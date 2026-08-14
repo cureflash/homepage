@@ -5,6 +5,13 @@ let activeVrm = null;
 let sleevePairs = [];
 let styled = false;
 
+function setPatchStatus(text, isError = false) {
+  const el = document.getElementById('status');
+  if (!el) return;
+  el.textContent = text;
+  el.classList.toggle('error', isError);
+}
+
 function matColor(mat, hex) {
   if (!mat?.color) return;
   mat.color.setHex(hex);
@@ -137,13 +144,24 @@ function accessories(vrm) {
 }
 
 function stylize(vrm) {
-  if (!vrm || vrm.userData.__maiStyled) return;
-  vrm.userData.__maiStyled = true;
-  activeVrm = vrm;
-  recolor(vrm);
-  accessories(vrm);
-  styled = true;
-  console.info('[MaiPatch] VRMを舞スタイルへ変換しました');
+  if (!vrm?.scene) return;
+  const marker = vrm.scene.userData;
+  if (marker.__maiStyled) return;
+  marker.__maiStyled = true;
+
+  try {
+    activeVrm = vrm;
+    recolor(vrm);
+    accessories(vrm);
+    styled = true;
+    setPatchStatus('Mai.vrm / 舞スタイル適用済み');
+    console.info('[MaiPatch] VRMを舞スタイルへ変換しました');
+  } catch (error) {
+    marker.__maiStyled = false;
+    styled = false;
+    console.error('[MaiPatch] 舞スタイル適用失敗', error);
+    setPatchStatus(`舞スタイル適用失敗: ${error?.message ?? error}`, true);
+  }
 }
 
 const originalLoadAsync = GLTFLoader.prototype.loadAsync;
