@@ -1,0 +1,98 @@
+name: Build Plarail iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/plarail-ios-ci
+    paths:
+      - "plarail-ios-ci/**"
+      - ".github/workflows/build-plarail-ios.yml"
+
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Show Xcode version
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+
+      - name: Restore original Swift sources
+        run: |
+          rm -rf plarail-ios-ci/build
+          mkdir -p plarail-ios-ci/build
+          python3 - <<'PY'
+          import base64
+          import pathlib
+          import tarfile
+
+          root = pathlib.Path('plarail-ios-ci')
+          build = root / 'build'
+          archive = build / 'source.tar.gz'
+          archive.write_bytes(base64.b64decode((root / 'source.tar.gz.b64').read_text()))
+          with tarfile.open(archive, 'r:gz') as tf:
+              tf.extractall(build)
+          PY
+          cp plarail-ios-ci/project.yml plarail-ios-ci/build/project.yml
+          find plarail-ios-ci/build/App -maxdepth 1 -name '*.swift' -print | sort
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        working-directory: plarail-ios-ci/build
+        run: |
+          xcodegen generate
+          xcodebuild -project PlarailController.xcodeproj -scheme PlarailController -showBuildSettings | head -120
+
+      - name: Build unsigned iPad app
+        working-directory: plarail-ios-ci/build
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project PlarailController.xcodeproj \
+            -scheme PlarailController \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY='' \
+            build 2>&1 | tee build.log
+
+      - name: Package unsigned IPA
+        working-directory: plarail-ios-ci/build
+        run: |
+          APP='DerivedData/Build/Products/Release-iphoneos/PlarailController.app'
+          test -d "$APP"
+          echo '--- executable ---'
+          file "$APP/PlarailController"
+          echo '--- Info.plist ---'
+          plutil -p "$APP/Info.plist"
+          rm -rf Payload PlarailController-unsigned.ipa
+          mkdir Payload
+          cp -R "$APP" Payload/
+          /usr/bin/zip -qry PlarailController-unsigned.ipa Payload
+          ls -lh PlarailController-unsigned.ipa
+
+      - name: Upload unsigned IPA
+        uses: actions/upload-artifact@v7
+        with:
+          name: PlarailController-unsigned-ipa
+          path: plarail-ios-ci/build/PlarailController-unsigned.ipa
+          if-no-files-found: error
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: PlarailController-build-log
+          path: plarail-ios-ci/build/build.log
+          if-no-files-found: warn
