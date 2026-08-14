@@ -1,0 +1,36 @@
+name: PlarailController
+options:
+  bundleIdPrefix: com.cureflash
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "2"
+    SUPPORTS_MACCATALYST: NO
+targets:
+  PlarailController:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: .
+        excludes:
+          - Package.swift
+          - Resources
+          - project.yml
+          - Info.plist
+    resources:
+      - path: Resources/shinkansen
+        type: folder
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.cureflash.plarailcontroller
+        PRODUCT_NAME: PlarailController
+        INFOPLIST_FILE: Info.plist
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGNING_REQUIRED: NO
+    scheme:
+      testTargets: []
