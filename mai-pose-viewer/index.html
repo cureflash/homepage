@@ -19,19 +19,20 @@
 <body>
   <div id="app">
     <header class="toolbar">
+      <button id="builtinMai" type="button">舞モデル</button>
       <label class="fileButton">
-        VRMを開く
+        別のVRMを開く
         <input id="vrmFile" type="file" accept=".vrm,model/gltf-binary,model/gltf+json" />
       </label>
       <button id="resetView" type="button">表示を戻す</button>
-      <span id="status" class="status">VRMを選択してください</span>
+      <span id="status" class="status">舞モデルを準備中</span>
     </header>
 
     <main class="workspace">
       <section id="viewer" class="viewer" aria-label="3Dビュー">
         <div id="emptyState" class="emptyState">
-          <div class="emptyTitle">VRMモデルを読み込んでください</div>
-          <div class="emptySub">iPadの「ファイル」から .vrm を選択できます</div>
+          <div class="emptyTitle">舞モデルを準備中</div>
+          <div class="emptySub">ページを開くと内蔵モデルが自動表示されます</div>
         </div>
       </section>
 
