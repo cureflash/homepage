@@ -1,0 +1,72 @@
+name: Build Plarail unsigned IPA
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'plarail-ios/**'
+      - '.github/workflows/build-plarail-ipa.yml'
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Restore Swift app source
+        run: |
+          set -euxo pipefail
+          cd plarail-ios
+          cat archive/part-*.b64 > source.tar.gz.b64
+          base64 -D source.tar.gz.b64 > source.tar.gz
+          mkdir -p source
+          tar -xzf source.tar.gz -C source --strip-components=1
+          cp project.yml source/project.yml
+          find source -maxdepth 2 -type f | sort | head -80
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        working-directory: plarail-ios/source
+        run: xcodegen generate
+
+      - name: Build unsigned app
+        working-directory: plarail-ios/source
+        run: |
+          set -euxo pipefail
+          xcodebuild \
+            -project PlarailController.xcodeproj \
+            -scheme PlarailController \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY='' \
+            build
+
+      - name: Package unsigned IPA
+        working-directory: plarail-ios/source
+        run: |
+          set -euxo pipefail
+          APP='build/Build/Products/Release-iphoneos/PlarailController.app'
+          test -d "$APP"
+          rm -rf Payload PlarailController-unsigned.ipa
+          mkdir Payload
+          cp -R "$APP" Payload/
+          /usr/bin/zip -qry PlarailController-unsigned.ipa Payload
+          /usr/bin/unzip -l PlarailController-unsigned.ipa | head -60
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PlarailController-unsigned-ipa
+          path: plarail-ios/source/PlarailController-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 14
