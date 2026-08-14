@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'plarail-ios/**'
+      - 'plarail-ios/PlarailController.swiftpm.zip'
+      - 'plarail-ios/project.yml'
       - '.github/workflows/build-plarail-ipa.yml'
 
 jobs:
@@ -17,28 +18,32 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      - name: Restore Swift app source
+      - name: Restore Swift Playground app
         run: |
           set -euxo pipefail
-          cd plarail-ios
-          cat archive/part-*.b64 > source.tar.gz.b64
-          base64 -D source.tar.gz.b64 > source.tar.gz
-          mkdir -p source
-          tar -xzf source.tar.gz -C source --strip-components=1
-          cp project.yml source/project.yml
-          find source -maxdepth 2 -type f | sort | head -80
+          ZIP='plarail-ios/PlarailController.swiftpm.zip'
+          test -f "$ZIP"
+          rm -rf plarail-ios/work
+          mkdir -p plarail-ios/work
+          unzip -q "$ZIP" -d plarail-ios/work
+          APP_DIR="$(find plarail-ios/work -maxdepth 2 -type d -name '*.swiftpm' | head -1)"
+          test -n "$APP_DIR"
+          cp plarail-ios/project.yml "$APP_DIR/project.yml"
+          echo "APP_DIR=$APP_DIR" >> "$GITHUB_ENV"
+          find "$APP_DIR" -maxdepth 3 -type f | sort | head -100
 
       - name: Install XcodeGen
         run: brew install xcodegen
 
       - name: Generate Xcode project
-        working-directory: plarail-ios/source
-        run: xcodegen generate
+        run: |
+          cd "$APP_DIR"
+          xcodegen generate
 
       - name: Build unsigned app
-        working-directory: plarail-ios/source
         run: |
           set -euxo pipefail
+          cd "$APP_DIR"
           xcodebuild \
             -project PlarailController.xcodeproj \
             -scheme PlarailController \
@@ -52,9 +57,9 @@ jobs:
             build
 
       - name: Package unsigned IPA
-        working-directory: plarail-ios/source
         run: |
           set -euxo pipefail
+          cd "$APP_DIR"
           APP='build/Build/Products/Release-iphoneos/PlarailController.app'
           test -d "$APP"
           rm -rf Payload PlarailController-unsigned.ipa
@@ -67,6 +72,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: PlarailController-unsigned-ipa
-          path: plarail-ios/source/PlarailController-unsigned.ipa
+          path: ${{ env.APP_DIR }}/PlarailController-unsigned.ipa
           if-no-files-found: error
           retention-days: 14
