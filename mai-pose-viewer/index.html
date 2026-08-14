@@ -19,20 +19,20 @@
 <body>
   <div id="app">
     <header class="toolbar">
-      <button id="builtinMai" type="button">舞モデル</button>
+      <button id="builtinMai" type="button">内蔵モデル</button>
       <label class="fileButton">
-        別のVRMを開く
+        Mai.vrmを開く
         <input id="vrmFile" type="file" accept=".vrm,model/gltf-binary,model/gltf+json" />
       </label>
       <button id="resetView" type="button">表示を戻す</button>
-      <span id="status" class="status">舞モデルを準備中</span>
+      <span id="status" class="status">VRMを開くと自動で舞化します</span>
     </header>
 
     <main class="workspace">
       <section id="viewer" class="viewer" aria-label="3Dビュー">
         <div id="emptyState" class="emptyState">
-          <div class="emptyTitle">舞モデルを準備中</div>
-          <div class="emptySub">ページを開くと内蔵モデルが自動表示されます</div>
+          <div class="emptyTitle">Mai.vrmを選択してください</div>
+          <div class="emptySub">VRoidのモデルを金髪・青目・巫女服風に自動変換します</div>
         </div>
       </section>
 
@@ -92,6 +92,6 @@
     </main>
   </div>
 
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./bootstrap.js"></script>
 </body>
 </html>
