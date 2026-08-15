@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-15
+    runs-on: macos-15-intel
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -73,6 +73,7 @@ jobs:
           cd "$APP_DIR"
           df -h /
           xcodebuild -quiet \
+            -jobs 1 \
             -project PlarailController.xcodeproj \
             -scheme PlarailController \
             -configuration Debug \
@@ -84,6 +85,7 @@ jobs:
             CODE_SIGN_IDENTITY='' \
             SWIFT_OPTIMIZATION_LEVEL='-Onone' \
             SWIFT_COMPILATION_MODE=singlefile \
+            SWIFT_ENABLE_BATCH_MODE=NO \
             COMPILER_INDEX_STORE_ENABLE=NO \
             SWIFT_INDEX_STORE_ENABLE=NO \
             DEBUG_INFORMATION_FORMAT=dwarf \
