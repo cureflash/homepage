@@ -15,6 +15,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Free macOS runner disk space
+        run: |
+          set -euxo pipefail
+          echo '=== disk before cleanup ==='
+          df -h /
+          ACTIVE_DEVELOPER="$(xcode-select -p)"
+          ACTIVE_XCODE="${ACTIVE_DEVELOPER%/Contents/Developer}"
+          ACTIVE_REAL="$(python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$ACTIVE_XCODE")"
+          for xcode in /Applications/Xcode*.app; do
+            [ -e "$xcode" ] || continue
+            REAL="$(python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$xcode")"
+            if [ "$REAL" != "$ACTIVE_REAL" ]; then
+              echo "Removing unused $xcode"
+              sudo rm -rf "$xcode"
+            fi
+          done
+          sudo rm -rf /Library/Developer/CoreSimulator/Profiles/Runtimes/* || true
+          rm -rf "$HOME/Library/Developer/CoreSimulator/Caches" || true
+          rm -rf "$HOME/Library/Caches/Homebrew" || true
+          brew cleanup -s || true
+          echo '=== disk after cleanup ==='
+          df -h /
+
       - name: Show Xcode version
         run: xcodebuild -version
 
@@ -33,7 +56,11 @@ jobs:
           find "$APP_DIR" -maxdepth 3 -type f | sort | head -100
 
       - name: Install XcodeGen
-        run: brew install xcodegen
+        run: |
+          brew install xcodegen
+          brew cleanup -s || true
+          rm -rf "$HOME/Library/Caches/Homebrew" || true
+          df -h /
 
       - name: Generate Xcode project
         run: |
@@ -44,6 +71,7 @@ jobs:
         run: |
           set -o pipefail
           cd "$APP_DIR"
+          df -h /
           xcodebuild \
             -project PlarailController.xcodeproj \
             -scheme PlarailController \
@@ -54,6 +82,8 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY='' \
+            DEBUG_INFORMATION_FORMAT=dwarf \
+            GCC_GENERATE_DEBUGGING_SYMBOLS=NO \
             build 2>&1 | tee build.log
 
       - name: Upload build log
