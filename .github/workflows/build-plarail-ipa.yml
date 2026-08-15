@@ -5,7 +5,6 @@ on:
   push:
     paths:
       - 'plarail-ios/PlarailController.swiftpm.zip'
-      - 'plarail-ios/project.yml'
       - '.github/workflows/build-plarail-ipa.yml'
 
 jobs:
@@ -18,7 +17,6 @@ jobs:
       - name: Free macOS runner disk space
         run: |
           set -euxo pipefail
-          echo '=== disk before cleanup ==='
           df -h /
           ACTIVE_DEVELOPER="$(xcode-select -p)"
           ACTIVE_XCODE="${ACTIVE_DEVELOPER%/Contents/Developer}"
@@ -27,7 +25,6 @@ jobs:
             [ -e "$xcode" ] || continue
             REAL="$(python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$xcode")"
             if [ "$REAL" != "$ACTIVE_REAL" ]; then
-              echo "Removing unused $xcode"
               sudo rm -rf "$xcode"
             fi
           done
@@ -35,11 +32,13 @@ jobs:
           rm -rf "$HOME/Library/Developer/CoreSimulator/Caches" || true
           rm -rf "$HOME/Library/Caches/Homebrew" || true
           brew cleanup -s || true
-          echo '=== disk after cleanup ==='
           df -h /
 
-      - name: Show Xcode version
-        run: xcodebuild -version
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphoneos swiftc --version
+          xcrun --sdk iphoneos --show-sdk-path
 
       - name: Restore Swift Playground app
         run: |
@@ -51,72 +50,102 @@ jobs:
           unzip -q "$ZIP" -d plarail-ios/work
           APP_DIR="$(find plarail-ios/work -maxdepth 2 -type d -name '*.swiftpm' | head -1)"
           test -n "$APP_DIR"
-          cp plarail-ios/project.yml "$APP_DIR/project.yml"
           echo "APP_DIR=$APP_DIR" >> "$GITHUB_ENV"
-          find "$APP_DIR" -maxdepth 3 -type f | sort | head -100
+          find "$APP_DIR" -maxdepth 2 -type f | sort | head -100
 
-      - name: Install XcodeGen
+      - name: Compile iPad executable directly
         run: |
-          brew install xcodegen
-          brew cleanup -s || true
-          rm -rf "$HOME/Library/Caches/Homebrew" || true
+          set -euxo pipefail
+          SDK="$(xcrun --sdk iphoneos --show-sdk-path)"
+          OUT="$APP_DIR/direct-build"
+          APP="$OUT/Payload/PlarailController.app"
+          rm -rf "$OUT"
+          mkdir -p "$APP"
+
+          SOURCES=()
+          while IFS= read -r -d '' file; do
+            SOURCES+=("$file")
+          done < <(find "$APP_DIR" -maxdepth 1 -type f -name '*.swift' ! -name 'Package.swift' -print0 | sort -z)
+          test "${#SOURCES[@]}" -gt 0
+          printf '%s\n' "${SOURCES[@]}"
+
+          xcrun --sdk iphoneos swiftc \
+            -sdk "$SDK" \
+            -target arm64-apple-ios16.0 \
+            -module-name PlarailController \
+            -parse-as-library \
+            -emit-executable \
+            -Onone \
+            -gnone \
+            -j 1 \
+            -disable-batch-mode \
+            -framework SwiftUI \
+            -framework UIKit \
+            -framework Foundation \
+            -framework CoreBluetooth \
+            -framework AVFoundation \
+            -framework Combine \
+            -o "$APP/PlarailController" \
+            "${SOURCES[@]}"
+
+          chmod +x "$APP/PlarailController"
+          file "$APP/PlarailController"
+          xcrun vtool -show-build "$APP/PlarailController" || true
           df -h /
 
-      - name: Generate Xcode project
+      - name: Assemble app bundle
         run: |
-          cd "$APP_DIR"
-          xcodegen generate
+          set -euxo pipefail
+          OUT="$APP_DIR/direct-build"
+          APP="$OUT/Payload/PlarailController.app"
 
-      - name: Build unsigned app
-        run: |
-          set -o pipefail
-          cd "$APP_DIR"
-          df -h /
-          xcodebuild -quiet \
-            -jobs 1 \
-            -project PlarailController.xcodeproj \
-            -scheme PlarailController \
-            -configuration Debug \
-            -sdk iphoneos \
-            -destination 'generic/platform=iOS' \
-            -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY='' \
-            SWIFT_OPTIMIZATION_LEVEL='-Onone' \
-            SWIFT_COMPILATION_MODE=singlefile \
-            SWIFT_ENABLE_BATCH_MODE=NO \
-            COMPILER_INDEX_STORE_ENABLE=NO \
-            SWIFT_INDEX_STORE_ENABLE=NO \
-            DEBUG_INFORMATION_FORMAT=dwarf \
-            GCC_GENERATE_DEBUGGING_SYMBOLS=NO \
-            build 2>&1 | tee build.log
+          cat > "$APP/Info.plist" <<'PLIST'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>CFBundleDevelopmentRegion</key><string>ja</string>
+            <key>CFBundleDisplayName</key><string>PlarailController</string>
+            <key>CFBundleExecutable</key><string>PlarailController</string>
+            <key>CFBundleIdentifier</key><string>com.cureflash.plarailcontroller</string>
+            <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+            <key>CFBundleName</key><string>PlarailController</string>
+            <key>CFBundlePackageType</key><string>APPL</string>
+            <key>CFBundleShortVersionString</key><string>1.0</string>
+            <key>CFBundleVersion</key><string>1</string>
+            <key>LSRequiresIPhoneOS</key><true/>
+            <key>MinimumOSVersion</key><string>16.0</string>
+            <key>NSBluetoothAlwaysUsageDescription</key><string>プラレール車両との接続にBluetoothを使用します。</string>
+            <key>UIDeviceFamily</key><array><integer>2</integer></array>
+            <key>UISupportedInterfaceOrientations~ipad</key>
+            <array>
+              <string>UIInterfaceOrientationLandscapeLeft</string>
+              <string>UIInterfaceOrientationLandscapeRight</string>
+            </array>
+          </dict>
+          </plist>
+          PLIST
 
-      - name: Upload build log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: PlarailController-build-log
-          path: ${{ env.APP_DIR }}/build.log
-          if-no-files-found: warn
-          retention-days: 14
+          plutil -lint "$APP/Info.plist"
+          printf 'APPL????' > "$APP/PkgInfo"
+          cp -R "$APP_DIR/Resources/shinkansen" "$APP/shinkansen"
+          find "$APP" -maxdepth 2 -type f | sort | head -100
+          du -sh "$APP"
 
       - name: Package unsigned IPA
         run: |
           set -euxo pipefail
-          cd "$APP_DIR"
-          APP='build/Build/Products/Debug-iphoneos/PlarailController.app'
-          test -d "$APP"
-          rm -rf Payload PlarailController-unsigned.ipa
-          mkdir Payload
-          cp -R "$APP" Payload/
+          cd "$APP_DIR/direct-build"
+          rm -f PlarailController-unsigned.ipa
           /usr/bin/zip -qry PlarailController-unsigned.ipa Payload
-          /usr/bin/unzip -l PlarailController-unsigned.ipa | head -60
+          test -s PlarailController-unsigned.ipa
+          ls -lh PlarailController-unsigned.ipa
+          /usr/bin/unzip -l PlarailController-unsigned.ipa | head -80
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
           name: PlarailController-unsigned-ipa
-          path: ${{ env.APP_DIR }}/PlarailController-unsigned.ipa
+          path: ${{ env.APP_DIR }}/direct-build/PlarailController-unsigned.ipa
           if-no-files-found: error
           retention-days: 14
