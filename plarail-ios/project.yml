@@ -8,6 +8,7 @@ settings:
     SWIFT_VERSION: "5.0"
     TARGETED_DEVICE_FAMILY: "2"
     SUPPORTS_MACCATALYST: NO
+
 targets:
   PlarailController:
     type: application
@@ -20,14 +21,24 @@ targets:
           - Resources
           - project.yml
           - Info.plist
+          - build
+          - Payload
     resources:
       - path: Resources/shinkansen
         type: folder
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: PlarailController
+        NSBluetoothAlwaysUsageDescription: "プラレール車両との接続にBluetoothを使用します。"
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UILaunchScreen: {}
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.cureflash.plarailcontroller
         PRODUCT_NAME: PlarailController
-        INFOPLIST_FILE: Info.plist
         CURRENT_PROJECT_VERSION: 1
         MARKETING_VERSION: 1.0
         CODE_SIGNING_ALLOWED: NO
