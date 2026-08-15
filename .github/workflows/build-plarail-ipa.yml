@@ -72,16 +72,20 @@ jobs:
           set -o pipefail
           cd "$APP_DIR"
           df -h /
-          xcodebuild \
+          xcodebuild -quiet \
             -project PlarailController.xcodeproj \
             -scheme PlarailController \
-            -configuration Release \
+            -configuration Debug \
             -sdk iphoneos \
             -destination 'generic/platform=iOS' \
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY='' \
+            SWIFT_OPTIMIZATION_LEVEL='-Onone' \
+            SWIFT_COMPILATION_MODE=singlefile \
+            COMPILER_INDEX_STORE_ENABLE=NO \
+            SWIFT_INDEX_STORE_ENABLE=NO \
             DEBUG_INFORMATION_FORMAT=dwarf \
             GCC_GENERATE_DEBUGGING_SYMBOLS=NO \
             build 2>&1 | tee build.log
@@ -99,7 +103,7 @@ jobs:
         run: |
           set -euxo pipefail
           cd "$APP_DIR"
-          APP='build/Build/Products/Release-iphoneos/PlarailController.app'
+          APP='build/Build/Products/Debug-iphoneos/PlarailController.app'
           test -d "$APP"
           rm -rf Payload PlarailController-unsigned.ipa
           mkdir Payload
