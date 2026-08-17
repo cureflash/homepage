@@ -7,7 +7,7 @@ on:
       - 'plarail-ios/apply-ipad-fullscreen-layout.py'
       - 'plarail-ios/apply-time-based-audio.py'
       - 'plarail-ios/PlarailController.swiftpm.zip'
-      - 'plarail-ios/app-icon.jpg'
+      - 'plarail-ios/icon-b64/**'
   workflow_dispatch:
 
 jobs:
@@ -91,7 +91,7 @@ jobs:
             <key>CFBundleName</key><string>PlarailController</string>
             <key>CFBundlePackageType</key><string>APPL</string>
             <key>CFBundleShortVersionString</key><string>1.0</string>
-            <key>CFBundleVersion</key><string>4</string>
+            <key>CFBundleVersion</key><string>5</string>
             <key>LSRequiresIPhoneOS</key><true/>
             <key>MinimumOSVersion</key><string>16.0</string>
             <key>NSBluetoothAlwaysUsageDescription</key><string>プラレール車両との接続にBluetoothを使用します。</string>
@@ -115,13 +115,17 @@ jobs:
           plutil -lint "$APP/Info.plist"
           printf 'APPL????' > "$APP/PkgInfo"
           cp -R "$APP_DIR/Resources/shinkansen" "$APP/shinkansen"
-          test -f plarail-ios/app-icon.jpg
-          sips -g pixelWidth -g pixelHeight plarail-ios/app-icon.jpg
-          sips -s format png -z 40 40 plarail-ios/app-icon.jpg --out "$APP/AppIcon20@2x.png" >/dev/null
-          sips -s format png -z 58 58 plarail-ios/app-icon.jpg --out "$APP/AppIcon29@2x.png" >/dev/null
-          sips -s format png -z 80 80 plarail-ios/app-icon.jpg --out "$APP/AppIcon40@2x.png" >/dev/null
-          sips -s format png -z 152 152 plarail-ios/app-icon.jpg --out "$APP/AppIcon76@2x.png" >/dev/null
-          sips -s format png -z 167 167 plarail-ios/app-icon.jpg --out "$APP/AppIcon83.5@2x.png" >/dev/null
+
+          ICON_SOURCE="$RUNNER_TEMP/plarail-app-icon.jpg"
+          cat plarail-ios/icon-b64/part*.txt | tr -d '\r\n' | /usr/bin/base64 -D > "$ICON_SOURCE"
+          ACTUAL_SHA256="$(shasum -a 256 "$ICON_SOURCE" | awk '{print $1}')"
+          test "$ACTUAL_SHA256" = "f19c59cecf1a158e4b1b31dafff48c6692871a8ea639863b22666d8fc3a886a3"
+          sips -g pixelWidth -g pixelHeight "$ICON_SOURCE"
+          sips -s format png -z 40 40 "$ICON_SOURCE" --out "$APP/AppIcon20@2x.png" >/dev/null
+          sips -s format png -z 58 58 "$ICON_SOURCE" --out "$APP/AppIcon29@2x.png" >/dev/null
+          sips -s format png -z 80 80 "$ICON_SOURCE" --out "$APP/AppIcon40@2x.png" >/dev/null
+          sips -s format png -z 152 152 "$ICON_SOURCE" --out "$APP/AppIcon76@2x.png" >/dev/null
+          sips -s format png -z 167 167 "$ICON_SOURCE" --out "$APP/AppIcon83.5@2x.png" >/dev/null
           file "$APP"/AppIcon*.png
 
       - name: Package IPA
