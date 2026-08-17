@@ -7,6 +7,7 @@ on:
       - 'plarail-ios/apply-ipad-fullscreen-layout.py'
       - 'plarail-ios/apply-time-based-audio.py'
       - 'plarail-ios/PlarailController.swiftpm.zip'
+      - 'plarail-ios/app-icon.png'
   workflow_dispatch:
 
 jobs:
@@ -90,7 +91,7 @@ jobs:
             <key>CFBundleName</key><string>PlarailController</string>
             <key>CFBundlePackageType</key><string>APPL</string>
             <key>CFBundleShortVersionString</key><string>1.0</string>
-            <key>CFBundleVersion</key><string>2</string>
+            <key>CFBundleVersion</key><string>3</string>
             <key>LSRequiresIPhoneOS</key><true/>
             <key>MinimumOSVersion</key><string>16.0</string>
             <key>NSBluetoothAlwaysUsageDescription</key><string>プラレール車両との接続にBluetoothを使用します。</string>
@@ -99,6 +100,28 @@ jobs:
             <key>UIStatusBarHidden</key><true/>
             <key>UIViewControllerBasedStatusBarAppearance</key><false/>
             <key>UILaunchScreen</key><dict/>
+            <key>CFBundleIconFiles~ipad</key>
+            <array>
+              <string>AppIcon20</string>
+              <string>AppIcon29</string>
+              <string>AppIcon40</string>
+              <string>AppIcon76</string>
+              <string>AppIcon83.5</string>
+            </array>
+            <key>CFBundleIcons~ipad</key>
+            <dict>
+              <key>CFBundlePrimaryIcon</key>
+              <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                  <string>AppIcon20</string>
+                  <string>AppIcon29</string>
+                  <string>AppIcon40</string>
+                  <string>AppIcon76</string>
+                  <string>AppIcon83.5</string>
+                </array>
+              </dict>
+            </dict>
             <key>UISupportedInterfaceOrientations~ipad</key><array>
               <string>UIInterfaceOrientationLandscapeLeft</string>
               <string>UIInterfaceOrientationLandscapeRight</string>
@@ -108,6 +131,15 @@ jobs:
           plutil -lint "$APP/Info.plist"
           printf 'APPL????' > "$APP/PkgInfo"
           cp -R "$APP_DIR/Resources/shinkansen" "$APP/shinkansen"
+
+          # Build iPad icon sizes from the user-provided source image.
+          test -f plarail-ios/app-icon.png
+          sips -s format png -z 40 40 plarail-ios/app-icon.png --out "$APP/AppIcon20@2x.png" >/dev/null
+          sips -s format png -z 58 58 plarail-ios/app-icon.png --out "$APP/AppIcon29@2x.png" >/dev/null
+          sips -s format png -z 80 80 plarail-ios/app-icon.png --out "$APP/AppIcon40@2x.png" >/dev/null
+          sips -s format png -z 152 152 plarail-ios/app-icon.png --out "$APP/AppIcon76@2x.png" >/dev/null
+          sips -s format png -z 167 167 plarail-ios/app-icon.png --out "$APP/AppIcon83.5@2x.png" >/dev/null
+          file "$APP"/AppIcon*.png
 
       - name: Package IPA
         run: |
