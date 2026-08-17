@@ -1,0 +1,126 @@
+name: Build Plarail iPad fixed IPA
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build-plarail-ipad-fixed.yml'
+      - 'plarail-ios/apply-ipad-fullscreen-layout.py'
+      - 'plarail-ios/apply-time-based-audio.py'
+      - 'plarail-ios/PlarailController.swiftpm.zip'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15-intel
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Free disk space
+        run: |
+          set -euxo pipefail
+          ACTIVE_DEVELOPER="$(xcode-select -p)"
+          ACTIVE_XCODE="${ACTIVE_DEVELOPER%/Contents/Developer}"
+          ACTIVE_REAL="$(python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$ACTIVE_XCODE")"
+          for xcode in /Applications/Xcode*.app; do
+            [ -e "$xcode" ] || continue
+            REAL="$(python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$xcode")"
+            if [ "$REAL" != "$ACTIVE_REAL" ]; then sudo rm -rf "$xcode"; fi
+          done
+          sudo rm -rf /Library/Developer/CoreSimulator/Profiles/Runtimes/* || true
+          rm -rf "$HOME/Library/Developer/CoreSimulator/Caches" || true
+          brew cleanup -s || true
+          df -h /
+
+      - name: Restore app
+        run: |
+          set -euxo pipefail
+          rm -rf plarail-ios/work
+          mkdir -p plarail-ios/work
+          unzip -q plarail-ios/PlarailController.swiftpm.zip -d plarail-ios/work
+          APP_DIR="$(find plarail-ios/work -maxdepth 2 -type d -name '*.swiftpm' | head -1)"
+          test -n "$APP_DIR"
+          echo "APP_DIR=$APP_DIR" >> "$GITHUB_ENV"
+
+      - name: Apply audio and iPad layout fixes
+        run: |
+          set -euxo pipefail
+          python3 plarail-ios/apply-time-based-audio.py "$APP_DIR"
+          python3 plarail-ios/apply-ipad-fullscreen-layout.py "$APP_DIR"
+          grep -q 'designWidth: CGFloat = 1366' "$APP_DIR/MyApp.swift"
+          grep -q 'persistentSystemOverlays(.hidden)' "$APP_DIR/MyApp.swift"
+          ! grep -R 'MIN_BUSY_MS' "$APP_DIR"/*.swift
+
+      - name: Compile iPad executable directly
+        run: |
+          set -euxo pipefail
+          SDK="$(xcrun --sdk iphoneos --show-sdk-path)"
+          OUT="$APP_DIR/direct-build"
+          APP="$OUT/Payload/PlarailController.app"
+          rm -rf "$OUT"
+          mkdir -p "$APP"
+          SOURCES=()
+          while IFS= read -r -d '' file; do SOURCES+=("$file"); done < <(find "$APP_DIR" -maxdepth 1 -type f -name '*.swift' ! -name 'Package.swift' -print0 | sort -z)
+          xcrun --sdk iphoneos swiftc \
+            -sdk "$SDK" \
+            -target arm64-apple-ios16.0 \
+            -module-name PlarailController \
+            -parse-as-library \
+            -emit-executable \
+            -Onone -gnone -j 1 -disable-batch-mode \
+            -framework SwiftUI -framework UIKit -framework Foundation \
+            -framework CoreBluetooth -framework AVFoundation -framework Combine \
+            -o "$APP/PlarailController" \
+            "${SOURCES[@]}"
+          chmod +x "$APP/PlarailController"
+
+      - name: Assemble app bundle
+        run: |
+          set -euxo pipefail
+          APP="$APP_DIR/direct-build/Payload/PlarailController.app"
+          cat > "$APP/Info.plist" <<'PLIST'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>CFBundleDevelopmentRegion</key><string>ja</string>
+            <key>CFBundleDisplayName</key><string>PlarailController</string>
+            <key>CFBundleExecutable</key><string>PlarailController</string>
+            <key>CFBundleIdentifier</key><string>com.cureflash.plarailcontroller</string>
+            <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+            <key>CFBundleName</key><string>PlarailController</string>
+            <key>CFBundlePackageType</key><string>APPL</string>
+            <key>CFBundleShortVersionString</key><string>1.0</string>
+            <key>CFBundleVersion</key><string>2</string>
+            <key>LSRequiresIPhoneOS</key><true/>
+            <key>MinimumOSVersion</key><string>16.0</string>
+            <key>NSBluetoothAlwaysUsageDescription</key><string>プラレール車両との接続にBluetoothを使用します。</string>
+            <key>UIDeviceFamily</key><array><integer>2</integer></array>
+            <key>UIRequiresFullScreen</key><true/>
+            <key>UIStatusBarHidden</key><true/>
+            <key>UIViewControllerBasedStatusBarAppearance</key><false/>
+            <key>UILaunchScreen</key><dict/>
+            <key>UISupportedInterfaceOrientations~ipad</key><array>
+              <string>UIInterfaceOrientationLandscapeLeft</string>
+              <string>UIInterfaceOrientationLandscapeRight</string>
+            </array>
+          </dict></plist>
+          PLIST
+          plutil -lint "$APP/Info.plist"
+          printf 'APPL????' > "$APP/PkgInfo"
+          cp -R "$APP_DIR/Resources/shinkansen" "$APP/shinkansen"
+
+      - name: Package IPA
+        run: |
+          set -euxo pipefail
+          cd "$APP_DIR/direct-build"
+          /usr/bin/zip -qry PlarailController-iPadFixed-unsigned.ipa Payload
+          test -s PlarailController-iPadFixed-unsigned.ipa
+          ls -lh PlarailController-iPadFixed-unsigned.ipa
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PlarailController-iPadFixed-unsigned-ipa
+          path: ${{ env.APP_DIR }}/direct-build/PlarailController-iPadFixed-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 14
