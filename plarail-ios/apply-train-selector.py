@@ -177,3 +177,5 @@ if needle not in sc:
 sc = sc.replace(needle, replace, 1)
 scene.write_text(sc, encoding='utf-8')
 print('patched train selector')
+
+# Build trigger marker: train series selector v7
