@@ -22,21 +22,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Free disk space
-        run: |
-          set -euxo pipefail
-          ACTIVE_DEVELOPER="$(xcode-select -p)"
-          ACTIVE_XCODE="${ACTIVE_DEVELOPER%/Contents/Developer}"
-          ACTIVE_REAL="$(python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$ACTIVE_XCODE")"
-          for xcode in /Applications/Xcode*.app; do
-            [ -e "$xcode" ] || continue
-            REAL="$(python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$xcode")"
-            if [ "$REAL" != "$ACTIVE_REAL" ]; then sudo rm -rf "$xcode"; fi
-          done
-          sudo rm -rf /Library/Developer/CoreSimulator/Profiles/Runtimes/* || true
-          rm -rf "$HOME/Library/Developer/CoreSimulator/Caches" || true
-          brew cleanup -s || true
-          df -h /
+      - name: Check disk space
+        run: df -h /
 
       - name: Restore app
         run: |
@@ -177,21 +164,6 @@ jobs:
           test -s PlarailController-Universal-unsigned.ipa
           ls -lh PlarailController-Universal-unsigned.ipa
 
-      - name: Publish universal IPA to repository
-        run: |
-          set -euxo pipefail
-          cp "$APP_DIR/direct-build/PlarailController-Universal-unsigned.ipa" \
-             plarail-ios/PlarailController-Universal-unsigned.ipa
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add plarail-ios/PlarailController-Universal-unsigned.ipa
-          if git diff --cached --quiet; then
-            echo "IPA unchanged"
-          else
-            git commit -m "Publish universal Plarail IPA [skip ci]"
-            git push
-          fi
-
       - name: Upload universal IPA artifact
         uses: actions/upload-artifact@v4
         with:
@@ -199,3 +171,21 @@ jobs:
           path: ${{ env.APP_DIR }}/direct-build/PlarailController-Universal-unsigned.ipa
           if-no-files-found: error
           retention-days: 14
+
+      - name: Publish universal IPA to repository
+        run: |
+          set -euxo pipefail
+          BUILT_IPA="$RUNNER_TEMP/PlarailController-Universal-unsigned.ipa"
+          cp "$APP_DIR/direct-build/PlarailController-Universal-unsigned.ipa" "$BUILT_IPA"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git checkout -B publish origin/main
+          cp "$BUILT_IPA" plarail-ios/PlarailController-Universal-unsigned.ipa
+          git add plarail-ios/PlarailController-Universal-unsigned.ipa
+          if git diff --cached --quiet; then
+            echo "IPA unchanged"
+          else
+            git commit -m "Publish universal Plarail IPA [skip ci]"
+            git push origin HEAD:main
+          fi
