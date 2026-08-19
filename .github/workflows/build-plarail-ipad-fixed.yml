@@ -1,4 +1,4 @@
-name: Build Plarail iPad fixed IPA
+name: Build Plarail universal IPA
 
 on:
   push:
@@ -43,7 +43,7 @@ jobs:
           test -n "$APP_DIR"
           echo "APP_DIR=$APP_DIR" >> "$GITHUB_ENV"
 
-      - name: Apply audio and iPad layout fixes
+      - name: Apply audio and universal layout fixes
         run: |
           set -euxo pipefail
           python3 plarail-ios/apply-time-based-audio.py "$APP_DIR"
@@ -52,7 +52,7 @@ jobs:
           grep -q 'persistentSystemOverlays(.hidden)' "$APP_DIR/MyApp.swift"
           ! grep -R 'MIN_BUSY_MS' "$APP_DIR"/*.swift
 
-      - name: Compile iPad executable directly
+      - name: Compile universal executable directly
         run: |
           set -euxo pipefail
           SDK="$(xcrun --sdk iphoneos --show-sdk-path)"
@@ -75,7 +75,7 @@ jobs:
             "${SOURCES[@]}"
           chmod +x "$APP/PlarailController"
 
-      - name: Assemble app bundle
+      - name: Assemble universal app bundle
         run: |
           set -euxo pipefail
           APP="$APP_DIR/direct-build/Payload/PlarailController.app"
@@ -91,21 +91,34 @@ jobs:
             <key>CFBundleName</key><string>PlarailController</string>
             <key>CFBundlePackageType</key><string>APPL</string>
             <key>CFBundleShortVersionString</key><string>1.0</string>
-            <key>CFBundleVersion</key><string>5</string>
+            <key>CFBundleVersion</key><string>6</string>
             <key>LSRequiresIPhoneOS</key><true/>
             <key>MinimumOSVersion</key><string>16.0</string>
             <key>NSBluetoothAlwaysUsageDescription</key><string>プラレール車両との接続にBluetoothを使用します。</string>
-            <key>UIDeviceFamily</key><array><integer>2</integer></array>
+            <key>UIDeviceFamily</key><array><integer>1</integer><integer>2</integer></array>
             <key>UIRequiresFullScreen</key><true/>
             <key>UIStatusBarHidden</key><true/>
             <key>UIViewControllerBasedStatusBarAppearance</key><false/>
             <key>UILaunchScreen</key><dict/>
+
+            <key>CFBundleIconFiles</key><array>
+              <string>AppIcon20</string><string>AppIcon29</string><string>AppIcon40</string><string>AppIcon60</string>
+            </array>
+            <key>CFBundleIcons</key><dict><key>CFBundlePrimaryIcon</key><dict><key>CFBundleIconFiles</key><array>
+              <string>AppIcon20</string><string>AppIcon29</string><string>AppIcon40</string><string>AppIcon60</string>
+            </array></dict></dict>
+
             <key>CFBundleIconFiles~ipad</key><array>
               <string>AppIcon20</string><string>AppIcon29</string><string>AppIcon40</string><string>AppIcon76</string><string>AppIcon83.5</string>
             </array>
             <key>CFBundleIcons~ipad</key><dict><key>CFBundlePrimaryIcon</key><dict><key>CFBundleIconFiles</key><array>
               <string>AppIcon20</string><string>AppIcon29</string><string>AppIcon40</string><string>AppIcon76</string><string>AppIcon83.5</string>
             </array></dict></dict>
+
+            <key>UISupportedInterfaceOrientations</key><array>
+              <string>UIInterfaceOrientationLandscapeLeft</string>
+              <string>UIInterfaceOrientationLandscapeRight</string>
+            </array>
             <key>UISupportedInterfaceOrientations~ipad</key><array>
               <string>UIInterfaceOrientationLandscapeLeft</string>
               <string>UIInterfaceOrientationLandscapeRight</string>
@@ -113,6 +126,7 @@ jobs:
           </dict></plist>
           PLIST
           plutil -lint "$APP/Info.plist"
+          /usr/libexec/PlistBuddy -c 'Print :UIDeviceFamily' "$APP/Info.plist"
           printf 'APPL????' > "$APP/PkgInfo"
           cp -R "$APP_DIR/Resources/shinkansen" "$APP/shinkansen"
 
@@ -121,25 +135,34 @@ jobs:
           ACTUAL_SHA256="$(shasum -a 256 "$ICON_SOURCE" | awk '{print $1}')"
           test "$ACTUAL_SHA256" = "f19c59cecf1a158e4b1b31dafff48c6692871a8ea639863b22666d8fc3a886a3"
           sips -g pixelWidth -g pixelHeight "$ICON_SOURCE"
+
+          # iPhone + shared sizes
           sips -s format png -z 40 40 "$ICON_SOURCE" --out "$APP/AppIcon20@2x.png" >/dev/null
+          sips -s format png -z 60 60 "$ICON_SOURCE" --out "$APP/AppIcon20@3x.png" >/dev/null
           sips -s format png -z 58 58 "$ICON_SOURCE" --out "$APP/AppIcon29@2x.png" >/dev/null
+          sips -s format png -z 87 87 "$ICON_SOURCE" --out "$APP/AppIcon29@3x.png" >/dev/null
           sips -s format png -z 80 80 "$ICON_SOURCE" --out "$APP/AppIcon40@2x.png" >/dev/null
+          sips -s format png -z 120 120 "$ICON_SOURCE" --out "$APP/AppIcon40@3x.png" >/dev/null
+          sips -s format png -z 120 120 "$ICON_SOURCE" --out "$APP/AppIcon60@2x.png" >/dev/null
+          sips -s format png -z 180 180 "$ICON_SOURCE" --out "$APP/AppIcon60@3x.png" >/dev/null
+
+          # iPad sizes
           sips -s format png -z 152 152 "$ICON_SOURCE" --out "$APP/AppIcon76@2x.png" >/dev/null
           sips -s format png -z 167 167 "$ICON_SOURCE" --out "$APP/AppIcon83.5@2x.png" >/dev/null
           file "$APP"/AppIcon*.png
 
-      - name: Package IPA
+      - name: Package universal IPA
         run: |
           set -euxo pipefail
           cd "$APP_DIR/direct-build"
-          /usr/bin/zip -qry PlarailController-iPadFixed-unsigned.ipa Payload
-          test -s PlarailController-iPadFixed-unsigned.ipa
-          ls -lh PlarailController-iPadFixed-unsigned.ipa
+          /usr/bin/zip -qry PlarailController-Universal-unsigned.ipa Payload
+          test -s PlarailController-Universal-unsigned.ipa
+          ls -lh PlarailController-Universal-unsigned.ipa
 
-      - name: Upload IPA artifact
+      - name: Upload universal IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: PlarailController-iPadFixed-unsigned-ipa
-          path: ${{ env.APP_DIR }}/direct-build/PlarailController-iPadFixed-unsigned.ipa
+          name: PlarailController-Universal-unsigned-ipa
+          path: ${{ env.APP_DIR }}/direct-build/PlarailController-Universal-unsigned.ipa
           if-no-files-found: error
           retention-days: 14
