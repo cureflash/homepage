@@ -10,6 +10,9 @@ on:
       - 'plarail-ios/icon-b64/**'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: macos-15-intel
@@ -158,6 +161,21 @@ jobs:
           /usr/bin/zip -qry PlarailController-Universal-unsigned.ipa Payload
           test -s PlarailController-Universal-unsigned.ipa
           ls -lh PlarailController-Universal-unsigned.ipa
+
+      - name: Publish universal IPA to repository
+        run: |
+          set -euxo pipefail
+          cp "$APP_DIR/direct-build/PlarailController-Universal-unsigned.ipa" \
+             plarail-ios/PlarailController-Universal-unsigned.ipa
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add plarail-ios/PlarailController-Universal-unsigned.ipa
+          if git diff --cached --quiet; then
+            echo "IPA unchanged"
+          else
+            git commit -m "Publish universal Plarail IPA [skip ci]"
+            git push
+          fi
 
       - name: Upload universal IPA artifact
         uses: actions/upload-artifact@v4
