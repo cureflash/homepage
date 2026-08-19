@@ -54,8 +54,9 @@ jobs:
           python3 plarail-ios/apply-time-based-audio.py "$APP_DIR"
           python3 plarail-ios/apply-ipad-fullscreen-layout.py "$APP_DIR"
           python3 plarail-ios/apply-train-selector.py "$APP_DIR"
-          python3 -m pip install --quiet pillow
-          python3 plarail-ios/generate-train-assets.py "$APP_DIR/Resources/shinkansen"
+          python3 -m venv "$RUNNER_TEMP/trainasset-venv"
+          "$RUNNER_TEMP/trainasset-venv/bin/pip" install --quiet pillow
+          "$RUNNER_TEMP/trainasset-venv/bin/python" plarail-ios/generate-train-assets.py "$APP_DIR/Resources/shinkansen"
           grep -q 'designWidth: CGFloat = 1366' "$APP_DIR/MyApp.swift"
           grep -q 'persistentSystemOverlays(.hidden)' "$APP_DIR/MyApp.swift"
           grep -q 'selectedTrainSeries' "$APP_DIR/RunningScenePanel.swift"
