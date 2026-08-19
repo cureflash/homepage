@@ -6,6 +6,8 @@ on:
       - '.github/workflows/build-plarail-ipad-fixed.yml'
       - 'plarail-ios/apply-ipad-fullscreen-layout.py'
       - 'plarail-ios/apply-time-based-audio.py'
+      - 'plarail-ios/apply-train-selector.py'
+      - 'plarail-ios/generate-train-assets.py'
       - 'plarail-ios/PlarailController.swiftpm.zip'
       - 'plarail-ios/icon-b64/**'
   workflow_dispatch:
@@ -46,13 +48,25 @@ jobs:
           test -n "$APP_DIR"
           echo "APP_DIR=$APP_DIR" >> "$GITHUB_ENV"
 
-      - name: Apply audio and universal layout fixes
+      - name: Apply audio, layout and train selector fixes
         run: |
           set -euxo pipefail
           python3 plarail-ios/apply-time-based-audio.py "$APP_DIR"
           python3 plarail-ios/apply-ipad-fullscreen-layout.py "$APP_DIR"
+          python3 plarail-ios/apply-train-selector.py "$APP_DIR"
+          python3 -m pip install --quiet pillow
+          python3 plarail-ios/generate-train-assets.py "$APP_DIR/Resources/shinkansen"
           grep -q 'designWidth: CGFloat = 1366' "$APP_DIR/MyApp.swift"
           grep -q 'persistentSystemOverlays(.hidden)' "$APP_DIR/MyApp.swift"
+          grep -q 'selectedTrainSeries' "$APP_DIR/RunningScenePanel.swift"
+          test -f "$APP_DIR/Resources/shinkansen/train0.png"
+          test -f "$APP_DIR/Resources/shinkansen/train100.png"
+          test -f "$APP_DIR/Resources/shinkansen/train300.png"
+          test -f "$APP_DIR/Resources/shinkansen/train500.png"
+          test -f "$APP_DIR/Resources/shinkansen/train700.png"
+          test -f "$APP_DIR/Resources/shinkansen/trainRailStar.png"
+          test -f "$APP_DIR/Resources/shinkansen/trainN700S.png"
+          test -f "$APP_DIR/Resources/shinkansen/trainT4.png"
           ! grep -R 'MIN_BUSY_MS' "$APP_DIR"/*.swift
 
       - name: Compile universal executable directly
@@ -94,7 +108,7 @@ jobs:
             <key>CFBundleName</key><string>PlarailController</string>
             <key>CFBundlePackageType</key><string>APPL</string>
             <key>CFBundleShortVersionString</key><string>1.0</string>
-            <key>CFBundleVersion</key><string>6</string>
+            <key>CFBundleVersion</key><string>7</string>
             <key>LSRequiresIPhoneOS</key><true/>
             <key>MinimumOSVersion</key><string>16.0</string>
             <key>NSBluetoothAlwaysUsageDescription</key><string>プラレール車両との接続にBluetoothを使用します。</string>
