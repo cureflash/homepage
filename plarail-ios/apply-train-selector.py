@@ -1,181 +1,288 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import re
 import sys
 
 if len(sys.argv) != 2:
     raise SystemExit('usage: apply-train-selector.py APP_DIR')
 
-app_dir = Path(sys.argv[1])
-content_view = app_dir / 'ContentView.swift'
-dashboard = app_dir / 'ContentViewDashboard.swift'
-scene = app_dir / 'RunningScenePanel.swift'
+root = Path(sys.argv[1]).resolve()
 
-cv = content_view.read_text(encoding='utf-8')
-needle = '    @State var showManualAudioLibrary = false\n'
-replace = '    @State var showManualAudioLibrary = false\n    @State var selectedTrainSeries: TrainSeries = .series300\n'
-if needle not in cv:
-    raise SystemExit('ContentView.swift state insertion point not found')
-cv = cv.replace(needle, replace, 1)
-content_view.write_text(cv, encoding='utf-8')
+# ---------------------------------------------------------------------------
+# Train display model: only 300 series and N700 series.
+# ---------------------------------------------------------------------------
+(root / 'TrainDisplaySeries.swift').write_text('''import Foundation
 
-db = dashboard.read_text(encoding='utf-8')
-needle = '''                selectedDestination: selectedDestination,
-                selectedOriginStation: selectedOriginStation
-            )
-'''
-replace = '''                selectedDestination: selectedDestination,
-                selectedOriginStation: selectedOriginStation,
-                selectedTrainSeries: $selectedTrainSeries
-            )
-'''
-if needle not in db:
-    raise SystemExit('ContentViewDashboard.swift RunningScenePanel call not found')
-db = db.replace(needle, replace, 1)
-dashboard.write_text(db, encoding='utf-8')
+enum TrainDisplaySeries: String, CaseIterable {
+    case series300 = "300"
+    case n700 = "N700"
 
-sc = scene.read_text(encoding='utf-8')
-
-enum_block = '''enum TrainSeries: String, CaseIterable, Identifiable {
-    case series0 = "0系"
-    case series100 = "100系"
-    case series300 = "300系"
-    case series500 = "500系"
-    case series700 = "700系"
-    case railStar = "ひかりレールスター"
-    case n700s = "N700S"
-    case doctorYellowT4 = "ドクターイエロー T4"
-
-    var id: String { rawValue }
-
-    var shortTitle: String {
+    var trainAssetFileName: String {
         switch self {
-        case .series0: return "0"
-        case .series100: return "100"
-        case .series300: return "300"
-        case .series500: return "500"
-        case .series700: return "700"
-        case .railStar: return "RS"
-        case .n700s: return "N700S"
-        case .doctorYellowT4: return "T4"
+        case .series300: return "train300.png"
+        case .n700: return "trainN700.png"
         }
     }
 
-    var assetFileName: String {
+    /// The button always displays the OTHER train that will be selected.
+    var toggleIconFileName: String {
         switch self {
-        case .series0: return "train0.png"
-        case .series100: return "train100.png"
-        case .series300: return "train300.png"
-        case .series500: return "train500.png"
-        case .series700: return "train700.png"
-        case .railStar: return "trainRailStar.png"
-        case .n700s: return "trainN700S.png"
-        case .doctorYellowT4: return "trainT4.png"
+        case .series300: return "iconN700_toggle.png"
+        case .n700: return "icon300_toggle.png"
+        }
+    }
+
+    var next: TrainDisplaySeries {
+        switch self {
+        case .series300: return .n700
+        case .n700: return .series300
         }
     }
 }
+''', encoding='utf-8')
 
+# ---------------------------------------------------------------------------
+# ContentView: train state + coupling between train and cabin chime.
+# ---------------------------------------------------------------------------
+p = root / 'ContentView.swift'
+s = p.read_text(encoding='utf-8')
+needle = '    @State var showManualAudioLibrary = false\n'
+if 'selectedTrainSeries: TrainDisplaySeries' not in s:
+    if needle not in s:
+        raise SystemExit('ContentView.swift: state insertion point not found')
+    s = s.replace(
+        needle,
+        needle + '    @State var selectedTrainSeries: TrainDisplaySeries = .series300\n',
+        1
+    )
+
+selected_chime_block = '''    var selectedChime: ChimeType {
+        get { operation.selectedChime }
+        nonmutating set { operation.selectedChime = newValue }
+    }
 '''
-needle = 'struct RunningScenePanel: View {\n'
-if needle not in sc:
-    raise SystemExit('RunningScenePanel declaration not found')
-sc = sc.replace(needle, enum_block + needle, 1)
-
-needle = '''    let selectedDestination: Destination?
-    let selectedOriginStation: Station?
-
-    private let canvasWidth: CGFloat = 1366
-'''
-replace = '''    let selectedDestination: Destination?
-    let selectedOriginStation: Station?
-    @Binding var selectedTrainSeries: TrainSeries
-
-    private let canvasWidth: CGFloat = 1366
-'''
-if needle not in sc:
-    raise SystemExit('RunningScenePanel property insertion point not found')
-sc = sc.replace(needle, replace, 1)
-
-needle = '''                sceneCanvas
-                    .frame(width: canvasWidth, height: canvasHeight, alignment: .topLeading)
-                    .scaleEffect(appliedScale, anchor: .topLeading)
-                    .offset(x: sceneOffsetX, y: sceneOffsetY)
-            }
-'''
-replace = '''                sceneCanvas
-                    .frame(width: canvasWidth, height: canvasHeight, alignment: .topLeading)
-                    .scaleEffect(appliedScale, anchor: .topLeading)
-                    .offset(x: sceneOffsetX, y: sceneOffsetY)
-
-                trainSeriesSelector
-                    .padding(8)
-            }
-'''
-if needle not in sc:
-    raise SystemExit('RunningScenePanel overlay insertion point not found')
-sc = sc.replace(needle, replace, 1)
-
-needle = '''    private var animationPixelsPerSecond: CGFloat {
-        let clamped = min(max(displaySpeed, 0), maxGaugeSpeed)
-        return CGFloat(clamped / maxGaugeSpeed * maxAnimationSpeed)
+helpers = '''
+    var trainAssetFileName: String {
+        selectedTrainSeries.trainAssetFileName
     }
 
-'''
-selector = '''    private var animationPixelsPerSecond: CGFloat {
-        let clamped = min(max(displaySpeed, 0), maxGaugeSpeed)
-        return CGFloat(clamped / maxGaugeSpeed * maxAnimationSpeed)
+    var toggleTrainIconFileName: String {
+        selectedTrainSeries.toggleIconFileName
     }
 
-    private var trainSeriesSelector: some View {
-        HStack(spacing: 4) {
-            Text("SERIES")
-                .font(.system(size: 9, weight: .black, design: .monospaced))
-                .foregroundColor(.green)
+    func toggleTrainSeries() {
+        switch selectedTrainSeries {
+        case .series300:
+            selectedTrainSeries = .n700
+            selectedChime = .ainiIkou
+        case .n700:
+            selectedTrainSeries = .series300
+            selectedChime = .ambitiousJapan
+        }
+    }
+'''
+if 'func toggleTrainSeries()' not in s:
+    if selected_chime_block not in s:
+        raise SystemExit('ContentView.swift: selectedChime block not found')
+    s = s.replace(selected_chime_block, selected_chime_block + helpers, 1)
+p.write_text(s, encoding='utf-8')
 
-            ForEach(TrainSeries.allCases) { series in
-                Button {
-                    selectedTrainSeries = series
-                } label: {
-                    Text(series.shortTitle)
-                        .font(.system(size: 9, weight: .black, design: .monospaced))
-                        .foregroundColor(selectedTrainSeries == series ? .black : .green)
-                        .frame(minWidth: series == .n700s ? 48 : 34, minHeight: 24)
-                        .padding(.horizontal, 3)
-                        .background(
-                            RoundedRectangle(cornerRadius: 3)
-                                .fill(selectedTrainSeries == series ? Color.green : Color.black.opacity(0.76))
-                        )
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 3)
-                                .stroke(Color.green.opacity(0.82), lineWidth: 0.8)
-                        )
+# ---------------------------------------------------------------------------
+# Resources: image lookup used by the header toggle button.
+# ---------------------------------------------------------------------------
+p = root / 'AppResourceBundle.swift'
+s = p.read_text(encoding='utf-8')
+if 'static func imageURL(fileName:' not in s:
+    idx = s.rfind('\n}')
+    if idx < 0:
+        raise SystemExit('AppResourceBundle.swift: enum terminator not found')
+    image_helper = '''
+
+    static func imageURL(fileName: String) -> URL? {
+        let ns = fileName as NSString
+        let name = ns.deletingPathExtension
+        let ext = ns.pathExtension.isEmpty ? nil : ns.pathExtension
+
+        var bundles: [Bundle] = [Bundle.main]
+        bundles.append(contentsOf: Bundle.allBundles)
+        bundles.append(contentsOf: Bundle.allFrameworks)
+
+        for bundle in bundles {
+            if let url = bundle.url(
+                forResource: name,
+                withExtension: ext,
+                subdirectory: "shinkansen"
+            ) {
+                return url
+            }
+
+            if let resourceURL = bundle.resourceURL {
+                let nestedURL = resourceURL
+                    .appendingPathComponent("shinkansen", isDirectory: true)
+                    .appendingPathComponent(fileName)
+                if FileManager.default.fileExists(atPath: nestedURL.path) {
+                    return nestedURL
                 }
-                .buttonStyle(.plain)
-                .accessibilityLabel(series.rawValue)
             }
         }
-        .padding(.horizontal, 7)
-        .padding(.vertical, 5)
-        .background(
-            RoundedRectangle(cornerRadius: 5)
-                .fill(Color.black.opacity(0.72))
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 5)
-                .stroke(Color.green.opacity(0.55), lineWidth: 0.8)
-        )
+        return nil
     }
+'''
+    s = s[:idx] + image_helper + s[idx:]
+p.write_text(s, encoding='utf-8')
+
+# ---------------------------------------------------------------------------
+# Running scene: switch the train graphic according to ContentView state.
+# ---------------------------------------------------------------------------
+p = root / 'RunningScenePanel.swift'
+s = p.read_text(encoding='utf-8')
+property_needle = '''    let selectedDestination: Destination?
+    let selectedOriginStation: Station?
+
+    private let canvasWidth: CGFloat = 1366
+'''
+if 'let trainAssetFileName: String' not in s:
+    if property_needle not in s:
+        raise SystemExit('RunningScenePanel.swift: property insertion point not found')
+    s = s.replace(
+        property_needle,
+        '''    let selectedDestination: Destination?
+    let selectedOriginStation: Station?
+    let trainAssetFileName: String
+
+    private let canvasWidth: CGFloat = 1366
+''',
+        1
+    )
+
+if 'SceneImage(fileName: trainAssetFileName)' not in s:
+    if 'SceneImage(fileName: "train300.png")' not in s:
+        raise SystemExit('RunningScenePanel.swift: train300 reference not found')
+    s = s.replace(
+        'SceneImage(fileName: "train300.png")',
+        'SceneImage(fileName: trainAssetFileName)',
+        1
+    )
+p.write_text(s, encoding='utf-8')
+
+# ---------------------------------------------------------------------------
+# Dashboard: Tokaido title, header train-toggle image button, scene parameter.
+# ---------------------------------------------------------------------------
+p = root / 'ContentViewDashboard.swift'
+s = p.read_text(encoding='utf-8')
+s = s.replace(
+    'Text("300系新幹線電車制御システム")',
+    'Text("東海道新幹線制御システム")'
+)
+s = s.replace(
+    'Text("300 SERIES SHINKANSEN ELECTRIC TRAIN CONTROL SYSTEM")',
+    'Text("TOKAIDO SHINKANSEN CONTROL SYSTEM")'
+)
+
+# Insert the train switch immediately before the origin-station tram menu.
+if '.accessibilityLabel("車両切替")' not in s:
+    menu_needle = '''            Menu {
+                Section("始発駅") {
+'''
+    if menu_needle not in s:
+        raise SystemExit('ContentViewDashboard.swift: header Menu insertion point not found')
+    switch_button = '''            Button {
+                toggleTrainSeries()
+            } label: {
+                if let url = AppResourceBundle.imageURL(fileName: toggleTrainIconFileName),
+                   let uiImage = UIImage(contentsOfFile: url.path) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .interpolation(.high)
+                        .scaledToFit()
+                        .padding(2)
+                        .frame(width: UILayoutConfig.Header.buttonSize, height: UILayoutConfig.Header.buttonSize)
+                        .background(Color.white.opacity(0.10))
+                        .clipShape(RoundedRectangle(cornerRadius: 4))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 4)
+                                .stroke(.green.opacity(0.75), lineWidth: 0.7)
+                        )
+                } else {
+                    Text(selectedTrainSeries.next.rawValue)
+                        .font(.system(size: 12, weight: .black, design: .monospaced))
+                        .foregroundColor(.green)
+                        .frame(width: UILayoutConfig.Header.buttonSize, height: UILayoutConfig.Header.buttonSize)
+                        .background(Color.green.opacity(0.12))
+                        .clipShape(RoundedRectangle(cornerRadius: 4))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 4)
+                                .stroke(.green.opacity(0.75), lineWidth: 0.7)
+                        )
+                }
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("車両切替")
 
 '''
-if needle not in sc:
-    raise SystemExit('RunningScenePanel selector insertion point not found')
-sc = sc.replace(needle, selector, 1)
+    s = s.replace(menu_needle, switch_button + menu_needle, 1)
 
-needle = '                SceneImage(fileName: "train300.png")\n'
-replace = '                SceneImage(fileName: selectedTrainSeries.assetFileName)\n'
-if needle not in sc:
-    raise SystemExit('train300 asset reference not found')
-sc = sc.replace(needle, replace, 1)
-scene.write_text(sc, encoding='utf-8')
-print('patched train selector')
+call_needle = '''                selectedService: selectedService,
+                selectedDestination: selectedDestination,
+                selectedOriginStation: selectedOriginStation
+            )
+'''
+if 'trainAssetFileName: trainAssetFileName' not in s:
+    if call_needle not in s:
+        raise SystemExit('ContentViewDashboard.swift: RunningScenePanel call not found')
+    s = s.replace(
+        call_needle,
+        '''                selectedService: selectedService,
+                selectedDestination: selectedDestination,
+                selectedOriginStation: selectedOriginStation,
+                trainAssetFileName: trainAssetFileName
+            )
+''',
+        1
+    )
+p.write_text(s, encoding='utf-8')
 
-# Build trigger marker: train series selector v7
+# ---------------------------------------------------------------------------
+# Cabin chime: 1012 is Aini Ikou. 1008 remains Otome no Inori.
+# Default chime is Aini Ikou.
+# ---------------------------------------------------------------------------
+p = root / 'AppConfig.swift'
+s = p.read_text(encoding='utf-8')
+old = s
+s = re.sub(r'(static\s+let\s+ainiIkouTrack\s*=\s*)\d+', r'\g<1>1012', s)
+# Some revisions used a different capitalization but the same semantic name.
+s = re.sub(r'(static\s+let\s+ainiIkou(?:Intermediate|Terminal)?Track\s*=\s*)\d+', r'\g<1>1012', s)
+if 'ainiIkouTrack' in old and 'ainiIkouTrack = 1012' not in s:
+    raise SystemExit('AppConfig.swift: failed to map ainiIkouTrack to 1012')
+p.write_text(s, encoding='utf-8')
+
+p = root / 'TrainStateManagers.swift'
+s = p.read_text(encoding='utf-8')
+s, n = re.subn(
+    r'(@Published\s+var\s+selectedChime\s*:\s*ChimeType\s*=\s*)\.[A-Za-z0-9_]+',
+    r'\g<1>.ainiIkou',
+    s,
+    count=1
+)
+if n != 1:
+    raise SystemExit('TrainStateManagers.swift: selectedChime default not found')
+p.write_text(s, encoding='utf-8')
+
+# ---------------------------------------------------------------------------
+# Debug Mode 2: display N700 and use Aini Ikou.
+# Insert just before the first activation of isDebugMode2.
+# ---------------------------------------------------------------------------
+p = root / 'ContentViewOperations.swift'
+s = p.read_text(encoding='utf-8')
+if 'selectedTrainSeries = .n700' not in s:
+    needle = '        isDebugMode2 = true\n'
+    if needle not in s:
+        raise SystemExit('ContentViewOperations.swift: debug activation not found')
+    s = s.replace(
+        needle,
+        '        selectedTrainSeries = .n700\n        selectedChime = .ainiIkou\n' + needle,
+        1
+    )
+p.write_text(s, encoding='utf-8')
+
+print('patched final Tokaido 300/N700 selector + Aini Ikou 1012 behavior')
