@@ -1,5 +1,5 @@
 name: Build Plarail final IPA
-# final build trigger 2026-08-20b
+# final build trigger 2026-08-20c
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
         run: |
           set -euxo pipefail
           ARCHIVE="$RUNNER_TEMP/plarail-final-override.tar.gz"
-          /usr/bin/base64 -D plarail-ios/final-override.tar.gz.b64 > "$ARCHIVE"
+          /usr/bin/base64 -D -i plarail-ios/final-override.tar.gz.b64 -o "$ARCHIVE"
           echo '1e6cfd6762034c7aa67c6ce596690b768fa9bbab5688245b3c64172d24c82fbb  '"$ARCHIVE" | shasum -a 256 -c -
           tar -xzf "$ARCHIVE" -C "$APP_DIR"
           grep -q 'static let ainiIkouTrack = 1012' "$APP_DIR/AppConfig.swift"
