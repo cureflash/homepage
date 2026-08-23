@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f1eb" />
+  <title>動画キャラ 表情・ポーズエディタ</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">MAKEMOVIE / CHARACTER PRESETS</p>
+      <h1>動画キャラ 表情・ポーズエディタ</h1>
+      <p class="lead">ささら・霊夢・魔理沙のプリセットをiPad/PCから編集し、Google Driveへ直接保存します。</p>
+    </div>
+    <a class="homeLink" href="../">ホームへ</a>
+  </header>
+
+  <main class="page">
+    <section class="connectCard">
+      <div class="connectFields">
+        <label>
+          <span>Google OAuth Web クライアントID</span>
+          <input id="clientId" type="text" inputmode="text" autocomplete="off" placeholder="xxxxxxxx.apps.googleusercontent.com" />
+        </label>
+        <button id="rememberClientId" type="button">端末に保存</button>
+        <button id="connectDrive" class="primary" type="button">Google Driveに接続</button>
+      </div>
+      <p class="smallText">クライアントIDはこの端末のブラウザにだけ保存します。秘密鍵は使いません。Drive上の元PSD/ZIPと設定JSONは公開しません。</p>
+    </section>
+
+    <nav class="characterTabs" aria-label="キャラクター">
+      <button type="button" data-character="sasara" class="active">ささら</button>
+      <button type="button" data-character="reimu">霊夢</button>
+      <button type="button" data-character="marisa">魔理沙</button>
+    </nav>
+
+    <section class="actionbar">
+      <button id="reloadDrive" type="button">Driveから再読込</button>
+      <button id="saveDrive" type="button" class="primary">Driveに保存</button>
+      <button id="downloadJson" type="button">JSONをダウンロード</button>
+      <button id="duplicatePreset" type="button">別名で複製</button>
+      <button id="deletePreset" type="button">削除</button>
+      <span id="dirtyBadge" class="dirtyBadge" hidden>未保存</span>
+    </section>
+
+    <div id="status" class="status">Google Driveに接続すると、設定JSONと立ち絵素材を読み込みます。</div>
+
+    <section class="workspace">
+      <aside class="panel presetPanel">
+        <div class="panelHeading">
+          <div>
+            <h2>プリセット</h2>
+            <span id="presetCount" class="count"></span>
+          </div>
+          <select id="emotionFilter" aria-label="感情カテゴリ">
+            <option value="">すべて</option>
+          </select>
+        </div>
+        <input id="presetSearch" class="search" type="search" placeholder="名前で絞り込み" />
+        <div id="presetList" class="presetList"></div>
+      </aside>
+
+      <section class="viewerPanel">
+        <div class="canvasWrap">
+          <canvas id="preview" width="720" height="720"></canvas>
+          <div id="emptyState" class="emptyState">Driveに接続してください</div>
+        </div>
+        <div class="currentPreset">
+          <strong id="currentLabel">—</strong>
+          <code id="currentKey">—</code>
+        </div>
+      </section>
+
+      <aside class="panel controlPanel">
+        <h2>パーツ調整</h2>
+        <div id="controls"></div>
+        <label class="textField">
+          <span>表示名</span>
+          <input id="presetLabel" type="text" />
+        </label>
+        <label class="textField">
+          <span>感情カテゴリ</span>
+          <select id="presetEmotion"></select>
+        </label>
+        <label class="defaultCheck">
+          <input id="setEmotionDefault" type="checkbox" />
+          このカテゴリの既定ポーズにする
+        </label>
+        <button id="applyPreset" class="primary wide" type="button">このプリセットを更新</button>
+
+        <section class="scriptHelp">
+          <h3>台本CSV</h3>
+          <p>普段は表情だけ、細かく固定したい行だけポーズを指定します。</p>
+          <code>表情=serious</code>
+          <code>ポーズ=serious_03</code>
+          <p class="priority">ポーズ指定 ＞ 表情の既定 ＞ normal</p>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
