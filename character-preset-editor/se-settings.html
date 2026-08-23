@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f1eb" />
+  <title>表情SE設定 - MAKEMOVIE</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <style>
+    .sePage { max-width: 1100px; margin: 0 auto; }
+    .seTableWrap { overflow-x: auto; }
+    .seTable { width: 100%; border-collapse: collapse; min-width: 720px; }
+    .seTable th, .seTable td { padding: 10px; border-bottom: 1px solid #ddd4c8; text-align: left; vertical-align: middle; }
+    .seTable input[type="text"] { width: 100%; min-width: 210px; }
+    .seTable input[type="number"] { width: 90px; }
+    .optional { opacity: .72; font-size: .9em; }
+    .ruleBox { margin: 12px 0 18px; padding: 12px 14px; border-radius: 12px; background: #f2ece3; }
+    .ruleBox code { display: inline-block; margin: 2px 5px 2px 0; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">MAKEMOVIE / EXPRESSION SE</p>
+      <h1>表情カテゴリ × SE 設定</h1>
+      <p class="lead">表情に入った瞬間だけ鳴らす効果音を、キャラクターごとに任意設定します。</p>
+    </div>
+    <a class="homeLink" href="./">表情・ポーズ編集へ</a>
+  </header>
+
+  <main class="page sePage">
+    <section class="connectCard">
+      <div class="connectFields">
+        <label>
+          <span>Google OAuth Web クライアントID</span>
+          <input id="clientId" type="text" autocomplete="off" placeholder="xxxxxxxx.apps.googleusercontent.com" />
+        </label>
+        <button id="rememberClientId" type="button">端末に保存</button>
+        <button id="connectDrive" class="primary" type="button">Google Driveに接続</button>
+      </div>
+      <p class="smallText">表情・ポーズエディタと同じOAuthクライアントIDを使います。</p>
+    </section>
+
+    <nav class="characterTabs" aria-label="キャラクター">
+      <button type="button" data-character="sasara" class="active">ささら</button>
+      <button type="button" data-character="reimu">霊夢</button>
+      <button type="button" data-character="marisa">魔理沙</button>
+    </nav>
+
+    <section class="actionbar">
+      <button id="reloadDrive" type="button">Driveから再読込</button>
+      <button id="applyRecommended" type="button">控えめな初期設定を適用</button>
+      <button id="saveDrive" type="button" class="primary">Driveに保存</button>
+      <span id="dirtyBadge" class="dirtyBadge" hidden>未保存</span>
+    </section>
+
+    <div id="status" class="status">Google Driveに接続してください。</div>
+
+    <section class="panel">
+      <h2 id="characterTitle">ささら</h2>
+      <div class="ruleBox">
+        <strong>自動SEのルール</strong><br />
+        同じ話者で表情が切り替わった瞬間だけ鳴ります。表情が続く間は繰り返しません。<br />
+        台本CSVに <code>SE=...</code> が明示されている行は、そちらを優先します。<br />
+        SE欄が空なら、その表情では何も鳴りません。
+      </div>
+      <div class="seTableWrap">
+        <table class="seTable">
+          <thead>
+            <tr>
+              <th>表情カテゴリ</th>
+              <th>内部キー</th>
+              <th>SE <span class="optional">（任意）</span></th>
+              <th>音量</th>
+            </tr>
+          </thead>
+          <tbody id="seRows"></tbody>
+        </table>
+      </div>
+      <datalist id="seChoices">
+        <option value="sparkle.wav"></option>
+        <option value="surprise.wav"></option>
+        <option value="question.wav"></option>
+        <option value="shock.wav"></option>
+        <option value="pop.wav"></option>
+        <option value="boing.wav"></option>
+        <option value="success.wav"></option>
+        <option value="warning.wav"></option>
+        <option value="error.wav"></option>
+        <option value="decision.wav"></option>
+        <option value="notification.wav"></option>
+        <option value="cancel.wav"></option>
+        <option value="confirm.wav"></option>
+        <option value="click.wav"></option>
+        <option value="impact.wav"></option>
+        <option value="whoosh.wav"></option>
+        <option value="page.wav"></option>
+      </datalist>
+    </section>
+  </main>
+
+  <script type="module" src="./se-settings.js"></script>
+</body>
+</html>
