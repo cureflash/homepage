@@ -76,14 +76,19 @@
 
       <aside class="panel controlPanel">
         <h2>パーツ調整</h2>
+        <p id="yukkuriLinkNote" class="smallText" hidden>霊夢 ↔ 魔理沙：顔・眉・目・口は連動します。片方を変えてDrive保存すると、もう片方の同じポーズにも保存されます。</p>
         <div id="controls"></div>
         <label class="textField">
-          <span>表示名</span>
-          <input id="presetLabel" type="text" />
+          <span>このポーズの名前</span>
+          <input id="presetLabel" type="text" placeholder="例：びっくり顔、にやり、真剣" />
         </label>
         <label class="textField">
           <span>感情カテゴリ</span>
           <select id="presetEmotion"></select>
+        </label>
+        <label class="textField">
+          <span>表情カテゴリの表示名</span>
+          <input id="emotionLabel" type="text" placeholder="例：通常、説明、笑顔" />
         </label>
         <label class="defaultCheck">
           <input id="setEmotionDefault" type="checkbox" />
@@ -93,7 +98,7 @@
 
         <section class="scriptHelp">
           <h3>台本CSV</h3>
-          <p>普段は表情だけ、細かく固定したい行だけポーズを指定します。</p>
+          <p>「このポーズの名前」と「表情カテゴリの表示名」は自由に変更できます。CSVでは安定した内部キーを使います。</p>
           <code>表情=serious</code>
           <code>ポーズ=serious_03</code>
           <p class="priority">ポーズ指定 ＞ 表情の既定 ＞ normal</p>
@@ -102,7 +107,7 @@
     </section>
   </main>
 
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./app-v2.js"></script>
   <script type="module" src="./ui-fix.js"></script>
 </body>
 </html>
