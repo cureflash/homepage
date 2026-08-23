@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f1eb" />
+  <title>ささら ポーズ・表情エディタ</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">MAKEMOVIE TOOL</p>
+      <h1>ささら ポーズ・表情エディタ</h1>
+      <p class="lead">初期プリセットを選び、目・眉・口・手だけ微調整して保存します。</p>
+    </div>
+    <a class="homeLink" href="../">ホームへ</a>
+  </header>
+
+  <main class="page">
+    <section class="notice">
+      <strong>PSDはアップロードされません。</strong>
+      <span>選択したPSDはブラウザ内だけで読み込みます。公開サイトには立ち絵素材を置きません。</span>
+    </section>
+
+    <section class="toolbar" aria-label="ファイル操作">
+      <button id="openPsd" class="primary" type="button">1. ささらPSDを開く</button>
+      <button id="openPreset" type="button">設定JSONを開く</button>
+      <button id="resetStarter" type="button">初期8パターンに戻す</button>
+      <button id="savePreset" class="primary" type="button">設定JSONを保存</button>
+      <button id="exportPng" type="button">現在のPNGを書き出す</button>
+      <input id="psdFallback" type="file" accept=".psd,image/vnd.adobe.photoshop" hidden />
+      <input id="jsonFallback" type="file" accept=".json,application/json" hidden />
+    </section>
+
+    <div id="status" class="status">まず「ささらPSDを開く」から、手元のPSDを選んでください。</div>
+
+    <section class="workspace">
+      <aside class="panel presetPanel">
+        <div class="panelTitleRow">
+          <h2>プリセット</h2>
+          <button id="duplicatePreset" type="button" class="small">別名で登録</button>
+        </div>
+        <div id="presetList" class="presetList"></div>
+        <button id="deletePreset" class="dangerText" type="button">選択プリセットを削除</button>
+      </aside>
+
+      <section class="viewerPanel">
+        <div class="canvasWrap">
+          <canvas id="preview" width="791" height="1127"></canvas>
+          <div id="emptyState" class="emptyState">PSDを選ぶと、ここにプレビューが出ます。</div>
+        </div>
+      </section>
+
+      <aside class="panel controlPanel">
+        <h2>微調整</h2>
+        <label>目<select id="eye"></select></label>
+        <label>眉<select id="brow"></select></label>
+        <label>口<select id="mouth"></select></label>
+        <label>奥手<select id="backHand"></select></label>
+        <label>手前手<select id="frontHand"></select></label>
+        <button id="updatePreset" class="primary wide" type="button">このプリセットを更新</button>
+
+        <div class="helpBox">
+          <h3>台本での指定</h3>
+          <code>表情=explain</code>
+          <code>表情=serious</code>
+          <code>表情=surprised</code>
+          <p>保存したプリセット名を、そのまま台本の「表情」列に書きます。</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
