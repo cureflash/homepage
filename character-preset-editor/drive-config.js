@@ -2,10 +2,9 @@ export const DRIVE_FILES = {
   sasara: {
     label: 'さとうささら',
     presetFileId: '1Jpu9pXocx5Unj3yCGCdF1MMUZGIsPB3p',
-    assetType: 'layerpack',
-    assetFolderId: '19pD_hvvPorOc28mZ7G6MknjuQM26A3Hs',
-    assetName: 'sasara_editor.zip',
-    fallbackAssetFileId: '1c2aWOnRuM1erPUZqCx0D7Ao56z1z7bRC',
+    assetFileId: '1TDTJjFb6V4U30hu-cKqxjACj5M7mYNPN',
+    assetType: 'zip',
+    characterRoot: 'sasara',
   },
   reimu: {
     label: '霊夢',
