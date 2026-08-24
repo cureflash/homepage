@@ -24,7 +24,7 @@
     <div>
       <p class="eyebrow">MAKEMOVIE / EXPRESSION SE</p>
       <h1>表情カテゴリ × SE 設定</h1>
-      <p class="lead">表情に入った瞬間だけ鳴らす効果音を、キャラクターごとに任意設定します。</p>
+      <p class="lead">喜び・怒り・悲しい・驚きなどの表情に入った瞬間だけ鳴らす効果音を、キャラクターごとに任意設定します。</p>
     </div>
     <a class="homeLink" href="./">表情・ポーズ編集へ</a>
   </header>
@@ -100,6 +100,124 @@
     </section>
   </main>
 
+  <script>
+(() => {
+  const PRESET_FILE_IDS = new Set([
+    '1Jpu9pXocx5Unj3yCGCdF1MMUZGIsPB3p',
+    '1X00mFg_Dj4-ySbv-EMvooWJeIjGVTlMZ',
+    '1aV4HjqlEO566zAI91RP7rouq2iaVEOpE',
+  ]);
+  const LEGACY_KEYS = new Set(['smile', 'excited', 'deadpan']);
+  const LABELS = { normal: '通常', explain: '説明', happy: '喜び', angry: '怒り', sad: '悲しい', surprised: '驚き', troubled: '困る', thinking: '考える', serious: '真面目', annoyed: '呆れ' };
+  const SINGLE = [
+    ['happy', '喜び', ['happy', 'smile', 'excited']], ['angry', '怒り', ['angry', 'annoyed']], ['sad', '悲しい', ['sad', 'troubled']],
+    ['surprised', '驚き', ['surprised']], ['troubled', '困る', ['troubled']], ['thinking', '考える', ['thinking']],
+    ['serious', '真面目', ['serious']], ['annoyed', '呆れ', ['annoyed', 'deadpan']],
+  ];
+  function copy(value) { return value == null ? value : JSON.parse(JSON.stringify(value)); }
+  function presetEntries(presets, emotions) {
+    const wanted = new Set(emotions);
+    return Object.entries(presets || {}).filter(([, preset]) => wanted.has(String(preset?.emotion || '').trim())).sort(([a], [b]) => a.localeCompare(b, 'ja'));
+  }
+  function pickPreset(presets, preferredKey, emotions, fallback) {
+    if (presets?.[preferredKey]) return copy(presets[preferredKey]);
+    const entries = presetEntries(presets, emotions);
+    if (entries.length) return copy(entries[0][1]);
+    return copy(fallback || Object.values(presets || {})[0] || {});
+  }
+  function migrateSe(oldSe) {
+    const source = oldSe && typeof oldSe === 'object' ? oldSe : {};
+    const next = {};
+    for (const key of ['normal', 'explain', 'surprised', 'troubled', 'thinking', 'serious', 'annoyed']) if (source[key]) next[key] = copy(source[key]);
+    if (source.happy) next.happy = copy(source.happy); else if (source.smile) next.happy = copy(source.smile); else if (source.excited) next.happy = copy(source.excited);
+    if (source.angry) next.angry = copy(source.angry);
+    if (source.sad) next.sad = copy(source.sad);
+    return next;
+  }
+  function normalizeConfig(data) {
+    if (!data || typeof data !== 'object' || !data.presets || !['sasara', 'reimu', 'marisa'].includes(data.character)) return data;
+    if (Number(data.emotion_catalog_version || 0) >= 2) {
+      data.emotion_labels ||= {};
+      for (const key of LEGACY_KEYS) delete data.emotion_labels[key];
+      for (const [key, label] of Object.entries(LABELS)) if (!String(data.emotion_labels[key] || '').trim()) data.emotion_labels[key] = label;
+      data.emotion_defaults ||= {};
+      for (const key of LEGACY_KEYS) delete data.emotion_defaults[key];
+      data.emotion_se = migrateSe(data.emotion_se);
+      return data;
+    }
+    const oldPresets = copy(data.presets || {});
+    data.legacy_presets = { ...(data.legacy_presets || {}), ...copy(oldPresets) };
+    const canonical = {};
+    const fallback = oldPresets.normal_01 || Object.values(oldPresets)[0] || {};
+    for (const emotion of ['normal', 'explain']) {
+      const candidates = presetEntries(oldPresets, emotion === 'normal' ? ['normal', 'deadpan'] : ['explain']);
+      for (let i = 0; i < 3; i += 1) {
+        const key = `${emotion}_0${i + 1}`;
+        const source = copy(oldPresets[key] || candidates[i]?.[1] || candidates[0]?.[1] || fallback);
+        source.emotion = emotion;
+        source.label = `${LABELS[emotion]}${i + 1}`;
+        canonical[key] = source;
+      }
+    }
+    for (const [key, label, sourceEmotions] of SINGLE) {
+      const source = pickPreset(oldPresets, key, sourceEmotions, fallback);
+      source.emotion = key;
+      source.label = label;
+      canonical[key] = source;
+    }
+    data.presets = canonical;
+    data.emotion_labels = { ...LABELS };
+    data.emotion_defaults = { normal: 'normal_01', explain: 'explain_01', happy: 'happy', angry: 'angry', sad: 'sad', surprised: 'surprised', troubled: 'troubled', thinking: 'thinking', serious: 'serious', annoyed: 'annoyed' };
+    data.emotion_se = migrateSe(data.emotion_se);
+    data.emotion_catalog_version = 2;
+    data.schema_version = Math.max(4, Number(data.schema_version || 0));
+    return data;
+  }
+  function driveFileId(input) {
+    try {
+      const url = new URL(typeof input === 'string' ? input : input.url, location.href);
+      const match = url.pathname.match(/\/(?:upload\/)?drive\/v3\/files\/([^/]+)/);
+      return match ? decodeURIComponent(match[1]) : '';
+    } catch (_) { return ''; }
+  }
+  const originalFetch = window.fetch.bind(window);
+  window.fetch = async (input, init = {}) => {
+    const fileId = driveFileId(input);
+    let nextInit = init;
+    const method = String(init.method || 'GET').toUpperCase();
+    if (PRESET_FILE_IDS.has(fileId) && method === 'PATCH' && typeof init.body === 'string') {
+      try { nextInit = { ...init, body: JSON.stringify(normalizeConfig(JSON.parse(init.body)), null, 2) + '\n' }; } catch (_) {}
+    }
+    const response = await originalFetch(input, nextInit);
+    if (!PRESET_FILE_IDS.has(fileId) || method !== 'GET' || !response.ok) return response;
+    try {
+      const normalized = normalizeConfig(JSON.parse(await response.clone().text()));
+      const headers = new Headers(response.headers);
+      headers.set('Content-Type', 'application/json; charset=utf-8');
+      return new Response(JSON.stringify(normalized), { status: response.status, statusText: response.statusText, headers });
+    } catch (_) { return response; }
+  };
+  function cleanLegacyUi() {
+    for (const id of ['emotionFilter', 'presetEmotion']) {
+      const select = document.getElementById(id);
+      if (!select) continue;
+      for (const option of [...select.options]) if (LEGACY_KEYS.has(option.value)) option.remove();
+    }
+    for (const row of document.querySelectorAll('#seRows tr')) {
+      const key = row.querySelector('code')?.textContent?.trim();
+      if (LEGACY_KEYS.has(key)) row.remove();
+    }
+  }
+  let queued = false;
+  const queueClean = () => {
+    if (queued) return;
+    queued = true;
+    queueMicrotask(() => { queued = false; cleanLegacyUi(); });
+  };
+  new MutationObserver(queueClean).observe(document.documentElement, { childList: true, subtree: true });
+  window.addEventListener('DOMContentLoaded', queueClean);
+})();
+  </script>
   <script type="module" src="./se-settings.js"></script>
 </body>
 </html>
