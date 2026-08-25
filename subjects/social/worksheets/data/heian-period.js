@@ -7,7 +7,7 @@
     field: "history",
     unit: "古代までの日本",
     practicalGradeGroup: "中学・歴史導入",
-    factcheckStatus: "pending_factcheck",
+    factcheckStatus: "verified",
     keyPoint: "平安京を中心に貴族政治が展開し、日本独自の国風文化が発達した。",
     timeline: [
       { label: "794年", note: "平安京へ遷都" },
@@ -26,7 +26,7 @@
             terms: ["桓武天皇", "平安京"],
             importance: "A",
             sources: ["kyoto-history", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "heian-02",
@@ -34,7 +34,7 @@
             terms: ["摂政", "関白", "摂関政治"],
             importance: "A",
             sources: ["mext-social-commentary", "kyoto-culture"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "heian-03",
@@ -42,7 +42,7 @@
             terms: ["藤原道長"],
             importance: "A",
             sources: ["kyoto-culture"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       },
@@ -57,7 +57,7 @@
             terms: ["かな文字", "国風文化"],
             importance: "A",
             sources: ["mext-social-commentary", "kyoto-history"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "heian-05",
@@ -65,7 +65,7 @@
             terms: ["紫式部", "源氏物語", "清少納言", "枕草子"],
             importance: "A",
             sources: ["kyoto-history", "kyoto-culture", "ndl-classics"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "heian-06",
@@ -73,7 +73,7 @@
             terms: ["藤原頼通", "平等院鳳凰堂"],
             importance: "B",
             sources: ["byodoin-architecture", "byodoin-history"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       }
@@ -88,7 +88,7 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:Murasaki_Shikibu.jpg",
         credit: "菊池容斎 / Wikimedia Commons",
         license: "Public Domain Mark 1.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "byodoin",
@@ -99,7 +99,7 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:Byodoin.jpg",
         credit: "Cun Cun / Wikimedia Commons",
         license: "CC BY-SA 4.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       }
     ],
     sources: [
