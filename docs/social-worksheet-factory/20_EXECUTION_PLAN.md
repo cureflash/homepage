@@ -6,8 +6,8 @@
 - [x] Define structured sentence/cloze model.
 - [x] Define non-AI historical image rule and license tracking.
 - [x] Create first junior-high history prototype unit: Jomon / Yayoi overview.
-- [ ] Independent scheduled fact-check of the first prototype.
-- [ ] After approval, register the unit as the first verified production unit.
+- [x] Independent scheduled fact-check of the first prototype.
+- [x] After approval, register the unit as the first verified production unit.
 
 ## Junior-high history queue
 
