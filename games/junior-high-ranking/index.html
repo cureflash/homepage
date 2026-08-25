@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="中学1年で習うbe動詞をABCの3択で答える格付けゲームです。">
   <title>中学生格付けチェック｜ひかり教材室</title>
-  <link rel="stylesheet" href="styles.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <main class="page">
     <div class="topbar">
       <a class="back-link" href="../../">← ひかり教材室</a>
-      <div class="current-rank" aria-live="polite">
-        <span>現在のランク</span>
-        <strong id="rank-label">一流中学生</strong>
-      </div>
     </div>
+
+    <aside class="rank-board" aria-live="polite" aria-label="現在の格付け">
+      <span class="rank-board-title">現在の格付け</span>
+      <strong id="rank-label">一流中学生</strong>
+      <ol id="rank-ladder" class="rank-ladder"></ol>
+    </aside>
 
     <header class="hero">
       <p class="eyebrow">JUNIOR HIGH SCHOOL RANKING CHECK</p>
@@ -26,6 +28,13 @@
     <section id="game-panel" class="panel" aria-live="polite">
       <p id="question-number" class="question-number">第1問 / 7</p>
       <h2 id="question-prompt" class="question-prompt">問題を読み込み中…</h2>
+
+      <div class="choice-legend" aria-label="選択肢の色">
+        <span class="legend-a">A＝赤</span>
+        <span class="legend-b">B＝青</span>
+        <span class="legend-c">C＝黄</span>
+      </div>
+
       <div id="choices" class="choices" aria-label="選択肢"></div>
       <p id="feedback" class="feedback"></p>
       <div class="actions">
@@ -34,14 +43,14 @@
     </section>
 
     <section id="result-panel" class="panel result-panel" hidden>
-      <p class="result-label">最終結果</p>
+      <p id="result-label" class="result-label">最終結果</p>
       <h2 id="result-rank">一流中学生</h2>
-      <p class="result-copy">7問の格付けチェックが終了しました。</p>
+      <p id="result-copy" class="result-copy">7問の格付けチェックが終了しました。</p>
       <button id="restart-button" class="primary-button" type="button">もう一度挑戦</button>
     </section>
   </main>
 
-  <script src="questions.js?v=1"></script>
-  <script src="app.js?v=1"></script>
+  <script src="questions.js?v=2"></script>
+  <script src="app.js?v=2"></script>
 </body>
 </html>
