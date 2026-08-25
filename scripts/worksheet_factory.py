@@ -15,6 +15,12 @@ SKILLS = {
     'sub-10': {'title':'10までのひき算', 'kind':'sub', 'max':10},
 }
 
+CATALOG_REQUIRED_FIELDS = {
+    'id', 'school_level', 'grade', 'subject', 'unit', 'skill',
+    'problem_count', 'seed', 'variant', 'title', 'description', 'url',
+    'content_hash',
+}
+
 def compute_answer(p):
     t=p['type']
     if t=='compose': return p['total']-p['known']
@@ -45,6 +51,24 @@ def generate(skill, seed, count=20):
 def validate(problems):
     for p in problems:
         assert compute_answer(p)==p['answer']
+
+def validate_catalog(catalog, repo_root=None):
+    seen_ids=set(); seen_urls=set(); seen_hashes=set()
+    for entry in catalog:
+        missing=CATALOG_REQUIRED_FIELDS-entry.keys()
+        assert not missing, f"missing catalog fields: {sorted(missing)}"
+        assert entry['id'] not in seen_ids, f"duplicate worksheet id: {entry['id']}"
+        assert entry['url'] not in seen_urls, f"duplicate worksheet url: {entry['url']}"
+        assert entry['content_hash'] not in seen_hashes, f"duplicate worksheet content: {entry['id']}"
+        seen_ids.add(entry['id']); seen_urls.add(entry['url']); seen_hashes.add(entry['content_hash'])
+        assert isinstance(entry['problem_count'], int) and entry['problem_count'] > 0
+        if entry['subject']=='理科':
+            for field in ('science_field','worksheet_mode'):
+                assert entry.get(field), f"science catalog entry missing {field}: {entry['id']}"
+            if entry['school_level']=='high-school':
+                assert entry.get('formal_course'), f"high-school science entry missing formal_course: {entry['id']}"
+        if repo_root is not None:
+            assert (Path(repo_root)/entry['url']).is_file(), f"missing worksheet file: {entry['url']}"
 
 def normalized_hash(problems):
     norm=[{k:v for k,v in p.items() if k!='answer'} for p in problems]
@@ -94,6 +118,7 @@ def main(outdir):
                 'url':f"materials/worksheets/elementary/grade-01/{filename}",
                 'content_hash':h
             })
+    validate_catalog(catalog)
     (outdir/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n', encoding='utf-8')
     print(f'generated {len(catalog)} worksheets')
 if __name__=='__main__': main(sys.argv[1])
