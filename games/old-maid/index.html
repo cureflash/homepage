@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="都道府県と県庁所在地の正しいペアを見つけて捨てる9枚のババ抜きゲームです。">
+  <meta name="description" content="都道府県と県庁所在地の正しいペアを見つけて捨てるババ抜きゲームです。通常9枚と全ペアを使うハードモードを選べます。">
   <title>都道府県ババ抜き｜ひかり教材室</title>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <main class="old-maid-page">
@@ -17,10 +17,22 @@
     <section class="game-panel" aria-labelledby="game-message">
       <div class="game-toolbar">
         <div class="game-info">
-          <span>捨てたペア <strong id="pairs-discarded">0</strong>/4</span>
-          <button id="restart-button" type="button">最初から</button>
+          <span>モード <strong id="mode-label">通常</strong></span>
+          <span>捨てたペア <strong id="pairs-discarded">0</strong>/<strong id="pairs-total">4</strong></span>
         </div>
         <button id="discard-button" class="discard-button" type="button" disabled>捨てる</button>
+      </div>
+
+      <div class="game-controls">
+        <div class="control-group" aria-label="難易度">
+          <button id="normal-mode-button" class="mode-button is-active" type="button" aria-pressed="true">通常 9枚</button>
+          <button id="hard-mode-button" class="mode-button" type="button" aria-pressed="false">ハード 全部</button>
+          <button id="restart-button" type="button">最初から</button>
+        </div>
+        <div class="control-group" aria-label="音声">
+          <button id="bgm-button" class="audio-button" type="button" aria-pressed="true">BGM: ON</button>
+          <button id="se-button" class="audio-button" type="button" aria-pressed="true">SE: ON</button>
+        </div>
       </div>
 
       <p id="game-message" aria-live="polite">カードをタッチして2枚選んでください。</p>
@@ -39,6 +51,6 @@
     </section>
   </main>
 
-  <script type="module" src="app.js?v=3"></script>
+  <script type="module" src="app.js?v=4"></script>
 </body>
 </html>
