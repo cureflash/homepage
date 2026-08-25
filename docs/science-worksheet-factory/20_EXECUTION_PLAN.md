@@ -4,10 +4,10 @@ Complete work in order. Check an item only when its acceptance criteria are sati
 
 ## Phase 0 — align with shared math infrastructure
 
-- [ ] Inspect latest math worksheet catalog/generator/validator/PDF/site implementation.
-- [ ] Identify which components can be generalized for science without breaking math.
-- [ ] Record existing worksheet URLs and site behavior that must remain stable.
-- [ ] Add/extend validation so science entries cannot publish broken links or invalid answers.
+- [x] Inspect latest math worksheet catalog/generator/validator/PDF/site implementation.
+- [x] Identify which components can be generalized for science without breaking math.
+- [x] Record existing worksheet URLs and site behavior that must remain stable.
+- [x] Add/extend validation so science entries cannot publish broken links or invalid answers.
 
 Acceptance: science has an explicit integration path into the shared worksheet pipeline and no duplicate standalone architecture is required without a documented reason.
 
@@ -111,3 +111,4 @@ Acceptance: basic earth-science facts and suitable calculations have broad repet
 ## Progress log
 
 - 2026-08-25: science factory instruction set initialized; implementation not yet started.
+- 2026-08-25: Phase 0 completed. Inspected the live math generator/catalog/site/test implementation, documented the shared integration boundary and stable public worksheet URLs in `40_SHARED_INTEGRATION.md`, and extended the shared generator with catalog/link/science-metadata validation plus tests.
