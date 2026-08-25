@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/grade1-variant-publish.yml'
+      - 'tests/test_grade1_variant_publisher.py'
   workflow_dispatch:
 
 permissions:
