@@ -4,72 +4,114 @@
 
 - Active stage: junior-high
 - Active field: history
-- Verified production unit: Jomon / Yayoi overview
-- Active unit: Yayoi society, small states, Yamatai / Himiko
+- Verified through: Yayoi society / small states / Yamatai / Himiko
+- Active batch: Kofun / Asuka / Nara / Heian
 - Next role: FACTCHECK
+- Batch size: 4 units
 - Canonical implementation path: `subjects/social/worksheets/`
+- Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed GENERATE work
+## Completed FACTCHECK — Yayoi society / Yamatai / Himiko
 
-Created `subjects/social/worksheets/data/yayoi-states-yamatai-himiko.js` as the second junior-high history unit. The sheet is intentionally low-density: two sections, six concise study sentences, and two historical-source images.
+Independently reopened authoritative sources instead of accepting the generator summary. The six pending claims were checked against MEXT current junior-high Social Studies commentary, Fukuoka City Museum, National Diet Library, Imperial Household Agency, Kyoto National Museum, and National Museum of Japanese History material.
 
-New core-term groups:
+Final state:
 
-- 小国
-- 奴国 / 後漢 / 漢委奴国王
-- 魏志倭人伝 / 邪馬台国 / 卑弥呼
-- 魏 / 親魏倭王
+- all six sentence records: `verified`
+- unit: `verified`
+- `King of Na gold seal faces.jpg`: verified as a photograph of a Toi Museum replica by PHGCOM; Commons offers CC BY-SA 3.0 / GFDL, and this project records the CC BY-SA 3.0 route
+- `Gishiwajinden.jpg`: Commons file page identifies the material as `魏志倭人伝` and marks the file CC0 1.0; provenance information remains recorded on the file page
+- no AI-generated historical images are used
 
-All six new sentence records are `factcheckStatus: "pending_factcheck"`. Both new image records are also `pending_factcheck`. Do not publish this unit as verified until the independent FACTCHECK run is complete.
+Two wordings were tightened during review:
 
-## Source basis collected during generation
+1. the 239 sentence now states that Himiko sent an envoy to Wei, received the title `親魏倭王`, and was given a gold seal and bronze mirrors, matching the independently reopened sources;
+2. the location sentence now says the location of Yamatai is still unsettled and that debate includes Kyushu and Kinai theories, rather than implying a resolved binary choice.
 
-The generator used these only as candidate evidence; the next run must independently reopen them and verify every claim rather than accepting this summary.
+Main fact-check evidence URLs retained in the unit:
 
-- MEXT current junior-high Social Studies commentary for placement under `古代までの日本` and state formation.
-- Fukuoka City Museum `金印` and `発掘が語る福岡の歴史` for the Na state, 57 CE, Later Han, the gold seal, and northern-Kyushu elite burials.
-- National Diet Library `邪馬台国論争` for the bibliographic identity and historical importance of the `魏志倭人伝` record.
-- Imperial Household Agency 2025 lecture material for the third-century Yamatai/Himiko description.
-- Waseda University Library historical chronology for the 239 embassy and `親魏倭王` entry.
-- Kyoto National Museum `謎多き「三角縁神獣鏡」` for Himiko's diplomacy with Wei and the `親魏倭王` title.
-- National Museum of Japanese History FAQ and NDL material for the unresolved location of Yamatai.
+- MEXT: `https://www.mext.go.jp/content/20240919-mxt_kyoiku01-100002608.pdf`
+- Fukuoka City Museum gold seal: `https://museum.city.fukuoka.jp/sp/gold/`
+- Fukuoka City Museum excavation history: `https://museum.city.fukuoka.jp/archives/leaflet/414/index.html`
+- NDL Yamatai material: `https://dl.ndl.go.jp/view/download/digidepo_999426_po_85.pdf?contentNo=1`
+- Imperial Household Agency 2025 lecture: `https://www.kunaicho.go.jp/learn/culture/kosyo/kosho-r07.html`
+- Kyoto National Museum: `https://www.kyohaku.go.jp/jp/learn/home/yomimono_data/0063/`
+- Rekihaku FAQ: `https://www.rekihaku.ac.jp/contact/faq/`
 
-## New image candidates
+## Completed GENERATE batch — four units
 
-1. `King of Na gold seal faces.jpg`
-   - explicitly labeled as a Toi Museum replica image, not the original artifact photograph
-   - Wikimedia Commons file page currently states PHGCOM, CC BY-SA 3.0 / GFDL
-   - must independently verify the exact file license and attribution on FACTCHECK
+All new material below is deliberately `pending_factcheck`. It must not be treated as published/verified content until the next independent FACTCHECK run.
 
-2. `Gishiwajinden.jpg`
-   - image of text identified on Commons as `魏志倭人伝`
-   - Commons file page currently states CC0 1.0
-   - must independently verify provenance, labeling, and file license on FACTCHECK
+### 1. Kofun period and Yamato polity
 
-No AI-generated historical images were added.
+File: `subjects/social/worksheets/data/kofun-yamato.js`
 
-## Generator/tool changes
+- 6 concise study sentences
+- core terms include 古墳 / 前方後円墳 / 埴輪 / 大和政権 / 渡来人
+- 2 image candidates:
+  - `Daisenryo Kofun zenkei.JPG` — Saigen Jiro, Commons, CC0 1.0
+  - warrior haniwa `DSC05626.JPG` — Daderot, Commons, CC0 1.0
+- candidate fact sources: MEXT and Cultural Heritage Online
 
-The previously verified Jomon/Yayoi unit remains in place. The worksheet UI now supports multiple registered units through a unit selector:
+### 2. Asuka reforms and ritsuryo formation
 
-- `subjects/social/worksheets/data/jomon-yayoi.js` now registers the existing verified unit in `window.SOCIAL_WORKSHEET_UNITS` without changing its verified sentence content.
-- `subjects/social/worksheets/data/yayoi-states-yamatai-himiko.js` registers the new pending unit.
-- `subjects/social/worksheets/index.html` loads both datasets and exposes the unit selector.
-- `subjects/social/worksheets/app.js` selects the active dataset while preserving seeded explicit-term-only blank generation.
+File: `subjects/social/worksheets/data/asuka-ritsuryo.js`
 
-The cloze algorithm itself was not broadened: only `sentence.terms` are eligible for blanks, and the same seed/rate still determines the blank set reproducibly.
+- 5 concise study sentences
+- core terms include 冠位十二階 / 十七条の憲法 / 小野妹子 / 遣隋使 / 中大兄皇子 / 中臣鎌足 / 大化の改新 / 大宝律令 / 律令国家
+- 2 image candidates:
+  - `Portrait of Prince Shōtoku and Two Princes.jpg` — Commons file marked public domain
+  - Horyu-ji `法隆寺57.JPG` — Nekosuki, Commons, CC BY-SA 4.0
+- candidate fact sources: MEXT, Horyu-ji, Nara Prefecture materials, Nara Manyo Culture Center, archaeological-report materials
+
+### 3. Nara period
+
+File: `subjects/social/worksheets/data/nara-period.js`
+
+- 6 concise study sentences
+- core terms include 平城京 / 長安 / 律令国家 / 聖武天皇 / 東大寺 / 正倉院 / 天平文化
+- 2 image candidates:
+  - `Todaiji-Daibutsuden-1999.jpg` — Bigjap, Commons, CC0 1.0
+  - `Shosin-shouso.jpg` — あずきごはん, Commons, CC BY-SA 4.0
+- candidate fact sources: MEXT and Nara City official history/cultural-property pages
+
+### 4. Heian period
+
+File: `subjects/social/worksheets/data/heian-period.js`
+
+- 6 concise study sentences
+- core terms include 桓武天皇 / 平安京 / 摂政 / 関白 / 摂関政治 / 藤原道長 / かな文字 / 国風文化 / 紫式部 / 源氏物語 / 清少納言 / 枕草子 / 藤原頼通 / 平等院鳳凰堂
+- 2 image candidates:
+  - `Murasaki Shikibu.jpg` — Kikuchi Yosai work / Commons, Public Domain Mark 1.0
+  - `Byodoin.jpg` — Cun Cun, Commons, CC BY-SA 4.0
+- candidate fact sources: MEXT, Kyoto official school-trip history/culture material, NDL, and Byodoin official pages
+
+No AI-generated historical images were added in this batch.
+
+## Tool integration
+
+`subjects/social/worksheets/index.html` now loads the six current datasets in order:
+
+1. Jomon / Yayoi overview — verified
+2. Yayoi society / Yamatai / Himiko — verified
+3. Kofun / Yamato — pending
+4. Asuka / ritsuryo — pending
+5. Nara — pending
+6. Heian — pending
+
+The shared generator behavior was not broadened. `app.js` still blanks only terms explicitly listed in each sentence's `terms` array, so arbitrary nouns cannot become blanks. Existing seed/rate behavior is unchanged.
 
 ## Exact next starting point
 
-Perform an independent FACTCHECK of only `yayoi-society-states-yamatai-himiko`.
+Perform one independent FACTCHECK batch covering only these four files:
 
-Treat these six claims as untrusted and reopen authoritative sources from scratch:
+- `subjects/social/worksheets/data/kofun-yamato.js`
+- `subjects/social/worksheets/data/asuka-ritsuryo.js`
+- `subjects/social/worksheets/data/nara-period.js`
+- `subjects/social/worksheets/data/heian-period.js`
 
-1. formation of small states and northern-Kyushu ruler tomb evidence;
-2. Na-state embassy to Later Han in 57 CE;
-3. identification/wording of the `漢委奴国王` gold seal;
-4. what `魏志倭人伝` is and what it records about Yamatai/Himiko;
-5. 239 embassy to Wei and the `親魏倭王` title/insignia wording;
-6. statement that Yamatai's location remains unsettled, with Kyushu and Kinai as representative theories.
+Treat all 23 new study sentences and all 8 image records as untrusted. Reopen MEXT and authoritative museum/archive/government/temple sources from scratch. Do not approve an item merely because its generator source list looks plausible.
 
-Also independently reopen both Commons file pages and verify the exact image identity, replica/original distinction, authorship, license, and attribution. Correct or reject any unsupported wording. If and only if all pending material is supportable, mark it `verified`, set `next_role` to `generate`, and advance to `kofun-period-yamato-polity`.
+For every sentence, verify dates, names, institutional terminology, causal wording, and current junior-high curriculum placement. For every image, independently verify exact file identity, whether it depicts what the label says, author/creator, source, license, and any attribution/share-alike requirement. Correct or reject unsupported wording or image use.
+
+Only after all four units pass should their sentence/image/unit statuses become `verified`. Then set `next_role` to `generate`, clear the active fact-check batch, and advance the queue to `Kamakura period`.
