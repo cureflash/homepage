@@ -4,97 +4,92 @@ Updated: 2026-08-26
 
 ## Completed this run
 
-- Started from latest `main`, recursively listed and read every Markdown file under `docs/science-worksheet-factory/` in lexical path order, read the four required shared math-factory control files, and inspected the current shared generator, science helpers, JH2 publisher/tests, catalog/PDF path and site listing before editing.
-- Resumed Phase 3 at the exact handoff point: physics, junior-high grade 2. Did not advance to junior-high grade 3 or another science field.
-- Re-opened the current MEXT junior-high science commentary immediately before implementation. The `電流とその利用` explanation states that electric power is current multiplied by voltage and is measured in W, electric energy is power multiplied by time and is measured in J, and generated heat quantity is also expressed in J while examining its relationship with electric power and time.
-- Added three structured focused calculation families without introducing a new science problem type, answer format, relation engine or renderer:
-  - electric power `P = V × I`: 10 worksheets, deterministic seeds `6251`–`6260`;
-  - electric energy `E = P × t`: 10 worksheets, deterministic seeds `6261`–`6270`;
-  - electric-heater heat quantity `Q = P × t`: 10 worksheets, deterministic seeds `6271`–`6280`.
-- Each worksheet contains 20 basic numerical problems. Energy/heat time is deliberately limited to seconds and answers to joules in this first focused batch; no arbitrary conversion-heavy puzzle set was added merely to increase volume.
-- Reused the existing shared `product` relation in `science_worksheet_helpers.py`, independent answer recomputation, normalized content hashing, common PDF renderer and shared catalog validator. The existing 60 JH2 worksheets keep their IDs, seeds and problem sets unchanged.
-- Expanded `tests/test_science_physics_jh2.py` so all 90 JH2 sheets must regenerate deterministically with distinct normalized hashes. Added independent checks for `P = V × I`, `E = P × t` and `Q = P × t`, W/J units, second-based time, prompt-length constraints and corrupted-answer rejection.
-- Expanded `.github/workflows/science-jh2-publish.yml` so real-checkout validation requires exactly 90 JH2 physics entries: 30 Ohm-law, 10 series-voltage, 10 parallel-current, 10 series-combined-resistance, 10 electric-power, 10 electric-energy and 10 heat-quantity sheets.
-- GitHub Actions run `32884426705` completed successfully. Shared tests, JH2 tests, generation, post-generation catalog/output validation and commit/push all passed.
-- The generated publication commit is `9bcbe3c6001f3d614f8921721fc9ef2a91e706f6` (`Publish 30 JH2 power energy and heat worksheets`).
-- Updated `curriculum/physics/PLAN.md` to record the accepted 90-sheet JH2 focused-calculation checkpoint. Phase 3 checkboxes remain open because JH2 mixed/review work, JH3, `物理基礎` and `物理` are still incomplete.
+- Started from latest `main`, recursively listed and read every Markdown file under `docs/science-worksheet-factory/` in lexical path order, and read the required shared math-factory control files.
+- Inspected the current shared generator/validator/PDF renderer (`scripts/worksheet_factory.py`), science helpers, JH2 structured topic registry/publisher/tests, shared catalog schema/data, and catalog-driven `worksheets/index.html`. No competing science pipeline was introduced.
+- Resumed Phase 3 at the exact prior point: physics, junior-high grade 2, mixed/review coverage. Did not advance to chemistry, biology or earth science.
+- Re-opened the current MEXT junior-high science curriculum/commentary. The present `電流とその利用` scope still includes direct/parallel circuits, electric resistance and combined resistance, electric power, electric energy and heat quantity. This run added no new formula/fact family; it recombined the already verified JH2 registry.
+- Added `scripts/science_physics_jh2_mixed_review.py` with deterministic builders sourcing all numerical items from `JH2_PHYSICS_FORMULA_TOPICS`.
+- Published 15 `mixed` worksheets using seeds `6301`–`6315` and 15 cumulative `review` worksheets using seeds `6351`–`6365`.
+- Each new worksheet contains 20 basic numerical problems. The builders deliberately span Ohm's law direct/reverse solving, series voltage, parallel current, series combined resistance, electric power, electric energy and heat quantity.
+- Each generated mixed/review sheet is tested to contain at least seven distinct source formula IDs, all five answer-unit families V/A/Ω/W/J, and Ohm-law solving for V/I/R. The new 30 hashes must be distinct from one another and from all 90 focused JH2 hashes.
+- Extended the existing JH2 publisher rather than adding a separate publication pipeline. The shared independent recomputation, normalized content hashing, PDF renderer and catalog validator remain authoritative.
+- Extended `tests/test_science_physics_jh2.py` with deterministic regeneration, cross-topic breadth, focused-vs-mixed/review duplicate rejection, prompt-length and corrupted-answer checks.
+- Extended `.github/workflows/science-jh2-publish.yml` to include the new builder and to require exactly 120 JH2 physics entries: 90 focused + 15 mixed + 15 review.
+- GitHub Actions run `32889892459` completed successfully. The generated publication commit is `8bf5e9f6728450f9f8674948e20d97c63988f71d` (`Publish 30 JH2 mixed and review worksheets`).
+- Updated `curriculum/physics/PLAN.md` so JH2 is now considered to have a complete focused → mixed → review production cycle and the next production stage is junior-high grade 3.
 
 ## Changed files
 
-- `scripts/science_physics_jh2_topics.py`
+- `scripts/science_physics_jh2_mixed_review.py` (new)
+- `scripts/publish_science_physics_jh2.py`
 - `tests/test_science_physics_jh2.py`
 - `.github/workflows/science-jh2-publish.yml`
 - `worksheets/catalog.json`
 - 30 new PDFs under `materials/worksheets/science/junior-high/grade-02/physics/`:
-  - `science-jh2-physics-electric-power-basic-01.pdf` through `-10.pdf`
-  - `science-jh2-physics-electric-energy-basic-01.pdf` through `-10.pdf`
-  - `science-jh2-physics-heat-quantity-basic-01.pdf` through `-10.pdf`
+  - `science-jh2-physics-electricity-mixed-01.pdf` through `-15.pdf`
+  - `science-jh2-physics-electricity-review-01.pdf` through `-15.pdf`
 - `docs/science-worksheet-factory/curriculum/physics/PLAN.md`
 - `docs/science-worksheet-factory/90_HANDOFF.md`
 
 ## Validation results
 
-GitHub Actions run `32884426705` completed successfully against a real checkout of current `main`.
+GitHub Actions run `32889892459` completed successfully against a real checkout of current `main`.
 
-Before publication:
+The workflow ran, before and after generation:
 - `python tests/test_worksheet_factory.py` -> OK
 - `python tests/test_science_physics_jh2.py` -> OK
-
-After publication:
-- `python tests/test_worksheet_factory.py` -> OK
-- `python tests/test_science_physics_jh2.py` -> OK
-- complete JH2 physics catalog/output validation -> OK
+- shared catalog/output validation -> OK
 
 The validated JH2 checkpoint now contains:
-- exactly 90 junior-high grade-2 physics catalog entries;
-- exactly 70 `calculation-basic` and 20 `calculation-reverse` sheets;
-- 30 `ohms-law` entries;
-- 10 each of `series-circuit-voltage`, `parallel-circuit-current`, `series-combined-resistance`, `electric-power`, `electric-energy` and `heat-quantity`;
-- all entries `numeric`, `focused`, `basic`;
-- 20 problems per worksheet;
-- distinct normalized problem-content hashes across all 90 generated variants;
-- independent numerical recomputation rather than trusting stored answers;
-- every registered PDF exists, begins with `%PDF`, exceeds the minimum-size check and has the expected shared two-page problem/answer structure;
+- exactly 120 junior-high grade-2 physics catalog entries;
+- 90 `focused`, 15 `mixed`, 15 `review`;
+- 70 `calculation-basic`, 20 `calculation-reverse`, 15 `calculation-mixed`, 15 `calculation-review`;
+- 30 Ohm-law focused entries;
+- 10 each for series voltage, parallel current, series combined resistance, electric power, electric energy and heat quantity;
+- 30 cumulative electricity entries across mixed/review;
+- all entries use independently recomputable numeric answers;
+- every registered JH2 PDF exists, begins with `%PDF`, exceeds the minimum-size check and has the expected shared two-page problem/answer structure;
 - shared catalog validation passes, including duplicate ID, URL and normalized-content-hash checks.
 
-The shared renderer remains unchanged: problem numbers are ordinary integers without decimal-looking punctuation, and the answer page repeats the original problem layout with answers overlaid in red.
+The shared renderer remains unchanged: problem numbers are plain integers without decimal-looking punctuation, and answer pages repeat the problem layout with answers added in red.
 
-Screenshot-based visual QA for generated PDFs remains pending because this GitHub connector path does not expose the PDF bytes directly to the screenshot renderer. Structural PDF validation and prompt-length/unit tests passed; do not claim representative generated-PDF visual inspection has passed.
+Screenshot-based visual QA remains incomplete because the GitHub connector does not expose generated PDF bytes directly to the screenshot renderer. Structural PDF checks and prompt-length tests passed; do not claim representative generated-PDF screenshot inspection has passed.
 
 ## Current implementation status
 
 Phase 0, Phase 1 and Phase 2 are complete. Phase 3 remains in progress.
 
-Published physics coverage now includes:
-- junior-high grade 1: 48 worksheets with focused calculation, concept retrieval, light/sound retrieval, mixed and cumulative review;
-- junior-high grade 2: 90 focused calculation worksheets covering Ohm's law, selected basic series/parallel circuit relationships, series combined resistance, electric power, electric energy and heat quantity.
+Published physics coverage:
+- junior-high grade 1: 48 worksheets, including focused calculation/retrieval plus mixed/review;
+- junior-high grade 2: 120 worksheets, including 90 focused calculations plus 15 mixed and 15 review.
 
-The current science factory therefore has 138 published physics worksheets across JH1 and JH2 at this checkpoint.
+Current published physics total: 168 worksheets.
+
+JH2 now has sufficient focused/mixed/review coverage to advance in the required curriculum order to junior-high grade 3.
 
 ## Incomplete work / blockers
 
-- JH2 now has a broad focused calculation base but still needs legitimate `mixed` and cumulative `review` coverage before moving to JH3.
-- Build mixed/review from the already verified JH2 topic registries rather than copying formulas into a separate content source. A mixed sheet should deliberately cover multiple topic families; a review sheet should broaden cumulative retrieval/calculation while remaining basic and mechanically checkable.
-- High-value short retrieval may cover series-current equality, parallel-voltage equality, formula/symbol/unit recall and other current MEXT statements that support the calculation work. Do not add ambiguous free-response content simply to inflate counts.
-- Time/unit-conversion variants may be added only where educationally natural and independently validated. The focused `E = P × t` and `Q = P × t` batches intentionally use seconds and joules.
-- Do not make reciprocal parallel-resistance formula memorization a high-volume drill by default. The current MEXT commentary frames combined resistance through whole-circuit current and voltage.
-- Magnetic field and electromagnetic-induction content is part of JH2, but add numerical drills only where a natural basic quantitative relation exists; otherwise use structured retrieval later.
-- Screenshot-based generated-PDF visual QA remains pending.
+- Junior-high grade 3 physics has not yet been produced by the science factory.
+- Before publishing JH3, re-verify current MEXT placement and quantitative treatment for motion and energy: speed/average speed, force composition/decomposition, work, power, kinetic/potential/mechanical energy and energy conversion/efficiency where applicable.
+- Start with simple, mechanically recomputable formula/substitution families. Do not turn the first JH3 batch into multi-step entrance-exam problems.
+- Use the 30–60 worksheet throughput target once the JH3 formula registry and tests are safe.
+- Magnetic field/electromagnetic-induction retrieval remains a possible later JH2 completeness enhancement, but it must not block the required production-order move to JH3 and should not be inflated into unnatural numerical drills.
+- Screenshot-based PDF visual QA remains pending.
 - Diagram-label exercises remain deferred until deterministic diagram rendering and independent positional validation are reliable.
-- Phase 3 calculation/retrieval/review checkboxes remain unchecked until physics has broad coverage through JH2, JH3, `物理基礎` and `物理`.
+- Phase 3 checkboxes remain open until JH3, `物理基礎` and `物理` have broad basic coverage.
 
 ## Exact next starting point
 
-Continue Phase 3, physics, junior-high grade 2:
+Continue Phase 3, physics, junior-high grade 3:
 
 1. start from latest `main` and repeat the required science-Markdown/shared-math read sequence;
-2. inspect concurrent changes to the shared worksheet factory before editing;
-3. use the existing verified JH2 topic definitions as the source pool for a deterministic mixed/review builder; do not duplicate the science pipeline;
-4. target another coherent 30–60-sheet checkpoint if the mixed/review generator, independent validation and normalized duplicate checks remain safe; a smaller batch is acceptable only for a concrete validation reason;
-5. ensure mixed sheets genuinely cross multiple JH2 skills rather than being title-only variants, and ensure review sheets are cumulative without becoming entrance-exam-style multi-step circuit puzzles;
-6. where useful, add finite accepted-set retrieval for core circuit relationships/formulas/units, using independently recomputable structured facts;
-7. run shared and JH2 tests, independent recomputation, duplicate detection, full catalog/output validation and real PDF generation before publication;
-8. only after JH2 has sufficient focused/mixed/review coverage should production advance to junior-high grade 3 physics;
+2. inspect any concurrent changes to the shared worksheet factory before editing;
+3. re-open current MEXT junior-high science guidance and verify JH3 `運動とエネルギー` scope and the exact quantitative relations suitable for repetitive worksheets;
+4. define structured JH3 formula topics using the shared science formula helper rather than creating a new engine;
+5. prioritize speed/average speed, work, power and mechanically safe energy calculations; add force composition/decomposition only in forms that remain unambiguous and independently checkable;
+6. target a coherent 30–60 worksheet first JH3 batch after foundation tests pass, using direct/basic and reverse variants where natural;
+7. extend the shared tests/publisher/workflow, generate PDFs through Actions, validate full catalog/output existence and duplicate hashes, then record the exact published checkpoint;
+8. after focused JH3 skills are broad enough, add mixed/review before moving to `物理基礎`;
 9. keep physics ahead of chemistry, biology and earth science.
 
-Do not return to JH1 merely to inflate counts, and do not create difficult circuit puzzles or artificial unit conversions to increase volume.
+Do not return to JH1/JH2 merely to inflate counts unless fixing a real defect or adding a clearly legitimate high-use nonduplicate family.
