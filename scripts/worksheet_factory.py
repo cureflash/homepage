@@ -1,5 +1,6 @@
 import hashlib, json, random, sys
 from pathlib import Path
+from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.cidfonts import UnicodeCIDFont
@@ -196,10 +197,25 @@ def text_problem(p):
     raise ValueError(p['type'])
 
 
+def problem_number_label(number):
+    return str(number)
+
+
+def draw_numbered_problem(c, x, y, number, problem, answer=None):
+    c.setFillColor(colors.black)
+    c.drawString(x, y, problem_number_label(number))
+    c.drawString(x + 28, y, text_problem(problem))
+    if answer is not None:
+        c.setFillColor(colors.red)
+        c.drawString(x + 28, y - 20, f"こたえ：{answer}")
+        c.setFillColor(colors.black)
+
+
 def render_pdf(path, title, problems):
     c=canvas.Canvas(str(path), pagesize=A4)
     w,h=A4
     def page_header(label):
+        c.setFillColor(colors.black)
         c.setFont(FONT,18); c.drawString(45,h-55,title)
         c.setFont(FONT,10); c.drawRightString(w-45,h-52,label)
         c.setFont(FONT,10); c.drawString(45,h-78,'なまえ：____________________________')
@@ -208,12 +224,12 @@ def render_pdf(path, title, problems):
     for i,p in enumerate(problems):
         col=i//10; row=i%10
         x=55+col*260; y=h-120-row*63
-        c.drawString(x,y,f"{i+1:02d}. {text_problem(p)}")
+        draw_numbered_problem(c, x, y, i+1, p)
     c.showPage(); page_header('こたえ'); c.setFont(FONT,14)
     for i,p in enumerate(problems):
         col=i//10; row=i%10
         x=55+col*260; y=h-120-row*63
-        c.drawString(x,y,f"{i+1:02d}. {p['answer']}")
+        draw_numbered_problem(c, x, y, i+1, p, compute_answer(p))
     c.save()
 
 
@@ -232,7 +248,7 @@ def main(outdir):
                 'id':wid,'school_level':'elementary','grade':1,'subject':'算数',
                 'unit':SKILLS[skill]['title'],'skill':skill,'problem_count':20,
                 'seed':seed,'variant':variant,'title':f"{SKILLS[skill]['title']} {variant:02d}",
-                'description':'基礎計算を20問くり返すプリントです。2ページ目に解答があります。',
+                'description':'基礎計算を20問くり返すプリントです。2ページ目は元の問題に赤字で解答を加えています。',
                 'url':f"materials/worksheets/elementary/grade-01/{filename}",
                 'content_hash':h,'difficulty':'basic','worksheet_series':'focused','answer_type':'numeric'
             })
