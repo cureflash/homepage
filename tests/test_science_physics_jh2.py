@@ -30,7 +30,7 @@ def test_deterministic_and_distinct():
             h = normalized_hash(first)
             assert h not in hashes
             hashes.add(h)
-    assert len(hashes) == 9
+    assert len(hashes) == 30
 
 
 def test_ohms_law_answers():
