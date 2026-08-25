@@ -38,6 +38,10 @@ SKILLS = {
     'add-1digit-random': {'title':'1桁 + 1桁 ランダム反復', 'kind':'add-1digit-random'},
     'mixed-add-sub-20': {'title':'20までのたし算・ひき算混合', 'kind':'mixed-add-sub-20'},
     'missing-number-add-sub': {'title':'□に入る数（加減の簡単な逆算）', 'kind':'missing-number-add-sub'},
+    'compare-2digit': {'title':'2桁の数の大小比較', 'kind':'compare-2digit', 'answer_type':'accepted-set'},
+    'number-before-after': {'title':'数の並び・前後の数', 'kind':'number-before-after'},
+    'two-digit-one-digit-mixed': {'title':'簡単な2桁 + 1桁 / 2桁 - 1桁', 'kind':'two-digit-one-digit-mixed'},
+    'grade1-review': {'title':'小学1年 算数 総復習', 'kind':'grade1-review', 'worksheet_series':'review'},
 }
 
 CATALOG_REQUIRED_FIELDS = {
@@ -108,6 +112,9 @@ def compute_answer(p):
     if t=='missing-add-left': return p['total']-p['known']
     if t=='missing-add-right': return p['total']-p['known']
     if t=='missing-sub-subtrahend': return p['minuend']-p['result']
+    if t=='compare': return '=' if p['a']==p['b'] else ('<' if p['a']<p['b'] else '>')
+    if t=='before': return p['number']-1
+    if t=='after': return p['number']+1
     raise ValueError(t)
 
 
@@ -158,6 +165,43 @@ def make_problem(rng, spec):
             return {'type':'missing-add-right','known':known,'total':total,'answer':answer}
         minuend=rng.randint(0,20); answer=rng.randint(0,min(9,minuend)); result=minuend-answer
         return {'type':'missing-sub-subtrahend','minuend':minuend,'result':result,'answer':answer}
+    if k=='compare-2digit':
+        a=rng.randint(10,99)
+        relation=rng.choice(('less','greater','equal'))
+        if relation=='equal':
+            b=a
+        elif relation=='less':
+            if a==99: a=rng.randint(10,98)
+            b=rng.randint(a+1,99)
+        else:
+            if a==10: a=rng.randint(11,99)
+            b=rng.randint(10,a-1)
+        answer='=' if a==b else ('<' if a<b else '>')
+        return {'type':'compare','a':a,'b':b,'answer':answer}
+    if k=='number-before-after':
+        number=rng.randint(11,98)
+        t=rng.choice(('before','after'))
+        answer=number-1 if t=='before' else number+1
+        return {'type':t,'number':number,'answer':answer}
+    if k=='two-digit-one-digit-mixed':
+        if rng.choice((True,False)):
+            tens=rng.randint(1,9); ones=rng.randint(0,8); a=10*tens+ones
+            b=rng.randint(1,9-ones)
+            return {'type':'add','a':a,'b':b,'answer':a+b}
+        tens=rng.randint(1,9); ones=rng.randint(1,9); a=10*tens+ones
+        b=rng.randint(1,ones)
+        return {'type':'sub','a':a,'b':b,'answer':a-b}
+    if k=='grade1-review':
+        review_spec=rng.choice((
+            {'kind':'add','max':10},
+            {'kind':'sub','max':10},
+            {'kind':'add-20-carry'},
+            {'kind':'sub-20-borrow'},
+            {'kind':'missing-number-add-sub'},
+            {'kind':'number-before-after'},
+            {'kind':'two-digit-one-digit-mixed'},
+        ))
+        return make_problem(rng, review_spec)
     raise ValueError(k)
 
 
@@ -219,6 +263,9 @@ def text_problem(p):
     if p['type']=='missing-add-left': return f"□ + {p['known']} = {p['total']}"
     if p['type']=='missing-add-right': return f"{p['known']} + □ = {p['total']}"
     if p['type']=='missing-sub-subtrahend': return f"{p['minuend']} - □ = {p['result']}"
+    if p['type']=='compare': return f"{p['a']}  □  {p['b']}"
+    if p['type']=='before': return f"{p['number']} の まえの かずは □"
+    if p['type']=='after': return f"{p['number']} の つぎの かずは □"
     raise ValueError(p['type'])
 
 
@@ -268,21 +315,23 @@ def render_pdf(path, title, problems):
 def main(outdir):
     outdir=Path(outdir); outdir.mkdir(parents=True,exist_ok=True)
     catalog=[]; hashes=set()
-    for skill in SKILLS:
+    for skill,spec in SKILLS.items():
         for variant,seed in enumerate((101,), start=1):
             problems=generate(skill, seed, 20)
             h=normalized_hash(problems)
             assert h not in hashes, 'duplicate worksheet content'; hashes.add(h)
             wid=f"e1-{skill}-{variant:02d}"
             filename=f"{wid}.pdf"
-            render_pdf(outdir/filename, SKILLS[skill]['title'], problems)
+            render_pdf(outdir/filename, spec['title'], problems)
             catalog.append({
                 'id':wid,'school_level':'elementary','grade':1,'subject':'算数',
-                'unit':SKILLS[skill]['title'],'skill':skill,'problem_count':20,
-                'seed':seed,'variant':variant,'title':f"{SKILLS[skill]['title']} {variant:02d}",
-                'description':'基礎計算を20問くり返すプリントです。2ページ目は元の問題に赤字で解答を加えています。',
+                'unit':spec['title'],'skill':skill,'problem_count':20,
+                'seed':seed,'variant':variant,'title':f"{spec['title']} {variant:02d}",
+                'description':'基礎練習を20問くり返すプリントです。2ページ目は元の問題に赤字で解答を加えています。',
                 'url':f"materials/worksheets/elementary/grade-01/{filename}",
-                'content_hash':h,'difficulty':'basic','worksheet_series':'focused','answer_type':'numeric'
+                'content_hash':h,'difficulty':'basic',
+                'worksheet_series':spec.get('worksheet_series','focused'),
+                'answer_type':spec.get('answer_type','numeric')
             })
     validate_catalog(catalog)
     (outdir/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n', encoding='utf-8')
