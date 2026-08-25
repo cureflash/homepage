@@ -44,7 +44,7 @@ jobs:
           python tests/test_worksheet_factory.py
           python tests/test_science_physics_jh2.py
 
-      - name: Generate and register JH2 Ohm-law batch
+      - name: Generate and register JH2 electricity batch
         run: python scripts/publish_science_physics_jh2.py
 
       - name: Re-run validation after publication
@@ -53,6 +53,7 @@ jobs:
           python tests/test_science_physics_jh2.py
           python - <<'PY'
           import json
+          from collections import Counter
           from pathlib import Path
           from scripts.worksheet_factory import validate_catalog
           root = Path('.')
@@ -65,18 +66,24 @@ jobs:
               and x.get('school_level') == 'junior-high'
               and x.get('grade') == 2
           ]
-          assert len(rows) == 30, len(rows)
+          assert len(rows) == 60, len(rows)
           assert all(x['answer_type'] == 'numeric' for x in rows)
           assert all(x['worksheet_series'] == 'focused' for x in rows)
-          assert sum(x['worksheet_mode'] == 'calculation-basic' for x in rows) == 10
-          assert sum(x['worksheet_mode'] == 'calculation-reverse' for x in rows) == 20
+          modes = Counter(x['worksheet_mode'] for x in rows)
+          assert modes['calculation-basic'] == 40, modes
+          assert modes['calculation-reverse'] == 20, modes
+          skills = Counter(x['skill'] for x in rows)
+          assert skills['ohms-law'] == 30, skills
+          assert skills['series-circuit-voltage'] == 10, skills
+          assert skills['parallel-circuit-current'] == 10, skills
+          assert skills['series-combined-resistance'] == 10, skills
           for entry in rows:
               path = root / entry['url']
               data = path.read_bytes()
               assert data.startswith(b'%PDF')
               assert path.stat().st_size > 1000
               assert b'/Count 2' in data, entry['id']
-          print('JH2 physics 30-PDF catalog validation: OK')
+          print('JH2 physics 60-PDF catalog validation: OK')
           PY
 
       - name: Commit generated PDFs and catalog when changed
@@ -85,10 +92,10 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add worksheets/catalog.json materials/worksheets/science/junior-high/grade-02/physics/*.pdf
           if git diff --cached --quiet; then
-            echo 'No generated changes; JH2 Ohm-law worksheets are already current.'
+            echo 'No generated changes; JH2 physics worksheets are already current.'
             exit 0
           fi
-          git commit -m 'Publish 30 junior-high grade 2 physics worksheets'
+          git commit -m 'Publish 30 more junior-high grade 2 circuit worksheets'
           git fetch origin main
           test "$(git rev-parse HEAD^)" = "$(git rev-parse origin/main)"
           git push origin HEAD:main
