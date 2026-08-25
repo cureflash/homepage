@@ -2,14 +2,14 @@
   "status": "in_progress",
   "school_stage": "junior-high",
   "field": "history",
-  "active_unit": "edo-economy-culture-foreign-relations",
+  "active_unit": "bakumatsu-meiji-restoration",
   "active_units": [
-    "edo-economy-culture-foreign-relations"
+    "bakumatsu-meiji-restoration"
   ],
-  "next_role": "factcheck",
-  "last_completed_role": "generate",
-  "verified_through": "edo-political-system-society",
+  "next_role": "generate",
+  "last_completed_role": "factcheck",
+  "verified_through": "edo-economy-culture-foreign-relations",
   "prototype_status": "verified",
   "batch_size": 1,
-  "updated_at": "2026-08-26T05:48:00+09:00"
+  "updated_at": "2026-08-26T05:59:00+09:00"
 }
