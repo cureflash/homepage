@@ -43,6 +43,81 @@ JH2_PHYSICS_FORMULA_TOPICS = {
             },
         },
     },
+    "series-voltage": {
+        "title": "中2理科 直列回路の電圧",
+        "unit": "電流とその利用",
+        "skill": "series-circuit-voltage",
+        "formula": "V全体 = V1 + V2",
+        "seeds": tuple(range(6221, 6231)),
+        "spec": {
+            "id": "jh2-physics-series-voltage",
+            "relation": "sum",
+            "result": "Vtotal",
+            "inputs": ["V1", "V2"],
+            "variables": {
+                "Vtotal": {"label": "回路全体の電圧", "unit": "V"},
+                "V1": {"label": "抵抗1の電圧", "unit": "V", "values": [0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6]},
+                "V2": {"label": "抵抗2の電圧", "unit": "V", "values": [0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6]},
+            },
+        },
+        "modes": {
+            "basic": {
+                "solve_for": "Vtotal",
+                "worksheet_mode": "calculation-basic",
+                "description": "直列回路で、二つの抵抗に加わる電圧の和から回路全体の電圧を求める基本反復です。",
+            },
+        },
+    },
+    "parallel-current": {
+        "title": "中2理科 並列回路の電流",
+        "unit": "電流とその利用",
+        "skill": "parallel-circuit-current",
+        "formula": "I全体 = I1 + I2",
+        "seeds": tuple(range(6231, 6241)),
+        "spec": {
+            "id": "jh2-physics-parallel-current",
+            "relation": "sum",
+            "result": "Itotal",
+            "inputs": ["I1", "I2"],
+            "variables": {
+                "Itotal": {"label": "分岐前の電流", "unit": "A"},
+                "I1": {"label": "枝1の電流", "unit": "A", "values": [0.1, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.75, 0.8, 1]},
+                "I2": {"label": "枝2の電流", "unit": "A", "values": [0.1, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.75, 0.8, 1]},
+            },
+        },
+        "modes": {
+            "basic": {
+                "solve_for": "Itotal",
+                "worksheet_mode": "calculation-basic",
+                "description": "並列回路の分岐点で、二つの枝を流れる電流の和から分岐前の電流を求める基本反復です。",
+            },
+        },
+    },
+    "series-resistance": {
+        "title": "中2理科 直列回路の合成抵抗",
+        "unit": "電流とその利用",
+        "skill": "series-combined-resistance",
+        "formula": "R全体 = R1 + R2",
+        "seeds": tuple(range(6241, 6251)),
+        "spec": {
+            "id": "jh2-physics-series-resistance",
+            "relation": "sum",
+            "result": "Rtotal",
+            "inputs": ["R1", "R2"],
+            "variables": {
+                "Rtotal": {"label": "合成抵抗", "unit": "Ω"},
+                "R1": {"label": "抵抗1", "unit": "Ω", "values": [2, 3, 4, 5, 6, 10, 15, 20, 25, 30, 40, 50]},
+                "R2": {"label": "抵抗2", "unit": "Ω", "values": [2, 3, 4, 5, 6, 10, 15, 20, 25, 30, 40, 50]},
+            },
+        },
+        "modes": {
+            "basic": {
+                "solve_for": "Rtotal",
+                "worksheet_mode": "calculation-basic",
+                "description": "二つの抵抗を直列につないだときの合成抵抗を、抵抗値の和から求める基本反復です。",
+            },
+        },
+    },
 }
 
 JH2_PHYSICS_SEEDS = tuple(range(6201, 6211))
