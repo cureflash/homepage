@@ -1,9 +1,12 @@
 import importlib.util
 import re
+import sys
 import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / 'scripts'))
 spec = importlib.util.spec_from_file_location('wf', ROOT / 'scripts' / 'worksheet_factory.py')
 wf = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(wf)
