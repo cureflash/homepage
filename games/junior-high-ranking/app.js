@@ -27,13 +27,16 @@
 
   const questionNumber = document.querySelector("#question-number");
   const rankLabel = document.querySelector("#rank-label");
+  const rankLadder = document.querySelector("#rank-ladder");
   const prompt = document.querySelector("#question-prompt");
   const choices = document.querySelector("#choices");
   const feedback = document.querySelector("#feedback");
   const nextButton = document.querySelector("#next-button");
   const gamePanel = document.querySelector("#game-panel");
   const resultPanel = document.querySelector("#result-panel");
+  const resultLabel = document.querySelector("#result-label");
   const resultRank = document.querySelector("#result-rank");
+  const resultCopy = document.querySelector("#result-copy");
   const restartButton = document.querySelector("#restart-button");
 
   function clampRank(index) {
@@ -42,6 +45,15 @@
 
   function updateRank() {
     rankLabel.textContent = ranks[state.rankIndex];
+    rankLadder.innerHTML = "";
+
+    ranks.forEach((rank, index) => {
+      const item = document.createElement("li");
+      item.textContent = rank;
+      if (index < state.rankIndex) item.classList.add("passed");
+      if (index === state.rankIndex) item.classList.add("current");
+      rankLadder.appendChild(item);
+    });
   }
 
   function renderQuestion() {
@@ -58,12 +70,28 @@
 
     question.choices.forEach((choice, choiceIndex) => {
       const button = document.createElement("button");
+      const letter = String.fromCharCode(65 + choiceIndex);
       button.type = "button";
-      button.className = "choice-button";
-      button.innerHTML = `<span class="choice-letter">${String.fromCharCode(65 + choiceIndex)}</span><span>${choice}</span>`;
+      button.className = `choice-button choice-${letter.toLowerCase()}`;
+      button.innerHTML = `<span class="choice-letter">${letter}</span><span>${choice}</span>`;
       button.addEventListener("click", () => selectChoice(choiceIndex));
       choices.appendChild(button);
     });
+  }
+
+  function showResult(isGameOver = false) {
+    gamePanel.hidden = true;
+    resultPanel.hidden = false;
+    resultPanel.classList.toggle("game-over", isGameOver);
+    resultRank.textContent = ranks[state.rankIndex];
+
+    if (isGameOver) {
+      resultLabel.textContent = "GAME OVER";
+      resultCopy.textContent = "映す価値なしになったため、ここで格付けチェック終了です。";
+    } else {
+      resultLabel.textContent = "最終結果";
+      resultCopy.textContent = "7問の格付けチェックが終了しました。";
+    }
   }
 
   function selectChoice(choiceIndex) {
@@ -96,20 +124,20 @@
 
     buttons[question.answer].classList.add("answer");
     updateRank();
+
+    if (state.rankIndex === ranks.length - 1) {
+      showResult(true);
+      return;
+    }
+
     nextButton.textContent = state.index === questions.length - 1 ? "結果を見る" : "次の問題";
     nextButton.hidden = false;
-  }
-
-  function showResult() {
-    gamePanel.hidden = true;
-    resultPanel.hidden = false;
-    resultRank.textContent = ranks[state.rankIndex];
   }
 
   nextButton.addEventListener("click", () => {
     if (!state.locked) return;
     if (state.index >= questions.length - 1) {
-      showResult();
+      showResult(false);
       return;
     }
     state.index += 1;
@@ -122,6 +150,7 @@
     state.rankIndex = 0;
     state.locked = false;
     resultPanel.hidden = true;
+    resultPanel.classList.remove("game-over");
     gamePanel.hidden = false;
     renderQuestion();
   });
@@ -132,5 +161,6 @@
     return;
   }
 
+  updateRank();
   renderQuestion();
 })();
