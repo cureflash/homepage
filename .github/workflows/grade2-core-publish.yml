@@ -5,7 +5,9 @@ on:
     branches: [main]
     paths:
       - 'scripts/publish_grade2_core.py'
+      - 'scripts/publish_grade2_columnar.py'
       - 'tests/test_grade2_core_publisher.py'
+      - 'tests/test_grade2_columnar_publisher.py'
       - '.github/workflows/grade2-core-publish.yml'
   workflow_dispatch:
 
@@ -25,7 +27,7 @@ jobs:
           python-version: '3.12'
       - name: Install PDF dependency
         run: python -m pip install --disable-pip-version-check reportlab
-      - name: Reconcile latest main and validate grade 2 core batch
+      - name: Reconcile latest main and validate grade 2 batch
         shell: bash
         run: |
           set -euo pipefail
@@ -33,7 +35,9 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python scripts/publish_grade2_core.py .
+            python scripts/publish_grade2_columnar.py .
             python tests/test_grade2_core_publisher.py
+            python tests/test_grade2_columnar_publisher.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main)
             git fetch origin main
@@ -57,5 +61,5 @@ jobs:
             echo 'No grade-2 checkpoint changes to publish.'
             exit 0
           fi
-          git commit -m 'Publish grade 2 two-digit arithmetic worksheets'
+          git commit -m 'Publish grade 2 worksheet checkpoint'
           git push origin HEAD:main
