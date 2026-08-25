@@ -9,12 +9,30 @@ wf = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(wf)
 
 for skill in wf.SKILLS:
-    a = wf.generate(skill, 101, 20)
-    b = wf.generate(skill, 101, 20)
-    assert a == b
-    wf.validate(a)
-    for problem in a:
-        assert wf.compute_answer(problem) == problem['answer']
+    for seed in (101, 202, 303):
+        a = wf.generate(skill, seed, 20)
+        b = wf.generate(skill, seed, 20)
+        assert a == b
+        wf.validate(a)
+        for problem in a:
+            assert wf.compute_answer(problem) == problem['answer']
+
+        if skill == 'add-20-no-carry':
+            assert all(10 <= p['a'] <= 19 for p in a)
+            assert all(0 <= p['b'] <= 9 for p in a)
+            assert all(p['a'] + p['b'] <= 20 for p in a)
+            assert all((p['a'] % 10) + p['b'] < 10 for p in a)
+        elif skill == 'sub-20-no-borrow':
+            assert all(10 <= p['a'] <= 20 for p in a)
+            assert all(0 <= p['b'] <= 9 for p in a)
+            assert all((p['a'] % 10) >= p['b'] for p in a)
+        elif skill == 'add-20-carry':
+            assert all(2 <= p['a'] <= 9 and 2 <= p['b'] <= 9 for p in a)
+            assert all(11 <= p['a'] + p['b'] <= 18 for p in a)
+        elif skill == 'sub-20-borrow':
+            assert all(11 <= p['a'] <= 18 for p in a)
+            assert all(p['b'] > p['a'] % 10 for p in a)
+            assert all(0 <= p['answer'] <= 9 for p in a)
 
 catalog = json.loads((ROOT / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
 wf.validate_catalog(catalog, ROOT)
