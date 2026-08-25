@@ -1,5 +1,12 @@
-import { COUNTRY_CAPITAL_PAIRS, ODD_COUNTRIES, WORLD_CAPITAL_CONFIG } from "./cards.js?v=1";
-import { AUDIO_CONFIG } from "./audio.js?v=1";
+import { CAPITAL_SETS } from "./datasets.js?v=1";
+import { AUDIO_CONFIG } from "./audio.js?v=2";
+
+const setKey = document.body.dataset.capitalSet;
+const capitalSet = CAPITAL_SETS[setKey];
+
+if (!capitalSet) {
+  throw new Error(`Unknown capital set: ${setKey}`);
+}
 
 const handEl = document.querySelector("#hand");
 const discardButton = document.querySelector("#discard-button");
@@ -12,7 +19,9 @@ const messageEl = document.querySelector("#game-message");
 const pairsEl = document.querySelector("#pairs-discarded");
 const totalPairsEl = document.querySelector("#pairs-total");
 const modeLabelEl = document.querySelector("#mode-label");
+const titleEl = document.querySelector("#game-title");
 
+const NORMAL_PAIR_COUNT = 4;
 let selectedCards = [];
 let discardedPairs = 0;
 let gameActive = true;
@@ -71,30 +80,18 @@ function shuffle(items) {
 }
 
 function getPairsForMode() {
-  if (gameMode === "hard") {
-    return shuffle(COUNTRY_CAPITAL_PAIRS);
-  }
-  return shuffle(COUNTRY_CAPITAL_PAIRS).slice(0, WORLD_CAPITAL_CONFIG.normalPairCount);
+  if (gameMode === "hard") return shuffle(capitalSet.pairs);
+  return shuffle(capitalSet.pairs).slice(0, Math.min(NORMAL_PAIR_COUNT, capitalSet.pairs.length));
 }
 
 function buildHand() {
   const pairs = getPairsForMode();
   const pairedCards = pairs.flatMap((pair) => [
-    {
-      id: `${pair.id}-country`,
-      pairId: pair.id,
-      label: pair.country,
-      odd: false,
-    },
-    {
-      id: `${pair.id}-capital`,
-      pairId: pair.id,
-      label: pair.capital,
-      odd: false,
-    },
+    { id: `${pair.id}-country`, pairId: pair.id, label: pair.country, odd: false },
+    { id: `${pair.id}-capital`, pairId: pair.id, label: pair.capital, odd: false },
   ]);
 
-  const oddCountry = shuffle(ODD_COUNTRIES)[0];
+  const oddCountry = shuffle(capitalSet.oddCountries)[0];
   const oddCard = {
     id: "odd-country",
     pairId: "odd",
@@ -119,7 +116,6 @@ function selectCard(cardEl) {
   cardEl.setAttribute("aria-pressed", "true");
   selectedCards.push(cardEl);
   playSe("select");
-
   messageEl.textContent = selectedCards.length === 2
     ? "2枚選びました。ペアだと思ったら「捨てる」を押してください。"
     : "もう1枚選んでください。";
@@ -128,7 +124,6 @@ function selectCard(cardEl) {
 
 function unselectCard(cardEl) {
   if (!gameActive || !cardEl.classList.contains("is-selected")) return;
-
   cardEl.classList.remove("is-selected");
   cardEl.setAttribute("aria-pressed", "false");
   selectedCards = selectedCards.filter((item) => item !== cardEl);
@@ -140,12 +135,8 @@ function unselectCard(cardEl) {
 function handleCardTouch(cardEl) {
   if (!gameActive || cardEl.classList.contains("is-discarded")) return;
   playBgm();
-
-  if (cardEl.classList.contains("is-selected")) {
-    unselectCard(cardEl);
-  } else {
-    selectCard(cardEl);
-  }
+  if (cardEl.classList.contains("is-selected")) unselectCard(cardEl);
+  else selectCard(cardEl);
 }
 
 function createCard(card) {
@@ -221,6 +212,8 @@ function updateModeButtons() {
   hardModeButton.classList.toggle("is-active", hard);
   handEl.classList.toggle("hard-mode", hard);
   modeLabelEl.textContent = hard ? "ハード" : "通常";
+  normalModeButton.textContent = `通常 ${Math.min(NORMAL_PAIR_COUNT, capitalSet.pairs.length) * 2 + 1}枚`;
+  hardModeButton.textContent = `ハード 全${capitalSet.pairs.length}か国`;
 }
 
 function renderGame() {
@@ -259,11 +252,8 @@ hardModeButton.addEventListener("click", () => {
 });
 bgmButton.addEventListener("click", () => {
   bgmEnabled = !bgmEnabled;
-  if (bgmEnabled) {
-    playBgm();
-  } else {
-    stopBgm();
-  }
+  if (bgmEnabled) playBgm();
+  else stopBgm();
   updateAudioButtons();
 });
 seButton.addEventListener("click", () => {
@@ -272,5 +262,7 @@ seButton.addEventListener("click", () => {
   if (seEnabled) playSe("select");
 });
 
+if (titleEl) titleEl.textContent = capitalSet.title;
+document.title = `${capitalSet.title}｜ひかり教材室`;
 updateAudioButtons();
 renderGame();
