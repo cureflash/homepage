@@ -5,53 +5,71 @@
 - Active stage: junior-high
 - Active field: history
 - Verified production unit: Jomon / Yayoi overview
-- Next active unit: Yayoi society, small states, Yamatai / Himiko
-- Next role: GENERATE
+- Active unit: Yayoi society, small states, Yamatai / Himiko
+- Next role: FACTCHECK
 - Canonical implementation path: `subjects/social/worksheets/`
 
-## Completed fact-check
+## Completed GENERATE work
 
-The first Jomon / Yayoi prototype was independently checked against fresh authoritative sources rather than accepting the generator's citations.
+Created `subjects/social/worksheets/data/yayoi-states-yamatai-himiko.js` as the second junior-high history unit. The sheet is intentionally low-density: two sections, six concise study sentences, and two historical-source images.
 
-Verified curriculum placement:
+New core-term groups:
 
-- MEXT current junior-high Social Studies commentary places the material under historical field `古代までの日本` and explicitly treats the spread of agriculture and resulting changes in life as part of `日本列島における国家形成`.
+- 小国
+- 奴国 / 後漢 / 漢委奴国王
+- 魏志倭人伝 / 邪馬台国 / 卑弥呼
+- 魏 / 親魏倭王
 
-Verified content:
+All six new sentence records are `factcheckStatus: "pending_factcheck"`. Both new image records are also `pending_factcheck`. Do not publish this unit as verified until the independent FACTCHECK run is complete.
 
-- Jomon settled life and hunting/gathering/fishing: National Museum of Japanese History, Room 1.
-- Jomon pit dwellings: National Museum of Japanese History khirin archaeological record.
-- Jomon pottery used for cooking: Agency for Cultural Affairs / Cultural Heritage Online.
-- Shell mounds containing discarded eaten shells: Agency for Cultural Affairs / Cultural Heritage Online.
-- Dogu as ritual/prayer objects: Agency for Cultural Affairs cultural-property explanations.
-- Wet-rice agriculture reached northern Kyushu from the Korean Peninsula and spread through the archipelago; current Rekihaku chronology places its northern-Kyushu beginning around the 10th century BCE (about 3,000 years ago).
-- Bronze and iron objects and dotaku used in ritual contexts: National Museum of Japanese History / Kids Rekihaku.
-- Yoshinogari as a major moated Yayoi settlement, with high-floored storehouses and storage of rice/grain: Yoshinogari Historical Park official pages.
+## Source basis collected during generation
 
-All seven sentence records in `subjects/social/worksheets/data/jomon-yayoi.js` now carry explicit source references and `factcheckStatus: "verified"`.
+The generator used these only as candidate evidence; the next run must independently reopen them and verify every claim rather than accepting this summary.
 
-## Image-license review
+- MEXT current junior-high Social Studies commentary for placement under `古代までの日本` and state formation.
+- Fukuoka City Museum `金印` and `発掘が語る福岡の歴史` for the Na state, 57 CE, Later Han, the gold seal, and northern-Kyushu elite burials.
+- National Diet Library `邪馬台国論争` for the bibliographic identity and historical importance of the `魏志倭人伝` record.
+- Imperial Household Agency 2025 lecture material for the third-century Yamatai/Himiko description.
+- Waseda University Library historical chronology for the 239 embassy and `親魏倭王` entry.
+- Kyoto National Museum `謎多き「三角縁神獣鏡」` for Himiko's diplomacy with Wei and the `親魏倭王` title.
+- National Museum of Japanese History FAQ and NDL material for the unresolved location of Yamatai.
 
-All four image file pages were reopened and checked individually.
+## New image candidates
 
-- Shakoki-dogu: CC BY-SA 4.0; source/author shown as Tokyo National Museum on the Commons file page.
-- Yayoi pottery: wording corrected from vague `CC BY 4.0 compatible terms` to `Government of Japan Standard Terms of Use (Ver. 2.0, CC BY 4.0 compatible)` with ColBase attribution.
-- Dotaku photograph: uploader Saigen Jiro released the photograph to the public domain (PD-self).
-- Yoshinogari reconstructed high-floored storehouse photograph: uploader AsPJT, CC0 1.0.
+1. `King of Na gold seal faces.jpg`
+   - explicitly labeled as a Toi Museum replica image, not the original artifact photograph
+   - Wikimedia Commons file page currently states PHGCOM, CC BY-SA 3.0 / GFDL
+   - must independently verify the exact file license and attribution on FACTCHECK
 
-No AI-generated historical images are used.
+2. `Gishiwajinden.jpg`
+   - image of text identified on Commons as `魏志倭人伝`
+   - Commons file page currently states CC0 1.0
+   - must independently verify provenance, labeling, and file license on FACTCHECK
 
-## Generator / layout check
+No AI-generated historical images were added.
 
-- `app.js` blanks only the explicit `terms` entries.
-- Blank selection is deterministic for the same seed/rate through the seeded PRNG.
-- Worksheet and answer modes use the same selected blank set, so answers correspond to the generated blanks.
-- The print stylesheet fixes the sheet to A4 portrait and keeps the prototype intentionally low-density.
+## Generator/tool changes
 
-## Progress
+The previously verified Jomon/Yayoi unit remains in place. The worksheet UI now supports multiple registered units through a unit selector:
 
-`20_EXECUTION_PLAN.md` now marks the independent prototype fact-check and first verified production-unit registration complete. `STATUS.json` has advanced to `yayoi-society-states-yamatai-himiko` with `next_role: generate`.
+- `subjects/social/worksheets/data/jomon-yayoi.js` now registers the existing verified unit in `window.SOCIAL_WORKSHEET_UNITS` without changing its verified sentence content.
+- `subjects/social/worksheets/data/yayoi-states-yamatai-himiko.js` registers the new pending unit.
+- `subjects/social/worksheets/index.html` loads both datasets and exposes the unit selector.
+- `subjects/social/worksheets/app.js` selects the active dataset while preserving seeded explicit-term-only blank generation.
+
+The cloze algorithm itself was not broadened: only `sentence.terms` are eligible for blanks, and the same seed/rate still determines the blank set reproducibly.
 
 ## Exact next starting point
 
-On the next GENERATE run, work only on `Yayoi society, small states, Yamatai / Himiko`. Build its concise explanation-sheet facts first, then explicit cloze targets and suitable non-AI source images. Mark all new claims/images `pending_factcheck` and return `next_role` to `factcheck` before ending.
+Perform an independent FACTCHECK of only `yayoi-society-states-yamatai-himiko`.
+
+Treat these six claims as untrusted and reopen authoritative sources from scratch:
+
+1. formation of small states and northern-Kyushu ruler tomb evidence;
+2. Na-state embassy to Later Han in 57 CE;
+3. identification/wording of the `漢委奴国王` gold seal;
+4. what `魏志倭人伝` is and what it records about Yamatai/Himiko;
+5. 239 embassy to Wei and the `親魏倭王` title/insignia wording;
+6. statement that Yamatai's location remains unsettled, with Kyushu and Kinai as representative theories.
+
+Also independently reopen both Commons file pages and verify the exact image identity, replica/original distinction, authorship, license, and attribution. Correct or reject any unsupported wording. If and only if all pending material is supportable, mark it `verified`, set `next_role` to `generate`, and advance to `kofun-period-yamato-polity`.
