@@ -6,137 +6,96 @@
 - Active field: history
 - Verified through: Sengoku / Azuchi-Momoyama
 - Active unit: Edo political system and society
-- Next role: GENERATE
+- Next role: FACTCHECK
 - Batch size: 1 unit
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed FACTCHECK — Sengoku / Azuchi-Momoyama
+## Completed GENERATE — Edo political system and society
 
-Independently reopened current curriculum material and authoritative government, municipal, museum, archive, temple, and exact Commons file pages. All eight study sentences and both image records were treated as untrusted before approval.
+Created `subjects/social/worksheets/data/edo-political-system-society.js` as the next junior-high history unit. The unit is deliberately low-density and limited to the political/social framework; economy, culture, and foreign relations remain reserved for the next separate queue unit.
 
-### Curriculum placement
+All seven study sentences, both image records, and the unit itself remain `pending_factcheck`. The dataset is intentionally not registered in `subjects/social/worksheets/index.html`, so learner-facing publication still stops at the nine verified units through Sengoku / Azuchi-Momoyama.
 
-MEXT current junior-high Social Studies commentary places this material under `近世の日本` → `世界の動きと統一事業`.
+### Curriculum placement used for generation
 
-The commentary requires understanding the background and influence of European arrivals, Oda/Toyotomi unification, contemporary foreign relations, and the development of the life culture of warriors and wealthy merchants. Its content handling explicitly calls for `検地・刀狩` when teaching Oda/Toyotomi unification policy. It also describes Momoyama culture as including a豪壮・華麗な文化 connected to the spirit and economic power of warriors and wealthy merchants.
+MEXT current junior-high Social Studies commentary places this content under `近世の日本` → `江戸幕府の成立と対外関係` and explicitly requires learners to understand:
 
-No fixed school year is assigned in project metadata.
+- establishment of the Edo bakufu and daimyo control;
+- status order and rural society;
+- establishment of rule by the shogunate and domains.
 
-### Independent factual checks and corrections
+The commentary also asks learners to notice that the bakufu controlled daimyo while leaving daimyo responsible for politics within their domains, that people fulfilled roles within their respective statuses, that most farmers lived with the village as their social base, and that villages supported bakufu/domain finances. No exact school year has been encoded.
 
-All eight sentence records are now `verified`. The following wording changes were made during review.
+### Study structure
 
-1. 1543 firearms arrival
-   - Changed the broad `ポルトガル人を乗せた船` wording to `ポルトガル人を乗せた明国船`.
-   - Nishinoomote City and Kagoshima Prefecture both describe a Ming/Chinese vessel carrying Portuguese people arriving/drifting to Tanegashima in 1543.
+Two sections, seven concise original study sentences:
 
-2. 1549 Xavier
-   - Kept Xavier as an `イエズス会の宣教師` and Kagoshima as the landing place.
-   - Changed the final clause from an absolute `日本でキリスト教の布教を始めた` to `日本でキリスト教布教の第一歩をしるした`, matching Kagoshima Prefecture's official wording and avoiding unnecessary overstatement.
+1. `江戸幕府と大名統制`
+   - 徳川家康 / 征夷大将軍 / 1603
+   - 幕府 / 藩
+   - 武家諸法度 / 1615
+   - 参勤交代 / 1635
+2. `身分制と農村`
+   - 武士 / 百姓 / 町人
+   - 村 as the main living base for most farmers
+   - 年貢 / 村請制
 
-3. Nobunaga 1568
-   - Verified `足利義昭を奉じて京都に入った` through Kyoto City / Kyoto Prefectural Museum material.
+Only explicitly listed `terms` are cloze candidates; the shared deterministic seed/rate generator was not changed.
 
-4. 楽市楽座
-   - Avoided wording that could imply one uniform nationwide institution.
-   - Final sentence says Nobunaga promoted policies generally called `楽市楽座` at places including the Azuchi castle town.
-   - Omihachiman City material confirms the 1577 `安土山下町中掟書` and its `楽市` provision, and city-history material discusses the application of 楽市楽座 at Azuchi/Hachiman castle towns.
+### Candidate factual basis used during generation
 
-5. 1590 unification
-   - Odawara City explicitly states that the 1590 surrender of the Hojo side marked completion of Hideyoshi's unification, so the junior-high wording remains supportable.
+These references are candidate evidence only. The next FACTCHECK run must independently reopen authoritative sources and must not approve claims because they appear here.
 
-6. 太閤検地
-   - Rewrote the sentence to say land area and grade were surveyed, kokudaka was fixed, and cultivators were registered in cadastral registers.
-   - Nagoya City Museum, the National Tax College, and Osaka Castle Museum independently support these elements and the nationwide/unified character of the system.
+- MEXT current junior-high Social Studies commentary for curriculum placement, shogunate/domain rule, status order, and village life.
+- Edo-Tokyo Museum material stating that Tokugawa Ieyasu received the shogunal appointment and opened the Edo bakufu in 1603.
+- National Archives of Japan `家康の内政・外交` for the 1615 Buke Shohatto and its role as fundamental rules for warrior houses / daimyo.
+- National Archives digital exhibition `大名` for daimyo and domain governance context.
+- Rekihaku material on daimyo processions and travel between domains and Edo.
+- NDL Reference Cooperative Database material for historical regulations around daimyo attendance/processions.
+- National Tax College material for village organization, annual tribute, and the village-responsibility (`村請`) system.
 
-7. 刀狩
-   - Expanded the weapon categories so the sentence does not reduce the 1588 order to swords alone.
-   - Osaka Castle Museum's original-document commentary states that the first article prohibited peasants from possessing swords, wakizashi, bows, spears, firearms, and other weapons.
-   - Rekihaku independently identifies the 1588 three-article sword-hunt order and its original held by Osaka Castle.
+### Image candidates
 
-8. 桃山文化 / 障壁画
-   - Retained `豪壮・華麗` only as an important characteristic, not as the sole cultural style.
-   - MEXT explicitly uses this characterization in connection with warriors and wealthy merchants.
-   - Tokyo National Museum material confirms large-scale Momoyama-period gold-ground wall/screen painting and includes major works by Kano painters.
+No AI-generated historical images were used.
 
-### Independent evidence retained in the unit
+1. `Tokugawa_Ieyasu2.JPG`
+   - exact Commons file identifies the subject as Tokugawa Ieyasu;
+   - author field: Kano Tan'yū / 狩野探幽 (1602–1674);
+   - source field: Osaka Castle main tower / 大阪城天守閣;
+   - date field: early Edo period;
+   - Commons licensing section states the work is public domain under Japanese copyright rules;
+   - project status remains `pending_factcheck` until the independent review confirms file identity, source wording, and the exact reusable-license description suitable for the printed source note.
 
-- MEXT `中学校学習指導要領（平成29年告示）解説 社会編`
-- Nishinoomote City `種子島銃（ポルトガル初伝銃）`
-- Kagoshima Prefecture / Reimeikan `鉄砲とキリスト教の伝来`
-- Kagoshima Prefecture `キリスト教の伝来`
-- Kyoto Prefecture Kyoto Culture Museum `信長上洛～京都・織田信長入京から450年～`
-- Omihachiman City material on the 1577 Azuchi castle-town rules and city-history publications
-- Odawara City material on the 1590 Odawara campaign and unification
-- Nagoya City Museum `豊臣秀次朱印状` / 太閤検地 explanation
-- National Tax College `太閤検地`
-- Osaka Castle Museum `摂津国豊島郡熊野田村検地帳`
-- Osaka Castle Museum `豊臣秀吉朱印刀狩条目`
-- National Museum of Japanese History khirin `刀狩令 複製`
-- Tokyo National Museum Momoyama exhibition / wall-painting material
+2. `Sankiko01.jpg`
+   - Commons identifies it as `園部藩参勤交代行列図（1）`;
+   - held by Nantan City Museum of Culture according to the file description;
+   - made in 1904 and described as depicting a Sonobe-domain alternate-attendance procession around the Kaei era;
+   - Commons licensing section marks the work public domain;
+   - project status remains `pending_factcheck` until the next run independently confirms the provenance, file license, and whether the educational caption is sufficiently precise.
 
-## Image verification
+## Publication / integration state
 
-No AI-generated historical images are used.
+`subjects/social/worksheets/index.html` was re-read after generation and still loads only the nine verified datasets through `sengoku-azuchi-momoyama.js`. The pending Edo dataset was not added.
 
-### Oda Nobunaga portrait
-
-Exact Commons file: `Odanobunaga.jpg`.
-
-- artist field: Kano Sōshū / 狩野宗秀
-- title: `Portrait of Oda Nobunaga (detail)` / `織田信長像（部分）`
-- original date: 1583
-- collection: Chōkō-ji / 長興寺
-- Commons states the work is public domain and treats the faithful two-dimensional reproduction as public domain; the file displays Creative Commons Public Domain Mark 1.0
-- project record: `verified`
-
-The learner note now explicitly distinguishes the old artwork from its digital reproduction.
-
-### Toyotomi Hideyoshi portrait
-
-Exact Commons file: `Toyotomi hideyoshi.jpg`.
-
-- Commons artist field: Kano Mitsunobu / 狩野光信
-- description: part of a Hideyoshi portrait in Kōdai-ji holdings
-- date: circa 1601
-- Kōdai-ji Sho Museum independently identifies its Hideyoshi portrait as dated Keicho 6 (1601)
-- Commons treats the faithful two-dimensional reproduction as public domain and explicitly displays Public Domain Mark 1.0
-- project record: `verified`
-
-The learner note now identifies the reproduction status explicitly.
-
-## Publication state
-
-`subjects/social/worksheets/data/sengoku-azuchi-momoyama.js` is fully `verified` and is now registered in `subjects/social/worksheets/index.html`.
-
-The public selector now loads nine verified units in chronological order:
-
-1. Jomon / Yayoi overview
-2. Yayoi society / Yamatai / Himiko
-3. Kofun / Yamato
-4. Asuka / ritsuryo
-5. Nara
-6. Heian
-7. Kamakura
-8. Muromachi
-9. Sengoku / Azuchi-Momoyama
-
-The shared worksheet generator was not changed. Only explicit `terms` remain eligible for blanks, and seeded generation behavior remains deterministic.
+No shared JavaScript, CSS, navigation, or print-layout code was modified in this run. The new file follows the existing unit object / `window.SOCIAL_WORKSHEET_UNITS.push(unit)` contract, and therefore preserves the existing explicit-term-only cloze and seeded-generation design. A browser/runtime syntax check was not available through the GitHub connector in this run; the next run should preserve this limitation in mind if it has a runnable checkout available.
 
 ## Exact next starting point
 
-Next role is GENERATE. Work only on `Edo political system and society`, the next junior-high history queue unit.
+Next role is FACTCHECK. Independently review only:
 
-Create the explanation-sheet data first and keep it low-density. Cover only the political/social framework needed for this unit, leaving `Edo economy / culture / foreign relations` for the following separate unit.
+`subjects/social/worksheets/data/edo-political-system-society.js`
 
-Likely core areas to verify before generation include:
+Treat all seven study sentences and both images as untrusted. Reopen sources from scratch and verify at minimum:
 
-- Tokugawa Ieyasu and the 1603 establishment of the Edo bakufu;
-- bakuhan political structure without oversimplifying the relationship between shogunate and domains;
-- daimyo classification and the purpose/effects of controls such as 武家諸法度 and 参勤交代;
-- shogunate offices only to the level appropriate for junior-high learners;
-- status/social-order treatment using current MEXT wording and avoiding outdated simplistic claims where current scholarship/curriculum is more careful;
-- village organization / agriculture only where needed to explain the political-social framework, leaving detailed economic development to the next unit.
+1. `1603`: Ieyasu's appointment as Seii Taishogun and the wording `江戸に幕府を開いた`.
+2. `幕府と藩`: ensure the sentence accurately reflects MEXT's formulation that the bakufu controlled daimyo while daimyo bore responsibility for government within their territories; avoid implying a modern federal structure or identical autonomy for all domains.
+3. `1615 武家諸法度`: confirm date, promulgation context, and whether `大名が守るべき基本的な規則` is accurate enough for junior-high wording.
+4. `1635 参勤交代`: distinguish pre-existing attendance practice from its formalization in the 1635 Buke Shohatto; verify the concise `江戸と領地を往復` wording and avoid false claims about every daimyo following an identical annual cycle in all periods.
+5. `身分制`: confirm that `武士・百姓・町人など` and `それぞれの身分の中で職分を担った` match current curriculum wording. Do not revert to a simplistic rigid `士農工商` ranking model unless directly supportable and pedagogically required.
+6. `農民と村`: confirm the MEXT wording that most farmers used villages as their living base and helped one another in agricultural work.
+7. `年貢 / 村請制`: verify that villages bore collective responsibility for annual-tribute payment and that the statement about rural society supporting bakufu/domain finances is appropriately phrased.
+8. `Tokugawa_Ieyasu2.JPG`: independently verify exact file identity, painter/source metadata, public-domain basis, and caption.
+9. `Sankiko01.jpg`: independently verify exact file identity, Nantan City Museum holding statement, 1904 production / Kaei-era scene description, public-domain basis, and caption.
 
-Use at least two useful non-AI historical-source images if their exact reuse terms can be documented. All new sentence and image records must remain `pending_factcheck`, and the new dataset must not be added to the public selector until the subsequent independent FACTCHECK run approves it.
+If and only if all pending material can be supported, correct wording as necessary, mark the unit/sentences/images `verified`, add `data/edo-political-system-society.js` to the public selector in chronological order, set `next_role` to `generate`, and advance the queue to `edo-economy-culture-foreign-relations`. Otherwise leave unsupported items pending and document the blocker precisely.
