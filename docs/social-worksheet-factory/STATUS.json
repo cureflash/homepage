@@ -2,14 +2,14 @@
   "status": "in_progress",
   "school_stage": "junior-high",
   "field": "history",
-  "active_unit": "sengoku-azuchi-momoyama",
+  "active_unit": "edo-political-system-society",
   "active_units": [
-    "sengoku-azuchi-momoyama"
+    "edo-political-system-society"
   ],
-  "next_role": "factcheck",
-  "last_completed_role": "generate",
-  "verified_through": "muromachi-period",
+  "next_role": "generate",
+  "last_completed_role": "factcheck",
+  "verified_through": "sengoku-azuchi-momoyama",
   "prototype_status": "verified",
   "batch_size": 1,
-  "updated_at": "2026-08-26T01:37:00+09:00"
+  "updated_at": "2026-08-26T02:49:00+09:00"
 }
