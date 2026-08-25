@@ -1,0 +1,61 @@
+name: Grade 2 worksheet factory checkpoint
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/publish_grade2_core.py'
+      - 'tests/test_grade2_core_publisher.py'
+      - '.github/workflows/grade2-core-publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF dependency
+        run: python -m pip install --disable-pip-version-check reportlab
+      - name: Reconcile latest main and validate grade 2 core batch
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/publish_grade2_core.py .
+            python tests/test_grade2_core_publisher.py
+            python tests/test_worksheet_factory.py
+            before=$(git rev-parse origin/main)
+            git fetch origin main
+            after=$(git rev-parse origin/main)
+            if [ "$before" = "$after" ]; then
+              break
+            fi
+            if [ "$attempt" = 3 ]; then
+              echo 'main kept moving; aborting rather than validating stale state' >&2
+              exit 1
+            fi
+          done
+      - name: Commit validated checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'worksheet-factory-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git add worksheets/catalog.json materials/worksheets/elementary/grade-02/
+          if git diff --cached --quiet; then
+            echo 'No grade-2 checkpoint changes to publish.'
+            exit 0
+          fi
+          git commit -m 'Publish grade 2 two-digit arithmetic worksheets'
+          git push origin HEAD:main
