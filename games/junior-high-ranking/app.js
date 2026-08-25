@@ -12,9 +12,12 @@
   ];
 
   function selectQuestions() {
-    return [...questionPool]
-      .sort(() => Math.random() - 0.5)
-      .slice(0, Math.min(questionCount, questionPool.length));
+    const shuffled = [...questionPool];
+    for (let i = shuffled.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled.slice(0, Math.min(questionCount, shuffled.length));
   }
 
   let questions = selectQuestions();
@@ -22,7 +25,8 @@
   const state = {
     index: 0,
     rankIndex: 0,
-    locked: false
+    locked: false,
+    gameOver: false
   };
 
   const questionNumber = document.querySelector("#question-number");
@@ -30,6 +34,7 @@
   const rankLadder = document.querySelector("#rank-ladder");
   const prompt = document.querySelector("#question-prompt");
   const choices = document.querySelector("#choices");
+  const answerBreakdown = document.querySelector("#answer-breakdown");
   const feedback = document.querySelector("#feedback");
   const nextButton = document.querySelector("#next-button");
   const gamePanel = document.querySelector("#game-panel");
@@ -59,9 +64,13 @@
   function renderQuestion() {
     const question = questions[state.index];
     state.locked = false;
+    state.gameOver = false;
     feedback.textContent = "";
     feedback.className = "feedback";
+    answerBreakdown.innerHTML = "";
+    answerBreakdown.hidden = true;
     nextButton.hidden = true;
+    nextButton.classList.remove("game-over-button");
     choices.innerHTML = "";
 
     questionNumber.textContent = `第${state.index + 1}問 / ${questions.length}`;
@@ -77,6 +86,26 @@
       button.addEventListener("click", () => selectChoice(choiceIndex));
       choices.appendChild(button);
     });
+  }
+
+  function renderAnswerBreakdown(question) {
+    answerBreakdown.innerHTML = "";
+
+    question.choices.forEach((choice, choiceIndex) => {
+      const letter = String.fromCharCode(65 + choiceIndex);
+      const row = document.createElement("div");
+      const role = choiceIndex === question.answer
+        ? "正解"
+        : choiceIndex === question.absoluteWrong
+          ? "絶対アカン"
+          : "誤答";
+
+      row.className = `answer-detail choice-${letter.toLowerCase()} role-${role === "正解" ? "correct" : role === "絶対アカン" ? "absolute" : "wrong"}`;
+      row.innerHTML = `<span class="answer-choice">${letter}＝${choice}</span><strong>${role}</strong>`;
+      answerBreakdown.appendChild(row);
+    });
+
+    answerBreakdown.hidden = false;
   }
 
   function showResult(isGameOver = false) {
@@ -123,10 +152,15 @@
     }
 
     buttons[question.answer].classList.add("answer");
+    renderAnswerBreakdown(question);
     updateRank();
 
     if (state.rankIndex === ranks.length - 1) {
-      showResult(true);
+      state.gameOver = true;
+      feedback.textContent += " 映す価値なし。ゲームオーバー。";
+      nextButton.textContent = "GAME OVER";
+      nextButton.classList.add("game-over-button");
+      nextButton.hidden = false;
       return;
     }
 
@@ -136,6 +170,10 @@
 
   nextButton.addEventListener("click", () => {
     if (!state.locked) return;
+    if (state.gameOver) {
+      showResult(true);
+      return;
+    }
     if (state.index >= questions.length - 1) {
       showResult(false);
       return;
@@ -149,6 +187,7 @@
     state.index = 0;
     state.rankIndex = 0;
     state.locked = false;
+    state.gameOver = false;
     resultPanel.hidden = true;
     resultPanel.classList.remove("game-over");
     gamePanel.hidden = false;
