@@ -1,9 +1,11 @@
 import importlib.util
 import json
+import sys
 import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 MODULE = ROOT / 'scripts' / 'worksheet_factory.py'
 SCIENCE_MODULE = ROOT / 'scripts' / 'science_worksheet_helpers.py'
 spec = importlib.util.spec_from_file_location('wf', MODULE)
@@ -117,7 +119,6 @@ assert 'id="field"' in listing
 assert 'formal_course' in listing
 assert "params.get('subject')" in listing
 
-# Shared numerical formula-drill foundation: product relation supports direct and reverse variables.
 pressure_spec = {
     'id':'pressure-test',
     'relation':'product',
@@ -212,7 +213,6 @@ try:
 except AssertionError:
     pass
 
-# Shared PDF renderer accepts both numerical and retrieval science problems and keeps two-page answer-overlay output.
 with tempfile.TemporaryDirectory() as tmp:
     formula_pdf = Path(tmp) / 'formula.pdf'
     retrieval_pdf = Path(tmp) / 'retrieval.pdf'
