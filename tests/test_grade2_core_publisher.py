@@ -10,9 +10,20 @@ from scripts.publish_grade2_core import GRADE2_CORE_SKILLS, SEEDS, generate_grad
 from scripts.worksheet_factory import normalized_hash, validate_catalog
 
 
+def expected_ids():
+    return {
+        f'e2-{skill}-{variant:02d}'
+        for skill in GRADE2_CORE_SKILLS
+        for variant, _seed in enumerate(SEEDS, start=1)
+    }
+
+
 def main():
     source_catalog = json.loads((ROOT / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
-    published_hashes = {entry['content_hash'] for entry in source_catalog}
+    own_ids = expected_ids()
+    published_hashes = {
+        entry['content_hash'] for entry in source_catalog if entry['id'] not in own_ids
+    }
     all_hashes = set()
     for skill in GRADE2_CORE_SKILLS:
         for seed in SEEDS:
@@ -23,8 +34,13 @@ def main():
             assert len({(p['a'], p['b']) for p in first}) == 20
             h = normalized_hash(first)
             assert h not in all_hashes, f'duplicate generated content for {skill} seed={seed}'
-            assert h not in published_hashes, f'duplicate of published content for {skill} seed={seed}'
+            assert h not in published_hashes, f'duplicate of other published content for {skill} seed={seed}'
             all_hashes.add(h)
+
+    present = [entry for entry in source_catalog if entry['id'] in own_ids]
+    if present:
+        assert {entry['id'] for entry in present} == own_ids
+        assert {entry['content_hash'] for entry in present} == all_hashes
 
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)
@@ -33,6 +49,7 @@ def main():
         publish(root)
         catalog = json.loads((root / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
         assert len(catalog) == 12
+        assert {e['id'] for e in catalog} == own_ids
         assert {e['skill'] for e in catalog} == set(GRADE2_CORE_SKILLS)
         assert {e['seed'] for e in catalog} == set(SEEDS)
         assert all(e['problem_count'] == 20 for e in catalog)
