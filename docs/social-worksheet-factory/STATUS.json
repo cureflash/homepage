@@ -6,10 +6,10 @@
   "active_units": [
     "muromachi-period"
   ],
-  "next_role": "generate",
-  "last_completed_role": "factcheck",
+  "next_role": "factcheck",
+  "last_completed_role": "generate",
   "verified_through": "kamakura-period",
   "prototype_status": "verified",
   "batch_size": 1,
-  "updated_at": "2026-08-25T22:49:00+09:00"
+  "updated_at": "2026-08-25T23:37:00+09:00"
 }
