@@ -6,8 +6,10 @@ on:
     paths:
       - 'scripts/publish_grade2_core.py'
       - 'scripts/publish_grade2_columnar.py'
+      - 'scripts/publish_grade2_times_tables.py'
       - 'tests/test_grade2_core_publisher.py'
       - 'tests/test_grade2_columnar_publisher.py'
+      - 'tests/test_grade2_times_tables_publisher.py'
       - '.github/workflows/grade2-core-publish.yml'
   workflow_dispatch:
 
@@ -36,8 +38,10 @@ jobs:
             git reset --hard origin/main
             python scripts/publish_grade2_core.py .
             python scripts/publish_grade2_columnar.py .
+            python scripts/publish_grade2_times_tables.py .
             python tests/test_grade2_core_publisher.py
             python tests/test_grade2_columnar_publisher.py
+            python tests/test_grade2_times_tables_publisher.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main)
             git fetch origin main
