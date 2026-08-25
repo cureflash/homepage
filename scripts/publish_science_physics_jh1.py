@@ -42,7 +42,9 @@ def build_batch(repo_root):
                 )
                 validate(problems)
                 content_hash = normalized_hash(problems)
-                if content_hash in existing_hashes or any(item["content_hash"] == content_hash for item in pending):
+                if content_hash in existing_hashes or any(
+                    item["entry"]["content_hash"] == content_hash for item in pending
+                ):
                     raise AssertionError(f"duplicate worksheet content: {topic_key}/{mode_key}/{variant}")
 
                 wid = f"science-jh1-physics-{topic_key}-{mode_key}-{variant:02d}"
