@@ -5,7 +5,9 @@ and catalog publication stay in the shared worksheet infrastructure.
 """
 
 JH1_LIGHT_SOUND_SEEDS = (6301, 6302, 6303)
-JH1_LIGHT_SOUND_PROBLEM_COUNT = 20
+# Ten problems deliberately keep these text-heavy sheets in the renderer's first
+# column, giving each concise prompt the full printable page width.
+JH1_LIGHT_SOUND_PROBLEM_COUNT = 10
 
 _LIGHT_FORWARD = [
     {"template": "反射：入射角と反射角は{answer}。", "answer": ["等しい"]},
