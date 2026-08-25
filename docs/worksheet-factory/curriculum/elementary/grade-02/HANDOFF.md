@@ -4,62 +4,68 @@
 
 ## 今回完了
 
+### 九九 穴埋め
+
 - 文部科学省「小学校学習指導要領（平成29年告示）解説 算数編」の第2学年 A「数と計算」の乗法を再確認した。
-  - 第2学年で乗法の意味を理解し、乗法九九を構成して身に付け、1位数と1位数との乗法の計算を確実にできるようにする位置付けであることを確認した。
+  - 第2学年で乗法九九を構成して身に付け、1位数と1位数との乗法の計算を確実にできるようにする位置付けであることを確認した。
   - 参照: https://www.mext.go.jp/content/20211102-mxt_kyoiku02-100002607_04.pdf
-- `scripts/publish_grade2_times_tables_mixed.py` を追加し、`九九 全段ランダム` を段別プリントとは独立した混合技能として実装した。
-- seed=1001/1102/1203 の3種類で決定的生成し、新規3PDFを公開した。
+- `scripts/publish_grade2_times_tables_missing.py` を追加し、`九九 穴埋め` を実装した。
+- seed=1301/1402/1503 の3種類で決定的生成し、新規3PDFを公開した。
 - 各プリントは24問。
-  - 2〜9の8段を各3問ずつ出題し、1枚の中で特定の段に偏らない。
-  - 各段の1〜9を決定的に3群へ分割し、3variantにそれぞれ割り当てる。
-  - 3variantを合わせると `2×1` から `9×9` までの72基本事実を重複なくちょうど1回ずつ扱う。
-  - 各variant内では24問をseedでシャッフルし、段別プリントを単純に連結した並びにはしない。
-- `independent_mixed_answer()` で生成器が保持する答えとは独立に全問を再計算する。
-- 各24問内の `(段, 乗数)` 重複、variant間の正規化 `content_hash` 重複、既存カタログとの教材内容重複を拒否する。
-- 問題番号は普通整数 `1`〜`24`。解答ページは問題ページと同じ配置を再掲し、各式の下へ赤字で答えを追加する。
-- カタログには `worksheet_series: mixed`、`worksheet_format: times-table-mixed` を保存した。
-- `tests/test_grade2_times_tables_mixed_publisher.py` を追加し、決定性、各段3問、24問内の事実重複なし、3variant全体で72事実完全網羅、独立解答再計算、PDF2ページ、カタログ整合性、冪等性を検証するようにした。
-- Grade 2 checkpointを拡張し、core版・筆算版・段別九九版・全段ランダム版・共通ファクトリー回帰テストをlatest main上でまとめて検証するようにした。
+  - 2〜9の8段を各3問ずつ出題する。
+  - 3variantを合わせると `2×1`〜`9×9` の72基本事実を重複なくすべて扱う。
+  - `□ × 7 = 35` と `6 × □ = 42` のような左右の穴埋めを各12問ずつ配置する。
+  - 積を既知として正の既知因数で割り、答えが一意に求まることを独立検証する。
+- `independent_missing_answer()` で生成器が保持する答えとは独立に再計算する。
+- `fact_of()` で穴埋めの左右に依存せず元の九九事実を復元し、段分布・教材内重複・3variant全体の72事実完全網羅を検証する。
+- 問題番号は普通整数 `1`〜`24`。解答ページは同じ配置を再掲し、各式の下へ赤字で答えを追加する。
+- カタログには `worksheet_series: mixed`、`worksheet_format: times-table-missing-factor` を保存した。
+- `tests/test_grade2_times_tables_missing_publisher.py` を追加した。
+- GitHub Actions `Grade 2 worksheet factory checkpoint` run 32881318355 で生成器・既存小2生成器・共通ファクトリー回帰テストがすべて成功した。
+- 同runで3PDFとカタログを公開。公開コミットは `142965f40425bac132033f12c4b3655b670d9539`。
+
+### 簡単な2桁×1桁
+
+- 同じ文部科学省解説で、第2学年の「簡単な場合の2位数と1位数との乗法」は「12程度まで」を扱うことを確認した。
+- `scripts/publish_grade2_simple_two_digit_times.py` を追加した。
+- 10・11・12をそれぞれ独立技能として構造化した。
+  - `10×1桁`
+  - `11×1桁`
+  - `12×1桁`
+- 各技能を seed=1601/1702/1803 の3種類で決定的生成し、新規9PDFを公開した。
+- 各プリントは20問。
+  - 1〜9の全乗数を最低2回ずつ扱う。
+  - seedごとに2個の乗数だけを3回目として追加し、variant間で実際の反復内容を変える。
+- `independent_simple_answer()` で全問を独立再計算する。
+- 問題番号は普通整数 `1`〜`20`。解答ページは問題ページと同じ配置に赤字で答えを加える。
+- カタログには `worksheet_series: focused`、`worksheet_format: simple-two-digit-times` を保存した。
+- `tests/test_grade2_simple_two_digit_times_publisher.py` を追加し、決定性、1〜9の最低2回反復、variant差、独立解答、重複、PDF2ページ、カタログ、冪等性まで検証するようにした。
+- GitHub Actions `Grade 2 worksheet factory checkpoint` run 32881544888 で新規9PDF生成と、core・筆算・段別九九・全段ランダム・九九穴埋め・共通ファクトリーの全回帰テストが成功した。
+- 同runで9PDFとカタログを公開。公開コミットは `5ced687418ccde075d365a112c75bf44130bb519`。
 
 ## 現在の公開範囲
 
-- 小2算数: 21技能。
+- 小2算数: 25技能。
 - 通常横書き: 8技能 × 3variant = 24PDF。
 - 筆算専用: 4技能 × 3variant = 12PDF。
 - 九九段別: 8技能 × 3variant = 24PDF。
 - 九九全段ランダム: 1技能 × 3variant = 3PDF。
-- 合計63PDFを公開済み。
+- 九九穴埋め: 1技能 × 3variant = 3PDF。
+- 簡単な2桁×1桁: 3技能 × 3variant = 9PDF。
+- 合計75PDFを公開済み。
 - 公開先: `materials/worksheets/elementary/grade-02/`。
 - `worksheets/catalog.json` に登録済みで、既存の動的一覧/navigationから小2として表示される。
-
-## 検証
-
-GitHub Actions `Grade 2 worksheet factory checkpoint` run 32875388068 で latest main を再取得してから以下を実行し、すべて成功した。
-
-- `python scripts/publish_grade2_core.py .` → 公開済み分は `published 0`
-- `python scripts/publish_grade2_columnar.py .` → 公開済み分は `published 0`
-- `python scripts/publish_grade2_times_tables.py .` → 公開済み分は `published 0`
-- `python scripts/publish_grade2_times_tables_mixed.py .` → 新規3PDF生成
-- `python tests/test_grade2_core_publisher.py` → OK
-- `python tests/test_grade2_columnar_publisher.py` → OK
-- `python tests/test_grade2_times_tables_publisher.py` → OK
-- `python tests/test_grade2_times_tables_mixed_publisher.py` → OK
-- `python tests/test_worksheet_factory.py` → OK
-
-同runで新規3PDFとカタログ更新を `Publish grade 2 worksheet checkpoint` として main へ反映した。公開コミットは `225c8f4eb0110e9d752ab9deb09ccce5acd77f1f`。
 
 ## 未完了
 
 PLAN.md の残り、とくに次の優先項目は未実装。
 
-- 九九 穴埋め
-- 簡単な2桁×1桁
 - たし算・ひき算・かけ算混合
-- 1000・10000までの位取り/大小
-- 簡単な分数
-- 学年総復習
+- 1000・10000までの位取り/数の大小
+- 簡単な分数の読み取り・同じ大きさの確認
+- 学年総復習計算
 - 九九の逆引き/speed展開
 
 ## 次にやること
 
-`九九 穴埋め` を実装する。第2学年の九九の確実な習得を目的に、`□ × 7 = 35` や `6 × □ = 42` のように既知の積から欠けた1位数の因数を答える形式を、2〜9の段に偏らず構造化する。通常の九九式を単に同じ順番で穴埋めへ置換しただけにはせず、左右どちらを隠すかも含めて決定的seedで変化させる。独立解答再計算、各段分布、正解の一意性、教材間重複検査、問題と同位置への赤字解答、PDF/カタログ登録、回帰テストまで通してから簡単な2桁×1桁へ進む。
+`たし算・ひき算・かけ算混合` を実装する。第2学年で既習の加法・減法・乗法を1枚の中で切り替えて反復する教材とし、演算順序を必要とする複合式ではなく、各設問は1回の加法・減法・乗法だけを行う形式にする。既存の単元別プリントを単純連結しただけにはせず、決定的seedで演算種別と問題データを構成し、3演算の出題数が偏らないこと、加減は既習範囲、乗法は九九中心であること、独立解答再計算、教材内・教材間重複検査、問題と同位置への赤字解答、PDF/カタログ登録、Grade 2全回帰テストまで実装する。その後は1000・10000までの位取り/大小へ進む。
