@@ -8,11 +8,14 @@ on:
       - 'scripts/publish_science_physics_jh1.py'
       - 'scripts/publish_science_physics_jh1_retrieval.py'
       - 'scripts/publish_science_physics_jh1_light_sound.py'
+      - 'scripts/publish_science_physics_jh1_mixed_review.py'
       - 'scripts/science_physics_topics.py'
       - 'scripts/science_physics_jh1_light_sound_topics.py'
+      - 'scripts/science_physics_jh1_mixed_review.py'
       - 'tests/test_science_physics_jh1.py'
       - 'tests/test_science_physics_jh1_retrieval.py'
       - 'tests/test_science_physics_jh1_light_sound.py'
+      - 'tests/test_science_physics_jh1_mixed_review.py'
 
 permissions:
   contents: write
@@ -50,6 +53,7 @@ jobs:
           python tests/test_science_physics_jh1.py
           python tests/test_science_physics_jh1_retrieval.py
           python tests/test_science_physics_jh1_light_sound.py
+          python tests/test_science_physics_jh1_mixed_review.py
 
       - name: Ensure calculation batch is present
         run: python scripts/publish_science_physics_jh1.py
@@ -57,8 +61,11 @@ jobs:
       - name: Ensure force retrieval batch is present
         run: python scripts/publish_science_physics_jh1_retrieval.py
 
-      - name: Generate and register light and sound batch
+      - name: Ensure light and sound batch is present
         run: python scripts/publish_science_physics_jh1_light_sound.py
+
+      - name: Generate and register mixed and review batch
+        run: python scripts/publish_science_physics_jh1_mixed_review.py
 
       - name: Re-run full validation after publication
         run: |
@@ -66,6 +73,7 @@ jobs:
           python tests/test_science_physics_jh1.py
           python tests/test_science_physics_jh1_retrieval.py
           python tests/test_science_physics_jh1_light_sound.py
+          python tests/test_science_physics_jh1_mixed_review.py
           python - <<'PY'
           import json
           from pathlib import Path
@@ -80,19 +88,21 @@ jobs:
               and x.get('school_level') == 'junior-high'
               and x.get('grade') == 1
           ]
-          assert len(science) == 42, len(science)
+          assert len(science) == 48, len(science)
           assert sum(x.get('answer_type') == 'numeric' for x in science) == 12
-          assert sum(x.get('answer_type') == 'accepted-set' for x in science) == 30
-          light_sound = [x for x in science if x.get('skill') in {'light-basic-retrieval', 'sound-basic-retrieval'}]
-          assert len(light_sound) == 18, len(light_sound)
-          assert all(x.get('problem_count') == 10 for x in light_sound)
+          assert sum(x.get('answer_type') == 'accepted-set' for x in science) == 36
+          mixed = [x for x in science if x.get('worksheet_series') == 'mixed']
+          review = [x for x in science if x.get('worksheet_series') == 'review']
+          assert len(mixed) == 3, len(mixed)
+          assert len(review) == 3, len(review)
+          assert all(x.get('problem_count') == 10 for x in mixed + review)
           for entry in science:
               path = root / entry['url']
               data = path.read_bytes()
               assert data.startswith(b'%PDF')
               assert path.stat().st_size > 1000
               assert b'/Count 2' in data, entry['id']
-          print('JH1 physics 42-PDF catalog validation: OK')
+          print('JH1 physics 48-PDF catalog validation: OK')
           PY
 
       - name: Commit generated PDFs and catalog when changed
@@ -104,7 +114,7 @@ jobs:
             echo 'No generated changes; all JH1 physics worksheets are already current.'
             exit 0
           fi
-          git commit -m 'Publish junior-high physics light and sound worksheets'
+          git commit -m 'Publish junior-high physics mixed and review worksheets'
           git fetch origin main
           test "$(git rev-parse HEAD^)" = "$(git rev-parse origin/main)"
           git push origin HEAD:main
