@@ -37,20 +37,55 @@ for skill in wf.SKILLS:
 catalog = json.loads((ROOT / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
 wf.validate_catalog(catalog, ROOT)
 
+numeric = wf.numeric_answer(12.5, tolerance=0.1, unit='m/s')
+assert wf.answer_matches(numeric, 12.5)
+assert wf.answer_matches(numeric, 12.59)
+assert not wf.answer_matches(numeric, 12.7)
+assert not wf.answer_matches(numeric, '12.5')
+
+accepted = wf.accepted_answer('塩化銀', 'AgCl')
+assert wf.answer_matches(accepted, '塩化銀')
+assert wf.answer_matches(accepted, ' AgCl ')
+assert not wf.answer_matches(accepted, '塩化ナトリウム')
+
 science_entry = {
     'id':'science-test','school_level':'junior-high','grade':1,'subject':'理科',
     'science_field':'physics','worksheet_mode':'calculation','unit':'力','skill':'pressure-basic',
     'problem_count':20,'seed':1,'variant':1,'title':'test','description':'test',
-    'url':catalog[0]['url'],'content_hash':'science-test-hash'
+    'url':catalog[0]['url'],'content_hash':'science-test-hash','difficulty':'basic',
+    'worksheet_series':'focused','answer_type':'numeric'
 }
 wf.validate_catalog([science_entry], ROOT)
 
-invalid_science = dict(science_entry)
-del invalid_science['science_field']
+for missing_field in ('science_field', 'worksheet_mode'):
+    invalid_science = dict(science_entry)
+    del invalid_science[missing_field]
+    try:
+        wf.validate_catalog([invalid_science], ROOT)
+        raise AssertionError(f'{missing_field} validation did not fail')
+    except AssertionError as exc:
+        assert missing_field in str(exc)
+
+invalid_series = dict(science_entry)
+invalid_series['worksheet_series'] = 'speed'
 try:
-    wf.validate_catalog([invalid_science], ROOT)
-    raise AssertionError('science_field validation did not fail')
+    wf.validate_catalog([invalid_series], ROOT)
+    raise AssertionError('worksheet_series validation did not fail')
 except AssertionError as exc:
-    assert 'science_field' in str(exc)
+    assert 'worksheet_series' in str(exc)
+
+high_school_science = dict(science_entry)
+high_school_science.update({
+    'id':'science-high-school-test','school_level':'high-school','grade':None,
+    'formal_course':'物理基礎','content_hash':'science-high-school-test-hash'
+})
+wf.validate_catalog([high_school_science], ROOT)
+
+del high_school_science['formal_course']
+try:
+    wf.validate_catalog([high_school_science], ROOT)
+    raise AssertionError('formal_course validation did not fail')
+except AssertionError as exc:
+    assert 'formal_course' in str(exc)
 
 print('worksheet factory tests: OK')
