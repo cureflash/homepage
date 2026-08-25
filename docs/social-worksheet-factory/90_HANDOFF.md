@@ -4,35 +4,54 @@
 
 - Active stage: junior-high
 - Active field: history
-- Active unit: Jomon / Yayoi overview
-- Next role: FACTCHECK
-- Prototype worksheet/generator has been created under `subjects/social/worksheets/`.
+- Verified production unit: Jomon / Yayoi overview
+- Next active unit: Yayoi society, small states, Yamatai / Himiko
+- Next role: GENERATE
+- Canonical implementation path: `subjects/social/worksheets/`
 
-## Prototype intent
+## Completed fact-check
 
-The first A4 study sheet is deliberately light on information. It introduces:
+The first Jomon / Yayoi prototype was independently checked against fresh authoritative sources rather than accepting the generator's citations.
 
-- Jomon: settled life, pit dwellings, Jomon pottery, shell mounds, dogu
-- Yayoi: wet-rice agriculture, Yayoi pottery, high-floored storehouses, bronze/iron tools, dotaku, moated settlements / Yoshinogari
+Verified curriculum placement:
 
-Core terms render red in study mode. The same explicit terms become eligible blanks in generated worksheet mode.
+- MEXT current junior-high Social Studies commentary places the material under historical field `古代までの日本` and explicitly treats the spread of agriculture and resulting changes in life as part of `日本列島における国家形成`.
 
-## Evidence used during generation (not yet independent approval)
+Verified content:
 
-- MEXT current junior-high Social Studies commentary: historical field, `古代までの日本` and large-flow understanding.
-- National Museum of Japanese History: Jomon settled life; hunting/gathering/fishing/cultivation; wet-rice agriculture spreading from northern Kyushu; metal objects including dotaku.
-- Yoshinogari Historical Park official pages: moated Yayoi settlement, pit buildings, storehouse areas, and development of the settlement.
-- Wikimedia Commons file pages for the actual image-file licenses. The prototype uses only non-AI images and records file/license/source links.
+- Jomon settled life and hunting/gathering/fishing: National Museum of Japanese History, Room 1.
+- Jomon pit dwellings: National Museum of Japanese History khirin archaeological record.
+- Jomon pottery used for cooking: Agency for Cultural Affairs / Cultural Heritage Online.
+- Shell mounds containing discarded eaten shells: Agency for Cultural Affairs / Cultural Heritage Online.
+- Dogu as ritual/prayer objects: Agency for Cultural Affairs cultural-property explanations.
+- Wet-rice agriculture reached northern Kyushu from the Korean Peninsula and spread through the archipelago; current Rekihaku chronology places its northern-Kyushu beginning around the 10th century BCE (about 3,000 years ago).
+- Bronze and iron objects and dotaku used in ritual contexts: National Museum of Japanese History / Kids Rekihaku.
+- Yoshinogari as a major moated Yayoi settlement, with high-floored storehouses and storage of rice/grain: Yoshinogari Historical Park official pages.
 
-## Required next run
+All seven sentence records in `subjects/social/worksheets/data/jomon-yayoi.js` now carry explicit source references and `factcheckStatus: "verified"`.
 
-1. Do not trust the wording above as proof.
-2. Independently reopen MEXT and authoritative museum/archaeological sources.
-3. Verify every sentence in `subjects/social/worksheets/data/jomon-yayoi.js`.
-4. Verify each image file's actual reuse license and attribution requirement.
-5. Correct or reject anything unsupported.
-6. If all claims and image metadata pass, change each item to `verified`, update `STATUS.json.next_role` to `generate`, and mark the first independent fact-check checkbox in `20_EXECUTION_PLAN.md` complete.
+## Image-license review
 
-## Important constraint
+All four image file pages were reopened and checked individually.
 
-Do not use AI-generated historical images. Do not copy prose from current textbooks. Build original short sentences from independently verified facts.
+- Shakoki-dogu: CC BY-SA 4.0; source/author shown as Tokyo National Museum on the Commons file page.
+- Yayoi pottery: wording corrected from vague `CC BY 4.0 compatible terms` to `Government of Japan Standard Terms of Use (Ver. 2.0, CC BY 4.0 compatible)` with ColBase attribution.
+- Dotaku photograph: uploader Saigen Jiro released the photograph to the public domain (PD-self).
+- Yoshinogari reconstructed high-floored storehouse photograph: uploader AsPJT, CC0 1.0.
+
+No AI-generated historical images are used.
+
+## Generator / layout check
+
+- `app.js` blanks only the explicit `terms` entries.
+- Blank selection is deterministic for the same seed/rate through the seeded PRNG.
+- Worksheet and answer modes use the same selected blank set, so answers correspond to the generated blanks.
+- The print stylesheet fixes the sheet to A4 portrait and keeps the prototype intentionally low-density.
+
+## Progress
+
+`20_EXECUTION_PLAN.md` now marks the independent prototype fact-check and first verified production-unit registration complete. `STATUS.json` has advanced to `yayoi-society-states-yamatai-himiko` with `next_role: generate`.
+
+## Exact next starting point
+
+On the next GENERATE run, work only on `Yayoi society, small states, Yamatai / Himiko`. Build its concise explanation-sheet facts first, then explicit cloze targets and suitable non-AI source images. Mark all new claims/images `pending_factcheck` and return `next_role` to `factcheck` before ending.
