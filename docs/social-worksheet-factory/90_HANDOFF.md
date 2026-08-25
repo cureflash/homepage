@@ -6,107 +6,72 @@
 - Active field: history
 - Verified through: Heian period
 - Active unit: Kamakura period
-- Next role: GENERATE
+- Next role: FACTCHECK
 - Batch size: 1 unit
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed FACTCHECK — Kofun / Asuka / Nara / Heian
+## Completed GENERATE — Kamakura period
 
-The four generated units were reviewed as untrusted content. MEXT's current junior-high Social Studies commentary and independent government, museum/archive, temple, municipal, and exact Wikimedia Commons file pages were reopened from scratch. Curriculum placement was confirmed at junior-high history / ancient Japan level without assigning a nationally fixed grade year.
+Created `subjects/social/worksheets/data/kamakura-period.js` as the next junior-high history unit. It is intentionally low-density and remains completely `pending_factcheck`; it is not loaded by the public selector yet.
 
-Final state:
+### Study structure
 
-- 23 study sentences: `verified`
-- 8 image records: `verified`
-- 4 unit records: `verified`
-- no AI-generated historical images are used
-- the four verified datasets are now loaded by `subjects/social/worksheets/index.html`
+Two sections, seven concise study sentences:
 
-### Kofun period and Yamato polity
+1. Kamakura bakufu and gokenin
+   - 守護 / 地頭
+   - 源頼朝 / 征夷大将軍
+   - 御家人 / 御恩 / 奉公
+2. Hojo regency and Mongol invasions
+   - 執権
+   - 承久の乱
+   - 御成敗式目
+   - 文永の役 / 弘安の役 / 元寇
 
-File: `subjects/social/worksheets/data/kofun-yamato.js`
+The worksheet generator contract is unchanged: only explicit `terms` entries are eligible for blanks, and deterministic seed/rate behavior remains in the shared app.
 
-Verified against MEXT and Cultural Heritage Online material for ancient tombs, haniwa, the spread of Yamato political power, and migrants from the continent.
+### Candidate factual basis used during generation
 
-Images independently checked on their exact Commons file pages:
+These are generation references only. The next FACTCHECK run must independently reopen sources and treat every claim as untrusted.
 
-- `Daisenryo Kofun zenkei.JPG` — Saigen Jiro — CC0 1.0
-- warrior haniwa `DSC05626.JPG` — Daderot — CC0 1.0; file identity states Tokyo National Museum, Kofun period, 6th century
+- MEXT current junior-high Social Studies commentary for placement in medieval Japanese history and the core terms around warrior government, gokenin, Hojo rule and Mongol invasions.
+- Kamakura City official history pages for Yoritomo, Kamakura as political base, the 1185 right to appoint shugo/jito, the 1192 shogun appointment, and the modern caution that bakufu formation was gradual rather than a single-year event.
+- National Museum of Japanese History material for gokenin and service to the shogun.
+- National Archives of Japan material for Hojo Yoshitoki and chronology entries for the Jokyu Disturbance, Goseibai Shikimoku, Bun'ei campaign, Koan campaign and the 1333 end of the Kamakura bakufu.
 
-### Asuka reforms and ritsuryo formation
+### Image candidates
 
-File: `subjects/social/worksheets/data/asuka-ritsuryo.js`
+No AI-generated images were used.
 
-Verified the 603 Crown Rank system, 604 Seventeen-Article Constitution, 607 embassy led by Ono no Imoko, Taika reform sequence, and 701 Taiho Code against MEXT, Horyuji, Nara Prefecture / Manyo Culture Center, and archaeological-report sources.
+1. `Kamakura_Daibutsu_-_01.jpg`
+   - depicts the Great Buddha at Kotoku-in, Kamakura
+   - photographer: Quercus acuta
+   - exact Commons file page states CC0 1.0
+   - current project label: `鎌倉大仏`
 
-Image checks:
+2. `Mōko_Shūrai_Ekotoba.jpg`
+   - image from the historical `蒙古襲来絵詞`
+   - exact Commons file page describes it as a faithful reproduction of a public-domain two-dimensional work
+   - exact Commons file page carries Public Domain Mark 1.0 / no known copyright restrictions
+   - current project label: `『蒙古襲来絵詞』`
 
-- `Portrait of Prince Shōtoku and Two Princes.jpg` — traditional attribution to Asa no atori / exact Commons page marks the old work and reproduction public domain, with Public Domain Mark 1.0
-- Horyuji `法隆寺57.JPG` — Nekosuki — CC BY-SA 4.0
+## Publication state
 
-The Horyuji caption was tightened from a claim naming specific buildings to `法隆寺西院伽藍`, because that is the safer independently supported description of the photograph.
-
-### Nara period
-
-File: `subjects/social/worksheets/data/nara-period.js`
-
-Verified the 710 move to Heijokyo, Chang'an-influenced planned capital, ritsuryo-state administrative center, Shomu / Todaiji, 752 Great Buddha opening, 756 treasure donation, and Tenpyo culture against MEXT, Nara City, and the Nara National Research Institute for Cultural Properties.
-
-Image checks:
-
-- `Todaiji-Daibutsuden-1999.jpg` — Bigjap — CC0 1.0
-- `Shosin-shouso.jpg` — あずきごはん — CC BY-SA 4.0
-
-Two image notes were corrected during review:
-
-1. the Todaiji photo now states that the present Daibutsuden was rebuilt in 1709, avoiding an implication that the photographed building is the original Nara-period structure;
-2. the Shosoin note no longer calls the whole building `校倉造`; it states that the north and south storehouses are azekura construction, matching the Imperial Household Agency explanation.
-
-### Heian period
-
-File: `subjects/social/worksheets/data/heian-period.js`
-
-Verified the 794 move and naming of Heiankyo, Fujiwara regency politics, Michinaga, kana / kokufu culture, Murasaki Shikibu and Sei Shonagon, and the 1053 Phoenix Hall against MEXT, Kyoto official educational material, the National Diet Library, and Byodoin official history / architecture pages.
-
-Image checks:
-
-- `Murasaki Shikibu.jpg` — work by Kikuchi Yosai — old-work faithful reproduction / Public Domain Mark 1.0
-- `Byodoin.jpg` — Cun Cun — CC BY-SA 4.0
-
-## Main fact-check evidence
-
-- MEXT current junior-high Social Studies commentary: `https://www.mext.go.jp/content/20240919-mxt_kyoiku01-100002608.pdf`
-- Cultural Heritage Online: `https://bunka.nii.ac.jp/`
-- Horyuji official site: `https://www.horyuji.or.jp/garan/`
-- Nara Prefecture Shotoku material: `https://www.pref.nara.jp/secure/61525/05.pdf`
-- Nara Manyo Culture Center: `https://manyo-hyakka.pref.nara.jp/db/detailLink?cls=db_yougo3&pkey=3`
-- Nara National Research Institute / site reports: `https://sitereports.nabunken.go.jp/`
-- Nara City history: `https://www.city.nara.lg.jp/soshiki/3/148230.html`
-- Nara City Todaiji: `https://www.city.nara.lg.jp/site/world-heritage/88515.html`
-- Imperial Household Agency Shosoin: `https://shosoin.kunaicho.go.jp/`
-- Kyoto official school-trip history: `https://shugakuryoko.kyoto.travel/study/history/`
-- National Diet Library classical literature material: `https://dl.ndl.go.jp/view/download/digidepo_999380_po_127.pdf?contentNo=1`
-- Byodoin architecture: `https://www.byodoin.or.jp/learn/architecture/`
-- Byodoin history: `https://www.byodoin.or.jp/learn/history/`
-
-Exact Wikimedia Commons source pages, credits, and licenses remain recorded in each unit's image records and sources.
-
-## Publication and generator state
-
-`subjects/social/worksheets/index.html` now loads six verified datasets in production order:
-
-1. Jomon / Yayoi overview
-2. Yayoi society / Yamatai / Himiko
-3. Kofun period / Yamato polity
-4. Asuka reforms / ritsuryo formation
-5. Nara period
-6. Heian period
-
-The concurrent site description and Cloudflare Web Analytics markup were preserved. The shared generator was not broadened; it continues to blank only terms explicitly listed in sentence `terms` arrays, with the existing deterministic seed/rate behavior.
+The public `subjects/social/worksheets/index.html` still loads only the six verified units through Heian. `kamakura-period.js` must remain unregistered there until independent fact-checking passes all seven sentences and both image records.
 
 ## Exact next starting point
 
-Next role is GENERATE. Work only on `Kamakura period`, the next junior-high history queue item.
+Perform an independent FACTCHECK of only `subjects/social/worksheets/data/kamakura-period.js`.
 
-Create or update its structured unit under `subjects/social/worksheets/data/`, build the low-density A4 explanation content first, mark only true core terms as cloze targets, use several non-AI historical-source images where useful, and record exact file source / author / license metadata. All new claims and images must remain `pending_factcheck`, must not be added to the public selector yet, and `STATUS.json.next_role` must be changed to `factcheck` before the run ends.
+Treat all seven study sentences and both image records as untrusted. Reopen authoritative sources from scratch and verify at minimum:
+
+1. whether the 1185 wording about shugo/jito appointment authority is accurate and appropriately qualified;
+2. 1192 Yoritomo appointment and the statement that bakufu formation is now treated as gradual rather than fixed to one founding year;
+3. terminology and substance of 御家人 / 御恩 / 奉公;
+4. the role of the Hojo regent and whether the sentence overstates a single start point for Hojo dominance;
+5. 1221 Jokyu Disturbance and the consequence wording about bakufu influence over court/western Japan;
+6. 1232 Goseibai Shikimoku, Hojo Yasutoki, and its characterization as a warrior judicial standard;
+7. 1274 Bun'ei and 1281 Koan campaigns, the use of `元寇`, and the wording about Kyushu gokenin defense.
+
+For both images, independently verify exact file identity, author/source, license, and whether the educational caption is supportable. Correct or reject unsupported wording. If all items pass, mark sentence/image/unit statuses `verified`, add `data/kamakura-period.js` to the public selector, set `next_role` to `generate`, and advance the queue to `Muromachi period`.
