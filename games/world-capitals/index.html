@@ -3,49 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="主要国と首都の正しいペアを見つけて捨てるババ抜きゲームです。通常9枚と主要30か国を使うハードモードを選べます。">
+  <meta name="description" content="地域別とG7から選べる、国と首都のババ抜き学習ゲームです。">
   <title>世界の首都ババ抜き｜ひかり教材室</title>
-  <link rel="stylesheet" href="styles.css?v=1">
+  <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-  <main class="old-maid-page">
-    <header class="old-maid-header">
-      <h1>世界の首都ババ抜き</h1>
-      <a class="back-link" href="../../index.html">教材室トップへ</a>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../../index.html">ひかり教材室</a>
+      <nav class="nav" aria-label="ナビゲーション">
+        <a href="../../index.html#games-heading">学習ゲーム</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="game-panel" aria-labelledby="game-message">
-      <div class="game-toolbar">
-        <div class="game-info">
-          <span>モード <strong id="mode-label">通常</strong></span>
-          <span>捨てたペア <strong id="pairs-discarded">0</strong>/<strong id="pairs-total">4</strong></span>
-        </div>
-        <button id="discard-button" class="discard-button" type="button" disabled>捨てる</button>
+  <main>
+    <section class="hero hero-compact">
+      <div class="container">
+        <p class="eyebrow">WORLD CAPITALS</p>
+        <h1>世界の首都ババ抜き</h1>
+        <p class="hero-text">地域を選んで、国と首都のペアをそろえます。各ゲームに通常モードと全収録国を出すハードモードがあります。</p>
       </div>
+    </section>
 
-      <div class="game-controls">
-        <div class="control-group" aria-label="難易度">
-          <button id="normal-mode-button" class="mode-button is-active" type="button" aria-pressed="true">通常 9枚</button>
-          <button id="hard-mode-button" class="mode-button" type="button" aria-pressed="false">ハード 主要30か国</button>
-          <button id="restart-button" type="button">最初から</button>
-        </div>
-        <div class="control-group" aria-label="音声">
-          <button id="bgm-button" class="audio-button" type="button" aria-pressed="true">BGM: ON</button>
-          <button id="se-button" class="audio-button" type="button" aria-pressed="true">SE: ON</button>
-        </div>
+    <section class="container section" aria-labelledby="regions-heading">
+      <div class="section-heading">
+        <h2 id="regions-heading">地域から選ぶ</h2>
+        <p>各地域の主要国を中心に収録しています。</p>
       </div>
+      <div class="subject-grid">
+        <a class="subject-card subject-social" href="east-asia/"><span class="subject-kicker">アジア</span><strong>東アジア</strong><span>日本・中国・韓国など 5か国</span></a>
+        <a class="subject-card subject-social" href="southeast-asia/"><span class="subject-kicker">アジア</span><strong>東南アジア</strong><span>タイ・ベトナム・フィリピンなど 9か国</span></a>
+        <a class="subject-card subject-social" href="south-asia/"><span class="subject-kicker">アジア</span><strong>南アジア</strong><span>インド・パキスタンなど 6か国</span></a>
+        <a class="subject-card subject-social" href="middle-east/"><span class="subject-kicker">アジア</span><strong>中東</strong><span>サウジアラビア・トルコなど 12か国</span></a>
+        <a class="subject-card subject-social" href="europe/"><span class="subject-kicker">ヨーロッパ</span><strong>ヨーロッパ</strong><span>イギリス・フランス・ドイツなど 19か国</span></a>
+        <a class="subject-card subject-social" href="africa/"><span class="subject-kicker">アフリカ</span><strong>アフリカ</strong><span>エジプト・ナイジェリア・ケニアなど 16か国</span></a>
+        <a class="subject-card subject-social" href="north-america/"><span class="subject-kicker">アメリカ</span><strong>北アメリカ</strong><span>アメリカ・カナダ・メキシコなど 12か国</span></a>
+        <a class="subject-card subject-social" href="south-america/"><span class="subject-kicker">アメリカ</span><strong>南アメリカ</strong><span>ブラジル・アルゼンチンなど 11か国</span></a>
+        <a class="subject-card subject-social" href="oceania/"><span class="subject-kicker">オセアニア</span><strong>オセアニア</strong><span>オーストラリア・ニュージーランドなど 8か国</span></a>
+      </div>
+    </section>
 
-      <p id="game-message" aria-live="polite">カードをタッチして2枚選んでください。</p>
-
-      <div class="play-area">
-        <section class="hand-area" aria-label="手札">
-          <p class="area-label">手札</p>
-          <div id="hand" class="hand"></div>
-        </section>
+    <section class="container section" aria-labelledby="groups-heading">
+      <div class="section-heading">
+        <h2 id="groups-heading">国際グループ</h2>
+      </div>
+      <div class="subject-grid">
+        <a class="subject-card subject-social" href="g7/"><span class="subject-kicker">G7</span><strong>G7の首都</strong><span>日本・アメリカ・カナダ・イギリス・フランス・ドイツ・イタリア</span></a>
       </div>
     </section>
   </main>
 
-  <script type="module" src="app.js?v=1"></script>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© ひかり教材室</span>
+      <a href="../../privacy.html">プライバシーポリシー</a>
+    </div>
+  </footer>
 </body>
 </html>
