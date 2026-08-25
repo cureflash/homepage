@@ -4,114 +4,109 @@
 
 - Active stage: junior-high
 - Active field: history
-- Verified through: Yayoi society / small states / Yamatai / Himiko
-- Active batch: Kofun / Asuka / Nara / Heian
-- Next role: FACTCHECK
-- Batch size: 4 units
+- Verified through: Heian period
+- Active unit: Kamakura period
+- Next role: GENERATE
+- Batch size: 1 unit
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed FACTCHECK — Yayoi society / Yamatai / Himiko
+## Completed FACTCHECK — Kofun / Asuka / Nara / Heian
 
-Independently reopened authoritative sources instead of accepting the generator summary. The six pending claims were checked against MEXT current junior-high Social Studies commentary, Fukuoka City Museum, National Diet Library, Imperial Household Agency, Kyoto National Museum, and National Museum of Japanese History material.
+The four generated units were reviewed as untrusted content. MEXT's current junior-high Social Studies commentary and independent government, museum/archive, temple, municipal, and exact Wikimedia Commons file pages were reopened from scratch. Curriculum placement was confirmed at junior-high history / ancient Japan level without assigning a nationally fixed grade year.
 
 Final state:
 
-- all six sentence records: `verified`
-- unit: `verified`
-- `King of Na gold seal faces.jpg`: verified as a photograph of a Toi Museum replica by PHGCOM; Commons offers CC BY-SA 3.0 / GFDL, and this project records the CC BY-SA 3.0 route
-- `Gishiwajinden.jpg`: Commons file page identifies the material as `魏志倭人伝` and marks the file CC0 1.0; provenance information remains recorded on the file page
+- 23 study sentences: `verified`
+- 8 image records: `verified`
+- 4 unit records: `verified`
 - no AI-generated historical images are used
+- the four verified datasets are now loaded by `subjects/social/worksheets/index.html`
 
-Two wordings were tightened during review:
-
-1. the 239 sentence now states that Himiko sent an envoy to Wei, received the title `親魏倭王`, and was given a gold seal and bronze mirrors, matching the independently reopened sources;
-2. the location sentence now says the location of Yamatai is still unsettled and that debate includes Kyushu and Kinai theories, rather than implying a resolved binary choice.
-
-Main fact-check evidence URLs retained in the unit:
-
-- MEXT: `https://www.mext.go.jp/content/20240919-mxt_kyoiku01-100002608.pdf`
-- Fukuoka City Museum gold seal: `https://museum.city.fukuoka.jp/sp/gold/`
-- Fukuoka City Museum excavation history: `https://museum.city.fukuoka.jp/archives/leaflet/414/index.html`
-- NDL Yamatai material: `https://dl.ndl.go.jp/view/download/digidepo_999426_po_85.pdf?contentNo=1`
-- Imperial Household Agency 2025 lecture: `https://www.kunaicho.go.jp/learn/culture/kosyo/kosho-r07.html`
-- Kyoto National Museum: `https://www.kyohaku.go.jp/jp/learn/home/yomimono_data/0063/`
-- Rekihaku FAQ: `https://www.rekihaku.ac.jp/contact/faq/`
-
-## Completed GENERATE batch — four units
-
-All new material below is deliberately `pending_factcheck`. It must not be treated as published/verified content until the next independent FACTCHECK run.
-
-### 1. Kofun period and Yamato polity
+### Kofun period and Yamato polity
 
 File: `subjects/social/worksheets/data/kofun-yamato.js`
 
-- 6 concise study sentences
-- core terms include 古墳 / 前方後円墳 / 埴輪 / 大和政権 / 渡来人
-- 2 image candidates:
-  - `Daisenryo Kofun zenkei.JPG` — Saigen Jiro, Commons, CC0 1.0
-  - warrior haniwa `DSC05626.JPG` — Daderot, Commons, CC0 1.0
-- candidate fact sources: MEXT and Cultural Heritage Online
+Verified against MEXT and Cultural Heritage Online material for ancient tombs, haniwa, the spread of Yamato political power, and migrants from the continent.
 
-### 2. Asuka reforms and ritsuryo formation
+Images independently checked on their exact Commons file pages:
+
+- `Daisenryo Kofun zenkei.JPG` — Saigen Jiro — CC0 1.0
+- warrior haniwa `DSC05626.JPG` — Daderot — CC0 1.0; file identity states Tokyo National Museum, Kofun period, 6th century
+
+### Asuka reforms and ritsuryo formation
 
 File: `subjects/social/worksheets/data/asuka-ritsuryo.js`
 
-- 5 concise study sentences
-- core terms include 冠位十二階 / 十七条の憲法 / 小野妹子 / 遣隋使 / 中大兄皇子 / 中臣鎌足 / 大化の改新 / 大宝律令 / 律令国家
-- 2 image candidates:
-  - `Portrait of Prince Shōtoku and Two Princes.jpg` — Commons file marked public domain
-  - Horyu-ji `法隆寺57.JPG` — Nekosuki, Commons, CC BY-SA 4.0
-- candidate fact sources: MEXT, Horyu-ji, Nara Prefecture materials, Nara Manyo Culture Center, archaeological-report materials
+Verified the 603 Crown Rank system, 604 Seventeen-Article Constitution, 607 embassy led by Ono no Imoko, Taika reform sequence, and 701 Taiho Code against MEXT, Horyuji, Nara Prefecture / Manyo Culture Center, and archaeological-report sources.
 
-### 3. Nara period
+Image checks:
+
+- `Portrait of Prince Shōtoku and Two Princes.jpg` — traditional attribution to Asa no atori / exact Commons page marks the old work and reproduction public domain, with Public Domain Mark 1.0
+- Horyuji `法隆寺57.JPG` — Nekosuki — CC BY-SA 4.0
+
+The Horyuji caption was tightened from a claim naming specific buildings to `法隆寺西院伽藍`, because that is the safer independently supported description of the photograph.
+
+### Nara period
 
 File: `subjects/social/worksheets/data/nara-period.js`
 
-- 6 concise study sentences
-- core terms include 平城京 / 長安 / 律令国家 / 聖武天皇 / 東大寺 / 正倉院 / 天平文化
-- 2 image candidates:
-  - `Todaiji-Daibutsuden-1999.jpg` — Bigjap, Commons, CC0 1.0
-  - `Shosin-shouso.jpg` — あずきごはん, Commons, CC BY-SA 4.0
-- candidate fact sources: MEXT and Nara City official history/cultural-property pages
+Verified the 710 move to Heijokyo, Chang'an-influenced planned capital, ritsuryo-state administrative center, Shomu / Todaiji, 752 Great Buddha opening, 756 treasure donation, and Tenpyo culture against MEXT, Nara City, and the Nara National Research Institute for Cultural Properties.
 
-### 4. Heian period
+Image checks:
+
+- `Todaiji-Daibutsuden-1999.jpg` — Bigjap — CC0 1.0
+- `Shosin-shouso.jpg` — あずきごはん — CC BY-SA 4.0
+
+Two image notes were corrected during review:
+
+1. the Todaiji photo now states that the present Daibutsuden was rebuilt in 1709, avoiding an implication that the photographed building is the original Nara-period structure;
+2. the Shosoin note no longer calls the whole building `校倉造`; it states that the north and south storehouses are azekura construction, matching the Imperial Household Agency explanation.
+
+### Heian period
 
 File: `subjects/social/worksheets/data/heian-period.js`
 
-- 6 concise study sentences
-- core terms include 桓武天皇 / 平安京 / 摂政 / 関白 / 摂関政治 / 藤原道長 / かな文字 / 国風文化 / 紫式部 / 源氏物語 / 清少納言 / 枕草子 / 藤原頼通 / 平等院鳳凰堂
-- 2 image candidates:
-  - `Murasaki Shikibu.jpg` — Kikuchi Yosai work / Commons, Public Domain Mark 1.0
-  - `Byodoin.jpg` — Cun Cun, Commons, CC BY-SA 4.0
-- candidate fact sources: MEXT, Kyoto official school-trip history/culture material, NDL, and Byodoin official pages
+Verified the 794 move and naming of Heiankyo, Fujiwara regency politics, Michinaga, kana / kokufu culture, Murasaki Shikibu and Sei Shonagon, and the 1053 Phoenix Hall against MEXT, Kyoto official educational material, the National Diet Library, and Byodoin official history / architecture pages.
 
-No AI-generated historical images were added in this batch.
+Image checks:
 
-## Tool integration and publication state
+- `Murasaki Shikibu.jpg` — work by Kikuchi Yosai — old-work faithful reproduction / Public Domain Mark 1.0
+- `Byodoin.jpg` — Cun Cun — CC BY-SA 4.0
 
-The four pending unit files are complete structured inputs for the existing generator, but they are intentionally not loaded by the public `subjects/social/worksheets/index.html` yet. The published selector currently loads only the two verified datasets:
+## Main fact-check evidence
 
-1. Jomon / Yayoi overview — verified
-2. Yayoi society / Yamatai / Himiko — verified
+- MEXT current junior-high Social Studies commentary: `https://www.mext.go.jp/content/20240919-mxt_kyoiku01-100002608.pdf`
+- Cultural Heritage Online: `https://bunka.nii.ac.jp/`
+- Horyuji official site: `https://www.horyuji.or.jp/garan/`
+- Nara Prefecture Shotoku material: `https://www.pref.nara.jp/secure/61525/05.pdf`
+- Nara Manyo Culture Center: `https://manyo-hyakka.pref.nara.jp/db/detailLink?cls=db_yougo3&pkey=3`
+- Nara National Research Institute / site reports: `https://sitereports.nabunken.go.jp/`
+- Nara City history: `https://www.city.nara.lg.jp/soshiki/3/148230.html`
+- Nara City Todaiji: `https://www.city.nara.lg.jp/site/world-heritage/88515.html`
+- Imperial Household Agency Shosoin: `https://shosoin.kunaicho.go.jp/`
+- Kyoto official school-trip history: `https://shugakuryoko.kyoto.travel/study/history/`
+- National Diet Library classical literature material: `https://dl.ndl.go.jp/view/download/digidepo_999380_po_127.pdf?contentNo=1`
+- Byodoin architecture: `https://www.byodoin.or.jp/learn/architecture/`
+- Byodoin history: `https://www.byodoin.or.jp/learn/history/`
 
-After the next independent fact-check approves a new unit, add its dataset script to `subjects/social/worksheets/index.html`. This preserves the factory rule that unverified study sheets are not published as learner-facing material.
+Exact Wikimedia Commons source pages, credits, and licenses remain recorded in each unit's image records and sources.
 
-A concurrent site-maintenance change added the page description and Cloudflare Web Analytics to `index.html`; those unrelated changes were preserved while reconciling latest `main`.
+## Publication and generator state
 
-The shared generator behavior was not broadened. `app.js` still blanks only terms explicitly listed in each sentence's `terms` array, so arbitrary nouns cannot become blanks. Existing seed/rate behavior is unchanged.
+`subjects/social/worksheets/index.html` now loads six verified datasets in production order:
+
+1. Jomon / Yayoi overview
+2. Yayoi society / Yamatai / Himiko
+3. Kofun period / Yamato polity
+4. Asuka reforms / ritsuryo formation
+5. Nara period
+6. Heian period
+
+The concurrent site description and Cloudflare Web Analytics markup were preserved. The shared generator was not broadened; it continues to blank only terms explicitly listed in sentence `terms` arrays, with the existing deterministic seed/rate behavior.
 
 ## Exact next starting point
 
-Perform one independent FACTCHECK batch covering only these four files:
+Next role is GENERATE. Work only on `Kamakura period`, the next junior-high history queue item.
 
-- `subjects/social/worksheets/data/kofun-yamato.js`
-- `subjects/social/worksheets/data/asuka-ritsuryo.js`
-- `subjects/social/worksheets/data/nara-period.js`
-- `subjects/social/worksheets/data/heian-period.js`
-
-Treat all 23 new study sentences and all 8 image records as untrusted. Reopen MEXT and authoritative museum/archive/government/temple sources from scratch. Do not approve an item merely because its generator source list looks plausible.
-
-For every sentence, verify dates, names, institutional terminology, causal wording, and current junior-high curriculum placement. For every image, independently verify exact file identity, whether it depicts what the label says, author/creator, source, license, and any attribution/share-alike requirement. Correct or reject unsupported wording or image use.
-
-Only after all four units pass should their sentence/image/unit statuses become `verified`. Then register the verified datasets in `subjects/social/worksheets/index.html`, set `next_role` to `generate`, clear the active fact-check batch, and advance the queue to `Kamakura period`.
+Create or update its structured unit under `subjects/social/worksheets/data/`, build the low-density A4 explanation content first, mark only true core terms as cloze targets, use several non-AI historical-source images where useful, and record exact file source / author / license metadata. All new claims and images must remain `pending_factcheck`, must not be added to the public selector yet, and `STATUS.json.next_role` must be changed to `factcheck` before the run ends.
