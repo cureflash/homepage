@@ -1,5 +1,5 @@
 {
-  "status": "in_progress",
-  "updated_at": "2026-08-26T05:04:00+09:00",
-  "next_task": "既存の九九穴埋めがすでに missing-factor 型を扱っているため、まず scripts/publish_grade2_times_tables_missing.py と公開カタログを確認し、九九の逆引きを問題内容として実質重複しない形式で設計できるか判定する。単なる表現変更・並べ替えにしかならない場合は逆引き教材を追加せず、九九 speed を既存の段別20問・全段ランダム24問とは異なる正当な短時間反復形式として設計する。2〜9の段分布・基本事実の網羅性、決定的seed生成、独立解答再計算、教材内・教材間重複検査、普通整数の問題番号、問題と同じ配置への赤字解答、PDF/カタログ登録、Grade 2全回帰テストまで実装する。worksheet_series は既存許容値を維持し、必要なら worksheet_format: times-table-speed で形式を区別する"
+  "status": "done",
+  "updated_at": "2026-08-26T06:06:00+09:00",
+  "next_task": null
 }
