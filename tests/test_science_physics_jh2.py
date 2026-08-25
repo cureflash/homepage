@@ -9,6 +9,13 @@ from scripts.science_physics_jh2_topics import (
     JH2_PHYSICS_PROBLEM_COUNT,
     JH2_PHYSICS_SEEDS,
 )
+from scripts.science_physics_jh2_mixed_review import (
+    JH2_PHYSICS_MIXED_REVIEW_PROBLEM_COUNT,
+    JH2_PHYSICS_MIXED_SEEDS,
+    JH2_PHYSICS_REVIEW_SEEDS,
+    generate_jh2_physics_mixed,
+    generate_jh2_physics_review,
+)
 from scripts.science_worksheet_helpers import generate_formula_drill, validate_science_problem
 from scripts.worksheet_factory import normalized_hash, text_problem, validate
 
@@ -39,6 +46,44 @@ def test_deterministic_and_distinct():
                 count += 1
     assert count == 90
     assert len(hashes) == 90
+
+
+def test_mixed_review_deterministic_distinct_and_broad():
+    hashes = set()
+    for generator, seeds in (
+        (generate_jh2_physics_mixed, JH2_PHYSICS_MIXED_SEEDS),
+        (generate_jh2_physics_review, JH2_PHYSICS_REVIEW_SEEDS),
+    ):
+        for seed in seeds:
+            first = generator(seed)
+            second = generator(seed)
+            assert first == second
+            assert len(first) == JH2_PHYSICS_MIXED_REVIEW_PROBLEM_COUNT == 20
+            validate(first)
+            h = normalized_hash(first)
+            assert h not in hashes
+            hashes.add(h)
+            formula_ids = {problem["formula_id"] for problem in first}
+            assert len(formula_ids) >= 7
+            solve_for = {problem["solve_for"] for problem in first}
+            assert {"V", "I", "R"}.issubset(solve_for)
+            assert {problem["answer_spec"]["unit"] for problem in first}.issuperset({"V", "A", "Ω", "W", "J"})
+    assert len(hashes) == 30
+
+
+def test_mixed_review_do_not_duplicate_focused():
+    focused_hashes = {
+        normalized_hash(generated(topic_key, mode_key, seed))
+        for topic_key, topic in JH2_PHYSICS_FORMULA_TOPICS.items()
+        for mode_key in topic["modes"]
+        for seed in topic_seeds(topic_key)
+    }
+    for generator, seeds in (
+        (generate_jh2_physics_mixed, JH2_PHYSICS_MIXED_SEEDS),
+        (generate_jh2_physics_review, JH2_PHYSICS_REVIEW_SEEDS),
+    ):
+        for seed in seeds:
+            assert normalized_hash(generator(seed)) not in focused_hashes
 
 
 def test_ohms_law_answers():
@@ -113,21 +158,28 @@ def test_prompts_and_units_are_basic():
             assert "求めなさい" in prompt
             assert problem["answer_spec"]["unit"] == expected_unit
             assert len(prompt) < 120
+    for generator, seed in (
+        (generate_jh2_physics_mixed, JH2_PHYSICS_MIXED_SEEDS[0]),
+        (generate_jh2_physics_review, JH2_PHYSICS_REVIEW_SEEDS[0]),
+    ):
+        assert all(len(text_problem(problem)) < 120 for problem in generator(seed))
 
 
 def test_corruption_is_rejected():
-    problem = generated("electric-energy", "basic", topic_seeds("electric-energy")[2])[0]
+    problem = generate_jh2_physics_review(JH2_PHYSICS_REVIEW_SEEDS[0])[0]
     broken = {**problem, "answer": problem["answer"] + 1}
     try:
         validate_science_problem(broken)
     except AssertionError:
         pass
     else:
-        raise AssertionError("corrupted JH2 energy answer was accepted")
+        raise AssertionError("corrupted JH2 mixed/review answer was accepted")
 
 
 if __name__ == "__main__":
     test_deterministic_and_distinct()
+    test_mixed_review_deterministic_distinct_and_broad()
+    test_mixed_review_do_not_duplicate_focused()
     test_ohms_law_answers()
     test_series_parallel_and_combined_resistance_answers()
     test_power_energy_and_heat_answers()
