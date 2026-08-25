@@ -1,0 +1,16 @@
+{
+  "repositoryPath": "..",
+  "maxRunsPerProject": 10,
+  "maxNoProgressRuns": 2,
+  "turnTimeoutMinutes": 60,
+  "requireCleanWorkingTree": true,
+  "pullBeforeStart": true,
+  "pushAfterTurn": true,
+  "codex": {
+    "sandboxMode": "workspace-write",
+    "approvalPolicy": "never",
+    "networkAccessEnabled": true,
+    "webSearchMode": "live",
+    "modelReasoningEffort": "high"
+  }
+}
