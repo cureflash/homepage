@@ -4,46 +4,63 @@ Updated: 2026-08-25
 
 ## Completed this run
 
-- Read the full science-factory Markdown control tree and the required math-factory shared instructions/handoff.
-- Inspected the live shared math implementation: `scripts/worksheet_factory.py`, `worksheets/catalog.json`, `worksheets/index.html`, `tests/test_worksheet_factory.py`, generated PDF paths, and the root site's existing material links.
-- Confirmed that science can reuse the current seeded generation → independent answer recomputation → normalized content hash → PDF → catalog → generated listing path; no separate science-only engine is needed.
-- Added `docs/science-worksheet-factory/40_SHARED_INTEGRATION.md` documenting the reuse boundary and stable URL families that science must not break.
-- Extended `scripts/worksheet_factory.py` with shared catalog validation for required fields, duplicate IDs/URLs/content hashes, positive problem counts, output-file existence, science field/mode metadata, and mandatory formal course metadata for high-school science.
-- Kept the existing math problem generators and answer recomputation behavior unchanged.
-- Extended `tests/test_worksheet_factory.py` to validate the current catalog/output links and science metadata rejection behavior.
-- Marked Phase 0 complete in `20_EXECUTION_PLAN.md`.
+- Re-read latest `main`, the full science-factory Markdown tree, the required shared math-factory instructions/handoff, and the current shared generator/catalog/listing/tests before changing code.
+- Completed Phase 1 of `20_EXECUTION_PLAN.md` without publishing science content yet.
+- Generalized `scripts/worksheet_factory.py` so the shared catalog now requires `difficulty`, `worksheet_series`, and `answer_type` in addition to the existing worksheet identity/publication metadata.
+- Added shared answer specifications for numerical answers (`numeric`, optional tolerance/unit) and finite accepted string sets (`accepted-set`) plus validation/matching helpers.
+- Added science metadata validation for `science_field`, `worksheet_mode`, junior-high grade 1–3, and the formal high-school courses `物理基礎/物理/化学基礎/化学/生物基礎/生物/地学基礎/地学`.
+- Preserved all existing mathematics worksheet IDs, URLs, content hashes, and generator behavior; existing math catalog entries were only augmented with the new shared metadata.
+- Generalized `worksheets/index.html` from a math-only listing to the shared catalog view with filters for subject, school level, grade/formal course, science field, unit, and focused/mixed/review series.
+- Added query-parameter entry for `?subject=理科`, and linked `subjects/science/index.html` into that shared listing. The science landing page now presents junior-high grades and high-school formal course pairs instead of fabricated high-school year placement.
+- Extended `tests/test_worksheet_factory.py` with numerical-answer, accepted-answer-set, science metadata, formal-course, worksheet-series, retrieval-entry, and shared-listing checks.
+- Updated `40_SHARED_INTEGRATION.md` with the Phase-1 catalog, answer, and listing contracts.
+- Marked all Phase 1 items complete in `20_EXECUTION_PLAN.md`.
 
-## Stable published paths recorded
+## Changed files
 
-Preserve the existing root-site worksheet families:
-
-- `materials/seifu-fu-100masu-kaho-01.pdf` through `-05.pdf`
-- `materials/seifu-fu-100masu-genpo-01.pdf` through `-05.pdf`
-- `materials/seifu-fu-100masu-joho-01.pdf` through `-05.pdf`
-- `materials/mojishiki-100masu-01.pdf` through `-05.pdf`
-
-Also preserve the currently cataloged generated elementary paths under `materials/worksheets/elementary/grade-01/`.
+- `scripts/worksheet_factory.py`
+- `worksheets/catalog.json`
+- `worksheets/index.html`
+- `subjects/science/index.html`
+- `tests/test_worksheet_factory.py`
+- `docs/science-worksheet-factory/20_EXECUTION_PLAN.md`
+- `docs/science-worksheet-factory/40_SHARED_INTEGRATION.md`
+- `docs/science-worksheet-factory/90_HANDOFF.md`
 
 ## Validation results
 
-- Existing generator logic and new catalog validation were reviewed against the current catalog and repository tree.
-- The shared test file now exercises current catalog URL existence and science metadata guards.
-- A full repository test execution could not be run in this environment because direct Git network access from the local execution container is unavailable. No test failure was observed through repository inspection, but the next run should execute the test suite if an executable checkout becomes available.
+- Re-fetched the changed generator, catalog, tests, and latest repository tree from GitHub after the implementation commits and confirmed the new schema/listing changes are present on latest `main`.
+- Existing worksheet IDs, URLs, and content hashes remain unchanged; only shared metadata was added to current math catalog entries.
+- The latest repository tree was re-checked immediately before this handoff update; no concurrent changes were observed in the files touched by this science batch.
+- A local full test execution was attempted from the execution container, but the container could not resolve `github.com`, so it could not clone the repository. This is an execution-environment network limitation, not an observed repository test failure.
+- No science worksheet has been published, so no curriculum-placement verification was required for a new published topic in this run.
 
 ## Current implementation status
 
-Phase 0 is complete. The shared pipeline exists and has an explicit science integration contract. No science worksheet has been published yet.
+Phase 0 and Phase 1 are complete.
 
-Phase 1 is next: extend the shared structured model from its current math-oriented catalog shape to explicit science schema/answer-type support, then update the catalog-driven listing so mathematics and science can be grouped independently without hand-written cards.
+The shared pipeline now has the catalog and answer-representation layer needed for science, but Phase 2 is not complete. In particular, the repository does not yet have reusable science numerical formula generators, reusable retrieval generators, or independent science-family answer recomputation. Therefore physics production must not start yet.
+
+## Incomplete work / blockers
+
+- Phase 2 numerical formula-drill helpers are not implemented.
+- Phase 2 retrieval helpers (`forward/reverse`, matching, classification, true/false, fill, ordering) are not implemented.
+- Independent validator/recomputation logic for actual science problem families is not implemented.
+- Science-specific normalized duplicate detection needs to be exercised against the future problem representations.
+- Deterministic seed and printable-output tests for science generators are not implemented.
+- Full local test execution remains unavailable in the current container while GitHub DNS/network access is unavailable. Continue using repository inspection and run the suite if a future execution environment has a usable checkout.
 
 ## Exact next starting point
 
-Start at `20_EXECUTION_PLAN.md` Phase 1, first unfinished item:
+Start at `20_EXECUTION_PLAN.md` Phase 2, first unfinished item:
 
-1. re-read latest `main` and all science Markdown files, including `40_SHARED_INTEGRATION.md`;
-2. inspect `scripts/worksheet_factory.py`, `worksheets/catalog.json`, `worksheets/index.html`, and tests for concurrent math changes;
-3. implement explicit science metadata in the shared catalog/schema: science field, grade/course, formal high-school course, unit, skill/fact set, worksheet mode, difficulty, seed and output path while retaining existing math entries;
-4. add a shared representation for numerical answers and finite accepted-answer sets without publishing physics content yet;
-5. extend tests and only then proceed through the remaining Phase 1 items.
+1. re-read latest `main`, every Markdown file under `docs/science-worksheet-factory/`, and the required shared math-factory control files;
+2. inspect the latest `scripts/worksheet_factory.py`, catalog, listing, tests, and any concurrent math-factory changes before editing;
+3. implement reusable numerical formula-drill helpers in the shared generator without creating a science-only engine;
+4. implement structured retrieval helpers for forward/reverse, matching, classification, true/false, fill, and ordering;
+5. add independent per-family answer recomputation/validation rather than trusting generated answer fields;
+6. extend normalized duplicate detection and deterministic seed tests for the new science problem structures;
+7. add printable-output tests for both numerical and retrieval science worksheets;
+8. only after every Phase 2 acceptance criterion is met, verify the current MEXT placement for the first physics topic and begin Phase 3 with junior-high grade 1 physics.
 
-Do not begin physics production until Phases 1 and 2 provide validated shared science generation support.
+Do not publish physics worksheets before Phase 2 is complete.
