@@ -4,74 +4,99 @@
 
 - Active stage: junior-high
 - Active field: history
-- Verified through: Heian period
-- Active unit: Kamakura period
-- Next role: FACTCHECK
-- Batch size: 1 unit
+- Verified through: Kamakura period
+- Active unit: Muromachi period
+- Next role: GENERATE
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed GENERATE — Kamakura period
+## Completed FACTCHECK — Kamakura period
 
-Created `subjects/social/worksheets/data/kamakura-period.js` as the next junior-high history unit. It is intentionally low-density and remains completely `pending_factcheck`; it is not loaded by the public selector yet.
+Independently reopened authoritative sources and treated all seven study sentences and both image records as untrusted before approval.
 
-### Study structure
+### Curriculum placement
 
-Two sections, seven concise study sentences:
+MEXT current junior-high Social Studies commentary places this content under `中世の日本` → `武家政治の成立とユーラシアの交流`. It explicitly identifies `鎌倉幕府の成立` and `元寇（モンゴル帝国の襲来）` as core material and asks students to understand the rise of warrior government, lord-vassal ties, and the spread of warrior rule.
 
-1. Kamakura bakufu and gokenin
-   - 守護 / 地頭
-   - 源頼朝 / 征夷大将軍
-   - 御家人 / 御恩 / 奉公
-2. Hojo regency and Mongol invasions
-   - 執権
-   - 承久の乱
-   - 御成敗式目
-   - 文永の役 / 弘安の役 / 元寇
+### Factual checks and corrections
 
-The worksheet generator contract is unchanged: only explicit `terms` entries are eligible for blanks, and deterministic seed/rate behavior remains in the shared app.
+All seven records are now `verified`, but three wordings were tightened during review.
 
-### Candidate factual basis used during generation
+1. `守護・地頭`
+   - Replaced the broad wording `全国に守護・地頭` with the more precise distinction: `諸国に守護` and `荘園や公領に地頭`.
+   - Kamakura City confirms the 1185 grant and official educational material from the National Theatre distinguishes the locations/functions of shugo and jito.
 
-These are generation references only. The next FACTCHECK run must independently reopen sources and treat every claim as untrusted.
+2. `御成敗式目`
+   - Reworded it as a standard for judgments involving gokenin rather than the vague `武士のための裁判の基準`.
+   - National Archives chronology confirms 1232; Supreme Court/Judicial Research material discusses Hojo Yasutoki's purpose in establishing consistent adjudicative rules.
 
-- MEXT current junior-high Social Studies commentary for placement in medieval Japanese history and the core terms around warrior government, gokenin, Hojo rule and Mongol invasions.
-- Kamakura City official history pages for Yoritomo, Kamakura as political base, the 1185 right to appoint shugo/jito, the 1192 shogun appointment, and the modern caution that bakufu formation was gradual rather than a single-year event.
-- National Museum of Japanese History material for gokenin and service to the shogun.
-- National Archives of Japan material for Hojo Yoshitoki and chronology entries for the Jokyu Disturbance, Goseibai Shikimoku, Bun'ei campaign, Koan campaign and the 1333 end of the Kamakura bakufu.
+3. `元寇`
+   - Replaced `元の軍勢` with `元・高麗などの軍勢` and clarified that the bakufu strengthened northern-Kyushu defenses and mobilized gokenin.
+   - National Archives confirms the two invasions in 1274 and 1281, the combined forces, and the defensive preparations.
 
-### Image candidates
+The other reviewed claims also passed:
 
-No AI-generated images were used.
+- Yoritomo became Seii Taishogun in 1192.
+- Kamakura City explicitly notes that current scholarship treats bakufu formation as gradual rather than equating it with one founding year.
+- Gokenin / go-on / hoko terminology is supported by National Tax College, National Theatre educational material, Rekihaku material, and MEXT's requirement to understand lord-vassal ties.
+- Hojo rule through the shikken position is supportable; the sentence avoids claiming that all authority shifted at one single date.
+- The Jokyu Disturbance occurred in 1221; the defeat of the retired-emperor side strengthened bakufu power toward Kyoto and western Japan.
+- Goseibai Shikimoku was established in 1232 under Hojo Yasutoki.
+- Bun'ei campaign = 1274 and Koan campaign = 1281; together they are taught as the Mongol invasions / 元寇.
 
-1. `Kamakura_Daibutsu_-_01.jpg`
-   - depicts the Great Buddha at Kotoku-in, Kamakura
-   - photographer: Quercus acuta
-   - exact Commons file page states CC0 1.0
-   - current project label: `鎌倉大仏`
+### Independent evidence retained in the unit
 
-2. `Mōko_Shūrai_Ekotoba.jpg`
-   - image from the historical `蒙古襲来絵詞`
-   - exact Commons file page describes it as a faithful reproduction of a public-domain two-dimensional work
-   - exact Commons file page carries Public Domain Mark 1.0 / no known copyright restrictions
-   - current project label: `『蒙古襲来絵詞』`
+- MEXT `中学校学習指導要領（平成29年告示）解説 社会編`
+- Kamakura City history and `鎌倉殿とは`
+- Kamakura City material on Hojo Masako / Jokyu Disturbance
+- National Tax College `鎌倉幕府の財源`
+- National Theatre / Cultural Digital Library material on shugo, jito, gokenin, go-on and hoko
+- National Museum of Japanese History medieval-warrior exhibition material
+- National Archives chronology, Hojo Yoshitoki document, and Japan-Mongolia historical project
+- Supreme Court / Judicial Research and Training Institute material on Goseibai Shikimoku
+
+## Image verification
+
+No AI-generated historical images are used.
+
+### Kamakura Daibutsu
+
+- Exact Commons file: `Kamakura_Daibutsu_-_01.jpg`
+- Caption identifies Kotoku-in's Kamakura Great Buddha.
+- Photographer: Quercus acuta.
+- File is explicitly CC0 1.0.
+- Kotoku-in's own conservation material places the Great Buddha project in the Kamakura period; the learner caption was changed to `鎌倉時代に造立が進められた高徳院の大仏`.
+- Record status: `verified`.
+
+### Mōko Shūrai Ekotoba
+
+- Exact Commons file: `Mōko_Shūrai_Ekotoba.jpg`.
+- The file describes the pictured scene as the Bun'ei campaign, showing Takezaki Suenaga fighting Mongol forces.
+- Commons treats the faithful reproduction of the old two-dimensional work as public domain and applies Public Domain Mark 1.0.
+- The Agency for Cultural Affairs national cultural-property database identifies `紙本著色蒙古襲来絵詞` as a Kamakura-period National Treasure connected with the invasions of 1274 and 1281.
+- Learner caption tightened to `文永の役で竹崎季長らが元軍と戦う様子を伝える絵巻資料`.
+- Record status: `verified`.
 
 ## Publication state
 
-The public `subjects/social/worksheets/index.html` still loads only the six verified units through Heian. `kamakura-period.js` must remain unregistered there until independent fact-checking passes all seven sentences and both image records.
+`subjects/social/worksheets/data/kamakura-period.js` is now fully `verified` and has been added to `subjects/social/worksheets/index.html`.
+
+The public selector therefore loads seven verified units in order:
+
+1. Jomon / Yayoi overview
+2. Yayoi society / Yamatai / Himiko
+3. Kofun / Yamato
+4. Asuka / ritsuryo
+5. Nara
+6. Heian
+7. Kamakura
+
+The shared generator contract is unchanged: only explicit `terms` entries can become blanks, and seeded generation remains deterministic.
 
 ## Exact next starting point
 
-Perform an independent FACTCHECK of only `subjects/social/worksheets/data/kamakura-period.js`.
+Next role is GENERATE. Start with `Muromachi period` from the junior-high history queue.
 
-Treat all seven study sentences and both image records as untrusted. Reopen authoritative sources from scratch and verify at minimum:
+Create the explanation sheet data first using concise original sentences and explicit core terms. Likely core coverage should include the transition through the Kenmu Restoration / Northern and Southern Courts only as needed to explain the Muromachi bakufu, Ashikaga Takauji and shogunate structure, shugo daimyo, Ashikaga Yoshimitsu, Ming trade, and the political framework leading toward the Onin War. Keep the unit low-density and do not prematurely duplicate the later separate `Sengoku / Azuchi-Momoyama` unit.
 
-1. whether the 1185 wording about shugo/jito appointment authority is accurate and appropriately qualified;
-2. 1192 Yoritomo appointment and the statement that bakufu formation is now treated as gradual rather than fixed to one founding year;
-3. terminology and substance of 御家人 / 御恩 / 奉公;
-4. the role of the Hojo regent and whether the sentence overstates a single start point for Hojo dominance;
-5. 1221 Jokyu Disturbance and the consequence wording about bakufu influence over court/western Japan;
-6. 1232 Goseibai Shikimoku, Hojo Yasutoki, and its characterization as a warrior judicial standard;
-7. 1274 Bun'ei and 1281 Koan campaigns, the use of `元寇`, and the wording about Kyushu gokenin defense.
-
-For both images, independently verify exact file identity, author/source, license, and whether the educational caption is supportable. Correct or reject unsupported wording. If all items pass, mark sentence/image/unit statuses `verified`, add `data/kamakura-period.js` to the public selector, set `next_role` to `generate`, and advance the queue to `Muromachi period`.
+Use at least two useful non-AI historical-source images if licensing can be independently documented. All new claims and image records must remain `pending_factcheck`; do not publish the Muromachi dataset in `index.html` until the following FACTCHECK run approves it.
