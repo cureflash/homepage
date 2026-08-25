@@ -29,9 +29,10 @@ Site renderer / index
 5. **Batch-safe publishing** — a failed worksheet must not block unrelated valid worksheets, but a failed worksheet must not be registered as published.
 6. **Stable URLs** — generated output paths should be predictable and should not change after publication without a migration reason.
 7. **Useful variation** — variants should change actual numbers/expressions while preserving the advertised skill and difficulty.
-8. **Printable first** — A4-friendly, legible monochrome-compatible layout; problem page first, answer page second by default.
-9. **Simple taxonomy** — school level → grade/course → unit → worksheet series → variant.
-10. **No content inflation for its own sake** — quantity is achieved by covering legitimate combinations of skill, range, format and seed, not by meaningless title permutations.
+8. **Printable first** — A4-friendly, legible monochrome-compatible problem layout. Problem numbers use plain integers without leading zeroes or a trailing period, and are spatially separated from the expression so they cannot be mistaken for decimals.
+9. **Answer overlay** — the second page repeats the same problem layout and adds answers in red. It must not be an answer-only list.
+10. **Simple taxonomy** — school level → grade/course → unit → worksheet series → variant.
+11. **No content inflation for its own sake** — quantity is achieved by covering legitimate combinations of skill, range, format and seed, not by meaningless title permutations.
 
 ## Target site structure
 
