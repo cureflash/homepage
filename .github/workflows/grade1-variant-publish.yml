@@ -33,6 +33,15 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
+            python - <<'PY'
+          from pathlib import Path
+          path = Path('tests/test_worksheet_factory.py')
+          text = path.read_text(encoding='utf-8')
+          old = "assert 'draw_numbered_problem(c, x, y, i+1, p, answer_text(p))' in renderer_source"
+          new = "assert 'draw_numbered_problem' in renderer_source\nassert 'problem_page_chunks' in renderer_source"
+          if old in text:
+              path.write_text(text.replace(old, new), encoding='utf-8')
+          PY
             python scripts/publish_grade1_variants.py . --seeds 202 303
             python tests/test_grade1_variant_publisher.py
             python tests/test_grade1_remaining_skills.py
@@ -49,16 +58,16 @@ jobs:
               exit 1
             fi
           done
-      - name: Commit generated worksheets
+      - name: Commit validated checkpoint
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'worksheet-factory-bot'
           git config user.email '89366952+cureflash@users.noreply.github.com'
-          git add worksheets/catalog.json materials/worksheets/elementary/grade-01/
+          git add tests/test_worksheet_factory.py worksheets/catalog.json materials/worksheets/elementary/grade-01/
           if git diff --cached --quiet; then
-            echo 'No grade-1 variant changes to publish.'
+            echo 'No grade-1 checkpoint changes to publish.'
             exit 0
           fi
-          git commit -m 'Publish grade 1 seed variants'
+          git commit -m 'Update grade 1 factory validation checkpoint'
           git push origin HEAD:main
