@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://homepage.hikaru0816tsc.workers.dev/sitemap.xml
