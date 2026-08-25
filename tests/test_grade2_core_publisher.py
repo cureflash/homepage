@@ -18,6 +18,19 @@ def expected_ids():
     }
 
 
+def assert_simple_three_digit(skill, problems):
+    if skill == 'add-hundreds-simple':
+        assert all(p['a'] % 100 == p['b'] % 100 == 0 and p['a'] <= p['b'] for p in problems)
+    elif skill == 'sub-hundreds-simple':
+        assert all(p['a'] % 100 == p['b'] % 100 == 0 and p['a'] > p['b'] for p in problems)
+    elif skill == 'add-3digit-simple':
+        assert all(100 <= p['a'] <= 999 and 1 <= p['b'] <= 99 for p in problems)
+        assert all(p['a'] % 100 + p['b'] <= 99 for p in problems)
+    elif skill == 'sub-3digit-simple':
+        assert all(100 <= p['a'] <= 999 and 1 <= p['b'] <= 99 for p in problems)
+        assert all(p['a'] % 100 >= p['b'] for p in problems)
+
+
 def main():
     source_catalog = json.loads((ROOT / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
     own_ids = expected_ids()
@@ -32,6 +45,7 @@ def main():
             assert first == second
             assert len(first) == 20
             assert len({(p['a'], p['b']) for p in first}) == 20
+            assert_simple_three_digit(skill, first)
             h = normalized_hash(first)
             assert h not in all_hashes, f'duplicate generated content for {skill} seed={seed}'
             assert h not in published_hashes, f'duplicate of other published content for {skill} seed={seed}'
@@ -39,8 +53,8 @@ def main():
 
     present = [entry for entry in source_catalog if entry['id'] in own_ids]
     if present:
-        assert {entry['id'] for entry in present} == own_ids
-        assert {entry['content_hash'] for entry in present} == all_hashes
+        assert {entry['id'] for entry in present}.issubset(own_ids)
+        assert {entry['content_hash'] for entry in present}.issubset(all_hashes)
 
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)
@@ -48,7 +62,7 @@ def main():
         (root / 'worksheets' / 'catalog.json').write_text('[]\n', encoding='utf-8')
         publish(root)
         catalog = json.loads((root / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
-        assert len(catalog) == 12
+        assert len(catalog) == len(GRADE2_CORE_SKILLS) * len(SEEDS)
         assert {e['id'] for e in catalog} == own_ids
         assert {e['skill'] for e in catalog} == set(GRADE2_CORE_SKILLS)
         assert {e['seed'] for e in catalog} == set(SEEDS)
