@@ -1,8 +1,13 @@
 import { assertValidGameDefinition } from "../core/game-validator.js";
+import { prefectureCapitalChoiceGame } from "./prefecture-capital-choice.js";
 import { prefecturalCapitalGame } from "./prefectural-capitals.js";
 import { prefectureGame } from "./prefectures.js";
 
-const registeredGames = [prefectureGame, prefecturalCapitalGame].map((game) => assertValidGameDefinition(game));
+const registeredGames = [
+  prefectureGame,
+  prefecturalCapitalGame,
+  prefectureCapitalChoiceGame
+].map((game) => assertValidGameDefinition(game));
 const gamesById = new Map();
 
 for (const game of registeredGames) {
