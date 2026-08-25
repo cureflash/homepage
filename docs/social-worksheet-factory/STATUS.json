@@ -2,14 +2,14 @@
   "status": "in_progress",
   "school_stage": "junior-high",
   "field": "history",
-  "active_unit": "edo-political-system-society",
+  "active_unit": "edo-economy-culture-foreign-relations",
   "active_units": [
-    "edo-political-system-society"
+    "edo-economy-culture-foreign-relations"
   ],
-  "next_role": "factcheck",
-  "last_completed_role": "generate",
-  "verified_through": "sengoku-azuchi-momoyama",
+  "next_role": "generate",
+  "last_completed_role": "factcheck",
+  "verified_through": "edo-political-system-society",
   "prototype_status": "verified",
   "batch_size": 1,
-  "updated_at": "2026-08-26T03:40:00+09:00"
+  "updated_at": "2026-08-26T04:41:46+09:00"
 }
