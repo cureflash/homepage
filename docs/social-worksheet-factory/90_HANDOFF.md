@@ -6,116 +6,124 @@
 - Active field: history
 - Verified through: Edo economy / culture / foreign relations
 - Active unit: Bakumatsu and Meiji Restoration
-- Next role: GENERATE
+- Next role: FACTCHECK
 - Batch size: 1 unit
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed FACTCHECK — Edo economy / culture / foreign relations
+## Completed GENERATE — Bakumatsu and Meiji Restoration
 
-Independently reopened the current MEXT junior-high Social Studies commentary and authoritative municipal, museum, and cultural sources rather than relying on the generator's rationale. All eight structured fact records, all eight learner sentences, both image records, and the unit are now `verified`.
+Created `subjects/social/worksheets/data/bakumatsu-meiji-restoration.js` as the next junior-high history unit. It is intentionally low-density and remains completely `pending_factcheck`; it has not been added to the public selector.
 
-### Curriculum placement and verified wording
+### Curriculum boundary used for generation
 
-MEXT places this material under junior-high history `近世の日本`.
+The current MEXT junior-high Social Studies commentary places this material under `近代の日本と世界` → `明治維新と近代国家の形成`. It explicitly requires treatment of `開国とその影響` and says the opening of Japan and its political/social effects should be connected to the movement that produced the Meiji Restoration. The same section also lists `廃藩置県` among reforms to be handled under the new government's policies.
 
-For industry, transport, culture, and education, the commentary explicitly supports:
+To avoid duplicating the following queue unit `Meiji state / industrialization`, this generated sheet stops after the early central-government framework represented by `廃藩置県`. It does not yet teach the school system, conscription, land-tax reform, industrialization, civilization/enlightenment, constitutional government, or later foreign policy as main sentence targets.
 
-- development of agriculture/forestry/fisheries, handicrafts, commerce, river and sea transport, and roads as examples of early-modern industrial/transport development;
-- formation of urban-centered culture with economically stronger townspeople as cultural actors, explicitly naming Osaka, Kyoto, and Edo as suitable urban examples;
-- spread of han schools and terakoya, growing interest in education, and expansion of the social base of learning and culture.
+### Study structure
 
-For foreign relations, the commentary explicitly states that the policies later called `鎖国` included bans/restrictions on overseas travel and trade, prohibition of Christianity, and control of diplomacy/information, while still requiring learners to recognize continuing trade and exchange. It explicitly calls for treatment of:
+Three sections, eight concise study sentences, with matching structured `facts` records:
 
-- Dutch and Chinese trade at Nagasaki;
-- exchange with Korea through Tsushima;
-- Ryukyu's role in relations with China;
-- Ainu trade in northern products in Ezo.
+1. **Black ships and opening of Japan**
+   - 1853: ペリー / 浦賀
+   - 1854: 日米和親条約 / 下田 / 箱館
+   - 1858: 日米修好通商条約 / 領事裁判権 / 関税自主権
+2. **End of the bakufu**
+   - 薩摩藩 / 長州藩 cooperation and growing anti-bakufu movement
+   - 1867: 徳川慶喜 / 大政奉還 / 王政復古の大号令
+   - 1868–1869: 戊辰戦争
+3. **Early new-government framework**
+   - 1868: 五箇条の御誓文
+   - 1871: 廃藩置県
 
-National Museum of Japanese History independently reinforces that early-modern Japan was not isolated and describes four major international gateways: Nagasaki, Tsushima, Satsuma, and Matsumae.
+Every new fact record, learner sentence, image record, and the unit itself is `pending_factcheck`.
 
-### Claim checks
+The cloze contract is unchanged. Only entries explicitly listed in each sentence's `terms` array can become blanks; arbitrary nouns are not blanked. Existing deterministic seed/rate behavior remains in the shared app.
 
-1. **Industry / transport** — verified against MEXT. The sentence remains general and does not claim equal development in every region.
-2. **Osaka kurayashiki** — verified against Osaka City and Osaka City Library. Osaka City states that domains built kurayashiki around Nakanoshima to bring in, manage, sell, and convert annual-rent rice and products into money. The learner sentence continues to avoid using `天下の台所` as a memorization target.
-3. **Townsperson culture** — verified directly against MEXT's wording on Osaka, Kyoto, Edo, economically stronger townspeople, and urban-centered culture.
-4. **Han schools / terakoya** — verified directly against MEXT, including the intended inference of growing educational interest and wider cultural diffusion.
-5. **Sakoku framing** — verified against MEXT and Rekihaku. The learner sheet correctly says these policies were later called `鎖国` and explicitly avoids implying total international isolation.
-6. **Nagasaki / Dejima** — MEXT confirms Dutch and Chinese trade at Nagasaki. Official Dejima history confirms that the Dutch factory moved from Hirado to Dejima in 1641.
-7. **Korea / Tsushima and Ryukyu / Satsuma** — verified against Rekihaku. Tsushima Museum independently confirms the diplomatic role of Tsushima and Tsushima domain in Joseon relations.
-8. **Ainu / Matsumae** — wording was corrected. Instead of saying merely that a trade relationship existed `through` Matsumae domain, the final wording states that Ainu people themselves traded marine products and that Matsumae domain controlled Ainu-Wajin trade. This preserves Ainu agency and reflects National Ainu Museum material describing both Ainu people as producers/traders and Matsumae control/monopoly structures.
+## Generation sources — candidate evidence only
 
-## Final learner wording correction
-
-Only one substantive sentence required revision:
-
-- Before: `蝦夷地ではアイヌの人々が海産物などを交易し、松前藩を介した通商関係も形成された。`
-- Final: `蝦夷地では{{アイヌ}}の人々が海産物などを交易し、{{松前藩}}はアイヌとの交易を統制した。`
-
-The corresponding structured fact record was changed to the same meaning.
-
-## Image verification
-
-No AI-generated historical images are used.
-
-### Utagawa Hiroshige, `Tōkaidō gojūsan tsui, Kyō`
-
-- Exact Commons file checked: `Tōkaidō gojūsan tsui, Kyō by Hiroshige.jpg`.
-- Commons identifies the artist as Utagawa Hiroshige and the work as a woodblock print from `The 53 stations of the Tōkaidō in pairs`.
-- Date: 1844–1847.
-- Subject: view from Sanjo Ohashi in Kyoto.
-- Source institution: Museum of Fine Arts, Boston.
-- Commons states the underlying work and faithful reproduction are public domain; Public Domain Mark 1.0 / PD-Art / PD-Japan information is present.
-- Learner note tightened to `1844〜1847年の錦絵。三条大橋からの眺めと往来を描いた東海道関連資料`.
-- Status: `verified`.
-
-### `DejimaInNagasakiBay.jpg`
-
-- Exact Commons file checked.
-- Commons describes a painting of Japanese-Dutch trade at Dejima, dated between 1800 and 1825, with two Dutch ships and Chinese trading junks.
-- Collection: British Museum.
-- The historical painter is not identified on the file record. File history records a photograph/digital capture by PHGCOM, so the final credit distinguishes the unknown historical artist from the photographer: `作者不詳の絵画 / British Museum / PHGCOM（撮影） / Wikimedia Commons`.
-- Commons applies Public Domain Mark 1.0 and states the file is free of known copyright restrictions.
-- Status: `verified`.
-
-## Publication / integration state
-
-`subjects/social/worksheets/data/edo-economy-culture-foreign-relations.js` is fully verified and is now loaded by `subjects/social/worksheets/index.html` after `edo-political-system-society.js`.
-
-The public selector therefore includes eleven independently verified units, from Jomon/Yayoi through Edo economy/culture/foreign relations.
-
-The shared worksheet engine was not broadened or rewritten. It still uses the existing `window.SOCIAL_WORKSHEET_UNITS` registry and only explicit `terms` entries are eligible for deterministic seeded blanks. Unrelated educational pages were not changed.
-
-The existing Cloudflare Web Analytics tag in `index.html` was preserved. Its public token is represented with equivalent HTML character references in the attribute value so browser parsing yields the same value while allowing the safe repository write.
-
-## Independent evidence used in this FACTCHECK
+The following sources were opened during GENERATE to build candidate facts. The next FACTCHECK run must independently reopen authoritative sources from scratch and must not approve wording merely because these sources are listed here.
 
 - MEXT `中学校学習指導要領（平成29年告示）解説 社会編`
   - `https://www.mext.go.jp/content/20240919-mxt_kyoiku01-100002608.pdf`
-- Osaka City `蔵屋敷跡`
-  - `https://www.city.osaka.lg.jp/kensetsu/page/0000009873.html`
-- Osaka City Library / Osaka City History Compilation `中世・近世の大坂`
-  - `https://www.oml.city.osaka.lg.jp/page/1146.html`
-- National Museum of Japanese History, Room 3
-  - `https://www.rekihaku.ac.jp/exhibitions/room3/`
-- Official Dejima history
-  - `https://nagasakidejima.jp/history/`
-- Tsushima Museum `対馬の外交II 朝鮮通信使`
-  - `https://tsushimamuseum.jp/exhibition/1058/`
-- National Ainu Museum related material on early-modern trade
-  - `https://nam.go.jp/wp/wp-content/uploads/2020/10/siryou1.pdf`
-- Wikimedia Commons exact file pages for both published images.
+  - relevant current commentary: `明治維新と近代国家の形成`, including `開国とその影響` and `廃藩置県`
+- National Archives of Japan `激動幕末―黒船と開国`
+  - `https://www.archives.go.jp/exhibition/digital/bakumatsu/contents/category03.html`
+- National Archives of Japan `激動幕末―五ヶ国条約并税則`
+  - `https://www.archives.go.jp/exhibition/digital/bakumatsu/contents/20.html`
+- National Archives of Japan `近代国家 日本の登場―条約改正交渉`
+  - `https://www.archives.go.jp/exhibition/digital/modean_state/contents/negotiation/index.html`
+- National Archives of Japan `激動幕末―年表`
+  - `https://www.archives.go.jp/exhibition/digital/bakumatsu/history.html`
+- National Archives of Japan `王政復古の大号令が発せられる`
+  - `https://www.archives.go.jp/ayumi/kobetsu/k03_1867_01.html`
+- National Archives of Japan `五箇条の御誓文が発せられる`
+  - `https://www.archives.go.jp/ayumi/kobetsu/m01_1868_02.html`
+- JACAR `五ヶ条ノ御誓文`
+  - `https://www.jacar.archives.go.jp/das/meta/A14110269100`
+- National Archives of Japan `日本のあゆみ 年表`
+  - `https://www.archives.go.jp/ayumi/table.html`
+- National Archives pamphlet material for `廃藩置県`
+  - `https://www.archives.go.jp/publication/pamphlet/pamphlet.pdf`
+
+## New image candidates
+
+No AI-generated historical images were used.
+
+### 1. Perry meeting Japanese commissioners at Yokohama
+
+File page:
+`https://commons.wikimedia.org/wiki/File:Commo._Perry_meeting_the_imperial_Commissioners_at_Yokuhama_-_from_nature_by_W.T._Petris_%3B_Lith._of_Sarony_%26_Co.%2C_New_York._LCCN95507967.jpg`
+
+Generation-time metadata recorded:
+
+- 1856 color lithograph.
+- Commons source: Library of Congress, LCCN 95507967.
+- Commons lists Sarony & Co. as author and notes that the plate appeared in the published narrative of Perry's expedition.
+- Commons marks the work Public Domain and applies Public Domain Mark 1.0 / no known publication restrictions.
+- Current learner caption: `1856年刊行のペリー遠征記に収められた、横浜での会見場面を描く石版画`.
+- Status remains `pending_factcheck`; the next run must independently verify exact depiction, title/creator metadata, and license.
+
+### 2. Charter Oath in the government journal
+
+File page:
+`https://commons.wikimedia.org/wiki/File:5jo1.gif`
+
+Generation-time metadata recorded:
+
+- Image identified by Commons as the five articles of the Charter Oath published in the Japanese government's official journal.
+- Commons date/source fields identify a 1876 issue of `慶應四年戊辰三月 太政官日誌 第五` and author `Government of Japan`.
+- Commons marks the work Public Domain and applies Public Domain Mark 1.0.
+- Current learner caption: `1876年発行の『太政官日誌』に掲載された五箇条の御誓文`.
+- Status remains `pending_factcheck`; the next run must independently verify that this exact file and caption are appropriate for publication.
+
+## Publication / validation state
+
+- `subjects/social/worksheets/data/bakumatsu-meiji-restoration.js` exists on `main`.
+- Local `node --check` passed for the generated JavaScript before the repository write.
+- The public `subjects/social/worksheets/index.html` was deliberately not changed; only independently verified units remain learner-facing.
+- The shared worksheet engine and unrelated educational pages were not modified.
 
 ## Exact next starting point
 
-Next role is GENERATE. Work only on:
+Next role is FACTCHECK. Work only on:
 
-`bakumatsu-meiji-restoration`
+`subjects/social/worksheets/data/bakumatsu-meiji-restoration.js`
 
-This is junior-high history queue item 12, `Bakumatsu and Meiji Restoration`.
+Treat all eight structured facts, all eight learner sentences, the timeline/key-point wording, and both image records as untrusted. Independently reopen MEXT and authoritative archive/government/primary sources from scratch. Do not rely on the generator's conclusions above.
 
-Build the low-density explanation sheet first from authoritative structured facts. Keep new claims and image records `pending_factcheck` and do not register the new dataset in the public selector until the following independent FACTCHECK run.
+At minimum verify:
 
-Likely core coverage to investigate from scratch includes the opening of Japan and treaty system, domestic political change around the end of the bakufu, restoration of imperial government, the Charter Oath / abolition of domains and establishment of prefectures / social-status reform as appropriate, and the transition into the Meiji state without duplicating the following separate queue unit `Meiji state / industrialization`. Verify the exact current MEXT scope before choosing terms or chronology.
+1. 1853 Perry chronology, rank, four-ship wording, Uraga/Kurihama distinction, and what was handed to the bakufu;
+2. 1854 Treaty of Peace and Amity, exact ports and whether the learner wording `開国へ進んだ` is appropriately framed;
+3. 1858 Treaty of Amity and Commerce, exact treaty provisions, consular jurisdiction terminology, and whether `関税自主権` is pedagogically and historically precise in this sentence;
+4. whether the Satsuma/Choshu cooperation sentence is sufficiently evidenced and not an oversimplified causal explanation of the fall of the bakufu;
+5. 1867 Taisei Hokan and Restoration of Imperial Rule chronology/terminology;
+6. start/end framing of the Boshin War and the 1869 Hakodate surrender wording;
+7. date, character, and learner paraphrase of the Charter Oath;
+8. 1871 Haihan-chiken and the wording about centrally appointed prefectural governors;
+9. MEXT curriculum placement and the boundary with the following `Meiji state / industrialization` unit;
+10. exact identity, historical description, creator/source, and actual file license for both image candidates.
 
-Use useful non-AI historical-source images only where exact source and reuse terms can be recorded. Update `STATUS.json` and this handoff at the end of that GENERATE run, setting the next role to FACTCHECK.
+Correct or reject unsupported wording. If and only if all included material passes, mark facts/sentences/images/unit `verified`, add the dataset to the public selector, set `verified_through` to `bakumatsu-meiji-restoration`, set `next_role` to `generate`, and advance the active unit to `meiji-state-industrialization`.
