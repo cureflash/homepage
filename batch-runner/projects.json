@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "name": "社会プリント",
+      "enabled": true,
+      "statusFile": "docs/social-worksheet-factory/STATUS.json",
+      "handoffFile": "docs/social-worksheet-factory/90_HANDOFF.md",
+      "instructionFiles": [
+        "docs/social-worksheet-factory/00_MASTER_INSTRUCTIONS.md",
+        "docs/social-worksheet-factory/20_EXECUTION_PLAN.md"
+      ],
+      "doneStatuses": [
+        "done",
+        "completed",
+        "complete"
+      ],
+      "nextPrompt": "次を進めて"
+    }
+  ]
+}
