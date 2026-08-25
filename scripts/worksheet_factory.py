@@ -6,6 +6,23 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.pdfgen import canvas
 
+try:
+    from scripts.science_worksheet_helpers import (
+        SCIENCE_PROBLEM_TYPES,
+        compute_science_answer,
+        science_answer_text,
+        text_science_problem,
+        validate_science_problem,
+    )
+except ModuleNotFoundError:
+    from science_worksheet_helpers import (
+        SCIENCE_PROBLEM_TYPES,
+        compute_science_answer,
+        science_answer_text,
+        text_science_problem,
+        validate_science_problem,
+    )
+
 pdfmetrics.registerFont(UnicodeCIDFont('HeiseiKakuGo-W5'))
 FONT='HeiseiKakuGo-W5'
 
@@ -82,6 +99,8 @@ def answer_matches(spec, candidate):
 
 
 def compute_answer(p):
+    if p.get('type') in SCIENCE_PROBLEM_TYPES:
+        return compute_science_answer(p)
     t=p['type']
     if t=='compose': return p['total']-p['known']
     if t=='add': return p['a']+p['b']
@@ -152,7 +171,11 @@ def generate(skill, seed, count=20):
 
 def validate(problems):
     for p in problems:
-        assert compute_answer(p)==p['answer']
+        if p.get('type') in SCIENCE_PROBLEM_TYPES:
+            validate_science_problem(p)
+            validate_answer_spec(p['answer_spec'])
+        else:
+            assert compute_answer(p)==p['answer']
 
 
 def validate_catalog(catalog, repo_root=None):
@@ -183,11 +206,13 @@ def validate_catalog(catalog, repo_root=None):
 
 
 def normalized_hash(problems):
-    norm=[{k:v for k,v in p.items() if k!='answer'} for p in problems]
-    return hashlib.sha256(json.dumps(norm,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+    norm=[{k:v for k,v in p.items() if k not in ('answer','answer_spec')} for p in problems]
+    return hashlib.sha256(json.dumps(norm,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()
 
 
 def text_problem(p):
+    if p.get('type') in SCIENCE_PROBLEM_TYPES:
+        return text_science_problem(p)
     if p['type']=='compose': return f"{p['total']} = {p['known']} + □"
     if p['type']=='add': return f"{p['a']} + {p['b']} = □"
     if p['type']=='sub': return f"{p['a']} - {p['b']} = □"
@@ -195,6 +220,12 @@ def text_problem(p):
     if p['type']=='missing-add-right': return f"{p['known']} + □ = {p['total']}"
     if p['type']=='missing-sub-subtrahend': return f"{p['minuend']} - □ = {p['result']}"
     raise ValueError(p['type'])
+
+
+def answer_text(p):
+    if p.get('type') in SCIENCE_PROBLEM_TYPES:
+        return science_answer_text(p)
+    return str(compute_answer(p))
 
 
 def problem_number_label(number):
@@ -212,6 +243,7 @@ def draw_numbered_problem(c, x, y, number, problem, answer=None):
 
 
 def render_pdf(path, title, problems):
+    validate(problems)
     c=canvas.Canvas(str(path), pagesize=A4)
     w,h=A4
     def page_header(label):
@@ -229,7 +261,7 @@ def render_pdf(path, title, problems):
     for i,p in enumerate(problems):
         col=i//10; row=i%10
         x=55+col*260; y=h-120-row*63
-        draw_numbered_problem(c, x, y, i+1, p, compute_answer(p))
+        draw_numbered_problem(c, x, y, i+1, p, answer_text(p))
     c.save()
 
 
