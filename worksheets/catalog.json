@@ -1,0 +1,62 @@
+[
+  {
+    "id": "e1-compose-5-01",
+    "school_level": "elementary",
+    "grade": 1,
+    "subject": "算数",
+    "unit": "5までの数の合成・分解",
+    "skill": "compose-5",
+    "problem_count": 20,
+    "seed": 101,
+    "variant": 1,
+    "title": "5までの数の合成・分解 01",
+    "description": "基礎計算を20問くり返すプリントです。2ページ目に解答があります。",
+    "url": "materials/worksheets/elementary/grade-01/e1-compose-5-01.pdf",
+    "content_hash": "2f3f69d6391c7b6d6decff369cd10348098e03779960c20748880ffb43f19f51"
+  },
+  {
+    "id": "e1-compose-10-01",
+    "school_level": "elementary",
+    "grade": 1,
+    "subject": "算数",
+    "unit": "10までの数の合成・分解",
+    "skill": "compose-10",
+    "problem_count": 20,
+    "seed": 101,
+    "variant": 1,
+    "title": "10までの数の合成・分解 01",
+    "description": "基礎計算を20問くり返すプリントです。2ページ目に解答があります。",
+    "url": "materials/worksheets/elementary/grade-01/e1-compose-10-01.pdf",
+    "content_hash": "f410d3bd317e7af250ff6a72cf253bef9dfb583723f2e53ea7933a080e7b55ab"
+  },
+  {
+    "id": "e1-add-10-01",
+    "school_level": "elementary",
+    "grade": 1,
+    "subject": "算数",
+    "unit": "10までのたし算",
+    "skill": "add-10",
+    "problem_count": 20,
+    "seed": 101,
+    "variant": 1,
+    "title": "10までのたし算 01",
+    "description": "基礎計算を20問くり返すプリントです。2ページ目に解答があります。",
+    "url": "materials/worksheets/elementary/grade-01/e1-add-10-01.pdf",
+    "content_hash": "fc17d26698189ca005b510f877d9037e88d8ee331b9275b185bf20ced3b8049e"
+  },
+  {
+    "id": "e1-sub-10-01",
+    "school_level": "elementary",
+    "grade": 1,
+    "subject": "算数",
+    "unit": "10までのひき算",
+    "skill": "sub-10",
+    "problem_count": 20,
+    "seed": 101,
+    "variant": 1,
+    "title": "10までのひき算 01",
+    "description": "基礎計算を20問くり返すプリントです。2ページ目に解答があります。",
+    "url": "materials/worksheets/elementary/grade-01/e1-sub-10-01.pdf",
+    "content_hash": "bfa7c021e9847a3921fc39d378adb5bc85d3fa7e2a31fa42c80cba5620fc67be"
+  }
+]

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>算数・数学 反復プリント｜ひかり教材室</title>
+<style>
+body{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;max-width:1100px;margin:0 auto;padding:24px;color:#222}h1{font-size:1.8rem}.note{color:#555}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{border:1px solid #ddd;border-radius:12px;padding:16px}.meta{font-size:.85rem;color:#666}.card a{display:inline-block;margin-top:8px;padding:9px 13px;border-radius:8px;background:#222;color:#fff;text-decoration:none}select{padding:8px;margin:0 8px 20px 0}
+</style>
+</head>
+<body>
+<h1>算数・数学 反復プリント</h1>
+<p class="note">問題と解答を自動検証した反復練習用プリントです。</p>
+<label>学年 <select id="grade"><option value="1">小学1年</option></select></label>
+<label>単元 <select id="unit"><option value="">すべて</option></select></label>
+<div id="grid" class="grid"></div>
+<script>
+(async()=>{const data=await fetch('catalog.json').then(r=>r.json());const grid=document.querySelector('#grid'),unit=document.querySelector('#unit');[...new Set(data.map(x=>x.unit))].forEach(v=>{const o=document.createElement('option');o.value=o.textContent=v;unit.append(o)});function render(){grid.replaceChildren();data.filter(x=>!unit.value||x.unit===unit.value).forEach(x=>{const a=document.createElement('article');a.className='card';a.innerHTML=`<div class="meta">小学${x.grade}年 / ${x.subject} / ${x.problem_count}問</div><h2>${x.title}</h2><p>${x.description}</p><a href="../${x.url}" download>PDFをダウンロード</a>`;grid.append(a)})}unit.addEventListener('change',render);render()})()
+</script>
+</body>
+</html>
