@@ -1,8 +1,13 @@
 (() => {
   "use strict";
 
-  const data = window.SOCIAL_WORKSHEET_DATA;
+  const units = window.SOCIAL_WORKSHEET_UNITS?.length
+    ? window.SOCIAL_WORKSHEET_UNITS
+    : [window.SOCIAL_WORKSHEET_DATA].filter(Boolean);
+  let data = units[0];
+
   const sheet = document.getElementById("sheet");
+  const unitSelect = document.getElementById("unit");
   const modeSelect = document.getElementById("mode");
   const blankRateSelect = document.getElementById("blankRate");
   const seedInput = document.getElementById("seed");
@@ -151,10 +156,17 @@
       </div>
       <aside class="key-point">
         <strong>ここだけ先に：</strong>
-        縄文時代は自然の恵みを利用した定住生活、弥生時代は水田稲作の広がりが大きな転換点。
+        ${escapeHtml(data.keyPoint || "縄文時代は自然の恵みを利用した定住生活、弥生時代は水田稲作の広がりが大きな転換点。")}
       </aside>
       ${renderSources()}
     `;
+  }
+
+  for (const unit of units) {
+    const option = document.createElement("option");
+    option.value = unit.id;
+    option.textContent = unit.title;
+    unitSelect.appendChild(option);
   }
 
   document.getElementById("regenerate").addEventListener("click", () => {
@@ -162,6 +174,10 @@
     render();
   });
   document.getElementById("print").addEventListener("click", () => window.print());
+  unitSelect.addEventListener("change", () => {
+    data = units.find((unit) => unit.id === unitSelect.value) || units[0];
+    render();
+  });
   modeSelect.addEventListener("change", render);
   blankRateSelect.addEventListener("change", render);
   seedInput.addEventListener("change", render);
