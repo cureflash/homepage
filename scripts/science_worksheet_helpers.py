@@ -34,6 +34,10 @@ def _relation_result(relation, inputs):
         return prod(inputs)
     if relation == 'sum':
         return sum(inputs)
+    if relation == 'offset-product':
+        if len(inputs) < 3:
+            raise ValueError('offset-product relation needs an offset and at least two factors')
+        return inputs[0] + prod(inputs[1:])
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -50,6 +54,16 @@ def _generation_formula_answer(relation, result_name, input_names, values, solve
         return values[result_name] / denominator
     if relation == 'sum':
         return values[result_name] - sum(other_values)
+    if relation == 'offset-product':
+        offset_name = input_names[0]
+        factor_names = input_names[1:]
+        if solve_for == offset_name:
+            return values[result_name] - prod(values[name] for name in factor_names)
+        other_factors = [name for name in factor_names if name != solve_for]
+        denominator = prod(values[name] for name in other_factors)
+        if denominator == 0:
+            raise ValueError('cannot solve offset-product relation with zero denominator')
+        return (values[result_name] - values[offset_name]) / denominator
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -59,8 +73,10 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
     input_names = list(spec['inputs'])
     variables = spec['variables']
     solve_for = solve_for or spec.get('solve_for') or result_name
-    if relation not in {'product', 'sum'}:
+    if relation not in {'product', 'sum', 'offset-product'}:
         raise ValueError(f'unsupported formula relation: {relation}')
+    if relation == 'offset-product' and len(input_names) < 3:
+        raise ValueError('offset-product relation needs an offset and at least two factors')
     if result_name not in variables or any(name not in variables for name in input_names):
         raise ValueError('all formula variables need definitions')
     if solve_for not in [result_name, *input_names]:
@@ -233,6 +249,16 @@ def compute_science_answer(problem):
             return known[result_name] / denominator
         if relation == 'sum':
             return known[result_name] - sum(known[name] for name in other_inputs)
+        if relation == 'offset-product':
+            offset_name = input_names[0]
+            factor_names = input_names[1:]
+            if solve_for == offset_name:
+                return known[result_name] - prod(known[name] for name in factor_names)
+            other_factors = [name for name in factor_names if name != solve_for]
+            denominator = prod(known[name] for name in other_factors)
+            if denominator == 0:
+                raise ValueError('cannot solve offset-product relation with zero denominator')
+            return (known[result_name] - known[offset_name]) / denominator
         raise ValueError(f'unsupported formula relation: {relation}')
 
     source = problem['source']
