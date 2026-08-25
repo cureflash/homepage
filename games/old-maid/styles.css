@@ -128,28 +128,36 @@ body {
   align-items: flex-end;
   justify-content: center;
   padding: 0 10px 6px;
+  overflow-x: auto;
 }
 
 .playing-card {
+  display: grid;
+  place-items: center;
   position: relative;
-  width: clamp(58px, 11vw, 82px);
+  width: clamp(76px, 13vw, 104px);
   aspect-ratio: 5 / 7;
   flex: 0 0 auto;
-  padding: 0;
+  padding: 10px;
   border: 1px solid #c7ccd5;
   border-radius: 11px;
+  color: #1f2937;
   background: #ffffff;
   box-shadow: 0 3px 9px rgba(31, 41, 55, 0.2);
   font: inherit;
-  cursor: grab;
-  touch-action: pan-x;
+  font-size: clamp(0.9rem, 2.3vw, 1.25rem);
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+  touch-action: manipulation;
   user-select: none;
   -webkit-user-select: none;
   transition: transform 0.16s ease, box-shadow 0.16s ease;
 }
 
 .hand .playing-card + .playing-card {
-  margin-left: -16px;
+  margin-left: -24px;
 }
 
 .playing-card.is-selected {
@@ -160,54 +168,6 @@ body {
 .playing-card:disabled {
   cursor: default;
   opacity: 0.72;
-}
-
-.card-corner {
-  position: absolute;
-  top: 7px;
-  left: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: clamp(0.8rem, 2.3vw, 1rem);
-  font-weight: 800;
-  line-height: 1.05;
-}
-
-.card-center {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: clamp(1.55rem, 5vw, 2.4rem);
-}
-
-.card-red {
-  color: #c52f37;
-}
-
-.card-black {
-  color: #111827;
-}
-
-.card-joker {
-  color: #5b2d88;
-  background: linear-gradient(150deg, #ffffff, #f2eaf9);
-}
-
-.joker-star {
-  display: block;
-  margin-top: 24%;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-  line-height: 1;
-}
-
-.joker-label {
-  display: block;
-  margin-top: 8px;
-  font-size: clamp(0.62rem, 2vw, 0.86rem);
-  font-weight: 900;
-  letter-spacing: 0.05em;
 }
 
 #restart-button:focus-visible,
@@ -253,12 +213,12 @@ body {
   }
 
   .playing-card {
-    width: min(16vw, 64px);
-    min-width: 48px;
+    width: 76px;
+    font-size: 0.9rem;
   }
 
   .hand .playing-card + .playing-card {
-    margin-left: -22px;
+    margin-left: -34px;
   }
 }
 
