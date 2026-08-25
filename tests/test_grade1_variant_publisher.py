@@ -16,11 +16,25 @@ publisher = importlib.util.module_from_spec(publisher_spec)
 publisher_spec.loader.exec_module(publisher)
 
 catalog = json.loads((ROOT / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
-planned = publisher.planned_entries(catalog, seeds=(202, 303))
+
+# Reconstruct the pre-publication baseline so this regression test stays valid
+# both before and after seed=202/303 variants have been published to main.
+baseline_catalog = [
+    entry for entry in catalog
+    if not (
+        entry.get('school_level') == 'elementary'
+        and entry.get('grade') == 1
+        and entry.get('skill') in wf.SKILLS
+        and entry.get('seed') in (202, 303)
+        and entry.get('variant') in (2, 3)
+    )
+]
+
+planned = publisher.planned_entries(baseline_catalog, seeds=(202, 303))
 assert len(planned) == len(wf.SKILLS) * 2
 
-seen_ids = {entry['id'] for entry in catalog}
-seen_hashes = {entry['content_hash'] for entry in catalog}
+seen_ids = {entry['id'] for entry in baseline_catalog}
+seen_hashes = {entry['content_hash'] for entry in baseline_catalog}
 for entry, problems in planned:
     assert entry['id'] not in seen_ids
     assert entry['content_hash'] not in seen_hashes
@@ -38,9 +52,8 @@ with tempfile.TemporaryDirectory() as tmp:
     (tmp / 'worksheets').mkdir(parents=True)
     (tmp / 'materials' / 'worksheets' / 'elementary' / 'grade-01').mkdir(parents=True)
 
-    source_catalog = json.loads((ROOT / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
     copied_catalog = []
-    for entry in source_catalog:
+    for entry in baseline_catalog:
         copied = dict(entry)
         source_pdf = ROOT / copied['url']
         target_pdf = tmp / copied['url']
@@ -57,7 +70,7 @@ with tempfile.TemporaryDirectory() as tmp:
 
     updated = json.loads((tmp / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
     wf.validate_catalog(updated, tmp)
-    assert len(updated) == len(source_catalog) + len(wf.SKILLS)
+    assert len(updated) == len(baseline_catalog) + len(wf.SKILLS)
 
     for entry in published:
         output = tmp / entry['url']
