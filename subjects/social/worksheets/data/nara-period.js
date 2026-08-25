@@ -7,7 +7,7 @@
     field: "history",
     unit: "古代までの日本",
     practicalGradeGroup: "中学・歴史導入",
-    factcheckStatus: "pending_factcheck",
+    factcheckStatus: "verified",
     keyPoint: "平城京を中心に律令国家の政治が行われ、唐などの影響を受けた国際色豊かな文化が栄えた。",
     timeline: [
       { label: "710年", note: "平城京へ遷都" },
@@ -26,7 +26,7 @@
             terms: ["平城京"],
             importance: "A",
             sources: ["nara-history", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "nara-02",
@@ -34,7 +34,7 @@
             terms: ["平城京", "長安"],
             importance: "A",
             sources: ["nara-history", "nara-suzaku"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "nara-03",
@@ -42,7 +42,7 @@
             terms: ["律令国家"],
             importance: "B",
             sources: ["mext-social-commentary", "nara-history"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       },
@@ -57,7 +57,7 @@
             terms: ["聖武天皇", "東大寺"],
             importance: "A",
             sources: ["nara-todaiji"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "nara-05",
@@ -65,7 +65,7 @@
             terms: ["正倉院"],
             importance: "A",
             sources: ["nara-crafts", "nara-todaiji"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "nara-06",
@@ -73,7 +73,7 @@
             terms: ["天平文化"],
             importance: "A",
             sources: ["nara-history", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       }
@@ -83,23 +83,23 @@
         id: "todaiji-daibutsuden",
         section: "tenpyo",
         label: "東大寺大仏殿",
-        note: "聖武天皇の発願で建立された東大寺の中心建築",
+        note: "東大寺の大仏殿。現存する建物は1709年に再建された",
         src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Todaiji-Daibutsuden-1999.jpg",
         sourcePage: "https://commons.wikimedia.org/wiki/File:Todaiji-Daibutsuden-1999.jpg",
         credit: "Bigjap / Wikimedia Commons",
         license: "CC0 1.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "shosoin",
         section: "tenpyo",
         label: "正倉院正倉",
-        note: "奈良時代の宝物を伝える校倉造の建物",
+        note: "奈良時代の宝物を伝える正倉院正倉。北倉・南倉は校倉造",
         src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Shosin-shouso.jpg",
         sourcePage: "https://commons.wikimedia.org/wiki/File:Shosin-shouso.jpg",
         credit: "あずきごはん / Wikimedia Commons",
         license: "CC BY-SA 4.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       }
     ],
     sources: [
