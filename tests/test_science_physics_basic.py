@@ -29,9 +29,9 @@ class PhysicsBasicMotionTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_exactly_sixty_focused_variants(self):
+    def test_exactly_one_hundred_ten_focused_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 60)
+        self.assertEqual(len(batches), 110)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
 
     def test_deterministic_regeneration_and_independent_answers(self):
@@ -46,10 +46,10 @@ class PhysicsBasicMotionTests(unittest.TestCase):
             for problem in problems:
                 self.assertTrue(validate_science_problem(problem))
 
-    def test_all_sixty_problem_sets_are_distinct(self):
+    def test_all_problem_sets_are_distinct(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 60)
-        self.assertEqual(len(set(hashes)), 60)
+        self.assertEqual(len(hashes), 110)
+        self.assertEqual(len(set(hashes)), 110)
 
     def test_course_stays_one_dimensional_and_uses_expected_units(self):
         expected_units = {"m", "s", "m/s", "m/s²"}
@@ -63,6 +63,21 @@ class PhysicsBasicMotionTests(unittest.TestCase):
         relations = {topic["spec"]["relation"] for topic in PHYSICS_BASIC_MOTION_TOPICS.values()}
         self.assertIn("product", relations)
         self.assertIn("sum", relations)
+        self.assertIn("offset-product", relations)
+
+    def test_uniform_acceleration_relation_is_independently_checked(self):
+        topic = PHYSICS_BASIC_MOTION_TOPICS["uniform-acceleration"]
+        for mode in topic["modes"].values():
+            problems = generate_formula_drill(topic["spec"], 6631, 20, solve_for=mode["solve_for"])
+            for problem in problems:
+                self.assertEqual(problem["relation"], "offset-product")
+                self.assertTrue(validate_science_problem(problem))
+
+    def test_free_fall_uses_fixed_standard_gravity_and_no_height_formula(self):
+        topic = PHYSICS_BASIC_MOTION_TOPICS["free-fall-velocity"]
+        self.assertEqual(topic["spec"]["variables"]["g"]["values"], [9.8])
+        self.assertEqual(topic["formula"], "v = g × t")
+        self.assertNotIn("height", topic["skill"])
 
     def test_corrupted_numeric_answer_is_rejected(self):
         _, _, _, _, problems = self.generated_batches()[0]
