@@ -1,15 +1,66 @@
-import { ODD_PREFECTURES, OLD_MAID_CONFIG, PREFECTURE_CAPITAL_PAIRS } from "./cards.js?v=3";
+import { ODD_PREFECTURES, OLD_MAID_CONFIG, PREFECTURE_CAPITAL_PAIRS } from "./cards.js?v=4";
+import { AUDIO_CONFIG } from "./audio.js?v=1";
 
 const handEl = document.querySelector("#hand");
 const selectedEl = document.querySelector("#selected-cards");
 const discardButton = document.querySelector("#discard-button");
 const restartButton = document.querySelector("#restart-button");
+const normalModeButton = document.querySelector("#normal-mode-button");
+const hardModeButton = document.querySelector("#hard-mode-button");
+const bgmButton = document.querySelector("#bgm-button");
+const seButton = document.querySelector("#se-button");
 const messageEl = document.querySelector("#game-message");
 const pairsEl = document.querySelector("#pairs-discarded");
+const totalPairsEl = document.querySelector("#pairs-total");
+const modeLabelEl = document.querySelector("#mode-label");
 
 let selectedCards = [];
 let discardedPairs = 0;
 let gameActive = true;
+let gameMode = "normal";
+let bgmEnabled = true;
+let seEnabled = true;
+
+function makeAudio(src, loop = false) {
+  if (!src) return null;
+  const audio = new Audio(src);
+  audio.loop = loop;
+  audio.preload = "none";
+  return audio;
+}
+
+const audio = {
+  bgm: makeAudio(AUDIO_CONFIG.bgm, true),
+  select: makeAudio(AUDIO_CONFIG.select),
+  correct: makeAudio(AUDIO_CONFIG.correct),
+  wrong: makeAudio(AUDIO_CONFIG.wrong),
+  clear: makeAudio(AUDIO_CONFIG.clear),
+};
+
+function playBgm() {
+  if (!bgmEnabled || !audio.bgm) return;
+  audio.bgm.play().catch(() => {});
+}
+
+function stopBgm() {
+  if (!audio.bgm) return;
+  audio.bgm.pause();
+}
+
+function playSe(name) {
+  if (!seEnabled) return;
+  const sound = audio[name];
+  if (!sound) return;
+  sound.currentTime = 0;
+  sound.play().catch(() => {});
+}
+
+function updateAudioButtons() {
+  bgmButton.textContent = `BGM: ${bgmEnabled ? "ON" : "OFF"}`;
+  bgmButton.setAttribute("aria-pressed", String(bgmEnabled));
+  seButton.textContent = `SE: ${seEnabled ? "ON" : "OFF"}`;
+  seButton.setAttribute("aria-pressed", String(seEnabled));
+}
 
 function shuffle(items) {
   const array = [...items];
@@ -20,8 +71,15 @@ function shuffle(items) {
   return array;
 }
 
+function getPairsForMode() {
+  if (gameMode === "hard") {
+    return shuffle(PREFECTURE_CAPITAL_PAIRS);
+  }
+  return shuffle(PREFECTURE_CAPITAL_PAIRS).slice(0, OLD_MAID_CONFIG.normalPairCount);
+}
+
 function buildHand() {
-  const pairs = shuffle(PREFECTURE_CAPITAL_PAIRS).slice(0, OLD_MAID_CONFIG.pairCount);
+  const pairs = getPairsForMode();
   const pairedCards = pairs.flatMap((pair) => [
     {
       id: `${pair.id}-prefecture`,
@@ -45,7 +103,10 @@ function buildHand() {
     odd: true,
   };
 
-  return shuffle([...pairedCards, oddCard]);
+  return {
+    cards: shuffle([...pairedCards, oddCard]),
+    pairCount: pairs.length,
+  };
 }
 
 function updateDiscardButton() {
@@ -60,6 +121,7 @@ function moveToSelected(cardEl) {
   cardEl.setAttribute("aria-pressed", "true");
   selectedCards.push(cardEl);
   selectedEl.append(cardEl);
+  playSe("select");
 
   messageEl.textContent = selectedCards.length === 2
     ? "2枚選びました。ペアだと思ったら「捨てる」を押してください。"
@@ -75,12 +137,14 @@ function moveToHand(cardEl) {
   cardEl.setAttribute("aria-pressed", "false");
   selectedCards = selectedCards.filter((item) => item !== cardEl);
   handEl.append(cardEl);
+  playSe("select");
   messageEl.textContent = "カードをタッチして2枚選んでください。";
   updateDiscardButton();
 }
 
 function handleCardTouch(cardEl) {
   if (!gameActive) return;
+  playBgm();
 
   if (cardEl.dataset.zone === "selected") {
     moveToHand(cardEl);
@@ -109,12 +173,14 @@ function finishGameIfComplete() {
     gameActive = false;
     remaining[0].disabled = true;
     discardButton.disabled = true;
+    playSe("clear");
     messageEl.textContent = `クリア！ 「${remaining[0].textContent}」がババでした。`;
   }
 }
 
 function discardSelectedPair() {
   if (!gameActive || selectedCards.length !== 2) return;
+  playBgm();
 
   const [first, second] = selectedCards;
   const isPair = first.dataset.odd === "false"
@@ -127,6 +193,7 @@ function discardSelectedPair() {
     document.querySelectorAll(".playing-card").forEach((card) => {
       card.disabled = true;
     });
+    playSe("wrong");
     messageEl.textContent = "ゲームオーバー。正しい都道府県と県庁所在地のペアではありません。";
     return;
   }
@@ -136,24 +203,71 @@ function discardSelectedPair() {
   selectedCards = [];
   discardedPairs += 1;
   pairsEl.textContent = String(discardedPairs);
+  playSe("correct");
   messageEl.textContent = "正解。ペアを捨てました。次の2枚を選んでください。";
   updateDiscardButton();
   finishGameIfComplete();
 }
 
+function updateModeButtons() {
+  const hard = gameMode === "hard";
+  normalModeButton.setAttribute("aria-pressed", String(!hard));
+  hardModeButton.setAttribute("aria-pressed", String(hard));
+  normalModeButton.classList.toggle("is-active", !hard);
+  hardModeButton.classList.toggle("is-active", hard);
+  handEl.classList.toggle("hard-mode", hard);
+  modeLabelEl.textContent = hard ? "ハード" : "通常";
+}
+
 function renderGame() {
-  const cards = buildHand();
+  const { cards, pairCount } = buildHand();
   selectedCards = [];
   discardedPairs = 0;
   gameActive = true;
 
   pairsEl.textContent = "0";
+  totalPairsEl.textContent = String(pairCount);
   messageEl.textContent = "カードをタッチして2枚選んでください。";
   selectedEl.replaceChildren();
   handEl.replaceChildren(...cards.map(createCard));
+  updateModeButtons();
   updateDiscardButton();
 }
 
 discardButton.addEventListener("click", discardSelectedPair);
-restartButton.addEventListener("click", renderGame);
+restartButton.addEventListener("click", () => {
+  playBgm();
+  playSe("select");
+  renderGame();
+});
+normalModeButton.addEventListener("click", () => {
+  if (gameMode === "normal") return;
+  gameMode = "normal";
+  playBgm();
+  playSe("select");
+  renderGame();
+});
+hardModeButton.addEventListener("click", () => {
+  if (gameMode === "hard") return;
+  gameMode = "hard";
+  playBgm();
+  playSe("select");
+  renderGame();
+});
+bgmButton.addEventListener("click", () => {
+  bgmEnabled = !bgmEnabled;
+  if (bgmEnabled) {
+    playBgm();
+  } else {
+    stopBgm();
+  }
+  updateAudioButtons();
+});
+seButton.addEventListener("click", () => {
+  seEnabled = !seEnabled;
+  updateAudioButtons();
+  if (seEnabled) playSe("select");
+});
+
+updateAudioButtons();
 renderGame();
