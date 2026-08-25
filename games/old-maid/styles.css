@@ -115,11 +115,7 @@ body {
 }
 
 .play-area {
-  display: flex;
-  min-height: 430px;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
+  min-height: 250px;
   padding: 14px;
   border-radius: 16px;
   background: linear-gradient(#edf3ea, #e5eee1);
@@ -130,22 +126,6 @@ body {
   color: #56615a;
   font-size: 0.9rem;
   font-weight: 700;
-}
-
-.selected-area {
-  min-height: 170px;
-}
-
-.selected-cards {
-  display: flex;
-  min-height: 142px;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 18px;
-}
-
-.hand-area {
-  margin-top: auto;
 }
 
 .hand {
@@ -173,7 +153,7 @@ body {
   aspect-ratio: 5 / 7;
   flex: 0 0 auto;
   padding: 10px;
-  border: 1px solid #c7ccd5;
+  border: 2px solid #c7ccd5;
   border-radius: 11px;
   color: #1f2937;
   background: #ffffff;
@@ -187,7 +167,7 @@ body {
   touch-action: manipulation;
   user-select: none;
   -webkit-user-select: none;
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
 }
 
 .hand:not(.hard-mode) .playing-card + .playing-card {
@@ -200,13 +180,21 @@ body {
 }
 
 .playing-card.is-selected {
-  transform: translateY(-8px);
-  box-shadow: 0 7px 16px rgba(31, 41, 55, 0.24);
+  border-color: #315fa8;
+  box-shadow: 0 0 0 3px rgba(49, 95, 168, 0.24), 0 4px 10px rgba(31, 41, 55, 0.22);
 }
 
 .playing-card:disabled {
   cursor: default;
-  opacity: 0.72;
+}
+
+.hand.hard-mode .playing-card.is-discarded {
+  color: #4b5563;
+  background: #9ca3af;
+  border-color: #8b929d;
+  box-shadow: none;
+  opacity: 0.34;
+  filter: grayscale(1);
 }
 
 #restart-button:focus-visible,
@@ -245,12 +233,10 @@ body {
   }
 
   .play-area {
-    min-height: 360px;
+    min-height: 210px;
     padding: 10px 6px;
   }
 
-  .selected-area,
-  .selected-cards,
   .hand {
     min-height: 118px;
   }
