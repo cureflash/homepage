@@ -9,7 +9,7 @@ Work strictly from top to bottom. Check off an item only after implementation an
 - [x] 0.3 Validate unique question IDs, non-empty prompts, answer presence, renderer requirements, and option uniqueness.
 - [x] 0.4 Confirm `QuizEngine` has no visual-design assumptions; move any presentation-specific dependency outward if found.
 - [x] 0.5 Confirm renderers are replaceable and current UI can later be redesigned without changing question banks.
-- [ ] 0.6 Add a game registry/catalog so new games can be registered without modifying core scoring logic.
+- [x] 0.6 Add a game registry/catalog so new games can be registered without modifying core scoring logic.
 
 ## Phase 1 — Japan: prefectures and capitals
 
