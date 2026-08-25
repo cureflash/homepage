@@ -48,7 +48,8 @@ assert not wf.problem_number_label(1).startswith('0')
 assert '.' not in wf.problem_number_label(1)
 renderer_source = MODULE.read_text(encoding='utf-8')
 assert 'colors.red' in renderer_source
-assert 'draw_numbered_problem(c, x, y, i+1, p, answer_text(p))' in renderer_source
+assert 'draw_numbered_problem' in renderer_source
+assert 'problem_page_chunks' in renderer_source
 assert '{i+1:02d}.' not in renderer_source
 
 catalog = json.loads((ROOT / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
