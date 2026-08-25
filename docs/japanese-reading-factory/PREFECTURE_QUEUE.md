@@ -1,6 +1,6 @@
 # Prefecture queue
 
-Process in JIS prefecture-code order. A prefecture may be marked complete only after all indexed core-corpus verses mapped to it have been evaluated.
+Process in JIS prefecture-code order. A prefecture may be marked complete only after all verified material mapped to it from the defined 1900 and 1929 corpora has been evaluated.
 
 - [ ] 01 北海道
 - [ ] 02 青森県
