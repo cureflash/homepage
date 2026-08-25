@@ -57,6 +57,14 @@ science_entry = {
 }
 wf.validate_catalog([science_entry], ROOT)
 
+retrieval_entry = dict(science_entry)
+retrieval_entry.update({
+    'id':'science-retrieval-test','science_field':'chemistry','worksheet_mode':'retrieval',
+    'unit':'物質','skill':'formula-name-pairs','content_hash':'science-retrieval-test-hash',
+    'worksheet_series':'mixed','answer_type':'accepted-set'
+})
+wf.validate_catalog([retrieval_entry], ROOT)
+
 for missing_field in ('science_field', 'worksheet_mode'):
     invalid_science = dict(science_entry)
     del invalid_science[missing_field]
@@ -87,5 +95,11 @@ try:
     raise AssertionError('formal_course validation did not fail')
 except AssertionError as exc:
     assert 'formal_course' in str(exc)
+
+listing = (ROOT / 'worksheets' / 'index.html').read_text(encoding='utf-8')
+assert 'id="subject"' in listing
+assert 'id="field"' in listing
+assert 'formal_course' in listing
+assert "params.get('subject')" in listing
 
 print('worksheet factory tests: OK')
