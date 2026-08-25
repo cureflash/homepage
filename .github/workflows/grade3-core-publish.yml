@@ -1,6 +1,6 @@
 name: Grade 3 worksheet factory checkpoint
 
-# Covers addition/subtraction, multiplication, and division publishers.
+# Covers addition/subtraction, multiplication, division, and decimal publishers.
 on:
   push:
     branches: [main]
@@ -8,9 +8,11 @@ on:
       - 'scripts/publish_grade3_add_sub.py'
       - 'scripts/publish_grade3_multiplication.py'
       - 'scripts/publish_grade3_division.py'
+      - 'scripts/publish_grade3_decimals.py'
       - 'tests/test_grade3_add_sub_publisher.py'
       - 'tests/test_grade3_multiplication_publisher.py'
       - 'tests/test_grade3_division_publisher.py'
+      - 'tests/test_grade3_decimals_publisher.py'
       - '.github/workflows/grade3-core-publish.yml'
   workflow_dispatch:
 
@@ -40,9 +42,11 @@ jobs:
             python scripts/publish_grade3_add_sub.py .
             python scripts/publish_grade3_multiplication.py .
             python scripts/publish_grade3_division.py .
+            python scripts/publish_grade3_decimals.py .
             python tests/test_grade3_add_sub_publisher.py
             python tests/test_grade3_multiplication_publisher.py
             python tests/test_grade3_division_publisher.py
+            python tests/test_grade3_decimals_publisher.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main)
             git fetch origin main
