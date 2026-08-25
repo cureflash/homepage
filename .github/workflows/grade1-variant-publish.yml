@@ -8,8 +8,10 @@ on:
       - 'scripts/worksheet_factory.py'
       - 'scripts/publish_grade1_variants.py'
       - 'scripts/publish_grade1_50q.py'
+      - 'scripts/publish_grade1_speed.py'
       - 'tests/test_grade1_variant_publisher.py'
       - 'tests/test_grade1_50q_publisher.py'
+      - 'tests/test_grade1_speed_publisher.py'
       - 'tests/test_grade1_multi_page_renderer.py'
   workflow_dispatch:
 
@@ -38,8 +40,10 @@ jobs:
             git reset --hard origin/main
             python scripts/publish_grade1_variants.py . --seeds 202 303
             python scripts/publish_grade1_50q.py .
+            python scripts/publish_grade1_speed.py .
             python tests/test_grade1_variant_publisher.py
             python tests/test_grade1_50q_publisher.py
+            python tests/test_grade1_speed_publisher.py
             python tests/test_grade1_remaining_skills.py
             python tests/test_grade1_multi_page_renderer.py
             python tests/test_worksheet_factory.py
@@ -65,5 +69,5 @@ jobs:
             echo 'No grade-1 checkpoint changes to publish.'
             exit 0
           fi
-          git commit -m 'Publish grade 1 50-question worksheets'
+          git commit -m 'Publish grade 1 speed worksheets'
           git push origin HEAD:main
