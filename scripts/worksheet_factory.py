@@ -25,6 +25,7 @@ except ModuleNotFoundError:
 
 pdfmetrics.registerFont(UnicodeCIDFont('HeiseiKakuGo-W5'))
 FONT='HeiseiKakuGo-W5'
+PAGE_PROBLEM_CAPACITY=20
 
 SKILLS = {
     'compose-5': {'title':'5までの数の合成・分解', 'kind':'compose', 'max':5},
@@ -289,26 +290,43 @@ def draw_numbered_problem(c, x, y, number, problem, answer=None):
         c.setFillColor(colors.black)
 
 
+def problem_page_chunks(problems, capacity=PAGE_PROBLEM_CAPACITY):
+    assert capacity > 0
+    return [problems[i:i+capacity] for i in range(0, len(problems), capacity)]
+
+
 def render_pdf(path, title, problems):
     validate(problems)
+    assert problems, 'worksheet must contain at least one problem'
     c=canvas.Canvas(str(path), pagesize=A4)
     w,h=A4
-    def page_header(label):
+    chunks=problem_page_chunks(problems)
+    page_count=len(chunks)
+
+    def page_header(label, page_index):
         c.setFillColor(colors.black)
         c.setFont(FONT,18); c.drawString(45,h-55,title)
-        c.setFont(FONT,10); c.drawRightString(w-45,h-52,label)
+        page_suffix=f" {page_index}/{page_count}" if page_count > 1 else ''
+        c.setFont(FONT,10); c.drawRightString(w-45,h-52,label + page_suffix)
         c.setFont(FONT,10); c.drawString(45,h-78,'なまえ：____________________________')
-    page_header('もんだい')
-    c.setFont(FONT,14)
-    for i,p in enumerate(problems):
-        col=i//10; row=i%10
-        x=55+col*260; y=h-120-row*63
-        draw_numbered_problem(c, x, y, i+1, p)
-    c.showPage(); page_header('こたえ'); c.setFont(FONT,14)
-    for i,p in enumerate(problems):
-        col=i//10; row=i%10
-        x=55+col*260; y=h-120-row*63
-        draw_numbered_problem(c, x, y, i+1, p, answer_text(p))
+
+    pages=[]
+    for answer_mode in (False, True):
+        label='こたえ' if answer_mode else 'もんだい'
+        for page_index, chunk in enumerate(chunks, start=1):
+            pages.append((answer_mode, label, page_index, chunk))
+
+    for rendered_index, (answer_mode, label, page_index, chunk) in enumerate(pages):
+        page_header(label, page_index)
+        c.setFont(FONT,14)
+        start_number=(page_index-1)*PAGE_PROBLEM_CAPACITY+1
+        for local_index,p in enumerate(chunk):
+            col=local_index//10; row=local_index%10
+            x=55+col*260; y=h-120-row*63
+            answer=answer_text(p) if answer_mode else None
+            draw_numbered_problem(c, x, y, start_number+local_index, p, answer)
+        if rendered_index < len(pages)-1:
+            c.showPage()
     c.save()
 
 
