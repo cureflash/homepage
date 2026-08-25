@@ -21,7 +21,6 @@ except ModuleNotFoundError:
 
 
 FORMAL_COURSE = "物理基礎"
-UNIT = "物体の運動とエネルギー：運動の表し方"
 ID_PREFIX = "science-physics-basic-motion-"
 
 
@@ -60,7 +59,7 @@ def build_batch(repo_root):
                     "subject": "理科",
                     "science_field": "physics",
                     "worksheet_mode": mode["worksheet_mode"],
-                    "unit": UNIT,
+                    "unit": topic["unit"],
                     "skill": topic["skill"],
                     "problem_count": len(problems),
                     "seed": seed,
@@ -80,6 +79,7 @@ def build_batch(repo_root):
                     assert existing["content_hash"] == content_hash, f"existing worksheet content mismatch: {wid}"
                     assert existing.get("formal_course") == FORMAL_COURSE
                     assert existing.get("grade") is None
+                    assert existing.get("unit") == topic["unit"]
                     continue
                 if url in by_url:
                     raise AssertionError(f"worksheet URL already belongs to another id: {url}")
