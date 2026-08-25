@@ -17,6 +17,15 @@
 - `js/games/prefectures.js`: 都道府県ゲーム固有の問題データと表示設定
 - `js/main.js`: ゲーム設定と renderer の接続
 
+## 継続開発
+
+自動的な継続開発のルール・順序・引き継ぎは `docs/social-quiz-factory/` を正とします。
+
+- `00_MASTER_INSTRUCTIONS.md`: 毎回守る実行規則
+- `10_CONTENT_AND_ARCHITECTURE.md`: 1対1対応、5択、色分け領域、UI分離などの設計規則
+- `20_EXECUTION_PLAN.md`: 実装順序とチェックリスト
+- `90_HANDOFF.md`: 次回の開始地点
+
 ## 拡張
 
 問題内容と回答UIを分離しているため、エンジン本体を変更せずにゲームを追加できます。
