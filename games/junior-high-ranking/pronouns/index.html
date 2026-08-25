@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="中学1年で習う人称代名詞をABCの3択で答える格付けゲームです。">
+  <title>中学生格付けチェック 人称代名詞編｜ひかり教材室</title>
+  <link rel="stylesheet" href="../styles.css?v=4">
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="back-link" href="../../../">← ひかり教材室</a>
+      <a class="back-link" href="../">be動詞編へ</a>
+    </div>
+
+    <aside class="rank-board" aria-live="polite" aria-label="現在の格付け">
+      <span class="rank-board-title">現在の格付け</span>
+      <strong id="rank-label">一流中学生</strong>
+      <ol id="rank-ladder" class="rank-ladder"></ol>
+    </aside>
+
+    <header class="hero">
+      <p class="eyebrow">JUNIOR HIGH SCHOOL RANKING CHECK</p>
+      <h1>中学生格付けチェック</h1>
+      <p class="subtitle">中1英語・人称代名詞編　全7問</p>
+    </header>
+
+    <section id="game-panel" class="panel" aria-live="polite">
+      <p id="question-number" class="question-number">第1問 / 7</p>
+      <h2 id="question-prompt" class="question-prompt">問題を読み込み中…</h2>
+
+      <div class="choice-legend" aria-label="選択肢の色">
+        <span class="legend-a">A＝赤</span>
+        <span class="legend-b">B＝青</span>
+        <span class="legend-c">C＝黄</span>
+      </div>
+
+      <div id="choices" class="choices" aria-label="選択肢"></div>
+      <div id="answer-breakdown" class="answer-breakdown" aria-label="解答結果" hidden></div>
+      <p id="feedback" class="feedback"></p>
+      <div class="actions">
+        <button id="next-button" class="primary-button" type="button" hidden>結果発表</button>
+      </div>
+    </section>
+
+    <section id="result-panel" class="panel result-panel" hidden>
+      <p id="result-label" class="result-label">最終結果</p>
+      <h2 id="result-rank">一流中学生</h2>
+      <p id="result-copy" class="result-copy">7問の格付けチェックが終了しました。</p>
+      <button id="restart-button" class="primary-button" type="button">もう一度挑戦</button>
+    </section>
+  </main>
+
+  <script src="questions.js?v=1"></script>
+  <script src="../audio.js?v=4"></script>
+  <script src="../app.js?v=4"></script>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"54c05627bfcb4754ae2cf2c56591f809"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
