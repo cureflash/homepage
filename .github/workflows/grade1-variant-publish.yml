@@ -1,0 +1,59 @@
+name: Grade 1 worksheet variant publish
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/grade1-variant-publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF dependency
+        run: python -m pip install --disable-pip-version-check reportlab
+      - name: Reconcile latest main and publish validated variants
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/publish_grade1_variants.py . --seeds 202 303
+            python tests/test_grade1_variant_publisher.py
+            python tests/test_grade1_remaining_skills.py
+            before=$(git rev-parse origin/main)
+            git fetch origin main
+            after=$(git rev-parse origin/main)
+            if [ "$before" = "$after" ]; then
+              break
+            fi
+            if [ "$attempt" = 3 ]; then
+              echo 'main kept moving; aborting rather than publishing stale catalog' >&2
+              exit 1
+            fi
+          done
+      - name: Commit generated worksheets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'worksheet-factory-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git add worksheets/catalog.json materials/worksheets/elementary/grade-01/
+          if git diff --cached --quiet; then
+            echo 'No grade-1 variant changes to publish.'
+            exit 0
+          fi
+          git commit -m 'Publish grade 1 seed variants'
+          git push origin HEAD:main
