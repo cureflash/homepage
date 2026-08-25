@@ -1,10 +1,11 @@
-name: Publish Physics Basics motion worksheets
+name: Publish Physics Basics mechanics worksheets
 
 on:
   workflow_dispatch:
   push:
     paths:
       - '.github/workflows/science-physics-basic-publish.yml'
+      - 'scripts/science_worksheet_helpers.py'
       - 'scripts/science_physics_basic_motion.py'
       - 'scripts/publish_science_physics_basic.py'
       - 'tests/test_science_physics_basic.py'
@@ -44,7 +45,7 @@ jobs:
           python tests/test_worksheet_factory.py
           python tests/test_science_physics_basic.py
 
-      - name: Generate and register first Physics Basics motion batch
+      - name: Generate and register Physics Basics mechanics batch
         run: python scripts/publish_science_physics_basic.py
 
       - name: Re-run validation after publication
@@ -61,29 +62,33 @@ jobs:
           catalog = json.loads((root / 'worksheets/catalog.json').read_text(encoding='utf-8'))
           validate_catalog(catalog, root)
           rows = [x for x in catalog if x.get('id', '').startswith('science-physics-basic-motion-')]
-          assert len(rows) == 60, len(rows)
+          assert len(rows) == 110, len(rows)
           assert all(x['school_level'] == 'high-school' for x in rows)
           assert all(x.get('formal_course') == '物理基礎' for x in rows)
           assert all(x.get('grade') is None for x in rows)
           assert all(x['subject'] == '理科' and x['science_field'] == 'physics' for x in rows)
-          assert all(x['unit'] == '物体の運動とエネルギー：運動の表し方' for x in rows)
           assert all(x['worksheet_series'] == 'focused' and x['answer_type'] == 'numeric' for x in rows)
           assert all(x['problem_count'] == 20 for x in rows)
           modes = Counter(x['worksheet_mode'] for x in rows)
-          assert modes['calculation-basic'] == 30, modes
-          assert modes['calculation-reverse'] == 30, modes
+          assert modes['calculation-basic'] == 50, modes
+          assert modes['calculation-reverse'] == 60, modes
           skills = Counter(x['skill'] for x in rows)
           assert skills['displacement-average-velocity'] == 20, skills
           assert skills['acceleration-velocity-change'] == 20, skills
           assert skills['initial-final-velocity'] == 20, skills
-          assert len({x['content_hash'] for x in rows}) == 60
+          assert skills['uniform-acceleration-velocity'] == 30, skills
+          assert skills['free-fall-velocity'] == 20, skills
+          units = Counter(x['unit'] for x in rows)
+          assert units['物体の運動とエネルギー：運動の表し方'] == 90, units
+          assert units['物体の運動とエネルギー：様々な力とその働き'] == 20, units
+          assert len({x['content_hash'] for x in rows}) == 110
           for entry in rows:
               path = root / entry['url']
               data = path.read_bytes()
               assert data.startswith(b'%PDF')
               assert path.stat().st_size > 1000
               assert b'/Count 2' in data, entry['id']
-          print('Physics Basics first 60-PDF catalog validation: OK')
+          print('Physics Basics 110-PDF catalog validation: OK')
           PY
 
       - name: Commit generated PDFs and catalog when changed
@@ -92,10 +97,10 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add worksheets/catalog.json materials/worksheets/science/high-school/physics-basic/motion/*.pdf
           if git diff --cached --quiet; then
-            echo 'No generated changes; Physics Basics motion worksheets are already current.'
+            echo 'No generated changes; Physics Basics mechanics worksheets are already current.'
             exit 0
           fi
-          git commit -m 'Publish first 60 Physics Basics motion worksheets'
+          git commit -m 'Publish 50 more Physics Basics mechanics worksheets'
           git fetch origin main
           test "$(git rev-parse HEAD^)" = "$(git rev-parse origin/main)"
           git push origin HEAD:main
