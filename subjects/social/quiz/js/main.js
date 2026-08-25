@@ -1,4 +1,5 @@
 import { QuizEngine } from "./core/quiz-engine.js";
+import { assertValidGameDefinition } from "./core/game-validator.js";
 import { SvgRegionRenderer } from "./renderers/svg-region-renderer.js";
 import { ChoiceRenderer } from "./renderers/choice-renderer.js";
 import { prefectureGame } from "./games/prefectures.js";
@@ -29,7 +30,7 @@ function createRenderer(config) {
   throw new Error(`Unknown renderer type: ${config.type}`);
 }
 
-const game = prefectureGame;
+const game = assertValidGameDefinition(prefectureGame);
 const renderer = createRenderer(game.renderer);
 const engine = new QuizEngine({ game, renderer, ui });
 
