@@ -7,7 +7,7 @@
     field: "history",
     unit: "古代までの日本",
     practicalGradeGroup: "中学・歴史導入",
-    factcheckStatus: "pending_factcheck",
+    factcheckStatus: "verified",
     keyPoint: "東アジアの制度や文化を取り入れながら、天皇を中心とする国家の仕組みが整えられていった。",
     timeline: [
       { label: "603年", note: "冠位十二階" },
@@ -28,7 +28,7 @@
             terms: ["冠位十二階"],
             importance: "A",
             sources: ["nara-shotoku-material", "horyuji"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "asuka-02",
@@ -36,7 +36,7 @@
             terms: ["十七条の憲法"],
             importance: "A",
             sources: ["nara-shotoku-material", "nara-manyohyakuka"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "asuka-03",
@@ -44,7 +44,7 @@
             terms: ["小野妹子", "遣隋使"],
             importance: "A",
             sources: ["nara-shotoku-material", "horyuji"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       },
@@ -59,7 +59,7 @@
             terms: ["中大兄皇子", "中臣鎌足", "大化の改新"],
             importance: "A",
             sources: ["mext-social-commentary", "nabunken-taika"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "asuka-05",
@@ -67,7 +67,7 @@
             terms: ["大宝律令", "律令国家"],
             importance: "A",
             sources: ["mext-social-commentary", "nabunken-taiho"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       }
@@ -82,18 +82,18 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:Portrait_of_Prince_Sh%C5%8Dtoku_and_Two_Princes.jpg",
         credit: "伝・阿佐太子 / Wikimedia Commons",
         license: "Public Domain Mark 1.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "horyuji",
         section: "reform",
-        label: "法隆寺の金堂と五重塔",
-        note: "飛鳥文化を代表する寺院建築",
+        label: "法隆寺西院伽藍",
+        note: "飛鳥文化を伝える法隆寺の寺院建築",
         src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Horyu-ji_National_Treasure_World_heritage_%E5%9B%BD%E5%AE%9D%E3%83%BB%E4%B8%96%E7%95%8C%E9%81%BA%E7%94%A3%E6%B3%95%E9%9A%86%E5%AF%BA57.JPG",
         sourcePage: "https://commons.wikimedia.org/wiki/File:Horyu-ji_National_Treasure_World_heritage_%E5%9B%BD%E5%AE%9D%E3%83%BB%E4%B8%96%E7%95%8C%E9%81%BA%E7%94%A3%E6%B3%95%E9%9A%86%E5%AF%BA57.JPG",
         credit: "Nekosuki / Wikimedia Commons",
         license: "CC BY-SA 4.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       }
     ],
     sources: [
