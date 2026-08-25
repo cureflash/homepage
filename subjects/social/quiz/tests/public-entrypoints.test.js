@@ -5,9 +5,10 @@ import test from "node:test";
 const rootIndex = readFileSync(new URL("../../../../index.html", import.meta.url), "utf8");
 const quizIndex = readFileSync(new URL("../index.html", import.meta.url), "utf8");
 
-test("root learning-game section links to both Japan map drills", () => {
+test("root learning-game section links to all Japan prefecture/capital drills", () => {
   assert.match(rootIndex, /href="subjects\/social\/quiz\/"/);
   assert.match(rootIndex, /href="subjects\/social\/quiz\/\?game=japan-prefectural-capitals"/);
+  assert.match(rootIndex, /href="subjects\/social\/quiz\/\?game=japan-prefecture-capital-choice"/);
 });
 
 test("canonical social quiz page still loads the shared main module", () => {
