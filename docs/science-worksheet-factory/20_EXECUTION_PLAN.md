@@ -13,10 +13,10 @@ Acceptance: science has an explicit integration path into the shared worksheet p
 
 ## Phase 1 — science catalog/schema support
 
-- [ ] Extend structured metadata for `subject=science`, science field, school level, grade/course, formal high-school course, unit, skill/fact-set, worksheet mode, difficulty, seed, title, description, output path.
-- [ ] Support both numerical-answer and finite accepted-answer-set validation.
-- [ ] Support focused, mixed, and cumulative-review worksheet series.
-- [ ] Ensure site navigation can group/filter science independently from mathematics.
+- [x] Extend structured metadata for `subject=science`, science field, school level, grade/course, formal high-school course, unit, skill/fact-set, worksheet mode, difficulty, seed, title, description, output path.
+- [x] Support both numerical-answer and finite accepted-answer-set validation.
+- [x] Support focused, mixed, and cumulative-review worksheet series.
+- [x] Ensure site navigation can group/filter science independently from mathematics.
 
 Acceptance: science worksheets can be registered and listed without hand-written HTML cards.
 
@@ -112,3 +112,4 @@ Acceptance: basic earth-science facts and suitable calculations have broad repet
 
 - 2026-08-25: science factory instruction set initialized; implementation not yet started.
 - 2026-08-25: Phase 0 completed. Inspected the live math generator/catalog/site/test implementation, documented the shared integration boundary and stable public worksheet URLs in `40_SHARED_INTEGRATION.md`, and extended the shared generator with catalog/link/science-metadata validation plus tests.
+- 2026-08-25: Phase 1 completed. Generalized the shared catalog with difficulty/series/answer-type metadata, added numerical and finite accepted-answer-set representations, validated junior-high science grades and formal high-school course names, generalized the shared worksheet listing to filter by subject/school/course/science field/unit/series, and linked the science landing page to the shared catalog.
