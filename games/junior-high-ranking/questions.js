@@ -1,142 +1,124 @@
-window.RANKING_QUESTIONS = [
-  {
-    prompt: "I ___ a junior high school student.",
-    choices: ["am", "is", "are"],
-    answer: 0,
-    absoluteWrong: 1,
-    explanation: "I の be動詞は am です。"
-  },
-  {
-    prompt: "You ___ my friend.",
-    choices: ["is", "are", "am"],
-    answer: 1,
-    absoluteWrong: 2,
-    explanation: "You の be動詞は are です。"
-  },
-  {
-    prompt: "He ___ twelve years old.",
-    choices: ["are", "am", "is"],
-    answer: 2,
-    absoluteWrong: 1,
-    explanation: "He の be動詞は is です。"
-  },
-  {
-    prompt: "They ___ in the classroom.",
-    choices: ["are", "is", "am"],
-    answer: 0,
-    absoluteWrong: 2,
-    explanation: "They の be動詞は are です。"
-  },
-  {
-    prompt: "This ___ my English book.",
-    choices: ["am", "are", "is"],
-    answer: 2,
-    absoluteWrong: 0,
-    explanation: "This は単数なので、be動詞は is です。"
-  },
-  {
-    prompt: "We ___ from Japan.",
-    choices: ["is", "are", "am"],
-    answer: 1,
-    absoluteWrong: 0,
-    explanation: "We の be動詞は are です。"
-  },
-  {
-    prompt: "My name ___ Ken.",
-    choices: ["is", "am", "are"],
-    answer: 0,
-    absoluteWrong: 1,
-    explanation: "My name は単数なので、be動詞は is です。"
-  },
-  {
-    prompt: "She ___ my sister.",
-    choices: ["are", "is", "am"],
-    answer: 1,
-    absoluteWrong: 2,
-    explanation: "She の be動詞は is です。"
-  },
-  {
-    prompt: "Tom and I ___ good friends.",
-    choices: ["am", "are", "is"],
-    answer: 1,
-    absoluteWrong: 2,
-    explanation: "Tom and I は複数なので、be動詞は are です。"
-  },
-  {
-    prompt: "The dog ___ under the table.",
-    choices: ["is", "are", "am"],
-    answer: 0,
-    absoluteWrong: 1,
-    explanation: "The dog は単数なので、be動詞は is です。"
-  },
-  {
-    prompt: "My parents ___ at home.",
-    choices: ["is", "am", "are"],
-    answer: 2,
-    absoluteWrong: 1,
-    explanation: "My parents は複数なので、be動詞は are です。"
-  },
-  {
-    prompt: "It ___ sunny today.",
-    choices: ["are", "is", "am"],
-    answer: 1,
-    absoluteWrong: 2,
-    explanation: "It の be動詞は is です。"
-  },
-  {
-    prompt: "These books ___ interesting.",
-    choices: ["are", "am", "is"],
-    answer: 0,
-    absoluteWrong: 1,
-    explanation: "These books は複数なので、be動詞は are です。"
-  },
-  {
-    prompt: "That boy ___ my classmate.",
-    choices: ["am", "is", "are"],
-    answer: 1,
-    absoluteWrong: 0,
-    explanation: "That boy は単数なので、be動詞は is です。"
-  },
-  {
-    prompt: "___ you busy now?",
-    choices: ["Are", "Is", "Am"],
-    answer: 0,
-    absoluteWrong: 2,
-    explanation: "You を主語にする疑問文では Are を使います。"
-  },
-  {
-    prompt: "___ he your teacher?",
-    choices: ["Am", "Are", "Is"],
-    answer: 2,
-    absoluteWrong: 0,
-    explanation: "He を主語にする疑問文では Is を使います。"
-  },
-  {
-    prompt: "Where ___ my pencil?",
-    choices: ["is", "are", "am"],
-    answer: 0,
-    absoluteWrong: 2,
-    explanation: "my pencil は単数なので、be動詞は is です。"
-  },
-  {
-    prompt: "Where ___ your shoes?",
-    choices: ["am", "is", "are"],
-    answer: 2,
-    absoluteWrong: 1,
-    explanation: "your shoes は複数なので、be動詞は are です。"
-  },
-  {
-    prompt: "I ___ not tired.",
-    choices: ["is", "am", "are"],
-    answer: 1,
-    absoluteWrong: 0,
-    explanation: "I の否定文でも be動詞は am です。"
-  },
-  {
-    prompt: "Those students ___ not in the gym.",
-    choices: ["are", "is", "am"],
-    answer: 0,
-    absoluteWrong: 2,
-    explanation: "Those students は複数なので、be動詞は are です。"
-  }
+const RAW_RANKING_QUESTIONS = [
+  ["I ___ a junior high school student.", "am", "I の be動詞は am です。"],
+  ["I ___ thirteen years old.", "am", "I の be動詞は am です。"],
+  ["I ___ from Osaka.", "am", "I の be動詞は am です。"],
+  ["I ___ in the music club.", "am", "I の be動詞は am です。"],
+  ["I ___ not busy today.", "am", "I の否定文でも be動詞は am です。"],
+  ["I ___ not hungry now.", "am", "I の否定文でも be動詞は am です。"],
+  ["I ___ ready for school.", "am", "I の be動詞は am です。"],
+  ["I ___ good at math.", "am", "I の be動詞は am です。"],
+  ["I ___ at home now.", "am", "I の be動詞は am です。"],
+  ["I ___ happy today.", "am", "I の be動詞は am です。"],
+  ["You ___ my friend.", "are", "You の be動詞は are です。"],
+  ["You ___ very kind.", "are", "You の be動詞は are です。"],
+  ["You ___ in Class 1.", "are", "You の be動詞は are です。"],
+  ["You ___ from Kyoto.", "are", "You の be動詞は are です。"],
+  ["You ___ not late.", "are", "You の否定文では are not を使います。"],
+  ["You ___ not alone.", "are", "You の否定文では are not を使います。"],
+  ["Where ___ you now?", "are", "You の be動詞は are です。"],
+  ["How ___ you today?", "are", "How are you? では are を使います。"],
+  ["Why ___ you so happy?", "are", "You の be動詞は are です。"],
+  ["What ___ you interested in?", "are", "You の be動詞は are です。"],
+  ["He ___ twelve years old.", "is", "He の be動詞は is です。"],
+  ["He ___ my brother.", "is", "He の be動詞は is です。"],
+  ["He ___ in the soccer club.", "is", "He の be動詞は is です。"],
+  ["He ___ from Tokyo.", "is", "He の be動詞は is です。"],
+  ["He ___ not at school today.", "is", "He の否定文では is not を使います。"],
+  ["Where ___ he now?", "is", "He の be動詞は is です。"],
+  ["Why ___ he tired?", "is", "He の be動詞は is です。"],
+  ["What ___ he good at?", "is", "He の be動詞は is です。"],
+  ["Who ___ he?", "is", "He の be動詞は is です。"],
+  ["How old ___ he?", "is", "He の be動詞は is です。"],
+  ["She ___ my sister.", "is", "She の be動詞は is です。"],
+  ["She ___ a good tennis player.", "is", "She の be動詞は is です。"],
+  ["She ___ in the library.", "is", "She の be動詞は is です。"],
+  ["She ___ from Nara.", "is", "She の be動詞は is です。"],
+  ["She ___ not busy now.", "is", "She の否定文では is not を使います。"],
+  ["Where ___ she today?", "is", "She の be動詞は is です。"],
+  ["Why ___ she angry?", "is", "She の be動詞は is です。"],
+  ["What ___ she interested in?", "is", "She の be動詞は is です。"],
+  ["Who ___ she?", "is", "She の be動詞は is です。"],
+  ["How old ___ she?", "is", "She の be動詞は is です。"],
+  ["It ___ sunny today.", "is", "It の be動詞は is です。"],
+  ["It ___ a nice day.", "is", "It の be動詞は is です。"],
+  ["It ___ very cold outside.", "is", "It の be動詞は is です。"],
+  ["It ___ not easy.", "is", "It の否定文では is not を使います。"],
+  ["It ___ five o'clock now.", "is", "時刻を表す It の be動詞は is です。"],
+  ["This ___ my English book.", "is", "This は単数なので is を使います。"],
+  ["This ___ a new pen.", "is", "This は単数なので is を使います。"],
+  ["This ___ not my bag.", "is", "This は単数なので is を使います。"],
+  ["What ___ this?", "is", "This は単数なので is を使います。"],
+  ["Whose book ___ this?", "is", "This は単数なので is を使います。"],
+  ["That ___ my school.", "is", "That は単数なので is を使います。"],
+  ["That ___ a big dog.", "is", "That は単数なので is を使います。"],
+  ["That ___ not my umbrella.", "is", "That は単数なので is を使います。"],
+  ["Who ___ that boy?", "is", "that boy は単数なので is を使います。"],
+  ["What ___ that building?", "is", "that building は単数なので is を使います。"],
+  ["My name ___ Ken.", "is", "My name は単数なので is を使います。"],
+  ["My mother ___ a teacher.", "is", "My mother は単数なので is を使います。"],
+  ["My father ___ at work.", "is", "My father は単数なので is を使います。"],
+  ["My school ___ near the station.", "is", "My school は単数なので is を使います。"],
+  ["My bike ___ new.", "is", "My bike は単数なので is を使います。"],
+  ["The dog ___ under the table.", "is", "The dog は単数なので is を使います。"],
+  ["The cat ___ on the chair.", "is", "The cat は単数なので is を使います。"],
+  ["The library ___ open today.", "is", "The library は単数なので is を使います。"],
+  ["Ken ___ my classmate.", "is", "Ken は一人なので is を使います。"],
+  ["Yuki ___ good at English.", "is", "Yuki は一人なので is を使います。"],
+  ["Tom ___ not in the classroom.", "is", "Tom は一人なので is を使います。"],
+  ["Where ___ my pencil?", "is", "my pencil は単数なので is を使います。"],
+  ["Where ___ the station?", "is", "the station は単数なので is を使います。"],
+  ["What color ___ your bag?", "is", "your bag は単数なので is を使います。"],
+  ["How old ___ your brother?", "is", "your brother は単数なので is を使います。"],
+  ["We ___ from Japan.", "are", "We の be動詞は are です。"],
+  ["We ___ good friends.", "are", "We の be動詞は are です。"],
+  ["We ___ in the same class.", "are", "We の be動詞は are です。"],
+  ["We ___ ready now.", "are", "We の be動詞は are です。"],
+  ["We ___ not busy today.", "are", "We の否定文では are not を使います。"],
+  ["Where ___ we now?", "are", "We の be動詞は are です。"],
+  ["Why ___ we here?", "are", "We の be動詞は are です。"],
+  ["They ___ in the classroom.", "are", "They の be動詞は are です。"],
+  ["They ___ my classmates.", "are", "They の be動詞は are です。"],
+  ["They ___ from Canada.", "are", "They の be動詞は are です。"],
+  ["They ___ not at home.", "are", "They の否定文では are not を使います。"],
+  ["Where ___ they now?", "are", "They の be動詞は are です。"],
+  ["Why ___ they excited?", "are", "They の be動詞は are です。"],
+  ["Tom and I ___ good friends.", "are", "Tom and I は複数なので are を使います。"],
+  ["Ken and Yuki ___ in the tennis club.", "are", "Ken and Yuki は複数なので are を使います。"],
+  ["My parents ___ at home.", "are", "My parents は複数なので are を使います。"],
+  ["My friends ___ kind.", "are", "My friends は複数なので are を使います。"],
+  ["The students ___ in the gym.", "are", "The students は複数なので are を使います。"],
+  ["The books ___ on the desk.", "are", "The books は複数なので are を使います。"],
+  ["The dogs ___ very cute.", "are", "The dogs は複数なので are を使います。"],
+  ["These books ___ interesting.", "are", "These books は複数なので are を使います。"],
+  ["These apples ___ red.", "are", "These apples は複数なので are を使います。"],
+  ["These shoes ___ mine.", "are", "These shoes は複数なので are を使います。"],
+  ["Those students ___ not in the gym.", "are", "Those students は複数なので are を使います。"],
+  ["Those flowers ___ beautiful.", "are", "Those flowers は複数なので are を使います。"],
+  ["Those bikes ___ new.", "are", "Those bikes は複数なので are を使います。"],
+  ["Where ___ your shoes?", "are", "your shoes は複数なので are を使います。"],
+  ["Where ___ my glasses?", "are", "glasses は複数扱いなので are を使います。"],
+  ["What color ___ these pens?", "are", "these pens は複数なので are を使います。"],
+  ["How old ___ your parents?", "are", "your parents は複数なので are を使います。"]
 ];
+
+const CHOICE_ORDERS = [
+  ["am", "is", "are"],
+  ["is", "are", "am"],
+  ["are", "am", "is"]
+];
+
+window.RANKING_QUESTIONS = RAW_RANKING_QUESTIONS.map(([prompt, correct, explanation], index) => {
+  const choices = CHOICE_ORDERS[index % CHOICE_ORDERS.length];
+  const answer = choices.indexOf(correct);
+  const wrongIndexes = choices
+    .map((_, choiceIndex) => choiceIndex)
+    .filter((choiceIndex) => choiceIndex !== answer);
+
+  return {
+    prompt,
+    choices,
+    answer,
+    absoluteWrong: wrongIndexes[index % wrongIndexes.length],
+    explanation
+  };
+});
