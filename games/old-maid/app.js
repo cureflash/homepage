@@ -2,7 +2,6 @@ import { ODD_PREFECTURES, OLD_MAID_CONFIG, PREFECTURE_CAPITAL_PAIRS } from "./ca
 import { AUDIO_CONFIG } from "./audio.js?v=1";
 
 const handEl = document.querySelector("#hand");
-const selectedEl = document.querySelector("#selected-cards");
 const discardButton = document.querySelector("#discard-button");
 const restartButton = document.querySelector("#restart-button");
 const normalModeButton = document.querySelector("#normal-mode-button");
@@ -118,14 +117,12 @@ function updateDiscardButton() {
   discardButton.disabled = !gameActive || selectedCards.length !== 2;
 }
 
-function moveToSelected(cardEl) {
-  if (!gameActive || selectedCards.length >= 2 || cardEl.dataset.zone === "selected") return;
+function selectCard(cardEl) {
+  if (!gameActive || cardEl.classList.contains("is-discarded") || selectedCards.length >= 2 || cardEl.classList.contains("is-selected")) return;
 
-  cardEl.dataset.zone = "selected";
   cardEl.classList.add("is-selected");
   cardEl.setAttribute("aria-pressed", "true");
   selectedCards.push(cardEl);
-  selectedEl.append(cardEl);
   playSe("select");
 
   messageEl.textContent = selectedCards.length === 2
@@ -134,27 +131,25 @@ function moveToSelected(cardEl) {
   updateDiscardButton();
 }
 
-function moveToHand(cardEl) {
-  if (!gameActive || cardEl.dataset.zone !== "selected") return;
+function unselectCard(cardEl) {
+  if (!gameActive || !cardEl.classList.contains("is-selected")) return;
 
-  cardEl.dataset.zone = "hand";
   cardEl.classList.remove("is-selected");
   cardEl.setAttribute("aria-pressed", "false");
   selectedCards = selectedCards.filter((item) => item !== cardEl);
-  handEl.append(cardEl);
   playSe("select");
   messageEl.textContent = "カードをタッチして2枚選んでください。";
   updateDiscardButton();
 }
 
 function handleCardTouch(cardEl) {
-  if (!gameActive) return;
+  if (!gameActive || cardEl.classList.contains("is-discarded")) return;
   playBgm();
 
-  if (cardEl.dataset.zone === "selected") {
-    moveToHand(cardEl);
+  if (cardEl.classList.contains("is-selected")) {
+    unselectCard(cardEl);
   } else {
-    moveToSelected(cardEl);
+    selectCard(cardEl);
   }
 }
 
@@ -165,7 +160,6 @@ function createCard(card) {
   button.className = "playing-card";
   button.dataset.pairId = card.pairId;
   button.dataset.odd = String(card.odd);
-  button.dataset.zone = "hand";
   button.setAttribute("aria-label", label);
   button.setAttribute("aria-pressed", "false");
   button.textContent = label;
@@ -174,7 +168,7 @@ function createCard(card) {
 }
 
 function finishGameIfComplete() {
-  const remaining = [...handEl.children, ...selectedEl.children];
+  const remaining = [...handEl.querySelectorAll(".playing-card:not(.is-discarded)")];
   if (remaining.length === 1 && remaining[0].dataset.odd === "true") {
     gameActive = false;
     remaining[0].disabled = true;
@@ -204,8 +198,18 @@ function discardSelectedPair() {
     return;
   }
 
-  first.remove();
-  second.remove();
+  if (gameMode === "hard") {
+    [first, second].forEach((card) => {
+      card.classList.remove("is-selected");
+      card.classList.add("is-discarded");
+      card.setAttribute("aria-pressed", "false");
+      card.disabled = true;
+    });
+  } else {
+    first.remove();
+    second.remove();
+  }
+
   selectedCards = [];
   discardedPairs += 1;
   pairsEl.textContent = String(discardedPairs);
@@ -234,7 +238,6 @@ function renderGame() {
   pairsEl.textContent = "0";
   totalPairsEl.textContent = String(pairCount);
   messageEl.textContent = "カードをタッチして2枚選んでください。";
-  selectedEl.replaceChildren();
   handEl.replaceChildren(...cards.map(createCard));
   updateModeButtons();
   updateDiscardButton();
