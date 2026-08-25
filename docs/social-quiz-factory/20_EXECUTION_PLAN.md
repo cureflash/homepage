@@ -5,10 +5,10 @@ Work strictly from top to bottom. Check off an item only after implementation an
 ## Phase 0 — stabilize the reusable engine
 
 - [x] 0.1 Characterize current behavior with tests: shuffle, scoring, progress, lock-after-answer, result screen, restart.
-- [ ] 0.2 Add schema validation for game definitions and questions.
-- [ ] 0.3 Validate unique question IDs, non-empty prompts, answer presence, renderer requirements, and option uniqueness.
-- [ ] 0.4 Confirm `QuizEngine` has no visual-design assumptions; move any presentation-specific dependency outward if found.
-- [ ] 0.5 Confirm renderers are replaceable and current UI can later be redesigned without changing question banks.
+- [x] 0.2 Add schema validation for game definitions and questions.
+- [x] 0.3 Validate unique question IDs, non-empty prompts, answer presence, renderer requirements, and option uniqueness.
+- [x] 0.4 Confirm `QuizEngine` has no visual-design assumptions; move any presentation-specific dependency outward if found.
+- [x] 0.5 Confirm renderers are replaceable and current UI can later be redesigned without changing question banks.
 - [ ] 0.6 Add a game registry/catalog so new games can be registered without modifying core scoring logic.
 
 ## Phase 1 — Japan: prefectures and capitals
