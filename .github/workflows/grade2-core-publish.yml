@@ -7,9 +7,11 @@ on:
       - 'scripts/publish_grade2_core.py'
       - 'scripts/publish_grade2_columnar.py'
       - 'scripts/publish_grade2_times_tables.py'
+      - 'scripts/publish_grade2_times_tables_mixed.py'
       - 'tests/test_grade2_core_publisher.py'
       - 'tests/test_grade2_columnar_publisher.py'
       - 'tests/test_grade2_times_tables_publisher.py'
+      - 'tests/test_grade2_times_tables_mixed_publisher.py'
       - '.github/workflows/grade2-core-publish.yml'
   workflow_dispatch:
 
@@ -39,9 +41,11 @@ jobs:
             python scripts/publish_grade2_core.py .
             python scripts/publish_grade2_columnar.py .
             python scripts/publish_grade2_times_tables.py .
+            python scripts/publish_grade2_times_tables_mixed.py .
             python tests/test_grade2_core_publisher.py
             python tests/test_grade2_columnar_publisher.py
             python tests/test_grade2_times_tables_publisher.py
+            python tests/test_grade2_times_tables_mixed_publisher.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main)
             git fetch origin main
