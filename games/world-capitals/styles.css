@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #1f2937;
+  background: #f5f7fb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+.old-maid-page {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.old-maid-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.old-maid-header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 2.15rem);
+}
+
+.back-link {
+  color: #315fa8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.game-panel {
+  padding: 18px;
+  border: 1px solid #d9dee8;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.game-toolbar,
+.game-controls,
+.control-group,
+.game-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.game-toolbar {
+  justify-content: space-between;
+}
+
+.game-controls {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.control-group,
+.game-info {
+  flex-wrap: wrap;
+}
+
+.game-info {
+  font-weight: 700;
+}
+
+#restart-button,
+.mode-button,
+.audio-button,
+.discard-button {
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#restart-button,
+.audio-button {
+  color: #315fa8;
+  background: #e8eef8;
+}
+
+.mode-button {
+  color: #4b5563;
+  background: #eceff3;
+}
+
+.mode-button.is-active {
+  color: #ffffff;
+  background: #315fa8;
+}
+
+.discard-button {
+  color: #ffffff;
+  background: #c83d47;
+}
+
+.discard-button:disabled {
+  color: #8a919c;
+  background: #e4e7ec;
+  cursor: default;
+}
+
+#game-message {
+  min-height: 1.6em;
+  margin: 18px 0 12px;
+}
+
+.play-area {
+  min-height: 250px;
+  padding: 14px;
+  border-radius: 16px;
+  background: linear-gradient(#edf3ea, #e5eee1);
+}
+
+.area-label {
+  margin: 0 0 10px;
+  color: #56615a;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hand {
+  display: flex;
+  min-height: 142px;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 10px 6px;
+  overflow-x: auto;
+}
+
+.hand.hard-mode {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+  align-items: stretch;
+  gap: 10px;
+  overflow-x: visible;
+}
+
+.playing-card {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: clamp(76px, 13vw, 104px);
+  aspect-ratio: 5 / 7;
+  flex: 0 0 auto;
+  padding: 8px;
+  border: 2px solid #c7ccd5;
+  border-radius: 11px;
+  color: #1f2937;
+  background: #ffffff;
+  box-shadow: 0 3px 9px rgba(31, 41, 55, 0.2);
+  font: inherit;
+  font-size: clamp(0.82rem, 2.1vw, 1.15rem);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+
+.hand:not(.hard-mode) .playing-card + .playing-card {
+  margin-left: -24px;
+}
+
+.hand.hard-mode .playing-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.playing-card.is-selected {
+  border-color: #315fa8;
+  box-shadow: 0 0 0 3px rgba(49, 95, 168, 0.24), 0 4px 10px rgba(31, 41, 55, 0.22);
+}
+
+.playing-card:disabled {
+  cursor: default;
+}
+
+.hand.hard-mode .playing-card.is-discarded {
+  color: #4b5563;
+  background: #9ca3af;
+  border-color: #8b929d;
+  box-shadow: none;
+  opacity: 0.34;
+  filter: grayscale(1);
+}
+
+#restart-button:focus-visible,
+.mode-button:focus-visible,
+.audio-button:focus-visible,
+.discard-button:focus-visible,
+.playing-card:focus-visible,
+.back-link:focus-visible {
+  outline: 3px solid #f0a500;
+  outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+  .old-maid-page {
+    width: min(100% - 20px, 920px);
+    padding-top: 18px;
+  }
+
+  .old-maid-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .game-panel {
+    padding: 12px;
+  }
+
+  .game-toolbar {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .game-controls {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .play-area {
+    min-height: 210px;
+    padding: 10px 6px;
+  }
+
+  .hand {
+    min-height: 118px;
+  }
+
+  .playing-card {
+    width: 76px;
+    font-size: 0.82rem;
+  }
+
+  .hand:not(.hard-mode) .playing-card + .playing-card {
+    margin-left: -34px;
+  }
+
+  .hand.hard-mode {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .hand.hard-mode .playing-card {
+    width: 100%;
+    padding: 5px;
+    font-size: 0.68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playing-card {
+    transition: none;
+  }
+}
