@@ -14,13 +14,15 @@ test("registry returns registered games without exposing mutable registry state"
   assert.notEqual(first, second);
   assert.deepEqual(first.map((game) => game.id), [
     "japan-prefectures",
-    "japan-prefectural-capitals"
+    "japan-prefectural-capitals",
+    "japan-prefecture-capital-choice"
   ]);
 });
 
 test("registry supports explicit lookup and rejects unknown ids", () => {
   assert.equal(getGame("japan-prefectures")?.title, "都道府県当て");
   assert.equal(getGame("japan-prefectural-capitals")?.title, "県庁所在地当て");
+  assert.equal(getGame("japan-prefecture-capital-choice")?.title, "県庁所在地5択");
   assert.equal(getGame("missing"), null);
   assert.throws(() => requireGame("missing"), /Unknown game id/);
 });
