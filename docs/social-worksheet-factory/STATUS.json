@@ -2,17 +2,14 @@
   "status": "in_progress",
   "school_stage": "junior-high",
   "field": "history",
-  "active_unit": "kofun-asuka-nara-heian-batch",
+  "active_unit": "kamakura-period",
   "active_units": [
-    "kofun-period-yamato-polity",
-    "asuka-reforms-ritsuryo-formation",
-    "nara-period",
-    "heian-period"
+    "kamakura-period"
   ],
-  "next_role": "factcheck",
-  "last_completed_role": "generate",
-  "verified_through": "yayoi-society-states-yamatai-himiko",
+  "next_role": "generate",
+  "last_completed_role": "factcheck",
+  "verified_through": "heian-period",
   "prototype_status": "verified",
-  "batch_size": 4,
-  "updated_at": "2026-08-25T21:26:00+09:00"
+  "batch_size": 1,
+  "updated_at": "2026-08-25T21:46:00+09:00"
 }
