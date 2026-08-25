@@ -4,132 +4,118 @@
 
 - Active stage: junior-high
 - Active field: history
-- Verified through: Edo political system and society
-- Active unit: Edo economy / culture / foreign relations
-- Next role: FACTCHECK
+- Verified through: Edo economy / culture / foreign relations
+- Active unit: Bakumatsu and Meiji Restoration
+- Next role: GENERATE
 - Batch size: 1 unit
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed GENERATE — Edo economy / culture / foreign relations
+## Completed FACTCHECK — Edo economy / culture / foreign relations
 
-Created:
+Independently reopened the current MEXT junior-high Social Studies commentary and authoritative municipal, museum, and cultural sources rather than relying on the generator's rationale. All eight structured fact records, all eight learner sentences, both image records, and the unit are now `verified`.
 
-`subjects/social/worksheets/data/edo-economy-culture-foreign-relations.js`
+### Curriculum placement and verified wording
 
-The unit is intentionally low-density and is not registered in the public selector. The unit, all structured fact records, all eight learner sentences, and both image records remain `pending_factcheck`.
+MEXT places this material under junior-high history `近世の日本`.
 
-### Curriculum basis used only for generation
+For industry, transport, culture, and education, the commentary explicitly supports:
 
-The current MEXT junior-high Social Studies commentary places this content in `近世の日本` and explicitly calls for:
+- development of agriculture/forestry/fisheries, handicrafts, commerce, river and sea transport, and roads as examples of early-modern industrial/transport development;
+- formation of urban-centered culture with economically stronger townspeople as cultural actors, explicitly naming Osaka, Kyoto, and Edo as suitable urban examples;
+- spread of han schools and terakoya, growing interest in education, and expansion of the social base of learning and culture.
 
-- understanding the development of industry and transport;
-- understanding that urban-centered chonin culture formed and that local life cultures also developed;
-- attention to han schools and terakoya as part of educational diffusion;
-- treatment of the bakufu's later-called `鎖国` policy without equating it with total isolation;
-- Nagasaki trade with the Netherlands and China;
+For foreign relations, the commentary explicitly states that the policies later called `鎖国` included bans/restrictions on overseas travel and trade, prohibition of Christianity, and control of diplomacy/information, while still requiring learners to recognize continuing trade and exchange. It explicitly calls for treatment of:
+
+- Dutch and Chinese trade at Nagasaki;
 - exchange with Korea through Tsushima;
-- the role of Ryukyu in relations with China;
-- northern trade involving the Ainu in Ezo.
+- Ryukyu's role in relations with China;
+- Ainu trade in northern products in Ezo.
 
-MEXT also states that river/sea transport and roads may be used as examples of transport development, and that Osaka, Kyoto, and Edo are appropriate examples of urban settings in which economically stronger townspeople became cultural actors.
+National Museum of Japanese History independently reinforces that early-modern Japan was not isolated and describes four major international gateways: Nagasaki, Tsushima, Satsuma, and Matsumae.
 
-### Structured facts and learner sentences
+### Claim checks
 
-Eight structured fact records were added before sentence templates were written. The learner sheet has three sections and eight concise sentences.
+1. **Industry / transport** — verified against MEXT. The sentence remains general and does not claim equal development in every region.
+2. **Osaka kurayashiki** — verified against Osaka City and Osaka City Library. Osaka City states that domains built kurayashiki around Nakanoshima to bring in, manage, sell, and convert annual-rent rice and products into money. The learner sentence continues to avoid using `天下の台所` as a memorization target.
+3. **Townsperson culture** — verified directly against MEXT's wording on Osaka, Kyoto, Edo, economically stronger townspeople, and urban-centered culture.
+4. **Han schools / terakoya** — verified directly against MEXT, including the intended inference of growing educational interest and wider cultural diffusion.
+5. **Sakoku framing** — verified against MEXT and Rekihaku. The learner sheet correctly says these policies were later called `鎖国` and explicitly avoids implying total international isolation.
+6. **Nagasaki / Dejima** — MEXT confirms Dutch and Chinese trade at Nagasaki. Official Dejima history confirms that the Dutch factory moved from Hirado to Dejima in 1641.
+7. **Korea / Tsushima and Ryukyu / Satsuma** — verified against Rekihaku. Tsushima Museum independently confirms the diplomatic role of Tsushima and Tsushima domain in Joseon relations.
+8. **Ainu / Matsumae** — wording was corrected. Instead of saying merely that a trade relationship existed `through` Matsumae domain, the final wording states that Ainu people themselves traded marine products and that Matsumae domain controlled Ainu-Wajin trade. This preserves Ainu agency and reflects National Ainu Museum material describing both Ainu people as producers/traders and Matsumae control/monopoly structures.
 
-#### 1. Industry, transport, and cities
+## Final learner wording correction
 
-- `商業 / 海上交通 / 街道`: industry and transport development linked production and markets.
-- `大坂 / 蔵屋敷`: Osaka's storehouses handled domain rice and products and supported its development as a major commercial city.
+Only one substantive sentence required revision:
 
-Candidate authoritative sources used during generation:
+- Before: `蝦夷地ではアイヌの人々が海産物などを交易し、松前藩を介した通商関係も形成された。`
+- Final: `蝦夷地では{{アイヌ}}の人々が海産物などを交易し、{{松前藩}}はアイヌとの交易を統制した。`
 
-- MEXT current Social Studies commentary.
-- Osaka City page on kurayashiki remains.
-- Osaka City Library / Osaka City History Compilation material on early-modern Osaka.
+The corresponding structured fact record was changed to the same meaning.
 
-The sentence deliberately avoids making `天下の台所` a cloze target because Osaka City Library's reference material notes that the exact slogan's historical usage is more complicated than a simple Edo-period label.
+## Image verification
 
-#### 2. Chonin culture and education
+No AI-generated historical images are used.
 
-- `町人 / 町人文化`: Osaka, Kyoto, and Edo as urban settings for culture supported by economically stronger townspeople.
-- `藩校 / 寺子屋`: educational diffusion and the widening social base of learning/culture.
+### Utagawa Hiroshige, `Tōkaidō gojūsan tsui, Kyō`
 
-Candidate authoritative sources:
+- Exact Commons file checked: `Tōkaidō gojūsan tsui, Kyō by Hiroshige.jpg`.
+- Commons identifies the artist as Utagawa Hiroshige and the work as a woodblock print from `The 53 stations of the Tōkaidō in pairs`.
+- Date: 1844–1847.
+- Subject: view from Sanjo Ohashi in Kyoto.
+- Source institution: Museum of Fine Arts, Boston.
+- Commons states the underlying work and faithful reproduction are public domain; Public Domain Mark 1.0 / PD-Art / PD-Japan information is present.
+- Learner note tightened to `1844〜1847年の錦絵。三条大橋からの眺めと往来を描いた東海道関連資料`.
+- Status: `verified`.
 
-- MEXT current Social Studies commentary.
-- Osaka Museum of History material on early-modern Osaka chonin culture.
+### `DejimaInNagasakiBay.jpg`
 
-No attempt was made to force a particular fixed school grade or to overload the sheet with a long list of Genroku/Kasei artists.
-
-#### 3. Foreign relations under bakufu control
-
-- `鎖国`: phrased as policies later called sakoku, while explicitly stating that overseas trade and exchange continued.
-- `長崎 / オランダ / 中国 / 出島`: trade continued at Nagasaki; the Dutch factory moved to Dejima in 1641.
-- `朝鮮 / 対馬藩 / 琉球 / 薩摩藩`: multiple diplomatic/exchange routes remained active.
-- `アイヌ / 松前藩`: northern trade relationships in Ezo.
-
-Candidate authoritative sources:
-
-- MEXT current Social Studies commentary.
-- National Museum of Japanese History, third gallery, which explicitly explains that early-modern Japan was not isolated and presents Nagasaki, Tsushima, Satsuma, and Matsumae as four international gateways.
-- Official Dejima history for the 1641 Dutch-factory move and continued Dutch trade.
-- Tsushima Museum material on Joseon missions and Tsushima's diplomatic role.
-- National Ainu Museum material on Ainu-Wajin trade and Matsumae control.
-
-## Historical-source images added as candidates
-
-No AI-generated historical images were used.
-
-### 1. Utagawa Hiroshige, `Tōkaidō gojūsan tsui, Kyō`
-
-- Exact file: `Tōkaidō gojūsan tsui, Kyō by Hiroshige.jpg`.
-- Commons identifies it as a woodblock print from the series `The 53 stations of the Tōkaidō in pairs`, published 1844–1847.
-- It depicts the Sanjo Ohashi area in Kyoto and is used as a concrete visual for road travel / urban culture near the end of the Edo period.
-- Source recorded by Commons: Museum of Fine Arts, Boston.
-- Artist: Utagawa Hiroshige (1797–1858).
-- Commons licensing identifies the work and faithful reproduction as public domain and carries Public Domain Mark 1.0 / PD-Art / PD-Japan information.
-- Current record status: `pending_factcheck`.
-
-### 2. `DejimaInNagasakiBay.jpg`
-
-- Commons caption: painting of Japanese and Dutch trade on Dejima in Nagasaki.
-- Date: between 1800 and 1825.
-- Scene includes Dutch ships and Chinese trading junks.
-- Collection/source: British Museum.
-- Artwork creator is not identified on the Commons record; the digital file history includes a photograph/upload by PHGCOM/World Imaging, so the learner credit deliberately says `作者不詳の絵画 / British Museum / Wikimedia Commons` rather than treating the digitizer as the historical artist.
-- Commons marks the underlying work public domain and applies Public Domain Mark 1.0.
-- Current record status: `pending_factcheck`.
+- Exact Commons file checked.
+- Commons describes a painting of Japanese-Dutch trade at Dejima, dated between 1800 and 1825, with two Dutch ships and Chinese trading junks.
+- Collection: British Museum.
+- The historical painter is not identified on the file record. File history records a photograph/digital capture by PHGCOM, so the final credit distinguishes the unknown historical artist from the photographer: `作者不詳の絵画 / British Museum / PHGCOM（撮影） / Wikimedia Commons`.
+- Commons applies Public Domain Mark 1.0 and states the file is free of known copyright restrictions.
+- Status: `verified`.
 
 ## Publication / integration state
 
-The new dataset has NOT been added to `subjects/social/worksheets/index.html`. The public selector therefore remains limited to the ten independently verified units through `edo-political-system-society`.
+`subjects/social/worksheets/data/edo-economy-culture-foreign-relations.js` is fully verified and is now loaded by `subjects/social/worksheets/index.html` after `edo-political-system-society.js`.
 
-The shared worksheet engine was not changed. The new unit follows the existing `window.SOCIAL_WORKSHEET_UNITS.push(unit)` contract, and only explicit entries in each sentence's `terms` array are eligible for deterministic seeded blanks.
+The public selector therefore includes eleven independently verified units, from Jomon/Yayoi through Edo economy/culture/foreign relations.
 
-No unrelated educational page was modified.
+The shared worksheet engine was not broadened or rewritten. It still uses the existing `window.SOCIAL_WORKSHEET_UNITS` registry and only explicit `terms` entries are eligible for deterministic seeded blanks. Unrelated educational pages were not changed.
+
+The existing Cloudflare Web Analytics tag in `index.html` was preserved. Its public token is represented with equivalent HTML character references in the attribute value so browser parsing yields the same value while allowing the safe repository write.
+
+## Independent evidence used in this FACTCHECK
+
+- MEXT `中学校学習指導要領（平成29年告示）解説 社会編`
+  - `https://www.mext.go.jp/content/20240919-mxt_kyoiku01-100002608.pdf`
+- Osaka City `蔵屋敷跡`
+  - `https://www.city.osaka.lg.jp/kensetsu/page/0000009873.html`
+- Osaka City Library / Osaka City History Compilation `中世・近世の大坂`
+  - `https://www.oml.city.osaka.lg.jp/page/1146.html`
+- National Museum of Japanese History, Room 3
+  - `https://www.rekihaku.ac.jp/exhibitions/room3/`
+- Official Dejima history
+  - `https://nagasakidejima.jp/history/`
+- Tsushima Museum `対馬の外交II 朝鮮通信使`
+  - `https://tsushimamuseum.jp/exhibition/1058/`
+- National Ainu Museum related material on early-modern trade
+  - `https://nam.go.jp/wp/wp-content/uploads/2020/10/siryou1.pdf`
+- Wikimedia Commons exact file pages for both published images.
 
 ## Exact next starting point
 
-Next role is FACTCHECK. Work only on:
+Next role is GENERATE. Work only on:
 
-`subjects/social/worksheets/data/edo-economy-culture-foreign-relations.js`
+`bakumatsu-meiji-restoration`
 
-Treat all eight structured facts, all eight learner sentences, and both image records as untrusted. Reopen sources independently rather than accepting this generation summary.
+This is junior-high history queue item 12, `Bakumatsu and Meiji Restoration`.
 
-At minimum verify:
+Build the low-density explanation sheet first from authoritative structured facts. Keep new claims and image records `pending_factcheck` and do not register the new dataset in the public selector until the following independent FACTCHECK run.
 
-1. whether the general industry/transport sentence accurately reflects MEXT and does not imply uniform development across all regions;
-2. whether the Osaka `蔵屋敷` sentence is supportable without relying on the historically problematic `天下の台所` slogan;
-3. the precise curriculum-supported scope of `町人文化`, including the choice to mention Osaka/Kyoto/Edo without forcing Genroku/Kasei labels;
-4. `藩校 / 寺子屋` wording and whether `教育への関心が高まる` is supported;
-5. the wording `後に鎖国と呼ばれた` and the explicit rejection of complete-isolation framing;
-6. 1641 Dejima chronology and the statement that Dutch and Chinese trade continued at Nagasaki;
-7. Tsushima/Korea and Satsuma/Ryukyu wording, including whether `外交関係` is the best concise term for the Ryukyu route;
-8. Ainu/Matsumae wording, avoiding wording that erases Ainu agency or oversimplifies unequal trade/control relations;
-9. exact identities, dates, institutions, and reuse status of both Commons image files.
+Likely core coverage to investigate from scratch includes the opening of Japan and treaty system, domestic political change around the end of the bakufu, restoration of imperial government, the Charter Oath / abolition of domains and establishment of prefectures / social-status reform as appropriate, and the transition into the Meiji state without duplicating the following separate queue unit `Meiji state / industrialization`. Verify the exact current MEXT scope before choosing terms or chronology.
 
-If all claims can be supported after correction as needed, mark the fact records, learner sentences, image records, and unit `verified`; then add only the verified dataset to `subjects/social/worksheets/index.html`.
-
-After successful publication, set `next_role` to `generate`, advance the active unit to `bakumatsu-meiji-restoration`, and record the exact next state here and in `STATUS.json`.
+Use useful non-AI historical-source images only where exact source and reuse terms can be recorded. Update `STATUS.json` and this handoff at the end of that GENERATE run, setting the next role to FACTCHECK.
