@@ -109,6 +109,11 @@ function buildHand() {
   };
 }
 
+function displayLabel(label) {
+  if (label === "北海道") return label;
+  return label.replace(/[都府県市区]$/, "");
+}
+
 function updateDiscardButton() {
   discardButton.disabled = !gameActive || selectedCards.length !== 2;
 }
@@ -155,14 +160,15 @@ function handleCardTouch(cardEl) {
 
 function createCard(card) {
   const button = document.createElement("button");
+  const label = displayLabel(card.label);
   button.type = "button";
   button.className = "playing-card";
   button.dataset.pairId = card.pairId;
   button.dataset.odd = String(card.odd);
   button.dataset.zone = "hand";
-  button.setAttribute("aria-label", card.label);
+  button.setAttribute("aria-label", label);
   button.setAttribute("aria-pressed", "false");
-  button.textContent = card.label;
+  button.textContent = label;
   button.addEventListener("click", () => handleCardTouch(button));
   return button;
 }
