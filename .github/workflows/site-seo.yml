@@ -1,0 +1,47 @@
+name: Site SEO maintenance
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-seo-main
+  cancel-in-progress: false
+
+jobs:
+  maintain-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Normalize analytics and sitemap
+        run: node scripts/site_maintenance.mjs
+
+      - name: Validate SEO and local links
+        run: node scripts/check_site.mjs
+
+      - name: Commit generated maintenance changes
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          git commit -m "chore: refresh site SEO metadata [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
