@@ -1,17 +1,15 @@
-import { MEMORY_GAME_CONFIG, TRUMP_PAIRS } from "./cards.js";
+import { JOKER, OLD_MAID_CONFIG, RANKS, SUITS } from "./cards.js";
 
-const board = document.querySelector("#memory-board");
-const movesEl = document.querySelector("#moves");
-const pairsEl = document.querySelector("#pairs-found");
-const totalPairsEl = document.querySelector("#total-pairs");
-const messageEl = document.querySelector("#game-message");
+const handEl = document.querySelector("#hand");
+const selectedEl = document.querySelector("#selected-cards");
+const discardButton = document.querySelector("#discard-button");
 const restartButton = document.querySelector("#restart-button");
+const messageEl = document.querySelector("#game-message");
+const pairsEl = document.querySelector("#pairs-discarded");
 
-let firstCard = null;
-let secondCard = null;
-let boardLocked = false;
-let moves = 0;
-let matchedPairs = 0;
+let selectedCards = [];
+let discardedPairs = 0;
+let gameActive = true;
 
 function shuffle(items) {
   const array = [...items];
@@ -22,122 +20,146 @@ function shuffle(items) {
   return array;
 }
 
-function buildDeck() {
-  const pairCount = Math.min(MEMORY_GAME_CONFIG.pairCount, TRUMP_PAIRS.length);
-  const selectedPairs = shuffle(TRUMP_PAIRS).slice(0, pairCount);
+function buildHand() {
+  const ranks = shuffle(RANKS).slice(0, OLD_MAID_CONFIG.pairCount);
+  const cards = ranks.flatMap((rank) => {
+    const suits = shuffle(SUITS).slice(0, 2);
+    return suits.map((suit, index) => ({
+      id: `${rank}-${suit}-${index}`,
+      rank,
+      suit,
+      joker: false,
+    }));
+  });
 
-  return shuffle(
-    selectedPairs.flatMap((pair) =>
-      pair.cards.map((card, index) => ({
-        ...card,
-        pairId: pair.id,
-        cardId: `${pair.id}-${index}`,
-      })),
-    ),
-  );
+  return shuffle([...cards, JOKER]);
 }
 
-function suitClass(suit) {
-  return suit === "♥" || suit === "♦" ? "card-red" : "card-black";
+function suitClass(card) {
+  if (card.joker) return "card-joker";
+  return card.suit === "♥" || card.suit === "♦" ? "card-red" : "card-black";
 }
 
-function resetTurn() {
-  firstCard = null;
-  secondCard = null;
-  boardLocked = false;
+function updateDiscardButton() {
+  discardButton.disabled = !gameActive || selectedCards.length !== 2;
 }
 
-function finishIfComplete() {
-  if (matchedPairs !== Number(totalPairsEl.textContent)) return;
-  messageEl.textContent = `${moves}手でクリア！`;
+function moveToSelected(cardEl) {
+  if (!gameActive || selectedCards.length >= 2 || cardEl.dataset.zone === "selected") return;
+  cardEl.dataset.zone = "selected";
+  cardEl.classList.add("is-selected");
+  selectedCards.push(cardEl);
+  selectedEl.append(cardEl);
+  messageEl.textContent = selectedCards.length === 2 ? "2枚選びました。そろっていると思ったら「捨てる」を押してください。" : "もう1枚選んでください。";
+  updateDiscardButton();
 }
 
-function handleCardClick(button) {
-  if (boardLocked || button === firstCard || button.dataset.matched === "true") return;
+function moveToHand(cardEl) {
+  if (!gameActive || cardEl.dataset.zone !== "selected") return;
+  cardEl.dataset.zone = "hand";
+  cardEl.classList.remove("is-selected");
+  selectedCards = selectedCards.filter((item) => item !== cardEl);
+  handEl.append(cardEl);
+  messageEl.textContent = "上にスワイプして2枚選んでください。";
+  updateDiscardButton();
+}
 
-  button.classList.add("is-open");
-  button.setAttribute("aria-pressed", "true");
+function attachSwipe(cardEl) {
+  let startY = null;
 
-  if (!firstCard) {
-    firstCard = button;
-    return;
-  }
+  cardEl.addEventListener("pointerdown", (event) => {
+    if (!gameActive) return;
+    startY = event.clientY;
+    cardEl.setPointerCapture?.(event.pointerId);
+  });
 
-  secondCard = button;
-  moves += 1;
-  movesEl.textContent = String(moves);
+  cardEl.addEventListener("pointerup", (event) => {
+    if (startY === null || !gameActive) return;
+    const deltaY = event.clientY - startY;
+    startY = null;
 
-  if (firstCard.dataset.pairId === secondCard.dataset.pairId) {
-    firstCard.dataset.matched = "true";
-    secondCard.dataset.matched = "true";
-    firstCard.classList.add("is-matched");
-    secondCard.classList.add("is-matched");
-    firstCard.disabled = true;
-    secondCard.disabled = true;
-    matchedPairs += 1;
-    pairsEl.textContent = String(matchedPairs);
-    resetTurn();
-    finishIfComplete();
-    return;
-  }
+    if (deltaY <= -OLD_MAID_CONFIG.swipeThreshold) {
+      moveToSelected(cardEl);
+    } else if (deltaY >= OLD_MAID_CONFIG.swipeThreshold) {
+      moveToHand(cardEl);
+    }
+  });
 
-  boardLocked = true;
-  window.setTimeout(() => {
-    firstCard.classList.remove("is-open");
-    secondCard.classList.remove("is-open");
-    firstCard.setAttribute("aria-pressed", "false");
-    secondCard.setAttribute("aria-pressed", "false");
-    resetTurn();
-  }, 700);
+  cardEl.addEventListener("pointercancel", () => {
+    startY = null;
+  });
 }
 
 function createCard(card) {
   const button = document.createElement("button");
   button.type = "button";
-  button.className = "memory-card";
-  button.dataset.pairId = card.pairId;
-  button.dataset.matched = "false";
-  button.setAttribute("aria-label", "伏せられたカード");
-  button.setAttribute("aria-pressed", "false");
+  button.className = `playing-card ${suitClass(card)}`;
+  button.dataset.rank = card.rank;
+  button.dataset.joker = String(card.joker);
+  button.dataset.zone = "hand";
+  button.setAttribute("aria-label", card.joker ? "ジョーカー" : `${card.rank}${card.suit}`);
 
-  const back = document.createElement("span");
-  back.className = "card-face card-back";
-  back.setAttribute("aria-hidden", "true");
-  back.textContent = "★";
+  if (card.joker) {
+    button.innerHTML = '<span class="joker-star">★</span><span class="joker-label">JOKER</span>';
+  } else {
+    button.innerHTML = `<span class="card-corner"><span>${card.rank}</span><span>${card.suit}</span></span><span class="card-center">${card.suit}</span>`;
+  }
 
-  const front = document.createElement("span");
-  front.className = `card-face card-front ${suitClass(card.suit)}`;
-  front.setAttribute("aria-hidden", "true");
-  front.innerHTML = `<span class="card-rank">${card.rank}</span><span class="card-suit">${card.suit}</span>`;
-
-  button.append(back, front);
-  button.addEventListener("click", () => handleCardClick(button));
-  button.addEventListener("focus", () => {
-    if (button.classList.contains("is-open") || button.dataset.matched === "true") {
-      button.setAttribute("aria-label", `${card.rank}${card.suit}`);
-    } else {
-      button.setAttribute("aria-label", "伏せられたカード");
-    }
-  });
-
+  attachSwipe(button);
   return button;
 }
 
-function renderGame() {
-  const deck = buildDeck();
-  moves = 0;
-  matchedPairs = 0;
-  resetTurn();
-
-  movesEl.textContent = "0";
-  pairsEl.textContent = "0";
-  totalPairsEl.textContent = String(deck.length / 2);
-  messageEl.textContent = "同じ数字のカードを2枚そろえよう。";
-  board.replaceChildren(...deck.map(createCard));
-
-  const columns = deck.length <= 16 ? 4 : deck.length <= 24 ? 6 : 7;
-  board.style.setProperty("--memory-columns", String(columns));
+function finishGameIfComplete() {
+  const remaining = [...handEl.children, ...selectedEl.children];
+  if (remaining.length === 1 && remaining[0].dataset.joker === "true") {
+    gameActive = false;
+    remaining[0].disabled = true;
+    discardButton.disabled = true;
+    messageEl.textContent = "クリア！ ジョーカー1枚だけ残りました。";
+  }
 }
 
+function discardSelectedPair() {
+  if (!gameActive || selectedCards.length !== 2) return;
+
+  const [first, second] = selectedCards;
+  const isPair = first.dataset.joker === "false"
+    && second.dataset.joker === "false"
+    && first.dataset.rank === second.dataset.rank;
+
+  if (!isPair) {
+    gameActive = false;
+    discardButton.disabled = true;
+    document.querySelectorAll(".playing-card").forEach((card) => {
+      card.disabled = true;
+    });
+    messageEl.textContent = "ゲームオーバー。正しいペアではありません。";
+    return;
+  }
+
+  first.remove();
+  second.remove();
+  selectedCards = [];
+  discardedPairs += 1;
+  pairsEl.textContent = String(discardedPairs);
+  messageEl.textContent = "ペアを捨てました。次の2枚を選んでください。";
+  updateDiscardButton();
+  finishGameIfComplete();
+}
+
+function renderGame() {
+  const cards = buildHand();
+  selectedCards = [];
+  discardedPairs = 0;
+  gameActive = true;
+
+  pairsEl.textContent = "0";
+  messageEl.textContent = "上にスワイプして2枚選んでください。";
+  selectedEl.replaceChildren();
+  handEl.replaceChildren(...cards.map(createCard));
+  updateDiscardButton();
+}
+
+discardButton.addEventListener("click", discardSelectedPair);
 restartButton.addEventListener("click", renderGame);
 renderGame();
