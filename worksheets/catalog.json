@@ -102,7 +102,7 @@
     "title": "20までの繰り下がりなしのひき算 01",
     "description": "基礎計算を20問くり返すプリントです。2ページ目に解答があります。",
     "url": "materials/worksheets/elementary/grade-01/e1-sub-20-no-borrow-01.pdf",
-    "content_hash": "57196e918339176f27496e5f37827d37ec9d5299921dac635862353c581eb76",
+    "content_hash": "57196e918339176f27496e5f37827d37ec9d529992a1dac635862353c581eb76",
     "difficulty": "basic",
     "worksheet_series": "focused",
     "answer_type": "numeric"
