@@ -66,24 +66,27 @@ jobs:
               and x.get('school_level') == 'junior-high'
               and x.get('grade') == 2
           ]
-          assert len(rows) == 60, len(rows)
+          assert len(rows) == 90, len(rows)
           assert all(x['answer_type'] == 'numeric' for x in rows)
           assert all(x['worksheet_series'] == 'focused' for x in rows)
           modes = Counter(x['worksheet_mode'] for x in rows)
-          assert modes['calculation-basic'] == 40, modes
+          assert modes['calculation-basic'] == 70, modes
           assert modes['calculation-reverse'] == 20, modes
           skills = Counter(x['skill'] for x in rows)
           assert skills['ohms-law'] == 30, skills
           assert skills['series-circuit-voltage'] == 10, skills
           assert skills['parallel-circuit-current'] == 10, skills
           assert skills['series-combined-resistance'] == 10, skills
+          assert skills['electric-power'] == 10, skills
+          assert skills['electric-energy'] == 10, skills
+          assert skills['heat-quantity'] == 10, skills
           for entry in rows:
               path = root / entry['url']
               data = path.read_bytes()
               assert data.startswith(b'%PDF')
               assert path.stat().st_size > 1000
               assert b'/Count 2' in data, entry['id']
-          print('JH2 physics 60-PDF catalog validation: OK')
+          print('JH2 physics 90-PDF catalog validation: OK')
           PY
 
       - name: Commit generated PDFs and catalog when changed
@@ -95,7 +98,7 @@ jobs:
             echo 'No generated changes; JH2 physics worksheets are already current.'
             exit 0
           fi
-          git commit -m 'Publish 30 more junior-high grade 2 circuit worksheets'
+          git commit -m 'Publish 30 JH2 power energy and heat worksheets'
           git fetch origin main
           test "$(git rev-parse HEAD^)" = "$(git rev-parse origin/main)"
           git push origin HEAD:main
