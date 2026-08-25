@@ -154,7 +154,7 @@ h1 {
 }
 
 .legend-a {
-  background: #c62828;
+  background: #d32f2f;
   color: #fff;
 }
 
@@ -164,7 +164,7 @@ h1 {
 }
 
 .legend-c {
-  background: #f4cf20;
+  background: #f5d313;
   color: #211f1a;
 }
 
@@ -187,21 +187,23 @@ h1 {
   font-size: 1.25rem;
   font-weight: 700;
   transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.choice-button.choice-a {
-  background: #c62828;
-  color: #fff;
+.choices .choice-button.choice-a {
+  background-color: #d32f2f !important;
+  color: #fff !important;
 }
 
-.choice-button.choice-b {
-  background: #1565c0;
-  color: #fff;
+.choices .choice-button.choice-b {
+  background-color: #1565c0 !important;
+  color: #fff !important;
 }
 
-.choice-button.choice-c {
-  background: #f4cf20;
-  color: #211f1a;
+.choices .choice-button.choice-c {
+  background-color: #f5d313 !important;
+  color: #211f1a !important;
 }
 
 .choice-button:hover:not(:disabled) {
@@ -211,6 +213,7 @@ h1 {
 
 .choice-button:disabled {
   cursor: default;
+  -webkit-text-fill-color: currentColor;
 }
 
 .choice-letter {
@@ -236,6 +239,63 @@ h1 {
   border-color: #111;
   box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #651b1b;
   opacity: 0.72;
+}
+
+.answer-breakdown {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.answer-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 2px solid #d3c9b5;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.answer-detail.choice-a {
+  border-left: 10px solid #d32f2f;
+}
+
+.answer-detail.choice-b {
+  border-left: 10px solid #1565c0;
+}
+
+.answer-detail.choice-c {
+  border-left: 10px solid #f5d313;
+}
+
+.answer-choice {
+  font-weight: 800;
+}
+
+.answer-detail strong {
+  min-width: 88px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+.answer-detail.role-correct strong {
+  background: #dff3e4;
+  color: #185d30;
+}
+
+.answer-detail.role-wrong strong {
+  background: #f1ece4;
+  color: #5f5547;
+}
+
+.answer-detail.role-absolute strong {
+  background: #651b1b;
+  color: #fff;
 }
 
 .feedback {
@@ -273,6 +333,10 @@ h1 {
   background: #23211d;
   color: white;
   cursor: pointer;
+}
+
+.primary-button.game-over-button {
+  background: #651b1b;
 }
 
 .result-panel {
@@ -331,5 +395,9 @@ h1 {
 
   .rank-ladder {
     grid-template-columns: 1fr;
+  }
+
+  .answer-detail {
+    align-items: flex-start;
   }
 }
