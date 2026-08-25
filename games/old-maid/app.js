@@ -1,4 +1,4 @@
-import { JOKER, OLD_MAID_CONFIG, RANKS, SUITS } from "./cards.js";
+import { JOKER, OLD_MAID_CONFIG, RANKS, SUITS } from "./cards.js?v=2";
 
 const handEl = document.querySelector("#hand");
 const selectedEl = document.querySelector("#selected-cards");
