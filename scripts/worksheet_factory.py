@@ -13,6 +13,10 @@ SKILLS = {
     'compose-10': {'title':'10までの数の合成・分解', 'kind':'compose', 'max':10},
     'add-10': {'title':'10までのたし算', 'kind':'add', 'max':10},
     'sub-10': {'title':'10までのひき算', 'kind':'sub', 'max':10},
+    'add-20-no-carry': {'title':'20までの繰り上がりなしのたし算', 'kind':'add-20-no-carry'},
+    'sub-20-no-borrow': {'title':'20までの繰り下がりなしのひき算', 'kind':'sub-20-no-borrow'},
+    'add-20-carry': {'title':'20までの繰り上がりありのたし算', 'kind':'add-20-carry'},
+    'sub-20-borrow': {'title':'20までの繰り下がりありのひき算', 'kind':'sub-20-borrow'},
 }
 
 CATALOG_REQUIRED_FIELDS = {
@@ -29,15 +33,32 @@ def compute_answer(p):
     raise ValueError(t)
 
 def make_problem(rng, spec):
-    k=spec['kind']; m=spec['max']
+    k=spec['kind']
     if k=='compose':
-        total=rng.randint(2,m); known=rng.randint(0,total)
+        m=spec['max']; total=rng.randint(2,m); known=rng.randint(0,total)
         return {'type':'compose','total':total,'known':known,'answer':total-known}
     if k=='add':
-        a=rng.randint(0,m); b=rng.randint(0,m-a)
+        m=spec['max']; a=rng.randint(0,m); b=rng.randint(0,m-a)
         return {'type':'add','a':a,'b':b,'answer':a+b}
     if k=='sub':
-        a=rng.randint(0,m); b=rng.randint(0,a)
+        m=spec['max']; a=rng.randint(0,m); b=rng.randint(0,a)
+        return {'type':'sub','a':a,'b':b,'answer':a-b}
+    if k=='add-20-no-carry':
+        a=rng.randint(10,19)
+        b=rng.randint(0,min(9-(a%10),20-a))
+        return {'type':'add','a':a,'b':b,'answer':a+b}
+    if k=='sub-20-no-borrow':
+        a=rng.randint(10,20)
+        b=rng.randint(0,min(9,a%10))
+        return {'type':'sub','a':a,'b':b,'answer':a-b}
+    if k=='add-20-carry':
+        a=rng.randint(2,9)
+        b=rng.randint(11-a,9)
+        return {'type':'add','a':a,'b':b,'answer':a+b}
+    if k=='sub-20-borrow':
+        a=rng.randint(11,18)
+        ones=a%10
+        b=rng.randint(ones+1,9)
         return {'type':'sub','a':a,'b':b,'answer':a-b}
     raise ValueError(k)
 
@@ -103,7 +124,7 @@ def main(outdir):
     outdir=Path(outdir); outdir.mkdir(parents=True,exist_ok=True)
     catalog=[]; hashes=set()
     for skill in SKILLS:
-        for variant,seed in enumerate((101,202,303), start=1):
+        for variant,seed in enumerate((101,), start=1):
             problems=generate(skill, seed, 20)
             h=normalized_hash(problems)
             assert h not in hashes, 'duplicate worksheet content'; hashes.add(h)
