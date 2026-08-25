@@ -1,8 +1,7 @@
 import { QuizEngine } from "./core/quiz-engine.js";
-import { assertValidGameDefinition } from "./core/game-validator.js";
 import { SvgRegionRenderer } from "./renderers/svg-region-renderer.js";
 import { ChoiceRenderer } from "./renderers/choice-renderer.js";
-import { prefectureGame } from "./games/prefectures.js";
+import { defaultGameId, requireGame } from "./games/registry.js";
 
 const ui = {
   title: document.querySelector("#game-title"),
@@ -30,7 +29,8 @@ function createRenderer(config) {
   throw new Error(`Unknown renderer type: ${config.type}`);
 }
 
-const game = assertValidGameDefinition(prefectureGame);
+const requestedGameId = new URLSearchParams(window.location.search).get("game") || defaultGameId;
+const game = requireGame(requestedGameId);
 const renderer = createRenderer(game.renderer);
 const engine = new QuizEngine({ game, renderer, ui });
 
