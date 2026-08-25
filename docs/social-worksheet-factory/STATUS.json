@@ -6,10 +6,10 @@
   "active_units": [
     "kamakura-period"
   ],
-  "next_role": "generate",
-  "last_completed_role": "factcheck",
+  "next_role": "factcheck",
+  "last_completed_role": "generate",
   "verified_through": "heian-period",
   "prototype_status": "verified",
   "batch_size": 1,
-  "updated_at": "2026-08-25T21:46:00+09:00"
+  "updated_at": "2026-08-25T22:42:00+09:00"
 }
