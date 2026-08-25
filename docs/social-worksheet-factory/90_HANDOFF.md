@@ -4,112 +4,139 @@
 
 - Active stage: junior-high
 - Active field: history
-- Verified through: Muromachi period
-- Active unit: Sengoku / Azuchi-Momoyama
-- Next role: FACTCHECK
+- Verified through: Sengoku / Azuchi-Momoyama
+- Active unit: Edo political system and society
+- Next role: GENERATE
 - Batch size: 1 unit
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed GENERATE — Sengoku / Azuchi-Momoyama
+## Completed FACTCHECK — Sengoku / Azuchi-Momoyama
 
-Created `subjects/social/worksheets/data/sengoku-azuchi-momoyama.js` as the next junior-high history unit. It is intentionally low-density and remains entirely `pending_factcheck`. It has NOT been added to the public `subjects/social/worksheets/index.html`.
+Independently reopened current curriculum material and authoritative government, municipal, museum, archive, temple, and exact Commons file pages. All eight study sentences and both image records were treated as untrusted before approval.
 
-### Curriculum placement checked before generation
+### Curriculum placement
 
-Current MEXT junior-high Social Studies commentary places this content in `近世の日本` → `世界の動きと統一事業`. It explicitly requires understanding:
+MEXT current junior-high Social Studies commentary places this material under `近世の日本` → `世界の動きと統一事業`.
 
-- the background and impact of European arrivals;
-- Oda/Toyotomi unification;
-- the purpose of unification-government policies;
-- land surveys and sword hunts;
-- the cultural development around warriors and wealthy townspeople.
+The commentary requires understanding the background and influence of European arrivals, Oda/Toyotomi unification, contemporary foreign relations, and the development of the life culture of warriors and wealthy merchants. Its content handling explicitly calls for `検地・刀狩` when teaching Oda/Toyotomi unification policy. It also describes Momoyama culture as including a豪壮・華麗な文化 connected to the spirit and economic power of warriors and wealthy merchants.
 
-The commentary explicitly names `織田・豊臣による統一事業` and requires treatment of `検地・刀狩`. No fixed school year was assigned.
+No fixed school year is assigned in project metadata.
 
-## Generated study structure
+### Independent factual checks and corrections
 
-Two sections, eight concise study sentences:
+All eight sentence records are now `verified`. The following wording changes were made during review.
 
-### 1. European contact and Oda Nobunaga
+1. 1543 firearms arrival
+   - Changed the broad `ポルトガル人を乗せた船` wording to `ポルトガル人を乗せた明国船`.
+   - Nishinoomote City and Kagoshima Prefecture both describe a Ming/Chinese vessel carrying Portuguese people arriving/drifting to Tanegashima in 1543.
 
-- 1543 firearms / 種子島
-- 1549 Francis Xavier / Christianity
-- Oda Nobunaga and the 1568 Kyoto entry
-- 楽市楽座 and commercial policy
+2. 1549 Xavier
+   - Kept Xavier as an `イエズス会の宣教師` and Kagoshima as the landing place.
+   - Changed the final clause from an absolute `日本でキリスト教の布教を始めた` to `日本でキリスト教布教の第一歩をしるした`, matching Kagoshima Prefecture's official wording and avoiding unnecessary overstatement.
 
-### 2. Toyotomi Hideyoshi and unification / Momoyama culture
+3. Nobunaga 1568
+   - Verified `足利義昭を奉じて京都に入った` through Kyoto City / Kyoto Prefectural Museum material.
 
-- Hideyoshi continuing the unification project and the 1590 Odawara campaign
-- 太閤検地
-- 1588 刀狩
-- 桃山文化 / 障壁画
+4. 楽市楽座
+   - Avoided wording that could imply one uniform nationwide institution.
+   - Final sentence says Nobunaga promoted policies generally called `楽市楽座` at places including the Azuchi castle town.
+   - Omihachiman City material confirms the 1577 `安土山下町中掟書` and its `楽市` provision, and city-history material discusses the application of 楽市楽座 at Azuchi/Hachiman castle towns.
 
-Core terms are explicit in each `terms` array, so the existing generator will blank only those terms. No arbitrary noun blanking was introduced.
+5. 1590 unification
+   - Odawara City explicitly states that the 1590 surrender of the Hojo side marked completion of Hideyoshi's unification, so the junior-high wording remains supportable.
 
-## Candidate factual basis used during generation
+6. 太閤検地
+   - Rewrote the sentence to say land area and grade were surveyed, kokudaka was fixed, and cultivators were registered in cadastral registers.
+   - Nagoya City Museum, the National Tax College, and Osaka Castle Museum independently support these elements and the nationwide/unified character of the system.
 
-These are GENERATE references only. The next FACTCHECK run must independently reopen sources and treat every sentence as untrusted.
+7. 刀狩
+   - Expanded the weapon categories so the sentence does not reduce the 1588 order to swords alone.
+   - Osaka Castle Museum's original-document commentary states that the first article prohibited peasants from possessing swords, wakizashi, bows, spears, firearms, and other weapons.
+   - Rekihaku independently identifies the 1588 three-article sword-hunt order and its original held by Osaka Castle.
 
-- MEXT current junior-high Social Studies commentary for current placement and the required treatment of European arrivals, Oda/Toyotomi unification, land surveys, sword hunt and culture.
-- Nishinoomote City / Tanegashima historical-cultural-property pages for the 1543 firearms arrival.
-- Kagoshima Prefecture history pages for Xavier's 1549 landing and the beginning of Christian missionary activity in Japan.
-- Nagoya City Museum for Nobunaga's expansion, commercial policy, and Hideyoshi succeeding the unification effort.
-- Omihachiman City historical landscape materials for Azuchi Castle construction and the 1577 Azuchi castle-town `楽市` provisions.
-- Odawara City for the 1590 Odawara campaign and Hideyoshi's nationwide unification.
-- National Diet Library Search / linked historical materials for `太閤検地` and the 1588 `豊臣秀吉刀狩條書`.
-- Kyoto National Museum and Tokyo National Museum material for large-scale Momoyama wall paintings and the cultural context of castles / major temples.
+8. 桃山文化 / 障壁画
+   - Retained `豪壮・華麗` only as an important characteristic, not as the sole cultural style.
+   - MEXT explicitly uses this characterization in connection with warriors and wealthy merchants.
+   - Tokyo National Museum material confirms large-scale Momoyama-period gold-ground wall/screen painting and includes major works by Kano painters.
 
-## New image candidates
+### Independent evidence retained in the unit
 
-No AI-generated historical images were used.
+- MEXT `中学校学習指導要領（平成29年告示）解説 社会編`
+- Nishinoomote City `種子島銃（ポルトガル初伝銃）`
+- Kagoshima Prefecture / Reimeikan `鉄砲とキリスト教の伝来`
+- Kagoshima Prefecture `キリスト教の伝来`
+- Kyoto Prefecture Kyoto Culture Museum `信長上洛～京都・織田信長入京から450年～`
+- Omihachiman City material on the 1577 Azuchi castle-town rules and city-history publications
+- Odawara City material on the 1590 Odawara campaign and unification
+- Nagoya City Museum `豊臣秀次朱印状` / 太閤検地 explanation
+- National Tax College `太閤検地`
+- Osaka Castle Museum `摂津国豊島郡熊野田村検地帳`
+- Osaka Castle Museum `豊臣秀吉朱印刀狩条目`
+- National Museum of Japanese History khirin `刀狩令 複製`
+- Tokyo National Museum Momoyama exhibition / wall-painting material
 
-### 1. Oda Nobunaga portrait
+## Image verification
 
-- file: `Odanobunaga.jpg`
-- exact Commons page identifies the work as `Portrait of Oda Nobunaga (detail)` / `織田信長像（部分）`
-- artist: Kano Sōshū / 狩野宗秀
-- original work dated 1583
+No AI-generated historical images are used.
+
+### Oda Nobunaga portrait
+
+Exact Commons file: `Odanobunaga.jpg`.
+
+- artist field: Kano Sōshū / 狩野宗秀
+- title: `Portrait of Oda Nobunaga (detail)` / `織田信長像（部分）`
+- original date: 1583
 - collection: Chōkō-ji / 長興寺
-- Commons states the work is public domain in Japan; the file is tagged with the Public Domain Mark route
-- project currently records `Public Domain Mark 1.0`
-- status remains `pending_factcheck`
+- Commons states the work is public domain and treats the faithful two-dimensional reproduction as public domain; the file displays Creative Commons Public Domain Mark 1.0
+- project record: `verified`
 
-### 2. Toyotomi Hideyoshi portrait
+The learner note now explicitly distinguishes the old artwork from its digital reproduction.
 
-- file: `Toyotomi hideyoshi.jpg`
-- exact Commons page identifies it as part of a Hideyoshi portrait held by Kōdai-ji / 高台寺
-- artist field identifies Kanō Mitsunobu / 狩野光信
-- circa 1601
-- Commons treats the faithful reproduction of the old two-dimensional work as public domain and explicitly displays Public Domain Mark 1.0
-- project currently records `Public Domain Mark 1.0`
-- status remains `pending_factcheck`
+### Toyotomi Hideyoshi portrait
+
+Exact Commons file: `Toyotomi hideyoshi.jpg`.
+
+- Commons artist field: Kano Mitsunobu / 狩野光信
+- description: part of a Hideyoshi portrait in Kōdai-ji holdings
+- date: circa 1601
+- Kōdai-ji Sho Museum independently identifies its Hideyoshi portrait as dated Keicho 6 (1601)
+- Commons treats the faithful two-dimensional reproduction as public domain and explicitly displays Public Domain Mark 1.0
+- project record: `verified`
+
+The learner note now identifies the reproduction status explicitly.
 
 ## Publication state
 
-The public worksheet selector remains unchanged and contains only the eight verified units through Muromachi. `sengoku-azuchi-momoyama.js` must not be registered publicly until every sentence and both images independently pass FACTCHECK.
+`subjects/social/worksheets/data/sengoku-azuchi-momoyama.js` is fully `verified` and is now registered in `subjects/social/worksheets/index.html`.
 
-The shared generator and print infrastructure were not changed in this run. The canonical path remains `subjects/social/worksheets/`; the retired root path was not used or recreated.
+The public selector now loads nine verified units in chronological order:
+
+1. Jomon / Yayoi overview
+2. Yayoi society / Yamatai / Himiko
+3. Kofun / Yamato
+4. Asuka / ritsuryo
+5. Nara
+6. Heian
+7. Kamakura
+8. Muromachi
+9. Sengoku / Azuchi-Momoyama
+
+The shared worksheet generator was not changed. Only explicit `terms` remain eligible for blanks, and seeded generation behavior remains deterministic.
 
 ## Exact next starting point
 
-Perform an independent FACTCHECK of only:
+Next role is GENERATE. Work only on `Edo political system and society`, the next junior-high history queue unit.
 
-`subjects/social/worksheets/data/sengoku-azuchi-momoyama.js`
+Create the explanation-sheet data first and keep it low-density. Cover only the political/social framework needed for this unit, leaving `Edo economy / culture / foreign relations` for the following separate unit.
 
-Treat all eight sentence records and both image records as untrusted. Reopen authoritative sources from scratch rather than accepting this generation summary.
+Likely core areas to verify before generation include:
 
-Verify at minimum:
+- Tokugawa Ieyasu and the 1603 establishment of the Edo bakufu;
+- bakuhan political structure without oversimplifying the relationship between shogunate and domains;
+- daimyo classification and the purpose/effects of controls such as 武家諸法度 and 参勤交代;
+- shogunate offices only to the level appropriate for junior-high learners;
+- status/social-order treatment using current MEXT wording and avoiding outdated simplistic claims where current scholarship/curriculum is more careful;
+- village organization / agriculture only where needed to explain the political-social framework, leaving detailed economic development to the next unit.
 
-1. MEXT current curriculum placement under `近世の日本` / `世界の動きと統一事業` and whether each chosen core term is appropriate for junior-high scope.
-2. 1543 wording: whether `ポルトガル人を乗せた船が種子島に来航` is sufficiently precise; distinguish the ship's broader context from the Portuguese passengers and avoid overstating a simple Portuguese-ship narrative.
-3. 1549 Xavier: landing location/date, Jesuit status, and whether `日本でキリスト教の布教を始めた` is appropriately phrased.
-4. Nobunaga 1568: whether the wording `足利義昭を奉じて京都に入った` is supported and pedagogically precise.
-5. `楽市楽座`: confirm the policy wording and avoid implying a single uniform nationwide institution; verify the Azuchi castle-town evidence and the broader commercial-policy characterization.
-6. 1590 Odawara campaign: verify that the learner-level statement that nationwide unification was achieved after the campaign is supportable.
-7. `太閤検地`: independently verify the description of measured area / yield / cultivators and whether the wording overcompresses a long-running policy.
-8. 1588 `刀狩`: verify date, scope, actual weapon categories, and avoid overstating complete disarmament of all peasants.
-9. `桃山文化` / `障壁画`: verify that the sentence fairly characterizes the period and that `豪壮・華麗` is not presented as the only cultural style.
-10. Both Commons image records: exact file identity, work/artist/collection/date, public-domain basis, Public Domain Mark metadata, and whether the captions distinguish old artwork from its modern digital reproduction correctly.
-
-Correct or reject unsupported wording. Only after all eight sentences and two images pass should the unit/image/sentence statuses become `verified`, the dataset be added to the public selector, `verified_through` advance to `sengoku-azuchi-momoyama`, and `next_role` return to `generate` for `Edo political system and society`.
+Use at least two useful non-AI historical-source images if their exact reuse terms can be documented. All new sentence and image records must remain `pending_factcheck`, and the new dataset must not be added to the public selector until the subsequent independent FACTCHECK run approves it.
