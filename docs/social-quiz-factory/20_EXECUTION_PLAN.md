@@ -14,8 +14,8 @@ Work strictly from top to bottom. Check off an item only after implementation an
 ## Phase 1 — Japan: prefectures and capitals
 
 - [x] 1.1 Prefecture name -> click prefecture on Japan map. Existing first implementation.
-- [ ] 1.2 Validate all 47 prefecture IDs against the map asset.
-- [ ] 1.3 Add prefectural capital -> click corresponding prefecture, all 47.
+- [x] 1.2 Validate all 47 prefecture IDs against the map asset.
+- [x] 1.3 Add prefectural capital -> click corresponding prefecture, all 47.
 - [ ] 1.4 Add reverse 5-choice drill: prefecture -> prefectural capital.
 - [ ] 1.5 Add validation that every prefecture/capital pair appears exactly once and no duplicate mapping exists.
 
