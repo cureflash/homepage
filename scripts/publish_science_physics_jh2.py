@@ -35,8 +35,9 @@ def build_batch(repo_root):
     pending = []
 
     for topic_key, topic in JH2_PHYSICS_FORMULA_TOPICS.items():
+        seeds = topic.get("seeds", JH2_PHYSICS_SEEDS)
         for mode_key, mode in topic["modes"].items():
-            for variant, seed in enumerate(JH2_PHYSICS_SEEDS, start=1):
+            for variant, seed in enumerate(seeds, start=1):
                 problems = generate_formula_drill(
                     topic["spec"], seed, JH2_PHYSICS_PROBLEM_COUNT, solve_for=mode["solve_for"]
                 )
@@ -91,7 +92,7 @@ def publish(repo_root):
     catalog_path, output_dir, catalog, pending, prospective_catalog = build_batch(root)
     if not pending:
         validate_catalog(catalog, root)
-        print("junior-high grade-2 physics Ohm-law worksheets already published")
+        print("junior-high grade-2 physics worksheets already published")
         return 0
 
     output_dir.mkdir(parents=True, exist_ok=True)
