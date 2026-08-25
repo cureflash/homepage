@@ -5,7 +5,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/grade1-variant-publish.yml'
+      - 'scripts/worksheet_factory.py'
       - 'tests/test_grade1_variant_publisher.py'
+      - 'tests/test_grade1_multi_page_renderer.py'
   workflow_dispatch:
 
 permissions:
@@ -24,7 +26,7 @@ jobs:
           python-version: '3.12'
       - name: Install PDF dependency
         run: python -m pip install --disable-pip-version-check reportlab
-      - name: Reconcile latest main and publish validated variants
+      - name: Reconcile latest main and validate grade 1 factory
         shell: bash
         run: |
           set -euo pipefail
@@ -34,6 +36,8 @@ jobs:
             python scripts/publish_grade1_variants.py . --seeds 202 303
             python tests/test_grade1_variant_publisher.py
             python tests/test_grade1_remaining_skills.py
+            python tests/test_grade1_multi_page_renderer.py
+            python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main)
             git fetch origin main
             after=$(git rev-parse origin/main)
@@ -41,7 +45,7 @@ jobs:
               break
             fi
             if [ "$attempt" = 3 ]; then
-              echo 'main kept moving; aborting rather than publishing stale catalog' >&2
+              echo 'main kept moving; aborting rather than validating stale state' >&2
               exit 1
             fi
           done
