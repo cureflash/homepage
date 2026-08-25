@@ -2,14 +2,14 @@
   "status": "in_progress",
   "school_stage": "junior-high",
   "field": "history",
-  "active_unit": "kamakura-period",
+  "active_unit": "muromachi-period",
   "active_units": [
-    "kamakura-period"
+    "muromachi-period"
   ],
-  "next_role": "factcheck",
-  "last_completed_role": "generate",
-  "verified_through": "heian-period",
+  "next_role": "generate",
+  "last_completed_role": "factcheck",
+  "verified_through": "kamakura-period",
   "prototype_status": "verified",
   "batch_size": 1,
-  "updated_at": "2026-08-25T22:42:00+09:00"
+  "updated_at": "2026-08-25T22:49:00+09:00"
 }
