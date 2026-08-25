@@ -1,8 +1,15 @@
 {
-  "status": "not_started",
-  "phase": 0,
-  "collection": "東海道",
-  "next_verse": 1,
+  "status": "in_progress",
+  "phase": 1,
+  "stage": "source_verification",
+  "corpus_scope": [
+    "大和田建樹『地理教育鉄道唱歌』第1-5集",
+    "鉄道省編『新鉄道唱歌』第1-10輯"
+  ],
+  "prefecture_allocation": "initialized",
+  "owada_1900_allocation": "334_verses_draft_complete",
+  "new_1929_allocation": "10_volumes_route_scope_complete_verse_boundaries_pending",
+  "next_task": "Verify 1900 verse/place assignments and locate inspectable 1929 primary text for exact verse-level allocation; do not guess unavailable verse boundaries.",
   "active_prefecture": null,
   "last_completed_prefecture": null,
   "last_updated": "2026-08-25"
