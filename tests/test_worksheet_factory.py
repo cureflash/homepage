@@ -34,6 +34,16 @@ for skill in wf.SKILLS:
             assert all(p['b'] > p['a'] % 10 for p in a)
             assert all(0 <= p['answer'] <= 9 for p in a)
 
+assert wf.problem_number_label(1) == '1'
+assert wf.problem_number_label(9) == '9'
+assert wf.problem_number_label(10) == '10'
+assert not wf.problem_number_label(1).startswith('0')
+assert '.' not in wf.problem_number_label(1)
+renderer_source = MODULE.read_text(encoding='utf-8')
+assert 'colors.red' in renderer_source
+assert 'draw_numbered_problem(c, x, y, i+1, p, compute_answer(p))' in renderer_source
+assert '{i+1:02d}.' not in renderer_source
+
 catalog = json.loads((ROOT / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
 wf.validate_catalog(catalog, ROOT)
 
