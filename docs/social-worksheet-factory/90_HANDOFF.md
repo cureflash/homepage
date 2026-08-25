@@ -88,16 +88,16 @@ File: `subjects/social/worksheets/data/heian-period.js`
 
 No AI-generated historical images were added in this batch.
 
-## Tool integration
+## Tool integration and publication state
 
-`subjects/social/worksheets/index.html` now loads the six current datasets in order:
+The four pending unit files are complete structured inputs for the existing generator, but they are intentionally not loaded by the public `subjects/social/worksheets/index.html` yet. The published selector currently loads only the two verified datasets:
 
 1. Jomon / Yayoi overview — verified
 2. Yayoi society / Yamatai / Himiko — verified
-3. Kofun / Yamato — pending
-4. Asuka / ritsuryo — pending
-5. Nara — pending
-6. Heian — pending
+
+After the next independent fact-check approves a new unit, add its dataset script to `subjects/social/worksheets/index.html`. This preserves the factory rule that unverified study sheets are not published as learner-facing material.
+
+A concurrent site-maintenance change added the page description and Cloudflare Web Analytics to `index.html`; those unrelated changes were preserved while reconciling latest `main`.
 
 The shared generator behavior was not broadened. `app.js` still blanks only terms explicitly listed in each sentence's `terms` array, so arbitrary nouns cannot become blanks. Existing seed/rate behavior is unchanged.
 
@@ -114,4 +114,4 @@ Treat all 23 new study sentences and all 8 image records as untrusted. Reopen ME
 
 For every sentence, verify dates, names, institutional terminology, causal wording, and current junior-high curriculum placement. For every image, independently verify exact file identity, whether it depicts what the label says, author/creator, source, license, and any attribution/share-alike requirement. Correct or reject unsupported wording or image use.
 
-Only after all four units pass should their sentence/image/unit statuses become `verified`. Then set `next_role` to `generate`, clear the active fact-check batch, and advance the queue to `Kamakura period`.
+Only after all four units pass should their sentence/image/unit statuses become `verified`. Then register the verified datasets in `subjects/social/worksheets/index.html`, set `next_role` to `generate`, clear the active fact-check batch, and advance the queue to `Kamakura period`.
