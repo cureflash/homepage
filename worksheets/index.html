@@ -3,19 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>算数・数学 反復プリント｜ひかり教材室</title>
+<title>反復プリント｜ひかり教材室</title>
 <style>
-body{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;max-width:1100px;margin:0 auto;padding:24px;color:#222}h1{font-size:1.8rem}.note{color:#555}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{border:1px solid #ddd;border-radius:12px;padding:16px}.meta{font-size:.85rem;color:#666}.card a{display:inline-block;margin-top:8px;padding:9px 13px;border-radius:8px;background:#222;color:#fff;text-decoration:none}select{padding:8px;margin:0 8px 20px 0}
+body{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;max-width:1100px;margin:0 auto;padding:24px;color:#222}h1{font-size:1.8rem}.note{color:#555}.filters{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:20px}.filters label{display:flex;align-items:center;gap:6px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{border:1px solid #ddd;border-radius:12px;padding:16px}.meta{font-size:.85rem;color:#666}.card a{display:inline-block;margin-top:8px;padding:9px 13px;border-radius:8px;background:#222;color:#fff;text-decoration:none}select{padding:8px}.empty{color:#666;padding:20px 0}
 </style>
 </head>
 <body>
-<h1>算数・数学 反復プリント</h1>
+<h1>反復プリント</h1>
 <p class="note">問題と解答を自動検証した反復練習用プリントです。</p>
-<label>学年 <select id="grade"><option value="1">小学1年</option></select></label>
+<div class="filters">
+<label>教科 <select id="subject"><option value="">すべて</option></select></label>
+<label>学校段階 <select id="level"><option value="">すべて</option></select></label>
+<label>学年・科目 <select id="course"><option value="">すべて</option></select></label>
+<label id="field-label">理科分野 <select id="field"><option value="">すべて</option></select></label>
 <label>単元 <select id="unit"><option value="">すべて</option></select></label>
+<label>系列 <select id="series"><option value="">すべて</option></select></label>
+</div>
 <div id="grid" class="grid"></div>
 <script>
-(async()=>{const data=await fetch('catalog.json').then(r=>r.json());const grid=document.querySelector('#grid'),unit=document.querySelector('#unit');[...new Set(data.map(x=>x.unit))].forEach(v=>{const o=document.createElement('option');o.value=o.textContent=v;unit.append(o)});function render(){grid.replaceChildren();data.filter(x=>!unit.value||x.unit===unit.value).forEach(x=>{const a=document.createElement('article');a.className='card';a.innerHTML=`<div class="meta">小学${x.grade}年 / ${x.subject} / ${x.problem_count}問</div><h2>${x.title}</h2><p>${x.description}</p><a href="../${x.url}" download>PDFをダウンロード</a>`;grid.append(a)})}unit.addEventListener('change',render);render()})()
+(async()=>{
+const data=await fetch('catalog.json').then(r=>r.json());
+const $=s=>document.querySelector(s);
+const subject=$('#subject'),level=$('#level'),course=$('#course'),field=$('#field'),unit=$('#unit'),series=$('#series'),grid=$('#grid'),fieldLabel=$('#field-label');
+const params=new URLSearchParams(location.search);
+const levelNames={'elementary':'小学校','junior-high':'中学校','high-school':'高校'};
+const fieldNames={'physics':'物理','chemistry':'化学','biology':'生物','earth-science':'地学'};
+const seriesNames={'focused':'単元別','mixed':'混合','review':'総復習'};
+function option(select,value,label){const o=document.createElement('option');o.value=value;o.textContent=label;select.append(o)}
+function unique(values){return [...new Set(values.filter(v=>v!==undefined&&v!==null&&v!==''))]}
+unique(data.map(x=>x.subject)).sort().forEach(v=>option(subject,v,v));
+unique(data.map(x=>x.school_level)).forEach(v=>option(level,v,levelNames[v]||v));
+unique(data.map(x=>x.science_field)).forEach(v=>option(field,v,fieldNames[v]||v));
+unique(data.map(x=>x.worksheet_series)).forEach(v=>option(series,v,seriesNames[v]||v));
+function courseKey(x){if(x.school_level==='high-school')return x.formal_course||'高校';if(x.school_level==='junior-high')return `中${x.grade}`;if(x.school_level==='elementary')return `小${x.grade}`;return String(x.grade??'')}
+function refill(select,values,current){select.replaceChildren();option(select,'','すべて');values.forEach(v=>option(select,v,v));if(values.includes(current))select.value=current}
+function filteredBase(){return data.filter(x=>(!subject.value||x.subject===subject.value)&&(!level.value||x.school_level===level.value)&&(!field.value||x.science_field===field.value))}
+function refreshDependent(){const base=filteredBase();refill(course,unique(base.map(courseKey)),course.value);refill(unit,unique(base.map(x=>x.unit)),unit.value);fieldLabel.hidden=subject.value!==''&&subject.value!=='理科'}
+function render(){refreshDependent();const rows=data.filter(x=>(!subject.value||x.subject===subject.value)&&(!level.value||x.school_level===level.value)&&(!course.value||courseKey(x)===course.value)&&(!field.value||x.science_field===field.value)&&(!unit.value||x.unit===unit.value)&&(!series.value||x.worksheet_series===series.value));grid.replaceChildren();if(!rows.length){const p=document.createElement('p');p.className='empty';p.textContent='該当するプリントはありません。';grid.append(p);return}rows.forEach(x=>{const a=document.createElement('article');a.className='card';const meta=[courseKey(x),x.subject,x.science_field?fieldNames[x.science_field]:null,x.formal_course||null,x.problem_count+'問'].filter(Boolean);a.innerHTML=`<div class="meta">${meta.join(' / ')}</div><h2>${x.title}</h2><p>${x.description}</p><a href="../${x.url}" download>PDFをダウンロード</a>`;grid.append(a)})}
+const requestedSubject=params.get('subject');if(requestedSubject&&[...subject.options].some(o=>o.value===requestedSubject))subject.value=requestedSubject;
+const requestedLevel=params.get('school_level');if(requestedLevel&&[...level.options].some(o=>o.value===requestedLevel))level.value=requestedLevel;
+const requestedField=params.get('science_field');if(requestedField&&[...field.options].some(o=>o.value===requestedField))field.value=requestedField;
+[subject,level,course,field,unit,series].forEach(el=>el.addEventListener('change',render));
+render();
+})()
 </script>
 </body>
 </html>
