@@ -1,5 +1,10 @@
 import copy
+from pathlib import Path
+import sys
 import unittest
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
 from scripts.science_physics_basic_motion import (
     PHYSICS_BASIC_MOTION_PROBLEM_COUNT,
@@ -55,8 +60,9 @@ class PhysicsBasicMotionTests(unittest.TestCase):
                 if unit:
                     seen_units.add(unit)
         self.assertTrue(expected_units.issubset(seen_units))
-        self.assertIn("product", {topic["spec"]["relation"] for topic in PHYSICS_BASIC_MOTION_TOPICS.values()})
-        self.assertIn("sum", {topic["spec"]["relation"] for topic in PHYSICS_BASIC_MOTION_TOPICS.values()})
+        relations = {topic["spec"]["relation"] for topic in PHYSICS_BASIC_MOTION_TOPICS.values()}
+        self.assertIn("product", relations)
+        self.assertIn("sum", relations)
 
     def test_corrupted_numeric_answer_is_rejected(self):
         _, _, _, _, problems = self.generated_batches()[0]
@@ -66,8 +72,6 @@ class PhysicsBasicMotionTests(unittest.TestCase):
             validate_science_problem(bad)
 
     def test_topic_scope_has_no_fixed_high_school_grade_metadata(self):
-        # Grade/course metadata is assigned by the publisher. Topic definitions must
-        # remain course-oriented and must not smuggle in a fabricated school year.
         for topic in PHYSICS_BASIC_MOTION_TOPICS.values():
             self.assertNotIn("grade", topic)
             self.assertNotIn("school_year", topic)
