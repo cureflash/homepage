@@ -7,7 +7,7 @@
     field: "history",
     unit: "古代までの日本",
     practicalGradeGroup: "中学・歴史導入",
-    factcheckStatus: "pending_factcheck",
+    factcheckStatus: "verified",
     keyPoint: "弥生時代には各地に小国が生まれ、中国の史書から奴国や邪馬台国と中国との交流を知ることができる。",
     timeline: [
       { label: "57年", note: "奴国の使いが後漢へ" },
@@ -26,7 +26,7 @@
             terms: ["小国"],
             importance: "A",
             sources: ["fukuoka-excavation-history", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "yayoi-states-02",
@@ -34,7 +34,7 @@
             terms: ["奴国", "後漢"],
             importance: "A",
             sources: ["fukuoka-gold-seal", "fukuoka-excavation-history"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "yayoi-states-03",
@@ -42,7 +42,7 @@
             terms: ["漢委奴国王"],
             importance: "A",
             sources: ["fukuoka-gold-seal"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       },
@@ -57,23 +57,23 @@
             terms: ["魏志倭人伝", "邪馬台国", "卑弥呼"],
             importance: "A",
             sources: ["ndl-yamatai-exhibition", "kunaicho-kosho-2025"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "yamatai-02",
-            template: "239年、卑弥呼は中国の{{魏}}に使いを送り、皇帝から{{親魏倭王}}の称号と印綬などを授けられた。",
+            template: "239年、卑弥呼は中国の{{魏}}に使いを送り、{{親魏倭王}}の称号を受け、金印や銅鏡などを与えられた。",
             terms: ["魏", "親魏倭王"],
             importance: "A",
-            sources: ["waseda-history-table", "kyohaku-mirror"],
-            factcheckStatus: "pending_factcheck"
+            sources: ["fukuoka-excavation-history", "kunaicho-kosho-2025", "kyohaku-mirror"],
+            factcheckStatus: "verified"
           },
           {
             id: "yamatai-03",
-            template: "{{邪馬台国}}がどこにあったかは現在も確定しておらず、代表的な説として九州説と畿内説がある。",
+            template: "{{邪馬台国}}の所在地は現在も確定しておらず、九州説や畿内説などをめぐって議論が続いている。",
             terms: ["邪馬台国"],
             importance: "B",
             sources: ["rekihaku-yamatai-faq", "ndl-yamatai-exhibition"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       }
@@ -88,7 +88,7 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:King_of_Na_gold_seal_faces.jpg",
         credit: "PHGCOM / Wikimedia Commons（Toi Museum replica）",
         license: "CC BY-SA 3.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "gishi-wajinden",
@@ -97,9 +97,9 @@
         note: "『三国志』魏書東夷伝倭人条の本文資料",
         src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gishiwajinden.jpg",
         sourcePage: "https://commons.wikimedia.org/wiki/File:Gishiwajinden.jpg",
-        credit: "Wikimedia Commons",
+        credit: "Wikimedia Commons（file page provenance recorded）",
         license: "CC0 1.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       }
     ],
     sources: [
@@ -127,11 +127,6 @@
         id: "kunaicho-kosho-2025",
         label: "宮内庁『講書始におけるご進講の内容（令和7年）』",
         url: "https://www.kunaicho.go.jp/learn/culture/kosyo/kosho-r07.html"
-      },
-      {
-        id: "waseda-history-table",
-        label: "早稲田大学図書館 古典籍総合データベース『日本史年表』",
-        url: "https://www.wul.waseda.ac.jp/kotenseki/ga_jhistory/history_table.html"
       },
       {
         id: "kyohaku-mirror",
