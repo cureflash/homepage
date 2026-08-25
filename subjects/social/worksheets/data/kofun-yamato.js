@@ -7,7 +7,7 @@
     field: "history",
     unit: "古代までの日本",
     practicalGradeGroup: "中学・歴史導入",
-    factcheckStatus: "pending_factcheck",
+    factcheckStatus: "verified",
     keyPoint: "大きな古墳とその分布は、有力者の存在や大和政権の勢力の広がりを考える手がかりになる。",
     timeline: [
       { label: "3世紀後半ごろ", note: "大規模な古墳が築かれ始める" },
@@ -26,7 +26,7 @@
             terms: ["古墳"],
             importance: "A",
             sources: ["mext-social-commentary", "bunka-kofun"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "kofun-02",
@@ -34,7 +34,7 @@
             terms: ["前方後円墳"],
             importance: "A",
             sources: ["mext-social-commentary", "bunka-kofun"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "kofun-03",
@@ -42,7 +42,7 @@
             terms: ["埴輪"],
             importance: "A",
             sources: ["bunka-haniwa"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       },
@@ -57,7 +57,7 @@
             terms: ["大和政権"],
             importance: "A",
             sources: ["mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "yamato-02",
@@ -65,7 +65,7 @@
             terms: ["前方後円墳"],
             importance: "A",
             sources: ["mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "yamato-03",
@@ -73,7 +73,7 @@
             terms: ["渡来人"],
             importance: "B",
             sources: ["mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       }
@@ -88,7 +88,7 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:Daisenryo_Kofun_zenkei.JPG",
         credit: "Saigen Jiro / Wikimedia Commons",
         license: "CC0 1.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "warrior-haniwa",
@@ -99,7 +99,7 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:Warrior_in_Keiko_Armor,_haniwa_(terracotta_tomb_figurine)_from_Niwatorizuka_Tumulus,_Mooka-shi,_Tochigi,_Kofun_period,_6th_century_-_Tokyo_National_Museum_-_DSC05626.JPG",
         credit: "Daderot / Wikimedia Commons",
         license: "CC0 1.0",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       }
     ],
     sources: [
