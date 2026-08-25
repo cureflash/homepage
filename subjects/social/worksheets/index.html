@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>中学社会プリント — 縄文・弥生</title>
+  <title>中学社会プリント</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="toolbar" aria-label="プリント操作">
     <div class="toolbar__group">
+      <label>単元
+        <select id="unit"></select>
+      </label>
       <label>表示
         <select id="mode">
           <option value="study">解説プリント</option>
@@ -35,6 +38,7 @@
   <main id="sheet" class="sheet" aria-live="polite"></main>
 
   <script src="data/jomon-yayoi.js"></script>
+  <script src="data/yayoi-states-yamatai-himiko.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
