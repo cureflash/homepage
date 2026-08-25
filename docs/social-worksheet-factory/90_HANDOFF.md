@@ -6,7 +6,7 @@
 - Active field: history
 - Active unit: Jomon / Yayoi overview
 - Next role: FACTCHECK
-- Prototype worksheet/generator has been created under `social-worksheets/`.
+- Prototype worksheet/generator has been created under `subjects/social/worksheets/`.
 
 ## Prototype intent
 
@@ -28,7 +28,7 @@ Core terms render red in study mode. The same explicit terms become eligible bla
 
 1. Do not trust the wording above as proof.
 2. Independently reopen MEXT and authoritative museum/archaeological sources.
-3. Verify every sentence in `social-worksheets/data/jomon-yayoi.js`.
+3. Verify every sentence in `subjects/social/worksheets/data/jomon-yayoi.js`.
 4. Verify each image file's actual reuse license and attribution requirement.
 5. Correct or reject anything unsupported.
 6. If all claims and image metadata pass, change each item to `verified`, update `STATUS.json.next_role` to `generate`, and mark the first independent fact-check checkbox in `20_EXECUTION_PLAN.md` complete.
