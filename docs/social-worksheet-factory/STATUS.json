@@ -6,10 +6,10 @@
   "active_units": [
     "meiji-state-industrialization"
   ],
-  "next_role": "generate",
-  "last_completed_role": "factcheck",
+  "next_role": "factcheck",
+  "last_completed_role": "generate",
   "verified_through": "bakumatsu-meiji-restoration",
   "prototype_status": "verified",
   "batch_size": 1,
-  "updated_at": "2026-08-26T07:42:00+09:00"
+  "updated_at": "2026-08-26T08:39:00+09:00"
 }
