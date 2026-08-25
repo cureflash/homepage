@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #1f2937;
+  background: #f5f7fb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+.memory-page {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.memory-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.memory-header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 2.15rem);
+}
+
+.back-link {
+  color: #315fa8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.game-panel {
+  padding: 20px;
+  border: 1px solid #d9dee8;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.game-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.status-numbers {
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  font-weight: 700;
+}
+
+#game-message {
+  margin: 0 0 16px;
+  min-height: 1.6em;
+}
+
+#restart-button {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #315fa8;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#restart-button:focus-visible,
+.memory-card:focus-visible,
+.back-link:focus-visible {
+  outline: 3px solid #f0a500;
+  outline-offset: 3px;
+}
+
+.memory-board {
+  --memory-columns: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--memory-columns), minmax(0, 1fr));
+  gap: 12px;
+}
+
+.memory-card {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 5 / 7;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  perspective: 700px;
+}
+
+.memory-card:disabled {
+  cursor: default;
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  transition: transform 0.22s ease;
+}
+
+.card-back {
+  border: 4px solid #ffffff;
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.13) 25%, transparent 25%) 0 0 / 16px 16px,
+    linear-gradient(315deg, rgba(255,255,255,.13) 25%, transparent 25%) 0 0 / 16px 16px,
+    #315fa8;
+  box-shadow: 0 2px 7px rgba(31, 41, 55, 0.18);
+  font-size: clamp(1.2rem, 5vw, 2rem);
+}
+
+.card-front {
+  flex-direction: column;
+  border: 1px solid #cfd5df;
+  background: #ffffff;
+  box-shadow: 0 2px 7px rgba(31, 41, 55, 0.14);
+  transform: rotateY(180deg);
+}
+
+.card-rank {
+  font-size: clamp(1.5rem, 7vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.card-suit {
+  margin-top: 6px;
+  font-size: clamp(1.4rem, 6vw, 2.4rem);
+  line-height: 1;
+}
+
+.card-red {
+  color: #c52f37;
+}
+
+.card-black {
+  color: #111827;
+}
+
+.memory-card.is-open .card-back,
+.memory-card.is-matched .card-back {
+  transform: rotateY(180deg);
+}
+
+.memory-card.is-open .card-front,
+.memory-card.is-matched .card-front {
+  transform: rotateY(0deg);
+}
+
+.memory-card.is-matched .card-front {
+  border-color: #77a66a;
+  box-shadow: 0 0 0 3px rgba(119, 166, 106, 0.2);
+}
+
+@media (max-width: 520px) {
+  .memory-page {
+    width: min(100% - 20px, 760px);
+    padding-top: 18px;
+  }
+
+  .memory-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .game-panel {
+    padding: 14px;
+  }
+
+  .memory-board {
+    gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-face {
+    transition: none;
+  }
+}
