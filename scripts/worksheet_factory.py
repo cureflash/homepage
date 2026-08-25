@@ -17,6 +17,9 @@ SKILLS = {
     'sub-20-no-borrow': {'title':'20までの繰り下がりなしのひき算', 'kind':'sub-20-no-borrow'},
     'add-20-carry': {'title':'20までの繰り上がりありのたし算', 'kind':'add-20-carry'},
     'sub-20-borrow': {'title':'20までの繰り下がりありのひき算', 'kind':'sub-20-borrow'},
+    'add-1digit-random': {'title':'1桁 + 1桁 ランダム反復', 'kind':'add-1digit-random'},
+    'mixed-add-sub-20': {'title':'20までのたし算・ひき算混合', 'kind':'mixed-add-sub-20'},
+    'missing-number-add-sub': {'title':'□に入る数（加減の簡単な逆算）', 'kind':'missing-number-add-sub'},
 }
 
 CATALOG_REQUIRED_FIELDS = {
@@ -82,6 +85,9 @@ def compute_answer(p):
     if t=='compose': return p['total']-p['known']
     if t=='add': return p['a']+p['b']
     if t=='sub': return p['a']-p['b']
+    if t=='missing-add-left': return p['total']-p['known']
+    if t=='missing-add-right': return p['total']-p['known']
+    if t=='missing-sub-subtrahend': return p['minuend']-p['result']
     raise ValueError(t)
 
 
@@ -113,6 +119,25 @@ def make_problem(rng, spec):
         ones=a%10
         b=rng.randint(ones+1,9)
         return {'type':'sub','a':a,'b':b,'answer':a-b}
+    if k=='add-1digit-random':
+        a=rng.randint(0,9); b=rng.randint(0,9)
+        return {'type':'add','a':a,'b':b,'answer':a+b}
+    if k=='mixed-add-sub-20':
+        if rng.choice((True,False)):
+            a=rng.randint(0,20); b=rng.randint(0,20-a)
+            return {'type':'add','a':a,'b':b,'answer':a+b}
+        a=rng.randint(0,20); b=rng.randint(0,a)
+        return {'type':'sub','a':a,'b':b,'answer':a-b}
+    if k=='missing-number-add-sub':
+        form=rng.choice(('add-left','add-right','sub-subtrahend'))
+        if form=='add-left':
+            answer=rng.randint(0,9); known=rng.randint(0,9); total=answer+known
+            return {'type':'missing-add-left','known':known,'total':total,'answer':answer}
+        if form=='add-right':
+            known=rng.randint(0,9); answer=rng.randint(0,9); total=known+answer
+            return {'type':'missing-add-right','known':known,'total':total,'answer':answer}
+        minuend=rng.randint(0,20); answer=rng.randint(0,min(9,minuend)); result=minuend-answer
+        return {'type':'missing-sub-subtrahend','minuend':minuend,'result':result,'answer':answer}
     raise ValueError(k)
 
 
@@ -164,7 +189,11 @@ def normalized_hash(problems):
 def text_problem(p):
     if p['type']=='compose': return f"{p['total']} = {p['known']} + □"
     if p['type']=='add': return f"{p['a']} + {p['b']} = □"
-    return f"{p['a']} - {p['b']} = □"
+    if p['type']=='sub': return f"{p['a']} - {p['b']} = □"
+    if p['type']=='missing-add-left': return f"□ + {p['known']} = {p['total']}"
+    if p['type']=='missing-add-right': return f"{p['known']} + □ = {p['total']}"
+    if p['type']=='missing-sub-subtrahend': return f"{p['minuend']} - □ = {p['result']}"
+    raise ValueError(p['type'])
 
 
 def render_pdf(path, title, problems):
