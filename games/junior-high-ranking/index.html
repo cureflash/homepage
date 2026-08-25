@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="中学1年で習うbe動詞をABCの3択で答える格付けゲームです。">
+  <title>中学生格付けチェック｜ひかり教材室</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <main class="page">
+    <div class="topbar">
+      <a class="back-link" href="../../">← ひかり教材室</a>
+      <div class="current-rank" aria-live="polite">
+        <span>現在のランク</span>
+        <strong id="rank-label">一流中学生</strong>
+      </div>
+    </div>
+
+    <header class="hero">
+      <p class="eyebrow">JUNIOR HIGH SCHOOL RANKING CHECK</p>
+      <h1>中学生格付けチェック</h1>
+      <p class="subtitle">中1英語・be動詞編　全7問</p>
+    </header>
+
+    <section id="game-panel" class="panel" aria-live="polite">
+      <p id="question-number" class="question-number">第1問 / 7</p>
+      <h2 id="question-prompt" class="question-prompt">問題を読み込み中…</h2>
+      <div id="choices" class="choices" aria-label="選択肢"></div>
+      <p id="feedback" class="feedback"></p>
+      <div class="actions">
+        <button id="next-button" class="primary-button" type="button" hidden>次の問題</button>
+      </div>
+    </section>
+
+    <section id="result-panel" class="panel result-panel" hidden>
+      <p class="result-label">最終結果</p>
+      <h2 id="result-rank">一流中学生</h2>
+      <p class="result-copy">7問の格付けチェックが終了しました。</p>
+      <button id="restart-button" class="primary-button" type="button">もう一度挑戦</button>
+    </section>
+  </main>
+
+  <script src="questions.js?v=1"></script>
+  <script src="app.js?v=1"></script>
+</body>
+</html>
