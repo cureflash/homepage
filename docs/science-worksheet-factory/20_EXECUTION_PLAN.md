@@ -22,11 +22,11 @@ Acceptance: science worksheets can be registered and listed without hand-written
 
 ## Phase 2 — shared science generation foundation
 
-- [ ] Implement reusable numerical formula-drill helpers.
-- [ ] Implement reusable retrieval-drill helpers: forward/reverse, matching, classification, true/false, fill, ordering.
-- [ ] Add independent answer validation for each supported problem family.
-- [ ] Add duplicate detection based on normalized problem content.
-- [ ] Add deterministic seed tests and printable-output tests.
+- [x] Implement reusable numerical formula-drill helpers.
+- [x] Implement reusable retrieval-drill helpers: forward/reverse, matching, classification, true/false, fill, ordering.
+- [x] Add independent answer validation for each supported problem family.
+- [x] Add duplicate detection based on normalized problem content.
+- [x] Add deterministic seed tests and printable-output tests.
 
 Acceptance: new science topics can be defined mostly as structured content/rules rather than one-off page scripts.
 
@@ -113,3 +113,4 @@ Acceptance: basic earth-science facts and suitable calculations have broad repet
 - 2026-08-25: science factory instruction set initialized; implementation not yet started.
 - 2026-08-25: Phase 0 completed. Inspected the live math generator/catalog/site/test implementation, documented the shared integration boundary and stable public worksheet URLs in `40_SHARED_INTEGRATION.md`, and extended the shared generator with catalog/link/science-metadata validation plus tests.
 - 2026-08-25: Phase 1 completed. Generalized the shared catalog with difficulty/series/answer-type metadata, added numerical and finite accepted-answer-set representations, validated junior-high science grades and formal high-school course names, generalized the shared worksheet listing to filter by subject/school/course/science field/unit/series, and linked the science landing page to the shared catalog.
+- 2026-08-25: Phase 2 completed. Added reusable structured formula drills and retrieval families (forward/reverse, matching, classification, true/false, fill, ordering), integrated them into the shared validator/text/PDF renderer, added independent recomputation, normalized duplicate hashing, deterministic-seed tests, corruption-detection tests, and PDF-render tests. No science content was published in this phase.
