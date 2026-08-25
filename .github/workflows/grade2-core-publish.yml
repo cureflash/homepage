@@ -11,6 +11,7 @@ on:
       - 'scripts/publish_grade2_times_tables_missing.py'
       - 'scripts/publish_grade2_simple_two_digit_times.py'
       - 'scripts/publish_grade2_mixed_operations.py'
+      - 'scripts/publish_grade2_place_value.py'
       - 'tests/test_grade2_core_publisher.py'
       - 'tests/test_grade2_columnar_publisher.py'
       - 'tests/test_grade2_times_tables_publisher.py'
@@ -18,6 +19,7 @@ on:
       - 'tests/test_grade2_times_tables_missing_publisher.py'
       - 'tests/test_grade2_simple_two_digit_times_publisher.py'
       - 'tests/test_grade2_mixed_operations_publisher.py'
+      - 'tests/test_grade2_place_value_publisher.py'
       - '.github/workflows/grade2-core-publish.yml'
   workflow_dispatch:
 
@@ -51,6 +53,7 @@ jobs:
             python scripts/publish_grade2_times_tables_missing.py .
             python scripts/publish_grade2_simple_two_digit_times.py .
             python scripts/publish_grade2_mixed_operations.py .
+            python scripts/publish_grade2_place_value.py .
             python tests/test_grade2_core_publisher.py
             python tests/test_grade2_columnar_publisher.py
             python tests/test_grade2_times_tables_publisher.py
@@ -58,6 +61,7 @@ jobs:
             python tests/test_grade2_times_tables_missing_publisher.py
             python tests/test_grade2_simple_two_digit_times_publisher.py
             python tests/test_grade2_mixed_operations_publisher.py
+            python tests/test_grade2_place_value_publisher.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main)
             git fetch origin main
