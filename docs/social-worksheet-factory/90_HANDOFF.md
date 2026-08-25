@@ -6,109 +6,130 @@
 - Active field: history
 - Verified through: Edo political system and society
 - Active unit: Edo economy / culture / foreign relations
-- Next role: GENERATE
+- Next role: FACTCHECK
 - Batch size: 1 unit
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed FACTCHECK — Edo political system and society
+## Completed GENERATE — Edo economy / culture / foreign relations
 
-Independently reopened authoritative sources and treated all seven study sentences and both image records as untrusted before approval.
+Created:
 
-### Curriculum placement
+`subjects/social/worksheets/data/edo-economy-culture-foreign-relations.js`
 
-MEXT current junior-high Social Studies commentary places this material under `近世の日本` → `江戸幕府の成立と対外関係`. It explicitly requires learners to understand `江戸幕府の成立と大名統制`, `身分制と農村の様子`, and the establishment of `幕府と藩による支配`.
+The unit is intentionally low-density and is not registered in the public selector. The unit, all structured fact records, all eight learner sentences, and both image records remain `pending_factcheck`.
 
-The detailed commentary further states that:
+### Curriculum basis used only for generation
 
-- the bakufu controlled daimyo while making daimyo responsible for government within their territories;
-- people fulfilled roles within their respective statuses;
-- the majority of farmers used the village as their living base and helped one another in agricultural work;
-- rural communities supported the economies of the bakufu and domains.
+The current MEXT junior-high Social Studies commentary places this content in `近世の日本` and explicitly calls for:
 
-No fixed school year has been assigned.
+- understanding the development of industry and transport;
+- understanding that urban-centered chonin culture formed and that local life cultures also developed;
+- attention to han schools and terakoya as part of educational diffusion;
+- treatment of the bakufu's later-called `鎖国` policy without equating it with total isolation;
+- Nagasaki trade with the Netherlands and China;
+- exchange with Korea through Tsushima;
+- the role of Ryukyu in relations with China;
+- northern trade involving the Ainu in Ezo.
 
-### Factual checks and corrections
+MEXT also states that river/sea transport and roads may be used as examples of transport development, and that Osaka, Kyoto, and Edo are appropriate examples of urban settings in which economically stronger townspeople became cultural actors.
 
-All seven sentence records are now `verified`. Three wordings were tightened during independent review.
+### Structured facts and learner sentences
 
-1. `1615 武家諸法度`
-   - Generator wording treated it mainly as rules for daimyo.
-   - National Archives states that the 1615 Buke Shohatto was a fundamental law to be observed by the warrior houses and that it was promulgated to the assembled daimyo.
-   - Final learner wording: `1615年、幕府は武家全体が守る基本法として武家諸法度を諸大名に示した。`
+Eight structured fact records were added before sentence templates were written. The learner sheet has three sections and eight concise sentences.
 
-2. `1635 参勤交代`
-   - Removed the overly simple statement that daimyo merely alternated between Edo and their domains.
-   - NDL Search independently confirms a surviving Kanei Buke Shohatto copy dated 1635-06-21, and scholarly metadata identifies the Kanei law's provision regulating daimyo sankin as the institutionalization of sankin-kotai.
-   - Final learner wording: `1635年の武家諸法度では大名の江戸への参勤などが規定され、参勤交代が制度化された。`
+#### 1. Industry, transport, and cities
 
-3. `村請制`
-   - Tightened the sentence to match National Tax College's formulation that villages bore responsibility for paying `年貢と諸役`.
-   - Final learner wording: `江戸時代には、村が年貢と諸役を納める責任を負う村請制が用いられ、農村は幕府や藩の経済を支えた。`
+- `商業 / 海上交通 / 街道`: industry and transport development linked production and markets.
+- `大坂 / 蔵屋敷`: Osaka's storehouses handled domain rice and products and supported its development as a major commercial city.
 
-The remaining claims also passed independent review:
+Candidate authoritative sources used during generation:
 
-- Tokugawa Ieyasu was appointed Seii Taishogun in 1603 and opened the Edo bakufu; Edo-Tokyo Museum states this directly.
-- MEXT supports the formulation that the bakufu controlled daimyo while daimyo governed their own territories, producing bakufu-domain rule.
-- MEXT supports `武士・百姓・町人など` without reverting to a simplistic rigid `士農工商` hierarchy.
-- MEXT explicitly supports the village as the living base for the majority of farmers and mutual aid in farm work.
-- National Tax College independently confirms the mura-uke system and village-level responsibility for nengu and other dues.
+- MEXT current Social Studies commentary.
+- Osaka City page on kurayashiki remains.
+- Osaka City Library / Osaka City History Compilation material on early-modern Osaka.
 
-### Independent evidence retained in the unit
+The sentence deliberately avoids making `天下の台所` a cloze target because Osaka City Library's reference material notes that the exact slogan's historical usage is more complicated than a simple Edo-period label.
 
-- MEXT `中学校学習指導要領（平成29年告示）解説 社会編`, especially the detailed explanation of `江戸幕府の成立と対外関係`.
-- Edo-Tokyo Museum `徳川将軍家へようこそ` for 1603 Ieyasu / Edo bakufu.
-- National Archives of Japan `家康の内政・外交―武家諸法度` for the 1615 law and its character as a fundamental warrior law.
-- NDL Search `武家諸法度写` dated 1635-06-21 and related NDL material on sankin-kotai institutionalization.
-- National Tax College `年貢と諸役`, `見取場の年貢割付状`, and related tax-history material for mura-uke and village payment responsibility.
+#### 2. Chonin culture and education
 
-## Image verification
+- `町人 / 町人文化`: Osaka, Kyoto, and Edo as urban settings for culture supported by economically stronger townspeople.
+- `藩校 / 寺子屋`: educational diffusion and the widening social base of learning/culture.
 
-No AI-generated historical images are used.
+Candidate authoritative sources:
 
-### Tokugawa Ieyasu portrait
+- MEXT current Social Studies commentary.
+- Osaka Museum of History material on early-modern Osaka chonin culture.
 
-- Exact Commons file: `Tokugawa_Ieyasu2.JPG`.
-- File description identifies the subject as Tokugawa Ieyasu.
-- Date field: early Edo period.
-- Source field: Osaka Castle main tower.
-- Author: Kano Tan'yū / 狩野探幽 (1602–1674).
-- Commons licensing section states the copyright has expired under Japanese law and marks the work public domain / PD-Japan.
-- Final source note records `Public Domain (PD-Japan)`.
-- Record status: `verified`.
+No attempt was made to force a particular fixed school grade or to overload the sheet with a long list of Genroku/Kasei artists.
 
-### Sonobe-domain sankin-kotai procession
+#### 3. Foreign relations under bakufu control
 
-- Exact Commons file: `Sankiko01.jpg`.
-- Description: `園部藩参勤交代行列図（1）`.
-- File page states `南丹市文化博物館蔵`, `明治37年（1904年）制作`, and that it depicts a Sonobe-domain sankin-kotai procession around the Kaei era.
-- Commons licensing section marks the work public domain / PD-Japan.
-- Final source note records `Public Domain (PD-Japan)`.
-- Record status: `verified`.
+- `鎖国`: phrased as policies later called sakoku, while explicitly stating that overseas trade and exchange continued.
+- `長崎 / オランダ / 中国 / 出島`: trade continued at Nagasaki; the Dutch factory moved to Dejima in 1641.
+- `朝鮮 / 対馬藩 / 琉球 / 薩摩藩`: multiple diplomatic/exchange routes remained active.
+- `アイヌ / 松前藩`: northern trade relationships in Ezo.
+
+Candidate authoritative sources:
+
+- MEXT current Social Studies commentary.
+- National Museum of Japanese History, third gallery, which explicitly explains that early-modern Japan was not isolated and presents Nagasaki, Tsushima, Satsuma, and Matsumae as four international gateways.
+- Official Dejima history for the 1641 Dutch-factory move and continued Dutch trade.
+- Tsushima Museum material on Joseon missions and Tsushima's diplomatic role.
+- National Ainu Museum material on Ainu-Wajin trade and Matsumae control.
+
+## Historical-source images added as candidates
+
+No AI-generated historical images were used.
+
+### 1. Utagawa Hiroshige, `Tōkaidō gojūsan tsui, Kyō`
+
+- Exact file: `Tōkaidō gojūsan tsui, Kyō by Hiroshige.jpg`.
+- Commons identifies it as a woodblock print from the series `The 53 stations of the Tōkaidō in pairs`, published 1844–1847.
+- It depicts the Sanjo Ohashi area in Kyoto and is used as a concrete visual for road travel / urban culture near the end of the Edo period.
+- Source recorded by Commons: Museum of Fine Arts, Boston.
+- Artist: Utagawa Hiroshige (1797–1858).
+- Commons licensing identifies the work and faithful reproduction as public domain and carries Public Domain Mark 1.0 / PD-Art / PD-Japan information.
+- Current record status: `pending_factcheck`.
+
+### 2. `DejimaInNagasakiBay.jpg`
+
+- Commons caption: painting of Japanese and Dutch trade on Dejima in Nagasaki.
+- Date: between 1800 and 1825.
+- Scene includes Dutch ships and Chinese trading junks.
+- Collection/source: British Museum.
+- Artwork creator is not identified on the Commons record; the digital file history includes a photograph/upload by PHGCOM/World Imaging, so the learner credit deliberately says `作者不詳の絵画 / British Museum / Wikimedia Commons` rather than treating the digitizer as the historical artist.
+- Commons marks the underlying work public domain and applies Public Domain Mark 1.0.
+- Current record status: `pending_factcheck`.
 
 ## Publication / integration state
 
-`subjects/social/worksheets/data/edo-political-system-society.js` is fully `verified` and is now registered in `subjects/social/worksheets/index.html` after `sengoku-azuchi-momoyama.js`.
+The new dataset has NOT been added to `subjects/social/worksheets/index.html`. The public selector therefore remains limited to the ten independently verified units through `edo-political-system-society`.
 
-The public selector therefore contains ten verified junior-high history units through Edo political system and society.
+The shared worksheet engine was not changed. The new unit follows the existing `window.SOCIAL_WORKSHEET_UNITS.push(unit)` contract, and only explicit entries in each sentence's `terms` array are eligible for deterministic seeded blanks.
 
-The shared worksheet engine was not changed. Only explicit terms in each sentence's `terms` array can become blanks, and seeded blank selection remains deterministic. No unrelated educational page was modified.
-
-A runnable browser checkout was not available through the GitHub connector, so no local browser/runtime print test was executed in this run. The dataset follows the already-used unit object / `window.SOCIAL_WORKSHEET_UNITS.push(unit)` contract, and the public script ordering was checked directly in `index.html`.
+No unrelated educational page was modified.
 
 ## Exact next starting point
 
-Next role is GENERATE. Work only on:
+Next role is FACTCHECK. Work only on:
 
-`edo-economy-culture-foreign-relations`
+`subjects/social/worksheets/data/edo-economy-culture-foreign-relations.js`
 
-Create the low-density A4 explanation-sheet data first, keeping it separate from the already verified political/social framework unit.
+Treat all eight structured facts, all eight learner sentences, and both image records as untrusted. Reopen sources independently rather than accepting this generation summary.
 
-Likely core coverage should remain within the queue definition `Edo economy / culture / foreign relations` and current MEXT `近世の日本`, for example:
+At minimum verify:
 
-- agriculture, commerce, transport, and urban development;
-- Osaka / Edo and merchant activity where useful;
-- Genroku / Kasei-era representative culture only at a low enough density for the sheet;
-- foreign-relations framework including Nagasaki trade, Korea via Tsushima, Ryukyu, and Ainu northern trade, while avoiding the obsolete oversimplification that `鎖国 = 完全な国際的孤立`.
+1. whether the general industry/transport sentence accurately reflects MEXT and does not imply uniform development across all regions;
+2. whether the Osaka `蔵屋敷` sentence is supportable without relying on the historically problematic `天下の台所` slogan;
+3. the precise curriculum-supported scope of `町人文化`, including the choice to mention Osaka/Kyoto/Edo without forcing Genroku/Kasei labels;
+4. `藩校 / 寺子屋` wording and whether `教育への関心が高まる` is supported;
+5. the wording `後に鎖国と呼ばれた` and the explicit rejection of complete-isolation framing;
+6. 1641 Dejima chronology and the statement that Dutch and Chinese trade continued at Nagasaki;
+7. Tsushima/Korea and Satsuma/Ryukyu wording, including whether `外交関係` is the best concise term for the Ryukyu route;
+8. Ainu/Matsumae wording, avoiding wording that erases Ainu agency or oversimplifies unequal trade/control relations;
+9. exact identities, dates, institutions, and reuse status of both Commons image files.
 
-Use concise original sentences from authoritative facts, explicit core cloze terms only, and at least two useful non-AI historical-source images where reuse metadata can be documented. Leave every new sentence, image, and the unit itself `pending_factcheck`; do not register the new dataset in `index.html` until the following independent FACTCHECK run passes it. At the end, set `next_role` to `factcheck` and preserve the exact next batch in STATUS/HANDOFF.
+If all claims can be supported after correction as needed, mark the fact records, learner sentences, image records, and unit `verified`; then add only the verified dataset to `subjects/social/worksheets/index.html`.
+
+After successful publication, set `next_role` to `generate`, advance the active unit to `bakumatsu-meiji-restoration`, and record the exact next state here and in `STATUS.json`.
