@@ -1,12 +1,17 @@
 import importlib.util
 import json
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE = ROOT / 'scripts' / 'worksheet_factory.py'
+SCIENCE_MODULE = ROOT / 'scripts' / 'science_worksheet_helpers.py'
 spec = importlib.util.spec_from_file_location('wf', MODULE)
 wf = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(wf)
+science_spec = importlib.util.spec_from_file_location('science_helpers', SCIENCE_MODULE)
+science = importlib.util.module_from_spec(science_spec)
+science_spec.loader.exec_module(science)
 
 for skill in wf.SKILLS:
     for seed in (101, 202, 303):
@@ -41,7 +46,7 @@ assert not wf.problem_number_label(1).startswith('0')
 assert '.' not in wf.problem_number_label(1)
 renderer_source = MODULE.read_text(encoding='utf-8')
 assert 'colors.red' in renderer_source
-assert 'draw_numbered_problem(c, x, y, i+1, p, compute_answer(p))' in renderer_source
+assert 'draw_numbered_problem(c, x, y, i+1, p, answer_text(p))' in renderer_source
 assert '{i+1:02d}.' not in renderer_source
 
 catalog = json.loads((ROOT / 'worksheets' / 'catalog.json').read_text(encoding='utf-8'))
@@ -111,5 +116,109 @@ assert 'id="subject"' in listing
 assert 'id="field"' in listing
 assert 'formal_course' in listing
 assert "params.get('subject')" in listing
+
+# Shared numerical formula-drill foundation: product relation supports direct and reverse variables.
+pressure_spec = {
+    'id':'pressure-test',
+    'relation':'product',
+    'result':'force',
+    'inputs':['pressure','area'],
+    'variables':{
+        'force':{'label':'F','unit':'N'},
+        'pressure':{'label':'p','unit':'Pa','values':[2,3,4,5,6,8,10]},
+        'area':{'label':'A','unit':'m²','values':[1,2,3,4,5]},
+    },
+}
+formula_a = science.generate_formula_drill(pressure_spec, 4101, 20, solve_for='force')
+formula_b = science.generate_formula_drill(pressure_spec, 4101, 20, solve_for='force')
+formula_c = science.generate_formula_drill(pressure_spec, 4102, 20, solve_for='force')
+assert formula_a == formula_b
+assert wf.normalized_hash(formula_a) == wf.normalized_hash(formula_b)
+assert wf.normalized_hash(formula_a) != wf.normalized_hash(formula_c)
+wf.validate(formula_a)
+assert all(p['answer_spec']['type'] == 'numeric' for p in formula_a)
+assert all(wf.compute_answer(p) == p['answer'] for p in formula_a)
+assert all('求めなさい' in wf.text_problem(p) for p in formula_a)
+
+reverse_formula = science.generate_formula_drill(pressure_spec, 4201, 20, solve_for='pressure')
+wf.validate(reverse_formula)
+assert all(abs(p['answer'] - p['known']['force'] / p['known']['area']) < 1e-12 for p in reverse_formula)
+
+broken_formula = dict(formula_a[0])
+broken_formula['answer'] = broken_formula['answer'] + 1
+try:
+    science.validate_science_problem(broken_formula)
+    raise AssertionError('independent science numerical validation did not fail')
+except AssertionError:
+    pass
+
+pair_items = [
+    {'left':'酸素','right':['O2','O₂']},
+    {'left':'水素','right':['H2','H₂']},
+    {'left':'二酸化炭素','right':['CO2','CO₂']},
+    {'left':'アンモニア','right':['NH3','NH₃']},
+]
+pair_base = {'items':pair_items,'left_label':'物質名','right_label':'化学式'}
+for mode in ('forward','reverse','matching'):
+    retrieval = science.generate_retrieval_drill({**pair_base,'mode':mode}, 5100, 12)
+    assert retrieval == science.generate_retrieval_drill({**pair_base,'mode':mode}, 5100, 12)
+    wf.validate(retrieval)
+    assert all(p['answer_spec']['type'] == 'accepted-set' for p in retrieval)
+
+classification = science.generate_retrieval_drill({
+    'mode':'classify',
+    'items':[
+        {'item':'花こう岩','category':'火成岩'},
+        {'item':'砂岩','category':'堆積岩'},
+        {'item':'石灰岩','category':'堆積岩'},
+    ],
+}, 5201, 12)
+wf.validate(classification)
+
+tf = science.generate_retrieval_drill({
+    'mode':'tf',
+    'items':[
+        {'item':'酸素','property':'ものを燃えやすくする'},
+        {'item':'二酸化炭素','property':'石灰水を白くにごらせる'},
+        {'item':'水素','property':'燃えると水ができる'},
+    ],
+}, 5202, 12)
+wf.validate(tf)
+assert {p['answer'] for p in tf} <= {'○','×'}
+
+fill = science.generate_retrieval_drill({
+    'mode':'fill',
+    'items':[
+        {'template':'水は標準的な気圧のもとで{answer}℃で沸騰する。','answer':'100'},
+        {'template':'純粋な水は{answer}℃で凍る。','answer':'0'},
+    ],
+}, 5203, 12)
+wf.validate(fill)
+
+ordering = science.generate_retrieval_drill({
+    'mode':'order',
+    'items':[
+        {'steps':['受精','細胞分裂','胚の形成']},
+        {'steps':['刺激','感覚器官','中枢神経','運動器官']},
+    ],
+}, 5204, 12)
+wf.validate(ordering)
+
+broken_retrieval = dict(classification[0])
+broken_retrieval['answer_spec'] = {'type':'accepted-set','values':['誤答']}
+try:
+    science.validate_science_problem(broken_retrieval)
+    raise AssertionError('independent science retrieval validation did not fail')
+except AssertionError:
+    pass
+
+# Shared PDF renderer accepts both numerical and retrieval science problems and keeps two-page answer-overlay output.
+with tempfile.TemporaryDirectory() as tmp:
+    formula_pdf = Path(tmp) / 'formula.pdf'
+    retrieval_pdf = Path(tmp) / 'retrieval.pdf'
+    wf.render_pdf(formula_pdf, '理科 数式問題テスト', formula_a)
+    wf.render_pdf(retrieval_pdf, '理科 暗記問題テスト', classification + tf[:8])
+    assert formula_pdf.read_bytes().startswith(b'%PDF') and formula_pdf.stat().st_size > 1000
+    assert retrieval_pdf.read_bytes().startswith(b'%PDF') and retrieval_pdf.stat().st_size > 1000
 
 print('worksheet factory tests: OK')
