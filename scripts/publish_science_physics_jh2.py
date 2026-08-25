@@ -10,6 +10,13 @@ try:
         JH2_PHYSICS_PROBLEM_COUNT,
         JH2_PHYSICS_SEEDS,
     )
+    from scripts.science_physics_jh2_mixed_review import (
+        JH2_PHYSICS_MIXED_REVIEW_PROBLEM_COUNT,
+        JH2_PHYSICS_MIXED_SEEDS,
+        JH2_PHYSICS_REVIEW_SEEDS,
+        generate_jh2_physics_mixed,
+        generate_jh2_physics_review,
+    )
     from scripts.science_worksheet_helpers import generate_formula_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
@@ -18,8 +25,31 @@ except ModuleNotFoundError:
         JH2_PHYSICS_PROBLEM_COUNT,
         JH2_PHYSICS_SEEDS,
     )
+    from science_physics_jh2_mixed_review import (
+        JH2_PHYSICS_MIXED_REVIEW_PROBLEM_COUNT,
+        JH2_PHYSICS_MIXED_SEEDS,
+        JH2_PHYSICS_REVIEW_SEEDS,
+        generate_jh2_physics_mixed,
+        generate_jh2_physics_review,
+    )
     from science_worksheet_helpers import generate_formula_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
+
+
+def _register_pending(pending, by_id, by_url, by_hash, entry, problems, filename, title):
+    wid = entry["id"]
+    url = entry["url"]
+    content_hash = entry["content_hash"]
+    if wid in by_id:
+        existing = by_id[wid]
+        assert existing["url"] == url, f"existing worksheet URL mismatch: {wid}"
+        assert existing["content_hash"] == content_hash, f"existing worksheet content mismatch: {wid}"
+        return
+    if url in by_url:
+        raise AssertionError(f"worksheet URL already belongs to another id: {url}")
+    if content_hash in by_hash or any(item["entry"]["content_hash"] == content_hash for item in pending):
+        raise AssertionError(f"duplicate worksheet content: {wid}")
+    pending.append({"entry": entry, "problems": problems, "filename": filename, "title": title})
 
 
 def build_batch(repo_root):
@@ -67,20 +97,57 @@ def build_batch(repo_root):
                     "worksheet_series": "focused",
                     "answer_type": "numeric",
                 }
+                _register_pending(pending, by_id, by_url, by_hash, entry, problems, filename, title)
 
-                if wid in by_id:
-                    existing = by_id[wid]
-                    assert existing["url"] == url, f"existing worksheet URL mismatch: {wid}"
-                    assert existing["content_hash"] == content_hash, f"existing worksheet content mismatch: {wid}"
-                    continue
-                if url in by_url:
-                    raise AssertionError(f"worksheet URL already belongs to another id: {url}")
-                if content_hash in by_hash or any(
-                    item["entry"]["content_hash"] == content_hash for item in pending
-                ):
-                    raise AssertionError(f"duplicate worksheet content: {topic_key}/{mode_key}/{variant}")
-
-                pending.append({"entry": entry, "problems": problems, "filename": filename, "title": title})
+    mixed_review = (
+        (
+            "mixed",
+            JH2_PHYSICS_MIXED_SEEDS,
+            generate_jh2_physics_mixed,
+            "中2理科 電流とその利用 混合演習",
+            "オームの法則、直列・並列回路、電力・電力量・発熱量を横断して基本計算を反復します。",
+            "mixed",
+        ),
+        (
+            "review",
+            JH2_PHYSICS_REVIEW_SEEDS,
+            generate_jh2_physics_review,
+            "中2理科 電流とその利用 総復習",
+            "中2の電流とその利用で扱った基本数量関係を累積的に復習します。",
+            "review",
+        ),
+    )
+    for series_key, seeds, generator, base_title, description, worksheet_series in mixed_review:
+        for variant, seed in enumerate(seeds, start=1):
+            problems = generator(seed)
+            validate(problems)
+            assert len(problems) == JH2_PHYSICS_MIXED_REVIEW_PROBLEM_COUNT
+            content_hash = normalized_hash(problems)
+            wid = f"science-jh2-physics-electricity-{series_key}-{variant:02d}"
+            filename = f"{wid}.pdf"
+            url = (output_rel_dir / filename).as_posix()
+            title = f"{base_title} {variant:02d}"
+            entry = {
+                "id": wid,
+                "school_level": "junior-high",
+                "grade": 2,
+                "subject": "理科",
+                "science_field": "physics",
+                "worksheet_mode": f"calculation-{series_key}",
+                "unit": "電流とその利用",
+                "skill": "electricity-cumulative",
+                "problem_count": JH2_PHYSICS_MIXED_REVIEW_PROBLEM_COUNT,
+                "seed": seed,
+                "variant": variant,
+                "title": title,
+                "description": description,
+                "url": url,
+                "content_hash": content_hash,
+                "difficulty": "basic",
+                "worksheet_series": worksheet_series,
+                "answer_type": "numeric",
+            }
+            _register_pending(pending, by_id, by_url, by_hash, entry, problems, filename, title)
 
     prospective_catalog = catalog + [item["entry"] for item in pending]
     validate_catalog(prospective_catalog)
