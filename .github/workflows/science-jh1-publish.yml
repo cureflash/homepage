@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - '.github/workflows/science-jh1-publish.yml'
+      - 'scripts/publish_science_physics_jh1.py'
 
 permissions:
   contents: write
