@@ -19,6 +19,17 @@ Purpose: continuously expand `cureflash/homepage` with free, simple repetition-p
 13. Commit safe completed batches with descriptive messages.
 14. Before ending every run, update progress and fully rewrite `90_HANDOFF.md` with the exact next starting point.
 
+## Throughput / batch-size rule
+
+The factory is intentionally high-volume. Once the curriculum placement, formula/fact set, generator shape, and validator for a topic are verified, do not continue in tiny 3–6 worksheet increments without a specific safety reason.
+
+- Normal target per scheduled run: **30–60 newly published worksheets** across the active curriculum stage.
+- When a topic family is already verified and the run is mainly deterministic variant expansion, mixed practice, or cumulative review, **up to about 100 genuinely distinct worksheets** is acceptable if tests, duplicate checks, PDF validation, catalog validation, and safe commits can all complete in the same run.
+- The target is a throughput goal, not a quota. Never create meaningless duplicates, artificial wording-only variants, unverified curriculum content, or weak questions just to reach a number.
+- Prefer one initial curriculum/fact/formula verification step followed by broad structured generation in the same run: direct/basic, reverse-variable, unit variants where natural, mixed practice, and review.
+- If a new topic introduces a new formula family, rendering type, answer type, or ambiguous knowledge set, validate that foundation first; once safe, expand it aggressively rather than stopping after only a few sheets.
+- A run may cross multiple closely related skills within the same active grade/course when doing so remains curriculum-ordered and produces a coherent tested checkpoint. Do not advance to the next subject while unfinished higher-priority physics/chemistry/etc. coverage remains.
+
 ## Calculation worksheet rule
 
 Calculation worksheets are basic repetition drills. Prefer problems solvable by understanding the relevant formula and substituting values correctly. Do not drift into trick questions or difficult entrance-exam style derivations.
