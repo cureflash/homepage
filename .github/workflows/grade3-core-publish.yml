@@ -1,5 +1,6 @@
 name: Grade 3 worksheet factory checkpoint
 
+# Covers addition/subtraction, multiplication, and division publishers.
 on:
   push:
     branches: [main]
