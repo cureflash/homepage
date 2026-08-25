@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="16枚のトランプで遊ぶシンプルな神経衰弱ゲームです。">
+  <title>トランプ神経衰弱｜ひかり教材室</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="memory-page">
+    <header class="memory-header">
+      <div>
+        <h1>トランプ神経衰弱</h1>
+      </div>
+      <a class="back-link" href="../../index.html">教材室トップへ</a>
+    </header>
+
+    <section class="game-panel" aria-labelledby="game-message">
+      <div class="game-status">
+        <p class="status-numbers">
+          <span>手数 <strong id="moves">0</strong></span>
+          <span>ペア <strong id="pairs-found">0</strong>/<strong id="total-pairs">8</strong></span>
+        </p>
+        <button id="restart-button" type="button">最初から</button>
+      </div>
+
+      <p id="game-message" aria-live="polite">同じ数字のカードを2枚そろえよう。</p>
+      <div id="memory-board" class="memory-board" aria-label="神経衰弱のカード"></div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
