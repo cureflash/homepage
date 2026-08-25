@@ -1,12 +1,12 @@
 # Social Quiz Factory — master instructions
 
-Purpose: continuously expand `cureflash/homepage/social-quiz/` into a reusable social-studies quiz platform while preserving a strict separation between content/data, quiz logic, renderers, and presentation/UI.
+Purpose: continuously expand `cureflash/homepage/subjects/social/quiz/` into a reusable social-studies quiz platform while preserving a strict separation between content/data, quiz logic, renderers, and presentation/UI.
 
 ## Every run
 
 1. Read the latest `main`. Never work from stale file contents.
 2. Recursively read every Markdown file under `docs/social-quiz-factory/` in lexical path order.
-3. Read the current `social-quiz/` engine, renderer, game-data, tests, and any files that will be changed.
+3. Read the current `subjects/social/quiz/` engine, renderer, game-data, tests, and any files that will be changed.
 4. Resume from `90_HANDOFF.md` and the first unfinished item in `20_EXECUTION_PLAN.md`.
 5. Work from the top of the execution plan. Complete as much as is safe in one run, then update progress and handoff.
 6. Do not redesign the game UI unless a task explicitly requires it. UI appearance is provisional and must remain replaceable without rewriting content or quiz logic.
