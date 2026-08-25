@@ -3,30 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="16枚のトランプで遊ぶシンプルな神経衰弱ゲームです。">
-  <title>トランプ神経衰弱｜ひかり教材室</title>
+  <meta name="description" content="9枚の手札から正しいペアを見つけて捨てるババ抜きゲームです。">
+  <title>ババ抜き｜ひかり教材室</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="memory-page">
-    <header class="memory-header">
-      <div>
-        <h1>トランプ神経衰弱</h1>
-      </div>
+  <main class="old-maid-page">
+    <header class="old-maid-header">
+      <h1>ババ抜き</h1>
       <a class="back-link" href="../../index.html">教材室トップへ</a>
     </header>
 
     <section class="game-panel" aria-labelledby="game-message">
-      <div class="game-status">
-        <p class="status-numbers">
-          <span>手数 <strong id="moves">0</strong></span>
-          <span>ペア <strong id="pairs-found">0</strong>/<strong id="total-pairs">8</strong></span>
-        </p>
-        <button id="restart-button" type="button">最初から</button>
+      <div class="game-toolbar">
+        <div class="game-info">
+          <span>捨てたペア <strong id="pairs-discarded">0</strong>/4</span>
+          <button id="restart-button" type="button">最初から</button>
+        </div>
+        <button id="discard-button" class="discard-button" type="button" disabled>捨てる</button>
       </div>
 
-      <p id="game-message" aria-live="polite">同じ数字のカードを2枚そろえよう。</p>
-      <div id="memory-board" class="memory-board" aria-label="神経衰弱のカード"></div>
+      <p id="game-message" aria-live="polite">上にスワイプして2枚選んでください。</p>
+
+      <div class="play-area">
+        <section class="selected-area" aria-label="選んだカード">
+          <p class="area-label">選んだカード</p>
+          <div id="selected-cards" class="selected-cards"></div>
+        </section>
+
+        <section class="hand-area" aria-label="手札">
+          <p class="area-label">手札</p>
+          <div id="hand" class="hand"></div>
+        </section>
+      </div>
     </section>
   </main>
 
