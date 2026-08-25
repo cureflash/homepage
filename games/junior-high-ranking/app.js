@@ -1,5 +1,6 @@
 (() => {
-  const questions = window.RANKING_QUESTIONS || [];
+  const questionPool = window.RANKING_QUESTIONS || [];
+  const questionCount = 7;
   const ranks = [
     "一流中学生",
     "上級中学生",
@@ -9,6 +10,14 @@
     "中学英語そっくりさん",
     "映す価値なし"
   ];
+
+  function selectQuestions() {
+    return [...questionPool]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, Math.min(questionCount, questionPool.length));
+  }
+
+  let questions = selectQuestions();
 
   const state = {
     index: 0,
@@ -108,6 +117,7 @@
   });
 
   restartButton.addEventListener("click", () => {
+    questions = selectQuestions();
     state.index = 0;
     state.rankIndex = 0;
     state.locked = false;
