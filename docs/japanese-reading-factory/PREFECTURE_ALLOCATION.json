@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-25",
+  "rules": {
+    "cross_prefecture_verse": "duplicate into every supported prefecture",
+    "unknown_boundary": "do_not_guess_primary_text_pending",
+    "lyrics_text": "not_stored_in_allocation_ledger"
+  },
+  "sources": {
+    "old_ndl": "https://ndlsearch.ndl.go.jp/books/R100000136-I1970586434806673061",
+    "old_wikisource": "https://ja.wikisource.org/wiki/鉄道唱歌",
+    "new_ndl": "https://ndlsearch.ndl.go.jp/books/R100000002-I000001876305",
+    "new_noda": "https://jmapps.ne.jp/ndskdhk/det.html?data_id=51308",
+    "new_sanin": "https://ameblo.jp/daruma0215/entry-12365178662.html"
+  },
+  "owada_1900": [
+    {
+      "id": "1900-01-tokaido",
+      "title": "第1集 東海道",
+      "verse_count": 66,
+      "allocations": [
+        [1, 3, "東京都"], [4, 4, "東京都", "神奈川県"], [5, 13, "神奈川県"],
+        [14, 29, "静岡県"], [30, 33, "愛知県"], [34, 34, "愛知県", "岐阜県"],
+        [35, 36, "岐阜県"], [37, 44, "滋賀県"], [45, 53, "京都府"],
+        [54, 54, "京都府", "大阪府"], [55, 60, "大阪府"], [61, 61, "大阪府", "兵庫県"],
+        [62, 66, "兵庫県"]
+      ]
+    },
+    {
+      "id": "1900-02-sanyo-kyushu",
+      "title": "第2集 山陽・九州",
+      "verse_count": 68,
+      "allocations": [
+        [1, 9, "兵庫県"], [10, 11, "岡山県"], [12, 12, "岡山県", "香川県"],
+        [13, 22, "広島県"], [23, 25, "山口県"], [26, 26, "山口県", "福岡県"],
+        [27, 30, "山口県"], [31, 31, "福岡県"], [32, 32, "福岡県", "大分県"],
+        [33, 35, "大分県"], [36, 48, "福岡県"], [49, 49, "福岡県", "佐賀県"],
+        [50, 57, "熊本県"], [58, 58, "佐賀県"], [59, 59, "佐賀県", "長崎県"],
+        [60, 68, "長崎県"]
+      ]
+    },
+    {
+      "id": "1900-03-oshu-iwaki",
+      "title": "第3集 奥州・磐城",
+      "verse_count": 64,
+      "allocations": [
+        [1, 3, "東京都"], [4, 6, "埼玉県"], [7, 7, "茨城県", "栃木県"],
+        [8, 8, "栃木県", "茨城県"], [9, 9, "栃木県", "群馬県"], [10, 16, "栃木県"],
+        [17, 17, "栃木県", "福島県"], [18, 23, "福島県"], [24, 24, "福島県", "宮城県"],
+        [25, 31, "宮城県"], [32, 32, "宮城県", "岩手県"], [33, 36, "岩手県"],
+        [37, 40, "青森県"], [41, 41, "青森県", "北海道"], [42, 42, "青森県"],
+        [43, 43, "宮城県"], [44, 44, "福島県", "茨城県"], [45, 51, "福島県"],
+        [52, 52, "福島県", "茨城県"], [53, 60, "茨城県"], [61, 61, "千葉県"],
+        [62, 64, "東京都"]
+      ]
+    },
+    {
+      "id": "1900-04-hokuriku",
+      "title": "第4集 北陸",
+      "verse_count": 72,
+      "allocations": [
+        [1, 5, "東京都"], [6, 10, "埼玉県"], [11, 19, "群馬県"],
+        [20, 20, "群馬県", "長野県"], [21, 30, "長野県"], [31, 31, "長野県", "新潟県"],
+        [32, 49, "新潟県"], [50, 51, "富山県"], [52, 52, "富山県", "石川県"],
+        [53, 61, "石川県"], [62, 62, "石川県", "福井県"], [63, 67, "福井県"],
+        [68, 68, "福井県", "滋賀県"], [69, 71, "滋賀県"], [72, 72, "東京都"]
+      ]
+    },
+    {
+      "id": "1900-05-kansai-sangu-nankai",
+      "title": "第5集 関西・参宮・南海",
+      "verse_count": 64,
+      "allocations": [
+        [1, 6, "大阪府"], [7, 11, "京都府"], [12, 30, "三重県"],
+        [31, 38, "奈良県"], [39, 39, "奈良県", "大阪府"], [40, 41, "奈良県"],
+        [42, 42, "奈良県", "和歌山県"], [43, 45, "和歌山県"],
+        [46, 48, "和歌山県", "奈良県"], [49, 54, "和歌山県"], [55, 64, "大阪府"]
+      ]
+    }
+  ],
+  "new_1929": [
+    {
+      "id": "1929-01", "title": "第1輯 東海道線", "known_verse_count": 62,
+      "prefectures": ["東京都", "神奈川県", "静岡県", "愛知県", "岐阜県", "滋賀県", "京都府", "大阪府", "兵庫県"],
+      "status": "route_scope_confirmed; verse_boundaries_pending_primary_text"
+    },
+    {
+      "id": "1929-02", "title": "第2輯 山陽線・四国めぐり", "known_verse_count": null,
+      "prefectures": ["兵庫県", "岡山県", "広島県", "山口県", "香川県", "徳島県", "愛媛県", "高知県"],
+      "status": "route_scope_confirmed; verse_boundaries_pending_primary_text"
+    },
+    {
+      "id": "1929-03", "title": "第3輯 九州線", "known_verse_count": null,
+      "prefectures": ["福岡県", "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県"],
+      "status": "route_scope_confirmed; verse_boundaries_pending_primary_text"
+    },
+    {
+      "id": "1929-04", "title": "第4輯 東北線・常磐線・房総めぐり", "known_verse_count": null,
+      "prefectures": ["東京都", "埼玉県", "栃木県", "福島県", "宮城県", "岩手県", "青森県", "茨城県", "千葉県"],
+      "status": "route_scope_confirmed; verse_boundaries_pending_primary_text; verse_3_chiba_confirmed"
+    },
+    {
+      "id": "1929-05", "title": "第5輯 高崎・信越・中央線", "known_verse_count": null,
+      "prefectures": ["東京都", "埼玉県", "群馬県", "長野県", "新潟県", "神奈川県", "山梨県", "岐阜県", "愛知県"],
+      "status": "route_scope_confirmed; verse_boundaries_pending_primary_text"
+    },
+    {
+      "id": "1929-06", "title": "第6輯 北陸・信越・羽越線", "known_verse_count": null,
+      "prefectures": ["滋賀県", "福井県", "石川県", "富山県", "新潟県", "長野県", "山形県", "秋田県"],
+      "status": "route_scope_confirmed; verse_boundaries_pending_primary_text"
+    },
+    {
+      "id": "1929-07", "title": "第7輯 山陰線", "known_verse_count": 52,
+      "prefectures": ["京都府", "兵庫県", "鳥取県", "島根県"],
+      "status": "route_scope_confirmed; verse_1_kyoto_and_23_tottori_and_52_shimane_publicly_attested; remaining_boundaries_pending_primary_text"
+    },
+    {
+      "id": "1929-08", "title": "第8輯 関西線", "known_verse_count": null,
+      "prefectures": ["愛知県", "三重県", "京都府", "奈良県", "大阪府"],
+      "status": "route_scope_confirmed; verse_boundaries_pending_primary_text"
+    },
+    {
+      "id": "1929-09", "title": "第9輯 奥羽線", "known_verse_count": null,
+      "prefectures": ["福島県", "山形県", "秋田県", "青森県"],
+      "status": "route_scope_confirmed; verse_boundaries_pending_primary_text"
+    },
+    {
+      "id": "1929-10", "title": "第10輯 北海道線", "known_verse_count": null,
+      "prefectures": ["北海道"],
+      "status": "route_scope_confirmed; verse_boundaries_pending_primary_text"
+    }
+  ],
+  "uncovered_prefectures": ["沖縄県"]
+}
