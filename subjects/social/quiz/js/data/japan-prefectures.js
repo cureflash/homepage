@@ -1,0 +1,63 @@
+export const PREFECTURE_CURRICULUM_SOURCE = {
+  title: "中学校学習指導要領解説 社会編",
+  publisher: "文部科学省",
+  url: "https://www.mext.go.jp/content/20240919-mxt_kyoiku01-100002608.pdf",
+  note: "日本の地域構成では都道府県の名称・位置に加えて都道府県庁所在地名も取り上げる。"
+};
+
+export const PREFECTURAL_CAPITAL_SOURCE = {
+  title: "都道府県と都道府県庁所在地",
+  publisher: "国土地理院",
+  url: "https://www.gsi.go.jp/common/000218164.pdf",
+  note: "教材上の所在地名表記に合わせ、東京都は「東京」とする。"
+};
+
+export const JAPAN_PREFECTURES = [
+  { code: "1", name: "北海道", capital: "札幌市" },
+  { code: "2", name: "青森県", capital: "青森市" },
+  { code: "3", name: "岩手県", capital: "盛岡市" },
+  { code: "4", name: "宮城県", capital: "仙台市" },
+  { code: "5", name: "秋田県", capital: "秋田市" },
+  { code: "6", name: "山形県", capital: "山形市" },
+  { code: "7", name: "福島県", capital: "福島市" },
+  { code: "8", name: "茨城県", capital: "水戸市" },
+  { code: "9", name: "栃木県", capital: "宇都宮市" },
+  { code: "10", name: "群馬県", capital: "前橋市" },
+  { code: "11", name: "埼玉県", capital: "さいたま市" },
+  { code: "12", name: "千葉県", capital: "千葉市" },
+  { code: "13", name: "東京都", capital: "東京" },
+  { code: "14", name: "神奈川県", capital: "横浜市" },
+  { code: "15", name: "新潟県", capital: "新潟市" },
+  { code: "16", name: "富山県", capital: "富山市" },
+  { code: "17", name: "石川県", capital: "金沢市" },
+  { code: "18", name: "福井県", capital: "福井市" },
+  { code: "19", name: "山梨県", capital: "甲府市" },
+  { code: "20", name: "長野県", capital: "長野市" },
+  { code: "21", name: "岐阜県", capital: "岐阜市" },
+  { code: "22", name: "静岡県", capital: "静岡市" },
+  { code: "23", name: "愛知県", capital: "名古屋市" },
+  { code: "24", name: "三重県", capital: "津市" },
+  { code: "25", name: "滋賀県", capital: "大津市" },
+  { code: "26", name: "京都府", capital: "京都市" },
+  { code: "27", name: "大阪府", capital: "大阪市" },
+  { code: "28", name: "兵庫県", capital: "神戸市" },
+  { code: "29", name: "奈良県", capital: "奈良市" },
+  { code: "30", name: "和歌山県", capital: "和歌山市" },
+  { code: "31", name: "鳥取県", capital: "鳥取市" },
+  { code: "32", name: "島根県", capital: "松江市" },
+  { code: "33", name: "岡山県", capital: "岡山市" },
+  { code: "34", name: "広島県", capital: "広島市" },
+  { code: "35", name: "山口県", capital: "山口市" },
+  { code: "36", name: "徳島県", capital: "徳島市" },
+  { code: "37", name: "香川県", capital: "高松市" },
+  { code: "38", name: "愛媛県", capital: "松山市" },
+  { code: "39", name: "高知県", capital: "高知市" },
+  { code: "40", name: "福岡県", capital: "福岡市" },
+  { code: "41", name: "佐賀県", capital: "佐賀市" },
+  { code: "42", name: "長崎県", capital: "長崎市" },
+  { code: "43", name: "熊本県", capital: "熊本市" },
+  { code: "44", name: "大分県", capital: "大分市" },
+  { code: "45", name: "宮崎県", capital: "宮崎市" },
+  { code: "46", name: "鹿児島県", capital: "鹿児島市" },
+  { code: "47", name: "沖縄県", capital: "那覇市" }
+];

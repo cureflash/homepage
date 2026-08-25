@@ -1,32 +1,36 @@
 # Social Quiz Factory — handoff
 
-Current status: Phase 0.1 through 0.6 complete. A game registry now exists at `subjects/social/quiz/js/games/registry.js`. Registered games are validated through `assertValidGameDefinition`, duplicate registered game IDs are rejected, and `main.js` resolves the requested game from the registry rather than importing the prefecture game directly. `QuizEngine` remains unchanged.
+Current status: Phase 0.1 through 0.6 and Phase 1.1 through 1.3 are complete. Canonical implementation is `subjects/social/quiz/`; old `social-quiz/` remains unused.
 
 Architecture status:
 
-- Canonical implementation remains `subjects/social/quiz/`; old `social-quiz/` was not used or recreated.
-- `QuizEngine` still owns only scoring, progress and state transitions.
-- Renderer selection remains outside the engine.
-- Question banks remain independent of CSS/layout.
-- No UI redesign was made.
-- Root `index.html` still exposes `subjects/social/quiz/` as 「都道府県当て」 under 「学習ゲーム」 and existing other game entries remain present.
+- `QuizEngine` remains unchanged and owns scoring, progress and state transitions only.
+- UI/CSS was not redesigned.
+- Japan geography reference data is now under `subjects/social/quiz/js/data/` and is independent of presentation.
+- The prefecture map asset is pinned to lalamalink/japan-map-svg commit `b6008cd22e6993a62860f5afafcc810ef4f9c69f` (CC0 1.0, version 2026.06.30), rather than following upstream `main`.
+- The 47 map region code/name pairs are stored separately from the question bank and checked by an offline regression test.
+- Root `index.html` exposes both 「都道府県当て」 and 「県庁所在地当て」 under 「学習ゲーム」; existing other game entries remain present.
 
 Completed this run:
 
-- Added `js/games/registry.js` with `listGames`, `getGame`, `requireGame`, and a default game ID.
-- Updated `js/main.js` to resolve `?game=<id>` through the registry, defaulting to the prefecture game.
-- Added `tests/game-registry.test.js` for default lookup, explicit lookup, unknown IDs, and registry-list isolation.
-- Performed a Node syntax check on the new registry module successfully.
-- A full local clone/test run could not be performed in the execution container because outbound DNS to github.com is unavailable there; this is an environment limitation, not a repository failure. Existing repository tests were not modified.
+- Phase 1.2: added a pinned Japan-map manifest containing all 47 `data-code` / prefecture-name pairs and tests that the prefecture game exactly matches them.
+- Refactored the existing prefecture game to consume shared Japan prefecture data without changing its UI or scoring behavior.
+- Phase 1.3: added all 47 prefectural-capital -> prefecture map questions as game ID `japan-prefectural-capitals`.
+- Added curriculum metadata from MEXT. The current social-studies guidance explicitly requires prefectural capital names to be covered alongside prefecture names and locations.
+- Added factual source metadata from the Geospatial Information Authority of Japan 「都道府県と都道府県庁所在地」. For the educational label used there, Tokyo is stored as `東京`.
+- Registered the new game through the existing registry; no `QuizEngine` fork was added.
+- Added a root-public-entry regression test so both Japan map drills must remain discoverable from the top-page 「学習ゲーム」 section.
+- Targeted Node tests for the new data/registry/mapping logic passed locally before commit preparation.
 
 Next start point:
 
 1. Read latest `main`.
 2. Read all Markdown under `docs/social-quiz-factory/` in lexical order.
-3. Inspect the current canonical prefecture game, SVG renderer, tests, root `index.html`, and the upstream Japan map asset.
-4. Start with Phase 1.2: validate all 47 prefecture IDs against the map asset. Add an automated, offline validation fixture/test if practical so future asset or data changes cannot silently break mappings.
-5. Then continue to Phase 1.3: prefectural capital -> click corresponding prefecture, all 47, with authoritative source metadata.
-6. Do not redesign the UI.
+3. Start Phase 1.4: add reverse curated 5-choice drill, prefecture -> prefectural capital.
+4. The correct capital plus four distractors must be stored/curated as question data; do not blindly sample distractors at runtime.
+5. Reuse `ChoiceRenderer`; do not change `QuizEngine` or redesign the UI.
+6. When the new reverse game is playable, register it and add a separate root `index.html` 「学習ゲーム」 entry in the same run.
+7. Then proceed to Phase 1.5 validation of one-to-one prefecture/capital coverage.
 
 Important constraints:
 
@@ -35,5 +39,5 @@ Important constraints:
 - Use curated 5-choice questions when associations can overlap.
 - Use colored selectable regions for oceans/continents/broad regions.
 - Record sources and source years for changing facts/statistics.
-- When a new playable game is added or its URL changes, update the root `index.html` 「学習ゲーム」 entry in the same run without removing existing games.
-- At the end of every run, update the execution-plan checkboxes and rewrite this file with the exact next task.
+- Do not recreate or use old `social-quiz/`.
+- At the end of every run, update `20_EXECUTION_PLAN.md` and fully rewrite this file with the exact next task.
