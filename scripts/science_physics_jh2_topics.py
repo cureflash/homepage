@@ -118,6 +118,81 @@ JH2_PHYSICS_FORMULA_TOPICS = {
             },
         },
     },
+    "electric-power": {
+        "title": "中2理科 電力",
+        "unit": "電流とその利用",
+        "skill": "electric-power",
+        "formula": "P = V × I",
+        "seeds": tuple(range(6251, 6261)),
+        "spec": {
+            "id": "jh2-physics-electric-power",
+            "relation": "product",
+            "result": "P",
+            "inputs": ["V", "I"],
+            "variables": {
+                "P": {"label": "電力 P", "unit": "W"},
+                "V": {"label": "電圧 V", "unit": "V", "values": [2, 3, 4, 5, 6, 8, 10, 12, 15, 20]},
+                "I": {"label": "電流 I", "unit": "A", "values": [0.5, 1, 1.5, 2, 2.5, 3]},
+            },
+        },
+        "modes": {
+            "basic": {
+                "solve_for": "P",
+                "worksheet_mode": "calculation-basic",
+                "description": "P = V × I を使い、電圧と電流から電力を求める基本反復です。",
+            },
+        },
+    },
+    "electric-energy": {
+        "title": "中2理科 電力量",
+        "unit": "電流とその利用",
+        "skill": "electric-energy",
+        "formula": "E = P × t",
+        "seeds": tuple(range(6261, 6271)),
+        "spec": {
+            "id": "jh2-physics-electric-energy",
+            "relation": "product",
+            "result": "E",
+            "inputs": ["P", "t"],
+            "variables": {
+                "E": {"label": "電力量 E", "unit": "J"},
+                "P": {"label": "電力 P", "unit": "W", "values": [2, 5, 10, 20, 30, 40, 50, 60, 100]},
+                "t": {"label": "時間 t", "unit": "s", "values": [1, 2, 3, 5, 10, 15, 20, 30, 60]},
+            },
+        },
+        "modes": {
+            "basic": {
+                "solve_for": "E",
+                "worksheet_mode": "calculation-basic",
+                "description": "E = P × t を使い、電力と時間から電力量をジュールで求める基本反復です。",
+            },
+        },
+    },
+    "heat-quantity": {
+        "title": "中2理科 電熱線の発熱量",
+        "unit": "電流とその利用",
+        "skill": "heat-quantity",
+        "formula": "Q = P × t",
+        "seeds": tuple(range(6271, 6281)),
+        "spec": {
+            "id": "jh2-physics-heat-quantity",
+            "relation": "product",
+            "result": "Q",
+            "inputs": ["P", "t"],
+            "variables": {
+                "Q": {"label": "発生する熱量 Q", "unit": "J"},
+                "P": {"label": "電熱線の電力 P", "unit": "W", "values": [5, 10, 20, 30, 40, 50, 60, 80, 100]},
+                "t": {"label": "電流を流す時間 t", "unit": "s", "values": [1, 2, 3, 5, 10, 15, 20, 30, 60]},
+            },
+        },
+        "modes": {
+            "basic": {
+                "solve_for": "Q",
+                "worksheet_mode": "calculation-basic",
+                "description": "電熱線で電気エネルギーが熱に変わる基本場面として、Q = P × t を使い発生する熱量をジュールで求めます。",
+            },
+        },
+    },
 }
 
 JH2_PHYSICS_SEEDS = tuple(range(6201, 6211))
