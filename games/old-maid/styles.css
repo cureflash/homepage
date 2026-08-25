@@ -10,7 +10,7 @@ body {
 }
 
 .old-maid-page {
-  width: min(820px, calc(100% - 32px));
+  width: min(920px, calc(100% - 32px));
   margin: 0 auto;
   padding: 28px 0 48px;
 }
@@ -41,25 +41,40 @@ body {
   background: #ffffff;
 }
 
-.game-toolbar {
+.game-toolbar,
+.game-controls,
+.control-group,
+.game-info {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.game-toolbar {
   justify-content: space-between;
-  gap: 16px;
+}
+
+.game-controls {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.control-group,
+.game-info {
+  flex-wrap: wrap;
 }
 
 .game-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
   font-weight: 700;
 }
 
 #restart-button,
+.mode-button,
+.audio-button,
 .discard-button {
   min-height: 44px;
-  padding: 9px 16px;
+  padding: 9px 14px;
   border: 0;
   border-radius: 10px;
   font: inherit;
@@ -67,9 +82,20 @@ body {
   cursor: pointer;
 }
 
-#restart-button {
+#restart-button,
+.audio-button {
   color: #315fa8;
   background: #e8eef8;
+}
+
+.mode-button {
+  color: #4b5563;
+  background: #eceff3;
+}
+
+.mode-button.is-active {
+  color: #ffffff;
+  background: #315fa8;
 }
 
 .discard-button {
@@ -131,6 +157,14 @@ body {
   overflow-x: auto;
 }
 
+.hand.hard-mode {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+  align-items: stretch;
+  gap: 10px;
+  overflow-x: visible;
+}
+
 .playing-card {
   display: grid;
   place-items: center;
@@ -156,8 +190,13 @@ body {
   transition: transform 0.16s ease, box-shadow 0.16s ease;
 }
 
-.hand .playing-card + .playing-card {
+.hand:not(.hard-mode) .playing-card + .playing-card {
   margin-left: -24px;
+}
+
+.hand.hard-mode .playing-card {
+  width: 100%;
+  min-width: 0;
 }
 
 .playing-card.is-selected {
@@ -171,6 +210,8 @@ body {
 }
 
 #restart-button:focus-visible,
+.mode-button:focus-visible,
+.audio-button:focus-visible,
 .discard-button:focus-visible,
 .playing-card:focus-visible,
 .back-link:focus-visible {
@@ -180,7 +221,7 @@ body {
 
 @media (max-width: 520px) {
   .old-maid-page {
-    width: min(100% - 20px, 820px);
+    width: min(100% - 20px, 920px);
     padding-top: 18px;
   }
 
@@ -194,11 +235,13 @@ body {
   }
 
   .game-toolbar {
+    align-items: flex-start;
     gap: 8px;
   }
 
-  .game-info {
-    gap: 8px;
+  .game-controls {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .play-area {
@@ -217,8 +260,19 @@ body {
     font-size: 0.9rem;
   }
 
-  .hand .playing-card + .playing-card {
+  .hand:not(.hard-mode) .playing-card + .playing-card {
     margin-left: -34px;
+  }
+
+  .hand.hard-mode {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .hand.hard-mode .playing-card {
+    width: 100%;
+    padding: 6px;
+    font-size: 0.78rem;
   }
 }
 
