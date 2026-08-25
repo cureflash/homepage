@@ -37,8 +37,8 @@ def test_deterministic_and_distinct():
                 assert h not in hashes
                 hashes.add(h)
                 count += 1
-    assert count == 60
-    assert len(hashes) == 60
+    assert count == 90
+    assert len(hashes) == 90
 
 
 def test_ohms_law_answers():
@@ -70,6 +70,30 @@ def test_series_parallel_and_combined_resistance_answers():
             assert problem["answer_spec"]["unit"] == unit
 
 
+def test_power_energy_and_heat_answers():
+    checks = (
+        ("electric-power", "V", "I", "P", "W"),
+        ("electric-energy", "P", "t", "E", "J"),
+        ("heat-quantity", "P", "t", "Q", "J"),
+    )
+    for topic_key, first, second, result, unit in checks:
+        seed = topic_seeds(topic_key)[0]
+        for problem in generated(topic_key, "basic", seed):
+            assert abs(problem["answer"] - problem["known"][first] * problem["known"][second]) < 1e-9
+            assert problem["solve_for"] == result
+            assert problem["answer_spec"]["unit"] == unit
+
+
+def test_energy_and_heat_time_is_seconds():
+    for topic_key in ("electric-energy", "heat-quantity"):
+        topic = JH2_PHYSICS_FORMULA_TOPICS[topic_key]
+        assert topic["spec"]["variables"]["t"]["unit"] == "s"
+        for seed in topic_seeds(topic_key):
+            for problem in generated(topic_key, "basic", seed):
+                assert problem["known"]["t"] > 0
+                assert problem["answer"] >= 0
+
+
 def test_prompts_and_units_are_basic():
     expected_units = {
         ("ohms-law", "basic"): "V",
@@ -78,6 +102,9 @@ def test_prompts_and_units_are_basic():
         ("series-voltage", "basic"): "V",
         ("parallel-current", "basic"): "A",
         ("series-resistance", "basic"): "Ω",
+        ("electric-power", "basic"): "W",
+        ("electric-energy", "basic"): "J",
+        ("heat-quantity", "basic"): "J",
     }
     for (topic_key, mode_key), expected_unit in expected_units.items():
         seed = topic_seeds(topic_key)[1]
@@ -89,20 +116,22 @@ def test_prompts_and_units_are_basic():
 
 
 def test_corruption_is_rejected():
-    problem = generated("series-voltage", "basic", topic_seeds("series-voltage")[2])[0]
+    problem = generated("electric-energy", "basic", topic_seeds("electric-energy")[2])[0]
     broken = {**problem, "answer": problem["answer"] + 1}
     try:
         validate_science_problem(broken)
     except AssertionError:
         pass
     else:
-        raise AssertionError("corrupted JH2 circuit answer was accepted")
+        raise AssertionError("corrupted JH2 energy answer was accepted")
 
 
 if __name__ == "__main__":
     test_deterministic_and_distinct()
     test_ohms_law_answers()
     test_series_parallel_and_combined_resistance_answers()
+    test_power_energy_and_heat_answers()
+    test_energy_and_heat_time_is_seconds()
     test_prompts_and_units_are_basic()
     test_corruption_is_rejected()
     print("junior-high physics grade 2 tests: OK")
