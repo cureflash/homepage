@@ -1,0 +1,231 @@
+* { box-sizing: border-box; }
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  color: #1d1d1f;
+  background: #ececec;
+}
+
+body { margin: 0; }
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 12px 18px 10px;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.toolbar__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: end;
+}
+
+.toolbar label {
+  display: grid;
+  gap: 3px;
+  font-size: 12px;
+}
+
+.toolbar select,
+.toolbar input,
+.toolbar button {
+  min-height: 34px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background: #fff;
+  padding: 5px 9px;
+  font: inherit;
+}
+
+.toolbar button { cursor: pointer; }
+.toolbar__note { margin: 7px 0 0; font-size: 12px; color: #555; }
+
+.sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 20px auto 40px;
+  padding: 11mm 12mm 9mm;
+  background: #fff;
+  box-shadow: 0 3px 18px rgba(0,0,0,.15);
+}
+
+.sheet__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12mm;
+  align-items: end;
+  border-bottom: 2px solid #222;
+  padding-bottom: 4mm;
+}
+
+.eyebrow { margin: 0 0 1mm; font-size: 10pt; font-weight: 700; }
+h1 { margin: 0; font-size: 23pt; line-height: 1.15; }
+.subtitle { margin: 1.5mm 0 0; font-size: 10pt; color: #555; }
+.name-box { min-width: 48mm; border-bottom: 1px solid #777; padding-bottom: 1.5mm; font-size: 10pt; }
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 4mm;
+  align-items: center;
+  margin: 5mm 0;
+}
+
+.timeline__item {
+  border: 1.5px solid #555;
+  border-radius: 4mm;
+  padding: 3mm 4mm;
+  display: grid;
+  gap: 1mm;
+}
+
+.timeline__item strong { font-size: 13pt; }
+.timeline__item span { font-size: 8.8pt; line-height: 1.35; }
+.timeline__arrow { font-size: 18pt; font-weight: 800; }
+
+.periods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+}
+
+.period {
+  border: 1px solid #bbb;
+  border-radius: 3mm;
+  padding: 4mm;
+  min-width: 0;
+}
+
+.period h2 {
+  margin: 0 0 2mm;
+  font-size: 16pt;
+  border-left: 5px solid #444;
+  padding-left: 2.5mm;
+}
+
+.lead {
+  margin: 0 0 3mm;
+  padding: 2.5mm 3mm;
+  background: #f3f3f3;
+  font-size: 9.6pt;
+  line-height: 1.45;
+}
+
+.period ul {
+  margin: 0;
+  padding-left: 5mm;
+  font-size: 9.4pt;
+  line-height: 1.55;
+}
+
+.period li + li { margin-top: 2mm; }
+
+.core-term {
+  color: #d40000;
+  font-weight: 800;
+}
+
+.answer-term {
+  color: #d40000;
+  font-weight: 800;
+  border-bottom: 1px solid #d40000;
+  padding: 0 .2em;
+}
+
+.blank {
+  display: inline-block;
+  width: var(--blank-ch, 7ch);
+  height: 1.15em;
+  vertical-align: -.08em;
+  border-bottom: 1.5px solid #111;
+  margin: 0 .15em;
+}
+
+.image-grid {
+  display: grid;
+  gap: 2.5mm;
+  margin-top: 4mm;
+}
+
+.image-grid--1 { grid-template-columns: 1fr; }
+.image-grid--2,
+.image-grid--3,
+.image-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.source-image {
+  margin: 0;
+  min-width: 0;
+  border: 1px solid #ddd;
+  padding: 1.5mm;
+}
+
+.source-image img {
+  display: block;
+  width: 100%;
+  height: 35mm;
+  object-fit: contain;
+  background: #fafafa;
+}
+
+.image-grid--3 .source-image img { height: 25mm; }
+
+.source-image figcaption {
+  display: grid;
+  gap: .4mm;
+  margin-top: 1mm;
+  font-size: 6.4pt;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.image-label { font-size: 7.7pt; font-weight: 800; }
+.source-image a { color: inherit; text-decoration: none; }
+
+.key-point {
+  margin-top: 5mm;
+  padding: 3mm 4mm;
+  border: 2px solid #333;
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+.sources {
+  margin-top: 3mm;
+  padding-top: 2mm;
+  border-top: 1px solid #bbb;
+  font-size: 6.2pt;
+  line-height: 1.35;
+  color: #555;
+}
+
+.sources a { color: inherit; text-decoration: none; }
+
+@page { size: A4 portrait; margin: 0; }
+
+@media print {
+  :root { background: #fff; }
+  .toolbar { display: none; }
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    min-height: 0;
+    margin: 0;
+    padding: 10mm 11mm 8mm;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+}
+
+@media (max-width: 860px) {
+  .sheet {
+    width: min(100%, 210mm);
+    min-height: auto;
+    margin: 0 auto;
+  }
+  .periods { grid-template-columns: 1fr; }
+}
