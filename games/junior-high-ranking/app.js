@@ -1,5 +1,6 @@
 (() => {
   const questionPool = window.RANKING_QUESTIONS || [];
+  const audio = window.RankingAudio || {};
   const questionCount = 7;
   const ranks = [
     "一流中学生",
@@ -26,6 +27,8 @@
     index: 0,
     rankIndex: 0,
     locked: false,
+    revealed: false,
+    selectedChoice: null,
     gameOver: false
   };
 
@@ -64,6 +67,8 @@
   function renderQuestion() {
     const question = questions[state.index];
     state.locked = false;
+    state.revealed = false;
+    state.selectedChoice = null;
     state.gameOver = false;
     feedback.textContent = "";
     feedback.className = "feedback";
@@ -109,6 +114,9 @@
   }
 
   function showResult(isGameOver = false) {
+    if (typeof audio.stopBgm === "function") audio.stopBgm();
+    if (typeof audio.playFinish === "function") audio.playFinish(isGameOver);
+
     gamePanel.hidden = true;
     resultPanel.hidden = false;
     resultPanel.classList.toggle("game-over", isGameOver);
@@ -125,30 +133,53 @@
 
   function selectChoice(choiceIndex) {
     if (state.locked) return;
+
     state.locked = true;
+    state.selectedChoice = choiceIndex;
 
-    const question = questions[state.index];
+    if (typeof audio.startBgm === "function") audio.startBgm();
+    if (typeof audio.playSelect === "function") audio.playSelect();
+
     const buttons = [...choices.querySelectorAll(".choice-button")];
-    const selectedButton = buttons[choiceIndex];
-
     buttons.forEach((button) => {
       button.disabled = true;
     });
+    buttons[choiceIndex].classList.add("selected");
+
+    feedback.textContent = "選択しました。結果発表を押してください。";
+    feedback.className = "feedback selected-feedback";
+    nextButton.textContent = "結果発表";
+    nextButton.hidden = false;
+  }
+
+  function revealAnswer() {
+    if (!state.locked || state.revealed || state.selectedChoice === null) return;
+
+    state.revealed = true;
+    const question = questions[state.index];
+    const choiceIndex = state.selectedChoice;
+    const buttons = [...choices.querySelectorAll(".choice-button")];
+    const selectedButton = buttons[choiceIndex];
+
+    selectedButton.classList.remove("selected");
 
     if (choiceIndex === question.answer) {
       selectedButton.classList.add("correct");
       feedback.textContent = `正解！ ${question.explanation}`;
-      feedback.classList.add("correct-feedback");
+      feedback.className = "feedback correct-feedback";
+      if (typeof audio.playCorrect === "function") audio.playCorrect();
     } else if (choiceIndex === question.absoluteWrong) {
       state.rankIndex = clampRank(state.rankIndex + 3);
       selectedButton.classList.add("absolute-wrong");
       feedback.textContent = `絶対アカン！ 3ランクダウン。${question.explanation}`;
-      feedback.classList.add("absolute-feedback");
+      feedback.className = "feedback absolute-feedback";
+      if (typeof audio.playAbsoluteWrong === "function") audio.playAbsoluteWrong();
     } else {
       state.rankIndex = clampRank(state.rankIndex + 1);
       selectedButton.classList.add("wrong");
       feedback.textContent = `不正解。1ランクダウン。${question.explanation}`;
-      feedback.classList.add("wrong-feedback");
+      feedback.className = "feedback wrong-feedback";
+      if (typeof audio.playWrong === "function") audio.playWrong();
     }
 
     buttons[question.answer].classList.add("answer");
@@ -160,33 +191,43 @@
       feedback.textContent += " 映す価値なし。ゲームオーバー。";
       nextButton.textContent = "GAME OVER";
       nextButton.classList.add("game-over-button");
-      nextButton.hidden = false;
       return;
     }
 
-    nextButton.textContent = state.index === questions.length - 1 ? "結果を見る" : "次の問題";
-    nextButton.hidden = false;
+    nextButton.textContent = state.index === questions.length - 1 ? "最終結果を見る" : "次の問題";
   }
 
   nextButton.addEventListener("click", () => {
     if (!state.locked) return;
+
+    if (!state.revealed) {
+      revealAnswer();
+      return;
+    }
+
     if (state.gameOver) {
       showResult(true);
       return;
     }
+
     if (state.index >= questions.length - 1) {
       showResult(false);
       return;
     }
+
     state.index += 1;
     renderQuestion();
   });
 
   restartButton.addEventListener("click", () => {
+    if (typeof audio.stopBgm === "function") audio.stopBgm();
+
     questions = selectQuestions();
     state.index = 0;
     state.rankIndex = 0;
     state.locked = false;
+    state.revealed = false;
+    state.selectedChoice = null;
     state.gameOver = false;
     resultPanel.hidden = true;
     resultPanel.classList.remove("game-over");
