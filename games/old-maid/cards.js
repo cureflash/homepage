@@ -1,9 +1,9 @@
 export const OLD_MAID_CONFIG = {
-  pairCount: 4,
-  handSize: 9,
+  normalPairCount: 4,
 };
 
 // 都道府県名と都道府県庁所在地名が異なる組だけを収録する。
+// 埼玉県・東京都は出題対象から除外する。
 export const PREFECTURE_CAPITAL_PAIRS = [
   { id: "hokkaido", prefecture: "北海道", capital: "札幌市" },
   { id: "iwate", prefecture: "岩手県", capital: "盛岡市" },
@@ -11,8 +11,6 @@ export const PREFECTURE_CAPITAL_PAIRS = [
   { id: "ibaraki", prefecture: "茨城県", capital: "水戸市" },
   { id: "tochigi", prefecture: "栃木県", capital: "宇都宮市" },
   { id: "gunma", prefecture: "群馬県", capital: "前橋市" },
-  { id: "saitama", prefecture: "埼玉県", capital: "さいたま市" },
-  { id: "tokyo", prefecture: "東京都", capital: "新宿区" },
   { id: "kanagawa", prefecture: "神奈川県", capital: "横浜市" },
   { id: "ishikawa", prefecture: "石川県", capital: "金沢市" },
   { id: "yamanashi", prefecture: "山梨県", capital: "甲府市" },
@@ -26,7 +24,7 @@ export const PREFECTURE_CAPITAL_PAIRS = [
   { id: "okinawa", prefecture: "沖縄県", capital: "那覇市" },
 ];
 
-// ババとして混ぜる、今回の正解ペアには含まれない都道府県名。
+// ババとして混ぜる、正解ペアには含まれない都道府県名。
 export const ODD_PREFECTURES = [
   "青森県",
   "秋田県",
