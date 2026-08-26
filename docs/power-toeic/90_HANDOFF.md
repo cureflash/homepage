@@ -2,7 +2,7 @@
 
 ## Current state
 
-**Phase 3 is complete. The exact next APP TRACK task is Phase 4 / Task 4.1 — platform-neutral workout recipe model.**
+**Phase 4 / Tasks 4.1–4.4 are complete. The exact next APP TRACK task is Phase 4 / Task 4.5 — user-editable workout editor.**
 
 The Power TOEIC app/UI track remains separate from production taxonomy/question generation and QA. This work did not edit production question data.
 
@@ -16,107 +16,100 @@ The Web reference implementation now includes:
 - semantic character/audio `AssetCatalog`;
 - versioned browser persistence through `VersionedAppStore`;
 - deterministic mastery snapshots;
-- deterministic weakness ranking.
+- deterministic weakness ranking;
+- common platform-neutral `WorkoutRecipe` model;
+- deterministic question selection through `QuestionBankRepository`;
+- QUICK / TRAINING / POWER / TEST / REVIEW presets through the same recipe model;
+- WEAKNESS recipe generation from ranked weakness evidence.
 
-## Phase 3.1 persistence
+## Phase 4.1 WorkoutRecipe
 
-`js/core/persistence.js` owns the versioned root:
+Added `subjects/english/power-toeic/js/core/workout-builder.js`.
+
+Canonical recipe fields are JSON/Codable-friendly:
 
 ```text
-version: 1
-attempts: []
-reviewEntries: []
-progression: { points, stage }
+mode
+totalCount
+skillAllocations[] { skillId, count | weight }
+selectionPolicy
+labelPolicy
+seed
+endless
 ```
 
-Invalid JSON, unsupported versions and storage API failures fall back safely. Session attempts are persisted through this boundary; correctness/session state does not depend on persistence.
+Validation rejects unsupported modes/policies, non-positive total counts, negative/non-integer seeds, duplicate skill allocations, entries that specify both/neither `count` and `weight`, explicit counts exceeding the total, TEST recipes that expose skill labels, and REVIEW recipes that do not use `review_due` selection.
 
-Focused persistence verification: **5 tests passed, 0 failed**.
+Returned recipes and allocation entries are frozen after construction. System weakness recommendations and future user-edited recipes use exactly this same model.
 
-## Phase 3.2 mastery engine
+## Phase 4.2 deterministic selector
 
-Added:
+`selectQuestionIds(...)` consumes only the repository contract plus recipe/history metadata. It does not know fixture/production storage details.
 
-`subjects/english/power-toeic/js/core/mastery.js`
+Policy implemented:
 
-Initial deterministic/configurable rules:
+1. restrict by requested skill allocation when present;
+2. prefer unseen eligible questions;
+3. among seen questions, prefer least-recently-seen;
+4. use stable seed hashing for deterministic tie-breaking;
+5. prevent duplicate IDs inside a finite session;
+6. fill remaining capacity from the broader repository pool when an allocation is underfilled;
+7. REVIEW mode restricts selection to supplied due-review IDs.
 
-- states exposed now: `unknown`, `training`, `weak`;
-- `minimumAttempts = 4`;
-- `recentWindow = 8`;
-- `weakAccuracyThreshold = 0.60`;
-- zero evidence -> `unknown`;
-- some evidence below minimum sample -> `training`;
-- enough evidence with recent accuracy below threshold -> `weak`;
-- enough evidence at/above threshold -> `training`.
+The selector returns a frozen ID list and never mutates question records or mastery state.
 
-Important: Phase 3 deliberately does **not** expose `mastered`. Concentrated/labeled practice alone can never create a permanent mastered state. The snapshot already reserves deterministic `mixed` and `review` evidence counters so Phase 5 can introduce the transfer/review gate without redesigning the domain model.
+## Phase 4.3 presets
 
-Each snapshot includes overall attempts/correct/accuracy, recent-window equivalents, plus mixed/review evidence summaries. The engine consumes plain attempt history and external `skillId`; it has no DOM, character or question-generation dependency.
+`createPresetRecipe(...)` now resolves these modes through the same model:
 
-## Phase 3.3 weakness ranking
+- QUICK: default 10;
+- TRAINING: default 30 and requires a skill ID;
+- POWER: default 100 and requires a skill ID;
+- TEST: default 30 with `hide_skill` label policy;
+- REVIEW: default 30 with `review_due` selection.
 
-Added:
+No separate quiz engine was introduced.
 
-`subjects/english/power-toeic/js/core/weakness.js`
+## Phase 4.4 weakness recipes
 
-Ranking is deterministic and explainable:
-
-- only attempted skills are ranked;
-- unattempted/unknown skills are not mislabeled as demonstrated weakness;
-- score uses recent error evidence with higher weight plus overall error evidence;
-- a demonstrated `weak` mastery state adds a small explicit bonus;
-- ties resolve by sample count then stable skill ID ordering.
-
-This produces a ranked skill list suitable for the later weakness workout builder, but does not itself choose questions or mutate mastery.
+`createWeaknessWorkoutRecipe(...)` accepts the deterministic ranked weakness output and converts the top demonstrated weak skills into weighted allocations. Defaults are 30 questions across at most three skills. The result is an ordinary `WorkoutRecipe`, so the forthcoming editor does not need a separate weakness-specific data model.
 
 ## Verification
 
-Added:
+Added `subjects/english/power-toeic/tests/workout-builder.test.js`.
 
-`subjects/english/power-toeic/tests/mastery-weakness.test.js`
+Focused Node verification against the exact new source and existing in-memory repository contract: **4 tests passed, 0 failed**.
 
-Focused tests cover:
+Coverage includes:
 
-1. no evidence / insufficient evidence / weak / improving-training state distinction;
-2. mixed/review evidence capture without promoting practice to mastered;
-3. deterministic snapshot ordering including requested unknown skill IDs;
-4. weakness ranking excluding unknown skills and prioritizing stronger error evidence.
+1. recipe immutability/serialization and invalid duplicate/TEST-policy rejection;
+2. deterministic selection, unseen preference, per-skill allocation and no duplicate IDs;
+3. QUICK/TRAINING/POWER/TEST/REVIEW preset normalization plus due-only REVIEW selection;
+4. WEAKNESS weighting resolving 3:1 allocation through the same selector.
 
-Result: **4 focused mastery/weakness tests passed, 0 failed** using Node's built-in test runner against the exact new source.
-
-Previously established tests remain unchanged:
+Previously established verification remains:
 
 - Phase 2 adapter/session/renderer/asset contracts: 9 passed;
-- Phase 3.1 persistence: 5 passed.
-
-## Current core tree
-
-```text
-subjects/english/power-toeic/js/core/
-  session.js
-  persistence.js
-  mastery.js
-  weakness.js
-```
+- Phase 3.1 persistence: 5 passed;
+- Phase 3.2/3.3 mastery/weakness: 4 passed.
 
 ## Exact next work
 
-### Task 4.1 — platform-neutral workout recipe model
+### Task 4.5 — user-editable workout editor
 
-Create `js/core/workout-builder.js` or a smaller recipe/model module first.
+Build a mobile-first editor that edits a `WorkoutRecipe`, not fixed question IDs.
 
 Requirements:
 
-1. one common recipe representation for QUICK / TRAINING / POWER / WEAKNESS / CUSTOM / TEST / REVIEW;
-2. recipe contains total desired count, skill allocations/weights, selection policy, label/mixed presentation policy and deterministic seed where needed;
-3. validation rejects impossible/negative counts and duplicate/conflicting skill entries;
-4. system-generated weakness recipes and user-edited recipes use exactly the same model;
-5. no recipe owns fixed rendered DOM or character state;
-6. keep JSON/Codable-friendly field shapes for later Swift port;
-7. table-test serialization/validation before adding selection behavior.
+1. accept both system-generated WEAKNESS recipes and manually-created CUSTOM/TRAINING recipes;
+2. allow add/remove skill allocation and count adjustment;
+3. keep total count and allocations valid before start;
+4. normalize edited output through `createWorkoutRecipe(...)` so machine/user recipes share one validation path;
+5. use broad learner-facing skill/category labels supplied by the repository; do not expose dozens of raw micro-skill IDs at once;
+6. keep DOM/UI code separate from the recipe domain module;
+7. add focused editor tests for add/remove/count changes and invalid states.
 
-After 4.1, proceed to **4.2 deterministic question selector through `QuestionBankRepository`** if safe.
+After 4.5, proceed to 4.6 finite 10/30/50/100 and bounded-chunk endless session behavior if safe.
 
 ## Fixed decisions
 
