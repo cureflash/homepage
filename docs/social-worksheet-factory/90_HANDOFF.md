@@ -8,75 +8,92 @@
 - Normal target: **20 newly generated units per run**
 - Fact-check policy: manual/later batch; do not alternate automatically
 - Verified learner-facing coverage remains through: Meiji state / industrialization
-- Pending backlog count: 31 units
+- Pending backlog count: **51 units**
 - Junior-high history generation queue: complete
 - Junior-high civics generation queue: complete
-- Current high-school course: `歴史総合`
-- Next generation start: C(4) `国際秩序の変化や大衆化と現代的な諸課題`
+- `歴史総合` generation queue: complete
+- Current high-school course: `日本史探究`
+- Next generation start: B `中世の日本と世界`, first worksheet `japanese-history-medieval-transition`
 - Public selector remains verified-only; pending datasets must not be registered there.
 
-## Throughput policy — 20 units per run
+## Latest completed GENERATE batch — 20 units
 
-The previous 10-unit target is retired. Normal scheduled runs now target **20 sequential generated worksheet units**.
+This run completed the required 20 sequential units: the final seven `歴史総合` worksheets followed immediately by the first thirteen `日本史探究` worksheets.
 
-Rules:
+### Final 7 歴史総合
 
-1. Resume from the first ungenerated curriculum item.
-2. Generate 20 new units before ending a normal run whenever there is no genuine blocker.
-3. Crossing a course or school-stage boundary is expected when needed to reach 20.
-4. If the next high-school formal course does not yet have a detailed production queue, expand that queue first from current MEXT curriculum/commentary, then continue generation in the same run.
-5. Queue planning does **not** count as one of the 20 worksheet units.
-6. Keep every new fact, sentence, key-point/timeline claim and image record `pending_factcheck`.
-7. Append new unit IDs to `STATUS.json.unverified_backlog`.
-8. Do not add pending units to the public selector.
-9. Do not automatically FACTCHECK; independent verification remains a later explicit batch.
-10. Only a real technical/source blocker justifies stopping below 20, and the blocker must be written precisely into this handoff.
+1. `history-comprehensive-massification-contemporary-issues`
+2. `history-comprehensive-globalization-questions`
+3. `history-comprehensive-cold-war-decolonization`
+4. `history-comprehensive-high-growth-order-change`
+5. `history-comprehensive-cold-war-end-regional-integration`
+6. `history-comprehensive-market-information-globalization`
+7. `history-comprehensive-contemporary-issues-outlook`
 
-## Latest completed GENERATE batch — 10 `歴史総合` units
+### First 13 日本史探究
 
-Latest `main` already contains these generated units. They are all `pending_factcheck`; do not duplicate them.
+8. `japanese-history-paleolithic-environment`
+9. `japanese-history-jomon-society`
+10. `japanese-history-yayoi-agriculture`
+11. `japanese-history-yayoi-polities-exchange`
+12. `japanese-history-kofun-yamato`
+13. `japanese-history-ancient-sources-outlook`
+14. `japanese-history-asuka-state-formation`
+15. `japanese-history-ritsuryo-state`
+16. `japanese-history-nara-government-society`
+17. `japanese-history-tenpyo-culture-east-asia`
+18. `japanese-history-early-heian-rule`
+19. `japanese-history-sekkan-politics`
+20. `japanese-history-shoen-warrior-rise`
 
-1. B(1) `近代化への問い` — `history-comprehensive-modernization-questions`
-2. B(2)-a `18世紀のアジアの経済と社会` — `history-comprehensive-18c-asia-economy-society`
-3. B(2)-b `産業革命・世界市場・中国の開港・日本の開国` — `history-comprehensive-industrial-revolution-world-market-opening`
-4. B(3) `国民国家と明治維新` — `history-comprehensive-nation-state-meiji-restoration`
-5. B(4) `近代化と現代的な諸課題` — `history-comprehensive-modernization-contemporary-issues`
-6. C(1) `国際秩序の変化や大衆化への問い` — `history-comprehensive-massification-questions`
-7. C(2)-a `第一次世界大戦と国際協調体制` — `history-comprehensive-wwi-international-cooperation`
-8. C(2)-b `大衆社会の形成と社会参加の拡大` — `history-comprehensive-mass-society-participation`
-9. C(3)-a `世界恐慌・国際協調体制の動揺` — `history-comprehensive-world-depression-cooperation-crisis`
-10. C(3)-b `第二次世界大戦と戦後国際秩序` — `history-comprehensive-wwii-postwar-order`
+All 20 remain `pending_factcheck`. None were added to the learner-facing selector. No independent FACTCHECK was performed.
 
-These ten raised the accumulated unverified backlog to 31 units. The datasets passed generation-stage syntax/structure validation noted in the prior handoff, but they remain unverified and learner-facing publication is unchanged.
+## 日本史探究 queue
 
-## Exact next 20-unit run
+`20_EXECUTION_PLAN.md` now contains the ordered 63-unit worksheet queue for `日本史探究`, grounded in the current MEXT section structure A `原始・古代の日本と東アジア`, B `中世の日本と世界`, C `近世の日本と世界`, D `近現代の地域・日本と世界`. The first 13 A-section worksheets are generated. Continue with B item 14.
 
-Finish the remaining seven `歴史総合` units first:
+The A-section split intentionally keeps formal MEXT parent metadata while using smaller low-density worksheet units. The generated files use `formalCourse: 日本史探究` and `formalPlacement` for the corresponding A(1), A(2), or A(3) parent.
 
-1. C(4) 国際秩序の変化や大衆化と現代的な諸課題
-2. D(1) グローバル化への問い
-3. D(2)-a 冷戦と植民地独立
-4. D(2)-b 高度経済成長・国際秩序の変容
-5. D(3)-a 冷戦終結・地域統合
-6. D(3)-b 市場経済の変容・情報通信・グローバル化
-7. D(4) 現代的な諸課題の形成と展望
+## Backlog / publication state
 
-After unit 7, `歴史総合` generation is complete. Continue immediately into `日本史探究` within the same run:
+- Previous pending backlog: 31
+- Newly generated: 20
+- Current pending backlog: 51
+- Verified-through marker remains `meiji-state-industrialization`
+- `subjects/social/worksheets/index.html` was deliberately not changed.
 
-- expand `日本史探究` into an ordered production queue using the current MEXT High School Course of Study Commentary for Geography and History;
-- preserve formal MEXT section/subsection metadata and `formalCourse: 日本史探究`;
-- do not assign the formal course to a fixed school year;
-- generate the **first 13 sequential `日本史探究` worksheet units** from the newly recorded queue.
+## Generation-stage evidence
 
-That produces the required total of 20 units for the run: 7 remaining `歴史総合` + 13 `日本史探究`.
+Primary curriculum anchor: 文部科学省『高等学校学習指導要領（平成30年告示）解説 地理歴史編』. The current commentary identifies `日本史探究` as a course building on `歴史総合`, and its A-section contains (1) 黎明期の日本列島と歴史的環境, (2) 歴史資料と原始・古代の展望, and the subsequent ancient-state/social development study. The B/C/D large-section order is preserved in the execution queue.
 
-If MEXT's structure is too broad for low-density A4 sheets, split broad middle sections into sensible worksheet-sized subunits, but record the formal MEXT parent placement in every dataset. Queue-definition work does not count toward the 13 generated `日本史探究` units.
+These sources support generation-stage placement only. Every factual sentence and any future image reuse still requires an independent later FACTCHECK batch before publication.
 
-## Backlog expectation
+## Exact next run
 
-Current backlog: 31 units. If the next 20-unit run completes before any explicit FACTCHECK, expected backlog becomes 51 units.
+Start at `日本史探究` B `中世の日本と世界` and target the next 20 queue items, beginning with:
 
-All new material remains `pending_factcheck`. Later, when the user requests FACTCHECK, independently reopen MEXT and authoritative primary/curatorial/government sources, verify exact image provenance/licenses, correct or reject unsupported claims, and publish only units that pass.
+1. 中世への転換：院政・武士の政治進出
+2. 中世への転換：土地支配の変容
+3. 歴史資料と中世の展望
+4. 鎌倉幕府の成立と公武関係
+5. 御家人制と土地支配
+6. 宋との交流と中世経済
+7. 元寇と鎌倉幕府の変容
+8. 鎌倉新仏教と中世文化
+9. 建武政権・南北朝内乱
+10. 室町幕府と守護大名
+11. 日明貿易と東アジア
+12. 琉球王国と列島周辺の交流
+13. 農業・商工業・流通の発達
+14. 村落・都市の自立
+15. 応仁の乱と戦国大名
+16. 室町文化・地域文化・文化の融合
+17. 近世への転換：戦国社会と統一
+18. ヨーロッパ人来航と世界の結び付き
+19. 歴史資料と近世の展望
+20. 織豊政権と統一事業
+
+Continue across the B→C boundary as shown; do not stop at the course subsection boundary merely because B completes.
 
 ## Generator / validation discipline
 
@@ -86,4 +103,4 @@ All new material remains `pending_factcheck`. Later, when the user requests FACT
 - Use real historical/official source images where useful; never AI-generated historical images.
 - Record generation-stage image source/license candidates, then independently recheck them before publication.
 - Reconcile latest `main` before shared writes.
-- Before ending every run, update `STATUS.json` and this handoff with the generated unit list, backlog count and exact next ungenerated curriculum item.
+- Before ending every run, update `STATUS.json` and this handoff with generated unit list, backlog count, and exact next ungenerated curriculum item.
