@@ -22,7 +22,10 @@ permissions:
   contents: write
 
 concurrency:
-  group: science-physics-basic-publish
+  # v2 bypasses the stale pending lock left by the pre-heat publication run.
+  # The workflow still checks and publishes latest main, so concurrent recovery
+  # attempts cannot safely overwrite a newer main commit.
+  group: science-physics-basic-publish-v2
   cancel-in-progress: false
 
 jobs:
