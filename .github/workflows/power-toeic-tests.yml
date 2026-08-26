@@ -1,0 +1,27 @@
+name: Power TOEIC tests
+
+on:
+  pull_request:
+    paths:
+      - 'subjects/english/power-toeic/**'
+      - 'docs/power-toeic/**'
+      - '.github/workflows/power-toeic-tests.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'subjects/english/power-toeic/**'
+      - 'docs/power-toeic/**'
+      - '.github/workflows/power-toeic-tests.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: subjects/english/power-toeic
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
