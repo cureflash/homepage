@@ -2,8 +2,8 @@
   "project": "Power TOEIC",
   "status": "in_progress",
   "track": "app_ui_program",
-  "phase": 3,
-  "active_task": "3.2",
+  "phase": 4,
+  "active_task": "4.1",
   "next_role": "implementation",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
@@ -15,7 +15,6 @@
   },
   "content_database_track": "external_scheduler",
   "app_track_content_policy": "do not author or scale production question DB; only define consumer adapter/contracts and tiny synthetic fixtures",
-  "reuse_decision": "reuse the proven core/renderers/data/tests separation and ChoiceRenderer contract; do not cross-import the timed social QuizEngine",
   "mvp_scope": "TOEIC Part 5 four-choice cloze runtime",
   "architecture_policy": "Web first in static HTML/CSS/Vanilla JS ES modules; then native Swift/SwiftUI using the same domain boundaries and conformance fixtures",
   "runtime_ai": false,
@@ -44,9 +43,22 @@
     "root_fields": ["attempts", "reviewEntries", "progression"],
     "invalid_or_unsupported_policy": "reset safely to default root"
   },
-  "last_completed_task": "3.1",
-  "phase0_audit": "docs/power-toeic/PHASE0_REUSE_AUDIT.md",
+  "mastery": {
+    "module": "subjects/english/power-toeic/js/core/mastery.js",
+    "states": ["unknown", "training", "weak"],
+    "minimum_attempts": 4,
+    "recent_window": 8,
+    "weak_accuracy_threshold": 0.6,
+    "mixed_review_evidence_reserved": true,
+    "practice_only_mastered": false
+  },
+  "weakness": {
+    "module": "subjects/english/power-toeic/js/core/weakness.js",
+    "policy": "rank attempted skills deterministically from recent and overall error evidence; exclude unknown/unattempted skills"
+  },
+  "last_completed_task": "3.3",
   "phase2_test_result": "9 Node tests passed: adapter/session/renderer/asset-catalog contracts",
   "phase3_1_test_result": "5 focused persistence tests passed",
-  "updated_at": "2026-08-26T23:48:00+09:00"
+  "phase3_2_3_test_result": "4 focused mastery/weakness tests passed",
+  "updated_at": "2026-08-26T23:54:00+09:00"
 }
