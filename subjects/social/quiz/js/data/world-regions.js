@@ -1,22 +1,38 @@
 export const WORLD_REGIONS = Object.freeze([
-  { id: "east-asia", label: "東アジア", west: 72, east: 151, north: 56, south: 17 },
-  { id: "southeast-asia", label: "東南アジア", west: 88, east: 142, north: 31, south: -13 },
-  { id: "south-asia", label: "南アジア", west: 59, east: 97, north: 38, south: -2 },
-  { id: "west-central-asia", label: "西・中央アジア", west: 23, east: 91, north: 58, south: 9 },
-  { id: "north-west-europe", label: "北・西ヨーロッパ", west: -26, east: 31, north: 73, south: 40 },
-  { id: "central-south-europe", label: "中・南ヨーロッパ", west: -12, east: 41, north: 56, south: 33 },
-  { id: "east-europe", label: "東ヨーロッパ・ロシア", west: 17, east: 66, north: 73, south: 39 },
-  { id: "north-africa", label: "北アフリカ", west: -20, east: 41, north: 39, south: 13 },
-  { id: "west-central-africa", label: "西・中部アフリカ", west: -21, east: 33, north: 26, south: -18 },
-  { id: "east-south-africa", label: "東・南部アフリカ", west: 17, east: 61, north: 19, south: -39 },
-  { id: "north-central-america", label: "北・中央アメリカ", west: -171, east: -50, north: 82, south: 4 },
-  { id: "caribbean", label: "カリブ海地域", west: -91, east: -57, north: 31, south: 7 },
-  { id: "south-america", label: "南アメリカ", west: -91, east: -28, north: 16, south: -59 },
-  { id: "oceania-west", label: "オセアニア西部", west: 108, east: 185, north: 16, south: -51 },
-  { id: "pacific-islands", label: "太平洋島しょ部", west: 125, east: 195, north: 30, south: -32, wrapDateline: true }
+  { id: "asia", label: "アジア" },
+  { id: "europe", label: "ヨーロッパ" },
+  { id: "africa", label: "アフリカ" },
+  { id: "north-america", label: "北アメリカ" },
+  { id: "south-america", label: "南アメリカ" },
+  { id: "oceania", label: "オセアニア" }
 ]);
 
+export const SUBREGIONS_BY_WORLD_REGION = Object.freeze({
+  asia: Object.freeze(["east-asia", "southeast-asia", "south-asia", "west-central-asia"]),
+  europe: Object.freeze(["north-west-europe", "central-south-europe", "east-europe"]),
+  africa: Object.freeze(["north-africa", "west-central-africa", "east-south-africa"]),
+  "north-america": Object.freeze(["north-central-america", "caribbean"]),
+  "south-america": Object.freeze(["south-america"]),
+  oceania: Object.freeze(["oceania-west", "pacific-islands"])
+});
+
 export const REGIONS_BY_ID = new Map(WORLD_REGIONS.map((region) => [region.id, region]));
+export const WORLD_REGION_BY_SUBREGION = new Map(
+  Object.entries(SUBREGIONS_BY_WORLD_REGION)
+    .flatMap(([regionId, subregions]) => subregions.map((subregionId) => [subregionId, regionId]))
+);
+
+export function normalizeWorldRegionId(regionId) {
+  const value = String(regionId ?? "");
+  if (REGIONS_BY_ID.has(value)) return value;
+  return WORLD_REGION_BY_SUBREGION.get(value) ?? null;
+}
+
+export function countryBelongsToWorldRegion(country, regionId) {
+  const normalized = normalizeWorldRegionId(regionId);
+  if (!normalized) return false;
+  return WORLD_REGION_BY_SUBREGION.get(country.region) === normalized;
+}
 
 export const WORLD_GAME_MODES = Object.freeze([
   { id: "easy", label: "イージー：国名＋首都＋国旗", direction: "map", promptKind: "easy", requiresCapital: true },
