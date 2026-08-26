@@ -1,1 +1,28 @@
-(() => { const unit = {"id":"hs-history-comprehensive-modernization-questions-001","title":"近代化への問い","subtitle":"歴史総合の重要事項を日本と世界の関係から整理する","schoolStage":"high-school","field":"history","formalCourse":"歴史総合","formalPlacement":"B「近代化と私たち」(1) 近代化への問い","unit":"歴史総合","era":"18〜19世紀","practicalGradeGroup":"高校・歴史総合","factcheckStatus":"pending_factcheck","keyPoint":"産業化、政治参加、移民・植民などの資料から、近代化が社会をどう変えたかという問いを立てる。","timeline":[],"facts":[{"id":"hc-b1-f1","claim":"歴史総合B(1)では、近代化に伴う生活や社会の変化を示す資料から、生徒自身が問いを表現することが求められる。","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"},{"id":"hc-b1-f2","claim":"近代化を考える視点には、工業化、政治参加、移民・植民、交通や情報の変化などが含まれる。","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"}],"sections":[{"id":"question","heading":"資料から問いを立てる","lead":"まず変化や差異を読み取り、理由や影響を問う。","sentences":[{"id":"hc-b1-01","template":"歴史総合では、資料から読み取った変化をもとに{{問い}}を立てる。","terms":["問い"],"importance":"A","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"},{"id":"hc-b1-02","template":"近代化を考えるときは、{{工業化}}や政治参加、移民など複数の視点を使う。","terms":["工業化"],"importance":"A","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"}]},{"id":"perspective","heading":"問いを深める","lead":"原因・結果・比較・継続と変化の視点を使う。","sentences":[{"id":"hc-b1-03","template":"「なぜ変化したか」という{{因果関係}}の視点で考える。","terms":["因果関係"],"importance":"A","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"},{"id":"hc-b1-04","template":"地域や時代を比べる{{比較}}の視点も重要である。","terms":["比較"],"importance":"B","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"}]}],"images":[],"sources":[{"id":"mext-hs-history-commentary","label":"文部科学省『高等学校学習指導要領（平成30年告示）解説 地理歴史編』","url":"https://www.mext.go.jp/content/20220802-mxt_kyoiku02-100002620_03.pdf"},{"id":"ndl-modern","label":"国立国会図書館『史料にみる日本の近代』","url":"https://www.ndl.go.jp/modern/"},{"id":"jacar-modern-japan","label":"アジア歴史資料センター『近代日本とアジア』","url":"https://www.jacar.go.jp/modernjapan/"},{"id":"national-archives-modern","label":"国立公文書館 近現代史デジタル展示","url":"https://www.archives.go.jp/exhibition/digital/"},{"id":"mofa-diplomatic-archives","label":"外務省外交史料館","url":"https://www.mofa.go.jp/mofaj/annai/honsho/shiryo/"}]}; window.SOCIAL_WORKSHEET_UNITS = window.SOCIAL_WORKSHEET_UNITS || []; window.SOCIAL_WORKSHEET_UNITS.push(unit); })();
+(() => {
+  const unit = {
+    id:"hs-history-comprehensive-modernization-questions-001", title:"近代化への問い", subtitle:"資料から近代化に伴う生活や社会の変化を問いにする",
+    schoolStage:"high-school", field:"history", formalCourse:"歴史総合", formalPlacement:"B「近代化と私たち」(1) 近代化への問い", unit:"歴史総合", era:"18〜19世紀", practicalGradeGroup:"高校・歴史総合", factcheckStatus:"verified",
+    keyPoint:"交通と貿易、産業と人口、権利意識と政治参加、学校教育、労働と家族、移民などに関する資料を読み取り、近代化に伴う生活や社会の変容について自分自身の問いを表現する。",
+    timeline:[],
+    facts:[
+      { id:"hc-b1-f1", claim:"歴史総合B(1)では、近代化に伴い生活や社会が変化したことを示す資料を読み取り、比較・関連付けながら、生徒自身が考察のための問いを表現する。", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" },
+      { id:"hc-b1-f2", claim:"B(1)で例示される資料の観点には、交通と貿易、産業と人口、権利意識と政治参加や国民の義務、学校教育、労働と家族、移民などがある。", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" }
+    ],
+    sections:[
+      { id:"question", heading:"資料から問いを立てる", lead:"資料から変化を読み取り、興味や疑問、追究したいことを問いとして表現する。", sentences:[
+        { id:"hc-b1-01", template:"近代化に伴う生活や社会の変化を示す資料から、自分自身の{{問い}}を表現する。", terms:["問い"], importance:"A", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" },
+        { id:"hc-b1-02", template:"近代化への問いでは、{{交通と貿易}}、産業と人口、政治参加、学校教育、労働と家族、移民などの資料を活用する。", terms:["交通と貿易"], importance:"A", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" }
+      ]},
+      { id:"perspective", heading:"問いを深める", lead:"複数資料を比較したり関連付けたりして、読み取った変化を検討する。", sentences:[
+        { id:"hc-b1-03", template:"複数の資料を{{比較}}したり関連付けたりして、近代化に伴う変化を考える。", terms:["比較"], importance:"A", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" },
+        { id:"hc-b1-04", template:"資料から見いだした興味・関心や疑問、追究したいことを{{問い}}として表現する。", terms:["問い"], importance:"B", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" }
+      ]}
+    ],
+    images:[],
+    sources:[
+      { id:"mext-hs-history-commentary", label:"文部科学省『高等学校学習指導要領（平成30年告示）解説 地理歴史編』", url:"https://www.mext.go.jp/content/20220802-mxt_kyoiku02-100002620_03.pdf" }
+    ]
+  };
+  window.SOCIAL_WORKSHEET_UNITS = window.SOCIAL_WORKSHEET_UNITS || [];
+  window.SOCIAL_WORKSHEET_UNITS.push(unit);
+})();

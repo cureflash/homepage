@@ -2,12 +2,12 @@
   "status": "generation_complete",
   "mode": "generate_backlog",
   "school_stage": "high-school",
-  "field": "civics",
-  "formal_course": "政治・経済",
+  "field": "history",
+  "formal_course": "歴史総合",
   "active_unit": null,
   "next_role": "factcheck_manual",
   "last_completed_role": "factcheck",
-  "verified_through": "civics-cumulative-review",
+  "verified_through": "history-comprehensive-modernization-contemporary-issues",
   "generation_batch_target": 20,
   "factcheck_policy": "manual_batch",
   "last_generated_batch": [
@@ -21,23 +21,15 @@
     "political-economy-global-issues-inquiry"
   ],
   "last_factchecked_batch": [
-    "elections-political-participation",
-    "local-government",
-    "market-economy-firms-labor",
-    "money-finance",
-    "public-finance-taxation",
-    "social-security",
-    "international-society-un",
-    "civics-cumulative-review"
-  ],
-  "unverified_backlog": [
     "history-comprehensive-history-and-us",
     "history-comprehensive-characteristics-sources",
     "history-comprehensive-modernization-questions",
     "history-comprehensive-18c-asia-economy-society",
     "history-comprehensive-industrial-revolution-world-market-opening",
     "history-comprehensive-nation-state-meiji-restoration",
-    "history-comprehensive-modernization-contemporary-issues",
+    "history-comprehensive-modernization-contemporary-issues"
+  ],
+  "unverified_backlog": [
     "history-comprehensive-massification-questions",
     "history-comprehensive-wwi-international-cooperation",
     "history-comprehensive-mass-society-participation",
@@ -212,7 +204,7 @@
     "political-economy-international-cooperation-economic-institutions",
     "political-economy-global-issues-inquiry"
   ],
-  "pending_factcheck_count": 180,
+  "pending_factcheck_count": 173,
   "prototype_status": "verified",
-  "updated_at": "2026-08-26T22:02:00+09:00"
+  "updated_at": "2026-08-26T22:20:00+09:00"
 }
