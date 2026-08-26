@@ -25,13 +25,20 @@ COUNTRY_DATA = REPO_ROOT / "subjects/social/quiz/js/data/world-countries.js"
 OUT_DIR = REPO_ROOT / "subjects/social/quiz/assets/maps/world"
 MANIFEST = OUT_DIR / "manifest.json"
 
+REGION_GROUPS = {
+    "asia": ("east-asia", "southeast-asia", "south-asia", "west-central-asia"),
+    "europe": ("north-west-europe", "central-south-europe", "east-europe"),
+    "africa": ("north-africa", "west-central-africa", "east-south-africa"),
+    "north-america": ("north-central-america", "caribbean"),
+    "south-america": ("south-america",),
+    "oceania": ("oceania-west", "pacific-islands"),
+}
+
 COUNTRY_RE = re.compile(
     r'country\("(?P<code>[A-Z]{2})",\s*"(?:[^"\\]|\\.)*",\s*(?:null|"(?:[^"\\]|\\.)*"),\s*"(?P<region>[a-z0-9-]+)"'
 )
 MARKER_RE = re.compile(r"marker:\s*\[\s*(?P<lon>-?\d+(?:\.\d+)?)\s*,\s*(?P<lat>-?\d+(?:\.\d+)?)\s*\]")
 
-# Natural Earth is not obligated to use ISO alpha-2 for every political feature.
-# Keep explicit mappings narrow and auditable rather than guessing by display name.
 ADM0_A3_TO_QUIZ_CODE = {
     "KOS": "XK",
 }
@@ -39,7 +46,7 @@ ADM0_A3_TO_QUIZ_CODE = {
 
 def parse_quiz_geography():
     text = COUNTRY_DATA.read_text(encoding="utf-8")
-    regions = {}
+    detailed = {}
     markers = {}
     for line in text.splitlines():
         match = COUNTRY_RE.search(line)
@@ -47,20 +54,30 @@ def parse_quiz_geography():
             continue
         code = match.group("code")
         region = match.group("region")
-        regions.setdefault(region, []).append(code)
+        detailed.setdefault(region, []).append(code)
         marker_match = MARKER_RE.search(line)
         if marker_match:
             markers[code] = (float(marker_match.group("lon")), float(marker_match.group("lat")))
-    if len(regions) < 10:
-        raise RuntimeError(f"Could not parse world regions from {COUNTRY_DATA}")
-    return {region: sorted(set(codes)) for region, codes in regions.items()}, markers
+
+    expected_subregions = {item for group in REGION_GROUPS.values() for item in group}
+    missing_subregions = sorted(expected_subregions - set(detailed))
+    if missing_subregions:
+        raise RuntimeError(f"Country data is missing expected subregions: {missing_subregions}")
+
+    regions = {}
+    for region, subregions in REGION_GROUPS.items():
+        codes = []
+        for subregion in subregions:
+            codes.extend(detailed[subregion])
+        regions[region] = sorted(set(codes))
+    return regions, markers
 
 
 def download_source():
     last_error = None
     for url in SOURCE_URLS:
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": "cureflash-homepage-map-builder/2.0"})
+            request = urllib.request.Request(url, headers={"User-Agent": "cureflash-homepage-map-builder/3.0"})
             with urllib.request.urlopen(request, timeout=60) as response:
                 data = response.read()
             if not zipfile.is_zipfile(io.BytesIO(data)):
@@ -161,7 +178,7 @@ def xml_escape(value):
 
 
 def build_region_svg(region, codes, feature_paths, feature_points, markers):
-    wrap_dateline = region == "pacific-islands"
+    wrap_dateline = region == "oceania"
     points = []
     path_elements = []
 
@@ -243,14 +260,14 @@ def main():
         old.unlink()
 
     generated = {}
-    for region, codes in sorted(memberships.items()):
-        payload, _ = build_region_svg(region, codes, feature_paths, feature_points, markers)
+    for region, codes in REGION_GROUPS.items():
+        payload, _ = build_region_svg(region, memberships[region], feature_paths, feature_points, markers)
         path = OUT_DIR / f"{region}.svg"
         path.write_bytes(payload)
         generated[region] = {
             "file": path.name,
             "bytes": len(payload),
-            "countries": len(codes),
+            "countries": len(memberships[region]),
             "sha256": hashlib.sha256(payload).hexdigest(),
         }
 
@@ -265,14 +282,15 @@ def main():
         "projection": "Web Mercator",
         "worldCoordinateSize": WORLD_SIZE,
         "markerFallbackCodes": tolerated,
+        "regionModel": "six-major-regions",
         "regions": generated,
     }
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     total = sum(item["bytes"] for item in generated.values())
-    largest = sorted(generated.items(), key=lambda item: item[1]["bytes"], reverse=True)[:5]
-    print(f"Generated {len(generated)} local Web Mercator region SVGs ({total} bytes total)")
-    print("Largest region files:", [(region, meta["bytes"]) for region, meta in largest])
+    largest = sorted(generated.items(), key=lambda item: item[1]["bytes"], reverse=True)[:6]
+    print(f"Generated {len(generated)} local Web Mercator major-region SVGs ({total} bytes total)")
+    print("Region files:", [(region, meta["bytes"]) for region, meta in largest])
     print("Marker-only source fallbacks:", tolerated)
     print("Natural Earth ZIP SHA256:", source_sha256)
 
