@@ -2,8 +2,8 @@
   "project": "Power TOEIC",
   "status": "in_progress",
   "track": "app_ui_program",
-  "phase": 6,
-  "active_task": "6.1",
+  "phase": 7,
+  "active_task": "7.4",
   "next_role": "implementation",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
@@ -15,26 +15,30 @@
   "runtime_ai": false,
   "target_score_feature": false,
   "body_part_skill_mapping": false,
-  "characters": { "question_giver": "drill_sergeant", "learner_avatar": "skinny_trainee", "progression": "skinny_to_muscular", "temporary_art_source": "Irasutoya", "temporary_unique_art_limit": 20 },
+  "characters": {
+    "question_giver": "drill_sergeant",
+    "learner_avatar": "skinny_trainee",
+    "temporary_art_source": "Irasutoya",
+    "temporary_unique_art_limit": 20,
+    "asset_contract": "semantic Sergeant reactions + Trainee stage 0-5 neutral/reaction fallback",
+    "presenter": "subjects/english/power-toeic/js/ui/character-presenter.js",
+    "missing_asset_policy": "text fallback; quiz remains playable"
+  },
+  "progression": {
+    "module": "subjects/english/power-toeic/js/core/progression.js",
+    "stages": [0, 1, 2, 3, 4, 5],
+    "thresholds": [0, 20, 60, 140, 280, 500],
+    "anti_spam": "wrong and repeated labeled-answer events earn zero; meaningful first-correct/mixed/review/milestone events earn points"
+  },
   "audio": { "source": "Google Drive existing SE library", "initial_correct": "otologic_correct.mp3", "initial_wrong": "otologic_incorrect.mp3", "initial_milestone": "otologic_inspiration.mp3", "license": "CC BY 4.0 / OtoLogic attribution required" },
   "asset_policy": "docs/power-toeic/50_ASSET_POLICY.md",
   "asset_catalog": "subjects/english/power-toeic/js/ui/asset-catalog.js",
   "persistence": { "module": "subjects/english/power-toeic/js/core/persistence.js", "storage_key": "power-toeic.app-state", "version": 1, "root_fields": ["attempts", "reviewEntries", "progression"], "invalid_or_unsupported_policy": "reset safely to default root" },
-  "mastery": {
-    "module": "subjects/english/power-toeic/js/core/mastery.js",
-    "states": ["unknown", "training", "weak", "mixed_pass", "reviewing", "mastered"],
-    "minimum_attempts": 4,
-    "mixed_minimum_attempts": 3,
-    "mixed_accuracy_threshold": 0.8,
-    "review_minimum_attempts": 2,
-    "review_accuracy_threshold": 0.8,
-    "practice_only_mastered": false
-  },
-  "review": { "module": "subjects/english/power-toeic/js/core/review.js", "interval_days": [1, 3, 7, 14], "failed_review_policy": "reset to next-day", "due_query": "deterministic ISO date-time boundary" },
+  "mastery": { "module": "subjects/english/power-toeic/js/core/mastery.js", "states": ["unknown", "training", "weak", "mixed_pass", "reviewing", "mastered"], "practice_only_mastered": false },
+  "review": { "module": "subjects/english/power-toeic/js/core/review.js", "interval_days": [1, 3, 7, 14], "failed_review_policy": "reset to next-day" },
   "attempt_contexts": ["training", "mixed", "review"],
-  "weakness": { "module": "subjects/english/power-toeic/js/core/weakness.js", "policy": "rank attempted skills deterministically from recent and overall error evidence; exclude unknown/unattempted skills" },
-  "workout": { "module": "subjects/english/power-toeic/js/core/workout-builder.js", "editor_model": "subjects/english/power-toeic/js/core/workout-editor-model.js", "editor_ui": "subjects/english/power-toeic/js/ui/workout-editor.js", "session_planner": "subjects/english/power-toeic/js/core/session-planner.js", "completed_tasks": ["4.1", "4.2", "4.3", "4.4", "4.5", "4.6"], "modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"], "finite_session_sizes": [10, 30, 50, 100], "endless_default_chunk_size": 30, "endless_max_chunk_size": 100 },
-  "last_completed_task": "5.3",
-  "phase5_result": "5.1 mixed presentation, 5.2 deterministic review scheduling, and 5.3 mixed/review mastery gate completed; focused presentation/review/mastery/session checks passed",
-  "updated_at": "2026-08-27T01:58:00+09:00"
+  "workout": { "module": "subjects/english/power-toeic/js/core/workout-builder.js", "completed_tasks": ["4.1", "4.2", "4.3", "4.4", "4.5", "4.6"], "modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"], "finite_session_sizes": [10, 30, 50, 100], "endless_default_chunk_size": 30, "endless_max_chunk_size": 100 },
+  "last_completed_task": "6.3",
+  "phase6_result": "6.1 semantic asset contract, 6.2 removable character composition, 6.3 deterministic persisted trainee progression completed with focused checks",
+  "updated_at": "2026-08-27T02:05:00+09:00"
 }
