@@ -4,7 +4,10 @@ import vm from "node:vm";
 import assert from "node:assert/strict";
 
 const ROOT = process.cwd();
-const pendingPath = path.join(ROOT, "qualifications/takken/data/pending-units.js");
+const pendingPaths = [
+  path.join(ROOT, "qualifications/takken/data/pending-units.js"),
+  path.join(ROOT, "qualifications/takken/data/pending-units-21-40.js")
+];
 const publicPath = path.join(ROOT, "qualifications/takken/data/public-catalog.js");
 const appPath = path.join(ROOT, "qualifications/takken/assets/app.js");
 
@@ -15,12 +18,16 @@ function runBrowserData(file) {
   return context.window;
 }
 
-const pendingWindow = runBrowserData(pendingPath);
+const firstPendingWindow = runBrowserData(pendingPaths[0]);
+const secondPendingWindow = runBrowserData(pendingPaths[1]);
 const publicWindow = runBrowserData(publicPath);
-const pending = pendingWindow.TAKKEN_PENDING_UNITS;
+const pending = [
+  ...(firstPendingWindow.TAKKEN_PENDING_UNITS || []),
+  ...(secondPendingWindow.TAKKEN_PENDING_UNITS_21_40 || [])
+];
 const published = publicWindow.TAKKEN_PUBLIC_UNITS;
 
-assert.ok(Array.isArray(pending), "TAKKEN_PENDING_UNITS must be an array");
+assert.ok(Array.isArray(pending), "combined pending catalog must be an array");
 assert.ok(Array.isArray(published), "TAKKEN_PUBLIC_UNITS must be an array");
 assert.ok(pending.length > 0, "pending catalog must contain generated units");
 
