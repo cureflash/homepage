@@ -1,28 +1,33 @@
 # Social Quiz Factory — handoff
 
-Current status: Phase 0 and Phase 1 are complete. Canonical implementation remains `subjects/social/quiz/`; old `social-quiz/` remains unused. The Japan-map visual asset has been migrated from the deformed lalamalink map to PA4KEV/japan-vector-map v1.0 without changing question answers or `QuizEngine` scoring behavior.
+Current status: Phase 0 and Phase 1 are complete. Canonical implementation remains `subjects/social/quiz/`; old `social-quiz/` remains unused. The Japan map uses PA4KEV/japan-vector-map v1.0, and the shared quiz loop now includes the requested SE and time-limit rules without moving educational content into the UI layer.
 
 Architecture status:
 
-- `QuizEngine` remains unchanged and owns only scoring, progress and state transitions.
-- The page layout/UI was not redesigned; only the Japan map asset integration and map-path styling were changed.
+- `QuizEngine` owns question order, scoring, progress, shared countdown/penalty state, and clear/game-over transitions. It still has no dependency on colors, dimensions, typography, or specific question content.
+- `QuizEffects` at `subjects/social/quiz/js/core/quiz-effects.js` owns optional audio playback. Audio failure/browser blocking does not alter scoring or timing.
+- Renderers remain answer-mode adapters only (`svg-region`, `choice`); timer and SE logic was not duplicated into renderers or question banks.
+- Default shared gameplay is 180 seconds total and -20 seconds for each wrong answer. Reaching 0 before completing all questions is game over. Answering the final question while time remains locks in a clear before the feedback-delay timer finishes.
+- An explicit 「ゲーム開始」 control starts both the countdown and the start SE, avoiding browser autoplay restrictions.
+- Shared SE assets are `assets/audio/quiz-start.mp3`, `quiz-correct.mp3`, and `quiz-wrong.mp3`, derived from the user-supplied クイズ出題2 / クイズ正解1 / クイズ不正解1 files.
 - Japan geography facts remain under `subjects/social/quiz/js/data/`, independent of presentation.
-- `JAPAN_PREFECTURE_MAP` now pins `PA4KEV/japan-vector-map` commit `6be9e705045777b7c433c429b0313f19b49d1ed4`, release v1.0, `japan-prefectures.svg`, MIT License, Copyright (c) 2023 Kevin Matsubara.
+- `JAPAN_PREFECTURE_MAP` pins `PA4KEV/japan-vector-map` commit `6be9e705045777b7c433c429b0313f19b49d1ed4`, release v1.0, `japan-prefectures.svg`, MIT License, Copyright (c) 2023 Kevin Matsubara.
 - Existing canonical answer keys remain string codes `1` through `47`.
-- PA4KEV source layer names such as `hokkaido`, `tokyo`, `osaka`, and `okinawa` are mapped onto those stable answer keys through renderer configuration. The upstream spelling `nigata` is intentionally preserved only as a source-layer key for 新潟県.
-- `SvgRegionRenderer` now supports optional `sourceKeyAttribute` + `regionKeyMap`, so an SVG's own layer names can be adapted without contaminating game/question data.
-- When source-layer mapping is active, mapped layers are forced visible and non-answer SVG shapes do not intercept pointer input. This is required because the PA4KEV source contains some hidden prefecture layers and separate island-outline layers.
-- Root `index.html` URLs did not change; all three Japan drills remain under 「学習ゲーム」.
+- Root `index.html` game URLs are unchanged; all three Japan drills remain discoverable under 「学習ゲーム」.
 
-Completed this map-migration run:
+Completed this gameplay run:
 
-- Replaced the deformed lalamalink Japan map source with PA4KEV `japan-prefectures.svg` v1.0, pinned to an immutable commit.
-- Kept all 47 prefecture/capital question answers unchanged.
-- Updated both map games (`japan-prefectures` and `japan-prefectural-capitals`) to supply source-layer mapping to the existing SVG renderer.
-- Extended `SvgRegionRenderer` with a generic source-layer-to-answer-key adapter rather than adding PA4KEV-specific logic to `QuizEngine` or question banks.
-- Updated map CSS so nested PA4KEV path geometry receives fill/hover/correct/wrong styles while retaining the existing game presentation.
-- Added regression coverage for all 47 PA4KEV source-layer mappings and for the renderer mapping helper, including namespaced `inkscape:label` fallback and hidden-layer activation.
-- Updated `subjects/social/quiz/README.md` with the new map source, pinned commit and MIT attribution.
+- Added a start screen so the timer and start SE begin only after an explicit user action.
+- Added a fourth status item for remaining time; desktop uses four columns and mobile uses a 2x2 status layout.
+- Added default `timeLimitSeconds = 180` and `wrongPenaltySeconds = 20` in the shared engine, with per-game override support for future use.
+- Correct answer: increments score and plays `quiz-correct.mp3`.
+- Wrong answer: plays `quiz-wrong.mp3`, subtracts 20 seconds immediately, and triggers game over immediately if the remaining time reaches 0.
+- Natural countdown to 0 triggers 「ゲームオーバー」 and prevents further answers.
+- Final answer submitted while time remains stops the countdown immediately; the normal feedback delay may finish before the result panel appears, but the player cannot lose after completing the final answer in time.
+- Result screen distinguishes 「クリア！」 from 「ゲームオーバー」 and includes remaining time or time-out status.
+- Updated `quiz-engine.test.js` to cover start SE, correct/wrong SE calls, 180-second initialization, -20 penalty, natural timeout, penalty-caused timeout, final-answer boundary, answer locking, restart, and shuffle behavior.
+- Targeted local Node regression checks for the timing/SE state machine passed: 5 tests, 0 failures.
+- Updated README, master instructions, architecture rules, and execution plan; Phase 0.7 is recorded complete.
 
 Next start point:
 
@@ -32,11 +37,12 @@ Next start point:
 4. Prefer a stable open dataset whose country polygons can be converted to regional SVG views and whose identifiers can be mapped to stable country IDs.
 5. Record source URL, version/date, license, attribution requirements and any known boundary caveats before importing assets.
 6. Then begin Phase 2.2: define stable country IDs and Japanese display names separately from UI/layout.
-7. Do not begin regional country games until the dataset/ID foundation is validated.
+7. All new playable games should inherit the shared 180-second / -20-second / SE loop unless the user explicitly requests different gameplay settings.
+8. Do not begin regional country games until the dataset/ID foundation is validated.
 
 Important constraints:
 
-- Preserve data / core / renderer / presentation separation.
+- Preserve data / core / renderer / effects / presentation separation.
 - Do not redesign the UI unless explicitly requested.
 - One prompt -> one intended answer.
 - Regional world maps must be large enough for reliable clicking; do not default to one tiny world map.

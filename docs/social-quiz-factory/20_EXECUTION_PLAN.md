@@ -10,6 +10,7 @@ Work strictly from top to bottom. Check off an item only after implementation an
 - [x] 0.4 Confirm `QuizEngine` has no visual-design assumptions; move any presentation-specific dependency outward if found.
 - [x] 0.5 Confirm renderers are replaceable and current UI can later be redesigned without changing question banks.
 - [x] 0.6 Add a game registry/catalog so new games can be registered without modifying core scoring logic.
+- [x] 0.7 Add shared gameplay timing/effects: explicit start, 180-second countdown, 20-second wrong-answer penalty, timeout game over, start/correct/wrong SE, and regression tests.
 
 ## Phase 1 — Japan: prefectures and capitals
 
