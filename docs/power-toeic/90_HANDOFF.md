@@ -2,37 +2,90 @@
 
 ## Current state
 
-**The Power TOEIC app/UI track is now separate from the production question-database track.**
+**Phase 2 Web common quiz-session MVP is complete. The exact next APP TRACK task is Phase 3 / Task 3.1 — versioned browser persistence.**
 
-The `Power TOEIC 開発` scheduler must focus on application/program/UI work only. Production taxonomy authoring, Gold-bank production, bulk question generation, production QA and database scaling belong to another scheduler/content track.
+The Power TOEIC app/UI track remains separate from the production question-database track. Production taxonomy authoring, Gold-bank production, bulk question generation, production QA and database scaling belong to the external content track.
 
-The exact next app-track task is:
+## Completed in Phase 2
 
-**Phase 2 / Task 2.0 — Create Web app skeleton and question-bank adapter.**
+Implemented under `subjects/english/power-toeic/`:
 
-Phase 0 reuse audit remains complete.
+- mobile-first `index.html` / `styles.css` quiz shell;
+- `QuestionBankRepository` contract plus `InMemoryQuestionBank` fixture implementation;
+- three explicitly synthetic fixture questions and two fixture skill labels;
+- deterministic `QuizSession` with an immutable started-session question-ID list;
+- per-answer attempt events containing question ID/version, skill ID, selected/correct index, correctness and response time;
+- four-choice cloze renderer with immediate correct/wrong state and concise explanation;
+- accessible result state that does not rely on color alone;
+- result screen derived only from session attempts: answered, correct, accuracy and per-skill breakdown;
+- restartable demo composition through `main.js`.
 
-## Platform plan
+No production TOEIC question content was authored by this work. Existing production taxonomy/question folders created by the external content track were left unchanged. The runtime demo consumes fixture questions only through the repository adapter.
 
-Current Web implementation uses:
+## Verification
 
-- HTML;
-- CSS;
-- Vanilla JavaScript;
-- ES Modules;
-- Node tests.
+Node tests were reconstructed and executed for the exact adapter/session/renderer source added in this checkpoint:
 
-Canonical Web path:
+- adapter tests: repository lookup/filtering and frozen records;
+- session tests: immutable started list, deterministic attempt payload, response timing, advance guard and results;
+- renderer tests: exactly four semantic buttons, answer-index forwarding, disabled post-answer state, correct/wrong textual accessibility labels.
 
-`subjects/english/power-toeic/`
+Result: **7 tests passed, 0 failed**.
 
-After the Web V1 behavior is complete and frozen with deterministic cross-platform fixtures, build a native iOS version in:
+## Current Web architecture
 
-- Swift;
-- SwiftUI;
-- standard Apple frameworks first.
+```text
+subjects/english/power-toeic/
+  index.html
+  styles.css
+  package.json
+  js/
+    core/
+      session.js
+    data/
+      question-bank-adapter.js
+      fixtures.js
+      taxonomy/        # external content track; do not edit from APP TRACK
+      questions/       # external content track; do not edit from APP TRACK
+    renderers/
+      cloze-choice.js
+    ui/
+      result.js
+    main.js
+  tests/
+    question-bank-adapter.test.js
+    session.test.js
+    cloze-choice.test.js
+```
 
-The Swift app must preserve the same domain boundaries:
+The session engine has no mandatory countdown or game-over semantics. Character presentation is still only a placeholder in the Phase 2 shell and does not own answer logic.
+
+## Exact next work
+
+### Task 3.1 — versioned browser persistence
+
+Implement a small storage adapter behind an explicit boundary. Persist at minimum:
+
+- attempt history;
+- review entries/state placeholder required by later Phase 5;
+- character progression state placeholder required by later Phase 6.
+
+Requirements:
+
+1. use a versioned root record;
+2. reject or safely reset corrupted payloads;
+3. define deterministic migration/fallback behavior for unsupported versions;
+4. keep storage API independent from DOM and question data;
+5. use injectable storage in tests so Node tests do not require a browser;
+6. wire emitted session attempts into persistence only after the storage contract is tested.
+
+After 3.1, proceed to 3.2 deterministic mastery engine and 3.3 weakness ranking if safe.
+
+## Fixed platform plan
+
+Web remains HTML/CSS/Vanilla JavaScript/ES Modules first. After Web V1 and Phase 9 cross-platform fixtures are frozen, implement native iOS in Swift + SwiftUI.
+
+Preserve responsibility mapping:
 
 ```text
 Web JS                         Swift / SwiftUI
@@ -47,62 +100,7 @@ quiz UI modules             -> SwiftUI Views
 browser persistence         -> native persistence adapter
 ```
 
-Do not translate DOM code line-by-line. Share the model/data contracts, deterministic fixtures and expected behavior.
-
-## Content boundary
-
-App-development runs may create only:
-
-- consumer-facing question/taxonomy adapter interfaces;
-- tiny synthetic fixture data needed for tests or a demo;
-- synthetic scale fixtures for performance testing.
-
-They must not spend runs writing or scaling the real TOEIC question bank.
-
-Production question data should eventually arrive through a simple platform-neutral export, preferably JSON or an equivalently stable documented format, so both JavaScript and Swift can decode the same educational content.
-
-## Phase 0 architecture decision
-
-Keep the proven social-quiz separation pattern:
-
-`core / renderers / data / presentation / tests`
-
-Do not cross-import the social quiz at runtime. Its current QuizEngine is deliberately a countdown game with wrong-answer time penalties and is not suitable as the Power TOEIC study-session core.
-
-The existing `ChoiceRenderer` interface remains a useful pattern:
-
-- `setAnswerHandler(handler)`;
-- `render(question)`;
-- `showResult(result)`.
-
-## Exact next work
-
-### Task 2.0
-
-Create the initial `subjects/english/power-toeic/` structure:
-
-```text
-index.html
-styles.css
-js/
-  core/
-  data/
-    question-bank-adapter.js
-    fixtures.js
-  renderers/
-  ui/
-  main.js
-tests/
-package.json
-```
-
-Define a narrow question-bank adapter so runtime code does not know where production questions come from.
-
-Create only a tiny synthetic fixture set sufficient to exercise the UI. Clearly identify it as test/demo data, not production TOEIC content.
-
-Add smoke/adapter tests.
-
-Then proceed directly to Task 2.1 common study-session core if safe.
+Do not translate DOM code line-by-line. Share contracts, data formats, deterministic fixtures and expected behavior.
 
 ## Fixed product behavior
 
@@ -110,7 +108,6 @@ Still canonical:
 
 - Part 5-style sentence cloze, exactly four choices;
 - fine-grained weak-skill concentration once external data supplies skill IDs;
-- user-editable weakness-generated workout recipes;
 - QUICK / TRAINING / POWER / WEAKNESS / CUSTOM / TEST / REVIEW through one session engine;
 - no target-score feature;
 - no skill-to-body-part mapping;
@@ -118,14 +115,3 @@ Still canonical:
 - Drill Sergeant presents the drill in the UI;
 - skinny Trainee represents the learner and becomes progressively more muscular;
 - characters do not own answer/mastery/workout logic.
-
-## Swift transition gate
-
-Do not begin the Swift port merely because a few Web screens exist. First complete Web V1 and Phase 9 cross-platform freeze:
-
-1. platform-neutral model definitions;
-2. deterministic conformance fixtures;
-3. expected session/mastery/review/progression behavior;
-4. documented data adapter format.
-
-Then Phase 10 starts the native Swift/SwiftUI implementation. Equivalent JavaScript and Swift fixtures must produce equivalent domain outputs.
