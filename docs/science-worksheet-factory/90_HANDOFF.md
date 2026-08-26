@@ -1,114 +1,94 @@
 # Science Worksheet Factory — handoff
 
-Updated: 2026-08-26
+Updated: 2026-08-27
 
 ## Completed this run
 
-- Started from the latest `main`, re-read the science factory control documents, all science curriculum plans, and the required shared worksheet-factory control documents. Science continues to use the shared generator/validator/PDF/catalog path rather than a competing renderer or catalog.
-- Resumed Phase 3 at formal high-school course `物理基礎`. Did not advance to `物理`, chemistry, biology or earth science.
-- Re-opened the current MEXT high-school science commentary for `物理基礎 / 物体の運動とエネルギー / 力学的エネルギー`. The commentary treats conversion between kinetic and potential energy and mechanical-energy conservation, and the existing curriculum verification remains that conservation is handled mainly under the no-friction/no-air-resistance condition.
-- Added `scripts/science_physics_basic_conservation.py` with 30 focused mechanical-energy-conservation worksheets, all 20 problems each:
-  - 10 sheets solve conserved mechanical energy `E` from later kinetic energy `K` and potential energy `U`;
-  - 10 sheets solve later kinetic energy `K` from conserved mechanical energy `E` and later potential energy `U`;
-  - 10 sheets solve later potential energy `U` from conserved mechanical energy `E` and later kinetic energy `K`.
-- Reused the already-tested shared `sum` relation as `E = K + U`. No shared science helper, common generator relation, validator relation, PDF renderer or catalog schema change was needed.
-- The learner-facing conserved-energy variable label explicitly says `摩擦・空気抵抗がないとき`, so every generated direct and reverse problem displays the relevant condition rather than relying only on worksheet metadata or description.
-- Added `tests/test_science_physics_basic_conservation.py` to validate exactly 30 variants, deterministic regeneration, independent direct/reverse recomputation, 30 unique normalized hashes, the three solve directions, and presence of the no-friction/no-air-resistance condition in every learner-facing problem string.
-- Extended `scripts/publish_science_physics_basic.py` to include the new conservation topic and extended `.github/workflows/science-physics-basic-publish.yml` to validate exactly 390 Physics Basics worksheets, including exactly 30 `mechanical-energy-conservation` entries and 170 total `力学的エネルギー` entries.
-- Re-checked `main` immediately before integration. No parallel main advance occurred between the science branch base and merge, so the four intended source/test/workflow changes were merged without overwriting unrelated Power TOEIC or other repository work.
-- PR #64 (`Add Physics Basics mechanical energy conservation worksheets`) was merged. Merge commit: `dffb0cd34350c80d36067ffd9d5d451785250d5a`.
-- GitHub Actions run `32978429745` completed successfully. All steps, including latest-main confirmation, shared/topic tests, generation, post-generation catalog/output validation, and generated commit/push, succeeded.
-- The Actions publication commit is `25869523c8e4e988c755e32c7c542f58f3a433a5` (`Publish 30 Physics Basics mechanical energy conservation worksheets`). It added the 30 PDFs and catalog rows to `main`.
+- Started from latest `main`, re-read the science factory control documents and the shared worksheet-factory rules, and resumed Phase 3 at formal high-school course `物理基礎`. No later science course was advanced.
+- Re-opened the current MEXT high-school science commentary for `物理基礎 / 様々な物理現象とエネルギーの利用 / 熱`. The current commentary explicitly includes heat and temperature, heat capacity, specific heat capacity (specific heat), heat transfer and conservation of heat quantity. NIST SI material was also checked for the coherent units used here: heat capacity J/K and specific heat capacity J/(kg·K).
+- Added `scripts/science_physics_basic_heat.py` for the first heat checkpoint, all 20 problems per worksheet:
+  - `Q = mcΔT`: 40 variants, 10 each solving `Q`, `m`, `c`, and `ΔT`;
+  - `Q = CΔT`: 20 variants, 10 solving `Q` and 10 solving `C`.
+- Used coherent SI quantities throughout this first family: `Q` in J, `m` in kg, `c` in J/(kg·K), `C` in J/K, and temperature difference `ΔT` in K. This keeps the family at formula-understanding/substitution level and avoids mixing a unit-conversion exercise into the first heat block.
+- Reused the existing shared `product` relation for both formula families. No shared helper relation, validator, PDF renderer, or catalog schema was changed.
+- Added `tests/test_science_physics_basic_heat.py`. It checks exactly 60 variants × 20 problems, deterministic regeneration, shared independent validation, 60 unique normalized hashes, all six solve directions, explicit independent arithmetic for direct/reverse forms, and requested answer units.
+- Independently reproduced the new formula generation/recomputation logic outside the committed generation path during this run. Result: 60 batches, all 20 problems, and 60/60 mutually unique normalized hashes. A repository search also found no pre-existing new heat worksheet IDs.
+- Extended `scripts/publish_science_physics_basic.py` to include heat, and extended `.github/workflows/science-physics-basic-publish.yml` so a successful publication must validate exactly 450 Physics Basics worksheets, 170 `calculation-basic`, 280 `calculation-reverse`, 40 `specific-heat-quantity`, 20 `heat-capacity`, 60 heat-unit entries, 450 unique content hashes, and the existing PDF existence/size/two-page checks.
+- PR #68 (`Add Physics Basics heat worksheets`) was merged to `main`; merge commit `3aae6b7d607f1a25b88d86c2eb9a51898b554360`.
+- Follow-up commit `8bdcad43a80b81b021cf51747bc5b828353bf4a1` only documented the deliberate `ΔT` unit convention; it did not change generation behavior.
+- Reconciled against latest `main` before recording this handoff. No unrelated repository progress was rolled back.
 
-## Changed files
+## Publication status — important
 
-Source/test/workflow changes:
+The 60 heat PDFs are **not yet counted as published**.
 
-- `scripts/science_physics_basic_conservation.py`
+The intended `Publish Physics Basics worksheets` workflow did not start for the app-authored merge/direct update. Only unrelated Pages/SEO workflows appeared for the new commits. The workflow file itself is active and contains `workflow_dispatch` plus the expected push path filters, but the connector available in this run exposes rerun operations, not a fresh workflow-dispatch operation. Re-running the previous successful Physics Basics run is not a safe substitute because that historical run uses the earlier workflow definition with the 390-sheet post-generation assertion.
+
+Therefore this run deliberately did **not** claim success, did not advance STATUS to waves, and did not manually fabricate catalog rows or binary PDFs through a divergent publication path. The source/test/workflow checkpoint is on `main`; the authoritative generated publication checkpoint remains the previous 390-PDF state until the current workflow/equivalent validated publisher actually commits the 60 PDFs and catalog rows.
+
+## Changed files now on main
+
+- `scripts/science_physics_basic_heat.py`
+- `tests/test_science_physics_basic_heat.py`
 - `scripts/publish_science_physics_basic.py`
-- `tests/test_science_physics_basic_conservation.py`
 - `.github/workflows/science-physics-basic-publish.yml`
-
-Generated publication changes:
-
-- `worksheets/catalog.json`
-- 30 new PDFs under `materials/worksheets/science/high-school/physics-basic/motion/`
 - `docs/science-worksheet-factory/STATUS.json`
 - `docs/science-worksheet-factory/90_HANDOFF.md`
 
-## Validation results
+No new heat PDF or `worksheets/catalog.json` publication commit has been recorded yet.
 
-GitHub Actions run `32978429745`: **success**.
+## Validation completed before publication
 
-The successful workflow verified:
+Completed in this run:
 
-- latest `main` matched the checked-out source before validation;
-- `python tests/test_worksheet_factory.py` -> OK;
-- `python tests/test_science_physics_basic.py` -> OK;
-- `python tests/test_science_physics_basic_forces.py` -> OK;
-- `python tests/test_science_physics_basic_energy.py` -> OK;
-- `python tests/test_science_physics_basic_conservation.py` -> OK;
-- generation/registration of the new Physics Basics batch -> OK;
-- post-generation shared and topic validation -> OK;
-- exactly 390 `science-physics-basic-motion-*` catalog entries -> OK;
-- exactly 150 `calculation-basic` + 240 `calculation-reverse` entries -> OK;
-- skill count `mechanical-energy-conservation` = exactly 30 -> OK;
-- unit counts are exactly 90 `運動の表し方` + 130 `様々な力とその働き` + 170 `力学的エネルギー` -> OK;
-- all entries use `school_level=high-school`, `formal_course=物理基礎`, `grade=null` -> OK;
-- all 390 Physics Basics worksheets contain 20 problems and have unique normalized content hashes -> OK;
-- full shared catalog validation with repository-root output checks -> OK;
-- all registered Physics Basics PDFs exist, begin with `%PDF`, exceed the minimum-size check, and contain the expected two-page structure -> OK.
+- current MEXT heat scope re-check;
+- SI unit re-check for heat capacity / specific heat capacity;
+- deterministic formula generation design;
+- independent direct/reverse arithmetic recomputation;
+- 60 × 20 intended problem count;
+- 60/60 unique normalized hashes among the new variants;
+- no pre-existing new heat worksheet IDs found;
+- no shared-generator relation change required.
 
-The shared renderer remains authoritative: ordinary integer problem numbers are used, and the answer page preserves the problem layout with answers added in red.
+Still required before publication can be declared complete:
 
-Representative screenshot-based worksheet PDF visual QA remains incomplete. Structural PDF validation passed. An external raw-PDF fetch for screenshot inspection was not available in this run, so do not claim screenshot QA has passed.
+- execute the current Physics Basics publish workflow (or equivalent current-main publication path);
+- shared `test_worksheet_factory.py` plus all Physics Basics topic tests including heat must pass in the publication environment;
+- generated catalog must contain exactly 450 Physics Basics entries with 450 unique hashes and exact skill/unit/mode counts encoded in the current workflow;
+- all 60 heat PDFs must be generated through the authoritative renderer and pass file, size, `%PDF`, and two-page checks;
+- generated PDFs and catalog must be committed/pushed to current `main` without overwriting parallel work;
+- representative screenshot-based visual PDF QA remains pending, as it already was before this run.
 
-## Current implementation status
+## Current authoritative published coverage
 
-Phase 0, Phase 1 and Phase 2 are complete. Phase 3 remains in progress because `物理基礎` still needs heat, waves/sound, electricity and energy use, and advanced `物理` has not started.
+Until the generated publication commit succeeds, published counts remain unchanged:
 
-Published physics coverage:
+- junior-high grade 1 physics: 48 worksheets;
+- junior-high grade 2 physics: 120 worksheets;
+- junior-high grade 3 physics: 120 worksheets;
+- `物理基礎`: 390 worksheets;
+- total published physics: **678 worksheets**.
 
-- junior-high grade 1: 48 worksheets;
-- junior-high grade 2: 120 worksheets;
-- junior-high grade 3: 120 worksheets;
-- `物理基礎`: 390 worksheets.
+`物理基礎` published unit counts remain:
 
-Current published physics total: **678 worksheets**.
+- `運動の表し方`: 90;
+- `様々な力とその働き`: 130;
+- `力学的エネルギー`: 170;
+- heat: 0 published in the catalog at this checkpoint, although the 60-sheet source family is ready on `main`.
 
-`物理基礎` current unit counts:
-
-- `運動の表し方`: 90 worksheets;
-- `様々な力とその働き`: 130 worksheets;
-- `力学的エネルギー`: 170 worksheets.
-
-The 170-sheet energy block now consists of work 30, work rate 20, gravitational potential energy 30, kinetic energy 30, elastic potential energy 30, and mechanical-energy conservation 30.
-
-The first mechanics-energy production block is now coherent enough to advance in the defined production map. Do not add wording-only conservation variants merely to increase counts.
-
-## Incomplete work / blockers
-
-- `物理基礎` next needs heat, then waves/sound, electricity and energy use.
-- Before implementing heat, re-open the current MEXT commentary and confirm the exact quantitative treatment of heat quantity, specific heat and heat capacity before choosing relation(s), units and accepted representations.
-- Prefer a basic direct/reverse heat family that can be independently recomputed with the existing shared relation helpers if possible. Add a new shared relation only if a curriculum-aligned formula genuinely requires it, and then add shared regression tests before volume generation.
-- Keep the first heat drills formula-understanding/substitution level; do not turn them into multi-step calorimetry or entrance-exam problems merely to increase difficulty.
-- Static friction remains curriculum content, but do not treat static friction as always `μN`; distinguish variable static friction from maximum static friction if quantified later.
-- `物理` has not started and remains after `物理基礎` in production order.
-- Screenshot-based worksheet PDF visual QA remains pending.
+After successful heat publication the intended counts are `物理基礎` 450 and total physics 738.
 
 ## Exact next starting point
 
-Continue Phase 3, physics, formal high-school course `物理基礎`:
+Continue Phase 3 at **Physics Basics heat publication**. Do not start waves yet.
 
-1. start from latest `main` and repeat the required science-Markdown/shared-math read sequence;
-2. inspect concurrent worksheet-factory changes before editing and preserve parallel progress;
-3. preserve `school_level=high-school`, `formal_course=物理基礎`, `grade=null`;
-4. re-open the current MEXT high-school science commentary for the `熱` portion of `様々な物理現象とエネルギーの利用`;
-5. verify the exact treatment and units for heat quantity, specific heat and heat capacity before defining the first formula family;
-6. implement a coherent 30–60-sheet basic direct/reverse heat checkpoint if the verified relation family naturally supports that volume;
-7. independently recompute every answer, require deterministic regeneration and normalized-hash uniqueness, and keep the existing two-page PDF/catalog/site pipeline;
-8. require Actions success before treating generated PDFs as published;
-9. after a coherent heat block, continue `物理基礎` in production-map order: waves/sound -> electricity -> energy use;
-10. keep `物理基礎` ahead of `物理`, and all physics ahead of chemistry, biology and earth science.
+1. start from latest `main` and repeat the required science/shared control-document read sequence;
+2. preserve any parallel repository progress;
+3. verify the current heat source/test/workflow files are still present and unchanged or reconcile intentional parallel edits;
+4. run the current Physics Basics publication workflow or an equivalent fully validated current-main publisher;
+5. require all shared/topic tests, independent recomputation, exact 450-entry counts, normalized-hash uniqueness, PDF structure checks, catalog validation, and commit/push success;
+6. only after the 60 heat PDFs and catalog rows are actually on `main`, update published counts to `物理基礎` 450 / physics 738;
+7. then advance in production-map order to waves/sound -> electricity -> energy use;
+8. keep `物理基礎` ahead of `物理`, and all physics ahead of chemistry, biology and earth science.
 
-Do not return to JH1–JH3 merely to inflate counts unless fixing a real defect or adding a clearly legitimate high-use nonduplicate family.
+Do not inflate heat with wording-only duplicates, do not add multi-step calorimetry merely for volume, and do not claim publication from source readiness alone.
