@@ -1,25 +1,26 @@
 {
   "status": "in_progress",
   "mode": "generate_backlog",
-  "school_stage": "junior-high",
-  "field": "civics",
-  "active_unit": "elections-political-participation",
+  "school_stage": "high-school",
+  "field": "history",
+  "formal_course": "歴史総合",
+  "active_unit": "history-comprehensive-modernization-questions",
   "next_role": "generate",
   "last_completed_role": "generate",
   "verified_through": "meiji-state-industrialization",
   "generation_batch_target": 10,
   "factcheck_policy": "manual_batch",
   "last_generated_batch": [
-    "taisho-democracy-interwar-japan",
-    "asia-pacific-war",
-    "postwar-japan",
-    "contemporary-japan-cumulative-review",
-    "constitution-constitutionalism",
-    "fundamental-human-rights",
-    "diet",
-    "cabinet",
-    "courts",
-    "separation-of-powers"
+    "elections-political-participation",
+    "local-government",
+    "market-economy-firms-labor",
+    "money-finance",
+    "public-finance-taxation",
+    "social-security",
+    "international-society-un",
+    "civics-cumulative-review",
+    "history-comprehensive-history-and-us",
+    "history-comprehensive-history-and-sources"
   ],
   "unverified_backlog": [
     "imperialism-sino-japanese-russo-japanese-wars",
@@ -32,9 +33,19 @@
     "diet",
     "cabinet",
     "courts",
-    "separation-of-powers"
+    "separation-of-powers",
+    "elections-political-participation",
+    "local-government",
+    "market-economy-firms-labor",
+    "money-finance",
+    "public-finance-taxation",
+    "social-security",
+    "international-society-un",
+    "civics-cumulative-review",
+    "history-comprehensive-history-and-us",
+    "history-comprehensive-history-and-sources"
   ],
-  "pending_factcheck_count": 11,
+  "pending_factcheck_count": 21,
   "prototype_status": "verified",
-  "updated_at": "2026-08-26T10:55:00+09:00"
+  "updated_at": "2026-08-26T11:52:00+09:00"
 }

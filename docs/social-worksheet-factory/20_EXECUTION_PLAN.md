@@ -67,10 +67,32 @@ After junior-high history generation reaches the end of its queue, continue dire
 
 After junior-high history/civics generation coverage:
 
-1. 歴史総合
-2. 日本史探究
-3. 世界史探究
-4. 公共
+### 歴史総合
+
+The ordered unit queue follows the current MEXT high-school Geography/History curriculum and commentary. Keep `formalCourse: "歴史総合"` separate from practical site grouping, and do not assign the course to a fixed school year.
+
+1. A 歴史の扉（1）歴史と私たち
+2. A 歴史の扉（2）歴史の特質と資料
+3. B 近代化と私たち（1）近代化への問い
+4. B 近代化と私たち（2）結び付く世界と日本の開国
+5. B 近代化と私たち（3）国民国家と明治維新
+6. B 近代化と私たち（4）近代化と現代的な諸課題
+7. C 国際秩序の変化や大衆化と私たち（1）国際秩序の変化や大衆化への問い
+8. C 国際秩序の変化や大衆化と私たち（2）第一次世界大戦と大衆社会
+9. C 国際秩序の変化や大衆化と私たち（3）経済危機と第二次世界大戦
+10. C 国際秩序の変化や大衆化と私たち（4）国際秩序の変化や大衆化と現代的な諸課題
+11. D グローバル化と私たち（1）グローバル化への問い
+12. D グローバル化と私たち（2）冷戦と世界経済
+13. D グローバル化と私たち（3）世界秩序の変容と日本
+14. D グローバル化と私たち（4）現代的な諸課題の形成と展望
+
+Queue basis: 文部科学省『高等学校学習指導要領（平成30年告示）解説 地理歴史編』, `https://www.mext.go.jp/content/20220802-mxt_kyoiku02-100002620_03.pdf`.
+
+### Later high-school courses
+
+1. 日本史探究
+2. 世界史探究
+3. 公共
 
 Before high-school production, expand each formal course into an ordered unit queue grounded in current MEXT curriculum organization. Do not falsely map formal high-school courses to one fixed school year.
 
