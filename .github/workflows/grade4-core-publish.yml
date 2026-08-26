@@ -10,6 +10,7 @@ on:
       - 'scripts/publish_grade4_decimal_multiplication.py'
       - 'scripts/publish_grade4_decimal_division.py'
       - 'scripts/publish_grade4_same_denominator_fractions.py'
+      - 'scripts/publish_grade4_fraction_conversions.py'
       - 'tests/test_grade4_*_publisher.py'
       - '.github/workflows/grade4-core-publish.yml'
   workflow_dispatch:
@@ -37,12 +38,14 @@ jobs:
             python scripts/publish_grade4_decimal_multiplication.py .
             python scripts/publish_grade4_decimal_division.py .
             python scripts/publish_grade4_same_denominator_fractions.py .
+            python scripts/publish_grade4_fraction_conversions.py .
             python tests/test_grade4_large_integer_add_sub_publisher.py
             python tests/test_grade4_division_publisher.py
             python tests/test_grade4_decimals_publisher.py
             python tests/test_grade4_decimal_multiplication_publisher.py
             python tests/test_grade4_decimal_division_publisher.py
             python tests/test_grade4_same_denominator_fractions_publisher.py
+            python tests/test_grade4_fraction_conversions_publisher.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main); git fetch origin main; after=$(git rev-parse origin/main)
             [ "$before" = "$after" ] && break
