@@ -14,7 +14,7 @@
     "needs_revision": 4,
     "rejected": 0
   },
-  "next_batch": "2026-08-26-001",
+  "next_batch": "2026-08-26-manual-001",
   "next_micro_skill": "p5.pos.adverb_modifies_verb",
   "next_question_id": "p5_pos_adverb_modifies_verb_0001",
   "generation_complete": false,
