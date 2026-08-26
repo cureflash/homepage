@@ -1,6 +1,6 @@
 {
   "repositoryPath": "..",
-  "maxRunsPerProject": 10,
+  "maxRunsPerProject": 1,
   "maxNoProgressRuns": 2,
   "turnTimeoutMinutes": 60,
   "requireCleanWorkingTree": true,
