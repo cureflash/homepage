@@ -13,7 +13,7 @@ Initial uses:
 - flag -> country
 - mountain range / river / plain / industrial region where a suitable selectable region or line representation exists
 
-World-country exact-map questions use regional views rather than one full-world answer map. Tiny island states may receive an explicit marker hit target mapped to the same stable ISO-style country key.
+World-country exact-map questions use one of six major-region maps rather than one full-world answer map. Tiny island states may receive an explicit marker hit target mapped to the same stable ISO-style country key.
 
 ### 2. Colored region selection
 Use when the target is broad geography rather than a political polygon.
@@ -37,11 +37,26 @@ For the world-country reverse drills explicitly requested by the user, a control
 - highlighted country -> flag;
 - highlighted country -> capital only when that country is eligible for bare-capital questions.
 
-The correct answer plus four distinct wrong answers may be sampled only from other eligible countries in the same displayed region. Automated validation must confirm all five keys are distinct, all options belong to the current region, and the correct key is present. This exception must not be generalized to ambiguous content.
+The correct answer plus four distinct wrong answers may be sampled only from other eligible countries in the same displayed **major region**. Automated validation must confirm all five keys are distinct, all options belong to that major region, and the correct key is present. This exception must not be generalized to ambiguous content.
+
+## World-country region model
+
+The public world selector has exactly six regions:
+
+- Asia
+- Europe
+- Africa
+- North America
+- South America
+- Oceania
+
+The country data may retain the previous fine-grained subregion tag for organization and backward compatibility. `world-regions.js` owns the mapping from those internal subregions to the six public major regions. Old URLs such as `region=east-asia`, `region=caribbean`, and `region=pacific-islands` resolve to their major-region equivalent rather than breaking.
+
+Each play contains at most 20 questions. For South America, Oceania, or any capital-filtered mode with fewer than 20 eligible countries, all eligible countries are used. Reverse-mode distractor candidates come from the full eligible major-region pool even when the current play samples only 20 questions.
 
 ## World-country data model
 
-Stable country keys use two-letter ISO-style codes. Display labels, capital strings, status notes, region membership, and optional small-country marker coordinates remain separate from renderer geometry.
+Stable country keys use two-letter ISO-style codes. Display labels, capital strings, status notes, internal subregion membership, and optional small-country marker coordinates remain separate from renderer geometry.
 
 Countries/regions with multiple capitals, an unsettled capital transition, no official capital, or a diplomatic/political issue that prevents one simple intended answer are excluded from capital-based modes. They may remain available for country-name and flag modes.
 
@@ -54,20 +69,21 @@ Canonical pipeline:
 1. Source geometry: Natural Earth 1:50m `Admin 0 – Countries`, version 5.1.1, Public Domain.
 2. `scripts/build_social_world_maps.py` maps Natural Earth records to the quiz two-letter country keys.
 3. Geographic coordinates are projected to **Web Mercator** at build time.
-4. The generator splits geometry into the 15 quiz regions and embeds small-country marker hit targets where configured.
-5. Generated SVGs and `manifest.json` are stored at `subjects/social/quiz/assets/maps/world/`.
-6. At runtime `world-map-source.js` fetches only the selected region SVG with browser caching. There is no jsDelivr/esm.sh dependency, no full-world SVG construction, and no browser-side deletion of unrelated countries.
+4. Internal detailed subregions are grouped into the six public major regions.
+5. The generator embeds small-country marker hit targets where configured and handles dateline wrapping for Oceania.
+6. Generated SVGs and `manifest.json` are stored at `subjects/social/quiz/assets/maps/world/`.
+7. At runtime `world-map-source.js` fetches only the selected major-region SVG with browser caching. There is no jsDelivr/esm.sh dependency, no full-world SVG construction, and no browser-side deletion of unrelated countries.
 
-The manifest records source version/URL/hash, Public Domain terms, projection, per-region file size, country count and SHA-256. Keep each regional request reasonably small; automated tests currently enforce a 250 KB uncompressed ceiling per region and a 1.3 MB ceiling for all 15 generated SVGs combined.
+The manifest records source version/URL/hash, Public Domain terms, projection, region model, per-region file size, country count and SHA-256. Current tests enforce a 350 KB uncompressed ceiling for each major-region SVG and a 1.3 MB ceiling for all six generated SVGs combined.
 
 ## Renderer ownership
 
 - `svg-region`: generic SVG region clicking, currently Japan.
 - `choice`: ordinary button choices.
-- `world-region`: loads one already-split local world-region SVG and owns country-map input.
+- `world-region`: loads one already-split local major-region SVG and owns country-map input.
 - `world-map-choice`: display-only highlighted regional map plus a `choice` renderer for reverse questions.
 
-`QuizEngine` does not know about projection, map source, country codes, flags, file paths, or world-region selectors.
+`QuizEngine` does not know about projection, map source, country codes, flags, file paths, region grouping, or selectors.
 
 ## Question schema direction
 

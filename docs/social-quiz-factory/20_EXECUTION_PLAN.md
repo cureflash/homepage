@@ -22,9 +22,9 @@ Work strictly from top to bottom. Check off an item only after implementation an
 
 ## Phase 2 — world countries by region
 
-Do not use one tiny full-world answer map. Keep regional views large enough for reliable selection.
+Do not use one tiny full-world answer map. Use school-geography-sized major regions so the map is still readable without over-fragmenting the selector.
 
-Implementation note: Phase 2 now uses **Natural Earth 1:50m Admin 0 Countries v5.1.1 (Public Domain)**. `scripts/build_social_world_maps.py` projects it to Web Mercator and stores 15 pre-split local SVGs in `subjects/social/quiz/assets/maps/world/`. Runtime loads only the selected regional file; the earlier `svg-world-maps` CDN/Robinson full-world generation path is retired.
+Implementation note: Phase 2 uses **Natural Earth 1:50m Admin 0 Countries v5.1.1 (Public Domain)**. `scripts/build_social_world_maps.py` projects it to Web Mercator and stores six pre-generated local SVGs in `subjects/social/quiz/assets/maps/world/`: Asia, Europe, Africa, North America, South America, and Oceania. Runtime loads only the selected regional file. Internal detailed subregion labels remain in country data for compatibility and grouping, but are no longer separate selectable games.
 
 - [x] 2.1 Select and document a reusable world boundary dataset with acceptable license.
 - [x] 2.2 Define stable country IDs and Japanese display names.
@@ -32,14 +32,15 @@ Implementation note: Phase 2 now uses **Natural Earth 1:50m Admin 0 Countries v5
 - [x] 2.4 Create Southeast Asia country map quiz.
 - [x] 2.5 Create South Asia country map quiz.
 - [x] 2.6 Create West/Central Asia country map quiz as curriculum-appropriate groupings.
-- [x] 2.7 Create Europe country map quizzes split into usable regional views.
-- [x] 2.8 Create Africa country map quizzes split into usable regional views.
+- [x] 2.7 Create Europe country map quizzes split into usable regional views if needed.
+- [x] 2.8 Create Africa country map quizzes split into usable regional views if needed.
 - [x] 2.9 Create North America country map quiz.
 - [x] 2.10 Create Central America/Caribbean map quiz.
 - [x] 2.11 Create South America country map quiz.
 - [x] 2.12 Create Oceania country map quiz.
 - [x] 2.13 Validate country names, IDs, boundaries, and region membership.
 - [x] 2.14 Replace runtime full-world/CDN rendering with local Web Mercator regional SVGs; validate source manifest, country coverage, no CDN dependency, and regional file-size budgets.
+- [x] 2.15 Consolidate the over-fragmented 15-view selector into six major regions; keep old region query IDs backward-compatible, generate six local SVGs, keep reverse distractors inside the selected major region, and cap one play at 20 questions (or all eligible countries when fewer than 20 exist).
 
 ## Phase 3 — world capitals
 

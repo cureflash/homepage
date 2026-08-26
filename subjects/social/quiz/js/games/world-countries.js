@@ -2,20 +2,23 @@ import { isCapitalQuizEligible } from "../data/world-capital-policy.js";
 import { WORLD_CURRICULUM_SOURCE } from "../data/world-curriculum.js";
 import { WORLD_MERCATOR_MAP_SOURCE } from "../data/world-map-metadata.js";
 import {
+  WORLD_COUNTRIES,
   WORLD_FACT_SOURCE,
   WORLD_NAME_SOURCE,
-  countriesForRegion,
   flagEmoji
 } from "../data/world-countries.js";
 import {
   MODES_BY_ID,
   REGIONS_BY_ID,
   WORLD_GAME_MODES,
-  WORLD_REGIONS
+  WORLD_REGIONS,
+  countryBelongsToWorldRegion,
+  normalizeWorldRegionId
 } from "../data/world-regions.js";
 
-export const defaultWorldRegionId = "east-asia";
+export const defaultWorldRegionId = "asia";
 export const defaultWorldModeId = "easy";
+export const WORLD_QUESTIONS_PER_PLAY = 20;
 export { WORLD_GAME_MODES, WORLD_REGIONS };
 
 function shuffle(items) {
@@ -52,9 +55,9 @@ function buildSameRegionOptions(country, candidates, kind) {
   }));
 }
 
-function mapQuestion(country, mode) {
+function mapQuestion(country, mode, regionId) {
   return {
-    id: `world-${country.region}-${mode.id}-${country.code.toLowerCase()}`,
+    id: `world-${regionId}-${mode.id}-${country.code.toLowerCase()}`,
     prompt: promptFor(country, mode.promptKind),
     answer: country.code,
     answerLabel: country.name,
@@ -62,7 +65,7 @@ function mapQuestion(country, mode) {
   };
 }
 
-function reverseQuestion(country, mode, candidates) {
+function reverseQuestion(country, mode, candidates, regionId) {
   const answerLabel = answerLabelFor(country, mode.answerKind);
   const instruction = mode.answerKind === "capital"
     ? "光っている国の首都は？"
@@ -70,7 +73,7 @@ function reverseQuestion(country, mode, candidates) {
       ? "光っている国の国旗は？"
       : "光っている国はどこ？";
   return {
-    id: `world-${country.region}-${mode.id}-${country.code.toLowerCase()}`,
+    id: `world-${regionId}-${mode.id}-${country.code.toLowerCase()}`,
     prompt: instruction,
     instruction,
     highlightKey: country.code,
@@ -81,29 +84,37 @@ function reverseQuestion(country, mode, candidates) {
   };
 }
 
+export function countriesForWorldRegion(regionId) {
+  const normalized = normalizeWorldRegionId(regionId);
+  if (!normalized) return [];
+  return WORLD_COUNTRIES.filter((country) => countryBelongsToWorldRegion(country, normalized));
+}
+
 export function createWorldCountryGame({
   regionId = defaultWorldRegionId,
   modeId = defaultWorldModeId
 } = {}) {
-  const region = REGIONS_BY_ID.get(regionId) ?? REGIONS_BY_ID.get(defaultWorldRegionId);
+  const normalizedRegionId = normalizeWorldRegionId(regionId) ?? defaultWorldRegionId;
+  const region = REGIONS_BY_ID.get(normalizedRegionId) ?? REGIONS_BY_ID.get(defaultWorldRegionId);
   const mode = MODES_BY_ID.get(modeId) ?? MODES_BY_ID.get(defaultWorldModeId);
-  const regionCountries = countriesForRegion(region.id);
-  const countries = mode.requiresCapital
+  const regionCountries = countriesForWorldRegion(region.id);
+  const eligibleCountries = mode.requiresCapital
     ? regionCountries.filter(isCapitalQuizEligible)
     : regionCountries;
 
-  if (mode.direction === "choice" && countries.length < 5) {
+  if (mode.direction === "choice" && eligibleCountries.length < 5) {
     throw new Error(`${region.label} needs at least five eligible countries for reverse-choice mode`);
   }
 
+  const playCountries = shuffle(eligibleCountries).slice(0, WORLD_QUESTIONS_PER_PLAY);
   const questions = mode.direction === "map"
-    ? countries.map((country) => mapQuestion(country, mode))
-    : countries.map((country) => reverseQuestion(country, mode, countries));
+    ? playCountries.map((country) => mapQuestion(country, mode, region.id))
+    : playCountries.map((country) => reverseQuestion(country, mode, eligibleCountries, region.id));
 
   return {
     id: "world-countries",
     title: `世界の国当て｜${region.label}`,
-    description: mode.label,
+    description: `${mode.label}（1プレイ最大${WORLD_QUESTIONS_PER_PLAY}問）`,
     instruction: mode.direction === "map" ? "地図から国を選んでください" : "光っている国を5択で答えてください",
     shuffle: true,
     advanceDelay: 800,
@@ -117,8 +128,8 @@ export function createWorldCountryGame({
     },
     worldConfig: { regionId: region.id, modeId: mode.id },
     renderer: mode.direction === "map"
-      ? { type: "world-region", region, countries }
-      : { type: "world-map-choice", region, countries },
+      ? { type: "world-region", region, countries: regionCountries }
+      : { type: "world-map-choice", region, countries: regionCountries },
     questions
   };
 }

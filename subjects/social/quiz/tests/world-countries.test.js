@@ -8,29 +8,50 @@ import { WORLD_MERCATOR_MAP_SOURCE } from "../js/data/world-map-metadata.js";
 import {
   COUNTRIES_BY_CODE,
   WORLD_COUNTRIES,
-  countriesForRegion,
   flagEmoji
 } from "../js/data/world-countries.js";
-import { WORLD_GAME_MODES, WORLD_REGIONS } from "../js/data/world-regions.js";
-import { createWorldCountryGame } from "../js/games/world-countries.js";
+import {
+  WORLD_GAME_MODES,
+  WORLD_REGIONS,
+  countryBelongsToWorldRegion,
+  normalizeWorldRegionId
+} from "../js/data/world-regions.js";
+import {
+  WORLD_QUESTIONS_PER_PLAY,
+  countriesForWorldRegion,
+  createWorldCountryGame
+} from "../js/games/world-countries.js";
 
 const mapRoot = new URL("../assets/maps/world/", import.meta.url);
 const manifest = JSON.parse(readFileSync(new URL("manifest.json", mapRoot), "utf8"));
 
-test("world country data has stable unique ISO-style keys and all regions are playable", () => {
+const EXPECTED_REGION_IDS = ["asia", "europe", "africa", "north-america", "south-america", "oceania"];
+
+test("world country data has stable unique ISO-style keys and six major regions are playable", () => {
   assert.ok(WORLD_COUNTRIES.length >= 190);
   const codes = WORLD_COUNTRIES.map((country) => country.code);
   assert.equal(new Set(codes).size, WORLD_COUNTRIES.length);
   assert.ok(codes.every((code) => /^[A-Z]{2}$/.test(code)));
   assert.equal(COUNTRIES_BY_CODE.size, WORLD_COUNTRIES.length);
-  assert.equal(WORLD_REGIONS.length, 15);
+  assert.deepEqual(WORLD_REGIONS.map((region) => region.id), EXPECTED_REGION_IDS);
 
   for (const region of WORLD_REGIONS) {
-    const members = countriesForRegion(region.id);
+    const members = countriesForWorldRegion(region.id);
     const capitalMembers = members.filter(isCapitalQuizEligible);
     assert.ok(members.length >= 5, `${region.id} needs at least five countries`);
     assert.ok(capitalMembers.length >= 5, `${region.id} needs at least five capital-eligible countries`);
+    assert.ok(members.every((country) => countryBelongsToWorldRegion(country, region.id)));
   }
+});
+
+test("legacy fine-grained region URLs resolve to their major region", () => {
+  assert.equal(normalizeWorldRegionId("east-asia"), "asia");
+  assert.equal(normalizeWorldRegionId("caribbean"), "north-america");
+  assert.equal(normalizeWorldRegionId("pacific-islands"), "oceania");
+
+  const legacy = createWorldCountryGame({ regionId: "east-asia", modeId: "name" });
+  assert.equal(legacy.worldConfig.regionId, "asia");
+  assert.match(legacy.title, /アジア/);
 });
 
 test("world map source is Natural Earth 1:50m Public Domain and local Web Mercator", () => {
@@ -41,10 +62,11 @@ test("world map source is Natural Earth 1:50m Public Domain and local Web Mercat
   assert.equal(manifest.sourceVersion, "5.1.1");
   assert.equal(manifest.license, "Public Domain");
   assert.equal(manifest.projection, "Web Mercator");
-  assert.equal(Object.keys(manifest.regions).length, 15);
+  assert.equal(manifest.regionModel, "six-major-regions");
+  assert.deepEqual(Object.keys(manifest.regions), EXPECTED_REGION_IDS);
 });
 
-test("every local region SVG contains every quiz country and stays below the runtime size budget", () => {
+test("every local major-region SVG contains every quiz country and stays within the runtime size budget", () => {
   let totalBytes = 0;
   for (const region of WORLD_REGIONS) {
     const meta = manifest.regions[region.id];
@@ -54,13 +76,13 @@ test("every local region SVG contains every quiz country and stays below the run
     const bytes = statSync(url).size;
     totalBytes += bytes;
     assert.equal(bytes, meta.bytes);
-    assert.ok(bytes < 250_000, `${region.id} is too large for one regional map request: ${bytes}`);
+    assert.ok(bytes < 350_000, `${region.id} is too large for one major-region map request: ${bytes}`);
     assert.match(svg, /data-projection="Web Mercator"/);
-    for (const country of countriesForRegion(region.id)) {
+    for (const country of countriesForWorldRegion(region.id)) {
       assert.ok(svg.includes(`data-code="${country.code}"`), `${region.id} missing ${country.code}`);
     }
   }
-  assert.ok(totalBytes < 1_300_000, `regional map asset total is unexpectedly large: ${totalBytes}`);
+  assert.ok(totalBytes < 1_300_000, `major-region map asset total is unexpectedly large: ${totalBytes}`);
 });
 
 test("world map runtime loader has no external CDN dependency", () => {
@@ -70,7 +92,7 @@ test("world map runtime loader has no external CDN dependency", () => {
   assert.match(loader, /force-cache/);
 });
 
-test("every region supports all seven requested world quiz modes", () => {
+test("every major region supports all seven requested world quiz modes", () => {
   assert.deepEqual(WORLD_GAME_MODES.map((mode) => mode.id), [
     "easy",
     "name",
@@ -86,13 +108,24 @@ test("every region supports all seven requested world quiz modes", () => {
       const game = createWorldCountryGame({ regionId: region.id, modeId: mode.id });
       assert.doesNotThrow(() => assertValidGameDefinition(game), `${region.id}/${mode.id}`);
       assert.ok(game.questions.length >= 5, `${region.id}/${mode.id} has too few questions`);
+      assert.ok(game.questions.length <= WORLD_QUESTIONS_PER_PLAY, `${region.id}/${mode.id} exceeds play cap`);
       assert.equal(game.worldConfig.regionId, region.id);
       assert.equal(game.worldConfig.modeId, mode.id);
     }
   }
 });
 
-test("reverse modes use exactly five distinct options from the same region", () => {
+test("large regions sample at most 20 questions while small regions use all eligible countries", () => {
+  const asia = createWorldCountryGame({ regionId: "asia", modeId: "name" });
+  const southAmerica = createWorldCountryGame({ regionId: "south-america", modeId: "name" });
+  const oceania = createWorldCountryGame({ regionId: "oceania", modeId: "name" });
+
+  assert.equal(asia.questions.length, WORLD_QUESTIONS_PER_PLAY);
+  assert.equal(southAmerica.questions.length, countriesForWorldRegion("south-america").length);
+  assert.equal(oceania.questions.length, countriesForWorldRegion("oceania").length);
+});
+
+test("reverse modes use exactly five distinct options from the same major region", () => {
   for (const region of WORLD_REGIONS) {
     for (const modeId of ["reverse-name", "reverse-capital", "reverse-flag"]) {
       const game = createWorldCountryGame({ regionId: region.id, modeId });
@@ -101,7 +134,8 @@ test("reverse modes use exactly five distinct options from the same region", () 
         assert.equal(new Set(question.options.map((option) => option.key)).size, 5);
         assert.ok(question.options.some((option) => option.key === question.answer));
         for (const option of question.options) {
-          assert.equal(COUNTRIES_BY_CODE.get(option.key)?.region, region.id);
+          const country = COUNTRIES_BY_CODE.get(option.key);
+          assert.ok(countryBelongsToWorldRegion(country, region.id), `${option.key} should belong to ${region.id}`);
         }
       }
     }
