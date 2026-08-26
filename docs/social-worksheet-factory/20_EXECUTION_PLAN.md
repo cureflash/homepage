@@ -21,6 +21,7 @@ Normal scheduled runs are GENERATE runs. Target **20 newly generated sequential 
 - `日本史探究`: 63-unit MEXT-aligned generation queue complete.
 - `世界史探究`: 38-unit MEXT-aligned generation queue complete.
 - `公共`: 18-unit MEXT-aligned generation queue complete.
+- `倫理`: 20-unit MEXT-aligned generation queue complete.
 
 ## 日本史探究 — ordered production queue
 
@@ -193,24 +194,24 @@ This practical queue follows the current MEXT `A 公共の扉` → `B 自立し�
 
 This practical queue follows the current MEXT `A 現代に生きる自己の課題と人間としての在り方生き方` → `B 現代の諸課題と倫理` structure. It splits MEXT's conceptual clusters into low-density worksheet units; the numbering is a factory queue, not official MEXT sub-item numbering.
 
-### A 現代に生きる自己の課題と人間としての在り方生き方
+### A 現代に生きる自己の課題と人間としての在り方生き方 — generated
 
-1. 心の在り方と自己形成 — `ethics-mind-individuality-emotion` — generated
-2. 認知と発達 — `ethics-cognition-development` — generated
-3. 幸福と愛 — `ethics-happiness-love` — generated
-4. 徳とよく生きること — `ethics-virtue-good-life` — generated
-5. 宗教の意義 — `ethics-religion-meaning` — generated
-6. 芸術の意義 — `ethics-art-meaning` — generated
-7. 善と正義 — `ethics-good-justice` — generated
-8. 義務と責任 — `ethics-duty-responsibility` — generated
-9. 真理と知 — `ethics-truth-knowledge` — generated
-10. 存在と世界 — `ethics-existence-world` — generated
-11. 先哲の原典を読む — `ethics-reading-primary-thought-sources` — generated
-12. 日本の風土と人間観 — `ethics-japan-climate-human-view` — generated
-13. 日本の宗教観と外来思想の受容 — `ethics-japan-religion-foreign-thought` — generated
-14. 国際社会に生きる日本人としての自覚 — `ethics-japanese-identity-global-society` — generated
+1. 心の在り方と自己形成 — `ethics-mind-individuality-emotion`
+2. 認知と発達 — `ethics-cognition-development`
+3. 幸福と愛 — `ethics-happiness-love`
+4. 徳とよく生きること — `ethics-virtue-good-life`
+5. 宗教の意義 — `ethics-religion-meaning`
+6. 芸術の意義 — `ethics-art-meaning`
+7. 善と正義 — `ethics-good-justice`
+8. 義務と責任 — `ethics-duty-responsibility`
+9. 真理と知 — `ethics-truth-knowledge`
+10. 存在と世界 — `ethics-existence-world`
+11. 先哲の原典を読む — `ethics-reading-primary-thought-sources`
+12. 日本の風土と人間観 — `ethics-japan-climate-human-view`
+13. 日本の宗教観と外来思想の受容 — `ethics-japan-religion-foreign-thought`
+14. 国際社会に生きる日本人としての自覚 — `ethics-japanese-identity-global-society`
 
-### B 現代の諸課題と倫理
+### B 現代の諸課題と倫理 — generated
 
 15. 生命と倫理 — `ethics-life-bioethics`
 16. 自然・環境と倫理 — `ethics-nature-environment`
@@ -219,9 +220,39 @@ This practical queue follows the current MEXT `A 現代に生きる自己の課�
 19. 文化・宗教と共生 — `ethics-culture-religion-coexistence`
 20. 平和と倫理 — `ethics-peace`
 
-**Next start:** queue item 15, `ethics-life-bioethics`.
+## 政治・経済 — ordered production queue
 
-After `倫理`, define the current MEXT-aligned `政治・経済` queue before generating that course. Queue planning does not count as generated units.
+This practical queue follows the current MEXT `A 現代日本における政治・経済の諸課題` → `B グローバル化する国際社会の諸課題` structure. The split expands the concepts explicitly listed in the commentary into low-density worksheets; numbering is internal factory numbering, not official MEXT sub-item numbering.
+
+### A 現代日本における政治・経済の諸課題
+
+1. 政治と法の意義・機能 — `political-economy-politics-law` — generated
+2. 基本的人権と法の支配 — `political-economy-rights-rule-of-law` — generated
+3. 権利と義務・私法 — `political-economy-rights-obligations-private-law` — generated
+4. 議会制民主主義と政治機構 — `political-economy-parliamentary-democracy` — generated
+5. 選挙・政党と政治参加 — `political-economy-elections-parties-participation` — generated
+6. 地方自治 — `political-economy-local-autonomy` — generated
+7. 経済活動と市場 — `political-economy-market-economic-activity` — generated
+8. 経済主体と経済循環 — `political-economy-economic-actors-circular-flow` — generated
+9. 国民経済の大きさと経済成長 — `political-economy-gdp-economic-growth` — generated
+10. 物価と景気変動 — `political-economy-prices-business-cycle` — generated
+11. 財政と租税 — `political-economy-fiscal-tax` — generated
+12. 金融の働きと仕組み — `political-economy-finance-system` — generated
+13. 市場の機能と限界 — `political-economy-market-failure-environment-consumer` — generated
+14. 現代日本の政治・経済課題を探究する — `political-economy-domestic-issues-inquiry` — generated
+
+### B グローバル化する国際社会の諸課題
+
+15. 国際社会の変遷と国際法 — `political-economy-international-society-law`
+16. 人権・国家主権・領土 — `political-economy-human-rights-sovereignty-territory`
+17. 国際連合と国際機構 — `political-economy-un-international-organizations`
+18. 安全保障・防衛と国際貢献 — `political-economy-security-defense-contribution`
+19. 貿易の現状と意義 — `political-economy-trade`
+20. 為替相場と国際収支 — `political-economy-exchange-balance-payments`
+21. 国際協調と国際経済機関 — `political-economy-international-cooperation-economic-institutions`
+22. グローバル化する国際社会の課題探究 — `political-economy-global-issues-inquiry`
+
+**Next start:** queue item 15, `political-economy-international-society-law`.
 
 ## Per-unit generation acceptance criteria
 
