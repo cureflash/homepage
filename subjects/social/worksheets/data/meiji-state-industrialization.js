@@ -8,7 +8,7 @@
     unit: "近代の日本と世界",
     era: "明治前期",
     practicalGradeGroup: "中学・歴史",
-    factcheckStatus: "pending_factcheck",
+    factcheckStatus: "verified",
     keyPoint: "明治政府は富国強兵・殖産興業を進め、教育・兵制・税制などを改めるとともに、鉄道や工場を整備した。欧米の制度や文化が取り入れられ、人々の生活も大きく変化した。",
     timeline: [
       { label: "1872年", note: "学制・新橋―横浜間の鉄道・富岡製糸場" },
@@ -20,49 +20,49 @@
         id: "meiji-state-fact-01",
         claim: "明治政府は富国強兵・殖産興業政策の下で、教育・兵制・税制などの制度を改革し、近代国家の基礎を整えようとした。",
         sources: ["mext-social-commentary"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "meiji-state-fact-02",
         claim: "1872年に学制が公布され、全国的な近代学校制度を整備する方針が示された。",
         sources: ["national-archives-gakusei", "mext-social-commentary"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "meiji-state-fact-03",
         claim: "1873年に徴兵令が発せられ、男子を兵籍に登録し、徴兵検査の合格者から兵役に服する者を選ぶ制度が設けられた。",
         sources: ["national-archives-conscription", "mext-social-commentary"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "meiji-state-fact-04",
         claim: "1873年の地租改正条例では、地価を基準に地租を定め、従来の米などによる物納から金納へ改める仕組みが示された。",
         sources: ["national-archives-land-tax", "mext-social-commentary"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "meiji-state-fact-05",
-        claim: "明治初期には封建的な身分制度が改められ、華族・士族・平民という新たな区分が設けられる一方、旧来の身分に基づく法的な制限が段階的に廃止された。",
+        claim: "明治初期には封建的な身分制度が改められ、華族・士族・平民という新たな区分が設けられる一方、旧来の身分に基づく法的な制限が段階的に廃止された。ただし、現実の社会には差別が残った。",
         sources: ["ndl-meiji-constitution-background", "mext-social-commentary"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "meiji-industry-fact-01",
         claim: "政府は殖産興業を進め、近代的な産業や技術を育てるために官営工場などを設けた。1872年に操業を始めた富岡製糸場は、器械製糸の模範工場として設立された。",
         sources: ["mext-social-commentary", "tomioka-official"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "meiji-industry-fact-02",
         claim: "1872年、新橋と横浜の間で日本最初の鉄道が本開業し、近代的な交通網の整備が始まった。",
         sources: ["national-archives-railway", "mext-social-commentary"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "meiji-culture-fact-01",
         claim: "明治初期には洋装・洋風建築・鉄道・郵便など欧米由来の制度や文化が広がり、こうした社会や生活の変化は文明開化と呼ばれた。",
         sources: ["mext-social-commentary", "national-archives-civilization", "ndl-meiji-nishikie"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       }
     ],
     sections: [
@@ -77,7 +77,7 @@
             terms: ["富国強兵"],
             importance: "A",
             sources: ["mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "meiji-state-02",
@@ -85,7 +85,7 @@
             terms: ["学制"],
             importance: "A",
             sources: ["national-archives-gakusei", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "meiji-state-03",
@@ -93,7 +93,7 @@
             terms: ["徴兵令"],
             importance: "A",
             sources: ["national-archives-conscription", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "meiji-state-04",
@@ -101,15 +101,15 @@
             terms: ["地租改正", "金納"],
             importance: "A",
             sources: ["national-archives-land-tax", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "meiji-state-05",
-            template: "明治初期には江戸時代の身分制度が改められ、旧来の身分に基づく法的な制限が段階的に廃止された。",
+            template: "明治初期には江戸時代の身分制度が改められ、旧来の身分に基づく法的な制限が段階的に廃止されたが、現実の社会には差別が残った。",
             terms: [],
             importance: "B",
             sources: ["ndl-meiji-constitution-background", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       },
@@ -124,7 +124,7 @@
             terms: ["殖産興業", "富岡製糸場"],
             importance: "A",
             sources: ["mext-social-commentary", "tomioka-official"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "meiji-industry-02",
@@ -132,7 +132,7 @@
             terms: ["新橋", "横浜", "鉄道"],
             importance: "A",
             sources: ["national-archives-railway", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "meiji-culture-01",
@@ -140,7 +140,7 @@
             terms: ["文明開化"],
             importance: "A",
             sources: ["mext-social-commentary", "national-archives-civilization", "ndl-meiji-nishikie"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       }
@@ -155,7 +155,7 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:Kund%C5%8D_sh%C5%8Dgakk%C5%8D_ky%C5%8Dd%C5%8D_no_zu.jpg",
         credit: "肉亭夏良（小林清親と推定） / Wikimedia Commons",
         license: "Public Domain (PD-Japan / PD-US)",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "tomioka-east-cocoon-warehouse",
@@ -166,7 +166,7 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:Tomioka_Silk_Mill_East_Cocoon_Warehouse04.jpg",
         credit: "Hasec / Wikimedia Commons",
         license: "Public Domain (PD-self)",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       }
     ],
     sources: [
