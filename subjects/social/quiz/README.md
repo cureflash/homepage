@@ -7,15 +7,40 @@
 - 都道府県名を見て、日本地図上の都道府県を選ぶゲーム
 - 出題順のシャッフル
 - 正誤判定、正解数、正答率、結果表示
+- 180秒の共通制限時間
+- 不正解ごとに残り時間を20秒減算
+- 0秒でゲームオーバー、全問回答でクリア
+- ゲーム開始・正解・不正解のSE
 - マウス・タッチ・キーボード操作
 
 ## 構成
 
-- `js/core/quiz-engine.js`: 出題順、採点、進行、結果表示
+- `js/core/quiz-engine.js`: 出題順、採点、進行、タイマー、ペナルティ、結果表示
+- `js/core/quiz-effects.js`: SE再生。音声再生に失敗してもゲーム進行には影響させない
 - `js/renderers/svg-region-renderer.js`: SVG上の地域をクリックして答える形式
 - `js/renderers/choice-renderer.js`: 選択肢ボタンから答える形式
 - `js/games/prefectures.js`: 都道府県ゲーム固有の問題データと表示設定
-- `js/main.js`: ゲーム設定と renderer の接続
+- `js/main.js`: ゲーム設定、renderer、SEの接続
+- `assets/audio/`: 共通SE
+
+## 共通ゲームルール
+
+既定値は以下です。
+
+- `timeLimitSeconds = 180`
+- `wrongPenaltySeconds = 20`
+- タイマーが0になる前に最後の問題へ回答すればクリア
+- タイマーが0になった時点で未回答問題が残っていればゲームオーバー
+
+必要なら将来、ゲーム定義側で制限時間やペナルティ秒数だけを上書きできます。問題データやrendererを書き換える必要はありません。
+
+ブラウザの自動再生制限に対応するため、クイズは「ゲーム開始」ボタンから開始します。この操作で出題SEとカウントダウンを同時に開始します。
+
+SE:
+
+- `assets/audio/quiz-start.mp3`: ゲーム開始
+- `assets/audio/quiz-correct.mp3`: 正解
+- `assets/audio/quiz-wrong.mp3`: 不正解
 
 ## 継続開発
 
