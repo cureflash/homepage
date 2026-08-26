@@ -2,99 +2,71 @@
 
 ## Current state
 
-**Phase 4 is complete. The exact next APP TRACK task is Phase 5 / Task 5.1 — mixed/unlabeled test presentation.**
+**Phase 5 is complete. The exact next APP TRACK task is Phase 6 / Task 6.1 — stable Drill Sergeant / Trainee asset contract.**
 
-The Power TOEIC app/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored in this run.
+The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored.
 
-## Newly completed work
+## Phase 5 completed
 
-### Task 4.5 — user-editable workout editor
+### 5.1 mixed/unlabeled presentation — PR #73
 
-PR #70 was merged to `main`.
+Added `js/ui/question-presentation.js`. Presentation now derives the learner-facing context from the existing `WorkoutRecipe.labelPolicy`:
 
-Added:
+- labeled training may show the learner-facing skill label;
+- TEST/mixed mode displays only the mixed-test mode context;
+- raw micro-skill IDs are never used as a fallback in hidden-label mode;
+- the underlying question/session data is unchanged and not duplicated.
 
-- `js/core/workout-editor-model.js` — pure immutable-ish draft transformations;
-- `js/ui/workout-editor.js` — DOM-only mobile editor;
-- result-screen route back to editing;
-- demo startup through edited `WorkoutRecipe` + existing selector/session engine.
+Focused presentation tests cover labeled and hidden-label behavior.
 
-Behavior:
+### 5.2 deterministic review scheduling — PR #74
 
-- system WEAKNESS recipes are converted to editable CUSTOM drafts;
-- weighted weakness allocations resolve to concrete per-skill counts before display;
-- user can change total count, change per-skill counts, remove skills and add repository-supplied skills;
-- edited output always passes through `createWorkoutRecipe(...)` before session start;
-- repository learner-facing labels are shown instead of exposing raw IDs as the primary UI;
-- original recipes are not mutated.
+Added `js/core/review.js` with deterministic review intervals `[1, 3, 7, 14]` days.
 
-Focused verification: **4 editor-model tests passed, 0 failed**. Coverage includes weight-to-count resolution, add/remove/count edits, shared validation rejection and duplicate/unknown-skill errors.
+- ordinary attempts schedule next-day review;
+- successful review advances the interval;
+- failed review resets to next-day;
+- one scheduled entry is kept per question;
+- due queries are deterministic at ISO date-time boundaries.
 
-### Task 4.6 — finite and endless session planning
+Focused review tests: 4 passed.
 
-PR #71 was merged to `main`.
+### 5.3 mastery transfer/review gate — PR #75
 
-Added `js/core/session-planner.js` with:
+`QuizSession` now emits `answeredAt` and a constrained attempt context: `training`, `mixed`, or `review`. TEST maps to `mixed`, REVIEW maps to `review`, and ordinary drills map to `training`.
 
-- supported finite sizes: `10 / 30 / 50 / 100`;
-- resizing that preserves allocation proportions through weights;
-- endless continuation through bounded deterministic chunks;
-- default endless chunk size 30;
-- hard per-chunk maximum 100;
-- later chunks preferentially receive unseen questions when accumulated attempts are supplied;
-- no unbounded question array or separate endless quiz engine.
+Mastery states are now:
 
-Focused verification: **4 session-planner tests passed, 0 failed**. Coverage includes all finite presets, deterministic chunks, unseen preference across chunks and hard bounds.
+`unknown -> training/weak -> mixed_pass -> reviewing -> mastered`
 
-## Existing foundation
+The deterministic gate requires enough successful mixed evidence and later review evidence before `mastered`. Labeled/training-only success cannot produce mastery. Poor recent performance can return a skill to `weak` even if older transfer evidence exists.
 
-The Web reference implementation now has:
+Focused smoke checks confirmed training-only, mixed-pass, reviewing, mastered, and regression-to-weak transitions, plus session context/timestamp emission.
 
-- `QuestionBankRepository` with synthetic fixture-only demo data;
-- immutable `QuizSession` and attempt emission;
-- mobile-first four-choice cloze UI and results;
-- semantic character/audio `AssetCatalog`;
-- versioned browser persistence;
-- deterministic mastery and weakness ranking;
-- common `WorkoutRecipe` and deterministic selector;
-- QUICK / TRAINING / POWER / TEST / REVIEW presets;
-- WEAKNESS recipe generation;
-- user workout editing;
-- finite and bounded-chunk endless session planning.
+## Existing Web foundation
+
+The reference implementation now includes question repository adapters, QuizSession, mobile cloze UI/results, versioned persistence, mastery/weakness, WorkoutRecipe/selector/presets, weakness recommendations, workout editor, 10/30/50/100 and bounded endless planning, mixed presentation, review scheduling, and transfer-gated mastery.
 
 ## Exact next work
 
-### Phase 5 / Task 5.1 — mixed/unlabeled test presentation
+### Phase 6 / Task 6.1
 
-Use the existing recipe `labelPolicy` contract. TEST recipes already enforce `hide_skill`; the next UI work must ensure the quiz header/presentation never leaks the underlying micro-skill when this policy is active.
+Inspect the existing semantic `js/ui/asset-catalog.js` against `40_UI_AND_CHARACTER_SPEC.md` and `50_ASSET_POLICY.md`.
 
 Acceptance focus:
 
-1. same question can render in labeled training and unlabeled TEST mode without duplicating content;
-2. TEST view hides micro-skill labels/strategy hints while retaining progress/mode information;
-3. session/domain correctness remains unchanged by presentation policy;
-4. add focused renderer/UI tests for label visibility.
+1. stable semantic IDs for Sergeant neutral/correct/wrong/complete and Trainee stages 0–5;
+2. reaction states may alias neutral assets to stay below the temporary Irasutoya asset limit;
+3. missing optional reaction assets fall back to stage neutral / text without blocking quiz;
+4. source-specific filenames stay isolated in the asset catalog/manifest;
+5. the same semantic contract can later map to Swift `AssetCatalog`.
 
-After 5.1, proceed to deterministic review scheduling (5.2), then gate mastery on mixed/review evidence (5.3).
-
-## Verification summary
-
-- Phase 2 adapter/session/renderer/asset contracts: 9 passed;
-- Phase 3.1 persistence: 5 passed;
-- Phase 3.2/3.3 mastery/weakness: 4 passed;
-- Phase 4.1–4.4 workout builder/selector/presets/weakness: 4 passed;
-- Phase 4.5 editor model: 4 passed;
-- Phase 4.6 session planner: 4 passed.
+Then 6.2 composes Sergeant-presenter and Trainee-answerer UI without moving educational logic into character code. 6.3 adds deterministic progression points/stages.
 
 ## Fixed decisions
 
-- Web remains HTML/CSS/Vanilla JavaScript/ES Modules until V1 is frozen;
-- Swift + SwiftUI begins only after Web V1 and Phase 9 conformance fixtures;
-- JS and Swift share contracts/fixtures, not runtime code;
-- no target-score feature;
-- no skill-to-body-part mapping;
-- no runtime LLM generation;
-- no production question generation in APP TRACK;
-- characters remain presentation-only;
-- temporary character art = Irasutoya via semantic IDs, below 20 unique works unless policy changes;
+- Web = HTML/CSS/Vanilla JS/ES Modules until V1 freeze;
+- Swift + SwiftUI only after Phase 9 conformance freeze;
+- no target-score feature, skill-to-body-part mapping, runtime LLM, or production question creation in APP TRACK;
+- temporary art = Irasutoya via semantic IDs, below 20 unique works;
 - audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved.
