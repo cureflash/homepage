@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>宅建 無料教材</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="site-header"><div><strong id="siteName">宅建 無料教材</strong><span>2026年度対応</span></div></header>
+  <main class="layout">
+    <section class="hero">
+      <p class="eyebrow">宅地建物取引士資格試験</p>
+      <h1>無料教科書・学習プリント</h1>
+      <p>2026年4月1日現在施行の法令を基準に、検証済み教材だけを公開します。</p>
+    </section>
+    <section class="controls" aria-label="教材設定">
+      <label>単元<select id="unit"></select></label>
+      <label>表示<select id="mode"><option value="study">解説</option><option value="worksheet">穴埋め</option><option value="answer">解答</option></select></label>
+      <label>Seed<input id="seed" type="number" min="1" value="101"></label>
+      <button id="regenerate" type="button">別パターン</button>
+      <button id="print" type="button">印刷 / PDF</button>
+    </section>
+    <div id="empty" class="empty" hidden>現在、公開済みの検証済み教材はありません。</div>
+    <article id="sheet" class="sheet" aria-live="polite"></article>
+  </main>
+  <script src="./assets/config.js"></script>
+  <script src="./data/public-catalog.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
