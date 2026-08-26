@@ -2,71 +2,85 @@
 
 ## Current state
 
-**Phase 5 is complete. The exact next APP TRACK task is Phase 6 / Task 6.1 — stable Drill Sergeant / Trainee asset contract.**
+**Phase 6 is complete, APP TRACK 7.4 bad-question reporting is implemented, and the exact next APP TRACK task is Phase 8 / Task 8.1 — mobile-first home/navigation.**
 
 The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored.
 
-## Phase 5 completed
+## Reconciled concurrent Phase 6 work
 
-### 5.1 mixed/unlabeled presentation — PR #73
+PRs #77–#79 were already merged into `main` before this run and were reconciled rather than duplicated.
 
-Added `js/ui/question-presentation.js`. Presentation now derives the learner-facing context from the existing `WorkoutRecipe.labelPolicy`:
+### 6.1 semantic character asset contract — PR #77
 
-- labeled training may show the learner-facing skill label;
-- TEST/mixed mode displays only the mixed-test mode context;
-- raw micro-skill IDs are never used as a fallback in hidden-label mode;
-- the underlying question/session data is unchanged and not duplicated.
+`js/ui/asset-catalog.js` now owns stable semantic Sergeant reaction IDs and Trainee stage 0–5 IDs. Sparse temporary Irasutoya reaction art may alias neutral assets. Missing reaction/stage assets fall back safely and never block quiz operation.
 
-Focused presentation tests cover labeled and hidden-label behavior.
+### 6.2 Sergeant/Trainee quiz composition — PR #78
 
-### 5.2 deterministic review scheduling — PR #74
+`js/ui/character-presenter.js` renders Sergeant and Trainee as removable presentation. Image failures fall back to text. Correct/wrong/complete reactions are driven by session/UI events and own no answer, mastery, workout, or persistence logic.
 
-Added `js/core/review.js` with deterministic review intervals `[1, 3, 7, 14]` days.
+### 6.3 deterministic progression — PR #79
 
-- ordinary attempts schedule next-day review;
-- successful review advances the interval;
-- failed review resets to next-day;
-- one scheduled entry is kept per question;
-- due queries are deterministic at ISO date-time boundaries.
+`js/core/progression.js` defines deterministic POWER points and stage thresholds. First correct answers, mixed/review success, mastery milestones, and substantial session completion can earn points; wrong answers and repeated ordinary labeled answers do not become the optimal progression path. Persisted progression only drives character presentation.
 
-Focused review tests: 4 passed.
+## 7.4 bad-question reporting
 
-### 5.3 mastery transfer/review gate — PR #75
+Added:
 
-`QuizSession` now emits `answeredAt` and a constrained attempt context: `training`, `mixed`, or `review`. TEST maps to `mixed`, REVIEW maps to `review`, and ordinary drills map to `training`.
+- `js/core/question-reports.js` — platform-neutral local report model/storage contract;
+- `js/ui/question-report.js` — learner report panel;
+- quiz-level `問題を報告` action;
+- focused Node tests for exact question ID/version capture, reason validation, append behavior, and corrupted-storage fail-safe.
 
-Mastery states are now:
+Supported reasons:
 
-`unknown -> training/weak -> mixed_pass -> reviewing -> mastered`
+- `ambiguous`;
+- `unnatural_english`;
+- `wrong_answer`;
+- `wrong_explanation`;
+- `other`.
 
-The deterministic gate requires enough successful mixed evidence and later review evidence before `mastered`. Labeled/training-only success cannot produce mastery. Poor recent performance can return a skill to `weak` even if older transfer evidence exists.
-
-Focused smoke checks confirmed training-only, mixed-pass, reviewing, mastered, and regression-to-weak transitions, plus session context/timestamp emission.
+Each report stores exact `questionId`, `questionVersion`, reason, optional detail, and timestamp. Report storage uses a separate `power-toeic.question-reports.v1` browser key so adding reporting does not mutate or migrate the established learning-state root. Storage failure is intentionally non-fatal to quiz progression.
 
 ## Existing Web foundation
 
-The reference implementation now includes question repository adapters, QuizSession, mobile cloze UI/results, versioned persistence, mastery/weakness, WorkoutRecipe/selector/presets, weakness recommendations, workout editor, 10/30/50/100 and bounded endless planning, mixed presentation, review scheduling, and transfer-gated mastery.
+The reference Web implementation now includes:
+
+- QuestionBankRepository adapter and synthetic fixture bank;
+- common QuizSession;
+- mobile cloze UI/results;
+- versioned learning persistence;
+- mastery/weakness;
+- WorkoutRecipe/selector/presets/editor;
+- bounded endless planning;
+- mixed presentation and review scheduling;
+- transfer/review mastery gate;
+- semantic character assets and Sergeant/Trainee composition;
+- deterministic Trainee POWER progression;
+- bad-question reporting.
 
 ## Exact next work
 
-### Phase 6 / Task 6.1
+### Phase 8 / Task 8.1 — mobile-first home/navigation
 
-Inspect the existing semantic `js/ui/asset-catalog.js` against `40_UI_AND_CHARACTER_SPEC.md` and `50_ASSET_POLICY.md`.
+Build a real learner entry screen rather than booting directly into the fixture workout editor.
 
-Acceptance focus:
+Required entry points:
 
-1. stable semantic IDs for Sergeant neutral/correct/wrong/complete and Trainee stages 0–5;
-2. reaction states may alias neutral assets to stay below the temporary Irasutoya asset limit;
-3. missing optional reaction assets fall back to stage neutral / text without blocking quiz;
-4. source-specific filenames stay isolated in the asset catalog/manifest;
-5. the same semantic contract can later map to Swift `AssetCatalog`.
+1. recommended weakness workout;
+2. quick drill;
+3. choose category/training;
+4. custom workout;
+5. due review;
+6. mixed/general test.
 
-Then 6.2 composes Sergeant-presenter and Trainee-answerer UI without moving educational logic into character code. 6.3 adds deterministic progression points/stages.
+The current Trainee stage may be shown as a motivation element. Do not add target-score input. Keep internal micro-skills behind broader learner-facing navigation and feed every path into the existing WorkoutRecipe/session engine rather than adding alternate quiz engines.
+
+After 8.1, continue to end-to-end Web regression, synthetic large-bank adapter performance, and beta entry-point publishing.
 
 ## Fixed decisions
 
 - Web = HTML/CSS/Vanilla JS/ES Modules until V1 freeze;
-- Swift + SwiftUI only after Phase 9 conformance freeze;
+- Swift + SwiftUI starts only after Phase 9 conformance freeze;
 - no target-score feature, skill-to-body-part mapping, runtime LLM, or production question creation in APP TRACK;
 - temporary art = Irasutoya via semantic IDs, below 20 unique works;
 - audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved.
