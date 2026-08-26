@@ -2,17 +2,39 @@
   "status": "in_progress",
   "mode": "generate_backlog",
   "school_stage": "junior-high",
-  "field": "history",
-  "active_unit": "taisho-democracy-interwar-japan",
+  "field": "civics",
+  "active_unit": "elections-political-participation",
   "next_role": "generate",
   "last_completed_role": "generate",
   "verified_through": "meiji-state-industrialization",
   "generation_batch_target": 10,
   "factcheck_policy": "manual_batch",
-  "unverified_backlog": [
-    "imperialism-sino-japanese-russo-japanese-wars"
+  "last_generated_batch": [
+    "taisho-democracy-interwar-japan",
+    "asia-pacific-war",
+    "postwar-japan",
+    "contemporary-japan-cumulative-review",
+    "constitution-constitutionalism",
+    "fundamental-human-rights",
+    "diet",
+    "cabinet",
+    "courts",
+    "separation-of-powers"
   ],
-  "pending_factcheck_count": 1,
+  "unverified_backlog": [
+    "imperialism-sino-japanese-russo-japanese-wars",
+    "taisho-democracy-interwar-japan",
+    "asia-pacific-war",
+    "postwar-japan",
+    "contemporary-japan-cumulative-review",
+    "constitution-constitutionalism",
+    "fundamental-human-rights",
+    "diet",
+    "cabinet",
+    "courts",
+    "separation-of-powers"
+  ],
+  "pending_factcheck_count": 11,
   "prototype_status": "verified",
-  "updated_at": "2026-08-26T10:41:00+09:00"
+  "updated_at": "2026-08-26T10:55:00+09:00"
 }
