@@ -1,26 +1,28 @@
 export const MASTERY_STATES = Object.freeze({
   UNKNOWN: 'unknown',
   TRAINING: 'training',
-  WEAK: 'weak'
+  WEAK: 'weak',
+  MIXED_PASS: 'mixed_pass',
+  REVIEWING: 'reviewing',
+  MASTERED: 'mastered'
 });
 
 export const DEFAULT_MASTERY_CONFIG = Object.freeze({
   minimumAttempts: 4,
   recentWindow: 8,
-  weakAccuracyThreshold: 0.6
+  weakAccuracyThreshold: 0.6,
+  mixedMinimumAttempts: 3,
+  mixedAccuracyThreshold: 0.8,
+  reviewMinimumAttempts: 2,
+  reviewAccuracyThreshold: 0.8
 });
 
 function validateConfig(config) {
-  if (!Number.isInteger(config.minimumAttempts) || config.minimumAttempts < 1) {
-    throw new Error('minimumAttempts must be a positive integer');
+  for (const key of ['minimumAttempts', 'recentWindow', 'mixedMinimumAttempts', 'reviewMinimumAttempts']) {
+    if (!Number.isInteger(config[key]) || config[key] < 1) throw new Error(`${key} must be a positive integer`);
   }
-  if (!Number.isInteger(config.recentWindow) || config.recentWindow < 1) {
-    throw new Error('recentWindow must be a positive integer');
-  }
-  if (!Number.isFinite(config.weakAccuracyThreshold)
-      || config.weakAccuracyThreshold < 0
-      || config.weakAccuracyThreshold > 1) {
-    throw new Error('weakAccuracyThreshold must be between 0 and 1');
+  for (const key of ['weakAccuracyThreshold', 'mixedAccuracyThreshold', 'reviewAccuracyThreshold']) {
+    if (!Number.isFinite(config[key]) || config[key] < 0 || config[key] > 1) throw new Error(`${key} must be between 0 and 1`);
   }
 }
 
@@ -31,11 +33,7 @@ function safeAccuracy(correct, total) {
 function summarizeEvidence(attempts, context) {
   const filtered = attempts.filter((attempt) => attempt.context === context);
   const correct = filtered.filter((attempt) => attempt.correct).length;
-  return Object.freeze({
-    attempts: filtered.length,
-    correct,
-    accuracy: safeAccuracy(correct, filtered.length)
-  });
+  return Object.freeze({ attempts: filtered.length, correct, accuracy: safeAccuracy(correct, filtered.length) });
 }
 
 export function buildMasterySnapshot(skillId, attempts, config = DEFAULT_MASTERY_CONFIG) {
@@ -56,9 +54,17 @@ export function buildMasterySnapshot(skillId, attempts, config = DEFAULT_MASTERY
   if (skillAttempts.length > 0 && skillAttempts.length < config.minimumAttempts) {
     state = MASTERY_STATES.TRAINING;
   } else if (skillAttempts.length >= config.minimumAttempts) {
-    state = recentAccuracy < config.weakAccuracyThreshold
-      ? MASTERY_STATES.WEAK
-      : MASTERY_STATES.TRAINING;
+    if (recentAccuracy < config.weakAccuracyThreshold) {
+      state = MASTERY_STATES.WEAK;
+    } else if (mixed.attempts < config.mixedMinimumAttempts || mixed.accuracy < config.mixedAccuracyThreshold) {
+      state = MASTERY_STATES.TRAINING;
+    } else if (review.attempts === 0) {
+      state = MASTERY_STATES.MIXED_PASS;
+    } else if (review.attempts < config.reviewMinimumAttempts || review.accuracy < config.reviewAccuracyThreshold) {
+      state = MASTERY_STATES.REVIEWING;
+    } else {
+      state = MASTERY_STATES.MASTERED;
+    }
   }
 
   return Object.freeze({
@@ -92,8 +98,5 @@ export function buildMasterySnapshots({ attempts, skillIds = [], config = DEFAUL
     .filter((skillId) => typeof skillId === 'string' && skillId && !seen.has(skillId))
     .sort();
 
-  return Object.freeze([
-    ...ordered,
-    ...extra
-  ].map((skillId) => buildMasterySnapshot(skillId, attempts, config)));
+  return Object.freeze([...ordered, ...extra].map((skillId) => buildMasterySnapshot(skillId, attempts, config)));
 }

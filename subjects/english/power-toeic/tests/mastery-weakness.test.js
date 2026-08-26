@@ -9,7 +9,7 @@ import { rankWeakSkills } from '../js/core/weakness.js';
 
 function makeAttempts(skillId, results, context) {
   return results.map((correct, index) => ({
-    questionId: `${skillId}-${index + 1}`,
+    questionId: `${skillId}-${context ?? 'training'}-${index + 1}`,
     questionVersion: 1,
     skillId,
     selectedIndex: correct ? 0 : 1,
@@ -34,16 +34,39 @@ test('mastery snapshot distinguishes no evidence, insufficient evidence, weak an
   }
 });
 
-test('mastery records mixed and review evidence without promoting training to mastered', () => {
+test('training-only success can never become mastered', () => {
+  const snapshot = buildMasterySnapshot('skill.alpha', makeAttempts('skill.alpha', Array(12).fill(true), 'training'));
+  assert.equal(snapshot.state, MASTERY_STATES.TRAINING);
+  assert.equal(snapshot.mixed.attempts, 0);
+  assert.equal(snapshot.review.attempts, 0);
+});
+
+test('mastery progresses training to mixed pass, reviewing, then mastered', () => {
+  const training = makeAttempts('skill.alpha', [true, true, true, true], 'training');
+  const mixed = makeAttempts('skill.alpha', [true, true, true], 'mixed');
+  const oneReview = makeAttempts('skill.alpha', [true], 'review');
+  const twoReviews = makeAttempts('skill.alpha', [true, true], 'review');
+
+  const mixedPass = buildMasterySnapshot('skill.alpha', [...training, ...mixed]);
+  assert.equal(mixedPass.state, MASTERY_STATES.MIXED_PASS);
+
+  const reviewing = buildMasterySnapshot('skill.alpha', [...training, ...mixed, ...oneReview]);
+  assert.equal(reviewing.state, MASTERY_STATES.REVIEWING);
+
+  const mastered = buildMasterySnapshot('skill.alpha', [...training, ...mixed, ...twoReviews]);
+  assert.equal(mastered.state, MASTERY_STATES.MASTERED);
+  assert.deepEqual(mastered.mixed, { attempts: 3, correct: 3, accuracy: 1 });
+  assert.deepEqual(mastered.review, { attempts: 2, correct: 2, accuracy: 1 });
+});
+
+test('weak recent performance overrides older transfer evidence', () => {
   const attempts = [
-    ...makeAttempts('skill.alpha', [true, true, true, true]),
-    ...makeAttempts('skill.alpha', [true, false], 'mixed'),
-    ...makeAttempts('skill.alpha', [true], 'review')
+    ...makeAttempts('skill.alpha', [true, true, true], 'mixed'),
+    ...makeAttempts('skill.alpha', [true, true], 'review'),
+    ...makeAttempts('skill.alpha', [false, false, false, false], 'training')
   ];
   const snapshot = buildMasterySnapshot('skill.alpha', attempts);
-  assert.equal(snapshot.state, MASTERY_STATES.TRAINING);
-  assert.deepEqual(snapshot.mixed, { attempts: 2, correct: 1, accuracy: 0.5 });
-  assert.deepEqual(snapshot.review, { attempts: 1, correct: 1, accuracy: 1 });
+  assert.equal(snapshot.state, MASTERY_STATES.WEAK);
 });
 
 test('snapshot list includes requested unknown skills and deterministic extra skill ordering', () => {

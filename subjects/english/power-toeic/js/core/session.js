@@ -1,9 +1,13 @@
+const ATTEMPT_CONTEXTS = new Set(['training', 'mixed', 'review']);
+
 export class QuizSession {
-  constructor({ questionIds, repository, now = () => Date.now() }) {
+  constructor({ questionIds, repository, now = () => Date.now(), context = 'training' }) {
     if (!Array.isArray(questionIds) || questionIds.length === 0) throw new Error('questionIds must be non-empty');
+    if (!ATTEMPT_CONTEXTS.has(context)) throw new Error(`unsupported session context: ${context}`);
     this.repository = repository;
     this.questionIds = Object.freeze([...questionIds]);
     this.now = now;
+    this.context = context;
     this.index = 0;
     this.attempts = [];
     this.questionStartedAt = this.now();
@@ -21,7 +25,7 @@ export class QuizSession {
     if (!question) throw new Error('question not found');
     if (!Number.isInteger(selectedIndex) || selectedIndex < 0 || selectedIndex >= question.choices.length) throw new Error('invalid answer index');
 
-    const answeredAt = this.now();
+    const answeredAtMs = this.now();
     const attempt = Object.freeze({
       questionId: question.id,
       questionVersion: question.version,
@@ -29,7 +33,9 @@ export class QuizSession {
       selectedIndex,
       correctIndex: question.correctIndex,
       correct: selectedIndex === question.correctIndex,
-      responseMs: Math.max(0, answeredAt - this.questionStartedAt)
+      responseMs: Math.max(0, answeredAtMs - this.questionStartedAt),
+      answeredAt: new Date(answeredAtMs).toISOString(),
+      context: this.context,
     });
     this.attempts.push(attempt);
     this.answeredCurrent = true;
