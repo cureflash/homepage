@@ -2,7 +2,7 @@
   "status": "in_progress",
   "mode": "handoff_driven",
   "project": "science-worksheet-factory",
-  "next_task": "Resume Phase 3 at 物理基礎 waves/sound. Heat publication is complete: recovery Actions run 32997246034 succeeded and publication commit 48a0f5a52e467d8879b77bf2682303557cab091c added 60 heat PDFs/catalog rows after shared/topic tests, independent recomputation, exact 450 Physics Basics rows with 450 unique hashes, and PDF header/size/two-page validation. Published count is now 450 Physics Basics / 738 physics. Next, verify current MEXT placement for wave speed/frequency/wavelength and basic sound quantities, then implement the next coherent 30–60 worksheet batch without changing the established PDF/catalog format. Representative screenshot-based visual PDF QA remains pending.",
+  "next_task": "Resume Phase 3 at 物理基礎 音と振動 / basic sound quantities. Wave-quantity publication is complete: PR #84 merged, Actions run 33003615994 succeeded, and publication commit c93ad13d60af18172a094e0f1b2e7e2c6112ea0c added 30 v=fλ PDFs/catalog rows after shared/topic tests, deterministic regeneration, independent direct/reverse recomputation, exact 480 Physics Basics rows with 480 unique hashes, and PDF header/size/two-page validation. Published count is now 480 Physics Basics / 768 physics. Next, stay in MEXT wave/sound order and choose the next coherent sound-and-vibration quantity batch without changing the established PDF/catalog format. Representative screenshot-based visual QA of generated worksheet PDFs remains pending because the published raw PDF could not be retrieved for rendering in this run.",
   "scheduler_policy": "one_checkpoint_per_cycle",
   "updated_at": "2026-08-27"
 }
