@@ -2,8 +2,8 @@
   "project": "Power TOEIC",
   "status": "in_progress",
   "track": "app_ui_program",
-  "phase": 4,
-  "active_task": "4.5",
+  "phase": 5,
+  "active_task": "5.1",
   "next_role": "implementation",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
@@ -58,17 +58,26 @@
   },
   "workout": {
     "module": "subjects/english/power-toeic/js/core/workout-builder.js",
-    "completed_tasks": ["4.1", "4.2", "4.3", "4.4"],
+    "editor_model": "subjects/english/power-toeic/js/core/workout-editor-model.js",
+    "editor_ui": "subjects/english/power-toeic/js/ui/workout-editor.js",
+    "session_planner": "subjects/english/power-toeic/js/core/session-planner.js",
+    "completed_tasks": ["4.1", "4.2", "4.3", "4.4", "4.5", "4.6"],
     "modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
+    "finite_session_sizes": [10, 30, 50, 100],
+    "endless_default_chunk_size": 30,
+    "endless_max_chunk_size": 100,
     "selector_policy": "seed-deterministic; prefer unseen then least-recently-seen; no duplicate IDs in finite sessions",
     "test_label_policy": "hide_skill",
     "review_policy": "review_due IDs only",
-    "weakness_policy": "ranked weakness weights resolve through the common WorkoutRecipe model"
+    "weakness_policy": "ranked weakness weights resolve through the common WorkoutRecipe model",
+    "editor_policy": "WEAKNESS/system recipes become user-editable CUSTOM drafts and normalize through createWorkoutRecipe before start"
   },
-  "last_completed_task": "4.4",
+  "last_completed_task": "4.6",
   "phase2_test_result": "9 Node tests passed: adapter/session/renderer/asset-catalog contracts",
   "phase3_1_test_result": "5 focused persistence tests passed",
   "phase3_2_3_test_result": "4 focused mastery/weakness tests passed",
   "phase4_1_4_4_test_result": "4 focused workout recipe/selector/preset/weakness tests passed",
-  "updated_at": "2026-08-27T00:40:00+09:00"
+  "phase4_5_test_result": "4 focused workout editor model tests passed",
+  "phase4_6_test_result": "4 focused session planner tests passed",
+  "updated_at": "2026-08-27T01:49:00+09:00"
 }
