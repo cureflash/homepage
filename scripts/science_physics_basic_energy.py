@@ -1,10 +1,10 @@
-"""Physics Basics work and power topics for the shared worksheet factory.
+"""Physics Basics work and mechanical-energy topics for the shared worksheet factory.
 
-The definitions stay inside formal course 物理基礎 and intentionally use only
-shared product relations that are already independently recomputed by the
-science worksheet helper. Work problems state the parallel-force/displacement
-assumption explicitly so W = Fd is not used outside its basic one-dimensional
-form.
+All definitions stay inside formal course 物理基礎. Work and gravitational
+potential-energy drills use the independently validated shared product relation.
+Kinetic energy uses the shared half-product-last-square relation so v is sampled
+as speed itself and squared by the formula helper; v² is never represented as an
+unrelated sampled variable.
 """
 
 PHYSICS_BASIC_ENERGY_PROBLEM_COUNT = 20
@@ -74,6 +74,79 @@ PHYSICS_BASIC_ENERGY_TOPICS = {
                 "solve_for": "time",
                 "worksheet_mode": "calculation-reverse",
                 "description": "仕事と仕事率から、W = Pt を使って仕事に要した時間を求める基本逆算です。",
+            },
+        },
+    },
+    "gravitational-potential": {
+        "title": "物理基礎 重力による位置エネルギー",
+        "unit": "物体の運動とエネルギー：力学的エネルギー",
+        "skill": "gravitational-potential-energy",
+        "formula": "U = mgh（基準面を U = 0 とする）",
+        "seeds": tuple(range(6711, 6721)),
+        "spec": {
+            "id": "physics-basic-gravitational-potential",
+            "relation": "product",
+            "result": "potential_energy",
+            "inputs": ["mass", "gravity", "height"],
+            "variables": {
+                "potential_energy": {"label": "重力による位置エネルギー U", "unit": "J"},
+                "mass": {"label": "質量 m", "unit": "kg", "values": [0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]},
+                "gravity": {"label": "重力加速度 g", "unit": "m/s²", "values": [9.8]},
+                "height": {"label": "基準面からの高さ h", "unit": "m", "values": [0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 15, 20]},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-potential-energy": {
+                "solve_for": "potential_energy",
+                "worksheet_mode": "calculation-basic",
+                "description": "位置エネルギーの基準面を U = 0 と明示し、U = mgh から重力による位置エネルギーを求める基本反復です。",
+            },
+            "reverse-mass": {
+                "solve_for": "mass",
+                "worksheet_mode": "calculation-reverse",
+                "description": "基準面からの高さと重力による位置エネルギーから、U = mgh を使って質量を求める基本逆算です。",
+            },
+            "reverse-height": {
+                "solve_for": "height",
+                "worksheet_mode": "calculation-reverse",
+                "description": "質量と重力による位置エネルギーから、U = mgh を使って基準面からの高さを求める基本逆算です。",
+            },
+        },
+    },
+    "kinetic-energy": {
+        "title": "物理基礎 運動エネルギー",
+        "unit": "物体の運動とエネルギー：力学的エネルギー",
+        "skill": "kinetic-energy",
+        "formula": "K = 1/2 mv²",
+        "seeds": tuple(range(6721, 6731)),
+        "spec": {
+            "id": "physics-basic-kinetic-energy",
+            "relation": "half-product-last-square",
+            "result": "kinetic_energy",
+            "inputs": ["mass", "speed"],
+            "variables": {
+                "kinetic_energy": {"label": "運動エネルギー K", "unit": "J"},
+                "mass": {"label": "質量 m", "unit": "kg", "values": [0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]},
+                "speed": {"label": "速さ v", "unit": "m/s", "values": [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20]},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-kinetic-energy": {
+                "solve_for": "kinetic_energy",
+                "worksheet_mode": "calculation-basic",
+                "description": "質量と速さから K = 1/2 mv² を使って運動エネルギーを求める基本反復です。",
+            },
+            "reverse-mass": {
+                "solve_for": "mass",
+                "worksheet_mode": "calculation-reverse",
+                "description": "運動エネルギーと速さから K = 1/2 mv² を使って質量を求める基本逆算です。",
+            },
+            "reverse-speed": {
+                "solve_for": "speed",
+                "worksheet_mode": "calculation-reverse",
+                "description": "運動エネルギーと質量から K = 1/2 mv² を使って速さを求める基本逆算です。",
             },
         },
     },

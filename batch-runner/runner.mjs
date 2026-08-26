@@ -116,8 +116,19 @@ async function runProject(project) {
       await log(`CODEX [${project.name}] #${runNumber}: ${singleLine(turn.finalResponse)}`);
     }
 
+    // Codex workspace-write can intentionally leave .git read-only. The parent
+    // runner is outside that sandbox, so if the turn produced a dirty tree it
+    // safely commits exactly those changes here. Every turn starts clean, which
+    // prevents unrelated pre-existing edits from being swept into this commit.
+    if (!isWorkingTreeClean()) {
+      await log(`PARENT COMMIT [${project.name}] #${runNumber}: Codex left uncommitted changes; committing from parent runner.`);
+      runGit(["add", "-A"]);
+      runGit(["diff", "--cached", "--check"]);
+      runGit(["commit", "-m", `Batch: ${project.name} turn ${runNumber}`]);
+    }
+
     if (config.requireCleanWorkingTree !== false) {
-      assertCleanWorkingTree(`ターン${runNumber}終了後。Codexは変更をcommitしてから終了する必要があります`);
+      assertCleanWorkingTree(`ターン${runNumber}終了後。親ランナーのcommit後もdirtyです`);
     }
 
     const afterHead = runGit(["rev-parse", "HEAD"]).trim();
@@ -179,7 +190,7 @@ STATUS に batch target / generation batch target など明示的な作業量が
 STATUS は必ず残し、作業継続中なら status=in_progress、プロジェクト全体が本当に完了した場合だけ status=done にしてください。
 事実確認が必要な作業では、権威ある一次情報・公的資料を優先してください。
 
-このターンで変更したファイルは、既存のリポジトリ運用に従ってcommitしてください。pushは親ランナー側でも実行します。
+可能ならこのターンの変更をcommitしてください。ただし sandbox の制約で .git が読み取り専用なら、commitのために権限回避や破壊的操作を試みず、変更をそのまま残してください。親ランナーが安全にcommitしてpushします。
 force push、reset --hard、既存の未関連変更の破棄、履歴改変は禁止です。
 完了できない場合は成功したことにせず、状態を壊さずにブロッカーをSTATUS/HANDOFFへ記録してください。
 
