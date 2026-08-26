@@ -4,23 +4,23 @@
   "school_stage": "high-school",
   "field": "history",
   "formal_course": "歴史総合",
-  "active_unit": "history-comprehensive-modernization-questions",
+  "active_unit": "history-comprehensive-massification-contemporary-issues",
   "next_role": "generate",
   "last_completed_role": "generate",
   "verified_through": "meiji-state-industrialization",
   "generation_batch_target": 10,
   "factcheck_policy": "manual_batch",
   "last_generated_batch": [
-    "elections-political-participation",
-    "local-government",
-    "market-economy-firms-labor",
-    "money-finance",
-    "public-finance-taxation",
-    "social-security",
-    "international-society-un",
-    "civics-cumulative-review",
-    "history-comprehensive-history-and-us",
-    "history-comprehensive-characteristics-sources"
+    "history-comprehensive-modernization-questions",
+    "history-comprehensive-18c-asia-economy-society",
+    "history-comprehensive-industrial-revolution-world-market-opening",
+    "history-comprehensive-nation-state-meiji-restoration",
+    "history-comprehensive-modernization-contemporary-issues",
+    "history-comprehensive-massification-questions",
+    "history-comprehensive-wwi-international-cooperation",
+    "history-comprehensive-mass-society-participation",
+    "history-comprehensive-world-depression-cooperation-crisis",
+    "history-comprehensive-wwii-postwar-order"
   ],
   "unverified_backlog": [
     "imperialism-sino-japanese-russo-japanese-wars",
@@ -43,9 +43,19 @@
     "international-society-un",
     "civics-cumulative-review",
     "history-comprehensive-history-and-us",
-    "history-comprehensive-characteristics-sources"
+    "history-comprehensive-characteristics-sources",
+    "history-comprehensive-modernization-questions",
+    "history-comprehensive-18c-asia-economy-society",
+    "history-comprehensive-industrial-revolution-world-market-opening",
+    "history-comprehensive-nation-state-meiji-restoration",
+    "history-comprehensive-modernization-contemporary-issues",
+    "history-comprehensive-massification-questions",
+    "history-comprehensive-wwi-international-cooperation",
+    "history-comprehensive-mass-society-participation",
+    "history-comprehensive-world-depression-cooperation-crisis",
+    "history-comprehensive-wwii-postwar-order"
   ],
-  "pending_factcheck_count": 21,
+  "pending_factcheck_count": 31,
   "prototype_status": "verified",
-  "updated_at": "2026-08-26T11:58:00+09:00"
+  "updated_at": "2026-08-26T12:43:00+09:00"
 }
