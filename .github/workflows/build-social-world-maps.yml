@@ -1,0 +1,37 @@
+name: Build Social World Maps
+
+on:
+  push:
+    branches:
+      - social-quiz-mercator-fast-maps
+    paths:
+      - scripts/build_social_world_maps.py
+      - subjects/social/quiz/js/data/world-countries.js
+      - .github/workflows/build-social-world-maps.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: social-quiz-mercator-fast-maps
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate local regional Mercator SVGs
+        run: python scripts/build_social_world_maps.py
+      - name: Commit generated map assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add subjects/social/quiz/assets/maps/world/
+          if git diff --cached --quiet; then
+            echo "No generated map changes."
+            exit 0
+          fi
+          git commit -m "Generate local Mercator world region maps"
+          git push origin HEAD:social-quiz-mercator-fast-maps
