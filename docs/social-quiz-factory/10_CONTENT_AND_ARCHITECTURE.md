@@ -64,6 +64,18 @@ Every question should be representable with stable data resembling:
 
 Fields may be factored to game-level metadata when shared. UI must not be responsible for educational metadata.
 
+## Shared gameplay layer
+
+The first-generation social quiz catalog shares a lightweight game loop independent of individual question banks:
+
+- default time limit: 180 seconds;
+- wrong answer penalty: 20 seconds;
+- timer reaching 0 before all questions are answered: game over;
+- answering the final question while time remains: clear, with the remaining time locked at that moment;
+- start/correct/wrong SE are invoked through a separate effects adapter rather than embedded in question data or renderers.
+
+A game may later override `timeLimitSeconds` or `wrongPenaltySeconds` without changing its questions. Audio failure must not alter scoring, timing, or answer availability.
+
 ## UI isolation
 
 The current HTML/CSS is not a permanent design contract.
@@ -73,7 +85,8 @@ Required rule:
 - `QuizEngine` must not depend on colors, dimensions, typography, or decorative UI;
 - renderers may depend on semantic answer containers but not on a specific site-wide visual design;
 - replacing the outer HTML/CSS later must not require rewriting question banks;
-- if a renderer needs a visual asset, asset identity belongs to renderer/game configuration, not core scoring logic.
+- if a renderer needs a visual asset, asset identity belongs to renderer/game configuration, not core scoring logic;
+- sound playback belongs to the effects adapter; timer state belongs to core game flow; the presentation only displays semantic state such as remaining seconds and game-over/clear result.
 
 ## Ambiguity policy
 
