@@ -1,0 +1,22 @@
+{
+  "batch_id": "2026-08-26-manual-001",
+  "purpose": "manual throughput test for scheduled CONTENT/GENERATE worker",
+  "qa_status": "pending_validation",
+  "skill_count": 4,
+  "question_count": 400,
+  "questions_per_skill": 100,
+  "skills": [
+    {"id":"p5.pos.adjective_before_noun","count":100,"path":"parts-of-speech/adjective-before-noun/pending/batch-20260826-001.json"},
+    {"id":"p5.pos.adverb_modifies_verb","count":100,"path":"parts-of-speech/adverb-modifies-verb/pending/batch-20260826-001.json"},
+    {"id":"p5.pos.noun_in_noun_slot","count":100,"path":"parts-of-speech/noun-in-noun-slot/pending/batch-20260826-001.json"},
+    {"id":"p5.pos.adjective_after_linking_verb","count":100,"path":"parts-of-speech/adjective-after-linking-verb/pending/batch-20260826-001.json"}
+  ],
+  "construction_checks": {
+    "stable_ids": true,
+    "exactly_four_choices_per_item": true,
+    "one_explicit_blank_per_stem": true,
+    "answer_index_rotated_evenly_per_skill": true,
+    "answer_position_distribution": {"A":100,"B":100,"C":100,"D":100}
+  },
+  "important": "These are generated candidates, not approved learner-facing questions. Independent QA must re-solve every item and check alternate answers before approval."
+}

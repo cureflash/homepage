@@ -1,0 +1,13 @@
+{
+  "project": "Power TOEIC",
+  "role": "question_validation",
+  "checked_question_count": 0,
+  "verified_question_count": 0,
+  "needs_revision_count": 0,
+  "rejected_question_count": 0,
+  "pending_validation_count": 400,
+  "next_batch": "2026-08-26-manual-001",
+  "next_micro_skill": "p5.pos.adjective_before_noun",
+  "next_question_id": "p5_pos_adjective_before_noun_0001",
+  "updated_at": "2026-08-26T22:00:00+09:00"
+}

@@ -1,0 +1,19 @@
+{
+  "project": "Power TOEIC",
+  "role": "content_generate",
+  "taxonomy_version": "part5-v1.0",
+  "taxonomy_micro_skill_count": 44,
+  "generated_question_count": 400,
+  "pending_validation_count": 400,
+  "verified_question_count": 0,
+  "generated_micro_skills": [
+    "p5.pos.adjective_before_noun",
+    "p5.pos.adverb_modifies_verb",
+    "p5.pos.noun_in_noun_slot",
+    "p5.pos.adjective_after_linking_verb"
+  ],
+  "current_batch": "2026-08-26-manual-001",
+  "next_micro_skill": "p5.pos.adverb_modifies_adjective",
+  "last_run_result": "4 micro-skills x 100 candidates completed; first run also created the 44-skill taxonomy structure",
+  "updated_at": "2026-08-26T22:00:00+09:00"
+}
