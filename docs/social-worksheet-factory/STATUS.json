@@ -7,7 +7,7 @@
   "active_unit": null,
   "next_role": "factcheck_manual",
   "last_completed_role": "factcheck",
-  "verified_through": "separation-of-powers",
+  "verified_through": "civics-cumulative-review",
   "generation_batch_target": 20,
   "factcheck_policy": "manual_batch",
   "last_generated_batch": [
@@ -21,14 +21,6 @@
     "political-economy-global-issues-inquiry"
   ],
   "last_factchecked_batch": [
-    "constitution-constitutionalism",
-    "fundamental-human-rights",
-    "diet",
-    "cabinet",
-    "courts",
-    "separation-of-powers"
-  ],
-  "unverified_backlog": [
     "elections-political-participation",
     "local-government",
     "market-economy-firms-labor",
@@ -36,7 +28,9 @@
     "public-finance-taxation",
     "social-security",
     "international-society-un",
-    "civics-cumulative-review",
+    "civics-cumulative-review"
+  ],
+  "unverified_backlog": [
     "history-comprehensive-history-and-us",
     "history-comprehensive-characteristics-sources",
     "history-comprehensive-modernization-questions",
@@ -218,7 +212,7 @@
     "political-economy-international-cooperation-economic-institutions",
     "political-economy-global-issues-inquiry"
   ],
-  "pending_factcheck_count": 188,
+  "pending_factcheck_count": 180,
   "prototype_status": "verified",
-  "updated_at": "2026-08-26T21:45:00+09:00"
+  "updated_at": "2026-08-26T22:02:00+09:00"
 }
