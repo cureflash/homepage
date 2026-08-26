@@ -162,10 +162,10 @@ public struct AssetCatalog: Sendable {
 }
 
 public protocol AudioCuePlaying: Sendable {
-    func play(_ id: SemanticAssetID) async
+    func play(_ id: SemanticAssetID)
 }
 
 public struct SilentAudioCuePlayer: AudioCuePlaying {
     public init() {}
-    public func play(_ id: SemanticAssetID) async {}
+    public func play(_ id: SemanticAssetID) {}
 }
