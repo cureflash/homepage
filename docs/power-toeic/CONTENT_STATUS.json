@@ -3,9 +3,12 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 1200,
-  "pending_validation_count": 1200,
-  "verified_question_count": 0,
+  "generated_question_count": 1300,
+  "checked_question_count": 200,
+  "pending_validation_count": 1100,
+  "verified_question_count": 183,
+  "needs_revision_count": 17,
+  "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
     "p5.pos.adverb_modifies_verb",
@@ -18,15 +21,17 @@
     "p5.verb.subject_verb_agreement",
     "p5.verb.present_vs_past",
     "p5.verb.present_perfect_vs_past",
-    "p5.verb.active_vs_passive"
+    "p5.verb.active_vs_passive",
+    "p5.verb.modal_base_form"
   ],
-  "current_batch": "2026-08-27-scheduled-011",
-  "current_micro_skill": "p5.verb.modal_base_form",
+  "current_batch": "2026-08-27-scheduled-012",
+  "current_micro_skill": "p5.verb.to_infinitive_pattern",
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_verb_modal_base_form_0001",
-  "next_micro_skill": "p5.verb.modal_base_form",
+  "next_resume_id": "p5_verb_to_infinitive_pattern_0001",
+  "next_micro_skill": "p5.verb.to_infinitive_pattern",
   "generation_complete": false,
-  "last_run_result": "Completed p5.verb.active_vs_passive with 100 persisted candidates in four 25-question pending batches, IDs 0001-0100. The set covers singular past passive, plural present passive, active simple past with explicit finished-time anchors, and active habitual present contexts. Generation-time structural checks found unique sequential IDs, exactly one blank, four distinct choices, valid proposed-answer indexes, balanced answer positions A/B/C/D = 25/25/25/25, zero exact duplicate stems, zero intra-skill SequenceMatcher pairs at or above 0.94 after rewriting four initially over-similar pairs, and maximum observed intra-skill similarity 0.9125. All 1200 questions remain pending_validation; no QA decisions were made. Full cross-bank near-duplicate clearance against all 1200 questions is not claimed complete because this runtime did not execute a full local-repository global duplicate scan. Generation remains incomplete at 12 of 44 micro-skills; resume with p5.verb.modal_base_form.",
-  "updated_at": "2026-08-27T07:28:00+09:00"
+  "validation_complete": false,
+  "last_run_result": "Reconciled a parallel 25-question modal_base_form checkpoint already on main, then persisted IDs 0026-0100 in three additional 25-question batches to complete p5.verb.modal_base_form at 100/100. Combined generation checks: sequential unique IDs 0001-0100, one blank, four distinct choices, valid proposed-answer indexes, A/B/C/D = 25/25/25/25, exact duplicate stems 0, intra-skill SequenceMatcher pairs >=0.94 = 0, maximum observed similarity about 0.671. A pre-persistence morphology error that would have produced shiped/shiping was corrected to shipped/shipping. Full cross-bank semantic near-duplicate scanning across all 1300 candidates was not completed. In the same run, independently checked the oldest 100 pending adjective_before_noun items: 96 verified, 4 needs_revision (IDs 0037-0040; secure vs secured ambiguity), 0 rejected. Cumulative QA is checked 200, verified 183, needs_revision 17, rejected 0, leaving 1100 unchecked pending_validation questions. Generation remains incomplete at 13/44; next generation skill is p5.verb.to_infinitive_pattern.",
+  "updated_at": "2026-08-27T08:31:00+09:00"
 }
