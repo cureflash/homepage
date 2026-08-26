@@ -77,13 +77,12 @@ public struct CharacterQuizView: View {
 
     private func handleAttempt(_ attempt: Attempt) {
         reaction = attempt.correct ? .correct : .wrong
-        let cue = attempt.correct ? AssetCatalog.audioCorrect : AssetCatalog.audioWrong
-        Task { await audioPlayer.play(cue) }
+        audioPlayer.play(attempt.correct ? AssetCatalog.audioCorrect : AssetCatalog.audioWrong)
     }
 
     private func handleComplete(_ results: SessionResults) {
         reaction = .complete
-        Task { await audioPlayer.play(AssetCatalog.audioInspiration) }
+        audioPlayer.play(AssetCatalog.audioInspiration)
         onComplete(results)
     }
 }
