@@ -5,6 +5,7 @@ import tempfile
 from pathlib import Path
 
 try:
+    from scripts.science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
     from scripts.science_physics_basic_motion import (
         PHYSICS_BASIC_MOTION_PROBLEM_COUNT,
         PHYSICS_BASIC_MOTION_TOPICS,
@@ -12,6 +13,7 @@ try:
     from scripts.science_worksheet_helpers import generate_formula_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
+    from science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
     from science_physics_basic_motion import (
         PHYSICS_BASIC_MOTION_PROBLEM_COUNT,
         PHYSICS_BASIC_MOTION_TOPICS,
@@ -22,6 +24,7 @@ except ModuleNotFoundError:
 
 FORMAL_COURSE = "物理基礎"
 ID_PREFIX = "science-physics-basic-motion-"
+ALL_TOPICS = {**PHYSICS_BASIC_MOTION_TOPICS, **PHYSICS_BASIC_FORCE_TOPICS}
 
 
 def build_batch(repo_root):
@@ -36,7 +39,7 @@ def build_batch(repo_root):
     output_dir = root / output_rel_dir
     pending = []
 
-    for topic_key, topic in PHYSICS_BASIC_MOTION_TOPICS.items():
+    for topic_key, topic in ALL_TOPICS.items():
         for mode_key, mode in topic["modes"].items():
             for variant, seed in enumerate(topic["seeds"], start=1):
                 problems = generate_formula_drill(
@@ -97,7 +100,7 @@ def publish(repo_root):
     catalog_path, output_dir, catalog, pending, prospective_catalog = build_batch(root)
     if not pending:
         validate_catalog(catalog, root)
-        print("Physics Basics motion worksheets already published")
+        print("Physics Basics mechanics worksheets already published")
         return 0
 
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -119,7 +122,7 @@ def publish(repo_root):
         json.dumps(prospective_catalog, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"published {len(pending)} Physics Basics motion worksheets")
+    print(f"published {len(pending)} Physics Basics motion/force worksheets")
     return len(pending)
 
 
