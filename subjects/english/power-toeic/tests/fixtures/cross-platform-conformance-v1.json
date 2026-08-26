@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Synthetic deterministic fixtures shared by Web JavaScript and native Swift conformance tests. Not production TOEIC content.",
+  "questions": [
+    {"id":"syn-q1","version":1,"skillId":"skill.alpha","categoryId":"category.synthetic","sentence":"Synthetic alpha one ____.","choices":["a","b","c","d"],"correctIndex":0,"explanation":"Synthetic fixture only."},
+    {"id":"syn-q2","version":1,"skillId":"skill.alpha","categoryId":"category.synthetic","sentence":"Synthetic alpha two ____.","choices":["a","b","c","d"],"correctIndex":1,"explanation":"Synthetic fixture only."},
+    {"id":"syn-q3","version":1,"skillId":"skill.alpha","categoryId":"category.synthetic","sentence":"Synthetic alpha three ____.","choices":["a","b","c","d"],"correctIndex":2,"explanation":"Synthetic fixture only."},
+    {"id":"syn-q4","version":1,"skillId":"skill.beta","categoryId":"category.synthetic","sentence":"Synthetic beta one ____.","choices":["a","b","c","d"],"correctIndex":3,"explanation":"Synthetic fixture only."},
+    {"id":"syn-q5","version":1,"skillId":"skill.beta","categoryId":"category.synthetic","sentence":"Synthetic beta two ____.","choices":["a","b","c","d"],"correctIndex":0,"explanation":"Synthetic fixture only."},
+    {"id":"syn-q6","version":1,"skillId":"skill.beta","categoryId":"category.synthetic","sentence":"Synthetic beta three ____.","choices":["a","b","c","d"],"correctIndex":1,"explanation":"Synthetic fixture only."}
+  ],
+  "skills": [
+    {"id":"skill.alpha","label":"Synthetic Alpha","categoryId":"category.synthetic"},
+    {"id":"skill.beta","label":"Synthetic Beta","categoryId":"category.synthetic"}
+  ],
+  "selection": {
+    "recipe": {"mode":"CUSTOM","totalCount":4,"skillAllocations":[{"skillId":"skill.alpha","count":2},{"skillId":"skill.beta","count":2}],"selectionPolicy":"standard","labelPolicy":"show_skill","seed":7,"endless":false},
+    "attempts": [
+      {"questionId":"syn-q1","answeredAt":"2026-01-03T00:00:00.000Z"},
+      {"questionId":"syn-q4","answeredAt":"2026-01-01T00:00:00.000Z"}
+    ],
+    "expectedQuestionIds": ["syn-q3","syn-q2","syn-q5","syn-q6"]
+  },
+  "session": {
+    "questionIds": ["syn-q3","syn-q2"],
+    "context": "mixed",
+    "clockMs": [1000,2500,3000,5000],
+    "selectedIndexes": [2,0],
+    "expectedAttempts": [
+      {"questionId":"syn-q3","questionVersion":1,"skillId":"skill.alpha","selectedIndex":2,"correctIndex":2,"correct":true,"responseMs":1500,"answeredAt":"1970-01-01T00:00:02.500Z","context":"mixed"},
+      {"questionId":"syn-q2","questionVersion":1,"skillId":"skill.alpha","selectedIndex":0,"correctIndex":1,"correct":false,"responseMs":2000,"answeredAt":"1970-01-01T00:00:05.000Z","context":"mixed"}
+    ],
+    "expectedResults": {"answered":2,"correct":1,"accuracy":0.5,"bySkill":{"skill.alpha":{"answered":2,"correct":1}}}
+  },
+  "mastery": {
+    "cases": [
+      {
+        "name":"mastered_after_mixed_and_review_evidence",
+        "skillId":"skill.alpha",
+        "attempts":[
+          {"skillId":"skill.alpha","correct":true,"context":"training"},
+          {"skillId":"skill.alpha","correct":true,"context":"training"},
+          {"skillId":"skill.alpha","correct":true,"context":"training"},
+          {"skillId":"skill.alpha","correct":true,"context":"mixed"},
+          {"skillId":"skill.alpha","correct":true,"context":"mixed"},
+          {"skillId":"skill.alpha","correct":true,"context":"mixed"},
+          {"skillId":"skill.alpha","correct":true,"context":"review"},
+          {"skillId":"skill.alpha","correct":true,"context":"review"}
+        ],
+        "expected":{"skillId":"skill.alpha","state":"mastered","attempts":8,"correct":8,"accuracy":1,"recentAttempts":8,"recentCorrect":8,"recentAccuracy":1,"mixed":{"attempts":3,"correct":3,"accuracy":1},"review":{"attempts":2,"correct":2,"accuracy":1}}
+      },
+      {
+        "name":"weak_from_recent_low_accuracy",
+        "skillId":"skill.beta",
+        "attempts":[
+          {"skillId":"skill.beta","correct":false,"context":"training"},
+          {"skillId":"skill.beta","correct":false,"context":"training"},
+          {"skillId":"skill.beta","correct":true,"context":"training"},
+          {"skillId":"skill.beta","correct":false,"context":"training"}
+        ],
+        "expected":{"skillId":"skill.beta","state":"weak","attempts":4,"correct":1,"accuracy":0.25,"recentAttempts":4,"recentCorrect":1,"recentAccuracy":0.25,"mixed":{"attempts":0,"correct":0,"accuracy":0},"review":{"attempts":0,"correct":0,"accuracy":0}}
+      }
+    ]
+  },
+  "review": {
+    "initialAttempt":{"questionId":"syn-q1","questionVersion":1,"skillId":"skill.alpha","correct":true,"context":"training","answeredAt":"2026-01-01T00:00:00.000Z"},
+    "expectedInitialEntry":{"questionId":"syn-q1","questionVersion":1,"skillId":"skill.alpha","dueAt":"2026-01-02T00:00:00.000Z","intervalIndex":0,"status":"scheduled","lastAttemptAt":"2026-01-01T00:00:00.000Z"},
+    "successfulReviewAttempt":{"questionId":"syn-q1","questionVersion":1,"skillId":"skill.alpha","correct":true,"context":"review","answeredAt":"2026-01-02T00:00:00.000Z"},
+    "expectedAdvancedEntry":{"questionId":"syn-q1","questionVersion":1,"skillId":"skill.alpha","dueAt":"2026-01-05T00:00:00.000Z","intervalIndex":1,"status":"scheduled","lastAttemptAt":"2026-01-02T00:00:00.000Z"},
+    "dueAt":"2026-01-05T00:00:00.000Z",
+    "expectedDueQuestionIds":["syn-q1"]
+  },
+  "progression": {
+    "initialState":{"points":0,"stage":0},
+    "events":[
+      {"type":"attempt","correct":true,"firstCorrect":true,"context":"training"},
+      {"type":"attempt","correct":true,"firstCorrect":true,"context":"mixed"},
+      {"type":"attempt","correct":true,"firstCorrect":true,"context":"review"},
+      {"type":"mastery","newlyMastered":true},
+      {"type":"session_complete","questionCount":10}
+    ],
+    "expectedStates":[
+      {"points":2,"stage":0,"earned":2},
+      {"points":6,"stage":0,"earned":4},
+      {"points":11,"stage":0,"earned":5},
+      {"points":21,"stage":1,"earned":10},
+      {"points":26,"stage":1,"earned":5}
+    ]
+  },
+  "questionReport": {
+    "input":{"questionId":"syn-q2","questionVersion":1,"reason":"ambiguous","detail":"  Synthetic ambiguity detail.  ","createdAt":"2026-02-01T12:34:56.000Z","id":"report-syn-q2-v1"},
+    "expected":{"id":"report-syn-q2-v1","questionId":"syn-q2","questionVersion":1,"reason":"ambiguous","detail":"Synthetic ambiguity detail.","createdAt":"2026-02-01T12:34:56.000Z"}
+  }
+}
