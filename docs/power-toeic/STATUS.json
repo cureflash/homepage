@@ -3,7 +3,7 @@
   "status": "in_progress",
   "track": "app_ui_program",
   "phase": 3,
-  "active_task": "3.1",
+  "active_task": "3.2",
   "next_role": "implementation",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
@@ -37,8 +37,16 @@
   },
   "asset_policy": "docs/power-toeic/50_ASSET_POLICY.md",
   "asset_catalog": "subjects/english/power-toeic/js/ui/asset-catalog.js",
-  "last_completed_task": "2.3",
+  "persistence": {
+    "module": "subjects/english/power-toeic/js/core/persistence.js",
+    "storage_key": "power-toeic.app-state",
+    "version": 1,
+    "root_fields": ["attempts", "reviewEntries", "progression"],
+    "invalid_or_unsupported_policy": "reset safely to default root"
+  },
+  "last_completed_task": "3.1",
   "phase0_audit": "docs/power-toeic/PHASE0_REUSE_AUDIT.md",
   "phase2_test_result": "9 Node tests passed: adapter/session/renderer/asset-catalog contracts",
-  "updated_at": "2026-08-26T22:48:00+09:00"
+  "phase3_1_test_result": "5 focused persistence tests passed",
+  "updated_at": "2026-08-26T23:48:00+09:00"
 }

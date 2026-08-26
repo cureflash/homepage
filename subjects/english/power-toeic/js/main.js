@@ -1,3 +1,4 @@
+import { createBrowserAppStore } from './core/persistence.js';
 import { QuizSession } from './core/session.js';
 import { InMemoryQuestionBank } from './data/question-bank-adapter.js';
 import { demoQuestions, demoSkills } from './data/fixtures.js';
@@ -5,6 +6,7 @@ import { ClozeChoiceRenderer } from './renderers/cloze-choice.js';
 import { renderResults } from './ui/result.js';
 
 const repository = new InMemoryQuestionBank({ questions: demoQuestions, skills: demoSkills });
+const appStore = createBrowserAppStore();
 const skillLabels = new Map(repository.listSkills().map((skill) => [skill.id, skill.label]));
 
 const quizView = document.querySelector('[data-view="quiz"]');
@@ -41,6 +43,7 @@ function renderCurrent() {
 renderer.setAnswerHandler((selectedIndex) => {
   const question = session.currentQuestion;
   const attempt = session.submitAnswer(selectedIndex);
+  appStore.appendAttempt(attempt);
   renderer.showResult({ selectedIndex, correctIndex: question.correctIndex, explanation: question.explanation });
   feedbackEl.textContent = attempt.correct ? '軍曹「よし、その調子だ！」' : '軍曹「違う。理由を確認して次だ！」';
   nextButton.textContent = session.progress.current === session.progress.total ? '結果を見る' : '次の問題';
