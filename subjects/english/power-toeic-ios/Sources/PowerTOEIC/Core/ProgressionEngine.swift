@@ -56,7 +56,7 @@ public enum ProgressionEngine {
         guard points >= 0 else { throw ProgressionEngineError.negativePoints }
         guard !thresholds.isEmpty,
               thresholds.first == 0,
-              zip(thresholds, thresholds.dropFirst()).allSatisfy({ $0 <= $1 }) else {
+              zip(thresholds, thresholds.dropFirst()).allSatisfy({ pair in pair.0 <= pair.1 }) else {
             throw ProgressionEngineError.invalidThresholds
         }
 
