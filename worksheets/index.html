@@ -3,49 +3,155 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="反復プリントの無料学習教材です。ブラウザで利用できる教材・学習ツールを掲載しています。">
-<title>反復プリント｜ひかり教材室</title>
+<meta name="description" content="ひかり教材室の無料プリント配布ページです。自動検証済みの算数・数学・理科PDFと、検証済みの社会プリントを公開しています。">
+<title>教材・プリント配布｜ひかり教材室</title>
 <style>
-body{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;max-width:1100px;margin:0 auto;padding:24px;color:#222}h1{font-size:1.8rem}.note{color:#555}.filters{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:20px}.filters label{display:flex;align-items:center;gap:6px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{border:1px solid #ddd;border-radius:12px;padding:16px}.meta{font-size:.85rem;color:#666}.card a{display:inline-block;margin-top:8px;padding:9px 13px;border-radius:8px;background:#222;color:#fff;text-decoration:none}select{padding:8px}.empty{color:#666;padding:20px 0}
+:root{color-scheme:light;--ink:#1f2937;--muted:#667085;--line:#e5e7eb;--panel:#f8fafc;--accent:#111827;--soft:#eef2ff;--ok:#166534;--okbg:#f0fdf4}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;max-width:1180px;margin:0 auto;padding:24px;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}.home{font-weight:700;text-decoration:none}.home:hover{text-decoration:underline}
+h1{font-size:clamp(1.75rem,4vw,2.35rem);line-height:1.25;margin:.25rem 0}.lead{color:var(--muted);max-width:760px;margin:.5rem 0 0}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:24px 0}.summary-card{border:1px solid var(--line);border-radius:14px;padding:15px 16px;background:var(--panel)}.summary-label{font-size:.82rem;color:var(--muted)}.summary-value{font-size:1.45rem;font-weight:800;margin-top:2px}.summary-note{font-size:.78rem;color:var(--muted);margin-top:2px}
+.public-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:24px 0 30px}.public-card{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff}.public-card h2{font-size:1.1rem;margin:6px 0}.public-card p{color:var(--muted);font-size:.92rem;margin:0 0 12px}.badge{display:inline-block;font-size:.75rem;font-weight:700;padding:3px 8px;border-radius:999px;background:var(--okbg);color:var(--ok)}.public-card a,.card a{display:inline-block;padding:9px 13px;border-radius:9px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}.public-card a:hover,.card a:hover{opacity:.86}
+.section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:28px}.section-title h2{margin:0;font-size:1.45rem}.result-count{color:var(--muted);font-size:.9rem}
+.search-row{margin:16px 0 12px}.search-row input{width:100%;padding:12px 14px;border:1px solid #cbd5e1;border-radius:10px;font:inherit}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;margin-bottom:14px}.filters label{font-size:.78rem;color:var(--muted)}select{display:block;width:100%;margin-top:4px;padding:9px 10px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font:inherit;color:var(--ink)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.filter-button{border:1px solid #cbd5e1;background:#fff;border-radius:999px;padding:7px 11px;cursor:pointer;font:inherit;font-size:.86rem}.filter-button:hover{background:var(--panel)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;min-height:220px;background:#fff}.meta{font-size:.8rem;color:var(--muted)}.card h3{font-size:1.08rem;line-height:1.45;margin:6px 0}.card p{font-size:.9rem;color:#4b5563;margin:0 0 12px;flex:1}.card-footer{display:flex;align-items:center;justify-content:space-between;gap:8px}.variant{font-size:.78rem;color:var(--muted)}
+.empty,.error{color:var(--muted);padding:28px 0}.error{color:#991b1b}.policy{margin:28px 0 8px;padding:14px 16px;border-left:4px solid #94a3b8;background:var(--panel);font-size:.88rem;color:#475569}
+footer{border-top:1px solid var(--line);margin-top:36px;padding-top:18px;color:var(--muted);font-size:.84rem}
+@media(max-width:600px){body{padding:16px}.summary{grid-template-columns:1fr 1fr}.public-links{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<h1>反復プリント</h1>
-<p class="note">問題と解答を自動検証した反復練習用プリントです。</p>
-<div class="filters">
-<label>教科 <select id="subject"><option value="">すべて</option></select></label>
-<label>学校段階 <select id="level"><option value="">すべて</option></select></label>
-<label>学年・科目 <select id="course"><option value="">すべて</option></select></label>
-<label id="field-label">理科分野 <select id="field"><option value="">すべて</option></select></label>
-<label>単元 <select id="unit"><option value="">すべて</option></select></label>
-<label>系列 <select id="series"><option value="">すべて</option></select></label>
-</div>
-<div id="grid" class="grid"></div>
+<header>
+  <div class="top"><a class="home" href="../index.html">← ひかり教材室</a></div>
+  <h1>教材・プリント配布</h1>
+  <p class="lead">スケジューラーで生成した教材のうち、検証・公開工程まで完了したものをここに集約します。未検証・作業途中の教材は表示しません。</p>
+</header>
+
+<section class="summary" aria-label="公開状況">
+  <div class="summary-card"><div class="summary-label">公開中PDF</div><div class="summary-value" id="pdf-count">—</div><div class="summary-note">catalog登録済み</div></div>
+  <div class="summary-card"><div class="summary-label">公開教科</div><div class="summary-value" id="subject-count">—</div><div class="summary-note">PDF教材</div></div>
+  <div class="summary-card"><div class="summary-label">公開単元</div><div class="summary-value" id="unit-count">—</div><div class="summary-note">重複単元名を除外</div></div>
+  <div class="summary-card"><div class="summary-label">社会</div><div class="summary-value">公開中</div><div class="summary-note">検証済み単元のみ</div></div>
+</section>
+
+<section class="public-links" aria-label="公開中教材">
+  <article class="public-card">
+    <span class="badge">自動検証済み</span>
+    <h2>算数・数学・理科 PDFプリント</h2>
+    <p>問題と解答を検証して公開カタログへ登録済みのPDFです。下の検索・絞り込みから直接ダウンロードできます。</p>
+    <a href="#pdf-list">PDF一覧を見る</a>
+  </article>
+  <article class="public-card">
+    <span class="badge">ファクトチェック済みのみ</span>
+    <h2>中学社会プリント</h2>
+    <p>歴史などの検証済み単元を、解説・穴埋め・解答の3モードで表示して印刷できます。未検証の生成済み単元は公開対象に含めません。</p>
+    <a href="../subjects/social/worksheets/">社会プリントを開く</a>
+  </article>
+</section>
+
+<section id="pdf-list">
+  <div class="section-title">
+    <h2>PDFプリント一覧</h2>
+    <div class="result-count" id="result-count" aria-live="polite"></div>
+  </div>
+  <div class="search-row"><input id="search" type="search" placeholder="単元名・タイトル・説明から検索" aria-label="プリントを検索"></div>
+  <div class="filters">
+    <label>教科<select id="subject"><option value="">すべて</option></select></label>
+    <label>学校段階<select id="level"><option value="">すべて</option></select></label>
+    <label>学年・科目<select id="course"><option value="">すべて</option></select></label>
+    <label id="field-label">理科分野<select id="field"><option value="">すべて</option></select></label>
+    <label>単元<select id="unit"><option value="">すべて</option></select></label>
+    <label>系列<select id="series"><option value="">すべて</option></select></label>
+  </div>
+  <div class="actions">
+    <button class="filter-button" type="button" data-subject="算数">算数</button>
+    <button class="filter-button" type="button" data-subject="数学">数学</button>
+    <button class="filter-button" type="button" data-subject="理科">理科</button>
+    <button class="filter-button" type="button" id="clear">絞り込み解除</button>
+  </div>
+  <div id="grid" class="grid"></div>
+</section>
+
+<div class="policy">公開基準：このページのPDF一覧は <code>worksheets/catalog.json</code> に登録された公開済み教材だけを表示します。生成だけ終わっている教材、ファクトチェック待ち、公開判定待ちの教材は一覧へ出しません。</div>
+
+<footer>© ひかり教材室</footer>
 <script>
 (async()=>{
-const data=await fetch('catalog.json').then(r=>r.json());
-const $=s=>document.querySelector(s);
-const subject=$('#subject'),level=$('#level'),course=$('#course'),field=$('#field'),unit=$('#unit'),series=$('#series'),grid=$('#grid'),fieldLabel=$('#field-label');
-const params=new URLSearchParams(location.search);
-const levelNames={'elementary':'小学校','junior-high':'中学校','high-school':'高校'};
-const fieldNames={'physics':'物理','chemistry':'化学','biology':'生物','earth-science':'地学'};
-const seriesNames={'focused':'単元別','mixed':'混合','review':'総復習'};
-function option(select,value,label){const o=document.createElement('option');o.value=value;o.textContent=label;select.append(o)}
-function unique(values){return [...new Set(values.filter(v=>v!==undefined&&v!==null&&v!==''))]}
-unique(data.map(x=>x.subject)).sort().forEach(v=>option(subject,v,v));
-unique(data.map(x=>x.school_level)).forEach(v=>option(level,v,levelNames[v]||v));
-unique(data.map(x=>x.science_field)).forEach(v=>option(field,v,fieldNames[v]||v));
-unique(data.map(x=>x.worksheet_series)).forEach(v=>option(series,v,seriesNames[v]||v));
-function courseKey(x){if(x.school_level==='high-school')return x.formal_course||'高校';if(x.school_level==='junior-high')return `中${x.grade}`;if(x.school_level==='elementary')return `小${x.grade}`;return String(x.grade??'')}
-function refill(select,values,current){select.replaceChildren();option(select,'','すべて');values.forEach(v=>option(select,v,v));if(values.includes(current))select.value=current}
-function filteredBase(){return data.filter(x=>(!subject.value||x.subject===subject.value)&&(!level.value||x.school_level===level.value)&&(!field.value||x.science_field===field.value))}
-function refreshDependent(){const base=filteredBase();refill(course,unique(base.map(courseKey)),course.value);refill(unit,unique(base.map(x=>x.unit)),unit.value);fieldLabel.hidden=subject.value!==''&&subject.value!=='理科'}
-function render(){refreshDependent();const rows=data.filter(x=>(!subject.value||x.subject===subject.value)&&(!level.value||x.school_level===level.value)&&(!course.value||courseKey(x)===course.value)&&(!field.value||x.science_field===field.value)&&(!unit.value||x.unit===unit.value)&&(!series.value||x.worksheet_series===series.value));grid.replaceChildren();if(!rows.length){const p=document.createElement('p');p.className='empty';p.textContent='該当するプリントはありません。';grid.append(p);return}rows.forEach(x=>{const a=document.createElement('article');a.className='card';const meta=[courseKey(x),x.subject,x.science_field?fieldNames[x.science_field]:null,x.formal_course||null,x.problem_count+'問'].filter(Boolean);a.innerHTML=`<div class="meta">${meta.join(' / ')}</div><h2>${x.title}</h2><p>${x.description}</p><a href="../${x.url}" download>PDFをダウンロード</a>`;grid.append(a)})}
-const requestedSubject=params.get('subject');if(requestedSubject&&[...subject.options].some(o=>o.value===requestedSubject))subject.value=requestedSubject;
-const requestedLevel=params.get('school_level');if(requestedLevel&&[...level.options].some(o=>o.value===requestedLevel))level.value=requestedLevel;
-const requestedField=params.get('science_field');if(requestedField&&[...field.options].some(o=>o.value===requestedField))field.value=requestedField;
-[subject,level,course,field,unit,series].forEach(el=>el.addEventListener('change',render));
-render();
+const grid=document.querySelector('#grid');
+try{
+  const response=await fetch('catalog.json',{cache:'no-store'});
+  if(!response.ok)throw new Error(`catalog load failed: ${response.status}`);
+  const data=await response.json();
+  const $=s=>document.querySelector(s);
+  const subject=$('#subject'),level=$('#level'),course=$('#course'),field=$('#field'),unit=$('#unit'),series=$('#series'),search=$('#search'),fieldLabel=$('#field-label');
+  const params=new URLSearchParams(location.search);
+  const levelNames={'elementary':'小学校','junior-high':'中学校','high-school':'高校'};
+  const fieldNames={'physics':'物理','chemistry':'化学','biology':'生物','earth-science':'地学'};
+  const seriesNames={'focused':'単元別','mixed':'混合','review':'総復習'};
+  const unique=values=>[...new Set(values.filter(v=>v!==undefined&&v!==null&&v!==''))];
+  const option=(select,value,label)=>{const o=document.createElement('option');o.value=value;o.textContent=label;select.append(o)};
+  const courseKey=x=>x.school_level==='high-school'?(x.formal_course||'高校'):x.school_level==='junior-high'?`中${x.grade}`:x.school_level==='elementary'?`小${x.grade}`:String(x.grade??'');
+
+  $('#pdf-count').textContent=data.length.toLocaleString('ja-JP')+'枚';
+  $('#subject-count').textContent=unique(data.map(x=>x.subject)).length+'教科';
+  $('#unit-count').textContent=unique(data.map(x=>`${x.subject}|${x.school_level}|${x.grade}|${x.formal_course||''}|${x.unit}`)).length+'単元';
+
+  unique(data.map(x=>x.subject)).sort((a,b)=>a.localeCompare(b,'ja')).forEach(v=>option(subject,v,v));
+  unique(data.map(x=>x.school_level)).forEach(v=>option(level,v,levelNames[v]||v));
+  unique(data.map(x=>x.science_field)).forEach(v=>option(field,v,fieldNames[v]||v));
+  unique(data.map(x=>x.worksheet_series)).forEach(v=>option(series,v,seriesNames[v]||v));
+
+  function refill(select,values,current){
+    select.replaceChildren();option(select,'','すべて');
+    values.forEach(v=>option(select,v,v));
+    if(values.includes(current))select.value=current;
+  }
+  function baseRows(){
+    return data.filter(x=>(!subject.value||x.subject===subject.value)&&(!level.value||x.school_level===level.value)&&(!field.value||x.science_field===field.value));
+  }
+  function refreshDependent(){
+    const base=baseRows();
+    refill(course,unique(base.map(courseKey)).sort((a,b)=>a.localeCompare(b,'ja')),course.value);
+    refill(unit,unique(base.map(x=>x.unit)).sort((a,b)=>a.localeCompare(b,'ja')),unit.value);
+    fieldLabel.hidden=subject.value!==''&&subject.value!=='理科';
+  }
+  function makeCard(x){
+    const article=document.createElement('article');article.className='card';
+    const meta=document.createElement('div');meta.className='meta';
+    meta.textContent=[courseKey(x),x.subject,x.science_field?fieldNames[x.science_field]:null,x.formal_course||null,`${x.problem_count}問`].filter(Boolean).join(' / ');
+    const title=document.createElement('h3');title.textContent=x.title;
+    const description=document.createElement('p');description.textContent=x.description||'';
+    const footer=document.createElement('div');footer.className='card-footer';
+    const variant=document.createElement('span');variant.className='variant';variant.textContent=x.variant?`variant ${x.variant}`:'';
+    const link=document.createElement('a');link.href=`../${x.url}`;link.download='';link.textContent='PDFをダウンロード';
+    footer.append(variant,link);article.append(meta,title,description,footer);return article;
+  }
+  function render(){
+    refreshDependent();
+    const q=search.value.trim().toLocaleLowerCase('ja');
+    const rows=data.filter(x=>{
+      const haystack=[x.title,x.description,x.unit,x.skill,x.subject,x.formal_course].filter(Boolean).join(' ').toLocaleLowerCase('ja');
+      return (!subject.value||x.subject===subject.value)&&(!level.value||x.school_level===level.value)&&(!course.value||courseKey(x)===course.value)&&(!field.value||x.science_field===field.value)&&(!unit.value||x.unit===unit.value)&&(!series.value||x.worksheet_series===series.value)&&(!q||haystack.includes(q));
+    });
+    grid.replaceChildren();
+    $('#result-count').textContent=`${rows.length.toLocaleString('ja-JP')} / ${data.length.toLocaleString('ja-JP')} 枚を表示`;
+    if(!rows.length){const p=document.createElement('p');p.className='empty';p.textContent='該当する公開プリントはありません。';grid.append(p);return}
+    const fragment=document.createDocumentFragment();rows.forEach(x=>fragment.append(makeCard(x)));grid.append(fragment);
+  }
+  function setIfValid(select,value){if(value&&[...select.options].some(o=>o.value===value))select.value=value}
+  setIfValid(subject,params.get('subject'));setIfValid(level,params.get('school_level'));setIfValid(field,params.get('science_field'));
+  [subject,level,course,field,unit,series].forEach(el=>el.addEventListener('change',render));
+  search.addEventListener('input',render);
+  document.querySelectorAll('[data-subject]').forEach(button=>button.addEventListener('click',()=>{const value=button.dataset.subject;if([...subject.options].some(o=>o.value===value)){subject.value=value;render();document.querySelector('#pdf-list').scrollIntoView({behavior:'smooth'})}}));
+  $('#clear').addEventListener('click',()=>{[subject,level,course,field,unit,series].forEach(el=>el.value='');search.value='';render()});
+  render();
+}catch(error){
+  console.error(error);grid.replaceChildren();const p=document.createElement('p');p.className='error';p.textContent='公開プリント一覧を読み込めませんでした。時間をおいて再読み込みしてください。';grid.append(p);
+}
 })()
 </script>
 <!-- Cloudflare Web Analytics -->
