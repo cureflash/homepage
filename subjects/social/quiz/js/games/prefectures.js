@@ -18,7 +18,9 @@ export const prefectureGame = {
     type: "svg-region",
     source: JAPAN_PREFECTURE_MAP.rawUrl,
     regionSelector: JAPAN_PREFECTURE_MAP.regionSelector,
-    keyAttribute: JAPAN_PREFECTURE_MAP.keyAttribute
+    keyAttribute: JAPAN_PREFECTURE_MAP.keyAttribute,
+    sourceKeyAttribute: JAPAN_PREFECTURE_MAP.sourceKeyAttribute,
+    regionKeyMap: JAPAN_PREFECTURE_MAP.regionKeyMap
   },
   questions: JAPAN_PREFECTURES.map(({ code, name }) => ({
     id: `pref-${String(code).padStart(2, "0")}`,

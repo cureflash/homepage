@@ -1,19 +1,39 @@
+const regions = [
+  ["1", "北海道"], ["2", "青森県"], ["3", "岩手県"], ["4", "宮城県"], ["5", "秋田県"], ["6", "山形県"], ["7", "福島県"],
+  ["8", "茨城県"], ["9", "栃木県"], ["10", "群馬県"], ["11", "埼玉県"], ["12", "千葉県"], ["13", "東京都"], ["14", "神奈川県"],
+  ["15", "新潟県"], ["16", "富山県"], ["17", "石川県"], ["18", "福井県"], ["19", "山梨県"], ["20", "長野県"],
+  ["21", "岐阜県"], ["22", "静岡県"], ["23", "愛知県"], ["24", "三重県"],
+  ["25", "滋賀県"], ["26", "京都府"], ["27", "大阪府"], ["28", "兵庫県"], ["29", "奈良県"], ["30", "和歌山県"],
+  ["31", "鳥取県"], ["32", "島根県"], ["33", "岡山県"], ["34", "広島県"], ["35", "山口県"],
+  ["36", "徳島県"], ["37", "香川県"], ["38", "愛媛県"], ["39", "高知県"],
+  ["40", "福岡県"], ["41", "佐賀県"], ["42", "長崎県"], ["43", "熊本県"], ["44", "大分県"], ["45", "宮崎県"], ["46", "鹿児島県"], ["47", "沖縄県"]
+];
+
+const sourceLayerByCode = {
+  "1": "hokkaido", "2": "aomori", "3": "iwate", "4": "miyagi", "5": "akita", "6": "yamagata", "7": "fukushima",
+  "8": "ibaraki", "9": "tochigi", "10": "gunma", "11": "saitama", "12": "chiba", "13": "tokyo", "14": "kanagawa",
+  "15": "nigata", "16": "toyama", "17": "ishikawa", "18": "fukui", "19": "yamanashi", "20": "nagano",
+  "21": "gifu", "22": "shizuoka", "23": "aichi", "24": "mie", "25": "shiga", "26": "kyoto", "27": "osaka", "28": "hyogo",
+  "29": "nara", "30": "wakayama", "31": "tottori", "32": "shimane", "33": "okayama", "34": "hiroshima", "35": "yamaguchi",
+  "36": "tokushima", "37": "kagawa", "38": "ehime", "39": "kochi", "40": "fukuoka", "41": "saga", "42": "nagasaki",
+  "43": "kumamoto", "44": "oita", "45": "miyazaki", "46": "kagoshima", "47": "okinawa"
+};
+
+const regionKeyMap = Object.fromEntries(
+  regions.map(([code, name]) => [sourceLayerByCode[code], { key: code, name }])
+);
+
 export const JAPAN_PREFECTURE_MAP = {
-  sourceRepository: "https://github.com/lalamalink/japan-map-svg",
-  sourceCommit: "b6008cd22e6993a62860f5afafcc810ef4f9c69f",
-  version: "2026.06.30",
-  license: "CC0 1.0 Universal",
-  rawUrl: "https://raw.githubusercontent.com/lalamalink/japan-map-svg/b6008cd22e6993a62860f5afafcc810ef4f9c69f/svg/deformed-japan-prefecture-map.svg",
-  regionSelector: "#prefecture-fills [data-code]",
+  sourceRepository: "https://github.com/PA4KEV/japan-vector-map",
+  sourceCommit: "6be9e705045777b7c433c429b0313f19b49d1ed4",
+  sourceFile: "japan-prefectures.svg",
+  version: "v1.0",
+  license: "MIT",
+  copyright: "Copyright (c) 2023 Kevin Matsubara",
+  rawUrl: "https://raw.githubusercontent.com/PA4KEV/japan-vector-map/6be9e705045777b7c433c429b0313f19b49d1ed4/japan-prefectures.svg",
+  regionSelector: "g",
   keyAttribute: "data-code",
-  regions: [
-    ["1", "北海道"], ["2", "青森県"], ["3", "岩手県"], ["4", "宮城県"], ["5", "秋田県"], ["6", "山形県"], ["7", "福島県"],
-    ["8", "茨城県"], ["9", "栃木県"], ["10", "群馬県"], ["11", "埼玉県"], ["12", "千葉県"], ["13", "東京都"], ["14", "神奈川県"],
-    ["15", "新潟県"], ["16", "富山県"], ["17", "石川県"], ["18", "福井県"], ["19", "山梨県"], ["20", "長野県"],
-    ["21", "岐阜県"], ["22", "静岡県"], ["23", "愛知県"], ["24", "三重県"],
-    ["25", "滋賀県"], ["26", "京都府"], ["27", "大阪府"], ["28", "兵庫県"], ["29", "奈良県"], ["30", "和歌山県"],
-    ["31", "鳥取県"], ["32", "島根県"], ["33", "岡山県"], ["34", "広島県"], ["35", "山口県"],
-    ["36", "徳島県"], ["37", "香川県"], ["38", "愛媛県"], ["39", "高知県"],
-    ["40", "福岡県"], ["41", "佐賀県"], ["42", "長崎県"], ["43", "熊本県"], ["44", "大分県"], ["45", "宮崎県"], ["46", "鹿児島県"], ["47", "沖縄県"]
-  ]
+  sourceKeyAttribute: "inkscape:label",
+  regionKeyMap,
+  regions
 };

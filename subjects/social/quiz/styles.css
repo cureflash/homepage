@@ -35,11 +35,18 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 .answer-root { min-height: 320px; }
 .map-loading, .map-error { display: grid; min-height: 320px; place-items: center; color: var(--muted); text-align: center; }
 .svg-region-stage svg { display: block; width: 100%; height: auto; max-height: 610px; margin: auto; }
-.svg-region-stage [data-code] { fill: #eef1f4 !important; stroke: #66717d !important; stroke-width: 4 !important; cursor: pointer; transition: fill 120ms ease, filter 120ms ease; outline: none; }
+.svg-region-stage [data-code] { cursor: pointer; transition: fill 120ms ease, filter 120ms ease; outline: none; }
+.svg-region-stage [data-code],
+.svg-region-stage [data-code] path { fill: #eef1f4 !important; stroke: #66717d !important; stroke-width: 1.6 !important; vector-effect: non-scaling-stroke; }
 .svg-region-stage [data-code]:focus-visible { filter: drop-shadow(0 0 9px rgba(34, 94, 168, .75)); }
-@media (hover: hover) and (pointer: fine) { .svg-region-stage [data-code]:hover { fill: #dce8f5 !important; } }
-.svg-region-stage [data-code].is-correct { fill: var(--correct) !important; }
-.svg-region-stage [data-code].is-wrong { fill: var(--wrong) !important; }
+@media (hover: hover) and (pointer: fine) {
+  .svg-region-stage [data-code]:hover,
+  .svg-region-stage [data-code]:hover path { fill: #dce8f5 !important; }
+}
+.svg-region-stage [data-code].is-correct,
+.svg-region-stage [data-code].is-correct path { fill: var(--correct) !important; }
+.svg-region-stage [data-code].is-wrong,
+.svg-region-stage [data-code].is-wrong path { fill: var(--wrong) !important; }
 .choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .choice-button { min-height: 58px; padding: 12px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); color: var(--text); cursor: pointer; font-weight: 700; }
 .choice-button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
@@ -60,6 +67,10 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 }
 @media (prefers-color-scheme: dark) {
   :root { --bg: #10151b; --panel: #171e26; --text: #edf2f7; --muted: #a6b2bf; --border: #34404d; --accent: #7fb4f0; --correct-soft: #173827; --wrong-soft: #472323; }
-  .svg-region-stage [data-code] { fill: #26313c !important; stroke: #9ba8b5 !important; }
-  @media (hover: hover) and (pointer: fine) { .svg-region-stage [data-code]:hover { fill: #334b62 !important; } }
+  .svg-region-stage [data-code],
+  .svg-region-stage [data-code] path { fill: #26313c !important; stroke: #9ba8b5 !important; }
+  @media (hover: hover) and (pointer: fine) {
+    .svg-region-stage [data-code]:hover,
+    .svg-region-stage [data-code]:hover path { fill: #334b62 !important; }
+  }
 }
