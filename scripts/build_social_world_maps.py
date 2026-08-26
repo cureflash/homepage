@@ -1,14 +1,25 @@
 #!/usr/bin/env python3
-import copy
 import hashlib
+import io
 import json
+import math
 import re
 import sys
 import urllib.request
-import xml.etree.ElementTree as ET
+import zipfile
 from pathlib import Path
 
-SOURCE_URL = "https://www.simplemaplab.com/maps/blank/world.svg"
+import shapefile
+
+SOURCE_VERSION = "5.1.1"
+SOURCE_URLS = (
+    f"https://naturalearth.s3.amazonaws.com/{SOURCE_VERSION}/50m_cultural/ne_50m_admin_0_countries.zip",
+    "https://www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip",
+)
+SOURCE_PAGE = "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/"
+TERMS_URL = "https://www.naturalearthdata.com/about/terms-of-use/"
+WORLD_SIZE = 2000.0
+MAX_MERCATOR_LAT = 85.05112878
 REPO_ROOT = Path(__file__).resolve().parents[1]
 COUNTRY_DATA = REPO_ROOT / "subjects/social/quiz/js/data/world-countries.js"
 OUT_DIR = REPO_ROOT / "subjects/social/quiz/assets/maps/world"
@@ -17,128 +28,223 @@ MANIFEST = OUT_DIR / "manifest.json"
 COUNTRY_RE = re.compile(
     r'country\("(?P<code>[A-Z]{2})",\s*"(?:[^"\\]|\\.)*",\s*(?:null|"(?:[^"\\]|\\.)*"),\s*"(?P<region>[a-z0-9-]+)"'
 )
+MARKER_RE = re.compile(r"marker:\s*\[\s*(?P<lon>-?\d+(?:\.\d+)?)\s*,\s*(?P<lat>-?\d+(?:\.\d+)?)\s*\]")
 
-POSSIBLE_CODE_ATTRS = (
-    "data-code",
-    "data-iso",
-    "data-iso2",
-    "data-country-code",
-    "data-country",
-    "id",
-    "class",
-)
+# Natural Earth is not obligated to use ISO alpha-2 for every political feature.
+# Keep explicit mappings narrow and auditable rather than guessing by display name.
+ADM0_A3_TO_QUIZ_CODE = {
+    "KOS": "XK",
+}
 
 
-def parse_region_memberships():
+def parse_quiz_geography():
     text = COUNTRY_DATA.read_text(encoding="utf-8")
     regions = {}
-    for match in COUNTRY_RE.finditer(text):
-        regions.setdefault(match.group("region"), []).append(match.group("code"))
+    markers = {}
+    for line in text.splitlines():
+        match = COUNTRY_RE.search(line)
+        if not match:
+            continue
+        code = match.group("code")
+        region = match.group("region")
+        regions.setdefault(region, []).append(code)
+        marker_match = MARKER_RE.search(line)
+        if marker_match:
+            markers[code] = (float(marker_match.group("lon")), float(marker_match.group("lat")))
     if len(regions) < 10:
         raise RuntimeError(f"Could not parse world regions from {COUNTRY_DATA}")
-    return {region: sorted(set(codes)) for region, codes in regions.items()}
-
-
-def normalize_code(value, known_codes):
-    if not value:
-        return None
-    raw = value.strip()
-    candidates = [raw]
-    candidates.extend(re.split(r"[^A-Za-z0-9]+", raw))
-    lowered = raw.lower()
-    for prefix in ("country-", "country_", "iso-", "iso_", "map-"):
-        if lowered.startswith(prefix):
-            candidates.append(raw[len(prefix):])
-    for candidate in candidates:
-        code = candidate.strip().upper()
-        if code in known_codes:
-            return code
-    return None
-
-
-def element_code(element, known_codes):
-    for attr in POSSIBLE_CODE_ATTRS:
-        code = normalize_code(element.attrib.get(attr), known_codes)
-        if code:
-            return code
-    return None
-
-
-def annotate_codes(root, known_codes):
-    found = set()
-    samples = []
-    for element in root.iter():
-        code = element_code(element, known_codes)
-        if code:
-            element.set("data-code", code)
-            found.add(code)
-        if len(samples) < 30 and element.tag.rsplit("}", 1)[-1] in {"path", "g", "polygon"}:
-            samples.append(dict(element.attrib))
-    if len(found) < 150:
-        print("Could not identify enough country codes in source SVG.")
-        print("Detected:", len(found), sorted(found)[:50])
-        print("Sample SVG attributes:")
-        for sample in samples:
-            print(sample)
-        raise RuntimeError("SimpleMapLab SVG country identifiers were not recognized")
-    return found
-
-
-def filter_region(root, allowed_codes):
-    allowed = set(allowed_codes)
-
-    def visit(parent):
-        for child in list(parent):
-            code = child.attrib.get("data-code")
-            if code and code not in allowed:
-                parent.remove(child)
-                continue
-            visit(child)
-
-    visit(root)
-    present = {el.attrib["data-code"] for el in root.iter() if "data-code" in el.attrib}
-    missing = sorted(allowed - present)
-    if missing:
-        raise RuntimeError(f"Region is missing country elements: {missing}")
-    return present
+    return {region: sorted(set(codes)) for region, codes in regions.items()}, markers
 
 
 def download_source():
-    request = urllib.request.Request(
-        SOURCE_URL,
-        headers={"User-Agent": "cureflash-homepage-map-builder/1.0"},
+    last_error = None
+    for url in SOURCE_URLS:
+        try:
+            request = urllib.request.Request(url, headers={"User-Agent": "cureflash-homepage-map-builder/2.0"})
+            with urllib.request.urlopen(request, timeout=60) as response:
+                data = response.read()
+            if not zipfile.is_zipfile(io.BytesIO(data)):
+                raise RuntimeError(f"Natural Earth response is not a ZIP archive: {url}")
+            return url, data
+        except Exception as exc:
+            last_error = exc
+            print(f"Source download failed, trying next URL: {url}: {exc}", file=sys.stderr)
+    raise RuntimeError("Could not download Natural Earth 1:50m countries") from last_error
+
+
+def extract_shapefile(zip_bytes):
+    with zipfile.ZipFile(io.BytesIO(zip_bytes)) as archive:
+        names = archive.namelist()
+        base = next((name[:-4] for name in names if name.endswith("ne_50m_admin_0_countries.shp")), None)
+        if base is None:
+            raise RuntimeError("Natural Earth ZIP does not contain expected countries shapefile")
+        return (
+            io.BytesIO(archive.read(base + ".shp")),
+            io.BytesIO(archive.read(base + ".shx")),
+            io.BytesIO(archive.read(base + ".dbf")),
+        )
+
+
+def mercator_xy(longitude, latitude, wrap_dateline=False):
+    lon = float(longitude)
+    lat = max(-MAX_MERCATOR_LAT, min(MAX_MERCATOR_LAT, float(latitude)))
+    if wrap_dateline and lon < 0:
+        lon += 360.0
+    x = ((lon + 180.0) / 360.0) * WORLD_SIZE
+    radians = math.radians(lat)
+    y = (1.0 - math.asinh(math.tan(radians)) / math.pi) * 0.5 * WORLD_SIZE
+    return x, y
+
+
+def normalize_code(value, known_codes):
+    if value is None:
+        return None
+    code = str(value).strip().upper()
+    if code in known_codes:
+        return code
+    return None
+
+
+def record_code(record, known_codes):
+    data = record.as_dict()
+    for field in ("ISO_A2_EH", "ISO_A2", "WB_A2", "POSTAL"):
+        code = normalize_code(data.get(field), known_codes)
+        if code:
+            return code
+    mapped = ADM0_A3_TO_QUIZ_CODE.get(str(data.get("ADM0_A3", "")).upper())
+    if mapped in known_codes:
+        return mapped
+    return None
+
+
+def projected_part(points, wrap_dateline=False):
+    projected = [mercator_xy(lon, lat, wrap_dateline) for lon, lat in points]
+    if not projected:
+        return "", []
+    commands = [f"M{projected[0][0]:.1f},{projected[0][1]:.1f}"]
+    commands.extend(f"L{x:.1f},{y:.1f}" for x, y in projected[1:])
+    commands.append("Z")
+    return "".join(commands), projected
+
+
+def shape_path(shape, wrap_dateline=False):
+    parts = list(shape.parts) + [len(shape.points)]
+    commands = []
+    all_points = []
+    for start, end in zip(parts, parts[1:]):
+        command, projected = projected_part(shape.points[start:end], wrap_dateline)
+        if command:
+            commands.append(command)
+            all_points.extend(projected)
+    return "".join(commands), all_points
+
+
+def svg_view_box(points):
+    if not points:
+        raise RuntimeError("Cannot create regional SVG without any geometry")
+    xs = [point[0] for point in points]
+    ys = [point[1] for point in points]
+    width = max(xs) - min(xs)
+    height = max(ys) - min(ys)
+    pad_x = max(8.0, width * 0.035)
+    pad_y = max(8.0, height * 0.05)
+    return (
+        min(xs) - pad_x,
+        min(ys) - pad_y,
+        max(1.0, width + 2 * pad_x),
+        max(1.0, height + 2 * pad_y),
     )
-    with urllib.request.urlopen(request, timeout=60) as response:
-        data = response.read()
-    if not data.lstrip().startswith(b"<svg") and b"<svg" not in data[:500]:
-        raise RuntimeError("Downloaded SimpleMapLab source is not SVG")
-    return data
+
+
+def xml_escape(value):
+    return str(value).replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def build_region_svg(region, codes, feature_paths, feature_points, markers):
+    wrap_dateline = region == "pacific-islands"
+    points = []
+    path_elements = []
+
+    for code in codes:
+        for path_d in feature_paths.get((code, wrap_dateline), []):
+            path_elements.append(
+                f'<path data-code="{code}" class="world-country" d="{path_d}" fill-rule="evenodd"/>'
+            )
+        points.extend(feature_points.get((code, wrap_dateline), []))
+
+    marker_elements = []
+    for code in codes:
+        if code not in markers:
+            continue
+        x, y = mercator_xy(*markers[code], wrap_dateline=wrap_dateline)
+        points.append((x, y))
+        marker_elements.append(
+            f'<circle data-code="{code}" class="world-country world-country-marker" cx="{x:.1f}" cy="{y:.1f}" r="6"/>'
+        )
+
+    missing_without_marker = [code for code in codes if not feature_paths.get((code, wrap_dateline)) and code not in markers]
+    if missing_without_marker:
+        raise RuntimeError(f"{region}: countries missing both Natural Earth geometry and marker: {missing_without_marker}")
+
+    x, y, width, height = svg_view_box(points)
+    body = "".join(path_elements + marker_elements)
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>'
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{x:.1f} {y:.1f} {width:.1f} {height:.1f}" '
+        f'data-region="{xml_escape(region)}" data-projection="Web Mercator" '
+        'data-source="Natural Earth 1:50m admin-0 countries">'
+        f"{body}</svg>"
+    ).encode("utf-8"), missing_without_marker
 
 
 def main():
-    memberships = parse_region_memberships()
-    known_codes = set(code for codes in memberships.values() for code in codes)
-    source = download_source()
-    source_sha256 = hashlib.sha256(source).hexdigest()
-    root = ET.fromstring(source)
-    source_view_box = root.attrib.get("viewBox")
-    if not source_view_box:
-        raise RuntimeError("SimpleMapLab source SVG has no viewBox")
+    memberships, markers = parse_quiz_geography()
+    known_codes = {code for codes in memberships.values() for code in codes}
+    source_url, source_zip = download_source()
+    source_sha256 = hashlib.sha256(source_zip).hexdigest()
+    shp, shx, dbf = extract_shapefile(source_zip)
+    reader = shapefile.Reader(shp=shp, shx=shx, dbf=dbf, encoding="utf-8")
 
-    found = annotate_codes(root, known_codes)
-    missing_from_source = sorted(known_codes - found)
-    if missing_from_source:
-        raise RuntimeError(f"Quiz country codes missing from source SVG: {missing_from_source}")
+    source_shapes = {}
+    unmatched_source_names = []
+    for shape_record in reader.iterShapeRecords():
+        code = record_code(shape_record.record, known_codes)
+        if not code:
+            if len(unmatched_source_names) < 20:
+                data = shape_record.record.as_dict()
+                unmatched_source_names.append((data.get("NAME_EN"), data.get("ISO_A2"), data.get("ADM0_A3")))
+            continue
+        source_shapes.setdefault(code, []).append(shape_record.shape)
+
+    feature_paths = {}
+    feature_points = {}
+    for code, shapes in source_shapes.items():
+        for wrap in (False, True):
+            paths = []
+            points = []
+            for shape in shapes:
+                path_d, projected = shape_path(shape, wrap_dateline=wrap)
+                if path_d:
+                    paths.append(path_d)
+                    points.extend(projected)
+            feature_paths[(code, wrap)] = paths
+            feature_points[(code, wrap)] = points
+
+    found_codes = set(source_shapes)
+    missing = sorted(known_codes - found_codes)
+    tolerated = sorted(code for code in missing if code in markers)
+    fatal = sorted(code for code in missing if code not in markers)
+    if fatal:
+        print("Natural Earth records not matched (sample):", unmatched_source_names, file=sys.stderr)
+        raise RuntimeError(f"Quiz country codes not found in Natural Earth and lacking marker fallback: {fatal}")
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    for old in OUT_DIR.glob("*.svg"):
+        old.unlink()
+
     generated = {}
     for region, codes in sorted(memberships.items()):
-        region_root = copy.deepcopy(root)
-        filter_region(region_root, codes)
-        region_root.set("data-source", "SimpleMapLab / Natural Earth 1:50m")
-        region_root.set("data-projection", "Mercator")
-        region_root.set("data-region", region)
-        payload = ET.tostring(region_root, encoding="utf-8", xml_declaration=True)
+        payload, _ = build_region_svg(region, codes, feature_paths, feature_points, markers)
         path = OUT_DIR / f"{region}.svg"
         path.write_bytes(payload)
         generated[region] = {
@@ -149,21 +255,26 @@ def main():
         }
 
     manifest = {
-        "sourceUrl": SOURCE_URL,
-        "sourceSha256": source_sha256,
-        "sourceLicense": "CC0 / Public Domain",
-        "sourceGeometry": "Natural Earth 1:50m",
-        "projection": "Mercator",
-        "sourceViewBox": source_view_box,
+        "source": "Natural Earth 1:50m Admin 0 – Countries",
+        "sourceVersion": SOURCE_VERSION,
+        "sourcePage": SOURCE_PAGE,
+        "downloadUrl": source_url,
+        "sourceZipSha256": source_sha256,
+        "termsUrl": TERMS_URL,
+        "license": "Public Domain",
+        "projection": "Web Mercator",
+        "worldCoordinateSize": WORLD_SIZE,
+        "markerFallbackCodes": tolerated,
         "regions": generated,
     }
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     total = sum(item["bytes"] for item in generated.values())
-    print(f"Generated {len(generated)} local Mercator region SVGs ({total} bytes total)")
-    for region, meta in generated.items():
-        print(f"{region}: {meta['countries']} countries, {meta['bytes']} bytes")
-    print("SimpleMapLab source SHA256:", source_sha256)
+    largest = sorted(generated.items(), key=lambda item: item[1]["bytes"], reverse=True)[:5]
+    print(f"Generated {len(generated)} local Web Mercator region SVGs ({total} bytes total)")
+    print("Largest region files:", [(region, meta["bytes"]) for region, meta in largest])
+    print("Marker-only source fallbacks:", tolerated)
+    print("Natural Earth ZIP SHA256:", source_sha256)
 
 
 if __name__ == "__main__":
