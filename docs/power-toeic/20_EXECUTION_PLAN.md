@@ -27,7 +27,6 @@ Phase 2 verification: 9 Node tests passed across adapter/session/renderer contra
 - [x] **3.1 Implement versioned browser persistence**
 - [x] **3.2 Implement deterministic mastery engine**
 - [x] **3.3 Implement weakness ranking**
-Phase 3 verification: 5 focused persistence tests plus 4 focused mastery/weakness tests passed.
 
 ## Phase 4 — Web workout system — APP TRACK
 - [x] **4.1 Implement platform-neutral workout recipe model**
@@ -36,7 +35,6 @@ Phase 3 verification: 5 focused persistence tests plus 4 focused mastery/weaknes
 - [x] **4.4 Implement weakness-generated workout recipes**
 - [x] **4.5 Implement user-editable workout editor**
 - [x] **4.6 Implement 10 / 30 / 50 / 100 and bounded-chunk endless sessions**
-Phase 4 verification: 4 workout-builder + 4 editor-model + 4 session-planner focused tests passed. No mode gets a separate quiz engine.
 
 ## Phase 5 — Web review and transfer — APP TRACK
 - [x] **5.1 Implement mixed/unlabeled test presentation**
@@ -56,28 +54,19 @@ Phase 4 verification: 4 workout-builder + 4 editor-model + 4 session-planner foc
 
 ## Phase 8 — Web V1 integration — APP TRACK
 - [x] **8.1 Mobile-first home/navigation**
-  - Home is the default entry view rather than the fixture workout editor.
-  - QUICK / WEAKNESS / TRAINING / POWER / REVIEW / TEST / CUSTOM route into the existing common recipe/session engine.
-  - TRAINING/POWER expose a mobile skill picker; home reflects POWER progression and due-review count.
-  - Brand control returns to home without coupling navigation to quiz-domain logic.
 - [x] **8.2 End-to-end Web regression suite**
-  - Added a deterministic integration regression spanning WorkoutRecipe -> selection -> QuizSession -> attempts -> review/progression -> versioned persistence -> results.
-  - Added a dedicated GitHub Actions Node 22 workflow for the complete Power TOEIC test suite.
-  - The first complete run exposed and fixed a pre-existing progression-stage callback regression.
 - [x] **8.3 Performance/large-bank adapter check**
-  - Added a synthetic-only 20,000-question bank regression; production TOEIC content is not involved.
-  - 100-question workout selection remains unique and deterministic and completed far below the 2-second regression ceiling on GitHub Actions.
 - [x] **8.4 Publish Web beta entry point**
-  - Added a learner-facing Power TOEIC β card and English nav link on the site top page.
-  - The beta copy explicitly says question data is still being validated/expanded; synthetic fixtures are not represented as finished production content.
-  - Added the beta URL to `sitemap.xml`.
 
 ## Phase 9 — freeze cross-platform behavior — APP TRACK
 - [x] **9.1 Freeze platform-neutral models**
   - Documented JSON-compatible Skill, Question, WorkoutRecipe, Attempt, MasterySnapshot, ReviewEntry, ProgressionState, QuestionReport and semantic Asset ID contracts.
   - Added runtime shape validators and positive/negative contract tests without importing production question-authoring concerns.
-- [ ] **9.2 Create deterministic cross-platform conformance fixtures**
-- [ ] **9.3 Document Web V1 behavior as Swift port reference**
+- [x] **9.2 Create deterministic cross-platform conformance fixtures**
+  - Added `tests/fixtures/cross-platform-conformance-v1.json`, containing synthetic deterministic inputs and exact expected outputs for seeded selection, QuizSession, mastery, review, progression and question reports.
+  - Added JavaScript conformance tests that consume the JSON unchanged; the same file is the Swift conformance input.
+- [x] **9.3 Document Web V1 behavior as Swift port reference**
+  - Added `docs/power-toeic/70_SWIFT_PORT_REFERENCE.md` freezing responsibility boundaries, algorithms, thresholds, enum semantics and the rule that shared conformance fixtures decide cross-platform behavior.
 
 ## Phase 10 — native iOS Swift/SwiftUI port — APP TRACK
 - [ ] **10.1 Create native Swift/SwiftUI project structure**
