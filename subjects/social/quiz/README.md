@@ -34,6 +34,8 @@
 
 `renderer.type` を `svg-region` にし、クリック可能な地域に共通属性を持つSVGを指定します。世界の国当てにも同じ renderer を使えます。
 
+外部SVGが独自のレイヤー名しか持たない場合は、`sourceKeyAttribute` と `regionKeyMap` を使って素材側のレイヤー名を教材側の安定IDへ変換できます。問題データのanswer IDを素材固有IDへ変更する必要はありません。
+
 ### 選択肢型
 
 `renderer.type` を `choice` にし、各 question に `options` を持たせます。雨温図の気候判定、人物の国籍・時代判定などに使えます。
@@ -57,6 +59,6 @@
 
 ## 地図素材
 
-都道府県地図は lalamalink の「ディフォルメ都道府県日本地図」を使用しています。CC0 1.0 Universal。
+都道府県地図は `PA4KEV/japan-vector-map` の `japan-prefectures.svg` v1.0 を使用しています。MIT License、Copyright (c) 2023 Kevin Matsubara。実際の都道府県境界に近い形状を持つSVGで、上流コミット `6be9e705045777b7c433c429b0313f19b49d1ed4` に固定しています。
 
-https://github.com/lalamalink/japan-map-svg
+https://github.com/PA4KEV/japan-vector-map
