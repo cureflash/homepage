@@ -3,17 +3,11 @@
   "status": "in_progress",
   "track": "app_ui_program",
   "phase": 10,
-  "active_task": "10.1",
-  "next_role": "create_native_swiftui_project_structure",
+  "active_task": "10.3",
+  "next_role": "port_quiz_session_and_workout_builder",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
-  "web_beta": {
-    "entry_path": "subjects/english/power-toeic/",
-    "site_entry": "index.html",
-    "sitemap": true,
-    "completed_task": "8.4",
-    "content_status_copy": "question data is still being validated and expanded"
-  },
+  "native_implementation_path": "subjects/english/power-toeic-ios/",
   "cross_platform_contracts": {
     "document": "docs/power-toeic/60_PLATFORM_NEUTRAL_CONTRACTS.md",
     "swift_reference": "docs/power-toeic/70_SWIFT_PORT_REFERENCE.md",
@@ -25,9 +19,12 @@
   "ios_implementation": {
     "language": "Swift",
     "ui_framework": "SwiftUI",
-    "phase": 10,
-    "status": "ready_to_start",
-    "start_gate": "Phase 9 contracts, conformance fixture and Swift port reference frozen"
+    "package": "subjects/english/power-toeic-ios/Package.swift",
+    "minimum_ios": 17,
+    "ci": ".github/workflows/power-toeic-swift-tests.yml",
+    "completed_tasks": ["10.1", "10.2"],
+    "shared_fixture_decoding": true,
+    "status": "in_progress"
   },
   "content_database_track": "external_scheduler",
   "app_track_content_policy": "do not author or scale production question DB; only define consumer adapter/contracts and tiny synthetic fixtures",
@@ -36,28 +33,10 @@
   "runtime_ai": false,
   "target_score_feature": false,
   "body_part_skill_mapping": false,
-  "characters": {
-    "question_giver": "drill_sergeant",
-    "learner_avatar": "skinny_trainee",
-    "progression": "skinny_to_muscular",
-    "temporary_art_source": "Irasutoya",
-    "temporary_unique_art_limit": 20,
-    "completed_tasks": ["6.1", "6.2", "6.3"]
-  },
-  "audio": {
-    "source": "Google Drive existing SE library",
-    "initial_correct": "otologic_correct.mp3",
-    "initial_wrong": "otologic_incorrect.mp3",
-    "initial_milestone": "otologic_inspiration.mp3",
-    "license": "CC BY 4.0 / OtoLogic attribution required"
-  },
-  "persistence": {"storage_key": "power-toeic.app-state", "version": 1, "root_fields": ["attempts", "reviewEntries", "progression"]},
-  "mastery": {"states": ["unknown", "training", "weak", "mixed_pass", "reviewing", "mastered"], "practice_only_mastered": false},
+  "characters": {"question_giver":"drill_sergeant","learner_avatar":"skinny_trainee","progression":"skinny_to_muscular","temporary_art_source":"Irasutoya","temporary_unique_art_limit":20},
+  "audio": {"source":"Google Drive existing SE library","initial_correct":"otologic_correct.mp3","initial_wrong":"otologic_incorrect.mp3","initial_milestone":"otologic_inspiration.mp3","license":"CC BY 4.0 / OtoLogic attribution required"},
   "attempt_contexts": ["training", "mixed", "review"],
   "workout_modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
-  "navigation": {"module": "subjects/english/power-toeic/js/ui/home.js", "default_view": "home", "completed_task": "8.1", "routes": ["QUICK", "WEAKNESS", "TRAINING", "POWER", "REVIEW", "TEST", "CUSTOM"]},
-  "question_reports": {"storage_key": "power-toeic.question-reports.v1", "completed_task": "7.4"},
-  "regression": {"workflow": ".github/workflows/power-toeic-tests.yml", "node": 22, "e2e_task": "8.2", "large_bank_task": "8.3", "synthetic_bank_questions": 20000, "cross_platform_fixture_task": "9.2"},
-  "last_completed_task": "9.3",
-  "updated_at": "2026-08-27T05:47:00+09:00"
+  "last_completed_task": "10.2",
+  "updated_at": "2026-08-27T05:52:00+09:00"
 }
