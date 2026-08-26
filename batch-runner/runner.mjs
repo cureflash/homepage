@@ -44,7 +44,14 @@ try {
     } catch (error) {
       hadFailure = true;
       await log(`STOP [${project.name}]: ${formatError(error)}`);
-      break;
+
+      // A failed project must never expose another project to its uncommitted files.
+      // If the tree is still clean, continue the round-robin so one logical blocker
+      // does not starve every other project.
+      if (config.requireCleanWorkingTree !== false && !isWorkingTreeClean()) {
+        await log(`ABORT QUEUE: [${project.name}] left the Git working tree dirty.`);
+        break;
+      }
     }
   }
 } catch (error) {
@@ -52,7 +59,7 @@ try {
   await log(`FATAL: ${formatError(error)}`);
 }
 
-await log(hadFailure ? "Batch runner stopped with an error." : "Batch runner finished normally.");
+await log(hadFailure ? "Batch runner finished with one or more project errors." : "Batch runner finished normally.");
 process.exitCode = hadFailure ? 1 : 0;
 
 async function runProject(project) {
@@ -79,7 +86,7 @@ async function runProject(project) {
     modelReasoningEffort: config.codex?.modelReasoningEffort ?? "high",
   });
 
-  const maxRuns = project.maxRuns ?? config.maxRunsPerProject ?? 10;
+  const maxRuns = project.maxRuns ?? config.maxRunsPerProject ?? 1;
   const maxNoProgressRuns = project.maxNoProgressRuns ?? config.maxNoProgressRuns ?? 2;
   let noProgressRuns = 0;
 
@@ -135,7 +142,7 @@ async function runProject(project) {
       return;
     }
 
-    if (beforeFingerprint === afterFingerprint) {
+    if (beforeFingerprint === afterFingerprint && afterHead === beforeHead) {
       noProgressRuns += 1;
       await log(`NO PROGRESS [${project.name}] ${noProgressRuns}/${maxNoProgressRuns}`);
     } else {
@@ -143,14 +150,19 @@ async function runProject(project) {
     }
 
     if (noProgressRuns >= maxNoProgressRuns) {
-      throw new Error(`STATUS.json が ${maxNoProgressRuns} 回連続で実質的に進んでいません。無限ループ防止のため停止します。`);
+      throw new Error(`STATUS/Git が ${maxNoProgressRuns} 回連続で実質的に進んでいません。無限ループ防止のためこのプロジェクトを停止します。`);
     }
   }
 
   const finalStatus = await readStatus(statusPath);
-  if (!doneStatuses.has(normalizeStatus(finalStatus.status))) {
-    throw new Error(`最大実行回数 ${maxRuns} 回に達しました。status=${finalStatus.status}`);
+  if (doneStatuses.has(normalizeStatus(finalStatus.status))) {
+    await log(`PROJECT DONE [${project.name}] after run budget`);
+    return;
   }
+
+  // Reaching the per-project run budget is normal in round-robin mode. Yield to
+  // the next project; systemd will start another queue cycle after this run.
+  await log(`PROJECT YIELD [${project.name}] after ${maxRuns} turn(s), status=${finalStatus.status}`);
 }
 
 function buildInitialPrompt(project) {
@@ -161,18 +173,20 @@ function buildInitialPrompt(project) {
   ].filter(Boolean);
 
   return `
-このリポジトリで継続バッチ処理を実行してください。
+このリポジトリで「${project.name}」の継続バッチ処理を実行してください。
 
-最初に以下のファイルを読み、現在の状態と指示を確認してください。
+最初に以下のファイルを読み、現在の状態、正本ルール、直前の引き継ぎを確認してください。
 ${files.map((file) => `- ${file}`).join("\n")}
 
-現在STATUSで指定されている未完了タスクだけを実行してください。勝手に範囲を広げないでください。
-作業本体、必要な調査、検証・テスト、STATUS、実行計画、HANDOFFの更新まで完了してください。
-事実確認が必要な作業では、権威ある一次情報・公的資料を優先して確認してください。
+STATUS と HANDOFF が示す現在の未完了作業だけを進めてください。HANDOFF に「Exact next starting point」「次の開始地点」等がある場合はそこを正本として扱ってください。
+STATUS に batch target / generation batch target など明示的な作業量がある場合は、その指定量をこのターンの単位として優先してください。勝手に別分野へ範囲を広げないでください。
+作業本体、必要な調査、検証・テスト、実行計画、HANDOFF、STATUS の更新まで完了してください。
+STATUS は必ず残し、作業継続中なら status=in_progress、プロジェクト全体が本当に完了した場合だけ status=done にしてください。
+事実確認が必要な作業では、権威ある一次情報・公的資料を優先してください。
 
 このターンで変更したファイルは、既存のリポジトリ運用に従ってcommitしてください。pushは親ランナー側でも実行します。
 force push、reset --hard、既存の未関連変更の破棄、履歴改変は禁止です。
-完了できない場合は成功したことにせず、状態を壊さずにブロッカーを明示してください。
+完了できない場合は成功したことにせず、状態を壊さずにブロッカーをSTATUS/HANDOFFへ記録してください。
 
 作業終了時は簡潔な完了報告を返してください。
 `.trim();
@@ -200,6 +214,10 @@ function verifyPrerequisites() {
   if (topLevel !== repoRoot) {
     throw new Error(`repositoryPath がGitルートを指していません。expected=${repoRoot} actual=${topLevel}`);
   }
+}
+
+function isWorkingTreeClean() {
+  return !runGit(["status", "--porcelain"]).trim();
 }
 
 function assertCleanWorkingTree(stage) {
@@ -263,7 +281,7 @@ function stripVolatileFields(value) {
   if (value && typeof value === "object") {
     const result = {};
     for (const key of Object.keys(value).sort()) {
-      if (key === "updated_at" || key === "updatedAt") continue;
+      if (key === "updated_at" || key === "updatedAt" || key === "last_updated") continue;
       result[key] = stripVolatileFields(value[key]);
     }
     return result;
