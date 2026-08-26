@@ -51,12 +51,14 @@ Phase 3.2/3.3 verification: 4 focused mastery/weakness tests passed.
 
 ## Phase 4 — Web workout system — APP TRACK
 
-- [ ] **4.1 Implement platform-neutral workout recipe model**
-- [ ] **4.2 Implement deterministic question selector through QuestionBankRepository**
-- [ ] **4.3 Implement QUICK / TRAINING / POWER / TEST / REVIEW presets through recipes**
-- [ ] **4.4 Implement weakness-generated workout recipes**
+- [x] **4.1 Implement platform-neutral workout recipe model**
+- [x] **4.2 Implement deterministic question selector through QuestionBankRepository**
+- [x] **4.3 Implement QUICK / TRAINING / POWER / TEST / REVIEW presets through recipes**
+- [x] **4.4 Implement weakness-generated workout recipes**
 - [ ] **4.5 Implement user-editable workout editor**
 - [ ] **4.6 Implement 10 / 30 / 50 / 100 and bounded-chunk endless sessions**
+
+Phase 4.1–4.4 verification: 4 focused Node tests passed. Recipe objects are JSON/Codable-friendly and immutable after construction; selector is seed-deterministic, prefers unseen then least-recently-seen questions, avoids duplicate IDs in finite sessions, REVIEW restricts selection to supplied due IDs, TEST hides skill labels, and weakness recommendations resolve through the same recipe model.
 
 No mode gets a separate quiz engine.
 
