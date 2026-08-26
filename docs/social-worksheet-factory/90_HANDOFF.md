@@ -4,97 +4,111 @@
 
 - Active stage: junior-high
 - Active field: history
-- Verified through: Bakumatsu and Meiji Restoration
-- Active unit: Meiji state / industrialization
-- Next role: FACTCHECK
+- Verified through: Meiji state / industrialization
+- Active unit: Imperialism / Sino-Japanese and Russo-Japanese wars
+- Next role: GENERATE
 - Batch size: 1 unit
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed GENERATE — Meiji state / industrialization
+## Completed FACTCHECK — Meiji state / industrialization
 
-Created `subjects/social/worksheets/data/meiji-state-industrialization.js` as the next junior-high history unit. The dataset is intentionally low-density and remains completely `pending_factcheck`; it is not loaded by the public selector.
+Independently reopened authoritative sources and treated all eight structured facts, eight learner sentences, the key-point/timeline wording, and both image records as untrusted before approval.
 
-### Curriculum boundary used during generation
+### Curriculum placement
 
-Freshly reopened MEXT current junior-high Social Studies commentary places this material under `近代の日本と世界` → `明治維新と近代国家の形成`. It explicitly requires `富国強兵・殖産興業政策`, and says that the reforms under this policy should include the school system, military system, tax system, abolition of the status system and related state-building changes. It also requires the `文明開化` trend and understanding that people's lives changed greatly.
+MEXT current junior-high Social Studies commentary places this material under `近代の日本と世界` → `明治維新と近代国家の形成`. It explicitly names `富国強兵・殖産興業政策` and directs schools to cover the reforms of the school, military and tax systems and the abolition of the status system. It also states that learners should notice that discrimination remained in reality despite the abolition of the status system, and that the `文明開化` trend changed society and people's lives.
 
-This unit therefore does not repeat the preceding verified Bakumatsu unit beyond connective context. Perry, the Ansei treaties, Taisei Hokan, Boshin War, Charter Oath and Haihan-chiken are not re-taught here. Constitutional government and later foreign policy are left for subsequent units.
+### Independent checks and final wording
 
-### Structured content generated
+All eight facts and all eight learner sentences are now `verified`.
 
-Eight structured facts and eight concise learner sentences were created. All are `pending_factcheck`.
+1. `富国強兵` / `殖産興業`
+   - MEXT treats these as broad policies under which the new government carried out multiple reforms, not as one decree with one start date.
+   - The unit wording already reflected that distinction and was retained.
 
-Core coverage:
+2. `学制`
+   - National Archives confirms August 1872 and describes the Gakusei as Japan's first basic legal framework for a modern school system.
+   - The learner wording `全国的な近代学校制度を整備する方針が示された` is supportable and was retained.
 
-1. `富国強兵` as the overall state-building direction.
-2. `学制` — 1872; nationwide modern school-system policy.
-3. `徴兵令` — 1873; registration / examination / selection for military service.
-4. `地租改正` — 1873; tax based on land value and shift from in-kind payment to `金納`.
-5. Reform of the old status system, stated cautiously as a gradual removal of legal restrictions rather than the simplistic claim that social discrimination immediately disappeared.
-6. `殖産興業` and `富岡製糸場` — model mechanized silk-reeling factory established by the Meiji government, operating from 1872.
-7. `新橋`–`横浜` railway — Japan's first railway full opening in 1872.
-8. `文明開化` — spread of Western-derived institutions / cultural forms such as Western dress, Western-style architecture, railways and postal services.
+3. `徴兵令`
+   - National Archives confirms January 1873. Men were entered in military registers, conscription examination occurred at age 20, and only selected qualified men entered active service; exemptions also existed.
+   - The worksheet deliberately does not say that every adult male actually served. Existing wording was retained.
 
-The cloze terms remain explicit. The status-system sentence intentionally has an empty `terms` array because the historical change is important context but the generator should not force a potentially misleading shorthand such as `四民平等` into a memorization blank without independent review.
+4. `地租改正`
+   - National Archives confirms the July 28, 1873 ordinance: land value formed the tax basis, the initial rate was 3 percent of land value, payment shifted from the former in-kind system to money, and the land-certificate holder was the taxpayer.
+   - The concise learner sentence correctly captures the land-value basis and `金納` shift.
 
-### Candidate factual evidence collected during GENERATE
+5. Status-system reform
+   - National Diet Library material confirms the staged creation of categories including `華族・士族・平民` and the progressive removal of inherited legal restrictions.
+   - MEXT specifically requires noticing that discrimination remained despite the legal abolition of the status system.
+   - The structured fact and learner sentence were therefore tightened to add: `ただし、現実の社会には差別が残った。`
+   - The `terms` array remains empty so the worksheet does not force a misleading memorization shorthand such as `四民平等`.
 
-These are generator references only. The next run must independently reopen authoritative sources and treat every claim as untrusted.
+6. `殖産興業` / `富岡製糸場`
+   - Tomioka City confirms that the Meiji government decided in 1870 to establish a government-run model mechanized silk-reeling factory, construction began in 1871, and the principal buildings were completed and operation started in 1872.
+   - The official site also confirms the purposes of improving raw-silk quality/production and training technical instructors.
+   - Existing wording was retained.
 
-- MEXT `中学校学習指導要領（平成29年告示）解説 社会編`.
-- National Archives `学制が公布される` — confirms the August 1872 proclamation and describes it as Japan's first modern school-system basic legislation.
-- National Archives `徴兵令が発せられる` — confirms January 1873 and the details of conscription examination, selection and service, including contemporary exemptions.
-- National Archives `地租改正条例が制定される` — confirms July 1873, calculation from land value, 3 percent rate at introduction, monetary payment and land-certificate holder as taxpayer.
-- National Diet Library constitutional-history research material for the staged dismantling of the old class/status order, the creation of kazoku / shizoku / heimin categories and abolition of a number of inherited legal restrictions.
-- Tomioka City official Tomioka Silk Mill site — describes the mill as an 1872 government-established model mechanized silk-reeling factory intended to improve raw-silk quality, production and technical training.
-- National Archives `新橋・横浜間の鉄道が開通する` — confirms the 1872 full opening and opening ceremony.
-- National Archives `文明開化と明治のくらし` and NDL Image Bank Meiji print material — document changes including Western dress, Western-style buildings, railway, postal system and other new practices / technologies.
+7. Shimbashi–Yokohama railway
+   - National Archives confirms the September 12, 1872 opening and opening ceremony of the Shimbashi–Yokohama railway.
+   - The learner wording identifies the 1872 full opening and does not confuse it with earlier temporary operation.
 
-### Image candidates
+8. `文明開化`
+   - MEXT describes the trend as social and lifestyle change under the influence of institutions and culture brought from Western countries.
+   - National Archives' `文明開化と明治のくらし` exhibition documents examples including Western dress, railways and postal services; these support the examples used in the worksheet.
 
-No AI-generated historical images were used. Both image records are `pending_factcheck` and must be independently reopened next run.
+### Independent evidence reopened
 
-1. `Kundō shōgakkō kyōdō no zu.jpg`
-   - learner label: `明治初期の小学校を描いた錦絵`
-   - Commons summary identifies the work as `訓童 小學校教導之圖`, published in 1874, showing an elementary-school scene in the second year after the Gakusei proclamation.
-   - author field: 肉亭夏良, presumed Kobayashi Kiyochika.
-   - exact Commons page treats the two-dimensional work and faithful reproduction as public domain in Japan / United States.
-   - project currently records `Public Domain (PD-Japan / PD-US)`.
+- MEXT `中学校学習指導要領（平成29年告示）解説 社会編`, especially the pages covering `明治維新と近代国家の形成` and its content handling.
+- National Archives `学制が公布される`.
+- National Archives `徴兵令が発せられる`.
+- National Archives `地租改正条例が制定される`.
+- National Diet Library `明治憲法と日本国憲法に関する基礎的資料` for the staged status-system changes.
+- Tomioka City official Tomioka Silk Mill history / site guide.
+- National Archives `新橋・横浜間の鉄道が開通する`.
+- National Archives `文明開化と明治のくらし`.
 
-2. `Tomioka Silk Mill East Cocoon Warehouse04.jpg`
-   - learner label: `富岡製糸場 東置繭所`
-   - Commons identifies the depicted East Cocoon Warehouse as built in 1872.
-   - photograph date: 11 December 2010.
-   - photographer: Hasec.
-   - uploader/copyright holder explicitly released the photograph into the public domain (`PD-self`).
+## Image verification
 
-### Publication and generator state
+No AI-generated historical images are used.
 
-The new dataset is deliberately not added to `subjects/social/worksheets/index.html`. Only independently verified units remain learner-facing.
+### `Kundō shōgakkō kyōdō no zu.jpg`
 
-The shared worksheet generator was not modified. Only terms explicitly listed in each sentence's `terms` array can become blanks, so the existing deterministic seed/rate behavior and arbitrary-noun protection remain intact. Unrelated educational pages were not touched.
+- Exact Commons file reopened independently.
+- Work: `訓童 小學校教導之圖`.
+- Published: 1874.
+- Commons describes it as a scene of an elementary school in the second year after the Gakusei proclamation.
+- Creator field: 肉亭夏良, presumed Kobayashi Kiyochika.
+- Commons identifies the underlying two-dimensional work as public domain in Japan and the United States and treats the faithful reproduction as public domain under its PD-Art policy.
+- Project license note `Public Domain (PD-Japan / PD-US)` is retained.
+- Record status: `verified`.
 
-A direct `node --check` attempt from the local execution container could not fetch the newly created GitHub file because DNS resolution for `raw.githubusercontent.com` failed. The GitHub connector successfully created and re-fetched the file, but syntax validation should be repeated in the next run if network/tooling permits.
+### `Tomioka Silk Mill East Cocoon Warehouse04.jpg`
+
+- Exact Commons file reopened independently.
+- Depicts the East Cocoon Warehouse at Tomioka Silk Mill; Commons states the building was built in 1872.
+- Photograph date: 11 December 2010.
+- Photographer: Hasec.
+- Copyright holder explicitly released the photograph into the public domain worldwide (`PD-self`).
+- Record status: `verified`.
+
+## Publication and generator state
+
+`subjects/social/worksheets/data/meiji-state-industrialization.js` is fully `verified` and is now loaded by `subjects/social/worksheets/index.html`.
+
+The public selector therefore includes the verified junior-high history sequence through Meiji state / industrialization.
+
+The shared generator itself was not changed. It continues to blank only terms explicitly listed in each sentence's `terms` array, preserving deterministic seeded blank selection and preventing arbitrary noun deletion.
+
+Unrelated educational pages and the existing Cloudflare analytics markup were preserved.
 
 ## Exact next starting point
 
-Next role is FACTCHECK. Work only on:
+Next role is GENERATE. Work only on the next junior-high history queue unit:
 
-`subjects/social/worksheets/data/meiji-state-industrialization.js`
+`imperialism-sino-japanese-russo-japanese-wars`
 
-Treat all eight facts, eight learner sentences, key-point/timeline wording and both image records as untrusted. Independently reopen MEXT and authoritative sources from scratch rather than relying on the generator summary above.
+Create a low-density explanation-sheet dataset first. Keep the unit boundary focused on imperialism, Japan's constitutional/international position as needed for context, the Sino-Japanese War, Russo-Japanese War, treaty/territorial consequences, and Korea/continental relations as required by the current curriculum. Do not prematurely absorb the later separate `Taisho democracy / interwar Japan` unit.
 
-At minimum verify:
-
-1. whether `富国強兵` and `殖産興業` are used in a way consistent with the current MEXT curriculum and do not imply one single decree or start date;
-2. exact date / nature of the 1872 `学制`, including whether `全国的な近代学校制度を整備する方針` is appropriately worded;
-3. the 1873 `徴兵令` wording, especially avoiding a false implication that every adult male actually served;
-4. the 1873 `地租改正` wording, including land-value basis, money payment and whether any detail needs qualification;
-5. the status-system sentence, especially the distinction between legal reform and the persistence of social discrimination; reject any wording that overstates immediate equality;
-6. the relationship between `殖産興業` and the government-established Tomioka Silk Mill, including its 1872 start of operations / model-factory purpose;
-7. the distinction between temporary opening / construction milestones and the 1872 full opening of the Shimbashi–Yokohama railway;
-8. the definition and examples used for `文明開化`;
-9. exact image identities, date / creator fields, captions and the actual Commons reuse status for both files.
-
-If and only if the complete unit passes independent review, mark the fact, sentence, image and unit statuses `verified`, add `data/meiji-state-industrialization.js` to the public selector, set `verified_through` to `meiji-state-industrialization`, set `next_role` to `generate`, and advance the junior-high history queue to `imperialism-sino-japanese-russo-japanese-wars`.
+Collect authoritative facts from MEXT plus government archives, museums, diplomatic archives, Diet/National Archives or primary-source repositories. Use several useful non-AI historical-source images only when the exact file license can be recorded. Mark all new facts, learner sentences and image records `pending_factcheck`, do not publish the new dataset in `index.html`, then set `next_role` to `factcheck` and leave `verified_through` at `meiji-state-industrialization`.
