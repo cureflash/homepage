@@ -2,7 +2,7 @@
   "status": "in_progress",
   "mode": "handoff_driven",
   "project": "science-worksheet-factory",
-  "next_task": "Continue Phase 3 at 物理基礎 heat. Re-open the current MEXT commentary for the heat block, then add a coherent basic mechanically checkable heat-quantity/specific-heat/heat-capacity family through the shared generator/validator/PDF/catalog pipeline. Preserve formal_course=物理基礎 and grade=null; after heat continue waves/sound, electricity, then energy use.",
+  "next_task": "Resume Phase 3 at 物理基礎 heat publication, not waves yet. The 60-sheet heat source/test/workflow checkpoint is already on main: Q=mcΔT (40 variants: solve Q, m, c, ΔT) and Q=CΔT (20 variants: solve Q, C), coherent SI units J/kg/J/(kg·K)/J/K/K, existing shared product relation only. Reconfirm latest main, then get the Physics Basics publish workflow to execute on current main (or an equivalent fully validated publication path), require all shared/topic tests, independent recomputation, 450 unique Physics Basics hashes, PDF two-page/file checks, catalog registration, and successful commit/push before counting the 60 PDFs as published. Current published count remains 390 Physics Basics / 678 physics until that succeeds. After heat is actually published, continue waves/sound -> electricity -> energy use.",
   "scheduler_policy": "one_checkpoint_per_cycle",
-  "updated_at": "2026-08-26"
+  "updated_at": "2026-08-27"
 }
