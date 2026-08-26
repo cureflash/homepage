@@ -8,7 +8,7 @@
   "next_role": "generate",
   "last_completed_role": "generate",
   "verified_through": "meiji-state-industrialization",
-  "generation_batch_target": 10,
+  "generation_batch_target": 20,
   "factcheck_policy": "manual_batch",
   "last_generated_batch": [
     "history-comprehensive-modernization-questions",
@@ -57,5 +57,5 @@
   ],
   "pending_factcheck_count": 31,
   "prototype_status": "verified",
-  "updated_at": "2026-08-26T12:43:00+09:00"
+  "updated_at": "2026-08-26T12:47:00+09:00"
 }
