@@ -14,7 +14,21 @@ let package = Package(
     targets: [
         .target(
             name: "PowerTOEIC",
-            path: "Sources/PowerTOEIC"
+            path: "Sources/PowerTOEIC",
+            exclude: [
+                "ARCHITECTURE.md",
+                "Core/README.md",
+                "Models/README.md",
+                "Data/README.md",
+                "Persistence/README.md",
+                "Resources/README.md",
+                "Views/Home/README.md",
+                "Views/Quiz/README.md",
+                "Views/Workout/README.md",
+                "Views/Result/README.md",
+                "Views/Weakness/README.md",
+                "Views/Character/README.md"
+            ]
         ),
         .testTarget(
             name: "PowerTOEICTests",
