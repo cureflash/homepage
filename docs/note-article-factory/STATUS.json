@@ -6,7 +6,24 @@
   "timezone": "Asia/Tokyo",
   "auto_publish": false,
   "delivery": "gmail_to_self",
-  "last_article": null,
-  "recent_topic_keys": [],
+  "last_article": {
+    "date": "2026-08-27",
+    "topic_key": "github_time_routing_hourly_worker",
+    "title": "5時はnote、6時はメール、17時は監査。ChatGPTの仕事をGitHubの時間割にした",
+    "target_reader": "AIヘビーユーザー・個人開発者",
+    "source_projects": [
+      "automation-routing",
+      "note-article-factory",
+      "morning-operations",
+      "automation-audit",
+      "worksheet-factory"
+    ],
+    "article_type": "free",
+    "sent_status": "sent",
+    "gmail_message_id": "1a0406491bfa1ecb"
+  },
+  "recent_topic_keys": [
+    "github_time_routing_hourly_worker"
+  ],
   "notes": "Before scheduling, use 90_SCHEDULE_PROMPT.md. Every article must pass 10_STYLE_AND_AI_SMELL_SPEC.md before Gmail delivery."
 }
