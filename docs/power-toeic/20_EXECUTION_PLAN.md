@@ -21,7 +21,6 @@ The app track may define only the consumer-facing adapter contract and tiny synt
 - [x] **2.1 Implement common four-choice study session core**
 - [x] **2.2 Implement cloze-choice renderer and quiz screen**
 - [x] **2.3 Implement basic result screen**
-Phase 2 verification: 9 Node tests passed across adapter/session/renderer contracts.
 
 ## Phase 3 — Web persistence, mastery and weakness — APP TRACK
 - [x] **3.1 Implement versioned browser persistence**
@@ -60,17 +59,16 @@ Phase 2 verification: 9 Node tests passed across adapter/session/renderer contra
 
 ## Phase 9 — freeze cross-platform behavior — APP TRACK
 - [x] **9.1 Freeze platform-neutral models**
-  - Documented JSON-compatible Skill, Question, WorkoutRecipe, Attempt, MasterySnapshot, ReviewEntry, ProgressionState, QuestionReport and semantic Asset ID contracts.
-  - Added runtime shape validators and positive/negative contract tests without importing production question-authoring concerns.
 - [x] **9.2 Create deterministic cross-platform conformance fixtures**
-  - Added `tests/fixtures/cross-platform-conformance-v1.json`, containing synthetic deterministic inputs and exact expected outputs for seeded selection, QuizSession, mastery, review, progression and question reports.
-  - Added JavaScript conformance tests that consume the JSON unchanged; the same file is the Swift conformance input.
 - [x] **9.3 Document Web V1 behavior as Swift port reference**
-  - Added `docs/power-toeic/70_SWIFT_PORT_REFERENCE.md` freezing responsibility boundaries, algorithms, thresholds, enum semantics and the rule that shared conformance fixtures decide cross-platform behavior.
 
 ## Phase 10 — native iOS Swift/SwiftUI port — APP TRACK
-- [ ] **10.1 Create native Swift/SwiftUI project structure**
-- [ ] **10.2 Implement Codable platform-neutral models and QuestionBankRepository protocol**
+- [x] **10.1 Create native Swift/SwiftUI project structure**
+  - Created `subjects/english/power-toeic-ios/` as a Swift Package targeting iOS 17/macOS 14.
+  - Established App/Core/Models/Data/Persistence/Views/Resources boundaries, minimal SwiftUI root, XCTest smoke test and dedicated macOS `swift test` workflow.
+- [x] **10.2 Implement Codable platform-neutral models and QuestionBankRepository protocol**
+  - Added Codable/Equatable/Sendable Swift forms for frozen V1 models/enums plus `QuestionBankRepository`.
+  - Swift tests read the canonical Web conformance JSON directly from the adjacent Web tree without a translated/copied fixture.
 - [ ] **10.3 Port QuizSession and WorkoutBuilder behavior**
 - [ ] **10.4 Port mastery, weakness and review engines**
 - [ ] **10.5 Build SwiftUI home/workout/quiz/result/weakness screens**
