@@ -6,61 +6,74 @@
 - Never recreate or use retired `social-worksheets/`.
 - GENERATE scope defined by `00_MASTER_INSTRUCTIONS.md` is **complete**.
 - FACTCHECK is manual batch work only.
-- Verified learner-facing coverage now runs through `contemporary-japan-cumulative-review`.
-- Pending backlog count: **194 units**.
+- Verified learner-facing coverage now runs through `separation-of-powers`.
+- Pending backlog count: **188 units**.
 - Public selector remains verified-only.
 
-## Latest independent FACTCHECK batch — first 5 backlog units
+## FACTCHECK progress this session
 
-The following five units were independently checked against current MEXT curriculum/commentary plus government, archive, library, treaty, or other authoritative sources. Their unit-level, fact-level, learner-sentence-level, and retained image-level `factcheckStatus` values are now `verified`, and they have been added to the public selector.
+### Batch 01 — 5 modern-history units
 
-1. `imperialism-sino-japanese-russo-japanese-wars` — 帝国主義と日清・日露戦争
-2. `taisho-democracy-interwar-japan` — 大正デモクラシーと戦間期
-3. `asia-pacific-war` — アジア・太平洋戦争
-4. `postwar-japan` — 戦後日本の出発
-5. `contemporary-japan-cumulative-review` — 現代日本と近現代の累積復習
+Verified and published:
+
+1. `imperialism-sino-japanese-russo-japanese-wars`
+2. `taisho-democracy-interwar-japan`
+3. `asia-pacific-war`
+4. `postwar-japan`
+5. `contemporary-japan-cumulative-review`
+
+Batch 01 reduced the backlog from 199 to 194. Its detailed evidence note is `FACTCHECK_BATCH_01.md`.
+
+### Batch 02 — constitution, rights and the three powers
+
+Independently checked against the current MEXT junior-high social-studies commentary and primary/official constitutional and institutional sources, then verified and published:
+
+1. `constitution-constitutionalism` — 日本国憲法と立憲主義
+2. `fundamental-human-rights` — 基本的人権
+3. `diet` — 国会
+4. `cabinet` — 内閣
+5. `courts` — 裁判所
+6. `separation-of-powers` — 三権分立
+
+For these six, article wording and institutional claims were cross-checked against the Constitution of Japan as published by the House of Representatives, House of Representatives material on Diet powers, Cabinet Secretariat material on the parliamentary cabinet system, and Courts in Japan material on the three-tier court system and judicial review. MEXT commentary was used to recheck junior-high curriculum treatment of constitutionalism, rights, the Diet-centered political system, parliamentary cabinet government, and separation of powers.
 
 ## Corrections / image decisions
 
-- `taisho-democracy-interwar-japan`: narrowed the learner sentence about the 1925 治安維持法 so that it describes the law's stated targets (organizations aiming at alteration of the kokutai or denial of the system of private property) instead of broadly saying it regulated social movements and thought in general.
-- `taisho-democracy-interwar-japan`: removed the generation-stage Hara Takashi portrait. The Commons file page only established a U.S. public-domain claim and explicitly warned that the work might not be public domain outside the United States, so it was not retained for Japanese learner-facing publication.
-- `asia-pacific-war`: removed the generation-stage surrender-document image for the same reason: the Commons reuse statement established U.S. public-domain status but did not provide a sufficiently clear Japan-side reuse basis for this factory's publication rule.
-- `imperialism-sino-japanese-russo-japanese-wars`: retained the Shimonoseki Treaty ratification image and the Japan–Korea Annexation Treaty image after rechecking the Commons provenance and Japan-side public-domain tags.
-- `postwar-japan`: retained the Constitution of Japan signature image after rechecking its Commons provenance and CC BY-SA 4.0 license.
-
-## Evidence families used
-
-- 文部科学省『中学校学習指導要領（平成29年告示）解説 社会編』 for curriculum placement and required historical scope.
-- 国立公文書館 for the Sino-Japanese War, Russo-Japanese War, Shimonoseki/Portsmouth-related material, Korea annexation, wartime/end-of-war records, postwar reform, reconstruction, and high-growth chronology.
-- 外務省外交史料館 for treaty and diplomatic-history cross-checks.
-- 国立国会図書館 for Taisho democracy, universal male suffrage / Peace Preservation Law, and the Constitution of Japan.
-- Wikimedia Commons only for exact file identity/provenance/license checks; a file was not retained merely because it existed on Commons.
+- `cabinet`: made the learner sentence on a no-confidence vote explicit: after passage, the Cabinet must either have the House of Representatives dissolved within 10 days or resign en masse.
+- `constitution-constitutionalism`: retained the same Constitution signature image already independently verified in Batch 01, with the checked CC BY-SA 4.0 attribution/license metadata.
+- `diet`, `cabinet`, and `courts`: removed their generation-stage building photographs rather than publish them without a separate completed license/provenance review. The factual worksheets do not depend on those decorative images.
+- Batch 01 image decisions remain in force: ambiguous Hara Takashi and surrender-document images were removed; treaty-document and Constitution images with completed reuse checks were retained.
 
 ## Backlog / publication state
 
-- Previous pending backlog: 199
-- Independently verified in this batch: 5
-- Current pending backlog: 194
-- `subjects/social/worksheets/index.html` now loads these five units after `meiji-state-industrialization.js` and before `app.js`.
-- No unit after these five has been published or removed from the pending backlog.
+- Start of this session: 199 pending
+- Batch 01 verified: 5
+- Batch 02 verified: 6
+- Total independently verified this session: **11 units**
+- Current pending backlog: **188 units**
+- All 11 passing units are loaded by `subjects/social/worksheets/index.html`.
+- No remaining pending unit is public.
 
 ## Exact next social action
 
-Continue independent FACTCHECK from the new backlog head:
+Continue independent FACTCHECK sequentially from:
 
-1. `constitution-constitutionalism`
-2. `fundamental-human-rights`
-3. `diet`
-4. `cabinet`
-5. `courts`
-6. `separation-of-powers`
+1. `elections-political-participation`
+2. `local-government`
+3. `market-economy-firms-labor`
+4. `money-finance`
+5. `public-finance-taxation`
+6. `social-security`
+7. `international-society-un`
+8. `civics-cumulative-review`
 
-Continue sequentially from there only when FACTCHECK is explicitly requested. GENERATE is finished; do not invent additional generation work.
+After those, the backlog proceeds into `歴史総合`. Continue only when FACTCHECK is explicitly requested. GENERATE is finished; do not invent additional generation work.
 
 ## Factcheck discipline retained
 
-- Treat each selected pending fact, learner sentence, key point/timeline claim, and image claim as untrusted until independently reopened and checked.
+- Treat each pending fact, learner sentence, key point/timeline claim, and image claim as untrusted until independently reopened and checked.
 - Correct or reject unsupported wording rather than preserving generated text for convenience.
 - Verify exact image identity, provenance, and reuse terms before learner-facing publication.
+- Decorative images may be removed when factual content passes but reuse evidence is incomplete.
 - Only verified units may be added to the public selector and removed from `unverified_backlog`.
 - Reconcile latest `main` before shared writes and never roll back parallel progress.
