@@ -1,4 +1,5 @@
 import { createBrowserAppStore } from './core/persistence.js';
+import { applyProgressionEvent, progressionEventFromAttempt } from './core/progression.js';
 import { createReviewEntryFromAttempt, getDueReviewQuestionIds, upsertReviewEntry } from './core/review.js';
 import { QuizSession } from './core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from './core/workout-builder.js';
@@ -36,6 +37,7 @@ const characters = new CharacterPresenter({
 
 let session;
 let activeRecipe;
+let sessionCompletionAwarded = false;
 
 const defaultRecipe = createWorkoutRecipe({
   mode: 'CUSTOM',
@@ -55,8 +57,13 @@ function sessionContextForRecipe(recipe) {
   return 'training';
 }
 
-function currentTraineeStage() {
-  return Math.min(5, Math.max(0, Number(appStore.load().progression.stage) || 0));
+function currentProgression() { return appStore.load().progression; }
+function currentTraineeStage() { return Math.min(5, Math.max(0, Number(currentProgression().stage) || 0)); }
+
+function saveProgressionEvent(event) {
+  const next = applyProgressionEvent(currentProgression(), event);
+  appStore.replaceProgression({ points: next.points, stage: next.stage });
+  return next;
 }
 
 function showEditor(recipe = activeRecipe ?? defaultRecipe) {
@@ -74,6 +81,7 @@ function startSession(recipe) {
   const questionIds = selectQuestionIds({ repository, recipe, attempts: state.attempts, reviewQuestionIds });
   if (!questionIds.length) return showEditor(recipe);
   activeRecipe = recipe;
+  sessionCompletionAwarded = false;
   session = new QuizSession({ questionIds, repository, context: sessionContextForRecipe(recipe) });
   editorView.hidden = true;
   resultView.hidden = true;
@@ -90,7 +98,7 @@ function renderCurrent() {
   progressEl.textContent = `${current} / ${total}`;
   contextEl.textContent = presentation.contextText;
   feedbackEl.textContent = '軍曹「この一問を仕上げろ！」';
-  traineeStatusEl.textContent = `訓練生ステージ ${stage}`;
+  traineeStatusEl.textContent = `訓練生ステージ ${stage} ・ ${currentProgression().points} POWER`;
   characters.render({ traineeStage: stage, reaction: 'neutral' });
   nextButton.hidden = true;
   renderer.render(question);
@@ -104,9 +112,13 @@ renderer.setAnswerHandler((selectedIndex) => {
   const nextReview = createReviewEntryFromAttempt(attempt, previousReview);
   appStore.appendAttempt(attempt);
   appStore.replaceReviewEntries(upsertReviewEntry(beforeState.reviewEntries, nextReview));
+  const progression = saveProgressionEvent(progressionEventFromAttempt(attempt, beforeState.attempts));
   renderer.showResult({ selectedIndex, correctIndex: question.correctIndex, explanation: question.explanation });
   const reaction = attempt.correct ? 'correct' : 'wrong';
-  characters.render({ traineeStage: currentTraineeStage(), reaction });
+  characters.render({ traineeStage: progression.stage, reaction });
+  traineeStatusEl.textContent = progression.earned > 0
+    ? `+${progression.earned} POWER ・ ステージ ${progression.stage}`
+    : `ステージ ${progression.stage} ・ ${progression.points} POWER`;
   feedbackEl.textContent = attempt.correct ? '軍曹「よし、その調子だ！」' : '軍曹「違う。理由を確認して次だ！」';
   nextButton.textContent = session.progress.current === session.progress.total ? '結果を見る' : '次の問題';
   nextButton.hidden = false;
@@ -120,6 +132,10 @@ resultView.addEventListener('click', (event) => {
 });
 
 function finishSession() {
+  if (!sessionCompletionAwarded) {
+    saveProgressionEvent({ type: 'session_complete', questionCount: session.attempts.length });
+    sessionCompletionAwarded = true;
+  }
   characters.render({ traineeStage: currentTraineeStage(), reaction: 'complete' });
   quizView.hidden = true;
   resultView.hidden = false;
