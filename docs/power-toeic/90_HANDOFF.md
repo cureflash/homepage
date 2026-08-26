@@ -18,19 +18,32 @@ Implemented under `subjects/english/power-toeic/`:
 - four-choice cloze renderer with immediate correct/wrong state and concise explanation;
 - accessible result state that does not rely on color alone;
 - result screen derived only from session attempts: answered, correct, accuracy and per-skill breakdown;
-- restartable demo composition through `main.js`.
+- restartable demo composition through `main.js`;
+- presentation-only `AssetCatalog` with semantic character/audio IDs and `SafeAudioPlayer` failure isolation.
 
 No production TOEIC question content was authored by this work. Existing production taxonomy/question folders created by the external content track were left unchanged. The runtime demo consumes fixture questions only through the repository adapter.
 
 ## Verification
 
-Node tests were reconstructed and executed for the exact adapter/session/renderer source added in this checkpoint:
+Node tests were reconstructed and executed for the exact adapter/session/renderer/asset-catalog source in this checkpoint:
 
 - adapter tests: repository lookup/filtering and frozen records;
 - session tests: immutable started list, deterministic attempt payload, response timing, advance guard and results;
-- renderer tests: exactly four semantic buttons, answer-index forwarding, disabled post-answer state, correct/wrong textual accessibility labels.
+- renderer tests: exactly four semantic buttons, answer-index forwarding, disabled post-answer state, correct/wrong textual accessibility labels;
+- asset tests: semantic lookup and fail-silent audio playback behavior.
 
-Result: **7 tests passed, 0 failed**.
+Result: **9 tests passed, 0 failed**.
+
+## Temporary asset decision
+
+Canonical asset rules are in `docs/power-toeic/50_ASSET_POLICY.md`.
+
+- Character art: temporary **いらすとや** assets, kept below 20 unique illustrations unless licensing/replacement policy changes. Runtime code uses semantic IDs rather than source names/URLs.
+- Audio: existing Google Drive SE library. Initial semantic mapping is `audio.correct` -> `otologic_correct.mp3`, `audio.wrong` -> `otologic_incorrect.mp3`, `audio.inspiration` -> `otologic_inspiration.mp3`.
+- OtoLogic attribution/CC BY 4.0 metadata must remain with the public bundle.
+- Missing images or blocked audio must never block quiz play.
+
+The initial Web skeleton does not yet bundle the binary Irasutoya/OtoLogic files. It already has the semantic catalog and expected local audio paths so later asset import is isolated from domain code.
 
 ## Current Web architecture
 
@@ -51,14 +64,16 @@ subjects/english/power-toeic/
       cloze-choice.js
     ui/
       result.js
+      asset-catalog.js
     main.js
   tests/
     question-bank-adapter.test.js
     session.test.js
     cloze-choice.test.js
+    asset-catalog.test.js
 ```
 
-The session engine has no mandatory countdown or game-over semantics. Character presentation is still only a placeholder in the Phase 2 shell and does not own answer logic.
+The session engine has no mandatory countdown or game-over semantics. Character presentation remains separate from correctness/session state.
 
 ## Exact next work
 
@@ -96,6 +111,7 @@ mastery.js                  -> MasteryEngine.swift
 review.js                   -> ReviewScheduler.swift
 progression.js              -> ProgressionEngine.swift
 question-bank-adapter.js    -> QuestionBankRepository protocol
+asset-catalog.js            -> AssetCatalog.swift
 quiz UI modules             -> SwiftUI Views
 browser persistence         -> native persistence adapter
 ```
