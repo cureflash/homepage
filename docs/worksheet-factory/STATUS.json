@@ -1,0 +1,8 @@
+{
+  "status": "in_progress",
+  "mode": "handoff_driven",
+  "project": "worksheet-factory",
+  "next_task": "Follow docs/worksheet-factory/90_HANDOFF.md exact next starting point and advance one safe checkpoint.",
+  "scheduler_policy": "one_checkpoint_per_cycle",
+  "updated_at": "2026-08-26T11:42:00+09:00"
+}
