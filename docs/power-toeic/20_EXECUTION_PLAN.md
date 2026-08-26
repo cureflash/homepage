@@ -25,30 +25,9 @@ The app track may define only the consumer-facing adapter contract and tiny synt
 ## Phase 2 — Web common quiz-session MVP — APP TRACK
 
 - [x] **2.0 Create Web app skeleton and question-bank adapter**
-  - Create `subjects/english/power-toeic/` with mobile-first static HTML/CSS/ES-module structure.
-  - Define the minimum `QuestionBankRepository`/adapter interface consumed by runtime code.
-  - Add a tiny clearly synthetic fixture bank for tests/demo only.
-  - Do not author production TOEIC database content.
-  - Acceptance: app imports fixture questions only through the adapter and basic smoke tests pass.
-
 - [x] **2.1 Implement common four-choice study session core**
-  - Immutable started-session question list.
-  - Current index/state.
-  - Answer submission and correctness.
-  - Attempt events containing question ID/version, skill ID, answer, correctness and response duration where available.
-  - No mandatory countdown/game-over semantics.
-  - Acceptance: deterministic Node tests.
-
 - [x] **2.2 Implement cloze-choice renderer and quiz screen**
-  - Sentence with one blank plus exactly four tappable options.
-  - Immediate correct/wrong visual state and concise explanation.
-  - Mobile-first one-thumb interaction.
-  - Acceptance: renderer/DOM contract tests and usable static page.
-
 - [x] **2.3 Implement basic result screen**
-  - Questions answered, correct count, accuracy and skill breakdown.
-  - No target-score prediction.
-  - Acceptance: result data derives only from session attempts.
 
 Phase 2 verification: 9 Node tests passed across adapter/session/renderer contracts. The visible page currently uses only synthetic fixture content through the repository adapter.
 
@@ -57,15 +36,18 @@ Phase 2 verification: 9 Node tests passed across adapter/session/renderer contra
 - [x] **3.1 Implement versioned browser persistence**
   - Attempts, review data and character progression.
   - Fail safely on invalid/old data.
-  - Acceptance: versioned root, injectable storage, safe corrupted/unsupported fallback and session-attempt wiring are covered by focused tests.
   - Verification: 5 focused persistence tests passed.
 
-- [ ] **3.2 Implement deterministic mastery engine**
+- [x] **3.2 Implement deterministic mastery engine**
   - Configurable, explainable state transitions.
-  - Must support mixed/review evidence later.
+  - Distinguishes unknown / training / weak without allowing labeled practice alone to become mastered.
+  - Carries mixed/review evidence counters for later Phase 5 transfer gates.
 
-- [ ] **3.3 Implement weakness ranking**
-  - Mechanically rank weak skill IDs supplied by the content adapter.
+- [x] **3.3 Implement weakness ranking**
+  - Mechanically ranks attempted skill IDs from overall/recent error evidence.
+  - Unknown/unattempted skills are not mislabeled as demonstrated weakness.
+
+Phase 3.2/3.3 verification: 4 focused mastery/weakness tests passed.
 
 ## Phase 4 — Web workout system — APP TRACK
 
@@ -136,28 +118,13 @@ Complete this before native iOS implementation.
 ## Phase 10 — native iOS Swift/SwiftUI port — APP TRACK
 
 - [ ] **10.1 Create native Swift/SwiftUI project structure**
-  - `App / Core / Models / Data / Persistence / Views / Resources / Tests`.
-  - Use standard Apple frameworks first.
-
 - [ ] **10.2 Implement Codable platform-neutral models and QuestionBankRepository protocol**
-  - Decode the same production-export format/fixtures as Web where practical.
-
 - [ ] **10.3 Port QuizSession and WorkoutBuilder behavior**
-  - Match cross-platform fixtures.
-
 - [ ] **10.4 Port mastery, weakness and review engines**
-  - Match Web expected outputs for identical fixtures.
-
 - [ ] **10.5 Build SwiftUI home/workout/quiz/result/weakness screens**
-  - Preserve the same product flow, not the exact Web layout pixels.
-
 - [ ] **10.6 Port Drill Sergeant / Trainee character UX and progression**
-
 - [ ] **10.7 Implement native persistence**
-  - Hide storage behind an equivalent repository/store boundary.
-
 - [ ] **10.8 Run JavaScript/Swift conformance suite**
-  - Equivalent fixtures must produce equivalent domain results.
 
 ## Phase 11 — iOS release preparation — APP TRACK
 
