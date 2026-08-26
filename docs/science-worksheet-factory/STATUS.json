@@ -2,6 +2,7 @@
   "status": "in_progress",
   "mode": "handoff_driven",
   "project": "science-worksheet-factory",
-  "next_task": "Follow docs/science-worksheet-factory/90_HANDOFF.md exact next starting point and advance one safe checkpoint.",
-  "scheduler_policy": "one_checkpoint_per_cycle"
+  "next_task": "Continue Phase 3 at 物理基礎 mechanical-energy conservation. State no-friction/no-air-resistance conditions explicitly, keep drills basic and mechanically checkable, then continue to heat after the mechanics energy block is coherent.",
+  "scheduler_policy": "one_checkpoint_per_cycle",
+  "updated_at": "2026-08-26"
 }
