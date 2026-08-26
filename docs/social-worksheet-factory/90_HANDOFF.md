@@ -6,8 +6,8 @@
 - Never recreate or use retired `social-worksheets/`.
 - GENERATE scope defined by `00_MASTER_INSTRUCTIONS.md` is **complete**.
 - FACTCHECK is manual batch work only.
-- Verified learner-facing coverage now runs through `separation-of-powers`.
-- Pending backlog count: **188 units**.
+- Junior-high history and junior-high civics generation backlog is now independently verified through `civics-cumulative-review`.
+- Pending backlog count: **180 units**.
 - Public selector remains verified-only.
 
 ## FACTCHECK progress this session
@@ -22,41 +22,24 @@ Verified and published:
 4. `postwar-japan`
 5. `contemporary-japan-cumulative-review`
 
-Batch 01 reduced the backlog from 199 to 194. Its detailed evidence note is `FACTCHECK_BATCH_01.md`.
+Batch 01 reduced the backlog from 199 to 194. Detailed evidence: `FACTCHECK_BATCH_01.md`.
 
-### Batch 02 — constitution, rights and the three powers
+### Batch 02 — 6 constitution / three-powers units
 
-Independently checked against the current MEXT junior-high social-studies commentary and primary/official constitutional and institutional sources, then verified and published:
+Verified and published:
 
-1. `constitution-constitutionalism` — 日本国憲法と立憲主義
-2. `fundamental-human-rights` — 基本的人権
-3. `diet` — 国会
-4. `cabinet` — 内閣
-5. `courts` — 裁判所
-6. `separation-of-powers` — 三権分立
+1. `constitution-constitutionalism`
+2. `fundamental-human-rights`
+3. `diet`
+4. `cabinet`
+5. `courts`
+6. `separation-of-powers`
 
-For these six, article wording and institutional claims were cross-checked against the Constitution of Japan as published by the House of Representatives, House of Representatives material on Diet powers, Cabinet Secretariat material on the parliamentary cabinet system, and Courts in Japan material on the three-tier court system and judicial review. MEXT commentary was used to recheck junior-high curriculum treatment of constitutionalism, rights, the Diet-centered political system, parliamentary cabinet government, and separation of powers.
+Batch 02 reduced the backlog from 194 to 188. Detailed evidence: `FACTCHECK_BATCH_02.md`.
 
-## Corrections / image decisions
+### Batch 03 — remaining 8 junior-high civics units
 
-- `cabinet`: made the learner sentence on a no-confidence vote explicit: after passage, the Cabinet must either have the House of Representatives dissolved within 10 days or resign en masse.
-- `constitution-constitutionalism`: retained the same Constitution signature image already independently verified in Batch 01, with the checked CC BY-SA 4.0 attribution/license metadata.
-- `diet`, `cabinet`, and `courts`: removed their generation-stage building photographs rather than publish them without a separate completed license/provenance review. The factual worksheets do not depend on those decorative images.
-- Batch 01 image decisions remain in force: ambiguous Hara Takashi and surrender-document images were removed; treaty-document and Constitution images with completed reuse checks were retained.
-
-## Backlog / publication state
-
-- Start of this session: 199 pending
-- Batch 01 verified: 5
-- Batch 02 verified: 6
-- Total independently verified this session: **11 units**
-- Current pending backlog: **188 units**
-- All 11 passing units are loaded by `subjects/social/worksheets/index.html`.
-- No remaining pending unit is public.
-
-## Exact next social action
-
-Continue independent FACTCHECK sequentially from:
+Verified and published:
 
 1. `elections-political-participation`
 2. `local-government`
@@ -67,13 +50,47 @@ Continue independent FACTCHECK sequentially from:
 7. `international-society-un`
 8. `civics-cumulative-review`
 
-After those, the backlog proceeds into `歴史総合`. Continue only when FACTCHECK is explicitly requested. GENERATE is finished; do not invent additional generation work.
+These were independently checked against the current MEXT commentary and the relevant official sources: e-Gov current election/local-government law text, House of Representatives Constitution text, Japan Fair Trade Commission, Ministry of Health Labour and Welfare, Bank of Japan, Ministry of Finance/National Tax Agency, Ministry of Foreign Affairs, and United Nations material.
+
+## Corrections made during Batch 03
+
+- `local-government`: changed the overbroad statement “地方公共団体には都道府県と市町村がある” to “普通地方公共団体には都道府県と市町村がある”, because the Local Autonomy Act also defines special local public entities.
+- `local-government`: made the 条例 sentence legally more precise: local public entities enact ordinances within the scope permitted by law rather than treating every local rule as an ordinance.
+- `market-economy-firms-labor`: corrected an overcompressed definition that equated “市場経済” only with prices being set through supply and demand. The learner sentence now describes sellers and buyers trading in markets, with prices formed through factors including demand and supply.
+- `money-finance`: aligned the Bank of Japan wording with the Bank's official function/purpose language; financial policy is described as monetary/financial adjustment aimed at price stability and sound development of the national economy.
+- `public-finance-taxation`: tightened direct/indirect tax wording to the National Tax Agency's distinction between the person who bears the tax and the person who remits it; avoided implying that all public finance can be reduced to a single tax function.
+- `social-security`: removed the overgeneralization that all social insurance works by everyone “contributing premiums together”. It now uses the official category examples (pension, medical, long-term care, employment and workers' compensation insurance) and describes them as public insurance systems.
+- `international-society-un`: confirmed the UN's 1945 establishment, one-vote General Assembly rule, 5 permanent + 10 non-permanent Security Council composition, and Japan's 18 December 1956 admission.
+- `civics-cumulative-review`: propagated the corrected market-economy wording so the cumulative sheet does not reintroduce the earlier oversimplification.
+
+## Backlog / publication state
+
+- Start of this session: 199 pending
+- Batch 01 verified: 5
+- Batch 02 verified: 6
+- Batch 03 verified: 8
+- Total independently verified this session: **19 units**
+- Current pending backlog: **180 units**
+- The junior-high generated backlog is now fully fact-checked and learner-facing.
+- No remaining pending unit is public.
+
+## Exact next social action
+
+The next backlog item is the first high-school `歴史総合` unit:
+
+1. `history-comprehensive-history-and-us`
+2. `history-comprehensive-characteristics-sources`
+3. `history-comprehensive-modernization-questions`
+4. `history-comprehensive-18c-asia-economy-society`
+5. `history-comprehensive-industrial-revolution-world-market-opening`
+6. `history-comprehensive-nation-state-meiji-restoration`
+
+Continue sequentially from `歴史総合` only when FACTCHECK is explicitly requested. GENERATE is finished; do not invent additional generation work.
 
 ## Factcheck discipline retained
 
 - Treat each pending fact, learner sentence, key point/timeline claim, and image claim as untrusted until independently reopened and checked.
 - Correct or reject unsupported wording rather than preserving generated text for convenience.
 - Verify exact image identity, provenance, and reuse terms before learner-facing publication.
-- Decorative images may be removed when factual content passes but reuse evidence is incomplete.
 - Only verified units may be added to the public selector and removed from `unverified_backlog`.
 - Reconcile latest `main` before shared writes and never roll back parallel progress.
