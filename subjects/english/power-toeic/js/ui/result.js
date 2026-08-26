@@ -12,7 +12,9 @@ export function renderResults(container, results, skillLabels = new Map()) {
       <div class="result-score"><strong>${results.correct}</strong><span>/ ${results.answered}</span></div>
       <p class="result-accuracy">正答率 ${accuracyPercent}%</p>
       <ul class="skill-results">${rows}</ul>
-      <button type="button" class="primary-button" data-action="restart">もう一度</button>
+      <div class="result-actions">
+        <button type="button" class="primary-button" data-action="restart">もう一度</button>
+      </div>
     </section>`;
 }
 
