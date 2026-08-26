@@ -35,5 +35,10 @@ export const JAPAN_PREFECTURE_MAP = {
   keyAttribute: "data-code",
   sourceKeyAttribute: "inkscape:label",
   regionKeyMap,
-  regions
+  regions,
+  viewBox: "0 0 1536.8191 1450",
+  decorativeSourceKeys: ["etorofutou", "kunashiritou", "shikotantou", "habomai"],
+  insets: [
+    { key: "47", x: 95, y: 105, scale: 2.35 }
+  ]
 };
