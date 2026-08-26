@@ -1,0 +1,31 @@
+{
+  "project": "takken-worksheet-factory",
+  "repository": "cureflash/homepage",
+  "canonical_implementation_path": "qualifications/takken/",
+  "exam_year": 2026,
+  "law_as_of": "2026-04-01",
+  "mode": "generation_backlog",
+  "next_role": "generate",
+  "generation_batch_target": 20,
+  "active_unit_order": 1,
+  "active_unit": "takken-gyoho-definition",
+  "generated_unit_count": 0,
+  "verified_unit_count": 0,
+  "pending_factcheck_count": 0,
+  "unverified_backlog": [],
+  "generation_complete": false,
+  "foundation": {
+    "portable_site_shell": false,
+    "structured_unit_model": false,
+    "shared_renderer": false,
+    "seeded_cloze": false,
+    "print_layout": false,
+    "verified_only_catalog": false,
+    "automated_validation": false
+  },
+  "publication_policy": "verified_only",
+  "factcheck_policy": "manual_batch",
+  "last_completed_unit": null,
+  "last_run_summary": "Initial factory specification created. First scheduled run should bootstrap the portable implementation under qualifications/takken/, establish the minimum generator, then begin the ordered 90-unit queue and generate up to 20 pending_factcheck units if safe.",
+  "updated_at": "2026-08-26T18:00:00+09:00"
+}
