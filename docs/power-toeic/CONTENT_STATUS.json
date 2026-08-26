@@ -3,8 +3,8 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 800,
-  "pending_validation_count": 800,
+  "generated_question_count": 900,
+  "pending_validation_count": 900,
   "verified_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
@@ -14,15 +14,16 @@
     "p5.pos.adverb_modifies_adjective",
     "p5.pos.participle_adjective_ed_ing",
     "p5.pos.word_form_subject_position",
-    "p5.pos.word_form_object_position"
+    "p5.pos.word_form_object_position",
+    "p5.verb.subject_verb_agreement"
   ],
-  "current_batch": "2026-08-27-scheduled-007",
-  "current_micro_skill": "p5.verb.subject_verb_agreement",
+  "current_batch": "2026-08-27-scheduled-008",
+  "current_micro_skill": "p5.verb.present_vs_past",
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_verb_subject_verb_agreement_0001",
-  "next_micro_skill": "p5.verb.subject_verb_agreement",
+  "next_resume_id": "p5_verb_present_vs_past_0001",
+  "next_micro_skill": "p5.verb.present_vs_past",
   "generation_complete": false,
-  "last_run_result": "Reconciled parallel generation already persisted for p5.pos.word_form_object_position questions 0001-0075, then completed 0076-0100 in batch-20260827-007-part4.json without regenerating the existing 75. The completed skill now has 100 persisted candidates, all pending_validation. New items use five noun families (assessment, confirmation, replacement, registration, inspection) with stable sequential IDs, exactly one blank, four distinct choices, valid proposed-answer indexes, and deliberately varied direct-object business contexts. No QA decisions were made. Full cross-bank near-duplicate clearance is still not claimed complete because this runtime does not expose a full local checkout. Generation remains incomplete at 8 of 44 micro-skills; resume with p5.verb.subject_verb_agreement.",
-  "updated_at": "2026-08-27T03:30:00+09:00"
+  "last_run_result": "Completed p5.verb.subject_verb_agreement with 100 persisted candidates in four 25-question pending batches, IDs 0001-0100. Items cover simple singular/plural subjects, intervening prepositional phrases, each/every, plural quantifiers, indefinite pronouns, compound subjects, along-with/as-well-as/together-with constructions, gerund/clausal subjects, and the number/a number contrasts. Generation-time structural checks found stable unique sequential IDs, exactly one blank, four distinct choices, valid proposed-answer indexes, balanced answer positions A/B/C/D = 25/25/25/25, no exact duplicate stems, and no intra-skill SequenceMatcher pair at or above 0.94 (maximum observed approximately 0.650). All 900 questions remain pending_validation and no QA decisions were made. Full cross-bank near-duplicate clearance against all 900 questions is still not claimed complete because this runtime does not expose a full local checkout. Generation remains incomplete at 9 of 44 micro-skills; resume with p5.verb.present_vs_past.",
+  "updated_at": "2026-08-27T04:30:00+09:00"
 }
