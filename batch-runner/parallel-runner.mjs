@@ -26,7 +26,14 @@ for (const [lane, projects] of lanes) {
 }
 
 const laneResults = await Promise.all(
-  [...lanes.entries()].map(([lane, projects]) => runLane(lane, projects)),
+  [...lanes.entries()].map(async ([lane, projects]) => {
+    try {
+      return await runLane(lane, projects);
+    } catch (error) {
+      console.error(`[parallel] LANE ERROR [${lane}]: ${formatError(error)}`);
+      return { lane, code: 1 };
+    }
+  }),
 );
 
 const failedLanes = laneResults.filter((result) => result.code !== 0);
@@ -181,4 +188,8 @@ function safeName(value) {
 
 function stamp() {
   return new Date().toISOString().replace(/[-:TZ.]/g, "").slice(0, 14);
+}
+
+function formatError(error) {
+  return error instanceof Error ? error.stack ?? error.message : String(error);
 }
