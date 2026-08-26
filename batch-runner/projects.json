@@ -3,6 +3,8 @@
     {
       "name": "社会プリント",
       "enabled": true,
+      "branch": "main",
+      "recoverDirty": true,
       "statusFile": "docs/social-worksheet-factory/STATUS.json",
       "handoffFile": "docs/social-worksheet-factory/90_HANDOFF.md",
       "instructionFiles": [
@@ -16,6 +18,8 @@
     {
       "name": "理科プリント",
       "enabled": true,
+      "branch": "main",
+      "recoverDirty": true,
       "statusFile": "docs/science-worksheet-factory/STATUS.json",
       "handoffFile": "docs/science-worksheet-factory/90_HANDOFF.md",
       "instructionFiles": [
@@ -29,6 +33,8 @@
     {
       "name": "算数・数学プリント",
       "enabled": true,
+      "branch": "main",
+      "recoverDirty": true,
       "statusFile": "docs/worksheet-factory/curriculum/elementary/grade-04/STATUS.json",
       "instructionFiles": [
         "docs/worksheet-factory/00_MASTER_INSTRUCTIONS.md",
@@ -42,6 +48,8 @@
     {
       "name": "社会クイズ",
       "enabled": true,
+      "branch": "main",
+      "recoverDirty": true,
       "statusFile": "docs/social-quiz-factory/STATUS.json",
       "handoffFile": "docs/social-quiz-factory/90_HANDOFF.md",
       "instructionFiles": [
@@ -54,16 +62,20 @@
       "nextPrompt": "次を進めて"
     },
     {
-      "name": "国語音読教材",
+      "name": "ゆっくり動画生成",
       "enabled": true,
-      "statusFile": "docs/japanese-reading-factory/STATUS.json",
-      "handoffFile": "docs/japanese-reading-factory/90_HANDOFF.md",
+      "repositoryPath": "../../makemovie",
+      "cloneUrl": "https://github.com/cureflash/makemovie.git",
+      "branch": "agent/initial-yukkuri-pipeline",
+      "recoverDirty": true,
+      "statusFile": "docs/architecture/STATUS.json",
+      "handoffFile": "docs/architecture/HANDOFF.md",
       "instructionFiles": [
-        "docs/japanese-reading-factory/00_MASTER_INSTRUCTIONS.md",
-        "docs/japanese-reading-factory/20_EXECUTION_PLAN.md",
-        "docs/japanese-reading-factory/PREFECTURE_QUEUE.md",
-        "docs/japanese-reading-factory/PREFECTURE_ALLOCATION.md"
+        "docs/architecture/MIGRATION_PLAN.md",
+        "docs/architecture/ARCHITECTURE.md",
+        "docs/architecture/DEPENDENCY_RULES.md"
       ],
+      "extraInstructions": "これは cureflash/makemovie の Phase 7 継続作業です。自動ターンでは agent/initial-yukkuri-pipeline 統合ブランチを直接前進させます。開始時に現在のコードと STATUS を確認し、すでに実装済みのcheckpointを重複実装しないでください。直前の自動変更に対応するCI失敗が確認できる場合は新機能より修正を優先してください。字幕は実YMM4証拠ゲートを厳守し、CRLF、Y、JimakuVisibility、BasePoint、WordWrap、Custom等を推測変更しないでください。1ターンでは安全なcheckpointを1つだけ完了させ、関連テストを実行し、MIGRATION_PLAN/HANDOFF/STATUSを最新化してください。",
       "maxRuns": 1,
       "doneStatuses": ["done", "completed", "complete"],
       "nextPrompt": "次を進めて"
