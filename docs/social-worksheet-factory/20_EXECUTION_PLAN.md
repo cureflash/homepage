@@ -65,14 +65,44 @@ After junior-high history generation reaches the end of its queue, continue dire
 
 ## High-school queue
 
-After junior-high history/civics generation coverage:
+Production order after junior-high history/civics generation coverage:
 
 1. 歴史総合
 2. 日本史探究
 3. 世界史探究
 4. 公共
 
-Before high-school production, expand each formal course into an ordered unit queue grounded in current MEXT curriculum organization. Do not falsely map formal high-school courses to one fixed school year.
+Do not falsely map a formal high-school course to one fixed school year. Store `formalCourse` separately from any practical site grouping.
+
+### 歴史総合 — ordered production queue
+
+This queue follows the current MEXT High School Course of Study Commentary for Geography and History. Preserve the four formal large sections and their order: A `歴史の扉`, B `近代化と私たち`, C `国際秩序の変化や大衆化と私たち`, D `グローバル化と私たち`.
+
+1. A(1) 歴史と私たち
+2. A(2) 歴史の特質と資料
+3. B(1) 近代化への問い
+4. B(2)-a 18世紀のアジアの経済と社会
+5. B(2)-b 産業革命・世界市場・中国の開港・日本の開国
+6. B(3) 国民国家と明治維新
+7. B(4) 近代化と現代的な諸課題
+8. C(1) 国際秩序の変化や大衆化への問い
+9. C(2)-a 第一次世界大戦と国際協調体制
+10. C(2)-b 大衆社会の形成と社会参加の拡大
+11. C(3)-a 世界恐慌・国際協調体制の動揺
+12. C(3)-b 第二次世界大戦と戦後国際秩序
+13. C(4) 国際秩序の変化や大衆化と現代的な諸課題
+14. D(1) グローバル化への問い
+15. D(2)-a 冷戦と植民地独立
+16. D(2)-b 高度経済成長・国際秩序の変容
+17. D(3)-a 冷戦終結・地域統合
+18. D(3)-b 市場経済の変容・情報通信・グローバル化
+19. D(4) 現代的な諸課題の形成と展望
+
+The split of some MEXT middle sections into `-a/-b` production units is only a worksheet-density decision. Keep the formal MEXT large/middle-section metadata on every dataset so the curriculum structure is never obscured.
+
+### 日本史探究 / 世界史探究 / 公共
+
+Before production reaches each formal course, expand it into an ordered unit queue grounded in the current MEXT curriculum/commentary, just as above. Do not infer a fixed grade assignment.
 
 Later expansion of 倫理 / 政治・経済 is allowed only after the above core sequence.
 
