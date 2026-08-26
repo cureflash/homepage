@@ -6,109 +6,114 @@
 - Active field: history
 - Verified through: Meiji state / industrialization
 - Active unit: Imperialism / Sino-Japanese and Russo-Japanese wars
-- Next role: GENERATE
+- Next role: FACTCHECK
 - Batch size: 1 unit
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 
-## Completed FACTCHECK — Meiji state / industrialization
+## Completed GENERATE — Imperialism / Sino-Japanese and Russo-Japanese wars
 
-Independently reopened authoritative sources and treated all eight structured facts, eight learner sentences, the key-point/timeline wording, and both image records as untrusted before approval.
+Created `subjects/social/worksheets/data/imperialism-sino-japanese-russo-japanese-wars.js` as the next junior-high history unit. The dataset is deliberately not registered in the public selector yet. Every new fact, learner sentence and image record remains `pending_factcheck`.
+
+### Unit boundary
+
+The unit is intentionally limited to the late-19th/early-20th-century imperialist setting and Japan's wars/continental relations through the 1910 annexation of Korea. It does not absorb the later separate `Taisho democracy / interwar Japan` unit.
+
+Two low-density sections, eight structured facts and eight learner sentences:
+
+1. `列強の進出と日清戦争`
+   - 帝国主義
+   - 1894 日清戦争
+   - 1895 下関条約
+   - 三国干渉
+2. `日露戦争と韓国への支配拡大`
+   - 1902 日英同盟
+   - 1904 日露戦争
+   - 1905 ポーツマス条約
+   - 1910 韓国併合
+
+The shared generator contract is unchanged: only explicit `terms` entries can become blanks, so arbitrary nouns are not blanked and seeded generation remains deterministic.
+
+## Candidate factual basis used during GENERATE
+
+These are generation references only. The next FACTCHECK run must independently reopen authoritative sources and treat every claim as untrusted.
 
 ### Curriculum placement
 
-MEXT current junior-high Social Studies commentary places this material under `近代の日本と世界` → `明治維新と近代国家の形成`. It explicitly names `富国強兵・殖産興業政策` and directs schools to cover the reforms of the school, military and tax systems and the abolition of the status system. It also states that learners should notice that discrimination remained in reality despite the abolition of the status system, and that the `文明開化` trend changed society and people's lives.
+- MEXT current junior-high Social Studies curriculum/commentary places the material in `近代の日本と世界` and requires learners to understand Japan's changing international position and continental relations through the Sino-Japanese War, Russo-Japanese War and treaty revision.
+- The unit uses the imperialist expansion of Western powers as context but does not turn this into a separate world-history survey.
 
-### Independent checks and final wording
+### Candidate fact sources
 
-All eight facts and all eight learner sentences are now `verified`.
+- MEXT `中学校学習指導要領（平成29年告示）解説 社会編`
+- MEXT current junior-high Social Studies curriculum page
+- National Archives of Japan `近代国家 日本の登場―日清戦争`
+- National Archives learning content for the Treaty of Shimonoseki
+- MOFA Diplomatic Archives `条約書にみる明治の日本外交`
+- MOFA Diplomatic Archives Q&A on the Triple Intervention
+- National Archives `近代国家 日本の登場―日露戦争`
+- MOFA Diplomatic Archives `史料と解説―日露戦争`
+- National Archives learning content for the Treaty of Portsmouth
+- National Archives `韓国併合条約が結ばれる`
 
-1. `富国強兵` / `殖産興業`
-   - MEXT treats these as broad policies under which the new government carried out multiple reforms, not as one decree with one start date.
-   - The unit wording already reflected that distinction and was retained.
+## Generated claims requiring independent review
 
-2. `学制`
-   - National Archives confirms August 1872 and describes the Gakusei as Japan's first basic legal framework for a modern school system.
-   - The learner wording `全国的な近代学校制度を整備する方針が示された` is supportable and was retained.
+Treat all eight as untrusted.
 
-3. `徴兵令`
-   - National Archives confirms January 1873. Men were entered in military registers, conscription examination occurred at age 20, and only selected qualified men entered active service; exemptions also existed.
-   - The worksheet deliberately does not say that every adult male actually served. Existing wording was retained.
+1. Whether the concise explanation of late-19th-century colonial/rights expansion is suitable for the core term `帝国主義` at current junior-high level and is correctly placed in this unit.
+2. Whether the 1894 causation wording is accurate: the Korean peasant uprising/甲午農民戦争, Qing intervention, Japanese intervention, failure to withdraw, and escalation into the Sino-Japanese War.
+3. Exact 1895 Treaty of Shimonoseki terms: recognition of Korean independence, Taiwan/Penghu/Liaodong cessions and the 200 million tael indemnity.
+4. Exact Triple Intervention sequence: Russia/Germany/France recommendation, Japanese acceptance, and later Liaodong return to Qing.
+5. Whether the 1902 Anglo-Japanese Alliance sentence appropriately relates Russian expansion in Manchuria to Japanese security policy without oversimplifying causation.
+6. Russo-Japanese War wording: breakdown of negotiations over Manchuria/Korea, 1904 opening of war, and the need to avoid implying that Japanese battlefield success meant unlimited war capacity.
+7. Exact 1905 Portsmouth terms, especially terminology around Japan's position in Korea, the lease rights to Port Arthur/Dalian, the Changchun-south railway interests, southern Sakhalin, and the absence of an indemnity claim in the learner sentence.
+8. 1910 Korea Annexation wording and curriculum placement. Independently verify the annexation treaty's signature/effective dates and avoid euphemistic wording that obscures colonial rule.
 
-4. `地租改正`
-   - National Archives confirms the July 28, 1873 ordinance: land value formed the tax basis, the initial rate was 3 percent of land value, payment shifted from the former in-kind system to money, and the land-certificate holder was the taxpayer.
-   - The concise learner sentence correctly captures the land-value basis and `金納` shift.
+## Image candidates
 
-5. Status-system reform
-   - National Diet Library material confirms the staged creation of categories including `華族・士族・平民` and the progressive removal of inherited legal restrictions.
-   - MEXT specifically requires noticing that discrimination remained despite the legal abolition of the status system.
-   - The structured fact and learner sentence were therefore tightened to add: `ただし、現実の社会には差別が残った。`
-   - The `terms` array remains empty so the worksheet does not force a misleading memorization shorthand such as `四民平等`.
+No AI-generated historical images were used.
 
-6. `殖産興業` / `富岡製糸場`
-   - Tomioka City confirms that the Meiji government decided in 1870 to establish a government-run model mechanized silk-reeling factory, construction began in 1871, and the principal buildings were completed and operation started in 1872.
-   - The official site also confirms the purposes of improving raw-silk quality/production and training technical instructors.
-   - Existing wording was retained.
+### 1. Treaty of Shimonoseki Japanese ratification image
 
-7. Shimbashi–Yokohama railway
-   - National Archives confirms the September 12, 1872 opening and opening ceremony of the Shimbashi–Yokohama railway.
-   - The learner wording identifies the 1872 full opening and does not confuse it with earlier temporary operation.
+- File: `Treaty of Shimonoseki Nippon tennō.jpg`
+- Current learner label: `日清講和条約（下関条約）の日本側批准書`
+- Commons summary: dated 1895; source listed as the National Palace Museum database of Qing treaties/agreements preserved by the ROC Ministry of Foreign Affairs; author listed as the Empire of Japan government.
+- GENERATE-stage license record: `Public Domain (PD-Japan-exempt; Japan Copyright Act Article 13)`.
+- Next FACTCHECK must independently confirm that the specific pictured document is accurately described as the Japanese ratification/imperial-signature version and whether the project should retain exactly this license wording.
 
-8. `文明開化`
-   - MEXT describes the trend as social and lifestyle change under the influence of institutions and culture brought from Western countries.
-   - National Archives' `文明開化と明治のくらし` exhibition documents examples including Western dress, railways and postal services; these support the examples used in the worksheet.
+### 2. Korea Annexation Treaty original-document image
 
-### Independent evidence reopened
+- File: `Japan–Korea Annexation Treaty 1.jpg`
+- Current learner label: `韓国併合に関する条約`
+- Commons summary links the image to JACAR Ref. A03020879400 / National Archives of Japan and dates it 22 August 1910.
+- Current credit: Empire of Japan / Korean Empire; National Archives / JACAR; Wikimedia Commons.
+- GENERATE-stage license record: `Public Domain (PD-Japan / PD-1996; Commons file-page tags)`.
+- Next FACTCHECK must reopen the exact Commons file page, verify all relevant copyright tags and provenance, and verify that the selected page is pedagogically meaningful and accurately captioned.
 
-- MEXT `中学校学習指導要領（平成29年告示）解説 社会編`, especially the pages covering `明治維新と近代国家の形成` and its content handling.
-- National Archives `学制が公布される`.
-- National Archives `徴兵令が発せられる`.
-- National Archives `地租改正条例が制定される`.
-- National Diet Library `明治憲法と日本国憲法に関する基礎的資料` for the staged status-system changes.
-- Tomioka City official Tomioka Silk Mill history / site guide.
-- National Archives `新橋・横浜間の鉄道が開通する`.
-- National Archives `文明開化と明治のくらし`.
+## Publication state
 
-## Image verification
+The newly generated dataset is NOT loaded by `subjects/social/worksheets/index.html`. The public selector must remain verified-only until the next FACTCHECK approves all eight facts, all eight learner sentences, key-point/timeline wording and both image records.
 
-No AI-generated historical images are used.
+Existing verified units, unrelated educational pages, and shared worksheet/print infrastructure were not modified.
 
-### `Kundō shōgakkō kyōdō no zu.jpg`
+## Validation note
 
-- Exact Commons file reopened independently.
-- Work: `訓童 小學校教導之圖`.
-- Published: 1874.
-- Commons describes it as a scene of an elementary school in the second year after the Gakusei proclamation.
-- Creator field: 肉亭夏良, presumed Kobayashi Kiyochika.
-- Commons identifies the underlying two-dimensional work as public domain in Japan and the United States and treats the faithful reproduction as public domain under its PD-Art policy.
-- Project license note `Public Domain (PD-Japan / PD-US)` is retained.
-- Record status: `verified`.
-
-### `Tomioka Silk Mill East Cocoon Warehouse04.jpg`
-
-- Exact Commons file reopened independently.
-- Depicts the East Cocoon Warehouse at Tomioka Silk Mill; Commons states the building was built in 1872.
-- Photograph date: 11 December 2010.
-- Photographer: Hasec.
-- Copyright holder explicitly released the photograph into the public domain worldwide (`PD-self`).
-- Record status: `verified`.
-
-## Publication and generator state
-
-`subjects/social/worksheets/data/meiji-state-industrialization.js` is fully `verified` and is now loaded by `subjects/social/worksheets/index.html`.
-
-The public selector therefore includes the verified junior-high history sequence through Meiji state / industrialization.
-
-The shared generator itself was not changed. It continues to blank only terms explicitly listed in each sentence's `terms` array, preserving deterministic seeded blank selection and preventing arbitrary noun deletion.
-
-Unrelated educational pages and the existing Cloudflare analytics markup were preserved.
+The dataset was written through the GitHub contents API. A direct raw-GitHub fetch from the execution container was blocked by the current environment, so a local `node --check` could not be performed in this run. The next run should perform syntax validation if the environment permits before publication. Do not treat this transient tooling limitation as factual approval.
 
 ## Exact next starting point
 
-Next role is GENERATE. Work only on the next junior-high history queue unit:
+Next role is FACTCHECK. Work only on:
 
-`imperialism-sino-japanese-russo-japanese-wars`
+`subjects/social/worksheets/data/imperialism-sino-japanese-russo-japanese-wars.js`
 
-Create a low-density explanation-sheet dataset first. Keep the unit boundary focused on imperialism, Japan's constitutional/international position as needed for context, the Sino-Japanese War, Russo-Japanese War, treaty/territorial consequences, and Korea/continental relations as required by the current curriculum. Do not prematurely absorb the later separate `Taisho democracy / interwar Japan` unit.
+Independently reopen MEXT plus authoritative National Archives/MOFA/JACAR material from scratch. Do not use this handoff's conclusions as evidence. Verify every pending fact/sentence, the key-point/timeline claims, and both exact image file pages/licenses.
 
-Collect authoritative facts from MEXT plus government archives, museums, diplomatic archives, Diet/National Archives or primary-source repositories. Use several useful non-AI historical-source images only when the exact file license can be recorded. Mark all new facts, learner sentences and image records `pending_factcheck`, do not publish the new dataset in `index.html`, then set `next_role` to `factcheck` and leave `verified_through` at `meiji-state-industrialization`.
+Correct or reject unsupported wording. If and only if all material passes:
+
+1. mark the unit, eight structured facts, eight learner sentences and both image records `verified`;
+2. add the dataset script to `subjects/social/worksheets/index.html` while preserving unrelated markup;
+3. validate JavaScript/links/print behavior as far as available;
+4. set `verified_through` to `imperialism-sino-japanese-russo-japanese-wars`;
+5. set `next_role` to `generate`;
+6. advance `active_unit` to `taisho-democracy-interwar-japan`;
+7. update this handoff with the exact independent evidence and any corrections made.
