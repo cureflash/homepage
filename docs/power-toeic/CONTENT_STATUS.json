@@ -3,8 +3,8 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 625,
-  "pending_validation_count": 625,
+  "generated_question_count": 650,
+  "pending_validation_count": 650,
   "verified_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
@@ -14,13 +14,13 @@
     "p5.pos.adverb_modifies_adjective",
     "p5.pos.participle_adjective_ed_ing"
   ],
-  "current_batch": "2026-08-27-scheduled-004",
+  "current_batch": "2026-08-27-scheduled-005",
   "current_micro_skill": "p5.pos.word_form_subject_position",
-  "current_micro_skill_persisted_count": 25,
+  "current_micro_skill_persisted_count": 50,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_pos_word_form_subject_position_0026",
+  "next_resume_id": "p5_pos_word_form_subject_position_0051",
   "next_micro_skill": "p5.pos.word_form_subject_position",
   "generation_complete": false,
-  "last_run_result": "Persisted and wording-refined questions 0001-0025 for p5.pos.word_form_subject_position as a sequential checkpoint. All remain pending_validation. The persisted 25 pass unique-ID, one-blank, four-distinct-choice, valid-answer-index, exact-duplicate, and SequenceMatcher >=0.94 near-duplicate checks; maximum within-checkpoint similarity is 0.6144. Full cross-bank similarity scan against the previous 600 questions was not completed because direct GitHub checkout is unavailable in this runtime.",
-  "updated_at": "2026-08-27T00:55:00+09:00"
+  "last_run_result": "Persisted questions 0026-0050 for p5.pos.word_form_subject_position as the next sequential checkpoint. All remain pending_validation. The 25 new items use five additional business word families (approval, implementation, security, performance, replacement), stable sequential IDs, one blank, four distinct word-form choices, and rotated answer positions. Full cross-bank near-duplicate clearance remains deferred because the runtime does not expose a full local repository checkout; no QA decisions were made.",
+  "updated_at": "2026-08-27T01:17:00+09:00"
 }
