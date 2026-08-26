@@ -3,8 +3,8 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 1000,
-  "pending_validation_count": 1000,
+  "generated_question_count": 1100,
+  "pending_validation_count": 1100,
   "verified_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
@@ -16,15 +16,16 @@
     "p5.pos.word_form_subject_position",
     "p5.pos.word_form_object_position",
     "p5.verb.subject_verb_agreement",
-    "p5.verb.present_vs_past"
+    "p5.verb.present_vs_past",
+    "p5.verb.present_perfect_vs_past"
   ],
-  "current_batch": "2026-08-27-scheduled-009",
-  "current_micro_skill": "p5.verb.present_perfect_vs_past",
+  "current_batch": "2026-08-27-scheduled-010",
+  "current_micro_skill": "p5.verb.active_vs_passive",
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_verb_present_perfect_vs_past_0001",
-  "next_micro_skill": "p5.verb.present_perfect_vs_past",
+  "next_resume_id": "p5_verb_active_vs_passive_0001",
+  "next_micro_skill": "p5.verb.active_vs_passive",
   "generation_complete": false,
-  "last_run_result": "Completed p5.verb.present_vs_past with 100 persisted candidates in four 25-question pending batches, IDs 0001-0100. The set contains 50 simple-present habitual/routine items with explicit recurring-time cues and 50 simple-past completed-event items with explicit past-time cues. Generation-time structural checks found stable unique sequential IDs, exactly one blank, four distinct choices, valid proposed-answer indexes, balanced answer positions A/B/C/D = 25/25/25/25, no exact duplicate stems, and no intra-skill SequenceMatcher pair at or above 0.94; maximum observed intra-skill similarity was approximately 0.925. All 1000 questions remain pending_validation and no QA decisions were made. Full cross-bank near-duplicate clearance against all 1000 questions is still not claimed complete because this runtime does not expose a full local checkout. Generation remains incomplete at 10 of 44 micro-skills; resume with p5.verb.present_perfect_vs_past.",
-  "updated_at": "2026-08-27T05:25:00+09:00"
+  "last_run_result": "Completed p5.verb.present_perfect_vs_past with 100 persisted candidates in four 25-question pending batches, IDs 0001-0100. The set deliberately contrasts present-perfect items anchored by cues such as already, since Monday, since January, so far this week, during the current quarter, up to now, and over the past three months with simple-past items anchored by finished-time expressions such as yesterday, last Friday, two weeks ago, last month, in 2024, and in March 2025. Generation-time structural checks found stable unique sequential IDs, exactly one blank, four distinct choices, valid proposed-answer indexes, balanced answer positions A/B/C/D = 25/25/25/25, no exact duplicate stems, and no intra-skill SequenceMatcher pair at or above 0.94; maximum observed intra-skill similarity was approximately 0.918. During generation, an earlier unsaved draft that produced malformed third-person forms and poor verb-object collocations was discarded and replaced before persistence. All 1100 questions remain pending_validation and no QA decisions were made. Full cross-bank near-duplicate clearance against all 1100 questions is still not claimed complete because this runtime does not expose a full local checkout. Generation remains incomplete at 11 of 44 micro-skills; resume with p5.verb.active_vs_passive.",
+  "updated_at": "2026-08-27T06:40:00+09:00"
 }
