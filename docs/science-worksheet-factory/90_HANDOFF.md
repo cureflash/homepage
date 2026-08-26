@@ -5,58 +5,58 @@ Updated: 2026-08-26
 ## Completed this run
 
 - Started from the latest `main`, recursively listed and read every Markdown file under `docs/science-worksheet-factory/` in lexical path order, and read the four required shared math-factory control files.
-- Re-inspected the shared worksheet implementation: `scripts/science_worksheet_helpers.py`, `scripts/science_physics_basic_motion.py`, the common Physics Basics publisher/tests/workflow, the shared catalog/validator/PDF path, and catalog-driven site integration. No duplicate science pipeline was introduced.
+- Re-inspected the shared worksheet implementation: `scripts/science_worksheet_helpers.py`, the existing Physics Basics structured topic registry/publisher/tests/workflow, the common catalog/validator/PDF renderer, and catalog-driven site integration. No duplicate science pipeline was introduced.
 - Resumed Phase 3 at formal high-school course `物理基礎`. Did not advance to `物理`, chemistry, biology or earth science.
-- Re-opened the current MEXT high-school science commentary for `物理基礎 (1) 物体の運動とエネルギー / 様々な力とその働き`. The commentary explicitly includes friction among the forces to be treated, force balance in a plane, and the laws of motion centered on straight-line motion. It also describes experimentally examining the relationship among mass, force and acceleration and establishing the second law of motion.
-- Preserved high-school metadata: all new entries use `school_level=high-school`, `formal_course=物理基礎`, and `grade=null`.
-- Generalized the shared science formula helper with a reusable `difference` relation. For ordered inputs `[first, second]`, `result = first - second`; independent recomputation supports solving for the result, first input or second input. This creates an explicit signed representation for opposing forces rather than faking force balance with an unsigned generic sum.
-- Added 30 one-dimensional net-force worksheets, 20 problems each, using `F合 = F右 - F左` with **rightward explicitly defined as positive**:
-  - net force from rightward/leftward forces: 10;
-  - rightward force from net force/leftward force: 10;
-  - leftward force from rightward force/net force: 10.
-- Added 30 Newton-second-law worksheets, 20 problems each, using `F = m × a` for the resultant force in straight-line motion:
-  - resultant force from mass/acceleration: 10;
-  - mass from resultant force/acceleration: 10;
-  - acceleration from resultant force/mass: 10.
-- Did not add a coefficient-of-friction formula family in this batch. Friction is curriculum-aligned, but the exact quantitative relation and desired assumptions should be re-opened and confirmed before high-volume publication rather than inferred from scope alone.
-- Expanded `tests/test_science_physics_basic.py` to validate exactly 170 Physics Basics focused variants, deterministic regeneration, 170 distinct normalized hashes, the explicit directional `difference` relation, independent direct/reverse recomputation, `F=ma`, corrupted-answer rejection, expected units, and absence of fabricated high-school grade metadata.
-- Expanded `.github/workflows/science-physics-basic-publish.yml` to validate all 170 Physics Basics catalog rows/PDFs and exact skill/mode/unit counts.
-- Merged the implementation through PR #12. The source merge commit is `ca225cc624e78c9dfd89318b4375f37671d1a4dd`.
-- GitHub Actions run `32915592268` completed successfully. All workflow stages succeeded: latest-main check, shared tests, Physics Basics tests, generation/registration, post-generation validation, and generated-output commit.
-- The workflow published all 60 new PDFs/catalog rows in commit `3019a49062e135aac02e1ac937f670f830fcc045` (`Publish 60 more Physics Basics force worksheets`).
+- Re-opened the current MEXT high-school science commentary for `物理基礎 (1) 物体の運動とエネルギー / 様々な力とその働き`. It explicitly includes normal force, static friction, kinetic friction, force balance and the laws of motion. The MEXT commentary does not itself state a friction-coefficient formula, so quantitative kinetic-friction work was not inferred from MEXT wording alone.
+- Separately checked current Tokyo Shoseki `物理基礎` material and confirmed the standard quantitative relation `F動 = μ'N` for kinetic friction. The generated drills therefore use **given kinetic-friction coefficient and given normal force**; they do not silently assume `N = mg`.
+- Added `scripts/science_physics_basic_forces.py` as a structured-topic extension that plugs into the existing shared publisher and shared formula helper. No new renderer or validator family was needed.
+- Added 20 explicit one-dimensional force-balance worksheets, 20 problems each:
+  - 10 sheets solve for the leftward force;
+  - 10 sheets solve for the rightward force;
+  - every problem states opposing right/left directions and fixes the resultant at exactly `0 N`.
+- Added 30 kinetic-friction worksheets, 20 problems each, using `F動 = μ'N`:
+  - 10 sheets solve for kinetic friction;
+  - 10 sheets solve for the kinetic-friction coefficient;
+  - 10 sheets solve for the normal force.
+- Reused only already validated shared relations (`sum` for the explicit zero-resultant balance representation and `product` for kinetic friction). Independent recomputation remains in `science_worksheet_helpers.py`.
+- Added `tests/test_science_physics_basic_forces.py` covering exactly 50 variants, deterministic regeneration, independent answers, 50 distinct normalized hashes, explicit zero-resultant/direction constraints, kinetic-friction assumptions, no fabricated high-school grade metadata, and corrupted-answer rejection.
+- Extended `.github/workflows/science-physics-basic-publish.yml` so the full Physics Basics set is validated as exactly 220 focused numerical worksheets after publication.
+- Merged source changes through PR #13. Merge commit: `126c52c7e320a8e61dc810a74dcf4c5d0444b9ca`.
+- GitHub Actions run `32919557638` completed successfully. The workflow generated and published all 50 new PDFs/catalog rows in commit `fd5008b6fa1bc776b14f3eb2d0c0c97901d9d4e9` (`Publish 50 Physics Basics balance and friction worksheets`).
 
 ## Changed files
 
 Source/test/workflow changes:
 
-- `scripts/science_worksheet_helpers.py`
-- `scripts/science_physics_basic_motion.py`
-- `tests/test_science_physics_basic.py`
+- `scripts/science_physics_basic_forces.py` (new)
+- `scripts/publish_science_physics_basic.py`
+- `tests/test_science_physics_basic_forces.py` (new)
 - `.github/workflows/science-physics-basic-publish.yml`
 
 Generated publication changes:
 
 - `worksheets/catalog.json`
-- 60 new PDFs under `materials/worksheets/science/high-school/physics-basic/motion/`
+- 50 new PDFs under `materials/worksheets/science/high-school/physics-basic/motion/`
 - `docs/science-worksheet-factory/90_HANDOFF.md`
 
 ## Validation results
 
-GitHub Actions run `32915592268`: **success**.
+GitHub Actions run `32919557638`: **success**.
 
 The successful workflow verified:
 
 - latest `main` matched the checked-out source before validation;
 - `python tests/test_worksheet_factory.py` -> OK;
 - `python tests/test_science_physics_basic.py` -> OK;
+- `python tests/test_science_physics_basic_forces.py` -> OK;
 - generation/registration of the Physics Basics batch -> OK;
 - post-generation shared and topic validation -> OK;
-- exactly 170 `science-physics-basic-motion-*` catalog entries -> OK;
-- exactly 70 `calculation-basic` + 100 `calculation-reverse` -> OK;
-- skill counts: 20 displacement/average-velocity, 20 acceleration/velocity-change, 20 initial/final-velocity, 30 combined uniform-acceleration velocity, 20 free-fall velocity, 30 one-dimensional net-force, 30 Newton-second-law -> OK;
-- unit counts: 90 `運動の表し方` + 80 `様々な力とその働き` -> OK;
+- exactly 220 `science-physics-basic-motion-*` catalog entries -> OK;
+- exactly 90 `calculation-basic` + 130 `calculation-reverse` -> OK;
+- existing skill counts remained unchanged and new counts are exactly 20 `opposed-force-balance` + 30 `kinetic-friction` -> OK;
+- unit counts are exactly 90 `運動の表し方` + 130 `様々な力とその働き` -> OK;
 - all entries use `school_level=high-school`, `formal_course=物理基礎`, `grade=null` -> OK;
-- all 170 worksheets contain 20 problems and have unique normalized content hashes -> OK;
+- all 220 worksheets contain 20 problems and have unique normalized content hashes -> OK;
 - full shared catalog validation with repository-root output checks -> OK;
 - all registered Physics Basics PDFs exist, begin with `%PDF`, exceed the minimum-size check, and contain the expected two-page structure -> OK.
 
@@ -73,18 +73,18 @@ Published physics coverage:
 - junior-high grade 1: 48 worksheets;
 - junior-high grade 2: 120 worksheets;
 - junior-high grade 3: 120 worksheets;
-- `物理基礎`: 170 worksheets.
+- `物理基礎`: 220 worksheets.
 
-Current published physics total: **458 worksheets**.
+Current published physics total: **508 worksheets**.
 
-`物理基礎` now has validated shared relation families `product`, `sum`, `difference`, and `offset-product`. The new `difference` relation gives a mechanically explicit signed one-dimensional force model, so a zero resultant can be used safely in later force-balance practice without hiding direction.
+`物理基礎` now has broad introductory motion/force coverage including displacement/average velocity, acceleration, initial/final velocity, `v = v0 + at`, free-fall velocity, signed one-dimensional resultant force, Newton's second law, explicit zero-resultant force balance, and kinetic friction.
 
 ## Incomplete work / blockers
 
-- `物理基礎` still needs broad coverage after the current 170 focused sheets: explicit force-balance practice, friction, work/work rate, kinetic/potential/mechanical energy, then heat, waves/sound, electricity and energy use.
-- The current net-force family permits positive, zero or negative signed resultants but does not yet make a dedicated `F合 = 0` force-balance series. Such a series should be generated with an explicit zero-result constraint or as finite-answer concept retrieval, not as an ambiguous unsigned sum.
-- Friction is verified as curriculum content, but the exact quantitative drill family and assumptions still need fresh source confirmation before publication.
-- Free-fall still covers velocity-time only. Height relations such as `y = 1/2 gt²` need a power/square-capable independently validated relation before bulk generation.
+- `物理基礎` still needs broad coverage after the current 220 focused sheets: work/work rate, kinetic/potential/mechanical energy, then heat, waves/sound, electricity and energy use.
+- Static friction is curriculum content, but high-volume quantitative worksheets should not be added by treating static friction as always equal to `μN`; the distinction between variable static friction and maximum static friction must remain explicit if that topic is later quantified.
+- Free-fall still covers velocity-time only. Height relations such as `y = 1/2 gt²` need a square/power-capable independently validated relation before bulk generation.
+- Kinetic/potential energy relations will likely require either a new independently validated scaled-product/power relation or carefully structured equivalent relations; do not encode them through misleading one-off arithmetic.
 - Keep mechanics at formula-understanding/substitution level; do not turn the high-volume target into multi-step entrance-exam mechanics.
 - `物理` has not started and remains after `物理基礎` in production order.
 - Screenshot-based worksheet PDF visual QA remains pending.
@@ -96,11 +96,11 @@ Continue Phase 3, physics, formal high-school course `物理基礎`:
 1. start from latest `main` and repeat the required science-Markdown/shared-math read sequence;
 2. inspect concurrent shared worksheet-factory changes before editing;
 3. preserve `school_level=high-school`, `formal_course=物理基礎`, `grade=null`;
-4. use the now-validated signed `difference` relation to add an explicit force-balance family with resultant force fixed at 0 N and/or finite-answer concept retrieval; keep direction visible in every problem;
-5. re-open the MEXT commentary and an authoritative Physics Basics source before adding quantitative friction drills; define assumptions explicitly rather than silently assuming a coefficient relation;
-6. after force balance/friction, continue in the curriculum map to work/work rate and energy relations, reusing shared relations or adding a new independently tested relation only when necessary;
-7. target another coherent 30–60-sheet batch once the next formula/fact set is safe;
-8. keep using shared validator/hash/PDF/catalog/site infrastructure and require Actions success before treating generated PDFs as published;
+4. re-open the current MEXT commentary for `仕事と力学的エネルギー` before publication;
+5. add work `W = Fd` and work rate `P = W/t` basic/reverse families using existing shared relations where the problem statement keeps force and displacement parallel and assumptions explicit;
+6. then verify the exact Physics Basics treatment of gravitational potential energy, kinetic energy and mechanical-energy conservation; add a reusable independently tested relation for coefficients/squares only if the shared helper genuinely needs one;
+7. target another coherent 30–60-sheet batch once those relations are safe, rather than stopping at a tiny pilot set;
+8. keep using the shared validator/hash/PDF/catalog/site infrastructure and require Actions success before treating generated PDFs as published;
 9. keep `物理基礎` ahead of `物理`, and all physics ahead of chemistry, biology and earth science.
 
 Do not return to JH1–JH3 merely to inflate counts unless fixing a real defect or adding a clearly legitimate high-use nonduplicate family.
