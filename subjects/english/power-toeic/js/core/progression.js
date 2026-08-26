@@ -10,8 +10,9 @@ export const DEFAULT_PROGRESSION_POINTS = Object.freeze({
 
 export function deriveProgressionStage(points, thresholds = PROGRESSION_STAGE_THRESHOLDS) {
   if (!Number.isFinite(points) || points < 0) throw new Error('points must be non-negative');
+  const resolvedThresholds = Array.isArray(thresholds) ? thresholds : PROGRESSION_STAGE_THRESHOLDS;
   let stage = 0;
-  thresholds.forEach((threshold, index) => {
+  resolvedThresholds.forEach((threshold, index) => {
     if (points >= threshold) stage = index;
   });
   return Math.min(5, stage);

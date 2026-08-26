@@ -2,80 +2,49 @@
 
 ## Current state
 
-**Phase 6 is complete, APP TRACK 7.4 bad-question reporting is implemented, and the exact next APP TRACK task is Phase 8 / Task 8.1 — mobile-first home/navigation.**
+**APP TRACK Phase 8.1–8.3 is complete. The exact next APP TRACK task is Phase 8 / Task 8.4 — publish the Web beta entry point.**
 
-The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored.
+The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored in this checkpoint.
 
-## Reconciled concurrent Phase 6 work
+## Phase 8 integration completed
 
-PRs #77–#79 were already merged into `main` before this run and were reconciled rather than duplicated.
+### 8.1 mobile-first home/navigation
 
-### 6.1 semantic character asset contract — PR #77
+The Web app now boots to a real learner home instead of the fixture workout editor. QUICK / WEAKNESS / TRAINING / POWER / REVIEW / TEST / CUSTOM all feed the established WorkoutRecipe -> common QuizSession path. TRAINING/POWER expose a skill picker, while home reflects progression and due-review state.
 
-`js/ui/asset-catalog.js` now owns stable semantic Sergeant reaction IDs and Trainee stage 0–5 IDs. Sparse temporary Irasutoya reaction art may alias neutral assets. Missing reaction/stage assets fall back safely and never block quiz operation.
+### 8.2 end-to-end regression
 
-### 6.2 Sergeant/Trainee quiz composition — PR #78
+Added `tests/e2e-web-flow.test.js`, which fixes the core Web-domain flow as one deterministic regression:
 
-`js/ui/character-presenter.js` renders Sergeant and Trainee as removable presentation. Image failures fall back to text. Correct/wrong/complete reactions are driven by session/UI events and own no answer, mastery, workout, or persistence logic.
+`WorkoutRecipe -> QuestionBankRepository selection -> QuizSession -> attempts -> review scheduling -> progression -> versioned persistence -> results`
 
-### 6.3 deterministic progression — PR #79
+Added `.github/workflows/power-toeic-tests.yml` so Power TOEIC changes run the complete Node 22 suite on PRs and main pushes.
 
-`js/core/progression.js` defines deterministic POWER points and stage thresholds. First correct answers, mixed/review success, mastery milestones, and substantial session completion can earn points; wrong answers and repeated ordinary labeled answers do not become the optimal progression path. Persisted progression only drives character presentation.
+The first complete CI run was valuable: the new tests themselves passed, but the full suite exposed a pre-existing Phase 6 progression regression. `deriveProgressionStage` accepted an optional threshold array; passing it directly to `Array.map` caused the map index to be interpreted as that second argument. The implementation now falls back to canonical thresholds unless the second argument is actually an array, preserving its explicit customization contract while making ordinary callback use safe.
 
-## 7.4 bad-question reporting
+### 8.3 synthetic large-bank check
 
-Added:
+Added `tests/large-bank.test.js`. It creates a synthetic-only 20,000-question in-memory bank and selects a deterministic 100-question workout with no duplicate IDs. On GitHub Actions the test completed in roughly 57 ms, well below its conservative 2-second regression ceiling. This is performance test data only and is not production TOEIC content.
 
-- `js/core/question-reports.js` — platform-neutral local report model/storage contract;
-- `js/ui/question-report.js` — learner report panel;
-- quiz-level `問題を報告` action;
-- focused Node tests for exact question ID/version capture, reason validation, append behavior, and corrupted-storage fail-safe.
+## Verification
 
-Supported reasons:
-
-- `ambiguous`;
-- `unnatural_english`;
-- `wrong_answer`;
-- `wrong_explanation`;
-- `other`.
-
-Each report stores exact `questionId`, `questionVersion`, reason, optional detail, and timestamp. Report storage uses a separate `power-toeic.question-reports.v1` browser key so adding reporting does not mutate or migrate the established learning-state root. Storage failure is intentionally non-fatal to quiz progression.
-
-## Existing Web foundation
-
-The reference Web implementation now includes:
-
-- QuestionBankRepository adapter and synthetic fixture bank;
-- common QuizSession;
-- mobile cloze UI/results;
-- versioned learning persistence;
-- mastery/weakness;
-- WorkoutRecipe/selector/presets/editor;
-- bounded endless planning;
-- mixed presentation and review scheduling;
-- transfer/review mastery gate;
-- semantic character assets and Sergeant/Trainee composition;
-- deterministic Trainee POWER progression;
-- bad-question reporting.
+Power TOEIC GitHub Actions run `33001533361` completed successfully after the progression fix. The complete Node suite is now the merge gate for this track.
 
 ## Exact next work
 
-### Phase 8 / Task 8.1 — mobile-first home/navigation
+### Phase 8 / Task 8.4 — publish Web beta entry point
 
-Build a real learner entry screen rather than booting directly into the fixture workout editor.
+Expose `subjects/english/power-toeic/` from the appropriate learner-facing site navigation without changing the application architecture or production question DB. Keep the beta clearly scoped while the external content track is still scaling/validating real questions. Do not turn synthetic fixtures into learner-facing production content merely to make the link look populated.
 
-Required entry points:
+Before publishing, inspect the existing English/subject navigation and choose the smallest consistent entry-point change. Preserve current site routing conventions and run the Power TOEIC suite after the change.
 
-1. recommended weakness workout;
-2. quick drill;
-3. choose category/training;
-4. custom workout;
-5. due review;
-6. mixed/general test.
+After 8.4, Phase 9 begins:
 
-The current Trainee stage may be shown as a motivation element. Do not add target-score input. Keep internal micro-skills behind broader learner-facing navigation and feed every path into the existing WorkoutRecipe/session engine rather than adding alternate quiz engines.
+1. freeze platform-neutral models;
+2. create deterministic cross-platform conformance fixtures;
+3. document Web V1 behavior as the Swift port reference.
 
-After 8.1, continue to end-to-end Web regression, synthetic large-bank adapter performance, and beta entry-point publishing.
+Only after that freeze should Phase 10 create the native Swift/SwiftUI implementation.
 
 ## Fixed decisions
 
