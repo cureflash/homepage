@@ -2,49 +2,64 @@
 
 ## Current state
 
-**APP TRACK Phase 8.1–8.3 is complete. The exact next APP TRACK task is Phase 8 / Task 8.4 — publish the Web beta entry point.**
+**APP TRACK Phase 8 is complete. The exact next APP TRACK task is Phase 9 / Task 9.1 — freeze platform-neutral models.**
 
 The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored in this checkpoint.
 
-## Phase 8 integration completed
+## Phase 8.4 completed — Web beta entry point
 
-### 8.1 mobile-first home/navigation
+The existing site had no standalone English subject landing page; `subjects/english/` contained only Power TOEIC. The smallest consistent learner-facing publish path was therefore the site top page.
 
-The Web app now boots to a real learner home instead of the fixture workout editor. QUICK / WEAKNESS / TRAINING / POWER / REVIEW / TEST / CUSTOM all feed the established WorkoutRecipe -> common QuizSession path. TRAINING/POWER expose a skill picker, while home reflects progression and due-review state.
+Changes:
 
-### 8.2 end-to-end regression
+- added an `英語` navigation link pointing to `subjects/english/power-toeic/`;
+- added a `Power TOEIC` card under `教科から探す`;
+- marked the card `英語・β版`;
+- explicitly states that question data is still being validated and expanded, so the app shell is not presented as a finished production question bank;
+- added `https://homepage.hikaru0816tsc.workers.dev/subjects/english/power-toeic/` to `sitemap.xml`.
 
-Added `tests/e2e-web-flow.test.js`, which fixes the core Web-domain flow as one deterministic regression:
+No synthetic fixture question was promoted or relabeled as production content.
 
-`WorkoutRecipe -> QuestionBankRepository selection -> QuizSession -> attempts -> review scheduling -> progression -> versioned persistence -> results`
+## Web V1 status
 
-Added `.github/workflows/power-toeic-tests.yml` so Power TOEIC changes run the complete Node 22 suite on PRs and main pushes.
+The reference Web application now has:
 
-The first complete CI run was valuable: the new tests themselves passed, but the full suite exposed a pre-existing Phase 6 progression regression. `deriveProgressionStage` accepted an optional threshold array; passing it directly to `Array.map` caused the map index to be interpreted as that second argument. The implementation now falls back to canonical thresholds unless the second argument is actually an array, preserving its explicit customization contract while making ordinary callback use safe.
-
-### 8.3 synthetic large-bank check
-
-Added `tests/large-bank.test.js`. It creates a synthetic-only 20,000-question in-memory bank and selects a deterministic 100-question workout with no duplicate IDs. On GitHub Actions the test completed in roughly 57 ms, well below its conservative 2-second regression ceiling. This is performance test data only and is not production TOEIC content.
-
-## Verification
-
-Power TOEIC GitHub Actions run `33001533361` completed successfully after the progression fix. The complete Node suite is now the merge gate for this track.
+- mobile-first home/navigation;
+- common QuizSession;
+- four-choice cloze renderer and immediate feedback;
+- results;
+- versioned browser persistence;
+- deterministic mastery and weakness ranking;
+- common WorkoutRecipe/selector for QUICK / TRAINING / POWER / WEAKNESS / CUSTOM / TEST / REVIEW;
+- editable workout recipes and long/endless-style bounded sessions;
+- deterministic review scheduling and mixed/review mastery gates;
+- Drill Sergeant / Trainee presentation and deterministic progression;
+- bad-question reporting;
+- end-to-end regression coverage and synthetic 20,000-question performance regression;
+- learner-facing beta entry point.
 
 ## Exact next work
 
-### Phase 8 / Task 8.4 — publish Web beta entry point
+### Phase 9 / Task 9.1 — freeze platform-neutral models
 
-Expose `subjects/english/power-toeic/` from the appropriate learner-facing site navigation without changing the application architecture or production question DB. Keep the beta clearly scoped while the external content track is still scaling/validating real questions. Do not turn synthetic fixtures into learner-facing production content merely to make the link look populated.
+Before Swift code exists, inventory the actual Web V1 data shapes and freeze stable, platform-neutral contracts for at least:
 
-Before publishing, inspect the existing English/subject navigation and choose the smallest consistent entry-point change. Preserve current site routing conventions and run the Power TOEIC suite after the change.
+- Question;
+- WorkoutRecipe;
+- Attempt;
+- MasterySnapshot / per-skill state;
+- ReviewEntry;
+- Progression state/event inputs;
+- QuestionReport;
+- semantic Asset IDs where they cross platform boundaries.
 
-After 8.4, Phase 9 begins:
+Prefer a documented JSON-compatible contract plus validation/tests over exposing incidental JavaScript implementation details. Do not redesign learning behavior during the freeze unless a concrete ambiguity makes cross-platform equivalence impossible.
 
-1. freeze platform-neutral models;
-2. create deterministic cross-platform conformance fixtures;
-3. document Web V1 behavior as the Swift port reference.
+After 9.1, create deterministic cross-platform conformance fixtures in 9.2, then document the Web V1 behavior as the Swift reference in 9.3. Only after those gates pass should Phase 10 create the Swift/SwiftUI implementation.
 
-Only after that freeze should Phase 10 create the native Swift/SwiftUI implementation.
+## Verification policy
+
+Power TOEIC tests run through `.github/workflows/power-toeic-tests.yml` on Node 22. For the Web beta publish change, the existing application code was not altered; the PR should still pass the complete Power TOEIC suite before merge.
 
 ## Fixed decisions
 
