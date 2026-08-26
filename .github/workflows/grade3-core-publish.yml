@@ -1,6 +1,6 @@
 name: Grade 3 worksheet factory checkpoint
 
-# Covers addition/subtraction, multiplication, division, decimals, fractions, large numbers, and missing-number equations.
+# Covers grade 3 core arithmetic/calculation topics and comprehensive review.
 on:
   push:
     branches: [main]
@@ -12,6 +12,7 @@ on:
       - 'scripts/publish_grade3_fractions.py'
       - 'scripts/publish_grade3_large_numbers.py'
       - 'scripts/publish_grade3_missing_number.py'
+      - 'scripts/publish_grade3_review.py'
       - 'tests/test_grade3_add_sub_publisher.py'
       - 'tests/test_grade3_multiplication_publisher.py'
       - 'tests/test_grade3_division_publisher.py'
@@ -19,6 +20,7 @@ on:
       - 'tests/test_grade3_fractions_publisher.py'
       - 'tests/test_grade3_large_numbers_publisher.py'
       - 'tests/test_grade3_missing_number_publisher.py'
+      - 'tests/test_grade3_review_publisher.py'
       - '.github/workflows/grade3-core-publish.yml'
   workflow_dispatch:
 
@@ -52,6 +54,7 @@ jobs:
             python scripts/publish_grade3_fractions.py .
             python scripts/publish_grade3_large_numbers.py .
             python scripts/publish_grade3_missing_number.py .
+            python scripts/publish_grade3_review.py .
             python tests/test_grade3_add_sub_publisher.py
             python tests/test_grade3_multiplication_publisher.py
             python tests/test_grade3_division_publisher.py
@@ -59,6 +62,7 @@ jobs:
             python tests/test_grade3_fractions_publisher.py
             python tests/test_grade3_large_numbers_publisher.py
             python tests/test_grade3_missing_number_publisher.py
+            python tests/test_grade3_review_publisher.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main)
             git fetch origin main
