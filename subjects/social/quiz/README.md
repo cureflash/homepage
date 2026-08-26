@@ -5,7 +5,7 @@
 ## 現在の実装
 
 - 日本地図：都道府県名 -> 都道府県、県庁所在地 -> 都道府県、都道府県 -> 県庁所在地5択
-- 世界地図：15地域に分割した国・地域の位置当て
+- 世界地図：6つの大地域に分けた国・地域の位置当て
 - 世界地図の7モード
   - イージー：国名＋首都＋国旗 -> 地図クリック
   - ハード：国名だけ -> 地図クリック
@@ -14,6 +14,7 @@
   - 逆引き：光った国 -> 国名5択
   - 逆引き：光った国 -> 首都5択
   - 逆引き：光った国 -> 国旗5択
+- 世界版は1プレイ最大20問。20か国未満の地域／モードでは対象国をすべて出題
 - 出題順のシャッフル
 - 正誤判定、正解数、正答率、結果表示
 - 180秒の共通制限時間
@@ -24,31 +25,24 @@
 
 ## 世界版の地域
 
-世界版は一枚の小さな世界地図で回答させず、次の15ビューに分割しています。
+地域セレクタは学校地理で扱いやすい大きな単位に統合しています。
 
-- 東アジア
-- 東南アジア
-- 南アジア
-- 西・中央アジア
-- 北・西ヨーロッパ
-- 中・南ヨーロッパ
-- 東ヨーロッパ・ロシア
-- 北アフリカ
-- 西・中部アフリカ
-- 東・南部アフリカ
-- 北・中央アメリカ
-- カリブ海地域
+- アジア
+- ヨーロッパ
+- アフリカ
+- 北アメリカ
 - 南アメリカ
-- オセアニア西部
-- 太平洋島しょ部
+- オセアニア
 
-各地域はNatural Earth 1:50mの国境データから事前生成したWebメルカトルSVGです。小さすぎる島国・小国には同じISOキーの丸いヒットターゲットも埋め込みます。太平洋島しょ部は日付変更線をまたぐ表示に対応しています。
+内部の国データには従来の細かなサブリージョンを保持していますが、ゲーム上の地域選択・地図ファイル・逆引き5択の候補範囲は上記6地域を正とします。旧URLの `east-asia`、`caribbean`、`pacific-islands` などは対応する大地域へ自動的に読み替えます。
+
+各地域はNatural Earth 1:50mの国境データから事前生成したWebメルカトルSVGです。小さすぎる島国・小国には同じISOキーの丸いヒットターゲットも埋め込みます。オセアニアは日付変更線をまたぐ国も同じ地域地図内に表示します。
 
 ## ロード方式
 
 世界版では外部CDNから地図ライブラリを動的importしません。また、ブラウザで全世界SVGを生成して不要な国を削除する処理も行いません。
 
-`assets/maps/world/` に15地域のSVGを固定保存し、選択中の地域ファイルを1本だけ `fetch(..., { cache: "force-cache" })` します。現在の生成物は1地域あたり約10KB〜233KB（未圧縮）で、すべての地域を同時には読み込みません。
+`assets/maps/world/` に6地域のSVGを固定保存し、選択中の地域ファイルを1本だけ `fetch(..., { cache: "force-cache" })` します。現在の生成物は約70KB〜311KB（未圧縮）で、すべての地域を同時には読み込みません。
 
 ## 構成
 
@@ -59,12 +53,12 @@
 - `js/renderers/world-map-source.js`: 選択地域のローカルSVGをキャッシュ付きで読み込む
 - `js/renderers/world-region-renderer.js`: 事前生成済み地域SVGの国をクリックするrenderer
 - `js/renderers/world-map-choice-renderer.js`: 国を光らせた地図＋5択を組み合わせるrenderer
-- `js/games/world-countries.js`: 地域×7モードを同一データから生成するgame factory
-- `js/data/world-countries.js`: ISOコード、日本語国名、首都、地域、小国マーカー、出典メタデータ
-- `js/data/world-regions.js`: 地域ビューとモード定義
+- `js/games/world-countries.js`: 6地域×7モードと1プレイ最大20問を同一データから生成するgame factory
+- `js/data/world-countries.js`: ISOコード、日本語国名、首都、内部サブリージョン、小国マーカー、出典メタデータ
+- `js/data/world-regions.js`: 6大地域、サブリージョン対応、モード定義
 - `js/data/world-map-metadata.js`: Natural Earth・投影法・ローカル配信の正本メタデータ
-- `assets/maps/world/`: 15地域のWebメルカトルSVG＋`manifest.json`
-- `scripts/build_social_world_maps.py`: Natural Earth 1:50m -> 地域別WebメルカトルSVG生成器
+- `assets/maps/world/`: 6地域のWebメルカトルSVG＋`manifest.json`
+- `scripts/build_social_world_maps.py`: Natural Earth 1:50m -> 6大地域WebメルカトルSVG生成器
 - `assets/audio/`: 共通SE
 
 ## 共通ゲームルール
@@ -84,7 +78,7 @@ SE:
 
 ## 世界版5択の扱い
 
-通常の曖昧な知識問題では、誤答候補は手動で固定します。一方、世界版の逆引きは「ISOコードで一意に決まる国名・国旗」と、首都が一意に扱える国だけを対象にしているため、ユーザー指定どおり同じ地域の候補から4件をランダム抽出して正解と合わせた5択を生成します。
+通常の曖昧な知識問題では、誤答候補は手動で固定します。一方、世界版の逆引きは「ISOコードで一意に決まる国名・国旗」と、首都が一意に扱える国だけを対象にしているため、ユーザー指定どおり同じ大地域の候補から4件をランダム抽出して正解と合わせた5択を生成します。
 
 首都が複数ある、外交上の扱いが複雑、移転中・内戦等で単一の首都問題にしにくいケースは首都関連モードから除外し、国名・国旗の位置問題には残せます。
 
@@ -98,7 +92,7 @@ SE:
 
 世界地図は **Natural Earth 1:50m Admin 0 – Countries v5.1.1** を使用しています。Natural EarthはPublic Domainです。
 
-生成時に緯度経度をWebメルカトルへ投影し、現在の15地域へ分割してローカルSVGとして保存します。正本manifestは `assets/maps/world/manifest.json` にあり、元ZIPのSHA-256、各地域SVGのSHA-256、ファイルサイズを記録しています。
+生成時に緯度経度をWebメルカトルへ投影し、アジア・ヨーロッパ・アフリカ・北アメリカ・南アメリカ・オセアニアの6地域へまとめてローカルSVGとして保存します。正本manifestは `assets/maps/world/manifest.json` にあり、元ZIPのSHA-256、各地域SVGのSHA-256、ファイルサイズを記録しています。
 
 - Natural Earth: https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/
 - Terms: https://www.naturalearthdata.com/about/terms-of-use/
