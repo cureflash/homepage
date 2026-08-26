@@ -1,13 +1,21 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 0,
-  "verified_question_count": 0,
-  "needs_revision_count": 0,
+  "checked_question_count": 100,
+  "verified_question_count": 87,
+  "needs_revision_count": 13,
   "rejected_question_count": 0,
   "pending_validation_count": 400,
+  "last_completed_batch": "2026-08-26-scheduled-002",
+  "last_completed_micro_skill": "p5.pos.adverb_modifies_adjective",
+  "last_batch_counts": {
+    "checked": 100,
+    "verified": 87,
+    "needs_revision": 13,
+    "rejected": 0
+  },
   "next_batch": "2026-08-26-manual-001",
   "next_micro_skill": "p5.pos.adjective_before_noun",
   "next_question_id": "p5_pos_adjective_before_noun_0001",
-  "updated_at": "2026-08-26T22:00:00+09:00"
+  "updated_at": "2026-08-26T23:06:00+09:00"
 }
