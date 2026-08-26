@@ -79,7 +79,7 @@ def generate(seed,count=PROBLEM_COUNT):
     for op in ('decimal-add','decimal-add','decimal-sub','decimal-sub'):
         while True:
             if op=='decimal-add':
-                a=rng.randint(1,99); b=rng.randint(1,199-a); p={'type':op,'a_tenths':a,'b_tenths':b}
+                a=rng.randint(1,99); b=rng.randint(1,min(99,199-a)); p={'type':op,'a_tenths':a,'b_tenths':b}
             else:
                 a=rng.randint(2,199); b=rng.randint(1,a-1); p={'type':op,'a_tenths':a,'b_tenths':b}
             if add(p): break
