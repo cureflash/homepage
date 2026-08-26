@@ -8,6 +8,7 @@ try:
     from scripts.science_physics_basic_conservation import PHYSICS_BASIC_CONSERVATION_TOPICS
     from scripts.science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
     from scripts.science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
+    from scripts.science_physics_basic_heat import PHYSICS_BASIC_HEAT_TOPICS
     from scripts.science_physics_basic_motion import (
         PHYSICS_BASIC_MOTION_PROBLEM_COUNT,
         PHYSICS_BASIC_MOTION_TOPICS,
@@ -18,6 +19,7 @@ except ModuleNotFoundError:
     from science_physics_basic_conservation import PHYSICS_BASIC_CONSERVATION_TOPICS
     from science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
     from science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
+    from science_physics_basic_heat import PHYSICS_BASIC_HEAT_TOPICS
     from science_physics_basic_motion import (
         PHYSICS_BASIC_MOTION_PROBLEM_COUNT,
         PHYSICS_BASIC_MOTION_TOPICS,
@@ -33,6 +35,7 @@ ALL_TOPICS = {
     **PHYSICS_BASIC_FORCE_TOPICS,
     **PHYSICS_BASIC_ENERGY_TOPICS,
     **PHYSICS_BASIC_CONSERVATION_TOPICS,
+    **PHYSICS_BASIC_HEAT_TOPICS,
 }
 
 
@@ -109,7 +112,7 @@ def publish(repo_root):
     catalog_path, output_dir, catalog, pending, prospective_catalog = build_batch(root)
     if not pending:
         validate_catalog(catalog, root)
-        print("Physics Basics mechanics worksheets already published")
+        print("Physics Basics worksheets already published")
         return 0
 
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -131,7 +134,7 @@ def publish(repo_root):
         json.dumps(prospective_catalog, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"published {len(pending)} Physics Basics mechanics worksheets")
+    print(f"published {len(pending)} Physics Basics worksheets")
     return len(pending)
 
 
