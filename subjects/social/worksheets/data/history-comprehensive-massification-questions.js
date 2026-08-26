@@ -1,1 +1,28 @@
-(() => { const unit = {"id":"hs-history-comprehensive-massification-questions-001","title":"国際秩序の変化や大衆化への問い","subtitle":"歴史総合の重要事項を日本と世界の関係から整理する","schoolStage":"high-school","field":"history","formalCourse":"歴史総合","formalPlacement":"C「国際秩序の変化や大衆化と私たち」(1) 国際秩序の変化や大衆化への問い","unit":"歴史総合","era":"20世紀前半","practicalGradeGroup":"高校・歴史総合","factcheckStatus":"pending_factcheck","keyPoint":"戦争、国際協調、大衆社会、政治参加などの資料から、20世紀前半の変化について問いを立てる。","timeline":[],"facts":[{"id":"hc-c1-f1","claim":"歴史総合C(1)では、国際関係や大衆社会の変化を示す資料から問いを表現する。","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"},{"id":"hc-c1-f2","claim":"視点には戦争の総力戦化、国際協調、普通選挙、メディアや大量消費の広がりなどが含まれる。","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"}],"sections":[{"id":"q","heading":"20世紀前半を問う","lead":"複数資料から変化を見つける。","sentences":[{"id":"hc-c1-01","template":"第一次世界大戦後の社会変化から{{問い}}を立てる。","terms":["問い"],"importance":"A","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"},{"id":"hc-c1-02","template":"戦争が社会全体を動員する{{総力戦}}になったことに注目する。","terms":["総力戦"],"importance":"A","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"}]},{"id":"mass","heading":"大衆化の視点","lead":"政治参加・メディア・消費を結び付ける。","sentences":[{"id":"hc-c1-03","template":"選挙権の拡大など{{政治参加}}の変化を見る。","terms":["政治参加"],"importance":"A","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"},{"id":"hc-c1-04","template":"新聞・ラジオ・映画など{{マスメディア}}の広がりにも注目する。","terms":["マスメディア"],"importance":"B","sources":["mext-hs-history-commentary"],"factcheckStatus":"pending_factcheck"}]}],"images":[],"sources":[{"id":"mext-hs-history-commentary","label":"文部科学省『高等学校学習指導要領（平成30年告示）解説 地理歴史編』","url":"https://www.mext.go.jp/content/20220802-mxt_kyoiku02-100002620_03.pdf"},{"id":"ndl-modern","label":"国立国会図書館『史料にみる日本の近代』","url":"https://www.ndl.go.jp/modern/"},{"id":"jacar-modern-japan","label":"アジア歴史資料センター『近代日本とアジア』","url":"https://www.jacar.go.jp/modernjapan/"},{"id":"national-archives-modern","label":"国立公文書館 近現代史デジタル展示","url":"https://www.archives.go.jp/exhibition/digital/"},{"id":"mofa-diplomatic-archives","label":"外務省外交史料館","url":"https://www.mofa.go.jp/mofaj/annai/honsho/shiryo/"}]}; window.SOCIAL_WORKSHEET_UNITS = window.SOCIAL_WORKSHEET_UNITS || []; window.SOCIAL_WORKSHEET_UNITS.push(unit); })();
+(() => {
+  const unit = {
+    id:"hs-history-comprehensive-massification-questions-001", title:"国際秩序の変化や大衆化への問い", subtitle:"資料から20世紀前半の国際関係・社会・生活の変化を問いにする",
+    schoolStage:"high-school", field:"history", formalCourse:"歴史総合", formalPlacement:"C「国際秩序の変化や大衆化と私たち」(1) 国際秩序の変化や大衆化への問い", unit:"歴史総合", era:"20世紀前半", practicalGradeGroup:"高校・歴史総合", factcheckStatus:"verified",
+    keyPoint:"国際関係の緊密化、アメリカ合衆国とソヴィエト連邦の台頭、植民地の独立、大衆の政治的・経済的・社会的地位の変化、生活様式の変化などの資料を読み取り、国際秩序の変化や大衆化に伴う生活・社会の変容について問いを表現する。",
+    timeline:[],
+    facts:[
+      { id:"hc-c1-f1", claim:"歴史総合C(1)では、国際秩序の変化や大衆化に伴う生活や社会の変容について、資料から情報を読み取ったりまとめたりしながら考察し、自分自身の問いを表現する。", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" },
+      { id:"hc-c1-f2", claim:"C(1)で例示される資料の観点には、国際関係の緊密化、アメリカ合衆国とソヴィエト連邦の台頭、植民地の独立、大衆の政治的・経済的・社会的地位の変化、生活様式の変化などがある。", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" }
+    ],
+    sections:[
+      { id:"q", heading:"国際秩序の変化を問う", lead:"複数の資料を比較・関連付け、国家間の関係性がどのように変わったかを考える。", sentences:[
+        { id:"hc-c1-01", template:"国際関係の緊密化や米ソの台頭などを示す資料から、自分自身の{{問い}}を表現する。", terms:["問い"], importance:"A", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" },
+        { id:"hc-c1-02", template:"20世紀前半には、{{アメリカ合衆国とソヴィエト連邦の台頭}}など国際秩序に関わる変化が見られた。", terms:["アメリカ合衆国とソヴィエト連邦の台頭"], importance:"A", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" }
+      ]},
+      { id:"mass", heading:"大衆化の変化を問う", lead:"政治・経済・社会的地位や生活様式の変化を、資料から読み取る。", sentences:[
+        { id:"hc-c1-03", template:"大衆の政治的・経済的・社会的な{{地位の変化}}に関する資料を活用する。", terms:["地位の変化"], importance:"A", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" },
+        { id:"hc-c1-04", template:"大量消費や都市化などを含む{{生活様式の変化}}も、大衆化を考える資料となる。", terms:["生活様式の変化"], importance:"B", sources:["mext-hs-history-commentary"], factcheckStatus:"verified" }
+      ]}
+    ],
+    images:[],
+    sources:[
+      { id:"mext-hs-history-commentary", label:"文部科学省『高等学校学習指導要領（平成30年告示）解説 地理歴史編』", url:"https://www.mext.go.jp/content/20220802-mxt_kyoiku02-100002620_03.pdf" }
+    ]
+  };
+  window.SOCIAL_WORKSHEET_UNITS = window.SOCIAL_WORKSHEET_UNITS || [];
+  window.SOCIAL_WORKSHEET_UNITS.push(unit);
+})();
