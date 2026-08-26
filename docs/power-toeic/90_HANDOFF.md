@@ -2,137 +2,131 @@
 
 ## Current state
 
-**Phase 3 / Task 3.1 versioned browser persistence is complete. The exact next APP TRACK task is Phase 3 / Task 3.2 — deterministic mastery engine.**
+**Phase 3 is complete. The exact next APP TRACK task is Phase 4 / Task 4.1 — platform-neutral workout recipe model.**
 
-The Power TOEIC app/UI track remains separate from the production question-database track. Production taxonomy authoring, Gold-bank production, bulk generation, production QA and database scaling remain external.
+The Power TOEIC app/UI track remains separate from production taxonomy/question generation and QA. This work did not edit production question data.
 
-## Completed through Phase 2
+## Completed foundation
 
-Existing Web reference implementation under `subjects/english/power-toeic/` already provides:
+The Web reference implementation now includes:
 
-- mobile-first HTML/CSS/ES-module quiz shell;
-- `QuestionBankRepository` + tiny synthetic fixture bank;
+- `QuestionBankRepository` with synthetic fixture-only demo data;
 - immutable `QuizSession` and attempt emission;
-- four-choice cloze renderer with immediate feedback;
-- result screen derived only from session attempts;
-- semantic `AssetCatalog` and fail-silent audio boundary.
+- mobile-first four-choice cloze UI and result screen;
+- semantic character/audio `AssetCatalog`;
+- versioned browser persistence through `VersionedAppStore`;
+- deterministic mastery snapshots;
+- deterministic weakness ranking.
 
-Phase 2 verification remains **9 Node tests passed, 0 failed**. No Phase 2 production-content code was changed by Task 3.1.
+## Phase 3.1 persistence
 
-## Task 3.1 completed work
-
-Added:
-
-`subjects/english/power-toeic/js/core/persistence.js`
-
-The persistence boundary is `VersionedAppStore` with a versioned root record:
+`js/core/persistence.js` owns the versioned root:
 
 ```text
-{
-  version: 1,
-  attempts: [],
-  reviewEntries: [],
-  progression: {
-    points: 0,
-    stage: 0
-  }
-}
+version: 1
+attempts: []
+reviewEntries: []
+progression: { points, stage }
 ```
 
-Canonical browser key:
+Invalid JSON, unsupported versions and storage API failures fall back safely. Session attempts are persisted through this boundary; correctness/session state does not depend on persistence.
 
-`power-toeic.app-state`
+Focused persistence verification: **5 tests passed, 0 failed**.
 
-Behavior is deliberately deterministic and conservative:
-
-- missing storage -> return a clean version-1 default record;
-- corrupted JSON -> remove invalid payload when possible and return defaults;
-- unsupported/unknown version -> do not guess migration semantics; reset safely to defaults;
-- storage API read/write/remove exceptions -> fail silently to safe in-memory/default behavior rather than blocking quiz play;
-- returned/saved data is cloned so callers cannot mutate stored state by reference;
-- attempt validation requires question ID/version, skill ID, selected/correct indexes, correctness and non-negative response duration;
-- review entries and progression are already represented as root fields so Phase 5/6 can evolve them without changing the top-level storage boundary.
-
-`createBrowserAppStore()` uses browser `localStorage` when available and falls back to an in-memory key/value implementation when unavailable.
-
-Updated:
-
-`subjects/english/power-toeic/js/main.js`
-
-Each emitted `QuizSession` attempt is now appended through the persistence adapter after answer submission. Correctness/session logic still does not depend on persistence.
+## Phase 3.2 mastery engine
 
 Added:
 
-`subjects/english/power-toeic/tests/persistence.test.js`
+`subjects/english/power-toeic/js/core/mastery.js`
 
-Focused verification covers:
+Initial deterministic/configurable rules:
 
-1. versioned default root;
-2. attempts/review/progression surviving reload;
-3. corrupted JSON safe reset;
-4. unsupported-version deterministic reset;
-5. storage API failures remaining non-fatal.
+- states exposed now: `unknown`, `training`, `weak`;
+- `minimumAttempts = 4`;
+- `recentWindow = 8`;
+- `weakAccuracyThreshold = 0.60`;
+- zero evidence -> `unknown`;
+- some evidence below minimum sample -> `training`;
+- enough evidence with recent accuracy below threshold -> `weak`;
+- enough evidence at/above threshold -> `training`.
 
-Result: **5 focused persistence tests passed, 0 failed** using Node's built-in test runner against the exact new persistence source.
+Important: Phase 3 deliberately does **not** expose `mastered`. Concentrated/labeled practice alone can never create a permanent mastered state. The snapshot already reserves deterministic `mixed` and `review` evidence counters so Phase 5 can introduce the transfer/review gate without redesigning the domain model.
 
-## Current Web architecture
+Each snapshot includes overall attempts/correct/accuracy, recent-window equivalents, plus mixed/review evidence summaries. The engine consumes plain attempt history and external `skillId`; it has no DOM, character or question-generation dependency.
+
+## Phase 3.3 weakness ranking
+
+Added:
+
+`subjects/english/power-toeic/js/core/weakness.js`
+
+Ranking is deterministic and explainable:
+
+- only attempted skills are ranked;
+- unattempted/unknown skills are not mislabeled as demonstrated weakness;
+- score uses recent error evidence with higher weight plus overall error evidence;
+- a demonstrated `weak` mastery state adds a small explicit bonus;
+- ties resolve by sample count then stable skill ID ordering.
+
+This produces a ranked skill list suitable for the later weakness workout builder, but does not itself choose questions or mutate mastery.
+
+## Verification
+
+Added:
+
+`subjects/english/power-toeic/tests/mastery-weakness.test.js`
+
+Focused tests cover:
+
+1. no evidence / insufficient evidence / weak / improving-training state distinction;
+2. mixed/review evidence capture without promoting practice to mastered;
+3. deterministic snapshot ordering including requested unknown skill IDs;
+4. weakness ranking excluding unknown skills and prioritizing stronger error evidence.
+
+Result: **4 focused mastery/weakness tests passed, 0 failed** using Node's built-in test runner against the exact new source.
+
+Previously established tests remain unchanged:
+
+- Phase 2 adapter/session/renderer/asset contracts: 9 passed;
+- Phase 3.1 persistence: 5 passed.
+
+## Current core tree
 
 ```text
-subjects/english/power-toeic/
-  index.html
-  styles.css
-  package.json
-  js/
-    core/
-      persistence.js
-      session.js
-    data/
-      question-bank-adapter.js
-      fixtures.js
-      taxonomy/        # EXTERNAL CONTENT TRACK; do not edit here
-      questions/       # EXTERNAL CONTENT TRACK; do not edit here
-    renderers/
-      cloze-choice.js
-    ui/
-      result.js
-      asset-catalog.js
-    main.js
-  tests/
-    question-bank-adapter.test.js
-    session.test.js
-    cloze-choice.test.js
-    asset-catalog.test.js
-    persistence.test.js
+subjects/english/power-toeic/js/core/
+  session.js
+  persistence.js
+  mastery.js
+  weakness.js
 ```
 
 ## Exact next work
 
-### Task 3.2 — deterministic mastery engine
+### Task 4.1 — platform-neutral workout recipe model
 
-Add `js/core/mastery.js` or equivalent with one centralized, configurable rule set.
+Create `js/core/workout-builder.js` or a smaller recipe/model module first.
 
 Requirements:
 
-1. consume persisted attempt history rather than DOM/UI state;
-2. produce deterministic per-skill snapshots keyed by externally supplied `skillId`;
-3. keep rules explainable and table-testable;
-4. represent insufficient evidence distinctly from demonstrated weakness;
-5. reserve explicit mixed-test/review evidence fields or counters so Phase 5 can later gate true mastery without redesigning the model;
-6. do **not** mark a skill permanently mastered from concentrated/labeled practice alone;
-7. keep character progression completely separate;
-8. add table-driven tests for no evidence, insufficient sample, weak performance and improving/training performance.
+1. one common recipe representation for QUICK / TRAINING / POWER / WEAKNESS / CUSTOM / TEST / REVIEW;
+2. recipe contains total desired count, skill allocations/weights, selection policy, label/mixed presentation policy and deterministic seed where needed;
+3. validation rejects impossible/negative counts and duplicate/conflicting skill entries;
+4. system-generated weakness recipes and user-edited recipes use exactly the same model;
+5. no recipe owns fixed rendered DOM or character state;
+6. keep JSON/Codable-friendly field shapes for later Swift port;
+7. table-test serialization/validation before adding selection behavior.
 
-After 3.2 passes, proceed to **3.3 weakness ranking** if it can be completed safely in the same run.
+After 4.1, proceed to **4.2 deterministic question selector through `QuestionBankRepository`** if safe.
 
-## Fixed product/platform decisions
+## Fixed decisions
 
-- Web first: HTML/CSS/Vanilla JavaScript/ES Modules.
-- Swift + SwiftUI native port begins only after Web V1 + Phase 9 conformance fixtures are frozen.
+- Web remains HTML/CSS/Vanilla JavaScript/ES Modules until V1 is frozen.
+- Swift + SwiftUI begins only after Web V1 and Phase 9 cross-platform conformance fixtures.
 - JS and Swift share contracts/fixtures, not runtime code.
 - no target-score feature;
 - no skill-to-body-part mapping;
 - no runtime LLM generation;
 - no production question generation in APP TRACK;
-- Drill Sergeant / Trainee UI remains presentation-only;
-- temporary art = Irasutoya through semantic asset IDs, below 20 unique works unless policy changes;
-- audio = existing Google Drive OtoLogic SE through semantic IDs with CC BY 4.0 attribution retained.
+- characters remain presentation-only;
+- temporary character art = Irasutoya via semantic IDs, below 20 unique works unless policy changes;
+- audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved.
