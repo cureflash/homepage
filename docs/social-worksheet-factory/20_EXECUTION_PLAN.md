@@ -12,110 +12,113 @@
 
 ## Throughput policy
 
-Normal scheduled runs are GENERATE runs.
+Normal scheduled runs are GENERATE runs. Target **20 newly generated sequential units per run**. Every new unit remains `pending_factcheck`, is appended to `STATUS.json.unverified_backlog`, and stays out of the public selector. Queue planning does not count toward the 20-unit target. Independent FACTCHECK is a later explicit backlog operation.
 
-- Target: **20 newly generated sequential units per run**.
-- Preserve the production order below; crossing a field/course/stage boundary within a twenty-unit batch is expected when necessary.
-- If a high-school course queue has not yet been expanded, define it from current MEXT curriculum/commentary and continue generating in the same run.
-- Queue planning does not count toward the 20 generated-unit target.
-- Every new unit remains `pending_factcheck` and is appended to `STATUS.json.unverified_backlog`.
-- Pending units stay out of the public selector.
-- Do not automatically fact-check after generation.
-- Independent FACTCHECK is a later explicit backlog operation requested by the user or a deliberate state switch.
-- When fact-checking is requested, verify as many pending units as can be safely handled in one batch and publish only those that pass.
+## Completed production queues
 
-## Junior-high history queue
+### Junior-high history
 
-1. Jomon / Yayoi overview
-2. Yayoi society, small states, Yamatai / Himiko
-3. Kofun period and Yamato polity
-4. Asuka reforms and ritsuryo formation
-5. Nara period
-6. Heian period
-7. Kamakura period
-8. Muromachi period
-9. Sengoku / Azuchi-Momoyama
-10. Edo political system and society
-11. Edo economy / culture / foreign relations
-12. Bakumatsu and Meiji Restoration
-13. Meiji state / industrialization
-14. Imperialism / Sino-Japanese and Russo-Japanese wars
-15. Taisho democracy / interwar Japan
-16. Asia-Pacific War
-17. Postwar Japan
-18. Contemporary Japan and cumulative review
+18-unit queue complete through Contemporary Japan and cumulative review.
 
-## Junior-high civics queue
+### Junior-high civics
 
-1. Constitution and constitutionalism
-2. Fundamental human rights
-3. Diet
-4. Cabinet
-5. Courts
-6. Separation of powers
-7. Elections and political participation
-8. Local government
-9. Market economy / firms / labor
-10. Money / finance
-11. Public finance / taxation
-12. Social security
-13. International society / United Nations
-14. Cumulative review
+14-unit queue complete through cumulative review.
 
-## High-school production order
+### 歴史総合
 
-1. `歴史総合`
-2. `日本史探究`
-3. `世界史探究`
-4. `公共`
+19-unit MEXT-aligned queue complete: A(1)〜D(4). The final seven units completed in the 2026-08-26 20-unit generation batch.
 
-Do not falsely map a formal high-school course to one fixed school year. Store `formalCourse` separately from practical grouping.
+## 日本史探究 — ordered production queue
 
-### 歴史総合 — ordered production queue
+The queue follows the current MEXT large-section order and keeps the formal parent placement in every dataset. Broad MEXT sections are split only for low-density A4 worksheet production.
 
-Preserve the formal MEXT large-section order A `歴史の扉`, B `近代化と私たち`, C `国際秩序の変化や大衆化と私たち`, D `グローバル化と私たち`.
+### A 原始・古代の日本と東アジア
 
-1. A(1) 歴史と私たち
-2. A(2) 歴史の特質と資料
-3. B(1) 近代化への問い
-4. B(2)-a 18世紀のアジアの経済と社会
-5. B(2)-b 産業革命・世界市場・中国の開港・日本の開国
-6. B(3) 国民国家と明治維新
-7. B(4) 近代化と現代的な諸課題
-8. C(1) 国際秩序の変化や大衆化への問い
-9. C(2)-a 第一次世界大戦と国際協調体制
-10. C(2)-b 大衆社会の形成と社会参加の拡大
-11. C(3)-a 世界恐慌・国際協調体制の動揺
-12. C(3)-b 第二次世界大戦と戦後国際秩序
-13. C(4) 国際秩序の変化や大衆化と現代的な諸課題
-14. D(1) グローバル化への問い
-15. D(2)-a 冷戦と植民地独立
-16. D(2)-b 高度経済成長・国際秩序の変容
-17. D(3)-a 冷戦終結・地域統合
-18. D(3)-b 市場経済の変容・情報通信・グローバル化
-19. D(4) 現代的な諸課題の形成と展望
+1. 旧石器時代と日本列島の環境 — generated
+2. 縄文文化と定住生活 — generated
+3. 弥生文化と稲作社会 — generated
+4. 弥生社会の小国と東アジア交流 — generated
+5. 古墳文化とヤマト政権 — generated
+6. 歴史資料と原始・古代の展望 — generated
+7. 飛鳥時代の国家形成 — generated
+8. 律令国家の成立 — generated
+9. 奈良時代の政治と社会 — generated
+10. 天平文化と東アジア交流 — generated
+11. 平安初期の政治と地方支配 — generated
+12. 摂関政治と貴族社会 — generated
+13. 荘園・公領と武士の台頭 — generated
 
-The `-a/-b` splits are worksheet-density choices. Retain formal MEXT placement metadata in every dataset.
+### B 中世の日本と世界
 
-### 日本史探究 / 世界史探究 / 公共
+14. 中世への転換：院政・武士の政治進出
+15. 中世への転換：土地支配の変容
+16. 歴史資料と中世の展望
+17. 鎌倉幕府の成立と公武関係
+18. 御家人制と土地支配
+19. 宋との交流と中世経済
+20. 元寇と鎌倉幕府の変容
+21. 鎌倉新仏教と中世文化
+22. 建武政権・南北朝内乱
+23. 室町幕府と守護大名
+24. 日明貿易と東アジア
+25. 琉球王国と列島周辺の交流
+26. 農業・商工業・流通の発達
+27. 村落・都市の自立
+28. 応仁の乱と戦国大名
+29. 室町文化・地域文化・文化の融合
 
-Before production reaches each formal course, expand it into an ordered unit queue grounded in the current MEXT curriculum/commentary. This queue-definition work is mandatory but does not count as one of the 20 worksheet units for the run. Then continue generating until the run reaches 20 units or a real blocker occurs.
+### C 近世の日本と世界
 
-Later expansion of 倫理 / 政治・経済 is allowed only after the core sequence above.
+30. 近世への転換：戦国社会と統一
+31. ヨーロッパ人来航と世界の結び付き
+32. 歴史資料と近世の展望
+33. 織豊政権と統一事業
+34. 検地・刀狩と社会秩序
+35. 江戸幕府の成立と幕藩体制
+36. 大名統制と朝廷・寺社
+37. 近世の対外関係と四つの口
+38. 身分・村・町と近世社会
+39. 農業・商品生産・交通の発達
+40. 元禄文化
+41. 幕府財政と享保の改革
+42. 田沼政治と寛政の改革
+43. 化政文化と教育・学問
+44. 社会変動と天保の改革
+45. ロシア・欧米船接近と海防
+
+### D 近現代の地域・日本と世界
+
+46. 近代への転換：開国と幕末政治
+47. 明治維新と新政府
+48. 近代国家形成と自由民権運動
+49. 大日本帝国憲法と議会政治
+50. 条約改正・日清戦争
+51. 日露戦争と帝国主義
+52. 近代産業・社会・文化
+53. 第一次世界大戦と日本
+54. 大正デモクラシーと大衆社会
+55. 世界恐慌と政党政治の動揺
+56. 満州事変から日中戦争
+57. アジア太平洋戦争と戦時社会
+58. 敗戦・占領と戦後改革
+59. 冷戦・講和・国際社会復帰
+60. 高度経済成長と社会変容
+61. 1970年代以降の経済・政治・社会
+62. 冷戦終結とグローバル化
+63. 現代日本の課題を歴史的に探究する
+
+Next start is queue item 14, `japanese-history-medieval-transition`.
+
+## High-school production order after 日本史探究
+
+1. `世界史探究`
+2. `公共`
+
+Before reaching each course, expand its detailed ordered queue from the current MEXT curriculum/commentary; queue planning does not count as generated units. Later expansion of 倫理 / 政治・経済 is allowed only after the core sequence.
 
 ## Per-unit generation acceptance criteria
 
-A unit may enter the pending backlog only when:
-
-- explanation-sheet text uses concise original wording derived from facts, not copied textbook prose;
-- core terms are explicit and can render red in study mode;
-- useful non-generated source images are included where they materially help;
-- generation-stage image source/license metadata is recorded;
-- cloze generation uses explicit core terms only;
-- seeded generation remains reproducible;
-- answer view maps to the explicit blank targets;
-- A4 information density remains controlled;
-- the unit is clearly `pending_factcheck` and is not publicly registered.
+A unit may enter the pending backlog only when explanation text is concise original wording; core terms are explicit; cloze generation uses only those terms; seeded generation remains reproducible; answer mapping is explicit; A4 density is controlled; image sources/licenses are recorded when used; and the unit remains `pending_factcheck` and unpublished.
 
 ## Publication acceptance criteria
 
