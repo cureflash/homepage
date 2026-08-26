@@ -27,9 +27,9 @@ class PhysicsBasicEnergyTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_exactly_fifty_new_focused_variants(self):
+    def test_exactly_one_hundred_ten_focused_energy_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 50)
+        self.assertEqual(len(batches), 110)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
 
     def test_deterministic_regeneration_and_independent_answers(self):
@@ -45,10 +45,10 @@ class PhysicsBasicEnergyTests(unittest.TestCase):
             for problem in problems:
                 self.assertTrue(validate_science_problem(problem))
 
-    def test_all_new_problem_sets_are_distinct(self):
+    def test_all_energy_problem_sets_are_distinct(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 50)
-        self.assertEqual(len(set(hashes)), 50)
+        self.assertEqual(len(hashes), 110)
+        self.assertEqual(len(set(hashes)), 110)
 
     def test_work_relation_is_parallel_and_has_three_directions(self):
         topic = PHYSICS_BASIC_ENERGY_TOPICS["work-parallel"]
@@ -66,6 +66,38 @@ class PhysicsBasicEnergyTests(unittest.TestCase):
         self.assertEqual(topic["spec"]["inputs"], ["power", "time"])
         self.assertEqual(set(topic["modes"]), {"basic-work-rate", "reverse-time"})
 
+    def test_gravitational_potential_uses_mgh_and_reference_height(self):
+        topic = PHYSICS_BASIC_ENERGY_TOPICS["gravitational-potential"]
+        self.assertEqual(topic["formula"], "U = mgh（基準面を U = 0 とする）")
+        self.assertEqual(topic["spec"]["relation"], "product")
+        self.assertEqual(topic["spec"]["inputs"], ["mass", "gravity", "height"])
+        self.assertEqual(topic["spec"]["variables"]["gravity"]["values"], [9.8])
+        self.assertIn("基準面", topic["spec"]["variables"]["height"]["label"])
+        self.assertEqual(
+            set(topic["modes"]),
+            {"basic-potential-energy", "reverse-mass", "reverse-height"},
+        )
+
+    def test_kinetic_energy_uses_real_speed_squared_relation(self):
+        topic = PHYSICS_BASIC_ENERGY_TOPICS["kinetic-energy"]
+        self.assertEqual(topic["formula"], "K = 1/2 mv²")
+        self.assertEqual(topic["spec"]["relation"], "half-product-last-square")
+        self.assertEqual(topic["spec"]["inputs"], ["mass", "speed"])
+        self.assertNotIn("speed_squared", topic["spec"]["variables"])
+        self.assertEqual(
+            set(topic["modes"]),
+            {"basic-kinetic-energy", "reverse-mass", "reverse-speed"},
+        )
+
+        direct = generate_formula_drill(topic["spec"], 6721, 1, solve_for="kinetic_energy")[0]
+        mass = direct["known"]["mass"]
+        speed = direct["known"]["speed"]
+        self.assertAlmostEqual(direct["answer"], 0.5 * mass * speed ** 2)
+
+        reverse_speed = generate_formula_drill(topic["spec"], 6721, 1, solve_for="speed")[0]
+        expected_speed = (2 * reverse_speed["known"]["kinetic_energy"] / reverse_speed["known"]["mass"]) ** 0.5
+        self.assertAlmostEqual(reverse_speed["answer"], expected_speed)
+
     def test_expected_units_and_no_fixed_grade_metadata(self):
         seen_units = set()
         for topic in PHYSICS_BASIC_ENERGY_TOPICS.values():
@@ -75,14 +107,23 @@ class PhysicsBasicEnergyTests(unittest.TestCase):
                 unit = definition.get("unit")
                 if unit:
                     seen_units.add(unit)
-        self.assertEqual(seen_units, {"J", "N", "m", "W", "s"})
+        self.assertEqual(seen_units, {"J", "N", "m", "W", "s", "kg", "m/s²", "m/s"})
 
-    def test_corrupted_numeric_answer_is_rejected(self):
-        _, _, _, _, problems = self.generated_batches()[0]
-        bad = copy.deepcopy(problems[0])
-        bad["answer"] = bad["answer"] + 1
+    def test_corrupted_numeric_answers_are_rejected_for_product_and_square_relations(self):
+        first_product = self.generated_batches()[0][-1][0]
+        bad_product = copy.deepcopy(first_product)
+        bad_product["answer"] = bad_product["answer"] + 1
         with self.assertRaises(AssertionError):
-            validate_science_problem(bad)
+            validate_science_problem(bad_product)
+
+        kinetic = PHYSICS_BASIC_ENERGY_TOPICS["kinetic-energy"]
+        square_problem = generate_formula_drill(
+            kinetic["spec"], 6721, 1, solve_for="speed"
+        )[0]
+        bad_square = copy.deepcopy(square_problem)
+        bad_square["answer_spec"]["value"] = bad_square["answer_spec"]["value"] + 1
+        with self.assertRaises(AssertionError):
+            validate_science_problem(bad_square)
 
 
 if __name__ == "__main__":
