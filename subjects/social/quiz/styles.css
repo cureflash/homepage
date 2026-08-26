@@ -20,11 +20,14 @@ button { font: inherit; }
 .eyebrow { margin: 0 0 6px; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
 h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 .game-description { margin: 8px 0 0; color: var(--muted); }
-.status-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
-.status-bar > div, .question-panel, .answer-panel, .result-panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; }
+.status-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px; }
+.status-bar > div, .start-panel, .question-panel, .answer-panel, .result-panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; }
 .status-bar > div { padding: 10px 14px; }
 .status-label { display: block; margin-bottom: 2px; color: var(--muted); font-size: .75rem; }
 .status-bar strong { font-size: 1.08rem; }
+.start-panel { padding: 24px; text-align: center; }
+.start-panel h2 { margin-top: 0; }
+.start-panel p { color: var(--muted); }
 .question-panel { padding: 18px; text-align: center; }
 .question-label { margin: 0 0 6px; color: var(--muted); font-size: .9rem; }
 .question-text { margin: 0; font-size: clamp(1.8rem, 7vw, 3.1rem); font-weight: 800; }
@@ -59,8 +62,9 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 .game-footer { margin-top: 18px; color: var(--muted); font-size: .75rem; text-align: center; }
 @media (max-width: 560px) {
   .game-shell { padding: 18px 10px 30px; }
-  .status-bar { gap: 6px; }
+  .status-bar { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .status-bar > div { padding: 8px; text-align: center; }
+  .start-panel { padding: 18px 12px; }
   .answer-panel { padding: 8px; }
   .answer-root, .map-loading, .map-error { min-height: 260px; }
   .choice-grid { grid-template-columns: 1fr; }
