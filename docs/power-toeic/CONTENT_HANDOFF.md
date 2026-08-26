@@ -2,12 +2,9 @@
 
 ## Current state
 
-Production content generation now contains **1200 persisted generated candidates**.
+Production content now contains **1300 persisted generated candidates** across **13 complete micro-skills**. QA has independently checked 200 of them: **183 verified / 17 needs_revision / 0 rejected**, leaving **1100 unchecked `pending_validation`** questions.
 
-- **12 micro-skills are complete at 100 questions each**.
-- All 1200 persisted questions remain `pending_validation`.
-- No QA decision was made by this generation run.
-- `generation_complete` remains **false**. Continue GENERATE only.
+`generation_complete` and `validation_complete` both remain **false**.
 
 ## Taxonomy
 
@@ -27,54 +24,76 @@ Canonical taxonomy remains `subjects/english/power-toeic/js/data/taxonomy/part5-
 10. `p5.verb.present_vs_past` — 100
 11. `p5.verb.present_perfect_vs_past` — 100
 12. `p5.verb.active_vs_passive` — 100
+13. `p5.verb.modal_base_form` — 100
 
-Completed subtotal: **1200**.
+Completed subtotal: **1300**.
 
-## Work completed this run
+## Work completed this run — GENERATE
 
-Generated and persisted the full 100-question `p5.verb.active_vs_passive` micro-skill in four 25-question pending batches:
+A parallel worker had already persisted the first 25 `p5.verb.modal_base_form` questions at:
 
-- 0001–0025: `subjects/english/power-toeic/js/data/questions/part5/verbs/active-vs-passive/pending/batch-20260827-011-part1.json`
-- 0026–0050: `.../batch-20260827-011-part2.json`
-- 0051–0075: `.../batch-20260827-011-part3.json`
-- 0076–0100: `.../batch-20260827-011-part4.json`
+- `subjects/english/power-toeic/js/data/questions/part5/verbs/modal-base-form/pending/batch-20260827-012-part1.json`
 
-Coverage:
+That checkpoint was reconciled rather than duplicated. This run then persisted:
 
-- 0001–0025: singular simple-past passive with explicit agents;
-- 0026–0050: plural simple-present passive;
-- 0051–0075: active simple past with explicit finished-time anchors;
-- 0076–0100: active habitual present.
+- 0026–0050: `.../batch-20260827-012-part2.json`
+- 0051–0075: `.../batch-20260827-012-part3.json`
+- 0076–0100: `.../batch-20260827-012-part4.json`
 
-Generation-time structural checks:
+The combined 100-question skill uses modal verbs such as `can / must / should / may / might / will / could` with the tested rule that the following main verb takes the base form.
 
-- stable sequential IDs 0001–0100;
-- exactly one blank per stem;
-- four distinct choices per item;
-- valid proposed-answer indexes;
+Generation checks over the combined 100:
+
+- sequential unique IDs 0001–0100;
+- one blank per stem;
+- four distinct choices and valid proposed-answer index;
 - answer positions A/B/C/D = **25/25/25/25**;
 - exact duplicate stems: **0**;
-- initial near-duplicate scan found four pairs at/above 0.94; those stems were rewritten before persistence;
-- final intra-skill SequenceMatcher similarity >= 0.94: **0 pairs**;
-- maximum final intra-skill similarity: **0.9125**;
-- all items remain `pending_validation`;
-- no QA status was promoted.
+- intra-skill SequenceMatcher similarity >= 0.94: **0 pairs**;
+- maximum observed intra-skill similarity: about **0.671**.
 
-The full cross-bank machine near-duplicate scan against all 1200 questions is still **not claimed complete** because this runtime did not execute a full local-repository global scan. Independent VALIDATION must later perform global duplicate, naturalness, ambiguity, all-choice substitution, and explanation review.
+A draft morphology helper would have produced `shiped / shiping` for one item; this was detected before persistence and corrected to `shipped / shipping`.
+
+A full cross-bank semantic near-duplicate scan against all 1300 candidates was **not completed in this run**, so global duplicate clearance is not claimed.
+
+## Work completed this run — VALIDATION
+
+The oldest remaining pending batch `2026-08-26-manual-001` / `p5.pos.adjective_before_noun` was independently re-solved question-by-question before consulting proposed answers/explanations.
+
+Result:
+
+- checked: **100**
+- verified: **96**
+- needs_revision: **4**
+- rejected: **0**
+
+The four revision items are IDs `0037`–`0040`. Each uses `secure` and `secured` as competing adjective choices in noun phrases such as connection/network/storage method/system; both readings are defensible, so these items are not uniquely solvable.
+
+Canonical QA record:
+
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-26-manual-001.qa.json`
+
+Approved-ID gate:
+
+`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/adjective-before-noun/verified/batch-20260826-001-approved-ids.json`
 
 ## Exact next generation point
 
-Resume at `p5_verb_modal_base_form_0001` for `p5.verb.modal_base_form` and generate toward 100 questions before marking the skill complete.
+Resume at:
 
-Then continue in canonical taxonomy order:
+- micro-skill: `p5.verb.to_infinitive_pattern`
+- question ID: `p5_verb_to_infinitive_pattern_0001`
 
-1. `p5.verb.to_infinitive_pattern`
-2. `p5.verb.gerund_pattern`
-3. `p5.verb.causative_have_make_let`
-4. next canonical taxonomy item
+Then continue in canonical taxonomy order.
 
-Normal target remains up to four complete 100-question micro-skills per run, but safe persisted checkpoints take priority over padding.
+## Exact next QA point
+
+Resume the oldest unchecked batch at:
+
+- file: `subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/adverb-modifies-verb/pending/batch-20260826-001.json`
+- micro-skill: `p5.pos.adverb_modifies_verb`
+- question ID: `p5_pos_adverb_modifies_verb_0001`
 
 ## Phase transition
 
-Generation remains incomplete: **12 of 44 micro-skills are complete**. Do not enter VALIDATION until every target micro-skill reaches its required count and CONTENT status records `generation_complete: true`.
+Generation remains incomplete at **13/44 micro-skills**. Continue normal combined GENERATE + VALIDATION runs. Do not bulk-promote unchecked questions. Once all 44 skills are generated, stop new generation and switch to validation-only until pending/revision work is exhausted.
