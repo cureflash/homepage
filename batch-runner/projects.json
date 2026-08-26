@@ -50,8 +50,8 @@
     },
     {
       "name": "社会クイズ",
-      "enabled": false,
-      "lane": "paused",
+      "enabled": true,
+      "lane": "education",
       "branch": "main",
       "recoverDirty": true,
       "statusFile": "docs/social-quiz-factory/STATUS.json",
