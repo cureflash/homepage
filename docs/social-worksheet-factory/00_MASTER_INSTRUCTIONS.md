@@ -16,44 +16,43 @@ Never recreate or use the retired root path `social-worksheets/`.
 5. High-school World History Advanced (`世界史探究`)
 6. High-school civics (`公共` and later related courses)
 
-Do not force a topic into an exact school year when the national curriculum does not prescribe that year. Store school stage, formal subject/field, unit, era, and a practical grade grouping separately.
+Do not force a topic into an exact school year when the national curriculum does not prescribe that year. Store school stage, formal subject/field, unit, era, and practical grouping separately.
 
 ## Core workflow — generation backlog mode
 
-As of 2026-08-26, the old one-unit GENERATE → FACTCHECK alternation is retired for normal scheduled runs.
-
-The default scheduled mode is high-volume GENERATE-only production. Fact-checking is accumulated and performed later as an explicit batch operation.
+The old per-unit GENERATE → FACTCHECK alternation is retired for normal scheduled runs. Normal scheduled operation is high-volume GENERATE-only production. Independent fact-checking is accumulated for a later explicit batch.
 
 `STATUS.json` is authoritative for the current production position, generation target, and unverified backlog.
 
 ### Normal scheduled GENERATE run
 
-1. Read latest `main`, this file, `20_EXECUTION_PLAN.md`, `STATUS.json`, and `90_HANDOFF.md`.
+1. Start from latest `main` and read this file, `20_EXECUTION_PLAN.md`, `STATUS.json`, and `90_HANDOFF.md`.
 2. Resume from the first ungenerated unit in the fixed production order.
-3. Target **10 newly generated units per scheduled run**. This is a throughput target, not permission to create weak or duplicate material. If a genuinely hard blocker prevents ten safe units, finish the largest coherent safe batch and record the exact blocker.
-4. A run may cross a history/civics or school-stage boundary when needed to reach ten units, but it must preserve the production order and update stage/field metadata correctly.
-5. Collect claims from authoritative/public sources, but do not copy textbook prose.
-6. Convert source material into structured facts, then write short original study sentences from those facts.
-7. Mark the minimum core terms that should be memorized. These terms are rendered red on the explanation sheet and are the only default cloze targets.
-8. Prefer a small amount of information per A4 explanation sheet. Use several concrete historical-source images where useful.
-9. Do not use AI-generated historical images. Use photographs/scans of commonly taught artifacts, portraits, maps, ruins, documents, etc. whose reuse terms have been checked at generation time and must be rechecked before publication. Record exact source and license metadata.
-10. Generate/update worksheet data from structured sentence definitions rather than hand-authoring many worksheet variants.
-11. Every newly generated fact, learner sentence, image record, key-point claim, and timeline claim remains `pending_factcheck`.
-12. Append every generated unit ID to `STATUS.json.unverified_backlog` without deleting earlier pending units.
-13. **Do not add pending units to the public `subjects/social/worksheets/index.html` selector.** Public learner-facing material remains verified-only.
-14. At the end of a normal scheduled run, keep the factory in generation mode and advance to the next ungenerated unit. Do not automatically switch to fact-check merely because a batch was generated.
+3. Target **20 newly generated sequential units per scheduled run**. Twenty is the normal target, not a ceiling and not permission to create weak/duplicate material. If a real source or technical blocker prevents twenty safe units, complete the largest coherent safe batch and record the exact blocker.
+4. Cross field/course/school-stage boundaries when needed to reach twenty, while preserving curriculum order and correct metadata.
+5. When production reaches a high-school course whose detailed queue has not yet been defined, use the current MEXT Course of Study/commentary to create its ordered queue first, then continue generating within the same run. Queue planning itself does not count as a generated worksheet unit.
+6. Collect candidate facts from authoritative/public sources; do not copy textbook prose.
+7. Convert source material into structured facts, then write concise original learner sentences.
+8. Mark only genuine core terms as explicit `terms`. Those terms are rendered red in study mode and are the only default cloze targets.
+9. Keep each A4 explanation sheet intentionally low-density. Use useful real historical/official source images where appropriate.
+10. Never use AI-generated historical images. Record exact source/license candidates for every external image; these remain provisional until independent fact-check.
+11. Generate worksheet behavior from structured sentence definitions, preserving deterministic seeded blank selection. Never blank arbitrary nouns.
+12. Every newly generated fact, learner sentence, key-point/timeline claim, and image record remains `pending_factcheck`.
+13. Append every generated unit ID to `STATUS.json.unverified_backlog` without deleting earlier pending units.
+14. Pending units must NOT be added to the public `subjects/social/worksheets/index.html` selector. Public learner-facing content remains verified-only.
+15. At the end of a normal run, remain in generation mode and advance `active_unit` to the next ungenerated curriculum item. Do not automatically switch to fact-check.
 
-### FACTCHECK batch — only when explicitly requested or state is deliberately switched
+### FACTCHECK batch — only when explicitly requested or deliberately switched
 
-1. Do not run fact-check merely because pending material exists. A user instruction or deliberate state change must request batch fact-checking.
-2. Treat every pending sentence and image claim as untrusted. Do not approve it merely because the generator supplied a citation.
+1. Do not fact-check merely because pending material exists.
+2. Treat every selected pending sentence, fact, key-point/timeline claim, and image claim as untrusted.
 3. Independently reopen MEXT curriculum/commentary and authoritative museum/archive/government/primary sources from scratch.
-4. Verify dates, names, causal relations, terminology, curriculum placement, key-point/timeline wording, and the exact image identity/license/source.
-5. Correct or reject unsupported claims. Record what source supports the final wording.
-6. Do not copy protected textbook prose. Facts may be rewritten into original concise sentences.
-7. Fact-check as large a backlog batch as can be safely completed; the intended use is to verify many accumulated units together rather than alternating after each unit.
-8. Only verified units may be added to the public selector. Remove each approved unit from `unverified_backlog` and keep any unresolved units pending.
-9. After a requested fact-check batch, return to generation mode unless the user explicitly asks to continue fact-checking.
+4. Verify dates, names, causal relations, terminology, curriculum placement, exact image identity, provenance and license.
+5. Correct or reject unsupported wording; record evidence for the final wording.
+6. Do not copy protected textbook prose.
+7. Fact-check as large a backlog batch as can be safely completed. The intended workflow is large independent review batches, not alternation after each unit.
+8. Only verified units may be added to the public selector. Remove only passed units from `unverified_backlog`.
+9. Return to generation mode afterward unless the user explicitly requests continued fact-checking.
 
 ## Worksheet model
 
@@ -64,24 +63,21 @@ Each knowledge item should contain, at minimum:
 - `field`
 - `unit`
 - `era`
+- high-school `formalCourse` where applicable
 - `importance`
-- original `sentenceTemplate`
+- original sentence/template
 - explicit `terms` / cloze targets
 - `sources`
 - `factcheckStatus`
 
-The generator must blank only explicit cloze targets. It must not randomly delete arbitrary nouns.
-
 ## Image rule
 
-- Historical image generation is prohibited for published learning sheets.
-- Prefer iconic objects that commonly appear in school history materials: pottery, dogu, dotaku, gold seal, portraits, maps, ruins, documents, etc.
-- Verify the actual file license/terms, not merely the host website.
-- Attribution/license notes must remain available in the printable output or accompanying source note.
-- A generation-stage license check is provisional until the later independent fact-check confirms the exact file and terms.
+- Historical image generation is prohibited for learner-facing sheets.
+- Prefer iconic real sources: artifacts, portraits, maps, ruins, documents, official photographs, etc.
+- Verify the actual file license/terms rather than merely the host website.
+- Attribution/license notes must remain available in printable output or accompanying source notes.
+- Generation-stage license checks are provisional until the later independent fact-check.
 
 ## Publication rule
 
-A sheet is publishable only when its included claims are independently fact-checked, cloze targets map to valid answers, the generated worksheet is reproducible from a seed, the print layout fits the intended paper size, and image reuse terms are independently verified.
-
-Pending backlog units may exist in `subjects/social/worksheets/data/`, but they must not be learner-facing through the public selector until verified.
+A sheet is publishable only after independent factual and image-license verification, valid cloze/answer mapping, reproducible seeded generation, and acceptable A4 print layout. Pending backlog units may exist under `subjects/social/worksheets/data/`, but they must remain outside the public selector until verified.
