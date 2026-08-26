@@ -7,8 +7,8 @@
     "node": ">=18"
   },
   "scripts": {
-    "start": "node runner.mjs",
-    "check": "node --check runner.mjs"
+    "start": "node parallel-runner.mjs",
+    "check": "node --check runner.mjs && node --check parallel-runner.mjs"
   },
   "dependencies": {
     "@openai/codex-sdk": "0.149.1"

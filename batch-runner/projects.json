@@ -3,6 +3,7 @@
     {
       "name": "社会プリント",
       "enabled": true,
+      "lane": "education",
       "branch": "main",
       "recoverDirty": true,
       "statusFile": "docs/social-worksheet-factory/STATUS.json",
@@ -18,6 +19,7 @@
     {
       "name": "理科プリント",
       "enabled": true,
+      "lane": "education",
       "branch": "main",
       "recoverDirty": true,
       "statusFile": "docs/science-worksheet-factory/STATUS.json",
@@ -33,6 +35,7 @@
     {
       "name": "算数・数学プリント",
       "enabled": true,
+      "lane": "education",
       "branch": "main",
       "recoverDirty": true,
       "statusFile": "docs/worksheet-factory/curriculum/elementary/grade-04/STATUS.json",
@@ -48,6 +51,7 @@
     {
       "name": "社会クイズ",
       "enabled": true,
+      "lane": "education",
       "branch": "main",
       "recoverDirty": true,
       "statusFile": "docs/social-quiz-factory/STATUS.json",
@@ -62,8 +66,32 @@
       "nextPrompt": "次を進めて"
     },
     {
+      "name": "Spell Operator",
+      "enabled": true,
+      "lane": "spell-operator",
+      "repositoryPath": "../../spell-operator",
+      "cloneUrl": "https://github.com/cureflash/spell-operator.git",
+      "branch": "main",
+      "recoverDirty": true,
+      "statusFile": "docs/runtime-migration/STATUS.json",
+      "handoffFile": "docs/runtime-migration/90_HANDOFF.md",
+      "instructionFiles": [
+        "AGENTS.md",
+        "docs/runtime-migration/00_MASTER_INSTRUCTIONS.md",
+        "docs/runtime-migration/10_DESIGN_PRINCIPLES.md",
+        "docs/runtime-migration/20_EXECUTION_PLAN.md",
+        "docs/runtime-migration/30_BASELINE_BEFORE_MIGRATION.md",
+        "docs/RUNTIME_ARCHITECTURE.md"
+      ],
+      "extraInstructions": "これは cureflash/spell-operator の runtime migration 継続作業です。docs/runtime-migration/00_MASTER_INSTRUCTIONS.md の scheduled-run 手順を厳守し、最新mainから最初の未完了タスクだけを安全なcoherent checkpointまで進めてください。現在の開始点は Phase 9 / Task 9.5 の BattleScene / presenter integration です。実装前に docs/BATTLE_UI.md と現在のbattle/SceneManager/bootstrap/field->battle->field経路を完全に確認してください。Battle System v2を正本とし、BattleEngineをDOM/audio/GameStoreから独立させたままにしてください。Phase 10 progression cleanupやPhase 11 spell-shape cleanupを不用意に混ぜず、未決定仕様や新しいPokemon mechanicsを推測追加しないでください。最新mainのCIが失敗している場合は新機能よりその原因修正を優先してください。完全なNode 22テストを実行し、20_EXECUTION_PLAN.md、90_HANDOFF.md、STATUS.jsonを必ず更新してください。",
+      "maxRuns": 1,
+      "doneStatuses": ["done", "completed", "complete"],
+      "nextPrompt": "次を進めて"
+    },
+    {
       "name": "ゆっくり動画生成",
       "enabled": true,
+      "lane": "yukkuri",
       "repositoryPath": "../../makemovie",
       "cloneUrl": "https://github.com/cureflash/makemovie.git",
       "branch": "agent/initial-yukkuri-pipeline",
