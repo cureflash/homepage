@@ -29,9 +29,9 @@ class PhysicsBasicMotionTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_exactly_one_hundred_ten_focused_variants(self):
+    def test_exactly_one_hundred_seventy_focused_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 110)
+        self.assertEqual(len(batches), 170)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
 
     def test_deterministic_regeneration_and_independent_answers(self):
@@ -48,11 +48,11 @@ class PhysicsBasicMotionTests(unittest.TestCase):
 
     def test_all_problem_sets_are_distinct(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 110)
-        self.assertEqual(len(set(hashes)), 110)
+        self.assertEqual(len(hashes), 170)
+        self.assertEqual(len(set(hashes)), 170)
 
-    def test_course_stays_one_dimensional_and_uses_expected_units(self):
-        expected_units = {"m", "s", "m/s", "m/s²"}
+    def test_expected_units_and_shared_relations_are_present(self):
+        expected_units = {"m", "s", "m/s", "m/s²", "N", "kg"}
         seen_units = set()
         for topic in PHYSICS_BASIC_MOTION_TOPICS.values():
             for definition in topic["spec"]["variables"].values():
@@ -61,9 +61,7 @@ class PhysicsBasicMotionTests(unittest.TestCase):
                     seen_units.add(unit)
         self.assertTrue(expected_units.issubset(seen_units))
         relations = {topic["spec"]["relation"] for topic in PHYSICS_BASIC_MOTION_TOPICS.values()}
-        self.assertIn("product", relations)
-        self.assertIn("sum", relations)
-        self.assertIn("offset-product", relations)
+        self.assertTrue({"product", "sum", "difference", "offset-product"}.issubset(relations))
 
     def test_uniform_acceleration_relation_is_independently_checked(self):
         topic = PHYSICS_BASIC_MOTION_TOPICS["uniform-acceleration"]
@@ -78,6 +76,26 @@ class PhysicsBasicMotionTests(unittest.TestCase):
         self.assertEqual(topic["spec"]["variables"]["g"]["values"], [9.8])
         self.assertEqual(topic["formula"], "v = g × t")
         self.assertNotIn("height", topic["skill"])
+
+    def test_net_force_uses_explicit_direction_and_difference_relation(self):
+        topic = PHYSICS_BASIC_MOTION_TOPICS["net-force-1d"]
+        self.assertEqual(topic["spec"]["relation"], "difference")
+        self.assertEqual(topic["spec"]["inputs"], ["fright", "fleft"])
+        self.assertIn("右向きを正", topic["formula"])
+        self.assertIn("右向きを正", topic["spec"]["variables"]["fnet"]["label"])
+        for mode in topic["modes"].values():
+            problems = generate_formula_drill(topic["spec"], 6651, 20, solve_for=mode["solve_for"])
+            for problem in problems:
+                self.assertEqual(problem["relation"], "difference")
+                self.assertTrue(validate_science_problem(problem))
+
+    def test_newton_second_law_uses_net_force_mass_and_acceleration(self):
+        topic = PHYSICS_BASIC_MOTION_TOPICS["newton-second-law"]
+        self.assertEqual(topic["formula"], "F = m × a")
+        self.assertEqual(topic["spec"]["relation"], "product")
+        self.assertEqual(topic["spec"]["result"], "force")
+        self.assertEqual(topic["spec"]["inputs"], ["mass", "acceleration"])
+        self.assertEqual(set(topic["modes"]), {"basic-force", "reverse-mass", "reverse-acceleration"})
 
     def test_corrupted_numeric_answer_is_rejected(self):
         _, _, _, _, problems = self.generated_batches()[0]

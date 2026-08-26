@@ -34,6 +34,10 @@ def _relation_result(relation, inputs):
         return prod(inputs)
     if relation == 'sum':
         return sum(inputs)
+    if relation == 'difference':
+        if len(inputs) != 2:
+            raise ValueError('difference relation needs exactly two inputs')
+        return inputs[0] - inputs[1]
     if relation == 'offset-product':
         if len(inputs) < 3:
             raise ValueError('offset-product relation needs an offset and at least two factors')
@@ -54,6 +58,13 @@ def _generation_formula_answer(relation, result_name, input_names, values, solve
         return values[result_name] / denominator
     if relation == 'sum':
         return values[result_name] - sum(other_values)
+    if relation == 'difference':
+        if len(input_names) != 2:
+            raise ValueError('difference relation needs exactly two inputs')
+        first_name, second_name = input_names
+        if solve_for == first_name:
+            return values[result_name] + values[second_name]
+        return values[first_name] - values[result_name]
     if relation == 'offset-product':
         offset_name = input_names[0]
         factor_names = input_names[1:]
@@ -73,8 +84,10 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
     input_names = list(spec['inputs'])
     variables = spec['variables']
     solve_for = solve_for or spec.get('solve_for') or result_name
-    if relation not in {'product', 'sum', 'offset-product'}:
+    if relation not in {'product', 'sum', 'difference', 'offset-product'}:
         raise ValueError(f'unsupported formula relation: {relation}')
+    if relation == 'difference' and len(input_names) != 2:
+        raise ValueError('difference relation needs exactly two inputs')
     if relation == 'offset-product' and len(input_names) < 3:
         raise ValueError('offset-product relation needs an offset and at least two factors')
     if result_name not in variables or any(name not in variables for name in input_names):
@@ -249,6 +262,13 @@ def compute_science_answer(problem):
             return known[result_name] / denominator
         if relation == 'sum':
             return known[result_name] - sum(known[name] for name in other_inputs)
+        if relation == 'difference':
+            if len(input_names) != 2:
+                raise ValueError('difference relation needs exactly two inputs')
+            first_name, second_name = input_names
+            if solve_for == first_name:
+                return known[result_name] + known[second_name]
+            return known[first_name] - known[result_name]
         if relation == 'offset-product':
             offset_name = input_names[0]
             factor_names = input_names[1:]
