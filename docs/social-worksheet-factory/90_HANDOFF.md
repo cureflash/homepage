@@ -4,67 +4,63 @@
 
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use retired `social-worksheets/`.
-- GENERATE scope defined by `00_MASTER_INSTRUCTIONS.md` is now **complete**.
-- FACTCHECK remains manual/later batch only; do not start it automatically.
-- Verified learner-facing coverage remains through `meiji-state-industrialization`.
-- Pending backlog count: **199 units**.
-- Public selector remains verified-only; pending batches are deliberately not registered.
+- GENERATE scope defined by `00_MASTER_INSTRUCTIONS.md` is **complete**.
+- FACTCHECK is manual batch work only.
+- Verified learner-facing coverage now runs through `contemporary-japan-cumulative-review`.
+- Pending backlog count: **194 units**.
+- Public selector remains verified-only.
 
-## Completed generation queues
+## Latest independent FACTCHECK batch — first 5 backlog units
 
-- Junior-high history: complete
-- Junior-high civics: complete
-- `歴史総合`: 19-unit queue complete
-- `日本史探究`: 63-unit queue complete
-- `世界史探究`: 38-unit queue complete
-- `公共`: 18-unit queue complete
-- `倫理`: 20-unit queue complete
-- `政治・経済`: 22-unit queue complete
+The following five units were independently checked against current MEXT curriculum/commentary plus government, archive, library, treaty, or other authoritative sources. Their unit-level, fact-level, learner-sentence-level, and retained image-level `factcheckStatus` values are now `verified`, and they have been added to the public selector.
 
-The master production order does not define an additional geography or other social-studies queue after these courses. Do not invent unrelated units merely to keep GENERATE running.
+1. `imperialism-sino-japanese-russo-japanese-wars` — 帝国主義と日清・日露戦争
+2. `taisho-democracy-interwar-japan` — 大正デモクラシーと戦間期
+3. `asia-pacific-war` — アジア・太平洋戦争
+4. `postwar-japan` — 戦後日本の出発
+5. `contemporary-japan-cumulative-review` — 現代日本と近現代の累積復習
 
-## Final GENERATE batch — 政治・経済 15–22
+## Corrections / image decisions
 
-No independent FACTCHECK was performed. Every new fact, learner sentence and key point remains `pending_factcheck`.
+- `taisho-democracy-interwar-japan`: narrowed the learner sentence about the 1925 治安維持法 so that it describes the law's stated targets (organizations aiming at alteration of the kokutai or denial of the system of private property) instead of broadly saying it regulated social movements and thought in general.
+- `taisho-democracy-interwar-japan`: removed the generation-stage Hara Takashi portrait. The Commons file page only established a U.S. public-domain claim and explicitly warned that the work might not be public domain outside the United States, so it was not retained for Japanese learner-facing publication.
+- `asia-pacific-war`: removed the generation-stage surrender-document image for the same reason: the Commons reuse statement established U.S. public-domain status but did not provide a sufficiently clear Japan-side reuse basis for this factory's publication rule.
+- `imperialism-sino-japanese-russo-japanese-wars`: retained the Shimonoseki Treaty ratification image and the Japan–Korea Annexation Treaty image after rechecking the Commons provenance and Japan-side public-domain tags.
+- `postwar-japan`: retained the Constitution of Japan signature image after rechecking its Commons provenance and CC BY-SA 4.0 license.
 
-1. `political-economy-international-society-law` — 国際社会の変遷と国際法
-2. `political-economy-human-rights-sovereignty-territory` — 人権・国家主権・領土
-3. `political-economy-un-international-organizations` — 国際連合と国際機構
-4. `political-economy-security-defense-contribution` — 安全保障・防衛と国際貢献
-5. `political-economy-trade` — 貿易の現状と意義
-6. `political-economy-exchange-balance-payments` — 為替相場と国際収支
-7. `political-economy-international-cooperation-economic-institutions` — 国際協調と国際経済機関
-8. `political-economy-global-issues-inquiry` — グローバル化する国際社会の課題探究
+## Evidence families used
 
-The batch dataset is `subjects/social/worksheets/data/political-economy-15-22.js`. It only pushes units when explicitly loaded. `subjects/social/worksheets/index.html` is unchanged, so these units remain unpublished.
-
-## Validation
-
-`tests/test_social_political_economy_15_22.py` locks:
-
-- exactly eight final units;
-- queue numbers 15–22 in order;
-- expected slugs and `formalCourse: 政治・経済`;
-- at least two explicit cloze terms per unit and term/template consistency;
-- the `pending_factcheck` generation contract;
-- absence of the batch file and all eight slugs from the public selector.
+- 文部科学省『中学校学習指導要領（平成29年告示）解説 社会編』 for curriculum placement and required historical scope.
+- 国立公文書館 for the Sino-Japanese War, Russo-Japanese War, Shimonoseki/Portsmouth-related material, Korea annexation, wartime/end-of-war records, postwar reform, reconstruction, and high-growth chronology.
+- 外務省外交史料館 for treaty and diplomatic-history cross-checks.
+- 国立国会図書館 for Taisho democracy, universal male suffrage / Peace Preservation Law, and the Constitution of Japan.
+- Wikimedia Commons only for exact file identity/provenance/license checks; a file was not retained merely because it existed on Commons.
 
 ## Backlog / publication state
 
-- Previous pending backlog: 191
-- Newly generated: 8
-- Current pending backlog: 199
-- Verified-through marker remains unchanged.
-- No pending batch was added to the public selector.
+- Previous pending backlog: 199
+- Independently verified in this batch: 5
+- Current pending backlog: 194
+- `subjects/social/worksheets/index.html` now loads these five units after `meiji-state-industrialization.js` and before `app.js`.
+- No unit after these five has been published or removed from the pending backlog.
 
 ## Exact next social action
 
-There is **no automatic GENERATE continuation**. The next social action is only an explicitly requested independent FACTCHECK batch over `STATUS.json.unverified_backlog`. Until that is requested, leave the 199 pending units unpublished.
+Continue independent FACTCHECK from the new backlog head:
 
-## Generation discipline retained
+1. `constitution-constitutionalism`
+2. `fundamental-human-rights`
+3. `diet`
+4. `cabinet`
+5. `courts`
+6. `separation-of-powers`
 
-- Only explicit `terms` may become blanks; seeded generation must remain deterministic.
-- Keep sheets low-density and original in wording.
-- Use real historical/official source images only when useful; never AI-generate historical images.
-- Treat generation-stage source/image records as provisional until independent FACTCHECK.
+Continue sequentially from there only when FACTCHECK is explicitly requested. GENERATE is finished; do not invent additional generation work.
+
+## Factcheck discipline retained
+
+- Treat each selected pending fact, learner sentence, key point/timeline claim, and image claim as untrusted until independently reopened and checked.
+- Correct or reject unsupported wording rather than preserving generated text for convenience.
+- Verify exact image identity, provenance, and reuse terms before learner-facing publication.
+- Only verified units may be added to the public selector and removed from `unverified_backlog`.
 - Reconcile latest `main` before shared writes and never roll back parallel progress.

@@ -8,7 +8,7 @@
     unit: "近代の日本と世界",
     era: "明治中期〜末期",
     practicalGradeGroup: "中学・歴史",
-    factcheckStatus: "pending_factcheck",
+    factcheckStatus: "verified",
     keyPoint: "19世紀後半、列強はアジアで植民地や権益を広げた。日本も日清・日露戦争を経て国際的地位を高める一方、台湾の領有や韓国併合など、アジアへの支配を拡大した。",
     timeline: [
       { label: "1894〜1895年", note: "日清戦争" },
@@ -23,49 +23,49 @@
         id: "imperialism-wars-fact-01",
         claim: "19世紀後半、工業化を進めた欧米列強はアジアやアフリカで植民地や権益を拡大し、列強による進出と競争が強まった。こうした動きは帝国主義の時代背景として扱われる。",
         sources: ["mext-social-commentary", "mext-social-curriculum"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "imperialism-wars-fact-02",
         claim: "1894年、朝鮮での甲午農民戦争をきっかけに日本と清が出兵し、両国の対立が深まって日清戦争が始まった。",
         sources: ["national-archives-sino-war", "mext-social-commentary"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "imperialism-wars-fact-03",
         claim: "1895年の下関条約で、清は朝鮮の独立を認め、日本に台湾・澎湖諸島・遼東半島を割譲し、賠償金2億両を支払うことなどを認めた。",
         sources: ["national-archives-shimonoseki", "mofa-meiji-treaties"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "imperialism-wars-fact-04",
         claim: "下関条約直後、ロシア・ドイツ・フランスは日本に遼東半島の返還を勧告し、日本は三国干渉を受け入れて清に返還した。",
         sources: ["national-archives-sino-war", "mofa-triple-intervention"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "imperialism-wars-fact-05",
         claim: "日清戦争後、列強が清で権益を広げ、ロシアが満州へ進出する中、日本はロシアを警戒して1902年にイギリスと日英同盟を結んだ。",
         sources: ["national-archives-russo-war", "mofa-russo-war-materials"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "imperialism-wars-fact-06",
         claim: "満州と韓国をめぐる日露交渉が決裂し、1904年に日露戦争が始まった。日本は奉天会戦や日本海海戦などを経たが、長期戦を続ける国力には限界があった。",
         sources: ["national-archives-russo-war", "mofa-russo-war-materials"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "imperialism-wars-fact-07",
         claim: "1905年のポーツマス条約で、ロシアは韓国における日本の優越的な地位を認め、旅順・大連の租借権、長春以南の鉄道利権を日本に譲り、南樺太を割譲した。",
         sources: ["national-archives-portsmouth", "mofa-meiji-treaties"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "imperialism-wars-fact-08",
         claim: "日本は日露戦争後、韓国への支配を強め、1910年の韓国併合条約によって韓国を日本に併合した。",
         sources: ["national-archives-korea-annexation", "mofa-russo-war-materials", "mext-social-commentary"],
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       }
     ],
     sections: [
@@ -80,7 +80,7 @@
             terms: ["帝国主義"],
             importance: "A",
             sources: ["mext-social-commentary", "mext-social-curriculum"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "imperialism-wars-02",
@@ -88,7 +88,7 @@
             terms: ["日清戦争"],
             importance: "A",
             sources: ["national-archives-sino-war", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "imperialism-wars-03",
@@ -96,7 +96,7 @@
             terms: ["下関条約"],
             importance: "A",
             sources: ["national-archives-shimonoseki", "mofa-meiji-treaties"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "imperialism-wars-04",
@@ -104,7 +104,7 @@
             terms: ["三国干渉"],
             importance: "A",
             sources: ["national-archives-sino-war", "mofa-triple-intervention"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       },
@@ -119,7 +119,7 @@
             terms: ["日英同盟"],
             importance: "A",
             sources: ["national-archives-russo-war", "mofa-russo-war-materials"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "imperialism-wars-06",
@@ -127,7 +127,7 @@
             terms: ["日露戦争"],
             importance: "A",
             sources: ["national-archives-russo-war", "mofa-russo-war-materials"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "imperialism-wars-07",
@@ -135,7 +135,7 @@
             terms: ["ポーツマス条約"],
             importance: "A",
             sources: ["national-archives-portsmouth", "mofa-meiji-treaties"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           },
           {
             id: "imperialism-wars-08",
@@ -143,7 +143,7 @@
             terms: ["韓国併合"],
             importance: "A",
             sources: ["national-archives-korea-annexation", "mext-social-commentary"],
-            factcheckStatus: "pending_factcheck"
+            factcheckStatus: "verified"
           }
         ]
       }
@@ -158,7 +158,7 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:Treaty_of_Shimonoseki_Nippon_tenn%C5%8D.jpg",
         credit: "大日本帝國政府 / 故宮博物院資料庫 / Wikimedia Commons",
         license: "Public Domain (PD-Japan-exempt; Japan Copyright Act Article 13)",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       },
       {
         id: "korea-annexation-treaty-1910",
@@ -169,7 +169,7 @@
         sourcePage: "https://commons.wikimedia.org/wiki/File:Japan%E2%80%93Korea_Annexation_Treaty_1.jpg",
         credit: "大日本帝国・大韓帝国 / 国立公文書館・JACAR / Wikimedia Commons",
         license: "Public Domain (PD-Japan / PD-1996; Commons file-page tags)",
-        factcheckStatus: "pending_factcheck"
+        factcheckStatus: "verified"
       }
     ],
     sources: [
