@@ -97,9 +97,53 @@ Preserve the formal MEXT large-section order A `歴史の扉`, B `近代化と�
 
 The `-a/-b` splits are worksheet-density choices. Retain formal MEXT placement metadata in every dataset.
 
-### 日本史探究 / 世界史探究 / 公共
+### 日本史探究 — ordered production queue
 
-Before production reaches each formal course, expand it into an ordered unit queue grounded in the current MEXT curriculum/commentary. This queue-definition work is mandatory but does not count as one of the 20 worksheet units for the run. Then continue generating until the run reaches 20 units or a real blocker occurs.
+This queue follows the current MEXT High School Course of Study Commentary order A → B → C → D. The `-a/-b` and numbered splits are worksheet-density choices; every dataset must retain its formal MEXT parent in `formalSection`, `formalSubsection`, and `formalPlacement`.
+
+1. A(1)-a 旧石器文化から縄文文化へ
+2. A(1)-b 弥生文化と農耕社会
+3. A(2) 歴史資料と原始・古代の展望
+4. A(3)-a-1 小国の形成と東アジア交流
+5. A(3)-a-2 古墳文化と大和政権
+6. A(3)-a-3 律令国家の形成と飛鳥文化
+7. A(3)-a-4 奈良時代の国家と天平文化
+8. A(3)-b-1 平安初期の政治と東アジア
+9. A(3)-b-2 摂関政治と国風文化
+10. A(3)-b-3 地方支配の変化・荘園・武士
+11. B(1) 中世への転換と歴史的環境
+12. B(2) 歴史資料と中世の展望
+13. B(3)-a-1 鎌倉幕府の成立と公武関係
+14. B(3)-a-2 元寇とユーラシア交流
+15. B(3)-a-3 中世の産業・宗教・文化
+16. B(3)-b-1 室町幕府と地域権力
+17. B(3)-b-2 日明貿易・琉球王国・アイヌ
+18. B(3)-b-3 自立する村落・都市と中世文化
+19. C(1) 近世への転換と歴史的環境
+20. C(2) 歴史資料と近世の展望
+21. C(3)-a-1 幕藩体制と身分秩序
+22. C(3)-a-2 貿易統制と近世の対外関係
+23. C(3)-a-3 技術・開発・交通と学問文化
+24. C(3)-b-1 産業発達と都市・農村の変化
+25. C(3)-b-2 幕政改革・飢饉・一揆と国際情勢
+26. C(3)-b-3 学問・教育と庶民文化
+27. D(1) 近代への転換と歴史的環境
+28. D(2) 歴史資料と近代の展望
+29. D(3)-a-1 明治維新と国民国家の形成
+30. D(3)-a-2 立憲体制・対外戦争と第一次世界大戦
+31. D(3)-b-1 文明開化・産業革命と交通
+32. D(3)-b-2 教育・社会問題と大衆社会
+33. D(3)-c-1 恐慌・政党政治と軍部の台頭
+34. D(3)-c-2 戦時体制と第二次世界大戦
+35. D(3)-d-1 占領・戦後改革と日本国憲法
+36. D(3)-d-2 独立回復・経済復興と高度経済成長
+37. D(3)-d-3 国際化・情報化と現代日本
+38. D(3)-e 近現代の画期と構造の総括
+39. D(4) 現代の日本の課題の探究
+
+### 世界史探究 / 公共
+
+Before production reaches each remaining formal course, expand it into an ordered unit queue grounded in the current MEXT curriculum/commentary. This queue-definition work is mandatory but does not count as one of the 20 worksheet units for the run. Then continue generating until the run reaches 20 units or a real blocker occurs.
 
 Later expansion of 倫理 / 政治・経済 is allowed only after the core sequence above.
 
