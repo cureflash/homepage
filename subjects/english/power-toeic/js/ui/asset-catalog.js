@@ -1,3 +1,6 @@
+const TRAINEE_STAGES = Object.freeze([0, 1, 2, 3, 4, 5]);
+const CHARACTER_REACTIONS = Object.freeze(['neutral', 'correct', 'wrong', 'complete']);
+
 export const ASSET_IDS = Object.freeze({
   SERGEANT_NEUTRAL: 'sergeant.neutral',
   SERGEANT_CORRECT: 'sergeant.correct',
@@ -30,6 +33,17 @@ const assetMap = Object.freeze({
   [ASSET_IDS.AUDIO_INSPIRATION]: './assets/audio/otologic_inspiration.mp3'
 });
 
+export function sergeantAssetId(reaction = 'neutral') {
+  const normalized = CHARACTER_REACTIONS.includes(reaction) ? reaction : 'neutral';
+  return `sergeant.${normalized}`;
+}
+
+export function traineeAssetId(stage = 0, reaction = 'neutral') {
+  const normalizedStage = TRAINEE_STAGES.includes(Number(stage)) ? Number(stage) : 0;
+  const normalizedReaction = CHARACTER_REACTIONS.includes(reaction) ? reaction : 'neutral';
+  return `trainee.stage_${normalizedStage}.${normalizedReaction}`;
+}
+
 export class AssetCatalog {
   constructor(overrides = {}) {
     this.assets = Object.freeze({ ...assetMap, ...overrides });
@@ -37,6 +51,16 @@ export class AssetCatalog {
 
   resolve(id, fallbackId = null) {
     return this.assets[id] ?? (fallbackId ? this.assets[fallbackId] ?? null : null);
+  }
+
+  resolveSergeant(reaction = 'neutral') {
+    return this.resolve(sergeantAssetId(reaction), ASSET_IDS.SERGEANT_NEUTRAL);
+  }
+
+  resolveTrainee(stage = 0, reaction = 'neutral') {
+    const neutralId = traineeAssetId(stage, 'neutral');
+    return this.resolve(traineeAssetId(stage, reaction), neutralId)
+      ?? this.resolve(ASSET_IDS.TRAINEE_STAGE_0);
   }
 }
 
