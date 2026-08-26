@@ -1,0 +1,23 @@
+{
+  "timezone": "Asia/Tokyo",
+  "route_by_hour": {
+    "05": "note_article",
+    "06": "morning_operations",
+    "17": "automation_audit"
+  },
+  "default_route": "math_worksheet",
+  "routes": {
+    "note_article": {
+      "prompt_file": "docs/note-article-factory/90_SCHEDULE_PROMPT.md"
+    },
+    "morning_operations": {
+      "prompt_file": "docs/morning-operations/90_SCHEDULE_PROMPT.md"
+    },
+    "automation_audit": {
+      "prompt_file": "docs/automation-audit/90_SCHEDULE_PROMPT.md"
+    },
+    "math_worksheet": {
+      "prompt_file": "docs/worksheet-factory/90_SCHEDULE_PROMPT.md"
+    }
+  }
+}
