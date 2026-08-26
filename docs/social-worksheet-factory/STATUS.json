@@ -1,15 +1,18 @@
 {
   "status": "in_progress",
+  "mode": "generate_backlog",
   "school_stage": "junior-high",
   "field": "history",
-  "active_unit": "imperialism-sino-japanese-russo-japanese-wars",
-  "active_units": [
-    "imperialism-sino-japanese-russo-japanese-wars"
-  ],
-  "next_role": "factcheck",
+  "active_unit": "taisho-democracy-interwar-japan",
+  "next_role": "generate",
   "last_completed_role": "generate",
   "verified_through": "meiji-state-industrialization",
+  "generation_batch_target": 10,
+  "factcheck_policy": "manual_batch",
+  "unverified_backlog": [
+    "imperialism-sino-japanese-russo-japanese-wars"
+  ],
+  "pending_factcheck_count": 1,
   "prototype_status": "verified",
-  "batch_size": 1,
-  "updated_at": "2026-08-26T10:40:00+09:00"
+  "updated_at": "2026-08-26T10:41:00+09:00"
 }
