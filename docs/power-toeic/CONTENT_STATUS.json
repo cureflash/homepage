@@ -3,8 +3,8 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 700,
-  "pending_validation_count": 700,
+  "generated_question_count": 800,
+  "pending_validation_count": 800,
   "verified_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
@@ -13,15 +13,16 @@
     "p5.pos.adjective_after_linking_verb",
     "p5.pos.adverb_modifies_adjective",
     "p5.pos.participle_adjective_ed_ing",
-    "p5.pos.word_form_subject_position"
+    "p5.pos.word_form_subject_position",
+    "p5.pos.word_form_object_position"
   ],
-  "current_batch": "2026-08-27-scheduled-006",
-  "current_micro_skill": "p5.pos.word_form_object_position",
+  "current_batch": "2026-08-27-scheduled-007",
+  "current_micro_skill": "p5.verb.subject_verb_agreement",
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_pos_word_form_object_position_0001",
-  "next_micro_skill": "p5.pos.word_form_object_position",
+  "next_resume_id": "p5_verb_subject_verb_agreement_0001",
+  "next_micro_skill": "p5.verb.subject_verb_agreement",
   "generation_complete": false,
-  "last_run_result": "Completed p5.pos.word_form_subject_position through question 0100 by persisting two additional 25-question checkpoints (0051-0075 and 0076-0100). All 50 new items remain pending_validation. Generation-time checks confirmed stable sequential IDs, exactly one blank, four distinct choices, valid proposed-answer indexes, balanced answer positions across the new 50 (A/B/C/D = 13/13/12/12), and no within-checkpoint near-duplicate above 0.94; the maximum observed similarity among the new stems was about 0.671. Full cross-bank near-duplicate clearance against all 700 questions is still not claimed complete because this runtime does not expose a full local checkout. No QA decisions were made.",
-  "updated_at": "2026-08-27T02:16:00+09:00"
+  "last_run_result": "Reconciled parallel generation already persisted for p5.pos.word_form_object_position questions 0001-0075, then completed 0076-0100 in batch-20260827-007-part4.json without regenerating the existing 75. The completed skill now has 100 persisted candidates, all pending_validation. New items use five noun families (assessment, confirmation, replacement, registration, inspection) with stable sequential IDs, exactly one blank, four distinct choices, valid proposed-answer indexes, and deliberately varied direct-object business contexts. No QA decisions were made. Full cross-bank near-duplicate clearance is still not claimed complete because this runtime does not expose a full local checkout. Generation remains incomplete at 8 of 44 micro-skills; resume with p5.verb.subject_verb_agreement.",
+  "updated_at": "2026-08-27T03:30:00+09:00"
 }
