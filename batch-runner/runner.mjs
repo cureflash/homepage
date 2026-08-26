@@ -1,7 +1,7 @@
 import { Codex } from "@openai/codex-sdk";
 import { spawnSync } from "node:child_process";
 import { existsSync } from "node:fs";
-import { mkdir, readFile, appendFile } from "node:fs/promises";
+import { mkdir, readFile, appendFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -10,6 +10,7 @@ const config = await readJson(path.join(scriptDir, "config.json"));
 const projectConfig = await readJson(path.join(scriptDir, "projects.json"));
 const defaultRepoRoot = path.resolve(scriptDir, config.repositoryPath ?? "..");
 const logsDir = path.join(scriptDir, "logs");
+const completionFile = path.resolve(defaultRepoRoot, "..", ".homepage-batch-all-done.json");
 await mkdir(logsDir, { recursive: true });
 
 const logFile = path.join(logsDir, `${localDateStamp()}-${safeTimeStamp()}.log`);
@@ -25,16 +26,21 @@ try {
     throw new Error("projects.json に enabled なプロジェクトがありません。");
   }
 
+  let allDone = true;
+
   for (const project of projects) {
     const repoRoot = resolveProjectRepoRoot(project);
     if (blockedRepos.has(repoRoot)) {
+      allDone = false;
       await log(`PROJECT SKIP [${project.name}] repository is blocked for this queue cycle: ${repoRoot}`);
       continue;
     }
 
     try {
-      await runProject(project, repoRoot);
+      const projectDone = await runProject(project, repoRoot);
+      if (!projectDone) allDone = false;
     } catch (error) {
+      allDone = false;
       hadFailure = true;
       await log(`STOP [${project.name}]: ${formatError(error)}`);
 
@@ -42,6 +48,22 @@ try {
         blockedRepos.add(repoRoot);
         await log(`REPO BLOCKED [${project.name}]: dirty tree remains in ${repoRoot}; other projects in this repository will skip this cycle.`);
       }
+    }
+  }
+
+  if (allDone && !hadFailure) {
+    const completion = {
+      completedAt: new Date().toISOString(),
+      projects: projects.map((project) => project.name),
+    };
+    await writeFile(completionFile, `${JSON.stringify(completion, null, 2)}\n`, "utf8");
+    await log(`ALL PROJECTS DONE: completion marker written to ${completionFile}`);
+
+    try {
+      runCommand("sudo", ["-n", "systemctl", "disable", "--now", "homepage-batch.timer"], defaultRepoRoot);
+      await log("AUTOSTOP: homepage-batch.timer disabled because all enabled projects are complete.");
+    } catch (error) {
+      await log(`AUTOSTOP WARNING: could not disable homepage-batch.timer automatically. Completion marker remains for manual recovery. ${formatError(error)}`);
     }
   }
 } catch (error) {
@@ -64,7 +86,7 @@ async function runProject(project, repoRoot) {
 
   if (doneStatuses.has(normalizeStatus(initialStatus.status))) {
     await log(`PROJECT SKIP [${project.name}] already done`);
-    return;
+    return true;
   }
 
   const codex = new Codex();
@@ -89,7 +111,7 @@ async function runProject(project, repoRoot) {
     const beforeStatus = await readStatus(statusPath);
     if (doneStatuses.has(normalizeStatus(beforeStatus.status))) {
       await log(`PROJECT DONE [${project.name}] before turn ${runNumber}`);
-      return;
+      return true;
     }
 
     const beforeFingerprint = statusFingerprint(beforeStatus);
@@ -137,7 +159,7 @@ async function runProject(project, repoRoot) {
 
     if (doneStatuses.has(normalizeStatus(afterStatus.status))) {
       await log(`PROJECT DONE [${project.name}] after turn ${runNumber}`);
-      return;
+      return true;
     }
 
     if (beforeFingerprint === afterFingerprint && afterHead === beforeHead) {
@@ -155,10 +177,11 @@ async function runProject(project, repoRoot) {
   const finalStatus = await readStatus(statusPath);
   if (doneStatuses.has(normalizeStatus(finalStatus.status))) {
     await log(`PROJECT DONE [${project.name}] after run budget`);
-    return;
+    return true;
   }
 
   await log(`PROJECT YIELD [${project.name}] after ${maxRuns} turn(s), status=${finalStatus.status}`);
+  return false;
 }
 
 async function prepareRepository(project, repoRoot) {
