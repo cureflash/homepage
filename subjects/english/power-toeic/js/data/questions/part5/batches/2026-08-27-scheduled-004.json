@@ -1,0 +1,29 @@
+{
+  "batch": "2026-08-27-scheduled-004",
+  "role": "content_generate",
+  "taxonomy_version": "part5-v1.0",
+  "skill": "p5.pos.word_form_subject_position",
+  "checkpoint": "items-0001-0025",
+  "persisted_question_count": 25,
+  "target_question_count_for_skill": 100,
+  "validation_status": "pending_validation",
+  "files": [
+    "subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/word-form-subject-position/pending/batch-20260827-004-part1.json"
+  ],
+  "generation_checks": {
+    "unique_ids": "passed for persisted checkpoint",
+    "one_blank": "passed",
+    "four_distinct_choices": "passed",
+    "valid_proposed_answer_index": "passed",
+    "answer_positions_checkpoint": {"A": 7, "B": 6, "C": 6, "D": 6},
+    "full_100_answer_positions_planned": {"A": 25, "B": 25, "C": 25, "D": 25},
+    "within_planned_100_exact_duplicate_stems": 0,
+    "within_planned_100_near_duplicate_stems_ge_0_94": 0,
+    "max_within_planned_100_sequence_matcher": 0.9211,
+    "cross_bank_full_similarity_scan": "not_completed"
+  },
+  "generation_complete": false,
+  "skill_complete": false,
+  "next_resume_id": "p5_pos_word_form_subject_position_0026",
+  "next_micro_skill_after_skill_completion": "p5.pos.word_form_object_position"
+}
