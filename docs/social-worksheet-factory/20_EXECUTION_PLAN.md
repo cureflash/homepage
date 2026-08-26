@@ -103,23 +103,23 @@ The queue follows the current MEXT large-section order. Broad MEXT sections are 
 
 This queue follows the current MEXT `A 世界史へのまなざし` → `B 諸地域の歴史的特質の形成` → `C 諸地域の交流・再編` → `D 諸地域の結合・変容` → `E 地球世界の課題` structure. Broad middle items are split into low-density worksheet units without treating this practical split as an official MEXT sub-item numbering.
 
-### A 世界史へのまなざし
+### A 世界史へのまなざし — generated
 
-1. 地球環境から見る人類の歴史 — generated
-2. 日常生活から見る世界の歴史 — generated
+1. 地球環境から見る人類の歴史
+2. 日常生活から見る世界の歴史
 
-### B 諸地域の歴史的特質の形成
+### B 諸地域の歴史的特質の形成 — generated
 
-3. 諸地域の歴史的特質への問い — generated
-4. 農耕・牧畜と古代文明 — generated
-5. オリエント文明 — generated
-6. インダス文明 — generated
-7. 中華文明 — generated
-8. 東アジアと中央ユーラシア — generated
-9. 南アジアと東南アジアの歴史的特質 — generated
-10. 西アジアと地中海周辺の歴史的特質 — generated
+3. 諸地域の歴史的特質への問い
+4. 農耕・牧畜と古代文明
+5. オリエント文明
+6. インダス文明
+7. 中華文明
+8. 東アジアと中央ユーラシア
+9. 南アジアと東南アジアの歴史的特質
+10. 西アジアと地中海周辺の歴史的特質
 
-### C 諸地域の交流・再編
+### C 諸地域の交流・再編 — generated
 
 11. 諸地域の交流・再編への問い
 12. イスラーム世界の拡大と交易
@@ -133,17 +133,17 @@ This queue follows the current MEXT `A 世界史へのまなざし` → `B 諸�
 
 ### D 諸地域の結合・変容
 
-20. 諸地域の結合・変容への問い
-21. 産業革命と世界市場
-22. アメリカ独立とフランス革命
-23. 国民国家と19世紀ヨーロッパ
-24. ラテンアメリカ諸国の独立
-25. アジア諸地域と欧米列強の進出
-26. 帝国主義と列強の世界分割
-27. アジア・アフリカの民族運動
-28. 第一次世界大戦と総力戦
-29. ロシア革命と戦間期の国際秩序
-30. 世界恐慌とファシズム
+20. 諸地域の結合・変容への問い — generated
+21. 産業革命と世界市場 — generated
+22. アメリカ独立とフランス革命 — generated
+23. 国民国家と19世紀ヨーロッパ — generated
+24. ラテンアメリカ諸国の独立 — generated
+25. アジア諸地域と欧米列強の進出 — generated
+26. 帝国主義と列強の世界分割 — generated
+27. アジア・アフリカの民族運動 — generated
+28. 第一次世界大戦と総力戦 — generated
+29. ロシア革命と戦間期の国際秩序 — generated
+30. 世界恐慌とファシズム — generated
 31. 第二次世界大戦と諸地域の変容
 
 ### E 地球世界の課題
@@ -156,7 +156,7 @@ This queue follows the current MEXT `A 世界史へのまなざし` → `B 諸�
 37. 科学技術の高度化と知識基盤社会
 38. 地球世界の課題を歴史的に探究する
 
-**Next start:** queue item 11, `world-history-exchange-reorganization-questions`.
+**Next start:** queue item 31, `world-history-wwii-regional-transformation`.
 
 ## High-school production order after 世界史探究
 
