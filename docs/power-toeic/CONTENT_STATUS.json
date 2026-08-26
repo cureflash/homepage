@@ -21,6 +21,6 @@
   "next_resume_id": "p5_pos_word_form_subject_position_0026",
   "next_micro_skill": "p5.pos.word_form_subject_position",
   "generation_complete": false,
-  "last_run_result": "Persisted questions 0001-0025 for p5.pos.word_form_subject_position as a clear sequential checkpoint. All remain pending_validation. Structural checks passed for the persisted checkpoint; the planned 100-question set has unique IDs, one blank, four distinct choices, balanced final answer positions, no exact duplicates, and no SequenceMatcher near-duplicates >=0.94 within the planned skill. Full cross-bank similarity scan against the previous 600 questions was not completed because direct GitHub checkout is unavailable in this runtime.",
-  "updated_at": "2026-08-27T00:45:00+09:00"
+  "last_run_result": "Persisted and wording-refined questions 0001-0025 for p5.pos.word_form_subject_position as a sequential checkpoint. All remain pending_validation. The persisted 25 pass unique-ID, one-blank, four-distinct-choice, valid-answer-index, exact-duplicate, and SequenceMatcher >=0.94 near-duplicate checks; maximum within-checkpoint similarity is 0.6144. Full cross-bank similarity scan against the previous 600 questions was not completed because direct GitHub checkout is unavailable in this runtime.",
+  "updated_at": "2026-08-27T00:55:00+09:00"
 }
