@@ -2,8 +2,8 @@
   "project": "Power TOEIC",
   "status": "in_progress",
   "track": "app_ui_program",
-  "phase": 2,
-  "active_task": "2.0",
+  "phase": 3,
+  "active_task": "3.1",
   "next_role": "implementation",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
@@ -36,7 +36,9 @@
     "license": "CC BY 4.0 / OtoLogic attribution required"
   },
   "asset_policy": "docs/power-toeic/50_ASSET_POLICY.md",
-  "last_completed_task": "0.3",
+  "asset_catalog": "subjects/english/power-toeic/js/ui/asset-catalog.js",
+  "last_completed_task": "2.3",
   "phase0_audit": "docs/power-toeic/PHASE0_REUSE_AUDIT.md",
-  "updated_at": "2026-08-26T22:35:00+09:00"
+  "phase2_test_result": "9 Node tests passed: adapter/session/renderer/asset-catalog contracts",
+  "updated_at": "2026-08-26T22:48:00+09:00"
 }
