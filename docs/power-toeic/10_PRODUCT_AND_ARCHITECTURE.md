@@ -5,7 +5,7 @@
 Power TOEIC is built around one loop:
 
 ```text
-fine-grained diagnosis
+weakness/mastery data
   -> select weak micro-skills
   -> concentrated four-choice cloze drilling
   -> immediate feedback
@@ -14,74 +14,109 @@ fine-grained diagnosis
   -> mastery or renewed concentration
 ```
 
-The product should feel like a training camp rather than a textbook.
+The app track consumes taxonomy/question data supplied by the separate content track. It does not own production question generation.
 
-## MVP scope
+## Platform strategy
 
-MVP focuses on Part 5-style four-choice cloze questions only.
+Power TOEIC is implemented in two ordered stages.
 
-The learner-facing format is always:
+### Stage A — Web reference implementation
+
+Use the existing repository's proven static stack:
+
+- HTML;
+- CSS;
+- Vanilla JavaScript;
+- ES Modules;
+- Node's built-in test runner.
+
+Canonical Web path:
+
+`subjects/english/power-toeic/`
+
+The Web version is completed first because it is cheap to iterate, directly publishable with the existing site, and suitable for stabilizing all domain contracts before native duplication.
+
+### Stage B — native iOS implementation
+
+After the Web app reaches the V1 acceptance criteria and its domain behavior is covered by tests, implement a native iOS client in **Swift + SwiftUI**.
+
+The Swift version must mirror the same architectural responsibilities rather than mechanically translating DOM code line-by-line.
+
+Target responsibility mapping:
 
 ```text
-Sentence with one blank
-
-[A] choice
-[B] choice
-[C] choice
-[D] choice
+Web JavaScript                       iOS Swift
+-------------------------------------------------------------
+core/session.js                  ->  Core/QuizSession.swift
+core/workout-builder.js          ->  Core/WorkoutBuilder.swift
+core/mastery.js                  ->  Core/MasteryEngine.swift
+core/review.js                   ->  Core/ReviewScheduler.swift
+core/persistence.js              ->  Persistence/AppStore.swift
+renderers/cloze-choice.js        ->  Views/Quiz/ClozeChoiceView.swift
+ui/home.js                       ->  Views/Home/HomeView.swift
+ui/workout-editor.js             ->  Views/Workout/WorkoutEditorView.swift
+ui/result.js                     ->  Views/Result/ResultView.swift
+ui/weakness.js                   ->  Views/Weakness/WeaknessView.swift
+ui/character.js                  ->  Views/Character/CharacterView.swift
+main.js composition              ->  PowerTOEICApp / dependency container
 ```
 
-A question can belong to one primary micro-skill and optional secondary tags, but the narrow drill mode must still test one intended decision rule/error pattern at a time.
+Do not attempt to share JavaScript runtime code with Swift. Share **contracts, data formats, fixtures and expected behavior**.
 
-## Taxonomy structure
+## Cross-platform contract
 
-Use a two-layer presentation model:
+The strongest portability boundary is data + behavior contracts.
 
-- internal: fine-grained micro-skills, initially approximately 44 for Part 5;
-- UI: broader human-readable groups such as parts of speech, verbs, prepositions/conjunctions, pronouns/relatives, vocabulary/usage.
+Both implementations must consume equivalent platform-neutral representations for:
 
-Never expose the complete internal taxonomy as a flat home-screen menu.
+- question records;
+- skill IDs supplied by the content track;
+- workout recipes;
+- attempt records;
+- mastery snapshots;
+- review entries;
+- character progression state;
+- bad-question reports.
+
+Production question content should be exportable as JSON or another simple documented format that both JavaScript and Swift can decode without rewriting educational data.
+
+## Cross-platform conformance fixtures
+
+Before the Swift port begins, freeze a small set of deterministic fixtures containing:
+
+- sample questions;
+- workout recipes;
+- attempt histories;
+- expected selected question IDs for seeded cases;
+- expected mastery states;
+- expected review dates;
+- expected character progression stages.
+
+Run equivalent fixture tests in JavaScript and Swift. This prevents the iOS version from silently developing different learning behavior.
+
+## MVP learner format
+
+The runtime question interface is one sentence with one blank and exactly four choices. The application does not require production taxonomy authoring to proceed; it only requires stable IDs/labels from the external content adapter or fixtures.
 
 ## Reuse-first architecture decision
 
-The repository already contains a deliberately separated quiz platform at `subjects/social/quiz/` with:
+Phase 0 audited `subjects/social/quiz/`. Keep its successful separation pattern:
 
-- `js/core/` for quiz state/gameplay logic;
-- `js/renderers/` for input/rendering modes;
-- `js/games/` and `js/data/` for content/configuration;
-- separate presentation CSS/HTML;
+- core domain/session logic;
+- renderers/views;
+- data adapters;
+- presentation;
 - tests.
 
-Power TOEIC must first audit this implementation and reuse or generalize it before adding a new app framework.
+Do not cross-import or rewrite the existing timed social `QuizEngine`. Power TOEIC needs a study-session model rather than a countdown/game-over model.
 
-### Preferred outcome after audit
+## Framework rule
 
-If the existing contracts are compatible, move/shared-copy the minimum generic primitives into a stable shared quiz module and keep social quiz behavior unchanged. Power TOEIC then supplies:
+For Web V1, do not introduce React, Django, GraphQL, Redis, microservices, a game engine, or runtime AI unless a concrete requirement cannot reasonably be met by the existing static ES-module deployment.
 
-- a four-choice cloze renderer/configuration;
-- Power TOEIC-specific session/workout construction;
-- mastery/attempt persistence;
-- character presentation;
-- Part 5 data.
+For iOS, use Apple's standard Swift/SwiftUI stack first. Prefer Foundation, SwiftUI, Codable, XCTest/Swift Testing, and native persistence mechanisms over third-party dependencies unless a concrete need exists.
 
-If extracting a shared package creates more risk than value, reuse the proven structure and interfaces without creating cross-project coupling. Document the decision in `90_HANDOFF.md` and `STATUS.json`.
-
-### Framework rule
-
-Do not introduce React, Django, GraphQL, Redis, a game engine, microservices, or a runtime AI service during MVP unless an execution-plan task demonstrates a concrete requirement not reasonably met by the existing static/vanilla-JS stack.
-
-The default MVP technical target is therefore a static mobile-first web app using HTML/CSS/ES modules and deterministic browser-side logic, compatible with the repository's current deployment model.
-
-Persistence should start with the smallest maintainable option:
-
-- browser local storage / IndexedDB for anonymous MVP history if sufficient;
-- introduce server persistence only when account sync, multi-device data, payment, or production analytics requires it.
-
-Do not prematurely build authentication/backend infrastructure before the core drill loop is proven.
-
-## Proposed implementation tree
-
-Phase 0 may refine names, but the target structure is:
+## Web implementation tree
 
 ```text
 subjects/english/power-toeic/
@@ -96,9 +131,10 @@ subjects/english/power-toeic/
       mastery.js
       review.js
       persistence.js
+      progression.js
     data/
-      taxonomy.js
-      questions/
+      question-bank-adapter.js
+      fixtures.js
     renderers/
       cloze-choice.js
     ui/
@@ -110,133 +146,110 @@ subjects/english/power-toeic/
       character.js
     main.js
   tests/
-
-scripts/power-toeic/
-  generate_questions.py
-  validate_questions.py
-  detect_duplicates.py
-  build_bank.py
 ```
 
-Where possible, the quiz-session primitive or choice renderer should reuse/share existing social-quiz code instead of being independently reimplemented.
+The app track may create only a tiny synthetic fixture bank under this tree. Production question-bank generation is external.
+
+## iOS target tree
+
+The exact Xcode-project location may be frozen when the Swift phase starts, but its internal target architecture must mirror the Web responsibility split:
+
+```text
+PowerTOEIC/
+  App/
+  Core/
+    QuizSession.swift
+    WorkoutBuilder.swift
+    MasteryEngine.swift
+    ReviewScheduler.swift
+    ProgressionEngine.swift
+  Models/
+    Question.swift
+    WorkoutRecipe.swift
+    Attempt.swift
+    MasterySnapshot.swift
+  Data/
+    QuestionBankRepository.swift
+  Persistence/
+  Views/
+    Home/
+    Quiz/
+    Workout/
+    Result/
+    Weakness/
+    Character/
+  Resources/
+    Characters/
+  Tests/
+```
 
 ## Runtime boundaries
 
-### Question bank
-Owns educational content only:
+### QuestionBankRepository / adapter
 
-- question ID;
-- sentence/stem;
-- four choices;
-- correct answer;
-- concise explanation;
-- primary micro-skill;
-- secondary tags;
-- confusion/error type;
-- expected difficulty;
-- QA/version metadata.
+The app sees production content only through a narrow interface. It must support operations such as:
 
-It must not contain CSS selectors, character stage rules, DOM assumptions, or workout state.
+- load question by ID;
+- list eligible questions by skill/category;
+- list learner-facing categories/skills;
+- expose question version metadata for reports.
+
+Web fixture data and later production data implement the same contract. Swift receives an equivalent repository protocol.
 
 ### Session engine
-Owns:
 
-- ordered question IDs;
-- current index;
-- selected answer;
-- correctness;
-- session completion;
-- attempt emission.
-
-It does not decide which skills the learner should train.
+Owns ordered question IDs, current index, answer submission, correctness and attempt emission. It does not decide what the learner should study.
 
 ### Workout builder
-Owns selection recipes, not rendering.
 
-Inputs may include:
+Owns recipes/selection. Machine-generated weakness workouts and user-customized workouts use the same model.
 
-- desired question count;
-- skill IDs and weights/counts;
-- unseen preference;
-- review inclusion;
-- mixed-label policy;
-- random seed.
+### Mastery engine
 
-Outputs an immutable session question list for the started session.
-
-System weakness recommendations and manually built workouts use the same recipe model.
-
-### Mastery service
-Consumes attempts and derives per-micro-skill state using deterministic rules.
-
-Initial states may be:
-
-- unknown;
-- weak;
-- training;
-- mixed_pass;
-- reviewing;
-- mastered.
-
-Do not make state transitions dependent on character UI.
+Consumes attempts and produces deterministic per-skill state. It does not depend on UI or character assets.
 
 ### Review scheduler
-Creates future review due dates/queues from mastery events and attempts. Keep first rules simple and testable.
+
+Produces due review entries from deterministic rules.
 
 ### Character progression
-Consumes educational progress totals/events and maps them to one of a small number of character stages. It must not affect which answer is correct or alter mastery calculation.
+
+Maps meaningful learning events to a small stage enum from skinny to increasingly muscular. It does not change answer truth, question selection, or mastery rules.
 
 ## Workout model
 
-Every mode must resolve to the same recipe/session mechanism.
+Every mode resolves to the same recipe/session mechanism:
 
-Examples:
+- QUICK;
+- TRAINING;
+- POWER;
+- WEAKNESS;
+- CUSTOM;
+- TEST;
+- REVIEW.
 
-- QUICK: 5 or 10 questions from a broad pool;
-- TRAINING: selected skill/category, selected count;
-- POWER: one weak micro-skill, high concentration, 10/30/50/100/endless-style continuation;
-- WEAKNESS: system-generated recipe from weak skills;
-- CUSTOM: user-edited recipe;
-- TEST: broad/mixed selection with micro-skill labels hidden;
-- REVIEW: due review items / matched unseen items.
-
-### Weakness-generated workout flow
-
-```text
-attempt history
-  -> mastery snapshot
-  -> ranking of weak skills
-  -> generated workout recipe
-  -> user editable screen
-  -> frozen session question list
-  -> common quiz engine
-```
-
-The user can remove a suggested skill, add another skill, or adjust question counts before start.
+Long sessions use 10/30/50/100 presets and bounded-chunk endless continuation.
 
 ## Question selection policy
 
-Prefer, in order:
+Prefer eligible unseen questions, then least-recently-seen questions, then deliberate review items. Avoid duplicate IDs inside finite sessions.
 
-1. eligible unseen questions for the requested micro-skill;
-2. questions not seen recently;
-3. known-error-pattern coverage;
-4. previously missed questions only when deliberate review is desired.
-
-Do not repeatedly serve one memorized item when equivalent unseen items exist.
+The selector operates on IDs/metadata supplied by `QuestionBankRepository`; it does not care whether data came from fixtures, static JSON, or a future backend.
 
 ## Mixed test rule
 
-Single-skill drills may display a broad category label, but mixed/general tests must hide micro-skill labels that would reveal the answer strategy.
-
-Mastery cannot be finalized only from labeled drills.
+Mixed/general tests hide micro-skill labels that would reveal the solving strategy. Mastery cannot be finalized from labeled drills alone.
 
 ## Mobile-first interaction rule
 
-The quiz screen should make one-answer selection possible with a single tap, then advance with minimal friction. No mandatory long explanation page between every question.
+One-thumb selection and fast progression take priority over decorative art. Character presentation must never block answering.
 
-Feedback should be concise by default and expandable if detailed explanation is later added.
+## Persistence
 
-## Portability
+Web starts with a versioned browser persistence adapter. iOS uses a native persistence implementation behind an equivalent repository/store boundary. Persistence records should stay structurally compatible where practical so future sync is possible.
 
-Question data and mastery/workout logic must not depend on GitHub Pages URLs or site-wide layout. The web app should remain portable to a later mobile wrapper or native client without rewriting the question bank.
+## Portability rule
+
+**Web JavaScript is the behavioral reference implementation; Swift is the native reimplementation of the same contracts.**
+
+Before Swift development, freeze Web V1 conformance fixtures. When behavior differs, the documented contract and fixtures decide which implementation is wrong rather than platform-specific incidental code.

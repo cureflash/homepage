@@ -2,102 +2,130 @@
 
 ## Current state
 
-**Phase 0 is complete. Phase 1 / Task 1.1 is the exact next starting point.**
+**The Power TOEIC app/UI track is now separate from the production question-database track.**
 
-Power TOEIC remains a Part 5-style four-choice cloze drill product built around fine-grained weakness detection, concentration, and high-volume repetition.
+The `Power TOEIC 開発` scheduler must focus on application/program/UI work only. Production taxonomy authoring, Gold-bank production, bulk question generation, production QA and database scaling belong to another scheduler/content track.
 
-Canonical product decisions remain unchanged:
+The exact next app-track task is:
 
-- no target-score feature;
-- no skill-to-body-part mapping;
-- no runtime LLM question generation;
-- question generation/QA stays offline;
-- Drill Sergeant presents/commands questions in the UI;
-- skinny Trainee represents the learner and becomes progressively more muscular;
-- character presentation remains separate from answer, workout, mastery, and content logic.
+**Phase 2 / Task 2.0 — Create Web app skeleton and question-bank adapter.**
 
-## Phase 0 completed work
+Phase 0 reuse audit remains complete.
 
-### Existing quiz audit
+## Platform plan
 
-The existing `subjects/social/quiz/` implementation was inspected at the relevant boundaries:
+Current Web implementation uses:
 
-- `js/core/quiz-engine.js`;
-- `js/renderers/choice-renderer.js` and renderer directory;
-- `js/main.js`;
-- tests, especially `quiz-engine.test.js`;
-- package test script;
-- existing architecture documentation.
+- HTML;
+- CSS;
+- Vanilla JavaScript;
+- ES Modules;
+- Node tests.
 
-The full file-level decision is recorded in `docs/power-toeic/PHASE0_REUSE_AUDIT.md`.
-
-### Architecture decision
-
-Canonical Power TOEIC implementation path is now:
+Canonical Web path:
 
 `subjects/english/power-toeic/`
 
-Offline generation/QA path is:
+After the Web V1 behavior is complete and frozen with deterministic cross-platform fixtures, build a native iOS version in:
 
-`scripts/power-toeic/`
+- Swift;
+- SwiftUI;
+- standard Apple frameworks first.
 
-Do **not** make Power TOEIC import the social quiz at runtime.
-
-The social `QuizEngine` remains social-specific because it intentionally owns a timed-game contract: 180-second default countdown, wrong-answer time penalty, timeout/game-over semantics, and finite-game result output. Those constraints are inappropriate for Power TOEIC study sessions, long drills, review/mastery hooks, and workout recipes.
-
-Reuse the proven architecture rather than the social engine implementation:
+The Swift app must preserve the same domain boundaries:
 
 ```text
-core / renderers / data / presentation / tests
+Web JS                         Swift / SwiftUI
+-----------------------------------------------------------
+session.js                  -> QuizSession.swift
+workout-builder.js          -> WorkoutBuilder.swift
+mastery.js                  -> MasteryEngine.swift
+review.js                   -> ReviewScheduler.swift
+progression.js              -> ProgressionEngine.swift
+question-bank-adapter.js    -> QuestionBankRepository protocol
+quiz UI modules             -> SwiftUI Views
+browser persistence         -> native persistence adapter
 ```
 
-The existing `ChoiceRenderer` contract is the main reusable UI pattern:
+Do not translate DOM code line-by-line. Share the model/data contracts, deterministic fixtures and expected behavior.
+
+## Content boundary
+
+App-development runs may create only:
+
+- consumer-facing question/taxonomy adapter interfaces;
+- tiny synthetic fixture data needed for tests or a demo;
+- synthetic scale fixtures for performance testing.
+
+They must not spend runs writing or scaling the real TOEIC question bank.
+
+Production question data should eventually arrive through a simple platform-neutral export, preferably JSON or an equivalently stable documented format, so both JavaScript and Swift can decode the same educational content.
+
+## Phase 0 architecture decision
+
+Keep the proven social-quiz separation pattern:
+
+`core / renderers / data / presentation / tests`
+
+Do not cross-import the social quiz at runtime. Its current QuizEngine is deliberately a countdown game with wrong-answer time penalties and is not suitable as the Power TOEIC study-session core.
+
+The existing `ChoiceRenderer` interface remains a useful pattern:
 
 - `setAnswerHandler(handler)`;
 - `render(question)`;
 - `showResult(result)`.
 
-For initial Power TOEIC work, implement a small Power TOEIC renderer with that contract rather than cross-importing `subjects/social/quiz/...`. Extract a true shared package only later if real duplicated evolution justifies it.
+## Exact next work
 
-No concrete Phase 0 requirement justified React, Django, GraphQL, Redis, a game engine, microservices, or another framework. Continue with static mobile-first HTML/CSS/ES modules until a real requirement proves otherwise.
+### Task 2.0
 
-### Regression protection
+Create the initial `subjects/english/power-toeic/` structure:
 
-Added:
+```text
+index.html
+styles.css
+js/
+  core/
+  data/
+    question-bank-adapter.js
+    fixtures.js
+  renderers/
+  ui/
+  main.js
+tests/
+package.json
+```
 
-`subjects/social/quiz/tests/choice-renderer.test.js`
+Define a narrow question-bank adapter so runtime code does not know where production questions come from.
 
-It characterizes two reusable contracts:
+Create only a tiny synthetic fixture set sufficient to exercise the UI. Clearly identify it as test/demo data, not production TOEIC content.
 
-1. four options render and a click forwards the stable option key through the answer handler;
-2. result display disables all choices and marks the correct option plus the selected wrong option.
+Add smoke/adapter tests.
 
-The focused Node test was executed against the exact current `ChoiceRenderer` implementation and new test source: **2 tests passed, 0 failed**.
+Then proceed directly to Task 2.1 common study-session core if safe.
 
-No existing social quiz production source was modified during Phase 0.
+## Fixed product behavior
 
-## Exact next task
+Still canonical:
 
-Start **Phase 1 / Task 1.1 — Define Part 5 taxonomy V1**.
+- Part 5-style sentence cloze, exactly four choices;
+- fine-grained weak-skill concentration once external data supplies skill IDs;
+- user-editable weakness-generated workout recipes;
+- QUICK / TRAINING / POWER / WEAKNESS / CUSTOM / TEST / REVIEW through one session engine;
+- no target-score feature;
+- no skill-to-body-part mapping;
+- no runtime LLM generation;
+- Drill Sergeant presents the drill in the UI;
+- skinny Trainee represents the learner and becomes progressively more muscular;
+- characters do not own answer/mastery/workout logic.
 
-Required deliverables:
+## Swift transition gate
 
-1. create a machine-readable taxonomy under the Power TOEIC implementation/data area or a canonical source that can later be imported there;
-2. define approximately 44 stable micro-skill IDs;
-3. group them into a small learner-facing hierarchy;
-4. for every micro-skill define:
-   - stable ID;
-   - learner-facing label;
-   - parent group;
-   - intended decision rule;
-   - representative confusion/error type;
-   - initial priority/notes where useful;
-5. add validation tests for duplicate IDs, missing groups, and duplicate/overlapping definitions where mechanically detectable;
-6. add/update a human-readable taxonomy document;
-7. update STATUS, execution-plan checkbox, and this handoff.
+Do not begin the Swift port merely because a few Web screens exist. First complete Web V1 and Phase 9 cross-platform freeze:
 
-Do not start bulk question generation during Task 1.1. Taxonomy must be stable before question schema/Gold-bank scaling.
+1. platform-neutral model definitions;
+2. deterministic conformance fixtures;
+3. expected session/mastery/review/progression behavior;
+4. documented data adapter format.
 
-## After Task 1.1
-
-Proceed to Task 1.2: Power TOEIC question schema and validators, then Task 1.3 Gold questions. The first visible quiz page remains a later milestone after content contracts are testable.
+Then Phase 10 starts the native Swift/SwiftUI implementation. Equivalent JavaScript and Swift fixtures must produce equivalent domain outputs.
