@@ -2,7 +2,7 @@
 
 ## Current state
 
-The portable Takken worksheet foundation is now present on `main`, and the first normal generation batch has been completed.
+The portable Takken worksheet foundation is present on `main`, and the first two normal generation batches are complete.
 
 Canonical files:
 
@@ -23,43 +23,59 @@ Implemented foundation:
 - deterministic seeded cloze selection from explicit `terms`
 - A4 print/PDF layout and source notes
 - verified-only public catalog
-- automated validation test at `tests/takken-worksheet-factory-validation.mjs`
+- automated validation at `tests/takken-worksheet-factory-validation.mjs`
 
 ## Generated backlog
 
-Queue items 1-20 have been generated into `qualifications/takken/data/pending-units.js`.
+Queue items 1-20 remain in:
 
-They cover:
+- `qualifications/takken/data/pending-units.js`
 
-1. 宅地・建物・宅建業の定義
-2. 免許が必要な取引・不要な行為
-3. 国土交通大臣免許・都道府県知事免許
-4. 免許の欠格事由
-5. 免許の有効期間・更新
-6. 免許換え・変更届・廃業等
-7. 宅建業者名簿・標識等
-8. 宅建士資格登録
-9. 宅地建物取引士証
-10. 専任の宅建士
-11. 宅建士の独占業務
-12. 営業保証金
-13. 営業保証金の還付・不足額
-14. 保証協会・弁済業務保証金
-15. 媒介契約の基本
-16. 一般・専任・専属専任媒介
-17. 指定流通機構・業務処理状況報告
-18. 広告開始時期
-19. 契約締結時期
-20. 誇大広告・禁止行為
+Queue items 21-40 were added in:
 
-All 20 units remain `pending_factcheck`. None is published. `qualifications/takken/data/public-catalog.js` remains verified-only and currently contains no units.
+- `qualifications/takken/data/pending-units-21-40.js`
 
-## Validation added
+All 40 units remain `pending_factcheck`. None is published. `qualifications/takken/data/public-catalog.js` is still empty and verified-only.
 
-`tests/takken-worksheet-factory-validation.mjs` now checks:
+### Newly generated items 21-40
+
+21. 重要事項説明・35条書面の基本
+22. 35条の説明事項と取引類型
+23. 37条書面の基本
+24. 35条と37条の比較
+25. 8種制限の全体像
+26. クーリング・オフ
+27. 手付額・手付金等の保全
+28. 損害賠償額の予定・違約金
+29. 契約不適合責任に関する特約制限
+30. 自己の所有に属しない宅地建物の売買
+31. 割賦販売・所有権留保等
+32. 報酬額の制限
+33. 監督処分・罰則
+34. 意思表示の基本
+35. 錯誤
+36. 詐欺・強迫
+37. 心裡留保・虚偽表示
+38. 制限行為能力者
+39. 代理
+40. 無権代理・表見代理
+
+The batch uses authoritative source candidates centered on:
+
+- e-Gov `宅地建物取引業法`, with `occasion_date=20260401`
+- 国土交通省「不動産取引における手付金等の保全について」
+- e-Gov `民法`, with `occasion_date=20260401`
+
+These are generation-stage source candidates only. They must be independently reopened during a later explicit FACTCHECK batch before publication.
+
+## Validation state
+
+`tests/takken-worksheet-factory-validation.mjs` has been updated to combine the original 1-20 file and the new 21-40 batch, then validate the complete sequence.
+
+It checks:
 
 - 2026 exam year and `2026-04-01` law cutoff
-- sequential unit order
+- exact sequential unit order across both pending batch files
 - unique unit/fact/sentence IDs
 - required metadata
 - HTTPS source records and source-reference resolution
@@ -70,7 +86,7 @@ All 20 units remain `pending_factcheck`. None is published. `qualifications/takk
 - deterministic seeded RNG guard
 - print/PDF path guard
 
-The GitHub connector session could not execute a local Node checkout because the container had no external DNS access, so do not claim the test script has been executed in CI yet. The test itself is committed and should be run by the next environment with repo execution access; if an existing CI workflow covers `tests/*.mjs`, confirm that run before treating CI as green.
+The local container still cannot clone GitHub because external DNS is unavailable, so do not claim the Node validation has been executed locally or in CI unless a later run actually confirms it.
 
 ## Required source baseline
 
@@ -91,14 +107,14 @@ Do not trust prior-year explanations where amendments may change the result.
 
 ## Exact next start
 
-Queue item 21:
+Queue item 41:
 
-`article35-basics` — 重要事項説明・35条書面の基本
+`civil-prescription` — 時効
 
-Normal next run should resume at item 21 and target the next 20 sequential units (21-40) if authoritative-source generation can be done safely. Crossing from 宅建業法 into 権利関係 is allowed to reach the target while preserving queue order.
+Normal next run should resume at item 41 and target the next 20 sequential units (41-60) if authoritative-source generation can be done safely. This will complete the remaining 権利関係 queue through `real-estate-registration`.
 
 Every new unit must remain `pending_factcheck`, be appended to `STATUS.json.unverified_backlog`, and remain outside the public catalog.
 
 ## FACTCHECK policy
 
-Do not fact-check the 20-unit backlog automatically. FACTCHECK remains a separate explicit operation requested by the user.
+Do not fact-check the 40-unit backlog automatically. FACTCHECK remains a separate explicit operation requested by the user.
