@@ -4,6 +4,7 @@ import { createWorkoutRecipe, selectQuestionIds } from './core/workout-builder.j
 import { InMemoryQuestionBank } from './data/question-bank-adapter.js';
 import { demoQuestions, demoSkills } from './data/fixtures.js';
 import { ClozeChoiceRenderer } from './renderers/cloze-choice.js';
+import { getQuestionPresentation } from './ui/question-presentation.js';
 import { renderResults } from './ui/result.js';
 import { WorkoutEditor } from './ui/workout-editor.js';
 
@@ -16,6 +17,7 @@ const quizView = document.querySelector('[data-view="quiz"]');
 const resultView = document.querySelector('[data-view="result"]');
 const progressEl = document.querySelector('[data-role="progress"]');
 const feedbackEl = document.querySelector('[data-role="feedback"]');
+const contextEl = document.querySelector('[data-role="question-context"]');
 const nextButton = document.querySelector('[data-action="next"]');
 
 const renderer = new ClozeChoiceRenderer({
@@ -71,7 +73,9 @@ function renderCurrent() {
   const question = session.currentQuestion;
   if (!question) return finishSession();
   const { current, total } = session.progress;
+  const presentation = getQuestionPresentation({ recipe: activeRecipe, question, skillLabels });
   progressEl.textContent = `${current} / ${total}`;
+  contextEl.textContent = presentation.contextText;
   feedbackEl.textContent = '軍曹「この一問を仕上げろ！」';
   nextButton.hidden = true;
   renderer.render(question);
