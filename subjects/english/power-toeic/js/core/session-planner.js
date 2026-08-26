@@ -7,6 +7,13 @@ export function isSupportedFiniteSessionSize(size) {
   return FINITE_SESSION_SIZES.includes(Number(size));
 }
 
+function asWeightedAllocations(recipe) {
+  return recipe.skillAllocations.map((entry) => ({
+    skillId: entry.skillId,
+    weight: entry.weight ?? Math.max(1, entry.count),
+  }));
+}
+
 export function createFiniteSessionRecipe(recipe, size) {
   const totalCount = Number(size);
   if (!isSupportedFiniteSessionSize(totalCount)) {
@@ -16,9 +23,7 @@ export function createFiniteSessionRecipe(recipe, size) {
     ...recipe,
     totalCount,
     endless: false,
-    skillAllocations: recipe.skillAllocations.map((entry) =>
-      entry.weight != null ? { skillId: entry.skillId, weight: entry.weight } : { skillId: entry.skillId, count: Math.min(entry.count, totalCount) }
-    ),
+    skillAllocations: asWeightedAllocations(recipe),
   });
 }
 
@@ -39,11 +44,7 @@ export function createEndlessChunk({
     totalCount: chunkSize,
     seed: recipe.seed + chunkIndex,
     endless: true,
-    skillAllocations: recipe.skillAllocations.map((entry) =>
-      entry.weight != null
-        ? { skillId: entry.skillId, weight: entry.weight }
-        : { skillId: entry.skillId, weight: Math.max(1, entry.count) }
-    ),
+    skillAllocations: asWeightedAllocations(recipe),
   });
 
   const questionIds = selectQuestionIds({ repository, recipe: chunkRecipe, attempts, reviewQuestionIds });
