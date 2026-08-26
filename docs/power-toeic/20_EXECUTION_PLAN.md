@@ -50,13 +50,15 @@ The app track may define only the consumer-facing adapter contract and tiny synt
   - No target-score prediction.
   - Acceptance: result data derives only from session attempts.
 
-Phase 2 verification: 7 Node tests passed across adapter/session/renderer contracts. The visible page currently uses only synthetic fixture content through the repository adapter.
+Phase 2 verification: 9 Node tests passed across adapter/session/renderer contracts. The visible page currently uses only synthetic fixture content through the repository adapter.
 
 ## Phase 3 — Web persistence, mastery and weakness — APP TRACK
 
-- [ ] **3.1 Implement versioned browser persistence**
+- [x] **3.1 Implement versioned browser persistence**
   - Attempts, review data and character progression.
   - Fail safely on invalid/old data.
+  - Acceptance: versioned root, injectable storage, safe corrupted/unsupported fallback and session-attempt wiring are covered by focused tests.
+  - Verification: 5 focused persistence tests passed.
 
 - [ ] **3.2 Implement deterministic mastery engine**
   - Configurable, explainable state transitions.
