@@ -1,0 +1,36 @@
+{
+  "batch_id": "2026-08-26-scheduled-002",
+  "purpose": "scheduled CONTENT/GENERATE checkpoint",
+  "validation_status": "pending_validation",
+  "qa_status": "pending_validation",
+  "target_skill_count": 4,
+  "completed_skill_count": 1,
+  "question_count": 100,
+  "questions_per_completed_skill": 100,
+  "skills": [
+    {
+      "id": "p5.pos.adverb_modifies_adjective",
+      "count": 100,
+      "paths": [
+        "parts-of-speech/adverb-modifies-adjective/pending/batch-20260826-002-part1.json",
+        "parts-of-speech/adverb-modifies-adjective/pending/batch-20260826-002-part2.json",
+        "parts-of-speech/adverb-modifies-adjective/pending/batch-20260826-002-part3.json",
+        "parts-of-speech/adverb-modifies-adjective/pending/batch-20260826-002-part4.json"
+      ]
+    }
+  ],
+  "next_micro_skill": "p5.pos.participle_adjective_ed_ing",
+  "construction_checks": {
+    "stable_ids": true,
+    "exactly_four_distinct_choices_per_item": true,
+    "one_explicit_blank_per_stem": true,
+    "valid_answer_index": true,
+    "answer_position_distribution": {"A": 25, "B": 25, "C": 25, "D": 25},
+    "exact_duplicate_stems_within_completed_skill": 0,
+    "near_duplicate_pairs_within_completed_skill_at_0_94": 0,
+    "full_existing_bank_similarity_scan": "not_completed_in_this_checkpoint"
+  },
+  "schema_note": "Files use power-toeic-candidate-v1-extended. Tuple positions 0-4 remain compatible with candidate-v1, while difficulty/template_id are added and taxonomy/generation/status metadata are inherited from each file wrapper.",
+  "checkpoint_note": "One complete 100-question micro-skill was persisted. Remaining run target was not counted or committed; resume from the next taxonomy micro-skill rather than padding the batch with lower-quality material.",
+  "important": "All questions are generated candidates only. Independent QA must re-solve and may verify, revise, quarantine, or reject them."
+}
