@@ -1,0 +1,23 @@
+{
+  "project": "Power TOEIC",
+  "status": "planned",
+  "phase": 0,
+  "active_task": "0.1",
+  "next_role": "implementation",
+  "canonical_docs": "docs/power-toeic/",
+  "implementation_path": null,
+  "reuse_candidate": "subjects/social/quiz/",
+  "mvp_scope": "TOEIC Part 5 four-choice cloze drills",
+  "taxonomy_target": "approximately 44 Part 5 micro-skills",
+  "architecture_policy": "reuse-first boring technology; no new framework until reuse audit proves necessary",
+  "runtime_ai": false,
+  "target_score_feature": false,
+  "body_part_skill_mapping": false,
+  "characters": {
+    "question_giver": "drill_sergeant",
+    "learner_avatar": "skinny_trainee",
+    "progression": "skinny_to_muscular"
+  },
+  "last_completed_task": null,
+  "updated_at": "2026-08-26T21:22:00+09:00"
+}
