@@ -1,0 +1,7 @@
+{
+  "status": "in_progress",
+  "mode": "handoff_driven",
+  "project": "science-worksheet-factory",
+  "next_task": "Follow docs/science-worksheet-factory/90_HANDOFF.md exact next starting point and advance one safe checkpoint.",
+  "scheduler_policy": "one_checkpoint_per_cycle"
+}
