@@ -75,7 +75,10 @@ The app track may define only the consumer-facing adapter contract and tiny synt
 - [x] **10.4 Port mastery, weakness and review engines**
   - Ported frozen mastery gates, recent/overall weakness ranking and deterministic review intervals/due ordering.
   - Shared Web mastery/review fixture cases pass natively.
-- [ ] **10.5 Build SwiftUI home/workout/quiz/result/weakness screens**
+- [x] **10.5 Build SwiftUI home/workout/quiz/result/weakness screens**
+  - Added native mobile-first Home, recipe configuration, four-choice Quiz, Result and Weakness views behind existing boundaries.
+  - Views forward intent to domain objects and do not calculate correctness, selection, mastery or review dates.
+  - TEST/mixed sessions hide the micro-skill label.
 - [ ] **10.6 Port Drill Sergeant / Trainee character UX and progression**
 - [ ] **10.7 Implement native persistence**
 - [ ] **10.8 Run JavaScript/Swift conformance suite**
