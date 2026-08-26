@@ -1,5 +1,5 @@
 import random
-from math import prod
+from math import prod, sqrt
 
 SCIENCE_PROBLEM_TYPES = {
     'science-formula',
@@ -42,6 +42,10 @@ def _relation_result(relation, inputs):
         if len(inputs) < 3:
             raise ValueError('offset-product relation needs an offset and at least two factors')
         return inputs[0] + prod(inputs[1:])
+    if relation == 'half-product-last-square':
+        if len(inputs) < 2:
+            raise ValueError('half-product-last-square needs at least one linear factor and one squared factor')
+        return 0.5 * prod(inputs[:-1]) * inputs[-1] ** 2
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -75,6 +79,22 @@ def _generation_formula_answer(relation, result_name, input_names, values, solve
         if denominator == 0:
             raise ValueError('cannot solve offset-product relation with zero denominator')
         return (values[result_name] - values[offset_name]) / denominator
+    if relation == 'half-product-last-square':
+        squared_name = input_names[-1]
+        linear_names = input_names[:-1]
+        if solve_for == squared_name:
+            denominator = prod(values[name] for name in linear_names)
+            if denominator == 0:
+                raise ValueError('cannot solve half-product-last-square with zero denominator')
+            squared_value = 2 * values[result_name] / denominator
+            if squared_value < 0:
+                raise ValueError('cannot solve half-product-last-square with negative square')
+            return sqrt(squared_value)
+        other_linear = [name for name in linear_names if name != solve_for]
+        denominator = prod(values[name] for name in other_linear) * values[squared_name] ** 2
+        if denominator == 0:
+            raise ValueError('cannot solve half-product-last-square with zero denominator')
+        return 2 * values[result_name] / denominator
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -84,12 +104,17 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
     input_names = list(spec['inputs'])
     variables = spec['variables']
     solve_for = solve_for or spec.get('solve_for') or result_name
-    if relation not in {'product', 'sum', 'difference', 'offset-product'}:
+    if relation not in {'product', 'sum', 'difference', 'offset-product', 'half-product-last-square'}:
         raise ValueError(f'unsupported formula relation: {relation}')
     if relation == 'difference' and len(input_names) != 2:
         raise ValueError('difference relation needs exactly two inputs')
     if relation == 'offset-product' and len(input_names) < 3:
         raise ValueError('offset-product relation needs an offset and at least two factors')
+    if relation == 'half-product-last-square':
+        if len(input_names) < 2:
+            raise ValueError('half-product-last-square needs at least two inputs')
+        if len(set(input_names)) != len(input_names):
+            raise ValueError('half-product-last-square input names must be unique')
     if result_name not in variables or any(name not in variables for name in input_names):
         raise ValueError('all formula variables need definitions')
     if solve_for not in [result_name, *input_names]:
@@ -279,6 +304,22 @@ def compute_science_answer(problem):
             if denominator == 0:
                 raise ValueError('cannot solve offset-product relation with zero denominator')
             return (known[result_name] - known[offset_name]) / denominator
+        if relation == 'half-product-last-square':
+            squared_name = input_names[-1]
+            linear_names = input_names[:-1]
+            if solve_for == squared_name:
+                denominator = prod(known[name] for name in linear_names)
+                if denominator == 0:
+                    raise ValueError('cannot solve half-product-last-square with zero denominator')
+                squared_value = 2 * known[result_name] / denominator
+                if squared_value < 0:
+                    raise ValueError('cannot solve half-product-last-square with negative square')
+                return sqrt(squared_value)
+            other_linear = [name for name in linear_names if name != solve_for]
+            denominator = prod(known[name] for name in other_linear) * known[squared_name] ** 2
+            if denominator == 0:
+                raise ValueError('cannot solve half-product-last-square with zero denominator')
+            return 2 * known[result_name] / denominator
         raise ValueError(f'unsupported formula relation: {relation}')
 
     source = problem['source']
