@@ -16,6 +16,7 @@ export class ChoiceRenderer {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "choice-button";
+      if (option.kind === "flag") button.classList.add("choice-button-flag");
       button.dataset.key = String(option.key);
       button.textContent = option.label;
       button.addEventListener("click", () => this.onAnswer(option.key));
