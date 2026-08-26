@@ -81,7 +81,7 @@ function setupWorldControls(params, game) {
   };
   ui.worldRegionSelect.addEventListener("change", reloadWithSelection);
   ui.worldModeSelect.addEventListener("change", reloadWithSelection);
-  ui.mapCredit.textContent = "世界地図: svg-world-maps 1.0.1 / SimpleMaps SVG Map Library（ライセンス条件に基づき利用）";
+  ui.mapCredit.textContent = "世界地図: Natural Earth 1:50m（Public Domain）／Webメルカトル図法・地域別ローカルSVG";
 }
 
 const params = new URLSearchParams(window.location.search);
