@@ -2,8 +2,8 @@
   "project": "Power TOEIC",
   "status": "in_progress",
   "track": "app_ui_program",
-  "phase": 6,
-  "active_task": "6.1",
+  "phase": 8,
+  "active_task": "8.1",
   "next_role": "implementation",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
@@ -15,10 +15,19 @@
   "runtime_ai": false,
   "target_score_feature": false,
   "body_part_skill_mapping": false,
-  "characters": { "question_giver": "drill_sergeant", "learner_avatar": "skinny_trainee", "progression": "skinny_to_muscular", "temporary_art_source": "Irasutoya", "temporary_unique_art_limit": 20 },
+  "characters": {
+    "question_giver": "drill_sergeant",
+    "learner_avatar": "skinny_trainee",
+    "progression": "skinny_to_muscular",
+    "temporary_art_source": "Irasutoya",
+    "temporary_unique_art_limit": 20,
+    "asset_catalog": "subjects/english/power-toeic/js/ui/asset-catalog.js",
+    "presenter": "subjects/english/power-toeic/js/ui/character-presenter.js",
+    "progression_module": "subjects/english/power-toeic/js/core/progression.js",
+    "completed_tasks": ["6.1", "6.2", "6.3"]
+  },
   "audio": { "source": "Google Drive existing SE library", "initial_correct": "otologic_correct.mp3", "initial_wrong": "otologic_incorrect.mp3", "initial_milestone": "otologic_inspiration.mp3", "license": "CC BY 4.0 / OtoLogic attribution required" },
   "asset_policy": "docs/power-toeic/50_ASSET_POLICY.md",
-  "asset_catalog": "subjects/english/power-toeic/js/ui/asset-catalog.js",
   "persistence": { "module": "subjects/english/power-toeic/js/core/persistence.js", "storage_key": "power-toeic.app-state", "version": 1, "root_fields": ["attempts", "reviewEntries", "progression"], "invalid_or_unsupported_policy": "reset safely to default root" },
   "mastery": {
     "module": "subjects/english/power-toeic/js/core/mastery.js",
@@ -34,7 +43,15 @@
   "attempt_contexts": ["training", "mixed", "review"],
   "weakness": { "module": "subjects/english/power-toeic/js/core/weakness.js", "policy": "rank attempted skills deterministically from recent and overall error evidence; exclude unknown/unattempted skills" },
   "workout": { "module": "subjects/english/power-toeic/js/core/workout-builder.js", "editor_model": "subjects/english/power-toeic/js/core/workout-editor-model.js", "editor_ui": "subjects/english/power-toeic/js/ui/workout-editor.js", "session_planner": "subjects/english/power-toeic/js/core/session-planner.js", "completed_tasks": ["4.1", "4.2", "4.3", "4.4", "4.5", "4.6"], "modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"], "finite_session_sizes": [10, 30, 50, 100], "endless_default_chunk_size": 30, "endless_max_chunk_size": 100 },
-  "last_completed_task": "5.3",
-  "phase5_result": "5.1 mixed presentation, 5.2 deterministic review scheduling, and 5.3 mixed/review mastery gate completed; focused presentation/review/mastery/session checks passed",
-  "updated_at": "2026-08-27T01:58:00+09:00"
+  "question_reports": {
+    "module": "subjects/english/power-toeic/js/core/question-reports.js",
+    "ui": "subjects/english/power-toeic/js/ui/question-report.js",
+    "storage_key": "power-toeic.question-reports.v1",
+    "reasons": ["ambiguous", "unnatural_english", "wrong_answer", "wrong_explanation", "other"],
+    "identifies": ["questionId", "questionVersion"],
+    "completed_task": "7.4"
+  },
+  "last_completed_task": "7.4",
+  "phase6_result": "semantic character contract, removable Sergeant/Trainee composition, and deterministic stage 0-5 progression are merged",
+  "updated_at": "2026-08-27T02:08:00+09:00"
 }
