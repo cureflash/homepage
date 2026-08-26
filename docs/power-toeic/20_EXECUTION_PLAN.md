@@ -24,14 +24,14 @@ The app track may define only the consumer-facing adapter contract and tiny synt
 
 ## Phase 2 — Web common quiz-session MVP — APP TRACK
 
-- [ ] **2.0 Create Web app skeleton and question-bank adapter**
+- [x] **2.0 Create Web app skeleton and question-bank adapter**
   - Create `subjects/english/power-toeic/` with mobile-first static HTML/CSS/ES-module structure.
   - Define the minimum `QuestionBankRepository`/adapter interface consumed by runtime code.
   - Add a tiny clearly synthetic fixture bank for tests/demo only.
   - Do not author production TOEIC database content.
   - Acceptance: app imports fixture questions only through the adapter and basic smoke tests pass.
 
-- [ ] **2.1 Implement common four-choice study session core**
+- [x] **2.1 Implement common four-choice study session core**
   - Immutable started-session question list.
   - Current index/state.
   - Answer submission and correctness.
@@ -39,16 +39,18 @@ The app track may define only the consumer-facing adapter contract and tiny synt
   - No mandatory countdown/game-over semantics.
   - Acceptance: deterministic Node tests.
 
-- [ ] **2.2 Implement cloze-choice renderer and quiz screen**
+- [x] **2.2 Implement cloze-choice renderer and quiz screen**
   - Sentence with one blank plus exactly four tappable options.
   - Immediate correct/wrong visual state and concise explanation.
   - Mobile-first one-thumb interaction.
   - Acceptance: renderer/DOM contract tests and usable static page.
 
-- [ ] **2.3 Implement basic result screen**
+- [x] **2.3 Implement basic result screen**
   - Questions answered, correct count, accuracy and skill breakdown.
   - No target-score prediction.
   - Acceptance: result data derives only from session attempts.
+
+Phase 2 verification: 7 Node tests passed across adapter/session/renderer contracts. The visible page currently uses only synthetic fixture content through the repository adapter.
 
 ## Phase 3 — Web persistence, mastery and weakness — APP TRACK
 
