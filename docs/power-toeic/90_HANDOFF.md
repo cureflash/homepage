@@ -2,61 +2,102 @@
 
 ## Current state
 
-Power TOEIC has been specified but implementation has not begun.
+**Phase 0 is complete. Phase 1 / Task 1.1 is the exact next starting point.**
 
-The current product decisions are canonical:
+Power TOEIC remains a Part 5-style four-choice cloze drill product built around fine-grained weakness detection, concentration, and high-volume repetition.
 
-- product name: Power TOEIC;
-- core philosophy: decompose weak points finely, choose/concentrate, and break them through high-volume repetition;
-- MVP content: TOEIC Part 5-style sentence cloze questions with exactly four choices;
-- system may mechanically generate a weakness-focused workout recipe from attempt/mastery data;
-- user can edit the proposed recipe before starting;
-- all workout modes must feed one common quiz-session engine;
-- user-facing taxonomy is broader than the internal approximately 44 Part 5 micro-skills;
+Canonical product decisions remain unchanged:
+
 - no target-score feature;
-- no body-part-to-skill mapping;
+- no skill-to-body-part mapping;
 - no runtime LLM question generation;
-- question generation and QA are offline tooling;
-- characters are a Drill Sergeant and a skinny Trainee;
-- Drill Sergeant presents/commands the drill in the UI;
-- Trainee represents the answering learner and progressively becomes muscular;
-- character presentation must remain separate from answer, workout, mastery, and content logic.
+- question generation/QA stays offline;
+- Drill Sergeant presents/commands questions in the UI;
+- skinny Trainee represents the learner and becomes progressively more muscular;
+- character presentation remains separate from answer, workout, mastery, and content logic.
 
-## Repository evidence relevant to Phase 0
+## Phase 0 completed work
 
-`cureflash/homepage` already contains `subjects/social/quiz/`, a lightweight vanilla-JS quiz platform with explicit separation among core quiz logic, renderers, game/data modules, presentation, and tests. The Power TOEIC implementation must audit that code before introducing any new framework.
+### Existing quiz audit
 
-The intended first comparison targets are:
+The existing `subjects/social/quiz/` implementation was inspected at the relevant boundaries:
 
-- `subjects/social/quiz/js/core/`
-- `subjects/social/quiz/js/renderers/`
-- `subjects/social/quiz/js/main.js`
-- `subjects/social/quiz/tests/`
-- `subjects/social/quiz/package.json`
-- relevant README/design docs
+- `js/core/quiz-engine.js`;
+- `js/renderers/choice-renderer.js` and renderer directory;
+- `js/main.js`;
+- tests, especially `quiz-engine.test.js`;
+- package test script;
+- existing architecture documentation.
 
-The preferred result is reuse/generalization of proven quiz primitives without breaking social quiz behavior. If direct sharing would create harmful coupling, preserve the same proven architectural boundaries and document why duplication is safer.
+The full file-level decision is recorded in `docs/power-toeic/PHASE0_REUSE_AUDIT.md`.
+
+### Architecture decision
+
+Canonical Power TOEIC implementation path is now:
+
+`subjects/english/power-toeic/`
+
+Offline generation/QA path is:
+
+`scripts/power-toeic/`
+
+Do **not** make Power TOEIC import the social quiz at runtime.
+
+The social `QuizEngine` remains social-specific because it intentionally owns a timed-game contract: 180-second default countdown, wrong-answer time penalty, timeout/game-over semantics, and finite-game result output. Those constraints are inappropriate for Power TOEIC study sessions, long drills, review/mastery hooks, and workout recipes.
+
+Reuse the proven architecture rather than the social engine implementation:
+
+```text
+core / renderers / data / presentation / tests
+```
+
+The existing `ChoiceRenderer` contract is the main reusable UI pattern:
+
+- `setAnswerHandler(handler)`;
+- `render(question)`;
+- `showResult(result)`.
+
+For initial Power TOEIC work, implement a small Power TOEIC renderer with that contract rather than cross-importing `subjects/social/quiz/...`. Extract a true shared package only later if real duplicated evolution justifies it.
+
+No concrete Phase 0 requirement justified React, Django, GraphQL, Redis, a game engine, microservices, or another framework. Continue with static mobile-first HTML/CSS/ES modules until a real requirement proves otherwise.
+
+### Regression protection
+
+Added:
+
+`subjects/social/quiz/tests/choice-renderer.test.js`
+
+It characterizes two reusable contracts:
+
+1. four options render and a click forwards the stable option key through the answer handler;
+2. result display disables all choices and marks the correct option plus the selected wrong option.
+
+The focused Node test was executed against the exact current `ChoiceRenderer` implementation and new test source: **2 tests passed, 0 failed**.
+
+No existing social quiz production source was modified during Phase 0.
 
 ## Exact next task
 
-Start **Phase 0 / Task 0.1 — Audit existing quiz foundation**.
+Start **Phase 1 / Task 1.1 — Define Part 5 taxonomy V1**.
 
-Required actions:
+Required deliverables:
 
-1. fetch latest `main` and reconcile any parallel change;
-2. read every Power TOEIC canonical document;
-3. inspect the social quiz core, ordinary choice renderer, main wiring, tests, and package scripts;
-4. write a concrete file-level table of:
-   - reusable as-is;
-   - reusable after small generic extraction;
-   - social-specific / must not reuse;
-5. identify the smallest safe Power TOEIC implementation path and shared-code boundary;
-6. add characterization/regression tests before any extraction that could alter social quiz behavior;
-7. update `STATUS.json`, `20_EXECUTION_PLAN.md`, and this handoff with the exact outcome;
-8. proceed directly into Task 0.2/0.3 in the same run if safe.
+1. create a machine-readable taxonomy under the Power TOEIC implementation/data area or a canonical source that can later be imported there;
+2. define approximately 44 stable micro-skill IDs;
+3. group them into a small learner-facing hierarchy;
+4. for every micro-skill define:
+   - stable ID;
+   - learner-facing label;
+   - parent group;
+   - intended decision rule;
+   - representative confusion/error type;
+   - initial priority/notes where useful;
+5. add validation tests for duplicate IDs, missing groups, and duplicate/overlapping definitions where mechanically detectable;
+6. add/update a human-readable taxonomy document;
+7. update STATUS, execution-plan checkbox, and this handoff.
 
-Do not start building a React/Django/mobile stack during Task 0.1. A new framework requires concrete evidence from the audit that the existing static ES-module approach cannot support the current MVP requirements.
+Do not start bulk question generation during Task 1.1. Taxonomy must be stable before question schema/Gold-bank scaling.
 
-## First implementation milestone
+## After Task 1.1
 
-The first visible milestone should be a minimal Power TOEIC page that can run a tiny reviewed Gold question set through the reused/common four-choice quiz session. Do not scale AI-generated question volume before taxonomy/schema validation and negative QA fixtures exist.
+Proceed to Task 1.2: Power TOEIC question schema and validators, then Task 1.3 Gold questions. The first visible quiz page remains a later milestone after content contracts are testable.
