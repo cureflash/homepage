@@ -2,7 +2,7 @@
   "status": "in_progress",
   "mode": "handoff_driven",
   "project": "science-worksheet-factory",
-  "next_task": "Continue Phase 3 at 物理基礎 mechanical-energy conservation. State no-friction/no-air-resistance conditions explicitly, keep drills basic and mechanically checkable, then continue to heat after the mechanics energy block is coherent.",
+  "next_task": "Continue Phase 3 at 物理基礎 heat. Re-open the current MEXT commentary for the heat block, then add a coherent basic mechanically checkable heat-quantity/specific-heat/heat-capacity family through the shared generator/validator/PDF/catalog pipeline. Preserve formal_course=物理基礎 and grade=null; after heat continue waves/sound, electricity, then energy use.",
   "scheduler_policy": "one_checkpoint_per_cycle",
   "updated_at": "2026-08-26"
 }
