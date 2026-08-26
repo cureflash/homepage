@@ -2,76 +2,65 @@
 
 ## Current state
 
-Independent QA has completed the latest generated batch `2026-08-26-scheduled-002` for micro-skill `p5.pos.adverb_modifies_adjective`.
+Independent QA has now checked **200 questions cumulatively**.
 
-- checked: 100
-- verified: 87
-- needs_revision: 13
-- rejected: 0
-- remaining pending backlog: 400
+- verified: **183**
+- needs_revision: **17**
+- rejected: **0**
+- unchecked `pending_validation`: **1100** out of 1300 generated candidates
+- `validation_complete`: **false**
 
-The per-item QA record is canonical at:
+## Work completed this run
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-26-scheduled-002.qa.json`
+Reviewed the oldest remaining pending batch for `p5.pos.adjective_before_noun` (`batch: 2026-08-26-manual-001`) question-by-question. Each item was solved from the stem and four choices before consulting its stored proposed answer/explanation.
 
-The 87 verified IDs are separately indexed as production-eligible at:
+Result:
 
-`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/adverb-modifies-adjective/verified/batch-20260826-002-approved-ids.json`
+- checked: **100**
+- verified: **96**
+- needs_revision: **4**
+- rejected: **0**
 
-The original candidate files remain unchanged. The approved-ID index is an explicit gate: IDs not listed there must not enter a learner-facing production pool.
+Per-item QA record:
 
-## QA method used
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-26-manual-001.qa.json`
 
-Each of the 100 items was independently solved from the stem and four choices before consulting the generated proposed answer/explanation. Then each item was reviewed for:
+Approved production-eligible ID gate:
 
-- one defensible answer only;
-- alternate-answer risk;
-- grammatical and semantic naturalness;
-- distractor validity;
-- intended micro-skill alignment;
-- answer/explanation consistency;
-- exact/near-duplicate concerns;
-- excessive template or lexical repetition.
+`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/adjective-before-noun/verified/batch-20260826-001-approved-ids.json`
 
-The batch had no existing verified-bank collision to compare against because the verified production bank was empty before this QA pass. The generation-time within-batch exact/near-duplicate checks were also reviewed; no item was rejected solely for duplication. The family structure is repetitive (25 adverb/word-family sets × 4 answer-position variants), but the 87 passing items remain sufficiently distinct for this first bank checkpoint.
+The source candidate file remains unchanged. IDs absent from the approved-ID index remain excluded from any production bank.
 
-## 13 items requiring revision
+## Four items requiring revision
 
-The full per-ID reason is in the QA JSON. Main defect classes:
+- `p5_pos_adjective_before_noun_0037` — `secure connection` / `secured connection`
+- `p5_pos_adjective_before_noun_0038` — `secure network` / `secured network`
+- `p5_pos_adjective_before_noun_0039` — `secure storage method` / `secured storage method`
+- `p5_pos_adjective_before_noun_0040` — `secure system` / `secured system`
 
-1. **taxonomy mismatch: adverb actually modifies another adverb**
-   - `...0020`: `remarkably quickly`
-   - `...0047`: `exceptionally well qualified`
-   - `...0062`: `arrived unusually early`
+In each case both adjective forms are grammatically and semantically defensible in the existing context, so the item lacks a uniquely defensible answer. These four remain `needs_revision`; they were not auto-promoted.
 
-2. **taxonomy mismatch: adverb modifies a passive verb phrase rather than an adjective**
-   - `...0034`: `widely accepted`
-   - `...0035`: `widely used`
-   - `...0036`: `widely recognized`
-   - `...0094`: `publicly announced`
-   - `...0096`: `publicly confirmed`
+## Quality observations
 
-3. **explanation points to the wrong syntactic target even though the keyed answer is unique**
-   - `...0024`: `significantly more accurate`
-   - `...0056`: `considerably more efficient`
-
-4. **unnatural/weak TOEIC-style collocation**
-   - `...0051`: `customer satisfaction is stronger`
-   - `...0079`: `operationally practical`
-   - `...0082`: `environmentally efficient`
-
-These 13 remain excluded. They may be minimally rewritten by a future revision step, but must be independently rechecked before becoming verified.
+- The proposed key matched the independently derived unique answer in all 96 verified items.
+- No key mismatch was found; the four failures are ambiguity failures.
+- Stored explanations are short but accurate for the 96 verified items.
+- No exact duplicate stem was observed within this 100-question batch.
+- The batch has visible structural repetition because it uses 25 word families × four answer-position variants, but the passing stems remain contextually distinct.
+- Answer positions are balanced A/B/C/D = **25/25/25/25**.
+- A full repository-wide semantic near-duplicate scan was **not completed in this run**, so global near-duplicate clearance is not claimed.
 
 ## Exact next QA point
 
-The latest 100-question scheduled batch is complete. Resume the older remaining backlog at:
+Continue with the next oldest unchecked data:
 
-- batch: `2026-08-26-manual-001`
-- micro-skill: `p5.pos.adjective_before_noun`
-- question ID: `p5_pos_adjective_before_noun_0001`
+- file: `subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/adverb-modifies-verb/pending/batch-20260826-001.json`
+- batch metadata: `2026-08-26-manual-001`
+- micro-skill: `p5.pos.adverb_modifies_verb`
+- question ID: `p5_pos_adverb_modifies_verb_0001`
 
-Then continue through the remaining three micro-skills of that manual batch in order unless a newer generated batch should be prioritized by the scheduler rule.
+Continue in oldest-pending order. Do not prioritize the newly generated `modal_base_form` batch over older unchecked candidates.
 
-## Throughput observation
+## Generation coordination
 
-A full 100-question micro-skill can be independently reviewed in one QA run with meaningful item-level scrutiny. This run does **not** establish that 400 questions can be checked with the same rigor in one run. At the current observed rate, generation may outpace QA if generation regularly produces 400 per run, so backlog growth must be monitored rather than bulk-approving unchecked items.
+Generation has reached **1300 questions / 13 of 44 micro-skills**. The next generation micro-skill is `p5.verb.to_infinitive_pattern`. Until all 44 skills are generated, normal runs should continue combined generation + oldest-pending validation. After generation completes, switch to validation-only until pending and revision work is exhausted.
