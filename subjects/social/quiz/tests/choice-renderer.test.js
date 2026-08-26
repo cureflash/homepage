@@ -3,24 +3,11 @@ import assert from "node:assert/strict";
 
 import { ChoiceRenderer } from "../js/renderers/choice-renderer.js";
 
-function makeClassList(owner) {
-  const values = new Set();
-  return {
-    add(...names) {
-      for (const name of names) values.add(name);
-      owner.className = [...values].join(" ");
-    },
-    contains(name) {
-      return values.has(name);
-    }
-  };
-}
-
 function fakeElement(tagName) {
+  let classes = new Set();
   const element = {
     tagName: String(tagName).toUpperCase(),
     type: "",
-    className: "",
     dataset: {},
     textContent: "",
     disabled: false,
@@ -38,9 +25,7 @@ function fakeElement(tagName) {
     querySelectorAll(selector) {
       const found = [];
       const visit = (node) => {
-        if (selector === ".choice-button" && node.classList?.contains("choice-button")) {
-          found.push(node);
-        }
+        if (selector === ".choice-button" && node.classList?.contains("choice-button")) found.push(node);
         for (const child of node.children ?? []) visit(child);
       };
       for (const child of this.children) visit(child);
@@ -50,19 +35,24 @@ function fakeElement(tagName) {
       this.children = [...children];
     }
   };
-  element.classList = makeClassList(element);
+
   Object.defineProperty(element, "className", {
     get() {
-      return this._className ?? "";
+      return [...classes].join(" ");
     },
     set(value) {
-      this._className = value;
-      const names = String(value).split(/\s+/).filter(Boolean);
-      element.classList = makeClassList(element);
-      if (names.length) element.classList.add(...names);
-    },
-    configurable: true
+      classes = new Set(String(value).split(/\s+/).filter(Boolean));
+    }
   });
+  element.classList = {
+    add(...names) {
+      for (const name of names) classes.add(name);
+    },
+    contains(name) {
+      return classes.has(name);
+    }
+  };
+
   return element;
 }
 
