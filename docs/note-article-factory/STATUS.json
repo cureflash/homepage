@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "status": "ready_for_scheduling",
+  "schedule_registered": false,
+  "target_time_local": "05:00",
+  "timezone": "Asia/Tokyo",
+  "auto_publish": false,
+  "delivery": "gmail_to_self",
+  "last_article": null,
+  "recent_topic_keys": [],
+  "notes": "Before scheduling, use 90_SCHEDULE_PROMPT.md. Every article must pass 10_STYLE_AND_AI_SMELL_SPEC.md before Gmail delivery."
+}
