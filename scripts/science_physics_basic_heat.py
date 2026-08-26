@@ -4,8 +4,10 @@ The current MEXT Physics Basics commentary explicitly includes heat and temperat
 heat capacity, specific heat capacity (specific heat), and conservation of heat
 quantity. These first drills stay at formula-understanding/substitution level and
 use coherent SI units: Q in J, m in kg, c in J/(kg·K), C in J/K, and temperature
-change ΔT in K. The shared product relation is sufficient for both Q = mcΔT and
-Q = CΔT, so no shared generator relation is introduced here.
+change ΔT in K. Using K for the temperature difference keeps the first family on
+one coherent unit convention without introducing a unit-conversion exercise. The
+shared product relation is sufficient for both Q = mcΔT and Q = CΔT, so no shared
+generator relation is introduced here.
 """
 
 PHYSICS_BASIC_HEAT_PROBLEM_COUNT = 20
