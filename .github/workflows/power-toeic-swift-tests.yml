@@ -1,0 +1,27 @@
+name: Power TOEIC Swift tests
+
+on:
+  pull_request:
+    paths:
+      - 'subjects/english/power-toeic-ios/**'
+      - 'docs/power-toeic/**'
+      - '.github/workflows/power-toeic-swift-tests.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'subjects/english/power-toeic-ios/**'
+      - 'docs/power-toeic/**'
+      - '.github/workflows/power-toeic-swift-tests.yml'
+
+jobs:
+  test:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: subjects/english/power-toeic-ios
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift version
+        run: swift --version
+      - name: Build and test package
+        run: swift test
