@@ -2,10 +2,10 @@
 
 ## Current state
 
-Production content generation now contains **900 persisted generated candidates**.
+Production content generation now contains **1000 persisted generated candidates**.
 
-- **9 micro-skills are complete at 100 questions each**.
-- All 900 persisted questions remain `pending_validation`.
+- **10 micro-skills are complete at 100 questions each**.
+- All 1000 persisted questions remain `pending_validation`.
 - No QA decision was made by this generation run.
 - `generation_complete` remains **false**. Continue GENERATE only.
 
@@ -24,30 +24,23 @@ Canonical taxonomy remains `subjects/english/power-toeic/js/data/taxonomy/part5-
 7. `p5.pos.word_form_subject_position` — 100
 8. `p5.pos.word_form_object_position` — 100
 9. `p5.verb.subject_verb_agreement` — 100
+10. `p5.verb.present_vs_past` — 100
 
-Completed subtotal: **900**.
+Completed subtotal: **1000**.
 
 ## Work completed this run
 
-Generated and persisted the full 100-question `p5.verb.subject_verb_agreement` micro-skill in four 25-question pending batches:
+Generated and persisted the full 100-question `p5.verb.present_vs_past` micro-skill in four 25-question pending batches:
 
-- 0001–0025: `subjects/english/power-toeic/js/data/questions/part5/verbs/subject-verb-agreement/pending/batch-20260827-008-part1.json`
-- 0026–0050: `.../batch-20260827-008-part2.json`
-- 0051–0075: `.../batch-20260827-008-part3.json`
-- 0076–0100: `.../batch-20260827-008-part4.json`
+- 0001–0025: `subjects/english/power-toeic/js/data/questions/part5/verbs/present-vs-past/pending/batch-20260827-009-part1.json`
+- 0026–0050: `.../batch-20260827-009-part2.json`
+- 0051–0075: `.../batch-20260827-009-part3.json`
+- 0076–0100: `.../batch-20260827-009-part4.json`
 
-The set intentionally covers multiple agreement patterns rather than one lexical substitution template:
+The set intentionally uses explicit temporal cues so the target distinction is not dependent on unstated context:
 
-- simple singular and plural subjects;
-- singular heads separated from plural nouns by prepositional phrases;
-- plural heads with intervening singular nouns;
-- `each` / `every` singular agreement;
-- `both` / `many` / `several` plural agreement;
-- `one of`, `everyone`, `someone`, `neither`;
-- compound A-and-B subjects;
-- singular heads with `along with`, `as well as`, and `together with` interveners;
-- gerund and clausal subjects;
-- `the number of` versus `a number of`.
+- 0001–0050: simple-present routines/habits with cues such as `every Monday`, `each quarter`, `every weekday`, `whenever ...`, and standing procedures;
+- 0051–0100: simple-past completed events with cues such as `yesterday`, `last Friday`, `two days ago`, `last month`, and clauses anchored to explicit completed past events.
 
 Generation-time structural checks for the 100 candidates:
 
@@ -58,27 +51,27 @@ Generation-time structural checks for the 100 candidates:
 - answer positions balanced A/B/C/D = **25/25/25/25**;
 - exact duplicate stems: **0**;
 - intra-skill SequenceMatcher similarity >= 0.94: **0 pairs**;
-- maximum observed intra-skill similarity: approximately **0.650**;
+- maximum observed intra-skill similarity: approximately **0.925**;
 - all items remain `pending_validation`;
 - no QA status was promoted.
 
-A malformed draft stem for item 0010 was corrected before persistence; the saved version is `The revised policy ____ to all contractors working at the facility.`
+The highest-similarity pair is intentionally a present/past contrast built around the same office-shuttle context (items 0048 and 0098), but it remains below the current 0.94 near-duplicate threshold. Independent VALIDATION must still judge whether such paired contexts are pedagogically useful or too repetitive.
 
-The full cross-bank machine near-duplicate scan against all 900 questions is still **not claimed complete** because this runtime does not expose a full local repository checkout. Independent VALIDATION must later perform global duplicate, naturalness, ambiguity, all-choice substitution, and explanation review before approval.
+The full cross-bank machine near-duplicate scan against all 1000 questions is still **not claimed complete** because this runtime does not expose a full local repository checkout. Independent VALIDATION must later perform global duplicate, naturalness, ambiguity, all-choice substitution, and explanation review before approval.
 
 ## Exact next generation point
 
-Resume at `p5_verb_present_vs_past_0001` for `p5.verb.present_vs_past` and generate toward 100 questions before marking the skill complete.
+Resume at `p5_verb_present_perfect_vs_past_0001` for `p5.verb.present_perfect_vs_past` and generate toward 100 questions before marking the skill complete.
 
 Then continue in canonical taxonomy order:
 
-1. `p5.verb.present_perfect_vs_past`
-2. `p5.verb.active_vs_passive`
-3. `p5.verb.modal_base_form`
+1. `p5.verb.active_vs_passive`
+2. `p5.verb.modal_base_form`
+3. `p5.verb.to_infinitive_pattern`
 4. next canonical taxonomy item
 
 Normal target remains up to four complete 100-question micro-skills per run, but safe persisted checkpoints take priority over padding.
 
 ## Phase transition
 
-Generation remains incomplete: **9 of 44 micro-skills are complete**. Do not enter VALIDATION until every target micro-skill reaches its required count and CONTENT status records `generation_complete: true`.
+Generation remains incomplete: **10 of 44 micro-skills are complete**. Do not enter VALIDATION until every target micro-skill reaches its required count and CONTENT status records `generation_complete: true`.
