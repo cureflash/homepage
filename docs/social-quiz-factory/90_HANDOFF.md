@@ -1,27 +1,28 @@
 # Social Quiz Factory — handoff
 
-Current status: Phase 0 and Phase 1 are complete. Canonical implementation remains `subjects/social/quiz/`; old `social-quiz/` remains unused.
+Current status: Phase 0 and Phase 1 are complete. Canonical implementation remains `subjects/social/quiz/`; old `social-quiz/` remains unused. The Japan-map visual asset has been migrated from the deformed lalamalink map to PA4KEV/japan-vector-map v1.0 without changing question answers or `QuizEngine` scoring behavior.
 
 Architecture status:
 
 - `QuizEngine` remains unchanged and owns only scoring, progress and state transitions.
-- UI/CSS was not redesigned.
+- The page layout/UI was not redesigned; only the Japan map asset integration and map-path styling were changed.
 - Japan geography facts remain under `subjects/social/quiz/js/data/`, independent of presentation.
-- The pinned lalamalink Japan-map asset and existing map games remain unchanged.
-- The existing `ChoiceRenderer` is reused for the reverse prefecture/capital drill.
-- Root `index.html` exposes all three canonical Japan drills under 「学習ゲーム」 while preserving existing unrelated games.
+- `JAPAN_PREFECTURE_MAP` now pins `PA4KEV/japan-vector-map` commit `6be9e705045777b7c433c429b0313f19b49d1ed4`, release v1.0, `japan-prefectures.svg`, MIT License, Copyright (c) 2023 Kevin Matsubara.
+- Existing canonical answer keys remain string codes `1` through `47`.
+- PA4KEV source layer names such as `hokkaido`, `tokyo`, `osaka`, and `okinawa` are mapped onto those stable answer keys through renderer configuration. The upstream spelling `nigata` is intentionally preserved only as a source-layer key for 新潟県.
+- `SvgRegionRenderer` now supports optional `sourceKeyAttribute` + `regionKeyMap`, so an SVG's own layer names can be adapted without contaminating game/question data.
+- When source-layer mapping is active, mapped layers are forced visible and non-answer SVG shapes do not intercept pointer input. This is required because the PA4KEV source contains some hidden prefecture layers and separate island-outline layers.
+- Root `index.html` URLs did not change; all three Japan drills remain under 「学習ゲーム」.
 
-Completed this run:
+Completed this map-migration run:
 
-- Phase 1.4: added game ID `japan-prefecture-capital-choice` for prefecture -> prefectural capital.
-- Added all 47 prefectures. Every question has exactly five choices: one correct capital and four fixed, reviewed distractors.
-- Distractors are stored in `js/data/prefecture-capital-options.js`; there is no runtime sampling from the full dataset.
-- Registered the game through the existing registry without changing `QuizEngine` or `ChoiceRenderer`.
-- Added top-page entry `subjects/social/quiz/?game=japan-prefecture-capital-choice` as 「県庁所在地5択」.
-- Phase 1.5: added validation that the canonical prefecture codes, prefecture names and prefectural-capital labels are each unique across all 47 records.
-- Added tests verifying all 47 reverse questions, exactly five unique option keys per question, the presence of the correct option, fixed option-set identity, and preservation of the authoritative prefecture/capital mapping.
-- Updated registry and root-entry regression tests for the third Japan game.
-- Targeted local Node tests for the new game and canonical validator passed: 4 tests, 0 failures.
+- Replaced the deformed lalamalink Japan map source with PA4KEV `japan-prefectures.svg` v1.0, pinned to an immutable commit.
+- Kept all 47 prefecture/capital question answers unchanged.
+- Updated both map games (`japan-prefectures` and `japan-prefectural-capitals`) to supply source-layer mapping to the existing SVG renderer.
+- Extended `SvgRegionRenderer` with a generic source-layer-to-answer-key adapter rather than adding PA4KEV-specific logic to `QuizEngine` or question banks.
+- Updated map CSS so nested PA4KEV path geometry receives fill/hover/correct/wrong styles while retaining the existing game presentation.
+- Added regression coverage for all 47 PA4KEV source-layer mappings and for the renderer mapping helper, including namespaced `inkscape:label` fallback and hidden-layer activation.
+- Updated `subjects/social/quiz/README.md` with the new map source, pinned commit and MIT attribution.
 
 Next start point:
 
@@ -36,9 +37,9 @@ Next start point:
 Important constraints:
 
 - Preserve data / core / renderer / presentation separation.
-- Do not redesign the UI.
+- Do not redesign the UI unless explicitly requested.
 - One prompt -> one intended answer.
 - Regional world maps must be large enough for reliable clicking; do not default to one tiny world map.
 - Do not recreate or use old `social-quiz/`.
 - When a new playable game is published, add its top-page 「学習ゲーム」 entry in the same run without removing existing entries.
-- At the end of every run, update `20_EXECUTION_PLAN.md` and fully rewrite this file with the exact next task.
+- At the end of every normal factory run, update `20_EXECUTION_PLAN.md` and fully rewrite this file with the exact next task.
