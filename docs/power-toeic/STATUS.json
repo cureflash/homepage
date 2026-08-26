@@ -1,17 +1,23 @@
 {
   "project": "Power TOEIC",
   "status": "in_progress",
-  "phase": 1,
-  "active_task": "1.1",
+  "track": "app_ui_program",
+  "phase": 2,
+  "active_task": "2.0",
   "next_role": "implementation",
   "canonical_docs": "docs/power-toeic/",
-  "implementation_path": "subjects/english/power-toeic/",
-  "offline_tooling_path": "scripts/power-toeic/",
-  "reuse_candidate": "subjects/social/quiz/",
-  "reuse_decision": "reuse the proven core/renderers/data/tests separation and ChoiceRenderer contract; do not share/cross-import the timed social QuizEngine; keep social quiz source unchanged for initial Power TOEIC implementation",
-  "mvp_scope": "TOEIC Part 5 four-choice cloze drills",
-  "taxonomy_target": "approximately 44 Part 5 micro-skills",
-  "architecture_policy": "static mobile-first ES modules first; no new framework until a concrete unmet requirement exists",
+  "web_implementation_path": "subjects/english/power-toeic/",
+  "ios_implementation": {
+    "language": "Swift",
+    "ui_framework": "SwiftUI",
+    "start_after": "Web V1 and cross-platform conformance fixtures are frozen",
+    "phase": 10
+  },
+  "content_database_track": "external_scheduler",
+  "app_track_content_policy": "do not author or scale production question DB; only define consumer adapter/contracts and tiny synthetic fixtures",
+  "reuse_decision": "reuse the proven core/renderers/data/tests separation and ChoiceRenderer contract; do not cross-import the timed social QuizEngine",
+  "mvp_scope": "TOEIC Part 5 four-choice cloze runtime",
+  "architecture_policy": "Web first in static HTML/CSS/Vanilla JS ES modules; then native Swift/SwiftUI using the same domain boundaries and conformance fixtures",
   "runtime_ai": false,
   "target_score_feature": false,
   "body_part_skill_mapping": false,
@@ -22,6 +28,5 @@
   },
   "last_completed_task": "0.3",
   "phase0_audit": "docs/power-toeic/PHASE0_REUSE_AUDIT.md",
-  "phase0_regression_test": "subjects/social/quiz/tests/choice-renderer.test.js",
-  "updated_at": "2026-08-26T21:46:07+09:00"
+  "updated_at": "2026-08-26T21:55:00+09:00"
 }
