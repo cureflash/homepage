@@ -42,7 +42,13 @@
 - オセアニア西部
 - 太平洋島しょ部
 
-小さすぎる島国・小国は、元の国境パスが空またはクリック困難な場合に同じ地理座標上へクリック可能な丸マーカーを追加しています。太平洋島しょ部は日付変更線をまたぐ表示に対応しています。
+各地域はNatural Earth 1:50mの国境データから事前生成したWebメルカトルSVGです。小さすぎる島国・小国には同じISOキーの丸いヒットターゲットも埋め込みます。太平洋島しょ部は日付変更線をまたぐ表示に対応しています。
+
+## ロード方式
+
+世界版では外部CDNから地図ライブラリを動的importしません。また、ブラウザで全世界SVGを生成して不要な国を削除する処理も行いません。
+
+`assets/maps/world/` に15地域のSVGを固定保存し、選択中の地域ファイルを1本だけ `fetch(..., { cache: "force-cache" })` します。現在の生成物は1地域あたり約10KB〜233KB（未圧縮）で、すべての地域を同時には読み込みません。
 
 ## 構成
 
@@ -50,24 +56,23 @@
 - `js/core/quiz-effects.js`: SE再生。音声再生に失敗してもゲーム進行には影響させない
 - `js/renderers/svg-region-renderer.js`: 通常SVG上の地域をクリックして答える形式
 - `js/renderers/choice-renderer.js`: 選択肢ボタンから答える形式
-- `js/renderers/world-region-renderer.js`: svg-world-mapsを地域ビューへ切り出す世界地図renderer
+- `js/renderers/world-map-source.js`: 選択地域のローカルSVGをキャッシュ付きで読み込む
+- `js/renderers/world-region-renderer.js`: 事前生成済み地域SVGの国をクリックするrenderer
 - `js/renderers/world-map-choice-renderer.js`: 国を光らせた地図＋5択を組み合わせるrenderer
 - `js/games/world-countries.js`: 地域×7モードを同一データから生成するgame factory
 - `js/data/world-countries.js`: ISOコード、日本語国名、首都、地域、小国マーカー、出典メタデータ
 - `js/data/world-regions.js`: 地域ビューとモード定義
-- `js/main.js`: ゲーム設定、renderer、SE、世界版セレクタの接続
+- `js/data/world-map-metadata.js`: Natural Earth・投影法・ローカル配信の正本メタデータ
+- `assets/maps/world/`: 15地域のWebメルカトルSVG＋`manifest.json`
+- `scripts/build_social_world_maps.py`: Natural Earth 1:50m -> 地域別WebメルカトルSVG生成器
 - `assets/audio/`: 共通SE
 
 ## 共通ゲームルール
-
-既定値は以下です。
 
 - `timeLimitSeconds = 180`
 - `wrongPenaltySeconds = 20`
 - タイマーが0になる前に最後の問題へ回答すればクリア
 - タイマーが0になった時点で未回答問題が残っていればゲームオーバー
-
-必要ならゲーム定義側で制限時間やペナルティ秒数だけを上書きできます。問題データやrendererを書き換える必要はありません。
 
 ブラウザの自動再生制限に対応するため、クイズは「ゲーム開始」ボタンから開始します。この操作で出題SEとカウントダウンを同時に開始します。
 
@@ -79,9 +84,9 @@ SE:
 
 ## 世界版5択の扱い
 
-通常の曖昧な知識問題では、誤答候補は手動で固定します。一方、世界版の逆引きは「ISOコードで一意に決まる国名・国旗」と、首都が一意に扱える国だけを対象にしているため、ユーザー指定どおり**同じ地域の候補から4件をランダム抽出して正解と合わせた5択**を生成します。
+通常の曖昧な知識問題では、誤答候補は手動で固定します。一方、世界版の逆引きは「ISOコードで一意に決まる国名・国旗」と、首都が一意に扱える国だけを対象にしているため、ユーザー指定どおり同じ地域の候補から4件をランダム抽出して正解と合わせた5択を生成します。
 
-首都が複数ある、外交上の扱いが複雑、移転中・内戦等で単一の首都問題にしにくいケースは `capitalQuiz: false` として首都関連モードから除外します。国名・国旗の位置問題には残せます。
+首都が複数ある、外交上の扱いが複雑、移転中・内戦等で単一の首都問題にしにくいケースは首都関連モードから除外し、国名・国旗の位置問題には残せます。
 
 ## 地図素材
 
@@ -91,12 +96,12 @@ SE:
 
 ### 世界
 
-世界地図表示は `homayounmmdy/svg-world-maps` 1.0.1 を使用し、実装確認時の上流コミット `06c2de4a159326e527e38e8506e3b9f2705bdf42` を記録しています。
+世界地図は **Natural Earth 1:50m Admin 0 – Countries v5.1.1** を使用しています。Natural EarthはPublic Domainです。
 
-重要: `svg-world-maps` のJavaScriptソフトウェア自体はMITですが、`src/maps/` の世界地図パスデータはSimpleMaps由来で、**SimpleMaps SVG Map Library License**が適用されます。クイズのように付加価値を加えたWebサイト／ソフトウェアでの利用条件に従って使用し、raw map collectionとしての再配布はしません。
+生成時に緯度経度をWebメルカトルへ投影し、現在の15地域へ分割してローカルSVGとして保存します。正本manifestは `assets/maps/world/manifest.json` にあり、元ZIPのSHA-256、各地域SVGのSHA-256、ファイルサイズを記録しています。
 
-- svg-world-maps: https://github.com/homayounmmdy/svg-world-maps
-- SimpleMaps license: https://simplemaps.com/resources/svg-license
+- Natural Earth: https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/
+- Terms: https://www.naturalearthdata.com/about/terms-of-use/
 
 国名・首都・国旗の確認は外務省「キッズ外務省 世界の国々 基本情報を調べてみよう！」を主要な確認先としています。
 

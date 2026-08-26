@@ -1,8 +1,8 @@
 import { isCapitalQuizEligible } from "../data/world-capital-policy.js";
 import { WORLD_CURRICULUM_SOURCE } from "../data/world-curriculum.js";
+import { WORLD_MERCATOR_MAP_SOURCE } from "../data/world-map-metadata.js";
 import {
   WORLD_FACT_SOURCE,
-  WORLD_MAP_SOURCE,
   WORLD_NAME_SOURCE,
   countriesForRegion,
   flagEmoji
@@ -108,7 +108,7 @@ export function createWorldCountryGame({
     shuffle: true,
     advanceDelay: 800,
     source: WORLD_FACT_SOURCE,
-    sources: [WORLD_CURRICULUM_SOURCE, WORLD_FACT_SOURCE, WORLD_NAME_SOURCE, WORLD_MAP_SOURCE],
+    sources: [WORLD_CURRICULUM_SOURCE, WORLD_FACT_SOURCE, WORLD_NAME_SOURCE, WORLD_MERCATOR_MAP_SOURCE],
     curriculum: {
       stage: "junior-high",
       subject: "geography",

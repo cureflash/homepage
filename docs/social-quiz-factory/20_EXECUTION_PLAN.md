@@ -14,7 +14,7 @@ Work strictly from top to bottom. Check off an item only after implementation an
 
 ## Phase 1 — Japan: prefectures and capitals
 
-- [x] 1.1 Prefecture name -> click prefecture on Japan map. Existing first implementation.
+- [x] 1.1 Prefecture name -> click prefecture on Japan map.
 - [x] 1.2 Validate all 47 prefecture IDs against the map asset.
 - [x] 1.3 Add prefectural capital -> click corresponding prefecture, all 47.
 - [x] 1.4 Add reverse 5-choice drill: prefecture -> prefectural capital.
@@ -22,9 +22,9 @@ Work strictly from top to bottom. Check off an item only after implementation an
 
 ## Phase 2 — world countries by region
 
-Do not begin with one tiny full-world map. Build regional views so countries are large enough to select reliably.
+Do not use one tiny full-world answer map. Keep regional views large enough for reliable selection.
 
-Implementation note: Phase 2 uses `svg-world-maps` 1.0.1 / SimpleMaps world SVG data, stable two-letter country keys, Robinson-projection regional crops, and marker hit targets for tiny island states. The playable family currently exposes 15 regional views and the requested country-name/capital/flag modes without forking `QuizEngine`.
+Implementation note: Phase 2 now uses **Natural Earth 1:50m Admin 0 Countries v5.1.1 (Public Domain)**. `scripts/build_social_world_maps.py` projects it to Web Mercator and stores 15 pre-split local SVGs in `subjects/social/quiz/assets/maps/world/`. Runtime loads only the selected regional file; the earlier `svg-world-maps` CDN/Robinson full-world generation path is retired.
 
 - [x] 2.1 Select and document a reusable world boundary dataset with acceptable license.
 - [x] 2.2 Define stable country IDs and Japanese display names.
@@ -32,13 +32,14 @@ Implementation note: Phase 2 uses `svg-world-maps` 1.0.1 / SimpleMaps world SVG 
 - [x] 2.4 Create Southeast Asia country map quiz.
 - [x] 2.5 Create South Asia country map quiz.
 - [x] 2.6 Create West/Central Asia country map quiz as curriculum-appropriate groupings.
-- [x] 2.7 Create Europe country map quizzes split into usable regional views if needed.
-- [x] 2.8 Create Africa country map quizzes split into usable regional views if needed.
+- [x] 2.7 Create Europe country map quizzes split into usable regional views.
+- [x] 2.8 Create Africa country map quizzes split into usable regional views.
 - [x] 2.9 Create North America country map quiz.
-- [x] 2.10 Create Central America/Caribbean map quiz where map size allows reliable selection.
+- [x] 2.10 Create Central America/Caribbean map quiz.
 - [x] 2.11 Create South America country map quiz.
 - [x] 2.12 Create Oceania country map quiz.
 - [x] 2.13 Validate country names, IDs, boundaries, and region membership.
+- [x] 2.14 Replace runtime full-world/CDN rendering with local Web Mercator regional SVGs; validate source manifest, country coverage, no CDN dependency, and regional file-size budgets.
 
 ## Phase 3 — world capitals
 
@@ -59,8 +60,6 @@ Use a colored-region renderer or equivalent region-selection configuration. The 
 
 ## Phase 5 — Japanese geography: landforms and named regions
 
-Keep one-to-one questions and only use features that can be shown clearly.
-
 - [ ] 5.1 Major mountain ranges/mountain systems -> select location/region.
 - [ ] 5.2 Major plains and basins -> select location/region.
 - [ ] 5.3 Major rivers -> select corresponding line/region with adequate hit area.
@@ -70,8 +69,6 @@ Keep one-to-one questions and only use features that can be shown clearly.
 
 ## Phase 6 — specialties, agriculture, industry: curated 5-choice
 
-Do not use ambiguous free associations. Every question has four manually curated distractors.
-
 - [ ] 6.1 Define question-bank schema for `fact + correct target + four curated distractors + source year/source`.
 - [ ] 6.2 Major agricultural products and prefectures.
 - [ ] 6.3 Major fisheries/products and regions where curriculum-relevant.
@@ -80,8 +77,6 @@ Do not use ambiguous free associations. Every question has four manually curated
 - [ ] 6.6 Add freshness metadata and a process for statistics-dependent questions.
 
 ## Phase 7 — climate and climographs
-
-Start with one graph -> one answer. Do not combine climate, agriculture, and lifestyle in one question yet.
 
 - [ ] 7.1 Add a climate/climograph data format independent of UI styling.
 - [ ] 7.2 Add a renderer capable of displaying a climograph while answering through curated 5-choice buttons.
@@ -98,8 +93,6 @@ Start with one graph -> one answer. Do not combine climate, agriculture, and lif
 - [ ] 8.4 Validate every person-country association against reliable historical sources.
 
 ## Phase 9 — additional one-to-one social-studies drills
-
-Only after Phases 0–8 are stable.
 
 - [ ] 9.1 Flags -> country, curated 5-choice.
 - [ ] 9.2 Country -> flag, curated 5-choice.
@@ -120,14 +113,4 @@ Only after Phases 0–8 are stable.
 
 ## Definition of done for each game
 
-A game is complete only when:
-
-- its curriculum placement has been checked;
-- its authoritative factual source is recorded;
-- every question has exactly one intended correct answer in its presented context;
-- all distractors are curated when ambiguity is possible, except for explicitly documented validated one-to-one sampling rules;
-- assets have documented usable rights;
-- automated validation passes;
-- existing games and core scoring still pass regression tests;
-- the page loads and the game can be completed from first question to result screen;
-- UI redesign is not required to modify or reuse the question bank.
+A game is complete only when its curriculum placement and authoritative factual source are recorded, every question has one intended answer, ambiguity is controlled, assets have documented usable rights, automated validation passes, existing scoring regression tests remain green, the page can be completed end-to-end, and UI changes do not require rewriting the question bank.

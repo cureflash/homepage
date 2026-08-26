@@ -1,12 +1,4 @@
-import { geoBoundsToViewBox, projectRobinsonSvg } from "../data/world-regions.js";
-import { loadWorldSvg } from "./world-map-source.js";
-
-const SVG_NS = "http://www.w3.org/2000/svg";
-
-function markerRadius(region) {
-  const [, , width, height] = geoBoundsToViewBox(region).split(" ").map(Number);
-  return Math.max(4.5, Math.min(9, Math.min(width, height) * 0.025));
-}
+import { loadWorldRegionSvg } from "./world-map-source.js";
 
 export class WorldRegionRenderer {
   constructor({ root, region, countries, interactive = true }) {
@@ -28,13 +20,11 @@ export class WorldRegionRenderer {
 
   async load() {
     try {
-      const svgText = await loadWorldSvg();
+      const svgText = await loadWorldRegionSvg(this.region.id);
       this.root.innerHTML = `<div class="svg-region-stage world-region-stage">${svgText}</div>`;
       this.svg = this.root.querySelector("svg");
-      if (!this.svg) throw new Error("World SVG not found");
+      if (!this.svg) throw new Error("World region SVG not found");
 
-      this.svg.querySelectorAll("style").forEach((style) => style.remove());
-      this.svg.setAttribute("viewBox", geoBoundsToViewBox(this.region));
       this.svg.removeAttribute("width");
       this.svg.removeAttribute("height");
 
@@ -49,30 +39,16 @@ export class WorldRegionRenderer {
       });
 
       for (const country of this.countries) {
-        const existing = [...this.svg.querySelectorAll(`[data-code="${country.code}"]`)];
-        existing.forEach((element) => {
+        const elements = [...this.svg.querySelectorAll(`[data-code="${country.code}"]`)];
+        if (elements.length === 0) {
+          throw new Error(`World region ${this.region.id} has no map element for ${country.code}`);
+        }
+        elements.forEach((element) => {
           element.setAttribute("data-name", country.name);
           element.setAttribute("aria-label", country.name);
         });
-
-        if (country.marker) {
-          const [longitude, latitude] = country.marker;
-          const [x, y] = projectRobinsonSvg(longitude, latitude, this.region);
-          const marker = document.createElementNS(SVG_NS, "circle");
-          marker.setAttribute("cx", String(x));
-          marker.setAttribute("cy", String(y));
-          marker.setAttribute("r", String(markerRadius(this.region)));
-          marker.setAttribute("data-code", country.code);
-          marker.setAttribute("data-name", country.name);
-          marker.setAttribute("aria-label", country.name);
-          marker.classList.add("world-country", "world-country-marker");
-          this.svg.append(marker);
-        }
-      }
-
-      for (const country of this.countries) {
-        const elements = [...this.svg.querySelectorAll(`[data-code="${country.code}"]`)];
         this.elementsByCode.set(country.code, elements);
+
         if (!this.interactive) continue;
         elements.forEach((element) => {
           element.setAttribute("role", "button");
