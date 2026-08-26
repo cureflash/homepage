@@ -4,8 +4,7 @@
 
 - [x] Define structured sentence/cloze model.
 - [x] Define non-AI historical image rule and license tracking.
-- [x] Create first junior-high history prototype unit: Jomon / Yayoi overview.
-- [x] Independently fact-check and publish the first prototype.
+- [x] Create and independently verify the first junior-high history prototype.
 - [x] Establish verified-only publication.
 - [x] Replace per-unit GENERATE/FACTCHECK alternation with high-volume generation backlog mode.
 - [x] Raise normal generation throughput to 20 units per run.
@@ -16,39 +15,31 @@ Normal scheduled runs are GENERATE runs. Target **20 newly generated sequential 
 
 ## Completed production queues
 
-### Junior-high history
-
-18-unit queue complete through Contemporary Japan and cumulative review.
-
-### Junior-high civics
-
-14-unit queue complete through cumulative review.
-
-### 歴史総合
-
-19-unit MEXT-aligned queue complete: A(1)〜D(4). The final seven units completed in the 2026-08-26 20-unit generation batch.
+- Junior-high history: 18-unit generation queue complete.
+- Junior-high civics: 14-unit generation queue complete.
+- `歴史総合`: 19-unit MEXT-aligned generation queue complete.
 
 ## 日本史探究 — ordered production queue
 
-The queue follows the current MEXT large-section order and keeps the formal parent placement in every dataset. Broad MEXT sections are split only for low-density A4 worksheet production.
+The queue follows the current MEXT large-section order. Broad MEXT sections are split into low-density A4 worksheet units while preserving `formalCourse: 日本史探究` and parent placement metadata.
 
-### A 原始・古代の日本と東アジア
+### A 原始・古代の日本と東アジア — generated
 
-1. 旧石器時代と日本列島の環境 — generated
-2. 縄文文化と定住生活 — generated
-3. 弥生文化と稲作社会 — generated
-4. 弥生社会の小国と東アジア交流 — generated
-5. 古墳文化とヤマト政権 — generated
-6. 歴史資料と原始・古代の展望 — generated
-7. 飛鳥時代の国家形成 — generated
-8. 律令国家の成立 — generated
-9. 奈良時代の政治と社会 — generated
-10. 天平文化と東アジア交流 — generated
-11. 平安初期の政治と地方支配 — generated
-12. 摂関政治と貴族社会 — generated
-13. 荘園・公領と武士の台頭 — generated
+1. 旧石器時代と日本列島の環境
+2. 縄文文化と定住生活
+3. 弥生文化と稲作社会
+4. 弥生社会の小国と東アジア交流
+5. 古墳文化とヤマト政権
+6. 歴史資料と原始・古代の展望
+7. 飛鳥時代の国家形成
+8. 律令国家の成立
+9. 奈良時代の政治と社会
+10. 天平文化と東アジア交流
+11. 平安初期の政治と地方支配
+12. 摂関政治と貴族社会
+13. 荘園・公領と武士の台頭
 
-### B 中世の日本と世界
+### B 中世の日本と世界 — generated
 
 14. 中世への転換：院政・武士の政治進出
 15. 中世への転換：土地支配の変容
@@ -69,10 +60,10 @@ The queue follows the current MEXT large-section order and keeps the formal pare
 
 ### C 近世の日本と世界
 
-30. 近世への転換：戦国社会と統一
-31. ヨーロッパ人来航と世界の結び付き
-32. 歴史資料と近世の展望
-33. 織豊政権と統一事業
+30. 近世への転換：戦国社会と統一 — generated
+31. ヨーロッパ人来航と世界の結び付き — generated
+32. 歴史資料と近世の展望 — generated
+33. 織豊政権と統一事業 — generated
 34. 検地・刀狩と社会秩序
 35. 江戸幕府の成立と幕藩体制
 36. 大名統制と朝廷・寺社
@@ -107,7 +98,7 @@ The queue follows the current MEXT large-section order and keeps the formal pare
 62. 冷戦終結とグローバル化
 63. 現代日本の課題を歴史的に探究する
 
-Next start is queue item 14, `japanese-history-medieval-transition`.
+**Next start:** queue item 34, `japanese-history-land-survey-sword-hunt`.
 
 ## High-school production order after 日本史探究
 
