@@ -26,12 +26,17 @@
       </div>
 
       <section class="question-card" aria-live="polite">
-        <p class="question-label" data-role="question-context">Choose the best answer.</p>
+        <div class="question-meta-row">
+          <p class="question-label" data-role="question-context">Choose the best answer.</p>
+          <button type="button" class="text-button" data-action="report-question">問題を報告</button>
+        </div>
         <p class="sentence" data-role="sentence"></p>
         <div class="choices" data-role="choices"></div>
         <div class="explanation" data-role="explanation" hidden></div>
         <button type="button" class="primary-button next-button" data-action="next" hidden>次の問題</button>
       </section>
+
+      <section class="report-panel" data-role="question-report" aria-label="問題報告" hidden></section>
 
       <div class="trainee-strip">
         <div class="character-placeholder trainee" data-role="trainee-character" aria-live="polite"></div>

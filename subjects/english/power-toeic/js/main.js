@@ -1,5 +1,6 @@
 import { createBrowserAppStore } from './core/persistence.js';
 import { applyProgressionEvent, progressionEventFromAttempt } from './core/progression.js';
+import { createBrowserQuestionReportStore } from './core/question-reports.js';
 import { createReviewEntryFromAttempt, getDueReviewQuestionIds, upsertReviewEntry } from './core/review.js';
 import { QuizSession } from './core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from './core/workout-builder.js';
@@ -8,11 +9,13 @@ import { demoQuestions, demoSkills } from './data/fixtures.js';
 import { ClozeChoiceRenderer } from './renderers/cloze-choice.js';
 import { CharacterPresenter } from './ui/character-presenter.js';
 import { getQuestionPresentation } from './ui/question-presentation.js';
+import { QuestionReportUI } from './ui/question-report.js';
 import { renderResults } from './ui/result.js';
 import { WorkoutEditor } from './ui/workout-editor.js';
 
 const repository = new InMemoryQuestionBank({ questions: demoQuestions, skills: demoSkills });
 const appStore = createBrowserAppStore();
+const reportStore = createBrowserQuestionReportStore();
 const skillLabels = new Map(repository.listSkills().map((skill) => [skill.id, skill.label]));
 
 const editorView = document.querySelector('[data-view="workout-editor"]');
@@ -23,6 +26,7 @@ const feedbackEl = document.querySelector('[data-role="feedback"]');
 const contextEl = document.querySelector('[data-role="question-context"]');
 const traineeStatusEl = document.querySelector('[data-role="trainee-status"]');
 const nextButton = document.querySelector('[data-action="next"]');
+const reportButton = document.querySelector('[data-action="report-question"]');
 
 const renderer = new ClozeChoiceRenderer({
   sentenceEl: document.querySelector('[data-role="sentence"]'),
@@ -33,6 +37,11 @@ const renderer = new ClozeChoiceRenderer({
 const characters = new CharacterPresenter({
   sergeantEl: document.querySelector('[data-role="sergeant-character"]'),
   traineeEl: document.querySelector('[data-role="trainee-character"]'),
+});
+
+const questionReporter = new QuestionReportUI({
+  container: document.querySelector('[data-role="question-report"]'),
+  store: reportStore,
 });
 
 let session;
@@ -68,6 +77,7 @@ function saveProgressionEvent(event) {
 
 function showEditor(recipe = activeRecipe ?? defaultRecipe) {
   activeRecipe = recipe;
+  questionReporter.close();
   quizView.hidden = true;
   resultView.hidden = true;
   editorView.hidden = false;
@@ -90,6 +100,7 @@ function startSession(recipe) {
 }
 
 function renderCurrent() {
+  questionReporter.close();
   const question = session.currentQuestion;
   if (!question) return finishSession();
   const { current, total } = session.progress;
@@ -103,6 +114,10 @@ function renderCurrent() {
   nextButton.hidden = true;
   renderer.render(question);
 }
+
+reportButton.addEventListener('click', () => {
+  if (session?.currentQuestion) questionReporter.open(session.currentQuestion);
+});
 
 renderer.setAnswerHandler((selectedIndex) => {
   const question = session.currentQuestion;
@@ -132,6 +147,7 @@ resultView.addEventListener('click', (event) => {
 });
 
 function finishSession() {
+  questionReporter.close();
   if (!sessionCompletionAwarded) {
     saveProgressionEvent({ type: 'session_complete', questionCount: session.attempts.length });
     sessionCompletionAwarded = true;
