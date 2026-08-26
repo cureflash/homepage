@@ -5,7 +5,9 @@ on:
     branches: [main]
     paths:
       - 'scripts/publish_grade4_large_integer_add_sub.py'
+      - 'scripts/publish_grade4_division.py'
       - 'tests/test_grade4_large_integer_add_sub_publisher.py'
+      - 'tests/test_grade4_division_publisher.py'
       - '.github/workflows/grade4-core-publish.yml'
   workflow_dispatch:
 
@@ -33,7 +35,9 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python scripts/publish_grade4_large_integer_add_sub.py .
+            python scripts/publish_grade4_division.py .
             python tests/test_grade4_large_integer_add_sub_publisher.py
+            python tests/test_grade4_division_publisher.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main)
             git fetch origin main
