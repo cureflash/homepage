@@ -3,7 +3,7 @@
   "status": "in_progress",
   "track": "app_ui_program",
   "phase": 4,
-  "active_task": "4.1",
+  "active_task": "4.5",
   "next_role": "implementation",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
@@ -56,9 +56,19 @@
     "module": "subjects/english/power-toeic/js/core/weakness.js",
     "policy": "rank attempted skills deterministically from recent and overall error evidence; exclude unknown/unattempted skills"
   },
-  "last_completed_task": "3.3",
+  "workout": {
+    "module": "subjects/english/power-toeic/js/core/workout-builder.js",
+    "completed_tasks": ["4.1", "4.2", "4.3", "4.4"],
+    "modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
+    "selector_policy": "seed-deterministic; prefer unseen then least-recently-seen; no duplicate IDs in finite sessions",
+    "test_label_policy": "hide_skill",
+    "review_policy": "review_due IDs only",
+    "weakness_policy": "ranked weakness weights resolve through the common WorkoutRecipe model"
+  },
+  "last_completed_task": "4.4",
   "phase2_test_result": "9 Node tests passed: adapter/session/renderer/asset-catalog contracts",
   "phase3_1_test_result": "5 focused persistence tests passed",
   "phase3_2_3_test_result": "4 focused mastery/weakness tests passed",
-  "updated_at": "2026-08-26T23:54:00+09:00"
+  "phase4_1_4_4_test_result": "4 focused workout recipe/selector/preset/weakness tests passed",
+  "updated_at": "2026-08-27T00:40:00+09:00"
 }
