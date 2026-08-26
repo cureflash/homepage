@@ -4,19 +4,19 @@ Work strictly from the first unchecked executable item. Check an item only when 
 
 ## Phase 0 — reuse audit and architecture freeze
 
-- [ ] **0.1 Audit existing quiz foundation**
+- [x] **0.1 Audit existing quiz foundation**
   - Read `subjects/social/quiz/README.md`, `js/core/`, `js/renderers/`, `js/main.js`, tests, and package scripts.
   - Identify exactly which primitives can be reused for four-choice cloze sessions without importing social-studies-specific assumptions.
   - Identify whether the existing `choice` renderer can be reused directly or generalized safely.
   - Document coupling risks and chosen reuse strategy in `90_HANDOFF.md`.
   - Acceptance: concrete file-level reuse plan exists; no speculative framework migration.
 
-- [ ] **0.2 Freeze Power TOEIC implementation location and shared-code boundary**
+- [x] **0.2 Freeze Power TOEIC implementation location and shared-code boundary**
   - Prefer `subjects/english/power-toeic/` unless the reuse audit proves another repository-local path materially safer.
   - Decide whether to extract shared quiz primitives or preserve duplicated structure with explicit compatibility tests.
   - Acceptance: canonical paths are recorded in all relevant Power TOEIC docs/STATUS.
 
-- [ ] **0.3 Add baseline regression coverage for reusable quiz contracts**
+- [x] **0.3 Add baseline regression coverage for reusable quiz contracts**
   - Characterize any existing social-quiz core behavior that Power TOEIC will depend on before refactoring/extraction.
   - Acceptance: tests fail on an intentional break and pass on current behavior.
 
