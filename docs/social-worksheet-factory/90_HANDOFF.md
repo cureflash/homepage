@@ -8,139 +8,115 @@
 - Normal target: 10 newly generated units per run
 - Fact-check policy: manual/later batch; do not alternate automatically
 - Verified learner-facing coverage remains through: Meiji state / industrialization
-- Pending backlog count: 21 units
-- Junior-high history generation queue: complete
-- Junior-high civics generation queue: complete
+- Pending backlog count: 31 units
 - Current high-school course: `歴史総合`
-- Next generation start: B(1) `近代化への問い`
-- Public `subjects/social/worksheets/index.html` remains verified-only; none of the pending units below are registered there.
+- Generated through: C(3)-b `第二次世界大戦と戦後国際秩序`
+- Exact next generation start: C(4) `国際秩序の変化や大衆化と現代的な諸課題`
+- Public `subjects/social/worksheets/index.html` remains verified-only.
 
 ## Completed GENERATE batch — 10 units
 
-This batch completed the remaining eight junior-high civics units and the first two `歴史総合` units. All new content remains `pending_factcheck` and learner-facing publication was not changed.
+All files below retain `formalCourse: 歴史総合`, separate formal section/subsection metadata, and the worksheet-density-only `productionUnit`. Every fact, learner sentence and timeline entry remains `pending_factcheck`; none was added to the public selector.
 
-During reconciliation, the eight civics files and the first `歴史総合` file had already reached latest `main` while `STATUS.json` was still behind. They were treated as completed generated artifacts rather than duplicated. The second `歴史総合` unit and canonical queue/state updates were then added on top of latest `main`.
+1. `subjects/social/worksheets/data/history-comprehensive-modernization-questions.js`
+   - B(1) `近代化への問い`
+   - compares sources about transport, industry, participation, education, labor/family and migration to form historical questions
 
-### Junior-high civics — remaining 8 units
+2. `subjects/social/worksheets/data/history-comprehensive-asia-economy-society-18c.js`
+   - B(2)-a under formal B(2) `結び付く世界と日本の開国`
+   - production, circulation, managed trade and Asian/interregional trade in the 18th century
 
-1. `subjects/social/worksheets/data/civics-elections-political-participation.js`
-   - Elections and political participation
-   - election principles, voting, political parties and participation
+3. `subjects/social/worksheets/data/history-comprehensive-industrial-revolution-world-market-openings.js`
+   - B(2)-b under formal B(2)
+   - Industrial Revolution, transport, world markets, China's opening and Japan's opening
 
-2. `subjects/social/worksheets/data/civics-local-government.js`
-   - Local government
-   - local autonomy, assemblies, governors/mayors and resident participation
+4. `subjects/social/worksheets/data/history-comprehensive-nation-state-meiji-restoration.js`
+   - B(3) `国民国家と明治維新`
+   - constitutional systems, nation-states, Meiji state formation and imperialism
 
-3. `subjects/social/worksheets/data/civics-market-economy-firms-labor.js`
-   - Market economy / firms / labor
-   - prices, firms, households and labor-related foundations
+5. `subjects/social/worksheets/data/history-comprehensive-modernization-contemporary-issues.js`
+   - B(4) `近代化と現代的な諸課題`
+   - uses the paired MEXT perspectives such as freedom/restriction and equality/disparity
 
-4. `subjects/social/worksheets/data/civics-money-finance.js`
-   - Money / finance
-   - money functions, financial intermediation, Bank of Japan and monetary policy
+6. `subjects/social/worksheets/data/history-comprehensive-international-order-mass-society-questions.js`
+   - C(1) `国際秩序の変化や大衆化への問い`
+   - forms questions from international-relations, participation, media and lifestyle evidence
 
-5. `subjects/social/worksheets/data/civics-public-finance-taxation.js`
-   - Public finance / taxation
-   - revenue/expenditure, taxes, government bonds and public services
+7. `subjects/social/worksheets/data/history-comprehensive-wwi-international-cooperation.js`
+   - C(2)-a under formal C(2) `第一次世界大戦と大衆社会`
+   - total war, the postwar settlement, League of Nations and Washington system
 
-6. `subjects/social/worksheets/data/civics-social-security.js`
-   - Social security
-   - social insurance, public assistance, right to maintain minimum standards of wholesome and cultured living, demographic change
+8. `subjects/social/worksheets/data/history-comprehensive-mass-society-social-participation.js`
+   - C(2)-b under formal C(2)
+   - political participation, social movements, mass consumption and mass media
 
-7. `subjects/social/worksheets/data/civics-international-society-un.js`
-   - International society / United Nations
-   - international cooperation, UN organs and Japan's participation
+9. `subjects/social/worksheets/data/history-comprehensive-great-depression-order-crisis.js`
+   - C(3)-a under formal C(3) `経済危機と第二次世界大戦`
+   - Great Depression, differing state responses, fascism and weakening international cooperation
 
-8. `subjects/social/worksheets/data/civics-cumulative-review.js`
-   - Junior-high civics cumulative review
-   - constitution, politics, economy, social security and international society
+10. `subjects/social/worksheets/data/history-comprehensive-wwii-postwar-order.js`
+    - C(3)-b under formal C(3)
+    - global total war, civilian suffering, United Nations, Cold War, occupation reforms and Japan's restored independence
 
-### High-school `歴史総合` — first 2 units
+## Generation evidence and validation
 
-9. `subjects/social/worksheets/data/history-comprehensive-history-and-us.js`
-   - formal course: `歴史総合`
-   - formal placement: A `歴史の扉` (1) `歴史と私たち`
-   - focuses on connections between everyday/local phenomena and Japanese/world history
-
-10. `subjects/social/worksheets/data/history-comprehensive-characteristics-sources.js`
-    - formal course: `歴史総合`
-    - formal placement: A `歴史の扉` (2) `歴史の特質と資料`
-    - focuses on historical sources, comparison of sources and source-based historical narration
-
-Both high-school units intentionally omit a fixed school-year assignment. `formalCourse: 歴史総合` is stored separately from the practical site grouping.
-
-## `歴史総合` curriculum queue established
-
-`docs/social-worksheet-factory/20_EXECUTION_PLAN.md` now contains an explicit ordered `歴史総合` production queue grounded in the current MEXT High School Course of Study Commentary for Geography and History.
-
-The formal large-section order is preserved:
-
-- A `歴史の扉`
-- B `近代化と私たち`
-- C `国際秩序の変化や大衆化と私たち`
-- D `グローバル化と私たち`
-
-The worksheet queue splits several broad MEXT middle sections into smaller `-a/-b` production units only to keep A4 sheets low-density. Every generated dataset must retain the corresponding formal MEXT placement so this split never becomes a false curriculum structure.
-
-MEXT evidence used to establish the queue:
+The generation-stage curriculum/content basis was reopened from authoritative public sources:
 
 - 文部科学省『高等学校学習指導要領（平成30年告示）解説 地理歴史編』
   - `https://www.mext.go.jp/content/20220802-mxt_kyoiku02-100002620_03.pdf`
-  - describes `歴史総合` as a common compulsory course examining modern/contemporary history related to present-day issues;
-  - specifies the four large sections above and their order;
-  - B(1) is `近代化への問い`, B(2) `結び付く世界と日本の開国`, B(3) `国民国家と明治維新`, B(4) `近代化と現代的な諸課題`.
+- 国立国会図書館『史料にみる日本の近代』chapters 1–5
+  - `https://www.ndl.go.jp/modern/index.html`
 
-Generation-stage evidence is not factual approval. A later FACTCHECK batch must reopen these materials independently.
+Generation evidence is not factual approval. A later explicit FACTCHECK batch must independently reopen sources and verify every pending claim.
 
-## Accumulated unverified backlog — 21 units
+Local validation completed successfully:
 
-1. `imperialism-sino-japanese-russo-japanese-wars`
-2. `taisho-democracy-interwar-japan`
-3. `asia-pacific-war`
-4. `postwar-japan`
-5. `contemporary-japan-cumulative-review`
-6. `constitution-constitutionalism`
-7. `fundamental-human-rights`
-8. `diet`
-9. `cabinet`
-10. `courts`
-11. `separation-of-powers`
-12. `elections-political-participation`
-13. `local-government`
-14. `market-economy-firms-labor`
-15. `money-finance`
-16. `public-finance-taxation`
-17. `social-security`
-18. `international-society-un`
-19. `civics-cumulative-review`
-20. `history-comprehensive-history-and-us`
-21. `history-comprehensive-characteristics-sources`
+- `node --check` passed for every `history-comprehensive-*.js` dataset, including all 10 new files.
+- A VM-based contract check loaded the 10 new files and validated 10 units / 111 fact-and-sentence records.
+- All new unit/fact/sentence/timeline statuses are `pending_factcheck`.
+- All cloze markers exactly match their explicit `terms` arrays.
+- All referenced source IDs resolve inside their unit; no unit/item ID duplicates were found in the batch.
+- The public selector contains none of the 10 new files.
+
+No image was added. These low-density overview/question sheets do not require an image to meet their learning purpose, and no provisional license record was introduced.
+
+## Accumulated unverified backlog — 31 units
+
+The prior 21 units remain pending. This batch appended, in order:
+
+1. `history-comprehensive-modernization-questions`
+2. `history-comprehensive-asia-economy-society-18c`
+3. `history-comprehensive-industrial-revolution-world-market-openings`
+4. `history-comprehensive-nation-state-meiji-restoration`
+5. `history-comprehensive-modernization-contemporary-issues`
+6. `history-comprehensive-international-order-mass-society-questions`
+7. `history-comprehensive-wwi-international-cooperation`
+8. `history-comprehensive-mass-society-social-participation`
+9. `history-comprehensive-great-depression-order-crisis`
+10. `history-comprehensive-wwii-postwar-order`
 
 Do not automatically fact-check this backlog on the next run.
 
-## Publication / validation state
-
-`subjects/social/worksheets/index.html` was re-read after reconciliation and still loads only verified datasets through `meiji-state-industrialization.js`. Pending junior-high history, civics and high-school units are therefore not publicly registered.
-
-No AI-generated historical image was introduced in this batch. The two introductory `歴史総合` units intentionally contain no external image because their focus is historical method/source literacy rather than a particular event; future source-based worksheets may add concrete documents/images where they materially improve learning.
-
-The connector execution path does not provide a local checkout, so a batch-wide local `node --check` was not run here. The later FACTCHECK/publication pass must perform syntax/runtime validation where available before any pending dataset is registered publicly.
-
 ## Exact next starting point
 
-Remain in GENERATE BACKLOG mode and continue `歴史総合` from item 3 of the newly recorded queue.
+Remain in GENERATE BACKLOG mode. Start from item 13 of the recorded `歴史総合` queue:
 
-Next ten targets, in order:
+1. C(4) 国際秩序の変化や大衆化と現代的な諸課題
+2. D(1) グローバル化への問い
+3. D(2)-a 冷戦と植民地独立
+4. D(2)-b 高度経済成長・国際秩序の変容
+5. D(3)-a 冷戦終結・地域統合
+6. D(3)-b 市場経済の変容・情報通信・グローバル化
+7. D(4) 現代的な諸課題の形成と展望
 
-1. B(1) 近代化への問い
-2. B(2)-a 18世紀のアジアの経済と社会
-3. B(2)-b 産業革命・世界市場・中国の開港・日本の開国
-4. B(3) 国民国家と明治維新
-5. B(4) 近代化と現代的な諸課題
-6. C(1) 国際秩序の変化や大衆化への問い
-7. C(2)-a 第一次世界大戦と国際協調体制
-8. C(2)-b 大衆社会の形成と社会参加の拡大
-9. C(3)-a 世界恐慌・国際協調体制の動揺
-10. C(3)-b 第二次世界大戦と戦後国際秩序
+These are the seven remaining `歴史総合` production units. Because `generation_batch_target` remains 10, the next run must expand the ordered `日本史探究` queue from the current MEXT curriculum/commentary before crossing courses, then continue with only the first three units of that newly recorded queue. Do not infer those three units before the queue is grounded and written into `20_EXECUTION_PLAN.md`.
 
-Every new unit must remain `pending_factcheck`, retain `formalCourse: 歴史総合`, stay out of the public selector, and be appended to the backlog. After that batch, continue with C(4) and then D in the recorded queue unless the user explicitly requests a FACTCHECK batch.
+Every new unit must remain `pending_factcheck`, stay out of the public selector, and be appended to the backlog.
+
+## Commit blocker
+
+The requested local commit could not be created in this execution profile. `git add` failed with:
+
+`fatal: Unable to create '/home/hikaru0816tsc/homepage/.git/index.lock': Read-only file system`
+
+All 13 intended files remain intact in the working tree: the 10 new datasets plus `20_EXECUTION_PLAN.md`, `90_HANDOFF.md`, and `STATUS.json`. No unrelated file was changed or discarded. Once `.git` is writable, stage exactly those 13 files, rerun the recorded checks, and commit the batch before pushing.
