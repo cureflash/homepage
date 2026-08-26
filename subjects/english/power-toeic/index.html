@@ -20,8 +20,8 @@
     <section data-view="workout-editor" aria-label="ワークアウト編集"></section>
 
     <section class="quiz-view" data-view="quiz" hidden>
-      <div class="character-row" aria-hidden="true">
-        <div class="character-placeholder sergeant">軍曹</div>
+      <div class="character-row">
+        <div class="character-placeholder sergeant" data-role="sergeant-character" aria-live="polite"></div>
         <div class="speech" data-role="feedback">軍曹「この一問を仕上げろ！」</div>
       </div>
 
@@ -33,9 +33,9 @@
         <button type="button" class="primary-button next-button" data-action="next" hidden>次の問題</button>
       </section>
 
-      <div class="trainee-strip" aria-hidden="true">
-        <div class="character-placeholder trainee">訓練生</div>
-        <p>synthetic fixtureでUI動作確認中</p>
+      <div class="trainee-strip">
+        <div class="character-placeholder trainee" data-role="trainee-character" aria-live="polite"></div>
+        <p data-role="trainee-status">synthetic fixtureでUI動作確認中</p>
       </div>
     </section>
 
