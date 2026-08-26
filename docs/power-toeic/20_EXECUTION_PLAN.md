@@ -29,7 +29,7 @@ The app track may define only the consumer-facing adapter contract and tiny synt
 - [x] **2.2 Implement cloze-choice renderer and quiz screen**
 - [x] **2.3 Implement basic result screen**
 
-Phase 2 verification: 9 Node tests passed across adapter/session/renderer contracts. The visible page currently uses only synthetic fixture content through the repository adapter.
+Phase 2 verification: 9 Node tests passed across adapter/session/renderer contracts.
 
 ## Phase 3 — Web persistence, mastery and weakness — APP TRACK
 
@@ -48,15 +48,15 @@ Phase 3 verification: 5 focused persistence tests plus 4 focused mastery/weaknes
 - [x] **4.5 Implement user-editable workout editor**
 - [x] **4.6 Implement 10 / 30 / 50 / 100 and bounded-chunk endless sessions**
 
-Phase 4.1–4.4 verification: 4 focused Node tests passed. Phase 4.5 verification: 4 focused editor-model tests passed. Phase 4.6 verification: 4 focused session-planner tests passed. Workout edits normalize through the same `createWorkoutRecipe(...)` path; WEAKNESS weights resolve to editable counts; finite sizes are 10/30/50/100; endless mode creates deterministic bounded chunks with a hard maximum of 100 questions per chunk.
-
-No mode gets a separate quiz engine.
+Phase 4 verification: 4 workout-builder + 4 editor-model + 4 session-planner focused tests passed. No mode gets a separate quiz engine.
 
 ## Phase 5 — Web review and transfer — APP TRACK
 
-- [ ] **5.1 Implement mixed/unlabeled test presentation**
-- [ ] **5.2 Implement deterministic review scheduler**
-- [ ] **5.3 Gate mastery on mixed/review evidence**
+- [x] **5.1 Implement mixed/unlabeled test presentation**
+- [x] **5.2 Implement deterministic review scheduler**
+- [x] **5.3 Gate mastery on mixed/review evidence**
+
+Phase 5 verification: presentation policy tests confirm TEST mode hides micro-skill labels; review scheduler tests cover deterministic 1/3/7/14-day intervals and due boundaries; mastery/session focused checks confirm `training -> mixed_pass -> reviewing -> mastered`, training-only cannot become mastered, and recent regression can return a skill to `weak`.
 
 ## Phase 6 — Web character UX — APP TRACK
 
@@ -78,8 +78,7 @@ The following integration item remains APP TRACK:
 
 - [ ] **7.4 Implement bad-question reporting UI and report storage contract — APP TRACK**
   - Identify exact question ID/version.
-  - Support reasons such as ambiguity, unnatural English, wrong answer/explanation and other.
-  - Production moderation pipeline remains external.
+  - Support ambiguity, unnatural English, wrong answer/explanation and other reasons.
 
 ## Phase 8 — Web V1 integration — APP TRACK
 
