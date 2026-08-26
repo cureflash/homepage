@@ -4,9 +4,10 @@ import vm from "node:vm";
 import assert from "node:assert/strict";
 
 const ROOT = process.cwd();
-const pendingPaths = [
-  path.join(ROOT, "qualifications/takken/data/pending-units.js"),
-  path.join(ROOT, "qualifications/takken/data/pending-units-21-40.js")
+const pendingBatches = [
+  ["qualifications/takken/data/pending-units.js", "TAKKEN_PENDING_UNITS"],
+  ["qualifications/takken/data/pending-units-21-40.js", "TAKKEN_PENDING_UNITS_21_40"],
+  ["qualifications/takken/data/pending-units-41-60.js", "TAKKEN_PENDING_UNITS_41_60"]
 ];
 const publicPath = path.join(ROOT, "qualifications/takken/data/public-catalog.js");
 const appPath = path.join(ROOT, "qualifications/takken/assets/app.js");
@@ -18,13 +19,13 @@ function runBrowserData(file) {
   return context.window;
 }
 
-const firstPendingWindow = runBrowserData(pendingPaths[0]);
-const secondPendingWindow = runBrowserData(pendingPaths[1]);
+const pending = pendingBatches.flatMap(([relativePath, globalName]) => {
+  const browserWindow = runBrowserData(path.join(ROOT, relativePath));
+  const batch = browserWindow[globalName];
+  assert.ok(Array.isArray(batch), `${globalName} must be an array`);
+  return batch;
+});
 const publicWindow = runBrowserData(publicPath);
-const pending = [
-  ...(firstPendingWindow.TAKKEN_PENDING_UNITS || []),
-  ...(secondPendingWindow.TAKKEN_PENDING_UNITS_21_40 || [])
-];
 const published = publicWindow.TAKKEN_PUBLIC_UNITS;
 
 assert.ok(Array.isArray(pending), "combined pending catalog must be an array");
@@ -75,6 +76,8 @@ for (let i = 0; i < pending.length; i += 1) {
     }
   }
 }
+
+assert.equal(pending.length, 60, "expected three complete generation batches through unit 60");
 
 for (const unit of published) {
   assert.equal(unit.factcheckStatus, "verified", `${unit.id}: public catalog must be verified-only`);
