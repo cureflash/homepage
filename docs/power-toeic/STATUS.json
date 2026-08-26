@@ -2,11 +2,18 @@
   "project": "Power TOEIC",
   "status": "in_progress",
   "track": "app_ui_program",
-  "phase": 8,
-  "active_task": "8.4",
-  "next_role": "publish_web_beta_entry",
+  "phase": 9,
+  "active_task": "9.1",
+  "next_role": "freeze_platform_neutral_models",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
+  "web_beta": {
+    "entry_path": "subjects/english/power-toeic/",
+    "site_entry": "index.html",
+    "sitemap": true,
+    "completed_task": "8.4",
+    "content_status_copy": "question data is still being validated and expanded"
+  },
   "ios_implementation": { "language": "Swift", "ui_framework": "SwiftUI", "start_after": "Web V1 and cross-platform conformance fixtures are frozen", "phase": 10 },
   "content_database_track": "external_scheduler",
   "app_track_content_policy": "do not author or scale production question DB; only define consumer adapter/contracts and tiny synthetic fixtures",
@@ -24,6 +31,6 @@
   "navigation": { "module": "subjects/english/power-toeic/js/ui/home.js", "default_view": "home", "completed_task": "8.1", "routes": ["QUICK", "WEAKNESS", "TRAINING", "POWER", "REVIEW", "TEST", "CUSTOM"] },
   "question_reports": { "storage_key": "power-toeic.question-reports.v1", "completed_task": "7.4" },
   "regression": { "workflow": ".github/workflows/power-toeic-tests.yml", "node": 22, "e2e_task": "8.2", "large_bank_task": "8.3", "synthetic_bank_questions": 20000 },
-  "last_completed_task": "8.3",
-  "updated_at": "2026-08-27T03:47:00+09:00"
+  "last_completed_task": "8.4",
+  "updated_at": "2026-08-27T04:40:00+09:00"
 }

@@ -67,7 +67,10 @@ Phase 4 verification: 4 workout-builder + 4 editor-model + 4 session-planner foc
 - [x] **8.3 Performance/large-bank adapter check**
   - Added a synthetic-only 20,000-question bank regression; production TOEIC content is not involved.
   - 100-question workout selection remains unique and deterministic and completed far below the 2-second regression ceiling on GitHub Actions.
-- [ ] **8.4 Publish Web beta entry point**
+- [x] **8.4 Publish Web beta entry point**
+  - Added a learner-facing Power TOEIC β card and English nav link on the site top page.
+  - The beta copy explicitly says question data is still being validated/expanded; synthetic fixtures are not represented as finished production content.
+  - Added the beta URL to `sitemap.xml`.
 
 ## Phase 9 — freeze cross-platform behavior — APP TRACK
 - [ ] **9.1 Freeze platform-neutral models**
