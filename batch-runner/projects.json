@@ -9,11 +9,63 @@
         "docs/social-worksheet-factory/00_MASTER_INSTRUCTIONS.md",
         "docs/social-worksheet-factory/20_EXECUTION_PLAN.md"
       ],
-      "doneStatuses": [
-        "done",
-        "completed",
-        "complete"
+      "maxRuns": 1,
+      "doneStatuses": ["done", "completed", "complete"],
+      "nextPrompt": "次を進めて"
+    },
+    {
+      "name": "理科プリント",
+      "enabled": true,
+      "statusFile": "docs/science-worksheet-factory/STATUS.json",
+      "handoffFile": "docs/science-worksheet-factory/90_HANDOFF.md",
+      "instructionFiles": [
+        "docs/science-worksheet-factory/00_MASTER_INSTRUCTIONS.md",
+        "docs/science-worksheet-factory/20_EXECUTION_PLAN.md"
       ],
+      "maxRuns": 1,
+      "doneStatuses": ["done", "completed", "complete"],
+      "nextPrompt": "次を進めて"
+    },
+    {
+      "name": "算数・数学プリント",
+      "enabled": true,
+      "statusFile": "docs/worksheet-factory/curriculum/elementary/grade-04/STATUS.json",
+      "instructionFiles": [
+        "docs/worksheet-factory/00_MASTER_INSTRUCTIONS.md",
+        "docs/worksheet-factory/20_EXECUTION_PLAN.md",
+        "docs/worksheet-factory/curriculum/elementary/grade-04/PLAN.md"
+      ],
+      "maxRuns": 1,
+      "doneStatuses": ["done", "completed", "complete"],
+      "nextPrompt": "次を進めて"
+    },
+    {
+      "name": "社会クイズ",
+      "enabled": true,
+      "statusFile": "docs/social-quiz-factory/STATUS.json",
+      "handoffFile": "docs/social-quiz-factory/90_HANDOFF.md",
+      "instructionFiles": [
+        "docs/social-quiz-factory/00_MASTER_INSTRUCTIONS.md",
+        "docs/social-quiz-factory/10_CONTENT_AND_ARCHITECTURE.md",
+        "docs/social-quiz-factory/20_EXECUTION_PLAN.md"
+      ],
+      "maxRuns": 1,
+      "doneStatuses": ["done", "completed", "complete"],
+      "nextPrompt": "次を進めて"
+    },
+    {
+      "name": "国語音読教材",
+      "enabled": true,
+      "statusFile": "docs/japanese-reading-factory/STATUS.json",
+      "handoffFile": "docs/japanese-reading-factory/90_HANDOFF.md",
+      "instructionFiles": [
+        "docs/japanese-reading-factory/00_MASTER_INSTRUCTIONS.md",
+        "docs/japanese-reading-factory/20_EXECUTION_PLAN.md",
+        "docs/japanese-reading-factory/PREFECTURE_QUEUE.md",
+        "docs/japanese-reading-factory/PREFECTURE_ALLOCATION.md"
+      ],
+      "maxRuns": 1,
+      "doneStatuses": ["done", "completed", "complete"],
       "nextPrompt": "次を進めて"
     }
   ]
