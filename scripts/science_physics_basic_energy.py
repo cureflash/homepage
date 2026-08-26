@@ -2,9 +2,9 @@
 
 All definitions stay inside formal course 物理基礎. Work and gravitational
 potential-energy drills use the independently validated shared product relation.
-Kinetic energy uses the shared half-product-last-square relation so v is sampled
-as speed itself and squared by the formula helper; v² is never represented as an
-unrelated sampled variable.
+Kinetic and elastic potential energy use the shared half-product-last-square
+relation so the actual speed/extension is sampled and squared by the helper;
+no unrelated squared variable is introduced.
 """
 
 PHYSICS_BASIC_ENERGY_PROBLEM_COUNT = 20
@@ -147,6 +147,42 @@ PHYSICS_BASIC_ENERGY_TOPICS = {
                 "solve_for": "speed",
                 "worksheet_mode": "calculation-reverse",
                 "description": "運動エネルギーと質量から K = 1/2 mv² を使って速さを求める基本逆算です。",
+            },
+        },
+    },
+    "elastic-potential": {
+        "title": "物理基礎 弾性力による位置エネルギー",
+        "unit": "物体の運動とエネルギー：力学的エネルギー",
+        "skill": "elastic-potential-energy",
+        "formula": "U = 1/2 kx²（自然長を x = 0 とする）",
+        "seeds": tuple(range(6731, 6741)),
+        "spec": {
+            "id": "physics-basic-elastic-potential",
+            "relation": "half-product-last-square",
+            "result": "elastic_potential_energy",
+            "inputs": ["spring_constant", "extension"],
+            "variables": {
+                "elastic_potential_energy": {"label": "弾性力による位置エネルギー U", "unit": "J"},
+                "spring_constant": {"label": "ばね定数 k", "unit": "N/m", "values": [10, 20, 25, 40, 50, 80, 100, 120, 160, 200]},
+                "extension": {"label": "自然長からの伸び・縮みの大きさ x", "unit": "m", "values": [0.1, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.8, 1.0]},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-elastic-potential-energy": {
+                "solve_for": "elastic_potential_energy",
+                "worksheet_mode": "calculation-basic",
+                "description": "自然長を x = 0 とし、ばね定数と伸び・縮みの大きさから U = 1/2 kx² を使って弾性力による位置エネルギーを求める基本反復です。",
+            },
+            "reverse-spring-constant": {
+                "solve_for": "spring_constant",
+                "worksheet_mode": "calculation-reverse",
+                "description": "弾性力による位置エネルギーと伸び・縮みの大きさから U = 1/2 kx² を使ってばね定数を求める基本逆算です。",
+            },
+            "reverse-extension": {
+                "solve_for": "extension",
+                "worksheet_mode": "calculation-reverse",
+                "description": "弾性力による位置エネルギーとばね定数から U = 1/2 kx² を使って伸び・縮みの大きさを求める基本逆算です。",
             },
         },
     },
