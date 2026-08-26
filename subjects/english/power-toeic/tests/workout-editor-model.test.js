@@ -10,13 +10,14 @@ import {
   setWorkoutTotalCount,
 } from '../js/core/workout-editor-model.js';
 
-test('weakness recommendation becomes an editable CUSTOM recipe', () => {
+test('weakness recommendation resolves weights and becomes editable CUSTOM recipe', () => {
   const weakness = createWorkoutRecipe({
     mode: 'WEAKNESS', totalCount: 30,
     skillAllocations: [{ skillId: 'a', weight: 3 }, { skillId: 'b', weight: 2 }], seed: 7,
   });
   let draft = createWorkoutDraft(weakness);
   assert.equal(draft.mode, 'CUSTOM');
+  assert.deepEqual(draft.skillAllocations, [{ skillId: 'a', count: 18 }, { skillId: 'b', count: 12 }]);
   draft = setSkillCount(draft, 'a', 12);
   draft = setSkillCount(draft, 'b', 10);
   draft = setWorkoutTotalCount(draft, 22);
