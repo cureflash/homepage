@@ -15,7 +15,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif; }
 button { font: inherit; }
-.game-shell { width: min(100%, 980px); margin: 0 auto; padding: 28px 18px 40px; }
+.game-shell { width: min(100%, 1180px); margin: 0 auto; padding: 28px 18px 40px; }
 .game-header { margin-bottom: 20px; }
 .eyebrow { margin: 0 0 6px; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
 h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
@@ -34,13 +34,15 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 .feedback { min-height: 1.6em; margin-top: 10px; font-weight: 700; }
 .feedback.correct { color: var(--correct); }
 .feedback.wrong { color: var(--wrong); }
-.answer-panel { margin-top: 14px; padding: 14px; }
-.answer-root { min-height: 320px; }
-.map-loading, .map-error { display: grid; min-height: 320px; place-items: center; color: var(--muted); text-align: center; }
-.svg-region-stage svg { display: block; width: 100%; height: auto; max-height: 610px; margin: auto; }
+.answer-panel { margin-top: 14px; padding: 8px; }
+.answer-root { min-height: 400px; }
+.map-loading, .map-error { display: grid; min-height: 400px; place-items: center; color: var(--muted); text-align: center; }
+.svg-region-stage svg { display: block; width: 100%; height: auto; max-height: 790px; margin: auto; }
 .svg-region-stage [data-code] { cursor: pointer; transition: fill 120ms ease, filter 120ms ease; outline: none; }
 .svg-region-stage [data-code],
-.svg-region-stage [data-code] path { fill: #eef1f4 !important; stroke: #66717d !important; stroke-width: 1.6 !important; vector-effect: non-scaling-stroke; }
+.svg-region-stage [data-code] path,
+.svg-region-stage .map-decorative-land,
+.svg-region-stage .map-decorative-land path { fill: #eef1f4 !important; stroke: #66717d !important; stroke-width: 1.6 !important; vector-effect: non-scaling-stroke; }
 .svg-region-stage [data-code]:focus-visible { filter: drop-shadow(0 0 9px rgba(34, 94, 168, .75)); }
 @media (hover: hover) and (pointer: fine) {
   .svg-region-stage [data-code]:hover,
@@ -65,14 +67,16 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
   .status-bar { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .status-bar > div { padding: 8px; text-align: center; }
   .start-panel { padding: 18px 12px; }
-  .answer-panel { padding: 8px; }
-  .answer-root, .map-loading, .map-error { min-height: 260px; }
+  .answer-panel { padding: 6px; }
+  .answer-root, .map-loading, .map-error { min-height: 280px; }
   .choice-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-color-scheme: dark) {
   :root { --bg: #10151b; --panel: #171e26; --text: #edf2f7; --muted: #a6b2bf; --border: #34404d; --accent: #7fb4f0; --correct-soft: #173827; --wrong-soft: #472323; }
   .svg-region-stage [data-code],
-  .svg-region-stage [data-code] path { fill: #26313c !important; stroke: #9ba8b5 !important; }
+  .svg-region-stage [data-code] path,
+  .svg-region-stage .map-decorative-land,
+  .svg-region-stage .map-decorative-land path { fill: #26313c !important; stroke: #9ba8b5 !important; }
   @media (hover: hover) and (pointer: fine) {
     .svg-region-stage [data-code]:hover,
     .svg-region-stage [data-code]:hover path { fill: #334b62 !important; }
