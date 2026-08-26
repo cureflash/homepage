@@ -20,6 +20,7 @@ Normal scheduled runs are GENERATE runs. Target **20 newly generated sequential 
 - `歴史総合`: 19-unit MEXT-aligned generation queue complete.
 - `日本史探究`: 63-unit MEXT-aligned generation queue complete.
 - `世界史探究`: 38-unit MEXT-aligned generation queue complete.
+- `公共`: 18-unit MEXT-aligned generation queue complete.
 
 ## 日本史探究 — ordered production queue
 
@@ -168,29 +169,59 @@ This practical queue follows the current MEXT `A 公共の扉` → `B 自立し�
 3. 幸福・正義・公正 — `public-happiness-justice-fairness`
 4. 公共的な空間の基本原理 — `public-basic-principles`
 
-### B 自立した主体としてよりよい社会の形成に参画する私たち
+### B 自立した主体としてよりよい社会の形成に参画する私たち — generated
 
-5. 法や規範の意義と役割 — `public-law-norms` — generated
-6. 契約と消費者の権利・責任 — `public-contracts-consumer-rights` — generated
-7. 司法参加の意義 — `public-judicial-participation` — generated
-8. 政治参加と公正な世論の形成 — `public-political-participation-public-opinion` — generated
-9. 地方自治 — `public-local-government` — generated
-10. 国家主権と領土 — `public-sovereignty-territory` — generated
-11. 安全保障・防衛と国際貢献 — `public-security-defense-international-contribution` — generated
-12. 職業選択・雇用と労働問題 — `public-career-employment-labor` — generated
+5. 法や規範の意義と役割 — `public-law-norms`
+6. 契約と消費者の権利・責任 — `public-contracts-consumer-rights`
+7. 司法参加の意義 — `public-judicial-participation`
+8. 政治参加と公正な世論の形成 — `public-political-participation-public-opinion`
+9. 地方自治 — `public-local-government`
+10. 国家主権と領土 — `public-sovereignty-territory`
+11. 安全保障・防衛と国際貢献 — `public-security-defense-international-contribution`
+12. 職業選択・雇用と労働問題 — `public-career-employment-labor`
 13. 財政及び租税の役割 — `public-public-finance-taxation`
 14. 少子高齢社会と社会保障 — `public-social-security`
 15. 市場経済の機能と限界 — `public-market-economy-function-limits`
 16. 金融の働き — `public-finance-money`
 17. 経済のグローバル化と相互依存 — `public-economic-globalization-interdependence`
 
-### C 持続可能な社会づくりの主体となる私たち
+### C 持続可能な社会づくりの主体となる私たち — generated
 
 18. 持続可能な社会づくりの課題探究 — `public-sustainable-society-inquiry`
 
-**Next start:** queue item 13, `public-public-finance-taxation`.
+## 倫理 — ordered production queue
 
-Later expansion of `倫理` / `政治・経済` is allowed only after the core `公共` sequence is complete and a detailed MEXT-aligned queue is defined first.
+This practical queue follows the current MEXT `A 現代に生きる自己の課題と人間としての在り方生き方` → `B 現代の諸課題と倫理` structure. It splits MEXT's conceptual clusters into low-density worksheet units; the numbering is a factory queue, not official MEXT sub-item numbering.
+
+### A 現代に生きる自己の課題と人間としての在り方生き方
+
+1. 心の在り方と自己形成 — `ethics-mind-individuality-emotion` — generated
+2. 認知と発達 — `ethics-cognition-development` — generated
+3. 幸福と愛 — `ethics-happiness-love` — generated
+4. 徳とよく生きること — `ethics-virtue-good-life` — generated
+5. 宗教の意義 — `ethics-religion-meaning` — generated
+6. 芸術の意義 — `ethics-art-meaning` — generated
+7. 善と正義 — `ethics-good-justice` — generated
+8. 義務と責任 — `ethics-duty-responsibility` — generated
+9. 真理と知 — `ethics-truth-knowledge` — generated
+10. 存在と世界 — `ethics-existence-world` — generated
+11. 先哲の原典を読む — `ethics-reading-primary-thought-sources` — generated
+12. 日本の風土と人間観 — `ethics-japan-climate-human-view` — generated
+13. 日本の宗教観と外来思想の受容 — `ethics-japan-religion-foreign-thought` — generated
+14. 国際社会に生きる日本人としての自覚 — `ethics-japanese-identity-global-society` — generated
+
+### B 現代の諸課題と倫理
+
+15. 生命と倫理 — `ethics-life-bioethics`
+16. 自然・環境と倫理 — `ethics-nature-environment`
+17. 科学技術と倫理 — `ethics-science-technology`
+18. 福祉と倫理 — `ethics-welfare`
+19. 文化・宗教と共生 — `ethics-culture-religion-coexistence`
+20. 平和と倫理 — `ethics-peace`
+
+**Next start:** queue item 15, `ethics-life-bioethics`.
+
+After `倫理`, define the current MEXT-aligned `政治・経済` queue before generating that course. Queue planning does not count as generated units.
 
 ## Per-unit generation acceptance criteria
 
