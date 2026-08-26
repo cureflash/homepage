@@ -2,91 +2,108 @@
 
 ## Current state
 
-**APP TRACK Phase 10 has started. Tasks 10.1 and 10.2 are complete. The exact next APP TRACK task is Phase 10 / Task 10.3 — port QuizSession and WorkoutBuilder behavior.**
+**APP TRACK Phase 10 / Tasks 10.3 and 10.4 are complete. The exact next APP TRACK task is Phase 10 / Task 10.5 — build the SwiftUI Home / Workout / Quiz / Result / Weakness screens.**
 
-The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored in this checkpoint.
+The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored or validated in this checkpoint.
 
-## Phase 9 cross-platform freeze
+## Phase 10.3 completed — native QuizSession and WorkoutBuilder
 
-Phase 9 is complete. Canonical references are:
+Added:
 
-- `docs/power-toeic/60_PLATFORM_NEUTRAL_CONTRACTS.md`;
-- `docs/power-toeic/70_SWIFT_PORT_REFERENCE.md`;
-- `subjects/english/power-toeic/tests/fixtures/cross-platform-conformance-v1.json`.
+- `subjects/english/power-toeic-ios/Sources/PowerTOEIC/Core/QuizSession.swift`
+- `subjects/english/power-toeic-ios/Sources/PowerTOEIC/Core/WorkoutBuilder.swift`
+- `subjects/english/power-toeic-ios/Tests/PowerTOEICTests/QuizSessionWorkoutBuilderTests.swift`
 
-The shared fixture pins seeded selection, QuizSession attempts/results, mastery, review scheduling, progression and question-report behavior.
+The native session engine now preserves the frozen Web behavior:
 
-## Phase 10.1 completed — native Swift/SwiftUI structure
+- immutable started-session question ordering;
+- one answer per current question;
+- advancing before answering is invalid;
+- zero-based answer indexes;
+- injected clock for deterministic response timing;
+- exact `Attempt` fields, ISO-8601 timestamps and per-skill result aggregation;
+- all modes continue to feed the same session engine.
 
-Created:
+The native workout builder now preserves:
 
-`subjects/english/power-toeic-ios/`
+- recipe validation;
+- explicit counts and deterministic weighted allocations;
+- unseen-first selection;
+- least-recently-seen fallback;
+- Web-compatible 32-bit FNV-style seeded tie breaking using UTF-16 code units;
+- no duplicate question IDs in a finite selected list;
+- `review_due` restriction to supplied due-review IDs;
+- QUICK / TRAINING / POWER / TEST / REVIEW presets and weakness recipes.
 
-as a Swift Package with iOS 17 / macOS 14 platform declarations. The source tree has explicit boundaries for:
+The Swift tests consume the canonical Web fixture directly and match its exact expected selected IDs, attempts and results. No Swift-specific translated fixture was created.
 
-- App composition;
-- Core domain engines;
-- Models;
-- Data/QuestionBankRepository;
-- Persistence;
-- Home/Quiz/Workout/Result/Weakness/Character SwiftUI views;
-- Resources.
+## Phase 10.4 completed — mastery, weakness and review
 
-A minimal `PowerTOEICAppRoot` proves SwiftUI compilation without prematurely implementing UI behavior.
+Added:
 
-Added dedicated CI:
+- `subjects/english/power-toeic-ios/Sources/PowerTOEIC/Core/MasteryEngine.swift`
+- `subjects/english/power-toeic-ios/Sources/PowerTOEIC/Core/WeaknessRanker.swift`
+- `subjects/english/power-toeic-ios/Sources/PowerTOEIC/Core/ReviewScheduler.swift`
+- `subjects/english/power-toeic-ios/Tests/PowerTOEICTests/MasteryReviewTests.swift`
 
-`.github/workflows/power-toeic-swift-tests.yml`
+`MasteryEngine` matches the frozen Web V1 gates:
 
-The initial macOS Swift 6.3.3 run built the package and passed the structure smoke test. SwiftPM documentation-file warnings were then removed by explicitly excluding the architecture README files from the target.
+- minimum attempts 4;
+- recent window 8;
+- weak threshold 0.60;
+- mixed evidence 3 attempts at 0.80;
+- review evidence 2 attempts at 0.80;
+- states `unknown / training / weak / mixed_pass / reviewing / mastered`;
+- training-only evidence can never directly produce `mastered`.
 
-## Phase 10.2 completed — Codable models and repository protocol
+`WeaknessRanker` mirrors the Web recent/overall error weighting (`0.7 / 0.3`) plus the `weak` state bonus (`0.15`) and deterministic tie ordering.
 
-Added `Models/PlatformModels.swift` with Swift `Codable + Equatable + Sendable` forms for the frozen platform-neutral records/enums:
+`ReviewScheduler` mirrors the Web intervals `[1, 3, 7, 14]`, resets non-successful/non-review paths to the first interval, advances successful review attempts by one interval, caps at the final interval, and orders due entries by due time then question ID.
 
-- Skill;
-- Question;
-- WorkoutRecipe / SkillAllocation;
-- Attempt;
-- MasterySnapshot / EvidenceSummary;
-- ReviewEntry;
-- ProgressionState;
-- QuestionReport;
-- SemanticAssetID;
-- PersistenceEnvelope.
+## Tests / CI
 
-Enum raw values preserve the exact JSON spellings, including `TEST`, `review_due`, `hide_skill`, `mixed_pass`, and `wrong_explanation`.
+The Swift package was built with Apple Swift 6.3.3 on the macOS runner. The full native suite executed **10 tests with 0 failures**, including exact cross-platform fixture conformance for:
 
-Added `Data/QuestionBankRepository.swift` as the native content-consumer protocol.
+- deterministic question selection;
+- QuizSession attempts/results;
+- mastery snapshots;
+- review scheduling;
+- Codable platform models;
+- structure smoke coverage.
 
-`PlatformModelsTests.swift` locates the canonical Web fixture in the adjacent `power-toeic/tests/fixtures/` tree and decodes it directly. There is no copied/translated Swift-specific fixture.
+PR: `#94 feat: port Power TOEIC Swift domain core`.
 
 ## Exact next work
 
-### Phase 10 / Task 10.3 — QuizSession and WorkoutBuilder
+### Phase 10 / Task 10.5 — SwiftUI screens
 
-Port the Web reference behavior, not syntax. Required conformance includes:
+Build the native SwiftUI presentation layer under the existing `Views/` boundaries:
 
-1. immutable started-session question ordering;
-2. one answer per current question;
-3. zero-based answer indexes;
-4. deterministic response timing/ISO timestamp emission via injected clock;
-5. exact per-attempt and result semantics;
-6. WorkoutRecipe validation;
-7. unseen-first then least-recently-seen selection;
-8. exact seeded tie-break ordering compatible with Web's 32-bit FNV-style hash;
-9. no duplicate question IDs in finite sessions;
-10. review_due selection constrained to due IDs.
+1. `Home` — routes into quick, training, power, weakness, custom, test and review flows using recipes rather than separate engines;
+2. `Workout` — edits counts/allocations, not fixed question IDs;
+3. `Quiz` — renders the current cloze sentence plus four tappable options and forwards answer intent to `QuizSession`;
+4. `Result` — derives displayed totals/accuracy/skill breakdown from session results;
+5. `Weakness` — presents `MasteryEngine` / `WeaknessRanker` output and can launch an editable weakness recipe.
 
-Extend Swift tests to consume the existing selection/session cases from `cross-platform-conformance-v1.json` and require exact equality with expected outputs.
+Use only synthetic/test repository data for native UI wiring until the production content adapter is ready. Do not author production TOEIC questions in this track.
 
-After 10.3, proceed to mastery/weakness/review engines in 10.4.
+Important boundaries for 10.5:
+
+- Views must not calculate correctness, mastery transitions, review dates or question selection;
+- TEST presentation must hide the underlying micro-skill label;
+- the four answer choices must remain the primary one-thumb interaction;
+- character composition/progression belongs to 10.6, so do not mix character business logic into 10.5;
+- persistence belongs to 10.7;
+- no third-party UI framework is required.
+
+After 10.5, proceed to 10.6 character UX/progression, then 10.7 native persistence, then 10.8 full JavaScript/Swift conformance.
 
 ## Fixed decisions
 
 - Web remains the behavioral reference implementation;
 - native uses Swift + SwiftUI + standard Apple frameworks first;
-- JavaScript code is not embedded or line-by-line translated into Swift;
+- JavaScript code is not embedded or mechanically translated line-by-line into Swift;
+- shared contracts/fixtures determine cross-platform behavior;
 - no target-score feature, skill-to-body-part mapping, runtime LLM, or production question creation in APP TRACK;
-- temporary art = Irasutoya via semantic IDs, below 20 unique works;
+- temporary art = Irasutoya via semantic asset IDs, below 20 unique works;
 - audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved.

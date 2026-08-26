@@ -3,8 +3,8 @@
   "status": "in_progress",
   "track": "app_ui_program",
   "phase": 10,
-  "active_task": "10.3",
-  "next_role": "port_quiz_session_and_workout_builder",
+  "active_task": "10.5",
+  "next_role": "build_swiftui_screens",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
   "native_implementation_path": "subjects/english/power-toeic-ios/",
@@ -22,8 +22,9 @@
     "package": "subjects/english/power-toeic-ios/Package.swift",
     "minimum_ios": 17,
     "ci": ".github/workflows/power-toeic-swift-tests.yml",
-    "completed_tasks": ["10.1", "10.2"],
+    "completed_tasks": ["10.1", "10.2", "10.3", "10.4"],
     "shared_fixture_decoding": true,
+    "shared_fixture_behavior_covered": ["question_selection", "quiz_session", "mastery", "review"],
     "status": "in_progress"
   },
   "content_database_track": "external_scheduler",
@@ -37,6 +38,6 @@
   "audio": {"source":"Google Drive existing SE library","initial_correct":"otologic_correct.mp3","initial_wrong":"otologic_incorrect.mp3","initial_milestone":"otologic_inspiration.mp3","license":"CC BY 4.0 / OtoLogic attribution required"},
   "attempt_contexts": ["training", "mixed", "review"],
   "workout_modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
-  "last_completed_task": "10.2",
-  "updated_at": "2026-08-27T05:52:00+09:00"
+  "last_completed_task": "10.4",
+  "updated_at": "2026-08-27T06:46:00+09:00"
 }
