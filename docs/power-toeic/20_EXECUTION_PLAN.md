@@ -69,8 +69,12 @@ The app track may define only the consumer-facing adapter contract and tiny synt
 - [x] **10.2 Implement Codable platform-neutral models and QuestionBankRepository protocol**
   - Added Codable/Equatable/Sendable Swift forms for frozen V1 models/enums plus `QuestionBankRepository`.
   - Swift tests read the canonical Web conformance JSON directly from the adjacent Web tree without a translated/copied fixture.
-- [ ] **10.3 Port QuizSession and WorkoutBuilder behavior**
-- [ ] **10.4 Port mastery, weakness and review engines**
+- [x] **10.3 Port QuizSession and WorkoutBuilder behavior**
+  - Ported one-answer-per-question session state, injected-clock Attempt emission/results and deterministic seeded question selection.
+  - Shared Web fixture pins exact selected IDs and session attempts/results in Swift tests.
+- [x] **10.4 Port mastery, weakness and review engines**
+  - Ported frozen mastery gates, recent/overall weakness ranking and deterministic review intervals/due ordering.
+  - Shared Web mastery/review fixture cases pass natively.
 - [ ] **10.5 Build SwiftUI home/workout/quiz/result/weakness screens**
 - [ ] **10.6 Port Drill Sergeant / Trainee character UX and progression**
 - [ ] **10.7 Implement native persistence**
