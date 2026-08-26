@@ -1,22 +1,21 @@
 import assert from "node:assert/strict";
+import { readFileSync, statSync } from "node:fs";
 import test from "node:test";
 
 import { assertValidGameDefinition } from "../js/core/game-validator.js";
 import { isCapitalQuizEligible } from "../js/data/world-capital-policy.js";
+import { WORLD_MERCATOR_MAP_SOURCE } from "../js/data/world-map-metadata.js";
 import {
   COUNTRIES_BY_CODE,
   WORLD_COUNTRIES,
-  WORLD_MAP_SOURCE,
   countriesForRegion,
   flagEmoji
 } from "../js/data/world-countries.js";
-import {
-  WORLD_GAME_MODES,
-  WORLD_REGIONS,
-  geoBoundsToViewBox,
-  projectRobinsonSvg
-} from "../js/data/world-regions.js";
+import { WORLD_GAME_MODES, WORLD_REGIONS } from "../js/data/world-regions.js";
 import { createWorldCountryGame } from "../js/games/world-countries.js";
+
+const mapRoot = new URL("../assets/maps/world/", import.meta.url);
+const manifest = JSON.parse(readFileSync(new URL("manifest.json", mapRoot), "utf8"));
 
 test("world country data has stable unique ISO-style keys and all regions are playable", () => {
   assert.ok(WORLD_COUNTRIES.length >= 190);
@@ -34,29 +33,41 @@ test("world country data has stable unique ISO-style keys and all regions are pl
   }
 });
 
-test("world map source is pinned and records the SimpleMaps map-data license exception", () => {
-  assert.equal(WORLD_MAP_SOURCE.package, "svg-world-maps");
-  assert.equal(WORLD_MAP_SOURCE.version, "1.0.1");
-  assert.equal(WORLD_MAP_SOURCE.sourceCommit, "06c2de4a159326e527e38e8506e3b9f2705bdf42");
-  assert.equal(WORLD_MAP_SOURCE.softwareLicense, "MIT");
-  assert.match(WORLD_MAP_SOURCE.mapDataLicense, /SimpleMaps/);
+test("world map source is Natural Earth 1:50m Public Domain and local Web Mercator", () => {
+  assert.equal(WORLD_MERCATOR_MAP_SOURCE.version, "5.1.1");
+  assert.equal(WORLD_MERCATOR_MAP_SOURCE.license, "Public Domain");
+  assert.equal(WORLD_MERCATOR_MAP_SOURCE.projection, "Web Mercator");
+  assert.equal(WORLD_MERCATOR_MAP_SOURCE.runtimeExternalDependency, false);
+  assert.equal(manifest.sourceVersion, "5.1.1");
+  assert.equal(manifest.license, "Public Domain");
+  assert.equal(manifest.projection, "Web Mercator");
+  assert.equal(Object.keys(manifest.regions).length, 15);
 });
 
-test("Robinson projection matches the svg-world-maps coordinate frame and wrapped Pacific view", () => {
-  assert.deepEqual(projectRobinsonSvg(0, 0), [1000, 500]);
-  assert.deepEqual(projectRobinsonSvg(-180, 0), [0, 500]);
-  assert.deepEqual(projectRobinsonSvg(180, 0), [2000, 500]);
+test("every local region SVG contains every quiz country and stays below the runtime size budget", () => {
+  let totalBytes = 0;
+  for (const region of WORLD_REGIONS) {
+    const meta = manifest.regions[region.id];
+    assert.ok(meta, `manifest missing ${region.id}`);
+    const url = new URL(meta.file, mapRoot);
+    const svg = readFileSync(url, "utf8");
+    const bytes = statSync(url).size;
+    totalBytes += bytes;
+    assert.equal(bytes, meta.bytes);
+    assert.ok(bytes < 250_000, `${region.id} is too large for one regional map request: ${bytes}`);
+    assert.match(svg, /data-projection="Web Mercator"/);
+    for (const country of countriesForRegion(region.id)) {
+      assert.ok(svg.includes(`data-code="${country.code}"`), `${region.id} missing ${country.code}`);
+    }
+  }
+  assert.ok(totalBytes < 1_300_000, `regional map asset total is unexpectedly large: ${totalBytes}`);
+});
 
-  const [fijiX, fijiY] = projectRobinsonSvg(178.065, -17.7134);
-  assert.ok(fijiX > 1950 && fijiX < 2000);
-  assert.ok(fijiY > 590 && fijiY < 640);
-
-  const pacific = WORLD_REGIONS.find((region) => region.id === "pacific-islands");
-  const [samoaX, samoaY] = projectRobinsonSvg(-171.7514, -13.8507, pacific);
-  const [viewX, viewY, viewWidth, viewHeight] = geoBoundsToViewBox(pacific).split(" ").map(Number);
-  assert.ok(samoaX > 2000, "wrapped Samoa marker should move past the right map edge");
-  assert.ok(samoaX >= viewX && samoaX <= viewX + viewWidth);
-  assert.ok(samoaY >= viewY && samoaY <= viewY + viewHeight);
+test("world map runtime loader has no external CDN dependency", () => {
+  const loader = readFileSync(new URL("../js/renderers/world-map-source.js", import.meta.url), "utf8");
+  assert.doesNotMatch(loader, /jsdelivr|esm\.sh|svg-world-maps/);
+  assert.match(loader, /assets\/maps\/world/);
+  assert.match(loader, /force-cache/);
 });
 
 test("every region supports all seven requested world quiz modes", () => {
