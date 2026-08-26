@@ -19,26 +19,33 @@
       <div><span class="status-label">問題</span><strong id="progress">0 / 0</strong></div>
       <div><span class="status-label">正解</span><strong id="score">0</strong></div>
       <div><span class="status-label">正答率</span><strong id="accuracy">0%</strong></div>
+      <div><span class="status-label">残り時間</span><strong id="time-remaining">180秒</strong></div>
     </section>
 
-    <section class="question-panel" aria-labelledby="question-label">
-      <p id="question-label" class="question-label">この都道府県はどこ？</p>
+    <section id="start-panel" class="start-panel">
+      <h2>制限時間クイズ</h2>
+      <p>180秒以内に全問へ回答してください。不正解になると残り時間が20秒減ります。</p>
+      <button id="start-button" class="primary-button" type="button">ゲーム開始</button>
+    </section>
+
+    <section id="question-panel" class="question-panel" aria-labelledby="question-label" hidden>
+      <p id="question-label" class="question-label">問題</p>
       <p id="question-text" class="question-text">読み込み中…</p>
       <div id="feedback" class="feedback" aria-live="polite"></div>
     </section>
 
-    <section class="answer-panel">
+    <section class="answer-panel" hidden>
       <div id="answer-root" class="answer-root" aria-live="off"></div>
     </section>
 
     <section id="result-panel" class="result-panel" hidden>
-      <h2>結果</h2>
+      <h2 id="result-title">結果</h2>
       <p id="result-score" class="result-score"></p>
       <button id="restart-button" class="primary-button" type="button">もう一度</button>
     </section>
 
     <footer class="game-footer">
-      <p>日本地図素材: lalamalink「ディフォルメ都道府県日本地図」(CC0 1.0)</p>
+      <p>日本地図素材: PA4KEV/japan-vector-map v1.0（MIT License）</p>
     </footer>
   </main>
 
