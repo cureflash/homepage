@@ -105,8 +105,9 @@ function allocationCounts(recipe) {
   const weighted = result.filter((entry) => entry.weight != null);
   if (!weighted.length) return result;
   const weightTotal = weighted.reduce((sum, entry) => sum + entry.weight, 0);
+  const weightedBudget = remaining;
   weighted.forEach((entry) => {
-    const share = Math.floor((remaining * entry.weight) / weightTotal);
+    const share = Math.floor((weightedBudget * entry.weight) / weightTotal);
     entry.resolvedCount += share;
     remaining -= share;
   });
