@@ -71,6 +71,8 @@ The learning screen has two recurring characters:
 
 Character presentation is a UI/presentation concern only. It must never own answer logic, question selection, mastery rules, or persisted educational data.
 
+Temporary visual/audio sources are defined by `50_ASSET_POLICY.md`. The app must reference character/audio resources through semantic asset IDs so temporary Irasutoya/Google Drive assets can later be replaced without touching domain logic.
+
 ## Maintainability policy
 
 Prefer boring, proven technology and reuse over novelty.
@@ -87,6 +89,7 @@ Required principles:
 6. Do not introduce React/Django/another framework until a concrete unmet requirement exists.
 7. Use dependency injection/adapters at the question-bank boundary so production content can arrive independently.
 8. Keep the web implementation portable for a later mobile wrapper.
+9. Use a presentation-layer `AssetCatalog`/adapter instead of scattering source filenames or URLs throughout UI code.
 
 ## Canonical project documents
 
@@ -96,6 +99,7 @@ At the start of every scheduled app-development run, read latest `main`, then:
 - `docs/power-toeic/10_PRODUCT_AND_ARCHITECTURE.md`
 - `docs/power-toeic/20_EXECUTION_PLAN.md`
 - `docs/power-toeic/40_UI_AND_CHARACTER_SPEC.md`
+- `docs/power-toeic/50_ASSET_POLICY.md`
 - `docs/power-toeic/STATUS.json`
 - `docs/power-toeic/90_HANDOFF.md`
 
