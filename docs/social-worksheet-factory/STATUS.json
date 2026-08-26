@@ -2,14 +2,14 @@
   "status": "in_progress",
   "school_stage": "junior-high",
   "field": "history",
-  "active_unit": "meiji-state-industrialization",
+  "active_unit": "imperialism-sino-japanese-russo-japanese-wars",
   "active_units": [
-    "meiji-state-industrialization"
+    "imperialism-sino-japanese-russo-japanese-wars"
   ],
-  "next_role": "factcheck",
-  "last_completed_role": "generate",
-  "verified_through": "bakumatsu-meiji-restoration",
+  "next_role": "generate",
+  "last_completed_role": "factcheck",
+  "verified_through": "meiji-state-industrialization",
   "prototype_status": "verified",
   "batch_size": 1,
-  "updated_at": "2026-08-26T08:39:00+09:00"
+  "updated_at": "2026-08-26T09:41:00+09:00"
 }
