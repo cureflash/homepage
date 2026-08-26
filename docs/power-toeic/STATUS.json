@@ -2,8 +2,8 @@
   "project": "Power TOEIC",
   "status": "in_progress",
   "track": "app_ui_program",
-  "phase": 2,
-  "active_task": "2.0",
+  "phase": 3,
+  "active_task": "3.1",
   "next_role": "implementation",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
@@ -26,7 +26,7 @@
     "learner_avatar": "skinny_trainee",
     "progression": "skinny_to_muscular"
   },
-  "last_completed_task": "0.3",
-  "phase0_audit": "docs/power-toeic/PHASE0_REUSE_AUDIT.md",
-  "updated_at": "2026-08-26T21:55:00+09:00"
+  "last_completed_task": "2.3",
+  "phase2_test_result": "7 Node tests passed: adapter/session/renderer contracts",
+  "updated_at": "2026-08-26T22:45:00+09:00"
 }
