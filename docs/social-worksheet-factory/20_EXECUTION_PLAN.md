@@ -19,6 +19,7 @@ Normal scheduled runs are GENERATE runs. Target **20 newly generated sequential 
 - Junior-high civics: 14-unit generation queue complete.
 - `歴史総合`: 19-unit MEXT-aligned generation queue complete.
 - `日本史探究`: 63-unit MEXT-aligned generation queue complete.
+- `世界史探究`: 38-unit MEXT-aligned generation queue complete.
 
 ## 日本史探究 — ordered production queue
 
@@ -131,22 +132,22 @@ This queue follows the current MEXT `A 世界史へのまなざし` → `B 諸�
 18. 大航海時代と大西洋世界
 19. 主権国家体制と国際関係
 
-### D 諸地域の結合・変容
+### D 諸地域の結合・変容 — generated
 
-20. 諸地域の結合・変容への問い — generated
-21. 産業革命と世界市場 — generated
-22. アメリカ独立とフランス革命 — generated
-23. 国民国家と19世紀ヨーロッパ — generated
-24. ラテンアメリカ諸国の独立 — generated
-25. アジア諸地域と欧米列強の進出 — generated
-26. 帝国主義と列強の世界分割 — generated
-27. アジア・アフリカの民族運動 — generated
-28. 第一次世界大戦と総力戦 — generated
-29. ロシア革命と戦間期の国際秩序 — generated
-30. 世界恐慌とファシズム — generated
+20. 諸地域の結合・変容への問い
+21. 産業革命と世界市場
+22. アメリカ独立とフランス革命
+23. 国民国家と19世紀ヨーロッパ
+24. ラテンアメリカ諸国の独立
+25. アジア諸地域と欧米列強の進出
+26. 帝国主義と列強の世界分割
+27. アジア・アフリカの民族運動
+28. 第一次世界大戦と総力戦
+29. ロシア革命と戦間期の国際秩序
+30. 世界恐慌とファシズム
 31. 第二次世界大戦と諸地域の変容
 
-### E 地球世界の課題
+### E 地球世界の課題 — generated
 
 32. 国際機構の形成と平和への模索
 33. 冷戦と脱植民地化
@@ -156,13 +157,40 @@ This queue follows the current MEXT `A 世界史へのまなざし` → `B 諸�
 37. 科学技術の高度化と知識基盤社会
 38. 地球世界の課題を歴史的に探究する
 
-**Next start:** queue item 31, `world-history-wwii-regional-transformation`.
+## 公共 — ordered production queue
 
-## High-school production order after 世界史探究
+This practical queue follows the current MEXT `A 公共の扉` → `B 自立した主体としてよりよい社会の形成に参画する私たち` → `C 持続可能な社会づくりの主体となる私たち` structure. The B section preserves the curriculum's progression across law, politics/international society, and economy while splitting it into low-density worksheet units.
 
-1. `公共`
+### A 公共の扉 — generated
 
-Before reaching `公共`, expand its detailed ordered queue from the current MEXT curriculum/commentary; queue planning does not count as generated units. Later expansion of 倫理 / 政治・経済 is allowed only after the core sequence.
+1. 公共的な空間を作る私たち — `public-public-space-and-us`
+2. 個人の尊厳・自主自律・多様性 — `public-dignity-autonomy-diversity`
+3. 幸福・正義・公正 — `public-happiness-justice-fairness`
+4. 公共的な空間の基本原理 — `public-basic-principles`
+
+### B 自立した主体としてよりよい社会の形成に参画する私たち
+
+5. 法や規範の意義と役割 — `public-law-norms` — generated
+6. 契約と消費者の権利・責任 — `public-contracts-consumer-rights` — generated
+7. 司法参加の意義 — `public-judicial-participation` — generated
+8. 政治参加と公正な世論の形成 — `public-political-participation-public-opinion` — generated
+9. 地方自治 — `public-local-government` — generated
+10. 国家主権と領土 — `public-sovereignty-territory` — generated
+11. 安全保障・防衛と国際貢献 — `public-security-defense-international-contribution` — generated
+12. 職業選択・雇用と労働問題 — `public-career-employment-labor` — generated
+13. 財政及び租税の役割 — `public-public-finance-taxation`
+14. 少子高齢社会と社会保障 — `public-social-security`
+15. 市場経済の機能と限界 — `public-market-economy-function-limits`
+16. 金融の働き — `public-finance-money`
+17. 経済のグローバル化と相互依存 — `public-economic-globalization-interdependence`
+
+### C 持続可能な社会づくりの主体となる私たち
+
+18. 持続可能な社会づくりの課題探究 — `public-sustainable-society-inquiry`
+
+**Next start:** queue item 13, `public-public-finance-taxation`.
+
+Later expansion of `倫理` / `政治・経済` is allowed only after the core `公共` sequence is complete and a detailed MEXT-aligned queue is defined first.
 
 ## Per-unit generation acceptance criteria
 
