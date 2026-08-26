@@ -18,6 +18,7 @@ Normal scheduled runs are GENERATE runs. Target **20 newly generated sequential 
 - Junior-high history: 18-unit generation queue complete.
 - Junior-high civics: 14-unit generation queue complete.
 - `歴史総合`: 19-unit MEXT-aligned generation queue complete.
+- `日本史探究`: 63-unit MEXT-aligned generation queue complete.
 
 ## 日本史探究 — ordered production queue
 
@@ -77,16 +78,16 @@ The queue follows the current MEXT large-section order. Broad MEXT sections are 
 44. 社会変動と天保の改革
 45. ロシア・欧米船接近と海防
 
-### D 近現代の地域・日本と世界
+### D 近現代の地域・日本と世界 — generated
 
-46. 近代への転換：開国と幕末政治 — generated
-47. 明治維新と新政府 — generated
-48. 近代国家形成と自由民権運動 — generated
-49. 大日本帝国憲法と議会政治 — generated
-50. 条約改正・日清戦争 — generated
-51. 日露戦争と帝国主義 — generated
-52. 近代産業・社会・文化 — generated
-53. 第一次世界大戦と日本 — generated
+46. 近代への転換：開国と幕末政治
+47. 明治維新と新政府
+48. 近代国家形成と自由民権運動
+49. 大日本帝国憲法と議会政治
+50. 条約改正・日清戦争
+51. 日露戦争と帝国主義
+52. 近代産業・社会・文化
+53. 第一次世界大戦と日本
 54. 大正デモクラシーと大衆社会
 55. 世界恐慌と政党政治の動揺
 56. 満州事変から日中戦争
@@ -98,14 +99,70 @@ The queue follows the current MEXT large-section order. Broad MEXT sections are 
 62. 冷戦終結とグローバル化
 63. 現代日本の課題を歴史的に探究する
 
-**Next start:** queue item 54, `japanese-history-taisho-democracy-mass-society`.
+## 世界史探究 — ordered production queue
 
-## High-school production order after 日本史探究
+This queue follows the current MEXT `A 世界史へのまなざし` → `B 諸地域の歴史的特質の形成` → `C 諸地域の交流・再編` → `D 諸地域の結合・変容` → `E 地球世界の課題` structure. Broad middle items are split into low-density worksheet units without treating this practical split as an official MEXT sub-item numbering.
 
-1. `世界史探究`
-2. `公共`
+### A 世界史へのまなざし
 
-Before reaching each course, expand its detailed ordered queue from the current MEXT curriculum/commentary; queue planning does not count as generated units. Later expansion of 倫理 / 政治・経済 is allowed only after the core sequence.
+1. 地球環境から見る人類の歴史 — generated
+2. 日常生活から見る世界の歴史 — generated
+
+### B 諸地域の歴史的特質の形成
+
+3. 諸地域の歴史的特質への問い — generated
+4. 農耕・牧畜と古代文明 — generated
+5. オリエント文明 — generated
+6. インダス文明 — generated
+7. 中華文明 — generated
+8. 東アジアと中央ユーラシア — generated
+9. 南アジアと東南アジアの歴史的特質 — generated
+10. 西アジアと地中海周辺の歴史的特質 — generated
+
+### C 諸地域の交流・再編
+
+11. 諸地域の交流・再編への問い
+12. イスラーム世界の拡大と交易
+13. モンゴル帝国とユーラシア交流
+14. 海域アジアの交易ネットワーク
+15. 明・清と東アジアの再編
+16. オスマン・サファヴィー・ムガル帝国
+17. ルネサンスと宗教改革
+18. 大航海時代と大西洋世界
+19. 主権国家体制と国際関係
+
+### D 諸地域の結合・変容
+
+20. 諸地域の結合・変容への問い
+21. 産業革命と世界市場
+22. アメリカ独立とフランス革命
+23. 国民国家と19世紀ヨーロッパ
+24. ラテンアメリカ諸国の独立
+25. アジア諸地域と欧米列強の進出
+26. 帝国主義と列強の世界分割
+27. アジア・アフリカの民族運動
+28. 第一次世界大戦と総力戦
+29. ロシア革命と戦間期の国際秩序
+30. 世界恐慌とファシズム
+31. 第二次世界大戦と諸地域の変容
+
+### E 地球世界の課題
+
+32. 国際機構の形成と平和への模索
+33. 冷戦と脱植民地化
+34. 高度経済成長と南北問題
+35. 冷戦終結と地域統合
+36. 経済のグローバル化と格差の是正
+37. 科学技術の高度化と知識基盤社会
+38. 地球世界の課題を歴史的に探究する
+
+**Next start:** queue item 11, `world-history-exchange-reorganization-questions`.
+
+## High-school production order after 世界史探究
+
+1. `公共`
+
+Before reaching `公共`, expand its detailed ordered queue from the current MEXT curriculum/commentary; queue planning does not count as generated units. Later expansion of 倫理 / 政治・経済 is allowed only after the core sequence.
 
 ## Per-unit generation acceptance criteria
 
