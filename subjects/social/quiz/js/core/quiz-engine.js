@@ -7,8 +7,8 @@ function shuffle(items) {
   return result;
 }
 
-const DEFAULT_TIME_LIMIT_SECONDS = 180;
-const DEFAULT_WRONG_PENALTY_SECONDS = 20;
+export const DEFAULT_TIME_LIMIT_SECONDS = 180;
+export const DEFAULT_WRONG_PENALTY_SECONDS = 20;
 
 export class QuizEngine {
   constructor({ game, renderer, ui, effects = null }) {
@@ -39,9 +39,12 @@ export class QuizEngine {
     this.wrongPenaltySeconds = Number.isFinite(this.game.wrongPenaltySeconds)
       ? Math.max(0, Math.floor(this.game.wrongPenaltySeconds))
       : DEFAULT_WRONG_PENALTY_SECONDS;
+
+    if (this.ui.startPanel) this.ui.startPanel.hidden = true;
+    if (this.ui.questionPanel) this.ui.questionPanel.hidden = false;
     this.ui.resultPanel.hidden = true;
     this.ui.answerPanel.hidden = false;
-    if (this.ui.startPanel) this.ui.startPanel.hidden = true;
+
     this.updateHeader();
     this.renderCurrent();
     this.effects?.play?.("start");
@@ -56,12 +59,12 @@ export class QuizEngine {
 
   updateStatus() {
     const total = this.queue?.length ?? this.game.questions.length;
-    const shown = total === 0 ? 0 : Math.min(this.index + 1, total);
+    const shown = this.queue ? Math.min(this.index + 1, total) : 0;
     this.ui.progress.textContent = `${shown} / ${total}`;
-    this.ui.score.textContent = String(this.score);
-    const accuracy = this.answered === 0 ? 0 : Math.round((this.score / this.answered) * 100);
+    this.ui.score.textContent = String(this.score ?? 0);
+    const accuracy = !this.answered ? 0 : Math.round((this.score / this.answered) * 100);
     this.ui.accuracy.textContent = `${accuracy}%`;
-    if (this.ui.time) this.ui.time.textContent = `${Math.max(0, this.timeRemaining ?? 0)}秒`;
+    if (this.ui.time) this.ui.time.textContent = `${Math.max(0, this.timeRemaining ?? DEFAULT_TIME_LIMIT_SECONDS)}秒`;
   }
 
   renderCurrent() {
@@ -84,11 +87,13 @@ export class QuizEngine {
     if (this.locked || this.finished) return;
     const question = this.queue[this.index];
     if (!question) return;
+
     this.locked = true;
     this.answered += 1;
     const selected = String(answerKey);
     const correct = String(question.answer);
     const isCorrect = selected === correct;
+
     if (isCorrect) {
       this.score += 1;
       this.effects?.play?.("correct");
@@ -96,9 +101,12 @@ export class QuizEngine {
       this.effects?.play?.("wrong");
       this.timeRemaining = Math.max(0, this.timeRemaining - this.wrongPenaltySeconds);
     }
+
     this.renderer.showResult({ selected, correct, isCorrect, question });
     this.ui.feedback.className = `feedback ${isCorrect ? "correct" : "wrong"}`;
-    this.ui.feedback.textContent = isCorrect ? (question.correctText ?? "正解！") : (question.wrongText ?? `正解は「${question.answerLabel ?? correct}」`);
+    this.ui.feedback.textContent = isCorrect
+      ? (question.correctText ?? "正解！")
+      : (question.wrongText ?? `正解は「${question.answerLabel ?? correct}」`);
     this.updateStatus();
 
     if (this.timeRemaining <= 0) {
@@ -107,6 +115,17 @@ export class QuizEngine {
     }
 
     const delay = Number.isFinite(this.game.advanceDelay) ? this.game.advanceDelay : 750;
+    const isLastQuestion = this.index >= this.queue.length - 1;
+
+    if (isLastQuestion) {
+      this.clearCountdown();
+      this.advanceTimer = window.setTimeout(() => {
+        this.advanceTimer = null;
+        this.finish("clear");
+      }, Math.max(0, delay));
+      return;
+    }
+
     this.advanceTimer = window.setTimeout(() => {
       this.advanceTimer = null;
       this.index += 1;
@@ -144,14 +163,18 @@ export class QuizEngine {
     this.updateStatus();
   }
 
+  clearCountdown() {
+    if (this.countdownTimer !== null) {
+      window.clearInterval(this.countdownTimer);
+      this.countdownTimer = null;
+    }
+  }
+
   clearTimers() {
     if (this.advanceTimer !== null) {
       window.clearTimeout(this.advanceTimer);
       this.advanceTimer = null;
     }
-    if (this.countdownTimer !== null) {
-      window.clearInterval(this.countdownTimer);
-      this.countdownTimer = null;
-    }
+    this.clearCountdown();
   }
 }
