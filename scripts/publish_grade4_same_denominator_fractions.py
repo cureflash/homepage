@@ -153,7 +153,7 @@ def publish(repo_root):
                 'title': f"{spec['title']} {variant:02d}",
                 'description': '同じ分母の分数のたし算・ひき算を20問反復します。たし算は1を超える和も含み、2ページ目は同じ問題配置に赤字で解答を加えています。',
                 'url': f'materials/worksheets/elementary/grade-04/{filename}', 'content_hash': content_hash,
-                'difficulty': 'basic', 'worksheet_series': 'focused', 'worksheet_format': 'fraction-horizontal', 'answer_type': 'fraction',
+                'difficulty': 'basic', 'worksheet_series': 'focused', 'worksheet_format': 'fraction-horizontal', 'answer_type': 'accepted-set',
             })
             existing.add(wid); published += 1
     validate_catalog(catalog, root)
