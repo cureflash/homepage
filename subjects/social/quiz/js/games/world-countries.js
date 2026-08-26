@@ -1,3 +1,5 @@
+import { isCapitalQuizEligible } from "../data/world-capital-policy.js";
+import { WORLD_CURRICULUM_SOURCE } from "../data/world-curriculum.js";
 import {
   WORLD_FACT_SOURCE,
   WORLD_MAP_SOURCE,
@@ -85,7 +87,10 @@ export function createWorldCountryGame({
 } = {}) {
   const region = REGIONS_BY_ID.get(regionId) ?? REGIONS_BY_ID.get(defaultWorldRegionId);
   const mode = MODES_BY_ID.get(modeId) ?? MODES_BY_ID.get(defaultWorldModeId);
-  const countries = countriesForRegion(region.id, { capitalOnly: Boolean(mode.requiresCapital) });
+  const regionCountries = countriesForRegion(region.id);
+  const countries = mode.requiresCapital
+    ? regionCountries.filter(isCapitalQuizEligible)
+    : regionCountries;
 
   if (mode.direction === "choice" && countries.length < 5) {
     throw new Error(`${region.label} needs at least five eligible countries for reverse-choice mode`);
@@ -103,11 +108,12 @@ export function createWorldCountryGame({
     shuffle: true,
     advanceDelay: 800,
     source: WORLD_FACT_SOURCE,
-    sources: [WORLD_FACT_SOURCE, WORLD_NAME_SOURCE, WORLD_MAP_SOURCE],
+    sources: [WORLD_CURRICULUM_SOURCE, WORLD_FACT_SOURCE, WORLD_NAME_SOURCE, WORLD_MAP_SOURCE],
     curriculum: {
       stage: "junior-high",
       subject: "geography",
-      topic: "世界の地域構成"
+      topic: "世界の地域構成",
+      source: WORLD_CURRICULUM_SOURCE
     },
     worldConfig: { regionId: region.id, modeId: mode.id },
     renderer: mode.direction === "map"
