@@ -2,95 +2,91 @@
 
 ## Current state
 
-**APP TRACK Phase 9 is complete. The exact next APP TRACK task is Phase 10 / Task 10.1 — create the native Swift/SwiftUI project structure.**
+**APP TRACK Phase 10 has started. Tasks 10.1 and 10.2 are complete. The exact next APP TRACK task is Phase 10 / Task 10.3 — port QuizSession and WorkoutBuilder behavior.**
 
 The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored in this checkpoint.
 
-## Phase 9.2 completed — deterministic cross-platform conformance fixture
+## Phase 9 cross-platform freeze
 
-Added:
+Phase 9 is complete. Canonical references are:
 
-- `subjects/english/power-toeic/tests/fixtures/cross-platform-conformance-v1.json`;
-- `subjects/english/power-toeic/tests/cross-platform-conformance.test.js`.
+- `docs/power-toeic/60_PLATFORM_NEUTRAL_CONTRACTS.md`;
+- `docs/power-toeic/70_SWIFT_PORT_REFERENCE.md`;
+- `subjects/english/power-toeic/tests/fixtures/cross-platform-conformance-v1.json`.
 
-The fixture is explicitly synthetic and contains exact deterministic inputs/outputs for:
+The shared fixture pins seeded selection, QuizSession attempts/results, mastery, review scheduling, progression and question-report behavior.
 
-1. seeded WorkoutRecipe question selection;
-2. QuizSession attempts and results using a fixed clock;
-3. mastery snapshots including `weak` and `mastered` cases;
-4. review scheduling and due-question selection at fixed UTC dates;
-5. progression points/stages over a fixed event sequence;
-6. question-report normalization/serialization.
+## Phase 10.1 completed — native Swift/SwiftUI structure
 
-The JSON file contains no JavaScript-specific executable data. Swift tests must consume the same file unchanged.
+Created:
 
-GitHub Actions Power TOEIC Node 22 run `33011796826` completed successfully after the fixture/test addition.
+`subjects/english/power-toeic-ios/`
 
-## Phase 9.3 completed — Swift port behavior reference
+as a Swift Package with iOS 17 / macOS 14 platform declarations. The source tree has explicit boundaries for:
 
-Added:
+- App composition;
+- Core domain engines;
+- Models;
+- Data/QuestionBankRepository;
+- Persistence;
+- Home/Quiz/Workout/Result/Weakness/Character SwiftUI views;
+- Resources.
 
-`docs/power-toeic/70_SWIFT_PORT_REFERENCE.md`
+A minimal `PowerTOEICAppRoot` proves SwiftUI compilation without prematurely implementing UI behavior.
 
-It freezes the Web V1 behaviors Swift must reproduce, including:
+Added dedicated CI:
 
-- QuestionBankRepository boundary;
-- WorkoutRecipe validation and common-engine rule;
-- exact deterministic selection ordering semantics;
-- QuizSession attempt/result semantics;
-- mastery thresholds and state gates;
-- review intervals and interval advancement;
-- progression thresholds/point weights;
-- question-report reasons and normalization;
-- semantic AssetCatalog boundary;
-- persistence failure behavior;
-- SwiftUI view responsibility boundaries.
+`.github/workflows/power-toeic-swift-tests.yml`
 
-When Web and Swift differ, the platform-neutral contracts plus the shared conformance fixture are authoritative unless a deliberate canonical behavior change updates both implementations.
+The initial macOS Swift 6.3.3 run built the package and passed the structure smoke test. SwiftPM documentation-file warnings were then removed by explicitly excluding the architecture README files from the target.
 
-## Web V1 reference status
+## Phase 10.2 completed — Codable models and repository protocol
 
-Web remains complete through Phase 8 and is the behavioral reference implementation. It includes mobile-first navigation, common QuizSession, four-choice cloze feedback, results, versioned browser persistence, mastery/weakness, workout recipes/editor, review, character progression, bad-question reports, performance regression, and beta entry point.
+Added `Models/PlatformModels.swift` with Swift `Codable + Equatable + Sendable` forms for the frozen platform-neutral records/enums:
+
+- Skill;
+- Question;
+- WorkoutRecipe / SkillAllocation;
+- Attempt;
+- MasterySnapshot / EvidenceSummary;
+- ReviewEntry;
+- ProgressionState;
+- QuestionReport;
+- SemanticAssetID;
+- PersistenceEnvelope.
+
+Enum raw values preserve the exact JSON spellings, including `TEST`, `review_due`, `hide_skill`, `mixed_pass`, and `wrong_explanation`.
+
+Added `Data/QuestionBankRepository.swift` as the native content-consumer protocol.
+
+`PlatformModelsTests.swift` locates the canonical Web fixture in the adjacent `power-toeic/tests/fixtures/` tree and decodes it directly. There is no copied/translated Swift-specific fixture.
 
 ## Exact next work
 
-### Phase 10 / Task 10.1 — native Swift/SwiftUI project structure
+### Phase 10 / Task 10.3 — QuizSession and WorkoutBuilder
 
-Create the native iOS source/test structure without rewriting Web code and without adding production question content. Preserve these responsibility boundaries:
+Port the Web reference behavior, not syntax. Required conformance includes:
 
-```text
-PowerTOEIC/
-  App/
-  Core/
-    QuizSession.swift
-    WorkoutBuilder.swift
-    MasteryEngine.swift
-    ReviewScheduler.swift
-    ProgressionEngine.swift
-  Models/
-  Data/
-    QuestionBankRepository.swift
-  Persistence/
-  Views/
-    Home/
-    Quiz/
-    Workout/
-    Result/
-    Weakness/
-    Character/
-  Resources/
-  Tests/
-```
+1. immutable started-session question ordering;
+2. one answer per current question;
+3. zero-based answer indexes;
+4. deterministic response timing/ISO timestamp emission via injected clock;
+5. exact per-attempt and result semantics;
+6. WorkoutRecipe validation;
+7. unseen-first then least-recently-seen selection;
+8. exact seeded tie-break ordering compatible with Web's 32-bit FNV-style hash;
+9. no duplicate question IDs in finite sessions;
+10. review_due selection constrained to due IDs.
 
-Task 10.1 acceptance should establish a buildable/testable native project or package structure suitable for later SwiftUI app wiring. Task 10.2 then adds Codable versions of the frozen platform-neutral models and the QuestionBankRepository protocol.
+Extend Swift tests to consume the existing selection/session cases from `cross-platform-conformance-v1.json` and require exact equality with expected outputs.
 
-Do not mechanically translate DOM modules. Keep Web and Swift separate implementations connected by contracts/fixtures.
+After 10.3, proceed to mastery/weakness/review engines in 10.4.
 
 ## Fixed decisions
 
-- Web = HTML/CSS/Vanilla JS/ES Modules and remains the behavioral reference;
-- native = Swift + SwiftUI + standard Apple frameworks first;
+- Web remains the behavioral reference implementation;
+- native uses Swift + SwiftUI + standard Apple frameworks first;
+- JavaScript code is not embedded or line-by-line translated into Swift;
 - no target-score feature, skill-to-body-part mapping, runtime LLM, or production question creation in APP TRACK;
 - temporary art = Irasutoya via semantic IDs, below 20 unique works;
-- audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved;
-- cross-platform fixture = `tests/fixtures/cross-platform-conformance-v1.json`.
+- audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved.
