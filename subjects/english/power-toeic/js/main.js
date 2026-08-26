@@ -5,6 +5,7 @@ import { createWorkoutRecipe, selectQuestionIds } from './core/workout-builder.j
 import { InMemoryQuestionBank } from './data/question-bank-adapter.js';
 import { demoQuestions, demoSkills } from './data/fixtures.js';
 import { ClozeChoiceRenderer } from './renderers/cloze-choice.js';
+import { CharacterPresenter } from './ui/character-presenter.js';
 import { getQuestionPresentation } from './ui/question-presentation.js';
 import { renderResults } from './ui/result.js';
 import { WorkoutEditor } from './ui/workout-editor.js';
@@ -19,12 +20,18 @@ const resultView = document.querySelector('[data-view="result"]');
 const progressEl = document.querySelector('[data-role="progress"]');
 const feedbackEl = document.querySelector('[data-role="feedback"]');
 const contextEl = document.querySelector('[data-role="question-context"]');
+const traineeStatusEl = document.querySelector('[data-role="trainee-status"]');
 const nextButton = document.querySelector('[data-action="next"]');
 
 const renderer = new ClozeChoiceRenderer({
   sentenceEl: document.querySelector('[data-role="sentence"]'),
   choicesEl: document.querySelector('[data-role="choices"]'),
   explanationEl: document.querySelector('[data-role="explanation"]')
+});
+
+const characters = new CharacterPresenter({
+  sergeantEl: document.querySelector('[data-role="sergeant-character"]'),
+  traineeEl: document.querySelector('[data-role="trainee-character"]'),
 });
 
 let session;
@@ -40,16 +47,16 @@ const defaultRecipe = createWorkoutRecipe({
   seed: 1,
 });
 
-const editor = new WorkoutEditor({
-  container: editorView,
-  repository,
-  onStart: (recipe) => startSession(recipe),
-});
+const editor = new WorkoutEditor({ container: editorView, repository, onStart: (recipe) => startSession(recipe) });
 
 function sessionContextForRecipe(recipe) {
   if (recipe.mode === 'TEST') return 'mixed';
   if (recipe.mode === 'REVIEW') return 'review';
   return 'training';
+}
+
+function currentTraineeStage() {
+  return Math.min(5, Math.max(0, Number(appStore.load().progression.stage) || 0));
 }
 
 function showEditor(recipe = activeRecipe ?? defaultRecipe) {
@@ -63,20 +70,11 @@ function showEditor(recipe = activeRecipe ?? defaultRecipe) {
 
 function startSession(recipe) {
   const state = appStore.load();
-  const reviewQuestionIds = recipe.mode === 'REVIEW'
-    ? getDueReviewQuestionIds(state.reviewEntries)
-    : [];
+  const reviewQuestionIds = recipe.mode === 'REVIEW' ? getDueReviewQuestionIds(state.reviewEntries) : [];
   const questionIds = selectQuestionIds({ repository, recipe, attempts: state.attempts, reviewQuestionIds });
-  if (!questionIds.length) {
-    showEditor(recipe);
-    return;
-  }
+  if (!questionIds.length) return showEditor(recipe);
   activeRecipe = recipe;
-  session = new QuizSession({
-    questionIds,
-    repository,
-    context: sessionContextForRecipe(recipe),
-  });
+  session = new QuizSession({ questionIds, repository, context: sessionContextForRecipe(recipe) });
   editorView.hidden = true;
   resultView.hidden = true;
   quizView.hidden = false;
@@ -87,10 +85,13 @@ function renderCurrent() {
   const question = session.currentQuestion;
   if (!question) return finishSession();
   const { current, total } = session.progress;
+  const stage = currentTraineeStage();
   const presentation = getQuestionPresentation({ recipe: activeRecipe, question, skillLabels });
   progressEl.textContent = `${current} / ${total}`;
   contextEl.textContent = presentation.contextText;
   feedbackEl.textContent = '軍曹「この一問を仕上げろ！」';
+  traineeStatusEl.textContent = `訓練生ステージ ${stage}`;
+  characters.render({ traineeStage: stage, reaction: 'neutral' });
   nextButton.hidden = true;
   renderer.render(question);
 }
@@ -104,15 +105,14 @@ renderer.setAnswerHandler((selectedIndex) => {
   appStore.appendAttempt(attempt);
   appStore.replaceReviewEntries(upsertReviewEntry(beforeState.reviewEntries, nextReview));
   renderer.showResult({ selectedIndex, correctIndex: question.correctIndex, explanation: question.explanation });
+  const reaction = attempt.correct ? 'correct' : 'wrong';
+  characters.render({ traineeStage: currentTraineeStage(), reaction });
   feedbackEl.textContent = attempt.correct ? '軍曹「よし、その調子だ！」' : '軍曹「違う。理由を確認して次だ！」';
   nextButton.textContent = session.progress.current === session.progress.total ? '結果を見る' : '次の問題';
   nextButton.hidden = false;
 });
 
-nextButton.addEventListener('click', () => {
-  session.next();
-  renderCurrent();
-});
+nextButton.addEventListener('click', () => { session.next(); renderCurrent(); });
 
 resultView.addEventListener('click', (event) => {
   if (event.target.closest('[data-action="restart"]')) startSession(activeRecipe ?? defaultRecipe);
@@ -120,6 +120,7 @@ resultView.addEventListener('click', (event) => {
 });
 
 function finishSession() {
+  characters.render({ traineeStage: currentTraineeStage(), reaction: 'complete' });
   quizView.hidden = true;
   resultView.hidden = false;
   renderResults(resultView, session.getResults(), skillLabels);
