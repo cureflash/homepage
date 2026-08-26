@@ -60,8 +60,13 @@ Phase 4 verification: 4 workout-builder + 4 editor-model + 4 session-planner foc
   - QUICK / WEAKNESS / TRAINING / POWER / REVIEW / TEST / CUSTOM route into the existing common recipe/session engine.
   - TRAINING/POWER expose a mobile skill picker; home reflects POWER progression and due-review count.
   - Brand control returns to home without coupling navigation to quiz-domain logic.
-- [ ] **8.2 End-to-end Web regression suite**
-- [ ] **8.3 Performance/large-bank adapter check**
+- [x] **8.2 End-to-end Web regression suite**
+  - Added a deterministic integration regression spanning WorkoutRecipe -> selection -> QuizSession -> attempts -> review/progression -> versioned persistence -> results.
+  - Added a dedicated GitHub Actions Node 22 workflow for the complete Power TOEIC test suite.
+  - The first complete run exposed and fixed a pre-existing progression-stage callback regression.
+- [x] **8.3 Performance/large-bank adapter check**
+  - Added a synthetic-only 20,000-question bank regression; production TOEIC content is not involved.
+  - 100-question workout selection remains unique and deterministic and completed far below the 2-second regression ceiling on GitHub Actions.
 - [ ] **8.4 Publish Web beta entry point**
 
 ## Phase 9 — freeze cross-platform behavior — APP TRACK
