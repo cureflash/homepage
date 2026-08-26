@@ -1,183 +1,173 @@
 # Power TOEIC — execution plan
 
-Work strictly from the first unchecked executable item. Check an item only when its acceptance criteria are satisfied and relevant tests pass.
+The `Power TOEIC 開発` scheduled task owns **APP TRACK only**. Content/database tasks are explicitly external and must not block app implementation.
 
-## Phase 0 — reuse audit and architecture freeze
+Work from the first unchecked APP TRACK task. Check an item only when acceptance criteria are satisfied and relevant tests pass.
+
+## Phase 0 — reuse audit and architecture freeze — APP TRACK
 
 - [x] **0.1 Audit existing quiz foundation**
-  - Read `subjects/social/quiz/README.md`, `js/core/`, `js/renderers/`, `js/main.js`, tests, and package scripts.
-  - Identify exactly which primitives can be reused for four-choice cloze sessions without importing social-studies-specific assumptions.
-  - Identify whether the existing `choice` renderer can be reused directly or generalized safely.
-  - Document coupling risks and chosen reuse strategy in `90_HANDOFF.md`.
-  - Acceptance: concrete file-level reuse plan exists; no speculative framework migration.
-
-- [x] **0.2 Freeze Power TOEIC implementation location and shared-code boundary**
-  - Prefer `subjects/english/power-toeic/` unless the reuse audit proves another repository-local path materially safer.
-  - Decide whether to extract shared quiz primitives or preserve duplicated structure with explicit compatibility tests.
-  - Acceptance: canonical paths are recorded in all relevant Power TOEIC docs/STATUS.
-
+- [x] **0.2 Freeze implementation path and shared-code boundary**
 - [x] **0.3 Add baseline regression coverage for reusable quiz contracts**
-  - Characterize any existing social-quiz core behavior that Power TOEIC will depend on before refactoring/extraction.
-  - Acceptance: tests fail on an intentional break and pass on current behavior.
 
-## Phase 1 — taxonomy and content contract
+Canonical Web path: `subjects/english/power-toeic/`.
 
-- [ ] **1.1 Define Part 5 taxonomy V1**
-  - Create stable IDs for approximately 44 micro-skills.
-  - Group them into a small learner-facing hierarchy.
-  - For each micro-skill define intended decision rule and representative confusion/error pattern.
-  - Acceptance: unique IDs, no duplicate meanings, machine-readable source plus human-readable documentation.
+## Phase 1 — production taxonomy/question database — EXTERNAL CONTENT TRACK
 
-- [ ] **1.2 Define question schema and validators**
-  - Implement the schema from `30_QUESTION_AND_QA_SPEC.md`.
-  - Validate exactly four distinct choices, one answer, required tags, explanation, and QA state.
-  - Acceptance: positive and negative schema tests.
+These tasks are not owned by the app-development scheduler:
 
-- [ ] **1.3 Create initial Gold set**
-  - Hand-curate/review a small representative set across the initial micro-skills.
-  - Use it to regression-test renderers, selectors, validators, and later generation QA.
-  - Target: enough coverage for each implemented question family before scale; do not chase volume before validation.
+- [ ] **1.1 Define Part 5 taxonomy V1 — EXTERNAL**
+- [ ] **1.2 Define/produce production question schema/content validation — EXTERNAL**
+- [ ] **1.3 Create and scale Gold/production question bank — EXTERNAL**
 
-## Phase 2 — common quiz session MVP
+The app track may define only the consumer-facing adapter contract and tiny synthetic fixtures required to test program behavior.
 
-- [ ] **2.1 Implement/reuse four-choice session core**
-  - One common session engine for all Power TOEIC modes.
+## Phase 2 — Web common quiz-session MVP — APP TRACK
+
+- [ ] **2.0 Create Web app skeleton and question-bank adapter**
+  - Create `subjects/english/power-toeic/` with mobile-first static HTML/CSS/ES-module structure.
+  - Define the minimum `QuestionBankRepository`/adapter interface consumed by runtime code.
+  - Add a tiny clearly synthetic fixture bank for tests/demo only.
+  - Do not author production TOEIC database content.
+  - Acceptance: app imports fixture questions only through the adapter and basic smoke tests pass.
+
+- [ ] **2.1 Implement common four-choice study session core**
   - Immutable started-session question list.
-  - Attempt events emitted per answer.
-  - Acceptance: deterministic session tests.
+  - Current index/state.
+  - Answer submission and correctness.
+  - Attempt events containing question ID/version, skill ID, answer, correctness and response duration where available.
+  - No mandatory countdown/game-over semantics.
+  - Acceptance: deterministic Node tests.
 
-- [ ] **2.2 Implement cloze-choice renderer**
+- [ ] **2.2 Implement cloze-choice renderer and quiz screen**
   - Sentence with one blank plus exactly four tappable options.
-  - Mobile-first layout.
-  - Immediate correct/wrong state and concise explanation.
-  - Acceptance: keyboard/tap interaction and answer uniqueness tests where applicable.
+  - Immediate correct/wrong visual state and concise explanation.
+  - Mobile-first one-thumb interaction.
+  - Acceptance: renderer/DOM contract tests and usable static page.
 
-- [ ] **2.3 Implement basic results**
-  - Show question count, correctness, and skill breakdown without target-score prediction.
-  - Acceptance: results derive only from stored session attempts.
+- [ ] **2.3 Implement basic result screen**
+  - Questions answered, correct count, accuracy and skill breakdown.
+  - No target-score prediction.
+  - Acceptance: result data derives only from session attempts.
 
-## Phase 3 — persistence and mastery
+## Phase 3 — Web persistence, mastery and weakness — APP TRACK
 
-- [ ] **3.1 Implement minimal anonymous persistence**
-  - Persist attempts and progression with the smallest suitable browser storage layer.
-  - Include schema/version migration strategy.
-  - Acceptance: reload preserves history; corrupted/old data fails safely.
+- [ ] **3.1 Implement versioned browser persistence**
+  - Attempts, review data and character progression.
+  - Fail safely on invalid/old data.
 
-- [ ] **3.2 Implement deterministic micro-skill mastery**
-  - Track recent correctness, enough sample count, mixed performance, and review state.
-  - Keep rules explainable and configurable.
-  - Acceptance: table-driven transition tests.
+- [ ] **3.2 Implement deterministic mastery engine**
+  - Configurable, explainable state transitions.
+  - Must support mixed/review evidence later.
 
 - [ ] **3.3 Implement weakness ranking**
-  - Produce ranked weak micro-skills mechanically from mastery/attempt data.
-  - Acceptance: deterministic fixtures produce expected ranking.
+  - Mechanically rank weak skill IDs supplied by the content adapter.
 
-## Phase 4 — workout system
+## Phase 4 — Web workout system — APP TRACK
 
-- [ ] **4.1 Implement workout recipe model**
-  - Skill IDs + desired counts/weights + total count + selection policy.
-  - Same model for machine-generated and manual workouts.
-  - Acceptance: recipe validation and serialization tests.
+- [ ] **4.1 Implement platform-neutral workout recipe model**
+- [ ] **4.2 Implement deterministic question selector through QuestionBankRepository**
+- [ ] **4.3 Implement QUICK / TRAINING / POWER / TEST / REVIEW presets through recipes**
+- [ ] **4.4 Implement weakness-generated workout recipes**
+- [ ] **4.5 Implement user-editable workout editor**
+- [ ] **4.6 Implement 10 / 30 / 50 / 100 and bounded-chunk endless sessions**
 
-- [ ] **4.2 Implement question selector**
-  - Prefer unseen eligible questions, then least-recently-seen questions.
-  - Avoid duplicate question IDs within a finite session.
-  - Acceptance: deterministic seeded selection tests.
+No mode gets a separate quiz engine.
 
-- [ ] **4.3 Implement standard presets through recipes**
-  - QUICK, TRAINING, POWER, TEST, REVIEW.
-  - No separate quiz engine per mode.
-  - Acceptance: each preset resolves to one common session format.
+## Phase 5 — Web review and transfer — APP TRACK
 
-- [ ] **4.4 Implement weakness-generated workouts**
-  - Generate a recipe from ranked weak skills.
-  - Acceptance: generated recipe contains only eligible skills and respects requested count.
+- [ ] **5.1 Implement mixed/unlabeled test presentation**
+- [ ] **5.2 Implement deterministic review scheduler**
+- [ ] **5.3 Gate mastery on mixed/review evidence**
 
-- [ ] **4.5 Implement user workout editor**
-  - User can add/remove skills and adjust counts before session start.
-  - Acceptance: edited system recommendation becomes an ordinary valid recipe and starts through the same engine.
+## Phase 6 — Web character UX — APP TRACK
 
-- [ ] **4.6 Implement long-session behavior**
-  - 10/30/50/100 question sizes plus an endless-style continuation mode.
-  - Endless mode must still operate in bounded chunks internally and avoid loading an unbounded question list.
-  - Acceptance: stable operation over repeated continuation chunks.
+- [ ] **6.1 Define stable Drill Sergeant / Trainee asset contract**
+- [ ] **6.2 Implement Sergeant-presents / Trainee-answers quiz composition**
+- [ ] **6.3 Implement deterministic Trainee progression from skinny to muscular**
 
-## Phase 5 — review and transfer
+Character code remains removable presentation and never owns educational logic.
 
-- [ ] **5.1 Implement mixed/unlabeled test mode**
-  - Hide micro-skill labels that would reveal strategy.
-  - Acceptance: same underlying questions can run in training and mixed presentation without data duplication.
+## Phase 7 — production question factory/database — EXTERNAL CONTENT TRACK
 
-- [ ] **5.2 Implement review scheduler**
-  - Start with deterministic intervals such as next-day / later follow-ups; exact intervals remain configurable.
-  - Acceptance: due review fixtures and date-boundary tests.
+Not owned by the app-development scheduler:
 
-- [ ] **5.3 Gate mastery on transfer/review**
-  - Single-skill drill success alone must not finalize mastery.
-  - Acceptance: mastery fixtures demonstrate concentration -> mixed -> review progression.
+- [ ] **7.1 Candidate-generation specifications — EXTERNAL**
+- [ ] **7.2 Automatic production QA pipeline — EXTERNAL**
+- [ ] **7.3 Scale production bank — EXTERNAL**
 
-## Phase 6 — character UX
+The following integration item remains APP TRACK:
 
-- [ ] **6.1 Define character asset contract**
-  - Drill Sergeant and Trainee asset IDs/states; no educational logic in assets.
-  - Trainee has a small set of progression stages from skinny to increasingly muscular.
-  - Acceptance: missing asset degrades gracefully without blocking quiz.
+- [ ] **7.4 Implement bad-question reporting UI and report storage contract — APP TRACK**
+  - Identify exact question ID/version.
+  - Support reasons such as ambiguity, unnatural English, wrong answer/explanation and other.
+  - Production moderation pipeline remains external.
 
-- [ ] **6.2 Implement Sergeant/Trainee quiz composition**
-  - Sergeant visually presents/commands the current problem.
-  - Trainee visually represents the answering learner.
-  - Correct/wrong reactions are presentation effects driven by session events.
-  - Acceptance: removing character layer leaves quiz fully playable.
+## Phase 8 — Web V1 integration — APP TRACK
 
-- [ ] **6.3 Implement trainee progression**
-  - Award progression from meaningful training/mastery events, not body-part skill mapping.
-  - Prevent trivial tap-spam from being the optimal progression method.
-  - Acceptance: progression is deterministic from recorded events and covered by tests.
+- [ ] **8.1 Mobile-first home/navigation**
+  - Weakness workout, quick drill, category training, custom workout, review, mixed test.
 
-## Phase 7 — question factory and QA
+- [ ] **8.2 End-to-end Web regression suite**
+  - fixture bank -> recipe -> selection -> session -> attempts -> mastery -> review -> progression.
 
-- [ ] **7.1 Implement candidate-generation specification per micro-skill**
-  - Template IDs, intended rule, lexical family/constraints, distractor strategy.
-  - Generation tooling remains offline.
+- [ ] **8.3 Performance/large-bank adapter check**
+  - Test against generated synthetic scale fixtures rather than authoring production questions.
 
-- [ ] **7.2 Implement automatic QA pipeline**
-  - Schema validation, answer consistency, all-choice substitution checks where practical, duplicate checks, independent solver/judge hooks, explanation consistency.
-  - Acceptance: seeded bad-question fixtures are rejected.
+- [ ] **8.4 Publish Web beta entry point**
 
-- [ ] **7.3 Build first meaningful bank**
-  - Scale only after the QA gates are proven.
-  - Prioritize high-value Part 5 micro-skills and breadth of unseen surface forms.
-  - Track generated/approved/rejected counts.
+## Phase 9 — freeze cross-platform behavior — APP TRACK
 
-- [ ] **7.4 Add bad-question reporting**
-  - User can report ambiguity, unnatural English, wrong explanation, wrong answer, or other issue.
-  - Acceptance: reports persist locally or through the chosen persistence layer and identify exact question/version.
+Complete this before native iOS implementation.
 
-## Phase 8 — integrated V1
+- [ ] **9.1 Freeze platform-neutral models**
+  - Question consumer model, WorkoutRecipe, Attempt, MasterySnapshot, ReviewEntry, ProgressionState, QuestionReport.
 
-- [ ] **8.1 Mobile-first home and navigation**
-  - Entry points for recommended weakness workout, manual category training, custom workout, review, and mixed test.
-  - No target-score UI.
+- [ ] **9.2 Create deterministic cross-platform conformance fixtures**
+  - Expected session transitions, selection results for seeded cases, mastery states, review dates and character stages.
 
-- [ ] **8.2 End-to-end regression suite**
-  - Taxonomy -> question bank -> workout recipe -> selection -> session -> attempts -> mastery -> progression.
+- [ ] **9.3 Document Web V1 behavior as Swift port reference**
+  - No DOM-specific behavior should be part of the domain contract.
 
-- [ ] **8.3 Performance and large-bank check**
-  - Verify startup and question transitions remain responsive with the intended bank size.
-  - Avoid loading all future content unnecessarily if bank size makes that inefficient.
+## Phase 10 — native iOS Swift/SwiftUI port — APP TRACK
 
-- [ ] **8.4 Publish beta entry point**
-  - Add site navigation only when V1 is sufficiently playable and question quality is acceptable.
+- [ ] **10.1 Create native Swift/SwiftUI project structure**
+  - `App / Core / Models / Data / Persistence / Views / Resources / Tests`.
+  - Use standard Apple frameworks first.
 
-## Phase 9 — post-MVP only
+- [ ] **10.2 Implement Codable platform-neutral models and QuestionBankRepository protocol**
+  - Decode the same production-export format/fixtures as Web where practical.
 
-Do not start these until V1 is stable unless the user explicitly reprioritizes:
+- [ ] **10.3 Port QuizSession and WorkoutBuilder behavior**
+  - Match cross-platform fixtures.
 
-- accounts and cross-device sync;
-- server-side persistence/analytics;
+- [ ] **10.4 Port mastery, weakness and review engines**
+  - Match Web expected outputs for identical fixtures.
+
+- [ ] **10.5 Build SwiftUI home/workout/quiz/result/weakness screens**
+  - Preserve the same product flow, not the exact Web layout pixels.
+
+- [ ] **10.6 Port Drill Sergeant / Trainee character UX and progression**
+
+- [ ] **10.7 Implement native persistence**
+  - Hide storage behind an equivalent repository/store boundary.
+
+- [ ] **10.8 Run JavaScript/Swift conformance suite**
+  - Equivalent fixtures must produce equivalent domain results.
+
+## Phase 11 — iOS release preparation — APP TRACK
+
+- [ ] **11.1 App lifecycle, offline behavior and accessibility pass**
+- [ ] **11.2 App Store assets/metadata/privacy requirements**
+- [ ] **11.3 TestFlight build and release regression**
+- [ ] **11.4 App Store submission readiness checkpoint**
+
+## Deferred / only when required
+
+- account login and cross-device sync;
+- server-side analytics/persistence;
 - payments;
-- PWA/mobile wrapper;
 - Part 2/6/7/listening expansion;
-- App Store packaging;
-- advanced item statistics;
-- more character animation/skins.
+- advanced item-response statistics;
+- third-party UI/game frameworks;
+- more character skins/animation.
