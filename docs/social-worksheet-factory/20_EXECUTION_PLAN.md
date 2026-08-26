@@ -8,13 +8,16 @@
 - [x] Independently fact-check and publish the first prototype.
 - [x] Establish verified-only publication.
 - [x] Replace per-unit GENERATE/FACTCHECK alternation with high-volume generation backlog mode.
+- [x] Raise normal generation throughput to 20 units per run.
 
 ## Throughput policy
 
 Normal scheduled runs are GENERATE runs.
 
-- Target: **10 newly generated units per run**.
-- Preserve the production order below; crossing a field/stage boundary within a ten-unit batch is allowed when necessary.
+- Target: **20 newly generated sequential units per run**.
+- Preserve the production order below; crossing a field/course/stage boundary within a twenty-unit batch is expected when necessary.
+- If a high-school course queue has not yet been expanded, define it from current MEXT curriculum/commentary and continue generating in the same run.
+- Queue planning does not count toward the 20 generated-unit target.
 - Every new unit remains `pending_factcheck` and is appended to `STATUS.json.unverified_backlog`.
 - Pending units stay out of the public selector.
 - Do not automatically fact-check after generation.
@@ -42,11 +45,7 @@ Normal scheduled runs are GENERATE runs.
 17. Postwar Japan
 18. Contemporary Japan and cumulative review
 
-The explanation sheet/data definition comes first for every unit. Cloze generation uses the same structured facts. Independent fact-check and learner-facing publication may occur later in a large backlog batch.
-
 ## Junior-high civics queue
-
-After junior-high history generation reaches the end of its queue, continue directly into civics generation even if history has pending fact-check backlog.
 
 1. Constitution and constitutionalism
 2. Fundamental human rights
@@ -63,20 +62,18 @@ After junior-high history generation reaches the end of its queue, continue dire
 13. International society / United Nations
 14. Cumulative review
 
-## High-school queue
+## High-school production order
 
-Production order after junior-high history/civics generation coverage:
+1. `歴史総合`
+2. `日本史探究`
+3. `世界史探究`
+4. `公共`
 
-1. 歴史総合
-2. 日本史探究
-3. 世界史探究
-4. 公共
-
-Do not falsely map a formal high-school course to one fixed school year. Store `formalCourse` separately from any practical site grouping.
+Do not falsely map a formal high-school course to one fixed school year. Store `formalCourse` separately from practical grouping.
 
 ### 歴史総合 — ordered production queue
 
-This queue follows the current MEXT High School Course of Study Commentary for Geography and History. Preserve the four formal large sections and their order: A `歴史の扉`, B `近代化と私たち`, C `国際秩序の変化や大衆化と私たち`, D `グローバル化と私たち`.
+Preserve the formal MEXT large-section order A `歴史の扉`, B `近代化と私たち`, C `国際秩序の変化や大衆化と私たち`, D `グローバル化と私たち`.
 
 1. A(1) 歴史と私たち
 2. A(2) 歴史の特質と資料
@@ -98,28 +95,28 @@ This queue follows the current MEXT High School Course of Study Commentary for G
 18. D(3)-b 市場経済の変容・情報通信・グローバル化
 19. D(4) 現代的な諸課題の形成と展望
 
-The split of some MEXT middle sections into `-a/-b` production units is only a worksheet-density decision. Keep the formal MEXT large/middle-section metadata on every dataset so the curriculum structure is never obscured.
+The `-a/-b` splits are worksheet-density choices. Retain formal MEXT placement metadata in every dataset.
 
 ### 日本史探究 / 世界史探究 / 公共
 
-Before production reaches each formal course, expand it into an ordered unit queue grounded in the current MEXT curriculum/commentary, just as above. Do not infer a fixed grade assignment.
+Before production reaches each formal course, expand it into an ordered unit queue grounded in the current MEXT curriculum/commentary. This queue-definition work is mandatory but does not count as one of the 20 worksheet units for the run. Then continue generating until the run reaches 20 units or a real blocker occurs.
 
-Later expansion of 倫理 / 政治・経済 is allowed only after the above core sequence.
+Later expansion of 倫理 / 政治・経済 is allowed only after the core sequence above.
 
 ## Per-unit generation acceptance criteria
 
 A unit may enter the pending backlog only when:
 
-- explanation sheet text uses concise original wording derived from facts, not copied textbook prose;
-- core terms are explicit and render in red in study mode;
-- useful non-generated historical-source images are included where appropriate;
+- explanation-sheet text uses concise original wording derived from facts, not copied textbook prose;
+- core terms are explicit and can render red in study mode;
+- useful non-generated source images are included where they materially help;
 - generation-stage image source/license metadata is recorded;
-- cloze worksheet is generated from explicit core terms only;
+- cloze generation uses explicit core terms only;
 - seeded generation remains reproducible;
 - answer view maps to the explicit blank targets;
-- print layout remains intentionally low-density and suitable for A4;
-- the unit is clearly marked `pending_factcheck` and is not publicly registered.
+- A4 information density remains controlled;
+- the unit is clearly `pending_factcheck` and is not publicly registered.
 
 ## Publication acceptance criteria
 
-A pending unit becomes publishable only after an independent FACTCHECK batch has approved every learner sentence, key-point/timeline claim, and image reuse claim. Only then may its status become `verified` and its dataset be added to the public selector.
+A pending unit becomes publishable only after an independent FACTCHECK batch approves every learner sentence, fact, key-point/timeline claim, and image reuse claim. Only then may its status become `verified` and its dataset be added to the public selector.
