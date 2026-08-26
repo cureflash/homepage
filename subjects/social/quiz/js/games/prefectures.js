@@ -20,12 +20,16 @@ export const prefectureGame = {
     regionSelector: JAPAN_PREFECTURE_MAP.regionSelector,
     keyAttribute: JAPAN_PREFECTURE_MAP.keyAttribute,
     sourceKeyAttribute: JAPAN_PREFECTURE_MAP.sourceKeyAttribute,
-    regionKeyMap: JAPAN_PREFECTURE_MAP.regionKeyMap
+    regionKeyMap: JAPAN_PREFECTURE_MAP.regionKeyMap,
+    decorativeSourceKeys: JAPAN_PREFECTURE_MAP.decorativeSourceKeys,
+    insets: JAPAN_PREFECTURE_MAP.insets,
+    viewBox: JAPAN_PREFECTURE_MAP.viewBox
   },
   questions: JAPAN_PREFECTURES.map(({ code, name }) => ({
     id: `pref-${String(code).padStart(2, "0")}`,
     prompt: name,
     answer: code,
-    answerLabel: name
+    answerLabel: name,
+    wrongText: "不正解！"
   }))
 };
