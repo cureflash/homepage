@@ -66,7 +66,7 @@ def main():
         catalog = json.loads((root / 'worksheets/catalog.json').read_text(encoding='utf-8'))
         assert {entry['id'] for entry in catalog} == own
         assert all(entry['unit'] == UNIT_TITLE and entry['grade'] == 4 for entry in catalog)
-        assert all(entry['answer_type'] == 'fraction' for entry in catalog)
+        assert all(entry['answer_type'] == 'accepted-set' for entry in catalog)
         validate_catalog(catalog, root)
         for entry in catalog:
             pdf = root / entry['url']
