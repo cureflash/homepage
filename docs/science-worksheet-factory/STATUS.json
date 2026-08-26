@@ -2,7 +2,7 @@
   "status": "in_progress",
   "mode": "handoff_driven",
   "project": "science-worksheet-factory",
-  "next_task": "Resume Phase 3 at 物理基礎 heat publication, not waves yet. The 60-sheet heat source/test/workflow checkpoint is already on main: Q=mcΔT (40 variants: solve Q, m, c, ΔT) and Q=CΔT (20 variants: solve Q, C), coherent SI units J/kg/J/(kg·K)/J/K/K, existing shared product relation only. Reconfirm latest main, then get the Physics Basics publish workflow to execute on current main (or an equivalent fully validated publication path), require all shared/topic tests, independent recomputation, 450 unique Physics Basics hashes, PDF two-page/file checks, catalog registration, and successful commit/push before counting the 60 PDFs as published. Current published count remains 390 Physics Basics / 678 physics until that succeeds. After heat is actually published, continue waves/sound -> electricity -> energy use.",
+  "next_task": "Resume Phase 3 at 物理基礎 heat publication, not waves yet. The 60-sheet heat source/test/workflow checkpoint is already on main. Reconcile against latest main, then re-check GitHub Actions run 32984118839 (Publish Physics Basics worksheets). The run was created for PR #68 merge commit 3aae6b7d607f1a25b88d86c2eb9a51898b554360 and is still queued with no jobs started. When it runs, require shared/topic tests, independent recomputation, exactly 450 unique Physics Basics hashes, 60 heat catalog rows, PDF file/size/%PDF/two-page checks, and successful safe push before counting heat as published. Current published count remains 390 Physics Basics / 678 physics. Only after successful heat publication continue waves/sound -> electricity -> energy use.",
   "scheduler_policy": "one_checkpoint_per_cycle",
   "updated_at": "2026-08-27"
 }
