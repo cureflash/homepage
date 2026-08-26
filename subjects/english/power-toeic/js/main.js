@@ -1,4 +1,5 @@
 import { createBrowserAppStore } from './core/persistence.js';
+import { createReviewEntryFromAttempt, getDueReviewQuestionIds, upsertReviewEntry } from './core/review.js';
 import { QuizSession } from './core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from './core/workout-builder.js';
 import { InMemoryQuestionBank } from './data/question-bank-adapter.js';
@@ -45,6 +46,12 @@ const editor = new WorkoutEditor({
   onStart: (recipe) => startSession(recipe),
 });
 
+function sessionContextForRecipe(recipe) {
+  if (recipe.mode === 'TEST') return 'mixed';
+  if (recipe.mode === 'REVIEW') return 'review';
+  return 'training';
+}
+
 function showEditor(recipe = activeRecipe ?? defaultRecipe) {
   activeRecipe = recipe;
   quizView.hidden = true;
@@ -55,14 +62,21 @@ function showEditor(recipe = activeRecipe ?? defaultRecipe) {
 }
 
 function startSession(recipe) {
-  const attempts = appStore.load().attempts;
-  const questionIds = selectQuestionIds({ repository, recipe, attempts });
+  const state = appStore.load();
+  const reviewQuestionIds = recipe.mode === 'REVIEW'
+    ? getDueReviewQuestionIds(state.reviewEntries)
+    : [];
+  const questionIds = selectQuestionIds({ repository, recipe, attempts: state.attempts, reviewQuestionIds });
   if (!questionIds.length) {
     showEditor(recipe);
     return;
   }
   activeRecipe = recipe;
-  session = new QuizSession({ questionIds, repository });
+  session = new QuizSession({
+    questionIds,
+    repository,
+    context: sessionContextForRecipe(recipe),
+  });
   editorView.hidden = true;
   resultView.hidden = true;
   quizView.hidden = false;
@@ -83,8 +97,12 @@ function renderCurrent() {
 
 renderer.setAnswerHandler((selectedIndex) => {
   const question = session.currentQuestion;
+  const beforeState = appStore.load();
   const attempt = session.submitAnswer(selectedIndex);
+  const previousReview = beforeState.reviewEntries.find((entry) => entry.questionId === attempt.questionId) ?? null;
+  const nextReview = createReviewEntryFromAttempt(attempt, previousReview);
   appStore.appendAttempt(attempt);
+  appStore.replaceReviewEntries(upsertReviewEntry(beforeState.reviewEntries, nextReview));
   renderer.showResult({ selectedIndex, correctIndex: question.correctIndex, explanation: question.explanation });
   feedbackEl.textContent = attempt.correct ? '軍曹「よし、その調子だ！」' : '軍曹「違う。理由を確認して次だ！」';
   nextButton.textContent = session.progress.current === session.progress.total ? '結果を見る' : '次の問題';
