@@ -13,6 +13,7 @@ try:
         PHYSICS_BASIC_MOTION_PROBLEM_COUNT,
         PHYSICS_BASIC_MOTION_TOPICS,
     )
+    from scripts.science_physics_basic_sound import PHYSICS_BASIC_SOUND_TOPICS
     from scripts.science_physics_basic_wave import PHYSICS_BASIC_WAVE_TOPICS
     from scripts.science_worksheet_helpers import generate_formula_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
@@ -25,6 +26,7 @@ except ModuleNotFoundError:
         PHYSICS_BASIC_MOTION_PROBLEM_COUNT,
         PHYSICS_BASIC_MOTION_TOPICS,
     )
+    from science_physics_basic_sound import PHYSICS_BASIC_SOUND_TOPICS
     from science_physics_basic_wave import PHYSICS_BASIC_WAVE_TOPICS
     from science_worksheet_helpers import generate_formula_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
@@ -39,6 +41,7 @@ ALL_TOPICS = {
     **PHYSICS_BASIC_CONSERVATION_TOPICS,
     **PHYSICS_BASIC_HEAT_TOPICS,
     **PHYSICS_BASIC_WAVE_TOPICS,
+    **PHYSICS_BASIC_SOUND_TOPICS,
 }
 
 
