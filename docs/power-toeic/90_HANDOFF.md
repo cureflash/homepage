@@ -2,48 +2,78 @@
 
 ## Current state
 
-**Phase 2 Web common quiz-session MVP is complete. The exact next APP TRACK task is Phase 3 / Task 3.1 — versioned browser persistence.**
+**Phase 3 / Task 3.1 versioned browser persistence is complete. The exact next APP TRACK task is Phase 3 / Task 3.2 — deterministic mastery engine.**
 
-The Power TOEIC app/UI track remains separate from the production question-database track. Production taxonomy authoring, Gold-bank production, bulk question generation, production QA and database scaling belong to the external content track.
+The Power TOEIC app/UI track remains separate from the production question-database track. Production taxonomy authoring, Gold-bank production, bulk generation, production QA and database scaling remain external.
 
-## Completed in Phase 2
+## Completed through Phase 2
 
-Implemented under `subjects/english/power-toeic/`:
+Existing Web reference implementation under `subjects/english/power-toeic/` already provides:
 
-- mobile-first `index.html` / `styles.css` quiz shell;
-- `QuestionBankRepository` contract plus `InMemoryQuestionBank` fixture implementation;
-- three explicitly synthetic fixture questions and two fixture skill labels;
-- deterministic `QuizSession` with an immutable started-session question-ID list;
-- per-answer attempt events containing question ID/version, skill ID, selected/correct index, correctness and response time;
-- four-choice cloze renderer with immediate correct/wrong state and concise explanation;
-- accessible result state that does not rely on color alone;
-- result screen derived only from session attempts: answered, correct, accuracy and per-skill breakdown;
-- restartable demo composition through `main.js`;
-- presentation-only `AssetCatalog` with semantic character/audio IDs and `SafeAudioPlayer` failure isolation.
+- mobile-first HTML/CSS/ES-module quiz shell;
+- `QuestionBankRepository` + tiny synthetic fixture bank;
+- immutable `QuizSession` and attempt emission;
+- four-choice cloze renderer with immediate feedback;
+- result screen derived only from session attempts;
+- semantic `AssetCatalog` and fail-silent audio boundary.
 
-No production TOEIC question content was authored by this work. Existing production taxonomy/question folders created by the external content track were left unchanged. The runtime demo consumes fixture questions only through the repository adapter.
+Phase 2 verification remains **9 Node tests passed, 0 failed**. No Phase 2 production-content code was changed by Task 3.1.
 
-## Verification
+## Task 3.1 completed work
 
-Node tests were reconstructed and executed for the exact adapter/session/renderer/asset-catalog source in this checkpoint:
+Added:
 
-- adapter tests: repository lookup/filtering and frozen records;
-- session tests: immutable started list, deterministic attempt payload, response timing, advance guard and results;
-- renderer tests: exactly four semantic buttons, answer-index forwarding, disabled post-answer state, correct/wrong textual accessibility labels;
-- asset tests: semantic lookup and fail-silent audio playback behavior.
+`subjects/english/power-toeic/js/core/persistence.js`
 
-Result: **9 tests passed, 0 failed**.
+The persistence boundary is `VersionedAppStore` with a versioned root record:
 
-## Temporary asset decision
+```text
+{
+  version: 1,
+  attempts: [],
+  reviewEntries: [],
+  progression: {
+    points: 0,
+    stage: 0
+  }
+}
+```
 
-Canonical asset rules are in `docs/power-toeic/50_ASSET_POLICY.md`.
+Canonical browser key:
 
-- Character art: temporary **いらすとや** assets, kept below 20 unique illustrations unless licensing/replacement policy changes. Runtime code uses semantic IDs rather than source names/URLs.
-- Audio: existing Google Drive SE library. Initial semantic mapping is `audio.correct` -> `otologic_correct.mp3`, `audio.wrong` -> `otologic_incorrect.mp3`, `audio.inspiration` -> `otologic_inspiration.mp3`.
-- OtoLogic attribution/CC BY 4.0 metadata must remain with the public bundle.
-- Missing images or blocked audio must never block quiz play.
+`power-toeic.app-state`
 
-The initial Web skeleton does not yet bundle the binary Irasutoya/OtoLogic files. It already has the semantic catalog and expected local audio paths so later asset import is isolated from domain code.
+Behavior is deliberately deterministic and conservative:
+
+- missing storage -> return a clean version-1 default record;
+- corrupted JSON -> remove invalid payload when possible and return defaults;
+- unsupported/unknown version -> do not guess migration semantics; reset safely to defaults;
+- storage API read/write/remove exceptions -> fail silently to safe in-memory/default behavior rather than blocking quiz play;
+- returned/saved data is cloned so callers cannot mutate stored state by reference;
+- attempt validation requires question ID/version, skill ID, selected/correct indexes, correctness and non-negative response duration;
+- review entries and progression are already represented as root fields so Phase 5/6 can evolve them without changing the top-level storage boundary.
+
+`createBrowserAppStore()` uses browser `localStorage` when available and falls back to an in-memory key/value implementation when unavailable.
+
+Updated:
+
+`subjects/english/power-toeic/js/main.js`
+
+Each emitted `QuizSession` attempt is now appended through the persistence adapter after answer submission. Correctness/session logic still does not depend on persistence.
+
+Added:
+
+`subjects/english/power-toeic/tests/persistence.test.js`
+
+Focused verification covers:
+
+1. versioned default root;
+2. attempts/review/progression surviving reload;
+3. corrupted JSON safe reset;
+4. unsupported-version deterministic reset;
+5. storage API failures remaining non-fatal.
+
+Result: **5 focused persistence tests passed, 0 failed** using Node's built-in test runner against the exact new persistence source.
 
 ## Current Web architecture
 
@@ -54,12 +84,13 @@ subjects/english/power-toeic/
   package.json
   js/
     core/
+      persistence.js
       session.js
     data/
       question-bank-adapter.js
       fixtures.js
-      taxonomy/        # external content track; do not edit from APP TRACK
-      questions/       # external content track; do not edit from APP TRACK
+      taxonomy/        # EXTERNAL CONTENT TRACK; do not edit here
+      questions/       # EXTERNAL CONTENT TRACK; do not edit here
     renderers/
       cloze-choice.js
     ui/
@@ -71,63 +102,37 @@ subjects/english/power-toeic/
     session.test.js
     cloze-choice.test.js
     asset-catalog.test.js
+    persistence.test.js
 ```
-
-The session engine has no mandatory countdown or game-over semantics. Character presentation remains separate from correctness/session state.
 
 ## Exact next work
 
-### Task 3.1 — versioned browser persistence
+### Task 3.2 — deterministic mastery engine
 
-Implement a small storage adapter behind an explicit boundary. Persist at minimum:
-
-- attempt history;
-- review entries/state placeholder required by later Phase 5;
-- character progression state placeholder required by later Phase 6.
+Add `js/core/mastery.js` or equivalent with one centralized, configurable rule set.
 
 Requirements:
 
-1. use a versioned root record;
-2. reject or safely reset corrupted payloads;
-3. define deterministic migration/fallback behavior for unsupported versions;
-4. keep storage API independent from DOM and question data;
-5. use injectable storage in tests so Node tests do not require a browser;
-6. wire emitted session attempts into persistence only after the storage contract is tested.
+1. consume persisted attempt history rather than DOM/UI state;
+2. produce deterministic per-skill snapshots keyed by externally supplied `skillId`;
+3. keep rules explainable and table-testable;
+4. represent insufficient evidence distinctly from demonstrated weakness;
+5. reserve explicit mixed-test/review evidence fields or counters so Phase 5 can later gate true mastery without redesigning the model;
+6. do **not** mark a skill permanently mastered from concentrated/labeled practice alone;
+7. keep character progression completely separate;
+8. add table-driven tests for no evidence, insufficient sample, weak performance and improving/training performance.
 
-After 3.1, proceed to 3.2 deterministic mastery engine and 3.3 weakness ranking if safe.
+After 3.2 passes, proceed to **3.3 weakness ranking** if it can be completed safely in the same run.
 
-## Fixed platform plan
+## Fixed product/platform decisions
 
-Web remains HTML/CSS/Vanilla JavaScript/ES Modules first. After Web V1 and Phase 9 cross-platform fixtures are frozen, implement native iOS in Swift + SwiftUI.
-
-Preserve responsibility mapping:
-
-```text
-Web JS                         Swift / SwiftUI
------------------------------------------------------------
-session.js                  -> QuizSession.swift
-workout-builder.js          -> WorkoutBuilder.swift
-mastery.js                  -> MasteryEngine.swift
-review.js                   -> ReviewScheduler.swift
-progression.js              -> ProgressionEngine.swift
-question-bank-adapter.js    -> QuestionBankRepository protocol
-asset-catalog.js            -> AssetCatalog.swift
-quiz UI modules             -> SwiftUI Views
-browser persistence         -> native persistence adapter
-```
-
-Do not translate DOM code line-by-line. Share contracts, data formats, deterministic fixtures and expected behavior.
-
-## Fixed product behavior
-
-Still canonical:
-
-- Part 5-style sentence cloze, exactly four choices;
-- fine-grained weak-skill concentration once external data supplies skill IDs;
-- QUICK / TRAINING / POWER / WEAKNESS / CUSTOM / TEST / REVIEW through one session engine;
+- Web first: HTML/CSS/Vanilla JavaScript/ES Modules.
+- Swift + SwiftUI native port begins only after Web V1 + Phase 9 conformance fixtures are frozen.
+- JS and Swift share contracts/fixtures, not runtime code.
 - no target-score feature;
 - no skill-to-body-part mapping;
 - no runtime LLM generation;
-- Drill Sergeant presents the drill in the UI;
-- skinny Trainee represents the learner and becomes progressively more muscular;
-- characters do not own answer/mastery/workout logic.
+- no production question generation in APP TRACK;
+- Drill Sergeant / Trainee UI remains presentation-only;
+- temporary art = Irasutoya through semantic asset IDs, below 20 unique works unless policy changes;
+- audio = existing Google Drive OtoLogic SE through semantic IDs with CC BY 4.0 attribution retained.
