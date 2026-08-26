@@ -24,9 +24,21 @@
   "characters": {
     "question_giver": "drill_sergeant",
     "learner_avatar": "skinny_trainee",
-    "progression": "skinny_to_muscular"
+    "progression": "skinny_to_muscular",
+    "temporary_art_source": "Irasutoya",
+    "temporary_unique_art_limit": 20
   },
+  "audio": {
+    "source": "Google Drive existing SE library",
+    "initial_correct": "otologic_correct.mp3",
+    "initial_wrong": "otologic_incorrect.mp3",
+    "initial_milestone": "otologic_inspiration.mp3",
+    "license": "CC BY 4.0 / OtoLogic attribution required"
+  },
+  "asset_policy": "docs/power-toeic/50_ASSET_POLICY.md",
+  "asset_catalog": "subjects/english/power-toeic/js/ui/asset-catalog.js",
   "last_completed_task": "2.3",
-  "phase2_test_result": "7 Node tests passed: adapter/session/renderer contracts",
-  "updated_at": "2026-08-26T22:45:00+09:00"
+  "phase0_audit": "docs/power-toeic/PHASE0_REUSE_AUDIT.md",
+  "phase2_test_result": "9 Node tests passed: adapter/session/renderer/asset-catalog contracts",
+  "updated_at": "2026-08-26T22:48:00+09:00"
 }
