@@ -34,20 +34,10 @@ Phase 2 verification: 9 Node tests passed across adapter/session/renderer contra
 ## Phase 3 — Web persistence, mastery and weakness — APP TRACK
 
 - [x] **3.1 Implement versioned browser persistence**
-  - Attempts, review data and character progression.
-  - Fail safely on invalid/old data.
-  - Verification: 5 focused persistence tests passed.
-
 - [x] **3.2 Implement deterministic mastery engine**
-  - Configurable, explainable state transitions.
-  - Distinguishes unknown / training / weak without allowing labeled practice alone to become mastered.
-  - Carries mixed/review evidence counters for later Phase 5 transfer gates.
-
 - [x] **3.3 Implement weakness ranking**
-  - Mechanically ranks attempted skill IDs from overall/recent error evidence.
-  - Unknown/unattempted skills are not mislabeled as demonstrated weakness.
 
-Phase 3.2/3.3 verification: 4 focused mastery/weakness tests passed.
+Phase 3 verification: 5 focused persistence tests plus 4 focused mastery/weakness tests passed.
 
 ## Phase 4 — Web workout system — APP TRACK
 
@@ -55,10 +45,10 @@ Phase 3.2/3.3 verification: 4 focused mastery/weakness tests passed.
 - [x] **4.2 Implement deterministic question selector through QuestionBankRepository**
 - [x] **4.3 Implement QUICK / TRAINING / POWER / TEST / REVIEW presets through recipes**
 - [x] **4.4 Implement weakness-generated workout recipes**
-- [ ] **4.5 Implement user-editable workout editor**
-- [ ] **4.6 Implement 10 / 30 / 50 / 100 and bounded-chunk endless sessions**
+- [x] **4.5 Implement user-editable workout editor**
+- [x] **4.6 Implement 10 / 30 / 50 / 100 and bounded-chunk endless sessions**
 
-Phase 4.1–4.4 verification: 4 focused Node tests passed. Recipe objects are JSON/Codable-friendly and immutable after construction; selector is seed-deterministic, prefers unseen then least-recently-seen questions, avoids duplicate IDs in finite sessions, REVIEW restricts selection to supplied due IDs, TEST hides skill labels, and weakness recommendations resolve through the same recipe model.
+Phase 4.1–4.4 verification: 4 focused Node tests passed. Phase 4.5 verification: 4 focused editor-model tests passed. Phase 4.6 verification: 4 focused session-planner tests passed. Workout edits normalize through the same `createWorkoutRecipe(...)` path; WEAKNESS weights resolve to editable counts; finite sizes are 10/30/50/100; endless mode creates deterministic bounded chunks with a hard maximum of 100 questions per chunk.
 
 No mode gets a separate quiz engine.
 
@@ -94,28 +84,15 @@ The following integration item remains APP TRACK:
 ## Phase 8 — Web V1 integration — APP TRACK
 
 - [ ] **8.1 Mobile-first home/navigation**
-  - Weakness workout, quick drill, category training, custom workout, review, mixed test.
-
 - [ ] **8.2 End-to-end Web regression suite**
-  - fixture bank -> recipe -> selection -> session -> attempts -> mastery -> review -> progression.
-
 - [ ] **8.3 Performance/large-bank adapter check**
-  - Test against generated synthetic scale fixtures rather than authoring production questions.
-
 - [ ] **8.4 Publish Web beta entry point**
 
 ## Phase 9 — freeze cross-platform behavior — APP TRACK
 
-Complete this before native iOS implementation.
-
 - [ ] **9.1 Freeze platform-neutral models**
-  - Question consumer model, WorkoutRecipe, Attempt, MasterySnapshot, ReviewEntry, ProgressionState, QuestionReport.
-
 - [ ] **9.2 Create deterministic cross-platform conformance fixtures**
-  - Expected session transitions, selection results for seeded cases, mastery states, review dates and character stages.
-
 - [ ] **9.3 Document Web V1 behavior as Swift port reference**
-  - No DOM-specific behavior should be part of the domain contract.
 
 ## Phase 10 — native iOS Swift/SwiftUI port — APP TRACK
 
