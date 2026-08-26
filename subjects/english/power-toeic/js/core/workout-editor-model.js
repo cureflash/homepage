@@ -8,11 +8,38 @@ function cloneAllocations(allocations = []) {
   }));
 }
 
+function resolveAllocationCounts(recipe) {
+  const allocations = cloneAllocations(recipe.skillAllocations);
+  if (!allocations.some((entry) => entry.weight != null)) return allocations;
+
+  const resolved = allocations.map((entry) => ({ skillId: entry.skillId, count: entry.count ?? 0, weight: entry.weight }));
+  const explicitTotal = resolved.reduce((sum, entry) => sum + entry.count, 0);
+  let remaining = Math.max(0, recipe.totalCount - explicitTotal);
+  const weighted = resolved.filter((entry) => entry.weight != null);
+  const totalWeight = weighted.reduce((sum, entry) => sum + entry.weight, 0);
+  const weightedBudget = remaining;
+
+  weighted.forEach((entry) => {
+    const share = Math.floor((weightedBudget * entry.weight) / totalWeight);
+    entry.count += share;
+    remaining -= share;
+  });
+
+  let cursor = 0;
+  while (remaining > 0 && weighted.length) {
+    weighted[cursor % weighted.length].count += 1;
+    cursor += 1;
+    remaining -= 1;
+  }
+
+  return resolved.map(({ skillId, count }) => ({ skillId, count }));
+}
+
 export function createWorkoutDraft(recipe) {
   return {
     mode: recipe.mode === 'WEAKNESS' ? 'CUSTOM' : recipe.mode,
     totalCount: recipe.totalCount,
-    skillAllocations: cloneAllocations(recipe.skillAllocations),
+    skillAllocations: resolveAllocationCounts(recipe),
     selectionPolicy: recipe.selectionPolicy,
     labelPolicy: recipe.labelPolicy,
     seed: recipe.seed,
