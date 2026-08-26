@@ -9,66 +9,31 @@
   "projection": "Web Mercator",
   "worldCoordinateSize": 2000.0,
   "markerFallbackCodes": [],
+  "regionModel": "six-major-regions",
   "regions": {
-    "caribbean": {
-      "file": "caribbean.svg",
-      "bytes": 14066,
-      "countries": 13,
-      "sha256": "1662143bf72a0569a368ac41fdf0d32b1852dc2a5069ab33c3263659300a2a34"
+    "asia": {
+      "file": "asia.svg",
+      "bytes": 310531,
+      "countries": 49,
+      "sha256": "569cfb9df81b0aee8ed1f0667dc725941719f569a4a7b18c7992d27352576e2b"
     },
-    "central-south-europe": {
-      "file": "central-south-europe.svg",
-      "bytes": 63425,
-      "countries": 20,
-      "sha256": "e11ebc4077395230f43567cc71630bb04da9710ba3bd7d4666d12ba1a1adc21a"
+    "europe": {
+      "file": "europe.svg",
+      "bytes": 281048,
+      "countries": 45,
+      "sha256": "6f11826f0139a26ef5b4faa741bea711d0143be1a7bb285ae3fa89d4421215b9"
     },
-    "east-asia": {
-      "file": "east-asia.svg",
-      "bytes": 67385,
-      "countries": 6,
-      "sha256": "c6b91ae22c038ef70f4245d76f07b03ff0adcb3c7a56008f0aa351604c066e72"
+    "africa": {
+      "file": "africa.svg",
+      "bytes": 171824,
+      "countries": 54,
+      "sha256": "0b09c2357b466e4938cae437baa20d2c67ee96e8d77109cfb47f08014381ffbf"
     },
-    "east-europe": {
-      "file": "east-europe.svg",
-      "bytes": 120752,
-      "countries": 8,
-      "sha256": "1acc6c283cc1b8fd03a318a22ac62001bb76f9c08565bf3ac4b97936c6001af4"
-    },
-    "east-south-africa": {
-      "file": "east-south-africa.svg",
-      "bytes": 70673,
-      "countries": 24,
-      "sha256": "090ab4dce64ca7bb267a4a28642f7858891486b92de0641d0b0656e6f4ebf1d0"
-    },
-    "north-africa": {
-      "file": "north-africa.svg",
-      "bytes": 18827,
-      "countries": 5,
-      "sha256": "90c0ffd67286224007185b7988125e3b0169d0e22b98f236222b395e25ef82dc"
-    },
-    "north-central-america": {
-      "file": "north-central-america.svg",
-      "bytes": 232718,
-      "countries": 10,
-      "sha256": "e4d0404cffaf87581b5f786c5a857dbc7bb50eca10317e802ab2a4cab5d8543a"
-    },
-    "north-west-europe": {
-      "file": "north-west-europe.svg",
-      "bytes": 97345,
-      "countries": 17,
-      "sha256": "54f6374a5cc0ea15e95f952af93880070a40e35712322603821ede85063ed95b"
-    },
-    "oceania-west": {
-      "file": "oceania-west.svg",
-      "bytes": 59255,
-      "countries": 6,
-      "sha256": "159f461ef5d8a6f932c7d7845f48046f295a3c8c3d1d9c75c4b8de025cf2c21b"
-    },
-    "pacific-islands": {
-      "file": "pacific-islands.svg",
-      "bytes": 10123,
-      "countries": 8,
-      "sha256": "9d1cc88451d865cd446469b85ab089392aa00acd0816937d5715ae3de152eaf2"
+    "north-america": {
+      "file": "north-america.svg",
+      "bytes": 246551,
+      "countries": 23,
+      "sha256": "33cfca2a697ab3c380a243bc36aeb7b7496aaf75be818b52327187964256c8a8"
     },
     "south-america": {
       "file": "south-america.svg",
@@ -76,29 +41,11 @@
       "countries": 12,
       "sha256": "41ea40842749522c8f4962caf886b9c95a177eaabe313435b3c884f333b50ca3"
     },
-    "south-asia": {
-      "file": "south-asia.svg",
-      "bytes": 38392,
-      "countries": 7,
-      "sha256": "8b9941c71253d14f65df2fd8d6a7bebd4c27a5541e39e28eb073f42abbbb9cdd"
-    },
-    "southeast-asia": {
-      "file": "southeast-asia.svg",
-      "bytes": 111692,
-      "countries": 11,
-      "sha256": "adb077ad57dc9dd15ae98e1d06a3514baae90812067d2ae6b15dad1840ad623c"
-    },
-    "west-central-africa": {
-      "file": "west-central-africa.svg",
-      "bytes": 82799,
-      "countries": 25,
-      "sha256": "e8bc20815ede60980d04926d51fa29c98a39470676640afee69d69d39a231c97"
-    },
-    "west-central-asia": {
-      "file": "west-central-asia.svg",
-      "bytes": 93759,
-      "countries": 25,
-      "sha256": "56a45e313e8f4e19feb59e8d39b5c29110c69edd3b703c1ecc8b3c9953ee7e16"
+    "oceania": {
+      "file": "oceania.svg",
+      "bytes": 69550,
+      "countries": 14,
+      "sha256": "aff040bf4e45ec6f2b45ed7974decd69dd8a012c2de6e4fdbc49279f8bcbaec4"
     }
   }
 }
