@@ -28,37 +28,40 @@
 
 - 文部科学省の現行解説で、第4学年に `小数×整数` が明示され、第5学年では乗数が小数の場合へ意味を拡張する構成であることを再確認した。
 - `scripts/publish_grade4_decimal_multiplication.py` を追加した。
-- 「小数×1桁整数（1/100の位まで）」を1技能として、seed=5001/5102/5203の3variantで生成する。
+- 「小数×1桁整数（1/100の位まで）」を1技能として、seed=5001/5102/5203の3variantで生成・公開した。
 - 各プリントは20問。被乗数は1/100単位の整数 (`multiplicand_units`) で保持し、乗数は2〜9に限定する。
 - `independent_decimal_multiplication_answer()` は生成時の答えに依存せず、整数単位で積を再計算する。
 - 浮動小数点は計算authorityに使わず、表示時だけ `整数部.小数部2桁` に整形する。
 - 各20問は、小数部分で繰り上がりがある問題10問・ない問題10問に固定する。
 - 問題番号は通常整数表記、解答ページは同じ問題配置を再掲して赤字解答を追加する。
-- `tests/test_grade4_decimal_multiplication_publisher.py` を追加し、決定性、20問内重複、独立解答、乗数範囲、繰り上がり分布、variant差、content hash重複、PDF2ページ、カタログ、冪等性を検証する。
+- `tests/test_grade4_decimal_multiplication_publisher.py` を追加し、決定性、20問内重複、独立解答、乗数範囲、繰り上がり分布、variant差、content hash重複、PDF2ページ、カタログ、冪等性を検証した。
 - `.github/workflows/grade4-core-publish.yml` を拡張し、既存3publisher/3testsと新規publisher/test、共通Factory回帰をlatest main上でまとめて実行するようにした。
+- PR #26 を squash mergeし、実装コミットは `a3b8488876ab21a0fc7b6e6f80eb384618d4fcbf`。
+- GitHub Actions `Grade 4 worksheet factory checkpoint` run `32933820486` は成功。新規3PDFとカタログ更新の公開コミットは `59a9af3261cbef82ad4f3ff6ae18ca7b5830b976`。
 
 ## 現在の公開範囲
 
-main上で公開済みなのは小4算数8技能・24PDF。
+小4算数は9技能・27PDFを公開済み。
 
 - 大きな整数の加減: 4技能 × 3variant = 12PDF
 - 2桁の除数による整数除法: 2技能 × 3variant = 6PDF
 - 1/100の位までの小数加減: 2技能 × 3variant = 6PDF
-
-今回の小数×1桁整数はPRマージ後のGrade 4 checkpoint workflowで3PDF生成・検証・カタログ登録される。成功後は9技能・27PDFになる。
+- 1/100の位までの小数×1桁整数: 1技能 × 3variant = 3PDF
 
 公開先: `materials/worksheets/elementary/grade-04/`。カタログは `worksheets/catalog.json`。
 
 ## 検証
 
-- 直前の公開済みcheckpointでは GitHub Actions `32925117631` が成功済み。
-- 今回の新規checkpointはPRマージ後に `Grade 4 worksheet factory checkpoint` を起動し、以下をlatest main上で実行する設計。
-  - `python scripts/publish_grade4_large_integer_add_sub.py .`
-  - `python scripts/publish_grade4_division.py .`
-  - `python scripts/publish_grade4_decimals.py .`
-  - `python scripts/publish_grade4_decimal_multiplication.py .`
-  - 対応する4本のpublisher test
-  - `python tests/test_worksheet_factory.py`
+GitHub Actions `32933820486` では latest mainを再取得して以下がすべて成功した。
+
+- `python scripts/publish_grade4_large_integer_add_sub.py .`
+- `python scripts/publish_grade4_division.py .`
+- `python scripts/publish_grade4_decimals.py .`
+- `python scripts/publish_grade4_decimal_multiplication.py .`
+- 対応する4本のpublisher test
+- `python tests/test_worksheet_factory.py`
+
+run終了時に新規3PDFとカタログをmainへ公開し、公開コミットは `59a9af3261cbef82ad4f3ff6ae18ca7b5830b976`。
 
 ## 未完了
 
