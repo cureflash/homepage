@@ -44,7 +44,7 @@ public struct HomeView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("POWER TOEIC").font(.largeTitle.black())
+                    Text("POWER TOEIC").font(.largeTitle.weight(.black))
                     Text("弱点を見つけて、問題数で鍛える。")
                         .foregroundStyle(.secondary)
                 }
