@@ -5,117 +5,94 @@
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use the retired root path `social-worksheets/`.
 - Mode: GENERATE BACKLOG
-- Normal scheduled target: 10 newly generated units per run
+- Normal target: 10 newly generated units per run
 - Fact-check policy: manual/later batch; do not alternate automatically
 - Verified learner-facing coverage remains through: Meiji state / industrialization
-- Pending backlog count: 11 units
-- Next generation start: junior-high civics — Elections and political participation
-- Public `subjects/social/worksheets/index.html` remains verified-only; none of the pending units below were registered there.
+- Pending backlog count: 21 units
+- Junior-high history generation queue: complete
+- Junior-high civics generation queue: complete
+- Current high-school course: `歴史総合`
+- Next generation start: B(1) `近代化への問い`
+- Public `subjects/social/worksheets/index.html` remains verified-only; none of the pending units below are registered there.
 
-## Completed GENERATE batch — 10 new units
+## Completed GENERATE batch — 10 units
 
-This run completed the requested ten-unit throughput batch. Every new fact, learner sentence, key-point/timeline claim and image record remains `pending_factcheck`. No content from this batch is learner-facing yet.
+This batch completed the remaining eight junior-high civics units and the first two `歴史総合` units. All new content remains `pending_factcheck` and learner-facing publication was not changed.
 
-### Junior-high history — 4 units
+During reconciliation, the eight civics files and the first `歴史総合` file had already reached latest `main` while `STATUS.json` was still behind. They were treated as completed generated artifacts rather than duplicated. The second `歴史総合` unit and canonical queue/state updates were then added on top of latest `main`.
 
-1. `subjects/social/worksheets/data/taisho-democracy-interwar-japan.js`
-   - Taisho democracy / interwar Japan
-   - core terms include 大正デモクラシー, 米騒動, 原敬, 普通選挙法, 治安維持法, 世界恐慌
-   - generation-stage image candidate: `Picture_of_Takashi_Hara.jpg`
+### Junior-high civics — remaining 8 units
 
-2. `subjects/social/worksheets/data/asia-pacific-war.js`
-   - Asia-Pacific War
-   - core terms include 満州事変, 日中戦争, 国家総動員法, 太平洋戦争, ポツダム宣言, 降伏文書
-   - generation-stage image candidate: `Instrument_of_surrender_Japan.jpg`
+1. `subjects/social/worksheets/data/civics-elections-political-participation.js`
+   - Elections and political participation
+   - election principles, voting, political parties and participation
 
-3. `subjects/social/worksheets/data/postwar-japan.js`
-   - Postwar Japan / occupation and democratic reforms
-   - core terms include GHQ, 女性参政権, 農地改革, 日本国憲法, 国民主権, 基本的人権の尊重, 平和主義, サンフランシスコ平和条約
-   - generation-stage image candidate: `Constitution_of_Japan_original_signatures.jpg`
+2. `subjects/social/worksheets/data/civics-local-government.js`
+   - Local government
+   - local autonomy, assemblies, governors/mayors and resident participation
 
-4. `subjects/social/worksheets/data/contemporary-japan-cumulative-review.js`
-   - Contemporary Japan and cumulative review
-   - core terms include 高度経済成長, 東海道新幹線, 東京オリンピック, 公害, 沖縄返還, 石油危機
-   - intentionally no external image candidate in this first generation pass; the later fact-check may add a better licensed primary/official visual if useful
+3. `subjects/social/worksheets/data/civics-market-economy-firms-labor.js`
+   - Market economy / firms / labor
+   - prices, firms, households and labor-related foundations
 
-### Junior-high civics — 6 units
+4. `subjects/social/worksheets/data/civics-money-finance.js`
+   - Money / finance
+   - money functions, financial intermediation, Bank of Japan and monetary policy
 
-5. `subjects/social/worksheets/data/civics-constitution-constitutionalism.js`
-   - Constitution and constitutionalism
-   - core terms include 公布, 施行, 国民主権, 基本的人権の尊重, 平和主義, 立憲主義, 象徴, 最高法規
-   - generation-stage image candidate: Constitution original-signature photograph
+5. `subjects/social/worksheets/data/civics-public-finance-taxation.js`
+   - Public finance / taxation
+   - revenue/expenditure, taxes, government bonds and public services
 
-6. `subjects/social/worksheets/data/civics-fundamental-human-rights.js`
-   - Fundamental human rights
-   - core terms include 基本的人権, 個人として尊重, 法の下の平等, 自由権, 社会権
+6. `subjects/social/worksheets/data/civics-social-security.js`
+   - Social security
+   - social insurance, public assistance, right to maintain minimum standards of wholesome and cultured living, demographic change
 
-7. `subjects/social/worksheets/data/civics-diet.js`
-   - National Diet
-   - core terms include 最高機関, 立法機関, 衆議院, 参議院, 内閣総理大臣の指名, 衆議院の優越
-   - generation-stage image candidate: `Japanese_national_diet_building.jpg`
+7. `subjects/social/worksheets/data/civics-international-society-un.js`
+   - International society / United Nations
+   - international cooperation, UN organs and Japan's participation
 
-8. `subjects/social/worksheets/data/civics-cabinet.js`
-   - Cabinet
-   - core terms include 行政権, 議院内閣制, 内閣総理大臣, 連帯して責任, 内閣不信任決議
-   - generation-stage image candidate: `Kantei_PM_Japan_Residence.jpg`
+8. `subjects/social/worksheets/data/civics-cumulative-review.js`
+   - Junior-high civics cumulative review
+   - constitution, politics, economy, social security and international society
 
-9. `subjects/social/worksheets/data/civics-courts.js`
-   - Courts
-   - core terms include 司法権, 裁判官の独立, 三審制, 違憲審査権, 最高裁判所
-   - generation-stage image candidate: `Supreme_Court_of_Japan01s4s3872.jpg`
+### High-school `歴史総合` — first 2 units
 
-10. `subjects/social/worksheets/data/civics-separation-of-powers.js`
-    - Separation of powers
-    - core terms include 立法権, 行政権, 司法権, 三権分立, 内閣不信任決議, 違憲審査権
+9. `subjects/social/worksheets/data/history-comprehensive-history-and-us.js`
+   - formal course: `歴史総合`
+   - formal placement: A `歴史の扉` (1) `歴史と私たち`
+   - focuses on connections between everyday/local phenomena and Japanese/world history
 
-## Batch scale
+10. `subjects/social/worksheets/data/history-comprehensive-characteristics-sources.js`
+    - formal course: `歴史総合`
+    - formal placement: A `歴史の扉` (2) `歴史の特質と資料`
+    - focuses on historical sources, comparison of sources and source-based historical narration
 
-Across the ten new units:
+Both high-school units intentionally omit a fixed school-year assignment. `formalCourse: 歴史総合` is stored separately from the practical site grouping.
 
-- 51 structured fact records
-- 55 concise learner sentences
-- 7 generation-stage image candidates
-- all records are `pending_factcheck`
-- no pending dataset was added to the public selector
-- shared cloze behavior was not changed: only explicit `terms` entries can become blanks, so arbitrary nouns remain ineligible
+## `歴史総合` curriculum queue established
 
-## Generation-stage evidence used
+`docs/social-worksheet-factory/20_EXECUTION_PLAN.md` now contains an explicit ordered `歴史総合` production queue grounded in the current MEXT High School Course of Study Commentary for Geography and History.
 
-These sources are only candidate evidence for later independent review. A future FACTCHECK run must reopen them from scratch and must not approve claims merely because they appear here.
+The formal large-section order is preserved:
 
-### Shared curriculum / constitution
+- A `歴史の扉`
+- B `近代化と私たち`
+- C `国際秩序の変化や大衆化と私たち`
+- D `グローバル化と私たち`
 
-- MEXT current junior-high Social Studies commentary: `https://www.mext.go.jp/content/20240919-mxt_kyoiku01-100002608.pdf`
-- House of Representatives, Constitution of Japan: `https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/shiryo/dl-constitution.htm`
-- NDL, Birth of the Constitution of Japan / constitutional text: `https://www.ndl.go.jp/constitution/etc/j01.html`
+The worksheet queue splits several broad MEXT middle sections into smaller `-a/-b` production units only to keep A4 sheets low-density. Every generated dataset must retain the corresponding formal MEXT placement so this split never becomes a false curriculum structure.
 
-### History
+MEXT evidence used to establish the queue:
 
-- NDL, `史料にみる日本の近代` Taisho democracy chapter and universal male suffrage / Peace Preservation Law material
-- National Archives of Japan, `昭和20年`, Potsdam Declaration, Imperial Rescript on the End of the War, postwar reconstruction chronology, land reform material, and `高度成長の時代へ 1951-1972` exhibition list
-- MEXT material on postwar science/technology, pollution and the oil crisis
+- 文部科学省『高等学校学習指導要領（平成30年告示）解説 地理歴史編』
+  - `https://www.mext.go.jp/content/20220802-mxt_kyoiku02-100002620_03.pdf`
+  - describes `歴史総合` as a common compulsory course examining modern/contemporary history related to present-day issues;
+  - specifies the four large sections above and their order;
+  - B(1) is `近代化への問い`, B(2) `結び付く世界と日本の開国`, B(3) `国民国家と明治維新`, B(4) `近代化と現代的な諸課題`.
 
-### Civics institutions
+Generation-stage evidence is not factual approval. A later FACTCHECK batch must reopen these materials independently.
 
-- House of Representatives, `国会の地位` and `国会の権限`
-- Prime Minister's Office, `内閣制度の概要`
-- Courts in Japan, court-system overview and judicial-review explanatory material
-
-## Image/license state
-
-No AI-generated historical images were used. The external files selected during generation were chosen because the current file pages expose plausible reusable status such as public domain, CC BY or CC BY-SA. These are **provisional generation-stage records only**.
-
-The later independent FACTCHECK must reopen each exact file page and verify:
-
-- that the file depicts what the learner caption claims;
-- creator / photographer / originating institution;
-- exact current license or public-domain basis;
-- attribution and share-alike requirements;
-- whether use in Japan is supportable where a file page expresses jurisdiction-specific public-domain caution.
-
-In particular, the Hara Takashi image currently has a Commons warning that its U.S. public-domain status may not automatically settle status outside the United States. Do not publish that image without resolving this point; replace it with a safer source if necessary.
-
-## Accumulated unverified backlog — 11 units
+## Accumulated unverified backlog — 21 units
 
 1. `imperialism-sino-japanese-russo-japanese-wars`
 2. `taisho-democracy-interwar-japan`
@@ -128,35 +105,42 @@ In particular, the Hara Takashi image currently has a Commons warning that its U
 9. `cabinet`
 10. `courts`
 11. `separation-of-powers`
+12. `elections-political-participation`
+13. `local-government`
+14. `market-economy-firms-labor`
+15. `money-finance`
+16. `public-finance-taxation`
+17. `social-security`
+18. `international-society-un`
+19. `civics-cumulative-review`
+20. `history-comprehensive-history-and-us`
+21. `history-comprehensive-characteristics-sources`
 
-Do not automatically fact-check these on the next scheduled run.
+Do not automatically fact-check this backlog on the next run.
 
 ## Publication / validation state
 
-`subjects/social/worksheets/index.html` was re-read after generation and still contains only verified datasets through `meiji-state-industrialization.js`. This confirms that the eleven pending units are not publicly registered.
+`subjects/social/worksheets/index.html` was re-read after reconciliation and still loads only verified datasets through `meiji-state-industrialization.js`. Pending junior-high history, civics and high-school units are therefore not publicly registered.
 
-The files were written through the GitHub contents API. A full local `node --check` over the newly created files was not available through the connector-only execution path in this run. Before publication, the later FACTCHECK batch must perform syntax/runtime validation where the environment permits, in addition to factual and license review.
+No AI-generated historical image was introduced in this batch. The two introductory `歴史総合` units intentionally contain no external image because their focus is historical method/source literacy rather than a particular event; future source-based worksheets may add concrete documents/images where they materially improve learning.
+
+The connector execution path does not provide a local checkout, so a batch-wide local `node --check` was not run here. The later FACTCHECK/publication pass must perform syntax/runtime validation where available before any pending dataset is registered publicly.
 
 ## Exact next starting point
 
-Remain in GENERATE BACKLOG mode.
+Remain in GENERATE BACKLOG mode and continue `歴史総合` from item 3 of the newly recorded queue.
 
-Start at junior-high civics queue item 7:
+Next ten targets, in order:
 
-1. Elections and political participation
-2. Local government
-3. Market economy / firms / labor
-4. Money / finance
-5. Public finance / taxation
-6. Social security
-7. International society / United Nations
-8. Junior-high civics cumulative review
+1. B(1) 近代化への問い
+2. B(2)-a 18世紀のアジアの経済と社会
+3. B(2)-b 産業革命・世界市場・中国の開港・日本の開国
+4. B(3) 国民国家と明治維新
+5. B(4) 近代化と現代的な諸課題
+6. C(1) 国際秩序の変化や大衆化への問い
+7. C(2)-a 第一次世界大戦と国際協調体制
+8. C(2)-b 大衆社会の形成と社会参加の拡大
+9. C(3)-a 世界恐慌・国際協調体制の動揺
+10. C(3)-b 第二次世界大戦と戦後国際秩序
 
-That exhausts the remaining eight junior-high civics generation units. To reach the normal ten-unit target in the same scheduled run, then move to high school as follows:
-
-9. Before writing high-school content, expand `歴史総合` into an ordered unit queue grounded in the current MEXT high-school Geography/History curriculum/commentary, without assigning the formal course to a fixed school year.
-10. Generate the first two `歴史総合` units from that newly recorded queue as units 9 and 10 of the batch.
-
-Do not skip the queue-expansion step. All high-school metadata must retain the formal course name `歴史総合` separately from any convenient site grouping.
-
-Keep all newly generated material pending and out of the public selector. Continue adding to `unverified_backlog` until the user explicitly requests a large independent FACTCHECK batch.
+Every new unit must remain `pending_factcheck`, retain `formalCourse: 歴史総合`, stay out of the public selector, and be appended to the backlog. After that batch, continue with C(4) and then D in the recorded queue unless the user explicitly requests a FACTCHECK batch.
