@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="中学1年で習うbe動詞をABCの3択で答える格付けゲームです。">
-  <title>中学生格付けチェック｜ひかり教材室</title>
-  <link rel="stylesheet" href="styles.css?v=4">
+  <meta name="description" content="中学社会の歴史人物を、ABCの3枚の肖像・人物画から当てる格付けゲームです。">
+  <title>中学生格付けチェック 社会・歴史人物編｜ひかり教材室</title>
+  <link rel="stylesheet" href="../styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=1">
 </head>
 <body>
   <main class="page">
     <div class="topbar">
-      <a class="back-link" href="../../">← ひかり教材室</a>
-      <a class="back-link" href="pronouns/">人称代名詞編へ</a>
+      <a class="back-link" href="../">← be動詞編</a>
+      <a class="back-link" href="../../../subjects/social/worksheets/">社会プリントへ</a>
     </div>
 
     <aside class="rank-board" aria-live="polite" aria-label="現在の格付け">
@@ -23,9 +24,13 @@
     <header class="hero">
       <p class="eyebrow">JUNIOR HIGH SCHOOL RANKING CHECK</p>
       <h1>中学生格付けチェック</h1>
-      <p class="subtitle">中1英語・be動詞編　全7問</p>
-      <p class="subtitle"><a class="back-link" href="social/">社会・歴史人物編へ →</a></p>
+      <p class="subtitle">社会・歴史人物編　全26人物から毎回7問</p>
     </header>
+
+    <p class="mode-note">
+      名前を見て、A・B・Cの人物画像から正しいものを選んでください。
+      普通の誤答は近い時代、<strong>絶対アカン</strong>は大きく時代がずれた人物です。
+    </p>
 
     <section id="game-panel" class="panel" aria-live="polite">
       <p id="question-number" class="question-number">第1問 / 7</p>
@@ -37,7 +42,7 @@
         <span class="legend-c">C＝黄</span>
       </div>
 
-      <div id="choices" class="choices" aria-label="選択肢"></div>
+      <div id="choices" class="choices" aria-label="人物画像の選択肢"></div>
       <div id="answer-breakdown" class="answer-breakdown" aria-label="解答結果" hidden></div>
       <p id="feedback" class="feedback"></p>
       <div class="actions">
@@ -48,14 +53,19 @@
     <section id="result-panel" class="panel result-panel" hidden>
       <p id="result-label" class="result-label">最終結果</p>
       <h2 id="result-rank">一流中学生</h2>
-      <p id="result-copy" class="result-copy">7問の格付けチェックが終了しました。</p>
-      <button id="restart-button" class="primary-button" type="button">もう一度挑戦</button>
+      <p id="result-copy" class="result-copy">社会・歴史人物編の7問が終了しました。</p>
+      <button id="restart-button" class="primary-button" type="button">別の7問に挑戦</button>
     </section>
+
+    <p class="social-source-note">
+      人物画像はWikimedia Commonsのパブリックドメイン／再利用可能画像を中心に使用し、人物名・資料の性質・出典・ライセンスは結果発表後に表示します。
+      古代・中世の人物には後世の肖像や伝承像が含まれます。
+    </p>
   </main>
 
-  <script src="questions.js?v=3"></script>
-  <script src="audio.js?v=4"></script>
-  <script src="app.js?v=4"></script>
+  <script src="questions.js?v=1"></script>
+  <script src="../audio.js?v=4"></script>
+  <script src="app.js?v=1"></script>
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"54c05627bfcb4754ae2cf2c56591f809"}'></script>
 <!-- End Cloudflare Web Analytics -->
