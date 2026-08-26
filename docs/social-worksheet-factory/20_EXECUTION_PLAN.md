@@ -58,12 +58,12 @@ The queue follows the current MEXT large-section order. Broad MEXT sections are 
 28. 応仁の乱と戦国大名
 29. 室町文化・地域文化・文化の融合
 
-### C 近世の日本と世界
+### C 近世の日本と世界 — generated
 
-30. 近世への転換：戦国社会と統一 — generated
-31. ヨーロッパ人来航と世界の結び付き — generated
-32. 歴史資料と近世の展望 — generated
-33. 織豊政権と統一事業 — generated
+30. 近世への転換：戦国社会と統一
+31. ヨーロッパ人来航と世界の結び付き
+32. 歴史資料と近世の展望
+33. 織豊政権と統一事業
 34. 検地・刀狩と社会秩序
 35. 江戸幕府の成立と幕藩体制
 36. 大名統制と朝廷・寺社
@@ -79,14 +79,14 @@ The queue follows the current MEXT large-section order. Broad MEXT sections are 
 
 ### D 近現代の地域・日本と世界
 
-46. 近代への転換：開国と幕末政治
-47. 明治維新と新政府
-48. 近代国家形成と自由民権運動
-49. 大日本帝国憲法と議会政治
-50. 条約改正・日清戦争
-51. 日露戦争と帝国主義
-52. 近代産業・社会・文化
-53. 第一次世界大戦と日本
+46. 近代への転換：開国と幕末政治 — generated
+47. 明治維新と新政府 — generated
+48. 近代国家形成と自由民権運動 — generated
+49. 大日本帝国憲法と議会政治 — generated
+50. 条約改正・日清戦争 — generated
+51. 日露戦争と帝国主義 — generated
+52. 近代産業・社会・文化 — generated
+53. 第一次世界大戦と日本 — generated
 54. 大正デモクラシーと大衆社会
 55. 世界恐慌と政党政治の動揺
 56. 満州事変から日中戦争
@@ -98,7 +98,7 @@ The queue follows the current MEXT large-section order. Broad MEXT sections are 
 62. 冷戦終結とグローバル化
 63. 現代日本の課題を歴史的に探究する
 
-**Next start:** queue item 34, `japanese-history-land-survey-sword-hunt`.
+**Next start:** queue item 54, `japanese-history-taisho-democracy-mass-society`.
 
 ## High-school production order after 日本史探究
 
