@@ -6,8 +6,8 @@
   "formal_course": "政治・経済",
   "active_unit": null,
   "next_role": "factcheck_manual",
-  "last_completed_role": "generate",
-  "verified_through": "meiji-state-industrialization",
+  "last_completed_role": "factcheck",
+  "verified_through": "contemporary-japan-cumulative-review",
   "generation_batch_target": 20,
   "factcheck_policy": "manual_batch",
   "last_generated_batch": [
@@ -20,12 +20,14 @@
     "political-economy-international-cooperation-economic-institutions",
     "political-economy-global-issues-inquiry"
   ],
-  "unverified_backlog": [
+  "last_factchecked_batch": [
     "imperialism-sino-japanese-russo-japanese-wars",
     "taisho-democracy-interwar-japan",
     "asia-pacific-war",
     "postwar-japan",
-    "contemporary-japan-cumulative-review",
+    "contemporary-japan-cumulative-review"
+  ],
+  "unverified_backlog": [
     "constitution-constitutionalism",
     "fundamental-human-rights",
     "diet",
@@ -221,7 +223,7 @@
     "political-economy-international-cooperation-economic-institutions",
     "political-economy-global-issues-inquiry"
   ],
-  "pending_factcheck_count": 199,
+  "pending_factcheck_count": 194,
   "prototype_status": "verified",
-  "updated_at": "2026-08-26T21:12:00+09:00"
+  "updated_at": "2026-08-26T21:29:53+09:00"
 }
