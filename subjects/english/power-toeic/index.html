@@ -10,40 +10,22 @@
 <body>
   <main class="app-shell">
     <header class="topbar">
-      <div>
-        <p class="eyebrow">POWER TOEIC</p>
-        <h1>集中トレーニング</h1>
-      </div>
-      <div class="progress-pill" data-role="progress" aria-label="問題進捗">設定</div>
+      <button type="button" class="brand-button" data-action="home" aria-label="ホームへ戻る"><span class="eyebrow">POWER TOEIC</span><span class="brand-title">集中トレーニング</span></button>
+      <div class="progress-pill" data-role="progress" aria-label="問題進捗">HOME</div>
     </header>
 
-    <section data-view="workout-editor" aria-label="ワークアウト編集"></section>
+    <section data-view="home" aria-label="ホーム"></section>
+    <section data-view="workout-editor" aria-label="ワークアウト編集" hidden></section>
 
     <section class="quiz-view" data-view="quiz" hidden>
-      <div class="character-row">
-        <div class="character-placeholder sergeant" data-role="sergeant-character" aria-live="polite"></div>
-        <div class="speech" data-role="feedback">軍曹「この一問を仕上げろ！」</div>
-      </div>
-
+      <div class="character-row"><div class="character-placeholder sergeant" data-role="sergeant-character" aria-live="polite"></div><div class="speech" data-role="feedback">軍曹「この一問を仕上げろ！」</div></div>
       <section class="question-card" aria-live="polite">
-        <div class="question-meta-row">
-          <p class="question-label" data-role="question-context">Choose the best answer.</p>
-          <button type="button" class="text-button" data-action="report-question">問題を報告</button>
-        </div>
-        <p class="sentence" data-role="sentence"></p>
-        <div class="choices" data-role="choices"></div>
-        <div class="explanation" data-role="explanation" hidden></div>
-        <button type="button" class="primary-button next-button" data-action="next" hidden>次の問題</button>
+        <div class="question-meta-row"><p class="question-label" data-role="question-context">Choose the best answer.</p><button type="button" class="text-button" data-action="report-question">問題を報告</button></div>
+        <p class="sentence" data-role="sentence"></p><div class="choices" data-role="choices"></div><div class="explanation" data-role="explanation" hidden></div><button type="button" class="primary-button next-button" data-action="next" hidden>次の問題</button>
       </section>
-
       <section class="report-panel" data-role="question-report" aria-label="問題報告" hidden></section>
-
-      <div class="trainee-strip">
-        <div class="character-placeholder trainee" data-role="trainee-character" aria-live="polite"></div>
-        <p data-role="trainee-status">synthetic fixtureでUI動作確認中</p>
-      </div>
+      <div class="trainee-strip"><div class="character-placeholder trainee" data-role="trainee-character" aria-live="polite"></div><p data-role="trainee-status">synthetic fixtureでUI動作確認中</p></div>
     </section>
-
     <section data-view="result" hidden></section>
   </main>
   <script type="module" src="./js/main.js"></script>
