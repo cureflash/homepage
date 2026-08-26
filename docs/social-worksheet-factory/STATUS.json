@@ -7,7 +7,7 @@
   "active_unit": null,
   "next_role": "factcheck_manual",
   "last_completed_role": "factcheck",
-  "verified_through": "history-comprehensive-massification-contemporary-issues",
+  "verified_through": "history-comprehensive-contemporary-issues-outlook",
   "generation_batch_target": 20,
   "factcheck_policy": "manual_batch",
   "last_generated_batch": [
@@ -21,20 +21,14 @@
     "political-economy-global-issues-inquiry"
   ],
   "last_factchecked_batch": [
-    "history-comprehensive-massification-questions",
-    "history-comprehensive-wwi-international-cooperation",
-    "history-comprehensive-mass-society-participation",
-    "history-comprehensive-world-depression-cooperation-crisis",
-    "history-comprehensive-wwii-postwar-order",
-    "history-comprehensive-massification-contemporary-issues"
-  ],
-  "unverified_backlog": [
     "history-comprehensive-globalization-questions",
     "history-comprehensive-cold-war-decolonization",
     "history-comprehensive-high-growth-order-change",
     "history-comprehensive-cold-war-end-regional-integration",
     "history-comprehensive-market-information-globalization",
-    "history-comprehensive-contemporary-issues-outlook",
+    "history-comprehensive-contemporary-issues-outlook"
+  ],
+  "unverified_backlog": [
     "japanese-history-paleolithic-environment",
     "japanese-history-jomon-society",
     "japanese-history-yayoi-agriculture",
@@ -197,7 +191,7 @@
     "political-economy-international-cooperation-economic-institutions",
     "political-economy-global-issues-inquiry"
   ],
-  "pending_factcheck_count": 167,
+  "pending_factcheck_count": 161,
   "prototype_status": "verified",
-  "updated_at": "2026-08-26T22:34:00+09:00"
+  "updated_at": "2026-08-26T22:35:00+09:00"
 }
