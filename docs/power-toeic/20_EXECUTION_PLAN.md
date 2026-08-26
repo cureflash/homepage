@@ -60,11 +60,11 @@ Phase 5 verification: presentation policy tests confirm TEST mode hides micro-sk
 
 ## Phase 6 — Web character UX — APP TRACK
 
-- [ ] **6.1 Define stable Drill Sergeant / Trainee asset contract**
-- [ ] **6.2 Implement Sergeant-presents / Trainee-answers quiz composition**
-- [ ] **6.3 Implement deterministic Trainee progression from skinny to muscular**
+- [x] **6.1 Define stable Drill Sergeant / Trainee asset contract**
+- [x] **6.2 Implement Sergeant-presents / Trainee-answers quiz composition**
+- [x] **6.3 Implement deterministic Trainee progression from skinny to muscular**
 
-Character code remains removable presentation and never owns educational logic.
+Phase 6 verification: PRs #77–#79 merged. Character assets are semantic/fallback-safe, character composition is removable presentation only, and deterministic progression uses stage 0–5 without moving educational logic into character code.
 
 ## Phase 7 — production question factory/database — EXTERNAL CONTENT TRACK
 
@@ -76,9 +76,10 @@ Not owned by the app-development scheduler:
 
 The following integration item remains APP TRACK:
 
-- [ ] **7.4 Implement bad-question reporting UI and report storage contract — APP TRACK**
-  - Identify exact question ID/version.
-  - Support ambiguity, unnatural English, wrong answer/explanation and other reasons.
+- [x] **7.4 Implement bad-question reporting UI and report storage contract — APP TRACK**
+  - Identifies exact question ID/version.
+  - Supports ambiguity, unnatural English, wrong answer, wrong explanation and other reasons.
+  - Local reporting failure does not block quiz progress.
 
 ## Phase 8 — Web V1 integration — APP TRACK
 
