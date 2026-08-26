@@ -4,54 +4,57 @@ Updated: 2026-08-27
 
 ## Completed / reconciled this run
 
-- Started from latest `main` and resumed exactly at the unresolved `物理基礎` heat-publication checkpoint.
-- Rechecked stale Actions run `32984118839`: it was still `queued` with zero jobs, while unrelated repository Actions were executing normally.
-- Confirmed the expected first heat PDF was still absent from `main`, so source readiness was not miscounted as publication.
-- Recovered the stuck publication path by moving only this workflow to fresh concurrency group `science-physics-basic-publish-v2`; all latest-main checkout, validation, and final parent guards were preserved.
-- Recovery PR #81 was used for the workflow change. Its push triggered Actions run `32997246034`, which completed successfully.
-- Run `32997246034` checked out then-current `main` (`2cc9dc2e30270c35bb81ea157792efacdfc83702`), ran shared and all Physics Basics topic tests, generated the heat batch, re-ran validation, and safely pushed publication commit `48a0f5a52e467d8879b77bf2682303557cab091c` to `main`.
-- The run log explicitly reports `published 60 Physics Basics worksheets` and `Physics Basics 450-PDF catalog validation: OK`.
-- The validation requires exactly 450 Physics Basics rows, 450 unique content hashes, exactly 40 `specific-heat-quantity` and 20 `heat-capacity` rows, correct course/unit metadata, and every registered PDF to begin with `%PDF`, exceed 1000 bytes, and contain `/Count 2`.
-- Recovery PR #81 was then merged so the fresh concurrency group is retained on `main`; merge commit `28054f5bd5a68d690d50a572a9cd029f5f326048` includes the already-published heat commit and the workflow recovery change without rolling back parallel work.
+- Started from latest `main` and resumed exactly at `物理基礎：波・音` after the published heat checkpoint.
+- Rechecked the current MEXT high-school science commentary. In `物理基礎` it explicitly places `波` under `様々な物理現象とエネルギーの利用` and states that the basic quantities for a straight-travelling wave include wavelength, frequency, and propagation speed. The following subsection is `音と振動`, including air-column resonance, source frequency, string vibration, and sound-wave properties.
+- Implemented the first wave batch as `v = fλ` using only the existing shared `product` relation. No shared generator, validator, renderer, catalog schema, or output format was changed.
+- Added one focused skill, `wave-speed-frequency-wavelength`, with three solve directions: wave speed, frequency, and wavelength. Each direction has 10 deterministic seed variants, for 30 worksheets total, 20 problems per worksheet.
+- Added dedicated tests for exactly 30 variants, deterministic regeneration, independent direct/reverse recomputation, answer units (`m/s`, `Hz`, `m`), shared relation/direction metadata, per-problem validation, and 30/30 normalized-hash uniqueness.
+- Extended the existing Physics Basics publisher and existing `Publish Physics Basics worksheets` workflow rather than creating a parallel pipeline. Existing historical ID prefix and output directory were retained to preserve catalog/PDF continuity.
+- Implementation PR #84 merged as `ea90bfb3c9807c3181ca90eefaee179353cda499`.
+- The merge triggered Actions run `33003615994`. Every workflow step succeeded: latest-main guard, shared and all Physics Basics topic tests, generation, post-generation tests/catalog checks, PDF structural checks, commit, and safe push.
+- The workflow validated exactly 480 Physics Basics catalog rows, 480 unique content hashes, 180 `calculation-basic` rows, 300 `calculation-reverse` rows, and exactly 30 rows for the new wave skill/unit. Every registered Physics Basics PDF had a `%PDF` header, size over 1000 bytes, and `/Count 2` two-page structure.
+- Publication commit is `c93ad13d60af18172a094e0f1b2e7e2c6112ea0c` (`Publish 30 Physics Basics wave worksheets`).
 
-## Published heat checkpoint
+## Published wave checkpoint
 
-The 60 heat worksheets are now authoritative published output:
+The new authoritative output is:
 
-- `Q = mcΔT`: 40 variants, 10 each solving `Q`, `m`, `c`, and `ΔT`;
-- `Q = CΔT`: 20 variants, 10 solving `Q` and 10 solving `C`;
+- `v = fλ`, solve `v`: 10 worksheets;
+- `v = fλ`, solve `f`: 10 worksheets;
+- `v = fλ`, solve `λ`: 10 worksheets;
 - 20 problems per worksheet;
-- SI quantities remain `Q` in J, `m` in kg, `c` in J/(kg·K), `C` in J/K, and `ΔT` in K;
-- existing shared `product` relation only; no shared relation/validator/renderer/catalog-schema change.
+- units remain coherent SI quantities: `v` in m/s, `f` in Hz, `λ` in m;
+- existing shared `product` relation only.
 
-The heat tests cover deterministic regeneration, independent direct/reverse recomputation, all solve directions, answer units, problem counts, and normalized-hash uniqueness. The publication workflow then repeated the full shared/topic suite after generation and validated all 450 Physics Basics catalog/PDF outputs.
+The generated worksheet PDF format, catalog schema, series metadata, and historical Physics Basics output location were not changed.
 
 ## Current authoritative published coverage
 
 - junior-high grade 1 physics: 48 worksheets;
 - junior-high grade 2 physics: 120 worksheets;
 - junior-high grade 3 physics: 120 worksheets;
-- `物理基礎`: **450 worksheets**;
-- total published physics: **738 worksheets**.
+- `物理基礎`: **480 worksheets**;
+- total published physics: **768 worksheets**.
 
 `物理基礎` unit counts are now:
 
 - `運動の表し方`: 90;
 - `様々な力とその働き`: 130;
 - `力学的エネルギー`: 170;
-- `様々な物理現象とエネルギーの利用：熱`: 60.
+- `様々な物理現象とエネルギーの利用：熱`: 60;
+- `様々な物理現象とエネルギーの利用：波`: 30.
 
 ## Exact next starting point
 
-Continue Phase 3 at **`物理基礎：波・音`**.
+Continue Phase 3 at **`物理基礎：音と振動 / basic sound quantities`**.
 
 1. Start from latest `main` and repeat the required science/shared control-document read sequence.
-2. Preserve all parallel repository progress.
-3. Re-check the current MEXT Physics Basics commentary for wave speed, frequency, wavelength, and the basic sound quantities/relationships to be drilled.
-4. Inspect the existing shared formula relations before adding anything new. Prefer reuse when `v = fλ` and any selected sound relation can be represented safely; add a new shared relation only with dedicated regression tests.
-5. Build the next coherent 30–60 worksheet batch in curriculum order, with deterministic seeds, independent answer recomputation, requested units, normalized-hash duplicate rejection, and `formal_course=物理基礎`, `grade=null`.
-6. Extend the existing Physics Basics publisher/workflow rather than creating a parallel pipeline; update exact expected catalog counts and topic/unit counts.
-7. Publish only after shared/topic tests, PDF generation, catalog validation, PDF existence/size/header/two-page checks, and safe current-main push all succeed.
-8. Representative screenshot-based visual PDF QA is still pending; do not silently mark it passed.
+2. Preserve all parallel repository progress and reconcile rather than overwriting a newer `main`.
+3. Stay within the current MEXT `音と振動` scope: air-column resonance and source frequency, string vibration, and sound-wave properties; do not jump to electricity yet.
+4. Inspect existing formula relations and existing junior-high sound content before selecting the next quantitative drill. Prefer reuse; add a shared relation only when unavoidable and cover it with regression tests.
+5. Build the next coherent 30–60 worksheet batch with deterministic seeds, independent answer recomputation, requested units, normalized-hash duplicate rejection, `formal_course=物理基礎`, and `grade=null`.
+6. Extend the current Physics Basics publisher/workflow and update exact catalog/mode/skill/unit counts.
+7. Publish only after shared/topic tests, PDF generation, catalog validation, PDF header/size/two-page checks, and safe latest-main push succeed.
+8. Representative screenshot-based visual QA of generated worksheet PDFs remains pending. The published raw PDF could not be retrieved into the rendering environment in this run, so do not mark visual QA as passed.
 
 Do not jump to electricity or energy use before the waves/sound checkpoint is complete.
