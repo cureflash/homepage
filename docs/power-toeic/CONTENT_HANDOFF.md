@@ -2,10 +2,10 @@
 
 ## Current state
 
-Production content generation now contains **700 persisted generated candidates**.
+Production content generation now contains **800 persisted generated candidates**.
 
-- **7 micro-skills are complete at 100 questions each**.
-- All 700 persisted questions remain `pending_validation`.
+- **8 micro-skills are complete at 100 questions each**.
+- All 800 persisted questions remain `pending_validation`.
 - No QA decision was made by this generation run.
 - `generation_complete` remains **false**. Continue GENERATE only.
 
@@ -22,47 +22,50 @@ Canonical taxonomy remains `subjects/english/power-toeic/js/data/taxonomy/part5-
 5. `p5.pos.adverb_modifies_adjective` — 100
 6. `p5.pos.participle_adjective_ed_ing` — 100
 7. `p5.pos.word_form_subject_position` — 100
+8. `p5.pos.word_form_object_position` — 100
 
-Completed subtotal: **700**.
+Completed subtotal: **800**.
 
-## Newly completed micro-skill
+## Reconciliation performed this run
 
-`p5.pos.word_form_subject_position` — 主語位置の語形
+At run start, `CONTENT_STATUS.json` still reported 700 persisted candidates and 0/100 for `p5.pos.word_form_object_position`, but latest `main` already contained three pending batch files for that skill covering **0001–0075**. Those parallel results were preserved and treated as authoritative content state rather than regenerated.
 
-Persisted ranges:
+Existing persisted ranges detected:
 
-- 0001–0025: `.../word-form-subject-position/pending/batch-20260827-004-part1.json`
-- 0026–0050: `.../word-form-subject-position/pending/batch-20260827-005-part2.json`
-- 0051–0075: `.../word-form-subject-position/pending/batch-20260827-006-part3.json`
-- 0076–0100: `.../word-form-subject-position/pending/batch-20260827-006-part4.json`
+- 0001–0025: `.../word-form-object-position/pending/batch-20260827-007-part1.json`
+- 0026–0050: `.../word-form-object-position/pending/batch-20260827-007-part2.json`
+- 0051–0075: `.../word-form-object-position/pending/batch-20260827-007-part3.json`
 
-The new 0051–0100 checkpoint adds ten business word families: completion, inspection, expansion, reduction, selection, distribution, maintenance, verification, availability, and reliability. Items were written to force a noun-form subject, commonly through controlled `noun + of ...` structures, rather than relying on contexts where an -ing form could become a defensible alternate subject.
+This run then added:
 
-Generation-time structural checks for the new 50:
+- 0076–0100: `.../word-form-object-position/pending/batch-20260827-007-part4.json`
 
-- stable sequential IDs 0051–0100;
+The final 25 use five business noun families: assessment, confirmation, replacement, registration, and inspection. Each item requires a noun in an object/noun-phrase position, with stems written to avoid obvious alternative grammatical completions.
+
+Generation-time structural checks for the new 25 by construction/review:
+
+- stable sequential IDs 0076–0100;
 - exactly one blank per stem;
 - four distinct choices per item;
 - valid proposed-answer indexes;
-- answer positions A/B/C/D = 13/13/12/12 across the new 50;
-- 50 distinct stems;
-- no within-new-item SequenceMatcher similarity at or above 0.94; maximum observed similarity was approximately 0.671;
-- all items remain `pending_validation`; no status was promoted to verified.
+- all items remain `pending_validation`;
+- no QA status was promoted.
 
-The full cross-bank machine near-duplicate scan against all 700 questions is still not claimed as complete because this runtime does not expose a full local repository checkout. Independent VALIDATION must perform duplicate/naturalness/ambiguity review before approval.
+The full cross-bank machine near-duplicate scan against all 800 questions is still **not claimed complete** because this runtime does not expose a full local repository checkout. Independent VALIDATION must later perform duplicate, naturalness, ambiguity, and explanation review before approval.
 
 ## Exact next generation point
 
-Resume at `p5_pos_word_form_object_position_0001` for `p5.pos.word_form_object_position` and generate toward 100 questions before marking the skill complete.
+Resume at `p5_verb_subject_verb_agreement_0001` for `p5.verb.subject_verb_agreement` and generate toward 100 questions before marking the skill complete.
 
 Then continue in canonical taxonomy order:
 
-1. `p5.verb.subject_verb_agreement`
-2. `p5.verb.present_vs_past`
-3. next canonical taxonomy item
+1. `p5.verb.present_vs_past`
+2. `p5.verb.present_perfect_vs_past`
+3. `p5.verb.active_vs_passive`
+4. next canonical taxonomy item
 
 Normal target remains up to four complete 100-question micro-skills per run, but safe persisted checkpoints take priority over padding.
 
 ## Phase transition
 
-Generation remains incomplete: **7 of 44 micro-skills are complete**. Do not enter VALIDATION until every target micro-skill reaches its required count and CONTENT status records `generation_complete: true`.
+Generation remains incomplete: **8 of 44 micro-skills are complete**. Do not enter VALIDATION until every target micro-skill reaches its required count and CONTENT status records `generation_complete: true`.
