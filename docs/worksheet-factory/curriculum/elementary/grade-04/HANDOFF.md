@@ -6,69 +6,62 @@
 
 - 共通Factory指示を再確認し、小1〜小3の `STATUS.json` が `done`、小4が最初の未完了学年であることを確認した。
 - 文部科学省「小学校学習指導要領（平成29年告示）解説 算数編」の第4学年 A「数と計算」を再確認した。
-  - 第4学年では、除数が1位数や2位数で被除数が2位数や3位数の除法を扱う。解説には `98÷23`、`171÷21` の例があるため、小3の1位数除数と重複しない「2桁の除数」に限定して教材化した。
-  - 第4学年では小数の加法・減法を1/100の位まで広げて扱う。解説の `3.7+2.48` のように小数点を揃え、整数と同様の原理で計算する内容に合わせた。
+  - 第4学年では、除数が1位数や2位数で被除数が2位数や3位数の除法を扱う。
+  - 第4学年では小数の加法・減法を1/100の位まで広げて扱う。
+  - 第4学年では小数の乗法及び除法として `小数×整数`、`小数÷整数` を扱い、第5学年で乗数・除数が小数の場合へ拡張する。
   - PLANの `2桁×2桁 / 3桁×2桁` は第3学年の乗法範囲と重複するため、小4の新規技能としては追加しない方針を維持する。
 
 ### 1. 2桁の除数による整数のわり算
 
-- `scripts/publish_grade4_division.py` を追加した。
-- 次の2技能を追加した。
-  - 2桁で割るわり算（割り切れる）
-  - 2桁で割るわり算（あまりあり）
-- 各技能を seed=4401/4502/4603 の3variantで生成し、新規6PDFを公開した。
-- 各プリントは20問。除数11〜99、被除数は999以下とし、小3の1位数除数教材と明確に分離した。
-- `independent_division_answer()` で `divmod()` を用いて商・余りを独立再計算する。
-- 全問で `除数 × 商 + 余り = 被除数`、`0 <= 余り < 除数` を検証する。あまりあり技能では余りを必ず1以上にする。
-- 問題番号は通常整数表記で、解答ページは同じ問題配置を再掲し、赤字で商・余りを追加する。
-- `tests/test_grade4_division_publisher.py` を追加し、決定性、範囲、独立再計算、除法恒等式、余り条件、variant差、content hash重複、PDF2ページ、カタログ、冪等性を検証する。
-- Grade 4 checkpointを拡張し、既存の大整数加減と新規除法をlatest main上でまとめて検証するようにした。
-- PR #15をmainへマージし、GitHub Actions `Grade 4 worksheet factory checkpoint` run `32924990320` が成功した。
-- 同runで新規6PDFとカタログ更新を公開し、公開コミットは `a60bfbb7f3e70ccc5a96add24dd23c7b66ad6a4b`。
+- `scripts/publish_grade4_division.py` を追加済み。
+- 「2桁で割るわり算（割り切れる）」「2桁で割るわり算（あまりあり）」の2技能、各3variant、計6PDFを公開済み。
+- 商・余りの独立再計算、除法恒等式、余り条件、決定的seed、重複検査、同一配置への赤字解答を検証済み。
 
 ### 2. 1/100の位までの小数のたし算・ひき算
 
-- `scripts/publish_grade4_decimals.py` を追加した。
-- 次の2技能を追加した。
-  - 小数のたし算（1/100の位まで）
-  - 小数のひき算（1/100の位まで）
-- 各技能を seed=4701/4802/4903 の3variantで生成し、新規6PDFを公開した。
-- 小数は浮動小数点値を計算のauthorityにせず、内部では「1/100を1とする整数単位」 (`a_units`, `b_units`, `answer_units`) で保持・計算する。表示時だけ小数点以下2桁へ変換する。
-- 各20問は、小数部分での繰り上がり/繰り下がりあり10問、なし10問に固定して偏りを防いだ。
-- `independent_decimal_answer()` で生成時の答えとは独立に整数単位の加減を再計算する。
-- 問題番号は通常整数表記、解答ページは同一配置に赤字解答を追加する。
-- `tests/test_grade4_decimals_publisher.py` を追加し、決定性、20問内重複、独立解答、繰り上がり/繰り下がり分布、variant差、content hash重複、PDF2ページ、カタログ、冪等性を検証する。
-- Grade 4 checkpointをさらに拡張し、大整数加減・2桁除数除法・小数加減・共通Factory回帰をまとめて検証するようにした。
-- PR #16をmainへマージし、GitHub Actions `Grade 4 worksheet factory checkpoint` run `32925117631` が成功した。
-- 同runで新規6PDFとカタログ更新を公開し、公開コミットは `d815cfe72f6325d00b5fc6a7c1c0b2b14aa7fe05`。
+- `scripts/publish_grade4_decimals.py` を追加済み。
+- 「小数のたし算（1/100の位まで）」「小数のひき算（1/100の位まで）」の2技能、各3variant、計6PDFを公開済み。
+- 浮動小数点をauthorityにせず、1/100を1とする整数単位で保持・計算する。
+- 繰り上がり/繰り下がり有無を半数ずつにし、独立解答再計算、決定的seed、重複検査、同一配置への赤字解答を検証済み。
+
+### 3. 1/100の位までの小数×1桁整数
+
+- 文部科学省の現行解説で、第4学年に `小数×整数` が明示され、第5学年では乗数が小数の場合へ意味を拡張する構成であることを再確認した。
+- `scripts/publish_grade4_decimal_multiplication.py` を追加した。
+- 「小数×1桁整数（1/100の位まで）」を1技能として、seed=5001/5102/5203の3variantで生成する。
+- 各プリントは20問。被乗数は1/100単位の整数 (`multiplicand_units`) で保持し、乗数は2〜9に限定する。
+- `independent_decimal_multiplication_answer()` は生成時の答えに依存せず、整数単位で積を再計算する。
+- 浮動小数点は計算authorityに使わず、表示時だけ `整数部.小数部2桁` に整形する。
+- 各20問は、小数部分で繰り上がりがある問題10問・ない問題10問に固定する。
+- 問題番号は通常整数表記、解答ページは同じ問題配置を再掲して赤字解答を追加する。
+- `tests/test_grade4_decimal_multiplication_publisher.py` を追加し、決定性、20問内重複、独立解答、乗数範囲、繰り上がり分布、variant差、content hash重複、PDF2ページ、カタログ、冪等性を検証する。
+- `.github/workflows/grade4-core-publish.yml` を拡張し、既存3publisher/3testsと新規publisher/test、共通Factory回帰をlatest main上でまとめて実行するようにした。
 
 ## 現在の公開範囲
 
-- 小4算数: 8技能。
-- 大きな整数の加減: 4技能 × 3variant = 12PDF。
-- 2桁の除数による整数除法: 2技能 × 3variant = 6PDF。
-- 1/100の位までの小数加減: 2技能 × 3variant = 6PDF。
-- 合計24PDFを公開済み。
-- 公開先: `materials/worksheets/elementary/grade-04/`。
-- `worksheets/catalog.json` 登録済み。
+main上で公開済みなのは小4算数8技能・24PDF。
+
+- 大きな整数の加減: 4技能 × 3variant = 12PDF
+- 2桁の除数による整数除法: 2技能 × 3variant = 6PDF
+- 1/100の位までの小数加減: 2技能 × 3variant = 6PDF
+
+今回の小数×1桁整数はPRマージ後のGrade 4 checkpoint workflowで3PDF生成・検証・カタログ登録される。成功後は9技能・27PDFになる。
+
+公開先: `materials/worksheets/elementary/grade-04/`。カタログは `worksheets/catalog.json`。
 
 ## 検証
 
-最新のGitHub Actions run `32925117631` では、latest mainを再取得してから以下がすべて成功した。
-
-- `python scripts/publish_grade4_large_integer_add_sub.py .` → 公開済み分 `published 0`
-- `python scripts/publish_grade4_division.py .` → 公開済み分 `published 0`
-- `python scripts/publish_grade4_decimals.py .` → 新規6PDF生成
-- `python tests/test_grade4_large_integer_add_sub_publisher.py` → OK
-- `python tests/test_grade4_division_publisher.py` → OK
-- `python tests/test_grade4_decimals_publisher.py` → OK
-- `python tests/test_worksheet_factory.py` → OK
-
-run終了時に新規6PDFをmainへ公開し、現在の公開コミットは `d815cfe72f6325d00b5fc6a7c1c0b2b14aa7fe05`。
+- 直前の公開済みcheckpointでは GitHub Actions `32925117631` が成功済み。
+- 今回の新規checkpointはPRマージ後に `Grade 4 worksheet factory checkpoint` を起動し、以下をlatest main上で実行する設計。
+  - `python scripts/publish_grade4_large_integer_add_sub.py .`
+  - `python scripts/publish_grade4_division.py .`
+  - `python scripts/publish_grade4_decimals.py .`
+  - `python scripts/publish_grade4_decimal_multiplication.py .`
+  - 対応する4本のpublisher test
+  - `python tests/test_worksheet_factory.py`
 
 ## 未完了
 
-- 小数×整数
 - 小数÷整数
 - 同分母分数のたし算・ひき算
 - 帯分数・仮分数の変換
@@ -82,4 +75,4 @@ run終了時に新規6PDFをmainへ公開し、現在の公開コミットは `d
 
 ## 次にやること
 
-文部科学省の第4学年における **小数×整数** の配置・到達範囲を最新の公的資料で再確認する。そのうえで、まず1/100の位までの小数を1桁の整数倍する反復技能を、整数単位による厳密計算、独立解答再計算、桁あふれ/表示規則、決定的seed、問題内・教材間重複検査、同一配置への赤字解答、PDF/カタログ登録、Grade 4 checkpoint回帰テストまで実装する。公的資料から2桁整数倍までを第4学年の安全な基本反復として扱えることが明確なら、同じcheckpoint内で別技能として段階化する。
+文部科学省の第4学年における **小数÷整数** の配置と余りの扱いを最新の公的資料で再確認する。そのうえで、まず1/100の位までの小数を1桁整数で割る反復技能を、整数単位による厳密計算、独立解答再計算、割り切れる問題を基本とした表示規則、決定的seed、問題内・教材間重複検査、同一配置への赤字解答、PDF/カタログ登録、Grade 4 checkpoint回帰テストまで実装する。
