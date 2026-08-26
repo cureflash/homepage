@@ -1,17 +1,7 @@
-import { geoBoundsToViewBox } from "../data/world-regions.js";
+import { geoBoundsToViewBox, projectRobinsonSvg } from "../data/world-regions.js";
 import { loadWorldSvg } from "./world-map-source.js";
 
 const SVG_NS = "http://www.w3.org/2000/svg";
-
-function longitudeToX(longitude, wrapDateline = false) {
-  let longitudeForMap = longitude;
-  if (wrapDateline && longitudeForMap < 0) longitudeForMap += 360;
-  return ((longitudeForMap + 180) / 360) * 2000;
-}
-
-function latitudeToY(latitude) {
-  return ((90 - latitude) / 180) * 857;
-}
 
 function markerRadius(region) {
   const [, , width, height] = geoBoundsToViewBox(region).split(" ").map(Number);
@@ -67,9 +57,10 @@ export class WorldRegionRenderer {
 
         if (country.marker) {
           const [longitude, latitude] = country.marker;
+          const [x, y] = projectRobinsonSvg(longitude, latitude, this.region);
           const marker = document.createElementNS(SVG_NS, "circle");
-          marker.setAttribute("cx", String(longitudeToX(longitude, this.region.wrapDateline)));
-          marker.setAttribute("cy", String(latitudeToY(latitude)));
+          marker.setAttribute("cx", String(x));
+          marker.setAttribute("cy", String(y));
           marker.setAttribute("r", String(markerRadius(this.region)));
           marker.setAttribute("data-code", country.code);
           marker.setAttribute("data-name", country.name);
