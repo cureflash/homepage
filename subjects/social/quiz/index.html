@@ -15,6 +15,15 @@
       <p id="game-description" class="game-description"></p>
     </header>
 
+    <section id="world-controls" class="world-controls" aria-label="世界の国当て設定" hidden>
+      <label>地域
+        <select id="world-region-select"></select>
+      </label>
+      <label>モード
+        <select id="world-mode-select"></select>
+      </label>
+    </section>
+
     <section class="status-bar" aria-label="進行状況">
       <div><span class="status-label">問題</span><strong id="progress">0 / 0</strong></div>
       <div><span class="status-label">正解</span><strong id="score">0</strong></div>
@@ -45,7 +54,7 @@
     </section>
 
     <footer class="game-footer">
-      <p>日本地図素材: PA4KEV/japan-vector-map v1.0（MIT License）</p>
+      <p id="map-credit">日本地図素材: PA4KEV/japan-vector-map v1.0（MIT License）</p>
     </footer>
   </main>
 

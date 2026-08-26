@@ -10,16 +10,20 @@
   --correct-soft: #e7f6ed;
   --wrong: #c23b3b;
   --wrong-soft: #fdecec;
+  --target: #f2c94c;
 }
 
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif; }
-button { font: inherit; }
+button, select { font: inherit; }
 .game-shell { width: min(100%, 1180px); margin: 0 auto; padding: 28px 18px 40px; }
 .game-header { margin-bottom: 20px; }
 .eyebrow { margin: 0 0 6px; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
 h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 .game-description { margin: 8px 0 0; color: var(--muted); }
+.world-controls { display: grid; grid-template-columns: minmax(180px, .75fr) minmax(260px, 1.25fr); gap: 10px; margin-bottom: 14px; padding: 12px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; }
+.world-controls label { display: grid; gap: 5px; color: var(--muted); font-size: .78rem; font-weight: 700; }
+.world-controls select { width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 9px; background: var(--panel); color: var(--text); }
 .status-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px; }
 .status-bar > div, .start-panel, .question-panel, .answer-panel, .result-panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; }
 .status-bar > div { padding: 10px 14px; }
@@ -30,7 +34,7 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 .start-panel p { color: var(--muted); }
 .question-panel { padding: 18px; text-align: center; }
 .question-label { margin: 0 0 6px; color: var(--muted); font-size: .9rem; }
-.question-text { margin: 0; font-size: clamp(1.8rem, 7vw, 3.1rem); font-weight: 800; }
+.question-text { margin: 0; font-size: clamp(1.8rem, 7vw, 3.1rem); font-weight: 800; white-space: pre-line; }
 .feedback { min-height: 1.6em; margin-top: 10px; font-weight: 700; }
 .feedback.correct { color: var(--correct); }
 .feedback.wrong { color: var(--wrong); }
@@ -38,7 +42,7 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 .answer-root { min-height: 400px; }
 .map-loading, .map-error { display: grid; min-height: 400px; place-items: center; color: var(--muted); text-align: center; }
 .svg-region-stage svg { display: block; width: 100%; height: auto; max-height: 790px; margin: auto; }
-.svg-region-stage [data-code] { cursor: pointer; transition: fill 120ms ease, filter 120ms ease; outline: none; }
+.svg-region-stage [data-code] { cursor: pointer; transition: fill 120ms ease, filter 120ms ease, opacity 120ms ease; outline: none; }
 .svg-region-stage [data-code],
 .svg-region-stage [data-code] path,
 .svg-region-stage .map-decorative-land,
@@ -52,8 +56,16 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 .svg-region-stage [data-code].is-correct path { fill: var(--correct) !important; }
 .svg-region-stage [data-code].is-wrong,
 .svg-region-stage [data-code].is-wrong path { fill: var(--wrong) !important; }
+.world-region-stage svg { max-height: 660px; overflow: visible; }
+.world-region-stage .world-country-marker { stroke-width: 2.2 !important; vector-effect: non-scaling-stroke; }
+.world-region-stage .is-target { fill: var(--target) !important; filter: drop-shadow(0 0 8px rgba(242, 201, 76, .9)); }
+.world-choice-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr); gap: 14px; align-items: center; }
+.world-choice-map { min-height: 360px; display: grid; align-items: center; }
+.world-choice-map .world-country { cursor: default; }
+.world-choice-options .choice-grid { grid-template-columns: 1fr; }
 .choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .choice-button { min-height: 58px; padding: 12px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); color: var(--text); cursor: pointer; font-weight: 700; }
+.choice-button-flag { min-height: 70px; font-size: 2.1rem; }
 .choice-button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .choice-button.is-correct { border-color: var(--correct); background: var(--correct-soft); }
 .choice-button.is-wrong { border-color: var(--wrong); background: var(--wrong-soft); }
@@ -62,8 +74,13 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.5rem); }
 .result-score { font-size: 1.3rem; font-weight: 800; }
 .primary-button { min-height: 46px; padding: 10px 20px; border: 0; border-radius: 10px; background: var(--accent); color: white; cursor: pointer; font-weight: 800; }
 .game-footer { margin-top: 18px; color: var(--muted); font-size: .75rem; text-align: center; }
+@media (max-width: 760px) {
+  .world-choice-layout { grid-template-columns: 1fr; }
+  .world-choice-map { min-height: 280px; }
+}
 @media (max-width: 560px) {
   .game-shell { padding: 18px 10px 30px; }
+  .world-controls { grid-template-columns: 1fr; gap: 8px; }
   .status-bar { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .status-bar > div { padding: 8px; text-align: center; }
   .start-panel { padding: 18px 12px; }

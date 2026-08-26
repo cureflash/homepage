@@ -1,4 +1,4 @@
-const SUPPORTED_RENDERERS = new Set(["svg-region", "choice"]);
+const SUPPORTED_RENDERERS = new Set(["svg-region", "choice", "world-region", "world-map-choice"]);
 
 function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
@@ -34,6 +34,15 @@ function validateRenderer(renderer, errors) {
       if (!isNonEmptyString(renderer[field])) {
         addError(errors, `renderer.${field}`, `${field} is required for svg-region`);
       }
+    }
+  }
+
+  if (renderer.type === "world-region" || renderer.type === "world-map-choice") {
+    if (!renderer.region || !isNonEmptyString(renderer.region.id)) {
+      addError(errors, "renderer.region", "region with an id is required for world map renderers");
+    }
+    if (!Array.isArray(renderer.countries) || renderer.countries.length === 0) {
+      addError(errors, "renderer.countries", "countries are required for world map renderers");
     }
   }
 }
@@ -115,7 +124,12 @@ export function validateGameDefinition(game) {
     if (!isNonEmptyString(question.prompt)) addError(errors, `${path}.prompt`, "prompt is required");
     if (!hasAnswer(question.answer)) addError(errors, `${path}.answer`, "answer is required");
 
-    if (game.renderer?.type === "choice") validateChoiceQuestion(question, index, errors);
+    if (game.renderer?.type === "choice" || game.renderer?.type === "world-map-choice") {
+      validateChoiceQuestion(question, index, errors);
+    }
+    if (game.renderer?.type === "world-map-choice" && !hasAnswer(question.highlightKey)) {
+      addError(errors, `${path}.highlightKey`, "highlightKey is required for world-map-choice questions");
+    }
   });
 
   return { valid: errors.length === 0, errors };

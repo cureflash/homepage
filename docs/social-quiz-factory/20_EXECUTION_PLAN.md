@@ -24,26 +24,28 @@ Work strictly from top to bottom. Check off an item only after implementation an
 
 Do not begin with one tiny full-world map. Build regional views so countries are large enough to select reliably.
 
-- [ ] 2.1 Select and document a reusable world boundary dataset with acceptable license.
-- [ ] 2.2 Define stable country IDs and Japanese display names.
-- [ ] 2.3 Create East Asia country map quiz.
-- [ ] 2.4 Create Southeast Asia country map quiz.
-- [ ] 2.5 Create South Asia country map quiz.
-- [ ] 2.6 Create West/Central Asia country map quiz as curriculum-appropriate groupings.
-- [ ] 2.7 Create Europe country map quizzes split into usable regional views if needed.
-- [ ] 2.8 Create Africa country map quizzes split into usable regional views if needed.
-- [ ] 2.9 Create North America country map quiz.
-- [ ] 2.10 Create Central America/Caribbean map quiz where map size allows reliable selection.
-- [ ] 2.11 Create South America country map quiz.
-- [ ] 2.12 Create Oceania country map quiz.
-- [ ] 2.13 Validate country names, IDs, boundaries, and region membership.
+Implementation note: Phase 2 uses `svg-world-maps` 1.0.1 / SimpleMaps world SVG data, stable two-letter country keys, Robinson-projection regional crops, and marker hit targets for tiny island states. The playable family currently exposes 15 regional views and the requested country-name/capital/flag modes without forking `QuizEngine`.
+
+- [x] 2.1 Select and document a reusable world boundary dataset with acceptable license.
+- [x] 2.2 Define stable country IDs and Japanese display names.
+- [x] 2.3 Create East Asia country map quiz.
+- [x] 2.4 Create Southeast Asia country map quiz.
+- [x] 2.5 Create South Asia country map quiz.
+- [x] 2.6 Create West/Central Asia country map quiz as curriculum-appropriate groupings.
+- [x] 2.7 Create Europe country map quizzes split into usable regional views if needed.
+- [x] 2.8 Create Africa country map quizzes split into usable regional views if needed.
+- [x] 2.9 Create North America country map quiz.
+- [x] 2.10 Create Central America/Caribbean map quiz where map size allows reliable selection.
+- [x] 2.11 Create South America country map quiz.
+- [x] 2.12 Create Oceania country map quiz.
+- [x] 2.13 Validate country names, IDs, boundaries, and region membership.
 
 ## Phase 3 — world capitals
 
-- [ ] 3.1 Build authoritative country-capital data with source metadata.
-- [ ] 3.2 Capital -> country map selection, using the same regional views from Phase 2.
-- [ ] 3.3 Country -> capital curated 5-choice.
-- [ ] 3.4 Validate one current intended capital per question; explicitly handle countries with special/multiple capital arrangements rather than guessing.
+- [x] 3.1 Build country-capital data with authoritative source metadata and explicit capital-mode eligibility policy.
+- [x] 3.2 Capital -> country map selection, using the same regional views from Phase 2.
+- [x] 3.3 Country/highlighted-country -> capital 5-choice using the validated same-region world-country exception documented in the architecture rules.
+- [ ] 3.4 Exhaustively validate one current intended capital per capital-mode question against authoritative current sources; explicitly handle countries with special/multiple capital arrangements, transition cases, conflict-related government-seat issues, or diplomatic-status complications rather than guessing.
 
 ## Phase 4 — continents, oceans, and broad regions
 
@@ -123,7 +125,7 @@ A game is complete only when:
 - its curriculum placement has been checked;
 - its authoritative factual source is recorded;
 - every question has exactly one intended correct answer in its presented context;
-- all distractors are curated when ambiguity is possible;
+- all distractors are curated when ambiguity is possible, except for explicitly documented validated one-to-one sampling rules;
 - assets have documented usable rights;
 - automated validation passes;
 - existing games and core scoring still pass regression tests;
