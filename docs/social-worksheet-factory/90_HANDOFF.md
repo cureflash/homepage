@@ -8,82 +8,22 @@
 - Normal target: **20 newly generated units per run**
 - FACTCHECK: manual/later batch only; do not alternate automatically
 - Verified learner-facing coverage remains through `meiji-state-industrialization`
-- Pending backlog count: **171 units**
+- Pending backlog count: **191 units**
 - Junior-high history: generation complete
 - Junior-high civics: generation complete
 - `歴史総合`: generation complete
 - `日本史探究`: 63-unit generation queue complete
 - `世界史探究`: 38-unit generation queue complete
 - `公共`: 18-unit generation queue complete
-- `倫理`: 20-unit detailed MEXT-aligned queue defined; generated through item 14
+- `倫理`: 20-unit generation queue complete
+- `政治・経済`: 22-unit MEXT-aligned practical queue defined; generated through item 14
 - Public selector remains verified-only; the new batch is deliberately not registered.
 
-## Latest completed GENERATE batch — 公共 13–18 + 倫理 1–14
+## Latest completed GENERATE batch — 倫理 15–20 + 政治・経済 1–14
 
 No independent FACTCHECK was performed. Every new fact, learner sentence, key point and source claim remains `pending_factcheck`.
 
-### 公共 13–18
-
-1. `public-public-finance-taxation` — 財政及び租税の役割
-2. `public-social-security` — 少子高齢社会と社会保障
-3. `public-market-economy-function-limits` — 市場経済の機能と限界
-4. `public-finance-money` — 金融の働き
-5. `public-economic-globalization-interdependence` — 経済のグローバル化と相互依存
-6. `public-sustainable-society-inquiry` — 持続可能な社会づくりの課題探究
-
-These six complete the current `公共` queue.
-
-### 倫理 1–14
-
-7. `ethics-mind-individuality-emotion` — 心の在り方と自己形成
-8. `ethics-cognition-development` — 認知と発達
-9. `ethics-happiness-love` — 幸福と愛
-10. `ethics-virtue-good-life` — 徳とよく生きること
-11. `ethics-religion-meaning` — 宗教の意義
-12. `ethics-art-meaning` — 芸術の意義
-13. `ethics-good-justice` — 善と正義
-14. `ethics-duty-responsibility` — 義務と責任
-15. `ethics-truth-knowledge` — 真理と知
-16. `ethics-existence-world` — 存在と世界
-17. `ethics-reading-primary-thought-sources` — 先哲の原典を読む
-18. `ethics-japan-climate-human-view` — 日本の風土と人間観
-19. `ethics-japan-religion-foreign-thought` — 日本の宗教観と外来思想の受容
-20. `ethics-japanese-identity-global-society` — 国際社会に生きる日本人としての自覚
-
-The batch dataset is `subjects/social/worksheets/data/public-13-18-ethics-1-14.js`. It pushes the 20 units to `window.SOCIAL_WORKSHEET_UNITS` only when explicitly loaded. `subjects/social/worksheets/index.html` does not load this file, so none of the new units is learner-facing.
-
-## 倫理 queue authority
-
-The ordered practical queue is recorded in `20_EXECUTION_PLAN.md` and follows the current MEXT structure:
-
-- A `現代に生きる自己の課題と人間としての在り方生き方`
-- B `現代の諸課題と倫理`
-
-The practical split preserves the curriculum's conceptual clusters while keeping each worksheet low-density. Queue numbering is internal factory numbering, not claimed as official MEXT sub-item numbering.
-
-## Validation added
-
-`tests/test_social_public_13_18_ethics_1_14.py` locks:
-
-- exactly 20 new units;
-- 公共 queue numbers 13–18 in order;
-- 倫理 queue numbers 1–14 in order;
-- expected slugs and `formalCourse` separation;
-- at least two explicit cloze terms per unit and term/template consistency;
-- the `pending_factcheck` generation contract;
-- absence of the batch file and all 20 pending slugs from the public selector.
-
-## Backlog / publication state
-
-- Previous pending backlog: 151
-- Newly generated: 20
-- Current pending backlog: 171
-- Verified-through marker remains unchanged.
-- `subjects/social/worksheets/index.html` was deliberately not modified.
-
-## Exact next run
-
-Continue `倫理` from queue item 15:
+### 倫理 15–20
 
 1. `ethics-life-bioethics` — 生命と倫理
 2. `ethics-nature-environment` — 自然・環境と倫理
@@ -92,7 +32,74 @@ Continue `倫理` from queue item 15:
 5. `ethics-culture-religion-coexistence` — 文化・宗教と共生
 6. `ethics-peace` — 平和と倫理
 
-These six complete the current `倫理` queue. In the same run, define the next current MEXT-aligned `政治・経済` queue before generating further units, so the normal target remains 20 when safe. Do not count queue planning as generated units and do not switch to FACTCHECK automatically.
+These six complete the current `倫理` queue.
+
+### 政治・経済 1–14
+
+7. `political-economy-politics-law` — 政治と法の意義・機能
+8. `political-economy-rights-rule-of-law` — 基本的人権と法の支配
+9. `political-economy-rights-obligations-private-law` — 権利と義務・私法
+10. `political-economy-parliamentary-democracy` — 議会制民主主義と政治機構
+11. `political-economy-elections-parties-participation` — 選挙・政党と政治参加
+12. `political-economy-local-autonomy` — 地方自治
+13. `political-economy-market-economic-activity` — 経済活動と市場
+14. `political-economy-economic-actors-circular-flow` — 経済主体と経済循環
+15. `political-economy-gdp-economic-growth` — 国民経済の大きさと経済成長
+16. `political-economy-prices-business-cycle` — 物価と景気変動
+17. `political-economy-fiscal-tax` — 財政と租税
+18. `political-economy-finance-system` — 金融の働きと仕組み
+19. `political-economy-market-failure-environment-consumer` — 市場の機能と限界
+20. `political-economy-domestic-issues-inquiry` — 現代日本の政治・経済課題を探究する
+
+The batch dataset is `subjects/social/worksheets/data/ethics-15-20-political-economy-1-14.js`. It pushes the 20 units to `window.SOCIAL_WORKSHEET_UNITS` only when explicitly loaded. `subjects/social/worksheets/index.html` does not load this file, so none of the new units is learner-facing.
+
+## 政治・経済 queue authority
+
+The practical 22-unit queue is recorded in `20_EXECUTION_PLAN.md`. It follows the current MEXT structure:
+
+- A `現代日本における政治・経済の諸課題`
+  - `(1) 現代日本の政治・経済`
+  - `(2) 現代日本における政治・経済の諸課題の探究`
+- B `グローバル化する国際社会の諸課題`
+  - `(1) 現代の国際政治・経済`
+  - `(2) グローバル化する国際社会の諸課題の探究`
+
+The split is based on the concepts explicitly listed in the MEXT commentary: political/legal functions, rights and rule of law, parliamentary democracy and local autonomy, markets/economic circulation, national economy/economic growth, prices/business cycles, fiscal/tax, finance, then international law/sovereignty, international organizations, security, trade, exchange rates/balance of payments and international economic cooperation. Queue numbering is internal factory numbering, not official MEXT sub-item numbering.
+
+## Validation added
+
+`tests/test_social_ethics_15_20_political_economy_1_14.py` locks:
+
+- exactly 20 new units;
+- 倫理 queue numbers 15–20 in order;
+- 政治・経済 queue numbers 1–14 in order;
+- expected slugs and `formalCourse` separation;
+- at least two explicit cloze terms per unit and term/template consistency;
+- the `pending_factcheck` generation contract;
+- absence of the batch file and all 20 pending slugs from the public selector.
+
+## Backlog / publication state
+
+- Previous pending backlog: 171
+- Newly generated: 20
+- Current pending backlog: 191
+- Verified-through marker remains unchanged.
+- `subjects/social/worksheets/index.html` was deliberately not modified.
+
+## Exact next run
+
+Continue `政治・経済` from queue item 15:
+
+1. `political-economy-international-society-law` — 国際社会の変遷と国際法
+2. `political-economy-human-rights-sovereignty-territory` — 人権・国家主権・領土
+3. `political-economy-un-international-organizations` — 国際連合と国際機構
+4. `political-economy-security-defense-contribution` — 安全保障・防衛と国際貢献
+5. `political-economy-trade` — 貿易の現状と意義
+6. `political-economy-exchange-balance-payments` — 為替相場と国際収支
+7. `political-economy-international-cooperation-economic-institutions` — 国際協調と国際経済機関
+8. `political-economy-global-issues-inquiry` — グローバル化する国際社会の課題探究
+
+These eight complete the current `政治・経済` queue. If no further canonical social-studies course queue is defined after that, do not invent unrelated work merely to reach 20; first check the MASTER INSTRUCTIONS / production order and current MEXT course coverage, then record completion or define the next authorized queue only if it belongs to the project scope.
 
 ## Generation discipline
 
