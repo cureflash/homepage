@@ -3,8 +3,8 @@
   "status": "in_progress",
   "track": "app_ui_program",
   "phase": 9,
-  "active_task": "9.1",
-  "next_role": "freeze_platform_neutral_models",
+  "active_task": "9.2",
+  "next_role": "create_cross_platform_conformance_fixtures",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
   "web_beta": {
@@ -13,6 +13,12 @@
     "sitemap": true,
     "completed_task": "8.4",
     "content_status_copy": "question data is still being validated and expanded"
+  },
+  "cross_platform_contracts": {
+    "document": "docs/power-toeic/60_PLATFORM_NEUTRAL_CONTRACTS.md",
+    "validator": "subjects/english/power-toeic/js/data/platform-contracts.js",
+    "completed_task": "9.1",
+    "models": ["Skill", "Question", "WorkoutRecipe", "Attempt", "MasterySnapshot", "ReviewEntry", "ProgressionState", "QuestionReport", "SemanticAssetId"]
   },
   "ios_implementation": { "language": "Swift", "ui_framework": "SwiftUI", "start_after": "Web V1 and cross-platform conformance fixtures are frozen", "phase": 10 },
   "content_database_track": "external_scheduler",
@@ -31,6 +37,6 @@
   "navigation": { "module": "subjects/english/power-toeic/js/ui/home.js", "default_view": "home", "completed_task": "8.1", "routes": ["QUICK", "WEAKNESS", "TRAINING", "POWER", "REVIEW", "TEST", "CUSTOM"] },
   "question_reports": { "storage_key": "power-toeic.question-reports.v1", "completed_task": "7.4" },
   "regression": { "workflow": ".github/workflows/power-toeic-tests.yml", "node": 22, "e2e_task": "8.2", "large_bank_task": "8.3", "synthetic_bank_questions": 20000 },
-  "last_completed_task": "8.4",
-  "updated_at": "2026-08-27T04:40:00+09:00"
+  "last_completed_task": "9.1",
+  "updated_at": "2026-08-27T04:50:00+09:00"
 }

@@ -73,7 +73,9 @@ Phase 4 verification: 4 workout-builder + 4 editor-model + 4 session-planner foc
   - Added the beta URL to `sitemap.xml`.
 
 ## Phase 9 — freeze cross-platform behavior — APP TRACK
-- [ ] **9.1 Freeze platform-neutral models**
+- [x] **9.1 Freeze platform-neutral models**
+  - Documented JSON-compatible Skill, Question, WorkoutRecipe, Attempt, MasterySnapshot, ReviewEntry, ProgressionState, QuestionReport and semantic Asset ID contracts.
+  - Added runtime shape validators and positive/negative contract tests without importing production question-authoring concerns.
 - [ ] **9.2 Create deterministic cross-platform conformance fixtures**
 - [ ] **9.3 Document Web V1 behavior as Swift port reference**
 
