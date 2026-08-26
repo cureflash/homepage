@@ -12,6 +12,7 @@
     <div class="container header-inner">
       <a class="logo" href="index.html">ひかり教材室</a>
       <nav class="nav" aria-label="メインナビゲーション">
+        <a href="worksheets/">プリント配布</a>
         <a href="subjects/math/">算数・数学</a>
         <a href="subjects/japanese/">国語</a>
         <a href="subjects/science/">理科</a>
@@ -27,6 +28,7 @@
         <p class="eyebrow">FREE STUDY MATERIALS</p>
         <h1>教科と学年から、すぐ教材へ</h1>
         <p class="hero-text">無料の学習プリント・解説教材・学習ツールを、教科ごとに整理しています。</p>
+        <p><a class="button-link" href="worksheets/">公開中のプリントをまとめて見る</a></p>
       </div>
     </section>
 
@@ -39,7 +41,7 @@
         <a class="subject-card subject-math" href="subjects/math/">
           <span class="subject-kicker">算数・数学</span>
           <strong>計算・文章題・図形</strong>
-          <span>小学校から高校まで、学年別に整理</span>
+          <span>公開済みの小1〜小4プリントなどを学年別に整理</span>
         </a>
         <a class="subject-card subject-japanese" href="subjects/japanese/">
           <span class="subject-kicker">国語</span>
@@ -49,13 +51,24 @@
         <a class="subject-card subject-science" href="subjects/science/">
           <span class="subject-kicker">理科</span>
           <strong>物理・化学・生物・地学</strong>
-          <span>基礎から反復まで単元別に整理</span>
+          <span>中1〜中3・物理基礎の公開済みプリントを掲載</span>
         </a>
         <a class="subject-card subject-social" href="subjects/social/">
           <span class="subject-kicker">社会</span>
           <strong>地理・歴史・公民</strong>
-          <span>学年・分野ごとの教材から探す</span>
+          <span>検証済みの解説・穴埋め教材と学習ゲーム</span>
         </a>
+      </div>
+    </section>
+
+    <section class="container section" aria-labelledby="print-heading">
+      <div class="section-heading">
+        <h2 id="print-heading">プリント配布</h2>
+        <p>スケジューラーで生成し、公開工程まで完了したPDFだけを一覧にしています。</p>
+      </div>
+      <div class="content-grid">
+        <article class="content-card"><h2>算数・数学・理科</h2><p>学年・科目・単元で絞り込み、PDFを直接ダウンロードできます。</p><a class="card-link" href="worksheets/">公開プリント一覧を開く</a></article>
+        <article class="content-card"><h2>中学社会</h2><p>ファクトチェック済みの単元だけを解説・穴埋め・解答モードで利用できます。</p><a class="card-link" href="subjects/social/worksheets/">社会プリントを開く</a></article>
       </div>
     </section>
 
@@ -65,65 +78,21 @@
         <p>教科をまたいだ学習ゲームは、ここにまとめています。</p>
       </div>
       <div class="subject-grid">
-        <a class="subject-card subject-social" href="subjects/social/quiz/">
-          <span class="subject-kicker">社会・地理</span>
-          <strong>都道府県当て</strong>
-          <span>日本地図を使って47都道府県を反復練習</span>
-        </a>
-        <a class="subject-card subject-social" href="subjects/social/quiz/?game=japan-prefectural-capitals">
-          <span class="subject-kicker">社会・地理</span>
-          <strong>県庁所在地当て</strong>
-          <span>県庁所在地から対応する都道府県を日本地図で選ぶ</span>
-        </a>
-        <a class="subject-card subject-social" href="subjects/social/quiz/?game=japan-prefecture-capital-choice">
-          <span class="subject-kicker">社会・地理</span>
-          <strong>県庁所在地5択</strong>
-          <span>都道府県名から正しい県庁所在地を5択で選ぶ</span>
-        </a>
-        <a class="subject-card subject-social" href="games/old-maid/index.html?v=5">
-          <span class="subject-kicker">社会・地理</span>
-          <strong>都道府県ババ抜き</strong>
-          <span>通常9枚／ハード全ペアで県庁所在地をそろえる</span>
-        </a>
-        <a class="subject-card subject-social" href="games/world-capitals/index.html?v=2">
-          <span class="subject-kicker">社会・世界地理</span>
-          <strong>世界の首都ババ抜き</strong>
-          <span>地域別9種類＋G7から選んで国と首都をそろえる</span>
-        </a>
-        <a class="subject-card subject-japanese" href="games/junior-high-ranking/">
-          <span class="subject-kicker">中1英語・be動詞</span>
-          <strong>中学生格付けチェック</strong>
-          <span>100問プールからABCの3択で7問に挑戦</span>
-        </a>
-        <a class="subject-card subject-japanese" href="games/junior-high-ranking/pronouns/">
-          <span class="subject-kicker">中1英語・人称代名詞</span>
-          <strong>中学生格付けチェック</strong>
-          <span>主格・所有格・目的格・所有代名詞を100問プールから出題</span>
-        </a>
+        <a class="subject-card subject-social" href="subjects/social/quiz/"><span class="subject-kicker">社会・地理</span><strong>都道府県当て</strong><span>日本地図を使って47都道府県を反復練習</span></a>
+        <a class="subject-card subject-social" href="subjects/social/quiz/?game=japan-prefectural-capitals"><span class="subject-kicker">社会・地理</span><strong>県庁所在地当て</strong><span>県庁所在地から対応する都道府県を日本地図で選ぶ</span></a>
+        <a class="subject-card subject-social" href="subjects/social/quiz/?game=japan-prefecture-capital-choice"><span class="subject-kicker">社会・地理</span><strong>県庁所在地5択</strong><span>都道府県名から正しい県庁所在地を5択で選ぶ</span></a>
+        <a class="subject-card subject-social" href="games/old-maid/index.html?v=5"><span class="subject-kicker">社会・地理</span><strong>都道府県ババ抜き</strong><span>通常9枚／ハード全ペアで県庁所在地をそろえる</span></a>
+        <a class="subject-card subject-social" href="games/world-capitals/index.html?v=2"><span class="subject-kicker">社会・世界地理</span><strong>世界の首都ババ抜き</strong><span>地域別9種類＋G7から選んで国と首都をそろえる</span></a>
+        <a class="subject-card subject-japanese" href="games/junior-high-ranking/"><span class="subject-kicker">中1英語・be動詞</span><strong>中学生格付けチェック</strong><span>100問プールからABCの3択で7問に挑戦</span></a>
+        <a class="subject-card subject-japanese" href="games/junior-high-ranking/pronouns/"><span class="subject-kicker">中1英語・人称代名詞</span><strong>中学生格付けチェック</strong><span>主格・所有格・目的格・所有代名詞を100問プールから出題</span></a>
       </div>
     </section>
 
-    <section class="container ad-section" aria-label="広告">
-      <div class="ad-slot">
-        <span>広告枠</span>
-        <small>AdSense承認後、この場所に広告コードを設置</small>
-      </div>
-    </section>
-
-    <section class="container info-section">
-      <h2>教材の探し方</h2>
-      <p>プリントや解説は「教科 → 学年 → 単元」の順に探し、学習ゲームはトップページの「学習ゲーム」から選べます。</p>
-    </section>
+    <section class="container ad-section" aria-label="広告"><div class="ad-slot"><span>広告枠</span><small>AdSense承認後、この場所に広告コードを設置</small></div></section>
+    <section class="container info-section"><h2>教材の探し方</h2><p>プリントはトップの「プリント配布」または「教科 → 学年」から探せます。学習ゲームは「学習ゲーム」から選べます。</p></section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© ひかり教材室</span>
-      <a href="privacy.html">プライバシーポリシー</a>
-    </div>
-  </footer>
-  <!-- Cloudflare Web Analytics -->
+  <footer class="site-footer"><div class="container footer-inner"><span>© ひかり教材室</span><a href="privacy.html">プライバシーポリシー</a></div></footer>
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"54c05627bfcb4754ae2cf2c56591f809"}'></script>
-  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
