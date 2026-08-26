@@ -5,6 +5,7 @@ import tempfile
 from pathlib import Path
 
 try:
+    from scripts.science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
     from scripts.science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
     from scripts.science_physics_basic_motion import (
         PHYSICS_BASIC_MOTION_PROBLEM_COUNT,
@@ -13,6 +14,7 @@ try:
     from scripts.science_worksheet_helpers import generate_formula_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
+    from science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
     from science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
     from science_physics_basic_motion import (
         PHYSICS_BASIC_MOTION_PROBLEM_COUNT,
@@ -24,7 +26,11 @@ except ModuleNotFoundError:
 
 FORMAL_COURSE = "物理基礎"
 ID_PREFIX = "science-physics-basic-motion-"
-ALL_TOPICS = {**PHYSICS_BASIC_MOTION_TOPICS, **PHYSICS_BASIC_FORCE_TOPICS}
+ALL_TOPICS = {
+    **PHYSICS_BASIC_MOTION_TOPICS,
+    **PHYSICS_BASIC_FORCE_TOPICS,
+    **PHYSICS_BASIC_ENERGY_TOPICS,
+}
 
 
 def build_batch(repo_root):
@@ -122,7 +128,7 @@ def publish(repo_root):
         json.dumps(prospective_catalog, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"published {len(pending)} Physics Basics motion/force worksheets")
+    print(f"published {len(pending)} Physics Basics mechanics worksheets")
     return len(pending)
 
 
