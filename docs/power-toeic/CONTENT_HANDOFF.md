@@ -16,10 +16,10 @@
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
 - Completed generated micro-skills: **19 / 44**
-- Current micro-skill: `p5.conn.because_vs_because_of` **25/100 persisted**
-- Generated questions: **1,925**
-- QA checked: **925**
-- Verified: **892**
+- Current micro-skill: `p5.conn.because_vs_because_of` **50/100 persisted**
+- Generated questions: **1,950**
+- QA checked: **950**
+- Verified: **917**
 - Needs revision: **33**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
@@ -28,43 +28,39 @@
 
 ## This checkpoint — generation
 
-Generated `p5.conn.because_vs_because_of` IDs **0001-0025** under:
+Generated `p5.conn.because_vs_because_of` IDs **0026-0050** under:
 
-`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/because-vs-because-of/pending/batch-20260827-021-part1.json`
+`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/because-vs-because-of/pending/batch-20260827-021-part2.json`
 
-The checkpoint mixes noun-phrase complements requiring `because of` with full clauses requiring `because`, across business contexts including launches, logistics, facilities, invoicing, staffing, IT, customer orders, travel, and finance.
+The checkpoint continues to contrast noun-phrase complements requiring `because of` with full clauses requiring `because`, using varied business contexts across installation, retail, seminars, billing, travel, logistics, refunds, staffing, inspection, software, manufacturing, finance, construction and support operations.
 
 Checks on the new 25:
-- IDs 0001-0025 unique and sequential
+- IDs 0026-0050 unique and sequential
 - one cloze per item
 - four distinct choices per item
 - valid proposed answer index
 - answer positions A/B/C/D = **7/6/6/6**
 - exact duplicate stems: **0**
 - SequenceMatcher >= 0.94: **0 pairs**
-- maximum within-checkpoint similarity: about **0.563**
+- maximum within-checkpoint similarity: about **0.571**
 - all 25 remain `pending_validation`
 
-Full semantic cross-bank near-duplicate scanning across all 1,925 candidates is still **not completed**.
+Full semantic cross-bank near-duplicate scanning across all 1,950 candidates is still **not completed**.
 
 ## This checkpoint — QA
 
-Independently reviewed the oldest unchecked `p5.verb.present_vs_past` IDs **0001-0025**, solving each from stem + choices before consulting the stored proposed answer/explanation.
+Independently reviewed the oldest unchecked `p5.verb.present_vs_past` IDs **0026-0050**, solving each from stem + choices before consulting the stored proposed answer/explanation.
 
 Result:
 - Checked: **25**
-- Verified: **23**
-- Needs revision: **2**
+- Verified: **25**
+- Needs revision: **0**
 - Rejected: **0**
 
-Withheld items:
-- `p5_verb_present_vs_past_0017`: `throughout the workday` does not uniquely establish a habitual/current frame; both `tracks` and `tracked` can be natural with different unstated time frames.
-- `p5_verb_present_vs_past_0022`: `for the required retention period` describes duration/obligation but does not uniquely establish present versus past; both `retains` and `retained` can be natural.
-
-These two were not bulk-verified. Both need an explicit recurring/policy time anchor and then independent revalidation.
+All 25 contain explicit habitual or recurring cues such as `every`, `each`, `whenever`, `weekly`, `monthly`, `twice a day`, or `as a standing rule`, so the simple present is uniquely supported over the simple past. Stored keys and explanations matched the independent solutions.
 
 QA record:
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-021-part1-present-vs-past.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-021-part2-present-vs-past.qa.json`
 
 ## Next generation
 
@@ -72,7 +68,7 @@ QA record:
 
 Start ID:
 
-`p5_conn_because_vs_because_of_0026`
+`p5_conn_because_vs_because_of_0051`
 
 ## Next QA
 
@@ -80,4 +76,4 @@ Start ID:
 
 Start ID:
 
-`p5_verb_present_vs_past_0026`
+`p5_verb_present_vs_past_0051`
