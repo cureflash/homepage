@@ -59,5 +59,53 @@ class ScienceFormulaRelationTests(unittest.TestCase):
             generate_formula_drill(bad, 9905, 1, solve_for="y")
 
 
+    def test_square_over_double_direct_and_reverse(self):
+        spec = {
+            "id": "test-square-over-double", "relation": "square-over-double",
+            "result": "h", "inputs": ["v", "g"],
+            "variables": {
+                "h": {"label": "h", "unit": "m"},
+                "v": {"label": "v", "unit": "m/s", "values": [9.8, 19.6, 29.4]},
+                "g": {"label": "g", "unit": "m/s²", "values": [9.8]},
+            }, "tolerance": 1e-9,
+        }
+        for solve_for in ("h", "v", "g"):
+            for problem in generate_formula_drill(spec, 9910, 20, solve_for=solve_for):
+                known = problem["known"]
+                if solve_for == "h": expected = known["v"] ** 2 / (2 * known["g"])
+                elif solve_for == "v": expected = (2 * known["h"] * known["g"]) ** 0.5
+                else: expected = known["v"] ** 2 / (2 * known["h"])
+                self.assertAlmostEqual(problem["answer"], expected)
+                self.assertTrue(validate_science_problem(problem))
+
+    def test_double_quotient_direct_and_reverse(self):
+        spec = {
+            "id": "test-double-quotient", "relation": "double-quotient",
+            "result": "t", "inputs": ["v", "g"],
+            "variables": {
+                "t": {"label": "t", "unit": "s"},
+                "v": {"label": "v", "unit": "m/s", "values": [9.8, 19.6, 29.4]},
+                "g": {"label": "g", "unit": "m/s²", "values": [9.8]},
+            }, "tolerance": 1e-9,
+        }
+        for solve_for in ("t", "v", "g"):
+            for problem in generate_formula_drill(spec, 9911, 20, solve_for=solve_for):
+                known = problem["known"]
+                if solve_for == "t": expected = 2 * known["v"] / known["g"]
+                elif solve_for == "v": expected = known["t"] * known["g"] / 2
+                else: expected = 2 * known["v"] / known["t"]
+                self.assertAlmostEqual(problem["answer"], expected)
+                self.assertTrue(validate_science_problem(problem))
+
+    def test_new_relation_wrong_arity_is_rejected(self):
+        for relation in ("square-over-double", "double-quotient"):
+            spec = {
+                "id": "bad", "relation": relation, "result": "r", "inputs": ["x"],
+                "variables": {"r": {"label": "r"}, "x": {"label": "x", "values": [1]}},
+            }
+            with self.assertRaisesRegex(ValueError, "two unique inputs"):
+                generate_formula_drill(spec, 9912, 1, solve_for="r")
+
+
 if __name__ == "__main__":
     unittest.main()

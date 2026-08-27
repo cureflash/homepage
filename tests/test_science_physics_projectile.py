@@ -22,9 +22,9 @@ class PhysicsProjectileTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_eight_checkpoints_total_two_hundred_forty_variants(self):
+    def test_eleven_checkpoints_total_three_hundred_thirty_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 240)
+        self.assertEqual(len(batches), 330)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
         counts = {key: 0 for key in PHYSICS_PROJECTILE_TOPICS}
         for topic_key, *_ in batches:
@@ -71,6 +71,14 @@ class PhysicsProjectileTests(unittest.TestCase):
                         expected = (known["vertical_displacement"] - 0.5 * known["vertical_acceleration"] * known["time"] ** 2) / known["time"]
                 elif topic_key == "oblique-projectile-time-to-highest-point":
                     expected = known["initial_vertical_velocity"] / known["gravity"] if solve_for == "time_to_highest_point" else known["gravity"] * known["time_to_highest_point"]
+                elif topic_key == "oblique-projectile-maximum-height":
+                    expected = known["initial_vertical_velocity"] ** 2 / (2 * known["gravity"]) if solve_for == "maximum_height" else (2 * known["maximum_height"] * known["gravity"]) ** 0.5
+                elif topic_key == "oblique-projectile-same-height-flight-time":
+                    expected = 2 * known["initial_vertical_velocity"] / known["gravity"] if solve_for == "total_flight_time" else known["total_flight_time"] * known["gravity"] / 2
+                elif topic_key == "oblique-projectile-same-height-horizontal-range":
+                    if solve_for == "horizontal_range": expected = known["initial_horizontal_velocity"] * known["total_flight_time"]
+                    elif solve_for == "initial_horizontal_velocity": expected = known["horizontal_range"] / known["total_flight_time"]
+                    else: expected = known["horizontal_range"] / known["initial_horizontal_velocity"]
                 else:
                     self.fail(topic_key)
                 self.assertAlmostEqual(problem["answer"], expected, msg=(topic_key, mode_key, variant))
@@ -78,8 +86,8 @@ class PhysicsProjectileTests(unittest.TestCase):
 
     def test_normalized_hashes_unique_and_disjoint_from_existing_series(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 240)
-        self.assertEqual(len(set(hashes)), 240)
+        self.assertEqual(len(hashes), 330)
+        self.assertEqual(len(set(hashes)), 330)
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
         current_ids = {f"science-physics-motion-{topic_key}-{mode_key}-{variant:02d}" for topic_key, topic in PHYSICS_PROJECTILE_TOPICS.items() for mode_key in topic["modes"] for variant, _ in enumerate(topic["seeds"], start=1)}
         prior_hashes = {row["content_hash"] for row in catalog if row.get("id") not in current_ids}
@@ -98,6 +106,16 @@ class PhysicsProjectileTests(unittest.TestCase):
         peak_time = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-time-to-highest-point"]
         self.assertEqual(peak_time["spec"]["relation"], "product")
         self.assertEqual(peak_time["spec"]["variables"]["gravity"]["values"], [9.8])
+        maximum_height = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-maximum-height"]
+        self.assertEqual(maximum_height["spec"]["relation"], "square-over-double")
+        self.assertEqual(maximum_height["spec"]["variables"]["gravity"]["values"], [9.8])
+        flight_time = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-same-height-flight-time"]
+        self.assertEqual(flight_time["spec"]["relation"], "double-quotient")
+        self.assertEqual(flight_time["spec"]["variables"]["gravity"]["values"], [9.8])
+        self.assertTrue(all("同じ高さ" in mode["description"] for mode in flight_time["modes"].values()))
+        range_topic = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-same-height-horizontal-range"]
+        self.assertEqual(range_topic["spec"]["relation"], "product")
+        self.assertTrue(all("同じ高さ" in mode["description"] for mode in range_topic["modes"].values()))
         for topic in PHYSICS_PROJECTILE_TOPICS.values():
             self.assertEqual(topic["unit"], "様々な運動：平面運動と放物運動")
             self.assertNotIn("grade", topic)

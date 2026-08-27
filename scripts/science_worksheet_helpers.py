@@ -18,6 +18,8 @@ FORMULA_RELATIONS = {
     'offset-product',
     'half-product-last-square',
     'linear-plus-half-quadratic',
+    'square-over-double',
+    'double-quotient',
 }
 
 
@@ -60,6 +62,20 @@ def _relation_result(relation, inputs):
             raise ValueError('linear-plus-half-quadratic needs exactly linear rate, acceleration, and time')
         linear_rate, acceleration, time = inputs
         return linear_rate * time + 0.5 * acceleration * time ** 2
+    if relation == 'square-over-double':
+        if len(inputs) != 2:
+            raise ValueError('square-over-double needs exactly numerator and divisor')
+        numerator, divisor = inputs
+        if numerator < 0 or divisor <= 0:
+            raise ValueError('square-over-double requires nonnegative numerator and positive divisor')
+        return numerator ** 2 / (2 * divisor)
+    if relation == 'double-quotient':
+        if len(inputs) != 2:
+            raise ValueError('double-quotient needs exactly numerator and divisor')
+        numerator, divisor = inputs
+        if divisor == 0:
+            raise ValueError('double-quotient divisor must not be zero')
+        return 2 * numerator / divisor
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -123,6 +139,29 @@ def _generation_formula_answer(relation, result_name, input_names, values, solve
         if solve_for == acceleration_name:
             return 2 * (values[result_name] - values[linear_name] * time) / time ** 2
         raise ValueError(f'unsupported solve_for for linear-plus-half-quadratic: {solve_for}')
+    if relation == 'square-over-double':
+        if len(input_names) != 2:
+            raise ValueError('square-over-double needs exactly two inputs')
+        numerator_name, divisor_name = input_names
+        if solve_for == numerator_name:
+            radicand = 2 * values[result_name] * values[divisor_name]
+            if radicand < 0:
+                raise ValueError('cannot solve square-over-double with negative radicand')
+            return sqrt(radicand)
+        if solve_for == divisor_name:
+            if values[result_name] == 0:
+                raise ValueError('cannot solve square-over-double divisor with zero result')
+            return values[numerator_name] ** 2 / (2 * values[result_name])
+    if relation == 'double-quotient':
+        if len(input_names) != 2:
+            raise ValueError('double-quotient needs exactly two inputs')
+        numerator_name, divisor_name = input_names
+        if solve_for == numerator_name:
+            return values[result_name] * values[divisor_name] / 2
+        if solve_for == divisor_name:
+            if values[result_name] == 0:
+                raise ValueError('cannot solve double-quotient divisor with zero result')
+            return 2 * values[numerator_name] / values[result_name]
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -148,6 +187,9 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
             raise ValueError('linear-plus-half-quadratic needs three unique inputs')
         if solve_for == input_names[-1]:
             raise ValueError('time inversion is intentionally unsupported for linear-plus-half-quadratic')
+    if relation in {'square-over-double', 'double-quotient'}:
+        if len(input_names) != 2 or len(set(input_names)) != 2:
+            raise ValueError(f'{relation} needs two unique inputs')
     if result_name not in variables or any(name not in variables for name in input_names):
         raise ValueError('all formula variables need definitions')
     if solve_for not in [result_name, *input_names]:
@@ -367,6 +409,29 @@ def compute_science_answer(problem):
             if solve_for == acceleration_name:
                 return 2 * (known[result_name] - known[linear_name] * time) / time ** 2
             raise ValueError(f'unsupported solve_for for linear-plus-half-quadratic: {solve_for}')
+        if relation == 'square-over-double':
+            if len(input_names) != 2:
+                raise ValueError('square-over-double needs exactly two inputs')
+            numerator_name, divisor_name = input_names
+            if solve_for == numerator_name:
+                radicand = 2 * known[result_name] * known[divisor_name]
+                if radicand < 0:
+                    raise ValueError('cannot solve square-over-double with negative radicand')
+                return sqrt(radicand)
+            if solve_for == divisor_name:
+                if known[result_name] == 0:
+                    raise ValueError('cannot solve square-over-double divisor with zero result')
+                return known[numerator_name] ** 2 / (2 * known[result_name])
+        if relation == 'double-quotient':
+            if len(input_names) != 2:
+                raise ValueError('double-quotient needs exactly two inputs')
+            numerator_name, divisor_name = input_names
+            if solve_for == numerator_name:
+                return known[result_name] * known[divisor_name] / 2
+            if solve_for == divisor_name:
+                if known[result_name] == 0:
+                    raise ValueError('cannot solve double-quotient divisor with zero result')
+                return 2 * known[numerator_name] / known[result_name]
         raise ValueError(f'unsupported formula relation: {relation}')
 
     source = problem['source']
