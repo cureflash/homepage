@@ -2,49 +2,80 @@
 
 ## Current QA state
 
-- Checked: **1,125**
-- Verified: **1,063**
-- Needs revision: **62**
+- Checked: **1,225**
+- Verified: **1,160**
+- Needs revision: **65**
 - Rejected: **0**
-- Unchecked `pending_validation`: **1,000**
+- Unchecked `pending_validation`: **975**
 - `generation_complete`: `false`
 - `validation_complete`: `false`
 
-## Latest QA checkpoint
+## This run — independent QA
 
-Micro-skill: `p5.verb.active_vs_passive`
-Range completed: `0001-0025`
+Reviewed the oldest unchecked backlog in strict order, solving from stem + choices before consulting the stored proposed answer/explanation.
 
-Independent result:
-- 25 checked
-- 23 verified
-- 2 needs_revision
-- 0 rejected
+### `p5.verb.active_vs_passive` 0026-0050
 
-Each item was solved from stem + choices before consulting the stored proposed answer/explanation.
+- Checked: 25
+- Verified: 25
+- Needs revision: 0
+- Rejected: 0
+
+All 25 have unique plural-subject present-passive answers and acceptable business English.
+
+### `p5.verb.active_vs_passive` 0051-0075
+
+- Checked: 25
+- Verified: 23
+- Needs revision: 2
+- Rejected: 0
 
 Needs revision:
+- `p5_verb_active_vs_passive_0060`: intended active-past answer is unique, but `during yesterday's review during the shutdown` is repetitive and below the naturalness gate.
+- `p5_verb_active_vs_passive_0070`: intended active-past answer is unique, but `during yesterday's review after the review meeting` is redundant/awkward.
 
-- `p5_verb_active_vs_passive_0013`: `course materials` is plural, so the passive must be `were prepared`. The current intended option `was prepared` is ungrammatical and the option set contains no valid plural passive answer.
-- `p5_verb_active_vs_passive_0016`: `survey results` is plural, so the passive must be `were analyzed`. The current intended option `was analyzed` is ungrammatical and the option set contains no valid plural passive answer.
+### `p5.verb.active_vs_passive` 0076-0100
 
-Recommended repair: replace the singular passive choices with the correct plural forms, update explanations, then independently re-solve before changing either item to verified.
+- Checked: 25
+- Verified: 24
+- Needs revision: 1
+- Rejected: 0
 
-The other 23 items have a unique defensible answer and acceptable TOEIC-style business English in this checkpoint. Verified answer-position distribution is A/B/C/D = **6/6/6/5**.
+Needs revision:
+- `p5_verb_active_vs_passive_0084`: intended active-present answer is unique, but `before each monthly review before the due date` repeats the timing structure and fails the finished-item naturalness standard.
 
-QA record:
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-023-active-vs-passive-part1.qa.json`
+This completes independent first-pass QA of the remaining `active_vs_passive` backlog. Existing earlier needs-revision IDs 0013 and 0016 remain unresolved; do not silently promote them.
+
+### `p5.verb.modal_base_form` 0001-0025
+
+- Checked: 25
+- Verified: 25
+- Needs revision: 0
+- Rejected: 0
+
+All 25 uniquely require the bare infinitive after a modal verb; stored explanations agree with the independently selected answer.
+
+## Run total
+
+- Checked: **100**
+- Verified: **97**
+- Needs revision: **3**
+- Rejected: **0**
+
+QA records for all four 25-question checkpoints are stored under:
+
+`subjects/english/power-toeic/js/data/questions/part5/qa/`
 
 Full-bank semantic near-duplicate clearance is still not claimed. `verified` does not mean production-approved until the revision-bound cross-bank duplicate gate passes.
 
 ## Next QA
 
-Continue the same oldest unchecked micro-skill:
+Continue the oldest unchecked micro-skill:
 
-`p5.verb.active_vs_passive`
+`p5.verb.modal_base_form`
 
 Start ID:
 
-`p5_verb_active_vs_passive_0026`
+`p5_verb_modal_base_form_0026`
 
 Continue independent re-solving in 25-question safe checkpoints before reading stored proposed answers or explanations.
