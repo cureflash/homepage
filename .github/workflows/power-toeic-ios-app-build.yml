@@ -19,7 +19,7 @@ jobs:
     env:
       PROJECT: subjects/english/power-toeic-ios/AppShell/PowerTOEICApp.xcodeproj
       SCHEME: PowerTOEICApp
-      ARCHIVE_PATH: ${{ runner.temp }}/PowerTOEICApp.xcarchive
+      ARCHIVE_PATH: /tmp/PowerTOEICApp.xcarchive
     steps:
       - uses: actions/checkout@v4
 
