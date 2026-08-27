@@ -4,7 +4,7 @@
 
 **APP TRACK Phase 11 / Task 11.4 — App Store submission readiness — is still in progress.**
 
-Phase 11.3 is complete. Phase 11.4 now has explicit Credits, machine-readable submission blockers, verified Google Drive OtoLogic source files, and a native semantic audio playback boundary. No production taxonomy/question generation/QA work belongs to this track.
+Phase 11.3 is complete. Phase 11.4 now has Credits, machine-readable submission blockers, the three verified OtoLogic MP3s committed as native SwiftPM resources, and a non-blocking semantic audio playback path. No production taxonomy/question generation/QA work belongs to this track.
 
 ## Phase 11.4 progress
 
@@ -16,52 +16,51 @@ Native `CreditsView` is reachable from Home and preserves the exact required att
 
 `subjects/english/power-toeic-ios/Release/SubmissionReadiness.json` keeps `submission_ready: false` and separates repository-owned blockers from Apple/account/operator inputs.
 
-Repository-owned blockers remain:
+Repository-owned blockers are now only:
 
 1. final original App Store icon artwork;
-2. exact approved Irasutoya temporary character files bundled behind semantic IDs;
-3. exact three OtoLogic MP3 binaries bundled as SwiftPM resources.
+2. exact approved Irasutoya temporary character files bundled behind semantic IDs.
 
-### OtoLogic source files verified
+The OtoLogic audio blocker is closed.
 
-The intended files in the existing Google Drive SE library have been confirmed as actual `audio/mpeg` files:
+### OtoLogic native resources completed
 
-- `otologic_correct.mp3` — `1WP7Mi1cCbv9hWWGdIRnKoR3NDOQaBRxt`;
-- `otologic_incorrect.mp3` — `1DcJNhKfHNwifcWy1sAAgzzCjbOPa4iDE`;
-- `otologic_inspiration.mp3` — `11uMGcDxfqPhhPsVc2HtNWtWTKgGixPSy`.
+The intended Google Drive SE files were re-fetched and verified:
 
-They remain `not_yet_bundled` in `Release/AssetManifest.json` until the exact binaries exist in the repository resource bundle.
+- `otologic_correct.mp3` — Drive `1WP7Mi1cCbv9hWWGdIRnKoR3NDOQaBRxt` — SHA256 `085e5a4a3fe2669ad1378423c412f7e76cc6b2b573b3081380207f5d8b8ea2fc`;
+- `otologic_incorrect.mp3` — Drive `1DcJNhKfHNwifcWy1sAAgzzCjbOPa4iDE` — SHA256 `c5141a298f48e63c4606ab34b189590cd0f64611ae9546463511d63da7deb2eb`;
+- `otologic_inspiration.mp3` — Drive `11uMGcDxfqPhhPsVc2HtNWtWTKgGixPSy` — SHA256 `4c61471b681bdb407fcdaa183e6881aaa76be05887accf761f73b0454f0f5f66a`.
 
-### Native audio playback path completed
+A one-shot PR workflow downloaded the corresponding current public OtoLogic source URLs and required all three SHA256 values to match the connected Drive copies before committing any binary. The check passed, the exact MP3 bytes were committed under:
 
-Added `BundleAudioCuePlayer` behind the existing `AudioCuePlaying` protocol. It:
+`subjects/english/power-toeic-ios/Sources/PowerTOEIC/Resources/Audio/`
+
+The one-shot vendor workflow was then removed; normal builds no longer depend on network access.
+
+`Release/AssetManifest.json` now records the actual Drive IDs, SHA256 values, and `bundle_status: bundled` for all three audio assets.
+
+### Native audio playback path
+
+`BundleAudioCuePlayer` remains behind the existing `AudioCuePlaying` protocol. It:
 
 - resolves `audio.correct`, `audio.wrong`, and `audio.inspiration` through `AssetCatalog`;
-- uses SwiftPM `Bundle.module` resources under `Sources/PowerTOEIC/Resources/Audio/`;
+- uses SwiftPM `Bundle.module` resources;
+- handles both preserved `Audio/` and flattened SwiftPM resource layouts;
 - uses `AVAudioPlayer` only as presentation infrastructure;
 - safely no-ops for missing/invalid resources;
-- never throws into or owns QuizSession progression/correctness;
-- is now the default audio adapter in `PowerTOEICAppEnvironment`.
+- never owns QuizSession progression/correctness;
+- is the default audio adapter in `PowerTOEICAppEnvironment`.
 
-The shipping filenames are fixed in the Audio resource directory README. The directory is declared through `Package.swift`, but the MP3 binaries themselves are intentionally still absent, so the blocker remains truthful.
-
-An initial Xcode failure exposed a Swift visibility rule: internal `Bundle.module` cannot be used directly as a public initializer default argument. The initializer now accepts an optional bundle and resolves `Bundle.module` internally.
-
-Validation after that fix:
-
-- Swift tests run `33031064304`: success;
-- iOS app build/archive run `33031064312`: success, including Simulator Debug, generic-device Release, unsigned archive, and archived privacy-manifest validation.
-
-A parallel duplicate `BundleAudioCuePlayer` implementation appeared during this checkpoint and was removed rather than leaving two competing audio boundaries.
+Tests now require all three semantic audio IDs to resolve to real bundled data with the expected byte sizes, while keeping playback fire-and-forget.
 
 ## Exact next work
 
 Continue **Phase 11.4** in this order:
 
-1. Commit the exact three already-verified OtoLogic MP3 binaries into `Sources/PowerTOEIC/Resources/Audio/` using the fixed filenames.
-2. Strengthen release tests/CI to verify those three resources exist in `Bundle.module` and the generated/archive packaging contains the SwiftPM resource bundle.
-3. Only after those checks pass, change the three OtoLogic entries in `Release/AssetManifest.json` to `bundled`, remove `otologic_audio_assets_bundled` from repository blockers, and retain exact Credits attribution.
-4. Acquire/bundle the exact four approved Irasutoya temporary character works behind existing semantic IDs; verify source/usage conditions before marking them bundled.
+1. Run the complete Swift Package and iOS app build/archive CI on the audio-bundled PR and confirm the SwiftPM resources survive app/archive packaging.
+2. Reconcile latest `main`; merge the audio checkpoint only if all required CI is green.
+3. Acquire/bundle the exact four approved Irasutoya temporary character works behind existing semantic IDs; verify the actual source files and current usage terms before changing their manifest entries from `not_yet_bundled`.
+4. Keep the total temporary Irasutoya count below 20 unique works; current plan is only four.
 5. Keep final AppIcon blocked until original submission artwork is supplied; do not use temporary Irasutoya art as a fake final icon.
 6. Re-audit metadata/privacy after repository-owned assets are complete. Phase 11.4 may be checked only when all remaining blockers are genuine external Apple/account/operator inputs.
 7. Do not claim TestFlight/App Store submission without a signed real upload.
@@ -73,6 +72,6 @@ Continue **Phase 11.4** in this order:
 - shared contracts/fixtures determine cross-platform behavior;
 - no target-score feature, skill-to-body-part mapping, runtime LLM, or production question creation in APP TRACK;
 - temporary art = Irasutoya via semantic asset IDs, below 20 unique works;
-- audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved;
+- audio = verified OtoLogic resources with CC BY 4.0 attribution preserved;
 - persistence/audio/character-presentation failures must not block quiz operation;
 - runtime remains offline-capable and does not require network access for the core quiz loop.
