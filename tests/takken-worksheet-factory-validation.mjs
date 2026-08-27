@@ -7,7 +7,8 @@ const ROOT = process.cwd();
 const pendingBatches = [
   ["qualifications/takken/data/pending-units.js", "TAKKEN_PENDING_UNITS"],
   ["qualifications/takken/data/pending-units-21-40.js", "TAKKEN_PENDING_UNITS_21_40"],
-  ["qualifications/takken/data/pending-units-41-60.js", "TAKKEN_PENDING_UNITS_41_60"]
+  ["qualifications/takken/data/pending-units-41-60.js", "TAKKEN_PENDING_UNITS_41_60"],
+  ["qualifications/takken/data/pending-units-61-80.js", "TAKKEN_PENDING_UNITS_61_80"]
 ];
 const publicPath = path.join(ROOT, "qualifications/takken/data/public-catalog.js");
 const appPath = path.join(ROOT, "qualifications/takken/assets/app.js");
@@ -77,7 +78,7 @@ for (let i = 0; i < pending.length; i += 1) {
   }
 }
 
-assert.equal(pending.length, 60, "expected three complete generation batches through unit 60");
+assert.equal(pending.length, 80, "expected four complete generation batches through unit 80");
 
 for (const unit of published) {
   assert.equal(unit.factcheckStatus, "verified", `${unit.id}: public catalog must be verified-only`);
