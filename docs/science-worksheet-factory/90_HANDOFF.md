@@ -4,89 +4,89 @@ Updated: 2026-08-27
 
 ## Completed / reconciled this run
 
-Started from latest `main`, read the science-factory control documents plus the shared worksheet-factory contracts, and resumed at `物理基礎：エネルギーとその利用`. Current MEXT guidance was rechecked before defining content. The run completed **three independent safe checkpoints totaling 120 new PDFs**, which reaches the requested per-run publication target without inventing a fourth checkpoint.
+Started from latest `main`, read the science-factory control documents, all curriculum plans, and the shared worksheet-factory contracts, then resumed at formal course `物理：平面運動・放物運動`.
 
-MEXT scope used for this batch: energy resources such as water, fossil fuels, nuclear, solar and wind; use of energy centered on conversion to electrical energy; qualitative nuclear-fission energy; radiation types/properties and radioactive-substance basics including half-life; examples of radiation use in medicine, industry and agriculture; and nuclear-energy issues such as safety, radioactive waste and decommissioning. Government energy/radiation references were used to keep mechanism and unit wording concrete.
+Current MEXT guidance was rechecked before defining the batch. The High School Course of Study Commentary for Physics states that, after the vertical falling motion covered in Physics Basics, horizontal and oblique projectile motion should be related to rectilinear motion, including velocity, acceleration and gravity, and that projectile motion can be analyzed by decomposing it into horizontal and vertical components. The first formal-Physics batch therefore isolates mechanically exact component relations for horizontal projection instead of repeating the Physics Basics free-fall series.
 
-### 1. 発電とエネルギー変換 — 40 PDFs
+This run completed **three independent safe checkpoints totaling 90 new PDFs**. A fourth checkpoint was not manufactured: moving from horizontal projection to oblique projection introduces trigonometric components plus explicit sign/rounding conventions and should be designed as the next safety boundary.
 
-- Added `forward / reverse / fill / true-false` retrieval variants × 10 deterministic seeds, 20 problems each.
-- Covers water, thermal, nuclear, solar-PV and wind generation and the central Physics Basics idea of conversion to electrical energy.
-- Mechanism statements were kept basic and finite-answer: water-position energy drives a turbine/generator; fossil-fuel combustion and nuclear fission provide heat for steam/turbine generation; solar cells convert light directly to electricity; wind turns blades/generator.
-- Skill: `energy-resources-and-electric-conversion`.
+### 1. 水平投射 — 水平方向の運動 — 30 PDFs
 
-### 2. 放射線の種類・半減期・単位 — 40 PDFs
+- Relation: `x = v_x t` with air resistance explicitly excluded.
+- Existing shared relation: `product`.
+- 10 deterministic seeds × three targets: horizontal displacement `x`, horizontal velocity `v_x`, elapsed time `t`.
+- Each worksheet has 20 problems.
+- Skill: `horizontal-projectile-horizontal-motion`.
 
-- Added the same four retrieval modes × 10 deterministic seeds, 20 problems each.
-- Covers α, β, γ and neutron radiation, half-life, and Bq/Gy/Sv at introductory Physics Basics level.
-- Facts are finite and independently recomputable from structured source fields; no ambiguous free-form explanations are accepted.
-- Skill: `radiation-types-half-life-and-units`.
+### 2. 水平投射 — 鉛直方向の落下距離 — 30 PDFs
 
-### 3. 放射線利用と原子力利用の課題 — 40 PDFs
+- Relation: `y = 1/2 g t^2`, using the magnitude of downward displacement and `g = 9.8 m/s^2`.
+- Existing shared relation: `half-product-last-square`.
+- 15 deterministic seeds × two targets: downward drop distance `y`, elapsed time `t`.
+- Each worksheet has 20 problems.
+- Skill: `horizontal-projectile-vertical-displacement`.
 
-- Added the same four retrieval modes × 10 deterministic seeds, 20 problems each.
-- Covers medical, industrial and agricultural radiation-use examples plus the basic issues of safety assurance, radioactive-waste treatment/disposal and decommissioning.
-- Avoids policy advocacy or relative-safety claims; only curriculum-aligned basic facts/issue labels are drilled.
-- Skill: `radiation-use-and-nuclear-challenges`.
+### 3. 水平投射 — 鉛直方向の速度 — 30 PDFs
+
+- Relation: `v_y = g t`, using the magnitude of downward vertical velocity and `g = 9.8 m/s^2`.
+- Existing shared relation: `product`.
+- 15 deterministic seeds × two targets: downward vertical speed `v_y`, elapsed time `t`.
+- Each worksheet has 20 problems.
+- Skill: `horizontal-projectile-vertical-velocity`.
 
 ## Engineering / validation
 
-- Reused the existing shared `generate_retrieval_drill` + `accepted-set` publication path; no new common formula relation or renderer change was required.
-- Added `scripts/science_physics_basic_energy_use.py` and `tests/test_science_physics_basic_energy_use.py`.
-- New test contract checks:
-  - exactly three 40-PDF checkpoints / 120 series total;
+- Added `scripts/science_physics_projectile.py`.
+- Added `scripts/publish_science_physics.py` as the non-destructive publisher for formal-course Physics.
+- Added `tests/test_science_physics_projectile.py`.
+- Added `.github/workflows/science-physics-publish.yml` with latest-main guarding, generation, post-generation validation, catalog/PDF checks and safe push.
+- No shared generator/relation/renderer/catalog-schema change was required.
+- Dedicated test contract checks:
+  - exactly three 30-PDF checkpoints / 90 series total;
   - 20 problems per worksheet;
   - deterministic seed regeneration;
-  - independent `validate_science_problem` recomputation;
-  - explicit corrupted-answer rejection for each checkpoint;
-  - 120/120 normalized-hash uniqueness;
-  - collision rejection against previously published accepted-set Physics Basics topics;
-  - required curriculum concepts.
-- Updated `scripts/publish_science_physics_basic.py` to register the new retrieval topics.
-- Updated `.github/workflows/science-physics-basic-publish.yml` to include the new module/test and require exactly 870 Physics Basics rows, 870 unique hashes and `numeric=630 / accepted-set=240`.
-- Implementation PR #120 merge: `9aca8d07154a60c391e44454fe87bdc5580435c8`.
-- Actions run `33032268163`: **success**. Shared/topic tests, generation, post-generation tests, catalog validation, all-PDF `%PDF`/size/two-page checks, commit and latest-main safe push all succeeded.
-- Publication commit: `f96d50f8de74de90b4a7b40d973d3b718450884d`.
+  - independent answer recalculation directly from visible known values for every target direction;
+  - explicit corrupted-answer rejection for every topic;
+  - 90/90 normalized-hash uniqueness;
+  - hash disjointness from every previously published worksheet series;
+  - explicit air-resistance condition in learner-visible variable labels and descriptions;
+  - `g = 9.8 m/s^2` where applicable;
+  - no fixed grade metadata in topic definitions.
+- Formal Physics catalog invariants require `school_level=high-school`, `formal_course=物理`, `grade=null`, `science_field=physics`, `worksheet_series=focused`, `answer_type=numeric`.
+- Implementation PR #124 merge: `725df274f46ed6ac01fe7c9ab5e79615ba40b88a`.
+- Actions run `33035639572`: **success**. Shared/topic tests, generation, post-generation tests, exact 90-row catalog validation, 90 unique hashes, all-PDF `%PDF`/size/two-page checks, commit and latest-main safe push all succeeded.
+- Publication commit: `851d5da0a45b597496c440499f46e04b9cc0d201`.
 
 ## Current authoritative published coverage
 
 - junior-high grade 1 physics: 48;
 - junior-high grade 2 physics: 120;
 - junior-high grade 3 physics: 120;
-- `物理基礎`: **870**;
-- total published physics: **1158**.
+- `物理基礎`: 870;
+- formal `物理`: **90**;
+- total published physics: **1248**.
 
-`物理基礎` unit counts:
+Formal `物理` currently has:
 
-- 運動の表し方: 90;
-- 様々な力とその働き: 130;
-- 力学的エネルギー: 170;
-- 熱: 60;
-- 波: 30;
-- 音と振動: 190;
-- 電気: 80;
-- エネルギーとその利用: 120.
+- `様々な運動：平面運動と放物運動`: 90;
+- `calculation-basic`: 40;
+- `calculation-reverse`: 50;
+- answer type `numeric`: 90;
+- 90 unique normalized content hashes.
 
-Publication invariants verified by Actions:
-
-- exactly **870** Physics Basics catalog rows;
-- **870 unique normalized content hashes**;
-- answer types: `numeric` 630 / `accepted-set` 240;
-- 20 problems per worksheet;
-- every registered Physics Basics PDF passes `%PDF` header, file-size, and two-page structural checks.
-
-The planned `物理基礎` production sequence is now complete. Representative screenshot-based visual QA remains pending; structural validation is not being treated as visual QA.
+Every registered formal-Physics PDF passes `%PDF` header, file-size greater than 1000 bytes, and two-page structural checks. Representative screenshot-based visual QA remains pending; structural validation is not treated as visual QA.
 
 ## Exact next starting point
 
-Continue Phase 3 at formal course **`物理：平面運動・放物運動`**.
+Continue Phase 3 at formal course **`物理：平面運動・放物運動`**, now at the remaining planar/projectile-motion scope after horizontal projection.
 
 1. Start from latest `main` and repeat the control-document read/reconcile sequence.
 2. Preserve parallel repository progress; never reset a newer `main`.
-3. Recheck the current MEXT `物理` scope before defining any advanced-course formula relation or worksheet family.
-4. Keep `formal_course=物理` and `grade=null`; do not fabricate a fixed high-school year.
-5. Begin with the simplest mechanically verifiable planar/projectile-motion relation that is explicitly curriculum-aligned. Reuse shared formula relations where mathematically exact; add a relation only with independent relation-level regression tests.
-6. For every new series, independently recompute answers, verify deterministic seeds, reject normalized-hash collisions, preserve 20-problem/two-page format, and validate the complete catalog.
-7. Advance up to four contiguous safe checkpoints only when the same unit/shared machinery supports it naturally; do not manufacture checkpoint count.
-8. Update exact workflow/catalog totals and publish only after shared/topic tests, generation, post-generation validation, catalog/PDF checks, and latest-main safe push succeed.
-9. Representative screenshot-based visual QA remains pending.
+3. Recheck current MEXT `物理` scope before extending projectile formulas.
+4. Keep `formal_course=物理` and `grade=null`; never fabricate a fixed high-school year.
+5. Prefer **oblique projection** as the next design point, but first define a machine-verifiable contract for initial horizontal/vertical velocity components, allowed angles, exact or rounded trigonometric values, signs and accepted tolerances.
+6. Do not disguise the same horizontal-projectile relations as new checkpoints. Add a shared relation only when the relation itself has independent regression tests.
+7. For every new series, independently recompute answers from learner-visible values, verify deterministic seeds, reject normalized-hash collisions, preserve 20-problem/two-page format, and validate the complete catalog.
+8. Advance up to four contiguous safe checkpoints only when the same unit/shared machinery supports them naturally; do not manufacture checkpoint count.
+9. Publish only after shared/topic tests, generation, post-generation validation, catalog/PDF checks, and latest-main safe push succeed.
+10. Representative screenshot-based visual QA remains pending.
