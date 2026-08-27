@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 2275,
-  "checked_question_count": 1300,
+  "generated_question_count": 2300,
+  "checked_question_count": 1325,
   "pending_validation_count": 975,
-  "verified_question_count": 1235,
+  "verified_question_count": 1260,
   "needs_revision_count": 65,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -31,16 +31,17 @@
     "p5.conn.preposition_vs_conjunction",
     "p5.conn.because_vs_because_of",
     "p5.conn.despite_vs_although",
-    "p5.conn.during_vs_while"
+    "p5.conn.during_vs_while",
+    "p5.conn.by_vs_until"
   ],
-  "current_batch": "2026-08-28-scheduled-025-part3",
-  "current_micro_skill": "p5.conn.by_vs_until",
-  "current_micro_skill_persisted_count": 75,
+  "current_batch": "2026-08-28-scheduled-025-part4",
+  "current_micro_skill": "p5.conn.for_vs_since",
+  "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_conn_by_vs_until_0076",
-  "next_micro_skill": "p5.conn.by_vs_until",
+  "next_resume_id": "p5_conn_for_vs_since_0001",
+  "next_micro_skill": "p5.conn.for_vs_since",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Persisted p5.conn.by_vs_until IDs 0051-0075, bringing total generation to 2,275. All 25 remain pending_validation. Checkpoint checks found unique sequential IDs, one blank, four distinct choices, answer-position counts A/B/C/D=7/6/6/6, zero exact duplicate stems, no within-checkpoint SequenceMatcher pair >=0.94, and maximum observed similarity about 0.644. Independently reviewed the oldest unchecked p5.verb.modal_base_form IDs 0076-0100: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,300 checked, 1,235 verified, 65 needs_revision, 0 rejected; unchecked pending_validation remains 975. Next generation is p5_conn_by_vs_until_0076; next QA is p5_verb_to_infinitive_pattern_0001. Full cross-bank semantic near-duplicate scanning remains incomplete and verified does not yet mean production-approved.",
-  "updated_at": "2026-08-28T01:14:00+09:00"
+  "last_run_result": "Persisted p5.conn.by_vs_until IDs 0076-0100, completing that micro-skill at 100/100 and bringing total generation to 2,300 across 23 completed micro-skills. All 25 new items remain pending_validation. Checkpoint checks found sequential unique IDs, one blank, four distinct choices, answer-position counts A/B/C/D=6/7/6/6, zero exact duplicate stems, no within-checkpoint SequenceMatcher pair >=0.94, and maximum observed similarity about 0.636. Independently reviewed the oldest unchecked p5.verb.to_infinitive_pattern IDs 0001-0025: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,325 checked, 1,260 verified, 65 needs_revision, 0 rejected; unchecked pending_validation remains 975. Next generation is p5_conn_for_vs_since_0001; next QA is p5_verb_to_infinitive_pattern_0026. Full cross-bank semantic near-duplicate scanning remains incomplete and verified does not yet mean production-approved.",
+  "updated_at": "2026-08-28T02:20:00+09:00"
 }
