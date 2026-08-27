@@ -1,12 +1,12 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1450,
-  "verified_question_count": 1381,
+  "checked_question_count": 1475,
+  "verified_question_count": 1406,
   "needs_revision_count": 69,
   "rejected_question_count": 0,
   "pending_validation_count": 975,
-  "last_completed_batch": "2026-08-28-scheduled-025-gerund-part2",
+  "last_completed_batch": "2026-08-28-scheduled-025-gerund-part3",
   "last_completed_micro_skill": "p5.verb.gerund_pattern",
   "last_batch_counts": {
     "checked": 25,
@@ -14,10 +14,10 @@
     "needs_revision": 0,
     "rejected": 0
   },
-  "next_batch": "2026-08-28-scheduled-025-gerund-part3",
+  "next_batch": "2026-08-28-scheduled-025-gerund-part4",
   "next_micro_skill": "p5.verb.gerund_pattern",
-  "next_question_id": "p5_verb_gerund_pattern_0051",
+  "next_question_id": "p5_verb_gerund_pattern_0076",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-28T07:30:00+09:00"
+  "updated_at": "2026-08-28T07:45:00+09:00"
 }
