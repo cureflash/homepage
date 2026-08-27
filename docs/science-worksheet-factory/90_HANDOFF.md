@@ -10,64 +10,73 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 680 PDFs
-- total published physics: 1838 PDFs
+- formal `物理`: 780 PDFs
+- total published physics: 1938 PDFs
 
 Formal `物理` currently has:
 
 - `様々な運動：平面運動と放物運動`: 330 PDFs
 - `様々な運動：剛体のつり合い`: 200 PDFs
-- `様々な運動：運動量と力積`: 150 PDFs
+- `様々な運動：運動量と力積`: 250 PDFs
 
-All 680 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, numeric answers, 20 problems, and unique normalized content hashes. The formal-Physics publish workflow validates every registered PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
+All 780 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, numeric answers, 20 problems, and unique normalized content hashes. The formal-Physics publish workflow validates every registered PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
 
-## Completed this run — basic momentum conservation, 60 PDFs
+## Completed this run — full momentum conservation and collision follow-up, 100 PDFs
 
-The current MEXT High School Course of Study Commentary for formal Physics was rechecked. It explicitly places momentum conservation under `運動量` and states that collisions or divisions of bodies are used to understand the law of conservation of momentum. The next curriculum topic after this area is collision and mechanical energy.
+The current MEXT High School Course of Study Commentary for formal Physics was rechecked. It requires momentum/impulse and momentum conservation, then collision and mechanical-energy change; its content-handling note explicitly includes the coefficient of restitution. The same current MEXT material states that the following circular-motion section covers uniform circular-motion speed, period, angular speed, centripetal acceleration, and centripetal force, with centrifugal force also mentioned.
 
-Two contiguous machine-verifiable checkpoints were added:
+Three contiguous machine-verifiable checkpoints were completed:
 
-1. `momentum-conservation-total-before-after` — 30 PDFs
-   - learner-visible conservation `P前=P後`
-   - uses `P前=p₁前+p₂前`
-   - direct final total momentum / reverse either initial body momentum
-   - shared reversible `sum` relation reused
-2. `momentum-conservation-final-object` — 30 PDFs
-   - `p₂後=P前-p₁後` with `P前=P後`
-   - direct one final-body momentum / reverse initial total / reverse the other final-body momentum
-   - shared reversible `difference` relation reused
-
-Both checkpoints are restricted to one-dimensional two-body collisions. Right is explicitly positive and left negative. The learner-facing descriptions state that the impulse of external forces can be neglected; no rest condition or sign convention is hidden in generator state.
+1. `momentum-conservation-two-body-velocity` — 40 PDFs
+   - full one-dimensional relation `m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂`
+   - exactly one unknown velocity in each problem
+   - direct `v₂` plus reverse `u₁`, `u₂`, or `v₁`
+   - right-positive/left-negative direction is learner-visible
+   - external-force impulse being negligible is learner-visible
+   - no hidden initial-at-rest assumption; velocity pools intentionally exclude zero
+   - new shared reversible relation `two-body-momentum-conservation`
+   - mass inversion is intentionally unsupported; masses must be positive and arity must be exactly five unique inputs
+2. `collision-coefficient-of-restitution` — 30 PDFs
+   - `相対離れる速さ = e × 相対近づく速さ`, `0≦e≦1`
+   - direct separation relative speed / reverse coefficient / reverse approach relative speed
+   - relative approach/separation speeds are learner-visible positive magnitudes to avoid hidden sign ambiguity
+   - existing reversible `product` relation reused
+3. `collision-kinetic-energy-loss` — 30 PDFs
+   - `K減少 = K前 - K後` for the two-body total kinetic energy before and after collision
+   - direct energy decrease / reverse initial total kinetic energy / reverse final total kinetic energy
+   - generated ranges guarantee a positive loss in this basic checkpoint
+   - learner-facing description explicitly distinguishes momentum conservation from kinetic-energy conservation
+   - existing reversible `difference` relation reused
 
 Implementation and validation:
 
-- implementation PR #148 merge commit: `491e567e5503823afae3596e3bd9c7405061ead9`
-- no new shared formula relation was needed; existing `sum` and `difference` were sufficient
-- each checkpoint uses 10 deterministic seeds × 3 modes, 20 problems per worksheet
-- momentum/impulse tests now cover 5 checkpoints / 150 worksheet variants
-- tests independently recompute every answer from learner-visible values, require deterministic regeneration, reject corrupted answers, require positive and negative signed results, require 150/150 momentum-family normalized hashes to be unique, and require disjointness from the existing catalog
-- publisher/workflow contract increased from 620 to 680 formal-Physics rows and from 90 to 150 rows in `様々な運動：運動量と力積`
-- the first publication run attempt stopped only because the new test required exact text `P前=P後` while the displayed formula had spaces; the learner-visible formula was normalized by commit `eb882668dd0b2e44894feb0cc664fa3271941680`
-- publication commit: `4b10c1549283d8051013fd8f6f1eb01c3ebd055f`
-- Actions run `33066240727`, attempt 2: success
-- the successful validation reported `Formal Physics 680-PDF catalog validation: OK`; all shared worksheet tests, formula relations, projectile, rigid-body, momentum tests, catalog validation, `%PDF`, size, and two-page checks passed
-- the attempt-2 publisher reported no generated changes because the fixed latest `main` already contained the publication commit; it still revalidated the complete 680-PDF state successfully
+- the first checkpoint was merged by PR #151; formal-Physics Actions run `33070787706` succeeded
+- first publication commit: `8bdf22487195a8474e48f14dea31d2dc0afc0a1e` (`Publish 40 formal Physics two-body momentum worksheets`)
+- the two collision checkpoints were merged by PR #155 after repeated latest-main reconciliation with concurrent non-science updates; merge commit: `3a246e16745fcd921546c4ca5d6ad816fa396626`
+- collision publication Actions run `33071405515`: success
+- final publication commit: `f1038fc5a2eb05702057eb47a0b4c8657caf51d2` (`Publish 60 formal Physics collision worksheets`)
+- the momentum/collision test registry now covers 8 checkpoints / 250 worksheet variants
+- tests require deterministic regeneration, independent recomputation from learner-visible values, corrupted-answer rejection, valid restitution bounds, positive collision-energy decrease for that checkpoint, 250/250 normalized-hash uniqueness, and collision disjointness from the existing catalog
+- the new shared two-body relation has direct/reverse regression tests plus bad-arity, mass-inversion, and zero/nonpositive-mass rejection
+- final publisher validation reported `Formal Physics 780-PDF catalog validation: OK`
+- all shared worksheet tests, shared formula-relation tests, projectile tests, rigid-body tests, momentum/collision tests, catalog validation, `%PDF`, size, and two-page checks passed
+- the final workflow generated 60 collision PDFs and completed its latest-main parent guard and non-force push successfully
 
-The repository-wide shared catalog serialization remains `worksheet-catalog-publish-v1` with `cancel-in-progress: false`; do not bypass it.
+The repository-wide shared catalog serialization remains `worksheet-catalog-publish-v1` with `cancel-in-progress: false`; do not bypass it. Concurrent Grade 6, Power Classics, and Power TOEIC work was preserved by reconciling onto the latest `main` rather than force-updating or rolling back unrelated commits.
 
 ## Exact next starting point
 
-Continue formal course **`物理：運動量と力積 / 運動量保存`** at the full mass-and-velocity form.
+Continue formal course **`物理：様々な運動 / 円運動`**.
 
 1. Start from latest `main`; re-read `00_MASTER_INSTRUCTIONS.md`, `20_EXECUTION_PLAN.md`, `STATUS.json`, and this HANDOFF, then reconcile any parallel progress.
-2. Recheck the current MEXT wording before implementation.
-3. Design the simplest one-dimensional two-body relation `m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂` with exactly one unknown velocity.
-4. Keep `formal_course=物理`, `grade=null`, right-positive/left-negative direction, and the condition that external impulse is negligible learner-visible.
-5. Any initial-at-rest assumption must be explicit in the problem; do not hide it only in generator state.
-6. Add a new shared reversible relation only if the full equation cannot be represented safely by existing relations. If added, require direct/reverse regression, invalid/zero-denominator rejection, bad-arity rejection, and independent solver validation.
-7. Require deterministic seed regeneration, independent answer recomputation from visible values, corrupted-answer rejection, normalized-hash uniqueness and collision checks against the existing catalog, 20-problem/two-page output, complete catalog validation, and structural PDF checks.
+2. Recheck the current MEXT circular-motion wording before implementation. Current MEXT scope explicitly includes uniform circular-motion speed, period, angular speed, centripetal acceleration, and centripetal force; centrifugal force is also mentioned.
+3. Start with the simplest one-unknown quantitative checkpoint among the basic circular-motion quantities. Prefer a relation among speed, radius, angular speed, or period that can be expressed with an existing shared relation or a small independently tested reversible relation.
+4. Preserve `formal_course=物理`, `grade=null`, 20 problems per worksheet, and the current focused PDF layout.
+5. Keep all frame, direction, radius, and uniform-motion assumptions learner-visible. Do not mix inertial-frame centripetal force and rotating-frame centrifugal force in the first checkpoint.
+6. If a new shared relation is necessary, add direct/reverse regression tests, invalid/zero-denominator and bad-arity rejection where applicable, and independent solver validation before publication.
+7. Require deterministic seed regeneration, independent answer recomputation from learner-visible values, corrupted-answer rejection, normalized-hash uniqueness and collision checks against the existing catalog, complete catalog validation, and structural PDF checks.
 8. Preserve `worksheet-catalog-publish-v1` serialization and non-force latest-main push safety.
-9. If this full conservation checkpoint becomes stable, nearby collision/separation variants may follow in the same run only when the same verified solver contract can be reused without hidden assumptions.
+9. Continue to later circular-motion checkpoints in the same run only while the same verified solver assumptions remain clear; do not create a fourth checkpoint merely to meet throughput.
 10. Representative screenshot-based visual QA remains pending; structural PDF QA is not a substitute for visual QA.
 
-This run stops after two new checkpoints (60 PDFs). The next step changes from direct manipulation of already-computed momenta to the full four mass/velocity momentum equation and may require a new reversible solver contract, so it is a deliberate safety boundary rather than a throughput limit.
+This run stops after three safe checkpoints (100 PDFs). The momentum/collision block is now closed at a natural curriculum boundary; the next step changes to uniform circular-motion quantities and force/direction conventions, so stopping here is deliberate rather than a throughput limitation.
