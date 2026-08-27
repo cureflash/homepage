@@ -4,9 +4,9 @@
 - Shared runtime/backend authority: existing Power TOEIC Drill Engine; no classics-specific fork.
 - Taxonomy: `subjects/japanese/power-classics/data/taxonomy/classics-v1.json`
 - Taxonomy: 30 big categories / 100 atomic micro-skills.
-- Generated questions: 175
-- QA checked: 175
-- Verified: 175
+- Generated questions: 200
+- QA checked: 200
+- Verified: 200
 - Needs revision: 0
 - Rejected: 0
 - Unchecked pending_validation: 0
@@ -15,17 +15,17 @@
 - global duplicate gate: not complete
 
 ## This checkpoint — generation
-Started `kobun.verb.conjugation_type.kami_nidan` and persisted the first 25/100 Phase A questions.
+Continued `kobun.verb.conjugation_type.kami_nidan` from 25/100 to 50/100 and persisted 25 new Phase A questions.
 
 New IDs:
-`kobun_verb_conjugation_type_kami_nidan_0001` through `kobun_verb_conjugation_type_kami_nidan_0025`
+`kobun_verb_conjugation_type_kami_nidan_0026` through `kobun_verb_conjugation_type_kami_nidan_0050`
 
 Batch:
-`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-kami-nidan/pending/batch-20260827-004.json`
+`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-kami-nidan/pending/batch-20260828-005a.json`
 
-The checkpoint uses attested classical 上二段 verbs instead of invented lexical variety. Core lexemes include 起く・過ぐ・尽く・落つ・恥づ・恋ふ・生ふ・滅ぶ・老ゆ・吹き閉づ. The core paradigm is i・i・u・uる・uれ・iよ, and this checkpoint covers direct identification, 未然形＋ず, and the beginning of 連用形＋て contexts.
+The checkpoint deliberately reuses attested 上二段 lexemes rather than inventing lexical variety. It extends the evidence to 連用形＋「て」「つつ」「けり」 while preserving the core i・i・u・uる・uれ・iよ paradigm. Exact stem duplicates were avoided against the preceding checkpoint.
 
-Answer positions: A/B/C/D = 7/6/6/6.
+Answer positions: A/B/C/D = 6/7/6/6 for the 25 new items; cumulative kami-nidan 0001-0050 = 13/13/12/12.
 
 ## This checkpoint — QA
 Independently re-solved all 25 new questions from stem + choices before consulting their stored answer/explanation.
@@ -36,15 +36,15 @@ Independently re-solved all 25 new questions from stem + choices before consulti
 - rejected: 0
 
 QA record:
-`subjects/japanese/power-classics/data/questions/qa/2026-08-27-scheduled-004-kami-nidan.qa.json`
+`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-005a-kami-nidan.qa.json`
 
 ## Next generation
-`kobun.verb.conjugation_type.kami_nidan` is at 25/100 for Phase A.
+`kobun.verb.conjugation_type.kami_nidan` is at 50/100 for Phase A.
 
 Resume at:
-`kobun_verb_conjugation_type_kami_nidan_0026`
+`kobun_verb_conjugation_type_kami_nidan_0051`
 
-Continue legitimate 上二段 inventory across distinct 連用・終止・連体・已然・命令/paradigm contexts. Do not invent verbs to force lexical diversity. Quarantine any item where homography or modern-language analogy makes the historical conjugation ambiguous without sufficient context.
+Continue with distinct 終止・連体・已然・命令 contexts using legitimate 上二段 inventory. Do not invent verbs to force lexical diversity. Quarantine any item where homography or modern-language analogy makes the historical conjugation ambiguous without sufficient context.
 
 ## Next QA
 There is no unchecked Power古典 pending backlog at this checkpoint. Independently QA the oldest candidates generated in the next run.
