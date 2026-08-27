@@ -1,5 +1,5 @@
 {
-  "status": "in_progress",
-  "updated_at": "2026-08-28T01:06:00+09:00",
-  "next_task": "小数を含む一次方程式を実装する。続いて、分数を含む一次方程式、比例式型の方程式、比例・反比例の式への代入を同一runで最大4 checkpointまで進める。"
+  "status": "done",
+  "updated_at": "2026-08-28T02:03:00+09:00",
+  "next_task": "なし。中学1年の計画済み反復技能は完了。次回workerは中学2年をactive gradeとしてPLAN.md先頭の『単項式の乗法』から開始する"
 }
