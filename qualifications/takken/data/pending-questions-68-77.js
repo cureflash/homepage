@@ -164,8 +164,8 @@
       proposedAnswerIndex: 2,
       explanation: "国土利用計画法23条は、一定規模以上の土地売買等の契約を締結した場合、土地に関する権利の取得者に事後届出を求めている。",
       sourceIds: ["egov-national-land-use-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-73-002",
@@ -179,8 +179,8 @@
       proposedAnswerIndex: 3,
       explanation: "国土利用計画法23条では、原則として契約締結の日から2週間以内に、土地の所在する市町村の長を経由して都道府県知事へ届け出る。",
       sourceIds: ["egov-national-land-use-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-74-001",
@@ -194,8 +194,8 @@
       proposedAnswerIndex: 0,
       explanation: "農地法3条は、農地または採草放牧地について所有権移転や使用収益権の設定・移転を行う場合、原則として農業委員会の許可を必要としている。",
       sourceIds: ["egov-farmland-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-74-002",
@@ -209,8 +209,8 @@
       proposedAnswerIndex: 1,
       explanation: "農地法3条では、許可を受けないでした行為は、同条に定める例外を除き効力を生じない。",
       sourceIds: ["egov-farmland-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-75-001",
@@ -224,8 +224,8 @@
       proposedAnswerIndex: 2,
       explanation: "農地法4条は、農地を農地以外のものにする自己転用について、原則として都道府県知事等の許可を必要としている。",
       sourceIds: ["egov-farmland-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-75-002",
@@ -239,8 +239,8 @@
       proposedAnswerIndex: 3,
       explanation: "農地法5条は、農地を転用する目的で権利を設定・移転する場合について、原則として都道府県知事等の許可を必要としている。",
       sourceIds: ["egov-farmland-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-76-001",
@@ -254,8 +254,8 @@
       proposedAnswerIndex: 0,
       explanation: "土地区画整理法98条は、施行者が事業施行上必要がある場合等に仮換地を指定できると定めている。",
       sourceIds: ["egov-land-readjustment-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-76-002",
@@ -269,8 +269,8 @@
       proposedAnswerIndex: 1,
       explanation: "換地処分の公告があった日の翌日から、換地は従前の宅地とみなされるなど所定の法的効果が生じる。",
       sourceIds: ["egov-land-readjustment-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-77-001",
@@ -284,8 +284,8 @@
       proposedAnswerIndex: 2,
       explanation: "同法は盛土等に伴う災害を防止するため、都道府県知事等による規制区域の指定制度を設けている。",
       sourceIds: ["egov-embankment-regulation-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-77-002",
@@ -299,8 +299,8 @@
       proposedAnswerIndex: 3,
       explanation: "規制区域内で一定規模の宅地造成、特定盛土等または土石の堆積に関する工事を行う場合、原則として都道府県知事等の許可が必要となる。",
       sourceIds: ["egov-embankment-regulation-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T01:42:00+09:00", result: "verified" }
     }
   ];
 
