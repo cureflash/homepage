@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/publish_grade6_*.py'
       - 'tests/test_grade6_*_publisher.py'
+      - 'tests/test_worksheet_catalog_writer_concurrency.py'
       - '.github/workflows/grade6-core-publish.yml'
   workflow_dispatch:
 permissions:
