@@ -4,58 +4,59 @@
 
 ## 今回完了
 
-中学1年の次の4 checkpointを連続で実装・公開した。
+中学1年の最後の4 checkpointを連続で実装・公開した。
 
-1. `substitution` — 式への代入 — 3 variants / 3 PDFs
-2. `linear-equation-basic` — 一元一次方程式 基本 — 3 variants / 3 PDFs
-3. `linear-equation-transposition` — 移項だけの反復 — 3 variants / 3 PDFs
-4. `linear-equation-parentheses` — かっこを含む一次方程式 — 3 variants / 3 PDFs
+1. `linear-equation-decimal` — 小数を含む一次方程式 — 3 variants / 3 PDFs
+2. `linear-equation-fraction` — 分数を含む一次方程式 — 3 variants / 3 PDFs
+3. `proportion-equation` — 比例式型の方程式 — 3 variants / 3 PDFs
+4. `proportional-inverse-substitution` — 比例・反比例の式への代入 — 3 variants / 3 PDFs
 
-各PDFは20問。今回新規は4技能 / 12PDF、中学1年累計は **16技能 / 48PDF**。
+各PDFは20問。今回新規は4技能 / 12PDFで、中学1年は **20技能 / 60PDF** まで到達し、PLAN.mdの計画済み反復技能を完了した。
 
 ## 教科配置
 
-現行の文部科学省「中学校学習指導要領」数学・第1学年の「数と式」に沿って、文字式への数の代入と一元一次方程式の基本計算を反復技能として配置した。
+現行の文部科学省「中学校学習指導要領」数学・第1学年の範囲を再確認した。第1学年では文字を用いた式・方程式と、比例・反比例の関係を扱う。今回の4技能はその機械的反復として配置した。
 
 ## 実装
 
-- `scripts/publish_jh1_substitution_linear_equations.py`
-  - 式への代入: `ax+b` に整数 `x` を代入して数値を求める。
-  - 一元一次方程式 基本: `ax+b=c` を整数解になるよう生成する。
-  - 移項だけの反復: `x+b=c` を反復する。
-  - かっこ付き一次方程式: `a(x+b)=c` を整数解になるよう生成する。
-  - 全問題をdeterministic seedから再生成可能。
-  - 保存済みanswerを信頼せず `independent_answer()` で再計算する。
-- `tests/test_jh1_substitution_linear_equations_publisher.py`
+- `scripts/publish_jh1_decimal_fraction_ratio.py`
+  - 小数一次方程式は0.1単位の整数スケールで保持し、浮動小数誤差を避けて独立解答する。
+  - 分数一次方程式は `Fraction` で厳密に独立再計算する。
+  - 比例式は `a:b=x:d` を整数比から生成し、交差積で一意に解ける。
+  - 比例・反比例の代入は各variantで比例10問・反比例10問。反比例は必ず整数で割り切れる値を生成する。
+- `tests/test_jh1_decimal_fraction_ratio_publisher.py`
   - deterministic再生成
   - independent answer recomputation
   - 問題内重複、variant間差、既存catalogとのnormalized content hash衝突検査
-  - 2ページPDF
-  - 通常整数の問題番号
-  - 問題ページと同一配置への赤字解答
-  - catalog validation / 冪等publish
+  - 比例/反比例10問ずつの構成確認
+  - 2ページPDF、通常整数番号、同一配置＋赤字解答、catalog validation、冪等publish
 - `.github/workflows/math-jh1-publish.yml`
-  - 新publisher/testを既存中1publisher、共通Factory回帰、共有catalog writer concurrency guardと同じworkflowへ追加。
+  - 新publisher/testを既存中1全publisher、共通Factory回帰、共有catalog writer concurrency guardと同じworkflowへ追加。
 
 ## 検証・公開
 
-- publisher commit: `f069a66fb468158bac404548940377358c759381`
-- test commit: `077c6673c6b0bcf66cac9807a8a2736906868087`
-- workflow commit: `5b45dfccc4cd8835c058992a55475bbb9858b320`
-- workflow run: `33091396085` — publish job success
-- publish commit: `db31430acdf34c30bf3d7171e00af9bdd0d4de7e`
+- publisher commit: `397dcfb31d43601d68d3468e7503eeb70978e11a`
+- test commit: `80f24e43d2eb74794b0e6bffcc7a866231bf6f37`
+- workflow commit: `7dab34e164ddf5b6ba4c007b6c1fd326002fccb5`
+- publish commit: `8a3db9e099779331662d2cb43822113b658667d2`
 
 公開commitには12PDFと12 catalog rowsが実際に追加されている。
 
+## 完了状態
+
+中学1年は `done`。
+
+座標の読み取りはPLAN上「自動生成適性を見て追加」の補助候補であり、計画済み必須反復技能の完了条件には含めない。必要なら将来の合法的な追加拡張として扱う。
+
 ## 次にやること
 
-次の未完了は `小数を含む一次方程式`。
+次のactive gradeは **中学2年**。
 
-次runでは安全なら最大4 checkpointとして以下まで進める。
+`curriculum/junior-high/grade-02/PLAN.md` の先頭から、次の最大4 checkpointを候補とする。
 
-1. 小数を含む一次方程式
-2. 分数を含む一次方程式
-3. 比例式型の方程式
-4. 比例・反比例の式への代入
+1. 単項式の乗法
+2. 単項式の除法
+3. 多項式の加法
+4. 多項式の減法
 
-同じFactory契約と共有catalog concurrency guardを維持する。
+現行MEXT第2学年の単元配置を確認してから、同じFactory契約と共有catalog concurrency guardを維持して進める。
