@@ -27,8 +27,11 @@ test('trainee reaction falls back to the same stage neutral asset', () => {
   assert.equal(catalog.resolveTrainee(3, 'correct'), '/trainee-stage-3.webp');
 });
 
-test('missing trainee stage falls back to stage zero when available', () => {
-  const catalog = new AssetCatalog({ [ASSET_IDS.TRAINEE_STAGE_0]: '/trainee-stage-0.webp' });
+test('missing trainee stage asset falls back to stage zero when available', () => {
+  const catalog = new AssetCatalog({
+    [ASSET_IDS.TRAINEE_STAGE_0]: '/trainee-stage-0.webp',
+    [ASSET_IDS.TRAINEE_STAGE_5]: null,
+  });
   assert.equal(catalog.resolveTrainee(5, 'complete'), '/trainee-stage-0.webp');
 });
 
