@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: **1,250**
-- Verified: **1,185**
+- Checked: **1,275**
+- Verified: **1,210**
 - Needs revision: **65**
 - Rejected: **0**
 - Unchecked `pending_validation`: **975**
@@ -14,7 +14,7 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.verb.modal_base_form` 0026-0050
+### `p5.verb.modal_base_form` 0051-0075
 
 - Checked: **25**
 - Verified: **25**
@@ -25,7 +25,7 @@ All 25 questions uniquely require the bare infinitive immediately after a modal 
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-025-modal-base-form-part2.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-025-modal-base-form-part3.qa.json`
 
 Full-bank semantic near-duplicate clearance is still not claimed. `verified` does not mean production-approved until the revision-bound cross-bank duplicate gate passes.
 
@@ -37,6 +37,6 @@ Continue the oldest unchecked micro-skill:
 
 Start ID:
 
-`p5_verb_modal_base_form_0051`
+`p5_verb_modal_base_form_0076`
 
 Continue independent re-solving in 25-question safe checkpoints before consulting stored answers/explanations. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
