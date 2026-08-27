@@ -66,11 +66,10 @@ def validate_image_url(url: str):
 
 def update_web_catalog():
     text = WEB_CATALOG.read_text(encoding="utf-8")
+    # Only neutral semantic IDs own the physical asset. Reaction IDs stay null so
+    # resolveSergeant/resolveTrainee preserve the existing neutral-fallback contract.
     replacements = {
         "[ASSET_IDS.SERGEANT_NEUTRAL]: null": "[ASSET_IDS.SERGEANT_NEUTRAL]: './assets/characters/irasutoya_sergeant_instructor.png'",
-        "[ASSET_IDS.SERGEANT_CORRECT]: null": "[ASSET_IDS.SERGEANT_CORRECT]: './assets/characters/irasutoya_sergeant_instructor.png'",
-        "[ASSET_IDS.SERGEANT_WRONG]: null": "[ASSET_IDS.SERGEANT_WRONG]: './assets/characters/irasutoya_sergeant_instructor.png'",
-        "[ASSET_IDS.SERGEANT_COMPLETE]: null": "[ASSET_IDS.SERGEANT_COMPLETE]: './assets/characters/irasutoya_sergeant_instructor.png'",
         "[ASSET_IDS.TRAINEE_STAGE_0]: null": "[ASSET_IDS.TRAINEE_STAGE_0]: './assets/characters/irasutoya_trainee_skinny.png'",
         "[ASSET_IDS.TRAINEE_STAGE_1]: null": "[ASSET_IDS.TRAINEE_STAGE_1]: './assets/characters/irasutoya_trainee_skinny.png'",
         "[ASSET_IDS.TRAINEE_STAGE_2]: null": "[ASSET_IDS.TRAINEE_STAGE_2]: './assets/characters/irasutoya_trainee_muscular.png'",
