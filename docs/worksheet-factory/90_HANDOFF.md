@@ -1,47 +1,47 @@
 # Worksheet Factory — handoff
 
-Updated: 2026-08-25
+Updated: 2026-08-27
 
-## Completed this run
+## Current factory state
 
-- Identified the target repository as `cureflash/homepage` and confirmed the current static-PDF/manual-card publication model.
-- Created the worksheet-factory instruction set under `docs/worksheet-factory/`.
-- Defined the target architecture: structured curriculum/catalog data → deterministic problem generator → independent answer validator → printable output → generated site listing.
-- Researched the current Japanese elementary, junior-high and high-school mathematics curriculum using Ministry of Education (MEXT) curriculum explanations.
-- Reviewed Chibimusu Drill's public elementary/junior-high category structure as a demand/taxonomy reference only; its worksheet content/layout/problem sets are not to be copied.
-- Added an explicit production map from elementary grade 1 through high-school grade 3 equivalent under `docs/worksheet-factory/curriculum/`.
-- Added concrete repetition-drill targets including elementary arithmetic, junior-high algebra, high-school factorization, degree↔radian conversion, trigonometric values, exponent/log calculations, sequences, vectors, differentiation/integration, and complex-number-plane calculations.
-- Clarified that high-school grade grouping is a site convenience, while worksheet metadata must retain the formal subject (`数学I/II/III/A/B/C`) because the national curriculum does not fix every subject to a single high-school year.
-- Updated master instructions so every scheduled run recursively reads all curriculum Markdown plans.
+The shared worksheet-factory foundation is operational and bulk publication is underway. The old note that generator/catalog implementation had not started is obsolete.
 
-## Curriculum plan tree
+Completed active grades:
 
-- `curriculum/elementary/grade-01/PLAN.md`
-- `curriculum/elementary/grade-02/PLAN.md`
-- `curriculum/elementary/grade-03/PLAN.md`
-- `curriculum/elementary/grade-04/PLAN.md`
-- `curriculum/elementary/grade-05/PLAN.md`
-- `curriculum/elementary/grade-06/PLAN.md`
-- `curriculum/junior-high/grade-01/PLAN.md`
-- `curriculum/junior-high/grade-02/PLAN.md`
-- `curriculum/junior-high/grade-03/PLAN.md`
-- `curriculum/high-school/grade-01/PLAN.md`
-- `curriculum/high-school/grade-02/PLAN.md`
-- `curriculum/high-school/grade-03/PLAN.md`
+- 小学1年: done
+- 小学2年: done
+- 小学3年: done
+- 小学4年: done
 
-## Implementation status
+The next active grade is **小学5年**.
 
-The curriculum/product map is ready. Generator/catalog implementation has not started yet, and no existing public worksheet/site behavior was changed by the curriculum-planning work.
+## Latest completed run
+
+小学4年の最後の3 checkpointを連続で完了した。
+
+1. `large-number-place-value` — 億・兆の位取り — 3 variants / 3 PDFs
+2. `rounding-estimation` — 概数・四捨五入 — 3 variants / 3 PDFs
+3. `grade4-review` — 小学4年 算数 総復習 — 3 variants / 3 PDFs
+
+All three use deterministic seeds, independent answer recomputation, duplicate/content-hash checks, 2-page PDFs, ordinary integer problem numbering, and answer pages that preserve the problem layout and add answers in red.
+
+Grade 4 final publication total: **19 skills / 57 PDFs**.
+
+The Grade 4 workflow runs all existing Grade 4 publishers, publisher tests, final-checkpoint tests, and `tests/test_worksheet_factory.py`. A transient test-design failure occurred because the combined final-checkpoint test treated the just-generated nine hashes as pre-existing hashes; this was corrected by excluding the three modules' own worksheet IDs from the baseline hash set. The corrected workflow passed and published the nine PDFs.
+
+- successful workflow run: `33034975154`
+- publish commit: `353a9652607eae4e177d8fe97d1964ccb1e9113f`
 
 ## Exact next starting point
 
-Start at `20_EXECUTION_PLAN.md` Phase 0:
+Read:
 
-1. inventory all current worksheet files and material links;
-2. add automatic broken-link/catalog validation;
-3. record stable existing worksheet URLs;
-4. proceed to Phase 1 structured catalog/list generation;
-5. build Phase 2 deterministic generation/answer-validation/duplicate-detection foundation;
-6. only then begin bulk publication using `curriculum/elementary/grade-01/PLAN.md` and advance grade by grade.
+- `curriculum/elementary/grade-05/STATUS.json`
+- `curriculum/elementary/grade-05/PLAN.md`
+- `curriculum/elementary/grade-05/HANDOFF.md` if present
 
-Do not mass-produce PDFs before the catalog/generator foundation exists. The production map is now explicit, so later runs should implement the factory first and then fill it in mechanically.
+Start with the first unfinished Grade 5 skill: **小数×小数**.
+
+Before implementation, confirm its placement and intended scope against the current MEXT elementary mathematics curriculum commentary. Then follow the existing factory contract: deterministic generation, independent answer validation, duplicate detection, 2-page printable PDF, same-layout red answers, catalog/site validation, and checkpoint tests.
+
+Do not reopen completed Grade 4 work unless a regression or audit finding requires it. Do not cross multiple active grades within one run merely to reach a checkpoint count.
