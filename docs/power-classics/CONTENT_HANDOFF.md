@@ -4,9 +4,9 @@
 - Shared runtime/backend authority: existing Power TOEIC Drill Engine; no classics-specific fork.
 - Taxonomy: `subjects/japanese/power-classics/data/taxonomy/classics-v1.json`
 - Taxonomy: 30 big categories / 100 atomic micro-skills.
-- Generated questions: 350
-- QA checked: 350
-- Verified: 350
+- Generated questions: 375
+- QA checked: 375
+- Verified: 375
 - Needs revision: 0
 - Rejected: 0
 - Unchecked pending_validation: 0
@@ -15,19 +15,19 @@
 - global duplicate gate: not complete
 
 ## This checkpoint — generation
-Completed `kobun.verb.conjugation_type.shimo_nidan` by persisting IDs 0076-0100, bringing this micro-skill to 100/100.
+Started `kobun.verb.conjugation_type.irregular` by persisting IDs 0001-0025, bringing this micro-skill to 25/100.
 
 New IDs:
-`kobun_verb_conjugation_type_shimo_nidan_0076` through `kobun_verb_conjugation_type_shimo_nidan_0100`
+`kobun_verb_conjugation_type_irregular_0001` through `kobun_verb_conjugation_type_irregular_0025`
 
 Batch:
-`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-shimo-nidan/pending/batch-20260828-010.json`
+`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-irregular/pending/batch-20260828-011.json`
 
-The final 25 restore breadth across 未然・連用・終止・連体・已然・命令 rather than over-concentrating on 命令形. They use attested lower-bigrade verbs including `受く・出づ・求む・捨つ・植う・見ゆ・聞こゆ・覚ゆ・絶ゆ・越ゆ・答ふ・与ふ・据う・飢う`. No invented verbs were introduced solely for diversity.
+Coverage explicitly separates the four classical irregular conjugations: カ変 `来`, サ変 `す・おはす`, ナ変 `死ぬ・往ぬ`, and ラ変 `あり・をり・侍り`. Forms span 未然・連用・終止・連体・已然・命令 where appropriate. No invented historical forms were added.
 
-One draft stem duplicated a prior question exactly (`ありのままに答へよ`); it was detected before QA and rewritten. Final exact stem duplicates within the new batch: 0.
+One draft stem `かくす` was rejected before QA because the surface string could be confused with the lexical verb `隠す`. It was rewritten as `学問をす`, making the intended サ変 lexeme explicit.
 
-Answer positions in this batch: A/B/C/D = 6/6/6/7. Combined with the prior 75 questions, the full `shimo_nidan` bank is exactly A/B/C/D = 25/25/25/25.
+Answer positions in this batch: A/B/C/D = 6/7/6/6.
 
 ## This checkpoint — QA
 Independently re-solved all 25 new questions from stem + choices before consulting stored answer/explanation.
@@ -38,20 +38,18 @@ Independently re-solved all 25 new questions from stem + choices before consulti
 - rejected: 0
 
 QA record:
-`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-010-shimo-nidan.qa.json`
+`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-011-irregular.qa.json`
 
-External grammar spot-checks reconfirmed the lower-bigrade e/e/u/uる/uれ/eよ pattern, ワ行下二段 `植う・飢う・据う`, and ヤ行下二段 `覚ゆ・絶ゆ・見ゆ` before finalizing the checkpoint.
+External grammar spot-checks reconfirmed the standard paradigms: カ変 `こ・き・く・くる・くれ・こ（よ）`, サ変 `せ・し・す・する・すれ・せよ`, ナ変 `な・に・ぬ・ぬる・ぬれ・ね`, ラ変 `ら・り・り・る・れ・れ`.
 
 ## Next generation
-`kobun.verb.conjugation_type.shimo_nidan` is complete at 100/100.
-
-Advance to taxonomy-next skill:
+Continue the same micro-skill:
 `kobun.verb.conjugation_type.irregular`
 
 Resume at:
-`kobun_verb_conjugation_type_irregular_0001`
+`kobun_verb_conjugation_type_irregular_0026`
 
-Target is 100 questions. Cover カ変・サ変・ナ変・ラ変 as separate, explicit contexts while avoiding forms whose surface alone would make the intended lexeme ambiguous. Keep answer positions balanced and do not invent historical forms.
+Target is 100 questions. Keep カ変・サ変・ナ変・ラ変 coverage explicit and broaden contexts without inventing forms or relying on visually ambiguous surface strings. Maintain balanced answer positions across the eventual 100-question bank.
 
 ## Next QA
 There is no unchecked Power古典 pending backlog at this checkpoint. Independently QA the oldest candidates generated in the next run.
