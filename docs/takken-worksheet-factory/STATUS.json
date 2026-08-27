@@ -13,15 +13,15 @@
   "generated_unit_count": 90,
   "question_generated_unit_count": 90,
   "generated_question_count": 163,
-  "checked_question_count": 102,
-  "verified_question_count": 102,
+  "checked_question_count": 127,
+  "verified_question_count": 127,
   "needs_revision_question_count": 0,
   "rejected_question_count": 0,
-  "pending_validation_question_count": 61,
-  "verified_unit_count": 59,
-  "pending_factcheck_count": 31,
+  "pending_validation_question_count": 36,
+  "verified_unit_count": 72,
+  "pending_factcheck_count": 18,
   "unverified_backlog": [
-    "real-estate-registration", "city-planning-area", "area-division", "use-districts", "city-planning-decisions", "development-permission-required", "development-permission-procedure", "building-confirmation", "roads-frontage", "building-coverage-ratio", "floor-area-ratio", "height-restrictions", "fire-prevention-zones", "national-land-use-notification", "farmland-act-article3", "farmland-act-articles4-5", "land-readjustment", "embankment-regulation", "legal-restrictions-comparison", "real-estate-acquisition-tax", "fixed-asset-tax", "registration-license-tax", "stamp-tax", "income-tax-real-estate-transfer", "land-price-public-notice", "real-estate-appraisal", "housing-finance-agency", "fair-competition-advertising", "land-building-knowledge", "statistics", "five-question-exemption-review"
+    "national-land-use-notification", "farmland-act-article3", "farmland-act-articles4-5", "land-readjustment", "embankment-regulation", "legal-restrictions-comparison", "real-estate-acquisition-tax", "fixed-asset-tax", "registration-license-tax", "stamp-tax", "income-tax-real-estate-transfer", "land-price-public-notice", "real-estate-appraisal", "housing-finance-agency", "fair-competition-advertising", "land-building-knowledge", "statistics", "five-question-exemption-review"
   ],
   "unit_generation_complete": true,
   "question_generation_complete": true,
@@ -44,12 +44,12 @@
     "next_unit": null
   },
   "validation_progress": {
-    "next_validation_question_id": "takken-q-60-002",
-    "checked_question_count": 102,
-    "verified_question_count": 102,
+    "next_validation_question_id": "takken-q-73-001",
+    "checked_question_count": 127,
+    "verified_question_count": 127,
     "needs_revision_question_count": 0,
     "rejected_question_count": 0,
-    "pending_validation_question_count": 61
+    "pending_validation_question_count": 36
   },
   "foundation": {
     "portable_site_shell": true,
@@ -63,7 +63,7 @@
   },
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
-  "last_completed_unit": "condominium-law",
-  "last_run_summary": "Phase 3 solve-all validation continued strictly from takken-q-48-001 through takken-q-60-001. Independently re-solved 25 questions covering sale earnest money, civil contract nonconformity, lease basics and deposits, lease opposability, ordinary and fixed-term land leases, building leases, fixed-term building leases, inheritance, renunciation, wills/reserved portions, condominium law, and the first real-estate-registration question. Current e-Gov Civil Code, Land and Building Lease Act, Condominium Act, and Ministry of Justice registration guidance were checked against the 2026-04-01 legal baseline. Results this run: checked 25, verified 25, needs_revision 0, rejected 0. Cumulative checked/verified is 102; pending is 61. Next strict question is takken-q-60-002. Phase 4 remains blocked until validation_complete is true.",
-  "updated_at": "2026-08-27T23:46:00+09:00"
+  "last_completed_unit": "fire-prevention-zones",
+  "last_run_summary": "Phase 3 solve-all validation continued strictly from takken-q-60-002 through takken-q-72-002, completing a 25-question safety checkpoint. The checked range covered real-estate-registration rights sections, city-planning and quasi-city-planning areas, area division, use districts, city-planning decision/business, development permission and completion procedure, building confirmation, roads/frontage, building coverage ratio, floor-area ratio, height restrictions, and fire/semi-fire prevention zones. The stored answers and explanations were compared against the 2026-04-01 legal baseline using current official/e-Gov materials; no item required correction. Results this run: checked 25, verified 25, needs_revision 0, rejected 0. Cumulative checked/verified is 127; pending is 36. Next strict question is takken-q-73-001. Phase 4 remains blocked until validation_complete is true.",
+  "updated_at": "2026-08-28T00:28:00+09:00"
 }
