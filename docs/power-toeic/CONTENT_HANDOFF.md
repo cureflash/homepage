@@ -15,11 +15,11 @@
 ## Current canonical state
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
-- Completed generated micro-skills: **20 / 44**
-- Generated questions: **2,000**
-- QA checked: **1,000**
-- Verified: **960**
-- Needs revision: **40**
+- Completed generated micro-skills: **21 / 44**
+- Generated questions: **2,100**
+- QA checked: **1,100**
+- Verified: **1,040**
+- Needs revision: **60**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
 - `generation_complete`: `false`
@@ -27,54 +27,63 @@
 
 ## This checkpoint — generation
 
-Completed `p5.conn.because_vs_because_of` by generating IDs **0076-0100** under:
+Completed `p5.conn.despite_vs_although` by generating IDs **0001-0100** under four 25-question checkpoints:
 
-`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/because-vs-because-of/pending/batch-20260827-021-part4.json`
+- `subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/despite-vs-although/pending/batch-20260827-022-part1.json`
+- `subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/despite-vs-although/pending/batch-20260827-022-part2.json`
+- `subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/despite-vs-although/pending/batch-20260827-022-part3.json`
+- `subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/despite-vs-although/pending/batch-20260827-022-part4.json`
 
-This brings the micro-skill to **100/100 persisted**. The checkpoint continues the intended distinction: noun phrases require `because of`, while complete clauses require `because`. Contexts include finance, hospitality, engineering, recruiting, healthcare, procurement, warehousing, insurance, logistics, banking, publishing, manufacturing, museums, software, legal, property management, and research.
+The 100 items distinguish `despite` before noun/gerund phrases from `although` before complete clauses. Business contexts span finance, hospitality, logistics, manufacturing, recruiting, healthcare, publishing, banking, software, facilities, research, events, procurement, retail, and professional services.
 
-Checkpoint properties:
-- IDs 0076-0100 are sequential and unique within the checkpoint
+Generation checks for the 100-question skill:
+- IDs 0001-0100 are sequential and unique
 - one cloze per item
-- four distinct choices per item
-- all 25 remain `pending_validation`
-- no production approval is implied by generation
+- four distinct visible choices per item
+- answer positions A/B/C/D = **25/25/25/25**
+- exact duplicate stems = **0**
+- SequenceMatcher pairs >= 0.94 = **0**
+- maximum within-skill stem similarity approximately **0.627**
+- all 100 remain `pending_validation`
 
-Full semantic cross-bank near-duplicate scanning across all 2,000 candidates is still **not completed**. Do not claim global duplicate clearance from this checkpoint alone.
+Full semantic cross-bank near-duplicate scanning across all 2,100 candidates is still **not completed**. Do not claim global duplicate clearance from this checkpoint alone.
 
 ## This checkpoint — QA
 
-Independently reviewed the oldest unchecked `p5.verb.present_vs_past` IDs **0076-0100**, solving each from stem + choices before consulting the stored proposed answer/explanation.
+Independently reviewed the oldest unchecked `p5.verb.present_perfect_vs_past` IDs **0001-0100**, solving each from stem + choices before consulting the stored proposed answer/explanation.
 
 Result:
-- Checked: **25**
-- Verified: **21**
-- Needs revision: **4**
+- Checked: **100**
+- Verified: **80**
+- Needs revision: **20**
 - Rejected: **0**
 
-Needs revision:
-- `p5_verb_present_vs_past_0080`: `after the stock check on Tuesday` does not uniquely establish completed past time. Use `last Tuesday` or another explicit past marker.
-- `p5_verb_present_vs_past_0083`: `immediately after Monday's complaint` is not sufficiently anchored. Use `last Monday` or another explicit past marker.
-- `p5_verb_present_vs_past_0085`: `early Monday morning` does not explicitly identify Monday as past. Use `early last Monday morning` or another completed-past cue.
-- `p5_verb_present_vs_past_0094`: `before Friday's dinner service` can still support a present/future scheduling reading. Use `before last Friday's dinner service` or another explicit past marker.
+The 50 simple-past-target items use explicit completed-past anchors such as `yesterday`, `last month`, `last Friday`, `two weeks ago`, `in 2024`, `during last year's audit`, and `in March 2025`, and passed the independent check. Present-perfect items using strong continuing-to-present cues such as `so far this week`, `since ...`, `up to now`, and `over the past three months` also passed.
 
-The other 21 items contain explicit completed-past cues and their stored answer keys/explanations matched the independent solutions.
+The 20 needs-revision items repeat four cue families that do not uniquely force present perfect over simple past in standard business English:
+
+- `already`: IDs 0001, 0011, 0021, 0031, 0041
+- `during the current quarter`: IDs 0002, 0012, 0022, 0032, 0042
+- `this year`: IDs 0003, 0013, 0023, 0033, 0043
+- `recently`: IDs 0005, 0015, 0025, 0035, 0045
+
+Use stronger cues such as `so far this quarter`, `so far this year`, `as of today`, `up to now`, or `so far this week`, then independently re-solve before changing any item to verified.
 
 QA record:
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-021-part4-present-vs-past.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-022-present-perfect-vs-past.qa.json`
 
 ## Next generation
 
-`p5.conn.despite_vs_although`
+`p5.conn.during_vs_while`
 
 Start ID:
 
-`p5_conn_despite_vs_although_0001`
+`p5_conn_during_vs_while_0001`
 
 ## Next QA
 
-`p5.verb.present_perfect_vs_past`
+`p5.verb.active_vs_passive`
 
 Start ID:
 
-`p5_verb_present_perfect_vs_past_0001`
+`p5_verb_active_vs_passive_0001`
