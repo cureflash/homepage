@@ -68,10 +68,10 @@ Before each grade, verify current Japanese curriculum placement with authoritati
 - [ ] publish/register multiple variants.
 
 ### Grade 5
-- [ ] decimal multiplication/division;
-- [ ] fraction operations appropriate to grade;
-- [ ] mixed calculation drills;
-- [ ] publish/register multiple variants.
+- [x] decimal multiplication/division;
+- [x] fraction operations appropriate to grade;
+- [x] mixed calculation drills;
+- [x] publish/register multiple variants.
 
 ### Grade 6
 - [ ] fraction multiplication/division and other grade-appropriate arithmetic;
@@ -146,3 +146,4 @@ Acceptance: factory can continue adding new validated calculation worksheets fro
 ## Progress log
 
 - 2026-08-25: factory instruction set created; implementation/generation not yet started.
+- 2026-08-27: Grade 5 planned worksheet coverage completed at 16 skills / 48 PDFs; next active grade is Grade 6.
