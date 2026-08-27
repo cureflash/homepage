@@ -58,7 +58,6 @@ class ScienceFormulaRelationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "three unique inputs"):
             generate_formula_drill(bad, 9905, 1, solve_for="y")
 
-
     def test_square_over_double_direct_and_reverse(self):
         spec = {
             "id": "test-square-over-double", "relation": "square-over-double",
@@ -97,6 +96,28 @@ class ScienceFormulaRelationTests(unittest.TestCase):
                 self.assertAlmostEqual(problem["answer"], expected)
                 self.assertTrue(validate_science_problem(problem))
 
+    def test_equal_products_direct_and_all_reverse_directions(self):
+        spec = {
+            "id": "test-equal-products", "relation": "equal-products",
+            "result": "f1", "inputs": ["d1", "f2", "d2"],
+            "variables": {
+                "f1": {"label": "f1", "unit": "N"},
+                "d1": {"label": "d1", "unit": "m", "values": [0.5, 1, 2]},
+                "f2": {"label": "f2", "unit": "N", "values": [8, 16, 32]},
+                "d2": {"label": "d2", "unit": "m", "values": [0.5, 1, 2]},
+            }, "tolerance": 1e-9,
+        }
+        for solve_for in ("f1", "d1", "f2", "d2"):
+            for problem in generate_formula_drill(spec, 9913, 20, solve_for=solve_for):
+                known = problem["known"]
+                if solve_for == "f1": expected = known["f2"] * known["d2"] / known["d1"]
+                elif solve_for == "d1": expected = known["f2"] * known["d2"] / known["f1"]
+                elif solve_for == "f2": expected = known["f1"] * known["d1"] / known["d2"]
+                else: expected = known["f1"] * known["d1"] / known["f2"]
+                self.assertAlmostEqual(problem["answer"], expected)
+                self.assertAlmostEqual(problem["answer_spec"]["value"], expected)
+                self.assertTrue(validate_science_problem(problem))
+
     def test_new_relation_wrong_arity_is_rejected(self):
         for relation in ("square-over-double", "double-quotient"):
             spec = {
@@ -105,6 +126,17 @@ class ScienceFormulaRelationTests(unittest.TestCase):
             }
             with self.assertRaisesRegex(ValueError, "two unique inputs"):
                 generate_formula_drill(spec, 9912, 1, solve_for="r")
+
+        equal_products = {
+            "id": "bad-equal-products", "relation": "equal-products", "result": "r", "inputs": ["x", "y"],
+            "variables": {
+                "r": {"label": "r"},
+                "x": {"label": "x", "values": [1]},
+                "y": {"label": "y", "values": [1]},
+            },
+        }
+        with self.assertRaisesRegex(ValueError, "three unique inputs"):
+            generate_formula_drill(equal_products, 9914, 1, solve_for="r")
 
 
 if __name__ == "__main__":

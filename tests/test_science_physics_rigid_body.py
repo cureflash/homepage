@@ -22,14 +22,15 @@ class PhysicsRigidBodyTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_four_checkpoints_total_one_hundred_twenty_variants(self):
+    def test_five_checkpoints_total_one_hundred_sixty_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 120)
+        self.assertEqual(len(batches), 160)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
         counts = {key: 0 for key in PHYSICS_RIGID_BODY_TOPICS}
         for topic_key, *_ in batches:
             counts[topic_key] += 1
-        self.assertEqual(set(counts.values()), {30})
+        self.assertEqual(counts["rigid-body-two-force-moment-balance"], 40)
+        self.assertEqual({count for key, count in counts.items() if key != "rigid-body-two-force-moment-balance"}, {30})
 
     def test_deterministic_regeneration_and_validation(self):
         for topic_key, mode_key, variant, seed, problems in self.generated_batches():
@@ -62,6 +63,11 @@ class PhysicsRigidBodyTests(unittest.TestCase):
                     if solve_for == "net_moment": expected = known["counterclockwise_moment"] - known["clockwise_moment"]
                     elif solve_for == "counterclockwise_moment": expected = known["net_moment"] + known["clockwise_moment"]
                     else: expected = known["counterclockwise_moment"] - known["net_moment"]
+                elif topic_key == "rigid-body-two-force-moment-balance":
+                    if solve_for == "left_force": expected = known["right_force"] * known["right_arm"] / known["left_arm"]
+                    elif solve_for == "left_arm": expected = known["right_force"] * known["right_arm"] / known["left_force"]
+                    elif solve_for == "right_force": expected = known["left_force"] * known["left_arm"] / known["right_arm"]
+                    else: expected = known["left_force"] * known["left_arm"] / known["right_force"]
                 else:
                     self.fail(topic_key)
                 self.assertAlmostEqual(problem["answer"], expected, msg=(topic_key, mode_key, variant))
@@ -69,8 +75,8 @@ class PhysicsRigidBodyTests(unittest.TestCase):
 
     def test_normalized_hashes_unique_and_disjoint_from_existing_series(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 120)
-        self.assertEqual(len(set(hashes)), 120)
+        self.assertEqual(len(hashes), 160)
+        self.assertEqual(len(set(hashes)), 160)
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
         current_ids = {f"science-physics-motion-{topic_key}-{mode_key}-{variant:02d}" for topic_key, topic in PHYSICS_RIGID_BODY_TOPICS.items() for mode_key in topic["modes"] for variant, _ in enumerate(topic["seeds"], start=1)}
         prior_hashes = {row["content_hash"] for row in catalog if row.get("id") not in current_ids}
@@ -78,7 +84,7 @@ class PhysicsRigidBodyTests(unittest.TestCase):
 
     def test_scope_units_geometry_and_sign_convention(self):
         self.assertEqual(set(PHYSICS_RIGID_BODY_TOPICS), {
-            "rigid-body-force-moment", "rigid-body-weight-moment", "rigid-body-couple-moment", "rigid-body-signed-net-moment",
+            "rigid-body-force-moment", "rigid-body-weight-moment", "rigid-body-couple-moment", "rigid-body-signed-net-moment", "rigid-body-two-force-moment-balance",
         })
         for topic in PHYSICS_RIGID_BODY_TOPICS.values():
             self.assertEqual(topic["unit"], "様々な運動：剛体のつり合い")
@@ -97,6 +103,10 @@ class PhysicsRigidBodyTests(unittest.TestCase):
         self.assertEqual(weight_moment["spec"]["variables"]["gravity"]["values"], [9.8])
         couple = PHYSICS_RIGID_BODY_TOPICS["rigid-body-couple-moment"]
         self.assertTrue(all("作用線" in mode["description"] for mode in couple["modes"].values()))
+        balance = PHYSICS_RIGID_BODY_TOPICS["rigid-body-two-force-moment-balance"]
+        self.assertEqual(balance["spec"]["relation"], "equal-products")
+        self.assertEqual(set(mode["solve_for"] for mode in balance["modes"].values()), {"left_force", "left_arm", "right_force", "right_arm"})
+        self.assertTrue(all("F₁d₁ = F₂d₂" in mode["description"] and "正味のモーメントが0" in mode["description"] for mode in balance["modes"].values()))
         units = {definition["unit"] for topic in PHYSICS_RIGID_BODY_TOPICS.values() for definition in topic["spec"]["variables"].values() if definition.get("unit")}
         self.assertEqual(units, {"N·m", "N", "m", "kg", "m/s²"})
 
@@ -110,6 +120,16 @@ class PhysicsRigidBodyTests(unittest.TestCase):
         self.assertTrue(any(value > 0 for value in values))
         self.assertTrue(any(value < 0 for value in values))
         self.assertTrue(any(value == 0 for value in values))
+
+    def test_two_force_balance_has_exactly_equal_opposing_moments(self):
+        topic = PHYSICS_RIGID_BODY_TOPICS["rigid-body-two-force-moment-balance"]
+        for mode in topic["modes"].values():
+            for seed in topic["seeds"]:
+                problems = generate_formula_drill(topic["spec"], seed, PHYSICS_RIGID_BODY_PROBLEM_COUNT, solve_for=mode["solve_for"])
+                for problem in problems:
+                    values = dict(problem["known"])
+                    values[problem["solve_for"]] = problem["answer"]
+                    self.assertAlmostEqual(values["left_force"] * values["left_arm"], values["right_force"] * values["right_arm"])
 
     def test_corrupted_answers_are_rejected(self):
         for topic_key, topic in PHYSICS_RIGID_BODY_TOPICS.items():

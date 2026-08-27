@@ -20,6 +20,7 @@ FORMULA_RELATIONS = {
     'linear-plus-half-quadratic',
     'square-over-double',
     'double-quotient',
+    'equal-products',
 }
 
 
@@ -76,6 +77,13 @@ def _relation_result(relation, inputs):
         if divisor == 0:
             raise ValueError('double-quotient divisor must not be zero')
         return 2 * numerator / divisor
+    if relation == 'equal-products':
+        if len(inputs) != 3:
+            raise ValueError('equal-products needs exactly left arm, right force, and right arm')
+        left_arm, right_force, right_arm = inputs
+        if left_arm == 0:
+            raise ValueError('equal-products left arm must not be zero')
+        return right_force * right_arm / left_arm
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -162,6 +170,22 @@ def _generation_formula_answer(relation, result_name, input_names, values, solve
             if values[result_name] == 0:
                 raise ValueError('cannot solve double-quotient divisor with zero result')
             return 2 * values[numerator_name] / values[result_name]
+    if relation == 'equal-products':
+        if len(input_names) != 3:
+            raise ValueError('equal-products needs exactly three inputs')
+        left_arm_name, right_force_name, right_arm_name = input_names
+        if solve_for == left_arm_name:
+            if values[result_name] == 0:
+                raise ValueError('cannot solve equal-products left arm with zero left force')
+            return values[right_force_name] * values[right_arm_name] / values[result_name]
+        if solve_for == right_force_name:
+            if values[right_arm_name] == 0:
+                raise ValueError('cannot solve equal-products right force with zero right arm')
+            return values[result_name] * values[left_arm_name] / values[right_arm_name]
+        if solve_for == right_arm_name:
+            if values[right_force_name] == 0:
+                raise ValueError('cannot solve equal-products right arm with zero right force')
+            return values[result_name] * values[left_arm_name] / values[right_force_name]
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -190,6 +214,9 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
     if relation in {'square-over-double', 'double-quotient'}:
         if len(input_names) != 2 or len(set(input_names)) != 2:
             raise ValueError(f'{relation} needs two unique inputs')
+    if relation == 'equal-products':
+        if len(input_names) != 3 or len(set(input_names)) != 3:
+            raise ValueError('equal-products needs three unique inputs')
     if result_name not in variables or any(name not in variables for name in input_names):
         raise ValueError('all formula variables need definitions')
     if solve_for not in [result_name, *input_names]:
@@ -432,6 +459,22 @@ def compute_science_answer(problem):
                 if known[result_name] == 0:
                     raise ValueError('cannot solve double-quotient divisor with zero result')
                 return 2 * known[numerator_name] / known[result_name]
+        if relation == 'equal-products':
+            if len(input_names) != 3:
+                raise ValueError('equal-products needs exactly three inputs')
+            left_arm_name, right_force_name, right_arm_name = input_names
+            if solve_for == left_arm_name:
+                if known[result_name] == 0:
+                    raise ValueError('cannot solve equal-products left arm with zero left force')
+                return known[right_force_name] * known[right_arm_name] / known[result_name]
+            if solve_for == right_force_name:
+                if known[right_arm_name] == 0:
+                    raise ValueError('cannot solve equal-products right force with zero right arm')
+                return known[result_name] * known[left_arm_name] / known[right_arm_name]
+            if solve_for == right_arm_name:
+                if known[right_force_name] == 0:
+                    raise ValueError('cannot solve equal-products right arm with zero right force')
+                return known[result_name] * known[left_arm_name] / known[right_force_name]
         raise ValueError(f'unsupported formula relation: {relation}')
 
     source = problem['source']

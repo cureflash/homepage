@@ -1,9 +1,9 @@
 """Formal-course Physics topics for rigid-body equilibrium.
 
 This module covers machine-verifiable rigid-body checkpoints: force moment,
-weight moment, couple moment, and signed net moment about one pivot.  Lever-arm
-geometry is learner-visible.  For signed moments the convention is explicitly
-counterclockwise positive and clockwise negative.
+weight moment, couple moment, signed net moment about one pivot, and two-force
+moment equilibrium. Lever-arm geometry is learner-visible. For signed moments
+the convention is explicitly counterclockwise positive and clockwise negative.
 
 Curriculum basis: MEXT High School Course of Study Commentary, Science / Math,
 Physics (1) Various motions: plane motion and equilibrium of rigid bodies.
@@ -81,6 +81,32 @@ PHYSICS_RIGID_BODY_TOPICS = {
             "basic-net-moment": {"solve_for": "net_moment", "worksheet_mode": "calculation-basic", "description": "反時計回りを正、時計回りを負とする符号規約で、M_net = M_CCW - M_CW から支点まわりの正味のモーメントを求めます。"},
             "reverse-counterclockwise-moment": {"solve_for": "counterclockwise_moment", "worksheet_mode": "calculation-reverse", "description": "反時計回りを正、時計回りを負とする符号規約で、正味のモーメントと時計回りモーメントから反時計回りモーメントの大きさを逆算します。"},
             "reverse-clockwise-moment": {"solve_for": "clockwise_moment", "worksheet_mode": "calculation-reverse", "description": "反時計回りを正、時計回りを負とする符号規約で、正味のモーメントと反時計回りモーメントから時計回りモーメントの大きさを逆算します。"},
+        },
+    },
+    "rigid-body-two-force-moment-balance": {
+        "title": "物理 剛体 2力のモーメントのつり合い",
+        "unit": "様々な運動：剛体のつり合い",
+        "skill": "rigid-body-two-force-moment-balance",
+        "formula": "F₁d₁ = F₂d₂（反時計回りを正、時計回りを負、正味のモーメント0）",
+        "seeds": tuple(range(7341, 7351)),
+        "spec": {
+            "id": "physics-rigid-body-two-force-moment-balance",
+            "relation": "equal-products",
+            "result": "left_force",
+            "inputs": ["left_arm", "right_force", "right_arm"],
+            "variables": {
+                "left_force": {"label": "反時計回りにはたらく左側の力 F₁", "unit": "N"},
+                "left_arm": {"label": "支点から左側の力 F₁ の作用線までの垂直距離 d₁", "unit": "m", "values": [0.25, 0.5, 1.0, 2.0]},
+                "right_force": {"label": "時計回りにはたらく右側の力 F₂", "unit": "N", "values": [8, 12, 16, 20, 24, 32, 40, 48, 64, 80]},
+                "right_arm": {"label": "支点から右側の力 F₂ の作用線までの垂直距離 d₂", "unit": "m", "values": [0.25, 0.5, 1.0, 2.0]},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "balance-left-force": {"solve_for": "left_force", "worksheet_mode": "calculation-basic", "description": "反時計回りを正、時計回りを負とし、正味のモーメントが0である2力のつり合い F₁d₁ = F₂d₂ から左側の力 F₁ を求めます。"},
+            "balance-left-arm": {"solve_for": "left_arm", "worksheet_mode": "calculation-reverse", "description": "反時計回りを正、時計回りを負とし、正味のモーメントが0である2力のつり合い F₁d₁ = F₂d₂ から左側の腕 d₁ を逆算します。"},
+            "balance-right-force": {"solve_for": "right_force", "worksheet_mode": "calculation-reverse", "description": "反時計回りを正、時計回りを負とし、正味のモーメントが0である2力のつり合い F₁d₁ = F₂d₂ から右側の力 F₂ を逆算します。"},
+            "balance-right-arm": {"solve_for": "right_arm", "worksheet_mode": "calculation-reverse", "description": "反時計回りを正、時計回りを負とし、正味のモーメントが0である2力のつり合い F₁d₁ = F₂d₂ から右側の腕 d₂ を逆算します。"},
         },
     },
 }
