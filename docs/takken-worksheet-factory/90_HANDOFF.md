@@ -4,7 +4,7 @@
 
 Phase 1 unit generation, Phase 2 core-fact four-choice question generation, and Phase 3 solve-all independent validation are complete. All 163 current questions have been independently checked and verified; `pending_validation` is zero and `validation_complete: true`.
 
-Phase 4 Power宅建 knowledge / print / app integration is active. Phase 4.1 Concept inventory has started and is intentionally being completed before any Phase 4.2 knowledge-item decomposition, 50-question expansion, print generation, or app linkage.
+Phase 4 Power宅建 knowledge / print / app integration is active. Phase 4.1 Concept inventory is being completed before any Phase 4.2 knowledge-item decomposition, 50-question expansion, print generation, or app linkage.
 
 Canonical docs: `00_MASTER_INSTRUCTIONS.md`, `20_EXECUTION_PLAN.md`, `30_QUESTION_AND_QA_SPEC.md`, `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`, `STATUS.json`, `90_HANDOFF.md`.
 Canonical implementation: `qualifications/takken/`.
@@ -14,21 +14,21 @@ Canonical Phase 4 concept inventory: `qualifications/takken/data/power-concepts.
 
 Re-read latest `main` and confirmed the Phase 4 gate remains satisfied: 90/90 units generated, 163/163 questions checked and verified, pending 0, `validation_complete: true`.
 
-Started Phase 4.1 only. Canonical units 1 through 30 were reviewed in order together with their Phase 2/3 verified-question evidence and normalized into **37 `exam_concept` entries**.
+Continued Phase 4.1 only. Canonical units **31 through 50** were reviewed in order against their existing verified Phase 2/3 question evidence and normalized into **27 additional `exam_concept` entries**. Cumulative inventory is now **64 concepts covering units 1-50**.
 
-The inventory deliberately does not use one unit = one concept. Compound units were split where independent study value warrants separate 50-question topics, for example:
+The new inventory continues the rule that one canonical unit does not automatically equal one concept. Compound units were split only where separate 50-question study/drill value exists. Notable splits in this checkpoint include:
 
-- 宅建業者名簿 / 標識
-- 免許換え / 変更届・廃業等
-- 媒介契約書面 / 媒介価額の根拠
-- 一般媒介 / 専任媒介 / 専属専任媒介
-- REINS登録 / 業務処理状況報告
-- 重要事項説明の時期・主体・方法 / 35条説明事項
-- 手付額上限 / 手付金等の保全措置
+- 割賦販売の解除制限 / 所有権留保等の制限
+- 詐欺 / 強迫
+- 心裡留保 / 通謀虚偽表示
+- 未成年者 / 成年被後見人
+- 無権代理 / 表見代理
+- 取得時効 / 消滅時効
+- 同時履行の抗弁権 / 危険負担
 
-Conversely, isolated values such as `5年間`, `30日以内`, `20%`, or authority names were kept inside their parent concepts rather than promoted to standalone 50-question topics.
+Conversely, `30日以上`, `30%`, `20年`, `10年`, `5年`, `50年` 等の数値断片は独立conceptにせず、それぞれの制度concept配下へ残しています。
 
-`power-concepts.js` currently contains 37 stable semantic `conceptId` entries with `title`, `category`, `sourceUnits`, `scopeNote`, `examYear: 2026`, `lawAsOf: "2026-04-01"`, and an inventory-stage status. Runtime guards reject duplicate IDs, empty source-unit mappings, or an unexpected checkpoint count.
+`power-concepts.js` now contains 64 stable semantic `conceptId` entries with `title`, `category`, `sourceUnits`, `scopeNote`, `examYear: 2026`, `lawAsOf: "2026-04-01"`, and inventory-stage status. Runtime guards reject duplicate IDs, empty source-unit mappings, or an unexpected checkpoint count.
 
 No Phase 4.2 `knowledge_items`, no new drill questions, no detailed explanation migration, no prints, and no app linkage were created in this run.
 
@@ -39,19 +39,19 @@ No Phase 4.2 `knowledge_items`, no new drill questions, no detailed explanation 
 - Phase 3: complete — checked 163 / verified 163 / needs_revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1 concept inventory: active
-- Concept inventory checkpoint: unit 1-30 covered
-- Normalized concepts so far: **37**
-- Next canonical unit: **31 `installment-sale-restrictions`**
+- Concept inventory checkpoint: unit 1-50 covered
+- Normalized concepts so far: **64**
+- Next canonical unit: **51 `lease-deposit-opposability`**
 - Phase 4.2 knowledge items: not started
 - Phase 4.3 fifty-question expansion: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.1 from canonical unit 31 `installment-sale-restrictions`.
+Continue Phase 4.1 from canonical unit 51 `lease-deposit-opposability`.
 
 1. Read `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md` as the governing Phase 4 specification.
-2. Review units 31 onward in canonical order and the corresponding verified Phase 2/3 questions.
+2. Review units 51 onward in canonical order and the corresponding verified Phase 2/3 questions.
 3. Add independently useful `exam_concept` entries to `qualifications/takken/data/power-concepts.js`.
 4. Split compound units only where the resulting topic has independent study/50-question value; do not create number-only or word-only concepts.
 5. Keep exact concept count driven by actual extraction, not the initial 250-300 estimate.
