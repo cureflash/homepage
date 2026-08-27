@@ -1,0 +1,64 @@
+name: Power TOEIC Vendor Audio
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/power-toeic-vendor-audio.yml'
+      - 'subjects/english/power-toeic-ios/**'
+
+permissions:
+  contents: write
+
+jobs:
+  vendor-audio:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Download exact OtoLogic sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest='subjects/english/power-toeic-ios/Sources/PowerTOEIC/Resources/Audio'
+          mkdir -p "$dest"
+
+          curl --fail --location --retry 3 \
+            'https://otologic.jp/sounds/se/pre2/Quiz-Ding_Dong05-1(Fast-Short).mp3' \
+            --output "$dest/otologic_correct.mp3"
+          curl --fail --location --retry 3 \
+            'https://otologic.jp/sounds/se/pre2/Quiz-Buzzer05-1(Mid).mp3' \
+            --output "$dest/otologic_incorrect.mp3"
+          curl --fail --location --retry 3 \
+            'https://otologic.jp/sounds/se/pre2/Inspiration11-1(Low).mp3' \
+            --output "$dest/otologic_inspiration.mp3"
+
+      - name: Verify against connected Drive copies
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd subjects/english/power-toeic-ios/Sources/PowerTOEIC/Resources/Audio
+          cat > /tmp/power-toeic-audio.sha256 <<'EOF'
+          f7f32f869b46cbd7263e4f508dc1526f52700bccdd2de99db10f9e192327edc1  otologic_correct.mp3
+          e31188cc16c426d7ef7284379feed55b5fd54e67f7c2358df51798204f581f6c  otologic_incorrect.mp3
+          a1386360174a91c76ca9c35764d77a7998008546486ce52797143b4d8c5bb62a  otologic_inspiration.mp3
+          EOF
+          sha256sum -c /tmp/power-toeic-audio.sha256
+
+      - name: Commit verified resources to PR branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- subjects/english/power-toeic-ios/Sources/PowerTOEIC/Resources/Audio)" ]; then
+            echo 'Verified audio resources already match the repository.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add subjects/english/power-toeic-ios/Sources/PowerTOEIC/Resources/Audio
+          git commit -m 'chore(power-toeic): vendor verified OtoLogic audio'
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
