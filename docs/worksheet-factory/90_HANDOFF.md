@@ -8,6 +8,8 @@ The former P1 concurrent-writer risk on authoritative `worksheets/catalog.json` 
 
 All workflows that directly publish the shared worksheet catalog must use repository-wide GitHub Actions concurrency group `worksheet-catalog-publish-v1` with `cancel-in-progress: false`. Preserve `tests/test_worksheet_catalog_writer_concurrency.py`, latest-main reconciliation, non-force pushes, catalog/hash validation, and stable URLs.
 
+The new JH2 writer `.github/workflows/math-jh2-publish.yml` is registered in that repository-wide guard.
+
 ## Current math factory state
 
 Completed grades:
@@ -20,34 +22,33 @@ Completed grades:
 - 小学6年: done
 - 中学1年: done
 
-中学1年の計画済み範囲は **20 skills / 60 PDFs** で完了した。
+Active grade: **中学2年** — in progress.
+
+Current JH2 publication: **4 skills / 12 PDFs**.
 
 Latest completed batch:
 
-- `linear-equation-decimal` — 小数を含む一次方程式 — 3 PDFs
-- `linear-equation-fraction` — 分数を含む一次方程式 — 3 PDFs
-- `proportion-equation` — 比例式型の方程式 — 3 PDFs
-- `proportional-inverse-substitution` — 比例・反比例の式への代入 — 3 PDFs
+- `monomial-multiplication` — 単項式の乗法 — 3 PDFs
+- `monomial-division` — 単項式の除法 — 3 PDFs
+- `polynomial-addition` — 多項式の加法 — 3 PDFs
+- `polynomial-subtraction` — 多項式の減法 — 3 PDFs
 
-各PDFは20問。deterministic seed、independent answer recomputation、problem/variant/content-hash duplicate checks、2-page PDFs、ordinary integer numbering、same-layout red answers、catalog validation、common Factory regression、catalog-writer concurrency validationを維持した。
+Each PDF contains 20 problems. The batch preserves deterministic seeds, independent answer recomputation, problem/variant/content-hash duplicate checks, 2-page PDFs, ordinary integer numbering, same-layout red answers, catalog validation, common Factory regression, and the shared catalog-writer concurrency guard.
 
-Publish commit: `8a3db9e099779331662d2cb43822113b658667d2`.
+The first workflow attempt correctly failed because the new JH2 catalog writer was not yet present in the explicit writer allowlist. `tests/test_worksheet_catalog_writer_concurrency.py` was updated to register `math-jh2-publish.yml`, and attempt 2 passed all steps.
+
+- successful workflow run: `33101526841` attempt 2
+- publish commit: `f532ab79ec37fdd37372617583fe60f047733c00`
 
 ## Exact next starting point
 
-The next active grade is **中学2年**.
+Continue in **中学2年** from the first unfinished skill: **多項式×数**.
 
-Read only:
+The next four candidates are:
 
-- `curriculum/junior-high/grade-02/STATUS.json`
-- `curriculum/junior-high/grade-02/PLAN.md`
-- `curriculum/junior-high/grade-02/HANDOFF.md` if present
+1. 多項式×数
+2. 式の四則混合
+3. 式への代入
+4. 連立方程式 加減法 基本
 
-Start from the first unfinished Grade 2 junior-high skill. The first four candidates are:
-
-1. 単項式の乗法
-2. 単項式の除法
-3. 多項式の加法
-4. 多項式の減法
-
-Before publication, confirm placement against the current MEXT junior-high mathematics curriculum. Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
+Before crossing into simultaneous equations, confirm placement/scope against current MEXT junior-high mathematics guidance. Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
