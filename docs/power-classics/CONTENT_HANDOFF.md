@@ -4,9 +4,9 @@
 - Shared runtime/backend authority: existing Power TOEIC Drill Engine; no classics-specific fork.
 - Taxonomy: `subjects/japanese/power-classics/data/taxonomy/classics-v1.json`
 - Taxonomy: 30 big categories / 100 atomic micro-skills.
-- Generated questions: 275
-- QA checked: 275
-- Verified: 275
+- Generated questions: 300
+- QA checked: 300
+- Verified: 300
 - Needs revision: 0
 - Rejected: 0
 - Unchecked pending_validation: 0
@@ -15,20 +15,20 @@
 - global duplicate gate: not complete
 
 ## This checkpoint — generation
-Started `kobun.verb.conjugation_type.shimo_nidan` and persisted IDs 0001-0025 (25/100).
+Continued `kobun.verb.conjugation_type.shimo_nidan` and persisted IDs 0026-0050, bringing this micro-skill to 50/100.
 
 New IDs:
-`kobun_verb_conjugation_type_shimo_nidan_0001` through `kobun_verb_conjugation_type_shimo_nidan_0025`
+`kobun_verb_conjugation_type_shimo_nidan_0026` through `kobun_verb_conjugation_type_shimo_nidan_0050`
 
 Batch:
-`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-shimo-nidan/pending/batch-20260828-007.json`
+`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-shimo-nidan/pending/batch-20260828-008.json`
 
-This checkpoint uses attested 下二段 lexemes including `受く・出づ・求む・捨つ・植う` and diversifies evidence across 未然形・連用形・終止形・連体形・已然形. No invented verbs were introduced solely to force lexical diversity.
+This checkpoint broadens lexical coverage with attested lower-bigrade verbs: ア行 `得（う）` and ヤ行 `見ゆ・聞こゆ・覚ゆ・絶ゆ`. Evidence is distributed across 未然形・連用形・終止形・連体形・已然形. No invented verbs were introduced solely to force lexical diversity.
 
-Answer positions: A/B/C/D = 7/6/6/6.
+Answer positions: A/B/C/D = 6/7/6/6. Across the first 50 下二段 items, answer positions are A/B/C/D = 13/13/12/12.
 
 ## This checkpoint — QA
-Independently re-solved all 25 new questions from stem + choices before consulting their stored answer/explanation.
+Independently re-solved all 25 new questions from stem + choices before consulting stored answer/explanation.
 
 - checked: 25
 - verified: 25
@@ -36,15 +36,15 @@ Independently re-solved all 25 new questions from stem + choices before consulti
 - rejected: 0
 
 QA record:
-`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-007-shimo-nidan.qa.json`
+`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-008-shimo-nidan.qa.json`
 
 ## Next generation
-`kobun.verb.conjugation_type.shimo_nidan` is now 25/100.
+`kobun.verb.conjugation_type.shimo_nidan` is now 50/100.
 
 Resume at:
-`kobun_verb_conjugation_type_shimo_nidan_0026`
+`kobun_verb_conjugation_type_shimo_nidan_0051`
 
-Continue with attested lower-bigrade verbs and broaden evidence, especially 命令形 and additional lexical classes. Avoid homographs whose historical conjugation type is context-dependent unless the stem makes the intended lexical sense unique.
+Prioritize command-form coverage in the next checkpoint and continue using attested lower-bigrade lexemes. Useful remaining classes include ワ行 forms such as `植う・飢う・据う` and other well-attested regular lower-bigrade verbs. Avoid homographs or semantic uses whose historical conjugation type is not unique unless the stem disambiguates them.
 
 ## Next QA
 There is no unchecked Power古典 pending backlog at this checkpoint. Independently QA the oldest candidates generated in the next run.
