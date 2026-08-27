@@ -80,7 +80,14 @@ The app track may define only the consumer-facing adapter contract and tiny synt
   - Home, Quiz, Workout, Result, Weakness and Character presentation now carry explicit VoiceOver labels/hints where needed.
   - Correct/wrong feedback is textual as well as visual; Dynamic Type/accessibility-size layouts fall back safely on constrained widths.
   - Native Swift CI passed for both lifecycle/offline and accessibility closeout checkpoints.
-- [ ] **11.2 App Store assets/metadata/privacy requirements**
+- [x] **11.2 App Store assets/metadata/privacy requirements**
+  - Audited the native deliverable and recorded that the current Swift Package is not itself an archiveable iOS App target.
+  - Added placeholder-safe App Store metadata/config boundaries without inventing Apple account, bundle/signing or App Store Connect identifiers.
+  - Added machine-readable temporary Irasutoya/OtoLogic asset manifest and preserved OtoLogic CC BY 4.0 attribution.
+  - Added a canonical `PrivacyInfo.xcprivacy` template declaring app-local `UserDefaults` use with Required Reason API reason `CA92.1`; it must be copied into the real app target in 11.3.
+  - Audited the current implementation as local-only/no off-device data collection and added an in-app privacy policy surface from Home.
+  - Added Swift tests that parse and validate release metadata, asset limits/credits and privacy-manifest contents.
+  - Full release-readiness rationale and exact 11.3 boundary: `docs/power-toeic/80_IOS_RELEASE_READINESS.md`.
 - [ ] **11.3 TestFlight build and release regression**
 - [ ] **11.4 App Store submission readiness checkpoint**
 
