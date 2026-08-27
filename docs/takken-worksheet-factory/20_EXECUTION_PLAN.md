@@ -54,9 +54,10 @@ This phase is active. Questions must be processed strictly in ID/order sequence.
 Completed Phase 3 checkpoints:
 - Questions `takken-q-01-001` through `takken-q-07-001`: 9 checked / 9 verified / 0 needs_revision / 0 rejected.
 - Questions `takken-q-08-001` through `takken-q-26-001`: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-26-002` through `takken-q-27-002`: 3 checked / 3 verified / 0 needs_revision / 0 rejected. This closed the file boundary at unit 27; current legal/official confirmation covered the 8-day cooling-off limit, 20% hand-money cap, and MLIT safeguard-exemption thresholds.
+- Questions `takken-q-26-002` through `takken-q-27-002`: 3 checked / 3 verified / 0 needs_revision / 0 rejected.
+- Questions `takken-q-28-001` through `takken-q-40-001`: 25 checked / 25 verified / 0 needs_revision / 0 rejected. This checkpoint covered宅建業法の損害賠償予定・契約不適合特約・他人物売買・割賦販売・報酬・監督処分 and民法の意思表示・錯誤・詐欺強迫・虚偽表示・制限行為能力・代理・無権代理.
 
-Current Phase 3 progress: **checked 37 / verified 37 / needs_revision 0 / rejected 0 / pending 126 / next `takken-q-28-001`**.
+Current Phase 3 progress: **checked 62 / verified 62 / needs_revision 0 / rejected 0 / pending 101 / next `takken-q-40-002`**.
 
 ## Phase 4 — Power宅建 knowledge / print / app integration
 
