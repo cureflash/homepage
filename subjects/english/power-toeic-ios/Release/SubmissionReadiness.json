@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "submission_ready": false,
+  "repository_owned": {
+    "real_xcode_app_target": "complete",
+    "unsigned_archive_regression": "complete",
+    "privacy_manifest": "complete",
+    "in_app_privacy_policy": "complete",
+    "in_app_credits": "complete",
+    "final_app_icon": "blocked",
+    "temporary_character_assets_bundled": "blocked",
+    "otologic_audio_assets_bundled": "blocked"
+  },
+  "repository_blockers": [
+    {
+      "id": "final_app_icon",
+      "description": "Supply final original App Store icon artwork and populate AppIcon.appiconset. Temporary Irasutoya character art must not be treated as final brand artwork by default."
+    },
+    {
+      "id": "temporary_character_assets_bundled",
+      "description": "Bundle the exact approved Irasutoya temporary character image files or replace them with original art; verify each actual file against Release/AssetManifest.json before marking bundled."
+    },
+    {
+      "id": "otologic_audio_assets_bundled",
+      "description": "Bundle the three approved Google Drive OtoLogic MP3 files and connect a native audio player to semantic audio IDs; keep exact CC BY 4.0 attribution visible in Credits."
+    }
+  ],
+  "external_operator_inputs": [
+    "apple_developer_team_id",
+    "production_bundle_identifier",
+    "app_store_connect_app_id",
+    "sku",
+    "distribution_signing_and_provisioning",
+    "marketing_version",
+    "build_number",
+    "public_privacy_policy_url",
+    "public_support_url",
+    "app_store_screenshots_and_listing_review"
+  ],
+  "external_upload_gate": "A signed TestFlight/App Store upload must not be claimed until the external Apple account/signing inputs are supplied and a real upload succeeds."
+}
