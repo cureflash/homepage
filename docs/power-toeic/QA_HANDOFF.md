@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: **1,275**
-- Verified: **1,210**
+- Checked: **1,300**
+- Verified: **1,235**
 - Needs revision: **65**
 - Rejected: **0**
 - Unchecked `pending_validation`: **975**
@@ -14,29 +14,29 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.verb.modal_base_form` 0051-0075
+### `p5.verb.modal_base_form` 0076-0100
 
 - Checked: **25**
 - Verified: **25**
 - Needs revision: **0**
 - Rejected: **0**
 
-All 25 questions uniquely require the bare infinitive immediately after a modal verb (`can`, `must`, `should`, `may`, `might`, `will`, or `could`). The business contexts are natural enough for the TOEIC Part 5 target, distractors cannot grammatically replace the base form in the tested structure, and the stored proposed answer/explanation agrees with the independently selected answer.
+All 25 questions uniquely require the bare infinitive immediately after a modal verb (`can`, `must`, `should`, `may`, `might`, `will`, or `could`). The business contexts are natural enough for the TOEIC Part 5 target, distractors cannot grammatically replace the base form in the tested structure, and every stored proposed answer/explanation agrees with the independently selected answer.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-025-modal-base-form-part3.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-025-modal-base-form-part4.qa.json`
 
 Full-bank semantic near-duplicate clearance is still not claimed. `verified` does not mean production-approved until the revision-bound cross-bank duplicate gate passes.
 
 ## Next QA
 
-Continue the oldest unchecked micro-skill:
+`p5.verb.modal_base_form` is now fully independently reviewed. Continue the oldest unchecked next micro-skill:
 
-`p5.verb.modal_base_form`
+`p5.verb.to_infinitive_pattern`
 
 Start ID:
 
-`p5_verb_modal_base_form_0076`
+`p5_verb_to_infinitive_pattern_0001`
 
 Continue independent re-solving in 25-question safe checkpoints before consulting stored answers/explanations. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
