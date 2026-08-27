@@ -24,6 +24,8 @@ public struct HomeView: View {
     public let reviewDueCount: Int
     public let onSelect: (WorkoutMode) -> Void
 
+    @State private var showingPrivacyPolicy = false
+
     private let actions: [HomeAction] = [
         .init(id: "quick", title: "クイック 10", subtitle: "短時間で10問", systemImage: "bolt.fill", mode: .quick),
         .init(id: "weakness", title: "おすすめ弱点特訓", subtitle: "苦手を優先して鍛える", systemImage: "scope", mode: .weakness),
@@ -72,8 +74,19 @@ public struct HomeView: View {
                         .accessibilityIdentifier("home.\(action.id)")
                     }
                 }
+
+                Button("プライバシーポリシー") {
+                    showingPrivacyPolicy = true
+                }
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+                .accessibilityHint("端末内に保存する学習データと、現在のデータ収集方針を確認します")
+                .accessibilityIdentifier("home.privacy")
             }
             .padding()
+        }
+        .sheet(isPresented: $showingPrivacyPolicy) {
+            PrivacyPolicyView()
         }
     }
 
