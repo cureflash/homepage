@@ -1,0 +1,60 @@
+{
+  "format": "power-classics-candidate-v1",
+  "subject": "kobun",
+  "skill_group": "kobun.verbs",
+  "subcategory": "動詞・活用種類",
+  "skill": "kobun.verb.conjugation_type.irregular",
+  "taxonomy_path": [
+    "kobun",
+    "kobun.verbs",
+    "動詞・活用種類",
+    "kobun.verb.conjugation_type.irregular"
+  ],
+  "tags": [
+    "kobun",
+    "verbs",
+    "conjugation-type",
+    "irregular"
+  ],
+  "generator_version": "power-classics-content-generate-v1.0",
+  "validation_status": "pending_validation",
+  "qa_status": "verified",
+  "item_fields": [
+    "id",
+    "stem",
+    "choices",
+    "proposed_answer_index",
+    "explanation",
+    "difficulty",
+    "template_id"
+  ],
+  "generated_at": "2026-08-28T08:00:00+09:00",
+  "batch": "2026-08-28-scheduled-012",
+  "items": [
+    ["kobun_verb_conjugation_type_irregular_0026","古文「使ひの来ぬ日」の「来（こ）」に当たる動詞の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],0,"動詞「来（く）」はカ行変格活用。ここでは未然形「こ」に打消の助動詞「ず」の連体形「ぬ」が続く。",2,"kobun-irregular-kahen-未然形-026"],
+    ["kobun_verb_conjugation_type_irregular_0027","古文「心を静めて祈りをす」の「す」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],1,"動詞「す」はサ行変格活用で、この形は終止形。",1,"kobun-irregular-sahen-終止形-027"],
+    ["kobun_verb_conjugation_type_irregular_0028","古文「若き人の死ぬるを惜しむ」の「死ぬる」に当たる動詞「死ぬ」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],2,"動詞「死ぬ」はナ行変格活用。連体形は「死ぬる」。",2,"kobun-irregular-nahen-連体形-028"],
+    ["kobun_verb_conjugation_type_irregular_0029","古文「昔ここにありし家」の「あり」に当たる動詞の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],3,"動詞「あり」はラ行変格活用。連用形「あり」に過去の助動詞「き」の連体形「し」が続く。",3,"kobun-irregular-rahen-連用形-029"],
+    ["kobun_verb_conjugation_type_irregular_0030","古文「客の来れば門を開く」の「来れ」に当たる動詞の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],0,"動詞「来（く）」はカ行変格活用。已然形は「くれ」。",2,"kobun-irregular-kahen-已然形-030"],
+    ["kobun_verb_conjugation_type_irregular_0031","古文「急ぎ支度せよ」の「せよ」に当たる動詞「す」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],1,"動詞「す」はサ行変格活用。命令形は「せよ」。",2,"kobun-irregular-sahen-命令形-031"],
+    ["kobun_verb_conjugation_type_irregular_0032","古文「里を往にて山へ向かふ」の「往に」に当たる動詞「往ぬ」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],2,"動詞「往ぬ（いぬ）」はナ行変格活用。連用形は「往に」。",2,"kobun-irregular-nahen-連用形-032"],
+    ["kobun_verb_conjugation_type_irregular_0033","古文「御前に候ふ人、ここに侍り」の「侍り」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],3,"動詞「侍り（はべり）」はラ行変格活用で、この形は終止形。",2,"kobun-irregular-rahen-終止形-033"],
+    ["kobun_verb_conjugation_type_irregular_0034","古文「明日こそ都へ来（く）」の「来（く）」に当たる動詞の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],0,"動詞「来（く）」はカ行変格活用で、この形は終止形。",1,"kobun-irregular-kahen-終止形-034"],
+    ["kobun_verb_conjugation_type_irregular_0035","古文「学問をして道を知る」の「し」に当たる動詞「す」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],1,"動詞「す」はサ行変格活用。連用形は「し」。",2,"kobun-irregular-sahen-連用形-035"],
+    ["kobun_verb_conjugation_type_irregular_0036","古文「人の往ぬれば庭静かなり」の「往ぬれ」に当たる動詞「往ぬ」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],2,"動詞「往ぬ」はナ行変格活用。已然形は「往ぬれ」。",3,"kobun-irregular-nahen-已然形-036"],
+    ["kobun_verb_conjugation_type_irregular_0037","古文「人あらば知らせよ」の「あら」に当たる動詞「あり」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],3,"動詞「あり」はラ行変格活用。未然形は「あら」。",2,"kobun-irregular-rahen-未然形-037"],
+    ["kobun_verb_conjugation_type_irregular_0038","古文「都より来（き）て語る」の「来（き）」に当たる動詞の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],0,"動詞「来（く）」はカ行変格活用。連用形は「き」。",2,"kobun-irregular-kahen-連用形-038"],
+    ["kobun_verb_conjugation_type_irregular_0039","古文「何事もせず暮らす」の「せ」に当たる動詞「す」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],1,"動詞「す」はサ行変格活用。未然形は「せ」。",2,"kobun-irregular-sahen-未然形-039"],
+    ["kobun_verb_conjugation_type_irregular_0040","古文「命尽きなば死なむ」の「死な」に当たる動詞「死ぬ」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],2,"動詞「死ぬ」はナ行変格活用。未然形は「死な」。",3,"kobun-irregular-nahen-未然形-040"],
+    ["kobun_verb_conjugation_type_irregular_0041","古文「そこにをれば声聞こゆ」の「をれ」に当たる動詞「をり」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],3,"動詞「をり」はラ行変格活用。已然形は「をれ」。",3,"kobun-irregular-rahen-已然形-041"],
+    ["kobun_verb_conjugation_type_irregular_0042","古文「春になれば人の来る道」の「来る」に当たる動詞の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],0,"動詞「来（く）」はカ行変格活用。連体形は「くる」。",2,"kobun-irregular-kahen-連体形-042"],
+    ["kobun_verb_conjugation_type_irregular_0043","古文「御前におはする人」の「おはする」に当たる動詞「おはす」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],1,"動詞「おはす」はサ行変格活用。連体形は「おはする」。",2,"kobun-irregular-sahen-連体形-043"],
+    ["kobun_verb_conjugation_type_irregular_0044","古文の命令表現「疾く往ね」の「往ね」に当たる動詞「往ぬ」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],2,"動詞「往ぬ」はナ行変格活用。命令形は「往ね」。",2,"kobun-irregular-nahen-命令形-044"],
+    ["kobun_verb_conjugation_type_irregular_0045","古文の命令表現「しばしここに侍れ」の「侍れ」に当たる動詞「侍り」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],3,"動詞「侍り」はラ行変格活用。命令形は「侍れ」。",2,"kobun-irregular-rahen-命令形-045"],
+    ["kobun_verb_conjugation_type_irregular_0046","古文の命令表現「御簾の内へ来よ」の「来（こ）」に当たる動詞の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],0,"動詞「来（く）」はカ行変格活用。命令形は「こ」または「こよ」。",2,"kobun-irregular-kahen-命令形-046"],
+    ["kobun_verb_conjugation_type_irregular_0047","古文「そのことをすればよし」の「すれ」に当たる動詞「す」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],1,"動詞「す」はサ行変格活用。已然形は「すれ」。",3,"kobun-irregular-sahen-已然形-047"],
+    ["kobun_verb_conjugation_type_irregular_0048","古文「人皆去り、ただ一人死ぬ」の「死ぬ」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],2,"動詞「死ぬ」はナ行変格活用で、この形は終止形。",1,"kobun-irregular-nahen-終止形-048"],
+    ["kobun_verb_conjugation_type_irregular_0049","古文「昔よりここにをり」の「をり」の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],3,"動詞「をり」はラ行変格活用で、この形は終止形。",1,"kobun-irregular-rahen-終止形-049"],
+    ["kobun_verb_conjugation_type_irregular_0050","古文「遠き国より人来ず」の「来（こ）」に当たる動詞の活用の種類として正しいものを選べ。",["カ行変格活用","サ行変格活用","ナ行変格活用","ラ行変格活用"],0,"動詞「来（く）」はカ行変格活用。未然形は「こ」で、打消の助動詞「ず」が続く。",2,"kobun-irregular-kahen-未然形-050"]
+  ]
+}
