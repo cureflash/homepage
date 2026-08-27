@@ -27,7 +27,7 @@ const assetMap = Object.freeze({
   [ASSET_IDS.TRAINEE_STAGE_2]: './assets/characters/irasutoya_trainee_muscular.png',
   [ASSET_IDS.TRAINEE_STAGE_3]: './assets/characters/irasutoya_trainee_muscular.png',
   [ASSET_IDS.TRAINEE_STAGE_4]: './assets/characters/irasutoya_trainee_muscular.png',
-  [ASSET_IDS.TRAINEE_STAGE_5]: null,
+  [ASSET_IDS.TRAINEE_STAGE_5]: './assets/characters/irasutoya_trainee_bodybuilder.png',
   [ASSET_IDS.AUDIO_CORRECT]: './assets/audio/otologic_correct.mp3',
   [ASSET_IDS.AUDIO_WRONG]: './assets/audio/otologic_incorrect.mp3',
   [ASSET_IDS.AUDIO_INSPIRATION]: './assets/audio/otologic_inspiration.mp3'
