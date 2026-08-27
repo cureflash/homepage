@@ -13,6 +13,7 @@ SKILLS={
  'linear-function-substitution':('一次関数 xからyを求める代入','linear-function-substitution'),
  'linear-function-rate-from-two-points':('2点から変化の割合','linear-function-rate'),
  'linear-function-from-slope-intercept':('傾きと切片から式を作る','linear-function-equation'),
+ 'linear-function-equation-from-two-points':('2点から一次関数の式を求める','linear-function-equation-from-two-points'),
 }
 def ft(v):
  v=Fraction(v); return str(v.numerator) if v.denominator==1 else f'{v.numerator}/{v.denominator}'
@@ -22,6 +23,8 @@ def eq(m,b):
 def ans(p):
  if p['type']=='linear-function-substitution': return ft(Fraction(p['mn'],p['md'])*p['x']+p['b'])
  if p['type']=='linear-function-rate-from-two-points': return ft(Fraction(p['y2']-p['y1'],p['x2']-p['x1']))
+ if p['type']=='linear-function-equation-from-two-points':
+  m=Fraction(p['y2']-p['y1'],p['x2']-p['x1']); b=Fraction(p['y1'])-m*p['x1']; return eq(m,b)
  return eq(Fraction(p['mn'],p['md']),p['b'])
 def gen(skill,seed):
  r=random.Random(seed+1009*sum(map(ord,skill))); out=[]; seen=set()
@@ -32,6 +35,11 @@ def gen(skill,seed):
    dx=r.choice((2,3,4,6)); mn=r.choice([i for i in range(-6,7) if i]); md=r.choice((1,2,3)); m=Fraction(mn,md)
    if (m*dx).denominator!=1: continue
    x1=r.randint(-8,4); y1=r.randint(-9,9); p={'type':skill,'x1':x1,'y1':y1,'x2':x1+dx,'y2':y1+int(m*dx)}
+  elif skill=='linear-function-equation-from-two-points':
+   md=r.choice((1,2,3,4)); mn=r.choice([i for i in range(-6,7) if i]); m=Fraction(mn,md); b=r.randint(-9,9)
+   dx=r.choice((2,3,4,6,8)); x1=r.randint(-8,4); x2=x1+dx; y1=m*x1+b; y2=m*x2+b
+   if y1.denominator!=1 or y2.denominator!=1: continue
+   p={'type':skill,'x1':x1,'y1':int(y1),'x2':x2,'y2':int(y2)}
   else:
    md=r.choice((1,2,3,4)); mn=r.choice([i for i in range(-6,7) if i]); m=Fraction(mn,md); p={'type':skill,'mn':m.numerator,'md':m.denominator,'b':r.randint(-9,9)}
   p['answer']=ans(p); k=json.dumps(p,sort_keys=True)
@@ -41,6 +49,7 @@ def gen(skill,seed):
 def text(p):
  if p['type']=='linear-function-substitution': return f'{eq(Fraction(p["mn"],p["md"]),p["b"])}, x={p["x"]} のとき y=□'
  if p['type']=='linear-function-rate-from-two-points': return f'({p["x1"]},{p["y1"]}), ({p["x2"]},{p["y2"]}) の変化の割合=□'
+ if p['type']=='linear-function-equation-from-two-points': return f'({p["x1"]},{p["y1"]}), ({p["x2"]},{p["y2"]}) を通る一次関数：□'
  return f'傾き {ft(Fraction(p["mn"],p["md"]))}, 切片 {p["b"]} → 式：□'
 def pdf(path,title,ps):
  c=canvas.Canvas(str(path),pagesize=A4); _,h=A4
