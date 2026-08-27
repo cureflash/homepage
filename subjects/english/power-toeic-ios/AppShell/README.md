@@ -38,4 +38,6 @@ The AppIcon catalog is intentionally empty during engineering CI. Final original
 
 ## CI validation
 
-The repository release workflow builds this target unsigned for both Simulator and generic iOS Release configurations. Package tests remain the domain-behavior gate. A real TestFlight upload remains gated on Apple signing/App Store Connect inputs.
+The repository release workflow builds this target unsigned for Simulator and generic iOS Release configurations, then creates an unsigned `.xcarchive` and checks that the archived application contains a valid `PrivacyInfo.xcprivacy`. Package tests remain the domain-behavior gate.
+
+The unsigned archive proves Xcode application packaging works without committing signing secrets; it is not uploadable to TestFlight. A real TestFlight upload remains gated on user-owned Apple signing/App Store Connect inputs.
