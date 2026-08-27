@@ -2,7 +2,7 @@
 
 ## Current state
 
-**APP TRACK Phase 10 / Tasks 10.6 and 10.7 are complete. The exact next APP TRACK task is Phase 10 / Task 10.8 — run the JavaScript/Swift conformance suite on one shared commit.**
+**APP TRACK Phase 10 is complete. The exact next APP TRACK task is Phase 11 / Task 11.1 — app lifecycle, offline behavior and accessibility pass.**
 
 The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored or validated in these checkpoints.
 
@@ -20,7 +20,7 @@ Merged implementation includes:
 - temporary Irasutoya mappings limited to four unique works, safely below the configured 20-work commercial threshold;
 - shared Web conformance fixture coverage for native progression behavior.
 
-The reconciled implementation passed the macOS Swift CI before merge. The obsolete stale PR was closed rather than merged.
+The reconciled implementation passed the macOS Swift CI before merge. The obsolete stale PR #99 was closed rather than merged. PR #102 was merged at `cd44e42a67bc6add495802d47cb27ae4ac85edb5`.
 
 ## Phase 10.7 completed — native persistence
 
@@ -36,19 +36,34 @@ Added `Persistence/AppStore.swift` with:
 - mutation helpers for appending attempts and replacing review/progression domains without overwriting the other domains;
 - validation of persisted attempts, review entries, and progression before writes.
 
-`AppStoreTests.swift` covers round-trip persistence, corrupt/unsupported fallback, mutation isolation, storage-failure behavior, and invalid-state rejection. The final 10.6+10.7 branch passed the native Swift CI and was merged as PR #102.
+`AppStoreTests.swift` covers round-trip persistence, corrupt/unsupported fallback, mutation isolation, storage-failure behavior, and invalid-state rejection. The final 10.6+10.7 branch passed the native Swift CI before merge.
+
+## Phase 10.8 completed — JavaScript/Swift conformance closeout
+
+A docs-only checkpoint after the merged native code intentionally triggered both existing Power TOEIC workflows on the exact same commit.
+
+Results:
+
+- Web Node 22 workflow run `33027870787`: **success** (`npm test`);
+- native macOS Swift workflow run `33027870790`: **success** (`swift test`).
+
+Swift continues to load the canonical Web fixture directly from:
+
+`subjects/english/power-toeic/tests/fixtures/cross-platform-conformance-v1.json`
+
+No copied Swift-only conformance fixture was introduced. This satisfies the Phase 10 cross-platform gate.
 
 ## Exact next work
 
-### Phase 10 / Task 10.8 — cross-platform conformance closeout
+### Phase 11 / Task 11.1 — app lifecycle, offline behavior and accessibility pass
 
-1. Use a docs-only checkpoint commit after the merged 10.6/10.7 code so both existing workflows trigger on the same SHA:
-   - `.github/workflows/power-toeic-tests.yml` -> Node 22 / Web `npm test`;
-   - `.github/workflows/power-toeic-swift-tests.yml` -> macOS / `swift test`.
-2. Confirm both suites are green on the same commit.
-3. Confirm Swift continues to consume the canonical Web fixture directly at `subjects/english/power-toeic/tests/fixtures/cross-platform-conformance-v1.json` rather than a copied Swift fixture.
-4. If both are green, mark 10.8 complete and advance the APP TRACK to Phase 11 / Task 11.1.
-5. Do not modify production question content while closing Phase 10.
+1. Define the native composition/dependency-container boundary that creates the question repository, versioned app store, progression state and top-level SwiftUI navigation without putting domain rules in Views.
+2. Verify app launch with no persisted state, valid persisted state, corrupt persisted state and unavailable/failed storage.
+3. Verify the native quiz remains usable when optional character/audio resources are missing and that offline operation does not require runtime network/LLM access.
+4. Audit SwiftUI semantics for VoiceOver: meaningful labels/hints for answer buttons, progress, correct/wrong feedback, character presentation, and primary actions; decorative artwork should stay hidden from accessibility where appropriate.
+5. Check Dynamic Type / narrow-screen resilience and ensure correct/wrong meaning is not conveyed by color alone.
+6. Add focused tests or deterministic presentation/state helpers where possible and keep domain logic out of UI.
+7. After 11.1 passes CI, proceed to 11.2 App Store assets/metadata/privacy requirements.
 
 ## Fixed decisions
 
