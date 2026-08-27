@@ -2,33 +2,30 @@
 
 Updated: 2026-08-27
 
-## AUDIT OVERRIDE — P1 concurrent catalog writer
+## P1 shared catalog writer audit — resolved
 
-**Severity:** P1 — fix before further worksheet publication.
+The concurrent-writer risk on the authoritative `worksheets/catalog.json` has been corrected before Grade 6 publication resumes.
 
-**Audit evidence:** the enabled standalone science worksheet worker and the enabled GitHub time-routing worker's normal math route both run at the top of the hour during ordinary math hours. Both projects publish into the same repository and mutate the same authoritative `worksheets/catalog.json`. Science's publication workflow performs a latest-main safe push, while math publication workflows also regenerate and commit the shared catalog. Even when non-force Git prevents silent loss, two concurrent writers to one canonical catalog create a recurring race: one run can validate against a catalog snapshot that becomes stale before its publish commit, causing push failures/retries or requiring reconcile after generation.
+All ten enabled workflows that directly stage `worksheets/catalog.json` now share one repository-wide GitHub Actions concurrency key:
 
-**Files / ownership boundary:** `worksheets/catalog.json`; `.github/workflows/grade*-publish.yml`; science publication workflows that also update the catalog; `docs/worksheet-factory/90_HANDOFF.md`; `docs/science-worksheet-factory/90_HANDOFF.md`.
+`worksheet-catalog-publish-v1`
 
-**Required correction:** before publishing new Grade 6 PDFs, make catalog publication safe under simultaneous math/science activity. Prefer a repository-level serialization mechanism or a catalog architecture in which independently owned track fragments are generated separately and an aggregate catalog is produced deterministically. If the chosen correction is workflow serialization, it must cover every workflow that writes `worksheets/catalog.json`, not only Grade 6. Do not rely only on "fetch latest main immediately before push" as the ownership model.
+with `cancel-in-progress: false`.
 
-**Do not:** do not force-push; do not overwrite a newer catalog; do not disable duplicate/hash validation; do not move science or math entries into hand-maintained catalog patches; do not reopen completed Grade 5 content except as required to validate the shared publication fix.
+Covered math workflows are Grade 1 through Grade 5. Covered science workflows are JH1, JH2, JH3, Physics Basics, and formal Physics. Existing latest-main / non-force publication safety is preserved; catalog rows, stable URLs, duplicate/hash validation, and generated PDFs were not hand-patched or weakened.
 
-**Acceptance criteria:**
+A static guard at `tests/test_worksheet_catalog_writer_concurrency.py` enumerates the direct catalog-writing workflows, requires the exact known writer set, and rejects any private or uncaptured concurrency group. `.github/workflows/worksheet-catalog-concurrency-audit.yml` reruns that guard when publish workflows change.
 
-1. There is one explicit serialization/aggregation contract for all writers of `worksheets/catalog.json`.
-2. Two representative math/science publication workflows cannot concurrently publish from independent stale catalog snapshots.
-3. Existing catalog rows and stable URLs survive the change unchanged.
-4. Catalog validation, duplicate/hash checks, PDF existence checks, and relevant Grade 5/science regressions remain green.
-5. A repository search identifies no remaining publication workflow that writes the shared catalog outside the chosen serialization/aggregation contract.
+Audit validation:
 
-**Tests / searches required:** enumerate every `.github/workflows/*` and publisher that writes `worksheets/catalog.json`; run the shared worksheet-factory validation plus one representative math workflow and one representative science workflow under the new contract; verify non-force latest-main behavior remains intact.
+- audit PR #140 merge: `0de819077fbab3ce3d326c69a126ff59ca8bf723`
+- catalog concurrency audit run `33053444720`: success
+- representative formal-Physics science run `33053444636`: success
+- representative Grade 4 math run `33053444726`: success
 
-**Resume after audit fix:** continue with小学6年の first unfinished skill **分数×整数** and the existing deterministic generation / independent answer validation / duplicate detection / two-page red-answer publication contract.
+The P1 audit override is therefore closed. Future worksheet publishers that write the shared catalog must remain inside `worksheet-catalog-publish-v1`; the static audit test is the repository guard against regressions.
 
-## Current factory state
-
-The shared worksheet-factory foundation is operational and bulk publication is underway.
+## Current math factory state
 
 Completed active grades:
 
@@ -40,39 +37,25 @@ Completed active grades:
 
 The next active grade is **小学6年**.
 
-## Latest completed run
+The last completed Grade 5 content batch added the final four skills:
 
-小学5年の最後の4 checkpointを連続で完了した。
+1. `fraction-add-sub-mixed` — 分数計算混合 — 3 PDFs
+2. `decimal-percent-conversion` — 小数・百分率の変換 — 3 PDFs
+3. `basic-ratio-calculation` — 割合の基本数値計算 — 3 PDFs
+4. `grade5-review` — 小学5年 算数 総復習 — 3 PDFs
 
-1. `fraction-add-sub-mixed` — 分数計算混合 — 3 variants / 3 PDFs
-2. `decimal-percent-conversion` — 小数・百分率の変換 — 3 variants / 3 PDFs
-3. `basic-ratio-calculation` — 割合の基本数値計算 — 3 variants / 3 PDFs
-4. `grade5-review` — 小学5年 算数 総復習 — 3 variants / 3 PDFs
-
-合計 **4技能・12PDF** を追加公開し、小学5年は **16 skills / 48 PDFs** で計画済み範囲を完了した。
-
-MEXTの現行小学校学習指導要領解説・算数編で、第5学年に割合・百分率を用いた表し方と割合を求める内容が配置されていることを確認した。分数計算混合は第5学年の加法・減法だけに限定し、分数乗除は小学6年へ送った。
-
-All four checkpoints use deterministic seeds, independent `Fraction`-based answer recomputation, duplicate/content-hash checks, 2-page PDFs, ordinary integer problem numbering, and answer pages that preserve the problem layout and add answers in red.
-
-- publisher: `scripts/publish_grade5_final_four.py`
-- test: `tests/test_grade5_final_four_publisher.py`
-- workflow run: `33048183296` success
-- publish commit: `1a8294444b39fd74544c867504fa59a50630ae2c`
-- final Grade 5 publication total: **16 skills / 48 PDFs**
+Grade 5 is complete at 16 skills / 48 PDFs. Its final publication used `scripts/publish_grade5_final_four.py`, `tests/test_grade5_final_four_publisher.py`, workflow run `33048183296` success, and publish commit `1a8294444b39fd74544c867504fa59a50630ae2c`.
 
 ## Exact next starting point
 
-The AUDIT OVERRIDE above supersedes normal Grade 6 publication until the shared catalog-writer race is corrected. After that correction:
-
-Read:
+Read the current Grade 6 canonical files first:
 
 - `curriculum/elementary/grade-06/STATUS.json`
 - `curriculum/elementary/grade-06/PLAN.md`
 - `curriculum/elementary/grade-06/HANDOFF.md` if present
 
-Start with the first unfinished Grade 6 skill: **分数×整数**.
+Then start with the first unfinished Grade 6 skill: **分数×整数**.
 
-Before implementation, confirm Grade 6 placement and scope against the current MEXT elementary mathematics curriculum commentary. Then continue with the existing factory contract: deterministic generation, independent answer validation, duplicate detection, 2-page printable PDF, same-layout red answers, catalog/site validation, and a Grade 6 checkpoint workflow.
+Before implementation, confirm Grade 6 placement and scope against the current MEXT elementary mathematics curriculum commentary. Continue the existing factory contract: deterministic generation, independent answer validation, duplicate/content-hash detection, two-page printable PDFs, same-layout red answers, full catalog/site validation, and non-force latest-main publication. Every workflow that mutates `worksheets/catalog.json` must remain in the shared `worksheet-catalog-publish-v1` concurrency group.
 
-Do not reopen completed Grade 5 work unless a regression or audit finding requires it.
+Do not reopen completed Grade 5 content unless a regression requires it.
