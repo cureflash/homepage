@@ -20,47 +20,47 @@ Canonical implementation:
 
 Advanced Phase 2 question generation for the maximum normal batch of 20 consecutive units:
 
-- units 28-47
+- units 48-67
 - 40 core facts covered
 - 40 new four-choice questions
-- new file: `qualifications/takken/data/pending-questions-28-47.js`
+- new file: `qualifications/takken/data/pending-questions-48-67.js`
 
 Cumulative coverage is now:
 
-- 47/90 units covered
-- 77 core facts covered
-- 77 generated four-choice questions
-- 77 `pending_validation`
+- 67/90 units covered
+- 117 core facts covered
+- 117 generated four-choice questions
+- 117 `pending_validation`
 - 0 verified
 
-The new checkpoint covers:
+The checkpoint covers:
 
-1. `damages-penalty`
-2. `contract-nonconformity-special-rule`
-3. `unowned-property-restriction`
-4. `installment-sales-ownership`
-5. `brokerage-fees`
-6. `supervision-penalties`
-7. `civil-intent-general`
-8. `civil-mistake`
-9. `civil-fraud-duress`
-10. `civil-fictitious-declaration`
-11. `civil-limited-capacity`
-12. `civil-agency`
-13. `civil-unauthorized-agency`
-14. `civil-prescription`
-15. `property-rights-opposability`
-16. `co-ownership`
-17. `mortgage`
-18. `default-damages`
-19. `contract-cancellation`
-20. `risk-simultaneous-performance`
+1. `sale-earnest`
+2. `contract-nonconformity-civil`
+3. `lease-general`
+4. `lease-deposit-opposability`
+5. `land-lease-right`
+6. `fixed-term-land-lease`
+7. `building-lease-right`
+8. `fixed-term-building-lease`
+9. `inheritance-heirs-shares`
+10. `inheritance-acceptance-renunciation`
+11. `will-reserved-portion`
+12. `condominium-law`
+13. `real-estate-registration`
+14. `city-planning-area`
+15. `area-division`
+16. `use-districts`
+17. `city-planning-decisions`
+18. `development-permission-required`
+19. `development-permission-procedure`
+20. `building-confirmation`
 
 Every new question has a stable ID, exactly four distinct choices, one proposed answer, explanation, canonical fact/source references, `examYear: 2026`, `lawAsOf: "2026-04-01"`, and `validationStatus: "pending_validation"`.
 
 The new question file includes generation-time guards for duplicate IDs, normalized duplicate stems, choice count, duplicate choices, answer-index range, exam metadata, and pending-validation status.
 
-Answer-position distribution for units 28-47 is exactly balanced:
+Answer-position distribution for units 48-67 is exactly balanced:
 
 - A=10
 - B=10
@@ -69,19 +69,29 @@ Answer-position distribution for units 28-47 is exactly balanced:
 
 No independent solve-all validation was performed because Phase 2 is incomplete. No question was promoted to verified.
 
-## Validation notes
+## Source / validation notes
 
-The questions were derived directly from the canonical `facts[]` for units 28-47. Source references remain the canonical 2026-04-01 e-Gov Takken Law or Civil Code IDs already attached to those facts. Generation did not substitute secondary summaries for canonical claims.
+Questions were derived directly from the canonical `facts[]` for units 48-67 and retained the canonical primary-source IDs. Relevant e-Gov sources include the Civil Code, Land and Building Lease Act, City Planning Act, Building Standards Act, Condominium Act and Real Estate Registration Act. Current e-Gov pages were reopened during this run for the Land and Building Lease Act and City Planning Act to confirm the source family remained current for the 2026 generation path.
 
-Local structural checks confirmed 40 unique IDs, 40 unique stems, four choices per question, no duplicate choices, valid answer indexes, and A/B/C/D=10/10/10/10. `node --check` passed for `pending-questions-28-47.js` before GitHub upload.
+Local structural validation of the generated file passed before upload:
+
+- 40 question IDs
+- 40 unique IDs
+- 40 unique stems
+- exactly 4 choices per question
+- no duplicate choices within a question
+- proposed answer indexes in range
+- all questions `pending_validation`
+- answer-position distribution A/B/C/D = 10/10/10/10
+- `node --check` passed
 
 ## Status after this run
 
 - Unit generation: 90/90 complete
-- Question-covered units: 47/90
-- Covered core facts: 77
-- Generated four-choice questions: 77
-- Pending validation questions: 77
+- Question-covered units: 67/90
+- Covered core facts: 117
+- Generated four-choice questions: 117
+- Pending validation questions: 117
 - Verified questions: 0
 - `question_generation_complete`: false
 - `generation_complete`: false
@@ -89,11 +99,11 @@ Local structural checks confirmed 40 unique IDs, 40 unique stems, four choices p
 
 ## Exact next start
 
-Continue Phase 2 at unit 48:
+Continue Phase 2 at unit 68:
 
-`sale-earnest`
+`roads-frontage`
 
-Read its complete `facts[]` from `qualifications/takken/data/pending-units-41-60.js`, generate at least one direct four-choice measurement for every uncovered core fact, then continue strictly in unit order.
+Read its complete `facts[]` from `qualifications/takken/data/pending-units-61-80.js`, generate at least one direct four-choice measurement for every uncovered core fact, then continue strictly in unit order. The next normal batch may cover units 68-87 if all facts can be generated safely; do not pad counts.
 
 Do not start solve-all validation until all 90 units have 100% core-fact question coverage and every generated question is stored as `pending_validation`.
 
