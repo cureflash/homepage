@@ -29,7 +29,6 @@ public struct CreditsView: View {
                 }
             }
             .navigationTitle("クレジット")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
