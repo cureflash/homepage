@@ -2,98 +2,102 @@
 
 ## Current state
 
-**APP TRACK Phase 11 / Task 11.2 is complete. The exact next APP TRACK task is Phase 11 / Task 11.3 — create a real Xcode iOS app shell/target and run archive-oriented TestFlight release regression.**
+**APP TRACK Phase 11 / Task 11.3 is complete. The exact next APP TRACK task is Phase 11 / Task 11.4 — App Store submission readiness checkpoint.**
 
 The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored or validated in this checkpoint.
 
-## Phase 11.2 completed — App Store assets / metadata / privacy
+## Phase 11.3 completed — real iOS app target and release regression
 
-### Packaging audit
+### Real Xcode application target
 
-The native implementation at `subjects/english/power-toeic-ios/` is currently a Swift Package library. It is suitable for Swift compilation/tests and for sharing the native implementation, but it is **not itself an archiveable App Store application target**.
+Added the minimal application shell at:
 
-Phase 11.3 must therefore introduce the smallest real Xcode iOS app shell/target around the existing `PowerTOEIC` module. Do not duplicate domain logic inside that shell.
+`subjects/english/power-toeic-ios/AppShell/`
 
-The release-time values that require the user's Apple account remain explicit inputs rather than invented repository values:
+The real Xcode project is:
 
-- Apple Developer Team ID;
-- bundle identifier;
-- App Store Connect app ID;
-- SKU;
-- signing/provisioning configuration;
-- marketing version/build number;
-- privacy-policy URL;
-- support URL.
+`subjects/english/power-toeic-ios/AppShell/PowerTOEICApp.xcodeproj`
 
-Canonical config boundary:
+and uses the shared scheme `PowerTOEICApp`.
 
-`subjects/english/power-toeic-ios/Release/AppStoreMetadata.json`
+The app target imports the existing local `PowerTOEIC` Swift Package product. The app shell owns only:
 
-### Privacy
+- `@main` application entry point;
+- Xcode target/scheme;
+- app-target privacy manifest;
+- AppIcon/AccentColor asset-catalog slots;
+- account-neutral bundle/version build configuration.
 
-The actual native implementation was audited. Current local state consists of attempts, review entries, trainee progression and locally stored question reports. The current native runtime has no account backend, analytics/advertising/tracking SDK, runtime LLM, or required network service for the quiz loop.
+Quiz, workout, mastery, review, persistence, character and question-bank logic remain in the existing Swift Package; do not duplicate them in the app target.
 
-Therefore the current shipping model is **local-only/no off-device collection**. This statement must be re-audited if a later phase adds sync, remote reporting, payments, analytics, advertising or accounts.
-
-Apple requires a privacy-policy URL in App Store Connect for iOS, while App Review guidance also requires the policy to be accessible inside the app. A native `PrivacyPolicyView` was added and is reachable from `HomeView` through the `home.privacy` button. The public policy URL remains a release-time input.
-
-### Required Reason API
-
-`UserDefaultsPersistenceBackend` uses Foundation `UserDefaults` only for app-local state. Apple's current Required Reason API documentation maps this use to:
-
-- `NSPrivacyAccessedAPICategoryUserDefaults`;
-- reason `CA92.1`.
-
-Added canonical template:
-
-`subjects/english/power-toeic-ios/Release/PrivacyInfo.xcprivacy`
-
-It declares no tracking, no collected data types, and only the current UserDefaults required-reason API. Because there is no real app target yet, the manifest intentionally lives under `Release/`; 11.3 must add it to the actual iOS application target resources.
-
-### Asset and attribution manifest
+### App-target resources and config
 
 Added:
 
-`subjects/english/power-toeic-ios/Release/AssetManifest.json`
+- `AppShell/PowerTOEICApp/PrivacyInfo.xcprivacy`;
+- `AppShell/PowerTOEICApp/Assets.xcassets/`;
+- `AppShell/Config/PowerTOEIC.xcconfig`;
+- `AppShell/README.md`.
 
-It records four planned unique Irasutoya works behind existing semantic IDs, below the temporary `<20` policy threshold, with runtime hotlinking disabled. It also records the three OtoLogic audio semantic IDs and required credit:
+The privacy manifest is byte-for-byte checked against the canonical `Release/PrivacyInfo.xcprivacy` and declares app-local UserDefaults reason `CA92.1` only.
 
-`OtoLogic (CC BY 4.0) / https://otologic.jp/`
+The AppIcon set is intentionally empty. Do not fabricate final icon artwork from temporary Irasutoya character art. A final original 1024x1024 App Store icon remains a submission-readiness requirement.
 
-Current files are marked `not_yet_bundled`; 11.3/11.4 must only change that status after actual target resources exist and source/license checks are repeated. Do not use temporary Irasutoya character art as the App Store icon unless licensing/branding suitability is explicitly cleared; prefer original icon artwork for submission.
+The xcconfig uses deliberately invalid/account-neutral engineering values (`invalid.placeholder.PowerTOEIC`, marketing version `0.0.0`) so CI can compile without storing Apple credentials. These must be replaced only at release time with user-owned values.
 
-### Repository validation
+### Release CI
 
-Added `ReleaseMetadataTests.swift` to parse and validate:
+Added:
 
-- the release metadata JSON and its explicit release-time placeholders;
-- the temporary Irasutoya unique-asset count and OtoLogic credit;
-- the privacy manifest, including `CA92.1`.
+`.github/workflows/power-toeic-ios-app-build.yml`
 
-Full rationale, Apple-reference links and acceptance checklist:
+It validates:
 
-`docs/power-toeic/80_IOS_RELEASE_READINESS.md`
+1. Xcode project/scheme discovery;
+2. unsigned Debug build for generic iOS Simulator;
+3. unsigned Release build for generic iOS device;
+4. unsigned Release `.xcarchive` creation;
+5. archived `PowerTOEICApp.app` existence;
+6. archived `PrivacyInfo.xcprivacy` presence and plist validity.
+
+Initial Xcode target CI proved the Simulator and generic-device builds. A later workflow edit introduced a GitHub workflow-evaluation error because `runner.temp` was referenced from job-level `env`; PR #114 replaced it with a workflow-safe fixed `/tmp/PowerTOEICApp.xcarchive` path. The corrected archive workflow then passed through unsigned archive creation and archived privacy-manifest validation.
+
+The Swift package regression suite remained green while introducing the app shell.
+
+### What is intentionally not done
+
+No actual TestFlight upload was attempted. That requires user-owned Apple account and signing inputs that must not be invented or committed:
+
+- Apple Developer Team ID;
+- production bundle identifier;
+- App Store Connect app ID;
+- SKU;
+- distribution certificate / signing mechanism;
+- provisioning configuration;
+- real marketing version/build number;
+- public privacy-policy URL;
+- public support URL.
+
+An unsigned `.xcarchive` proves application packaging and release compilation; it is not an uploadable signed TestFlight artifact.
 
 ## Exact next work
 
-### Phase 11 / Task 11.3 — Xcode app shell + TestFlight release regression
+### Phase 11 / Task 11.4 — App Store submission readiness checkpoint
 
-1. Start from latest `main` and re-read the canonical docs.
-2. Create the smallest real iOS application project/target that imports/depends on the existing `PowerTOEIC` Swift package/module; do not copy core/model/view logic into the app shell.
-3. Use iOS 17 as the minimum target and preserve the release metadata boundary from `Release/AppStoreMetadata.json`.
-4. Add the canonical `Release/PrivacyInfo.xcprivacy` to the application target resources.
-5. Add placeholder-safe AppIcon/AccentColor asset catalogs. Do not fabricate final copyrighted branding; original final icon artwork may remain a submission blocker.
-6. Wire the app entry point to the existing native root/environment.
-7. Add build/archive-oriented CI validation that does not require signing credentials where possible (`CODE_SIGNING_ALLOWED=NO` or equivalent simulator/generic-device compile validation).
-8. Re-run the Swift package tests and the Web/Swift conformance suites after introducing the app shell.
-9. Do not attempt an actual TestFlight upload without valid Apple account/signing/App Store Connect inputs. Record those as explicit blockers rather than inventing them.
-10. Only mark 11.3 complete when the real app target builds in CI and release-regression checks are green. Then proceed to 11.4 submission-readiness checkpoint.
+1. Start from latest `main` and re-read canonical docs plus `80_IOS_RELEASE_READINESS.md`.
+2. Audit the actual app target/resources and produce a machine-checkable submission blocker list. Do not invent user/account values.
+3. Add an in-app Credits/About surface if the OtoLogic sounds remain in the intended shipping asset set; preserve exact CC BY 4.0 credit.
+4. Verify whether temporary Irasutoya character files have actually been bundled. Only mark assets `bundled` in `Release/AssetManifest.json` after file existence and source/license checks; otherwise keep them as explicit blockers/placeholders.
+5. Require final original AppIcon artwork before declaring submission-ready.
+6. Validate App Store metadata strings and privacy declarations against then-current Apple requirements.
+7. Keep account/signing/App Store Connect identifiers external and list them as operator inputs.
+8. Run Swift Package tests plus iOS app unsigned archive regression after any release-readiness changes.
+9. Mark 11.4 complete only if every repository-owned requirement is complete and every remaining blocker is solely an explicit external operator/account input. Do not claim that the app has been submitted or uploaded unless a real signed upload occurs.
 
 ## Fixed decisions
 
 - Web remains the behavioral reference implementation;
 - native uses Swift + SwiftUI + standard Apple frameworks first;
-- JavaScript code is not embedded or mechanically translated line-by-line into Swift;
 - shared contracts/fixtures determine cross-platform behavior;
 - no target-score feature, skill-to-body-part mapping, runtime LLM, or production question creation in APP TRACK;
 - temporary art = Irasutoya via semantic asset IDs, below 20 unique works;
