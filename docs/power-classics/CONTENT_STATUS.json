@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "classics-v1.0",
   "taxonomy_micro_skill_count": 100,
-  "generated_question_count": 400,
-  "checked_question_count": 400,
+  "generated_question_count": 425,
+  "checked_question_count": 425,
   "pending_validation_count": 0,
-  "verified_question_count": 400,
+  "verified_question_count": 425,
   "needs_revision_count": 0,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -15,15 +15,15 @@
     "kobun.verb.conjugation_type.kami_nidan",
     "kobun.verb.conjugation_type.shimo_nidan"
   ],
-  "current_batch": "2026-08-28-scheduled-012",
+  "current_batch": "2026-08-28-scheduled-013",
   "current_micro_skill": "kobun.verb.conjugation_type.irregular",
-  "current_micro_skill_persisted_count": 50,
+  "current_micro_skill_persisted_count": 75,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "kobun_verb_conjugation_type_irregular_0051",
+  "next_resume_id": "kobun_verb_conjugation_type_irregular_0076",
   "next_micro_skill": "kobun.verb.conjugation_type.irregular",
   "generation_complete": false,
   "validation_complete": false,
   "global_duplicate_gate_complete": false,
-  "last_run_result": "Generated IDs 0026-0050 for kobun.verb.conjugation_type.irregular. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=7/6/6/6, bringing the first 50 irregular questions to A/B/C/D=13/13/12/12. Coverage continues カ変・サ変・ナ変・ラ変 across 未然・連用・終止・連体・已然・命令 and includes おはす as well as す for サ変. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_type_irregular_0051.",
-  "updated_at": "2026-08-28T08:00:00+09:00"
+  "last_run_result": "Generated IDs 0051-0075 for kobun.verb.conjugation_type.irregular. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=6/6/7/6, bringing irregular IDs 0001-0075 to A/B/C/D=19/19/19/18. Coverage spans カ変・サ変・ナ変・ラ変 across 未然・連用・終止・連体・已然・命令. Obvious near-duplicates against the immediately preceding batch were rewritten before persistence. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_type_irregular_0076.",
+  "updated_at": "2026-08-28T09:00:00+09:00"
 }
