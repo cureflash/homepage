@@ -21,6 +21,7 @@ FORMULA_RELATIONS = {
     'square-over-double',
     'double-quotient',
     'equal-products',
+    'two-body-momentum-conservation',
 }
 
 
@@ -84,6 +85,13 @@ def _relation_result(relation, inputs):
         if left_arm == 0:
             raise ValueError('equal-products left arm must not be zero')
         return right_force * right_arm / left_arm
+    if relation == 'two-body-momentum-conservation':
+        if len(inputs) != 5:
+            raise ValueError('two-body-momentum-conservation needs exactly m1, u1, m2, u2, and v1')
+        mass_1, initial_velocity_1, mass_2, initial_velocity_2, final_velocity_1 = inputs
+        if mass_1 <= 0 or mass_2 <= 0:
+            raise ValueError('two-body-momentum-conservation masses must be positive')
+        return (mass_1 * initial_velocity_1 + mass_2 * initial_velocity_2 - mass_1 * final_velocity_1) / mass_2
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -186,6 +194,21 @@ def _generation_formula_answer(relation, result_name, input_names, values, solve
             if values[right_force_name] == 0:
                 raise ValueError('cannot solve equal-products right arm with zero right force')
             return values[result_name] * values[left_arm_name] / values[right_force_name]
+    if relation == 'two-body-momentum-conservation':
+        if len(input_names) != 5:
+            raise ValueError('two-body-momentum-conservation needs exactly five inputs')
+        mass_1_name, initial_velocity_1_name, mass_2_name, initial_velocity_2_name, final_velocity_1_name = input_names
+        mass_1 = values[mass_1_name]
+        mass_2 = values[mass_2_name]
+        if mass_1 <= 0 or mass_2 <= 0:
+            raise ValueError('two-body-momentum-conservation masses must be positive')
+        if solve_for == initial_velocity_1_name:
+            return (mass_1 * values[final_velocity_1_name] + mass_2 * values[result_name] - mass_2 * values[initial_velocity_2_name]) / mass_1
+        if solve_for == initial_velocity_2_name:
+            return (mass_1 * values[final_velocity_1_name] + mass_2 * values[result_name] - mass_1 * values[initial_velocity_1_name]) / mass_2
+        if solve_for == final_velocity_1_name:
+            return (mass_1 * values[initial_velocity_1_name] + mass_2 * values[initial_velocity_2_name] - mass_2 * values[result_name]) / mass_1
+        raise ValueError('two-body-momentum-conservation supports solving velocities only')
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -217,6 +240,11 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
     if relation == 'equal-products':
         if len(input_names) != 3 or len(set(input_names)) != 3:
             raise ValueError('equal-products needs three unique inputs')
+    if relation == 'two-body-momentum-conservation':
+        if len(input_names) != 5 or len(set(input_names)) != 5:
+            raise ValueError('two-body-momentum-conservation needs five unique inputs')
+        if solve_for in {input_names[0], input_names[2]}:
+            raise ValueError('two-body-momentum-conservation supports solving velocities only')
     if result_name not in variables or any(name not in variables for name in input_names):
         raise ValueError('all formula variables need definitions')
     if solve_for not in [result_name, *input_names]:
@@ -475,6 +503,21 @@ def compute_science_answer(problem):
                 if known[right_force_name] == 0:
                     raise ValueError('cannot solve equal-products right arm with zero right force')
                 return known[result_name] * known[left_arm_name] / known[right_force_name]
+        if relation == 'two-body-momentum-conservation':
+            if len(input_names) != 5:
+                raise ValueError('two-body-momentum-conservation needs exactly five inputs')
+            mass_1_name, initial_velocity_1_name, mass_2_name, initial_velocity_2_name, final_velocity_1_name = input_names
+            mass_1 = known[mass_1_name]
+            mass_2 = known[mass_2_name]
+            if mass_1 <= 0 or mass_2 <= 0:
+                raise ValueError('two-body-momentum-conservation masses must be positive')
+            if solve_for == initial_velocity_1_name:
+                return (mass_1 * known[final_velocity_1_name] + mass_2 * known[result_name] - mass_2 * known[initial_velocity_2_name]) / mass_1
+            if solve_for == initial_velocity_2_name:
+                return (mass_1 * known[final_velocity_1_name] + mass_2 * known[result_name] - mass_1 * known[initial_velocity_1_name]) / mass_2
+            if solve_for == final_velocity_1_name:
+                return (mass_1 * known[initial_velocity_1_name] + mass_2 * known[initial_velocity_2_name] - mass_2 * known[result_name]) / mass_1
+            raise ValueError('two-body-momentum-conservation supports solving velocities only')
         raise ValueError(f'unsupported formula relation: {relation}')
 
     source = problem['source']
