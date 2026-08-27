@@ -4,8 +4,7 @@ import { createBrowserQuestionReportStore } from './core/question-reports.js';
 import { createReviewEntryFromAttempt, getDueReviewQuestionIds, upsertReviewEntry } from './core/review.js';
 import { QuizSession } from './core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from './core/workout-builder.js';
-import { InMemoryQuestionBank } from './data/question-bank-adapter.js';
-import { demoQuestions, demoSkills } from './data/fixtures.js';
+import { loadRuntimeQuestionBank } from './data/runtime-bank.js';
 import { ClozeChoiceRenderer } from './renderers/cloze-choice.js';
 import { CharacterPresenter } from './ui/character-presenter.js';
 import { HomeView } from './ui/home.js';
@@ -14,7 +13,7 @@ import { QuestionReportUI } from './ui/question-report.js';
 import { renderResults } from './ui/result.js';
 import { WorkoutEditor } from './ui/workout-editor.js';
 
-const repository = new InMemoryQuestionBank({ questions: demoQuestions, skills: demoSkills });
+const { repository, runtimeInfo } = await loadRuntimeQuestionBank();
 const appStore = createBrowserAppStore();
 const reportStore = createBrowserQuestionReportStore();
 const skillLabels = new Map(repository.listSkills().map((skill) => [skill.id, skill.label]));
@@ -26,15 +25,29 @@ const progressEl = document.querySelector('[data-role="progress"]');
 const feedbackEl = document.querySelector('[data-role="feedback"]');
 const contextEl = document.querySelector('[data-role="question-context"]');
 const traineeStatusEl = document.querySelector('[data-role="trainee-status"]');
+const bankStatusEl = document.querySelector('[data-role="bank-status"]');
 const nextButton = document.querySelector('[data-action="next"]');
 const reportButton = document.querySelector('[data-action="report-question"]');
 const renderer = new ClozeChoiceRenderer({ sentenceEl: document.querySelector('[data-role="sentence"]'), choicesEl: document.querySelector('[data-role="choices"]'), explanationEl: document.querySelector('[data-role="explanation"]') });
 const characters = new CharacterPresenter({ sergeantEl: document.querySelector('[data-role="sergeant-character"]'), traineeEl: document.querySelector('[data-role="trainee-character"]') });
 const questionReporter = new QuestionReportUI({ container: document.querySelector('[data-role="question-report"]'), store: reportStore });
 let session; let activeRecipe; let sessionCompletionAwarded = false;
-const defaultRecipe = createWorkoutRecipe({ mode: 'CUSTOM', totalCount: 3, skillAllocations: [{ skillId: 'fixture.pos-adverb', count: 2 }, { skillId: 'fixture.verb-tense', count: 1 }], seed: 1 });
+
+const initialSkills = repository.listSkills().slice(0, 2);
+const defaultAllocations = initialSkills.length > 1
+  ? [{ skillId: initialSkills[0].id, count: 2 }, { skillId: initialSkills[1].id, count: 1 }]
+  : [{ skillId: initialSkills[0]?.id ?? 'fixture.pos-adverb', count: 3 }];
+const defaultRecipe = createWorkoutRecipe({ mode: 'CUSTOM', totalCount: 3, skillAllocations: defaultAllocations, seed: 1 });
 const editor = new WorkoutEditor({ container: editorView, repository, onStart: (recipe) => startSession(recipe) });
 const home = new HomeView({ container: homeView, repository, appStore, onStart: (recipe) => startSession(recipe), onEdit: () => showEditor(defaultRecipe) });
+
+if (bankStatusEl) {
+  bankStatusEl.textContent = runtimeInfo.source === 'beta_verified_bank'
+    ? `β問題DB: ${runtimeInfo.questionCount.toLocaleString()}問 / ${runtimeInfo.skillCount}分野（独立QA verifiedのみ）`
+    : `問題DB読込失敗: ${runtimeInfo.questionCount}問のfixtureで動作中`;
+  bankStatusEl.dataset.source = runtimeInfo.source;
+}
+
 function hideViews() { homeView.hidden = true; editorView.hidden = true; quizView.hidden = true; resultView.hidden = true; }
 function showHome() { questionReporter.close(); hideViews(); homeView.hidden = false; progressEl.textContent = 'HOME'; home.render(); }
 function sessionContextForRecipe(recipe) { if (recipe.mode === 'TEST') return 'mixed'; if (recipe.mode === 'REVIEW') return 'review'; return 'training'; }
