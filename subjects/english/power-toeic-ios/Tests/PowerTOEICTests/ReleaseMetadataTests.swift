@@ -47,6 +47,33 @@ final class ReleaseMetadataTests: XCTestCase {
         XCTAssertTrue(assets.allSatisfy { !($0["drive_file_id"] as? String ?? "").isEmpty })
     }
 
+    func testBundledIrasutoyaAssetsRequirePinnedOfficialProvenance() throws {
+        let object = try jsonObject(at: packageRoot.appendingPathComponent("Release/AssetManifest.json"))
+        let root = try XCTUnwrap(object as? [String: Any])
+        let character = try XCTUnwrap(root["character_art"] as? [String: Any])
+        let assets = try XCTUnwrap(character["assets"] as? [[String: Any]])
+        let verification = try XCTUnwrap(character["verification"] as? [String: Any])
+        let remaining = try XCTUnwrap(verification["remaining_unbundled"] as? [String])
+        let hex64 = try NSRegularExpression(pattern: "^[0-9a-f]{64}$")
+
+        XCTAssertEqual(assets.count, character["bundled_unique_assets"] as? Int)
+        XCTAssertTrue(remaining.isEmpty)
+
+        for asset in assets {
+            XCTAssertEqual(asset["bundle_status"] as? String, "bundled")
+            let sourceURL = try XCTUnwrap(asset["source_url"] as? String)
+            let imageURL = try XCTUnwrap(asset["resolved_image_url_at_bundle_time"] as? String)
+            let filename = try XCTUnwrap(asset["bundled_filename"] as? String)
+            let resourceName = try XCTUnwrap(asset["resource_name"] as? String)
+            let sha256 = try XCTUnwrap(asset["sha256"] as? String)
+
+            XCTAssertTrue(sourceURL.hasPrefix("https://www.irasutoya.com/"))
+            XCTAssertTrue(isApprovedIrasutoyaImageURL(imageURL), "Bundled Irasutoya image must be pinned to an approved Blogger/Google-hosted URL")
+            XCTAssertEqual(filename, resourceName + ".png")
+            XCTAssertNotNil(hex64.firstMatch(in: sha256, range: NSRange(sha256.startIndex..., in: sha256)))
+        }
+    }
+
     func testPrivacyManifestDeclaresOnlyCurrentUserDefaultsRequiredReason() throws {
         let canonicalURL = packageRoot.appendingPathComponent("Release/PrivacyInfo.xcprivacy")
         let appTargetURL = packageRoot.appendingPathComponent("AppShell/PowerTOEICApp/PrivacyInfo.xcprivacy")
@@ -99,6 +126,13 @@ final class ReleaseMetadataTests: XCTestCase {
             encoding: .utf8
         )
         XCTAssertTrue(source.contains("OtoLogic (CC BY 4.0) / https://otologic.jp/"))
+    }
+
+    private func isApprovedIrasutoyaImageURL(_ value: String) -> Bool {
+        guard let url = URL(string: value), url.scheme == "https", let host = url.host?.lowercased() else {
+            return false
+        }
+        return host.hasSuffix(".bp.blogspot.com") || host == "blogger.googleusercontent.com"
     }
 
     private func jsonObject(at url: URL) throws -> Any {
