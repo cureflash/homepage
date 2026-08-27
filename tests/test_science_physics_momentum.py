@@ -22,14 +22,15 @@ class PhysicsMomentumTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_five_checkpoints_total_one_hundred_fifty_variants(self):
+    def test_six_checkpoints_total_one_hundred_ninety_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 150)
+        self.assertEqual(len(batches), 190)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
         counts = {key: 0 for key in PHYSICS_MOMENTUM_TOPICS}
         for topic_key, *_ in batches:
             counts[topic_key] += 1
-        self.assertEqual(set(counts.values()), {30})
+        self.assertEqual(counts["momentum-conservation-two-body-velocity"], 40)
+        self.assertTrue(all(count == 30 for key, count in counts.items() if key != "momentum-conservation-two-body-velocity"))
 
     def test_deterministic_regeneration_and_validation(self):
         for topic_key, mode_key, variant, seed, problems in self.generated_batches():
@@ -59,10 +60,21 @@ class PhysicsMomentumTests(unittest.TestCase):
                     if solve_for == "final_total_momentum": expected = known["initial_momentum_1"] + known["initial_momentum_2"]
                     elif solve_for == "initial_momentum_1": expected = known["final_total_momentum"] - known["initial_momentum_2"]
                     else: expected = known["final_total_momentum"] - known["initial_momentum_1"]
-                else:
+                elif topic_key == "momentum-conservation-final-object":
                     if solve_for == "final_momentum_2": expected = known["initial_total_momentum"] - known["final_momentum_1"]
                     elif solve_for == "initial_total_momentum": expected = known["final_momentum_2"] + known["final_momentum_1"]
                     else: expected = known["initial_total_momentum"] - known["final_momentum_2"]
+                else:
+                    m1 = known["mass_1"]
+                    m2 = known["mass_2"]
+                    if solve_for == "final_velocity_2":
+                        expected = (m1 * known["initial_velocity_1"] + m2 * known["initial_velocity_2"] - m1 * known["final_velocity_1"]) / m2
+                    elif solve_for == "initial_velocity_1":
+                        expected = (m1 * known["final_velocity_1"] + m2 * known["final_velocity_2"] - m2 * known["initial_velocity_2"]) / m1
+                    elif solve_for == "initial_velocity_2":
+                        expected = (m1 * known["final_velocity_1"] + m2 * known["final_velocity_2"] - m1 * known["initial_velocity_1"]) / m2
+                    else:
+                        expected = (m1 * known["initial_velocity_1"] + m2 * known["initial_velocity_2"] - m2 * known["final_velocity_2"]) / m1
                 self.assertAlmostEqual(problem["answer"], expected, msg=(topic_key, mode_key, variant))
                 self.assertAlmostEqual(problem["answer_spec"]["value"], expected)
 
@@ -80,16 +92,32 @@ class PhysicsMomentumTests(unittest.TestCase):
             self.assertTrue(any(value < 0 for value in answers), topic_key)
 
     def test_conservation_assumptions_and_equal_total_are_learner_visible(self):
-        conservation = [PHYSICS_MOMENTUM_TOPICS[key] for key in (
+        conservation_keys = (
             "momentum-conservation-total-before-after",
             "momentum-conservation-final-object",
-        )]
+            "momentum-conservation-two-body-velocity",
+        )
+        conservation = [PHYSICS_MOMENTUM_TOPICS[key] for key in conservation_keys]
         self.assertEqual(conservation[0]["spec"]["relation"], "sum")
         self.assertEqual(conservation[1]["spec"]["relation"], "difference")
+        self.assertEqual(conservation[2]["spec"]["relation"], "two-body-momentum-conservation")
+        self.assertIn("m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂", conservation[2]["formula"])
         for topic in conservation:
-            self.assertIn("P前=P後", topic["formula"])
             self.assertTrue(all("外力の力積を無視できる" in mode["description"] for mode in topic["modes"].values()))
             self.assertTrue(all("1次元" in mode["description"] for mode in topic["modes"].values()))
+
+    def test_full_conservation_has_exactly_one_unknown_velocity_and_no_hidden_rest_assumption(self):
+        topic = PHYSICS_MOMENTUM_TOPICS["momentum-conservation-two-body-velocity"]
+        velocity_names = {"initial_velocity_1", "initial_velocity_2", "final_velocity_1", "final_velocity_2"}
+        self.assertEqual({mode["solve_for"] for mode in topic["modes"].values()}, velocity_names)
+        self.assertNotIn(0, topic["spec"]["variables"]["initial_velocity_1"]["values"])
+        self.assertNotIn(0, topic["spec"]["variables"]["initial_velocity_2"]["values"])
+        for mode in topic["modes"].values():
+            problems = generate_formula_drill(topic["spec"], topic["seeds"][0], 5, solve_for=mode["solve_for"])
+            for problem in problems:
+                visible_velocity_count = sum(name in problem["known"] for name in velocity_names)
+                self.assertEqual(visible_velocity_count, 3)
+                self.assertNotIn(problem["solve_for"], problem["known"])
 
     def test_momentum_change_checkpoint_states_impulse_theorem(self):
         topic = PHYSICS_MOMENTUM_TOPICS["momentum-change-from-impulse"]
@@ -98,8 +126,8 @@ class PhysicsMomentumTests(unittest.TestCase):
 
     def test_normalized_hashes_unique_and_disjoint_from_existing_catalog(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 150)
-        self.assertEqual(len(set(hashes)), 150)
+        self.assertEqual(len(hashes), 190)
+        self.assertEqual(len(set(hashes)), 190)
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
         current_ids = {f"science-physics-motion-{topic_key}-{mode_key}-{variant:02d}" for topic_key, topic in PHYSICS_MOMENTUM_TOPICS.items() for mode_key in topic["modes"] for variant, _ in enumerate(topic["seeds"], start=1)}
         prior_hashes = {row["content_hash"] for row in catalog if row.get("id") not in current_ids}
