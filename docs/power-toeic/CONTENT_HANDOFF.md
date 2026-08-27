@@ -9,57 +9,66 @@
 ## Current canonical state
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
-- Fully completed generated micro-skills: **24 / 44**
-- Current generation micro-skill: `p5.conn.time_prepositions` — **50 / 100**
-- Generated questions persisted: **2,450**
-- QA checked: **1,475**
-- Verified: **1,406**
-- Needs revision: **69**
+- Fully completed generated micro-skills: **25 / 44**
+- Generated questions persisted: **2,500**
+- QA checked: **1,500**
+- Verified: **1,425**
+- Needs revision: **75**
 - Rejected: **0**
-- Unchecked `pending_validation`: **975**
+- Unchecked `pending_validation`: **1,000**
 - `generation_complete`: `false`
 - `validation_complete`: `false`
 
 ## This run — generation
 
-Persisted `p5.conn.time_prepositions` IDs **0026-0050** as:
+Completed `p5.conn.time_prepositions` by persisting IDs **0051-0100** as two safe checkpoints:
 
-`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/time-prepositions/pending/batch-20260828-025-part2.json`
+- `subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/time-prepositions/pending/batch-20260828-025-part3.json`
+- `subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/time-prepositions/pending/batch-20260828-025-part4.json`
 
-All 25 new items remain `pending_validation`. They cover specific dates, months, years, clock times, named days, day+part-of-day, seasons, `at night`, `at dawn`, `at noon`, `the morning of + date`, and decade expressions. Answer positions are A/B/C/D = **6/7/6/6**. Each record keeps one cloze, four distinct choices, a valid keyed answer, explanation, difficulty and stable template ID.
+All 50 new items remain `pending_validation`. They cover months, years, dates, named days, day+part-of-day, clock times, seasons, general parts of day, decade periods, and fixed points such as noon/midnight/dawn/dusk. Answer positions across the new 50 are A/B/C/D = **12/12/13/13**. The 50-question checkpoint has no identical stems and no SequenceMatcher pair at or above 0.94; maximum observed similarity was approximately **0.688**.
 
 This connector-only run did not execute the repository-wide semantic duplicate scanner, so no global duplicate-clearance claim is made.
 
 ## This run — QA
 
-Reviewed the oldest unchecked `p5.verb.gerund_pattern` IDs **0051-0075**.
+Reviewed the oldest unchecked `p5.verb.gerund_pattern` IDs **0076-0100**.
 
 Run result:
 - Checked: **25**
-- Verified: **25**
-- Needs revision: **0**
+- Verified: **19**
+- Needs revision: **6**
 - Rejected: **0**
 
-The displayed `deny`, `risk`, `delay`, `enjoy`, and `discuss` constructions each uniquely select a gerund complement among the four choices. Stored explanations are consistent with the keyed answers.
+Revision IDs:
+
+- `p5_verb_gerund_pattern_0081` — present `mentions` conflicts with `during yesterday's project briefing`.
+- `p5_verb_gerund_pattern_0086` through `0090` — the gerund target is clear, but one-time present `quits` is unnatural or temporally inconsistent with completed past events / the surrounding sequence.
+
+These six were not promoted merely because their gerund choice is structurally obvious; whole-sentence TOEIC naturalness remains part of the QA gate.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-025-gerund-part3.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-025-gerund-part4.qa.json`
 
 ## Test limitation
 
-The connector read/write path succeeded, but repo-local full schema/Node tests were not executed in this run. Full revision-bound cross-bank semantic duplicate clearance also remains outstanding.
+The new 50 generation items were checked for IDs, one-cloze/four-choice structure, keyed-index validity, answer-position distribution, exact stem duplicates and within-checkpoint SequenceMatcher similarity before persistence. Repo-local full schema/Node tests were not executed in this connector-only run. Full revision-bound cross-bank semantic duplicate clearance also remains outstanding.
 
 ## Next generation
 
-Continue `p5.conn.time_prepositions` from:
+Start taxonomy-next micro-skill:
 
-`p5_conn_time_prepositions_0051`
+`p5.conn.logical_conjunction`
+
+from:
+
+`p5_conn_logical_conjunction_0001`
 
 ## Next QA
 
-Continue `p5.verb.gerund_pattern` from:
+The `p5.verb.gerund_pattern` 100-question oldest-pending pass is complete. Continue oldest unchecked backlog at:
 
-`p5_verb_gerund_pattern_0076`
+`p5_verb_causative_have_make_let_0001`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items remain unresolved.
