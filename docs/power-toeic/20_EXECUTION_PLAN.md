@@ -64,34 +64,22 @@ The app track may define only the consumer-facing adapter contract and tiny synt
 
 ## Phase 10 — native iOS Swift/SwiftUI port — APP TRACK
 - [x] **10.1 Create native Swift/SwiftUI project structure**
-  - Created `subjects/english/power-toeic-ios/` as a Swift Package targeting iOS 17/macOS 14.
-  - Established App/Core/Models/Data/Persistence/Views/Resources boundaries, minimal SwiftUI root, XCTest smoke test and dedicated macOS `swift test` workflow.
 - [x] **10.2 Implement Codable platform-neutral models and QuestionBankRepository protocol**
-  - Added Codable/Equatable/Sendable Swift forms for frozen V1 models/enums plus `QuestionBankRepository`.
-  - Swift tests read the canonical Web conformance JSON directly from the adjacent Web tree without a translated/copied fixture.
 - [x] **10.3 Port QuizSession and WorkoutBuilder behavior**
-  - Ported one-answer-per-question session state, injected-clock Attempt emission/results and deterministic seeded question selection.
-  - Shared Web fixture pins exact selected IDs and session attempts/results in Swift tests.
 - [x] **10.4 Port mastery, weakness and review engines**
-  - Ported frozen mastery gates, recent/overall weakness ranking and deterministic review intervals/due ordering.
-  - Shared Web mastery/review fixture cases pass natively.
 - [x] **10.5 Build SwiftUI home/workout/quiz/result/weakness screens**
-  - Added native mobile-first Home, recipe configuration, four-choice Quiz, Result and Weakness views behind existing boundaries.
-  - Views forward intent to domain objects and do not calculate correctness, selection, mastery or review dates.
-  - TEST/mixed sessions hide the micro-skill label.
 - [x] **10.6 Port Drill Sergeant / Trainee character UX and progression**
-  - Added deterministic native `ProgressionEngine`, semantic `AssetCatalog`, detachable `CharacterView`/`CharacterQuizView`, and presentation-only Quiz callbacks.
-  - Shared Web progression fixture is consumed directly by Swift tests; temporary Irasutoya mapping uses four unique works and OtoLogic audio remains behind semantic IDs.
 - [x] **10.7 Implement native persistence**
-  - Added versioned `VersionedNativeAppStore` using an injected native persistence backend with `UserDefaults` as the standard adapter.
-  - Attempts, review entries and progression persist in the same platform-neutral envelope shape; corrupt/unsupported state and storage failures fall back safely without blocking quiz operation.
-  - Native persistence tests cover round-trip, mutation isolation, invalid-state rejection and failure fallback.
 - [x] **10.8 Run JavaScript/Swift conformance suite**
-  - Web Node 22 suite and native macOS Swift suite both passed on the same docs checkpoint commit after 10.6/10.7 merge.
-  - Swift still consumes the canonical Web `cross-platform-conformance-v1.json` directly; no platform-specific fixture fork was introduced.
 
 ## Phase 11 — iOS release preparation — APP TRACK
-- [ ] **11.1 App lifecycle, offline behavior and accessibility pass**
+- [x] **11.1 App lifecycle, offline behavior and accessibility pass**
+  - Added a native dependency/composition environment and deterministic launch snapshot outside Views.
+  - Launch is safe for missing, valid, corrupt and unavailable persisted state; due-review count is restored without network/LLM dependency.
+  - Default/native fallback repository remains offline-safe and optional character/audio failures do not own quiz logic.
+  - Home, Quiz, Workout, Result, Weakness and Character presentation now carry explicit VoiceOver labels/hints where needed.
+  - Correct/wrong feedback is textual as well as visual; Dynamic Type/accessibility-size layouts fall back safely on constrained widths.
+  - Native Swift CI passed for both lifecycle/offline and accessibility closeout checkpoints.
 - [ ] **11.2 App Store assets/metadata/privacy requirements**
 - [ ] **11.3 TestFlight build and release regression**
 - [ ] **11.4 App Store submission readiness checkpoint**

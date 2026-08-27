@@ -2,68 +2,67 @@
 
 ## Current state
 
-**APP TRACK Phase 10 is complete. The exact next APP TRACK task is Phase 11 / Task 11.1 — app lifecycle, offline behavior and accessibility pass.**
+**APP TRACK Phase 11 / Task 11.1 is complete. The exact next APP TRACK task is Phase 11 / Task 11.2 — App Store assets, metadata and privacy requirements.**
 
 The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored or validated in these checkpoints.
 
-## Phase 10.6 completed — native character UX/progression
+## Phase 11.1 completed — native lifecycle, offline behavior and accessibility
 
-The previously blocked character work was reconciled onto the latest `main` rather than merging a stale branch that was 23 commits behind.
+### App composition and launch lifecycle
 
-Merged implementation includes:
+Added a native composition boundary:
 
-- `Core/ProgressionEngine.swift` with the frozen Web stage thresholds `[0, 20, 60, 140, 280, 500]` and the same deterministic point rules;
-- `Views/Character/AssetCatalog.swift` using stable semantic IDs for Sergeant/Trainee/audio resources;
-- `Views/Character/CharacterView.swift` and `CharacterQuizView.swift` as detachable presentation composition;
-- presentation-only callbacks from `QuizView` so character/audio reactions observe `Attempt` events without owning correctness or session state;
-- OtoLogic `audio.correct`, `audio.wrong`, `audio.inspiration` mappings with CC BY 4.0 attribution metadata preserved;
-- temporary Irasutoya mappings limited to four unique works, safely below the configured 20-work commercial threshold;
-- shared Web conformance fixture coverage for native progression behavior.
+- `App/AppEnvironment.swift` defines `PowerTOEICAppEnvironment`, injected question-bank/persistence/asset/audio dependencies and `AppClock`;
+- `AppLaunchSnapshot` restores persisted progression plus the deterministic count of due review entries outside SwiftUI Views;
+- `PowerTOEICAppRoot` now renders the real `HomeView` from the launch snapshot instead of a placeholder `Text("Power TOEIC")` screen;
+- `EmptyQuestionBankRepository` is an offline-safe no-content fallback and does not add runtime network or LLM behavior.
 
-The reconciled implementation passed the macOS Swift CI before merge. The obsolete stale PR #99 was closed rather than merged. PR #102 was merged at `cd44e42a67bc6add495802d47cb27ae4ac85edb5`.
+Launch behavior is covered for:
 
-## Phase 10.7 completed — native persistence
+- no persisted state;
+- valid persisted state;
+- corrupt persisted state;
+- storage read failure.
 
-Added `Persistence/AppStore.swift` with:
+`AppEnvironmentTests.swift` uses an injected fixed clock and memory storage backend, so review-due restoration is deterministic.
 
-- `VersionedNativeAppStore`;
-- injected `AppStatePersistenceBackend` boundary;
-- `UserDefaultsPersistenceBackend` as the standard native adapter;
-- the same version-1 platform-neutral persistence envelope used by Web: attempts, review entries, progression;
-- safe default state when nothing is stored;
-- safe reset/fallback for corrupt JSON, unsupported versions, or backend read/remove failures;
-- write failures that do not block quiz operation;
-- mutation helpers for appending attempts and replacing review/progression domains without overwriting the other domains;
-- validation of persisted attempts, review entries, and progression before writes.
+### Offline/failure boundaries
 
-`AppStoreTests.swift` covers round-trip persistence, corrupt/unsupported fallback, mutation isolation, storage-failure behavior, and invalid-state rejection. The final 10.6+10.7 branch passed the native Swift CI before merge.
+The native runtime continues to require no network or runtime LLM service. Missing production content is handled through the repository boundary rather than online generation. Persisted-state failures fall back to defaults. Character artwork already falls back to SF Symbols/text, and audio remains behind the non-blocking presentation boundary.
 
-## Phase 10.8 completed — JavaScript/Swift conformance closeout
+### Accessibility and constrained layouts
 
-A docs-only checkpoint after the merged native code intentionally triggered both existing Power TOEIC workflows on the exact same commit.
+Updated native presentation without moving correctness/mastery/review logic into Views:
 
-Results:
+- Home actions now expose explicit VoiceOver labels/hints; metric cards have combined accessible values and horizontal-to-vertical fallback;
+- Quiz announces question progress, sentence, answer-choice letters/text, selected/correct/wrong states, explanation feedback and primary-action purpose;
+- correct/wrong is communicated with text/icon semantics rather than color alone;
+- Character presentation hides decorative art from VoiceOver, combines role/message into one accessible label, and stacks vertically for accessibility Dynamic Type sizes;
+- Result uses Dynamic Type-friendly typography, explicit accuracy/count labels and vertical fallback for per-skill rows;
+- Weakness rows adapt from horizontal to vertical layout and expose explicit accuracy/count and training-action labels;
+- Workout Picker, Stepper and start action carry useful VoiceOver hints/values.
 
-- Web Node 22 workflow run `33027870787`: **success** (`npm test`);
-- native macOS Swift workflow run `33027870790`: **success** (`swift test`).
+### Validation
 
-Swift continues to load the canonical Web fixture directly from:
+Two safe implementation checkpoints were merged:
 
-`subjects/english/power-toeic/tests/fixtures/cross-platform-conformance-v1.json`
+- PR #104 — lifecycle/offline/accessibility foundation, Swift workflow run `33028277241`: **success**;
+- PR #105 — accessibility closeout for Result/Weakness/Workout, Swift workflow run `33028435596`: **success**.
 
-No copied Swift-only conformance fixture was introduced. This satisfies the Phase 10 cross-platform gate.
+No production question DB files were changed.
 
 ## Exact next work
 
-### Phase 11 / Task 11.1 — app lifecycle, offline behavior and accessibility pass
+### Phase 11 / Task 11.2 — App Store assets / metadata / privacy
 
-1. Define the native composition/dependency-container boundary that creates the question repository, versioned app store, progression state and top-level SwiftUI navigation without putting domain rules in Views.
-2. Verify app launch with no persisted state, valid persisted state, corrupt persisted state and unavailable/failed storage.
-3. Verify the native quiz remains usable when optional character/audio resources are missing and that offline operation does not require runtime network/LLM access.
-4. Audit SwiftUI semantics for VoiceOver: meaningful labels/hints for answer buttons, progress, correct/wrong feedback, character presentation, and primary actions; decorative artwork should stay hidden from accessibility where appropriate.
-5. Check Dynamic Type / narrow-screen resilience and ensure correct/wrong meaning is not conveyed by color alone.
-6. Add focused tests or deterministic presentation/state helpers where possible and keep domain logic out of UI.
-7. After 11.1 passes CI, proceed to 11.2 App Store assets/metadata/privacy requirements.
+1. Audit the current native package against actual App Store packaging requirements and identify what still requires a real Xcode app target/project rather than Swift Package-only structure.
+2. Define the app identity metadata needed for packaging: display name, bundle-ID placeholder/config boundary, version/build-number ownership and minimum iOS target.
+3. Define App Store icon/launch-screen requirements without creating final copyrighted/paid artwork; preserve temporary Irasutoya constraints and do not use Irasutoya as an App Store icon unless licensing/branding suitability is explicitly cleared.
+4. Record OtoLogic attribution placement for bundled audio and the temporary Irasutoya source manifest/usage-policy references.
+5. Audit privacy/data collection from actual implementation. Current local-only attempts/review/progression and bad-question reports must not be falsely described as server collection; add a privacy manifest only for APIs/reasons that the concrete app actually uses.
+6. Add release metadata/checklists/config files that can be validated in repository CI without requiring App Store Connect credentials.
+7. Do not invent App Store Connect IDs, signing-team IDs, certificates or account-specific values. Keep those as explicit release-time inputs.
+8. After 11.2 is complete, proceed to 11.3 TestFlight build/release regression.
 
 ## Fixed decisions
 
@@ -74,4 +73,5 @@ No copied Swift-only conformance fixture was introduced. This satisfies the Phas
 - no target-score feature, skill-to-body-part mapping, runtime LLM, or production question creation in APP TRACK;
 - temporary art = Irasutoya via semantic asset IDs, below 20 unique works;
 - audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved;
-- persistence failures must not block quiz operation.
+- persistence failures must not block quiz operation;
+- runtime remains offline-capable and does not require network access for the core quiz loop.
