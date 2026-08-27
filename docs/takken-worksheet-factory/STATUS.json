@@ -7,13 +7,13 @@
   "mode": "question_generation_backlog",
   "next_role": "generate_questions",
   "generation_batch_target": 20,
-  "active_unit_order": 68,
-  "active_unit": "roads-frontage",
+  "active_unit_order": 78,
+  "active_unit": "legal-restrictions-comparison",
   "generated_unit_count": 90,
-  "question_generated_unit_count": 67,
-  "generated_question_count": 117,
+  "question_generated_unit_count": 77,
+  "generated_question_count": 137,
   "verified_question_count": 0,
-  "pending_validation_question_count": 117,
+  "pending_validation_question_count": 137,
   "verified_unit_count": 0,
   "pending_factcheck_count": 90,
   "unverified_backlog": [
@@ -114,17 +114,18 @@
   "validation_complete": false,
   "question_generation_policy": "Generate four-choice questions from every independently testable core fact; no fixed count padding. See 30_QUESTION_AND_QA_SPEC.md.",
   "question_generation_progress": {
-    "covered_unit_orders": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67],
-    "covered_fact_count": 117,
+    "covered_unit_orders": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77],
+    "covered_fact_count": 137,
     "generated_question_files": [
       "qualifications/takken/data/pending-questions-01-07.js",
       "qualifications/takken/data/pending-questions-08-20.js",
       "qualifications/takken/data/pending-questions-21-27.js",
       "qualifications/takken/data/pending-questions-28-47.js",
-      "qualifications/takken/data/pending-questions-48-67.js"
+      "qualifications/takken/data/pending-questions-48-67.js",
+      "qualifications/takken/data/pending-questions-68-77.js"
     ],
-    "next_unit_order": 68,
-    "next_unit": "roads-frontage"
+    "next_unit_order": 78,
+    "next_unit": "legal-restrictions-comparison"
   },
   "foundation": {
     "portable_site_shell": true,
@@ -139,6 +140,6 @@
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
   "last_completed_unit": "five-question-exemption-review",
-  "last_run_summary": "Generated 40 additional four-choice pending_validation questions covering all 40 core facts in units 48-67. Cumulative coverage is now 67/90 units, 117 covered core facts, 117 pending_validation questions, and 0 verified. The new checkpoint answer-position distribution is A=10, B=10, C=10, D=10. Structural guards and JavaScript syntax validation passed. Question generation remains incomplete; next start is unit 68 roads-frontage. Solve-all validation has not started.",
-  "updated_at": "2026-08-27T15:27:00+09:00"
+  "last_run_summary": "Generated 20 additional four-choice pending_validation questions covering all 20 core facts in units 68-77. Cumulative coverage is now 77/90 units, 137 covered core facts, 137 pending_validation questions, and 0 verified. The new checkpoint answer-position distribution is A=5, B=5, C=5, D=5. Question generation remains incomplete; next start is unit 78 legal-restrictions-comparison. Solve-all validation has not started.",
+  "updated_at": "2026-08-27T16:32:00+09:00"
 }
