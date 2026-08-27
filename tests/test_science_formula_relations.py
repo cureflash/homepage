@@ -118,6 +118,56 @@ class ScienceFormulaRelationTests(unittest.TestCase):
                 self.assertAlmostEqual(problem["answer_spec"]["value"], expected)
                 self.assertTrue(validate_science_problem(problem))
 
+    def test_two_body_momentum_direct_and_velocity_reverse_directions(self):
+        spec = {
+            "id": "test-two-body-momentum", "relation": "two-body-momentum-conservation",
+            "result": "v2", "inputs": ["m1", "u1", "m2", "u2", "v1"],
+            "variables": {
+                "v2": {"label": "v2", "unit": "m/s"},
+                "m1": {"label": "m1", "unit": "kg", "values": [1, 2, 4]},
+                "u1": {"label": "u1", "unit": "m/s", "values": [-8, -4, 4, 8]},
+                "m2": {"label": "m2", "unit": "kg", "values": [1, 2, 4]},
+                "u2": {"label": "u2", "unit": "m/s", "values": [-6, -2, 2, 6]},
+                "v1": {"label": "v1", "unit": "m/s", "values": [-10, -5, 5, 10]},
+            }, "tolerance": 1e-9,
+        }
+        for solve_for in ("v2", "u1", "u2", "v1"):
+            for problem in generate_formula_drill(spec, 9915, 20, solve_for=solve_for):
+                known = problem["known"]
+                if solve_for == "v2":
+                    expected = (known["m1"] * known["u1"] + known["m2"] * known["u2"] - known["m1"] * known["v1"]) / known["m2"]
+                elif solve_for == "u1":
+                    expected = (known["m1"] * known["v1"] + known["m2"] * known["v2"] - known["m2"] * known["u2"]) / known["m1"]
+                elif solve_for == "u2":
+                    expected = (known["m1"] * known["v1"] + known["m2"] * known["v2"] - known["m1"] * known["u1"]) / known["m2"]
+                else:
+                    expected = (known["m1"] * known["u1"] + known["m2"] * known["u2"] - known["m2"] * known["v2"]) / known["m1"]
+                self.assertAlmostEqual(problem["answer"], expected)
+                self.assertAlmostEqual(problem["answer_spec"]["value"], expected)
+                self.assertTrue(validate_science_problem(problem))
+
+    def test_two_body_momentum_rejects_mass_inversion_zero_mass_and_wrong_arity(self):
+        base = {
+            "id": "test-two-body-momentum-invalid", "relation": "two-body-momentum-conservation",
+            "result": "v2", "inputs": ["m1", "u1", "m2", "u2", "v1"],
+            "variables": {
+                "v2": {"label": "v2"},
+                "m1": {"label": "m1", "values": [1]},
+                "u1": {"label": "u1", "values": [2]},
+                "m2": {"label": "m2", "values": [1]},
+                "u2": {"label": "u2", "values": [3]},
+                "v1": {"label": "v1", "values": [4]},
+            },
+        }
+        with self.assertRaisesRegex(ValueError, "supports solving velocities only"):
+            generate_formula_drill(base, 9916, 1, solve_for="m1")
+        zero_mass = {**base, "variables": {**base["variables"], "m2": {"label": "m2", "values": [0]}}}
+        with self.assertRaisesRegex(ValueError, "masses must be positive"):
+            generate_formula_drill(zero_mass, 9917, 1, solve_for="v2")
+        wrong = {**base, "inputs": ["m1", "u1", "m2", "u2"]}
+        with self.assertRaisesRegex(ValueError, "five unique inputs"):
+            generate_formula_drill(wrong, 9918, 1, solve_for="v2")
+
     def test_new_relation_wrong_arity_is_rejected(self):
         for relation in ("square-over-double", "double-quotient"):
             spec = {
