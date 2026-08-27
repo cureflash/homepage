@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 900,
-  "verified_question_count": 869,
-  "needs_revision_count": 31,
+  "checked_question_count": 925,
+  "verified_question_count": 892,
+  "needs_revision_count": 33,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-27-scheduled-020",
+  "last_completed_batch": "2026-08-27-scheduled-021-part1",
   "last_completed_micro_skill": "p5.verb.subject_verb_agreement",
   "last_batch_counts": {
-    "checked": 100,
-    "verified": 100,
-    "needs_revision": 0,
+    "checked": 25,
+    "verified": 23,
+    "needs_revision": 2,
     "rejected": 0
   },
-  "next_batch": "2026-08-27-scheduled-021-part1",
+  "next_batch": "2026-08-27-scheduled-021-part2",
   "next_micro_skill": "p5.verb.present_vs_past",
-  "next_question_id": "p5_verb_present_vs_past_0001",
+  "next_question_id": "p5_verb_present_vs_past_0026",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-27T16:12:00+09:00"
+  "updated_at": "2026-08-27T17:15:00+09:00"
 }
