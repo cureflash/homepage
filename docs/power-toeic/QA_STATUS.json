@@ -1,12 +1,12 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1275,
-  "verified_question_count": 1210,
+  "checked_question_count": 1300,
+  "verified_question_count": 1235,
   "needs_revision_count": 65,
   "rejected_question_count": 0,
   "pending_validation_count": 975,
-  "last_completed_batch": "2026-08-28-scheduled-025-modal-part3",
+  "last_completed_batch": "2026-08-28-scheduled-025-modal-part4",
   "last_completed_micro_skill": "p5.verb.modal_base_form",
   "last_batch_counts": {
     "checked": 25,
@@ -14,10 +14,10 @@
     "needs_revision": 0,
     "rejected": 0
   },
-  "next_batch": "2026-08-28-scheduled-025-modal-part4",
-  "next_micro_skill": "p5.verb.modal_base_form",
-  "next_question_id": "p5_verb_modal_base_form_0076",
+  "next_batch": "2026-08-28-scheduled-025-to-infinitive-part1",
+  "next_micro_skill": "p5.verb.to_infinitive_pattern",
+  "next_question_id": "p5_verb_to_infinitive_pattern_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-28T00:36:00+09:00"
+  "updated_at": "2026-08-28T01:14:00+09:00"
 }
