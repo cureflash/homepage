@@ -24,29 +24,30 @@ Completed grades:
 
 Active grade: **中学2年** — in progress.
 
-Current JH2 publication: **8 skills / 24 PDFs**.
+Current JH2 publication: **12 skills / 36 PDFs**.
 
 Latest completed batch:
 
-- `polynomial-times-number` — 多項式×数 — 3 PDFs
-- `expression-four-operations` — 式の四則混合 — 3 PDFs
-- `expression-substitution` — 式への代入 — 3 PDFs
-- `simultaneous-equations-elimination-basic` — 連立方程式 加減法 基本 — 3 PDFs
+- `simultaneous-equations-substitution-basic` — 連立方程式 代入法 基本 — 3 PDFs
+- `simultaneous-equations-align-coefficients` — 係数をそろえる連立方程式 — 3 PDFs
+- `simultaneous-equations-parentheses` — かっこを含む連立方程式 — 3 PDFs
+- `simultaneous-equations-decimals` — 小数を含む連立方程式 — 3 PDFs
 
-Each PDF contains 20 problems. The batch preserves deterministic seeds, independent answer recomputation, problem/variant/content-hash duplicate checks, 2-page PDFs, ordinary integer numbering, same-layout red answers, catalog validation, common Factory regression, and the shared catalog-writer concurrency guard. For the basic elimination worksheets, the validator solves the two equations independently from the determinant and the dedicated test substitutes the recovered x/y back into both original equations.
+Each PDF contains 20 problems. The batch preserves deterministic seeds, determinant / `Fraction` based independent answer recomputation, problem/variant/content-hash duplicate checks, 2-page PDFs, ordinary integer numbering, same-layout red answers, catalog validation, common Factory regression, and the shared catalog-writer concurrency guard.
 
-- successful workflow run: `33106457275`
-- publish commit: `9e1208009d4caeac07f8f7fa565c06c714eaa4a8`
+The current MEXT junior-high mathematics guidance places simultaneous linear equations in Grade 2 and requires solving simple simultaneous linear equations. The four worksheets are therefore treated as method/representation variants within that Grade 2 scope.
+
+- publish commit: `6ad3f5ba9175a36451cf0ea5c3e69cb54b269d13`
 
 ## Exact next starting point
 
-Continue in **中学2年** from the first unfinished skill: **連立方程式 代入法 基本**.
+Continue in **中学2年** from the first unfinished skill: **分数を含む連立方程式**.
 
 The next four candidates are:
 
-1. 代入法 基本
-2. 係数をそろえる連立方程式
-3. かっこを含む連立方程式
-4. 小数を含む連立方程式
+1. 分数を含む連立方程式
+2. 一次関数 xからyを求める代入
+3. 2点から変化の割合を求める
+4. 傾きと切片から式を作る基本練習
 
 Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
