@@ -1,12 +1,14 @@
-"""Formal-course Physics topics for momentum and impulse.
+"""Formal-course Physics topics for momentum, impulse, and momentum conservation.
 
 These checkpoints stay in one-dimensional motion so every sign and answer is
 mechanically unambiguous. The learner-visible positive direction is fixed in
-each variable label. The formulas are the standard p = mv, J = FΔt, and
-Δp = FΔt forms, reusing the shared reversible product relation.
+each variable label. The first three formulas are p = mv, J = FΔt, and
+Δp = FΔt. The conservation checkpoints use learner-visible total momentum
+before/after values and reuse the shared reversible sum/difference relations.
 
 Curriculum basis: current MEXT High School Course of Study Commentary,
-Physics: momentum and impulse, including that momentum change equals impulse.
+Physics: momentum and impulse, momentum conservation in collisions/divisions,
+and that momentum change equals impulse.
 """
 
 PHYSICS_MOMENTUM_PROBLEM_COUNT = 20
@@ -14,6 +16,7 @@ PHYSICS_MOMENTUM_PROBLEM_COUNT = 20
 _SIGNED_SPEEDS = [-12, -10, -8, -6, -5, -4, -3, 3, 4, 5, 6, 8, 10, 12]
 _SIGNED_FORCES = [-40, -30, -24, -20, -16, -12, -10, -8, 8, 10, 12, 16, 20, 24, 30, 40]
 _DURATIONS = [0.1, 0.2, 0.25, 0.4, 0.5, 0.8, 1.0, 1.25, 1.5, 2.0]
+_SIGNED_MOMENTA = [-30, -24, -20, -18, -15, -12, -10, -8, -6, -5, -4, 4, 5, 6, 8, 10, 12, 15, 18, 20, 24, 30]
 
 PHYSICS_MOMENTUM_TOPICS = {
     "momentum-one-dimensional": {
@@ -86,6 +89,54 @@ PHYSICS_MOMENTUM_TOPICS = {
             "basic-momentum-change": {"solve_for": "momentum_change", "worksheet_mode": "calculation-basic", "description": "力積は運動量の変化に等しいことを使い、一定の力 F が時間 Δt はたらくとき Δp = FΔt から運動量の変化 Δp を求めます。"},
             "reverse-force": {"solve_for": "force", "worksheet_mode": "calculation-reverse", "description": "力積は運動量の変化に等しいことを使い、運動量の変化 Δp と作用時間 Δt から Δp = FΔt で力 F を逆算します。"},
             "reverse-duration": {"solve_for": "duration", "worksheet_mode": "calculation-reverse", "description": "力積は運動量の変化に等しいことを使い、運動量の変化 Δp と一定の力 F から Δp = FΔt で作用時間 Δt を逆算します。"},
+        },
+    },
+    "momentum-conservation-total-before-after": {
+        "title": "物理 運動量保存：衝突前後の全運動量",
+        "unit": "様々な運動：運動量と力積",
+        "skill": "momentum-conservation-total-before-after",
+        "formula": "P後 = P前 = p₁前 + p₂前（右向きを正、左向きを負）",
+        "seeds": tuple(range(7381, 7391)),
+        "spec": {
+            "id": "physics-momentum-conservation-total-before-after",
+            "relation": "sum",
+            "result": "final_total_momentum",
+            "inputs": ["initial_momentum_1", "initial_momentum_2"],
+            "variables": {
+                "final_total_momentum": {"label": "衝突後の2物体の全運動量 P後（運動量保存により P前=P後、右向きを正、左向きを負）", "unit": "kg·m/s"},
+                "initial_momentum_1": {"label": "衝突前の物体1の運動量 p₁前（右向きを正、左向きを負）", "unit": "kg·m/s", "values": _SIGNED_MOMENTA},
+                "initial_momentum_2": {"label": "衝突前の物体2の運動量 p₂前（右向きを正、左向きを負）", "unit": "kg·m/s", "values": _SIGNED_MOMENTA},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-final-total": {"solve_for": "final_total_momentum", "worksheet_mode": "calculation-basic", "description": "外力の力積を無視できる1次元の2物体衝突で、右向きを正、左向きを負とし、運動量保存 P前=P後 と P前=p₁前+p₂前 から衝突後の全運動量を求めます。"},
+            "reverse-initial-p1": {"solve_for": "initial_momentum_1", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、衝突後の全運動量と衝突前の物体2の運動量から、運動量保存を使って物体1の衝突前運動量を逆算します。"},
+            "reverse-initial-p2": {"solve_for": "initial_momentum_2", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、衝突後の全運動量と衝突前の物体1の運動量から、運動量保存を使って物体2の衝突前運動量を逆算します。"},
+        },
+    },
+    "momentum-conservation-final-object": {
+        "title": "物理 運動量保存：衝突後の一方の運動量",
+        "unit": "様々な運動：運動量と力積",
+        "skill": "momentum-conservation-final-object",
+        "formula": "p₂後 = P前 - p₁後（P前=P後、右向きを正、左向きを負）",
+        "seeds": tuple(range(7391, 7401)),
+        "spec": {
+            "id": "physics-momentum-conservation-final-object",
+            "relation": "difference",
+            "result": "final_momentum_2",
+            "inputs": ["initial_total_momentum", "final_momentum_1"],
+            "variables": {
+                "final_momentum_2": {"label": "衝突後の物体2の運動量 p₂後（右向きを正、左向きを負）", "unit": "kg·m/s"},
+                "initial_total_momentum": {"label": "衝突前の2物体の全運動量 P前（運動量保存により P前=P後、右向きを正、左向きを負）", "unit": "kg·m/s", "values": _SIGNED_MOMENTA},
+                "final_momentum_1": {"label": "衝突後の物体1の運動量 p₁後（右向きを正、左向きを負）", "unit": "kg·m/s", "values": _SIGNED_MOMENTA},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-final-p2": {"solve_for": "final_momentum_2", "worksheet_mode": "calculation-basic", "description": "外力の力積を無視できる1次元の2物体衝突で、運動量保存 P前=P後 と P後=p₁後+p₂後 から、衝突後の物体2の運動量を求めます。"},
+            "reverse-initial-total": {"solve_for": "initial_total_momentum", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、衝突後の2物体の運動量から、運動量保存を使って衝突前の全運動量を逆算します。"},
+            "reverse-final-p1": {"solve_for": "final_momentum_1", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、衝突前の全運動量と衝突後の物体2の運動量から、物体1の衝突後運動量を逆算します。"},
         },
     },
 }
