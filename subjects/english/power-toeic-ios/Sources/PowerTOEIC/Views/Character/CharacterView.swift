@@ -67,7 +67,7 @@ public struct CharacterView: View {
     @ViewBuilder
     private var characterArtwork: some View {
         if let name = resolvedAsset?.resourceName {
-            Image(name)
+            Image(name, bundle: .module)
                 .resizable()
                 .scaledToFit()
         } else {

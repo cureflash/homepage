@@ -7,35 +7,66 @@
     "terms_url": "https://www.irasutoya.com/p/terms.html",
     "assets": [
       {
-        "semantic_ids": ["sergeant.neutral", "sergeant.correct", "sergeant.wrong", "sergeant.complete"],
+        "semantic_ids": [
+          "sergeant.neutral",
+          "sergeant.correct",
+          "sergeant.wrong",
+          "sergeant.complete"
+        ],
         "resource_name": "irasutoya_sergeant_instructor",
         "source_title": "法務教官のイラスト（男性）",
         "source_url": "https://www.irasutoya.com/2017/09/blog-post_34.html",
-        "bundle_status": "not_yet_bundled"
+        "bundle_status": "bundled",
+        "bundled_filename": "irasutoya_sergeant_instructor.png",
+        "sha256": "8137c37ef6868952a349f27773b0dee4af619594c5988798194de30873a5282e",
+        "resolved_image_url_at_bundle_time": "https://4.bp.blogspot.com/-bWokxivsF8U/WZP3jdEIcBI/AAAAAAABF_U/PRaxjIlVe8ETkbdrTix6ymro6feroK62QCLcBGAs/s450/keimusyo_job_houmukyoukan_man.png"
       },
       {
-        "semantic_ids": ["trainee.stage_0.neutral", "trainee.stage_1.neutral"],
+        "semantic_ids": [
+          "trainee.stage_0.neutral",
+          "trainee.stage_1.neutral"
+        ],
         "resource_name": "irasutoya_trainee_skinny",
         "source_title": "痩せた男性のイラスト",
         "source_url": "https://www.irasutoya.com/2016/05/blog-post_397.html",
-        "bundle_status": "not_yet_bundled"
+        "bundle_status": "bundled",
+        "bundled_filename": "irasutoya_trainee_skinny.png",
+        "sha256": "9af166e1d9d00e421ab42e36a4379f5e34134839545ca62ac85b896b0e3d0428",
+        "resolved_image_url_at_bundle_time": "https://4.bp.blogspot.com/-bJB8o7IfTrI/VpjCsMPYMaI/AAAAAAAA3GY/QKqohLvIvmM/s800/yase03_man.png"
       },
       {
-        "semantic_ids": ["trainee.stage_2.neutral", "trainee.stage_3.neutral", "trainee.stage_4.neutral"],
+        "semantic_ids": [
+          "trainee.stage_2.neutral",
+          "trainee.stage_3.neutral",
+          "trainee.stage_4.neutral"
+        ],
         "resource_name": "irasutoya_trainee_muscular",
         "source_title": "筋肉質な人のイラスト（男性）",
         "source_url": "https://www.irasutoya.com/2018/06/blog-post_865.html",
-        "bundle_status": "not_yet_bundled"
+        "bundle_status": "bundled",
+        "bundled_filename": "irasutoya_trainee_muscular.png",
+        "sha256": "cc2c39ae95252b0fe36a8baad9230f0db028049e76a1139bdcc1c614d1862e80",
+        "resolved_image_url_at_bundle_time": "https://2.bp.blogspot.com/-jqnzuMBq714/WwJaY08pZDI/AAAAAAABML0/MeB8mFNXN083xVJkGziPcqFIBMUaL-EnwCLcBGAs/s800/macho_man.png"
       },
       {
-        "semantic_ids": ["trainee.stage_5.neutral"],
+        "semantic_ids": [
+          "trainee.stage_5.neutral"
+        ],
         "resource_name": "irasutoya_trainee_bodybuilder",
         "source_title": "ボディービルダーのイラスト",
         "source_url": "https://www.irasutoya.com/2014/06/blog-post_14.html",
         "bundle_status": "not_yet_bundled"
       }
     ],
-    "app_icon_policy": "Do not use temporary Irasutoya character art as the App Store icon unless licensing and branding suitability are explicitly cleared; prefer original icon artwork before submission."
+    "app_icon_policy": "Do not use temporary Irasutoya character art as the App Store icon unless licensing and branding suitability are explicitly cleared; prefer original icon artwork before submission.",
+    "bundled_unique_assets": 3,
+    "verification": {
+      "verified_at": "2026-08-27",
+      "method": "Official Irasutoya article title/URL verified externally. Exact official Blogger-hosted PNG URLs are pinned for deterministic build-time acquisition; identical bytes are committed for Web and SwiftPM. Runtime hotlinking remains disabled.",
+      "remaining_unbundled": [
+        "irasutoya_trainee_bodybuilder"
+      ]
+    }
   },
   "audio": {
     "source": "Google Drive existing SE library / OtoLogic",
@@ -74,6 +105,9 @@
         "bundle_status": "bundled"
       }
     ],
-    "credit_placement": ["in-app credits/about surface before submission", "release documentation"]
+    "credit_placement": [
+      "in-app credits/about surface before submission",
+      "release documentation"
+    ]
   }
 }

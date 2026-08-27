@@ -92,6 +92,10 @@ The app track may define only the consumer-facing adapter contract and tiny synt
   - CI successfully produced an unsigned `.xcarchive` and verified the archived app contains a valid privacy manifest.
   - Actual TestFlight upload remains externally gated on user-owned Apple Developer/App Store Connect signing inputs; no credentials were invented or committed.
 - [ ] **11.4 App Store submission readiness checkpoint**
+  - OtoLogic audio resources are complete and bundled.
+  - Character-art checkpoint: 3 of the 4 approved Irasutoya works are now pinned to verified official Blogger-hosted PNGs and bundled identically for Web and SwiftPM behind semantic IDs: sergeant, skinny trainee, muscular trainee.
+  - Stage 5 `irasutoya_trainee_bodybuilder` remains deliberately unbundled until its exact official direct PNG can be pinned; no third-party copy or substitute may be used. Stage 5 therefore uses the existing safe presentation fallback.
+  - After the exact bodybuilder asset is bundled and validated, the remaining repository-owned visual blocker is the final original AppIcon.
 
 ## Deferred / only when required
 account login and cross-device sync; server-side analytics/persistence; payments; Part 2/6/7/listening expansion; advanced item-response statistics; third-party UI/game frameworks; more character skins/animation.

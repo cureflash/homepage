@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { AssetCatalog, ASSET_IDS } from '../js/ui/asset-catalog.js';
+import { AssetCatalog, ASSET_IDS, traineeAssetId } from '../js/ui/asset-catalog.js';
 import { CharacterPresenter } from '../js/ui/character-presenter.js';
 
 function element(documentRef) {
@@ -28,11 +28,19 @@ function fakeDocument() {
   };
 }
 
-test('presenter renders text fallbacks when character assets are absent', () => {
+test('presenter renders text fallbacks when character assets are explicitly absent', () => {
   const doc = fakeDocument();
   const sergeantEl = element(doc);
   const traineeEl = element(doc);
-  const presenter = new CharacterPresenter({ sergeantEl, traineeEl, catalog: new AssetCatalog() });
+  const presenter = new CharacterPresenter({
+    sergeantEl,
+    traineeEl,
+    catalog: new AssetCatalog({
+      [ASSET_IDS.SERGEANT_NEUTRAL]: null,
+      [traineeAssetId(2, 'neutral')]: null,
+      [ASSET_IDS.TRAINEE_STAGE_0]: null,
+    }),
+  });
   presenter.render({ traineeStage: 2, reaction: 'correct' });
   assert.equal(sergeantEl.children[0].textContent, '軍曹');
   assert.equal(traineeEl.children[0].textContent, '訓練生 Lv.2');
@@ -50,4 +58,14 @@ test('presenter uses available semantic images without changing quiz state', () 
   presenter.render({ traineeStage: 3, reaction: 'wrong' });
   assert.equal(sergeantEl.children[0].src, '/s.webp');
   assert.equal(traineeEl.children[0].src, '/t3.webp');
+});
+
+test('presenter uses bundled character assets by default when available', () => {
+  const doc = fakeDocument();
+  const sergeantEl = element(doc);
+  const traineeEl = element(doc);
+  const presenter = new CharacterPresenter({ sergeantEl, traineeEl });
+  presenter.render({ traineeStage: 4, reaction: 'correct' });
+  assert.equal(sergeantEl.children[0].src, './assets/characters/irasutoya_sergeant_instructor.png');
+  assert.equal(traineeEl.children[0].src, './assets/characters/irasutoya_trainee_muscular.png');
 });

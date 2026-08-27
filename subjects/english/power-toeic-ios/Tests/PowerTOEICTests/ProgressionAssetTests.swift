@@ -98,12 +98,20 @@ final class ProgressionAssetTests: XCTestCase {
         XCTAssertEqual(catalog.audio(AssetCatalog.audioWrong)?.resourceName, "otologic_incorrect.mp3")
     }
 
-    func testTemporaryCharacterCatalogStaysWellBelowIrasutoyaFreeLimit() {
+    func testTemporaryCharacterCatalogTracksBundledAndPlannedIrasutoyaAssetsBelowLimit() {
         let catalog = AssetCatalog()
-        let resourceNames = (0...5).compactMap { catalog.trainee(stage: $0)?.resourceName }
-            + [catalog.sergeant()?.resourceName].compactMap { $0 }
+        let records = (0...5).compactMap { catalog.trainee(stage: $0) }
+            + [catalog.sergeant()].compactMap { $0 }
+        let bundledResourceNames = Set(records.compactMap(\.resourceName))
+        let plannedSourceURLs = Set(records.compactMap(\.sourceURL))
 
-        XCTAssertLessThan(Set(resourceNames).count, 20)
-        XCTAssertEqual(Set(resourceNames).count, 4)
+        XCTAssertLessThan(bundledResourceNames.count, 20)
+        XCTAssertEqual(bundledResourceNames.count, 3)
+        XCTAssertLessThan(plannedSourceURLs.count, 20)
+        XCTAssertEqual(plannedSourceURLs.count, 4)
+
+        let finalStage = catalog.trainee(stage: 5)
+        XCTAssertNil(finalStage?.resourceName)
+        XCTAssertEqual(finalStage?.sourceURL, "https://www.irasutoya.com/2014/06/blog-post_14.html")
     }
 }
