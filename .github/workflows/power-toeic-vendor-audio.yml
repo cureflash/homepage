@@ -43,9 +43,9 @@ jobs:
           set -euo pipefail
           cd subjects/english/power-toeic-ios/Sources/PowerTOEIC/Resources/Audio
           cat > /tmp/power-toeic-audio.sha256 <<'EOF'
-          f7f32f869b46cbd7263e4f508dc1526f52700bccdd2de99db10f9e192327edc1  otologic_correct.mp3
-          e31188cc16c426d7ef7284379feed55b5fd54e67f7c2358df51798204f581f6c  otologic_incorrect.mp3
-          a1386360174a91c76ca9c35764d77a7998008546486ce52797143b4d8c5bb62a  otologic_inspiration.mp3
+          085e5a4a3fe2669ad1378423c412f7e76cc6b2b573b3081380207f5d8b8ea2fc  otologic_correct.mp3
+          c5141a298f48e63c4606ab34b189590cd0f64611ae9546463511d63da7deb2eb  otologic_incorrect.mp3
+          4c61471b681bdb407fcdaa183e6881aaa76be05887accf761f73b0454f0f5f66a  otologic_inspiration.mp3
           EOF
           sha256sum -c /tmp/power-toeic-audio.sha256
 
