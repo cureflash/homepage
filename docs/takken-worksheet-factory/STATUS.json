@@ -7,13 +7,13 @@
   "mode": "question_generation_backlog",
   "next_role": "generate_questions",
   "generation_batch_target": 20,
-  "active_unit_order": 28,
-  "active_unit": "damages-penalty",
+  "active_unit_order": 48,
+  "active_unit": "sale-earnest",
   "generated_unit_count": 90,
-  "question_generated_unit_count": 27,
-  "generated_question_count": 37,
+  "question_generated_unit_count": 47,
+  "generated_question_count": 77,
   "verified_question_count": 0,
-  "pending_validation_question_count": 37,
+  "pending_validation_question_count": 77,
   "verified_unit_count": 0,
   "pending_factcheck_count": 90,
   "unverified_backlog": [
@@ -114,15 +114,16 @@
   "validation_complete": false,
   "question_generation_policy": "Generate four-choice questions from every independently testable core fact; no fixed count padding. See 30_QUESTION_AND_QA_SPEC.md.",
   "question_generation_progress": {
-    "covered_unit_orders": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
-    "covered_fact_count": 37,
+    "covered_unit_orders": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+    "covered_fact_count": 77,
     "generated_question_files": [
       "qualifications/takken/data/pending-questions-01-07.js",
       "qualifications/takken/data/pending-questions-08-20.js",
-      "qualifications/takken/data/pending-questions-21-27.js"
+      "qualifications/takken/data/pending-questions-21-27.js",
+      "qualifications/takken/data/pending-questions-28-47.js"
     ],
-    "next_unit_order": 28,
-    "next_unit": "damages-penalty"
+    "next_unit_order": 48,
+    "next_unit": "sale-earnest"
   },
   "foundation": {
     "portable_site_shell": true,
@@ -137,6 +138,6 @@
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
   "last_completed_unit": "five-question-exemption-review",
-  "last_run_summary": "Generated 14 additional four-choice pending_validation questions covering all 14 core facts in units 21-27. Together with the earlier checkpoint in this run, question coverage advanced from unit 8 through unit 27: cumulative coverage is 27/90 units, 37 covered core facts, 37 pending_validation questions, and 0 verified. The units 21-27 answer-position distribution is A=4, B=4, C=4, D=2; no answer position is absent. Question generation remains incomplete; next start is unit 28 damages-penalty. Solve-all validation has not started.",
-  "updated_at": "2026-08-27T13:45:00+09:00"
+  "last_run_summary": "Generated 40 additional four-choice pending_validation questions covering all 40 core facts in units 28-47. Cumulative coverage is now 47/90 units, 77 covered core facts, 77 pending_validation questions, and 0 verified. The new checkpoint answer-position distribution is A=10, B=10, C=10, D=10. Structural guards and JavaScript syntax validation passed. Question generation remains incomplete; next start is unit 48 sale-earnest. Solve-all validation has not started.",
+  "updated_at": "2026-08-27T14:31:00+09:00"
 }
