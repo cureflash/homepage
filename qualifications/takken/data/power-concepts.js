@@ -72,12 +72,39 @@
     { conceptId: "takken-concept-risk-allocation", title: "危険負担", category: "rights", sourceUnits: ["risk-simultaneous-performance"], scopeNote: "双方に帰責できない履行不能における反対給付拒絶を扱う。" },
     { conceptId: "takken-concept-sale-earnest", title: "民法上の解約手付", category: "rights", sourceUnits: ["sale-earnest"], scopeNote: "相手方の履行着手前の手付放棄・倍額の現実提供による解除を扱う。" },
     { conceptId: "takken-concept-civil-nonconformity", title: "民法上の契約不適合責任", category: "rights", sourceUnits: ["contract-nonconformity-civil"], scopeNote: "追完請求、代金減額請求など契約不適合時の買主救済を扱う。" },
-    { conceptId: "takken-concept-lease-general", title: "民法上の賃貸借", category: "rights", sourceUnits: ["lease-general"], scopeNote: "使用収益、賃料、返還という契約構造と存続期間上限を扱う。" }
+    { conceptId: "takken-concept-lease-general", title: "民法上の賃貸借", category: "rights", sourceUnits: ["lease-general"], scopeNote: "使用収益、賃料、返還という契約構造と存続期間上限を扱う。" },
+
+    { conceptId: "takken-concept-security-deposit", title: "敷金", category: "rights", sourceUnits: ["lease-deposit-opposability"], scopeNote: "敷金の定義、賃貸借終了・目的物返還後の未払債務控除と残額返還を扱う。" },
+    { conceptId: "takken-concept-building-lease-opposability", title: "建物賃貸借の対抗力", category: "rights", sourceUnits: ["lease-deposit-opposability", "building-lease-right"], scopeNote: "建物の引渡しによって登記なしでも第三者に対抗できる借地借家法上の対抗要件を扱う。" },
+    { conceptId: "takken-concept-ordinary-land-lease-term", title: "普通借地権の存続期間", category: "rights", sourceUnits: ["land-lease-right"], scopeNote: "普通借地権の当初30年と、より長い契約期間を定めた場合の扱いを扱う。" },
+    { conceptId: "takken-concept-land-lease-opposability", title: "借地権の対抗力", category: "rights", sourceUnits: ["land-lease-right"], scopeNote: "借地権登記がなくても借地権者名義で登記された建物の所有により第三者対抗できる仕組みを扱う。" },
+    { conceptId: "takken-concept-fixed-term-land-lease", title: "一般定期借地権", category: "rights", sourceUnits: ["fixed-term-land-lease"], scopeNote: "50年以上の存続期間、更新等なし・建物買取請求なしの特約、書面等の方式を一体で扱う。" },
+    { conceptId: "takken-concept-building-lease-term", title: "建物賃貸借の期間", category: "rights", sourceUnits: ["building-lease-right"], scopeNote: "期間1年未満の建物賃貸借が期間の定めのない賃貸借とみなされるルールを中心に扱う。" },
+    { conceptId: "takken-concept-fixed-term-building-lease", title: "定期建物賃貸借", category: "rights", sourceUnits: ["fixed-term-building-lease"], scopeNote: "更新なし・期間満了終了、書面等による契約、契約前の別書面等による説明を扱う。" },
+    { conceptId: "takken-concept-heirs-order", title: "法定相続人と順位", category: "rights", sourceUnits: ["inheritance-heirs-shares"], scopeNote: "配偶者は常に相続人となることと、子・直系尊属・兄弟姉妹の血族相続順位を扱う。" },
+    { conceptId: "takken-concept-statutory-inheritance-shares", title: "法定相続分", category: "rights", sourceUnits: ["inheritance-heirs-shares"], scopeNote: "共同相続人の組合せに応じた法定相続分を扱い、配偶者と子の場合の各2分の1を基礎にする。" },
+    { conceptId: "takken-concept-inheritance-deliberation", title: "相続の承認・放棄と熟慮期間", category: "rights", sourceUnits: ["inheritance-acceptance-renunciation"], scopeNote: "相続開始を知った時から原則3か月以内に単純承認・限定承認・放棄を選ぶルールを扱う。" },
+    { conceptId: "takken-concept-inheritance-renunciation", title: "相続放棄", category: "rights", sourceUnits: ["inheritance-acceptance-renunciation"], scopeNote: "相続放棄を家庭裁判所への申述によって行う手続と効果を扱う。" },
+    { conceptId: "takken-concept-will-effect", title: "遺言の効力", category: "rights", sourceUnits: ["will-reserved-portion"], scopeNote: "遺言が原則として遺言者の死亡時から効力を生じることを中心に扱う。" },
+    { conceptId: "takken-concept-reserved-portion", title: "遺留分", category: "rights", sourceUnits: ["will-reserved-portion"], scopeNote: "兄弟姉妹以外の相続人に認められる遺留分と権利者の範囲を扱う。" },
+    { conceptId: "takken-concept-condominium-ownership", title: "区分所有権・共用部分", category: "rights", sourceUnits: ["condominium-law"], scopeNote: "専有部分に成立する区分所有権と、共用部分が原則として区分所有者全員の共有となる構造を扱う。" },
+    { conceptId: "takken-concept-real-estate-registration-record", title: "不動産登記記録の構造", category: "rights", sourceUnits: ["real-estate-registration"], scopeNote: "表題部・権利部の役割と、甲区の所有権・乙区の所有権以外の権利の区分を扱う。" },
+    { conceptId: "takken-concept-city-quasi-planning-area", title: "都市計画区域・準都市計画区域", category: "legal-restrictions", sourceUnits: ["city-planning-area"], scopeNote: "一体の都市として整備等する都市計画区域と、区域外で土地利用整序等のため指定する準都市計画区域を比較する。" },
+    { conceptId: "takken-concept-area-division", title: "区域区分・市街化区域・市街化調整区域", category: "legal-restrictions", sourceUnits: ["area-division"], scopeNote: "区域区分の意味と、市街化区域の優先的市街化・市街化調整区域の市街化抑制を扱う。" },
+    { conceptId: "takken-concept-use-districts", title: "用途地域", category: "legal-restrictions", sourceUnits: ["use-districts"], scopeNote: "都市計画法上の地域地区としての位置付けと建築基準法48条の用途制限との連動を扱う。" },
+    { conceptId: "takken-concept-city-planning-decision", title: "都市計画の決定主体", category: "legal-restrictions", sourceUnits: ["city-planning-decisions"], scopeNote: "広域的・根幹的な都市計画を都道府県、その他を市町村が定める基本的役割分担を扱う。" },
+    { conceptId: "takken-concept-city-planning-project", title: "都市計画事業", category: "legal-restrictions", sourceUnits: ["city-planning-decisions"], scopeNote: "施行者に応じた国土交通大臣または都道府県知事の認可・承認と施行を扱う。" },
+    { conceptId: "takken-concept-development-permission", title: "開発許可の要否", category: "legal-restrictions", sourceUnits: ["development-permission-required"], scopeNote: "都市計画区域・準都市計画区域内の一定の開発行為に対する原則許可と法律上の許可不要例外を扱う。" },
+    { conceptId: "takken-concept-development-completion", title: "開発許可後の工事完了手続", category: "legal-restrictions", sourceUnits: ["development-permission-procedure"], scopeNote: "完了届、適合検査、検査済証交付、工事完了公告までの流れを扱う。" },
+    { conceptId: "takken-concept-building-confirmation", title: "建築確認", category: "legal-restrictions", sourceUnits: ["building-confirmation"], scopeNote: "一定の建築物について工事着手前に行う確認申請と、建築主事・指定確認検査機関、確認済証を扱う。" },
+    { conceptId: "takken-concept-roads-frontage", title: "建築基準法上の道路・接道義務", category: "legal-restrictions", sourceUnits: ["roads-frontage"], scopeNote: "原則幅員4m以上の道路と、敷地が道路に原則2m以上接する接道義務を一体で扱う。" },
+    { conceptId: "takken-concept-building-coverage-ratio", title: "建ぺい率", category: "legal-restrictions", sourceUnits: ["building-coverage-ratio"], scopeNote: "建築面積÷敷地面積という定義、用途地域等による限度、防火地域・角地等の緩和を扱う。" },
+    { conceptId: "takken-concept-floor-area-ratio", title: "容積率", category: "legal-restrictions", sourceUnits: ["floor-area-ratio"], scopeNote: "延べ面積÷敷地面積という定義、指定容積率と前面道路幅員による制限を扱う。" }
   ].map((concept) => ({ ...base, ...concept }));
 
   const ids = concepts.map((concept) => concept.conceptId);
   if (new Set(ids).size !== ids.length) throw new Error("Duplicate Power Takken conceptId");
-  if (concepts.length !== 64) throw new Error(`Expected 64 concepts for units 1-50 checkpoint, got ${concepts.length}`);
+  if (concepts.length !== 90) throw new Error(`Expected 90 concepts for units 1-70 checkpoint, got ${concepts.length}`);
   for (const concept of concepts) {
     if (!concept.title || !concept.category || !Array.isArray(concept.sourceUnits) || concept.sourceUnits.length === 0) {
       throw new Error(`Invalid Power Takken concept: ${concept.conceptId}`);
