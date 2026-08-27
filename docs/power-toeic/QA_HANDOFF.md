@@ -1,39 +1,37 @@
 # Power TOEIC QA handoff
 
-## Current counts
+## Current QA state
 
-- Checked: **600**
-- Verified: **570**
-- Needs revision: **30**
+- Checked: **700**
+- Verified: **669**
+- Needs revision: **31**
 - Rejected: **0**
-- Unchecked `pending_validation`: **1,100**
+- Unchecked `pending_validation`: **1,025**
 - `generation_complete`: `false`
 - `validation_complete`: `false`
 
 ## Latest completed QA batch
 
-Skill: `p5.pos.participle_adjective_ed_ing`
-Source batch: `batch-20260826-003`
-Checked: **100**
-Verified: **100**
-Needs revision: **0**
-Rejected: **0**
+Micro-skill: `p5.pos.word_form_subject_position`
+Batch: `2026-08-27-scheduled-017`
 
-Record:
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-016-participle-adjective-ed-ing.qa.json`
+Result:
+- checked 100
+- verified 99
+- needs_revision 1
+- rejected 0
 
-Approved-ID gate:
-`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/participle-adjective-ed-ing/verified/batch-20260826-003-approved-ids.json`
+Only `p5_pos_word_form_subject_position_0038` failed unique-answer review. `security` is the intended noun, but `securing of confidential documents` is a defensible gerundial nominalization in the displayed context. Leave it out of the approved gate until rewritten and rechecked.
 
-All 100 were independently re-solved from stem + choices before comparing the stored proposed answer and explanation. Each item retained one clear answer, natural business context, the intended `-ed / -ing` participial-adjective distinction, and an explanation consistent with the independently selected answer. No exact duplicate stems were observed within this reviewed batch. Answer positions were A/B/C/D = 25/25/25/25. A full semantic duplicate scan against the entire question bank was not completed in this checkpoint.
+No stored proposed-answer mismatches were found in the other 99 items. Full-bank semantic near-duplicate clearance is not claimed.
 
-## Reconciliation note
+## Next QA
 
-The previous QA pointer to `p5.pos.adverb_modifies_adjective` was stale. That skill had already been independently validated in an earlier checkpoint at **87 verified / 13 needs_revision**. Its stricter existing QA record and approved-ID gate were preserved. A duplicate QA artifact created before detecting the stale pointer was removed; no established result was overwritten.
+Resume with the oldest unchecked skill:
 
-## Next QA start
+`p5.pos.word_form_object_position`
 
-Skill: `p5.pos.word_form_subject_position`
-Question: `p5_pos_word_form_subject_position_0001`
+Start ID:
+`p5_pos_word_form_object_position_0001`
 
-Independently solve stem + choices first. Only then inspect stored proposed answer/explanation. Keep checked and verified counts separate; stop at a 25-question checkpoint rather than batch-approving uncertain material.
+Continue independent re-solving from stem + choices before reading stored proposed answers or explanations.
