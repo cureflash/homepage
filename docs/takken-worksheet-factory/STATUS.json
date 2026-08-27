@@ -5,7 +5,7 @@
   "exam_year": 2026,
   "law_as_of": "2026-04-01",
   "mode": "power_takken_phase4",
-  "next_role": "build_concept_inventory",
+  "next_role": "continue_concept_inventory",
   "generation_batch_target": 20,
   "validation_batch_target": 25,
   "active_unit_order": null,
@@ -51,8 +51,12 @@
   },
   "phase4_progress": {
     "active_subphase": "4.1_concept_inventory",
-    "concept_count": 0,
-    "next_task": "Extract exam-relevant concepts from the 90 units, 163 verified questions, and official exam scope, then normalize them into exam_concept units per 40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md."
+    "concept_inventory_file": "qualifications/takken/data/power-concepts.js",
+    "concept_count": 37,
+    "covered_unit_orders": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+    "next_unit_order": 31,
+    "next_unit": "installment-sale-restrictions",
+    "next_task": "Continue Phase 4.1 concept extraction from canonical unit 31 in unit order. Normalize independently useful exam_concept units; do not begin Phase 4.2 knowledge_items until all 90 units and verified-question evidence have been inventoried."
   },
   "foundation": {
     "portable_site_shell": true,
@@ -67,6 +71,6 @@
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
   "last_completed_unit": "five-question-exemption-review",
-  "last_run_summary": "Phase 3 solve-all validation completed strictly from takken-q-78-001 through takken-q-90-002, covering the final 26 questions in pending-questions-78-90.js. Each item was independently solved from stem and choices before comparing stored answer/explanation/source refs and checking the 2026-04-01 legal baseline/current official materials as applicable. Results this run: checked 26, verified 26, needs_revision 0, rejected 0. Cumulative checked/verified is 163/163; pending is 0. All 90 units are fully verified and validation_complete is now true. Phase 4 gate is therefore open; no Phase 4 content was generated in this run. Exact next task is Phase 4.1 concept inventory.",
-  "updated_at": "2026-08-28T02:31:00+09:00"
+  "last_run_summary": "Phase 4.1 concept inventory started only after the Phase 3 gate was confirmed complete. Canonical units 1-30 and their verified Phase 2/3 question evidence were normalized into 37 independently useful exam_concept entries in qualifications/takken/data/power-concepts.js. Compound units were split where a 50-question learning topic needs independent treatment (for example roster vs signs, license transfer vs change/closure, brokerage contract forms, REINS registration vs reporting, Article 35 procedure vs items, earnest-money limit vs safeguards), while isolated numbers/words were not promoted to concepts. No knowledge_items, new drill questions, prints, or app linkage were created. Exact continuation is canonical unit 31 installment-sale-restrictions.",
+  "updated_at": "2026-08-28T03:32:00+09:00"
 }
