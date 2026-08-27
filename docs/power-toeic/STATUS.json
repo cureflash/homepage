@@ -4,7 +4,7 @@
   "track": "app_ui_program",
   "phase": 11,
   "active_task": "11.4",
-  "next_role": "app_store_submission_readiness",
+  "next_role": "bundle_release_assets_then_submission_readiness",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
   "native_implementation_path": "subjects/english/power-toeic-ios/",
@@ -15,7 +15,7 @@
     "fixture": "subjects/english/power-toeic/tests/fixtures/cross-platform-conformance-v1.json",
     "completed_tasks": ["9.1", "9.2", "9.3", "10.8"],
     "models": ["Skill", "Question", "WorkoutRecipe", "Attempt", "MasterySnapshot", "ReviewEntry", "ProgressionState", "QuestionReport", "SemanticAssetId"],
-    "last_joint_ci": {"web_run":33027974654,"swift_run":33027974597,"result":"success"}
+    "last_joint_ci": {"web_run":33029986760,"swift_run":33029986881,"result":"success"}
   },
   "ios_implementation": {
     "language": "Swift",
@@ -29,19 +29,21 @@
     "completed_tasks": ["10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8", "11.1", "11.2", "11.3"],
     "shared_fixture_decoding": true,
     "shared_fixture_behavior_covered": ["question_selection", "quiz_session", "mastery", "review", "progression"],
-    "native_views": ["Home", "Workout", "Quiz", "Result", "Weakness", "Character", "PrivacyPolicy"],
+    "native_views": ["Home", "Workout", "Quiz", "Result", "Weakness", "Character", "PrivacyPolicy", "Credits"],
     "native_persistence": "VersionedNativeAppStore/UserDefaultsPersistenceBackend",
     "native_environment": "PowerTOEICAppEnvironment/AppLaunchSnapshot",
     "offline_runtime_network_dependency": false,
     "accessibility_pass": true,
     "release_metadata": "subjects/english/power-toeic-ios/Release/AppStoreMetadata.json",
     "release_asset_manifest": "subjects/english/power-toeic-ios/Release/AssetManifest.json",
+    "submission_readiness": "subjects/english/power-toeic-ios/Release/SubmissionReadiness.json",
     "privacy_manifest_template": "subjects/english/power-toeic-ios/Release/PrivacyInfo.xcprivacy",
     "app_target_privacy_manifest": "subjects/english/power-toeic-ios/AppShell/PowerTOEICApp/PrivacyInfo.xcprivacy",
     "privacy_required_reason": "NSPrivacyAccessedAPICategoryUserDefaults / CA92.1",
     "unsigned_release_regression": "simulator debug build + generic device release build + unsigned xcarchive + archived privacy manifest validation passed",
     "testflight_upload": "blocked until user-owned Apple Developer signing and App Store Connect identifiers are supplied",
-    "status": "submission_readiness"
+    "repository_submission_blockers": ["final_app_icon", "temporary_character_assets_bundled", "otologic_audio_assets_bundled"],
+    "status": "submission_readiness_in_progress"
   },
   "content_database_track": "external_scheduler",
   "app_track_content_policy": "do not author or scale production question DB; only define consumer adapter/contracts and tiny synthetic fixtures",
@@ -50,10 +52,10 @@
   "runtime_ai": false,
   "target_score_feature": false,
   "body_part_skill_mapping": false,
-  "characters": {"question_giver":"drill_sergeant","learner_avatar":"skinny_trainee","progression":"skinny_to_muscular","temporary_art_source":"Irasutoya","temporary_unique_art_limit":20,"planned_unique_art":4},
-  "audio": {"source":"Google Drive existing SE library","initial_correct":"otologic_correct.mp3","initial_wrong":"otologic_incorrect.mp3","initial_milestone":"otologic_inspiration.mp3","license":"CC BY 4.0 / OtoLogic attribution required"},
+  "characters": {"question_giver":"drill_sergeant","learner_avatar":"skinny_trainee","progression":"skinny_to_muscular","temporary_art_source":"Irasutoya","temporary_unique_art_limit":20,"planned_unique_art":4,"bundled":false},
+  "audio": {"source":"Google Drive existing SE library","initial_correct":"otologic_correct.mp3","initial_wrong":"otologic_incorrect.mp3","initial_milestone":"otologic_inspiration.mp3","drive_files_verified":true,"bundled":false,"license":"CC BY 4.0 / OtoLogic attribution required","credits_view":true},
   "attempt_contexts": ["training", "mixed", "review"],
   "workout_modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
   "last_completed_task": "11.3",
-  "updated_at": "2026-08-27T10:23:00+09:00"
+  "updated_at": "2026-08-27T10:30:00+09:00"
 }
