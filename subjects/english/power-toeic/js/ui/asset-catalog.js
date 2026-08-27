@@ -18,15 +18,15 @@ export const ASSET_IDS = Object.freeze({
 });
 
 const assetMap = Object.freeze({
-  [ASSET_IDS.SERGEANT_NEUTRAL]: null,
+  [ASSET_IDS.SERGEANT_NEUTRAL]: './assets/characters/irasutoya_sergeant_instructor.png',
   [ASSET_IDS.SERGEANT_CORRECT]: null,
   [ASSET_IDS.SERGEANT_WRONG]: null,
   [ASSET_IDS.SERGEANT_COMPLETE]: null,
-  [ASSET_IDS.TRAINEE_STAGE_0]: null,
-  [ASSET_IDS.TRAINEE_STAGE_1]: null,
-  [ASSET_IDS.TRAINEE_STAGE_2]: null,
-  [ASSET_IDS.TRAINEE_STAGE_3]: null,
-  [ASSET_IDS.TRAINEE_STAGE_4]: null,
+  [ASSET_IDS.TRAINEE_STAGE_0]: './assets/characters/irasutoya_trainee_skinny.png',
+  [ASSET_IDS.TRAINEE_STAGE_1]: './assets/characters/irasutoya_trainee_skinny.png',
+  [ASSET_IDS.TRAINEE_STAGE_2]: './assets/characters/irasutoya_trainee_muscular.png',
+  [ASSET_IDS.TRAINEE_STAGE_3]: './assets/characters/irasutoya_trainee_muscular.png',
+  [ASSET_IDS.TRAINEE_STAGE_4]: './assets/characters/irasutoya_trainee_muscular.png',
   [ASSET_IDS.TRAINEE_STAGE_5]: null,
   [ASSET_IDS.AUDIO_CORRECT]: './assets/audio/otologic_correct.mp3',
   [ASSET_IDS.AUDIO_WRONG]: './assets/audio/otologic_incorrect.mp3',
