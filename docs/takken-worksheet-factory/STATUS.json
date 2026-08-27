@@ -13,15 +13,15 @@
   "generated_unit_count": 90,
   "question_generated_unit_count": 90,
   "generated_question_count": 163,
-  "checked_question_count": 62,
-  "verified_question_count": 62,
+  "checked_question_count": 77,
+  "verified_question_count": 77,
   "needs_revision_question_count": 0,
   "rejected_question_count": 0,
-  "pending_validation_question_count": 101,
-  "verified_unit_count": 39,
-  "pending_factcheck_count": 51,
+  "pending_validation_question_count": 86,
+  "verified_unit_count": 47,
+  "pending_factcheck_count": 43,
   "unverified_backlog": [
-    "civil-unauthorized-agency", "civil-prescription", "property-rights-opposability", "co-ownership", "mortgage", "default-damages", "contract-cancellation", "risk-simultaneous-performance", "sale-earnest", "contract-nonconformity-civil", "lease-general", "lease-deposit-opposability", "land-lease-right", "fixed-term-land-lease", "building-lease-right", "fixed-term-building-lease", "inheritance-heirs-shares", "inheritance-acceptance-renunciation", "will-reserved-portion", "condominium-law", "real-estate-registration", "city-planning-area", "area-division", "use-districts", "city-planning-decisions", "development-permission-required", "development-permission-procedure", "building-confirmation", "roads-frontage", "building-coverage-ratio", "floor-area-ratio", "height-restrictions", "fire-prevention-zones", "national-land-use-notification", "farmland-act-article3", "farmland-act-articles4-5", "land-readjustment", "embankment-regulation", "legal-restrictions-comparison", "real-estate-acquisition-tax", "fixed-asset-tax", "registration-license-tax", "stamp-tax", "income-tax-real-estate-transfer", "land-price-public-notice", "real-estate-appraisal", "housing-finance-agency", "fair-competition-advertising", "land-building-knowledge", "statistics", "five-question-exemption-review"
+    "sale-earnest", "contract-nonconformity-civil", "lease-general", "lease-deposit-opposability", "land-lease-right", "fixed-term-land-lease", "building-lease-right", "fixed-term-building-lease", "inheritance-heirs-shares", "inheritance-acceptance-renunciation", "will-reserved-portion", "condominium-law", "real-estate-registration", "city-planning-area", "area-division", "use-districts", "city-planning-decisions", "development-permission-required", "development-permission-procedure", "building-confirmation", "roads-frontage", "building-coverage-ratio", "floor-area-ratio", "height-restrictions", "fire-prevention-zones", "national-land-use-notification", "farmland-act-article3", "farmland-act-articles4-5", "land-readjustment", "embankment-regulation", "legal-restrictions-comparison", "real-estate-acquisition-tax", "fixed-asset-tax", "registration-license-tax", "stamp-tax", "income-tax-real-estate-transfer", "land-price-public-notice", "real-estate-appraisal", "housing-finance-agency", "fair-competition-advertising", "land-building-knowledge", "statistics", "five-question-exemption-review"
   ],
   "unit_generation_complete": true,
   "question_generation_complete": true,
@@ -44,12 +44,12 @@
     "next_unit": null
   },
   "validation_progress": {
-    "next_validation_question_id": "takken-q-40-002",
-    "checked_question_count": 62,
-    "verified_question_count": 62,
+    "next_validation_question_id": "takken-q-48-001",
+    "checked_question_count": 77,
+    "verified_question_count": 77,
     "needs_revision_question_count": 0,
     "rejected_question_count": 0,
-    "pending_validation_question_count": 101
+    "pending_validation_question_count": 86
   },
   "foundation": {
     "portable_site_shell": true,
@@ -63,7 +63,7 @@
   },
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
-  "last_completed_unit": "civil-agency",
-  "last_run_summary": "Phase 3 solve-all validation continued strictly from takken-q-28-001 through takken-q-40-001. Independently re-solved 25 questions covering宅建業法の8種制限・報酬・監督処分 and民法の意思表示・錯誤・詐欺強迫・虚偽表示・制限行為能力・代理・無権代理. Current e-Gov/MLIT primary or official sources were checked for the 2026-04-01 legal baseline. Results this run: checked 25, verified 25, needs_revision 0, rejected 0. Cumulative checked/verified is 62; pending is 101. Next strict question is takken-q-40-002. Phase 4 remains blocked until validation_complete is true.",
-  "updated_at": "2026-08-27T21:32:11+09:00"
+  "last_completed_unit": "risk-simultaneous-performance",
+  "last_run_summary": "Phase 3 solve-all validation continued strictly from takken-q-40-002 through takken-q-47-002. Independently re-solved 15 questions covering apparent authority, prescription, property-right opposability, co-ownership, mortgages, default damages, cancellation, simultaneous performance and risk allocation. Current e-Gov Civil Code was checked against the 2026-04-01 legal baseline. Results this run: checked 15, verified 15, needs_revision 0, rejected 0. Cumulative checked/verified is 77; pending is 86. Next strict question is takken-q-48-001. Phase 4 remains blocked until validation_complete is true.",
+  "updated_at": "2026-08-27T22:31:40+09:00"
 }
