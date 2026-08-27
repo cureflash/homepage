@@ -16,6 +16,25 @@
 
 ただし共有 `90_HANDOFF.md` が示すとおり、factory基盤が未完成の間は学年PDF量産を先行しない。まず `20_EXECUTION_PLAN.md` の最初の未完了phase/taskから順に、既存worksheet inventory、stable URL記録、broken-link/catalog validation、structured catalog、deterministic generator、independent answer validator、duplicate detection、printable PDF pipelineを完成させる。基盤のacceptance criteriaを満たしてから小学校1年から順にbulk publicationへ移る。
 
+## 1 run の作業量
+
+各runでは、原則として **最大4つの連続checkpoint** まで進める。
+
+1つ目のcheckpointを安全に完了したら即終了せず、次の未完了項目を再確認する。同一学年または近接単元で、既存generator / validator / catalog / PDF pipelineを安全に再利用でき、各checkpointの検証を独立して完了できる場合は、そのまま2つ目、3つ目、4つ目まで連続して進める。
+
+4 checkpointは目標上限であってノルマではない。次のcheckpointで以下のいずれかが生じる場合は、1〜3 checkpointで安全に停止する。
+
+- 学習指導要領・単元配置の確認が不十分
+- 新しい共通generator設計が必要で、既存系列への回帰リスクが高い
+- 独立answer validationを機械的に保証できない
+- duplicate / hash / catalog / PDF / site validationに未解決の問題がある
+- CI / Actions / main整合性にblockerがある
+- 数合わせのために問題品質やvariant差を弱める必要がある
+
+逆に、単純な近接単元で既存基盤を再利用できるのに、1 checkpointだけで機械的に終了してはならない。残り時間と安全性が許す限り最大4 checkpointまで進める。
+
+各checkpointごとに、問題定義・deterministic seed・独立解答再計算・完全/近似重複検査・PDF生成・catalog/site validation・必要な回帰テストを完了し、安全境界を作る。途中で時間不足になっても、最後に完了したcheckpointまでをGitHubへ永続化し、次回の正確な再開点をSTATUS/HANDOFFへ残す。
+
 各runでは、数合わせを目的にせず、テスト・検証・Git反映まで安全に完了できる連続checkpointを可能な限り進める。新しい共通generatorやcatalog構造を導入する場合は既存公開URL・既存教材を壊さないことを優先する。
 
 各worksheetは必ず以下を満たす。
