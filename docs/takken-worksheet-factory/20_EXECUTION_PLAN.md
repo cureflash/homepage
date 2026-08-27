@@ -1,6 +1,6 @@
 # 宅建 Worksheet Factory — EXECUTION PLAN
 
-This plan is subordinate to `00_MASTER_INSTRUCTIONS.md` and works with `30_QUESTION_AND_QA_SPEC.md`.
+This plan is subordinate to `00_MASTER_INSTRUCTIONS.md` and works with `30_QUESTION_AND_QA_SPEC.md`. Phase 4 is additionally governed by `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`.
 
 ## Phase 0 — foundation
 
@@ -16,19 +16,17 @@ This plan is subordinate to `00_MASTER_INSTRUCTIONS.md` and works with `30_QUEST
 - [x] All 90 canonical unit datasets generated in fixed order.
 - [x] All remain `pending_factcheck` and unpublished.
 
-The canonical order remains units 1 through 90 as originally defined in this document; later question generation and validation must preserve unit order and must not skip units.
-
 ## Phase 2 — four-choice question generation
 
-- [ ] Generate stable-ID four-choice questions from independently testable core facts.
-- [ ] Cover every core fact in unit order without skipping.
-- [ ] Store exactly four distinct choices, one proposed answer, explanation, fact/source references and `pending_validation` status.
-- [ ] Run schema/reference/duplicate/answer-position checks at each safe checkpoint.
-- [ ] Do not pad counts with template clones; coverage is fact-based.
-- [ ] Keep all unverified questions outside production/public pools.
-- [ ] When every core fact in all 90 units is covered, set `question_generation_complete: true` and `generation_complete: true`.
+- [x] Generate stable-ID four-choice questions from independently testable core facts.
+- [x] Cover every core fact in unit order without skipping.
+- [x] Store exactly four distinct choices, one proposed answer, explanation, fact/source references and `pending_validation` status.
+- [x] Run schema/reference/duplicate/answer-position checks at each safe checkpoint.
+- [x] Do not pad counts with template clones; coverage is fact-based.
+- [x] Keep all unverified questions outside production/public pools.
+- [x] All 90 units have 100% core-fact coverage; `question_generation_complete: true` and `generation_complete: true`.
 
-Progress: units 1-77 have 100% core-fact question coverage: 137 facts -> 137 `pending_validation` questions.
+Final Phase 2 totals: **90/90 units, 163/163 core facts, 163 `pending_validation` questions, 0 verified**.
 
 Question files:
 - `qualifications/takken/data/pending-questions-01-07.js` — 9 questions
@@ -37,12 +35,11 @@ Question files:
 - `qualifications/takken/data/pending-questions-28-47.js` — 40 questions
 - `qualifications/takken/data/pending-questions-48-67.js` — 40 questions
 - `qualifications/takken/data/pending-questions-68-77.js` — 20 questions
-
-Current next start: unit 78 `legal-restrictions-comparison`, first uncovered core fact.
+- `qualifications/takken/data/pending-questions-78-90.js` — 26 questions
 
 ## Phase 3 — solve-all independent validation
 
-This phase starts only after Phase 2 is complete.
+This phase is now the active phase. Start strictly at `takken-q-01-001`.
 
 - [ ] Begin from the first question ID and process strictly in order.
 - [ ] Hide stored answer/explanation/source references before independent solving.
@@ -54,57 +51,42 @@ This phase starts only after Phase 2 is complete.
 - [ ] Track checked and verified counts separately and persist the exact next question ID.
 - [ ] Only after every question has been independently re-solved and all revision work is closed may `validation_complete: true` be set.
 
+Current Phase 3 progress: **checked 0 / verified 0 / pending 163 / next `takken-q-01-001`**.
+
 ## Phase 4 — Power宅建 knowledge / print / app integration
 
-**Do not begin Phase 4 until Phase 2 and Phase 3 are fully complete.** The current direction must be finished first. The canonical specification for this phase is `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`.
+**BLOCKED until `validation_complete: true`. Do not begin any Phase 4 work early.** Canonical specification: `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`.
 
 ### 4.1 Concept inventory
-
-- [ ] Extract all exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, verified core questions and official exam scope.
-- [ ] Normalize them into exam-level `exam_concept` units rather than treating isolated words/numbers as separate 50-question topics.
-- [ ] Build a canonical concept inventory with an initial expected scale of roughly 250-300 concepts; record the actual count rather than forcing the estimate.
-- [ ] Assign category, importance, law cutoff and primary-source ownership.
+- [ ] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, verified Phase 2/3 questions and official scope.
+- [ ] Normalize into exam-level `exam_concept` units; do not make isolated numbers/words standalone 50-question topics.
+- [ ] Record actual concept count; initial estimate is roughly 250-300.
 
 ### 4.2 Canonical knowledge items
-
-- [ ] Decompose each exam concept into atomic `knowledge_items` for rules, conditions, actors, deadlines, numbers, exceptions and comparison points.
-- [ ] Give every knowledge item a stable ID and primary-source references.
-- [ ] Map existing verified Phase 2/3 questions into the new concept / knowledge graph instead of discarding them.
+- [ ] Decompose each concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` law cutoff and primary sources.
+- [ ] Map existing verified questions to concepts/knowledge items instead of discarding them.
 
 ### 4.3 Fifty-question drill expansion
-
-- [ ] Target 50 verified four-choice questions per exam concept.
-- [ ] Reuse existing verified questions where they fit; generate only the missing questions.
-- [ ] Allow deliberate content repetition for important knowledge items, but reject superficial template/number/name swaps used only to inflate count.
-- [ ] Diversify direct knowledge, false-statement, scenario, comparison, exception/count/combination and cross-topic forms.
-- [ ] Every question must carry `concept_id`, `knowledge_refs[]`, a detailed explanation, distractor explanations and primary-source refs.
+- [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
+- [ ] Reject superficial number/name/template swaps; diversify direct knowledge, false-statement, scenario, comparison, exception/count/combination and cross-topic forms.
+- [ ] Add `concept_id`, `knowledge_refs[]`, detailed explanation, distractor explanations and primary sources.
 
 ### 4.4 Question-first QA and explanation completion
-
-- [ ] Independently solve every newly generated question before it becomes verified.
-- [ ] Finalize `detailed_explanation` and `knowledge_refs` only after QA.
-- [ ] Track verified question coverage per knowledge item and ensure important items receive repeated practice.
+- [ ] Independently solve every newly generated question before verified status.
+- [ ] Finalize `detailed_explanation` and `knowledge_refs` after QA.
 
 ### 4.5 Explanation-print generation
-
-- [ ] Generate each concept's study print only from verified knowledge items actually referenced by verified questions.
-- [ ] Merge duplicate explanations for readability while preserving all conditions/exceptions required by the questions.
-- [ ] Generate study / worksheet / answer modes from the same canonical knowledge data.
-- [ ] Add comparison tables, timelines, actor/relationship diagrams and rule/exception boxes where they improve learning.
+- [ ] Generate concept study prints only from verified question/knowledge data.
+- [ ] Produce study / worksheet / answer from the same canonical knowledge data.
 
 ### 4.6 Bidirectional coverage validator
-
-- [ ] Enforce Question -> Print 100% coverage: every knowledge item required by a verified question appears in that concept's study print.
-- [ ] Enforce Print -> Question 100% coverage: every testable knowledge item printed is referenced by at least one verified question.
-- [ ] Permit one knowledge item to map to multiple questions; repetition is expected for important knowledge.
-- [ ] Block publication on orphan questions, orphan print knowledge, unverified sources or unresolved law-version mismatches.
+- [ ] Enforce Question -> Print 100% knowledge coverage.
+- [ ] Enforce Print -> Question 100% knowledge coverage.
+- [ ] Block publication on orphan questions, orphan print knowledge, unverified sources or law-version mismatches.
 
 ### 4.7 App review integration
-
 - [ ] Expose concept / knowledge item IDs to the app question bank.
-- [ ] Record performance at both question and knowledge-item level.
-- [ ] Allow re-solving wrong questions and prioritizing alternate questions sharing the same weak knowledge item.
-- [ ] Surface the detailed question explanation after answering and link back to the corresponding explanation-print concept.
+- [ ] Track performance at question and knowledge-item levels, prioritize alternate questions for the same weak item, show detailed explanations, and link to the matching explanation print.
 
 ## Publication invariant
 
