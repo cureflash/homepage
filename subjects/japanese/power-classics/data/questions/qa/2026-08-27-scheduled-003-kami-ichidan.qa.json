@@ -1,0 +1,22 @@
+{
+  "format": "power-classics-qa-v1",
+  "batch": "2026-08-27-scheduled-003",
+  "micro_skill": "kobun.verb.conjugation_type.kami_ichidan",
+  "qa_method": "independent_resolve_stem_and_choices_before_key_check",
+  "checked": 50,
+  "verified": 50,
+  "needs_revision": 0,
+  "rejected": 0,
+  "answer_positions": {"A":13,"B":13,"C":12,"D":12},
+  "cross_batch_exact_stem_duplicates": 0,
+  "notes": [
+    "IDs 0001-0050 were independently re-solved from stem + choices before key comparison.",
+    "All 50 items have exactly one correct conjugation-type choice: 上一段活用.",
+    "Lexical inventory is intentionally finite: 見る・着る・似る・煮る・干る・居る・射る・率る・鋳る are reused across genuinely distinct inflection/context forms rather than inventing fake verbs.",
+    "Full semantic near-duplicate clearance across the entire Power古典 bank remains a later release gate."
+  ],
+  "verified_ids": [
+    "kobun_verb_conjugation_type_kami_ichidan_0001","kobun_verb_conjugation_type_kami_ichidan_0002","kobun_verb_conjugation_type_kami_ichidan_0003","kobun_verb_conjugation_type_kami_ichidan_0004","kobun_verb_conjugation_type_kami_ichidan_0005","kobun_verb_conjugation_type_kami_ichidan_0006","kobun_verb_conjugation_type_kami_ichidan_0007","kobun_verb_conjugation_type_kami_ichidan_0008","kobun_verb_conjugation_type_kami_ichidan_0009","kobun_verb_conjugation_type_kami_ichidan_0010","kobun_verb_conjugation_type_kami_ichidan_0011","kobun_verb_conjugation_type_kami_ichidan_0012","kobun_verb_conjugation_type_kami_ichidan_0013","kobun_verb_conjugation_type_kami_ichidan_0014","kobun_verb_conjugation_type_kami_ichidan_0015","kobun_verb_conjugation_type_kami_ichidan_0016","kobun_verb_conjugation_type_kami_ichidan_0017","kobun_verb_conjugation_type_kami_ichidan_0018","kobun_verb_conjugation_type_kami_ichidan_0019","kobun_verb_conjugation_type_kami_ichidan_0020","kobun_verb_conjugation_type_kami_ichidan_0021","kobun_verb_conjugation_type_kami_ichidan_0022","kobun_verb_conjugation_type_kami_ichidan_0023","kobun_verb_conjugation_type_kami_ichidan_0024","kobun_verb_conjugation_type_kami_ichidan_0025","kobun_verb_conjugation_type_kami_ichidan_0026","kobun_verb_conjugation_type_kami_ichidan_0027","kobun_verb_conjugation_type_kami_ichidan_0028","kobun_verb_conjugation_type_kami_ichidan_0029","kobun_verb_conjugation_type_kami_ichidan_0030","kobun_verb_conjugation_type_kami_ichidan_0031","kobun_verb_conjugation_type_kami_ichidan_0032","kobun_verb_conjugation_type_kami_ichidan_0033","kobun_verb_conjugation_type_kami_ichidan_0034","kobun_verb_conjugation_type_kami_ichidan_0035","kobun_verb_conjugation_type_kami_ichidan_0036","kobun_verb_conjugation_type_kami_ichidan_0037","kobun_verb_conjugation_type_kami_ichidan_0038","kobun_verb_conjugation_type_kami_ichidan_0039","kobun_verb_conjugation_type_kami_ichidan_0040","kobun_verb_conjugation_type_kami_ichidan_0041","kobun_verb_conjugation_type_kami_ichidan_0042","kobun_verb_conjugation_type_kami_ichidan_0043","kobun_verb_conjugation_type_kami_ichidan_0044","kobun_verb_conjugation_type_kami_ichidan_0045","kobun_verb_conjugation_type_kami_ichidan_0046","kobun_verb_conjugation_type_kami_ichidan_0047","kobun_verb_conjugation_type_kami_ichidan_0048","kobun_verb_conjugation_type_kami_ichidan_0049","kobun_verb_conjugation_type_kami_ichidan_0050"
+  ],
+  "completed_at": "2026-08-27T22:00:00+09:00"
+}
