@@ -1,5 +1,5 @@
 {
-  "status": "in_progress",
-  "updated_at": "2026-08-28T07:04:00+09:00",
-  "next_task": "中学2年の次の未完了技能『2点から一次関数の式を求める数値練習』から開始する。deterministic seed、独立解答再計算、重複/hash検査、2ページPDF、通常整数番号、同一配置＋赤字解答、catalog/site validation、共有catalog writer concurrency guardを維持する"
+  "status": "done",
+  "updated_at": "2026-08-28T08:00:00+09:00",
+  "next_task": "なし。中学2年の計画済み技能は完了。次回workerは中学3年をactive gradeとしてPLAN.mdの先頭から開始する"
 }
