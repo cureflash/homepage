@@ -1,5 +1,5 @@
 {
   "status": "in_progress",
-  "updated_at": "2026-08-27T18:05:00+09:00",
-  "next_task": "Grade 6 first-four fraction publishers/tests/workflow are implemented. Confirm the Grade 6 publish workflow completes and the 12 PDFs/catalog rows appear on latest main; only after publication success advance to 帯分数を含む乗除."
+  "updated_at": "2026-08-27T19:01:00+09:00",
+  "next_task": "Grade 6 is published through 8 skills / 24 PDFs. Continue from 比の値, then 比例式の欠損値計算, 文字を使った簡単な式への代入, 速さ・時間・道のりの公式代入型計算, respecting the 4-checkpoint maximum and current MEXT placement."
 }
