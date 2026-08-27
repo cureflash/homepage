@@ -38,6 +38,8 @@ Web `asset-catalog.js` maps neutral semantic IDs to the physical files while cor
 
 Temporary Irasutoya accounting is **4 bundled / 4 planned**, safely below the project policy limit of 20 unique works. Runtime hotlinking remains disabled.
 
+Release metadata regression now also treats provenance as an invariant: every character entry marked `bundled` must keep an official `irasutoya.com` article URL, an approved Blogger/Google-hosted direct image URL, a `resource_name`/PNG filename match, and a lowercase 64-hex SHA256. This prevents a later asset swap from silently retaining `bundled` status without pinned provenance.
+
 ### Validation for the 4/4 character checkpoint
 
 One-shot GitHub Actions run `33035572949` passed end-to-end after two validation-only corrections:
