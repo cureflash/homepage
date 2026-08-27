@@ -1,0 +1,21 @@
+{
+  "format": "power-classics-qa-v1",
+  "batch": "2026-08-28-scheduled-006",
+  "micro_skill": "kobun.verb.conjugation_type.kami_nidan",
+  "qa_method": "independent_resolve_stem_and_choices_before_key_check",
+  "checked": 25,
+  "verified": 25,
+  "needs_revision": 0,
+  "rejected": 0,
+  "answer_positions": {"A":5,"B":6,"C":7,"D":7},
+  "cross_batch_exact_stem_duplicates": 0,
+  "notes": [
+    "IDs 0076-0100 were independently re-solved from stem + choices before key comparison.",
+    "All 25 items have exactly one correct conjugation-type choice: 上二段活用.",
+    "This checkpoint finishes the Phase A kami-nidan target, emphasizing 已然形 and 命令形 while reusing attested upper-bigrade lexemes rather than inventing verbs.",
+    "New answer positions A/B/C/D=5/6/7/7 bring cumulative kami-nidan 0001-0100 to 25/25/25/25.",
+    "All items have four distinct choices and valid answer indexes; full-bank semantic near-duplicate clearance remains a later release gate."
+  ],
+  "verified_ids": ["kobun_verb_conjugation_type_kami_nidan_0076","kobun_verb_conjugation_type_kami_nidan_0077","kobun_verb_conjugation_type_kami_nidan_0078","kobun_verb_conjugation_type_kami_nidan_0079","kobun_verb_conjugation_type_kami_nidan_0080","kobun_verb_conjugation_type_kami_nidan_0081","kobun_verb_conjugation_type_kami_nidan_0082","kobun_verb_conjugation_type_kami_nidan_0083","kobun_verb_conjugation_type_kami_nidan_0084","kobun_verb_conjugation_type_kami_nidan_0085","kobun_verb_conjugation_type_kami_nidan_0086","kobun_verb_conjugation_type_kami_nidan_0087","kobun_verb_conjugation_type_kami_nidan_0088","kobun_verb_conjugation_type_kami_nidan_0089","kobun_verb_conjugation_type_kami_nidan_0090","kobun_verb_conjugation_type_kami_nidan_0091","kobun_verb_conjugation_type_kami_nidan_0092","kobun_verb_conjugation_type_kami_nidan_0093","kobun_verb_conjugation_type_kami_nidan_0094","kobun_verb_conjugation_type_kami_nidan_0095","kobun_verb_conjugation_type_kami_nidan_0096","kobun_verb_conjugation_type_kami_nidan_0097","kobun_verb_conjugation_type_kami_nidan_0098","kobun_verb_conjugation_type_kami_nidan_0099","kobun_verb_conjugation_type_kami_nidan_0100"],
+  "completed_at": "2026-08-28T02:00:00+09:00"
+}
