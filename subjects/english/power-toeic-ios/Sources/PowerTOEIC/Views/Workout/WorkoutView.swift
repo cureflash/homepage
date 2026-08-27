@@ -32,7 +32,10 @@ public struct WorkoutView: View {
 
     public var body: some View {
         Form {
-            Section("モード") { Text(mode.rawValue) }
+            Section("モード") {
+                Text(mode.rawValue)
+                    .accessibilityLabel("トレーニングモード、\(mode.rawValue)")
+            }
 
             if mode == .training || mode == .power || mode == .custom {
                 Section("分野") {
@@ -40,12 +43,16 @@ public struct WorkoutView: View {
                         Text("おすすめ").tag(String?.none)
                         ForEach(skills) { skill in Text(skill.label).tag(String?.some(skill.id)) }
                     }
+                    .accessibilityHint("トレーニングする分野を選びます")
                 }
             }
 
             if mode == .custom {
                 Section("問題数") {
                     Stepper("\(count)問", value: $count, in: 1...100)
+                        .accessibilityLabel("問題数")
+                        .accessibilityValue("\(count)問")
+                        .accessibilityHint("上下スワイプで問題数を変更します")
                 }
             }
 
@@ -53,6 +60,7 @@ public struct WorkoutView: View {
                 Button("トレーニング開始") { onStart(selectedSkillID, count) }
                     .frame(maxWidth: .infinity)
                     .buttonStyle(.borderedProminent)
+                    .accessibilityHint("選択した条件でトレーニングを開始します")
             }
         }
         .navigationTitle("トレーニング")
