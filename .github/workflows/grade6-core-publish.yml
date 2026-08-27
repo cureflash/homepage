@@ -35,9 +35,11 @@ jobs:
             python scripts/publish_grade6_fraction_first_four.py .
             python scripts/publish_grade6_fraction_ratio_next_four.py .
             python scripts/publish_grade6_ratio_algebra_speed_four.py .
+            python scripts/publish_grade6_final_three.py .
             python tests/test_grade6_fraction_first_four_publisher.py
             python tests/test_grade6_fraction_ratio_next_four_publisher.py
             python tests/test_grade6_ratio_algebra_speed_four_publisher.py
+            python tests/test_grade6_final_three_publisher.py
             python tests/test_worksheet_factory.py
             python tests/test_worksheet_catalog_writer_concurrency.py
             before=$(git rev-parse origin/main); git fetch origin main; after=$(git rev-parse origin/main)
