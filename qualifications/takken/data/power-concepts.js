@@ -73,7 +73,6 @@
     { conceptId: "takken-concept-sale-earnest", title: "民法上の解約手付", category: "rights", sourceUnits: ["sale-earnest"], scopeNote: "相手方の履行着手前の手付放棄・倍額の現実提供による解除を扱う。" },
     { conceptId: "takken-concept-civil-nonconformity", title: "民法上の契約不適合責任", category: "rights", sourceUnits: ["contract-nonconformity-civil"], scopeNote: "追完請求、代金減額請求など契約不適合時の買主救済を扱う。" },
     { conceptId: "takken-concept-lease-general", title: "民法上の賃貸借", category: "rights", sourceUnits: ["lease-general"], scopeNote: "使用収益、賃料、返還という契約構造と存続期間上限を扱う。" },
-
     { conceptId: "takken-concept-security-deposit", title: "敷金", category: "rights", sourceUnits: ["lease-deposit-opposability"], scopeNote: "敷金の定義、賃貸借終了・目的物返還後の未払債務控除と残額返還を扱う。" },
     { conceptId: "takken-concept-building-lease-opposability", title: "建物賃貸借の対抗力", category: "rights", sourceUnits: ["lease-deposit-opposability", "building-lease-right"], scopeNote: "建物の引渡しによって登記なしでも第三者に対抗できる借地借家法上の対抗要件を扱う。" },
     { conceptId: "takken-concept-ordinary-land-lease-term", title: "普通借地権の存続期間", category: "rights", sourceUnits: ["land-lease-right"], scopeNote: "普通借地権の当初30年と、より長い契約期間を定めた場合の扱いを扱う。" },
@@ -99,12 +98,35 @@
     { conceptId: "takken-concept-building-confirmation", title: "建築確認", category: "legal-restrictions", sourceUnits: ["building-confirmation"], scopeNote: "一定の建築物について工事着手前に行う確認申請と、建築主事・指定確認検査機関、確認済証を扱う。" },
     { conceptId: "takken-concept-roads-frontage", title: "建築基準法上の道路・接道義務", category: "legal-restrictions", sourceUnits: ["roads-frontage"], scopeNote: "原則幅員4m以上の道路と、敷地が道路に原則2m以上接する接道義務を一体で扱う。" },
     { conceptId: "takken-concept-building-coverage-ratio", title: "建ぺい率", category: "legal-restrictions", sourceUnits: ["building-coverage-ratio"], scopeNote: "建築面積÷敷地面積という定義、用途地域等による限度、防火地域・角地等の緩和を扱う。" },
-    { conceptId: "takken-concept-floor-area-ratio", title: "容積率", category: "legal-restrictions", sourceUnits: ["floor-area-ratio"], scopeNote: "延べ面積÷敷地面積という定義、指定容積率と前面道路幅員による制限を扱う。" }
+    { conceptId: "takken-concept-floor-area-ratio", title: "容積率", category: "legal-restrictions", sourceUnits: ["floor-area-ratio"], scopeNote: "延べ面積÷敷地面積という定義、指定容積率と前面道路幅員による制限を扱う。" },
+    { conceptId: "takken-concept-setback-height-restrictions", title: "道路・隣地・北側斜線制限", category: "legal-restrictions", sourceUnits: ["height-restrictions"], scopeNote: "建築基準法56条の道路斜線・隣地斜線・北側斜線について、適用関係と高さ制限の考え方を扱う。" },
+    { conceptId: "takken-concept-shadow-restrictions", title: "日影規制", category: "legal-restrictions", sourceUnits: ["height-restrictions"], scopeNote: "条例指定区域内の一定建築物に対する建築基準法56条の2の日影による高さ制限を扱う。" },
+    { conceptId: "takken-concept-fire-prevention-zones", title: "防火地域・準防火地域", category: "legal-restrictions", sourceUnits: ["fire-prevention-zones"], scopeNote: "都市計画上の地域地区としての位置付けと、規模等に応じた建築物の防火性能規制を扱う。" },
+    { conceptId: "takken-concept-national-land-use-notification", title: "国土利用計画法の事後届出", category: "legal-restrictions", sourceUnits: ["national-land-use-notification", "legal-restrictions-comparison"], scopeNote: "一定規模以上の土地売買等における権利取得者、契約後2週間以内、市町村長経由の事後届出を扱う。" },
+    { conceptId: "takken-concept-farmland-article3", title: "農地法3条許可", category: "legal-restrictions", sourceUnits: ["farmland-act-article3"], scopeNote: "農地を農地のまま権利移転・設定する場合の農業委員会許可と無許可行為の効力を扱う。" },
+    { conceptId: "takken-concept-farmland-article4", title: "農地法4条の自己転用", category: "legal-restrictions", sourceUnits: ["farmland-act-articles4-5"], scopeNote: "権利移転を伴わず農地を農地以外へ自己転用する場合の原則許可を扱う。" },
+    { conceptId: "takken-concept-farmland-article5", title: "農地法5条の転用目的権利移転", category: "legal-restrictions", sourceUnits: ["farmland-act-articles4-5"], scopeNote: "農地転用を目的として権利を設定・移転する場合の原則許可を扱い、4条との主体・行為差を比較する。" },
+    { conceptId: "takken-concept-provisional-replotting", title: "仮換地", category: "legal-restrictions", sourceUnits: ["land-readjustment"], scopeNote: "土地区画整理事業中に施行者が指定する仮換地の位置付けと使用収益関係を扱う。" },
+    { conceptId: "takken-concept-replotting-disposition", title: "換地処分", category: "legal-restrictions", sourceUnits: ["land-readjustment"], scopeNote: "換地処分公告翌日から生じる従前地・換地の権利関係上の効果を扱う。" },
+    { conceptId: "takken-concept-embankment-regulation", title: "盛土規制法", category: "legal-restrictions", sourceUnits: ["embankment-regulation"], scopeNote: "規制区域の指定と、区域内の一定規模の盛土・切土・土石堆積工事に対する原則許可を扱う。" },
+    { conceptId: "takken-concept-legal-permit-notification-comparison", title: "法令上の許可・届出の横断比較", category: "legal-restrictions", sourceUnits: ["legal-restrictions-comparison"], scopeNote: "開発許可、国土利用計画法の事後届出、農地法許可などについて主体・時期・対象行為を横断比較する。" },
+    { conceptId: "takken-concept-real-estate-acquisition-tax", title: "不動産取得税", category: "tax-other", sourceUnits: ["real-estate-acquisition-tax"], scopeNote: "不動産取得に対する都道府県税、納税義務者、登記・有償無償との関係を扱う。" },
+    { conceptId: "takken-concept-fixed-asset-tax", title: "固定資産税", category: "tax-other", sourceUnits: ["fixed-asset-tax"], scopeNote: "土地・家屋等の所有者に市町村が課す税と、原則1月1日の賦課期日を扱う。" },
+    { conceptId: "takken-concept-registration-license-tax", title: "登録免許税", category: "tax-other", sourceUnits: ["registration-license-tax"], scopeNote: "不動産登記等を受ける際の国税として、納税義務者と登記原因・種類による課税の基本を扱う。" },
+    { conceptId: "takken-concept-stamp-tax", title: "不動産契約書の印紙税", category: "tax-other", sourceUnits: ["stamp-tax"], scopeNote: "不動産譲渡契約書の課税文書区分、記載金額による税額、軽減措置の基本を扱う。" },
+    { conceptId: "takken-concept-real-estate-transfer-income", title: "土地建物の譲渡所得", category: "tax-other", sourceUnits: ["income-tax-real-estate-transfer"], scopeNote: "分離課税と、譲渡年1月1日現在の所有期間5年超か否かによる長期・短期区分を扱う。" },
+    { conceptId: "takken-concept-land-price-public-notice", title: "地価公示", category: "tax-other", sourceUnits: ["land-price-public-notice", "statistics"], scopeNote: "標準地、土地鑑定委員会、複数鑑定士による正常価格判定と、公示価格の指標性・年度統計を扱う。" },
+    { conceptId: "takken-concept-real-estate-appraisal-methods", title: "不動産鑑定評価の三方式・三手法", category: "tax-other", sourceUnits: ["real-estate-appraisal"], scopeNote: "原価方式・比較方式・収益方式と、原価法・取引事例比較法・収益還元法の対応を扱う。" },
+    { conceptId: "takken-concept-flat35-securitization", title: "住宅金融支援機構とフラット35", category: "tax-other", sourceUnits: ["housing-finance-agency"], scopeNote: "全期間固定金利のフラット35と、機構が民間金融機関の住宅ローン債権を買い取る証券化支援を扱う。" },
+    { conceptId: "takken-concept-real-estate-advertising-rules", title: "不動産広告の表示規約", category: "tax-other", sourceUnits: ["fair-competition-advertising"], scopeNote: "徒歩所要時間、面積、取引態様等について実際より有利・優良と誤認させる表示の禁止を扱う。" },
+    { conceptId: "takken-concept-landform-disaster-risk", title: "地形分類と土地の災害リスク", category: "tax-other", sourceUnits: ["land-building-knowledge"], scopeNote: "山地・台地・低地・人工地形等の分類と、旧河道・低地・盛土地等に応じた洪水・液状化等のリスクを扱う。" },
+    { conceptId: "takken-concept-housing-market-statistics", title: "宅建試験の住宅・地価統計", category: "tax-other", sourceUnits: ["statistics"], scopeNote: "地価公示と新設住宅着工など、年度で変動する公的統計を対象年・増減方向・出典とセットで読む。" },
+    { conceptId: "takken-concept-five-question-exemption", title: "登録講習と5問免除", category: "tax-other", sourceUnits: ["five-question-exemption-review"], scopeNote: "登録講習修了者の5問免除、45問受験、受講対象・修了後の免除有効期間と対象分野を扱う。" }
   ].map((concept) => ({ ...base, ...concept }));
 
   const ids = concepts.map((concept) => concept.conceptId);
   if (new Set(ids).size !== ids.length) throw new Error("Duplicate Power Takken conceptId");
-  if (concepts.length !== 90) throw new Error(`Expected 90 concepts for units 1-70 checkpoint, got ${concepts.length}`);
+  if (concepts.length !== 113) throw new Error(`Expected 113 concepts after complete unit 1-90 inventory, got ${concepts.length}`);
   for (const concept of concepts) {
     if (!concept.title || !concept.category || !Array.isArray(concept.sourceUnits) || concept.sourceUnits.length === 0) {
       throw new Error(`Invalid Power Takken concept: ${concept.conceptId}`);
