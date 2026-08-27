@@ -95,7 +95,7 @@ PHYSICS_MOMENTUM_TOPICS = {
         "title": "物理 運動量保存：衝突前後の全運動量",
         "unit": "様々な運動：運動量と力積",
         "skill": "momentum-conservation-total-before-after",
-        "formula": "P後 = P前 = p₁前 + p₂前（右向きを正、左向きを負）",
+        "formula": "P前=P後=p₁前+p₂前（右向きを正、左向きを負）",
         "seeds": tuple(range(7381, 7391)),
         "spec": {
             "id": "physics-momentum-conservation-total-before-after",
