@@ -4,51 +4,60 @@
 
 Phase 1 unit generation, Phase 2 core-fact four-choice question generation, and Phase 3 solve-all independent validation are complete. All 163 current questions have been independently checked and verified; `pending_validation` is zero and `validation_complete: true`.
 
-The Phase 4 Power宅建 knowledge / print / app integration gate is now satisfied. Phase 4 content work has not yet begun; the exact next task is Phase 4.1 Concept inventory.
+Phase 4 Power宅建 knowledge / print / app integration is active. Phase 4.1 Concept inventory has started and is intentionally being completed before any Phase 4.2 knowledge-item decomposition, 50-question expansion, print generation, or app linkage.
 
 Canonical docs: `00_MASTER_INSTRUCTIONS.md`, `20_EXECUTION_PLAN.md`, `30_QUESTION_AND_QA_SPEC.md`, `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`, `STATUS.json`, `90_HANDOFF.md`.
 Canonical implementation: `qualifications/takken/`.
+Canonical Phase 4 concept inventory: `qualifications/takken/data/power-concepts.js`.
 
 ## Completed in this run
 
-Completed the final Phase 3 checkpoint strictly from `takken-q-78-001` through `takken-q-90-002`, covering all 26 questions in `pending-questions-78-90.js`.
+Re-read latest `main` and confirmed the Phase 4 gate remains satisfied: 90/90 units generated, 163/163 questions checked and verified, pending 0, `validation_complete: true`.
 
-Covered topics were legal-restriction comparison, real-estate acquisition tax, fixed-asset tax, registration-license tax, stamp tax, real-estate transfer income tax, land-price public notice, real-estate appraisal, Housing Finance Agency / Flat35, real-estate advertising, land/building knowledge, 2026 statistics, and five-question exemption review.
+Started Phase 4.1 only. Canonical units 1 through 30 were reviewed in order together with their Phase 2/3 verified-question evidence and normalized into **37 `exam_concept` entries**.
 
-Each question was first solved from stem and four choices without relying on the stored proposed answer, explanation, or source refs. The independent result was then compared with stored data and checked against the `2026-04-01` legal baseline and current official materials as applicable.
+The inventory deliberately does not use one unit = one concept. Compound units were split where independent study value warrants separate 50-question topics, for example:
 
-Results this run: **checked 26 / verified 26 / needs_revision 0 / rejected 0**. No unresolved question defect remains. The final question file now permits the canonical validation-status set while retaining ID, normalized-stem, four-distinct-choice, answer-index, exam metadata, and answer-position guards.
+- 宅建業者名簿 / 標識
+- 免許換え / 変更届・廃業等
+- 媒介契約書面 / 媒介価額の根拠
+- 一般媒介 / 専任媒介 / 専属専任媒介
+- REINS登録 / 業務処理状況報告
+- 重要事項説明の時期・主体・方法 / 35条説明事項
+- 手付額上限 / 手付金等の保全措置
 
-Phase 3 cumulative result: **checked 163 / verified 163 / needs_revision 0 / rejected 0 / pending 0**.
+Conversely, isolated values such as `5年間`, `30日以内`, `20%`, or authority names were kept inside their parent concepts rather than promoted to standalone 50-question topics.
 
-No Phase 4 concepts, knowledge items, new 50-question drills, prints, or app-linkage data were generated in this run. The Phase 4 gate was opened only after the Phase 3 completion conditions were recorded.
+`power-concepts.js` currently contains 37 stable semantic `conceptId` entries with `title`, `category`, `sourceUnits`, `scopeNote`, `examYear: 2026`, `lawAsOf: "2026-04-01"`, and an inventory-stage status. Runtime guards reject duplicate IDs, empty source-unit mappings, or an unexpected checkpoint count.
+
+No Phase 4.2 `knowledge_items`, no new drill questions, no detailed explanation migration, no prints, and no app linkage were created in this run.
 
 ## Status after this run
 
-- Unit generation: 90/90 complete
-- Question-covered units: 90/90
-- Covered core facts: 163/163
-- Generated four-choice questions: 163
-- Checked questions: 163
-- Verified questions: 163
-- Needs revision: 0
-- Rejected: 0
-- Pending validation questions: 0
-- Fully verified units: 90
-- `question_generation_complete`: true
-- `generation_complete`: true
+- Phase 1: complete
+- Phase 2: complete — 90/90 units, 163/163 core facts, 163 generated questions
+- Phase 3: complete — checked 163 / verified 163 / needs_revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
+- Phase 4.1 concept inventory: active
+- Concept inventory checkpoint: unit 1-30 covered
+- Normalized concepts so far: **37**
+- Next canonical unit: **31 `installment-sale-restrictions`**
+- Phase 4.2 knowledge items: not started
+- Phase 4.3 fifty-question expansion: not started
+- Prints/app integration: not started
 
 ## Exact next start
 
-Start Phase 4 at `20_EXECUTION_PLAN.md` Phase 4.1, first unchecked item:
+Continue Phase 4.1 from canonical unit 31 `installment-sale-restrictions`.
 
 1. Read `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md` as the governing Phase 4 specification.
-2. Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions, and comparison axes from the 90 units, all 163 verified questions, and official exam scope.
-3. Normalize them into independently useful `exam_concept` units rather than forcing the estimated concept count or making isolated numbers/words standalone topics.
-4. Record the actual concept inventory and exact continuation point before proceeding to Phase 4.2 knowledge items.
+2. Review units 31 onward in canonical order and the corresponding verified Phase 2/3 questions.
+3. Add independently useful `exam_concept` entries to `qualifications/takken/data/power-concepts.js`.
+4. Split compound units only where the resulting topic has independent study/50-question value; do not create number-only or word-only concepts.
+5. Keep exact concept count driven by actual extraction, not the initial 250-300 estimate.
+6. Continue Phase 4.1 until all 90 units and verified-question evidence are covered. Only then mark the concept inventory complete and move to Phase 4.2.
 
-Do not skip ahead to 50-question expansion, print generation, or app integration before the concept inventory and canonical knowledge structure are established.
+Do not generate new 50-question drills, study prints, worksheets, answer prints, or app-linkage data before Phase 4.1 is complete and the canonical concept inventory is stable.
 
 ## Publication invariant
 
