@@ -71,7 +71,7 @@ Final Phase 3 totals: **checked 163 / verified 163 / needs_revision 0 / rejected
 Current task: Phase 4.1 Concept inventory. Do not skip ahead to 50-question expansion, print generation, or app integration before the concept inventory and canonical knowledge model are established.
 
 ### 4.1 Concept inventory
-- [~] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, all 163 verified Phase 2/3 questions and official scope. **Checkpoint complete through canonical unit 50; 64 normalized concepts recorded. Exact continuation: unit 51 `lease-deposit-opposability`.**
+- [~] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, all 163 verified Phase 2/3 questions and official scope. **Checkpoint complete through canonical unit 70; 90 normalized concepts recorded. Exact continuation: unit 71 `height-restrictions`.**
 - [~] Normalize into exam-level `exam_concept` units; do not make isolated numbers/words standalone 50-question topics. **Current inventory deliberately splits compound units where independent study value exists while keeping numbers/authority names inside parent concepts.**
 - [ ] Record final actual concept count after all 90 units and verified-question evidence are covered; initial estimate is roughly 250-300, but count must follow actual extraction rather than a quota.
 
@@ -80,6 +80,7 @@ Canonical inventory file: `qualifications/takken/data/power-concepts.js`.
 Phase 4.1 checkpoints:
 - Units 1-30: **37 concepts** normalized and persisted.
 - Units 31-50: **27 additional concepts**, cumulative **64 concepts**. Splits include installment-sale cancellation / ownership retention, fraud / duress, mental reservation / fictitious declaration, minor / adult ward, unauthorized / apparent agency, acquisitive / extinctive prescription, and simultaneous performance / risk allocation.
+- Units 51-70: **26 additional concepts**, cumulative **90 concepts**. Splits include敷金 / 建物賃貸借の対抗力、普通借地権の存続期間 / 借地権の対抗力、法定相続人と順位 / 法定相続分、承認・放棄の熟慮期間 / 相続放棄、遺言 / 遺留分、都市計画決定主体 / 都市計画事業。
 
 ### 4.2 Canonical knowledge items
 - [ ] Decompose each concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` law cutoff and primary sources.
