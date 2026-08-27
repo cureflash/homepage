@@ -1,0 +1,55 @@
+name: Power TOEIC beta bank
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'subjects/english/power-toeic/js/data/questions/part5/**'
+      - 'subjects/english/power-toeic/js/data/taxonomy/**'
+      - 'subjects/english/power-toeic/tools/build-beta-bank.mjs'
+      - 'subjects/english/power-toeic/js/data/runtime/**'
+      - '.github/workflows/power-toeic-beta-bank.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-beta-bank:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Build beta runtime bank from QA-approved IDs
+        working-directory: subjects/english/power-toeic
+        run: node tools/build-beta-bank.mjs
+
+      - name: Validate generated bank
+        working-directory: subjects/english/power-toeic
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const bank = JSON.parse(fs.readFileSync('js/data/runtime/beta-bank.json', 'utf8'));
+          if (bank.format !== 'power-toeic-beta-runtime-bank-v1') throw new Error('bad bank format');
+          if (bank.questions.length < 100) throw new Error('beta bank unexpectedly small');
+          if (bank.questions.some(q => q.validationStatus !== 'verified')) throw new Error('non-verified item in beta bank');
+          if (new Set(bank.questions.map(q => q.id)).size !== bank.questions.length) throw new Error('duplicate IDs');
+          console.log({ questions: bank.questions.length, skills: bank.skills.length, quarantined: bank.quarantine.length });
+          NODE
+
+      - name: Commit generated bank to PR branch
+        run: |
+          set -euo pipefail
+          target='subjects/english/power-toeic/js/data/runtime/beta-bank.json'
+          if [ -z "$(git status --porcelain -- "$target")" ]; then
+            echo 'Beta bank already current.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$target"
+          git commit -m 'chore(power-toeic): refresh verified beta bank'
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
