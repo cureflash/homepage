@@ -15,10 +15,10 @@ public final class BundleAudioCuePlayer: AudioCuePlaying, @unchecked Sendable {
 
     public init(
         catalog: AssetCatalog = AssetCatalog(),
-        bundle: Bundle = .module
+        bundle: Bundle? = nil
     ) {
         self.catalog = catalog
-        self.bundle = bundle
+        self.bundle = bundle ?? .module
     }
 
     public func play(_ id: SemanticAssetID) {
@@ -69,7 +69,7 @@ public final class BundleAudioCuePlayer: AudioCuePlaying, @unchecked Sendable {
 }
 #else
 public struct BundleAudioCuePlayer: AudioCuePlaying {
-    public init(catalog: AssetCatalog = AssetCatalog(), bundle: Bundle = .main) {}
+    public init(catalog: AssetCatalog = AssetCatalog(), bundle: Bundle? = nil) {}
     public func play(_ id: SemanticAssetID) {}
     public func resourceURL(for id: SemanticAssetID) -> URL? { nil }
 }
