@@ -6,45 +6,37 @@
 
 中学2年の次の4 checkpointを連続で実装・公開した。
 
-1. `simultaneous-equations-substitution-basic` — 連立方程式 代入法 基本 — 3 variants / 3 PDFs
-2. `simultaneous-equations-align-coefficients` — 係数をそろえる連立方程式 — 3 variants / 3 PDFs
-3. `simultaneous-equations-parentheses` — かっこを含む連立方程式 — 3 variants / 3 PDFs
-4. `simultaneous-equations-decimals` — 小数を含む連立方程式 — 3 variants / 3 PDFs
+1. `simultaneous-equations-fractions` — 分数を含む連立方程式 — 3 variants / 3 PDFs
+2. `linear-function-substitution` — 一次関数 xからyを求める代入 — 3 variants / 3 PDFs
+3. `linear-function-rate-from-two-points` — 2点から変化の割合 — 3 variants / 3 PDFs
+4. `linear-function-from-slope-intercept` — 傾きと切片から式を作る — 3 variants / 3 PDFs
 
-各variantは20問。`scripts/publish_jh2_simultaneous_equations_variants.py` で deterministic seed から生成し、保存済みanswerを信頼せず determinant / `Fraction` ベースの `independent_answer()` でx,yを独立再計算する。
+各variantは20問。MEXT「中学校学習指導要領（平成29年告示）解説 数学編」で、第2学年に連立二元一次方程式と一次関数が配置されていることを確認した。
 
-- 代入法 基本: 1本目の式でxまたはyの係数を±1とし、代入へ移りやすい形に限定する。
-- 係数をそろえる連立方程式: 初期状態ではx/yどちらの係数の絶対値も一致させず、最小公倍数で係数をそろえる必要がある形を生成する。
-- かっこを含む連立方程式: `k(ax+by)=c` 型2本を生成し、validator側でかっこを独立展開してから解く。
-- 小数を含む連立方程式: 係数を整数tenthsとして保持し、表示は1桁小数、validatorは `Fraction(value, 10)` で浮動小数誤差なしに解き直す。
-- すべて整数解x/yを先に選び、元の2式へ代入すると厳密一致する問題だけを採用する。
-- 問題内重複、variant間差、既存catalogとのnormalized content hash衝突を検査する。
+- 分数連立は `Fraction` で係数・定数を保持し、determinantでx/yを独立再計算する。
+- 一次関数代入は `y=ax+b` へ指定xを代入し、`Fraction` で厳密にyを求める。
+- 2点から変化の割合は `(y2-y1)/(x2-x1)` を独立再計算する。
+- 傾き・切片から式を作る問題は、与えられた傾きmと切片bから `y=mx+b` を独立に再構成する。
+- deterministic seed、問題内重複、variant間差、既存catalogとのnormalized content hash衝突を検査する。
 - 問題番号は通常整数、PDFは2ページ、解答ページは同じ問題配置に赤字で答えを追加する。
-
-現行の文部科学省・中学校学習指導要領では、第2学年「数と式」で連立二元一次方程式を理解し、簡単な連立二元一次方程式を解くことが明記されているため、その範囲内の解法・表現違いとして実装した。
 
 ## 検証・公開
 
-- publisher: `scripts/publish_jh2_simultaneous_equations_variants.py`
-- test: `tests/test_jh2_simultaneous_equations_variants_publisher.py`
+- publishers:
+  - `scripts/publish_jh2_fractional_simultaneous_equations.py`
+  - `scripts/publish_jh2_linear_functions.py`
+- test: `tests/test_jh2_fractional_and_linear_functions_publisher.py`
 - workflow: `.github/workflows/math-jh2-publish.yml`
 - shared catalog concurrency group: `worksheet-catalog-publish-v1`
 
-workflowは既存JH2 publisher/test、新4技能publisher/test、`tests/test_worksheet_factory.py`、`tests/test_worksheet_catalog_writer_concurrency.py` を通過した後に公開commitを作成した。
+workflowは既存JH2 publisher/test、新publisher/test、`tests/test_worksheet_factory.py`、`tests/test_worksheet_catalog_writer_concurrency.py` を通過した後に12PDFを公開した。
 
-- publish commit: `6ad3f5ba9175a36451cf0ea5c3e69cb54b269d13`
+- publish commit: `b9061e8f01ef0f91709a8a7744ce3a70c352b09b`
 
-現在の中学2年公開範囲は **12 skills / 36 PDFs**。
+現在の中学2年公開範囲は **16 skills / 48 PDFs**。
 
 ## 次にやること
 
-次の未完了技能 **「分数を含む連立方程式」** から開始する。
-
-その後、安全なら同じrunで次を順に進める。
-
-1. 分数を含む連立方程式
-2. 一次関数 xからyを求める代入
-3. 2点から変化の割合を求める
-4. 傾きと切片から式を作る基本練習
+次の未完了技能 **「2点から一次関数の式を求める数値練習」** から開始する。
 
 引き続きdeterministic seed、独立answer validation、duplicate/hash guard、2ページPDF、通常整数番号、同一配置＋赤字解答、catalog/site validation、共有catalog writer concurrency guardを維持する。
