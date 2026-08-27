@@ -36,8 +36,12 @@ public struct QuizView: View {
                 Spacer()
                 Text("\(progress.current) / \(progress.total)").monospacedDigit()
             }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("問題 \(progress.current) / \(progress.total)")
 
             ProgressView(value: Double(progress.current - 1), total: Double(max(progress.total, 1)))
+                .accessibilityLabel("セッション進捗")
+                .accessibilityValue("\(progress.current)問目、全\(progress.total)問")
 
             if let question = session.currentQuestion {
                 if session.context != .mixed {
@@ -50,16 +54,18 @@ public struct QuizView: View {
                 Text(question.sentence)
                     .font(.title3.weight(.semibold))
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .accessibilityLabel("問題文、\(question.sentence)")
                     .accessibilityIdentifier("quiz.sentence")
 
                 VStack(spacing: 10) {
                     ForEach(Array(question.choices.enumerated()), id: \.offset) { index, choice in
+                        let letter = String(UnicodeScalar(65 + index)!)
                         Button {
                             guard submittedAttempt == nil else { return }
                             selectedIndex = index
                         } label: {
                             HStack(spacing: 12) {
-                                Text(String(UnicodeScalar(65 + index)!))
+                                Text(letter)
                                     .font(.caption.bold())
                                     .frame(width: 28, height: 28)
                                     .background(Circle().fill(.quaternary))
@@ -71,6 +77,9 @@ public struct QuizView: View {
                         }
                         .buttonStyle(.plain)
                         .background(RoundedRectangle(cornerRadius: 12).stroke(borderStyle(index: index), lineWidth: 2))
+                        .accessibilityLabel("選択肢 \(letter)、\(choice)")
+                        .accessibilityValue(choiceAccessibilityValue(index: index))
+                        .accessibilityHint(submittedAttempt == nil ? "ダブルタップして選択" : "回答済み")
                         .accessibilityIdentifier("quiz.choice.\(index)")
                     }
                 }
@@ -84,9 +93,17 @@ public struct QuizView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 12).fill(.thinMaterial))
+                    .accessibilityElement(children: .ignore)
+                    .accessibilityLabel("\(attempt.correct ? "正解" : "不正解")。\(question.explanation)")
+                    .accessibilityIdentifier("quiz.feedback")
                 }
 
-                if let errorMessage { Text(errorMessage).font(.footnote).foregroundStyle(.secondary) }
+                if let errorMessage {
+                    Text(errorMessage)
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                        .accessibilityLabel("エラー、\(errorMessage)")
+                }
 
                 Button(submittedAttempt == nil ? "回答する" : (progress.current == progress.total ? "結果を見る" : "次の問題")) {
                     advance(question: question)
@@ -95,6 +112,7 @@ public struct QuizView: View {
                 .controlSize(.large)
                 .disabled(submittedAttempt == nil && selectedIndex == nil)
                 .frame(maxWidth: .infinity)
+                .accessibilityHint(primaryActionHint(progress: progress))
                 .accessibilityIdentifier("quiz.primaryAction")
             }
         }
@@ -108,6 +126,20 @@ public struct QuizView: View {
             if index == attempt.selectedIndex && !attempt.correct { return .secondary }
         }
         return selectedIndex == index ? .primary : .quaternary
+    }
+
+    private func choiceAccessibilityValue(index: Int) -> String {
+        if let attempt = submittedAttempt {
+            if index == attempt.correctIndex { return "正解" }
+            if index == attempt.selectedIndex { return "選択した不正解" }
+            return ""
+        }
+        return selectedIndex == index ? "選択中" : ""
+    }
+
+    private func primaryActionHint(progress: (current: Int, total: Int)) -> String {
+        if submittedAttempt == nil { return "選択した答えを確定します" }
+        return progress.current == progress.total ? "セッション結果を表示します" : "次の問題へ進みます"
     }
 
     private func advance(question: Question) {
