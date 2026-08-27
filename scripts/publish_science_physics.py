@@ -9,17 +9,25 @@ try:
         PHYSICS_PROJECTILE_PROBLEM_COUNT,
         PHYSICS_PROJECTILE_TOPICS,
     )
+    from scripts.science_physics_rigid_body import (
+        PHYSICS_RIGID_BODY_PROBLEM_COUNT,
+        PHYSICS_RIGID_BODY_TOPICS,
+    )
     from scripts.science_worksheet_helpers import generate_formula_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
     from science_physics_projectile import PHYSICS_PROJECTILE_PROBLEM_COUNT, PHYSICS_PROJECTILE_TOPICS
+    from science_physics_rigid_body import PHYSICS_RIGID_BODY_PROBLEM_COUNT, PHYSICS_RIGID_BODY_TOPICS
     from science_worksheet_helpers import generate_formula_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 
 
 FORMAL_COURSE = "物理"
 ID_PREFIX = "science-physics-motion-"
-ALL_TOPICS = {**PHYSICS_PROJECTILE_TOPICS}
+ALL_TOPICS = {
+    **{key: (topic, PHYSICS_PROJECTILE_PROBLEM_COUNT) for key, topic in PHYSICS_PROJECTILE_TOPICS.items()},
+    **{key: (topic, PHYSICS_RIGID_BODY_PROBLEM_COUNT) for key, topic in PHYSICS_RIGID_BODY_TOPICS.items()},
+}
 
 
 def build_batch(repo_root):
@@ -34,11 +42,11 @@ def build_batch(repo_root):
     output_dir = root / output_rel_dir
     pending = []
 
-    for topic_key, topic in ALL_TOPICS.items():
+    for topic_key, (topic, problem_count) in ALL_TOPICS.items():
         for mode_key, mode in topic["modes"].items():
             for variant, seed in enumerate(topic["seeds"], start=1):
                 problems = generate_formula_drill(
-                    topic["spec"], seed, PHYSICS_PROJECTILE_PROBLEM_COUNT,
+                    topic["spec"], seed, problem_count,
                     solve_for=mode["solve_for"],
                 )
                 validate(problems)
