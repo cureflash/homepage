@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 2375,
-  "checked_question_count": 1400,
+  "generated_question_count": 2400,
+  "checked_question_count": 1425,
   "pending_validation_count": 975,
-  "verified_question_count": 1331,
+  "verified_question_count": 1356,
   "needs_revision_count": 69,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -32,16 +32,17 @@
     "p5.conn.because_vs_because_of",
     "p5.conn.despite_vs_although",
     "p5.conn.during_vs_while",
-    "p5.conn.by_vs_until"
+    "p5.conn.by_vs_until",
+    "p5.conn.for_vs_since"
   ],
-  "current_batch": "2026-08-28-scheduled-025-for-since-part3",
-  "current_micro_skill": "p5.conn.for_vs_since",
-  "current_micro_skill_persisted_count": 75,
+  "current_batch": "2026-08-28-scheduled-025-for-since-part4",
+  "current_micro_skill": "p5.conn.time_prepositions",
+  "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_conn_for_vs_since_0076",
-  "next_micro_skill": "p5.conn.for_vs_since",
+  "next_resume_id": "p5_conn_time_prepositions_0001",
+  "next_micro_skill": "p5.conn.time_prepositions",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Persisted p5.conn.for_vs_since IDs 0051-0075, bringing total generation to 2,375. All 25 new items remain pending_validation. Within the new checkpoint there are no exact stem duplicates and no SequenceMatcher pair at or above 0.94; the observed maximum was about 0.613. Independently reviewed p5.verb.to_infinitive_pattern IDs 0076-0100: 25 checked, 24 verified, 1 needs_revision, 0 rejected. ID 0097 uses past 'failed' with the still-open deadline 'by the end of this week' and was not approved. Cumulative QA is 1,400 checked, 1,331 verified, 69 needs_revision, 0 rejected; unchecked pending_validation remains 975 because generation and QA both advanced by 25. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_conn_for_vs_since_0076; next QA is p5_verb_gerund_pattern_0001.",
-  "updated_at": "2026-08-28T05:25:00+09:00"
+  "last_run_result": "Persisted p5.conn.for_vs_since IDs 0076-0100, completing the micro-skill at 100/100 and bringing total generation to 2,400 across 24/44 micro-skills. All 25 new items remain pending_validation. Within the new checkpoint there are no exact stem duplicates and no SequenceMatcher pair at or above 0.94; the observed maximum was about 0.607. Answer positions are A/B/C/D = 7/6/6/6. Independently reviewed p5.verb.gerund_pattern IDs 0001-0025: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,425 checked, 1,356 verified, 69 needs_revision, 0 rejected; unchecked pending_validation remains 975 because generation and QA both advanced by 25. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_conn_time_prepositions_0001; next QA is p5_verb_gerund_pattern_0026.",
+  "updated_at": "2026-08-28T06:24:00+09:00"
 }
