@@ -2,122 +2,73 @@
 
 Updated: 2026-08-27
 
-## AUDIT OVERRIDE — P1 concurrent catalog writer
+## Current state
 
-**Severity:** P1 — fix before further science worksheet publication.
+The P1 shared-catalog writer audit is resolved. Science publication may continue under the repository-wide serialization contract described below.
 
-**Audit evidence:** the enabled standalone science worksheet worker and the enabled GitHub time-routing worker's normal math route both run at the top of the hour during ordinary math hours. Both publish into `cureflash/homepage` and mutate the same authoritative `worksheets/catalog.json`. The science workflow's latest-main safe-push guard reduces data-loss risk, but it does not establish exclusive ownership of the catalog while another scheduled writer is generating/validating against a potentially changing snapshot.
+Current authoritative published physics coverage:
 
-**Files / ownership boundary:** `worksheets/catalog.json`; science publish workflows; `.github/workflows/grade*-publish.yml`; `docs/science-worksheet-factory/90_HANDOFF.md`; `docs/worksheet-factory/90_HANDOFF.md`.
+- junior-high grade 1 physics: 48 PDFs
+- junior-high grade 2 physics: 120 PDFs
+- junior-high grade 3 physics: 120 PDFs
+- `物理基礎`: 870 PDFs
+- formal `物理`: 450 PDFs
+- total published physics: 1608 PDFs
 
-**Required correction:** before publishing the next signed-moment equilibrium checkpoint, establish one repository-level serialization/aggregation contract for every workflow that writes `worksheets/catalog.json`. Acceptable designs include shared workflow concurrency serialization across math/science publication or independently generated per-track catalog fragments with deterministic aggregation. The correction must be common to both tracks rather than a science-only retry patch.
+Formal `物理` currently has 330 PDFs in `様々な運動：平面運動と放物運動` and 120 PDFs in `様々な運動：剛体のつり合い`. All 450 formal-Physics rows use `formal_course=物理`, `grade=null`, numeric answers, and unique normalized content hashes.
 
-**Do not:** do not force-push; do not overwrite a newer catalog; do not weaken catalog/hash validation; do not hand-patch generated catalog rows; do not merely add more retry loops around the existing shared-file race.
+## Completed science checkpoint this run — signed net moment, 30 PDFs
 
-**Acceptance criteria:**
+Added `rigid-body-signed-net-moment` as the fourth rigid-body checkpoint.
 
-1. Every workflow/publisher that writes `worksheets/catalog.json` is covered by one explicit serialization/aggregation rule.
-2. A math publication and a science publication cannot both validate independent stale snapshots and then race to publish the shared catalog.
-3. Existing science/math catalog rows and stable URLs remain byte-for-byte semantically preserved after regeneration.
-4. Shared worksheet validation plus one representative math workflow and one representative science workflow pass under the new contract.
-5. Repository search finds no uncaptured direct publication path for the shared catalog.
-
-**Tests / searches required:** enumerate all catalog writers; verify workflow concurrency/aggregation behavior; run `tests/test_worksheet_factory.py`, the current formal-Physics publisher tests, and a representative current math publisher/test; preserve non-force latest-main safety.
-
-**Resume after audit fix:** continue Phase 3 at `物理：剛体のつり合い / 符号付きモーメントのつり合い` with the learner-visible sign convention and uniquely solvable torque-balance model described below.
-
-## Completed / reconciled this run
-
-Started from the latest `main`, re-read the science-factory control documents, and resumed formal course `物理` at the exact prior stop point: `剛体のつり合い`. Parallel worksheet-factory updates on `main` were preserved; the implementation was merged by PR rather than resetting newer repository progress.
-
-The current MEXT High School Course of Study Commentary page for the 2018 high-school curriculum was rechecked, and the formal-Physics sequence remains in the rigid-body equilibrium portion after projectile motion. The first rigid-body batch was deliberately limited to force moments that are fully specified by learner-visible perpendicular distances. A reference mechanics source was also checked for the textbook relation that a perpendicular force gives moment magnitude `M = Fd` and that clockwise/counterclockwise moments must balance in static equilibrium.
-
-This run completed **three independent safe checkpoints totaling 90 new PDFs**. A fourth checkpoint was not manufactured because the next natural step is signed multi-force torque equilibrium; that requires an explicit rotation-sign convention and a new uniquely-solvable balance contract rather than another isolated product drill.
-
-### 1. 剛体 — 力のモーメント — 30 PDFs
-
-- Relation: `M = Fd`.
-- Geometry is explicit: `d` is the perpendicular distance from the pivot to the force's line of action, with the force perpendicular to the lever arm in the basic model.
-- Reuses the existing shared `product` relation.
-- 10 deterministic seeds × three targets: direct `M`, reverse `F`, reverse `d`.
+- Relation: `M_net = M_CCW - M_CW`.
+- Learner-visible sign convention: counterclockwise positive, clockwise negative (`反時計回りを正、時計回りを負`).
+- Reuses the existing shared `difference` relation; no new shared formula solver was introduced.
+- 10 deterministic seeds × three targets: direct net moment, reverse counterclockwise moment, reverse clockwise moment.
 - Each worksheet has 20 problems.
-- Skill: `rigid-body-force-moment`.
+- Tests independently recompute every answer from learner-visible values, verify deterministic regeneration, reject corrupted answers, require positive/negative/zero net-moment coverage, require 120/120 rigid-body normalized hashes to be unique, and check disjointness from unrelated published series.
+- The formal-Physics publication contract is now 450 catalog rows / 450 unique hashes, with all registered PDFs checked for `%PDF`, size greater than 1000 bytes, and two-page structure.
 
-### 2. 剛体 — 重力によるモーメント — 30 PDFs
+Implementation/publication:
 
-- Relation: `M = mgd`.
-- Fixed gravity: `g = 9.8 m/s²`.
-- `d` is the perpendicular distance from the pivot to the weight's line of action.
-- Reuses the existing shared `product` relation with three factors.
-- 10 deterministic seeds × three targets: direct `M`, reverse mass `m`, reverse `d`.
-- Each worksheet has 20 problems.
-- Skill: `rigid-body-weight-moment`.
+- implementation PR #139 merge: `c951c99df15b368ee6769e767fdc45d69e6c14ee`
+- publication Actions run `33052821010`: success
+- publication commit: `afe873762c228ba78c25130094006f5a02e3ee85`
 
-### 3. 剛体 — 偶力のモーメント — 30 PDFs
+The current MEXT High School Course of Study Commentary for Science/Math was rechecked before implementation. Formal Physics continues through `平面内の運動と剛体のつり合い`, including finding and understanding conditions for rigid-body equilibrium.
 
-- Relation: `N = Fℓ` for two equal, parallel and oppositely directed forces.
-- `ℓ` is the perpendicular distance between the two lines of action.
-- Reuses the existing shared `product` relation.
-- 10 deterministic seeds × three targets: direct couple moment `N`, reverse `F`, reverse `ℓ`.
-- Each worksheet has 20 problems.
-- Skill: `rigid-body-couple-moment`.
+## P1 shared `worksheets/catalog.json` writer audit — resolved
 
-## Generator / validation contract
+During reconciliation, a newer canonical audit override required all worksheet publishers that mutate the authoritative `worksheets/catalog.json` to use one repository-level serialization/aggregation contract before any further science publication. The already-generated signed-net-moment batch had passed all topic/shared/catalog/PDF checks and was not rolled back; instead, no further physics checkpoint was started until the shared writer race was corrected.
 
-No shared formula relation was added in this run. `scripts/science_physics_rigid_body.py` defines the three new rigid-body topics and `tests/test_science_physics_rigid_body.py` independently verifies:
+Repository enumeration found exactly ten enabled workflows that directly stage `worksheets/catalog.json` for publication: Grade 1–5 math plus JH1–3, Physics Basics, and formal Physics science publishers.
 
-- exactly 3 checkpoints / 90 worksheet series;
-- 20 problems per worksheet;
-- deterministic seed regeneration;
-- independent answer recalculation from learner-visible values for every target direction;
-- corrupted-answer rejection;
-- 90/90 normalized-hash uniqueness;
-- hash disjointness from all unrelated published worksheet series;
-- explicit perpendicular-distance / line-of-action geometry;
-- fixed `g = 9.8 m/s²` for the weight-moment checkpoint;
-- `formal_course=物理` / `grade=null` through publisher/catalog validation.
+All ten now use the same GitHub Actions concurrency group `worksheet-catalog-publish-v1` with `cancel-in-progress: false`. Existing latest-main/non-force safeguards remain in place. The change does not rewrite or hand-patch catalog rows and does not weaken duplicate/hash validation.
 
-The formal-Physics publisher now combines the existing 330 projectile worksheets with these 90 rigid-body worksheets. The publication workflow validates **420 catalog rows / 420 unique content hashes**, answer type `numeric` for all 420, `calculation-basic=170`, `calculation-reverse=250`, and every registered formal-Physics PDF for `%PDF` header, file size greater than 1000 bytes, and two-page structure.
+A static guard was added at `tests/test_worksheet_catalog_writer_concurrency.py`. It enumerates every direct workflow writer, requires the exact known set of ten, and fails if any writer is outside the shared group or uses a private group. `.github/workflows/worksheet-catalog-concurrency-audit.yml` runs this guard when publish workflows change.
 
-## Implementation / publication
+Audit implementation/validation:
 
-- Implementation PR #136 merge: `e0062280108bd0263e9d653fbb99057cb24f3a7d`.
-- Actions run `33048340278`: **success**.
-- The run passed shared worksheet tests, shared formula-relation regression tests, the existing 330-series projectile tests, and the new 90-series rigid-body tests before generation.
-- Publication produced 90 new formal-Physics PDFs, then reran all tests and completed exact 420-row / 420-unique-hash catalog validation plus all-PDF header/size/two-page checks.
-- Latest-main safe-push guard passed.
-- Publication commit: `d26669a77c47626e4cb3c9f57157ffd28606c161`.
+- audit PR #140 merge: `0de819077fbab3ce3d326c69a126ff59ca8bf723`
+- catalog concurrency audit run `33053444720`: success
+- representative formal-Physics run `33053444636`: success under the shared group
+- representative Grade 4 math run `33053444726`: success under the shared group
 
-## Current authoritative published coverage
-
-- junior-high grade 1 physics: 48;
-- junior-high grade 2 physics: 120;
-- junior-high grade 3 physics: 120;
-- `物理基礎`: 870;
-- formal `物理`: **420**;
-- total published physics: **1578**.
-
-Formal `物理` currently has:
-
-- `様々な運動：平面運動と放物運動`: 330;
-- `様々な運動：剛体のつり合い`: 90;
-- answer type `numeric`: 420;
-- 420 unique normalized content hashes.
-
-Every registered formal-Physics PDF passes `%PDF` header, file-size greater than 1000 bytes, and two-page structural checks. Representative screenshot-based visual QA remains pending; structural validation is not treated as visual QA.
+The simultaneous merge-triggered workflow fan-out demonstrated the intended ownership behavior: independent catalog writers were not allowed to publish concurrently. A representative math and representative science publisher then completed successfully under the same contract.
 
 ## Exact next starting point
 
-The AUDIT OVERRIDE above supersedes new publication work until the shared catalog-writer race is corrected. After that correction, continue Phase 3 at formal course **`物理：剛体のつり合い / 符号付きモーメントのつり合い`**.
+Continue formal course **`物理：剛体のつり合い / 2力のモーメントのつり合い`**.
 
-1. Start from latest `main` and repeat the control-document read/reconcile sequence.
-2. Preserve parallel repository progress; never reset a newer `main`.
-3. Recheck current MEXT formal-Physics scope and a reliable mechanics reference before adding the equilibrium model.
-4. Keep `formal_course=物理` and `grade=null`.
-5. Define the learner-visible rotation convention first, for example counterclockwise positive and clockwise negative. The convention must appear in the problem data/description and not only in generator state.
-6. Begin with the simplest unique two-force balance about one pivot, e.g. `F1 d1 = F2 d2`, or an equivalent signed-sum-zero relation. Add a shared formula relation only if existing relations cannot represent all direct/reverse targets without hiding derived values.
-7. Do not generate any mode with more than one unknown, ambiguous force direction, non-perpendicular geometry, or multiple mathematical answers.
-8. If a new shared relation is introduced, add independent direct/reverse regression tests and invalid-case rejection before publication.
-9. For every new series, independently recompute answers, verify deterministic seeds, reject normalized-hash collisions, preserve 20-problem/two-page format, and validate the complete catalog.
-10. Publish only after shared/topic tests, generation, post-generation validation, catalog/PDF checks, and latest-main safe push succeed.
-11. Representative screenshot-based visual QA remains pending.
+1. Start from latest `main` and re-read the canonical science instructions, STATUS, and this HANDOFF. Preserve parallel repository progress.
+2. Recheck current MEXT formal-Physics scope and a reliable mechanics reference.
+3. Keep `formal_course=物理` and `grade=null`.
+4. Use learner-visible convention `反時計回りを正、時計回りを負` and learner-visible perpendicular lever-arm geometry. Do not hide force direction or derived geometry in generator state.
+5. Begin with the simplest unique two-force balance about one pivot, e.g. `F1 d1 = F2 d2`, equivalent to signed moment sum zero.
+6. Exactly one quantity may be unknown. Do not generate ambiguous force directions, non-perpendicular geometry, multiple unknowns, or multiple mathematical answers.
+7. Existing relations may be reused only if they expose all learner-visible values cleanly. If a new shared invertible relation is required, add independent direct/reverse regression tests, zero/invalid-denominator rejection, bad-arity rejection, and corrupted-answer rejection before any PDF publication.
+8. For every new series require deterministic seed regeneration, independent visible-value answer recomputation, normalized-hash uniqueness and collision checks against existing catalog rows, 20-problem/two-page output, complete catalog validation, and structural PDF checks.
+9. Preserve the repository-wide `worksheet-catalog-publish-v1` serialization rule and non-force latest-main push safety.
+10. Representative screenshot-based visual QA remains pending; structural PDF QA is not a substitute for visual QA.
+
+This run stops here rather than manufacturing additional checkpoints because the next natural model changes from a simple signed difference to a uniquely invertible two-product equilibrium relation and therefore needs an explicit shared formula contract before publication.
