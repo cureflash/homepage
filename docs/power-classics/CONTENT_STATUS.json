@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "classics-v1.0",
   "taxonomy_micro_skill_count": 100,
-  "generated_question_count": 175,
-  "checked_question_count": 175,
+  "generated_question_count": 200,
+  "checked_question_count": 200,
   "pending_validation_count": 0,
-  "verified_question_count": 175,
+  "verified_question_count": 200,
   "needs_revision_count": 0,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -14,15 +14,15 @@
     "kobun.verb.conjugation_type.kami_ichidan",
     "kobun.verb.conjugation_type.kami_nidan"
   ],
-  "current_batch": "2026-08-27-scheduled-004",
+  "current_batch": "2026-08-28-scheduled-005a",
   "current_micro_skill": "kobun.verb.conjugation_type.kami_nidan",
-  "current_micro_skill_persisted_count": 25,
+  "current_micro_skill_persisted_count": 50,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "kobun_verb_conjugation_type_kami_nidan_0026",
+  "next_resume_id": "kobun_verb_conjugation_type_kami_nidan_0051",
   "next_micro_skill": "kobun.verb.conjugation_type.kami_nidan",
   "generation_complete": false,
   "validation_complete": false,
   "global_duplicate_gate_complete": false,
-  "last_run_result": "Generated the first 25/100 Phase A questions for kobun.verb.conjugation_type.kami_nidan using attested 上二段 verbs and direct/未然/連用 contexts. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=7/6/6/6. No invented verbs were used. Full bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_type_kami_nidan_0026.",
-  "updated_at": "2026-08-27T23:00:00+09:00"
+  "last_run_result": "Generated IDs 0026-0050 for kobun.verb.conjugation_type.kami_nidan, extending attested 上二段 verbs through 連用形＋て・つつ・けり contexts. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=6/7/6/6. No invented verbs were used. Full bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_type_kami_nidan_0051.",
+  "updated_at": "2026-08-28T00:00:00+09:00"
 }
