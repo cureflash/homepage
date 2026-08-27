@@ -19,8 +19,8 @@
       proposedAnswerIndex: 0,
       explanation: "宅建業者が自ら売主となる売買契約では、損害賠償額の予定と違約金の合算額は代金の20%を超える定めをしてはならない。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-28-002",
@@ -39,8 +39,8 @@
       proposedAnswerIndex: 1,
       explanation: "20%を超える特約は、超える部分について無効となる。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-29-001",
@@ -59,8 +59,8 @@
       proposedAnswerIndex: 2,
       explanation: "民法566条の期間を引渡しの日から2年以上とする特約は許されるが、それ以外に買主へ不利な特約は原則として制限される。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-29-002",
@@ -79,8 +79,8 @@
       proposedAnswerIndex: 3,
       explanation: "宅建業法の制限に反する買主に不利な特約は無効となる。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-30-001",
@@ -99,8 +99,8 @@
       proposedAnswerIndex: 0,
       explanation: "宅建業法33条の2は、宅建業者が自ら売主として自己の所有に属しない宅地または建物を売買することを原則として制限している。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-30-002",
@@ -119,8 +119,8 @@
       proposedAnswerIndex: 1,
       explanation: "宅建業者が当該物件を取得する契約を締結している場合など、法定の例外がある。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-31-001",
@@ -139,8 +139,8 @@
       proposedAnswerIndex: 2,
       explanation: "賦払金の支払遅滞を理由に解除するには、30日以上の相当期間を定めて書面で催告し、その期間内に履行がないことが原則として必要である。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-31-002",
@@ -159,8 +159,8 @@
       proposedAnswerIndex: 3,
       explanation: "宅建業法43条では、引渡しや代金の30%超の支払時点を基準とする所有権留保等の制限が置かれている。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-32-001",
@@ -179,8 +179,8 @@
       proposedAnswerIndex: 0,
       explanation: "宅建業者が代理または媒介に関して受けられる報酬額は国土交通大臣が定める。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-32-002",
@@ -199,8 +199,8 @@
       proposedAnswerIndex: 1,
       explanation: "宅建業者は国土交通大臣が定めた額を超えて報酬を受けてはならない。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-33-001",
@@ -219,8 +219,8 @@
       proposedAnswerIndex: 2,
       explanation: "宅建業法65条では、一定の場合に1年以内の期間を定めて業務の全部または一部の停止を命じることができる。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-33-002",
@@ -239,8 +239,8 @@
       proposedAnswerIndex: 3,
       explanation: "宅建業法66条は、一定の重大事由について免許を取り消さなければならない場合を定めている。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-34-001",
@@ -259,8 +259,8 @@
       proposedAnswerIndex: 0,
       explanation: "民法97条により、意思表示はその通知が相手方に到達した時から効力を生ずる。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-34-002",
@@ -279,8 +279,8 @@
       proposedAnswerIndex: 1,
       explanation: "相手方が正当な理由なく到達を妨げた場合、通常到達すべき時に到達したものとみなす規定がある。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-35-001",
@@ -299,8 +299,8 @@
       proposedAnswerIndex: 2,
       explanation: "民法95条は、一定の錯誤が法律行為の目的および取引上の社会通念に照らして重要な場合に取消しを認めている。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-35-002",
@@ -319,8 +319,8 @@
       proposedAnswerIndex: 3,
       explanation: "錯誤による取消しには、表意者の重大な過失や第三者保護に関する制限がある。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-36-001",
@@ -339,8 +339,8 @@
       proposedAnswerIndex: 0,
       explanation: "民法96条1項は、詐欺または強迫による意思表示を取り消すことができると定める。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-36-002",
@@ -359,8 +359,8 @@
       proposedAnswerIndex: 1,
       explanation: "詐欺による意思表示の取消しは、善意かつ無過失の第三者に対抗できない。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-37-001",
@@ -379,8 +379,8 @@
       proposedAnswerIndex: 2,
       explanation: "民法93条は心裡留保を原則有効とし、相手方が真意でないことを知りまたは知ることができたときは無効とする。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-37-002",
@@ -399,8 +399,8 @@
       proposedAnswerIndex: 3,
       explanation: "民法94条は、相手方と通じてした虚偽の意思表示を無効とする。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-38-001",
@@ -419,8 +419,8 @@
       proposedAnswerIndex: 0,
       explanation: "未成年者が法律行為をするには原則として法定代理人の同意が必要で、同意なくした行為は取り消すことができる。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-38-002",
@@ -439,8 +439,8 @@
       proposedAnswerIndex: 1,
       explanation: "成年被後見人の法律行為は、日用品の購入その他日常生活に関する行為を除き取り消すことができる。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-39-001",
@@ -459,8 +459,8 @@
       proposedAnswerIndex: 2,
       explanation: "民法99条により、代理人が権限内で本人のためにすることを示してした意思表示は本人に直接効力を生ずる。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-39-002",
@@ -479,8 +479,8 @@
       proposedAnswerIndex: 3,
       explanation: "本人のためにすることを示さない意思表示は、原則として代理人自身のためにしたものとみなされる。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-40-001",
@@ -499,8 +499,8 @@
       proposedAnswerIndex: 0,
       explanation: "民法113条により、無権代理人がした契約は本人が追認しなければ原則として本人に対して効力を生じない。",
       sourceIds: ["egov-civil-code-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T21:32:11+09:00", result: "verified" }
     },
     {
       id: "takken-q-40-002",
@@ -815,7 +815,7 @@
     if (!Array.isArray(q.choices) || q.choices.length !== 4) throw new Error(`Invalid choices: ${q.id}`);
     if (new Set(q.choices).size !== 4) throw new Error(`Duplicate choices: ${q.id}`);
     if (!Number.isInteger(q.proposedAnswerIndex) || q.proposedAnswerIndex < 0 || q.proposedAnswerIndex > 3) throw new Error(`Invalid answer index: ${q.id}`);
-    if (q.validationStatus !== "pending_validation") throw new Error(`Invalid validation status: ${q.id}`);
+    if (!["pending_validation", "verified", "needs_revision", "rejected"].includes(q.validationStatus)) throw new Error(`Invalid validation status: ${q.id}`);
     if (q.examYear !== 2026 || q.lawAsOf !== "2026-04-01") throw new Error(`Invalid exam metadata: ${q.id}`);
   }
 
