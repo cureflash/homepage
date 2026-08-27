@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "classics-v1.0",
   "taxonomy_micro_skill_count": 100,
-  "generated_question_count": 300,
-  "checked_question_count": 300,
+  "generated_question_count": 325,
+  "checked_question_count": 325,
   "pending_validation_count": 0,
-  "verified_question_count": 300,
+  "verified_question_count": 325,
   "needs_revision_count": 0,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -15,15 +15,15 @@
     "kobun.verb.conjugation_type.kami_nidan",
     "kobun.verb.conjugation_type.shimo_nidan"
   ],
-  "current_batch": "2026-08-28-scheduled-008",
+  "current_batch": "2026-08-28-scheduled-009",
   "current_micro_skill": "kobun.verb.conjugation_type.shimo_nidan",
-  "current_micro_skill_persisted_count": 50,
+  "current_micro_skill_persisted_count": 75,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "kobun_verb_conjugation_type_shimo_nidan_0051",
+  "next_resume_id": "kobun_verb_conjugation_type_shimo_nidan_0076",
   "next_micro_skill": "kobun.verb.conjugation_type.shimo_nidan",
   "generation_complete": false,
   "validation_complete": false,
   "global_duplicate_gate_complete": false,
-  "last_run_result": "Generated IDs 0026-0050 for kobun.verb.conjugation_type.shimo_nidan, broadening coverage with attested ア行下二段 得（う） and ヤ行下二段 見ゆ・聞こゆ・覚ゆ・絶ゆ across 未然・連用・終止・連体・已然 forms. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=6/7/6/6. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_type_shimo_nidan_0051.",
-  "updated_at": "2026-08-28T04:00:00+09:00"
+  "last_run_result": "Generated IDs 0051-0075 for kobun.verb.conjugation_type.shimo_nidan with a deliberate 命令形-heavy checkpoint, including attested ワ行下二段 植う・飢う・据う plus regular lower-bigrade verbs. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=6/6/7/6. Exact stem duplicates within this batch=0. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_type_shimo_nidan_0076.",
+  "updated_at": "2026-08-28T05:00:00+09:00"
 }
