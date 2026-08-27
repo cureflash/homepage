@@ -10,7 +10,7 @@
     "native_audio_adapter": "complete",
     "final_app_icon": "blocked",
     "temporary_character_assets_bundled": "blocked",
-    "otologic_audio_assets_bundled": "blocked"
+    "otologic_audio_assets_bundled": "complete"
   },
   "repository_blockers": [
     {
@@ -20,10 +20,12 @@
     {
       "id": "temporary_character_assets_bundled",
       "description": "Bundle the exact approved Irasutoya temporary character image files or replace them with original art; verify each actual file against Release/AssetManifest.json before marking bundled."
-    },
+    }
+  ],
+  "completed_asset_requirements": [
     {
       "id": "otologic_audio_assets_bundled",
-      "description": "Commit the three already-verified Google Drive OtoLogic MP3 binaries into the declared SwiftPM Audio resources. The semantic AudioCuePlaying/BundleAudioCuePlayer path and exact CC BY 4.0 Credits attribution are already complete."
+      "description": "The three verified OtoLogic MP3 files are committed as SwiftPM Audio resources, semantic IDs resolve through BundleAudioCuePlayer, and the exact CC BY 4.0 credit is exposed in-app."
     }
   ],
   "external_operator_inputs": [
