@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 2225,
-  "checked_question_count": 1250,
+  "generated_question_count": 2250,
+  "checked_question_count": 1275,
   "pending_validation_count": 975,
-  "verified_question_count": 1185,
+  "verified_question_count": 1210,
   "needs_revision_count": 65,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -33,14 +33,14 @@
     "p5.conn.despite_vs_although",
     "p5.conn.during_vs_while"
   ],
-  "current_batch": "2026-08-27-scheduled-025-part1",
+  "current_batch": "2026-08-28-scheduled-025-part2",
   "current_micro_skill": "p5.conn.by_vs_until",
-  "current_micro_skill_persisted_count": 25,
+  "current_micro_skill_persisted_count": 50,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_conn_by_vs_until_0026",
+  "next_resume_id": "p5_conn_by_vs_until_0051",
   "next_micro_skill": "p5.conn.by_vs_until",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Persisted the first 25 questions for p5.conn.by_vs_until (IDs 0001-0025), bringing total generation to 2,225. The checkpoint uses explicit completion deadlines for by and continuing states/actions for until; all new items remain pending_validation. Machine checks found unique sequential IDs, one blank, four distinct choices, answer-position counts A/B/C/D=6/6/7/6, zero exact duplicate stems, no within-checkpoint SequenceMatcher pair >=0.94, and maximum observed similarity 0.5625. Independently reviewed the oldest unchecked p5.verb.modal_base_form IDs 0026-0050: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,250 checked, 1,185 verified, 65 needs_revision, 0 rejected; unchecked pending_validation remains 975. Next generation is p5_conn_by_vs_until_0026; next QA is p5_verb_modal_base_form_0051. Full cross-bank semantic near-duplicate scanning remains incomplete and verified does not yet mean production-approved.",
-  "updated_at": "2026-08-27T23:59:00+09:00"
+  "last_run_result": "Persisted p5.conn.by_vs_until IDs 0026-0050, bringing total generation to 2,250. All 25 remain pending_validation. Checkpoint checks found unique sequential IDs, one blank, four distinct choices, answer-position counts A/B/C/D=7/6/6/6, zero exact duplicate stems, no within-checkpoint SequenceMatcher pair >=0.94, and maximum observed similarity about 0.663. Independently reviewed the oldest unchecked p5.verb.modal_base_form IDs 0051-0075: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,275 checked, 1,210 verified, 65 needs_revision, 0 rejected; unchecked pending_validation remains 975. Next generation is p5_conn_by_vs_until_0051; next QA is p5_verb_modal_base_form_0076. Full cross-bank semantic near-duplicate scanning remains incomplete and verified does not yet mean production-approved.",
+  "updated_at": "2026-08-28T00:36:00+09:00"
 }
