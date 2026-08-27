@@ -36,9 +36,12 @@ jobs:
             python scripts/publish_jh2_expression_operations.py .
             python scripts/publish_jh2_expression_equation_basics.py .
             python scripts/publish_jh2_simultaneous_equations_variants.py .
+            python scripts/publish_jh2_fractional_simultaneous_equations.py .
+            python scripts/publish_jh2_linear_functions.py .
             python tests/test_jh2_expression_operations_publisher.py
             python tests/test_jh2_expression_equation_basics_publisher.py
             python tests/test_jh2_simultaneous_equations_variants_publisher.py
+            python tests/test_jh2_fractional_and_linear_functions_publisher.py
             python tests/test_worksheet_factory.py
             python tests/test_worksheet_catalog_writer_concurrency.py
             before=$(git rev-parse origin/main)
