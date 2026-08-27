@@ -2,9 +2,9 @@
 
 ## Current QA state
 
-- Checked: **975**
-- Verified: **939**
-- Needs revision: **36**
+- Checked: **1,000**
+- Verified: **960**
+- Needs revision: **40**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
 - `generation_complete`: `false`
@@ -13,37 +13,38 @@
 ## Latest completed QA work
 
 Micro-skill: `p5.verb.present_vs_past`
-Range completed: `0051-0075`
+Range completed: `0076-0100`
 
 Independent result:
 - 25 checked
-- 22 verified
-- 3 needs_revision
+- 21 verified
+- 4 needs_revision
 - 0 rejected
 
 Each item was solved from stem + choices before consulting the stored proposed answer/explanation.
 
-The 22 verified items contain explicit completed-past cues such as `yesterday`, `last Friday`, `two days ago`, `last week`, `last night`, `last Thursday`, `last Wednesday`, `last Saturday`, or `last year`, so the simple past is uniquely supported in the displayed sentence.
+The 21 verified items contain explicit completed-past cues such as `last Monday`, `yesterday evening`, `last week's review`, `yesterday`, `last night`, `last Thursday`, `last month`, or `last Friday`, so the simple past is uniquely supported in the displayed sentence.
 
-Three items remain `needs_revision` because the intended past-time interpretation is not uniquely forced:
+Four items remain `needs_revision` because the intended past-time interpretation is not uniquely forced:
 
-- `p5_verb_present_vs_past_0057` — `for Tuesday's board meeting`; add `last Tuesday` or another explicit past marker.
-- `p5_verb_present_vs_past_0062` — `after Monday's hiring event`; use `last Monday` or another explicit past marker.
-- `p5_verb_present_vs_past_0074` — `during Sunday's system upgrade`; use `last Sunday's system upgrade`.
+- `p5_verb_present_vs_past_0080` — `after the stock check on Tuesday`; use `last Tuesday` or another explicit completed-past marker.
+- `p5_verb_present_vs_past_0083` — `immediately after Monday's complaint`; use `last Monday` or another explicit completed-past marker.
+- `p5_verb_present_vs_past_0085` — `early Monday morning`; use `early last Monday morning` or another explicit completed-past marker.
+- `p5_verb_present_vs_past_0094` — `before Friday's dinner service`; use `before last Friday's dinner service` or another explicit completed-past marker.
 
 QA record:
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-021-part3-present-vs-past.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-021-part4-present-vs-past.qa.json`
 
 Full-bank semantic near-duplicate clearance is not claimed. `verified` still does not mean production-approved until the final revision-bound cross-bank duplicate gate passes.
 
 ## Next QA
 
-Continue the same oldest pending micro-skill:
+Continue with the oldest unchecked pending micro-skill:
 
-`p5.verb.present_vs_past`
+`p5.verb.present_perfect_vs_past`
 
 Start ID:
 
-`p5_verb_present_vs_past_0076`
+`p5_verb_present_perfect_vs_past_0001`
 
 Continue independent re-solving from stem + choices before reading stored proposed answers or explanations. Work in 25-question safe checkpoints.
