@@ -41,27 +41,37 @@
     "source": "Google Drive existing SE library / OtoLogic",
     "license": "CC BY 4.0",
     "required_credit": "OtoLogic (CC BY 4.0) / https://otologic.jp/",
+    "verification": {
+      "verified_at": "2026-08-27",
+      "method": "Connected Google Drive copies were re-fetched and SHA256-compared against the current OtoLogic public source URLs before the exact bytes were committed as SwiftPM resources."
+    },
     "assets": [
       {
         "semantic_id": "audio.correct",
         "resource_name": "otologic_correct.mp3",
         "source_title": "Quiz Ding Dong 05-1 (Fast-Short)",
         "source_url": "https://otologic.jp/free/se/quiz01.html",
-        "bundle_status": "not_yet_bundled"
+        "drive_file_id": "1WP7Mi1cCbv9hWWGdIRnKoR3NDOQaBRxt",
+        "sha256": "085e5a4a3fe2669ad1378423c412f7e76cc6b2b573b3081380207f5d8b8ea2fc",
+        "bundle_status": "bundled"
       },
       {
         "semantic_id": "audio.wrong",
         "resource_name": "otologic_incorrect.mp3",
         "source_title": "Quiz Buzzer 05-1 (Mid)",
         "source_url": "https://otologic.jp/free/se/quiz01.html",
-        "bundle_status": "not_yet_bundled"
+        "drive_file_id": "1DcJNhKfHNwifcWy1sAAgzzCjbOPa4iDE",
+        "sha256": "c5141a298f48e63c4606ab34b189590cd0f64611ae9546463511d63da7deb2eb",
+        "bundle_status": "bundled"
       },
       {
         "semantic_id": "audio.inspiration",
         "resource_name": "otologic_inspiration.mp3",
         "source_title": "Inspiration 11-1 (Low)",
         "source_url": "https://otologic.jp/free/se/inspiration01.html",
-        "bundle_status": "not_yet_bundled"
+        "drive_file_id": "11uMGcDxfqPhhPsVc2HtNWtWTKgGixPSy",
+        "sha256": "4c61471b681bdb407fcdaa183e6881aaa76be05887accf761f73b0454f0f5f66",
+        "bundle_status": "bundled"
       }
     ],
     "credit_placement": ["in-app credits/about surface before submission", "release documentation"]

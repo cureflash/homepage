@@ -31,6 +31,12 @@ final class ReleaseMetadataTests: XCTestCase {
         let limit = try XCTUnwrap(character["commercial_unique_asset_limit_without_paid_handling"] as? Int)
         XCTAssertLessThan(planned, limit)
         XCTAssertEqual(audio["required_credit"] as? String, "OtoLogic (CC BY 4.0) / https://otologic.jp/")
+
+        let assets = try XCTUnwrap(audio["assets"] as? [[String: Any]])
+        XCTAssertEqual(assets.count, 3)
+        XCTAssertTrue(assets.allSatisfy { ($0["bundle_status"] as? String) == "bundled" })
+        XCTAssertTrue(assets.allSatisfy { ($0["sha256"] as? String)?.count == 64 })
+        XCTAssertTrue(assets.allSatisfy { !($0["drive_file_id"] as? String ?? "").isEmpty })
     }
 
     func testPrivacyManifestDeclaresOnlyCurrentUserDefaultsRequiredReason() throws {
@@ -63,22 +69,22 @@ final class ReleaseMetadataTests: XCTestCase {
         XCTAssertFalse(config.contains("DEVELOPMENT_TEAM ="))
     }
 
-    func testSubmissionReadinessDoesNotHideRepositoryOwnedAssetGaps() throws {
+    func testSubmissionReadinessShowsOnlyRemainingRepositoryOwnedAssetGaps() throws {
         let object = try jsonObject(at: packageRoot.appendingPathComponent("Release/SubmissionReadiness.json"))
         let root = try XCTUnwrap(object as? [String: Any])
         XCTAssertEqual(root["submission_ready"] as? Bool, false)
 
         let owned = try XCTUnwrap(root["repository_owned"] as? [String: String])
         XCTAssertEqual(owned["in_app_credits"], "complete")
+        XCTAssertEqual(owned["native_audio_adapter"], "complete")
+        XCTAssertEqual(owned["otologic_audio_assets_bundled"], "complete")
         XCTAssertEqual(owned["final_app_icon"], "blocked")
         XCTAssertEqual(owned["temporary_character_assets_bundled"], "blocked")
-        XCTAssertEqual(owned["otologic_audio_assets_bundled"], "blocked")
 
         let blockers = try XCTUnwrap(root["repository_blockers"] as? [[String: String]])
         XCTAssertEqual(Set(blockers.compactMap { $0["id"] }), Set([
             "final_app_icon",
-            "temporary_character_assets_bundled",
-            "otologic_audio_assets_bundled"
+            "temporary_character_assets_bundled"
         ]))
     }
 
