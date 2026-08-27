@@ -19,20 +19,31 @@
         "takken-k-business-definition-self-lease-exclusion"
       ],
       sourceQuestionValidationStatus: "verified"
+    },
+    {
+      questionId: "takken-q-02-001",
+      conceptId: "takken-concept-license-required",
+      knowledgeRefs: ["takken-k-license-required-general"],
+      sourceQuestionValidationStatus: "verified"
     }
   ];
 
   const knownKnowledgeIds = new Set([
     "takken-k-business-definition-self-sale-exchange",
     "takken-k-business-definition-agency-brokerage",
-    "takken-k-business-definition-self-lease-exclusion"
+    "takken-k-business-definition-self-lease-exclusion",
+    "takken-k-license-required-general"
+  ]);
+  const allowedConceptIds = new Set([
+    "takken-concept-business-definition",
+    "takken-concept-license-required"
   ]);
   const questionIds = new Set();
 
   for (const mapping of mappings) {
     if (questionIds.has(mapping.questionId)) throw new Error(`Duplicate Power Takken question mapping: ${mapping.questionId}`);
     questionIds.add(mapping.questionId);
-    if (mapping.conceptId !== "takken-concept-business-definition") throw new Error(`Unexpected concept mapping: ${mapping.questionId}`);
+    if (!allowedConceptIds.has(mapping.conceptId)) throw new Error(`Unexpected concept mapping: ${mapping.questionId}`);
     if (!Array.isArray(mapping.knowledgeRefs) || mapping.knowledgeRefs.length === 0) throw new Error(`Missing knowledge refs: ${mapping.questionId}`);
     if (new Set(mapping.knowledgeRefs).size !== mapping.knowledgeRefs.length) throw new Error(`Duplicate knowledge refs: ${mapping.questionId}`);
     for (const knowledgeId of mapping.knowledgeRefs) {
@@ -41,10 +52,12 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 2) throw new Error(`Expected 2 mapped business-definition questions, got ${mappings.length}`);
-  if (new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs)).size !== knownKnowledgeIds.size) {
-    throw new Error("Business-definition knowledge coverage is incomplete");
+  if (mappings.length !== 3) throw new Error(`Expected 3 mapped questions through license-required, got ${mappings.length}`);
+  const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
+  for (const knowledgeId of knownKnowledgeIds) {
+    if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Knowledge coverage is incomplete: ${knowledgeId}`);
   }
+  if (!questionIds.has("takken-q-02-001")) throw new Error("License-required source question mapping is missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
