@@ -59,6 +59,9 @@ jobs:
             python tests/test_grade4_fraction_conversions_publisher.py
             python tests/test_grade4_order_of_operations_publisher.py
             python tests/test_grade4_mixed_operations_publisher.py
+            python tests/test_grade4_large_number_place_value_publisher.py
+            python tests/test_grade4_rounding_publisher.py
+            python tests/test_grade4_review_publisher.py
             python tests/test_grade4_remaining_publishers.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main); git fetch origin main; after=$(git rev-parse origin/main)
