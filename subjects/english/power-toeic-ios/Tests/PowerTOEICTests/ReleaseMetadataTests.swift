@@ -70,6 +70,7 @@ final class ReleaseMetadataTests: XCTestCase {
 
         let owned = try XCTUnwrap(root["repository_owned"] as? [String: String])
         XCTAssertEqual(owned["in_app_credits"], "complete")
+        XCTAssertEqual(owned["native_audio_adapter"], "complete")
         XCTAssertEqual(owned["final_app_icon"], "blocked")
         XCTAssertEqual(owned["temporary_character_assets_bundled"], "blocked")
         XCTAssertEqual(owned["otologic_audio_assets_bundled"], "blocked")
