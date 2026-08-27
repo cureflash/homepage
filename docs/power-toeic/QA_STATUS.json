@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 400,
-  "verified_question_count": 374,
-  "needs_revision_count": 26,
+  "checked_question_count": 500,
+  "verified_question_count": 470,
+  "needs_revision_count": 30,
   "rejected_question_count": 0,
   "pending_validation_count": 1100,
-  "last_completed_batch": "2026-08-26-manual-001",
-  "last_completed_micro_skill": "p5.pos.noun_in_noun_slot",
+  "last_completed_batch": "2026-08-27-scheduled-015",
+  "last_completed_micro_skill": "p5.pos.adjective_after_linking_verb",
   "last_batch_counts": {
     "checked": 100,
     "verified": 96,
     "needs_revision": 4,
     "rejected": 0
   },
-  "next_batch": "2026-08-26-manual-001",
-  "next_micro_skill": "p5.pos.adjective_after_linking_verb",
-  "next_question_id": "p5_pos_adjective_after_linking_verb_0001",
+  "next_batch": "2026-08-27-scheduled-015",
+  "next_micro_skill": "p5.pos.adverb_modifies_adjective",
+  "next_question_id": "p5_pos_adverb_modifies_adjective_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-27T10:16:00+09:00"
+  "updated_at": "2026-08-27T11:14:00+09:00"
 }
