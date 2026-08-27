@@ -2,49 +2,53 @@
 
 ## Current state
 
-**APP TRACK Phase 10 / Task 10.5 is complete. The exact next APP TRACK task is Phase 10 / Task 10.6 — port the Drill Sergeant / Trainee character UX and progression using semantic asset IDs.**
+**APP TRACK Phase 10 / Tasks 10.6 and 10.7 are complete. The exact next APP TRACK task is Phase 10 / Task 10.8 — run the JavaScript/Swift conformance suite on one shared commit.**
 
-The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored or validated in this checkpoint.
+The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored or validated in these checkpoints.
 
-## Phase 10.5 completed — native SwiftUI screens
+## Phase 10.6 completed — native character UX/progression
 
-Added native presentation files under the existing responsibility boundaries:
+The previously blocked character work was reconciled onto the latest `main` rather than merging a stale branch that was 23 commits behind.
 
-- `Views/Home/HomeView.swift`
-- `Views/Workout/WorkoutView.swift`
-- `Views/Quiz/QuizView.swift`
-- `Views/Result/ResultView.swift`
-- `Views/Weakness/WeaknessView.swift`
+Merged implementation includes:
 
-The native UI now provides:
+- `Core/ProgressionEngine.swift` with the frozen Web stage thresholds `[0, 20, 60, 140, 280, 500]` and the same deterministic point rules;
+- `Views/Character/AssetCatalog.swift` using stable semantic IDs for Sergeant/Trainee/audio resources;
+- `Views/Character/CharacterView.swift` and `CharacterQuizView.swift` as detachable presentation composition;
+- presentation-only callbacks from `QuizView` so character/audio reactions observe `Attempt` events without owning correctness or session state;
+- OtoLogic `audio.correct`, `audio.wrong`, `audio.inspiration` mappings with CC BY 4.0 attribution metadata preserved;
+- temporary Irasutoya mappings limited to four unique works, safely below the configured 20-work commercial threshold;
+- shared Web conformance fixture coverage for native progression behavior.
 
-- mobile-first Home cards for QUICK / WEAKNESS / TRAINING / POWER / REVIEW / TEST / CUSTOM;
-- Home summary values for trainee stage, POWER points and due-review count supplied by the caller;
-- Workout configuration that edits mode/skill/count intent rather than fixed question IDs;
-- four-choice cloze Quiz presentation backed directly by `QuizSession`;
-- one-tap selection followed by explicit answer submission and explanation reveal;
-- Result totals, accuracy and per-skill breakdown derived from `SessionResults`;
-- Weakness list presentation with a callback to launch training for the selected skill;
-- TEST/mixed context hides the micro-skill label.
+The reconciled implementation passed the macOS Swift CI before merge. The obsolete stale PR was closed rather than merged.
 
-The views intentionally do not calculate correctness, question selection, mastery transitions or review dates. Those remain in the previously ported domain engines. Character composition/progression is still separate and belongs to 10.6. Persistence is still separate and belongs to 10.7.
+## Phase 10.7 completed — native persistence
 
-## Validation note
+Added `Persistence/AppStore.swift` with:
 
-This checkpoint was authored against the existing Swift 6 package/domain contracts and uses only SwiftUI/Foundation APIs already allowed by the project. The repository connector available in this run cannot execute `swift test` locally, so final merge is gated on the repository's macOS Swift CI. No production question fixture or production database file was changed.
+- `VersionedNativeAppStore`;
+- injected `AppStatePersistenceBackend` boundary;
+- `UserDefaultsPersistenceBackend` as the standard native adapter;
+- the same version-1 platform-neutral persistence envelope used by Web: attempts, review entries, progression;
+- safe default state when nothing is stored;
+- safe reset/fallback for corrupt JSON, unsupported versions, or backend read/remove failures;
+- write failures that do not block quiz operation;
+- mutation helpers for appending attempts and replacing review/progression domains without overwriting the other domains;
+- validation of persisted attempts, review entries, and progression before writes.
+
+`AppStoreTests.swift` covers round-trip persistence, corrupt/unsupported fallback, mutation isolation, storage-failure behavior, and invalid-state rejection. The final 10.6+10.7 branch passed the native Swift CI and was merged as PR #102.
 
 ## Exact next work
 
-### Phase 10 / Task 10.6 — native character UX/progression
+### Phase 10 / Task 10.8 — cross-platform conformance closeout
 
-1. Port the Web semantic asset mapping into a Swift `AssetCatalog` boundary; do not hard-code Irasutoya filenames in Quiz/Home views.
-2. Port the deterministic progression calculation and consume `ProgressionState.stage` 0...5 without deriving correctness/mastery in the View.
-3. Compose the Drill Sergeant as question presenter and Trainee as answer-side learner around `QuizView` without changing `QuizSession`.
-4. Preserve the ability to remove/replace character presentation without touching domain behavior.
-5. Keep temporary Irasutoya usage below 20 unique works and preserve later replacement by semantic ID.
-6. Keep OtoLogic audio behind a separate semantic audio boundary; audio failure must never block quiz progress.
-
-After 10.6, proceed to 10.7 native persistence, then 10.8 full JavaScript/Swift conformance.
+1. Use a docs-only checkpoint commit after the merged 10.6/10.7 code so both existing workflows trigger on the same SHA:
+   - `.github/workflows/power-toeic-tests.yml` -> Node 22 / Web `npm test`;
+   - `.github/workflows/power-toeic-swift-tests.yml` -> macOS / `swift test`.
+2. Confirm both suites are green on the same commit.
+3. Confirm Swift continues to consume the canonical Web fixture directly at `subjects/english/power-toeic/tests/fixtures/cross-platform-conformance-v1.json` rather than a copied Swift fixture.
+4. If both are green, mark 10.8 complete and advance the APP TRACK to Phase 11 / Task 11.1.
+5. Do not modify production question content while closing Phase 10.
 
 ## Fixed decisions
 
@@ -54,4 +58,5 @@ After 10.6, proceed to 10.7 native persistence, then 10.8 full JavaScript/Swift 
 - shared contracts/fixtures determine cross-platform behavior;
 - no target-score feature, skill-to-body-part mapping, runtime LLM, or production question creation in APP TRACK;
 - temporary art = Irasutoya via semantic asset IDs, below 20 unique works;
-- audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved.
+- audio = existing Google Drive OtoLogic SE with CC BY 4.0 attribution preserved;
+- persistence failures must not block quiz operation.
