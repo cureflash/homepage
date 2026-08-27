@@ -5,6 +5,7 @@ import tempfile
 from pathlib import Path
 
 try:
+    from scripts.science_physics_basic_beats import PHYSICS_BASIC_BEATS_TOPICS
     from scripts.science_physics_basic_conservation import PHYSICS_BASIC_CONSERVATION_TOPICS
     from scripts.science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
     from scripts.science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
@@ -19,6 +20,7 @@ try:
     from scripts.science_worksheet_helpers import generate_formula_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
+    from science_physics_basic_beats import PHYSICS_BASIC_BEATS_TOPICS
     from science_physics_basic_conservation import PHYSICS_BASIC_CONSERVATION_TOPICS
     from science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
     from science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
@@ -45,6 +47,7 @@ ALL_TOPICS = {
     **PHYSICS_BASIC_WAVE_TOPICS,
     **PHYSICS_BASIC_SOUND_TOPICS,
     **PHYSICS_BASIC_STRING_TOPICS,
+    **PHYSICS_BASIC_BEATS_TOPICS,
 }
 
 
