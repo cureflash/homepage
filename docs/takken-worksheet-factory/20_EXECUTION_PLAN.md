@@ -51,12 +51,11 @@ This phase is active. Questions must be processed strictly in ID/order sequence.
 - [x] Track checked and verified counts separately and persist the exact next question ID.
 - [ ] Only after every question has been independently re-solved and all revision work is closed may `validation_complete: true` be set.
 
-Completed Phase 3 checkpoint:
-- Questions `takken-q-01-001` through `takken-q-07-001` (9 questions, complete first question file)
-- checked 9 / verified 9 / needs_revision 0 / rejected 0
-- independent official-source confirmation covered the statutory definition/scope, licensing authority, five-year disqualification examples, five-year license validity, 90-to-30-day renewal window, 30-day change notification and roster/sign regulation.
+Completed Phase 3 checkpoints:
+- Questions `takken-q-01-001` through `takken-q-07-001`: 9 checked / 9 verified / 0 needs_revision / 0 rejected.
+- Questions `takken-q-08-001` through `takken-q-26-001`: 25 checked / 25 verified / 0 needs_revision / 0 rejected. Official-source confirmation covered宅建士制度、専任割合、営業保証金/保証協会、媒介契約、35/37条、広告・契約時期規制、誇大広告、自ら売主規制概観、クーリング・オフ適用場面。
 
-Current Phase 3 progress: **checked 9 / verified 9 / needs_revision 0 / rejected 0 / pending 154 / next `takken-q-08-001`**.
+Current Phase 3 progress: **checked 34 / verified 34 / needs_revision 0 / rejected 0 / pending 129 / next `takken-q-26-002`**.
 
 ## Phase 4 — Power宅建 knowledge / print / app integration
 
