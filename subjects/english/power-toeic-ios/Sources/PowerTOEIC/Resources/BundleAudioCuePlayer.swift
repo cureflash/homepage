@@ -58,9 +58,11 @@ public final class BundleAudioCuePlayer: AudioCuePlaying, @unchecked Sendable {
         let extensionName = nsName.pathExtension
         let baseName = nsName.deletingPathExtension
 
-        if !extensionName.isEmpty,
-           let url = bundle.url(forResource: baseName, withExtension: extensionName, subdirectory: "Audio") {
-            return url
+        if !extensionName.isEmpty {
+            return bundle.url(forResource: baseName, withExtension: extensionName, subdirectory: "Audio")
+                ?? bundle.url(forResource: baseName, withExtension: extensionName)
+                ?? bundle.url(forResource: resourceName, withExtension: nil, subdirectory: "Audio")
+                ?? bundle.url(forResource: resourceName, withExtension: nil)
         }
 
         return bundle.url(forResource: resourceName, withExtension: nil, subdirectory: "Audio")
