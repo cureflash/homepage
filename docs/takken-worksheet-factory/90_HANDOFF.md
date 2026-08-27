@@ -9,13 +9,13 @@ Canonical implementation: `qualifications/takken/`.
 
 ## Completed in this run
 
-Continued Phase 3 strictly from `takken-q-60-002` through `takken-q-72-002`, completing a 25-question safety checkpoint.
+Continued Phase 3 strictly from `takken-q-73-001` through `takken-q-77-002`, completing the remaining 10 questions in `pending-questions-68-77.js` as a file-boundary safety checkpoint.
 
-Covered topics were the ownership/non-ownership sections of the real-estate registration record, city-planning and quasi-city-planning areas, area division, use districts, city-planning decision and city-planning projects, development permission and completion procedure, building confirmation, roads/frontage, building coverage ratio, floor-area ratio, height restrictions, and fire/semi-fire prevention zones.
+Covered topics were National Land Use Planning Act post-contract notification, Farmland Act Articles 3/4/5, land-readjustment temporary replotting and the legal effect of replotting disposition, and the embankment-regulation regime.
 
-Each question was checked individually for a unique correct answer, legal baseline, subject/conditions, distractor validity and explanation consistency. Current official/e-Gov materials were checked against the canonical `2026-04-01` legal baseline. Results this run: **checked 25 / verified 25 / needs_revision 0 / rejected 0**. No question text, choices, proposed answer, explanation or source reference required correction.
+Each question was first solved from stem and four choices without relying on the stored answer/explanation/source refs. The result was then compared with the stored proposal and checked against the `2026-04-01` legal baseline and current official materials. Results this run: **checked 10 / verified 10 / needs_revision 0 / rejected 0**. No question text, choices, proposed answer, explanation or source reference required correction.
 
-`pending-questions-68-77.js` now accepts the canonical post-QA statuses (`verified`, `needs_revision`, `rejected`) as well as `pending_validation`, while preserving its ID/stem/choice/answer-position guards. Questions from `takken-q-73-001` onward remain pending.
+All 20 questions in `pending-questions-68-77.js` are now verified. The next file, `pending-questions-78-90.js`, remains pending from its first question.
 
 No Phase 4 work was started.
 
@@ -25,12 +25,12 @@ No Phase 4 work was started.
 - Question-covered units: 90/90
 - Covered core facts: 163/163
 - Generated four-choice questions: 163
-- Checked questions: 127
-- Verified questions: 127
+- Checked questions: 137
+- Verified questions: 137
 - Needs revision: 0
 - Rejected: 0
-- Pending validation questions: 36
-- Fully verified units: 72
+- Pending validation questions: 26
+- Fully verified units: 77
 - `question_generation_complete`: true
 - `generation_complete`: true
 - `validation_complete`: false
@@ -39,7 +39,7 @@ No Phase 4 work was started.
 
 Continue Phase 3 at:
 
-`takken-q-73-001`
+`takken-q-78-001`
 
 Process questions strictly in ID/order sequence. Prefer 25-question checkpoints, but file/content boundaries and legal-source verification take priority over count targets.
 
