@@ -1,0 +1,22 @@
+{
+  "display_name": "Power TOEIC",
+  "subtitle_ja": "弱点を問題数で鍛えるTOEIC特訓",
+  "primary_category": "Education",
+  "minimum_ios": "17.0",
+  "bundle_identifier": "RELEASE_TIME_INPUT",
+  "sku": "RELEASE_TIME_INPUT",
+  "apple_team_id": "RELEASE_TIME_INPUT",
+  "marketing_version": "RELEASE_TIME_INPUT",
+  "build_number": "CI_OR_RELEASE_TIME_INTEGER",
+  "privacy_policy_url": "RELEASE_TIME_INPUT",
+  "support_url": "RELEASE_TIME_INPUT",
+  "app_store_connect_app_id": "RELEASE_TIME_INPUT",
+  "signing_certificate": "RELEASE_TIME_INPUT",
+  "provisioning_profile": "RELEASE_TIME_INPUT",
+  "notes": [
+    "Do not commit account-specific signing credentials.",
+    "A real Xcode iOS application target is required before archive/TestFlight; the current repository implementation is a Swift Package library.",
+    "The App Store privacy declaration must match the shipping binary. Current implementation collects no data off-device and uses UserDefaults for app-local state only.",
+    "PrivacyInfo.xcprivacy in this Release directory is the canonical manifest template and must be added to the future iOS application target resources."
+  ]
+}

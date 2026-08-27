@@ -1,0 +1,69 @@
+{
+  "character_art": {
+    "source": "Irasutoya",
+    "commercial_unique_asset_limit_without_paid_handling": 20,
+    "planned_unique_assets": 4,
+    "runtime_hotlinking": false,
+    "terms_url": "https://www.irasutoya.com/p/terms.html",
+    "assets": [
+      {
+        "semantic_ids": ["sergeant.neutral", "sergeant.correct", "sergeant.wrong", "sergeant.complete"],
+        "resource_name": "irasutoya_sergeant_instructor",
+        "source_title": "法務教官のイラスト（男性）",
+        "source_url": "https://www.irasutoya.com/2017/09/blog-post_34.html",
+        "bundle_status": "not_yet_bundled"
+      },
+      {
+        "semantic_ids": ["trainee.stage_0.neutral", "trainee.stage_1.neutral"],
+        "resource_name": "irasutoya_trainee_skinny",
+        "source_title": "痩せた男性のイラスト",
+        "source_url": "https://www.irasutoya.com/2016/05/blog-post_397.html",
+        "bundle_status": "not_yet_bundled"
+      },
+      {
+        "semantic_ids": ["trainee.stage_2.neutral", "trainee.stage_3.neutral", "trainee.stage_4.neutral"],
+        "resource_name": "irasutoya_trainee_muscular",
+        "source_title": "筋肉質な人のイラスト（男性）",
+        "source_url": "https://www.irasutoya.com/2018/06/blog-post_865.html",
+        "bundle_status": "not_yet_bundled"
+      },
+      {
+        "semantic_ids": ["trainee.stage_5.neutral"],
+        "resource_name": "irasutoya_trainee_bodybuilder",
+        "source_title": "ボディービルダーのイラスト",
+        "source_url": "https://www.irasutoya.com/2014/06/blog-post_14.html",
+        "bundle_status": "not_yet_bundled"
+      }
+    ],
+    "app_icon_policy": "Do not use temporary Irasutoya character art as the App Store icon unless licensing and branding suitability are explicitly cleared; prefer original icon artwork before submission."
+  },
+  "audio": {
+    "source": "Google Drive existing SE library / OtoLogic",
+    "license": "CC BY 4.0",
+    "required_credit": "OtoLogic (CC BY 4.0) / https://otologic.jp/",
+    "assets": [
+      {
+        "semantic_id": "audio.correct",
+        "resource_name": "otologic_correct.mp3",
+        "source_title": "Quiz Ding Dong 05-1 (Fast-Short)",
+        "source_url": "https://otologic.jp/free/se/quiz01.html",
+        "bundle_status": "not_yet_bundled"
+      },
+      {
+        "semantic_id": "audio.wrong",
+        "resource_name": "otologic_incorrect.mp3",
+        "source_title": "Quiz Buzzer 05-1 (Mid)",
+        "source_url": "https://otologic.jp/free/se/quiz01.html",
+        "bundle_status": "not_yet_bundled"
+      },
+      {
+        "semantic_id": "audio.inspiration",
+        "resource_name": "otologic_inspiration.mp3",
+        "source_title": "Inspiration 11-1 (Low)",
+        "source_url": "https://otologic.jp/free/se/inspiration01.html",
+        "bundle_status": "not_yet_bundled"
+      }
+    ],
+    "credit_placement": ["in-app credits/about surface before submission", "release documentation"]
+  }
+}
