@@ -45,12 +45,39 @@
     { conceptId: "takken-concept-earnest-money-safeguards", title: "手付金等の保全措置", category: "takken-gyoho", sourceUnits: ["earnest-money-and-safeguards"], scopeNote: "未完成・完成物件の保全措置と免除基準を区別する。" },
     { conceptId: "takken-concept-damages-penalty", title: "損害賠償額の予定・違約金", category: "takken-gyoho", sourceUnits: ["damages-penalty"], scopeNote: "自ら売主の場合の合算20%上限と超過部分の効力を扱う。" },
     { conceptId: "takken-concept-nonconformity-special-rule", title: "自ら売主の契約不適合責任特約", category: "takken-gyoho", sourceUnits: ["contract-nonconformity-special-rule"], scopeNote: "民法より買主に不利な特約制限と引渡しから2年以上の通知期間特約を扱う。" },
-    { conceptId: "takken-concept-unowned-property-sale", title: "自己の所有に属しない宅地建物の売買", category: "takken-gyoho", sourceUnits: ["unowned-property-restriction"], scopeNote: "宅建業者自ら売主の他人物売買等の原則禁止と法定例外を扱う。" }
+    { conceptId: "takken-concept-unowned-property-sale", title: "自己の所有に属しない宅地建物の売買", category: "takken-gyoho", sourceUnits: ["unowned-property-restriction"], scopeNote: "宅建業者自ら売主の他人物売買等の原則禁止と法定例外を扱う。" },
+    { conceptId: "takken-concept-installment-cancellation", title: "割賦販売の解除制限", category: "takken-gyoho", sourceUnits: ["installment-sales-ownership"], scopeNote: "自ら売主の割賦販売で支払遅滞を理由に解除等をする際の30日以上の書面催告を扱う。" },
+    { conceptId: "takken-concept-installment-ownership-retention", title: "割賦販売の所有権留保等の制限", category: "takken-gyoho", sourceUnits: ["installment-sales-ownership"], scopeNote: "自ら売主の割賦販売における引渡し・代金30%超支払と所有権留保等の制限を扱う。" },
+    { conceptId: "takken-concept-brokerage-fees", title: "媒介・代理の報酬額制限", category: "takken-gyoho", sourceUnits: ["brokerage-fees"], scopeNote: "国土交通大臣が定める報酬上限と超過報酬受領禁止を扱う。" },
+    { conceptId: "takken-concept-supervision-dispositions", title: "宅建業者への監督処分", category: "takken-gyoho", sourceUnits: ["supervision-penalties"], scopeNote: "指示、1年以内の業務停止、免許取消しの区別と適用場面を扱う。" },
+    { conceptId: "takken-concept-declaration-arrival", title: "意思表示の到達主義", category: "rights", sourceUnits: ["civil-intent-general"], scopeNote: "相手方のある意思表示の効力発生時期と到達妨害時のみなし到達を扱う。" },
+    { conceptId: "takken-concept-mistake", title: "錯誤", category: "rights", sourceUnits: ["civil-mistake"], scopeNote: "錯誤取消しの重要性要件、重大な過失、第三者保護を扱う。" },
+    { conceptId: "takken-concept-fraud", title: "詐欺による意思表示", category: "rights", sourceUnits: ["civil-fraud-duress"], scopeNote: "詐欺による取消しと善意無過失の第三者保護を扱う。" },
+    { conceptId: "takken-concept-duress", title: "強迫による意思表示", category: "rights", sourceUnits: ["civil-fraud-duress"], scopeNote: "強迫による意思表示の取消しと詐欺との第三者保護の差異を扱う。" },
+    { conceptId: "takken-concept-mental-reservation", title: "心裡留保", category: "rights", sourceUnits: ["civil-fictitious-declaration"], scopeNote: "心裡留保の原則有効と相手方が真意でないことを知る等の場合の無効を扱う。" },
+    { conceptId: "takken-concept-fictitious-declaration", title: "通謀虚偽表示", category: "rights", sourceUnits: ["civil-fictitious-declaration"], scopeNote: "相手方と通じた虚偽表示の無効と第三者関係を扱う。" },
+    { conceptId: "takken-concept-minor", title: "未成年者の法律行為", category: "rights", sourceUnits: ["civil-limited-capacity"], scopeNote: "法定代理人の同意、同意を欠く法律行為の取消し等を扱う。" },
+    { conceptId: "takken-concept-adult-ward", title: "成年被後見人の法律行為", category: "rights", sourceUnits: ["civil-limited-capacity"], scopeNote: "成年被後見人の法律行為の取消しと日常生活行為の例外を扱う。" },
+    { conceptId: "takken-concept-agency", title: "代理", category: "rights", sourceUnits: ["civil-agency"], scopeNote: "代理権内・顕名による本人への直接効果と顕名を欠く場合を扱う。" },
+    { conceptId: "takken-concept-unauthorized-agency", title: "無権代理", category: "rights", sourceUnits: ["civil-unauthorized-agency"], scopeNote: "無権代理行為の本人への効果、追認、相手方との関係を扱う。" },
+    { conceptId: "takken-concept-apparent-agency", title: "表見代理", category: "rights", sourceUnits: ["civil-unauthorized-agency"], scopeNote: "代理権授与表示、権限外行為、代理権消滅後などの外観保護を扱う。" },
+    { conceptId: "takken-concept-acquisitive-prescription", title: "取得時効", category: "rights", sourceUnits: ["civil-prescription"], scopeNote: "所有権取得時効の20年と善意無過失時10年の要件を扱う。" },
+    { conceptId: "takken-concept-extinctive-prescription", title: "消滅時効", category: "rights", sourceUnits: ["civil-prescription"], scopeNote: "債権の主観的5年・客観的10年の消滅時効を扱う。" },
+    { conceptId: "takken-concept-property-transfer-opposability", title: "不動産物権変動と対抗要件", category: "rights", sourceUnits: ["property-rights-opposability"], scopeNote: "当事者間では意思表示で効力が生じ、第三者対抗には原則登記を要する構造を扱う。" },
+    { conceptId: "takken-concept-co-ownership", title: "共有", category: "rights", sourceUnits: ["co-ownership"], scopeNote: "共有持分、共有物全部の使用その他共有関係の基本を扱う。" },
+    { conceptId: "takken-concept-mortgage", title: "抵当権", category: "rights", sourceUnits: ["mortgage"], scopeNote: "占有を移転しない担保設定と目的不動産からの優先弁済を扱う。" },
+    { conceptId: "takken-concept-default-damages", title: "債務不履行と損害賠償", category: "rights", sourceUnits: ["default-damages"], scopeNote: "債務不履行・履行不能による損害賠償と帰責不能事由の例外を扱う。" },
+    { conceptId: "takken-concept-contract-cancellation", title: "債務不履行による契約解除", category: "rights", sourceUnits: ["contract-cancellation"], scopeNote: "催告解除と一定の場合の無催告解除を比較して扱う。" },
+    { conceptId: "takken-concept-simultaneous-performance", title: "同時履行の抗弁権", category: "rights", sourceUnits: ["risk-simultaneous-performance"], scopeNote: "双務契約で相手方が履行を提供するまで自己の履行を拒める原則を扱う。" },
+    { conceptId: "takken-concept-risk-allocation", title: "危険負担", category: "rights", sourceUnits: ["risk-simultaneous-performance"], scopeNote: "双方に帰責できない履行不能における反対給付拒絶を扱う。" },
+    { conceptId: "takken-concept-sale-earnest", title: "民法上の解約手付", category: "rights", sourceUnits: ["sale-earnest"], scopeNote: "相手方の履行着手前の手付放棄・倍額の現実提供による解除を扱う。" },
+    { conceptId: "takken-concept-civil-nonconformity", title: "民法上の契約不適合責任", category: "rights", sourceUnits: ["contract-nonconformity-civil"], scopeNote: "追完請求、代金減額請求など契約不適合時の買主救済を扱う。" },
+    { conceptId: "takken-concept-lease-general", title: "民法上の賃貸借", category: "rights", sourceUnits: ["lease-general"], scopeNote: "使用収益、賃料、返還という契約構造と存続期間上限を扱う。" }
   ].map((concept) => ({ ...base, ...concept }));
 
   const ids = concepts.map((concept) => concept.conceptId);
   if (new Set(ids).size !== ids.length) throw new Error("Duplicate Power Takken conceptId");
-  if (concepts.length !== 37) throw new Error(`Expected 37 concepts for units 1-30 checkpoint, got ${concepts.length}`);
+  if (concepts.length !== 64) throw new Error(`Expected 64 concepts for units 1-50 checkpoint, got ${concepts.length}`);
   for (const concept of concepts) {
     if (!concept.title || !concept.category || !Array.isArray(concept.sourceUnits) || concept.sourceUnits.length === 0) {
       throw new Error(`Invalid Power Takken concept: ${concept.conceptId}`);

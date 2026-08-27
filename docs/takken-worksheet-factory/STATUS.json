@@ -52,11 +52,11 @@
   "phase4_progress": {
     "active_subphase": "4.1_concept_inventory",
     "concept_inventory_file": "qualifications/takken/data/power-concepts.js",
-    "concept_count": 37,
-    "covered_unit_orders": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
-    "next_unit_order": 31,
-    "next_unit": "installment-sale-restrictions",
-    "next_task": "Continue Phase 4.1 concept extraction from canonical unit 31 in unit order. Normalize independently useful exam_concept units; do not begin Phase 4.2 knowledge_items until all 90 units and verified-question evidence have been inventoried."
+    "concept_count": 64,
+    "covered_unit_orders": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50],
+    "next_unit_order": 51,
+    "next_unit": "lease-deposit-opposability",
+    "next_task": "Continue Phase 4.1 concept extraction from canonical unit 51 in unit order. Normalize independently useful exam_concept units; do not begin Phase 4.2 knowledge_items until all 90 units and verified-question evidence have been inventoried."
   },
   "foundation": {
     "portable_site_shell": true,
@@ -71,6 +71,6 @@
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
   "last_completed_unit": "five-question-exemption-review",
-  "last_run_summary": "Phase 4.1 concept inventory started only after the Phase 3 gate was confirmed complete. Canonical units 1-30 and their verified Phase 2/3 question evidence were normalized into 37 independently useful exam_concept entries in qualifications/takken/data/power-concepts.js. Compound units were split where a 50-question learning topic needs independent treatment (for example roster vs signs, license transfer vs change/closure, brokerage contract forms, REINS registration vs reporting, Article 35 procedure vs items, earnest-money limit vs safeguards), while isolated numbers/words were not promoted to concepts. No knowledge_items, new drill questions, prints, or app linkage were created. Exact continuation is canonical unit 31 installment-sale-restrictions.",
-  "updated_at": "2026-08-28T03:32:00+09:00"
+  "last_run_summary": "Phase 4.1 concept inventory advanced through canonical unit 50. Units 31-50 and their verified Phase 2/3 evidence were normalized into 27 additional independently useful exam_concept entries, bringing the inventory to 64 concepts. Compound units were split only where independent drill value exists (including installment-sale cancellation vs ownership retention, fraud vs duress, mental reservation vs fictitious declaration, unauthorized vs apparent agency, acquisitive vs extinctive prescription, and simultaneous-performance vs risk allocation). No knowledge_items, new drill questions, prints, or app linkage were created. Exact continuation is canonical unit 51 lease-deposit-opposability.",
+  "updated_at": "2026-08-28T04:31:00+09:00"
 }
