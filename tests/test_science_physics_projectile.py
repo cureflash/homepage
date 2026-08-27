@@ -7,10 +7,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.science_physics_projectile import (
-    PHYSICS_PROJECTILE_PROBLEM_COUNT,
-    PHYSICS_PROJECTILE_TOPICS,
-)
+from scripts.science_physics_projectile import PHYSICS_PROJECTILE_PROBLEM_COUNT, PHYSICS_PROJECTILE_TOPICS
 from scripts.science_worksheet_helpers import generate_formula_drill, validate_science_problem
 from scripts.worksheet_factory import normalized_hash, validate
 
@@ -21,16 +18,13 @@ class PhysicsProjectileTests(unittest.TestCase):
         for topic_key, topic in PHYSICS_PROJECTILE_TOPICS.items():
             for mode_key, mode in topic["modes"].items():
                 for variant, seed in enumerate(topic["seeds"], start=1):
-                    problems = generate_formula_drill(
-                        topic["spec"], seed, PHYSICS_PROJECTILE_PROBLEM_COUNT,
-                        solve_for=mode["solve_for"],
-                    )
+                    problems = generate_formula_drill(topic["spec"], seed, PHYSICS_PROJECTILE_PROBLEM_COUNT, solve_for=mode["solve_for"])
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_three_checkpoints_total_ninety_variants(self):
+    def test_six_checkpoints_total_one_hundred_eighty_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 90)
+        self.assertEqual(len(batches), 180)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
         counts = {key: 0 for key in PHYSICS_PROJECTILE_TOPICS}
         for topic_key, *_ in batches:
@@ -41,10 +35,7 @@ class PhysicsProjectileTests(unittest.TestCase):
         for topic_key, mode_key, variant, seed, problems in self.generated_batches():
             topic = PHYSICS_PROJECTILE_TOPICS[topic_key]
             mode = topic["modes"][mode_key]
-            regenerated = generate_formula_drill(
-                topic["spec"], seed, PHYSICS_PROJECTILE_PROBLEM_COUNT,
-                solve_for=mode["solve_for"],
-            )
+            regenerated = generate_formula_drill(topic["spec"], seed, PHYSICS_PROJECTILE_PROBLEM_COUNT, solve_for=mode["solve_for"])
             self.assertEqual(problems, regenerated, (topic_key, mode_key, variant))
             validate(problems)
             for problem in problems:
@@ -56,22 +47,23 @@ class PhysicsProjectileTests(unittest.TestCase):
                 known = problem["known"]
                 solve_for = problem["solve_for"]
                 if topic_key == "horizontal-projectile-horizontal-motion":
-                    if solve_for == "horizontal_displacement":
-                        expected = known["horizontal_velocity"] * known["time"]
-                    elif solve_for == "horizontal_velocity":
-                        expected = known["horizontal_displacement"] / known["time"]
-                    else:
-                        expected = known["horizontal_displacement"] / known["horizontal_velocity"]
+                    expected = known["horizontal_velocity"] * known["time"] if solve_for == "horizontal_displacement" else (known["horizontal_displacement"] / known["time"] if solve_for == "horizontal_velocity" else known["horizontal_displacement"] / known["horizontal_velocity"])
                 elif topic_key == "horizontal-projectile-vertical-displacement":
-                    if solve_for == "vertical_drop":
-                        expected = 0.5 * known["gravity"] * known["time"] ** 2
-                    else:
-                        expected = (2 * known["vertical_drop"] / known["gravity"]) ** 0.5
+                    expected = 0.5 * known["gravity"] * known["time"] ** 2 if solve_for == "vertical_drop" else (2 * known["vertical_drop"] / known["gravity"]) ** 0.5
                 elif topic_key == "horizontal-projectile-vertical-velocity":
-                    if solve_for == "vertical_velocity":
-                        expected = known["gravity"] * known["time"]
-                    else:
-                        expected = known["vertical_velocity"] / known["gravity"]
+                    expected = known["gravity"] * known["time"] if solve_for == "vertical_velocity" else known["vertical_velocity"] / known["gravity"]
+                elif topic_key == "oblique-projectile-initial-horizontal-component":
+                    if solve_for == "initial_horizontal_velocity": expected = known["initial_speed"] * known["cos_theta"]
+                    elif solve_for == "initial_speed": expected = known["initial_horizontal_velocity"] / known["cos_theta"]
+                    else: expected = known["initial_horizontal_velocity"] / known["initial_speed"]
+                elif topic_key == "oblique-projectile-initial-vertical-component":
+                    if solve_for == "initial_vertical_velocity": expected = known["initial_speed"] * known["sin_theta"]
+                    elif solve_for == "initial_speed": expected = known["initial_vertical_velocity"] / known["sin_theta"]
+                    else: expected = known["initial_vertical_velocity"] / known["initial_speed"]
+                elif topic_key == "oblique-projectile-vertical-velocity":
+                    if solve_for == "vertical_velocity": expected = known["initial_vertical_velocity"] + known["vertical_acceleration"] * known["time"]
+                    elif solve_for == "initial_vertical_velocity": expected = known["vertical_velocity"] - known["vertical_acceleration"] * known["time"]
+                    else: expected = (known["vertical_velocity"] - known["initial_vertical_velocity"]) / known["vertical_acceleration"]
                 else:
                     self.fail(topic_key)
                 self.assertAlmostEqual(problem["answer"], expected, msg=(topic_key, mode_key, variant))
@@ -79,47 +71,36 @@ class PhysicsProjectileTests(unittest.TestCase):
 
     def test_normalized_hashes_unique_and_disjoint_from_existing_series(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 90)
-        self.assertEqual(len(set(hashes)), 90)
+        self.assertEqual(len(hashes), 180)
+        self.assertEqual(len(set(hashes)), 180)
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
-        prior_hashes = {
-            row["content_hash"] for row in catalog
-            if not row.get("id", "").startswith("science-physics-motion-")
-        }
+        current_ids = {f"science-physics-motion-{topic_key}-{mode_key}-{variant:02d}" for topic_key, topic in PHYSICS_PROJECTILE_TOPICS.items() for mode_key in topic["modes"] for variant, _ in enumerate(topic["seeds"], start=1)}
+        prior_hashes = {row["content_hash"] for row in catalog if row.get("id") not in current_ids}
         self.assertTrue(set(hashes).isdisjoint(prior_hashes))
 
     def test_curriculum_scope_and_conditions_are_explicit(self):
-        horizontal = PHYSICS_PROJECTILE_TOPICS["horizontal-projectile-horizontal-motion"]
-        vertical_drop = PHYSICS_PROJECTILE_TOPICS["horizontal-projectile-vertical-displacement"]
-        vertical_velocity = PHYSICS_PROJECTILE_TOPICS["horizontal-projectile-vertical-velocity"]
-        self.assertEqual(horizontal["spec"]["relation"], "product")
-        self.assertEqual(vertical_drop["spec"]["relation"], "half-product-last-square")
-        self.assertEqual(vertical_velocity["spec"]["relation"], "product")
+        self.assertEqual(PHYSICS_PROJECTILE_TOPICS["oblique-projectile-initial-horizontal-component"]["spec"]["relation"], "product")
+        self.assertEqual(PHYSICS_PROJECTILE_TOPICS["oblique-projectile-initial-vertical-component"]["spec"]["relation"], "product")
+        vertical = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-vertical-velocity"]
+        self.assertEqual(vertical["spec"]["relation"], "offset-product")
+        self.assertEqual(vertical["spec"]["variables"]["vertical_acceleration"]["values"], [-9.8])
         for topic in PHYSICS_PROJECTILE_TOPICS.values():
             self.assertEqual(topic["unit"], "様々な運動：平面運動と放物運動")
             self.assertNotIn("grade", topic)
             self.assertNotIn("school_year", topic)
             self.assertTrue(all("空気抵抗" in mode["description"] for mode in topic["modes"].values()))
-        self.assertEqual(vertical_drop["spec"]["variables"]["gravity"]["values"], [9.8])
-        self.assertEqual(vertical_velocity["spec"]["variables"]["gravity"]["values"], [9.8])
-        self.assertIn("空気抵抗なし", horizontal["spec"]["variables"]["horizontal_displacement"]["label"])
-        self.assertIn("空気抵抗なし", vertical_drop["spec"]["variables"]["vertical_drop"]["label"])
-        self.assertIn("空気抵抗なし", vertical_velocity["spec"]["variables"]["vertical_velocity"]["label"])
+        ratios = {0.5, 0.7071067811865476, 0.8660254037844386}
+        self.assertEqual(set(PHYSICS_PROJECTILE_TOPICS["oblique-projectile-initial-horizontal-component"]["spec"]["variables"]["cos_theta"]["values"]), ratios)
+        self.assertEqual(set(PHYSICS_PROJECTILE_TOPICS["oblique-projectile-initial-vertical-component"]["spec"]["variables"]["sin_theta"]["values"]), ratios)
 
     def test_expected_units(self):
-        units = set()
-        for topic in PHYSICS_PROJECTILE_TOPICS.values():
-            for definition in topic["spec"]["variables"].values():
-                if definition.get("unit"):
-                    units.add(definition["unit"])
+        units = {definition["unit"] for topic in PHYSICS_PROJECTILE_TOPICS.values() for definition in topic["spec"]["variables"].values() if definition.get("unit")}
         self.assertEqual(units, {"m", "s", "m/s", "m/s²"})
 
     def test_corrupted_answers_are_rejected(self):
         for topic_key, topic in PHYSICS_PROJECTILE_TOPICS.items():
             mode = next(iter(topic["modes"].values()))
-            problem = generate_formula_drill(
-                topic["spec"], topic["seeds"][0], 1, solve_for=mode["solve_for"]
-            )[0]
+            problem = generate_formula_drill(topic["spec"], topic["seeds"][0], 1, solve_for=mode["solve_for"])[0]
             bad = copy.deepcopy(problem)
             bad["answer"] += 1
             with self.assertRaises(AssertionError, msg=topic_key):
