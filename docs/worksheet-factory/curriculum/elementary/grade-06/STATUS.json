@@ -1,5 +1,5 @@
 {
   "status": "in_progress",
-  "updated_at": "2026-08-27T19:01:00+09:00",
-  "next_task": "Grade 6 is published through 8 skills / 24 PDFs. Continue from 比の値, then 比例式の欠損値計算, 文字を使った簡単な式への代入, 速さ・時間・道のりの公式代入型計算, respecting the 4-checkpoint maximum and current MEXT placement."
+  "updated_at": "2026-08-27T19:57:52+09:00",
+  "next_task": "Grade 6 is published through 12 skills / 36 PDFs. Continue from 単位換算を含む数値練習, then 小学校6年間の四則総復習, then 5分間計算チャレンジ型の総合セット. Respect the 4-checkpoint maximum, current MEXT placement, deterministic generation, independent answer validation, duplicate/hash checks, and shared catalog-writer concurrency guard."
 }
