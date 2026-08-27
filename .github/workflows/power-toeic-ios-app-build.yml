@@ -1,0 +1,59 @@
+name: Power TOEIC iOS app build
+
+on:
+  pull_request:
+    paths:
+      - 'subjects/english/power-toeic-ios/**'
+      - 'docs/power-toeic/**'
+      - '.github/workflows/power-toeic-ios-app-build.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'subjects/english/power-toeic-ios/**'
+      - 'docs/power-toeic/**'
+      - '.github/workflows/power-toeic-ios-app-build.yml'
+
+jobs:
+  build-app:
+    runs-on: macos-latest
+    env:
+      PROJECT: subjects/english/power-toeic-ios/AppShell/PowerTOEICApp.xcodeproj
+      SCHEME: PowerTOEICApp
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Xcode version
+        run: xcodebuild -version
+
+      - name: List project and shared scheme
+        run: xcodebuild -project "$PROJECT" -list
+
+      - name: Build Debug for iOS Simulator without signing
+        run: >-
+          xcodebuild
+          -project "$PROJECT"
+          -scheme "$SCHEME"
+          -configuration Debug
+          -sdk iphonesimulator
+          -destination 'generic/platform=iOS Simulator'
+          CODE_SIGNING_ALLOWED=NO
+          build
+
+      - name: Build Release for generic iOS device without signing
+        run: >-
+          xcodebuild
+          -project "$PROJECT"
+          -scheme "$SCHEME"
+          -configuration Release
+          -sdk iphoneos
+          -destination 'generic/platform=iOS'
+          CODE_SIGNING_ALLOWED=NO
+          CODE_SIGNING_REQUIRED=NO
+          build
+
+      - name: Verify app-target privacy manifest is bundled
+        run: |
+          APP_PATH=$(find "$HOME/Library/Developer/Xcode/DerivedData" -path '*Release-iphoneos/PowerTOEICApp.app' -type d | head -n 1)
+          test -n "$APP_PATH"
+          test -f "$APP_PATH/PrivacyInfo.xcprivacy"
+          plutil -lint "$APP_PATH/PrivacyInfo.xcprivacy"
