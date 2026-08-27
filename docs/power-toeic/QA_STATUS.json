@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 600,
-  "verified_question_count": 570,
-  "needs_revision_count": 30,
+  "checked_question_count": 700,
+  "verified_question_count": 669,
+  "needs_revision_count": 31,
   "rejected_question_count": 0,
-  "pending_validation_count": 1100,
-  "last_completed_batch": "2026-08-27-scheduled-016",
-  "last_completed_micro_skill": "p5.pos.participle_adjective_ed_ing",
+  "pending_validation_count": 1025,
+  "last_completed_batch": "2026-08-27-scheduled-017",
+  "last_completed_micro_skill": "p5.pos.word_form_subject_position",
   "last_batch_counts": {
     "checked": 100,
-    "verified": 100,
-    "needs_revision": 0,
+    "verified": 99,
+    "needs_revision": 1,
     "rejected": 0
   },
-  "next_batch": "2026-08-27-scheduled-016",
-  "next_micro_skill": "p5.pos.word_form_subject_position",
-  "next_question_id": "p5_pos_word_form_subject_position_0001",
+  "next_batch": "2026-08-27-scheduled-018",
+  "next_micro_skill": "p5.pos.word_form_object_position",
+  "next_question_id": "p5_pos_word_form_object_position_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-27T12:13:00+09:00"
+  "updated_at": "2026-08-27T13:17:00+09:00"
 }
