@@ -1,5 +1,5 @@
 {
-  "status": "todo",
-  "updated_at": null,
-  "next_task": "PLAN.md を読み、この学年の最初の未完了項目から開始する"
+  "status": "in_progress",
+  "updated_at": "2026-08-27T18:05:00+09:00",
+  "next_task": "Grade 6 first-four fraction publishers/tests/workflow are implemented. Confirm the Grade 6 publish workflow completes and the 12 PDFs/catalog rows appear on latest main; only after publication success advance to 帯分数を含む乗除."
 }
