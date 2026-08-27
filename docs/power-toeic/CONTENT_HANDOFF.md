@@ -16,11 +16,11 @@
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
 - Completed generated micro-skills: **19 / 44**
-- Current micro-skill: `p5.conn.because_vs_because_of` **50/100 persisted**
-- Generated questions: **1,950**
-- QA checked: **950**
-- Verified: **917**
-- Needs revision: **33**
+- Current micro-skill: `p5.conn.because_vs_because_of` **75/100 persisted**
+- Generated questions: **1,975**
+- QA checked: **975**
+- Verified: **939**
+- Needs revision: **36**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
 - `generation_complete`: `false`
@@ -28,39 +28,40 @@
 
 ## This checkpoint — generation
 
-Generated `p5.conn.because_vs_because_of` IDs **0026-0050** under:
+Generated `p5.conn.because_vs_because_of` IDs **0051-0075** under:
 
-`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/because-vs-because-of/pending/batch-20260827-021-part2.json`
+`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/because-vs-because-of/pending/batch-20260827-021-part3.json`
 
-The checkpoint continues to contrast noun-phrase complements requiring `because of` with full clauses requiring `because`, using varied business contexts across installation, retail, seminars, billing, travel, logistics, refunds, staffing, inspection, software, manufacturing, finance, construction and support operations.
+The 25 items continue the noun-phrase vs full-clause distinction: noun phrases require `because of`, while complete clauses require `because`. Business contexts are distributed across events, accounting, manufacturing, support, maintenance, legal, hospitality, transport, procurement, insurance, laboratory work, property management and research.
 
-Checks on the new 25:
-- IDs 0026-0050 unique and sequential
+Checkpoint properties:
+- IDs 0051-0075 are sequential and unique within the checkpoint
 - one cloze per item
 - four distinct choices per item
-- valid proposed answer index
-- answer positions A/B/C/D = **7/6/6/6**
-- exact duplicate stems: **0**
-- SequenceMatcher >= 0.94: **0 pairs**
-- maximum within-checkpoint similarity: about **0.571**
+- proposed answer positions A/B/C/D = **7/6/6/6**
 - all 25 remain `pending_validation`
 
-Full semantic cross-bank near-duplicate scanning across all 1,950 candidates is still **not completed**.
+Full semantic cross-bank near-duplicate scanning across all 1,975 candidates is still **not completed**. Do not claim global duplicate clearance from this checkpoint alone.
 
 ## This checkpoint — QA
 
-Independently reviewed the oldest unchecked `p5.verb.present_vs_past` IDs **0026-0050**, solving each from stem + choices before consulting the stored proposed answer/explanation.
+Independently reviewed the oldest unchecked `p5.verb.present_vs_past` IDs **0051-0075**, solving each from stem + choices before consulting the stored proposed answer/explanation.
 
 Result:
 - Checked: **25**
-- Verified: **25**
-- Needs revision: **0**
+- Verified: **22**
+- Needs revision: **3**
 - Rejected: **0**
 
-All 25 contain explicit habitual or recurring cues such as `every`, `each`, `whenever`, `weekly`, `monthly`, `twice a day`, or `as a standing rule`, so the simple present is uniquely supported over the simple past. Stored keys and explanations matched the independent solutions.
+Needs revision:
+- `p5_verb_present_vs_past_0057`: `for Tuesday's board meeting` does not unambiguously place Tuesday in the past. Add `last Tuesday` or another completed-past marker.
+- `p5_verb_present_vs_past_0062`: `after Monday's hiring event` is not sufficiently anchored. Use `last Monday` or another explicit past marker.
+- `p5_verb_present_vs_past_0074`: `during Sunday's system upgrade` does not establish that Sunday is past. Use `last Sunday's system upgrade`.
+
+The other 22 items contain explicit completed-past cues and their stored answer keys/explanations matched the independent solutions.
 
 QA record:
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-021-part2-present-vs-past.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-021-part3-present-vs-past.qa.json`
 
 ## Next generation
 
@@ -68,7 +69,7 @@ QA record:
 
 Start ID:
 
-`p5_conn_because_vs_because_of_0051`
+`p5_conn_because_vs_because_of_0076`
 
 ## Next QA
 
@@ -76,4 +77,4 @@ Start ID:
 
 Start ID:
 
-`p5_verb_present_vs_past_0051`
+`p5_verb_present_vs_past_0076`
