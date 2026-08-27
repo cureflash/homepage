@@ -29,19 +29,22 @@
     "completed_tasks": ["10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8", "11.1", "11.2", "11.3"],
     "shared_fixture_decoding": true,
     "shared_fixture_behavior_covered": ["question_selection", "quiz_session", "mastery", "review", "progression"],
-    "native_views": ["Home", "Workout", "Quiz", "Result", "Weakness", "Character", "PrivacyPolicy"],
+    "native_views": ["Home", "Workout", "Quiz", "Result", "Weakness", "Character", "PrivacyPolicy", "Credits"],
     "native_persistence": "VersionedNativeAppStore/UserDefaultsPersistenceBackend",
     "native_environment": "PowerTOEICAppEnvironment/AppLaunchSnapshot",
     "offline_runtime_network_dependency": false,
     "accessibility_pass": true,
     "release_metadata": "subjects/english/power-toeic-ios/Release/AppStoreMetadata.json",
     "release_asset_manifest": "subjects/english/power-toeic-ios/Release/AssetManifest.json",
+    "submission_readiness_manifest": "subjects/english/power-toeic-ios/Release/SubmissionReadiness.json",
     "privacy_manifest_template": "subjects/english/power-toeic-ios/Release/PrivacyInfo.xcprivacy",
     "app_target_privacy_manifest": "subjects/english/power-toeic-ios/AppShell/PowerTOEICApp/PrivacyInfo.xcprivacy",
     "privacy_required_reason": "NSPrivacyAccessedAPICategoryUserDefaults / CA92.1",
+    "app_store_constraints_validated_at": "2026-08-27",
+    "repository_submission_blockers": ["temporary Irasutoya character binaries not bundled", "OtoLogic audio binaries not bundled", "final original 1024x1024 AppIcon not supplied"],
     "unsigned_release_regression": "simulator debug build + generic device release build + unsigned xcarchive + archived privacy manifest validation passed",
-    "testflight_upload": "blocked until user-owned Apple Developer signing and App Store Connect identifiers are supplied",
-    "status": "submission_readiness"
+    "testflight_upload": "blocked until repository asset blockers are closed and user-owned Apple Developer signing/App Store Connect identifiers are supplied",
+    "status": "submission_readiness_blocked_assets"
   },
   "content_database_track": "external_scheduler",
   "app_track_content_policy": "do not author or scale production question DB; only define consumer adapter/contracts and tiny synthetic fixtures",
@@ -55,5 +58,5 @@
   "attempt_contexts": ["training", "mixed", "review"],
   "workout_modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
   "last_completed_task": "11.3",
-  "updated_at": "2026-08-27T10:23:00+09:00"
+  "updated_at": "2026-08-27T10:37:00+09:00"
 }
