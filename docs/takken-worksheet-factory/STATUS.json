@@ -7,13 +7,13 @@
   "mode": "question_generation_backlog",
   "next_role": "generate_questions",
   "generation_batch_target": 20,
-  "active_unit_order": 8,
-  "active_unit": "takken-shi-registration",
+  "active_unit_order": 21,
+  "active_unit": "article35-basics",
   "generated_unit_count": 90,
-  "question_generated_unit_count": 7,
-  "generated_question_count": 9,
+  "question_generated_unit_count": 20,
+  "generated_question_count": 23,
   "verified_question_count": 0,
-  "pending_validation_question_count": 9,
+  "pending_validation_question_count": 23,
   "verified_unit_count": 0,
   "pending_factcheck_count": 90,
   "unverified_backlog": [
@@ -114,13 +114,14 @@
   "validation_complete": false,
   "question_generation_policy": "Generate four-choice questions from every independently testable core fact; no fixed count padding. See 30_QUESTION_AND_QA_SPEC.md.",
   "question_generation_progress": {
-    "covered_unit_orders": [1, 2, 3, 4, 5, 6, 7],
-    "covered_fact_count": 9,
+    "covered_unit_orders": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+    "covered_fact_count": 23,
     "generated_question_files": [
-      "qualifications/takken/data/pending-questions-01-07.js"
+      "qualifications/takken/data/pending-questions-01-07.js",
+      "qualifications/takken/data/pending-questions-08-20.js"
     ],
-    "next_unit_order": 8,
-    "next_unit": "takken-shi-registration"
+    "next_unit_order": 21,
+    "next_unit": "article35-basics"
   },
   "foundation": {
     "portable_site_shell": true,
@@ -135,6 +136,6 @@
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
   "last_completed_unit": "five-question-exemption-review",
-  "last_run_summary": "Generated 9 four-choice pending_validation questions covering all 9 core facts in units 1-7. Added stable IDs, four distinct choices, answer indices, explanations, fact/source references, 2026 exam metadata, and generation-time structural guards. Question generation remains incomplete; next start is unit 8 takken-shi-registration. Solve-all validation has not started.",
-  "updated_at": "2026-08-27T12:32:49+09:00"
+  "last_run_summary": "Generated 14 four-choice pending_validation questions covering all 14 core facts in units 8-20. Cumulative question coverage is 20/90 units and 23/23 covered core facts, with 23 pending_validation questions and 0 verified. Answer positions in the new checkpoint are balanced A=3, B=4, C=4, D=3. Question generation remains incomplete; next start is unit 21 article35-basics. Solve-all validation has not started.",
+  "updated_at": "2026-08-27T13:30:50+09:00"
 }
