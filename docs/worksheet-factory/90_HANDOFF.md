@@ -4,7 +4,7 @@ Updated: 2026-08-27
 
 ## Current factory state
 
-The shared worksheet-factory foundation is operational and bulk publication is underway. The old note that generator/catalog implementation had not started is obsolete.
+The shared worksheet-factory foundation is operational and bulk publication is underway.
 
 Completed active grades:
 
@@ -13,24 +13,26 @@ Completed active grades:
 - 小学3年: done
 - 小学4年: done
 
-The next active grade is **小学5年**.
+Current active grade: **小学5年** (`in_progress`).
 
 ## Latest completed run
 
-小学4年の最後の3 checkpointを連続で完了した。
+小学5年の先頭4 checkpointを連続で完了した。
 
-1. `large-number-place-value` — 億・兆の位取り — 3 variants / 3 PDFs
-2. `rounding-estimation` — 概数・四捨五入 — 3 variants / 3 PDFs
-3. `grade4-review` — 小学4年 算数 総復習 — 3 variants / 3 PDFs
+1. `decimal-times-decimal` — 小数×小数 — 3 variants / 3 PDFs
+2. `decimal-div-decimal` — 小数÷小数（割り切れる） — 3 variants / 3 PDFs
+3. `decimal-mixed-four` — 小数四則混合 — 3 variants / 3 PDFs
+4. `list-divisors` — 約数の列挙 — 3 variants / 3 PDFs
 
-All three use deterministic seeds, independent answer recomputation, duplicate/content-hash checks, 2-page PDFs, ordinary integer problem numbering, and answer pages that preserve the problem layout and add answers in red.
+合計 **4技能・12PDF** を公開した。
 
-Grade 4 final publication total: **19 skills / 57 PDFs**.
+MEXTの現行小学校算数解説で、第5学年に小数の乗法・除法および整数の性質（約数・倍数）が配置されていることを確認してから実装した。
 
-The Grade 4 workflow runs all existing Grade 4 publishers, publisher tests, final-checkpoint tests, and `tests/test_worksheet_factory.py`. A transient test-design failure occurred because the combined final-checkpoint test treated the just-generated nine hashes as pre-existing hashes; this was corrected by excluding the three modules' own worksheet IDs from the baseline hash set. The corrected workflow passed and published the nine PDFs.
+All four checkpoints use deterministic seeds, independent answer recomputation, duplicate/content-hash checks, 2-page PDFs, ordinary integer problem numbering, and answer pages that preserve the problem layout and add answers in red.
 
-- successful workflow run: `33034975154`
-- publish commit: `353a9652607eae4e177d8fe97d1964ccb1e9113f`
+- Grade 5 workflow run: `33038004644`
+- publish commit: `a166fca1f8a0c72eecb4eb957dac3f0fac371202`
+- current Grade 5 publication total: **4 skills / 12 PDFs**
 
 ## Exact next starting point
 
@@ -38,10 +40,8 @@ Read:
 
 - `curriculum/elementary/grade-05/STATUS.json`
 - `curriculum/elementary/grade-05/PLAN.md`
-- `curriculum/elementary/grade-05/HANDOFF.md` if present
+- `curriculum/elementary/grade-05/HANDOFF.md`
 
-Start with the first unfinished Grade 5 skill: **小数×小数**.
+Start with the next unfinished Grade 5 skill: **倍数の列挙**.
 
-Before implementation, confirm its placement and intended scope against the current MEXT elementary mathematics curriculum commentary. Then follow the existing factory contract: deterministic generation, independent answer validation, duplicate detection, 2-page printable PDF, same-layout red answers, catalog/site validation, and checkpoint tests.
-
-Do not reopen completed Grade 4 work unless a regression or audit finding requires it. Do not cross multiple active grades within one run merely to reach a checkpoint count.
+If safe in one run, continue through **最大公約数 → 最小公倍数 → 通分** as up to four consecutive checkpoints. Keep deterministic generation, independent answer validation, duplicate detection, 2-page printable PDFs, same-layout red answers, catalog/site validation, and Grade 5 workflow regression intact.
