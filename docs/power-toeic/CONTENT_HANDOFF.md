@@ -15,12 +15,11 @@
 ## Current canonical state
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
-- Completed generated micro-skills: **19 / 44**
-- Current micro-skill: `p5.conn.because_vs_because_of` **75/100 persisted**
-- Generated questions: **1,975**
-- QA checked: **975**
-- Verified: **939**
-- Needs revision: **36**
+- Completed generated micro-skills: **20 / 44**
+- Generated questions: **2,000**
+- QA checked: **1,000**
+- Verified: **960**
+- Needs revision: **40**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
 - `generation_complete`: `false`
@@ -28,53 +27,54 @@
 
 ## This checkpoint — generation
 
-Generated `p5.conn.because_vs_because_of` IDs **0051-0075** under:
+Completed `p5.conn.because_vs_because_of` by generating IDs **0076-0100** under:
 
-`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/because-vs-because-of/pending/batch-20260827-021-part3.json`
+`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/because-vs-because-of/pending/batch-20260827-021-part4.json`
 
-The 25 items continue the noun-phrase vs full-clause distinction: noun phrases require `because of`, while complete clauses require `because`. Business contexts are distributed across events, accounting, manufacturing, support, maintenance, legal, hospitality, transport, procurement, insurance, laboratory work, property management and research.
+This brings the micro-skill to **100/100 persisted**. The checkpoint continues the intended distinction: noun phrases require `because of`, while complete clauses require `because`. Contexts include finance, hospitality, engineering, recruiting, healthcare, procurement, warehousing, insurance, logistics, banking, publishing, manufacturing, museums, software, legal, property management, and research.
 
 Checkpoint properties:
-- IDs 0051-0075 are sequential and unique within the checkpoint
+- IDs 0076-0100 are sequential and unique within the checkpoint
 - one cloze per item
 - four distinct choices per item
-- proposed answer positions A/B/C/D = **7/6/6/6**
 - all 25 remain `pending_validation`
+- no production approval is implied by generation
 
-Full semantic cross-bank near-duplicate scanning across all 1,975 candidates is still **not completed**. Do not claim global duplicate clearance from this checkpoint alone.
+Full semantic cross-bank near-duplicate scanning across all 2,000 candidates is still **not completed**. Do not claim global duplicate clearance from this checkpoint alone.
 
 ## This checkpoint — QA
 
-Independently reviewed the oldest unchecked `p5.verb.present_vs_past` IDs **0051-0075**, solving each from stem + choices before consulting the stored proposed answer/explanation.
+Independently reviewed the oldest unchecked `p5.verb.present_vs_past` IDs **0076-0100**, solving each from stem + choices before consulting the stored proposed answer/explanation.
 
 Result:
 - Checked: **25**
-- Verified: **22**
-- Needs revision: **3**
+- Verified: **21**
+- Needs revision: **4**
 - Rejected: **0**
 
 Needs revision:
-- `p5_verb_present_vs_past_0057`: `for Tuesday's board meeting` does not unambiguously place Tuesday in the past. Add `last Tuesday` or another completed-past marker.
-- `p5_verb_present_vs_past_0062`: `after Monday's hiring event` is not sufficiently anchored. Use `last Monday` or another explicit past marker.
-- `p5_verb_present_vs_past_0074`: `during Sunday's system upgrade` does not establish that Sunday is past. Use `last Sunday's system upgrade`.
+- `p5_verb_present_vs_past_0080`: `after the stock check on Tuesday` does not uniquely establish completed past time. Use `last Tuesday` or another explicit past marker.
+- `p5_verb_present_vs_past_0083`: `immediately after Monday's complaint` is not sufficiently anchored. Use `last Monday` or another explicit past marker.
+- `p5_verb_present_vs_past_0085`: `early Monday morning` does not explicitly identify Monday as past. Use `early last Monday morning` or another completed-past cue.
+- `p5_verb_present_vs_past_0094`: `before Friday's dinner service` can still support a present/future scheduling reading. Use `before last Friday's dinner service` or another explicit past marker.
 
-The other 22 items contain explicit completed-past cues and their stored answer keys/explanations matched the independent solutions.
+The other 21 items contain explicit completed-past cues and their stored answer keys/explanations matched the independent solutions.
 
 QA record:
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-021-part3-present-vs-past.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-021-part4-present-vs-past.qa.json`
 
 ## Next generation
 
-`p5.conn.because_vs_because_of`
+`p5.conn.despite_vs_although`
 
 Start ID:
 
-`p5_conn_because_vs_because_of_0076`
+`p5_conn_despite_vs_although_0001`
 
 ## Next QA
 
-`p5.verb.present_vs_past`
+`p5.verb.present_perfect_vs_past`
 
 Start ID:
 
-`p5_verb_present_vs_past_0076`
+`p5_verb_present_perfect_vs_past_0001`
