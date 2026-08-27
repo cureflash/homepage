@@ -19,8 +19,8 @@
       proposedAnswerIndex: 0,
       explanation: "宅地・建物の売買または交換を業として行うことは宅建業に含まれる。自ら行う賃貸そのものは宅建業の定義には含まれない。",
       sourceIds: ["mlit-license"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T18:29:00+09:00", result: "verified", independentAnswerIndex: 0 }
     },
     {
       id: "takken-q-01-002",
@@ -39,8 +39,8 @@
       proposedAnswerIndex: 1,
       explanation: "宅地・建物の売買、交換、貸借について、その代理または媒介を業として行うことは宅建業に含まれる。",
       sourceIds: ["mlit-license"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T18:29:00+09:00", result: "verified", independentAnswerIndex: 1 }
     },
     {
       id: "takken-q-02-001",
@@ -59,8 +59,8 @@
       proposedAnswerIndex: 2,
       explanation: "宅地建物取引業を営もうとする者は、事務所の設置状況に応じて国土交通大臣または都道府県知事の免許を受ける必要がある。",
       sourceIds: ["mlit-license"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T18:29:00+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-03-001",
@@ -79,8 +79,8 @@
       proposedAnswerIndex: 3,
       explanation: "2以上の都道府県に事務所を設置する場合は国土交通大臣免許となる。1都道府県内だけに事務所を置く場合はその都道府県知事免許となる。",
       sourceIds: ["mlit-license"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T18:29:00+09:00", result: "verified", independentAnswerIndex: 3 }
     },
     {
       id: "takken-q-04-001",
@@ -99,8 +99,8 @@
       proposedAnswerIndex: 0,
       explanation: "宅建業法5条の欠格事由には、一定の免許取消し、刑罰、不正行為等について5年間という期間が関係するものがある。",
       sourceIds: ["mlit-license"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T18:29:00+09:00", result: "verified", independentAnswerIndex: 0 }
     },
     {
       id: "takken-q-05-001",
@@ -114,8 +114,8 @@
       proposedAnswerIndex: 1,
       explanation: "宅地建物取引業免許の有効期間は5年間である。",
       sourceIds: ["mlit-license-pdf"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T18:29:00+09:00", result: "verified", independentAnswerIndex: 1 }
     },
     {
       id: "takken-q-05-002",
@@ -134,8 +134,8 @@
       proposedAnswerIndex: 2,
       explanation: "更新申請は、免許の有効期間満了日の90日前から30日前までに行う。",
       sourceIds: ["mlit-license-pdf"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T18:29:00+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-06-001",
@@ -154,8 +154,8 @@
       proposedAnswerIndex: 3,
       explanation: "宅建業法8条2項2号から6号の一定事項に変更があった場合、30日以内に変更の届出を行う。",
       sourceIds: ["mlit-duty"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T18:29:00+09:00", result: "verified", independentAnswerIndex: 3 }
     },
     {
       id: "takken-q-07-001",
@@ -174,19 +174,20 @@
       proposedAnswerIndex: 0,
       explanation: "宅建業法には宅地建物取引業者名簿および標識に関する規定がある。",
       sourceIds: ["mlit-interpretation-2026"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T18:29:00+09:00", result: "verified", independentAnswerIndex: 0 }
     }
   ];
 
   const ids = new Set();
+  const allowedStatuses = new Set(["pending_validation", "verified", "needs_revision", "rejected"]);
   for (const q of Q) {
     if (ids.has(q.id)) throw new Error(`Duplicate Takken question id: ${q.id}`);
     ids.add(q.id);
     if (!Array.isArray(q.choices) || q.choices.length !== 4) throw new Error(`Invalid choices: ${q.id}`);
     if (new Set(q.choices).size !== 4) throw new Error(`Duplicate choices: ${q.id}`);
     if (!Number.isInteger(q.proposedAnswerIndex) || q.proposedAnswerIndex < 0 || q.proposedAnswerIndex > 3) throw new Error(`Invalid answer index: ${q.id}`);
-    if (q.validationStatus !== "pending_validation") throw new Error(`Invalid validation status: ${q.id}`);
+    if (!allowedStatuses.has(q.validationStatus)) throw new Error(`Invalid validation status: ${q.id}`);
   }
 
   window.TakkenPendingQuestions0107 = Object.freeze(Q);
