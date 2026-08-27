@@ -3,11 +3,11 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 2000,
-  "checked_question_count": 1000,
+  "generated_question_count": 2100,
+  "checked_question_count": 1100,
   "pending_validation_count": 1000,
-  "verified_question_count": 960,
-  "needs_revision_count": 40,
+  "verified_question_count": 1040,
+  "needs_revision_count": 60,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
@@ -29,16 +29,17 @@
     "p5.verb.conditional_form",
     "p5.verb.participle_clause",
     "p5.conn.preposition_vs_conjunction",
-    "p5.conn.because_vs_because_of"
+    "p5.conn.because_vs_because_of",
+    "p5.conn.despite_vs_although"
   ],
-  "current_batch": "2026-08-27-scheduled-021-part4",
-  "current_micro_skill": "p5.conn.despite_vs_although",
+  "current_batch": "2026-08-27-scheduled-022-part4",
+  "current_micro_skill": "p5.conn.during_vs_while",
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_conn_despite_vs_although_0001",
-  "next_micro_skill": "p5.conn.despite_vs_although",
+  "next_resume_id": "p5_conn_during_vs_while_0001",
+  "next_micro_skill": "p5.conn.during_vs_while",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Completed p5.conn.because_vs_because_of IDs 0076-0100, bringing that micro-skill to 100/100 and total generation to 2,000 questions across 20 completed micro-skills. The new 25-question checkpoint keeps one blank, four distinct choices, varied business contexts, explicit noun-phrase versus full-clause structure, and all items remain pending_validation. Independently validated the oldest unchecked p5.verb.present_vs_past IDs 0076-0100: 25 checked, 21 verified, 4 needs_revision, 0 rejected. IDs 0080, 0083, 0085, and 0094 use unanchored weekday expressions that do not uniquely force a completed-past reading. Cumulative QA is now 1,000 checked, 960 verified, 40 needs_revision, 0 rejected; unchecked pending_validation remains 1,000 because generation and QA each advanced by 25. Next generation is p5.conn.despite_vs_although_0001; next QA is p5.verb.present_perfect_vs_past_0001. Full cross-bank semantic near-duplicate scanning remains incomplete and verified does not yet mean production-approved.",
-  "updated_at": "2026-08-27T20:16:00+09:00"
+  "last_run_result": "Generated p5.conn.despite_vs_although IDs 0001-0100 in four 25-question checkpoints, bringing total generation to 2,100 questions across 21 completed micro-skills. The 100 new items distinguish despite before noun/gerund phrases from although before full clauses; all remain pending_validation. Mechanical generation review found unique IDs/stems, one blank per item, four distinct choices, balanced answer positions A/B/C/D=25/25/25/25, no exact duplicate stems, and no within-skill SequenceMatcher pair >=0.94 (maximum about 0.627). Independently validated the oldest unchecked p5.verb.present_perfect_vs_past IDs 0001-0100: 100 checked, 80 verified, 20 needs_revision, 0 rejected. The 20 needs_revision items use time cues such as already, during the current quarter, this year, or recently that do not uniquely force present perfect over simple past. Cumulative QA is now 1,100 checked, 1,040 verified, 60 needs_revision, 0 rejected; unchecked pending_validation remains 1,000 because generation and QA each advanced by 100. Next generation is p5.conn.during_vs_while_0001; next QA is p5.verb.active_vs_passive_0001. Full cross-bank semantic near-duplicate scanning remains incomplete and verified does not yet mean production-approved.",
+  "updated_at": "2026-08-27T21:13:00+09:00"
 }
