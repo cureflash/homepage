@@ -10,6 +10,7 @@ try:
     from scripts.science_physics_basic_electric_resistance import PHYSICS_BASIC_ELECTRIC_RESISTANCE_TOPICS
     from scripts.science_physics_basic_electric_use import PHYSICS_BASIC_ELECTRIC_USE_TOPICS
     from scripts.science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
+    from scripts.science_physics_basic_energy_use import PHYSICS_BASIC_ENERGY_USE_TOPICS
     from scripts.science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
     from scripts.science_physics_basic_heat import PHYSICS_BASIC_HEAT_TOPICS
     from scripts.science_physics_basic_motion import (
@@ -28,6 +29,7 @@ except ModuleNotFoundError:
     from science_physics_basic_electric_resistance import PHYSICS_BASIC_ELECTRIC_RESISTANCE_TOPICS
     from science_physics_basic_electric_use import PHYSICS_BASIC_ELECTRIC_USE_TOPICS
     from science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
+    from science_physics_basic_energy_use import PHYSICS_BASIC_ENERGY_USE_TOPICS
     from science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
     from science_physics_basic_heat import PHYSICS_BASIC_HEAT_TOPICS
     from science_physics_basic_motion import (
@@ -57,6 +59,7 @@ ALL_TOPICS = {
     **PHYSICS_BASIC_RESONANCE_TOPICS,
     **PHYSICS_BASIC_ELECTRIC_RESISTANCE_TOPICS,
     **PHYSICS_BASIC_ELECTRIC_USE_TOPICS,
+    **PHYSICS_BASIC_ENERGY_USE_TOPICS,
 }
 
 
