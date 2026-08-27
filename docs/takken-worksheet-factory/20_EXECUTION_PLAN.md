@@ -14,7 +14,7 @@ This plan is subordinate to `00_MASTER_INSTRUCTIONS.md` and works with `30_QUEST
 ## Phase 1 — ordered unit generation
 
 - [x] All 90 canonical unit datasets generated in fixed order.
-- [x] All remain `pending_factcheck` and unpublished.
+- [x] All remain unpublished until independently verified.
 
 ## Phase 2 — four-choice question generation
 
@@ -26,7 +26,7 @@ This plan is subordinate to `00_MASTER_INSTRUCTIONS.md` and works with `30_QUEST
 - [x] Keep all unverified questions outside production/public pools.
 - [x] All 90 units have 100% core-fact coverage; `question_generation_complete: true` and `generation_complete: true`.
 
-Final Phase 2 totals: **90/90 units, 163/163 core facts, 163 `pending_validation` questions, 0 verified**.
+Final Phase 2 totals: **90/90 units, 163/163 core facts, 163 generated questions**.
 
 Question files:
 - `qualifications/takken/data/pending-questions-01-07.js` — 9 questions
@@ -39,19 +39,24 @@ Question files:
 
 ## Phase 3 — solve-all independent validation
 
-This phase is now the active phase. Start strictly at `takken-q-01-001`.
+This phase is active. Questions must be processed strictly in ID/order sequence.
 
-- [ ] Begin from the first question ID and process strictly in order.
-- [ ] Hide stored answer/explanation/source references before independent solving.
-- [ ] Independently determine the answer and legal basis, reopening primary/official sources when needed.
-- [ ] Then compare against stored answer/explanation.
-- [ ] Classify each question individually as `verified`, `needs_revision`, or `rejected`.
-- [ ] Repair question/choices/answer/explanation/sources together and independently solve again before any repaired item becomes `verified`.
-- [ ] Use 25-question safe checkpoints; target at most about 100 checked questions per run.
-- [ ] Track checked and verified counts separately and persist the exact next question ID.
+- [x] Begin from the first question ID and process strictly in order.
+- [x] Hide stored answer/explanation/source references before independent solving.
+- [x] Independently determine the answer and legal basis, reopening primary/official sources when needed.
+- [x] Then compare against stored answer/explanation.
+- [x] Classify each checked question individually as `verified`, `needs_revision`, or `rejected`.
+- [ ] Repair question/choices/answer/explanation/sources together and independently solve again before any repaired item becomes `verified` when a defect is found.
+- [ ] Continue with safe checkpoints; target 25 questions where file/content boundaries allow and at most about 100 checked questions per run.
+- [x] Track checked and verified counts separately and persist the exact next question ID.
 - [ ] Only after every question has been independently re-solved and all revision work is closed may `validation_complete: true` be set.
 
-Current Phase 3 progress: **checked 0 / verified 0 / pending 163 / next `takken-q-01-001`**.
+Completed Phase 3 checkpoint:
+- Questions `takken-q-01-001` through `takken-q-07-001` (9 questions, complete first question file)
+- checked 9 / verified 9 / needs_revision 0 / rejected 0
+- independent official-source confirmation covered the statutory definition/scope, licensing authority, five-year disqualification examples, five-year license validity, 90-to-30-day renewal window, 30-day change notification and roster/sign regulation.
+
+Current Phase 3 progress: **checked 9 / verified 9 / needs_revision 0 / rejected 0 / pending 154 / next `takken-q-08-001`**.
 
 ## Phase 4 — Power宅建 knowledge / print / app integration
 
@@ -88,6 +93,6 @@ Current Phase 3 progress: **checked 0 / verified 0 / pending 163 / next `takken-
 - [ ] Expose concept / knowledge item IDs to the app question bank.
 - [ ] Track performance at question and knowledge-item levels, prioritize alternate questions for the same weak item, show detailed explanations, and link to the matching explanation print.
 
-## Publication invariant
+## publication invariant
 
 Only independently verified material may be published. `pending_factcheck`, `pending_validation`, `needs_revision`, and `rejected` content must not enter the public catalog or production question pool.
