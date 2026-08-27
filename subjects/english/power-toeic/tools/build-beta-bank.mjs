@@ -45,22 +45,29 @@ function dice(a, b) {
   return (2 * intersection) / (a.size + b.size);
 }
 
+function itemNumber(id) {
+  const match = String(id).match(/_(\d{4})$/);
+  return match ? Number(match[1]) : null;
+}
+
+function rangeFromQa(doc) {
+  const candidates = [doc.range, doc.notes, doc.qa_scope, doc.reviewed_range]
+    .filter(Boolean)
+    .map(String);
+  for (const text of candidates) {
+    const match = text.match(/(?:items?\s+|ids?\s+)?(\d{4})\s*[-–]\s*(\d{4})/i);
+    if (match) return [Number(match[1]), Number(match[2])];
+  }
+  return null;
+}
+
 const files = await walk(questionRoot);
 const approvedIndexFiles = files.filter((file) => file.includes(`${path.sep}verified${path.sep}`));
 const candidateFiles = files.filter((file) => file.includes(`${path.sep}pending${path.sep}`));
-
-const approvedIds = new Set();
-const approvedSkillById = new Map();
-for (const file of approvedIndexFiles) {
-  const doc = await parseJson(file);
-  if (doc.format !== 'power-toeic-approved-id-index-v1') continue;
-  for (const id of doc.approved_ids ?? []) {
-    approvedIds.add(id);
-    approvedSkillById.set(id, doc.skill);
-  }
-}
+const qaFiles = files.filter((file) => file.includes(`${path.sep}qa${path.sep}`));
 
 const candidateById = new Map();
+const candidateIdsBySkill = new Map();
 for (const file of candidateFiles) {
   const doc = await parseJson(file);
   if (!Array.isArray(doc.items) || !doc.skill) continue;
@@ -68,7 +75,80 @@ for (const file of candidateFiles) {
     if (!Array.isArray(row) || row.length < 5) continue;
     const [id, sentence, choices, correctIndex, explanation] = row;
     candidateById.set(id, { id, sentence, choices, correctIndex, explanation, skillId: doc.skill });
+    if (!candidateIdsBySkill.has(doc.skill)) candidateIdsBySkill.set(doc.skill, []);
+    candidateIdsBySkill.get(doc.skill).push(id);
   }
+}
+for (const ids of candidateIdsBySkill.values()) ids.sort((a, b) => (itemNumber(a) ?? 0) - (itemNumber(b) ?? 0));
+
+const approvedIds = new Set();
+const approvedSkillById = new Map();
+const approvalSources = new Map();
+function approve(id, skill, source) {
+  if (!candidateById.has(id)) throw new Error(`Verified ID missing source candidate: ${id} (${source})`);
+  if (skill && candidateById.get(id).skillId !== skill) throw new Error(`Skill mismatch for ${id}: ${skill} vs ${candidateById.get(id).skillId}`);
+  approvedIds.add(id);
+  approvedSkillById.set(id, skill ?? candidateById.get(id).skillId);
+  if (!approvalSources.has(id)) approvalSources.set(id, []);
+  approvalSources.get(id).push(source);
+}
+
+for (const file of approvedIndexFiles) {
+  const doc = await parseJson(file);
+  if (doc.format !== 'power-toeic-approved-id-index-v1') continue;
+  for (const id of doc.approved_ids ?? []) approve(id, doc.skill, `approved-index:${path.basename(file)}`);
+}
+
+const qaInference = [];
+for (const file of qaFiles) {
+  const doc = await parseJson(file);
+  const skill = doc.skill ?? doc.micro_skill;
+  if (!skill || !candidateIdsBySkill.has(skill)) continue;
+
+  if (Array.isArray(doc.verified_ids)) {
+    for (const id of doc.verified_ids) approve(id, skill, `qa-explicit:${path.basename(file)}`);
+    if (Number.isInteger(doc.verified) && doc.verified_ids.length !== doc.verified) {
+      throw new Error(`QA verified count mismatch in ${path.basename(file)}`);
+    }
+    continue;
+  }
+
+  const checked = Number(doc.checked);
+  const verified = Number(doc.verified);
+  if (!Number.isInteger(checked) || !Number.isInteger(verified) || checked <= 0 || verified < 0) continue;
+
+  const allSkillIds = candidateIdsBySkill.get(skill);
+  const range = rangeFromQa(doc);
+  let reviewedIds;
+  if (range) {
+    const [start, end] = range;
+    reviewedIds = allSkillIds.filter((id) => {
+      const n = itemNumber(id);
+      return n != null && n >= start && n <= end;
+    });
+  } else if (checked === allSkillIds.length) {
+    reviewedIds = [...allSkillIds];
+  } else {
+    qaInference.push({ file: path.basename(file), skill, status: 'skipped_no_safe_range', checked, verified });
+    continue;
+  }
+
+  if (reviewedIds.length !== checked) {
+    throw new Error(`QA reviewed range count mismatch in ${path.basename(file)}: expected ${checked}, found ${reviewedIds.length}`);
+  }
+
+  const excluded = new Set([
+    ...(doc.needs_revision_ids ?? []),
+    ...(doc.rejected_ids ?? []),
+    ...((doc.needs_revision_items ?? []).map((item) => item?.id).filter(Boolean)),
+    ...((doc.rejected_items ?? []).map((item) => item?.id).filter(Boolean))
+  ]);
+  const inferredVerified = reviewedIds.filter((id) => !excluded.has(id));
+  if (inferredVerified.length !== verified) {
+    throw new Error(`Cannot safely infer verified IDs in ${path.basename(file)}: expected ${verified}, inferred ${inferredVerified.length}`);
+  }
+  for (const id of inferredVerified) approve(id, skill, `qa-inferred:${path.basename(file)}`);
+  qaInference.push({ file: path.basename(file), skill, status: 'inferred', checked, verified, range: range ?? 'full-skill' });
 }
 
 const taxonomy = await parseJson(taxonomyPath);
@@ -76,13 +156,8 @@ const skillMeta = new Map((taxonomy.micro_skills ?? []).map((skill) => [skill.id
 const groupMeta = new Map((taxonomy.groups ?? []).map((group) => [group.id, group]));
 
 const verifiedCandidates = [];
-const missing = [];
 for (const id of [...approvedIds].sort()) {
   const candidate = candidateById.get(id);
-  if (!candidate) {
-    missing.push(id);
-    continue;
-  }
   const expectedSkill = approvedSkillById.get(id);
   if (expectedSkill && candidate.skillId !== expectedSkill) throw new Error(`Skill mismatch for ${id}`);
   const meta = skillMeta.get(candidate.skillId);
@@ -100,13 +175,12 @@ for (const id of [...approvedIds].sort()) {
     betaCandidate: true
   });
 }
-if (missing.length) throw new Error(`Approved IDs missing source candidates: ${missing.slice(0, 10).join(', ')}`);
 
-// This is an explicit beta-only global lexical near-duplicate gate. It is not the
-// final semantic production approval gate described in CONTENT_HANDOFF.md.
-// Later items in a >=0.965 character-trigram Dice cluster are quarantined.
+// Explicit beta-only lexical near-duplicate gate. This does not replace the
+// final semantic production-bank gate required by CONTENT_HANDOFF.md.
 const kept = [];
 const keptSignatures = [];
+const keptNormalized = [];
 const quarantined = [];
 const exactSeen = new Map();
 for (const question of verifiedCandidates) {
@@ -119,7 +193,7 @@ for (const question of verifiedCandidates) {
   const sig = ngrams(normalized, 3);
   let match = null;
   for (let i = 0; i < kept.length; i += 1) {
-    const otherText = normalizeStem(kept[i].sentence);
+    const otherText = keptNormalized[i];
     const ratio = Math.min(normalized.length, otherText.length) / Math.max(normalized.length, otherText.length);
     if (ratio < 0.8) continue;
     const score = dice(sig, keptSignatures[i]);
@@ -135,18 +209,14 @@ for (const question of verifiedCandidates) {
   exactSeen.set(normalized, question);
   kept.push(question);
   keptSignatures.push(sig);
+  keptNormalized.push(normalized);
 }
 
 const usedSkillIds = [...new Set(kept.map((question) => question.skillId))];
 const skills = usedSkillIds.map((id) => {
   const meta = skillMeta.get(id);
   const group = groupMeta.get(meta.group);
-  return {
-    id,
-    label: meta.label_ja,
-    categoryId: meta.group,
-    categoryLabel: group?.label_ja ?? meta.group
-  };
+  return { id, label: meta.label_ja, categoryId: meta.group, categoryLabel: group?.label_ja ?? meta.group };
 });
 
 const payload = {
@@ -158,18 +228,20 @@ const payload = {
     taxonomyVersion: taxonomy.version,
     approvedCandidateCount: verifiedCandidates.length,
     runtimeQuestionCount: kept.length,
-    quarantinedNearDuplicateCount: quarantined.length
+    quarantinedNearDuplicateCount: quarantined.length,
+    qaRecordCount: qaFiles.length
   },
   betaGlobalSimilarityGate: {
     passed: true,
-    scope: 'all currently QA-approved candidates included in this build',
+    scope: 'all currently QA-verified candidates recoverable from approved indexes and QA records in this repository snapshot',
     method: 'normalized stem exact match + character-trigram Dice',
     threshold: 0.965,
     note: 'Beta lexical similarity gate only; does not replace the final semantic production-bank gate.'
   },
   skills,
   questions: kept,
-  quarantine: quarantined
+  quarantine: quarantined,
+  buildDiagnostics: { qaInference }
 };
 
 if (payload.questions.length < 100) throw new Error(`Refusing tiny beta bank: ${payload.questions.length}`);
@@ -178,4 +250,4 @@ if (new Set(payload.questions.map((question) => question.id)).size !== payload.q
 
 await mkdir(outputDir, { recursive: true });
 await writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
-console.log(JSON.stringify({ approvedCandidates: verifiedCandidates.length, runtimeQuestions: kept.length, quarantined: quarantined.length, skills: skills.length }));
+console.log(JSON.stringify({ approvedCandidates: verifiedCandidates.length, runtimeQuestions: kept.length, quarantined: quarantined.length, skills: skills.length, qaRecords: qaFiles.length, skippedQaInference: qaInference.filter((entry) => entry.status.startsWith('skipped')).length }));
