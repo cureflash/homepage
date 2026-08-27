@@ -13,10 +13,17 @@
   "app_store_connect_app_id": "RELEASE_TIME_INPUT",
   "signing_certificate": "RELEASE_TIME_INPUT",
   "provisioning_profile": "RELEASE_TIME_INPUT",
+  "validated_constraints": {
+    "app_name_max_characters": 30,
+    "subtitle_max_characters": 30,
+    "ios_privacy_policy_url_required": true,
+    "validated_at": "2026-08-27"
+  },
   "notes": [
     "Do not commit account-specific signing credentials.",
-    "A real Xcode iOS application target is required before archive/TestFlight; the current repository implementation is a Swift Package library.",
+    "The real Xcode application target is subjects/english/power-toeic-ios/AppShell/PowerTOEICApp.xcodeproj and unsigned release/archive regression is covered by CI.",
     "The App Store privacy declaration must match the shipping binary. Current implementation collects no data off-device and uses UserDefaults for app-local state only.",
-    "PrivacyInfo.xcprivacy in this Release directory is the canonical manifest template and must be added to the future iOS application target resources."
+    "Release/PrivacyInfo.xcprivacy is the canonical privacy manifest and the app-target copy must remain byte-for-byte synchronized.",
+    "SubmissionReadiness.json is the machine-checkable source for repository blockers and external operator inputs."
   ]
 }
