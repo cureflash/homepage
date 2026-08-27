@@ -19,8 +19,8 @@
       proposedAnswerIndex: 1,
       explanation: "宅建業法は、宅地建物取引士について資格試験、資格登録、宅地建物取引士証の制度をそれぞれ設けている。試験合格だけで全ての手続が完了するわけではない。",
       sourceIds: ["mlit-takkenshi"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 1 }
     },
     {
       id: "takken-q-09-001",
@@ -39,8 +39,8 @@
       proposedAnswerIndex: 2,
       explanation: "宅地建物取引士制度には宅地建物取引士証が設けられており、重要事項説明は宅地建物取引士が担当する。",
       sourceIds: ["mlit-takkenshi"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-10-001",
@@ -59,8 +59,8 @@
       proposedAnswerIndex: 3,
       explanation: "宅建業者の事務所では、業務従事者5人に1人以上の割合で専任の宅地建物取引士を置く必要がある。",
       sourceIds: ["mlit-license", "mlit-takkenshi"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 3 }
     },
     {
       id: "takken-q-11-001",
@@ -79,8 +79,8 @@
       proposedAnswerIndex: 0,
       explanation: "国土交通省は宅地建物取引士の業務として、重要事項説明および35条関係書面・37条関係書面への記名を位置付けている。",
       sourceIds: ["mlit-takkenshi", "mlit-interpretation-2026"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 0 }
     },
     {
       id: "takken-q-12-001",
@@ -99,8 +99,8 @@
       proposedAnswerIndex: 3,
       explanation: "宅建業法には、宅建業者による営業保証金の供託制度が設けられている。",
       sourceIds: ["mlit-overview"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 3 }
     },
     {
       id: "takken-q-13-001",
@@ -119,8 +119,8 @@
       proposedAnswerIndex: 0,
       explanation: "営業保証金制度には、宅建業者との取引により生じた一定の債権について還付を受ける仕組みがある。",
       sourceIds: ["mlit-interpretation-2026"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 0 }
     },
     {
       id: "takken-q-14-001",
@@ -139,8 +139,8 @@
       proposedAnswerIndex: 1,
       explanation: "宅建業法には、宅地建物取引業保証協会と弁済業務保証金に関する制度が設けられている。",
       sourceIds: ["mlit-interpretation-2026"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 1 }
     },
     {
       id: "takken-q-15-001",
@@ -159,8 +159,8 @@
       proposedAnswerIndex: 2,
       explanation: "宅地・建物の売買または交換の媒介契約を締結した宅建業者は、遅滞なく所定事項を記載した書面を依頼者に交付する制度の対象となる。",
       sourceIds: ["mlit-brokerage"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-16-001",
@@ -179,8 +179,8 @@
       proposedAnswerIndex: 1,
       explanation: "標準媒介契約約款では、専任媒介契約と専属専任媒介契約の有効期間は3か月を超えない範囲で定める。",
       sourceIds: ["mlit-standard-brokerage"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 1 }
     },
     {
       id: "takken-q-17-001",
@@ -199,8 +199,8 @@
       proposedAnswerIndex: 2,
       explanation: "専任媒介契約では、指定流通機構へ7日以内に登録し、依頼者へ2週間に1回以上の頻度で業務処理状況を報告する。",
       sourceIds: ["mlit-standard-brokerage"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-17-002",
@@ -219,8 +219,8 @@
       proposedAnswerIndex: 0,
       explanation: "専属専任媒介契約では、指定流通機構へ5日以内に登録し、依頼者へ1週間に1回以上の頻度で業務処理状況を報告する。",
       sourceIds: ["mlit-standard-brokerage"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 0 }
     },
     {
       id: "takken-q-18-001",
@@ -239,8 +239,8 @@
       proposedAnswerIndex: 1,
       explanation: "宅建業法には、工事完了前の宅地・建物について、必要な許可等を受ける前に広告することを制限する規定がある。",
       sourceIds: ["mlit-interpretation-2026"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 1 }
     },
     {
       id: "takken-q-19-001",
@@ -259,8 +259,8 @@
       proposedAnswerIndex: 2,
       explanation: "宅建業法には、工事完了前物件について、必要な許可等を受ける前に売買等の契約を締結することを制限する規定がある。",
       sourceIds: ["mlit-interpretation-2026"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-20-001",
@@ -279,13 +279,14 @@
       proposedAnswerIndex: 3,
       explanation: "宅建業法は誇大広告等を禁止し、物件の所在・規模・形質、利用制限、環境、代金等に関する著しく事実と異なる表示などを規制する。",
       sourceIds: ["mlit-interpretation-2026"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 3 }
     }
   ];
 
   const ids = new Set();
   const stems = new Set();
+  const allowedStatuses = new Set(["pending_validation", "verified", "needs_revision", "rejected"]);
   for (const q of Q) {
     if (ids.has(q.id)) throw new Error(`Duplicate Takken question id: ${q.id}`);
     ids.add(q.id);
@@ -295,7 +296,7 @@
     if (!Array.isArray(q.choices) || q.choices.length !== 4) throw new Error(`Invalid choices: ${q.id}`);
     if (new Set(q.choices).size !== 4) throw new Error(`Duplicate choices: ${q.id}`);
     if (!Number.isInteger(q.proposedAnswerIndex) || q.proposedAnswerIndex < 0 || q.proposedAnswerIndex > 3) throw new Error(`Invalid answer index: ${q.id}`);
-    if (q.validationStatus !== "pending_validation") throw new Error(`Invalid validation status: ${q.id}`);
+    if (!allowedStatuses.has(q.validationStatus)) throw new Error(`Invalid validation status: ${q.id}`);
     if (q.examYear !== 2026 || q.lawAsOf !== "2026-04-01") throw new Error(`Invalid exam metadata: ${q.id}`);
   }
 
