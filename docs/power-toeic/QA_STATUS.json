@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1000,
-  "verified_question_count": 960,
-  "needs_revision_count": 40,
+  "checked_question_count": 1100,
+  "verified_question_count": 1040,
+  "needs_revision_count": 60,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-27-scheduled-021-part4",
-  "last_completed_micro_skill": "p5.verb.present_vs_past",
+  "last_completed_batch": "2026-08-27-scheduled-022",
+  "last_completed_micro_skill": "p5.verb.present_perfect_vs_past",
   "last_batch_counts": {
-    "checked": 25,
-    "verified": 21,
-    "needs_revision": 4,
+    "checked": 100,
+    "verified": 80,
+    "needs_revision": 20,
     "rejected": 0
   },
-  "next_batch": "2026-08-27-scheduled-022-part1",
-  "next_micro_skill": "p5.verb.present_perfect_vs_past",
-  "next_question_id": "p5_verb_present_perfect_vs_past_0001",
+  "next_batch": "2026-08-27-scheduled-023-part1",
+  "next_micro_skill": "p5.verb.active_vs_passive",
+  "next_question_id": "p5_verb_active_vs_passive_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-27T20:16:00+09:00"
+  "updated_at": "2026-08-27T21:13:00+09:00"
 }
