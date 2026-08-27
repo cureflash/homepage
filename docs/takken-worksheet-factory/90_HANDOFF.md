@@ -9,11 +9,11 @@ Canonical implementation: `qualifications/takken/`.
 
 ## Completed in this run
 
-Continued Phase 3 strictly from `takken-q-28-001` through `takken-q-40-001`, for a 25-question checkpoint.
+Continued Phase 3 strictly from `takken-q-40-002` through `takken-q-47-002`, stopping at the end of `pending-questions-28-47.js` for a safe 15-question file-boundary checkpoint.
 
-Covered topics included damages/penalties, contract-nonconformity special rules, non-owned property restrictions, installment-sale restrictions, brokerage fees, supervision/penalties, declaration of intent, mistake, fraud/duress, sham declarations, limited capacity, agency, and the first unauthorized-agency question.
+Covered topics were apparent authority, acquisitive/extinctive prescription, property-right transfer and opposability, co-ownership, mortgages, damages for default, cancellation, simultaneous-performance defense and risk allocation.
 
-Every item was independently re-solved, then compared with the stored answer/explanation and checked against the 2026-04-01 legal baseline using current e-Gov/MLIT primary or official sources. Results this run: **checked 25 / verified 25 / needs_revision 0 / rejected 0**. No question text, choices, proposed answer, explanation or source reference required correction.
+Every item was independently re-solved before comparing with the stored answer/explanation. The current Civil Code source was reopened through e-Gov and checked against the canonical `2026-04-01` legal baseline. Results this run: **checked 15 / verified 15 / needs_revision 0 / rejected 0**. No question text, choices, proposed answer, explanation or source reference required correction.
 
 No Phase 4 work was started.
 
@@ -23,12 +23,12 @@ No Phase 4 work was started.
 - Question-covered units: 90/90
 - Covered core facts: 163/163
 - Generated four-choice questions: 163
-- Checked questions: 62
-- Verified questions: 62
+- Checked questions: 77
+- Verified questions: 77
 - Needs revision: 0
 - Rejected: 0
-- Pending validation questions: 101
-- Fully verified units: 39
+- Pending validation questions: 86
+- Fully verified units: 47
 - `question_generation_complete`: true
 - `generation_complete`: true
 - `validation_complete`: false
@@ -37,7 +37,7 @@ No Phase 4 work was started.
 
 Continue Phase 3 at:
 
-`takken-q-40-002`
+`takken-q-48-001`
 
 Process questions strictly in ID/order sequence. Prefer 25-question checkpoints, but file/content boundaries and legal-source verification take priority over count targets.
 
