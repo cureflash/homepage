@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1225,
-  "verified_question_count": 1160,
+  "checked_question_count": 1250,
+  "verified_question_count": 1185,
   "needs_revision_count": 65,
   "rejected_question_count": 0,
   "pending_validation_count": 975,
-  "last_completed_batch": "2026-08-27-scheduled-024-modal-part1",
-  "last_completed_micro_skill": "p5.verb.active_vs_passive",
+  "last_completed_batch": "2026-08-27-scheduled-025-modal-part2",
+  "last_completed_micro_skill": "p5.verb.modal_base_form",
   "last_batch_counts": {
     "checked": 25,
     "verified": 25,
     "needs_revision": 0,
     "rejected": 0
   },
-  "next_batch": "2026-08-27-scheduled-024-modal-part2",
+  "next_batch": "2026-08-27-scheduled-025-modal-part3",
   "next_micro_skill": "p5.verb.modal_base_form",
-  "next_question_id": "p5_verb_modal_base_form_0026",
+  "next_question_id": "p5_verb_modal_base_form_0051",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-27T23:16:00+09:00"
+  "updated_at": "2026-08-27T23:59:00+09:00"
 }
