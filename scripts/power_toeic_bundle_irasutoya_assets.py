@@ -101,7 +101,8 @@ def main():
         if not dims:
             raise RuntimeError(f"invalid PNG for {asset['resource_name']}")
         width, height = dims
-        if width < 300 or height < 300:
+        short_side, long_side = sorted((width, height))
+        if short_side < 200 or long_side < 300:
             raise RuntimeError(f"unexpectedly small image for {asset['resource_name']}: {width}x{height}")
         digest = hashlib.sha256(data).hexdigest()
         filename = asset["resource_name"] + ".png"
