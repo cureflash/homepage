@@ -2,36 +2,35 @@
 
 ## Current QA state
 
-- Checked: **700**
-- Verified: **669**
+- Checked: **725**
+- Verified: **694**
 - Needs revision: **31**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,025**
 - `generation_complete`: `false`
 - `validation_complete`: `false`
 
-## Latest completed QA batch
+## Latest completed QA checkpoint
 
-Micro-skill: `p5.pos.word_form_subject_position`
-Batch: `2026-08-27-scheduled-017`
+Micro-skill: `p5.pos.word_form_object_position`
+Batch: `2026-08-27-scheduled-018-part1`
+Range: `0001-0025`
 
 Result:
-- checked 100
-- verified 99
-- needs_revision 1
+- checked 25
+- verified 25
+- needs_revision 0
 - rejected 0
 
-Only `p5_pos_word_form_subject_position_0038` failed unique-answer review. `security` is the intended noun, but `securing of confidential documents` is a defensible gerundial nominalization in the displayed context. Leave it out of the approved gate until rewritten and rechecked.
-
-No stored proposed-answer mismatches were found in the other 99 items. Full-bank semantic near-duplicate clearance is not claimed.
+Each item was independently solved from stem + choices before reading the stored proposed answer/explanation. All 25 require the stored noun form in the displayed object or noun-phrase position; no answer-key mismatch or defensible alternate option was found in this checkpoint. Full-bank semantic near-duplicate clearance is not claimed.
 
 ## Next QA
 
-Resume with the oldest unchecked skill:
+Continue the same oldest unchecked skill:
 
 `p5.pos.word_form_object_position`
 
 Start ID:
-`p5_pos_word_form_object_position_0001`
+`p5_pos_word_form_object_position_0026`
 
-Continue independent re-solving from stem + choices before reading stored proposed answers or explanations.
+Continue independent re-solving from stem + choices before reading stored proposed answers or explanations. Work in 25-question safe checkpoints.
