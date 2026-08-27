@@ -1,4 +1,5 @@
 import json,re,sys,tempfile
+from fractions import Fraction
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT))
 from scripts import publish_jh2_fractional_simultaneous_equations as fracmod
@@ -23,6 +24,12 @@ def main():
     seen=set()
     for p in ps:
      a=module.ans(p); assert a==p['answer']; k=json.dumps(p,ensure_ascii=False,sort_keys=True); assert k not in seen; seen.add(k)
+     if p.get('type')=='linear-function-equation-from-two-points':
+      assert p['x1'] != p['x2']
+      m=Fraction(p['y2']-p['y1'],p['x2']-p['x1'])
+      b=Fraction(p['y1'])-m*p['x1']
+      assert linmod.eq(m,b)==p['answer']
+      assert m*p['x1']+b==p['y1'] and m*p['x2']+b==p['y2']
     h=normalized_hash(ps); assert h not in hashes and h not in old; hashes.add(h)
  with tempfile.TemporaryDirectory() as td:
   root=Path(td); (root/'worksheets').mkdir(); (root/'worksheets/catalog.json').write_text('[]\n',encoding='utf-8')
