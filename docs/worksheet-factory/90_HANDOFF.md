@@ -1,14 +1,12 @@
 # Worksheet Factory — handoff
 
-Updated: 2026-08-27
+Updated: 2026-08-28
 
 ## Shared catalog writer safety
 
-The former P1 concurrent-writer risk on authoritative `worksheets/catalog.json` is resolved.
+The former P1 concurrent-writer risk on authoritative `worksheets/catalog.json` remains resolved.
 
-All workflows that directly publish the shared worksheet catalog use repository-wide GitHub Actions concurrency group `worksheet-catalog-publish-v1` with `cancel-in-progress: false`. The static guard `tests/test_worksheet_catalog_writer_concurrency.py` protects the known writer set and rejects uncaptured/private concurrency groups.
-
-Future worksheet publishers that write the shared catalog must remain inside this concurrency group. Preserve latest-main reconciliation, non-force pushes, catalog/hash validation, and stable URLs.
+All workflows that directly publish the shared worksheet catalog must use repository-wide GitHub Actions concurrency group `worksheet-catalog-publish-v1` with `cancel-in-progress: false`. Preserve `tests/test_worksheet_catalog_writer_concurrency.py`, latest-main reconciliation, non-force pushes, catalog/hash validation, and stable URLs.
 
 ## Current math factory state
 
@@ -20,29 +18,36 @@ Completed grades:
 - 小学4年: done
 - 小学5年: done
 - 小学6年: done
+- 中学1年: done
 
-Elementary planned coverage is now complete through Grade 6.
-
-Grade 6 final total: **15 skills / 45 PDFs**.
+中学1年の計画済み範囲は **20 skills / 60 PDFs** で完了した。
 
 Latest completed batch:
 
-- `unit-conversion-numeric` — 単位換算を含む数値練習 — 3 PDFs
-- `elementary-four-operations-review` — 小学校6年間の四則総復習 — 3 PDFs
-- `five-minute-calculation-challenge` — 5分間計算チャレンジ — 3 PDFs
+- `linear-equation-decimal` — 小数を含む一次方程式 — 3 PDFs
+- `linear-equation-fraction` — 分数を含む一次方程式 — 3 PDFs
+- `proportion-equation` — 比例式型の方程式 — 3 PDFs
+- `proportional-inverse-substitution` — 比例・反比例の式への代入 — 3 PDFs
 
-The timed challenge uses 40 questions per PDF; the other two use 20 questions per PDF. All use deterministic seeds, independent answer recomputation, problem/variant/content-hash duplicate checks, 2-page PDFs, ordinary integer problem numbering, same-layout red answers, catalog validation, common Factory regression, and catalog-writer concurrency validation.
+各PDFは20問。deterministic seed、independent answer recomputation、problem/variant/content-hash duplicate checks、2-page PDFs、ordinary integer numbering、same-layout red answers、catalog validation、common Factory regression、catalog-writer concurrency validationを維持した。
 
-Grade 6 final workflow run `33070402501` succeeded. Publish commit: `13bbc66c66e2069dd1051e4f6a81ada8dc67f1d7`.
+Publish commit: `8a3db9e099779331662d2cb43822113b658667d2`.
 
 ## Exact next starting point
 
-The next active grade is **中学1年**.
+The next active grade is **中学2年**.
 
 Read only:
 
-- `curriculum/junior-high/grade-01/STATUS.json`
-- `curriculum/junior-high/grade-01/PLAN.md`
-- `curriculum/junior-high/grade-01/HANDOFF.md` if present
+- `curriculum/junior-high/grade-02/STATUS.json`
+- `curriculum/junior-high/grade-02/PLAN.md`
+- `curriculum/junior-high/grade-02/HANDOFF.md` if present
 
-Start from the first unfinished Grade 1 junior-high calculation skill. Before publishing any new topic, confirm placement against the current MEXT junior-high mathematics curriculum. Continue the same deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
+Start from the first unfinished Grade 2 junior-high skill. The first four candidates are:
+
+1. 単項式の乗法
+2. 単項式の除法
+3. 多項式の加法
+4. 多項式の減法
+
+Before publication, confirm placement against the current MEXT junior-high mathematics curriculum. Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
