@@ -10,71 +10,64 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 620 PDFs
-- total published physics: 1778 PDFs
+- formal `物理`: 680 PDFs
+- total published physics: 1838 PDFs
 
 Formal `物理` currently has:
 
 - `様々な運動：平面運動と放物運動`: 330 PDFs
 - `様々な運動：剛体のつり合い`: 200 PDFs
-- `様々な運動：運動量と力積`: 90 PDFs
+- `様々な運動：運動量と力積`: 150 PDFs
 
-All 620 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, numeric answers, 20 problems, and unique normalized content hashes. The formal-Physics publish workflow validates every registered PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
+All 680 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, numeric answers, 20 problems, and unique normalized content hashes. The formal-Physics publish workflow validates every registered PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
 
-## Reconciliation completed this run
+## Completed this run — basic momentum conservation, 60 PDFs
 
-The previous STATUS/HANDOFF was stale relative to `main`. Do not regenerate these checkpoints:
+The current MEXT High School Course of Study Commentary for formal Physics was rechecked. It explicitly places momentum conservation under `運動量` and states that collisions or divisions of bodies are used to understand the law of conservation of momentum. The next curriculum topic after this area is collision and mechanical energy.
 
-- PR #143 had already added/published `rigid-body-two-force-moment-balance`: 4 one-unknown modes × 10 seeds = 40 PDFs using shared reversible `equal-products`, with learner-visible `F₁d₁ = F₂d₂`, CCW-positive/CW-negative convention, independent recomputation, corrupted-answer rejection, deterministic regeneration, and hash collision checks. Publication commit: `3a8998a9b85e6e0647f2b9fb9c3ab646be3ab75e`.
-- PR #144 had already added/published `rigid-body-two-mass-center-of-gravity`: 4 modes × 10 seeds = 40 PDFs using the same validated `equal-products` relation and massless-rod model `m₁d₁ = m₂d₂`. Publication commit: `c1e96fab75fe0e722fc7bef27df9604d2ac39d38`.
+Two contiguous machine-verifiable checkpoints were added:
 
-Those 80 PDFs moved formal `物理` from 450 to 530 before the new momentum work below.
+1. `momentum-conservation-total-before-after` — 30 PDFs
+   - learner-visible conservation `P前=P後`
+   - uses `P前=p₁前+p₂前`
+   - direct final total momentum / reverse either initial body momentum
+   - shared reversible `sum` relation reused
+2. `momentum-conservation-final-object` — 30 PDFs
+   - `p₂後=P前-p₁後` with `P前=P後`
+   - direct one final-body momentum / reverse initial total / reverse the other final-body momentum
+   - shared reversible `difference` relation reused
 
-## Completed this run — momentum and impulse, 90 PDFs
+Both checkpoints are restricted to one-dimensional two-body collisions. Right is explicitly positive and left negative. The learner-facing descriptions state that the impulse of external forces can be neglected; no rest condition or sign convention is hidden in generator state.
 
-Current MEXT High School Course of Study Commentary for formal Physics was rechecked. The curriculum explicitly treats momentum and impulse, states that momentum and impulse are vectors, and states that change in momentum equals impulse. Momentum conservation is the next natural checkpoint.
+Implementation and validation:
 
-Three contiguous machine-verifiable checkpoints were added:
-
-1. `momentum-one-dimensional` — 30 PDFs
-   - `p = mv`
-   - direct momentum / reverse mass / reverse velocity
-   - right positive, left negative explicitly shown to the learner
-2. `impulse-one-dimensional` — 30 PDFs
-   - `J = FΔt`
-   - direct impulse / reverse force / reverse duration
-   - right positive, left negative explicitly shown
-3. `momentum-change-from-impulse` — 30 PDFs
-   - `Δp = FΔt`
-   - directly reinforces that impulse equals momentum change
-   - direct momentum change / reverse force / reverse duration
-
-Implementation details:
-
-- PR #145 merge commit: `b350c6315ec93cffee726b19077c14997b116398`
-- no shared formula relation was added; all three checkpoints reuse the existing reversible `product`
+- implementation PR #148 merge commit: `491e567e5503823afae3596e3bd9c7405061ead9`
+- no new shared formula relation was needed; existing `sum` and `difference` were sufficient
 - each checkpoint uses 10 deterministic seeds × 3 modes, 20 problems per worksheet
-- tests independently recompute answers from learner-visible values, require deterministic regeneration, reject corrupted answers, require both positive and negative signed results, require 90/90 new normalized hashes to be unique, and require disjointness from the existing catalog
-- publisher/workflow contract increased from 530 to 620 formal-Physics rows and 620 unique hashes
-- publication Actions run `33063263309`: success
-- publication commit: `ae51ee300bb376c24eb873bb93d592de169b050e`
-- the successful run covered shared worksheet tests, formula-relation regression, projectile tests, rigid-body tests, momentum tests, PDF generation, post-generation revalidation, complete catalog validation, PDF header/size/two-page checks, and latest-main safe push
+- momentum/impulse tests now cover 5 checkpoints / 150 worksheet variants
+- tests independently recompute every answer from learner-visible values, require deterministic regeneration, reject corrupted answers, require positive and negative signed results, require 150/150 momentum-family normalized hashes to be unique, and require disjointness from the existing catalog
+- publisher/workflow contract increased from 620 to 680 formal-Physics rows and from 90 to 150 rows in `様々な運動：運動量と力積`
+- the first publication run attempt stopped only because the new test required exact text `P前=P後` while the displayed formula had spaces; the learner-visible formula was normalized by commit `eb882668dd0b2e44894feb0cc664fa3271941680`
+- publication commit: `4b10c1549283d8051013fd8f6f1eb01c3ebd055f`
+- Actions run `33066240727`, attempt 2: success
+- the successful validation reported `Formal Physics 680-PDF catalog validation: OK`; all shared worksheet tests, formula relations, projectile, rigid-body, momentum tests, catalog validation, `%PDF`, size, and two-page checks passed
+- the attempt-2 publisher reported no generated changes because the fixed latest `main` already contained the publication commit; it still revalidated the complete 680-PDF state successfully
 
 The repository-wide shared catalog serialization remains `worksheet-catalog-publish-v1` with `cancel-in-progress: false`; do not bypass it.
 
 ## Exact next starting point
 
-Continue formal course **`物理：運動量と力積 / 運動量保存`**.
+Continue formal course **`物理：運動量と力積 / 運動量保存`** at the full mass-and-velocity form.
 
 1. Start from latest `main`; re-read `00_MASTER_INSTRUCTIONS.md`, `20_EXECUTION_PLAN.md`, `STATUS.json`, and this HANDOFF, then reconcile any parallel progress.
-2. Recheck the current MEXT formal-Physics wording and a reliable mechanics reference before implementation.
-3. Keep `formal_course=物理`, `grade=null`, and one-dimensional learner-visible sign convention for the first conservation checkpoint.
-4. Begin with the simplest two-body collision or separation model whose total momentum before and after is equal. Exactly one quantity may be unknown.
-5. Any initial-at-rest condition, direction convention, or mass/velocity assumption must be learner-visible; never hide it only in generator state.
-6. Do not force momentum conservation into the existing `product` relation. If the chosen model needs a new sum/equality relation, implement an explicit invertible contract and add independent direct/reverse regression tests, zero/invalid-denominator rejection, bad-arity rejection, and corrupted-answer rejection.
-7. Require deterministic seed regeneration, independent answer recomputation from visible values, normalized-hash uniqueness and collision checks against the existing catalog, 20-problem/two-page output, complete catalog validation, and structural PDF checks.
+2. Recheck the current MEXT wording before implementation.
+3. Design the simplest one-dimensional two-body relation `m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂` with exactly one unknown velocity.
+4. Keep `formal_course=物理`, `grade=null`, right-positive/left-negative direction, and the condition that external impulse is negligible learner-visible.
+5. Any initial-at-rest assumption must be explicit in the problem; do not hide it only in generator state.
+6. Add a new shared reversible relation only if the full equation cannot be represented safely by existing relations. If added, require direct/reverse regression, invalid/zero-denominator rejection, bad-arity rejection, and independent solver validation.
+7. Require deterministic seed regeneration, independent answer recomputation from visible values, corrupted-answer rejection, normalized-hash uniqueness and collision checks against the existing catalog, 20-problem/two-page output, complete catalog validation, and structural PDF checks.
 8. Preserve `worksheet-catalog-publish-v1` serialization and non-force latest-main push safety.
-9. After basic momentum conservation, continue only if a nearby checkpoint can reuse the same mechanically verified relation safely. Do not manufacture a fourth checkpoint for count alone.
+9. If this full conservation checkpoint becomes stable, nearby collision/separation variants may follow in the same run only when the same verified solver contract can be reused without hidden assumptions.
 10. Representative screenshot-based visual QA remains pending; structural PDF QA is not a substitute for visual QA.
 
-This run stops after three new checkpoints (90 PDFs) because the next natural topic changes from a single reversible product to equality of total momentum before and after and therefore deserves its own explicit solver/validation boundary.
+This run stops after two new checkpoints (60 PDFs). The next step changes from direct manipulation of already-computed momenta to the full four mass/velocity momentum equation and may require a new reversible solver contract, so it is a deliberate safety boundary rather than a throughput limit.
