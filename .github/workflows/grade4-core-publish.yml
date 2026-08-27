@@ -22,6 +22,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: worksheet-catalog-publish-v1
+  cancel-in-progress: false
 jobs:
   publish:
     runs-on: ubuntu-24.04

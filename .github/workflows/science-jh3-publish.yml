@@ -15,7 +15,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: science-jh3-publish
+  group: worksheet-catalog-publish-v1
   cancel-in-progress: false
 
 jobs:

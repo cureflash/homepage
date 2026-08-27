@@ -10,6 +10,14 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+
+# All worksheet publishers that mutate worksheets/catalog.json share this
+# repository-wide group so math and science cannot validate/publish stale
+# catalog snapshots concurrently.
+concurrency:
+  group: worksheet-catalog-publish-v1
+  cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-24.04
