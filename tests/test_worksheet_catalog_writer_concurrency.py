@@ -25,6 +25,7 @@ class WorksheetCatalogWriterConcurrencyTests(unittest.TestCase):
             "grade5-core-publish.yml",
             "grade6-core-publish.yml",
             "math-jh1-publish.yml",
+            "math-jh2-publish.yml",
             "science-jh1-publish.yml",
             "science-jh2-publish.yml",
             "science-jh3-publish.yml",
