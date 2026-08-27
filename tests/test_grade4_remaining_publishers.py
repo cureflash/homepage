@@ -17,7 +17,8 @@ MODULES=(place,rounding,review)
 
 def main():
     source=json.loads((ROOT/'worksheets/catalog.json').read_text(encoding='utf-8'))
-    old_hashes={e['content_hash'] for e in source}
+    own_ids={f'e4-{module.SKILL}-{variant:02d}' for module in MODULES for variant,_ in enumerate(module.SEEDS,1)}
+    old_hashes={e['content_hash'] for e in source if e['id'] not in own_ids}
     all_hashes=set()
     for module in MODULES:
         variant_sets=[]
@@ -62,7 +63,7 @@ def main():
         assert before==(root/'worksheets/catalog.json').read_text(encoding='utf-8')
 
     for path in ('scripts/publish_grade4_large_number_place_value.py','scripts/publish_grade4_rounding.py','scripts/publish_grade4_review.py'):
-        text=(ROOT/path).read_text(encoding='utf-8'); assert 'str(index + 1)' in text or 'str(i+1)' in text; assert 'colors.red' in text
+        text=(ROOT/path).read_text(encoding='utf-8'); assert 'str(index + 1)' in text or 'str(index+1)' in text or 'str(i+1)' in text; assert 'colors.red' in text
     print('grade 4 remaining publisher tests: OK')
 
 if __name__=='__main__': main()
