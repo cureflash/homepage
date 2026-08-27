@@ -1,9 +1,10 @@
 """Formal-course Physics topics for rigid-body equilibrium.
 
 This module covers machine-verifiable rigid-body checkpoints: force moment,
-weight moment, couple moment, signed net moment about one pivot, and two-force
-moment equilibrium. Lever-arm geometry is learner-visible. For signed moments
-the convention is explicitly counterclockwise positive and clockwise negative.
+weight moment, couple moment, signed net moment about one pivot, two-force
+moment equilibrium, and a two-mass center-of-gravity balance model. Lever-arm
+geometry is learner-visible. For signed moments the convention is explicitly
+counterclockwise positive and clockwise negative.
 
 Curriculum basis: MEXT High School Course of Study Commentary, Science / Math,
 Physics (1) Various motions: plane motion and equilibrium of rigid bodies.
@@ -107,6 +108,32 @@ PHYSICS_RIGID_BODY_TOPICS = {
             "balance-left-arm": {"solve_for": "left_arm", "worksheet_mode": "calculation-reverse", "description": "反時計回りを正、時計回りを負とし、正味のモーメントが0である2力のつり合い F₁d₁ = F₂d₂ から左側の腕 d₁ を逆算します。"},
             "balance-right-force": {"solve_for": "right_force", "worksheet_mode": "calculation-reverse", "description": "反時計回りを正、時計回りを負とし、正味のモーメントが0である2力のつり合い F₁d₁ = F₂d₂ から右側の力 F₂ を逆算します。"},
             "balance-right-arm": {"solve_for": "right_arm", "worksheet_mode": "calculation-reverse", "description": "反時計回りを正、時計回りを負とし、正味のモーメントが0である2力のつり合い F₁d₁ = F₂d₂ から右側の腕 d₂ を逆算します。"},
+        },
+    },
+    "rigid-body-two-mass-center-of-gravity": {
+        "title": "物理 剛体 2物体の重心",
+        "unit": "様々な運動：剛体のつり合い",
+        "skill": "rigid-body-two-mass-center-of-gravity",
+        "formula": "m₁d₁ = m₂d₂（質量を無視できる棒、重心Gまわりの重力のモーメントがつり合う）",
+        "seeds": tuple(range(7351, 7361)),
+        "spec": {
+            "id": "physics-rigid-body-two-mass-center-of-gravity",
+            "relation": "equal-products",
+            "result": "left_mass",
+            "inputs": ["left_distance", "right_mass", "right_distance"],
+            "variables": {
+                "left_mass": {"label": "重心 G の左側にあるおもりの質量 m₁", "unit": "kg"},
+                "left_distance": {"label": "重心 G から左側のおもりまでの距離 d₁", "unit": "m", "values": [0.25, 0.5, 1.0, 2.0]},
+                "right_mass": {"label": "重心 G の右側にあるおもりの質量 m₂", "unit": "kg", "values": [1, 2, 3, 4, 5, 6, 8, 10, 12, 16]},
+                "right_distance": {"label": "重心 G から右側のおもりまでの距離 d₂", "unit": "m", "values": [0.25, 0.5, 1.0, 2.0]},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "center-left-mass": {"solve_for": "left_mass", "worksheet_mode": "calculation-basic", "description": "質量を無視できる棒の両側に2つのおもりがあり、その重心を G とします。同じ重力加速度のもとで重心 G まわりの重力のモーメントがつり合う条件 m₁d₁ = m₂d₂ から左側の質量 m₁ を求めます。"},
+            "center-left-distance": {"solve_for": "left_distance", "worksheet_mode": "calculation-reverse", "description": "質量を無視できる棒の両側に2つのおもりがあり、その重心を G とします。同じ重力加速度のもとで m₁d₁ = m₂d₂ から重心 G と左側のおもりの距離 d₁ を逆算します。"},
+            "center-right-mass": {"solve_for": "right_mass", "worksheet_mode": "calculation-reverse", "description": "質量を無視できる棒の両側に2つのおもりがあり、その重心を G とします。同じ重力加速度のもとで m₁d₁ = m₂d₂ から右側の質量 m₂ を逆算します。"},
+            "center-right-distance": {"solve_for": "right_distance", "worksheet_mode": "calculation-reverse", "description": "質量を無視できる棒の両側に2つのおもりがあり、その重心を G とします。同じ重力加速度のもとで m₁d₁ = m₂d₂ から重心 G と右側のおもりの距離 d₂ を逆算します。"},
         },
     },
 }
