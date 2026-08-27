@@ -3,11 +3,11 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 1975,
-  "checked_question_count": 975,
+  "generated_question_count": 2000,
+  "checked_question_count": 1000,
   "pending_validation_count": 1000,
-  "verified_question_count": 939,
-  "needs_revision_count": 36,
+  "verified_question_count": 960,
+  "needs_revision_count": 40,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
@@ -28,16 +28,17 @@
     "p5.verb.causative_have_make_let",
     "p5.verb.conditional_form",
     "p5.verb.participle_clause",
-    "p5.conn.preposition_vs_conjunction"
+    "p5.conn.preposition_vs_conjunction",
+    "p5.conn.because_vs_because_of"
   ],
-  "current_batch": "2026-08-27-scheduled-021-part3",
-  "current_micro_skill": "p5.conn.because_vs_because_of",
-  "current_micro_skill_persisted_count": 75,
+  "current_batch": "2026-08-27-scheduled-021-part4",
+  "current_micro_skill": "p5.conn.despite_vs_although",
+  "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_conn_because_vs_because_of_0076",
-  "next_micro_skill": "p5.conn.because_vs_because_of",
+  "next_resume_id": "p5_conn_despite_vs_although_0001",
+  "next_micro_skill": "p5.conn.despite_vs_although",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Generated p5.conn.because_vs_because_of IDs 0051-0075 as a safe 25-question checkpoint. The batch preserves one blank, four distinct choices, varied business contexts, and an alternating noun-phrase/clause distinction with proposed answer positions distributed A/B/C/D=7/6/6/6. All 25 remain pending_validation. Independently validated the oldest unchecked p5.verb.present_vs_past IDs 0051-0075: 25 checked, 22 verified, 3 needs_revision, 0 rejected. IDs 0057, 0062, and 0074 lack an unambiguous completed-past anchor because weekday possessives alone do not guarantee past time; they remain out of the verified gate. Cumulative QA checked 975, verified 939, needs_revision 36, rejected 0; unchecked pending_validation remains 1,000 because generation and QA each advanced by 25. Next generation is p5.conn.because_vs_because_of_0076; next QA is p5.verb.present_vs_past_0076. Full cross-bank semantic near-duplicate scanning remains incomplete.",
-  "updated_at": "2026-08-27T19:18:00+09:00"
+  "last_run_result": "Completed p5.conn.because_vs_because_of IDs 0076-0100, bringing that micro-skill to 100/100 and total generation to 2,000 questions across 20 completed micro-skills. The new 25-question checkpoint keeps one blank, four distinct choices, varied business contexts, explicit noun-phrase versus full-clause structure, and all items remain pending_validation. Independently validated the oldest unchecked p5.verb.present_vs_past IDs 0076-0100: 25 checked, 21 verified, 4 needs_revision, 0 rejected. IDs 0080, 0083, 0085, and 0094 use unanchored weekday expressions that do not uniquely force a completed-past reading. Cumulative QA is now 1,000 checked, 960 verified, 40 needs_revision, 0 rejected; unchecked pending_validation remains 1,000 because generation and QA each advanced by 25. Next generation is p5.conn.despite_vs_although_0001; next QA is p5.verb.present_perfect_vs_past_0001. Full cross-bank semantic near-duplicate scanning remains incomplete and verified does not yet mean production-approved.",
+  "updated_at": "2026-08-27T20:16:00+09:00"
 }
