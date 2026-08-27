@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "app_store_name": "Power TOEIC",
+  "subtitle_ja": "弱点を問題数で鍛えるTOEIC特訓",
+  "primary_category": "Education",
+  "minimum_ios": "17.0",
+  "privacy_policy_repo_path": "subjects/english/power-toeic/privacy.html",
+  "privacy_policy_url": "RELEASE_INPUT_REQUIRED",
+  "bundle_identifier": "RELEASE_INPUT_REQUIRED",
+  "sku": "RELEASE_INPUT_REQUIRED",
+  "apple_team_id": "RELEASE_INPUT_REQUIRED",
+  "marketing_version": "RELEASE_INPUT_REQUIRED",
+  "build_number": "RELEASE_INPUT_REQUIRED",
+  "app_store_privacy": {
+    "tracking": false,
+    "data_collected_by_current_ios_runtime": false,
+    "review_before_submission": true,
+    "notes": "Current native runtime stores attempts, review entries and progression locally. No analytics, ads, tracking SDK or server upload is implemented. Re-audit if reporting/sync/analytics is added."
+  },
+  "required_reason_apis": [
+    {
+      "category": "NSPrivacyAccessedAPICategoryUserDefaults",
+      "reason": "CA92.1",
+      "purpose": "Read and write app-only learning state."
+    }
+  ],
+  "screenshots": {
+    "required_count_min": 1,
+    "required_count_max": 10,
+    "formats": ["jpeg", "jpg", "png"],
+    "preferred_capture": "highest-resolution supported iPhone screenshot set",
+    "status": "RELEASE_ASSETS_REQUIRED"
+  },
+  "app_icon": {
+    "source_size_px": "1024x1024",
+    "asset_catalog_name": "AppIcon",
+    "status": "ORIGINAL_RELEASE_ART_REQUIRED",
+    "temporary_irasutoya_allowed_for_store_icon": false
+  }
+}

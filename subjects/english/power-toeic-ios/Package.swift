@@ -28,6 +28,9 @@ let package = Package(
                 "Views/Result/README.md",
                 "Views/Weakness/README.md",
                 "Views/Character/README.md"
+            ],
+            resources: [
+                .process("Resources/PrivacyInfo.xcprivacy")
             ]
         ),
         .testTarget(
