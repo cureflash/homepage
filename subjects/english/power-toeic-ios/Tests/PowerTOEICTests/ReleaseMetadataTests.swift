@@ -28,10 +28,18 @@ final class ReleaseMetadataTests: XCTestCase {
         let audio = try XCTUnwrap(root["audio"] as? [String: Any])
 
         let planned = try XCTUnwrap(character["planned_unique_assets"] as? Int)
+        let bundled = try XCTUnwrap(character["bundled_unique_assets"] as? Int)
         let limit = try XCTUnwrap(character["commercial_unique_asset_limit_without_paid_handling"] as? Int)
         XCTAssertLessThan(planned, limit)
-        XCTAssertEqual(audio["required_credit"] as? String, "OtoLogic (CC BY 4.0) / https://otologic.jp/")
+        XCTAssertEqual(planned, 4)
+        XCTAssertEqual(bundled, planned)
 
+        let characterAssets = try XCTUnwrap(character["assets"] as? [[String: Any]])
+        XCTAssertEqual(characterAssets.count, 4)
+        XCTAssertTrue(characterAssets.allSatisfy { ($0["bundle_status"] as? String) == "bundled" })
+        XCTAssertTrue(characterAssets.allSatisfy { ($0["sha256"] as? String)?.count == 64 })
+
+        XCTAssertEqual(audio["required_credit"] as? String, "OtoLogic (CC BY 4.0) / https://otologic.jp/")
         let assets = try XCTUnwrap(audio["assets"] as? [[String: Any]])
         XCTAssertEqual(assets.count, 3)
         XCTAssertTrue(assets.allSatisfy { ($0["bundle_status"] as? String) == "bundled" })
@@ -78,14 +86,11 @@ final class ReleaseMetadataTests: XCTestCase {
         XCTAssertEqual(owned["in_app_credits"], "complete")
         XCTAssertEqual(owned["native_audio_adapter"], "complete")
         XCTAssertEqual(owned["otologic_audio_assets_bundled"], "complete")
+        XCTAssertEqual(owned["temporary_character_assets_bundled"], "complete")
         XCTAssertEqual(owned["final_app_icon"], "blocked")
-        XCTAssertEqual(owned["temporary_character_assets_bundled"], "blocked")
 
         let blockers = try XCTUnwrap(root["repository_blockers"] as? [[String: String]])
-        XCTAssertEqual(Set(blockers.compactMap { $0["id"] }), Set([
-            "final_app_icon",
-            "temporary_character_assets_bundled"
-        ]))
+        XCTAssertEqual(Set(blockers.compactMap { $0["id"] }), Set(["final_app_icon"]))
     }
 
     func testCreditsViewContainsExactOtoLogicAttribution() throws {
