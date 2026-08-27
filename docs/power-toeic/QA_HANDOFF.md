@@ -2,8 +2,8 @@
 
 ## Current counts
 
-- Checked: **500**
-- Verified: **470**
+- Checked: **600**
+- Verified: **570**
 - Needs revision: **30**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,100**
@@ -12,26 +12,28 @@
 
 ## Latest completed QA batch
 
-Skill: `p5.pos.adjective_after_linking_verb`
-Source batch: `batch-20260826-001`
+Skill: `p5.pos.participle_adjective_ed_ing`
+Source batch: `batch-20260826-003`
 Checked: **100**
-Verified: **96**
-Needs revision: **4**
+Verified: **100**
+Needs revision: **0**
 Rejected: **0**
 
 Record:
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-015-adjective-after-linking-verb.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-016-participle-adjective-ed-ing.qa.json`
 
 Approved-ID gate:
-`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/adjective-after-linking-verb/verified/batch-20260826-001-approved-ids.json`
+`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/participle-adjective-ed-ing/verified/batch-20260826-003-approved-ids.json`
 
-The excluded IDs are `0037`, `0038`, `0039`, and `0040`. Each contains both `secure` and `secured` as defensible complements in the displayed context, so the item fails the unique-answer gate and remains `needs_revision`.
+All 100 were independently re-solved from stem + choices before comparing the stored proposed answer and explanation. Each item retained one clear answer, natural business context, the intended `-ed / -ing` participial-adjective distinction, and an explanation consistent with the independently selected answer. No exact duplicate stems were observed within this reviewed batch. Answer positions were A/B/C/D = 25/25/25/25. A full semantic duplicate scan against the entire question bank was not completed in this checkpoint.
 
-No proposed-key mismatches were found among the 96 approved items. Exact duplicate stems were not observed within this reviewed batch. A full cross-bank semantic duplicate scan was not completed in this checkpoint.
+## Reconciliation note
+
+The previous QA pointer to `p5.pos.adverb_modifies_adjective` was stale. That skill had already been independently validated in an earlier checkpoint at **87 verified / 13 needs_revision**. Its stricter existing QA record and approved-ID gate were preserved. A duplicate QA artifact created before detecting the stale pointer was removed; no established result was overwritten.
 
 ## Next QA start
 
-Skill: `p5.pos.adverb_modifies_adjective`
-Question: `p5_pos_adverb_modifies_adjective_0001`
+Skill: `p5.pos.word_form_subject_position`
+Question: `p5_pos_word_form_subject_position_0001`
 
 Independently solve stem + choices first. Only then inspect stored proposed answer/explanation. Keep checked and verified counts separate; stop at a 25-question checkpoint rather than batch-approving uncertain material.
