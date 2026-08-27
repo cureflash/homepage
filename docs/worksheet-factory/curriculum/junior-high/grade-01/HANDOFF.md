@@ -4,51 +4,55 @@
 
 ## 今回完了
 
-中学1年の先頭4 checkpointを連続で実装・公開した。
+中学1年の次の4 checkpointを連続で実装・公開した。
 
-1. `signed-addition` — 正負の数の加法 — 3 variants / 3 PDFs
-2. `signed-subtraction` — 正負の数の減法 — 3 variants / 3 PDFs
-3. `signed-multiplication` — 正負の数の乗法 — 3 variants / 3 PDFs
-4. `signed-division` — 正負の数の除法 — 3 variants / 3 PDFs
+1. `signed-mixed-four-operations` — 正負の数の四則混合 — 3 variants / 3 PDFs
+2. `signed-parentheses-powers` — かっこ・累乗を含む計算 — 3 variants / 3 PDFs
+3. `prime-identification` — 素数判定の基礎 — 3 variants / 3 PDFs
+4. `prime-factorization` — 素因数分解 — 3 variants / 3 PDFs
 
-各PDFは20問。除法は商が整数になる問題だけを生成する。
+各PDFは20問。
 
-## 検証契約
+## 実装
 
-- deterministic seed再生成
-- 保存済みanswerに依存しない `independent_answer()` 再計算
-- 問題内重複、variant間差、既存catalogとのnormalized content hash衝突検査
-- 符号パターンが単一に偏らないこと
-- 除法の0除算禁止・整数商条件
-- 2ページPDF
-- 通常整数の問題番号
-- 問題ページと同一配置に赤字解答
-- catalog validation
-- 共通Factory回帰
-- 共有catalog writer concurrency guard
-
-`.github/workflows/math-jh1-publish.yml` は共有catalog writer group `worksheet-catalog-publish-v1` を使用する。
-
-## 公開
-
-- publisher: `scripts/publish_jh1_signed_four_operations.py`
-- dedicated test: `tests/test_jh1_signed_four_operations_publisher.py`
-- publish commit: `f3d0fdc194157e853a9ba04b2cb461bfc59da51e`
-- 新規公開: 4技能 / 12PDF
+- `scripts/publish_jh1_signed_mixed_powers.py`
+  - 四則混合は乗除優先と整数除法を機械的に保証する。
+  - かっこ・累乗は2乗・3乗、負の数、かっこを組み合わせ、保存済みanswerとは独立に再計算する。
+- `scripts/publish_jh1_primes_factorization.py`
+  - 素数判定は各variantで素数10問・合成数10問。
+  - 素因数分解は2〜300の範囲で合成数を生成し、独立factorizationで素因数がすべて素数かつ積が元の数に戻ることを検証する。
+- `tests/test_jh1_mixed_primes_publishers.py`
+  - deterministic seed再生成
+  - independent answer recomputation
+  - 問題内重複、variant間差、既存catalogとのnormalized content hash衝突検査
+  - 素数/合成数の10/10分散
+  - 素因数分解の積復元
+  - 2ページPDF
+  - 通常整数の問題番号
+  - 問題ページと同一配置への赤字解答
+  - 冪等publish
+- `.github/workflows/math-jh1-publish.yml` に新publisher/testを追加し、既存中1publisher、共通Factory回帰、共有catalog writer concurrency guardと同一workflowで検証する。
 
 ## 教科配置
 
-現行MEXT中学校数学第1学年「A 数と式」で、数を正の数・負の数まで拡張し、その四則計算を扱うことを確認した。
+現行MEXT中学校学習指導要領の第1学年「数と式」に沿って、正負の数の計算の発展と、自然数を素数の積として表す学習を配置した。
+
+## 公開
+
+- workflow組み込み commit: `7f70202c714dec751330cc1ce0e5bde5bbe2fd6e`
+- publish commit: `6110fa7f6d8104c9c4c5b664a2996e452337cfc4`
+- 今回新規: 4技能 / 12PDF
+- 中学1年累計: 8技能 / 24PDF
 
 ## 次にやること
 
-次の未完了は `正負の数の四則混合`。
+次の未完了は `文字式の項・係数の確認`。
 
 次runでは安全なら最大4 checkpointとして以下まで進める。
 
-1. 正負の数の四則混合
-2. かっこ・累乗を含む計算
-3. 素数判定の基礎
-4. 素因数分解
+1. 文字式の項・係数の確認
+2. 同類項をまとめる
+3. 文字式の加減
+4. 文字式の乗除
 
 同じFactory契約と共有catalog concurrency guardを維持する。
