@@ -2,7 +2,7 @@
 
 ## Current state
 
-The portable Takken worksheet foundation is present on `main`, and the first three normal generation batches are complete.
+The portable Takken worksheet foundation is present on `main`, and four normal generation batches are now prepared through queue item 80.
 
 Canonical files:
 
@@ -39,67 +39,75 @@ Queue items 41-60:
 
 - `qualifications/takken/data/pending-units-41-60.js`
 
-All 60 units remain `pending_factcheck`. None is published. `qualifications/takken/data/public-catalog.js` remains empty and verified-only.
+Queue items 61-80:
 
-### Newly generated items 41-60
+- `qualifications/takken/data/pending-units-61-80.js`
 
-41. 時効
-42. 物権変動・対抗要件
-43. 共有
-44. 抵当権
-45. 債務不履行・損害賠償
-46. 契約解除
-47. 危険負担・同時履行の抗弁
-48. 売買・手付
-49. 民法上の契約不適合責任
-50. 賃貸借
-51. 敷金・賃借権の対抗関係
-52. 借地権
-53. 定期借地権等
-54. 借家権
-55. 定期建物賃貸借
-56. 相続人・法定相続分
-57. 相続の承認・放棄
-58. 遺言・遺留分
-59. 区分所有法
-60. 不動産登記法
+All 80 units remain `pending_factcheck`. None is published. `qualifications/takken/data/public-catalog.js` remains verified-only.
 
-This completes the ordered `権利関係` generation queue.
+### Newly generated items 61-80
 
-Generation-stage source candidates used for 41-60 are centered on:
+61. 都市計画区域・準都市計画区域
+62. 市街化区域・市街化調整区域等
+63. 用途地域・地域地区
+64. 都市計画の決定・都市計画事業
+65. 開発許可が必要な場合
+66. 開発許可・工事完了等
+67. 建築確認
+68. 建築基準法上の道路・接道義務
+69. 建ぺい率
+70. 容積率
+71. 高さ制限・斜線・日影等
+72. 防火地域・準防火地域
+73. 国土利用計画法の土地取引届出
+74. 農地法3条
+75. 農地法4条・5条
+76. 土地区画整理法
+77. 宅地造成及び特定盛土等規制法
+78. 法令上の制限・許可届出比較
+79. 不動産取得税
+80. 固定資産税
 
-- e-Gov `民法`, `occasion_date=20260401`
-- e-Gov `借地借家法`, `occasion_date=20260401`
-- e-Gov `建物の区分所有等に関する法律`, `occasion_date=20260401`
-- e-Gov `不動産登記法`, `occasion_date=20260401`
-- 法務局「不動産登記に関するよくある質問」 for the practical 甲区/乙区 explanation
+This completes the ordered `法令上の制限` generation queue and starts `税・その他`.
 
-These are generation-stage source candidates only. They must be independently reopened during a later explicit FACTCHECK batch before publication.
+Generation-stage source candidates used for 61-80 are centered on e-Gov versions as of `2026-04-01` of:
 
-## Content design notes for 41-60
+- 都市計画法
+- 建築基準法
+- 国土利用計画法
+- 農地法
+- 土地区画整理法
+- 宅地造成及び特定盛土等規制法
+- 地方税法
 
-The generated wording intentionally stays close to high-confidence statutory structure and avoids overloading pending material with edge cases. Examples include:
+These are generation-stage source candidates only. Every substantive claim must be independently reopened during later solve-all/factcheck before publication.
 
-- acquisition prescription 20 years / 10 years with good faith and no negligence at commencement; claim prescription 5 years from knowledge or 10 years from ability to exercise
-- Civil Code article 177 registration rule for third-party opposability
-- earnest-money cancellation before the other party begins performance
-- ordinary land lease 30-year baseline and building-registration opposability rule
-- general fixed-term land lease 50+ years
-- fixed-term building lease written/electronic contract plus pre-contract explanation
-- inheritance three-month deliberation period and family-court renunciation
-- condominium common parts and real-estate registration record structure
+## Content design notes for 61-80
 
-Do not interpret this conservative generation wording as completed legal review. FACTCHECK remains required before learner-facing publication.
+The generated wording intentionally keeps pending material conservative. It emphasizes stable statutory structure and defers edge-case matrices to independent validation. Particular future QA attention should be given to:
+
+- planning authority details and exceptions in unit 64
+- 2025/2026 Building Standards Act confirmation scope changes in unit 67
+- road definition exceptions and Article 43 exceptions in unit 68
+- building coverage / floor-area-ratio special cases in units 69-70
+- exact applicability by use district for height controls in unit 71
+- National Land Use Planning Act area thresholds in unit 73
+- Agricultural Land Act permission/notification exceptions in units 74-75
+- legal effects and timing around provisional replotting / replotting disposition in unit 76
+- current Embankment Regulation Act terminology and delegated authority in unit 77
+- tax exemptions, special measures, standard tax rates and assessment bases in units 79-80
+
+Do not interpret the conservative generation wording as completed legal review.
 
 ## Validation state
 
-`tests/takken-worksheet-factory-validation.mjs` now loads all three pending batch files and checks the complete sequence through unit 60.
+`tests/takken-worksheet-factory-validation.mjs` is updated to load all four pending batch files and expect exactly 80 sequential pending units.
 
 It checks:
 
 - 2026 exam year and `2026-04-01` law cutoff
-- exact sequential unit order through 60
-- exact total pending count of 60
+- exact sequential unit order through 80
+- exact total pending count of 80
 - unique unit/fact/sentence IDs
 - required metadata
 - HTTPS source records and source-reference resolution
@@ -110,35 +118,29 @@ It checks:
 - deterministic seeded RNG guard
 - print/PDF path guard
 
-The container still cannot resolve `github.com`, so `git clone` and therefore local Node execution of the repository validation remain unavailable in this run. Do not claim validation or CI execution until a later run actually confirms it.
-
-## Required source baseline
-
-Target: 2026 (令和8) 宅地建物取引士資格試験.
-
-Use `lawAsOf: 2026-04-01` for all generated units.
-
-Primary official source families:
-
-- e-Gov法令検索
-- 国土交通省
-- 一般財団法人不動産適正取引推進機構（RETIO）
-- 法務省
-- 国税庁
-- 総務省・自治体等
-
-Do not trust prior-year explanations where amendments may change the result.
+The current runtime still cannot resolve `github.com` from the local container, so repository clone and local Node execution were not possible. Do not claim the Node validation has executed successfully; CI should be checked after PR creation.
 
 ## Exact next start
 
-Queue item 61:
+Queue item 81:
 
-`city-planning-area` — 都市計画区域・準都市計画区域
+`registration-license-tax` — 登録免許税
 
-Normal next run should resume at item 61 and target the next 20 sequential units. Because the legal-restrictions queue ends at 78, a full 20-unit batch will cross into `税・その他` and should cover items 61-80 if authoritative generation is safe.
+The next generation run should resume at item 81 and generate the remaining 10 sequential items through item 90 if authoritative generation is safe:
 
-Every new unit must remain `pending_factcheck`, be appended to `STATUS.json.unverified_backlog`, and remain outside the public catalog.
+81. 登録免許税
+82. 印紙税
+83. 所得税・不動産譲渡の基礎
+84. 地価公示法
+85. 不動産鑑定評価の基礎
+86. 住宅金融支援機構
+87. 不動産広告・景品表示等
+88. 土地・建物の基礎知識
+89. 宅建試験の統計問題
+90. 5問免除科目まとめ
 
-## FACTCHECK policy
+After item 90, set `generation_complete: true`. Under the current scheduled instruction, the following run then starts the independent solve-all validation from the first generated item/problem and proceeds in order without skipping. Because the existing worksheet unit data currently has `questions: []`, do not falsely claim question-bank validation is possible until the canonical question-generation representation is actually populated; reconcile that schema requirement before marking solve-all complete.
 
-Do not fact-check the 60-unit backlog automatically. FACTCHECK remains a separate explicit operation requested by the user.
+## Publication / validation policy
+
+All pending units remain unpublished. Validation must independently reopen primary/official sources and must not trust generation-stage answers or explanations. Only independently verified material may enter the public catalog.
