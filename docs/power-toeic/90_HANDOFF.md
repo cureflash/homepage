@@ -29,7 +29,7 @@ The intended Google Drive SE files were re-fetched and verified:
 
 - `otologic_correct.mp3` — Drive `1WP7Mi1cCbv9hWWGdIRnKoR3NDOQaBRxt` — SHA256 `085e5a4a3fe2669ad1378423c412f7e76cc6b2b573b3081380207f5d8b8ea2fc`;
 - `otologic_incorrect.mp3` — Drive `1DcJNhKfHNwifcWy1sAAgzzCjbOPa4iDE` — SHA256 `c5141a298f48e63c4606ab34b189590cd0f64611ae9546463511d63da7deb2eb`;
-- `otologic_inspiration.mp3` — Drive `11uMGcDxfqPhhPsVc2HtNWtWTKgGixPSy` — SHA256 `4c61471b681bdb407fcdaa183e6881aaa76be05887accf761f73b0454f0f5f66a`.
+- `otologic_inspiration.mp3` — Drive `11uMGcDxfqPhhPsVc2HtNWtWTKgGixPSy` — SHA256 `4c61471b681bdb407fcdaa183e6881aaa76be05887accf761f73b0454f0f5f66`.
 
 A one-shot PR workflow downloaded the corresponding current public OtoLogic source URLs and required all three SHA256 values to match the connected Drive copies before committing any binary. The check passed, the exact MP3 bytes were committed under:
 
