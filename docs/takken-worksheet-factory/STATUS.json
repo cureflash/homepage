@@ -13,15 +13,15 @@
   "generated_unit_count": 90,
   "question_generated_unit_count": 90,
   "generated_question_count": 163,
-  "checked_question_count": 34,
-  "verified_question_count": 34,
+  "checked_question_count": 37,
+  "verified_question_count": 37,
   "needs_revision_question_count": 0,
   "rejected_question_count": 0,
-  "pending_validation_question_count": 129,
-  "verified_unit_count": 25,
-  "pending_factcheck_count": 65,
+  "pending_validation_question_count": 126,
+  "verified_unit_count": 27,
+  "pending_factcheck_count": 63,
   "unverified_backlog": [
-    "cooling-off", "earnest-money-and-safeguards", "damages-penalty", "contract-nonconformity-special-rule", "unowned-property-restriction", "installment-sales-ownership", "brokerage-fees", "supervision-penalties", "civil-intent-general", "civil-mistake", "civil-fraud-duress", "civil-fictitious-declaration", "civil-limited-capacity", "civil-agency", "civil-unauthorized-agency", "civil-prescription", "property-rights-opposability", "co-ownership", "mortgage", "default-damages", "contract-cancellation", "risk-simultaneous-performance", "sale-earnest", "contract-nonconformity-civil", "lease-general", "lease-deposit-opposability", "land-lease-right", "fixed-term-land-lease", "building-lease-right", "fixed-term-building-lease", "inheritance-heirs-shares", "inheritance-acceptance-renunciation", "will-reserved-portion", "condominium-law", "real-estate-registration", "city-planning-area", "area-division", "use-districts", "city-planning-decisions", "development-permission-required", "development-permission-procedure", "building-confirmation", "roads-frontage", "building-coverage-ratio", "floor-area-ratio", "height-restrictions", "fire-prevention-zones", "national-land-use-notification", "farmland-act-article3", "farmland-act-articles4-5", "land-readjustment", "embankment-regulation", "legal-restrictions-comparison", "real-estate-acquisition-tax", "fixed-asset-tax", "registration-license-tax", "stamp-tax", "income-tax-real-estate-transfer", "land-price-public-notice", "real-estate-appraisal", "housing-finance-agency", "fair-competition-advertising", "land-building-knowledge", "statistics", "five-question-exemption-review"
+    "damages-penalty", "contract-nonconformity-special-rule", "unowned-property-restriction", "installment-sales-ownership", "brokerage-fees", "supervision-penalties", "civil-intent-general", "civil-mistake", "civil-fraud-duress", "civil-fictitious-declaration", "civil-limited-capacity", "civil-agency", "civil-unauthorized-agency", "civil-prescription", "property-rights-opposability", "co-ownership", "mortgage", "default-damages", "contract-cancellation", "risk-simultaneous-performance", "sale-earnest", "contract-nonconformity-civil", "lease-general", "lease-deposit-opposability", "land-lease-right", "fixed-term-land-lease", "building-lease-right", "fixed-term-building-lease", "inheritance-heirs-shares", "inheritance-acceptance-renunciation", "will-reserved-portion", "condominium-law", "real-estate-registration", "city-planning-area", "area-division", "use-districts", "city-planning-decisions", "development-permission-required", "development-permission-procedure", "building-confirmation", "roads-frontage", "building-coverage-ratio", "floor-area-ratio", "height-restrictions", "fire-prevention-zones", "national-land-use-notification", "farmland-act-article3", "farmland-act-articles4-5", "land-readjustment", "embankment-regulation", "legal-restrictions-comparison", "real-estate-acquisition-tax", "fixed-asset-tax", "registration-license-tax", "stamp-tax", "income-tax-real-estate-transfer", "land-price-public-notice", "real-estate-appraisal", "housing-finance-agency", "fair-competition-advertising", "land-building-knowledge", "statistics", "five-question-exemption-review"
   ],
   "unit_generation_complete": true,
   "question_generation_complete": true,
@@ -44,12 +44,12 @@
     "next_unit": null
   },
   "validation_progress": {
-    "next_validation_question_id": "takken-q-26-002",
-    "checked_question_count": 34,
-    "verified_question_count": 34,
+    "next_validation_question_id": "takken-q-28-001",
+    "checked_question_count": 37,
+    "verified_question_count": 37,
     "needs_revision_question_count": 0,
     "rejected_question_count": 0,
-    "pending_validation_question_count": 129
+    "pending_validation_question_count": 126
   },
   "foundation": {
     "portable_site_shell": true,
@@ -63,7 +63,7 @@
   },
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
-  "last_completed_unit": "eight-restrictions-overview",
-  "last_run_summary": "Phase 3 solve-all validation continued strictly from takken-q-08-001. Independently re-solved 25 questions through takken-q-26-001 before comparing stored answers/explanations, with current official MLIT/legal-source checks covering宅建士制度,専任割合,営業保証金/保証協会,媒介契約,35/37条,広告・契約時期規制,誇大広告,8種制限概観 and cooling-off applicability. Results this run: checked 25, verified 25, needs_revision 0, rejected 0. Cumulative checked/verified is 34; pending is 129. Next strict question is takken-q-26-002. Phase 4 remains blocked until validation_complete is true.",
-  "updated_at": "2026-08-27T19:27:51+09:00"
+  "last_completed_unit": "earnest-money-and-safeguards",
+  "last_run_summary": "Phase 3 solve-all validation continued strictly from takken-q-26-002 through the end of the pending-questions-21-27 file. Independently checked the cooling-off 8-day limit, the 20% hand-money cap, and MLIT hand-money safeguard exemption thresholds against current 2026-04-01 legal/official sources. Results this run: checked 3, verified 3, needs_revision 0, rejected 0. Cumulative checked/verified is 37; pending is 126. Next strict question is takken-q-28-001. Phase 4 remains blocked until validation_complete is true.",
+  "updated_at": "2026-08-27T20:29:51+09:00"
 }
