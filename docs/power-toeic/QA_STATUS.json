@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1375,
-  "verified_question_count": 1307,
-  "needs_revision_count": 68,
+  "checked_question_count": 1400,
+  "verified_question_count": 1331,
+  "needs_revision_count": 69,
   "rejected_question_count": 0,
   "pending_validation_count": 975,
-  "last_completed_batch": "2026-08-28-scheduled-025-to-infinitive-part3",
+  "last_completed_batch": "2026-08-28-scheduled-025-to-infinitive-part4",
   "last_completed_micro_skill": "p5.verb.to_infinitive_pattern",
   "last_batch_counts": {
     "checked": 25,
-    "verified": 22,
-    "needs_revision": 3,
+    "verified": 24,
+    "needs_revision": 1,
     "rejected": 0
   },
-  "next_batch": "2026-08-28-scheduled-025-to-infinitive-part4",
-  "next_micro_skill": "p5.verb.to_infinitive_pattern",
-  "next_question_id": "p5_verb_to_infinitive_pattern_0076",
+  "next_batch": "2026-08-28-scheduled-025-gerund-part1",
+  "next_micro_skill": "p5.verb.gerund_pattern",
+  "next_question_id": "p5_verb_gerund_pattern_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-28T04:40:00+09:00"
+  "updated_at": "2026-08-28T05:25:00+09:00"
 }
