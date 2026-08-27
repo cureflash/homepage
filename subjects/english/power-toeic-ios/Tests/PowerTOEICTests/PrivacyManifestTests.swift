@@ -3,8 +3,15 @@ import XCTest
 @testable import PowerTOEIC
 
 final class PrivacyManifestTests: XCTestCase {
-    func testBundledPrivacyManifestDeclaresAppOnlyUserDefaultsReason() throws {
-        let url = try XCTUnwrap(Bundle.module.url(forResource: "PrivacyInfo", withExtension: "xcprivacy"))
+    func testPrivacyManifestDeclaresAppOnlyUserDefaultsReason() throws {
+        let testFile = URL(fileURLWithPath: #filePath)
+        let packageRoot = testFile
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+        let url = packageRoot
+            .appendingPathComponent("Sources/PowerTOEIC/Resources/PrivacyInfo.xcprivacy")
+
         let data = try Data(contentsOf: url)
         let plist = try XCTUnwrap(
             PropertyListSerialization.propertyList(from: data, format: nil) as? [String: Any]
