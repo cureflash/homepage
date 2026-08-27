@@ -19,20 +19,21 @@ Current active grade: **小学5年** (`in_progress`).
 
 小学5年の次の4 checkpointを連続で完了した。
 
-1. `list-multiples` — 倍数の列挙 — 3 variants / 3 PDFs
-2. `greatest-common-divisor` — 最大公約数 — 3 variants / 3 PDFs
-3. `least-common-multiple` — 最小公倍数 — 3 variants / 3 PDFs
-4. `common-denominator` — 通分 — 3 variants / 3 PDFs
+1. `reduce-fraction` — 約分 — 3 variants / 3 PDFs
+2. `unlike-denominator-add` — 異分母分数のたし算 — 3 variants / 3 PDFs
+3. `unlike-denominator-sub` — 異分母分数のひき算 — 3 variants / 3 PDFs
+4. `fraction-decimal-conversion` — 分数・小数の変換 — 3 variants / 3 PDFs
 
-合計 **4技能・12PDF** を追加公開し、小学5年は現在 **8 skills / 24 PDFs**。
+合計 **4技能・12PDF** を追加公開し、小学5年は現在 **12 skills / 36 PDFs**。
 
-MEXTの現行小学校算数解説で、第5学年に倍数・約数、最大公約数・最小公倍数、分数の通分が配置されていることを確認してから実装した。
+MEXTの現行小学校算数解説で、第5学年に約分・通分と異分母分数の加法・減法が配置されていることを確認してから実装した。分数・小数変換は有限小数へ機械的に変換できる範囲へ限定した。
 
-All four checkpoints use deterministic seeds, independent answer recomputation, duplicate/content-hash checks, 2-page PDFs, ordinary integer problem numbering, and answer pages that preserve the problem layout and add answers in red. The fraction checkpoint additionally verifies exact value equivalence with `Fraction` after common-denominator conversion.
+All four checkpoints use deterministic seeds, independent `Fraction`-based answer recomputation, duplicate/content-hash checks, 2-page PDFs, ordinary integer problem numbering, and answer pages that preserve the problem layout and add answers in red.
 
-- Grade 5 workflow run: `33041236859`
-- publish commit: `e5b8c6adef1e38e3fb28e219e7246d2a05a75ad2`
-- current Grade 5 publication total: **8 skills / 24 PDFs**
+- publisher: `scripts/publish_grade5_fraction_core.py`
+- test: `tests/test_grade5_fraction_core_publisher.py`
+- publish commit: `fce79b0f6b7070848a7edd5448eed0c0e550cd50`
+- current Grade 5 publication total: **12 skills / 36 PDFs**
 
 ## Exact next starting point
 
@@ -42,6 +43,6 @@ Read:
 - `curriculum/elementary/grade-05/PLAN.md`
 - `curriculum/elementary/grade-05/HANDOFF.md`
 
-Start with the next unfinished Grade 5 skill: **約分**.
+Start with the next unfinished Grade 5 skill: **分数計算混合（この学年までの範囲）**.
 
-If safe in one run, continue through **異分母分数のたし算 → 異分母分数のひき算 → 分数・小数の変換** as up to four consecutive checkpoints. Keep deterministic generation, independent `Fraction`-based validation, duplicate detection, 2-page printable PDFs, same-layout red answers, catalog/site validation, and Grade 5 workflow regression intact.
+If safe in one run, continue through **百分率の基本変換（小数↔百分率） → 割合の基本数値計算 → 学年総復習計算** as up to four consecutive checkpoints. Keep deterministic generation, independent validation, duplicate detection, 2-page printable PDFs, same-layout red answers, catalog/site validation, and Grade 5 workflow regression intact. Do not introduce fraction multiplication/division before Grade 6.
