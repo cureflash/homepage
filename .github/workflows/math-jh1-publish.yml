@@ -8,9 +8,11 @@ on:
       - 'scripts/publish_jh1_signed_mixed_powers.py'
       - 'scripts/publish_jh1_primes_factorization.py'
       - 'scripts/publish_jh1_algebraic_expressions.py'
+      - 'scripts/publish_jh1_substitution_linear_equations.py'
       - 'tests/test_jh1_signed_four_operations_publisher.py'
       - 'tests/test_jh1_mixed_primes_publishers.py'
       - 'tests/test_jh1_algebraic_expressions_publisher.py'
+      - 'tests/test_jh1_substitution_linear_equations_publisher.py'
       - 'tests/test_worksheet_catalog_writer_concurrency.py'
       - '.github/workflows/math-jh1-publish.yml'
   workflow_dispatch:
@@ -43,9 +45,11 @@ jobs:
             python scripts/publish_jh1_signed_mixed_powers.py .
             python scripts/publish_jh1_primes_factorization.py .
             python scripts/publish_jh1_algebraic_expressions.py .
+            python scripts/publish_jh1_substitution_linear_equations.py .
             python tests/test_jh1_signed_four_operations_publisher.py
             python tests/test_jh1_mixed_primes_publishers.py
             python tests/test_jh1_algebraic_expressions_publisher.py
+            python tests/test_jh1_substitution_linear_equations_publisher.py
             python tests/test_worksheet_factory.py
             python tests/test_worksheet_catalog_writer_concurrency.py
             before=$(git rev-parse origin/main)
