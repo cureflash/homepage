@@ -1,5 +1,5 @@
 {
-  "status": "todo",
-  "updated_at": null,
-  "next_task": "PLAN.md を読み、この学年の最初の未完了項目から開始する"
+  "status": "in_progress",
+  "updated_at": "2026-08-28T03:05:00+09:00",
+  "next_task": "中学2年の次の未完了技能『多項式×数』から開始する。安全なら続けて『式の四則混合』『式への代入』『連立方程式の加減法 基本』まで最大4 checkpoint進める。deterministic seed、独立解答再計算、重複/hash検査、2ページPDF、通常整数番号、同一配置＋赤字解答、catalog/site validation、共有catalog writer concurrency guardを維持する"
 }
