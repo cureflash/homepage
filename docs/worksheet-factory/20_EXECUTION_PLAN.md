@@ -74,10 +74,10 @@ Before each grade, verify current Japanese curriculum placement with authoritati
 - [x] publish/register multiple variants.
 
 ### Grade 6
-- [ ] fraction multiplication/division and other grade-appropriate arithmetic;
-- [ ] ratio/percentage-style numerical drills only where answers are mechanically verifiable and curriculum-appropriate;
-- [ ] comprehensive elementary arithmetic repetition sets;
-- [ ] publish/register multiple variants.
+- [x] fraction multiplication/division and other grade-appropriate arithmetic;
+- [x] ratio/percentage-style numerical drills only where answers are mechanically verifiable and curriculum-appropriate;
+- [x] comprehensive elementary arithmetic repetition sets;
+- [x] publish/register multiple variants.
 
 Acceptance for Phase 4: every supported elementary arithmetic skill has several validated variants, is navigable by grade/unit, and has no knowingly broken/duplicate publications.
 
@@ -147,3 +147,4 @@ Acceptance: factory can continue adding new validated calculation worksheets fro
 
 - 2026-08-25: factory instruction set created; implementation/generation not yet started.
 - 2026-08-27: Grade 5 planned worksheet coverage completed at 16 skills / 48 PDFs; next active grade is Grade 6.
+- 2026-08-27: Grade 6 planned worksheet coverage completed at 15 skills / 45 PDFs; elementary Grade 1–6 coverage is complete and next active grade is Junior high 1.
