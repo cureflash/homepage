@@ -4,7 +4,7 @@ These checkpoints stay in one-dimensional motion so every sign and answer is
 mechanically unambiguous. The learner-visible positive direction is fixed in
 each variable label. The first three formulas are p = mv, J = FΔt, and
 Δp = FΔt. The conservation checkpoints use learner-visible total momentum
-before/after values and reuse the shared reversible sum/difference relations.
+before/after values and the full two-body mass-and-velocity conservation law.
 
 Curriculum basis: current MEXT High School Course of Study Commentary,
 Physics: momentum and impulse, momentum conservation in collisions/divisions,
@@ -17,6 +17,7 @@ _SIGNED_SPEEDS = [-12, -10, -8, -6, -5, -4, -3, 3, 4, 5, 6, 8, 10, 12]
 _SIGNED_FORCES = [-40, -30, -24, -20, -16, -12, -10, -8, 8, 10, 12, 16, 20, 24, 30, 40]
 _DURATIONS = [0.1, 0.2, 0.25, 0.4, 0.5, 0.8, 1.0, 1.25, 1.5, 2.0]
 _SIGNED_MOMENTA = [-30, -24, -20, -18, -15, -12, -10, -8, -6, -5, -4, 4, 5, 6, 8, 10, 12, 15, 18, 20, 24, 30]
+_MASSES = [0.5, 1, 1.5, 2, 2.5, 3, 4, 5]
 
 PHYSICS_MOMENTUM_TOPICS = {
     "momentum-one-dimensional": {
@@ -32,7 +33,7 @@ PHYSICS_MOMENTUM_TOPICS = {
             "inputs": ["mass", "velocity"],
             "variables": {
                 "momentum": {"label": "運動量 p（右向きを正、左向きを負）", "unit": "kg·m/s"},
-                "mass": {"label": "物体の質量 m", "unit": "kg", "values": [0.5, 1, 1.5, 2, 2.5, 3, 4, 5]},
+                "mass": {"label": "物体の質量 m", "unit": "kg", "values": _MASSES},
                 "velocity": {"label": "速度 v（右向きを正、左向きを負）", "unit": "m/s", "values": _SIGNED_SPEEDS},
             },
             "tolerance": 1e-9,
@@ -137,6 +138,34 @@ PHYSICS_MOMENTUM_TOPICS = {
             "basic-final-p2": {"solve_for": "final_momentum_2", "worksheet_mode": "calculation-basic", "description": "外力の力積を無視できる1次元の2物体衝突で、運動量保存 P前=P後 と P後=p₁後+p₂後 から、衝突後の物体2の運動量を求めます。"},
             "reverse-initial-total": {"solve_for": "initial_total_momentum", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、衝突後の2物体の運動量から、運動量保存を使って衝突前の全運動量を逆算します。"},
             "reverse-final-p1": {"solve_for": "final_momentum_1", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、衝突前の全運動量と衝突後の物体2の運動量から、物体1の衝突後運動量を逆算します。"},
+        },
+    },
+    "momentum-conservation-two-body-velocity": {
+        "title": "物理 運動量保存：2物体の質量と速度",
+        "unit": "様々な運動：運動量と力積",
+        "skill": "momentum-conservation-two-body-velocity",
+        "formula": "m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂（右向きを正、左向きを負）",
+        "seeds": tuple(range(7401, 7411)),
+        "spec": {
+            "id": "physics-momentum-conservation-two-body-velocity",
+            "relation": "two-body-momentum-conservation",
+            "result": "final_velocity_2",
+            "inputs": ["mass_1", "initial_velocity_1", "mass_2", "initial_velocity_2", "final_velocity_1"],
+            "variables": {
+                "final_velocity_2": {"label": "衝突後の物体2の速度 v₂（右向きを正、左向きを負）", "unit": "m/s"},
+                "mass_1": {"label": "物体1の質量 m₁", "unit": "kg", "values": _MASSES},
+                "initial_velocity_1": {"label": "衝突前の物体1の速度 u₁（右向きを正、左向きを負）", "unit": "m/s", "values": _SIGNED_SPEEDS},
+                "mass_2": {"label": "物体2の質量 m₂", "unit": "kg", "values": _MASSES},
+                "initial_velocity_2": {"label": "衝突前の物体2の速度 u₂（右向きを正、左向きを負）", "unit": "m/s", "values": _SIGNED_SPEEDS},
+                "final_velocity_1": {"label": "衝突後の物体1の速度 v₁（右向きを正、左向きを負）", "unit": "m/s", "values": _SIGNED_SPEEDS},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-final-v2": {"solve_for": "final_velocity_2", "worksheet_mode": "calculation-basic", "description": "外力の力積を無視できる1次元の2物体衝突で、右向きを正、左向きを負とし、m₁u₁+m₂u₂=m₁v₁+m₂v₂ から衝突後の物体2の速度 v₂ を求めます。"},
+            "reverse-initial-u1": {"solve_for": "initial_velocity_1", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、右向きを正、左向きを負とし、運動量保存から衝突前の物体1の速度 u₁ を逆算します。"},
+            "reverse-initial-u2": {"solve_for": "initial_velocity_2", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、右向きを正、左向きを負とし、運動量保存から衝突前の物体2の速度 u₂ を逆算します。"},
+            "reverse-final-v1": {"solve_for": "final_velocity_1", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、右向きを正、左向きを負とし、運動量保存から衝突後の物体1の速度 v₁ を逆算します。"},
         },
     },
 }
