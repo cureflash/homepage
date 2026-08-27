@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/publish_jh1_signed_four_operations.py'
       - 'tests/test_jh1_signed_four_operations_publisher.py'
+      - 'tests/test_worksheet_catalog_writer_concurrency.py'
       - '.github/workflows/math-jh1-publish.yml'
   workflow_dispatch:
 
