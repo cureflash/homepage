@@ -36,7 +36,7 @@ public struct PowerTOEICAppEnvironment {
         questionBank: any QuestionBankRepository,
         appStore: VersionedNativeAppStore = VersionedNativeAppStore(),
         assetCatalog: AssetCatalog = AssetCatalog(),
-        audioPlayer: any AudioCuePlaying = SilentAudioCuePlayer(),
+        audioPlayer: any AudioCuePlaying = BundleAudioCuePlayer(),
         clock: any AppClock = SystemAppClock()
     ) {
         self.questionBank = questionBank
