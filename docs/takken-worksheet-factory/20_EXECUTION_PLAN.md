@@ -57,8 +57,9 @@ Completed Phase 3 checkpoints:
 - Questions `takken-q-26-002` through `takken-q-27-002`: 3 checked / 3 verified / 0 needs_revision / 0 rejected.
 - Questions `takken-q-28-001` through `takken-q-40-001`: 25 checked / 25 verified / 0 needs_revision / 0 rejected. This checkpoint covered宅建業法の損害賠償予定・契約不適合特約・他人物売買・割賦販売・報酬・監督処分 and民法の意思表示・錯誤・詐欺強迫・虚偽表示・制限行為能力・代理・無権代理.
 - Questions `takken-q-40-002` through `takken-q-47-002`: 15 checked / 15 verified / 0 needs_revision / 0 rejected. This file-boundary checkpoint covered表見代理、取得・消滅時効、物権変動・対抗要件、共有、抵当権、債務不履行、解除、同時履行の抗弁・危険負担.
+- Questions `takken-q-48-001` through `takken-q-60-001`: 25 checked / 25 verified / 0 needs_revision / 0 rejected. This checkpoint covered手付、契約不適合、賃貸借、敷金・借家対抗力、普通・定期借地、建物賃貸借・定期建物賃貸借、相続・放棄・遺留分、区分所有、不動産登記の表題部/権利部.
 
-Current Phase 3 progress: **checked 77 / verified 77 / needs_revision 0 / rejected 0 / pending 86 / next `takken-q-48-001`**.
+Current Phase 3 progress: **checked 102 / verified 102 / needs_revision 0 / rejected 0 / pending 61 / next `takken-q-60-002`**.
 
 ## Phase 4 — Power宅建 knowledge / print / app integration
 

@@ -9,11 +9,13 @@ Canonical implementation: `qualifications/takken/`.
 
 ## Completed in this run
 
-Continued Phase 3 strictly from `takken-q-40-002` through `takken-q-47-002`, stopping at the end of `pending-questions-28-47.js` for a safe 15-question file-boundary checkpoint.
+Continued Phase 3 strictly from `takken-q-48-001` through `takken-q-60-001`, completing a 25-question safety checkpoint.
 
-Covered topics were apparent authority, acquisitive/extinctive prescription, property-right transfer and opposability, co-ownership, mortgages, damages for default, cancellation, simultaneous-performance defense and risk allocation.
+Covered topics were sale earnest money, civil contract nonconformity, lease basics and maximum term, deposits and building-lease opposability, ordinary land leases, fixed-term land leases, building leases, fixed-term building leases, inheritance/heir shares, acceptance and renunciation, wills/reserved portions, condominium law, and the first real-estate-registration item.
 
-Every item was independently re-solved before comparing with the stored answer/explanation. The current Civil Code source was reopened through e-Gov and checked against the canonical `2026-04-01` legal baseline. Results this run: **checked 15 / verified 15 / needs_revision 0 / rejected 0**. No question text, choices, proposed answer, explanation or source reference required correction.
+Every item was independently re-solved from stem + four choices before comparing with the stored proposed answer/explanation/source references. Current e-Gov Civil Code, Land and Building Lease Act, Condominium Act and Ministry of Justice real-estate-registration guidance were reopened and checked against the canonical `2026-04-01` legal baseline. Results this run: **checked 25 / verified 25 / needs_revision 0 / rejected 0**. No question text, choices, proposed answer, explanation or source reference required correction.
+
+The question-file runtime guard now accepts the canonical post-QA statuses (`verified`, `needs_revision`, `rejected`) as well as `pending_validation`, instead of rejecting validated records.
 
 No Phase 4 work was started.
 
@@ -23,12 +25,12 @@ No Phase 4 work was started.
 - Question-covered units: 90/90
 - Covered core facts: 163/163
 - Generated four-choice questions: 163
-- Checked questions: 77
-- Verified questions: 77
+- Checked questions: 102
+- Verified questions: 102
 - Needs revision: 0
 - Rejected: 0
-- Pending validation questions: 86
-- Fully verified units: 47
+- Pending validation questions: 61
+- Fully verified units: 59
 - `question_generation_complete`: true
 - `generation_complete`: true
 - `validation_complete`: false
@@ -37,7 +39,7 @@ No Phase 4 work was started.
 
 Continue Phase 3 at:
 
-`takken-q-48-001`
+`takken-q-60-002`
 
 Process questions strictly in ID/order sequence. Prefer 25-question checkpoints, but file/content boundaries and legal-source verification take priority over count targets.
 
