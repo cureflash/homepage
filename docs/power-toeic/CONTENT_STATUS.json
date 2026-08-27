@@ -3,11 +3,11 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 2450,
-  "checked_question_count": 1475,
-  "pending_validation_count": 975,
-  "verified_question_count": 1406,
-  "needs_revision_count": 69,
+  "generated_question_count": 2500,
+  "checked_question_count": 1500,
+  "pending_validation_count": 1000,
+  "verified_question_count": 1425,
+  "needs_revision_count": 75,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
@@ -33,16 +33,17 @@
     "p5.conn.despite_vs_although",
     "p5.conn.during_vs_while",
     "p5.conn.by_vs_until",
-    "p5.conn.for_vs_since"
+    "p5.conn.for_vs_since",
+    "p5.conn.time_prepositions"
   ],
-  "current_batch": "2026-08-28-scheduled-025-time-prepositions-part2",
-  "current_micro_skill": "p5.conn.time_prepositions",
-  "current_micro_skill_persisted_count": 50,
+  "current_batch": "2026-08-28-scheduled-025-time-prepositions-part4",
+  "current_micro_skill": "p5.conn.logical_conjunction",
+  "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_conn_time_prepositions_0051",
-  "next_micro_skill": "p5.conn.time_prepositions",
+  "next_resume_id": "p5_conn_logical_conjunction_0001",
+  "next_micro_skill": "p5.conn.logical_conjunction",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Persisted p5.conn.time_prepositions IDs 0026-0050, bringing total generation to 2,450 while the micro-skill is 50/100. All 25 new items remain pending_validation. The checkpoint uses one cloze per item, four distinct choices, valid keyed indexes, and answer positions A/B/C/D = 6/7/6/6. Independently reviewed oldest unchecked p5.verb.gerund_pattern IDs 0051-0075: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,475 checked, 1,406 verified, 69 needs_revision, 0 rejected; unchecked pending_validation remains 975 because generation and QA both advanced by 25. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Repo-local full schema/Node tests were not run in this connector-only execution path. Next generation is p5_conn_time_prepositions_0051; next QA is p5_verb_gerund_pattern_0076.",
-  "updated_at": "2026-08-28T07:45:00+09:00"
+  "last_run_result": "Persisted p5.conn.time_prepositions IDs 0051-0100, completing the micro-skill at 100/100 and bringing total generation to 2,500. The 50 new items remain pending_validation; answer positions across the new 50 are A/B/C/D = 12/12/13/13 and the maximum within-checkpoint SequenceMatcher similarity was about 0.688 with no pair at or above 0.94. Independently reviewed oldest unchecked p5.verb.gerund_pattern IDs 0076-0100: 25 checked, 19 verified, 6 needs_revision, 0 rejected. The six revision cases have unnatural tense/aspect surrounding otherwise clear gerund complements. Cumulative QA is 1,500 checked, 1,425 verified, 75 needs_revision, 0 rejected; unchecked pending_validation is 1,000. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Repo-local full schema/Node tests were not run in this connector-only execution path. Next generation is p5_conn_logical_conjunction_0001; next QA is p5_verb_causative_have_make_let_0001.",
+  "updated_at": "2026-08-28T08:40:00+09:00"
 }
