@@ -3,11 +3,11 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 1400,
-  "checked_question_count": 300,
+  "generated_question_count": 1500,
+  "checked_question_count": 400,
   "pending_validation_count": 1100,
-  "verified_question_count": 278,
-  "needs_revision_count": 22,
+  "verified_question_count": 374,
+  "needs_revision_count": 26,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
@@ -23,16 +23,17 @@
     "p5.verb.present_perfect_vs_past",
     "p5.verb.active_vs_passive",
     "p5.verb.modal_base_form",
-    "p5.verb.to_infinitive_pattern"
+    "p5.verb.to_infinitive_pattern",
+    "p5.verb.gerund_pattern"
   ],
-  "current_batch": "2026-08-27-scheduled-013",
-  "current_micro_skill": "p5.verb.gerund_pattern",
+  "current_batch": "2026-08-27-scheduled-014",
+  "current_micro_skill": "p5.verb.causative_have_make_let",
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_verb_gerund_pattern_0001",
-  "next_micro_skill": "p5.verb.gerund_pattern",
+  "next_resume_id": "p5_verb_causative_have_make_let_0001",
+  "next_micro_skill": "p5.verb.causative_have_make_let",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Persisted p5.verb.to_infinitive_pattern IDs 0001-0100 in four 25-question checkpoints. Generation checks: sequential unique IDs 0001-0100, one blank per stem, four distinct choices, valid proposed-answer indexes, A/B/C/D = 25/25/25/25, exact duplicate stems 0, intra-skill SequenceMatcher pairs >=0.94 = 0, maximum observed similarity about 0.807. All 100 remain pending_validation. Full cross-bank semantic near-duplicate scanning across all 1400 candidates was not completed, so global near-duplicate clearance is not claimed. In the same run, independently checked the oldest 100 p5.pos.adverb_modifies_verb candidates: 95 verified, 5 needs_revision (0018 and 0077-0080, TOEIC-naturalness/collocation failures), 0 rejected. Cumulative QA is checked 300, verified 278, needs_revision 22, rejected 0, leaving 1100 unchecked pending_validation questions. Generation remains incomplete at 14/44; next generation skill is p5.verb.gerund_pattern and next QA skill is p5.pos.noun_in_noun_slot.",
-  "updated_at": "2026-08-27T09:48:00+09:00"
+  "last_run_result": "Persisted p5.verb.gerund_pattern IDs 0001-0100 in four 25-question checkpoints. Generation checks: sequential unique IDs 0001-0100, one blank per stem, four distinct choices after correcting a duplicate-form distractor in 0097, valid proposed-answer indexes, A/B/C/D = 25/25/25/25, exact duplicate stems 0, intra-skill SequenceMatcher pairs >=0.94 = 0, maximum observed similarity about 0.908. All 100 remain pending_validation. Full cross-bank semantic near-duplicate scanning across all 1500 candidates was not completed, so global near-duplicate clearance is not claimed. In the same run, independently checked the oldest 100 p5.pos.noun_in_noun_slot candidates: 96 verified, 4 needs_revision (0012, 0052, 0057 for singular/plural ambiguity; 0098 for awkward 'energy economy' collocation), 0 rejected. Cumulative QA is checked 400, verified 374, needs_revision 26, rejected 0, leaving 1100 unchecked pending_validation questions. Generation remains incomplete at 15/44; next generation skill is p5.verb.causative_have_make_let and next QA skill is p5.pos.adjective_after_linking_verb.",
+  "updated_at": "2026-08-27T10:16:00+09:00"
 }

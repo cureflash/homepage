@@ -1,82 +1,76 @@
-# Power TOEIC CONTENT/GENERATE handoff
+# Power TOEIC CONTENT handoff
 
-## Current state
+## Current canonical state
 
-Production content now contains **1400 persisted generated candidates** across **14 complete micro-skills**. QA has independently checked 300 of them: **278 verified / 22 needs_revision / 0 rejected**, leaving **1100 unchecked `pending_validation`** questions.
+- Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
+- Generated micro-skills: **15 / 44**
+- Generated questions: **1,500**
+- QA checked: **400**
+- Verified: **374**
+- Needs revision: **26**
+- Rejected: **0**
+- Unchecked `pending_validation`: **1,100**
+- `generation_complete`: `false`
+- `validation_complete`: `false`
 
-`generation_complete` and `validation_complete` both remain **false**.
+## This checkpoint
 
-## Taxonomy
+Generated `p5.verb.gerund_pattern` **100/100** as four 25-question pending checkpoints:
 
-Canonical taxonomy remains `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json` with 44 micro-skills. Do not merge or reorder skills.
+- `subjects/english/power-toeic/js/data/questions/part5/verbs/gerund-pattern/pending/batch-20260827-014-part1.json`
+- `...part2.json`
+- `...part3.json`
+- `...part4.json`
 
-## Work completed this run — GENERATE
+Generation checks for these 100:
+- IDs `0001`–`0100` sequential and unique
+- exactly one blank per stem
+- four distinct choices per item
+- valid answer indexes
+- proposed answer position A/B/C/D = **25/25/25/25**
+- exact duplicate stems = **0**
+- SequenceMatcher similarity >= 0.94 within this skill = **0 pairs**
+- maximum observed within-skill similarity ≈ **0.908**
+- one pre-persistence issue in 0097 (`cut` base/past surface-form collision) was corrected by replacing the duplicate distractor with a distinct finite form
+- full semantic cross-bank scan across all 1,500 questions is **not completed**, so do not claim global near-duplicate clearance
 
-Completed `p5.verb.to_infinitive_pattern` at **100/100** and persisted it in four safe checkpoints:
+All new 100 remain `pending_validation`.
 
-- 0001–0025: `subjects/english/power-toeic/js/data/questions/part5/verbs/to-infinitive-pattern/pending/batch-20260827-013-part1.json`
-- 0026–0050: `.../batch-20260827-013-part2.json`
-- 0051–0075: `.../batch-20260827-013-part3.json`
-- 0076–0100: `.../batch-20260827-013-part4.json`
+## QA in the same checkpoint
 
-All 100 remain `pending_validation`. The skill tests verbs/patterns that require a following to-infinitive using business-context Part 5 sentences and contrasts `to + base` against gerund/base/past-form distractors.
+Independently checked the oldest 100 pending questions: `p5.pos.noun_in_noun_slot`.
 
-Generation checks over the 100 questions:
+Result: **96 verified / 4 needs_revision / 0 rejected**.
 
-- sequential unique IDs 0001–0100;
-- one blank per stem;
-- four distinct choices and valid proposed-answer index;
-- answer positions A/B/C/D = **25/25/25/25**;
-- exact duplicate stems: **0**;
-- intra-skill SequenceMatcher similarity >= 0.94: **0 pairs**;
-- maximum observed intra-skill similarity: about **0.807**.
+Needs revision:
+- `p5_pos_noun_in_noun_slot_0012` — singular `efficiency` and plural `efficiencies` are both defensible.
+- `p5_pos_noun_in_noun_slot_0052` — `frequency` / `frequencies` can both work depending on meeting-series interpretation.
+- `p5_pos_noun_in_noun_slot_0057` — `availability` / `availabilities` can both be defensible in booking context.
+- `p5_pos_noun_in_noun_slot_0098` — `energy economy` is too marked/awkward for a general TOEIC item.
 
-A full cross-bank semantic near-duplicate scan against all 1400 candidates was **not completed in this run**, so global near-duplicate clearance is not claimed.
+QA record:
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-26-manual-001-noun-in-noun-slot.qa.json`
 
-## Work completed this run — VALIDATION
+Only the 96 approved IDs are eligible for a future production-bank build.
 
-Independently re-solved the oldest unchecked `p5.pos.adverb_modifies_verb` batch before consulting proposed answers/explanations.
+## Next generation
 
-Result:
+`p5.verb.causative_have_make_let`
 
-- checked: **100**
-- verified: **95**
-- needs_revision: **5**
-- rejected: **0**
+Resume ID:
+`p5_verb_causative_have_make_let_0001`
 
-All 100 stored proposed keys were grammatically derivable and no multiple-answer/key-mismatch case was found, but five items fail the TOEIC-naturalness gate:
+Generate 100 if quality permits. Keep all new candidates `pending_validation`.
 
-- `p5_pos_adverb_modifies_verb_0018` — `remained online stably` is unnatural.
-- `p5_pos_adverb_modifies_verb_0077` — `handled urgent requests responsively` is awkward.
-- `p5_pos_adverb_modifies_verb_0078` — `interface adjusted responsively` is marked/awkward for a general TOEIC item.
-- `p5_pos_adverb_modifies_verb_0079` — `reacted responsively` is redundant/unnatural.
-- `p5_pos_adverb_modifies_verb_0080` — `processed user input responsively` is an unnatural collocation for this target.
+## Next QA
 
-Canonical QA record:
+Oldest unchecked skill:
+`p5.pos.adjective_after_linking_verb`
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-26-manual-001-adverb-modifies-verb.qa.json`
+Start:
+`p5_pos_adjective_after_linking_verb_0001`
 
-Approved-ID gate:
+Source batch:
+`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/adjective-after-linking-verb/pending/batch-20260826-001.json`
 
-`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/adverb-modifies-verb/verified/batch-20260826-001-approved-ids.json`
-
-## Exact next generation point
-
-Resume at:
-
-- micro-skill: `p5.verb.gerund_pattern`
-- question ID: `p5_verb_gerund_pattern_0001`
-
-Then continue in canonical taxonomy order.
-
-## Exact next QA point
-
-Resume the oldest unchecked batch at:
-
-- file: `subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/noun-in-noun-slot/pending/batch-20260826-001.json`
-- micro-skill: `p5.pos.noun_in_noun_slot`
-- question ID: `p5_pos_noun_in_noun_slot_0001`
-
-## Phase transition
-
-Generation remains incomplete at **14/44 micro-skills**. Continue combined GENERATE + oldest-pending VALIDATION runs. Once all 44 skills are generated, stop new generation and switch to validation-only until pending and revision work is exhausted.
+Do not use proposed answer/explanation before independently solving each item.
