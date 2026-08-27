@@ -86,9 +86,9 @@ The app track may define only the consumer-facing adapter contract and tiny synt
   - Added versioned `VersionedNativeAppStore` using an injected native persistence backend with `UserDefaults` as the standard adapter.
   - Attempts, review entries and progression persist in the same platform-neutral envelope shape; corrupt/unsupported state and storage failures fall back safely without blocking quiz operation.
   - Native persistence tests cover round-trip, mutation isolation, invalid-state rejection and failure fallback.
-- [ ] **10.8 Run JavaScript/Swift conformance suite**
-  - Run the full Web Node 22 suite and native macOS Swift suite against one shared commit after 10.6/10.7 merge.
-  - Acceptance: both CI workflows are green and the shared conformance fixture remains authoritative without platform-specific divergence.
+- [x] **10.8 Run JavaScript/Swift conformance suite**
+  - Web Node 22 suite and native macOS Swift suite both passed on the same docs checkpoint commit after 10.6/10.7 merge.
+  - Swift still consumes the canonical Web `cross-platform-conformance-v1.json` directly; no platform-specific fixture fork was introduced.
 
 ## Phase 11 — iOS release preparation — APP TRACK
 - [ ] **11.1 App lifecycle, offline behavior and accessibility pass**
