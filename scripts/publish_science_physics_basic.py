@@ -7,6 +7,7 @@ from pathlib import Path
 try:
     from scripts.science_physics_basic_beats import PHYSICS_BASIC_BEATS_TOPICS
     from scripts.science_physics_basic_conservation import PHYSICS_BASIC_CONSERVATION_TOPICS
+    from scripts.science_physics_basic_electric_resistance import PHYSICS_BASIC_ELECTRIC_RESISTANCE_TOPICS
     from scripts.science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
     from scripts.science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
     from scripts.science_physics_basic_heat import PHYSICS_BASIC_HEAT_TOPICS
@@ -23,6 +24,7 @@ try:
 except ModuleNotFoundError:
     from science_physics_basic_beats import PHYSICS_BASIC_BEATS_TOPICS
     from science_physics_basic_conservation import PHYSICS_BASIC_CONSERVATION_TOPICS
+    from science_physics_basic_electric_resistance import PHYSICS_BASIC_ELECTRIC_RESISTANCE_TOPICS
     from science_physics_basic_energy import PHYSICS_BASIC_ENERGY_TOPICS
     from science_physics_basic_forces import PHYSICS_BASIC_FORCE_TOPICS
     from science_physics_basic_heat import PHYSICS_BASIC_HEAT_TOPICS
@@ -51,6 +53,7 @@ ALL_TOPICS = {
     **PHYSICS_BASIC_STRING_TOPICS,
     **PHYSICS_BASIC_BEATS_TOPICS,
     **PHYSICS_BASIC_RESONANCE_TOPICS,
+    **PHYSICS_BASIC_ELECTRIC_RESISTANCE_TOPICS,
 }
 
 
