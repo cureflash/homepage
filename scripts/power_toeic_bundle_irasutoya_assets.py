@@ -13,11 +13,9 @@ SWIFT_DIR = ROOT / "subjects/english/power-toeic-ios/Sources/PowerTOEIC/Resource
 MANIFEST = ROOT / "subjects/english/power-toeic-ios/Release/AssetManifest.json"
 WEB_CATALOG = ROOT / "subjects/english/power-toeic/js/ui/asset-catalog.js"
 
-# The canonical source_url remains the Irasutoya article page. These pinned image
-# URLs are the official Blogger-hosted PNGs for the exact article assets. We do
-# not fetch article HTML in CI because Irasutoya rate-limits GitHub-hosted runners.
-# Stage 5 bodybuilder remains intentionally unbundled until its official direct
-# PNG URL is independently pinned; do not substitute a copied third-party image.
+# Canonical source_url values remain the Irasutoya article pages. Exact original
+# Blogger-hosted PNG URLs are pinned for deterministic build-time acquisition.
+# Runtime never hotlinks these URLs; committed Web/SwiftPM copies are used.
 ASSETS = [
     {
         "resource_name": "irasutoya_sergeant_instructor",
@@ -36,6 +34,13 @@ ASSETS = [
         "source_title": "筋肉質な人のイラスト（男性）",
         "source_url": "https://www.irasutoya.com/2018/06/blog-post_865.html",
         "image_url": "https://2.bp.blogspot.com/-jqnzuMBq714/WwJaY08pZDI/AAAAAAABML0/MeB8mFNXN083xVJkGziPcqFIBMUaL-EnwCLcBGAs/s800/macho_man.png",
+    },
+    {
+        "resource_name": "irasutoya_trainee_bodybuilder",
+        "source_title": "ボディービルダーのイラスト",
+        "source_url": "https://www.irasutoya.com/2014/06/blog-post_14.html",
+        "image_url": "https://4.bp.blogspot.com/-To7VVp94gE8/U2ssDOevAhI/AAAAAAAAf98/UpTpnQGK12k/s450/body_builder.png",
+        "provenance_snapshot": "https://github.com/june29/irasutoya-data/blob/3aeaa9f08cc9c43146220a1d353b8978b6a16b7f/data/2134132440498153035a.yml",
     },
 ]
 
@@ -66,8 +71,6 @@ def validate_image_url(url: str):
 
 def update_web_catalog():
     text = WEB_CATALOG.read_text(encoding="utf-8")
-    # Only neutral semantic IDs own the physical asset. Reaction IDs stay null so
-    # resolveSergeant/resolveTrainee preserve the existing neutral-fallback contract.
     replacements = {
         "[ASSET_IDS.SERGEANT_NEUTRAL]: null": "[ASSET_IDS.SERGEANT_NEUTRAL]: './assets/characters/irasutoya_sergeant_instructor.png'",
         "[ASSET_IDS.TRAINEE_STAGE_0]: null": "[ASSET_IDS.TRAINEE_STAGE_0]: './assets/characters/irasutoya_trainee_skinny.png'",
@@ -75,6 +78,7 @@ def update_web_catalog():
         "[ASSET_IDS.TRAINEE_STAGE_2]: null": "[ASSET_IDS.TRAINEE_STAGE_2]: './assets/characters/irasutoya_trainee_muscular.png'",
         "[ASSET_IDS.TRAINEE_STAGE_3]: null": "[ASSET_IDS.TRAINEE_STAGE_3]: './assets/characters/irasutoya_trainee_muscular.png'",
         "[ASSET_IDS.TRAINEE_STAGE_4]: null": "[ASSET_IDS.TRAINEE_STAGE_4]: './assets/characters/irasutoya_trainee_muscular.png'",
+        "[ASSET_IDS.TRAINEE_STAGE_5]: null": "[ASSET_IDS.TRAINEE_STAGE_5]: './assets/characters/irasutoya_trainee_bodybuilder.png'",
     }
     for before, after in replacements.items():
         if before in text:
@@ -113,13 +117,15 @@ def main():
         item["bundled_filename"] = filename
         item["sha256"] = digest
         item["resolved_image_url_at_bundle_time"] = asset["image_url"]
+        if asset.get("provenance_snapshot"):
+            item["direct_url_provenance_snapshot"] = asset["provenance_snapshot"]
         print(f"bundled {asset['source_title']}: {width}x{height} sha256={digest}")
 
     manifest["character_art"]["bundled_unique_assets"] = len(ASSETS)
     manifest["character_art"]["verification"] = {
         "verified_at": "2026-08-27",
-        "method": "Official Irasutoya article title/URL verified externally. Exact official Blogger-hosted PNG URLs are pinned for deterministic build-time acquisition; identical bytes are committed for Web and SwiftPM. Runtime hotlinking remains disabled.",
-        "remaining_unbundled": ["irasutoya_trainee_bodybuilder"]
+        "method": "Official Irasutoya article title/URL pairs verified. Exact original Blogger-hosted PNG URLs are pinned for deterministic build-time acquisition; identical bytes are committed for Web and SwiftPM. The 2014 bodybuilder direct URL is additionally corroborated by the historical june29/irasutoya-data metadata snapshot for the same article/title/date. Runtime hotlinking remains disabled.",
+        "remaining_unbundled": []
     }
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     update_web_catalog()
