@@ -1,11 +1,11 @@
 """Formal-course Physics topics for plane motion and projectile motion.
 
-The module covers basic horizontal projection and the first machine-verifiable
-oblique-projection checkpoints. Air resistance is explicitly excluded. For
-oblique projection the vertical sign convention is upward-positive and the
-vertical acceleration is fixed at -9.8 m/s². Trigonometric ratios are supplied
-as learner-visible known values so answers can be recomputed only from values
-shown on the worksheet without adding a hidden trigonometric solver.
+The module covers basic horizontal projection and machine-verifiable oblique
+projection checkpoints. Air resistance is explicitly excluded. For oblique
+projection the vertical sign convention is upward-positive and the vertical
+acceleration is fixed at -9.8 m/s² where signed acceleration is used.
+Trigonometric ratios are supplied as learner-visible known values so answers
+can be recomputed only from values shown on the worksheet.
 
 Curriculum basis: MEXT High School Course of Study Commentary, Science / Math,
 Physics (1) Various motions: horizontal and oblique projectile motion is
@@ -156,6 +156,53 @@ PHYSICS_PROJECTILE_TOPICS = {
             "basic-vertical-velocity": {"solve_for": "vertical_velocity", "worksheet_mode": "calculation-basic", "description": "空気抵抗を無視した斜方投射で上向きを正とし、鉛直加速度 aᵧ = -9.8 m/s² として vᵧ = v₀ᵧ + aᵧt から鉛直速度を求めます。"},
             "reverse-initial-vertical-velocity": {"solve_for": "initial_vertical_velocity", "worksheet_mode": "calculation-reverse", "description": "空気抵抗を無視した斜方投射で上向きを正とし、時刻 t の鉛直速度から初速度の鉛直成分 v₀ᵧ を逆算します。鉛直加速度は -9.8 m/s² です。"},
             "reverse-time": {"solve_for": "time", "worksheet_mode": "calculation-reverse", "description": "空気抵抗を無視した斜方投射で上向きを正とし、初速度の鉛直成分と時刻 t の鉛直速度から経過時間を逆算します。鉛直加速度は -9.8 m/s² です。"},
+        },
+    },
+    "oblique-projectile-vertical-displacement": {
+        "title": "物理 斜方投射 鉛直変位",
+        "unit": "様々な運動：平面運動と放物運動",
+        "skill": "oblique-projectile-vertical-displacement",
+        "formula": "y = v₀ᵧt + 1/2 aᵧt²（上向きを正、空気抵抗を無視）",
+        "seeds": tuple(range(7171, 7186)),
+        "spec": {
+            "id": "physics-oblique-projectile-vertical-displacement",
+            "relation": "linear-plus-half-quadratic",
+            "result": "vertical_displacement",
+            "inputs": ["initial_vertical_velocity", "vertical_acceleration", "time"],
+            "variables": {
+                "vertical_displacement": {"label": "斜方投射（空気抵抗なし）の投射点からの鉛直変位 y（上向きを正）", "unit": "m"},
+                "initial_vertical_velocity": {"label": "初速度の上向き鉛直成分 v₀ᵧ", "unit": "m/s", "values": [19.6, 24.5, 29.4, 34.3, 39.2]},
+                "vertical_acceleration": {"label": "鉛直加速度 aᵧ（上向きを正）", "unit": "m/s²", "values": [-9.8]},
+                "time": {"label": "投射後の時間 t", "unit": "s", "values": [0.5, 1, 1.5, 2, 2.5, 3]},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-vertical-displacement": {"solve_for": "vertical_displacement", "worksheet_mode": "calculation-basic", "description": "空気抵抗を無視した斜方投射で上向きを正とし、y = v₀ᵧt + 1/2 aᵧt²、aᵧ = -9.8 m/s² から投射点に対する鉛直変位を求めます。"},
+            "reverse-initial-vertical-velocity": {"solve_for": "initial_vertical_velocity", "worksheet_mode": "calculation-reverse", "description": "空気抵抗を無視した斜方投射で上向きを正とし、鉛直変位と経過時間から y = v₀ᵧt + 1/2 aᵧt² を使って初速度の鉛直成分を逆算します。aᵧ = -9.8 m/s² です。"},
+        },
+    },
+    "oblique-projectile-time-to-highest-point": {
+        "title": "物理 斜方投射 最高点到達時間",
+        "unit": "様々な運動：平面運動と放物運動",
+        "skill": "oblique-projectile-time-to-highest-point",
+        "formula": "v₀ᵧ = gt最高点（最高点で vᵧ = 0、空気抵抗を無視）",
+        "seeds": tuple(range(7186, 7201)),
+        "spec": {
+            "id": "physics-oblique-projectile-time-to-highest-point",
+            "relation": "product",
+            "result": "initial_vertical_velocity",
+            "inputs": ["gravity", "time_to_highest_point"],
+            "variables": {
+                "initial_vertical_velocity": {"label": "斜方投射（空気抵抗なし）の初速度の上向き鉛直成分 v₀ᵧ", "unit": "m/s"},
+                "gravity": {"label": "重力加速度の大きさ g", "unit": "m/s²", "values": [9.8]},
+                "time_to_highest_point": {"label": "投射から最高点に達するまでの時間 t", "unit": "s", "values": [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4]},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-time-to-highest-point": {"solve_for": "time_to_highest_point", "worksheet_mode": "calculation-basic", "description": "空気抵抗を無視した斜方投射で、最高点では鉛直速度が0になることから v₀ᵧ = gt を使い、最高点に達するまでの時間を求めます。g = 9.8 m/s² です。"},
+            "reverse-initial-vertical-velocity": {"solve_for": "initial_vertical_velocity", "worksheet_mode": "calculation-reverse", "description": "空気抵抗を無視した斜方投射で、最高点に達するまでの時間から v₀ᵧ = gt を使って初速度の鉛直成分を逆算します。g = 9.8 m/s² です。"},
         },
     },
 }
