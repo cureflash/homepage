@@ -30,7 +30,8 @@ let package = Package(
                 "Views/Character/README.md"
             ],
             resources: [
-                .process("Resources/Audio")
+                .process("Resources/Audio"),
+                .process("Resources/Character")
             ]
         ),
         .testTarget(
