@@ -18,20 +18,32 @@ public struct ResultView: View {
             VStack(spacing: 20) {
                 Text("トレーニング完了").font(.title2.bold())
                 Text("\(Int((results.accuracy * 100).rounded()))%")
-                    .font(.system(size: 54, weight: .black, design: .rounded))
+                    .font(.largeTitle.weight(.black))
                     .monospacedDigit()
-                Text("\(results.correct) / \(results.answered) 正解").foregroundStyle(.secondary)
+                    .accessibilityLabel("正答率 \(Int((results.accuracy * 100).rounded()))パーセント")
+                Text("\(results.correct) / \(results.answered) 正解")
+                    .foregroundStyle(.secondary)
+                    .accessibilityLabel("\(results.answered)問中\(results.correct)問正解")
 
                 if !results.bySkill.isEmpty {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("分野別").font(.headline)
                         ForEach(results.bySkill.keys.sorted(), id: \.self) { skillID in
                             if let item = results.bySkill[skillID] {
-                                HStack {
-                                    Text(skillLabel(skillID))
-                                    Spacer()
-                                    Text("\(item.correct) / \(item.answered)").monospacedDigit()
+                                ViewThatFits(in: .horizontal) {
+                                    HStack {
+                                        Text(skillLabel(skillID))
+                                        Spacer()
+                                        Text("\(item.correct) / \(item.answered)").monospacedDigit()
+                                    }
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(skillLabel(skillID))
+                                        Text("\(item.correct) / \(item.answered) 正解")
+                                            .foregroundStyle(.secondary)
+                                    }
                                 }
+                                .accessibilityElement(children: .ignore)
+                                .accessibilityLabel("\(skillLabel(skillID))、\(item.answered)問中\(item.correct)問正解")
                             }
                         }
                     }
@@ -42,6 +54,7 @@ public struct ResultView: View {
                 Button("ホームへ戻る", action: onHome)
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)
+                    .accessibilityHint("ホーム画面へ戻ります")
             }
             .padding()
         }

@@ -31,20 +31,40 @@ public struct WeaknessView: View {
                 ContentUnavailableView("弱点データはまだありません", systemImage: "scope", description: Text("まずトレーニングを行うと、ここに苦手分野が表示されます。"))
             } else {
                 ForEach(items) { item in
-                    HStack(spacing: 12) {
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(item.label).font(.headline)
-                            Text("正答率 \(Int((item.accuracy * 100).rounded()))% ・ \(item.attempts)問")
-                                .font(.caption).foregroundStyle(.secondary)
+                    ViewThatFits(in: .horizontal) {
+                        HStack(spacing: 12) {
+                            itemSummary(item)
+                            Spacer()
+                            trainButton(item)
                         }
-                        Spacer()
-                        Button("鍛える") { onTrain(item.id) }.buttonStyle(.bordered)
+                        VStack(alignment: .leading, spacing: 8) {
+                            itemSummary(item)
+                            trainButton(item)
+                        }
                     }
                     .padding(.vertical, 4)
+                    .accessibilityElement(children: .contain)
                 }
             }
         }
         .navigationTitle("弱点")
+    }
+
+    private func itemSummary(_ item: WeaknessItem) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(item.label).font(.headline)
+            Text("正答率 \(Int((item.accuracy * 100).rounded()))% ・ \(item.attempts)問")
+                .font(.caption).foregroundStyle(.secondary)
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(item.label)、正答率 \(Int((item.accuracy * 100).rounded()))パーセント、\(item.attempts)問")
+    }
+
+    private func trainButton(_ item: WeaknessItem) -> some View {
+        Button("鍛える") { onTrain(item.id) }
+            .buttonStyle(.bordered)
+            .accessibilityLabel("\(item.label)を鍛える")
+            .accessibilityHint("この分野のトレーニングを開始します")
     }
 }
 #endif
