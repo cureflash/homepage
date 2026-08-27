@@ -7,6 +7,7 @@
     "privacy_manifest": "complete",
     "in_app_privacy_policy": "complete",
     "in_app_credits": "complete",
+    "native_audio_adapter": "complete",
     "final_app_icon": "blocked",
     "temporary_character_assets_bundled": "blocked",
     "otologic_audio_assets_bundled": "blocked"
@@ -22,7 +23,7 @@
     },
     {
       "id": "otologic_audio_assets_bundled",
-      "description": "Bundle the three approved Google Drive OtoLogic MP3 files and connect a native audio player to semantic audio IDs; keep exact CC BY 4.0 attribution visible in Credits."
+      "description": "Commit the three already-verified Google Drive OtoLogic MP3 binaries into the declared SwiftPM Audio resources. The semantic AudioCuePlaying/BundleAudioCuePlayer path and exact CC BY 4.0 Credits attribution are already complete."
     }
   ],
   "external_operator_inputs": [
