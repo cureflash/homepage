@@ -4,9 +4,9 @@
 - Shared runtime/backend authority: existing Power TOEIC Drill Engine; no classics-specific fork.
 - Taxonomy: `subjects/japanese/power-classics/data/taxonomy/classics-v1.json`
 - Taxonomy: 30 big categories / 100 atomic micro-skills.
-- Generated questions: 100
-- QA checked: 100
-- Verified: 100
+- Generated questions: 150
+- QA checked: 150
+- Verified: 150
 - Needs revision: 0
 - Rejected: 0
 - Unchecked pending_validation: 0
@@ -15,41 +15,41 @@
 - global duplicate gate: not complete
 
 ## This checkpoint — generation
-Completed `kobun.verb.conjugation_type.yodan` to its Phase A target.
+Completed `kobun.verb.conjugation_type.kami_ichidan` to its Phase A target.
 
 New IDs:
-`kobun_verb_conjugation_type_yodan_0031` through `kobun_verb_conjugation_type_yodan_0100`
+`kobun_verb_conjugation_type_kami_ichidan_0001` through `kobun_verb_conjugation_type_kami_ichidan_0050`
 
 Batch:
-`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-yodan/pending/batch-20260827-002.json`
+`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-kami-ichidan/pending/batch-20260827-003.json`
 
-70 new direct-identification questions were added. New answer positions are A/B/C/D = 17/17/18/18. Combined with IDs 0001-0030, the 100-question yodan bank is exactly A/B/C/D = 25/25/25/25.
+Because classical 上一段 has a small legitimate lexical inventory, the 50 questions intentionally reuse valid verbs across genuinely distinct direct/未然/連用/連体/已然/命令 contexts instead of inventing fake lexical variety. Core drill lexemes are 見る・着る・似る・煮る・干る・居る・射る・率る・鋳る.
 
-During cross-batch exact-stem checking, `隠す` was detected as already used in ID 0030. The new ID 0050 was changed to `渡す` before the checkpoint was finalized.
+Answer positions: A/B/C/D = 13/13/12/12.
 
 ## This checkpoint — QA
-Independently re-solved all 70 new questions from stem + choices before consulting their stored answer/explanation.
+Independently re-solved all 50 new questions from stem + choices before consulting their stored answer/explanation.
 
-- checked: 70
-- verified: 70
+- checked: 50
+- verified: 50
 - needs_revision: 0
 - rejected: 0
 
 QA record:
-`subjects/japanese/power-classics/data/questions/qa/2026-08-27-scheduled-002-yodan.qa.json`
+`subjects/japanese/power-classics/data/questions/qa/2026-08-27-scheduled-003-kami-ichidan.qa.json`
 
 ## Next generation
-`kobun.verb.conjugation_type.yodan` is complete at 100/100 for Phase A.
+`kobun.verb.conjugation_type.kami_ichidan` is complete at 50/50 for Phase A.
 
 Advance taxonomy order to:
-`kobun.verb.conjugation_type.kami_ichidan`
+`kobun.verb.conjugation_type.kami_nidan`
 
 Resume at:
-`kobun_verb_conjugation_type_kami_ichidan_0001`
+`kobun_verb_conjugation_type_kami_nidan_0001`
 
-Phase A target for 上一段活用判定: 50.
+Phase A target for 上二段活用判定: 100.
 
-Because classical 上一段 has a small finite lexical inventory, do not create fake lexical variety merely to reach 50. Use legitimate finite items plus genuinely distinct inflected/context forms, and quarantine any item whose conjugation classification is uncertain.
+Use legitimate classical 上二段 verbs, and quarantine items where modern-language analogy could hide a historical conjugation mismatch.
 
 ## Next QA
 There is no unchecked Power古典 pending backlog at this checkpoint. Independently QA the oldest candidates generated in the next run.
