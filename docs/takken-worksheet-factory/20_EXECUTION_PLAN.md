@@ -68,23 +68,26 @@ Final Phase 3 totals: **checked 163 / verified 163 / needs_revision 0 / rejected
 
 **ACTIVE. Phase 3 completion gate is satisfied.** Canonical specification: `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`.
 
-Current task: Phase 4.1 Concept inventory. Do not skip ahead to 50-question expansion, print generation, or app integration before the concept inventory and canonical knowledge model are established.
+Phase 4.1 is complete. Current task is Phase 4.2 Canonical knowledge items. Do not skip ahead to 50-question expansion, print generation, or app integration before the canonical knowledge model and existing verified-question mapping are established.
 
 ### 4.1 Concept inventory
-- [~] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, all 163 verified Phase 2/3 questions and official scope. **Checkpoint complete through canonical unit 70; 90 normalized concepts recorded. Exact continuation: unit 71 `height-restrictions`.**
-- [~] Normalize into exam-level `exam_concept` units; do not make isolated numbers/words standalone 50-question topics. **Current inventory deliberately splits compound units where independent study value exists while keeping numbers/authority names inside parent concepts.**
-- [ ] Record final actual concept count after all 90 units and verified-question evidence are covered; initial estimate is roughly 250-300, but count must follow actual extraction rather than a quota.
+- [x] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from all 90 units, all 163 verified Phase 2/3 questions and official scope.
+- [x] Normalize into exam-level `exam_concept` units; isolated numbers/words are not standalone 50-question topics.
+- [x] Record final actual concept count after all 90 units and verified-question evidence are covered. Final inventory: **113 concepts**; the original 250-300 estimate was not used as a quota.
 
 Canonical inventory file: `qualifications/takken/data/power-concepts.js`.
 
 Phase 4.1 checkpoints:
 - Units 1-30: **37 concepts** normalized and persisted.
 - Units 31-50: **27 additional concepts**, cumulative **64 concepts**. Splits include installment-sale cancellation / ownership retention, fraud / duress, mental reservation / fictitious declaration, minor / adult ward, unauthorized / apparent agency, acquisitive / extinctive prescription, and simultaneous performance / risk allocation.
-- Units 51-70: **26 additional concepts**, cumulative **90 concepts**. Splits include敷金 / 建物賃貸借の対抗力、普通借地権の存続期間 / 借地権の対抗力、法定相続人と順位 / 法定相続分、承認・放棄の熟慮期間 / 相続放棄、遺言 / 遺留分、都市計画決定主体 / 都市計画事業。
+- Units 51-70: **26 additional concepts**, cumulative **90 concepts**. Splits include 敷金 / 建物賃貸借の対抗力、普通借地権の存続期間 / 借地権の対抗力、法定相続人と順位 / 法定相続分、承認・放棄の熟慮期間 / 相続放棄、遺言 / 遺留分、都市計画決定主体 / 都市計画事業.
+- Units 71-90: **23 additional concepts**, final **113 concepts**. Independent splits include 斜線制限 / 日影規制、農地法4条 / 5条、仮換地 / 換地処分. Number-only, deadline-only, and annual-statistic fragments remain knowledge items within broader concepts rather than standalone concepts.
 
 ### 4.2 Canonical knowledge items
 - [ ] Decompose each concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` law cutoff and primary sources.
 - [ ] Map existing verified questions to concepts/knowledge items instead of discarding them.
+
+**Exact continuation:** begin with `takken-concept-business-definition` and its source unit `takken-gyoho-definition`; establish the canonical knowledge-item schema/data location and map the existing verified question evidence before proceeding to the next concept.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
