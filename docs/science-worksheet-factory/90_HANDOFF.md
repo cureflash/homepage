@@ -4,65 +4,67 @@ Updated: 2026-08-27
 
 ## Completed / reconciled this run
 
-Started from the latest `main`, re-read the science-factory control documents plus the shared worksheet-factory instructions, and resumed formal course `物理：平面運動・放物運動` at the exact prior stop point: oblique-projectile vertical displacement.
+Started from the latest `main`, re-read the science-factory control documents, and resumed formal course `物理：平面運動・放物運動` at the exact prior stop point: oblique-projectile maximum height. Parallel worksheet-factory updates on `main` were preserved; the implementation branch was merged rather than resetting newer repository progress.
 
-The current MEXT High School Course of Study Commentary for Physics was rechecked. Formal `物理` places horizontal and oblique projectile motion under `様々な運動`, treats velocity, acceleration and gravity in those motions, and explicitly states that horizontal/oblique projectile motion can be analyzed by decomposing it into vertical and horizontal motion. The new checkpoints remain inside that scope.
+The current MEXT High School Course of Study Commentary for Physics was rechecked. Formal `物理` places horizontal and oblique projectile motion under `様々な運動`, states that these motions can be analyzed by decomposing them into vertical and horizontal motion, and places `剛体のつり合い` immediately after `放物運動`. The three new projectile checkpoints remain inside that scope.
 
-This run completed **two independent safe checkpoints totaling 60 new PDFs**. It did not manufacture a third/fourth checkpoint because the next natural topic, maximum height, requires another new shared algebraic relation and is therefore the next clean safety boundary.
+This run completed **three independent safe checkpoints totaling 90 new PDFs**. A fourth checkpoint was not manufactured because the natural curriculum boundary now moves from projectile motion to rigid-body equilibrium, which requires a different force/moment model.
 
-### 1. 斜方投射 — 鉛直変位 — 30 PDFs
+### 1. 斜方投射 — 最高点の高さ — 30 PDFs
 
-- Upward-positive relation: `y = v0y t + 1/2 ay t^2`.
-- Fixed signed vertical acceleration: `ay = -9.8 m/s²`.
-- Air resistance is explicitly excluded in learner-facing descriptions/labels.
-- New shared relation: `linear-plus-half-quadratic`.
-- 15 deterministic seeds × two targets: direct `y` and reverse `v0y`.
-- Each worksheet has 20 problems.
-- Skill: `oblique-projectile-vertical-displacement`.
-- Values are chosen so the generated basic displacement range remains positive and simple.
-- Time inversion is **not** exposed: solving the quadratic for `t` can produce multiple roots and would violate the one-answer worksheet contract.
-
-### 2. 斜方投射 — 最高点到達時間 — 30 PDFs
-
-- At the highest point `vy = 0`; with gravity magnitude `g = 9.8 m/s²`, use `v0y = g t`.
-- Existing shared relation: `product`.
+- Relation: `H = v0y^2 / (2g)`.
+- New shared relation: `square-over-double`.
+- Fixed gravity magnitude: `g = 9.8 m/s²`.
 - Air resistance is explicitly excluded.
-- 15 deterministic seeds × two targets: direct time to highest point and reverse `v0y`.
+- 15 deterministic seeds × two targets: direct `H` and reverse positive `v0y`.
 - Each worksheet has 20 problems.
-- Skill: `oblique-projectile-time-to-highest-point`.
+- Skill: `oblique-projectile-maximum-height`.
+
+### 2. 斜方投射 — 同高度への全飛行時間 — 30 PDFs
+
+- Relation: `T = 2v0y / g`.
+- New shared relation: `double-quotient`.
+- The learner-facing condition states that the projectile returns to the same height as the launch point and that air resistance is ignored.
+- Fixed gravity magnitude: `g = 9.8 m/s²`.
+- 15 deterministic seeds × two targets: direct `T` and reverse `v0y`.
+- Each worksheet has 20 problems.
+- Skill: `oblique-projectile-same-height-flight-time`.
+
+### 3. 斜方投射 — 同高度への水平到達距離 — 30 PDFs
+
+- Relation: `R = v0x T`.
+- Reuses the existing shared `product` relation; no unnecessary new algebraic relation was added.
+- The learner-facing condition states that the projectile returns to the same height as the launch point and that air resistance is ignored.
+- 10 deterministic seeds × three targets: direct `R`, reverse `v0x`, reverse `T`.
+- Each worksheet has 20 problems.
+- Skill: `oblique-projectile-same-height-horizontal-range`.
 
 ## Shared generator change / regression contract
 
-`scripts/science_worksheet_helpers.py` now includes `linear-plus-half-quadratic` as an explicit shared formula relation.
+`scripts/science_worksheet_helpers.py` now includes two new explicit shared relations:
 
-Supported operations for this relation:
+- `square-over-double`: `result = numerator^2 / (2 * divisor)`; direct evaluation, positive-principal numerator inversion, and divisor inversion are mechanically defined with invalid zero/negative cases rejected.
+- `double-quotient`: `result = 2 * numerator / divisor`; direct evaluation and both reverse directions are mechanically defined with zero-divisor/zero-result ambiguity rejected where necessary.
 
-- result: `result = linear_rate * time + 1/2 * acceleration * time^2`;
-- reverse linear rate: `(result - 1/2 * acceleration * time^2) / time`;
-- reverse acceleration: `2 * (result - linear_rate * time) / time^2`;
-- reverse time: intentionally rejected because the general quadratic is not single-valued.
-
-`tests/test_science_formula_relations.py` was added to independently test direct evaluation, reverse linear-rate calculation, reverse acceleration calculation, rejection of ambiguous time inversion, and invalid arity. The formal-Physics projectile test now covers **8 checkpoints / 240 worksheet series**, including:
+`tests/test_science_formula_relations.py` independently exercises the direct and reverse calculations and invalid arity. The formal-Physics projectile test now covers **11 checkpoints / 330 worksheet series**, including:
 
 - 20 problems per worksheet;
 - deterministic seed regeneration;
 - independent answer recalculation from learner-visible known values for every published target direction;
 - corrupted-answer rejection;
-- 240/240 normalized-hash uniqueness;
+- 330/330 normalized-hash uniqueness;
 - hash disjointness from unrelated published worksheet series;
 - explicit air-resistance conditions;
-- `formal_course=物理` / no fixed grade;
-- signed `ay=-9.8 m/s²` where used;
-- positive/basic-range checks for the new vertical-displacement set.
+- explicit same-height conditions for the flight-time/range sets;
+- `formal_course=物理` / `grade=null`.
 
 ## Implementation / publication
 
-- Main implementation PR #132 merge: `b39253057c206c4611039d35fe69127e58ffa958`.
-- The first Actions attempt for run `33041609705` found a test-launch issue only: the new standalone regression test lacked the repository-root `sys.path` setup used by the existing formal-Physics test.
-- Test-only fix PR #133 merge: `36085fe1666fc61e36c744584ce7d208e2eb8b56`.
-- Actions run `33041609705`, attempt 2: **success**.
-- Successful run covered shared worksheet tests, new relation regression tests, all formal-Physics projectile tests, 60-PDF generation, post-generation revalidation, exact 240-row catalog validation, 240 unique hashes, all registered formal-Physics PDF `%PDF` headers, size >1000 bytes, two-page structure, commit, and latest-main safe push.
-- Publication commit: `87c0d61dd75f3aeb880f2dceaaeff349ee5b23fa`.
+- Implementation PR #134 merge: `f6e8c642455c720cb36a0ab6d471012a39e70ec1`.
+- Before PR merge, the source/relation/topic regression run passed the shared worksheet tests, relation tests, and the full 330-series projectile test. Temporary branch workflow scaffolding used only to obtain a clean runner was removed before the PR; it is not part of `main`.
+- Actions run `33045145115`: **success**.
+- Successful publication covered shared worksheet tests, relation regression tests, all formal-Physics projectile tests, 90-PDF generation, post-generation revalidation, exact 330-row catalog validation, 330 unique hashes, all registered formal-Physics PDF `%PDF` headers, size >1000 bytes, two-page structure, commit, and latest-main safe push.
+- Publication commit: `7cdac624ecc1ba93fb6479fe10c34fad1ddc3314`.
 
 ## Current authoritative published coverage
 
@@ -70,28 +72,28 @@ Supported operations for this relation:
 - junior-high grade 2 physics: 120;
 - junior-high grade 3 physics: 120;
 - `物理基礎`: 870;
-- formal `物理`: **240**;
-- total published physics: **1398**.
+- formal `物理`: **330**;
+- total published physics: **1488**.
 
 Formal `物理` currently has:
 
-- `様々な運動：平面運動と放物運動`: 240;
-- answer type `numeric`: 240;
-- 240 unique normalized content hashes.
+- `様々な運動：平面運動と放物運動`: 330;
+- answer type `numeric`: 330;
+- 330 unique normalized content hashes.
 
 Every registered formal-Physics PDF passes `%PDF` header, file-size greater than 1000 bytes, and two-page structural checks. Representative screenshot-based visual QA remains pending; structural validation is not treated as visual QA.
 
 ## Exact next starting point
 
-Continue Phase 3 at formal course **`物理：平面運動・放物運動`**, after vertical displacement and time to highest point.
+Continue Phase 3 at formal course **`物理：剛体のつり合い`**.
 
 1. Start from latest `main` and repeat the control-document read/reconcile sequence.
 2. Preserve parallel repository progress; never reset a newer `main`.
-3. Recheck current MEXT `物理` scope before extending formulas.
+3. Recheck current MEXT `物理` scope. The commentary places `剛体のつり合い` immediately after `放物運動` and requires understanding the equilibrium conditions of an extended rigid body.
 4. Keep `formal_course=物理` and `grade=null`.
-5. Next design target: **maximum height** `H = v0y^2 / (2g)` for a projectile returning to the launch-level reference framework.
-6. Define a mechanically invertible shared relation such as a square-over-double relation, or an equally explicit dedicated generator/validator. Direct `H` and reverse `v0y` are the natural single-answer targets; do not invent reverse modes only to increase PDF count.
-7. If that relation and tests are safe, the next likely contiguous checkpoint is same-level total flight time `T = 2v0y/g`, followed by horizontal range using previously established horizontal-component relations. Keep each checkpoint independently recomputable from learner-visible values and reject near-duplicate content.
+5. Begin with the simplest mechanically verifiable force-moment model, likely a single perpendicular force and lever arm (`M = Fd`) before introducing signed sums of moments or angled forces.
+6. Define learner-visible sign/rotation conventions explicitly before any clockwise/counterclockwise balance problems. Do not hide geometric assumptions in generator-only state.
+7. Prefer a direct/reverse numeric checkpoint only if all targets have unique answers from learner-visible values. If a balance equation introduces multiple unknowns or ambiguous geometry, reject that mode rather than increasing PDF count.
 8. For every new series, independently recompute answers, verify deterministic seeds, reject normalized-hash collisions, preserve 20-problem/two-page format, and validate the complete catalog.
 9. Publish only after shared/topic tests, generation, post-generation validation, catalog/PDF checks, and latest-main safe push succeed.
 10. Representative screenshot-based visual QA remains pending.
