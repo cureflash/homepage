@@ -13,7 +13,11 @@ on:
       - 'scripts/publish_grade4_fraction_conversions.py'
       - 'scripts/publish_grade4_order_of_operations.py'
       - 'scripts/publish_grade4_mixed_operations.py'
+      - 'scripts/publish_grade4_large_number_place_value.py'
+      - 'scripts/publish_grade4_rounding.py'
+      - 'scripts/publish_grade4_review.py'
       - 'tests/test_grade4_*_publisher.py'
+      - 'tests/test_grade4_remaining_publishers.py'
       - '.github/workflows/grade4-core-publish.yml'
   workflow_dispatch:
 permissions:
@@ -43,6 +47,9 @@ jobs:
             python scripts/publish_grade4_fraction_conversions.py .
             python scripts/publish_grade4_order_of_operations.py .
             python scripts/publish_grade4_mixed_operations.py .
+            python scripts/publish_grade4_large_number_place_value.py .
+            python scripts/publish_grade4_rounding.py .
+            python scripts/publish_grade4_review.py .
             python tests/test_grade4_large_integer_add_sub_publisher.py
             python tests/test_grade4_division_publisher.py
             python tests/test_grade4_decimals_publisher.py
@@ -52,6 +59,7 @@ jobs:
             python tests/test_grade4_fraction_conversions_publisher.py
             python tests/test_grade4_order_of_operations_publisher.py
             python tests/test_grade4_mixed_operations_publisher.py
+            python tests/test_grade4_remaining_publishers.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main); git fetch origin main; after=$(git rev-parse origin/main)
             [ "$before" = "$after" ] && break
