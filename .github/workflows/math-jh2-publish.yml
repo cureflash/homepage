@@ -34,7 +34,9 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python scripts/publish_jh2_expression_operations.py .
+            python scripts/publish_jh2_expression_equation_basics.py .
             python tests/test_jh2_expression_operations_publisher.py
+            python tests/test_jh2_expression_equation_basics_publisher.py
             python tests/test_worksheet_factory.py
             python tests/test_worksheet_catalog_writer_concurrency.py
             before=$(git rev-parse origin/main)
