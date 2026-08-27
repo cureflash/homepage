@@ -2,97 +2,73 @@
 
 ## Current state
 
-**APP TRACK Phase 11 / Task 11.3 is complete. The exact next APP TRACK task is Phase 11 / Task 11.4 — App Store submission readiness checkpoint.**
+**APP TRACK Phase 11 / Task 11.4 is in progress.** The repository-owned App Store submission-readiness audit is now explicit and machine-checkable, but the task must remain incomplete until the shipping asset blockers below are resolved.
 
 The APP/UI track remains separate from production taxonomy/question generation and QA. No production question data was authored or validated in this checkpoint.
 
-## Phase 11.3 completed — real iOS app target and release regression
+## Phase 11.4 progress completed
 
-### Real Xcode application target
+### In-app credits
 
-Added the minimal application shell at:
+Added `Sources/PowerTOEIC/Views/Home/CreditsView.swift` and linked it from `HomeView`.
 
-`subjects/english/power-toeic-ios/AppShell/`
+It preserves the exact required OtoLogic credit:
 
-The real Xcode project is:
+`OtoLogic (CC BY 4.0) / https://otologic.jp/`
 
-`subjects/english/power-toeic-ios/AppShell/PowerTOEICApp.xcodeproj`
+The credits surface is presentation-only and does not own quiz/domain logic.
 
-and uses the shared scheme `PowerTOEICApp`.
-
-The app target imports the existing local `PowerTOEIC` Swift Package product. The app shell owns only:
-
-- `@main` application entry point;
-- Xcode target/scheme;
-- app-target privacy manifest;
-- AppIcon/AccentColor asset-catalog slots;
-- account-neutral bundle/version build configuration.
-
-Quiz, workout, mastery, review, persistence, character and question-bank logic remain in the existing Swift Package; do not duplicate them in the app target.
-
-### App-target resources and config
+### Machine-checkable submission readiness
 
 Added:
 
-- `AppShell/PowerTOEICApp/PrivacyInfo.xcprivacy`;
-- `AppShell/PowerTOEICApp/Assets.xcassets/`;
-- `AppShell/Config/PowerTOEIC.xcconfig`;
-- `AppShell/README.md`.
+`subjects/english/power-toeic-ios/Release/SubmissionReadiness.json`
 
-The privacy manifest is byte-for-byte checked against the canonical `Release/PrivacyInfo.xcprivacy` and declares app-local UserDefaults reason `CA92.1` only.
+It records repository requirements separately from external Apple/operator inputs and refuses to claim `submission_ready: true` while repository blockers remain.
 
-The AppIcon set is intentionally empty. Do not fabricate final icon artwork from temporary Irasutoya character art. A final original 1024x1024 App Store icon remains a submission-readiness requirement.
+Current repository blockers are:
 
-The xcconfig uses deliberately invalid/account-neutral engineering values (`invalid.placeholder.PowerTOEIC`, marketing version `0.0.0`) so CI can compile without storing Apple credentials. These must be replaced only at release time with user-owned values.
+1. the four planned Irasutoya character binary resources are still not bundled;
+2. the three planned OtoLogic MP3 resources are still not bundled;
+3. final original 1024x1024 AppIcon artwork has not been supplied.
 
-### Release CI
+`Package.swift` currently declares no binary resource processing for these character/audio files, and `Release/AssetManifest.json` correctly leaves all seven entries as `not_yet_bundled`. Do not change any entry to `bundled` until the actual file exists in the repository/app resource graph and its source/license has been checked.
 
-Added:
+### App Store metadata/privacy audit
 
-`.github/workflows/power-toeic-ios-app-build.yml`
+Apple's current App Store Connect documentation was rechecked on 2026-08-27. The release metadata now records the current constraints used by the repository tests:
 
-It validates:
+- app name: maximum 30 characters;
+- subtitle: maximum 30 characters;
+- iOS privacy policy URL: required.
 
-1. Xcode project/scheme discovery;
-2. unsigned Debug build for generic iOS Simulator;
-3. unsigned Release build for generic iOS device;
-4. unsigned Release `.xcarchive` creation;
-5. archived `PowerTOEICApp.app` existence;
-6. archived `PrivacyInfo.xcprivacy` presence and plist validity.
+`Power TOEIC` and `弱点を問題数で鍛えるTOEIC特訓` are within those limits.
 
-Initial Xcode target CI proved the Simulator and generic-device builds. A later workflow edit introduced a GitHub workflow-evaluation error because `runner.temp` was referenced from job-level `env`; PR #114 replaced it with a workflow-safe fixed `/tmp/PowerTOEICApp.xcarchive` path. The corrected archive workflow then passed through unsigned archive creation and archived privacy-manifest validation.
+The current native binary still has no account, advertising, analytics, tracking, or off-device data collection. The existing privacy declaration therefore remains appropriate for the current implementation, subject to re-audit if network/account/analytics behavior is later added.
 
-The Swift package regression suite remained green while introducing the app shell.
-
-### What is intentionally not done
-
-No actual TestFlight upload was attempted. That requires user-owned Apple account and signing inputs that must not be invented or committed:
+### External operator inputs that must remain outside the repository
 
 - Apple Developer Team ID;
 - production bundle identifier;
 - App Store Connect app ID;
 - SKU;
-- distribution certificate / signing mechanism;
-- provisioning configuration;
-- real marketing version/build number;
+- distribution signing/provisioning configuration;
+- marketing version and build number;
 - public privacy-policy URL;
 - public support URL.
 
-An unsigned `.xcarchive` proves application packaging and release compilation; it is not an uploadable signed TestFlight artifact.
+Do not invent or commit these values.
 
 ## Exact next work
 
-### Phase 11 / Task 11.4 — App Store submission readiness checkpoint
+Continue Phase 11.4 from latest `main` after this checkpoint is merged:
 
-1. Start from latest `main` and re-read canonical docs plus `80_IOS_RELEASE_READINESS.md`.
-2. Audit the actual app target/resources and produce a machine-checkable submission blocker list. Do not invent user/account values.
-3. Add an in-app Credits/About surface if the OtoLogic sounds remain in the intended shipping asset set; preserve exact CC BY 4.0 credit.
-4. Verify whether temporary Irasutoya character files have actually been bundled. Only mark assets `bundled` in `Release/AssetManifest.json` after file existence and source/license checks; otherwise keep them as explicit blockers/placeholders.
-5. Require final original AppIcon artwork before declaring submission-ready.
-6. Validate App Store metadata strings and privacy declarations against then-current Apple requirements.
-7. Keep account/signing/App Store Connect identifiers external and list them as operator inputs.
-8. Run Swift Package tests plus iOS app unsigned archive regression after any release-readiness changes.
-9. Mark 11.4 complete only if every repository-owned requirement is complete and every remaining blocker is solely an explicit external operator/account input. Do not claim that the app has been submitted or uploaded unless a real signed upload occurs.
+1. obtain and bundle the actual four Irasutoya character files and three OtoLogic audio files only with verified source/license provenance;
+2. update `Package.swift` / app resource wiring as needed and mark only verified files `bundled` in `Release/AssetManifest.json`;
+3. provide a final original 1024x1024 AppIcon and verify it is in the app target asset catalog;
+4. rerun Swift Package tests plus the iOS unsigned build/archive regression;
+5. update `SubmissionReadiness.json` to `submission_ready: true` only when every repository requirement is complete and all remaining inputs are external operator/account values;
+6. only then mark 11.4 complete. Do not claim TestFlight upload or App Store submission without a real signed upload.
 
 ## Fixed decisions
 
