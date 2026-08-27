@@ -79,9 +79,16 @@ The app track may define only the consumer-facing adapter contract and tiny synt
   - Added native mobile-first Home, recipe configuration, four-choice Quiz, Result and Weakness views behind existing boundaries.
   - Views forward intent to domain objects and do not calculate correctness, selection, mastery or review dates.
   - TEST/mixed sessions hide the micro-skill label.
-- [ ] **10.6 Port Drill Sergeant / Trainee character UX and progression**
-- [ ] **10.7 Implement native persistence**
-- [ ] **10.8 Run JavaScript/Swift conformance suite**
+- [x] **10.6 Port Drill Sergeant / Trainee character UX and progression**
+  - Added deterministic native `ProgressionEngine`, semantic `AssetCatalog`, detachable `CharacterView`/`CharacterQuizView`, and presentation-only Quiz callbacks.
+  - Shared Web progression fixture is consumed directly by Swift tests; temporary Irasutoya mapping uses four unique works and OtoLogic audio remains behind semantic IDs.
+- [x] **10.7 Implement native persistence**
+  - Added versioned `VersionedNativeAppStore` using an injected native persistence backend with `UserDefaults` as the standard adapter.
+  - Attempts, review entries and progression persist in the same platform-neutral envelope shape; corrupt/unsupported state and storage failures fall back safely without blocking quiz operation.
+  - Native persistence tests cover round-trip, mutation isolation, invalid-state rejection and failure fallback.
+- [x] **10.8 Run JavaScript/Swift conformance suite**
+  - Web Node 22 suite and native macOS Swift suite both passed on the same docs checkpoint commit after 10.6/10.7 merge.
+  - Swift still consumes the canonical Web `cross-platform-conformance-v1.json` directly; no platform-specific fixture fork was introduced.
 
 ## Phase 11 — iOS release preparation — APP TRACK
 - [ ] **11.1 App lifecycle, offline behavior and accessibility pass**
