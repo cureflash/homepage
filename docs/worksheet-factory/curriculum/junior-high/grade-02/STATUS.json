@@ -1,5 +1,5 @@
 {
   "status": "in_progress",
-  "updated_at": "2026-08-28T05:05:00+09:00",
-  "next_task": "中学2年の次の未完了技能『分数を含む連立方程式』から開始する。安全なら続けて『一次関数 xからyを求める代入』『2点から変化の割合を求める』『傾きと切片から式を作る基本練習』まで最大4 checkpoint進める。deterministic seed、独立解答再計算、重複/hash検査、2ページPDF、通常整数番号、同一配置＋赤字解答、catalog/site validation、共有catalog writer concurrency guardを維持する"
+  "updated_at": "2026-08-28T07:04:00+09:00",
+  "next_task": "中学2年の次の未完了技能『2点から一次関数の式を求める数値練習』から開始する。deterministic seed、独立解答再計算、重複/hash検査、2ページPDF、通常整数番号、同一配置＋赤字解答、catalog/site validation、共有catalog writer concurrency guardを維持する"
 }
