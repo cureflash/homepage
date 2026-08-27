@@ -22,9 +22,9 @@ class PhysicsMomentumTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_three_checkpoints_total_ninety_variants(self):
+    def test_five_checkpoints_total_one_hundred_fifty_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 90)
+        self.assertEqual(len(batches), 150)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
         counts = {key: 0 for key in PHYSICS_MOMENTUM_TOPICS}
         for topic_key, *_ in batches:
@@ -50,18 +50,25 @@ class PhysicsMomentumTests(unittest.TestCase):
                     if solve_for == "momentum": expected = known["mass"] * known["velocity"]
                     elif solve_for == "mass": expected = known["momentum"] / known["velocity"]
                     else: expected = known["momentum"] / known["mass"]
-                else:
+                elif topic_key in {"impulse-one-dimensional", "momentum-change-from-impulse"}:
                     result_key = "impulse" if topic_key == "impulse-one-dimensional" else "momentum_change"
                     if solve_for == result_key: expected = known["force"] * known["duration"]
                     elif solve_for == "force": expected = known[result_key] / known["duration"]
                     else: expected = known[result_key] / known["force"]
+                elif topic_key == "momentum-conservation-total-before-after":
+                    if solve_for == "final_total_momentum": expected = known["initial_momentum_1"] + known["initial_momentum_2"]
+                    elif solve_for == "initial_momentum_1": expected = known["final_total_momentum"] - known["initial_momentum_2"]
+                    else: expected = known["final_total_momentum"] - known["initial_momentum_1"]
+                else:
+                    if solve_for == "final_momentum_2": expected = known["initial_total_momentum"] - known["final_momentum_1"]
+                    elif solve_for == "initial_total_momentum": expected = known["final_momentum_2"] + known["final_momentum_1"]
+                    else: expected = known["initial_total_momentum"] - known["final_momentum_2"]
                 self.assertAlmostEqual(problem["answer"], expected, msg=(topic_key, mode_key, variant))
                 self.assertAlmostEqual(problem["answer_spec"]["value"], expected)
 
     def test_sign_convention_is_visible_and_both_directions_occur(self):
         for topic_key, topic in PHYSICS_MOMENTUM_TOPICS.items():
             self.assertEqual(topic["unit"], "様々な運動：運動量と力積")
-            self.assertEqual(topic["spec"]["relation"], "product")
             self.assertNotIn("grade", topic)
             self.assertNotIn("school_year", topic)
             self.assertTrue(any("右向きを正" in variable.get("label", "") for variable in topic["spec"]["variables"].values()))
@@ -72,6 +79,18 @@ class PhysicsMomentumTests(unittest.TestCase):
             self.assertTrue(any(value > 0 for value in answers), topic_key)
             self.assertTrue(any(value < 0 for value in answers), topic_key)
 
+    def test_conservation_assumptions_and_equal_total_are_learner_visible(self):
+        conservation = [PHYSICS_MOMENTUM_TOPICS[key] for key in (
+            "momentum-conservation-total-before-after",
+            "momentum-conservation-final-object",
+        )]
+        self.assertEqual(conservation[0]["spec"]["relation"], "sum")
+        self.assertEqual(conservation[1]["spec"]["relation"], "difference")
+        for topic in conservation:
+            self.assertIn("P前=P後", topic["formula"])
+            self.assertTrue(all("外力の力積を無視できる" in mode["description"] for mode in topic["modes"].values()))
+            self.assertTrue(all("1次元" in mode["description"] for mode in topic["modes"].values()))
+
     def test_momentum_change_checkpoint_states_impulse_theorem(self):
         topic = PHYSICS_MOMENTUM_TOPICS["momentum-change-from-impulse"]
         self.assertIn("力積は運動量の変化に等しい", topic["formula"])
@@ -79,8 +98,8 @@ class PhysicsMomentumTests(unittest.TestCase):
 
     def test_normalized_hashes_unique_and_disjoint_from_existing_catalog(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 90)
-        self.assertEqual(len(set(hashes)), 90)
+        self.assertEqual(len(hashes), 150)
+        self.assertEqual(len(set(hashes)), 150)
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
         current_ids = {f"science-physics-motion-{topic_key}-{mode_key}-{variant:02d}" for topic_key, topic in PHYSICS_MOMENTUM_TOPICS.items() for mode_key in topic["modes"] for variant, _ in enumerate(topic["seeds"], start=1)}
         prior_hashes = {row["content_hash"] for row in catalog if row.get("id") not in current_ids}
