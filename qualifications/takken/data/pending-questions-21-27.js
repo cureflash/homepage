@@ -19,8 +19,8 @@
       proposedAnswerIndex: 1,
       explanation: "宅建業者は、契約成立までの間に、宅地建物取引士をして重要事項を記載した書面を交付して説明させなければならない。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 1 }
     },
     {
       id: "takken-q-21-002",
@@ -39,8 +39,8 @@
       proposedAnswerIndex: 2,
       explanation: "宅地建物取引士は重要事項説明をするとき、説明の相手方に宅地建物取引士証を提示しなければならない。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-22-001",
@@ -59,8 +59,8 @@
       proposedAnswerIndex: 0,
       explanation: "35条の重要事項には、対象不動産上に存する登記された権利の種類・内容等が含まれる。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 0 }
     },
     {
       id: "takken-q-22-002",
@@ -79,8 +79,8 @@
       proposedAnswerIndex: 1,
       explanation: "35条の重要事項には、都市計画法・建築基準法その他の法令に基づく制限のうち政令で定めるものの概要が含まれる。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 1 }
     },
     {
       id: "takken-q-23-001",
@@ -99,8 +99,8 @@
       proposedAnswerIndex: 2,
       explanation: "宅建業者は、売買・交換・貸借に関する契約を締結したとき、所定事項を記載した書面を交付しなければならない。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-23-002",
@@ -119,8 +119,8 @@
       proposedAnswerIndex: 0,
       explanation: "37条書面には宅地建物取引士が記名しなければならない。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 0 }
     },
     {
       id: "takken-q-24-001",
@@ -139,8 +139,8 @@
       proposedAnswerIndex: 1,
       explanation: "35条の重要事項説明は、契約が成立するまでの間に行う。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 1 }
     },
     {
       id: "takken-q-24-002",
@@ -159,8 +159,8 @@
       proposedAnswerIndex: 2,
       explanation: "37条の書面は、契約が成立したときに交付する。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-25-001",
@@ -179,8 +179,8 @@
       proposedAnswerIndex: 3,
       explanation: "宅建業法37条の2から43条には、自ら売主となる宅建業者について申込み撤回、損害賠償額、手付、担保責任、手付金等の保全、割賦販売等の規制が置かれている。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 3 }
     },
     {
       id: "takken-q-25-002",
@@ -199,8 +199,8 @@
       proposedAnswerIndex: 2,
       explanation: "自ら売主となる宅建業者に対する買主保護規制には、買主に不利な特約を無効とするものが複数ある。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 2 }
     },
     {
       id: "takken-q-26-001",
@@ -219,8 +219,8 @@
       proposedAnswerIndex: 0,
       explanation: "宅建業法37条の2は、一定の事務所等以外の場所で行われた買受けの申込み等について申込みの撤回等を認めている。",
       sourceIds: ["egov-takken-law-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-27T19:27:51+09:00", result: "verified", independentAnswerIndex: 0 }
     },
     {
       id: "takken-q-26-002",
@@ -286,6 +286,7 @@
 
   const ids = new Set();
   const stems = new Set();
+  const allowedStatuses = new Set(["pending_validation", "verified", "needs_revision", "rejected"]);
   for (const q of Q) {
     if (ids.has(q.id)) throw new Error(`Duplicate Takken question id: ${q.id}`);
     ids.add(q.id);
@@ -295,7 +296,7 @@
     if (!Array.isArray(q.choices) || q.choices.length !== 4) throw new Error(`Invalid choices: ${q.id}`);
     if (new Set(q.choices).size !== 4) throw new Error(`Duplicate choices: ${q.id}`);
     if (!Number.isInteger(q.proposedAnswerIndex) || q.proposedAnswerIndex < 0 || q.proposedAnswerIndex > 3) throw new Error(`Invalid answer index: ${q.id}`);
-    if (q.validationStatus !== "pending_validation") throw new Error(`Invalid validation status: ${q.id}`);
+    if (!allowedStatuses.has(q.validationStatus)) throw new Error(`Invalid validation status: ${q.id}`);
     if (q.examYear !== 2026 || q.lawAsOf !== "2026-04-01") throw new Error(`Invalid exam metadata: ${q.id}`);
   }
 
