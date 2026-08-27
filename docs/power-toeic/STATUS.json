@@ -4,7 +4,7 @@
   "track": "app_ui_program",
   "phase": 11,
   "active_task": "11.4",
-  "next_role": "pin_and_bundle_exact_bodybuilder_then_final_icon",
+  "next_role": "supply_final_original_app_icon_then_submission_reaudit",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
   "native_implementation_path": "subjects/english/power-toeic-ios/",
@@ -45,7 +45,7 @@
     "privacy_required_reason": "NSPrivacyAccessedAPICategoryUserDefaults / CA92.1",
     "unsigned_release_regression": "simulator debug build + generic device release build + unsigned xcarchive + archived privacy manifest validation passed",
     "testflight_upload": "blocked until user-owned Apple Developer signing and App Store Connect identifiers are supplied",
-    "repository_submission_blockers": ["final_app_icon", "temporary_character_assets_bundled"],
+    "repository_submission_blockers": ["final_app_icon"],
     "status": "submission_readiness_in_progress"
   },
   "content_database_track": "external_scheduler",
@@ -62,18 +62,19 @@
     "temporary_art_source": "Irasutoya",
     "temporary_unique_art_limit": 20,
     "planned_unique_art": 4,
-    "bundled_unique_art": 3,
+    "bundled_unique_art": 4,
     "bundled_resource_names": [
       "irasutoya_sergeant_instructor",
       "irasutoya_trainee_skinny",
-      "irasutoya_trainee_muscular"
+      "irasutoya_trainee_muscular",
+      "irasutoya_trainee_bodybuilder"
     ],
-    "remaining_unbundled_resource_names": ["irasutoya_trainee_bodybuilder"],
-    "bundled": false
+    "remaining_unbundled_resource_names": [],
+    "bundled": true
   },
   "audio": {"source":"Google Drive existing SE library / OtoLogic public source","initial_correct":"otologic_correct.mp3","initial_wrong":"otologic_incorrect.mp3","initial_milestone":"otologic_inspiration.mp3","drive_files_verified":true,"public_source_sha256_matched":true,"player_adapter_ready":true,"swiftpm_resource_boundary_ready":true,"bundled":true,"license":"CC BY 4.0 / OtoLogic attribution required","credits_view":true},
   "attempt_contexts": ["training", "mixed", "review"],
   "workout_modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
   "last_completed_task": "11.3",
-  "updated_at": "2026-08-27T11:00:00+09:00"
+  "updated_at": "2026-08-27T12:12:00+09:00"
 }
