@@ -4,45 +4,42 @@
 
 ## 今回完了したcheckpoint
 
-1. `reduce-fraction` — 約分 — 3 variants / 3 PDFs
-2. `unlike-denominator-add` — 異分母分数のたし算 — 3 variants / 3 PDFs
-3. `unlike-denominator-sub` — 異分母分数のひき算 — 3 variants / 3 PDFs
-4. `fraction-decimal-conversion` — 分数・小数の変換 — 3 variants / 3 PDFs
+1. `fraction-add-sub-mixed` — 分数計算混合 — 3 variants / 3 PDFs
+2. `decimal-percent-conversion` — 小数・百分率の変換 — 3 variants / 3 PDFs
+3. `basic-ratio-calculation` — 割合の基本数値計算 — 3 variants / 3 PDFs
+4. `grade5-review` — 小学5年 算数 総復習 — 3 variants / 3 PDFs
 
-今回 **4技能・12PDF** を追加公開した。これまでの8技能と合わせ、小学5年は **12技能・36PDF** 公開済み。
+今回 **4技能・12PDF** を追加公開した。これまでの12技能と合わせ、小学5年は **16技能・48PDF** で計画済み範囲を完了した。
 
 ## カリキュラム確認
 
-文部科学省「小学校学習指導要領（平成29年告示）解説 算数編」の第5学年で、約分・通分と異分母分数の加法・減法を扱うことを確認してから実装した。分数・小数の変換は有限小数へ機械的に変換できる範囲に限定し、分数と除法・小数の関係を反復する技能として設計した。
+文部科学省「小学校学習指導要領（平成29年告示）解説 算数編」で、第5学年に割合・百分率を用いた表し方と割合を求める学習が配置されていることを確認してから実装した。分数計算混合は第5学年で扱う加法・減法だけに限定し、分数の乗法・除法は小学6年へ送った。
 
 ## 実装・検証
 
-- publisher: `scripts/publish_grade5_fraction_core.py`
-- test: `tests/test_grade5_fraction_core_publisher.py`
+- publisher: `scripts/publish_grade5_final_four.py`
+- test: `tests/test_grade5_final_four_publisher.py`
 - workflow: `.github/workflows/grade5-core-publish.yml`
-- 各技能3seed（`10711 / 10812 / 10913`）、各20問。
-- `reduce-fraction` は未約分の真分数だけを生成し、`Fraction` で既約分数を独立再計算する。
-- `unlike-denominator-add` / `unlike-denominator-sub` は異なる分母を保証し、`Fraction` で和・差を独立再計算する。減法は正の結果だけを生成する。
-- `fraction-decimal-conversion` は分数→有限小数と小数→既約分数を10問ずつ交互に出し、`Fraction` と10進表記の双方で同値性を確認する。
+- 各技能3seed（`11014 / 11115 / 11216`）、各20問。
+- `fraction-add-sub-mixed` は異分母を含む3項の加減だけを生成し、`Fraction` で独立再計算する。結果が正になる問題だけを採用する。
+- `decimal-percent-conversion` は小数→百分率と百分率→小数を10問ずつ出し、`Fraction` で同値性を検証する。
+- `basic-ratio-calculation` は「割合を求める / 比べる量を求める / もとにする量を求める」を分散し、整数として一意に解ける数値条件に限定する。
+- `grade5-review` は小数乗法・異分母分数加法・百分率・約数列挙を各5問ずつ組み合わせる。
 - 問題内重複、variant間差、既存catalogとのnormalized content hash衝突を検査する。
 - 問題番号は通常整数表記。
 - 2ページ目は問題ページと同じ配置を保持し、答えだけ赤字で追加する。
-- Grade 5 workflowで既存publisher/test、新publisher/test、`tests/test_worksheet_factory.py` を実行し、公開commitが生成された。
-- publish commit: `fce79b0f6b7070848a7edd5448eed0c0e550cd50`
+- Grade 5 workflowで既存publisher/test、新publisher/test、`tests/test_worksheet_factory.py` を実行し、全step success後に公開commitを生成した。
+- workflow run: `33048183296` success
+- publish commit: `1a8294444b39fd74544c867504fa59a50630ae2c`
 
 ## 現在の公開範囲
 
-小学5年: **12技能・36PDF**。
+小学5年: **16技能・48PDF**。STATUSは `done`。
 
 公開先: `materials/worksheets/elementary/grade-05/`
 
 ## 次にやること
 
-PLAN.mdの次の未完了項目から順に進める。
+小学5年は完了。次runでは小学6年をactive gradeとして `PLAN.md` の先頭 **「分数×整数」** から開始する。
 
-1. 分数計算混合（この学年までの範囲）
-2. 百分率の基本変換（小数↔百分率）
-3. 割合の基本数値計算
-4. 学年総復習計算
-
-次runでも安全なら最大4 checkpoint連続で進める。分数混合は第5学年で扱う加減の範囲を越えて分数乗除へ進まない。百分率・割合は数値条件を限定し、独立answer validationを機械的に保証する。
+小学6年でも、決定的seed、独立answer validation、重複検査、通常整数の問題番号、同一配置への赤字解答、PDF/catalog/site validation、学年専用workflow回帰を維持する。
