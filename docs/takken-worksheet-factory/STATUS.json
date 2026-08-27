@@ -13,15 +13,15 @@
   "generated_unit_count": 90,
   "question_generated_unit_count": 90,
   "generated_question_count": 163,
-  "checked_question_count": 0,
-  "verified_question_count": 0,
+  "checked_question_count": 9,
+  "verified_question_count": 9,
   "needs_revision_question_count": 0,
   "rejected_question_count": 0,
-  "pending_validation_question_count": 163,
-  "verified_unit_count": 0,
-  "pending_factcheck_count": 90,
+  "pending_validation_question_count": 154,
+  "verified_unit_count": 7,
+  "pending_factcheck_count": 83,
   "unverified_backlog": [
-    "takken-gyoho-definition", "takken-gyoho-license-required", "takken-gyoho-license-authority", "takken-gyoho-license-disqualification", "takken-gyoho-license-validity-renewal", "takken-gyoho-license-change-closure", "takken-gyoho-roster-signs", "takken-shi-registration", "takken-shi-card", "takken-shi-exclusive", "takken-shi-exclusive-duties", "business-guarantee-deposit", "business-guarantee-refund", "guarantee-association", "brokerage-contract-basics", "brokerage-contract-types", "brokerage-reins-reporting", "advertising-start-time", "contract-start-time", "false-advertising-prohibited-conduct", "article35-basics", "article35-items", "article37-basics", "article35-vs-37", "eight-restrictions-overview", "cooling-off", "earnest-money-and-safeguards", "damages-penalty", "contract-nonconformity-special-rule", "unowned-property-restriction", "installment-sales-ownership", "brokerage-fees", "supervision-penalties", "civil-intent-general", "civil-mistake", "civil-fraud-duress", "civil-fictitious-declaration", "civil-limited-capacity", "civil-agency", "civil-unauthorized-agency", "civil-prescription", "property-rights-opposability", "co-ownership", "mortgage", "default-damages", "contract-cancellation", "risk-simultaneous-performance", "sale-earnest", "contract-nonconformity-civil", "lease-general", "lease-deposit-opposability", "land-lease-right", "fixed-term-land-lease", "building-lease-right", "fixed-term-building-lease", "inheritance-heirs-shares", "inheritance-acceptance-renunciation", "will-reserved-portion", "condominium-law", "real-estate-registration", "city-planning-area", "area-division", "use-districts", "city-planning-decisions", "development-permission-required", "development-permission-procedure", "building-confirmation", "roads-frontage", "building-coverage-ratio", "floor-area-ratio", "height-restrictions", "fire-prevention-zones", "national-land-use-notification", "farmland-act-article3", "farmland-act-articles4-5", "land-readjustment", "embankment-regulation", "legal-restrictions-comparison", "real-estate-acquisition-tax", "fixed-asset-tax", "registration-license-tax", "stamp-tax", "income-tax-real-estate-transfer", "land-price-public-notice", "real-estate-appraisal", "housing-finance-agency", "fair-competition-advertising", "land-building-knowledge", "statistics", "five-question-exemption-review"
+    "takken-shi-registration", "takken-shi-card", "takken-shi-exclusive", "takken-shi-exclusive-duties", "business-guarantee-deposit", "business-guarantee-refund", "guarantee-association", "brokerage-contract-basics", "brokerage-contract-types", "brokerage-reins-reporting", "advertising-start-time", "contract-start-time", "false-advertising-prohibited-conduct", "article35-basics", "article35-items", "article37-basics", "article35-vs-37", "eight-restrictions-overview", "cooling-off", "earnest-money-and-safeguards", "damages-penalty", "contract-nonconformity-special-rule", "unowned-property-restriction", "installment-sales-ownership", "brokerage-fees", "supervision-penalties", "civil-intent-general", "civil-mistake", "civil-fraud-duress", "civil-fictitious-declaration", "civil-limited-capacity", "civil-agency", "civil-unauthorized-agency", "civil-prescription", "property-rights-opposability", "co-ownership", "mortgage", "default-damages", "contract-cancellation", "risk-simultaneous-performance", "sale-earnest", "contract-nonconformity-civil", "lease-general", "lease-deposit-opposability", "land-lease-right", "fixed-term-land-lease", "building-lease-right", "fixed-term-building-lease", "inheritance-heirs-shares", "inheritance-acceptance-renunciation", "will-reserved-portion", "condominium-law", "real-estate-registration", "city-planning-area", "area-division", "use-districts", "city-planning-decisions", "development-permission-required", "development-permission-procedure", "building-confirmation", "roads-frontage", "building-coverage-ratio", "floor-area-ratio", "height-restrictions", "fire-prevention-zones", "national-land-use-notification", "farmland-act-article3", "farmland-act-articles4-5", "land-readjustment", "embankment-regulation", "legal-restrictions-comparison", "real-estate-acquisition-tax", "fixed-asset-tax", "registration-license-tax", "stamp-tax", "income-tax-real-estate-transfer", "land-price-public-notice", "real-estate-appraisal", "housing-finance-agency", "fair-competition-advertising", "land-building-knowledge", "statistics", "five-question-exemption-review"
   ],
   "unit_generation_complete": true,
   "question_generation_complete": true,
@@ -44,12 +44,12 @@
     "next_unit": null
   },
   "validation_progress": {
-    "next_validation_question_id": "takken-q-01-001",
-    "checked_question_count": 0,
-    "verified_question_count": 0,
+    "next_validation_question_id": "takken-q-08-001",
+    "checked_question_count": 9,
+    "verified_question_count": 9,
     "needs_revision_question_count": 0,
     "rejected_question_count": 0,
-    "pending_validation_question_count": 163
+    "pending_validation_question_count": 154
   },
   "foundation": {
     "portable_site_shell": true,
@@ -63,7 +63,7 @@
   },
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
-  "last_completed_unit": "five-question-exemption-review",
-  "last_run_summary": "Completed Phase 2 by generating 26 four-choice pending_validation questions covering all 26 remaining core facts in units 78-90. Cumulative coverage is 90/90 units, 163/163 core facts, 163 pending_validation questions, 0 checked, and 0 verified. Final checkpoint answer positions are A=7, B=7, C=6, D=6. question_generation_complete and generation_complete are true. Per phase-boundary rule, solve-all validation begins next run at takken-q-01-001; Phase 4 remains blocked until validation_complete is true.",
-  "updated_at": "2026-08-27T17:29:00+09:00"
+  "last_completed_unit": "takken-gyoho-roster-signs",
+  "last_run_summary": "Phase 3 solve-all validation started at takken-q-01-001. Independently re-solved and official-source-checked all 9 questions in units 1-7 before comparing stored answers/explanations. Results: checked 9, verified 9, needs_revision 0, rejected 0. Cumulative pending is 154. The next strict question is takken-q-08-001. Phase 4 remains blocked until validation_complete is true.",
+  "updated_at": "2026-08-27T18:29:00+09:00"
 }
