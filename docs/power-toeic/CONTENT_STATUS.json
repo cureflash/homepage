@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 1925,
-  "checked_question_count": 925,
+  "generated_question_count": 1950,
+  "checked_question_count": 950,
   "pending_validation_count": 1000,
-  "verified_question_count": 892,
+  "verified_question_count": 917,
   "needs_revision_count": 33,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -30,14 +30,14 @@
     "p5.verb.participle_clause",
     "p5.conn.preposition_vs_conjunction"
   ],
-  "current_batch": "2026-08-27-scheduled-021-part1",
+  "current_batch": "2026-08-27-scheduled-021-part2",
   "current_micro_skill": "p5.conn.because_vs_because_of",
-  "current_micro_skill_persisted_count": 25,
+  "current_micro_skill_persisted_count": 50,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_conn_because_vs_because_of_0026",
+  "next_resume_id": "p5_conn_because_vs_because_of_0051",
   "next_micro_skill": "p5.conn.because_vs_because_of",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Generated p5.conn.because_vs_because_of IDs 0001-0025 as a safe checkpoint. Structural checks: 25 unique sequential IDs, one blank, four distinct choices, valid answer indices, A/B/C/D=7/6/6/6, exact duplicate stems 0, SequenceMatcher >=0.94 pairs 0, maximum within-checkpoint similarity about 0.563. All 25 remain pending_validation. Independently validated the oldest unchecked p5.verb.present_vs_past IDs 0001-0025: 25 checked, 23 verified, 2 needs_revision, 0 rejected. IDs 0017 and 0022 lack a sufficiently explicit present-vs-past time anchor, so both were withheld rather than bulk-verified. Cumulative QA checked 925, verified 892, needs_revision 33, rejected 0; unchecked pending_validation remains 1,000 because generation and QA each advanced by 25. Next generation is p5.conn.because_vs_because_of_0026; next QA is p5.verb.present_vs_past_0026. Full cross-bank semantic near-duplicate scanning remains incomplete.",
-  "updated_at": "2026-08-27T17:15:00+09:00"
+  "last_run_result": "Generated p5.conn.because_vs_because_of IDs 0026-0050 as a safe 25-question checkpoint. Structural checks on the new 25: unique sequential IDs, one blank, four distinct choices, valid answer indices, A/B/C/D=7/6/6/6, exact duplicate stems 0, SequenceMatcher >=0.94 pairs 0, maximum within-checkpoint similarity about 0.571. All remain pending_validation. Independently validated the oldest unchecked p5.verb.present_vs_past IDs 0026-0050: 25 checked, 25 verified, 0 needs_revision, 0 rejected; all items contain explicit habitual/recurring cues such as every, each, whenever, weekly, monthly, twice a day, or a standing rule. Cumulative QA checked 950, verified 917, needs_revision 33, rejected 0; unchecked pending_validation remains 1,000 because generation and QA each advanced by 25. Next generation is p5.conn.because_vs_because_of_0051; next QA is p5.verb.present_vs_past_0051. Full cross-bank semantic near-duplicate scanning remains incomplete.",
+  "updated_at": "2026-08-27T18:14:00+09:00"
 }
