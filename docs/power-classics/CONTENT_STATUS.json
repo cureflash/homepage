@@ -3,24 +3,25 @@
   "role": "content_generate",
   "taxonomy_version": "classics-v1.0",
   "taxonomy_micro_skill_count": 100,
-  "generated_question_count": 100,
-  "checked_question_count": 100,
+  "generated_question_count": 150,
+  "checked_question_count": 150,
   "pending_validation_count": 0,
-  "verified_question_count": 100,
+  "verified_question_count": 150,
   "needs_revision_count": 0,
   "rejected_question_count": 0,
   "generated_micro_skills": [
-    "kobun.verb.conjugation_type.yodan"
+    "kobun.verb.conjugation_type.yodan",
+    "kobun.verb.conjugation_type.kami_ichidan"
   ],
-  "current_batch": "2026-08-27-scheduled-002",
-  "current_micro_skill": "kobun.verb.conjugation_type.yodan",
-  "current_micro_skill_persisted_count": 100,
-  "current_micro_skill_target_count": 100,
-  "next_resume_id": "kobun_verb_conjugation_type_kami_ichidan_0001",
-  "next_micro_skill": "kobun.verb.conjugation_type.kami_ichidan",
+  "current_batch": "2026-08-27-scheduled-003",
+  "current_micro_skill": "kobun.verb.conjugation_type.kami_ichidan",
+  "current_micro_skill_persisted_count": 50,
+  "current_micro_skill_target_count": 50,
+  "next_resume_id": "kobun_verb_conjugation_type_kami_nidan_0001",
+  "next_micro_skill": "kobun.verb.conjugation_type.kami_nidan",
   "generation_complete": false,
   "validation_complete": false,
   "global_duplicate_gate_complete": false,
-  "last_run_result": "Completed kobun.verb.conjugation_type.yodan Phase A to 100/100 by generating IDs 0031-0100. Independently re-solved all 70 new questions from stem+choices before checking keys: 70 verified, 0 needs_revision, 0 rejected. New answer positions A/B/C/D=17/17/18/18; cumulative yodan positions are exactly 25/25/25/25. Pre-commit cross-batch exact-stem QA caught a duplicate lexical stem (隠す, already ID 0030) and replaced ID 0050 with 渡す. Full bank semantic near-duplicate clearance remains pending. Next generation starts at kobun_verb_conjugation_type_kami_ichidan_0001.",
-  "updated_at": "2026-08-27T21:00:00+09:00"
+  "last_run_result": "Completed kobun.verb.conjugation_type.kami_ichidan Phase A at 50/50. Generated a finite-inventory drill across legitimate 上一段 verbs and distinct direct/未然/連用/連体/已然/命令 contexts instead of inventing lexical variety. Independently re-solved all 50 from stem+choices before key comparison: 50 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=13/13/12/12. Full bank semantic near-duplicate clearance remains pending. Next generation starts at kobun_verb_conjugation_type_kami_nidan_0001.",
+  "updated_at": "2026-08-27T22:00:00+09:00"
 }
