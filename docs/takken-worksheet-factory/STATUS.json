@@ -7,12 +7,13 @@
   "mode": "question_generation_backlog",
   "next_role": "generate_questions",
   "generation_batch_target": 20,
-  "active_unit_order": 1,
-  "active_unit": "takken-gyoho-definition",
+  "active_unit_order": 8,
+  "active_unit": "takken-shi-registration",
   "generated_unit_count": 90,
-  "generated_question_count": 0,
+  "question_generated_unit_count": 7,
+  "generated_question_count": 9,
   "verified_question_count": 0,
-  "pending_validation_question_count": 0,
+  "pending_validation_question_count": 9,
   "verified_unit_count": 0,
   "pending_factcheck_count": 90,
   "unverified_backlog": [
@@ -112,6 +113,15 @@
   "generation_complete": false,
   "validation_complete": false,
   "question_generation_policy": "Generate four-choice questions from every independently testable core fact; no fixed count padding. See 30_QUESTION_AND_QA_SPEC.md.",
+  "question_generation_progress": {
+    "covered_unit_orders": [1, 2, 3, 4, 5, 6, 7],
+    "covered_fact_count": 9,
+    "generated_question_files": [
+      "qualifications/takken/data/pending-questions-01-07.js"
+    ],
+    "next_unit_order": 8,
+    "next_unit": "takken-shi-registration"
+  },
   "foundation": {
     "portable_site_shell": true,
     "structured_unit_model": true,
@@ -125,6 +135,6 @@
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
   "last_completed_unit": "five-question-exemption-review",
-  "last_run_summary": "Generated queue items 81-90, completing the ordered 90-unit curriculum. Added canonical four-choice question/solve-all QA specification because all existing unit questions arrays are still empty. Unit generation is complete, but overall generation_complete remains false until every core fact is covered by stored four-choice questions with pending_validation status.",
-  "updated_at": "2026-08-27T11:29:00+09:00"
+  "last_run_summary": "Generated 9 four-choice pending_validation questions covering all 9 core facts in units 1-7. Added stable IDs, four distinct choices, answer indices, explanations, fact/source references, 2026 exam metadata, and generation-time structural guards. Question generation remains incomplete; next start is unit 8 takken-shi-registration. Solve-all validation has not started.",
+  "updated_at": "2026-08-27T12:32:49+09:00"
 }
