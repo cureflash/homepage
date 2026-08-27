@@ -2,6 +2,30 @@
 
 Updated: 2026-08-27
 
+## AUDIT OVERRIDE — P1 concurrent catalog writer
+
+**Severity:** P1 — fix before further science worksheet publication.
+
+**Audit evidence:** the enabled standalone science worksheet worker and the enabled GitHub time-routing worker's normal math route both run at the top of the hour during ordinary math hours. Both publish into `cureflash/homepage` and mutate the same authoritative `worksheets/catalog.json`. The science workflow's latest-main safe-push guard reduces data-loss risk, but it does not establish exclusive ownership of the catalog while another scheduled writer is generating/validating against a potentially changing snapshot.
+
+**Files / ownership boundary:** `worksheets/catalog.json`; science publish workflows; `.github/workflows/grade*-publish.yml`; `docs/science-worksheet-factory/90_HANDOFF.md`; `docs/worksheet-factory/90_HANDOFF.md`.
+
+**Required correction:** before publishing the next signed-moment equilibrium checkpoint, establish one repository-level serialization/aggregation contract for every workflow that writes `worksheets/catalog.json`. Acceptable designs include shared workflow concurrency serialization across math/science publication or independently generated per-track catalog fragments with deterministic aggregation. The correction must be common to both tracks rather than a science-only retry patch.
+
+**Do not:** do not force-push; do not overwrite a newer catalog; do not weaken catalog/hash validation; do not hand-patch generated catalog rows; do not merely add more retry loops around the existing shared-file race.
+
+**Acceptance criteria:**
+
+1. Every workflow/publisher that writes `worksheets/catalog.json` is covered by one explicit serialization/aggregation rule.
+2. A math publication and a science publication cannot both validate independent stale snapshots and then race to publish the shared catalog.
+3. Existing science/math catalog rows and stable URLs remain byte-for-byte semantically preserved after regeneration.
+4. Shared worksheet validation plus one representative math workflow and one representative science workflow pass under the new contract.
+5. Repository search finds no uncaptured direct publication path for the shared catalog.
+
+**Tests / searches required:** enumerate all catalog writers; verify workflow concurrency/aggregation behavior; run `tests/test_worksheet_factory.py`, the current formal-Physics publisher tests, and a representative current math publisher/test; preserve non-force latest-main safety.
+
+**Resume after audit fix:** continue Phase 3 at `物理：剛体のつり合い / 符号付きモーメントのつり合い` with the learner-visible sign convention and uniquely solvable torque-balance model described below.
+
 ## Completed / reconciled this run
 
 Started from the latest `main`, re-read the science-factory control documents, and resumed formal course `物理` at the exact prior stop point: `剛体のつり合い`. Parallel worksheet-factory updates on `main` were preserved; the implementation was merged by PR rather than resetting newer repository progress.
@@ -84,7 +108,7 @@ Every registered formal-Physics PDF passes `%PDF` header, file-size greater than
 
 ## Exact next starting point
 
-Continue Phase 3 at formal course **`物理：剛体のつり合い / 符号付きモーメントのつり合い`**.
+The AUDIT OVERRIDE above supersedes new publication work until the shared catalog-writer race is corrected. After that correction, continue Phase 3 at formal course **`物理：剛体のつり合い / 符号付きモーメントのつり合い`**.
 
 1. Start from latest `main` and repeat the control-document read/reconcile sequence.
 2. Preserve parallel repository progress; never reset a newer `main`.
