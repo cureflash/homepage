@@ -1,14 +1,14 @@
-"""Formal-course Physics topics for momentum, impulse, and momentum conservation.
+"""Formal-course Physics topics for momentum, impulse, conservation, and collisions.
 
 These checkpoints stay in one-dimensional motion so every sign and answer is
 mechanically unambiguous. The learner-visible positive direction is fixed in
-each variable label. The first three formulas are p = mv, J = FΔt, and
-Δp = FΔt. The conservation checkpoints use learner-visible total momentum
-before/after values and the full two-body mass-and-velocity conservation law.
+each signed-velocity label. Collision follow-up also covers the MEXT-required
+coefficient of restitution and change of mechanical energy with finite,
+one-unknown numerical models.
 
 Curriculum basis: current MEXT High School Course of Study Commentary,
 Physics: momentum and impulse, momentum conservation in collisions/divisions,
-and that momentum change equals impulse.
+collision/mechanical-energy change, and coefficient of restitution.
 """
 
 PHYSICS_MOMENTUM_PROBLEM_COUNT = 20
@@ -18,6 +18,10 @@ _SIGNED_FORCES = [-40, -30, -24, -20, -16, -12, -10, -8, 8, 10, 12, 16, 20, 24, 
 _DURATIONS = [0.1, 0.2, 0.25, 0.4, 0.5, 0.8, 1.0, 1.25, 1.5, 2.0]
 _SIGNED_MOMENTA = [-30, -24, -20, -18, -15, -12, -10, -8, -6, -5, -4, 4, 5, 6, 8, 10, 12, 15, 18, 20, 24, 30]
 _MASSES = [0.5, 1, 1.5, 2, 2.5, 3, 4, 5]
+_RELATIVE_SPEEDS = [2, 4, 5, 6, 8, 10, 12, 16, 20]
+_RESTITUTION_COEFFICIENTS = [0.2, 0.25, 0.4, 0.5, 0.6, 0.75, 0.8, 1.0]
+_INITIAL_KINETIC_ENERGIES = [120, 150, 180, 200, 240, 300, 360, 400]
+_FINAL_KINETIC_ENERGIES = [20, 40, 60, 80, 100]
 
 PHYSICS_MOMENTUM_TOPICS = {
     "momentum-one-dimensional": {
@@ -166,6 +170,54 @@ PHYSICS_MOMENTUM_TOPICS = {
             "reverse-initial-u1": {"solve_for": "initial_velocity_1", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、右向きを正、左向きを負とし、運動量保存から衝突前の物体1の速度 u₁ を逆算します。"},
             "reverse-initial-u2": {"solve_for": "initial_velocity_2", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、右向きを正、左向きを負とし、運動量保存から衝突前の物体2の速度 u₂ を逆算します。"},
             "reverse-final-v1": {"solve_for": "final_velocity_1", "worksheet_mode": "calculation-reverse", "description": "外力の力積を無視できる1次元の2物体衝突で、右向きを正、左向きを負とし、運動量保存から衝突後の物体1の速度 v₁ を逆算します。"},
+        },
+    },
+    "collision-coefficient-of-restitution": {
+        "title": "物理 衝突：はね返り係数",
+        "unit": "様々な運動：運動量と力積",
+        "skill": "collision-coefficient-of-restitution",
+        "formula": "相対離れる速さ = e × 相対近づく速さ（0≦e≦1）",
+        "seeds": tuple(range(7411, 7421)),
+        "spec": {
+            "id": "physics-collision-coefficient-of-restitution",
+            "relation": "product",
+            "result": "separation_relative_speed",
+            "inputs": ["restitution_coefficient", "approach_relative_speed"],
+            "variables": {
+                "separation_relative_speed": {"label": "衝突後に2物体が相対的に離れる速さ", "unit": "m/s"},
+                "restitution_coefficient": {"label": "はね返り係数 e", "values": _RESTITUTION_COEFFICIENTS},
+                "approach_relative_speed": {"label": "衝突前に2物体が相対的に近づく速さ", "unit": "m/s", "values": _RELATIVE_SPEEDS},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-separation-speed": {"solve_for": "separation_relative_speed", "worksheet_mode": "calculation-basic", "description": "1次元衝突について、近づく速さ・離れる速さをどちらも正の大きさで表し、相対離れる速さ=e×相対近づく速さから衝突後の相対速度の大きさを求めます。"},
+            "reverse-restitution": {"solve_for": "restitution_coefficient", "worksheet_mode": "calculation-reverse", "description": "1次元衝突について、近づく速さ・離れる速さをどちらも正の大きさで表し、e=(相対離れる速さ)/(相対近づく速さ)からはね返り係数を逆算します。"},
+            "reverse-approach-speed": {"solve_for": "approach_relative_speed", "worksheet_mode": "calculation-reverse", "description": "1次元衝突について、はね返り係数と衝突後に相対的に離れる速さから、衝突前に相対的に近づく速さを逆算します。"},
+        },
+    },
+    "collision-kinetic-energy-loss": {
+        "title": "物理 衝突：力学的エネルギーの減少",
+        "unit": "様々な運動：運動量と力積",
+        "skill": "collision-kinetic-energy-loss",
+        "formula": "K減少 = K前 - K後（衝突前後の全運動エネルギー）",
+        "seeds": tuple(range(7421, 7431)),
+        "spec": {
+            "id": "physics-collision-kinetic-energy-loss",
+            "relation": "difference",
+            "result": "kinetic_energy_loss",
+            "inputs": ["initial_total_kinetic_energy", "final_total_kinetic_energy"],
+            "variables": {
+                "kinetic_energy_loss": {"label": "衝突による全運動エネルギーの減少量 K減少", "unit": "J"},
+                "initial_total_kinetic_energy": {"label": "衝突前の2物体の全運動エネルギー K前", "unit": "J", "values": _INITIAL_KINETIC_ENERGIES},
+                "final_total_kinetic_energy": {"label": "衝突後の2物体の全運動エネルギー K後", "unit": "J", "values": _FINAL_KINETIC_ENERGIES},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-energy-loss": {"solve_for": "kinetic_energy_loss", "worksheet_mode": "calculation-basic", "description": "衝突前後の2物体の全運動エネルギーを比べ、K減少=K前-K後から衝突で減少した力学的エネルギーを求めます。運動量保存と運動エネルギー保存は同じ法則ではありません。"},
+            "reverse-initial-energy": {"solve_for": "initial_total_kinetic_energy", "worksheet_mode": "calculation-reverse", "description": "衝突後の全運動エネルギーと減少量から、K減少=K前-K後を使って衝突前の全運動エネルギーを逆算します。"},
+            "reverse-final-energy": {"solve_for": "final_total_kinetic_energy", "worksheet_mode": "calculation-reverse", "description": "衝突前の全運動エネルギーと減少量から、K減少=K前-K後を使って衝突後の全運動エネルギーを逆算します。"},
         },
     },
 }
