@@ -13,11 +13,16 @@ try:
         PHYSICS_RIGID_BODY_PROBLEM_COUNT,
         PHYSICS_RIGID_BODY_TOPICS,
     )
+    from scripts.science_physics_momentum import (
+        PHYSICS_MOMENTUM_PROBLEM_COUNT,
+        PHYSICS_MOMENTUM_TOPICS,
+    )
     from scripts.science_worksheet_helpers import generate_formula_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
     from science_physics_projectile import PHYSICS_PROJECTILE_PROBLEM_COUNT, PHYSICS_PROJECTILE_TOPICS
     from science_physics_rigid_body import PHYSICS_RIGID_BODY_PROBLEM_COUNT, PHYSICS_RIGID_BODY_TOPICS
+    from science_physics_momentum import PHYSICS_MOMENTUM_PROBLEM_COUNT, PHYSICS_MOMENTUM_TOPICS
     from science_worksheet_helpers import generate_formula_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 
@@ -27,6 +32,7 @@ ID_PREFIX = "science-physics-motion-"
 ALL_TOPICS = {
     **{key: (topic, PHYSICS_PROJECTILE_PROBLEM_COUNT) for key, topic in PHYSICS_PROJECTILE_TOPICS.items()},
     **{key: (topic, PHYSICS_RIGID_BODY_PROBLEM_COUNT) for key, topic in PHYSICS_RIGID_BODY_TOPICS.items()},
+    **{key: (topic, PHYSICS_MOMENTUM_PROBLEM_COUNT) for key, topic in PHYSICS_MOMENTUM_TOPICS.items()},
 }
 
 
