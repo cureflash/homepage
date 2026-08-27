@@ -9,6 +9,7 @@ on:
       - .github/workflows/power-toeic-bundle-character-assets.yml
       - subjects/english/power-toeic-ios/Package.swift
       - subjects/english/power-toeic-ios/Sources/PowerTOEIC/Views/Character/CharacterView.swift
+      - subjects/english/power-toeic-ios/Sources/PowerTOEIC/Views/Character/AssetCatalog.swift
   workflow_dispatch:
 
 permissions:
@@ -22,7 +23,7 @@ jobs:
         with:
           ref: power-toeic/phase-11-4-character-assets
 
-      - name: Bundle exact Irasutoya character assets
+      - name: Bundle pinned Irasutoya character assets
         run: python3 scripts/power_toeic_bundle_irasutoya_assets.py
 
       - name: Validate Web tests
@@ -45,7 +46,6 @@ jobs:
               'irasutoya_sergeant_instructor.png',
               'irasutoya_trainee_skinny.png',
               'irasutoya_trainee_muscular.png',
-              'irasutoya_trainee_bodybuilder.png',
           ]
           for name in names:
               a = (web / name).read_bytes()
@@ -53,6 +53,9 @@ jobs:
               assert a == b, name
               assert a.startswith(b'\x89PNG\r\n\x1a\n'), name
               print(name, len(a), hashlib.sha256(a).hexdigest())
+          bodybuilder = 'irasutoya_trainee_bodybuilder.png'
+          assert not (web / bodybuilder).exists(), 'Do not substitute an unverified Stage 5 image'
+          assert not (swift / bodybuilder).exists(), 'Do not substitute an unverified Stage 5 image'
           PY
 
       - name: Commit bundled assets and provenance
@@ -68,5 +71,5 @@ jobs:
             subjects/english/power-toeic/js/ui/asset-catalog.js \
             subjects/english/power-toeic-ios/Sources/PowerTOEIC/Resources/Character \
             subjects/english/power-toeic-ios/Release/AssetManifest.json
-          git commit -m "Power TOEIC: bundle exact Irasutoya character assets"
+          git commit -m "Power TOEIC: bundle verified Irasutoya character assets"
           git push origin HEAD:power-toeic/phase-11-4-character-assets
