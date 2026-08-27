@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 1800,
-  "checked_question_count": 800,
+  "generated_question_count": 1900,
+  "checked_question_count": 900,
   "pending_validation_count": 1000,
-  "verified_question_count": 769,
+  "verified_question_count": 869,
   "needs_revision_count": 31,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -27,16 +27,17 @@
     "p5.verb.gerund_pattern",
     "p5.verb.causative_have_make_let",
     "p5.verb.conditional_form",
-    "p5.verb.participle_clause"
+    "p5.verb.participle_clause",
+    "p5.conn.preposition_vs_conjunction"
   ],
-  "current_batch": "2026-08-27-scheduled-019",
-  "current_micro_skill": "p5.conn.preposition_vs_conjunction",
+  "current_batch": "2026-08-27-scheduled-020",
+  "current_micro_skill": "p5.conn.because_vs_because_of",
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_conn_preposition_vs_conjunction_0001",
-  "next_micro_skill": "p5.conn.preposition_vs_conjunction",
+  "next_resume_id": "p5_conn_because_vs_because_of_0001",
+  "next_micro_skill": "p5.conn.because_vs_because_of",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Completed p5.verb.participle_clause by persisting IDs 0051-0100, bringing the generated bank to 1,800 questions and 18/44 completed micro-skills. New 50-question checks: unique IDs/stems, one blank, four distinct choices, answer positions for IDs 0051-0100 A/B/C/D=12/12/13/13; combined full-skill balance is 25/25/25/25; within-new SequenceMatcher maximum about 0.590 and no >=0.94 near-duplicate. Independently validated the oldest unchecked p5.pos.word_form_object_position IDs 0026-0100 in three 25-question checkpoints: 75 checked, 75 verified, 0 needs_revision, 0 rejected. Cumulative QA checked 800, verified 769, needs_revision 31, rejected 0; unchecked pending_validation is 1,000. Next generation is p5.conn.preposition_vs_conjunction_0001; next QA is p5.verb.subject_verb_agreement_0001. Full cross-bank semantic near-duplicate scanning remains incomplete, so global near-duplicate clearance is not claimed.",
-  "updated_at": "2026-08-27T15:32:00+09:00"
+  "last_run_result": "Generated p5.conn.preposition_vs_conjunction IDs 0001-0100 in four 25-question checkpoints. Structural checks: unique sequential IDs, one blank, four distinct choices, valid answer indices, A/B/C/D=25/25/25/25, exact duplicate stems 0, SequenceMatcher >=0.94 pairs 0, maximum within-skill similarity about 0.647. All new items remain pending_validation. Independently validated the oldest unchecked p5.verb.subject_verb_agreement IDs 0001-0100: 100 checked, 100 verified, 0 needs_revision, 0 rejected; all independent answers matched stored keys and explanations. Cumulative QA checked 900, verified 869, needs_revision 31, rejected 0; unchecked pending_validation remains 1,000 because generation and QA each advanced by 100. Next generation is p5.conn.because_vs_because_of_0001; next QA is p5.verb.present_vs_past_0001. Full cross-bank semantic near-duplicate scanning remains incomplete.",
+  "updated_at": "2026-08-27T16:12:00+09:00"
 }
