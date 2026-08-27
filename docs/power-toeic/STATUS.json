@@ -3,8 +3,8 @@
   "status": "in_progress",
   "track": "app_ui_program",
   "phase": 11,
-  "active_task": "11.3",
-  "next_role": "ios_xcode_app_shell_testflight_regression",
+  "active_task": "11.4",
+  "next_role": "app_store_submission_readiness",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
   "native_implementation_path": "subjects/english/power-toeic-ios/",
@@ -21,9 +21,12 @@
     "language": "Swift",
     "ui_framework": "SwiftUI",
     "package": "subjects/english/power-toeic-ios/Package.swift",
+    "app_project": "subjects/english/power-toeic-ios/AppShell/PowerTOEICApp.xcodeproj",
+    "app_scheme": "PowerTOEICApp",
     "minimum_ios": 17,
-    "ci": ".github/workflows/power-toeic-swift-tests.yml",
-    "completed_tasks": ["10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8", "11.1", "11.2"],
+    "package_ci": ".github/workflows/power-toeic-swift-tests.yml",
+    "app_build_ci": ".github/workflows/power-toeic-ios-app-build.yml",
+    "completed_tasks": ["10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8", "11.1", "11.2", "11.3"],
     "shared_fixture_decoding": true,
     "shared_fixture_behavior_covered": ["question_selection", "quiz_session", "mastery", "review", "progression"],
     "native_views": ["Home", "Workout", "Quiz", "Result", "Weakness", "Character", "PrivacyPolicy"],
@@ -34,9 +37,11 @@
     "release_metadata": "subjects/english/power-toeic-ios/Release/AppStoreMetadata.json",
     "release_asset_manifest": "subjects/english/power-toeic-ios/Release/AssetManifest.json",
     "privacy_manifest_template": "subjects/english/power-toeic-ios/Release/PrivacyInfo.xcprivacy",
+    "app_target_privacy_manifest": "subjects/english/power-toeic-ios/AppShell/PowerTOEICApp/PrivacyInfo.xcprivacy",
     "privacy_required_reason": "NSPrivacyAccessedAPICategoryUserDefaults / CA92.1",
-    "packaging_gap": "real Xcode iOS application target/project still required for archive/TestFlight",
-    "status": "release_preparation"
+    "unsigned_release_regression": "simulator debug build + generic device release build + unsigned xcarchive + archived privacy manifest validation passed",
+    "testflight_upload": "blocked until user-owned Apple Developer signing and App Store Connect identifiers are supplied",
+    "status": "submission_readiness"
   },
   "content_database_track": "external_scheduler",
   "app_track_content_policy": "do not author or scale production question DB; only define consumer adapter/contracts and tiny synthetic fixtures",
@@ -49,6 +54,6 @@
   "audio": {"source":"Google Drive existing SE library","initial_correct":"otologic_correct.mp3","initial_wrong":"otologic_incorrect.mp3","initial_milestone":"otologic_inspiration.mp3","license":"CC BY 4.0 / OtoLogic attribution required"},
   "attempt_contexts": ["training", "mixed", "review"],
   "workout_modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
-  "last_completed_task": "11.2",
-  "updated_at": "2026-08-27T10:05:00+09:00"
+  "last_completed_task": "11.3",
+  "updated_at": "2026-08-27T10:23:00+09:00"
 }
