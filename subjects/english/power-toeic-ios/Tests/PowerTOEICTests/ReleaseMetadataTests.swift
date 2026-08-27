@@ -63,6 +63,33 @@ final class ReleaseMetadataTests: XCTestCase {
         XCTAssertFalse(config.contains("DEVELOPMENT_TEAM ="))
     }
 
+    func testSubmissionReadinessDoesNotHideRepositoryOwnedAssetGaps() throws {
+        let object = try jsonObject(at: packageRoot.appendingPathComponent("Release/SubmissionReadiness.json"))
+        let root = try XCTUnwrap(object as? [String: Any])
+        XCTAssertEqual(root["submission_ready"] as? Bool, false)
+
+        let owned = try XCTUnwrap(root["repository_owned"] as? [String: String])
+        XCTAssertEqual(owned["in_app_credits"], "complete")
+        XCTAssertEqual(owned["final_app_icon"], "blocked")
+        XCTAssertEqual(owned["temporary_character_assets_bundled"], "blocked")
+        XCTAssertEqual(owned["otologic_audio_assets_bundled"], "blocked")
+
+        let blockers = try XCTUnwrap(root["repository_blockers"] as? [[String: String]])
+        XCTAssertEqual(Set(blockers.compactMap { $0["id"] }), Set([
+            "final_app_icon",
+            "temporary_character_assets_bundled",
+            "otologic_audio_assets_bundled"
+        ]))
+    }
+
+    func testCreditsViewContainsExactOtoLogicAttribution() throws {
+        let source = try String(
+            contentsOf: packageRoot.appendingPathComponent("Sources/PowerTOEIC/Views/Home/CreditsView.swift"),
+            encoding: .utf8
+        )
+        XCTAssertTrue(source.contains("OtoLogic (CC BY 4.0) / https://otologic.jp/"))
+    }
+
     private func jsonObject(at url: URL) throws -> Any {
         try JSONSerialization.jsonObject(with: Data(contentsOf: url))
     }
