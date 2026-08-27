@@ -2,9 +2,9 @@
   "project": "Power TOEIC",
   "status": "in_progress",
   "track": "app_ui_program",
-  "phase": 10,
-  "active_task": "10.8",
-  "next_role": "run_cross_platform_conformance",
+  "phase": 11,
+  "active_task": "11.1",
+  "next_role": "ios_lifecycle_offline_accessibility",
   "canonical_docs": "docs/power-toeic/",
   "web_implementation_path": "subjects/english/power-toeic/",
   "native_implementation_path": "subjects/english/power-toeic-ios/",
@@ -13,8 +13,9 @@
     "swift_reference": "docs/power-toeic/70_SWIFT_PORT_REFERENCE.md",
     "validator": "subjects/english/power-toeic/js/data/platform-contracts.js",
     "fixture": "subjects/english/power-toeic/tests/fixtures/cross-platform-conformance-v1.json",
-    "completed_tasks": ["9.1", "9.2", "9.3"],
-    "models": ["Skill", "Question", "WorkoutRecipe", "Attempt", "MasterySnapshot", "ReviewEntry", "ProgressionState", "QuestionReport", "SemanticAssetId"]
+    "completed_tasks": ["9.1", "9.2", "9.3", "10.8"],
+    "models": ["Skill", "Question", "WorkoutRecipe", "Attempt", "MasterySnapshot", "ReviewEntry", "ProgressionState", "QuestionReport", "SemanticAssetId"],
+    "last_joint_ci": {"web_run":33027870787,"swift_run":33027870790,"result":"success"}
   },
   "ios_implementation": {
     "language": "Swift",
@@ -22,12 +23,12 @@
     "package": "subjects/english/power-toeic-ios/Package.swift",
     "minimum_ios": 17,
     "ci": ".github/workflows/power-toeic-swift-tests.yml",
-    "completed_tasks": ["10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7"],
+    "completed_tasks": ["10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8"],
     "shared_fixture_decoding": true,
     "shared_fixture_behavior_covered": ["question_selection", "quiz_session", "mastery", "review", "progression"],
     "native_views": ["Home", "Workout", "Quiz", "Result", "Weakness", "Character"],
     "native_persistence": "VersionedNativeAppStore/UserDefaultsPersistenceBackend",
-    "status": "in_progress"
+    "status": "phase_10_complete"
   },
   "content_database_track": "external_scheduler",
   "app_track_content_policy": "do not author or scale production question DB; only define consumer adapter/contracts and tiny synthetic fixtures",
@@ -40,6 +41,6 @@
   "audio": {"source":"Google Drive existing SE library","initial_correct":"otologic_correct.mp3","initial_wrong":"otologic_incorrect.mp3","initial_milestone":"otologic_inspiration.mp3","license":"CC BY 4.0 / OtoLogic attribution required"},
   "attempt_contexts": ["training", "mixed", "review"],
   "workout_modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
-  "last_completed_task": "10.7",
-  "updated_at": "2026-08-27T09:44:00+09:00"
+  "last_completed_task": "10.8",
+  "updated_at": "2026-08-27T09:47:00+09:00"
 }
