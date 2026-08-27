@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-08-27",
+  "submission_ready": false,
+  "repository_requirements": [
+    {
+      "id": "credits_surface",
+      "status": "complete",
+      "detail": "In-app CreditsView exposes the exact OtoLogic CC BY 4.0 credit and is reachable from HomeView."
+    },
+    {
+      "id": "privacy_manifest",
+      "status": "complete",
+      "detail": "Canonical and app-target PrivacyInfo.xcprivacy declare only app-local UserDefaults reason CA92.1 and are archive-validated."
+    },
+    {
+      "id": "metadata_constraints",
+      "status": "complete",
+      "detail": "Display name and Japanese subtitle are within Apple's current 30-character limits; iOS privacy policy URL remains required."
+    },
+    {
+      "id": "temporary_character_assets",
+      "status": "blocked",
+      "detail": "All four planned Irasutoya resources remain not_yet_bundled in AssetManifest.json; no character binary resource is declared by Package.swift. Add and source-check actual files before marking bundled."
+    },
+    {
+      "id": "otologic_audio_assets",
+      "status": "blocked",
+      "detail": "All three planned OtoLogic MP3 resources remain not_yet_bundled in AssetManifest.json; no audio binary resource is declared by Package.swift. Add the actual licensed files before marking bundled."
+    },
+    {
+      "id": "final_app_icon",
+      "status": "blocked",
+      "detail": "A final original 1024x1024 app icon must be supplied to the AppIcon asset catalog before App Store submission."
+    },
+    {
+      "id": "unsigned_release_regression",
+      "status": "complete",
+      "detail": "Simulator Debug, generic-device Release, unsigned xcarchive, and archived privacy-manifest checks have passed in CI."
+    }
+  ],
+  "external_operator_inputs": [
+    "apple_developer_team_id",
+    "production_bundle_identifier",
+    "app_store_connect_app_id",
+    "sku",
+    "distribution_signing_configuration",
+    "marketing_version",
+    "build_number",
+    "privacy_policy_url",
+    "support_url"
+  ],
+  "submission_rule": "Do not declare submission-ready until every repository requirement is complete and all remaining blockers are external operator/account inputs only."
+}
