@@ -3,78 +3,70 @@
 ## Current canonical state
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
-- Generated micro-skills: **17 / 44**
-- Generated questions: **1,700**
-- QA checked: **600**
-- Verified: **570**
-- Needs revision: **30**
+- Completed generated micro-skills: **17 / 44**
+- Current micro-skill: `p5.verb.participle_clause` **25/100 persisted**
+- Generated questions: **1,725**
+- QA checked: **700**
+- Verified: **669**
+- Needs revision: **31**
 - Rejected: **0**
-- Unchecked `pending_validation`: **1,100**
+- Unchecked `pending_validation`: **1,025**
 - `generation_complete`: `false`
 - `validation_complete`: `false`
 
 ## This checkpoint — generation
 
-Generated `p5.verb.conditional_form` **100/100** as four 25-question pending checkpoints under:
+Persisted `p5.verb.participle_clause` IDs **0001-0025** under:
 
-`subjects/english/power-toeic/js/data/questions/part5/verbs/conditional-form/pending/`
+`subjects/english/power-toeic/js/data/questions/part5/verbs/participle-clause/pending/batch-20260827-017-part1.json`
 
-Files: `batch-20260827-016-part1.json` through `part4.json`.
+This checkpoint focuses on active reduced participle clauses where the main-clause subject also performs the reduced-clause action.
 
-Coverage:
-- real future conditions: present simple in the if-clause
-- hypothetical present/future conditions: past simple + `would`
-- unreal past conditions: past perfect + `would have`
-- main-clause forms with `if`, `unless`, `provided that`, and `as long as`
-
-Generation checks for the 100:
-- IDs `0001`–`0100` sequential and unique
+Checks:
+- sequential unique IDs 0001-0025
 - exactly one blank per stem
-- four distinct choices per item
+- four distinct visible choices
 - valid proposed-answer indexes
-- proposed answer position A/B/C/D = **25/25/25/25**
+- answer positions A/B/C/D = **7/6/6/6**
 - exact duplicate stems = **0**
-- SequenceMatcher similarity >= 0.94 within this skill = **0 pairs**
-- maximum observed within-skill similarity ≈ **0.713**
-- full semantic cross-bank scan across all 1,700 candidates is **not completed**, so do not claim global near-duplicate clearance
+- SequenceMatcher similarity >= 0.94 = **0 pairs**
+- maximum observed similarity ≈ **0.599**
 
-All new 100 remain `pending_validation`.
+A broader 100-question draft covering active/passive and conjunction-reduced clauses was prepared, but only this validated 25-question safe checkpoint was persisted. Continue from `p5_verb_participle_clause_0026`; do not count unpersisted draft items.
 
-## This checkpoint — QA and reconciliation
+Full semantic cross-bank near-duplicate scanning across all 1,725 candidates is still **not completed**.
 
-The previous QA status pointer incorrectly still named `p5.pos.adverb_modifies_adjective`. Reconciliation showed that this skill had already been independently validated in the earlier `2026-08-26-scheduled-002` QA checkpoint at **87 verified / 13 needs_revision**. That stricter existing QA result and approved-ID gate were preserved. A duplicate QA artifact created before discovering the stale pointer was deleted; no established QA result was overwritten.
+## This checkpoint — QA
 
-The actual oldest unchecked micro-skill was `p5.pos.participle_adjective_ed_ing`.
+Independently reviewed `p5.pos.word_form_subject_position` **100/100**, solving from stem + choices before consulting the stored proposed answer/explanation.
 
-Independent QA result for its 100 questions:
+Result:
 - Checked: **100**
-- Verified: **100**
-- Needs revision: **0**
+- Verified: **99**
+- Needs revision: **1**
 - Rejected: **0**
 
-All 100 independently resolved to the stored answer, remained uniquely answerable in context, cleanly measured the intended `-ed / -ing` participial-adjective distinction, and had explanations consistent with the independently selected answer.
+`p5_pos_word_form_subject_position_0038` is `needs_revision`: both `security of confidential documents` and the gerundial nominalization `securing of confidential documents` can be defended, so the displayed sentence does not force one unique answer strongly enough.
 
 QA record:
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-016-participle-adjective-ed-ing.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-017-word-form-subject-position.qa.json`
 
 Approved-ID gate:
-`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/participle-adjective-ed-ing/verified/batch-20260826-003-approved-ids.json`
+`subjects/english/power-toeic/js/data/questions/part5/parts-of-speech/word-form-subject-position/verified/batch-20260827-017-approved-ids.json`
 
 ## Next generation
 
-`p5.verb.participle_clause`
+Continue `p5.verb.participle_clause` from:
 
-Resume ID:
-`p5_verb_participle_clause_0001`
+`p5_verb_participle_clause_0026`
 
-Generate 100 if quality permits. Keep all new candidates `pending_validation`.
+Complete the remaining 75 questions in safe 25-question checkpoints if quality permits.
 
 ## Next QA
 
-Oldest unchecked skill:
-`p5.pos.word_form_subject_position`
+Oldest unchecked micro-skill:
+
+`p5.pos.word_form_object_position`
 
 Start:
-`p5_pos_word_form_subject_position_0001`
-
-Continue independent re-solving from stem + choices before reading stored proposed answers/explanations. Keep checked and verified counts separate.
+`p5_pos_word_form_object_position_0001`
