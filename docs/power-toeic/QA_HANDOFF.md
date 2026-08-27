@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: **1,450**
-- Verified: **1,381**
+- Checked: **1,475**
+- Verified: **1,406**
 - Needs revision: **69**
 - Rejected: **0**
 - Unchecked `pending_validation`: **975**
@@ -14,18 +14,18 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.verb.gerund_pattern` 0026-0050
+### `p5.verb.gerund_pattern` 0051-0075
 
 - Checked: **25**
 - Verified: **25**
 - Needs revision: **0**
 - Rejected: **0**
 
-The displayed items use `suggest`, `keep`, `practice`, `mind`, and `admit`. Each sentence uniquely requires a gerund complement among the four choices. The stored explanations are consistent with the keyed answers. Some subject-role contexts are template-like, but none introduces a second grammatically valid displayed choice.
+The displayed items use `deny`, `risk`, `delay`, `enjoy`, and `discuss`. Each sentence uniquely requires a gerund complement among the four choices. The stored explanations are consistent with the keyed answers. Some actor-role contexts are generic, but none creates a second grammatically valid displayed choice.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-025-gerund-part2.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-025-gerund-part3.qa.json`
 
 ### QA-method limitation
 
@@ -35,12 +35,12 @@ Full-bank semantic near-duplicate clearance is still not claimed. `verified` doe
 
 ### Test limitation
 
-Repo-local full schema/Node tests were not executed because this environment could not resolve `github.com` for a local clone. The individual source batch and QA record were inspected through the GitHub connector.
+Repo-local full schema/Node tests were not executed in this connector-only run. The individual source batch and QA record were inspected through the GitHub connector.
 
 ## Next QA
 
 Continue the same micro-skill from:
 
-`p5_verb_gerund_pattern_0051`
+`p5_verb_gerund_pattern_0076`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
