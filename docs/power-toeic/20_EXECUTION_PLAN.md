@@ -77,18 +77,20 @@ The app track may define only the consumer-facing adapter contract and tiny synt
   - Added a native dependency/composition environment and deterministic launch snapshot outside Views.
   - Launch is safe for missing, valid, corrupt and unavailable persisted state; due-review count is restored without network/LLM dependency.
   - Default/native fallback repository remains offline-safe and optional character/audio failures do not own quiz logic.
-  - Home, Quiz, Workout, Result, Weakness and Character presentation now carry explicit VoiceOver labels/hints where needed.
+  - Home, Quiz, Workout, Result, Weakness and Character presentation carry explicit VoiceOver labels/hints where needed.
   - Correct/wrong feedback is textual as well as visual; Dynamic Type/accessibility-size layouts fall back safely on constrained widths.
-  - Native Swift CI passed for both lifecycle/offline and accessibility closeout checkpoints.
 - [x] **11.2 App Store assets/metadata/privacy requirements**
-  - Audited the native deliverable and recorded that the current Swift Package is not itself an archiveable iOS App target.
-  - Added placeholder-safe App Store metadata/config boundaries without inventing Apple account, bundle/signing or App Store Connect identifiers.
-  - Added machine-readable temporary Irasutoya/OtoLogic asset manifest and preserved OtoLogic CC BY 4.0 attribution.
-  - Added a canonical `PrivacyInfo.xcprivacy` template declaring app-local `UserDefaults` use with Required Reason API reason `CA92.1`; it must be copied into the real app target in 11.3.
-  - Audited the current implementation as local-only/no off-device data collection and added an in-app privacy policy surface from Home.
-  - Added Swift tests that parse and validate release metadata, asset limits/credits and privacy-manifest contents.
-  - Full release-readiness rationale and exact 11.3 boundary: `docs/power-toeic/80_IOS_RELEASE_READINESS.md`.
-- [ ] **11.3 TestFlight build and release regression**
+  - Added release metadata/config boundaries without inventing Apple account or signing values.
+  - Added temporary Irasutoya/OtoLogic asset manifest and OtoLogic attribution.
+  - Added canonical `PrivacyInfo.xcprivacy` for app-local `UserDefaults` with `CA92.1` and an in-app privacy-policy surface.
+  - Added release metadata/privacy validation tests.
+- [x] **11.3 TestFlight build and release regression**
+  - Added a real Xcode iOS application target and shared scheme under `subjects/english/power-toeic-ios/AppShell/` around the existing `PowerTOEIC` module.
+  - App shell contains only platform packaging/launch concerns; domain/UI implementation remains in the Swift Package.
+  - Added app-target `PrivacyInfo.xcprivacy`, placeholder-safe AppIcon/AccentColor catalogs, and account-neutral xcconfig values.
+  - CI successfully built Debug for iOS Simulator and Release for generic iOS without signing.
+  - CI successfully produced an unsigned `.xcarchive` and verified the archived app contains a valid privacy manifest.
+  - Actual TestFlight upload remains externally gated on user-owned Apple Developer/App Store Connect signing inputs; no credentials were invented or committed.
 - [ ] **11.4 App Store submission readiness checkpoint**
 
 ## Deferred / only when required
