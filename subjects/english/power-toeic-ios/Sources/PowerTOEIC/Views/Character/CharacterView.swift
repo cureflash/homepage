@@ -13,6 +13,8 @@ public struct CharacterView: View {
     public let catalog: AssetCatalog
     public let message: String?
 
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
     public init(
         role: CharacterRole,
         reaction: CharacterReaction = .neutral,
@@ -26,24 +28,40 @@ public struct CharacterView: View {
     }
 
     public var body: some View {
-        HStack(alignment: .center, spacing: 12) {
-            characterArtwork
-                .frame(width: 92, height: 92)
-                .accessibilityHidden(true)
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text(roleTitle)
-                    .font(.caption.weight(.bold))
-                    .foregroundStyle(.secondary)
-                Text(message ?? defaultMessage)
-                    .font(.callout.weight(.semibold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
+        Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                VStack(alignment: .leading, spacing: 8) {
+                    characterArtwork
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 88)
+                        .accessibilityHidden(true)
+                    characterText
+                }
+            } else {
+                HStack(alignment: .center, spacing: 12) {
+                    characterArtwork
+                        .frame(width: 92, height: 92)
+                        .accessibilityHidden(true)
+                    characterText
+                }
             }
         }
         .padding(12)
         .background(RoundedRectangle(cornerRadius: 16).fill(.thinMaterial))
-        .accessibilityElement(children: .combine)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(roleTitle)。\(message ?? defaultMessage)")
         .accessibilityIdentifier(accessibilityID)
+    }
+
+    private var characterText: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(roleTitle)
+                .font(.caption.weight(.bold))
+                .foregroundStyle(.secondary)
+            Text(message ?? defaultMessage)
+                .font(.callout.weight(.semibold))
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
     }
 
     @ViewBuilder

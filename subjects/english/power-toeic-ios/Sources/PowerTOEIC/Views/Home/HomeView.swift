@@ -49,10 +49,9 @@ public struct HomeView: View {
                         .foregroundStyle(.secondary)
                 }
 
-                HStack(spacing: 12) {
-                    metric(title: "STAGE", value: "\(progression.stage) / 5")
-                    metric(title: "POWER", value: "\(progression.points)")
-                    metric(title: "復習", value: "\(reviewDueCount)")
+                ViewThatFits(in: .horizontal) {
+                    HStack(spacing: 12) { metrics }
+                    VStack(spacing: 8) { metrics }
                 }
 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 12)], spacing: 12) {
@@ -68,12 +67,21 @@ public struct HomeView: View {
                             .background(RoundedRectangle(cornerRadius: 16).fill(.thinMaterial))
                         }
                         .buttonStyle(.plain)
+                        .accessibilityLabel(action.title)
+                        .accessibilityHint(action.subtitle)
                         .accessibilityIdentifier("home.\(action.id)")
                     }
                 }
             }
             .padding()
         }
+    }
+
+    @ViewBuilder
+    private var metrics: some View {
+        metric(title: "STAGE", value: "\(progression.stage) / 5")
+        metric(title: "POWER", value: "\(progression.points)")
+        metric(title: "復習", value: "\(reviewDueCount)")
     }
 
     private func metric(title: String, value: String) -> some View {
@@ -84,6 +92,8 @@ public struct HomeView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(10)
         .background(RoundedRectangle(cornerRadius: 12).fill(.quaternary))
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(title) \(value)")
     }
 }
 #endif
