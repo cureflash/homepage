@@ -1,0 +1,26 @@
+name: Worksheet catalog concurrency audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/*publish.yml'
+      - '.github/workflows/worksheet-catalog-concurrency-audit.yml'
+      - 'tests/test_worksheet_catalog_writer_concurrency.py'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify every shared catalog writer is serialized
+        run: python tests/test_worksheet_catalog_writer_concurrency.py
