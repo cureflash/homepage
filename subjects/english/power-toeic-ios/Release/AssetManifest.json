@@ -55,17 +55,19 @@
         "resource_name": "irasutoya_trainee_bodybuilder",
         "source_title": "ボディービルダーのイラスト",
         "source_url": "https://www.irasutoya.com/2014/06/blog-post_14.html",
-        "bundle_status": "not_yet_bundled"
+        "bundle_status": "bundled",
+        "bundled_filename": "irasutoya_trainee_bodybuilder.png",
+        "sha256": "90a2c4090b7ccc0e00fced272edfb09fc5de1d935d87eb0d996b0fb4ee210e98",
+        "resolved_image_url_at_bundle_time": "https://4.bp.blogspot.com/-To7VVp94gE8/U2ssDOevAhI/AAAAAAAAf98/UpTpnQGK12k/s450/body_builder.png",
+        "direct_url_provenance_snapshot": "https://github.com/june29/irasutoya-data/blob/3aeaa9f08cc9c43146220a1d353b8978b6a16b7f/data/2134132440498153035a.yml"
       }
     ],
     "app_icon_policy": "Do not use temporary Irasutoya character art as the App Store icon unless licensing and branding suitability are explicitly cleared; prefer original icon artwork before submission.",
-    "bundled_unique_assets": 3,
+    "bundled_unique_assets": 4,
     "verification": {
       "verified_at": "2026-08-27",
-      "method": "Official Irasutoya article title/URL verified externally. Exact official Blogger-hosted PNG URLs are pinned for deterministic build-time acquisition; identical bytes are committed for Web and SwiftPM. Runtime hotlinking remains disabled.",
-      "remaining_unbundled": [
-        "irasutoya_trainee_bodybuilder"
-      ]
+      "method": "Official Irasutoya article title/URL pairs verified. Exact original Blogger-hosted PNG URLs are pinned for deterministic build-time acquisition; identical bytes are committed for Web and SwiftPM. The 2014 bodybuilder direct URL is additionally corroborated by the historical june29/irasutoya-data metadata snapshot for the same article/title/date. Runtime hotlinking remains disabled.",
+      "remaining_unbundled": []
     }
   },
   "audio": {

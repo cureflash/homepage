@@ -64,7 +64,7 @@ jobs:
           CODE_SIGNING_REQUIRED=NO
           archive
 
-      - name: Verify archived app, privacy manifest, and audio resources
+      - name: Verify archived app, privacy manifest, audio, and character resources
         run: |
           set -euo pipefail
           APP_PATH="$ARCHIVE_PATH/Products/Applications/PowerTOEICApp.app"
@@ -78,8 +78,22 @@ jobs:
             match="$(find "$APP_PATH" -type f -name "$audio" -print -quit)"
             if [ -z "$match" ]; then
               echo "Missing archived audio resource: $audio" >&2
-              find "$APP_PATH" -maxdepth 4 -type f | sort
+              find "$APP_PATH" -maxdepth 5 -type f | sort
               exit 1
             fi
             echo "Archived audio resource: $match"
+          done
+
+          for character in \
+            irasutoya_sergeant_instructor.png \
+            irasutoya_trainee_skinny.png \
+            irasutoya_trainee_muscular.png \
+            irasutoya_trainee_bodybuilder.png; do
+            match="$(find "$APP_PATH" -type f -name "$character" -print -quit)"
+            if [ -z "$match" ]; then
+              echo "Missing archived character resource: $character" >&2
+              find "$APP_PATH" -maxdepth 5 -type f | sort
+              exit 1
+            fi
+            echo "Archived character resource: $match"
           done
