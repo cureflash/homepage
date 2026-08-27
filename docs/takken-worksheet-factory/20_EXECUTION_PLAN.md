@@ -28,39 +28,9 @@ This plan is subordinate to `00_MASTER_INSTRUCTIONS.md` and works with `30_QUEST
 
 Final Phase 2 totals: **90/90 units, 163/163 core facts, 163 generated questions**.
 
-Question files:
-- `qualifications/takken/data/pending-questions-01-07.js` — 9 questions
-- `qualifications/takken/data/pending-questions-08-20.js` — 14 questions
-- `qualifications/takken/data/pending-questions-21-27.js` — 14 questions
-- `qualifications/takken/data/pending-questions-28-47.js` — 40 questions
-- `qualifications/takken/data/pending-questions-48-67.js` — 40 questions
-- `qualifications/takken/data/pending-questions-68-77.js` — 20 questions
-- `qualifications/takken/data/pending-questions-78-90.js` — 26 questions
-
 ## Phase 3 — solve-all independent validation
 
 **COMPLETE.** Every Phase 2 question has been independently re-solved in strict ID/order sequence.
-
-- [x] Begin from the first question ID and process strictly in order.
-- [x] Hide stored answer/explanation/source references before independent solving.
-- [x] Independently determine the answer and legal basis, reopening primary/official sources when needed.
-- [x] Then compare against stored answer/explanation.
-- [x] Classify each checked question individually as `verified`, `needs_revision`, or `rejected`.
-- [x] Repair question/choices/answer/explanation/sources together and independently solve again before any repaired item becomes `verified` when a defect is found. No unresolved defect remains at completion.
-- [x] Continue with safe checkpoints; target 25 questions where file/content boundaries allow and at most about 100 checked questions per run.
-- [x] Track checked and verified counts separately and persist the exact next question ID.
-- [x] Only after every question has been independently re-solved and all revision work is closed may `validation_complete: true` be set.
-
-Completed Phase 3 checkpoints:
-- Questions `takken-q-01-001` through `takken-q-07-001`: 9 checked / 9 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-08-001` through `takken-q-26-001`: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-26-002` through `takken-q-27-002`: 3 checked / 3 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-28-001` through `takken-q-40-001`: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-40-002` through `takken-q-47-002`: 15 checked / 15 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-48-001` through `takken-q-60-001`: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-60-002` through `takken-q-72-002`: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-73-001` through `takken-q-77-002`: 10 checked / 10 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-78-001` through `takken-q-90-002`: 26 checked / 26 verified / 0 needs_revision / 0 rejected.
 
 Final Phase 3 totals: **checked 163 / verified 163 / needs_revision 0 / rejected 0 / pending 0 / `validation_complete: true`**.
 
@@ -71,7 +41,7 @@ Final Phase 3 totals: **checked 163 / verified 163 / needs_revision 0 / rejected
 Current task: Phase 4.1 Concept inventory. Do not skip ahead to 50-question expansion, print generation, or app integration before the concept inventory and canonical knowledge model are established.
 
 ### 4.1 Concept inventory
-- [~] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, all 163 verified Phase 2/3 questions and official scope. **Checkpoint complete through canonical unit 50; 64 normalized concepts recorded. Exact continuation: unit 51 `lease-deposit-opposability`.**
+- [~] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, all 163 verified Phase 2/3 questions and official scope. **Checkpoint complete through canonical unit 70; 90 normalized concepts recorded. Exact continuation: unit 71 `height-restrictions`.**
 - [~] Normalize into exam-level `exam_concept` units; do not make isolated numbers/words standalone 50-question topics. **Current inventory deliberately splits compound units where independent study value exists while keeping numbers/authority names inside parent concepts.**
 - [ ] Record final actual concept count after all 90 units and verified-question evidence are covered; initial estimate is roughly 250-300, but count must follow actual extraction rather than a quota.
 
@@ -79,7 +49,8 @@ Canonical inventory file: `qualifications/takken/data/power-concepts.js`.
 
 Phase 4.1 checkpoints:
 - Units 1-30: **37 concepts** normalized and persisted.
-- Units 31-50: **27 additional concepts**, cumulative **64 concepts**. Splits include installment-sale cancellation / ownership retention, fraud / duress, mental reservation / fictitious declaration, minor / adult ward, unauthorized / apparent agency, acquisitive / extinctive prescription, and simultaneous performance / risk allocation.
+- Units 31-50: **27 additional concepts**, cumulative **64 concepts**.
+- Units 51-70: **26 additional concepts**, cumulative **90 concepts**. Splits include敷金 / 建物賃貸借の対抗力、普通借地権の存続期間 / 借地権の対抗力、法定相続人と順位 / 法定相続分、承認・放棄の熟慮期間 / 相続放棄、遺言 / 遺留分、都市計画決定主体 / 都市計画事業。
 
 ### 4.2 Canonical knowledge items
 - [ ] Decompose each concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` law cutoff and primary sources.
