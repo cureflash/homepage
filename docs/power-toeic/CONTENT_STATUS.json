@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 1725,
-  "checked_question_count": 700,
+  "generated_question_count": 1750,
+  "checked_question_count": 725,
   "pending_validation_count": 1025,
-  "verified_question_count": 669,
+  "verified_question_count": 694,
   "needs_revision_count": 31,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -28,14 +28,14 @@
     "p5.verb.causative_have_make_let",
     "p5.verb.conditional_form"
   ],
-  "current_batch": "2026-08-27-scheduled-017",
+  "current_batch": "2026-08-27-scheduled-018",
   "current_micro_skill": "p5.verb.participle_clause",
-  "current_micro_skill_persisted_count": 25,
+  "current_micro_skill_persisted_count": 50,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_verb_participle_clause_0026",
+  "next_resume_id": "p5_verb_participle_clause_0051",
   "next_micro_skill": "p5.verb.participle_clause",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Persisted a safe 25-question checkpoint for p5.verb.participle_clause IDs 0001-0025 (active present-participle clauses). Generation checks for the persisted checkpoint: unique sequential IDs, exactly one blank, four distinct choices, valid proposed-answer indexes, answer positions A/B/C/D = 7/6/6/6, exact duplicate stems 0, intra-checkpoint SequenceMatcher pairs >=0.94 = 0, max observed similarity about 0.599. A larger 100-question draft was prepared but only the validated 25-question checkpoint was persisted; next generation resume is 0026. Independently validated the oldest unchecked p5.pos.word_form_subject_position 100 questions: 99 verified, 1 needs_revision (0038, because both 'security' and gerundial 'securing' can be defended in the displayed context), 0 rejected. Cumulative QA checked 700, verified 669, needs_revision 31, rejected 0; 1025 remain unchecked pending_validation. Full cross-bank semantic near-duplicate scanning remains incomplete, so global near-duplicate clearance is not claimed.",
-  "updated_at": "2026-08-27T13:17:00+09:00"
+  "last_run_result": "Reconciled a parallel persisted checkpoint for p5.verb.participle_clause IDs 0026-0050, bringing that skill to 50/100 and the generated bank to 1,750 questions. Independently validated the oldest unchecked p5.pos.word_form_object_position IDs 0001-0025 from stem + choices before consulting stored answers: 25 verified, 0 needs_revision, 0 rejected. Cumulative QA checked 725, verified 694, needs_revision 31, rejected 0; unchecked pending_validation remains 1,025 because generation and QA each advanced by 25. Next generation resume is participle_clause_0051; next QA resume is word_form_object_position_0026. Full cross-bank semantic near-duplicate scanning remains incomplete, so global near-duplicate clearance is not claimed.",
+  "updated_at": "2026-08-27T14:20:00+09:00"
 }
