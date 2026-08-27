@@ -28,11 +28,10 @@ jobs:
           python tests/test_worksheet_factory.py
           python tests/test_science_formula_relations.py
           python tests/test_science_physics_projectile.py
-      - name: Commit patched implementation
+      - name: Commit source and tests only
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git rm .github/workflows/automation-science-physics-projectile-next.yml scripts/_automation_patch_science_projectile_next.py
-          git add scripts/science_worksheet_helpers.py scripts/science_physics_projectile.py tests/test_science_formula_relations.py tests/test_science_physics_projectile.py .github/workflows/science-physics-publish.yml
+          git add scripts/science_worksheet_helpers.py scripts/science_physics_projectile.py tests/test_science_formula_relations.py tests/test_science_physics_projectile.py
           git commit -m 'Add formal Physics projectile peak and range checkpoints'
           git push origin HEAD:automation/science-physics-projectile-peak-range-20260827
