@@ -19,8 +19,8 @@
       proposedAnswerIndex: 0,
       explanation: "都市計画法29条の開発許可は、一定の開発行為を行う前に原則として都道府県知事等の許可を受ける制度である。",
       sourceIds: ["egov-city-planning-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-78-002",
@@ -39,8 +39,8 @@
       proposedAnswerIndex: 1,
       explanation: "国土利用計画法23条の届出は、一定規模以上の土地売買等について、契約締結後に土地に関する権利の取得者が行う事後届出である。",
       sourceIds: ["egov-national-land-use-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-79-001",
@@ -59,8 +59,8 @@
       proposedAnswerIndex: 2,
       explanation: "不動産取得税は、不動産の取得に対し、その不動産所在の都道府県が不動産取得者に課する地方税である。",
       sourceIds: ["egov-local-tax-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-79-002",
@@ -79,8 +79,8 @@
       proposedAnswerIndex: 3,
       explanation: "不動産取得税は原則として、登記の有無や有償・無償を問わず、不動産の所有権を取得した事実に着目して課税される。",
       sourceIds: ["egov-local-tax-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-80-001",
@@ -99,8 +99,8 @@
       proposedAnswerIndex: 0,
       explanation: "地方税法343条は、固定資産税を原則として固定資産の所有者に課すると定めている。",
       sourceIds: ["egov-local-tax-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-80-002",
@@ -119,8 +119,8 @@
       proposedAnswerIndex: 1,
       explanation: "地方税法359条は、固定資産税の賦課期日を当該年度の初日の属する年の1月1日と定めている。",
       sourceIds: ["egov-local-tax-act-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-81-001",
@@ -139,8 +139,8 @@
       proposedAnswerIndex: 2,
       explanation: "登録免許税は、不動産等の登記・登録のほか、免許、許可等について課税される国税である。",
       sourceIds: ["nta-registration-tax-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-81-002",
@@ -159,8 +159,8 @@
       proposedAnswerIndex: 3,
       explanation: "登録免許税の納税義務者は、原則として登記や登録等を受ける者である。",
       sourceIds: ["nta-registration-tax-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-82-001",
@@ -179,8 +179,8 @@
       proposedAnswerIndex: 0,
       explanation: "不動産売買契約書など、不動産の譲渡に関する契約書は印紙税の第1号文書に該当する。",
       sourceIds: ["nta-stamp-tax-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-82-002",
@@ -199,8 +199,8 @@
       proposedAnswerIndex: 1,
       explanation: "一定期間に作成される一定額超の不動産譲渡契約書には、印紙税の軽減措置が設けられている。",
       sourceIds: ["nta-stamp-tax-relief-20260401"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-83-001",
@@ -219,8 +219,8 @@
       proposedAnswerIndex: 2,
       explanation: "土地や建物の譲渡所得は、給与所得など他の所得と区分して計算する分離課税である。",
       sourceIds: ["nta-real-estate-transfer-2026"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-83-002",
@@ -239,8 +239,8 @@
       proposedAnswerIndex: 3,
       explanation: "譲渡年の1月1日現在で所有期間が5年を超える場合は長期譲渡所得、5年以下なら短期譲渡所得となる。",
       sourceIds: ["nta-real-estate-transfer-2026"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-84-001",
@@ -259,8 +259,8 @@
       proposedAnswerIndex: 0,
       explanation: "地価公示では、土地鑑定委員会が標準地について2人以上の不動産鑑定士の鑑定評価を求め、正常な価格を判定する。",
       sourceIds: ["mlit-land-price-system"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-84-002",
@@ -279,8 +279,8 @@
       proposedAnswerIndex: 1,
       explanation: "標準地の鑑定評価では、取引事例比較法・収益還元法・原価法等の結果を勘案して評価する。",
       sourceIds: ["mlit-land-price-system"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-85-001",
@@ -299,8 +299,8 @@
       proposedAnswerIndex: 2,
       explanation: "不動産鑑定評価の方式には、原価方式、比較方式、収益方式の三方式がある。",
       sourceIds: ["mlit-appraisal-standard"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-85-002",
@@ -319,8 +319,8 @@
       proposedAnswerIndex: 3,
       explanation: "不動産の価格を求める基本的手法は、原価法、取引事例比較法、収益還元法に大別される。",
       sourceIds: ["mlit-appraisal-standard"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-86-001",
@@ -339,8 +339,8 @@
       proposedAnswerIndex: 0,
       explanation: "フラット35は全期間固定金利の住宅ローンである。",
       sourceIds: ["jhf-flat35-overview"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-86-002",
@@ -359,8 +359,8 @@
       proposedAnswerIndex: 1,
       explanation: "証券化支援事業（買取型）では、住宅金融支援機構が民間金融機関からフラット35の住宅ローン債権を買い取り、それを基礎に資金調達を行う。",
       sourceIds: ["jhf-flat35-overview"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-87-001",
@@ -379,8 +379,8 @@
       proposedAnswerIndex: 2,
       explanation: "不動産の表示規約では、交通の利便性や徒歩所要時間を実際より良く見せる誤認表示が禁止されている。",
       sourceIds: ["rftc-display-rules"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-87-002",
@@ -399,8 +399,8 @@
       proposedAnswerIndex: 3,
       explanation: "物件の面積や取引態様についても、事実と異なる表示や実際より有利・優良と誤認させる表示は規約上の禁止対象となる。",
       sourceIds: ["rftc-display-rules"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-88-001",
@@ -419,8 +419,8 @@
       proposedAnswerIndex: 0,
       explanation: "土地条件図は、山地・台地・低地・人工地形などの地形分類を示し、防災や土地利用の基礎資料として利用される。",
       sourceIds: ["gsi-land-condition-map"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-88-002",
@@ -439,8 +439,8 @@
       proposedAnswerIndex: 1,
       explanation: "旧河道、後背低地、盛土地・埋立地などは、地形分類に応じて洪水や液状化等の災害リスクに注意が必要である。",
       sourceIds: ["gsi-land-condition-map"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-89-001",
@@ -459,8 +459,8 @@
       proposedAnswerIndex: 2,
       explanation: "令和8年地価公示では、全国平均の全用途平均・住宅地・商業地はいずれも5年連続で上昇したと国土交通省が公表している。",
       sourceIds: ["mlit-2026-land-price"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-89-002",
@@ -479,8 +479,8 @@
       proposedAnswerIndex: 3,
       explanation: "令和7年度の新設住宅着工戸数は、持家・貸家・分譲住宅が減少し、前年度の増加から再び減少したと国土交通省が公表している。",
       sourceIds: ["mlit-2025-housing-starts"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-90-001",
@@ -499,8 +499,8 @@
       proposedAnswerIndex: 0,
       explanation: "宅建試験は通常50問の四肢択一式で、登録講習修了者は5問が免除され45問となる。",
       sourceIds: ["retio-2026-exam"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-90-002",
@@ -519,8 +519,8 @@
       proposedAnswerIndex: 1,
       explanation: "登録講習は宅地建物取引業に従事し従業者証明書を持つ者が受講でき、修了試験合格後3年以内に行われる宅建試験で一部免除を受けられる。",
       sourceIds: ["retio-registration-course"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T02:31:00+09:00", result: "verified" }
     }
   ];
 
@@ -528,6 +528,7 @@
   const ids = new Set();
   const stems = new Set();
   const answerPositions = [0, 0, 0, 0];
+  const allowedStatuses = new Set(["pending_validation", "verified", "needs_revision", "rejected"]);
 
   for (const q of Q) {
     if (ids.has(q.id)) throw new Error(`Duplicate question id: ${q.id}`);
@@ -538,7 +539,7 @@
     if (!Array.isArray(q.choices) || q.choices.length !== 4) throw new Error(`Invalid choice count: ${q.id}`);
     if (new Set(q.choices.map(normalize)).size !== 4) throw new Error(`Duplicate choices: ${q.id}`);
     if (!Number.isInteger(q.proposedAnswerIndex) || q.proposedAnswerIndex < 0 || q.proposedAnswerIndex > 3) throw new Error(`Invalid answer index: ${q.id}`);
-    if (q.validationStatus !== "pending_validation") throw new Error(`Invalid validation status: ${q.id}`);
+    if (!allowedStatuses.has(q.validationStatus)) throw new Error(`Invalid validation status: ${q.id}`);
     if (q.examYear !== 2026 || q.lawAsOf !== "2026-04-01") throw new Error(`Invalid exam metadata: ${q.id}`);
     answerPositions[q.proposedAnswerIndex] += 1;
   }
