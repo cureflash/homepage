@@ -129,14 +129,15 @@ All 90 unit datasets remain `pending_factcheck` and unpublished.
 - [ ] Keep all unverified questions outside production/public pools.
 - [ ] When every core fact in all 90 units is covered, set `question_generation_complete: true` and `generation_complete: true`.
 
-Progress: units 1-27 have 100% core-fact question coverage (37 facts -> 37 pending-validation questions).
+Progress: units 1-47 have 100% core-fact question coverage (77 facts -> 77 pending-validation questions).
 
 Question files:
 - `qualifications/takken/data/pending-questions-01-07.js` — units 1-7, 9 questions
 - `qualifications/takken/data/pending-questions-08-20.js` — units 8-20, 14 questions
 - `qualifications/takken/data/pending-questions-21-27.js` — units 21-27, 14 questions
+- `qualifications/takken/data/pending-questions-28-47.js` — units 28-47, 40 questions
 
-Current next start: unit 28 `damages-penalty`, first uncovered core fact.
+Current next start: unit 48 `sale-earnest`, first uncovered core fact.
 
 ### Phase 3 — solve-all independent validation
 
