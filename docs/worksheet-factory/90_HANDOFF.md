@@ -21,26 +21,30 @@ Completed grades:
 - 小学5年: done
 - 小学6年: done
 - 中学1年: done
+- 中学2年: done
 
-Active grade: **中学2年** — in progress.
+The next active grade is **中学3年**.
 
-Current JH2 publication: **16 skills / 48 PDFs**.
+## Latest completed run
 
-Latest completed batch:
+中学2年の最後のcheckpointを完了した。
 
-- `simultaneous-equations-fractions` — 分数を含む連立方程式 — 3 PDFs
-- `linear-function-substitution` — 一次関数 xからyを求める代入 — 3 PDFs
-- `linear-function-rate-from-two-points` — 2点から変化の割合 — 3 PDFs
-- `linear-function-from-slope-intercept` — 傾きと切片から式を作る — 3 PDFs
+- `linear-function-equation-from-two-points` — 2点から一次関数の式を求める — 3 variants / 3 PDFs
 
-Each PDF contains 20 problems. The batch preserves deterministic seeds, `Fraction`/determinant based independent answer recomputation, problem/variant/content-hash duplicate checks, 2-page PDFs, ordinary integer numbering, same-layout red answers, catalog validation, common Factory regression, and the shared catalog-writer concurrency guard.
+2点から傾き `m=(y2-y1)/(x2-x1)` と切片 `b=y1-mx1` を `Fraction` で独立再計算し、`y=mx+b` を再構成する。専用testでは再構成した式が与えた2点の両方を通ることも確認する。
 
-MEXT「中学校学習指導要領（平成29年告示）解説 数学編」places both simultaneous linear equations and linear functions in Grade 2, so these worksheets remain within the current Grade 2 scope.
+中学2年の最終公開範囲は **17 skills / 51 PDFs**。
 
-- publish commit: `b9061e8f01ef0f91709a8a7744ce3a70c352b09b`
+- publish commit: `befc3caee100a3dd345a4afd080f4d068fd1bac1`
 
 ## Exact next starting point
 
-Continue in **中学2年** from the final unfinished planned skill: **2点から一次関数の式を求める数値練習**.
+Read:
 
-Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
+- `curriculum/junior-high/grade-03/STATUS.json`
+- `curriculum/junior-high/grade-03/PLAN.md`
+- `curriculum/junior-high/grade-03/HANDOFF.md` if present
+
+Start from the first unfinished Grade 3 skill. Before implementation, verify the topic placement against the current MEXT junior-high mathematics curriculum. Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
+
+Do not reopen completed Grade 2 work unless a regression or audit finding requires it.
