@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import hashlib
 import json
-import re
 import shutil
 import struct
 import urllib.parse
@@ -14,16 +13,34 @@ SWIFT_DIR = ROOT / "subjects/english/power-toeic-ios/Sources/PowerTOEIC/Resource
 MANIFEST = ROOT / "subjects/english/power-toeic-ios/Release/AssetManifest.json"
 WEB_CATALOG = ROOT / "subjects/english/power-toeic/js/ui/asset-catalog.js"
 
+# The canonical source_url remains the Irasutoya article page. These pinned image
+# URLs are the official Blogger-hosted PNGs for the exact article assets. We do
+# not fetch article HTML in CI because Irasutoya rate-limits GitHub-hosted runners.
+# Stage 5 bodybuilder remains intentionally unbundled until its official direct
+# PNG URL is independently pinned; do not substitute a copied third-party image.
 ASSETS = [
-    ("irasutoya_sergeant_instructor", "法務教官のイラスト（男性）", "https://www.irasutoya.com/2017/09/blog-post_34.html"),
-    ("irasutoya_trainee_skinny", "痩せた男性のイラスト", "https://www.irasutoya.com/2016/05/blog-post_397.html"),
-    ("irasutoya_trainee_muscular", "筋肉質な人のイラスト（男性）", "https://www.irasutoya.com/2018/06/blog-post_865.html"),
-    ("irasutoya_trainee_bodybuilder", "ボディービルダーのイラスト", "https://www.irasutoya.com/2014/06/blog-post_14.html"),
+    {
+        "resource_name": "irasutoya_sergeant_instructor",
+        "source_title": "法務教官のイラスト（男性）",
+        "source_url": "https://www.irasutoya.com/2017/09/blog-post_34.html",
+        "image_url": "https://4.bp.blogspot.com/-bWokxivsF8U/WZP3jdEIcBI/AAAAAAABF_U/PRaxjIlVe8ETkbdrTix6ymro6feroK62QCLcBGAs/s450/keimusyo_job_houmukyoukan_man.png",
+    },
+    {
+        "resource_name": "irasutoya_trainee_skinny",
+        "source_title": "痩せた男性のイラスト",
+        "source_url": "https://www.irasutoya.com/2016/05/blog-post_397.html",
+        "image_url": "https://4.bp.blogspot.com/-bJB8o7IfTrI/VpjCsMPYMaI/AAAAAAAA3GY/QKqohLvIvmM/s800/yase03_man.png",
+    },
+    {
+        "resource_name": "irasutoya_trainee_muscular",
+        "source_title": "筋肉質な人のイラスト（男性）",
+        "source_url": "https://www.irasutoya.com/2018/06/blog-post_865.html",
+        "image_url": "https://2.bp.blogspot.com/-jqnzuMBq714/WwJaY08pZDI/AAAAAAABML0/MeB8mFNXN083xVJkGziPcqFIBMUaL-EnwCLcBGAs/s800/macho_man.png",
+    },
 ]
 
 UA = "Mozilla/5.0 PowerTOEIC asset bundler (repository build-time acquisition; no runtime hotlinking)"
 ALLOWED_IMAGE_HOSTS = ("blogger.googleusercontent.com", "bp.blogspot.com")
-EXCLUDED_NAMES = ("pyoko_", "logo", "search", "button", "banner", "icon", "line_")
 
 
 def fetch(url: str) -> bytes:
@@ -38,42 +55,13 @@ def png_dimensions(data: bytes):
     return struct.unpack(">II", data[16:24])
 
 
-def candidate_urls(html: str):
-    urls = set()
-    for value in re.findall(r'''(?:src|href|data-original)=["']([^"']+)["']''', html, flags=re.I):
-        value = value.replace("&amp;", "&")
-        parsed = urllib.parse.urlparse(value)
-        host = parsed.hostname or ""
-        if any(host == allowed or host.endswith("." + allowed) for allowed in ALLOWED_IMAGE_HOSTS):
-            lower = parsed.path.lower()
-            if lower.endswith(".png") and not any(token in lower for token in EXCLUDED_NAMES):
-                urls.add(value)
-    return urls
-
-
-def select_article_image(page_url: str, title: str):
-    html = fetch(page_url).decode("utf-8", errors="replace")
-    if title not in html:
-        raise RuntimeError(f"source title mismatch for {page_url}: expected {title}")
-    scored = []
-    for url in candidate_urls(html):
-        try:
-            data = fetch(url)
-            dims = png_dimensions(data)
-            if not dims:
-                continue
-            width, height = dims
-            if width < 300 or height < 300:
-                continue
-            scored.append((width * height, len(data), width, height, url, data))
-        except Exception as exc:
-            print(f"skip candidate {url}: {exc}")
-    if not scored:
-        raise RuntimeError(f"no qualifying Irasutoya PNG found for {title}")
-    scored.sort(reverse=True)
-    _, _, width, height, url, data = scored[0]
-    print(f"selected {title}: {width}x{height} {url}")
-    return url, data
+def validate_image_url(url: str):
+    parsed = urllib.parse.urlparse(url)
+    host = parsed.hostname or ""
+    if not any(host == allowed or host.endswith("." + allowed) for allowed in ALLOWED_IMAGE_HOSTS):
+        raise RuntimeError(f"unapproved image host: {host}")
+    if not parsed.path.lower().endswith(".png"):
+        raise RuntimeError(f"pinned asset is not PNG: {url}")
 
 
 def update_web_catalog():
@@ -88,7 +76,6 @@ def update_web_catalog():
         "[ASSET_IDS.TRAINEE_STAGE_2]: null": "[ASSET_IDS.TRAINEE_STAGE_2]: './assets/characters/irasutoya_trainee_muscular.png'",
         "[ASSET_IDS.TRAINEE_STAGE_3]: null": "[ASSET_IDS.TRAINEE_STAGE_3]: './assets/characters/irasutoya_trainee_muscular.png'",
         "[ASSET_IDS.TRAINEE_STAGE_4]: null": "[ASSET_IDS.TRAINEE_STAGE_4]: './assets/characters/irasutoya_trainee_muscular.png'",
-        "[ASSET_IDS.TRAINEE_STAGE_5]: null": "[ASSET_IDS.TRAINEE_STAGE_5]: './assets/characters/irasutoya_trainee_bodybuilder.png'",
     }
     for before, after in replacements.items():
         if before in text:
@@ -104,26 +91,36 @@ def main():
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     manifest_assets = {item["resource_name"]: item for item in manifest["character_art"]["assets"]}
 
-    for resource_name, title, page_url in ASSETS:
-        selected_url, data = select_article_image(page_url, title)
+    for asset in ASSETS:
+        validate_image_url(asset["image_url"])
+        data = fetch(asset["image_url"])
+        dims = png_dimensions(data)
+        if not dims:
+            raise RuntimeError(f"invalid PNG for {asset['resource_name']}")
+        width, height = dims
+        if width < 300 or height < 300:
+            raise RuntimeError(f"unexpectedly small image for {asset['resource_name']}: {width}x{height}")
         digest = hashlib.sha256(data).hexdigest()
-        filename = resource_name + ".png"
+        filename = asset["resource_name"] + ".png"
         web_path = WEB_DIR / filename
         swift_path = SWIFT_DIR / filename
         web_path.write_bytes(data)
         shutil.copyfile(web_path, swift_path)
-        item = manifest_assets[resource_name]
-        if item["source_title"] != title or item["source_url"] != page_url:
-            raise RuntimeError(f"manifest provenance mismatch for {resource_name}")
+
+        item = manifest_assets[asset["resource_name"]]
+        if item["source_title"] != asset["source_title"] or item["source_url"] != asset["source_url"]:
+            raise RuntimeError(f"manifest provenance mismatch for {asset['resource_name']}")
         item["bundle_status"] = "bundled"
         item["bundled_filename"] = filename
         item["sha256"] = digest
-        item["resolved_image_url_at_bundle_time"] = selected_url
+        item["resolved_image_url_at_bundle_time"] = asset["image_url"]
+        print(f"bundled {asset['source_title']}: {width}x{height} sha256={digest}")
 
     manifest["character_art"]["bundled_unique_assets"] = len(ASSETS)
     manifest["character_art"]["verification"] = {
         "verified_at": "2026-08-27",
-        "method": "Official Irasutoya article title/URL verified; build-time acquisition selected the largest qualifying PNG from official Blogger image hosts, then identical bytes were committed for Web and SwiftPM. Runtime hotlinking remains disabled."
+        "method": "Official Irasutoya article title/URL verified externally. Exact official Blogger-hosted PNG URLs are pinned for deterministic build-time acquisition; identical bytes are committed for Web and SwiftPM. Runtime hotlinking remains disabled.",
+        "remaining_unbundled": ["irasutoya_trainee_bodybuilder"]
     }
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     update_web_catalog()
