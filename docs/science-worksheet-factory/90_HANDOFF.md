@@ -10,67 +10,56 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 900 PDFs
-- total published physics: 2058 PDFs
+- formal `物理`: 920 PDFs
+- total published physics: 2078 PDFs
 
 Formal `物理` currently has:
 
 - `様々な運動：平面運動と放物運動`: 330 PDFs
 - `様々な運動：剛体のつり合い`: 200 PDFs
 - `様々な運動：運動量と力積`: 250 PDFs
-- `様々な運動：円運動と単振動`: 120 PDFs
+- `様々な運動：円運動と単振動`: 140 PDFs
 
-All 900 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, numeric answers, 20 problems, and unique normalized content hashes. The formal-Physics publish workflow validates every registered PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
+All 920 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, numeric answers, 20 problems, and unique normalized content hashes. The publisher validates every registered PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
 
-## Completed this run — uniform circular motion, 120 PDFs
+## Completed this run — circular-motion period, 20 PDFs
 
-The current MEXT High School Course of Study Commentary for formal Physics was rechecked. Its circular-motion content handling explicitly includes uniform circular-motion speed, period, angular velocity, centripetal acceleration, and centripetal force, and also says to mention centrifugal force.
+The remaining uniform-circular-motion period checkpoint is now published:
 
-Four contiguous machine-verifiable checkpoints were completed, all using the existing reversible `product` relation rather than changing the shared formula solver:
+- `circular-period-angular-speed` — 20 PDFs
+  - relation: `ω = 2π/T`
+  - learner-visible convention: `π = 3.14`
+  - 10 direct angular-speed worksheets and 10 reverse-period worksheets
+  - 20 problems per worksheet
+  - deterministic seeds 7471–7480
 
-1. `circular-linear-speed-angular-speed-radius` — 30 PDFs
-   - `v = rω`
-   - direct speed / reverse radius / reverse angular speed
-   - 10 deterministic seeds per mode, 20 problems per worksheet
-2. `circular-angular-displacement` — 30 PDFs
-   - `θ = ωt`
-   - direct angular displacement / reverse angular speed / reverse time
-   - radians and rad/s are learner-visible
-3. `circular-centripetal-acceleration` — 30 PDFs
-   - centripetal-acceleration magnitude `a = vω`
-   - direct acceleration / reverse speed / reverse angular speed
-   - the acceleration is explicitly described as center-directed; the worksheet does not hide a vector sign convention
-4. `circular-centripetal-force` — 30 PDFs
-   - centripetal-force magnitude `F = ma`
-   - direct force / reverse mass / reverse centripetal acceleration
-   - the force is explicitly described as the center-directed net force
+Implementation deliberately reuses the existing reversible `double-quotient` relation. The fixed value `π=3.14` is represented as an explicit learner-visible known variable with a one-value domain, so no hidden constant or ambiguous rounding convention is required. No shared formula relation was added.
 
-Implementation and validation:
+Validation and publication:
 
-- implementation PR #160 merged as `d43f7d25a2c497d609f6ac4bba1c6e00a6d6c868`
-- publication Actions run `33075511015`: success
-- publication commit: `c87bff202ee23ad339a4cb8639066fc36b967684` (`Publish 120 formal Physics circular-motion worksheets`)
-- the new circular-motion test registry covers 4 checkpoints / 120 worksheet variants
-- tests require deterministic regeneration, independent recomputation from learner-visible values, corrupted-answer rejection, 120/120 normalized-hash uniqueness, and disjointness from the existing catalog
-- no new shared formula relation was introduced; all four checkpoints use the existing reversible `product` contract
-- final publisher validation requires `Formal Physics 900-PDF catalog validation: OK`, 900 unique hashes, numeric answer metadata, and the expected unit/skill/mode counts
-- all shared worksheet tests, shared formula-relation tests, projectile tests, rigid-body tests, momentum/collision tests, circular-motion tests, catalog validation, `%PDF`, size, and two-page checks passed in the successful main publication run
-- the workflow completed its latest-main parent guard and non-force push successfully
+- implementation PR #164 merged as `ab21c0d7f56e6c2286439af6270aecd60106801b`
+- publication Actions run `33080346570` attempt 1 generated and fully validated the 20 PDFs but correctly refused the final push because unrelated parallel work advanced `main`
+- the failed attempt had already passed shared tests, all formal-Physics topic tests, generation, post-generation tests, and `Formal Physics 920-PDF catalog validation: OK`; only the latest-main parent guard failed
+- the failed jobs were rerun from latest `main`; attempt 2 completed successfully
+- publication commit: `8cc9faf699312fbfdef6a26a3abbaa2c4e149fc1` (`Publish 20 formal Physics circular-period worksheets`)
+- the new period tests require deterministic regeneration, independent recomputation solely from learner-visible values, exact learner-visible `π=3.14`, corrupted-answer rejection, 20/20 normalized-hash uniqueness, and disjointness from the existing catalog
+- final workflow validation requires 920 formal-Physics rows, 920 unique hashes, `numeric=920`, expected skill/unit/mode counts, and structural checks for every registered formal-Physics PDF
+- repository-wide catalog serialization remains `worksheet-catalog-publish-v1` with `cancel-in-progress: false`
 
-The repository-wide shared catalog serialization remains `worksheet-catalog-publish-v1` with `cancel-in-progress: false`; do not bypass it. Parallel non-science progress must continue to be preserved by reconciling onto latest `main` rather than force-updating or rolling back unrelated commits.
+The concurrent-main failure/retry demonstrates the intended non-force publication safety. Do not weaken or bypass that guard.
 
 ## Exact next starting point
 
-Continue formal course **`物理：様々な運動 / 円運動`** with the remaining **period relation**.
+Continue formal course **`物理：様々な運動 / 円運動`** with the required **centrifugal-force mention** before moving to single harmonic motion.
 
-1. Start from latest `main`; re-read `00_MASTER_INSTRUCTIONS.md`, `20_EXECUTION_PLAN.md`, `STATUS.json`, and this HANDOFF, then reconcile any parallel progress.
-2. Recheck current MEXT circular-motion wording. Period is explicitly in scope alongside speed, angular velocity, centripetal acceleration, and centripetal force.
-3. Define the simplest one-unknown period/angular-speed relation, normally `ω = 2π/T` or an exactly equivalent formulation. Before generation, make the learner-visible π convention and numeric rounding/tolerance contract explicit so independent recomputation is unambiguous.
-4. Preserve `formal_course=物理`, `grade=null`, 20 problems per worksheet, the focused two-page PDF layout, deterministic seeds, independent visible-value recomputation, corrupted-answer rejection, normalized-hash uniqueness/collision checks, complete catalog validation, and structural PDF checks.
-5. Prefer an existing shared relation only if the fixed `2π` factor can be represented without hidden assumptions. Otherwise add the smallest reversible relation with direct/reverse regression tests, bad-arity/zero-denominator rejection, and independent solver validation.
-6. After the period checkpoint, recheck whether the required centrifugal-force mention is better represented as finite-answer retrieval rather than forcing it into the numeric inertial-frame centripetal-force exercises. Keep inertial-frame centripetal force and rotating-frame centrifugal force explicitly distinct.
-7. Once the remaining circular-motion coverage is safely complete, continue in curriculum order to single harmonic motion rather than skipping ahead.
-8. Preserve `worksheet-catalog-publish-v1` serialization and non-force latest-main push safety.
+1. Start from latest `main` and re-read the science factory instructions, execution plan, STATUS and this HANDOFF; reconcile parallel progress first.
+2. Recheck current MEXT wording: uniform circular motion covers speed, period, angular velocity, centripetal acceleration and centripetal force, and the content handling also requires mentioning centrifugal force.
+3. Prefer finite-answer retrieval for centrifugal force rather than introducing a misleading second numeric force formula into the inertial-frame exercises.
+4. Keep the frame distinction explicit and learner-visible: centripetal force is the real center-directed net force in an inertial-frame description; centrifugal force is an apparent/inertial force used in a rotating-frame description. Do not present them as two simultaneously acting physical forces in the same frame.
+5. If a deterministic finite-answer fact set can be made unambiguous, implement the smallest focused checkpoint using the existing accepted-answer retrieval infrastructure, with independent answer validation, corrupted-answer rejection, deterministic seeds, normalized-hash uniqueness/collision checks, catalog validation and structural PDF checks.
+6. A retrieval checkpoint changes the active formal-Physics publisher from its current all-numeric 920-row contract. Update answer-type expectations carefully and add regression coverage rather than weakening validation.
+7. After centrifugal force safely closes circular motion, continue in curriculum order to **single harmonic motion**. Do not skip ahead.
+8. Preserve `formal_course=物理`, `grade=null`, `worksheet-catalog-publish-v1`, and non-force latest-main push safety.
 9. Representative screenshot-based visual QA remains pending; structural PDF QA is not a substitute for visual QA.
 
-This run reached the configured maximum of four safe contiguous checkpoints (120 PDFs), so it stops here. The next period relation has a new `2π`/rounding contract and is therefore left as the exact next checkpoint rather than being added beyond the run limit.
+This run stops after one 20-PDF checkpoint even though the configured maximum is four. The next item changes both the answer model (numeric → finite accepted-answer retrieval) and the physical reference-frame contract, so it is a legitimate safety boundary rather than a throughput quota shortfall.
