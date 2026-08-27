@@ -22,9 +22,9 @@ class PhysicsProjectileTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_six_checkpoints_total_one_hundred_eighty_variants(self):
+    def test_eight_checkpoints_total_two_hundred_forty_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 180)
+        self.assertEqual(len(batches), 240)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
         counts = {key: 0 for key in PHYSICS_PROJECTILE_TOPICS}
         for topic_key, *_ in batches:
@@ -64,6 +64,13 @@ class PhysicsProjectileTests(unittest.TestCase):
                     if solve_for == "vertical_velocity": expected = known["initial_vertical_velocity"] + known["vertical_acceleration"] * known["time"]
                     elif solve_for == "initial_vertical_velocity": expected = known["vertical_velocity"] - known["vertical_acceleration"] * known["time"]
                     else: expected = (known["vertical_velocity"] - known["initial_vertical_velocity"]) / known["vertical_acceleration"]
+                elif topic_key == "oblique-projectile-vertical-displacement":
+                    if solve_for == "vertical_displacement":
+                        expected = known["initial_vertical_velocity"] * known["time"] + 0.5 * known["vertical_acceleration"] * known["time"] ** 2
+                    else:
+                        expected = (known["vertical_displacement"] - 0.5 * known["vertical_acceleration"] * known["time"] ** 2) / known["time"]
+                elif topic_key == "oblique-projectile-time-to-highest-point":
+                    expected = known["initial_vertical_velocity"] / known["gravity"] if solve_for == "time_to_highest_point" else known["gravity"] * known["time_to_highest_point"]
                 else:
                     self.fail(topic_key)
                 self.assertAlmostEqual(problem["answer"], expected, msg=(topic_key, mode_key, variant))
@@ -71,8 +78,8 @@ class PhysicsProjectileTests(unittest.TestCase):
 
     def test_normalized_hashes_unique_and_disjoint_from_existing_series(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 180)
-        self.assertEqual(len(set(hashes)), 180)
+        self.assertEqual(len(hashes), 240)
+        self.assertEqual(len(set(hashes)), 240)
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
         current_ids = {f"science-physics-motion-{topic_key}-{mode_key}-{variant:02d}" for topic_key, topic in PHYSICS_PROJECTILE_TOPICS.items() for mode_key in topic["modes"] for variant, _ in enumerate(topic["seeds"], start=1)}
         prior_hashes = {row["content_hash"] for row in catalog if row.get("id") not in current_ids}
@@ -81,9 +88,16 @@ class PhysicsProjectileTests(unittest.TestCase):
     def test_curriculum_scope_and_conditions_are_explicit(self):
         self.assertEqual(PHYSICS_PROJECTILE_TOPICS["oblique-projectile-initial-horizontal-component"]["spec"]["relation"], "product")
         self.assertEqual(PHYSICS_PROJECTILE_TOPICS["oblique-projectile-initial-vertical-component"]["spec"]["relation"], "product")
-        vertical = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-vertical-velocity"]
-        self.assertEqual(vertical["spec"]["relation"], "offset-product")
-        self.assertEqual(vertical["spec"]["variables"]["vertical_acceleration"]["values"], [-9.8])
+        velocity = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-vertical-velocity"]
+        self.assertEqual(velocity["spec"]["relation"], "offset-product")
+        self.assertEqual(velocity["spec"]["variables"]["vertical_acceleration"]["values"], [-9.8])
+        displacement = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-vertical-displacement"]
+        self.assertEqual(displacement["spec"]["relation"], "linear-plus-half-quadratic")
+        self.assertEqual(displacement["spec"]["variables"]["vertical_acceleration"]["values"], [-9.8])
+        self.assertNotIn("reverse-time", displacement["modes"])
+        peak_time = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-time-to-highest-point"]
+        self.assertEqual(peak_time["spec"]["relation"], "product")
+        self.assertEqual(peak_time["spec"]["variables"]["gravity"]["values"], [9.8])
         for topic in PHYSICS_PROJECTILE_TOPICS.values():
             self.assertEqual(topic["unit"], "様々な運動：平面運動と放物運動")
             self.assertNotIn("grade", topic)
@@ -92,6 +106,17 @@ class PhysicsProjectileTests(unittest.TestCase):
         ratios = {0.5, 0.7071067811865476, 0.8660254037844386}
         self.assertEqual(set(PHYSICS_PROJECTILE_TOPICS["oblique-projectile-initial-horizontal-component"]["spec"]["variables"]["cos_theta"]["values"]), ratios)
         self.assertEqual(set(PHYSICS_PROJECTILE_TOPICS["oblique-projectile-initial-vertical-component"]["spec"]["variables"]["sin_theta"]["values"]), ratios)
+
+    def test_vertical_displacement_stays_in_basic_positive_range(self):
+        topic = PHYSICS_PROJECTILE_TOPICS["oblique-projectile-vertical-displacement"]
+        for mode in topic["modes"].values():
+            for seed in topic["seeds"]:
+                problems = generate_formula_drill(topic["spec"], seed, PHYSICS_PROJECTILE_PROBLEM_COUNT, solve_for=mode["solve_for"])
+                for problem in problems:
+                    if "vertical_displacement" in problem["known"]:
+                        self.assertGreater(problem["known"]["vertical_displacement"], 0)
+                    if problem["solve_for"] == "vertical_displacement":
+                        self.assertGreater(problem["answer"], 0)
 
     def test_expected_units(self):
         units = {definition["unit"] for topic in PHYSICS_PROJECTILE_TOPICS.values() for definition in topic["spec"]["variables"].values() if definition.get("unit")}

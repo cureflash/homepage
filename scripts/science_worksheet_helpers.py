@@ -11,6 +11,15 @@ SCIENCE_PROBLEM_TYPES = {
     'science-retrieval-order',
 }
 
+FORMULA_RELATIONS = {
+    'product',
+    'sum',
+    'difference',
+    'offset-product',
+    'half-product-last-square',
+    'linear-plus-half-quadratic',
+}
+
 
 def _sample_value(rng, definition):
     if 'values' in definition:
@@ -46,6 +55,11 @@ def _relation_result(relation, inputs):
         if len(inputs) < 2:
             raise ValueError('half-product-last-square needs at least one linear factor and one squared factor')
         return 0.5 * prod(inputs[:-1]) * inputs[-1] ** 2
+    if relation == 'linear-plus-half-quadratic':
+        if len(inputs) != 3:
+            raise ValueError('linear-plus-half-quadratic needs exactly linear rate, acceleration, and time')
+        linear_rate, acceleration, time = inputs
+        return linear_rate * time + 0.5 * acceleration * time ** 2
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -95,6 +109,20 @@ def _generation_formula_answer(relation, result_name, input_names, values, solve
         if denominator == 0:
             raise ValueError('cannot solve half-product-last-square with zero denominator')
         return 2 * values[result_name] / denominator
+    if relation == 'linear-plus-half-quadratic':
+        if len(input_names) != 3:
+            raise ValueError('linear-plus-half-quadratic needs exactly three inputs')
+        linear_name, acceleration_name, time_name = input_names
+        time = values[time_name]
+        if solve_for == time_name:
+            raise ValueError('time inversion is intentionally unsupported because the quadratic can have multiple roots')
+        if time == 0:
+            raise ValueError('cannot invert linear-plus-half-quadratic at zero time')
+        if solve_for == linear_name:
+            return (values[result_name] - 0.5 * values[acceleration_name] * time ** 2) / time
+        if solve_for == acceleration_name:
+            return 2 * (values[result_name] - values[linear_name] * time) / time ** 2
+        raise ValueError(f'unsupported solve_for for linear-plus-half-quadratic: {solve_for}')
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -104,7 +132,7 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
     input_names = list(spec['inputs'])
     variables = spec['variables']
     solve_for = solve_for or spec.get('solve_for') or result_name
-    if relation not in {'product', 'sum', 'difference', 'offset-product', 'half-product-last-square'}:
+    if relation not in FORMULA_RELATIONS:
         raise ValueError(f'unsupported formula relation: {relation}')
     if relation == 'difference' and len(input_names) != 2:
         raise ValueError('difference relation needs exactly two inputs')
@@ -115,6 +143,11 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
             raise ValueError('half-product-last-square needs at least two inputs')
         if len(set(input_names)) != len(input_names):
             raise ValueError('half-product-last-square input names must be unique')
+    if relation == 'linear-plus-half-quadratic':
+        if len(input_names) != 3 or len(set(input_names)) != 3:
+            raise ValueError('linear-plus-half-quadratic needs three unique inputs')
+        if solve_for == input_names[-1]:
+            raise ValueError('time inversion is intentionally unsupported for linear-plus-half-quadratic')
     if result_name not in variables or any(name not in variables for name in input_names):
         raise ValueError('all formula variables need definitions')
     if solve_for not in [result_name, *input_names]:
@@ -320,6 +353,20 @@ def compute_science_answer(problem):
             if denominator == 0:
                 raise ValueError('cannot solve half-product-last-square with zero denominator')
             return 2 * known[result_name] / denominator
+        if relation == 'linear-plus-half-quadratic':
+            if len(input_names) != 3:
+                raise ValueError('linear-plus-half-quadratic needs exactly three inputs')
+            linear_name, acceleration_name, time_name = input_names
+            time = known.get(time_name)
+            if solve_for == time_name:
+                raise ValueError('time inversion is intentionally unsupported because the quadratic can have multiple roots')
+            if time == 0:
+                raise ValueError('cannot invert linear-plus-half-quadratic at zero time')
+            if solve_for == linear_name:
+                return (known[result_name] - 0.5 * known[acceleration_name] * time ** 2) / time
+            if solve_for == acceleration_name:
+                return 2 * (known[result_name] - known[linear_name] * time) / time ** 2
+            raise ValueError(f'unsupported solve_for for linear-plus-half-quadratic: {solve_for}')
         raise ValueError(f'unsupported formula relation: {relation}')
 
     source = problem['source']
