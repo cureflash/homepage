@@ -34,9 +34,14 @@ final class ReleaseMetadataTests: XCTestCase {
     }
 
     func testPrivacyManifestDeclaresOnlyCurrentUserDefaultsRequiredReason() throws {
-        let url = packageRoot.appendingPathComponent("Release/PrivacyInfo.xcprivacy")
-        let data = try Data(contentsOf: url)
-        let plist = try PropertyListSerialization.propertyList(from: data, options: [], format: nil)
+        let canonicalURL = packageRoot.appendingPathComponent("Release/PrivacyInfo.xcprivacy")
+        let appTargetURL = packageRoot.appendingPathComponent("AppShell/PowerTOEICApp/PrivacyInfo.xcprivacy")
+
+        let canonicalData = try Data(contentsOf: canonicalURL)
+        let appTargetData = try Data(contentsOf: appTargetURL)
+        XCTAssertEqual(appTargetData, canonicalData, "App target privacy manifest must stay byte-for-byte synchronized with the canonical release template")
+
+        let plist = try PropertyListSerialization.propertyList(from: canonicalData, options: [], format: nil)
         let root = try XCTUnwrap(plist as? [String: Any])
 
         XCTAssertEqual(root["NSPrivacyTracking"] as? Bool, false)
@@ -46,6 +51,16 @@ final class ReleaseMetadataTests: XCTestCase {
         XCTAssertEqual(accessed.count, 1)
         XCTAssertEqual(accessed[0]["NSPrivacyAccessedAPIType"] as? String, "NSPrivacyAccessedAPICategoryUserDefaults")
         XCTAssertEqual(accessed[0]["NSPrivacyAccessedAPITypeReasons"] as? [String], ["CA92.1"])
+    }
+
+    func testAppShellKeepsAccountNeutralBuildPlaceholders() throws {
+        let config = try String(
+            contentsOf: packageRoot.appendingPathComponent("AppShell/Config/PowerTOEIC.xcconfig"),
+            encoding: .utf8
+        )
+        XCTAssertTrue(config.contains("POWER_TOEIC_BUNDLE_ID = invalid.placeholder.PowerTOEIC"))
+        XCTAssertTrue(config.contains("IPHONEOS_DEPLOYMENT_TARGET = 17.0"))
+        XCTAssertFalse(config.contains("DEVELOPMENT_TEAM ="))
     }
 
     private func jsonObject(at url: URL) throws -> Any {

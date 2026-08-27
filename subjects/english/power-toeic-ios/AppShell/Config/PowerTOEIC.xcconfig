@@ -1,0 +1,8 @@
+// CI/build-only defaults. Do not submit these account-neutral placeholder values to App Store Connect.
+POWER_TOEIC_BUNDLE_ID = invalid.placeholder.PowerTOEIC
+POWER_TOEIC_MARKETING_VERSION = 0.0.0
+POWER_TOEIC_BUILD_NUMBER = 1
+
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
+SWIFT_VERSION = 5.0
+TARGETED_DEVICE_FAMILY = 1,2
