@@ -14,21 +14,20 @@ Canonical Phase 4 concept inventory: `qualifications/takken/data/power-concepts.
 
 Re-read latest `main` and confirmed the Phase 4 gate remains satisfied: 90/90 units generated, 163/163 questions checked and verified, pending 0, `validation_complete: true`.
 
-Continued Phase 4.1 only. Canonical units **31 through 50** were reviewed in order against their existing verified Phase 2/3 question evidence and normalized into **27 additional `exam_concept` entries**. Cumulative inventory is now **64 concepts covering units 1-50**.
+Continued Phase 4.1 only. Canonical units **51 through 70** were reviewed in order against their existing verified Phase 2/3 question evidence and normalized into **26 additional `exam_concept` entries**. Cumulative inventory is now **90 concepts covering units 1-70**.
 
 The new inventory continues the rule that one canonical unit does not automatically equal one concept. Compound units were split only where separate 50-question study/drill value exists. Notable splits in this checkpoint include:
 
-- 割賦販売の解除制限 / 所有権留保等の制限
-- 詐欺 / 強迫
-- 心裡留保 / 通謀虚偽表示
-- 未成年者 / 成年被後見人
-- 無権代理 / 表見代理
-- 取得時効 / 消滅時効
-- 同時履行の抗弁権 / 危険負担
+- 敷金 / 建物賃貸借の対抗力
+- 普通借地権の存続期間 / 借地権の対抗力
+- 法定相続人と順位 / 法定相続分
+- 相続の承認・放棄と熟慮期間 / 相続放棄
+- 遺言の効力 / 遺留分
+- 都市計画の決定主体 / 都市計画事業
 
-Conversely, `30日以上`, `30%`, `20年`, `10年`, `5年`, `50年` 等の数値断片は独立conceptにせず、それぞれの制度concept配下へ残しています。
+Conversely, `30年`, `50年以上`, `3か月`, `4m`, `2m` 等の数値断片は独立conceptにせず、それぞれの制度concept配下へ残しています。
 
-`power-concepts.js` now contains 64 stable semantic `conceptId` entries with `title`, `category`, `sourceUnits`, `scopeNote`, `examYear: 2026`, `lawAsOf: "2026-04-01"`, and inventory-stage status. Runtime guards reject duplicate IDs, empty source-unit mappings, or an unexpected checkpoint count.
+`power-concepts.js` now contains 90 stable semantic `conceptId` entries with `title`, `category`, `sourceUnits`, `scopeNote`, `examYear: 2026`, `lawAsOf: "2026-04-01"`, and inventory-stage status. Runtime guards reject duplicate IDs, empty source-unit mappings, or an unexpected checkpoint count.
 
 No Phase 4.2 `knowledge_items`, no new drill questions, no detailed explanation migration, no prints, and no app linkage were created in this run.
 
@@ -39,19 +38,19 @@ No Phase 4.2 `knowledge_items`, no new drill questions, no detailed explanation 
 - Phase 3: complete — checked 163 / verified 163 / needs_revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1 concept inventory: active
-- Concept inventory checkpoint: unit 1-50 covered
-- Normalized concepts so far: **64**
-- Next canonical unit: **51 `lease-deposit-opposability`**
+- Concept inventory checkpoint: unit 1-70 covered
+- Normalized concepts so far: **90**
+- Next canonical unit: **71 `height-restrictions`**
 - Phase 4.2 knowledge items: not started
 - Phase 4.3 fifty-question expansion: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.1 from canonical unit 51 `lease-deposit-opposability`.
+Continue Phase 4.1 from canonical unit 71 `height-restrictions`.
 
 1. Read `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md` as the governing Phase 4 specification.
-2. Review units 51 onward in canonical order and the corresponding verified Phase 2/3 questions.
+2. Review units 71 onward in canonical order and the corresponding verified Phase 2/3 questions.
 3. Add independently useful `exam_concept` entries to `qualifications/takken/data/power-concepts.js`.
 4. Split compound units only where the resulting topic has independent study/50-question value; do not create number-only or word-only concepts.
 5. Keep exact concept count driven by actual extraction, not the initial 250-300 estimate.
