@@ -4,9 +4,9 @@
 - Shared runtime/backend authority: existing Power TOEIC Drill Engine; no classics-specific fork.
 - Taxonomy: `subjects/japanese/power-classics/data/taxonomy/classics-v1.json`
 - Taxonomy: 30 big categories / 100 atomic micro-skills.
-- Generated questions: 375
-- QA checked: 375
-- Verified: 375
+- Generated questions: 400
+- QA checked: 400
+- Verified: 400
 - Needs revision: 0
 - Rejected: 0
 - Unchecked pending_validation: 0
@@ -15,19 +15,17 @@
 - global duplicate gate: not complete
 
 ## This checkpoint — generation
-Started `kobun.verb.conjugation_type.irregular` by persisting IDs 0001-0025, bringing this micro-skill to 25/100.
+Continued `kobun.verb.conjugation_type.irregular` with IDs 0026-0050, bringing this micro-skill to 50/100.
 
 New IDs:
-`kobun_verb_conjugation_type_irregular_0001` through `kobun_verb_conjugation_type_irregular_0025`
+`kobun_verb_conjugation_type_irregular_0026` through `kobun_verb_conjugation_type_irregular_0050`
 
 Batch:
-`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-irregular/pending/batch-20260828-011.json`
+`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-irregular/pending/batch-20260828-012.json`
 
-Coverage explicitly separates the four classical irregular conjugations: カ変 `来`, サ変 `す・おはす`, ナ変 `死ぬ・往ぬ`, and ラ変 `あり・をり・侍り`. Forms span 未然・連用・終止・連体・已然・命令 where appropriate. No invented historical forms were added.
+Coverage keeps the four classical irregular conjugations explicit: カ変 `来`, サ変 `す・おはす`, ナ変 `死ぬ・往ぬ`, and ラ変 `あり・をり・侍り`. Forms span 未然・連用・終止・連体・已然・命令. No invented historical forms were added.
 
-One draft stem `かくす` was rejected before QA because the surface string could be confused with the lexical verb `隠す`. It was rewritten as `学問をす`, making the intended サ変 lexeme explicit.
-
-Answer positions in this batch: A/B/C/D = 6/7/6/6.
+Answer positions in this batch: A/B/C/D = 7/6/6/6. Across irregular IDs 0001-0050 the distribution is 13/13/12/12.
 
 ## This checkpoint — QA
 Independently re-solved all 25 new questions from stem + choices before consulting stored answer/explanation.
@@ -38,18 +36,18 @@ Independently re-solved all 25 new questions from stem + choices before consulti
 - rejected: 0
 
 QA record:
-`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-011-irregular.qa.json`
+`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-012-irregular.qa.json`
 
-External grammar spot-checks reconfirmed the standard paradigms: カ変 `こ・き・く・くる・くれ・こ（よ）`, サ変 `せ・し・す・する・すれ・せよ`, ナ変 `な・に・ぬ・ぬる・ぬれ・ね`, ラ変 `ら・り・り・る・れ・れ`.
+External grammar spot-checks reconfirmed the standard lexical membership and paradigms for カ変・サ変・ナ変・ラ変. Exact stems are unique within this batch. Full-bank semantic near-duplicate clearance remains pending.
 
 ## Next generation
-Continue the same micro-skill:
+Continue:
 `kobun.verb.conjugation_type.irregular`
 
 Resume at:
-`kobun_verb_conjugation_type_irregular_0026`
+`kobun_verb_conjugation_type_irregular_0051`
 
-Target is 100 questions. Keep カ変・サ変・ナ変・ラ変 coverage explicit and broaden contexts without inventing forms or relying on visually ambiguous surface strings. Maintain balanced answer positions across the eventual 100-question bank.
+Target remains 100 questions. Continue balancing the four irregular classes and conjugation forms; avoid invented forms and visually ambiguous strings. Aim for eventual A/B/C/D balance across the 100-question bank.
 
 ## Next QA
 There is no unchecked Power古典 pending backlog at this checkpoint. Independently QA the oldest candidates generated in the next run.
