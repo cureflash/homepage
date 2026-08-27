@@ -87,7 +87,14 @@ Phase 4.1 checkpoints:
 - [ ] Decompose each concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` law cutoff and primary sources.
 - [ ] Map existing verified questions to concepts/knowledge items instead of discarding them.
 
-**Exact continuation:** begin with `takken-concept-business-definition` and its source unit `takken-gyoho-definition`; establish the canonical knowledge-item schema/data location and map the existing verified question evidence before proceeding to the next concept.
+Canonical data files:
+- `qualifications/takken/data/power-knowledge-items.js`
+- `qualifications/takken/data/power-question-knowledge-map.js`
+
+Phase 4.2 checkpoints:
+- [x] `takken-concept-business-definition`: **3 verified knowledge items** established and **2 existing verified questions** mapped non-destructively. Atomic items cover self sale/exchange, agency/brokerage of sale/exchange/lease, and the self-lease exclusion. Runtime guards enforce stable IDs, statute source presence, law version, verified status, question-ref uniqueness and first-concept coverage.
+
+**Exact continuation:** continue with `takken-concept-license-required` and source unit `takken-gyoho-license-required`; extend the same canonical knowledge-item and existing-question mapping path before proceeding to the following concept.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
