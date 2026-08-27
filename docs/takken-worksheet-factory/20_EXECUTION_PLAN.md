@@ -60,7 +60,7 @@ Completed Phase 3 checkpoints:
 - Questions `takken-q-48-001` through `takken-q-60-001`: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
 - Questions `takken-q-60-002` through `takken-q-72-002`: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
 - Questions `takken-q-73-001` through `takken-q-77-002`: 10 checked / 10 verified / 0 needs_revision / 0 rejected.
-- Questions `takken-q-78-001` through `takken-q-90-002`: 26 checked / 26 verified / 0 needs_revision / 0 rejected. This final checkpoint covered legal-restriction comparison, acquisition/fixed-asset/registration-license/stamp/transfer-income taxes, land-price public notice, appraisal, Housing Finance Agency/Flat35, real-estate advertising, land/building knowledge, 2026 statistics, and five-question exemption review.
+- Questions `takken-q-78-001` through `takken-q-90-002`: 26 checked / 26 verified / 0 needs_revision / 0 rejected.
 
 Final Phase 3 totals: **checked 163 / verified 163 / needs_revision 0 / rejected 0 / pending 0 / `validation_complete: true`**.
 
@@ -68,12 +68,17 @@ Final Phase 3 totals: **checked 163 / verified 163 / needs_revision 0 / rejected
 
 **ACTIVE. Phase 3 completion gate is satisfied.** Canonical specification: `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`.
 
-Exact next task: Phase 4.1 Concept inventory, first unchecked item. Do not skip ahead to 50-question expansion, print generation, or app integration before the concept inventory and canonical knowledge model are established.
+Current task: Phase 4.1 Concept inventory. Do not skip ahead to 50-question expansion, print generation, or app integration before the concept inventory and canonical knowledge model are established.
 
 ### 4.1 Concept inventory
-- [ ] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, all 163 verified Phase 2/3 questions and official scope.
-- [ ] Normalize into exam-level `exam_concept` units; do not make isolated numbers/words standalone 50-question topics.
-- [ ] Record actual concept count; initial estimate is roughly 250-300, but count must follow actual extraction rather than a quota.
+- [~] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, all 163 verified Phase 2/3 questions and official scope. **Checkpoint complete through canonical unit 30; 37 normalized concepts recorded. Exact continuation: unit 31 `installment-sale-restrictions`.**
+- [~] Normalize into exam-level `exam_concept` units; do not make isolated numbers/words standalone 50-question topics. **Current inventory deliberately splits compound units where independent study value exists while keeping numbers/authority names inside parent concepts.**
+- [ ] Record final actual concept count after all 90 units and verified-question evidence are covered; initial estimate is roughly 250-300, but count must follow actual extraction rather than a quota.
+
+Canonical inventory file: `qualifications/takken/data/power-concepts.js`.
+
+Phase 4.1 checkpoints:
+- Units 1-30: **37 concepts** normalized and persisted.
 
 ### 4.2 Canonical knowledge items
 - [ ] Decompose each concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` law cutoff and primary sources.
