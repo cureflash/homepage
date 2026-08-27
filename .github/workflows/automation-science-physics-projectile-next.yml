@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install PDF dependency
+        run: python -m pip install --disable-pip-version-check reportlab
       - name: Apply safe projectile checkpoints
         run: python scripts/_automation_patch_science_projectile_next.py
       - name: Run regression tests
