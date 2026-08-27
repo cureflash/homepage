@@ -12,10 +12,10 @@ Required follow-up before any production-bank build: run a full cross-bank dupli
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
 - Fully completed generated micro-skills: **22 / 44**
-- Current generation micro-skill: `p5.conn.by_vs_until` — **0 / 100**
-- Generated questions persisted: **2,200**
-- QA checked: **1,225**
-- Verified: **1,160**
+- Current generation micro-skill: `p5.conn.by_vs_until` — **25 / 100**
+- Generated questions persisted: **2,225**
+- QA checked: **1,250**
+- Verified: **1,185**
 - Needs revision: **65**
 - Rejected: **0**
 - Unchecked `pending_validation`: **975**
@@ -24,65 +24,55 @@ Required follow-up before any production-bank build: run a full cross-bank dupli
 
 ## This run — generation
 
-Completed `p5.conn.during_vs_while` by persisting IDs **0026-0100** in three 25-question checkpoints:
+Started `p5.conn.by_vs_until` and persisted IDs **0001-0025** as:
 
-- `batch-20260827-024-part2.json` — IDs 0026-0050, `while + clause`
-- `batch-20260827-024-part3.json` — IDs 0051-0075, `during + noun phrase`
-- `batch-20260827-024-part4.json` — IDs 0076-0100, `while + clause`
+- `subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/by-vs-until/pending/batch-20260827-025-part1.json`
 
-Together with the prior 0001-0025 checkpoint, the skill is now **100/100**. All 100 remain `pending_validation`.
+The checkpoint explicitly separates:
+- `by` = deadline by which a completion/result must occur;
+- `until` = endpoint through which an action/state continues.
 
-Generation checks across the completed skill:
-- IDs 0001-0100 sequential and unique
+All 25 remain `pending_validation`.
+
+Generation checks for this checkpoint:
+- IDs 0001-0025 sequential and unique
 - one cloze per item
 - four distinct visible choices per item
-- answer positions A/B/C/D = **25/25/25/25**
+- answer positions A/B/C/D = **6/6/7/6**
 - exact duplicate stems = **0**
-- no within-skill SequenceMatcher pair >= 0.94 in the run's machine comparison
-- observed maximum pair similarity in the run's 100-stem comparison was about **0.623**
+- no within-checkpoint SequenceMatcher pair >= 0.94
+- observed maximum pair similarity = **0.5625**
 
-The full cross-bank semantic near-duplicate gate is still outstanding; the above is only the completed skill-level check.
+The full cross-bank semantic near-duplicate gate is still outstanding; the above is only a checkpoint-level lexical/surface similarity check.
 
 ## This run — QA
 
-Independently reviewed **100** oldest unchecked questions:
+Independently reviewed the oldest unchecked `p5.verb.modal_base_form` IDs **0026-0050**.
 
-1. `p5.verb.active_vs_passive` IDs 0026-0050 — 25 verified / 0 needs revision
-2. `p5.verb.active_vs_passive` IDs 0051-0075 — 23 verified / 2 needs revision
-3. `p5.verb.active_vs_passive` IDs 0076-0100 — 24 verified / 1 needs revision
-4. `p5.verb.modal_base_form` IDs 0001-0025 — 25 verified / 0 needs revision
-
-Run total:
-- Checked: **100**
-- Verified: **97**
-- Needs revision: **3**
+Run result:
+- Checked: **25**
+- Verified: **25**
+- Needs revision: **0**
 - Rejected: **0**
 
-Needs revision discovered this run:
-- `p5_verb_active_vs_passive_0060`: duplicated timing wording (`during ... during ...`) is below the TOEIC naturalness gate.
-- `p5_verb_active_vs_passive_0070`: redundant/awkward timing sequence (`during yesterday's review after the review meeting`).
-- `p5_verb_active_vs_passive_0084`: duplicated `before` timing phrase (`before each monthly review before the due date`).
+Every item uniquely requires the bare infinitive immediately after a modal verb, the business English is acceptable, and the stored explanation agrees with the independently selected answer.
 
-Each has a unique grammatical intended answer, but all three remain outside verified until wording is repaired and independently re-solved.
+QA record:
 
-QA records were persisted under `subjects/english/power-toeic/js/data/questions/part5/qa/` for each 25-question checkpoint.
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-27-scheduled-025-modal-base-form-part2.qa.json`
 
 ## Next generation
 
-Taxonomy order after `p5.conn.during_vs_while` is:
+Continue `p5.conn.by_vs_until` from:
 
-`p5.conn.by_vs_until`
+`p5_conn_by_vs_until_0026`
 
-Start from:
-
-`p5_conn_by_vs_until_0001`
-
-Target 100 questions, using 25-question safe checkpoints as needed.
+Target the remaining 75 questions, using 25-question safe checkpoints as needed. After 0100, taxonomy order advances to `p5.conn.for_vs_since`.
 
 ## Next QA
 
 Continue oldest unchecked `p5.verb.modal_base_form` from:
 
-`p5_verb_modal_base_form_0026`
+`p5_verb_modal_base_form_0051`
 
 Continue independent re-solving in 25-question safe checkpoints. Full cross-bank semantic duplicate clearance remains outstanding.
