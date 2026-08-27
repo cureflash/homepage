@@ -54,6 +54,58 @@ This phase starts only after Phase 2 is complete.
 - [ ] Track checked and verified counts separately and persist the exact next question ID.
 - [ ] Only after every question has been independently re-solved and all revision work is closed may `validation_complete: true` be set.
 
+## Phase 4 — Power宅建 knowledge / print / app integration
+
+**Do not begin Phase 4 until Phase 2 and Phase 3 are fully complete.** The current direction must be finished first. The canonical specification for this phase is `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`.
+
+### 4.1 Concept inventory
+
+- [ ] Extract all exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from the 90 units, verified core questions and official exam scope.
+- [ ] Normalize them into exam-level `exam_concept` units rather than treating isolated words/numbers as separate 50-question topics.
+- [ ] Build a canonical concept inventory with an initial expected scale of roughly 250-300 concepts; record the actual count rather than forcing the estimate.
+- [ ] Assign category, importance, law cutoff and primary-source ownership.
+
+### 4.2 Canonical knowledge items
+
+- [ ] Decompose each exam concept into atomic `knowledge_items` for rules, conditions, actors, deadlines, numbers, exceptions and comparison points.
+- [ ] Give every knowledge item a stable ID and primary-source references.
+- [ ] Map existing verified Phase 2/3 questions into the new concept / knowledge graph instead of discarding them.
+
+### 4.3 Fifty-question drill expansion
+
+- [ ] Target 50 verified four-choice questions per exam concept.
+- [ ] Reuse existing verified questions where they fit; generate only the missing questions.
+- [ ] Allow deliberate content repetition for important knowledge items, but reject superficial template/number/name swaps used only to inflate count.
+- [ ] Diversify direct knowledge, false-statement, scenario, comparison, exception/count/combination and cross-topic forms.
+- [ ] Every question must carry `concept_id`, `knowledge_refs[]`, a detailed explanation, distractor explanations and primary-source refs.
+
+### 4.4 Question-first QA and explanation completion
+
+- [ ] Independently solve every newly generated question before it becomes verified.
+- [ ] Finalize `detailed_explanation` and `knowledge_refs` only after QA.
+- [ ] Track verified question coverage per knowledge item and ensure important items receive repeated practice.
+
+### 4.5 Explanation-print generation
+
+- [ ] Generate each concept's study print only from verified knowledge items actually referenced by verified questions.
+- [ ] Merge duplicate explanations for readability while preserving all conditions/exceptions required by the questions.
+- [ ] Generate study / worksheet / answer modes from the same canonical knowledge data.
+- [ ] Add comparison tables, timelines, actor/relationship diagrams and rule/exception boxes where they improve learning.
+
+### 4.6 Bidirectional coverage validator
+
+- [ ] Enforce Question -> Print 100% coverage: every knowledge item required by a verified question appears in that concept's study print.
+- [ ] Enforce Print -> Question 100% coverage: every testable knowledge item printed is referenced by at least one verified question.
+- [ ] Permit one knowledge item to map to multiple questions; repetition is expected for important knowledge.
+- [ ] Block publication on orphan questions, orphan print knowledge, unverified sources or unresolved law-version mismatches.
+
+### 4.7 App review integration
+
+- [ ] Expose concept / knowledge item IDs to the app question bank.
+- [ ] Record performance at both question and knowledge-item level.
+- [ ] Allow re-solving wrong questions and prioritizing alternate questions sharing the same weak knowledge item.
+- [ ] Surface the detailed question explanation after answering and link back to the corresponding explanation-print concept.
+
 ## Publication invariant
 
 Only independently verified material may be published. `pending_factcheck`, `pending_validation`, `needs_revision`, and `rejected` content must not enter the public catalog or production question pool.
