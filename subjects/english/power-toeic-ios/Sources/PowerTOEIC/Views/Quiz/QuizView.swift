@@ -5,6 +5,8 @@ import SwiftUI
 public struct QuizView: View {
     public let session: QuizSession
     public let skillLabel: (String) -> String
+    public let onAttemptSubmitted: (Attempt) -> Void
+    public let onQuestionAdvanced: () -> Void
     public let onComplete: (SessionResults) -> Void
 
     @State private var selectedIndex: Int?
@@ -12,9 +14,17 @@ public struct QuizView: View {
     @State private var renderToken = 0
     @State private var errorMessage: String?
 
-    public init(session: QuizSession, skillLabel: @escaping (String) -> String = { $0 }, onComplete: @escaping (SessionResults) -> Void) {
+    public init(
+        session: QuizSession,
+        skillLabel: @escaping (String) -> String = { $0 },
+        onAttemptSubmitted: @escaping (Attempt) -> Void = { _ in },
+        onQuestionAdvanced: @escaping () -> Void = {},
+        onComplete: @escaping (SessionResults) -> Void
+    ) {
         self.session = session
         self.skillLabel = skillLabel
+        self.onAttemptSubmitted = onAttemptSubmitted
+        self.onQuestionAdvanced = onQuestionAdvanced
         self.onComplete = onComplete
     }
 
@@ -104,7 +114,9 @@ public struct QuizView: View {
         do {
             if submittedAttempt == nil {
                 guard let selectedIndex else { return }
-                submittedAttempt = try session.submitAnswer(selectedIndex)
+                let attempt = try session.submitAnswer(selectedIndex)
+                submittedAttempt = attempt
+                onAttemptSubmitted(attempt)
                 renderToken += 1
                 return
             }
@@ -116,6 +128,7 @@ public struct QuizView: View {
             selectedIndex = nil
             submittedAttempt = nil
             errorMessage = nil
+            onQuestionAdvanced()
             renderToken += 1
         } catch {
             errorMessage = String(describing: error)
