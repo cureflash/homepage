@@ -79,9 +79,9 @@ Canonical inventory file: `qualifications/takken/data/power-concepts.js`.
 
 Phase 4.1 checkpoints:
 - Units 1-30: **37 concepts** normalized and persisted.
-- Units 31-50: **27 additional concepts**, cumulative **64 concepts**. Splits include installment-sale cancellation / ownership retention, fraud / duress, mental reservation / fictitious declaration, minor / adult ward, unauthorized / apparent agency, acquisitive / extinctive prescription, and simultaneous performance / risk allocation.
-- Units 51-70: **26 additional concepts**, cumulative **90 concepts**. Splits include 敷金 / 建物賃貸借の対抗力、普通借地権の存続期間 / 借地権の対抗力、法定相続人と順位 / 法定相続分、承認・放棄の熟慮期間 / 相続放棄、遺言 / 遺留分、都市計画決定主体 / 都市計画事業.
-- Units 71-90: **23 additional concepts**, final **113 concepts**. Independent splits include 斜線制限 / 日影規制、農地法4条 / 5条、仮換地 / 換地処分. Number-only, deadline-only, and annual-statistic fragments remain knowledge items within broader concepts rather than standalone concepts.
+- Units 31-50: **27 additional concepts**, cumulative **64 concepts**.
+- Units 51-70: **26 additional concepts**, cumulative **90 concepts**.
+- Units 71-90: **23 additional concepts**, final **113 concepts**.
 
 ### 4.2 Canonical knowledge items
 - [ ] Decompose each concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` law cutoff and primary sources.
@@ -92,9 +92,10 @@ Canonical data files:
 - `qualifications/takken/data/power-question-knowledge-map.js`
 
 Phase 4.2 checkpoints:
-- [x] `takken-concept-business-definition`: **3 verified knowledge items** established and **2 existing verified questions** mapped non-destructively. Atomic items cover self sale/exchange, agency/brokerage of sale/exchange/lease, and the self-lease exclusion. Runtime guards enforce stable IDs, statute source presence, law version, verified status, question-ref uniqueness and first-concept coverage.
+- [x] `takken-concept-business-definition`: **3 verified knowledge items** established and **2 existing verified questions** mapped non-destructively. Atomic items cover self sale/exchange, agency/brokerage of sale/exchange/lease, and the self-lease exclusion. Runtime guards enforce stable IDs, statute source presence, law version, verified status, question-ref uniqueness and coverage.
+- [x] `takken-concept-license-required`: **1 verified knowledge item** established and existing verified question `takken-q-02-001` mapped non-destructively. The item captures the statutory license requirement for anyone intending to conduct宅地建物取引業, with individual/corporate scope and the boundary that conduct outside the statutory definition does not trigger this particular license obligation. Runtime guards now support multiple modeled concepts while preserving statute-source, law-version, traceability, verified-only, unique-mapping and complete modeled-knowledge coverage invariants.
 
-**Exact continuation:** continue with `takken-concept-license-required` and source unit `takken-gyoho-license-required`; extend the same canonical knowledge-item and existing-question mapping path before proceeding to the following concept.
+**Exact continuation:** continue with `takken-concept-license-authority` and source unit `takken-gyoho-license-authority`; establish atomic knowledge items and map existing verified question evidence beginning with `takken-q-03-001` before proceeding to the following concept.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
