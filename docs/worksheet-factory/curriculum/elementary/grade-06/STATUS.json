@@ -1,5 +1,5 @@
 {
-  "status": "in_progress",
-  "updated_at": "2026-08-27T19:57:52+09:00",
-  "next_task": "Grade 6 is published through 12 skills / 36 PDFs. Continue from 単位換算を含む数値練習, then 小学校6年間の四則総復習, then 5分間計算チャレンジ型の総合セット. Respect the 4-checkpoint maximum, current MEXT placement, deterministic generation, independent answer validation, duplicate/hash checks, and shared catalog-writer concurrency guard."
+  "status": "done",
+  "updated_at": "2026-08-27T21:08:00+09:00",
+  "next_task": "なし。小学6年の計画済み反復技能は15技能・45PDFで完了。次回workerは中学1年をactive gradeとしてPLAN.mdの先頭から開始する"
 }

@@ -2,58 +2,63 @@
 
 更新: 2026-08-27
 
-## 公開済み
+## 完了
 
-小学6年は **12技能・36PDF** まで公開済み。
+小学6年の計画済み反復技能は **15技能・45PDF** で完了した。
 
-既存8技能:
+今回の最終3 checkpoint:
 
-1. `fraction-times-integer` — 分数×整数
-2. `fraction-times-fraction` — 分数×分数
-3. `fraction-div-integer` — 分数÷整数
-4. `fraction-div-fraction` — 分数÷分数
-5. `mixed-number-mul-div` — 帯分数を含む乗除
-6. `fraction-decimal-mixed` — 分数・小数混合計算
-7. `fraction-four-operations` — 分数四則混合
-8. `simplify-ratio` — 比を簡単にする
+13. `unit-conversion-numeric` — 単位換算を含む数値練習 — 3 variants / 3 PDFs
+14. `elementary-four-operations-review` — 小学校6年間の四則総復習 — 3 variants / 3 PDFs
+15. `five-minute-calculation-challenge` — 5分間計算チャレンジ — 3 variants / 3 PDFs
 
-今回の4 checkpoint:
+公開commit: `13bbc66c66e2069dd1051e4f6a81ada8dc67f1d7`
+workflow run: `33070402501` success
 
-9. `ratio-value` — 比の値
-10. `proportion-missing-value` — 比例式の欠損値計算
-11. `variable-substitution` — 文字式への代入
-12. `speed-distance-time-substitution` — 速さ・時間・道のりの公式代入
+## 最終3 checkpointの設計
 
-今回の公開commit: `ee9c3b1094c20f057908b1465494efc4da7588e4`
+### 単位換算
+
+長さ・質量・容量の既習単位を、整数で機械的に一意に検算できる範囲に限定した。
+
+- m ↔ cm
+- km ↔ m
+- kg ↔ g
+- L ↔ mL
+
+factorと方向から保存済みanswerを参照せず独立再計算する。
+
+### 小学校6年間の四則総復習
+
+加法・減法・乗法・除法を各5問、合計20問に均等化した。除法は整数で割り切れる問題だけ生成する。
+
+### 5分間計算チャレンジ
+
+短い整数四則を各10問、合計40問。4列×10行の時間練習向けレイアウトとし、問題ページと同一配置の解答ページに赤字で答えを加える。
+
+## 検証
+
+`tests/test_grade6_final_three_publisher.py` で以下を検証した。
+
+- deterministic seed再生成
+- 全answerの独立再計算一致
+- 問題内重複なし
+- variant間差
+- 既存catalogとのnormalized content hash衝突なし
+- 四則総復習/5分チャレンジのA/B/C/Dではなく加減乗除の均等配分
+- 除法の割り切れ条件
+- 2ページPDF
+- catalog validation
+- publisher冪等性
+- 通常整数の問題番号
+- 同一配置＋赤字解答
+
+Grade 6 workflowでは既存Grade 6全publisher/test、共通 `tests/test_worksheet_factory.py`、共有catalog writer concurrency guardまで成功してから9PDFをmainへ公開した。
 
 ## 範囲確認
 
-文部科学省の現行「小学校学習指導要領（平成29年告示）解説 算数編」を再確認した。
-
-- 第6学年C（2）で比の意味・表し方・等しい比を扱い、用語として「比の値」が明示されている。
-- 第6学年では `a`, `x` などの文字を用いた式を扱い、数を当てはめて調べる活動を通して文字の使用に慣れることが示されている。
-- 第6学年で速さを理解し、求めることが学習内容に含まれる。
-
-## 実装・検証
-
-`scripts/publish_grade6_ratio_algebra_speed_four.py` を追加し、4技能×3variant、各20問をdeterministic seedで生成する。
-
-- 比の値は整数比 `a:b` を `Fraction(a,b)` で独立再計算する。
-- 比例式 `a:b=c:□` は等しい比になる整数scaleを生成し、`a×□ = b×c` を独立検証する。
-- 文字式への代入は4種の簡単な式patternを使い、保存済みanswerに依存せず式を再評価する。
-- 速さ・時間・道のりは `道のり=速さ×時間` の関係から3対象を独立再計算し、整数で一意に解ける問題だけ生成する。
-- 問題内重複、variant間差、既存catalogとのnormalized content hash衝突を検査する。
-- 2ページPDF、通常整数の問題番号、2ページ目の同一配置＋赤字解答を維持する。
-- `tests/test_grade6_ratio_algebra_speed_four_publisher.py` で決定性、独立解答、関係式整合性、重複、PDF、catalog、冪等性、番号・赤字解答を検証する。
-- Grade 6 workflowは既存2 publisherと今回publisher、全Grade 6 publisher test、共通Factory test、catalog-writer concurrency guardを通した後だけcatalog/PDFを公開する。
-- shared catalog writer concurrency group `worksheet-catalog-publish-v1` を維持する。
+現行の文部科学省・小学校算数の学習指導要領を再確認し、小学校算数全体の既習量・四則計算を総復習として扱う設計に留めた。新しい中学校内容は混ぜていない。
 
 ## 次にやること
 
-PLANの残りは3項目。
-
-1. 単位換算を含む数値練習
-2. 小学校6年間の四則総復習
-3. 5分間計算チャレンジ型の総合セット
-
-次runでは同一active gradeのまま最大3 checkpointを進め、小6完了条件を満たしたらSTATUSを `done` にする。各checkpointでMEXT範囲確認、deterministic generation、独立answer validation、duplicate/hash検査、PDF/catalog/site validation、Grade 6回帰を維持する。
+小学6年は再開不要。次回workerは中学1年をactive gradeとして、`curriculum/junior-high/grade-01/STATUS.json` と `PLAN.md` を読み、最初の未完了技能から開始する。
