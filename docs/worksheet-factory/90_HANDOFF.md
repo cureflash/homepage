@@ -8,7 +8,7 @@ The former P1 concurrent-writer risk on authoritative `worksheets/catalog.json` 
 
 All workflows that directly publish the shared worksheet catalog must use repository-wide GitHub Actions concurrency group `worksheet-catalog-publish-v1` with `cancel-in-progress: false`. Preserve `tests/test_worksheet_catalog_writer_concurrency.py`, latest-main reconciliation, non-force pushes, catalog/hash validation, and stable URLs.
 
-The new JH2 writer `.github/workflows/math-jh2-publish.yml` is registered in that repository-wide guard.
+The JH2 writer `.github/workflows/math-jh2-publish.yml` remains registered in that repository-wide guard.
 
 ## Current math factory state
 
@@ -24,31 +24,29 @@ Completed grades:
 
 Active grade: **中学2年** — in progress.
 
-Current JH2 publication: **4 skills / 12 PDFs**.
+Current JH2 publication: **8 skills / 24 PDFs**.
 
 Latest completed batch:
 
-- `monomial-multiplication` — 単項式の乗法 — 3 PDFs
-- `monomial-division` — 単項式の除法 — 3 PDFs
-- `polynomial-addition` — 多項式の加法 — 3 PDFs
-- `polynomial-subtraction` — 多項式の減法 — 3 PDFs
+- `polynomial-times-number` — 多項式×数 — 3 PDFs
+- `expression-four-operations` — 式の四則混合 — 3 PDFs
+- `expression-substitution` — 式への代入 — 3 PDFs
+- `simultaneous-equations-elimination-basic` — 連立方程式 加減法 基本 — 3 PDFs
 
-Each PDF contains 20 problems. The batch preserves deterministic seeds, independent answer recomputation, problem/variant/content-hash duplicate checks, 2-page PDFs, ordinary integer numbering, same-layout red answers, catalog validation, common Factory regression, and the shared catalog-writer concurrency guard.
+Each PDF contains 20 problems. The batch preserves deterministic seeds, independent answer recomputation, problem/variant/content-hash duplicate checks, 2-page PDFs, ordinary integer numbering, same-layout red answers, catalog validation, common Factory regression, and the shared catalog-writer concurrency guard. For the basic elimination worksheets, the validator solves the two equations independently from the determinant and the dedicated test substitutes the recovered x/y back into both original equations.
 
-The first workflow attempt correctly failed because the new JH2 catalog writer was not yet present in the explicit writer allowlist. `tests/test_worksheet_catalog_writer_concurrency.py` was updated to register `math-jh2-publish.yml`, and attempt 2 passed all steps.
-
-- successful workflow run: `33101526841` attempt 2
-- publish commit: `f532ab79ec37fdd37372617583fe60f047733c00`
+- successful workflow run: `33106457275`
+- publish commit: `9e1208009d4caeac07f8f7fa565c06c714eaa4a8`
 
 ## Exact next starting point
 
-Continue in **中学2年** from the first unfinished skill: **多項式×数**.
+Continue in **中学2年** from the first unfinished skill: **連立方程式 代入法 基本**.
 
 The next four candidates are:
 
-1. 多項式×数
-2. 式の四則混合
-3. 式への代入
-4. 連立方程式 加減法 基本
+1. 代入法 基本
+2. 係数をそろえる連立方程式
+3. かっこを含む連立方程式
+4. 小数を含む連立方程式
 
-Before crossing into simultaneous equations, confirm placement/scope against current MEXT junior-high mathematics guidance. Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
+Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
