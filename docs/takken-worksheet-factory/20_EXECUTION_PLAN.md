@@ -129,7 +129,9 @@ All 90 unit datasets remain `pending_factcheck` and unpublished.
 - [ ] Keep all unverified questions outside production/public pools.
 - [ ] When every core fact in all 90 units is covered, set `question_generation_complete: true` and `generation_complete: true`.
 
-Current next start: unit 1 `takken-gyoho-definition`, first uncovered core fact.
+Progress: units 1-7 have 100% core-fact question coverage (9 facts -> 9 pending-validation questions).
+
+Current next start: unit 8 `takken-shi-registration`, first uncovered core fact.
 
 ### Phase 3 — solve-all independent validation
 
