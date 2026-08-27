@@ -29,9 +29,11 @@ jobs:
             python scripts/publish_grade5_first_four.py .
             python scripts/publish_grade5_number_properties_and_common_denominator.py .
             python scripts/publish_grade5_fraction_core.py .
+            python scripts/publish_grade5_final_four.py .
             python tests/test_grade5_first_four_publisher.py
             python tests/test_grade5_number_properties_and_common_denominator_publisher.py
             python tests/test_grade5_fraction_core_publisher.py
+            python tests/test_grade5_final_four_publisher.py
             python tests/test_worksheet_factory.py
             before=$(git rev-parse origin/main); git fetch origin main; after=$(git rev-parse origin/main)
             [ "$before" = "$after" ] && break
