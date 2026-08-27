@@ -11,6 +11,7 @@ on:
       - subjects/english/power-toeic-ios/Package.swift
       - subjects/english/power-toeic-ios/Sources/PowerTOEIC/Views/Character/CharacterView.swift
       - subjects/english/power-toeic-ios/Sources/PowerTOEIC/Views/Character/AssetCatalog.swift
+      - subjects/english/power-toeic-ios/Tests/PowerTOEICTests/ProgressionAssetTests.swift
   workflow_dispatch:
 
 permissions:
