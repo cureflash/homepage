@@ -30,7 +30,8 @@ Generation checks for these 100:
 - proposed answer position A/B/C/D = **25/25/25/25**
 - exact duplicate stems = **0**
 - SequenceMatcher similarity >= 0.94 within this skill = **0 pairs**
-- maximum observed within-skill similarity ≈ **0.908**
+- maximum observed within-skill similarity ≈ **0.800**
+- business contexts were rewritten after an initial self-check to remove repeated generic tail templates and improve structural/contextual diversity
 - one pre-persistence issue in 0097 (`cut` base/past surface-form collision) was corrected by replacing the duplicate distractor with a distinct finite form
 - full semantic cross-bank scan across all 1,500 questions is **not completed**, so do not claim global near-duplicate clearance
 
