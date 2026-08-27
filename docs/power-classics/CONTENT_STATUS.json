@@ -3,26 +3,27 @@
   "role": "content_generate",
   "taxonomy_version": "classics-v1.0",
   "taxonomy_micro_skill_count": 100,
-  "generated_question_count": 250,
-  "checked_question_count": 250,
+  "generated_question_count": 275,
+  "checked_question_count": 275,
   "pending_validation_count": 0,
-  "verified_question_count": 250,
+  "verified_question_count": 275,
   "needs_revision_count": 0,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "kobun.verb.conjugation_type.yodan",
     "kobun.verb.conjugation_type.kami_ichidan",
-    "kobun.verb.conjugation_type.kami_nidan"
+    "kobun.verb.conjugation_type.kami_nidan",
+    "kobun.verb.conjugation_type.shimo_nidan"
   ],
-  "current_batch": "2026-08-28-scheduled-006",
-  "current_micro_skill": "kobun.verb.conjugation_type.kami_nidan",
-  "current_micro_skill_persisted_count": 100,
+  "current_batch": "2026-08-28-scheduled-007",
+  "current_micro_skill": "kobun.verb.conjugation_type.shimo_nidan",
+  "current_micro_skill_persisted_count": 25,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "kobun_verb_conjugation_type_shimo_nidan_0001",
+  "next_resume_id": "kobun_verb_conjugation_type_shimo_nidan_0026",
   "next_micro_skill": "kobun.verb.conjugation_type.shimo_nidan",
   "generation_complete": false,
   "validation_complete": false,
   "global_duplicate_gate_complete": false,
-  "last_run_result": "Generated IDs 0076-0100 for kobun.verb.conjugation_type.kami_nidan, emphasizing 已然形・命令形 with attested 上二段 verbs. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=5/6/7/7, bringing cumulative kami-nidan 0001-0100 to 25/25/25/25. Phase A target for kami-nidan is complete. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_type_shimo_nidan_0001.",
-  "updated_at": "2026-08-28T02:00:00+09:00"
+  "last_run_result": "Generated IDs 0001-0025 for kobun.verb.conjugation_type.shimo_nidan using attested 下二段 verbs and five evidence forms (未然・連用・終止・連体・已然). Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=7/6/6/6. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_type_shimo_nidan_0026.",
+  "updated_at": "2026-08-28T03:00:00+09:00"
 }

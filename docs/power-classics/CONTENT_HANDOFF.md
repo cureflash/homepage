@@ -4,9 +4,9 @@
 - Shared runtime/backend authority: existing Power TOEIC Drill Engine; no classics-specific fork.
 - Taxonomy: `subjects/japanese/power-classics/data/taxonomy/classics-v1.json`
 - Taxonomy: 30 big categories / 100 atomic micro-skills.
-- Generated questions: 250
-- QA checked: 250
-- Verified: 250
+- Generated questions: 275
+- QA checked: 275
+- Verified: 275
 - Needs revision: 0
 - Rejected: 0
 - Unchecked pending_validation: 0
@@ -15,17 +15,17 @@
 - global duplicate gate: not complete
 
 ## This checkpoint — generation
-Completed `kobun.verb.conjugation_type.kami_nidan` from 75/100 to 100/100 and persisted 25 new Phase A questions.
+Started `kobun.verb.conjugation_type.shimo_nidan` and persisted IDs 0001-0025 (25/100).
 
 New IDs:
-`kobun_verb_conjugation_type_kami_nidan_0076` through `kobun_verb_conjugation_type_kami_nidan_0100`
+`kobun_verb_conjugation_type_shimo_nidan_0001` through `kobun_verb_conjugation_type_shimo_nidan_0025`
 
 Batch:
-`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-kami-nidan/pending/batch-20260828-006.json`
+`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-type-shimo-nidan/pending/batch-20260828-007.json`
 
-The checkpoint reuses attested 上二段 lexemes and emphasizes 已然形・命令形 evidence. No invented verbs were introduced solely to force lexical diversity.
+This checkpoint uses attested 下二段 lexemes including `受く・出づ・求む・捨つ・植う` and diversifies evidence across 未然形・連用形・終止形・連体形・已然形. No invented verbs were introduced solely to force lexical diversity.
 
-Answer positions: A/B/C/D = 5/6/7/7 for the 25 new items; cumulative kami-nidan 0001-0100 = 25/25/25/25.
+Answer positions: A/B/C/D = 7/6/6/6.
 
 ## This checkpoint — QA
 Independently re-solved all 25 new questions from stem + choices before consulting their stored answer/explanation.
@@ -36,15 +36,15 @@ Independently re-solved all 25 new questions from stem + choices before consulti
 - rejected: 0
 
 QA record:
-`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-006-kami-nidan.qa.json`
+`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-007-shimo-nidan.qa.json`
 
 ## Next generation
-`kobun.verb.conjugation_type.kami_nidan` has reached its Phase A target of 100/100.
+`kobun.verb.conjugation_type.shimo_nidan` is now 25/100.
 
 Resume at:
-`kobun_verb_conjugation_type_shimo_nidan_0001`
+`kobun_verb_conjugation_type_shimo_nidan_0026`
 
-Next micro-skill: `kobun.verb.conjugation_type.shimo_nidan` (下二段活用の判定), target 100. Start with attested 下二段 verbs and diversify evidence across 未然・連用・終止・連体・已然・命令 forms. Do not invent verbs to force lexical diversity; quarantine homographs where the historical conjugation is not uniquely recoverable from context.
+Continue with attested lower-bigrade verbs and broaden evidence, especially 命令形 and additional lexical classes. Avoid homographs whose historical conjugation type is context-dependent unless the stem makes the intended lexical sense unique.
 
 ## Next QA
 There is no unchecked Power古典 pending backlog at this checkpoint. Independently QA the oldest candidates generated in the next run.
