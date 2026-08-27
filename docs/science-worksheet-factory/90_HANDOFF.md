@@ -4,42 +4,39 @@ Updated: 2026-08-27
 
 ## Completed / reconciled this run
 
-- Started from latest `main` and resumed at `物理基礎：音と振動 / 弦の振動`.
-- Rechecked the current MEXT high-school science commentary. `物理基礎` treats string vibration and normal modes under `音と振動`; the commentary also discusses investigating string frequency and wave speed in relation to string mass and tension.
-- Cross-checked the simplest boundary-condition relation against OpenStax: for a string fixed at both ends, the fundamental mode has `λ = 2L`, hence `f = v/(2L)` and equivalently `v = 2Lf`.
-- Added only this simplest unambiguous model: string fixed at both ends, fundamental mode. Overtone/harmonic conventions and the tension/linear-density square-root relation were intentionally not mixed into this first checkpoint.
-- Added `scripts/science_physics_basic_string.py` with 30 focused worksheets: 10 solve string-wave speed `v`, 10 reverse-solve string length `L`, and 10 reverse-solve fundamental frequency `f`. Every worksheet has 20 deterministic problems.
-- Reused the existing shared `product` relation with a fixed factor 2. No shared generator, independent validator, PDF renderer, catalog schema, ID prefix, or output directory was changed.
-- Added `tests/test_science_physics_basic_string.py`. Tests cover exactly 30 variants, deterministic regeneration, independent direct/reverse recomputation, requested answer units, positive ranges, 30/30 normalized-hash uniqueness, and disjointness from all prior sound batches.
-- Wired the new topic into `scripts/publish_science_physics_basic.py` and updated the Physics Basics publication workflow to expect exactly 600 Physics Basics rows, 600 unique content hashes, 220 `calculation-basic`, 380 `calculation-reverse`, 30 rows for `string-fundamental-vibration`, and 120 rows in `音と振動`.
-- Implementation PR #98 merged as `43d5d2df99adc07da32a70641a6941eeddf93035`.
-- Actions run `33022082223` completed successfully. Latest-main guard, shared and all Physics Basics topic tests, generation, post-generation validation/catalog checks, PDF structural validation, generated commit, and safe push all succeeded.
-- Publication commit is `c9a6844ddb1be7edb99744b4e512626686d9190c` (`Publish 30 Physics Basics string-vibration worksheets`).
-- The workflow validated every registered Physics Basics PDF for `%PDF` header, size over 1000 bytes, and `/Count 2` two-page structure.
+- Started from latest `main` and resumed at `物理基礎：音と振動 / remaining sound properties and retrieval`.
+- Rechecked the current MEXT high-school science commentary. Under `物理基礎` / `音と振動`, sound-wave properties explicitly include resonance, sympathetic resonance, and beats (`共振，共鳴，うなり`).
+- Chose beats as the next safe numerical checkpoint because it remains mechanically recomputable with the existing shared formula engine; no new answer type or renderer was required.
+- Added `scripts/science_physics_basic_beats.py` with 30 focused worksheets: 10 solve beat frequency, 10 reverse-solve the higher source frequency, and 10 reverse-solve the lower source frequency. Every worksheet has 20 deterministic problems.
+- Represented the basic relation as `f_beat = f_high - f_low`, with the two source frequencies explicitly labeled and generated in ordered high/low ranges. This reuses the existing shared `difference` relation while remaining equivalent to the usual absolute frequency difference for the generated problems.
+- Added `tests/test_science_physics_basic_beats.py`. Tests cover exactly 30 variants, deterministic regeneration, independent direct/reverse recomputation, ordered source frequencies, a basic 5–15 Hz beat range, answer units, 30/30 normalized-hash uniqueness, and disjointness from prior sound/string batches.
+- Wired the new batch into `scripts/publish_science_physics_basic.py` and the Physics Basics publication workflow.
+- Implementation PR #100 merged as `44a1edcc691d4bec957bf505203bf6528c126f75`.
+- Actions run `33025448433` completed successfully. Shared/topic tests, generation, post-generation validation, catalog checks, PDF structural validation, generated commit, and safe push all succeeded.
+- Publication commit is `69f170ad435cb7f4c5fa862d8a2b6cfb598dec0c` (`Publish 30 Physics Basics beat-frequency worksheets`).
+- Workflow validated exactly 630 Physics Basics catalog rows, 630 unique content hashes, and every registered Physics Basics PDF for `%PDF` header, size over 1000 bytes, and two-page structure.
 - Representative screenshot-based visual QA remains pending; structural checks are not being treated as visual QA.
 
-## Published string-vibration checkpoint
+## Published beats checkpoint
 
-- string fixed at both ends;
-- fundamental mode only;
-- relation: `λ = 2L`, therefore `v = 2Lf`;
-- solve string-wave speed `v`: 10 worksheets;
-- solve string length `L`: 10 worksheets;
-- solve fundamental frequency `f`: 10 worksheets;
+- relation: `f_beat = f_high - f_low`, with `f_high > f_low` enforced by the spec ranges;
+- solve beat frequency: 10 worksheets;
+- reverse-solve higher source frequency: 10 worksheets;
+- reverse-solve lower source frequency: 10 worksheets;
 - 20 problems per worksheet;
-- answer units: `m/s`, `m`, `Hz` respectively;
-- shared `product` relation only, with fixed factor 2;
+- answer unit: `Hz`;
+- shared `difference` relation only;
 - `formal_course=物理基礎`, `grade=null`;
 - unit metadata: `様々な物理現象とエネルギーの利用：音と振動`;
-- skill metadata: `string-fundamental-vibration`.
+- skill metadata: `beat-frequency`.
 
 ## Current authoritative published coverage
 
 - junior-high grade 1 physics: 48 worksheets;
 - junior-high grade 2 physics: 120 worksheets;
 - junior-high grade 3 physics: 120 worksheets;
-- `物理基礎`: **600 worksheets**;
-- total published physics: **888 worksheets**.
+- `物理基礎`: **630 worksheets**;
+- total published physics: **918 worksheets**.
 
 `物理基礎` unit counts:
 
@@ -48,19 +45,19 @@ Updated: 2026-08-27
 - `物体の運動とエネルギー：力学的エネルギー`: 170;
 - `様々な物理現象とエネルギーの利用：熱`: 60;
 - `様々な物理現象とエネルギーの利用：波`: 30;
-- `様々な物理現象とエネルギーの利用：音と振動`: 120.
+- `様々な物理現象とエネルギーの利用：音と振動`: 150.
 
 ## Exact next starting point
 
-Continue Phase 3 at **`物理基礎：音と振動 / remaining sound properties and retrieval`**.
+Continue Phase 3 at **`物理基礎：音と振動 / resonance and remaining sound-property retrieval`**.
 
 1. Start from latest `main` and repeat the required science/shared control-document read sequence.
 2. Preserve parallel repository progress and reconcile rather than overwriting a newer `main`.
-3. Stay inside `音と振動`; do not advance to electricity until the remaining basic sound-property coverage is complete.
-4. Reconfirm current MEXT handling of resonance/resonance phenomena and beats before encoding finite-answer retrieval facts.
-5. Prefer mechanically checkable retrieval families (`forward`, `reverse`, `fill`, `true/false`) using a small authoritative fact registry; avoid vague prose questions or ambiguous terminology.
-6. Reuse the shared retrieval generator/validator where possible; add no new relation or renderer unless necessary.
-7. Target a coherent 30–60 worksheet checkpoint with deterministic generation, independent accepted-answer validation, normalized-hash uniqueness, and disjointness from existing sound/string/wave batches.
+3. Stay inside `音と振動`; do not advance to electricity until remaining basic sound-property coverage is complete.
+4. Use the already-shared finite-answer retrieval engine (`generate_retrieval_drill`) rather than inventing a new renderer/generator unless necessary.
+5. Build a small authoritative fact registry for `共振`, `共鳴`, and any remaining sound properties. Prefer only facts whose forward/reverse/fill/true-false answers are unambiguous and grade-appropriate.
+6. Because retrieval answers use `accepted-set` rather than the current Physics Basics publisher's numeric-only metadata path, update the publisher so each topic selects its generator/answer type explicitly; do not globally relabel existing numeric worksheets.
+7. Add independent accepted-answer recomputation tests, deterministic seed checks, normalized-hash uniqueness, and collision checks against all prior sound/wave/string/beats batches.
 8. Publish only after shared/topic tests, PDF generation, catalog validation, PDF header/size/two-page checks, and latest-main safe push succeed.
 9. Once sound retrieval is complete, advance in curriculum order to `物理基礎：電気`.
 10. Representative screenshot-based visual QA remains pending; retry only when an actual generated PDF can be fetched and rendered.
