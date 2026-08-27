@@ -116,10 +116,13 @@ public struct AssetCatalog: Sendable {
             )
         }
 
+        // Keep the semantic record and provenance fixed while the exact Stage 5
+        // image bytes are still unbundled. CharacterView will render its safe
+        // system-image fallback instead of requesting a missing SwiftPM resource.
         let finalID = traineeID(stage: 5)
         values[finalID] = AssetRecord(
             semanticID: finalID,
-            resourceName: "irasutoya_trainee_bodybuilder",
+            resourceName: nil,
             sourceTitle: "ボディービルダーのイラスト",
             sourceURL: "https://www.irasutoya.com/2014/06/blog-post_14.html"
         )
