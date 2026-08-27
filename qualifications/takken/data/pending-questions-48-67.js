@@ -389,80 +389,80 @@
       proposedAnswerIndex: 1,
       explanation: "法務局の案内では、権利部の甲区には所有権に関する事項、乙区には抵当権など所有権以外の権利に関する事項が記録される。",
       sourceIds: ["moj-real-estate-registration-faq"],
-      validationStatus: "pending_validation",
-      validationMeta: { checkedAt: null, result: null }
+      validationStatus: "verified",
+      validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-61-001", unitId: "city-planning-area", unitOrder: 61, factIds: ["u61-f1"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "都市計画区域について正しいものはどれか。",
       choices: ["国土全域が自動的に都市計画区域となる", "市町村だけが指定できる", "都道府県は、一体の都市として総合的に整備・開発・保全する必要がある区域を都市計画区域として指定できる", "都市計画区域は農地だけを対象とする"],
-      proposedAnswerIndex: 2, explanation: "都市計画法5条により、都道府県は一体の都市として総合的に整備し、開発し、保全する必要がある区域を都市計画区域として指定できる。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      proposedAnswerIndex: 2, explanation: "都市計画法5条により、都道府県は一体の都市として総合的に整備し、開発し、保全する必要がある区域を都市計画区域として指定できる。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-61-002", unitId: "city-planning-area", unitOrder: 61, factIds: ["u61-f2"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "準都市計画区域について正しいものはどれか。",
       choices: ["都市計画区域内にしか指定できない", "市街化区域と同じ意味である", "必ず国土交通大臣が全国一律に指定する", "都市計画区域外でも、土地利用の整序または環境保全のため必要な区域に指定されることがある"],
-      proposedAnswerIndex: 3, explanation: "都市計画法5条の2により、都市計画区域外でも土地利用の整序または環境保全のため必要な区域を準都市計画区域として指定できる。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      proposedAnswerIndex: 3, explanation: "都市計画法5条の2により、都市計画区域外でも土地利用の整序または環境保全のため必要な区域を準都市計画区域として指定できる。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-62-001", unitId: "area-division", unitOrder: 62, factIds: ["u62-f1"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "都市計画法上の区域区分について正しいものはどれか。", choices: ["都市計画区域を市街化区域と市街化調整区域に区分する仕組みである", "用途地域を住居専用地域だけにする仕組みである", "農地を宅地へ自動転用する仕組みである", "都道府県を市町村に分ける仕組みである"], proposedAnswerIndex: 0,
-      explanation: "都市計画法7条は、区域区分として都市計画区域を市街化区域と市街化調整区域に区分することを定める。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "都市計画法7条は、区域区分として都市計画区域を市街化区域と市街化調整区域に区分することを定める。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-62-002", unitId: "area-division", unitOrder: 62, factIds: ["u62-f2"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "市街化区域と市街化調整区域の説明として正しいものはどれか。", choices: ["市街化調整区域は優先的に市街化を図る区域である", "市街化区域は既成市街地とおおむね10年以内に優先的・計画的に市街化を図る区域で、市街化調整区域は市街化を抑制すべき区域である", "市街化区域は市街化を禁止する区域である", "両区域の意味に差はない"], proposedAnswerIndex: 1,
-      explanation: "都市計画法7条により、市街化区域は既成市街地およびおおむね10年以内に優先的・計画的に市街化を図る区域、市街化調整区域は市街化を抑制すべき区域である。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "都市計画法7条により、市街化区域は既成市街地およびおおむね10年以内に優先的・計画的に市街化を図る区域、市街化調整区域は市街化を抑制すべき区域である。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-63-001", unitId: "use-districts", unitOrder: 63, factIds: ["u63-f1"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "用途地域の都市計画法上の位置付けとして正しいものはどれか。", choices: ["都市施設の一種である", "市街地開発事業だけを指す", "地域地区の一つである", "区域区分そのものである"], proposedAnswerIndex: 2,
-      explanation: "都市計画法8条は、用途地域を地域地区の一つとして位置付けている。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "都市計画法8条は、用途地域を地域地区の一つとして位置付けている。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-63-002", unitId: "use-districts", unitOrder: 63, factIds: ["u63-f2"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "用途地域ごとの建築物の用途制限について正しいものはどれか。", choices: ["民法だけで定められる", "農地法だけで定められる", "地方税法だけで定められる", "建築基準法48条により用途地域ごとに建築できる建築物の用途が制限される"], proposedAnswerIndex: 3,
-      explanation: "用途地域が定められた区域では、建築基準法48条により用途地域ごとに建築できる建築物の用途が制限される。", sourceIds: ["egov-building-standards-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "用途地域が定められた区域では、建築基準法48条により用途地域ごとに建築できる建築物の用途が制限される。", sourceIds: ["egov-building-standards-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-64-001", unitId: "city-planning-decisions", unitOrder: 64, factIds: ["u64-f1"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "都市計画を定める主体について正しいものはどれか。", choices: ["広域的・根幹的な都市計画を都道府県が、その他を市町村が定めるという基本的な役割分担がある", "すべて国土交通大臣だけが定める", "すべて市町村長だけが定める", "民間事業者だけが定める"], proposedAnswerIndex: 0,
-      explanation: "都市計画法15条は、広域的・根幹的な都市計画を都道府県が、その他を市町村が定める基本的な役割分担を定める。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "都市計画法15条は、広域的・根幹的な都市計画を都道府県が、その他を市町村が定める基本的な役割分担を定める。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-64-002", unitId: "city-planning-decisions", unitOrder: 64, factIds: ["u64-f2"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "都市計画事業の施行について正しいものはどれか。", choices: ["都市計画決定があれば認可等は一切不要である", "施行者に応じて国土交通大臣または都道府県知事の認可・承認を受けて施行される", "必ず市町村議会の全会一致だけで施行される", "民間事業者は一切施行できない"], proposedAnswerIndex: 1,
-      explanation: "都市計画法59条により、都市計画事業は施行者に応じて国土交通大臣または都道府県知事の認可・承認を受けて施行される。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "都市計画法59条により、都市計画事業は施行者に応じて国土交通大臣または都道府県知事の認可・承認を受けて施行される。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-65-001", unitId: "development-permission-required", unitOrder: 65, factIds: ["u65-f1"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "都市計画区域または準都市計画区域内で一定の開発行為をしようとする場合について正しいものはどれか。", choices: ["常に許可不要である", "市町村長への事後届出だけで足りる", "原則として都道府県知事等の許可が必要である", "法務局の登記だけで足りる"], proposedAnswerIndex: 2,
-      explanation: "都市計画法29条により、都市計画区域または準都市計画区域内で開発行為をしようとする者は、原則として都道府県知事等の許可を受ける必要がある。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "都市計画法29条により、都市計画区域または準都市計画区域内で開発行為をしようとする者は、原則として都道府県知事等の許可を受ける必要がある。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-65-002", unitId: "development-permission-required", unitOrder: 65, factIds: ["u65-f2"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "都市計画法上の開発許可について正しいものはどれか。", choices: ["例外なく全ての開発行為に必要である", "住宅建築にだけ必要である", "区域に関係なく全国一律に同じ扱いである", "公益上必要な建築物に係る開発行為など、法律上の許可不要例外がある"], proposedAnswerIndex: 3,
-      explanation: "都市計画法29条は、公益上必要な建築物に係る開発行為など、開発許可が不要となる例外も定めている。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "都市計画法29条は、公益上必要な建築物に係る開発行為など、開発許可が不要となる例外も定めている。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-66-001", unitId: "development-permission-procedure", unitOrder: 66, factIds: ["u66-f1"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "開発許可を受けた工事が完了した場合の手続として正しいものはどれか。", choices: ["許可を受けた者が都道府県知事等へ工事完了を届け出る", "何の手続も不要である", "法務局へ所有権移転登記だけを申請する", "国税庁へ完成申告をする"], proposedAnswerIndex: 0,
-      explanation: "都市計画法36条により、開発許可を受けた工事が完了したときは、許可を受けた者が都道府県知事等へ届け出る。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "都市計画法36条により、開発許可を受けた工事が完了したときは、許可を受けた者が都道府県知事等へ届け出る。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-66-002", unitId: "development-permission-procedure", unitOrder: 66, factIds: ["u66-f2"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "開発工事の完了届後の流れとして正しいものはどれか。", choices: ["届出だけで直ちに自由使用となり検査はない", "都道府県知事等が許可内容への適合を検査し、適合していれば検査済証を交付して工事完了を公告する", "裁判所が検査済証を交付する", "国税庁が完了公告をする"], proposedAnswerIndex: 1,
-      explanation: "都市計画法36条により、都道府県知事等は工事を検査し、適合していれば検査済証を交付し、工事完了を公告する。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "都市計画法36条により、都道府県知事等は工事を検査し、適合していれば検査済証を交付し、工事完了を公告する。", sourceIds: ["egov-city-planning-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-67-001", unitId: "building-confirmation", unitOrder: 67, factIds: ["u67-f1"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "建築基準法上の建築確認について正しいものはどれか。", choices: ["工事完了後だけに行う", "全ての工作物について例外なく必要である", "一定の建築物の建築等では、工事着手前に確認申請が必要となる", "確認は税務署へ申請する"], proposedAnswerIndex: 2,
-      explanation: "建築基準法6条は、一定の建築物の建築等をしようとする建築主に、工事着手前の確認申請を求めている。", sourceIds: ["egov-building-standards-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "建築基準法6条は、一定の建築物の建築等をしようとする建築主に、工事着手前の確認申請を求めている。", sourceIds: ["egov-building-standards-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     },
     {
       id: "takken-q-67-002", unitId: "building-confirmation", unitOrder: 67, factIds: ["u67-f2"], examYear: 2026, lawAsOf: "2026-04-01",
       stem: "建築確認を行う者と確認済証について正しいものはどれか。", choices: ["税務署長が確認し納税証明書を交付する", "市町村議会が確認し議決書を交付する", "法務局が確認し登記識別情報を交付する", "建築主事または指定確認検査機関が確認し、適合が確認されると確認済証が交付される"], proposedAnswerIndex: 3,
-      explanation: "建築確認は建築主事または指定確認検査機関が行い、適合が確認されると確認済証が交付される。", sourceIds: ["egov-building-standards-act-20260401"], validationStatus: "pending_validation", validationMeta: { checkedAt: null, result: null }
+      explanation: "建築確認は建築主事または指定確認検査機関が行い、適合が確認されると確認済証が交付される。", sourceIds: ["egov-building-standards-act-20260401"], validationStatus: "verified", validationMeta: { checkedAt: "2026-08-28T00:28:00+09:00", result: "verified" }
     }
   ];
 
