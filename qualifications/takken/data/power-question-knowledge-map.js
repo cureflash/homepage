@@ -25,6 +25,15 @@
       conceptId: "takken-concept-license-required",
       knowledgeRefs: ["takken-k-license-required-general"],
       sourceQuestionValidationStatus: "verified"
+    },
+    {
+      questionId: "takken-q-03-001",
+      conceptId: "takken-concept-license-authority",
+      knowledgeRefs: [
+        "takken-k-license-authority-minister-multiple-prefectures",
+        "takken-k-license-authority-governor-single-prefecture"
+      ],
+      sourceQuestionValidationStatus: "verified"
     }
   ];
 
@@ -32,11 +41,14 @@
     "takken-k-business-definition-self-sale-exchange",
     "takken-k-business-definition-agency-brokerage",
     "takken-k-business-definition-self-lease-exclusion",
-    "takken-k-license-required-general"
+    "takken-k-license-required-general",
+    "takken-k-license-authority-minister-multiple-prefectures",
+    "takken-k-license-authority-governor-single-prefecture"
   ]);
   const allowedConceptIds = new Set([
     "takken-concept-business-definition",
-    "takken-concept-license-required"
+    "takken-concept-license-required",
+    "takken-concept-license-authority"
   ]);
   const questionIds = new Set();
 
@@ -52,12 +64,12 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 3) throw new Error(`Expected 3 mapped questions through license-required, got ${mappings.length}`);
+  if (mappings.length !== 4) throw new Error(`Expected 4 mapped questions through license-authority, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) {
     if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Knowledge coverage is incomplete: ${knowledgeId}`);
   }
-  if (!questionIds.has("takken-q-02-001")) throw new Error("License-required source question mapping is missing");
+  if (!questionIds.has("takken-q-03-001")) throw new Error("License-authority source question mapping is missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
