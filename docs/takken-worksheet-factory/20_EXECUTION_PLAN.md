@@ -85,10 +85,11 @@ Phase 4.2 checkpoints:
 - [x] `takken-concept-takkenshi-registration`: 4 verified items covering the separate exam/registration/card stages, registration with the governor of the prefecture where the exam was passed, the two-year recent practical-experience/equivalent requirement, and the distinction between registration needed for practice and preservation of exam-pass validity. `takken-q-08-001` maps only to the separate-stages item; the other three remain explicit Phase 4.3 deficits.
 - [x] `takken-concept-takkenshi-card`: 5 verified items covering registration plus card issuance for practice, five-year validity, statutory training and the one-year post-exam exemption, mandatory presentation during Article 35 important-matters explanation, and presentation on request by transaction parties. Existing `takken-q-09-001` does not directly test these detailed card rules, so all five remain explicit Phase 4.3 deficits.
 - [x] `takken-concept-exclusive-takkenshi`: 4 verified items covering the office one-fifth staffing ratio, adult/exclusive status, the meaning of exclusivity, and the two-week cure period when an existing office等 falls below the statutory standard. `takken-q-10-001` maps only to the office one-fifth ratio; the other three remain explicit Phase 4.3 deficits.
+- [x] `takken-concept-takkenshi-exclusive-duties`: 3 verified items covering Article 35 important-matters explanation by a宅地建物取引士, Article 35 document naming, and Article 37 document naming. `takken-q-11-001` directly tests all three and maps to all three; no new Phase 4.3 deficit is introduced. Current wording uses `記名` without the obsolete押印 requirement.
 
-Current Phase 4.2 totals: **12/113 modeled concepts, 50 verified knowledge items, 11 existing verified questions mapped, 34 explicit question-coverage gaps**.
+Current Phase 4.2 totals: **13/113 modeled concepts, 53 verified knowledge items, 12 existing verified questions mapped, 34 explicit question-coverage gaps**.
 
-**Exact continuation:** `takken-concept-takkenshi-exclusive-duties`, source unit `takken-shi-exclusive-duties`. Preserve all thirty-four explicit deficits and map existing questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
+**Exact continuation:** `takken-concept-business-guarantee-deposit`, source unit `business-guarantee-deposit`. Preserve all thirty-four explicit deficits and map existing questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
