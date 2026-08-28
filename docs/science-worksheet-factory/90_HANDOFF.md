@@ -10,8 +10,8 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 1380 PDFs
-- total published physics: 2538 PDFs
+- formal `物理`: 1500 PDFs
+- total published physics: 2658 PDFs
 
 Formal `物理` currently has:
 
@@ -20,72 +20,87 @@ Formal `物理` currently has:
 - `様々な運動：運動量と力積`: 250 PDFs
 - `様々な運動：円運動と単振動`: 380 PDFs
 - `様々な運動：万有引力`: 180 PDFs
-- `様々な運動：気体分子の運動`: 40 PDFs
+- `様々な運動：気体分子の運動`: 160 PDFs
 
-All 1380 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=1060` and `accepted-set=320`. Worksheet modes are `calculation-basic=390`, `calculation-reverse=670`, and 80 each of retrieval forward/reverse/fill/true-false. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
+All 1500 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=1180` and `accepted-set=320`. Worksheet modes are `calculation-basic=420`, `calculation-reverse=760`, and 80 each of retrieval forward/reverse/fill/true-false. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
 
-## Completed this run — gravitational potential energy and gas-molecular-motion entry, 110 PDFs
+## Completed this run — ideal-gas numerical relations, 120 PDFs
 
-This run completed three consecutive safe checkpoints. A fourth checkpoint was not added because the next work changes from finite-answer gas concepts to quantitative ideal-gas state relations, which requires an explicit unit/domain/rounding contract for pressure, volume, amount of substance, gas constant and absolute temperature.
+This run completed three consecutive safe checkpoints and reached the requested approximate 120-PDF ceiling. A fourth checkpoint was not added because the next work moves from state-equation algebra to molecular kinetic energy and introduces the Boltzmann constant, scientific notation, and a new answer-rounding contract.
 
-### 1. Gravitational potential energy numeric relation — 30 PDFs
+### 1. Ideal-gas state equation `pV=nRT` — 40 PDFs
 
-- skill: `gravitational-potential-energy`
-- learner-visible relation: `U = -GMm/r = (-G)mM(1/r)`
-- zero reference: `U(∞)=0`
-- learner-visible school constant: `G = 6.67×10^-11 N·m²/kg²`
-- the signed coefficient `-G` and positive reciprocal distance `1/r (r>0)` are explicit worksheet quantities; neither the negative sign nor reciprocal-distance dependence is hidden in generator state
-- 10 direct-U worksheets, 10 unknown-mass reverse worksheets, 10 reciprocal-distance reverse worksheets
-- 10 deterministic seeds per mode, 20 problems per worksheet
-- existing shared reversible `product` relation reused; no shared formula relation was added or changed
-- independent tests require direct U to be negative and reconstructed mass / `1/r` to be positive from learner-visible values
+- skill: `ideal-gas-state-equation-numeric`
+- 10 direct-pressure worksheets
+- 10 reverse-amount worksheets
+- 10 reverse-absolute-temperature worksheets
+- 10 reverse-volume worksheets
+- 20 problems per worksheet
+- learner-visible units: `p` in kPa, `V` in L, `n` in mol, `T` in K
+- learner-visible school-calculation constant: `R = 8.31 kPa·L/(mol·K)`
+- all physical quantities are positive; Celsius is not mixed into this family
+- value domains were chosen so generated answers remain readable finite values and no hidden pre-rounded value is required
 
-The current NIST/CODATA 2022 recommended value is `G = 6.67430(15)×10^-11 m³ kg^-1 s^-2`; the worksheet value `6.67×10^-11 N·m²/kg²` remains an explicit deterministic school-level approximation.
+The current NIST/CODATA 2022 value of the molar gas constant is `8.314462618... J mol^-1 K^-1` exactly. Because `1 kPa·L = 1 J`, the worksheet value `8.31 kPa·L/(mol·K)` is an explicit school-level approximation in a numerically convenient consistent unit system.
 
-### 2. Gravitational potential energy concepts — 40 PDFs
+### 2. Boyle's law — 40 PDFs
 
-- skill: `gravitational-potential-energy-concepts`
-- `forward / reverse / fill / true-false × 10 seeds`
-- covers zero reference at infinite separation, negative U at finite positive r, `U=-GMm/r`, more-negative U on approach, U→0 at infinity, and magnitude `GMm/r`
-- reverse retrieval source phrases are required to be unique
+- skill: `boyle-law-numeric`
+- learner-visible relation: `p₁V₁ = p₂V₂`
+- same amount of gas and constant absolute temperature are explicit conditions
+- 10 direct `p₂` worksheets and 10 each for reverse `p₁`, `V₁`, and `V₂`
+- all pressures and volumes are positive and expressed in kPa / L
 
-### 3. Gas molecular motion core concepts — 40 PDFs
+### 3. Charles's law — 40 PDFs
 
-- skill: `gas-molecular-motion-core-concepts`
-- `forward / reverse / fill / true-false × 10 seeds`
-- covers molecular collisions with container walls as the microscopic origin of pressure, ideal-gas state equation `pV=nRT`, Boyle's law, Charles's law, mean molecular kinetic energy proportional to absolute temperature, and ideal-gas internal energy proportional to absolute temperature
-- reverse retrieval source phrases are required to be unique
+- skill: `charles-law-numeric`
+- learner-visible relation: `V₁/T₁ = V₂/T₂`
+- same amount of gas and constant pressure are explicit conditions
+- 10 direct `V₂` worksheets and 10 each for reverse `V₁`, `T₂`, and `T₁`
+- temperatures are absolute temperatures in K only; all values are positive
+
+## Shared generator change
+
+A shared reversible formula relation `product-over-divisor` was added:
+
+`result = product(numerator factors) / divisor`
+
+It supports direct calculation, inversion of any numerator factor, and inversion of the divisor. Invalid arity, duplicate input names, zero divisors, and zero denominators needed for inversion are rejected. A dedicated independent regression test covers the direct result and every reverse direction. Existing shared relations remain unchanged.
+
+The three new gas families all use this same relation transparently:
+
+- `p = nRT/V`
+- `p₂ = p₁V₁/V₂`
+- `V₂ = V₁T₂/T₁`
 
 ## Validation and publication
 
-- implementation PR #228 merged as `0d674710e2a56899f2f8036884349ef8e62d9bac`
-- production Actions run `33174310948` completed successfully
-- every production workflow step succeeded: latest-main confirmation, all shared/formal-Physics regressions, 110-PDF generation, post-generation validation, catalog/PDF validation, commit, and non-force safe push
-- publication commit: `77febf9c0526356eac669df11f0fd674c7003293` (`Publish 110 formal Physics gravitation-energy and gas worksheets`)
-- final workflow contract requires 1380 formal-Physics rows and 1380 unique hashes
-- answer-type contract: `numeric=1060`, `accepted-set=320`
-- unit contract: projectile 330, rigid body 200, momentum/impulse 250, circular motion/SHM 380, gravitation 180, gas molecular motion 40
-- new tests cover 110 deterministic worksheet variants and require 110/110 normalized-hash uniqueness plus disjointness from the pre-existing catalog
-- numeric tests independently recompute direct U, reverse mass and reverse `1/r` answers from learner-visible values and reject corrupted answers
-- retrieval tests independently validate accepted answers, require unambiguous reverse mappings, and reject corrupted answers
+- implementation PR #233 merged as `07e612e4580be18e6780cf64572443872c97373e`
+- production Actions run `33179207777` completed successfully
+- every production workflow step succeeded: latest-main confirmation, all shared/formal-Physics regressions, 120-PDF generation, post-generation validation, catalog/PDF validation, commit, and non-force safe push
+- publication commit: `d59250cc3ca07ab6ff9fdfac5bb5fcaa11efe0da` (`Publish 120 formal Physics ideal-gas worksheets`)
+- final workflow contract requires 1500 formal-Physics rows and 1500 unique hashes
+- answer-type contract: `numeric=1180`, `accepted-set=320`
+- unit contract: projectile 330, rigid body 200, momentum/impulse 250, circular motion/SHM 380, gravitation 180, gas molecular motion 160
+- mode contract: calculation-basic 420, calculation-reverse 760, retrieval forward/reverse/fill/true-false 80 each
+- new topic tests cover 120 deterministic worksheet variants and require 120/120 normalized-hash uniqueness plus disjointness from the pre-existing catalog
+- numeric tests independently recompute every direct/reverse answer from learner-visible values, require positive physical values, and reject corrupted answers
 - repository publication safety remains non-force latest-main push with formal-Physics concurrency group `worksheet-catalog-publish-v2`
-
-A pre-merge branch-triggered run (`33174209750`) failed before generation because this publisher intentionally checks out latest `main`; at that moment `main` did not yet contain the newly referenced test file. This was not a production-content failure. The post-merge main run above executed the actual merged implementation and passed every step.
 
 ## Curriculum basis checked this run
 
-The current MEXT high-school Course of Study commentary was rechecked. Formal `物理` explicitly includes gravitational potential energy in the universal-gravitation section. The following gas-molecular-motion section includes gas molecular motion and pressure, ideal-gas laws including Boyle/Charles and the state equation, molecular speed and mean kinetic energy in relation to pressure and absolute temperature, ideal-gas internal energy, and then gas state changes with the first law of thermodynamics.
+The current MEXT high-school Course of Study commentary was rechecked. In formal `物理`, the gas-molecular-motion section explicitly includes gas molecular motion and pressure, the ideal-gas laws including Boyle/Charles and the ideal-gas state equation, molecular speed and mean kinetic energy in relation to pressure and absolute temperature, ideal-gas internal energy, and then gas state changes with the first law of thermodynamics.
 
-NIST's current fundamental-constants database continues to identify the 2022 CODATA adjustment as the latest available set and gives the Newtonian constant of gravitation as `6.67430(15)×10^-11 m³ kg^-1 s^-2`.
+NIST's current fundamental-constants database identifies the 2022 CODATA set as the latest available adjustment and gives the molar gas constant as `8.314462618... J mol^-1 K^-1` exactly.
 
 ## Exact next starting point
 
-Continue formal course **`物理：様々な運動 / 気体分子の運動 / 理想気体の状態方程式の数値計算`**.
+Continue formal course **`物理：様々な運動 / 気体分子の運動 / 気体分子1個あたりの平均運動エネルギー`**.
 
 1. Start from latest `main` and re-read the science factory instructions, execution plan, STATUS and this HANDOFF; reconcile parallel progress first.
-2. Keep the current MEXT gas-molecular-motion sequence: pressure/state equation first, then molecular kinetic-energy/internal-energy relations, then state change / first-law content.
-3. Before a numeric `pV=nRT` family, make units and positive domains for `p`, `V`, `n`, `R`, and absolute temperature `T` learner-visible and fix a deterministic rounding policy. Do not mix Celsius with absolute temperature unless an explicit conversion checkpoint is separately defined.
-4. Prefer direct calculation and only uniquely reconstructible reverse directions. Never depend on hidden pre-rounded values.
-5. Reuse existing formula relations when physically transparent. If a new shared relation is required, add dedicated independent regression tests and prove existing outputs remain valid.
+2. Preserve the current MEXT order: molecular speed / mean kinetic energy and absolute temperature next, then ideal-gas internal energy, then gas state changes / first law.
+3. Before a numerical mean-kinetic-energy family such as `K̄ = (3/2)k_B T`, make the Boltzmann constant, scientific-notation representation, units, positive absolute-temperature domain, and deterministic answer-rounding/tolerance policy learner-visible. Do not introduce a hidden rounded constant or hidden pre-rounded answer.
+4. Prefer direct calculation first; add reverse temperature only if the displayed answer/known-value representation makes the inversion uniquely reconstructible.
+5. Reuse existing formula relations only when physically transparent. A new shared relation requires dedicated independent regression tests and full formal-Physics/Physics-Basics regressions.
 6. Preserve deterministic seeds, independent recomputation from learner-visible values, corrupted-answer rejection, reverse-retrieval uniqueness, normalized-hash uniqueness and existing-catalog collision checks, `formal_course=物理`, `grade=null`, 20-problem two-page PDFs, mixed numeric/accepted-set publisher validation, `worksheet-catalog-publish-v2`, and non-force latest-main push safety.
-7. Representative screenshot-based visual QA remains pending; structural PDF QA is not a substitute for visual QA.
+7. Representative screenshot-based visual QA remains pending. Raw representative PDF retrieval again returned cache miss in this run; structural PDF QA passed but is not a substitute for visual QA.
