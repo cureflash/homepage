@@ -5,46 +5,17 @@ import tempfile
 from pathlib import Path
 
 try:
-    from scripts.science_physics_projectile import (
-        PHYSICS_PROJECTILE_PROBLEM_COUNT,
-        PHYSICS_PROJECTILE_TOPICS,
-    )
-    from scripts.science_physics_rigid_body import (
-        PHYSICS_RIGID_BODY_PROBLEM_COUNT,
-        PHYSICS_RIGID_BODY_TOPICS,
-    )
-    from scripts.science_physics_momentum import (
-        PHYSICS_MOMENTUM_PROBLEM_COUNT,
-        PHYSICS_MOMENTUM_TOPICS,
-    )
-    from scripts.science_physics_circular_motion import (
-        PHYSICS_CIRCULAR_MOTION_PROBLEM_COUNT,
-        PHYSICS_CIRCULAR_MOTION_TOPICS,
-    )
-    from scripts.science_physics_circular_period import (
-        PHYSICS_CIRCULAR_PERIOD_PROBLEM_COUNT,
-        PHYSICS_CIRCULAR_PERIOD_TOPICS,
-    )
-    from scripts.science_physics_centrifugal_shm import (
-        PHYSICS_CENTRIFUGAL_SHM_PROBLEM_COUNT,
-        PHYSICS_CENTRIFUGAL_SHM_TOPICS,
-    )
-    from scripts.science_physics_shm_periods import (
-        PHYSICS_SHM_PERIODS_PROBLEM_COUNT,
-        PHYSICS_SHM_PERIODS_TOPICS,
-    )
-    from scripts.science_physics_gravitation import (
-        PHYSICS_GRAVITATION_PROBLEM_COUNT,
-        PHYSICS_GRAVITATION_TOPICS,
-    )
-    from scripts.science_physics_gravitation_energy_gas import (
-        PHYSICS_GRAV_ENERGY_GAS_PROBLEM_COUNT,
-        PHYSICS_GRAV_ENERGY_GAS_TOPICS,
-    )
-    from scripts.science_physics_ideal_gas import (
-        PHYSICS_IDEAL_GAS_PROBLEM_COUNT,
-        PHYSICS_IDEAL_GAS_TOPICS,
-    )
+    from scripts.science_physics_projectile import PHYSICS_PROJECTILE_PROBLEM_COUNT, PHYSICS_PROJECTILE_TOPICS
+    from scripts.science_physics_rigid_body import PHYSICS_RIGID_BODY_PROBLEM_COUNT, PHYSICS_RIGID_BODY_TOPICS
+    from scripts.science_physics_momentum import PHYSICS_MOMENTUM_PROBLEM_COUNT, PHYSICS_MOMENTUM_TOPICS
+    from scripts.science_physics_circular_motion import PHYSICS_CIRCULAR_MOTION_PROBLEM_COUNT, PHYSICS_CIRCULAR_MOTION_TOPICS
+    from scripts.science_physics_circular_period import PHYSICS_CIRCULAR_PERIOD_PROBLEM_COUNT, PHYSICS_CIRCULAR_PERIOD_TOPICS
+    from scripts.science_physics_centrifugal_shm import PHYSICS_CENTRIFUGAL_SHM_PROBLEM_COUNT, PHYSICS_CENTRIFUGAL_SHM_TOPICS
+    from scripts.science_physics_shm_periods import PHYSICS_SHM_PERIODS_PROBLEM_COUNT, PHYSICS_SHM_PERIODS_TOPICS
+    from scripts.science_physics_gravitation import PHYSICS_GRAVITATION_PROBLEM_COUNT, PHYSICS_GRAVITATION_TOPICS
+    from scripts.science_physics_gravitation_energy_gas import PHYSICS_GRAV_ENERGY_GAS_PROBLEM_COUNT, PHYSICS_GRAV_ENERGY_GAS_TOPICS
+    from scripts.science_physics_ideal_gas import PHYSICS_IDEAL_GAS_PROBLEM_COUNT, PHYSICS_IDEAL_GAS_TOPICS
+    from scripts.science_physics_thermal_gas import PHYSICS_THERMAL_GAS_PROBLEM_COUNT, PHYSICS_THERMAL_GAS_TOPICS
     from scripts.science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
@@ -58,6 +29,7 @@ except ModuleNotFoundError:
     from science_physics_gravitation import PHYSICS_GRAVITATION_PROBLEM_COUNT, PHYSICS_GRAVITATION_TOPICS
     from science_physics_gravitation_energy_gas import PHYSICS_GRAV_ENERGY_GAS_PROBLEM_COUNT, PHYSICS_GRAV_ENERGY_GAS_TOPICS
     from science_physics_ideal_gas import PHYSICS_IDEAL_GAS_PROBLEM_COUNT, PHYSICS_IDEAL_GAS_TOPICS
+    from science_physics_thermal_gas import PHYSICS_THERMAL_GAS_PROBLEM_COUNT, PHYSICS_THERMAL_GAS_TOPICS
     from science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 
@@ -75,6 +47,7 @@ ALL_TOPICS = {
     **{key: (topic, PHYSICS_GRAVITATION_PROBLEM_COUNT) for key, topic in PHYSICS_GRAVITATION_TOPICS.items()},
     **{key: (topic, PHYSICS_GRAV_ENERGY_GAS_PROBLEM_COUNT) for key, topic in PHYSICS_GRAV_ENERGY_GAS_TOPICS.items()},
     **{key: (topic, PHYSICS_IDEAL_GAS_PROBLEM_COUNT) for key, topic in PHYSICS_IDEAL_GAS_TOPICS.items()},
+    **{key: (topic, PHYSICS_THERMAL_GAS_PROBLEM_COUNT) for key, topic in PHYSICS_THERMAL_GAS_TOPICS.items()},
 }
 
 
@@ -85,12 +58,7 @@ def _generate_topic_problems(topic, mode_key, mode, seed, problem_count):
     if generator != "formula":
         raise ValueError(f"unsupported formal Physics generator: {generator}")
     return (
-        generate_formula_drill(
-            topic["spec"],
-            seed,
-            problem_count,
-            solve_for=mode["solve_for"],
-        ),
+        generate_formula_drill(topic["spec"], seed, problem_count, solve_for=mode["solve_for"]),
         "numeric",
     )
 
@@ -183,10 +151,7 @@ def publish(repo_root):
             shutil.move(str(tmpdir / item["filename"]), destination)
 
     validate_catalog(prospective_catalog, root)
-    catalog_path.write_text(
-        json.dumps(prospective_catalog, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    catalog_path.write_text(json.dumps(prospective_catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"published {len(pending)} formal Physics worksheets")
     return len(pending)
 
