@@ -1,0 +1,34 @@
+name: Apply SHM numeric period patch
+
+on:
+  push:
+    branches:
+      - science-physics-shm-numeric-periods-20260828
+    paths:
+      - 'scripts/_apply_science_shm_numeric_period_patch.py'
+      - '.github/workflows/_apply-science-shm-numeric-period-patch.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: science-physics-shm-numeric-periods-20260828
+          fetch-depth: 0
+      - name: Apply targeted patch
+        run: python scripts/_apply_science_shm_numeric_period_patch.py
+      - name: Remove temporary patch scaffolding
+        run: |
+          rm scripts/_apply_science_shm_numeric_period_patch.py
+          rm .github/workflows/_apply-science-shm-numeric-period-patch.yml
+      - name: Commit patched implementation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Add direct numeric pendulum period checkpoints'
+          git push origin HEAD:science-physics-shm-numeric-periods-20260828
