@@ -33,6 +33,10 @@ try:
         PHYSICS_SHM_PERIODS_PROBLEM_COUNT,
         PHYSICS_SHM_PERIODS_TOPICS,
     )
+    from scripts.science_physics_gravitation import (
+        PHYSICS_GRAVITATION_PROBLEM_COUNT,
+        PHYSICS_GRAVITATION_TOPICS,
+    )
     from scripts.science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
@@ -43,6 +47,7 @@ except ModuleNotFoundError:
     from science_physics_circular_period import PHYSICS_CIRCULAR_PERIOD_PROBLEM_COUNT, PHYSICS_CIRCULAR_PERIOD_TOPICS
     from science_physics_centrifugal_shm import PHYSICS_CENTRIFUGAL_SHM_PROBLEM_COUNT, PHYSICS_CENTRIFUGAL_SHM_TOPICS
     from science_physics_shm_periods import PHYSICS_SHM_PERIODS_PROBLEM_COUNT, PHYSICS_SHM_PERIODS_TOPICS
+    from science_physics_gravitation import PHYSICS_GRAVITATION_PROBLEM_COUNT, PHYSICS_GRAVITATION_TOPICS
     from science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 
@@ -57,6 +62,7 @@ ALL_TOPICS = {
     **{key: (topic, PHYSICS_CIRCULAR_PERIOD_PROBLEM_COUNT) for key, topic in PHYSICS_CIRCULAR_PERIOD_TOPICS.items()},
     **{key: (topic, PHYSICS_CENTRIFUGAL_SHM_PROBLEM_COUNT) for key, topic in PHYSICS_CENTRIFUGAL_SHM_TOPICS.items()},
     **{key: (topic, PHYSICS_SHM_PERIODS_PROBLEM_COUNT) for key, topic in PHYSICS_SHM_PERIODS_TOPICS.items()},
+    **{key: (topic, PHYSICS_GRAVITATION_PROBLEM_COUNT) for key, topic in PHYSICS_GRAVITATION_TOPICS.items()},
 }
 
 
