@@ -1,6 +1,6 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-28T07:19:44.414Z",
+  "generatedAt": "2026-08-28T08:17:02.455Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
@@ -8,7 +8,7 @@
     "approvedCandidateCount": 1160,
     "runtimeQuestionCount": 1160,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 41
+    "qaRecordCount": 42
   },
   "betaGlobalSimilarityGate": {
     "passed": true,

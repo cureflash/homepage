@@ -1,18 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1700,
-  "verified_question_count": 1625,
+  "checked_question_count": 1725,
+  "verified_question_count": 1650,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-28-scheduled-033-conditional-part4",
-  "last_completed_micro_skill": "p5.verb.conditional_form",
+  "last_completed_batch": "2026-08-28-scheduled-034-participle-clause-part1",
+  "last_completed_micro_skill": "p5.verb.participle_clause",
   "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
-  "next_batch": "2026-08-28-scheduled-034-participle-clause-part1",
+  "next_batch": "2026-08-28-scheduled-035-participle-clause-part2",
   "next_micro_skill": "p5.verb.participle_clause",
-  "next_question_id": "p5_verb_participle_clause_0001",
+  "next_question_id": "p5_verb_participle_clause_0026",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-28T16:15:00+09:00"
+  "updated_at": "2026-08-28T17:13:00+09:00"
 }
