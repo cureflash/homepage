@@ -10,75 +10,81 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 1030 PDFs
-- total published physics: 2188 PDFs
+- formal `物理`: 1140 PDFs
+- total published physics: 2298 PDFs
 
 Formal `物理` currently has:
 
 - `様々な運動：平面運動と放物運動`: 330 PDFs
 - `様々な運動：剛体のつり合い`: 200 PDFs
 - `様々な運動：運動量と力積`: 250 PDFs
-- `様々な運動：円運動と単振動`: 250 PDFs
+- `様々な運動：円運動と単振動`: 360 PDFs
 
-All 1030 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=950` and `accepted-set=80`. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
+All 1140 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=980` and `accepted-set=160`. Worksheet modes are `calculation-basic=350`, `calculation-reverse=630`, and 40 each of retrieval forward/reverse/fill/true-false. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
 
-## Completed this run — centrifugal force and simple harmonic motion, 110 PDFs
+## Completed this run — quantitative SHM and pendulum periods, 110 PDFs
 
-This run completed three consecutive safe checkpoints while staying below the normal approximately-120-PDF target.
+This run completed three consecutive safe checkpoints, staying below the normal approximately-120-PDF target and without adding a new shared formula relation.
 
-### 1. Centrifugal force and reference frames — 40 PDFs
+### 1. Simple-harmonic acceleration and displacement magnitude — 30 PDFs
 
-- skill: `circular-centrifugal-frame-concepts`
+- skill: `simple-harmonic-acceleration-displacement-magnitude`
+- learner-visible relation: `|a| = ω²|x|`
+- learner-visible direction: acceleration points toward the equilibrium position
+- 10 direct acceleration-magnitude worksheets
+- 10 reverse `ω²` worksheets
+- 10 reverse displacement-magnitude worksheets
+- existing reversible `product` relation reused
+- solving directly for `ω` is deliberately omitted so the generator does not introduce an implicit square-root/root-selection contract
+
+This is an explicit magnitude checkpoint, not a hidden replacement for the signed physical relation `a=-ω²x`.
+
+### 2. Spring-pendulum period concepts — 40 PDFs
+
+- skill: `spring-pendulum-period-concepts`
 - answer model: finite `accepted-set` retrieval
 - formats: forward / reverse / fill / true-false, 10 deterministic seeds each
-- learner-visible distinction:
-  - in an inertial-frame description, the net force maintaining uniform circular motion is center-directed centripetal force
-  - in a frame rotating with the object, outward centrifugal force is introduced as an apparent/inertial force
-  - the two are not presented as two independent real forces simultaneously acting in the same frame
+- learner-visible formula: `T = 2π√(m/k)`
+- covers the qualitative dependence of period on mass and spring constant
+- reverse-retrieval displayed descriptions are required to map uniquely to one answer item
 
-This closes the required centrifugal-force mention without adding a misleading second inertial-frame numeric force formula.
+### 3. Small-angle simple-pendulum period concepts — 40 PDFs
 
-### 2. Simple-harmonic core concepts — 40 PDFs
-
-- skill: `simple-harmonic-core-concepts`
+- skill: `simple-pendulum-period-concepts`
 - answer model: finite `accepted-set` retrieval
 - formats: forward / reverse / fill / true-false, 10 deterministic seeds each
-- covers amplitude, period, speed at equilibrium/endpoints, acceleration direction, and restoring force
+- learner-visible scope: oscillation angle sufficiently small
+- learner-visible formula: `T = 2π√(l/g)`
+- covers length dependence, mass independence, and gravitational-acceleration dependence
+- reverse-retrieval displayed descriptions are required to map uniquely to one answer item
 
-Pre-publication semantic QA found one ambiguity in the first draft: the reverse prompts for restoring-force direction and acceleration direction could share the same displayed description. PR #196 reworded them into unique prompts and added a regression test requiring every reverse-retrieval displayed description to map to exactly one left-hand item. Do not remove that uniqueness gate.
+The two period checkpoints intentionally teach the formulas and dependencies without yet generating numerical square-root/π calculations. That numeric work remains open until a precise shared rounding/tolerance contract exists.
 
-### 3. Spring restoring force — 30 PDFs
+## Validation and publication
 
-- skill: `simple-harmonic-spring-restoring-force`
-- relation: `F = kx` for the magnitude of the restoring force
-- learner-visible direction: toward the equilibrium position
-- 10 direct-force worksheets, 10 reverse spring-constant worksheets, 10 reverse displacement worksheets
-- existing reversible `product` relation reused; no new shared formula relation was added
-
-### Validation and publication
-
-- implementation PR #194 merged as `de1f2b2e4a8f18362262e4da82beab1727bfc472`
-- ambiguity-fix PR #196 merged as `079b5d87f8ba3b009cb905534e27460b3b3a7f14`
-- production Actions run `33143868909` completed successfully
-- the run passed latest-main confirmation, shared and all formal-Physics tests, generation, post-generation validation, catalog validation, PDF structural checks, commit, and non-force safe push
-- publication commit: `3345b26e51e95f05ef2ec78fd3fc2ff244e61b0c` (`Publish 110 formal Physics centrifugal and SHM worksheets`)
-- final workflow contract requires 1030 formal-Physics rows, 1030 unique hashes, `numeric=950`, `accepted-set=80`, exact unit/skill/mode counts, and structural checks for all registered formal-Physics PDFs
-- new tests require deterministic regeneration, independent validation, corrupted-answer rejection, 110/110 normalized-hash uniqueness, existing-catalog collision rejection, unique reverse-retrieval prompts, and independent visible-value recomputation for `F=kx`, `k=F/x`, and `x=F/k`
-- repository-wide catalog serialization remains `worksheet-catalog-publish-v1` with `cancel-in-progress: false`
+- implementation PR #212 merged as `b9915a4d787de8359638705eda00393757f49bdb`
+- production Actions run `33161995894` completed successfully
+- every workflow step succeeded: latest-main confirmation, shared/formal-Physics tests, generation, post-generation validation, catalog/PDF validation, commit, and non-force safe push
+- publication commit: `09a61b0bf720fa2f23fae5296cb9d9410e8e8777` (`Publish 110 formal Physics SHM acceleration and period worksheets`)
+- final workflow contract requires 1140 formal-Physics rows and 1140 unique hashes
+- answer-type contract: `numeric=980`, `accepted-set=160`
+- unit contract: projectile 330, rigid body 200, momentum/impulse 250, circular motion/SHM 360
+- new tests require deterministic regeneration, independent visible-value recomputation for all three `|a|/ω²/|x|` directions, corrupted-answer rejection for numeric and retrieval problems, 110/110 new normalized hashes, existing-catalog collision rejection, learner-visible magnitude/direction/small-angle contracts, and unique reverse-retrieval descriptions
+- repository publication safety remains non-force latest-main push with formal-Physics concurrency group `worksheet-catalog-publish-v2`
 
 ## Curriculum basis checked this run
 
-Current high-school Course of Study materials were rechecked before implementation. Formal `物理` requires the circular-motion treatment to mention centrifugal force, and the following simple-harmonic-motion treatment covers displacement, velocity, acceleration, restoring force, and spring/simple pendulums. The new checkpoints remain within that sequence and do not skip ahead.
+Current MEXT high-school Course of Study materials were rechecked before implementation. In formal `物理`, simple harmonic motion treats displacement, velocity, acceleration and restoring force, and spring/simple pendulums are included in the same curriculum sequence. The new checkpoints stay within that sequence. For the simple pendulum, the worksheet explicitly restricts the period relation to sufficiently small oscillation angles.
 
 ## Exact next starting point
 
-Continue formal course **`物理：様々な運動 / 円運動と単振動`** with the quantitative simple-harmonic relation between displacement and acceleration.
+Continue formal course **`物理：様々な運動 / 円運動と単振動`** with numerical period calculations for the spring pendulum and simple pendulum.
 
 1. Start from latest `main` and re-read the science factory instructions, execution plan, STATUS and this HANDOFF; reconcile parallel progress first.
-2. Keep a learner-visible signed axis convention. For a relation such as `a = -ω²x`, the negative direction must not be hidden behind magnitude-only labels unless the checkpoint is deliberately and explicitly a magnitude exercise.
-3. Before implementing the first quantitative SHM checkpoint, design a mechanically checkable formula relation for the squared angular-speed factor. Independent recomputation must use only learner-visible values.
-4. Avoid ambiguous inverse problems. In particular, solving for `ω` introduces a square root; restrict it to the physically intended non-negative angular-speed root and make that contract explicit, or omit that reverse direction until a safe shared relation exists.
-5. Preserve deterministic seeds, corrupted-answer rejection, normalized-hash uniqueness and existing-catalog collision checks, `formal_course=物理`, `grade=null`, 20-problem two-page PDFs, mixed numeric/accepted-set publisher validation, `worksheet-catalog-publish-v1`, and non-force latest-main push safety.
-6. After the displacement/acceleration quantitative block is safe, continue in curriculum order to the spring-pendulum period and simple-pendulum period. Their square-root and `π` formulas require explicit rounding/tolerance contracts before publication.
-7. Do not add a fourth checkpoint merely to reach the configured maximum. This run stops at 110 PDFs because the next item changes the quantitative formula/solver contract.
+2. Introduce a generic, mechanically checkable relation for expressions of the form `T = 2π√(numerator/divisor)` only if it can safely serve both `T=2π√(m/k)` and `T=2π√(l/g)`.
+3. Make `π` handling explicit. Fix the learner-visible numerical value or a deterministic precision policy, and define answer rounding/tolerance before publishing any numeric period worksheet.
+4. Independent recomputation must use only learner-visible values and must not call the generation answer path.
+5. Reverse directions involving a square root must use physically intended non-negative quantities and a unique root. Reject ambiguous or zero-denominator cases rather than silently accepting them.
+6. Preserve deterministic seeds, corrupted-answer rejection, normalized-hash uniqueness and existing-catalog collision checks, `formal_course=物理`, `grade=null`, 20-problem two-page PDFs, mixed numeric/accepted-set publisher validation, `worksheet-catalog-publish-v2`, and non-force latest-main push safety.
+7. Once numeric spring/simple-pendulum periods are safely covered, close the `円運動と単振動` block and continue to the next formal-Physics curriculum item from current MEXT materials; do not add unrelated material merely to reach four checkpoints.
 8. Representative screenshot-based visual QA remains pending; structural PDF QA is not a substitute for visual QA.
