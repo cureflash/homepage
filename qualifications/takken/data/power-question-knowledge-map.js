@@ -15,7 +15,8 @@
     { questionId: "takken-q-10-001", conceptId: "takken-concept-exclusive-takkenshi", knowledgeRefs: ["takken-k-exclusive-takkenshi-office-one-fifth"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-11-001", conceptId: "takken-concept-takkenshi-exclusive-duties", knowledgeRefs: ["takken-k-takkenshi-exclusive-duties-important-matters-explanation", "takken-k-takkenshi-exclusive-duties-article35-name", "takken-k-takkenshi-exclusive-duties-article37-name"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-12-001", conceptId: "takken-concept-business-guarantee-deposit", knowledgeRefs: ["takken-k-business-guarantee-deposit-statutory-system"], sourceQuestionValidationStatus: "verified" },
-    { questionId: "takken-q-13-001", conceptId: "takken-concept-business-guarantee-refund", knowledgeRefs: ["takken-k-business-guarantee-refund-transaction-claim-right"], sourceQuestionValidationStatus: "verified" }
+    { questionId: "takken-q-13-001", conceptId: "takken-concept-business-guarantee-refund", knowledgeRefs: ["takken-k-business-guarantee-refund-transaction-claim-right"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-14-001", conceptId: "takken-concept-guarantee-association", knowledgeRefs: ["takken-k-guarantee-association-statutory-system"], sourceQuestionValidationStatus: "verified" }
   ];
 
   const knownKnowledgeIds = new Set([
@@ -30,10 +31,11 @@
     "takken-k-exclusive-takkenshi-office-one-fifth",
     "takken-k-takkenshi-exclusive-duties-important-matters-explanation", "takken-k-takkenshi-exclusive-duties-article35-name", "takken-k-takkenshi-exclusive-duties-article37-name",
     "takken-k-business-guarantee-deposit-statutory-system",
-    "takken-k-business-guarantee-refund-transaction-claim-right"
+    "takken-k-business-guarantee-refund-transaction-claim-right",
+    "takken-k-guarantee-association-statutory-system"
   ]);
   const allowedConceptIds = new Set([
-    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund"
+    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association"
   ]);
   const questionIds = new Set();
 
@@ -47,11 +49,12 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 14) throw new Error(`Expected 14 mapped questions through business guarantee refund, got ${mappings.length}`);
+  if (mappings.length !== 15) throw new Error(`Expected 15 mapped questions through guarantee association, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
   if (!questionIds.has("takken-q-12-001")) throw new Error("Business guarantee deposit source question mapping is missing");
   if (!questionIds.has("takken-q-13-001")) throw new Error("Business guarantee refund source question mapping is missing");
+  if (!questionIds.has("takken-q-14-001")) throw new Error("Guarantee association source question mapping is missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
