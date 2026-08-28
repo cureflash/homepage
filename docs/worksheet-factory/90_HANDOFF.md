@@ -8,7 +8,7 @@ The former P1 concurrent-writer risk on authoritative `worksheets/catalog.json` 
 
 All workflows that directly publish the shared worksheet catalog must use repository-wide GitHub Actions concurrency group `worksheet-catalog-publish-v1` with `cancel-in-progress: false`. Preserve `tests/test_worksheet_catalog_writer_concurrency.py`, latest-main reconciliation, non-force pushes, catalog/hash validation, and stable URLs.
 
-The JH2 writer `.github/workflows/math-jh2-publish.yml` remains registered in that repository-wide guard.
+The JH3 writer `.github/workflows/math-jh3-publish.yml` is registered in that repository-wide guard.
 
 ## Current math factory state
 
@@ -23,19 +23,20 @@ Completed grades:
 - 中学1年: done
 - 中学2年: done
 
-The next active grade is **中学3年**.
+The active grade is **中学3年**.
 
 ## Latest completed run
 
-中学2年の最後のcheckpointを完了した。
+中学3年の展開・因数分解を4 checkpoint連続で進めた。
 
-- `linear-function-equation-from-two-points` — 2点から一次関数の式を求める — 3 variants / 3 PDFs
+1. `difference-of-squares-expansion` — `(a+b)(a-b)` の展開 — 3 variants / 3 PDFs
+2. `factor-common-factor` — 共通因数でくくる因数分解 — 3 variants / 3 PDFs
+3. `factor-x2-sum-product` — `x^2+(a+b)x+ab` 型の因数分解 — 3 variants / 3 PDFs
+4. `factor-square-formula` — 平方公式型の因数分解 — 3 variants / 3 PDFs
 
-2点から傾き `m=(y2-y1)/(x2-x1)` と切片 `b=y1-mx1` を `Fraction` で独立再計算し、`y=mx+b` を再構成する。専用testでは再構成した式が与えた2点の両方を通ることも確認する。
+中学3年の公開範囲は現在 **8 skills / 24 PDFs**。
 
-中学2年の最終公開範囲は **17 skills / 51 PDFs**。
-
-- publish commit: `befc3caee100a3dd345a4afd080f4d068fd1bac1`
+- publish commit: `4f77b081a34bfe50fdcc0c86b1bcaab9f4eecb4c`
 
 ## Exact next starting point
 
@@ -43,8 +44,8 @@ Read:
 
 - `curriculum/junior-high/grade-03/STATUS.json`
 - `curriculum/junior-high/grade-03/PLAN.md`
-- `curriculum/junior-high/grade-03/HANDOFF.md` if present
+- `curriculum/junior-high/grade-03/HANDOFF.md`
 
-Start from the first unfinished Grade 3 skill. Before implementation, verify the topic placement against the current MEXT junior-high mathematics curriculum. Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
+Start from **和と差の積型の因数分解**. If safe, continue through **展開・因数分解混合100問系 → 平方根の基本値 → 根号の簡単化** for up to four checkpoints.
 
-Do not reopen completed Grade 2 work unless a regression or audit finding requires it.
+Before entering square roots, verify current MEXT Grade 3 placement. Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
