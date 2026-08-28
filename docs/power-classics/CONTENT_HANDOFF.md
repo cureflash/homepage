@@ -4,9 +4,9 @@
 - Shared runtime/backend authority: existing Power TOEIC Drill Engine; no classics-specific fork.
 - Taxonomy: `subjects/japanese/power-classics/data/taxonomy/classics-v1.json`
 - Taxonomy: 30 big categories / 100 atomic micro-skills.
-- Generated questions: 550
-- QA checked: 550
-- Verified: 550
+- Generated questions: 575
+- QA checked: 575
+- Verified: 575
 - Needs revision: 0
 - Rejected: 0
 - Unchecked pending_validation: 0
@@ -15,17 +15,17 @@
 - global duplicate gate: not complete
 
 ## This checkpoint — generation
-Continued `kobun.verb.conjugation_form` with IDs 0076-0100, bringing this micro-skill to 100/300.
+Continued `kobun.verb.conjugation_form` with IDs 0101-0125, bringing this micro-skill to 125/300.
 
 New IDs:
-`kobun_verb_conjugation_form_0076` through `kobun_verb_conjugation_form_0100`
+`kobun_verb_conjugation_form_0101` through `kobun_verb_conjugation_form_0125`
 
 Batch:
-`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-form/pending/batch-20260828-018.json`
+`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-form/pending/batch-20260828-019.json`
 
-Coverage spans 未然・連用・終止・連体・已然・命令 across 四段・下二段・カ変・サ変・ナ変・ラ変. Explicit syntactic cues (`む` / `て` / `ば`), sentence-final use, noun modification, and imperative contexts keep the requested form unique.
+Coverage spans 未然・連用・終止・連体・已然・命令 across 四段・上一段・上二段・下二段・カ変・サ変・ナ変・ラ変. `尋ぬ`・`濡る`・`降る（おる）` were externally cross-checked before verification. Explicit syntactic cues (`む` / `たり` / `て` / `ば` / `ども`), sentence-final use, noun modification, and imperative contexts keep the requested form unique.
 
-Answer positions in this batch: A/B/C/D = 6/6/6/7. Across conjugation-form IDs 0001-0100 the distribution is 25/25/25/25.
+Answer positions in this batch: A/B/C/D = 7/6/6/6.
 
 ## This checkpoint — QA
 Independently re-solved all 25 new questions from stem + choices before consulting stored answer/explanation.
@@ -36,16 +36,16 @@ Independently re-solved all 25 new questions from stem + choices before consulti
 - rejected: 0
 
 QA record:
-`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-018-conjugation-form.qa.json`
+`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-019-conjugation-form.qa.json`
 
-Exact stems are unique within this batch and no exact overlap with the previous 75 conjugation-form stems was found. Full-bank semantic near-duplicate clearance remains pending.
+Exact stems are unique within this batch. Maximum within-batch SequenceMatcher similarity is 0.829, below the 0.94 high-similarity review threshold. Full-bank semantic near-duplicate clearance remains pending.
 
 ## Next generation
 Continue:
 `kobun.verb.conjugation_form`
 
 Resume at:
-`kobun_verb_conjugation_form_0101`
+`kobun_verb_conjugation_form_0126`
 
 Taxonomy target is 300 questions. Continue balancing the six conjugation forms and conjugation classes while keeping each stem explicit enough to rule out form ambiguity.
 
