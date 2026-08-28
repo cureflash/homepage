@@ -13,16 +13,17 @@ Canonical implementation: `qualifications/takken/`.
 
 Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified.
 
-Completed **`takken-concept-takkenshi-registration`** using source unit `takken-shi-registration` and the 2026-04-01 law cutoff. Added `qualifications/takken/data/power-knowledge-items-takkenshi-registration.js` with four verified atomic knowledge items:
+Completed **`takken-concept-takkenshi-card`** using source unit `takken-shi-card` and the 2026-04-01 law cutoff. Added `qualifications/takken/data/power-knowledge-items-takkenshi-card.js` with five verified atomic knowledge items:
 
-1. `takken-k-takkenshi-registration-stages-separate` — 資格試験合格、資格登録、宅地建物取引士証交付は別の手続段階。
-2. `takken-k-takkenshi-registration-exam-prefecture-governor` — 新規の資格登録は、資格試験に合格した都道府県の知事へ申請する。
-3. `takken-k-takkenshi-registration-experience-or-equivalent` — 原則として登録申請前10年以内の宅建業実務経験2年以上、または登録実務講習修了等の法令上の同等要件が必要。
-4. `takken-k-takkenshi-registration-needed-for-practice-not-pass-validity` — 宅建士として業務に従事するには登録が必要だが、業務予定がなければ直ちに登録する義務はなく、未登録だけで試験合格が無効になるわけではない。
+1. `takken-k-takkenshi-card-registration-and-issuance` — 宅建士として業務に従事するには資格登録に加えて宅建士証の交付が必要で、取引士証は登録後の申請により交付される。
+2. `takken-k-takkenshi-card-validity-five-years` — 宅建士証の有効期間は5年で、申請により更新できる。
+3. `takken-k-takkenshi-card-statutory-training` — 原則として交付・更新申請前6か月以内の法定講習が必要。試験合格日から1年以内の交付申請は受講義務が免除される。
+4. `takken-k-takkenshi-card-presentation-important-matters` — 35条重要事項説明時は相手方からの請求がなくても宅建士証を提示する。
+5. `takken-k-takkenshi-card-presentation-on-request` — 宅建業者の業務に従事する宅建士は、取引関係者から請求があれば宅建士証を提示する。
 
-Primary authority is the current 宅地建物取引業法, supplemented by current official Osaka and Kyoto registration guidance. Osaka states that registration is made by the prefecture where the examination was passed and identifies the two-year recent practical-experience or registered-practical-training route. Kyoto likewise states that registration is with the governor of the examination prefecture, requires two years of practical experience or a statutory equivalent, and clarifies that non-registration does not invalidate the examination pass when the person does not plan to work as a宅建士.
+Primary authority is the current 宅地建物取引業法. Current official Kyoto guidance confirms that card issuance follows registration, the card is valid for five years, renewal requires statutory training within the six months before expiry, and applicants within one year after examination pass are exempt from the training requirement. Current Osaka guidance confirms that the card is required when working as a宅建士 and separately explains presentation of the card when giving important-matters explanations.
 
-Existing verified-question evidence was reconciled conservatively. **`takken-q-08-001` maps only to `takken-k-takkenshi-registration-stages-separate`.** It directly tests that the statute has separate examination, registration and宅建士証 stages, but it does not test the registration authority, the two-year/equivalent eligibility requirement, or the no-immediate-registration/pass-validity rule. Those three items remain explicit Phase 4.3 deficits. The prior twenty-three deficits remain unchanged; no false coverage was introduced.
+Existing verified-question evidence was reconciled conservatively. **`takken-q-09-001` was not mapped to any of the five detailed card items.** It establishes only that the card system exists and that important-matters explanations are performed by宅地建物取引士; it does not directly test card issuance requirements, validity, statutory training, mandatory presentation at the explanation, or presentation on request. All five therefore remain explicit Phase 4.3 deficits. The prior twenty-six deficits remain unchanged; no false coverage was introduced.
 
 ## Status after this run
 
@@ -31,18 +32,18 @@ Existing verified-question evidence was reconciled conservatively. **`takken-q-0
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — **10/113 concepts modeled**
-- Canonical knowledge items: **41**
+- Phase 4.2: active — **11/113 concepts modeled**
+- Canonical knowledge items: **46**
 - Existing verified questions mapped: **10**
-- Explicit unmapped knowledge gaps: **26**
+- Explicit unmapped knowledge gaps: **31**
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at **`takken-concept-takkenshi-card`** using source unit `takken-shi-card`.
+Continue Phase 4.2 at **`takken-concept-exclusive-takkenshi`** using source unit `takken-shi-exclusive`.
 
-Preserve all 41 knowledge items, ten valid mappings, and all twenty-six explicit deficits. Model the宅地建物取引士証 from 2026-04-01 primary/official sources and map existing verified questions only where they actually test the resulting knowledge. Do not start Phase 4.3 yet.
+Preserve all 46 knowledge items, ten valid mappings, and all thirty-one explicit deficits. Model the statutory exclusive-takkenshi staffing rule from 2026-04-01 primary/official sources and map existing verified questions only where they actually test the resulting knowledge. Do not start Phase 4.3 yet.
 
 ## Publication invariant
 
