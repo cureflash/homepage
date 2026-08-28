@@ -1,0 +1,84 @@
+name: Validate formal Physics electric-field candidate
+
+on:
+  push:
+    branches:
+      - 'automation/science-physics-electric-field-potential'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout candidate branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF dependency
+        run: python -m pip install --disable-pip-version-check reportlab
+
+      - name: Run full formal Physics regression and candidate tests
+        run: |
+          python tests/test_worksheet_factory.py
+          python tests/test_science_formula_relations.py
+          python tests/test_science_product_over_divisor.py
+          python tests/test_science_physics_projectile.py
+          python tests/test_science_physics_rigid_body.py
+          python tests/test_science_physics_momentum.py
+          python tests/test_science_physics_circular_motion.py
+          python tests/test_science_physics_circular_period.py
+          python tests/test_science_physics_centrifugal_shm.py
+          python tests/test_science_physics_shm_periods.py
+          python tests/test_science_physics_gravitation.py
+          python tests/test_science_physics_gravitation_energy_gas.py
+          python tests/test_science_physics_ideal_gas.py
+          python tests/test_science_physics_thermal_gas.py
+          python tests/test_science_physics_waves.py
+          python tests/test_science_physics_sound.py
+          python tests/test_science_physics_light.py
+          python tests/test_science_physics_light_numeric.py
+          python tests/test_science_physics_electric_field_potential.py
+
+      - name: Generate all 120 candidate PDFs
+        run: python scripts/publish_science_physics.py
+
+      - name: Validate prospective catalog and PDFs
+        run: |
+          python tests/test_science_physics_electric_field_potential.py
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          from scripts.worksheet_factory import validate_catalog
+
+          root = Path('.')
+          catalog = json.loads((root / 'worksheets/catalog.json').read_text(encoding='utf-8'))
+          validate_catalog(catalog, root)
+          rows = [x for x in catalog if x.get('id', '').startswith('science-physics-motion-')]
+          assert len(rows) == 2160, len(rows)
+          assert len({x['content_hash'] for x in rows}) == 2160
+          new = [x for x in rows if x.get('unit') == '電気と磁気：電場・電位']
+          assert len(new) == 120, len(new)
+          assert Counter(x['skill'] for x in new) == Counter({
+              'electric-coulomb-force-numeric': 30,
+              'electric-point-charge-field-numeric': 30,
+              'electric-point-charge-potential-numeric': 30,
+              'electric-potential-energy-numeric': 30,
+          })
+          assert all(x['answer_type'] == 'numeric' and x['problem_count'] == 20 for x in new)
+          for entry in new:
+              path = root / entry['url']
+              data = path.read_bytes()
+              assert data.startswith(b'%PDF')
+              assert path.stat().st_size > 1000
+              assert b'/Count 2' in data, entry['id']
+          print('Electric field candidate: 120 PDFs / 2160 unique formal Physics rows OK')
+          PY
