@@ -22,6 +22,7 @@ try:
     from scripts.science_physics_light_numeric import PHYSICS_LIGHT_NUMERIC_PROBLEM_COUNT, PHYSICS_LIGHT_NUMERIC_TOPICS
     from scripts.science_physics_electric_field_potential import PHYSICS_ELECTRIC_FIELD_POTENTIAL_PROBLEM_COUNT, PHYSICS_ELECTRIC_FIELD_POTENTIAL_TOPICS
     from scripts.science_physics_capacitors import PHYSICS_CAPACITOR_PROBLEM_COUNT, PHYSICS_CAPACITOR_TOPICS
+    from scripts.science_physics_circuits import PHYSICS_CIRCUIT_PROBLEM_COUNT, PHYSICS_CIRCUIT_TOPICS
     from scripts.science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
@@ -42,6 +43,7 @@ except ModuleNotFoundError:
     from science_physics_light_numeric import PHYSICS_LIGHT_NUMERIC_PROBLEM_COUNT, PHYSICS_LIGHT_NUMERIC_TOPICS
     from science_physics_electric_field_potential import PHYSICS_ELECTRIC_FIELD_POTENTIAL_PROBLEM_COUNT, PHYSICS_ELECTRIC_FIELD_POTENTIAL_TOPICS
     from science_physics_capacitors import PHYSICS_CAPACITOR_PROBLEM_COUNT, PHYSICS_CAPACITOR_TOPICS
+    from science_physics_circuits import PHYSICS_CIRCUIT_PROBLEM_COUNT, PHYSICS_CIRCUIT_TOPICS
     from science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 
@@ -66,6 +68,7 @@ ALL_TOPICS = {
     **{key: (topic, PHYSICS_LIGHT_NUMERIC_PROBLEM_COUNT) for key, topic in PHYSICS_LIGHT_NUMERIC_TOPICS.items()},
     **{key: (topic, PHYSICS_ELECTRIC_FIELD_POTENTIAL_PROBLEM_COUNT) for key, topic in PHYSICS_ELECTRIC_FIELD_POTENTIAL_TOPICS.items()},
     **{key: (topic, PHYSICS_CAPACITOR_PROBLEM_COUNT) for key, topic in PHYSICS_CAPACITOR_TOPICS.items()},
+    **{key: (topic, PHYSICS_CIRCUIT_PROBLEM_COUNT) for key, topic in PHYSICS_CIRCUIT_TOPICS.items()},
 }
 
 
