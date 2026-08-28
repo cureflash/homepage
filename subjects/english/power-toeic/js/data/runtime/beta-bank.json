@@ -1,12 +1,12 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-28T15:20:57.337Z",
+  "generatedAt": "2026-08-28T15:24:01.557Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1160,
-    "runtimeQuestionCount": 1160,
+    "approvedCandidateCount": 1185,
+    "runtimeQuestionCount": 1185,
     "quarantinedNearDuplicateCount": 0,
     "qaRecordCount": 49
   },
@@ -18,6 +18,12 @@
     "note": "Beta lexical similarity gate only; does not replace the final semantic production-bank gate."
   },
   "skills": [
+    {
+      "id": "p5.conn.preposition_vs_conjunction",
+      "label": "前置詞と接続詞",
+      "categoryId": "connectors-prepositions",
+      "categoryLabel": "前置詞・接続詞"
+    },
     {
       "id": "p5.pos.adjective_after_linking_verb",
       "label": "連結動詞後の形容詞",
@@ -98,6 +104,431 @@
     }
   ],
   "questions": [
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0076",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The equipment passed the inspection ____ it had been in service for many years.",
+      "choices": [
+        "in spite of",
+        "during",
+        "because of",
+        "even though"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank is followed by a full clause, so the conjunction 'even though' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0077",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The restaurant accepted the reservation ____ only one large table was still available.",
+      "choices": [
+        "even though",
+        "in spite of",
+        "during",
+        "because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank is followed by a full clause, so the conjunction 'even though' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0078",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The firm hired additional staff ____ demand was expected to slow next quarter.",
+      "choices": [
+        "in spite of",
+        "even though",
+        "during",
+        "because of"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank is followed by a full clause, so the conjunction 'even though' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0079",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The seminar went ahead ____ the main speaker had to participate remotely.",
+      "choices": [
+        "in spite of",
+        "during",
+        "even though",
+        "because of"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank is followed by a full clause, so the conjunction 'even though' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0080",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The shipment was released ____ customs officers had requested additional documents.",
+      "choices": [
+        "in spite of",
+        "during",
+        "because of",
+        "even though"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank is followed by a full clause, so the conjunction 'even though' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0081",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Employees may not enter the laboratory ____ a valid access card.",
+      "choices": [
+        "without",
+        "unless",
+        "although",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0082",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The accounting team cannot process the claim ____ the original receipt.",
+      "choices": [
+        "unless",
+        "without",
+        "although",
+        "because"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0083",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Visitors should not use the freight elevator ____ staff authorization.",
+      "choices": [
+        "unless",
+        "although",
+        "without",
+        "because"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0084",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The machine must not be operated ____ the protective cover in place.",
+      "choices": [
+        "unless",
+        "although",
+        "because",
+        "without"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0085",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Applicants cannot complete registration ____ providing a contact e-mail address.",
+      "choices": [
+        "without",
+        "unless",
+        "although",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0086",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The package cannot be shipped internationally ____ a completed customs form.",
+      "choices": [
+        "unless",
+        "without",
+        "although",
+        "because"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0087",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Customers may not receive a refund ____ proof of purchase.",
+      "choices": [
+        "unless",
+        "although",
+        "without",
+        "because"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0088",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The contractor cannot begin work ____ written approval from the property manager.",
+      "choices": [
+        "unless",
+        "although",
+        "because",
+        "without"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0089",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The system cannot create a new account ____ verifying the user's identity.",
+      "choices": [
+        "without",
+        "unless",
+        "although",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0090",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Drivers may not enter the loading zone ____ wearing the required safety vest.",
+      "choices": [
+        "unless",
+        "without",
+        "although",
+        "because"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank is followed by a noun phrase or gerund phrase; the preposition 'without' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0091",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The order will not be released ____ the payment has been confirmed.",
+      "choices": [
+        "without",
+        "despite",
+        "unless",
+        "during"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0092",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Employees should not restart the machine ____ a technician has inspected it.",
+      "choices": [
+        "without",
+        "despite",
+        "during",
+        "unless"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0093",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The reservation will be canceled ____ the guest confirms it by noon.",
+      "choices": [
+        "unless",
+        "without",
+        "despite",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0094",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The application cannot be approved ____ all required documents have been submitted.",
+      "choices": [
+        "without",
+        "unless",
+        "despite",
+        "during"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0095",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The store will not extend its hours ____ customer demand increases significantly.",
+      "choices": [
+        "without",
+        "despite",
+        "unless",
+        "during"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0096",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Visitors may not enter the production area ____ a staff member accompanies them.",
+      "choices": [
+        "without",
+        "despite",
+        "during",
+        "unless"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0097",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The invoice will remain unpaid ____ the billing discrepancy is resolved.",
+      "choices": [
+        "unless",
+        "without",
+        "despite",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0098",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The shipment cannot leave the warehouse ____ the supervisor signs the dispatch form.",
+      "choices": [
+        "without",
+        "unless",
+        "despite",
+        "during"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0099",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The software will not install correctly ____ the operating system is updated first.",
+      "choices": [
+        "without",
+        "despite",
+        "unless",
+        "during"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_preposition_vs_conjunction_0100",
+      "version": 1,
+      "skillId": "p5.conn.preposition_vs_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The meeting will be moved online ____ the weather improves before morning.",
+      "choices": [
+        "without",
+        "despite",
+        "during",
+        "unless"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank is followed by a full clause; the conjunction 'unless' introduces the necessary condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
     {
       "id": "p5_pos_adjective_after_linking_verb_0001",
       "version": 1,
