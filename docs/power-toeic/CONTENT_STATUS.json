@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 2500,
-  "checked_question_count": 1500,
+  "generated_question_count": 2525,
+  "checked_question_count": 1525,
   "pending_validation_count": 1000,
-  "verified_question_count": 1425,
+  "verified_question_count": 1450,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -36,14 +36,14 @@
     "p5.conn.for_vs_since",
     "p5.conn.time_prepositions"
   ],
-  "current_batch": "2026-08-28-scheduled-025-time-prepositions-part4",
+  "current_batch": "2026-08-28-scheduled-026-logical-conjunction-part1",
   "current_micro_skill": "p5.conn.logical_conjunction",
-  "current_micro_skill_persisted_count": 0,
+  "current_micro_skill_persisted_count": 25,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_conn_logical_conjunction_0001",
+  "next_resume_id": "p5_conn_logical_conjunction_0026",
   "next_micro_skill": "p5.conn.logical_conjunction",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Persisted p5.conn.time_prepositions IDs 0051-0100, completing the micro-skill at 100/100 and bringing total generation to 2,500. The 50 new items remain pending_validation; answer positions across the new 50 are A/B/C/D = 12/12/13/13 and the maximum within-checkpoint SequenceMatcher similarity was about 0.688 with no pair at or above 0.94. Independently reviewed oldest unchecked p5.verb.gerund_pattern IDs 0076-0100: 25 checked, 19 verified, 6 needs_revision, 0 rejected. The six revision cases have unnatural tense/aspect surrounding otherwise clear gerund complements. Cumulative QA is 1,500 checked, 1,425 verified, 75 needs_revision, 0 rejected; unchecked pending_validation is 1,000. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Repo-local full schema/Node tests were not run in this connector-only execution path. Next generation is p5_conn_logical_conjunction_0001; next QA is p5_verb_causative_have_make_let_0001.",
-  "updated_at": "2026-08-28T08:40:00+09:00"
+  "last_run_result": "Persisted p5.conn.logical_conjunction IDs 0001-0025 as a safe checkpoint, bringing total generation to 2,525. All 25 new items remain pending_validation and cover reason, contrast, purpose, condition, and time relations with varied business contexts; answer positions are A/B/C/D = 7/6/6/6. Independently reviewed oldest unchecked p5.verb.causative_have_make_let IDs 0001-0025: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Each uniquely requires the base verb in have + person/team + base verb and is natural enough for TOEIC-style use. Cumulative QA is 1,525 checked, 1,450 verified, 75 needs_revision, 0 rejected; unchecked pending_validation remains 1,000 because generation and QA advanced equally. Full revision-bound cross-bank semantic duplicate clearance and repo-local full schema/Node tests remain incomplete in this connector-only execution path. Next generation is p5_conn_logical_conjunction_0026; next QA is p5_verb_causative_have_make_let_0026.",
+  "updated_at": "2026-08-28T09:14:00+09:00"
 }
