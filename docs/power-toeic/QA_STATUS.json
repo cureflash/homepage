@@ -1,18 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 2025,
-  "verified_question_count": 1950,
+  "checked_question_count": 2050,
+  "verified_question_count": 1975,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-29-scheduled-046-despite-vs-although-part1",
+  "last_completed_batch": "2026-08-29-scheduled-047-despite-vs-although-part2",
   "last_completed_micro_skill": "p5.conn.despite_vs_although",
   "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
-  "next_batch": "2026-08-29-scheduled-047-despite-vs-although-part2",
+  "next_batch": "2026-08-29-scheduled-048-despite-vs-although-part3",
   "next_micro_skill": "p5.conn.despite_vs_although",
-  "next_question_id": "p5_conn_despite_vs_although_0026",
+  "next_question_id": "p5_conn_despite_vs_although_0051",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-29T05:14:00+09:00"
+  "updated_at": "2026-08-29T06:14:00+09:00"
 }
