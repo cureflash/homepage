@@ -110,3 +110,65 @@ PHYSICS_SHM_PERIODS_TOPICS = {
         },
     },
 }
+
+# Numeric period checkpoints use the same shared direct-only relation.  π=3.14
+# is a learner-visible known value, and period answers are rounded to 0.001 s.
+PHYSICS_SHM_PERIODS_TOPICS.update({
+    "spring-pendulum-period-numeric": {
+        "generator": "formula",
+        "title": "物理 単振動：ばね振り子の周期 数値計算",
+        "unit": "様々な運動：円運動と単振動",
+        "skill": "spring-pendulum-period-numeric",
+        "formula": "T = 2π√(m/k)（π=3.14、答えは0.001 sまで）",
+        "seeds": tuple(range(7551, 7561)),
+        "spec": {
+            "id": "physics-spring-pendulum-period-numeric",
+            "relation": "two-pi-sqrt-ratio",
+            "result": "period",
+            "inputs": ["mass", "spring_constant", "pi_value"],
+            "variables": {
+                "period": {"label": "周期 T（0.001 sまで）", "unit": "s"},
+                "mass": {"label": "質量 m", "unit": "kg", "values": [0.10, 0.20, 0.40, 0.80, 1.25, 1.80, 2.50]},
+                "spring_constant": {"label": "ばね定数 k", "unit": "N/m", "values": [5, 8, 10, 20, 25, 40, 50, 80]},
+                "pi_value": {"label": "円周率 π", "values": [3.14]},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-period": {
+                "solve_for": "period",
+                "worksheet_mode": "calculation-basic",
+                "description": "π=3.14を用い、T=2π√(m/k)からばね振り子の周期を0.001 sまで求めます。丸め済み周期からの逆算は行いません。",
+            },
+        },
+    },
+    "simple-pendulum-period-numeric": {
+        "generator": "formula",
+        "title": "物理 単振動：単振り子の周期 数値計算",
+        "unit": "様々な運動：円運動と単振動",
+        "skill": "simple-pendulum-period-numeric",
+        "formula": "T = 2π√(l/g)（振れ角が十分小さい。π=3.14、答えは0.001 sまで）",
+        "seeds": tuple(range(7561, 7571)),
+        "spec": {
+            "id": "physics-simple-pendulum-period-numeric",
+            "relation": "two-pi-sqrt-ratio",
+            "result": "period",
+            "inputs": ["length", "gravity", "pi_value"],
+            "variables": {
+                "period": {"label": "周期 T（振れ角が十分小さい。0.001 sまで）", "unit": "s"},
+                "length": {"label": "振り子の長さ l（振れ角が十分小さい）", "unit": "m", "values": [0.10, 0.20, 0.40, 0.80, 1.00, 1.60, 2.50]},
+                "gravity": {"label": "重力加速度 g", "unit": "m/s²", "values": [9.8]},
+                "pi_value": {"label": "円周率 π", "values": [3.14]},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-period": {
+                "solve_for": "period",
+                "worksheet_mode": "calculation-basic",
+                "description": "振れ角が十分小さい条件で、π=3.14を用いT=2π√(l/g)から周期を0.001 sまで求めます。丸め済み周期からの逆算は行いません。",
+            },
+        },
+    },
+})
+

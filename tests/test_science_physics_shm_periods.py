@@ -28,9 +28,9 @@ class PhysicsShmPeriodsTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_three_checkpoints_total_110_variants(self):
+    def test_five_checkpoints_total_130_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 110)
+        self.assertEqual(len(batches), 130)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
         counts = {}
         for topic_key, *_ in batches:
@@ -39,6 +39,8 @@ class PhysicsShmPeriodsTests(unittest.TestCase):
             "simple-harmonic-acceleration-displacement-magnitude": 30,
             "spring-pendulum-period-concepts": 40,
             "simple-pendulum-period-concepts": 40,
+            "spring-pendulum-period-numeric": 10,
+            "simple-pendulum-period-numeric": 10,
         })
 
     def test_deterministic_regeneration_and_validation(self):
@@ -60,7 +62,7 @@ class PhysicsShmPeriodsTests(unittest.TestCase):
             digest = normalized_hash(problems)
             self.assertNotIn(digest, hashes)
             hashes.add(digest)
-        self.assertEqual(len(hashes), 110)
+        self.assertEqual(len(hashes), 130)
 
     def test_acceleration_visible_value_recalculation(self):
         topic = PHYSICS_SHM_PERIODS_TOPICS["simple-harmonic-acceleration-displacement-magnitude"]
@@ -101,6 +103,28 @@ class PhysicsShmPeriodsTests(unittest.TestCase):
         self.assertIn("質量", pendulum_text)
         self.assertIn("重力加速度", pendulum_text)
 
+
+    def test_numeric_period_visible_value_recalculation_and_contracts(self):
+        for topic_key, numerator_name, divisor_name in (
+            ("spring-pendulum-period-numeric", "mass", "spring_constant"),
+            ("simple-pendulum-period-numeric", "length", "gravity"),
+        ):
+            topic = PHYSICS_SHM_PERIODS_TOPICS[topic_key]
+            self.assertEqual(topic["spec"]["relation"], "two-pi-sqrt-ratio")
+            text = json.dumps(topic, ensure_ascii=False)
+            self.assertIn("π=3.14", text)
+            self.assertIn("0.001 s", text)
+            if topic_key.startswith("simple-pendulum"):
+                self.assertIn("振れ角が十分小さい", text)
+            mode = topic["modes"]["basic-period"]
+            for seed in topic["seeds"]:
+                for problem in generate_formula_drill(topic["spec"], seed, 20, solve_for=mode["solve_for"]):
+                    known = problem["known"]
+                    expected = round(2 * known["pi_value"] * (known[numerator_name] / known[divisor_name]) ** 0.5, 3)
+                    self.assertEqual(problem["answer"], expected)
+                    self.assertEqual(problem["answer_spec"]["value"], expected)
+                    self.assertTrue(validate_science_problem(problem))
+
     def test_corrupted_answers_are_rejected(self):
         formula_topic = PHYSICS_SHM_PERIODS_TOPICS["simple-harmonic-acceleration-displacement-magnitude"]
         mode = formula_topic["modes"]["basic-acceleration"]
@@ -120,7 +144,7 @@ class PhysicsShmPeriodsTests(unittest.TestCase):
 
     def test_normalized_hashes_unique_and_disjoint_from_existing_catalog(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(hashes), 110)
+        self.assertEqual(len(hashes), 130)
         self.assertEqual(len(set(hashes)), 110)
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
         current_ids = {
