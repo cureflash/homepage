@@ -24,6 +24,7 @@ FORMULA_RELATIONS = {
     'two-pi-sqrt-ratio',
     'equal-products',
     'two-body-momentum-conservation',
+    'doppler-same-line',
 }
 
 
@@ -108,6 +109,15 @@ def _relation_result(relation, inputs):
         if mass_1 <= 0 or mass_2 <= 0:
             raise ValueError('two-body-momentum-conservation masses must be positive')
         return (mass_1 * initial_velocity_1 + mass_2 * initial_velocity_2 - mass_1 * final_velocity_1) / mass_2
+    if relation == 'doppler-same-line':
+        if len(inputs) != 4:
+            raise ValueError('doppler-same-line needs source frequency, sound speed, observer velocity, and source velocity')
+        source_frequency, sound_speed, observer_velocity, source_velocity = inputs
+        numerator_speed = sound_speed + observer_velocity
+        denominator_speed = sound_speed - source_velocity
+        if source_frequency <= 0 or sound_speed <= 0 or numerator_speed <= 0 or denominator_speed <= 0:
+            raise ValueError('doppler-same-line requires positive frequency, sound speed, and effective numerator/denominator speeds')
+        return round(source_frequency * numerator_speed / denominator_speed, 1)
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -281,6 +291,11 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
             raise ValueError('two-body-momentum-conservation needs five unique inputs')
         if solve_for in {input_names[0], input_names[2]}:
             raise ValueError('two-body-momentum-conservation supports solving velocities only')
+    if relation == 'doppler-same-line':
+        if len(input_names) != 4 or len(set(input_names)) != 4:
+            raise ValueError('doppler-same-line needs four unique inputs')
+        if solve_for != result_name:
+            raise ValueError('doppler-same-line inverse generation is intentionally unsupported after rounding')
     if result_name not in variables or any(name not in variables for name in input_names):
         raise ValueError('all formula variables need definitions')
     if solve_for not in [result_name, *input_names]:
