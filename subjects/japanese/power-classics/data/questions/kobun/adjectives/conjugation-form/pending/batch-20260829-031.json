@@ -1,0 +1,59 @@
+{
+  "format": "power-classics-candidate-v1",
+  "subject": "kobun",
+  "skill_group": "kobun.verbs",
+  "subcategory": "形容詞",
+  "skill": "kobun.adjective.conjugation_form",
+  "taxonomy_path": [
+    "kobun",
+    "kobun.verbs",
+    "形容詞",
+    "kobun.adjective.conjugation_form"
+  ],
+  "tags": [
+    "kobun",
+    "adjectives",
+    "conjugation-form"
+  ],
+  "generator_version": "power-classics-content-generate-v1.0",
+  "validation_status": "pending_validation",
+  "qa_status": "verified",
+  "item_fields": [
+    "id",
+    "stem",
+    "choices",
+    "proposed_answer_index",
+    "explanation",
+    "difficulty",
+    "template_id"
+  ],
+  "generated_at": "2026-08-29T03:00:00+09:00",
+  "batch": "2026-08-29-scheduled-031",
+  "items": [
+    ["kobun_adjective_conjugation_form_0001","「高からず」の「高から」は、形容詞「高し」の何形か。",["未然形","連用形","連体形","已然形"],0,"「から」はク活用形容詞のカリ活用の未然形。後ろの「ず」は未然形に接続する。",2,"kobun-adj-conjugation-0001"],
+    ["kobun_adjective_conjugation_form_0002","「高く流る」の「高く」は、形容詞「高し」の何形か。",["未然形","連用形","終止形","連体形"],1,"「高く」はク活用の連用形で、後続の動詞を修飾している。",2,"kobun-adj-conjugation-0002"],
+    ["kobun_adjective_conjugation_form_0003","「山高し。」の「高し」は何形か。",["連用形","連体形","終止形","已然形"],2,"文を言い切る「高し」は終止形。",2,"kobun-adj-conjugation-0003"],
+    ["kobun_adjective_conjugation_form_0004","「高き山」の「高き」は何形か。",["終止形","已然形","命令形","連体形"],3,"名詞「山」を修飾する「高き」は連体形。",2,"kobun-adj-conjugation-0004"],
+    ["kobun_adjective_conjugation_form_0005","「高けれど」の「高けれ」は何形か。",["已然形","未然形","連用形","連体形"],0,"接続助詞「ど」は已然形に接続し、「高けれ」は已然形。",2,"kobun-adj-conjugation-0005"],
+    ["kobun_adjective_conjugation_form_0006","「心あらば高かれ」の「高かれ」は何形か。",["已然形","命令形","連体形","終止形"],1,"「高かれ」はク活用形容詞の命令形。",2,"kobun-adj-conjugation-0006"],
+    ["kobun_adjective_conjugation_form_0007","「うつくしからず」の「うつくしから」は何形か。",["連用形","已然形","未然形","連体形"],2,"シク活用のカリ活用で「しから」は未然形。打消「ず」が続く。",2,"kobun-adj-conjugation-0007"],
+    ["kobun_adjective_conjugation_form_0008","「うつくしく見ゆ」の「うつくしく」は何形か。",["終止形","連体形","已然形","連用形"],3,"「うつくしく」はシク活用の連用形で、後続の「見ゆ」に連なる。",2,"kobun-adj-conjugation-0008"],
+    ["kobun_adjective_conjugation_form_0009","「花うつくし。」の「うつくし」は何形か。",["終止形","連用形","連体形","命令形"],0,"文末で言い切る「うつくし」は終止形。",2,"kobun-adj-conjugation-0009"],
+    ["kobun_adjective_conjugation_form_0010","「うつくしき花」の「うつくしき」は何形か。",["終止形","連体形","已然形","命令形"],1,"名詞「花」を修飾する「うつくしき」は連体形。",2,"kobun-adj-conjugation-0010"],
+    ["kobun_adjective_conjugation_form_0011","「うつくしければ」の「うつくしけれ」は何形か。",["未然形","連用形","已然形","命令形"],2,"確定条件の「ば」は已然形に接続し、「うつくしけれ」は已然形。",2,"kobun-adj-conjugation-0011"],
+    ["kobun_adjective_conjugation_form_0012","「いよいようつくしかれ」の「うつくしかれ」は何形か。",["終止形","連体形","已然形","命令形"],3,"「うつくしかれ」はシク活用形容詞の命令形。",2,"kobun-adj-conjugation-0012"],
+    ["kobun_adjective_conjugation_form_0013","ク活用形容詞「遠し」の形「遠かり」は何形か。",["連用形","未然形","連体形","已然形"],0,"カリ活用の「かり」は連用形。",2,"kobun-adj-conjugation-0013"],
+    ["kobun_adjective_conjugation_form_0014","シク活用形容詞「恋し」の形「恋しかり」は何形か。",["未然形","連用形","連体形","命令形"],1,"シク活用のカリ活用で「しかり」は連用形。",2,"kobun-adj-conjugation-0014"],
+    ["kobun_adjective_conjugation_form_0015","ク活用形容詞「近し」の形「近かる」は何形か。",["終止形","已然形","連体形","命令形"],2,"カリ活用の「かる」は連体形。",2,"kobun-adj-conjugation-0015"],
+    ["kobun_adjective_conjugation_form_0016","シク活用形容詞「楽し」の形「楽しかる」は何形か。",["連用形","終止形","已然形","連体形"],3,"シク活用のカリ活用で「しかる」は連体形。",2,"kobun-adj-conjugation-0016"],
+    ["kobun_adjective_conjugation_form_0017","ク活用形容詞「深し」の形「深く」は、活用表では何形として用いられるか。",["連用形","終止形","連体形","已然形"],0,"「深く」はク活用の連用形。",2,"kobun-adj-conjugation-0017"],
+    ["kobun_adjective_conjugation_form_0018","シク活用形容詞「悲し」の形「悲しく」は何形か。",["未然形","連用形","已然形","命令形"],1,"「悲しく」はシク活用の連用形。",2,"kobun-adj-conjugation-0018"],
+    ["kobun_adjective_conjugation_form_0019","ク活用形容詞「浅し」の形「浅き」は何形か。",["連用形","終止形","連体形","已然形"],2,"「浅き」はク活用の連体形。",2,"kobun-adj-conjugation-0019"],
+    ["kobun_adjective_conjugation_form_0020","シク活用形容詞「恐ろし」の形「恐ろしけれ」は何形か。",["未然形","終止形","連体形","已然形"],3,"「恐ろしけれ」はシク活用の已然形。",2,"kobun-adj-conjugation-0020"],
+    ["kobun_adjective_conjugation_form_0021","「寒くば、戸を閉ぢよ」の「寒く」は、この「ば」の直前では何形か。",["未然形","連用形","已然形","命令形"],0,"仮定条件の「ば」は未然形に接続する。形容詞の本活用では「寒く」が未然形として用いられる。",3,"kobun-adj-conjugation-0021"],
+    ["kobun_adjective_conjugation_form_0022","「さびしくば、文を書け」の「さびしく」は、この「ば」の直前では何形か。",["連用形","未然形","已然形","連体形"],1,"仮定条件の「ば」は未然形に接続するため、「さびしく」は未然形。",3,"kobun-adj-conjugation-0022"],
+    ["kobun_adjective_conjugation_form_0023","「高かりけり」の「高かり」は何形か。",["未然形","終止形","連用形","連体形"],2,"過去・詠嘆の助動詞「けり」は連用形に接続し、「高かり」はカリ活用の連用形。",3,"kobun-adj-conjugation-0023"],
+    ["kobun_adjective_conjugation_form_0024","「うつくしかりけり」の「うつくしかり」は何形か。",["未然形","終止形","連体形","連用形"],3,"「けり」は連用形接続で、「うつくしかり」はシク活用のカリ活用の連用形。",3,"kobun-adj-conjugation-0024"],
+    ["kobun_adjective_conjugation_form_0025","「近ければ、すぐ着かむ」の「近けれ」は何形か。",["已然形","未然形","連用形","連体形"],0,"確定条件を表す「ば」は已然形に接続し、「近けれ」は已然形。",3,"kobun-adj-conjugation-0025"]
+  ]
+}
