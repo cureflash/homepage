@@ -1,5 +1,5 @@
 {
-  "status": "todo",
-  "updated_at": null,
-  "next_task": "PLAN.md を読み、この学年の最初の未完了項目から開始する"
+  "status": "in_progress",
+  "updated_at": "2026-08-28T09:00:30+09:00",
+  "next_task": "中学3年の次の未完了技能『(a+b)(a-b)』から開始する。続いて共通因数でくくる因数分解、x^2+(a+b)x+ab型、平方公式型の因数分解を最大4 checkpointで進める。"
 }
