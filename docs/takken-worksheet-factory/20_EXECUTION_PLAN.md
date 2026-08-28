@@ -31,14 +31,14 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 - [ ] Decompose every concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` cutoff and primary sources.
 - [ ] Map existing verified questions only where they genuinely test the knowledge item; missing evidence remains a Phase 4.3 deficit.
 
-Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion.
+Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage.
 
 Latest checkpoint:
-- [x] `takken-concept-brokerage-price-opinion`: 2 verified items. Article 34-2(2) requires a宅建業者 who states an opinion on sale price or exchange valuation to make the basis clear, and the rule covers both sale and exchange. No existing Phase 2/3 question directly tests either item, so both remain explicit Phase 4.3 deficits.
+- [x] `takken-concept-general-brokerage`: 6 verified items. General brokerage permits concurrent appointment of other brokers and self-found transactions. The standard agreement uses disclosed other brokers by default but permits a nondisclosure special agreement; REINS registration is optional rather than statutorily mandatory; and the statutory three-month cap for exclusive brokerage types does not apply to general brokerage. Existing `takken-q-16-001` tests only the three-month cap for exclusive and sole-agency brokerage, so it is not mapped to this concept. All six items remain explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: 18/113 modeled concepts, 94 verified knowledge items, 16 existing verified questions mapped, 71 explicit question-coverage gaps.
+Current Phase 4.2 totals: 19/113 modeled concepts, 100 verified knowledge items, 16 existing verified questions mapped, 77 explicit question-coverage gaps.
 
-Exact continuation: `takken-concept-general-brokerage`, source unit `brokerage-contract-types`. Preserve all seventy-one explicit deficits and map existing questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
+Exact continuation: `takken-concept-exclusive-brokerage`, source units `brokerage-contract-types` and `brokerage-reins-reporting`. Preserve all seventy-seven explicit deficits and map `takken-q-16-001` only to knowledge it genuinely tests. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
