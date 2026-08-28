@@ -10,8 +10,8 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 2400 PDFs
-- total published physics: 3558 PDFs
+- formal `物理`: 2520 PDFs
+- total published physics: 3678 PDFs
 
 Formal `物理` currently has:
 
@@ -27,68 +27,65 @@ Formal `物理` currently has:
 - `電気と磁気：電場・電位`: 120 PDFs
 - `電気と磁気：コンデンサー`: 120 PDFs
 - `電気と磁気：電気回路`: 120 PDFs
+- `電気と磁気：磁場中の力`: 120 PDFs
 
-All 2400 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=1680` and `accepted-set=720`. Worksheet modes are `calculation-basic=630`, `calculation-reverse=1050`, and 180 each of retrieval forward/reverse/fill/true-false. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
+All 2520 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=1760` and `accepted-set=760`. Worksheet modes are `calculation-basic=650`, `calculation-reverse=1110`, and 190 each of retrieval forward/reverse/fill/true-false. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
 
-## Completed this run — electric circuits, 120 PDFs across four safe checkpoints
+## Completed this run — magnetic force, 120 PDFs across three safe checkpoints
 
-### 1. Resistance, resistivity and conductor geometry — 30 PDFs
+### 1. Force on a straight current in a perpendicular magnetic field — 40 PDFs
 
-- skill: `circuit-resistivity-geometry-numeric`
-- relation: `R=ρl/S`
-- learner-visible units: `ρ[Ω·mm²/m]`, `l[m]`, `S[mm²]`, `R[Ω]`
-- 10 direct resistance, 10 reverse resistivity, 10 reverse cross-sectional-area worksheets
-- existing reversible `product-over-divisor` relation is reused
+- skill: `magnetic-force-wire-perpendicular-numeric`
+- relation: `F=BIl`
+- learner-visible condition: straight current and uniform magnetic field are perpendicular
+- learner-visible units: `B[T]`, `I[A]`, `l[m]`, `F[N]`
+- 10 direct force, 10 reverse magnetic-flux-density, 10 reverse current, 10 reverse wire-length worksheets
+- existing reversible `product` relation is reused
 
-### 2. Source internal resistance — 30 PDFs
+### 2. Perpendicular Lorentz-force magnitude — 40 PDFs
 
-- skill: `circuit-internal-resistance-numeric`
-- relation for a discharging source: `E=V+rI`
-- current direction is stated explicitly as current flowing from the source into the external circuit
-- 10 direct emf, 10 reverse terminal-voltage, 10 reverse internal-resistance worksheets
-- existing reversible `offset-product` relation is reused
+- skill: `magnetic-force-lorentz-perpendicular-numeric`
+- relation: `F=|q|vB`
+- learner-visible condition: particle velocity and uniform magnetic field are perpendicular
+- learner-visible units: `|q|[μC]`, `v[m/s]`, `B[T]`, `F[μN]`; `1 μC×m/s×T=1 μN` is stated
+- 10 direct force, 10 reverse charge magnitude, 10 reverse speed, 10 reverse magnetic-flux-density worksheets
+- existing reversible `product` relation is reused
 
-### 3. Kirchhoff first law at one junction — 20 PDFs
+### 3. Magnetic-force concepts — 40 PDFs
 
-- skill: `circuit-kirchhoff-junction-numeric`
-- learner-visible topology: one current `Iin` enters a junction and `I1`, `I2` leave, so `Iin=I1+I2`
-- 10 direct incoming-current and 10 reverse outgoing-current worksheets
-- existing reversible `sum` relation is reused
-
-### 4. Electric-circuit concepts — 40 PDFs
-
-- skill: `circuit-core-concepts`
+- skill: `magnetic-force-core-concepts`
 - 10 each of forward, reverse, fill and true/false retrieval
-- covers `R=ρl/S`, conductor geometry, temperature dependence of resistivity, source internal resistance, Kirchhoff first/second laws and semiconductor scope
+- covers tesla, force on perpendicular/parallel currents, Lorentz force, positive/negative charge direction, parallel velocity-field zero-force condition, and `F=|q|vB`
 - finite accepted-answer sets are independently validated
 
 ## Curriculum basis
 
-The current MEXT High School Course of Study commentary is the authority for formal `物理`. Under `電気回路`, it requires understanding the basic laws of electric circuits through experiments and specifies that temperature change of resistivity and source internal resistance are treated, with semiconductors also touched on. The implementation stays within that scope and keeps signs, current direction and junction topology learner-visible.
+The current MEXT High School Course of Study commentary is the authority for formal `物理`. Under `電流と磁界`, it requires understanding the magnetic field produced by current, the force acting on a current in a magnetic field, electromagnetic induction and electromagnetic waves. Its handling specifies quantitative treatment of the force on current and explicitly touches on Lorentz force; charged-particle motion may be observed to investigate force direction. This run stays within that scope and restricts the numerical drills to perpendicular geometry so the relation and direction assumptions remain visible rather than hidden in generator state.
 
-The existing formal-Physics curriculum plan proceeds next to `磁場中の力`. Before generation, recheck the current MEXT `電流と磁界` scope and terminology and choose only mechanically verifiable relations with current direction, magnetic-field direction, force direction and geometry visible to the learner.
+The existing formal-Physics curriculum plan proceeds next to `電磁誘導`, then `交流の基本`.
 
 ## Validation and publication
 
-- no shared formula helper changed; numerical checkpoints reuse existing `product-over-divisor`, `offset-product` and `sum` relations
-- temporary branch-only candidate workflow was removed before merge
-- candidate validation run `33215542390`: success
-- candidate validation passed the full formal-Physics regression suite, deterministic regeneration, independent recomputation from learner-visible values, corrupted-answer rejection, retrieval validation, positive-domain checks, 120/120 new normalized-hash uniqueness and disjointness from the published catalog, generation of all 120 candidate PDFs, 2400-row prospective catalog validation, and PDF header/size/two-page checks
-- implementation PR #273 merged as `bc387332dbba75bd60efec62389b1f2333229f28`, preserving concurrent main progress
-- production Actions run `33215610585`: success
-- every production step succeeded: latest-main confirmation, full regression tests, 120-PDF generation, post-generation validation, 2400-row catalog/PDF validation, commit, and non-force safe push
-- worksheet-catalog concurrency audit run `33215610642`: success
-- publication commit: `60504c2ad730359fcc126b2ee870c7955a1db243` (`Publish 120 formal Physics electric-circuit worksheets`)
-- final contract: 2400 formal-Physics rows / 2400 unique hashes; `numeric=1680`, `accepted-set=720`; calculation-basic 630, calculation-reverse 1050, retrieval forward/reverse/fill/true-false 180 each
+- no shared formula helper changed; numerical checkpoints reuse the existing `product` relation
+- all new numerical values are positive and geometry/units are learner-visible
+- deterministic regeneration, independent recomputation from learner-visible values, corrupted-answer rejection, retrieval validation, and physical-domain checks are covered by `tests/test_science_physics_magnetic_force.py`
+- all 120 new normalized hashes are unique and disjoint from the previously published catalog
+- concurrent main progress was detected during implementation; the five unrelated Power古典 commits were reconciled into the science branch before merge, so no progress was rolled back
+- implementation PR #277 merged as `9a5784dcd65adaa795da4668cdba8ee94c371289`
+- production Actions run `33219362682`: success
+- every production step succeeded: latest-main confirmation, full regression tests, 120-PDF generation, post-generation validation, 2520-row catalog/PDF validation, commit, and non-force safe push
+- worksheet-catalog concurrency audit run `33219362699`: success
+- publication commit: `9e4f7cf8eb3c36da99440b8a82814e6c246c7a4a` (`Publish 120 formal Physics magnetic-force worksheets`)
+- final contract: 2520 formal-Physics rows / 2520 unique hashes; `numeric=1760`, `accepted-set=760`; calculation-basic 650, calculation-reverse 1110, retrieval forward/reverse/fill/true-false 190 each
 - shared catalog serialization remains `worksheet-catalog-publish-v1`
 
 ## Exact next starting point
 
-Continue formal course `物理` at `電気と磁気 / 磁場中の力`, following the existing curriculum plan.
+Continue formal course `物理` at `電気と磁気 / 電磁誘導`, following the existing curriculum plan.
 
 1. Start from latest `main`; re-read the science factory instructions, curriculum plan, STATUS and this HANDOFF, and reconcile parallel progress first.
-2. Recheck the current MEXT `電流と磁界` scope before selecting the first magnetic checkpoint.
-3. Keep current direction, magnetic-field direction, force direction and geometry learner-visible rather than inferred by hidden generator state.
+2. Recheck the current MEXT electromagnetic-induction scope before selecting the first checkpoint.
+3. Keep magnetic-field or magnetic-flux direction, conductor/coil geometry, current direction and any sign convention learner-visible rather than inferred by hidden generator state.
 4. Add a new shared formula relation only if existing transparent helpers cannot safely represent the verified relation; any shared-generator change requires regression tests.
 5. Preserve `formal_course=物理`, `grade=null`, deterministic seeds, independent validation, corrupted-answer rejection, normalized-hash uniqueness/existing-catalog collision checks, 20-problem two-page PDFs, mixed answer-type publisher validation, `worksheet-catalog-publish-v1`, and non-force latest-main push safety.
 6. Representative screenshot-based visual QA remains pending; structural PDF QA has passed but is not a substitute for visual QA.
