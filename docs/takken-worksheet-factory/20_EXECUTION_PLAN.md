@@ -78,11 +78,12 @@ Phase 4.2 checkpoints:
 - [x] `takken-concept-license-authority`: 2 items; `takken-q-03-001` mapped.
 - [x] `takken-concept-license-disqualification`: 4 items; `takken-q-04-001` mapped; current wording uses `拘禁刑`.
 - [x] `takken-concept-license-validity-renewal`: 2 items; `takken-q-05-001` / `takken-q-05-002` mapped.
-- [x] `takken-concept-license-transfer`: 4 verified items covering Minister->Governor, Governor->other Governor, Governor->Minister and the loss of effect of the prior license when the new license is obtained. No existing Phase 2/3 question directly tests these four rules. `takken-q-06-001` tests only the separate 30-day change-notice rule, so the four knowledge items remain explicitly unmapped for later Phase 4.3 deficit generation rather than being falsely linked.
+- [x] `takken-concept-license-transfer`: 4 verified items; no existing Phase 2/3 question directly tests them, so all four remain explicit Phase 4.3 deficits.
+- [x] `takken-concept-license-change-closure`: 7 verified items covering the 30-day roster-change notice, five statutory廃業等 notification categories/subjects/deadlines, and license-effect timing. `takken-q-06-001` maps only to the 30-day change-notice item; the other six remain explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: **6/113 modeled concepts, 16 verified knowledge items, 7 existing verified questions mapped, 4 explicit question-coverage gaps**.
+Current Phase 4.2 totals: **7/113 modeled concepts, 23 verified knowledge items, 8 existing verified questions mapped, 10 explicit question-coverage gaps**.
 
-**Exact continuation:** `takken-concept-license-change-closure`, source unit `takken-gyoho-license-change-closure`. Model the 30-day change-notice rule and statutory廃業等 notification subjects/deadlines, then map `takken-q-06-001` only to the knowledge it actually tests. Do not start Phase 4.3 yet.
+**Exact continuation:** `takken-concept-roster`, source unit `takken-gyoho-roster-signs`. Preserve all ten explicit deficits and map existing questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
