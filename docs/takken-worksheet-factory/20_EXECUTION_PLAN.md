@@ -80,10 +80,11 @@ Phase 4.2 checkpoints:
 - [x] `takken-concept-license-validity-renewal`: 2 items; `takken-q-05-001` / `takken-q-05-002` mapped.
 - [x] `takken-concept-license-transfer`: 4 verified items; no existing Phase 2/3 question directly tests them, so all four remain explicit Phase 4.3 deficits.
 - [x] `takken-concept-license-change-closure`: 7 verified items covering the 30-day roster-change notice, five statutory廃業等 notification categories/subjects/deadlines, and license-effect timing. `takken-q-06-001` maps only to the 30-day change-notice item; the other six remain explicit Phase 4.3 deficits.
+- [x] `takken-concept-roster`: 7 verified items covering the statutory roster system, licensing-authority maintenance, identity entries, personnel entries, office/exclusive-takkenshi entries, other statutory entries and general inspection. `takken-q-07-001` maps only to the statutory-system item; the six detailed roster/inspection items remain explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: **7/113 modeled concepts, 23 verified knowledge items, 8 existing verified questions mapped, 10 explicit question-coverage gaps**.
+Current Phase 4.2 totals: **8/113 modeled concepts, 30 verified knowledge items, 9 existing verified questions mapped, 16 explicit question-coverage gaps**.
 
-**Exact continuation:** `takken-concept-roster`, source unit `takken-gyoho-roster-signs`. Preserve all ten explicit deficits and map existing questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
+**Exact continuation:** `takken-concept-office-signs`, source unit `takken-gyoho-roster-signs`. Preserve all sixteen explicit deficits and map existing questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
