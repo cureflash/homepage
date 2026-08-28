@@ -53,7 +53,7 @@
       knowledgeId: "takken-k-brokerage-contract-document-price-or-valuation",
       claim: "媒介契約書面には、対象宅地・建物を売買すべき価額または交換の場合の評価額を記載する。",
       conditions: ["宅建業法34条の2第1項の媒介契約書面を作成する場合であること"],
-      exceptions: ["宅建業者がその価額・評価額について意見を述べる場合の根拠明示義務は、別のknowledge itemとして扱う。"],
+      exceptions: ["宅建業者がその価額・評価額について意見を述べる場合の根拠明示義務は、別conceptで扱う。"],
       importance: "A",
       primarySources: [statute]
     },
@@ -86,19 +86,55 @@
     },
     {
       ...shared,
-      knowledgeId: "takken-k-brokerage-contract-document-reins-and-remuneration",
-      claim: "媒介契約書面には、指定流通機構への登録に関する事項および報酬に関する事項を記載する。",
+      knowledgeId: "takken-k-brokerage-contract-document-reins-entry",
+      claim: "媒介契約書面には、指定流通機構への登録に関する事項を記載する。",
       conditions: ["宅建業法34条の2第1項の媒介契約書面を作成する場合であること"],
-      exceptions: ["REINSへの具体的な登録義務・期限はREINS conceptで扱う。", "報酬額の法定上限は報酬額conceptで扱う。"],
+      exceptions: ["REINSへの具体的な登録義務・期限はREINS conceptで扱う。"],
       importance: "A",
       primarySources: [statute]
     },
     {
       ...shared,
-      knowledgeId: "takken-k-brokerage-contract-document-regulation-additional-items",
-      claim: "媒介契約書面には省令所定の追加事項として、専任・専属専任等で依頼者が契約上の制限に反した場合の措置や、標準媒介契約約款に基づく契約か否かの別を記載する。",
-      conditions: ["各媒介契約類型について宅建業法施行規則15条の9に該当する場合であること"],
-      exceptions: ["契約類型に関係なく同一の違反措置を一律記載するという意味ではない。"],
+      knowledgeId: "takken-k-brokerage-contract-document-remuneration-entry",
+      claim: "媒介契約書面には、媒介に係る報酬に関する事項を記載する。",
+      conditions: ["宅建業法34条の2第1項の媒介契約書面を作成する場合であること"],
+      exceptions: ["報酬額の法定上限そのものは報酬額conceptで扱う。"],
+      importance: "A",
+      primarySources: [statute]
+    },
+    {
+      ...shared,
+      knowledgeId: "takken-k-brokerage-contract-document-exclusive-breach-measure",
+      claim: "専任媒介契約では、依頼者が他の宅建業者の媒介または代理によって売買・交換契約を成立させた場合の措置を、媒介契約書面に記載する。",
+      conditions: ["専任媒介契約について宅建業法施行規則15条の9第1号の記載事項を判定する場合であること"],
+      exceptions: ["一般媒介や専属専任媒介に同一の契約違反態様をそのまま当てはめない。"],
+      importance: "B",
+      primarySources: [statute, regulation]
+    },
+    {
+      ...shared,
+      knowledgeId: "takken-k-brokerage-contract-document-sole-agency-breach-measure",
+      claim: "専属専任媒介契約では、依頼者が宅建業者の探索した相手方以外の者と売買・交換契約を成立させた場合の措置を、媒介契約書面に記載する。",
+      conditions: ["専属専任媒介契約について宅建業法施行規則15条の9第2号の記載事項を判定する場合であること"],
+      exceptions: ["専任媒介では自己発見取引そのものが同じ契約違反態様になるわけではない。"],
+      importance: "B",
+      primarySources: [statute, regulation]
+    },
+    {
+      ...shared,
+      knowledgeId: "takken-k-brokerage-contract-document-open-undisclosed-broker-measure",
+      claim: "他の宅建業者を明示する義務を伴う一般媒介契約では、依頼者が明示していない宅建業者の媒介または代理によって売買・交換契約を成立させた場合の措置を、媒介契約書面に記載する。",
+      conditions: ["他の宅建業者を明示する義務を定めた一般媒介契約について宅建業法施行規則15条の9第3号を判定する場合であること"],
+      exceptions: ["明示義務を定めていない一般媒介契約に同じ違反措置を要求するものではない。"],
+      importance: "B",
+      primarySources: [statute, regulation]
+    },
+    {
+      ...shared,
+      knowledgeId: "takken-k-brokerage-contract-document-standard-terms-basis",
+      claim: "媒介契約書面には、その媒介契約が国土交通大臣の定める標準媒介契約約款に基づく契約であるか否かの別を記載する。",
+      conditions: ["宅建業法施行規則15条の9第4号の記載事項を判定する場合であること"],
+      exceptions: ["標準媒介契約約款を必ず使用しなければならないという意味ではなく、基づくか否かを記載する事項である。"],
       importance: "B",
       primarySources: [statute, regulation]
     },
@@ -120,7 +156,7 @@
     if (item.examYear !== 2026 || item.lawAsOf !== "2026-04-01" || item.factcheckStatus !== "verified") throw new Error(`Invalid knowledge item state: ${item.knowledgeId}`);
     if (!item.primarySources.some((entry) => entry.sourceType === "statute")) throw new Error(`Missing statute source: ${item.knowledgeId}`);
   }
-  if (knowledgeItems.length !== 9) throw new Error(`Expected 9 brokerage-contract-document knowledge items, got ${knowledgeItems.length}`);
+  if (knowledgeItems.length !== 13) throw new Error(`Expected 13 brokerage-contract-document knowledge items, got ${knowledgeItems.length}`);
 
   window.PowerTakkenKnowledgeItemsBrokerageContractDocument = Object.freeze(knowledgeItems.map((item) => Object.freeze(item)));
 })();
