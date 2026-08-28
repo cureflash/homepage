@@ -10,8 +10,8 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 1610 PDFs
-- total published physics: 2768 PDFs
+- formal `物理`: 1730 PDFs
+- total published physics: 2888 PDFs
 
 Formal `物理` currently has:
 
@@ -21,72 +21,69 @@ Formal `物理` currently has:
 - `様々な運動：円運動と単振動`: 380 PDFs
 - `様々な運動：万有引力`: 180 PDFs
 - `様々な運動：気体分子の運動`: 270 PDFs
+- `波：波の伝わり方`: 120 PDFs
 
-All 1610 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=1250` and `accepted-set=360`. Worksheet modes are `calculation-basic=450`, `calculation-reverse=800`, and 90 each of retrieval forward/reverse/fill/true-false. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
+All 1730 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=1250` and `accepted-set=480`. Worksheet modes are `calculation-basic=450`, `calculation-reverse=800`, and 120 each of retrieval forward/reverse/fill/true-false. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
 
-## Completed this run — molecular energy and thermodynamics, 110 PDFs
+## Completed this run — formal Physics waves, 120 PDFs
 
-Four consecutive safe checkpoints were completed. Existing shared `product`, `sum`, and retrieval generators were reused; no new shared formula relation was introduced.
+Three consecutive safe checkpoints were completed. The existing finite-answer retrieval generator was reused throughout; no shared formula relation changed.
 
-### 1. Molecular mean kinetic energy — 10 PDFs
+### 1. Wave propagation, reflection and refraction — 40 PDFs
 
-- skill: `molecular-mean-kinetic-energy-numeric`
-- learner-visible relation: `K̄ = (3/2)k_B T`
-- learner-visible exact SI constant: `k_B = 1.380649×10^-23 J/K`
-- absolute temperature is in K and positive
-- direct calculation only, 10 deterministic variants, 20 problems each
-- reverse-temperature generation was intentionally not added because direct scientific-notation output is sufficient for this checkpoint and avoids inventing an answer-rounding inversion contract
-
-### 2. Monatomic ideal-gas internal energy — 30 PDFs
-
-- skill: `ideal-gas-internal-energy-numeric`
-- learner-visible relation: `U = (3/2)nRT`
-- `R = 8.31 J/(mol·K)` is explicit and consistent with the preceding school-calculation gas worksheets
-- 10 direct-U, 10 reverse-amount and 10 reverse-absolute-temperature worksheets
-- all source physical quantities are learner-visible and positive
-
-### 3. Thermal-gas core concepts — 40 PDFs
-
-- skill: `thermal-gas-core-concepts`
+- skill: `wave-propagation-core-concepts`
 - forward / reverse / fill / true-false × 10 deterministic variants
-- covers mean molecular kinetic energy proportional to absolute temperature, monatomic ideal-gas internal energy, the first law, and explicit heat/work sign conventions
-- reverse retrieval requires unique shown descriptions
+- covers Huygens' principle, wavefronts, water-wave reflection, water-wave refraction, frequency across a boundary, wavelength/speed relation, and refractive-index meaning
+- finite accepted answers only; reverse shown descriptions are required to be unique
 
-### 4. First law of thermodynamics — 30 PDFs
+### 2. Sinusoidal-wave expression and phase — 40 PDFs
 
-- skill: `thermodynamics-first-law-numeric`
-- explicit convention: `ΔU = Q + W_on`
-- `Q > 0`: heat enters the gas; heat released by the gas is negative
-- `W_on > 0`: external surroundings do work on the gas; work done by the gas on the surroundings is negative
-- 10 direct-ΔU, 10 reverse-Q and 10 reverse-W_on worksheets
-- positive and negative values are deliberately present so the sign convention is actually exercised
+- skill: `wave-sine-phase-core-concepts`
+- forward / reverse / fill / true-false × 10 deterministic variants
+- covers amplitude, period, wavelength, phase, a representative `+x` travelling-wave form `y=A sin 2π(t/T-x/λ)`, same phase at separation `λ`, and opposite phase at separation `λ/2`
+- no diagram-dependent inference was introduced
+
+### 3. Water-wave interference and diffraction — 40 PDFs
+
+- skill: `water-wave-interference-diffraction-concepts`
+- forward / reverse / fill / true-false × 10 deterministic variants
+- covers interference, constructive path difference `mλ`, destructive path difference `(m+1/2)λ` for same-phase sources, diffraction, the wavelength/aperture-width relationship, and qualitative effects of changing source spacing/frequency
+- finite accepted answers only
+
+## Curriculum placement decision
+
+The current MEXT High School Course of Study Commentary was rechecked before implementation. In formal `物理`, the wave block explicitly treats:
+
+- wave propagation and representation, including Huygens' principle, water-wave reflection/refraction, sinusoidal-wave expression and phase;
+- water-wave interference and diffraction.
+
+Standing waves (`定在波` / `定常波`) are treated in `物理基礎`, so the loose previous handoff wording "wave interference / standing-wave coverage" was not followed literally. Duplicating standing-wave content into formal `物理` would conflict with the authoritative current-course placement and existing Physics-Basics coverage.
+
+The next formal-Physics wave subsection is `音`, beginning with sound interference/diffraction and then the Doppler effect. MEXT specifies sound interference/diffraction and treats Doppler mainly for observer and source moving on the same straight line.
 
 ## Validation and publication
 
-- implementation PR #237 merged as `39391396e02f6e10d5756aae0ab6dd45e8dee3fe`
-- candidate validation run `33183903053` passed all existing formal-Physics regressions, the new thermal-gas tests, and a no-publication dry-run that rendered all 110 candidate PDFs and validated 1610 prospective rows / 1610 unique hashes / PDF header, size and two-page structure
-- the first branch run of the production workflow failed only because the existing workflow intentionally checked out `main` even on branch pushes, so the new branch-only test file was absent; this was diagnosed before merge and was not a content/test failure
-- production Actions run `33183993675` completed successfully after merge
-- every production step succeeded: latest-main confirmation, all shared/formal-Physics tests, 110-PDF generation, post-generation validation, 1610-row catalog/PDF validation, commit, and non-force safe push
-- publication commit: `80ad5d49be641ae6f985687b083d15dfde358a0f` (`Publish 110 formal Physics thermal-gas worksheets`)
-- final contract: 1610 formal-Physics rows / 1610 unique hashes; `numeric=1250`, `accepted-set=360`; calculation-basic 450, calculation-reverse 800, retrieval forward/reverse/fill/true-false 90 each
-- gas-molecular-motion unit total is now 270 PDFs
-- new topic tests require deterministic regeneration, independent recomputation from learner-visible values, corrupted-answer rejection, reverse-retrieval uniqueness, 110/110 new normalized-hash uniqueness and disjointness from the existing catalog
-- publication safety remains `worksheet-catalog-publish-v2` serialization and non-force latest-main push
+- implementation PR #244 merged as `1be1203a28221be048a6bf72c6404e8747434cb0`
+- the branch production run failed only because that workflow intentionally checks out `main` even on branch pushes, so the new branch-only wave test file was absent; existing formal-Physics tests passed before that expected missing-file failure
+- production Actions run `33188717422` completed successfully after merge
+- every production step succeeded: latest-main confirmation, all shared/formal-Physics tests including the new wave tests, 120-PDF generation, post-generation validation, 1730-row catalog/PDF validation, commit, and non-force safe push
+- publication commit: `bf6a2ae370e707f187fcf71ee6bb6bb0f2c7ed9a` (`Publish 120 formal Physics wave worksheets`)
+- final contract: 1730 formal-Physics rows / 1730 unique hashes; `numeric=1250`, `accepted-set=480`; calculation-basic 450, calculation-reverse 800, retrieval forward/reverse/fill/true-false 120 each
+- new wave tests require deterministic regeneration, finite-answer independent validation, corrupted-answer rejection, reverse-retrieval uniqueness, 120/120 new normalized-hash uniqueness and disjointness from the existing catalog
 
-## Curriculum / source basis checked this run
+## Shared catalog-writer safety reconciled
 
-The current MEXT high-school Course of Study commentary remains the curriculum authority. The completed gas block follows the formal `物理` sequence through molecular mean kinetic energy, ideal-gas internal energy, state changes, and the first law of thermodynamics.
+The Physics publisher had remained on temporary recovery concurrency group `worksheet-catalog-publish-v2` from an earlier stale JH3 writer incident. The repository-wide shared instructions and `tests/test_worksheet_catalog_writer_concurrency.py` require every authoritative catalog writer to use `worksheet-catalog-publish-v1`.
 
-NIST's current fundamental-constants database identifies the 2022 CODATA recommended values as the latest available set. The Boltzmann constant is exactly `1.380649×10^-23 J/K`, so no hidden rounded constant was needed for the mean-kinetic-energy checkpoint.
+The old blocking JH3 run `33134751770` is now completed/cancelled, so the recovery split is no longer needed. This run restored the Physics publisher to `worksheet-catalog-publish-v1`. The post-merge catalog concurrency audit run `33188717453` passed, restoring one repository-wide serialized writer group without weakening latest-main checks or non-force push safety.
 
 ## Exact next starting point
 
-The gas-molecular-motion block is closed at this basic focused-worksheet boundary. Continue formal course `物理` in the curriculum plan with the next block, waves, beginning from **wave interference / standing-wave coverage**.
+Continue formal course `物理` in the wave block at **`音：音の干渉と回折`**, then **`音のドップラー効果`**.
 
 1. Start from latest `main`; re-read the science factory instructions, execution plan, STATUS and this HANDOFF, and reconcile parallel progress first.
-2. Recheck the current MEXT formal-Physics wave placement and terminology before defining the first wave checkpoint.
-3. Prefer machine-verifiable basic relations and finite-answer facts. Do not invent diagram-dependent or ambiguous interference questions before the renderer/validator can verify them deterministically.
+2. Recheck the current MEXT sound subsection before defining content. Keep Doppler work initially within the stated same-line source/observer treatment unless a broader case is independently justified by the curriculum source.
+3. Prefer machine-verifiable finite-answer facts for sound interference/diffraction. For Doppler numerical work, define sign/direction conventions and learner-visible quantities before generating reverse formulas.
 4. Reuse existing formula/retrieval relations where transparent. A new shared relation requires its own independent regression tests plus relevant Physics/Physics-Basics regressions.
-5. Preserve `formal_course=物理`, `grade=null`, deterministic seeds, independent recomputation/finite-set validation, corrupted-answer rejection, reverse-retrieval uniqueness, normalized-hash uniqueness and existing-catalog collision checks, 20-problem two-page PDFs, mixed numeric/accepted-set publisher validation, `worksheet-catalog-publish-v2`, and non-force latest-main push safety.
+5. Preserve `formal_course=物理`, `grade=null`, deterministic seeds, independent recomputation/finite-set validation, corrupted-answer rejection, reverse-retrieval uniqueness, normalized-hash uniqueness and existing-catalog collision checks, 20-problem two-page PDFs, mixed numeric/accepted-set publisher validation, `worksheet-catalog-publish-v1`, and non-force latest-main push safety.
 6. Representative screenshot-based visual QA remains pending; structural PDF QA has passed but is not a substitute for visual QA.
