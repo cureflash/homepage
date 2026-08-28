@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: **1,550**
-- Verified: **1,475**
+- Checked: **1,575**
+- Verified: **1,500**
 - Needs revision: **75**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
@@ -14,18 +14,18 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.verb.causative_have_make_let` 0026-0050
+### `p5.verb.causative_have_make_let` 0051-0075
 
 - Checked: **25**
 - Verified: **25**
 - Needs revision: **0**
 - Rejected: **0**
 
-All 25 items use `make + person/team + base verb`. For each question, exactly one of the four displayed choices supplies the required base form, the sentence is natural TOEIC-style business English, the distractors are not defensible alternatives in the blank, and the saved explanation matches the causative rule.
+All 25 items use `let + person/team + base verb`. For each question, exactly one of the four displayed choices supplies the required base form, the sentence is natural TOEIC-style business English, distractors are not defensible alternatives in the blank, and the saved explanation matches the causative rule.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-027-causative-part2.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-028-causative-part3.qa.json`
 
 ### QA-method limitation
 
@@ -41,6 +41,6 @@ Repo-local full schema/Node tests were not executed in this connector-only run. 
 
 Continue the oldest unchecked backlog at:
 
-`p5_verb_causative_have_make_let_0051`
+`p5_verb_causative_have_make_let_0076`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
