@@ -8,9 +8,9 @@
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
 - Fully completed generated micro-skills: 30 / 44
-- Generated questions persisted: 3,050
-- QA checked: 2,050
-- Verified: 1,975
+- Generated questions persisted: 3,075
+- QA checked: 2,075
+- Verified: 2,000
 - Needs revision: 75
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -19,28 +19,28 @@
 
 ## This run — generation
 
-Continued `p5.rel.whose` with IDs 0026-0050:
+Continued `p5.rel.whose` with IDs 0051-0075:
 
-`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/whose/pending/batch-20260829-047-part2.json`
+`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/whose/pending/batch-20260829-048-part3.json`
 
-All 25 remain `pending_validation`. Contexts span consulting, manufacturing, travel policy, contracts, research, logistics, facilities, hospitality, procurement, hiring, publishing, finance, and professional services. Answer positions are A/B/C/D = 7/6/6/6. Each item tests possessive relative-pronoun use before a noun. Exact IDs and template IDs are unique within the batch. Full revision-bound cross-bank semantic duplicate clearance remains incomplete.
+All 25 remain `pending_validation`. Answer positions are A/B/C/D = 7/6/6/6. Exact duplicate stems within the new checkpoint: 0. SequenceMatcher similarity >= 0.94 within the checkpoint: 0; maximum similarity was about 0.547. Contexts include architecture, retail, certification, startups, accounting, conferences, warranties, restaurants, engineering, insurance, clinics, publishing, facilities, logistics, higher education, hospitality, and construction.
 
-`p5.rel.whose` is now 50/100. Next generation is `p5_rel_whose_0051`.
+`p5.rel.whose` is now 75/100. Next generation is `p5_rel_whose_0076`.
 
 ## This run — QA
 
-Reviewed oldest unchecked `p5.conn.despite_vs_although` IDs 0026-0050.
+Reviewed oldest unchecked `p5.conn.despite_vs_although` IDs 0051-0075.
 
 - Checked: 25
 - Verified: 25
 - Needs revision: 0
 - Rejected: 0
 
-Each sentence was reviewed against all four choices. Every blank is followed by a complete finite clause, so `although` is uniquely valid; `despite` cannot introduce the clause directly. No alternate defensible answer, naturalness defect, target-skill mismatch, distractor defect, or explanation mismatch was found.
+Every blank is followed by a gerund phrase, so `despite` is uniquely valid; `although` requires a finite clause. Each sentence and all four choices were reviewed for unique-answer validity, naturalness, target-skill fit, distractor plausibility, and explanation consistency.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-047-despite-vs-although-part2.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-048-despite-vs-although-part3.qa.json`
 
 ## QA-method / test limitation
 
@@ -48,10 +48,10 @@ The persisted candidate format co-locates stems, choices, proposed answers and e
 
 ## Next generation
 
-Continue `p5.rel.whose` at `p5_rel_whose_0051`.
+Continue `p5.rel.whose` at `p5_rel_whose_0076`.
 
 ## Next QA
 
-Continue the oldest unchecked backlog at `p5_conn_despite_vs_although_0051`.
+Continue the oldest unchecked backlog at `p5_conn_despite_vs_although_0076`.
 
 Existing `needs_revision` items from earlier skills remain unresolved.
