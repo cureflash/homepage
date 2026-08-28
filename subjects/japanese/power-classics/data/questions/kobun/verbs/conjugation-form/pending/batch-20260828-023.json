@@ -4,29 +4,12 @@
   "skill_group": "kobun.verbs",
   "subcategory": "動詞・活用形",
   "skill": "kobun.verb.conjugation_form",
-  "taxonomy_path": [
-    "kobun",
-    "kobun.verbs",
-    "動詞・活用形",
-    "kobun.verb.conjugation_form"
-  ],
-  "tags": [
-    "kobun",
-    "verbs",
-    "conjugation-form"
-  ],
+  "taxonomy_path": ["kobun", "kobun.verbs", "動詞・活用形", "kobun.verb.conjugation_form"],
+  "tags": ["kobun", "verbs", "conjugation-form"],
   "generator_version": "power-classics-content-generate-v1.0",
   "validation_status": "pending_validation",
   "qa_status": "verified",
-  "item_fields": [
-    "id",
-    "stem",
-    "choices",
-    "proposed_answer_index",
-    "explanation",
-    "difficulty",
-    "template_id"
-  ],
+  "item_fields": ["id", "stem", "choices", "proposed_answer_index", "explanation", "difficulty", "template_id"],
   "generated_at": "2026-08-28T19:00:00+09:00",
   "batch": "2026-08-28-scheduled-023",
   "items": [
@@ -47,7 +30,7 @@
     ["kobun_verb_conjugation_form_0215","古文「使者、ただ今参上す。」の「参上す」が何形か、最も適切なものを選べ。",["未然形","連用形","終止形","連体形"],2,"サ行変格活用「参上す」の「参上す」は終止形。ここでは文末で言い切る。",1,"kobun-conj-form-shushi-0215"],
     ["kobun_verb_conjugation_form_0216","古文「御前に侍る人々、皆静かなり」の「侍る」が何形か、最も適切なものを選べ。",["未然形","連用形","終止形","連体形"],3,"ラ行変格活用「侍り」の「侍る」は連体形。名詞「人々」を修飾している。",2,"kobun-conj-form-rentai-0216"],
     ["kobun_verb_conjugation_form_0217","古文「友来れども、主人はまだ帰らず」の「来れ」が何形か、最も適切なものを選べ。",["已然形","未然形","連用形","終止形"],0,"カ行変格活用「来（く）」の「来れ」は已然形。接続助詞「ども」に続く。",2,"kobun-conj-form-izen-0217"],
-    ["kobun_verb_conjugation_form_0218","古文の命令「このことをよく記せよ」における「記せよ」が何形か、最も適切なものを選べ。",["未然形","命令形","終止形","連体形"],1,"サ行変格活用「記す」の「記せよ」は命令形。直接の命令表現である。",2,"kobun-conj-form-meirei-0218"],
+    ["kobun_verb_conjugation_form_0218","古文の命令「このことをよく記録せよ」における「記録せよ」が何形か、最も適切なものを選べ。",["未然形","命令形","終止形","連体形"],1,"サ行変格活用「記録す」の「記録せよ」は命令形。直接の命令表現である。",2,"kobun-conj-form-meirei-0218"],
     ["kobun_verb_conjugation_form_0219","古文「老翁、里を往なむとす」の「往な」が何形か、最も適切なものを選べ。",["連用形","終止形","未然形","連体形"],2,"ナ行変格活用「往ぬ（いぬ）」の「往な」は未然形。助動詞「む」は未然形に接続する。",2,"kobun-conj-form-mizen-0219"],
     ["kobun_verb_conjugation_form_0220","古文「旅人、里を往にて山路に入る」の「往に」が何形か、最も適切なものを選べ。",["未然形","終止形","連体形","連用形"],3,"ナ行変格活用「往ぬ（いぬ）」の「往に」は連用形。接続助詞「て」に続く。",2,"kobun-conj-form-renyo-0220"],
     ["kobun_verb_conjugation_form_0221","古文「その者、暁には里を往ぬ。」の「往ぬ」が何形か、最も適切なものを選べ。",["終止形","未然形","連用形","連体形"],0,"ナ行変格活用「往ぬ（いぬ）」の「往ぬ」は終止形。ここでは文末で言い切る。",2,"kobun-conj-form-shushi-0221"],
