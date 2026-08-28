@@ -16,21 +16,22 @@ Canonical existing-question mapping: `qualifications/takken/data/power-question-
 
 Re-read latest `main` and confirmed the Phase 4 gate remains satisfied: 90/90 units generated, 163/163 questions checked and verified, pending 0, `validation_complete: true`. No open Takken PR required reconciliation before continuing.
 
-Advanced Phase 4.2 at the exact prescribed concept **`takken-concept-license-required`**, source unit `takken-gyoho-license-required`, while preserving the prior `takken-concept-business-definition` knowledge model and mappings.
+Advanced Phase 4.2 at the exact prescribed concept **`takken-concept-license-authority`**, source unit `takken-gyoho-license-authority`, while preserving all prior knowledge items and mappings.
 
-Confirmed the existing Phase 2/3 evidence question `takken-q-02-001` remains `verified`. Independently reopened the current e-Gov Real Estate Brokerage Act page and MLIT licensing guidance. MLIT states that a person intending to conduct宅地建物取引業 must obtain a license from the Minister of Land, Infrastructure, Transport and Tourism or the prefectural governor; its table also confirms that this requirement applies to both corporations and individuals.
+Confirmed existing Phase 2/3 evidence question `takken-q-03-001` remains `verified`. Reopened current e-Gov宅地建物取引業法 and current MLIT licensing guidance. MLIT's current license-authority table states that a person establishing offices in **two or more prefectures** and conducting宅地建物取引業 requires a **Minister of Land, Infrastructure, Transport and Tourism** license, while a person whose offices are confined to **one prefecture** requires that **prefectural governor's** license. The table expressly applies the same split to both corporations and individuals.
 
-Added one atomic verified knowledge item:
+Added two atomic verified knowledge items:
 
-- `takken-k-license-required-general` — a person intending to conduct宅地建物取引業 must obtain the statutory宅建業免許; the condition applies irrespective of individual/corporate form, while conduct outside the statutory definition of宅地建物取引業 does not trigger this particular licensing obligation.
+- `takken-k-license-authority-minister-multiple-prefectures` — two-or-more-prefecture office configuration -> Minister license.
+- `takken-k-license-authority-governor-single-prefecture` — one-prefecture-only office configuration -> that prefectural governor's license.
 
-The item carries stable `knowledgeId`, `conceptId`, claim, conditions, exception boundary, importance, `examYear: 2026`, `lawAsOf: "2026-04-01"`, verified factcheck status, source-unit/fact traceability, and e-Gov/MLIT source metadata.
+Each item carries stable `knowledgeId`, `conceptId`, claim, conditions, opposite-rule exception boundary, importance, `examYear: 2026`, `lawAsOf: "2026-04-01"`, verified factcheck status, source-unit/fact traceability, and e-Gov/MLIT source metadata.
 
 Mapped existing verified question evidence non-destructively:
 
-- `takken-q-02-001` -> `takken-concept-license-required` -> `takken-k-license-required-general`.
+- `takken-q-03-001` -> `takken-concept-license-authority` -> both license-authority knowledge items, because the verified question tests the multi-prefecture rule and its verified explanation explicitly contrasts the single-prefecture rule.
 
-Extended runtime guards so canonical knowledge can cover multiple modeled concepts without weakening invariants. Guards now reject duplicate/unknown concept or knowledge IDs, missing statute sources, wrong law versions, missing source-unit/fact traceability, unverified canonical knowledge, duplicate question mappings, unknown knowledge refs, and incomplete coverage of the modeled knowledge set.
+Extended runtime guards only for this new modeled concept. Guards continue to reject duplicate/unknown concept or knowledge IDs, missing statute sources, wrong law versions, missing source-unit/fact traceability, unverified canonical knowledge, duplicate question mappings, unknown knowledge refs, and incomplete coverage of the modeled knowledge set.
 
 No new 50-question drill items, no print generation, and no app linkage were created.
 
@@ -42,19 +43,19 @@ No new 50-question drill items, no print generation, and no app linkage were cre
 - `validation_complete`: true
 - Phase 4.1 concept inventory: complete — 113 concepts
 - Phase 4.2 knowledge items: active
-- Knowledge-modeled concepts: **2/113**
-- Canonical knowledge items: **4**
-- Existing verified questions mapped: **3**
+- Knowledge-modeled concepts: **3/113**
+- Canonical knowledge items: **6**
+- Existing verified questions mapped: **4**
 - Phase 4.3 fifty-question expansion: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at **`takken-concept-license-authority`** and source unit `takken-gyoho-license-authority`.
+Continue Phase 4.2 at **`takken-concept-license-disqualification`** and source unit `takken-gyoho-license-disqualification`.
 
-1. Reconcile latest `main` and preserve all current four knowledge items / three mappings.
-2. Decompose `takken-concept-license-authority` into atomic knowledge items distinguishing one-prefecture and two-or-more-prefecture office configurations, using 2026-04-01 primary/official sources.
-3. Map existing verified Phase 2/3 evidence beginning with `takken-q-03-001`.
+1. Reconcile latest `main` and preserve all six current knowledge items / four mappings.
+2. Decompose the欠格事由 concept into atomic knowledge items using 2026-04-01 primary/official sources; do not flatten distinct statutory grounds into one vague "5 years" item.
+3. Map existing verified Phase 2/3 evidence beginning with `takken-q-04-001`.
 4. Extend reference/coverage guards only as needed; do not weaken verified-only or statute-source invariants.
 5. Do **not** start 50-question deficit generation yet.
 
