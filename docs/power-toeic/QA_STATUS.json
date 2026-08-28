@@ -1,18 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1775,
-  "verified_question_count": 1700,
+  "checked_question_count": 1800,
+  "verified_question_count": 1725,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-28-scheduled-036-participle-clause-part3",
+  "last_completed_batch": "2026-08-28-scheduled-037-participle-clause-part4",
   "last_completed_micro_skill": "p5.verb.participle_clause",
   "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
-  "next_batch": "2026-08-28-scheduled-037-participle-clause-part4",
-  "next_micro_skill": "p5.verb.participle_clause",
-  "next_question_id": "p5_verb_participle_clause_0076",
+  "next_batch": "2026-08-28-scheduled-038-preposition-vs-conjunction-part1",
+  "next_micro_skill": "p5.conn.preposition_vs_conjunction",
+  "next_question_id": "p5_conn_preposition_vs_conjunction_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-28T19:16:00+09:00"
+  "updated_at": "2026-08-28T20:15:00+09:00"
 }
