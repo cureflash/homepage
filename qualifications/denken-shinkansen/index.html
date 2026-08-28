@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="新幹線を題材に電験三種・二種を学ぶ無料教材。解説PDF、練習問題、PowerPoint、根拠資料をWebで閲覧できます。">
+  <title>電験×新幹線｜ひかり教材室</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="denken.css">
+</head>
+<body data-page="index">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../../index.html">ひかり教材室</a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="../../worksheets/">プリント配布</a>
+        <a href="../../subjects/math/">算数・数学</a>
+        <a href="../../subjects/science/">理科</a>
+        <a href="../takken/">宅建</a>
+        <a href="./">電験×新幹線</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container breadcrumb"><a href="../../index.html">ホーム</a> / 資格 / 電験×新幹線</div>
+
+    <section class="container denken-hero">
+      <p class="eyebrow">DENKEN × SHINKANSEN</p>
+      <h1>新幹線で学ぶ、電験三種・二種</h1>
+      <p>実在する新幹線車両・電力設備・主回路・制御を入口に、電験の理論・電力・機械を学ぶ教材です。公開工程を完了したテーマから順次追加します。</p>
+      <div class="denken-summary">
+        <span class="denken-pill">全10系列</span>
+        <span class="denken-pill" data-published-count>公開数を読み込み中</span>
+        <span class="denken-pill">解説PDF＋練習PDF</span>
+      </div>
+    </section>
+
+    <section class="container section" aria-labelledby="series-heading">
+      <div class="section-heading">
+        <h2 id="series-heading">教材シリーズ</h2>
+        <p>三種4系列、二種4系列、その後に電気数学三種・二種の順で制作します。</p>
+      </div>
+      <div class="series-grid" data-series-grid></div>
+    </section>
+
+    <section class="container section" aria-labelledby="topics-heading">
+      <div class="section-heading">
+        <h2 id="topics-heading">公開中の教材</h2>
+        <p>テーマを開くと、解説PDFと練習PDFをブラウザ内で切り替えて閲覧できます。</p>
+      </div>
+      <div class="denken-toolbar" aria-label="教材フィルター">
+        <button class="denken-filter is-active" type="button" data-filter="all">すべて</button>
+        <button class="denken-filter" type="button" data-filter="01_shinkansen_vehicle_3">車両・三種</button>
+        <button class="denken-filter" type="button" data-filter="02_shinkansen_power_3">電力・三種</button>
+        <button class="denken-filter" type="button" data-filter="03_shinkansen_machine_3">機械・三種</button>
+        <button class="denken-filter" type="button" data-filter="04_shinkansen_theory_3">理論・三種</button>
+      </div>
+      <div class="topic-list" data-topic-list><div class="empty-state">教材一覧を読み込み中です。</div></div>
+      <div class="empty-state" data-load-error hidden>教材カタログを読み込めませんでした。</div>
+    </section>
+
+    <section class="container info-section">
+      <h2>教材の扱い</h2>
+      <p>実車・実設備の数値は一次資料等で確認した値を使用し、資料から算出した値は計算値、教材上の仮定は仮定値として区別します。各テーマには根拠Markdownと引用元を記載したPowerPointも用意します。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>© ひかり教材室</span><a href="../../privacy.html">プライバシーポリシー</a></div></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
