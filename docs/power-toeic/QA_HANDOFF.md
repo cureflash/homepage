@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: **1,625**
-- Verified: **1,550**
+- Checked: **1,650**
+- Verified: **1,575**
 - Needs revision: **75**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
@@ -14,18 +14,18 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.verb.conditional_form` 0001-0025
+### `p5.verb.conditional_form` 0026-0050
 
 - Checked: **25**
 - Verified: **25**
 - Needs revision: **0**
 - Rejected: **0**
 
-All 25 items are real-future conditionals. The if-clause requires present simple, and each four-choice set contains one defensible present-simple form while the `will + base`, past, and bare-base distractors are invalid in the displayed construction. The saved explanations accurately state the rule and match the keyed answer.
+All 25 items are hypothetical present/future conditionals. Their result clauses use `would + base verb`, so the if-clause requires past simple; each four-choice set has one defensible past-simple answer. Sentence naturalness, distractor plausibility, target-skill fit, and explanation consistency were checked item by item.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-030-conditional-part1.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-031-conditional-part2.qa.json`
 
 ### QA-method limitation
 
@@ -37,6 +37,6 @@ Full-bank semantic near-duplicate clearance remains outstanding, so `verified` i
 
 Continue the oldest unchecked backlog at:
 
-`p5_verb_conditional_form_0026`
+`p5_verb_conditional_form_0051`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
