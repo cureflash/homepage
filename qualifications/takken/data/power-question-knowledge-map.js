@@ -34,6 +34,17 @@
         "takken-k-license-authority-governor-single-prefecture"
       ],
       sourceQuestionValidationStatus: "verified"
+    },
+    {
+      questionId: "takken-q-04-001",
+      conceptId: "takken-concept-license-disqualification",
+      knowledgeRefs: [
+        "takken-k-license-disqualification-cancellation-five-years",
+        "takken-k-license-disqualification-hearing-closure-five-years",
+        "takken-k-license-disqualification-criminal-sentence-five-years",
+        "takken-k-license-disqualification-misconduct-prior-five-years"
+      ],
+      sourceQuestionValidationStatus: "verified"
     }
   ];
 
@@ -43,12 +54,17 @@
     "takken-k-business-definition-self-lease-exclusion",
     "takken-k-license-required-general",
     "takken-k-license-authority-minister-multiple-prefectures",
-    "takken-k-license-authority-governor-single-prefecture"
+    "takken-k-license-authority-governor-single-prefecture",
+    "takken-k-license-disqualification-cancellation-five-years",
+    "takken-k-license-disqualification-hearing-closure-five-years",
+    "takken-k-license-disqualification-criminal-sentence-five-years",
+    "takken-k-license-disqualification-misconduct-prior-five-years"
   ]);
   const allowedConceptIds = new Set([
     "takken-concept-business-definition",
     "takken-concept-license-required",
-    "takken-concept-license-authority"
+    "takken-concept-license-authority",
+    "takken-concept-license-disqualification"
   ]);
   const questionIds = new Set();
 
@@ -64,12 +80,12 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 4) throw new Error(`Expected 4 mapped questions through license-authority, got ${mappings.length}`);
+  if (mappings.length !== 5) throw new Error(`Expected 5 mapped questions through license-disqualification, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) {
     if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Knowledge coverage is incomplete: ${knowledgeId}`);
   }
-  if (!questionIds.has("takken-q-03-001")) throw new Error("License-authority source question mapping is missing");
+  if (!questionIds.has("takken-q-04-001")) throw new Error("License-disqualification source question mapping is missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
