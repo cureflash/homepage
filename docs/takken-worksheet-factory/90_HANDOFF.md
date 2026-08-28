@@ -13,18 +13,23 @@ Canonical implementation: `qualifications/takken/`.
 
 Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified.
 
-Completed `takken-concept-business-guarantee-refund` using source unit `business-guarantee-refund` and the 2026-04-01 law cutoff. Added `qualifications/takken/data/power-knowledge-items-business-guarantee-refund.js` with six verified atomic knowledge items:
+Completed `takken-concept-guarantee-association` using source unit `guarantee-association` and the 2026-04-01 law cutoff. Added `qualifications/takken/data/power-knowledge-items-guarantee-association.js` with eleven verified atomic knowledge items:
 
-1. `takken-k-business-guarantee-refund-transaction-claim-right` — 宅建業に関する取引から生じた債権について営業保証金から弁済を受ける権利。
-2. `takken-k-business-guarantee-refund-broker-excluded` — 取引時に宅地建物取引業者に該当する者は法27条1項の還付保護対象から除外。
-3. `takken-k-business-guarantee-refund-unrelated-claim-excluded` — 宅建業に関係しない一般債権は還付対象外。
-4. `takken-k-business-guarantee-refund-shortfall-redeposit-two-weeks` — 還付により法定額へ不足が生じた場合、法令上の通知を受けた日から2週間以内に不足額を供託。
-5. `takken-k-business-guarantee-refund-shortfall-notice-two-weeks` — 不足額供託後、供託書写しを添えて2週間以内に免許権者へ届出。
-6. `takken-k-business-guarantee-refund-shortfall-securities-allowed` — 法25条3項の準用により、不足額供託にも法令で認められた有価証券を利用可能。
+1. `takken-k-guarantee-association-statutory-system` — 宅建業法上の保証協会・弁済業務保証金制度。
+2. `takken-k-guarantee-association-contribution-amount` — 弁済業務保証金分担金は主たる事務所60万円・その他の事務所ごと30万円。
+3. `takken-k-guarantee-association-joining-contribution-deadline` — 新規加入時は加入しようとする日までに分担金を納付。
+4. `takken-k-guarantee-association-new-office-contribution-two-weeks` — 社員が新事務所を設置した場合はその日から2週間以内に追加分担金を納付。
+5. `takken-k-guarantee-association-association-deposit-one-week` — 保証協会は分担金納付を受けた日から1週間以内に同額の弁済業務保証金を供託。
+6. `takken-k-guarantee-association-refund-right-and-limit` — 非宅建業者の取引債権について、加入前取引も含み、通常の営業保証金相当額の範囲内で弁済を受ける権利。
+7. `takken-k-guarantee-association-refund-certification-required` — 権利実行前に保証協会の認証が必要。
+8. `takken-k-guarantee-association-association-replenishment-two-weeks` — 還付後、保証協会は規則所定の通知書受領日から2週間以内に還付相当額を供託。
+9. `takken-k-guarantee-association-refund-charge-two-weeks` — 還付に係る社員・元社員は通知受領日から2週間以内に還付充当金を保証協会へ納付。
+10. `takken-k-guarantee-association-refund-charge-nonpayment-loss` — 社員が法定期間内に還付充当金を納付しないと社員地位を失う。
+11. `takken-k-guarantee-association-member-deposit-exemption-and-loss` — 弁済業務開始日以後の社員は営業保証金供託不要だが、社員地位喪失時は1週間以内に営業保証金を供託。
 
-Primary authority is the current 宅地建物取引業法 Articles 27 and 28 and current 宅地建物取引業者営業保証金規則. Current MLIT guidance on the Article 27 confirmation procedure independently confirms that the claimant must have been non-broker at the time of the relevant transaction.
+Primary authority is the current 宅地建物取引業法 Articles 64-7 through 64-15, the current 宅地建物取引業法施行令 Article 7, and the current 宅地建物取引業保証協会弁済業務保証金規則. The law text currently effective from 2026-04-01 retains the non-broker claimant exclusion and the one-/two-week deadlines used here.
 
-Existing verified-question evidence was reconciled conservatively. `takken-q-13-001` directly tests only the general right to receive payment from the営業保証金 for a qualifying transaction-derived claim, so it maps only to `takken-k-business-guarantee-refund-transaction-claim-right`. It does not directly test broker exclusion, unrelated-claim exclusion, either two-week rule, or securities for replenishment. Those five detailed items remain explicit Phase 4.3 deficits. The prior forty-one deficits are preserved unchanged.
+Existing verified-question evidence was reconciled conservatively. `takken-q-14-001` asks only whether the statutory guarantee-association / repayment-security-deposit system exists, so it maps only to `takken-k-guarantee-association-statutory-system`. It does not directly test amounts, deadlines, refund scope/certification, replenishment, refund charge, or loss-of-membership consequences. Those ten detailed items remain explicit Phase 4.3 deficits. The prior forty-six deficits are preserved unchanged.
 
 ## Status after this run
 
@@ -33,18 +38,18 @@ Existing verified-question evidence was reconciled conservatively. `takken-q-13-
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 15/113 concepts modeled
-- Canonical knowledge items: 67
-- Existing verified questions mapped: 14
-- Explicit unmapped knowledge gaps: 46
+- Phase 4.2: active — 16/113 concepts modeled
+- Canonical knowledge items: 78
+- Existing verified questions mapped: 15
+- Explicit unmapped knowledge gaps: 56
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-guarantee-association` using source unit `guarantee-association`.
+Continue Phase 4.2 at `takken-concept-brokerage-contract-document` using source unit `brokerage-contract-basics`.
 
-Preserve all 67 knowledge items, fourteen valid mappings, and all forty-six explicit deficits. Model 保証協会・弁済業務保証金 from 2026-04-01 primary/official sources and map existing verified questions only where they actually test the resulting knowledge. Do not start Phase 4.3 yet.
+Preserve all 78 knowledge items, fifteen valid mappings, and all fifty-six explicit deficits. Model 媒介契約書面 from 2026-04-01 primary/official sources and map existing verified questions only where they actually test the resulting knowledge. Do not start Phase 4.3 yet.
 
 ## Publication invariant
 
