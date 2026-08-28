@@ -8,9 +8,9 @@
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
 - Fully completed generated micro-skills: 29 / 44
-- Generated questions persisted: 2,900
-- QA checked: 1,900
-- Verified: 1,825
+- Generated questions persisted: 2,925
+- QA checked: 1,925
+- Verified: 1,850
 - Needs revision: 75
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -19,30 +19,28 @@
 
 ## This run — generation
 
-Completed `p5.pron.reflexive` with IDs 0076-0100:
+Started `p5.rel.who_vs_which` with IDs 0001-0025:
 
-`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/reflexive/pending/batch-20260829-041-part4.json`
+`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/who-vs-which/pending/batch-20260829-042-part1.json`
 
-All 25 remain `pending_validation`. The checkpoint mixes direct reflexive objects, emphatic reflexives, and fixed patterns such as `familiarize yourself with`, `help themselves to`, `find oneself`, `distinguish oneself from`, `make oneself available`, and `keep ... to themselves` across legal, finance, logistics, engineering, software, training, retail, and customer-service contexts. IDs are sequential and unique, every stem has one blank and four distinct choices, and answer positions are A/B/C/D = 7/6/6/6. Exact duplicate stems within the checkpoint: 0. Full revision-bound cross-bank semantic similarity clearance remains outstanding.
+All 25 remain `pending_validation`. The checkpoint uses human antecedents for `who` and object/device/document/place antecedents for `which` across consulting, software, logistics, finance, recruiting, engineering, legal, sales, and operations contexts. Each blank is the subject of the relative clause. Answer positions are A/B/C/D = 7/6/6/6. Exact duplicate stems: 0. Checkpoint SequenceMatcher similarity >=0.94: 0; maximum about 0.550. Full revision-bound cross-bank semantic similarity clearance remains outstanding.
 
-`p5.pron.reflexive` is now 100/100 and generation moves to `p5.rel.who_vs_which`.
+`p5.rel.who_vs_which` is now 25/100.
 
 ## This run — QA
 
-Reviewed oldest unchecked `p5.conn.preposition_vs_conjunction` IDs 0076-0100.
+Reviewed oldest unchecked `p5.conn.because_vs_because_of` IDs 0001-0025.
 
 - Checked: 25
 - Verified: 25
 - Needs revision: 0
 - Rejected: 0
 
-Items 0076-0080 require `even though` before full clauses, 0081-0090 require `without` before noun phrases or gerund phrases, and 0091-0100 require `unless` before full clauses expressing necessary conditions. Each item was individually re-solved against all four choices; no alternate defensible answer, naturalness defect, target-skill mismatch, or explanation mismatch was found.
+Each item was independently re-solved against all four choices. Noun-phrase complements require `because of`; full finite clauses require `because`. No alternate defensible answer, naturalness defect, target-skill mismatch, distractor defect, or explanation mismatch was found.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-041-preposition-vs-conjunction-part4.qa.json`
-
-This completes independent QA of the 100-item `p5.conn.preposition_vs_conjunction` skill.
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-042-because-vs-because-of-part1.qa.json`
 
 ## QA-method / test limitation
 
@@ -50,10 +48,10 @@ The persisted candidate format co-locates stems, choices, proposed answers and e
 
 ## Next generation
 
-Start `p5.rel.who_vs_which` from `p5_rel_who_vs_which_0001`.
+Continue `p5.rel.who_vs_which` from `p5_rel_who_vs_which_0026`.
 
 ## Next QA
 
-Continue the oldest unchecked backlog at `p5_conn_because_vs_because_of_0001`.
+Continue the oldest unchecked backlog at `p5_conn_because_vs_because_of_0026`.
 
 Existing `needs_revision` items from earlier skills remain unresolved.
