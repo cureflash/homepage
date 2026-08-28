@@ -13,6 +13,12 @@
       label: "国土交通省『宅地建物取引の免許について』",
       url: "https://www.mlit.go.jp/totikensangyo/const/1_6_bt_000242.html",
       sourceType: "official_guidance"
+    }),
+    nagasakiLicense: Object.freeze({
+      id: "nagasaki-takken-license",
+      label: "長崎県『宅地建物取引業の免許とは』",
+      url: "https://www.pref.nagasaki.lg.jp/doc/page-349751.html",
+      sourceType: "official_guidance"
     })
   });
 
@@ -142,6 +148,30 @@
       primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
       sourceUnitIds: ["takken-gyoho-license-disqualification"],
       sourceFactIds: ["u04-f1"]
+    },
+    {
+      ...shared,
+      conceptId: "takken-concept-license-validity-renewal",
+      knowledgeId: "takken-k-license-validity-five-years",
+      claim: "宅地建物取引業免許の有効期間は5年である。",
+      conditions: ["宅地建物取引業法3条1項の免許であること"],
+      exceptions: [],
+      importance: "A",
+      primarySources: [SOURCES.takkenAct, SOURCES.nagasakiLicense],
+      sourceUnitIds: ["takken-gyoho-license-validity-renewal"],
+      sourceFactIds: ["u05-f1"]
+    },
+    {
+      ...shared,
+      conceptId: "takken-concept-license-validity-renewal",
+      knowledgeId: "takken-k-license-renewal-application-window",
+      claim: "宅建業免許の有効期間満了後も引き続き宅地建物取引業を営もうとする場合、更新申請は有効期間満了日の90日前から30日前までに行う。",
+      conditions: ["現在の免許の有効期間満了後も引き続き宅地建物取引業を営もうとすること", "更新申請であること"],
+      exceptions: ["有効期間満了後に引き続き営まない場合は更新を受ける必要はない。"],
+      importance: "A",
+      primarySources: [SOURCES.takkenAct, SOURCES.nagasakiLicense],
+      sourceUnitIds: ["takken-gyoho-license-validity-renewal"],
+      sourceFactIds: ["u05-f2"]
     }
   ];
 
@@ -149,7 +179,8 @@
     "takken-concept-business-definition",
     "takken-concept-license-required",
     "takken-concept-license-authority",
-    "takken-concept-license-disqualification"
+    "takken-concept-license-disqualification",
+    "takken-concept-license-validity-renewal"
   ]);
   const ids = new Set();
   const allowedImportance = new Set(["A", "B", "C"]);
@@ -174,6 +205,7 @@
   if (countsByConcept.get("takken-concept-license-required") !== 1) throw new Error("License-required knowledge coverage is incomplete");
   if (countsByConcept.get("takken-concept-license-authority") !== 2) throw new Error("License-authority knowledge coverage is incomplete");
   if (countsByConcept.get("takken-concept-license-disqualification") !== 4) throw new Error("License-disqualification knowledge coverage is incomplete");
+  if (countsByConcept.get("takken-concept-license-validity-renewal") !== 2) throw new Error("License-validity-renewal knowledge coverage is incomplete");
 
   window.PowerTakkenKnowledgeItems = Object.freeze(knowledgeItems.map((item) => Object.freeze(item)));
 })();
