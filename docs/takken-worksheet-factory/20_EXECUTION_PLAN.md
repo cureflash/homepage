@@ -21,7 +21,7 @@ This plan is subordinate to `00_MASTER_INSTRUCTIONS.md` and works with `30_QUEST
 - [x] Schema/reference/duplicate/answer-position checks enforced.
 - [x] Unverified questions excluded from production/public pools.
 
-Final Phase 2 totals: **90/90 units, 163/163 core facts, 163 generated questions**.
+Final Phase 2 totals: 90/90 units, 163/163 core facts, 163 generated questions.
 
 Question files:
 - `qualifications/takken/data/pending-questions-01-07.js` — 9
@@ -34,7 +34,7 @@ Question files:
 
 ## Phase 3 — solve-all independent validation
 
-**COMPLETE.** Every Phase 2 question was independently re-solved in strict ID/order sequence before stored answer/explanation/source references were consulted.
+COMPLETE. Every Phase 2 question was independently re-solved in strict ID/order sequence before stored answer/explanation/source references were consulted.
 
 Completed checkpoints:
 - `takken-q-01-001` through `takken-q-07-001`: 9 checked / 9 verified.
@@ -47,16 +47,16 @@ Completed checkpoints:
 - `takken-q-73-001` through `takken-q-77-002`: 10 / 10.
 - `takken-q-78-001` through `takken-q-90-002`: 26 / 26.
 
-Final Phase 3 totals: **checked 163 / verified 163 / needs_revision 0 / rejected 0 / pending 0 / `validation_complete: true`**.
+Final Phase 3 totals: checked 163 / verified 163 / needs_revision 0 / rejected 0 / pending 0 / `validation_complete: true`.
 
 ## Phase 4 — Power宅建 knowledge / print / app integration
 
-**ACTIVE. Phase 3 completion gate is satisfied.** Canonical specification: `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`.
+ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER_KNOWLEDGE_PRINT_APP_SPEC.md`.
 
 ### 4.1 Concept inventory
 - [x] Extract exam-relevant terms, rules, institutions, numerical requirements, exceptions and comparison axes from all 90 units, all 163 verified questions and official scope.
 - [x] Normalize into exam-level `exam_concept` units; isolated numbers/words are not standalone 50-question topics.
-- [x] Final inventory: **113 concepts**.
+- [x] Final inventory: 113 concepts.
 
 Canonical inventory: `qualifications/takken/data/power-concepts.js`.
 
@@ -87,10 +87,11 @@ Phase 4.2 checkpoints:
 - [x] `takken-concept-exclusive-takkenshi`: 4 verified items covering the office one-fifth staffing ratio, adult/exclusive status, the meaning of exclusivity, and the two-week cure period when an existing office等 falls below the statutory standard. `takken-q-10-001` maps only to the office one-fifth ratio; the other three remain explicit Phase 4.3 deficits.
 - [x] `takken-concept-takkenshi-exclusive-duties`: 3 verified items covering Article 35 important-matters explanation by a宅地建物取引士, Article 35 document naming, and Article 37 document naming. `takken-q-11-001` directly tests all three and maps to all three; no new Phase 4.3 deficit is introduced. Current wording uses `記名` without the obsolete押印 requirement.
 - [x] `takken-concept-business-guarantee-deposit`: 8 verified items covering the statutory営業保証金 system, principal-office-nearest deposit place, 10,000,000/5,000,000 yen amount formula, cash/securities, statutory security valuation, post-deposit notice, the notice-before-business-start gate, and additional deposit/notice before operating a newly established office. `takken-q-12-001` maps only to the statutory-system item; the other seven remain explicit Phase 4.3 deficits.
+- [x] `takken-concept-business-guarantee-refund`: 6 verified items covering the transaction-derived refund right, exclusion of宅建業者 claimants, exclusion of unrelated claims, two-week shortfall redeposit, two-week post-redeposit notice, and eligible securities for the replenishment deposit. `takken-q-13-001` maps only to the general transaction-claim refund right; the other five remain explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: **14/113 modeled concepts, 61 verified knowledge items, 13 existing verified questions mapped, 41 explicit question-coverage gaps**.
+Current Phase 4.2 totals: 15/113 modeled concepts, 67 verified knowledge items, 14 existing verified questions mapped, 46 explicit question-coverage gaps.
 
-**Exact continuation:** `takken-concept-business-guarantee-refund`, source unit `business-guarantee-refund`. Preserve all forty-one explicit deficits and map existing questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
+Exact continuation: `takken-concept-guarantee-association`, source unit `guarantee-association`. Preserve all forty-six explicit deficits and map existing questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
