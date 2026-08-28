@@ -1,0 +1,40 @@
+{
+  "title": "電験×新幹線",
+  "updated": "2026-08-29",
+  "series": [
+    {"id":"01_shinkansen_vehicle_3","order":1,"name":"新幹線車両・三種","level":"三種","category":"車両","targetTopics":38},
+    {"id":"02_shinkansen_power_3","order":2,"name":"電力・三種","level":"三種","category":"電力","targetTopics":16},
+    {"id":"03_shinkansen_machine_3","order":3,"name":"機械・三種","level":"三種","category":"機械","targetTopics":16},
+    {"id":"04_shinkansen_theory_3","order":4,"name":"理論・三種","level":"三種","category":"理論","targetTopics":14},
+    {"id":"05_shinkansen_vehicle_2","order":5,"name":"新幹線車両・二種","level":"二種","category":"車両","targetTopics":39},
+    {"id":"06_shinkansen_power_2","order":6,"name":"電力・二種","level":"二種","category":"電力","targetTopics":22},
+    {"id":"07_shinkansen_machine_2","order":7,"name":"機械・二種","level":"二種","category":"機械・制御","targetTopics":22},
+    {"id":"08_shinkansen_theory_2","order":8,"name":"理論・二種","level":"二種","category":"理論","targetTopics":21},
+    {"id":"09_electrical_math_3","order":9,"name":"電気数学・三種","level":"三種","category":"電気数学","targetTopics":12},
+    {"id":"10_electrical_math_2","order":10,"name":"電気数学・二種","level":"二種","category":"電気数学","targetTopics":20}
+  ],
+  "topics": [
+    {
+      "id":"vehicle3-01",
+      "seriesId":"01_shinkansen_vehicle_3",
+      "topicNo":1,
+      "title":"プラレール① 電気編",
+      "summary":"乾電池・電圧・電流・抵抗・電力を、プラレールを入口に電験三種へ接続します。",
+      "explanation":"../../denken-shinkansen/01_shinkansen_vehicle_3/topics/01_plarail_electric/01_plarail_electric_explanation.pdf",
+      "practice":"../../denken-shinkansen/01_shinkansen_vehicle_3/topics/01_plarail_electric/01_plarail_electric_practice.pdf",
+      "slides":"../../denken-shinkansen/01_shinkansen_vehicle_3/topics/01_plarail_electric/01_plarail_electric_images.pptx",
+      "source":"../../denken-shinkansen/01_shinkansen_vehicle_3/topics/01_plarail_electric/01_plarail_electric.md"
+    },
+    {
+      "id":"vehicle3-02",
+      "seriesId":"01_shinkansen_vehicle_3",
+      "topicNo":2,
+      "title":"プラレール② 機械編",
+      "summary":"モーター・回転・トルク・歯車・車輪を、プラレールの駆動機構から学びます。",
+      "explanation":"../../denken-shinkansen/01_shinkansen_vehicle_3/topics/02_plarail_mechanics/02_plarail_mechanics_explanation.pdf",
+      "practice":"../../denken-shinkansen/01_shinkansen_vehicle_3/topics/02_plarail_mechanics/02_plarail_mechanics_practice.pdf",
+      "slides":"../../denken-shinkansen/01_shinkansen_vehicle_3/topics/02_plarail_mechanics/02_plarail_mechanics_images.pptx",
+      "source":"../../denken-shinkansen/01_shinkansen_vehicle_3/topics/02_plarail_mechanics/02_plarail_mechanics.md"
+    }
+  ]
+}
