@@ -94,13 +94,50 @@
       primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
       sourceUnitIds: ["takken-gyoho-license-authority"],
       sourceFactIds: ["u03-f1"]
+    },
+    {
+      ...shared,
+      conceptId: "takken-concept-license-disqualification",
+      knowledgeId: "takken-k-license-disqualification-revocation-five-years",
+      claim: "免許の不正取得、情状が特に重い不正行為、業務停止処分違反など一定の理由で宅建業免許を取り消された者には、取消しから5年間の欠格期間が問題となる。",
+      conditions: ["宅地建物取引業法5条の対象となる一定の免許取消しであること", "取消しから5年を経過していないこと"],
+      exceptions: ["免許取消しであれば理由を問わず永久に欠格となる、という制度ではない。"],
+      importance: "A",
+      primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
+      sourceUnitIds: ["takken-gyoho-license-disqualification"],
+      sourceFactIds: ["u04-f1"]
+    },
+    {
+      ...shared,
+      conceptId: "takken-concept-license-disqualification",
+      knowledgeId: "takken-k-license-disqualification-criminal-penalty-five-years",
+      claim: "拘禁刑以上の刑、または宅地建物取引業法違反・一定の暴力行為等による罰金刑に処せられた場合には、法定の5年間の欠格期間が問題となる。",
+      conditions: ["宅地建物取引業法5条が定める刑罰類型に該当すること", "2026年度基準では2025年6月1日施行の拘禁刑制度を前提とすること"],
+      exceptions: ["あらゆる罰金刑が一律に5年間の欠格事由になるわけではなく、法定の罰金刑類型に限られる。"],
+      importance: "A",
+      primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
+      sourceUnitIds: ["takken-gyoho-license-disqualification"],
+      sourceFactIds: ["u04-f1"]
+    },
+    {
+      ...shared,
+      conceptId: "takken-concept-license-disqualification",
+      knowledgeId: "takken-k-license-disqualification-improper-conduct-five-years",
+      claim: "免許申請前5年以内に宅地建物取引業に関して不正または著しく不当な行為をした者は、免許の欠格事由となる。",
+      conditions: ["宅地建物取引業に関する行為であること", "免許申請前5年以内の不正または著しく不当な行為であること"],
+      exceptions: ["単に過去に宅建業に関与したというだけでは、この欠格事由にはならない。"],
+      importance: "A",
+      primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
+      sourceUnitIds: ["takken-gyoho-license-disqualification"],
+      sourceFactIds: ["u04-f1"]
     }
   ];
 
   const knownConceptIds = new Set([
     "takken-concept-business-definition",
     "takken-concept-license-required",
-    "takken-concept-license-authority"
+    "takken-concept-license-authority",
+    "takken-concept-license-disqualification"
   ]);
   const ids = new Set();
   const allowedImportance = new Set(["A", "B", "C"]);
@@ -124,6 +161,7 @@
   if (countsByConcept.get("takken-concept-business-definition") !== 3) throw new Error("Business-definition knowledge count changed unexpectedly");
   if (countsByConcept.get("takken-concept-license-required") !== 1) throw new Error("License-required knowledge coverage is incomplete");
   if (countsByConcept.get("takken-concept-license-authority") !== 2) throw new Error("License-authority knowledge coverage is incomplete");
+  if (countsByConcept.get("takken-concept-license-disqualification") !== 3) throw new Error("License-disqualification knowledge coverage is incomplete");
 
   window.PowerTakkenKnowledgeItems = Object.freeze(knowledgeItems.map((item) => Object.freeze(item)));
 })();
