@@ -13,6 +13,7 @@ SCIENCE_PROBLEM_TYPES = {
 
 FORMULA_RELATIONS = {
     'product',
+    'product-over-divisor',
     'sum',
     'difference',
     'offset-product',
@@ -46,6 +47,13 @@ def _sample_value(rng, definition):
 def _relation_result(relation, inputs):
     if relation == 'product':
         return prod(inputs)
+    if relation == 'product-over-divisor':
+        if len(inputs) < 2:
+            raise ValueError('product-over-divisor needs at least one numerator factor and one divisor')
+        divisor = inputs[-1]
+        if divisor == 0:
+            raise ValueError('product-over-divisor divisor must not be zero')
+        return prod(inputs[:-1]) / divisor
     if relation == 'sum':
         return sum(inputs)
     if relation == 'difference':
@@ -114,6 +122,18 @@ def _generation_formula_answer(relation, result_name, input_names, values, solve
         if denominator == 0:
             raise ValueError('cannot solve product relation with zero denominator')
         return values[result_name] / denominator
+    if relation == 'product-over-divisor':
+        divisor_name = input_names[-1]
+        numerator_names = input_names[:-1]
+        if solve_for == divisor_name:
+            if values[result_name] == 0:
+                raise ValueError('cannot solve product-over-divisor divisor with zero result')
+            return prod(values[name] for name in numerator_names) / values[result_name]
+        other_numerators = [name for name in numerator_names if name != solve_for]
+        denominator = prod(values[name] for name in other_numerators)
+        if denominator == 0:
+            raise ValueError('cannot solve product-over-divisor numerator with zero denominator')
+        return values[result_name] * values[divisor_name] / denominator
     if relation == 'sum':
         return values[result_name] - sum(other_values)
     if relation == 'difference':
@@ -228,6 +248,9 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
     solve_for = solve_for or spec.get('solve_for') or result_name
     if relation not in FORMULA_RELATIONS:
         raise ValueError(f'unsupported formula relation: {relation}')
+    if relation == 'product-over-divisor':
+        if len(input_names) < 2 or len(set(input_names)) != len(input_names):
+            raise ValueError('product-over-divisor needs at least two unique inputs')
     if relation == 'difference' and len(input_names) != 2:
         raise ValueError('difference relation needs exactly two inputs')
     if relation == 'offset-product' and len(input_names) < 3:
@@ -428,6 +451,18 @@ def compute_science_answer(problem):
             if denominator == 0:
                 raise ValueError('cannot solve product relation with zero denominator')
             return known[result_name] / denominator
+        if relation == 'product-over-divisor':
+            divisor_name = input_names[-1]
+            numerator_names = input_names[:-1]
+            if solve_for == divisor_name:
+                if known[result_name] == 0:
+                    raise ValueError('cannot solve product-over-divisor divisor with zero result')
+                return prod(known[name] for name in numerator_names) / known[result_name]
+            other_numerators = [name for name in numerator_names if name != solve_for]
+            denominator = prod(known[name] for name in other_numerators)
+            if denominator == 0:
+                raise ValueError('cannot solve product-over-divisor numerator with zero denominator')
+            return known[result_name] * known[divisor_name] / denominator
         if relation == 'sum':
             return known[result_name] - sum(known[name] for name in other_inputs)
         if relation == 'difference':
