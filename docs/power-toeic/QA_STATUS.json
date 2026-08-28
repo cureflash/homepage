@@ -1,23 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1575,
-  "verified_question_count": 1500,
+  "checked_question_count": 1600,
+  "verified_question_count": 1525,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-28-scheduled-028-causative-part3",
+  "last_completed_batch": "2026-08-28-scheduled-029-causative-part4",
   "last_completed_micro_skill": "p5.verb.causative_have_make_let",
-  "last_batch_counts": {
-    "checked": 25,
-    "verified": 25,
-    "needs_revision": 0,
-    "rejected": 0
-  },
-  "next_batch": "2026-08-28-scheduled-028-causative-part4",
-  "next_micro_skill": "p5.verb.causative_have_make_let",
-  "next_question_id": "p5_verb_causative_have_make_let_0076",
+  "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
+  "next_batch": "2026-08-28-scheduled-030-conditional-part1",
+  "next_micro_skill": "p5.verb.conditional_form",
+  "next_question_id": "p5_verb_conditional_form_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-28T11:16:00+09:00"
+  "updated_at": "2026-08-28T12:15:00+09:00"
 }
