@@ -1,18 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1625,
-  "verified_question_count": 1550,
+  "checked_question_count": 1650,
+  "verified_question_count": 1575,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-28-scheduled-030-conditional-part1",
+  "last_completed_batch": "2026-08-28-scheduled-031-conditional-part2",
   "last_completed_micro_skill": "p5.verb.conditional_form",
   "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
-  "next_batch": "2026-08-28-scheduled-031-conditional-part2",
+  "next_batch": "2026-08-28-scheduled-032-conditional-part3",
   "next_micro_skill": "p5.verb.conditional_form",
-  "next_question_id": "p5_verb_conditional_form_0026",
+  "next_question_id": "p5_verb_conditional_form_0051",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-28T13:17:00+09:00"
+  "updated_at": "2026-08-28T14:18:00+09:00"
 }
