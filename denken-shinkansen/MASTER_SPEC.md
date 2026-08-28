@@ -30,6 +30,16 @@
 - 解説画像 PowerPoint
 - 根拠・計算条件を残す source Markdown
 
+## Web公開
+
+公開工程まで完了した各テーマは、`qualifications/denken-shinkansen/catalog.json` に登録し、ひかり教材室の `qualifications/denken-shinkansen/` から閲覧可能にする。
+
+Webカタログへ登録するのは、解説PDF、練習PDF、PowerPoint、source Markdownがすべて揃い、必要な計算検証と表示確認を完了したテーマだけとする。未完成テーマや検証中テーマは公開一覧へ追加しない。
+
+各カタログ項目には最低限、安定ID、系列ID、テーマ番号、表示タイトル、概要、解説PDFパス、練習PDFパス、PowerPointパス、source Markdownパスを持たせる。
+
+新規テーマ完了時は成果物のcommitと同じcheckpoint内でWebカタログも更新し、既存カタログ項目を削除・巻き戻さない。
+
 ## 出典・計算ルール
 JR各社、JRTT、公的機関、メーカー公式、メーカー技術論文、学術論文、学会資料、鉄道総研等を優先する。公開資料値は出典付き真値として扱い、資料値からの算出値は計算値と区別する。確認できない実機値は推測で真値化せず、仮定値を使う場合は明記する。
 
