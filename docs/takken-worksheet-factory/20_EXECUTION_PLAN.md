@@ -31,14 +31,14 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 - [ ] Decompose every concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` cutoff and primary sources.
 - [ ] Map existing verified questions only where they genuinely test the knowledge item; missing evidence remains a Phase 4.3 deficit.
 
-Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting.
+Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start.
 
 Latest checkpoint:
-- [x] `takken-concept-brokerage-reporting`: 3 verified items. Exclusive and sole-agency brokerage both carry a statutory duty to report the processing status to the client. Exclusive brokerage requires reporting at least once every two weeks; sole-agency brokerage requires reporting at least once every week. Existing `takken-q-17-001` and `takken-q-17-002` remain assigned to their contract-type concepts in the canonical one-concept-per-question map, so no duplicate mapping was manufactured. All three new items remain explicit Phase 4.3 deficits.
+- [x] `takken-concept-advertising-start`: 3 verified items. Article 33 bars advertising for a pre-completion development/building project until the legally required permit/confirmation disposition has actually occurred; representative triggers include Urban Planning Act Article 29 development permission and Building Standards Act Article 6 confirmation; application alone is not enough. Existing `takken-q-18-001` directly tests only the general permit-before-advertising rule and is mapped only to that item. The other two items remain explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: 23/113 modeled concepts, 121 verified knowledge items, 19 existing verified questions mapped, 93 explicit question-coverage gaps.
+Current Phase 4.2 totals: 24/113 modeled concepts, 124 verified knowledge items, 20 existing verified questions mapped, 95 explicit question-coverage gaps.
 
-Exact continuation: `takken-concept-advertising-start`, source unit `advertising-start-time`. Preserve all ninety-three explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
+Exact continuation: `takken-concept-contract-start`, source unit `contract-start-time`. Preserve all ninety-five explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
