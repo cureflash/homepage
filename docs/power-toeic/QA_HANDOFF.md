@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: **1,575**
-- Verified: **1,500**
+- Checked: **1,600**
+- Verified: **1,525**
 - Needs revision: **75**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
@@ -14,33 +14,29 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.verb.causative_have_make_let` 0051-0075
+### `p5.verb.causative_have_make_let` 0076-0100
 
 - Checked: **25**
 - Verified: **25**
 - Needs revision: **0**
 - Rejected: **0**
 
-All 25 items use `let + person/team + base verb`. For each question, exactly one of the four displayed choices supplies the required base form, the sentence is natural TOEIC-style business English, distractors are not defensible alternatives in the blank, and the saved explanation matches the causative rule.
+All 25 items use `have + object + past participle`. For each question, exactly one of the four displayed choices supplies the required past participle, the sentence is natural TOEIC-style business English, distractors are not defensible alternatives in the blank, and the saved explanation matches the causative rule.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-028-causative-part3.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-029-causative-part4.qa.json`
 
 ### QA-method limitation
 
-The persisted candidate format co-locates stems, choices, proposed answers and explanations. Connector-only file access therefore cannot technically guarantee a hidden-key first pass. Each item was nevertheless independently re-solved against all four choices before approval. Do not equate this with a fully blinded second-solver implementation.
+The persisted candidate format co-locates stems, choices, proposed answers and explanations. Connector-only file access therefore cannot technically guarantee a hidden-key first pass. Each item was nevertheless independently re-solved against all four choices before approval.
 
-Full-bank semantic near-duplicate clearance remains outstanding, so `verified` is not yet equivalent to final production-approved status.
-
-### Test limitation
-
-Repo-local full schema/Node tests were not executed in this connector-only run. The source batch and QA record were inspected through the GitHub connector.
+Full-bank semantic near-duplicate clearance remains outstanding, so `verified` is not yet equivalent to final production-approved status. Repo-local full schema/Node tests were not executed in this connector-only run.
 
 ## Next QA
 
 Continue the oldest unchecked backlog at:
 
-`p5_verb_causative_have_make_let_0076`
+`p5_verb_conditional_form_0001`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
