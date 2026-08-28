@@ -8,18 +8,17 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-reins-registration` using source unit `brokerage-reins-reporting` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-brokerage-reporting` using source unit `brokerage-reins-reporting` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-reins-registration.js` with four verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-brokerage-reporting.js` with three verified atomic knowledge items:
 
-1. `takken-k-reins-registration-exclusive-and-sole-duty` — exclusive and sole-agency brokerage are both subject to the statutory designated-distribution-system registration duty.
-2. `takken-k-reins-registration-exclusive-seven-days` — exclusive brokerage must be registered within seven days of conclusion of the brokerage agreement.
-3. `takken-k-reins-registration-sole-five-days` — sole-agency brokerage must be registered within five days of conclusion of the brokerage agreement.
-4. `takken-k-reins-registration-holidays-excluded` — holidays are excluded when calculating either statutory registration period.
+1. `takken-k-brokerage-reporting-exclusive-and-sole-duty` — exclusive and sole-agency brokerage both require the broker to report processing status to the client.
+2. `takken-k-brokerage-reporting-exclusive-two-weeks` — exclusive brokerage requires reporting at least once every two weeks.
+3. `takken-k-brokerage-reporting-sole-one-week` — sole-agency brokerage requires reporting at least once every week.
 
-Primary authorities are the current 宅地建物取引業法 Article 34-2 and 宅地建物取引業法施行規則 Article 15-10. The regulation in force on 2026-04-01 expressly sets seven days for exclusive brokerage, five days for sole-agency brokerage, and excludes holidays from the period calculation.
+Primary authority is the current 宅地建物取引業法 Article 34-2, cross-checked against the Ministry of Land, Infrastructure, Transport and Tourism standard brokerage agreement terms used by the source unit.
 
-Existing `takken-q-17-001` and `takken-q-17-002` directly contain the seven-day and five-day rules, but the canonical question map currently assigns each source question to one concept and those questions are already mapped to `takken-concept-exclusive-brokerage` and `takken-concept-sole-agency-brokerage`. The map schema was not changed merely to manufacture duplicate coverage for this overlapping comparison concept. Therefore no existing mapping was added in this checkpoint and all four new items remain explicit Phase 4.3 deficits.
+Existing `takken-q-17-001` and `takken-q-17-002` directly contain the two-week and one-week rules, but the canonical question map currently assigns each source question to one concept and those questions are already mapped to `takken-concept-exclusive-brokerage` and `takken-concept-sole-agency-brokerage`. The map schema was not changed merely to manufacture duplicate coverage for this overlapping comparison concept. Therefore no existing mapping was added in this checkpoint and all three new items remain explicit Phase 4.3 deficits.
 
 No Phase 2/3 question content or validation state was changed. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -30,18 +29,18 @@ No Phase 2/3 question content or validation state was changed. No Phase 4.3 ques
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 22/113 concepts modeled
-- Canonical knowledge items: 118
+- Phase 4.2: active — 23/113 concepts modeled
+- Canonical knowledge items: 121
 - Existing verified questions mapped: 19
-- Explicit unmapped knowledge gaps: 90
+- Explicit unmapped knowledge gaps: 93
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-brokerage-reporting` using source unit `brokerage-reins-reporting`.
+Continue Phase 4.2 at `takken-concept-advertising-start` using source unit `advertising-start-time`.
 
-Preserve all 118 knowledge items, nineteen valid mappings, and all ninety explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 121 knowledge items, nineteen valid mappings, and all ninety-three explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Publication invariant
 
