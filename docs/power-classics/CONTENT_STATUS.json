@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "classics-v1.0",
   "taxonomy_micro_skill_count": 100,
-  "generated_question_count": 450,
-  "checked_question_count": 450,
+  "generated_question_count": 475,
+  "checked_question_count": 475,
   "pending_validation_count": 0,
-  "verified_question_count": 450,
+  "verified_question_count": 475,
   "needs_revision_count": 0,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -16,15 +16,15 @@
     "kobun.verb.conjugation_type.shimo_nidan",
     "kobun.verb.conjugation_type.irregular"
   ],
-  "current_batch": "2026-08-28-scheduled-014",
+  "current_batch": "2026-08-28-scheduled-015",
   "current_micro_skill": "kobun.verb.conjugation_form",
-  "current_micro_skill_persisted_count": 0,
+  "current_micro_skill_persisted_count": 25,
   "current_micro_skill_target_count": 300,
-  "next_resume_id": "kobun_verb_conjugation_form_0001",
+  "next_resume_id": "kobun_verb_conjugation_form_0026",
   "next_micro_skill": "kobun.verb.conjugation_form",
   "generation_complete": false,
   "validation_complete": false,
   "global_duplicate_gate_complete": false,
-  "last_run_result": "Generated IDs 0076-0100 for kobun.verb.conjugation_type.irregular, completing the micro-skill at 100/100. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Answer positions A/B/C/D=6/6/6/7, bringing the full irregular bank to A/B/C/D=25/25/25/25. Coverage spans カ変・サ変・ナ変・ラ変 across 未然・連用・終止・連体・已然・命令. Exact stems are unique within the batch. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_form_0001.",
-  "updated_at": "2026-08-28T10:00:00+09:00"
+  "last_run_result": "Generated IDs 0001-0025 for kobun.verb.conjugation_form. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Coverage spans 未然・連用・終止・連体・已然・命令 across 四段・上一段・下二段・カ変・サ変・ナ変・ラ変. Answer positions A/B/C/D=7/6/6/6. Exact stems are unique within the batch. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_form_0026.",
+  "updated_at": "2026-08-28T11:00:00+09:00"
 }
