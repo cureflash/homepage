@@ -10,10 +10,10 @@
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
 - Fully completed generated micro-skills: **25 / 44**
-- Current partial micro-skill: `p5.conn.logical_conjunction` **50 / 100**
-- Generated questions persisted: **2,550**
-- QA checked: **1,550**
-- Verified: **1,475**
+- Current partial micro-skill: `p5.conn.logical_conjunction` **75 / 100**
+- Generated questions persisted: **2,575**
+- QA checked: **1,575**
+- Verified: **1,500**
 - Needs revision: **75**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
@@ -22,26 +22,26 @@
 
 ## This run — generation
 
-Persisted `p5.conn.logical_conjunction` IDs **0026-0050**:
+Persisted `p5.conn.logical_conjunction` IDs **0051-0075**:
 
-`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/logical-conjunction/pending/batch-20260828-027-part2.json`
+`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/logical-conjunction/pending/batch-20260828-028-part3.json`
 
-All 25 remain `pending_validation`. The checkpoint covers purpose, contrast, condition, reason, sequence, recurrence, and temporal endpoint relations across finance, procurement, facilities, support, legal, logistics, HR, and other TOEIC-style business contexts. Answer positions are A/B/C/D = **6/7/6/6**. IDs are sequential, every stem contains one blank, choices are distinct, and no identical stem exists within the checkpoint. Full cross-bank semantic duplicate clearance was not run in this connector-only execution path.
+All 25 remain `pending_validation`. The checkpoint covers purpose, reason, contrast, conditions, recurring triggers, and temporal endpoints across compliance, procurement, hospitality, legal, logistics, HR, IT, training, and facilities contexts. Answer positions are A/B/C/D = **6/7/6/6**. Structural review found sequential unique IDs, one blank per stem, four distinct choices, no exact duplicate stems, no within-checkpoint SequenceMatcher pair >= 0.94, and a maximum observed pair similarity of about **0.576**.
 
 ## This run — QA
 
-Reviewed the oldest unchecked `p5.verb.causative_have_make_let` IDs **0026-0050**.
+Reviewed the oldest unchecked `p5.verb.causative_have_make_let` IDs **0051-0075**.
 
 - Checked: **25**
 - Verified: **25**
 - Needs revision: **0**
 - Rejected: **0**
 
-All 25 use the causative pattern `make + person/team + base verb`. Each item has exactly one grammatically valid base-form option in the blank, natural business prose, appropriate distractors, and an explanation consistent with the keyed answer.
+All 25 use `let + person/team + base verb`. Each displayed option set contains exactly one valid base-form complement, the business English is natural, distractors are not defensible alternatives in the slot, and the saved explanation matches the construction.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-027-causative-part2.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-028-causative-part3.qa.json`
 
 ## QA-method limitation
 
@@ -49,18 +49,18 @@ The candidate JSON format stores stem, choices, proposed answer and explanation 
 
 ## Test limitation
 
-The new generation checkpoint was checked structurally before persistence, but repo-local full schema/Node tests and the revision-bound full-bank semantic near-duplicate scanner were not executable in this connector-only run. Do not claim final production-bank clearance from `verified` alone.
+The new generation checkpoint was structurally checked before persistence, but repo-local full schema/Node tests and the revision-bound full-bank semantic near-duplicate scanner were not executable in this connector-only run. Do not claim final production-bank clearance from `verified` alone.
 
 ## Next generation
 
 Continue `p5.conn.logical_conjunction` from:
 
-`p5_conn_logical_conjunction_0051`
+`p5_conn_logical_conjunction_0076`
 
 ## Next QA
 
 Continue the oldest unchecked backlog at:
 
-`p5_verb_causative_have_make_let_0051`
+`p5_verb_causative_have_make_let_0076`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved.
