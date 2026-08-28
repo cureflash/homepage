@@ -1,0 +1,43 @@
+{
+  "format": "power-classics-qa-v1",
+  "batch": "2026-08-28-scheduled-017",
+  "skill": "kobun.verb.conjugation_form",
+  "checked_at": "2026-08-28T13:00:00+09:00",
+  "qa_method": "independent_resolve_from_stem_and_choices_before_key_comparison",
+  "source_ids": [
+    "kobun_verb_conjugation_form_0051", "kobun_verb_conjugation_form_0052", "kobun_verb_conjugation_form_0053", "kobun_verb_conjugation_form_0054", "kobun_verb_conjugation_form_0055", "kobun_verb_conjugation_form_0056", "kobun_verb_conjugation_form_0057", "kobun_verb_conjugation_form_0058", "kobun_verb_conjugation_form_0059", "kobun_verb_conjugation_form_0060", "kobun_verb_conjugation_form_0061", "kobun_verb_conjugation_form_0062", "kobun_verb_conjugation_form_0063", "kobun_verb_conjugation_form_0064", "kobun_verb_conjugation_form_0065", "kobun_verb_conjugation_form_0066", "kobun_verb_conjugation_form_0067", "kobun_verb_conjugation_form_0068", "kobun_verb_conjugation_form_0069", "kobun_verb_conjugation_form_0070", "kobun_verb_conjugation_form_0071", "kobun_verb_conjugation_form_0072", "kobun_verb_conjugation_form_0073", "kobun_verb_conjugation_form_0074", "kobun_verb_conjugation_form_0075"
+  ],
+  "checked": 25,
+  "verified": 25,
+  "needs_revision": 0,
+  "rejected": 0,
+  "answer_positions": {"A": 6, "B": 6, "C": 7, "D": 6},
+  "notes": "All 25 were independently re-solved from stem+choices before key comparison. Explicit cues include む・ず・けり・て・ども, sentence-final use, noun modification, and imperative context. Coverage spans 四段・上一段・上二段・下二段・ラ変 and all six conjugation forms. Exact stems are unique within this batch and against conjugation-form IDs 0001-0050. Full-bank semantic near-duplicate clearance remains pending.",
+  "results": [
+    {"id":"kobun_verb_conjugation_form_0051","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0052","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0053","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0054","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0055","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0056","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0057","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0058","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0059","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0060","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0061","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0062","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0063","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0064","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0065","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0066","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0067","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0068","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0069","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0070","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0071","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0072","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0073","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0074","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_verb_conjugation_form_0075","independent_answer_index":2,"status":"verified"}
+  ]
+}

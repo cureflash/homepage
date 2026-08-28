@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "classics-v1.0",
   "taxonomy_micro_skill_count": 100,
-  "generated_question_count": 500,
-  "checked_question_count": 500,
+  "generated_question_count": 525,
+  "checked_question_count": 525,
   "pending_validation_count": 0,
-  "verified_question_count": 500,
+  "verified_question_count": 525,
   "needs_revision_count": 0,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -16,15 +16,15 @@
     "kobun.verb.conjugation_type.shimo_nidan",
     "kobun.verb.conjugation_type.irregular"
   ],
-  "current_batch": "2026-08-28-scheduled-016",
+  "current_batch": "2026-08-28-scheduled-017",
   "current_micro_skill": "kobun.verb.conjugation_form",
-  "current_micro_skill_persisted_count": 50,
+  "current_micro_skill_persisted_count": 75,
   "current_micro_skill_target_count": 300,
-  "next_resume_id": "kobun_verb_conjugation_form_0051",
+  "next_resume_id": "kobun_verb_conjugation_form_0076",
   "next_micro_skill": "kobun.verb.conjugation_form",
   "generation_complete": false,
   "validation_complete": false,
   "global_duplicate_gate_complete": false,
-  "last_run_result": "Generated IDs 0026-0050 for kobun.verb.conjugation_form. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Coverage uses explicit syntactic cues and spans 四段・上一段・下二段・カ変・サ変・ナ変 with 未然・連用・終止・連体・已然・命令. Answer positions A/B/C/D=6/7/6/6. Exact stems are unique within the batch. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_form_0051.",
-  "updated_at": "2026-08-28T12:00:00+09:00"
+  "last_run_result": "Generated IDs 0051-0075 for kobun.verb.conjugation_form. Independently re-solved all 25 from stem+choices before key comparison: 25 verified, 0 needs_revision, 0 rejected. Coverage spans 四段・上一段・上二段・下二段・ラ変 and 未然・連用・終止・連体・已然・命令. Answer positions A/B/C/D=6/6/7/6; across conjugation-form IDs 0001-0075 the distribution is 19/19/19/18. Exact stems are unique within the batch and against IDs 0001-0050. Full-bank semantic near-duplicate clearance remains pending. Resume at kobun_verb_conjugation_form_0076.",
+  "updated_at": "2026-08-28T13:00:00+09:00"
 }
