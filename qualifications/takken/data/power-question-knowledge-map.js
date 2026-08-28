@@ -10,7 +10,8 @@
     { questionId: "takken-q-05-001", conceptId: "takken-concept-license-validity-renewal", knowledgeRefs: ["takken-k-license-validity-five-years"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-05-002", conceptId: "takken-concept-license-validity-renewal", knowledgeRefs: ["takken-k-license-renewal-application-window"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-06-001", conceptId: "takken-concept-license-change-closure", knowledgeRefs: ["takken-k-license-change-notice-thirty-days"], sourceQuestionValidationStatus: "verified" },
-    { questionId: "takken-q-07-001", conceptId: "takken-concept-roster", knowledgeRefs: ["takken-k-roster-statutory-system"], sourceQuestionValidationStatus: "verified" }
+    { questionId: "takken-q-07-001", conceptId: "takken-concept-roster", knowledgeRefs: ["takken-k-roster-statutory-system"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-08-001", conceptId: "takken-concept-takkenshi-registration", knowledgeRefs: ["takken-k-takkenshi-registration-stages-separate"], sourceQuestionValidationStatus: "verified" }
   ];
 
   const knownKnowledgeIds = new Set([
@@ -20,10 +21,11 @@
     "takken-k-license-disqualification-cancellation-five-years", "takken-k-license-disqualification-hearing-closure-five-years", "takken-k-license-disqualification-criminal-sentence-five-years", "takken-k-license-disqualification-misconduct-prior-five-years",
     "takken-k-license-validity-five-years", "takken-k-license-renewal-application-window",
     "takken-k-license-change-notice-thirty-days",
-    "takken-k-roster-statutory-system"
+    "takken-k-roster-statutory-system",
+    "takken-k-takkenshi-registration-stages-separate"
   ]);
   const allowedConceptIds = new Set([
-    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster"
+    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration"
   ]);
   const questionIds = new Set();
 
@@ -37,10 +39,10 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 9) throw new Error(`Expected 9 mapped questions through roster, got ${mappings.length}`);
+  if (mappings.length !== 10) throw new Error(`Expected 10 mapped questions through takkenshi registration, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
-  if (!questionIds.has("takken-q-07-001")) throw new Error("Roster source question mapping is missing");
+  if (!questionIds.has("takken-q-08-001")) throw new Error("Takkenshi registration source question mapping is missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
