@@ -7,10 +7,10 @@
 ## Current canonical state
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
-- Fully completed generated micro-skills: 29 / 44
-- Generated questions persisted: 2,975
-- QA checked: 1,975
-- Verified: 1,900
+- Fully completed generated micro-skills: 30 / 44
+- Generated questions persisted: 3,000
+- QA checked: 2,000
+- Verified: 1,925
 - Needs revision: 75
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -19,28 +19,30 @@
 
 ## This run — generation
 
-Continued `p5.rel.who_vs_which` with IDs 0051-0075:
+Completed `p5.rel.who_vs_which` with IDs 0076-0100:
 
-`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/who-vs-which/pending/batch-20260829-044-part3.json`
+`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/who-vs-which/pending/batch-20260829-045-part4.json`
 
-All 25 remain `pending_validation`. Human and inanimate antecedents are alternated across manufacturing, customs, HR, facilities, compliance, research, healthcare, logistics, and engineering contexts. Answer positions are A/B/C/D = 6/7/6/6. Exact duplicate stems: 0. SequenceMatcher similarity >=0.94 across the first 75 `who_vs_which` items: 0; maximum about 0.655. Full revision-bound cross-bank semantic similarity clearance remains outstanding.
+All 25 remain `pending_validation`. Contexts cover forecasting, warehousing, export compliance, facilities, recruiting, contracts, laboratories, logistics, legal work, finance, healthcare, hospitality, and engineering. Answer positions are A/B/C/D = 6/7/6/6. Exact IDs and templates are unique within the batch. The revision-bound full-bank semantic near-duplicate scanner remains incomplete.
 
-`p5.rel.who_vs_which` is now 75/100.
+`p5.rel.who_vs_which` is now 100/100. Next generation is `p5.rel.whose` from `p5_rel_whose_0001`.
 
 ## This run — QA
 
-Reviewed oldest unchecked `p5.conn.because_vs_because_of` IDs 0051-0075.
+Reviewed oldest unchecked `p5.conn.because_vs_because_of` IDs 0076-0100.
 
 - Checked: 25
 - Verified: 25
 - Needs revision: 0
 - Rejected: 0
 
-Each item was independently re-solved against all four choices. Noun-phrase complements require `because of`; full finite clauses require `because`. No alternate defensible answer, naturalness defect, target-skill mismatch, distractor defect, or explanation mismatch was found.
+Each item was individually re-solved against all four choices. Noun-phrase complements require `because of`; full finite clauses require `because`. No alternate defensible answer, naturalness defect, target-skill mismatch, distractor defect, or explanation mismatch was found.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-044-because-vs-because-of-part3.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-045-because-vs-because-of-part4.qa.json`
+
+`QA_STATUS.json` had remained at the older 1,925 checked / 1,850 verified checkpoint while the canonical CONTENT/QA handoffs had already reached 1,975 / 1,900. It was reconciled forward to 2,000 / 1,925 in this run; no later progress was discarded.
 
 ## QA-method / test limitation
 
@@ -48,10 +50,10 @@ The persisted candidate format co-locates stems, choices, proposed answers and e
 
 ## Next generation
 
-Continue `p5.rel.who_vs_which` from `p5_rel_who_vs_which_0076`.
+Start `p5.rel.whose` at `p5_rel_whose_0001`.
 
 ## Next QA
 
-Continue the oldest unchecked backlog at `p5_conn_because_vs_because_of_0076`.
+Continue the oldest unchecked backlog at `p5_conn_despite_vs_although_0001`.
 
 Existing `needs_revision` items from earlier skills remain unresolved.
