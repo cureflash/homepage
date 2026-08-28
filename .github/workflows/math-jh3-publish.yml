@@ -35,8 +35,10 @@ jobs:
             git reset --hard origin/main
             python scripts/publish_jh3_expansion_basics.py .
             python scripts/publish_jh3_factorization_basics.py .
+            python scripts/publish_jh3_factorization_roots.py .
             python tests/test_jh3_expansion_basics_publisher.py
             python tests/test_jh3_factorization_basics_publisher.py
+            python tests/test_jh3_factorization_roots_publisher.py
             python tests/test_worksheet_factory.py
             python tests/test_worksheet_catalog_writer_concurrency.py
             before=$(git rev-parse origin/main)
