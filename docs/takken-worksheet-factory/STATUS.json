@@ -26,21 +26,8 @@
   "generation_complete": true,
   "validation_complete": true,
   "question_generation_policy": "Generate four-choice questions from every independently testable core fact; no fixed count padding. See 30_QUESTION_AND_QA_SPEC.md.",
-  "question_generation_progress": {
-    "covered_unit_orders": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90],
-    "covered_fact_count": 163,
-    "generated_question_files": ["qualifications/takken/data/pending-questions-01-07.js","qualifications/takken/data/pending-questions-08-20.js","qualifications/takken/data/pending-questions-21-27.js","qualifications/takken/data/pending-questions-28-47.js","qualifications/takken/data/pending-questions-48-67.js","qualifications/takken/data/pending-questions-68-77.js","qualifications/takken/data/pending-questions-78-90.js"],
-    "next_unit_order": null,
-    "next_unit": null
-  },
-  "validation_progress": {
-    "next_validation_question_id": null,
-    "checked_question_count": 163,
-    "verified_question_count": 163,
-    "needs_revision_question_count": 0,
-    "rejected_question_count": 0,
-    "pending_validation_question_count": 0
-  },
+  "question_generation_progress": {"covered_unit_orders": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90], "covered_fact_count": 163, "generated_question_files": ["qualifications/takken/data/pending-questions-01-07.js","qualifications/takken/data/pending-questions-08-20.js","qualifications/takken/data/pending-questions-21-27.js","qualifications/takken/data/pending-questions-28-47.js","qualifications/takken/data/pending-questions-48-67.js","qualifications/takken/data/pending-questions-68-77.js","qualifications/takken/data/pending-questions-78-90.js"], "next_unit_order": null, "next_unit": null},
+  "validation_progress": {"next_validation_question_id": null, "checked_question_count": 163, "verified_question_count": 163, "needs_revision_question_count": 0, "rejected_question_count": 0, "pending_validation_question_count": 0},
   "phase4_progress": {
     "active_subphase": "4.2_knowledge_items",
     "concept_inventory_file": "qualifications/takken/data/power-concepts.js",
@@ -48,32 +35,23 @@
     "concept_count": 113,
     "covered_unit_orders": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90],
     "knowledge_items_file": "qualifications/takken/data/power-knowledge-items.js",
-    "knowledge_item_files": ["qualifications/takken/data/power-knowledge-items.js","qualifications/takken/data/power-knowledge-items-license-transfer.js"],
+    "knowledge_item_files": ["qualifications/takken/data/power-knowledge-items.js","qualifications/takken/data/power-knowledge-items-license-transfer.js","qualifications/takken/data/power-knowledge-items-license-change-closure.js"],
     "question_knowledge_map_file": "qualifications/takken/data/power-question-knowledge-map.js",
-    "knowledge_concept_count": 6,
-    "knowledge_item_count": 16,
-    "mapped_existing_question_count": 7,
-    "unmapped_knowledge_item_count": 4,
-    "unmapped_knowledge_item_ids": ["takken-k-license-transfer-minister-to-governor","takken-k-license-transfer-governor-to-other-governor","takken-k-license-transfer-governor-to-minister","takken-k-license-transfer-old-license-loses-effect"],
-    "completed_concept_ids": ["takken-concept-business-definition","takken-concept-license-required","takken-concept-license-authority","takken-concept-license-disqualification","takken-concept-license-validity-renewal","takken-concept-license-transfer"],
+    "knowledge_concept_count": 7,
+    "knowledge_item_count": 23,
+    "mapped_existing_question_count": 8,
+    "unmapped_knowledge_item_count": 10,
+    "unmapped_knowledge_item_ids": ["takken-k-license-transfer-minister-to-governor","takken-k-license-transfer-governor-to-other-governor","takken-k-license-transfer-governor-to-minister","takken-k-license-transfer-old-license-loses-effect","takken-k-license-closure-death-heir-thirty-days-from-knowledge","takken-k-license-closure-merger-former-representative-thirty-days","takken-k-license-closure-bankruptcy-trustee-thirty-days","takken-k-license-closure-dissolution-liquidator-thirty-days","takken-k-license-closure-business-abolition-former-licensee-thirty-days","takken-k-license-closure-license-effect-timing"],
+    "completed_concept_ids": ["takken-concept-business-definition","takken-concept-license-required","takken-concept-license-authority","takken-concept-license-disqualification","takken-concept-license-validity-renewal","takken-concept-license-transfer","takken-concept-license-change-closure"],
     "next_unit_order": null,
     "next_unit": null,
-    "next_concept_id": "takken-concept-license-change-closure",
-    "next_task": "Continue Phase 4.2 at takken-concept-license-change-closure using source unit takken-gyoho-license-change-closure. Model the 30-day change-notice rule and the statutory closure/abolition notification rules, then map verified takken-q-06-001 only to the knowledge it actually tests. Preserve the four explicit license-transfer coverage gaps for later Phase 4.3 question generation; do not falsely map q06 to them."
+    "next_concept_id": "takken-concept-roster",
+    "next_task": "Continue Phase 4.2 at takken-concept-roster using source unit takken-gyoho-roster-signs. Preserve all explicit license-transfer and closure coverage gaps for later Phase 4.3; do not manufacture mappings."
   },
-  "foundation": {
-    "portable_site_shell": true,
-    "structured_unit_model": true,
-    "shared_renderer": true,
-    "seeded_cloze": true,
-    "print_layout": true,
-    "verified_only_catalog": true,
-    "automated_validation": true,
-    "question_qa_spec": true
-  },
+  "foundation": {"portable_site_shell": true,"structured_unit_model": true,"shared_renderer": true,"seeded_cloze": true,"print_layout": true,"verified_only_catalog": true,"automated_validation": true,"question_qa_spec": true},
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
   "last_completed_unit": "five-question-exemption-review",
-  "last_run_summary": "Phase 4.2 completed takken-concept-license-transfer without modifying any of the 163 verified Phase 2/3 questions. Added four verified atomic knowledge items for Minister-to-Governor, Governor-to-other-Governor, Governor-to-Minister license-transfer triggers and the statutory effect that the prior license loses effect when the new license is obtained. The existing source-unit question takken-q-06-001 tests only the separate 30-day change-notice rule, so it was intentionally not falsely mapped to license-transfer knowledge. The four resulting question-coverage gaps are tracked explicitly for later Phase 4.3 deficit generation. No 50-question drill expansion, prints, or app linkage were created.",
-  "updated_at": "2026-08-28T12:28:00+09:00"
+  "last_run_summary": "Phase 4.2 completed takken-concept-license-change-closure without modifying any Phase 2/3 question. Added seven verified atomic knowledge items: the 30-day roster-change notice; death, merger, bankruptcy, dissolution and business-abolition notification subjects/deadlines; and license-effect timing. Mapped verified takken-q-06-001 only to the 30-day change-notice item. Six closure items plus the prior four license-transfer items remain explicit Phase 4.3 question-coverage deficits. No 50-question drill expansion, prints, or app linkage were created.",
+  "updated_at": "2026-08-28T13:27:00+09:00"
 }
