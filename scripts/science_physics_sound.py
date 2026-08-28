@@ -1,16 +1,18 @@
-"""Formal-course Physics checkpoints for sound interference/diffraction and Doppler effect.
+"""Formal-course Physics checkpoints for sound interference, diffraction and Doppler effect.
 
 The current MEXT formal Physics sound subsection explicitly covers sound
 interference/diffraction and the Doppler effect, with Doppler treated mainly for
-observer and source moving on the same straight line. These first sound
-checkpoints intentionally use the existing finite-answer retrieval generator.
-Numerical Doppler formulas are deferred until their direction/sign convention is
-specified and independently validated.
+observer and source moving on the same straight line. Numerical Doppler
+problems use one explicit signed convention: observer velocity is positive when
+the observer moves toward the source, and source velocity is positive when the
+source moves toward the observer. The resulting same-line relation is
+f_obs = f_src (c + v_o) / (c - v_s). All four quantities are learner-visible.
 """
 
 PHYSICS_SOUND_PROBLEM_COUNT = 20
 _SOUND_INTERFERENCE_SEEDS = tuple(range(7761, 7771))
 _DOPPLER_SEEDS = tuple(range(7771, 7781))
+_DOPPLER_NUMERIC_SEEDS = tuple(range(7781, 7811))
 
 _SOUND_INTERFERENCE_PAIRS = [
     {"left": "音の干渉", "right": ["複数の音波が重なり、強め合いや弱め合いが起こる現象"]},
@@ -64,6 +66,9 @@ _DOPPLER_TF = [
     {"item": "音源が動く場合のドップラー効果", "property": "音源の運動に伴う波長の変化と関連付けられる"},
 ]
 
+_DOPPLER_FREQUENCIES = [256, 300, 320, 400, 440, 480, 500, 600, 640, 800, 880, 1000]
+_DOPPLER_VELOCITIES = [-20, -15, -10, -5, 0, 5, 10, 15, 20]
+
 PHYSICS_SOUND_TOPICS = {
     "sound-interference-diffraction-concepts": {
         "generator": "retrieval",
@@ -89,6 +94,35 @@ PHYSICS_SOUND_TOPICS = {
             "reverse": {"label": "内容→項目", "worksheet_mode": "retrieval-reverse", "description": "音のドップラー効果を説明から逆向きに確認します。", "spec": {"mode": "reverse", "left_label": "項目", "right_label": "内容", "items": _DOPPLER_PAIRS}},
             "fill": {"label": "穴埋め", "worksheet_mode": "retrieval-fill", "description": "接近・遠ざかりによる観測振動数や波面間隔の変化を穴埋めで確認します。", "spec": {"mode": "fill", "items": _DOPPLER_FILL}},
             "tf": {"label": "正誤", "worksheet_mode": "retrieval-tf", "description": "同一直線上の音源・観測者の運動を中心にドップラー効果を○×で確認します。", "spec": {"mode": "tf", "items": _DOPPLER_TF}},
+        },
+    },
+    "sound-doppler-numeric": {
+        "generator": "formula",
+        "title": "物理 音：ドップラー効果の数値計算",
+        "unit": "波：音",
+        "skill": "sound-doppler-numeric",
+        "formula": "f_obs = f_src (c + v_o) / (c - v_s)。v_o>0 は観測者が音源へ近づく向き、v_s>0 は音源が観測者へ近づく向き。",
+        "seeds": _DOPPLER_NUMERIC_SEEDS,
+        "spec": {
+            "id": "physics-sound-doppler-same-line",
+            "relation": "doppler-same-line",
+            "result": "observed_frequency",
+            "inputs": ["source_frequency", "sound_speed", "observer_velocity", "source_velocity"],
+            "variables": {
+                "observed_frequency": {"label": "観測される振動数 f_obs", "unit": "Hz"},
+                "source_frequency": {"label": "音源の振動数 f_src", "unit": "Hz", "values": _DOPPLER_FREQUENCIES},
+                "sound_speed": {"label": "音速 c", "unit": "m/s", "values": [340]},
+                "observer_velocity": {"label": "観測者速度 v_o（＋:音源へ接近、－:遠ざかる）", "unit": "m/s", "values": _DOPPLER_VELOCITIES},
+                "source_velocity": {"label": "音源速度 v_s（＋:観測者へ接近、－:遠ざかる）", "unit": "m/s", "values": _DOPPLER_VELOCITIES},
+            },
+            "tolerance": 1e-9,
+        },
+        "modes": {
+            "basic-observed-frequency": {
+                "solve_for": "observed_frequency",
+                "worksheet_mode": "calculation-basic",
+                "description": "同一直線上で、v_o>0を観測者が音源へ接近、v_s>0を音源が観測者へ接近と定め、f_obs=f_src(c+v_o)/(c-v_s)で観測振動数を0.1 Hzまで求めます。",
+            },
         },
     },
 }
