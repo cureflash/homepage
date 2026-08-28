@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-28T19:17:57.133Z",
+  "generatedAt": "2026-08-28T20:18:31.876Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1285,
-    "runtimeQuestionCount": 1285,
+    "approvedCandidateCount": 1310,
+    "runtimeQuestionCount": 1310,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 53
+    "qaRecordCount": 54
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -21,6 +21,12 @@
     {
       "id": "p5.conn.because_vs_because_of",
       "label": "because / because of",
+      "categoryId": "connectors-prepositions",
+      "categoryLabel": "前置詞・接続詞"
+    },
+    {
+      "id": "p5.conn.despite_vs_although",
+      "label": "despite / although",
       "categoryId": "connectors-prepositions",
       "categoryLabel": "前置詞・接続詞"
     },
@@ -1807,6 +1813,431 @@
       ],
       "correctIndex": 0,
       "explanation": "A noun phrase follows the blank, so 'because of' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0001",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The outdoor product demonstration continued ____ steady rain throughout the morning.",
+      "choices": [
+        "despite",
+        "although",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0002",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The accounting team met its filing deadline ____ a temporary outage in the reporting system.",
+      "choices": [
+        "although",
+        "despite",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0003",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The hotel maintained normal check-in service ____ a shortage of front-desk staff.",
+      "choices": [
+        "although",
+        "unless",
+        "despite",
+        "while"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0004",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The factory completed the shipment ____ delays in receiving several components.",
+      "choices": [
+        "although",
+        "unless",
+        "while",
+        "despite"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0005",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The branch remained open ____ renovation work near the main entrance.",
+      "choices": [
+        "despite",
+        "although",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0006",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The project stayed within budget ____ several unexpected equipment repairs.",
+      "choices": [
+        "although",
+        "despite",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0007",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The conference attracted more than 500 attendees ____ unusually high travel costs.",
+      "choices": [
+        "although",
+        "unless",
+        "despite",
+        "while"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0008",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The retailer reported stronger sales ____ weak foot traffic early in the month.",
+      "choices": [
+        "although",
+        "unless",
+        "while",
+        "despite"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0009",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The laboratory finished the test series ____ limited access to one of its instruments.",
+      "choices": [
+        "despite",
+        "although",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0010",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The restaurant kept the patio open ____ cool evening temperatures.",
+      "choices": [
+        "although",
+        "despite",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0011",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The logistics team delivered the order on time ____ heavy traffic around the distribution center.",
+      "choices": [
+        "although",
+        "unless",
+        "despite",
+        "while"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0012",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company renewed the lease ____ a substantial increase in monthly rent.",
+      "choices": [
+        "although",
+        "unless",
+        "while",
+        "despite"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0013",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The recruiting team filled the vacancy quickly ____ a highly competitive labor market.",
+      "choices": [
+        "despite",
+        "although",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0014",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The museum extended its evening hours ____ lower attendance during the previous month.",
+      "choices": [
+        "although",
+        "despite",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0015",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The support center met its response-time target ____ a surge in customer inquiries.",
+      "choices": [
+        "although",
+        "unless",
+        "despite",
+        "while"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0016",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The engineering group approved the design ____ concerns raised during the first review.",
+      "choices": [
+        "although",
+        "unless",
+        "while",
+        "despite"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0017",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The publisher released the issue on schedule ____ a late change to the cover artwork.",
+      "choices": [
+        "despite",
+        "although",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0018",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The clinic reduced average waiting times ____ higher patient volume this quarter.",
+      "choices": [
+        "although",
+        "despite",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0019",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The sales division exceeded its quarterly target ____ weaker demand in two regional markets.",
+      "choices": [
+        "although",
+        "unless",
+        "despite",
+        "while"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0020",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The construction crew resumed work ____ strong winds at the site.",
+      "choices": [
+        "although",
+        "unless",
+        "while",
+        "despite"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0021",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The software team launched the update ____ minor issues found in final testing.",
+      "choices": [
+        "despite",
+        "although",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0022",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The bank completed the system migration ____ a compressed implementation schedule.",
+      "choices": [
+        "although",
+        "despite",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0023",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The training program received positive ratings ____ several last-minute room changes.",
+      "choices": [
+        "although",
+        "unless",
+        "despite",
+        "while"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0024",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The warehouse maintained normal operations ____ repairs to one of the loading bays.",
+      "choices": [
+        "although",
+        "unless",
+        "while",
+        "despite"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_despite_vs_although_0025",
+      "version": 1,
+      "skillId": "p5.conn.despite_vs_although",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The research unit submitted its findings on time ____ delays in obtaining external data.",
+      "choices": [
+        "despite",
+        "although",
+        "unless",
+        "while"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun or gerund phrase follows the blank, so the preposition 'despite' is required to express contrast.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
