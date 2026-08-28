@@ -10,9 +10,10 @@
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
 - Fully completed generated micro-skills: **25 / 44**
-- Generated questions persisted: **2,500**
-- QA checked: **1,500**
-- Verified: **1,425**
+- Current partial micro-skill: `p5.conn.logical_conjunction` **25 / 100**
+- Generated questions persisted: **2,525**
+- QA checked: **1,525**
+- Verified: **1,450**
 - Needs revision: **75**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
@@ -21,54 +22,45 @@
 
 ## This run — generation
 
-Completed `p5.conn.time_prepositions` by persisting IDs **0051-0100** as two safe checkpoints:
+Persisted `p5.conn.logical_conjunction` IDs **0001-0025**:
 
-- `subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/time-prepositions/pending/batch-20260828-025-part3.json`
-- `subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/time-prepositions/pending/batch-20260828-025-part4.json`
+`subjects/english/power-toeic/js/data/questions/part5/connectors-prepositions/logical-conjunction/pending/batch-20260828-026-part1.json`
 
-All 50 new items remain `pending_validation`. They cover months, years, dates, named days, day+part-of-day, clock times, seasons, general parts of day, decade periods, and fixed points such as noon/midnight/dawn/dusk. Answer positions across the new 50 are A/B/C/D = **12/12/13/13**. The 50-question checkpoint has no identical stems and no SequenceMatcher pair at or above 0.94; maximum observed similarity was approximately **0.688**.
-
-This connector-only run did not execute the repository-wide semantic duplicate scanner, so no global duplicate-clearance claim is made.
+All 25 remain `pending_validation`. The checkpoint covers reason, contrast, purpose, condition, and temporal relations across logistics, IT, accounting, sales, HR, facilities, legal, and other TOEIC-style business contexts. Answer positions are A/B/C/D = **7/6/6/6**. IDs are sequential, each stem has one blank, choices are distinct, and no identical stem exists within the checkpoint. Full cross-bank semantic duplicate clearance was not run in this connector-only execution path.
 
 ## This run — QA
 
-Reviewed the oldest unchecked `p5.verb.gerund_pattern` IDs **0076-0100**.
+Reviewed the oldest unchecked `p5.verb.causative_have_make_let` IDs **0001-0025**.
 
-Run result:
 - Checked: **25**
-- Verified: **19**
-- Needs revision: **6**
+- Verified: **25**
+- Needs revision: **0**
 - Rejected: **0**
 
-Revision IDs:
-
-- `p5_verb_gerund_pattern_0081` — present `mentions` conflicts with `during yesterday's project briefing`.
-- `p5_verb_gerund_pattern_0086` through `0090` — the gerund target is clear, but one-time present `quits` is unnatural or temporally inconsistent with completed past events / the surrounding sequence.
-
-These six were not promoted merely because their gerund choice is structurally obvious; whole-sentence TOEIC naturalness remains part of the QA gate.
+All 25 uniquely require the base verb in the causative pattern `have + person/team + base verb`. The surrounding business sentences are natural, the distractors are invalid in the target slot, and the stored explanations match the rule.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-025-gerund-part4.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-026-causative-part1.qa.json`
+
+## QA-method limitation
+
+The candidate JSON format stores stem, choices, proposed answer and explanation together. With connector-only access, strict technical answer-blinding cannot be guaranteed. Each item was nevertheless re-solved against all four choices individually before approval.
 
 ## Test limitation
 
-The new 50 generation items were checked for IDs, one-cloze/four-choice structure, keyed-index validity, answer-position distribution, exact stem duplicates and within-checkpoint SequenceMatcher similarity before persistence. Repo-local full schema/Node tests were not executed in this connector-only run. Full revision-bound cross-bank semantic duplicate clearance also remains outstanding.
+The new generation checkpoint was checked structurally before persistence, but repo-local full schema/Node tests and the revision-bound full-bank semantic near-duplicate scanner were not executable in this connector-only run. Do not claim final production-bank clearance from `verified` alone.
 
 ## Next generation
 
-Start taxonomy-next micro-skill:
+Continue `p5.conn.logical_conjunction` from:
 
-`p5.conn.logical_conjunction`
-
-from:
-
-`p5_conn_logical_conjunction_0001`
+`p5_conn_logical_conjunction_0026`
 
 ## Next QA
 
-The `p5.verb.gerund_pattern` 100-question oldest-pending pass is complete. Continue oldest unchecked backlog at:
+Continue the oldest unchecked backlog at:
 
-`p5_verb_causative_have_make_let_0001`
+`p5_verb_causative_have_make_let_0026`
 
-Continue in 25-question safe checkpoints. Existing `needs_revision` items remain unresolved.
+Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved.
