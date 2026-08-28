@@ -12,15 +12,15 @@ Power TOEIC (`subjects/english/power-toeic/`) を共通バックエンド／Dril
 
 ## Exact continuation point
 
-- completed previous skill: `kobun.verb.conjugation_form` 300/300
-- current skill: `kobun.adjective.ku_vs_shiku`
-- completed: 75/100
-- next ID: `kobun_adjective_ku_vs_shiku_0076`
-- next safe checkpoint: 0076〜0100（25問）
+- completed previous skill: `kobun.adjective.ku_vs_shiku` 100/100
+- current skill: `kobun.adjective.conjugation_form`
+- completed: 0/100
+- next ID: `kobun_adjective_conjugation_form_0001`
+- next safe checkpoint: 0001〜0025（25問）
 
 ## Totals
 
-825 generated / 825 checked / 825 verified / 0 needs_revision / 0 rejected / pending 0.
+850 generated / 850 checked / 850 verified / 0 needs_revision / 0 rejected / pending 0.
 
 ## Reconcile rule
 
