@@ -12,19 +12,18 @@ Power TOEIC (`subjects/english/power-toeic/`) を共通バックエンド／Dril
 
 ## Exact continuation point
 
-- completed previous skill: `kobun.adjective.conjugation_form` 100/100
 - current skill: `kobun.adjectival_noun.nari_vs_tari`
-- completed: 0/50
-- next ID: `kobun_adjectival_noun_nari_vs_tari_0001`
-- next safe checkpoint: 0001〜0025（25問）
+- completed: 25/50
+- next ID: `kobun_adjectival_noun_nari_vs_tari_0026`
+- next safe checkpoint: 0026〜0050（25問）
 
 ## Totals
 
-950 generated / 950 checked / 950 verified / 0 needs_revision / 0 rejected / pending 0.
+975 generated / 975 checked / 975 verified / 0 needs_revision / 0 rejected / pending 0.
 
 ## Latest QA
 
-`kobun.adjective.conjugation_form` 0076〜0100を独立再解答し25/25 verified。これで同skillは100/100で第一目標完了。今回の正答位置A/B/C/D = 5/7/7/6、skill累計 = 25/25/25/25、stem完全重複0、batch内最大類似度0.895（0.94超0件）。ク活用・シク活用の本活用／カリ活用、未然形＋ば、已然形＋ば、ず・き・けり・つ・む接続を確認した。
+`kobun.adjectival_noun.nari_vs_tari` 0001〜0025を独立再解答し25/25 verified。正答位置A/B/C/D = 7/6/6/6、stem完全重複0、batch内最大類似度0.906（0.94超0件）。ナリ活用（なら・なり/に・なり・なる・なれ・なれ）とタリ活用（たら・たり/と・たり・たる・たれ・たれ）を未然・連用・終止・連体・已然・命令の用例で確認した。
 
 ## Reconcile rule
 
