@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="電験×新幹線の解説PDF・練習PDFをブラウザで閲覧できます。">
+  <title>教材｜電験×新幹線｜ひかり教材室</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="denken.css">
+</head>
+<body data-page="viewer">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../../index.html">ひかり教材室</a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="./">電験×新幹線</a>
+        <a href="../../worksheets/">プリント配布</a>
+        <a href="../takken/">宅建</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container breadcrumb"><a href="../../index.html">ホーム</a> / <a href="./">電験×新幹線</a> / 教材</div>
+
+    <section class="container viewer-head" data-viewer-content>
+      <p class="eyebrow" data-series-name></p>
+      <h1 data-topic-title>教材を読み込み中</h1>
+      <p data-topic-summary></p>
+
+      <div class="viewer-actions" aria-label="表示切替">
+        <button type="button" data-show-explanation>解説PDF</button>
+        <button type="button" data-show-practice>練習PDF</button>
+        <a class="primary" data-download-explanation download>解説PDFを開く</a>
+        <a data-download-practice download>練習PDFを開く</a>
+        <a data-slides>PowerPoint</a>
+        <a data-source>根拠・計算条件</a>
+      </div>
+    </section>
+
+    <section class="container section" data-viewer-content>
+      <iframe class="pdf-frame" data-pdf-frame title="教材PDF"></iframe>
+      <p class="viewer-fallback">PDFが表示されない場合は <a data-pdf-direct>PDFを直接開く</a> を使用してください。</p>
+    </section>
+
+    <section class="container section" data-viewer-error hidden>
+      <div class="empty-state">指定された教材が見つかりません。<a href="./">教材一覧へ戻る</a></div>
+    </section>
+    <section class="container section" data-load-error hidden>
+      <div class="empty-state">教材情報を読み込めませんでした。<a href="./">教材一覧へ戻る</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>© ひかり教材室</span><a href="../../privacy.html">プライバシーポリシー</a></div></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
