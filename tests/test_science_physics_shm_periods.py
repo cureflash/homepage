@@ -103,7 +103,6 @@ class PhysicsShmPeriodsTests(unittest.TestCase):
         self.assertIn("質量", pendulum_text)
         self.assertIn("重力加速度", pendulum_text)
 
-
     def test_numeric_period_visible_value_recalculation_and_contracts(self):
         for topic_key, numerator_name, divisor_name in (
             ("spring-pendulum-period-numeric", "mass", "spring_constant"),
@@ -145,7 +144,7 @@ class PhysicsShmPeriodsTests(unittest.TestCase):
     def test_normalized_hashes_unique_and_disjoint_from_existing_catalog(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
         self.assertEqual(len(hashes), 130)
-        self.assertEqual(len(set(hashes)), 110)
+        self.assertEqual(len(set(hashes)), 130)
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
         current_ids = {
             f"science-physics-motion-{topic_key}-{mode_key}-{variant:02d}"
