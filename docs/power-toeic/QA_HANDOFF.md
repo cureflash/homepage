@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: 2,000
-- Verified: 1,925
+- Checked: 2,025
+- Verified: 1,950
 - Needs revision: 75
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -14,20 +14,18 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.conn.because_vs_because_of` 0076-0100
+### `p5.conn.despite_vs_although` 0001-0025
 
 - Checked: 25
 - Verified: 25
 - Needs revision: 0
 - Rejected: 0
 
-Each displayed sentence was re-solved against all four choices. Noun-phrase complements require `because of`; full finite clauses require `because`. Structure, semantic relation, naturalness, target-skill fit, distractor plausibility, and explanation consistency were checked individually. No alternate defensible answer or explanation mismatch was found.
+Each sentence and all four choices were reviewed individually. Every blank is followed by a noun phrase, so the concessive preposition `despite` is uniquely valid; `although` would require a finite clause. Structure, semantic relation, naturalness, target-skill fit, distractor plausibility, and explanation consistency were checked. No alternate defensible answer or explanation mismatch was found.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-045-because-vs-because-of-part4.qa.json`
-
-`QA_STATUS.json` was stale by two prior 25-question checkpoints. It has been reconciled to the canonical handoff/content totals plus this run: 2,000 checked / 1,925 verified / 75 needs_revision / 0 rejected.
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-046-despite-vs-although-part1.qa.json`
 
 ### QA-method limitation
 
@@ -39,6 +37,6 @@ Full-bank semantic near-duplicate clearance remains outstanding, so `verified` i
 
 Continue the oldest unchecked backlog at:
 
-`p5_conn_despite_vs_although_0001`
+`p5_conn_despite_vs_although_0026`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
