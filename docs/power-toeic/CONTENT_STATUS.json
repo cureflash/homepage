@@ -3,23 +3,23 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 2925,
-  "checked_question_count": 1925,
+  "generated_question_count": 2950,
+  "checked_question_count": 1950,
   "pending_validation_count": 1000,
-  "verified_question_count": 1850,
+  "verified_question_count": 1875,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun","p5.pos.adverb_modifies_verb","p5.pos.noun_in_noun_slot","p5.pos.adjective_after_linking_verb","p5.pos.adverb_modifies_adjective","p5.pos.participle_adjective_ed_ing","p5.pos.word_form_subject_position","p5.pos.word_form_object_position","p5.verb.subject_verb_agreement","p5.verb.present_vs_past","p5.verb.present_perfect_vs_past","p5.verb.active_vs_passive","p5.verb.modal_base_form","p5.verb.to_infinitive_pattern","p5.verb.gerund_pattern","p5.verb.causative_have_make_let","p5.verb.conditional_form","p5.verb.participle_clause","p5.conn.preposition_vs_conjunction","p5.conn.because_vs_because_of","p5.conn.despite_vs_although","p5.conn.during_vs_while","p5.conn.by_vs_until","p5.conn.for_vs_since","p5.conn.time_prepositions","p5.conn.logical_conjunction","p5.pron.subject_vs_object","p5.pron.possessive_forms","p5.pron.reflexive"
   ],
-  "current_batch": "2026-08-29-scheduled-042-who-vs-which-part1",
+  "current_batch": "2026-08-29-scheduled-043-who-vs-which-part2",
   "current_micro_skill": "p5.rel.who_vs_which",
-  "current_micro_skill_persisted_count": 25,
+  "current_micro_skill_persisted_count": 50,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_rel_who_vs_which_0026",
+  "next_resume_id": "p5_rel_who_vs_which_0051",
   "next_micro_skill": "p5.rel.who_vs_which",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Persisted p5.rel.who_vs_which IDs 0001-0025; all 25 new items remain pending_validation. Answer positions A/B/C/D = 7/6/6/6; exact duplicate stems 0; checkpoint SequenceMatcher similarity >=0.94: 0, maximum about 0.550. Independently reviewed oldest unchecked p5.conn.because_vs_because_of IDs 0001-0025: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,925 checked, 1,850 verified, 75 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_rel_who_vs_which_0026; next QA is p5_conn_because_vs_because_of_0026.",
-  "updated_at": "2026-08-29T01:15:00+09:00"
+  "last_run_result": "Persisted p5.rel.who_vs_which IDs 0026-0050; all 25 new items remain pending_validation. Answer positions A/B/C/D = 6/7/6/6; exact duplicate stems 0; SequenceMatcher similarity >=0.94 across the first 50 items: 0, maximum about 0.655. Independently reviewed oldest unchecked p5.conn.because_vs_because_of IDs 0026-0050: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,950 checked, 1,875 verified, 75 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_rel_who_vs_which_0051; next QA is p5_conn_because_vs_because_of_0051.",
+  "updated_at": "2026-08-29T02:16:00+09:00"
 }

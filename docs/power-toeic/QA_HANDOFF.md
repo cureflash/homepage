@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: 1,925
-- Verified: 1,850
+- Checked: 1,950
+- Verified: 1,875
 - Needs revision: 75
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -14,7 +14,7 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.conn.because_vs_because_of` 0001-0025
+### `p5.conn.because_vs_because_of` 0026-0050
 
 - Checked: 25
 - Verified: 25
@@ -25,7 +25,7 @@ Each displayed sentence was re-solved against all four choices. Noun-phrase comp
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-042-because-vs-because-of-part1.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-043-because-vs-because-of-part2.qa.json`
 
 ### QA-method limitation
 
@@ -37,6 +37,6 @@ Full-bank semantic near-duplicate clearance remains outstanding, so `verified` i
 
 Continue the oldest unchecked backlog at:
 
-`p5_conn_because_vs_because_of_0026`
+`p5_conn_because_vs_because_of_0051`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.

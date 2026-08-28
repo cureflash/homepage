@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-28T16:17:31.265Z",
+  "generatedAt": "2026-08-28T17:19:37.802Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1210,
-    "runtimeQuestionCount": 1210,
+    "approvedCandidateCount": 1235,
+    "runtimeQuestionCount": 1235,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 50
+    "qaRecordCount": 51
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -528,6 +528,431 @@
         "because of",
         "because",
         "if",
+        "unless"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0026",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The installation was delayed ____ a missing safety certificate from the supplier.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0027",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The regional office closed early ____ the heating system stopped working.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 1,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0028",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The retailer increased its order ____ stronger-than-expected demand for the new model.",
+      "choices": [
+        "because",
+        "although",
+        "because of",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0029",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The seminar was moved to a larger room ____ more participants registered than expected.",
+      "choices": [
+        "because of",
+        "although",
+        "unless",
+        "because"
+      ],
+      "correctIndex": 3,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0030",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Several invoices were returned ____ incomplete billing addresses.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0031",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The maintenance visit was postponed ____ the replacement part had not arrived.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 1,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0032",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company revised its travel policy ____ rising accommodation costs.",
+      "choices": [
+        "because",
+        "although",
+        "because of",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0033",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The warehouse extended receiving hours ____ several trucks were delayed by road construction.",
+      "choices": [
+        "because of",
+        "although",
+        "unless",
+        "because"
+      ],
+      "correctIndex": 3,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0034",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The customer received a refund ____ a duplicate charge on the account.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0035",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The branch hired temporary staff ____ the holiday sales period is usually very busy.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 1,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0036",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The inspection took longer than planned ____ extensive damage to the roof.",
+      "choices": [
+        "because",
+        "although",
+        "because of",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0037",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The supplier changed the delivery route ____ a bridge on the usual route was closed.",
+      "choices": [
+        "because of",
+        "although",
+        "unless",
+        "because"
+      ],
+      "correctIndex": 3,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0038",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The training session was canceled ____ the instructor's sudden illness.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0039",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The team submitted the report late ____ several supporting documents were received after the deadline.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 1,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0040",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The hotel reduced room rates ____ lower demand during the renovation period.",
+      "choices": [
+        "because",
+        "although",
+        "because of",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0041",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The software update was withdrawn ____ users reported a serious compatibility problem.",
+      "choices": [
+        "because of",
+        "although",
+        "unless",
+        "because"
+      ],
+      "correctIndex": 3,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0042",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The factory temporarily reduced output ____ a shortage of packaging materials.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0043",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The meeting ended early ____ all agenda items had been completed ahead of schedule.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 1,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0044",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The clinic added another receptionist ____ a sharp increase in appointment requests.",
+      "choices": [
+        "because",
+        "although",
+        "because of",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0045",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The marketing campaign was extended ____ online sales continued to rise.",
+      "choices": [
+        "because of",
+        "although",
+        "unless",
+        "because"
+      ],
+      "correctIndex": 3,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0046",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The shipment required additional inspection ____ visible damage to several cartons.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0047",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The store delayed opening ____ an alarm malfunction had to be investigated first.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 1,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0048",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The finance team adjusted the forecast ____ recent changes in exchange rates.",
+      "choices": [
+        "because",
+        "although",
+        "because of",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so 'because of' is required to express the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0049",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The contractor requested more time ____ heavy rain had interrupted the exterior work.",
+      "choices": [
+        "because of",
+        "although",
+        "unless",
+        "because"
+      ],
+      "correctIndex": 3,
+      "explanation": "A full clause follows the blank, so the conjunction 'because' is required to introduce the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_because_vs_because_of_0050",
+      "version": 1,
+      "skillId": "p5.conn.because_vs_because_of",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The call center added an evening shift ____ unusually high demand for technical support.",
+      "choices": [
+        "because of",
+        "because",
+        "although",
         "unless"
       ],
       "correctIndex": 0,
