@@ -14,13 +14,13 @@ Power TOEIC (`subjects/english/power-toeic/`) を共通バックエンド／Dril
 
 - completed previous skill: `kobun.verb.conjugation_form` 300/300
 - current skill: `kobun.adjective.ku_vs_shiku`
-- completed: 50/100
-- next ID: `kobun_adjective_ku_vs_shiku_0051`
-- next safe checkpoint: 0051〜0075（25問）
+- completed: 75/100
+- next ID: `kobun_adjective_ku_vs_shiku_0076`
+- next safe checkpoint: 0076〜0100（25問）
 
 ## Totals
 
-800 generated / 800 checked / 800 verified / 0 needs_revision / 0 rejected / pending 0.
+825 generated / 825 checked / 825 verified / 0 needs_revision / 0 rejected / pending 0.
 
 ## Reconcile rule
 
