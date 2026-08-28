@@ -122,10 +122,19 @@
     },
     {
       ...shared,
-      knowledgeId: "takken-k-guarantee-association-member-deposit-exemption-and-loss",
-      claim: "保証協会の社員は弁済業務開始日以後は営業保証金の供託を要しないが、社員の地位を失ったときは、その日から1週間以内に営業保証金を供託しなければならない。",
-      conditions: ["国土交通大臣の指定する弁済業務開始日以後であること", "社員地位喪失後も宅建業を営む場合の営業保証金供託義務を判定する場合であること"],
-      exceptions: ["保証協会加入により営業保証金制度そのものが消滅するわけではなく、社員地位喪失時には通常の営業保証金ルートへ戻る。"],
+      knowledgeId: "takken-k-guarantee-association-member-business-guarantee-exemption",
+      claim: "国土交通大臣の指定する弁済業務開始日以後、保証協会の社員である宅建業者は営業保証金を供託することを要しない。",
+      conditions: ["保証協会の社員であること", "国土交通大臣の指定する弁済業務開始日以後であること"],
+      exceptions: ["社員の地位を失った場合には、この供託免除を維持できない。"],
+      importance: "A",
+      primarySources: [statute]
+    },
+    {
+      ...shared,
+      knowledgeId: "takken-k-guarantee-association-loss-of-membership-deposit-one-week",
+      claim: "保証協会の社員の地位を失った宅建業者は、その地位を失った日から1週間以内に営業保証金を供託しなければならない。",
+      conditions: ["保証協会の社員の地位を失い、その後も宅建業を営む場合であること"],
+      exceptions: ["保証協会加入時の分担金納付では代替できず、通常の営業保証金を供託する必要がある。"],
       importance: "A",
       primarySources: [statute]
     }
@@ -138,7 +147,7 @@
     if (item.examYear !== 2026 || item.lawAsOf !== "2026-04-01" || item.factcheckStatus !== "verified") throw new Error(`Invalid knowledge item state: ${item.knowledgeId}`);
     if (!item.primarySources.some((entry) => entry.sourceType === "statute")) throw new Error(`Missing statute source: ${item.knowledgeId}`);
   }
-  if (knowledgeItems.length !== 11) throw new Error(`Expected 11 guarantee-association knowledge items, got ${knowledgeItems.length}`);
+  if (knowledgeItems.length !== 12) throw new Error(`Expected 12 guarantee-association knowledge items, got ${knowledgeItems.length}`);
 
   window.PowerTakkenKnowledgeItemsGuaranteeAssociation = Object.freeze(knowledgeItems.map((item) => Object.freeze(item)));
 })();
