@@ -13,14 +13,13 @@ Power TOEIC (`subjects/english/power-toeic/`) を共通バックエンド／Dril
 ## Exact continuation point
 
 - current skill: `kobun.verb.conjugation_form`
-- completed: 250/300
-- next ID: `kobun_verb_conjugation_form_0251`
-- next safe checkpoint: 0251〜0275（25問）
-- after that: 0276〜0300でこのskillの第一目標300を完了
+- completed: 275/300
+- next ID: `kobun_verb_conjugation_form_0276`
+- next safe checkpoint: 0276〜0300（25問）でこのskillの第一目標300を完了
 
 ## Totals
 
-700 generated / 700 checked / 700 verified / 0 needs_revision / 0 rejected / pending 0.
+725 generated / 725 checked / 725 verified / 0 needs_revision / 0 rejected / pending 0.
 
 ## Reconcile rule
 
