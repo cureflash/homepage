@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 2725,
-  "checked_question_count": 1725,
+  "generated_question_count": 2750,
+  "checked_question_count": 1750,
   "pending_validation_count": 1000,
-  "verified_question_count": 1650,
+  "verified_question_count": 1675,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -38,14 +38,14 @@
     "p5.conn.logical_conjunction",
     "p5.pron.subject_vs_object"
   ],
-  "current_batch": "2026-08-28-scheduled-034-possessive-forms-part1",
+  "current_batch": "2026-08-28-scheduled-035-possessive-forms-part2",
   "current_micro_skill": "p5.pron.possessive_forms",
-  "current_micro_skill_persisted_count": 25,
+  "current_micro_skill_persisted_count": 50,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_pron_possessive_forms_0026",
+  "next_resume_id": "p5_pron_possessive_forms_0051",
   "next_micro_skill": "p5.pron.possessive_forms",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Persisted p5.pron.possessive_forms IDs 0001-0025, bringing total generation to 2,725; all 25 remain pending_validation. The checkpoint alternates possessive adjectives before explicit nouns with standalone possessive pronouns across office, logistics, legal, training, procurement, and project contexts; answer positions A/B/C/D = 7/6/6/6. Independently reviewed oldest unchecked p5.verb.participle_clause IDs 0001-0025: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,725 checked, 1,650 verified, 75 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full revision-bound cross-bank semantic duplicate clearance and repo-local full schema/Node tests remain incomplete in this connector-only execution path. Next generation is p5_pron_possessive_forms_0026; next QA is p5_verb_participle_clause_0026.",
-  "updated_at": "2026-08-28T17:13:00+09:00"
+  "last_run_result": "Persisted p5.pron.possessive_forms IDs 0026-0050, bringing total generation to 2,750; all 25 remain pending_validation. The checkpoint covers possessive adjectives before explicit nouns and standalone possessive pronouns across finance, events, software, facilities, audit, travel, procurement, customer service, and hospitality contexts. Independently reviewed oldest unchecked p5.verb.participle_clause IDs 0026-0050: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 1,750 checked, 1,675 verified, 75 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_pron_possessive_forms_0051; next QA is p5_verb_participle_clause_0051.",
+  "updated_at": "2026-08-28T18:13:00+09:00"
 }
