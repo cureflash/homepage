@@ -25,7 +25,11 @@ try:
         PHYSICS_CIRCULAR_PERIOD_PROBLEM_COUNT,
         PHYSICS_CIRCULAR_PERIOD_TOPICS,
     )
-    from scripts.science_worksheet_helpers import generate_formula_drill
+    from scripts.science_physics_centrifugal_shm import (
+        PHYSICS_CENTRIFUGAL_SHM_PROBLEM_COUNT,
+        PHYSICS_CENTRIFUGAL_SHM_TOPICS,
+    )
+    from scripts.science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
     from science_physics_projectile import PHYSICS_PROJECTILE_PROBLEM_COUNT, PHYSICS_PROJECTILE_TOPICS
@@ -33,7 +37,8 @@ except ModuleNotFoundError:
     from science_physics_momentum import PHYSICS_MOMENTUM_PROBLEM_COUNT, PHYSICS_MOMENTUM_TOPICS
     from science_physics_circular_motion import PHYSICS_CIRCULAR_MOTION_PROBLEM_COUNT, PHYSICS_CIRCULAR_MOTION_TOPICS
     from science_physics_circular_period import PHYSICS_CIRCULAR_PERIOD_PROBLEM_COUNT, PHYSICS_CIRCULAR_PERIOD_TOPICS
-    from science_worksheet_helpers import generate_formula_drill
+    from science_physics_centrifugal_shm import PHYSICS_CENTRIFUGAL_SHM_PROBLEM_COUNT, PHYSICS_CENTRIFUGAL_SHM_TOPICS
+    from science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 
 
@@ -45,7 +50,25 @@ ALL_TOPICS = {
     **{key: (topic, PHYSICS_MOMENTUM_PROBLEM_COUNT) for key, topic in PHYSICS_MOMENTUM_TOPICS.items()},
     **{key: (topic, PHYSICS_CIRCULAR_MOTION_PROBLEM_COUNT) for key, topic in PHYSICS_CIRCULAR_MOTION_TOPICS.items()},
     **{key: (topic, PHYSICS_CIRCULAR_PERIOD_PROBLEM_COUNT) for key, topic in PHYSICS_CIRCULAR_PERIOD_TOPICS.items()},
+    **{key: (topic, PHYSICS_CENTRIFUGAL_SHM_PROBLEM_COUNT) for key, topic in PHYSICS_CENTRIFUGAL_SHM_TOPICS.items()},
 }
+
+
+def _generate_topic_problems(topic, mode_key, mode, seed, problem_count):
+    generator = topic.get("generator", "formula")
+    if generator == "retrieval":
+        return generate_retrieval_drill(mode["spec"], seed, problem_count, mode=mode_key), "accepted-set"
+    if generator != "formula":
+        raise ValueError(f"unsupported formal Physics generator: {generator}")
+    return (
+        generate_formula_drill(
+            topic["spec"],
+            seed,
+            problem_count,
+            solve_for=mode["solve_for"],
+        ),
+        "numeric",
+    )
 
 
 def build_batch(repo_root):
@@ -63,16 +86,14 @@ def build_batch(repo_root):
     for topic_key, (topic, problem_count) in ALL_TOPICS.items():
         for mode_key, mode in topic["modes"].items():
             for variant, seed in enumerate(topic["seeds"], start=1):
-                problems = generate_formula_drill(
-                    topic["spec"], seed, problem_count,
-                    solve_for=mode["solve_for"],
-                )
+                problems, answer_type = _generate_topic_problems(topic, mode_key, mode, seed, problem_count)
                 validate(problems)
                 content_hash = normalized_hash(problems)
                 wid = f"{ID_PREFIX}{topic_key}-{mode_key}-{variant:02d}"
                 filename = f"{wid}.pdf"
                 url = (output_rel_dir / filename).as_posix()
-                title = f"{topic['title']} {mode_key} {variant:02d}"
+                mode_label = mode.get("label", mode_key)
+                title = f"{topic['title']} {mode_label} {variant:02d}"
                 entry = {
                     "id": wid,
                     "school_level": "high-school",
@@ -92,7 +113,7 @@ def build_batch(repo_root):
                     "content_hash": content_hash,
                     "difficulty": "basic",
                     "worksheet_series": "focused",
-                    "answer_type": "numeric",
+                    "answer_type": answer_type,
                 }
 
                 if wid in by_id:
@@ -102,7 +123,7 @@ def build_batch(repo_root):
                     assert existing.get("formal_course") == FORMAL_COURSE
                     assert existing.get("grade") is None
                     assert existing.get("unit") == topic["unit"]
-                    assert existing.get("answer_type") == "numeric"
+                    assert existing.get("answer_type") == answer_type
                     continue
                 if url in by_url:
                     raise AssertionError(f"worksheet URL already belongs to another id: {url}")
