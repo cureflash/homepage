@@ -14,17 +14,17 @@ Power TOEIC (`subjects/english/power-toeic/`) を共通バックエンド／Dril
 
 - completed previous skill: `kobun.adjective.ku_vs_shiku` 100/100
 - current skill: `kobun.adjective.conjugation_form`
-- completed: 25/100
-- next ID: `kobun_adjective_conjugation_form_0026`
-- next safe checkpoint: 0026〜0050（25問）
+- completed: 50/100
+- next ID: `kobun_adjective_conjugation_form_0051`
+- next safe checkpoint: 0051〜0075（25問）
 
 ## Totals
 
-875 generated / 875 checked / 875 verified / 0 needs_revision / 0 rejected / pending 0.
+900 generated / 900 checked / 900 verified / 0 needs_revision / 0 rejected / pending 0.
 
 ## Latest QA
 
-`kobun.adjective.conjugation_form` 0001〜0025を独立再解答し25/25 verified。正答位置A/B/C/D = 7/6/6/6、stem完全重複0、batch内最大類似度0.878（0.94超0件）。ク活用・シク活用の本活用／カリ活用を教育資料で再確認済み。
+`kobun.adjective.conjugation_form` 0026〜0050を独立再解答し25/25 verified。正答位置A/B/C/D = 6/6/6/7、stem完全重複0、batch内最大類似度0.846（0.94超0件）。ク活用・シク活用の本活用／カリ活用、未然形＋ば、已然形＋ば、けり接続を確認した。
 
 ## Reconcile rule
 
