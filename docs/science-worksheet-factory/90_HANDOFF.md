@@ -10,8 +10,8 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 2280 PDFs
-- total published physics: 3438 PDFs
+- formal `物理`: 2400 PDFs
+- total published physics: 3558 PDFs
 
 Formal `物理` currently has:
 
@@ -26,69 +26,69 @@ Formal `物理` currently has:
 - `波：光`: 200 PDFs
 - `電気と磁気：電場・電位`: 120 PDFs
 - `電気と磁気：コンデンサー`: 120 PDFs
+- `電気と磁気：電気回路`: 120 PDFs
 
-All 2280 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=1600` and `accepted-set=680`. Worksheet modes are `calculation-basic=600`, `calculation-reverse=1000`, and 170 each of retrieval forward/reverse/fill/true-false. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
+All 2400 formal-Physics catalog rows use `formal_course=物理`, `grade=null`, 20 problems, and unique normalized content hashes. Answer types are `numeric=1680` and `accepted-set=720`. Worksheet modes are `calculation-basic=630`, `calculation-reverse=1050`, and 180 each of retrieval forward/reverse/fill/true-false. The publisher validates every registered formal-Physics PDF for `%PDF`, size greater than 1000 bytes, and two-page structure.
 
-## Completed this run — capacitors, 120 PDFs across four safe checkpoints
+## Completed this run — electric circuits, 120 PDFs across four safe checkpoints
 
-### 1. Charge, capacitance and voltage — 30 PDFs
+### 1. Resistance, resistivity and conductor geometry — 30 PDFs
 
-- skill: `capacitor-charge-voltage-numeric`
-- relation: `Q=CV`
-- learner-visible scaled units: `C[μF] × V[V] = Q[μC]`
-- 10 direct charge, 10 reverse capacitance, 10 reverse voltage worksheets
-- all generated electrical quantities are positive and independently recomputable from displayed values
+- skill: `circuit-resistivity-geometry-numeric`
+- relation: `R=ρl/S`
+- learner-visible units: `ρ[Ω·mm²/m]`, `l[m]`, `S[mm²]`, `R[Ω]`
+- 10 direct resistance, 10 reverse resistivity, 10 reverse cross-sectional-area worksheets
+- existing reversible `product-over-divisor` relation is reused
 
-### 2. Parallel-plate capacitance — 30 PDFs
+### 2. Source internal resistance — 30 PDFs
 
-- skill: `capacitor-parallel-plate-capacitance-numeric`
-- relation: `C=ε₀S/d`
-- learner-visible school scaling: `C[pF]=0.885 S[cm²]/d[mm]`, using the vacuum-permittivity approximation after unit conversion
-- 10 direct capacitance, 10 reverse plate-area, 10 reverse plate-gap worksheets
-- plate area and separation are always positive; no hidden topology or distance transformation is used
+- skill: `circuit-internal-resistance-numeric`
+- relation for a discharging source: `E=V+rI`
+- current direction is stated explicitly as current flowing from the source into the external circuit
+- 10 direct emf, 10 reverse terminal-voltage, 10 reverse internal-resistance worksheets
+- existing reversible `offset-product` relation is reused
 
-### 3. Stored electrostatic energy — 20 PDFs
+### 3. Kirchhoff first law at one junction — 20 PDFs
 
-- skill: `capacitor-stored-energy-numeric`
-- relation: `U=(1/2)QV`
-- learner-visible scaled units: `Q[mC] × V[V]` with visible factor `1/2`, giving `U[mJ]`
-- 10 direct energy and 10 reverse charge worksheets
-- existing reversible `product` relation is reused; no new shared helper was needed
+- skill: `circuit-kirchhoff-junction-numeric`
+- learner-visible topology: one current `Iin` enters a junction and `I1`, `I2` leave, so `Iin=I1+I2`
+- 10 direct incoming-current and 10 reverse outgoing-current worksheets
+- existing reversible `sum` relation is reused
 
-### 4. Capacitor concepts — 40 PDFs
+### 4. Electric-circuit concepts — 40 PDFs
 
-- skill: `capacitor-core-concepts`
+- skill: `circuit-core-concepts`
 - 10 each of forward, reverse, fill and true/false retrieval
-- covers charging/discharging, definition `Q=CV`, plate-area and plate-gap dependence, parallel equivalent capacitance, series reciprocal relation and dielectric effects
-- finite accepted-answer sets are independently validated and reverse prompts are unambiguous
+- covers `R=ρl/S`, conductor geometry, temperature dependence of resistivity, source internal resistance, Kirchhoff first/second laws and semiconductor scope
+- finite accepted-answer sets are independently validated
 
 ## Curriculum basis
 
-The current MEXT High School Course of Study commentary remains the authority for formal `物理`. In the electricity section it treats capacitor charge/discharge and capacitance, relates parallel-plate capacitance to plate area and separation together with electric field/potential difference, requires touching on equivalent capacitance for capacitor connections, and allows the dielectric relationship to be addressed. This run stayed within that scope.
+The current MEXT High School Course of Study commentary is the authority for formal `物理`. Under `電気回路`, it requires understanding the basic laws of electric circuits through experiments and specifies that temperature change of resistivity and source internal resistance are treated, with semiconductors also touched on. The implementation stays within that scope and keeps signs, current direction and junction topology learner-visible.
 
-The next curriculum block is `電気回路`. Before generation, recheck the current MEXT treatment of resistance/resistivity and temperature dependence, source internal resistance, Kirchhoff's laws, and semiconductor-related scope, then select only mechanically verifiable basic relations whose sign/topology conventions can be learner-visible.
+The existing formal-Physics curriculum plan proceeds next to `磁場中の力`. Before generation, recheck the current MEXT `電流と磁界` scope and terminology and choose only mechanically verifiable relations with current direction, magnetic-field direction, force direction and geometry visible to the learner.
 
 ## Validation and publication
 
-- no shared formula helper changed; numerical checkpoints reuse existing reversible `product` and `product-over-divisor` relations
-- a temporary branch-only candidate workflow was used and removed before merge
-- candidate validation run `33211109947`: success
-- candidate validation passed the full formal-Physics regression suite, deterministic regeneration, independent recomputation from learner-visible values, corrupted-answer rejection, retrieval validation, physical-domain checks, 120/120 new normalized-hash uniqueness and disjointness from the published catalog, generation of all 120 candidate PDFs, 2280-row prospective catalog validation, and PDF header/size/two-page checks
-- implementation PR #269 merged as `9955e99e4498f71df083dac6e8b629a80bd6689c`, preserving concurrent main progress
-- production Actions run `33211163499`: success
-- every production step succeeded: latest-main confirmation, full regression tests, 120-PDF generation, post-generation validation, 2280-row catalog/PDF validation, commit, and non-force safe push
-- worksheet-catalog concurrency audit run `33211163494`: success
-- publication commit: `0379f81a8687c11696f3c24ca497ae51d887bbc3` (`Publish 120 formal Physics capacitor worksheets`)
-- final contract: 2280 formal-Physics rows / 2280 unique hashes; `numeric=1600`, `accepted-set=680`; calculation-basic 600, calculation-reverse 1000, retrieval forward/reverse/fill/true-false 170 each
+- no shared formula helper changed; numerical checkpoints reuse existing `product-over-divisor`, `offset-product` and `sum` relations
+- temporary branch-only candidate workflow was removed before merge
+- candidate validation run `33215542390`: success
+- candidate validation passed the full formal-Physics regression suite, deterministic regeneration, independent recomputation from learner-visible values, corrupted-answer rejection, retrieval validation, positive-domain checks, 120/120 new normalized-hash uniqueness and disjointness from the published catalog, generation of all 120 candidate PDFs, 2400-row prospective catalog validation, and PDF header/size/two-page checks
+- implementation PR #273 merged as `bc387332dbba75bd60efec62389b1f2333229f28`, preserving concurrent main progress
+- production Actions run `33215610585`: success
+- every production step succeeded: latest-main confirmation, full regression tests, 120-PDF generation, post-generation validation, 2400-row catalog/PDF validation, commit, and non-force safe push
+- worksheet-catalog concurrency audit run `33215610642`: success
+- publication commit: `60504c2ad730359fcc126b2ee870c7955a1db243` (`Publish 120 formal Physics electric-circuit worksheets`)
+- final contract: 2400 formal-Physics rows / 2400 unique hashes; `numeric=1680`, `accepted-set=720`; calculation-basic 630, calculation-reverse 1050, retrieval forward/reverse/fill/true-false 180 each
 - shared catalog serialization remains `worksheet-catalog-publish-v1`
 
 ## Exact next starting point
 
-Continue formal course `物理` at **`電気と磁気 / 電気回路`**.
+Continue formal course `物理` at `電気と磁気 / 磁場中の力`, following the existing curriculum plan.
 
 1. Start from latest `main`; re-read the science factory instructions, curriculum plan, STATUS and this HANDOFF, and reconcile parallel progress first.
-2. Recheck the current MEXT circuit scope and terminology before choosing the first numerical/retrieval checkpoint.
-3. Prefer transparent basic relations around resistance/resistivity, source internal resistance and Kirchhoff relationships; keep polarity, current direction and circuit topology learner-visible rather than inferred by hidden generator state.
-4. Add a new shared formula relation only if existing transparent helpers cannot represent the verified relation safely; any shared-generator change requires regression tests.
+2. Recheck the current MEXT `電流と磁界` scope before selecting the first magnetic checkpoint.
+3. Keep current direction, magnetic-field direction, force direction and geometry learner-visible rather than inferred by hidden generator state.
+4. Add a new shared formula relation only if existing transparent helpers cannot safely represent the verified relation; any shared-generator change requires regression tests.
 5. Preserve `formal_course=物理`, `grade=null`, deterministic seeds, independent validation, corrupted-answer rejection, normalized-hash uniqueness/existing-catalog collision checks, 20-problem two-page PDFs, mixed answer-type publisher validation, `worksheet-catalog-publish-v1`, and non-force latest-main push safety.
 6. Representative screenshot-based visual QA remains pending; structural PDF QA has passed but is not a substitute for visual QA.
