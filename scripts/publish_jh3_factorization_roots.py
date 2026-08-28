@@ -49,7 +49,7 @@ def gen(skill,seed):
     r=random.Random(seed+997*sum(map(ord,skill))); out=[]; seen=set(); target=SKILLS[skill][1]
     while len(out)<target:
         if skill=='factor-difference-squares':
-            p={'type':skill,'a':r.randint(2,20)}
+            p={'type':skill,'a':r.randint(2,30)}
         elif skill=='square-root-basic-value':
             a=r.randint(2,30); p={'type':skill,'n':a*a}
         elif skill=='simplify-radical':
@@ -57,11 +57,11 @@ def gen(skill,seed):
         else:
             i=len(out)%5
             if i==0: p={'type':'expand-square','a':r.randint(1,12),'sign':r.choice((-1,1))}
-            elif i==1: p={'type':'expand-difference','a':r.randint(2,20)}
+            elif i==1: p={'type':'expand-difference','a':r.randint(2,30)}
             elif i==2:
                 a=r.choice([x for x in range(-9,10) if x]); b=r.choice([x for x in range(-9,10) if x]); p={'type':'factor-sum-product','a':a,'b':b}
             elif i==3: p={'type':'factor-square','a':r.randint(1,12),'sign':r.choice((-1,1))}
-            else: p={'type':'factor-difference','a':r.randint(2,20)}
+            else: p={'type':'factor-difference','a':r.randint(2,30)}
         p['answer']=independent_answer(p); key=json.dumps(p,sort_keys=True)
         if key in seen: continue
         seen.add(key); out.append(p)
