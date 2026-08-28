@@ -7,42 +7,40 @@
 ## Current canonical state
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
-- Fully completed generated micro-skills: **28 / 44**
-- Generated questions persisted: **2,800**
-- QA checked: **1,800**
-- Verified: **1,725**
-- Needs revision: **75**
-- Rejected: **0**
-- Unchecked `pending_validation`: **1,000**
+- Fully completed generated micro-skills: 28 / 44
+- Generated questions persisted: 2,825
+- QA checked: 1,825
+- Verified: 1,750
+- Needs revision: 75
+- Rejected: 0
+- Unchecked `pending_validation`: 1,000
 - `generation_complete`: `false`
 - `validation_complete`: `false`
 
 ## This run — generation
 
-Completed `p5.pron.possessive_forms` with IDs **0076-0100**:
+Started `p5.pron.reflexive` with IDs 0001-0025:
 
-`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/possessive-forms/pending/batch-20260828-037-part4.json`
+`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/reflexive/pending/batch-20260828-038-part1.json`
 
-All 25 remain `pending_validation`. The checkpoint mixes possessive adjectives before explicit nouns with standalone possessive pronouns across accounting, branches, vendors, hotels, travel, suppliers, offices, reservations, engineering, warranties, clinics, publishing, research, and manufacturing contexts. IDs are sequential and unique, every stem has one blank and four distinct choices, and the intended answer is fixed by whether a following noun is present or a prior noun phrase must be replaced.
+All 25 remain `pending_validation`. The checkpoint mixes reflexive-object, emphatic, `by oneself`, and fixed-pattern uses across staffing, training, software, audits, supplier, hotel, laboratory, interview, and engineering contexts. IDs are sequential and unique, every stem has one blank and four distinct choices, and answer positions are distributed across the four slots.
 
-`p5.pron.possessive_forms` is now **100/100** and complete.
+`p5.pron.reflexive` is now 25/100.
 
 ## This run — QA
 
-Reviewed oldest unchecked `p5.verb.participle_clause` IDs **0076-0100**.
+Reviewed oldest unchecked `p5.conn.preposition_vs_conjunction` IDs 0001-0025.
 
-- Checked: **25**
-- Verified: **25**
-- Needs revision: **0**
-- Rejected: **0**
+- Checked: 25
+- Verified: 25
+- Needs revision: 0
+- Rejected: 0
 
-This final checkpoint mixes active reduced clauses requiring present participles with passive reduced clauses requiring past participles. Each item was individually re-solved against all four choices; subject control, voice, sentence naturalness, distractor plausibility, and explanation consistency were checked. No alternate defensible answer or dangling-subject conflict was found.
+Items 0001-0010 require `because of` before noun phrases, 0011-0020 require `because` before full clauses, and 0021-0025 require `despite` before noun phrases. Each item was individually re-solved against all four choices; no alternate defensible answer or explanation mismatch was found.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-037-participle-clause-part4.qa.json`
-
-`p5.verb.participle_clause` QA is now complete at **100/100 checked**.
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-038-preposition-vs-conjunction-part1.qa.json`
 
 ## QA-method / test limitation
 
@@ -50,14 +48,10 @@ The persisted candidate format co-locates stems, choices, proposed answers and e
 
 ## Next generation
 
-Start the next taxonomy micro-skill:
-
-`p5.pron.reflexive` from `p5_pron_reflexive_0001`.
+Continue `p5.pron.reflexive` from `p5_pron_reflexive_0026`.
 
 ## Next QA
 
-Continue the oldest unchecked backlog at:
-
-`p5_conn_preposition_vs_conjunction_0001`.
+Continue the oldest unchecked backlog at `p5_conn_preposition_vs_conjunction_0026`.
 
 Existing `needs_revision` items from earlier skills remain unresolved.
