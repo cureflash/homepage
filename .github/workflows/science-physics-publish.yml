@@ -38,7 +38,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: worksheet-catalog-publish-v2
+  group: worksheet-catalog-publish-v1
   cancel-in-progress: false
 
 jobs:
