@@ -7,10 +7,10 @@
 ## Current canonical state
 
 - Taxonomy: `subjects/english/power-toeic/js/data/taxonomy/part5-v1.json`
-- Fully completed generated micro-skills: **27 / 44**
-- Generated questions persisted: **2,775**
-- QA checked: **1,775**
-- Verified: **1,700**
+- Fully completed generated micro-skills: **28 / 44**
+- Generated questions persisted: **2,800**
+- QA checked: **1,800**
+- Verified: **1,725**
 - Needs revision: **75**
 - Rejected: **0**
 - Unchecked `pending_validation`: **1,000**
@@ -19,28 +19,30 @@
 
 ## This run — generation
 
-Continued `p5.pron.possessive_forms` with IDs **0051-0075**:
+Completed `p5.pron.possessive_forms` with IDs **0076-0100**:
 
-`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/possessive-forms/pending/batch-20260828-036-part3.json`
+`subjects/english/power-toeic/js/data/questions/part5/pronouns-relatives/possessive-forms/pending/batch-20260828-037-part4.json`
 
-All 25 remain `pending_validation`. The checkpoint mixes possessive adjectives before explicit nouns with standalone possessive pronouns across design, travel, compliance, logistics, laboratory, marketing, facilities, banking, construction, invoicing, and airline contexts. IDs are sequential and unique, every stem has one blank and four distinct choices, and the intended answer is fixed by whether a following noun is present or a prior noun phrase must be replaced.
+All 25 remain `pending_validation`. The checkpoint mixes possessive adjectives before explicit nouns with standalone possessive pronouns across accounting, branches, vendors, hotels, travel, suppliers, offices, reservations, engineering, warranties, clinics, publishing, research, and manufacturing contexts. IDs are sequential and unique, every stem has one blank and four distinct choices, and the intended answer is fixed by whether a following noun is present or a prior noun phrase must be replaced.
 
-`p5.pron.possessive_forms` is now **75/100**.
+`p5.pron.possessive_forms` is now **100/100** and complete.
 
 ## This run — QA
 
-Reviewed oldest unchecked `p5.verb.participle_clause` IDs **0051-0075**.
+Reviewed oldest unchecked `p5.verb.participle_clause` IDs **0076-0100**.
 
 - Checked: **25**
 - Verified: **25**
 - Needs revision: **0**
 - Rejected: **0**
 
-All 25 use an active reduced participle clause whose understood subject is the main-clause subject. The present participle is uniquely defensible against the past-participle, base-form, and infinitive distractors. No dangling-subject conflict, alternate natural answer, explanation mismatch, or obvious duplicate stem was found.
+This final checkpoint mixes active reduced clauses requiring present participles with passive reduced clauses requiring past participles. Each item was individually re-solved against all four choices; subject control, voice, sentence naturalness, distractor plausibility, and explanation consistency were checked. No alternate defensible answer or dangling-subject conflict was found.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-036-participle-clause-part3.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-037-participle-clause-part4.qa.json`
+
+`p5.verb.participle_clause` QA is now complete at **100/100 checked**.
 
 ## QA-method / test limitation
 
@@ -48,14 +50,14 @@ The persisted candidate format co-locates stems, choices, proposed answers and e
 
 ## Next generation
 
-Continue:
+Start the next taxonomy micro-skill:
 
-`p5.pron.possessive_forms` from `p5_pron_possessive_forms_0076`.
+`p5.pron.reflexive` from `p5_pron_reflexive_0001`.
 
 ## Next QA
 
-Continue oldest unchecked backlog at:
+Continue the oldest unchecked backlog at:
 
-`p5_verb_participle_clause_0076`.
+`p5_conn_preposition_vs_conjunction_0001`.
 
 Existing `needs_revision` items from earlier skills remain unresolved.
