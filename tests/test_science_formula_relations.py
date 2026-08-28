@@ -189,5 +189,29 @@ class ScienceFormulaRelationTests(unittest.TestCase):
             generate_formula_drill(equal_products, 9914, 1, solve_for="r")
 
 
+    def test_two_pi_sqrt_ratio_direct_rounding_and_inverse_rejection(self):
+        spec = {
+            "id": "test-two-pi-sqrt-ratio", "relation": "two-pi-sqrt-ratio",
+            "result": "t", "inputs": ["n", "d", "pi"],
+            "variables": {
+                "t": {"label": "t", "unit": "s"},
+                "n": {"label": "n", "values": [0.1, 0.4, 1.6]},
+                "d": {"label": "d", "values": [5, 10, 20]},
+                "pi": {"label": "pi", "values": [3.14]},
+            }, "tolerance": 1e-9,
+        }
+        for problem in generate_formula_drill(spec, 9920, 20, solve_for="t"):
+            known = problem["known"]
+            expected = round(2 * known["pi"] * (known["n"] / known["d"]) ** 0.5, 3)
+            self.assertEqual(problem["answer"], expected)
+            self.assertTrue(validate_science_problem(problem))
+        for target in ("n", "d", "pi"):
+            with self.assertRaisesRegex(ValueError, "inverse generation"):
+                generate_formula_drill(spec, 9921, 1, solve_for=target)
+        wrong = {**spec, "inputs": ["n", "d"]}
+        with self.assertRaisesRegex(ValueError, "three unique inputs"):
+            generate_formula_drill(wrong, 9922, 1, solve_for="t")
+
+
 if __name__ == "__main__":
     unittest.main()

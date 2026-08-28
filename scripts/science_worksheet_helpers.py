@@ -20,6 +20,7 @@ FORMULA_RELATIONS = {
     'linear-plus-half-quadratic',
     'square-over-double',
     'double-quotient',
+    'two-pi-sqrt-ratio',
     'equal-products',
     'two-body-momentum-conservation',
 }
@@ -78,6 +79,13 @@ def _relation_result(relation, inputs):
         if divisor == 0:
             raise ValueError('double-quotient divisor must not be zero')
         return 2 * numerator / divisor
+    if relation == 'two-pi-sqrt-ratio':
+        if len(inputs) != 3:
+            raise ValueError('two-pi-sqrt-ratio needs exactly numerator, divisor, and pi')
+        numerator, divisor, pi_value = inputs
+        if numerator <= 0 or divisor <= 0 or pi_value <= 0:
+            raise ValueError('two-pi-sqrt-ratio requires positive numerator, divisor, and pi')
+        return round(2 * pi_value * sqrt(numerator / divisor), 3)
     if relation == 'equal-products':
         if len(inputs) != 3:
             raise ValueError('equal-products needs exactly left arm, right force, and right arm')
@@ -237,6 +245,11 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
     if relation in {'square-over-double', 'double-quotient'}:
         if len(input_names) != 2 or len(set(input_names)) != 2:
             raise ValueError(f'{relation} needs two unique inputs')
+    if relation == 'two-pi-sqrt-ratio':
+        if len(input_names) != 3 or len(set(input_names)) != 3:
+            raise ValueError('two-pi-sqrt-ratio needs three unique inputs')
+        if solve_for != result_name:
+            raise ValueError('two-pi-sqrt-ratio inverse generation is intentionally unsupported after rounding')
     if relation == 'equal-products':
         if len(input_names) != 3 or len(set(input_names)) != 3:
             raise ValueError('equal-products needs three unique inputs')
