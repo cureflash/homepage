@@ -19,6 +19,7 @@ try:
     from scripts.science_physics_waves import PHYSICS_WAVES_PROBLEM_COUNT, PHYSICS_WAVES_TOPICS
     from scripts.science_physics_sound import PHYSICS_SOUND_PROBLEM_COUNT, PHYSICS_SOUND_TOPICS
     from scripts.science_physics_light import PHYSICS_LIGHT_PROBLEM_COUNT, PHYSICS_LIGHT_TOPICS
+    from scripts.science_physics_light_numeric import PHYSICS_LIGHT_NUMERIC_PROBLEM_COUNT, PHYSICS_LIGHT_NUMERIC_TOPICS
     from scripts.science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
@@ -36,6 +37,7 @@ except ModuleNotFoundError:
     from science_physics_waves import PHYSICS_WAVES_PROBLEM_COUNT, PHYSICS_WAVES_TOPICS
     from science_physics_sound import PHYSICS_SOUND_PROBLEM_COUNT, PHYSICS_SOUND_TOPICS
     from science_physics_light import PHYSICS_LIGHT_PROBLEM_COUNT, PHYSICS_LIGHT_TOPICS
+    from science_physics_light_numeric import PHYSICS_LIGHT_NUMERIC_PROBLEM_COUNT, PHYSICS_LIGHT_NUMERIC_TOPICS
     from science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 
@@ -57,6 +59,7 @@ ALL_TOPICS = {
     **{key: (topic, PHYSICS_WAVES_PROBLEM_COUNT) for key, topic in PHYSICS_WAVES_TOPICS.items()},
     **{key: (topic, PHYSICS_SOUND_PROBLEM_COUNT) for key, topic in PHYSICS_SOUND_TOPICS.items()},
     **{key: (topic, PHYSICS_LIGHT_PROBLEM_COUNT) for key, topic in PHYSICS_LIGHT_TOPICS.items()},
+    **{key: (topic, PHYSICS_LIGHT_NUMERIC_PROBLEM_COUNT) for key, topic in PHYSICS_LIGHT_NUMERIC_TOPICS.items()},
 }
 
 
