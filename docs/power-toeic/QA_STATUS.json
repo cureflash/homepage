@@ -1,18 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1875,
-  "verified_question_count": 1800,
+  "checked_question_count": 1900,
+  "verified_question_count": 1825,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-28-scheduled-040-preposition-vs-conjunction-part3",
+  "last_completed_batch": "2026-08-29-scheduled-041-preposition-vs-conjunction-part4",
   "last_completed_micro_skill": "p5.conn.preposition_vs_conjunction",
   "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
-  "next_batch": "2026-08-28-scheduled-041-preposition-vs-conjunction-part4",
-  "next_micro_skill": "p5.conn.preposition_vs_conjunction",
-  "next_question_id": "p5_conn_preposition_vs_conjunction_0076",
+  "next_batch": "2026-08-29-scheduled-042-because-vs-because-of-part1",
+  "next_micro_skill": "p5.conn.because_vs_because_of",
+  "next_question_id": "p5_conn_because_vs_because_of_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-28T23:15:00+09:00"
+  "updated_at": "2026-08-29T00:15:00+09:00"
 }
