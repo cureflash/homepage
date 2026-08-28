@@ -94,13 +94,62 @@
       primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
       sourceUnitIds: ["takken-gyoho-license-authority"],
       sourceFactIds: ["u03-f1"]
+    },
+    {
+      ...shared,
+      conceptId: "takken-concept-license-disqualification",
+      knowledgeId: "takken-k-license-disqualification-cancellation-five-years",
+      claim: "宅地建物取引業法66条1項8号または9号に該当して免許を取り消された者は、その取消しの日から5年を経過しない間、免許を受けることができない。",
+      conditions: ["宅地建物取引業法66条1項8号または9号に該当することを理由に免許を取り消されたこと", "取消しの日から5年を経過していないこと"],
+      exceptions: ["免許取消しであれば理由を問わず永久に欠格となるわけではない。"],
+      importance: "A",
+      primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
+      sourceUnitIds: ["takken-gyoho-license-disqualification"],
+      sourceFactIds: ["u04-f1"]
+    },
+    {
+      ...shared,
+      conceptId: "takken-concept-license-disqualification",
+      knowledgeId: "takken-k-license-disqualification-hearing-closure-five-years",
+      claim: "宅地建物取引業法66条1項8号または9号に該当するとして免許取消処分の聴聞が公示された後、処分前に一定の廃業等の届出をした者は、相当の理由がある場合を除き、その届出の日から5年を経過しない間、免許を受けることができない。",
+      conditions: ["免許取消処分の聴聞の期日および場所が公示された後の届出であること", "宅地建物取引業法5条1項3号が定める期間内の一定の届出であること", "届出の日から5年を経過していないこと"],
+      exceptions: ["解散または宅地建物取引業の廃止について相当の理由がある場合は、この欠格事由から除外される。"],
+      importance: "A",
+      primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
+      sourceUnitIds: ["takken-gyoho-license-disqualification"],
+      sourceFactIds: ["u04-f1"]
+    },
+    {
+      ...shared,
+      conceptId: "takken-concept-license-disqualification",
+      knowledgeId: "takken-k-license-disqualification-criminal-sentence-five-years",
+      claim: "拘禁刑以上の刑に処せられた者、または宅地建物取引業法違反等の法定の罪により罰金刑に処せられた者は、刑の執行を終わり、または執行を受けることがなくなった日から5年を経過しない間、免許を受けることができない。",
+      conditions: ["拘禁刑以上の刑、または宅地建物取引業法5条1項6号が列挙する違反・罪による罰金刑であること", "刑の執行を終わり、または執行を受けることがなくなった日から5年を経過していないこと"],
+      exceptions: ["罰金刑はすべて一律に5年間の欠格となるのではなく、同号が定める違反・罪によるものが対象となる。"],
+      importance: "A",
+      primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
+      sourceUnitIds: ["takken-gyoho-license-disqualification"],
+      sourceFactIds: ["u04-f1"]
+    },
+    {
+      ...shared,
+      conceptId: "takken-concept-license-disqualification",
+      knowledgeId: "takken-k-license-disqualification-misconduct-prior-five-years",
+      claim: "免許の申請前5年以内に宅地建物取引業に関し不正または著しく不当な行為をした者は、免許を受けることができない。",
+      conditions: ["宅地建物取引業に関する不正または著しく不当な行為であること", "その行為が免許申請前5年以内にあること"],
+      exceptions: [],
+      importance: "A",
+      primarySources: [SOURCES.takkenAct, SOURCES.mlitLicense],
+      sourceUnitIds: ["takken-gyoho-license-disqualification"],
+      sourceFactIds: ["u04-f1"]
     }
   ];
 
   const knownConceptIds = new Set([
     "takken-concept-business-definition",
     "takken-concept-license-required",
-    "takken-concept-license-authority"
+    "takken-concept-license-authority",
+    "takken-concept-license-disqualification"
   ]);
   const ids = new Set();
   const allowedImportance = new Set(["A", "B", "C"]);
@@ -124,6 +173,7 @@
   if (countsByConcept.get("takken-concept-business-definition") !== 3) throw new Error("Business-definition knowledge count changed unexpectedly");
   if (countsByConcept.get("takken-concept-license-required") !== 1) throw new Error("License-required knowledge coverage is incomplete");
   if (countsByConcept.get("takken-concept-license-authority") !== 2) throw new Error("License-authority knowledge coverage is incomplete");
+  if (countsByConcept.get("takken-concept-license-disqualification") !== 4) throw new Error("License-disqualification knowledge coverage is incomplete");
 
   window.PowerTakkenKnowledgeItems = Object.freeze(knowledgeItems.map((item) => Object.freeze(item)));
 })();
