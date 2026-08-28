@@ -8,19 +8,19 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-contract-start` using source unit `contract-start-time` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-false-advertising` using source unit `false-advertising-prohibited-conduct` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-contract-start.js` with five verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-false-advertising.js` with five verified atomic knowledge items:
 
-1. `takken-k-contract-start-permit-before-contract` — before completion of a land-development or building-construction project, a宅建業者 may not conclude, as principal or agent, or mediate the sale/exchange contract until the legally required permit/confirmation disposition has occurred.
-2. `takken-k-contract-start-self-agency-brokerage` — Article 36 covers the宅建業者 acting as principal, as agent, and as broker.
-3. `takken-k-contract-start-sale-exchange-scope` — Article 36 covers sale/exchange; it is not the statutory timing restriction for lease contracts.
-4. `takken-k-contract-start-development-permit-building-confirmation` — representative Article 36 triggers are Urban Planning Act Article 29 development permission and Building Standards Act Article 6 confirmation; the Enforcement Order supplies additional prescribed dispositions.
-5. `takken-k-contract-start-application-not-enough` — merely applying for the required permit/confirmation is insufficient; the disposition must have occurred.
+1. `takken-k-false-advertising-materially-false` — Article 32 prohibits advertisements containing representations that are materially contrary to fact concerning the statutory subject matters.
+2. `takken-k-false-advertising-materially-superior-favorable` — Article 32 separately prohibits representations that cause people to mistake the advertised property or conditions as materially superior or advantageous to reality.
+3. `takken-k-false-advertising-property-scope` — statutory subject matter includes location, scale, form/quality, current or future use restrictions, environment, transportation and other utility matters.
+4. `takken-k-false-advertising-transaction-conditions-scope` — statutory subject matter also includes price/rent and other consideration, payment method, and financing-arrangement matters concerning price or exchange difference.
+5. `takken-k-false-advertising-bait-fictitious-ads` — MLIT interpretation applies Article 32 to bait advertisements for attractive properties there is no intention to sell and to advertisements for properties that do not actually exist.
 
-Primary authority is the current 宅地建物取引業法 Article 36 and 宅地建物取引業法施行令 Article 2-5. The canonical source unit's `u19-f1` is preserved as the source fact reference.
+Primary authority is current 宅地建物取引業法 Article 32. The bait/fictitious-advertising item additionally uses MLIT's official Article 32 interpretation notice. The canonical source unit's `u20-f1` is preserved as the source fact reference.
 
-Existing verified `takken-q-19-001` directly tests the general rule that pre-completion sale/exchange contracting is restricted until the required permit etc. has been obtained, so it was mapped only to `takken-k-contract-start-permit-before-contract`. It does not directly test the principal/agent/broker distinction, the sale/exchange versus lease scope, the named development-permit/building-confirmation examples, or the application-versus-disposition distinction; those four items remain explicit Phase 4.3 deficits.
+Existing verified `takken-q-20-001` directly tests that property location/scale/form, use restrictions, environment and similar property-side matters fall within the statutory advertising scope, so it was mapped only to `takken-k-false-advertising-property-scope`. It does not directly distinguish the two Article 32 prohibition standards, transaction-condition/financing scope, or bait/fictitious advertising; those four items remain explicit Phase 4.3 deficits.
 
 No Phase 2/3 question content or validation state was changed. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -31,18 +31,18 @@ No Phase 2/3 question content or validation state was changed. No Phase 4.3 ques
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 25/113 concepts modeled
-- Canonical knowledge items: 129
-- Existing verified questions mapped: 21
-- Explicit unmapped knowledge gaps: 99
+- Phase 4.2: active — 26/113 concepts modeled
+- Canonical knowledge items: 134
+- Existing verified questions mapped: 22
+- Explicit unmapped knowledge gaps: 103
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-false-advertising` using source unit `false-advertising-prohibited-conduct`.
+Continue Phase 4.2 at `takken-concept-article35-procedure` using source units `article35-basics` and `article35-vs-37`.
 
-Preserve all 129 knowledge items, twenty-one valid mappings, and all ninety-nine explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 134 knowledge items, twenty-two valid mappings, and all one hundred three explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Publication invariant
 
