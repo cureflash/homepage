@@ -1,0 +1,43 @@
+{
+  "format": "power-classics-qa-v1",
+  "batch": "2026-08-29-scheduled-030",
+  "skill": "kobun.adjective.ku_vs_shiku",
+  "checked_at": "2026-08-29T02:00:00+09:00",
+  "qa_method": "independent_resolve_from_stem_and_choices_before_key_comparison",
+  "source_ids": [
+    "kobun_adjective_ku_vs_shiku_0076","kobun_adjective_ku_vs_shiku_0077","kobun_adjective_ku_vs_shiku_0078","kobun_adjective_ku_vs_shiku_0079","kobun_adjective_ku_vs_shiku_0080","kobun_adjective_ku_vs_shiku_0081","kobun_adjective_ku_vs_shiku_0082","kobun_adjective_ku_vs_shiku_0083","kobun_adjective_ku_vs_shiku_0084","kobun_adjective_ku_vs_shiku_0085","kobun_adjective_ku_vs_shiku_0086","kobun_adjective_ku_vs_shiku_0087","kobun_adjective_ku_vs_shiku_0088","kobun_adjective_ku_vs_shiku_0089","kobun_adjective_ku_vs_shiku_0090","kobun_adjective_ku_vs_shiku_0091","kobun_adjective_ku_vs_shiku_0092","kobun_adjective_ku_vs_shiku_0093","kobun_adjective_ku_vs_shiku_0094","kobun_adjective_ku_vs_shiku_0095","kobun_adjective_ku_vs_shiku_0096","kobun_adjective_ku_vs_shiku_0097","kobun_adjective_ku_vs_shiku_0098","kobun_adjective_ku_vs_shiku_0099","kobun_adjective_ku_vs_shiku_0100"
+  ],
+  "checked": 25,
+  "verified": 25,
+  "needs_revision": 0,
+  "rejected": 0,
+  "answer_positions": {"A":5,"B":6,"C":7,"D":7},
+  "notes": "All 25 were independently re-solved from stem+choices before comparison with stored keys/explanations. Each item has four distinct choices and one defensible answer. ク活用 / シク活用 was checked from the classical continuative-form pattern (-く vs -しく). Exact stems are unique within the batch; maximum within-batch SequenceMatcher similarity is 0.667, below the 0.94 review threshold. With this checkpoint the 100-question skill has cumulative answer positions A/B/C/D = 25/25/25/25. Full-bank semantic near-duplicate clearance remains pending.",
+  "results": [
+    {"id":"kobun_adjective_ku_vs_shiku_0076","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0077","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0078","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0079","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0080","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0081","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0082","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0083","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0084","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0085","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0086","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0087","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0088","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0089","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0090","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0091","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0092","independent_answer_index":0,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0093","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0094","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0095","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0096","independent_answer_index":1,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0097","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0098","independent_answer_index":2,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0099","independent_answer_index":3,"status":"verified"},
+    {"id":"kobun_adjective_ku_vs_shiku_0100","independent_answer_index":3,"status":"verified"}
+  ]
+}
