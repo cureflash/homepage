@@ -31,14 +31,14 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 - [ ] Decompose every concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` cutoff and primary sources.
 - [ ] Map existing verified questions only where they genuinely test the knowledge item; missing evidence remains a Phase 4.3 deficit.
 
-Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage.
+Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage.
 
 Latest checkpoint:
-- [x] `takken-concept-exclusive-brokerage`: 7 verified items. Exclusive brokerage prohibits retaining another broker for the same transaction but permits a self-found transaction. Its statutory period is capped at three months; renewal requires a client request and the renewed period is also capped at three months. REINS registration is required within seven days and processing-status reporting at least once every two weeks. Existing `takken-q-16-001` directly tests only the three-month cap; `takken-q-17-001` directly tests only the seven-day REINS deadline and two-week reporting frequency. Four new items therefore remain explicit Phase 4.3 deficits.
+- [x] `takken-concept-sole-agency-brokerage`: 7 verified items. Sole-agency brokerage prohibits retaining another broker and also prohibits a self-found transaction. Its statutory period is capped at three months; renewal requires a client request and the renewed period is also capped at three months. REINS registration is required within five days and processing-status reporting at least once every week. Existing `takken-q-17-002` directly tests only the five-day REINS deadline and one-week reporting frequency. Five new items therefore remain explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: 20/113 modeled concepts, 107 verified knowledge items, 18 existing verified questions mapped, 81 explicit question-coverage gaps.
+Current Phase 4.2 totals: 21/113 modeled concepts, 114 verified knowledge items, 19 existing verified questions mapped, 86 explicit question-coverage gaps.
 
-Exact continuation: `takken-concept-sole-agency-brokerage`, source units `brokerage-contract-types` and `brokerage-reins-reporting`. Preserve all eighty-one explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
+Exact continuation: `takken-concept-reins-registration`, source unit `brokerage-reins-reporting`. Preserve all eighty-six explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.

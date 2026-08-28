@@ -19,7 +19,8 @@
     { questionId: "takken-q-14-001", conceptId: "takken-concept-guarantee-association", knowledgeRefs: ["takken-k-guarantee-association-statutory-system"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-15-001", conceptId: "takken-concept-brokerage-contract-document", knowledgeRefs: ["takken-k-brokerage-contract-document-delivery-duty"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-16-001", conceptId: "takken-concept-exclusive-brokerage", knowledgeRefs: ["takken-k-exclusive-brokerage-period-three-month-cap"], sourceQuestionValidationStatus: "verified" },
-    { questionId: "takken-q-17-001", conceptId: "takken-concept-exclusive-brokerage", knowledgeRefs: ["takken-k-exclusive-brokerage-reins-seven-days", "takken-k-exclusive-brokerage-report-two-weeks"], sourceQuestionValidationStatus: "verified" }
+    { questionId: "takken-q-17-001", conceptId: "takken-concept-exclusive-brokerage", knowledgeRefs: ["takken-k-exclusive-brokerage-reins-seven-days", "takken-k-exclusive-brokerage-report-two-weeks"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-17-002", conceptId: "takken-concept-sole-agency-brokerage", knowledgeRefs: ["takken-k-sole-agency-brokerage-reins-five-days", "takken-k-sole-agency-brokerage-report-one-week"], sourceQuestionValidationStatus: "verified" }
   ];
 
   const knownKnowledgeIds = new Set([
@@ -37,10 +38,11 @@
     "takken-k-business-guarantee-refund-transaction-claim-right",
     "takken-k-guarantee-association-statutory-system",
     "takken-k-brokerage-contract-document-delivery-duty",
-    "takken-k-exclusive-brokerage-period-three-month-cap", "takken-k-exclusive-brokerage-reins-seven-days", "takken-k-exclusive-brokerage-report-two-weeks"
+    "takken-k-exclusive-brokerage-period-three-month-cap", "takken-k-exclusive-brokerage-reins-seven-days", "takken-k-exclusive-brokerage-report-two-weeks",
+    "takken-k-sole-agency-brokerage-reins-five-days", "takken-k-sole-agency-brokerage-report-one-week"
   ]);
   const allowedConceptIds = new Set([
-    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage"
+    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage"
   ]);
   const questionIds = new Set();
 
@@ -54,12 +56,13 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 18) throw new Error(`Expected 18 mapped questions through exclusive brokerage, got ${mappings.length}`);
+  if (mappings.length !== 19) throw new Error(`Expected 19 mapped questions through sole-agency brokerage, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
   if (!questionIds.has("takken-q-15-001")) throw new Error("Brokerage contract document source question mapping is missing");
   if (!questionIds.has("takken-q-16-001")) throw new Error("Exclusive brokerage period source question mapping is missing");
   if (!questionIds.has("takken-q-17-001")) throw new Error("Exclusive brokerage REINS/reporting source question mapping is missing");
+  if (!questionIds.has("takken-q-17-002")) throw new Error("Sole-agency brokerage REINS/reporting source question mapping is missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
