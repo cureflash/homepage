@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: 1,825
-- Verified: 1,750
+- Checked: 1,850
+- Verified: 1,775
 - Needs revision: 75
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -14,18 +14,18 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.conn.preposition_vs_conjunction` 0001-0025
+### `p5.conn.preposition_vs_conjunction` 0026-0050
 
 - Checked: 25
 - Verified: 25
 - Needs revision: 0
 - Rejected: 0
 
-Items 0001-0010 require `because of` before noun phrases, 0011-0020 require `because` before full clauses, and 0021-0025 require `despite` before noun phrases. Each displayed sentence was re-solved against all four choices, with structure, semantic relation, naturalness, target-skill fit, distractor plausibility, and explanation consistency checked individually. No alternate defensible answer or explanation mismatch was found.
+Items 0026-0030 require `despite` before noun phrases, 0031-0040 require `although` before full clauses, and 0041-0050 require `during` before time noun phrases. Each displayed sentence was re-solved against all four choices, with structure, semantic relation, naturalness, target-skill fit, distractor plausibility, and explanation consistency checked individually. No alternate defensible answer or explanation mismatch was found.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-038-preposition-vs-conjunction-part1.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-28-scheduled-039-preposition-vs-conjunction-part2.qa.json`
 
 ### QA-method limitation
 
@@ -37,6 +37,6 @@ Full-bank semantic near-duplicate clearance remains outstanding, so `verified` i
 
 Continue the oldest unchecked backlog at:
 
-`p5_conn_preposition_vs_conjunction_0026`
+`p5_conn_preposition_vs_conjunction_0051`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
