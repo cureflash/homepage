@@ -4,9 +4,9 @@
 - Shared runtime/backend authority: existing Power TOEIC Drill Engine; no classics-specific fork.
 - Taxonomy: `subjects/japanese/power-classics/data/taxonomy/classics-v1.json`
 - Taxonomy: 30 big categories / 100 atomic micro-skills.
-- Generated questions: 625
-- QA checked: 625
-- Verified: 625
+- Generated questions: 650
+- QA checked: 650
+- Verified: 650
 - Needs revision: 0
 - Rejected: 0
 - Unchecked pending_validation: 0
@@ -15,17 +15,17 @@
 - global duplicate gate: not complete
 
 ## This checkpoint — generation
-Continued `kobun.verb.conjugation_form` with IDs 0151-0175, bringing this micro-skill to 175/300.
+Continued `kobun.verb.conjugation_form` with IDs 0176-0200, bringing this micro-skill to 200/300.
 
 New IDs:
-`kobun_verb_conjugation_form_0151` through `kobun_verb_conjugation_form_0175`
+`kobun_verb_conjugation_form_0176` through `kobun_verb_conjugation_form_0200`
 
 Batch:
-`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-form/pending/batch-20260828-021.json`
+`subjects/japanese/power-classics/data/questions/kobun/verbs/conjugation-form/pending/batch-20260828-022.json`
 
-This checkpoint emphasizes サ変・ナ変・ラ変 while retaining mixed review of 四段・上一段・上二段・下二段・カ変. Coverage includes 未然・連用・終止・連体・已然・命令. Each item contains an explicit syntactic cue (`ず` / `む` / `て` / `ば` / `ども`), sentence-final use, noun modification, or direct imperative context so the requested form is unique even where surface forms coincide.
+Coverage spans 四段・上一段・上二段・下二段・カ変・サ変・ナ変・ラ変 and all six conjugation forms. Each item uses an explicit syntactic cue, sentence-final use, noun modification, or direct imperative context so the requested form is unique.
 
-Answer positions in this batch: A/B/C/D = 7/6/6/6.
+Answer positions in this batch: A/B/C/D = 6/6/6/7.
 
 ## This checkpoint — QA
 Independently re-solved all 25 new questions from stem + choices before consulting stored answer/explanation.
@@ -36,18 +36,18 @@ Independently re-solved all 25 new questions from stem + choices before consulti
 - rejected: 0
 
 QA record:
-`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-021-conjugation-form.qa.json`
+`subjects/japanese/power-classics/data/questions/qa/2026-08-28-scheduled-022-conjugation-form.qa.json`
 
-Exact stems are unique within this batch. Maximum within-batch SequenceMatcher similarity is 0.806, below the 0.94 high-similarity review threshold. Full-bank semantic near-duplicate clearance remains pending.
+Exact stems are unique within this batch. Maximum within-batch SequenceMatcher similarity is 0.838, below the 0.94 high-similarity review threshold. Full-bank semantic near-duplicate clearance remains pending.
 
 ## Next generation
 Continue:
 `kobun.verb.conjugation_form`
 
 Resume at:
-`kobun_verb_conjugation_form_0176`
+`kobun_verb_conjugation_form_0201`
 
-Taxonomy target is 300 questions. Continue balancing the six conjugation forms and conjugation classes while keeping each stem explicit enough to rule out form ambiguity.
+Taxonomy target is 300 questions.
 
 ## Next QA
 There is no unchecked Power古典 pending backlog at this checkpoint. Independently QA the oldest candidates generated in the next run.
