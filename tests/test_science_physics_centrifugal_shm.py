@@ -62,6 +62,17 @@ class PhysicsCentrifugalShmTests(unittest.TestCase):
             hashes.add(digest)
         self.assertEqual(len(hashes), 110)
 
+    def test_reverse_retrieval_descriptions_are_unambiguous(self):
+        for topic_key, topic in PHYSICS_CENTRIFUGAL_SHM_TOPICS.items():
+            if topic.get("generator") != "retrieval":
+                continue
+            items = topic["modes"]["reverse"]["spec"]["items"]
+            owners = {}
+            for item in items:
+                for shown in item["right"]:
+                    self.assertNotIn(shown, owners, (topic_key, shown, owners.get(shown), item["left"]))
+                    owners[shown] = item["left"]
+
     def test_spring_visible_value_recalculation(self):
         topic = PHYSICS_CENTRIFUGAL_SHM_TOPICS["simple-harmonic-spring-restoring-force"]
         for mode_key, mode in topic["modes"].items():
