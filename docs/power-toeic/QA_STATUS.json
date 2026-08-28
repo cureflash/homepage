@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 1500,
-  "verified_question_count": 1425,
+  "checked_question_count": 1525,
+  "verified_question_count": 1450,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-28-scheduled-025-gerund-part4",
-  "last_completed_micro_skill": "p5.verb.gerund_pattern",
+  "last_completed_batch": "2026-08-28-scheduled-026-causative-part1",
+  "last_completed_micro_skill": "p5.verb.causative_have_make_let",
   "last_batch_counts": {
     "checked": 25,
-    "verified": 19,
-    "needs_revision": 6,
+    "verified": 25,
+    "needs_revision": 0,
     "rejected": 0
   },
-  "next_batch": "2026-08-28-scheduled-025-causative-part1",
+  "next_batch": "2026-08-28-scheduled-026-causative-part2",
   "next_micro_skill": "p5.verb.causative_have_make_let",
-  "next_question_id": "p5_verb_causative_have_make_let_0001",
+  "next_question_id": "p5_verb_causative_have_make_let_0026",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-28T08:40:00+09:00"
+  "updated_at": "2026-08-28T09:14:00+09:00"
 }
