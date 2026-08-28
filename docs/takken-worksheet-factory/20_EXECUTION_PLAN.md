@@ -31,14 +31,14 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 - [ ] Decompose every concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` cutoff and primary sources.
 - [ ] Map existing verified questions only where they genuinely test the knowledge item; missing evidence remains a Phase 4.3 deficit.
 
-Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration.
+Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting.
 
 Latest checkpoint:
-- [x] `takken-concept-reins-registration`: 4 verified items. Both exclusive and sole-agency brokerage are subject to statutory designated-distribution-system registration. The exclusive-brokerage deadline is seven days, the sole-agency deadline is five days, and holidays are excluded when calculating either statutory registration period. Existing `takken-q-17-001` and `takken-q-17-002` already belong to their contract-type concepts in the canonical one-concept-per-question map, so no duplicate mapping was manufactured for this overlapping comparison concept. All four new items remain explicit Phase 4.3 deficits.
+- [x] `takken-concept-brokerage-reporting`: 3 verified items. Exclusive and sole-agency brokerage both carry a statutory duty to report the processing status to the client. Exclusive brokerage requires reporting at least once every two weeks; sole-agency brokerage requires reporting at least once every week. Existing `takken-q-17-001` and `takken-q-17-002` remain assigned to their contract-type concepts in the canonical one-concept-per-question map, so no duplicate mapping was manufactured. All three new items remain explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: 22/113 modeled concepts, 118 verified knowledge items, 19 existing verified questions mapped, 90 explicit question-coverage gaps.
+Current Phase 4.2 totals: 23/113 modeled concepts, 121 verified knowledge items, 19 existing verified questions mapped, 93 explicit question-coverage gaps.
 
-Exact continuation: `takken-concept-brokerage-reporting`, source unit `brokerage-reins-reporting`. Preserve all ninety explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
+Exact continuation: `takken-concept-advertising-start`, source unit `advertising-start-time`. Preserve all ninety-three explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
