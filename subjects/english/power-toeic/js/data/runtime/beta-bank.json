@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-27T13:02:25.789Z",
+  "generatedAt": "2026-08-28T03:18:44.693Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1040,
-    "runtimeQuestionCount": 1040,
+    "approvedCandidateCount": 1160,
+    "runtimeQuestionCount": 1160,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 17
+    "qaRecordCount": 37
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -65,6 +65,18 @@
       "label": "主語位置の語形",
       "categoryId": "parts-of-speech",
       "categoryLabel": "品詞・語形"
+    },
+    {
+      "id": "p5.verb.active_vs_passive",
+      "label": "能動態と受動態",
+      "categoryId": "verbs",
+      "categoryLabel": "動詞"
+    },
+    {
+      "id": "p5.verb.modal_base_form",
+      "label": "助動詞＋原形",
+      "categoryId": "verbs",
+      "categoryLabel": "動詞"
     },
     {
       "id": "p5.verb.present_perfect_vs_past",
@@ -13156,6 +13168,2046 @@
       ],
       "correctIndex": 1,
       "explanation": "“reliability” is the noun form and functions as the subject of the clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0001",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The revised contract ____ by the legal team before the client meeting.",
+      "choices": [
+        "was reviewed",
+        "reviewed",
+        "reviews",
+        "was review"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"revised contract\" receives the action and the agent is introduced by \"by,\" so the passive form \"was reviewed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0002",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The expense report ____ by the finance department before reimbursement.",
+      "choices": [
+        "approved",
+        "was approved",
+        "approves",
+        "was approve"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"expense report\" receives the action and the agent is introduced by \"by,\" so the passive form \"was approved\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0003",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The incoming shipment ____ by the warehouse staff upon arrival.",
+      "choices": [
+        "inspected",
+        "inspects",
+        "was inspected",
+        "was inspect"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"incoming shipment\" receives the action and the agent is introduced by \"by,\" so the passive form \"was inspected\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0004",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The security patch ____ by the IT team during the maintenance window.",
+      "choices": [
+        "installed",
+        "installs",
+        "was install",
+        "was installed"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"security patch\" receives the action and the agent is introduced by \"by,\" so the passive form \"was installed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0005",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The job application ____ by the HR department before the first interview.",
+      "choices": [
+        "was screened",
+        "screened",
+        "screens",
+        "was screen"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"job application\" receives the action and the agent is introduced by \"by,\" so the passive form \"was screened\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0006",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The supplier proposal ____ by the procurement team before negotiations.",
+      "choices": [
+        "evaluated",
+        "was evaluated",
+        "evaluates",
+        "was evaluate"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"supplier proposal\" receives the action and the agent is introduced by \"by,\" so the passive form \"was evaluated\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0007",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The finished product ____ by the quality control team before shipment.",
+      "choices": [
+        "tested",
+        "tests",
+        "was tested",
+        "was test"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"finished product\" receives the action and the agent is introduced by \"by,\" so the passive form \"was tested\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0008",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The campaign schedule ____ by the marketing team before the launch.",
+      "choices": [
+        "finalized",
+        "finalizes",
+        "was finalize",
+        "was finalized"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"campaign schedule\" receives the action and the agent is introduced by \"by,\" so the passive form \"was finalized\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0009",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The monthly invoice ____ by the accounting staff before the due date.",
+      "choices": [
+        "was processed",
+        "processed",
+        "processes",
+        "was process"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"monthly invoice\" receives the action and the agent is introduced by \"by,\" so the passive form \"was processed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0010",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The air-conditioning system ____ by the facilities team during the shutdown.",
+      "choices": [
+        "serviced",
+        "was serviced",
+        "services",
+        "was service"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"air-conditioning system\" receives the action and the agent is introduced by \"by,\" so the passive form \"was serviced\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0011",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The complaint ____ by the customer service team within two business days.",
+      "choices": [
+        "resolved",
+        "resolves",
+        "was resolved",
+        "was resolve"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"complaint\" receives the action and the agent is introduced by \"by,\" so the passive form \"was resolved\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0012",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The staffing plan ____ by the operations manager for the holiday period.",
+      "choices": [
+        "updated",
+        "updates",
+        "was update",
+        "was updated"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"staffing plan\" receives the action and the agent is introduced by \"by,\" so the passive form \"was updated\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0014",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The renewal notice ____ by the sales department to each corporate client.",
+      "choices": [
+        "sent",
+        "was sent",
+        "sends",
+        "was send"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"renewal notice\" receives the action and the agent is introduced by \"by,\" so the passive form \"was sent\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0015",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The cash count ____ by the branch manager at the end of the day.",
+      "choices": [
+        "verified",
+        "verifies",
+        "was verified",
+        "was verify"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"cash count\" receives the action and the agent is introduced by \"by,\" so the passive form \"was verified\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0017",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The delivery address ____ by the shipping clerk before dispatch.",
+      "choices": [
+        "was confirmed",
+        "confirmed",
+        "confirms",
+        "was confirm"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"delivery address\" receives the action and the agent is introduced by \"by,\" so the passive form \"was confirmed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0018",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The guest room ____ by the hotel staff before check-in.",
+      "choices": [
+        "cleaned",
+        "was cleaned",
+        "cleans",
+        "was clean"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"guest room\" receives the action and the agent is introduced by \"by,\" so the passive form \"was cleaned\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0019",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The faulty sensor ____ by the maintenance crew during the inspection.",
+      "choices": [
+        "replaced",
+        "replaces",
+        "was replaced",
+        "was replace"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"faulty sensor\" receives the action and the agent is introduced by \"by,\" so the passive form \"was replaced\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0020",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The implementation plan ____ by the project team after the review meeting.",
+      "choices": [
+        "revised",
+        "revises",
+        "was revise",
+        "was revised"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"implementation plan\" receives the action and the agent is introduced by \"by,\" so the passive form \"was revised\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0021",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The policy document ____ by the compliance officer after approval.",
+      "choices": [
+        "was archived",
+        "archived",
+        "archives",
+        "was archive"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"policy document\" receives the action and the agent is introduced by \"by,\" so the passive form \"was archived\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0022",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The visitor badge ____ by the reception staff at the front desk.",
+      "choices": [
+        "issued",
+        "was issued",
+        "issues",
+        "was issue"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"visitor badge\" receives the action and the agent is introduced by \"by,\" so the passive form \"was issued\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0023",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The purchase order ____ by the purchasing agent before it is sent.",
+      "choices": [
+        "authorized",
+        "authorizes",
+        "was authorized",
+        "was authorize"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"purchase order\" receives the action and the agent is introduced by \"by,\" so the passive form \"was authorized\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0024",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The appointment record ____ by the clinic staff after each visit.",
+      "choices": [
+        "updated",
+        "updates",
+        "was update",
+        "was updated"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"appointment record\" receives the action and the agent is introduced by \"by,\" so the passive form \"was updated\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0025",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The customs document ____ by the export team before the cargo departs.",
+      "choices": [
+        "was submitted",
+        "submitted",
+        "submits",
+        "was submit"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"customs document\" receives the action and the agent is introduced by \"by,\" so the passive form \"was submitted\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0026",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Purchase orders ____ by the purchasing team before they are released.",
+      "choices": [
+        "reviews",
+        "are reviewed",
+        "reviewed",
+        "is reviewed"
+      ],
+      "correctIndex": 1,
+      "explanation": "The plural subject \"purchase orders\" receives the action, so the present passive \"are reviewed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0027",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "At the start of each shift, visitor badges ____ by the reception staff after identification is checked.",
+      "choices": [
+        "issues",
+        "issued",
+        "are issued",
+        "is issued"
+      ],
+      "correctIndex": 2,
+      "explanation": "The plural subject \"visitor badges\" receives the action, so the present passive \"are issued\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0028",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Expense claims ____ by the finance department before payment.",
+      "choices": [
+        "approves",
+        "approved",
+        "is approved",
+        "are approved"
+      ],
+      "correctIndex": 3,
+      "explanation": "The plural subject \"expense claims\" receives the action, so the present passive \"are approved\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0029",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Incoming packages ____ by the security staff before delivery.",
+      "choices": [
+        "are inspected",
+        "inspects",
+        "inspected",
+        "is inspected"
+      ],
+      "correctIndex": 0,
+      "explanation": "The plural subject \"incoming packages\" receives the action, so the present passive \"are inspected\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0030",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Software updates ____ by the IT team during scheduled maintenance.",
+      "choices": [
+        "installs",
+        "are installed",
+        "installed",
+        "is installed"
+      ],
+      "correctIndex": 1,
+      "explanation": "The plural subject \"software updates\" receives the action, so the present passive \"are installed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0031",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Job applications ____ by the HR department before interviews.",
+      "choices": [
+        "screens",
+        "screened",
+        "are screened",
+        "is screened"
+      ],
+      "correctIndex": 2,
+      "explanation": "The plural subject \"job applications\" receives the action, so the present passive \"are screened\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0032",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Supplier bids ____ by the procurement team before selection.",
+      "choices": [
+        "evaluates",
+        "evaluated",
+        "is evaluated",
+        "are evaluated"
+      ],
+      "correctIndex": 3,
+      "explanation": "The plural subject \"supplier bids\" receives the action, so the present passive \"are evaluated\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0033",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Product samples ____ by the quality team before mass production.",
+      "choices": [
+        "are tested",
+        "tests",
+        "tested",
+        "is tested"
+      ],
+      "correctIndex": 0,
+      "explanation": "The plural subject \"product samples\" receives the action, so the present passive \"are tested\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0034",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Campaign materials ____ by the marketing team before publication.",
+      "choices": [
+        "finalizes",
+        "are finalized",
+        "finalized",
+        "is finalized"
+      ],
+      "correctIndex": 1,
+      "explanation": "The plural subject \"campaign materials\" receives the action, so the present passive \"are finalized\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0035",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Customer invoices ____ by the accounting staff each morning.",
+      "choices": [
+        "processes",
+        "processed",
+        "are processed",
+        "is processed"
+      ],
+      "correctIndex": 2,
+      "explanation": "The plural subject \"customer invoices\" receives the action, so the present passive \"are processed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0036",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Service requests ____ by the support team in the order received.",
+      "choices": [
+        "resolves",
+        "resolved",
+        "is resolved",
+        "are resolved"
+      ],
+      "correctIndex": 3,
+      "explanation": "The plural subject \"service requests\" receives the action, so the present passive \"are resolved\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0037",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Staff schedules ____ by the operations team every Friday.",
+      "choices": [
+        "are updated",
+        "updates",
+        "updated",
+        "is updated"
+      ],
+      "correctIndex": 0,
+      "explanation": "The plural subject \"staff schedules\" receives the action, so the present passive \"are updated\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0038",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Training materials ____ by the training coordinator for each session.",
+      "choices": [
+        "prepares",
+        "are prepared",
+        "prepared",
+        "is prepared"
+      ],
+      "correctIndex": 1,
+      "explanation": "The plural subject \"training materials\" receives the action, so the present passive \"are prepared\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0039",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Renewal notices ____ by the sales department to clients each month.",
+      "choices": [
+        "sends",
+        "sent",
+        "are sent",
+        "is sent"
+      ],
+      "correctIndex": 2,
+      "explanation": "The plural subject \"renewal notices\" receives the action, so the present passive \"are sent\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0040",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Cash records ____ by the branch manager at closing time.",
+      "choices": [
+        "verifies",
+        "verified",
+        "is verified",
+        "are verified"
+      ],
+      "correctIndex": 3,
+      "explanation": "The plural subject \"cash records\" receives the action, so the present passive \"are verified\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0041",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Survey responses ____ by the research team after collection.",
+      "choices": [
+        "are analyzed",
+        "analyzes",
+        "analyzed",
+        "is analyzed"
+      ],
+      "correctIndex": 0,
+      "explanation": "The plural subject \"survey responses\" receives the action, so the present passive \"are analyzed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0042",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Before trucks leave the warehouse, delivery addresses ____ by the shipping clerk against the dispatch list.",
+      "choices": [
+        "confirms",
+        "are confirmed",
+        "confirmed",
+        "is confirmed"
+      ],
+      "correctIndex": 1,
+      "explanation": "The plural subject \"delivery addresses\" receives the action, so the present passive \"are confirmed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0043",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Before guests are allowed to check in, guest rooms ____ by the hotel staff according to the cleaning checklist.",
+      "choices": [
+        "cleans",
+        "cleaned",
+        "are cleaned",
+        "is cleaned"
+      ],
+      "correctIndex": 2,
+      "explanation": "The plural subject \"guest rooms\" receives the action, so the present passive \"are cleaned\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0044",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Faulty parts ____ by the maintenance crew during repairs.",
+      "choices": [
+        "replaces",
+        "replaced",
+        "is replaced",
+        "are replaced"
+      ],
+      "correctIndex": 3,
+      "explanation": "The plural subject \"faulty parts\" receives the action, so the present passive \"are replaced\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0045",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Project plans ____ by the project team after review meetings.",
+      "choices": [
+        "are revised",
+        "revises",
+        "revised",
+        "is revised"
+      ],
+      "correctIndex": 0,
+      "explanation": "The plural subject \"project plans\" receives the action, so the present passive \"are revised\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0046",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Policy documents ____ by the compliance staff after approval.",
+      "choices": [
+        "archives",
+        "are archived",
+        "archived",
+        "is archived"
+      ],
+      "correctIndex": 1,
+      "explanation": "The plural subject \"policy documents\" receives the action, so the present passive \"are archived\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0047",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Access cards ____ by the security office to new employees.",
+      "choices": [
+        "issues",
+        "issued",
+        "are issued",
+        "is issued"
+      ],
+      "correctIndex": 2,
+      "explanation": "The plural subject \"access cards\" receives the action, so the present passive \"are issued\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0048",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Purchase requests ____ by the department manager before ordering.",
+      "choices": [
+        "authorizes",
+        "authorized",
+        "is authorized",
+        "are authorized"
+      ],
+      "correctIndex": 3,
+      "explanation": "The plural subject \"purchase requests\" receives the action, so the present passive \"are authorized\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0049",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "After each patient visit, appointment records ____ by the clinic staff in the electronic scheduling system.",
+      "choices": [
+        "are updated",
+        "updates",
+        "updated",
+        "is updated"
+      ],
+      "correctIndex": 0,
+      "explanation": "The plural subject \"appointment records\" receives the action, so the present passive \"are updated\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0050",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "Customs forms ____ by the export team before shipment.",
+      "choices": [
+        "submits",
+        "are submitted",
+        "submitted",
+        "is submitted"
+      ],
+      "correctIndex": 1,
+      "explanation": "The plural subject \"customs forms\" receives the action, so the present passive \"are submitted\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0051",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The legal team ____ the revised contract yesterday before the client meeting.",
+      "choices": [
+        "was reviewed",
+        "were reviewed",
+        "reviewed",
+        "is reviewed"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"legal team\" performs the action on \"revised contract,\" so the active past form \"reviewed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0052",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The finance department ____ the expense report last Friday before reimbursement.",
+      "choices": [
+        "was approved",
+        "were approved",
+        "is approved",
+        "approved"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"finance department\" performs the action on \"expense report,\" so the active past form \"approved\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0053",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The warehouse staff ____ the incoming shipment earlier this week upon arrival.",
+      "choices": [
+        "inspected",
+        "was inspected",
+        "were inspected",
+        "is inspected"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"warehouse staff\" performs the action on \"incoming shipment,\" so the active past form \"inspected\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0054",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The IT team ____ the security patch last month during the maintenance window.",
+      "choices": [
+        "was installed",
+        "installed",
+        "were installed",
+        "is installed"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"IT team\" performs the action on \"security patch,\" so the active past form \"installed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0055",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The HR department ____ the job application during yesterday's review before the first interview.",
+      "choices": [
+        "was screened",
+        "were screened",
+        "screened",
+        "is screened"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"HR department\" performs the action on \"job application,\" so the active past form \"screened\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0056",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The procurement team ____ the supplier proposal yesterday before negotiations.",
+      "choices": [
+        "was evaluated",
+        "were evaluated",
+        "is evaluated",
+        "evaluated"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"procurement team\" performs the action on \"supplier proposal,\" so the active past form \"evaluated\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0057",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The quality control team ____ the finished product last Friday before shipment.",
+      "choices": [
+        "tested",
+        "was tested",
+        "were tested",
+        "is tested"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"quality control team\" performs the action on \"finished product,\" so the active past form \"tested\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0058",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The marketing team ____ the campaign schedule earlier this week before the launch.",
+      "choices": [
+        "was finalized",
+        "finalized",
+        "were finalized",
+        "is finalized"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"marketing team\" performs the action on \"campaign schedule,\" so the active past form \"finalized\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0059",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The accounting staff ____ the monthly invoice last month before the due date.",
+      "choices": [
+        "was processed",
+        "were processed",
+        "processed",
+        "is processed"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"accounting staff\" performs the action on \"monthly invoice,\" so the active past form \"processed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0061",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The customer service team ____ the complaint yesterday within two business days.",
+      "choices": [
+        "resolved",
+        "was resolved",
+        "were resolved",
+        "is resolved"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"customer service team\" performs the action on \"complaint,\" so the active past form \"resolved\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0062",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The operations manager ____ the staffing plan last Friday for the holiday period.",
+      "choices": [
+        "was updated",
+        "updated",
+        "were updated",
+        "is updated"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"operations manager\" performs the action on \"staffing plan,\" so the active past form \"updated\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0063",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The training coordinator ____ the course materials earlier this week before orientation.",
+      "choices": [
+        "was prepared",
+        "were prepared",
+        "prepared",
+        "is prepared"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"training coordinator\" performs the action on \"course materials,\" so the active past form \"prepared\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0064",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The sales department ____ the renewal notice last month to each corporate client.",
+      "choices": [
+        "was sent",
+        "were sent",
+        "is sent",
+        "sent"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"sales department\" performs the action on \"renewal notice,\" so the active past form \"sent\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0065",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The branch manager ____ the cash count during yesterday's review at the end of the day.",
+      "choices": [
+        "verified",
+        "was verified",
+        "were verified",
+        "is verified"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"branch manager\" performs the action on \"cash count,\" so the active past form \"verified\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0066",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The research team ____ the survey results yesterday before publication.",
+      "choices": [
+        "was analyzed",
+        "analyzed",
+        "were analyzed",
+        "is analyzed"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"research team\" performs the action on \"survey results,\" so the active past form \"analyzed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0067",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The shipping clerk ____ the delivery address last Friday before dispatch.",
+      "choices": [
+        "was confirmed",
+        "were confirmed",
+        "confirmed",
+        "is confirmed"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"shipping clerk\" performs the action on \"delivery address,\" so the active past form \"confirmed\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0068",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The hotel staff ____ the guest room earlier this week before check-in.",
+      "choices": [
+        "was cleaned",
+        "were cleaned",
+        "is cleaned",
+        "cleaned"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"hotel staff\" performs the action on \"guest room,\" so the active past form \"cleaned\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0069",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The maintenance crew ____ the faulty sensor last month during the inspection.",
+      "choices": [
+        "replaced",
+        "was replaced",
+        "were replaced",
+        "is replaced"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"maintenance crew\" performs the action on \"faulty sensor,\" so the active past form \"replaced\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0071",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The compliance officer ____ the policy document yesterday after approval.",
+      "choices": [
+        "was archived",
+        "were archived",
+        "archived",
+        "is archived"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"compliance officer\" performs the action on \"policy document,\" so the active past form \"archived\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0072",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The reception staff ____ the visitor badge last Friday at the front desk.",
+      "choices": [
+        "was issued",
+        "were issued",
+        "is issued",
+        "issued"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"reception staff\" performs the action on \"visitor badge,\" so the active past form \"issued\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0073",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The purchasing agent ____ the purchase order earlier this week before it is sent.",
+      "choices": [
+        "authorized",
+        "was authorized",
+        "were authorized",
+        "is authorized"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"purchasing agent\" performs the action on \"purchase order,\" so the active past form \"authorized\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0074",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The clinic staff ____ the appointment record last month after each visit.",
+      "choices": [
+        "was updated",
+        "updated",
+        "were updated",
+        "is updated"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"clinic staff\" performs the action on \"appointment record,\" so the active past form \"updated\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0075",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The export team ____ the customs document during yesterday's review before the cargo departs.",
+      "choices": [
+        "was submitted",
+        "were submitted",
+        "submitted",
+        "is submitted"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"export team\" performs the action on \"customs document,\" so the active past form \"submitted\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0076",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The legal team ____ the revised contract each week before the client meeting.",
+      "choices": [
+        "is reviewed",
+        "are reviewed",
+        "reviewed",
+        "reviews"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"legal team\" performs the action on \"revised contract\" as a regular procedure, so the active present form \"reviews\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0077",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The finance department ____ the expense report every morning before reimbursement.",
+      "choices": [
+        "approves",
+        "is approved",
+        "are approved",
+        "approved"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"finance department\" performs the action on \"expense report\" as a regular procedure, so the active present form \"approves\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0078",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The warehouse staff ____ the incoming shipment as part of the standard procedure upon arrival.",
+      "choices": [
+        "is inspected",
+        "inspects",
+        "are inspected",
+        "inspected"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"warehouse staff\" performs the action on \"incoming shipment\" as a regular procedure, so the active present form \"inspects\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0079",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The IT team ____ the security patch before each monthly review during the maintenance window.",
+      "choices": [
+        "is installed",
+        "are installed",
+        "installs",
+        "installed"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"IT team\" performs the action on \"security patch\" as a regular procedure, so the active present form \"installs\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0080",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The HR department ____ the job application whenever necessary before the first interview.",
+      "choices": [
+        "is screened",
+        "are screened",
+        "screened",
+        "screens"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"HR department\" performs the action on \"job application\" as a regular procedure, so the active present form \"screens\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0081",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The procurement team ____ the supplier proposal each week before negotiations.",
+      "choices": [
+        "evaluates",
+        "is evaluated",
+        "are evaluated",
+        "evaluated"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"procurement team\" performs the action on \"supplier proposal\" as a regular procedure, so the active present form \"evaluates\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0082",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The quality control team ____ the finished product every morning before shipment.",
+      "choices": [
+        "is tested",
+        "tests",
+        "are tested",
+        "tested"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"quality control team\" performs the action on \"finished product\" as a regular procedure, so the active present form \"tests\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0083",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The marketing team ____ the campaign schedule as part of the standard procedure before the launch.",
+      "choices": [
+        "is finalized",
+        "are finalized",
+        "finalizes",
+        "finalized"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"marketing team\" performs the action on \"campaign schedule\" as a regular procedure, so the active present form \"finalizes\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0085",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The facilities team ____ the air-conditioning system whenever necessary during the shutdown.",
+      "choices": [
+        "services",
+        "is serviced",
+        "are serviced",
+        "serviced"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"facilities team\" performs the action on \"air-conditioning system\" as a regular procedure, so the active present form \"services\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0086",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The customer service team ____ the complaint each week within two business days.",
+      "choices": [
+        "is resolved",
+        "resolves",
+        "are resolved",
+        "resolved"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"customer service team\" performs the action on \"complaint\" as a regular procedure, so the active present form \"resolves\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0087",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The operations manager ____ the staffing plan every morning for the holiday period.",
+      "choices": [
+        "is updated",
+        "are updated",
+        "updates",
+        "updated"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"operations manager\" performs the action on \"staffing plan\" as a regular procedure, so the active present form \"updates\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0088",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The training coordinator ____ the course materials as part of the standard procedure before orientation.",
+      "choices": [
+        "is prepared",
+        "are prepared",
+        "prepared",
+        "prepares"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"training coordinator\" performs the action on \"course materials\" as a regular procedure, so the active present form \"prepares\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0089",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The sales department ____ the renewal notice before each monthly review to each corporate client.",
+      "choices": [
+        "sends",
+        "is sent",
+        "are sent",
+        "sent"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"sales department\" performs the action on \"renewal notice\" as a regular procedure, so the active present form \"sends\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0090",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The branch manager ____ the cash count whenever necessary at the end of the day.",
+      "choices": [
+        "is verified",
+        "verifies",
+        "are verified",
+        "verified"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"branch manager\" performs the action on \"cash count\" as a regular procedure, so the active present form \"verifies\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0091",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The research team ____ the survey results each week before publication.",
+      "choices": [
+        "is analyzed",
+        "are analyzed",
+        "analyzes",
+        "analyzed"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"research team\" performs the action on \"survey results\" as a regular procedure, so the active present form \"analyzes\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0092",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The shipping clerk ____ the delivery address every morning before dispatch.",
+      "choices": [
+        "is confirmed",
+        "are confirmed",
+        "confirmed",
+        "confirms"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"shipping clerk\" performs the action on \"delivery address\" as a regular procedure, so the active present form \"confirms\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0093",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The hotel staff ____ the guest room as part of the standard procedure before check-in.",
+      "choices": [
+        "cleans",
+        "is cleaned",
+        "are cleaned",
+        "cleaned"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"hotel staff\" performs the action on \"guest room\" as a regular procedure, so the active present form \"cleans\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0094",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The maintenance crew ____ the faulty sensor before each monthly review during the inspection.",
+      "choices": [
+        "is replaced",
+        "replaces",
+        "are replaced",
+        "replaced"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"maintenance crew\" performs the action on \"faulty sensor\" as a regular procedure, so the active present form \"replaces\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0095",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The project team ____ the implementation plan whenever necessary after the review meeting.",
+      "choices": [
+        "is revised",
+        "are revised",
+        "revises",
+        "revised"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"project team\" performs the action on \"implementation plan\" as a regular procedure, so the active present form \"revises\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0096",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The compliance officer ____ the policy document each week after approval.",
+      "choices": [
+        "is archived",
+        "are archived",
+        "archived",
+        "archives"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"compliance officer\" performs the action on \"policy document\" as a regular procedure, so the active present form \"archives\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0097",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The reception staff ____ the visitor badge every morning at the front desk.",
+      "choices": [
+        "issues",
+        "is issued",
+        "are issued",
+        "issued"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject \"reception staff\" performs the action on \"visitor badge\" as a regular procedure, so the active present form \"issues\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0098",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The purchasing agent ____ the purchase order as part of the standard procedure before it is sent.",
+      "choices": [
+        "is authorized",
+        "authorizes",
+        "are authorized",
+        "authorized"
+      ],
+      "correctIndex": 1,
+      "explanation": "The subject \"purchasing agent\" performs the action on \"purchase order\" as a regular procedure, so the active present form \"authorizes\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0099",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The clinic staff ____ the appointment record before each monthly review after each visit.",
+      "choices": [
+        "is updated",
+        "are updated",
+        "updates",
+        "updated"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject \"clinic staff\" performs the action on \"appointment record\" as a regular procedure, so the active present form \"updates\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_active_vs_passive_0100",
+      "version": 1,
+      "skillId": "p5.verb.active_vs_passive",
+      "categoryId": "verbs",
+      "sentence": "The export team ____ the customs document whenever necessary before the cargo departs.",
+      "choices": [
+        "is submitted",
+        "are submitted",
+        "submitted",
+        "submits"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject \"export team\" performs the action on \"customs document\" as a regular procedure, so the active present form \"submits\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0001",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The compliance team must ____ the revised policy before publication.",
+      "choices": [
+        "review",
+        "reviews",
+        "reviewed",
+        "reviewing"
+      ],
+      "correctIndex": 0,
+      "explanation": "After the modal verb \"must\", the bare infinitive \"review\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0002",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The sales coordinator can ____ the client address in the CRM system.",
+      "choices": [
+        "confirms",
+        "confirm",
+        "confirmed",
+        "confirming"
+      ],
+      "correctIndex": 1,
+      "explanation": "After the modal verb \"can\", the bare infinitive \"confirm\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0003",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The finance manager should ____ the quarterly budget before Friday.",
+      "choices": [
+        "updates",
+        "updated",
+        "update",
+        "updating"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the modal verb \"should\", the bare infinitive \"update\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0004",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The events team may ____ a larger conference room for the workshop.",
+      "choices": [
+        "reserves",
+        "reserved",
+        "reserving",
+        "reserve"
+      ],
+      "correctIndex": 3,
+      "explanation": "After the modal verb \"may\", the bare infinitive \"reserve\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0005",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The clinic receptionist will ____ the follow-up appointment this afternoon.",
+      "choices": [
+        "schedule",
+        "schedules",
+        "scheduled",
+        "scheduling"
+      ],
+      "correctIndex": 0,
+      "explanation": "After the modal verb \"will\", the bare infinitive \"schedule\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0006",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The hotel desk clerk can ____ a late checkout for the visiting executives.",
+      "choices": [
+        "arranges",
+        "arrange",
+        "arranged",
+        "arranging"
+      ],
+      "correctIndex": 1,
+      "explanation": "After the modal verb \"can\", the bare infinitive \"arrange\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0007",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The warehouse supervisor must ____ each pallet before loading.",
+      "choices": [
+        "inspects",
+        "inspected",
+        "inspect",
+        "inspecting"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the modal verb \"must\", the bare infinitive \"inspect\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0008",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The department head should ____ the travel request before tickets are purchased.",
+      "choices": [
+        "approves",
+        "approved",
+        "approving",
+        "approve"
+      ],
+      "correctIndex": 3,
+      "explanation": "After the modal verb \"should\", the bare infinitive \"approve\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0009",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The accounting system can ____ approved expense claims automatically.",
+      "choices": [
+        "process",
+        "processes",
+        "processed",
+        "processing"
+      ],
+      "correctIndex": 0,
+      "explanation": "After the modal verb \"can\", the bare infinitive \"process\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0010",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The HR officer must ____ all applicants of the interview schedule.",
+      "choices": [
+        "notifies",
+        "notify",
+        "notified",
+        "notifying"
+      ],
+      "correctIndex": 1,
+      "explanation": "After the modal verb \"must\", the bare infinitive \"notify\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0011",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The account manager should ____ the customer before changing the delivery date.",
+      "choices": [
+        "contacts",
+        "contacted",
+        "contact",
+        "contacting"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the modal verb \"should\", the bare infinitive \"contact\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0012",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The training coordinator will ____ the orientation materials before Monday.",
+      "choices": [
+        "prepares",
+        "prepared",
+        "preparing",
+        "prepare"
+      ],
+      "correctIndex": 3,
+      "explanation": "After the modal verb \"will\", the bare infinitive \"prepare\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0013",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The IT team may ____ the security patch during tonight's maintenance window.",
+      "choices": [
+        "install",
+        "installs",
+        "installed",
+        "installing"
+      ],
+      "correctIndex": 0,
+      "explanation": "After the modal verb \"may\", the bare infinitive \"install\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0014",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The maintenance crew must ____ the damaged sensor before the line restarts.",
+      "choices": [
+        "replaces",
+        "replace",
+        "replaced",
+        "replacing"
+      ],
+      "correctIndex": 1,
+      "explanation": "After the modal verb \"must\", the bare infinitive \"replace\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0015",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The courier can ____ the signed documents by noon.",
+      "choices": [
+        "delivers",
+        "delivered",
+        "deliver",
+        "delivering"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the modal verb \"can\", the bare infinitive \"deliver\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0016",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The auditor must ____ the transaction totals against the bank records.",
+      "choices": [
+        "verifies",
+        "verified",
+        "verifying",
+        "verify"
+      ],
+      "correctIndex": 3,
+      "explanation": "After the modal verb \"must\", the bare infinitive \"verify\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0017",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The buyer should ____ the two supplier quotations before placing an order.",
+      "choices": [
+        "compare",
+        "compares",
+        "compared",
+        "comparing"
+      ],
+      "correctIndex": 0,
+      "explanation": "After the modal verb \"should\", the bare infinitive \"compare\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0018",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The analyst can ____ the projected savings from the current cost data.",
+      "choices": [
+        "calculates",
+        "calculate",
+        "calculated",
+        "calculating"
+      ],
+      "correctIndex": 1,
+      "explanation": "After the modal verb \"can\", the bare infinitive \"calculate\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0019",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The receptionist must ____ all visitor entries in the security log.",
+      "choices": [
+        "records",
+        "recorded",
+        "record",
+        "recording"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the modal verb \"must\", the bare infinitive \"record\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0020",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The office manager will ____ the annual staff meeting next week.",
+      "choices": [
+        "organizes",
+        "organized",
+        "organizing",
+        "organize"
+      ],
+      "correctIndex": 3,
+      "explanation": "After the modal verb \"will\", the bare infinitive \"organize\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0021",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The support team should ____ system performance during the product launch.",
+      "choices": [
+        "monitor",
+        "monitors",
+        "monitored",
+        "monitoring"
+      ],
+      "correctIndex": 0,
+      "explanation": "After the modal verb \"should\", the bare infinitive \"monitor\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0022",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The technician can ____ the display settings for each workstation.",
+      "choices": [
+        "adjusts",
+        "adjust",
+        "adjusted",
+        "adjusting"
+      ],
+      "correctIndex": 1,
+      "explanation": "After the modal verb \"can\", the bare infinitive \"adjust\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0023",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The contract administrator may ____ the service period by one month.",
+      "choices": [
+        "extends",
+        "extended",
+        "extend",
+        "extending"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the modal verb \"may\", the bare infinitive \"extend\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0024",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The plant manager must ____ energy use during peak hours.",
+      "choices": [
+        "reduces",
+        "reduced",
+        "reducing",
+        "reduce"
+      ],
+      "correctIndex": 3,
+      "explanation": "After the modal verb \"must\", the bare infinitive \"reduce\" is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_verb_modal_base_form_0025",
+      "version": 1,
+      "skillId": "p5.verb.modal_base_form",
+      "categoryId": "verbs",
+      "sentence": "The project lead should ____ additional resources from the operations team.",
+      "choices": [
+        "request",
+        "requests",
+        "requested",
+        "requesting"
+      ],
+      "correctIndex": 0,
+      "explanation": "After the modal verb \"should\", the bare infinitive \"request\" is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
