@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T03:20:26.323Z",
+  "generatedAt": "2026-08-29T04:19:54.346Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1460,
-    "runtimeQuestionCount": 1460,
+    "approvedCandidateCount": 1560,
+    "runtimeQuestionCount": 1560,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 60
+    "qaRecordCount": 64
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -21,6 +21,12 @@
     {
       "id": "p5.conn.because_vs_because_of",
       "label": "because / because of",
+      "categoryId": "connectors-prepositions",
+      "categoryLabel": "前置詞・接続詞"
+    },
+    {
+      "id": "p5.conn.by_vs_until",
+      "label": "by / until",
       "categoryId": "connectors-prepositions",
       "categoryLabel": "前置詞・接続詞"
     },
@@ -1819,6 +1825,1281 @@
       ],
       "correctIndex": 0,
       "explanation": "A noun phrase follows the blank, so 'because of' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0001",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please submit the signed agreement ____ 5:00 p.m. on Friday.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0002",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The customer service desk will remain open ____ 8:00 p.m. during the holiday season.",
+      "choices": [
+        "by",
+        "for",
+        "until",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0003",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "All expense reports must be approved ____ the end of the month.",
+      "choices": [
+        "during",
+        "until",
+        "since",
+        "by"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0004",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Employees may use the temporary parking area ____ construction is completed next week.",
+      "choices": [
+        "by",
+        "until",
+        "for",
+        "during"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0005",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The supplier expects to deliver the replacement parts ____ Tuesday morning.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0006",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The promotional price will remain in effect ____ the store closes on Sunday.",
+      "choices": [
+        "since",
+        "by",
+        "during",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0007",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Candidates should complete the online assessment ____ noon tomorrow.",
+      "choices": [
+        "by",
+        "until",
+        "since",
+        "for"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0008",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The conference room is reserved for the audit team ____ 4:30 p.m.",
+      "choices": [
+        "for",
+        "until",
+        "during",
+        "by"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0009",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The engineering team plans to finish the safety review ____ the next inspection.",
+      "choices": [
+        "during",
+        "since",
+        "by",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0010",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The old billing system will continue operating ____ the new platform goes live.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0011",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please return the completed benefits form ____ September 15.",
+      "choices": [
+        "by",
+        "since",
+        "until",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0012",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The warehouse will store the recalled products separately ____ the manufacturer provides further instructions.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0013",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Managers must submit their staffing forecasts ____ next Wednesday.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0014",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Visitors are asked to keep their badges visible ____ they leave the building.",
+      "choices": [
+        "during",
+        "by",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0015",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The accounting department needs the revised invoice ____ the payment run begins.",
+      "choices": [
+        "by",
+        "until",
+        "since",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0016",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The maintenance crew will stay on site ____ the backup generator is fully operational.",
+      "choices": [
+        "for",
+        "until",
+        "by",
+        "during"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0017",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The design team aims to finalize the catalog layout ____ Monday afternoon.",
+      "choices": [
+        "since",
+        "until",
+        "by",
+        "during"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0018",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The temporary access code will remain valid ____ midnight tonight.",
+      "choices": [
+        "during",
+        "by",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0019",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Departments must identify their budget priorities ____ the planning meeting.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0020",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The cafeteria will serve breakfast ____ 10:30 a.m. on weekdays.",
+      "choices": [
+        "by",
+        "until",
+        "for",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0021",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The contractor has agreed to repair the damaged entrance ____ the building reopens.",
+      "choices": [
+        "during",
+        "since",
+        "by",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0022",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The help line will be staffed around the clock ____ the service interruption is resolved.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0023",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please upload the final presentation slides ____ the rehearsal starts.",
+      "choices": [
+        "by",
+        "until",
+        "since",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0024",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The security guard will remain at the loading dock ____ the last delivery truck departs.",
+      "choices": [
+        "for",
+        "until",
+        "during",
+        "by"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0025",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The legal team expects to complete its contract review ____ the end of the business day.",
+      "choices": [
+        "during",
+        "until",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0026",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The project manager expects to receive the contractor's final estimate ____ Thursday afternoon.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0027",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The temporary exhibition will remain open ____ the museum begins renovations next month.",
+      "choices": [
+        "during",
+        "until",
+        "by",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0028",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "All department heads must confirm their attendance ____ noon on Monday.",
+      "choices": [
+        "since",
+        "during",
+        "by",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0029",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The warranty coverage will continue ____ the end of the current service period.",
+      "choices": [
+        "by",
+        "since",
+        "during",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0030",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please send the corrected invoice ____ the accounting office closes today.",
+      "choices": [
+        "by",
+        "until",
+        "for",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0031",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The security system will stay in test mode ____ the technician completes the final inspection.",
+      "choices": [
+        "during",
+        "until",
+        "since",
+        "by"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0032",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The hiring committee hopes to select a finalist ____ the end of next week.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0033",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The shuttle bus will operate every thirty minutes ____ the conference concludes.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0034",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The laboratory needs the replacement sensors ____ the next calibration session.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "for"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0035",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Employees may continue using the old expense form ____ the new portal becomes available.",
+      "choices": [
+        "since",
+        "until",
+        "by",
+        "during"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0036",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The vendor has promised to install the software update ____ Friday evening.",
+      "choices": [
+        "during",
+        "since",
+        "by",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0037",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The lobby will remain closed ____ the floor coating has completely dried.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0038",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please finalize the training schedule ____ the orientation materials are printed.",
+      "choices": [
+        "by",
+        "until",
+        "since",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0039",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The backup server will remain online ____ the main system is fully restored.",
+      "choices": [
+        "for",
+        "until",
+        "during",
+        "by"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0040",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The purchasing team must place the order ____ the supplier's discount expires.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0041",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The revised safety rules will stay provisional ____ management approves the final version.",
+      "choices": [
+        "during",
+        "by",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0042",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Applicants are required to submit two references ____ the interview date.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0043",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The outdoor seating area will remain unavailable ____ the repair crew removes the barriers.",
+      "choices": [
+        "since",
+        "until",
+        "for",
+        "by"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0044",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The design department plans to deliver the final mock-up ____ next Tuesday.",
+      "choices": [
+        "during",
+        "since",
+        "by",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0045",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The temporary access restrictions will remain in place ____ the fire inspection is completed.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0046",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please update your emergency contact details ____ the annual records review.",
+      "choices": [
+        "by",
+        "until",
+        "since",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0047",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The call center will extend its evening hours ____ demand returns to normal.",
+      "choices": [
+        "for",
+        "until",
+        "during",
+        "by"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0048",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The finance team must reconcile the travel account ____ the quarterly report is issued.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0049",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The construction office will occupy the temporary trailer ____ the new site office is ready.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" would set a deadline for completion no later than that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0050",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The branch manager expects to complete the inventory count ____ Saturday morning.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks the deadline by which the action must be completed; \"until\" would describe an action or state continuing up to that point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0051",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The procurement office needs all supplier quotations ____ 3:00 P.M. tomorrow.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0052",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The guest parking area will remain closed ____ the resurfacing work is finished.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0053",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please upload the signed agreement ____ noon on Friday.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0054",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The temporary discount will remain available ____ the end of the month.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0055",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The research team expects to complete the field survey ____ the first week of October.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0056",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The customer service desk will stay open ____ the last train departs.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0057",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "All expense claims must be entered ____ Friday's payroll cutoff.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0058",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The prototype will remain in the test chamber ____ the temperature readings stabilize.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0059",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The regional office hopes to fill the vacant position ____ the end of this quarter.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0060",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The old software license will remain valid ____ the replacement system is activated.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0061",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please return the signed safety form ____ Monday morning.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0062",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The maintenance crew will continue inspections ____ every elevator has passed the safety check.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0063",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The publisher intends to send the revised manuscript ____ noon tomorrow.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0064",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The cafeteria will serve a limited menu ____ the kitchen renovation is complete.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0065",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "All conference speakers must submit their slides ____ Wednesday's rehearsal.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0066",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The temporary phone line will remain active ____ the new contact center opens.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0067",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The warehouse supervisor expects the damaged pallets to be replaced ____ next week's audit.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0068",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The reception area will remain on the second floor ____ construction on the lobby is completed.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0069",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Applicants should provide proof of certification ____ the final interview.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0070",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The trial subscription will continue ____ the customer cancels it or the trial period ends.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0071",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The finance department plans to close the monthly accounts ____ the third business day of next month.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0072",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The outdoor pool will remain unavailable ____ water-quality testing is completed.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0073",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please confirm the catering order ____ 5:00 P.M. on Thursday.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0074",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The branch will continue accepting paper applications ____ the online system becomes mandatory.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0075",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The contractor has agreed to finish the emergency repairs ____ the building's scheduled reopening date.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -4794,6 +6075,431 @@
       ],
       "correctIndex": 2,
       "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0076",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the auditor was examining the receipts, the controller answered questions from department managers.",
+      "choices": [
+        "While",
+        "During",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0077",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The store will continue accepting online orders ____ the sales floor is being remodeled.",
+      "choices": [
+        "During",
+        "While",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 1,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0078",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the engineers are conducting pressure tests, access to the equipment room is restricted.",
+      "choices": [
+        "During",
+        "Despite",
+        "While",
+        "Because of"
+      ],
+      "correctIndex": 2,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0079",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The receptionist forwards urgent calls ____ the department supervisor is away from the office.",
+      "choices": [
+        "During",
+        "Despite",
+        "Because of",
+        "While"
+      ],
+      "correctIndex": 3,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0080",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The logistics team tracks each container ____ it is moving through the port.",
+      "choices": [
+        "While",
+        "During",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0081",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the software vendor is installing the upgrade, employees can use the legacy application.",
+      "choices": [
+        "During",
+        "While",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 1,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0082",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The restaurant serves a limited menu ____ the kitchen staff are training on new equipment.",
+      "choices": [
+        "During",
+        "Despite",
+        "While",
+        "Because of"
+      ],
+      "correctIndex": 2,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0083",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Visitors should remain behind the marked line ____ forklifts are operating in the loading area.",
+      "choices": [
+        "During",
+        "Despite",
+        "Because of",
+        "While"
+      ],
+      "correctIndex": 3,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0084",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the committee is reviewing grant applications, no final funding decisions will be announced.",
+      "choices": [
+        "While",
+        "During",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0085",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The hotel provides shuttle service ____ the main entrance is closed for repairs.",
+      "choices": [
+        "During",
+        "While",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 1,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0086",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The payroll team responds to employee questions ____ the new benefits system is being rolled out.",
+      "choices": [
+        "During",
+        "Despite",
+        "While",
+        "Because of"
+      ],
+      "correctIndex": 2,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0087",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ technicians are replacing the elevator controls, tenants should use the east staircase.",
+      "choices": [
+        "During",
+        "Despite",
+        "Because of",
+        "While"
+      ],
+      "correctIndex": 3,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0088",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The manufacturer will keep the older model available ____ distributors are selling their remaining inventory.",
+      "choices": [
+        "While",
+        "During",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0089",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Security officers monitor the side gate ____ construction vehicles are entering the property.",
+      "choices": [
+        "During",
+        "While",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 1,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0090",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the laboratory staff are processing the samples, the refrigeration units must remain on.",
+      "choices": [
+        "During",
+        "Despite",
+        "While",
+        "Because of"
+      ],
+      "correctIndex": 2,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0091",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The call center will route inquiries to another office ____ local agents are attending training.",
+      "choices": [
+        "During",
+        "Despite",
+        "Because of",
+        "While"
+      ],
+      "correctIndex": 3,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0092",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Customers can request printed receipts ____ the mobile payment feature is temporarily unavailable.",
+      "choices": [
+        "While",
+        "During",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0093",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the inspection team is checking the roof, workers on the ground will secure the surrounding area.",
+      "choices": [
+        "During",
+        "While",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 1,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0094",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The procurement office keeps bids confidential ____ the evaluation panel is comparing proposals.",
+      "choices": [
+        "During",
+        "Despite",
+        "While",
+        "Because of"
+      ],
+      "correctIndex": 2,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0095",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The library offers curbside pickup ____ its main reading room is being renovated.",
+      "choices": [
+        "During",
+        "Despite",
+        "Because of",
+        "While"
+      ],
+      "correctIndex": 3,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0096",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the finance director is presenting the forecast, analysts will record questions for the follow-up session.",
+      "choices": [
+        "While",
+        "During",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0097",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The airline provides meal vouchers ____ passengers are waiting for replacement flights.",
+      "choices": [
+        "During",
+        "While",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 1,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0098",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Employees may work remotely ____ the office ventilation system is being serviced.",
+      "choices": [
+        "During",
+        "Despite",
+        "While",
+        "Because of"
+      ],
+      "correctIndex": 2,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0099",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the warehouse crew is unloading the morning shipment, delivery drivers must wait outside the dock.",
+      "choices": [
+        "During",
+        "Despite",
+        "Because of",
+        "While"
+      ],
+      "correctIndex": 3,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0100",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The service desk displays status updates ____ technicians are investigating the network outage.",
+      "choices": [
+        "During",
+        "Despite",
+        "Because of",
+        "While"
+      ],
+      "correctIndex": 3,
+      "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
