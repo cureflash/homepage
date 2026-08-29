@@ -8,21 +8,18 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-earnest-money-safeguards` using source unit `earnest-money-and-safeguards` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-damages-penalty` using source unit `damages-penalty` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-earnest-money-safeguards.js` with seven verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-damages-penalty.js` with four verified atomic knowledge items:
 
-1. Scope:宅建業者が自ら売主となり、買主が宅建業者ではない売買が41条・41条の2の対象。
-2. 保全措置が必要な場合は措置後でなければ手付金等を受領できず、措置がなければ買主は支払いを拒める。
-3. 工事完了前は累計が代金5%以下かつ1,000万円以下なら金額基準で保全措置不要。
-4. 工事完了後は累計が代金10%以下かつ1,000万円以下なら金額基準で保全措置不要。
-5. 買主への所有権移転登記等が済んでいる場合の保全措置不要。
-6. 工事完了前で必要な保全方法は保証措置または保険措置。
-7. 工事完了後では保証・保険に加えて指定保管機関による保管措置を利用できる。
+1. Scope: 宅建業者が自ら売主となり、買主が宅建業者ではない売買に38条が適用される。宅建業者相互間では78条2項により38条は適用されない。
+2. 損害賠償額の予定と違約金の双方を定める場合は、別枠ではなく合算額で上限を判定する。
+3. 合算額を代金額の20%を超える額と定めることはできない。
+4. 20%を超える特約は全部無効ではなく、超える部分だけが無効となる。
 
-Primary authority is the current 宅地建物取引業法 Articles 41, 41-2 and 78(2), plus the Ministry of Land, Infrastructure, Transport and Tourism guidance on earnest-money safeguards, at the 2026-04-01 cutoff. Canonical source fact `u27-f2` is preserved as the source-unit anchor.
+Primary authority is the current 宅地建物取引業法 Articles 38 and 78(2), at the 2026-04-01 cutoff. Canonical source facts `u28-f1` and `u28-f2` are preserved as source-unit anchors.
 
-Existing verified `takken-q-27-002` directly tests only the unfinished/completed exemption thresholds, so it is mapped to those two knowledge items. It does not establish the statutory scope, pre-receipt/payment-refusal rule, registration exemption, or available safeguard methods; those five items remain explicit Phase 4.3 deficits. `takken-q-27-001` and its prior non-mapping were not changed.
+Existing verified `takken-q-28-001` and `takken-q-28-002` were not mapped. Both stems state only that the seller is a宅建業者自ら売主 and omit the buyer-is-not-a宅建業者 condition necessary to establish Article 38 applicability. Their Phase 2/3 verified state and contents were not changed. All four canonical knowledge items therefore remain explicit Phase 4.3 deficits.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -33,22 +30,22 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 34/113 concepts modeled
-- Canonical knowledge items: 183
+- Phase 4.2: active — 35/113 concepts modeled
+- Canonical knowledge items: 187
 - Existing verified questions mapped: 35
-- Explicit unmapped knowledge gaps: 136
+- Explicit unmapped knowledge gaps: 140
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-damages-penalty` using source unit `damages-penalty`.
+Continue Phase 4.2 at `takken-concept-nonconformity-special-rule` using source unit `contract-nonconformity-special-rule`.
 
-Preserve all 183 knowledge items, thirty-five valid mappings, and all one hundred thirty-six explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 187 knowledge items, thirty-five valid mappings, and all one hundred forty explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-Canonical schema guards in the new knowledge file enforce unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected seven-item count. The question-knowledge map preserves its explicit ID/concept whitelists and now expects 35 valid mappings, including verified `takken-q-27-002` only for the two threshold knowledge items. No Phase 2/3 question data was modified in this checkpoint.
+The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected four-item count. `power-question-knowledge-map.js` was deliberately left unchanged because neither existing unit-28 question fully establishes the statutory applicability condition. No Phase 2/3 question data was modified in this checkpoint.
 
 ## Publication invariant
 
