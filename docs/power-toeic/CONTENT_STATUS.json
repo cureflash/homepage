@@ -3,23 +3,23 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 3600,
-  "checked_question_count": 2600,
+  "generated_question_count": 3625,
+  "checked_question_count": 2625,
   "pending_validation_count": 1000,
-  "verified_question_count": 2518,
+  "verified_question_count": 2543,
   "needs_revision_count": 82,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun", "p5.pos.adverb_modifies_verb", "p5.pos.noun_in_noun_slot", "p5.pos.adjective_after_linking_verb", "p5.pos.adverb_modifies_adjective", "p5.pos.participle_adjective_ed_ing", "p5.pos.word_form_subject_position", "p5.pos.word_form_object_position", "p5.verb.subject_verb_agreement", "p5.verb.present_vs_past", "p5.verb.present_perfect_vs_past", "p5.verb.active_vs_passive", "p5.verb.modal_base_form", "p5.verb.to_infinitive_pattern", "p5.verb.gerund_pattern", "p5.verb.causative_have_make_let", "p5.verb.conditional_form", "p5.verb.participle_clause", "p5.conn.preposition_vs_conjunction", "p5.conn.because_vs_because_of", "p5.conn.despite_vs_although", "p5.conn.during_vs_while", "p5.conn.by_vs_until", "p5.conn.for_vs_since", "p5.conn.time_prepositions", "p5.conn.logical_conjunction", "p5.pron.subject_vs_object", "p5.pron.possessive_forms", "p5.pron.reflexive", "p5.rel.who_vs_which", "p5.rel.whose", "p5.rel.where_vs_when", "p5.pron.indefinite_agreement", "p5.det.article_choice", "p5.det.countable_number", "p5.det.much_vs_many"
   ],
-  "current_batch": "2026-08-29-scheduled-061-much-vs-many-part4",
-  "current_micro_skill": "p5.det.much_vs_many",
-  "current_micro_skill_persisted_count": 100,
+  "current_batch": "2026-08-29-scheduled-062-few-vs-little-part1",
+  "current_micro_skill": "p5.det.few_vs_little",
+  "current_micro_skill_persisted_count": 25,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_det_few_vs_little_0001",
+  "next_resume_id": "p5_det_few_vs_little_0026",
   "next_micro_skill": "p5.det.few_vs_little",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Generated p5.det.much_vs_many 0076-0100 (25 questions), completing the micro-skill at 100/100; all new items remain pending_validation. Answer positions A/B/C/D = 7/6/6/6; exact duplicate stems = 0; within-checkpoint SequenceMatcher similarity >= 0.94 = 0, maximum approximately 0.558. Independently reviewed the oldest 25 unchecked pending items, p5.conn.logical_conjunction 0076-0100: 25 checked, 19 verified, 6 needs_revision, 0 rejected. The six quarantined items are 0086, 0087, 0090, 0091, 0098, and 0099 because another displayed conjunction remains defensible. Cumulative QA is 2,600 checked, 2,518 verified, 82 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_det_few_vs_little_0001; next QA is p5_pron_subject_vs_object_0001.",
-  "updated_at": "2026-08-29T20:12:00+09:00"
+  "last_run_result": "Generated p5.det.few_vs_little 0001-0025 (25 questions); all new items remain pending_validation. Answer positions A/B/C/D = 7/6/6/6; exact duplicate stems = 0; within-checkpoint SequenceMatcher similarity >= 0.94 = 0, maximum approximately 0.567. Independently reviewed the oldest 25 unchecked pending items, p5.pron.subject_vs_object 0001-0025: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 2,625 checked, 2,543 verified, 82 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_det_few_vs_little_0026; next QA is p5_pron_subject_vs_object_0026.",
+  "updated_at": "2026-08-29T21:16:00+09:00"
 }
