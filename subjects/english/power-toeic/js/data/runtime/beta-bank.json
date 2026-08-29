@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T08:25:55.119Z",
+  "generatedAt": "2026-08-29T09:31:56.241Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1809,
-    "runtimeQuestionCount": 1809,
+    "approvedCandidateCount": 1834,
+    "runtimeQuestionCount": 1834,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 74
+    "qaRecordCount": 75
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -9051,6 +9051,431 @@
       ],
       "correctIndex": 0,
       "explanation": "'Although' introduces the contrast between the higher purchase price and lower ink consumption.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0026",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The finance team prepared a second forecast ____ management could compare two budget scenarios.",
+      "choices": [
+        "because",
+        "so that",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 1,
+      "explanation": "'So that' introduces the purpose of preparing a second forecast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0027",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the supplier offered a lower price, the purchasing manager chose the vendor with the shorter lead time.",
+      "choices": [
+        "Because",
+        "Although",
+        "Unless",
+        "Once"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Although' introduces a contrast between the lower price and the different selection criterion.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0028",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The maintenance crew will inspect the elevator again ____ the warning light appears during testing.",
+      "choices": [
+        "if",
+        "although",
+        "because",
+        "whereas"
+      ],
+      "correctIndex": 0,
+      "explanation": "'If' introduces the condition that triggers another inspection.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0029",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The regional office remained open ____ the headquarters closed early because of the storm.",
+      "choices": [
+        "because",
+        "unless",
+        "whereas",
+        "after"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Whereas' contrasts the operating status of the two offices.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0030",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please keep the receipt ____ the reimbursement has been deposited into your account.",
+      "choices": [
+        "although",
+        "unless",
+        "because",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Until' marks the endpoint for keeping the receipt.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0031",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the revised brochure is approved, the marketing team will send it to the printer.",
+      "choices": [
+        "Once",
+        "Although",
+        "Because",
+        "Unless"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Once' marks the point after approval when printing can proceed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0032",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company reserved a larger venue ____ registrations were much higher than expected.",
+      "choices": [
+        "although",
+        "because",
+        "unless",
+        "whereas"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Because' gives the reason a larger venue was reserved.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0033",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The service desk extended its hours ____ customers could receive support after the system migration.",
+      "choices": [
+        "because",
+        "although",
+        "so that",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "'So that' introduces the purpose of extending service hours.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0034",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The contract will renew automatically ____ either party provides written notice by June 30.",
+      "choices": [
+        "because",
+        "although",
+        "whereas",
+        "unless"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Unless' states the exception that prevents automatic renewal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0035",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the first prototype was lightweight, the second model was designed for greater durability.",
+      "choices": [
+        "While",
+        "Because",
+        "Unless",
+        "After"
+      ],
+      "correctIndex": 0,
+      "explanation": "'While' contrasts the characteristics of the two prototypes.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0036",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The analyst checked the figures twice ____ the report contained several unusual variances.",
+      "choices": [
+        "Although",
+        "since",
+        "unless",
+        "before"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Since' gives the reason the figures were checked twice.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0037",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Employees may work remotely on Friday ____ their supervisors approve the arrangement in advance.",
+      "choices": [
+        "because",
+        "although",
+        "provided that",
+        "whereas"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Provided that' states the condition for remote work.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0038",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The warehouse staff will begin unloading ____ the safety inspection has been completed.",
+      "choices": [
+        "because",
+        "although",
+        "unless",
+        "after"
+      ],
+      "correctIndex": 3,
+      "explanation": "'After' correctly places unloading later than the safety inspection.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0039",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ demand rises further this quarter, the factory can add a weekend production shift.",
+      "choices": [
+        "If",
+        "Although",
+        "Because",
+        "Whereas"
+      ],
+      "correctIndex": 0,
+      "explanation": "'If' introduces the condition under which a weekend shift can be added.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0040",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The client accepted the revised schedule ____ the final delivery date remained unchanged.",
+      "choices": [
+        "Because",
+        "even though",
+        "Unless",
+        "Once"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Even though' introduces the unexpected contrast between accepting a revised schedule and an unchanged final date.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0041",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The accounting system locks an expense claim ____ the same invoice number is entered twice.",
+      "choices": [
+        "because",
+        "although",
+        "whenever",
+        "whereas"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Whenever' means each time the stated condition occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0042",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The branch manager will sign the lease ____ the legal department confirms the final wording.",
+      "choices": [
+        "because",
+        "although",
+        "whereas",
+        "as soon as"
+      ],
+      "correctIndex": 3,
+      "explanation": "'As soon as' marks the point immediately after legal confirmation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0043",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the shipment arrived earlier than planned, the receiving team was not available until the afternoon.",
+      "choices": [
+        "Although",
+        "Because",
+        "Unless",
+        "So that"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Although' introduces the contrast between early arrival and delayed availability.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0044",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The supervisor reassigned two technicians ____ the installation site required additional support.",
+      "choices": [
+        "Although",
+        "because",
+        "unless",
+        "whereas"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Because' gives the reason two technicians were reassigned.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0045",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company translated the safety guide into three languages ____ overseas contractors could follow the same procedures.",
+      "choices": [
+        "because",
+        "although",
+        "so that",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "'So that' introduces the purpose of translating the guide.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0046",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The discount remains valid ____ the order is placed before the end of the month.",
+      "choices": [
+        "because",
+        "although",
+        "whereas",
+        "as long as"
+      ],
+      "correctIndex": 3,
+      "explanation": "'As long as' states the condition for the discount to remain valid.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0047",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the new scanner processes documents faster, it requires more frequent calibration.",
+      "choices": [
+        "While",
+        "Because",
+        "Unless",
+        "After"
+      ],
+      "correctIndex": 0,
+      "explanation": "'While' introduces a contrast between faster processing and more frequent calibration.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0048",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The manager postponed the meeting ____ two key participants were traveling that day.",
+      "choices": [
+        "Although",
+        "because",
+        "unless",
+        "whereas"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Because' gives the reason the meeting was postponed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0049",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The support team will contact the software vendor ____ the same error occurs again.",
+      "choices": [
+        "because",
+        "although",
+        "if",
+        "whereas"
+      ],
+      "correctIndex": 2,
+      "explanation": "'If' introduces the condition that triggers contacting the vendor.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0050",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The final invoice cannot be issued ____ all approved change orders have been entered into the system.",
+      "choices": [
+        "because",
+        "although",
+        "whereas",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Until' marks the prerequisite that must be completed before invoicing.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
