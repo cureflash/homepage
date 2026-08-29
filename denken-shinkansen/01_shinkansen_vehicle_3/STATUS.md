@@ -4,58 +4,55 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 4 / 38
-- current_status: rebuilding_topic_04_depth
-- next_topic: `04 0系② シリコン整流器` の新版本文に合わせて解説PDF・練習PDF・PowerPointを再生成し、visual QA、練習問題独立再計算、公式過去問独立再解答まで行う
+- exam_aligned_completed_topics: 5 / 38
+- current_status: rebuilding_topic_05_depth
+- next_topic: `05 0系③ 速度制御` の新版本文・EXAM_ALIGNMENTを再確認し、解説PDF・練習PDF・PowerPointを再生成してvisual QA、練習問題独立再計算、公式過去問独立再解答まで行う
 
 ## 新品質ゲート進捗
 - [x] 01 プラレール① 電気編 — PASS
 - [x] 02 プラレール② 機械編 — 新版成果物再生成・再QA PASS
 - [x] 03 0系① 主変圧器 — 新版成果物再生成・再QA PASS
-- [ ] 04 0系② シリコン整流器 — REOPENED / Web記事全面再構築済み、PDF・練習・PPTX再生成待ち
+- [x] 04 0系② シリコン整流器 — 新版成果物再生成・再QA PASS
 - [ ] 05 0系③ 速度制御 — REOPENED / Web記事全面再構築済み、PDF・練習・PPTX再生成待ち
 - [ ] 06 0系④ 発電ブレーキ — REOPENED / Web記事全面再構築済み、PDF・練習・PPTX再生成待ち
 - [x] 07 200系 サイリスタ制御 — PASS
-- [ ] 08 100系 直流電動機方式の完成 — 04〜06再PASS後に着手
+- [ ] 08 100系 直流電動機方式の完成 — 05〜06再PASS後に着手
 
-## 03 0系① 主変圧器 — 再PASS
-- [x] source Markdown / EXAM_ALIGNMENTを新品質基準で再構築
-- [x] 公式過去問7問を分析: R6上機械問8・9、R5下機械問8・9、R3機械問15、H30機械問15、H27機械問8
-- [x] e-sysnet、電験三種まとめました、電験王3を比較
-- [x] 解説PDF再生成: 1ページ
-- [x] 練習PDF再生成: 14問、基礎4 / 本試験標準7 / 複合・応用3、五肢択一14問
-- [x] 解説画像PowerPoint再生成: 3スライド
-- [x] PDF / PowerPoint visual QA
-- [x] 練習問題14問の独立再計算
-- [x] 公式過去問7問を教材だけで独立再解答
+## 04 0系② シリコン整流器 — 再PASS
+
+### EXAM_ALIGNMENT
+公式過去問5問を対象にした。
+- R3 機械 問16 — 単相半波R-L負荷、`v=Ri+Ldi/dt`、波形・平均値
+- H26 機械 問10 — 環流ダイオード、インダクタ電流の閉回路
+- H25 機械 問9 — ブリッジ＋平滑コンデンサ、充放電と入力電流波形
+- H24 機械 問10 — 全波サイリスタ整流、制御角と平均電圧
+- R1 機械 問10 — サイリスタブリッジ、対角導通・自然転流・極性
+
+参照した解説資料: e-sysnet「整流回路の原理」、電験三種まとめましたの上記過去問解説。参照日2026-08-29。正答の正本は電気技術者試験センター公式過去問題・公式解答。
+
+### 成果物
+- `topics/04_0series_silicon_rectifier/04_0series_silicon_rectifier.md`
+- `topics/04_0series_silicon_rectifier/04_0series_silicon_rectifier_explanation.pdf` — 3ページ
+- `topics/04_0series_silicon_rectifier/04_0series_silicon_rectifier_practice.pdf` — 14問（基礎4 / 標準7 / 応用3、五肢択一13問）
+- `topics/04_0series_silicon_rectifier/04_0series_silicon_rectifier_images.pptx` — 3スライド
+
+### QA
+- 解説PDF 3ページ・練習PDF 2ページを160dpiで最終レンダリングし、文字化け・クリップ・重なりなし。
+- PowerPoint 3スライドをレンダリング確認。初回の文字コントラストを修正後、最終版で可読性・クリップ・重なりなし。
+- 練習14/14を独立再計算・再判定。代表値: `Vm(100V)=141.42V`, 半波平均`45.02V`, 全波平均`90.03V`, 200V全波平均`180.06V`, α=90°サイリスタ平均`45.02V`。
 
 ### 独立過去問QA
-- R6上 機械 問8 → 公式(4) PASS
-- R6上 機械 問9 → `Z=2.00Ω`, `R=0.75Ω`, `X=1.854Ω` → 公式(2) PASS
-- R5下 機械 問8 → アドミタンス換算を含め公式(5) PASS
-- R5下 機械 問9 → `R75/R20=310/255=1.2157` → 公式(3) PASS
-- R3 機械 問15 → 銅損206.19W → (a)公式(2)、最大効率負荷率70.7% → (b)公式(3) PASS
-- H30 機械 問15 → `R'=1.1445Ω`, `X'=6.267Ω`, `|Z'|=6.371Ω` → (a)公式(4)、フェーザ電圧降下 → (b)公式(3) PASS
-- H27 機械 問8 → `a=0.231` → 公式(2) PASS
+生成時の正答を先に見ず、教材内の導通判定・R-L・環流・C平滑・位相制御の説明だけで再解答した。
+- R3 機械 問16 → (a)(1), (b)(3) PASS
+- H26 機械 問10 → (2) PASS
+- H25 機械 問9 → (1) PASS
+- H24 機械 問10 → (5) PASS
+- R1 機械 問10 → (3) PASS
 
-7/7を教材外知識の補完なしで再現できたため03をPASSへ戻す。
-
-## 計算QA
-練習14問を独立再計算。主要値:
-- `V1=1000 V`
-- `I1=4 A`
-- `Z'=18 Ω`
-- `Pcu(x=0.5)=200 W`
-- 短絡試験 `X=1.854 Ω`
-- 温度補正 `R75/R20=1.2157`
-- 全損失 `309.28 W`、銅損 `206.19 W`
-- 最大効率負荷率 `0.7071`
-- H27型 `a=0.231`
-- H30型 `|Z'|=6.371 Ω`
-- 0系単純容量換算一次電流 `66.0 A`
+5/5で公式解答と一致。教材外知識の補完なしで根拠を説明できたため04をPASSへ戻す。
 
 ## Web公開
-03は再PASSしたため `article_rebuild` を解除し、解説PDF・練習PDF・PowerPointへのリンクをWebカタログへ復帰する。
+04は再PASSしたため `article_rebuild` を解除し、解説PDF・練習PDF・PowerPointへのリンクをWebカタログへ復帰する。
 
 ## 次
-04を最優先で再PASSする。その後05→06を順番に新版本文対応の成果物へ更新する。06まで再PASSするまで08へ進まない。
+05を最優先で再PASSする。その後06を再PASSし、08へ進む。
