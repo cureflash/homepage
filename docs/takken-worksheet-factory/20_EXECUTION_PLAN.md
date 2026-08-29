@@ -31,14 +31,14 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 - [ ] Decompose every concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` cutoff and primary sources.
 - [ ] Map existing verified questions only where they genuinely test the knowledge item; missing evidence remains a Phase 4.3 deficit.
 
-Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure.
+Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items.
 
 Latest checkpoint:
-- [x] `takken-concept-article35-procedure`: 5 verified items. Article 35 procedure was split into pre-contract timing, the宅地建物取引業者 duty to have a宅地建物取引士 explain, delivery of the important-matters document, consent-based electronic provision that is deemed document delivery, and mandatory presentation of the宅地建物取引士証 at explanation. Existing `takken-q-21-001` directly tests timing,宅建士 explanation and document delivery; `takken-q-21-002` directly tests card presentation. Electronic provision remains an explicit Phase 4.3 deficit.
+- [x] `takken-concept-article35-items`: 4 verified items. Article 35 explanation content was split into registered rights, registered owner/name information, statutory restrictions, and transaction-type-dependent application of those restrictions. Existing `takken-q-22-001` directly tests registered rights and `takken-q-22-002` directly tests statutory restrictions. Registered owner/name information and transaction-type-dependent application remain explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: 27/113 modeled concepts, 139 verified knowledge items, 24 existing verified questions mapped, 104 explicit question-coverage gaps.
+Current Phase 4.2 totals: 28/113 modeled concepts, 143 verified knowledge items, 26 existing verified questions mapped, 106 explicit question-coverage gaps.
 
-Exact continuation: `takken-concept-article35-items`, source unit `article35-items`. Preserve all one hundred four explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
+Exact continuation: `takken-concept-article37-document`, source units `article37-basics` and `article35-vs-37`. Preserve all one hundred six explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
