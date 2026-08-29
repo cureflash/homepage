@@ -8,19 +8,18 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-article35-procedure` using source units `article35-basics` and `article35-vs-37` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-article35-items` using source unit `article35-items` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-article35-procedure.js` with five verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-article35-items.js` with four verified atomic knowledge items:
 
-1. `takken-k-article35-procedure-before-contract` — 35条の重要事項説明は契約成立までの間に行う。
-2. `takken-k-article35-procedure-takkenshi-explains` — 宅建業者は宅地建物取引士をして重要事項説明を行わせる。
-3. `takken-k-article35-procedure-document-delivery` — 重要事項を記載した35条書面を交付して説明させる。
-4. `takken-k-article35-procedure-electronic-delivery` — 相手方等の承諾を得た法定の電磁的方法による提供は書面交付に代えることができ、書面を交付したものとみなされる。
-5. `takken-k-article35-procedure-card-presentation` — 宅地建物取引士は重要事項説明時に宅地建物取引士証を相手方へ提示しなければならない。
+1. `takken-k-article35-items-registered-rights` — 35条の説明事項には対象宅地・建物上の登記された権利の種類・内容が含まれる。
+2. `takken-k-article35-items-registered-owner-name` — 登記名義人または表題部所有者の氏名・法人名称も説明事項に含まれる。
+3. `takken-k-article35-items-legal-restrictions` — 都市計画法・建築基準法その他の法令に基づく政令所定の制限の概要が説明事項に含まれる。
+4. `takken-k-article35-items-contract-type-dependent` — 法令上の制限は、宅地/建物および売買・交換/貸借という契約内容の別に応じて決まる。
 
-Primary authority is current 宅地建物取引業法 Article 35. The electronic-delivery item additionally uses MLIT's official notice on electronic provision of important-matters and contract documents. Canonical source facts `u21-f1`, `u21-f2`, and `u24-f1` are preserved as source fact references.
+Primary authority is current 宅地建物取引業法 Article 35. Canonical source facts `u22-f1` and `u22-f2` are preserved as source fact references.
 
-Existing verified `takken-q-21-001` directly tests pre-contract timing,宅地建物取引士 explanation, and delivery of the prescribed document, so it is mapped to those three knowledge items. Existing verified `takken-q-21-002` directly tests mandatory宅地建物取引士証 presentation and is mapped to that item. Neither question tests consent-based electronic provision, so that item remains an explicit Phase 4.3 deficit. `takken-q-24-001` was not additionally mapped because the current mapping schema assigns each existing question to one concept and the comparison unit remains available for the later `takken-concept-article35-vs-37` checkpoint.
+Existing verified `takken-q-22-001` directly tests registered rights and is mapped to `takken-k-article35-items-registered-rights`. Existing verified `takken-q-22-002` directly tests statutory restrictions and is mapped to `takken-k-article35-items-legal-restrictions`. Neither question directly tests registered owner/name information or transaction-type-dependent application, so those two items remain explicit Phase 4.3 deficits.
 
 No Phase 2/3 question content or validation state was changed. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -31,18 +30,18 @@ No Phase 2/3 question content or validation state was changed. No Phase 4.3 ques
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 27/113 concepts modeled
-- Canonical knowledge items: 139
-- Existing verified questions mapped: 24
-- Explicit unmapped knowledge gaps: 104
+- Phase 4.2: active — 28/113 concepts modeled
+- Canonical knowledge items: 143
+- Existing verified questions mapped: 26
+- Explicit unmapped knowledge gaps: 106
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-article35-items` using source unit `article35-items`.
+Continue Phase 4.2 at `takken-concept-article37-document` using source units `article37-basics` and `article35-vs-37`.
 
-Preserve all 139 knowledge items, twenty-four valid mappings, and all one hundred four explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 143 knowledge items, twenty-six valid mappings, and all one hundred six explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Publication invariant
 
