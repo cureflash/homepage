@@ -8,14 +8,20 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-declaration-arrival` using source unit `civil-intent-general` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-mistake` using source unit `civil-mistake` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-declaration-arrival.js` with two verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-mistake.js` with eight verified atomic knowledge items:
 
-1. 民法97条1項の到達主義 — 相手方のある意思表示は通知が相手方に到達した時から効力を生ずる。
-2. 民法97条2項の到達妨害 — 相手方が正当な理由なく到達を妨げたときは通常到達すべき時に到達したものとみなすことができる。
+1. 民法95条1項所定の錯誤で、法律行為の目的・取引上の社会通念に照らして重要なものの取消し。
+2. 意思表示に対応する意思を欠く錯誤。
+3. 法律行為の基礎とした事情についての認識が真実に反する錯誤。
+4. 95条1項2号の錯誤では、その事情が法律行為の基礎とされていることが表示されていたことを要すること。
+5. 表意者の重大な過失による錯誤は原則として取消し不可であること。
+6. 相手方が錯誤を知り、または重大な過失で知らなかった場合の重大過失制限の例外。
+7. 相手方も同一の錯誤に陥っていた場合の重大過失制限の例外。
+8. 善意かつ無過失の第三者への取消しの対抗不可。
 
-Existing verified `takken-q-34-001` maps only to the first item and `takken-q-34-002` maps only to the second item. Both questions directly test the canonical knowledge, so this checkpoint adds no new Phase 4.3 deficit. Phase 2/3 question contents and verified states were not changed.
+Existing verified `takken-q-35-001` maps only to the first item. `takken-q-35-002` states only that gross-negligence and third-party-protection limits exist and does not directly test the detailed statutory rules, so it was not over-mapped. Seven new items remain explicit Phase 4.3 deficits. Phase 2/3 question contents and verified states were not changed.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -26,24 +32,22 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 42/113 concepts modeled
-- Canonical knowledge items: 248
-- Existing verified questions mapped: 41
-- Explicit unmapped knowledge gaps: 195
+- Phase 4.2: active — 43/113 concepts modeled
+- Canonical knowledge items: 256
+- Existing verified questions mapped: 42
+- Explicit unmapped knowledge gaps: 202
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-mistake` using source unit `civil-mistake`.
+Continue Phase 4.2 at `takken-concept-fraud` using source unit `civil-fraud-duress`.
 
-Preserve all 248 knowledge items, forty-one valid mappings, and all one hundred ninety-five explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 256 knowledge items, forty-two valid mappings, and all two hundred two explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected two-item count. `power-question-knowledge-map.js` now adds only the two existing verified unit-34 questions to the two canonical knowledge items they directly test. No Phase 2/3 question data was modified in this checkpoint.
-
-Local git/Node validation could not run because the execution environment could not resolve `github.com`; repository reads and writes were performed through the GitHub connection instead.
+The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected eight-item count. `power-question-knowledge-map.js` adds only existing verified `takken-q-35-001` to the canonical knowledge item it directly tests. `takken-q-35-002` remains unmapped rather than being used as evidence for statutory details it does not actually ask. No Phase 2/3 question data was modified in this checkpoint.
 
 ## Publication invariant
 
