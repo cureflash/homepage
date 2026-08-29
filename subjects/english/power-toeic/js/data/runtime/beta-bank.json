@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T21:18:18.917Z",
+  "generatedAt": "2026-08-29T22:15:56.567Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2350,
-    "runtimeQuestionCount": 2350,
+    "approvedCandidateCount": 2375,
+    "runtimeQuestionCount": 2375,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 96
+    "qaRecordCount": 97
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -33476,6 +33476,431 @@
       ],
       "correctIndex": 0,
       "explanation": "The forecast was made by the analyst, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0076",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The consultant ____ recommendations reduced processing time will lead the next efficiency review.",
+      "choices": [
+        "whose",
+        "who",
+        "which",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The recommendations are those of the consultant, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0077",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The hotel ____ rooftop terrace is being renovated has moved several events indoors.",
+      "choices": [
+        "who",
+        "whose",
+        "which",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The rooftop terrace belongs to the hotel, so 'whose' correctly expresses possession.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0078",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Vendors ____ invoices contain tax errors must submit corrected copies by Friday.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The invoices belong to the vendors, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0079",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The laboratory ____ safety procedures were updated will hold a staff briefing this afternoon.",
+      "choices": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "correctIndex": 3,
+      "explanation": "The safety procedures are those of the laboratory, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0080",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The designer ____ packaging concept was selected will collaborate with the marketing team.",
+      "choices": [
+        "whose",
+        "who",
+        "which",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The packaging concept was created by the designer, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0081",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The bank ____ mobile app experienced an outage has extended its support hours.",
+      "choices": [
+        "who",
+        "whose",
+        "which",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The mobile app belongs to the bank, so 'whose' correctly marks possession.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0082",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Managers ____ teams completed the compliance course may skip next week's orientation session.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The teams are managed by the managers, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0083",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The supplier ____ warehouse was damaged by flooding has arranged temporary storage nearby.",
+      "choices": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "correctIndex": 3,
+      "explanation": "The warehouse belongs to the supplier, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0084",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The researcher ____ survey findings were cited in the report will speak at the annual forum.",
+      "choices": [
+        "whose",
+        "who",
+        "which",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The survey findings are those of the researcher, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0085",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The airline ____ baggage policy recently changed has posted new guidance on its website.",
+      "choices": [
+        "who",
+        "whose",
+        "which",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The baggage policy is the airline's policy, so 'whose' correctly expresses possession.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0086",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Clients ____ contracts renew automatically will receive reminder notices thirty days in advance.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The contracts belong to the clients, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0087",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The publisher ____ editorial offices relocated last year is opening a new distribution center.",
+      "choices": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "correctIndex": 3,
+      "explanation": "The editorial offices belong to the publisher, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0088",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The mechanic ____ inspection detected the brake issue documented the repair in detail.",
+      "choices": [
+        "whose",
+        "who",
+        "which",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The inspection was performed by the mechanic, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0089",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The nonprofit organization ____ annual fundraiser exceeded its goal will expand two community programs.",
+      "choices": [
+        "who",
+        "whose",
+        "which",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The annual fundraiser is the organization's fundraiser, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0090",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Employees ____ identification badges are damaged should request replacements from security.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The identification badges belong to the employees, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0091",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The factory ____ ventilation system is being replaced will suspend overnight production.",
+      "choices": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "correctIndex": 3,
+      "explanation": "The ventilation system belongs to the factory, so 'whose' correctly expresses possession.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0092",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The broker ____ market analysis influenced the investment decision will prepare a follow-up briefing.",
+      "choices": [
+        "whose",
+        "who",
+        "which",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The market analysis was prepared by the broker, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0093",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The theater ____ ticketing platform was unavailable has waived exchange fees for affected customers.",
+      "choices": [
+        "who",
+        "whose",
+        "which",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The ticketing platform belongs to the theater, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0094",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Applicants ____ portfolios meet the design criteria will be invited to a practical assessment.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The portfolios belong to the applicants, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0095",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The agency ____ regional offices were consolidated expects lower administrative costs this year.",
+      "choices": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "correctIndex": 3,
+      "explanation": "The regional offices belong to the agency, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0096",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The technician ____ maintenance log noted repeated voltage fluctuations replaced the faulty control unit.",
+      "choices": [
+        "whose",
+        "who",
+        "which",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The maintenance log was completed by the technician, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0097",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The museum ____ membership numbers rose substantially plans to add more weekend tours.",
+      "choices": [
+        "who",
+        "whose",
+        "which",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The membership numbers are those of the museum, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0098",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Customers ____ delivery addresses have changed should update their account information before ordering.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The delivery addresses belong to the customers, so 'whose' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0099",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The consulting firm ____ client roster expanded rapidly has leased a larger office downtown.",
+      "choices": [
+        "who",
+        "which",
+        "where",
+        "whose"
+      ],
+      "correctIndex": 3,
+      "explanation": "The client roster belongs to the consulting firm, so 'whose' correctly expresses possession.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_whose_0100",
+      "version": 1,
+      "skillId": "p5.rel.whose",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The attorney ____ contract revisions resolved the dispute will join tomorrow's negotiation call.",
+      "choices": [
+        "whose",
+        "who",
+        "which",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The contract revisions were made by the attorney, so 'whose' is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
