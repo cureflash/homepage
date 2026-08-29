@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T02:18:51.727Z",
+  "generatedAt": "2026-08-29T03:20:26.323Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1435,
-    "runtimeQuestionCount": 1435,
+    "approvedCandidateCount": 1460,
+    "runtimeQuestionCount": 1460,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 59
+    "qaRecordCount": 60
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -4369,6 +4369,431 @@
       ],
       "correctIndex": 1,
       "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0051",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company hired additional interpreters ____ the international conference.",
+      "choices": [
+        "during",
+        "while",
+        "although",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0052",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Parking fees will be waived ____ the weekend charity event.",
+      "choices": [
+        "while",
+        "during",
+        "although",
+        "because"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0053",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The branch experienced heavier call volume ____ the annual enrollment period.",
+      "choices": [
+        "while",
+        "although",
+        "during",
+        "because"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0054",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Technicians monitored the network closely ____ the overnight data migration.",
+      "choices": [
+        "while",
+        "although",
+        "because",
+        "during"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0055",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The café extended its opening hours ____ the summer festival.",
+      "choices": [
+        "during",
+        "while",
+        "although",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0056",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "No personal deliveries are accepted ____ office hours.",
+      "choices": [
+        "while",
+        "during",
+        "although",
+        "because"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0057",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The insurer received numerous claims ____ the severe winter storm.",
+      "choices": [
+        "while",
+        "although",
+        "during",
+        "because"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0058",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The retailer displayed the new product line ____ its anniversary sale.",
+      "choices": [
+        "while",
+        "although",
+        "because",
+        "during"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0059",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Extra security checks are required ____ major public events.",
+      "choices": [
+        "during",
+        "while",
+        "although",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0060",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The design team made several revisions ____ the prototype review.",
+      "choices": [
+        "while",
+        "during",
+        "although",
+        "because"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0061",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Emergency exits must remain unobstructed ____ building inspections.",
+      "choices": [
+        "while",
+        "although",
+        "during",
+        "because"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0062",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The factory scheduled fewer deliveries ____ the holiday shutdown.",
+      "choices": [
+        "while",
+        "although",
+        "because",
+        "during"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0063",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Guests can access the fitness center ____ their stay.",
+      "choices": [
+        "during",
+        "while",
+        "although",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0064",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The research institute restricted visitor access ____ the clinical trial.",
+      "choices": [
+        "while",
+        "during",
+        "although",
+        "because"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0065",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Several price changes took effect ____ the promotional campaign.",
+      "choices": [
+        "while",
+        "although",
+        "during",
+        "because"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0066",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The bank increased staffing ____ the tax-filing season.",
+      "choices": [
+        "while",
+        "although",
+        "because",
+        "during"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0067",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The auditorium lights remain dimmed ____ performances.",
+      "choices": [
+        "during",
+        "while",
+        "although",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0068",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Maintenance requests accumulated ____ the long weekend.",
+      "choices": [
+        "while",
+        "during",
+        "although",
+        "because"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0069",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Contractors must wear protective equipment ____ site visits.",
+      "choices": [
+        "while",
+        "although",
+        "during",
+        "because"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0070",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The shipping department kept detailed records ____ the customs inspection.",
+      "choices": [
+        "while",
+        "although",
+        "because",
+        "during"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0071",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The clinic offered extended hours ____ the vaccination campaign.",
+      "choices": [
+        "during",
+        "while",
+        "although",
+        "because"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0072",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Noise levels are monitored ____ construction work.",
+      "choices": [
+        "while",
+        "during",
+        "although",
+        "because"
+      ],
+      "correctIndex": 1,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0073",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company suspended nonessential travel ____ the budget review period.",
+      "choices": [
+        "while",
+        "although",
+        "during",
+        "because"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0074",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The ticket office stayed open ____ the intermission.",
+      "choices": [
+        "while",
+        "although",
+        "because",
+        "during"
+      ],
+      "correctIndex": 3,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_during_vs_while_0075",
+      "version": 1,
+      "skillId": "p5.conn.during_vs_while",
+      "categoryId": "connectors-prepositions",
+      "sentence": "New employees receive temporary access cards ____ orientation week.",
+      "choices": [
+        "while",
+        "although",
+        "during",
+        "because"
+      ],
+      "correctIndex": 2,
+      "explanation": "A noun phrase follows the blank, so the preposition 'during' is required to express when the event occurs.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
