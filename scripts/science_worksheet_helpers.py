@@ -25,6 +25,7 @@ FORMULA_RELATIONS = {
     'equal-products',
     'two-body-momentum-conservation',
     'doppler-same-line',
+    'sqrt-square-plus-difference-square',
 }
 
 
@@ -118,6 +119,13 @@ def _relation_result(relation, inputs):
         if source_frequency <= 0 or sound_speed <= 0 or numerator_speed <= 0 or denominator_speed <= 0:
             raise ValueError('doppler-same-line requires positive frequency, sound speed, and effective numerator/denominator speeds')
         return round(source_frequency * numerator_speed / denominator_speed, 1)
+    if relation == 'sqrt-square-plus-difference-square':
+        if len(inputs) != 3:
+            raise ValueError('sqrt-square-plus-difference-square needs exactly base, first term, and second term')
+        base, first_term, second_term = inputs
+        if base < 0 or first_term < 0 or second_term < 0:
+            raise ValueError('sqrt-square-plus-difference-square requires nonnegative magnitude inputs')
+        return round(sqrt(base ** 2 + (first_term - second_term) ** 2), 2)
     raise ValueError(f'unsupported formula relation: {relation}')
 
 
@@ -296,6 +304,11 @@ def generate_formula_drill(spec, seed, count=20, solve_for=None):
             raise ValueError('doppler-same-line needs four unique inputs')
         if solve_for != result_name:
             raise ValueError('doppler-same-line inverse generation is intentionally unsupported after rounding')
+    if relation == 'sqrt-square-plus-difference-square':
+        if len(input_names) != 3 or len(set(input_names)) != 3:
+            raise ValueError('sqrt-square-plus-difference-square needs three unique inputs')
+        if solve_for != result_name:
+            raise ValueError('sqrt-square-plus-difference-square inverse generation is intentionally unsupported because inverse branches can be ambiguous')
     if result_name not in variables or any(name not in variables for name in input_names):
         raise ValueError('all formula variables need definitions')
     if solve_for not in [result_name, *input_names]:

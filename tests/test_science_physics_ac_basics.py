@@ -25,9 +25,9 @@ class PhysicsAcBasicsTests(unittest.TestCase):
                     batches.append((topic_key, mode_key, variant, seed, problems))
         return batches
 
-    def test_eight_checkpoints_total_240_variants(self):
+    def test_nine_checkpoints_total_270_variants(self):
         batches = self.generated_batches()
-        self.assertEqual(len(batches), 240)
+        self.assertEqual(len(batches), 270)
         self.assertTrue(all(len(problems) == 20 for *_, problems in batches))
         counts = {}
         for topic_key, *_ in batches:
@@ -41,6 +41,7 @@ class PhysicsAcBasicsTests(unittest.TestCase):
             "ac-capacitive-reactance-numeric": 20,
             "ac-series-rlc-reactance-difference-numeric": 30,
             "ac-reactance-rlc-concepts": 40,
+            "ac-series-rlc-impedance-numeric": 30,
         })
 
     def test_deterministic_validation_and_unique_hashes(self):
@@ -59,13 +60,14 @@ class PhysicsAcBasicsTests(unittest.TestCase):
             digest = normalized_hash(problems)
             self.assertNotIn(digest, hashes)
             hashes.add(digest)
-        self.assertEqual(len(hashes), 240)
+        self.assertEqual(len(hashes), 270)
 
     def test_new_numeric_visible_values_recompute_answers(self):
         new_numeric = {
             "ac-inductive-reactance-numeric",
             "ac-capacitive-reactance-numeric",
             "ac-series-rlc-reactance-difference-numeric",
+            "ac-series-rlc-impedance-numeric",
         }
         for topic_key, _, _, _, problems in self.generated_batches():
             if topic_key not in new_numeric:
@@ -85,13 +87,15 @@ class PhysicsAcBasicsTests(unittest.TestCase):
                         expected = k["numerator_one"] / k["omega_c_product"]
                     else:
                         expected = k["numerator_one"] / k["capacitive_reactance"]
-                else:
+                elif topic_key == "ac-series-rlc-reactance-difference-numeric":
                     if solve_for == "net_reactance":
                         expected = k["inductive_reactance"] - k["capacitive_reactance"]
                     elif solve_for == "inductive_reactance":
                         expected = k["net_reactance"] + k["capacitive_reactance"]
                     else:
                         expected = k["inductive_reactance"] - k["net_reactance"]
+                else:
+                    expected = round((k["resistance"] ** 2 + (k["inductive_reactance"] - k["capacitive_reactance"]) ** 2) ** 0.5, 2)
                 self.assertAlmostEqual(problem["answer"], expected)
                 self.assertAlmostEqual(problem["answer_spec"]["value"], expected)
 
@@ -118,6 +122,10 @@ class PhysicsAcBasicsTests(unittest.TestCase):
             elif topic_key == "ac-series-rlc-reactance-difference-numeric":
                 for problem in problems:
                     self.assertTrue(all(value >= 0 for name, value in problem["known"].items() if name != "net_reactance"))
+            elif topic_key == "ac-series-rlc-impedance-numeric":
+                for problem in problems:
+                    self.assertGreaterEqual(problem["answer"], problem["known"]["resistance"])
+                    self.assertTrue(all(value >= 0 for value in problem["known"].values()))
         topic = PHYSICS_AC_BASICS_TOPICS["ac-inductive-reactance-numeric"]
         mode = topic["modes"]["basic-reactance"]
         problem = generate_formula_drill(topic["spec"], topic["seeds"][0], 1, solve_for=mode["solve_for"])[0]
@@ -137,7 +145,7 @@ class PhysicsAcBasicsTests(unittest.TestCase):
 
     def test_hashes_disjoint_from_existing_catalog(self):
         hashes = [normalized_hash(problems) for *_, problems in self.generated_batches()]
-        self.assertEqual(len(set(hashes)), 240)
+        self.assertEqual(len(set(hashes)), 270)
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
         current_ids = {f"science-physics-motion-{topic_key}-{mode_key}-{variant:02d}" for topic_key, topic in PHYSICS_AC_BASICS_TOPICS.items() for mode_key in topic["modes"] for variant, _ in enumerate(topic["seeds"], start=1)}
         prior_hashes = {row["content_hash"] for row in catalog if row.get("id") not in current_ids}
