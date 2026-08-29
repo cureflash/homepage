@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: 2,600
-- Verified: 2,518
+- Checked: 2,625
+- Verified: 2,543
 - Needs revision: 82
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -14,13 +14,12 @@
 
 Reviewed the oldest 25 unchecked questions in strict order.
 
-- `p5.conn.logical_conjunction` 0076-0100: 25 checked / 19 verified / 6 needs_revision / 0 rejected.
-- Needs revision: `p5_conn_logical_conjunction_0086`, `0087`, `0090`, `0091`, `0098`, `0099`.
+- `p5.pron.subject_vs_object` 0001-0025: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
 
-The six quarantined items each allow another displayed conjunction to produce a natural defensible reading, so they were not verified. The other 19 have one defensible answer, natural TOEIC-style English, intended-skill alignment, and consistent explanations. No source item was silently rewritten.
+All 25 have one defensible pronoun-case answer, natural TOEIC-style English, intended-skill alignment, and consistent explanations. No source item was silently rewritten.
 
 The persisted candidate format co-locates stems, choices, proposed answers and explanations. Connector-only access therefore cannot technically guarantee a hidden-key first pass. Full-bank semantic near-duplicate clearance also remains outstanding.
 
 ## Next QA
 
-Continue at `p5_pron_subject_vs_object_0001`.
+Continue at `p5_pron_subject_vs_object_0026`.
