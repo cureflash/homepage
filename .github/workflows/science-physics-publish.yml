@@ -68,22 +68,22 @@ jobs:
           catalog = json.loads((root / 'worksheets/catalog.json').read_text(encoding='utf-8'))
           validate_catalog(catalog, root)
           rows = [x for x in catalog if x.get('id', '').startswith('science-physics-motion-')]
-          assert len(rows) == 2880, len(rows)
+          assert len(rows) == 3000, len(rows)
           assert all(x['school_level'] == 'high-school' for x in rows)
           assert all(x.get('formal_course') == '物理' for x in rows)
           assert all(x.get('grade') is None for x in rows)
           assert all(x['subject'] == '理科' and x['science_field'] == 'physics' for x in rows)
           assert all(x['worksheet_series'] == 'focused' for x in rows)
-          assert Counter(x['answer_type'] for x in rows) == Counter({'numeric': 2000, 'accepted-set': 880})
+          assert Counter(x['answer_type'] for x in rows) == Counter({'numeric': 2080, 'accepted-set': 920})
           assert all(x['problem_count'] == 20 for x in rows)
           modes = Counter(x['worksheet_mode'] for x in rows)
           assert modes == Counter({
-              'calculation-reverse': 1280,
-              'calculation-basic': 720,
-              'retrieval-forward': 220,
-              'retrieval-reverse': 220,
-              'retrieval-fill': 220,
-              'retrieval-tf': 220,
+              'calculation-reverse': 1330,
+              'calculation-basic': 750,
+              'retrieval-forward': 230,
+              'retrieval-reverse': 230,
+              'retrieval-fill': 230,
+              'retrieval-tf': 230,
           }), modes
           skills = Counter(x['skill'] for x in rows)
           assert skills['induction-faraday-average-emf-numeric'] == 40
@@ -96,17 +96,21 @@ jobs:
           assert skills['ac-resistor-ohm-rms-numeric'] == 30
           assert skills['ac-resistor-average-power-numeric'] == 30
           assert skills['ac-core-concepts'] == 40
+          assert skills['ac-inductive-reactance-numeric'] == 30
+          assert skills['ac-capacitive-reactance-numeric'] == 20
+          assert skills['ac-series-rlc-reactance-difference-numeric'] == 30
+          assert skills['ac-reactance-rlc-concepts'] == 40
           units = Counter(x['unit'] for x in rows)
           assert units['電気と磁気：電磁誘導'] == 240
-          assert units['電気と磁気：交流の基本'] == 120
-          assert len({x['content_hash'] for x in rows}) == 2880
+          assert units['電気と磁気：交流の基本'] == 240
+          assert len({x['content_hash'] for x in rows}) == 3000
           for entry in rows:
               path = root / entry['url']
               data = path.read_bytes()
               assert data.startswith(b'%PDF')
               assert path.stat().st_size > 1000
               assert b'/Count 2' in data, entry['id']
-          print('Formal Physics 2880-PDF catalog validation: OK')
+          print('Formal Physics 3000-PDF catalog validation: OK')
           PY
 
       - name: Commit generated PDFs and catalog when changed
@@ -118,7 +122,7 @@ jobs:
             echo 'No generated changes; formal Physics worksheets are already current.'
             exit 0
           fi
-          git commit -m 'Publish 120 formal Physics AC basics worksheets'
+          git commit -m 'Publish 120 formal Physics AC reactance worksheets'
           git fetch origin main
           test "$(git rev-parse HEAD^)" = "$(git rev-parse origin/main)"
           git push origin HEAD:main
