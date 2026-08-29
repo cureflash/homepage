@@ -12,18 +12,18 @@ Power TOEIC (`subjects/english/power-toeic/`) を共通バックエンド／Dril
 
 ## Exact continuation point
 
-- current skill: `kobun.aux.zuru.connection`
-- completed: 75/100
-- next ID: `kobun_aux_zuru_connection_0076`
-- next safe checkpoint: 0076〜0100（25問）
+- current skill: `kobun.aux.ki_keri.meaning`
+- completed: 0/200
+- next ID: `kobun_aux_ki_keri_meaning_0001`
+- next safe checkpoint: 0001〜0025（25問）
 
 ## Totals
 
-1075 generated / 1075 checked / 1075 verified / 0 needs_revision / 0 rejected / pending 0.
+1100 generated / 1100 checked / 1100 verified / 0 needs_revision / 0 rejected / pending 0.
 
 ## Latest QA
 
-`kobun.aux.zuru.connection` 0051〜0075をstem＋choicesのみから独立再解答し25/25 verified。正答位置A/B/C/D = 7/6/6/6、stem完全重複0、batch内最大類似度0.917（0.94以上0件）。打消の助動詞「ず」の未然形接続、本活用・補助活用、各活用種類の動詞への接続と後続語からの活用形判定を確認した。
+`kobun.aux.zuru.connection` 0076〜0100をstem＋choicesのみから独立再解答し25/25 verified。これで同skillは100/100完了。正答位置A/B/C/D = 4/7/7/7、stem完全重複0、batch内最大類似度0.842（0.94以上0件）。打消の助動詞「ず」の未然形接続、本活用・補助活用、各活用種類の動詞への接続と後続語からの活用形判定を確認した。
 
 ## Reconcile rule
 
