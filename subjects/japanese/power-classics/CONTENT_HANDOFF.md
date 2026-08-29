@@ -13,17 +13,17 @@ Power TOEIC (`subjects/english/power-toeic/`) を共通バックエンド／Dril
 ## Exact continuation point
 
 - current skill: `kobun.aux.tsu_nu.meaning`
-- completed: 75/300
-- next ID: `kobun_aux_tsu_nu_meaning_0076`
-- next safe checkpoint: 0076〜0100（25問）
+- completed: 100/300
+- next ID: `kobun_aux_tsu_nu_meaning_0101`
+- next safe checkpoint: 0101〜0125（25問）
 
 ## Totals
 
-1375 generated / 1375 checked / 1375 verified / 0 needs_revision / 0 rejected / pending 0.
+1400 generated / 1400 checked / 1400 verified / 0 needs_revision / 0 rejected / pending 0.
 
 ## Latest QA
 
-`kobun.aux.tsu_nu.meaning` 0051〜0075を生成し、proposed_answer / explanationを参照せずstem＋choicesのみから独立再解答して25/25 verified。正答位置A/B/C/D = 7/6/6/6、選択肢内重複0、stem完全重複0、batch内最大類似度0.9167、0.94以上0件。完了は動作・変化の完結、強意は主に「てむ・なむ・つべし・ぬべし」の後続形で判定し、「ぬ」の完了例は文脈語で打消との曖昧さを避けた。
+`kobun.aux.tsu_nu.meaning` 0076〜0100を生成し、proposed_answer / explanationを参照せずstem＋choicesのみから独立再解答して25/25 verified。正答位置A/B/C/D = 7/6/6/6、選択肢内重複0、stem完全重複0、batch内最大類似度0.8966、直前batchとの最大stem類似度0.9041、0.94以上0件。完了は動作・変化の成立・完結、強意は主に「てむ・なむ・つべし・ぬべし」で判定し、「ぬ」の完了例は文脈語で打消との曖昧さを避けた。
 
 ## Reconcile rule
 
