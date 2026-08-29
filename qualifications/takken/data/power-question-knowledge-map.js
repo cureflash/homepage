@@ -27,7 +27,9 @@
     { questionId: "takken-q-21-001", conceptId: "takken-concept-article35-procedure", knowledgeRefs: ["takken-k-article35-procedure-before-contract", "takken-k-article35-procedure-takkenshi-explains", "takken-k-article35-procedure-document-delivery"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-21-002", conceptId: "takken-concept-article35-procedure", knowledgeRefs: ["takken-k-article35-procedure-card-presentation"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-22-001", conceptId: "takken-concept-article35-items", knowledgeRefs: ["takken-k-article35-items-registered-rights"], sourceQuestionValidationStatus: "verified" },
-    { questionId: "takken-q-22-002", conceptId: "takken-concept-article35-items", knowledgeRefs: ["takken-k-article35-items-legal-restrictions"], sourceQuestionValidationStatus: "verified" }
+    { questionId: "takken-q-22-002", conceptId: "takken-concept-article35-items", knowledgeRefs: ["takken-k-article35-items-legal-restrictions"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-23-001", conceptId: "takken-concept-article37-document", knowledgeRefs: ["takken-k-article37-document-after-contract"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-23-002", conceptId: "takken-concept-article37-document", knowledgeRefs: ["takken-k-article37-document-takkenshi-name"], sourceQuestionValidationStatus: "verified" }
   ];
 
   const knownKnowledgeIds = new Set([
@@ -51,10 +53,11 @@
     "takken-k-contract-start-permit-before-contract",
     "takken-k-false-advertising-property-scope",
     "takken-k-article35-procedure-before-contract", "takken-k-article35-procedure-takkenshi-explains", "takken-k-article35-procedure-document-delivery", "takken-k-article35-procedure-card-presentation",
-    "takken-k-article35-items-registered-rights", "takken-k-article35-items-legal-restrictions"
+    "takken-k-article35-items-registered-rights", "takken-k-article35-items-legal-restrictions",
+    "takken-k-article37-document-after-contract", "takken-k-article37-document-takkenshi-name"
   ]);
   const allowedConceptIds = new Set([
-    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items"
+    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document"
   ]);
   const questionIds = new Set();
 
@@ -68,7 +71,7 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 26) throw new Error(`Expected 26 mapped questions through Article 35 items, got ${mappings.length}`);
+  if (mappings.length !== 28) throw new Error(`Expected 28 mapped questions through Article 37 document, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
   if (!questionIds.has("takken-q-15-001")) throw new Error("Brokerage contract document source question mapping is missing");
@@ -80,6 +83,7 @@
   if (!questionIds.has("takken-q-20-001")) throw new Error("False advertising source question mapping is missing");
   if (!questionIds.has("takken-q-21-001") || !questionIds.has("takken-q-21-002")) throw new Error("Article 35 procedure source question mappings are missing");
   if (!questionIds.has("takken-q-22-001") || !questionIds.has("takken-q-22-002")) throw new Error("Article 35 items source question mappings are missing");
+  if (!questionIds.has("takken-q-23-001") || !questionIds.has("takken-q-23-002")) throw new Error("Article 37 document source question mappings are missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
