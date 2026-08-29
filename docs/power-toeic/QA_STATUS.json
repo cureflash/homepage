@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 2425,
-  "verified_question_count": 2349,
+  "checked_question_count": 2525,
+  "verified_question_count": 2449,
   "needs_revision_count": 76,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-29-scheduled-056-time-prepositions-part1",
-  "last_completed_micro_skill": "p5.conn.time_prepositions",
+  "last_completed_batch": "2026-08-29-scheduled-058-logical-conjunction-part1",
+  "last_completed_micro_skill": "p5.conn.logical_conjunction",
   "last_batch_counts": {
-    "checked": 25,
-    "verified": 25,
+    "checked": 100,
+    "verified": 100,
     "needs_revision": 0,
     "rejected": 0
   },
-  "next_batch": "2026-08-29-scheduled-056-time-prepositions-part2",
-  "next_micro_skill": "p5.conn.time_prepositions",
-  "next_question_id": "p5_conn_time_prepositions_0026",
+  "next_batch": "2026-08-29-scheduled-058-logical-conjunction-part2",
+  "next_micro_skill": "p5.conn.logical_conjunction",
+  "next_question_id": "p5_conn_logical_conjunction_0026",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-29T16:14:39+09:00"
+  "updated_at": "2026-08-29T17:17:00+09:00"
 }
