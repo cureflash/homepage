@@ -3,46 +3,46 @@
 更新日: 2026-08-30
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。制作順01→10を先頭から再確認し、active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は15/38。01〜15がPASS。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。制作順01→10を先頭から再確認し、active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は16/38。01〜16がPASS。
 
 ## 今回完了
-`15 400系・E3系・E6系・E8系 新在直通` をEXAM_ALIGNMENTから本文・練習・PowerPoint・Visual QA・独立過去問再解答まで進め、PASSした。
+`16 N700系 車両システム制御` を制作前EXAM_ALIGNMENTから本文・練習・PowerPoint・Visual QA・独立過去問再解答まで進め、PASSした。
 
 ## 公式過去問
-R5上機械問9、R4下機械問8、R4上機械問8、R3機械問9、R2機械問9。正本は電気技術者試験センター公式問題・解答。参照教材はe-sysnet、電験三種まとめました、電験王。参照日2026-08-30。
+R6上機械問13、R4上機械問15、R3機械問13、H30機械問13、H28機械問13。正本は電気技術者試験センター公式問題・解答。参照教材はe-sysnet、電験王、電験三種まとめました。参照日2026-08-30。
 
 ## 教材範囲
-巻数比・電流比・容量、定格、鉄損/銅損、負荷率、最大効率、短絡試験、簡易等価回路、電圧変動率、多巻線負荷のP-Q合成まで収録。20/25 kVは新在直通の具体例として使い、一般の変圧器問題へ一般化した。
+目標値・制御量・操作量・偏差・センサ、シーケンス/フィードバック、負帰還、`CG/(1+CGH)`、一巡`CGH`、途中信号によるブロック線図整理、一次遅れ、折点角周波数、Bode線図、PID、定常偏差まで収録。
 
 ## 新幹線資料
-JR東日本公式でE8系の営業開始日・運行区間・最高速度を確認。土木学会誌で山形新幹線在来線区間AC20 kV、新幹線AC25 kVを確認。実巻数、実タップ、実二次電圧、実切替シーケンスは確認できないため真値化していない。
+JR東海公式でN700系の新幹線初の車体傾斜と、N700Aの定速走行装置を確認。JR東海は定速走行を「速度信号に沿った走行制御」と説明。日本機械学会誌のJR東海著者記事で空気ばね式車体傾斜、デジタル列車制御、情報伝送を確認。定速走行の教材ブロック線図は標準フィードバックへの抽象化で、実車実装図ではない。
 
 ## 成果物
-- `topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage.md`
-- `topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage_explanation.pdf` — 2ページ
-- `topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage_practice.pdf` — 15問、3ページ
-- `topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage_images.pptx` — 5スライド
+- `topics/16_n700_system_control/16_n700_system_control.md`
+- `topics/16_n700_system_control/16_n700_system_control_explanation.pdf`
+- `topics/16_n700_system_control/16_n700_system_control_practice.pdf` — 15問
+- `topics/16_n700_system_control/16_n700_system_control_images.pptx` — 5スライド
 
 ## QA
-練習15/15独立再計算PASS。解説/練習PDFは180 dpi、PPTXはLibreOffice PDF変換後160 dpiでVisual QAし、文字化け・クリップ・重なりなし。
+練習15/15独立再計算PASS。解説/練習PDFを200 dpi、PPTXをPDF変換後200 dpiでVisual QAし、文字化け・クリップ・重なりなし。
 
 ## 公式過去問独立再解答
-- R5上問9: `x=0.5`, `eta=98.04%` → `(4)` PASS
-- R4下問8: `Pi=900 W` → `(4)` PASS
-- R4上問8: `Z=2.00`, `R=0.625`, `X=1.90 ohm` → `(3)` PASS
-- R3問9: `epsilon=1.2%` → `(3)` PASS
-- R2問9: Q相殺後6.4 MVA、`I=55.99 A` → `(2)` PASS
+- R6上問13 → `(2)` PASS
+- R4上問15 → `(a)2`, `(b)3` PASS
+- R3問13 → `(2)` PASS
+- H30問13 → `(4)` PASS
+- H28問13 → `(2)` PASS
 
-5/5公式解答一致。教材外知識の補完なし。
+選定5件すべて公式解答一致。教材外知識の補完なし。
 
 ## QA判定
-15: `PASS`。完成数15/38。
+16: `PASS`。完成数16/38。
 
 ## Web公開
-15をカタログへ登録。
+16をカタログへ登録。
 
 ## 判断不能事項
-E8系等の主変圧器実巻数、実タップ構成、実二次電圧、実切替シーケンスは一次資料で確認できていない。仮定値としても実車値扱いしない。試験対応には影響しない。
+N700/N700Aの実制御ゲイン、実伝達関数、速度検出器の詳細構成、車体傾斜の詳細制御則は公開一次資料で確認できないため真値化していない。試験用ブロック線図は標準制御系への抽象化と明記した。
 
 ## 次の正確な開始点
-MASTER制作順を01から確認し01〜15が新品質基準PASSであることを確認後、16 `N700系 車両システム制御` をactive topicとし、本文作成前に関連公式過去問5問以上を優先調査してEXAM_ALIGNMENTを作成する。
+MASTER制作順を01から確認し01〜16が新品質基準PASSであることを確認後、17 `E5系 320km/h運転` をactive topicとし、本文作成前に関連公式過去問5問以上を優先調査してEXAM_ALIGNMENTを作成する。
