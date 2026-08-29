@@ -13,17 +13,17 @@ Power TOEIC (`subjects/english/power-toeic/`) を共通バックエンド／Dril
 ## Exact continuation point
 
 - current skill: `kobun.aux.ki_keri.meaning`
-- completed: 25/200
-- next ID: `kobun_aux_ki_keri_meaning_0026`
-- next safe checkpoint: 0026〜0050（25問）
+- completed: 50/200
+- next ID: `kobun_aux_ki_keri_meaning_0051`
+- next safe checkpoint: 0051〜0075（25問）
 
 ## Totals
 
-1125 generated / 1125 checked / 1125 verified / 0 needs_revision / 0 rejected / pending 0.
+1150 generated / 1150 checked / 1150 verified / 0 needs_revision / 0 rejected / pending 0.
 
 ## Latest QA
 
-`kobun.aux.ki_keri.meaning` 0001〜0025をstem＋choicesのみから独立再解答し25/25 verified。正答位置A/B/C/D = 7/6/6/6、stem完全重複0、batch内最大類似度0.754（0.94以上0件）。助動詞「き」の過去、物語・伝承文脈での「けり」の過去、眼前の気づき・感動・和歌／会話文脈での「けり」の詠嘆を確認した。
+`kobun.aux.ki_keri.meaning` 0026〜0050をstem＋choicesのみから独立再解答し25/25 verified。正答位置A/B/C/D = 7/6/6/6、stem完全重複0、batch内最大類似度0.640（0.94以上0件）。「き」の過去、物語・伝承文脈での「けり」の過去、眼前の気づき・感動・和歌／会話文脈での「けり」の詠嘆を確認した。
 
 ## Reconcile rule
 
