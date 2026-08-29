@@ -13,17 +13,17 @@ Power TOEIC (`subjects/english/power-toeic/`) を共通バックエンド／Dril
 ## Exact continuation point
 
 - current skill: `kobun.aux.tsu_nu.meaning`
-- completed: 0/300
-- next ID: `kobun_aux_tsu_nu_meaning_0001`
-- next safe checkpoint: 0001〜0025（25問）
+- completed: 25/300
+- next ID: `kobun_aux_tsu_nu_meaning_0026`
+- next safe checkpoint: 0026〜0050（25問）
 
 ## Totals
 
-1300 generated / 1300 checked / 1300 verified / 0 needs_revision / 0 rejected / pending 0.
+1325 generated / 1325 checked / 1325 verified / 0 needs_revision / 0 rejected / pending 0.
 
 ## Latest QA
 
-`kobun.aux.ki_keri.meaning` 0151〜0200を2 checkpointで生成し、stem＋choicesのみから独立再解答して50/50 verified。0151〜0175の正答位置A/B/C/D = 7/7/5/6、最大類似度0.767。0176〜0200はA/B/C/D = 7/6/6/6、最大類似度0.929。両batchともstem完全重複0、0.94以上の高類似0件。これで同skillは200/200で第一目標完了。
+`kobun.aux.tsu_nu.meaning` 0001〜0025を生成し、stem＋choicesのみから独立再解答して25/25 verified。生成直後に正答位置D=0の偏りを検出したため選択肢順のみ是正し、最終分布A/B/C/D = 7/6/6/6。stem完全重複0、最大類似度0.909、0.94以上0件。完了と強意の識別は、文末の動作完結と「てむ・なむ・つべし・ぬべし」等の後続形を中心に一意性を確認。
 
 ## Reconcile rule
 
