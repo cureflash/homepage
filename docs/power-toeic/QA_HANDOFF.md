@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: 2,100
-- Verified: 2,025
+- Checked: 2,125
+- Verified: 2,050
 - Needs revision: 75
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -14,18 +14,18 @@
 
 Reviewed the oldest unchecked backlog in strict order.
 
-### `p5.conn.despite_vs_although` 0076-0100
+### `p5.conn.during_vs_while` 0001-0025
 
 - Checked: 25
 - Verified: 25
 - Needs revision: 0
 - Rejected: 0
 
-Each sentence and all four choices were reviewed individually. Every blank is followed by a complete finite clause, so the concessive conjunction `although` is uniquely valid; `despite` requires a noun phrase or gerund phrase. Structure, semantic relation, naturalness, target-skill fit, distractor plausibility, and explanation consistency were checked. No alternate defensible answer or explanation mismatch was found.
+Each sentence and all four choices were reviewed individually. Every blank is followed by a noun phrase, so the preposition `during` is uniquely valid in the targeted contrast; `while` requires a finite clause. Structure, naturalness, target-skill fit, distractor plausibility, and explanation consistency were checked. No alternate defensible answer or explanation mismatch was found.
 
 QA record:
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-049-despite-vs-although-part4.qa.json`
+`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-050-during-vs-while-part1.qa.json`
 
 ### QA-method limitation
 
@@ -37,6 +37,6 @@ Full-bank semantic near-duplicate clearance remains outstanding, so `verified` i
 
 Continue the oldest unchecked backlog at:
 
-`p5_conn_during_vs_while_0001`
+`p5_conn_during_vs_while_0026`
 
 Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
