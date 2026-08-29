@@ -1,13 +1,13 @@
 # Power古典 CONTENT STATUS
 
-Updated: 2026-08-29 22:02 JST
+Updated: 2026-08-29 23:01 JST
 Phase: A — taxonomy順に未充足micro-skillを生成・独立QA
 
 ## Cumulative
 
-- generated: 1375
-- checked: 1375
-- verified: 1375
+- generated: 1400
+- checked: 1400
+- verified: 1400
 - needs_revision: 0
 - rejected: 0
 - pending: 0
@@ -19,10 +19,10 @@ Phase: A — taxonomy順に未充足micro-skillを生成・独立QA
 - skill: `kobun.aux.tsu_nu.meaning`
 - label: 完了・強意の識別
 - targetQuestions: 300
-- generated/checked/verified: 75/75/75
-- remaining to first target: 225
-- next exact ID: `kobun_aux_tsu_nu_meaning_0076`
+- generated/checked/verified: 100/100/100
+- remaining to first target: 200
+- next exact ID: `kobun_aux_tsu_nu_meaning_0101`
 
 ## Latest checkpoint
 
-`batch-20260829-075.json`: `kobun.aux.tsu_nu.meaning` 0051〜0075、25 generated / 25 checked / 25 verified / 0 needs_revision / 0 rejected。proposed_answer / explanationを参照せずstem＋choicesのみから独立再解答し、25問すべて一意にproposed keyと一致。正答位置 A/B/C/D = 7/6/6/6。選択肢内重複0、stem完全重複0、batch内最大類似度0.9167、高類似閾値0.94以上0件。完了は動作・変化の完結、強意は主に「てむ・なむ・つべし・ぬべし」の後続形で判定し、「ぬ」の完了例は「すでに」等で文脈を明確化した。
+`batch-20260829-100.json`: `kobun.aux.tsu_nu.meaning` 0076〜0100、25 generated / 25 checked / 25 verified / 0 needs_revision / 0 rejected。proposed_answer / explanationを参照せずstem＋choicesのみから独立再解答し、25問すべて一意にproposed keyと一致。正答位置 A/B/C/D = 7/6/6/6。選択肢内重複0、stem完全重複0、batch内最大類似度0.8966、直前batchとの最大stem類似度0.9041、高類似閾値0.94以上0件。完了は動作・変化の成立・完結、強意は主に「てむ・なむ・つべし・ぬべし」で判定し、「ぬ」の完了例は「すでに」等の文脈で打消との曖昧さを避けた。
