@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T15:22:18.089Z",
+  "generatedAt": "2026-08-29T17:24:05.572Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2052,
-    "runtimeQuestionCount": 2052,
+    "approvedCandidateCount": 2175,
+    "runtimeQuestionCount": 2175,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 84
+    "qaRecordCount": 89
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -117,6 +117,12 @@
     {
       "id": "p5.pron.possessive_forms",
       "label": "所有格・所有代名詞",
+      "categoryId": "pronouns-relatives",
+      "categoryLabel": "代名詞・関係詞"
+    },
+    {
+      "id": "p5.pron.reflexive",
+      "label": "再帰代名詞",
       "categoryId": "pronouns-relatives",
       "categoryLabel": "代名詞・関係詞"
     },
@@ -26709,6 +26715,2097 @@
       ],
       "correctIndex": 0,
       "explanation": "The noun phrase 'baggage policy' follows the blank, so the possessive adjective 'its' is required for singular 'airline'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0076",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The accounting team submitted ____ quarterly report before the deadline.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'quarterly report' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0077",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our branch closes at six, while ____ remains open until eight.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'theirs' replaces 'their branch'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0078",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Ms. Rivera reminded the vendors to update ____ contact information.",
+      "choices": [
+        "them",
+        "theirs",
+        "their",
+        "they"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'contact information' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0079",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "My parking permit expires in October, but ____ is valid through December.",
+      "choices": [
+        "your",
+        "you",
+        "yourself",
+        "yours"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'yours' replaces 'your parking permit'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0080",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The hotel recently renovated ____ main conference hall.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'main conference hall' follows the blank, so the possessive adjective 'its' is required for singular 'hotel'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0081",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I have already submitted my travel request, and Keiko has submitted ____ too.",
+      "choices": [
+        "her",
+        "hers",
+        "she",
+        "herself"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'hers' replaces 'her travel request'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0082",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "All applicants must bring ____ identification documents to the interview.",
+      "choices": [
+        "them",
+        "theirs",
+        "their",
+        "they"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'identification documents' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0084",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each office must maintain ____ own emergency contact list.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'own emergency contact list' follows the blank, so singular 'each office' takes the possessive adjective 'its'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0085",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Your reservation includes breakfast, whereas ____ includes both breakfast and dinner.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'ours' replaces 'our reservation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0086",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The engineers presented ____ inspection findings to the plant manager.",
+      "choices": [
+        "they",
+        "theirs",
+        "their",
+        "them"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'inspection findings' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0087",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our warranty covers labor costs, but ____ covers parts only.",
+      "choices": [
+        "their",
+        "them",
+        "they",
+        "theirs"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'theirs' replaces 'their warranty'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0088",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The clinic updated ____ appointment policy after reviewing patient feedback.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'appointment policy' follows the blank, so the possessive adjective 'its' is required for singular 'clinic'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0089",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Daniel has printed his boarding pass, and I have printed ____ as well.",
+      "choices": [
+        "mine",
+        "me",
+        "my",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'mine' replaces 'my boarding pass'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0090",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please review ____ account settings before activating the new security feature.",
+      "choices": [
+        "you",
+        "yours",
+        "your",
+        "yourself"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'account settings' follows the blank, so the possessive adjective 'your' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0091",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The downtown showroom completed its renovation in May, while ____ was finished in June.",
+      "choices": [
+        "our",
+        "us",
+        "we",
+        "ours"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'ours' replaces 'our showroom'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0092",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Customers can track ____ orders through the company's mobile application.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun 'orders' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0093",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "My proposal includes a maintenance plan, while ____ focuses on installation support.",
+      "choices": [
+        "her",
+        "hers",
+        "she",
+        "herself"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'hers' replaces 'her proposal'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0094",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The publisher revised ____ digital subscription terms last month.",
+      "choices": [
+        "it",
+        "itself",
+        "its",
+        "their"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'digital subscription terms' follows the blank, so the possessive adjective 'its' is required for singular 'publisher'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0095",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Their conference package includes airport transportation, but ____ does not.",
+      "choices": [
+        "our",
+        "us",
+        "we",
+        "ours"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'ours' replaces 'our conference package'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0096",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Supervisors should review ____ teams' overtime requests before Friday.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'teams’ overtime requests' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0097",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Your estimate includes delivery fees, whereas ____ excludes them.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'ours' replaces 'our estimate'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0098",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The research assistants recorded ____ observations in the shared database.",
+      "choices": [
+        "them",
+        "theirs",
+        "their",
+        "they"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun 'observations' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0099",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We have inspected our rental vehicle, but the other team has not inspected ____ yet.",
+      "choices": [
+        "their",
+        "them",
+        "they",
+        "theirs"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'theirs' replaces 'their rental vehicle'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0100",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The manufacturer extended ____ standard warranty from one year to two years.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'standard warranty' follows the blank, so the possessive adjective 'its' is required for singular 'manufacturer'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0001",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The branch manager prepared the revised staffing plan ____ before presenting it to headquarters.",
+      "choices": [
+        "herself",
+        "her",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 0,
+      "explanation": "The subject and the emphatic pronoun refer to the same person; 'herself' emphasizes that the manager personally prepared the plan.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0002",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Employees can register ____ for the safety workshop through the intranet.",
+      "choices": [
+        "them",
+        "theirselves",
+        "themselves",
+        "their"
+      ],
+      "correctIndex": 2,
+      "explanation": "The employees are both the people acting and the people being registered, so the reflexive pronoun 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0003",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Mr. Chen introduced ____ to the visiting auditors before the meeting began.",
+      "choices": [
+        "him",
+        "his",
+        "he",
+        "himself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The subject 'Mr. Chen' and the object refer to the same person, so 'himself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0004",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I checked the final invoice ____ to make sure no charges were duplicated.",
+      "choices": [
+        "myself",
+        "me",
+        "mine",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "The reflexive/emphatic pronoun 'myself' emphasizes that the speaker personally checked the invoice.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0005",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The software automatically restarts ____ after the update is installed.",
+      "choices": [
+        "it",
+        "its",
+        "itself",
+        "itself's"
+      ],
+      "correctIndex": 2,
+      "explanation": "The software is both the subject and the thing being restarted, so the reflexive pronoun 'itself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0006",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please help ____ to coffee and snacks in the lounge before the seminar starts.",
+      "choices": [
+        "you",
+        "your",
+        "yours",
+        "yourself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The fixed expression 'help yourself to' requires the reflexive pronoun 'yourself' when addressing one person.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0007",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The technicians completed the calibration ____ rather than hiring an outside contractor.",
+      "choices": [
+        "themselves",
+        "them",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Themselves' emphasizes that the technicians personally completed the work.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0008",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Ms. Patel reminded ____ to attach the signed contract before sending the email.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correctIndex": 2,
+      "explanation": "Ms. Patel is both the person reminding and the person being reminded, so the reflexive pronoun 'herself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0009",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We designed the customer survey ____ and then asked the research firm to distribute it.",
+      "choices": [
+        "us",
+        "our",
+        "ours",
+        "ourselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Ourselves' emphasizes that 'we' personally designed the survey.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0010",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The new interns introduced ____ to everyone in the department on their first morning.",
+      "choices": [
+        "themselves",
+        "them",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "The interns are both the subject and the people being introduced, so 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0011",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The CEO ____ will announce the acquisition during tomorrow's press conference.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correctIndex": 2,
+      "explanation": "The emphatic reflexive pronoun 'herself' can follow 'the CEO' to stress that she personally will make the announcement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0012",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "After reviewing the instructions, you should be able to install the application by ____.",
+      "choices": [
+        "you",
+        "your",
+        "yours",
+        "yourself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The expression 'by yourself' means without assistance and requires the reflexive pronoun 'yourself'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0013",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The committee members divided the remaining tasks among ____ before leaving the meeting.",
+      "choices": [
+        "themselves",
+        "them",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "Because the committee members distribute tasks among the same group, the reflexive pronoun 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0014",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Mr. Lopez found ____ responsible for coordinating three client visits on the same day.",
+      "choices": [
+        "him",
+        "his",
+        "himself",
+        "he"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject and complement refer to the same person in 'found himself responsible', so 'himself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0015",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The printer shuts ____ off automatically after thirty minutes of inactivity.",
+      "choices": [
+        "it",
+        "its",
+        "itself's",
+        "itself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The phrasal construction refers back to the subject 'printer', so 'itself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0016",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I will speak with the supplier ____ if the delivery problem is not resolved today.",
+      "choices": [
+        "myself",
+        "me",
+        "mine",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Myself' is used emphatically to stress that the speaker personally will speak with the supplier.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0017",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The consultants gave ____ enough time to review the financial records before drafting the report.",
+      "choices": [
+        "them",
+        "their",
+        "themselves",
+        "theirs"
+      ],
+      "correctIndex": 2,
+      "explanation": "The consultants are both the giver and recipient of the allotted time, so 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0018",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Before operating the machine, familiarize ____ with the emergency-stop procedure.",
+      "choices": [
+        "you",
+        "your",
+        "yours",
+        "yourself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb pattern 'familiarize yourself with' requires the reflexive pronoun 'yourself'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0019",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The hotel owner renovated the lobby ____ instead of using a design agency.",
+      "choices": [
+        "herself",
+        "her",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Herself' emphasizes that the hotel owner personally performed the renovation work.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0020",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The two departments reorganized ____ after the merger was completed.",
+      "choices": [
+        "them",
+        "their",
+        "themselves",
+        "theirs"
+      ],
+      "correctIndex": 2,
+      "explanation": "The departments are the entities acting on themselves, so the reflexive pronoun 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0021",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The director asked whether the applicants had prepared the presentation slides ____.",
+      "choices": [
+        "them",
+        "their",
+        "theirs",
+        "themselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Themselves' emphasizes that the applicants personally prepared the slides rather than someone else doing so.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0022",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our team assembled the exhibition booth ____ to reduce setup costs.",
+      "choices": [
+        "ourselves",
+        "us",
+        "our",
+        "ours"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Ourselves' emphasizes that the team personally assembled the booth.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0023",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The applicant described ____ as an experienced project coordinator during the interview.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject 'applicant' and the object of 'described' refer to the same person, so 'herself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0024",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "You may find ____ working with colleagues from several different time zones.",
+      "choices": [
+        "you",
+        "your",
+        "yours",
+        "yourself"
+      ],
+      "correctIndex": 3,
+      "explanation": "In the pattern 'find yourself doing something', the subject and object are the same person, so 'yourself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0025",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The laboratory developed the testing procedure ____ rather than licensing one from another company.",
+      "choices": [
+        "itself",
+        "it",
+        "its",
+        "itself's"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Itself' emphasizes that the laboratory developed the procedure independently.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0026",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The regional director reviewed every complaint ____ before approving the revised response procedure.",
+      "choices": [
+        "her",
+        "herself",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 1,
+      "explanation": "The emphatic pronoun 'herself' stresses that the director personally reviewed every complaint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0027",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "New employees are expected to familiarize ____ with the expense policy during orientation.",
+      "choices": [
+        "them",
+        "their",
+        "theirs",
+        "themselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb pattern 'familiarize themselves with' requires the reflexive pronoun because the employees act on themselves.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0028",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The vendor introduced ____ as a specialist in warehouse automation.",
+      "choices": [
+        "himself",
+        "him",
+        "his",
+        "he"
+      ],
+      "correctIndex": 0,
+      "explanation": "The vendor is both the subject and the person being introduced, so the reflexive pronoun 'himself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0029",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We completed the inventory count ____ rather than bringing in temporary staff.",
+      "choices": [
+        "us",
+        "our",
+        "ourselves",
+        "ours"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Ourselves' emphasizes that the speakers personally completed the inventory count.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0030",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The automatic gate resets ____ after an authorized vehicle passes through.",
+      "choices": [
+        "it",
+        "itself",
+        "its",
+        "itself's"
+      ],
+      "correctIndex": 1,
+      "explanation": "The gate is both the subject and the thing being reset, so 'itself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0031",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Ms. Rivera found ____ leading two projects after the department was reorganized.",
+      "choices": [
+        "her",
+        "hers",
+        "she",
+        "herself"
+      ],
+      "correctIndex": 3,
+      "explanation": "In the pattern 'find oneself doing something', the subject and object refer to the same person, so 'herself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0032",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The finance team prepared the supporting schedules ____ before sending them to the auditors.",
+      "choices": [
+        "themselves",
+        "them",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Themselves' emphasizes that the finance team members personally prepared the schedules.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0033",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please make ____ comfortable in the waiting area while the interviewer finishes the previous meeting.",
+      "choices": [
+        "you",
+        "your",
+        "yourself",
+        "yours"
+      ],
+      "correctIndex": 2,
+      "explanation": "The fixed expression 'make yourself comfortable' requires the reflexive pronoun 'yourself'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0034",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The two negotiators kept the details of the preliminary agreement to ____ until both companies approved it.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'keep something to themselves' requires the reflexive pronoun because the negotiators retain the information within their own group.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0035",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I prepared the demonstration ____ so that I could answer technical questions about every step.",
+      "choices": [
+        "me",
+        "mine",
+        "I",
+        "myself"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Myself' emphasizes that the speaker personally prepared the demonstration.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0036",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The company ____ will cover the cost of replacing the defective units.",
+      "choices": [
+        "itself",
+        "it",
+        "its",
+        "itself's"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'itself' follows 'the company' to stress that the company, rather than another party, will cover the cost.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0037",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "After the workshop, participants evaluated ____ using the checklist provided by the instructor.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The participants are both the people evaluating and the people evaluated, so 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0038",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Mr. Okada taught ____ how to use the new reporting software by following the online tutorials.",
+      "choices": [
+        "him",
+        "his",
+        "himself",
+        "he"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject learned without another teacher, so the reflexive pronoun 'himself' is required after 'taught'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0039",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "You can update the contact information ____ through the customer portal.",
+      "choices": [
+        "you",
+        "your",
+        "yours",
+        "yourself"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Yourself' emphasizes that the customer can personally update the information without assistance.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0040",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The department head signed the revised policy ____ before asking supervisors to distribute it.",
+      "choices": [
+        "herself",
+        "her",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Herself' emphasizes that the department head personally signed the policy.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0041",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The interns organized ____ into small groups for the afternoon exercise.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The interns perform the action on their own group, so the reflexive pronoun 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0043",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The consultant ____ presented the findings instead of sending a junior analyst.",
+      "choices": [
+        "him",
+        "his",
+        "he",
+        "himself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The emphatic pronoun 'himself' stresses that the consultant personally presented the findings.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0044",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The device protects ____ from overheating by shutting down when the internal temperature rises too high.",
+      "choices": [
+        "itself",
+        "it",
+        "its",
+        "itself's"
+      ],
+      "correctIndex": 0,
+      "explanation": "The device is both the subject doing the protecting and the object being protected, so 'itself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0045",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Before contacting support, users should ask ____ whether the problem occurs on more than one browser.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The users direct the question to themselves, so the reflexive pronoun 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0046",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The owner designed the café's new menu ____ after studying customer feedback.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Herself' emphasizes that the owner personally designed the menu.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0047",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "After receiving the access code, I was able to complete the account setup by ____.",
+      "choices": [
+        "me",
+        "mine",
+        "I",
+        "myself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The expression 'by myself' means without assistance and requires the reflexive pronoun 'myself'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0048",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The board members discussed the confidential proposal among ____ before inviting the legal team into the room.",
+      "choices": [
+        "themselves",
+        "them",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "When the members of a group interact within that same group after 'among', the reflexive pronoun 'themselves' is required here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0049",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Ms. Grant reminded ____ to bring the signed purchase agreement to the closing meeting.",
+      "choices": [
+        "her",
+        "herself",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ms. Grant is both the person reminding and the person being reminded, so 'herself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0050",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The research group developed the forecasting model ____ instead of purchasing a commercial package.",
+      "choices": [
+        "them",
+        "their",
+        "themselves",
+        "theirs"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Themselves' emphasizes that the group members personally developed the model.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0051",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The compliance officer ____ explained the revised reporting rule to all department heads.",
+      "choices": [
+        "herself",
+        "her",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'herself' follows the subject to stress that the compliance officer personally explained the rule.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0052",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "After missing the filing deadline, the account manager blamed ____ for not checking the calendar.",
+      "choices": [
+        "her",
+        "herself",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 1,
+      "explanation": "The account manager is both the person assigning blame and the person receiving it, so the reflexive pronoun 'herself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0053",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The warehouse robots position ____ at the charging stations when their batteries run low.",
+      "choices": [
+        "them",
+        "their",
+        "themselves",
+        "theirs"
+      ],
+      "correctIndex": 2,
+      "explanation": "The robots perform the positioning action on themselves, so the reflexive pronoun 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0054",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Mr. Alvarez completed the customs declaration ____ instead of asking the shipping agent to do it.",
+      "choices": [
+        "him",
+        "his",
+        "he",
+        "himself"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Himself' emphasizes that Mr. Alvarez personally completed the declaration.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0055",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The training coordinator ____ will lead the orientation session for the new sales representatives.",
+      "choices": [
+        "herself",
+        "her",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'herself' stresses that the training coordinator personally will lead the session.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0056",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The delegates seated ____ near the front of the conference room before the presentation began.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The delegates are both the people seating and the people being seated, so 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0057",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We prepared ____ for the client meeting by reviewing the latest contract terms.",
+      "choices": [
+        "us",
+        "our",
+        "ourselves",
+        "ours"
+      ],
+      "correctIndex": 2,
+      "explanation": "The subject 'we' and the object of 'prepared' refer to the same group, so 'ourselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0058",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The self-service kiosk turns ____ back on after the nightly software update is completed.",
+      "choices": [
+        "it",
+        "its",
+        "itself's",
+        "itself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The kiosk acts on itself in the phrasal construction 'turn itself back on', so 'itself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0059",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The auditors ____ requested additional evidence for the travel-expense transactions.",
+      "choices": [
+        "themselves",
+        "them",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'themselves' stresses that the auditors personally requested the evidence.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0060",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Ms. Lee excused ____ from the budget meeting to handle an urgent customer complaint.",
+      "choices": [
+        "her",
+        "herself",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ms. Lee is both the person excusing and the person being excused, so 'herself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0061",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "You should allow ____ at least thirty minutes to complete the online compliance module.",
+      "choices": [
+        "you",
+        "your",
+        "yourself",
+        "yours"
+      ],
+      "correctIndex": 2,
+      "explanation": "The person addressed is both the one allowing time and the recipient of that time, so 'yourself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0062",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The engineering team diagnosed the intermittent fault ____ without assistance from the manufacturer.",
+      "choices": [
+        "them",
+        "their",
+        "theirs",
+        "themselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Themselves' emphasizes that the engineering team members personally diagnosed the fault without outside help.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0063",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I assigned ____ the task of confirming the supplier's revised delivery date.",
+      "choices": [
+        "myself",
+        "me",
+        "mine",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "The speaker assigns the task to the same person who is the subject, so the reflexive pronoun 'myself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0064",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The business partners kept the final price concession to ____ until the contract was signed.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The fixed pattern 'keep something to themselves' requires the reflexive pronoun for information retained within the same group.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0065",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The climate-control unit adjusts ____ according to the number of people in the meeting room.",
+      "choices": [
+        "it",
+        "its",
+        "itself",
+        "itself's"
+      ],
+      "correctIndex": 2,
+      "explanation": "The unit is both the thing doing the adjusting and the thing being adjusted, so 'itself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0066",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The new hires introduced ____ during the virtual orientation before joining their assigned teams.",
+      "choices": [
+        "them",
+        "their",
+        "theirs",
+        "themselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "The new hires are both the people introducing and the people being introduced, so 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0067",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The company founder ____ negotiated the licensing agreement with the overseas distributor.",
+      "choices": [
+        "herself",
+        "her",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'herself' stresses that the founder personally negotiated the agreement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0068",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our department prides ____ on responding to technical inquiries within one business day.",
+      "choices": [
+        "it",
+        "itself",
+        "its",
+        "itself's"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'pride itself on' requires the reflexive pronoun because the department takes pride in its own performance.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0069",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Mr. Singh found ____ managing the branch temporarily after the director took medical leave.",
+      "choices": [
+        "him",
+        "his",
+        "himself",
+        "he"
+      ],
+      "correctIndex": 2,
+      "explanation": "In the pattern 'find oneself doing something', the subject and object refer to the same person, so 'himself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0070",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please make ____ available for a brief call with the legal team tomorrow morning.",
+      "choices": [
+        "you",
+        "your",
+        "yours",
+        "yourself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The fixed pattern 'make yourself available' requires the reflexive pronoun when addressing one person.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0071",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The directors ____ approved the revised investment policy after reviewing the risk report.",
+      "choices": [
+        "themselves",
+        "them",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'themselves' stresses that the directors personally approved the policy.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0072",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Ms. Ito taught ____ basic spreadsheet macros by working through the internal training materials.",
+      "choices": [
+        "her",
+        "herself",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ms. Ito learned without another teacher, so the reflexive pronoun 'herself' is required after 'taught'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0073",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We found ____ waiting for clearance from the compliance office before the campaign could launch.",
+      "choices": [
+        "us",
+        "our",
+        "ourselves",
+        "ours"
+      ],
+      "correctIndex": 2,
+      "explanation": "In the pattern 'find ourselves doing something', the subject and object refer to the same group.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0074",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The document scanner cleans ____ automatically after every five hundred pages.",
+      "choices": [
+        "it",
+        "its",
+        "itself's",
+        "itself"
+      ],
+      "correctIndex": 3,
+      "explanation": "The scanner performs the cleaning action on itself, so the reflexive pronoun 'itself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0075",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I ____ verified the serial numbers before the equipment was released to the customer.",
+      "choices": [
+        "myself",
+        "me",
+        "mine",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'myself' stresses that the speaker personally verified the serial numbers.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0076",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The regional director signed the amended lease ____ after the legal department completed its review.",
+      "choices": [
+        "himself",
+        "him",
+        "his",
+        "he"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'himself' stresses that the regional director personally signed the lease.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0077",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Ms. Chen reminded ____ to attach the updated price list before sending the proposal.",
+      "choices": [
+        "her",
+        "herself",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ms. Chen is both the person giving the reminder and the person receiving it, so 'herself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0078",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The automatic gate resets ____ after remaining open for more than two minutes.",
+      "choices": [
+        "it",
+        "its",
+        "itself",
+        "itself's"
+      ],
+      "correctIndex": 2,
+      "explanation": "The gate performs the resetting action on itself, so 'itself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0079",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The consultants introduced ____ to the client before beginning the workshop.",
+      "choices": [
+        "them",
+        "their",
+        "theirs",
+        "themselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "The consultants are both the people introducing and the people being introduced, so 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0080",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I ____ reviewed every expense entry before submitting the reimbursement report.",
+      "choices": [
+        "myself",
+        "me",
+        "mine",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'myself' stresses that the speaker personally reviewed every entry.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0081",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The interns organized ____ into three teams for the inventory count.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The interns perform the organizing action on themselves, so 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0082",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "You can familiarize ____ with the new expense policy by reading the examples on the intranet.",
+      "choices": [
+        "you",
+        "your",
+        "yourself",
+        "yours"
+      ],
+      "correctIndex": 2,
+      "explanation": "The fixed pattern 'familiarize yourself with' requires the reflexive pronoun when the subject and object are the same person.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0083",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The laboratory technicians calibrated the backup sensor ____ rather than sending it to an outside vendor.",
+      "choices": [
+        "them",
+        "their",
+        "theirs",
+        "themselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Themselves' emphasizes that the technicians personally calibrated the sensor.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0084",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The chief financial officer ____ presented the revised forecast to the board.",
+      "choices": [
+        "herself",
+        "her",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'herself' stresses that the chief financial officer personally presented the forecast.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0085",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Mr. Patel prepared ____ for the negotiation by reviewing the supplier's previous contracts.",
+      "choices": [
+        "him",
+        "himself",
+        "his",
+        "he"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mr. Patel is both the person preparing and the person being prepared, so 'himself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0086",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The application automatically updates ____ whenever a new security patch is installed.",
+      "choices": [
+        "it",
+        "its",
+        "itself",
+        "itself's"
+      ],
+      "correctIndex": 2,
+      "explanation": "The application acts on itself, so the reflexive pronoun 'itself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0087",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We completed the annual equipment audit ____ without hiring temporary staff.",
+      "choices": [
+        "us",
+        "our",
+        "ours",
+        "ourselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Ourselves' emphasizes that we completed the audit without outside assistance.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0088",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The branch manager ____ called the customer to apologize for the billing error.",
+      "choices": [
+        "himself",
+        "him",
+        "his",
+        "he"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'himself' stresses that the branch manager personally made the call.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0089",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The new employees helped ____ to refreshments during the orientation break.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The fixed expression 'help themselves to' requires the reflexive pronoun because the employees serve themselves.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0090",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "She found ____ leading the client presentation when the project manager was delayed.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correctIndex": 2,
+      "explanation": "In the pattern 'find oneself doing something', the subject and object refer to the same person, so 'herself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0091",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The two departments resolved the scheduling conflict ____ before it affected the launch date.",
+      "choices": [
+        "them",
+        "their",
+        "theirs",
+        "themselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Themselves' emphasizes that the departments resolved the conflict without outside intervention.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0092",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I promised ____ that I would finish the compliance course before Friday.",
+      "choices": [
+        "myself",
+        "me",
+        "mine",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "The speaker makes the promise to the same person who is the subject, so 'myself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0093",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The design team distinguished ____ from competitors by offering a longer warranty.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The pattern 'distinguish oneself from' requires the reflexive pronoun when the subject differentiates itself from others.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0094",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please seat ____ in the waiting area until a service representative is available.",
+      "choices": [
+        "you",
+        "your",
+        "yourself",
+        "yours"
+      ],
+      "correctIndex": 2,
+      "explanation": "The imperative addresses the same person who is to be seated, so 'yourself' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0095",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The software vendor handled the emergency migration ____ instead of subcontracting the work.",
+      "choices": [
+        "it",
+        "its",
+        "itself's",
+        "itself"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Itself' emphasizes that the software vendor handled the migration directly.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0096",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The owner ____ inspected the renovated storefront before approving the final payment.",
+      "choices": [
+        "herself",
+        "her",
+        "hers",
+        "she"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'herself' stresses that the owner personally inspected the storefront.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0097",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The trainees challenged ____ to finish the safety drill within the required time.",
+      "choices": [
+        "them",
+        "themselves",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "The trainees are both the people setting the challenge and the people receiving it, so 'themselves' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0098",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "He made ____ available to answer questions after the quarterly briefing.",
+      "choices": [
+        "him",
+        "his",
+        "himself",
+        "he"
+      ],
+      "correctIndex": 2,
+      "explanation": "The fixed pattern 'make oneself available' requires the reflexive pronoun, so 'himself' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0099",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The committee members kept the preliminary findings to ____ until the audit was complete.",
+      "choices": [
+        "them",
+        "their",
+        "theirs",
+        "themselves"
+      ],
+      "correctIndex": 3,
+      "explanation": "The fixed pattern 'keep something to themselves' requires the reflexive pronoun for information retained within the same group.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_reflexive_0100",
+      "version": 1,
+      "skillId": "p5.pron.reflexive",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We ____ contacted the carrier to confirm that the replacement parts had shipped.",
+      "choices": [
+        "ourselves",
+        "us",
+        "our",
+        "ours"
+      ],
+      "correctIndex": 0,
+      "explanation": "The emphatic pronoun 'ourselves' stresses that we personally contacted the carrier.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
