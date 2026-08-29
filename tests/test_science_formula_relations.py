@@ -212,6 +212,35 @@ class ScienceFormulaRelationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "three unique inputs"):
             generate_formula_drill(wrong, 9922, 1, solve_for="t")
 
+    def test_sqrt_square_plus_difference_square_direct_rounding_and_inverse_rejection(self):
+        spec = {
+            "id": "test-sqrt-square-plus-difference-square",
+            "relation": "sqrt-square-plus-difference-square",
+            "result": "z",
+            "inputs": ["r", "xl", "xc"],
+            "variables": {
+                "z": {"label": "Z", "unit": "Ω"},
+                "r": {"label": "R", "unit": "Ω", "values": [30, 40]},
+                "xl": {"label": "XL", "unit": "Ω", "values": [20, 50]},
+                "xc": {"label": "XC", "unit": "Ω", "values": [10, 35]},
+            },
+            "tolerance": 1e-9,
+        }
+        for problem in generate_formula_drill(spec, 9930, 20, solve_for="z"):
+            known = problem["known"]
+            expected = round((known["r"] ** 2 + (known["xl"] - known["xc"]) ** 2) ** 0.5, 2)
+            self.assertEqual(problem["answer"], expected)
+            self.assertTrue(validate_science_problem(problem))
+        for target in ("r", "xl", "xc"):
+            with self.assertRaisesRegex(ValueError, "inverse generation"):
+                generate_formula_drill(spec, 9931, 1, solve_for=target)
+        wrong = {**spec, "inputs": ["r", "xl"]}
+        with self.assertRaisesRegex(ValueError, "three unique inputs"):
+            generate_formula_drill(wrong, 9932, 1, solve_for="z")
+        negative = {**spec, "variables": {**spec["variables"], "r": {"label": "R", "values": [-1]}}}
+        with self.assertRaisesRegex(ValueError, "nonnegative magnitude inputs"):
+            generate_formula_drill(negative, 9933, 1, solve_for="z")
+
 
 if __name__ == "__main__":
     unittest.main()

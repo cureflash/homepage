@@ -14,6 +14,7 @@ _INDUCTIVE_REACTANCE_SEEDS = tuple(range(8131, 8141))
 _CAPACITIVE_REACTANCE_SEEDS = tuple(range(8141, 8151))
 _RLC_REACTANCE_SEEDS = tuple(range(8151, 8161))
 _REACTANCE_CONCEPT_SEEDS = tuple(range(8161, 8171))
+_RLC_IMPEDANCE_SEEDS = tuple(range(8171, 8201))
 
 _SQRT2_APPROX = [1.414]
 _TWO_PI_APPROX = [6.28]
@@ -163,4 +164,13 @@ PHYSICS_AC_BASICS_TOPICS = {
             "tf": {"label": "正誤", "worksheet_mode": "retrieval-tf", "description": "リアクタンス・位相・共振の基本事項を○×で確認します。", "spec": {"mode": "tf", "items": _REACTANCE_TF}},
         },
     },
+    "ac-series-rlc-impedance-numeric": _formula_topic(
+        "物理 交流：直列RLCのインピーダンス", "ac-series-rlc-impedance-numeric",
+        "直列RLC回路では Z=√(R²+(XL-XC)²)。R、XL、XC、Zの単位はΩ。答えは小数第2位まで求める。",
+        "impedance", ["resistance", "inductive_reactance", "capacitive_reactance"],
+        {"impedance": {"label": "インピーダンス Z", "unit": "Ω"}, "resistance": {"label": "抵抗 R", "unit": "Ω", "values": _RESISTANCE_OHM}, "inductive_reactance": {"label": "コイルのリアクタンス XL", "unit": "Ω", "values": _REACTANCE_OHM}, "capacitive_reactance": {"label": "コンデンサーのリアクタンス XC", "unit": "Ω", "values": _REACTANCE_OHM}},
+        _RLC_IMPEDANCE_SEEDS,
+        {"basic-impedance": {"solve_for": "impedance", "worksheet_mode": "calculation-basic", "description": "R、XL、XCから直列RLC回路のインピーダンスを小数第2位まで求めます。"}},
+        relation="sqrt-square-plus-difference-square",
+    ),
 }
