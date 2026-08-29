@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 2375,
-  "verified_question_count": 2299,
+  "checked_question_count": 2400,
+  "verified_question_count": 2324,
   "needs_revision_count": 76,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-29-scheduled-054-for-vs-since-part3",
+  "last_completed_batch": "2026-08-29-scheduled-055-for-vs-since-part4",
   "last_completed_micro_skill": "p5.conn.for_vs_since",
   "last_batch_counts": {
-    "checked": 100,
-    "verified": 99,
-    "needs_revision": 1,
+    "checked": 25,
+    "verified": 25,
+    "needs_revision": 0,
     "rejected": 0
   },
-  "next_batch": "2026-08-29-scheduled-055-for-vs-since-part4",
-  "next_micro_skill": "p5.conn.for_vs_since",
-  "next_question_id": "p5_conn_for_vs_since_0076",
+  "next_batch": "2026-08-29-scheduled-055-time-prepositions-part1",
+  "next_micro_skill": "p5.conn.time_prepositions",
+  "next_question_id": "p5_conn_time_prepositions_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-29T14:17:35+09:00"
+  "updated_at": "2026-08-29T15:14:35+09:00"
 }
