@@ -16,4 +16,4 @@
 
 ## 現在の先頭未充足skill
 
-`kobun.aux.tsu_nu.meaning` — 完了・強意の識別。targetQuestions: 300。2026-08-29 20:59 JST時点で50/300、次は `kobun_aux_tsu_nu_meaning_0051`。
+`kobun.aux.tsu_nu.meaning` — 完了・強意の識別。targetQuestions: 300。2026-08-29 23:01 JST時点で100/300、次は `kobun_aux_tsu_nu_meaning_0101`。
