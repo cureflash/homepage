@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T04:19:54.346Z",
+  "generatedAt": "2026-08-29T05:24:25.952Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1560,
-    "runtimeQuestionCount": 1560,
+    "approvedCandidateCount": 1659,
+    "runtimeQuestionCount": 1659,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 64
+    "qaRecordCount": 68
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -39,6 +39,12 @@
     {
       "id": "p5.conn.during_vs_while",
       "label": "during / while",
+      "categoryId": "connectors-prepositions",
+      "categoryLabel": "前置詞・接続詞"
+    },
+    {
+      "id": "p5.conn.for_vs_since",
+      "label": "for / since",
       "categoryId": "connectors-prepositions",
       "categoryLabel": "前置詞・接続詞"
     },
@@ -3100,6 +3106,431 @@
       ],
       "correctIndex": 0,
       "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0076",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The legal team will keep the draft confidential ____ the merger is publicly announced.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0077",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The laboratory must submit the calibration certificate ____ the inspection on Tuesday.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0078",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The loading dock will remain inaccessible ____ the damaged gate has been replaced.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0079",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The design team expects to finalize the packaging artwork ____ the end of next week.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0080",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Employees may use the temporary entrance ____ the main lobby reopens.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0081",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please send the revised insurance documents ____ 10:00 A.M. on Monday.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0082",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The backup generator will remain in service ____ the electrical repairs are completed.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0083",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The recruitment team aims to issue all interview invitations ____ Friday afternoon.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0084",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The customer portal will stay offline ____ the security patch has been fully tested.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0085",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "All department heads must approve their budget requests ____ the annual planning meeting.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0086",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The exhibition hall will remain closed ____ the fire-safety inspection is finished.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0087",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The vendor has agreed to deliver the replacement scanners ____ the first business day of September.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0088",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The help desk will operate from the conference room ____ the network upgrade is complete.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0089",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Applicants must upload a copy of their license ____ the application deadline.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0090",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The promotional banner will stay on the homepage ____ the campaign officially ends.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0091",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The accounting team plans to reconcile all outstanding invoices ____ month-end closing.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0092",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The temporary storage area will remain available ____ the new warehouse section opens.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0093",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please complete the online compliance module ____ your first day at the client site.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0094",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The old reception number will continue to work ____ callers are automatically transferred to the new system.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0095",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The quality manager expects to sign off on the revised procedure ____ Wednesday's production run.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0096",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The cafeteria patio will remain unavailable ____ the new flooring has dried completely.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0097",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "All speakers should submit their biographies ____ the program goes to print.",
+      "choices": [
+        "until",
+        "during",
+        "by",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0098",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The branch will keep the manual check-in desk open ____ every customer has been migrated to the new system.",
+      "choices": [
+        "by",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0099",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The facilities contractor must complete the ventilation repairs ____ the scheduled occupancy inspection.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"By\" marks a deadline by which an action or result must be completed; \"until\" describes an action or state continuing up to an endpoint.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_by_vs_until_0100",
+      "version": 1,
+      "skillId": "p5.conn.by_vs_until",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The discounted shipping rate will remain in effect ____ the revised contract takes effect.",
+      "choices": [
+        "by",
+        "until",
+        "during",
+        "since"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Until\" marks the endpoint of a continuing action or state; \"by\" instead sets a deadline for completion no later than a point.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -6500,6 +6931,1264 @@
       ],
       "correctIndex": 3,
       "explanation": "A complete clause follows the blank, so the subordinating conjunction 'while' is required to express two actions occurring at the same time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0001",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The regional office has used the same courier service ____ nearly six years.",
+      "choices": [
+        "for",
+        "since",
+        "during",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"For\" introduces a duration of time; \"since\" introduces the starting point of a period that continues to the present.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0002",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Ms. Ortega has supervised the customer-support team ____ January 2023.",
+      "choices": [
+        "for",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting point, January 2023; \"for\" would require a duration such as \"for three years.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0003",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The warehouse has remained at full capacity ____ the past three weeks.",
+      "choices": [
+        "since",
+        "until",
+        "during",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"For\" introduces the duration \"the past three weeks\"; \"since\" would require a starting point.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0004",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The accounting department has followed the revised approval procedure ____ last October.",
+      "choices": [
+        "during",
+        "since",
+        "for",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Since\" introduces the starting point \"last October\" for a situation continuing to the present.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0005",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Our technicians have been testing the replacement server ____ more than forty-eight hours.",
+      "choices": [
+        "until",
+        "during",
+        "for",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"more than forty-eight hours.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0006",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The downtown branch has offered Saturday appointments ____ the beginning of May.",
+      "choices": [
+        "since",
+        "for",
+        "until",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Since\" introduces the starting point \"the beginning of May.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0007",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The legal team has been reviewing the licensing agreement ____ two consecutive days.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"two consecutive days.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0008",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The factory has operated under the new safety protocol ____ March 1.",
+      "choices": [
+        "during",
+        "until",
+        "since",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the specific starting point \"March 1.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0009",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The recruitment portal has been unavailable ____ approximately ninety minutes.",
+      "choices": [
+        "for",
+        "since",
+        "until",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"For\" introduces the duration \"approximately ninety minutes.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0010",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company has leased additional storage space ____ the merger in 2024.",
+      "choices": [
+        "until",
+        "during",
+        "for",
+        "since"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Since\" introduces the starting event \"the merger in 2024.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0011",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The research group has collected temperature readings ____ twelve months.",
+      "choices": [
+        "during",
+        "for",
+        "since",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"twelve months.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0012",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The cafeteria has accepted mobile payments ____ the system upgrade last summer.",
+      "choices": [
+        "for",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"the system upgrade last summer.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0013",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Mr. Bell has served as the plant's maintenance supervisor ____ over a decade.",
+      "choices": [
+        "since",
+        "until",
+        "during",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"For\" introduces the duration \"over a decade.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0014",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The hotel has used energy-efficient lighting ____ 2021.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Since\" introduces the starting point \"2021.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0015",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The design team has worked on the new packaging concept ____ several months.",
+      "choices": [
+        "until",
+        "for",
+        "since",
+        "during"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"several months.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0016",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The call center has recorded fewer complaints ____ the policy change in February.",
+      "choices": [
+        "during",
+        "until",
+        "since",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"the policy change in February.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0017",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The construction crew has been waiting for the replacement parts ____ almost a week.",
+      "choices": [
+        "for",
+        "since",
+        "during",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"For\" introduces the duration \"almost a week.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0018",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The laboratory has kept digital calibration records ____ July 2022.",
+      "choices": [
+        "for",
+        "during",
+        "until",
+        "since"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Since\" introduces the starting point \"July 2022.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0019",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The sales division has exceeded its monthly target ____ four months in a row.",
+      "choices": [
+        "during",
+        "for",
+        "since",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"four months in a row.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0020",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The museum shop has stocked locally made souvenirs ____ its reopening last year.",
+      "choices": [
+        "until",
+        "during",
+        "since",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"its reopening last year.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0021",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The finance department has retained the supporting invoices ____ seven years.",
+      "choices": [
+        "since",
+        "until",
+        "for",
+        "during"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"seven years.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0022",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The airline has used the updated boarding procedure ____ last Monday.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Since\" introduces the starting point \"last Monday.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0023",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The marketing team has monitored the campaign's response rate ____ ten straight days.",
+      "choices": [
+        "during",
+        "until",
+        "for",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"ten straight days.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0024",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The clinic has scheduled evening appointments ____ the start of the winter season.",
+      "choices": [
+        "for",
+        "since",
+        "until",
+        "during"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Since\" introduces the starting point \"the start of the winter season.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0025",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The procurement team has negotiated with the same supplier ____ nearly eighteen months.",
+      "choices": [
+        "until",
+        "during",
+        "since",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"For\" introduces the duration \"nearly eighteen months.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0026",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The airport lounge has operated around the clock ____ three consecutive months.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"three consecutive months.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0027",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The purchasing team has required electronic approvals ____ the new policy took effect in April.",
+      "choices": [
+        "for",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"the new policy took effect in April.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0028",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Ms. Chen has worked with the same audit firm ____ more than eight years.",
+      "choices": [
+        "until",
+        "during",
+        "for",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"more than eight years.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0029",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The clinic has used online check-in ____ September 2024.",
+      "choices": [
+        "since",
+        "for",
+        "until",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Since\" introduces the starting point \"September 2024.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0030",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The engineering group has monitored the bridge sensors ____ forty-two days.",
+      "choices": [
+        "during",
+        "since",
+        "until",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"For\" introduces the duration \"forty-two days.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0031",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The hotel has offered contactless room keys ____ its renovation was completed last winter.",
+      "choices": [
+        "during",
+        "since",
+        "for",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Since\" introduces the starting event \"its renovation was completed last winter.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0032",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The compliance unit has retained the inspection logs ____ the past five years.",
+      "choices": [
+        "for",
+        "since",
+        "during",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"For\" introduces the duration \"the past five years.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0033",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The bakery has sourced its flour locally ____ the current owner took over the business.",
+      "choices": [
+        "for",
+        "until",
+        "since",
+        "during"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"the current owner took over the business.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0034",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The support desk has been handling the migration requests ____ nearly two weeks.",
+      "choices": [
+        "since",
+        "during",
+        "for",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"nearly two weeks.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0035",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The distributor has tracked shipments with GPS ____ early 2022.",
+      "choices": [
+        "during",
+        "until",
+        "for",
+        "since"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Since\" introduces the starting point \"early 2022.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0036",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The laboratory has been conducting stability tests ____ 120 hours.",
+      "choices": [
+        "for",
+        "since",
+        "until",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"For\" introduces the duration \"120 hours.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0037",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The restaurant has purchased produce from Green Valley Farm ____ the partnership began in June.",
+      "choices": [
+        "until",
+        "during",
+        "since",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"the partnership began in June.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0039",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The branch has kept a second service counter open ____ the holiday rush started.",
+      "choices": [
+        "during",
+        "since",
+        "for",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Since\" introduces the starting event \"the holiday rush started.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0040",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The software vendor has provided security updates ____ more than a decade.",
+      "choices": [
+        "until",
+        "during",
+        "since",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"For\" introduces the duration \"more than a decade.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0041",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The property manager has used the new maintenance portal ____ its launch on January 15.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Since\" introduces the starting event \"its launch on January 15.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0042",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The shipping company has leased the additional trucks ____ six months.",
+      "choices": [
+        "during",
+        "until",
+        "for",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"six months.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0043",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The university has offered the certificate program ____ the faculty approved it in 2023.",
+      "choices": [
+        "for",
+        "during",
+        "until",
+        "since"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Since\" introduces the starting event \"the faculty approved it in 2023.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0044",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The design agency has occupied the top floor ____ almost four years.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"almost four years.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0045",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The plant has recycled process water ____ the filtration system was installed.",
+      "choices": [
+        "until",
+        "since",
+        "during",
+        "for"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Since\" introduces the starting event \"the filtration system was installed.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0046",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The training center has kept the simulator in service ____ twenty-four consecutive days.",
+      "choices": [
+        "for",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"For\" introduces the duration \"twenty-four consecutive days.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0047",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The retailer has displayed digital price tags ____ the beginning of this fiscal year.",
+      "choices": [
+        "during",
+        "until",
+        "since",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting point \"the beginning of this fiscal year.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0048",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The insurer has processed claims through the new platform ____ nine weeks.",
+      "choices": [
+        "since",
+        "during",
+        "until",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"For\" introduces the duration \"nine weeks.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0049",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The warehouse has separated returned goods from new stock ____ the audit recommendation was issued.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Since\" introduces the starting event \"the audit recommendation was issued.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0050",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The consulting firm has advised the manufacturer ____ approximately eighteen months.",
+      "choices": [
+        "during",
+        "for",
+        "since",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"approximately eighteen months.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0051",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The legal department has archived vendor agreements ____ seven years.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"seven years.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0052",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The museum has offered audio guides ____ the new exhibition hall opened in May.",
+      "choices": [
+        "for",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"the new exhibition hall opened in May.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0053",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Mr. Alvarez has supervised the night shift ____ nearly eighteen months.",
+      "choices": [
+        "until",
+        "since",
+        "for",
+        "during"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"nearly eighteen months.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0054",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The accounting team has used the revised expense codes ____ January 1.",
+      "choices": [
+        "since",
+        "for",
+        "until",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Since\" introduces the starting point \"January 1.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0055",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The research center has stored the samples at minus 20 degrees ____ 96 hours.",
+      "choices": [
+        "during",
+        "since",
+        "until",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"For\" introduces the duration \"96 hours.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0056",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The airline has assigned larger aircraft to this route ____ passenger demand increased last summer.",
+      "choices": [
+        "during",
+        "since",
+        "for",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Since\" introduces the starting event \"passenger demand increased last summer.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0057",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The call center has recorded customer satisfaction scores ____ the past twelve months.",
+      "choices": [
+        "for",
+        "since",
+        "during",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"For\" introduces the duration \"the past twelve months.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0058",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The construction firm has required digital site reports ____ the safety audit identified reporting gaps.",
+      "choices": [
+        "for",
+        "until",
+        "since",
+        "during"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"the safety audit identified reporting gaps.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0059",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The pharmacy has kept the consultation room open ____ two additional hours each evening.",
+      "choices": [
+        "since",
+        "during",
+        "for",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"two additional hours each evening.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0060",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The publisher has distributed electronic review copies ____ November 2025.",
+      "choices": [
+        "during",
+        "until",
+        "for",
+        "since"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Since\" introduces the starting point \"November 2025.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0061",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The production line has operated without an unplanned shutdown ____ thirty-one consecutive days.",
+      "choices": [
+        "for",
+        "since",
+        "until",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"For\" introduces the duration \"thirty-one consecutive days.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0062",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The bank has verified high-value transfers by video call ____ the fraud-prevention procedure was revised.",
+      "choices": [
+        "until",
+        "during",
+        "since",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"the fraud-prevention procedure was revised.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0063",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The sales team has been testing the revised quotation form ____ just over a month.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"just over a month.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0064",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The convention center has prohibited single-use plastic cups ____ its sustainability policy took effect.",
+      "choices": [
+        "during",
+        "since",
+        "for",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Since\" introduces the starting event \"its sustainability policy took effect.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0065",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The cybersecurity team has monitored the suspicious domain ____ 72 hours.",
+      "choices": [
+        "until",
+        "during",
+        "since",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"For\" introduces the duration \"72 hours.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0066",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The grocery chain has displayed allergen information on shelf labels ____ March 2026.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"Since\" introduces the starting point \"March 2026.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0067",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The maintenance contractor has supported the elevators ____ more than five years.",
+      "choices": [
+        "during",
+        "until",
+        "for",
+        "since"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"more than five years.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0068",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The laboratory has required two-person approval for chemical disposal ____ the incident review was completed.",
+      "choices": [
+        "for",
+        "during",
+        "until",
+        "since"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Since\" introduces the starting event \"the incident review was completed.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0069",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The theater has been rehearsing the new production ____ six weeks.",
+      "choices": [
+        "since",
+        "during",
+        "for",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"For\" introduces the duration \"six weeks.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0070",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The logistics provider has routed refrigerated shipments through Osaka ____ the Kobe facility closed for renovation.",
+      "choices": [
+        "until",
+        "since",
+        "during",
+        "for"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"Since\" introduces the starting event \"the Kobe facility closed for renovation.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0071",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The consulting team has tracked implementation costs ____ the entire pilot period.",
+      "choices": [
+        "for",
+        "since",
+        "until",
+        "during"
+      ],
+      "correctIndex": 0,
+      "explanation": "\"For\" introduces the duration \"the entire pilot period.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0072",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The university library has stayed open until midnight ____ final-exam week began.",
+      "choices": [
+        "for",
+        "during",
+        "since",
+        "until"
+      ],
+      "correctIndex": 2,
+      "explanation": "\"Since\" introduces the starting event \"final-exam week began.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0073",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The hotel group has retained the same linen supplier ____ almost a decade.",
+      "choices": [
+        "until",
+        "for",
+        "since",
+        "during"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"almost a decade.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0074",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The manufacturer has printed QR codes on warranty cards ____ the product line was redesigned.",
+      "choices": [
+        "during",
+        "until",
+        "for",
+        "since"
+      ],
+      "correctIndex": 3,
+      "explanation": "\"Since\" introduces the starting event \"the product line was redesigned.\"",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_for_vs_since_0075",
+      "version": 1,
+      "skillId": "p5.conn.for_vs_since",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The finance division has been reconciling the disputed invoices ____ ten business days.",
+      "choices": [
+        "since",
+        "for",
+        "during",
+        "until"
+      ],
+      "correctIndex": 1,
+      "explanation": "\"For\" introduces the duration \"ten business days.\"",
       "validationStatus": "verified",
       "betaCandidate": true
     },
