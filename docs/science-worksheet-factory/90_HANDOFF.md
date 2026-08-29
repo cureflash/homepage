@@ -10,70 +10,70 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 2880 PDFs
-- total published physics: 4038 PDFs
+- formal `物理`: 3000 PDFs
+- total published physics: 4158 PDFs
 
-Formal `物理` has 2880 catalog rows / 2880 unique normalized content hashes. All formal-Physics rows use `formal_course=物理`, `grade=null`, 20 problems, `difficulty=basic`, and the shared focused-series publication path. Answer types are `numeric=2000` and `accepted-set=880`. Worksheet modes are `calculation-basic=720`, `calculation-reverse=1280`, and 220 each of retrieval forward/reverse/fill/true-false.
+Formal `物理` has 3000 catalog rows / 3000 unique normalized content hashes. All formal-Physics rows use `formal_course=物理`, `grade=null`, 20 problems, `difficulty=basic`, and the shared focused-series publication path. Answer types are `numeric=2080` and `accepted-set=920`. Worksheet modes are `calculation-basic=750`, `calculation-reverse=1330`, and 230 each of retrieval forward/reverse/fill/true-false.
 
-The previous handoff was stale at 2640 PDFs. Since then, the already-merged electromagnetic-induction follow-up was successfully published as commit `4c2483391d5d71d31a2896f072b23f34125d3092`, adding 120 PDFs: self induction 40, mutual induction 40, and induction follow-up concepts 40. This run reconciled that state before advancing.
+## Completed this run — AC reactance and series-RLC foundations, 120 PDFs
 
-## Completed this run — AC basics, 120 PDFs
+### 1. Coil reactance — 30 PDFs
 
-### 1. Sinusoidal RMS voltage — 20 PDFs
-
-- skill: `ac-sinusoidal-rms-voltage-numeric`
+- skill: `ac-inductive-reactance-numeric`
 - unit: `電気と磁気：交流の基本`
-- learner-visible relation: `Vmax=√2 Veff`
-- numerical problems explicitly supply `√2≈1.414`; no hidden constant is used
-- 10 direct maximum-voltage worksheets + 10 reverse RMS-voltage worksheets
+- learner-visible relation: `XL=ωL=2πfL`
+- numerical problems explicitly supply `2π≈6.28`
+- learner-visible quantities and units: `XL[Ω]`, `f[Hz]`, `L[H]`
+- 10 direct reactance + 10 reverse frequency + 10 reverse inductance worksheets
 - existing reversible `product` relation is reused
 
-### 2. Pure-resistor AC Ohm law — 30 PDFs
+### 2. Capacitor reactance — 20 PDFs
 
-- skill: `ac-resistor-ohm-rms-numeric`
-- learner-visible relation: `Veff=Ieff R`
-- learner-visible quantities and units: `Veff[V]`, `Ieff[A]`, `R[Ω]`
-- 10 voltage + 10 current reverse + 10 resistance reverse worksheets
-- existing reversible `product` relation is reused
+- skill: `ac-capacitive-reactance-numeric`
+- learner-visible relation: `XC=1/(ωC)`
+- problems explicitly supply the combined learner-visible quantity `ωC[1/Ω]`; no hidden frequency/capacitance calculation is performed
+- 10 direct reactance + 10 reverse `ωC` worksheets
+- existing reversible `product-over-divisor` relation is reused
 
-### 3. Pure-resistor average power — 30 PDFs
+### 3. Series-RLC reactance difference — 30 PDFs
 
-- skill: `ac-resistor-average-power-numeric`
-- learner-visible relation: `P=Veff Ieff` for a resistor-only AC circuit
-- learner-visible quantities and units: `P[W]`, `Veff[V]`, `Ieff[A]`
-- 10 power + 10 voltage reverse + 10 current reverse worksheets
-- existing reversible `product` relation is reused
+- skill: `ac-series-rlc-reactance-difference-numeric`
+- learner-visible relation: `X=XL-XC`
+- `X>0` is identified as inductive and `X<0` as capacitive
+- learner-visible quantities and units: `X[Ω]`, `XL[Ω]`, `XC[Ω]`
+- 10 direct net-reactance + 10 reverse XL + 10 reverse XC worksheets
+- existing reversible `difference` relation is reused
 
-### 4. AC fundamentals — 40 PDFs
+### 4. Reactance / series-RLC concepts — 40 PDFs
 
-- skill: `ac-core-concepts`
+- skill: `ac-reactance-rlc-concepts`
 - 10 each of forward, reverse, fill and true/false retrieval
-- covers AC, period, frequency/Hz, `f=1/T`, effective value, sinusoidal maximum/effective relation, and the same-phase property of a resistor-only AC circuit
+- covers `XL=ωL=2πfL`, `XC=1/(ωC)=1/(2πfC)`, frequency dependence, coil/capacitor phase relations, series-RLC impedance `Z=√(R²+(XL-XC)²)`, and resonance `XL=XC`, `Z=R`
 - finite accepted-answer sets are independently validated
 
 ## Curriculum basis
 
-The current MEXT High School Course of Study commentary for formal `物理` states that electromagnetic induction includes AC generation and that the basic properties of AC circuits are also addressed. It further explicitly notes capacitor/coil reactance and the impedance of a series circuit containing a resistor, capacitor and coil. This batch therefore starts with basic AC/effective-value/resistor relationships and does not invent material outside that sequence.
+The current MEXT High School Course of Study commentary for formal `物理` explicitly states that the basic properties of AC circuits are addressed, including capacitor and coil reactance and the impedance of a series circuit containing a resistor, capacitor and coil. This batch remains within that scope.
 
 ## Validation and publication
 
 - no shared formula helper changed
-- new definitions: `scripts/science_physics_ac_basics.py`
+- definitions: `scripts/science_physics_ac_basics.py`
 - independent validation: `tests/test_science_physics_ac_basics.py`
-- deterministic regeneration, independent recomputation from learner-visible values, positive-domain checks and corrupted-answer rejection are covered
+- deterministic regeneration, independent recomputation from learner-visible values, domain checks and corrupted-answer rejection are covered
 - retrieval answers use finite non-empty accepted sets
 - all 120 new normalized hashes are unique and disjoint from the previously published catalog
-- implementation PR #292 merged as `7bd18cb04a51f7b106fdd80d56243ea91e25ce64`
-- production Actions run `33228067387`: success
-- production passed latest-main confirmation, full formal-Physics regression, generation, post-generation validation, 2880-row catalog/PDF validation and non-force safe push
-- publication commit: `19c66228c8a70627426429071d8ac39bb708465b` (`Publish 120 formal Physics AC basics worksheets`)
-- final contract: 2880 formal-Physics rows / 2880 unique hashes; `numeric=2000`, `accepted-set=880`; calculation-basic 720, calculation-reverse 1280, retrieval forward/reverse/fill/true-false 220 each
+- implementation PR #297 merged as `da8efe62766f5ada090be2abe7f65062b30e2069`
+- production Actions run `33230501725`: success
+- production passed latest-main confirmation, full formal-Physics regression, generation, post-generation validation, 3000-row catalog/PDF validation and non-force safe push
+- publication commit: `232e5941702db187740726967cf6f8d624a257c0` (`Publish 120 formal Physics AC reactance worksheets`)
+- final contract: 3000 formal-Physics rows / 3000 unique hashes; `numeric=2080`, `accepted-set=920`; calculation-basic 750, calculation-reverse 1330, retrieval forward/reverse/fill/true-false 230 each
 - shared catalog serialization remains `worksheet-catalog-publish-v1`
 
 ## Exact next starting point
 
 Continue formal course `物理` within `電気と磁気 / 交流の基本`.
 
-Start by rechecking the current MEXT treatment of capacitor and coil reactance, then series RLC impedance. Implement only relations whose constants, frequency dependence, phase/geometry conditions and units can be made learner-visible and independently machine-verifiable. Do not advance to the `原子` production stage until the planned AC coverage is safely complete.
+The next numerical gap is direct series-RLC impedance `Z=√(R²+(XL-XC)²)`. The existing shared formula relations do not directly express this square-root combination, so add a new general relation only after testing its forward computation, valid domains, independently recomputed visible-value answers, reverse policy, and corrupted-answer rejection. Do not fake the formula by precomputing a hidden intermediate value, and do not advance to the `原子` production stage until the planned AC coverage is safely complete.
 
 Preserve deterministic seeds, independent validation, corrupted-answer rejection, normalized-hash uniqueness/existing-catalog collision checks, 20-problem two-page PDFs, `formal_course=物理`, `grade=null`, `worksheet-catalog-publish-v1`, and non-force latest-main push safety. Representative screenshot-based visual QA remains pending.
