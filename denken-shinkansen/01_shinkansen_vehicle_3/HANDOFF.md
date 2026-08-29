@@ -5,7 +5,7 @@
 ## 正本・active series
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。
 
-新品質基準の完成数は現在 **2/38**。PASSのままなのは01と07。02〜06は本文を全面再構築したため、旧PDF等との不整合を解消するまでREOPENED扱い。
+新品質基準の完成数は現在 **2/38**。PASSのままなのは01と07。02〜06は本文を全面再構築したため、旧成果物は削除し、新版PDF等の再生成待ちとする。
 
 ## 今回の方針変更
 ユーザー指示により、「公式・例題・注意点の列挙」ではなく、**現象の因果を追って理解し、その結果として電験問題を解ける記事**へ変更した。
@@ -42,6 +42,19 @@
 - 発電ブレーキを常用
 - 低速域では摩擦ブレーキへ切替
 - 22次車で発電ブレーキ下限速度を50 km/hから30 km/hへ変更
+
+## 02〜06 旧成果物の削除
+2026-08-29、ユーザー指示により新版Markdownと内容が一致しない旧成果物をGitHubから削除した。
+
+削除対象は各テーマの以下3種、合計15ファイル。
+
+- `02_plarail_mechanics_explanation.pdf` / `02_plarail_mechanics_practice.pdf` / `02_plarail_mechanics_images.pptx`
+- `03_0series_main_transformer_explanation.pdf` / `03_0series_main_transformer_practice.pdf` / `03_0series_main_transformer_images.pptx`
+- `04_0series_silicon_rectifier_explanation.pdf` / `04_0series_silicon_rectifier_practice.pdf` / `04_0series_silicon_rectifier_images.pptx`
+- `05_0series_speed_control_explanation.pdf` / `05_0series_speed_control_practice.pdf` / `05_0series_speed_control_images.pptx`
+- `06_0series_dynamic_brake_explanation.pdf` / `06_0series_dynamic_brake_practice.pdf` / `06_0series_dynamic_brake_images.pptx`
+
+各フォルダは現在、新版source Markdownのみを残している。旧成果物を再利用してはならない。
 
 ## 03 0系① 主変圧器 — Web記事再構築済み
 新版source:
@@ -109,15 +122,15 @@
 ## Web公開
 02〜06は `qualifications/denken-shinkansen/catalog.json` で `webArticle: true` / `publicationStatus: article_rebuild` とする。
 
-新版Web記事は公開するが、旧PDF・旧練習PDF・旧PowerPointは本文と不一致なのでビューアから一旦隠す。
+新版Web記事だけを公開し、PDF・練習PDF・PowerPointは新版を再生成してQAを通すまで存在させない。
 
 ## 次の正確な開始点
 スケジューラーは08へ進まない。
 
-1. 02 プラレール②を新版PDF・練習PDF・PPTXへ再生成し、独立過去問QAで再PASS
-2. 03 主変圧器を再生成・再QA
-3. 04 シリコン整流器を再生成・再QA
-4. 05 速度制御を再生成・再QA
-5. 06 発電ブレーキを再生成・再QA
+1. 02 プラレール②を新版PDF・練習PDF・PPTXへ新規再生成し、独立過去問QAで再PASS
+2. 03 主変圧器を新規再生成・再QA
+3. 04 シリコン整流器を新規再生成・再QA
+4. 05 速度制御を新規再生成・再QA
+5. 06 発電ブレーキを新規再生成・再QA
 
 各テーマは全成果物と独立過去問QAがPASSした段階で `article_rebuild` を解除し、PDF・練習・PPTXリンクをWebカタログへ戻す。
