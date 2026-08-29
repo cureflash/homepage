@@ -8,26 +8,19 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-article37-document` using source units `article37-basics` and `article35-vs-37` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-article35-vs-37` using source unit `article35-vs-37` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-article37-document.js` with twelve verified atomic knowledge items covering:
+Added `qualifications/takken/data/power-knowledge-items-article35-vs-37.js` with five verified atomic knowledge items covering:
 
-1. post-contract 37条書面 delivery,
-2. sale/exchange self-party recipient,
-3. sale/exchange agency recipients,
-4. sale/exchange brokerage recipients,
-5. lease agency/brokerage recipients,
-6. party name/address entries,
-7. property-identification entries,
-8. consideration/rent and payment entries,
-9. delivery-time entry,
-10. transfer-registration application timing for sale/exchange,
-11.宅地建物取引士の記名,
-12. consent-based electronic provision.
+1. 35条重要事項説明は契約成立までの間に行うこと,
+2. 37条書面は契約成立時に交付すること,
+3. 35条には宅地建物取引士による法定の重要事項説明義務がある一方、37条は契約成立後の書面交付制度であること,
+4. 35条説明時の宅建士・宅建士証の役割と、35条書面・37条書面双方の宅建士記名との比較,
+5. 契約判断前の重要事項を示す35条書面と、成立した契約内容を明確にする37条書面の内容・目的の違い.
 
-Primary authority is current 宅地建物取引業法 Article 37 at the 2026-04-01 cutoff. Canonical source facts `u23-f1`, `u23-f2`, and comparison fact `u24-f2` are preserved where applicable.
+Primary authority is current 宅地建物取引業法 Articles 35 and 37 at the 2026-04-01 cutoff. Canonical source facts `u24-f1` and `u24-f2` are preserved as the comparison anchors.
 
-Existing verified `takken-q-23-001` directly tests the post-contract timing and is mapped only to `takken-k-article37-document-after-contract`. Existing verified `takken-q-23-002` directly tests宅建士記名 and is mapped only to `takken-k-article37-document-takkenshi-name`. The other ten knowledge items remain explicit Phase 4.3 deficits. Existing `takken-q-24-002` is reserved for the following comparison concept and was not duplicated into this one-concept mapping.
+Existing verified `takken-q-24-001` directly tests the 35条 pre-contract timing item and is mapped only to `takken-k-article35-vs-37-article35-before-contract`. Existing verified `takken-q-24-002` directly tests the 37条 post-contract timing item and is mapped only to `takken-k-article35-vs-37-article37-after-contract`. The other three knowledge items remain explicit Phase 4.3 deficits.
 
 No Phase 2/3 question content or validation state was changed. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -38,18 +31,18 @@ No Phase 2/3 question content or validation state was changed. No Phase 4.3 ques
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 29/113 concepts modeled
-- Canonical knowledge items: 155
-- Existing verified questions mapped: 28
-- Explicit unmapped knowledge gaps: 116
+- Phase 4.2: active — 30/113 concepts modeled
+- Canonical knowledge items: 160
+- Existing verified questions mapped: 30
+- Explicit unmapped knowledge gaps: 119
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-article35-vs-37` using source unit `article35-vs-37`.
+Continue Phase 4.2 at `takken-concept-eight-restrictions-scope` using source unit `eight-restrictions-overview`.
 
-Preserve all 155 knowledge items, twenty-eight valid mappings, and all one hundred sixteen explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 160 knowledge items, thirty valid mappings, and all one hundred nineteen explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Publication invariant
 
