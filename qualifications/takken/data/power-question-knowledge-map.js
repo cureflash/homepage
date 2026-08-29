@@ -36,7 +36,9 @@
     { questionId: "takken-q-25-002", conceptId: "takken-concept-eight-restrictions-scope", knowledgeRefs: ["takken-k-eight-restrictions-scope-adverse-special-terms"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-26-001", conceptId: "takken-concept-cooling-off", knowledgeRefs: ["takken-k-cooling-off-outside-office-scope"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-26-002", conceptId: "takken-concept-cooling-off", knowledgeRefs: ["takken-k-cooling-off-eight-days"], sourceQuestionValidationStatus: "verified" },
-    { questionId: "takken-q-27-002", conceptId: "takken-concept-earnest-money-safeguards", knowledgeRefs: ["takken-k-earnest-money-safeguards-unfinished-exemption", "takken-k-earnest-money-safeguards-completed-exemption"], sourceQuestionValidationStatus: "verified" }
+    { questionId: "takken-q-27-002", conceptId: "takken-concept-earnest-money-safeguards", knowledgeRefs: ["takken-k-earnest-money-safeguards-unfinished-exemption", "takken-k-earnest-money-safeguards-completed-exemption"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-32-001", conceptId: "takken-concept-brokerage-fees", knowledgeRefs: ["takken-k-brokerage-fees-minister-sets-amount"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-32-002", conceptId: "takken-concept-brokerage-fees", knowledgeRefs: ["takken-k-brokerage-fees-no-excess"], sourceQuestionValidationStatus: "verified" }
   ];
 
   const knownKnowledgeIds = new Set([
@@ -45,31 +47,18 @@
     "takken-k-license-authority-minister-multiple-prefectures", "takken-k-license-authority-governor-single-prefecture",
     "takken-k-license-disqualification-cancellation-five-years", "takken-k-license-disqualification-hearing-closure-five-years", "takken-k-license-disqualification-criminal-sentence-five-years", "takken-k-license-disqualification-misconduct-prior-five-years",
     "takken-k-license-validity-five-years", "takken-k-license-renewal-application-window",
-    "takken-k-license-change-notice-thirty-days",
-    "takken-k-roster-statutory-system",
-    "takken-k-takkenshi-registration-stages-separate",
-    "takken-k-exclusive-takkenshi-office-one-fifth",
+    "takken-k-license-change-notice-thirty-days", "takken-k-roster-statutory-system", "takken-k-takkenshi-registration-stages-separate", "takken-k-exclusive-takkenshi-office-one-fifth",
     "takken-k-takkenshi-exclusive-duties-important-matters-explanation", "takken-k-takkenshi-exclusive-duties-article35-name", "takken-k-takkenshi-exclusive-duties-article37-name",
-    "takken-k-business-guarantee-deposit-statutory-system",
-    "takken-k-business-guarantee-refund-transaction-claim-right",
-    "takken-k-guarantee-association-statutory-system",
-    "takken-k-brokerage-contract-document-delivery-duty",
-    "takken-k-exclusive-brokerage-period-three-month-cap", "takken-k-exclusive-brokerage-reins-seven-days", "takken-k-exclusive-brokerage-report-two-weeks",
-    "takken-k-sole-agency-brokerage-reins-five-days", "takken-k-sole-agency-brokerage-report-one-week",
-    "takken-k-advertising-start-permit-before-advertising",
-    "takken-k-contract-start-permit-before-contract",
-    "takken-k-false-advertising-property-scope",
+    "takken-k-business-guarantee-deposit-statutory-system", "takken-k-business-guarantee-refund-transaction-claim-right", "takken-k-guarantee-association-statutory-system",
+    "takken-k-brokerage-contract-document-delivery-duty", "takken-k-exclusive-brokerage-period-three-month-cap", "takken-k-exclusive-brokerage-reins-seven-days", "takken-k-exclusive-brokerage-report-two-weeks",
+    "takken-k-sole-agency-brokerage-reins-five-days", "takken-k-sole-agency-brokerage-report-one-week", "takken-k-advertising-start-permit-before-advertising", "takken-k-contract-start-permit-before-contract", "takken-k-false-advertising-property-scope",
     "takken-k-article35-procedure-before-contract", "takken-k-article35-procedure-takkenshi-explains", "takken-k-article35-procedure-document-delivery", "takken-k-article35-procedure-card-presentation",
-    "takken-k-article35-items-registered-rights", "takken-k-article35-items-legal-restrictions",
-    "takken-k-article37-document-after-contract", "takken-k-article37-document-takkenshi-name",
-    "takken-k-article35-vs-37-article35-before-contract", "takken-k-article35-vs-37-article37-after-contract",
-    "takken-k-eight-restrictions-scope-regulation-family", "takken-k-eight-restrictions-scope-adverse-special-terms",
-    "takken-k-cooling-off-outside-office-scope", "takken-k-cooling-off-eight-days",
-    "takken-k-earnest-money-safeguards-unfinished-exemption", "takken-k-earnest-money-safeguards-completed-exemption"
+    "takken-k-article35-items-registered-rights", "takken-k-article35-items-legal-restrictions", "takken-k-article37-document-after-contract", "takken-k-article37-document-takkenshi-name",
+    "takken-k-article35-vs-37-article35-before-contract", "takken-k-article35-vs-37-article37-after-contract", "takken-k-eight-restrictions-scope-regulation-family", "takken-k-eight-restrictions-scope-adverse-special-terms",
+    "takken-k-cooling-off-outside-office-scope", "takken-k-cooling-off-eight-days", "takken-k-earnest-money-safeguards-unfinished-exemption", "takken-k-earnest-money-safeguards-completed-exemption",
+    "takken-k-brokerage-fees-minister-sets-amount", "takken-k-brokerage-fees-no-excess"
   ]);
-  const allowedConceptIds = new Set([
-    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document", "takken-concept-article35-vs-37", "takken-concept-eight-restrictions-scope", "takken-concept-cooling-off", "takken-concept-earnest-money-safeguards"
-  ]);
+  const allowedConceptIds = new Set(mappings.map((mapping) => mapping.conceptId));
   const questionIds = new Set();
 
   for (const mapping of mappings) {
@@ -82,23 +71,12 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 35) throw new Error(`Expected 35 mapped questions through earnest-money-safeguards, got ${mappings.length}`);
+  if (mappings.length !== 37) throw new Error(`Expected 37 mapped questions through brokerage-fees, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
-  if (!questionIds.has("takken-q-15-001")) throw new Error("Brokerage contract document source question mapping is missing");
-  if (!questionIds.has("takken-q-16-001")) throw new Error("Exclusive brokerage period source question mapping is missing");
-  if (!questionIds.has("takken-q-17-001")) throw new Error("Exclusive brokerage REINS/reporting source question mapping is missing");
-  if (!questionIds.has("takken-q-17-002")) throw new Error("Sole-agency brokerage REINS/reporting source question mapping is missing");
-  if (!questionIds.has("takken-q-18-001")) throw new Error("Advertising start source question mapping is missing");
-  if (!questionIds.has("takken-q-19-001")) throw new Error("Contract start source question mapping is missing");
-  if (!questionIds.has("takken-q-20-001")) throw new Error("False advertising source question mapping is missing");
-  if (!questionIds.has("takken-q-21-001") || !questionIds.has("takken-q-21-002")) throw new Error("Article 35 procedure source question mappings are missing");
-  if (!questionIds.has("takken-q-22-001") || !questionIds.has("takken-q-22-002")) throw new Error("Article 35 items source question mappings are missing");
-  if (!questionIds.has("takken-q-23-001") || !questionIds.has("takken-q-23-002")) throw new Error("Article 37 document source question mappings are missing");
-  if (!questionIds.has("takken-q-24-001") || !questionIds.has("takken-q-24-002")) throw new Error("Article 35 vs 37 source question mappings are missing");
-  if (!questionIds.has("takken-q-25-001") || !questionIds.has("takken-q-25-002")) throw new Error("Eight restrictions scope source question mappings are missing");
-  if (!questionIds.has("takken-q-26-001") || !questionIds.has("takken-q-26-002")) throw new Error("Cooling-off source question mappings are missing");
-  if (!questionIds.has("takken-q-27-002")) throw new Error("Earnest-money safeguards source question mapping is missing");
+  for (const requiredId of ["takken-q-15-001", "takken-q-16-001", "takken-q-17-001", "takken-q-17-002", "takken-q-18-001", "takken-q-19-001", "takken-q-20-001", "takken-q-21-001", "takken-q-21-002", "takken-q-22-001", "takken-q-22-002", "takken-q-23-001", "takken-q-23-002", "takken-q-24-001", "takken-q-24-002", "takken-q-25-001", "takken-q-25-002", "takken-q-26-001", "takken-q-26-002", "takken-q-27-002", "takken-q-32-001", "takken-q-32-002"]) {
+    if (!questionIds.has(requiredId)) throw new Error(`Required source question mapping is missing: ${requiredId}`);
+  }
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
