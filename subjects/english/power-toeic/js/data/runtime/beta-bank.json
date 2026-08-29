@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T07:19:21.627Z",
+  "generatedAt": "2026-08-29T08:25:55.119Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1709,
-    "runtimeQuestionCount": 1709,
+    "approvedCandidateCount": 1809,
+    "runtimeQuestionCount": 1809,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 70
+    "qaRecordCount": 74
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -45,6 +45,12 @@
     {
       "id": "p5.conn.for_vs_since",
       "label": "for / since",
+      "categoryId": "connectors-prepositions",
+      "categoryLabel": "前置詞・接続詞"
+    },
+    {
+      "id": "p5.conn.logical_conjunction",
+      "label": "論理関係の接続詞",
       "categoryId": "connectors-prepositions",
       "categoryLabel": "前置詞・接続詞"
     },
@@ -8624,6 +8630,431 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_conn_logical_conjunction_0001",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The shipment was delayed ____ severe weather closed the mountain pass overnight.",
+      "choices": [
+        "because",
+        "although",
+        "unless",
+        "whereas"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Because' introduces the reason the shipment was delayed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0002",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the software update was completed on time, several users still reported login problems.",
+      "choices": [
+        "Because",
+        "Although",
+        "Unless",
+        "So that"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Although' introduces a contrast between the timely update and the continuing login problems.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0003",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The training session was recorded ____ employees in other offices could watch it later.",
+      "choices": [
+        "because",
+        "although",
+        "so that",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "'So that' introduces the purpose of recording the training session.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0004",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The supplier will not release the order ____ the purchasing department confirms the revised quantity.",
+      "choices": [
+        "because",
+        "although",
+        "whereas",
+        "unless"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Unless' means 'if not' and states the condition required before the supplier will release the order.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0005",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the downtown branch focuses on retail clients, the airport branch mainly serves corporate travelers.",
+      "choices": [
+        "While",
+        "Because",
+        "Unless",
+        "After"
+      ],
+      "correctIndex": 0,
+      "explanation": "'While' appropriately contrasts the two branches' different customer groups.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0006",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the audit identified several missing receipts, the accounting team requested additional documentation.",
+      "choices": [
+        "Although",
+        "Since",
+        "Unless",
+        "Before"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Since' introduces the reason the accounting team requested more documentation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0007",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The conference room can be reserved for Friday ____ no executive meeting is scheduled at that time.",
+      "choices": [
+        "because",
+        "although",
+        "if",
+        "whereas"
+      ],
+      "correctIndex": 2,
+      "explanation": "'If' introduces the condition under which the room can be reserved.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0008",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The domestic sales team exceeded its target, ____ the overseas division finished slightly below forecast.",
+      "choices": [
+        "because",
+        "although",
+        "unless",
+        "whereas"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Whereas' contrasts the performance of the two divisions.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0009",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the technician replaced the damaged cable, the network connection became stable again.",
+      "choices": [
+        "After",
+        "Although",
+        "Unless",
+        "Whereas"
+      ],
+      "correctIndex": 0,
+      "explanation": "'After' correctly shows that the network stabilized following the cable replacement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0010",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Please review the expense report ____ you submit it to the finance director.",
+      "choices": [
+        "because",
+        "before",
+        "although",
+        "unless"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Before' correctly orders the review ahead of the submission.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0011",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the new warehouse opens, all regional deliveries will be routed through that facility.",
+      "choices": [
+        "Because",
+        "Although",
+        "Once",
+        "Unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Once' means 'as soon as/when' and marks the future point after which routing will change.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0012",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The help desk logs each incident ____ a customer reports a recurring technical problem.",
+      "choices": [
+        "because",
+        "although",
+        "unless",
+        "whenever"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Whenever' expresses that the logging action occurs each time the stated event happens.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0013",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "You may use the company vehicle ____ you return it to the garage by 8 p.m.",
+      "choices": [
+        "as long as",
+        "although",
+        "because",
+        "whereas"
+      ],
+      "correctIndex": 0,
+      "explanation": "'As long as' states the condition that must be satisfied for permission to use the vehicle.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0014",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ demand for the product remained strong, the manufacturer postponed its planned expansion.",
+      "choices": [
+        "Because",
+        "Even though",
+        "Unless",
+        "After"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Even though' introduces the unexpected contrast between strong demand and the postponed expansion.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0015",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The manager approved temporary staff ____ three regular employees will be attending an off-site conference next week.",
+      "choices": [
+        "although",
+        "unless",
+        "because",
+        "whereas"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Because' gives the reason temporary staff were approved.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0016",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company added a second inspection step ____ defective parts would be detected before shipment.",
+      "choices": [
+        "because",
+        "although",
+        "unless",
+        "so that"
+      ],
+      "correctIndex": 3,
+      "explanation": "'So that' introduces the purpose of adding the second inspection step.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0017",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the client requests a different date, the installation team will arrive on September 8 as scheduled.",
+      "choices": [
+        "Unless",
+        "Because",
+        "Although",
+        "Whereas"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Unless' means the scheduled date remains in effect except if the client requests another date.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0018",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the first proposal emphasized cost reduction, the revised version focuses on service quality.",
+      "choices": [
+        "Because",
+        "While",
+        "Unless",
+        "After"
+      ],
+      "correctIndex": 1,
+      "explanation": "'While' contrasts the emphasis of the two proposals.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0019",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Employees may collect their new security cards ____ the orientation session ends.",
+      "choices": [
+        "although",
+        "because",
+        "after",
+        "unless"
+      ],
+      "correctIndex": 2,
+      "explanation": "'After' correctly shows that card collection follows the orientation session.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0020",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The legal team must approve the final wording ____ the contract is sent to the customer for signature.",
+      "choices": [
+        "because",
+        "although",
+        "unless",
+        "before"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Before' correctly places legal approval earlier than sending the contract for signature.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0021",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the replacement parts arrive by Thursday, the repair crew can finish the work before the weekend.",
+      "choices": [
+        "If",
+        "Although",
+        "Because",
+        "Whereas"
+      ],
+      "correctIndex": 0,
+      "explanation": "'If' introduces the condition that would allow the crew to finish before the weekend.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0022",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ online orders increased sharply, sales at the company's physical stores remained almost unchanged.",
+      "choices": [
+        "Because",
+        "Whereas",
+        "Unless",
+        "After"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Whereas' highlights the contrast between rising online orders and nearly unchanged store sales.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0023",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the conference organizer expects more than 300 guests, an additional registration desk will be opened.",
+      "choices": [
+        "Although",
+        "Unless",
+        "Since",
+        "Before"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Since' introduces the reason an additional registration desk will be opened.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0024",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The revised pricing policy will take effect ____ all regional managers have received the implementation guide.",
+      "choices": [
+        "because",
+        "although",
+        "unless",
+        "once"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Once' indicates that the policy will take effect after the stated prerequisite has been completed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_logical_conjunction_0025",
+      "version": 1,
+      "skillId": "p5.conn.logical_conjunction",
+      "categoryId": "connectors-prepositions",
+      "sentence": "____ the new printer is more expensive than the previous model, it uses substantially less ink.",
+      "choices": [
+        "Although",
+        "Because",
+        "Unless",
+        "So that"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Although' introduces the contrast between the higher purchase price and lower ink consumption.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_conn_preposition_vs_conjunction_0076",
       "version": 1,
       "skillId": "p5.conn.preposition_vs_conjunction",
@@ -9470,6 +9901,1281 @@
       ],
       "correctIndex": 0,
       "explanation": "Use \"in\" with months, years, seasons, and general parts of the day. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0026",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The finance team will finalize the quarterly report ____ April 30.",
+      "choices": [
+        "at",
+        "on",
+        "in",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"on\" with a specific date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0027",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The new inventory system is expected to go live ____ November.",
+      "choices": [
+        "on",
+        "at",
+        "in",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"in\" with a month. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0028",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The emergency maintenance window begins ____ 11:45 p.m.",
+      "choices": [
+        "to",
+        "in",
+        "on",
+        "at"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0029",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The legal department will review the revised agreement ____ Wednesday morning.",
+      "choices": [
+        "on",
+        "at",
+        "in",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"on\" with a specific day or day plus part of the day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0030",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The retailer plans to introduce the new product line ____ the fall.",
+      "choices": [
+        "at",
+        "in",
+        "on",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with seasons. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0031",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The security desk is staffed continuously ____ night.",
+      "choices": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "The fixed expression is \"at night.\" Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0032",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The annual compliance seminar will take place ____ February 12.",
+      "choices": [
+        "in",
+        "at",
+        "to",
+        "on"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"on\" with a specific date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0033",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company opened its first overseas office ____ 2019.",
+      "choices": [
+        "in",
+        "at",
+        "on",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"in\" with a year. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0034",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The customer-support hotline starts accepting calls ____ 8:00 a.m.",
+      "choices": [
+        "on",
+        "at",
+        "in",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0035",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The recruiting team will interview the final candidates ____ Friday.",
+      "choices": [
+        "in",
+        "at",
+        "on",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"on\" with a named day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0036",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Hotel occupancy usually rises sharply ____ August.",
+      "choices": [
+        "on",
+        "at",
+        "to",
+        "in"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"in\" with a month. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0037",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The cafeteria switches to its dinner menu ____ 5:30 p.m.",
+      "choices": [
+        "at",
+        "in",
+        "on",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0038",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The board approved the acquisition ____ March 18, 2026.",
+      "choices": [
+        "at",
+        "on",
+        "in",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"on\" with a specific date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0039",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The design team does most of its concept work ____ the afternoon.",
+      "choices": [
+        "at",
+        "on",
+        "in",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"in\" with general parts of the day such as the morning or afternoon. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0040",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The freight train is scheduled to arrive ____ 6:20 tomorrow morning.",
+      "choices": [
+        "in",
+        "on",
+        "to",
+        "at"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0041",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The procurement committee will meet ____ the morning of June 4.",
+      "choices": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"on\" with a specific day or date, including \"the morning of\" a date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0042",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company expects demand for electric vehicles to increase ____ the early 2030s.",
+      "choices": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with decades and periods such as \"the early 2030s.\" Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0043",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The audit team will return to headquarters ____ Thursday evening.",
+      "choices": [
+        "in",
+        "at",
+        "on",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"on\" with a named day plus part of the day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0044",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The overnight system check normally finishes ____ dawn.",
+      "choices": [
+        "on",
+        "in",
+        "to",
+        "at"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"at\" with fixed points in time such as dawn. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0045",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The scholarship application portal reopens ____ January.",
+      "choices": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"in\" with a month. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0046",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The operations manager will brief the night shift ____ Sunday.",
+      "choices": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"on\" with a named day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0047",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The conference registration desk opens ____ noon on the first day.",
+      "choices": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"at\" with fixed points in time such as noon. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0048",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The manufacturer plans to complete the plant expansion ____ 2028.",
+      "choices": [
+        "on",
+        "at",
+        "to",
+        "in"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"in\" with a year. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0049",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The revised employee handbook will be distributed ____ Monday afternoon.",
+      "choices": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"on\" with a named day plus part of the day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0050",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The call center receives its highest volume of inquiries ____ the morning.",
+      "choices": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with general parts of the day such as the morning. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0051",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The accounting department prepares its annual budget ____ September.",
+      "choices": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with a month. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0052",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The loading dock will close for inspection ____ August 14.",
+      "choices": [
+        "at",
+        "to",
+        "on",
+        "in"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"on\" with a date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0053",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The first shuttle leaves the hotel ____ 6:15 a.m.",
+      "choices": [
+        "at",
+        "on",
+        "in",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"at\" with a clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0054",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The sales conference is scheduled to begin ____ Tuesday afternoon.",
+      "choices": [
+        "in",
+        "at",
+        "to",
+        "on"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"on\" with a named day plus part of day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0055",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company expects to open two additional branches ____ 2027.",
+      "choices": [
+        "to",
+        "in",
+        "on",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with a year. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0056",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The maintenance crew usually checks the backup generator ____ midnight.",
+      "choices": [
+        "on",
+        "to",
+        "at",
+        "in"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"at\" with a fixed point in time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0057",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The revised pricing policy will take effect ____ October 1.",
+      "choices": [
+        "on",
+        "at",
+        "in",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"on\" with a specific date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0058",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Customer traffic is typically highest ____ the evening.",
+      "choices": [
+        "to",
+        "on",
+        "in",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"in\" with a general part of day. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0059",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The legal team plans to submit its response ____ Friday.",
+      "choices": [
+        "at",
+        "on",
+        "to",
+        "in"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"on\" with a named day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0060",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The factory's second shift starts ____ 3:00 p.m.",
+      "choices": [
+        "in",
+        "to",
+        "on",
+        "at"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0061",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The regional office was established ____ 2008.",
+      "choices": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"in\" with a year. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0062",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The outdoor product line sells especially well ____ the summer.",
+      "choices": [
+        "at",
+        "to",
+        "in",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"in\" with a season. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0063",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The executive committee will review the proposal ____ the morning of May 22.",
+      "choices": [
+        "in",
+        "on",
+        "to",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"on\" with a specific morning of a date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0064",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The reception desk closes ____ 9:30 p.m. on weekdays.",
+      "choices": [
+        "on",
+        "in",
+        "to",
+        "at"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0065",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The new safety standards are expected to be introduced ____ January.",
+      "choices": [
+        "in",
+        "at",
+        "on",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"in\" with a month. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0066",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The warehouse team will conduct a full inventory count ____ Saturday night.",
+      "choices": [
+        "to",
+        "in",
+        "on",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"on\" with a named day plus part of day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0067",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The research division expanded rapidly ____ the late 2010s.",
+      "choices": [
+        "at",
+        "in",
+        "to",
+        "on"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with a decade period. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0068",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The morning briefing begins promptly ____ 7:45.",
+      "choices": [
+        "in",
+        "to",
+        "on",
+        "at"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0069",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The supplier delivered the replacement parts ____ March 6.",
+      "choices": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"on\" with a specific date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0070",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "Most departments hold planning meetings ____ the afternoon.",
+      "choices": [
+        "at",
+        "to",
+        "in",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"in\" with a general part of day. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0071",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The new employee orientation will be held ____ Monday.",
+      "choices": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"on\" with a named day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0072",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The security system automatically switches modes ____ dusk.",
+      "choices": [
+        "on",
+        "in",
+        "to",
+        "at"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"at\" with a fixed point in time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0073",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company completed its headquarters renovation ____ 2024.",
+      "choices": [
+        "in",
+        "at",
+        "on",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"in\" with a year. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0074",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The tourism division hires additional staff ____ the spring.",
+      "choices": [
+        "to",
+        "on",
+        "in",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"in\" with a season. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0075",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The board will announce its decision ____ Thursday morning.",
+      "choices": [
+        "at",
+        "on",
+        "to",
+        "in"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"on\" with a named day plus part of day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0076",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The payroll system processes monthly salaries ____ the last business day of each month.",
+      "choices": [
+        "at",
+        "in",
+        "to",
+        "on"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"on\" with a specific day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0077",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The design studio receives the most natural light ____ the morning.",
+      "choices": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"in\" with a general part of day. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0078",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The next software release is planned ____ December.",
+      "choices": [
+        "at",
+        "in",
+        "on",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with a month. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0079",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The banquet staff will begin setting the tables ____ 4:30 p.m.",
+      "choices": [
+        "in",
+        "to",
+        "at",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0080",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The insurance policy was renewed ____ July 9.",
+      "choices": [
+        "to",
+        "in",
+        "at",
+        "on"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"on\" with a specific date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0081",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The logistics center became fully operational ____ 2021.",
+      "choices": [
+        "at",
+        "to",
+        "on",
+        "in"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"in\" with a year. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0082",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The branch manager will meet the auditors ____ Wednesday afternoon.",
+      "choices": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"on\" with a named day plus part of day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0083",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The night supervisor checks all emergency exits ____ midnight.",
+      "choices": [
+        "in",
+        "at",
+        "to",
+        "on"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"at\" with a fixed point in time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0084",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The marketing campaign will run nationwide ____ the winter.",
+      "choices": [
+        "on",
+        "to",
+        "in",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"in\" with a season. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0085",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The customer survey will close ____ November 18.",
+      "choices": [
+        "to",
+        "in",
+        "at",
+        "on"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"on\" with a specific date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0086",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The help desk opens ____ 7:00 each weekday.",
+      "choices": [
+        "at",
+        "in",
+        "on",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0087",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The company made its largest equipment investment ____ the mid-2020s.",
+      "choices": [
+        "to",
+        "at",
+        "in",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"in\" with a decade period. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0088",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The training session is scheduled ____ Friday morning.",
+      "choices": [
+        "in",
+        "to",
+        "at",
+        "on"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"on\" with a named day plus part of day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0089",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The restaurant begins serving lunch ____ noon.",
+      "choices": [
+        "on",
+        "in",
+        "to",
+        "at"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"at\" with a fixed point in time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0090",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The finance director joined the company ____ 2016.",
+      "choices": [
+        "at",
+        "in",
+        "on",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with a year. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0091",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The annual maintenance shutdown usually occurs ____ August.",
+      "choices": [
+        "in",
+        "at",
+        "to",
+        "on"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"in\" with a month. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0092",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The inspection team will arrive ____ the morning of September 3.",
+      "choices": [
+        "at",
+        "to",
+        "on",
+        "in"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"on\" with a specific morning of a date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0093",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The delivery service experiences its heaviest traffic ____ the evening.",
+      "choices": [
+        "to",
+        "in",
+        "on",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with a general part of day. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0094",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The committee will vote on the revised policy ____ Tuesday.",
+      "choices": [
+        "in",
+        "at",
+        "to",
+        "on"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"on\" with a named day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0095",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The backup servers perform a diagnostic check ____ 2:00 a.m.",
+      "choices": [
+        "at",
+        "on",
+        "in",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"at\" with a specific clock time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0096",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The retailer plans to remodel its flagship store ____ 2029.",
+      "choices": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use \"in\" with a year. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0097",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The construction crew begins work earlier ____ the summer.",
+      "choices": [
+        "at",
+        "to",
+        "in",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"in\" with a season. Therefore, \"in\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0098",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The final registration deadline falls ____ January 15.",
+      "choices": [
+        "in",
+        "to",
+        "on",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use \"on\" with a specific date. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0099",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The conference venue opens its main entrance ____ dawn.",
+      "choices": [
+        "on",
+        "in",
+        "to",
+        "at"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use \"at\" with a fixed point in time. Therefore, \"at\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_conn_time_prepositions_0100",
+      "version": 1,
+      "skillId": "p5.conn.time_prepositions",
+      "categoryId": "connectors-prepositions",
+      "sentence": "The department's weekly planning call takes place ____ Thursday morning.",
+      "choices": [
+        "on",
+        "at",
+        "in",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use \"on\" with a named day plus part of day. Therefore, \"on\" is the only correct choice here.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
