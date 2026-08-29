@@ -3,52 +3,46 @@
 更新日: 2026-08-30
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。制作順01→10を先頭から再確認し、active seriesは引き続き `01_shinkansen_vehicle_3`。新品質基準の完成数は14/38。01〜14がPASS、15が制作中。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。制作順01→10を先頭から再確認し、active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は15/38。01〜15がPASS。
 
-## 今回進めたテーマ
-`15 400系・E3系・E6系・E8系 新在直通` の本文作成前EXAM_ALIGNMENTを完了した。完成扱いにはしていない。
+## 今回完了
+`15 400系・E3系・E6系・E8系 新在直通` をEXAM_ALIGNMENTから本文・練習・PowerPoint・Visual QA・独立過去問再解答まで進め、PASSした。
 
-## 15 EXAM_ALIGNMENT
-対象: 第三種電気主任技術者 / 機械（変圧器）。新在直通の20/25 kV入力差を、一般の巻数比・電流比・容量・定格・損失・効率・等価回路問題へ接続する。
+## 公式過去問
+R5上機械問9、R4下機械問8、R4上機械問8、R3機械問9、R2機械問9。正本は電気技術者試験センター公式問題・解答。参照教材はe-sysnet、電験三種まとめました、電験王。参照日2026-08-30。
 
-公式過去問:
-1. R5上 機械 問9 — 鉄損・銅損、負荷率、最大効率条件 `Pcu=Pi`。
-2. R4下 機械 問8 — 無負荷損・負荷損、`Pcu∝I^2`、2条件からの逆算。
-3. R4上 機械 問8 — 短絡試験、`Z=Vsc/Isc`, `R=Psc/Isc^2`, `X=sqrt(Z^2-R^2)`。
-4. R3 機械 問9 — 定格容量、全負荷銅損、百分率抵抗降下、電圧変動率。
-5. R2 機械 問9 — 三巻線変圧器、P/Q/S、三相一次電流。
-
-正本は一般財団法人 電気技術者試験センター公式過去問題・公式解答。参照資料はe-sysnet、電験三種まとめました、電験王。参照日2026-08-30。外部本文・図・例題は複製していない。
-
-## EXAM_ALIGNMENTで固定した教材範囲
-- 巻数比・変圧比・電流比と理想変圧器の容量保存
-- 20 kV / 25 kV入力を同一の必要二次電圧へ変換する考え方
-- 同一容量で入力電圧が変わると入力電流が変わること
-- 定格電圧・定格電流・定格容量
-- 鉄損・銅損・負荷率・最大効率
-- 短絡試験と簡易等価回路
-- 電圧変動率と百分率抵抗降下
-- 多巻線・複数負荷の複素電力集約
+## 教材範囲
+巻数比・電流比・容量、定格、鉄損/銅損、負荷率、最大効率、短絡試験、簡易等価回路、電圧変動率、多巻線負荷のP-Q合成まで収録。20/25 kVは新在直通の具体例として使い、一般の変圧器問題へ一般化した。
 
 ## 新幹線資料
-JR東日本公式資料で、E8系が400系・E3系に続く山形新幹線の新在直通車両であり、2024年3月16日運行開始、東京〜新庄間で運用されることを確認した。
+JR東日本公式でE8系の営業開始日・運行区間・最高速度を確認。土木学会誌で山形新幹線在来線区間AC20 kV、新幹線AC25 kVを確認。実巻数、実タップ、実二次電圧、実切替シーケンスは確認できないため真値化していない。
 
-20 kV / 25 kV複電圧条件は公開車両資料でも確認した。一方、各系列の主変圧器巻数、タップ構成、実二次電圧、切替シーケンスはJR東日本一次資料で確認できていないため、実値として教材へ追加しない。
+## 成果物
+- `topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage.md`
+- `topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage_explanation.pdf` — 2ページ
+- `topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage_practice.pdf` — 15問、3ページ
+- `topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage_images.pptx` — 5スライド
 
-## 作成・改訂成果物
-- `topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage.md` — 新規。EXAM_ALIGNMENT、参考教材、必須説明、新幹線側の確認範囲を記録。
-- `STATUS.md` — topic 15を `EXAM_ALIGNMENT_READY` としてcheckpoint更新。
-- `HANDOFF.md` — 本ファイルを更新。
+## QA
+練習15/15独立再計算PASS。解説/練習PDFは180 dpi、PPTXはLibreOffice PDF変換後160 dpiでVisual QAし、文字化け・クリップ・重なりなし。
 
-PDF / 練習PDF / PowerPointは未作成。
+## 公式過去問独立再解答
+- R5上問9: `x=0.5`, `eta=98.04%` → `(4)` PASS
+- R4下問8: `Pi=900 W` → `(4)` PASS
+- R4上問8: `Z=2.00`, `R=0.625`, `X=1.90 ohm` → `(3)` PASS
+- R3問9: `epsilon=1.2%` → `(3)` PASS
+- R2問9: Q相殺後6.4 MVA、`I=55.99 A` → `(2)` PASS
 
-## 独立再解答
-未実施。成果物完成後、R5上問9、R4下問8、R4上問8、R3問9、R2問9を保存済み正答を見ず教材だけで再解答する。1件でも教材外知識が必要ならNEEDS_REVISION。
+5/5公式解答一致。教材外知識の補完なし。
 
 ## QA判定
-15: `IN_PROGRESS / EXAM_ALIGNMENT_READY`。
+15: `PASS`。完成数15/38。
 
-完成数: 14/38。
+## Web公開
+15をカタログへ登録。
+
+## 判断不能事項
+E8系等の主変圧器実巻数、実タップ構成、実二次電圧、実切替シーケンスは一次資料で確認できていない。仮定値としても実車値扱いしない。試験対応には影響しない。
 
 ## 次の正確な開始点
-`topics/15_mini_shinkansen_dual_voltage/15_mini_shinkansen_dual_voltage.md` のEXAM_ALIGNMENTを入力に、15の解説PDF本文から制作する。順序は試験論点→用語・物理→公式と成立条件→解法手順→基礎例題→本試験標準例題→複合例題→新在直通実例→頻出ミス→調査過去問→公式まとめ。その後15問以上の練習、PowerPoint、独立再解答、Web公開へ進む。
+MASTER制作順を01から確認し01〜15が新品質基準PASSであることを確認後、16 `N700系 車両システム制御` をactive topicとし、本文作成前に関連公式過去問5問以上を優先調査してEXAM_ALIGNMENTを作成する。
