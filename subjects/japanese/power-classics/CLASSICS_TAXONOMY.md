@@ -16,4 +16,4 @@
 
 ## 現在の先頭未充足skill
 
-`kobun.aux.zuru.connection` — 助動詞ずの接続・活用。targetQuestions: 100。2026-08-29 09:00 JST時点で25/100、次は `kobun_aux_zuru_connection_0026`。
+`kobun.aux.zuru.connection` — 助動詞ずの接続・活用。targetQuestions: 100。2026-08-29 10:00 JST時点で50/100、次は `kobun_aux_zuru_connection_0051`。
