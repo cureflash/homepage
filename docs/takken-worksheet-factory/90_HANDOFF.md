@@ -8,25 +8,18 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-cooling-off` using source unit `cooling-off` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-earnest-money-limit` using source unit `earnest-money-and-safeguards` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-cooling-off.js` with nine verified atomic knowledge items covering:
+Added `qualifications/takken/data/power-knowledge-items-earnest-money-limit.js` with two verified atomic knowledge items:
 
-1. outside-office scope under Article 37-2,
-2. the rule that an application made at an office etc. prevents later cooling-off merely because the contract is concluded elsewhere,
-3. the written form required for withdrawal/cancellation,
-4. the 8-day cutoff after the statutory notice,
-5. the exclusion after both delivery and full payment,
-6. dispatch-time effectiveness of the withdrawal document,
-7. prohibition on damages or penalty claims arising from the withdrawal,
-8. prompt refund of earnest money and other received money,
-9. invalidity of special terms adverse to the applicant/buyer.
+1. Article 39 scope: the宅建業者 is itself the seller and the buyer is not a宅建業者; broker-to-broker transactions are excluded by Article 78(2).
+2. Within that scope, the seller may not receive earnest money exceeding 20% of the purchase price.
 
-Primary authority is the current 宅地建物取引業法 Article 37-2 at the 2026-04-01 cutoff. Canonical source facts `u26-f1` and `u26-f2` are preserved as source-unit anchors.
+Primary authority is the current 宅地建物取引業法 Articles 39 and 78(2) at the 2026-04-01 cutoff. Canonical source fact `u27-f1` is preserved as the source-unit anchor.
 
-Existing verified `takken-q-26-001` directly tests the outside-office scope item and is mapped only to `takken-k-cooling-off-outside-office-scope`. Existing verified `takken-q-26-002` directly tests the 8-day cutoff and is mapped only to `takken-k-cooling-off-eight-days`. The other seven knowledge items remain explicit Phase 4.3 deficits.
+Existing verified `takken-q-27-001` was deliberately not mapped. Its stem states that the宅建業者 is itself the seller and asks for the percentage cap, but does not state that the buyer is not a宅建業者. Because Article 78(2) excludes broker-to-broker transactions from Article 39, mapping that question to either canonical item would overstate what the question itself establishes. The Phase 2/3 question and its verified status were not changed; both new knowledge items remain explicit Phase 4.3 deficits.
 
-No Phase 2/3 question content or validation state was changed. No Phase 4.3 questions, prints, or app linkage were created.
+No Phase 4.3 questions, prints, or app linkage were created.
 
 ## Status after this run
 
@@ -35,22 +28,22 @@ No Phase 2/3 question content or validation state was changed. No Phase 4.3 ques
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 32/113 concepts modeled
-- Canonical knowledge items: 174
+- Phase 4.2: active — 33/113 concepts modeled
+- Canonical knowledge items: 176
 - Existing verified questions mapped: 34
-- Explicit unmapped knowledge gaps: 129
+- Explicit unmapped knowledge gaps: 131
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-earnest-money-limit` using source unit `earnest-money-and-safeguards`.
+Continue Phase 4.2 at `takken-concept-earnest-money-safeguards` using source unit `earnest-money-and-safeguards`.
 
-Preserve all 174 knowledge items, thirty-four valid mappings, and all one hundred twenty-nine explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 176 knowledge items, thirty-four valid mappings, and all one hundred thirty-one explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-The GitHub connector was used to read and write the canonical files. The execution environment could not resolve `github.com` over DNS, so an additional local Node execution against a cloned repository was not available in this run. This must not be reported as CI success.
+Canonical schema guards in the new knowledge file enforce unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected two-item count. No Phase 2/3 question data or question-knowledge mapping file was modified in this checkpoint.
 
 ## Publication invariant
 
