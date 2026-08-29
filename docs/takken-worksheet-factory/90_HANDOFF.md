@@ -8,14 +8,15 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-adult-ward` using source unit `civil-limited-capacity` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-agency` using source unit `civil-agency` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-adult-ward.js` with two verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-agency.js` with three verified atomic knowledge items:
 
-1. 民法9条本文により、成年被後見人の法律行為は原則として取り消すことができること。
-2. 民法9条ただし書により、日用品の購入その他日常生活に関する行為はこの取消しの対象外であること。
+1. 民法99条1項により、代理人が権限内で本人のためにすることを示してした意思表示は本人に直接効力を生ずること。
+2. 民法100条本文により、本人のためにすることを示さない意思表示は原則として代理人自身のためにしたものとみなされること。
+3. 民法100条ただし書により、相手方が本人のためにすることを知り、または知ることができた場合は上記みなしが適用されず、代理行為として本人に効果が帰属すること。
 
-Existing verified `takken-q-38-002` directly tests both the cancellation principle and the daily-life exception, so the evidence map maps that question to `takken-k-adult-ward-cancellation-principle` and `takken-k-adult-ward-daily-life-exception`. This concept therefore adds no new Phase 4.3 coverage gap. Phase 2/3 question contents and verified states were not changed.
+Existing verified `takken-q-39-001` directly tests item 1 and `takken-q-39-002` directly tests item 2, so both are added to the evidence map. The Article 100 counterparty-awareness exception is not directly tested by either existing question and remains one explicit Phase 4.3 coverage gap. Phase 2/3 question contents and verified states were not changed.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -26,22 +27,22 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 49/113 concepts modeled
-- Canonical knowledge items: 275
-- Existing verified questions mapped: 48
-- Explicit unmapped knowledge gaps: 212
+- Phase 4.2: active — 50/113 concepts modeled
+- Canonical knowledge items: 278
+- Existing verified questions mapped: 50
+- Explicit unmapped knowledge gaps: 213
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-agency` using source unit `civil-agency`.
+Continue Phase 4.2 at `takken-concept-unauthorized-agency` using source unit `civil-unauthorized-agency`.
 
-Preserve all 275 knowledge items, forty-eight valid mappings, and all two hundred twelve explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 278 knowledge items, fifty valid mappings, and all two hundred thirteen explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected two-item count. The question-knowledge map enforces a unique question ID and maps `takken-q-38-002` to the two Article 9 rules it directly tests. No new adult-ward deficit remains from the existing source question. No Phase 2/3 question data was modified.
+The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected three-item count. The question-knowledge map enforces unique question IDs and maps `takken-q-39-001` and `takken-q-39-002` only to the two rules they directly test. The Article 100 counterparty-awareness exception remains intentionally unmapped. No Phase 2/3 question data was modified.
 
 ## Publication invariant
 
