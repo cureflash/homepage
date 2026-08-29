@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T14:19:39.881Z",
+  "generatedAt": "2026-08-29T15:22:18.089Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1952,
-    "runtimeQuestionCount": 1952,
+    "approvedCandidateCount": 2052,
+    "runtimeQuestionCount": 2052,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 80
+    "qaRecordCount": 84
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -113,6 +113,12 @@
       "label": "主語位置の語形",
       "categoryId": "parts-of-speech",
       "categoryLabel": "品詞・語形"
+    },
+    {
+      "id": "p5.pron.possessive_forms",
+      "label": "所有格・所有代名詞",
+      "categoryId": "pronouns-relatives",
+      "categoryLabel": "代名詞・関係詞"
     },
     {
       "id": "p5.pron.subject_vs_object",
@@ -25432,6 +25438,1281 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_pron_possessive_forms_0001",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The marketing team will present ____ revised campaign proposal at Friday's meeting.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 0,
+      "explanation": "A noun follows the blank, so the possessive adjective 'our' is required before 'revised campaign proposal'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0002",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Ms. Ortega submitted her expense report before lunch, but I have not submitted ____ yet.",
+      "choices": [
+        "my",
+        "me",
+        "mine",
+        "I"
+      ],
+      "correctIndex": 2,
+      "explanation": "No noun follows the blank; the possessive pronoun 'mine' stands for 'my expense report'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0003",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The supplier confirmed that ____ delivery schedule would remain unchanged through September.",
+      "choices": [
+        "they",
+        "theirs",
+        "them",
+        "their"
+      ],
+      "correctIndex": 3,
+      "explanation": "The noun phrase 'delivery schedule' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0004",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our conference room is on the third floor, while ____ is beside the main lobby.",
+      "choices": [
+        "your",
+        "yours",
+        "you",
+        "yourself"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'yours' replaces 'your conference room'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0005",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The accountant asked Priya to attach ____ receipts to the reimbursement form.",
+      "choices": [
+        "her",
+        "hers",
+        "she",
+        "herself"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun 'receipts' follows the blank, so the possessive adjective 'her' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0006",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The east warehouse has already completed its inventory count, but ____ will not begin until tomorrow.",
+      "choices": [
+        "our",
+        "us",
+        "we",
+        "ours"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank; 'ours' stands for 'our inventory count'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0007",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please verify ____ contact information before the registration form is submitted.",
+      "choices": [
+        "you",
+        "yours",
+        "your",
+        "yourself"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'contact information' follows the blank, so the possessive adjective 'your' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0008",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Their warranty expires in December, whereas ____ remains valid until next March.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; the possessive pronoun 'ours' replaces 'our warranty'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0009",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The design firm updated ____ portfolio after completing the hotel renovation project.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun 'portfolio' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0010",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I have reviewed my section of the contract, but Lena is still revising ____.",
+      "choices": [
+        "her",
+        "she",
+        "hers",
+        "herself"
+      ],
+      "correctIndex": 2,
+      "explanation": "No noun follows the blank; 'hers' stands for 'her section of the contract'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0011",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The branch managers must submit ____ staffing requests by the end of the week.",
+      "choices": [
+        "them",
+        "theirs",
+        "they",
+        "their"
+      ],
+      "correctIndex": 3,
+      "explanation": "The noun phrase 'staffing requests' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0012",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Your parking permit is valid for one year, while ____ must be renewed every six months.",
+      "choices": [
+        "mine",
+        "my",
+        "me",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "No noun follows the blank; 'mine' replaces 'my parking permit'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0013",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The project coordinator distributed ____ notes from the client interview to the entire team.",
+      "choices": [
+        "she",
+        "hers",
+        "herself",
+        "her"
+      ],
+      "correctIndex": 3,
+      "explanation": "The noun 'notes' follows the blank, so the possessive adjective 'her' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0014",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our quotation includes installation costs, but ____ does not.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'theirs' stands for 'their quotation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0015",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Before leaving the laboratory, each technician should return ____ protective equipment to the storage cabinet.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'protective equipment' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0016",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "My client meeting was moved to Tuesday, but ____ is still scheduled for Monday afternoon.",
+      "choices": [
+        "your",
+        "you",
+        "yours",
+        "yourself"
+      ],
+      "correctIndex": 2,
+      "explanation": "No noun follows the blank; 'yours' replaces 'your client meeting'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0017",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The consultants will send ____ final recommendations after reviewing the survey results.",
+      "choices": [
+        "they",
+        "theirs",
+        "them",
+        "their"
+      ],
+      "correctIndex": 3,
+      "explanation": "The noun phrase 'final recommendations' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0018",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Her access badge works at the research facility, but ____ only works at the main office.",
+      "choices": [
+        "my",
+        "mine",
+        "me",
+        "I"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'mine' stands for 'my access badge'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0019",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We revised ____ budget estimate after receiving the contractor's updated price list.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'budget estimate' follows the blank, so the possessive adjective 'our' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0020",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The legal department has approved our version of the agreement but has not yet approved ____.",
+      "choices": [
+        "their",
+        "them",
+        "they",
+        "theirs"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank; 'theirs' replaces 'their version of the agreement'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0021",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please place ____ signature in the box at the bottom of the application.",
+      "choices": [
+        "you",
+        "yours",
+        "your",
+        "yourself"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun 'signature' follows the blank, so the possessive adjective 'your' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0022",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "My office printer is being repaired, so may I use ____ this afternoon?",
+      "choices": [
+        "your",
+        "yours",
+        "you",
+        "yourself"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'yours' stands for 'your office printer'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0023",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The training coordinator reminded the participants to bring ____ identification cards.",
+      "choices": [
+        "they",
+        "theirs",
+        "them",
+        "their"
+      ],
+      "correctIndex": 3,
+      "explanation": "The noun phrase 'identification cards' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0024",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our shipment arrived this morning, but ____ was delayed by severe weather.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'theirs' replaces 'their shipment'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0025",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I left ____ visitor pass with the security guard when I exited the building.",
+      "choices": [
+        "my",
+        "mine",
+        "me",
+        "I"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'visitor pass' follows the blank, so the possessive adjective 'my' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0026",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The finance department has finalized its quarterly forecast, while we are still revising ____.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'ours' stands for 'our quarterly forecast'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0027",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "All exhibitors must display ____ registration certificates near the entrance to their booths.",
+      "choices": [
+        "them",
+        "theirs",
+        "they",
+        "their"
+      ],
+      "correctIndex": 3,
+      "explanation": "The noun phrase 'registration certificates' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0028",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I checked my reservation details this morning, and Elena checked ____ as well.",
+      "choices": [
+        "hers",
+        "her",
+        "she",
+        "herself"
+      ],
+      "correctIndex": 0,
+      "explanation": "No noun follows the blank; 'hers' replaces 'her reservation details'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0029",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The software vendor will update ____ security settings during tonight's maintenance window.",
+      "choices": [
+        "they",
+        "theirs",
+        "their",
+        "them"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'security settings' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0030",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Your expense claim was approved yesterday, but ____ is still under review.",
+      "choices": [
+        "my",
+        "me",
+        "mine",
+        "I"
+      ],
+      "correctIndex": 2,
+      "explanation": "No noun follows the blank; 'mine' stands for 'my expense claim'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0031",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The maintenance crew stored ____ tools in the locked cabinet after completing the inspection.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun 'tools' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0032",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our proposal covers technical support, whereas ____ focuses mainly on installation services.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'theirs' stands for 'their proposal'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0033",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Before the workshop begins, please write ____ name and department on the attendance sheet.",
+      "choices": [
+        "you",
+        "yours",
+        "your",
+        "yourself"
+      ],
+      "correctIndex": 2,
+      "explanation": "The nouns 'name and department' follow the blank, so the possessive adjective 'your' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0034",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Ms. Patel's presentation starts at ten, and ____ begins immediately afterward.",
+      "choices": [
+        "our",
+        "us",
+        "we",
+        "ours"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank; 'ours' replaces 'our presentation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0035",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The restaurant chain plans to renovate ____ oldest location before the holiday season.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'oldest location' follows the blank, so the possessive adjective 'its' is required for the singular company.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0036",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I have uploaded my signed contract, but Carlos has not uploaded ____ yet.",
+      "choices": [
+        "his",
+        "him",
+        "he",
+        "himself"
+      ],
+      "correctIndex": 0,
+      "explanation": "No noun follows the blank; 'his' can function as a possessive pronoun standing for 'his signed contract'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0037",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The auditors requested that we provide ____ travel records for the previous fiscal year.",
+      "choices": [
+        "ours",
+        "us",
+        "our",
+        "we"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'travel records' follows the blank, so the possessive adjective 'our' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0038",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The north branch has replaced its reception desk, but ____ will remain unchanged until next year.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'theirs' stands for 'their reception desk'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0039",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every applicant should review ____ contact details before submitting the online form.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'contact details' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0040",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Your project deadline is Friday, while ____ has been extended to the following Monday.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'ours' replaces 'our project deadline'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0041",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The customer service manager asked each agent to update ____ availability in the scheduling system.",
+      "choices": [
+        "them",
+        "theirs",
+        "they",
+        "their"
+      ],
+      "correctIndex": 3,
+      "explanation": "The noun 'availability' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0042",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "My access code expires tonight, but ____ will remain active through the end of the month.",
+      "choices": [
+        "your",
+        "you",
+        "yours",
+        "yourself"
+      ],
+      "correctIndex": 2,
+      "explanation": "No noun follows the blank; 'yours' stands for 'your access code'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0043",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The research team presented ____ findings to senior management on Wednesday.",
+      "choices": [
+        "they",
+        "theirs",
+        "them",
+        "their"
+      ],
+      "correctIndex": 3,
+      "explanation": "The noun 'findings' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0044",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Her flight arrives at Kansai Airport, whereas ____ lands at Itami Airport.",
+      "choices": [
+        "my",
+        "mine",
+        "me",
+        "I"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'mine' replaces 'my flight'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0045",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We will submit ____ final cost estimate after the engineering review is complete.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'final cost estimate' follows the blank, so the possessive adjective 'our' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0046",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The supplier's warranty covers labor costs, but ____ covers both labor and replacement parts.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank; 'ours' stands for 'our warranty'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0047",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please make sure that ____ employee identification number is entered correctly on the request form.",
+      "choices": [
+        "you",
+        "your",
+        "yours",
+        "yourself"
+      ],
+      "correctIndex": 1,
+      "explanation": "The noun phrase 'employee identification number' follows the blank, so the possessive adjective 'your' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0048",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our booth is located near the main entrance, and ____ is at the opposite end of the exhibition hall.",
+      "choices": [
+        "their",
+        "them",
+        "theirs",
+        "they"
+      ],
+      "correctIndex": 2,
+      "explanation": "No noun follows the blank; 'theirs' replaces 'their booth'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0049",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The hotel updated ____ cancellation policy after receiving feedback from guests.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'cancellation policy' follows the blank, so the possessive adjective 'its' is required for the singular hotel.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0050",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I completed my safety training last week, while Nadia will complete ____ tomorrow.",
+      "choices": [
+        "her",
+        "herself",
+        "she",
+        "hers"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank; 'hers' stands for 'her safety training'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0051",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The design team submitted ____ revised floor plan before the client meeting.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'revised floor plan' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0052",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our conference room is on the third floor, while ____ is beside the reception area.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'theirs' replaces 'their conference room'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0053",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Mr. Chen asked the interns to attach ____ expense receipts to the reimbursement forms.",
+      "choices": [
+        "them",
+        "theirs",
+        "their",
+        "they"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'expense receipts' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0054",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "My laptop has already been upgraded, but ____ will be replaced next month.",
+      "choices": [
+        "your",
+        "you",
+        "yourself",
+        "yours"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'yours' stands for 'your laptop'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0055",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The courier company revised ____ delivery schedule because of the severe weather.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'delivery schedule' follows the blank, so the possessive adjective 'its' is required for the singular company.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0056",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Sofia completed her compliance course in June, and I completed ____ in July.",
+      "choices": [
+        "my",
+        "mine",
+        "me",
+        "I"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'mine' replaces 'my compliance course'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0057",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Before entering the laboratory, visitors must leave ____ bags in the storage lockers.",
+      "choices": [
+        "them",
+        "theirs",
+        "their",
+        "they"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun 'bags' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0058",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The marketing director approved our campaign yesterday, but she has not reviewed ____ yet.",
+      "choices": [
+        "their",
+        "them",
+        "they",
+        "theirs"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank; 'theirs' replaces 'their campaign'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0059",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each department is responsible for maintaining ____ own inventory records.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'own inventory records' follows the blank, so the possessive adjective 'its' agrees with singular 'each department'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0060",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Your badge expires at the end of this month, whereas ____ remains valid until December.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'ours' stands for 'our badge'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0061",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The consultants presented ____ recommendations to the board after the audit.",
+      "choices": [
+        "they",
+        "theirs",
+        "their",
+        "them"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun 'recommendations' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0062",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Our service contract includes weekend support, but ____ does not.",
+      "choices": [
+        "their",
+        "them",
+        "they",
+        "theirs"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'theirs' replaces 'their service contract'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0063",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The museum will publish ____ annual visitor statistics next week.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'annual visitor statistics' follows the blank, so the possessive adjective 'its' is required for singular 'museum'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0064",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "I have confirmed my hotel booking, and Daniel has confirmed ____ as well.",
+      "choices": [
+        "his",
+        "him",
+        "he",
+        "himself"
+      ],
+      "correctIndex": 0,
+      "explanation": "No noun follows the blank; 'his' functions as a possessive pronoun replacing 'his hotel booking'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0065",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please check ____ mailing address before signing the membership application.",
+      "choices": [
+        "you",
+        "yours",
+        "your",
+        "yourself"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'mailing address' follows the blank, so the possessive adjective 'your' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0066",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The eastern warehouse completed its safety inspection yesterday, and ____ is scheduled for Friday.",
+      "choices": [
+        "our",
+        "us",
+        "we",
+        "ours"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'ours' stands for 'our safety inspection'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0067",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The bank asked customers to verify ____ telephone numbers through the secure portal.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'telephone numbers' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0068",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "My presentation contains twelve slides, while ____ contains only eight.",
+      "choices": [
+        "her",
+        "hers",
+        "she",
+        "herself"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'hers' replaces 'her presentation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0069",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The construction firm updated ____ insurance certificate before beginning work on site.",
+      "choices": [
+        "it",
+        "itself",
+        "its",
+        "their"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'insurance certificate' follows the blank, so the possessive adjective 'its' is required for the singular firm.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0070",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Their estimate includes installation charges, but ____ covers only the equipment cost.",
+      "choices": [
+        "our",
+        "us",
+        "we",
+        "ours"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'ours' stands for 'our estimate'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0071",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Employees should store ____ personal belongings in the lockers provided near the entrance.",
+      "choices": [
+        "their",
+        "theirs",
+        "them",
+        "they"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'personal belongings' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0072",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Your invoice lists the correct tax amount, but ____ needs to be revised.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 1,
+      "explanation": "No noun follows the blank, so the possessive pronoun 'ours' replaces 'our invoice'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0073",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The project manager asked both contractors to submit ____ final schedules by noon.",
+      "choices": [
+        "them",
+        "theirs",
+        "their",
+        "they"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'final schedules' follows the blank, so the possessive adjective 'their' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0074",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "We have already tested our emergency generator, but the neighboring facility has not tested ____.",
+      "choices": [
+        "their",
+        "them",
+        "they",
+        "theirs"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank; 'theirs' replaces 'their emergency generator'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_possessive_forms_0075",
+      "version": 1,
+      "skillId": "p5.pron.possessive_forms",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The airline changed ____ baggage policy at the start of the summer season.",
+      "choices": [
+        "its",
+        "it",
+        "itself",
+        "their"
+      ],
+      "correctIndex": 0,
+      "explanation": "The noun phrase 'baggage policy' follows the blank, so the possessive adjective 'its' is required for singular 'airline'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_pron_subject_vs_object_0001",
       "version": 1,
       "skillId": "p5.pron.subject_vs_object",
@@ -26686,6 +27967,431 @@
       ],
       "correctIndex": 0,
       "explanation": "'Her' is the object of 'thanked', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0076",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The compliance officer asked Nora and ____ to review the revised disclosure form.",
+      "choices": [
+        "I",
+        "my",
+        "mine",
+        "me"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Me' is part of the compound object of 'asked', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0077",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "____ will accompany the engineering team during tomorrow's site inspection.",
+      "choices": [
+        "Them",
+        "They",
+        "Their",
+        "Theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "'They' is the subject of 'will accompany', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0078",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The revised insurance policy applies to all contractors, including Ms. Diaz and ____.",
+      "choices": [
+        "he",
+        "his",
+        "him",
+        "himself"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the preposition 'including', 'him' is required as the object pronoun.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0079",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Because ____ knows the client's reporting system well, Ms. Foster will lead the data migration.",
+      "choices": [
+        "her",
+        "hers",
+        "she",
+        "herself"
+      ],
+      "correctIndex": 2,
+      "explanation": "'She' is the subject of 'knows', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0080",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The purchasing assistant gave ____ the supplier's updated tax certificate.",
+      "choices": [
+        "us",
+        "we",
+        "our",
+        "ours"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Us' is the indirect object of 'gave', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0081",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The new laboratory manager and ____ are scheduled to meet the safety inspector at nine.",
+      "choices": [
+        "me",
+        "I",
+        "my",
+        "mine"
+      ],
+      "correctIndex": 1,
+      "explanation": "'I' is part of the compound subject of 'are scheduled', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0082",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The board secretary circulated the draft minutes to the directors and ____ before the vote.",
+      "choices": [
+        "they",
+        "their",
+        "them",
+        "theirs"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the preposition 'to', 'them' is part of the compound object, so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0083",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "If ____ need additional samples, the quality team can prepare them this afternoon.",
+      "choices": [
+        "us",
+        "our",
+        "ours",
+        "we"
+      ],
+      "correctIndex": 3,
+      "explanation": "'We' is the subject of 'need', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0084",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The account representative called ____ after the customer requested a revised quotation.",
+      "choices": [
+        "she",
+        "her",
+        "hers",
+        "herself"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Her' is the object of 'called', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0085",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "____ is responsible for confirming that the export license remains valid.",
+      "choices": [
+        "Him",
+        "His",
+        "Himself",
+        "He"
+      ],
+      "correctIndex": 3,
+      "explanation": "'He' is the subject of 'is responsible', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0086",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The workshop facilitator divided the participants into groups and placed Luis with ____.",
+      "choices": [
+        "I",
+        "me",
+        "my",
+        "mine"
+      ],
+      "correctIndex": 1,
+      "explanation": "After the preposition 'with', the object pronoun 'me' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0087",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "While ____ was reviewing the lease, Mr. Adams noticed an incorrect renewal date.",
+      "choices": [
+        "him",
+        "his",
+        "he",
+        "himself"
+      ],
+      "correctIndex": 2,
+      "explanation": "'He' is the subject of 'was reviewing', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0088",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The payroll system automatically sends ____ a notice when a timesheet is incomplete.",
+      "choices": [
+        "them",
+        "they",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Them' is the indirect object of 'sends', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0089",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither Ms. Kim nor ____ has received the final agenda for the budget meeting.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correctIndex": 3,
+      "explanation": "'She' is part of the compound subject of 'has received', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0090",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The facilities director asked Priya and ____ to inspect the emergency lighting on the second floor.",
+      "choices": [
+        "we",
+        "our",
+        "us",
+        "ours"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Us' is part of the compound object of 'asked', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0091",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Since ____ oversees the warranty claims, Mr. Lopez should respond to the manufacturer's inquiry.",
+      "choices": [
+        "him",
+        "his",
+        "himself",
+        "he"
+      ],
+      "correctIndex": 3,
+      "explanation": "'He' is the subject of 'oversees', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0092",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The travel desk booked adjacent seats for Ms. Weber and ____ on the morning train.",
+      "choices": [
+        "I",
+        "me",
+        "my",
+        "mine"
+      ],
+      "correctIndex": 1,
+      "explanation": "After the preposition 'for', 'me' is part of the compound object, so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0093",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "____ have been authorized to negotiate directly with the landlord about the renewal terms.",
+      "choices": [
+        "Them",
+        "They",
+        "Their",
+        "Theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "'They' is the subject of 'have been authorized', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0094",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The branch coordinator asked the delivery driver to contact ____ upon arrival at the loading dock.",
+      "choices": [
+        "we",
+        "our",
+        "us",
+        "ours"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Us' is the object of 'contact', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0095",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "After the vendor demonstration, ____ will prepare a recommendation for the procurement committee.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correctIndex": 3,
+      "explanation": "'She' is the subject of 'will prepare', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0096",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The legal adviser explained the confidentiality clause to Marcus and ____ before they signed the agreement.",
+      "choices": [
+        "I",
+        "me",
+        "my",
+        "mine"
+      ],
+      "correctIndex": 1,
+      "explanation": "After the preposition 'to', 'me' is part of the compound object, so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0097",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Only ____ were given temporary access to the archived personnel records.",
+      "choices": [
+        "they",
+        "them",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "'They' is the subject of 'were given', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0098",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The conference host introduced Dr. Tanaka and ____ to the keynote speaker before lunch.",
+      "choices": [
+        "she",
+        "hers",
+        "her",
+        "herself"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Her' is part of the compound object of 'introduced', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0099",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "When ____ complete the equipment checklist, the supervisor will authorize the shipment.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 3,
+      "explanation": "'We' is the subject of 'complete', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0100",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The support engineer sent ____ detailed instructions for restoring the database backup.",
+      "choices": [
+        "him",
+        "he",
+        "his",
+        "himself"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Him' is the indirect object of 'sent', so the object pronoun is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
