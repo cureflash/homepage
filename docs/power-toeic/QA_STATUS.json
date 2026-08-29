@@ -1,12 +1,12 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 2550,
-  "verified_question_count": 2474,
+  "checked_question_count": 2575,
+  "verified_question_count": 2499,
   "needs_revision_count": 76,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-29-scheduled-059-logical-conjunction-part2",
+  "last_completed_batch": "2026-08-29-scheduled-060-logical-conjunction-part3",
   "last_completed_micro_skill": "p5.conn.logical_conjunction",
   "last_batch_counts": {
     "checked": 25,
@@ -14,10 +14,10 @@
     "needs_revision": 0,
     "rejected": 0
   },
-  "next_batch": "2026-08-29-scheduled-059-logical-conjunction-part3",
+  "next_batch": "2026-08-29-scheduled-060-logical-conjunction-part4",
   "next_micro_skill": "p5.conn.logical_conjunction",
-  "next_question_id": "p5_conn_logical_conjunction_0051",
+  "next_question_id": "p5_conn_logical_conjunction_0076",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-29T18:15:00+09:00"
+  "updated_at": "2026-08-29T19:12:00+09:00"
 }
