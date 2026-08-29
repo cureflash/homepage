@@ -25,6 +25,7 @@ try:
     from scripts.science_physics_circuits import PHYSICS_CIRCUIT_PROBLEM_COUNT, PHYSICS_CIRCUIT_TOPICS
     from scripts.science_physics_magnetic_force import PHYSICS_MAGNETIC_FORCE_PROBLEM_COUNT, PHYSICS_MAGNETIC_FORCE_TOPICS
     from scripts.science_physics_electromagnetic_induction import PHYSICS_ELECTROMAGNETIC_INDUCTION_PROBLEM_COUNT, PHYSICS_ELECTROMAGNETIC_INDUCTION_TOPICS
+    from scripts.science_physics_induction_followup import PHYSICS_INDUCTION_FOLLOWUP_PROBLEM_COUNT, PHYSICS_INDUCTION_FOLLOWUP_TOPICS
     from scripts.science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
@@ -48,9 +49,9 @@ except ModuleNotFoundError:
     from science_physics_circuits import PHYSICS_CIRCUIT_PROBLEM_COUNT, PHYSICS_CIRCUIT_TOPICS
     from science_physics_magnetic_force import PHYSICS_MAGNETIC_FORCE_PROBLEM_COUNT, PHYSICS_MAGNETIC_FORCE_TOPICS
     from science_physics_electromagnetic_induction import PHYSICS_ELECTROMAGNETIC_INDUCTION_PROBLEM_COUNT, PHYSICS_ELECTROMAGNETIC_INDUCTION_TOPICS
+    from science_physics_induction_followup import PHYSICS_INDUCTION_FOLLOWUP_PROBLEM_COUNT, PHYSICS_INDUCTION_FOLLOWUP_TOPICS
     from science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
-
 
 FORMAL_COURSE = "物理"
 ID_PREFIX = "science-physics-motion-"
@@ -75,8 +76,8 @@ ALL_TOPICS = {
     **{key: (topic, PHYSICS_CIRCUIT_PROBLEM_COUNT) for key, topic in PHYSICS_CIRCUIT_TOPICS.items()},
     **{key: (topic, PHYSICS_MAGNETIC_FORCE_PROBLEM_COUNT) for key, topic in PHYSICS_MAGNETIC_FORCE_TOPICS.items()},
     **{key: (topic, PHYSICS_ELECTROMAGNETIC_INDUCTION_PROBLEM_COUNT) for key, topic in PHYSICS_ELECTROMAGNETIC_INDUCTION_TOPICS.items()},
+    **{key: (topic, PHYSICS_INDUCTION_FOLLOWUP_PROBLEM_COUNT) for key, topic in PHYSICS_INDUCTION_FOLLOWUP_TOPICS.items()},
 }
-
 
 def _generate_topic_problems(topic, mode_key, mode, seed, problem_count):
     generator = topic.get("generator", "formula")
@@ -85,7 +86,6 @@ def _generate_topic_problems(topic, mode_key, mode, seed, problem_count):
     if generator != "formula":
         raise ValueError(f"unsupported formal Physics generator: {generator}")
     return generate_formula_drill(topic["spec"], seed, problem_count, solve_for=mode["solve_for"]), "numeric"
-
 
 def build_batch(repo_root):
     root = Path(repo_root)
@@ -125,7 +125,6 @@ def build_batch(repo_root):
     validate_catalog(prospective_catalog)
     return catalog_path, output_dir, catalog, pending, prospective_catalog
 
-
 def publish(repo_root):
     root = Path(repo_root)
     catalog_path, output_dir, catalog, pending, prospective_catalog = build_batch(root)
@@ -148,7 +147,6 @@ def publish(repo_root):
     catalog_path.write_text(json.dumps(prospective_catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"published {len(pending)} formal Physics worksheets")
     return len(pending)
-
 
 if __name__ == "__main__":
     publish(Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parents[1])
