@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 3400,
-  "checked_question_count": 2400,
+  "generated_question_count": 3425,
+  "checked_question_count": 2425,
   "pending_validation_count": 1000,
-  "verified_question_count": 2324,
+  "verified_question_count": 2349,
   "needs_revision_count": 76,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -45,14 +45,14 @@
     "p5.pron.indefinite_agreement",
     "p5.det.article_choice"
   ],
-  "current_batch": "2026-08-29-scheduled-055-article-choice-part4",
+  "current_batch": "2026-08-29-scheduled-056-countable-number-part1",
   "current_micro_skill": "p5.det.countable_number",
-  "current_micro_skill_persisted_count": 0,
+  "current_micro_skill_persisted_count": 25,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_det_countable_number_0001",
+  "next_resume_id": "p5_det_countable_number_0026",
   "next_micro_skill": "p5.det.countable_number",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Generated 25 questions: p5.det.article_choice 0076-0100, completing the skill at 100/100. All remain pending_validation. New-generation exact duplicates = 0 and SequenceMatcher >= 0.94 = 0; maximum pairwise stem similarity = 0.568. Answer positions A/B/C/D = 7/6/6/6. Independently reviewed the oldest 25 pending items: p5.conn.for_vs_since 0076-0100. QA: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 2,400 checked, 2,324 verified, 76 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_det_countable_number_0001; next QA is p5_conn_time_prepositions_0001.",
-  "updated_at": "2026-08-29T15:14:35+09:00"
+  "last_run_result": "Generated 25 questions: p5.det.countable_number 0001-0025. All remain pending_validation. New-generation exact duplicates = 0 and SequenceMatcher >= 0.94 = 0; maximum pairwise stem similarity = 0.524. Answer positions A/B/C/D = 7/6/6/6. Independently reviewed the oldest 25 pending items: p5.conn.time_prepositions 0001-0025. QA: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 2,425 checked, 2,349 verified, 76 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_det_countable_number_0026; next QA is p5_conn_time_prepositions_0026.",
+  "updated_at": "2026-08-29T16:14:39+09:00"
 }
