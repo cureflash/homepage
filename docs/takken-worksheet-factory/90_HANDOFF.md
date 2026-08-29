@@ -8,19 +8,19 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-false-advertising` using source unit `false-advertising-prohibited-conduct` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-article35-procedure` using source units `article35-basics` and `article35-vs-37` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-false-advertising.js` with five verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-article35-procedure.js` with five verified atomic knowledge items:
 
-1. `takken-k-false-advertising-materially-false` — Article 32 prohibits advertisements containing representations that are materially contrary to fact concerning the statutory subject matters.
-2. `takken-k-false-advertising-materially-superior-favorable` — Article 32 separately prohibits representations that cause people to mistake the advertised property or conditions as materially superior or advantageous to reality.
-3. `takken-k-false-advertising-property-scope` — statutory subject matter includes location, scale, form/quality, current or future use restrictions, environment, transportation and other utility matters.
-4. `takken-k-false-advertising-transaction-conditions-scope` — statutory subject matter also includes price/rent and other consideration, payment method, and financing-arrangement matters concerning price or exchange difference.
-5. `takken-k-false-advertising-bait-fictitious-ads` — MLIT interpretation applies Article 32 to bait advertisements for attractive properties there is no intention to sell and to advertisements for properties that do not actually exist.
+1. `takken-k-article35-procedure-before-contract` — 35条の重要事項説明は契約成立までの間に行う。
+2. `takken-k-article35-procedure-takkenshi-explains` — 宅建業者は宅地建物取引士をして重要事項説明を行わせる。
+3. `takken-k-article35-procedure-document-delivery` — 重要事項を記載した35条書面を交付して説明させる。
+4. `takken-k-article35-procedure-electronic-delivery` — 相手方等の承諾を得た法定の電磁的方法による提供は書面交付に代えることができ、書面を交付したものとみなされる。
+5. `takken-k-article35-procedure-card-presentation` — 宅地建物取引士は重要事項説明時に宅地建物取引士証を相手方へ提示しなければならない。
 
-Primary authority is current 宅地建物取引業法 Article 32. The bait/fictitious-advertising item additionally uses MLIT's official Article 32 interpretation notice. The canonical source unit's `u20-f1` is preserved as the source fact reference.
+Primary authority is current 宅地建物取引業法 Article 35. The electronic-delivery item additionally uses MLIT's official notice on electronic provision of important-matters and contract documents. Canonical source facts `u21-f1`, `u21-f2`, and `u24-f1` are preserved as source fact references.
 
-Existing verified `takken-q-20-001` directly tests that property location/scale/form, use restrictions, environment and similar property-side matters fall within the statutory advertising scope, so it was mapped only to `takken-k-false-advertising-property-scope`. It does not directly distinguish the two Article 32 prohibition standards, transaction-condition/financing scope, or bait/fictitious advertising; those four items remain explicit Phase 4.3 deficits.
+Existing verified `takken-q-21-001` directly tests pre-contract timing,宅地建物取引士 explanation, and delivery of the prescribed document, so it is mapped to those three knowledge items. Existing verified `takken-q-21-002` directly tests mandatory宅地建物取引士証 presentation and is mapped to that item. Neither question tests consent-based electronic provision, so that item remains an explicit Phase 4.3 deficit. `takken-q-24-001` was not additionally mapped because the current mapping schema assigns each existing question to one concept and the comparison unit remains available for the later `takken-concept-article35-vs-37` checkpoint.
 
 No Phase 2/3 question content or validation state was changed. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -31,18 +31,18 @@ No Phase 2/3 question content or validation state was changed. No Phase 4.3 ques
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 26/113 concepts modeled
-- Canonical knowledge items: 134
-- Existing verified questions mapped: 22
-- Explicit unmapped knowledge gaps: 103
+- Phase 4.2: active — 27/113 concepts modeled
+- Canonical knowledge items: 139
+- Existing verified questions mapped: 24
+- Explicit unmapped knowledge gaps: 104
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-article35-procedure` using source units `article35-basics` and `article35-vs-37`.
+Continue Phase 4.2 at `takken-concept-article35-items` using source unit `article35-items`.
 
-Preserve all 134 knowledge items, twenty-two valid mappings, and all one hundred three explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 139 knowledge items, twenty-four valid mappings, and all one hundred four explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Publication invariant
 
