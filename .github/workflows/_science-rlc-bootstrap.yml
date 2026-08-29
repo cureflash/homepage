@@ -1,0 +1,86 @@
+name: Bootstrap formal Physics RLC impedance checkpoint
+
+on:
+  push:
+    branches:
+      - science-physics-rlc-impedance-20260829
+    paths:
+      - '.github/workflows/_science-rlc-bootstrap.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  implement-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout implementation branch
+        uses: actions/checkout@v4
+        with:
+          ref: science-physics-rlc-impedance-20260829
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF dependency
+        run: python -m pip install --disable-pip-version-check reportlab
+
+      - name: Apply permanent source changes
+        run: python scripts/_apply_science_rlc_impedance_checkpoint.py
+
+      - name: Run shared and formal Physics regressions
+        run: |
+          python tests/test_worksheet_factory.py
+          python tests/test_science_formula_relations.py
+          python tests/test_science_product_over_divisor.py
+          python -m unittest discover -s tests -p 'test_science_physics_*.py'
+
+      - name: Generate prospective RLC PDFs and catalog
+        run: python scripts/publish_science_physics.py
+
+      - name: Validate prospective 3030-PDF formal Physics catalog
+        run: |
+          python tests/test_worksheet_factory.py
+          python tests/test_science_formula_relations.py
+          python tests/test_science_product_over_divisor.py
+          python -m unittest discover -s tests -p 'test_science_physics_*.py'
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          from scripts.worksheet_factory import validate_catalog
+
+          root = Path('.')
+          catalog = json.loads((root / 'worksheets/catalog.json').read_text(encoding='utf-8'))
+          validate_catalog(catalog, root)
+          rows = [x for x in catalog if x.get('id', '').startswith('science-physics-motion-')]
+          assert len(rows) == 3030, len(rows)
+          assert len({x['content_hash'] for x in rows}) == 3030
+          assert Counter(x['answer_type'] for x in rows) == Counter({'numeric': 2110, 'accepted-set': 920})
+          new_rows = [x for x in rows if x.get('skill') == 'ac-series-rlc-impedance-numeric']
+          assert len(new_rows) == 30, len(new_rows)
+          assert all(x['worksheet_mode'] == 'calculation-basic' for x in new_rows)
+          assert all(x['problem_count'] == 20 for x in new_rows)
+          assert len({x['content_hash'] for x in new_rows}) == 30
+          for entry in new_rows:
+              path = root / entry['url']
+              data = path.read_bytes()
+              assert data.startswith(b'%PDF')
+              assert path.stat().st_size > 1000
+              assert b'/Count 2' in data, entry['id']
+          print('Prospective formal Physics RLC impedance 30-PDF validation: OK')
+          PY
+
+      - name: Discard generated artifacts and commit implementation only
+        run: |
+          git restore worksheets/catalog.json
+          git clean -f materials/worksheets/science/high-school/physics/motion/
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --check
+          git commit -m 'Implement formal Physics RLC impedance checkpoint'
+          git push origin HEAD:science-physics-rlc-impedance-20260829
