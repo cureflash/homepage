@@ -16,4 +16,4 @@
 
 ## 現在の先頭未充足skill
 
-`kobun.aux.ki_keri.meaning` — き・けりの意味識別。targetQuestions: 200。2026-08-29 17:00 JST時点で125/200、次は `kobun_aux_ki_keri_meaning_0126`。
+`kobun.aux.ki_keri.meaning` — き・けりの意味識別。targetQuestions: 200。2026-08-29 18:02 JST時点で150/200、次は `kobun_aux_ki_keri_meaning_0151`。
