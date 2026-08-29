@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: 2,550
-- Verified: 2,474
+- Checked: 2,575
+- Verified: 2,499
 - Needs revision: 76
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -14,7 +14,7 @@
 
 Reviewed the oldest 25 unchecked questions in strict order.
 
-- `p5.conn.logical_conjunction` 0026-0050: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
+- `p5.conn.logical_conjunction` 0051-0075: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
 
 Each item was individually resolved from its causal, concessive, purpose, conditional, contrast, or temporal relation. All 25 had one defensible answer, natural TOEIC-style English, plausible distractors, intended-skill alignment, and a consistent explanation.
 
@@ -22,4 +22,4 @@ The persisted candidate format co-locates stems, choices, proposed answers and e
 
 ## Next QA
 
-Continue at `p5_conn_logical_conjunction_0051`.
+Continue at `p5_conn_logical_conjunction_0076`.
