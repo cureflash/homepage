@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T13:15:38.079Z",
+  "generatedAt": "2026-08-29T14:19:39.881Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 1927,
-    "runtimeQuestionCount": 1927,
+    "approvedCandidateCount": 1952,
+    "runtimeQuestionCount": 1952,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 79
+    "qaRecordCount": 80
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -26261,6 +26261,431 @@
       ],
       "correctIndex": 0,
       "explanation": "'Him' is the object of 'contacted', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0051",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The regional director asked Ms. Chen and ____ to prepare the quarterly sales forecast.",
+      "choices": [
+        "I",
+        "me",
+        "my",
+        "mine"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Me' is part of the compound object of 'asked', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0052",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "____ will inspect the renovated conference rooms before they reopen on Monday.",
+      "choices": [
+        "They",
+        "Them",
+        "Their",
+        "Theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "'They' is the subject of 'will inspect', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0053",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The reimbursement form must be signed by the department head and ____.",
+      "choices": [
+        "she",
+        "hers",
+        "her",
+        "herself"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the preposition 'by', 'her' is part of a compound object, so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0054",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Because ____ handles international accounts, Mr. Singh will attend the overseas client meeting.",
+      "choices": [
+        "him",
+        "his",
+        "himself",
+        "he"
+      ],
+      "correctIndex": 3,
+      "explanation": "'He' is the subject of 'handles', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0055",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The training coordinator sent ____ a reminder about tomorrow's safety workshop.",
+      "choices": [
+        "us",
+        "we",
+        "our",
+        "ours"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Us' is the indirect object of 'sent', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0056",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither the consultant nor ____ was available to answer the auditor's question.",
+      "choices": [
+        "me",
+        "I",
+        "my",
+        "mine"
+      ],
+      "correctIndex": 1,
+      "explanation": "The pronoun is part of the compound subject of 'was available', so the subject pronoun 'I' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0057",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The vendor invited Mr. Gomez and ____ to tour the new distribution center.",
+      "choices": [
+        "they",
+        "their",
+        "them",
+        "theirs"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Them' is part of the compound object of 'invited', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0058",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "If ____ finish the inventory count by noon, we can reopen the warehouse this afternoon.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 3,
+      "explanation": "'We' is the subject of 'finish', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0059",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The finance manager asked ____ to verify the bank account details before issuing payment.",
+      "choices": [
+        "him",
+        "he",
+        "his",
+        "himself"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Him' is the object of 'asked', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0060",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "____ has already confirmed the catering order for the annual reception.",
+      "choices": [
+        "Her",
+        "She",
+        "Hers",
+        "Herself"
+      ],
+      "correctIndex": 1,
+      "explanation": "'She' is the subject of 'has confirmed', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0061",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The project leader divided the research assignments between Carlos and ____.",
+      "choices": [
+        "I",
+        "my",
+        "me",
+        "mine"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the preposition 'between', the object pronoun 'me' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0062",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Although ____ had never used the software before, Ms. Patel completed the setup without assistance.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correctIndex": 3,
+      "explanation": "'She' is the subject of 'had never used', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0063",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The receptionist gave ____ directions to the executive meeting room.",
+      "choices": [
+        "them",
+        "they",
+        "their",
+        "theirs"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Them' is the indirect object of 'gave', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0064",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Both Ms. Laurent and ____ are authorized to approve travel expenses.",
+      "choices": [
+        "him",
+        "he",
+        "his",
+        "himself"
+      ],
+      "correctIndex": 1,
+      "explanation": "'He' is part of the compound subject of 'are authorized', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0065",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Please forward the revised shipping schedule to the logistics team and ____.",
+      "choices": [
+        "we",
+        "our",
+        "us",
+        "ours"
+      ],
+      "correctIndex": 2,
+      "explanation": "After the preposition 'to', 'us' is part of a compound object, so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0066",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Since ____ manages the customer database, Ms. Evans should review the proposed access policy.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correctIndex": 3,
+      "explanation": "'She' is the subject of 'manages', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0067",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The maintenance supervisor showed ____ where the emergency shutoff valve was located.",
+      "choices": [
+        "me",
+        "I",
+        "my",
+        "mine"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Me' is the object of 'showed', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0068",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "____ were selected to represent the branch at the national service conference.",
+      "choices": [
+        "Them",
+        "They",
+        "Their",
+        "Theirs"
+      ],
+      "correctIndex": 1,
+      "explanation": "'They' is the subject of 'were selected', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0069",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The committee asked Ms. Romero and ____ for additional information about the proposal.",
+      "choices": [
+        "she",
+        "hers",
+        "her",
+        "herself"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Her' is part of the compound object of 'asked', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0070",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Only ____ can authorize a refund above the standard limit.",
+      "choices": [
+        "him",
+        "his",
+        "himself",
+        "he"
+      ],
+      "correctIndex": 3,
+      "explanation": "'He' is the subject of 'can authorize', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0071",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The travel agent emailed ____ the updated itinerary shortly after the flight change.",
+      "choices": [
+        "us",
+        "we",
+        "our",
+        "ours"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Us' is the indirect object of 'emailed', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0072",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "After lunch, ____ will meet with the contractor to review the revised construction schedule.",
+      "choices": [
+        "her",
+        "she",
+        "hers",
+        "herself"
+      ],
+      "correctIndex": 1,
+      "explanation": "'She' is the subject of 'will meet', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0073",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The operations manager assigned Daniel and ____ to supervise the weekend installation.",
+      "choices": [
+        "I",
+        "my",
+        "me",
+        "mine"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Me' is part of the compound object of 'assigned', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0074",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "When ____ arrive at the client's office, we will call the technical support team.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "we"
+      ],
+      "correctIndex": 3,
+      "explanation": "'We' is the subject of 'arrive', so the subject pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_subject_vs_object_0075",
+      "version": 1,
+      "skillId": "p5.pron.subject_vs_object",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The branch supervisor thanked ____ for covering the reception desk during the meeting.",
+      "choices": [
+        "her",
+        "she",
+        "hers",
+        "herself"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Her' is the object of 'thanked', so the object pronoun is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },

@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 2650,
-  "verified_question_count": 2567,
+  "checked_question_count": 2675,
+  "verified_question_count": 2592,
   "needs_revision_count": 83,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-29-scheduled-063-subject-vs-object-part2",
+  "last_completed_batch": "2026-08-29-scheduled-064-subject-vs-object-part3",
   "last_completed_micro_skill": "p5.pron.subject_vs_object",
   "last_batch_counts": {
     "checked": 25,
-    "verified": 24,
-    "needs_revision": 1,
+    "verified": 25,
+    "needs_revision": 0,
     "rejected": 0
   },
   "next_batch": "p5.pron.subject_vs_object",
   "next_micro_skill": "p5.pron.subject_vs_object",
-  "next_question_id": "p5_pron_subject_vs_object_0051",
+  "next_question_id": "p5_pron_subject_vs_object_0076",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-29T22:12:00+09:00"
+  "updated_at": "2026-08-29T23:12:00+09:00"
 }
