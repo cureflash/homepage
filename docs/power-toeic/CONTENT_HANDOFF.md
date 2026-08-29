@@ -7,9 +7,9 @@
 ## Current canonical state
 
 - Fully completed generated micro-skills: 34 / 44
-- Generated questions persisted: 3,400
-- QA checked: 2,400
-- Verified: 2,324
+- Generated questions persisted: 3,425
+- QA checked: 2,425
+- Verified: 2,349
 - Needs revision: 76
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -20,17 +20,17 @@
 
 Generated 25 questions as a safe checkpoint.
 
-- `p5.det.article_choice` 0076-0100: 25 questions; skill completed at 100/100.
+- `p5.det.countable_number` 0001-0025: 25 questions; skill progress 25/100.
 
-All new items remain `pending_validation`. Across the new 25 stems: exact duplicates = 0, SequenceMatcher >= 0.94 = 0, maximum pairwise similarity = 0.568. Answer positions A/B/C/D = 7/6/6/6.
+All new items remain `pending_validation`. Across the new 25 stems: exact duplicates = 0, SequenceMatcher >= 0.94 = 0, maximum pairwise similarity = 0.524. Answer positions A/B/C/D = 7/6/6/6.
 
-Next generation: `p5_det_countable_number_0001`.
+Next generation: `p5_det_countable_number_0026`.
 
 ## This run — QA
 
 Reviewed the oldest 25 unchecked questions in strict order.
 
-- `p5.conn.for_vs_since` 0076-0100: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
+- `p5.conn.time_prepositions` 0001-0025: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
 
 ## QA-method limitation
 
@@ -38,4 +38,4 @@ The persisted candidate format co-locates stems, choices, proposed answers and e
 
 ## Next QA
 
-Continue the oldest unchecked backlog at `p5_conn_time_prepositions_0001`.
+Continue the oldest unchecked backlog at `p5_conn_time_prepositions_0026`.
