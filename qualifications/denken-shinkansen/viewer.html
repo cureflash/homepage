@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="電験×新幹線の解説PDF・練習PDFをブラウザで閲覧できます。">
+  <meta name="description" content="電験×新幹線のWeb記事・解説PDF・練習PDFをブラウザで閲覧できます。">
   <title>教材｜電験×新幹線｜ひかり教材室</title>
   <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="denken.css">
@@ -27,18 +27,27 @@
       <p class="eyebrow" data-series-name></p>
       <h1 data-topic-title>教材を読み込み中</h1>
       <p data-topic-summary></p>
+      <p class="publication-note" data-publication-note hidden></p>
 
       <div class="viewer-actions" aria-label="表示切替">
+        <button type="button" data-show-article>Web記事</button>
         <button type="button" data-show-explanation>解説PDF</button>
         <button type="button" data-show-practice>練習PDF</button>
-        <a class="primary" data-download-explanation download>解説PDFを開く</a>
-        <a data-download-practice download>練習PDFを開く</a>
+        <a class="primary" data-download-explanation>解説PDFを開く</a>
+        <a data-download-practice>練習PDFを開く</a>
         <a data-slides>PowerPoint</a>
-        <a data-source>根拠・計算条件</a>
+        <a data-source>Markdown原文</a>
       </div>
     </section>
 
-    <section class="container section" data-viewer-content>
+    <section class="container article-shell" data-article-section hidden>
+      <article class="denken-article" data-article-content>
+        <p>記事を読み込み中です。</p>
+      </article>
+      <div class="empty-state" data-article-error hidden>記事本文を読み込めませんでした。</div>
+    </section>
+
+    <section class="container section" data-pdf-section data-viewer-content>
       <iframe class="pdf-frame" data-pdf-frame title="教材PDF"></iframe>
       <p class="viewer-fallback">PDFが表示されない場合は <a data-pdf-direct>PDFを直接開く</a> を使用してください。</p>
     </section>
