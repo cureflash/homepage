@@ -1,23 +1,23 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 2175,
-  "verified_question_count": 2100,
+  "checked_question_count": 2275,
+  "verified_question_count": 2200,
   "needs_revision_count": 75,
   "rejected_question_count": 0,
   "pending_validation_count": 1000,
-  "last_completed_batch": "2026-08-29-scheduled-052-during-vs-while-part3",
-  "last_completed_micro_skill": "p5.conn.during_vs_while",
+  "last_completed_batch": "2026-08-29-scheduled-053-by-vs-until-part3",
+  "last_completed_micro_skill": "p5.conn.by_vs_until",
   "last_batch_counts": {
-    "checked": 25,
-    "verified": 25,
+    "checked": 100,
+    "verified": 100,
     "needs_revision": 0,
     "rejected": 0
   },
-  "next_batch": "2026-08-29-scheduled-053-during-vs-while-part4",
-  "next_micro_skill": "p5.conn.during_vs_while",
-  "next_question_id": "p5_conn_during_vs_while_0076",
+  "next_batch": "2026-08-29-scheduled-054-by-vs-until-part4",
+  "next_micro_skill": "p5.conn.by_vs_until",
+  "next_question_id": "p5_conn_by_vs_until_0076",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-29T12:17:08+09:00"
+  "updated_at": "2026-08-29T13:14:08+09:00"
 }
