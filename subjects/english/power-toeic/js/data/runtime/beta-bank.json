@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-29T17:24:05.572Z",
+  "generatedAt": "2026-08-29T18:20:23.385Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2175,
-    "runtimeQuestionCount": 2175,
+    "approvedCandidateCount": 2275,
+    "runtimeQuestionCount": 2275,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 89
+    "qaRecordCount": 93
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -129,6 +129,12 @@
     {
       "id": "p5.pron.subject_vs_object",
       "label": "主格・目的格代名詞",
+      "categoryId": "pronouns-relatives",
+      "categoryLabel": "代名詞・関係詞"
+    },
+    {
+      "id": "p5.rel.who_vs_which",
+      "label": "who / which",
       "categoryId": "pronouns-relatives",
       "categoryLabel": "代名詞・関係詞"
     },
@@ -30489,6 +30495,1706 @@
       ],
       "correctIndex": 0,
       "explanation": "'Him' is the indirect object of 'sent', so the object pronoun is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0001",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The consultant ____ prepared the market forecast will present the findings at noon.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'consultant' is a person and the blank is the subject of 'prepared', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0002",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The software package ____ includes the new reporting tool will be installed tonight.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'software package' is a thing and the blank is the subject of 'includes', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0003",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Employees ____ complete the safety course by Friday will receive updated access badges.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Employees' refers to people and the blank is the subject of 'complete', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0004",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The conveyor belt ____ moves finished cartons to the loading area is undergoing maintenance.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'conveyor belt' is a thing and the blank is the subject of 'moves', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0005",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The accountant ____ handles international invoices is working from the Singapore office this week.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'accountant' is a person and the blank is the subject of 'handles', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0006",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The conference room ____ overlooks the harbor has been reserved for the client briefing.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'conference room' is a thing and the blank is the subject of 'overlooks', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0007",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Applicants ____ have at least three years of sales experience will be interviewed first.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Applicants' refers to people and the blank is the subject of 'have', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0008",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The scanner ____ reads damaged barcodes more accurately arrived yesterday.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'scanner' is a thing and the blank is the subject of 'reads', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0009",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The engineer ____ designed the cooling system will inspect the prototype this afternoon.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'engineer' is a person and the blank is the subject of 'designed', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0010",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The policy ____ governs travel reimbursements was revised at the start of this quarter.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'policy' is a thing and the blank is the subject of 'governs', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0011",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Customers ____ subscribe before September will receive the introductory rate for six months.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Customers' refers to people and the blank is the subject of 'subscribe', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0012",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The shipment ____ contains the replacement valves is scheduled to clear customs tomorrow.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'shipment' is a thing and the blank is the subject of 'contains', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0013",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The supervisor ____ approved the overtime request is attending a training seminar today.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'supervisor' is a person and the blank is the subject of 'approved', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0014",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The contract ____ outlines the warranty terms expires at the end of December.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'contract' is a thing and the blank is the subject of 'outlines', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0015",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Technicians ____ service the laboratory equipment must wear protective footwear.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Technicians' refers to people and the blank is the subject of 'service', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0016",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The brochure ____ explains the membership benefits is available at the reception desk.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'brochure' is a thing and the blank is the subject of 'explains', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0017",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The recruiter ____ coordinates graduate hiring will visit three universities next month.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'recruiter' is a person and the blank is the subject of 'coordinates', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0018",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The warehouse ____ stores temperature-sensitive products has a backup generator.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'warehouse' is a thing and the blank is the subject of 'stores', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0019",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Sales representatives ____ meet the quarterly target will qualify for the incentive trip.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Sales representatives' refers to people and the blank is the subject of 'meet', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0020",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The device ____ monitors room humidity sends an alert when levels exceed the limit.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'device' is a thing and the blank is the subject of 'monitors', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0021",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The attorney ____ reviewed the licensing agreement recommended two changes to the termination clause.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'attorney' is a person and the blank is the subject of 'reviewed', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0022",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The dashboard ____ displays regional sales figures is updated every fifteen minutes.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'dashboard' is a thing and the blank is the subject of 'displays', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0023",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Participants ____ arrive after registration closes should report directly to the information desk.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Participants' refers to people and the blank is the subject of 'arrive', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0024",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The battery pack ____ powers the portable scanner can operate for up to twelve hours.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'battery pack' is a thing and the blank is the subject of 'powers', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0025",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The analyst ____ tracks commodity prices sends the procurement team a summary every Monday.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'analyst' is a person and the blank is the subject of 'tracks', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0026",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The auditor ____ identified the accounting discrepancy will meet with the finance director tomorrow.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'auditor' is a person and the blank is the subject of 'identified', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0027",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The mobile application ____ tracks delivery vehicles was updated overnight.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'mobile application' is a thing and the blank is the subject of 'tracks', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0028",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Supplier representatives ____ submit complete tax forms will be added to the approved contact list.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Supplier representatives' refers to people and the blank is the subject of 'submit', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0029",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The inspection report ____ lists the damaged components is attached to the maintenance request.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'inspection report' is a thing and the blank is the subject of 'lists', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0030",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The coordinator ____ arranged the client visit has reserved a larger conference room.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'coordinator' is a person and the blank is the subject of 'arranged', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0031",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The printer ____ handles oversized drawings is located beside the design studio.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'printer' is a thing and the blank is the subject of 'handles', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0032",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Managers ____ oversee remote teams must complete the new cybersecurity module.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Managers' refers to people and the blank is the subject of 'oversee', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0033",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The valve ____ regulates steam pressure will be replaced during Saturday's shutdown.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'valve' is a thing and the blank is the subject of 'regulates', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0034",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The interpreter ____ assisted the delegation is available for next week's negotiations.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'interpreter' is a person and the blank is the subject of 'assisted', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0035",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The spreadsheet ____ calculates monthly inventory turnover contains several protected formulas.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'spreadsheet' is a thing and the blank is the subject of 'calculates', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0036",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Employees ____ operate the laser cutter must renew their safety certification annually.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Employees' refers to people and the blank is the subject of 'operate', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0037",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The warranty ____ covers replacement labor remains valid for another eighteen months.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'warranty' is a thing and the blank is the subject of 'covers', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0038",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The technician ____ calibrated the testing equipment documented each adjustment in the service log.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'technician' is a person and the blank is the subject of 'calibrated', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0039",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The survey ____ measures customer satisfaction is distributed after each support case is closed.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'survey' is a thing and the blank is the subject of 'measures', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0040",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Consultants ____ advise the company on export regulations will join Friday's strategy meeting.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Consultants' refers to people and the blank is the subject of 'advise', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0041",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The sensor ____ detects excessive vibration automatically shuts down the motor.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'sensor' is a thing and the blank is the subject of 'detects', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0042",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The broker ____ negotiated the lease will send the revised terms this afternoon.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'broker' is a person and the blank is the subject of 'negotiated', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0043",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The database ____ stores archived purchase orders is backed up every night.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'database' is a thing and the blank is the subject of 'stores', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0044",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Applicants ____ pass the technical assessment will proceed to the final interview.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Applicants' refers to people and the blank is the subject of 'pass', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0045",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The revised schedule ____ includes two additional training sessions takes effect next Monday.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'revised schedule' is a thing and the blank is the subject of 'includes', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0046",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The pharmacist ____ manages regulatory documentation will review the new labeling requirements.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'pharmacist' is a person and the blank is the subject of 'manages', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0047",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The charging station ____ serves the employee parking area will be offline for maintenance tonight.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'charging station' is a thing and the blank is the subject of 'serves', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0048",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Representatives ____ attend the trade fair must submit their travel requests by Wednesday.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Representatives' refers to people and the blank is the subject of 'attend', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0049",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The certificate ____ confirms compliance with the new standard expires in March.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'certificate' is a thing and the blank is the subject of 'confirms', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0050",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The trainer ____ leads the onboarding workshop previously worked in customer support.",
+      "choices": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'trainer' is a person and the blank is the subject of 'leads', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0051",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The chemist ____ developed the new cleaning solution will brief the production team tomorrow.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'chemist' is a person and the blank is the subject of 'developed', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0052",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The invoice ____ includes the expedited shipping fee was issued this morning.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'invoice' is a thing and the blank is the subject of 'includes', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0053",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Auditors ____ specialize in nonprofit organizations will attend the new tax seminar.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Auditors' refers to people and the blank is the subject of 'specialize', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0054",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The ventilation controller ____ adjusts airflow according to room occupancy will be replaced next quarter.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'ventilation controller' is a thing and the blank is the subject of 'adjusts', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0055",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The compliance officer ____ reviewed the revised commodity code will contact customs this afternoon.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'compliance officer' is a person and the blank is the subject of 'reviewed', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0056",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The online calculator ____ estimates customs duties has been updated with the new tariff rates.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'online calculator' is a thing and the blank is the subject of 'estimates', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0057",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Employees ____ volunteer for weekend inventory will receive compensatory leave next month.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Employees' refers to people and the blank is the subject of 'volunteer', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0058",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The checklist ____ covers the closing procedures is kept beside the cash register.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'checklist' is a thing and the blank is the subject of 'covers', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0059",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The planner ____ prepared the seating chart will greet the keynote speakers at the entrance.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'planner' is a person and the blank is the subject of 'prepared', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0060",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The firmware update ____ corrects the intermittent sensor error will be released next week.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'firmware update' is a thing and the blank is the subject of 'corrects', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0061",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Team leaders ____ authorize equipment rentals must verify the project code first.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Team leaders' refers to people and the blank is the subject of 'authorize', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0062",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The maintenance manual ____ specifies the torque settings is stored in the workshop cabinet.",
+      "choices": [
+        "who",
+        "whose",
+        "when",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'maintenance manual' is a thing and the blank is the subject of 'specifies', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0063",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The archivist ____ coordinates document retention has introduced a new indexing system.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'archivist' is a person and the blank is the subject of 'coordinates', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0064",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The thermometer ____ records the cold-room temperature transmits a reading every five minutes.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'thermometer' is a thing and the blank is the subject of 'records', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0065",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Researchers ____ require access to confidential survey data must sign the updated agreement.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Researchers' refers to people and the blank is the subject of 'require', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0066",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The protocol ____ defines the sample-handling sequence takes effect at the start of October.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'protocol' is a thing and the blank is the subject of 'defines', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0067",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The electrician ____ leads the emergency generator inspection will arrive before the building opens.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'electrician' is a person and the blank is the subject of 'leads', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0068",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The packaging unit ____ seals temperature-sensitive samples is cleaned after every batch.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'packaging unit' is a thing and the blank is the subject of 'seals', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0069",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Mechanics ____ maintain the airport ground vehicles must log each repair electronically.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Mechanics' refers to people and the blank is the subject of 'maintain', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0070",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The feasibility study ____ compares three expansion sites includes updated traffic estimates.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'feasibility study' is a thing and the blank is the subject of 'compares', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0071",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The physician ____ oversees the employee wellness program will speak at next week's seminar.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'physician' is a person and the blank is the subject of 'oversees', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0072",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The report ____ summarizes customer complaints is distributed to regional managers every Friday.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'report' is a thing and the blank is the subject of 'summarizes', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0073",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Inspectors ____ identify a critical defect must notify the plant manager immediately.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Inspectors' refers to people and the blank is the subject of 'identify', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0074",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The portal ____ allows suppliers to update banking information now requires multifactor authentication.",
+      "choices": [
+        "who",
+        "whose",
+        "when",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'portal' is a thing and the blank is the subject of 'allows', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0075",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The coordinator ____ monitors the apprenticeship program will submit the annual report in September.",
+      "choices": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'coordinator' is a person and the blank is the subject of 'monitors', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0076",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The analyst ____ prepared the quarterly demand forecast will present it to senior management on Monday.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'analyst' is a person and the blank is the subject of 'prepared', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0077",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The scanner ____ reads damaged barcodes will be installed at the returns desk next week.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'scanner' is a thing and the blank is the subject of 'reads', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0078",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Consultants ____ advise the company on export regulations must complete the new compliance training.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Consultants' refers to people and the blank is the subject of 'advise', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0079",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The dashboard ____ displays real-time energy consumption is available to all facility managers.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'dashboard' is a thing and the blank is the subject of 'displays', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0080",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The recruiter ____ scheduled the final interviews will send candidates updated directions this afternoon.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'recruiter' is a person and the blank is the subject of 'scheduled', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0081",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The contract ____ outlines the maintenance obligations expires at the end of the fiscal year.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'contract' is a thing and the blank is the subject of 'outlines', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0082",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Technicians ____ calibrate the laboratory instruments must record every adjustment in the service log.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Technicians' refers to people and the blank is the subject of 'calibrate', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0083",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The mobile application ____ tracks delivery status will receive a security update tonight.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'mobile application' is a thing and the blank is the subject of 'tracks', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0084",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The attorney ____ negotiated the revised lease will join tomorrow's property committee meeting.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'attorney' is a person and the blank is the subject of 'negotiated', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0085",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The filter ____ removes fine particles from the cooling system should be replaced every six months.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'filter' is a thing and the blank is the subject of 'removes', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0086",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Supervisors ____ approve overtime requests must confirm that the department budget is sufficient.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Supervisors' refers to people and the blank is the subject of 'approve', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0087",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The shipment tracker ____ sends automatic delay alerts was restored after a brief outage.",
+      "choices": [
+        "who",
+        "whose",
+        "when",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'shipment tracker' is a thing and the blank is the subject of 'sends', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0088",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The auditor ____ leads the annual inventory review has requested access to last year's records.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'auditor' is a person and the blank is the subject of 'leads', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0089",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The reservation system ____ assigns meeting rooms according to capacity will be unavailable during maintenance.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'reservation system' is a thing and the blank is the subject of 'assigns', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0090",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Employees ____ handle customer payment information must renew their data-security certification annually.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Employees' refers to people and the blank is the subject of 'handle', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0091",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The sensor ____ detects excessive vibration automatically shuts down the conveyor motor.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'sensor' is a thing and the blank is the subject of 'detects', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0092",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The pharmacist ____ manages vaccine inventory will train the new clinic assistant next Tuesday.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'pharmacist' is a person and the blank is the subject of 'manages', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0093",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The brochure ____ explains the updated warranty terms is included with every appliance shipment.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'brochure' is a thing and the blank is the subject of 'explains', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0094",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Engineers ____ evaluate supplier prototypes will submit their recommendations by Friday.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Engineers' refers to people and the blank is the subject of 'evaluate', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0095",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The database ____ stores archived inspection reports is backed up automatically each night.",
+      "choices": [
+        "who",
+        "whose",
+        "where",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'database' is a thing and the blank is the subject of 'stores', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0096",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The chef ____ designed the new banquet menu will meet with the events team this morning.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent 'chef' is a person and the blank is the subject of 'designed', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0097",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The checklist ____ identifies required shipping documents has been translated into three languages.",
+      "choices": [
+        "who",
+        "which",
+        "whose",
+        "when"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'checklist' is a thing and the blank is the subject of 'identifies', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0098",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Managers ____ oversee remote teams are expected to hold one-on-one meetings regularly.",
+      "choices": [
+        "which",
+        "whose",
+        "who",
+        "where"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent 'Managers' refers to people and the blank is the subject of 'oversee', so 'who' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0099",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The device ____ measures indoor air quality can transmit readings directly to the building-control server.",
+      "choices": [
+        "who",
+        "whose",
+        "when",
+        "which"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent 'device' is a thing and the blank is the subject of 'measures', so 'which' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_who_vs_which_0100",
+      "version": 1,
+      "skillId": "p5.rel.who_vs_which",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The coordinator ____ organizes the apprenticeship orientation will distribute safety equipment at registration.",
+      "choices": [
+        "which",
+        "who",
+        "whose",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent 'coordinator' is a person and the blank is the subject of 'organizes', so 'who' is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
