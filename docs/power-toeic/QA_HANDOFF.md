@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: 2,175
-- Verified: 2,100
+- Checked: 2,275
+- Verified: 2,200
 - Needs revision: 75
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -12,20 +12,32 @@
 
 ## This run — independent QA
 
-Reviewed the oldest unchecked backlog in strict order.
+Reviewed the oldest 100 unchecked questions in strict order.
 
-### `p5.conn.during_vs_while` 0051-0075
+### `p5.conn.during_vs_while` 0076-0100
 
 - Checked: 25
 - Verified: 25
 - Needs revision: 0
 - Rejected: 0
 
-Each sentence and all four choices were reviewed individually. Every blank is followed by a noun phrase, so the preposition `during` is uniquely valid in the targeted contrast; `while` requires a finite clause. Structure, naturalness, target-skill fit, distractor plausibility, and explanation consistency were checked. No alternate defensible answer or explanation mismatch was found.
+Every blank is followed by a finite clause, so `while` is uniquely valid in the targeted contrast; `during` requires a noun phrase.
 
-QA record:
+### `p5.conn.by_vs_until` 0001-0075
 
-`subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-052-during-vs-while-part3.qa.json`
+- Checked: 75
+- Verified: 75
+- Needs revision: 0
+- Rejected: 0
+
+Each item was reviewed individually. Completion/deadline contexts uniquely require `by`; continuing actions or states ending at a specified point uniquely require `until`. Naturalness, target-skill fit, distractor plausibility, and explanation consistency were checked. No alternate defensible answer or explanation mismatch was found.
+
+QA records:
+
+- `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-053-during-vs-while-part4.qa.json`
+- `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-053-by-vs-until-part1.qa.json`
+- `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-053-by-vs-until-part2.qa.json`
+- `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-053-by-vs-until-part3.qa.json`
 
 ### QA-method limitation
 
@@ -37,6 +49,6 @@ Full-bank semantic near-duplicate clearance remains outstanding, so `verified` i
 
 Continue the oldest unchecked backlog at:
 
-`p5_conn_during_vs_while_0076`
+`p5_conn_by_vs_until_0076`
 
-Continue in 25-question safe checkpoints. Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
+Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
