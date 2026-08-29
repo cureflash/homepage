@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 4025,
-  "checked_question_count": 3100,
+  "generated_question_count": 4050,
+  "checked_question_count": 3125,
   "pending_validation_count": 925,
-  "verified_question_count": 3015,
+  "verified_question_count": 3040,
   "needs_revision_count": 85,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -51,14 +51,14 @@
     "p5.vocab.verb_noun_collocation",
     "p5.vocab.adjective_noun_collocation"
   ],
-  "current_batch": "2026-08-30-scheduled-081-vocab-preposition-part1",
+  "current_batch": "2026-08-30-scheduled-082-vocab-preposition-part2",
   "current_micro_skill": "p5.vocab.preposition_collocation",
-  "current_micro_skill_persisted_count": 25,
+  "current_micro_skill_persisted_count": 50,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_vocab_preposition_collocation_0026",
+  "next_resume_id": "p5_vocab_preposition_collocation_0051",
   "next_micro_skill": "p5.vocab.preposition_collocation",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Generated p5.vocab.preposition_collocation 0001-0025 (25 questions) as a safe checkpoint; all remain pending_validation. Answer positions A/B/C/D = 7/6/6/6. Exact duplicate stems = 0; within-checkpoint SequenceMatcher similarity >= 0.94 = 0, maximum approximately 0.519. Independently reviewed the oldest 25 unchecked pending items, p5.rel.whose 0076-0100: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 3,100 checked, 3,015 verified, 85 needs_revision, 0 rejected; unchecked pending_validation remains 925. Full cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_vocab_preposition_collocation_0026; next QA is p5_rel_where_vs_when_0001.",
-  "updated_at": "2026-08-30T07:12:00+09:00"
+  "last_run_result": "Generated p5.vocab.preposition_collocation 0026-0050 (25 questions) as a safe checkpoint; all remain pending_validation. Answer positions A/B/C/D = 6/7/6/6. Exact duplicate stems = 0; within-checkpoint SequenceMatcher similarity >= 0.94 = 0, maximum approximately 0.515. Independently reviewed the oldest 25 unchecked pending items, p5.rel.where_vs_when 0001-0025: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 3,125 checked, 3,040 verified, 85 needs_revision, 0 rejected; unchecked pending_validation remains 925. Full cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_vocab_preposition_collocation_0051; next QA is p5_rel_where_vs_when_0026.",
+  "updated_at": "2026-08-30T08:15:00+09:00"
 }
