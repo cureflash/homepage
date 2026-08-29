@@ -31,14 +31,14 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 - [ ] Decompose every concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` cutoff and primary sources.
 - [ ] Map existing verified questions only where they genuinely test the knowledge item; missing evidence remains a Phase 4.3 deficit.
 
-Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document.
+Completed checkpoints through this run: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document; article35-vs-37.
 
 Latest checkpoint:
-- [x] `takken-concept-article37-document`: 12 verified items. Article 37 was split into post-contract delivery, recipient rules for self-party/agency/brokerage and lease agency/brokerage, core statutory entries,宅建士記名, and consent-based electronic provision. Existing `takken-q-23-001` directly tests post-contract delivery timing and `takken-q-23-002` directly tests宅建士記名. The other ten items remain explicit Phase 4.3 deficits.
+- [x] `takken-concept-article35-vs-37`: 5 verified items. The comparison concept separates 35条 pre-contract timing, 37条 post-contract timing, the presence/absence of the statutory important-matters explanation duty,宅建士 roles, and the different content/purpose of the two documents. Existing `takken-q-24-001` directly tests the 35条 timing item and `takken-q-24-002` directly tests the 37条 timing item. The other three items remain explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: 29/113 modeled concepts, 155 verified knowledge items, 28 existing verified questions mapped, 116 explicit question-coverage gaps.
+Current Phase 4.2 totals: 30/113 modeled concepts, 160 verified knowledge items, 30 existing verified questions mapped, 119 explicit question-coverage gaps.
 
-Exact continuation: `takken-concept-article35-vs-37`, source unit `article35-vs-37`. Preserve all one hundred sixteen explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
+Exact continuation: `takken-concept-eight-restrictions-scope`, source unit `eight-restrictions-overview`. Preserve all one hundred nineteen explicit deficits and map existing verified questions only to knowledge they genuinely test. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
