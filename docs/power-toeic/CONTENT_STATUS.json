@@ -3,10 +3,10 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 3800,
-  "checked_question_count": 2800,
+  "generated_question_count": 3825,
+  "checked_question_count": 2825,
   "pending_validation_count": 1000,
-  "verified_question_count": 2716,
+  "verified_question_count": 2741,
   "needs_revision_count": 84,
   "rejected_question_count": 0,
   "generated_micro_skills": [
@@ -49,14 +49,14 @@
     "p5.det.few_vs_little",
     "p5.det.another_other_others"
   ],
-  "current_batch": "2026-08-30-scheduled-069-another-other-others-part4",
+  "current_batch": "2026-08-30-scheduled-070-vocab-verb-noun-collocation-part1",
   "current_micro_skill": "p5.vocab.verb_noun_collocation",
-  "current_micro_skill_persisted_count": 0,
+  "current_micro_skill_persisted_count": 25,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_vocab_verb_noun_collocation_0001",
+  "next_resume_id": "p5_vocab_verb_noun_collocation_0026",
   "next_micro_skill": "p5.vocab.verb_noun_collocation",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Generated p5.det.another_other_others 0076-0100 (25 questions), completing the micro-skill at 100/100; all new items remain pending_validation. Answer positions A/B/C/D = 7/6/6/6; exact duplicate stems = 0; within-checkpoint SequenceMatcher similarity >= 0.94 = 0, maximum approximately 0.594. Independently reviewed the oldest 25 unchecked pending items, p5.pron.possessive_forms 0076-0100: 25 checked, 24 verified, 1 needs_revision, 0 rejected. p5_pron_possessive_forms_0083 permits both 'them' and 'theirs' under defensible readings and was quarantined. Cumulative QA is 2,800 checked, 2,716 verified, 84 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_vocab_verb_noun_collocation_0001; next QA is p5_pron_reflexive_0001.",
-  "updated_at": "2026-08-30T01:15:00+09:00"
+  "last_run_result": "Generated p5.vocab.verb_noun_collocation 0001-0025 (25 questions); all new items remain pending_validation. Answer positions A/B/C/D = 7/6/6/6; exact duplicate stems = 0; within-checkpoint SequenceMatcher similarity >= 0.94 = 0, maximum approximately 0.509. Independently reviewed the oldest 25 unchecked pending items, p5.pron.reflexive 0001-0025: 25 checked, 25 verified, 0 needs_revision, 0 rejected. Cumulative QA is 2,825 checked, 2,741 verified, 84 needs_revision, 0 rejected; unchecked pending_validation remains 1,000 because 25 new candidates were added while 25 old pending items were checked. Full cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_vocab_verb_noun_collocation_0026; next QA is p5_pron_reflexive_0026.",
+  "updated_at": "2026-08-30T02:13:00+09:00"
 }
