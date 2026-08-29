@@ -8,14 +8,18 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-fictitious-declaration` using source unit `civil-fictitious-declaration` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-minor` using source unit `civil-limited-capacity` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-fictitious-declaration.js` with two verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-minor.js` with six verified atomic knowledge items:
 
-1. 民法94条1項により、相手方と通じてした虚偽の意思表示（通謀虚偽表示）は当事者間では無効であること。
-2. その無効は善意の第三者に対抗できず、94条2項は第三者について無過失までは要求していないこと。
+1. 民法4条により18歳で成年となること。
+2. 民法5条1項本文により未成年者の法律行為は原則として法定代理人の同意を要すること。
+3. 民法5条1項ただし書により、単に権利を得、または義務を免れる法律行為には同意を要しないこと。
+4. 民法5条2項により、必要な同意を欠く法律行為は取り消すことができること。
+5. 民法5条3項により、法定代理人が処分を許した財産は法定範囲で未成年者が自由に処分できること。
+6. 民法6条により、一種または数種の営業を許された未成年者は、その営業に関して成年者と同一の行為能力を有すること。
 
-Existing verified `takken-q-37-002` directly tests only the first rule, so the evidence map maps that question only to `takken-k-fictitious-declaration-party-invalid`. The good-faith-third-party rule is not directly tested by the existing question and remains an explicit Phase 4.3 deficit. Phase 2/3 question contents and verified states were not changed.
+Existing verified `takken-q-38-001` directly tests the consent principle and cancellation consequence, so the evidence map maps that question to `takken-k-minor-consent-principle` and `takken-k-minor-cancellation-without-consent`. The adulthood-at-18 rule, right-only exception, permitted-property rule, and permitted-business rule are not directly measured by the existing question and remain explicit Phase 4.3 deficits. Phase 2/3 question contents and verified states were not changed.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -26,22 +30,22 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 47/113 concepts modeled
-- Canonical knowledge items: 267
-- Existing verified questions mapped: 46
-- Explicit unmapped knowledge gaps: 208
+- Phase 4.2: active — 48/113 concepts modeled
+- Canonical knowledge items: 273
+- Existing verified questions mapped: 47
+- Explicit unmapped knowledge gaps: 212
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-minor` using source unit `civil-limited-capacity`.
+Continue Phase 4.2 at `takken-concept-adult-ward` using source unit `civil-limited-capacity`.
 
-Preserve all 267 knowledge items, forty-six valid mappings, and all two hundred eight explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 273 knowledge items, forty-seven valid mappings, and all two hundred twelve explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected two-item count. The question-knowledge map enforces a unique question ID and maps `takken-q-37-002` only to the Article 94 rule it directly tests. The third-party protection item remains deliberately unmapped. No Phase 2/3 question data was modified.
+The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected six-item count. The question-knowledge map enforces a unique question ID and maps `takken-q-38-001` only to the two Article 5 rules it directly tests. Four minor-concept items remain deliberately unmapped. No Phase 2/3 question data was modified.
 
 ## Publication invariant
 
