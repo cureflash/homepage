@@ -8,18 +8,26 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-article35-items` using source unit `article35-items` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-article37-document` using source units `article37-basics` and `article35-vs-37` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-article35-items.js` with four verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-article37-document.js` with twelve verified atomic knowledge items covering:
 
-1. `takken-k-article35-items-registered-rights` — 35条の説明事項には対象宅地・建物上の登記された権利の種類・内容が含まれる。
-2. `takken-k-article35-items-registered-owner-name` — 登記名義人または表題部所有者の氏名・法人名称も説明事項に含まれる。
-3. `takken-k-article35-items-legal-restrictions` — 都市計画法・建築基準法その他の法令に基づく政令所定の制限の概要が説明事項に含まれる。
-4. `takken-k-article35-items-contract-type-dependent` — 法令上の制限は、宅地/建物および売買・交換/貸借という契約内容の別に応じて決まる。
+1. post-contract 37条書面 delivery,
+2. sale/exchange self-party recipient,
+3. sale/exchange agency recipients,
+4. sale/exchange brokerage recipients,
+5. lease agency/brokerage recipients,
+6. party name/address entries,
+7. property-identification entries,
+8. consideration/rent and payment entries,
+9. delivery-time entry,
+10. transfer-registration application timing for sale/exchange,
+11.宅地建物取引士の記名,
+12. consent-based electronic provision.
 
-Primary authority is current 宅地建物取引業法 Article 35. Canonical source facts `u22-f1` and `u22-f2` are preserved as source fact references.
+Primary authority is current 宅地建物取引業法 Article 37 at the 2026-04-01 cutoff. Canonical source facts `u23-f1`, `u23-f2`, and comparison fact `u24-f2` are preserved where applicable.
 
-Existing verified `takken-q-22-001` directly tests registered rights and is mapped to `takken-k-article35-items-registered-rights`. Existing verified `takken-q-22-002` directly tests statutory restrictions and is mapped to `takken-k-article35-items-legal-restrictions`. Neither question directly tests registered owner/name information or transaction-type-dependent application, so those two items remain explicit Phase 4.3 deficits.
+Existing verified `takken-q-23-001` directly tests the post-contract timing and is mapped only to `takken-k-article37-document-after-contract`. Existing verified `takken-q-23-002` directly tests宅建士記名 and is mapped only to `takken-k-article37-document-takkenshi-name`. The other ten knowledge items remain explicit Phase 4.3 deficits. Existing `takken-q-24-002` is reserved for the following comparison concept and was not duplicated into this one-concept mapping.
 
 No Phase 2/3 question content or validation state was changed. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -30,18 +38,18 @@ No Phase 2/3 question content or validation state was changed. No Phase 4.3 ques
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 28/113 concepts modeled
-- Canonical knowledge items: 143
-- Existing verified questions mapped: 26
-- Explicit unmapped knowledge gaps: 106
+- Phase 4.2: active — 29/113 concepts modeled
+- Canonical knowledge items: 155
+- Existing verified questions mapped: 28
+- Explicit unmapped knowledge gaps: 116
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-article37-document` using source units `article37-basics` and `article35-vs-37`.
+Continue Phase 4.2 at `takken-concept-article35-vs-37` using source unit `article35-vs-37`.
 
-Preserve all 143 knowledge items, twenty-six valid mappings, and all one hundred six explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 155 knowledge items, twenty-eight valid mappings, and all one hundred sixteen explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Publication invariant
 
