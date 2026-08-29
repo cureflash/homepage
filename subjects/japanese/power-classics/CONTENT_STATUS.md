@@ -1,13 +1,13 @@
 # Power古典 CONTENT STATUS
 
-Updated: 2026-08-29 18:02 JST
+Updated: 2026-08-29 19:10 JST
 Phase: A — taxonomy順に未充足micro-skillを生成・独立QA
 
 ## Cumulative
 
-- generated: 1250
-- checked: 1250
-- verified: 1250
+- generated: 1300
+- checked: 1300
+- verified: 1300
 - needs_revision: 0
 - rejected: 0
 - pending: 0
@@ -16,13 +16,13 @@ Phase: A — taxonomy順に未充足micro-skillを生成・独立QA
 
 ## Current micro-skill
 
-- skill: `kobun.aux.ki_keri.meaning`
-- label: き・けりの意味識別
-- targetQuestions: 200
-- generated/checked/verified: 150/150/150
-- remaining to first target: 50
-- next exact ID: `kobun_aux_ki_keri_meaning_0151`
+- skill: `kobun.aux.tsu_nu.meaning`
+- label: 完了・強意の識別
+- targetQuestions: 300
+- generated/checked/verified: 0/0/0
+- remaining to first target: 300
+- next exact ID: `kobun_aux_tsu_nu_meaning_0001`
 
 ## Latest checkpoint
 
-`batch-20260829-046.json`: `kobun.aux.ki_keri.meaning` 0126〜0150、25 generated / 25 checked / 25 verified / 0 needs_revision / 0 rejected。正答位置 A/B/C/D = 7/6/6/6。batch内stem完全重複0、最大類似度0.745、高類似閾値0.94以上0件。助動詞「き」の過去、物語・伝承・昔の習慣文脈での「けり」の過去、眼前の気づき・感動・和歌文脈での「けり」の詠嘆を、stem＋choicesのみから独立再解答して確認した。
+`batch-20260829-048.json`: `kobun.aux.ki_keri.meaning` 0176〜0200、25 generated / 25 checked / 25 verified / 0 needs_revision / 0 rejected。正答位置 A/B/C/D = 7/6/6/6。batch内stem完全重複0、最大類似度0.929、高類似閾値0.94以上0件。0151〜0200の計50問をstem＋choicesのみから独立再解答し、助動詞「き」の直接経験を中心とする過去、「けり」の物語・伝聞的過去、眼前の気づき・感動による詠嘆、両者の基本的使い分けを確認。`kobun.aux.ki_keri.meaning` は200/200で第一目標完了。
