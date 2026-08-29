@@ -3,11 +3,11 @@
   "role": "content_generate",
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
-  "generated_question_count": 3275,
-  "checked_question_count": 2275,
+  "generated_question_count": 3375,
+  "checked_question_count": 2375,
   "pending_validation_count": 1000,
-  "verified_question_count": 2200,
-  "needs_revision_count": 75,
+  "verified_question_count": 2299,
+  "needs_revision_count": 76,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun",
@@ -41,16 +41,17 @@
     "p5.pron.reflexive",
     "p5.rel.who_vs_which",
     "p5.rel.whose",
-    "p5.rel.where_vs_when"
+    "p5.rel.where_vs_when",
+    "p5.pron.indefinite_agreement"
   ],
-  "current_batch": "2026-08-29-scheduled-053-indefinite-agreement-part3",
-  "current_micro_skill": "p5.pron.indefinite_agreement",
+  "current_batch": "2026-08-29-scheduled-054-article-choice-part3",
+  "current_micro_skill": "p5.det.article_choice",
   "current_micro_skill_persisted_count": 75,
   "current_micro_skill_target_count": 100,
-  "next_resume_id": "p5_pron_indefinite_agreement_0076",
-  "next_micro_skill": "p5.pron.indefinite_agreement",
+  "next_resume_id": "p5_det_article_choice_0076",
+  "next_micro_skill": "p5.det.article_choice",
   "generation_complete": false,
   "validation_complete": false,
-  "last_run_result": "Generated 100 questions this run: p5.rel.where_vs_when 0076-0100 (completing that skill at 100/100) plus p5.pron.indefinite_agreement 0001-0075. All 100 new items remain pending_validation. where-vs-when answer positions A/B/C/D = 7/6/6/6; indefinite-agreement 0001-0075 = 20/19/18/18. Exact duplicates = 0 and SequenceMatcher >= 0.94 = 0 in the generated checkpoints; maximum pairwise similarity was 0.528 for where-vs-when and 0.740 across the 75 indefinite-agreement stems. Independently reviewed the oldest 100 pending items: p5.conn.during_vs_while 0076-0100 and p5.conn.by_vs_until 0001-0075. QA: 100 checked, 100 verified, 0 needs_revision, 0 rejected. Cumulative QA is 2,275 checked, 2,200 verified, 75 needs_revision, 0 rejected; unchecked pending_validation remains 1,000 because generation and QA both advanced by 100. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_pron_indefinite_agreement_0076; next QA is p5_conn_by_vs_until_0076.",
-  "updated_at": "2026-08-29T13:14:08+09:00"
+  "last_run_result": "Generated 100 questions: p5.pron.indefinite_agreement 0076-0100 (completing the skill at 100/100) plus p5.det.article_choice 0001-0075. All remain pending_validation. New-generation exact duplicates = 0 and SequenceMatcher >= 0.94 = 0; maximum pairwise stem similarity = 0.628. Article-choice answer positions A/B/C/D = 19/19/19/18. Independently reviewed the oldest 100 pending items: p5.conn.by_vs_until 0076-0100 and p5.conn.for_vs_since 0001-0075. QA: 100 checked, 99 verified, 1 needs_revision, 0 rejected. p5_conn_for_vs_since_0038 remains needs_revision because its time expression is not natural enough for a production item. Cumulative QA is 2,375 checked, 2,299 verified, 76 needs_revision, 0 rejected; unchecked pending_validation remains 1,000. Full revision-bound cross-bank semantic duplicate clearance remains incomplete. Next generation is p5_det_article_choice_0076; next QA is p5_conn_for_vs_since_0076.",
+  "updated_at": "2026-08-29T14:17:35+09:00"
 }
