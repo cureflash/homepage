@@ -8,15 +8,15 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-fraud` using source unit `civil-fraud-duress` at the 2026-04-01 law cutoff.
+Re-read latest `main`; Phase 4 gate remains satisfied and no Phase 2/3 question was modified. Completed `takken-concept-duress` using source unit `civil-fraud-duress` at the 2026-04-01 law cutoff.
 
-Added `qualifications/takken/data/power-knowledge-items-fraud.js` with three verified atomic knowledge items:
+Added `qualifications/takken/data/power-knowledge-items-duress.js` with three verified atomic knowledge items:
 
-1. 民法96条1項による詐欺の意思表示の取消し。
-2. 相手方に対する意思表示について第三者が詐欺をした場合、相手方がその事実を知り、または知ることができたときに限り取消し可能であること。
-3. 詐欺による意思表示の取消しを善意かつ無過失の第三者に対抗できないこと。
+1. 民法96条1項による強迫の意思表示の取消し。
+2. 第三者が強迫を行った場合、詐欺の場合と異なり、相手方が強迫の事実を知りまたは知ることができたことは取消しの要件ではないこと。
+3. 民法96条3項の善意無過失第三者保護は詐欺についての規定であり、強迫による取消しは善意無過失の第三者にも対抗できること。
 
-Existing verified `takken-q-36-001` maps to the first item and `takken-q-36-002` maps to the third item. The third-party-fraud rule is not directly tested by either existing question, so it remains one explicit Phase 4.3 deficit. Phase 2/3 question contents and verified states were not changed.
+Existing verified `takken-q-36-001` directly tests the first rule but is already assigned to `takken-concept-fraud` in the current one-question/one-concept evidence map. The current map rejects duplicate question IDs, so this checkpoint did not create a second cross-concept mapping or change the mapping schema. All three duress knowledge items therefore remain explicit Phase 4.3 deficits. Phase 2/3 question contents and verified states were not changed.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -27,22 +27,22 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 44/113 concepts modeled
-- Canonical knowledge items: 259
+- Phase 4.2: active — 45/113 concepts modeled
+- Canonical knowledge items: 262
 - Existing verified questions mapped: 44
-- Explicit unmapped knowledge gaps: 203
+- Explicit unmapped knowledge gaps: 206
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-duress` using source unit `civil-fraud-duress`.
+Continue Phase 4.2 at `takken-concept-mental-reservation` using source unit `civil-fictitious-declaration`.
 
-Preserve all 259 knowledge items, forty-four valid mappings, and all two hundred three explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 262 knowledge items, forty-four valid mappings, and all two hundred six explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected three-item count. `power-question-knowledge-map.js` adds only existing verified `takken-q-36-001` and `takken-q-36-002` to the two canonical fraud knowledge items they directly test. The third-party-fraud rule remains unmapped rather than being inferred from a broader question. No Phase 2/3 question data was modified in this checkpoint.
+The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, and the expected three-item count. No Phase 2/3 question data or question-knowledge mapping was modified in this checkpoint. The source unit records the shared Article 96 cancellation rule, while the fraud/duress distinction is normalized from Article 96 paragraphs 2 and 3 at the same statutory cutoff.
 
 ## Publication invariant
 
