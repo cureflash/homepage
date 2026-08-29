@@ -29,7 +29,10 @@ jobs:
         run: python -m pip install --disable-pip-version-check reportlab
 
       - name: Apply permanent source changes
-        run: python scripts/_apply_science_rlc_impedance_checkpoint.py
+        run: |
+          cp .github/workflows/_science-rlc-bootstrap.yml /tmp/science-rlc-bootstrap.yml
+          python scripts/_apply_science_rlc_impedance_checkpoint.py
+          cp /tmp/science-rlc-bootstrap.yml .github/workflows/_science-rlc-bootstrap.yml
 
       - name: Run shared and formal Physics regressions
         run: |
@@ -76,11 +79,12 @@ jobs:
 
       - name: Discard generated artifacts and commit implementation only
         run: |
-          git restore worksheets/catalog.json
+          git restore worksheets/catalog.json .github/workflows/science-physics-publish.yml
           git clean -f materials/worksheets/science/high-school/physics/motion/
+          find scripts tests -type d -name '__pycache__' -prune -exec rm -rf {} +
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
+          git add scripts/science_worksheet_helpers.py scripts/science_physics_ac_basics.py tests/test_science_formula_relations.py tests/test_science_physics_ac_basics.py scripts/_apply_science_rlc_impedance_checkpoint.py
           git diff --cached --check
           git commit -m 'Implement formal Physics RLC impedance checkpoint'
           git push origin HEAD:science-physics-rlc-impedance-20260829
