@@ -1,12 +1,12 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 3075,
-  "verified_question_count": 2990,
+  "checked_question_count": 3100,
+  "verified_question_count": 3015,
   "needs_revision_count": 85,
   "rejected_question_count": 0,
   "pending_validation_count": 925,
-  "last_completed_batch": "2026-08-30-scheduled-080-whose-part3",
+  "last_completed_batch": "2026-08-30-scheduled-081-whose-part4",
   "last_completed_micro_skill": "p5.rel.whose",
   "last_batch_counts": {
     "checked": 25,
@@ -14,10 +14,10 @@
     "needs_revision": 0,
     "rejected": 0
   },
-  "next_batch": "p5.rel.whose",
-  "next_micro_skill": "p5.rel.whose",
-  "next_question_id": "p5_rel_whose_0076",
+  "next_batch": "p5.rel.where_vs_when",
+  "next_micro_skill": "p5.rel.where_vs_when",
+  "next_question_id": "p5_rel_where_vs_when_0001",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-30T06:14:00+09:00"
+  "updated_at": "2026-08-30T07:12:00+09:00"
 }
