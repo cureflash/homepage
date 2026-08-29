@@ -6,10 +6,10 @@
 
 ## Current canonical state
 
-- Fully completed generated micro-skills: 33 / 44
-- Generated questions persisted: 3,375
-- QA checked: 2,375
-- Verified: 2,299
+- Fully completed generated micro-skills: 34 / 44
+- Generated questions persisted: 3,400
+- QA checked: 2,400
+- Verified: 2,324
 - Needs revision: 76
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
@@ -18,27 +18,19 @@
 
 ## This run — generation
 
-Generated 100 questions in four safe checkpoints.
+Generated 25 questions as a safe checkpoint.
 
-- `p5.pron.indefinite_agreement` 0076-0100: 25 questions; skill completed at 100/100.
-- `p5.det.article_choice` 0001-0025: 25 questions.
-- `p5.det.article_choice` 0026-0050: 25 questions.
-- `p5.det.article_choice` 0051-0075: 25 questions.
+- `p5.det.article_choice` 0076-0100: 25 questions; skill completed at 100/100.
 
-All new items remain `pending_validation`. Across the new 100 stems: exact duplicates = 0, SequenceMatcher >= 0.94 = 0, maximum pairwise similarity = 0.628. Article-choice answer positions for 0001-0075 are A/B/C/D = 19/19/19/18.
+All new items remain `pending_validation`. Across the new 25 stems: exact duplicates = 0, SequenceMatcher >= 0.94 = 0, maximum pairwise similarity = 0.568. Answer positions A/B/C/D = 7/6/6/6.
 
-Next generation: `p5_det_article_choice_0076`.
+Next generation: `p5_det_countable_number_0001`.
 
 ## This run — QA
 
-Reviewed the oldest 100 unchecked questions in strict order.
+Reviewed the oldest 25 unchecked questions in strict order.
 
-- `p5.conn.by_vs_until` 0076-0100: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
-- `p5.conn.for_vs_since` 0001-0025: 25 / 25 / 0 / 0.
-- `p5.conn.for_vs_since` 0026-0050: 25 / 24 / 1 / 0.
-- `p5.conn.for_vs_since` 0051-0075: 25 / 25 / 0 / 0.
-
-`p5_conn_for_vs_since_0038` remains `needs_revision`: the time expression is not natural enough for a production Part 5 item and was not promoted.
+- `p5.conn.for_vs_since` 0076-0100: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
 
 ## QA-method limitation
 
@@ -46,4 +38,4 @@ The persisted candidate format co-locates stems, choices, proposed answers and e
 
 ## Next QA
 
-Continue the oldest unchecked backlog at `p5_conn_for_vs_since_0076`.
+Continue the oldest unchecked backlog at `p5_conn_time_prepositions_0001`.
