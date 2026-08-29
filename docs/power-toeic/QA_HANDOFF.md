@@ -2,9 +2,9 @@
 
 ## Current QA state
 
-- Checked: 2,275
-- Verified: 2,200
-- Needs revision: 75
+- Checked: 2,375
+- Verified: 2,299
+- Needs revision: 76
 - Rejected: 0
 - Unchecked `pending_validation`: 1,000
 - `generation_complete`: `false`
@@ -14,41 +14,17 @@
 
 Reviewed the oldest 100 unchecked questions in strict order.
 
-### `p5.conn.during_vs_while` 0076-0100
+- `p5.conn.by_vs_until` 0076-0100: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
+- `p5.conn.for_vs_since` 0001-0025: 25 / 25 / 0 / 0.
+- `p5.conn.for_vs_since` 0026-0050: 25 / 24 / 1 / 0.
+- `p5.conn.for_vs_since` 0051-0075: 25 / 25 / 0 / 0.
 
-- Checked: 25
-- Verified: 25
-- Needs revision: 0
-- Rejected: 0
+`p5_conn_for_vs_since_0038` remains `needs_revision` because its time expression is not natural enough for production use. It was not silently promoted.
 
-Every blank is followed by a finite clause, so `while` is uniquely valid in the targeted contrast; `during` requires a noun phrase.
-
-### `p5.conn.by_vs_until` 0001-0075
-
-- Checked: 75
-- Verified: 75
-- Needs revision: 0
-- Rejected: 0
-
-Each item was reviewed individually. Completion/deadline contexts uniquely require `by`; continuing actions or states ending at a specified point uniquely require `until`. Naturalness, target-skill fit, distractor plausibility, and explanation consistency were checked. No alternate defensible answer or explanation mismatch was found.
-
-QA records:
-
-- `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-053-during-vs-while-part4.qa.json`
-- `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-053-by-vs-until-part1.qa.json`
-- `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-053-by-vs-until-part2.qa.json`
-- `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-29-scheduled-053-by-vs-until-part3.qa.json`
-
-### QA-method limitation
-
-The persisted candidate format co-locates stems, choices, proposed answers and explanations. Connector-only file access therefore cannot technically guarantee a hidden-key first pass. Each item was nevertheless independently re-solved against all four choices before approval.
+The persisted candidate format co-locates stems, choices, proposed answers and explanations. Connector-only file access therefore cannot technically guarantee a hidden-key first pass. Each item was nevertheless re-solved individually before comparison.
 
 Full-bank semantic near-duplicate clearance remains outstanding, so `verified` is not yet equivalent to final production-approved status.
 
 ## Next QA
 
-Continue the oldest unchecked backlog at:
-
-`p5_conn_by_vs_until_0076`
-
-Existing `needs_revision` items from earlier skills remain unresolved and must not be silently promoted.
+Continue at `p5_conn_for_vs_since_0076`.
