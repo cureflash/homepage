@@ -14,10 +14,12 @@
   - [x] `color_to_name` checkpoint 0033-0040: 8 generated and individually verified; 0 pending.
   - [x] `color_to_name` checkpoint 0041-0048: 8 generated and individually verified; 0 pending.
   - [x] `color_to_name` checkpoint 0049-0056: 8 generated and individually verified; 0 pending.
-  - [ ] Resume at `color_to_name` 0057.
+  - [x] `color_to_name` checkpoint 0057-0064: 8 generated and individually verified; 0 pending. Targets c3-048..051 and c3-053..056.
+  - [ ] `c3-conventional-052` (スカイブルー) is deferred for `color_to_name`: the canonical display reference `#8ED1E0` is identical to `c3-conventional-017` 空色, so a monitor-only identification item would violate the QA rule against display-only ambiguity.
+  - [ ] Resume at `color_to_name` question 0065 with `c3-conventional-057` unless a newer canonical source resolves c3-052 first.
 - [ ] Independent QA for all conventional-color questions.
 - [ ] Promote verified authoring checkpoints into `grade3-runtime.json` only after consistency tests pass.
-- [ ] Conventional-color coverage gate: both directions cover 64/64 master colors, pending=0, duplicates/schema/references pass.
+- [ ] Conventional-color coverage gate: both directions cover the useful authoritative master state space, pending=0, duplicates/schema/references pass; do not force a monitor-indistinguishable item merely to claim 64/64.
 
 ## Phase 2 — Grade 3 PCCS master
 - [ ] Confirm authoritative PCCS Grade 3 data/source.
