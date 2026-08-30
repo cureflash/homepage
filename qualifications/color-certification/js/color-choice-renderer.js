@@ -38,6 +38,32 @@ export function getAnswerFeedbackModel(question, colors) {
   });
 }
 
+export function getChoiceRevealModels(question, colors) {
+  if (question?.presentation?.kind !== 'choice_colors') return Object.freeze([]);
+  return Object.freeze(question.presentation.choiceColorRefs.map((ref, index) => {
+    const color = colors.get(ref);
+    if (!color) throw new Error(`Unknown choice color ref: ${ref}`);
+    return Object.freeze({
+      index,
+      colorRef: ref,
+      name: color.name,
+      reading: color.reading,
+      displayHex: color.displayHex
+    });
+  }));
+}
+
+export function readableTextColor(hex) {
+  const match = /^#([0-9a-f]{6})$/i.exec(hex ?? '');
+  if (!match) return '#111111';
+  const value = Number.parseInt(match[1], 16);
+  const red = (value >> 16) & 255;
+  const green = (value >> 8) & 255;
+  const blue = value & 255;
+  const brightness = (red * 299 + green * 587 + blue * 114) / 1000;
+  return brightness >= 155 ? '#111111' : '#ffffff';
+}
+
 export class ColorChoiceRenderer {
   constructor({ promptEl, choicesEl, explanationEl, colors, documentRef = document }) {
     this.promptEl = promptEl;
@@ -116,12 +142,32 @@ export class ColorChoiceRenderer {
     });
   }
 
+  revealChoiceNames(question) {
+    const reveals = getChoiceRevealModels(question, this.colors);
+    reveals.forEach((reveal) => {
+      const button = this.buttons[reveal.index];
+      const swatch = button?.querySelector?.('.choice-swatch');
+      if (!swatch) return;
+      const name = this.documentRef.createElement('span');
+      name.className = 'choice-swatch-name';
+      name.textContent = reveal.name;
+      name.style.color = readableTextColor(reveal.displayHex);
+      swatch.append(name);
+      swatch.removeAttribute('aria-hidden');
+      swatch.setAttribute('role', 'img');
+      swatch.setAttribute('aria-label', reveal.reading ? `${reveal.name}（${reveal.reading}）` : reveal.name);
+      button.setAttribute('aria-label', `${String.fromCharCode(65 + reveal.index)} ${reveal.name}`);
+    });
+  }
+
   showResult({ question, selectedIndex, correctIndex }) {
     this.buttons.forEach((button, index) => {
       button.disabled = true;
       if (index === correctIndex) button.dataset.state = 'correct';
       else if (index === selectedIndex) button.dataset.state = 'wrong';
     });
+
+    if (question?.presentation?.kind === 'choice_colors') this.revealChoiceNames(question);
 
     const feedback = getAnswerFeedbackModel(question, this.colors);
     this.explanationEl.replaceChildren();
