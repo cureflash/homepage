@@ -20,7 +20,8 @@
   - [x] `c3-conventional-052` (スカイブルー) formally deferred for `color_to_name`: the current association reference value `#8ED1E0` is identical to `c3-conventional-017` 空色, so monitor-only identification is ambiguous and is not required for the useful-state-space gate.
   - [x] `name_to_color` checkpoint 0017-0024: 8 generated as pending first and independently verified; 0 pending. Targets c3-002, 003, 005, 006, 007, 009, 010, 011.
   - [x] `name_to_color` checkpoint 0025-0032: 8 generated as pending first and independently verified; 0 pending. Targets c3-012, 013, 014, 015, 017, 019, 020, 021.
-  - [ ] Continue `name_to_color` authoring at question 0033 with c3-conventional-022 群青色.
+  - [x] `name_to_color` checkpoint 0033-0040: 8 generated as pending first and independently verified; 0 pending. Targets c3-022, 023, 024, 026, 027, 028, 029, 030; c3-025 was already covered by the runtime beta and is not reused.
+  - [ ] Continue `name_to_color` authoring at question 0041 with c3-conventional-031 バーミリオン.
 - [ ] Independent QA for all conventional-color questions.
 - [ ] Promote verified authoring checkpoints into `grade3-runtime.json` only after consistency tests pass.
 - [ ] Conventional-color coverage gate: both directions cover the useful authoritative master state space, pending=0, duplicates/schema/references pass; do not force a monitor-indistinguishable item merely to claim 64/64.
