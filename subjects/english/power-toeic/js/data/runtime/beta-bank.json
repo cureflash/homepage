@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T10:18:27.624Z",
+  "generatedAt": "2026-08-30T12:18:26.197Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2475,
-    "runtimeQuestionCount": 2475,
+    "approvedCandidateCount": 2500,
+    "runtimeQuestionCount": 2500,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 101
+    "qaRecordCount": 102
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -25889,6 +25889,431 @@
       ],
       "correctIndex": 0,
       "explanation": "'Each' is grammatically singular, so it takes the singular verb 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0026",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every employee in the purchasing unit ____ an individual login for the vendor portal.",
+      "choices": [
+        "has",
+        "have",
+        "having",
+        "are having"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0027",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the conference packages ____ breakfast in the registration fee.",
+      "choices": [
+        "include",
+        "includes",
+        "have included",
+        "are including"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'includes'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0028",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone from the legal department ____ all licensing requests before they are submitted.",
+      "choices": [
+        "review",
+        "have reviewed",
+        "reviews",
+        "are reviewing"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'reviews'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0029",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of these maintenance contracts ____ at the end of December.",
+      "choices": [
+        "expire",
+        "have expired",
+        "are expiring",
+        "expires"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'expires'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0030",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone assigned to the night shift ____ a reflective safety vest.",
+      "choices": [
+        "wears",
+        "wear",
+        "have worn",
+        "wearing"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'wears'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0031",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of the two meeting rooms ____ available after 3:00 p.m.",
+      "choices": [
+        "are",
+        "is",
+        "have been",
+        "being"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0032",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "No one in the branch office ____ access to the payroll database.",
+      "choices": [
+        "have",
+        "having",
+        "has",
+        "are having"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0033",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every one of the storage cabinets ____ locked after business hours.",
+      "choices": [
+        "are",
+        "have",
+        "were",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0034",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each technician ____ the equipment checklist before leaving the site.",
+      "choices": [
+        "completes",
+        "complete",
+        "have completed",
+        "completing"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'completes'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0035",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everybody on the mailing list ____ the quarterly newsletter electronically.",
+      "choices": [
+        "receive",
+        "receives",
+        "have received",
+        "are receiving"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'receives'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0036",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the revised proposals ____ the client's budget limit.",
+      "choices": [
+        "meet",
+        "have met",
+        "meets",
+        "are meeting"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'meets'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0037",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone in human resources ____ responsible for scheduling the interviews.",
+      "choices": [
+        "are",
+        "have",
+        "being",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0038",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the delivery vehicles ____ a GPS tracking device.",
+      "choices": [
+        "has",
+        "have",
+        "having",
+        "are having"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0039",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone at the seminar ____ a printed evaluation form at the end.",
+      "choices": [
+        "receive",
+        "receives",
+        "have received",
+        "receiving"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'receives'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0040",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of these payment methods ____ acceptable for international orders.",
+      "choices": [
+        "are",
+        "have been",
+        "is",
+        "were"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0041",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Nobody on the maintenance team ____ to enter the electrical room without authorization.",
+      "choices": [
+        "need",
+        "have needed",
+        "are needing",
+        "needs"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'needs'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0042",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every applicant ____ two professional references with the application.",
+      "choices": [
+        "provides",
+        "provide",
+        "have provided",
+        "providing"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'provides'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0043",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the elevators ____ operational during the scheduled inspection.",
+      "choices": [
+        "are",
+        "is",
+        "have been",
+        "being"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0044",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone on the reception staff ____ incoming visitors with temporary badges.",
+      "choices": [
+        "issue",
+        "have issued",
+        "issues",
+        "are issuing"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'issues'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0045",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the regional offices ____ its own quarterly sales target.",
+      "choices": [
+        "set",
+        "have set",
+        "are setting",
+        "sets"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'sets'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0046",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone using the company vehicle ____ the mileage at the end of each trip.",
+      "choices": [
+        "records",
+        "record",
+        "have recorded",
+        "recording"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'records'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0047",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "No one in the finance team ____ authorized to release the figures before the announcement.",
+      "choices": [
+        "are",
+        "is",
+        "have",
+        "being"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0048",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of the available time slots ____ for the client presentation.",
+      "choices": [
+        "work",
+        "have worked",
+        "works",
+        "are working"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'works'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0049",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every one of the sample containers ____ labeled with a tracking number.",
+      "choices": [
+        "are",
+        "have",
+        "were",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0050",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each department head ____ a brief update at Monday's planning meeting.",
+      "choices": [
+        "presents",
+        "present",
+        "have presented",
+        "presenting"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'presents'.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
