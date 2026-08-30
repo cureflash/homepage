@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T19:24:10.242Z",
+  "generatedAt": "2026-08-30T20:22:24.894Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 3094,
-    "runtimeQuestionCount": 3093,
+    "approvedCandidateCount": 3194,
+    "runtimeQuestionCount": 3193,
     "quarantinedNearDuplicateCount": 1,
-    "qaRecordCount": 126
+    "qaRecordCount": 130
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -215,6 +215,12 @@
       "label": "主語と動詞の一致",
       "categoryId": "verbs",
       "categoryLabel": "動詞"
+    },
+    {
+      "id": "p5.vocab.adjective_noun_collocation",
+      "label": "形容詞＋名詞コロケーション",
+      "categoryId": "vocabulary-usage",
+      "categoryLabel": "語彙・語法"
     },
     {
       "id": "p5.vocab.verb_noun_collocation",
@@ -51973,6 +51979,856 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_vocab_adjective_noun_collocation_0001",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The procurement team is seeking a supplier that can provide ____ delivery for emergency orders.",
+      "choices": [
+        "prompt",
+        "rapidly",
+        "speed",
+        "hasty"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'prompt delivery'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0002",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees receive ____ access to the training portal after completing orientation.",
+      "choices": [
+        "exclusively",
+        "exclusive",
+        "exclude",
+        "exclusion"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural collocation is 'exclusive access'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0003",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board approved a ____ increase in the research budget for next year.",
+      "choices": [
+        "substance",
+        "substantially",
+        "substantial",
+        "substantiated"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'substantial increase'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0004",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Our hotel offers ____ parking to guests who book directly through its website.",
+      "choices": [
+        "compliment",
+        "complimented",
+        "complimentaryly",
+        "complimentary"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard business collocation is 'complimentary parking'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0005",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The technician found a ____ defect in the circuit board during final inspection.",
+      "choices": [
+        "minor",
+        "minimize",
+        "minority",
+        "minutely"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural collocation is 'minor defect'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0006",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Applicants must demonstrate ____ knowledge of spreadsheet software.",
+      "choices": [
+        "worked",
+        "working",
+        "workable",
+        "worker"
+      ],
+      "correctIndex": 1,
+      "explanation": "The fixed collocation is 'working knowledge'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0007",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The merger is expected to create ____ savings across several administrative functions.",
+      "choices": [
+        "significance",
+        "significantly",
+        "significant",
+        "signify"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural collocation is 'significant savings'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0008",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The conference organizer issued ____ instructions for collecting badges at the entrance.",
+      "choices": [
+        "detail",
+        "detailing",
+        "details",
+        "detailed"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural collocation is 'detailed instructions'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0009",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse maintains ____ records of all temperature-sensitive shipments.",
+      "choices": [
+        "accurate",
+        "accuracy",
+        "accurately",
+        "accrue"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'accurate records'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0010",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company has introduced a ____ policy on the use of personal devices at work.",
+      "choices": [
+        "strictly",
+        "strict",
+        "restriction",
+        "stricture"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural collocation is 'strict policy'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0011",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new insurance plan provides ____ coverage for employees traveling overseas.",
+      "choices": [
+        "comprehensively",
+        "comprehend",
+        "comprehensive",
+        "comprehension"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'comprehensive coverage'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0012",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Management expects ____ demand for the product during the holiday season.",
+      "choices": [
+        "strongly",
+        "strength",
+        "strengthen",
+        "strong"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'strong demand'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0013",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The audit revealed ____ discrepancies in several expense reports.",
+      "choices": [
+        "serious",
+        "seriously",
+        "seriousness",
+        "series"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural collocation is 'serious discrepancies'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0014",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The agency released ____ figures showing a decline in business travel.",
+      "choices": [
+        "preliminarily",
+        "preliminary",
+        "prelude",
+        "preparation"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'preliminary figures'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0015",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The client requested a ____ estimate before approving the renovation project.",
+      "choices": [
+        "writing",
+        "write",
+        "written",
+        "writer"
+      ],
+      "correctIndex": 2,
+      "explanation": "The fixed collocation is 'written estimate'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0016",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The factory follows ____ safety procedures when handling volatile chemicals.",
+      "choices": [
+        "rigor",
+        "rigorously",
+        "rigidity",
+        "rigorous"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural collocation is 'rigorous safety procedures'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0017",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The branch reported ____ growth in online account registrations last quarter.",
+      "choices": [
+        "steady",
+        "steadily",
+        "steadiness",
+        "steadied"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'steady growth'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0018",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier gave us a ____ explanation for the unexpected price increase.",
+      "choices": [
+        "reasonably",
+        "reasonable",
+        "reason",
+        "reasoning"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural collocation is 'reasonable explanation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0019",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The committee reached a ____ decision after reviewing all five proposals.",
+      "choices": [
+        "unanimously",
+        "unanimity",
+        "unanimous",
+        "unified"
+      ],
+      "correctIndex": 2,
+      "explanation": "The fixed collocation is 'unanimous decision'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0020",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company faces ____ competition from several low-cost overseas manufacturers.",
+      "choices": [
+        "intensely",
+        "intensity",
+        "intensify",
+        "intense"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'intense competition'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0021",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new scheduling system has received ____ feedback from most department managers.",
+      "choices": [
+        "positive",
+        "positively",
+        "position",
+        "positivity"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural collocation is 'positive feedback'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0022",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please keep all receipts because ____ documentation is required for reimbursement.",
+      "choices": [
+        "supported",
+        "supporting",
+        "supportive",
+        "support"
+      ],
+      "correctIndex": 1,
+      "explanation": "The fixed collocation is 'supporting documentation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0023",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The restaurant experienced a ____ shortage of kitchen staff during the summer.",
+      "choices": [
+        "temporarily",
+        "temporariness",
+        "temporary",
+        "temporize"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural collocation is 'temporary shortage'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0024",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The updated software provides ____ protection against unauthorized access.",
+      "choices": [
+        "enhance",
+        "enhancing",
+        "enhancement",
+        "enhanced"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'enhanced protection'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0025",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The landlord is responsible for ____ repairs to the building's electrical system.",
+      "choices": [
+        "major",
+        "majorly",
+        "majority",
+        "majoring"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural collocation is 'major repairs'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0026",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All warehouse supervisors must complete ____ training before operating the new inventory system.",
+      "choices": [
+        "mandatory",
+        "mandate",
+        "mandatorily",
+        "mandating"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'mandatory training'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0027",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance department conducts an ____ review of travel expenses every January.",
+      "choices": [
+        "annually",
+        "annual",
+        "annualize",
+        "annuity"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'annual review'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0028",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier offered a ____ price for the replacement components.",
+      "choices": [
+        "competition",
+        "competitively",
+        "competitive",
+        "compete"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'competitive price'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0029",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees are prohibited from sharing ____ information with unauthorized parties.",
+      "choices": [
+        "confidence",
+        "confidentially",
+        "confide",
+        "confidential"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'confidential information'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0030",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Customers can request ____ assistance through the support portal.",
+      "choices": [
+        "technical",
+        "technician",
+        "technically",
+        "technique"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'technical assistance'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0031",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The safety officer called for ____ action after detecting a gas leak.",
+      "choices": [
+        "immediately",
+        "immediate",
+        "immediacy",
+        "mediation"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'immediate action'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0032",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The expansion plan cannot proceed without ____ approval from the board.",
+      "choices": [
+        "formally",
+        "formality",
+        "formal",
+        "formalize"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'formal approval'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0033",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Drivers should allow extra time because ____ traffic is expected near the convention center.",
+      "choices": [
+        "heavily",
+        "heaviness",
+        "weight",
+        "heavy"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'heavy traffic'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0034",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consultant charged a ____ rate for the additional analysis.",
+      "choices": [
+        "reasonable",
+        "reason",
+        "reasonably",
+        "reasoning"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'reasonable rate'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0035",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The planning team needs an ____ forecast before ordering raw materials.",
+      "choices": [
+        "accuracy",
+        "accurate",
+        "accurately",
+        "accrue"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'accurate forecast'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0036",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The client thanked the service desk for its ____ response to the outage.",
+      "choices": [
+        "timing",
+        "time",
+        "timely",
+        "timeliness"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'timely response'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0037",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees must provide a ____ reason when requesting an exception to the policy.",
+      "choices": [
+        "validity",
+        "validate",
+        "validly",
+        "valid"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'valid reason'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0038",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Each project proposal should state a ____ objective and measurable outcomes.",
+      "choices": [
+        "clear",
+        "clarify",
+        "clearly",
+        "clarity"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'clear objective'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0039",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "An ____ delay at customs prevented the shipment from arriving on Friday.",
+      "choices": [
+        "unexpectedly",
+        "unexpected",
+        "expectation",
+        "expect"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'unexpected delay'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0040",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The lender offered ____ terms to customers with strong credit histories.",
+      "choices": [
+        "favor",
+        "favorably",
+        "favorable",
+        "favorite"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'favorable terms'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0041",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The engineers proposed a ____ solution that could be implemented without replacing the entire system.",
+      "choices": [
+        "practice",
+        "practically",
+        "practitioner",
+        "practical"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'practical solution'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0042",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Members receive a ____ discount on conference registration fees.",
+      "choices": [
+        "substantial",
+        "substance",
+        "substantially",
+        "substantiate"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'substantial discount'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0043",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The legal team treated the regulator's inquiry as an ____ request.",
+      "choices": [
+        "urge",
+        "urgent",
+        "urgently",
+        "urgency"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'urgent request'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0044",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer is seeking a ____ supply of recycled aluminum for next year's production.",
+      "choices": [
+        "stability",
+        "stably",
+        "stable",
+        "stabilize"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'stable supply'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0045",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Tenants will receive an ____ notice before any changes to parking rules take effect.",
+      "choices": [
+        "officially",
+        "office",
+        "officiate",
+        "official"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'official notice'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0046",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The committee expects to announce its ____ decision by the end of the week.",
+      "choices": [
+        "final",
+        "finally",
+        "finality",
+        "finalize"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'final decision'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0047",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Applicants must submit all documents before the ____ deadline listed in the notice.",
+      "choices": [
+        "strictly",
+        "strict",
+        "stricture",
+        "restriction"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'strict deadline'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0048",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company chose the carrier because of its ____ service during peak seasons.",
+      "choices": [
+        "reliability",
+        "reliably",
+        "reliable",
+        "rely"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'reliable service'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0049",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The pilot program generated ____ feedback from both customers and staff.",
+      "choices": [
+        "value",
+        "valuably",
+        "valuation",
+        "valuable"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'valuable feedback'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0050",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The project cannot begin until ____ funding has been secured.",
+      "choices": [
+        "adequate",
+        "adequacy",
+        "adequately",
+        "equate"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'adequate funding'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_vocab_verb_noun_collocation_0001",
       "version": 1,
       "skillId": "p5.vocab.verb_noun_collocation",
@@ -52802,6 +53658,856 @@
       ],
       "correctIndex": 0,
       "explanation": "The standard collocation is 'make a recommendation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0051",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The notice is intended to ____ attention to changes in the building's emergency exits.",
+      "choices": [
+        "draw",
+        "pull over",
+        "carry",
+        "move"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'draw attention to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0052",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The nonprofit organization hopes to ____ funds for a new community training center.",
+      "choices": [
+        "lift",
+        "raise",
+        "grow",
+        "increase up"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'raise funds'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0053",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The importer must ____ a claim within 30 days if any goods arrive damaged.",
+      "choices": [
+        "store",
+        "hold",
+        "file",
+        "place away"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'file a claim'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0054",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The start-up is trying to ____ funding for the next stage of product development.",
+      "choices": [
+        "lock",
+        "close",
+        "fix",
+        "secure"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural business collocation is 'secure funding'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0055",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Researchers will ____ data from participating stores over a six-month period.",
+      "choices": [
+        "collect",
+        "pick",
+        "take up",
+        "receive in"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'collect data'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0056",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The billing system will ____ an invoice automatically after the shipment is confirmed.",
+      "choices": [
+        "publish",
+        "issue",
+        "declare",
+        "announce"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard commercial collocation is 'issue an invoice'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0057",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The installation crew has ____ steady progress despite several days of heavy rain.",
+      "choices": [
+        "built",
+        "performed",
+        "made",
+        "raised"
+      ],
+      "correctIndex": 2,
+      "explanation": "The fixed collocation is 'make progress'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0058",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Technical support can ____ assistance with account setup during normal business hours.",
+      "choices": [
+        "send",
+        "make",
+        "perform",
+        "provide"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'provide assistance'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0059",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees should ____ caution when opening attachments from unknown senders.",
+      "choices": [
+        "exercise",
+        "train",
+        "practice up",
+        "work"
+      ],
+      "correctIndex": 0,
+      "explanation": "The formal collocation is 'exercise caution'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0060",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new department manager will ____ responsibility for the regional training program next month.",
+      "choices": [
+        "receive",
+        "assume",
+        "carry in",
+        "own up"
+      ],
+      "correctIndex": 1,
+      "explanation": "The formal collocation is 'assume responsibility for'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0061",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The procurement team will ____ a meeting with shortlisted vendors on Thursday.",
+      "choices": [
+        "keep",
+        "take",
+        "hold",
+        "own"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'hold a meeting'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0062",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Both parties made concessions in order to ____ a compromise before the contract expired.",
+      "choices": [
+        "arrive",
+        "touch",
+        "form up",
+        "reach"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'reach a compromise'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0063",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Applicants must ____ all eligibility criteria before they can proceed to the interview stage.",
+      "choices": [
+        "meet",
+        "visit",
+        "join",
+        "touch"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'meet criteria'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0064",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Warehouse staff should ____ precautions when handling containers marked as fragile.",
+      "choices": [
+        "make",
+        "take",
+        "perform",
+        "hold"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'take precautions'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0065",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised FAQ should ____ customers' concerns about how their personal data is stored.",
+      "choices": [
+        "answer to",
+        "reply at",
+        "address",
+        "speak"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'address concerns'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0066",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The contractor must ____ all requirements in the safety specification before work can begin.",
+      "choices": [
+        "finish up",
+        "close out",
+        "complete over",
+        "fulfill"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'fulfill requirements'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0067",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The system administrator can ____ access to the shared folder for approved contractors.",
+      "choices": [
+        "grant",
+        "lend",
+        "borrow",
+        "donate"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'grant access'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0068",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The energy-efficiency project is expected to ____ substantial savings over the next three years.",
+      "choices": [
+        "win",
+        "achieve",
+        "receive",
+        "collect"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural collocation is 'achieve savings'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0069",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All franchise locations are expected to ____ the same customer-service standards.",
+      "choices": [
+        "hold",
+        "own",
+        "maintain",
+        "carry around"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'maintain standards'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0070",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Candidates must ____ an application and two references by September 15.",
+      "choices": [
+        "deliver out",
+        "offer up",
+        "publish",
+        "submit"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard administrative collocation is 'submit an application'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0071",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consultant will ____ information from each department before drafting the final report.",
+      "choices": [
+        "gather",
+        "meet",
+        "join",
+        "hold"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural collocation is 'gather information'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0072",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "A certified technician must ____ an inspection of the elevator every six months.",
+      "choices": [
+        "operate",
+        "conduct",
+        "drive",
+        "manage"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'conduct an inspection'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0073",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company will ____ the new remote-work policy at the beginning of the next fiscal year.",
+      "choices": [
+        "perform",
+        "conduct",
+        "implement",
+        "execute on"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'implement a policy'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0074",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The mediator helped the two firms ____ their dispute without going to court.",
+      "choices": [
+        "finish",
+        "close out",
+        "end up",
+        "settle"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'settle a dispute'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0075",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The event coordinator will ____ arrangements for transportation from the airport.",
+      "choices": [
+        "make",
+        "perform",
+        "build",
+        "produce"
+      ],
+      "correctIndex": 0,
+      "explanation": "The fixed collocation is 'make arrangements'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0076",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The lease requires tenants to ____ notice at least 30 days before moving out.",
+      "choices": [
+        "provide",
+        "speak",
+        "tell",
+        "announce"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'provide notice'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0077",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Patients must ____ consent before their records can be shared with the research team.",
+      "choices": [
+        "collect",
+        "give",
+        "make",
+        "perform"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'give consent'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0078",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Limited warehouse space may ____ a challenge during the peak shipping season.",
+      "choices": [
+        "set",
+        "put",
+        "pose",
+        "stand"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'pose a challenge'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0079",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The subcontractor must ____ all obligations specified in the maintenance agreement.",
+      "choices": [
+        "arrive at",
+        "touch",
+        "join",
+        "meet"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'meet obligations'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0080",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Late payment may cause the account holder to ____ a penalty under the contract.",
+      "choices": [
+        "incur",
+        "receive in",
+        "collect",
+        "win"
+      ],
+      "correctIndex": 0,
+      "explanation": "The formal collocation is 'incur a penalty'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0081",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new product manager will ____ ownership of the rollout schedule beginning Monday.",
+      "choices": [
+        "perform",
+        "take",
+        "make",
+        "hold up"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard business collocation is 'take ownership of'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0082",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The university team will ____ research on consumer responses to reusable packaging.",
+      "choices": [
+        "operate",
+        "drive",
+        "conduct",
+        "manage out"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'conduct research'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0083",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The campaign aims to ____ awareness of the company's new recycling program.",
+      "choices": [
+        "lift",
+        "grow",
+        "rise",
+        "raise"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'raise awareness'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0084",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The security officer must ____ a report whenever an access badge is lost.",
+      "choices": [
+        "file",
+        "store",
+        "hold",
+        "keep in"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'file a report'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0085",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "At Monday's planning session, the team will ____ priorities for the next development cycle.",
+      "choices": [
+        "put",
+        "set",
+        "install",
+        "settle"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'set priorities'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0086",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Clear communication helped the new account manager ____ the client's trust quickly.",
+      "choices": [
+        "win over",
+        "receive",
+        "earn",
+        "collect"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'earn trust'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0087",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The two organizations hope to ____ a long-term partnership in renewable-energy training.",
+      "choices": [
+        "raise",
+        "make up",
+        "grow out",
+        "build"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural collocation is 'build a partnership'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0088",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales division needs to ____ its quarterly target by the end of September.",
+      "choices": [
+        "reach",
+        "arrive",
+        "join",
+        "touch on"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'reach a target'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0089",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consulting firm is expected to ____ results within six weeks of starting the project.",
+      "choices": [
+        "carry",
+        "deliver",
+        "transport",
+        "ship"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard business collocation is 'deliver results'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0090",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Customers can ____ payment by credit card or bank transfer.",
+      "choices": [
+        "perform",
+        "conduct",
+        "make",
+        "build"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'make payment'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0091",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Either party may ____ notice of termination by registered mail.",
+      "choices": [
+        "say",
+        "speak",
+        "tell",
+        "give"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard legal/business collocation is 'give notice'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0092",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Representatives from both unions will ____ talks with management next week.",
+      "choices": [
+        "hold",
+        "own",
+        "keep",
+        "store"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'hold talks'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0093",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The legal department has been asked to ____ a contract for the new maintenance service.",
+      "choices": [
+        "pull",
+        "draw up",
+        "paint",
+        "lift"
+      ],
+      "correctIndex": 1,
+      "explanation": "The established collocation is 'draw up a contract'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0094",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Additional staff were assigned to help the project ____ its schedule despite the equipment delay.",
+      "choices": [
+        "touch",
+        "arrive",
+        "meet",
+        "join"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'meet a schedule'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0095",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The city may ____ restrictions on truck deliveries during major downtown events.",
+      "choices": [
+        "set to",
+        "give over",
+        "put against",
+        "impose"
+      ],
+      "correctIndex": 3,
+      "explanation": "The formal collocation is 'impose restrictions on'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0096",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The team leader must ____ approval before purchasing equipment that exceeds the budget limit.",
+      "choices": [
+        "seek",
+        "look",
+        "watch",
+        "find at"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'seek approval'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0097",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Ms. Owens volunteered to ____ minutes during the committee meeting.",
+      "choices": [
+        "make",
+        "take",
+        "hold",
+        "carry"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'take minutes'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0098",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company will ____ a statement after the investigation has been completed.",
+      "choices": [
+        "publish out",
+        "declare to",
+        "issue",
+        "tell"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'issue a statement'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0099",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The landlord agreed to ____ an extension of the lease while the tenant searches for a new office.",
+      "choices": [
+        "lend",
+        "donate",
+        "award to",
+        "grant"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'grant an extension'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0100",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employee suggestions can ____ a valuable contribution to improving workplace safety.",
+      "choices": [
+        "make",
+        "perform",
+        "build",
+        "produce"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'make a contribution'.",
       "validationStatus": "verified",
       "betaCandidate": true
     }
