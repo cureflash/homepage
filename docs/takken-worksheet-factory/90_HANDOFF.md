@@ -8,20 +8,35 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Partially advanced `takken-concept-lease-deposit-opposability` from source unit `lease-deposit-opposability` without modifying Phase 2/3 question content or validation state.
+Corrected the previous unit 51 Phase 4.2 checkpoint so it conforms to the canonical concept inventory.
 
-Civil Code Article 622-2 and Land and Building Lease Act Article 31 were normalized into eight verified atomic knowledge items:
+The prior checkpoint had staged eight verified knowledge items under `takken-concept-lease-deposit-opposability`. That concept ID does not exist in `power-concepts.js`; the canonical inventory has two separate concepts from the same source unit:
 
-1. 敷金は、名目を問わず、賃貸借に基づく賃借人の金銭債務を担保する目的で交付される金銭である。
-2. 賃貸借が終了し、かつ賃貸物の返還を受けたときは敷金返還義務が生じる。
-3. 賃借人が適法に賃借権を譲渡したときも敷金返還義務が生じる。
-4. 返還額は、敷金から賃貸借に基づく賃借人の金銭債務額を控除した残額である。
-5. 賃借人が賃貸借に基づく金銭債務を履行しないとき、賃貸人は敷金をその弁済に充てられる。
-6. 賃借人は、敷金を未払債務へ充当するよう賃貸人に請求できない。
-7. 建物賃貸借は、登記がなくても建物の引渡しがあれば第三者対抗力を取得する。
-8. その対抗力は、引渡し後に建物について物権を取得した者に対して生ずる。
+- `takken-concept-security-deposit`
+- `takken-concept-building-lease-opposability`
 
-Existing verified `takken-q-51-001` and `takken-q-51-002` were inspected, but their canonical mappings were intentionally not written in this checkpoint. `takken-q-51-001` directly tests the termination-plus-return trigger and debt deduction. `takken-q-51-002` directly tests delivery-based opposability without registration and expressly scopes the counterparty to a later property-right acquirer. The central `power-question-knowledge-map.js` therefore remains at 71 mappings and must be reconciled next before the concept is marked complete.
+The combined model was therefore removed rather than extended.
+
+Six Civil Code Article 622-2 items now belong to `takken-concept-security-deposit`:
+
+1. statutory definition of deposit/security money
+2. return after lease termination plus return of the leased property
+3. return after lawful assignment of the lease right
+4. deduction of lease-based monetary obligations from the amount returned
+5. lessor's right to apply the deposit to unpaid lease-based monetary debt
+6. lessee cannot demand that the lessor make that application
+
+Two Land and Building Lease Act Article 31 items now belong to `takken-concept-building-lease-opposability`:
+
+1. delivery of the building gives opposability even without registration
+2. the opposability applies against a person who later acquires a property right in the building
+
+Existing verified question mappings were reconciled only where directly tested:
+
+- `takken-q-51-001` -> `takken-k-security-deposit-return-after-end-and-return`, `takken-k-security-deposit-return-net-of-debt`
+- `takken-q-51-002` -> `takken-k-building-lease-opposability-delivery-without-registration`, `takken-k-building-lease-opposability-subsequent-property-right-acquirer`
+
+The definition, lawful-assignment return trigger, lessor application right, and lessee no-demand rule remain explicit Phase 4.3 coverage gaps.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -32,33 +47,26 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 64/113 completed concepts
-- Canonical knowledge items staged: 347
-- Existing verified questions mapped: 71
-- Explicit unmapped knowledge gaps before q51 reconciliation: 256
+- Phase 4.2: active — 66/113 completed concepts
+- Canonical knowledge items: 347
+- Existing verified questions mapped: 73
+- Explicit unmapped knowledge gaps: 252
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Finish `takken-concept-lease-deposit-opposability` by updating `qualifications/takken/data/power-question-knowledge-map.js` for existing verified `takken-q-51-001` and `takken-q-51-002` only where they directly test the staged knowledge items.
+Start `takken-concept-ordinary-land-lease-term` from source unit `land-lease-right`.
 
-Expected direct mappings from the inspected question text:
-
-- `takken-q-51-001` -> `takken-k-lease-deposit-opposability-return-after-end-and-return`, `takken-k-lease-deposit-opposability-return-net-of-debt`
-- `takken-q-51-002` -> `takken-k-lease-deposit-opposability-delivery-without-registration`, `takken-k-lease-deposit-opposability-subsequent-property-right-acquirer`
-
-Do not map the deposit definition, lawful-assignment return trigger, lessor unilateral application rule, or lessee no-demand rule because neither existing verified q51 question directly tests them.
-
-After that mapping is committed and validated, mark this concept complete and advance to the next concept in inventory order. Do not start Phase 4.3 yet.
+Do not start Phase 4.3 until all 113 canonical concepts have been decomposed and existing verified-question mappings have been reconciled.
 
 ## Validation note
 
-Canonical unit 51 fact `u51-f1` supports the ordinary return-after-termination-and-return rule plus deduction of unpaid monetary obligations. The fuller Article 622-2 text additionally supplies the statutory deposit definition, lawful-assignment return trigger, lessor application right, and lessee no-demand rule; these four are staged with empty `sourceFactIds` because the original unit facts did not separately encode them.
+The unit 51 correction is structural, not a change to Phase 2/3 question content. The eight staged legal claims were preserved, but their concept IDs and knowledge IDs were normalized to the actual concept inventory.
 
-Canonical unit 51 fact `u51-f2` supports delivery-based opposability of a building lease without registration against a person who later acquires a property right in the building. Existing `takken-q-51-002` expressly includes both the later-acquirer scope in the stem and the delivery-without-registration rule in its sole correct choice.
+`power-question-knowledge-map.js` now expects 73 mapped existing verified questions through unit 51 and explicitly requires both q51 mappings. Its allowed concept IDs and mapped knowledge IDs use the canonical `security-deposit` and `building-lease-opposability` identifiers.
 
-The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statutory primary sources, valid `u51-f1`/`u51-f2` provenance, and the expected eight-item count.
+The two replacement knowledge files enforce unique IDs, 2026/2026-04-01 metadata, verified status, statutory primary sources, and source-fact provenance limited to `u51-f1` or `u51-f2` as applicable.
 
 ## publication invariant
 
