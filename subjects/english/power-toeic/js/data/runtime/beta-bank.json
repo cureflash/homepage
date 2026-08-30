@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T21:19:56.322Z",
+  "generatedAt": "2026-08-30T22:21:57.239Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 3293,
-    "runtimeQuestionCount": 3292,
-    "quarantinedNearDuplicateCount": 1,
-    "qaRecordCount": 134
+    "approvedCandidateCount": 3392,
+    "runtimeQuestionCount": 3390,
+    "quarantinedNearDuplicateCount": 2,
+    "qaRecordCount": 138
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -219,6 +219,12 @@
     {
       "id": "p5.vocab.adjective_noun_collocation",
       "label": "形容詞＋名詞コロケーション",
+      "categoryId": "vocabulary-usage",
+      "categoryLabel": "語彙・語法"
+    },
+    {
+      "id": "p5.vocab.phrasal_verb",
+      "label": "句動詞",
       "categoryId": "vocabulary-usage",
       "categoryLabel": "語彙・語法"
     },
@@ -53668,6 +53674,839 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_vocab_phrasal_verb_0001",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The audit team will ____ the expense reports before Friday's finance meeting.",
+      "choices": [
+        "go over",
+        "put off",
+        "turn down",
+        "set up"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Go over' means review carefully, which fits checking expense reports.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0002",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ the online registration form before submitting your conference payment.",
+      "choices": [
+        "look into",
+        "fill out",
+        "take over",
+        "call off"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Fill out' means complete a form by providing the requested information.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0003",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Management decided to ____ the product launch until the safety tests are complete.",
+      "choices": [
+        "carry out",
+        "bring up",
+        "put off",
+        "check in"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Put off' means postpone, which fits delaying the launch.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0004",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Because of the severe weather warning, the organizers had to ____ tomorrow's outdoor reception.",
+      "choices": [
+        "set up",
+        "follow up",
+        "hand in",
+        "call off"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Call off' means cancel a planned event.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0005",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The IT department will ____ the new employee accounts before orientation begins.",
+      "choices": [
+        "set up",
+        "turn down",
+        "look after",
+        "go over"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Set up' means establish or configure something for use.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0006",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Ms. Patel will ____ the supplier's complaint and report her findings to the purchasing director.",
+      "choices": [
+        "take over",
+        "look into",
+        "fill out",
+        "put away"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Look into' means investigate a matter.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0007",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The maintenance crew will ____ a full inspection of the elevators this weekend.",
+      "choices": [
+        "check in",
+        "turn down",
+        "carry out",
+        "bring back"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Carry out' means perform or conduct a task.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0008",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "After Mr. Lewis retires, his deputy will ____ responsibility for the regional sales team.",
+      "choices": [
+        "point out",
+        "follow up",
+        "hand in",
+        "take over"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Take over' means assume control or responsibility.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0009",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consultant ____ several inconsistencies in the draft contract during yesterday's review.",
+      "choices": [
+        "pointed out",
+        "set aside",
+        "called off",
+        "filled out"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Pointed out' means drew attention to something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0010",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The recruiter promised to ____ with candidates who completed the second interview.",
+      "choices": [
+        "put off",
+        "follow up",
+        "take apart",
+        "turn in"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Follow up' means contact someone again or take further action.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0011",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Before the presentation, the technicians need to ____ the projector and audio equipment.",
+      "choices": [
+        "look into",
+        "turn down",
+        "set up",
+        "go against"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Set up' means arrange and prepare equipment for use.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0012",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board ____ the proposal because its projected costs were substantially above budget.",
+      "choices": [
+        "carried out",
+        "went over",
+        "checked in",
+        "turned down"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Turned down' means rejected.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0013",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All contractors must ____ at the security desk before entering the research facility.",
+      "choices": [
+        "check in",
+        "take over",
+        "put off",
+        "point out"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Check in' means report one's arrival at a designated place.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0014",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees should ____ their travel receipts within ten business days of returning.",
+      "choices": [
+        "set up",
+        "hand in",
+        "look after",
+        "call off"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Hand in' means submit something to an authority or responsible person.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0015",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse supervisor asked staff to ____ the damaged cartons from the items ready for shipment.",
+      "choices": [
+        "go over",
+        "bring up",
+        "set aside",
+        "follow through"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Set aside' means separate and reserve something for a particular purpose.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0016",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The operations manager plans to ____ the staffing issue at Monday's department meeting.",
+      "choices": [
+        "fill out",
+        "take over",
+        "put away",
+        "bring up"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Bring up' means introduce a topic for discussion.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0017",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company will gradually ____ its older delivery vans as electric replacements become available.",
+      "choices": [
+        "phase out",
+        "check in",
+        "hand in",
+        "look into"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Phase out' means discontinue something gradually.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0018",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ your identification badge when you leave the secure production area.",
+      "choices": [
+        "carry out",
+        "turn in",
+        "set up",
+        "go over"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Turn in' means return or submit something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0019",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The software team expects to ____ the updated customer portal across all regions next month.",
+      "choices": [
+        "put off",
+        "look after",
+        "roll out",
+        "turn down"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Roll out' means introduce or launch something for general use.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0020",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The accounting department has already ____ enough funds for the unexpected equipment repairs.",
+      "choices": [
+        "followed up",
+        "checked in",
+        "brought up",
+        "set aside"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Set aside' means reserve money for a particular purpose.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0021",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Could you ____ the volume in the conference room before the video call starts?",
+      "choices": [
+        "turn down",
+        "take over",
+        "fill out",
+        "carry out"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Turn down' means reduce the level or intensity of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0022",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The facilities team will ____ the old office furniture after the new desks arrive.",
+      "choices": [
+        "go over",
+        "take away",
+        "bring up",
+        "check in"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Take away' means remove something from a place.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0023",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The customer-service manager asked Mia to ____ the unresolved billing cases from last week.",
+      "choices": [
+        "call off",
+        "set aside",
+        "follow up on",
+        "turn in"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Follow up on' means take further action regarding an unresolved matter.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0024",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "We should ____ a backup copy of the client database before installing the system update.",
+      "choices": [
+        "hand in",
+        "put off",
+        "look into",
+        "back up"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Back up' means make a safety copy of data.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0025",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The store manager will ____ the promotional signs after the holiday sale ends.",
+      "choices": [
+        "take down",
+        "roll out",
+        "check in",
+        "carry out"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Take down' means remove something that has been displayed or erected.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0026",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The purchasing manager will ____ the revised contract before sending it to the legal department.",
+      "choices": [
+        "hand over",
+        "look over",
+        "run into",
+        "put away"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Look over' means examine or review something, which fits reviewing a contract.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0027",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company plans to ____ a customer survey next week to gather feedback on its delivery service.",
+      "choices": [
+        "turn down",
+        "check in",
+        "send out",
+        "take apart"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Send out' means distribute or dispatch something to a group of recipients.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0028",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "After reviewing the repair estimates, the facilities director decided to ____ the least urgent renovation until next year.",
+      "choices": [
+        "bring in",
+        "carry on",
+        "hand over",
+        "put back"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Put back' means postpone something until a later time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0029",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance team needs to ____ why the quarterly travel expenses exceeded the approved budget.",
+      "choices": [
+        "find out",
+        "take down",
+        "check out",
+        "give away"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Find out' means discover or determine information, which fits determining the cause of the higher expenses.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0030",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Because raw-material costs have risen, the factory is trying to ____ unnecessary energy use.",
+      "choices": [
+        "bring up",
+        "cut back on",
+        "hand in",
+        "come across"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Cut back on' means reduce the amount or use of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0031",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The project manager asked the engineers to ____ a backup plan in case the new equipment arrives late.",
+      "choices": [
+        "turn over",
+        "drop off",
+        "come up with",
+        "look after"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Come up with' means devise or produce an idea or plan.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0032",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Before the board votes on the acquisition, analysts must ____ any companies that fail the financial screening criteria.",
+      "choices": [
+        "set up",
+        "go through",
+        "take on",
+        "rule out"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Rule out' means eliminate something from consideration.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0033",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The receptionist will ____ your package from the courier desk and bring it to the conference room.",
+      "choices": [
+        "pick up",
+        "hold back",
+        "turn in",
+        "break down"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Pick up' means collect something from a place.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0034",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The human-resources team is ready to ____ two additional interns for the summer marketing project.",
+      "choices": [
+        "take apart",
+        "take on",
+        "put off",
+        "call back"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Take on' means employ or accept additional people or responsibilities.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0035",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ the billing error with the accounting department before contacting the customer again.",
+      "choices": [
+        "run out of",
+        "bring forward",
+        "sort out",
+        "check in"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Sort out' means resolve or organize a problem successfully.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0036",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The retiring director will ____ responsibility for the overseas division to Ms. Chen at the end of the month.",
+      "choices": [
+        "look into",
+        "put aside",
+        "carry out",
+        "hand over"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Hand over' means transfer control or responsibility to another person.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0037",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales department will ____ several former clients to ask whether their purchasing needs have changed.",
+      "choices": [
+        "get in touch with",
+        "take away",
+        "put through",
+        "break into"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Get in touch with' means contact someone.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0039",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The technicians are trying to ____ what caused the packaging machine to stop unexpectedly.",
+      "choices": [
+        "take over",
+        "drop by",
+        "work out",
+        "call off"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Work out' means determine or solve something through thought or investigation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0040",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The airline may ____ extra staff during the winter travel season if passenger demand remains high.",
+      "choices": [
+        "give back",
+        "put away",
+        "check over",
+        "bring in"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Bring in' means introduce or hire additional people or resources.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0041",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ the signed delivery receipt at the front desk before you leave the building.",
+      "choices": [
+        "drop off",
+        "take over",
+        "go against",
+        "bring about"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Drop off' means deliver or leave something at a specified place.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0042",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The marketing team will ____ the survey results in tomorrow's planning meeting.",
+      "choices": [
+        "put away",
+        "go over",
+        "take after",
+        "run out"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Go over' means review or discuss something carefully.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0043",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The customer asked the service representative to ____ the unexplained charge on last month's invoice.",
+      "choices": [
+        "turn in",
+        "set aside",
+        "clear up",
+        "take down"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Clear up' means explain or resolve something that is confusing or uncertain.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0044",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "If the first candidate declines the offer, the recruiter will ____ the second candidate later this week.",
+      "choices": [
+        "put through",
+        "look over",
+        "set out",
+        "call back"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Call back' means telephone someone again.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0045",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse has ____ packing tape, so the supervisor ordered additional supplies this morning.",
+      "choices": [
+        "run out of",
+        "look up to",
+        "put on",
+        "take in"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Run out of' means use all of the available supply of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0046",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The legal team will ____ a revised confidentiality agreement for the new contractors.",
+      "choices": [
+        "break down",
+        "draw up",
+        "turn away",
+        "take back"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Draw up' means prepare a formal document.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0047",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier promised to ____ the defective units and issue replacements at no extra charge.",
+      "choices": [
+        "go through",
+        "hold on",
+        "take back",
+        "bring forward"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Take back' means accept the return of something previously supplied or sold.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0048",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Despite the temporary network outage, the support team was able to ____ with the scheduled software training.",
+      "choices": [
+        "turn down",
+        "hand over",
+        "put aside",
+        "carry on"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Carry on' means continue an activity despite a difficulty or interruption.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0049",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The committee will ____ the meeting by one week so that the budget can be approved before the deadline.",
+      "choices": [
+        "bring forward",
+        "take apart",
+        "look after",
+        "check out"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Bring forward' means move an event to an earlier date or time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0050",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "After ten years as chief executive, Mr. Ortega has decided to ____ at the end of this fiscal year.",
+      "choices": [
+        "carry over",
+        "step down",
+        "bring up",
+        "look through"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Step down' means resign from a position of authority.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_vocab_preposition_collocation_0001",
       "version": 1,
       "skillId": "p5.vocab.preposition_collocation",
@@ -54514,6 +55353,839 @@
       ],
       "correctIndex": 1,
       "explanation": "The expression 'be committed to' takes 'to', followed here by a gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0051",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The legal team advised the supplier to comply ____ all updated labeling requirements.",
+      "choices": [
+        "to",
+        "with",
+        "for",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'comply' takes the preposition 'with'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0052",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new policy is intended to protect employees ____ unauthorized disclosure of client data.",
+      "choices": [
+        "from",
+        "with",
+        "to",
+        "at"
+      ],
+      "correctIndex": 0,
+      "explanation": "The expression 'protect someone from something' takes 'from'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0053",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales director attributed the increase in renewals ____ improved follow-up procedures.",
+      "choices": [
+        "with",
+        "for",
+        "to",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'attribute' takes 'to' before the cause or source.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0054",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The branch manager is responsible ____ approving overtime requests during the audit.",
+      "choices": [
+        "to",
+        "with",
+        "of",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "The adjective 'responsible' takes 'for' before the duty or task.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0055",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The research team is looking forward ____ presenting its findings at the trade show.",
+      "choices": [
+        "for",
+        "with",
+        "to",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "The expression 'look forward to' takes 'to' followed by a gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0056",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The contractor apologized ____ failing to meet the original installation deadline.",
+      "choices": [
+        "for",
+        "on",
+        "to",
+        "with"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'apologize' takes 'for' before the reason.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0057",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The regional office specializes ____ export documentation for medical equipment.",
+      "choices": [
+        "at",
+        "in",
+        "on",
+        "with"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'specialize' takes 'in' before a field or area.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0058",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance committee agreed ____ postpone the vote until the revised figures were available.",
+      "choices": [
+        "for",
+        "to",
+        "with",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'agree' takes 'to' before an infinitive.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0059",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warranty does not apply ____ damage caused by improper installation.",
+      "choices": [
+        "for",
+        "with",
+        "to",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "The expression 'apply to' identifies what a rule or warranty covers.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0060",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consultant warned the client ____ possible delays at the customs checkpoint.",
+      "choices": [
+        "about",
+        "for",
+        "with",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'warn' takes 'about' before a potential problem.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0061",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The customer service team has access ____ the latest troubleshooting database.",
+      "choices": [
+        "at",
+        "for",
+        "to",
+        "with"
+      ],
+      "correctIndex": 2,
+      "explanation": "The noun phrase 'access to' takes 'to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0062",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The operations chief objected ____ moving the warehouse before peak season ended.",
+      "choices": [
+        "for",
+        "to",
+        "with",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'object' takes 'to' before a noun or gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0063",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new software is compatible ____ the company's existing accounting system.",
+      "choices": [
+        "to",
+        "with",
+        "for",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The adjective 'compatible' takes 'with'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0064",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board decided to focus ____ expanding services in smaller cities.",
+      "choices": [
+        "at",
+        "for",
+        "on",
+        "with"
+      ],
+      "correctIndex": 2,
+      "explanation": "The expression 'focus on' takes 'on' before the area of attention.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0065",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The insurer agreed to compensate the retailer ____ losses caused by the storm.",
+      "choices": [
+        "with",
+        "for",
+        "to",
+        "on"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'compensate' takes 'for' before the loss being covered.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0066",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The quality manager insisted ____ inspecting every shipment before release.",
+      "choices": [
+        "at",
+        "on",
+        "for",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'insist' takes 'on' before a noun or gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0067",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The marketing team has been working ____ a campaign aimed at first-time buyers.",
+      "choices": [
+        "on",
+        "to",
+        "with",
+        "for"
+      ],
+      "correctIndex": 0,
+      "explanation": "The expression 'work on' means to develop or complete something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0068",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier is capable ____ meeting the revised delivery schedule.",
+      "choices": [
+        "to",
+        "with",
+        "of",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "The adjective 'capable' takes 'of' before a noun or gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0069",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company is experimenting ____ biodegradable packaging for online orders.",
+      "choices": [
+        "with",
+        "to",
+        "for",
+        "at"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'experiment' takes 'with' for something being tested.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0070",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new procedure is designed to prevent errors ____ occurring during data entry.",
+      "choices": [
+        "to",
+        "from",
+        "with",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'prevent' takes 'from' before a gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0071",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manager congratulated the team ____ completing the rollout ahead of schedule.",
+      "choices": [
+        "with",
+        "for",
+        "on",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'congratulate' takes 'on' before an achievement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0072",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company has invested heavily ____ cybersecurity training this year.",
+      "choices": [
+        "at",
+        "on",
+        "in",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'invest' takes 'in'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0073",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The technician is familiar ____ the safety procedures for the new equipment.",
+      "choices": [
+        "to",
+        "with",
+        "for",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The adjective 'familiar' takes 'with'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0074",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The committee will vote ____ the proposed changes after hearing from employees.",
+      "choices": [
+        "on",
+        "to",
+        "with",
+        "for"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'vote' takes 'on' when deciding about a proposal or issue.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0075",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The shipment was delayed because the carrier was unable to cope ____ the sudden increase in volume.",
+      "choices": [
+        "for",
+        "with",
+        "to",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'cope with' means to deal successfully with something difficult.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0076",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees who travel on short notice may be eligible ____ reimbursement of approved taxi expenses.",
+      "choices": [
+        "for",
+        "to",
+        "with",
+        "at"
+      ],
+      "correctIndex": 0,
+      "explanation": "The adjective 'eligible' takes 'for' before a benefit or reimbursement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0077",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The logistics manager said that a shortage of drivers contributed ____ the delivery delays.",
+      "choices": [
+        "with",
+        "to",
+        "for",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'contribute' takes 'to' before a result or situation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0078",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The launch date remains dependent ____ final approval from the safety committee.",
+      "choices": [
+        "for",
+        "with",
+        "on",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "The adjective 'dependent' takes 'on'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0079",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Several recent warranty claims were associated ____ a defective power connector.",
+      "choices": [
+        "to",
+        "for",
+        "on",
+        "with"
+      ],
+      "correctIndex": 3,
+      "explanation": "The adjective 'associated' takes 'with'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0080",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "New supervisors are expected to participate ____ a two-day leadership workshop next month.",
+      "choices": [
+        "in",
+        "at",
+        "to",
+        "for"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'participate' takes 'in' before an activity or event.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0081",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Two directors chose to abstain ____ voting because of a potential conflict of interest.",
+      "choices": [
+        "at",
+        "from",
+        "for",
+        "with"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'abstain' takes 'from' before a noun or gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0082",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Customers can subscribe ____ monthly billing alerts through the account portal.",
+      "choices": [
+        "for",
+        "with",
+        "to",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'subscribe' takes 'to' before a service or publication.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0083",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The data center recovered ____ the brief power outage without losing any customer records.",
+      "choices": [
+        "with",
+        "to",
+        "at",
+        "from"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'recover' takes 'from' before an adverse event or condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0084",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Orders placed before Friday may qualify ____ free express delivery.",
+      "choices": [
+        "for",
+        "with",
+        "at",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'qualify' takes 'for' before a benefit or eligibility category.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0085",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The procurement team is currently engaged ____ negotiations with three equipment suppliers.",
+      "choices": [
+        "at",
+        "in",
+        "to",
+        "for"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'be engaged in' takes 'in' before an activity.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0086",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The orientation program consists ____ three online modules and one in-person session.",
+      "choices": [
+        "with",
+        "from",
+        "of",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'consist' takes 'of' before the components of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0087",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All replacement parts must conform ____ the technical standards listed in the service manual.",
+      "choices": [
+        "with",
+        "for",
+        "at",
+        "to"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'conform' takes 'to' before a standard or requirement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0088",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The customer relations unit will deal ____ complaints that require a manager's review.",
+      "choices": [
+        "with",
+        "to",
+        "for",
+        "at"
+      ],
+      "correctIndex": 0,
+      "explanation": "The expression 'deal with' takes 'with' before the matter being handled.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0089",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised routing system should result ____ shorter delivery times for rural customers.",
+      "choices": [
+        "from",
+        "in",
+        "to",
+        "with"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'result in' introduces the outcome of a cause or action.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0090",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Investigators concluded that the billing discrepancy stemmed ____ an outdated tax table.",
+      "choices": [
+        "with",
+        "to",
+        "from",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "The expression 'stem from' introduces the source or cause of a problem.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0091",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The final construction cost may differ ____ the preliminary estimate because material prices have risen.",
+      "choices": [
+        "with",
+        "to",
+        "at",
+        "from"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'differ' takes 'from' when comparing two things.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0092",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please refer ____ the attached schedule for the dates of the regional training sessions.",
+      "choices": [
+        "to",
+        "with",
+        "for",
+        "at"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'refer' takes 'to' before the document or source being consulted.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0093",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The maintenance team relies ____ a local supplier for emergency replacement parts.",
+      "choices": [
+        "at",
+        "on",
+        "with",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'rely' takes 'on'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0094",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Part-time staff will also benefit ____ the company's expanded health-care program.",
+      "choices": [
+        "with",
+        "to",
+        "from",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'benefit' takes 'from' before the source of an advantage.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0095",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "A technical specialist will respond ____ your inquiry within two business days.",
+      "choices": [
+        "with",
+        "for",
+        "at",
+        "to"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'respond' takes 'to' before an inquiry or request.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0096",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Online subscriptions now account ____ nearly half of the magazine's annual revenue.",
+      "choices": [
+        "for",
+        "to",
+        "with",
+        "at"
+      ],
+      "correctIndex": 0,
+      "explanation": "The expression 'account for' means to constitute a stated share or proportion.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0097",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised checklist is aimed ____ reducing errors during the final inspection.",
+      "choices": [
+        "to",
+        "at",
+        "for",
+        "with"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'be aimed at' takes 'at' before a noun or gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0098",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer is committed ____ improving the energy efficiency of its new models.",
+      "choices": [
+        "for",
+        "with",
+        "to",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "The adjective 'committed' takes 'to' before a noun or gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0100",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The department head did not approve ____ the consultant's proposal to remove the final review step.",
+      "choices": [
+        "of",
+        "to",
+        "with",
+        "at"
+      ],
+      "correctIndex": 0,
+      "explanation": "The expression 'approve of' means to consider an idea or action acceptable.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -56205,6 +57877,12 @@
     {
       "id": "p5_det_article_choice_0094",
       "duplicateOf": "p5_det_article_choice_0044",
+      "score": 1,
+      "reason": "exact_normalized_stem"
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0099",
+      "duplicateOf": "p5_vocab_preposition_collocation_0021",
       "score": 1,
       "reason": "exact_normalized_stem"
     }
