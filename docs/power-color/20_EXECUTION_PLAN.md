@@ -17,13 +17,13 @@
   - [x] `color_to_name` checkpoint 0057-0064: 8 generated and individually verified; 0 pending. Targets c3-048..051 and c3-053..056.
   - [x] `color_to_name` checkpoint 0065-0071: 7 generated and individually verified; 0 pending. Targets c3-057..062 and c3-064.
   - [x] `color_to_name` useful monitor-discriminable state space: 63/64 master refs covered with no target reuse.
-  - [x] `c3-conventional-052` (スカイブルー) formally deferred for `color_to_name`: the current association reference value `#8ED1E0` is identical to `c3-conventional-017` 空色, so monitor-only identification is ambiguous and is not required for the useful-state-space gate.
-  - [x] `name_to_color` checkpoint 0017-0024: 8 generated as pending first and independently verified; 0 pending. Targets c3-002, 003, 005, 006, 007, 009, 010, 011.
-  - [x] `name_to_color` checkpoint 0025-0032: 8 generated as pending first and independently verified; 0 pending. Targets c3-012, 013, 014, 015, 017, 019, 020, 021.
-  - [x] `name_to_color` checkpoint 0033-0040: 8 generated as pending first and independently verified; 0 pending. Targets c3-022, 023, 024, 026, 027, 028, 029, 030; c3-025 was already covered by the runtime beta and is not reused.
-  - [x] `name_to_color` checkpoint 0041-0048: 8 generated as pending first and independently verified; 0 pending. Targets c3-031 through c3-038.
-  - [x] `name_to_color` checkpoint 0049-0056: 8 generated as pending first and independently verified; 0 pending. Targets c3-039 through c3-046.
-  - [ ] Continue `name_to_color` authoring at question 0057 with c3-conventional-047 エメラルドグリーン.
+  - [x] `c3-conventional-052` (スカイブルー) deferred for `color_to_name` because its reference display value is identical to 空色.
+  - [x] `name_to_color` checkpoint 0017-0024: 8 generated pending-first and independently verified; 0 pending.
+  - [x] `name_to_color` checkpoint 0025-0032: 8 generated pending-first and independently verified; 0 pending.
+  - [x] `name_to_color` checkpoint 0033-0040: 8 generated pending-first and independently verified; 0 pending; c3-025 was already covered by runtime and was not reused.
+  - [x] `name_to_color` checkpoint 0041-0048: 8 generated pending-first and independently verified; 0 pending. Targets c3-031 through c3-038.
+  - [x] `name_to_color` checkpoint 0049-0056: 8 generated pending-first and independently verified; 0 pending. Targets c3-039, 040, 041, 043, 044, 045, 046, 047; c3-042 was already covered by runtime and was removed after the cross-bank gate detected it.
+  - [ ] Continue `name_to_color` at question 0057 with c3-conventional-048 ビリジアン.
 - [ ] Independent QA for all conventional-color questions.
 - [ ] Promote verified authoring checkpoints into `grade3-runtime.json` only after consistency tests pass.
 - [ ] Conventional-color coverage gate: both directions cover the useful authoritative master state space, pending=0, duplicates/schema/references pass; do not force a monitor-indistinguishable item merely to claim 64/64.
