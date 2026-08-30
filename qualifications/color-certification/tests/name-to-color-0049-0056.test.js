@@ -27,8 +27,8 @@ test('name-to-color checkpoint 0049-0056 is independently verified and internall
   assert.equal(authoring.questions.at(-1).id, 'pc3-conventional-name-to-color-0056');
   assert.equal(new Set(authoring.questions.map((question) => question.id)).size, 8);
   assert.deepEqual(authoring.questions.map((question) => question.colorRef), [
-    'c3-conventional-039', 'c3-conventional-040', 'c3-conventional-041', 'c3-conventional-042',
-    'c3-conventional-043', 'c3-conventional-044', 'c3-conventional-045', 'c3-conventional-046'
+    'c3-conventional-039', 'c3-conventional-040', 'c3-conventional-041', 'c3-conventional-043',
+    'c3-conventional-044', 'c3-conventional-045', 'c3-conventional-046', 'c3-conventional-047'
   ]);
 
   for (const question of authoring.questions) {
