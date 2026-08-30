@@ -10,6 +10,7 @@ const colors = JSON.parse(await readFile(new URL('../data/grade3-colors.json', i
 const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
 const authoring0017 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0017-0024.json', import.meta.url), 'utf8'));
 const authoring0025 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0025-0032.json', import.meta.url), 'utf8'));
+const authoring0033 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0033-0040.json', import.meta.url), 'utf8'));
 const indexHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 const mainSource = await readFile(new URL('../js/main.js', import.meta.url), 'utf8');
 const rendererSource = await readFile(new URL('../js/color-choice-renderer.js', import.meta.url), 'utf8');
@@ -83,9 +84,19 @@ test('authoring checkpoint 0025-0032 is independently verified and internally co
   assertAuthoringCheckpoint(authoring0025, '0025', '0032');
 });
 
-test('staged color-to-name checkpoints do not reuse target master colors', () => {
-  const targetRefs = [...authoring0017.questions, ...authoring0025.questions].map((question) => question.colorRef);
+test('authoring checkpoint 0033-0040 is independently verified and internally consistent', () => {
+  assertAuthoringCheckpoint(authoring0033, '0033', '0040');
+});
+
+test('verified color-to-name coverage does not reuse target master colors', () => {
+  const runtimeTargets = runtime.questions
+    .filter((question) => question.skillId === 'pc3.conventional.color_to_name')
+    .map((question) => question.colorRef);
+  const authoringTargets = [...authoring0017.questions, ...authoring0025.questions, ...authoring0033.questions]
+    .map((question) => question.colorRef);
+  const targetRefs = [...runtimeTargets, ...authoringTargets];
   assert.equal(new Set(targetRefs).size, targetRefs.length);
+  assert.equal(targetRefs.length, 32);
 });
 
 test('answer feedback re-shows the correct color for color-to-name questions', () => {
