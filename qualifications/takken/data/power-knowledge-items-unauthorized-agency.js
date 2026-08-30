@@ -25,7 +25,7 @@
       exceptions: ["本人が追認した場合は、本人に対して効力を生ずる。"],
       importance: "A",
       primarySources: [statute],
-      sourceFactIds: ["u54-f1"]
+      sourceFactIds: ["u40-f1"]
     },
     {
       ...shared,
@@ -34,8 +34,7 @@
       conditions: ["無権代理行為について本人が追認すること"],
       exceptions: ["本人が別段の意思を表示した場合は、その意思に従う。"],
       importance: "A",
-      primarySources: [statute],
-      sourceFactIds: ["u54-f1"]
+      primarySources: [statute]
     },
     {
       ...shared,
@@ -44,8 +43,7 @@
       conditions: ["無権代理行為の相手方であること", "本人に相当期間を定めて確答を求めること"],
       exceptions: [],
       importance: "A",
-      primarySources: [statute],
-      sourceFactIds: ["u54-f2"]
+      primarySources: [statute]
     },
     {
       ...shared,
@@ -54,8 +52,7 @@
       conditions: ["本人が追認していないこと", "相手方が契約時に無権代理であることを知らなかったこと"],
       exceptions: ["相手方が契約時に無権代理であることを知っていた場合は取消しできない。"],
       importance: "A",
-      primarySources: [statute],
-      sourceFactIds: ["u54-f2"]
+      primarySources: [statute]
     },
     {
       ...shared,
@@ -64,8 +61,7 @@
       conditions: ["無権代理人が代理権を証明できないこと", "本人の追認がないこと", "相手方が無権代理を知らず、かつ過失もないこと"],
       exceptions: ["無権代理人が制限行為能力者である場合など、民法117条の責任を負わない場合がある。"],
       importance: "A",
-      primarySources: [statute],
-      sourceFactIds: ["u54-f3"]
+      primarySources: [statute]
     }
   ];
 
