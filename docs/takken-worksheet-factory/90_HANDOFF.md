@@ -8,17 +8,14 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed `takken-concept-acquisitive-prescription` from source unit `civil-prescription` without modifying Phase 2/3 question content or validation state.
+Completed `takken-concept-extinctive-prescription` from source unit `civil-prescription` without modifying Phase 2/3 question content or validation state.
 
-The new knowledge file contains three verified atomic knowledge items based on Civil Code Article 162:
+The new knowledge file contains two verified atomic knowledge items based on Civil Code Article 166(1):
 
-1. 取得時効に共通する、所有の意思・平穏・公然・他人の物という占有要件。
-2. 共通要件を満たす20年間の占有による所有権取得。
-3. 占有開始時に善意かつ無過失である場合の10年間の占有による所有権取得。
+1. 債権者が権利を行使することができることを知った時から5年間行使しない場合の消滅時効。
+2. 権利を行使することができる時から10年間行使しない場合の消滅時効。
 
-Canonical `takken-q-41-001` asks only the ownership-acquisitive-prescription periods and the good-faith/no-negligence condition. It is therefore mapped to the twenty-year and ten-year knowledge items, but not to the full common-possession-requirements item. That item remains an explicit Phase 4.3 deficit rather than being over-mapped.
-
-`takken-q-41-002` concerns extinctive prescription and was not mapped to this concept.
+Canonical `takken-q-41-002` asks the two general periods together and directly tests both knowledge items, so it is mapped to both. No additional rule outside the concept inventory scope was inferred into this checkpoint.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -29,24 +26,24 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 53/113 concepts modeled
-- Canonical knowledge items: 292
-- Existing verified questions mapped: 52
+- Phase 4.2: active — 54/113 concepts modeled
+- Canonical knowledge items: 294
+- Existing verified questions mapped: 53
 - Explicit unmapped knowledge gaps: 224
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-extinctive-prescription` using source unit `civil-prescription`.
+Continue Phase 4.2 at `takken-concept-property-transfer-opposability` using source unit `property-rights-opposability`.
 
-Preserve all 292 knowledge items, fifty-two current mappings, and all two hundred twenty-four explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 294 knowledge items, fifty-three current mappings, and all two hundred twenty-four explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-Canonical unit 41 fact `u41-f1` directly states the twenty-year ownership acquisitive prescription and the ten-year period when possession begins in good faith and without negligence. The same fact also states the ownership-intent, peaceful, public and other-person's-property requirements. Existing `takken-q-41-001` does not independently test those full common possession requirements, so the mapping intentionally leaves that knowledge item uncovered.
+Canonical unit 41 fact `u41-f2` states the general rule of Civil Code Article 166: five years from when the creditor knows the right can be exercised, or ten years from when the right can be exercised. Existing `takken-q-41-002` directly asks those two periods, so both new knowledge items have verified existing-question evidence and this concept creates no new coverage gap.
 
-The acquisitive-prescription knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, `u41-f1` provenance, and the expected three-item count. The question-knowledge map retains one mapping per existing Phase 2/3 question and adds only `takken-q-41-001` for this concept.
+The extinctive-prescription knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statute sourcing, `u41-f2` provenance, and the expected two-item count. The question-knowledge map retains one mapping per existing Phase 2/3 question and adds only `takken-q-41-002` for this concept.
 
 ## Publication invariant
 
