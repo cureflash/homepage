@@ -4,6 +4,7 @@ import test from 'node:test';
 import { InMemoryQuestionBank } from '../../../subjects/english/power-toeic/js/data/question-bank-adapter.js';
 import { QuizSession } from '../../../subjects/english/power-toeic/js/core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/english/power-toeic/js/core/workout-builder.js';
+import { getAnswerFeedbackModel } from '../js/color-choice-renderer.js';
 
 const colors = JSON.parse(await readFile(new URL('../data/grade3-colors.json', import.meta.url), 'utf8'));
 const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
@@ -62,6 +63,25 @@ test('authoring checkpoint 0017-0024 is independently verified and internally co
     assert.equal(question.choices[question.correctIndex], target.name);
     assert.equal(question.proposedAnswer, target.name);
   }
+});
+
+test('answer feedback re-shows the correct color for color-to-name questions', () => {
+  const colorById = new Map(colors.colors.map((color) => [color.id, color]));
+  const question = runtime.questions.find((entry) => entry.presentation.kind === 'prompt_color');
+  const feedback = getAnswerFeedbackModel(question, colorById);
+  assert.equal(feedback.name, colorById.get(question.colorRef).name);
+  assert.equal(feedback.colorRef, question.colorRef);
+  assert.equal(feedback.showSwatch, true);
+  assert.match(feedback.title, /^正解：/);
+});
+
+test('answer feedback names the correct color for name-to-color questions', () => {
+  const colorById = new Map(colors.colors.map((color) => [color.id, color]));
+  const question = runtime.questions.find((entry) => entry.presentation.kind === 'choice_colors');
+  const feedback = getAnswerFeedbackModel(question, colorById);
+  assert.equal(feedback.name, colorById.get(question.colorRef).name);
+  assert.equal(feedback.showSwatch, false);
+  assert.equal(feedback.title, `正解：${colorById.get(question.colorRef).name}`);
 });
 
 test('Power TOEIC shared repository/workout/session engine runs a color question', () => {

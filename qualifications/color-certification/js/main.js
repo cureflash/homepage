@@ -83,9 +83,9 @@ renderer.setAnswerHandler((selectedIndex) => {
   const question = session.currentQuestion;
   session.submitAnswer(selectedIndex);
   renderer.showResult({
+    question,
     selectedIndex,
-    correctIndex: question.correctIndex,
-    explanation: question.explanation
+    correctIndex: question.correctIndex
   });
   nextButton.textContent = session.progress.current === session.progress.total ? '結果を見る' : '次の問題';
   nextButton.hidden = false;
