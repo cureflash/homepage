@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T14:24:24.045Z",
+  "generatedAt": "2026-08-30T15:21:28.326Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2700,
-    "runtimeQuestionCount": 2699,
+    "approvedCandidateCount": 2799,
+    "runtimeQuestionCount": 2798,
     "quarantinedNearDuplicateCount": 1,
-    "qaRecordCount": 110
+    "qaRecordCount": 114
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -75,6 +75,12 @@
     {
       "id": "p5.det.countable_number",
       "label": "可算名詞の単複",
+      "categoryId": "determiners-quantity",
+      "categoryLabel": "限定詞・数量"
+    },
+    {
+      "id": "p5.det.much_vs_many",
+      "label": "much / many",
       "categoryId": "determiners-quantity",
       "categoryLabel": "限定詞・数量"
     },
@@ -14936,6 +14942,1689 @@
       ],
       "correctIndex": 0,
       "explanation": "The number 'two' requires a plural countable noun. Therefore, 'estimates' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0051",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "A single ____ can approve purchases of up to $5,000.",
+      "choices": [
+        "managers",
+        "manager",
+        "manager's",
+        "managers'"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'a single' requires a singular countable noun. Therefore, 'manager' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0052",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several software ____ were corrected before the public release.",
+      "choices": [
+        "error",
+        "error's",
+        "errors",
+        "errors'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'several', a plural countable noun is required. Therefore, 'errors' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0053",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every hotel ____ is inspected before a new guest checks in.",
+      "choices": [
+        "suites",
+        "suite's",
+        "suites'",
+        "suite"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required. Therefore, 'suite' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0054",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warehouse added eight storage ____ along the north wall.",
+      "choices": [
+        "racks",
+        "rack",
+        "rack's",
+        "racks'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'eight' requires a plural countable noun. Therefore, 'racks' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0055",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Another ____ will be sent once the payment has been processed.",
+      "choices": [
+        "invoices",
+        "invoice",
+        "invoice's",
+        "invoices'"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'another', a singular countable noun is required. Therefore, 'invoice' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0056",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Both project ____ were approved by the executive committee.",
+      "choices": [
+        "proposal",
+        "proposal's",
+        "proposals",
+        "proposals'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'both', a plural countable noun is required. Therefore, 'proposals' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0057",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each ____ on the tour must wear protective glasses inside the plant.",
+      "choices": [
+        "visitors",
+        "visitor's",
+        "visitors'",
+        "visitor"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'visitor' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0058",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The recruiter interviewed six qualified ____ for the sales position.",
+      "choices": [
+        "candidates",
+        "candidate",
+        "candidate's",
+        "candidates'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'six' requires a plural countable noun. Therefore, 'candidates' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0059",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "One damaged ____ was removed from the assembly line.",
+      "choices": [
+        "components",
+        "component",
+        "component's",
+        "components'"
+      ],
+      "correctIndex": 1,
+      "explanation": "The number 'one' requires a singular countable noun. Therefore, 'component' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0060",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "A number of routine ____ can now be completed through the mobile app.",
+      "choices": [
+        "request",
+        "request's",
+        "requests",
+        "requests'"
+      ],
+      "correctIndex": 2,
+      "explanation": "The expression 'a number of' is followed by a plural countable noun. Therefore, 'requests' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0061",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every ____ in the financial statement was checked twice.",
+      "choices": [
+        "figures",
+        "figure's",
+        "figures'",
+        "figure"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required. Therefore, 'figure' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0062",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The hotel ordered twelve new bedside ____ for the renovated rooms.",
+      "choices": [
+        "lamps",
+        "lamp",
+        "lamp's",
+        "lamps'"
+      ],
+      "correctIndex": 0,
+      "explanation": "A number greater than one requires a plural countable noun. Therefore, 'lamps' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0063",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Another training ____ has been scheduled for employees in the Osaka office.",
+      "choices": [
+        "sessions",
+        "session",
+        "session's",
+        "sessions'"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'another', a singular countable noun is required. Therefore, 'session' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0064",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several key ____ participated in the contract negotiations.",
+      "choices": [
+        "stakeholder",
+        "stakeholder's",
+        "stakeholders",
+        "stakeholders'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'several', a plural countable noun is required. Therefore, 'stakeholders' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0065",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each warranty ____ is valid for two years from the purchase date.",
+      "choices": [
+        "certificates",
+        "certificate's",
+        "certificates'",
+        "certificate"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'certificate' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0066",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The accounting team discovered three duplicate ____ in the payment file.",
+      "choices": [
+        "entries",
+        "entry",
+        "entry's",
+        "entries'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'three' requires a plural countable noun. Therefore, 'entries' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0067",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "One more ____ is needed to complete the delivery route.",
+      "choices": [
+        "drivers",
+        "driver",
+        "driver's",
+        "drivers'"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'one more' requires a singular countable noun. Therefore, 'driver' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0068",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Both research ____ will present their findings at the annual conference.",
+      "choices": [
+        "team",
+        "team's",
+        "teams",
+        "teams'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'both', a plural countable noun is required. Therefore, 'teams' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0069",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every emergency ____ is tested at the beginning of each month.",
+      "choices": [
+        "alarms",
+        "alarm's",
+        "alarms'",
+        "alarm"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required. Therefore, 'alarm' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0070",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The airline added four morning ____ between Tokyo and Fukuoka.",
+      "choices": [
+        "flights",
+        "flight",
+        "flight's",
+        "flights'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'four' requires a plural countable noun. Therefore, 'flights' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0071",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "A single customer ____ led to a review of the return policy.",
+      "choices": [
+        "complaints",
+        "complaint",
+        "complaint's",
+        "complaints'"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'a single' requires a singular countable noun. Therefore, 'complaint' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0072",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Many small ____ use the platform to manage online orders.",
+      "choices": [
+        "business",
+        "business's",
+        "businesses",
+        "businesses'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'many', a plural countable noun is required. Therefore, 'businesses' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0073",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each shipping ____ lists the contents and destination of the package.",
+      "choices": [
+        "documents",
+        "document's",
+        "documents'",
+        "document"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'document' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0074",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The supervisor assigned two experienced ____ to the evening shift.",
+      "choices": [
+        "operators",
+        "operator",
+        "operator's",
+        "operators'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'two' requires a plural countable noun. Therefore, 'operators' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0075",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Another ____ has been added to the list of approved suppliers.",
+      "choices": [
+        "manufacturers",
+        "manufacturer",
+        "manufacturer's",
+        "manufacturers'"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'another', a singular countable noun is required. Therefore, 'manufacturer' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0076",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Both conference ____ offer discounted rates for early registration.",
+      "choices": [
+        "package",
+        "package's",
+        "packages",
+        "packages'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'both', a plural countable noun is required. Therefore, 'packages' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0077",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every online ____ is encrypted before it is transmitted.",
+      "choices": [
+        "transactions",
+        "transaction's",
+        "transactions'",
+        "transaction"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required. Therefore, 'transaction' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0078",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The agency received seven design ____ for the new company logo.",
+      "choices": [
+        "submissions",
+        "submission",
+        "submission's",
+        "submissions'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'seven' requires a plural countable noun. Therefore, 'submissions' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0079",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "One customer ____ was incorrectly entered in the billing system.",
+      "choices": [
+        "addresses",
+        "address",
+        "address's",
+        "addresses'"
+      ],
+      "correctIndex": 1,
+      "explanation": "The number 'one' requires a singular countable noun. Therefore, 'address' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0080",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several branch ____ joined the video conference from overseas.",
+      "choices": [
+        "director",
+        "director's",
+        "directors",
+        "directors'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'several', a plural countable noun is required. Therefore, 'directors' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0081",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each equipment ____ is recorded in the maintenance log.",
+      "choices": [
+        "failures",
+        "failure's",
+        "failures'",
+        "failure"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'failure' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0082",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The procurement team compared five competing ____ before making a recommendation.",
+      "choices": [
+        "bids",
+        "bid",
+        "bid's",
+        "bids'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'five' requires a plural countable noun. Therefore, 'bids' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0083",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Another sales ____ will be assigned to the western region next quarter.",
+      "choices": [
+        "representatives",
+        "representative",
+        "representative's",
+        "representatives'"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'another', a singular countable noun is required. Therefore, 'representative' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0084",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Both service ____ include free installation and technical support.",
+      "choices": [
+        "plan",
+        "plan's",
+        "plans",
+        "plans'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'both', a plural countable noun is required. Therefore, 'plans' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0085",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every ____ entering the restricted area must show identification.",
+      "choices": [
+        "contractors",
+        "contractor's",
+        "contractors'",
+        "contractor"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required. Therefore, 'contractor' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0086",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The project requires three government ____ before construction can begin.",
+      "choices": [
+        "permits",
+        "permit",
+        "permit's",
+        "permits'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'three' requires a plural countable noun. Therefore, 'permits' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0087",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "A single production ____ can package 200 units per minute.",
+      "choices": [
+        "lines",
+        "line",
+        "line's",
+        "lines'"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'a single' requires a singular countable noun. Therefore, 'line' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0088",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Numerous delivery ____ were rerouted because of road construction.",
+      "choices": [
+        "truck",
+        "truck's",
+        "trucks",
+        "trucks'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'numerous', a plural countable noun is required. Therefore, 'trucks' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0089",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each client ____ is stored in a secure electronic folder.",
+      "choices": [
+        "files",
+        "file's",
+        "files'",
+        "file"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'file' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0090",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The department purchased ten ergonomic ____ for the new workspace.",
+      "choices": [
+        "chairs",
+        "chair",
+        "chair's",
+        "chairs'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'ten' requires a plural countable noun. Therefore, 'chairs' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0091",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "One of the new ____ will be used for executive meetings.",
+      "choices": [
+        "projector",
+        "projectors",
+        "projector's",
+        "projectors'"
+      ],
+      "correctIndex": 1,
+      "explanation": "In 'one of the + noun', the noun must be plural. Therefore, 'projectors' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0092",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several safety ____ were revised after the incident review.",
+      "choices": [
+        "procedure",
+        "procedure's",
+        "procedures",
+        "procedures'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'several', a plural countable noun is required. Therefore, 'procedures' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0093",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every purchase ____ must be approved before an order is placed.",
+      "choices": [
+        "requests",
+        "request's",
+        "requests'",
+        "request"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required. Therefore, 'request' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0094",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The bank opened two temporary ____ to handle year-end inquiries.",
+      "choices": [
+        "desks",
+        "desk",
+        "desk's",
+        "desks'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'two' requires a plural countable noun. Therefore, 'desks' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0095",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Another ____ will inspect the site before the lease is signed.",
+      "choices": [
+        "specialists",
+        "specialist",
+        "specialist's",
+        "specialists'"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'another', a singular countable noun is required. Therefore, 'specialist' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0096",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Both annual ____ contain detailed information about operating costs.",
+      "choices": [
+        "report",
+        "report's",
+        "reports",
+        "reports'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'both', a plural countable noun is required. Therefore, 'reports' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0097",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each ____ must be labeled before it is placed in cold storage.",
+      "choices": [
+        "samples",
+        "sample's",
+        "samples'",
+        "sample"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'sample' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0098",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The event organizer reserved six passenger ____ for airport transfers.",
+      "choices": [
+        "vans",
+        "van",
+        "van's",
+        "vans'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'six' requires a plural countable noun. Therefore, 'vans' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0099",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "One final ____ remains before the merger can be completed.",
+      "choices": [
+        "approvals",
+        "approval",
+        "approval's",
+        "approvals'"
+      ],
+      "correctIndex": 1,
+      "explanation": "The number 'one' requires a singular countable noun. Therefore, 'approval' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0100",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "A number of technical ____ were discussed during the vendor meeting.",
+      "choices": [
+        "issue",
+        "issue's",
+        "issues",
+        "issues'"
+      ],
+      "correctIndex": 2,
+      "explanation": "The expression 'a number of' is followed by a plural countable noun. Therefore, 'issues' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0001",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The sales director does not have ____ time to review unsolicited proposals this week.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Time is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0002",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ applicants were invited to the final round of interviews?",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Applicants are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0003",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warehouse does not have ____ space available for additional inventory.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Space is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0004",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The conference attracted ____ more visitors than the organizers had expected.",
+      "choices": [
+        "much",
+        "much of",
+        "many of",
+        "many"
+      ],
+      "correctIndex": 3,
+      "explanation": "Visitors are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0005",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is not ____ information about the new tax rule on the agency's website.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Information is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0007",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The project manager did not encounter ____ difficulty obtaining the required permits.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Difficulty is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0008",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ branch offices will participate in the pilot program?",
+      "choices": [
+        "much",
+        "much of",
+        "many of",
+        "many"
+      ],
+      "correctIndex": 3,
+      "explanation": "Branch offices are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0009",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The new software does not require ____ training for experienced users.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Training is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0010",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The retailer received ____ complaints after changing its return policy.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Complaints are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0011",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is not ____ traffic near the distribution center early on Sunday mornings.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Traffic is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0012",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The revised catalog includes ____ new products from local manufacturers.",
+      "choices": [
+        "much",
+        "much of",
+        "many of",
+        "many"
+      ],
+      "correctIndex": 3,
+      "explanation": "Products are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0013",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The legal department does not expect ____ opposition to the revised contract terms.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Opposition is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0014",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ delivery vehicles are currently out of service?",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Delivery vehicles are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0015",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company has not made ____ progress on the renovation since last month.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Progress is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0016",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The customer survey generated ____ useful comments about the redesigned website.",
+      "choices": [
+        "much",
+        "much of",
+        "many of",
+        "many"
+      ],
+      "correctIndex": 3,
+      "explanation": "Comments are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0017",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The finance team did not need ____ additional evidence to approve the expense.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Evidence is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0018",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The hotel has ____ conference rooms equipped for hybrid meetings.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Conference rooms are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0019",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is not ____ demand for outdoor seating during the winter.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Demand is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0020",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The recruiter spoke with ____ qualified candidates at the career fair.",
+      "choices": [
+        "much",
+        "much of",
+        "many of",
+        "many"
+      ],
+      "correctIndex": 3,
+      "explanation": "Candidates are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0021",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The factory does not produce ____ waste after installing the new filtration system.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Waste is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0022",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ invoices remain unpaid at the end of the month?",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Invoices are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0023",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The auditor found that the discrepancy did not cause ____ financial harm.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Harm is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0024",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The training portal offers ____ short courses for newly promoted supervisors.",
+      "choices": [
+        "much",
+        "much of",
+        "many of",
+        "many"
+      ],
+      "correctIndex": 3,
+      "explanation": "Courses are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0025",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The director does not have ____ patience for reports submitted without supporting data.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Patience is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0026",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The consultant did not provide ____ information about the proposed merger during the preliminary call.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Information is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0027",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ employees have completed the updated cybersecurity course?",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Employees are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0028",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The expansion will not require ____ additional equipment at the current production level.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Equipment is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0029",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The annual report highlights ____ of the initiatives launched by the sustainability team.",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Initiatives' is countable plural and is preceded by 'the', so 'many of' is correct. Therefore, 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0030",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "There was not ____ interest in the optional seminar among senior managers.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Interest is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0031",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The purchasing department reviewed ____ bids before selecting a contractor.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Bids are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0032",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The revised process does not leave ____ room for manual adjustments.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Room meaning available capacity is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0033",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ of the regional offices have adopted the new scheduling system?",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Regional offices' is countable plural and follows 'of the', so 'many of' is correct. Therefore, 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0034",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The board did not spend ____ time discussing the routine agenda items.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Time is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0035",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The exhibition featured ____ products developed by small local companies.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Products are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0036",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The client said there was not ____ flexibility in the proposed delivery schedule.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Flexibility is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0037",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The survey showed that ____ of the respondents preferred digital invoices.",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Respondents' is countable plural and follows 'of the', so 'many of' is correct. Therefore, 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0038",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The laboratory does not need ____ storage space for the new testing equipment.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Storage space is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0039",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ customer inquiries were received after the product announcement?",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Customer inquiries are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0040",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The delay did not cause ____ inconvenience to passengers on the morning service.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Inconvenience is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0041",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The manager has spoken with ____ of the applicants who passed the initial screening.",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Applicants' is countable plural and follows 'of the', so 'many of' is correct. Therefore, 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0042",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The new accounting platform does not require ____ technical knowledge from ordinary users.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Technical knowledge is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0043",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The convention center can accommodate ____ large events at the same time.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Events are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0044",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The auditor found that the error had not caused ____ damage to the company's records.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Damage is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0045",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The committee accepted ____ of the recommendations in the external review.",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Recommendations' is countable plural and follows 'of the', so 'many of' is correct. Therefore, 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0046",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The department has not received ____ feedback on the revised expense policy.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Feedback is uncountable, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0047",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The new distribution center employs ____ technicians with specialized safety training.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Technicians are countable plural, so 'many' is correct. Therefore, 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0048",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The finance director does not expect ____ growth in operating costs next quarter.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Growth is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0049",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ of the conference sessions will be streamed live for remote attendees?",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Conference sessions' is countable plural and follows 'of the', so 'many of' is correct. Therefore, 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0050",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The support team did not have ____ trouble identifying the source of the network outage.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trouble is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
