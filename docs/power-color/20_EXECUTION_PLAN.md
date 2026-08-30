@@ -22,7 +22,8 @@
   - [x] `name_to_color` checkpoint 0025-0032: 8 generated as pending first and independently verified; 0 pending. Targets c3-012, 013, 014, 015, 017, 019, 020, 021.
   - [x] `name_to_color` checkpoint 0033-0040: 8 generated as pending first and independently verified; 0 pending. Targets c3-022, 023, 024, 026, 027, 028, 029, 030; c3-025 was already covered by the runtime beta and is not reused.
   - [x] `name_to_color` checkpoint 0041-0048: 8 generated as pending first and independently verified; 0 pending. Targets c3-031 through c3-038.
-  - [ ] Continue `name_to_color` authoring at question 0049 with c3-conventional-039 セピア.
+  - [x] `name_to_color` checkpoint 0049-0056: 8 generated as pending first and independently verified; 0 pending. Targets c3-039 through c3-046.
+  - [ ] Continue `name_to_color` authoring at question 0057 with c3-conventional-047 エメラルドグリーン.
 - [ ] Independent QA for all conventional-color questions.
 - [ ] Promote verified authoring checkpoints into `grade3-runtime.json` only after consistency tests pass.
 - [ ] Conventional-color coverage gate: both directions cover the useful authoritative master state space, pending=0, duplicates/schema/references pass; do not force a monitor-indistinguishable item merely to claim 64/64.
