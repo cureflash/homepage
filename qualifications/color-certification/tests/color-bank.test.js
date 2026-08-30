@@ -18,13 +18,16 @@ test('Grade 3 conventional-color master contains 64 stable records', () => {
 test('runtime bank exposes verified questions only and all color refs resolve', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
   assert.equal(runtime.questions.length, 16);
+  assert.equal(new Set(runtime.questions.map((question) => question.id)).size, runtime.questions.length);
   for (const question of runtime.questions) {
     assert.equal(question.validationStatus, 'verified');
     assert.equal(question.choices.length, 4);
     assert.equal(new Set(question.choices).size, 4);
     assert.ok(colorById.has(question.colorRef));
+    const target = colorById.get(question.colorRef);
     if (question.presentation.kind === 'prompt_color') {
-      assert.ok(colorById.has(question.presentation.promptColorRef));
+      assert.equal(question.presentation.promptColorRef, question.colorRef);
+      assert.equal(question.choices[question.correctIndex], target.name);
     } else {
       assert.equal(question.presentation.choiceColorRefs.length, 4);
       question.presentation.choiceColorRefs.forEach((ref) => assert.ok(colorById.has(ref)));
