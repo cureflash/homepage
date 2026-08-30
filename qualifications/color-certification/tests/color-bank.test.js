@@ -8,7 +8,8 @@ import { getAnswerFeedbackModel, getChoiceRevealModels, getPromptChoiceSwatchMod
 
 const colors = JSON.parse(await readFile(new URL('../data/grade3-colors.json', import.meta.url), 'utf8'));
 const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
-const authoring = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0017-0024.json', import.meta.url), 'utf8'));
+const authoring0017 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0017-0024.json', import.meta.url), 'utf8'));
+const authoring0025 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0025-0032.json', import.meta.url), 'utf8'));
 const indexHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 const mainSource = await readFile(new URL('../js/main.js', import.meta.url), 'utf8');
 const rendererSource = await readFile(new URL('../js/color-choice-renderer.js', import.meta.url), 'utf8');
@@ -43,8 +44,9 @@ test('runtime bank exposes verified questions only and all color refs resolve', 
   }
 });
 
-test('authoring checkpoint 0017-0024 is independently verified and internally consistent', () => {
+function assertAuthoringCheckpoint(authoring, expectedStart, expectedEnd) {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
+  const colorByName = new Map(colors.colors.map((color) => [color.name, color]));
   assert.deepEqual(authoring.qaSummary, {
     generated: 8,
     checked: 8,
@@ -56,11 +58,14 @@ test('authoring checkpoint 0017-0024 is independently verified and internally co
   });
   assert.equal(authoring.questions.length, 8);
   assert.equal(new Set(authoring.questions.map((question) => question.id)).size, 8);
+  assert.equal(authoring.questions[0].id, `pc3-conventional-color-to-name-${expectedStart}`);
+  assert.equal(authoring.questions.at(-1).id, `pc3-conventional-color-to-name-${expectedEnd}`);
   for (const question of authoring.questions) {
     assert.equal(question.validationStatus, 'verified');
     assert.equal(question.skillId, 'pc3.conventional.color_to_name');
     assert.equal(question.choices.length, 4);
     assert.equal(new Set(question.choices).size, 4);
+    question.choices.forEach((choice) => assert.ok(colorByName.has(choice), `Unknown conventional color choice: ${choice}`));
     assert.ok(colorById.has(question.colorRef));
     const target = colorById.get(question.colorRef);
     assert.equal(question.presentation.kind, 'prompt_color');
@@ -68,6 +73,19 @@ test('authoring checkpoint 0017-0024 is independently verified and internally co
     assert.equal(question.choices[question.correctIndex], target.name);
     assert.equal(question.proposedAnswer, target.name);
   }
+}
+
+test('authoring checkpoint 0017-0024 is independently verified and internally consistent', () => {
+  assertAuthoringCheckpoint(authoring0017, '0017', '0024');
+});
+
+test('authoring checkpoint 0025-0032 is independently verified and internally consistent', () => {
+  assertAuthoringCheckpoint(authoring0025, '0025', '0032');
+});
+
+test('staged color-to-name checkpoints do not reuse target master colors', () => {
+  const targetRefs = [...authoring0017.questions, ...authoring0025.questions].map((question) => question.colorRef);
+  assert.equal(new Set(targetRefs).size, targetRefs.length);
 });
 
 test('answer feedback re-shows the correct color for color-to-name questions', () => {
