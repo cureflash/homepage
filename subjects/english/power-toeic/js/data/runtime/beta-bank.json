@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T18:19:48.316Z",
+  "generatedAt": "2026-08-30T19:24:10.242Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2995,
-    "runtimeQuestionCount": 2994,
+    "approvedCandidateCount": 3094,
+    "runtimeQuestionCount": 3093,
     "quarantinedNearDuplicateCount": 1,
-    "qaRecordCount": 122
+    "qaRecordCount": 126
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -215,6 +215,12 @@
       "label": "主語と動詞の一致",
       "categoryId": "verbs",
       "categoryLabel": "動詞"
+    },
+    {
+      "id": "p5.vocab.verb_noun_collocation",
+      "label": "動詞＋名詞コロケーション",
+      "categoryId": "vocabulary-usage",
+      "categoryLabel": "語彙・語法"
     }
   ],
   "questions": [
@@ -13271,6 +13277,856 @@
       ],
       "correctIndex": 1,
       "explanation": "'Refrigerator' is singular countable and one additional unit is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0051",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The project manager asked ____ consultant to review the cost assumptions before approval.",
+      "choices": [
+        "other",
+        "others",
+        "another",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Consultant' is singular countable and one additional consultant is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0052",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The orientation program introduces new hires to company policies and ____ internal resources.",
+      "choices": [
+        "another",
+        "others",
+        "otherwise",
+        "other"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Internal resources' is plural, so 'other' correctly modifies the noun phrase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0053",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some customers renewed their subscriptions immediately; ____ waited until the reminder email arrived.",
+      "choices": [
+        "others",
+        "another",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank stands alone for additional plural customers, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0054",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The hotel moved the group to ____ conference hall after an air-conditioning problem developed.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Conference hall' is singular countable and a different hall is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0055",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The purchasing policy applies to computers, office supplies, and ____ business equipment.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Business equipment' is uncountable, so 'other' is the appropriate determiner.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0056",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several employees volunteered for the special project; ____ were assigned regular shifts.",
+      "choices": [
+        "another",
+        "other",
+        "otherwise",
+        "others"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank stands alone for additional plural employees, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0057",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The manager requested ____ estimate because the first one did not include installation costs.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Estimate' is singular countable and one additional estimate is requested, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0058",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The website provides manuals, warranty details, and ____ technical information.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Technical information' is uncountable, so 'other' correctly modifies it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0059",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some deliveries were postponed by snow, while ____ arrived on schedule.",
+      "choices": [
+        "another",
+        "otherwise",
+        "others",
+        "other"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank is a standalone plural pronoun referring to additional deliveries, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0060",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The interviewer asked ____ question to clarify the applicant's project-management experience.",
+      "choices": [
+        "other",
+        "others",
+        "otherwise",
+        "another"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Question' is singular countable and an additional question is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0061",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The annual report summarizes sales results and ____ key performance measures.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Key performance measures' is plural, so 'other' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0062",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "A few conference rooms are equipped for video calls; ____ are reserved for in-person meetings.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank stands alone for additional plural conference rooms, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0063",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The mechanic used ____ diagnostic tool when the first device displayed an error.",
+      "choices": [
+        "other",
+        "others",
+        "another",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Diagnostic tool' is singular countable and a different tool is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0064",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The policy prohibits sharing passwords or ____ confidential information with unauthorized people.",
+      "choices": [
+        "another",
+        "others",
+        "otherwise",
+        "other"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Confidential information' is uncountable, so 'other' correctly modifies it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0065",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some trainees finished the exercise early; ____ needed additional guidance from the instructor.",
+      "choices": [
+        "others",
+        "another",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank stands alone for additional plural trainees, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0066",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The sales manager arranged ____ demonstration for the client who missed the first session.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Demonstration' is singular countable and one additional demonstration is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0067",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The inspection covered electrical systems and ____ safety-related equipment.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Safety-related equipment' is uncountable, so 'other' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0068",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several applicants accepted the employment offer, but ____ are still considering it.",
+      "choices": [
+        "another",
+        "other",
+        "otherwise",
+        "others"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank stands alone for additional plural applicants, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0069",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The office administrator ordered ____ cabinet because the existing files no longer fit in storage.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Cabinet' is singular countable and one additional cabinet is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0070",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The workshop addresses time management, communication, and ____ professional skills.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Professional skills' is plural, so 'other' correctly modifies it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0071",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some suppliers issue monthly invoices, while ____ bill customers after each shipment.",
+      "choices": [
+        "another",
+        "otherwise",
+        "others",
+        "other"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank stands alone for additional plural suppliers, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0072",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The researcher collected ____ sample after discovering that the first one had been contaminated.",
+      "choices": [
+        "other",
+        "others",
+        "otherwise",
+        "another"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Sample' is singular countable and one additional sample is collected, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0073",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The relocation package covers moving expenses and ____ necessary costs.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Necessary costs' is plural, so 'other' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0074",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several employees prefer flexible starting times; ____ value the option to work remotely.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank stands alone for additional plural employees, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0075",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The customer service team opened ____ case after discovering that the two complaints involved separate orders.",
+      "choices": [
+        "other",
+        "others",
+        "another",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Case' is singular countable and one additional case is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0076",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The finance director asked for ____ forecast before approving the revised budget.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Forecast' is singular countable, and one additional forecast is requested, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0077",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The training guide explains safety procedures and ____ workplace requirements.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Workplace requirements' is plural, so 'other' correctly modifies the noun phrase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0078",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some stores will extend weekend hours, while ____ will keep their current schedules.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank stands alone for additional plural stores, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0079",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician installed ____ router after the original unit failed during testing.",
+      "choices": [
+        "other",
+        "others",
+        "otherwise",
+        "another"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Router' is singular countable and a replacement/additional unit is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0080",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The contract includes maintenance fees but excludes ____ related expenses.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Related expenses' is plural, so 'other' is the correct determiner.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0081",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "A few team members joined the client call; ____ continued working on the presentation.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank stands alone for additional plural team members, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0082",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The recruiter scheduled ____ interview because the hiring manager wanted more information.",
+      "choices": [
+        "other",
+        "otherwise",
+        "another",
+        "others"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Interview' is singular countable and one additional interview is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0083",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The software package includes reporting tools and ____ useful features for administrators.",
+      "choices": [
+        "another",
+        "others",
+        "otherwise",
+        "other"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Useful features' is plural, so 'other' correctly modifies the noun phrase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0084",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warehouse manager requested ____ inspection after the damaged shelving was replaced.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Inspection' is singular countable and one additional inspection is requested, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0085",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The seminar covers negotiation techniques, presentation skills, and ____ professional topics.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Professional topics' is plural, so 'other' correctly modifies the noun phrase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0086",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several applicants submitted portfolios; ____ provided links to online work samples.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank stands alone for additional plural applicants, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0087",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The laboratory ordered ____ sensor when the first model proved unsuitable for the experiment.",
+      "choices": [
+        "other",
+        "others",
+        "otherwise",
+        "another"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Sensor' is singular countable and a different additional sensor is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0088",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The employee portal contains payroll information and ____ confidential records.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Confidential records' is plural, so 'other' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0089",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some departments completed the inventory count yesterday; ____ will finish it this afternoon.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank stands alone for additional plural departments, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0090",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The customer requested ____ receipt because the original copy was unreadable.",
+      "choices": [
+        "other",
+        "otherwise",
+        "another",
+        "others"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Receipt' is singular countable and one additional copy is requested, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0091",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The benefits package provides medical coverage along with ____ employee support services.",
+      "choices": [
+        "another",
+        "others",
+        "otherwise",
+        "other"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Employee support services' is plural, so 'other' correctly modifies the noun phrase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0092",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The editor asked the writer to prepare ____ version with a shorter introduction.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Version' is singular countable and one additional version is requested, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0093",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company sells office furniture as well as ____ commercial equipment.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Commercial equipment' is uncountable, so 'other' correctly modifies it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0094",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some guests chose the city tour, while ____ spent the afternoon at the conference center.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank stands alone for additional plural guests, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0095",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The branch manager opened ____ service counter to reduce the lunchtime queue.",
+      "choices": [
+        "other",
+        "others",
+        "otherwise",
+        "another"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Service counter' is singular countable and an additional counter is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0096",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The audit reviewed travel expenses and ____ financial documentation from the project.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Financial documentation' is uncountable, so 'other' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0097",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several vendors offered standard delivery; ____ proposed an expedited shipping option.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank stands alone for additional plural vendors, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0098",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The supervisor assigned ____ technician to the site after the repair took longer than expected.",
+      "choices": [
+        "other",
+        "otherwise",
+        "another",
+        "others"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Technician' is singular countable and one additional technician is assigned, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0099",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The report summarizes customer feedback and ____ information gathered during interviews.",
+      "choices": [
+        "another",
+        "others",
+        "otherwise",
+        "other"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Information' is uncountable, so 'other' correctly modifies it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0100",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The conference organizer reserved ____ room for participants who needed a quieter workspace.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Room' is singular countable and one additional room is reserved, so 'another' is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -51113,6 +51969,839 @@
       ],
       "correctIndex": 3,
       "explanation": "The grammatical subject is singular, so “remains” is the present-tense form that agrees with it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0001",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance department will ____ an audit of travel expenses before the end of the quarter.",
+      "choices": [
+        "conduct",
+        "operate",
+        "manage",
+        "drive"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard business collocation is 'conduct an audit'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0002",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ attention to the revised delivery dates listed at the bottom of the notice.",
+      "choices": [
+        "give",
+        "pay",
+        "make",
+        "bring"
+      ],
+      "correctIndex": 1,
+      "explanation": "The fixed collocation is 'pay attention to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0003",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "After several rounds of negotiation, the two companies finally ____ an agreement on joint distribution.",
+      "choices": [
+        "performed",
+        "handled",
+        "reached",
+        "operated"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural collocation is 'reach an agreement'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0004",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer has agreed to ____ responsibility for replacing the defective units.",
+      "choices": [
+        "hold",
+        "keep",
+        "carry",
+        "accept"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'accept responsibility for'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0005",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All visitors must ____ permission from the site manager before entering the production area.",
+      "choices": [
+        "obtain",
+        "collect",
+        "earn",
+        "win"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural formal collocation is 'obtain permission'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0006",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales team hopes to ____ its target for new subscriptions this month.",
+      "choices": [
+        "arrive",
+        "meet",
+        "touch",
+        "catch"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'meet a target'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0007",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Management will ____ a decision after reviewing all three proposals.",
+      "choices": [
+        "perform",
+        "do",
+        "make",
+        "produce"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'make a decision'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0008",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The hotel intends to ____ measures to reduce water consumption during the summer.",
+      "choices": [
+        "do",
+        "give",
+        "perform",
+        "take"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'take measures to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0009",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company will ____ a survey to learn why customers cancel their memberships.",
+      "choices": [
+        "conduct",
+        "operate",
+        "drive",
+        "steer"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural collocation is 'conduct a survey'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0010",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees who wish to attend the conference must ____ a request through the online portal.",
+      "choices": [
+        "carry",
+        "submit",
+        "offer",
+        "hold"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard administrative collocation is 'submit a request'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0011",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new routing software should ____ costs by reducing the number of partially filled trucks.",
+      "choices": [
+        "fall",
+        "decline",
+        "reduce",
+        "decrease by"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard transitive collocation is 'reduce costs'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0012",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The project manager asked the contractor to ____ the deadline by two weeks.",
+      "choices": [
+        "grow",
+        "increase",
+        "spread",
+        "extend"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural collocation is 'extend the deadline'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0013",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The legal team will ____ the contract carefully before either party signs it.",
+      "choices": [
+        "review",
+        "watch",
+        "observe",
+        "look"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard business collocation is 'review a contract'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0014",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Our representative will ____ a complaint with the shipping company if the missing cartons are not found.",
+      "choices": [
+        "place",
+        "file",
+        "store",
+        "keep"
+      ],
+      "correctIndex": 1,
+      "explanation": "The established collocation is 'file a complaint'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0015",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The retailer plans to ____ a new product line aimed at small offices next spring.",
+      "choices": [
+        "depart",
+        "open",
+        "launch",
+        "leave"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural business collocation is 'launch a product line'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0016",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board voted to ____ approval for the proposed renovation budget.",
+      "choices": [
+        "allow",
+        "accept",
+        "provide",
+        "grant"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'grant approval'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0017",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The maintenance team was able to ____ the problem to a damaged sensor near the loading dock.",
+      "choices": [
+        "trace",
+        "follow",
+        "seek",
+        "watch"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural collocation is 'trace a problem to' a cause or source.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0018",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised policy is intended to ____ access to technical training for part-time staff.",
+      "choices": [
+        "grow",
+        "expand",
+        "spread",
+        "stretch"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural collocation is 'expand access to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0019",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Before ordering additional equipment, the supervisor must ____ the need for each item.",
+      "choices": [
+        "state",
+        "show",
+        "justify",
+        "mention"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'justify the need for' something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0021",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The accounting system automatically ____ records of all payments made to suppliers.",
+      "choices": [
+        "keeps",
+        "draws",
+        "raises",
+        "takes"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'keep records of'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0022",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company has ____ a reputation for reliable after-sales service over the past decade.",
+      "choices": [
+        "formed",
+        "built",
+        "made",
+        "raised"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural collocation is 'build a reputation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0023",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The operations director will ____ priority to orders from customers affected by last week's outage.",
+      "choices": [
+        "send",
+        "put",
+        "give",
+        "make"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'give priority to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0024",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier has promised to ____ the requirements stated in the revised specification.",
+      "choices": [
+        "answer",
+        "agree",
+        "fit",
+        "meet"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'meet requirements'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0025",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The training session will ____ emphasis on procedures for handling confidential customer data.",
+      "choices": [
+        "place",
+        "set",
+        "add",
+        "send"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'place emphasis on'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0026",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "After comparing the three bids, the committee was able to ____ a conclusion about the best supplier.",
+      "choices": [
+        "draw",
+        "operate",
+        "reserve",
+        "appoint"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'draw a conclusion'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0027",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Several employees have ____ concerns about the new parking policy.",
+      "choices": [
+        "lifted",
+        "raised",
+        "grown",
+        "stood"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'raise concerns'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0028",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The purchasing assistant will ____ an order for replacement filters this afternoon.",
+      "choices": [
+        "build",
+        "form",
+        "place",
+        "arrive"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'place an order'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0029",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Under the service agreement, the contractor must ____ responsibility for damage caused by its staff.",
+      "choices": [
+        "carry",
+        "wear",
+        "own",
+        "bear"
+      ],
+      "correctIndex": 3,
+      "explanation": "The formal collocation is 'bear responsibility for'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0030",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The factory added a weekend shift to ____ demand for the new model.",
+      "choices": [
+        "meet",
+        "visit",
+        "join",
+        "touch"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'meet demand'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0031",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Leaving the equipment outdoors could ____ a risk to its electronic components.",
+      "choices": [
+        "set",
+        "pose",
+        "stand",
+        "put on"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'pose a risk to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0032",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Management has promised to ____ action if the safety issue is confirmed.",
+      "choices": [
+        "make",
+        "perform",
+        "take",
+        "hold"
+      ],
+      "correctIndex": 2,
+      "explanation": "The fixed collocation is 'take action'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0033",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier must ____ its contractual obligations before the final payment is released.",
+      "choices": [
+        "complete up",
+        "close",
+        "finish out",
+        "fulfill"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'fulfill an obligation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0034",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Customer service can ____ a refund once the returned item has been inspected.",
+      "choices": [
+        "issue",
+        "print out",
+        "publish",
+        "announce"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard commercial collocation is 'issue a refund'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0035",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "At the start of each quarter, department heads ____ objectives for their teams.",
+      "choices": [
+        "put",
+        "set",
+        "install",
+        "settle"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'set objectives'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0036",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Only authorized technicians can ____ access to the restricted server room.",
+      "choices": [
+        "win",
+        "take",
+        "gain",
+        "collect"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural collocation is 'gain access to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0037",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The upgraded system must ____ customer expectations for speed and reliability.",
+      "choices": [
+        "answer to",
+        "equal with",
+        "touch on",
+        "meet"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'meet expectations'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0038",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "After two hours of discussion, the negotiators finally ____ consensus on the delivery schedule.",
+      "choices": [
+        "reached",
+        "arrived",
+        "touched",
+        "formed up"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'reach consensus'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0039",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company may ____ additional costs if the project is delayed beyond October.",
+      "choices": [
+        "receive",
+        "incur",
+        "win",
+        "collect"
+      ],
+      "correctIndex": 1,
+      "explanation": "The formal business collocation is 'incur costs'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0040",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The director will ____ resources to the projects with the highest safety priority.",
+      "choices": [
+        "place",
+        "send",
+        "allocate",
+        "spread out"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'allocate resources to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0041",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Supervisors are encouraged to ____ feedback after observing each trainee's presentation.",
+      "choices": [
+        "say",
+        "tell",
+        "speak",
+        "provide"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'provide feedback'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0042",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The vendor has consistently ____ its promise to ship replacement parts within 24 hours.",
+      "choices": [
+        "kept",
+        "held",
+        "stored",
+        "saved"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'keep a promise'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0043",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The marketing team achieved its goal only after it ____ significant progress in the final month.",
+      "choices": [
+        "performed",
+        "made",
+        "built",
+        "raised"
+      ],
+      "correctIndex": 1,
+      "explanation": "The fixed collocation is 'make progress'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0044",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Banks are required to ____ records of certain transactions for several years.",
+      "choices": [
+        "stand",
+        "carry",
+        "maintain",
+        "own"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard collocation is 'maintain records'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0045",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The regulator can ____ a fine on companies that repeatedly violate the reporting rule.",
+      "choices": [
+        "put to",
+        "set at",
+        "give against",
+        "impose"
+      ],
+      "correctIndex": 3,
+      "explanation": "The formal collocation is 'impose a fine on'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0046",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Ms. Howard will ____ a presentation on the new inventory system at Monday's meeting.",
+      "choices": [
+        "deliver",
+        "transport",
+        "ship",
+        "carry"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'deliver a presentation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0047",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The construction team worked overtime to ____ the deadline for completing the lobby renovation.",
+      "choices": [
+        "touch",
+        "meet",
+        "arrive",
+        "join"
+      ],
+      "correctIndex": 1,
+      "explanation": "The standard collocation is 'meet a deadline'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0048",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The retailer plans to ____ a promotional campaign before the holiday shopping season begins.",
+      "choices": [
+        "depart",
+        "send",
+        "launch",
+        "leave"
+      ],
+      "correctIndex": 2,
+      "explanation": "The standard business collocation is 'launch a campaign'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0049",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The compliance office will ____ an investigation into the missing equipment.",
+      "choices": [
+        "drive",
+        "operate",
+        "manage out",
+        "conduct"
+      ],
+      "correctIndex": 3,
+      "explanation": "The standard collocation is 'conduct an investigation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_verb_noun_collocation_0050",
+      "version": 1,
+      "skillId": "p5.vocab.verb_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The advisory panel will ____ a recommendation after reviewing the pilot program's results.",
+      "choices": [
+        "make",
+        "perform",
+        "build",
+        "produce up"
+      ],
+      "correctIndex": 0,
+      "explanation": "The standard collocation is 'make a recommendation'.",
       "validationStatus": "verified",
       "betaCandidate": true
     }
