@@ -1,0 +1,15 @@
+{
+  "batch": "2026-08-30-scheduled-093-few-vs-little-part1",
+  "micro_skill": "p5.det.few_vs_little",
+  "source_batch": "subjects/english/power-toeic/js/data/questions/part5/determiners-quantity/few-vs-little/pending/batch-20260829-062-part1.json",
+  "method": "Reviewed each sentence and all four choices item by item for answer uniqueness, distractor validity, TOEIC-style naturalness, intended-skill alignment, explanation consistency, and local duplicate/template patterns. The persisted source co-locates keys with stems, so strict technical answer-blinding cannot be guaranteed in connector-only access; no item was approved without individual review.",
+  "checked_ids": ["p5_det_few_vs_little_0001","p5_det_few_vs_little_0002","p5_det_few_vs_little_0003","p5_det_few_vs_little_0004","p5_det_few_vs_little_0005","p5_det_few_vs_little_0006","p5_det_few_vs_little_0007","p5_det_few_vs_little_0008","p5_det_few_vs_little_0009","p5_det_few_vs_little_0010","p5_det_few_vs_little_0011","p5_det_few_vs_little_0012","p5_det_few_vs_little_0013","p5_det_few_vs_little_0014","p5_det_few_vs_little_0015","p5_det_few_vs_little_0016","p5_det_few_vs_little_0017","p5_det_few_vs_little_0018","p5_det_few_vs_little_0019","p5_det_few_vs_little_0020","p5_det_few_vs_little_0021","p5_det_few_vs_little_0022","p5_det_few_vs_little_0023","p5_det_few_vs_little_0024","p5_det_few_vs_little_0025"],
+  "verified_ids": ["p5_det_few_vs_little_0001","p5_det_few_vs_little_0002","p5_det_few_vs_little_0003","p5_det_few_vs_little_0004","p5_det_few_vs_little_0005","p5_det_few_vs_little_0006","p5_det_few_vs_little_0007","p5_det_few_vs_little_0008","p5_det_few_vs_little_0009","p5_det_few_vs_little_0010","p5_det_few_vs_little_0011","p5_det_few_vs_little_0012","p5_det_few_vs_little_0013","p5_det_few_vs_little_0014","p5_det_few_vs_little_0015","p5_det_few_vs_little_0016","p5_det_few_vs_little_0017","p5_det_few_vs_little_0018","p5_det_few_vs_little_0019","p5_det_few_vs_little_0020","p5_det_few_vs_little_0021","p5_det_few_vs_little_0022","p5_det_few_vs_little_0023","p5_det_few_vs_little_0024","p5_det_few_vs_little_0025"],
+  "approved_ids": ["p5_det_few_vs_little_0001","p5_det_few_vs_little_0002","p5_det_few_vs_little_0003","p5_det_few_vs_little_0004","p5_det_few_vs_little_0005","p5_det_few_vs_little_0006","p5_det_few_vs_little_0007","p5_det_few_vs_little_0008","p5_det_few_vs_little_0009","p5_det_few_vs_little_0010","p5_det_few_vs_little_0011","p5_det_few_vs_little_0012","p5_det_few_vs_little_0013","p5_det_few_vs_little_0014","p5_det_few_vs_little_0015","p5_det_few_vs_little_0016","p5_det_few_vs_little_0017","p5_det_few_vs_little_0018","p5_det_few_vs_little_0019","p5_det_few_vs_little_0020","p5_det_few_vs_little_0021","p5_det_few_vs_little_0022","p5_det_few_vs_little_0023","p5_det_few_vs_little_0024","p5_det_few_vs_little_0025"],
+  "checked": 25,
+  "verified": 25,
+  "needs_revision": [],
+  "rejected": [],
+  "counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
+  "notes": "25/25 verified. Countable-plural versus uncountable selection and few/little versus a few/a little polarity are sufficiently forced by the displayed contexts."
+}
