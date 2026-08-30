@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T13:27:57.703Z",
+  "generatedAt": "2026-08-30T14:24:24.045Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2600,
-    "runtimeQuestionCount": 2600,
-    "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 106
+    "approvedCandidateCount": 2700,
+    "runtimeQuestionCount": 2699,
+    "quarantinedNearDuplicateCount": 1,
+    "qaRecordCount": 110
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -69,6 +69,12 @@
     {
       "id": "p5.det.article_choice",
       "label": "冠詞 a/an/the/無冠詞",
+      "categoryId": "determiners-quantity",
+      "categoryLabel": "限定詞・数量"
+    },
+    {
+      "id": "p5.det.countable_number",
+      "label": "可算名詞の単複",
       "categoryId": "determiners-quantity",
       "categoryLabel": "限定詞・数量"
     },
@@ -13247,6 +13253,1689 @@
       ],
       "correctIndex": 1,
       "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0051",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The mechanic inspected ____ engine in the delivery van that stalled yesterday.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0052",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The publisher is seeking ____ editor with experience in technical manuals.",
+      "choices": [
+        "a",
+        "the",
+        "—",
+        "an"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0053",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The sales team prepared ____ customized proposal for the hospital group.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0054",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "All interns receive ____ access to the shared research database.",
+      "choices": [
+        "a",
+        "—",
+        "an",
+        "the"
+      ],
+      "correctIndex": 1,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0055",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company installed ____ energy-efficient cooling system in its data center.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0056",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The hotel assigned us ____ room overlooking the courtyard.",
+      "choices": [
+        "an",
+        "the",
+        "—",
+        "a"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0057",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The legal department updated ____ clause concerning data retention in the draft agreement.",
+      "choices": [
+        "the",
+        "a",
+        "an",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0058",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The vendor offered ____ extended warranty at no additional cost.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0059",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "We arranged ____ meeting with the regional distributor for Tuesday morning.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0060",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician photographed ____ damaged connector before replacing it.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0061",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The policy requires ____ approval from a department director for purchases over $5,000.",
+      "choices": [
+        "—",
+        "a",
+        "an",
+        "the"
+      ],
+      "correctIndex": 0,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0062",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The store introduced ____ reusable container program for takeout orders.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0063",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please confirm ____ reservation made under Ms. Nakamura's name.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0064",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The laboratory ordered ____ infrared sensor for the prototype.",
+      "choices": [
+        "a",
+        "the",
+        "—",
+        "an"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0065",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The contractor submitted ____ revised estimate after inspecting the roof.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0066",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The receptionist called ____ applicant scheduled for the 10:30 interview.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0067",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company purchased ____ additional insurance policy for overseas shipments.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0068",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The orientation materials provide ____ guidance on submitting travel expenses.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 3,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0069",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please replace ____ toner cartridge in the printer beside the mailroom.",
+      "choices": [
+        "the",
+        "a",
+        "an",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0070",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The speaker gave ____ informative overview of the new compliance rules.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0071",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The retailer opened ____ pop-up shop near the station for the holiday season.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0072",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician reset ____ router connected to the conference-room display system.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0073",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The bank appointed ____ experienced mediator to assist with the negotiations.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0074",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Our department needs ____ secure cabinet for personnel records.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0075",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please forward the invoice to ____ accountant handling the Osaka account.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0076",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The consultant recommended ____ upgrade to the inventory software before the holiday rush.",
+      "choices": [
+        "a",
+        "the",
+        "—",
+        "an"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0077",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please send the signed contract to ____ legal adviser who reviewed the original draft.",
+      "choices": [
+        "the",
+        "an",
+        "—",
+        "a"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0078",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warehouse needs ____ larger loading area to handle the new delivery schedule.",
+      "choices": [
+        "—",
+        "a",
+        "an",
+        "the"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0079",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Employees can request ____ assistance with the expense-reporting system from the finance desk.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 2,
+      "explanation": "No article is used here because the noun is an uncountable noun used in a general sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0080",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The airline opened ____ additional check-in counter for international passengers.",
+      "choices": [
+        "an",
+        "the",
+        "—",
+        "a"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0081",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The supervisor asked us to inspect ____ damaged pallet beside the receiving door.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0082",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The marketing team hired ____ photographer for the product launch event.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0083",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The workshop provides ____ equipment for participants who do not bring their own tools.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 3,
+      "explanation": "No article is used here because the noun is an uncountable noun used in a general sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0084",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The museum commissioned ____ interactive display for its new technology exhibit.",
+      "choices": [
+        "an",
+        "the",
+        "—",
+        "a"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0085",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please attach the receipt to ____ reimbursement form you submitted yesterday.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0086",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company plans to open ____ service center near the airport next spring.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0087",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "New employees receive ____ training on the laboratory's safety procedures during orientation.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 3,
+      "explanation": "No article is used here because the noun is an uncountable noun used in a general sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0088",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The architect proposed ____ alternative entrance for delivery vehicles.",
+      "choices": [
+        "an",
+        "the",
+        "—",
+        "a"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0089",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician replaced ____ battery identified as defective during the inspection.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0090",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The conference organizer reserved ____ private room for the keynote speakers.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0091",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The website gives customers ____ information about warranty coverage and repair options.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 3,
+      "explanation": "No article is used here because the noun is an uncountable noun used in a general sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0092",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The firm appointed ____ independent auditor to review the acquisition records.",
+      "choices": [
+        "an",
+        "the",
+        "—",
+        "a"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0093",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please update ____ spreadsheet containing the final attendance figures.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0095",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The maintenance team has ____ access to the mechanical room at all times.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 3,
+      "explanation": "No article is used here because the noun is an uncountable noun used in a general sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0096",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The supplier issued ____ electronic invoice after the shipment was dispatched.",
+      "choices": [
+        "an",
+        "the",
+        "—",
+        "a"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0097",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The receptionist handed the visitor ____ badge valid for one day.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0098",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The engineer tested ____ prototype that failed during last week's demonstration.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0099",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The seminar includes ____ advice on negotiating contracts with overseas vendors.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 2,
+      "explanation": "No article is used here because the noun is an uncountable noun used in a general sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0100",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The clinic purchased ____ portable scanner for its mobile screening unit.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0001",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The purchasing manager asked each ____ to submit a revised quotation by Friday.",
+      "choices": [
+        "supplier",
+        "suppliers",
+        "supply",
+        "supplier's"
+      ],
+      "correctIndex": 0,
+      "explanation": "After 'each', a singular countable noun is required, so 'supplier' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0002",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several ____ have applied for the newly created accounting position.",
+      "choices": [
+        "applicant",
+        "applicants",
+        "application",
+        "applicant's"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'several', a plural countable noun is required, so 'applicants' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0003",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The hotel replaced all of the guest-room ____ during the renovation.",
+      "choices": [
+        "chair",
+        "chair's",
+        "chairs",
+        "chairing"
+      ],
+      "correctIndex": 2,
+      "explanation": "The phrase 'all of the' refers to multiple countable items here, so the plural noun 'chairs' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0004",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every ____ must display a valid identification badge while inside the laboratory.",
+      "choices": [
+        "employees",
+        "employment",
+        "employee's",
+        "employee"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required, so 'employee' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0005",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warehouse received one damaged ____ in yesterday's shipment.",
+      "choices": [
+        "container",
+        "containers",
+        "container's",
+        "containing"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'one' requires a singular countable noun, so 'container' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0006",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Both ____ will attend the contract negotiation with the overseas distributor.",
+      "choices": [
+        "representative",
+        "representatives",
+        "representation",
+        "representative's"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'both', a plural countable noun is required, so 'representatives' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0007",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The training center added three evening ____ for employees who work daytime shifts.",
+      "choices": [
+        "course",
+        "course's",
+        "courses",
+        "coursing"
+      ],
+      "correctIndex": 2,
+      "explanation": "A quantity greater than one requires the plural countable noun 'courses'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0008",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each regional ____ is responsible for submitting its own monthly sales report.",
+      "choices": [
+        "offices",
+        "office's",
+        "official",
+        "office"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required, so 'office' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0009",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician found another faulty ____ in the control panel.",
+      "choices": [
+        "switch",
+        "switches",
+        "switching",
+        "switch's"
+      ],
+      "correctIndex": 0,
+      "explanation": "After 'another', a singular countable noun is required, so 'switch' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0010",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Many local ____ have expressed interest in joining the summer promotion.",
+      "choices": [
+        "retailer",
+        "retailers",
+        "retail",
+        "retailer's"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'many', a plural countable noun is required, so 'retailers' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0011",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "One of the conference ____ will lead a workshop on supply-chain risk.",
+      "choices": [
+        "speaker",
+        "speaker's",
+        "speakers",
+        "speaking"
+      ],
+      "correctIndex": 2,
+      "explanation": "In 'one of the + noun' the noun is plural because one member is selected from a group, so 'speakers' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0012",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The audit team examined every ____ submitted during the previous fiscal year.",
+      "choices": [
+        "claims",
+        "claiming",
+        "claim's",
+        "claim"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required, so 'claim' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0013",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "A single ____ can process up to 500 packages per hour.",
+      "choices": [
+        "scanner",
+        "scanners",
+        "scanning",
+        "scanner's"
+      ],
+      "correctIndex": 0,
+      "explanation": "The expression 'a single' requires a singular countable noun, so 'scanner' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0014",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company invited several qualified ____ to a second round of interviews.",
+      "choices": [
+        "candidate",
+        "candidates",
+        "candidacy",
+        "candidate's"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'several', a plural countable noun is required, so 'candidates' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0015",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The finance department keeps copies of all signed ____ for at least seven years.",
+      "choices": [
+        "agreement",
+        "agreement's",
+        "agreements",
+        "agreeing"
+      ],
+      "correctIndex": 2,
+      "explanation": "The context refers to multiple signed documents, so the plural countable noun 'agreements' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0016",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each ____ on the production line is inspected before the factory opens.",
+      "choices": [
+        "machines",
+        "machinery",
+        "machine's",
+        "machine"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required, so 'machine' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0017",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The branch hired one additional ____ to handle weekend customer inquiries.",
+      "choices": [
+        "receptionist",
+        "receptionists",
+        "reception",
+        "receptionist's"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'one' requires a singular countable noun, so 'receptionist' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0018",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Numerous ____ were delayed because of severe weather near the distribution hub.",
+      "choices": [
+        "delivery",
+        "deliveries",
+        "delivery's",
+        "delivering"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'numerous', a plural countable noun is required, so 'deliveries' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0019",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The supervisor reviewed two possible ____ before approving the revised work schedule.",
+      "choices": [
+        "alternative",
+        "alternative's",
+        "alternatives",
+        "alternatively"
+      ],
+      "correctIndex": 2,
+      "explanation": "The number 'two' requires a plural countable noun, so 'alternatives' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0020",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every new ____ receives a security code on the first day of employment.",
+      "choices": [
+        "users",
+        "usage",
+        "user's",
+        "user"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required, so 'user' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0021",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Another ____ will be installed near the south entrance next month.",
+      "choices": [
+        "camera",
+        "cameras",
+        "camera's",
+        "photography"
+      ],
+      "correctIndex": 0,
+      "explanation": "After 'another', a singular countable noun is required, so 'camera' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0022",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "A number of customer ____ were resolved during the morning shift.",
+      "choices": [
+        "complaint",
+        "complaints",
+        "complaining",
+        "complaint's"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'a number of' is followed by a plural countable noun, so 'complaints' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0023",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The project requires four separate ____ from independent testing laboratories.",
+      "choices": [
+        "certificate",
+        "certificate's",
+        "certificates",
+        "certification"
+      ],
+      "correctIndex": 2,
+      "explanation": "The number 'four' requires a plural countable noun, so 'certificates' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0024",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each ____ includes a summary of the client's recent transactions.",
+      "choices": [
+        "statements",
+        "stating",
+        "statement's",
+        "statement"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required, so 'statement' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0025",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The department needs one more ____ before the new filing system can be launched.",
+      "choices": [
+        "cabinet",
+        "cabinets",
+        "cabinet's",
+        "cabinetry"
+      ],
+      "correctIndex": 0,
+      "explanation": "The expression 'one more' requires a singular countable noun, so 'cabinet' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0026",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The facilities team ordered six replacement ____ for the conference rooms.",
+      "choices": [
+        "tables",
+        "table",
+        "table's",
+        "tables'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'six' requires a plural countable noun. Therefore, 'tables' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0027",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each ____ receives a copy of the updated travel policy during orientation.",
+      "choices": [
+        "employees",
+        "employee",
+        "employee's",
+        "employees'"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'employee' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0028",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The courier collected several sealed ____ from the legal department.",
+      "choices": [
+        "envelope",
+        "envelope's",
+        "envelopes",
+        "envelopes'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'several', a plural countable noun is required. Therefore, 'envelopes' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0029",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every ____ in the customer database must include a valid e-mail address.",
+      "choices": [
+        "records",
+        "record's",
+        "records'",
+        "record"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required. Therefore, 'record' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0030",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The quality team identified two minor ____ during the final inspection.",
+      "choices": [
+        "defects",
+        "defect",
+        "defect's",
+        "defects'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'two' requires a plural countable noun. Therefore, 'defects' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0031",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Another ____ has been assigned to the airport renovation project.",
+      "choices": [
+        "engineers",
+        "engineer",
+        "engineer's",
+        "engineers'"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'another', a singular countable noun is required. Therefore, 'engineer' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0032",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Both ____ submitted their expense reports before the deadline.",
+      "choices": [
+        "consultant",
+        "consultant's",
+        "consultants",
+        "consultants'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'both', a plural countable noun is required. Therefore, 'consultants' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0033",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "One ____ will remain open during the holiday weekend.",
+      "choices": [
+        "branches",
+        "branch's",
+        "branches'",
+        "branch"
+      ],
+      "correctIndex": 3,
+      "explanation": "The number 'one' requires a singular countable noun. Therefore, 'branch' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0034",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "A number of local ____ attended the supplier briefing.",
+      "choices": [
+        "vendors",
+        "vendor",
+        "vendor's",
+        "vendors'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The expression 'a number of' is followed by a plural countable noun. Therefore, 'vendors' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0035",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each parking ____ is marked with the tenant's company name.",
+      "choices": [
+        "spaces",
+        "space",
+        "space's",
+        "spaces'"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'space' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0036",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company purchased four electric ____ for its field-service team.",
+      "choices": [
+        "vehicle",
+        "vehicle's",
+        "vehicles",
+        "vehicles'"
+      ],
+      "correctIndex": 2,
+      "explanation": "The number 'four' requires a plural countable noun. Therefore, 'vehicles' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0037",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every completed ____ is reviewed by a senior loan officer.",
+      "choices": [
+        "applications",
+        "application's",
+        "applications'",
+        "application"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required. Therefore, 'application' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0038",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several new ____ were added to the restaurant's lunch menu.",
+      "choices": [
+        "dishes",
+        "dish",
+        "dish's",
+        "dishes'"
+      ],
+      "correctIndex": 0,
+      "explanation": "After 'several', a plural countable noun is required. Therefore, 'dishes' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0039",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The laboratory needs one additional ____ before testing can resume.",
+      "choices": [
+        "technicians",
+        "technician",
+        "technician's",
+        "technicians'"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'one additional' requires a singular countable noun. Therefore, 'technician' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0040",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Many international ____ have registered for the trade fair.",
+      "choices": [
+        "buyer",
+        "buyer's",
+        "buyers",
+        "buyers'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'many', a plural countable noun is required. Therefore, 'buyers' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0041",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each delivery ____ must be signed by the receiving clerk.",
+      "choices": [
+        "receipts",
+        "receipt's",
+        "receipts'",
+        "receipt"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'receipt' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0042",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The marketing director reviewed three campaign ____ before selecting one.",
+      "choices": [
+        "concepts",
+        "concept",
+        "concept's",
+        "concepts'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'three' requires a plural countable noun. Therefore, 'concepts' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0043",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Another customer-service ____ will open near the station in October.",
+      "choices": [
+        "counters",
+        "counter",
+        "counter's",
+        "counters'"
+      ],
+      "correctIndex": 1,
+      "explanation": "After 'another', a singular countable noun is required. Therefore, 'counter' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0044",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Both maintenance ____ were completed ahead of schedule.",
+      "choices": [
+        "inspection",
+        "inspection's",
+        "inspections",
+        "inspections'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'both', a plural countable noun is required. Therefore, 'inspections' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0045",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Every conference ____ includes wireless Internet access and a projector.",
+      "choices": [
+        "rooms",
+        "room's",
+        "rooms'",
+        "room"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'every', a singular countable noun is required. Therefore, 'room' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0046",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The factory installed five additional security ____ near the loading area.",
+      "choices": [
+        "cameras",
+        "camera",
+        "camera's",
+        "cameras'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'five' requires a plural countable noun. Therefore, 'cameras' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0047",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "One of the regional ____ will host next month's management meeting.",
+      "choices": [
+        "office",
+        "offices",
+        "office's",
+        "offices'"
+      ],
+      "correctIndex": 1,
+      "explanation": "In 'one of the + noun', the noun must be plural. Therefore, 'offices' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0048",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Numerous customer ____ were received after the new website launched.",
+      "choices": [
+        "inquiry",
+        "inquiry's",
+        "inquiries",
+        "inquiries'"
+      ],
+      "correctIndex": 2,
+      "explanation": "After 'numerous', a plural countable noun is required. Therefore, 'inquiries' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0049",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "Each product ____ contains a serial number and manufacturing date.",
+      "choices": [
+        "labels",
+        "label's",
+        "labels'",
+        "label"
+      ],
+      "correctIndex": 3,
+      "explanation": "After 'each', a singular countable noun is required. Therefore, 'label' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_countable_number_0050",
+      "version": 1,
+      "skillId": "p5.det.countable_number",
+      "categoryId": "determiners-quantity",
+      "sentence": "The purchasing team requested two revised ____ from the contractor.",
+      "choices": [
+        "estimates",
+        "estimate",
+        "estimate's",
+        "estimates'"
+      ],
+      "correctIndex": 0,
+      "explanation": "The number 'two' requires a plural countable noun. Therefore, 'estimates' is correct.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -44395,7 +46084,14 @@
       "betaCandidate": true
     }
   ],
-  "quarantine": [],
+  "quarantine": [
+    {
+      "id": "p5_det_article_choice_0094",
+      "duplicateOf": "p5_det_article_choice_0044",
+      "score": 1,
+      "reason": "exact_normalized_stem"
+    }
+  ],
   "buildDiagnostics": {
     "qaInference": [
       {
