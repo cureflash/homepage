@@ -1,18 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 3950,
-  "verified_question_count": 3859,
-  "needs_revision_count": 91,
+  "checked_question_count": 4050,
+  "verified_question_count": 3958,
+  "needs_revision_count": 92,
   "rejected_question_count": 0,
-  "pending_validation_count": 450,
-  "last_completed_batch": "2026-08-30-scheduled-106-adjective-noun-collocation-part2",
-  "last_completed_micro_skill": "p5.vocab.adjective_noun_collocation",
+  "pending_validation_count": 350,
+  "last_completed_batch": "2026-08-30-scheduled-110-preposition-collocation-part2",
+  "last_completed_micro_skill": "p5.vocab.preposition_collocation",
   "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
-  "next_batch": "p5.vocab.adjective_noun_collocation",
-  "next_micro_skill": "p5.vocab.adjective_noun_collocation",
-  "next_question_id": "p5_vocab_adjective_noun_collocation_0051",
+  "next_batch": "p5.vocab.preposition_collocation",
+  "next_micro_skill": "p5.vocab.preposition_collocation",
+  "next_question_id": "p5_vocab_preposition_collocation_0051",
   "generation_complete": true,
   "validation_complete": false,
-  "updated_at": "2026-08-30T20:21:13Z"
+  "updated_at": "2026-08-30T21:00:00Z"
 }
