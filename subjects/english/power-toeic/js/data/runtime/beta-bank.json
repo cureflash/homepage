@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T12:18:26.197Z",
+  "generatedAt": "2026-08-30T13:27:57.703Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2500,
-    "runtimeQuestionCount": 2500,
+    "approvedCandidateCount": 2600,
+    "runtimeQuestionCount": 2600,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 102
+    "qaRecordCount": 106
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -65,6 +65,12 @@
       "label": "in / on / at（時間）",
       "categoryId": "connectors-prepositions",
       "categoryLabel": "前置詞・接続詞"
+    },
+    {
+      "id": "p5.det.article_choice",
+      "label": "冠詞 a/an/the/無冠詞",
+      "categoryId": "determiners-quantity",
+      "categoryLabel": "限定詞・数量"
     },
     {
       "id": "p5.pos.adjective_after_linking_verb",
@@ -12391,6 +12397,856 @@
       ],
       "correctIndex": 0,
       "explanation": "Use \"on\" with a named day plus part of day. Therefore, \"on\" is the only correct choice here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0001",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company plans to hire ____ experienced accountant for the new branch.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0002",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please leave the signed contract on ____ desk beside the reception window.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0003",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Our supplier opened ____ distribution center near Nagoya last month.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0004",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Ms. Patel earned ____ MBA before joining the consulting firm.",
+      "choices": [
+        "a",
+        "the",
+        "—",
+        "an"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0005",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "New employees receive ____ training on the inventory system during their first week.",
+      "choices": [
+        "—",
+        "a",
+        "an",
+        "the"
+      ],
+      "correctIndex": 0,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0006",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "We need ____ additional projector for the afternoon seminar.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0007",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Customers can download ____ free copy of the installation guide from our website.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0008",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The courier delivered the replacement parts to ____ warehouse listed on the purchase order.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0009",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Mr. Wong will give ____ presentation on regional sales trends at noon.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0010",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The laboratory purchased ____ ultraviolet lamp for the new testing station.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0011",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please use ____ access code printed at the bottom of your confirmation email.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0012",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company provides ____ free parking to all employees after 6 P.M.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 3,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0013",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Our office is looking for ____ larger conference room for next week's workshop.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0014",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician replaced ____ damaged cable behind the main server rack.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0015",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The hotel offers ____ airport shuttle every thirty minutes.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0016",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "We received ____ unusually large order from a retailer in Fukuoka.",
+      "choices": [
+        "a",
+        "the",
+        "—",
+        "an"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0017",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please contact ____ supervisor responsible for the evening shift.",
+      "choices": [
+        "the",
+        "a",
+        "an",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0018",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The design team created ____ new logo for the product launch.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0019",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Applicants must have ____ experience in commercial refrigeration systems.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 2,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0020",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The invoice includes ____ delivery charge discussed in yesterday's call.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0021",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company has introduced ____ employee referral program for engineering positions.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0022",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "We booked ____ private dining room for the client dinner.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0023",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The receptionist handed me ____ envelope containing my visitor badge.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0024",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please return ____ key you received at check-in before leaving the building.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0025",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The agency published ____ annual report on tourism spending yesterday.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0026",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please send ____ feedback through the survey link by Friday.",
+      "choices": [
+        "a",
+        "—",
+        "an",
+        "the"
+      ],
+      "correctIndex": 1,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0027",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "We are seeking ____ candidate with at least five years of logistics experience.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0028",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please review ____ revised schedule attached to this message.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0029",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The museum has opened ____ exhibition on early industrial design.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0030",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "A courier will collect ____ parcel on the counter near the loading entrance.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0031",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The finance team identified ____ discrepancy in the quarterly expense report.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0032",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The training department reserved ____ auditorium for the orientation session.",
+      "choices": [
+        "a",
+        "the",
+        "—",
+        "an"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0033",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Visitors entering the production area must wear ____ protective clothing.",
+      "choices": [
+        "—",
+        "a",
+        "an",
+        "the"
+      ],
+      "correctIndex": 0,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0034",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The retailer launched ____ online loyalty program for frequent customers.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0035",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The consultant recommended ____ more efficient filing system for purchase records.",
+      "choices": [
+        "an",
+        "the",
+        "a",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0036",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The security officer checked ____ identification card shown by each visitor.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0037",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The firm received ____ inquiry from an overseas distributor this morning.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0038",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "We need to select ____ venue before invitations are printed.",
+      "choices": [
+        "an",
+        "a",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0039",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The replacement unit is stored in ____ cabinet next to the service elevator.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0040",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Customers can obtain ____ information about warranty coverage at the service desk.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 3,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0041",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The manufacturer issued ____ recall notice for the affected model.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0042",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please sign ____ form included with your reimbursement request.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0043",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The marketing team hired ____ illustrator for the spring catalog.",
+      "choices": [
+        "a",
+        "the",
+        "an",
+        "—"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0044",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The branch manager approved ____ temporary schedule for the renovation period.",
+      "choices": [
+        "an",
+        "the",
+        "—",
+        "a"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0045",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The auditor requested ____ original receipt for the equipment purchase.",
+      "choices": [
+        "the",
+        "a",
+        "an",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0046",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Our team prepared ____ estimate for repairing the damaged loading door.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0047",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The workshop includes ____ hands-on practice with the new scheduling software.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 2,
+      "explanation": "No article is used here because the noun is an uncountable or plural/general noun used in a broad sense.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0048",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please use ____ entrance facing the employee parking lot after 6 P.M.",
+      "choices": [
+        "a",
+        "an",
+        "—",
+        "the"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use 'the' because the noun refers to a specific, identifiable person or thing established by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0049",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The restaurant added ____ vegetarian option to its lunch menu.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use 'a' before a singular countable noun introduced non-specifically when the following sound is consonantal.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_article_choice_0050",
+      "version": 1,
+      "skillId": "p5.det.article_choice",
+      "categoryId": "determiners-quantity",
+      "sentence": "The project requires ____ unusually detailed risk assessment before approval.",
+      "choices": [
+        "a",
+        "an",
+        "the",
+        "—"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use 'an' before a singular countable noun introduced non-specifically when the following sound begins with a vowel sound.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -26314,6 +27170,856 @@
       ],
       "correctIndex": 0,
       "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'presents'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0051",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everybody who uses the shared printer ____ asked to collect documents promptly.",
+      "choices": [
+        "are",
+        "is",
+        "have",
+        "being"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0052",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the suggested routes ____ through the restricted construction zone.",
+      "choices": [
+        "pass",
+        "have passed",
+        "passes",
+        "are passing"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'passes'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0053",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone from the vendor team ____ the software demonstration each Friday.",
+      "choices": [
+        "conduct",
+        "have conducted",
+        "are conducting",
+        "conducts"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'conducts'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0054",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the new workstations ____ two external monitors.",
+      "choices": [
+        "has",
+        "have",
+        "having",
+        "are having"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0055",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone in the training class ____ a final skills assessment.",
+      "choices": [
+        "take",
+        "takes",
+        "have taken",
+        "taking"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'takes'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0056",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of the service plans ____ free technical support for one year.",
+      "choices": [
+        "include",
+        "have included",
+        "includes",
+        "are including"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'includes'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0057",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "No one at the information desk ____ permitted to accept cash payments.",
+      "choices": [
+        "are",
+        "have",
+        "being",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0058",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each store manager ____ inventory levels before placing a restocking order.",
+      "choices": [
+        "checks",
+        "check",
+        "have checked",
+        "checking"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'checks'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0059",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Somebody in the facilities office ____ the conference rooms each morning.",
+      "choices": [
+        "inspect",
+        "inspects",
+        "have inspected",
+        "are inspecting"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'inspects'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0060",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the backup batteries ____ a full charge.",
+      "choices": [
+        "hold",
+        "have held",
+        "holds",
+        "are holding"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'holds'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0061",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every one of the test reports ____ reviewed by a senior engineer.",
+      "choices": [
+        "are",
+        "have",
+        "were",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0062",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each visitor ____ a security card before entering the production area.",
+      "choices": [
+        "receives",
+        "receive",
+        "have received",
+        "receiving"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'receives'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0063",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone on the customer-support team ____ access to the updated troubleshooting guide.",
+      "choices": [
+        "have",
+        "has",
+        "having",
+        "are having"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0064",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of the proposed deadlines ____ enough time for final proofreading.",
+      "choices": [
+        "allow",
+        "have allowed",
+        "allows",
+        "are allowing"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'allows'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0065",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Nobody in the warehouse ____ permitted to operate a forklift without certification.",
+      "choices": [
+        "are",
+        "have",
+        "being",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0066",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the quarterly reports ____ a summary of regional performance.",
+      "choices": [
+        "contains",
+        "contain",
+        "have contained",
+        "containing"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'contains'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0067",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone from the audit firm ____ the expense records every spring.",
+      "choices": [
+        "review",
+        "reviews",
+        "have reviewed",
+        "are reviewing"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'reviews'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0068",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the replacement keys ____ the storage cabinet.",
+      "choices": [
+        "open",
+        "have opened",
+        "opens",
+        "are opening"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'opens'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0069",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone who attends the webinar ____ a link to the recording afterward.",
+      "choices": [
+        "receive",
+        "have received",
+        "are receiving",
+        "receives"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'receives'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0070",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every supervisor ____ responsible for confirming staff attendance.",
+      "choices": [
+        "is",
+        "are",
+        "have",
+        "being"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0071",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of the two proposals ____ further legal review before approval.",
+      "choices": [
+        "require",
+        "requires",
+        "have required",
+        "are requiring"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'requires'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0072",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "No one in the temporary office ____ direct access to the main server room.",
+      "choices": [
+        "have",
+        "having",
+        "has",
+        "are having"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0073",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the department budgets ____ approved separately by the finance director.",
+      "choices": [
+        "are",
+        "have",
+        "were",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0074",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone at the reception ____ a numbered ticket before speaking with an adviser.",
+      "choices": [
+        "takes",
+        "take",
+        "have taken",
+        "taking"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'takes'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0075",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Somebody on the engineering team ____ the calibration results before production resumes.",
+      "choices": [
+        "verify",
+        "verifies",
+        "have verified",
+        "are verifying"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'verifies'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0076",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the revised floor plans ____ a separate accessibility review.",
+      "choices": [
+        "require",
+        "requires",
+        "have required",
+        "requiring"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'requires'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0077",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone assigned to the morning shift ____ the safety briefing before entering the warehouse.",
+      "choices": [
+        "attend",
+        "attends",
+        "have attended",
+        "attending"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'attends'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0078",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the conference rooms ____ equipped for simultaneous interpretation.",
+      "choices": [
+        "are",
+        "were",
+        "is",
+        "have"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0079",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone in the payroll office ____ all overtime requests before Friday.",
+      "choices": [
+        "approve",
+        "have approved",
+        "approves",
+        "are approving"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'approves'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0080",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every one of the returned devices ____ inspected before it is restocked.",
+      "choices": [
+        "are",
+        "have",
+        "being",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0081",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of the two maintenance contracts ____ emergency service on weekends.",
+      "choices": [
+        "includes",
+        "include",
+        "have included",
+        "including"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'includes'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0082",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Nobody on the temporary staff ____ authorized to sign purchase orders.",
+      "choices": [
+        "is",
+        "are",
+        "have",
+        "being"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0083",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each applicant ____ two professional references with the online form.",
+      "choices": [
+        "provide",
+        "provides",
+        "have provided",
+        "providing"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'provides'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0084",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everybody in the branch office ____ access to the new scheduling system.",
+      "choices": [
+        "have",
+        "has",
+        "having",
+        "are having"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0085",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the proposed layouts ____ enough space for the larger display cases.",
+      "choices": [
+        "allow",
+        "have allowed",
+        "allows",
+        "are allowing"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'allows'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0086",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone from customer relations ____ the complaint log at the end of each day.",
+      "choices": [
+        "review",
+        "has reviewed",
+        "are reviewing",
+        "reviews"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'reviews'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0087",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the delivery vans ____ a digital temperature sensor.",
+      "choices": [
+        "has",
+        "have",
+        "having",
+        "are having"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0088",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "No one who handles confidential files ____ permitted to share a password.",
+      "choices": [
+        "are",
+        "is",
+        "have",
+        "being"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0089",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of the available printers ____ compatible with the new label software.",
+      "choices": [
+        "are",
+        "have",
+        "is",
+        "being"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0090",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone attending the orientation ____ a copy of the employee handbook.",
+      "choices": [
+        "receive",
+        "have received",
+        "are receiving",
+        "receives"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'receives'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0091",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every department head ____ responsible for approving travel expenses.",
+      "choices": [
+        "is",
+        "are",
+        "have",
+        "being"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0092",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Somebody in the IT department ____ the backup logs every morning.",
+      "choices": [
+        "check",
+        "checks",
+        "have checked",
+        "checking"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'checks'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0093",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the sample invoices ____ the correct tax rate.",
+      "choices": [
+        "show",
+        "have shown",
+        "shows",
+        "are showing"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'shows'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0094",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the replacement filters ____ labeled with an installation date.",
+      "choices": [
+        "are",
+        "have",
+        "were",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0095",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everybody who completes the certification course ____ eligible for the advanced workshop.",
+      "choices": [
+        "is",
+        "are",
+        "have",
+        "being"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0096",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of the two storage units ____ sufficient capacity for the archived files.",
+      "choices": [
+        "provide",
+        "provides",
+        "have provided",
+        "providing"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'provides'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0097",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "No one in the laboratory ____ access to the restricted cabinet without approval.",
+      "choices": [
+        "have",
+        "having",
+        "has",
+        "are having"
+      ],
+      "correctIndex": 2,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0098",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every one of the customer surveys ____ reviewed by the quality team.",
+      "choices": [
+        "are",
+        "have",
+        "were",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0099",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each regional manager ____ sales forecasts before the monthly meeting.",
+      "choices": [
+        "submits",
+        "submit",
+        "have submitted",
+        "submitting"
+      ],
+      "correctIndex": 0,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'submits'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0100",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone on the event staff ____ the registration desk during lunch breaks.",
+      "choices": [
+        "cover",
+        "covers",
+        "have covered",
+        "are covering"
+      ],
+      "correctIndex": 1,
+      "explanation": "The indefinite subject is grammatically singular in this construction, so it takes the singular form 'covers'.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
