@@ -51,5 +51,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue pc3.conventional.name_to_color authoring at question 0041 with c3-conventional-030 カーマイン, the first master color not covered by runtime plus the verified 0017-0040 authoring checkpoints. Generate pending first, independently QA against grade3-colors.json and the current association reference, keep verdicts individual, and preserve the shared-engine/runtime separation."
+  "next": "Continue pc3.conventional.name_to_color authoring at question 0041 with c3-conventional-031 バーミリオン, the first master color not covered by runtime plus the verified 0017-0040 authoring checkpoints. Generate pending first, independently QA against grade3-colors.json and the current association reference, keep verdicts individual, and preserve the shared-engine/runtime separation."
 }
