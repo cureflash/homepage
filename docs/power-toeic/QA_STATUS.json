@@ -1,18 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 3750,
-  "verified_question_count": 3660,
-  "needs_revision_count": 90,
+  "checked_question_count": 3850,
+  "verified_question_count": 3759,
+  "needs_revision_count": 91,
   "rejected_question_count": 0,
-  "pending_validation_count": 650,
-  "last_completed_batch": "2026-08-30-scheduled-098-another-other-others-part2",
-  "last_completed_micro_skill": "p5.det.another_other_others",
+  "pending_validation_count": 550,
+  "last_completed_batch": "2026-08-30-scheduled-102-verb-noun-collocation-part2",
+  "last_completed_micro_skill": "p5.vocab.verb_noun_collocation",
   "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
-  "next_batch": "p5.det.another_other_others",
-  "next_micro_skill": "p5.det.another_other_others",
-  "next_question_id": "p5_det_another_other_others_0051",
+  "next_batch": "p5.vocab.verb_noun_collocation",
+  "next_micro_skill": "p5.vocab.verb_noun_collocation",
+  "next_question_id": "p5_vocab_verb_noun_collocation_0051",
   "generation_complete": true,
   "validation_complete": false,
-  "updated_at": "2026-08-30T18:20:00Z"
+  "updated_at": "2026-08-30T19:21:35Z"
 }
