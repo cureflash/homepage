@@ -64,7 +64,8 @@
     { questionId: "takken-q-45-001", conceptId: "takken-concept-default-damages", knowledgeRefs: ["takken-k-default-damages-nonperformance-claim"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-45-002", conceptId: "takken-concept-default-damages", knowledgeRefs: ["takken-k-default-damages-no-liability-without-attribution"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-46-001", conceptId: "takken-concept-contract-cancellation", knowledgeRefs: ["takken-k-contract-cancellation-demand-principle"], sourceQuestionValidationStatus: "verified" },
-    { questionId: "takken-q-46-002", conceptId: "takken-concept-contract-cancellation", knowledgeRefs: ["takken-k-contract-cancellation-no-demand-total-impossibility"], sourceQuestionValidationStatus: "verified" }
+    { questionId: "takken-q-46-002", conceptId: "takken-concept-contract-cancellation", knowledgeRefs: ["takken-k-contract-cancellation-no-demand-total-impossibility"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-47-001", conceptId: "takken-concept-simultaneous-performance", knowledgeRefs: ["takken-k-simultaneous-performance-refusal-until-tender"], sourceQuestionValidationStatus: "verified" }
   ];
 
   const knownKnowledgeIds = new Set([
@@ -111,10 +112,11 @@
     "takken-k-co-ownership-equal-shares-presumed", "takken-k-co-ownership-use-entire-property-by-share",
     "takken-k-mortgage-no-possession-transfer", "takken-k-mortgage-priority-payment",
     "takken-k-default-damages-nonperformance-claim", "takken-k-default-damages-no-liability-without-attribution",
-    "takken-k-contract-cancellation-demand-principle", "takken-k-contract-cancellation-no-demand-total-impossibility"
+    "takken-k-contract-cancellation-demand-principle", "takken-k-contract-cancellation-no-demand-total-impossibility",
+    "takken-k-simultaneous-performance-refusal-until-tender"
   ]);
   const allowedConceptIds = new Set([
-    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document", "takken-concept-article35-vs-37", "takken-concept-eight-restrictions-scope", "takken-concept-cooling-off", "takken-concept-earnest-money-safeguards", "takken-concept-brokerage-fees", "takken-concept-supervision-dispositions", "takken-concept-declaration-arrival", "takken-concept-mistake", "takken-concept-fraud", "takken-concept-mental-reservation", "takken-concept-fictitious-declaration", "takken-concept-minor", "takken-concept-adult-ward", "takken-concept-agency", "takken-concept-apparent-agency", "takken-concept-acquisitive-prescription", "takken-concept-extinctive-prescription", "takken-concept-property-transfer-opposability", "takken-concept-co-ownership", "takken-concept-mortgage", "takken-concept-default-damages", "takken-concept-contract-cancellation"
+    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document", "takken-concept-article35-vs-37", "takken-concept-eight-restrictions-scope", "takken-concept-cooling-off", "takken-concept-earnest-money-safeguards", "takken-concept-brokerage-fees", "takken-concept-supervision-dispositions", "takken-concept-declaration-arrival", "takken-concept-mistake", "takken-concept-fraud", "takken-concept-mental-reservation", "takken-concept-fictitious-declaration", "takken-concept-minor", "takken-concept-adult-ward", "takken-concept-agency", "takken-concept-apparent-agency", "takken-concept-acquisitive-prescription", "takken-concept-extinctive-prescription", "takken-concept-property-transfer-opposability", "takken-concept-co-ownership", "takken-concept-mortgage", "takken-concept-default-damages", "takken-concept-contract-cancellation", "takken-concept-simultaneous-performance"
   ]);
   const questionIds = new Set();
 
@@ -128,7 +130,7 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 63) throw new Error(`Expected 63 mapped questions through contract-cancellation, got ${mappings.length}`);
+  if (mappings.length !== 64) throw new Error(`Expected 64 mapped questions through simultaneous-performance, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
   if (!questionIds.has("takken-q-15-001")) throw new Error("Brokerage contract document source question mapping is missing");
@@ -163,6 +165,7 @@
   if (!questionIds.has("takken-q-44-001") || !questionIds.has("takken-q-44-002")) throw new Error("Mortgage source question mappings are missing");
   if (!questionIds.has("takken-q-45-001") || !questionIds.has("takken-q-45-002")) throw new Error("Default-damages source question mappings are missing");
   if (!questionIds.has("takken-q-46-001") || !questionIds.has("takken-q-46-002")) throw new Error("Contract-cancellation source question mappings are missing");
+  if (!questionIds.has("takken-q-47-001")) throw new Error("Simultaneous-performance source question mapping is missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
