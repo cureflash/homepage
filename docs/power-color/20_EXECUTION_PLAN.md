@@ -26,9 +26,12 @@
   - [x] `name_to_color` checkpoint 0057-0064: 8 generated pending-first and independently verified; 0 pending. Targets c3-048 through c3-055; the c3-052 item excludes c3-017 from its choices because both share the same reference display value.
   - [x] `name_to_color` checkpoint 0065-0072: 8 generated pending-first and independently verified; 0 pending. Targets c3-056 through c3-062 and c3-064; c3-063 remains covered only by the existing runtime bank and is not reused.
   - [x] `name_to_color` authoritative master state space: 64/64 master refs covered with no target reuse.
-- [ ] Independent QA for all conventional-color questions.
+- [x] Independent QA for all conventional-color questions.
+  - [x] Corpus gate covers runtime 16 + authoring 111 = 127 verified questions, pending=0.
+  - [x] Canonical target resolution, schema/source refs, exact fingerprints, cross-bank target uniqueness, monitor-discriminable choice sets and answer-position balance pass.
+  - [x] Official association 3級慣用色 reference rechecked 2026-08-31; its public RGB/hex values remain reference values, and 空色/スカイブルー both remain `8ED1E0`.
 - [ ] Promote verified authoring checkpoints into `grade3-runtime.json` only after consistency tests pass.
-- [ ] Conventional-color coverage gate: both directions cover the useful authoritative master state space, pending=0, duplicates/schema/references pass; do not force a monitor-indistinguishable item merely to claim 64/64.
+- [x] Conventional-color coverage gate: both directions cover the useful authoritative master state space, pending=0, duplicates/schema/references pass; do not force a monitor-indistinguishable item merely to claim 64/64.
 
 ## Phase 2 — Grade 3 PCCS master
 - [ ] Confirm authoritative PCCS Grade 3 data/source.
