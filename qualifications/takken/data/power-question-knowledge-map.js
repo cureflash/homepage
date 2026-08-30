@@ -123,12 +123,11 @@
     "takken-k-sale-earnest-buyer-abandon", "takken-k-sale-earnest-seller-double-actual-tender", "takken-k-sale-earnest-before-counterparty-performance",
     "takken-k-civil-nonconformity-cure-right", "takken-k-civil-nonconformity-price-reduction-demand-principle"
   ]);
-
   const allowedConceptIds = new Set([
     "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document", "takken-concept-article35-vs-37", "takken-concept-eight-restrictions-scope", "takken-concept-cooling-off", "takken-concept-earnest-money-safeguards", "takken-concept-brokerage-fees", "takken-concept-supervision-dispositions", "takken-concept-declaration-arrival", "takken-concept-mistake", "takken-concept-fraud", "takken-concept-mental-reservation", "takken-concept-fictitious-declaration", "takken-concept-minor", "takken-concept-adult-ward", "takken-concept-agency", "takken-concept-apparent-agency", "takken-concept-acquisitive-prescription", "takken-concept-extinctive-prescription", "takken-concept-property-transfer-opposability", "takken-concept-co-ownership", "takken-concept-mortgage", "takken-concept-default-damages", "takken-concept-contract-cancellation", "takken-concept-simultaneous-performance", "takken-concept-risk-allocation", "takken-concept-sale-earnest", "takken-concept-civil-nonconformity"
   ]);
-
   const questionIds = new Set();
+
   for (const mapping of mappings) {
     if (questionIds.has(mapping.questionId)) throw new Error(`Duplicate Power Takken question mapping: ${mapping.questionId}`);
     questionIds.add(mapping.questionId);
@@ -142,6 +141,40 @@
   if (mappings.length !== 69) throw new Error(`Expected 69 mapped questions through civil-nonconformity, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
+  if (!questionIds.has("takken-q-15-001")) throw new Error("Brokerage contract document source question mapping is missing");
+  if (!questionIds.has("takken-q-16-001")) throw new Error("Exclusive brokerage period source question mapping is missing");
+  if (!questionIds.has("takken-q-17-001")) throw new Error("Exclusive brokerage REINS/reporting source question mapping is missing");
+  if (!questionIds.has("takken-q-17-002")) throw new Error("Sole-agency brokerage REINS/reporting source question mapping is missing");
+  if (!questionIds.has("takken-q-18-001")) throw new Error("Advertising start source question mapping is missing");
+  if (!questionIds.has("takken-q-19-001")) throw new Error("Contract start source question mapping is missing");
+  if (!questionIds.has("takken-q-20-001")) throw new Error("False advertising source question mapping is missing");
+  if (!questionIds.has("takken-q-21-001") || !questionIds.has("takken-q-21-002")) throw new Error("Article 35 procedure source question mappings are missing");
+  if (!questionIds.has("takken-q-22-001") || !questionIds.has("takken-q-22-002")) throw new Error("Article 35 items source question mappings are missing");
+  if (!questionIds.has("takken-q-23-001") || !questionIds.has("takken-q-23-002")) throw new Error("Article 37 document source question mappings are missing");
+  if (!questionIds.has("takken-q-24-001") || !questionIds.has("takken-q-24-002")) throw new Error("Article 35 vs 37 source question mappings are missing");
+  if (!questionIds.has("takken-q-25-001") || !questionIds.has("takken-q-25-002")) throw new Error("Eight restrictions scope source question mappings are missing");
+  if (!questionIds.has("takken-q-26-001") || !questionIds.has("takken-q-26-002")) throw new Error("Cooling-off source question mappings are missing");
+  if (!questionIds.has("takken-q-27-002")) throw new Error("Earnest-money safeguards source question mapping is missing");
+  if (!questionIds.has("takken-q-32-001") || !questionIds.has("takken-q-32-002")) throw new Error("Brokerage-fees source question mappings are missing");
+  if (!questionIds.has("takken-q-33-001") || !questionIds.has("takken-q-33-002")) throw new Error("Supervision-dispositions source question mappings are missing");
+  if (!questionIds.has("takken-q-34-001") || !questionIds.has("takken-q-34-002")) throw new Error("Declaration-arrival source question mappings are missing");
+  if (!questionIds.has("takken-q-35-001")) throw new Error("Mistake source question mapping is missing");
+  if (!questionIds.has("takken-q-36-001") || !questionIds.has("takken-q-36-002")) throw new Error("Fraud source question mappings are missing");
+  if (!questionIds.has("takken-q-37-001")) throw new Error("Mental-reservation source question mapping is missing");
+  if (!questionIds.has("takken-q-37-002")) throw new Error("Fictitious-declaration source question mapping is missing");
+  if (!questionIds.has("takken-q-38-001")) throw new Error("Minor source question mapping is missing");
+  if (!questionIds.has("takken-q-38-002")) throw new Error("Adult-ward source question mapping is missing");
+  if (!questionIds.has("takken-q-39-001") || !questionIds.has("takken-q-39-002")) throw new Error("Agency source question mappings are missing");
+  if (!questionIds.has("takken-q-40-002")) throw new Error("Apparent-agency overview source question mapping is missing");
+  if (!questionIds.has("takken-q-41-001")) throw new Error("Acquisitive-prescription source question mapping is missing");
+  if (!questionIds.has("takken-q-41-002")) throw new Error("Extinctive-prescription source question mapping is missing");
+  if (!questionIds.has("takken-q-42-001") || !questionIds.has("takken-q-42-002")) throw new Error("Property-transfer-opposability source question mappings are missing");
+  if (!questionIds.has("takken-q-43-001") || !questionIds.has("takken-q-43-002")) throw new Error("Co-ownership source question mappings are missing");
+  if (!questionIds.has("takken-q-44-001") || !questionIds.has("takken-q-44-002")) throw new Error("Mortgage source question mappings are missing");
+  if (!questionIds.has("takken-q-45-001") || !questionIds.has("takken-q-45-002")) throw new Error("Default-damages source question mappings are missing");
+  if (!questionIds.has("takken-q-46-001") || !questionIds.has("takken-q-46-002")) throw new Error("Contract-cancellation source question mappings are missing");
+  if (!questionIds.has("takken-q-47-001")) throw new Error("Simultaneous-performance source question mapping is missing");
+  if (!questionIds.has("takken-q-47-002")) throw new Error("Risk-allocation source question mapping is missing");
   if (!questionIds.has("takken-q-48-001") || !questionIds.has("takken-q-48-002")) throw new Error("Sale-earnest source question mappings are missing");
   if (!questionIds.has("takken-q-49-001") || !questionIds.has("takken-q-49-002")) throw new Error("Civil-nonconformity source question mappings are missing");
 
