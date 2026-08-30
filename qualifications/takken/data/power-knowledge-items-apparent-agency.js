@@ -21,7 +21,7 @@
       ...shared,
       knowledgeId: "takken-k-apparent-agency-statutory-overview",
       claim: "民法は、代理権授与表示、権限外行為、代理権消滅後について、所定の要件を満たすときに本人へ効果を帰属させる表見代理の制度を置いている。",
-      conditions: ["実際の代理権だけではなく、本人側に帰責可能な代理権の外観があること", "各類型について民法109条、110条または112条の要件を満たすこと"],
+      conditions: ["本人側に帰責可能な代理権の外観があること", "各類型について民法109条、110条または112条の要件を満たすこと"],
       exceptions: ["単に無権代理であるだけでは表見代理は成立せず、各条の相手方保護要件等を満たす必要がある。"],
       importance: "A",
       primarySources: [statute],
@@ -38,8 +38,17 @@
     },
     {
       ...shared,
+      knowledgeId: "takken-k-apparent-agency-authority-grant-representation-beyond-scope",
+      claim: "代理権授与表示を受けた者が表示された代理権の範囲外の行為をした場合でも、第三者にその権限があると信ずべき正当な理由があるときは、表示者がその行為について責任を負う。",
+      conditions: ["本人が第三者に対して代理権授与表示をしたこと", "行為が表示された代理権の範囲外であること", "第三者に行為者の権限があると信ずべき正当な理由があること"],
+      exceptions: ["第三者に権限があると信ずべき正当な理由がない場合は、民法109条2項による保護を受けない。"],
+      importance: "A",
+      primarySources: [statute]
+    },
+    {
+      ...shared,
       knowledgeId: "takken-k-apparent-agency-beyond-authority",
-      claim: "代理人が権限外の行為をした場合でも、第三者に代理人の権限があると信ずべき正当な理由があるときは、本人がその行為について責任を負う。",
+      claim: "代理人がその代理権の範囲外の行為をした場合でも、第三者に代理人の権限があると信ずべき正当な理由があるときは、本人がその行為について責任を負う。",
       conditions: ["代理人に何らかの代理権があること", "その代理権の範囲外の行為をしたこと", "第三者に代理人の権限があると信ずべき正当な理由があること"],
       exceptions: ["第三者に権限があると信ずべき正当な理由がない場合は、民法110条による表見代理は成立しない。"],
       importance: "A",
@@ -53,6 +62,15 @@
       exceptions: ["第三者が代理権消滅を知っていた場合、または知らなかったことに過失がある場合は保護されない。"],
       importance: "A",
       primarySources: [statute]
+    },
+    {
+      ...shared,
+      knowledgeId: "takken-k-apparent-agency-after-authority-extinction-beyond-scope",
+      claim: "代理権消滅後に、以前の代理権の範囲外の行為がされた場合でも、第三者が代理権消滅を知らず、そのことに過失がなく、かつ行為者にその権限があると信ずべき正当な理由があるときは、本人がその行為について責任を負う。",
+      conditions: ["行為者が以前は代理権を有していたこと", "代理権消滅後の行為であること", "行為が消滅前の代理権の範囲外であること", "第三者が代理権消滅を知らず、そのことについて過失がないこと", "第三者に行為者の権限があると信ずべき正当な理由があること"],
+      exceptions: ["代理権消滅について第三者が悪意または有過失である場合、あるいは権限があると信ずべき正当な理由がない場合は、民法112条2項による保護を受けない。"],
+      importance: "A",
+      primarySources: [statute]
     }
   ];
 
@@ -63,7 +81,7 @@
     if (item.examYear !== 2026 || item.lawAsOf !== "2026-04-01" || item.factcheckStatus !== "verified") throw new Error(`Invalid knowledge item state: ${item.knowledgeId}`);
     if (!item.primarySources.some((entry) => entry.sourceType === "statute")) throw new Error(`Missing statute source: ${item.knowledgeId}`);
   }
-  if (knowledgeItems.length !== 4) throw new Error(`Expected 4 apparent agency knowledge items, got ${knowledgeItems.length}`);
+  if (knowledgeItems.length !== 6) throw new Error(`Expected 6 apparent agency knowledge items, got ${knowledgeItems.length}`);
 
   window.PowerTakkenKnowledgeItemsApparentAgency = Object.freeze(knowledgeItems.map((item) => Object.freeze(item)));
 })();
