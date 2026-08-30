@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Power Color｜色彩検定3級 色トレ</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <p class="eyebrow">色彩検定3級 β</p>
+      <h1>Power Color</h1>
+      <p>Power TOEICの共通Drill Engineで、色そのものを反復します。</p>
+      <p class="notice" data-role="notice"></p>
+    </header>
+
+    <section data-view="home">
+      <h2>慣用色名</h2>
+      <div class="mode-grid">
+        <button type="button" data-skill="pc3.conventional.color_to_name">色 → 名前</button>
+        <button type="button" data-skill="pc3.conventional.name_to_color">名前 → 色</button>
+        <button type="button" data-skill="mixed">ミックス</button>
+      </div>
+      <p class="small">現在は64色マスターのうち、独立照合済みの16問だけをβ出題します。</p>
+    </section>
+
+    <section data-view="quiz" hidden>
+      <div class="progress" data-role="progress"></div>
+      <div class="prompt" data-role="prompt"></div>
+      <div class="choices" data-role="choices"></div>
+      <div class="explanation" data-role="explanation" hidden></div>
+      <button type="button" class="next" data-action="next" hidden>次の問題</button>
+    </section>
+
+    <section data-view="result" hidden>
+      <h2>結果</h2>
+      <p data-role="result"></p>
+      <button type="button" data-action="home">戻る</button>
+    </section>
+  </main>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

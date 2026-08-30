@@ -1,0 +1,33 @@
+name: Power Color tests
+
+on:
+  pull_request:
+    paths:
+      - 'qualifications/color-certification/**'
+      - 'docs/power-color/**'
+      - 'subjects/english/power-toeic/js/core/session.js'
+      - 'subjects/english/power-toeic/js/core/workout-builder.js'
+      - 'subjects/english/power-toeic/js/data/question-bank-adapter.js'
+  push:
+    branches: [main]
+    paths:
+      - 'qualifications/color-certification/**'
+      - 'docs/power-color/**'
+      - 'subjects/english/power-toeic/js/core/session.js'
+      - 'subjects/english/power-toeic/js/core/workout-builder.js'
+      - 'subjects/english/power-toeic/js/data/question-bank-adapter.js'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run Power Color tests
+        working-directory: qualifications/color-certification
+        run: npm test
