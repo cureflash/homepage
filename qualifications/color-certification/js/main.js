@@ -1,7 +1,7 @@
 import { QuizSession } from '../../../subjects/english/power-toeic/js/core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/english/power-toeic/js/core/workout-builder.js';
 import { InMemoryQuestionBank } from '../../../subjects/english/power-toeic/js/data/question-bank-adapter.js';
-import { ColorChoiceRenderer } from './color-choice-renderer.js';
+import { ColorChoiceRenderer } from './color-choice-renderer.js?v=20260830-choice-label-v2';
 
 async function loadJson(url) {
   const response = await fetch(url, { cache: 'no-store' });
