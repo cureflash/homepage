@@ -1,0 +1,50 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import test from 'node:test';
+import { InMemoryQuestionBank } from '../../../subjects/english/power-toeic/js/data/question-bank-adapter.js';
+import { QuizSession } from '../../../subjects/english/power-toeic/js/core/session.js';
+import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/english/power-toeic/js/core/workout-builder.js';
+
+const colors = JSON.parse(await readFile(new URL('../data/grade3-colors.json', import.meta.url), 'utf8'));
+const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
+
+test('Grade 3 conventional-color master contains 64 stable records', () => {
+  assert.equal(colors.colors.length, 64);
+  assert.equal(new Set(colors.colors.map((color) => color.id)).size, 64);
+  assert.equal(colors.displayValueAuthority, 'reference_only');
+  for (const color of colors.colors) assert.match(color.displayHex, /^#[0-9A-F]{6}$/);
+});
+
+test('runtime bank exposes verified questions only and all color refs resolve', () => {
+  const colorById = new Map(colors.colors.map((color) => [color.id, color]));
+  assert.equal(runtime.questions.length, 16);
+  for (const question of runtime.questions) {
+    assert.equal(question.validationStatus, 'verified');
+    assert.equal(question.choices.length, 4);
+    assert.equal(new Set(question.choices).size, 4);
+    assert.ok(colorById.has(question.colorRef));
+    if (question.presentation.kind === 'prompt_color') {
+      assert.ok(colorById.has(question.presentation.promptColorRef));
+    } else {
+      assert.equal(question.presentation.choiceColorRefs.length, 4);
+      question.presentation.choiceColorRefs.forEach((ref) => assert.ok(colorById.has(ref)));
+      assert.equal(question.presentation.choiceColorRefs[question.correctIndex], question.colorRef);
+    }
+  }
+});
+
+test('Power TOEIC shared repository/workout/session engine runs a color question', () => {
+  const repository = new InMemoryQuestionBank({ questions: runtime.questions, skills: runtime.skills });
+  const recipe = createWorkoutRecipe({
+    mode: 'TRAINING',
+    totalCount: 2,
+    skillAllocations: [{ skillId: 'pc3.conventional.color_to_name', count: 2 }],
+    seed: 1
+  });
+  const ids = selectQuestionIds({ repository, recipe });
+  assert.equal(ids.length, 2);
+  const session = new QuizSession({ questionIds: ids, repository, now: () => 1000 });
+  const question = session.currentQuestion;
+  const attempt = session.submitAnswer(question.correctIndex);
+  assert.equal(attempt.correct, true);
+});

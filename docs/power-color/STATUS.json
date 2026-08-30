@@ -1,0 +1,37 @@
+{
+  "project": "power-color",
+  "phase": "grade3_conventional_colors",
+  "grade": 3,
+  "grade3": {
+    "conventional_color_master": {
+      "target": 64,
+      "ingested": 64,
+      "status": "complete"
+    },
+    "pccs_master": {
+      "status": "not_started"
+    },
+    "relation_scheme_master": {
+      "status": "not_started"
+    },
+    "runtime_questions": {
+      "verified": 16,
+      "pending": 0,
+      "needs_revision": 0,
+      "rejected": 0
+    },
+    "micro_skills": {
+      "implemented": 2,
+      "planned_minimum": 11
+    }
+  },
+  "engine_integration": {
+    "shared_power_toeic_session": true,
+    "shared_power_toeic_workout_builder": true,
+    "shared_power_toeic_question_bank_adapter": true,
+    "color_renderer": "implemented_beta"
+  },
+  "grade3_complete": false,
+  "color_database_complete": false,
+  "next": "Generate and independently QA the remaining Grade 3 conventional-color two-way question coverage, then start authoritative PCCS master work."
+}
