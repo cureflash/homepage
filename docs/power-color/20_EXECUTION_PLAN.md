@@ -23,7 +23,8 @@
   - [x] `name_to_color` checkpoint 0033-0040: 8 generated pending-first and independently verified; 0 pending; c3-025 was already covered by runtime and was not reused.
   - [x] `name_to_color` checkpoint 0041-0048: 8 generated pending-first and independently verified; 0 pending. Targets c3-031 through c3-038.
   - [x] `name_to_color` checkpoint 0049-0056: 8 generated pending-first and independently verified; 0 pending. Targets c3-039, 040, 041, 043, 044, 045, 046, 047; c3-042 was already covered by runtime and was removed after the cross-bank gate detected it.
-  - [ ] Continue `name_to_color` at question 0057 with c3-conventional-048 ビリジアン.
+  - [x] `name_to_color` checkpoint 0057-0064: 8 generated pending-first and independently verified; 0 pending. Targets c3-048 through c3-055; the c3-052 item excludes c3-017 from its choices because both share the same reference display value.
+  - [ ] Continue `name_to_color` at question 0065 with c3-conventional-056 ウルトラマリンブルー; skip c3-conventional-063 because runtime already covers it.
 - [ ] Independent QA for all conventional-color questions.
 - [ ] Promote verified authoring checkpoints into `grade3-runtime.json` only after consistency tests pass.
 - [ ] Conventional-color coverage gate: both directions cover the useful authoritative master state space, pending=0, duplicates/schema/references pass; do not force a monitor-indistinguishable item merely to claim 64/64.
