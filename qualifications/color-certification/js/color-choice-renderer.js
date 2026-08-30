@@ -96,6 +96,17 @@ export class ColorChoiceRenderer {
     return swatch;
   }
 
+  createHiddenChoiceName(colorRef) {
+    const color = this.color(colorRef);
+    const name = this.documentRef.createElement('span');
+    name.className = 'choice-swatch-name';
+    name.dataset.role = 'choice-color-name';
+    name.textContent = color.name;
+    name.style.color = readableTextColor(color.displayHex);
+    name.hidden = true;
+    return name;
+  }
+
   render(question) {
     this.promptEl.replaceChildren();
     this.choicesEl.replaceChildren();
@@ -132,6 +143,7 @@ export class ColorChoiceRenderer {
         swatch.className = 'choice-swatch';
         swatch.style.backgroundColor = this.colorHex(colorRef);
         swatch.setAttribute('aria-hidden', 'true');
+        swatch.append(this.createHiddenChoiceName(colorRef));
         button.append(swatch);
         button.setAttribute('aria-label', `${String.fromCharCode(65 + index)} の色見本`);
       }
@@ -147,12 +159,9 @@ export class ColorChoiceRenderer {
     reveals.forEach((reveal) => {
       const button = this.buttons[reveal.index];
       const swatch = button?.querySelector?.('.choice-swatch');
-      if (!swatch) return;
-      const name = this.documentRef.createElement('span');
-      name.className = 'choice-swatch-name';
-      name.textContent = reveal.name;
-      name.style.color = readableTextColor(reveal.displayHex);
-      swatch.append(name);
+      const name = swatch?.querySelector?.('[data-role="choice-color-name"]');
+      if (!swatch || !name) throw new Error(`Missing pre-rendered choice color name: ${reveal.index}`);
+      name.hidden = false;
       swatch.removeAttribute('aria-hidden');
       swatch.setAttribute('role', 'img');
       swatch.setAttribute('aria-label', reveal.reading ? `${reveal.name}（${reveal.reading}）` : reveal.name);
