@@ -21,13 +21,13 @@
       "rejected": 0
     },
     "authoring_questions": {
-      "generated": 63,
-      "checked": 63,
-      "verified": 63,
+      "generated": 71,
+      "checked": 71,
+      "verified": 71,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0,
-      "checkpoint": "pc3.conventional.color_to_name 0017-0071 + pc3.conventional.name_to_color 0017-0024"
+      "checkpoint": "pc3.conventional.color_to_name 0017-0071 + pc3.conventional.name_to_color 0017-0032"
     },
     "micro_skills": {
       "implemented": 2,
@@ -39,7 +39,7 @@
       "color_to_name_useful_state_space_complete": true,
       "color_to_name_deferred_master_refs": ["c3-conventional-052"],
       "color_to_name_deferred_reason": "c3-conventional-052 スカイブルー and c3-conventional-017 空色 share the current authoritative reference displayHex #8ED1E0, so a monitor-only color-to-name item is ambiguous and is excluded from useful state-space completion.",
-      "name_to_color_unique_master_colors_covered": 16,
+      "name_to_color_unique_master_colors_covered": 24,
       "name_to_color_target": 64
     }
   },
@@ -51,5 +51,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue pc3.conventional.name_to_color authoring at question 0025 with c3-conventional-012 萌黄, the first master color not covered by runtime plus the verified 0017-0024 authoring checkpoint. Generate pending first, independently QA against grade3-colors.json, keep verdicts individual, and preserve the shared-engine/runtime separation."
+  "next": "Continue pc3.conventional.name_to_color authoring at question 0033 with c3-conventional-022 群青色, the first master color not covered by runtime plus the verified 0017-0032 authoring checkpoints. Generate pending first, independently QA against grade3-colors.json and the current association reference, keep verdicts individual, and preserve the shared-engine/runtime separation."
 }
