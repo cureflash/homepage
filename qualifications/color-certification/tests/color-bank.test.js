@@ -12,6 +12,7 @@ const authoring0017 = JSON.parse(await readFile(new URL('../data/grade3-authorin
 const authoring0025 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0025-0032.json', import.meta.url), 'utf8'));
 const authoring0033 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0033-0040.json', import.meta.url), 'utf8'));
 const authoring0041 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0041-0048.json', import.meta.url), 'utf8'));
+const authoring0049 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0049-0056.json', import.meta.url), 'utf8'));
 const indexHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 const mainSource = await readFile(new URL('../js/main.js', import.meta.url), 'utf8');
 const rendererSource = await readFile(new URL('../js/color-choice-renderer.js', import.meta.url), 'utf8');
@@ -93,15 +94,19 @@ test('authoring checkpoint 0041-0048 is independently verified and internally co
   assertAuthoringCheckpoint(authoring0041, '0041', '0048');
 });
 
+test('authoring checkpoint 0049-0056 is independently verified and internally consistent', () => {
+  assertAuthoringCheckpoint(authoring0049, '0049', '0056');
+});
+
 test('verified color-to-name coverage does not reuse target master colors', () => {
   const runtimeTargets = runtime.questions
     .filter((question) => question.skillId === 'pc3.conventional.color_to_name')
     .map((question) => question.colorRef);
-  const authoringTargets = [...authoring0017.questions, ...authoring0025.questions, ...authoring0033.questions, ...authoring0041.questions]
+  const authoringTargets = [...authoring0017.questions, ...authoring0025.questions, ...authoring0033.questions, ...authoring0041.questions, ...authoring0049.questions]
     .map((question) => question.colorRef);
   const targetRefs = [...runtimeTargets, ...authoringTargets];
   assert.equal(new Set(targetRefs).size, targetRefs.length);
-  assert.equal(targetRefs.length, 40);
+  assert.equal(targetRefs.length, 48);
 });
 
 test('answer feedback re-shows the correct color for color-to-name questions', () => {
