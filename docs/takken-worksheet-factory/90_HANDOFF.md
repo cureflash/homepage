@@ -8,14 +8,15 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed `takken-concept-simultaneous-performance` from source unit `risk-simultaneous-performance` without modifying Phase 2/3 question content or validation state.
+Completed `takken-concept-risk-allocation` from source unit `risk-simultaneous-performance` without modifying Phase 2/3 question content or validation state.
 
-The simultaneous-performance knowledge model contains two verified atomic knowledge items based on Civil Code Article 533:
+The risk-allocation knowledge model contains three verified atomic knowledge items based on Civil Code Article 536:
 
-1. 双務契約の当事者の一方は、相手方が債務の履行を提供するまでは、自己の債務の履行を拒むことができる原則。
-2. 相手方の債務が弁済期にないときは、この同時履行の抗弁によって自己の履行を拒めない例外。
+1. 当事者双方の責めに帰することができない事由による履行不能では、債権者は反対給付の履行を拒むことができる。
+2. 債権者の責めに帰すべき事由による履行不能では、債権者は反対給付の履行を拒むことができない。
+3. その債権者帰責の履行不能で、債務者が自己の債務を免れたことにより利益を得たときは、その利益を債権者に償還しなければならない。
 
-Canonical `takken-q-47-001` directly tests only the first rule and is mapped only to `takken-k-simultaneous-performance-refusal-until-tender`. The not-due exception is retained as an explicit Phase 4.3 coverage deficit rather than being treated as covered by the broader question.
+Canonical `takken-q-47-002` directly tests only the first rule and is mapped only to `takken-k-risk-allocation-no-fault-refuse-counter-performance`. The creditor-fault rule and benefit-reimbursement rule remain explicit Phase 4.3 coverage deficits.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -26,26 +27,26 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 60/113 concepts modeled
-- Canonical knowledge items: 319
-- Existing verified questions mapped: 64
-- Explicit unmapped knowledge gaps: 238
+- Phase 4.2: active — 61/113 concepts modeled
+- Canonical knowledge items: 322
+- Existing verified questions mapped: 65
+- Explicit unmapped knowledge gaps: 240
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-risk-allocation` using source unit `risk-simultaneous-performance`.
+Continue Phase 4.2 at `takken-concept-sale-earnest` using source unit `sale-earnest`.
 
-Preserve all 319 knowledge items, sixty-four current mappings, and all two hundred thirty-eight explicit deficits. Existing verified `takken-q-47-002` may be mapped only to knowledge it directly tests. Do not start Phase 4.3 yet.
+Preserve all 322 knowledge items, sixty-five current mappings, and all two hundred forty explicit deficits. Existing verified `takken-q-48-001` and `takken-q-48-002` may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-Canonical unit 47 fact `u47-f1` directly supports the Civil Code Article 533 refusal-until-tender principle. Article 533's proviso for a counterparty obligation that is not yet due is a separate atomic rule supported directly by the Civil Code statute and intentionally has no fabricated sourceFactId.
+Canonical unit 47 fact `u47-f2` directly supports Civil Code Article 536(1)'s no-fault impossibility rule. Article 536(2)'s creditor-attributable impossibility rule and benefit-reimbursement rule are separate atomic rules supported directly by the Civil Code statute and intentionally have no fabricated sourceFactId.
 
-Existing `takken-q-47-001` asks only whether a party may refuse its own performance until the counterparty tenders performance. It does not directly test the not-due proviso, so only the first knowledge item is mapped.
+Existing `takken-q-47-002` asks only whether a creditor may refuse counter-performance when the obligation became impossible for reasons attributable to neither party. It does not directly test the creditor-fault or reimbursement rules, so only the first knowledge item is mapped.
 
-The simultaneous-performance knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, Civil Code statute sourcing, valid `u47-f1` provenance where present, and the expected two-item count. The question-knowledge map now contains 64 verified source-question mappings through `takken-q-47-001`.
+The risk-allocation knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, Civil Code statute sourcing, valid `u47-f2` provenance where present, and the expected three-item count. The question-knowledge map now contains 65 verified source-question mappings through `takken-q-47-002`.
 
 ## publication invariant
 
