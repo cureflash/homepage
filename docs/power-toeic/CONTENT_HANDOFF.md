@@ -20,7 +20,8 @@ Generated 100 new Part 5 candidates in four 25-question checkpoints; all remain 
 - `p5.vocab.phrasal_verb` 0076-0100: 25 questions; micro-skill completed at 100/100.
 - `p5.vocab.business_context` 0001-0075: 75 questions; micro-skill now 75/100.
 - Business-context answer positions: A/B/C/D = 19/19/19/18.
-- Exact duplicate stems within each new checkpoint: 0.
+- Exact duplicate stems across the new 100: 0.
+- SequenceMatcher similarity >= 0.94 across the new 100: 0; maximum approximately 0.656.
 - No intentional template-copy batches were used.
 - Full cross-bank semantic duplicate clearance remains outstanding.
 
