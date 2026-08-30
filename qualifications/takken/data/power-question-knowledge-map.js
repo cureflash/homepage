@@ -70,7 +70,9 @@
     { questionId: "takken-q-48-001", conceptId: "takken-concept-sale-earnest", knowledgeRefs: ["takken-k-sale-earnest-buyer-abandon", "takken-k-sale-earnest-before-counterparty-performance"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-48-002", conceptId: "takken-concept-sale-earnest", knowledgeRefs: ["takken-k-sale-earnest-seller-double-actual-tender"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-49-001", conceptId: "takken-concept-civil-nonconformity", knowledgeRefs: ["takken-k-civil-nonconformity-cure-right"], sourceQuestionValidationStatus: "verified" },
-    { questionId: "takken-q-49-002", conceptId: "takken-concept-civil-nonconformity", knowledgeRefs: ["takken-k-civil-nonconformity-price-reduction-demand-principle"], sourceQuestionValidationStatus: "verified" }
+    { questionId: "takken-q-49-002", conceptId: "takken-concept-civil-nonconformity", knowledgeRefs: ["takken-k-civil-nonconformity-price-reduction-demand-principle"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-50-001", conceptId: "takken-concept-lease-general", knowledgeRefs: ["takken-k-lease-general-lessor-use-profit", "takken-k-lease-general-lessee-rent", "takken-k-lease-general-lessee-return-at-end"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-50-002", conceptId: "takken-concept-lease-general", knowledgeRefs: ["takken-k-lease-general-duration-fifty-year-cap"], sourceQuestionValidationStatus: "verified" }
   ];
 
   const knownKnowledgeIds = new Set([
@@ -121,10 +123,11 @@
     "takken-k-simultaneous-performance-refusal-until-tender",
     "takken-k-risk-allocation-no-fault-refuse-counter-performance",
     "takken-k-sale-earnest-buyer-abandon", "takken-k-sale-earnest-seller-double-actual-tender", "takken-k-sale-earnest-before-counterparty-performance",
-    "takken-k-civil-nonconformity-cure-right", "takken-k-civil-nonconformity-price-reduction-demand-principle"
+    "takken-k-civil-nonconformity-cure-right", "takken-k-civil-nonconformity-price-reduction-demand-principle",
+    "takken-k-lease-general-lessor-use-profit", "takken-k-lease-general-lessee-rent", "takken-k-lease-general-lessee-return-at-end", "takken-k-lease-general-duration-fifty-year-cap"
   ]);
   const allowedConceptIds = new Set([
-    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document", "takken-concept-article35-vs-37", "takken-concept-eight-restrictions-scope", "takken-concept-cooling-off", "takken-concept-earnest-money-safeguards", "takken-concept-brokerage-fees", "takken-concept-supervision-dispositions", "takken-concept-declaration-arrival", "takken-concept-mistake", "takken-concept-fraud", "takken-concept-mental-reservation", "takken-concept-fictitious-declaration", "takken-concept-minor", "takken-concept-adult-ward", "takken-concept-agency", "takken-concept-apparent-agency", "takken-concept-acquisitive-prescription", "takken-concept-extinctive-prescription", "takken-concept-property-transfer-opposability", "takken-concept-co-ownership", "takken-concept-mortgage", "takken-concept-default-damages", "takken-concept-contract-cancellation", "takken-concept-simultaneous-performance", "takken-concept-risk-allocation", "takken-concept-sale-earnest", "takken-concept-civil-nonconformity"
+    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document", "takken-concept-article35-vs-37", "takken-concept-eight-restrictions-scope", "takken-concept-cooling-off", "takken-concept-earnest-money-safeguards", "takken-concept-brokerage-fees", "takken-concept-supervision-dispositions", "takken-concept-declaration-arrival", "takken-concept-mistake", "takken-concept-fraud", "takken-concept-mental-reservation", "takken-concept-fictitious-declaration", "takken-concept-minor", "takken-concept-adult-ward", "takken-concept-agency", "takken-concept-apparent-agency", "takken-concept-acquisitive-prescription", "takken-concept-extinctive-prescription", "takken-concept-property-transfer-opposability", "takken-concept-co-ownership", "takken-concept-mortgage", "takken-concept-default-damages", "takken-concept-contract-cancellation", "takken-concept-simultaneous-performance", "takken-concept-risk-allocation", "takken-concept-sale-earnest", "takken-concept-civil-nonconformity", "takken-concept-lease-general"
   ]);
   const questionIds = new Set();
 
@@ -138,7 +141,7 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 69) throw new Error(`Expected 69 mapped questions through civil-nonconformity, got ${mappings.length}`);
+  if (mappings.length !== 71) throw new Error(`Expected 71 mapped questions through lease-general, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
   if (!questionIds.has("takken-q-15-001")) throw new Error("Brokerage contract document source question mapping is missing");
@@ -177,6 +180,7 @@
   if (!questionIds.has("takken-q-47-002")) throw new Error("Risk-allocation source question mapping is missing");
   if (!questionIds.has("takken-q-48-001") || !questionIds.has("takken-q-48-002")) throw new Error("Sale-earnest source question mappings are missing");
   if (!questionIds.has("takken-q-49-001") || !questionIds.has("takken-q-49-002")) throw new Error("Civil-nonconformity source question mappings are missing");
+  if (!questionIds.has("takken-q-50-001") || !questionIds.has("takken-q-50-002")) throw new Error("Lease-general source question mappings are missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
