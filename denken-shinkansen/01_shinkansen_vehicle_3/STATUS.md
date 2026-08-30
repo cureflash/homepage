@@ -4,15 +4,14 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 18 / 38
-- current_status: `topic_19_binary_publication_pending`
-- last_completed_topic: `18 E7・W7系 北陸新幹線の電源条件`
-- active_topic: `19 N700S① SiC`
-- next_start: topic 19の生成済みPDF/PPTXをGitHubへ配置し、実在確認後にcatalog公開・19/38へ進める
+- exam_aligned_completed_topics: 19 / 38
+- current_status: `topic_19_pass`
+- last_completed_topic: `19 N700S① SiC`
+- active_topic: `20 N700S② 6極誘導電動機`
+- next_start: topic 20の制作前EXAM_ALIGNMENT。公式過去問を原則5件以上確認してsource Markdownへ記録する
 
 ## 新品質ゲート進捗
-- [x] 01〜18 — PASS
-- [ ] 19 N700S① SiC — EXAM_ALIGNMENT、本文、15問練習、独立再解答、Visual QAまで完了。repositoryへのバイナリ配置のみ未完了
+- [x] 01〜19 — PASS
 
 ## 19 EXAM_ALIGNMENT
 公式過去問5件:
@@ -24,34 +23,24 @@
 
 参照: 電気技術者試験センター公式過去問・解答、e-sysnet、電験三種まとめました。参照日2026-08-30。
 
-## 作成・改訂成果物
-repository:
-- `topics/19_n700s_sic/19_n700s_sic.md` — EXAM_ALIGNMENT、解説本文、例題、練習設計、独立QA、過去問再解答結果まで完成。
+## 19 成果物
+GitHub上で必須4成果物の実在を確認済み。
+- `topics/19_n700s_sic/19_n700s_sic.md`
+- `topics/19_n700s_sic/19_n700s_sic_explanation.pdf` — 2ページ
+- `topics/19_n700s_sic/19_n700s_sic_practice.pdf` — 15問、3ページ（基礎4 / 標準8 / 応用3、五肢択一15問）
+- `topics/19_n700s_sic/19_n700s_sic_images.pptx` — 6スライド
 
-run内で生成・Visual QA済みだがrepository未配置:
-- `19_n700s_sic_explanation.pdf` — 2ページ
-- `19_n700s_sic_practice.pdf` — 15問、4ページ（基礎4 / 標準8 / 応用3、五肢択一15問）
-- `19_n700s_sic_images.pptx` — 6スライド
-
-## 独立再解答
-教材本文だけで5件を再解答し、要求論点をすべて説明可能であることを確認。
-- R6上問16: Q/D電流経路と`τ=L/R`
-- R5上問10: IGBT単体の逆方向電流記述を誤りと判定
-- R5上問16: 還流区間・波形・ダイオードの役割を判定
-- R4下問16: 電流経路、`2 mH / 1 Ω = 0.002 s`
-- H29問10: サイリスタの逆方向電流記述を誤りと判定
-
-## 練習QA
-15/15独立再計算・再判定。代表値: `2 ms`, `400 W`, `120 W`, `520 W`, `99.48%`, `1.15 kW`, `99.54%`, 周波数3倍時の`P_sw` 3倍。
+## 独立再解答・QA
+教材だけで選定5件を独立再解答し5/5 PASS。練習15/15も独立再計算・再判定済み。代表値は `2 ms`, `400 W`, `120 W`, `520 W`, `99.48%`, `1.15 kW`, `99.54%`、周波数3倍時の`P_sw` 3倍。
 
 ## Visual QA
-解説PDF 2ページ、練習PDF 4ページ、PowerPoint 6スライドを160 dpiでレンダリング。文字化け・クリップ・重なりを確認し、CIDフォントで表示できなかった近似記号はASCIIへ修正した。
+解説PDF 2ページ、練習PDF 3ページ、PowerPoint 6スライドをレンダリングし、文字化け・クリップ・重なりなしを確認。
 
 ## QA判定
-19: `BINARY_PUBLICATION_PENDING`。教材内容はPASS相当だが、必須4成果物がGitHub上に実在していないため完成数18/38のまま。
+19: `PASS`。EXAM_ALIGNMENT、本文、15問練習、独立再解答、計算QA、Visual QA、4成果物のGitHub実在、Web catalog登録をすべて満たした。
 
 ## Web公開
-未公開。バイナリ3成果物のGitHub実在確認後のみcatalogへ追加する。
+`qualifications/denken-shinkansen/catalog.json` にtopic 19を登録済み。
 
 ## 次
-19の生成済みPDF/PPTXをrepositoryへ配置する。4成果物の実在確認後、catalog登録、STATUS/HANDOFFを19/38 PASSへ更新する。次テーマ20へは19の品質ゲート通過後に進む。
+20 `N700S② 6極誘導電動機` の制作前EXAM_ALIGNMENTから開始する。
