@@ -1,18 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 3250,
-  "verified_question_count": 3165,
+  "checked_question_count": 3350,
+  "verified_question_count": 3265,
   "needs_revision_count": 85,
   "rejected_question_count": 0,
   "pending_validation_count": 925,
-  "last_completed_batch": "2026-08-30-scheduled-087-indefinite-agreement-part2",
-  "last_completed_micro_skill": "p5.pron.indefinite_agreement",
+  "last_completed_batch": "2026-08-30-scheduled-088-article-choice-part2",
+  "last_completed_micro_skill": "p5.det.article_choice",
   "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
-  "next_batch": "p5.pron.indefinite_agreement",
-  "next_micro_skill": "p5.pron.indefinite_agreement",
-  "next_question_id": "p5_pron_indefinite_agreement_0051",
+  "next_batch": "p5.det.article_choice",
+  "next_micro_skill": "p5.det.article_choice",
+  "next_question_id": "p5_det_article_choice_0051",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-30T21:14:00+09:00"
+  "updated_at": "2026-08-30T22:05:00+09:00"
 }
