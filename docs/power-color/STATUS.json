@@ -20,9 +20,24 @@
       "needs_revision": 0,
       "rejected": 0
     },
+    "authoring_questions": {
+      "generated": 8,
+      "checked": 8,
+      "verified": 8,
+      "pending": 0,
+      "needs_revision": 0,
+      "rejected": 0,
+      "checkpoint": "pc3.conventional.color_to_name 0017-0024"
+    },
     "micro_skills": {
       "implemented": 2,
       "planned_minimum": 13
+    },
+    "conventional_coverage": {
+      "color_to_name_unique_master_colors_covered": 16,
+      "color_to_name_target": 64,
+      "name_to_color_unique_master_colors_covered": 8,
+      "name_to_color_target": 64
     }
   },
   "engine_integration": {
@@ -33,5 +48,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Generate and independently QA the remaining Grade 3 conventional-color two-way question coverage, then start authoritative PCCS master work."
+  "next": "Continue pc3.conventional.color_to_name from question 0025 using uncovered Grade 3 conventional colors; generate pending first, independently QA, then stage verified records. Runtime promotion remains a separate verified-only step."
 }

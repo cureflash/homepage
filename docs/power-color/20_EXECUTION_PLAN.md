@@ -9,8 +9,11 @@
   - `pc3.conventional.name_to_color`
 - [x] Put a small individually checked 16-question beta bank on the shared Power TOEIC engine.
 - [ ] Generate the remaining conventional-color questions.
+  - [x] `color_to_name` checkpoint 0017-0024: 8 generated and individually verified; 0 pending.
+  - [ ] Resume at `color_to_name` 0025.
 - [ ] Independent QA for all conventional-color questions.
-- [ ] Conventional-color coverage gate.
+- [ ] Promote verified authoring checkpoints into `grade3-runtime.json` only after consistency tests pass.
+- [ ] Conventional-color coverage gate: both directions cover 64/64 master colors, pending=0, duplicates/schema/references pass.
 
 ## Phase 2 — Grade 3 PCCS master
 - [ ] Confirm authoritative PCCS Grade 3 data/source.
