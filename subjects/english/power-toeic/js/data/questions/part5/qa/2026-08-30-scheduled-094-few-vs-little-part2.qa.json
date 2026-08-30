@@ -1,0 +1,18 @@
+{
+  "batch": "2026-08-30-scheduled-094-few-vs-little-part2",
+  "micro_skill": "p5.det.few_vs_little",
+  "source_batch": "subjects/english/power-toeic/js/data/questions/part5/determiners-quantity/few-vs-little/pending/batch-20260829-063-part2.json",
+  "method": "Reviewed each sentence and all four choices item by item for answer uniqueness, distractor validity, TOEIC-style naturalness, intended-skill alignment, explanation consistency, and local duplicate/template patterns. The persisted source co-locates keys with stems, so strict technical answer-blinding cannot be guaranteed in connector-only access; no item was approved without individual review.",
+  "checked_ids": ["p5_det_few_vs_little_0026","p5_det_few_vs_little_0027","p5_det_few_vs_little_0028","p5_det_few_vs_little_0029","p5_det_few_vs_little_0030","p5_det_few_vs_little_0031","p5_det_few_vs_little_0032","p5_det_few_vs_little_0033","p5_det_few_vs_little_0034","p5_det_few_vs_little_0035","p5_det_few_vs_little_0036","p5_det_few_vs_little_0037","p5_det_few_vs_little_0038","p5_det_few_vs_little_0039","p5_det_few_vs_little_0040","p5_det_few_vs_little_0041","p5_det_few_vs_little_0042","p5_det_few_vs_little_0043","p5_det_few_vs_little_0044","p5_det_few_vs_little_0045","p5_det_few_vs_little_0046","p5_det_few_vs_little_0047","p5_det_few_vs_little_0048","p5_det_few_vs_little_0049","p5_det_few_vs_little_0050"],
+  "verified_ids": ["p5_det_few_vs_little_0026","p5_det_few_vs_little_0027","p5_det_few_vs_little_0028","p5_det_few_vs_little_0029","p5_det_few_vs_little_0030","p5_det_few_vs_little_0031","p5_det_few_vs_little_0032","p5_det_few_vs_little_0033","p5_det_few_vs_little_0035","p5_det_few_vs_little_0036","p5_det_few_vs_little_0037","p5_det_few_vs_little_0038","p5_det_few_vs_little_0039","p5_det_few_vs_little_0040","p5_det_few_vs_little_0041","p5_det_few_vs_little_0042","p5_det_few_vs_little_0043","p5_det_few_vs_little_0044","p5_det_few_vs_little_0045","p5_det_few_vs_little_0046","p5_det_few_vs_little_0047","p5_det_few_vs_little_0048","p5_det_few_vs_little_0049"],
+  "approved_ids": ["p5_det_few_vs_little_0026","p5_det_few_vs_little_0027","p5_det_few_vs_little_0028","p5_det_few_vs_little_0029","p5_det_few_vs_little_0030","p5_det_few_vs_little_0031","p5_det_few_vs_little_0032","p5_det_few_vs_little_0033","p5_det_few_vs_little_0035","p5_det_few_vs_little_0036","p5_det_few_vs_little_0037","p5_det_few_vs_little_0038","p5_det_few_vs_little_0039","p5_det_few_vs_little_0040","p5_det_few_vs_little_0041","p5_det_few_vs_little_0042","p5_det_few_vs_little_0043","p5_det_few_vs_little_0044","p5_det_few_vs_little_0045","p5_det_few_vs_little_0046","p5_det_few_vs_little_0047","p5_det_few_vs_little_0048","p5_det_few_vs_little_0049"],
+  "checked": 25,
+  "verified": 23,
+  "needs_revision": [
+    {"id":"p5_det_few_vs_little_0034","reason":"The only countable option yields 'Only few customers ...', which is noticeably unnatural for a TOEIC-style sentence; 'Only a few customers ...' is the idiomatic target."},
+    {"id":"p5_det_few_vs_little_0050","reason":"The only countable option yields 'Only few applicants ...', which is noticeably unnatural for a TOEIC-style sentence; 'Only a few applicants ...' is the idiomatic target."}
+  ],
+  "rejected": [],
+  "counts": {"checked":25,"verified":23,"needs_revision":2,"rejected":0},
+  "notes": "23/25 verified. IDs 0034 and 0050 are quarantined for TOEIC-style naturalness: 'Only few + plural noun' should be revised to the idiomatic 'Only a few + plural noun'."
+}
