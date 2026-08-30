@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T09:21:06.955Z",
+  "generatedAt": "2026-08-30T10:18:27.624Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2450,
-    "runtimeQuestionCount": 2450,
+    "approvedCandidateCount": 2475,
+    "runtimeQuestionCount": 2475,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 100
+    "qaRecordCount": 101
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -113,6 +113,12 @@
       "label": "主語位置の語形",
       "categoryId": "parts-of-speech",
       "categoryLabel": "品詞・語形"
+    },
+    {
+      "id": "p5.pron.indefinite_agreement",
+      "label": "不定代名詞と一致",
+      "categoryId": "pronouns-relatives",
+      "categoryLabel": "代名詞・関係詞"
     },
     {
       "id": "p5.pron.possessive_forms",
@@ -25458,6 +25464,431 @@
       ],
       "correctIndex": 1,
       "explanation": "“reliability” is the noun form and functions as the subject of the clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0001",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the regional managers ____ responsible for submitting a monthly forecast.",
+      "choices": [
+        "is",
+        "are",
+        "were",
+        "have"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Each' is grammatically singular, so it takes the singular verb 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0002",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone in the accounting department ____ access to the new expense system.",
+      "choices": [
+        "have",
+        "has",
+        "having",
+        "are having"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Everyone' is grammatically singular, so it takes the singular verb 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0003",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the proposed schedules ____ enough time for equipment testing.",
+      "choices": [
+        "allow",
+        "have allowed",
+        "allows",
+        "are allowing"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Neither' is grammatically singular in this construction, so it takes the singular verb 'allows'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0004",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every one of the conference rooms ____ equipped with a video display.",
+      "choices": [
+        "are",
+        "have",
+        "were",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Every one' is grammatically singular, so it takes the singular verb 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0005",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each applicant ____ a confirmation email after completing the online form.",
+      "choices": [
+        "receives",
+        "receive",
+        "have received",
+        "receiving"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Each applicant' is singular, so the present-tense verb must be 'receives'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0006",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone in the warehouse ____ responsible for checking the temperature log each morning.",
+      "choices": [
+        "are",
+        "is",
+        "have been",
+        "being"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Someone' is grammatically singular, so it takes the singular verb 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0007",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the two suppliers ____ able to guarantee delivery before Friday.",
+      "choices": [
+        "are",
+        "have been",
+        "is",
+        "were"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Neither' is grammatically singular in this construction, so it takes the singular verb 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0008",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everybody attending the orientation ____ required to wear a visitor badge.",
+      "choices": [
+        "are",
+        "have",
+        "were",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Everybody' is grammatically singular, so it takes the singular verb 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0009",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the invoices ____ a unique reference number in the upper-right corner.",
+      "choices": [
+        "has",
+        "have",
+        "having",
+        "are having"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Each' is grammatically singular, so it takes the singular verb 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0010",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "No one on the project team ____ permission to change the final budget without approval.",
+      "choices": [
+        "have",
+        "has",
+        "are having",
+        "having"
+      ],
+      "correctIndex": 1,
+      "explanation": "'No one' is grammatically singular, so it takes the singular verb 'has'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0011",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of these printers ____ suitable for producing the shipping labels.",
+      "choices": [
+        "are",
+        "have been",
+        "is",
+        "were"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Either' is grammatically singular in this construction, so it takes the singular verb 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0012",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone who enters the laboratory ____ protective eyewear at all times.",
+      "choices": [
+        "wear",
+        "have worn",
+        "are wearing",
+        "wears"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Everyone' is grammatically singular, so the present-tense verb must be 'wears'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0013",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each participant ____ a copy of the agenda at the registration desk.",
+      "choices": [
+        "receives",
+        "receive",
+        "have received",
+        "receiving"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Each participant' is singular, so the present-tense verb must be 'receives'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0014",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Somebody from technical support ____ available until 9:00 p.m. tonight.",
+      "choices": [
+        "are",
+        "is",
+        "have",
+        "be"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Somebody' is grammatically singular, so it takes the singular verb 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0015",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the replacement parts ____ compatible with the older machine.",
+      "choices": [
+        "are",
+        "have been",
+        "is",
+        "were"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Neither' is grammatically singular in this construction, so it takes the singular verb 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0016",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Every one of the branch offices ____ its own emergency contact list.",
+      "choices": [
+        "maintain",
+        "have maintained",
+        "are maintaining",
+        "maintains"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Every one' is grammatically singular, so the present-tense verb must be 'maintains'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0017",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the training modules ____ with a short review quiz.",
+      "choices": [
+        "ends",
+        "end",
+        "have ended",
+        "ending"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Each' is grammatically singular, so the present-tense verb must be 'ends'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0018",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Nobody in the sales division ____ authorized to approve discounts above 20 percent.",
+      "choices": [
+        "are",
+        "is",
+        "have",
+        "being"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Nobody' is grammatically singular, so it takes the singular verb 'is'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0019",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Either of the proposed venues ____ enough space for the product exhibition.",
+      "choices": [
+        "provide",
+        "have provided",
+        "provides",
+        "are providing"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Either' is grammatically singular in this construction, so the present-tense verb must be 'provides'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0020",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everyone on the morning shift ____ the daily safety briefing before work begins.",
+      "choices": [
+        "attend",
+        "have attended",
+        "are attending",
+        "attends"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Everyone' is grammatically singular, so the present-tense verb must be 'attends'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0021",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each member of the audit committee ____ a confidentiality agreement before reviewing the files.",
+      "choices": [
+        "signs",
+        "sign",
+        "have signed",
+        "signing"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Each member' is singular, so the present-tense verb must be 'signs'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0022",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Someone at the front desk ____ the incoming courier packages each afternoon.",
+      "choices": [
+        "record",
+        "records",
+        "have recorded",
+        "are recording"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Someone' is grammatically singular, so the present-tense verb must be 'records'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0023",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Neither of the new policies ____ to temporary contractors.",
+      "choices": [
+        "apply",
+        "have applied",
+        "applies",
+        "are applying"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Neither' is grammatically singular in this construction, so the present-tense verb must be 'applies'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0024",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Everybody in the building ____ to use the west exit during the fire drill.",
+      "choices": [
+        "need",
+        "have needed",
+        "are needing",
+        "needs"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Everybody' is grammatically singular, so the present-tense verb must be 'needs'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pron_indefinite_agreement_0025",
+      "version": 1,
+      "skillId": "p5.pron.indefinite_agreement",
+      "categoryId": "pronouns-relatives",
+      "sentence": "Each of the service counters ____ a separate line for appointment holders.",
+      "choices": [
+        "has",
+        "have",
+        "having",
+        "are having"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Each' is grammatically singular, so it takes the singular verb 'has'.",
       "validationStatus": "verified",
       "betaCandidate": true
     },

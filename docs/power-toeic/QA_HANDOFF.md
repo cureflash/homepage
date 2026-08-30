@@ -2,8 +2,8 @@
 
 ## Current QA state
 
-- Checked: 3,200
-- Verified: 3,115
+- Checked: 3,225
+- Verified: 3,140
 - Needs revision: 85
 - Rejected: 0
 - Unchecked `pending_validation`: 925
@@ -14,10 +14,10 @@
 
 Reviewed the oldest 25 unchecked questions in strict order.
 
-- `p5.rel.where_vs_when` 0076-0100: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
+- `p5.pron.indefinite_agreement` 0001-0025: 25 checked / 25 verified / 0 needs_revision / 0 rejected.
 
-Each item was reviewed for relative-adverb syntax, unique answer, distractor validity, TOEIC-style naturalness, intended-skill alignment, explanation consistency, and answer-position/template pattern. The batch alternates place/time antecedents and rotates answer positions, but the individual items remain unambiguous. Full-bank semantic near-duplicate clearance remains outstanding.
+Each item was reviewed for indefinite-pronoun number agreement, unique answer, distractor validity, TOEIC-style naturalness, intended-skill alignment, explanation consistency, and answer-position/template pattern. All 25 uniquely require the singular verb form licensed by each/everyone/neither/either/someone/nobody/everybody-type subjects. Full-bank semantic near-duplicate clearance remains outstanding.
 
 ## Next QA
 
-Continue at `p5_pron_indefinite_agreement_0001`.
+Continue at `p5_pron_indefinite_agreement_0026`.
