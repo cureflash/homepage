@@ -8,21 +8,14 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed `takken-concept-contract-cancellation` from source unit `contract-cancellation` without modifying Phase 2/3 question content or validation state.
+Completed `takken-concept-simultaneous-performance` from source unit `risk-simultaneous-performance` without modifying Phase 2/3 question content or validation state.
 
-The contract-cancellation knowledge model contains nine verified atomic knowledge items based on Civil Code Articles 541 and 542:
+The simultaneous-performance knowledge model contains two verified atomic knowledge items based on Civil Code Article 533:
 
-1. 相当期間を定めた催告後、その期間内に履行がなければ解除できる原則。
-2. 催告期間経過時の不履行が契約・取引上の社会通念に照らして軽微なら催告解除できないこと。
-3. 債務全部が履行不能の場合の無催告解除。
-4. 債務全部の履行拒絶意思が明確な場合の無催告解除。
-5. 一部履行不能・一部履行拒絶で残存部分のみでは契約目的を達成できない場合の無催告による全部解除。
-6. 定期行為等で履行時期を経過した場合の無催告解除。
-7. 催告しても契約目的達成に足りる履行の見込みがないことが明らかな場合の無催告解除。
-8. 一部履行不能の場合の無催告による一部解除。
-9. 一部履行拒絶意思が明確な場合の無催告による一部解除。
+1. 双務契約の当事者の一方は、相手方が債務の履行を提供するまでは、自己の債務の履行を拒むことができる原則。
+2. 相手方の債務が弁済期にないときは、この同時履行の抗弁によって自己の履行を拒めない例外。
 
-Canonical `takken-q-46-001` directly tests only the first rule. Canonical `takken-q-46-002` directly tests only the third rule. The remaining seven knowledge items are therefore retained as explicit Phase 4.3 coverage deficits rather than being treated as covered by broader questions.
+Canonical `takken-q-47-001` directly tests only the first rule and is mapped only to `takken-k-simultaneous-performance-refusal-until-tender`. The not-due exception is retained as an explicit Phase 4.3 coverage deficit rather than being treated as covered by the broader question.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -33,28 +26,26 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 59/113 concepts modeled
-- Canonical knowledge items: 317
-- Existing verified questions mapped: 63
-- Explicit unmapped knowledge gaps: 237
+- Phase 4.2: active — 60/113 concepts modeled
+- Canonical knowledge items: 319
+- Existing verified questions mapped: 64
+- Explicit unmapped knowledge gaps: 238
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-simultaneous-performance` using source unit `risk-simultaneous-performance`.
+Continue Phase 4.2 at `takken-concept-risk-allocation` using source unit `risk-simultaneous-performance`.
 
-Preserve all 317 knowledge items, sixty-three current mappings, and all two hundred thirty-seven explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 319 knowledge items, sixty-four current mappings, and all two hundred thirty-eight explicit deficits. Existing verified `takken-q-47-002` may be mapped only to knowledge it directly tests. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-Canonical unit 46 fact `u46-f1` directly supports the Civil Code Article 541 demand-and-expiry principle. The Article 541 minor-breach proviso is a separate atomic rule supported directly by the Civil Code statute and is intentionally left without a fabricated core-fact reference.
+Canonical unit 47 fact `u47-f1` directly supports the Civil Code Article 533 refusal-until-tender principle. Article 533's proviso for a counterparty obligation that is not yet due is a separate atomic rule supported directly by the Civil Code statute and intentionally has no fabricated sourceFactId.
 
-Canonical unit 46 fact `u46-f2` directly supports the Article 542 total-impossibility no-demand case and notes that other statutory cases exist. The remaining Article 542 grounds are modeled directly from the statute and intentionally use no fabricated sourceFactId.
+Existing `takken-q-47-001` asks only whether a party may refuse its own performance until the counterparty tenders performance. It does not directly test the not-due proviso, so only the first knowledge item is mapped.
 
-Existing `takken-q-46-001` asks only the ordinary demand requirement and does not directly test the minor-breach bar. Existing `takken-q-46-002` asks only total impossibility and does not directly test the other Article 542 grounds. The question-knowledge map therefore adds exactly those two mappings and leaves seven deficits.
-
-The contract-cancellation knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, Civil Code statute sourcing, valid `u46-f1` / `u46-f2` provenance where present, and the expected nine-item count.
+The simultaneous-performance knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, Civil Code statute sourcing, valid `u47-f1` provenance where present, and the expected two-item count. The question-knowledge map now contains 64 verified source-question mappings through `takken-q-47-001`.
 
 ## publication invariant
 
