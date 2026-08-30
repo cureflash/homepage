@@ -4,15 +4,15 @@
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
   "generated_question_count": 4400,
-  "checked_question_count": 3750,
-  "pending_validation_count": 650,
-  "verified_question_count": 3660,
-  "needs_revision_count": 90,
+  "checked_question_count": 3850,
+  "pending_validation_count": 550,
+  "verified_question_count": 3759,
+  "needs_revision_count": 91,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun","p5.pos.adverb_modifies_verb","p5.pos.noun_in_noun_slot","p5.pos.adjective_after_linking_verb","p5.pos.adverb_modifies_adjective","p5.pos.participle_adjective_ed_ing","p5.pos.word_form_subject_position","p5.pos.word_form_object_position","p5.verb.subject_verb_agreement","p5.verb.present_vs_past","p5.verb.present_perfect_vs_past","p5.verb.active_vs_passive","p5.verb.modal_base_form","p5.verb.to_infinitive_pattern","p5.verb.gerund_pattern","p5.verb.causative_have_make_let","p5.verb.conditional_form","p5.verb.participle_clause","p5.conn.preposition_vs_conjunction","p5.conn.because_vs_because_of","p5.conn.despite_vs_although","p5.conn.during_vs_while","p5.conn.by_vs_until","p5.conn.for_vs_since","p5.conn.time_prepositions","p5.conn.logical_conjunction","p5.pron.subject_vs_object","p5.pron.possessive_forms","p5.pron.reflexive","p5.rel.who_vs_which","p5.rel.whose","p5.rel.where_vs_when","p5.pron.indefinite_agreement","p5.det.article_choice","p5.det.countable_number","p5.det.much_vs_many","p5.det.few_vs_little","p5.det.another_other_others","p5.vocab.verb_noun_collocation","p5.vocab.adjective_noun_collocation","p5.vocab.preposition_collocation","p5.vocab.phrasal_verb","p5.vocab.business_context","p5.vocab.confusing_words"
   ],
-  "current_batch": "2026-08-30-scheduled-098-another-other-others-part2",
+  "current_batch": "2026-08-30-scheduled-102-verb-noun-collocation-part2",
   "current_micro_skill": null,
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 0,
@@ -20,6 +20,6 @@
   "next_micro_skill": null,
   "generation_complete": true,
   "validation_complete": false,
-  "last_run_result": "Generation remained stopped at 4,400/4,400 questions and 44/44 micro-skills because generation_complete is true. Reviewed the oldest 100 unchecked items: p5.det.few_vs_little 0051-0100 (50) and p5.det.another_other_others 0001-0050 (50): 100 checked, 98 verified, 2 needs_revision, 0 rejected. p5_det_few_vs_little_0059 and p5_det_few_vs_little_0088 are quarantined because 'Only few + plural noun' is unnatural TOEIC-style English and should be 'Only a few + plural noun'. Cumulative QA is 3,750 checked, 3,660 verified, 90 needs_revision, 0 rejected; unchecked pending_validation is 650. Next QA p5_det_another_other_others_0051.",
-  "updated_at": "2026-08-30T18:20:00Z"
+  "last_run_result": "Generation remained stopped at 4,400/4,400 questions and 44/44 micro-skills because generation_complete is true. Reviewed the oldest 100 unchecked items: p5.det.another_other_others 0051-0100 (50) and p5.vocab.verb_noun_collocation 0001-0050 (50): 100 checked, 99 verified, 1 needs_revision, 0 rejected. p5_vocab_verb_noun_collocation_0020 is quarantined because both 'refuse coverage' and keyed 'deny coverage' are natural in the supplied insurance context, so the answer is not unique. Cumulative QA is 3,850 checked, 3,759 verified, 91 needs_revision, 0 rejected; unchecked pending_validation is 550. Next QA p5_vocab_verb_noun_collocation_0051.",
+  "updated_at": "2026-08-30T19:21:35Z"
 }
