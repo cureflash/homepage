@@ -8,6 +8,18 @@
     "relation_scheme_master": {"status": "not_started"},
     "runtime_questions": {"verified": 16, "pending": 0, "needs_revision": 0, "rejected": 0},
     "authoring_questions": {"generated": 111, "checked": 111, "verified": 111, "pending": 0, "needs_revision": 0, "rejected": 0, "checkpoint": "pc3.conventional.color_to_name 0017-0071 + pc3.conventional.name_to_color 0017-0072"},
+    "conventional_corpus_qa": {
+      "status": "complete",
+      "questions_checked": 127,
+      "verified": 127,
+      "needs_revision": 0,
+      "rejected": 0,
+      "pending": 0,
+      "gate_test": "qualifications/color-certification/tests/conventional-corpus-gate.test.js",
+      "workflow_run": 33342816917,
+      "workflow_conclusion": "success",
+      "source_rechecked_on": "2026-08-31"
+    },
     "micro_skills": {"implemented": 2, "planned_minimum": 13},
     "conventional_coverage": {
       "color_to_name_unique_master_colors_covered": 63,
@@ -17,11 +29,12 @@
       "color_to_name_deferred_reason": "c3-conventional-052 スカイブルー and c3-conventional-017 空色 share the current authoritative reference displayHex #8ED1E0, so a monitor-only color-to-name item is ambiguous and is excluded from useful state-space completion.",
       "name_to_color_unique_master_colors_covered": 64,
       "name_to_color_target": 64,
-      "name_to_color_state_space_complete": true
+      "name_to_color_state_space_complete": true,
+      "consistency_gate_passed": true
     }
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "implemented_beta"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Run the full independent consistency QA for all Grade 3 conventional-color runtime plus authoring questions. Confirm schema, references, exact and near duplicates, answer-position balance, cross-bank target uniqueness, pending=0, and the documented color_to_name c3-conventional-052 display ambiguity. Only after that gate passes, promote verified conventional-color authoring records into grade3-runtime.json; do not start PCCS before the conventional-color gate is complete."
+  "next": "Promote the 111 verified conventional-color authoring questions into qualifications/color-certification/data/grade3-runtime.json, preserving the existing 16 verified runtime records and shared-engine schema. Re-run the corpus/runtime/engine tests after promotion and require runtime conventional coverage color_to_name=63 useful states, name_to_color=64 states, pending=0. Do not start PCCS until promotion and post-promotion tests pass."
 }
