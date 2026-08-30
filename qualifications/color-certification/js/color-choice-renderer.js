@@ -53,6 +53,22 @@ export function getChoiceRevealModels(question, colors) {
   }));
 }
 
+export function getPromptChoiceSwatchModels(question, colors) {
+  if (question?.presentation?.kind !== 'prompt_color') return Object.freeze([]);
+  const byName = new Map([...colors.values()].map((color) => [color.name, color]));
+  return Object.freeze(question.choices.map((choice, index) => {
+    const color = byName.get(choice);
+    if (!color) throw new Error(`Unknown prompt choice color name: ${choice}`);
+    return Object.freeze({
+      index,
+      colorRef: color.id,
+      name: color.name,
+      reading: color.reading,
+      displayHex: color.displayHex
+    });
+  }));
+}
+
 export function readableTextColor(hex) {
   const match = /^#([0-9a-f]{6})$/i.exec(hex ?? '');
   if (!match) return '#111111';
@@ -107,6 +123,19 @@ export class ColorChoiceRenderer {
     return name;
   }
 
+  createHiddenPromptChoiceSwatch(choiceName) {
+    const byName = new Map([...this.colors.values()].map((color) => [color.name, color]));
+    const color = byName.get(choiceName);
+    if (!color) throw new Error(`Unknown prompt choice color name: ${choiceName}`);
+    const swatch = this.documentRef.createElement('span');
+    swatch.className = 'choice-name-swatch';
+    swatch.dataset.role = 'choice-name-swatch';
+    swatch.style.backgroundColor = color.displayHex;
+    swatch.hidden = true;
+    swatch.setAttribute('aria-hidden', 'true');
+    return swatch;
+  }
+
   render(question) {
     this.promptEl.replaceChildren();
     this.choicesEl.replaceChildren();
@@ -135,7 +164,15 @@ export class ColorChoiceRenderer {
       label.textContent = question.presentation?.kind === 'choice_colors'
         ? String.fromCharCode(65 + index)
         : `${String.fromCharCode(65 + index)}. ${choice}`;
-      button.append(label);
+
+      if (question.presentation?.kind === 'prompt_color') {
+        const row = this.documentRef.createElement('span');
+        row.className = 'choice-text-row';
+        row.append(label, this.createHiddenPromptChoiceSwatch(choice));
+        button.append(row);
+      } else {
+        button.append(label);
+      }
 
       if (question.presentation?.kind === 'choice_colors') {
         const colorRef = question.presentation.choiceColorRefs[index];
@@ -169,6 +206,19 @@ export class ColorChoiceRenderer {
     });
   }
 
+  revealPromptChoiceSwatches(question) {
+    const reveals = getPromptChoiceSwatchModels(question, this.colors);
+    reveals.forEach((reveal) => {
+      const button = this.buttons[reveal.index];
+      const swatch = button?.querySelector?.('[data-role="choice-name-swatch"]');
+      if (!swatch) throw new Error(`Missing pre-rendered prompt choice swatch: ${reveal.index}`);
+      swatch.hidden = false;
+      swatch.removeAttribute('aria-hidden');
+      swatch.setAttribute('role', 'img');
+      swatch.setAttribute('aria-label', reveal.reading ? `${reveal.name}（${reveal.reading}）の色見本` : `${reveal.name}の色見本`);
+    });
+  }
+
   showResult({ question, selectedIndex, correctIndex }) {
     this.buttons.forEach((button, index) => {
       button.disabled = true;
@@ -177,6 +227,7 @@ export class ColorChoiceRenderer {
     });
 
     if (question?.presentation?.kind === 'choice_colors') this.revealChoiceNames(question);
+    if (question?.presentation?.kind === 'prompt_color') this.revealPromptChoiceSwatches(question);
 
     const feedback = getAnswerFeedbackModel(question, this.colors);
     this.explanationEl.replaceChildren();

@@ -4,7 +4,7 @@ import test from 'node:test';
 import { InMemoryQuestionBank } from '../../../subjects/english/power-toeic/js/data/question-bank-adapter.js';
 import { QuizSession } from '../../../subjects/english/power-toeic/js/core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/english/power-toeic/js/core/workout-builder.js';
-import { getAnswerFeedbackModel, getChoiceRevealModels, readableTextColor } from '../js/color-choice-renderer.js';
+import { getAnswerFeedbackModel, getChoiceRevealModels, getPromptChoiceSwatchModels, readableTextColor } from '../js/color-choice-renderer.js';
 
 const colors = JSON.parse(await readFile(new URL('../data/grade3-colors.json', import.meta.url), 'utf8'));
 const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
@@ -22,6 +22,7 @@ test('Grade 3 conventional-color master contains 64 stable records', () => {
 
 test('runtime bank exposes verified questions only and all color refs resolve', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
+  const colorByName = new Map(colors.colors.map((color) => [color.name, color]));
   assert.equal(runtime.questions.length, 16);
   assert.equal(new Set(runtime.questions.map((question) => question.id)).size, runtime.questions.length);
   for (const question of runtime.questions) {
@@ -33,6 +34,7 @@ test('runtime bank exposes verified questions only and all color refs resolve', 
     if (question.presentation.kind === 'prompt_color') {
       assert.equal(question.presentation.promptColorRef, question.colorRef);
       assert.equal(question.choices[question.correctIndex], target.name);
+      question.choices.forEach((choice) => assert.ok(colorByName.has(choice), `Unknown conventional color choice: ${choice}`));
     } else {
       assert.equal(question.presentation.choiceColorRefs.length, 4);
       question.presentation.choiceColorRefs.forEach((ref) => assert.ok(colorById.has(ref)));
@@ -78,6 +80,21 @@ test('answer feedback re-shows the correct color for color-to-name questions', (
   assert.match(feedback.title, /^正解：/);
 });
 
+test('color-to-name feedback maps every text choice to its color card', () => {
+  const colorById = new Map(colors.colors.map((color) => [color.id, color]));
+  const colorByName = new Map(colors.colors.map((color) => [color.name, color]));
+  const question = runtime.questions.find((entry) => entry.presentation.kind === 'prompt_color');
+  const reveals = getPromptChoiceSwatchModels(question, colorById);
+  assert.equal(reveals.length, 4);
+  reveals.forEach((reveal, index) => {
+    const expected = colorByName.get(question.choices[index]);
+    assert.equal(reveal.index, index);
+    assert.equal(reveal.colorRef, expected.id);
+    assert.equal(reveal.name, expected.name);
+    assert.equal(reveal.displayHex, expected.displayHex);
+  });
+});
+
 test('answer feedback names the correct color for name-to-color questions', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
   const question = runtime.questions.find((entry) => entry.presentation.kind === 'choice_colors');
@@ -105,15 +122,16 @@ test('revealed swatch labels choose readable dark/light text', () => {
   assert.equal(readableTextColor('#134A63'), '#ffffff');
 });
 
-test('choice color names are pre-rendered hidden and then revealed', () => {
+test('choice color names and color-to-name cards are pre-rendered hidden and then revealed', () => {
   assert.match(rendererSource, /name\.dataset\.role = 'choice-color-name'/);
-  assert.match(rendererSource, /name\.hidden = true/);
-  assert.match(rendererSource, /name\.hidden = false/);
-  assert.match(rendererSource, /Missing pre-rendered choice color name/);
+  assert.match(rendererSource, /swatch\.dataset\.role = 'choice-name-swatch'/);
+  assert.match(rendererSource, /swatch\.hidden = true/);
+  assert.match(rendererSource, /swatch\.hidden = false/);
+  assert.match(rendererSource, /revealPromptChoiceSwatches/);
 });
 
 test('browser-facing Power Color assets use the same cache-busting version', () => {
-  const version = '20260830-choice-label-v2';
+  const version = '20260830-color-name-swatches-v3';
   assert.match(indexHtml, new RegExp(`styles\\.css\\?v=${version}`));
   assert.match(indexHtml, new RegExp(`js/main\\.js\\?v=${version}`));
   assert.match(mainSource, new RegExp(`color-choice-renderer\\.js\\?v=${version}`));
