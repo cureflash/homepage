@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T20:22:24.894Z",
+  "generatedAt": "2026-08-30T21:19:56.322Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 3194,
-    "runtimeQuestionCount": 3193,
+    "approvedCandidateCount": 3293,
+    "runtimeQuestionCount": 3292,
     "quarantinedNearDuplicateCount": 1,
-    "qaRecordCount": 130
+    "qaRecordCount": 134
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -219,6 +219,12 @@
     {
       "id": "p5.vocab.adjective_noun_collocation",
       "label": "形容詞＋名詞コロケーション",
+      "categoryId": "vocabulary-usage",
+      "categoryLabel": "語彙・語法"
+    },
+    {
+      "id": "p5.vocab.preposition_collocation",
+      "label": "前置詞コロケーション",
       "categoryId": "vocabulary-usage",
       "categoryLabel": "語彙・語法"
     },
@@ -52825,6 +52831,1689 @@
       ],
       "correctIndex": 0,
       "explanation": "The natural adjective-noun collocation is 'adequate funding'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0051",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The regional office introduced a ____ schedule to accommodate employees during the renovation.",
+      "choices": [
+        "flexible",
+        "flexibility",
+        "flexibly",
+        "flex"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'flexible schedule'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0052",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The audit revealed a ____ discrepancy in the inventory records.",
+      "choices": [
+        "significance",
+        "significant",
+        "significantly",
+        "signify"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'significant discrepancy'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0053",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The maintenance team followed ____ procedures when handling the chemical spill.",
+      "choices": [
+        "standardize",
+        "standardly",
+        "standard",
+        "standardization"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'standard procedures'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0054",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board requested a ____ explanation for the unexpected increase in operating costs.",
+      "choices": [
+        "detail",
+        "detailing",
+        "detailedly",
+        "detailed"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'detailed explanation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0055",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new branch requires ____ equipment to process international payments securely.",
+      "choices": [
+        "specialized",
+        "specialist",
+        "specially",
+        "specialize"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'specialized equipment'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0056",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The retailer reported ____ demand for the limited-edition product during its first week.",
+      "choices": [
+        "strength",
+        "strong",
+        "strongly",
+        "strengthen"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'strong demand'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0057",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Applicants with ____ experience in contract negotiation will receive preference.",
+      "choices": [
+        "relevance",
+        "relevantly",
+        "relevant",
+        "relate"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'relevant experience'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0058",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The property manager arranged ____ access to the building for emergency repair crews.",
+      "choices": [
+        "temporarily",
+        "temporariness",
+        "temporize",
+        "temporary"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'temporary access'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0059",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The research team obtained ____ results from the second round of testing.",
+      "choices": [
+        "consistent",
+        "consistency",
+        "consistently",
+        "consist"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'consistent results'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0060",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The insurer requires ____ documentation before processing claims above the stated limit.",
+      "choices": [
+        "completion",
+        "complete",
+        "completely",
+        "completeable"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'complete documentation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0061",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The marketing director approved a ____ campaign for the product launch.",
+      "choices": [
+        "nation",
+        "nationally",
+        "national",
+        "nationalize"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'national campaign'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0062",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company has established a ____ partnership with a local logistics provider.",
+      "choices": [
+        "strategy",
+        "strategically",
+        "strategist",
+        "strategic"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'strategic partnership'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0063",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All visitors must wear ____ identification while inside the research facility.",
+      "choices": [
+        "visible",
+        "visibility",
+        "visibly",
+        "vision"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'visible identification'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0064",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised policy gives managers ____ authority to approve routine purchases.",
+      "choices": [
+        "limitation",
+        "limited",
+        "limitably",
+        "limit"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'limited authority'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0065",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The survey showed ____ interest in the company's new subscription service.",
+      "choices": [
+        "grow",
+        "growth",
+        "growing",
+        "grownly"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'growing interest'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0066",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The procurement team is looking for a supplier with ____ capacity during peak months.",
+      "choices": [
+        "addition",
+        "additionally",
+        "additive",
+        "additional"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'additional capacity'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0067",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The conference organizer provided ____ instructions for exhibitors arriving before opening day.",
+      "choices": [
+        "specific",
+        "specification",
+        "specifically",
+        "specify"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'specific instructions'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0068",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The merger is expected to create ____ opportunities for employees in both companies.",
+      "choices": [
+        "breadth",
+        "broader",
+        "broadly",
+        "broaden"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'broader opportunities'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0069",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The laboratory keeps ____ records of every equipment inspection.",
+      "choices": [
+        "detail",
+        "detailing",
+        "detailed",
+        "detailingly"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'detailed records'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0070",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales team achieved ____ growth in the online channel during the second quarter.",
+      "choices": [
+        "steadiness",
+        "steadily",
+        "steadying",
+        "steady"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'steady growth'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0071",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The bank introduced ____ measures to reduce unauthorized account access.",
+      "choices": [
+        "stringent",
+        "stringency",
+        "stringently",
+        "string"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'stringent measures'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0072",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The committee reached a ____ agreement after three rounds of negotiations.",
+      "choices": [
+        "mutually",
+        "mutual",
+        "mutuality",
+        "mutualize"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'mutual agreement'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0073",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company is seeking ____ candidates for its overseas management program.",
+      "choices": [
+        "qualification",
+        "qualify",
+        "qualified",
+        "qualifyingly"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'qualified candidates'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0074",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The agency issued a ____ warning about fraudulent invoices sent to small businesses.",
+      "choices": [
+        "writer",
+        "writing",
+        "write",
+        "written"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'written warning'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0075",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The service center offers ____ support for customers who cannot visit during business hours.",
+      "choices": [
+        "remote",
+        "remotely",
+        "remoteness",
+        "remove"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'remote support'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0076",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance team prepared a ____ forecast before presenting the expansion plan to investors.",
+      "choices": [
+        "realistic",
+        "reality",
+        "realistically",
+        "realize"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'realistic forecast'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0077",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The hotel received ____ feedback from guests after renovating its conference rooms.",
+      "choices": [
+        "favor",
+        "favorable",
+        "favorably",
+        "favorite"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'favorable feedback'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0078",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier agreed to provide ____ documentation for every shipment of medical equipment.",
+      "choices": [
+        "comprehend",
+        "comprehension",
+        "comprehensive",
+        "comprehensively"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'comprehensive documentation'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0079",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The factory introduced new controls to reduce ____ waste during the packaging process.",
+      "choices": [
+        "excessiveness",
+        "exceed",
+        "excessively",
+        "excessive"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'excessive waste'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0080",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board requested an ____ assessment of the merger proposal before voting on it.",
+      "choices": [
+        "independent",
+        "independence",
+        "independently",
+        "depend"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'independent assessment'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0082",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The project manager set ____ deadlines for each phase of the software migration.",
+      "choices": [
+        "attain",
+        "attainment",
+        "attainable",
+        "attainably"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'attainable deadlines'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0083",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The museum will conduct a ____ review of its emergency evacuation procedures next month.",
+      "choices": [
+        "thoroughness",
+        "thoroughly",
+        "through",
+        "thorough"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'thorough review'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0084",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consultant identified a ____ opportunity to reduce shipping costs without changing carriers.",
+      "choices": [
+        "significant",
+        "significance",
+        "significantly",
+        "signify"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'significant opportunity'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0085",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The restaurant maintains ____ records of food temperatures for all refrigerated storage areas.",
+      "choices": [
+        "accuracy",
+        "accurate",
+        "accurately",
+        "accrue"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'accurate records'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0086",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The bank introduced ____ measures to protect customers from unauthorized account access.",
+      "choices": [
+        "stringency",
+        "stringently",
+        "strengthen",
+        "stringent"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'stringent measures'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0087",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The design team needs a more ____ estimate of material costs before finalizing the budget.",
+      "choices": [
+        "precision",
+        "precisely",
+        "precise",
+        "preciseness"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'precise estimate'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0088",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company expects ____ growth in online orders during the holiday season.",
+      "choices": [
+        "steady",
+        "steadiness",
+        "steadily",
+        "stead"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'steady growth'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0089",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The laboratory follows ____ guidelines when storing samples that require refrigeration.",
+      "choices": [
+        "strictness",
+        "strict",
+        "strictly",
+        "restrict"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'strict guidelines'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0090",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales director asked for ____ evidence that the new pricing strategy had improved retention.",
+      "choices": [
+        "convince",
+        "convincingly",
+        "convincing",
+        "conviction"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'convincing evidence'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0091",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The property manager scheduled ____ inspections after several tenants reported water damage.",
+      "choices": [
+        "regularity",
+        "regularly",
+        "regulate",
+        "regular"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'regular inspections'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0092",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The retailer has seen ____ interest in its subscription service since the loyalty program launched.",
+      "choices": [
+        "considerable",
+        "consideration",
+        "considerably",
+        "consider"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'considerable interest'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0093",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The legal department requested ____ information about the vendor's data-handling practices.",
+      "choices": [
+        "addition",
+        "additional",
+        "additionally",
+        "add"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'additional information'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0094",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer announced ____ changes to the warranty policy after reviewing customer complaints.",
+      "choices": [
+        "substance",
+        "substantially",
+        "substantial",
+        "substantiate"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'substantial changes'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0095",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The training program gives new supervisors ____ experience in resolving workplace conflicts.",
+      "choices": [
+        "practice",
+        "practically",
+        "practiced",
+        "practical"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'practical experience'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0096",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The committee reached a ____ decision after reviewing all three bids.",
+      "choices": [
+        "unanimous",
+        "unanimity",
+        "unanimously",
+        "unify"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'unanimous decision'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0097",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse manager reported ____ damage to several cartons after the delivery truck arrived.",
+      "choices": [
+        "extent",
+        "extensive",
+        "extensively",
+        "extend"
+      ],
+      "correctIndex": 1,
+      "explanation": "The natural adjective-noun collocation is 'extensive damage'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0098",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The software update includes ____ improvements to the search and reporting functions.",
+      "choices": [
+        "notice",
+        "noticeably",
+        "noticeable",
+        "notification"
+      ],
+      "correctIndex": 2,
+      "explanation": "The natural adjective-noun collocation is 'noticeable improvements'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0099",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The insurer requires ____ proof of ownership before processing claims for high-value equipment.",
+      "choices": [
+        "document",
+        "documentation",
+        "documentarily",
+        "documentary"
+      ],
+      "correctIndex": 3,
+      "explanation": "The natural adjective-noun collocation is 'documentary proof'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_adjective_noun_collocation_0100",
+      "version": 1,
+      "skillId": "p5.vocab.adjective_noun_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The marketing team developed a ____ message for the product launch across all regional channels.",
+      "choices": [
+        "consistent",
+        "consistency",
+        "consistently",
+        "consist"
+      ],
+      "correctIndex": 0,
+      "explanation": "The natural adjective-noun collocation is 'consistent message'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0001",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The facilities manager is responsible ____ coordinating the office relocation scheduled for next month.",
+      "choices": [
+        "for",
+        "in",
+        "from",
+        "with"
+      ],
+      "correctIndex": 0,
+      "explanation": "The fixed collocation is 'responsible for'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0002",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All contractors must comply ____ the site's updated safety requirements before beginning work.",
+      "choices": [
+        "on",
+        "with",
+        "by",
+        "in"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'comply' takes the preposition 'with'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0003",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Only authorized staff members have access ____ the confidential payroll records.",
+      "choices": [
+        "at",
+        "with",
+        "to",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "The fixed expression is 'have access to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0004",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees who complete one year of service become eligible ____ the company's tuition assistance program.",
+      "choices": [
+        "in",
+        "from",
+        "with",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "The adjective 'eligible' takes the preposition 'for'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0005",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Several clients are interested ____ attending the product demonstration next Thursday.",
+      "choices": [
+        "in",
+        "at",
+        "for",
+        "of"
+      ],
+      "correctIndex": 0,
+      "explanation": "The adjective 'interested' takes the preposition 'in'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0006",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please make sure all supervisors are aware ____ the revised overtime approval procedure.",
+      "choices": [
+        "by",
+        "of",
+        "in",
+        "for"
+      ],
+      "correctIndex": 1,
+      "explanation": "The adjective 'aware' takes the preposition 'of'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0007",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new technician is already familiar ____ the diagnostic software used in our service centers.",
+      "choices": [
+        "in",
+        "from",
+        "with",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "The adjective 'familiar' normally takes 'with' for knowledge of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0008",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "This printer is capable ____ producing more than fifty color pages per minute.",
+      "choices": [
+        "for",
+        "on",
+        "at",
+        "of"
+      ],
+      "correctIndex": 3,
+      "explanation": "The adjective 'capable' takes the preposition 'of'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0009",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The final delivery date will depend ____ how quickly the supplier can obtain the replacement parts.",
+      "choices": [
+        "on",
+        "from",
+        "with",
+        "by"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'depend' takes the preposition 'on'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0010",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Candidates should apply ____ the position through the company's online recruitment portal.",
+      "choices": [
+        "at",
+        "for",
+        "of",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'apply' takes 'for' when referring to a job or position.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0011",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "More than eighty employees agreed to participate ____ the annual workplace safety survey.",
+      "choices": [
+        "for",
+        "on",
+        "in",
+        "from"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'participate' takes the preposition 'in'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0012",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consulting firm specializes ____ helping small manufacturers reduce energy costs.",
+      "choices": [
+        "by",
+        "to",
+        "with",
+        "in"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'specialize' takes the preposition 'in'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0013",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "For details about reimbursement limits, please refer ____ the travel policy on the company intranet.",
+      "choices": [
+        "to",
+        "from",
+        "by",
+        "with"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'refer' takes the preposition 'to' in this meaning.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0014",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The training program consists ____ three online modules and a final in-person workshop.",
+      "choices": [
+        "at",
+        "of",
+        "for",
+        "in"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'consist' takes the preposition 'of'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0015",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Improved inventory tracking should contribute ____ fewer shipping errors during the holiday season.",
+      "choices": [
+        "on",
+        "with",
+        "to",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'contribute' takes the preposition 'to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0016",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Customer-service agents are expected to respond ____ all written complaints within two business days.",
+      "choices": [
+        "with",
+        "by",
+        "from",
+        "to"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'respond' takes the preposition 'to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0017",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board did not approve ____ the proposal to close the regional warehouse.",
+      "choices": [
+        "of",
+        "in",
+        "from",
+        "with"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'approve' takes 'of' when it means to regard something favorably.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0018",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Several tenants objected ____ the proposed increase in parking fees.",
+      "choices": [
+        "by",
+        "to",
+        "with",
+        "for"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'object' takes the preposition 'to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0019",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Tomorrow's meeting will focus ____ strategies for improving customer retention.",
+      "choices": [
+        "in",
+        "from",
+        "on",
+        "by"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'focus' takes the preposition 'on'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0020",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "New employees can benefit ____ the mentoring program during their first six months.",
+      "choices": [
+        "for",
+        "on",
+        "at",
+        "from"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'benefit' takes the preposition 'from'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0021",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales team succeeded ____ securing a three-year contract with the hospital network.",
+      "choices": [
+        "in",
+        "at",
+        "for",
+        "of"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'succeed' takes the preposition 'in' before a gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0022",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The maintenance costs associated ____ older equipment have increased significantly this year.",
+      "choices": [
+        "by",
+        "with",
+        "to",
+        "in"
+      ],
+      "correctIndex": 1,
+      "explanation": "The adjective/participle 'associated' takes the preposition 'with'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0023",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The updated accounting software is fully compatible ____ the company's existing database system.",
+      "choices": [
+        "for",
+        "on",
+        "with",
+        "by"
+      ],
+      "correctIndex": 2,
+      "explanation": "The adjective 'compatible' takes the preposition 'with'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0024",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised budget was based ____ the latest sales forecast and supplier quotations.",
+      "choices": [
+        "to",
+        "at",
+        "with",
+        "on"
+      ],
+      "correctIndex": 3,
+      "explanation": "The fixed expression is 'based on'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0025",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All reservations are subject ____ availability at the time the booking is confirmed.",
+      "choices": [
+        "to",
+        "from",
+        "by",
+        "with"
+      ],
+      "correctIndex": 0,
+      "explanation": "The fixed expression is 'subject to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0026",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised forecast must account ____ recent changes in fuel prices and shipping fees.",
+      "choices": [
+        "to",
+        "for",
+        "with",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'account' takes the preposition 'for' when explaining or allowing for something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0027",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The hotel manager apologized ____ the delay in preparing the conference rooms.",
+      "choices": [
+        "with",
+        "at",
+        "for",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'apologize' takes the preposition 'for' before the reason for an apology.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0028",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The purchasing director insisted ____ reviewing all bids before a supplier was selected.",
+      "choices": [
+        "for",
+        "to",
+        "with",
+        "on"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'insist' takes the preposition 'on' before a noun or gerund.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0029",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The regional market has recovered ____ last year's temporary decline in consumer spending.",
+      "choices": [
+        "from",
+        "at",
+        "on",
+        "with"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'recover' takes the preposition 'from'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0030",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "A prolonged equipment failure could result ____ significant production delays.",
+      "choices": [
+        "from",
+        "in",
+        "at",
+        "by"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'result in' means to cause a particular outcome.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0031",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Our premium service differs ____ the standard plan in both response time and coverage.",
+      "choices": [
+        "with",
+        "to",
+        "from",
+        "on"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'differ' commonly takes the preposition 'from' when contrasting two things.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0032",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All laptops issued by the company belong ____ the information technology department.",
+      "choices": [
+        "for",
+        "with",
+        "from",
+        "to"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'belong' takes the preposition 'to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0033",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Ms. Ortega will deal ____ customer complaints while the service manager is away.",
+      "choices": [
+        "with",
+        "for",
+        "to",
+        "by"
+      ],
+      "correctIndex": 0,
+      "explanation": "The phrasal verb 'deal with' means to handle or address something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0034",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer plans to invest ____ more energy-efficient production equipment next year.",
+      "choices": [
+        "on",
+        "in",
+        "for",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'invest' takes the preposition 'in'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0035",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Department heads should prepare ____ the annual budget meeting by reviewing current expenses.",
+      "choices": [
+        "to",
+        "with",
+        "for",
+        "of"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'prepare' takes the preposition 'for' before an event or situation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0036",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Several applicants inquired ____ the possibility of working remotely two days per week.",
+      "choices": [
+        "at",
+        "for",
+        "on",
+        "about"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'inquire' can take 'about' when asking for information concerning a topic.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0037",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The auditor declined to comment ____ the findings until the final report was released.",
+      "choices": [
+        "on",
+        "with",
+        "from",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'comment' takes the preposition 'on' when referring to a topic.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0038",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "New scheduling software will allow the support team to adapt ____ changes in call volume more quickly.",
+      "choices": [
+        "for",
+        "to",
+        "with",
+        "by"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'adapt' takes the preposition 'to' when adjusting to a condition or change.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0039",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance team relies ____ weekly sales reports when updating its cash-flow projections.",
+      "choices": [
+        "from",
+        "in",
+        "on",
+        "at"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'rely' takes the preposition 'on'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0040",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees who work at least twenty hours per week may qualify ____ subsidized transportation passes.",
+      "choices": [
+        "to",
+        "with",
+        "of",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'qualify' takes the preposition 'for' before a benefit or opportunity.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0041",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consulting team will engage ____ a detailed review of the client's inventory procedures.",
+      "choices": [
+        "in",
+        "at",
+        "to",
+        "by"
+      ],
+      "correctIndex": 0,
+      "explanation": "The verb 'engage' takes the preposition 'in' before an activity.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0042",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The protective packaging helps prevent delicate components ____ being damaged during transit.",
+      "choices": [
+        "with",
+        "from",
+        "by",
+        "at"
+      ],
+      "correctIndex": 1,
+      "explanation": "The verb 'prevent' takes 'from' before a gerund in the pattern 'prevent something from doing/being done'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0043",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The project manager will negotiate ____ the contractor about the revised completion date.",
+      "choices": [
+        "to",
+        "at",
+        "with",
+        "for"
+      ],
+      "correctIndex": 2,
+      "explanation": "The verb 'negotiate' takes 'with' for the person or organization involved in negotiations.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0044",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The delivery company does not charge customers ____ standard weekend service.",
+      "choices": [
+        "with",
+        "at",
+        "on",
+        "for"
+      ],
+      "correctIndex": 3,
+      "explanation": "The verb 'charge' takes the preposition 'for' before the service or item being billed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0045",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Several investors are concerned ____ the effect of rising material costs on quarterly earnings.",
+      "choices": [
+        "about",
+        "for",
+        "to",
+        "from"
+      ],
+      "correctIndex": 0,
+      "explanation": "The adjective 'concerned' takes 'about' when expressing worry regarding something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0046",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Most participants said they were satisfied ____ the practical exercises included in the workshop.",
+      "choices": [
+        "for",
+        "with",
+        "at",
+        "to"
+      ],
+      "correctIndex": 1,
+      "explanation": "The adjective 'satisfied' commonly takes the preposition 'with'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0047",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The coastal region is known ____ its highly skilled shipbuilding workforce.",
+      "choices": [
+        "with",
+        "at",
+        "for",
+        "to"
+      ],
+      "correctIndex": 2,
+      "explanation": "The expression 'be known for' identifies a notable quality or feature.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0048",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Two senior engineers are involved ____ the testing of the new battery-management system.",
+      "choices": [
+        "for",
+        "with",
+        "to",
+        "in"
+      ],
+      "correctIndex": 3,
+      "explanation": "The adjective/participle 'involved' takes 'in' before an activity or project.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0049",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The neighborhood association remains opposed ____ the proposed expansion of the distribution center.",
+      "choices": [
+        "to",
+        "at",
+        "from",
+        "with"
+      ],
+      "correctIndex": 0,
+      "explanation": "The adjective 'opposed' takes the preposition 'to'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_preposition_collocation_0050",
+      "version": 1,
+      "skillId": "p5.vocab.preposition_collocation",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company is committed ____ reducing packaging waste by 30 percent over the next three years.",
+      "choices": [
+        "for",
+        "to",
+        "with",
+        "in"
+      ],
+      "correctIndex": 1,
+      "explanation": "The expression 'be committed to' takes 'to', followed here by a gerund.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
