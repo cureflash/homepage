@@ -11,6 +11,20 @@ Build a 色彩検定 app focused on visual color identification and color-system
 
 Do not start Grade 2 while Grade 3 is incomplete.
 
+## Core learning doctrine: micro-skill first, volume second
+Power Color is not a broad mock-exam app first. Its primary mode is deliberate overtraining of narrowly isolated visual skills.
+
+Rules:
+- One micro-skill must test one decision only.
+- Split a skill again whenever the learner could use materially different reasoning to answer it.
+- Do not combine hue, tone, notation and scheme recognition into one labeled drill merely because they share PCCS.
+- Learners must be able to select one micro-skill and drill it repeatedly without unrelated knowledge leaking into the cue.
+- Mixed/unlabeled tests are transfer checks after isolated drills; they are not a replacement for isolated drills.
+- Default content target is approximately 100 verified drills per micro-skill when the state space supports genuinely distinct questions.
+- For finite systems where 100 meaningfully distinct questions would require template spam, exhaust the useful state space instead, then create only defensible transformations/combinations. Never pad to 100 with cosmetic wording changes.
+- Question volume must come from distinct color states, directions, contrasts, pairings, arrangements and conditions, not from paraphrasing the same item.
+- Weakness/mastery/review are tracked per micro-skill, so a learner can repeatedly attack exactly the failed discrimination.
+
 ## Grade 3 scope
 Color-facing content only:
 - 慣用色名: 色→名前 / 名前→色
@@ -22,6 +36,24 @@ Color-facing content only:
 - 明度グラデーションなど公式出題例に現れる視覚判定
 
 Non-color-identification chapters are out of scope.
+
+## Grade 3 minimum micro-skill split
+At minimum, keep these abilities independently drillable:
+- `pc3.conventional.color_to_name`
+- `pc3.conventional.name_to_color`
+- `pc3.pccs.color_to_hue`
+- `pc3.pccs.hue_to_color`
+- `pc3.pccs.color_to_tone`
+- `pc3.pccs.tone_to_color`
+- `pc3.pccs.color_to_notation`
+- `pc3.pccs.notation_to_color`
+- `pc3.relation.complementary_hue`
+- `pc3.relation.same_hue`
+- `pc3.relation.same_tone`
+- `pc3.relation.hue_difference`
+- `pc3.relation.tone_difference`
+
+If official scope/sample questions reveal a distinct solving operation such as value-ordering/gradient recognition, add another micro-skill rather than hiding it inside a broad category.
 
 ## Sources
 Primary authority for scope and sample-question patterns is the 色彩検定協会 official site/current official materials.
@@ -38,6 +70,8 @@ Never invent a PCCS mapping or display value when the source is not confirmed.
 - No bulk verified flagging.
 - Check wrong-answer plausibility, answer-position balance, duplicate/near-duplicate questions, color-ref integrity, grade-range integrity.
 - Monitor-dependent color differences must be disclosed in the app.
+- Track generated / checked / verified / needs_revision / rejected / pending counts per micro-skill.
+- Coverage reports must show both question count and state-space coverage; raw count alone is not completion evidence.
 
 ## Engine rule
 Reuse:
@@ -51,6 +85,7 @@ Color-specific code may render swatches and adapt color metadata, but must not d
 Grade 3 is complete only when:
 - the Grade 3 color master is complete for all in-scope systems;
 - all Grade 3 micro-skills are implemented;
+- each micro-skill has exhausted its defined useful coverage target;
 - all intended questions are individually QA'd;
 - pending = 0;
 - schema/reference/duplicate/coverage tests pass;
