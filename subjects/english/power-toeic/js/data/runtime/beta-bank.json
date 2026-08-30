@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T15:21:28.326Z",
+  "generatedAt": "2026-08-30T16:25:36.980Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2799,
-    "runtimeQuestionCount": 2798,
+    "approvedCandidateCount": 2897,
+    "runtimeQuestionCount": 2896,
     "quarantinedNearDuplicateCount": 1,
-    "qaRecordCount": 114
+    "qaRecordCount": 118
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -75,6 +75,12 @@
     {
       "id": "p5.det.countable_number",
       "label": "可算名詞の単複",
+      "categoryId": "determiners-quantity",
+      "categoryLabel": "限定詞・数量"
+    },
+    {
+      "id": "p5.det.few_vs_little",
+      "label": "few / little",
       "categoryId": "determiners-quantity",
       "categoryLabel": "限定詞・数量"
     },
@@ -15796,6 +15802,822 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_det_few_vs_little_0001",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The new branch has ____ parking spaces available for visitors.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Parking spaces' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0002",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is ____ time left to revise the proposal before the deadline.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Time' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0003",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The manager made ____ adjustments to the schedule, so most appointments remain unchanged.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Adjustments' is countable plural, so 'a few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0004",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "We still have ____ flexibility in the delivery schedule, so a one-day delay is possible.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Flexibility' is uncountable, so 'a little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0005",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Very ____ applicants had prior experience with the specialized software.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Applicants' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0006",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The equipment requires ____ maintenance during its first year of operation.",
+      "choices": [
+        "many",
+        "little",
+        "few",
+        "a few"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Maintenance' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0007",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The audit identified ____ minor errors that can be corrected immediately.",
+      "choices": [
+        "much",
+        "little",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Errors' is countable plural, so 'a few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0008",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician needs ____ additional information before installing the update.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Information' is uncountable, so 'a little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0009",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Because ____ seats remain, late registrations may have to be declined.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Seats' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0010",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The revised process leaves ____ room for manual data entry.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Room' meaning available capacity is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0011",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company received ____ complaints after the billing system was upgraded.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Complaints' is countable plural, so 'a few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0012",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is ____ demand for the product in smaller regional markets, but sales are beginning to rise.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Demand' is uncountable, so 'a little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0013",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ employees volunteered for the weekend inventory count, so the supervisor requested extra help.",
+      "choices": [
+        "Few",
+        "Little",
+        "A little",
+        "Much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Employees' is countable plural, so 'Few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0014",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The report provides ____ evidence that the new policy has reduced operating costs.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Evidence' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0015",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Only ____ suppliers can meet the revised packaging requirements.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Suppliers' is countable plural, so 'a few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0016",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The budget includes ____ funding for staff training this quarter.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Funding' is uncountable, so 'a little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0017",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The remote office has ____ meeting rooms, which makes scheduling difficult.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Meeting rooms' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0018",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "There was ____ interest in the optional workshop, so it was canceled.",
+      "choices": [
+        "many",
+        "little",
+        "few",
+        "a few"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Interest' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0019",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The recruiter asked ____ follow-up questions before ending the interview.",
+      "choices": [
+        "much",
+        "little",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Questions' is countable plural, so 'a few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0020",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "We have ____ experience with this vendor, but the initial results have been positive.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Experience' is uncountable in this use, so 'a little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0021",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warehouse received ____ shipments during the holiday closure.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Shipments' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0022",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The committee showed ____ enthusiasm for extending the trial period.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Enthusiasm' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0023",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "A technician found ____ loose connections inside the control panel.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Connections' is countable plural, so 'a few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0024",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The sales team has ____ knowledge of the new tax rules and will attend a briefing tomorrow.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Knowledge' is uncountable, so 'a little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0025",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ customers used the express counter after 8 p.m., so the store shortened its hours.",
+      "choices": [
+        "Few",
+        "Little",
+        "A little",
+        "Much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Customers' is countable plural, so 'Few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0026",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The regional office has ____ meeting rooms, so teams often reserve them several days in advance.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Meeting rooms' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0027",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is ____ interest in extending the warranty beyond five years, according to the survey.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Interest' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0028",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "We received ____ useful suggestions during yesterday's staff workshop.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Suggestions' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0029",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The finance team still has ____ time to review the figures before the report is released.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Time' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0030",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Very ____ vendors can meet the new delivery requirement without changing their schedules.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Vendors' is countable plural, so 'few' is correct after 'Very'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0031",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The prototype showed ____ improvement after the first software update.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Improvement' is uncountable here, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0032",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The receptionist kept ____ brochures at the front desk for walk-in visitors.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Brochures' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0033",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "With ____ additional training, the new employees should be able to use the system independently.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Training' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0035",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The revised contract leaves ____ uncertainty about who is responsible for maintenance costs.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Uncertainty' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0036",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The supervisor approved ____ changes to the seating plan before the event began.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Changes' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0037",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please add ____ water to the cleaning solution before using it on the glass panels.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Water' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0038",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The training session attracted ____ participants from outside the sales department.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Participants' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0039",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Because the machine produces ____ noise, it can be installed near the customer service area.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Noise' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0040",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The committee raised ____ questions about the proposed office relocation.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Questions' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0041",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The consultant needs ____ more information about the building before preparing an estimate.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Information' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0042",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "There are ____ direct flights during the winter, so business travelers usually connect through Osaka.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Direct flights' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0043",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The marketing campaign generated ____ publicity outside the company's existing customer base.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Publicity' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0044",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warehouse has ____ spare carts available for unusually large deliveries.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Spare carts' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0045",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Adding ____ insulation around the pipe should reduce heat loss considerably.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Insulation' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0046",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ employees were willing to work the holiday shift at short notice.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Employees' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0047",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The report provides ____ evidence that the delay affected customer satisfaction.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Evidence' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0048",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The software update introduced ____ minor changes to the login screen.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Changes' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0049",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is ____ storage space left on the shared server, so old files should be archived.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Storage space' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_det_much_vs_many_0001",
       "version": 1,
       "skillId": "p5.det.much_vs_many",
@@ -16625,6 +17447,856 @@
       ],
       "correctIndex": 0,
       "explanation": "Trouble is uncountable in this use, so 'much' is correct. Therefore, 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0051",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The legal department does not have ____ evidence to support the claim at this stage.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Evidence is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0052",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ vendors submitted proposals before Friday's deadline?",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Vendors are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0053",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The redesign did not require ____ additional research before approval.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Research is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0054",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The supervisor interviewed ____ of the candidates recommended by the agency.",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Candidates are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0055",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is not ____ traffic near the distribution center after 8 P.M.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Traffic is uncountable in this use, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0056",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The conference attracted ____ overseas delegates this year.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Delegates are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0057",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The revised contract leaves the supplier with ____ flexibility in setting delivery dates.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Flexibility is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0058",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ of the invoices have already been approved for payment?",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Invoices are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0059",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician did not need ____ assistance to install the replacement unit.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Assistance is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0060",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The retailer opened ____ temporary counters during the holiday promotion.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Counters are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0061",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The delay caused more frustration than expected but not ____ financial loss.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Financial loss is uncountable here, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0062",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The audit team examined ____ of the transactions processed in March.",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Transactions are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0063",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The new warehouse does not provide ____ space for long-term document storage.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Space is uncountable in this use, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0064",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ appointments can the clinic schedule on Saturdays?",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Appointments are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0065",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The proposal did not generate ____ enthusiasm among the board members.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Enthusiasm is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0066",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company retained ____ of the consultants who worked on the pilot project.",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Consultants are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0067",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The customer did not provide ____ notice before changing the installation date.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Notice meaning advance warning is uncountable here, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0068",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The manufacturer ships ____ replacement parts directly from its regional depot.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Replacement parts are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0069",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The software update does not consume ____ memory on newer devices.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Memory is uncountable in this use, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0070",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The director personally reviewed ____ of the complaints received last quarter.",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Complaints are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0071",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "There was not ____ demand for the evening workshop, so it was canceled.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Demand is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0072",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The project involved ____ subcontractors from different engineering firms.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Subcontractors are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0073",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The department cannot devote ____ attention to low-priority requests this week.",
+      "choices": [
+        "many",
+        "much of",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Attention is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0074",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ of the machines require calibration before the next production run?",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Machines are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0075",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The finance team did not spend ____ money on outside consulting services.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Money is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0076",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ inventory space will the new shelving system free up?",
+      "choices": [
+        "much",
+        "many",
+        "many of",
+        "much of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Space is uncountable in this use, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0077",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The training center can accommodate ____ participants in its largest room.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Participants are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0078",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The consultant spent ____ of the afternoon reviewing the compliance records.",
+      "choices": [
+        "many",
+        "much",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Afternoon is a singular time period here and follows 'of the', so 'much of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0079",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ of the applications submitted online were missing a signature.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Applications are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0080",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The revised schedule does not leave ____ time for additional testing.",
+      "choices": [
+        "much",
+        "many of",
+        "many",
+        "much of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Time is uncountable in this use, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0081",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The loyalty program attracted ____ first-time shoppers during the campaign.",
+      "choices": [
+        "much of",
+        "many",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Shoppers are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0082",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The storm damaged ____ of the equipment stored near the loading dock.",
+      "choices": [
+        "many of",
+        "many",
+        "much of",
+        "much"
+      ],
+      "correctIndex": 2,
+      "explanation": "Equipment is uncountable and follows 'of the', so 'much of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0083",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ of the regional managers will attend the strategy meeting in person?",
+      "choices": [
+        "much of",
+        "many",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Regional managers are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0084",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The new packaging does not require ____ adhesive to keep the cartons sealed.",
+      "choices": [
+        "much",
+        "many",
+        "many of",
+        "much of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Adhesive is uncountable in this use, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0085",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The recruiter interviewed ____ qualified applicants for the engineering vacancy.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Applicants are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0086",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The accounting team recovered ____ of the data from the corrupted backup.",
+      "choices": [
+        "many",
+        "much",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Data is treated as uncountable here and follows 'of the', so 'much of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0087",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ of the conference rooms on the third floor have video equipment.",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Conference rooms are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0088",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is not ____ room in the current budget for an unplanned advertising campaign.",
+      "choices": [
+        "much",
+        "many of",
+        "many",
+        "much of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Room meaning available capacity is uncountable here, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0089",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The service center handles ____ warranty claims during the winter season.",
+      "choices": [
+        "much of",
+        "many",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Warranty claims are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0090",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The merger discussion occupied ____ of the board's meeting on Tuesday.",
+      "choices": [
+        "many of",
+        "many",
+        "much of",
+        "much"
+      ],
+      "correctIndex": 2,
+      "explanation": "The meeting is a singular whole and follows 'of', so 'much of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0091",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ of the parcels scheduled for today have already left the warehouse?",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Parcels are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0092",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The interviewer did not receive ____ information about the candidate's previous role.",
+      "choices": [
+        "much",
+        "many",
+        "many of",
+        "much of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Information is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0093",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The upgraded system allows ____ employees to work remotely at the same time.",
+      "choices": [
+        "much of",
+        "many",
+        "much",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Employees are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0094",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The renovation preserved ____ of the building's original character.",
+      "choices": [
+        "many",
+        "much",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 2,
+      "explanation": "Character is uncountable in this sense and follows 'of', so 'much of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0095",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ of the suppliers on the approved list can deliver within two business days.",
+      "choices": [
+        "much of",
+        "much",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Suppliers are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0096",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The audit found that the branch had not made ____ progress on the corrective plan.",
+      "choices": [
+        "much",
+        "many of",
+        "many",
+        "much of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Progress is uncountable, so 'much' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0097",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The airport added ____ self-service kiosks near the international check-in area.",
+      "choices": [
+        "much",
+        "many",
+        "much of",
+        "many of"
+      ],
+      "correctIndex": 1,
+      "explanation": "Kiosks are countable plural, so 'many' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0098",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The promotion generated ____ of the website traffic recorded last weekend.",
+      "choices": [
+        "many of",
+        "many",
+        "much of",
+        "much"
+      ],
+      "correctIndex": 2,
+      "explanation": "Website traffic is uncountable and follows 'of the', so 'much of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0099",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "How ____ of the invoices in this folder still require a manager's approval?",
+      "choices": [
+        "much",
+        "much of",
+        "many",
+        "many of"
+      ],
+      "correctIndex": 3,
+      "explanation": "Invoices are countable plural and follow 'of the', so 'many of' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_much_vs_many_0100",
+      "version": 1,
+      "skillId": "p5.det.much_vs_many",
+      "categoryId": "determiners-quantity",
+      "sentence": "The software does not use ____ bandwidth when running in offline mode.",
+      "choices": [
+        "much",
+        "many",
+        "many of",
+        "much of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bandwidth is uncountable, so 'much' is correct.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
