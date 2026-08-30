@@ -1,23 +1,18 @@
 {
   "project": "Power TOEIC",
   "role": "question_validation",
-  "checked_question_count": 3125,
-  "verified_question_count": 3040,
+  "checked_question_count": 3150,
+  "verified_question_count": 3065,
   "needs_revision_count": 85,
   "rejected_question_count": 0,
   "pending_validation_count": 925,
-  "last_completed_batch": "2026-08-30-scheduled-082-where-vs-when-part1",
+  "last_completed_batch": "2026-08-30-scheduled-083-where-vs-when-part2",
   "last_completed_micro_skill": "p5.rel.where_vs_when",
-  "last_batch_counts": {
-    "checked": 25,
-    "verified": 25,
-    "needs_revision": 0,
-    "rejected": 0
-  },
+  "last_batch_counts": {"checked":25,"verified":25,"needs_revision":0,"rejected":0},
   "next_batch": "p5.rel.where_vs_when",
   "next_micro_skill": "p5.rel.where_vs_when",
-  "next_question_id": "p5_rel_where_vs_when_0026",
+  "next_question_id": "p5_rel_where_vs_when_0051",
   "generation_complete": false,
   "validation_complete": false,
-  "updated_at": "2026-08-30T08:15:00+09:00"
+  "updated_at": "2026-08-30T09:15:00+09:00"
 }
