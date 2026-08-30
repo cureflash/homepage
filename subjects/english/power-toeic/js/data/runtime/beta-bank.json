@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T22:21:57.239Z",
+  "generatedAt": "2026-08-30T23:19:48.840Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 3392,
-    "runtimeQuestionCount": 3390,
+    "approvedCandidateCount": 3487,
+    "runtimeQuestionCount": 3485,
     "quarantinedNearDuplicateCount": 2,
-    "qaRecordCount": 138
+    "qaRecordCount": 142
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -219,6 +219,12 @@
     {
       "id": "p5.vocab.adjective_noun_collocation",
       "label": "形容詞＋名詞コロケーション",
+      "categoryId": "vocabulary-usage",
+      "categoryLabel": "語彙・語法"
+    },
+    {
+      "id": "p5.vocab.business_context",
+      "label": "業務文脈語彙",
       "categoryId": "vocabulary-usage",
       "categoryLabel": "語彙・語法"
     },
@@ -53674,6 +53680,856 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_vocab_business_context_0001",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The logistics manager asked the carrier to provide an updated delivery ____ for the delayed shipment.",
+      "choices": [
+        "estimate",
+        "vacancy",
+        "receipt",
+        "agenda"
+      ],
+      "correctIndex": 0,
+      "explanation": "An 'estimate' is an approximate calculation or forecast, here of delivery timing.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0002",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All applicants must submit a résumé and two professional ____ by Friday.",
+      "choices": [
+        "premises",
+        "references",
+        "warranties",
+        "inventories"
+      ],
+      "correctIndex": 1,
+      "explanation": "'References' are people or statements that support a job applicant's qualifications.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0003",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board will review the proposed annual ____ before approving departmental spending.",
+      "choices": [
+        "shipment",
+        "complaint",
+        "budget",
+        "fixture"
+      ],
+      "correctIndex": 2,
+      "explanation": "A 'budget' is a plan for expected income and expenditure.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0004",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The hotel has received several guest ____ about noise from the renovation work.",
+      "choices": [
+        "dividends",
+        "credentials",
+        "quotations",
+        "complaints"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'complaint' is an expression of dissatisfaction from a customer or guest.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0005",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please attach the original sales ____ to your reimbursement request.",
+      "choices": [
+        "receipt",
+        "agenda",
+        "inventory",
+        "vacancy"
+      ],
+      "correctIndex": 0,
+      "explanation": "A 'receipt' documents a completed purchase or payment.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0006",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The purchasing team requested three price ____ from approved vendors.",
+      "choices": [
+        "extensions",
+        "quotations",
+        "transfers",
+        "interviews"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'quotation' is a stated price offered by a supplier for goods or services.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0007",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse supervisor ordered a full ____ count before the year-end audit.",
+      "choices": [
+        "campaign",
+        "conference",
+        "inventory",
+        "allowance"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Inventory' refers to goods or stock held by a business.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0008",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company will conduct a customer satisfaction ____ next month.",
+      "choices": [
+        "merger",
+        "lease",
+        "invoice",
+        "survey"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'survey' collects responses or opinions from a group of people.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0009",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees traveling on business should submit an expense ____ within five working days.",
+      "choices": [
+        "report",
+        "vacancy",
+        "shipment",
+        "branch"
+      ],
+      "correctIndex": 0,
+      "explanation": "An expense 'report' records business costs for reimbursement or accounting.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0010",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier issued an amended ____ after discovering an incorrect shipping charge.",
+      "choices": [
+        "interview",
+        "invoice",
+        "warehouse",
+        "benefit"
+      ],
+      "correctIndex": 1,
+      "explanation": "An 'invoice' is a document requesting payment for supplied goods or services.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0011",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The regional office has a job ____ for an experienced service technician.",
+      "choices": [
+        "deadline",
+        "discount",
+        "vacancy",
+        "forecast"
+      ],
+      "correctIndex": 2,
+      "explanation": "A job 'vacancy' is an available position.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0012",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The marketing team moved the campaign launch forward to meet the new ____.",
+      "choices": [
+        "refund",
+        "capacity",
+        "facility",
+        "deadline"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'deadline' is the latest time by which something must be completed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0013",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The factory increased production ____ to meet seasonal demand.",
+      "choices": [
+        "capacity",
+        "policy",
+        "receipt",
+        "applicant"
+      ],
+      "correctIndex": 0,
+      "explanation": "Production 'capacity' is the maximum amount a facility can produce.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0014",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The airline offered passengers a full ____ after the flight was canceled.",
+      "choices": [
+        "agenda",
+        "refund",
+        "transfer",
+        "quotation"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'refund' is money returned after a canceled or unsatisfactory purchase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0015",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The client asked for a written ____ of the maintenance agreement before signing.",
+      "choices": [
+        "shipment",
+        "inventory",
+        "summary",
+        "candidate"
+      ],
+      "correctIndex": 2,
+      "explanation": "A 'summary' presents the main points of a document or agreement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0016",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The department head distributed the meeting ____ in advance so everyone could prepare.",
+      "choices": [
+        "invoice",
+        "premises",
+        "benefit",
+        "agenda"
+      ],
+      "correctIndex": 3,
+      "explanation": "An 'agenda' lists topics to be discussed at a meeting.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0017",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The retailer is offering a 15 percent ____ on selected office furniture this week.",
+      "choices": [
+        "discount",
+        "forecast",
+        "complaint",
+        "vacancy"
+      ],
+      "correctIndex": 0,
+      "explanation": "A 'discount' is a reduction in the usual price.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0018",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance team revised its sales ____ after receiving stronger-than-expected orders.",
+      "choices": [
+        "receipt",
+        "forecast",
+        "transfer",
+        "seminar"
+      ],
+      "correctIndex": 1,
+      "explanation": "A sales 'forecast' predicts future sales.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0019",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The insurance policy provides additional ____ for equipment damaged during transport.",
+      "choices": [
+        "attendance",
+        "branch",
+        "coverage",
+        "candidate"
+      ],
+      "correctIndex": 2,
+      "explanation": "Insurance 'coverage' is the protection provided under a policy.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0020",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company signed a five-year ____ for additional office space downtown.",
+      "choices": [
+        "survey",
+        "agenda",
+        "shipment",
+        "lease"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'lease' is a contract granting use of property for a period in exchange for payment.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0021",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The recruiter scheduled a second ____ with the strongest candidate.",
+      "choices": [
+        "interview",
+        "quotation",
+        "inventory",
+        "deadline"
+      ],
+      "correctIndex": 0,
+      "explanation": "An 'interview' is a formal meeting used to assess a job candidate.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0022",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Management approved the employee's request for a temporary ____ to another branch.",
+      "choices": [
+        "refund",
+        "transfer",
+        "receipt",
+        "survey"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'transfer' is a move from one position or location to another within an organization.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0023",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse reported a short ____ of replacement parts after the storm delayed deliveries.",
+      "choices": [
+        "benefit",
+        "lease",
+        "supply",
+        "seminar"
+      ],
+      "correctIndex": 2,
+      "explanation": "A short 'supply' means there are fewer goods available than needed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0024",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The operations team reviewed the emergency ____ after the power outage.",
+      "choices": [
+        "discount",
+        "invoice",
+        "candidate",
+        "procedure"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'procedure' is an established series of steps for handling a task or situation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0025",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company introduced a flexible work ____ for employees with long commutes.",
+      "choices": [
+        "policy",
+        "shipment",
+        "quotation",
+        "vacancy"
+      ],
+      "correctIndex": 0,
+      "explanation": "A 'policy' is an official rule or approach adopted by an organization.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0026",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The laboratory ordered new safety ____ for employees handling chemicals.",
+      "choices": [
+        "agenda",
+        "equipment",
+        "interview",
+        "refund"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Equipment' means the tools or machinery needed for a particular activity.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0027",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales team prepared a detailed product ____ for the trade show.",
+      "choices": [
+        "inventory",
+        "lease",
+        "demonstration",
+        "complaint"
+      ],
+      "correctIndex": 2,
+      "explanation": "A product 'demonstration' shows how a product works.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0028",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The contract includes a two-year ____ covering manufacturing defects.",
+      "choices": [
+        "survey",
+        "deadline",
+        "branch",
+        "warranty"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'warranty' is a formal promise to repair or replace a defective product.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0029",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consultant recommended improving the office ____ to reduce heating costs.",
+      "choices": [
+        "insulation",
+        "candidate",
+        "receipt",
+        "campaign"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Insulation' is material or treatment that reduces heat transfer.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0030",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The retailer opened a new distribution ____ near the airport.",
+      "choices": [
+        "forecast",
+        "facility",
+        "refund",
+        "interview"
+      ],
+      "correctIndex": 1,
+      "explanation": "A distribution 'facility' is a building or site used for storing and moving goods.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0031",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The human resources department updated the employee ____ to reflect the new leave rules.",
+      "choices": [
+        "shipment",
+        "quotation",
+        "handbook",
+        "vacancy"
+      ],
+      "correctIndex": 2,
+      "explanation": "An employee 'handbook' contains workplace policies and procedures.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0032",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Attendance at the safety ____ is mandatory for all new technicians.",
+      "choices": [
+        "invoice",
+        "warehouse",
+        "refund",
+        "seminar"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'seminar' is a meeting or class for instruction or discussion.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0033",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The customer service representative opened a support ____ to document the technical problem.",
+      "choices": [
+        "ticket",
+        "agenda",
+        "lease",
+        "inventory"
+      ],
+      "correctIndex": 0,
+      "explanation": "A support 'ticket' is a recorded request for assistance.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0034",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer recalled the product because of a possible safety ____.",
+      "choices": [
+        "benefit",
+        "defect",
+        "shipment",
+        "forecast"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'defect' is a fault or flaw in a product.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0035",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The applicant's technical ____ were verified before the final interview.",
+      "choices": [
+        "discounts",
+        "premises",
+        "credentials",
+        "deliveries"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Credentials' are qualifications or evidence showing that someone is suitable for a role.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0036",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The accounting department requested supporting ____ for every travel expense.",
+      "choices": [
+        "capacity",
+        "agenda",
+        "candidate",
+        "documentation"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Documentation' means records or documents that provide evidence or information.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0037",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The conference organizer confirmed the venue's seating ____ before opening registration.",
+      "choices": [
+        "capacity",
+        "refund",
+        "receipt",
+        "policy"
+      ],
+      "correctIndex": 0,
+      "explanation": "Seating 'capacity' is the maximum number of people a venue can accommodate.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0038",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier promised to replace the damaged goods at no additional ____.",
+      "choices": [
+        "survey",
+        "charge",
+        "transfer",
+        "benefit"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'charge' is an amount of money required as payment.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0039",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company expects the new software to improve staff ____.",
+      "choices": [
+        "vacancy",
+        "shipment",
+        "productivity",
+        "quotation"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Productivity' is the amount or efficiency of work produced.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0040",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please direct all media ____ to the corporate communications office.",
+      "choices": [
+        "inventories",
+        "leases",
+        "refunds",
+        "inquiries"
+      ],
+      "correctIndex": 3,
+      "explanation": "An 'inquiry' is a request for information.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0041",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The store manager authorized an exchange because the item was still under ____.",
+      "choices": [
+        "warranty",
+        "agenda",
+        "forecast",
+        "branch"
+      ],
+      "correctIndex": 0,
+      "explanation": "Being 'under warranty' means the product is still covered by a repair or replacement guarantee.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0042",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company plans to expand its online sales ____ into Southeast Asia.",
+      "choices": [
+        "receipts",
+        "operations",
+        "complaints",
+        "vacancies"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Operations' refers to a company's organized business activities.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0043",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The auditor found a small ____ between the recorded total and the bank statement.",
+      "choices": [
+        "campaign",
+        "transfer",
+        "discrepancy",
+        "benefit"
+      ],
+      "correctIndex": 2,
+      "explanation": "A 'discrepancy' is a difference between things that should agree.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0044",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manager approved additional overtime to clear the order ____.",
+      "choices": [
+        "agenda",
+        "refund",
+        "candidate",
+        "backlog"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'backlog' is accumulated work or orders waiting to be completed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0045",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales representative sent the client a revised product ____ with updated specifications.",
+      "choices": [
+        "brochure",
+        "invoice",
+        "vacancy",
+        "lease"
+      ],
+      "correctIndex": 0,
+      "explanation": "A 'brochure' is a printed or digital publication giving information about products or services.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0046",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer is seeking a local ____ to handle repairs in northern Japan.",
+      "choices": [
+        "deadline",
+        "distributor",
+        "receipt",
+        "survey"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'distributor' is a business that supplies or sells products in a region.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0047",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new employee will complete a three-month ____ period before the formal review.",
+      "choices": [
+        "shipment",
+        "quotation",
+        "probation",
+        "agenda"
+      ],
+      "correctIndex": 2,
+      "explanation": "A 'probation' period is an initial trial period of employment.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0048",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance director asked each department to justify any budget ____.",
+      "choices": [
+        "inventory",
+        "interview",
+        "refund",
+        "increase"
+      ],
+      "correctIndex": 3,
+      "explanation": "A budget 'increase' is an upward adjustment in allocated spending.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0049",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The courier requires the recipient's ____ upon delivery.",
+      "choices": [
+        "signature",
+        "vacancy",
+        "forecast",
+        "policy"
+      ],
+      "correctIndex": 0,
+      "explanation": "A 'signature' confirms receipt or authorization by the named person.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0050",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The hotel made a room ____ for the visiting consultants.",
+      "choices": [
+        "quotation",
+        "reservation",
+        "shipment",
+        "refund"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'reservation' is an arrangement to keep a room, seat, or service available.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_vocab_phrasal_verb_0001",
       "version": 1,
       "skillId": "p5.vocab.phrasal_verb",
@@ -54503,6 +55359,771 @@
       ],
       "correctIndex": 1,
       "explanation": "'Step down' means resign from a position of authority.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0052",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ the visitor log before leaving the reception area.",
+      "choices": [
+        "bring about",
+        "fill out",
+        "turn over",
+        "break into"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Fill out' means complete a form or document by supplying the required information.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0053",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance director asked the analysts to ____ the figures before the quarterly report is released.",
+      "choices": [
+        "take after",
+        "hand back",
+        "double-check",
+        "put off"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Double-check' means check something again carefully to make sure it is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0054",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier agreed to ____ the missing components by express delivery.",
+      "choices": [
+        "look into",
+        "carry over",
+        "break down",
+        "send over"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Send over' means send or deliver something to a particular place or person.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0055",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The training coordinator will ____ the new safety procedure during Monday's orientation.",
+      "choices": [
+        "go through",
+        "take away",
+        "turn down",
+        "call in"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Go through' means review or explain something step by step.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0056",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Because the original venue is unavailable, the event team needs to ____ an alternative location.",
+      "choices": [
+        "hand out",
+        "look for",
+        "set off",
+        "take apart"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Look for' means try to find something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0057",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The regional manager asked each branch to ____ its monthly sales figures by Friday.",
+      "choices": [
+        "bring up",
+        "look after",
+        "turn in",
+        "get around"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Turn in' means submit something to the appropriate person or department.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0058",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The IT department plans to ____ the old servers once the migration is complete.",
+      "choices": [
+        "hold on",
+        "come across",
+        "set up",
+        "phase out"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Phase out' means gradually stop using or providing something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0059",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The receptionist will ____ the conference room lights after the final meeting ends.",
+      "choices": [
+        "turn off",
+        "put through",
+        "take over",
+        "bring in"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Turn off' means switch off a device or light.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0060",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The project team must ____ several technical issues before the product can be launched.",
+      "choices": [
+        "run into",
+        "deal with",
+        "take back",
+        "put aside"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Deal with' means handle or resolve a problem or situation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0061",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new software should help employees ____ routine data-entry tasks more quickly.",
+      "choices": [
+        "look down on",
+        "check in",
+        "carry out",
+        "break into"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Carry out' means perform or complete a task.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0062",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board decided to ____ the proposal until more accurate cost estimates are available.",
+      "choices": [
+        "bring along",
+        "take on",
+        "give out",
+        "hold off on"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Hold off on' means delay doing or deciding something until a later time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0063",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Ms. Patel will ____ for the department manager while he is attending the overseas conference.",
+      "choices": [
+        "fill in",
+        "drop out",
+        "turn up",
+        "put down"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Fill in for' means temporarily do another person's job while that person is absent.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0064",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse supervisor asked staff to ____ damaged cartons before the next shipment arrives.",
+      "choices": [
+        "bring back",
+        "clear out",
+        "look up",
+        "hand over"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Clear out' means remove unwanted items from a place.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0065",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company hopes to ____ a new loyalty program before the holiday shopping season.",
+      "choices": [
+        "take apart",
+        "go against",
+        "roll out",
+        "call off"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Roll out' means introduce or launch a new product, service, or program.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0066",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Customers may ____ unused equipment within 30 days if they keep the original receipt.",
+      "choices": [
+        "set aside",
+        "bring about",
+        "look over",
+        "bring back"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Bring back' means return something to the place where it was obtained.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0067",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The audit team will ____ the expense records for any unusual transactions.",
+      "choices": [
+        "look through",
+        "take down",
+        "turn away",
+        "put on"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Look through' means examine or review a set of documents.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0068",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "After the merger, management plans to ____ several overlapping administrative roles.",
+      "choices": [
+        "get by",
+        "do away with",
+        "put through",
+        "step aside"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Do away with' means eliminate or discontinue something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0069",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The technician was able to ____ the source of the intermittent network problem.",
+      "choices": [
+        "bring forward",
+        "hand out",
+        "track down",
+        "turn in"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Track down' means locate or identify something after a search or investigation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0070",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The marketing department decided to ____ the campaign after the product launch was postponed.",
+      "choices": [
+        "take over",
+        "come up",
+        "look around",
+        "scale back"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Scale back' means reduce the size, scope, or intensity of an activity.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0071",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ your laptop before the security update begins.",
+      "choices": [
+        "shut down",
+        "take after",
+        "give away",
+        "call on"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Shut down' means turn off a computer or system in an orderly way.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0072",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The purchasing department will ____ local suppliers before requesting bids from overseas firms.",
+      "choices": [
+        "turn into",
+        "reach out to",
+        "break up",
+        "put away"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Reach out to' means contact someone or an organization, usually to request information or assistance.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0073",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The customer-service manager asked the team to ____ all unresolved complaints by the end of the week.",
+      "choices": [
+        "check out",
+        "take in",
+        "follow up on",
+        "bring down"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Follow up on' means take further action concerning an unresolved matter.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0074",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The factory had to ____ production temporarily because of a shortage of electronic components.",
+      "choices": [
+        "hand in",
+        "set out",
+        "bring over",
+        "slow down"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Slow down' means reduce the rate or pace of an activity.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0075",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The accounting team will ____ the remaining balance to next month's statement.",
+      "choices": [
+        "carry over",
+        "turn away",
+        "take off",
+        "look around"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Carry over' means transfer an amount or item to a later period.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0076",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The procurement team will ____ the supplier's references before signing the contract.",
+      "choices": [
+        "check out",
+        "put away",
+        "take after",
+        "break off"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Check out' means investigate or verify something before making a decision.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0077",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ any outdated brochures from the reception desk before the new campaign begins.",
+      "choices": [
+        "call on",
+        "clear away",
+        "run into",
+        "set up"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Clear away' means remove items from a place so the area is tidy or ready for use.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0078",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The legal department asked us to ____ the revised terms before sending them to the client.",
+      "choices": [
+        "take over",
+        "bring in",
+        "look over",
+        "give in"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Look over' means examine something, usually fairly carefully.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0080",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new supervisor plans to ____ a weekly meeting to discuss production issues.",
+      "choices": [
+        "set up",
+        "drop by",
+        "take in",
+        "hold back"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Set up' means arrange or establish something such as a meeting or system.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0082",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consultant helped the company ____ a more efficient approval process.",
+      "choices": [
+        "run down",
+        "take back",
+        "work out",
+        "put aside"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Work out' means devise or develop a solution or plan.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0083",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Because demand has increased, the manufacturer will ____ production at its Osaka plant.",
+      "choices": [
+        "look after",
+        "pass on",
+        "take apart",
+        "step up"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Step up' means increase the level, rate, or intensity of an activity.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0084",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The assistant will ____ the meeting minutes to all participants this afternoon.",
+      "choices": [
+        "send out",
+        "turn up",
+        "get by",
+        "bring down"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Send out' means distribute or dispatch something to multiple recipients.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0085",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ your identification card when you reach the security gate.",
+      "choices": [
+        "make up",
+        "show up",
+        "hand over",
+        "come around"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Hand over' means give something to another person, often officially or temporarily.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0086",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales manager asked representatives to ____ potential clients who attended the trade fair.",
+      "choices": [
+        "reach out to",
+        "take after",
+        "put down",
+        "turn into"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Reach out to' means contact someone, often to begin or continue a business relationship.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0087",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The technician will ____ the backup system before replacing the main server.",
+      "choices": [
+        "carry on",
+        "bring up",
+        "power up",
+        "put through"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Power up' means switch on or start an electronic system.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0088",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The committee decided to ____ the final vote until all members could attend.",
+      "choices": [
+        "turn out",
+        "put off",
+        "look into",
+        "give back"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Put off' means postpone something until a later time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0089",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Warehouse staff should ____ the shipment number in the tracking system before unloading the truck.",
+      "choices": [
+        "look up",
+        "break down",
+        "take on",
+        "pass away"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Look up' means search for information in a reference source or database.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0090",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new policy is intended to ____ unnecessary approval steps.",
+      "choices": [
+        "come across",
+        "turn in",
+        "cut out",
+        "set off"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Cut out' means remove or eliminate something unnecessary.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0092",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The hotel expects occupancy to ____ once the international conference begins.",
+      "choices": [
+        "pick up",
+        "turn down",
+        "break off",
+        "hold onto"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Pick up' means increase or improve after a slower period.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0093",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supervisor told the trainee to ____ the machine immediately if an alarm sounds.",
+      "choices": [
+        "bring over",
+        "take up",
+        "shut off",
+        "hand in"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Shut off' means stop the operation or flow of a machine, device, or supply.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0094",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The retailer will ____ the old display units after the store renovation.",
+      "choices": [
+        "come up",
+        "look for",
+        "set aside",
+        "get rid of"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Get rid of' means remove or dispose of something that is no longer wanted.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0095",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The team should ____ a backup plan in case the outdoor event is canceled by rain.",
+      "choices": [
+        "come up with",
+        "turn against",
+        "drop out",
+        "look down on"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Come up with' means devise or produce an idea or plan.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0096",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ the damaged package so the carrier can inspect it separately.",
+      "choices": [
+        "take in",
+        "set aside",
+        "break in",
+        "move on"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Set aside' means separate or reserve something for a particular purpose.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0097",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The branch manager asked the cashier to ____ the error in yesterday's deposit report.",
+      "choices": [
+        "bring along",
+        "look back",
+        "point out",
+        "turn away"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Point out' means draw attention to a particular fact, problem, or detail.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0098",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company will ____ temporary staff during the holiday rush.",
+      "choices": [
+        "put away",
+        "run over",
+        "give out",
+        "bring in"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Bring in' means recruit or introduce people or resources for a purpose.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_phrasal_verb_0100",
+      "version": 1,
+      "skillId": "p5.vocab.phrasal_verb",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance team will ____ the budget figures once the final invoices arrive.",
+      "choices": [
+        "take off",
+        "go over",
+        "put out",
+        "hold up"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Go over' means review or examine something carefully.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
