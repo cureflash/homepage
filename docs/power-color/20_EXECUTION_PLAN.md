@@ -11,7 +11,8 @@
 - [ ] Generate the remaining conventional-color questions.
   - [x] `color_to_name` checkpoint 0017-0024: 8 generated and individually verified; 0 pending.
   - [x] `color_to_name` checkpoint 0025-0032: 8 generated and individually verified; 0 pending.
-  - [ ] Resume at `color_to_name` 0033.
+  - [x] `color_to_name` checkpoint 0033-0040: 8 generated and individually verified; 0 pending.
+  - [ ] Resume at `color_to_name` 0041.
 - [ ] Independent QA for all conventional-color questions.
 - [ ] Promote verified authoring checkpoints into `grade3-runtime.json` only after consistency tests pass.
 - [ ] Conventional-color coverage gate: both directions cover 64/64 master colors, pending=0, duplicates/schema/references pass.
