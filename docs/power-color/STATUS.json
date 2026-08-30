@@ -21,20 +21,20 @@
       "rejected": 0
     },
     "authoring_questions": {
-      "generated": 32,
-      "checked": 32,
-      "verified": 32,
+      "generated": 40,
+      "checked": 40,
+      "verified": 40,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0,
-      "checkpoint": "pc3.conventional.color_to_name 0017-0048"
+      "checkpoint": "pc3.conventional.color_to_name 0017-0056"
     },
     "micro_skills": {
       "implemented": 2,
       "planned_minimum": 13
     },
     "conventional_coverage": {
-      "color_to_name_unique_master_colors_covered": 40,
+      "color_to_name_unique_master_colors_covered": 48,
       "color_to_name_target": 64,
       "name_to_color_unique_master_colors_covered": 8,
       "name_to_color_target": 64
@@ -48,5 +48,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue pc3.conventional.color_to_name from question 0049 using uncovered Grade 3 conventional colors. Generate pending first, independently QA against grade3-colors.json, keep verdicts individual, then update coverage. Runtime promotion remains a separate verified-only step."
+  "next": "Continue pc3.conventional.color_to_name from question 0057 using uncovered Grade 3 conventional colors. Generate pending first, independently QA against grade3-colors.json, keep verdicts individual, then update coverage. Runtime promotion remains a separate verified-only step."
 }
