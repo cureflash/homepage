@@ -28,11 +28,11 @@ test('name-to-color checkpoint 0033-0040 is independently verified and internall
     'c3-conventional-022',
     'c3-conventional-023',
     'c3-conventional-024',
-    'c3-conventional-025',
     'c3-conventional-026',
     'c3-conventional-027',
     'c3-conventional-028',
-    'c3-conventional-029'
+    'c3-conventional-029',
+    'c3-conventional-030'
   ]);
 
   for (const question of authoring.questions) {
