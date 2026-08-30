@@ -7,6 +7,7 @@ import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/englis
 
 const colors = JSON.parse(await readFile(new URL('../data/grade3-colors.json', import.meta.url), 'utf8'));
 const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
+const authoring = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0017-0024.json', import.meta.url), 'utf8'));
 
 test('Grade 3 conventional-color master contains 64 stable records', () => {
   assert.equal(colors.colors.length, 64);
@@ -33,6 +34,33 @@ test('runtime bank exposes verified questions only and all color refs resolve', 
       question.presentation.choiceColorRefs.forEach((ref) => assert.ok(colorById.has(ref)));
       assert.equal(question.presentation.choiceColorRefs[question.correctIndex], question.colorRef);
     }
+  }
+});
+
+test('authoring checkpoint 0017-0024 is independently verified and internally consistent', () => {
+  const colorById = new Map(colors.colors.map((color) => [color.id, color]));
+  assert.deepEqual(authoring.qaSummary, {
+    generated: 8,
+    checked: 8,
+    verified: 8,
+    needsRevision: 0,
+    rejected: 0,
+    pending: 0,
+    correctIndexDistribution: { A: 2, B: 2, C: 2, D: 2 }
+  });
+  assert.equal(authoring.questions.length, 8);
+  assert.equal(new Set(authoring.questions.map((question) => question.id)).size, 8);
+  for (const question of authoring.questions) {
+    assert.equal(question.validationStatus, 'verified');
+    assert.equal(question.skillId, 'pc3.conventional.color_to_name');
+    assert.equal(question.choices.length, 4);
+    assert.equal(new Set(question.choices).size, 4);
+    assert.ok(colorById.has(question.colorRef));
+    const target = colorById.get(question.colorRef);
+    assert.equal(question.presentation.kind, 'prompt_color');
+    assert.equal(question.presentation.promptColorRef, question.colorRef);
+    assert.equal(question.choices[question.correctIndex], target.name);
+    assert.equal(question.proposedAnswer, target.name);
   }
 });
 
