@@ -3,36 +3,12 @@
   "phase": "grade3_conventional_colors",
   "grade": 3,
   "grade3": {
-    "conventional_color_master": {
-      "target": 64,
-      "ingested": 64,
-      "status": "complete"
-    },
-    "pccs_master": {
-      "status": "not_started"
-    },
-    "relation_scheme_master": {
-      "status": "not_started"
-    },
-    "runtime_questions": {
-      "verified": 16,
-      "pending": 0,
-      "needs_revision": 0,
-      "rejected": 0
-    },
-    "authoring_questions": {
-      "generated": 95,
-      "checked": 95,
-      "verified": 95,
-      "pending": 0,
-      "needs_revision": 0,
-      "rejected": 0,
-      "checkpoint": "pc3.conventional.color_to_name 0017-0071 + pc3.conventional.name_to_color 0017-0056"
-    },
-    "micro_skills": {
-      "implemented": 2,
-      "planned_minimum": 13
-    },
+    "conventional_color_master": {"target": 64, "ingested": 64, "status": "complete"},
+    "pccs_master": {"status": "not_started"},
+    "relation_scheme_master": {"status": "not_started"},
+    "runtime_questions": {"verified": 16, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "authoring_questions": {"generated": 95, "checked": 95, "verified": 95, "pending": 0, "needs_revision": 0, "rejected": 0, "checkpoint": "pc3.conventional.color_to_name 0017-0071 + pc3.conventional.name_to_color 0017-0056"},
+    "micro_skills": {"implemented": 2, "planned_minimum": 13},
     "conventional_coverage": {
       "color_to_name_unique_master_colors_covered": 63,
       "color_to_name_target": 64,
@@ -43,13 +19,8 @@
       "name_to_color_target": 64
     }
   },
-  "engine_integration": {
-    "shared_power_toeic_session": true,
-    "shared_power_toeic_workout_builder": true,
-    "shared_power_toeic_question_bank_adapter": true,
-    "color_renderer": "implemented_beta"
-  },
+  "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "implemented_beta"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue pc3.conventional.name_to_color authoring at question 0057 with c3-conventional-047 エメラルドグリーン, the first master color not covered by runtime plus the verified 0017-0056 authoring checkpoints. Generate pending first, independently QA against grade3-colors.json and the current association reference, keep verdicts individual, and preserve the shared-engine/runtime separation."
+  "next": "Continue pc3.conventional.name_to_color authoring at question 0057 with c3-conventional-048 ビリジアン, the first master color not covered by runtime plus the verified 0017-0056 authoring checkpoints. c3-conventional-042 レモンイエロー is already covered by the runtime beta and must not be reused. Generate pending first, independently QA against grade3-colors.json and the current association reference, keep verdicts individual, and preserve the shared-engine/runtime separation."
 }
