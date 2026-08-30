@@ -8,15 +8,17 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed `takken-concept-risk-allocation` from source unit `risk-simultaneous-performance` without modifying Phase 2/3 question content or validation state.
+Completed `takken-concept-sale-earnest` from source unit `sale-earnest` without modifying Phase 2/3 question content or validation state.
 
-The risk-allocation knowledge model contains three verified atomic knowledge items based on Civil Code Article 536:
+The sale-earnest knowledge model contains three verified atomic knowledge items based on Civil Code Article 557(1):
 
-1. 当事者双方の責めに帰することができない事由による履行不能では、債権者は反対給付の履行を拒むことができる。
-2. 債権者の責めに帰すべき事由による履行不能では、債権者は反対給付の履行を拒むことができない。
-3. その債権者帰責の履行不能で、債務者が自己の債務を免れたことにより利益を得たときは、その利益を債権者に償還しなければならない。
+1. 買主は、買主から売主へ手付が交付されている場合、相手方である売主が履行に着手する前なら、手付を放棄して解除できる。
+2. 売主は、買主から手付を受領している場合、相手方である買主が履行に着手する前なら、手付の倍額を現実に提供して解除できる。
+3. 解約手付による解除は、解除しようとする当事者の相手方が契約の履行に着手する前に限られる。
 
-Canonical `takken-q-47-002` directly tests only the first rule and is mapped only to `takken-k-risk-allocation-no-fault-refuse-counter-performance`. The creditor-fault rule and benefit-reimbursement rule remain explicit Phase 4.3 coverage deficits.
+Canonical `takken-q-48-001` directly tests the buyer's abandonment method and the counterparty-performance cutoff, so it maps to `takken-k-sale-earnest-buyer-abandon` and `takken-k-sale-earnest-before-counterparty-performance`. Canonical `takken-q-48-002` asks only for the seller's cancellation method, so it maps only to `takken-k-sale-earnest-seller-double-actual-tender`.
+
+All three sale-earnest knowledge items have direct existing verified-question evidence. This checkpoint therefore adds no new Phase 4.3 coverage deficit.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -27,26 +29,26 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 61/113 concepts modeled
-- Canonical knowledge items: 322
-- Existing verified questions mapped: 65
+- Phase 4.2: active — 62/113 concepts modeled
+- Canonical knowledge items: 325
+- Existing verified questions mapped: 67
 - Explicit unmapped knowledge gaps: 240
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-sale-earnest` using source unit `sale-earnest`.
+Continue Phase 4.2 at `takken-concept-civil-nonconformity` using source unit `contract-nonconformity-civil`.
 
-Preserve all 322 knowledge items, sixty-five current mappings, and all two hundred forty explicit deficits. Existing verified `takken-q-48-001` and `takken-q-48-002` may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 325 knowledge items, sixty-seven current mappings, and all two hundred forty explicit deficits. Existing verified `takken-q-49-001` and `takken-q-49-002` may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-Canonical unit 47 fact `u47-f2` directly supports Civil Code Article 536(1)'s no-fault impossibility rule. Article 536(2)'s creditor-attributable impossibility rule and benefit-reimbursement rule are separate atomic rules supported directly by the Civil Code statute and intentionally have no fabricated sourceFactId.
+Canonical unit 48 facts `u48-f1` and `u48-f2` directly support the buyer and seller cancellation methods. Civil Code Article 557(1) also supplies the common condition that cancellation under the earnest-money rule is cut off once the counterparty has begun contractual performance.
 
-Existing `takken-q-47-002` asks only whether a creditor may refuse counter-performance when the obligation became impossible for reasons attributable to neither party. It does not directly test the creditor-fault or reimbursement rules, so only the first knowledge item is mapped.
+Existing `takken-q-48-001` expressly asks when the buyer may cancel and states both the hand-money abandonment method and the pre-performance cutoff in its correct choice. Existing `takken-q-48-002` asks only how the seller cancels and states the double actual tender method; it does not directly test the timing condition, so no timing knowledge is mapped from that question.
 
-The risk-allocation knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, Civil Code statute sourcing, valid `u47-f2` provenance where present, and the expected three-item count. The question-knowledge map now contains 65 verified source-question mappings through `takken-q-47-002`.
+The sale-earnest knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, Civil Code statute sourcing, valid `u48-f1`/`u48-f2` provenance, and the expected three-item count. The question-knowledge map now contains 67 verified source-question mappings through `takken-q-48-002`.
 
 ## publication invariant
 
