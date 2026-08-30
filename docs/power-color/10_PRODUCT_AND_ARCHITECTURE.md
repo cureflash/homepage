@@ -92,7 +92,8 @@ Future PCCS pair/multi-color renderers should remain presentation adapters; answ
 Every answered visual question must re-present the truth explicitly; highlighting the correct choice alone is not sufficient.
 
 - `prompt_color` / 色→名前: after answering, show an answer card containing the correct color name and a large repeat swatch of the target color, followed by the explanation.
-- `choice_colors` / 名前→色: after answering, show an answer card containing the correct color name (and reading when available), followed by the explanation. The learner must not have to infer the answer only from an outlined swatch.
+- `choice_colors` / 名前→色: after answering, reveal the canonical color name directly inside every A/B/C/D swatch so the learner can identify both the correct color and each distractor. Also show an answer card containing the correct color name (and reading when available), followed by the explanation.
+- Choice-name reveal occurs only after the learner commits an answer; names must not be visible while selecting.
 - Future PCCS questions must use the same rule: after selection, display the target visual state together with the canonical hue/tone/notation label that was being trained.
 - Answer feedback is generated from canonical master refs, not duplicated hard-coded color values in individual questions.
 
