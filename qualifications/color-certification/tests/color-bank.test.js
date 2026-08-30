@@ -9,6 +9,9 @@ import { getAnswerFeedbackModel, getChoiceRevealModels, readableTextColor } from
 const colors = JSON.parse(await readFile(new URL('../data/grade3-colors.json', import.meta.url), 'utf8'));
 const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
 const authoring = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0017-0024.json', import.meta.url), 'utf8'));
+const indexHtml = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const mainSource = await readFile(new URL('../js/main.js', import.meta.url), 'utf8');
+const rendererSource = await readFile(new URL('../js/color-choice-renderer.js', import.meta.url), 'utf8');
 
 test('Grade 3 conventional-color master contains 64 stable records', () => {
   assert.equal(colors.colors.length, 64);
@@ -100,6 +103,20 @@ test('name-to-color feedback reveals every choice color name after answering', (
 test('revealed swatch labels choose readable dark/light text', () => {
   assert.equal(readableTextColor('#FCEEEB'), '#111111');
   assert.equal(readableTextColor('#134A63'), '#ffffff');
+});
+
+test('choice color names are pre-rendered hidden and then revealed', () => {
+  assert.match(rendererSource, /name\.dataset\.role = 'choice-color-name'/);
+  assert.match(rendererSource, /name\.hidden = true/);
+  assert.match(rendererSource, /name\.hidden = false/);
+  assert.match(rendererSource, /Missing pre-rendered choice color name/);
+});
+
+test('browser-facing Power Color assets use the same cache-busting version', () => {
+  const version = '20260830-choice-label-v2';
+  assert.match(indexHtml, new RegExp(`styles\\.css\\?v=${version}`));
+  assert.match(indexHtml, new RegExp(`js/main\\.js\\?v=${version}`));
+  assert.match(mainSource, new RegExp(`color-choice-renderer\\.js\\?v=${version}`));
 });
 
 test('Power TOEIC shared repository/workout/session engine runs a color question', () => {
