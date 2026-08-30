@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T16:25:36.980Z",
+  "generatedAt": "2026-08-30T18:19:48.316Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2897,
-    "runtimeQuestionCount": 2896,
+    "approvedCandidateCount": 2995,
+    "runtimeQuestionCount": 2994,
     "quarantinedNearDuplicateCount": 1,
-    "qaRecordCount": 118
+    "qaRecordCount": 122
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -65,6 +65,12 @@
       "label": "in / on / at（時間）",
       "categoryId": "connectors-prepositions",
       "categoryLabel": "前置詞・接続詞"
+    },
+    {
+      "id": "p5.det.another_other_others",
+      "label": "another / other / others",
+      "categoryId": "determiners-quantity",
+      "categoryLabel": "限定詞・数量"
     },
     {
       "id": "p5.det.article_choice",
@@ -12419,6 +12425,856 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_det_another_other_others_0001",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The procurement team requested ____ quotation from a local supplier before making a decision.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Quotation' is singular countable, and the sentence asks for one additional quotation, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0002",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Employees who need replacement badges should contact the security desk; ____ requests can be submitted online.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Requests' is a plural noun, so 'other' is the correct determiner before it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0003",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some conference participants will attend the factory tour, while ____ will remain at the hotel for workshops.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "No noun follows the blank, and the blank refers to additional plural participants, so the pronoun 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0004",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Because the first delivery vehicle broke down, the dispatcher sent ____ truck to the customer.",
+      "choices": [
+        "other",
+        "others",
+        "otherwise",
+        "another"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Truck' is a singular countable noun and one additional truck is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0005",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The revised policy applies to travel expenses but not to ____ business costs.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Business costs' is plural, so 'other' correctly modifies the noun phrase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0006",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Two analysts are reviewing the sales forecast; ____ are checking the inventory figures.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank stands alone for additional plural analysts, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0007",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "If this meeting room is too small, we can reserve ____ room on the same floor.",
+      "choices": [
+        "other",
+        "others",
+        "another",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Room' is singular countable, and the meaning is one different/additional room, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0008",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The survey asks about salary, benefits, and ____ factors that influence employee retention.",
+      "choices": [
+        "another",
+        "others",
+        "otherwise",
+        "other"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Factors' is plural, so 'other' is the required determiner.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0009",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several applicants have already completed the skills test, and ____ are scheduled for tomorrow morning.",
+      "choices": [
+        "others",
+        "another",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "No noun follows the blank and a plural group is meant, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0010",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warehouse manager ordered ____ pallet of packing materials after demand increased unexpectedly.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Pallet' is singular countable and one additional pallet is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0011",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please keep confidential files separate from ____ documents stored in the shared cabinet.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Documents' is plural, so 'other' modifies the noun phrase correctly.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0012",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some branches will extend their weekend hours this month; ____ will keep their current schedules.",
+      "choices": [
+        "another",
+        "other",
+        "otherwise",
+        "others"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank replaces a plural noun phrase, so the possessive-free pronoun 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0013",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician installed ____ sensor to confirm whether the first reading was accurate.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Sensor' is singular countable and one additional sensor is being installed, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0014",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The contract covers maintenance but excludes ____ services requested after normal business hours.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Services' is plural, so 'other' is correct before the noun.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0015",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "A few customers chose express shipping, but ____ selected the standard delivery option.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank stands alone for additional plural customers, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0016",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The recruiter scheduled ____ interview with the candidate to discuss the relocation package.",
+      "choices": [
+        "other",
+        "others",
+        "otherwise",
+        "another"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Interview' is singular countable and one additional interview is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0017",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The finance team will review payroll records and ____ documents needed for the annual audit.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Documents' is plural, so 'other' correctly precedes it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0018",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some of the damaged units can be repaired, whereas ____ must be replaced entirely.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank is a standalone plural pronoun referring to additional units, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0019",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "After the original venue canceled, the event coordinator found ____ location near the station.",
+      "choices": [
+        "other",
+        "others",
+        "another",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Location' is singular countable and a different location is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0020",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The software update fixes login errors as well as ____ performance issues reported last week.",
+      "choices": [
+        "another",
+        "others",
+        "otherwise",
+        "other"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Performance issues' is plural, so 'other' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0021",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several vendors accepted the revised payment terms, but ____ asked for further negotiations.",
+      "choices": [
+        "others",
+        "another",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank stands alone and refers to additional plural vendors, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0022",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The designer prepared ____ mock-up so the client could compare two layout approaches.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Mock-up' is singular countable and an additional one is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0023",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please place recyclable packaging in bins separate from ____ waste.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Waste' is uncountable here, so 'other' is the appropriate determiner before it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0024",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some employees commute by train; ____ use buses or bicycles.",
+      "choices": [
+        "another",
+        "other",
+        "otherwise",
+        "others"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank is a plural pronoun standing for additional employees, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0025",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The legal team requested ____ copy of the signed agreement for its records.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Copy' is singular countable and one additional copy is requested, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0026",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The maintenance supervisor assigned ____ technician to inspect the backup generator.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Technician' is singular countable and one additional technician is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0027",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company sells office furniture and ____ equipment through its online catalog.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Equipment' is uncountable, so 'other' correctly modifies it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0028",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some guests requested vegetarian meals, while ____ chose the standard menu.",
+      "choices": [
+        "another",
+        "other",
+        "otherwise",
+        "others"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank stands alone for additional plural guests, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0029",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "When the first payment terminal stopped working, the cashier switched to ____ terminal.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Terminal' is singular countable and a different terminal is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0030",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The training session covers customer service, safety procedures, and ____ workplace topics.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Workplace topics' is plural, so 'other' is the correct determiner.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0031",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several departments submitted their budgets early; ____ are still waiting for final cost estimates.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "No noun follows the blank, and the verb is plural, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0032",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The editor asked for ____ draft after finding several inconsistencies in the first version.",
+      "choices": [
+        "other",
+        "others",
+        "otherwise",
+        "another"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Draft' is singular countable and one revised/additional draft is requested, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0033",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The new warehouse will store electronics, furniture, and ____ merchandise.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Merchandise' is uncountable, so 'other' correctly modifies it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0034",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some applicants applied through the company website; ____ were referred by current employees.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank replaces a plural noun phrase, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0035",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The customer requested ____ appointment because she could not attend on Tuesday.",
+      "choices": [
+        "other",
+        "others",
+        "another",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Appointment' is singular countable and a different appointment is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0036",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please compare this month's revenue with ____ financial indicators before revising the forecast.",
+      "choices": [
+        "another",
+        "others",
+        "otherwise",
+        "other"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Financial indicators' is plural, so 'other' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0037",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "A number of stores already use the new checkout system, and ____ will adopt it next quarter.",
+      "choices": [
+        "others",
+        "another",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank stands alone for additional plural stores, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0038",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The engineer performed ____ test at a lower temperature to verify the result.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Test' is singular countable and an additional test is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0039",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warranty does not cover damage caused by misuse or ____ external factors.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'External factors' is plural, so 'other' correctly precedes the noun phrase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0040",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some invoices were paid electronically; ____ were settled by bank transfer.",
+      "choices": [
+        "another",
+        "other",
+        "otherwise",
+        "others"
+      ],
+      "correctIndex": 3,
+      "explanation": "No noun follows the blank, and a plural set of invoices is meant, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0041",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The branch manager hired ____ assistant to handle the increased volume of customer calls.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Assistant' is singular countable and one additional assistant is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0042",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The brochure lists hotel rates, transportation options, and ____ travel information.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Travel information' is uncountable, so 'other' is the correct determiner.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0043",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several team members will present today, and ____ will speak at tomorrow's session.",
+      "choices": [
+        "another",
+        "other",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank stands alone for additional plural team members, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0044",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The supplier offered ____ model with a longer warranty and lower energy consumption.",
+      "choices": [
+        "other",
+        "others",
+        "otherwise",
+        "another"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Model' is singular countable and a different model is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0045",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The committee discussed staffing levels and ____ operational concerns during the meeting.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Operational concerns' is plural, so 'other' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0046",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Some packages were delivered before noon; ____ arrived later in the afternoon.",
+      "choices": [
+        "another",
+        "others",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank is a standalone plural pronoun for additional packages, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0047",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The accountant opened ____ spreadsheet to check the figures independently.",
+      "choices": [
+        "other",
+        "others",
+        "another",
+        "otherwise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Spreadsheet' is singular countable and a separate additional spreadsheet is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0048",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The company plans to expand into retail and ____ markets next year.",
+      "choices": [
+        "another",
+        "others",
+        "otherwise",
+        "other"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Markets' is plural, so 'other' correctly modifies it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0049",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "Several proposals met the technical requirements, but ____ exceeded the available budget.",
+      "choices": [
+        "others",
+        "another",
+        "other",
+        "otherwise"
+      ],
+      "correctIndex": 0,
+      "explanation": "The blank stands alone for additional plural proposals, so 'others' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_another_other_others_0050",
+      "version": 1,
+      "skillId": "p5.det.another_other_others",
+      "categoryId": "determiners-quantity",
+      "sentence": "The laboratory ordered ____ refrigerator after the existing unit reached full capacity.",
+      "choices": [
+        "other",
+        "another",
+        "others",
+        "otherwise"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Refrigerator' is singular countable and one additional unit is meant, so 'another' is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_det_article_choice_0001",
       "version": 1,
       "skillId": "p5.det.article_choice",
@@ -16614,6 +17470,822 @@
       ],
       "correctIndex": 3,
       "explanation": "'Storage space' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0051",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Because the renovation is nearly complete, ____ contractors remain on site this week.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Contractors' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0052",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The revised checklist leaves ____ room for confusion about the inspection procedure.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Room' is uncountable in the sense of opportunity or scope, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0053",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The hiring manager scheduled ____ short interviews before making the final selection.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Interviews' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0054",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The design team needs ____ more time to test the layout on older devices.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Time' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0055",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Very ____ invoices are still processed manually after the accounting upgrade.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Invoices' is countable plural, so 'few' is correct after 'Very'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0056",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The supplier provided ____ information about the cause of the production delay.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Information' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0057",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "We have ____ sample units available for customers who want an in-store demonstration.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Sample units' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0058",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Adding ____ cushioning inside the package should keep the glassware from shifting.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Cushioning' is uncountable here, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0060",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The branch has ____ flexibility to change the delivery window once the truck is dispatched.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Flexibility' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0061",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The auditor requested ____ additional receipts before closing the review.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Receipts' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0062",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please allow ____ extra space between the display cases to improve customer flow.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Space' is uncountable here, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0063",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ managers approved the proposal without requesting a revised cost estimate.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Managers' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0064",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The automated packaging line requires ____ supervision once operators complete the initial training.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Supervision' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0065",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The event coordinator kept ____ name badges blank for late registrants.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Name badges' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0066",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "A technician applied ____ lubricant to the hinge before testing the cabinet door again.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Lubricant' is uncountable here, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0067",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The downtown office receives ____ walk-in visitors on Friday afternoons.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Walk-in visitors' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0068",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is ____ demand for overnight shipping on this route during the off-season.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Demand' is uncountable here, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0069",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The maintenance crew found ____ loose connections during the routine equipment check.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Loose connections' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0070",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The purchasing team has ____ negotiating room because the annual order is unusually large.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Negotiating room' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0071",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ customers noticed the change to the receipt format after the software update.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Customers' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0072",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The draft budget allows ____ spending on nonessential travel this quarter.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Spending' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0073",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The receptionist printed ____ extra visitor passes for guests who had not preregistered.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Visitor passes' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0074",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "We need ____ feedback from the legal team before publishing the revised policy.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Feedback' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0075",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ of the submitted designs met all three accessibility requirements.",
+      "choices": [
+        "Few",
+        "Little",
+        "A little",
+        "Much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Designs' is countable plural, so 'Few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0076",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The regional office has ____ conference rooms large enough for the annual training session.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Conference rooms' is countable plural, so 'few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0077",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "There is ____ interest in extending the pilot program beyond the current quarter.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Interest' is uncountable here, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0078",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The recruiter invited ____ applicants back for a second interview.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Applicants' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0079",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "We still have ____ time before the courier's pickup deadline.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Time' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0080",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ suppliers can meet the new packaging standard without modifying their equipment.",
+      "choices": [
+        "Few",
+        "Little",
+        "A little",
+        "Much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Suppliers' is countable plural, so 'Few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0081",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The revised contract gives the distributor ____ freedom to change retail prices.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Freedom' is uncountable here, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0082",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The technician replaced ____ worn cables before restarting the machine.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Cables' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0083",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Adding ____ insulation around the pipe should reduce heat loss.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Insulation' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0084",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Very ____ complaints were received after the billing system was updated.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Complaints' is countable plural, so 'few' is correct after 'Very'.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0085",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The committee showed ____ willingness to postpone the vote again.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Willingness' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0086",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "Please reserve ____ tables near the entrance for guests with mobility needs.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Tables' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0087",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The analyst needs ____ more data before recommending a change to the forecast.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Data' is treated as an uncountable mass noun in this business context, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0089",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The current software provides ____ protection against that newly discovered security flaw.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Protection' is uncountable here, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0090",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The warehouse supervisor set aside ____ cartons for a manual quality check.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Cartons' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0091",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "A short extension would give us ____ breathing room to finish the audit properly.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Breathing room' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0092",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ customers use the overnight drop box now that mobile deposit is available.",
+      "choices": [
+        "Few",
+        "Little",
+        "A little",
+        "Much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Customers' is countable plural, so 'Few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0093",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The startup has ____ cash available for nonessential purchases this month.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Cash' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0094",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The event planner ordered ____ extra microphones in case one failed during the presentation.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Microphones' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0095",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The clerk added ____ postage to the envelope after weighing the documents again.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Postage' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0096",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "____ errors appeared in the final report because the figures had been checked twice.",
+      "choices": [
+        "Few",
+        "Little",
+        "A little",
+        "Much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Errors' is countable plural, so 'Few' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0097",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The manager has ____ patience for repeated violations of the safety procedure.",
+      "choices": [
+        "few",
+        "little",
+        "a few",
+        "many"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Patience' is uncountable, so 'little' is correct.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0098",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The sales representative brought ____ product samples to the client meeting.",
+      "choices": [
+        "little",
+        "much",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Product samples' is countable plural, and 'a few' expresses a small positive number.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0099",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "We have ____ flexibility in the schedule, so moving the workshop by an hour is possible.",
+      "choices": [
+        "few",
+        "many",
+        "a few",
+        "a little"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Flexibility' is uncountable, and 'a little' expresses a small positive amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_det_few_vs_little_0100",
+      "version": 1,
+      "skillId": "p5.det.few_vs_little",
+      "categoryId": "determiners-quantity",
+      "sentence": "The service center receives ____ requests for paper statements since most customers switched to online billing.",
+      "choices": [
+        "few",
+        "little",
+        "a little",
+        "much"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Requests' is countable plural, so 'few' is correct.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
