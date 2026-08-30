@@ -8,15 +8,21 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed `takken-concept-default-damages` from source unit `default-damages` without modifying Phase 2/3 question content or validation state.
+Completed `takken-concept-contract-cancellation` from source unit `contract-cancellation` without modifying Phase 2/3 question content or validation state.
 
-The default-damages knowledge model contains three verified atomic knowledge items based on Civil Code Article 415 paragraph 1 and canonical unit 45:
+The contract-cancellation knowledge model contains nine verified atomic knowledge items based on Civil Code Articles 541 and 542:
 
-1. 債務の本旨に従った履行がないときの損害賠償請求。
-2. 債務の履行が不能であるときの損害賠償請求。
-3. 契約その他の債務発生原因および取引上の社会通念に照らして債務者の責めに帰することができない事由による場合の免責。
+1. 相当期間を定めた催告後、その期間内に履行がなければ解除できる原則。
+2. 催告期間経過時の不履行が契約・取引上の社会通念に照らして軽微なら催告解除できないこと。
+3. 債務全部が履行不能の場合の無催告解除。
+4. 債務全部の履行拒絶意思が明確な場合の無催告解除。
+5. 一部履行不能・一部履行拒絶で残存部分のみでは契約目的を達成できない場合の無催告による全部解除。
+6. 定期行為等で履行時期を経過した場合の無催告解除。
+7. 催告しても契約目的達成に足りる履行の見込みがないことが明らかな場合の無催告解除。
+8. 一部履行不能の場合の無催告による一部解除。
+9. 一部履行拒絶意思が明確な場合の無催告による一部解除。
 
-Canonical `takken-q-45-001` directly tests only the first rule. Canonical `takken-q-45-002` directly tests the third rule. The second rule, impossibility of performance, is therefore retained as one new explicit Phase 4.3 coverage deficit rather than being treated as covered by a question that does not directly test it.
+Canonical `takken-q-46-001` directly tests only the first rule. Canonical `takken-q-46-002` directly tests only the third rule. The remaining seven knowledge items are therefore retained as explicit Phase 4.3 coverage deficits rather than being treated as covered by broader questions.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -27,26 +33,28 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 58/113 concepts modeled
-- Canonical knowledge items: 308
-- Existing verified questions mapped: 61
-- Explicit unmapped knowledge gaps: 230
+- Phase 4.2: active — 59/113 concepts modeled
+- Canonical knowledge items: 317
+- Existing verified questions mapped: 63
+- Explicit unmapped knowledge gaps: 237
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue Phase 4.2 at `takken-concept-contract-cancellation` using source unit `contract-cancellation`.
+Continue Phase 4.2 at `takken-concept-simultaneous-performance` using source unit `risk-simultaneous-performance`.
 
-Preserve all 308 knowledge items, sixty-one current mappings, and all two hundred thirty explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
+Preserve all 317 knowledge items, sixty-three current mappings, and all two hundred thirty-seven explicit deficits. Existing verified questions may be mapped only to knowledge they directly test. Do not start Phase 4.3 yet.
 
 ## Validation note
 
-Canonical unit 45 fact `u45-f1` contains two independently testable Article 415 paragraph 1 triggers: nonperformance according to the tenor of the obligation and impossibility of performance. They are stored as separate atomic knowledge items. Fact `u45-f2` supports the separate no-attribution exception.
+Canonical unit 46 fact `u46-f1` directly supports the Civil Code Article 541 demand-and-expiry principle. The Article 541 minor-breach proviso is a separate atomic rule supported directly by the Civil Code statute and is intentionally left without a fabricated core-fact reference.
 
-Existing `takken-q-45-001` asks only the nonperformance branch and does not directly test impossibility of performance. Existing `takken-q-45-002` directly tests the no-attribution exception. The question-knowledge map therefore maps those two verified questions only to the rules they actually test and leaves the impossibility item unmapped.
+Canonical unit 46 fact `u46-f2` directly supports the Article 542 total-impossibility no-demand case and notes that other statutory cases exist. The remaining Article 542 grounds are modeled directly from the statute and intentionally use no fabricated sourceFactId.
 
-The default-damages knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, Civil Code statute sourcing, valid `u45-f1` / `u45-f2` provenance, and the expected three-item count.
+Existing `takken-q-46-001` asks only the ordinary demand requirement and does not directly test the minor-breach bar. Existing `takken-q-46-002` asks only total impossibility and does not directly test the other Article 542 grounds. The question-knowledge map therefore adds exactly those two mappings and leaves seven deficits.
+
+The contract-cancellation knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, Civil Code statute sourcing, valid `u46-f1` / `u46-f2` provenance where present, and the expected nine-item count.
 
 ## publication invariant
 
