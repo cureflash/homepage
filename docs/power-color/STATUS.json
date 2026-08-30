@@ -21,23 +21,24 @@
       "rejected": 0
     },
     "authoring_questions": {
-      "generated": 48,
-      "checked": 48,
-      "verified": 48,
+      "generated": 55,
+      "checked": 55,
+      "verified": 55,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0,
-      "checkpoint": "pc3.conventional.color_to_name 0017-0064"
+      "checkpoint": "pc3.conventional.color_to_name 0017-0071"
     },
     "micro_skills": {
       "implemented": 2,
       "planned_minimum": 13
     },
     "conventional_coverage": {
-      "color_to_name_unique_master_colors_covered": 56,
+      "color_to_name_unique_master_colors_covered": 63,
       "color_to_name_target": 64,
+      "color_to_name_useful_state_space_complete": true,
       "color_to_name_deferred_master_refs": ["c3-conventional-052"],
-      "color_to_name_deferred_reason": "c3-conventional-052 スカイブルー and c3-conventional-017 空色 currently share displayHex #8ED1E0, so a monitor-only color-to-name item would be ambiguous under the canonical QA rule.",
+      "color_to_name_deferred_reason": "c3-conventional-052 スカイブルー and c3-conventional-017 空色 share the current authoritative reference displayHex #8ED1E0, so a monitor-only color-to-name item is ambiguous and is excluded from useful state-space completion.",
       "name_to_color_unique_master_colors_covered": 8,
       "name_to_color_target": 64
     }
@@ -50,5 +51,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue pc3.conventional.color_to_name at question 0065 with c3-conventional-057. Keep c3-conventional-052 deferred unless an authoritative source or non-ambiguous presentation resolves the identical display reference; do not force a monitor-only ambiguous question. Generate pending first, independently QA against grade3-colors.json, keep verdicts individual, then update coverage."
+  "next": "Begin pc3.conventional.name_to_color authoring at question 0017 with c3-conventional-002 珊瑚色, the first master color not already covered by the 8 verified runtime name-to-color questions. Generate pending first, independently QA against grade3-colors.json, keep verdicts individual, and preserve the shared-engine/runtime separation."
 }
