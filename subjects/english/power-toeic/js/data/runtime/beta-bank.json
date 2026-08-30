@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T08:22:13.458Z",
+  "generatedAt": "2026-08-30T09:21:06.955Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 2425,
-    "runtimeQuestionCount": 2425,
+    "approvedCandidateCount": 2450,
+    "runtimeQuestionCount": 2450,
     "quarantinedNearDuplicateCount": 0,
-    "qaRecordCount": 99
+    "qaRecordCount": 100
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -31349,6 +31349,431 @@
       "skillId": "p5.rel.where_vs_when",
       "categoryId": "pronouns-relatives",
       "sentence": "The branch office ____ regional sales data are compiled will move to a larger building next spring.",
+      "choices": [
+        "where",
+        "when",
+        "which",
+        "who"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0076",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The distribution center ____ online orders are packed operates around the clock.",
+      "choices": [
+        "where",
+        "when",
+        "which",
+        "who"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0077",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The morning ____ the safety inspection begins, all delivery vehicles must use the south gate.",
+      "choices": [
+        "which",
+        "when",
+        "who",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0078",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The office ____ warranty claims are processed has added two customer-service specialists.",
+      "choices": [
+        "who",
+        "when",
+        "where",
+        "which"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0079",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The date ____ the supplier contract expires is printed on the first page of the agreement.",
+      "choices": [
+        "where",
+        "which",
+        "who",
+        "when"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0080",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The workshop ____ technicians repair industrial pumps recently installed a new ventilation system.",
+      "choices": [
+        "where",
+        "when",
+        "which",
+        "who"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0081",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The quarter ____ advertising expenses are usually highest begins in October.",
+      "choices": [
+        "who",
+        "when",
+        "where",
+        "which"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0082",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The reception area ____ visitors receive security badges will be renovated next month.",
+      "choices": [
+        "when",
+        "which",
+        "where",
+        "who"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0083",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The moment ____ the backup generator starts will be recorded automatically by the control system.",
+      "choices": [
+        "which",
+        "who",
+        "where",
+        "when"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0084",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The branch ____ small-business loans are reviewed has expanded its advisory team.",
+      "choices": [
+        "where",
+        "who",
+        "when",
+        "which"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0085",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The week ____ the new accounting software is introduced will include daily support sessions.",
+      "choices": [
+        "where",
+        "when",
+        "which",
+        "who"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0086",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The loading zone ____ refrigerated trucks wait has been moved away from the main entrance.",
+      "choices": [
+        "which",
+        "who",
+        "where",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0087",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The evening ____ the awards ceremony takes place, shuttle buses will run every fifteen minutes.",
+      "choices": [
+        "who",
+        "where",
+        "which",
+        "when"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0088",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The studio ____ product photographs are taken now uses energy-efficient lighting.",
+      "choices": [
+        "where",
+        "when",
+        "which",
+        "who"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0089",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The year ____ the retailer began overseas shipping was also its most profitable year.",
+      "choices": [
+        "which",
+        "when",
+        "who",
+        "where"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0090",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The customer lounge ____ passengers can charge their devices is next to Gate 12.",
+      "choices": [
+        "who",
+        "when",
+        "where",
+        "which"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0091",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The period ____ annual performance reviews are conducted starts in late January.",
+      "choices": [
+        "where",
+        "which",
+        "who",
+        "when"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0092",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The storage room ____ replacement parts are kept is accessible only to maintenance staff.",
+      "choices": [
+        "where",
+        "who",
+        "when",
+        "which"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0093",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The afternoon ____ the legal team signs the final documents has been reserved for the closing meeting.",
+      "choices": [
+        "who",
+        "when",
+        "where",
+        "which"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0094",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The clinic ____ employees receive annual health checks is located across from the cafeteria.",
+      "choices": [
+        "when",
+        "which",
+        "where",
+        "who"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0095",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The day ____ discounted conference registration ends is approaching quickly.",
+      "choices": [
+        "which",
+        "who",
+        "where",
+        "when"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0096",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The factory floor ____ robotic arms assemble the frames is closed to unauthorized visitors.",
+      "choices": [
+        "where",
+        "when",
+        "which",
+        "who"
+      ],
+      "correctIndex": 0,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0097",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The month ____ the lease renewal is due is shown in the property management system.",
+      "choices": [
+        "where",
+        "when",
+        "which",
+        "who"
+      ],
+      "correctIndex": 1,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0098",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The interview room ____ applicants meet the hiring panel has been moved to the third floor.",
+      "choices": [
+        "which",
+        "who",
+        "where",
+        "when"
+      ],
+      "correctIndex": 2,
+      "explanation": "The antecedent refers to a place, so 'where' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0099",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The time ____ the last commuter train departs varies on weekends.",
+      "choices": [
+        "who",
+        "where",
+        "which",
+        "when"
+      ],
+      "correctIndex": 3,
+      "explanation": "The antecedent refers to a time or occasion, so 'when' correctly introduces the relative clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_rel_where_vs_when_0100",
+      "version": 1,
+      "skillId": "p5.rel.where_vs_when",
+      "categoryId": "pronouns-relatives",
+      "sentence": "The service depot ____ damaged rental vehicles are inspected will reopen after the electrical upgrade.",
       "choices": [
         "where",
         "when",
