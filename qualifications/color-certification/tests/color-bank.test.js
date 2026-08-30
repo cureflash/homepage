@@ -4,7 +4,7 @@ import test from 'node:test';
 import { InMemoryQuestionBank } from '../../../subjects/english/power-toeic/js/data/question-bank-adapter.js';
 import { QuizSession } from '../../../subjects/english/power-toeic/js/core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/english/power-toeic/js/core/workout-builder.js';
-import { getAnswerFeedbackModel } from '../js/color-choice-renderer.js';
+import { getAnswerFeedbackModel, getChoiceRevealModels, readableTextColor } from '../js/color-choice-renderer.js';
 
 const colors = JSON.parse(await readFile(new URL('../data/grade3-colors.json', import.meta.url), 'utf8'));
 const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
@@ -82,6 +82,24 @@ test('answer feedback names the correct color for name-to-color questions', () =
   assert.equal(feedback.name, colorById.get(question.colorRef).name);
   assert.equal(feedback.showSwatch, false);
   assert.equal(feedback.title, `正解：${colorById.get(question.colorRef).name}`);
+});
+
+test('name-to-color feedback reveals every choice color name after answering', () => {
+  const colorById = new Map(colors.colors.map((color) => [color.id, color]));
+  const question = runtime.questions.find((entry) => entry.presentation.kind === 'choice_colors');
+  const reveals = getChoiceRevealModels(question, colorById);
+  assert.equal(reveals.length, 4);
+  reveals.forEach((reveal, index) => {
+    const ref = question.presentation.choiceColorRefs[index];
+    assert.equal(reveal.colorRef, ref);
+    assert.equal(reveal.name, colorById.get(ref).name);
+    assert.equal(reveal.displayHex, colorById.get(ref).displayHex);
+  });
+});
+
+test('revealed swatch labels choose readable dark/light text', () => {
+  assert.equal(readableTextColor('#FCEEEB'), '#111111');
+  assert.equal(readableTextColor('#134A63'), '#ffffff');
 });
 
 test('Power TOEIC shared repository/workout/session engine runs a color question', () => {
