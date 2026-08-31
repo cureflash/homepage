@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-31T00:15:36.462Z",
+  "generatedAt": "2026-08-31T01:16:01.477Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 3584,
-    "runtimeQuestionCount": 3581,
+    "approvedCandidateCount": 3632,
+    "runtimeQuestionCount": 3629,
     "quarantinedNearDuplicateCount": 3,
-    "qaRecordCount": 146
+    "qaRecordCount": 148
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -56164,6 +56164,822 @@
       ],
       "correctIndex": 1,
       "explanation": "'Brief' is an adjective meaning concise.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0051",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The director will speak ____ about the reorganization before taking questions.",
+      "choices": [
+        "brief",
+        "short",
+        "briefly",
+        "shortage"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Briefly' is the adverb meaning for a short time or in few words.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0052",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The factory experienced a temporary parts ____ after one supplier suspended production.",
+      "choices": [
+        "short",
+        "shortly",
+        "brief",
+        "shortage"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'shortage' is a situation in which there is not enough of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0053",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new employee will begin work ____ after completing the required safety orientation.",
+      "choices": [
+        "shortly",
+        "short",
+        "shortage",
+        "briefly"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Shortly' means soon.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0054",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supervisor asked the team to ____ the cause of the repeated equipment failures.",
+      "choices": [
+        "decide",
+        "determine",
+        "settle",
+        "solve"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Determine' means establish or find out something through investigation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0056",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The maintenance engineer was able to ____ the network problem within an hour.",
+      "choices": [
+        "settle",
+        "decide",
+        "determine",
+        "solve"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Solve' means find an answer to a problem.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0058",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manager asked each department to ____ its spending for the next quarter.",
+      "choices": [
+        "esteem",
+        "estimate",
+        "establish",
+        "assume"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Estimate' means make an approximate calculation or judgment of an amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0059",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company plans to ____ a new regional office in Sendai next year.",
+      "choices": [
+        "estimate",
+        "assume",
+        "establish",
+        "esteem"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Establish' means set up an organization, office, or system.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0060",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "We cannot ____ that every customer has read the revised terms.",
+      "choices": [
+        "establish",
+        "estimate",
+        "consume",
+        "assume"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Assume' means accept something as true without proof.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0061",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new packaging is designed to ____ less plastic than the previous version.",
+      "choices": [
+        "consume",
+        "assume",
+        "resume",
+        "presume"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Consume' means use up a resource.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0062",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Production will ____ on Monday after the electrical inspection is completed.",
+      "choices": [
+        "assume",
+        "resume",
+        "consume",
+        "presume"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Resume' means begin again after a pause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0063",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised timetable is intended to ____ delays during the morning rush.",
+      "choices": [
+        "deduce",
+        "produce",
+        "reduce",
+        "induce"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Reduce' means make something smaller in amount or degree.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0064",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The analysis allowed the team to ____ that demand would remain strong through the summer.",
+      "choices": [
+        "reduce",
+        "induce",
+        "produce",
+        "deduce"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Deduce' means reach a conclusion by reasoning from available information.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0065",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The factory can ____ up to 2,000 units per day at full capacity.",
+      "choices": [
+        "produce",
+        "induce",
+        "reduce",
+        "deduce"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Produce' means manufacture or create goods.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0066",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company will ____ a survey to measure employee satisfaction after the reorganization.",
+      "choices": [
+        "induct",
+        "conduct",
+        "deduct",
+        "construct"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Conduct' means carry out an activity such as a survey.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0067",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Payroll will ____ the cost of optional parking permits from employees' monthly salaries.",
+      "choices": [
+        "conduct",
+        "induct",
+        "deduct",
+        "reduce"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Deduct' means subtract an amount from a total or payment.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0068",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All visitors must be ____ by an employee while inside the research facility.",
+      "choices": [
+        "accomplished",
+        "accounted",
+        "accustomed",
+        "accompanied"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Accompanied' means going together with another person.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0069",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The engineering team ____ the installation ahead of schedule despite several delivery delays.",
+      "choices": [
+        "accomplished",
+        "accompanied",
+        "accounted",
+        "accustomed"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Accomplished' means successfully completed or achieved something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0070",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance manager asked that every expense be properly ____ for before the audit.",
+      "choices": [
+        "accompanied",
+        "accounted",
+        "accomplished",
+        "accustomed"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Accounted for' means explained or recorded.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0071",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "New employees quickly become ____ to the company's flexible scheduling system.",
+      "choices": [
+        "accounted",
+        "accompanied",
+        "accustomed",
+        "accomplished"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Accustomed to' means familiar with something through experience.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0072",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company plans to ____ a new customer-feedback platform in September.",
+      "choices": [
+        "lunch",
+        "lounge",
+        "latch",
+        "launch"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Launch' means introduce or start a new product, service, or initiative.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0073",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The contract is ____ for renewal at the end of the fiscal year.",
+      "choices": [
+        "due",
+        "dew",
+        "do",
+        "dual"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Due for' means expected or scheduled to happen.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0074",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales figures remained ____ throughout the first half of the year.",
+      "choices": [
+        "stationary",
+        "stable",
+        "stationery",
+        "staple"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Stable' means not changing greatly.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0075",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The office manager ordered additional ____ for the new employees' desks.",
+      "choices": [
+        "stationary",
+        "stable",
+        "stationery",
+        "staple"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Stationery' means writing and office supplies such as paper and envelopes.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0076",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ that all expense reports are signed before submitting them to accounting.",
+      "choices": [
+        "ensure",
+        "assure",
+        "insure",
+        "reassure"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Ensure' means make certain that something happens or is true.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0077",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The account manager ____ the client that the replacement parts would arrive by Friday.",
+      "choices": [
+        "ensured",
+        "assured",
+        "insured",
+        "secured"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Assured' means told someone confidently in order to remove doubt.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0078",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company ____ the warehouse against fire damage before storing valuable equipment there.",
+      "choices": [
+        "assured",
+        "ensured",
+        "insured",
+        "reassured"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Insured' means provided insurance coverage against a specified risk.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0079",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "After a six-month trial, the board voted to formally ____ the new code of conduct.",
+      "choices": [
+        "adapt",
+        "adept",
+        "adjust",
+        "adopt"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Adopt' means formally accept and begin using a policy, plan, or practice.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0080",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The scheduling software can ____ to sudden changes in staffing levels.",
+      "choices": [
+        "adapt",
+        "adopt",
+        "adept",
+        "accept"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Adapt to' means adjust to changed conditions.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0081",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The customer service desk is open every weekday ____ national holidays.",
+      "choices": [
+        "accept",
+        "except",
+        "expect",
+        "excerpt"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Except' introduces something excluded from a general statement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0082",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier agreed to ____ the revised payment terms without further negotiation.",
+      "choices": [
+        "expect",
+        "except",
+        "accept",
+        "excerpt"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Accept' means agree to receive or approve something offered.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0083",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Unexpected shipping delays may ____ the delivery dates shown in the current schedule.",
+      "choices": [
+        "effect",
+        "effective",
+        "affection",
+        "affect"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Affect' is the verb meaning influence or cause a change in something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0084",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised advertising campaign had an immediate ____ on online sales.",
+      "choices": [
+        "effect",
+        "affect",
+        "effective",
+        "affection"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Effect' is a noun meaning a result or consequence.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0085",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The ____ reason for postponing the launch was a delay in safety certification.",
+      "choices": [
+        "principle",
+        "principal",
+        "principally",
+        "principled"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Principal' as an adjective means main or most important.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0086",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Customer privacy is a guiding ____ of the company's data-handling policy.",
+      "choices": [
+        "principal",
+        "principally",
+        "principle",
+        "principled"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Principle' is a noun meaning a fundamental rule or belief.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0087",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The human resources department is hiring additional ____ for the new distribution center.",
+      "choices": [
+        "personal",
+        "personality",
+        "personally",
+        "personnel"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Personnel' means the employees or staff of an organization.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0088",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees should not leave ____ belongings in the conference room overnight.",
+      "choices": [
+        "personal",
+        "personnel",
+        "personally",
+        "personality"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Personal' describes something belonging to or concerning an individual person.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0089",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warm wood panels ____ the neutral colors used throughout the renovated lobby.",
+      "choices": [
+        "compliment",
+        "complement",
+        "complimentary",
+        "complementary"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Complement' as a verb means combine well with something and enhance it.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0090",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "A customer wrote to ____ the staff on their prompt handling of her request.",
+      "choices": [
+        "complement",
+        "complimentary",
+        "compliment",
+        "complementary"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Compliment' as a verb means express praise or admiration.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0091",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Online sales are expected to ____ during the holiday shopping season.",
+      "choices": [
+        "raise",
+        "arise",
+        "raised",
+        "rise"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Rise' is an intransitive verb meaning increase or move upward.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0092",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer plans to ____ prices only if raw-material costs continue to increase.",
+      "choices": [
+        "raise",
+        "rise",
+        "arise",
+        "raised"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Raise' is a transitive verb meaning cause something to increase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0093",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Of the two proposals, the ____ offers a shorter implementation schedule.",
+      "choices": [
+        "later",
+        "latter",
+        "latest",
+        "last"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Latter' refers to the second of two people or things just mentioned.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0094",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Customers should download the ____ version of the mobile application before contacting support.",
+      "choices": [
+        "later",
+        "latter",
+        "latest",
+        "lately"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Latest' means the most recent.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0095",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "____ lowering operating costs, the new system reduces the time needed to process orders.",
+      "choices": [
+        "Beside",
+        "Beside of",
+        "Besides of",
+        "Besides"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Besides' can mean in addition to and is followed here by a gerund phrase.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0096",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The document scanner is located ____ the reception desk on the first floor.",
+      "choices": [
+        "beside",
+        "besides",
+        "besides of",
+        "beside of"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Beside' means next to or at the side of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0097",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised program will benefit small retailers, ____ those with limited warehouse space.",
+      "choices": [
+        "specially",
+        "especially",
+        "special",
+        "specific"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Especially' means particularly or above all, fitting the group singled out here.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0098",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The Tokyo and Osaka offices opened in 2018 and 2020, ____.",
+      "choices": [
+        "respectfully",
+        "respective",
+        "respectively",
+        "respectful"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Respectively' links items in two lists in the same order.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0099",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The monitoring system recorded temperature data ____ for 24 hours without interruption.",
+      "choices": [
+        "continual",
+        "continuation",
+        "continually",
+        "continuously"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Continuously' means without interruption, which is explicitly required by the context.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0100",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Once the safety inspection is complete, the installation team may ____ with the final testing stage.",
+      "choices": [
+        "proceed",
+        "precede",
+        "process",
+        "procedure"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Proceed with' means continue with or begin the stated activity.",
       "validationStatus": "verified",
       "betaCandidate": true
     },

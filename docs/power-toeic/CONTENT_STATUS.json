@@ -4,22 +4,22 @@
   "taxonomy_version": "part5-v1.0",
   "taxonomy_micro_skill_count": 44,
   "generated_question_count": 4400,
-  "checked_question_count": 4350,
-  "pending_validation_count": 50,
-  "verified_question_count": 4249,
-  "needs_revision_count": 101,
+  "checked_question_count": 4400,
+  "pending_validation_count": 0,
+  "verified_question_count": 4297,
+  "needs_revision_count": 103,
   "rejected_question_count": 0,
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun","p5.pos.adverb_modifies_verb","p5.pos.noun_in_noun_slot","p5.pos.adjective_after_linking_verb","p5.pos.adverb_modifies_adjective","p5.pos.participle_adjective_ed_ing","p5.pos.word_form_subject_position","p5.pos.word_form_object_position","p5.verb.subject_verb_agreement","p5.verb.present_vs_past","p5.verb.present_perfect_vs_past","p5.verb.active_vs_passive","p5.verb.modal_base_form","p5.verb.to_infinitive_pattern","p5.verb.gerund_pattern","p5.verb.causative_have_make_let","p5.verb.conditional_form","p5.verb.participle_clause","p5.conn.preposition_vs_conjunction","p5.conn.because_vs_because_of","p5.conn.despite_vs_although","p5.conn.during_vs_while","p5.conn.by_vs_until","p5.conn.for_vs_since","p5.conn.time_prepositions","p5.conn.logical_conjunction","p5.pron.subject_vs_object","p5.pron.possessive_forms","p5.pron.reflexive","p5.rel.who_vs_which","p5.rel.whose","p5.rel.where_vs_when","p5.pron.indefinite_agreement","p5.det.article_choice","p5.det.countable_number","p5.det.much_vs_many","p5.det.few_vs_little","p5.det.another_other_others","p5.vocab.verb_noun_collocation","p5.vocab.adjective_noun_collocation","p5.vocab.preposition_collocation","p5.vocab.phrasal_verb","p5.vocab.business_context","p5.vocab.confusing_words"
   ],
-  "current_batch": "2026-08-31-scheduled-122-confusing-words-part2",
+  "current_batch": "2026-08-31-scheduled-124-confusing-words-part4",
   "current_micro_skill": null,
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 0,
-  "next_resume_id": null,
-  "next_micro_skill": null,
+  "next_resume_id": "p5_pos_adverb_modifies_adjective_0020",
+  "next_micro_skill": "p5.pos.adverb_modifies_adjective",
   "generation_complete": true,
   "validation_complete": false,
-  "last_run_result": "Generation remained stopped at 4,400/4,400 questions and 44/44 micro-skills because generation_complete is true. Reviewed the oldest 100 unchecked items: p5.vocab.business_context 0051-0100 (50) and p5.vocab.confusing_words 0001-0050 (50): 100 checked, 97 verified, 3 needs_revision, 0 rejected. Quarantined p5_vocab_confusing_words_0014, 0028, and 0039 for multiple defensible answers. Cumulative QA is 4,350 checked, 4,249 verified, 101 needs_revision, 0 rejected; unchecked pending_validation is 50. Next QA p5_vocab_confusing_words_0051.",
-  "updated_at": "2026-08-31T00:12:00Z"
+  "last_run_result": "Generation remained stopped at 4,400/4,400 questions and 44/44 micro-skills because generation_complete is true. Reviewed the final 50 unchecked pending items, p5.vocab.confusing_words 0051-0100: 50 checked, 48 verified, 2 needs_revision, 0 rejected. Quarantined p5_vocab_confusing_words_0055 because both determine whether and decide whether are natural, and p5_vocab_confusing_words_0057 because both settle and solve can defensibly collocate with a dispute. Cumulative QA is 4,400 checked, 4,297 verified, 103 needs_revision, 0 rejected; unchecked pending_validation is 0. The run ended below 100 checked only because the pending_validation backlog is exhausted. validation_complete remains false until the needs_revision queue is repaired and independently rechecked. Next revision resume ID: p5_pos_adverb_modifies_adjective_0020.",
+  "updated_at": "2026-08-31T01:13:00Z"
 }
