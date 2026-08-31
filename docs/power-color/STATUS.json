@@ -1,6 +1,6 @@
 {
   "project": "power-color",
-  "phase": "grade3_scheme_identification_authoring_verified",
+  "phase": "grade3_scheme_identification_promotion_ready_tone_authority_rechecked",
   "grade": 3,
   "grade3": {
     "conventional_color_master": {
@@ -64,7 +64,13 @@
       },
       "tone_difference": {
         "skill": "pc3.relation.tone_difference",
-        "status": "blocked_pending_authoritative_tone_distance_or_adjacency_model"
+        "status": "blocked_pending_authoritative_grade3_classification_boundaries",
+        "authority_audit": {
+          "source": "https://www.jcri.jp/square/journal/pccs_revision",
+          "checked": "2026-08-31",
+          "finding": "JCRI states conventional PCCS has no algorithm defining relationships among tones; visual tone-map layout must not be converted into an invented distance/adjacency model.",
+          "detailed_pccs_substitution_prohibited": true
+        }
       },
       "value_gradient": {
         "skill": "pc3.value.gradient",
@@ -110,18 +116,15 @@
     "micro_skills": {"implemented_runtime": 7, "promotion_ready": 1, "planned_minimum": 13}
   },
   "current_run": {
-    "checkpoints_completed": 4,
-    "generated": 24,
-    "checked": 48,
-    "verified": 48,
+    "checkpoints_completed": 1,
+    "generated": 0,
+    "checked": 0,
+    "verified": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "hue_difference: 12 verified authoring records rechecked and promoted 163->175",
-      "value_gradient: 12 pending-first records generated and independently verified",
-      "value_gradient: 12 records rechecked and promoted 175->187",
-      "scheme_identification: 12 pending-first records generated and independently verified from four already confirmed rules"
+      "tone_difference authority audit: current JCRI source confirms conventional PCCS lacks a tone-relationship algorithm, so no visual-layout-derived distance/adjacency model was encoded"
     ]
   },
   "engine_integration": {
@@ -132,5 +135,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote the 12 CI-cleared pc3.scheme.identification records record-identically into grade3-runtime.json and require runtime 199 verified / pending 0 with exact-equality and shared-engine gates. Do not expand into contrast-tone or named hue-difference classification until current authoritative boundaries are acquired, and continue blocking monitor-facing PCCS questions until authoritative display references exist."
+  "next": "Promote the 12 CI-cleared pc3.scheme.identification records record-identically into grade3-runtime.json and require runtime 199 verified / pending 0 with exact-equality and shared-engine gates. For tone_difference/contrast-tone, require an explicit current Grade 3 classification boundary; do not derive a distance graph from the conventional PCCS tone-map layout or substitute the detailed-PCCS algorithm. Continue blocking monitor-facing PCCS questions until authoritative display references exist."
 }
