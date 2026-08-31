@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
+import { getAnswerFeedbackModel } from '../js/color-choice-renderer.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const master = JSON.parse(fs.readFileSync(path.resolve(here, '../data/grade3-pccs-structure.json'), 'utf8'));
@@ -55,4 +56,16 @@ test('Complementary-hue batch has balanced answer positions and no monitor-color
     assert.equal('presentation' in q, false);
   }
   assert.deepEqual(counts, [3, 3, 3, 3]);
+});
+
+test('Text-only PCCS questions produce answer feedback without a display-color dependency', () => {
+  for (const q of batch.questions) {
+    const feedback = getAnswerFeedbackModel(q, new Map());
+    assert.equal(feedback.kind, 'text');
+    assert.equal(feedback.title, `正解：${q.choices[q.correctIndex]}`);
+    assert.equal(feedback.name, q.choices[q.correctIndex]);
+    assert.equal(feedback.colorRef, null);
+    assert.equal(feedback.showSwatch, false);
+    assert.equal(feedback.explanation, q.explanation);
+  }
 });
