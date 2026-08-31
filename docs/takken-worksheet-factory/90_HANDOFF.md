@@ -8,20 +8,19 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Started canonical concept `takken-concept-ordinary-land-lease-term` from source unit `land-lease-right`.
+Completed canonical concept `takken-concept-ordinary-land-lease-term` from source unit `land-lease-right`.
 
-Borrowed Land and Building Lease Act Article 3 was independently checked against e-Gov and split into two atomic verified knowledge items:
+The two previously staged Article 3 knowledge items remain unchanged:
 
 1. the ordinary land lease initial term is 30 years when no longer term is agreed
 2. if the contract stipulates a term longer than 30 years, that stipulated period is the initial term
 
-The new canonical file is:
+Verified `takken-q-52-001` was reconciled into the central `power-question-knowledge-map.js` and mapped only to:
 
-- `qualifications/takken/data/power-knowledge-items-ordinary-land-lease-term.js`
+- `takken-k-ordinary-land-lease-term-thirty-years`
+- `takken-k-ordinary-land-lease-term-longer-contract-controls`
 
-Both items carry stable IDs, `examYear: 2026`, `lawAsOf: 2026-04-01`, verified factcheck status, the e-Gov Borrowed Land and Building Lease Act source, source unit `land-lease-right`, and source fact `u52-f1`.
-
-Existing verified `takken-q-52-001` directly tests both rules. The central `power-question-knowledge-map.js` has deliberately not yet been changed in this checkpoint, so this concept is not counted complete yet and both staged items remain explicit mapping deficits.
+The mapping validator was advanced from 73 to 74 mapped existing questions, the two Article 3 knowledge IDs were added to its known set, and the ordinary-land-lease-term concept was added to the allowed mapped concept set. The two temporary mapping deficits are therefore closed.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -32,29 +31,26 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 66/113 completed concepts
+- Phase 4.2: active — 67/113 completed concepts
 - Canonical knowledge items staged: 349
-- Existing verified questions mapped: 73
-- Explicit unmapped knowledge gaps before q52 mapping: 254
+- Existing verified questions mapped: 74
+- Explicit unmapped knowledge gaps: 252
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Finish `takken-concept-ordinary-land-lease-term` by mapping verified `takken-q-52-001` only to:
+Continue with `takken-concept-land-lease-opposability` from source unit `land-lease-right`.
 
-- `takken-k-ordinary-land-lease-term-thirty-years`
-- `takken-k-ordinary-land-lease-term-longer-contract-controls`
-
-After that mapping passes the central validator, increment the completed concept/mapped-question counts and reduce the two temporary mapping gaps, then advance to `takken-concept-land-lease-opposability` from the same source unit.
+Independently verify Borrowed Land and Building Lease Act Article 10 as of 2026-04-01, decompose the opposability rule into atomic knowledge items, then map verified `takken-q-52-002` only to the items it directly tests.
 
 Do not start Phase 4.3 until all 113 canonical concepts have been decomposed and existing verified-question mappings have been reconciled.
 
 ## Validation note
 
-The legal source rule was checked against e-Gov Borrowed Land and Building Lease Act Article 3. The source unit `u52-f1` and verified `takken-q-52-001` state the same two-part rule. No Phase 2/3 question content was modified.
+The existing q52-001 evidence is verified and directly states both Article 3 branches: the default 30-year period and the longer contractual period rule. No Phase 2/3 question content was modified.
 
-The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statutory primary source, canonical concept ID, and source-fact provenance limited to `u52-f1`.
+The central map continues to reject duplicate question IDs, duplicate knowledge refs, unknown knowledge IDs, unexpected concept IDs, and any source question not already verified.
 
 ## publication invariant
 
