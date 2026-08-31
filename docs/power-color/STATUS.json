@@ -1,6 +1,6 @@
 {
   "project": "power-color",
-  "phase": "grade3_same_tone_authoring_verified",
+  "phase": "grade3_same_tone_runtime_promoted",
   "grade": 3,
   "grade3": {
     "conventional_color_master": {
@@ -108,12 +108,23 @@
           "run": 33379830006,
           "conclusion": "success"
         },
-        "runtime_status": "promotion_ready",
-        "next": "Promote all 12 records record-identically, add runtime skill/promotion gates, and require runtime 151 verified / pending 0."
+        "runtime_status": "promoted",
+        "runtime_promotion": {
+          "status": "complete",
+          "promotedRecords": 12,
+          "recordLevelEqualityGate": true,
+          "runtimeGate": "qualifications/color-certification/tests/pccs-same-tone-runtime-promotion.test.js",
+          "expectedRuntimeTotal": 151,
+          "sharedEngineGate": true,
+          "workflow": "Power Color tests",
+          "run": 33384827586,
+          "conclusion": "success"
+        },
+        "next": "Re-audit current official Grade 3/PCCS authority for a deterministic non-visual same-hue formulation before creating that skill."
       }
     },
     "runtime_questions": {
-      "verified": 139,
+      "verified": 151,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0
@@ -125,7 +136,7 @@
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0,
-      "status": "111 conventional authoring records plus 12 complementary-hue records plus 12 same-tone records are independently verified; complementary-hue is already promoted, same-tone is CI-cleared and awaiting record-identical runtime promotion."
+      "status": "111 conventional authoring records plus 12 complementary-hue records plus 12 same-tone records are independently verified; both PCCS relation batches are promoted record-identically to runtime."
     },
     "conventional_corpus_qa": {
       "status": "complete",
@@ -149,7 +160,7 @@
       "post_promotion_test_conclusion": "success"
     },
     "micro_skills": {
-      "implemented_runtime": 3,
+      "implemented_runtime": 4,
       "verified_authoring": 2,
       "planned_minimum": 13
     },
@@ -167,7 +178,7 @@
     }
   },
   "current_run": {
-    "generated": 12,
+    "generated": 0,
     "checked": 12,
     "verified": 12,
     "needs_revision": 0,
@@ -182,5 +193,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote the 12 CI-cleared pc3.relation.same_tone records record-identically into grade3-runtime.json, add runtime skill/promotion/shared-engine gates, and require the full Power Color regression suite to pass with runtime 151 verified / pending 0."
+  "next": "Re-audit the current official Grade 3 sample/scope and PCCS notation authority specifically for a deterministic non-visual pc3.relation.same_hue formulation. Implement only if it can be independently derived from source-confirmed notation without unverified hue names or monitor RGB/HEX; otherwise leave it pending and proceed only to another relation skill with an explicit primary-source rule."
 }

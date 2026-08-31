@@ -42,10 +42,10 @@ function questionFingerprint(question) {
   });
 }
 
-test('Grade 3 conventional runtime slice remains 127 verified questions inside the 139-question bank', () => {
+test('Grade 3 conventional runtime slice remains 127 verified questions inside the 151-question bank', () => {
   assert.equal(authoringFiles.length, 14, `Unexpected authoring file count: ${authoringFiles.join(', ')}`);
   assert.equal(authoringQuestions.length, 111);
-  assert.equal(runtimeQuestions.length, 139);
+  assert.equal(runtimeQuestions.length, 151);
   assert.equal(conventionalRuntimeQuestions.length, 127);
   assert.equal(conventionalRuntimeQuestions.filter((question) => question.validationStatus === 'verified').length, 127);
   assert.equal(runtimeQuestions.filter((question) => question.validationStatus === 'pending_validation').length, 0);

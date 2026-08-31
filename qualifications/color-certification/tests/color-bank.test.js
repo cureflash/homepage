@@ -25,18 +25,16 @@ test('Grade 3 conventional-color master contains 64 stable records', () => {
   for (const color of colors.colors) assert.match(color.displayHex, /^#[0-9A-F]{6}$/);
 });
 
-test('runtime bank exposes 139 verified questions and validates each presentation domain', () => {
+test('runtime bank exposes 151 verified questions and validates each presentation domain', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
   const colorByName = new Map(colors.colors.map((color) => [color.name, color]));
-  assert.equal(runtime.questions.length, 139);
+  assert.equal(runtime.questions.length, 151);
   assert.equal(new Set(runtime.questions.map((question) => question.id)).size, runtime.questions.length);
   for (const question of runtime.questions) {
     assert.equal(question.validationStatus, 'verified');
     assert.equal(question.choices.length, 4);
     assert.equal(new Set(question.choices).size, 4);
-    if (question.skillId === 'pc3.pccs.complementary_hue_number') {
-      assert.equal(question.questionType, 'text_choice');
-      assert.equal(question.categoryId, 'pc3.pccs');
+    if (question.questionType === 'text_choice') {
       assert.equal(question.presentation, undefined);
       continue;
     }
@@ -123,7 +121,7 @@ test('verified color-to-name coverage does not reuse target master colors', () =
 
 test('answer feedback re-shows the correct color for color-to-name questions', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
-  const question = runtime.questions.find((entry) => entry.presentation.kind === 'prompt_color');
+  const question = runtime.questions.find((entry) => entry.presentation?.kind === 'prompt_color');
   const feedback = getAnswerFeedbackModel(question, colorById);
   assert.equal(feedback.name, colorById.get(question.colorRef).name);
   assert.equal(feedback.colorRef, question.colorRef);
@@ -134,7 +132,7 @@ test('answer feedback re-shows the correct color for color-to-name questions', (
 test('color-to-name feedback maps every text choice to its color card', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
   const colorByName = new Map(colors.colors.map((color) => [color.name, color]));
-  const question = runtime.questions.find((entry) => entry.presentation.kind === 'prompt_color');
+  const question = runtime.questions.find((entry) => entry.presentation?.kind === 'prompt_color');
   const reveals = getPromptChoiceSwatchModels(question, colorById);
   assert.equal(reveals.length, 4);
   reveals.forEach((reveal, index) => {
@@ -148,7 +146,7 @@ test('color-to-name feedback maps every text choice to its color card', () => {
 
 test('answer feedback names the correct color for name-to-color questions', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
-  const question = runtime.questions.find((entry) => entry.presentation.kind === 'choice_colors');
+  const question = runtime.questions.find((entry) => entry.presentation?.kind === 'choice_colors');
   const feedback = getAnswerFeedbackModel(question, colorById);
   assert.equal(feedback.name, colorById.get(question.colorRef).name);
   assert.equal(feedback.showSwatch, false);
@@ -157,7 +155,7 @@ test('answer feedback names the correct color for name-to-color questions', () =
 
 test('name-to-color feedback reveals every choice color name after answering', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
-  const question = runtime.questions.find((entry) => entry.presentation.kind === 'choice_colors');
+  const question = runtime.questions.find((entry) => entry.presentation?.kind === 'choice_colors');
   const reveals = getChoiceRevealModels(question, colorById);
   assert.equal(reveals.length, 4);
   reveals.forEach((reveal, index) => {
