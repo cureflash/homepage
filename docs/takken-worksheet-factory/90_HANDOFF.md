@@ -8,15 +8,20 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed canonical concept `takken-concept-land-lease-opposability` from source unit `land-lease-right`.
+Staged the canonical knowledge model for `takken-concept-fixed-term-land-lease` from source unit `fixed-term-land-lease`.
 
-The three previously staged, verified Borrowed Land and Building Lease Act Article 10(1) knowledge items remain unchanged:
+Borrowed Land and Building Lease Act Article 22 was decomposed into six verified atomic items:
 
-1. statutory substitute opposability can work without registration of the land lease right itself
-2. the substitute requirement is ownership of a building on the leased land for which the land lessee is registered as owner
-3. satisfying Article 10(1) allows the land lease right to be asserted against third parties
+1. the fixed-term land lease is set for 50 years or more
+2. the parties may stipulate that there is no contract renewal, including renewal by claim or continued land use
+3. the parties may stipulate that rebuilding does not extend the lease period
+4. the parties may stipulate that the Article 13 building-purchase demand will not be exercised
+5. the no-renewal etc. special agreement must be made by notarial deed or other written form
+6. a qualifying electronic record is treated as written form
 
-Verified `takken-q-52-002` was mapped in the central `power-question-knowledge-map.js` only to those three items. The central map's known knowledge IDs, allowed concept IDs, mapped-question count guard, and q52-002 presence guard were advanced together.
+The new canonical file is `qualifications/takken/data/power-knowledge-items-fixed-term-land-lease.js`. All six items are `verified`, `examYear: 2026`, `lawAsOf: "2026-04-01"`, tied only to unit 53 source facts, and backed by the e-Gov Borrowed Land and Building Lease Act source.
+
+Existing verified `takken-q-53-001` and `takken-q-53-002` were inspected but intentionally not added to the central question-knowledge map in this checkpoint. That central map and its count/knowledge/concept guards must be advanced together in the next checkpoint.
 
 No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -28,25 +33,27 @@ No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or a
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 68/113 completed concepts
-- Canonical knowledge items: 352
+- Canonical knowledge items: 358
 - Existing verified questions mapped: 75
-- Explicit unmapped knowledge gaps: 252
+- Explicit unmapped knowledge gaps: 258
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue with `takken-concept-fixed-term-land-lease` from source unit `fixed-term-land-lease`.
+Complete `takken-concept-fixed-term-land-lease` by updating `power-question-knowledge-map.js`.
 
-Decompose only knowledge supported by 2026-04-01 primary sources, then map existing verified unit 53 questions only where they directly test those knowledge items.
+Map verified `takken-q-53-001` only to the Article 22 items that its stem/correct choice directly tests: 50-year minimum duration, no renewal, no rebuilding extension, and no Article 13 building-purchase demand.
 
-Do not start Phase 4.3 until all 113 canonical concepts have been decomposed and existing verified-question mappings have been reconciled.
+Map verified `takken-q-53-002` only to the written-form requirement and qualifying electronic-record equivalence that its stem/correct choice directly tests.
+
+Advance the central known-knowledge IDs, allowed concept IDs, mapping-count guard, and unit-53 presence guards together. After validation passes, mark the concept complete and continue to the next canonical concept. Do not start Phase 4.3.
 
 ## Validation note
 
-`takken-q-52-002` is independently verified and asks how a land lease right without its own registration can be asserted against a third party. Its correct choice states ownership of a building on the land registered in the land lessee's name, which directly exercises all three staged Article 10(1) items. The central mapping therefore contains exactly those three knowledge refs and no broader claims.
+The 2026-04-01 primary-source model is intentionally more atomic than the legacy unit fact. `u53-f1` bundles duration plus three effects; `u53-f2` bundles written form plus electronic-record equivalence. The six-item split prevents later 50-question expansion from treating those distinct rules as a single opaque fact.
 
-The central mapping guards now require 75 mapped questions through q52-002 and require q52-002 to be present.
+Existing `takken-q-53-001` directly exercises the four `u53-f1` items in its correct choice. Existing `takken-q-53-002` directly exercises both `u53-f2` items. Neither question should be mapped to broader Article 22 claims beyond those six items.
 
 ## publication invariant
 
