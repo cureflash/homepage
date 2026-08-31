@@ -33,6 +33,7 @@ jobs:
           git rm qualifications/color-certification/scripts/promote-complementary-runtime-once.cjs
           git add qualifications/color-certification/data/grade3-runtime.json
           git add qualifications/color-certification/tests/color-bank.test.js
+          git add qualifications/color-certification/tests/conventional-corpus-gate.test.js
           git add qualifications/color-certification/tests/pccs-complementary-hue-runtime-promotion.test.js
           git add docs/power-color/STATUS.json
           git add docs/power-color/20_EXECUTION_PLAN.md
