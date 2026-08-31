@@ -8,15 +8,18 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Started `takken-concept-heirs-order` from source unit `inheritance-heirs-shares` and completed the knowledge-extraction half of the concept checkpoint.
+Completed `takken-concept-heirs-order` by reconciling the five already-verified canonical knowledge items with the existing independently verified Phase 2/3 questions.
 
-Created five verified atomic knowledge items from the Civil Code provisions used by the source unit: spouse always being an heir; children as the first blood-relative rank; lineal ascendants as the second rank when the first rank is absent; siblings as the third rank when the first two ranks are absent; and the one-half / one-half statutory shares when spouse and children inherit together.
+`takken-q-56-001` directly states that the spouse is always an heir and tests the blood-relative order of children, lineal ascendants and siblings. It is therefore mapped only to:
 
-All five items use the 2026-04-01 e-Gov Civil Code source and retain source fact references to `u56-f1` or `u56-f2`. No new questions were generated and no existing question was reclassified.
+- `takken-k-heirs-order-spouse-always-heir`
+- `takken-k-heirs-order-children-first-rank`
+- `takken-k-heirs-order-lineal-ascendants-second-rank`
+- `takken-k-heirs-order-siblings-third-rank`
 
-Existing verified `takken-q-56-001` and `takken-q-56-002` have not yet been added to the central question-knowledge map. The five new items therefore remain explicit Phase 4.3 coverage deficits until the next checkpoint performs direct-evidence mapping.
+`takken-q-56-002` directly tests only the statutory one-half / one-half shares for spouse and children and is therefore mapped only to `takken-k-heirs-order-spouse-child-half-each`.
 
-No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or app linkage were created.
+The central question-knowledge map now knows the five heirs-order IDs, permits `takken-concept-heirs-order`, requires 82 mapped verified questions through `takken-q-56-002`, and has an explicit unit-56 presence guard. No existing Phase 2/3 question content was modified and no Phase 4.3 work was started.
 
 ## Status after this run
 
@@ -25,16 +28,16 @@ No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or a
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 71/113 completed concepts
+- Phase 4.2: active — 72/113 completed concepts
 - Canonical knowledge items: 369
-- Existing verified questions mapped: 80
-- Explicit unmapped knowledge gaps: 258
+- Existing verified questions mapped: 82
+- Explicit unmapped knowledge gaps: 253
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Map verified `takken-q-56-001` and `takken-q-56-002` only to the five `takken-concept-heirs-order` knowledge items they directly test, update the central known-ID/concept/count/presence guards, then mark `takken-concept-heirs-order` complete. Keep Phase 4.3 blocked.
+Start `takken-concept-statutory-inheritance-shares` from source unit `inheritance-heirs-shares`. Extract only canonical statutory-share knowledge that belongs to that concept, then map existing verified evidence only where a question directly tests it. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
