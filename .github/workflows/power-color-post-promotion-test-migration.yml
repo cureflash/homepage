@@ -1,0 +1,36 @@
+name: Power Color post-promotion test migration
+
+on:
+  push:
+    branches:
+      - power-color/promote-grade3-conventional-runtime
+    paths:
+      - 'qualifications/color-certification/scripts/update-post-promotion-test-baselines.mjs'
+      - '.github/workflows/power-color-post-promotion-test-migration.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: power-color/promote-grade3-conventional-runtime
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Update historical runtime baselines after promotion
+        run: node qualifications/color-certification/scripts/update-post-promotion-test-baselines.mjs
+      - name: Commit migrated tests
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qualifications/color-certification/tests
+          if git diff --cached --quiet; then
+            echo 'No test changes produced.'
+            exit 1
+          fi
+          git commit -m 'Power Color: align checkpoint tests with promoted runtime'
+          git push origin HEAD:power-color/promote-grade3-conventional-runtime
