@@ -8,19 +8,19 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed existing-question reconciliation for `takken-concept-statutory-inheritance-shares`.
+Started `takken-concept-inheritance-deliberation` from source unit `inheritance-acceptance-renunciation` and completed the canonical knowledge extraction checkpoint.
 
-The five canonical Civil Code Article 900 knowledge items added in the previous checkpoint remain unchanged:
+Added five verified Civil Code knowledge items:
 
-- spouse + children: spouse 1/2, children collectively 1/2
-- spouse + lineal ascendants: spouse 2/3, lineal ascendants collectively 1/3
-- spouse + siblings: spouse 3/4, siblings collectively 1/4
-- multiple same-rank children, lineal ascendants or siblings: equal shares as the principle
-- half-blood sibling: one-half of a full-blood sibling's share
+- the three-month deliberation period, starting when the heir learns that succession has opened to that heir
+- the three statutory choices during that period: unconditional acceptance, qualified acceptance, or renunciation
+- extension of the period by the family court at the request of an interested party or the public prosecutor
+- the heir may investigate the estate before acceptance or renunciation
+- renunciation must be declared to the family court
 
-Existing verified-question evidence was reviewed without changing Phase 2/3 content. `takken-q-56-002` directly tests the spouse/child one-half rule but is already uniquely mapped under the completed `takken-concept-heirs-order`. No additional existing verified question directly tests any of the five statutory-share items. Therefore no mapping was duplicated, reassigned, or newly added. All five items remain explicit Phase 4.3 question deficits.
+Primary source is the Civil Code as applicable on `2026-04-01`, using Articles 915 and 938. The existing unit's `u57-f1` supports the period and three-choice items, while `u57-f2` supports the family-court renunciation item. The extension and estate-investigation items are canonical statute-level expansions and therefore intentionally have no sourceFactId.
 
-The concept reconciliation is now complete and the next Phase 4.2 concept is `takken-concept-inheritance-deliberation`, sourced from `inheritance-acceptance-renunciation`.
+No Phase 2/3 question content was changed. Existing verified `takken-q-57-001` and `takken-q-57-002` were inspected but not mapped in this checkpoint; mapping remains the exact next task so that evidence is not inferred merely from shared source facts.
 
 ## Status after this run
 
@@ -30,15 +30,15 @@ The concept reconciliation is now complete and the next Phase 4.2 concept is `ta
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 73/113 completed concepts
-- Canonical knowledge items: 374
+- Canonical knowledge items: 379
 - Existing verified questions mapped: 82
-- Explicit unmapped knowledge gaps: 258
+- Explicit unmapped knowledge gaps: 263
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Start `takken-concept-inheritance-deliberation` from source unit `inheritance-acceptance-renunciation`. Extract canonical knowledge items for the three-month deliberation period and directly related acceptance/renunciation rules from verified primary sources. Then reconcile only existing verified questions that genuinely test those items. Keep Phase 4.3 blocked.
+Reconcile verified `takken-q-57-001` and `takken-q-57-002` against the five `takken-concept-inheritance-deliberation` knowledge items. Map only what each question directly tests. In particular, do not credit the period-extension or pre-choice estate-investigation items unless an existing verified question directly measures them. Then complete the concept and advance to the next Phase 4.2 concept. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
