@@ -8,13 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Started `takken-concept-building-lease-term` from source unit `building-lease-right` and verified its scope against Borrowed Land and Building Lease Act Article 29 as of 2026-04-01.
+Completed `takken-concept-building-lease-term`.
 
-Added one atomic verified knowledge item: `takken-k-building-lease-term-less-than-one-year-deemed-indefinite`. It records that a building lease expressly set for less than one year is deemed to have no fixed term.
+Mapped existing verified `takken-q-54-002` only to `takken-k-building-lease-term-less-than-one-year-deemed-indefinite`. The central question-knowledge map was advanced atomically: known knowledge IDs, allowed concept IDs, mapping count, full-coverage guard, and unit-54 presence guard now include this mapping.
 
-The existing verified `takken-q-54-002` directly tests exactly this Article 29 rule. It has not yet been added to the central question-knowledge map in this checkpoint, so the concept remains incomplete.
-
-`takken-q-54-001` is not evidence for this concept: it tests Article 31 building-lease opposability, which is already normalized under `takken-concept-building-lease-opposability`.
+`takken-q-54-001` remains excluded from this concept because it tests Article 31 building-lease opposability, already normalized under `takken-concept-building-lease-opposability`.
 
 No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -25,22 +23,16 @@ No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or a
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 69/113 completed concepts
+- Phase 4.2: active — 70/113 completed concepts
 - Canonical knowledge items: 359
-- Existing verified questions mapped: 77
-- Explicit unmapped knowledge gaps: 253
+- Existing verified questions mapped: 78
+- Explicit unmapped knowledge gaps: 252
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Map verified `takken-q-54-002` only to `takken-k-building-lease-term-less-than-one-year-deemed-indefinite` in `power-question-knowledge-map.js`, and advance the central known-knowledge, allowed-concept, mapping-count, full-coverage, and unit-54 presence guards together.
-
-After that mapping validates, mark `takken-concept-building-lease-term` complete and continue with `takken-concept-fixed-term-building-lease` from source unit `fixed-term-building-lease`.
-
-## Validation note
-
-The source unit contains both Article 31 opposability (`u54-f1`) and Article 29 short-term treatment (`u54-f2`). The concept inventory deliberately separates those subjects. This checkpoint therefore stages only `u54-f2` under `building-lease-term` and does not duplicate the already-completed Article 31 knowledge model.
+Begin `takken-concept-fixed-term-building-lease` from source unit `fixed-term-building-lease`. Verify its atomic knowledge items against primary law sources as of 2026-04-01, then map only existing verified questions that directly test those items.
 
 ## publication invariant
 
