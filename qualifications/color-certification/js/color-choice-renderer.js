@@ -1,8 +1,23 @@
 export function getAnswerFeedbackModel(question, colors) {
+  const kind = question?.presentation?.kind ?? 'text';
+
+  if (kind === 'text') {
+    const answer = question?.choices?.[question?.correctIndex];
+    if (answer === undefined) throw new Error('Text answer choice is missing');
+    return Object.freeze({
+      kind,
+      title: `正解：${answer}`,
+      name: String(answer),
+      reading: null,
+      colorRef: null,
+      showSwatch: false,
+      explanation: question.explanation
+    });
+  }
+
   const target = colors.get(question?.colorRef);
   if (!target) throw new Error(`Unknown answer color ref: ${question?.colorRef}`);
 
-  const kind = question?.presentation?.kind;
   if (kind === 'prompt_color') {
     return Object.freeze({
       kind,
@@ -27,15 +42,7 @@ export function getAnswerFeedbackModel(question, colors) {
     });
   }
 
-  return Object.freeze({
-    kind: kind ?? 'text',
-    title: '正解',
-    name: target.name,
-    reading: target.reading,
-    colorRef: target.id,
-    showSwatch: false,
-    explanation: question.explanation
-  });
+  throw new Error(`Unsupported Power Color presentation kind: ${kind}`);
 }
 
 export function getChoiceRevealModels(question, colors) {
