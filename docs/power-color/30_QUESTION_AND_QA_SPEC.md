@@ -3,6 +3,8 @@
 ## Runtime shape
 Use the frozen Power TOEIC V1 required fields. Add color presentation metadata only as optional fields.
 
+Text-only PCCS relationship questions do not require monitor swatches or conventional-color `colorRef`. Their answer identity must be derived from canonical PCCS structure/notation facts, and the renderer must use text feedback without attempting display-color lookup.
+
 ## Micro-skill IDs
 Grade 3 conventional colors:
 - `pc3.conventional.color_to_name`
@@ -26,8 +28,8 @@ For every question:
 1. Ignore the stored proposed/correct answer initially.
 2. Resolve the correct color/name/attribute from the canonical master/source.
 3. Check all four choices for uniqueness and unintended alternative correctness.
-4. Confirm `colorRef` and presentation refs exist.
-5. Resolve all display colors from the canonical master; question records must not carry a second conflicting hex authority.
+4. For visual questions, confirm `colorRef` and presentation refs exist. For text-only PCCS relationships, confirm all structural refs resolve to the canonical PCCS master instead.
+5. Resolve all display colors from the canonical master; question records must not carry a second conflicting hex authority. Text-only questions must not introduce a display-value dependency.
 6. Confirm the skill actually measures one intended ability.
 7. Then compare with stored `correctIndex`.
 8. Mark `verified`, `needs_revision`, or `rejected`.
