@@ -1,6 +1,6 @@
 {
   "project": "power-color",
-  "phase": "grade3_pccs_relations_authoring",
+  "phase": "grade3_pccs_runtime_promotion_ready",
   "grade": 3,
   "grade3": {
     "conventional_color_master": {"target": 64, "ingested": 64, "status": "complete"},
@@ -48,11 +48,12 @@
         "coverage": "12/12 unique opposite hue pairs",
         "derivation": "For source-confirmed hue positions 1-24, complementary hue is the position 12 steps opposite.",
         "gate_test": "qualifications/color-certification/tests/pccs-complementary-hue-authoring.test.js",
-        "runtime_status": "not_promoted"
+        "ci_gate": {"workflow": "Power Color tests", "run": 33361968699, "conclusion": "success"},
+        "runtime_status": "promotion_ready"
       }
     },
     "runtime_questions": {"verified": 127, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "authoring_questions": {"generated": 123, "checked": 123, "verified": 123, "pending": 0, "needs_revision": 0, "rejected": 0, "status": "127 conventional runtime complete plus 12 verified PCCS complementary-hue authoring questions awaiting promotion"},
+    "authoring_questions": {"generated": 123, "checked": 123, "verified": 123, "pending": 0, "needs_revision": 0, "rejected": 0, "status": "127 conventional runtime complete plus 12 verified PCCS complementary-hue authoring questions with CI gate green and awaiting runtime promotion"},
     "conventional_corpus_qa": {
       "status": "complete",
       "questions_checked": 127,
@@ -88,9 +89,9 @@
       "consistency_gate_passed": true
     }
   },
-  "current_run": {"generated": 12, "checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0},
+  "current_run": {"generated": 0, "checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0},
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "implemented_beta"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Run the complementary-hue batch gate and shared Power Color regressions through CI, then promote this verified non-visual skill only if all gates pass. In parallel, continue authoritative acquisition for the 24 Japanese hue names/readings and current PCCS representative sRGB values; do not generate monitor-facing PCCS questions before those values are sourced."
+  "next": "Promote the 12 CI-cleared complementary-hue records into grade3-runtime.json and rerun promotion/shared-engine regressions. Continue authoritative acquisition for the 24 Japanese hue names/readings and current PCCS representative sRGB values; do not generate monitor-facing PCCS questions before those values are sourced."
 }
