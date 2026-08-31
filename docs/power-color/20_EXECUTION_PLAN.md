@@ -40,7 +40,8 @@ Non-visual relationship work may proceed only where the source contract permits 
   - [x] Independently recompute all 12 answers from the master; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0.
   - [x] Balance correct positions A/B/C/D = 3/3/3/3 and verify no monitor-color dependency.
   - [x] Add `pccs-complementary-hue-authoring.test.js` for pair coverage, derivation, source refs, choice uniqueness, answer correctness, pending-first audit metadata, and answer-position balance.
-  - [ ] Run CI/shared-engine regressions and promote the 12 verified records to runtime only if green.
+  - [x] Run CI/shared-engine regressions: `Power Color tests` run `33361968699` completed successfully on the authoring commit.
+  - [ ] Promote the 12 verified records to `grade3-runtime.json`, then rerun promotion and shared-engine regression gates.
 - [ ] Same hue / same tone.
 - [ ] Hue-difference / tone-difference.
 - [ ] 配色判定.
