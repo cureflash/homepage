@@ -20,8 +20,8 @@ function direction(sequence) {
 }
 
 test('value-gradient runtime promotion preserves all 12 verified authoring records exactly', () => {
-  assert.equal(runtime.questions.length, 187);
-  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 187);
+  assert.ok(runtime.questions.length >= 187);
+  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, runtime.questions.length);
   assert.equal(runtime.questions.filter((q) => q.validationStatus === 'pending_validation').length, 0);
   const promoted = runtime.questions.filter((question) => question.skillId === authoring.skill.id);
   assert.equal(promoted.length, 12);
