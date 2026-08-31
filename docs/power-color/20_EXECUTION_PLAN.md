@@ -50,8 +50,8 @@ Non-visual relationship work may proceed only where the source contract permits 
   - [x] Independently resolve the anchor tone from `grade3-pccs-structure.json` and re-derive the unique matching choice; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0.
   - [x] Balance correct positions A/B/C/D = 3/3/3/3 and keep the batch monitor-independent.
   - [x] Add `pccs-same-tone-authoring.test.js` for 12-tone coverage, independent notation parsing, source/hue refs, answer uniqueness, pending-first audit metadata, answer-position balance, and text-feedback regression.
-  - [ ] Require `Power Color tests` CI success before runtime promotion.
-  - [ ] Promote the 12 records record-identically only after CI clears.
+  - [x] `Power Color tests` run `33379830006` completed successfully; authoring is cleared for record-identical runtime promotion.
+  - [ ] Promote the 12 records record-identically and add runtime promotion/shared-engine gates.
 - [ ] Hue-difference / tone-difference.
 - [ ] 配色判定.
 - [ ] 明度グラデーション.
