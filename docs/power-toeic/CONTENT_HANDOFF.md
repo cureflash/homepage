@@ -6,8 +6,8 @@
 - Fully generated micro-skills: 44 / 44.
 - Generated questions: 4,400 / 4,400.
 - Checked: 4,400.
-- Verified: 4,315.
-- Needs revision: 85.
+- Verified: 4,324.
+- Needs revision: 76.
 - Rejected: 0.
 - Unchecked `pending_validation`: 0.
 - `generation_complete`: `true`.
@@ -17,20 +17,21 @@
 
 None. Generation remains stopped because all 44 micro-skills have reached their target counts.
 
-## This run — revision audit
+## This run — revision
 
-Reconciled the next historical quarantine records against the actual stored question choices before making any question rewrite.
+Reconciled the complete historical `p5.verb.present_vs_past` revision set against the actual stored questions. All nine flags were genuine tense-anchor ambiguities, not fabricated-distractor false positives.
 
-Five quarantines were false positives in the historical QA records:
+Repaired and independently re-solved:
 
-- `p5_pos_adjective_after_linking_verb_0037`-`0040`: historical QA claimed `secure` competed with `secured`, but `secured` is not a stored choice. `secure` is unique in all four actual questions.
-- `p5_pos_word_form_subject_position_0038`: historical QA claimed `security` competed with gerund `securing`, but `securing` is not a stored choice. The actual choices are `securely / secured / secure / security`, making `security` unique.
+- `0017`: `throughout the workday` → `throughout each workday`.
+- `0022`: added `routinely` to make the standing practice explicit.
+- `0057`, `0062`, `0074`, `0080`, `0083`, `0085`, `0094`: added explicit `last ...` completed-past anchors.
 
-All five were independently rechecked and verified. No question-data rewrite was required; the two historical QA records were corrected.
+All nine revised items have one clear answer, their stored proposed answers remain correct, and explanations were aligned with the strengthened cues. No new exact duplicate was introduced; the repairs only strengthen tense anchors without creating new scenario templates.
 
-Result: 5 checked / 5 verified / 0 needs_revision / 0 rejected. Cumulative state is 4,315 verified / 85 needs_revision / 0 rejected, with unchecked `pending_validation` still 0.
+Result: 9 checked / 9 verified / 0 needs_revision / 0 rejected. Cumulative state: 4,324 verified / 76 needs_revision / 0 rejected / pending_validation 0.
 
-This run stopped below 100 because the fabricated-distractor findings are a concrete QA-integrity issue. Remaining historical quarantine reasons must be reconciled against actual stored choices before repair; mechanically applying stale QA notes could corrupt valid questions.
+The run stopped below 100 because this completed the entire `present_vs_past` revision set. The next unresolved skill is a separate 20-item `present_perfect_vs_past` ambiguity pattern and requires its own source-batch repair plus independent revalidation rather than partially marking items verified.
 
 ## Next generation
 
@@ -38,4 +39,4 @@ None. `generation_complete: true`; do not generate additional Part 5 questions.
 
 ## Next QA
 
-Continue at `p5_verb_present_vs_past_0017`. Its actual stored stem (`throughout the workday`) does not uniquely distinguish present `tracks` from past `tracked`, so it remains a confirmed repair target. `validation_complete` stays `false` until all remaining 85 revision items are repaired or cleared by source-grounded re-audit and independently rechecked.
+Resume at `p5_verb_present_perfect_vs_past_0001`. Historical QA identifies 20 ambiguous present-perfect cues in IDs 0001-0045 (`already`, `during the current quarter`, `this year`, `recently`) that must be repaired against the actual stored source and then independently re-solved. `validation_complete` remains `false` until the remaining 76 revision items are resolved.

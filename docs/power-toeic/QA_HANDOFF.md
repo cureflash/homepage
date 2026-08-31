@@ -3,28 +3,29 @@
 ## Current QA state
 
 - Checked: 4,400
-- Verified: 4,315
-- Needs revision: 85
+- Verified: 4,324
+- Needs revision: 76
 - Rejected: 0
 - Unchecked `pending_validation`: 0
 - `generation_complete`: `true`
 - `validation_complete`: `false`
 
-## This run — source-grounded revision audit
+## This run — source-grounded revision
 
-Before rewriting quarantined questions, compared each historical QA reason with the actual stored stem and four choices.
+Compared the complete historical `p5.verb.present_vs_past` quarantine set with the actual stored stems and choices. All nine flags were real tense-anchor ambiguities.
 
-Five historical quarantines were false positives and are now verified:
+Repairs:
 
-- `p5_pos_adjective_after_linking_verb_0037`-`0040`: old QA reason depended on `secured`, which is absent from the stored choices. `secure` is uniquely grammatical among the actual options.
-- `p5_pos_word_form_subject_position_0038`: old QA reason depended on `securing`, which is absent from the stored choices. `security` is uniquely grammatical among the actual options.
+- `0017`: strengthened the recurring cue to `throughout each workday`.
+- `0022`: added `routinely`.
+- `0057`, `0062`, `0074`, `0080`, `0083`, `0085`, `0094`: added explicit `last ...` completed-past anchors.
 
-The corresponding historical QA files were corrected. No production question text was changed.
+Each revised item was then re-solved from stem + choices before checking the stored answer/explanation. All nine now have a unique intended answer and were reclassified verified. Revision record: `2026-08-31-revision-003-present-vs-past.qa.json`.
 
-Result: 5 checked / 5 verified / 0 needs_revision / 0 rejected.
+Result: 9 checked / 9 verified / 0 needs_revision / 0 rejected. Cumulative: 4,324 verified / 76 needs_revision / 0 rejected / pending 0.
 
-This run stopped below 100 because the stale QA records contain fabricated distractors. That is a QA-integrity issue: remaining quarantine reasons must be checked against source data before any rewrite so valid questions are not damaged.
+This run stopped below 100 because the entire `present_vs_past` revision set was exhausted. The next unresolved block is a distinct 20-item `present_perfect_vs_past` ambiguity pattern that must be repaired and independently revalidated as its own source-grounded set.
 
 ## Next QA
 
-Resume at `p5_verb_present_vs_past_0017`. This is a confirmed real ambiguity in the actual source: `throughout the workday` does not force present `tracks` over past `tracked`. Then continue the historical revision queue in source order. Keep `validation_complete: false` until all remaining 85 items are resolved and independently rechecked.
+Resume exactly at `p5_verb_present_perfect_vs_past_0001`, then continue the 20 historical flags in IDs 0001-0045. Keep `validation_complete: false` until all remaining 76 revision items are resolved.
