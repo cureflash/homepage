@@ -54,12 +54,14 @@ Non-visual relationship work may proceed only where deterministic derivation is 
   - [x] Promote the 12 records record-identically; runtime reached 175 verified / pending 0. Workflow run `33387836920` succeeded.
   - [x] Record JCRI first-party implementation evidence in `41_RELATION_BOUNDARY_AUDIT.md`: official software/report examples confirm named hue-relation classification exists and include adjacent/similar examples, but do not expose the complete boundary table.
   - [x] Recheck the current 2026 Color Certification Association Grade 3 sample/level/official-text pages and current JCRI PCCS pages; `中差色相配色` remains explicitly in current Grade 3 scope, but the public first-party web material still does not expose the complete named hue-boundary table.
-  - [ ] Encode named hue-difference classes only after current authoritative complete boundary evidence is acquired; do not extrapolate from official sample images, the three official sample colors, tone-map geometry, or secondary material.
+  - [x] Open and visually verify the current Association-hosted official Grade 3 text TOC; the hue-relation source target is now narrowed to official-text pp.72–83 (`色相に共通性がある配色` / `色相にやや違いがある配色` / `色相に対照性がある配色`).
+  - [ ] Encode named hue-difference classes only after current authoritative complete boundary evidence is acquired from those exact official-text pages or equivalent first-party material; do not extrapolate from official sample images, the three official sample colors, tone-map geometry, or secondary material.
 - [ ] Tone difference.
   - [x] Recheck current JCRI authority: conventional PCCS does not define an algorithm for relationships among tones; do not derive distance/adjacency from the tone-map layout.
   - [x] Record JCRI first-party implementation evidence in `41_RELATION_BOUNDARY_AUDIT.md`: official software/report examples confirm same/similar tone classification exists, but do not expose the complete pair-membership/boundary table or contrast-tone rule.
   - [x] Recheck the current 2026 Color Certification Association Grade 3 sample; `対照トーン配色` remains explicitly tested, but its complete current pair-membership rule is not published on the located first-party web pages.
-  - [ ] Acquire the exact current Grade 3 tone-difference / contrast-tone classification boundary before encoding this skill. The remaining source route is current official text/manual/card material or auditable current first-party software output, not inference from public examples.
+  - [x] Open and visually verify the current Association-hosted official Grade 3 text TOC; the tone-relation source target is now narrowed to official-text pp.84–89 (`トーン共通の配色` / `トーン対照の配色`).
+  - [ ] Acquire the exact current Grade 3 tone-difference / contrast-tone classification boundary from those pages or equivalent first-party material before encoding this skill.
 - [ ] 配色判定.
   - [x] Same-tone and same-hue deterministic sub-relations are independently testable from canonical notation.
   - [x] Define a deterministic `pc3.scheme.identification` subset using only same tone, same hue, complementary hue, and value gradient.
