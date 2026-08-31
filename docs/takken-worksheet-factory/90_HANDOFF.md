@@ -8,7 +8,9 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Started `takken-concept-statutory-inheritance-shares` from source unit `inheritance-heirs-shares` and added five canonical knowledge items from Civil Code Article 900:
+Completed existing-question reconciliation for `takken-concept-statutory-inheritance-shares`.
+
+The five canonical Civil Code Article 900 knowledge items added in the previous checkpoint remain unchanged:
 
 - spouse + children: spouse 1/2, children collectively 1/2
 - spouse + lineal ascendants: spouse 2/3, lineal ascendants collectively 1/3
@@ -16,9 +18,9 @@ Started `takken-concept-statutory-inheritance-shares` from source unit `inherita
 - multiple same-rank children, lineal ascendants or siblings: equal shares as the principle
 - half-blood sibling: one-half of a full-blood sibling's share
 
-All five use the 2026-04-01 e-Gov Civil Code as the primary statutory source and are stored as verified canonical knowledge. Only the spouse/child item has `u56-f2` as a direct source fact; the four Article 900 rules not stated in the old core-fact unit intentionally have no `sourceFactIds` rather than falsely attributing them to `u56-f2`.
+Existing verified-question evidence was reviewed without changing Phase 2/3 content. `takken-q-56-002` directly tests the spouse/child one-half rule but is already uniquely mapped under the completed `takken-concept-heirs-order`. No additional existing verified question directly tests any of the five statutory-share items. Therefore no mapping was duplicated, reassigned, or newly added. All five items remain explicit Phase 4.3 question deficits.
 
-Existing question mappings were intentionally unchanged. `takken-q-56-002` is already uniquely mapped under completed `takken-concept-heirs-order`; this checkpoint does not duplicate or reassign that question and does not change any Phase 2/3 question content.
+The concept reconciliation is now complete and the next Phase 4.2 concept is `takken-concept-inheritance-deliberation`, sourced from `inheritance-acceptance-renunciation`.
 
 ## Status after this run
 
@@ -27,7 +29,7 @@ Existing question mappings were intentionally unchanged. `takken-q-56-002` is al
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 72/113 completed concepts
+- Phase 4.2: active — 73/113 completed concepts
 - Canonical knowledge items: 374
 - Existing verified questions mapped: 82
 - Explicit unmapped knowledge gaps: 258
@@ -36,7 +38,7 @@ Existing question mappings were intentionally unchanged. `takken-q-56-002` is al
 
 ## Exact next start
 
-Reconcile existing verified-question evidence for `takken-concept-statutory-inheritance-shares`. Do not duplicate or reassign `takken-q-56-002`. Map only another existing verified question if it directly tests one or more of the five canonical share items. If no such question exists, retain all five as explicit Phase 4.3 deficits, mark the concept reconciliation complete, and advance to `takken-concept-inheritance-deliberation`. Keep Phase 4.3 blocked.
+Start `takken-concept-inheritance-deliberation` from source unit `inheritance-acceptance-renunciation`. Extract canonical knowledge items for the three-month deliberation period and directly related acceptance/renunciation rules from verified primary sources. Then reconcile only existing verified questions that genuinely test those items. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
