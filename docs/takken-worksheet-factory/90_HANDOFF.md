@@ -8,15 +8,13 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed `takken-concept-fixed-term-building-lease` existing-question mapping.
+Started `takken-concept-heirs-order` from source unit `inheritance-heirs-shares` and completed the knowledge-extraction half of the concept checkpoint.
 
-Mapped verified `takken-q-55-001` only to the two knowledge items it directly tests: no-renewal/period-expiry structure and the required written/electronic contract form.
+Created five verified atomic knowledge items from the Civil Code provisions used by the source unit: spouse always being an heir; children as the first blood-relative rank; lineal ascendants as the second rank when the first rank is absent; siblings as the third rank when the first two ranks are absent; and the one-half / one-half statutory shares when spouse and children inherit together.
 
-Mapped verified `takken-q-55-002` only to the two knowledge items it directly tests: the lessor's pre-contract explanation duty and invalidity of the no-renewal term when the required explanation is omitted.
+All five items use the 2026-04-01 e-Gov Civil Code source and retain source fact references to `u56-f1` or `u56-f2`. No new questions were generated and no existing question was reclassified.
 
-Did not map `takken-k-fixed-term-building-lease-prior-explanation-form`, because the existing question does not directly test the separate-independent explanation-document requirement. That item remains an explicit Phase 4.3 coverage gap.
-
-Updated central question-knowledge map guards to 80 mapped verified questions through q55-002 and added only the four directly covered fixed-term-building-lease knowledge IDs.
+Existing verified `takken-q-56-001` and `takken-q-56-002` have not yet been added to the central question-knowledge map. The five new items therefore remain explicit Phase 4.3 coverage deficits until the next checkpoint performs direct-evidence mapping.
 
 No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -28,15 +26,15 @@ No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or a
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 71/113 completed concepts
-- Canonical knowledge items: 364
+- Canonical knowledge items: 369
 - Existing verified questions mapped: 80
-- Explicit unmapped knowledge gaps: 253
+- Explicit unmapped knowledge gaps: 258
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Start `takken-concept-heirs-order` from source unit `inheritance-heirs-shares`. Extract atomic knowledge items from the 2026-04-01 primary law sources, then map existing verified questions only where directly tested. Keep Phase 4.3 blocked.
+Map verified `takken-q-56-001` and `takken-q-56-002` only to the five `takken-concept-heirs-order` knowledge items they directly test, update the central known-ID/concept/count/presence guards, then mark `takken-concept-heirs-order` complete. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
