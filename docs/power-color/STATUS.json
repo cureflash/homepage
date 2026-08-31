@@ -1,6 +1,6 @@
 {
   "project": "power-color",
-  "phase": "grade3_scheme_identification_promotion_ready_tone_authority_rechecked",
+  "phase": "grade3_scheme_identification_promoted",
   "grade": 3,
   "grade3": {
     "conventional_color_master": {
@@ -97,12 +97,29 @@
         "derivation": "Uses only already source-confirmed non-visual rules. Contrast-tone and named hue-difference boundaries are not inferred.",
         "authoring_gate": "qualifications/color-certification/tests/pccs-scheme-identification-authoring.test.js",
         "authoring_ci": {"workflow_run": 33388489462, "conclusion": "success"},
-        "runtime_status": "promotion_ready",
+        "duplicate_revision": {
+          "detected": 1,
+          "question": "pc3-scheme-identification-0012",
+          "collision_with": "pc3-scheme-identification-0003",
+          "cause": "same skill and identical four-choice ordering produced the same full fingerprint",
+          "resolution": "reordered distractors only, independently re-derived the answer, preserved correct index 1 and A/B/C/D balance",
+          "remaining_duplicates": 0
+        },
+        "runtime_status": "promoted",
+        "runtime_promotion": {
+          "promotedRecords": 12,
+          "recordLevelEqualityGate": true,
+          "duplicateFingerprintGate": true,
+          "sharedEngineGate": true,
+          "expectedRuntimeTotal": 199,
+          "workflow_run": 33400487901,
+          "conclusion": "success"
+        },
         "blocked_expansion": ["contrast_tone", "named_hue_difference"],
-        "next": "Promote these 12 verified records record-identically to runtime 199 before expanding the skill."
+        "next": "Continue authoritative source acquisition for contrast-tone and named hue-difference boundaries before expanding this skill."
       }
     },
-    "runtime_questions": {"verified": 187, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_questions": {"verified": 199, "pending": 0, "needs_revision": 0, "rejected": 0},
     "authoring_questions": {
       "generated": 183,
       "checked": 183,
@@ -112,19 +129,20 @@
       "rejected": 0
     },
     "conventional_corpus_qa": {"status": "complete", "questions_checked": 127, "verified": 127, "pending": 0},
-    "runtime_promotion": {"status": "conventional_plus_five_pccs_relation_value_slices_promoted", "runtime_total": 187, "record_level_equality_gate": true},
-    "micro_skills": {"implemented_runtime": 7, "promotion_ready": 1, "planned_minimum": 13}
+    "runtime_promotion": {"status": "conventional_plus_six_pccs_relation_value_scheme_slices_promoted", "runtime_total": 199, "record_level_equality_gate": true},
+    "micro_skills": {"implemented_runtime": 8, "promotion_ready": 0, "planned_minimum": 13}
   },
   "current_run": {
     "checkpoints_completed": 1,
     "generated": 0,
-    "checked": 0,
-    "verified": 0,
+    "checked": 12,
+    "verified": 12,
+    "revision_events": 1,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "tone_difference authority audit: current JCRI source confirms conventional PCCS lacks a tone-relationship algorithm, so no visual-layout-derived distance/adjacency model was encoded"
+      "pc3.scheme.identification: promotion QA found one full-fingerprint duplicate; pc3-scheme-identification-0012 was revised by distractor reordering, independently rechecked, and all 12 records were promoted record-identically to runtime 199"
     ]
   },
   "engine_integration": {
@@ -135,5 +153,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote the 12 CI-cleared pc3.scheme.identification records record-identically into grade3-runtime.json and require runtime 199 verified / pending 0 with exact-equality and shared-engine gates. For tone_difference/contrast-tone, require an explicit current Grade 3 classification boundary; do not derive a distance graph from the conventional PCCS tone-map layout or substitute the detailed-PCCS algorithm. Continue blocking monitor-facing PCCS questions until authoritative display references exist."
+  "next": "Continue Grade 3 source acquisition for the exact current tone-difference/contrast-tone and named hue-difference classification boundaries. Do not derive a distance graph from the conventional PCCS tone-map layout or substitute the detailed-PCCS algorithm. Continue blocking monitor-facing PCCS questions until authoritative display references exist."
 }
