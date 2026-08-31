@@ -3,40 +3,29 @@
 ## Current content state
 
 - Taxonomy: `part5-v1.0` — 44 micro-skills.
-- Fully generated micro-skills: 44 / 44.
 - Generated questions: 4,400 / 4,400.
 - Checked: 4,400.
-- Verified: 4,324.
-- Needs revision: 76.
+- Verified: 4,376.
+- Needs revision: 24.
 - Rejected: 0.
 - Unchecked `pending_validation`: 0.
 - `generation_complete`: `true`.
 - `validation_complete`: `false`.
 
-## This run — generation
+## Reconciled revision work
 
-None. Generation remains stopped because all 44 micro-skills have reached their target counts.
+The revision ledger has been re-audited against the actual persisted source rather than trusting historical QA notes blindly.
 
-## This run — revision
+- 35 genuine source issues were minimally repaired and independently re-solved: `p5.verb.present_perfect_vs_past` 20, `p5.verb.active_vs_passive` 5, `p5.verb.to_infinitive_pattern` 4, `p5.verb.gerund_pattern` 6.
+- 17 historical QA/source mismatches were independently re-audited and verified without changing source: `p5.conn.time_prepositions` 5, `p5.conn.logical_conjunction` 8, `p5.pron.subject_vs_object` 4.
+- No repaired item was bulk-verified; each revision QA record identifies the individually checked IDs.
 
-Reconciled the complete historical `p5.verb.present_vs_past` revision set against the actual stored questions. All nine flags were genuine tense-anchor ambiguities, not fabricated-distractor false positives.
-
-Repaired and independently re-solved:
-
-- `0017`: `throughout the workday` → `throughout each workday`.
-- `0022`: added `routinely` to make the standing practice explicit.
-- `0057`, `0062`, `0074`, `0080`, `0083`, `0085`, `0094`: added explicit `last ...` completed-past anchors.
-
-All nine revised items have one clear answer, their stored proposed answers remain correct, and explanations were aligned with the strengthened cues. No new exact duplicate was introduced; the repairs only strengthen tense anchors without creating new scenario templates.
-
-Result: 9 checked / 9 verified / 0 needs_revision / 0 rejected. Cumulative state: 4,324 verified / 76 needs_revision / 0 rejected / pending_validation 0.
-
-The run stopped below 100 because this completed the entire `present_vs_past` revision set. The next unresolved skill is a separate 20-item `present_perfect_vs_past` ambiguity pattern and requires its own source-batch repair plus independent revalidation rather than partially marking items verified.
+Result: 52 revision items resolved. Cumulative state is 4,376 verified / 24 needs_revision / 0 rejected / pending_validation 0.
 
 ## Next generation
 
-None. `generation_complete: true`; do not generate additional Part 5 questions.
+None. Generation is complete; do not generate additional Part 5 questions.
 
 ## Next QA
 
-Resume at `p5_verb_present_perfect_vs_past_0001`. Historical QA identifies 20 ambiguous present-perfect cues in IDs 0001-0045 (`already`, `during the current quarter`, `this year`, `recently`) that must be repaired against the actual stored source and then independently re-solved. `validation_complete` remains `false` until the remaining 76 revision items are resolved.
+Resume the remaining revision ledger at `p5_pron_possessive_forms_0083`, then continue in historical QA/source order until all 24 remaining items are resolved. The next known genuine issue is the possessive-form ambiguity in 0083; source must be repaired and independently re-solved before verification.
