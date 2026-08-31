@@ -8,6 +8,13 @@
     sourceType: "statute"
   });
 
+  const supremeCourtSeparateExplanation = Object.freeze({
+    id: "courts-supreme-20120913-fixed-term-building-lease",
+    label: "最高裁判所平成24年9月13日判決（平成22年（受）第1209号）",
+    url: "https://www.courts.go.jp/app/files/hanrei_jp/539/082539_hanrei.pdf",
+    sourceType: "judgment"
+  });
+
   const shared = Object.freeze({
     examYear: 2026,
     lawAsOf: "2026-04-01",
@@ -50,11 +57,11 @@
     {
       ...shared,
       knowledgeId: "takken-k-fixed-term-building-lease-prior-explanation-form",
-      claim: "定期建物賃貸借の事前説明は、更新がなく期間満了で終了する旨を記載した契約書とは別の書面等を交付して行う必要がある。",
+      claim: "定期建物賃貸借の事前説明は、契約書とは別個独立の説明書面を交付して行う必要があり、賃借人の承諾を得た電磁的方法による提供でその書面交付に代えることができる。",
       conditions: ["借地借家法38条所定の事前説明を行う場合"],
       exceptions: [],
       importance: "A",
-      primarySources: [landBuildingLeaseAct],
+      primarySources: [landBuildingLeaseAct, supremeCourtSeparateExplanation],
       sourceFactIds: ["u55-f2"]
     },
     {
@@ -75,7 +82,7 @@
     ids.add(item.knowledgeId);
     if (item.examYear !== 2026 || item.lawAsOf !== "2026-04-01" || item.factcheckStatus !== "verified") throw new Error(`Invalid knowledge item state: ${item.knowledgeId}`);
     if (item.conceptId !== "takken-concept-fixed-term-building-lease") throw new Error(`Unexpected concept id: ${item.knowledgeId}`);
-    if (!item.primarySources.every((entry) => entry.sourceType === "statute")) throw new Error(`Non-statutory primary source: ${item.knowledgeId}`);
+    if (!item.primarySources.every((entry) => entry.sourceType === "statute" || entry.sourceType === "judgment")) throw new Error(`Unexpected primary source type: ${item.knowledgeId}`);
     if (!item.sourceFactIds.every((id) => id === "u55-f1" || id === "u55-f2")) throw new Error(`Unexpected source fact id: ${item.knowledgeId}`);
   }
   if (knowledgeItems.length !== 5) throw new Error(`Expected 5 fixed-term-building-lease knowledge items, got ${knowledgeItems.length}`);
