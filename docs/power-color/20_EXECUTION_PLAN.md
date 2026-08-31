@@ -27,11 +27,14 @@
   - [x] `name_to_color` checkpoint 0065-0072: 8 generated pending-first and independently verified; 0 pending. Targets c3-056 through c3-062 and c3-064; c3-063 remains covered only by the existing runtime bank and is not reused.
   - [x] `name_to_color` authoritative master state space: 64/64 master refs covered with no target reuse.
 - [x] Independent QA for all conventional-color questions.
-  - [x] Corpus gate covers runtime 16 + authoring 111 = 127 verified questions, pending=0.
+  - [x] Corpus gate covered runtime 16 + authoring 111 = 127 verified questions, pending=0 before promotion.
   - [x] Canonical target resolution, schema/source refs, exact fingerprints, cross-bank target uniqueness, monitor-discriminable choice sets and answer-position balance pass.
   - [x] Official association 3級慣用色 reference rechecked 2026-08-31; its public RGB/hex values remain reference values, and 空色/スカイブルー both remain `8ED1E0`.
-- [ ] Promote verified authoring checkpoints into `grade3-runtime.json` only after consistency tests pass.
-- [x] Conventional-color coverage gate: both directions cover the useful authoritative master state space, pending=0, duplicates/schema/references pass; do not force a monitor-indistinguishable item merely to claim 64/64.
+- [x] Promote all 111 verified authoring records into `grade3-runtime.json`, preserving the existing 16 runtime records and two skill definitions.
+  - [x] Runtime now contains 127 verified questions, pending=0.
+  - [x] Promotion gate requires every staged record to be record-level identical to its runtime counterpart.
+- [ ] Post-promotion PR CI: require runtime `color_to_name=63`, `name_to_color=64`, pending=0, duplicate/schema/reference gates green, and shared Power TOEIC engine integration green.
+- [x] Conventional-color coverage gate: both directions cover the useful authoritative master state space; do not force a monitor-indistinguishable item merely to claim 64/64.
 
 ## Phase 2 — Grade 3 PCCS master
 - [ ] Confirm authoritative PCCS Grade 3 data/source.
