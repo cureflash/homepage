@@ -19,7 +19,6 @@ const colorById = new Map(colors.colors.map((color) => [color.id, color]));
 const colorByName = new Map(colors.colors.map((color) => [color.name, color]));
 const runtimeQuestions = runtime.questions;
 const authoringQuestions = authoringBanks.flatMap(({ bank }) => bank.questions);
-const corpus = [...runtimeQuestions, ...authoringQuestions];
 
 function distribution(questions) {
   return questions.reduce((counts, question) => {
@@ -42,18 +41,25 @@ function questionFingerprint(question) {
   });
 }
 
-test('Grade 3 conventional corpus contains the complete staged set and no pending records', () => {
+test('Grade 3 conventional runtime contains all 127 verified questions and no pending records', () => {
   assert.equal(authoringFiles.length, 14, `Unexpected authoring file count: ${authoringFiles.join(', ')}`);
-  assert.equal(runtimeQuestions.length, 16);
   assert.equal(authoringQuestions.length, 111);
-  assert.equal(corpus.length, 127);
-  assert.equal(corpus.filter((question) => question.validationStatus === 'verified').length, 127);
-  assert.equal(corpus.filter((question) => question.validationStatus === 'pending_validation').length, 0);
+  assert.equal(runtimeQuestions.length, 127);
+  assert.equal(runtimeQuestions.filter((question) => question.validationStatus === 'verified').length, 127);
+  assert.equal(runtimeQuestions.filter((question) => question.validationStatus === 'pending_validation').length, 0);
 });
 
-test('all conventional questions satisfy shared schema and canonical reference integrity', () => {
+test('all 111 staged authoring questions were promoted byte-for-byte at the record level', () => {
+  const runtimeById = new Map(runtimeQuestions.map((question) => [question.id, question]));
+  for (const staged of authoringQuestions) {
+    assert.ok(runtimeById.has(staged.id), `${staged.id} missing from runtime`);
+    assert.deepEqual(runtimeById.get(staged.id), staged, `${staged.id} changed during promotion`);
+  }
+});
+
+test('all conventional runtime questions satisfy shared schema and canonical reference integrity', () => {
   const required = ['id', 'version', 'skillId', 'categoryId', 'sentence', 'choices', 'correctIndex', 'explanation', 'validationStatus', 'colorRef', 'presentation', 'sourceRefs'];
-  for (const question of corpus) {
+  for (const question of runtimeQuestions) {
     for (const key of required) assert.ok(Object.hasOwn(question, key), `${question.id} missing ${key}`);
     assert.equal(question.categoryId, 'pc3.conventional');
     assert.ok(['pc3.conventional.color_to_name', 'pc3.conventional.name_to_color'].includes(question.skillId));
@@ -62,17 +68,12 @@ test('all conventional questions satisfy shared schema and canonical reference i
     assert.equal(new Set(question.choices).size, 4);
     assert.ok(Number.isInteger(question.correctIndex) && question.correctIndex >= 0 && question.correctIndex < 4);
     assert.ok(colorById.has(question.colorRef), `${question.id} has unknown target ${question.colorRef}`);
-    assert.ok(Array.isArray(question.sourceRefs) && question.sourceRefs.length > 0, `${question.id} lacks sourceRefs`);
-    assert.ok(question.sourceRefs.includes('aft-color-list-2022'), `${question.id} lacks the canonical conventional-color source ref`);
-  }
-  for (const question of authoringQuestions) {
-    assert.equal(typeof question.proposedAnswer, 'string', `${question.id} lacks proposedAnswer`);
-    assert.ok(question.proposedAnswer.length > 0, `${question.id} has empty proposedAnswer`);
+    assert.ok(Array.isArray(question.sourceRefs) && question.sourceRefs.includes('aft-color-list-2022'), `${question.id} lacks canonical source ref`);
   }
 });
 
-test('color-to-name questions independently resolve to the canonical target and remain monitor-discriminable', () => {
-  const questions = corpus.filter((question) => question.skillId === 'pc3.conventional.color_to_name');
+test('runtime color-to-name independently resolves 63 useful monitor-discriminable states', () => {
+  const questions = runtimeQuestions.filter((question) => question.skillId === 'pc3.conventional.color_to_name');
   assert.equal(questions.length, 63);
   for (const question of questions) {
     const target = colorById.get(question.colorRef);
@@ -86,13 +87,13 @@ test('color-to-name questions independently resolve to the canonical target and 
   }
   const targetRefs = questions.map((question) => question.colorRef);
   assert.equal(new Set(targetRefs).size, 63);
-  const missing = colors.colors.map((color) => color.id).filter((id) => !new Set(targetRefs).has(id));
-  assert.deepEqual(missing, ['c3-conventional-052']);
+  const targetSet = new Set(targetRefs);
+  assert.deepEqual(colors.colors.map((color) => color.id).filter((id) => !targetSet.has(id)), ['c3-conventional-052']);
   assertBalanced(questions, 'color_to_name');
 });
 
-test('name-to-color questions independently resolve all 64 canonical targets with discriminable choice swatches', () => {
-  const questions = corpus.filter((question) => question.skillId === 'pc3.conventional.name_to_color');
+test('runtime name-to-color independently resolves all 64 canonical targets', () => {
+  const questions = runtimeQuestions.filter((question) => question.skillId === 'pc3.conventional.name_to_color');
   assert.equal(questions.length, 64);
   for (const question of questions) {
     const target = colorById.get(question.colorRef);
@@ -119,15 +120,14 @@ test('the only duplicate master display value is the documented 空色/スカイ
     refs.push(color.id);
     refsByHex.set(color.displayHex, refs);
   }
-  const duplicateGroups = [...refsByHex.values()].filter((refs) => refs.length > 1);
-  assert.deepEqual(duplicateGroups, [['c3-conventional-017', 'c3-conventional-052']]);
+  assert.deepEqual([...refsByHex.values()].filter((refs) => refs.length > 1), [['c3-conventional-017', 'c3-conventional-052']]);
 });
 
-test('cross-bank IDs, targets, and full question fingerprints have no accidental duplicates', () => {
-  assert.equal(new Set(corpus.map((question) => question.id)).size, corpus.length);
-  assert.equal(new Set(corpus.map(questionFingerprint)).size, corpus.length);
+test('runtime IDs, targets, and full fingerprints have no accidental duplicates', () => {
+  assert.equal(new Set(runtimeQuestions.map((question) => question.id)).size, runtimeQuestions.length);
+  assert.equal(new Set(runtimeQuestions.map(questionFingerprint)).size, runtimeQuestions.length);
   for (const skillId of ['pc3.conventional.color_to_name', 'pc3.conventional.name_to_color']) {
-    const questions = corpus.filter((question) => question.skillId === skillId);
+    const questions = runtimeQuestions.filter((question) => question.skillId === skillId);
     const targetKeys = questions.map((question) => `${skillId}:${question.colorRef}`);
     assert.equal(new Set(targetKeys).size, targetKeys.length, `${skillId} reuses a target master color`);
   }
