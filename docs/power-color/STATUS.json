@@ -1,6 +1,6 @@
 {
   "project": "power-color",
-  "phase": "grade3_value_gradient_promoted",
+  "phase": "grade3_scheme_identification_authoring_verified",
   "grade": 3,
   "grade3": {
     "conventional_color_master": {
@@ -66,18 +66,11 @@
         "skill": "pc3.relation.tone_difference",
         "status": "blocked_pending_authoritative_tone_distance_or_adjacency_model"
       },
-      "scheme_identification": {
-        "skill": "pc3.scheme.identification",
-        "status": "partial_prerequisites_only",
-        "confirmed_relations": ["same_tone", "same_hue"],
-        "blocked_relations": ["contrast_tone", "named_hue_difference"],
-        "reason": "Do not infer official classification boundaries from visual layout or third-party tables."
-      },
       "value_gradient": {
         "skill": "pc3.value.gradient",
         "authoring_batch": "qualifications/color-certification/data/grade3-authoring-value-gradient-0001-0012.json",
         "generated": 12, "checked": 12, "verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0,
-        "coverage": "12 text-only monotonic stepwise lightness-sequence questions; correct-index A/B/C/D = 3/3/3/3",
+        "coverage": "12 text-only monotonic stepwise lightness-sequence questions; 6 increasing / 6 decreasing; correct-index A/B/C/D = 3/3/3/3",
         "official_sample_alignment": "Current Grade 3 official sample explicitly states that a value gradient changes lightness stepwise.",
         "authoring_ci": {"workflow_run": 33387985332, "conclusion": "success"},
         "runtime_status": "promoted",
@@ -89,26 +82,38 @@
           "workflow_run": 33388149661,
           "conclusion": "success"
         }
+      },
+      "scheme_identification": {
+        "skill": "pc3.scheme.identification",
+        "authoring_batch": "qualifications/color-certification/data/grade3-authoring-scheme-identification-0001-0012.json",
+        "generated": 12, "checked": 12, "verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0,
+        "coverage": "3 same-tone + 3 same-hue + 3 complementary-hue + 3 value-gradient identification questions; correct-index A/B/C/D = 3/3/3/3",
+        "derivation": "Uses only already source-confirmed non-visual rules. Contrast-tone and named hue-difference boundaries are not inferred.",
+        "authoring_gate": "qualifications/color-certification/tests/pccs-scheme-identification-authoring.test.js",
+        "authoring_ci": {"workflow_run": 33388489462, "conclusion": "success"},
+        "runtime_status": "promotion_ready",
+        "blocked_expansion": ["contrast_tone", "named_hue_difference"],
+        "next": "Promote these 12 verified records record-identically to runtime 199 before expanding the skill."
       }
     },
     "runtime_questions": {"verified": 187, "pending": 0, "needs_revision": 0, "rejected": 0},
     "authoring_questions": {
-      "generated": 171,
-      "checked": 171,
-      "verified": 171,
+      "generated": 183,
+      "checked": 183,
+      "verified": 183,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0
     },
     "conventional_corpus_qa": {"status": "complete", "questions_checked": 127, "verified": 127, "pending": 0},
     "runtime_promotion": {"status": "conventional_plus_five_pccs_relation_value_slices_promoted", "runtime_total": 187, "record_level_equality_gate": true},
-    "micro_skills": {"implemented_runtime": 7, "planned_minimum": 13}
+    "micro_skills": {"implemented_runtime": 7, "promotion_ready": 1, "planned_minimum": 13}
   },
   "current_run": {
     "checkpoints_completed": 4,
-    "generated": 12,
-    "checked": 36,
-    "verified": 36,
+    "generated": 24,
+    "checked": 48,
+    "verified": 48,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
@@ -116,7 +121,7 @@
       "hue_difference: 12 verified authoring records rechecked and promoted 163->175",
       "value_gradient: 12 pending-first records generated and independently verified",
       "value_gradient: 12 records rechecked and promoted 175->187",
-      "latest-main reconciliation and STATUS/HANDOFF/EXECUTION_PLAN synchronization"
+      "scheme_identification: 12 pending-first records generated and independently verified from four already confirmed rules"
     ]
   },
   "engine_integration": {
@@ -127,5 +132,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Acquire current authoritative tone-distance/contrast-tone and named hue-difference classification boundaries. Encode those models before generating tone_difference or remaining scheme_identification questions. Continue blocking monitor-facing PCCS questions until authoritative display references exist."
+  "next": "Promote the 12 CI-cleared pc3.scheme.identification records record-identically into grade3-runtime.json and require runtime 199 verified / pending 0 with exact-equality and shared-engine gates. Do not expand into contrast-tone or named hue-difference classification until current authoritative boundaries are acquired, and continue blocking monitor-facing PCCS questions until authoritative display references exist."
 }

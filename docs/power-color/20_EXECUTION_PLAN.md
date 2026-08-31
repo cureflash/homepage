@@ -56,8 +56,11 @@ Non-visual relationship work may proceed only where deterministic derivation is 
 - [ ] Tone difference.
   - [ ] Acquire current authoritative tone-distance/adjacency or contrast-tone boundaries before encoding this skill.
 - [ ] 配色判定.
-  - [x] Same-tone and same-hue deterministic sub-relations are already independently testable from canonical notation.
-  - [ ] Add contrast-tone / named hue-difference scheme identification only after their authoritative boundaries are sourced.
+  - [x] Same-tone and same-hue deterministic sub-relations are independently testable from canonical notation.
+  - [x] Define a deterministic `pc3.scheme.identification` subset using only same tone, same hue, complementary hue, and value gradient.
+  - [x] Generate and independently verify 12 pending-first text-only identification questions: 3 per confirmed rule; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3. Workflow run `33388489462` succeeded.
+  - [ ] Promote the 12 verified `pc3.scheme.identification` records record-identically and require runtime 199 verified / pending 0.
+  - [ ] Extend identification to contrast-tone / named hue-difference classes only after their authoritative boundaries are sourced.
 - [x] 明度グラデーション — deterministic text-only prerequisite slice.
   - [x] Confirm the current official Grade 3 sample explicitly describes the correct characteristic as changing lightness stepwise.
   - [x] Generate and independently verify 12 pending-first sequence questions; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
