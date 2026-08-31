@@ -34,7 +34,7 @@
 ## Phase 3 — Grade 3 relations / schemes
 Non-visual relationship work may proceed only where the source contract permits deterministic derivation from already source-confirmed master facts. It must not bypass Phase 2 display gates for visual questions.
 
-- [ ] Complementary hue.
+- [x] Complementary hue.
   - [x] Define `pc3.pccs.complementary_hue_number` as a single-skill text-only slice using the source-confirmed 24-position hue circle.
   - [x] Generate 12 pending-first questions covering all 12 unique opposite hue pairs.
   - [x] Independently recompute all 12 answers from the master; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0.
@@ -44,6 +44,14 @@ Non-visual relationship work may proceed only where the source contract permits 
   - [x] Fix the browser answer-feedback prerequisite before promotion: text-only questions no longer require a conventional-color `colorRef`; `Power Color tests` run `33370259344` passed, including all 12 complementary-hue records.
   - [x] Promote the 12 verified records record-identically to `grade3-runtime.json`; runtime is now 139 verified / pending 0, with record-equality, duplicate/schema, browser-feedback and shared-engine regression gates required by the promotion checkpoint.
 - [ ] Same hue / same tone.
+  - [ ] Same hue remains pending a separately justified non-visual formulation.
+  - [x] Define `pc3.relation.same_tone` from the official PCCS notation rule: chromatic colors are written as tone abbreviation + hue number, and the official Grade 3 sample explicitly tests 同一トーン配色.
+  - [x] Generate 12 pending-first text-choice questions, one for each source-confirmed chromatic tone.
+  - [x] Independently resolve the anchor tone from `grade3-pccs-structure.json` and re-derive the unique matching choice; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0.
+  - [x] Balance correct positions A/B/C/D = 3/3/3/3 and keep the batch monitor-independent.
+  - [x] Add `pccs-same-tone-authoring.test.js` for 12-tone coverage, independent notation parsing, source/hue refs, answer uniqueness, pending-first audit metadata, answer-position balance, and text-feedback regression.
+  - [ ] Require `Power Color tests` CI success before runtime promotion.
+  - [ ] Promote the 12 records record-identically only after CI clears.
 - [ ] Hue-difference / tone-difference.
 - [ ] 配色判定.
 - [ ] 明度グラデーション.
