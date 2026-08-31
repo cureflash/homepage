@@ -35,11 +35,12 @@ Completed checkpoints through the last completed concept: business-definition; l
 
 Current checkpoint:
 - [x] `takken-concept-building-lease-term` is complete. Existing verified `takken-q-54-002` is mapped only to `takken-k-building-lease-term-less-than-one-year-deemed-indefinite`; `takken-q-54-001` remains under building-lease-opposability.
-- [ ] Continue with `takken-concept-fixed-term-building-lease` from source unit `fixed-term-building-lease`.
+- [x] `takken-concept-fixed-term-building-lease` atomic knowledge extraction is complete: 5 verified knowledge items from source unit `fixed-term-building-lease` and the 2026-04-01 Borrowed Land and House Lease Act source.
+- [ ] Map existing verified `takken-q-55-001` / `takken-q-55-002` only to the fixed-term-building-lease knowledge items they directly test, then mark the concept complete.
 
-Current Phase 4.2 totals: 70/113 completed concepts, 359 verified knowledge items, 78 existing verified questions mapped, 252 explicit question-coverage gaps.
+Current Phase 4.2 totals: 70/113 completed concepts, 364 verified knowledge items, 78 existing verified questions mapped, 257 explicit question-coverage gaps.
 
-Exact continuation: begin `takken-concept-fixed-term-building-lease`, extract and verify its atomic knowledge items from the 2026-04-01 primary law source, then map only existing verified questions that directly test those items. Do not start Phase 4.3 yet.
+Exact continuation: map verified `takken-q-55-001` / `takken-q-55-002` to the new `takken-concept-fixed-term-building-lease` knowledge items only where directly tested. Keep Phase 4.3 blocked.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.

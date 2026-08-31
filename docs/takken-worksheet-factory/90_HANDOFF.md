@@ -8,11 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed `takken-concept-building-lease-term`.
+Advanced `takken-concept-fixed-term-building-lease` through atomic knowledge extraction.
 
-Mapped existing verified `takken-q-54-002` only to `takken-k-building-lease-term-less-than-one-year-deemed-indefinite`. The central question-knowledge map was advanced atomically: known knowledge IDs, allowed concept IDs, mapping count, full-coverage guard, and unit-54 presence guard now include this mapping.
+Added 5 verified knowledge items from source unit `fixed-term-building-lease`, grounded in Borrowed Land and House Lease Act Article 38 as of 2026-04-01: no-renewal/expiry structure, required written/electronic contract form, lessor's pre-contract explanation duty, separate written/electronic explanation form, and invalidity of the no-renewal term when the required explanation is omitted.
 
-`takken-q-54-001` remains excluded from this concept because it tests Article 31 building-lease opposability, already normalized under `takken-concept-building-lease-opposability`.
+Existing verified `takken-q-55-001` and `takken-q-55-002` were not yet added to the central question-knowledge map in this checkpoint, so the concept is not marked complete yet.
 
 No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -24,15 +24,15 @@ No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or a
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 70/113 completed concepts
-- Canonical knowledge items: 359
+- Canonical knowledge items: 364
 - Existing verified questions mapped: 78
-- Explicit unmapped knowledge gaps: 252
+- Explicit unmapped knowledge gaps: 257
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Begin `takken-concept-fixed-term-building-lease` from source unit `fixed-term-building-lease`. Verify its atomic knowledge items against primary law sources as of 2026-04-01, then map only existing verified questions that directly test those items.
+Map verified `takken-q-55-001` and `takken-q-55-002` only to the new `takken-concept-fixed-term-building-lease` knowledge items they directly test. Update the central map guards atomically, then mark this concept complete if validation passes.
 
 ## publication invariant
 
