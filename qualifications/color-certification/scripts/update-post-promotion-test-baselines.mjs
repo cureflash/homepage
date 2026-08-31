@@ -20,13 +20,18 @@ for (const name of files) {
   const skill = name.startsWith('name-to-color')
     ? 'pc3.conventional.name_to_color'
     : 'pc3.conventional.color_to_name';
-  const needle = `.filter((question) => question.skillId === '${skill}')`;
-  const replacement = `.filter((question) => question.skillId === '${skill}' && Number(question.id.slice(-4)) <= 16)`;
-  const occurrences = source.split(needle).length - 1;
-  if (occurrences !== 1) {
-    throw new Error(`${name}: expected exactly one historical runtime-target filter, found ${occurrences}`);
+  const longNeedle = `.filter((question) => question.skillId === '${skill}')`;
+  const shortNeedle = `.filter((q) => q.skillId === '${skill}')`;
+  const longCount = source.split(longNeedle).length - 1;
+  const shortCount = source.split(shortNeedle).length - 1;
+  if (longCount + shortCount !== 1) {
+    throw new Error(`${name}: expected exactly one historical runtime-target filter, found ${longCount + shortCount}`);
   }
-  source = source.replace(needle, replacement);
+  if (longCount === 1) {
+    source = source.replace(longNeedle, `.filter((question) => question.skillId === '${skill}' && Number(question.id.slice(-4)) <= 16)`);
+  } else {
+    source = source.replace(shortNeedle, `.filter((q) => q.skillId === '${skill}' && Number(q.id.slice(-4)) <= 16)`);
+  }
   if (name === 'color-bank.test.js') {
     const countNeedle = 'assert.equal(runtime.questions.length, 16);';
     if (!source.includes(countNeedle)) throw new Error(`${name}: missing old runtime count assertion`);
