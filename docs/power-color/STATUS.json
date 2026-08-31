@@ -1,6 +1,6 @@
 {
   "project": "power-color",
-  "phase": "grade3_pccs_runtime_promoted",
+  "phase": "grade3_same_tone_authoring_verified",
   "grade": 3,
   "grade3": {
     "conventional_color_master": {
@@ -33,46 +33,8 @@
       },
       "confirmed_structure": {
         "hue_circle_count": 24,
-        "hue_notations": [
-          "pR",
-          "R",
-          "yR",
-          "rO",
-          "O",
-          "yO",
-          "rY",
-          "Y",
-          "gY",
-          "YG",
-          "yG",
-          "G",
-          "bG",
-          "BG",
-          "BG",
-          "gB",
-          "B",
-          "B",
-          "pB",
-          "V",
-          "bP",
-          "P",
-          "rP",
-          "RP"
-        ],
-        "chromatic_tone_codes": [
-          "v",
-          "b",
-          "s",
-          "dp",
-          "lt",
-          "sf",
-          "d",
-          "dk",
-          "p",
-          "ltg",
-          "g",
-          "dkg"
-        ],
+        "hue_notations": ["pR", "R", "yR", "rO", "O", "yO", "rY", "Y", "gY", "YG", "yG", "G", "bG", "BG", "BG", "gB", "B", "B", "pB", "V", "bP", "P", "rP", "RP"],
+        "chromatic_tone_codes": ["v", "b", "s", "dp", "lt", "sf", "d", "dk", "p", "ltg", "g", "dkg"],
         "new_color_card_199_plus_notation": {
           "lt": "lt+",
           "p": "p+",
@@ -127,6 +89,27 @@
           "recordLevelEqualityGate": true,
           "expectedRuntimeTotal": 139
         }
+      },
+      "same_tone": {
+        "skill": "pc3.relation.same_tone",
+        "authoring_batch": "qualifications/color-certification/data/grade3-authoring-same-tone-0001-0012.json",
+        "generated": 12,
+        "checked": 12,
+        "verified": 12,
+        "pending": 0,
+        "needs_revision": 0,
+        "rejected": 0,
+        "coverage": "12/12 source-confirmed chromatic tone codes",
+        "derivation": "The official PCCS notation rule writes a chromatic color as tone abbreviation plus hue number; same tone is independently determined by matching the source-confirmed tone abbreviation while hue number may differ.",
+        "official_sample_alignment": "The current Color Certification Association Grade 3 sample directly includes 同一トーン配色.",
+        "gate_test": "qualifications/color-certification/tests/pccs-same-tone-authoring.test.js",
+        "authoring_ci_gate": {
+          "workflow": "Power Color tests",
+          "run": 33379830006,
+          "conclusion": "success"
+        },
+        "runtime_status": "promotion_ready",
+        "next": "Promote all 12 records record-identically, add runtime skill/promotion gates, and require runtime 151 verified / pending 0."
       }
     },
     "runtime_questions": {
@@ -136,13 +119,13 @@
       "rejected": 0
     },
     "authoring_questions": {
-      "generated": 123,
-      "checked": 123,
-      "verified": 123,
+      "generated": 135,
+      "checked": 135,
+      "verified": 135,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0,
-      "status": "127 conventional runtime plus 12 verified PCCS complementary-hue records now promoted record-identically; all 139 runtime records verified; pending 0"
+      "status": "111 conventional authoring records plus 12 complementary-hue records plus 12 same-tone records are independently verified; complementary-hue is already promoted, same-tone is CI-cleared and awaiting record-identical runtime promotion."
     },
     "conventional_corpus_qa": {
       "status": "complete",
@@ -167,7 +150,7 @@
     },
     "micro_skills": {
       "implemented_runtime": 3,
-      "verified_authoring": 1,
+      "verified_authoring": 2,
       "planned_minimum": 13
     },
     "conventional_coverage": {
@@ -175,9 +158,7 @@
       "color_to_name_unique_master_colors_covered": 63,
       "color_to_name_target": 64,
       "color_to_name_useful_state_space_complete": true,
-      "color_to_name_deferred_master_refs": [
-        "c3-conventional-052"
-      ],
+      "color_to_name_deferred_master_refs": ["c3-conventional-052"],
       "color_to_name_deferred_reason": "c3-conventional-052 スカイブルー and c3-conventional-017 空色 share the current authoritative reference displayHex #8ED1E0, so a monitor-only color-to-name item is ambiguous and is excluded from useful state-space completion.",
       "name_to_color_unique_master_colors_covered": 64,
       "name_to_color_target": 64,
@@ -186,7 +167,7 @@
     }
   },
   "current_run": {
-    "generated": 0,
+    "generated": 12,
     "checked": 12,
     "verified": 12,
     "needs_revision": 0,
@@ -201,5 +182,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 3 PCCS non-visual relation/scheme work only where deterministically derivable from source-confirmed structure, while continuing authoritative acquisition for the complete 24 Japanese hue-name/readings mapping and current representative PCCS sRGB values. Do not generate monitor-facing PCCS questions before those values are sourced."
+  "next": "Promote the 12 CI-cleared pc3.relation.same_tone records record-identically into grade3-runtime.json, add runtime skill/promotion/shared-engine gates, and require the full Power Color regression suite to pass with runtime 151 verified / pending 0."
 }
