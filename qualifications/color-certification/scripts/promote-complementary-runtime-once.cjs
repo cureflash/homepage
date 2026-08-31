@@ -4,6 +4,7 @@ const runtimePath = 'qualifications/color-certification/data/grade3-runtime.json
 const authoringPath = 'qualifications/color-certification/data/grade3-authoring-complementary-hue-number-0001-0012.json';
 const statusPath = 'docs/power-color/STATUS.json';
 const bankTestPath = 'qualifications/color-certification/tests/color-bank.test.js';
+const corpusTestPath = 'qualifications/color-certification/tests/conventional-corpus-gate.test.js';
 const promotionTestPath = 'qualifications/color-certification/tests/pccs-complementary-hue-runtime-promotion.test.js';
 const planPath = 'docs/power-color/20_EXECUTION_PLAN.md';
 const handoffPath = 'docs/power-color/90_HANDOFF.md';
@@ -53,7 +54,7 @@ const replacement = `test('runtime bank exposes 139 verified questions and valid
     if (question.presentation.kind === 'prompt_color') {
       assert.equal(question.presentation.promptColorRef, question.colorRef);
       assert.equal(question.choices[question.correctIndex], target.name);
-      question.choices.forEach((choice) => assert.ok(colorByName.has(choice), \`Unknown conventional color choice: \${choice}\`));
+      question.choices.forEach((choice) => assert.ok(colorByName.has(choice), `Unknown conventional color choice: ${choice}`));
     } else {
       assert.equal(question.presentation.choiceColorRefs.length, 4);
       question.presentation.choiceColorRefs.forEach((ref) => assert.ok(colorById.has(ref)));
@@ -89,6 +90,30 @@ if (!bankTest.includes('shared Power TOEIC engine runs promoted PCCS text-choice
 }
 fs.writeFileSync(bankTestPath, bankTest);
 
+let corpusTest = fs.readFileSync(corpusTestPath, 'utf8');
+corpusTest = corpusTest.replace(
+  'const runtimeQuestions = runtime.questions;\n',
+  "const runtimeQuestions = runtime.questions;\nconst conventionalRuntimeQuestions = runtimeQuestions.filter((question) => question.categoryId === 'pc3.conventional');\n"
+);
+corpusTest = corpusTest.replace(
+  "test('Grade 3 conventional runtime contains all 127 verified questions and no pending records', () => {\n  assert.equal(authoringFiles.length, 14, `Unexpected authoring file count: ${authoringFiles.join(', ')}`);\n  assert.equal(authoringQuestions.length, 111);\n  assert.equal(runtimeQuestions.length, 127);\n  assert.equal(runtimeQuestions.filter((question) => question.validationStatus === 'verified').length, 127);\n  assert.equal(runtimeQuestions.filter((question) => question.validationStatus === 'pending_validation').length, 0);\n});",
+  "test('Grade 3 conventional runtime slice remains 127 verified questions inside the 139-question bank', () => {\n  assert.equal(authoringFiles.length, 14, `Unexpected authoring file count: ${authoringFiles.join(', ')}`);\n  assert.equal(authoringQuestions.length, 111);\n  assert.equal(runtimeQuestions.length, 139);\n  assert.equal(conventionalRuntimeQuestions.length, 127);\n  assert.equal(conventionalRuntimeQuestions.filter((question) => question.validationStatus === 'verified').length, 127);\n  assert.equal(runtimeQuestions.filter((question) => question.validationStatus === 'pending_validation').length, 0);\n});"
+);
+corpusTest = corpusTest.replace(
+  "  for (const question of runtimeQuestions) {\n    for (const key of required) assert.ok(Object.hasOwn(question, key), `${question.id} missing ${key}`);",
+  "  for (const question of conventionalRuntimeQuestions) {\n    for (const key of required) assert.ok(Object.hasOwn(question, key), `${question.id} missing ${key}`);"
+);
+corpusTest = corpusTest.replace(
+  "const questions = runtimeQuestions.filter((question) => question.skillId === 'pc3.conventional.color_to_name');",
+  "const questions = conventionalRuntimeQuestions.filter((question) => question.skillId === 'pc3.conventional.color_to_name');"
+);
+corpusTest = corpusTest.replace(
+  "const questions = runtimeQuestions.filter((question) => question.skillId === 'pc3.conventional.name_to_color');",
+  "const questions = conventionalRuntimeQuestions.filter((question) => question.skillId === 'pc3.conventional.name_to_color');"
+);
+if (!corpusTest.includes('conventionalRuntimeQuestions.length, 127')) throw new Error('failed to scope conventional corpus gate to conventional runtime slice');
+fs.writeFileSync(corpusTestPath, corpusTest);
+
 fs.writeFileSync(promotionTestPath, `import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
@@ -108,7 +133,7 @@ test('promoted complementary-hue answers independently recompute from the 24-pos
   const distribution = [0, 0, 0, 0];
   for (const question of promoted) {
     const match = question.prompt.match(/色相番号(\\d+)/);
-    assert.ok(match, \`missing hue number in prompt: \${question.id}\`);
+    assert.ok(match, `missing hue number in prompt: ${question.id}`);
     const sourceHue = Number(match[1]);
     const expected = ((sourceHue + 11) % 24) + 1;
     assert.equal(Number(question.choices[question.correctIndex]), expected, question.id);
@@ -155,7 +180,7 @@ Completed this run:
 - Promoted all 12 independently verified complementary-hue records from \`grade3-authoring-complementary-hue-number-0001-0012.json\` into \`grade3-runtime.json\` without changing record content.
 - Added \`pc3.pccs.complementary_hue_number\` to runtime skills.
 - Raised runtime from 127 to 139 verified / pending 0.
-- Reworked the runtime schema regression so conventional visual questions still require canonical conventional-color refs, while PCCS text-only questions are validated as their own presentation domain rather than being forced through a visual-color contract.
+- Reworked runtime gates so conventional visual questions remain checked against the canonical conventional-color contract while PCCS text-only questions are validated as their own presentation domain.
 - Added a record-level equality promotion gate and an independent 24-position complement recomputation gate; correct-position balance remains A/B/C/D = 3/3/3/3.
 - Added a shared Power TOEIC engine regression that selects and answers the promoted PCCS skill.
 - Current-run accounting: 0 generated / 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending.
