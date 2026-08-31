@@ -42,7 +42,7 @@ Non-visual relationship work may proceed only where the source contract permits 
   - [x] Add `pccs-complementary-hue-authoring.test.js` for pair coverage, derivation, source refs, choice uniqueness, answer correctness, pending-first audit metadata, and answer-position balance.
   - [x] Run CI/shared-engine regressions: `Power Color tests` run `33361968699` completed successfully on the authoring commit.
   - [x] Fix the browser answer-feedback prerequisite before promotion: text-only questions no longer require a conventional-color `colorRef`; `Power Color tests` run `33370259344` passed, including all 12 complementary-hue records.
-  - [x] Promote the 12 verified records record-identically to `grade3-runtime.json`; runtime is now 139 verified / pending 0, with record-equality, duplicate/schema, browser-feedback and shared-engine regression gates required by the promotion checkpoint.
+  - [x] Promote the 12 verified records record-identically to `grade3-runtime.json`; runtime reached 139 verified / pending 0 with record-equality, duplicate/schema, browser-feedback and shared-engine regression gates.
 - [ ] Same hue / same tone.
   - [ ] Same hue remains pending a separately justified non-visual formulation.
   - [x] Define `pc3.relation.same_tone` from the official PCCS notation rule: chromatic colors are written as tone abbreviation + hue number, and the official Grade 3 sample explicitly tests 同一トーン配色.
@@ -50,8 +50,8 @@ Non-visual relationship work may proceed only where the source contract permits 
   - [x] Independently resolve the anchor tone from `grade3-pccs-structure.json` and re-derive the unique matching choice; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0.
   - [x] Balance correct positions A/B/C/D = 3/3/3/3 and keep the batch monitor-independent.
   - [x] Add `pccs-same-tone-authoring.test.js` for 12-tone coverage, independent notation parsing, source/hue refs, answer uniqueness, pending-first audit metadata, answer-position balance, and text-feedback regression.
-  - [x] `Power Color tests` run `33379830006` completed successfully; authoring is cleared for record-identical runtime promotion.
-  - [ ] Promote the 12 records record-identically and add runtime promotion/shared-engine gates.
+  - [x] `Power Color tests` run `33379830006` completed successfully on the authoring checkpoint.
+  - [x] Promote all 12 records record-identically into `grade3-runtime.json`, add `pc3.relation.same_tone` to runtime skills, preserve the conventional 127-question slice and complementary 12-question slice, and gate exact authoring equality / all 12 tone codes / A-B-C-D balance / 151 verified / pending 0 / shared Power TOEIC Drill Engine execution. `Power Color tests` run `33384827586` completed successfully.
 - [ ] Hue-difference / tone-difference.
 - [ ] 配色判定.
 - [ ] 明度グラデーション.
