@@ -5,27 +5,29 @@
 - Taxonomy: `part5-v1.0` — 44 micro-skills.
 - Generated questions: 4,400 / 4,400.
 - Checked: 4,400.
-- Verified: 4,376.
-- Needs revision: 24.
-- Rejected: 0.
+- CONTENT aggregate: 4,376 verified / 24 needs_revision / 0 rejected.
 - Unchecked `pending_validation`: 0.
 - `generation_complete`: `true`.
 - `validation_complete`: `false`.
 
-## Reconciled revision work
+## This run
 
-The revision ledger has been re-audited against the actual persisted source rather than trusting historical QA notes blindly.
+PR #452 was merged after Power TOEIC tests #517 and beta-bank #123 succeeded. It reconciled 52 revision-ledger items: 35 genuine source repairs plus 17 source-grounded historical-QA re-audits.
 
-- 35 genuine source issues were minimally repaired and independently re-solved: `p5.verb.present_perfect_vs_past` 20, `p5.verb.active_vs_passive` 5, `p5.verb.to_infinitive_pattern` 4, `p5.verb.gerund_pattern` 6.
-- 17 historical QA/source mismatches were independently re-audited and verified without changing source: `p5.conn.time_prepositions` 5, `p5.conn.logical_conjunction` 8, `p5.pron.subject_vs_object` 4.
-- No repaired item was bulk-verified; each revision QA record identifies the individually checked IDs.
+A subsequent direct source check found that the remaining-ledger pointer cannot yet be trusted as a complete ordered queue. `docs/power-toeic/QA_STATUS.json` is stale at 4,297 verified / 103 needs_revision, while CONTENT_STATUS reports 24 remaining. More importantly, persisted source still contains `p5_pron_subject_vs_object_0031` as:
 
-Result: 52 revision items resolved. Cumulative state is 4,376 verified / 24 needs_revision / 0 rejected / pending_validation 0.
+`Neither Mr. Park nor ____ has access to the confidential payroll file.`
+
+with keyed `they`. With the nearer plural subject `they`, standard agreement requires `have`, so the item remains a genuine unresolved source defect. Its historical QA record also marks it `needs_revision`, yet the previous CONTENT resume pointer had advanced to `p5_pron_possessive_forms_0083`.
+
+Because historical QA has also contained source-mismatch false positives, the safe next operation is not to decrement the remaining count mechanically. Reconstruct the outstanding revision ledger from persisted source plus QA/revision records, then repair each genuine issue and independently re-solve it.
 
 ## Next generation
 
-None. Generation is complete; do not generate additional Part 5 questions.
+None. Generation is complete.
 
 ## Next QA
 
-Resume the remaining revision ledger at `p5_pron_possessive_forms_0083`, then continue in historical QA/source order until all 24 remaining items are resolved. The next known genuine issue is the possessive-form ambiguity in 0083; source must be repaired and independently re-solved before verification.
+Exact safe resume ID: `p5_pron_subject_vs_object_0031`.
+
+Stop reason below the nominal 100-item validation target: canonical revision-ledger inconsistency discovered after 52 source-grounded resolutions. Do not set `validation_complete` until CONTENT_STATUS, QA_STATUS, historical QA/revision records, and persisted source agree on zero unresolved items.
