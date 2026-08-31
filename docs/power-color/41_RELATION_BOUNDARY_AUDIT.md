@@ -51,16 +51,35 @@ The official Grade-level page was also rechecked:
 It continues to describe Grade 3 as learning PCCS theoretically and using it to create systematic color schemes. The Association's official-text page states that examination questions are based on official-text content and that the official text and examination colors are aligned:
 - https://www.aft.or.jp/pages/official-product-orders/index.html
 
+## Official Grade 3 text table-of-contents checkpoint
+The current Association-hosted official Grade 3 text table of contents was opened directly from the Grade-level page and visually checked as a PDF:
+- https://www.aft.or.jp/images/text_of-3st-grade_mokuji.pdf
+
+It fixes the current authoritative chapter locations for the remaining relation work:
+- `色相を手がかりにした配色` starts at p.71.
+- `色相に共通性がある配色` starts at p.72.
+- `色相にやや違いがある配色` starts at p.78.
+- `色相に対照性がある配色` starts at p.80.
+- `トーンを手がかりにした配色` starts at p.84.
+- `トーン共通の配色` starts at p.84.
+- `トーン対照の配色` starts at p.88.
+- `色相とトーンを組みあわせた配色` starts at p.90.
+- `アクセントカラー`, `セパレーション`, and `グラデーション` are explicitly included at pp.92, 94, and 96.
+
+This is useful narrowing evidence: the missing hue-class rules must be acquired from the official text's pp.72–83 range, and the missing tone-common/contrast rules from pp.84–89. The public TOC itself does not expose the tables or exact pair-membership rules, so it does not authorize encoding them.
+
 ## What this evidence establishes
 It establishes:
 - the named hue/tone relation classes are genuine first-party PCCS categories;
 - JCRI has implemented deterministic classification logic for them;
 - the current Grade 3 examination scope explicitly includes `対照トーン配色` and `中差色相配色`;
+- the current official Grade 3 text dedicates specific sections to hue-common/slightly-different/contrast and tone-common/contrast schemes;
+- the exact source-page acquisition target is now narrowed to pp.72–89 of the current official Grade 3 text;
 - the current Grade 3 scope still expects PCCS-based systematic color-scheme discrimination;
 - monitor-rendered colors are explicitly not guaranteed to reproduce examination colors exactly.
 
 ## What remains unavailable in located public first-party material
-The current public Association/JCRI pages still do not expose:
+The current public Association/JCRI pages and public official-text TOC still do not expose:
 - the complete numeric hue-difference boundary table for every named class;
 - the complete tone-pair membership/boundary table, including the exact `対照トーン配色` rule;
 - a complete current public table sufficient to derive all Grade 3 named relation answers without relying on the official text/card materials;
@@ -73,6 +92,6 @@ The 2022 software sample rows and current public Grade 3 sample images are not s
 - Keep named hue-difference classification blocked for full implementation.
 - Do not infer missing boundaries from common textbook rules, third-party sites, sample-image appearance, tone-map geometry, or the detailed-PCCS revision algorithm.
 - Preserve the already verified numeric circular hue-difference drill because it depends only on the source-confirmed 24-position hue circle and arithmetic, not on named-class boundaries.
-- Treat the public-web source route as exhausted for this checkpoint. The remaining authoritative acquisition target is a current official text/manual/card/software output that explicitly exposes the complete boundaries or pair memberships.
+- Treat the generic public-web source route as exhausted for this checkpoint. The remaining authoritative acquisition target is the current official Grade 3 text at pp.72–89, equivalent official card/manual material, or current licensed PCCS Color Calc/related first-party output that explicitly exposes the complete boundaries or pair memberships.
 
-This checkpoint narrows the blocker further: current official exam scope and first-party classifier existence are both confirmed; the only unresolved item is the complete authoritative rule table needed for deterministic encoding.
+This checkpoint narrows the blocker from a broad source search to exact official-text page ranges while preserving the no-inference gate.
