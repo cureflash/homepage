@@ -11,7 +11,7 @@
       "scope_authority_confirmed": true,
       "structural_authority_confirmed": true,
       "hue_positions_and_notations": {"target": 24, "source_confirmed": 24, "status": "complete"},
-      "hue_japanese_names": {"target": 24, "source_confirmed": 0, "status": "pending_source"},
+      "hue_japanese_names": {"target": 24, "source_confirmed": 0, "status": "pending_source", "public_authority_audit_on": "2026-08-31", "audit_result": "No complete current public authoritative 24-record Japanese hue-name plus reading mapping found; fields remain null."},
       "tone_codes_and_names": {"target": 12, "source_confirmed": 12, "status": "complete"},
       "confirmed_structure": {
         "hue_circle_count": 24,
@@ -21,10 +21,16 @@
       },
       "hue20_change_watch": "Current JCRI Color Calc manual still uses 20:V and states PB is a future rename; keep V until the authority actually changes.",
       "authoritative_public_complete_rgb_hex_table_found": false,
+      "digital_display_authority_lead": {
+        "source": "jcri_color_calc_manual",
+        "confirmed": true,
+        "finding": "Current official PCCS Color Calc accepts PCCS hue-tone input, uses each hue/tone representative value, and outputs sRGB under D65 / 2-degree conditions.",
+        "remaining_blocker": "The public manual does not expose the complete representative per-state sRGB table; obtain an authoritative export/table rather than reconstructing values."
+      },
       "visual_question_generation_blocked": true,
       "structural_gate_test": "qualifications/color-certification/tests/pccs-structure-master.test.js",
       "source_rechecked_on": "2026-08-31",
-      "next": "Confirm all 24 Grade 3 PCCS Japanese hue names/readings from authoritative current sources and continue searching for an authoritative per-state digital display reference. Keep displayReference null and do not generate monitor-facing PCCS questions until the display-value gate is satisfied."
+      "next": "Continue authoritative search for the complete 24 Japanese hue-name/readings mapping and for an authoritative export/table of the representative PCCS Color Calc sRGB values. Keep nameJa/reading/displayReference null and do not generate monitor-facing PCCS questions until the relevant gates are satisfied."
     },
     "relation_scheme_master": {"status": "not_started"},
     "runtime_questions": {"verified": 127, "pending": 0, "needs_revision": 0, "rejected": 0},
@@ -68,5 +74,5 @@
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "implemented_beta"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Confirm authoritative Japanese hue names/readings for the 24 PCCS hue records and continue the authoritative digital-display-reference search. Do not infer names or display colors; keep monitor-facing PCCS generation blocked."
+  "next": "Continue the authoritative 24-name/reading search and pursue an authoritative PCCS Color Calc representative-sRGB export/table. Do not infer names or display colors; keep monitor-facing PCCS generation blocked."
 }
