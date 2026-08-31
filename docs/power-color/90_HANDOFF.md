@@ -1,44 +1,39 @@
 # Power Color — HANDOFF
 
 ## Current checkpoint
-Grade 3 conventional colors remain complete. Grade 3 PCCS has a source-confirmed structural master for all 24 hue positions/notations and all 12 chromatic tone codes/names. This run converted the remaining display-value problem from an open-ended public-table search into a defined authoritative acquisition path: direct numeric output from the current licensed JCRI PCCS Color Calc is acceptable when exact hue/tone input-to-output evidence is retained.
+Grade 3 conventional colors remain complete at 127 verified runtime questions. Grade 3 PCCS monitor-facing work is still blocked by missing authoritative current display values, but the source contract explicitly permits deterministic non-visual relationships from the already source-confirmed 24 hue positions. This run therefore advanced the first PCCS relation micro-skill without inventing RGB/HEX or Japanese hue names.
 
-Completed:
-- 64/64 Grade 3 慣用色名 ingested into the conventional color master.
-- Two conventional-color micro-skills remain on the shared Power TOEIC drill engine; no color-specific engine fork exists.
-- Runtime contains 127 verified conventional-color questions: 63 `pc3.conventional.color_to_name` useful monitor-discriminable states and 64 `pc3.conventional.name_to_color` authoritative states; pending 0 / needs_revision 0 / rejected 0.
-- `qualifications/color-certification/data/grade3-pccs-structure.json` stores 24/24 PCCS hue positions and current hue notations from Japan Color Research Institute authority.
-- The same master stores 12/12 chromatic tone codes and names. `lt`/`p` are separately recorded as `lt+`/`p+` for new color card 199 notation, while `s` is recorded as not included in that card, matching Color Certification Association guidance.
-- Hue 20 remains `V`. The current JCRI Color Calc manual explicitly says a `PB` rename is planned for the future, so Power Color must not switch before the authority actually changes.
-- Rechecked current first-party materials on 2026-08-31. Japan Color Enterprise `基本色彩掛図〈中級用〉` explicitly contains `色相別と色相名（日本色研配色体系）※24色相`, proving a current authoritative 24-hue-name material exists. Its public product page does not enumerate the 24 mappings or readings, so all 24 `nameJa` / `reading` fields remain null.
-- The current official JCRI PCCS Color Calc manual confirms that `PCCS ヒュー・トーン入力` uses each hue/tone representative value and outputs sRGB under D65 illumination / 2-degree conditions.
-- The current JCRI PCCS Color Calc FAQ additionally states that customer-created figures from the software may be used for private or commercial purposes. The source contract now accepts direct numeric output from a current licensed installation as an authoritative acquisition route, provided exact input/output audit evidence is retained.
-- Every PCCS `displayReference` remains null because no representative numeric values were actually acquired in this run. No RGB/HEX was sampled from screenshots, inferred from third-party tables, converted from Munsell, or hand-tuned.
-- `docs/power-color/40_PCCS_SOURCE_CONTRACT.md`, `20_EXECUTION_PLAN.md`, and `STATUS.json` now distinguish source discovery from actual value acquisition.
-- Existing PCCS structure gates remain unchanged because no master values or runtime questions were modified.
+Completed this run:
+- Re-fetched latest `main` and reconciled unrelated parallel work before branching.
+- Rechecked current JCRI material. The current JCRI `デジタル色彩マニュアル` product page states that its PCCS chart contains 288 chromatic + 17 achromatic colors and that every chart includes RGB hexadecimal and CMYK values. Exact numbers were not acquired, and the publication lineage is older than the current Color Calc documentation, so these values were not treated as current representative Color Calc values and no `displayReference` was populated.
+- Added `pc3.pccs.complementary_hue_number` authoring batch with 12 questions covering all 12 unique opposite pairs in the 24-position hue circle.
+- Generation was pending-first. Each answer was then independently recomputed from the source-confirmed hue positions using the opposite-position rule before final `verified` status was written.
+- Current-run QA: 12 generated / 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending.
+- Answer positions are A/B/C/D = 3/3/3/3.
+- The batch is text-only and has no monitor-color presentation dependency.
+- Added `pccs-complementary-hue-authoring.test.js` to gate unique-pair coverage, independent complement arithmetic, source/master references, four unique choices, answer correctness, pending-first audit metadata, and balanced answer positions.
 
-Current run counts:
-- generated: 0
-- checked: 0 new questions
-- verified: 0 new questions
-- needs_revision: 0
-- rejected: 0
-- pending questions: 0
-- PCCS hue positions/notations: 24/24 source-confirmed
-- PCCS tone codes/names: 12/12 source-confirmed
-- PCCS Japanese hue names/readings: 0/24 populated; current authoritative material identified but mapping/readings not yet acquired
-- PCCS representative monitor values: 0 acquired; authoritative direct-software acquisition route confirmed
+Existing state retained:
+- 64/64 Grade 3 慣用色名 master records complete.
+- Runtime conventional questions: 127 verified / pending 0 / needs_revision 0 / rejected 0.
+- PCCS hue positions/notations: 24/24 source-confirmed.
+- PCCS tone codes/names: 12/12 source-confirmed.
+- PCCS Japanese hue names/readings: 0/24 populated; current first-party physical material is identified but the complete mapping/readings have not been acquired.
+- PCCS representative monitor values: 0 acquired. Current licensed JCRI PCCS Color Calc direct numeric output remains the approved primary acquisition path.
+- Hue 20 remains `V` until the authority actually changes it.
+- No color-specific Drill Engine fork exists; shared Power TOEIC engine integration remains the architecture.
 
 Not complete:
-- complete 24-record Japanese hue-name/readings mapping from actual current authoritative material;
-- representative digital display values for the PCCS states needed by monitor swatches;
-- Grade 3 PCCS visual questions;
-- Grade 3 relationship/scheme questions;
+- complementary-hue authoring batch is not yet promoted to runtime; CI must pass first;
+- complete 24-record Japanese hue-name/readings mapping;
+- current representative digital display values for monitor swatches;
+- Grade 3 color/hue, color/tone, color/notation visual questions;
+- remaining Grade 3 relation/scheme skills;
 - full Grade 3 completion, then Grade 2 and Grade 1;
 - `color_database_complete` remains false.
 
 ## Exact blocker
-The remaining blockers are now concrete acquisition tasks rather than missing authority definitions. Japanese hue names/readings require an actual current first-party material exposing the complete mapping/readings. Display values require either a current official published state-by-state table/export or direct numeric output from a current licensed PCCS Color Calc with auditable hue/tone input-to-output evidence. This environment does not have the licensed Color Calc workbook/USB dongle, so no representative sRGB values were fabricated.
+Monitor-facing PCCS questions still require current authoritative per-state digital values. The current environment does not contain the licensed PCCS Color Calc workbook/USB dongle, and no current public state-by-state numeric export has been found. Japanese hue names/readings likewise require an actual authoritative complete mapping. Neither blocker applies to the already source-confirmed arithmetic relationship between hue positions.
 
 ## Next exact start point
-Acquire the complete 24 hue-name/readings mapping from current authoritative material. For display values, use a current licensed PCCS Color Calc and systematically enter the required PCCS hue/tone states, recording the numeric sRGB output together with exact input and version/condition evidence; alternatively ingest a current official published table/export if one is found first. Keep `nameJa`, `reading`, and `displayReference` null until their respective evidence is actually available, and do not generate monitor-facing PCCS questions before then.
+Run the new complementary-hue gate and existing Power Color regressions in CI. If green, promote the 12 verified text-only complementary-hue questions into the shared runtime without adding a new engine. Continue authoritative acquisition for the 24 hue-name/readings mapping and current PCCS representative sRGB values; keep `nameJa`, `reading`, and `displayReference` null until evidence is acquired and do not generate monitor-facing PCCS questions before then.
