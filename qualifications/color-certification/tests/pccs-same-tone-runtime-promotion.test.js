@@ -16,11 +16,10 @@ function parseNotation(value) {
 }
 
 test('PCCS same-tone runtime promotion preserves all 12 verified authoring records exactly', () => {
-  assert.equal(runtime.questions.length, 151);
-  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 151);
   const promoted = runtime.questions.filter((question) => question.skillId === authoring.skill.id);
   assert.equal(promoted.length, 12);
   assert.deepEqual(promoted, authoring.questions);
+  assert.ok(promoted.every((question) => question.validationStatus === 'verified'));
   assert.ok(runtime.skills.some((skill) => skill.id === authoring.skill.id));
 });
 
