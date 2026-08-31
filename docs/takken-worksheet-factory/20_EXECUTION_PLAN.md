@@ -35,11 +35,12 @@ Completed checkpoints through the last completed concept: business-definition; l
 
 Current checkpoint:
 - [x] `takken-concept-fixed-term-building-lease` is complete. `takken-q-55-001` maps only to no-renewal/expiry and contract-form. `takken-q-55-002` maps only to prior-explanation and no-explanation-invalid. The separate explanation-form knowledge item remains an explicit Phase 4.3 coverage gap.
-- [ ] Continue with `takken-concept-heirs-order` from source unit `inheritance-heirs-shares`.
+- [x] `takken-concept-heirs-order` knowledge extraction checkpoint: five verified knowledge items created from Civil Code Articles 887, 889, 890 and 900 covering spouse, blood-relative rank order and spouse/child shares.
+- [ ] Map `takken-q-56-001` and `takken-q-56-002` only to the heirs-order knowledge items they directly test; then mark the concept complete.
 
-Current Phase 4.2 totals: 71/113 completed concepts, 364 verified knowledge items, 80 existing verified questions mapped, 253 explicit question-coverage gaps.
+Current Phase 4.2 totals: 71/113 completed concepts, 369 verified knowledge items, 80 existing verified questions mapped, 258 explicit question-coverage gaps.
 
-Exact continuation: extract atomic knowledge items for `takken-concept-heirs-order` from `inheritance-heirs-shares` and 2026-04-01 primary law sources, then map existing verified questions only where directly tested. Keep Phase 4.3 blocked.
+Exact continuation: map verified `takken-q-56-001` and `takken-q-56-002` to the new heirs-order knowledge items only where directly tested, update central guards, and complete `takken-concept-heirs-order`. Keep Phase 4.3 blocked.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
