@@ -34,13 +34,13 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 Completed checkpoints through the last completed concept: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document; article35-vs-37; eight-restrictions-scope; cooling-off; earnest-money-limit; earnest-money-safeguards; damages-penalty; nonconformity-special-rule; unowned-property-sale; installment-cancellation; installment-ownership-retention; brokerage-fees; supervision-dispositions; declaration-arrival; mistake; fraud; duress; mental-reservation; fictitious-declaration; minor; adult-ward; agency; unauthorized-agency; apparent-agency; acquisitive-prescription; extinctive-prescription; property-transfer-opposability; co-ownership; mortgage; default-damages; contract-cancellation; simultaneous-performance; risk-allocation; sale-earnest; civil-nonconformity; lease-general; security-deposit; building-lease-opposability; ordinary-land-lease-term; land-lease-opposability.
 
 Current checkpoint:
-- [x] `takken-concept-land-lease-opposability` Article 10 knowledge model completed from source unit `land-lease-right`.
-- [x] Borrowed Land and Building Lease Act Article 10(1) split into three atomic items: no land-right registration required when statutory substitute exists; registered building on the land in the land lessee's name; resulting third-party opposability.
-- [x] Verified `takken-q-52-002` mapped only to those three directly tested items in the central question-knowledge map.
+- [x] `takken-concept-fixed-term-land-lease` knowledge model staged from source unit `fixed-term-land-lease` using Borrowed Land and Building Lease Act Article 22.
+- [x] Article 22 split into six atomic items: 50-year minimum duration; no contract renewal; no extension by rebuilding; no Article 13 building-purchase demand; written-form requirement; qualifying electronic-record equivalence.
+- [ ] Existing verified `takken-q-53-001` and `takken-q-53-002` still require central mapping before this concept is counted complete.
 
-Current Phase 4.2 totals: 68/113 completed concepts, 352 verified knowledge items, 75 existing verified questions mapped, 252 explicit question-coverage gaps.
+Current Phase 4.2 totals: 68/113 completed concepts, 358 verified knowledge items, 75 existing verified questions mapped, 258 explicit question-coverage gaps.
 
-Exact continuation: continue to `takken-concept-fixed-term-land-lease` from source unit `fixed-term-land-lease`, decompose only verified 2026-04-01 knowledge from primary sources, and map existing verified unit 53 questions only where they directly test those items. Do not start Phase 4.3 yet.
+Exact continuation: map verified `takken-q-53-001` and `takken-q-53-002` only to the staged Article 22 knowledge items they directly test, advance central mapping guards together, then mark `takken-concept-fixed-term-land-lease` complete and continue to the next canonical concept. Do not start Phase 4.3 yet.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
