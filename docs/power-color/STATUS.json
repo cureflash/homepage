@@ -4,7 +4,20 @@
   "grade": 3,
   "grade3": {
     "conventional_color_master": {"target": 64, "ingested": 64, "status": "complete"},
-    "pccs_master": {"status": "not_started", "next": "confirm_authoritative_grade3_pccs_sources"},
+    "pccs_master": {
+      "status": "source_contract_fixed",
+      "source_contract": "docs/power-color/40_PCCS_SOURCE_CONTRACT.md",
+      "scope_authority_confirmed": true,
+      "structural_authority_confirmed": true,
+      "confirmed_structure": {
+        "hue_circle_count": 24,
+        "current_color_tone_circle_tones": ["v", "b", "dp", "lt+", "sf", "d", "dk", "p+", "ltg", "g", "dkg"],
+        "current_color_tone_circle_hues_per_tone": 12
+      },
+      "authoritative_public_complete_rgb_hex_table_found": false,
+      "visual_question_generation_blocked": true,
+      "next": "Confirm exact Grade 3 hue-number/name/notation mappings and Grade 3 tone/notation mappings from authoritative sources, while continuing to search for an authoritative per-state digital display reference. Do not create PCCS swatches from screenshots, third-party tables, conversion formulas, or approximations."
+    },
     "relation_scheme_master": {"status": "not_started"},
     "runtime_questions": {"verified": 127, "pending": 0, "needs_revision": 0, "rejected": 0},
     "authoring_questions": {"generated": 111, "checked": 111, "verified": 111, "pending": 0, "needs_revision": 0, "rejected": 0, "status": "promoted_and_retained_for_audit", "checkpoint": "pc3.conventional.color_to_name 0017-0071 + pc3.conventional.name_to_color 0017-0072"},
@@ -46,5 +59,5 @@
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "implemented_beta"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Begin Grade 3 PCCS master source confirmation. Re-read the current Color Certification Association Grade 3 official scope/textbook/sample information and identify authoritative PCCS hue/tone/notation data that can be stored without guessed display values. Do not generate PCCS questions until the master/source contract is fixed."
+  "next": "Build the source-confirmed structural slice of the Grade 3 PCCS master only after confirming exact hue-number/name/notation and tone/notation mappings from authoritative sources. Keep displayReference null wherever no authoritative digital value exists; do not generate monitor-facing PCCS questions yet."
 }
