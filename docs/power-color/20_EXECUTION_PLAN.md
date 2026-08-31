@@ -40,8 +40,16 @@
 - [x] Conventional-color coverage complete for the useful authoritative monitor state space; do not force a monitor-indistinguishable item merely to claim 64/64.
 
 ## Phase 2 — Grade 3 PCCS master
-- [ ] Confirm authoritative PCCS Grade 3 data/source.
+- [x] Confirm authoritative PCCS Grade 3 source boundary and fix `40_PCCS_SOURCE_CONTRACT.md`.
+  - [x] Color Certification Association official Grade 3 scope/sample confirms PCCS is in scope.
+  - [x] Current Japan Color Enterprise PCCS documentation confirms a 24-hue system and current tone-based PCCS teaching/reference products.
+  - [x] Current PCCS Color Tone Circle confirms 11 chromatic tone groups `v,b,dp,lt+,sf,d,dk,p+,ltg,g,dkg`, each represented across 12 hues.
+  - [x] Structural PCCS truth and monitor display references are separate authorities.
+  - [x] Unsourced RGB/HEX, screenshot sampling, third-party tables and conversion-derived swatches are prohibited.
 - [ ] Build hue/tone/notation master without guessing display values.
+  - [ ] Confirm the exact Grade 3 hue-number/name/notation set from an authoritative source before inserting mappings.
+  - [ ] Confirm the exact Grade 3 tone set/notation required by the official material before inserting mappings beyond directly sourced current tone codes.
+  - [ ] Identify an authoritative per-state display reference for monitor swatches. Current reviewed public official pages do not expose a complete RGB/HEX table; visual PCCS question generation remains blocked until this is resolved.
 - [ ] Add color/hue, color/tone, color/notation and reverse-lookup drills.
 - [ ] QA and coverage gate.
 
