@@ -48,12 +48,19 @@
         "coverage": "12/12 unique opposite hue pairs",
         "derivation": "For source-confirmed hue positions 1-24, complementary hue is the position 12 steps opposite.",
         "gate_test": "qualifications/color-certification/tests/pccs-complementary-hue-authoring.test.js",
-        "ci_gate": {"workflow": "Power Color tests", "run": 33361968699, "conclusion": "success"},
+        "authoring_ci_gate": {"workflow": "Power Color tests", "run": 33361968699, "conclusion": "success"},
+        "runtime_promotion_prerequisite": {
+          "status": "complete",
+          "root_cause": "The browser answer-feedback path resolved a single conventional-color colorRef before distinguishing text-only questions, so unchanged text-choice PCCS records would throw after answer submission.",
+          "fix": "Text-only feedback now derives the answer identity from choices[correctIndex] without a monitor-color dependency; visual feedback still requires its canonical colorRef.",
+          "test_run": 33370259344,
+          "conclusion": "success"
+        },
         "runtime_status": "promotion_ready"
       }
     },
     "runtime_questions": {"verified": 127, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "authoring_questions": {"generated": 123, "checked": 123, "verified": 123, "pending": 0, "needs_revision": 0, "rejected": 0, "status": "127 conventional runtime complete plus 12 verified PCCS complementary-hue authoring questions with CI gate green and awaiting runtime promotion"},
+    "authoring_questions": {"generated": 123, "checked": 123, "verified": 123, "pending": 0, "needs_revision": 0, "rejected": 0, "status": "127 conventional runtime complete plus 12 verified PCCS complementary-hue authoring questions with browser-feedback prerequisite and CI gates green; runtime promotion still pending"},
     "conventional_corpus_qa": {
       "status": "complete",
       "questions_checked": 127,
@@ -90,8 +97,8 @@
     }
   },
   "current_run": {"generated": 0, "checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0},
-  "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "implemented_beta"},
+  "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "text_and_visual_feedback_supported"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote the 12 CI-cleared complementary-hue records into grade3-runtime.json and rerun promotion/shared-engine regressions. Continue authoritative acquisition for the 24 Japanese hue names/readings and current PCCS representative sRGB values; do not generate monitor-facing PCCS questions before those values are sourced."
+  "next": "Promote the 12 verified pc3.pccs.complementary_hue_number records into grade3-runtime.json now that the text-only browser-feedback prerequisite is CI-cleared, then rerun record-equality, duplicate/schema, browser-feedback and shared-engine regressions. Expected runtime total is 139 verified / pending 0. Continue authoritative acquisition for the 24 Japanese hue names/readings and current PCCS representative sRGB values; do not generate monitor-facing PCCS questions before those values are sourced."
 }
