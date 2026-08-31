@@ -52,9 +52,11 @@ Non-visual relationship work may proceed only where deterministic derivation is 
   - [x] Generate 12 pending-first text-only questions covering circular hue differences 1 through 12 exactly once.
   - [x] Independently recompute every answer as `min(abs(a-b), 24-abs(a-b))`; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
   - [x] Promote the 12 records record-identically; runtime reached 175 verified / pending 0. Workflow run `33387836920` succeeded.
-  - [ ] Encode named hue-difference classes only after current authoritative boundary evidence is acquired; do not infer them from secondary material.
+  - [x] Record JCRI first-party implementation evidence in `41_RELATION_BOUNDARY_AUDIT.md`: official software/report examples confirm named hue-relation classification exists and include adjacent/similar examples, but do not expose the complete boundary table.
+  - [ ] Encode named hue-difference classes only after current authoritative complete boundary evidence is acquired; do not extrapolate from the three official sample colors or secondary material.
 - [ ] Tone difference.
   - [x] Recheck current JCRI authority: conventional PCCS does not define an algorithm for relationships among tones; do not derive distance/adjacency from the tone-map layout.
+  - [x] Record JCRI first-party implementation evidence in `41_RELATION_BOUNDARY_AUDIT.md`: official software/report examples confirm same/similar tone classification exists, but do not expose the complete pair-membership/boundary table or contrast-tone rule.
   - [ ] Acquire the exact current Grade 3 tone-difference / contrast-tone classification boundary before encoding this skill.
 - [ ] 配色判定.
   - [x] Same-tone and same-hue deterministic sub-relations are independently testable from canonical notation.
