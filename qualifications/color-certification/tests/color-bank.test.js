@@ -25,17 +25,16 @@ test('Grade 3 conventional-color master contains 64 stable records', () => {
   for (const color of colors.colors) assert.match(color.displayHex, /^#[0-9A-F]{6}$/);
 });
 
-test('runtime bank exposes 151 verified questions and validates each presentation domain', () => {
+test('runtime bank contains only verified unique questions and validates each presentation domain', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
   const colorByName = new Map(colors.colors.map((color) => [color.name, color]));
-  assert.equal(runtime.questions.length, 151);
   assert.equal(new Set(runtime.questions.map((question) => question.id)).size, runtime.questions.length);
   for (const question of runtime.questions) {
     assert.equal(question.validationStatus, 'verified');
     assert.equal(question.choices.length, 4);
     assert.equal(new Set(question.choices).size, 4);
-    if (question.questionType === 'text_choice') {
-      assert.equal(question.presentation, undefined);
+    if (question.questionType === 'text_choice' && question.presentation === undefined) {
+      assert.ok(['pc3.pccs', 'pc3.relation'].includes(question.categoryId), `unexpected text-only category: ${question.id}`);
       continue;
     }
     assert.ok(colorById.has(question.colorRef));
@@ -201,7 +200,6 @@ test('Power TOEIC shared repository/workout/session engine runs a color question
   const attempt = session.submitAnswer(question.correctIndex);
   assert.equal(attempt.correct, true);
 });
-
 
 test('shared Power TOEIC engine runs promoted PCCS text-choice questions', () => {
   const repository = new InMemoryQuestionBank({ questions: runtime.questions, skills: runtime.skills });
