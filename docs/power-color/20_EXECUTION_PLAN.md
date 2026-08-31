@@ -42,7 +42,7 @@ Non-visual relationship work may proceed only where the source contract permits 
   - [x] Add `pccs-complementary-hue-authoring.test.js` for pair coverage, derivation, source refs, choice uniqueness, answer correctness, pending-first audit metadata, and answer-position balance.
   - [x] Run CI/shared-engine regressions: `Power Color tests` run `33361968699` completed successfully on the authoring commit.
   - [x] Fix the browser answer-feedback prerequisite before promotion: text-only questions no longer require a conventional-color `colorRef`; `Power Color tests` run `33370259344` passed, including all 12 complementary-hue records.
-  - [ ] Promote the 12 verified records to `grade3-runtime.json`, then rerun record-equality, duplicate/schema, browser-feedback and shared-engine regression gates.
+  - [x] Promote the 12 verified records record-identically to `grade3-runtime.json`; runtime is now 139 verified / pending 0, with record-equality, duplicate/schema, browser-feedback and shared-engine regression gates required by the promotion checkpoint.
 - [ ] Same hue / same tone.
 - [ ] Hue-difference / tone-difference.
 - [ ] 配色判定.

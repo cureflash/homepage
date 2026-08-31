@@ -1,23 +1,83 @@
 {
   "project": "power-color",
-  "phase": "grade3_pccs_runtime_promotion_ready",
+  "phase": "grade3_pccs_runtime_promoted",
   "grade": 3,
   "grade3": {
-    "conventional_color_master": {"target": 64, "ingested": 64, "status": "complete"},
+    "conventional_color_master": {
+      "target": 64,
+      "ingested": 64,
+      "status": "complete"
+    },
     "pccs_master": {
       "status": "structural_slice_created",
       "master": "qualifications/color-certification/data/grade3-pccs-structure.json",
       "source_contract": "docs/power-color/40_PCCS_SOURCE_CONTRACT.md",
       "scope_authority_confirmed": true,
       "structural_authority_confirmed": true,
-      "hue_positions_and_notations": {"target": 24, "source_confirmed": 24, "status": "complete"},
-      "hue_japanese_names": {"target": 24, "source_confirmed": 0, "status": "pending_source", "public_authority_audit_on": "2026-08-31", "audit_result": "Current Japan Color Enterprise product documentation explicitly confirms a current first-party 24-hue color-name chart exists, but the public page does not expose the complete 24 mappings or readings; fields remain null until actual authoritative material is acquired."},
-      "tone_codes_and_names": {"target": 12, "source_confirmed": 12, "status": "complete"},
+      "hue_positions_and_notations": {
+        "target": 24,
+        "source_confirmed": 24,
+        "status": "complete"
+      },
+      "hue_japanese_names": {
+        "target": 24,
+        "source_confirmed": 0,
+        "status": "pending_source",
+        "public_authority_audit_on": "2026-08-31",
+        "audit_result": "Current Japan Color Enterprise product documentation explicitly confirms a current first-party 24-hue color-name chart exists, but the public page does not expose the complete 24 mappings or readings; fields remain null until actual authoritative material is acquired."
+      },
+      "tone_codes_and_names": {
+        "target": 12,
+        "source_confirmed": 12,
+        "status": "complete"
+      },
       "confirmed_structure": {
         "hue_circle_count": 24,
-        "hue_notations": ["pR", "R", "yR", "rO", "O", "yO", "rY", "Y", "gY", "YG", "yG", "G", "bG", "BG", "BG", "gB", "B", "B", "pB", "V", "bP", "P", "rP", "RP"],
-        "chromatic_tone_codes": ["v", "b", "s", "dp", "lt", "sf", "d", "dk", "p", "ltg", "g", "dkg"],
-        "new_color_card_199_plus_notation": {"lt": "lt+", "p": "p+", "s_included": false}
+        "hue_notations": [
+          "pR",
+          "R",
+          "yR",
+          "rO",
+          "O",
+          "yO",
+          "rY",
+          "Y",
+          "gY",
+          "YG",
+          "yG",
+          "G",
+          "bG",
+          "BG",
+          "BG",
+          "gB",
+          "B",
+          "B",
+          "pB",
+          "V",
+          "bP",
+          "P",
+          "rP",
+          "RP"
+        ],
+        "chromatic_tone_codes": [
+          "v",
+          "b",
+          "s",
+          "dp",
+          "lt",
+          "sf",
+          "d",
+          "dk",
+          "p",
+          "ltg",
+          "g",
+          "dkg"
+        ],
+        "new_color_card_199_plus_notation": {
+          "lt": "lt+",
+          "p": "p+",
+          "s_included": false
+        }
       },
       "hue20_change_watch": "Current JCRI Color Calc manual still uses 20:V and states PB is a future rename; keep V until the authority actually changes.",
       "authoritative_public_complete_rgb_hex_table_found": false,
@@ -48,7 +108,11 @@
         "coverage": "12/12 unique opposite hue pairs",
         "derivation": "For source-confirmed hue positions 1-24, complementary hue is the position 12 steps opposite.",
         "gate_test": "qualifications/color-certification/tests/pccs-complementary-hue-authoring.test.js",
-        "authoring_ci_gate": {"workflow": "Power Color tests", "run": 33361968699, "conclusion": "success"},
+        "authoring_ci_gate": {
+          "workflow": "Power Color tests",
+          "run": 33361968699,
+          "conclusion": "success"
+        },
         "runtime_promotion_prerequisite": {
           "status": "complete",
           "root_cause": "The browser answer-feedback path resolved a single conventional-color colorRef before distinguishing text-only questions, so unchanged text-choice PCCS records would throw after answer submission.",
@@ -56,11 +120,30 @@
           "test_run": 33370259344,
           "conclusion": "success"
         },
-        "runtime_status": "promotion_ready"
+        "runtime_status": "promoted",
+        "runtime_promotion": {
+          "status": "complete",
+          "promotedRecords": 12,
+          "recordLevelEqualityGate": true,
+          "expectedRuntimeTotal": 139
+        }
       }
     },
-    "runtime_questions": {"verified": 127, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "authoring_questions": {"generated": 123, "checked": 123, "verified": 123, "pending": 0, "needs_revision": 0, "rejected": 0, "status": "127 conventional runtime complete plus 12 verified PCCS complementary-hue authoring questions with browser-feedback prerequisite and CI gates green; runtime promotion still pending"},
+    "runtime_questions": {
+      "verified": 139,
+      "pending": 0,
+      "needs_revision": 0,
+      "rejected": 0
+    },
+    "authoring_questions": {
+      "generated": 123,
+      "checked": 123,
+      "verified": 123,
+      "pending": 0,
+      "needs_revision": 0,
+      "rejected": 0,
+      "status": "127 conventional runtime plus 12 verified PCCS complementary-hue records now promoted record-identically; all 139 runtime records verified; pending 0"
+    },
     "conventional_corpus_qa": {
       "status": "complete",
       "questions_checked": 127,
@@ -82,13 +165,19 @@
       "post_promotion_test_run": 33346108038,
       "post_promotion_test_conclusion": "success"
     },
-    "micro_skills": {"implemented_runtime": 2, "verified_authoring": 1, "planned_minimum": 13},
+    "micro_skills": {
+      "implemented_runtime": 3,
+      "verified_authoring": 1,
+      "planned_minimum": 13
+    },
     "conventional_coverage": {
       "status": "complete",
       "color_to_name_unique_master_colors_covered": 63,
       "color_to_name_target": 64,
       "color_to_name_useful_state_space_complete": true,
-      "color_to_name_deferred_master_refs": ["c3-conventional-052"],
+      "color_to_name_deferred_master_refs": [
+        "c3-conventional-052"
+      ],
       "color_to_name_deferred_reason": "c3-conventional-052 スカイブルー and c3-conventional-017 空色 share the current authoritative reference displayHex #8ED1E0, so a monitor-only color-to-name item is ambiguous and is excluded from useful state-space completion.",
       "name_to_color_unique_master_colors_covered": 64,
       "name_to_color_target": 64,
@@ -96,9 +185,21 @@
       "consistency_gate_passed": true
     }
   },
-  "current_run": {"generated": 0, "checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0},
-  "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "text_and_visual_feedback_supported"},
+  "current_run": {
+    "generated": 0,
+    "checked": 12,
+    "verified": 12,
+    "needs_revision": 0,
+    "rejected": 0,
+    "pending": 0
+  },
+  "engine_integration": {
+    "shared_power_toeic_session": true,
+    "shared_power_toeic_workout_builder": true,
+    "shared_power_toeic_question_bank_adapter": true,
+    "color_renderer": "text_and_visual_feedback_supported"
+  },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote the 12 verified pc3.pccs.complementary_hue_number records into grade3-runtime.json now that the text-only browser-feedback prerequisite is CI-cleared, then rerun record-equality, duplicate/schema, browser-feedback and shared-engine regressions. Expected runtime total is 139 verified / pending 0. Continue authoritative acquisition for the 24 Japanese hue names/readings and current PCCS representative sRGB values; do not generate monitor-facing PCCS questions before those values are sourced."
+  "next": "Continue Grade 3 PCCS non-visual relation/scheme work only where deterministically derivable from source-confirmed structure, while continuing authoritative acquisition for the complete 24 Japanese hue-name/readings mapping and current representative PCCS sRGB values. Do not generate monitor-facing PCCS questions before those values are sourced."
 }
