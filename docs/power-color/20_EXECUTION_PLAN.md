@@ -24,17 +24,20 @@
   - [x] `name_to_color` checkpoint 0041-0048: 8 generated pending-first and independently verified; 0 pending. Targets c3-031 through c3-038.
   - [x] `name_to_color` checkpoint 0049-0056: 8 generated pending-first and independently verified; 0 pending. Targets c3-039, 040, 041, 043, 044, 045, 046, 047; c3-042 was already covered by runtime and was removed after the cross-bank gate detected it.
   - [x] `name_to_color` checkpoint 0057-0064: 8 generated pending-first and independently verified; 0 pending. Targets c3-048 through c3-055; the c3-052 item excludes c3-017 from its choices because both share the same reference display value.
-  - [x] `name_to_color` checkpoint 0065-0072: 8 generated pending-first and independently verified; 0 pending. Targets c3-056 through c3-062 and c3-064; c3-063 remains covered only by the existing runtime bank and is not reused.
+  - [x] `name_to_color` checkpoint 0065-0072: 8 generated pending-first and independently verified; 0 pending. Targets c3-056 through c3-062 and c3-064; c3-063 remains covered only by the original runtime seed and is not reused.
   - [x] `name_to_color` authoritative master state space: 64/64 master refs covered with no target reuse.
 - [x] Independent QA for all conventional-color questions.
   - [x] Corpus gate covered runtime 16 + authoring 111 = 127 verified questions, pending=0 before promotion.
   - [x] Canonical target resolution, schema/source refs, exact fingerprints, cross-bank target uniqueness, monitor-discriminable choice sets and answer-position balance pass.
   - [x] Official association 3級慣用色 reference rechecked 2026-08-31; its public RGB/hex values remain reference values, and 空色/スカイブルー both remain `8ED1E0`.
 - [x] Promote all 111 verified authoring records into `grade3-runtime.json`, preserving the existing 16 runtime records and two skill definitions.
-  - [x] Runtime now contains 127 verified questions, pending=0.
+  - [x] Runtime contains 127 verified questions, pending=0.
   - [x] Promotion gate requires every staged record to be record-level identical to its runtime counterpart.
-- [ ] Post-promotion PR CI: require runtime `color_to_name=63`, `name_to_color=64`, pending=0, duplicate/schema/reference gates green, and shared Power TOEIC engine integration green.
-- [x] Conventional-color coverage gate: both directions cover the useful authoritative master state space; do not force a monitor-indistinguishable item merely to claim 64/64.
+- [x] Post-promotion runtime/shared-engine regression gate.
+  - [x] Runtime `color_to_name=63`, `name_to_color=64`, pending=0.
+  - [x] Duplicate/schema/reference and record-level equality gates pass.
+  - [x] Shared Power TOEIC repository/workout/session integration passes.
+- [x] Conventional-color coverage complete for the useful authoritative monitor state space; do not force a monitor-indistinguishable item merely to claim 64/64.
 
 ## Phase 2 — Grade 3 PCCS master
 - [ ] Confirm authoritative PCCS Grade 3 data/source.
