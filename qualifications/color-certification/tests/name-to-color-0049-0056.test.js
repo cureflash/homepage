@@ -49,7 +49,7 @@ test('name-to-color checkpoint 0049-0056 is independently verified and internall
 
 test('name-to-color staged coverage reaches 48 unique master refs without target reuse', () => {
   const runtimeTargets = runtime.questions
-    .filter((question) => question.skillId === 'pc3.conventional.name_to_color')
+    .filter((question) => question.skillId === 'pc3.conventional.name_to_color' && Number(question.id.slice(-4)) <= 16)
     .map((question) => question.colorRef);
   const stagedTargets = [...previous1.questions, ...previous2.questions, ...previous3.questions, ...previous4.questions, ...authoring.questions]
     .map((question) => question.colorRef);

@@ -47,7 +47,7 @@ test('late color-to-name checkpoint is independently verified and internally con
 
 test('color-to-name useful state-space coverage reaches 63 unique master refs with only c3-052 deferred', () => {
   const runtimeTargets = runtime.questions
-    .filter((question) => question.skillId === 'pc3.conventional.color_to_name')
+    .filter((question) => question.skillId === 'pc3.conventional.color_to_name' && Number(question.id.slice(-4)) <= 16)
     .map((question) => question.colorRef);
   const authoringTargets = checkpoints.flatMap((checkpoint) => checkpoint.questions.map((question) => question.colorRef));
   const targets = [...runtimeTargets, ...authoringTargets];

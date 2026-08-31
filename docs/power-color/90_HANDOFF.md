@@ -1,34 +1,33 @@
 # Power Color — HANDOFF
 
 ## Current checkpoint
-Grade 3 conventional colors — full consistency QA complete; runtime promotion is next.
+Grade 3 conventional colors complete; next exact work is Grade 3 PCCS master source confirmation.
 
 Completed:
 - 64/64 Grade 3 慣用色名 ingested into the color master.
-- Source/reference-color caveat recorded. The current association Grade 3 conventional-color page was rechecked on 2026-08-31 and still states that its RGB/hex values are reference values based on 『決定版 色の名前 507』.
-- Two first micro-skills established on the shared Power TOEIC drill engine.
-- Existing runtime remains 16 verified beta questions (8 colors × 2 directions).
-- Authoring corpus contains 111 individually verified questions: 55 `pc3.conventional.color_to_name` + 56 `pc3.conventional.name_to_color`; 0 pending / 0 needs_revision / 0 rejected.
-- Combined runtime + authoring corpus is 127 verified questions.
-- Added `tests/conventional-corpus-gate.test.js`, which loads runtime plus all 14 authoring checkpoint files as one corpus and independently resolves targets/choices against `grade3-colors.json`.
-- Corpus gate verifies shared schema/source refs, canonical target resolution, four-choice uniqueness, display-value discriminability, cross-bank target uniqueness, unique IDs/full fingerprints, answer-position balance and pending=0.
-- `color_to_name` coverage is 63/64 with no target reuse. The only omitted target is `c3-conventional-052` スカイブルー because the current association reference page gives both it and `c3-conventional-017` 空色 the same display hex `8ED1E0`.
-- `name_to_color` coverage is 64/64 with no target reuse and every choice set has four distinct reference display values.
-- Power Color Actions run `33342816917` passed the full suite with the new corpus gate.
-- Shared Power TOEIC `QuizSession`, `WorkoutBuilder`, and `InMemoryQuestionBank` remain the only drill engine.
+- Current association Grade 3 conventional-color source rechecked on 2026-08-31; public RGB/hex values remain reference display values, not print-color guarantees.
+- Two conventional-color micro-skills remain on the shared Power TOEIC drill engine; no color-specific engine fork exists.
+- Existing 16 verified runtime records were preserved and all 111 individually verified authoring records were promoted unchanged into `grade3-runtime.json`.
+- Runtime now contains 127 verified conventional-color questions: 63 `pc3.conventional.color_to_name` useful monitor-discriminable states and 64 `pc3.conventional.name_to_color` authoritative states; pending 0 / needs_revision 0 / rejected 0.
+- The 14 authoring checkpoint files remain as audit sources. `tests/conventional-corpus-gate.test.js` requires all 111 staged records to be record-level identical to runtime counterparts.
+- Post-promotion legacy checkpoint tests were reconciled to use the original 16-question runtime seed only when reconstructing historical staged coverage; final runtime assertions use all 127 questions. No validation gate was weakened.
+- Post-promotion Power Color Actions run `33346108038` succeeded. Runtime schema/source refs, display-value discriminability, unique IDs/fingerprints, target uniqueness, answer-position balance and shared Power TOEIC repository/workout/session integration all pass.
+- `color_to_name` remains 63/64 because `c3-conventional-052` スカイブルー and `c3-conventional-017` 空色 share reference display hex `8ED1E0`; the ambiguous monitor-only state remains intentionally excluded.
 
 Current run counts:
 - generated: 0
-- corpus checked: 127
-- verified by corpus gate: 127
+- promoted: 111
+- runtime checked: 127
+- runtime verified: 127
 - needs_revision: 0
 - rejected: 0
 - pending: 0
 
 Not complete:
-- promotion of the 111 verified authoring records into `grade3-runtime.json`;
-- post-promotion runtime/shared-engine regression gate;
-- PCCS master/questions, relationship/scheme questions, full Grade 3 completion.
+- Grade 3 PCCS master/questions;
+- Grade 3 relationship/scheme questions;
+- full Grade 3 completion, then Grade 2 and Grade 1;
+- `color_database_complete` remains false.
 
 ## Next exact start point
-Promote all 111 verified conventional-color authoring records into `qualifications/color-certification/data/grade3-runtime.json` without changing their truth data, preserving the existing 16 runtime questions and the two current skill definitions. Then rerun the full Power Color suite and require runtime conventional coverage `color_to_name=63` useful monitor-discriminable states, `name_to_color=64` authoritative states, pending=0, and shared Power TOEIC engine integration green. Only after that post-promotion gate passes may Phase 2 PCCS begin.
+Begin Grade 3 PCCS master source confirmation. Re-read the current Color Certification Association Grade 3 official scope/textbook/sample information and identify authoritative PCCS hue/tone/notation data that can be stored without guessed display values. Fix the PCCS master/source contract before generating any PCCS questions.
