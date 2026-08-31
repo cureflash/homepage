@@ -47,9 +47,12 @@
   - [x] Structural PCCS truth and monitor display references are separate authorities.
   - [x] Unsourced RGB/HEX, screenshot sampling, third-party tables and conversion-derived swatches are prohibited.
 - [ ] Build hue/tone/notation master without guessing display values.
-  - [ ] Confirm the exact Grade 3 hue-number/name/notation set from an authoritative source before inserting mappings.
-  - [ ] Confirm the exact Grade 3 tone set/notation required by the official material before inserting mappings beyond directly sourced current tone codes.
+  - [x] Create `grade3-pccs-structure.json` with source-confirmed hue positions 1-24 and their current notations.
+  - [x] Confirm 12 chromatic tone codes/names and preserve the `lt+`/`p+` new-color-card convention separately from canonical `lt`/`p`; record that `s` is omitted from new color card 199a.
+  - [x] Preserve current hue 20 as `V`; the current JCRI manual says `PB` is a future rename, so no premature migration is allowed.
+  - [ ] Confirm all 24 Japanese PCCS hue names/readings from a current authoritative source before filling those fields.
   - [ ] Identify an authoritative per-state display reference for monitor swatches. Current reviewed public official pages do not expose a complete RGB/HEX table; visual PCCS question generation remains blocked until this is resolved.
+  - [x] Add `pccs-structure-master.test.js` to gate the structural slice, null display references, source refs, and notation exceptions.
 - [ ] Add color/hue, color/tone, color/notation and reverse-lookup drills.
 - [ ] QA and coverage gate.
 

@@ -5,18 +5,26 @@
   "grade3": {
     "conventional_color_master": {"target": 64, "ingested": 64, "status": "complete"},
     "pccs_master": {
-      "status": "source_contract_fixed",
+      "status": "structural_slice_created",
+      "master": "qualifications/color-certification/data/grade3-pccs-structure.json",
       "source_contract": "docs/power-color/40_PCCS_SOURCE_CONTRACT.md",
       "scope_authority_confirmed": true,
       "structural_authority_confirmed": true,
+      "hue_positions_and_notations": {"target": 24, "source_confirmed": 24, "status": "complete"},
+      "hue_japanese_names": {"target": 24, "source_confirmed": 0, "status": "pending_source"},
+      "tone_codes_and_names": {"target": 12, "source_confirmed": 12, "status": "complete"},
       "confirmed_structure": {
         "hue_circle_count": 24,
-        "current_color_tone_circle_tones": ["v", "b", "dp", "lt+", "sf", "d", "dk", "p+", "ltg", "g", "dkg"],
-        "current_color_tone_circle_hues_per_tone": 12
+        "hue_notations": ["pR", "R", "yR", "rO", "O", "yO", "rY", "Y", "gY", "YG", "yG", "G", "bG", "BG", "BG", "gB", "B", "B", "pB", "V", "bP", "P", "rP", "RP"],
+        "chromatic_tone_codes": ["v", "b", "s", "dp", "lt", "sf", "d", "dk", "p", "ltg", "g", "dkg"],
+        "new_color_card_199_plus_notation": {"lt": "lt+", "p": "p+", "s_included": false}
       },
+      "hue20_change_watch": "Current JCRI Color Calc manual still uses 20:V and states PB is a future rename; keep V until the authority actually changes.",
       "authoritative_public_complete_rgb_hex_table_found": false,
       "visual_question_generation_blocked": true,
-      "next": "Confirm exact Grade 3 hue-number/name/notation mappings and Grade 3 tone/notation mappings from authoritative sources, while continuing to search for an authoritative per-state digital display reference. Do not create PCCS swatches from screenshots, third-party tables, conversion formulas, or approximations."
+      "structural_gate_test": "qualifications/color-certification/tests/pccs-structure-master.test.js",
+      "source_rechecked_on": "2026-08-31",
+      "next": "Confirm all 24 Grade 3 PCCS Japanese hue names/readings from authoritative current sources and continue searching for an authoritative per-state digital display reference. Keep displayReference null and do not generate monitor-facing PCCS questions until the display-value gate is satisfied."
     },
     "relation_scheme_master": {"status": "not_started"},
     "runtime_questions": {"verified": 127, "pending": 0, "needs_revision": 0, "rejected": 0},
@@ -56,8 +64,9 @@
       "consistency_gate_passed": true
     }
   },
+  "current_run": {"generated": 0, "checked": 0, "verified": 0, "needs_revision": 0, "rejected": 0, "pending": 0},
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "implemented_beta"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Build the source-confirmed structural slice of the Grade 3 PCCS master only after confirming exact hue-number/name/notation and tone/notation mappings from authoritative sources. Keep displayReference null wherever no authoritative digital value exists; do not generate monitor-facing PCCS questions yet."
+  "next": "Confirm authoritative Japanese hue names/readings for the 24 PCCS hue records and continue the authoritative digital-display-reference search. Do not infer names or display colors; keep monitor-facing PCCS generation blocked."
 }
