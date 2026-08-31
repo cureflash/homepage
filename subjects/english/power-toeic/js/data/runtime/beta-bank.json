@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-31T01:16:01.477Z",
+  "generatedAt": "2026-08-31T05:17:35.561Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 3632,
-    "runtimeQuestionCount": 3629,
+    "approvedCandidateCount": 3650,
+    "runtimeQuestionCount": 3647,
     "quarantinedNearDuplicateCount": 3,
-    "qaRecordCount": 148
+    "qaRecordCount": 149
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -21471,6 +21471,74 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_pos_adjective_after_linking_verb_0037",
+      "version": 1,
+      "skillId": "p5.pos.adjective_after_linking_verb",
+      "categoryId": "parts-of-speech",
+      "sentence": "The customer database remains ____ behind the new firewall.",
+      "choices": [
+        "secure",
+        "security",
+        "securely",
+        "securing"
+      ],
+      "correctIndex": 0,
+      "explanation": "Adjective required after the linking verb; 'secure' describes the database's state.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adjective_after_linking_verb_0038",
+      "version": 1,
+      "skillId": "p5.pos.adjective_after_linking_verb",
+      "categoryId": "parts-of-speech",
+      "sentence": "The payment connection is ____ during every transaction.",
+      "choices": [
+        "security",
+        "secure",
+        "securing",
+        "securely"
+      ],
+      "correctIndex": 1,
+      "explanation": "Adjective required after the linking verb; 'secure' describes the connection's state.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adjective_after_linking_verb_0039",
+      "version": 1,
+      "skillId": "p5.pos.adjective_after_linking_verb",
+      "categoryId": "parts-of-speech",
+      "sentence": "The storage area appears ____ after the locks were replaced.",
+      "choices": [
+        "securely",
+        "securing",
+        "secure",
+        "security"
+      ],
+      "correctIndex": 2,
+      "explanation": "Adjective required after the linking verb; 'secure' describes the storage area's state.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adjective_after_linking_verb_0040",
+      "version": 1,
+      "skillId": "p5.pos.adjective_after_linking_verb",
+      "categoryId": "parts-of-speech",
+      "sentence": "The archived files are ____ and accessible only to authorized staff.",
+      "choices": [
+        "securing",
+        "securely",
+        "security",
+        "secure"
+      ],
+      "correctIndex": 3,
+      "explanation": "Adjective required after the linking verb; 'secure' describes the files' state.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_pos_adjective_after_linking_verb_0041",
       "version": 1,
       "skillId": "p5.pos.adjective_after_linking_verb",
@@ -24446,6 +24514,23 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_pos_adverb_modifies_adjective_0020",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The service remained ____ reliable after the network interruption.",
+      "choices": [
+        "remarkable",
+        "remark",
+        "remarked",
+        "remarkably"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank modifies the adjective “reliable,” so the adverb “remarkably” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_pos_adverb_modifies_adjective_0021",
       "version": 1,
       "skillId": "p5.pos.adverb_modifies_adjective",
@@ -24493,6 +24578,23 @@
       ],
       "correctIndex": 2,
       "explanation": "The blank modifies the adjective “faster,” so the adverb “significantly” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adverb_modifies_adjective_0024",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The updated forecast is ____ more accurate than the preliminary estimate.",
+      "choices": [
+        "significant",
+        "significance",
+        "signify",
+        "significantly"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank modifies the comparative adjective phrase “more accurate,” so the adverb “significantly” is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -24646,6 +24748,57 @@
       ],
       "correctIndex": 0,
       "explanation": "The blank modifies the adjective “available,” so the adverb “widely” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adverb_modifies_adjective_0034",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The new payment method is ____ available at retailers throughout the region.",
+      "choices": [
+        "wide",
+        "widely",
+        "width",
+        "widen"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank modifies the adjective “available,” so the adverb “widely” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adverb_modifies_adjective_0035",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The software package is ____ compatible with systems used by small logistics companies.",
+      "choices": [
+        "wide",
+        "width",
+        "widely",
+        "widen"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank modifies the adjective “compatible,” so the adverb “widely” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adverb_modifies_adjective_0036",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The revised labeling standard is ____ applicable across the industry.",
+      "choices": [
+        "wide",
+        "width",
+        "widen",
+        "widely"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank modifies the adjective “applicable,” so the adverb “widely” is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -24820,6 +24973,23 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_pos_adverb_modifies_adjective_0047",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The candidate is ____ qualified for the regional manager position.",
+      "choices": [
+        "exceptional",
+        "exception",
+        "exceptionally",
+        "except"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank modifies the adjective “qualified,” so the adverb “exceptionally” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_pos_adverb_modifies_adjective_0048",
       "version": 1,
       "skillId": "p5.pos.adverb_modifies_adjective",
@@ -24867,6 +25037,23 @@
       ],
       "correctIndex": 1,
       "explanation": "The blank modifies the adjective “lighter,” so the adverb “notably” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adverb_modifies_adjective_0051",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "Customer satisfaction is ____ higher among subscribers who use live support.",
+      "choices": [
+        "notable",
+        "note",
+        "notably",
+        "noted"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank modifies the adjective “higher,” so the adverb “notably” is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -24935,6 +25122,23 @@
       ],
       "correctIndex": 2,
       "explanation": "The blank modifies the adjective “larger,” so the adverb “considerably” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adverb_modifies_adjective_0056",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "Production has become ____ more efficient since the layout was changed.",
+      "choices": [
+        "considerable",
+        "consideration",
+        "consider",
+        "considerably"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank modifies the comparative adjective phrase “more efficient,” so the adverb “considerably” is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -25020,6 +25224,23 @@
       ],
       "correctIndex": 0,
       "explanation": "The blank modifies the adjective “quiet,” so the adverb “unusually” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adverb_modifies_adjective_0062",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The delivery schedule is ____ early for the holiday season.",
+      "choices": [
+        "unusual",
+        "unusually",
+        "unusualness",
+        "usual"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank modifies the adjective “early,” so the adverb “unusually” is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -25296,6 +25517,23 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_pos_adverb_modifies_adjective_0079",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The revised staffing plan is ____ feasible during the busiest delivery hours.",
+      "choices": [
+        "operational",
+        "operation",
+        "operationally",
+        "operate"
+      ],
+      "correctIndex": 2,
+      "explanation": "The blank modifies the adjective “feasible,” so the adverb “operationally” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_pos_adverb_modifies_adjective_0080",
       "version": 1,
       "skillId": "p5.pos.adverb_modifies_adjective",
@@ -25326,6 +25564,23 @@
       ],
       "correctIndex": 0,
       "explanation": "The blank modifies the adjective “responsible,” so the adverb “environmentally” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adverb_modifies_adjective_0082",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The proposed heating system is ____ beneficial because it uses less energy than the current equipment.",
+      "choices": [
+        "environmental",
+        "environmentally",
+        "environment",
+        "environmentalist"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank modifies the adjective “beneficial,” so the adverb “environmentally” is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -25517,6 +25772,23 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_pos_adverb_modifies_adjective_0094",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The revised timetable was ____ accessible before tickets went on sale.",
+      "choices": [
+        "public",
+        "publicly",
+        "publicity",
+        "publicize"
+      ],
+      "correctIndex": 1,
+      "explanation": "The blank modifies the adjective “accessible,” so the adverb “publicly” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_pos_adverb_modifies_adjective_0095",
       "version": 1,
       "skillId": "p5.pos.adverb_modifies_adjective",
@@ -25530,6 +25802,23 @@
       ],
       "correctIndex": 2,
       "explanation": "The blank modifies the adjective “accessible,” so the adverb “publicly” is required.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_adverb_modifies_adjective_0096",
+      "version": 1,
+      "skillId": "p5.pos.adverb_modifies_adjective",
+      "categoryId": "parts-of-speech",
+      "sentence": "The new branch location was ____ available on the company website before the opening.",
+      "choices": [
+        "public",
+        "publicity",
+        "publicize",
+        "publicly"
+      ],
+      "correctIndex": 3,
+      "explanation": "The blank modifies the adjective “available,” so the adverb “publicly” is required.",
       "validationStatus": "verified",
       "betaCandidate": true
     },
@@ -32873,6 +33162,23 @@
         "securing"
       ],
       "correctIndex": 0,
+      "explanation": "“security” is the noun form and functions as the subject of the clause.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_pos_word_form_subject_position_0038",
+      "version": 1,
+      "skillId": "p5.pos.word_form_subject_position",
+      "categoryId": "parts-of-speech",
+      "sentence": "____ of confidential documents remains a priority for the legal department.",
+      "choices": [
+        "securely",
+        "secured",
+        "secure",
+        "security"
+      ],
+      "correctIndex": 3,
       "explanation": "“security” is the noun form and functions as the subject of the clause.",
       "validationStatus": "verified",
       "betaCandidate": true
@@ -61971,11 +62277,19 @@
   "buildDiagnostics": {
     "qaInference": [
       {
+        "file": "2026-08-27-scheduled-015-adjective-after-linking-verb.qa.json",
+        "skill": "p5.pos.adjective_after_linking_verb",
+        "status": "inferred",
+        "checked": 100,
+        "verified": 100,
+        "range": "full-skill"
+      },
+      {
         "file": "2026-08-27-scheduled-017-word-form-subject-position.qa.json",
         "skill": "p5.pos.word_form_subject_position",
         "status": "inferred",
         "checked": 100,
-        "verified": 99,
+        "verified": 100,
         "range": "full-skill"
       },
       {
