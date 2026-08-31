@@ -1,6 +1,6 @@
 {
   "project": "power-color",
-  "phase": "grade3_pccs_master",
+  "phase": "grade3_pccs_relations_authoring",
   "grade": 3,
   "grade3": {
     "conventional_color_master": {"target": 64, "ingested": 64, "status": "complete"},
@@ -26,16 +26,33 @@
         "confirmed": true,
         "finding": "Current official PCCS Color Calc accepts PCCS hue-tone input, uses each hue/tone representative value, and outputs sRGB under D65 / 2-degree conditions. Current JCRI FAQ permits customer-created Color Calc figures for private or commercial use.",
         "direct_official_software_output_route_approved": true,
-        "remaining_blocker": "Acquire the representative per-state numeric sRGB values either from a current official published table/export or by running a current licensed PCCS Color Calc and retaining auditable hue/tone input-to-output evidence."
+        "secondary_published_reference_found": "The current JCRI product page for Digital Color Manual states that its PCCS chart contains 288 chromatic and 17 achromatic colors and that every chart includes RGB hexadecimal and CMYK values. Exact values were not acquired, and publication freshness relative to current Color Calc representative values is not established, so this does not populate displayReference.",
+        "remaining_blocker": "Acquire current representative per-state numeric sRGB values from current licensed PCCS Color Calc or a current official published table/export with auditable values."
       },
       "visual_question_generation_blocked": true,
       "structural_gate_test": "qualifications/color-certification/tests/pccs-structure-master.test.js",
       "source_rechecked_on": "2026-08-31",
-      "next": "Acquire the complete 24 Japanese hue-name/readings mapping from current authoritative material and obtain representative PCCS sRGB values through the now-approved current licensed Color Calc direct-output route or an official published table/export. Keep nameJa/reading/displayReference null until their respective source evidence is acquired; do not generate monitor-facing PCCS questions before then."
+      "next": "Acquire the complete 24 Japanese hue-name/readings mapping and current representative PCCS sRGB values. Keep nameJa/reading/displayReference null until evidence is acquired; monitor-facing PCCS questions remain blocked."
     },
-    "relation_scheme_master": {"status": "not_started"},
+    "relation_scheme_master": {
+      "status": "in_progress",
+      "complementary_hue_number": {
+        "skill": "pc3.pccs.complementary_hue_number",
+        "authoring_batch": "qualifications/color-certification/data/grade3-authoring-complementary-hue-number-0001-0012.json",
+        "generated": 12,
+        "checked": 12,
+        "verified": 12,
+        "pending": 0,
+        "needs_revision": 0,
+        "rejected": 0,
+        "coverage": "12/12 unique opposite hue pairs",
+        "derivation": "For source-confirmed hue positions 1-24, complementary hue is the position 12 steps opposite.",
+        "gate_test": "qualifications/color-certification/tests/pccs-complementary-hue-authoring.test.js",
+        "runtime_status": "not_promoted"
+      }
+    },
     "runtime_questions": {"verified": 127, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "authoring_questions": {"generated": 111, "checked": 111, "verified": 111, "pending": 0, "needs_revision": 0, "rejected": 0, "status": "promoted_and_retained_for_audit", "checkpoint": "pc3.conventional.color_to_name 0017-0071 + pc3.conventional.name_to_color 0017-0072"},
+    "authoring_questions": {"generated": 123, "checked": 123, "verified": 123, "pending": 0, "needs_revision": 0, "rejected": 0, "status": "127 conventional runtime complete plus 12 verified PCCS complementary-hue authoring questions awaiting promotion"},
     "conventional_corpus_qa": {
       "status": "complete",
       "questions_checked": 127,
@@ -47,7 +64,7 @@
       "source_rechecked_on": "2026-08-31"
     },
     "runtime_promotion": {
-      "status": "complete",
+      "status": "complete_for_conventional_only",
       "promoted_authoring_records": 111,
       "preserved_existing_runtime_records": 16,
       "runtime_total": 127,
@@ -57,7 +74,7 @@
       "post_promotion_test_run": 33346108038,
       "post_promotion_test_conclusion": "success"
     },
-    "micro_skills": {"implemented": 2, "planned_minimum": 13},
+    "micro_skills": {"implemented_runtime": 2, "verified_authoring": 1, "planned_minimum": 13},
     "conventional_coverage": {
       "status": "complete",
       "color_to_name_unique_master_colors_covered": 63,
@@ -71,9 +88,9 @@
       "consistency_gate_passed": true
     }
   },
-  "current_run": {"generated": 0, "checked": 0, "verified": 0, "needs_revision": 0, "rejected": 0, "pending": 0},
+  "current_run": {"generated": 12, "checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0},
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "implemented_beta"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Acquire the authoritative 24-name/readings mapping and representative PCCS sRGB values via current licensed Color Calc direct numeric output or an official published table/export. Do not infer names or display colors; monitor-facing PCCS generation remains blocked until evidence is stored."
+  "next": "Run the complementary-hue batch gate and shared Power Color regressions through CI, then promote this verified non-visual skill only if all gates pass. In parallel, continue authoritative acquisition for the 24 Japanese hue names/readings and current PCCS representative sRGB values; do not generate monitor-facing PCCS questions before those values are sourced."
 }
