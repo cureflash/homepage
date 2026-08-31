@@ -25,6 +25,8 @@ All 13 quarantined items in `p5.pos.adverb_modifies_adjective` were repaired and
 
 Cumulative state is now 4,310 verified / 90 needs_revision / 0 rejected, with unchecked `pending_validation` still 0.
 
+This run ended below 100 revision rechecks because the 13 items formed one coherent historical skill repair spanning four complete source batch files. Connector-only editing requires full-file replacement for each batch; continuing into the next skill in the same run would risk a partially applied multi-file revision checkpoint.
+
 ## Next generation
 
 None. `generation_complete: true`; do not generate additional Part 5 questions.
