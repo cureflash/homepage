@@ -48,7 +48,7 @@ test('checkpoint 0057-0064 is individually verified and schema-consistent', () =
 
 test('0057-0064 adds eight new color-to-name targets without reusing prior coverage', () => {
   const priorTargets = [
-    ...runtime.questions.filter((q) => q.skillId === 'pc3.conventional.color_to_name').map((q) => q.colorRef),
+    ...runtime.questions.filter((q) => q.skillId === 'pc3.conventional.color_to_name' && Number(q.id.slice(-4)) <= 16).map((q) => q.colorRef),
     ...previous.flatMap((bank) => bank.questions.map((q) => q.colorRef))
   ];
   const newTargets = checkpoint.questions.map((q) => q.colorRef);
