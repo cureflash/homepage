@@ -1,6 +1,6 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-31T19:36:09.579Z",
+  "generatedAt": "2026-08-31T23:35:36.236Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
@@ -8,7 +8,7 @@
     "approvedCandidateCount": 3694,
     "runtimeQuestionCount": 3691,
     "quarantinedNearDuplicateCount": 3,
-    "qaRecordCount": 157
+    "qaRecordCount": 158
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -63116,6 +63116,13 @@
         "status": "skipped_no_safe_range",
         "checked": 4,
         "verified": 4
+      },
+      {
+        "file": "2026-09-01-revision-011-subject-vs-object-0031.qa.json",
+        "skill": "p5.pron.subject_vs_object",
+        "status": "skipped_no_safe_range",
+        "checked": 1,
+        "verified": 1
       }
     ]
   }
