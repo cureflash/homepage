@@ -1,6 +1,6 @@
 {
   "project": "power-color",
-  "phase": "grade3_same_tone_runtime_promoted",
+  "phase": "grade3_hue_difference_authoring_verified",
   "grade": 3,
   "grade3": {
     "conventional_color_master": {
@@ -14,11 +14,7 @@
       "source_contract": "docs/power-color/40_PCCS_SOURCE_CONTRACT.md",
       "scope_authority_confirmed": true,
       "structural_authority_confirmed": true,
-      "hue_positions_and_notations": {
-        "target": 24,
-        "source_confirmed": 24,
-        "status": "complete"
-      },
+      "hue_positions_and_notations": {"target": 24, "source_confirmed": 24, "status": "complete"},
       "hue_japanese_names": {
         "target": 24,
         "source_confirmed": 0,
@@ -26,20 +22,12 @@
         "public_authority_audit_on": "2026-08-31",
         "audit_result": "Current Japan Color Enterprise product documentation explicitly confirms a current first-party 24-hue color-name chart exists, but the public page does not expose the complete 24 mappings or readings; fields remain null until actual authoritative material is acquired."
       },
-      "tone_codes_and_names": {
-        "target": 12,
-        "source_confirmed": 12,
-        "status": "complete"
-      },
+      "tone_codes_and_names": {"target": 12, "source_confirmed": 12, "status": "complete"},
       "confirmed_structure": {
         "hue_circle_count": 24,
         "hue_notations": ["pR", "R", "yR", "rO", "O", "yO", "rY", "Y", "gY", "YG", "yG", "G", "bG", "BG", "BG", "gB", "B", "B", "pB", "V", "bP", "P", "rP", "RP"],
         "chromatic_tone_codes": ["v", "b", "s", "dp", "lt", "sf", "d", "dk", "p", "ltg", "g", "dkg"],
-        "new_color_card_199_plus_notation": {
-          "lt": "lt+",
-          "p": "p+",
-          "s_included": false
-        }
+        "new_color_card_199_plus_notation": {"lt": "lt+", "p": "p+", "s_included": false}
       },
       "hue20_change_watch": "Current JCRI Color Calc manual still uses 20:V and states PB is a future rename; keep V until the authority actually changes.",
       "authoritative_public_complete_rgb_hex_table_found": false,
@@ -61,109 +49,79 @@
       "complementary_hue_number": {
         "skill": "pc3.pccs.complementary_hue_number",
         "authoring_batch": "qualifications/color-certification/data/grade3-authoring-complementary-hue-number-0001-0012.json",
-        "generated": 12,
-        "checked": 12,
-        "verified": 12,
-        "pending": 0,
-        "needs_revision": 0,
-        "rejected": 0,
+        "generated": 12, "checked": 12, "verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0,
         "coverage": "12/12 unique opposite hue pairs",
-        "derivation": "For source-confirmed hue positions 1-24, complementary hue is the position 12 steps opposite.",
-        "gate_test": "qualifications/color-certification/tests/pccs-complementary-hue-authoring.test.js",
-        "authoring_ci_gate": {
-          "workflow": "Power Color tests",
-          "run": 33361968699,
-          "conclusion": "success"
-        },
-        "runtime_promotion_prerequisite": {
-          "status": "complete",
-          "root_cause": "The browser answer-feedback path resolved a single conventional-color colorRef before distinguishing text-only questions, so unchanged text-choice PCCS records would throw after answer submission.",
-          "fix": "Text-only feedback now derives the answer identity from choices[correctIndex] without a monitor-color dependency; visual feedback still requires its canonical colorRef.",
-          "test_run": 33370259344,
-          "conclusion": "success"
-        },
         "runtime_status": "promoted",
-        "runtime_promotion": {
-          "status": "complete",
-          "promotedRecords": 12,
-          "recordLevelEqualityGate": true,
-          "expectedRuntimeTotal": 139
-        }
+        "runtime_promotion": {"status": "complete", "promotedRecords": 12, "recordLevelEqualityGate": true, "expectedRuntimeTotal": 139}
       },
       "same_tone": {
         "skill": "pc3.relation.same_tone",
         "authoring_batch": "qualifications/color-certification/data/grade3-authoring-same-tone-0001-0012.json",
-        "generated": 12,
-        "checked": 12,
-        "verified": 12,
-        "pending": 0,
-        "needs_revision": 0,
-        "rejected": 0,
+        "generated": 12, "checked": 12, "verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0,
         "coverage": "12/12 source-confirmed chromatic tone codes",
         "derivation": "The official PCCS notation rule writes a chromatic color as tone abbreviation plus hue number; same tone is independently determined by matching the source-confirmed tone abbreviation while hue number may differ.",
         "official_sample_alignment": "The current Color Certification Association Grade 3 sample directly includes 同一トーン配色.",
         "gate_test": "qualifications/color-certification/tests/pccs-same-tone-authoring.test.js",
-        "authoring_ci_gate": {
-          "workflow": "Power Color tests",
-          "run": 33379830006,
-          "conclusion": "success"
-        },
+        "authoring_ci_gate": {"workflow": "Power Color tests", "run": 33379830006, "conclusion": "success"},
         "runtime_status": "promoted",
         "runtime_promotion": {
           "status": "complete",
           "promotedRecords": 12,
           "recordLevelEqualityGate": true,
           "runtimeGate": "qualifications/color-certification/tests/pccs-same-tone-runtime-promotion.test.js",
-          "expectedRuntimeTotal": 151,
+          "expectedRuntimeTotalAtPromotion": 151,
           "sharedEngineGate": true,
           "workflow": "Power Color tests",
           "run": 33384827586,
           "conclusion": "success"
-        },
-        "next": "Re-audit current official Grade 3/PCCS authority for a deterministic non-visual same-hue formulation before creating that skill."
+        }
+      },
+      "same_hue": {
+        "skill": "pc3.relation.same_hue",
+        "authoring_batch": "qualifications/color-certification/data/grade3-authoring-same-hue-0001-0012.json",
+        "generated": 12, "checked": 12, "verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0,
+        "coverage": "12 source-confirmed chromatic tone anchors across 12 distinct hue positions",
+        "derivation": "PCCS chromatic notation is tone abbreviation plus hue number. Same hue is independently determined by matching the source-confirmed hue number while the tone abbreviation differs.",
+        "official_sample_alignment": "The current Color Certification Association Grade 3 sample directly includes 同一色相配色.",
+        "authoring_gate": "qualifications/color-certification/tests/pccs-same-hue-authoring.test.js",
+        "runtime_status": "promoted",
+        "runtime_promotion": {
+          "status": "complete",
+          "promotedRecords": 12,
+          "recordLevelEqualityGate": true,
+          "runtimeGate": "qualifications/color-certification/tests/pccs-same-hue-runtime-promotion.test.js",
+          "expectedRuntimeTotal": 163,
+          "sharedEngineGate": true,
+          "workflow": "Power Color reconcile checkpoint",
+          "run": 33386401079,
+          "conclusion": "success"
+        }
+      },
+      "hue_difference": {
+        "skill": "pc3.relation.hue_difference",
+        "authoring_batch": "qualifications/color-certification/data/grade3-authoring-hue-difference-0001-0012.json",
+        "generated": 12, "checked": 12, "verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0,
+        "coverage": "numeric circular hue differences 1-12 exactly once",
+        "derivation": "For source-confirmed positions on the 24-hue circle, numeric hue difference is min(abs(a-b), 24-abs(a-b)). Named classification boundaries are intentionally not inferred in this batch.",
+        "authoring_gate": "qualifications/color-certification/tests/pccs-hue-difference-authoring.test.js",
+        "authoring_ci_gate": {"workflow": "Power Color reconcile checkpoint", "run": 33386401079, "conclusion": "success"},
+        "runtime_status": "promotion_ready",
+        "next": "Promote all 12 records record-identically and require runtime 175 verified / pending 0 with promotion/shared-engine gates."
       }
     },
-    "runtime_questions": {
-      "verified": 151,
-      "pending": 0,
-      "needs_revision": 0,
-      "rejected": 0
-    },
+    "runtime_questions": {"verified": 163, "pending": 0, "needs_revision": 0, "rejected": 0},
     "authoring_questions": {
-      "generated": 135,
-      "checked": 135,
-      "verified": 135,
+      "generated": 159,
+      "checked": 159,
+      "verified": 159,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0,
-      "status": "111 conventional authoring records plus 12 complementary-hue records plus 12 same-tone records are independently verified; both PCCS relation batches are promoted record-identically to runtime."
+      "status": "111 conventional authoring records plus 12 complementary-hue, 12 same-tone, 12 same-hue, and 12 hue-difference records are independently verified. Hue-difference is the only current relation batch awaiting runtime promotion."
     },
-    "conventional_corpus_qa": {
-      "status": "complete",
-      "questions_checked": 127,
-      "verified": 127,
-      "needs_revision": 0,
-      "rejected": 0,
-      "pending": 0,
-      "gate_test": "qualifications/color-certification/tests/conventional-corpus-gate.test.js",
-      "source_rechecked_on": "2026-08-31"
-    },
-    "runtime_promotion": {
-      "status": "complete_for_conventional_only",
-      "promoted_authoring_records": 111,
-      "preserved_existing_runtime_records": 16,
-      "runtime_total": 127,
-      "record_level_equality_gate": true,
-      "promotion_workflow_run": 33345618257,
-      "promotion_workflow_conclusion": "success",
-      "post_promotion_test_run": 33346108038,
-      "post_promotion_test_conclusion": "success"
-    },
-    "micro_skills": {
-      "implemented_runtime": 4,
-      "verified_authoring": 2,
-      "planned_minimum": 13
-    },
+    "conventional_corpus_qa": {"status": "complete", "questions_checked": 127, "verified": 127, "needs_revision": 0, "rejected": 0, "pending": 0, "gate_test": "qualifications/color-certification/tests/conventional-corpus-gate.test.js", "source_rechecked_on": "2026-08-31"},
+    "runtime_promotion": {"status": "conventional_and_three_pccs_relation_slices_promoted", "runtime_total": 163, "record_level_equality_gate": true},
+    "micro_skills": {"implemented_runtime": 5, "verified_authoring": 4, "planned_minimum": 13},
     "conventional_coverage": {
       "status": "complete",
       "color_to_name_unique_master_colors_covered": 63,
@@ -178,20 +136,22 @@
     }
   },
   "current_run": {
-    "generated": 0,
-    "checked": 12,
-    "verified": 12,
+    "checkpoints_completed": 4,
+    "generated": 24,
+    "checked": 48,
+    "verified": 48,
     "needs_revision": 0,
     "rejected": 0,
-    "pending": 0
+    "pending": 0,
+    "checkpoint_breakdown": [
+      "same_tone: latest-main parallel promotion reconciled and 12 records rechecked without double-applying",
+      "same_hue: 12 generated and independently verified",
+      "same_hue: 12 rechecked and promoted 151->163",
+      "hue_difference: 12 generated and independently verified"
+    ]
   },
-  "engine_integration": {
-    "shared_power_toeic_session": true,
-    "shared_power_toeic_workout_builder": true,
-    "shared_power_toeic_question_bank_adapter": true,
-    "color_renderer": "text_and_visual_feedback_supported"
-  },
+  "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "text_and_visual_feedback_supported"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Re-audit the current official Grade 3 sample/scope and PCCS notation authority specifically for a deterministic non-visual pc3.relation.same_hue formulation. Implement only if it can be independently derived from source-confirmed notation without unverified hue names or monitor RGB/HEX; otherwise leave it pending and proceed only to another relation skill with an explicit primary-source rule."
+  "next": "Promote the 12 CI-cleared pc3.relation.hue_difference records record-identically into grade3-runtime.json and require runtime 175 verified / pending 0 with runtime promotion/shared-engine gates. Continue to block monitor-facing PCCS questions until authoritative display references exist."
 }
