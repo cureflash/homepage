@@ -3,28 +3,29 @@
 ## Current QA state
 
 - Checked: 4,400
-- Verified: 4,297
-- Needs revision: 103
+- Verified: 4,310
+- Needs revision: 90
 - Rejected: 0
 - Unchecked `pending_validation`: 0
 - `generation_complete`: `true`
 - `validation_complete`: `false`
 
-## This run — independent QA
+## This run — revision repair and recheck
 
-Reviewed the final 50 unchecked questions in strict backlog order.
+The unchecked `pending_validation` backlog was already 0, so this run entered the unresolved revision queue at `p5_pos_adverb_modifies_adjective_0020`.
 
-- `p5.vocab.confusing_words` 0051-0100: 50 checked / 48 verified / 2 needs_revision / 0 rejected.
+Repaired and independently rechecked all 13 quarantined items from `p5.pos.adverb_modifies_adjective`:
 
-Needs-revision items:
+- taxonomy mismatches were rewritten so the target adverb modifies an adjective rather than an adverb/passive verb phrase;
+- awkward collocations were rewritten to natural TOEIC-style adjective phrases;
+- two explanations were corrected to identify the full comparative adjective phrase.
 
-- `p5_vocab_confusing_words_0055`: `determine whether` and `decide whether` are both natural.
-- `p5_vocab_confusing_words_0057`: `settle` and `solve` can both defensibly complete the dispute sentence.
+Result: 13 checked / 13 verified / 0 needs_revision / 0 rejected.
 
-Each item was reviewed individually for unique answer, distractor validity, TOEIC-style naturalness, intended-skill alignment, explanation consistency, and answer-position/template pattern. No exact duplicate was identified within these two 25-item batches. The persisted source co-locates keys with stems, so strict technical answer-blinding cannot be guaranteed in connector-only access; no item was approved without individual review.
-
-The run ended below 100 checked only because the unchecked `pending_validation` backlog reached 0.
+A revision QA record is stored at `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-31-revision-001-adverb-modifies-adjective.qa.json`.
 
 ## Next QA
 
-Process the unresolved revision queue beginning at `p5_pos_adverb_modifies_adjective_0020`. Keep `validation_complete: false` until all required revisions have been repaired and independently rechecked.
+Continue the unresolved revision queue at `p5_pos_adjective_after_linking_verb_0037`. The next four known quarantined items are 0037-0040 in `p5.pos.adjective_after_linking_verb`, where `secure` and `secured` are both defensible in the current stems.
+
+Keep `validation_complete: false` until all remaining 90 revision items are repaired and independently rechecked.
