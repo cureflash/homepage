@@ -12,14 +12,14 @@
   "generated_micro_skills": [
     "p5.pos.adjective_before_noun","p5.pos.adverb_modifies_verb","p5.pos.noun_in_noun_slot","p5.pos.adjective_after_linking_verb","p5.pos.adverb_modifies_adjective","p5.pos.participle_adjective_ed_ing","p5.pos.word_form_subject_position","p5.pos.word_form_object_position","p5.verb.subject_verb_agreement","p5.verb.present_vs_past","p5.verb.present_perfect_vs_past","p5.verb.active_vs_passive","p5.verb.modal_base_form","p5.verb.to_infinitive_pattern","p5.verb.gerund_pattern","p5.verb.causative_have_make_let","p5.verb.conditional_form","p5.verb.participle_clause","p5.conn.preposition_vs_conjunction","p5.conn.because_vs_because_of","p5.conn.despite_vs_although","p5.conn.during_vs_while","p5.conn.by_vs_until","p5.conn.for_vs_since","p5.conn.time_prepositions","p5.conn.logical_conjunction","p5.pron.subject_vs_object","p5.pron.possessive_forms","p5.pron.reflexive","p5.rel.who_vs_which","p5.rel.whose","p5.rel.where_vs_when","p5.pron.indefinite_agreement","p5.det.article_choice","p5.det.countable_number","p5.det.much_vs_many","p5.det.few_vs_little","p5.det.another_other_others","p5.vocab.verb_noun_collocation","p5.vocab.adjective_noun_collocation","p5.vocab.preposition_collocation","p5.vocab.phrasal_verb","p5.vocab.business_context","p5.vocab.confusing_words"
   ],
-  "current_batch": "2026-09-01-revision-010-subject-vs-object",
+  "current_batch": "2026-09-01-revision-ledger-reconcile",
   "current_micro_skill": null,
   "current_micro_skill_persisted_count": 0,
   "current_micro_skill_target_count": 0,
-  "next_resume_id": "p5_pron_possessive_forms_0083",
-  "next_micro_skill": "p5.pron.possessive_forms",
+  "next_resume_id": "p5_pron_subject_vs_object_0031",
+  "next_micro_skill": "p5.pron.subject_vs_object",
   "generation_complete": true,
   "validation_complete": false,
-  "last_run_result": "Generation remains complete at 4,400/4,400 with pending_validation 0. Source-grounded revision work has resolved 52 of the 76-item revision ledger: 35 genuine source issues were minimally repaired and independently re-solved; 17 historical QA/source mismatches were re-audited against the stored choices and verified without source edits. Cumulative state is 4,376 verified / 24 needs_revision / 0 rejected. Resume at p5_pron_possessive_forms_0083.",
-  "updated_at": "2026-09-01T04:30:00+09:00"
+  "last_run_result": "Generation remains complete at 4,400/4,400 with pending_validation 0. This run merged PR #452, resolving 52 revision-ledger items and moving the CONTENT aggregate to 4,376 verified / 24 needs_revision / 0 rejected. Further source-grounded audit then found a canonical-ledger inconsistency: QA_STATUS is stale at 4,297 verified / 103 needs_revision, while CONTENT_STATUS says 24 remain, and the persisted p5_pron_subject_vs_object_0031 still contains the independently confirmed 'Neither Mr. Park nor they has access' agreement defect even though the prior CONTENT resume pointer had advanced past it. The run therefore stops below 100 for a concrete quality blocker: the remaining revision ledger must be reconstructed from persisted source plus QA records before any additional bulk count reduction. Exact safe resume ID is p5_pron_subject_vs_object_0031. Do not mark validation_complete until the ledger and source agree.",
+  "updated_at": "2026-09-01T04:50:00+09:00"
 }
