@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
+import { InMemoryQuestionBank } from '../../../subjects/english/power-toeic/js/data/question-bank-adapter.js';
+import { QuizSession } from '../../../subjects/english/power-toeic/js/core/session.js';
+import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/english/power-toeic/js/core/workout-builder.js';
 
 const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
 const authoring = JSON.parse(await readFile(new URL('../data/grade3-authoring-same-tone-0001-0012.json', import.meta.url), 'utf8'));
@@ -53,4 +56,21 @@ test('promoted same-tone answers independently resolve from PCCS notation', () =
 
   assert.deepEqual(coveredTones, toneCodes);
   assert.deepEqual(distribution, [3, 3, 3, 3]);
+});
+
+test('shared Power TOEIC Drill Engine runs promoted same-tone questions', () => {
+  const repository = new InMemoryQuestionBank({ questions: runtime.questions, skills: runtime.skills });
+  const recipe = createWorkoutRecipe({
+    mode: 'TRAINING',
+    totalCount: 2,
+    skillAllocations: [{ skillId: authoring.skill.id, count: 2 }],
+    seed: 11
+  });
+  const ids = selectQuestionIds({ repository, recipe });
+  assert.equal(ids.length, 2);
+  const session = new QuizSession({ questionIds: ids, repository, now: () => 1000 });
+  const question = session.currentQuestion;
+  assert.equal(question.skillId, authoring.skill.id);
+  const attempt = session.submitAnswer(question.correctIndex);
+  assert.equal(attempt.correct, true);
 });
