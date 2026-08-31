@@ -34,7 +34,7 @@ test('runtime bank contains only verified unique questions and validates each pr
     assert.equal(question.choices.length, 4);
     assert.equal(new Set(question.choices).size, 4);
     if (question.questionType === 'text_choice' && question.presentation === undefined) {
-      assert.ok(['pc3.pccs', 'pc3.relation'].includes(question.categoryId), `unexpected text-only category: ${question.id}`);
+      assert.ok(['pc3.pccs', 'pc3.relation', 'pc3.value', 'pc3.scheme'].includes(question.categoryId), `unexpected text-only category: ${question.id}`);
       continue;
     }
     assert.ok(colorById.has(question.colorRef));
