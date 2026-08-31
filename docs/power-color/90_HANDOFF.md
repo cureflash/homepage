@@ -1,33 +1,31 @@
 # Power Color — HANDOFF
 
 ## Current checkpoint
-Grade 3 runtime remains 139 verified questions: 127 conventional-color questions plus 12 `pc3.pccs.complementary_hue_number` questions. This run added and independently verified the next text-only authoring slice, `pc3.relation.same_tone`, without promoting it to runtime yet. The shared Power TOEIC question-bank/workout/session engine remains unchanged; no color-specific engine fork was introduced.
+Grade 3 Phase A remains active. Runtime is now 163 verified / pending 0: 127 conventional-color questions + 12 complementary-hue-number + 12 same-tone + 12 same-hue. The next `pc3.relation.hue_difference` 12-question batch is independently verified and promotion-ready. The shared Power TOEIC Drill Engine remains the only engine.
 
-Completed this run:
-- Re-fetched latest `main` at `b7ffaef973ff285c1607298fe24673ce5ae977a9` and branched after unrelated Takken work had already merged.
-- Reconfirmed from the current Color Certification Association Grade 3 sample that 同一トーン配色 is directly in scope.
-- Reconfirmed from the Association's current HAPPY COLOR LIFE PCCS lesson that chromatic PCCS notation is tone abbreviation + hue number 1–24, and that same-tone colors share the tone category independent of hue number.
-- Added `grade3-authoring-same-tone-0001-0012.json`: 12 pending-first records, one per source-confirmed chromatic tone.
-- Independently re-derived every answer from `grade3-pccs-structure.json` and the official notation rule before comparing with stored answers: 12 checked / 12 verified / 0 needs_revision / 0 rejected / pending 0.
-- Balanced correct positions A/B/C/D = 3/3/3/3; no question requires monitor RGB/HEX.
-- Added `pccs-same-tone-authoring.test.js` to gate all 12 tone codes, notation parsing, unique answer derivation, source/hue refs, pending-first audit metadata, answer-position balance, and text-only feedback.
-- `Power Color tests` run `33379830006` completed successfully.
-- Current-run accounting: 12 generated / 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending.
+Completed this run — 4 checkpoints:
+1. Promoted the 12 verified `pc3.relation.same_tone` records record-identically: runtime 139 -> 151. The promotion exposed stale tests that owned the whole runtime count; root fix separated the immutable 127 conventional slice from the growing PCCS runtime. Final branch gate passed.
+2. Added `grade3-authoring-same-hue-0001-0012.json`: 12 pending-first text-only questions. Answers were independently re-derived from PCCS notation by matching hue number while changing tone. 12 checked / 12 verified / 0 needs_revision / 0 rejected / pending 0; A/B/C/D = 3/3/3/3. Authoring gate passed.
+3. Promoted the 12 same-hue records record-identically: runtime 151 -> 163. Promotion/equality and shared Power TOEIC session/workout/question-bank regressions passed.
+4. Added `grade3-authoring-hue-difference-0001-0012.json`: 12 pending-first text-only questions covering numeric circular hue differences 1 through 12 exactly once. Independent QA computes `min(abs(a-b), 24-abs(a-b))` from source-confirmed 24 hue positions before comparing with the stored answer. 12 checked / 12 verified / 0 needs_revision / 0 rejected / pending 0; A/B/C/D = 3/3/3/3. No named hue-difference boundary was guessed.
 
-Existing source blockers retained:
-- PCCS Japanese hue names/readings remain 0/24 populated until a complete current authoritative mapping is acquired.
+Current-run accounting: 24 generated / 48 checked / 48 verified / 0 needs_revision / 0 rejected / 0 pending.
+
+Source/quality constraints retained:
+- Current Color Certification Association Grade 3 sample explicitly includes 同一トーン配色, 同一色相配色, 中差色相配色 and 明度のグラデーション.
+- PCCS Japanese hue names/readings remain 0/24 until a complete current authoritative mapping is acquired.
 - PCCS representative monitor values remain unpopulated; current licensed JCRI Color Calc direct numeric output remains the approved primary acquisition path.
 - Monitor-facing PCCS questions remain blocked.
 - Hue 20 remains `V` until the authority actually changes it.
+- Named hue-difference classification boundaries are not encoded by this run; only the deterministic numeric circular distance is used.
 
 Not complete:
-- runtime promotion of the 12 verified `pc3.relation.same_tone` records;
-- remaining Grade 3 PCCS relation/scheme skills, including a separately justified same-hue formulation;
+- runtime promotion of the 12 verified `pc3.relation.hue_difference` records;
+- remaining Grade 3 PCCS relation/scheme skills such as tone difference, scheme identification and value gradient;
 - complete 24-record Japanese hue-name/readings mapping;
-- current representative digital display values for monitor swatches;
-- Grade 3 visual PCCS question families;
+- current representative digital display values and visual PCCS question families;
 - full Grade 3 completion, then Grade 2 and Grade 1;
 - `color_database_complete` remains false.
 
 ## Next exact start point
-Promote the 12 CI-cleared `pc3.relation.same_tone` records record-identically into `grade3-runtime.json`, add the runtime skill entry and promotion/equality/shared-engine gates, then require the complete Power Color regression suite to pass with runtime 151 verified / pending 0. Do not generate monitor-facing PCCS questions before the display-reference gate clears.
+Promote the 12 CI-cleared `pc3.relation.hue_difference` records record-identically into `grade3-runtime.json`, add/retain promotion equality and shared-engine gates, and require runtime 175 verified / pending 0. Do not generate monitor-facing PCCS questions before the display-reference gate clears.
