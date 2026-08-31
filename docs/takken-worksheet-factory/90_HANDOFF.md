@@ -8,19 +8,17 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed canonical concept `takken-concept-ordinary-land-lease-term` from source unit `land-lease-right`.
+Started canonical concept `takken-concept-land-lease-opposability` from source unit `land-lease-right`.
 
-The two previously staged Article 3 knowledge items remain unchanged:
+Borrowed Land and Building Lease Act Article 10(1), checked against the 2026-04-01 e-Gov statute source, was decomposed into three verified atomic knowledge items:
 
-1. the ordinary land lease initial term is 30 years when no longer term is agreed
-2. if the contract stipulates a term longer than 30 years, that stipulated period is the initial term
+1. statutory substitute opposability can work without registration of the land lease right itself
+2. the substitute requirement is ownership of a building on the leased land for which the land lessee is registered as owner
+3. satisfying Article 10(1) allows the land lease right to be asserted against third parties
 
-Verified `takken-q-52-001` was reconciled into the central `power-question-knowledge-map.js` and mapped only to:
+All three items reference source fact `u52-f2` and remain tied to `takken-concept-land-lease-opposability`.
 
-- `takken-k-ordinary-land-lease-term-thirty-years`
-- `takken-k-ordinary-land-lease-term-longer-contract-controls`
-
-The mapping validator was advanced from 73 to 74 mapped existing questions, the two Article 3 knowledge IDs were added to its known set, and the ordinary-land-lease-term concept was added to the allowed mapped concept set. The two temporary mapping deficits are therefore closed.
+Verified `takken-q-52-002` already directly tests this Article 10(1) rule. The central `power-question-knowledge-map.js` mapping has intentionally not yet been changed in this checkpoint, so the concept is not counted complete.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -32,25 +30,25 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 67/113 completed concepts
-- Canonical knowledge items staged: 349
+- Canonical knowledge items staged: 352
 - Existing verified questions mapped: 74
-- Explicit unmapped knowledge gaps: 252
+- Explicit unmapped knowledge gaps before q52-002 reconciliation: 255
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue with `takken-concept-land-lease-opposability` from source unit `land-lease-right`.
+Finish `takken-concept-land-lease-opposability` by mapping verified `takken-q-52-002` in the central `power-question-knowledge-map.js` only to the three staged Article 10 knowledge items it directly tests.
 
-Independently verify Borrowed Land and Building Lease Act Article 10 as of 2026-04-01, decompose the opposability rule into atomic knowledge items, then map verified `takken-q-52-002` only to the items it directly tests.
+After central mapping validation passes, mark the concept complete, advance totals, and continue to `takken-concept-fixed-term-land-lease`.
 
 Do not start Phase 4.3 until all 113 canonical concepts have been decomposed and existing verified-question mappings have been reconciled.
 
 ## Validation note
 
-The existing q52-001 evidence is verified and directly states both Article 3 branches: the default 30-year period and the longer contractual period rule. No Phase 2/3 question content was modified.
+`takken-q-52-002` is already independently verified and asks precisely how a land lease right without its own registration can be asserted against a third party. Its correct choice states ownership of a building on the land registered in the land lessee's name, matching Article 10(1).
 
-The central map continues to reject duplicate question IDs, duplicate knowledge refs, unknown knowledge IDs, unexpected concept IDs, and any source question not already verified.
+No Phase 2/3 question content was modified.
 
 ## publication invariant
 
