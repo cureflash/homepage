@@ -23,13 +23,16 @@ Current official product documentation for PCCS confirms:
 - PCCS products organize colors by tone.
 - The current PCCS Color Tone Circle exposes 11 chromatic tone groups `v`, `b`, `dp`, `lt+`, `sf`, `d`, `dk`, `p+`, `ltg`, `g`, `dkg`, each represented across 12 hues.
 - Current PCCS teaching/chart products reproduce physical PCCS reference colors using dedicated high-accuracy printing rather than claiming ordinary monitor RGB equivalence.
+- The current Japan Color Enterprise `基本色彩掛図〈中級用〉` explicitly includes `色相別と色相名（日本色研配色体系）※24色相`, establishing a current first-party physical source containing the 24 PCCS hue names, although the public product page does not enumerate the 24 mappings or readings.
 
 Sources:
 - https://sikiken.co.jp/products/70731.html
 - https://sikiken.co.jp/products/60650.html
 - https://sikiken.co.jp/products/60657.html
 - https://sikiken.co.jp/products/67620.html
+- https://sikiken.co.jp/products/70706.html
 - https://www.jcri.jp/wp-content/uploads/2025/02/PCCS_Color_Calc_manual.pdf
+- https://www.jcri.jp/seihin/PCCS_Color_Calc/pccs_color_calc_faq.html
 
 ## Master-data rule
 PCCS master data must distinguish four kinds of fields:
@@ -42,7 +45,7 @@ PCCS master data must distinguish four kinds of fields:
    - relationship facts derived deterministically from sourced PCCS positions
 
 2. `displayReference`
-   - monitor RGB/HEX only when a current authoritative source explicitly publishes the value for that exact PCCS state
+   - monitor RGB/HEX only when a current authoritative source explicitly publishes the value for that exact PCCS state, or when the numeric value is directly exported/read from the current licensed JCRI PCCS Color Calc using exact PCCS hue-tone input under the documented conversion conditions
    - otherwise `null`
 
 3. `sourceRefs`
@@ -54,30 +57,40 @@ PCCS master data must distinguish four kinds of fields:
 No field may silently promote a visually approximated swatch into PCCS truth.
 
 ## Current digital-display authority finding
-The current Japan Color Research Institute `PCCS Color Calc` manual provides a materially stronger display-value lead than a generic RGB conversion path:
+The current Japan Color Research Institute `PCCS Color Calc` manual provides a materially stronger display-value path than a generic RGB conversion path:
 - the official software accepts `PCCS ヒュー・トーン入力`;
 - when that input mode is used, the manual states that each hue/tone's representative value is used for conversion;
 - the software outputs sRGB, with color-value conversion specified for D65 illumination and a 2-degree field.
 
-This establishes an authoritative mechanism that can produce PCCS representative sRGB values. It does not, however, publish the complete per-state representative sRGB table in the public manual. Power Color therefore must not reconstruct or guess that table from screenshots or unrelated conversions. The display-value blocker is now narrowed to obtaining an authoritative export/table of the representative values actually used by the current PCCS Color Calc implementation or another current official source publishing the same state-by-state values.
+The current JCRI FAQ additionally states that figures created by customers with PCCS Color Calc may be used for both private and commercial purposes. This confirms that direct output from the licensed official software is an acceptable authoritative acquisition route for Power Color; a separately published public RGB table is not a prerequisite if the values are obtained directly and reproducibly from the current software.
+
+Approved direct-output procedure:
+- use a current licensed PCCS Color Calc installation; do not inspect or modify protected program code;
+- enter the exact PCCS hue/tone state through the documented `PCCS ヒュー・トーン入力` mode;
+- record the numeric sRGB output itself, not a screenshot-sampled pixel value;
+- preserve the exact hue number, tone code, software/version evidence available at acquisition time, D65 / 2-degree condition, and an audit artifact tying input to output;
+- do not substitute Munsell conversion, third-party tables, browser sampling, screenshot color picking, or hand tuning for this route.
+
+The public manual still does not publish the complete per-state representative sRGB table. The remaining display-value blocker is therefore operational rather than conceptual: obtain the representative values either from a current official published table/export if one is found, or by running the current licensed PCCS Color Calc and recording its direct numeric outputs under the procedure above.
 
 ## Japanese hue-name authority audit
-Rechecked 2026-08-31 against current public official Color Certification Association / Japan Color Research Institute materials. The reviewed sources confirm the 24 hue-number system and current hue notations, but no complete public authoritative mapping of all 24 records to Japanese hue names plus readings was found.
+Rechecked 2026-08-31 against current public official Color Certification Association / Japan Color Research Institute / Japan Color Enterprise materials. The reviewed public pages confirm the 24 hue-number system and current hue notations. The current `基本色彩掛図〈中級用〉` also confirms that an official 24-hue color-name chart exists, but its public product page does not expose the complete 24-record mapping or readings.
 
 Therefore:
 - keep all 24 `nameJa` / `reading` fields `null`;
 - do not populate the familiar textbook-style Japanese names from memory, third-party tables, or inferred notation expansions;
 - partial official mentions such as individual descriptive color phrases do not qualify as a complete 24-record mapping;
-- continue the authority search before filling these fields.
+- an actual current authoritative material that exposes the 24 mappings may be transcribed, but each mapping must remain auditable to that source; readings must likewise be source-confirmed rather than inferred;
+- continue the authority acquisition before filling these fields.
 
 ## Display-value gate
-As of 2026-08-31, the reviewed current official public pages confirm physical PCCS color products and PCCS structure but do not provide a complete authoritative public RGB/HEX table for the PCCS states needed by Power Color.
+As of 2026-08-31, the reviewed current official public pages confirm physical PCCS color products and PCCS structure but do not provide a complete authoritative public RGB/HEX table for the PCCS states needed by Power Color. A direct official-software output route is now confirmed as described above, but the values have not yet been acquired.
 
 Therefore:
 - do not generate `color_to_hue`, `hue_to_color`, `color_to_tone`, `tone_to_color`, `color_to_notation`, or `notation_to_color` questions that depend on unsourced monitor swatches;
 - do not derive RGB/HEX from screenshots, catalog images, browser sampling, Munsell conversion, third-party PCCS tables, or hand-tuned approximations;
 - structural master records may be added only for directly confirmed hue/tone/notation facts;
-- monitor-facing PCCS questions remain blocked until every rendered target/choice has an approved display reference source.
+- monitor-facing PCCS questions remain blocked until every rendered target/choice has an approved display reference source or direct official-software output record.
 
 ## Relationship derivation rule
 Once hue positions are individually source-confirmed, relationships such as same hue, hue difference, and complementary hue may be computed from canonical positions. The derived relationship must retain refs to the underlying sourced hue records; it does not require a second external source for the arithmetic relation.
