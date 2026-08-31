@@ -8,19 +8,20 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Started `takken-concept-inheritance-deliberation` from source unit `inheritance-acceptance-renunciation` and completed the canonical knowledge extraction checkpoint.
+Completed `takken-concept-inheritance-deliberation` reconciliation against the five canonical Civil Code knowledge items already extracted from Articles 915 and 938.
 
-Added five verified Civil Code knowledge items:
+Existing verified evidence is now mapped narrowly:
 
-- the three-month deliberation period, starting when the heir learns that succession has opened to that heir
-- the three statutory choices during that period: unconditional acceptance, qualified acceptance, or renunciation
-- extension of the period by the family court at the request of an interested party or the public prosecutor
-- the heir may investigate the estate before acceptance or renunciation
-- renunciation must be declared to the family court
+- `takken-q-57-001` -> `takken-k-inheritance-deliberation-three-month-period`
+- `takken-q-57-002` -> `takken-k-inheritance-deliberation-renunciation-family-court`
 
-Primary source is the Civil Code as applicable on `2026-04-01`, using Articles 915 and 938. The existing unit's `u57-f1` supports the period and three-choice items, while `u57-f2` supports the family-court renunciation item. The extension and estate-investigation items are canonical statute-level expansions and therefore intentionally have no sourceFactId.
+`takken-q-57-001` asks only the length and start point of the deliberation period. Although its explanation names unconditional acceptance, qualified acceptance, and renunciation, those three options are not independently tested by the question choices. Therefore `takken-k-inheritance-deliberation-three-options` remains uncovered rather than being credited from explanation text.
 
-No Phase 2/3 question content was changed. Existing verified `takken-q-57-001` and `takken-q-57-002` were inspected but not mapped in this checkpoint; mapping remains the exact next task so that evidence is not inferred merely from shared source facts.
+The existing questions also do not directly test the family-court period-extension rule or the pre-choice estate-investigation rule. Those three uncovered knowledge items remain explicit Phase 4.3 deficits.
+
+The central map guard was advanced from 82 to 84 mapped existing questions and recognizes only the two inheritance-deliberation knowledge IDs that have direct existing question evidence.
+
+No Phase 2/3 question content was changed. No Phase 4.3 question generation, print generation, or app linkage was started.
 
 ## Status after this run
 
@@ -29,16 +30,16 @@ No Phase 2/3 question content was changed. Existing verified `takken-q-57-001` a
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 73/113 completed concepts
+- Phase 4.2: active — 74/113 completed concepts
 - Canonical knowledge items: 379
-- Existing verified questions mapped: 82
-- Explicit unmapped knowledge gaps: 263
+- Existing verified questions mapped: 84
+- Explicit unmapped knowledge gaps: 261
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile verified `takken-q-57-001` and `takken-q-57-002` against the five `takken-concept-inheritance-deliberation` knowledge items. Map only what each question directly tests. In particular, do not credit the period-extension or pre-choice estate-investigation items unless an existing verified question directly measures them. Then complete the concept and advance to the next Phase 4.2 concept. Keep Phase 4.3 blocked.
+Start `takken-concept-inheritance-renunciation` from source unit `inheritance-acceptance-renunciation`. Extract its canonical knowledge items from primary law at the `2026-04-01` cutoff. Because `takken-q-57-002` is already uniquely mapped under the completed inheritance-deliberation concept, do not duplicate or reassign it merely because the same source unit also feeds the renunciation concept. Reconcile only genuinely available direct evidence and leave uncovered knowledge as Phase 4.3 deficits. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
