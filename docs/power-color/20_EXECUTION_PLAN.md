@@ -51,10 +51,13 @@
   - [x] Confirm 12 chromatic tone codes/names and preserve the `lt+`/`p+` new-color-card convention separately from canonical `lt`/`p`; record that `s` is omitted from new color card 199a.
   - [x] Preserve current hue 20 as `V`; the current JCRI manual says `PB` is a future rename, so no premature migration is allowed.
   - [ ] Confirm all 24 Japanese PCCS hue names/readings from a current authoritative source before filling those fields.
-    - [x] 2026-08-31 public-authority audit: current AFT/JCRI public sources confirm the 24 hue-number/notation structure but no complete authoritative 24-record Japanese name + reading mapping was found; all fields remain null.
-  - [ ] Identify an authoritative per-state display reference for monitor swatches. Current reviewed public official pages do not expose a complete RGB/HEX table; visual PCCS question generation remains blocked until this is resolved.
-    - [x] Narrow the authority path: current JCRI PCCS Color Calc documentation states that PCCS hue-tone input uses each hue/tone representative value and outputs sRGB under D65 / 2-degree conditions.
-    - [ ] Obtain an authoritative export/table of those representative per-state sRGB values; do not reconstruct them from screenshots or unrelated conversion tables.
+    - [x] 2026-08-31 public-authority audit: current AFT/JCRI public sources confirm the 24 hue-number/notation structure but no complete authoritative public 24-record Japanese name + reading mapping was found; all fields remain null.
+    - [x] Identify a current first-party material containing the 24 hue names: Japan Color Enterprise `基本色彩掛図〈中級用〉` explicitly includes `色相別と色相名（日本色研配色体系）※24色相`; its public page does not expose the 24 mappings/readings, so no fields are populated yet.
+    - [ ] Acquire the complete 24-record mapping plus readings from an actual current authoritative material and retain auditable source evidence.
+  - [ ] Identify authoritative per-state display references for monitor swatches.
+    - [x] Current JCRI PCCS Color Calc documentation states that PCCS hue-tone input uses each hue/tone representative value and outputs sRGB under D65 / 2-degree conditions.
+    - [x] Current JCRI FAQ states that customer-created PCCS Color Calc figures may be used for private or commercial purposes; direct current licensed-software numeric output is therefore an approved authoritative acquisition path when input/output evidence is retained.
+    - [ ] Obtain the representative per-state sRGB values either from a current official published table/export or by direct numeric output from a current licensed PCCS Color Calc. Do not reconstruct them from screenshots or unrelated conversion tables.
   - [x] Add `pccs-structure-master.test.js` to gate the structural slice, null display references, source refs, and notation exceptions.
 - [ ] Add color/hue, color/tone, color/notation and reverse-lookup drills.
 - [ ] QA and coverage gate.
