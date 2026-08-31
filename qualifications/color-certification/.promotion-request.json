@@ -1,7 +1,0 @@
-{
-  "runtime": "data/grade3-runtime.json",
-  "authoring": "data/grade3-authoring-same-hue-0001-0012.json",
-  "expectedBefore": 151,
-  "expectedAfter": 163,
-  "notice": "3級慣用色名127問、PCCS補色色相番号12問、同一トーン12問、同一色相12問、計163問を独立QA済みruntimeとして収録。表示RGB/HEXは学習用参考であり、本試験の印刷色を完全再現するものではありません。PCCSの表示色を使う問題は継続作業中です。"
-}
