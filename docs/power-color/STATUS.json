@@ -6,8 +6,8 @@
     "conventional_color_master": {"target": 64, "ingested": 64, "status": "complete"},
     "pccs_master": {"status": "not_started"},
     "relation_scheme_master": {"status": "not_started"},
-    "runtime_questions": {"verified": 16, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "authoring_questions": {"generated": 111, "checked": 111, "verified": 111, "pending": 0, "needs_revision": 0, "rejected": 0, "checkpoint": "pc3.conventional.color_to_name 0017-0071 + pc3.conventional.name_to_color 0017-0072"},
+    "runtime_questions": {"verified": 127, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "authoring_questions": {"generated": 111, "checked": 111, "verified": 111, "pending": 0, "needs_revision": 0, "rejected": 0, "status": "promoted_and_retained_for_audit", "checkpoint": "pc3.conventional.color_to_name 0017-0071 + pc3.conventional.name_to_color 0017-0072"},
     "conventional_corpus_qa": {
       "status": "complete",
       "questions_checked": 127,
@@ -16,9 +16,16 @@
       "rejected": 0,
       "pending": 0,
       "gate_test": "qualifications/color-certification/tests/conventional-corpus-gate.test.js",
-      "workflow_run": 33342816917,
-      "workflow_conclusion": "success",
       "source_rechecked_on": "2026-08-31"
+    },
+    "runtime_promotion": {
+      "status": "complete_pending_pr_ci",
+      "promoted_authoring_records": 111,
+      "preserved_existing_runtime_records": 16,
+      "runtime_total": 127,
+      "record_level_equality_gate": true,
+      "promotion_workflow_run": 33345618257,
+      "promotion_workflow_conclusion": "success"
     },
     "micro_skills": {"implemented": 2, "planned_minimum": 13},
     "conventional_coverage": {
@@ -36,5 +43,5 @@
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "color_renderer": "implemented_beta"},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote the 111 verified conventional-color authoring questions into qualifications/color-certification/data/grade3-runtime.json, preserving the existing 16 verified runtime records and shared-engine schema. Re-run the corpus/runtime/engine tests after promotion and require runtime conventional coverage color_to_name=63 useful states, name_to_color=64 states, pending=0. Do not start PCCS until promotion and post-promotion tests pass."
+  "next": "Complete the post-promotion Power Color PR CI against the 127-question runtime. Require record-level equality for all 111 promoted records, runtime color_to_name=63 useful states, name_to_color=64 states, pending=0, and shared Power TOEIC engine integration green. Only then start Grade 3 PCCS master source confirmation."
 }
