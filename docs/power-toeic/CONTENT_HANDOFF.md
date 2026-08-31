@@ -6,8 +6,8 @@
 - Fully generated micro-skills: 44 / 44.
 - Generated questions: 4,400 / 4,400.
 - Checked: 4,400.
-- Verified: 4,310.
-- Needs revision: 90.
+- Verified: 4,315.
+- Needs revision: 85.
 - Rejected: 0.
 - Unchecked `pending_validation`: 0.
 - `generation_complete`: `true`.
@@ -17,15 +17,20 @@
 
 None. Generation remains stopped because all 44 micro-skills have reached their target counts.
 
-## This run — revision repair
+## This run — revision audit
 
-The unchecked pending backlog was already exhausted, so the CONTENT worker entered the unresolved revision queue at `p5_pos_adverb_modifies_adjective_0020`.
+Reconciled the next historical quarantine records against the actual stored question choices before making any question rewrite.
 
-All 13 quarantined items in `p5.pos.adverb_modifies_adjective` were repaired and independently rechecked. Fixes covered taxonomy mismatches, awkward collocations, and incorrect explanation targets. Result: 13 checked / 13 verified / 0 needs_revision / 0 rejected.
+Five quarantines were false positives in the historical QA records:
 
-Cumulative state is now 4,310 verified / 90 needs_revision / 0 rejected, with unchecked `pending_validation` still 0.
+- `p5_pos_adjective_after_linking_verb_0037`-`0040`: historical QA claimed `secure` competed with `secured`, but `secured` is not a stored choice. `secure` is unique in all four actual questions.
+- `p5_pos_word_form_subject_position_0038`: historical QA claimed `security` competed with gerund `securing`, but `securing` is not a stored choice. The actual choices are `securely / secured / secure / security`, making `security` unique.
 
-This run ended below 100 revision rechecks because the 13 items formed one coherent historical skill repair spanning four complete source batch files. Connector-only editing requires full-file replacement for each batch; continuing into the next skill in the same run would risk a partially applied multi-file revision checkpoint.
+All five were independently rechecked and verified. No question-data rewrite was required; the two historical QA records were corrected.
+
+Result: 5 checked / 5 verified / 0 needs_revision / 0 rejected. Cumulative state is 4,315 verified / 85 needs_revision / 0 rejected, with unchecked `pending_validation` still 0.
+
+This run stopped below 100 because the fabricated-distractor findings are a concrete QA-integrity issue. Remaining historical quarantine reasons must be reconciled against actual stored choices before repair; mechanically applying stale QA notes could corrupt valid questions.
 
 ## Next generation
 
@@ -33,4 +38,4 @@ None. `generation_complete: true`; do not generate additional Part 5 questions.
 
 ## Next QA
 
-Continue the unresolved revision queue at `p5_pos_adjective_after_linking_verb_0037`. `validation_complete` must remain `false` until the remaining 90 revision items are repaired and independently rechecked.
+Continue at `p5_verb_present_vs_past_0017`. Its actual stored stem (`throughout the workday`) does not uniquely distinguish present `tracks` from past `tracked`, so it remains a confirmed repair target. `validation_complete` stays `false` until all remaining 85 revision items are repaired or cleared by source-grounded re-audit and independently rechecked.
