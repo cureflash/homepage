@@ -1,5 +1,6 @@
 name: Power Color runtime promotion once
 
+# retry 5
 on:
   push:
     branches:
