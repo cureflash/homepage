@@ -3,31 +3,28 @@
 ## Current QA state
 
 - Checked: 4,400
-- Verified: 4,310
-- Needs revision: 90
+- Verified: 4,315
+- Needs revision: 85
 - Rejected: 0
 - Unchecked `pending_validation`: 0
 - `generation_complete`: `true`
 - `validation_complete`: `false`
 
-## This run — revision repair and recheck
+## This run — source-grounded revision audit
 
-The unchecked `pending_validation` backlog was already 0, so this run entered the unresolved revision queue at `p5_pos_adverb_modifies_adjective_0020`.
+Before rewriting quarantined questions, compared each historical QA reason with the actual stored stem and four choices.
 
-Repaired and independently rechecked all 13 quarantined items from `p5.pos.adverb_modifies_adjective`:
+Five historical quarantines were false positives and are now verified:
 
-- taxonomy mismatches were rewritten so the target adverb modifies an adjective rather than an adverb/passive verb phrase;
-- awkward collocations were rewritten to natural TOEIC-style adjective phrases;
-- two explanations were corrected to identify the full comparative adjective phrase.
+- `p5_pos_adjective_after_linking_verb_0037`-`0040`: old QA reason depended on `secured`, which is absent from the stored choices. `secure` is uniquely grammatical among the actual options.
+- `p5_pos_word_form_subject_position_0038`: old QA reason depended on `securing`, which is absent from the stored choices. `security` is uniquely grammatical among the actual options.
 
-Result: 13 checked / 13 verified / 0 needs_revision / 0 rejected.
+The corresponding historical QA files were corrected. No production question text was changed.
 
-A revision QA record is stored at `subjects/english/power-toeic/js/data/questions/part5/qa/2026-08-31-revision-001-adverb-modifies-adjective.qa.json`.
+Result: 5 checked / 5 verified / 0 needs_revision / 0 rejected.
 
-This run ended below 100 revision rechecks because these 13 items formed one coherent historical skill repair spanning four full source batch files. Connector-only editing requires full-file replacement for each batch; continuing into the next skill in the same run would risk leaving a multi-file revision checkpoint partially applied.
+This run stopped below 100 because the stale QA records contain fabricated distractors. That is a QA-integrity issue: remaining quarantine reasons must be checked against source data before any rewrite so valid questions are not damaged.
 
 ## Next QA
 
-Continue the unresolved revision queue at `p5_pos_adjective_after_linking_verb_0037`. The next four known quarantined items are 0037-0040 in `p5.pos.adjective_after_linking_verb`, where `secure` and `secured` are both defensible in the current stems.
-
-Keep `validation_complete: false` until all remaining 90 revision items are repaired and independently rechecked.
+Resume at `p5_verb_present_vs_past_0017`. This is a confirmed real ambiguity in the actual source: `throughout the workday` does not force present `tracks` over past `tracked`. Then continue the historical revision queue in source order. Keep `validation_complete: false` until all remaining 85 items are resolved and independently rechecked.
