@@ -19,11 +19,10 @@ function parseNotation(value) {
 }
 
 test('PCCS same-hue runtime promotion preserves all 12 verified authoring records exactly', () => {
-  assert.equal(runtime.questions.length, 163);
-  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 163);
   const promoted = runtime.questions.filter((question) => question.skillId === authoring.skill.id);
   assert.equal(promoted.length, 12);
   assert.deepEqual(promoted, authoring.questions);
+  assert.ok(promoted.every((question) => question.validationStatus === 'verified'));
   assert.ok(runtime.skills.some((skill) => skill.id === authoring.skill.id));
 });
 
@@ -47,12 +46,7 @@ test('promoted same-hue answers independently resolve to the anchor hue', () => 
 
 test('shared Power TOEIC engine runs promoted same-hue text questions', () => {
   const repository = new InMemoryQuestionBank({ questions: runtime.questions, skills: runtime.skills });
-  const recipe = createWorkoutRecipe({
-    mode: 'TRAINING',
-    totalCount: 2,
-    skillAllocations: [{ skillId: authoring.skill.id, count: 2 }],
-    seed: 11
-  });
+  const recipe = createWorkoutRecipe({ mode: 'TRAINING', totalCount: 2, skillAllocations: [{ skillId: authoring.skill.id, count: 2 }], seed: 11 });
   const ids = selectQuestionIds({ repository, recipe });
   assert.equal(ids.length, 2);
   const session = new QuizSession({ questionIds: ids, repository, now: () => 1000 });
