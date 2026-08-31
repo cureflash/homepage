@@ -8,11 +8,15 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Advanced `takken-concept-fixed-term-building-lease` through atomic knowledge extraction.
+Completed `takken-concept-fixed-term-building-lease` existing-question mapping.
 
-Added 5 verified knowledge items from source unit `fixed-term-building-lease`, grounded in Borrowed Land and House Lease Act Article 38 as of 2026-04-01: no-renewal/expiry structure, required written/electronic contract form, lessor's pre-contract explanation duty, separate written/electronic explanation form, and invalidity of the no-renewal term when the required explanation is omitted.
+Mapped verified `takken-q-55-001` only to the two knowledge items it directly tests: no-renewal/period-expiry structure and the required written/electronic contract form.
 
-Existing verified `takken-q-55-001` and `takken-q-55-002` were not yet added to the central question-knowledge map in this checkpoint, so the concept is not marked complete yet.
+Mapped verified `takken-q-55-002` only to the two knowledge items it directly tests: the lessor's pre-contract explanation duty and invalidity of the no-renewal term when the required explanation is omitted.
+
+Did not map `takken-k-fixed-term-building-lease-prior-explanation-form`, because the existing question does not directly test the separate-independent explanation-document requirement. That item remains an explicit Phase 4.3 coverage gap.
+
+Updated central question-knowledge map guards to 80 mapped verified questions through q55-002 and added only the four directly covered fixed-term-building-lease knowledge IDs.
 
 No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -23,16 +27,16 @@ No Phase 2/3 question content was modified. No Phase 4.3 questions, prints, or a
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 70/113 completed concepts
+- Phase 4.2: active — 71/113 completed concepts
 - Canonical knowledge items: 364
-- Existing verified questions mapped: 78
-- Explicit unmapped knowledge gaps: 257
+- Existing verified questions mapped: 80
+- Explicit unmapped knowledge gaps: 253
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Map verified `takken-q-55-001` and `takken-q-55-002` only to the new `takken-concept-fixed-term-building-lease` knowledge items they directly test. Update the central map guards atomically, then mark this concept complete if validation passes.
+Start `takken-concept-heirs-order` from source unit `inheritance-heirs-shares`. Extract atomic knowledge items from the 2026-04-01 primary law sources, then map existing verified questions only where directly tested. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
