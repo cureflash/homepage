@@ -18,6 +18,7 @@ const authoringBanks = await Promise.all(
 const colorById = new Map(colors.colors.map((color) => [color.id, color]));
 const colorByName = new Map(colors.colors.map((color) => [color.name, color]));
 const runtimeQuestions = runtime.questions;
+const conventionalRuntimeQuestions = runtimeQuestions.filter((question) => question.categoryId === 'pc3.conventional');
 const authoringQuestions = authoringBanks.flatMap(({ bank }) => bank.questions);
 
 function distribution(questions) {
@@ -41,11 +42,12 @@ function questionFingerprint(question) {
   });
 }
 
-test('Grade 3 conventional runtime contains all 127 verified questions and no pending records', () => {
+test('Grade 3 conventional runtime slice remains 127 verified questions inside the 139-question bank', () => {
   assert.equal(authoringFiles.length, 14, `Unexpected authoring file count: ${authoringFiles.join(', ')}`);
   assert.equal(authoringQuestions.length, 111);
-  assert.equal(runtimeQuestions.length, 127);
-  assert.equal(runtimeQuestions.filter((question) => question.validationStatus === 'verified').length, 127);
+  assert.equal(runtimeQuestions.length, 139);
+  assert.equal(conventionalRuntimeQuestions.length, 127);
+  assert.equal(conventionalRuntimeQuestions.filter((question) => question.validationStatus === 'verified').length, 127);
   assert.equal(runtimeQuestions.filter((question) => question.validationStatus === 'pending_validation').length, 0);
 });
 
@@ -59,7 +61,7 @@ test('all 111 staged authoring questions were promoted byte-for-byte at the reco
 
 test('all conventional runtime questions satisfy shared schema and canonical reference integrity', () => {
   const required = ['id', 'version', 'skillId', 'categoryId', 'sentence', 'choices', 'correctIndex', 'explanation', 'validationStatus', 'colorRef', 'presentation', 'sourceRefs'];
-  for (const question of runtimeQuestions) {
+  for (const question of conventionalRuntimeQuestions) {
     for (const key of required) assert.ok(Object.hasOwn(question, key), `${question.id} missing ${key}`);
     assert.equal(question.categoryId, 'pc3.conventional');
     assert.ok(['pc3.conventional.color_to_name', 'pc3.conventional.name_to_color'].includes(question.skillId));
@@ -73,7 +75,7 @@ test('all conventional runtime questions satisfy shared schema and canonical ref
 });
 
 test('runtime color-to-name independently resolves 63 useful monitor-discriminable states', () => {
-  const questions = runtimeQuestions.filter((question) => question.skillId === 'pc3.conventional.color_to_name');
+  const questions = conventionalRuntimeQuestions.filter((question) => question.skillId === 'pc3.conventional.color_to_name');
   assert.equal(questions.length, 63);
   for (const question of questions) {
     const target = colorById.get(question.colorRef);
@@ -93,7 +95,7 @@ test('runtime color-to-name independently resolves 63 useful monitor-discriminab
 });
 
 test('runtime name-to-color independently resolves all 64 canonical targets', () => {
-  const questions = runtimeQuestions.filter((question) => question.skillId === 'pc3.conventional.name_to_color');
+  const questions = conventionalRuntimeQuestions.filter((question) => question.skillId === 'pc3.conventional.name_to_color');
   assert.equal(questions.length, 64);
   for (const question of questions) {
     const target = colorById.get(question.colorRef);

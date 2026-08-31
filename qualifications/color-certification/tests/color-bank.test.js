@@ -8,6 +8,7 @@ import { getAnswerFeedbackModel, getChoiceRevealModels, getPromptChoiceSwatchMod
 
 const colors = JSON.parse(await readFile(new URL('../data/grade3-colors.json', import.meta.url), 'utf8'));
 const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json', import.meta.url), 'utf8'));
+const complementaryAuthoring = JSON.parse(await readFile(new URL('../data/grade3-authoring-complementary-hue-number-0001-0012.json', import.meta.url), 'utf8'));
 const authoring0017 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0017-0024.json', import.meta.url), 'utf8'));
 const authoring0025 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0025-0032.json', import.meta.url), 'utf8'));
 const authoring0033 = JSON.parse(await readFile(new URL('../data/grade3-authoring-color-to-name-0033-0040.json', import.meta.url), 'utf8'));
@@ -24,27 +25,38 @@ test('Grade 3 conventional-color master contains 64 stable records', () => {
   for (const color of colors.colors) assert.match(color.displayHex, /^#[0-9A-F]{6}$/);
 });
 
-test('runtime bank exposes verified questions only and all color refs resolve', () => {
+test('runtime bank exposes 139 verified questions and validates each presentation domain', () => {
   const colorById = new Map(colors.colors.map((color) => [color.id, color]));
   const colorByName = new Map(colors.colors.map((color) => [color.name, color]));
-  assert.equal(runtime.questions.length, 127);
+  assert.equal(runtime.questions.length, 139);
   assert.equal(new Set(runtime.questions.map((question) => question.id)).size, runtime.questions.length);
   for (const question of runtime.questions) {
     assert.equal(question.validationStatus, 'verified');
     assert.equal(question.choices.length, 4);
     assert.equal(new Set(question.choices).size, 4);
+    if (question.skillId === 'pc3.pccs.complementary_hue_number') {
+      assert.equal(question.questionType, 'text_choice');
+      assert.equal(question.categoryId, 'pc3.pccs');
+      assert.equal(question.presentation, undefined);
+      continue;
+    }
     assert.ok(colorById.has(question.colorRef));
     const target = colorById.get(question.colorRef);
     if (question.presentation.kind === 'prompt_color') {
       assert.equal(question.presentation.promptColorRef, question.colorRef);
       assert.equal(question.choices[question.correctIndex], target.name);
-      question.choices.forEach((choice) => assert.ok(colorByName.has(choice), `Unknown conventional color choice: ${choice}`));
+      question.choices.forEach((choice) => assert.ok(colorByName.has(choice), 'Unknown conventional color choice: ' + choice));
     } else {
       assert.equal(question.presentation.choiceColorRefs.length, 4);
       question.presentation.choiceColorRefs.forEach((ref) => assert.ok(colorById.has(ref)));
       assert.equal(question.presentation.choiceColorRefs[question.correctIndex], question.colorRef);
     }
   }
+});
+
+test('promoted PCCS complementary-hue runtime records remain record-identical to verified authoring', () => {
+  const promoted = runtime.questions.filter((question) => question.skillId === complementaryAuthoring.skill.id);
+  assert.deepEqual(promoted, complementaryAuthoring.questions);
 });
 
 function assertAuthoringCheckpoint(authoring, expectedStart, expectedEnd) {
@@ -188,6 +200,24 @@ test('Power TOEIC shared repository/workout/session engine runs a color question
   assert.equal(ids.length, 2);
   const session = new QuizSession({ questionIds: ids, repository, now: () => 1000 });
   const question = session.currentQuestion;
+  const attempt = session.submitAnswer(question.correctIndex);
+  assert.equal(attempt.correct, true);
+});
+
+
+test('shared Power TOEIC engine runs promoted PCCS text-choice questions', () => {
+  const repository = new InMemoryQuestionBank({ questions: runtime.questions, skills: runtime.skills });
+  const recipe = createWorkoutRecipe({
+    mode: 'TRAINING',
+    totalCount: 2,
+    skillAllocations: [{ skillId: 'pc3.pccs.complementary_hue_number', count: 2 }],
+    seed: 7
+  });
+  const ids = selectQuestionIds({ repository, recipe });
+  assert.equal(ids.length, 2);
+  const session = new QuizSession({ questionIds: ids, repository, now: () => 1000 });
+  const question = session.currentQuestion;
+  assert.equal(question.skillId, 'pc3.pccs.complementary_hue_number');
   const attempt = session.submitAnswer(question.correctIndex);
   assert.equal(attempt.correct, true);
 });
