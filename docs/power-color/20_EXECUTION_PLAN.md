@@ -6,7 +6,7 @@
 - [x] Preserve the source warning that public RGB/hex values are reference display values.
 - [x] Implement `pc3.conventional.color_to_name` and `pc3.conventional.name_to_color` on the shared Power TOEIC Drill Engine.
 - [x] Generate, independently QA, duplicate/schema/coverage-check, and promote the useful authoritative state space.
-- [x] Runtime now contains 127 verified conventional-color questions: color→name 63 monitor-discriminable states + name→color 64 authoritative states; pending=0.
+- [x] Runtime contains 127 verified conventional-color questions: color→name 63 monitor-discriminable states + name→color 64 authoritative states; pending=0.
 - [x] Keep `c3-conventional-052` スカイブルー out of color→name because its authoritative display reference equals 空色 and would be monitor-ambiguous.
 
 ## Phase 2 — Grade 3 PCCS master
@@ -25,34 +25,38 @@
   - [ ] Acquire authoritative current per-state display references for monitor swatches.
     - [x] Current JCRI PCCS Color Calc documentation confirms PCCS hue-tone representative values can be output as sRGB under D65 / 2-degree conditions.
     - [x] Current JCRI FAQ permits customer-created Color Calc figures for private/commercial use; direct numeric output from a current licensed installation is approved when audit evidence is retained.
-    - [x] Current JCRI `デジタル色彩マニュアル` product documentation confirms a PCCS chart of 288 chromatic + 17 achromatic colors and states that every chart carries RGB hexadecimal and CMYK values. Exact values have not been acquired, and freshness/equivalence to current Color Calc representative values is unverified, so it is a secondary authority lead only and does not populate `displayReference`.
+    - [x] Current JCRI `デジタル色彩マニュアル` product documentation confirms a PCCS chart of 288 chromatic + 17 achromatic colors and states that every chart carries RGB hexadecimal and CMYK values. Exact values have not been acquired, and freshness/equivalence to current Color Calc representative values is unverified, so it remains a secondary authority lead only.
     - [ ] Obtain current representative per-state numeric sRGB from current licensed Color Calc or a current official table/export with exact auditable values.
   - [x] `pccs-structure-master.test.js` gates the structural slice and prohibits accidental display-value invention.
 - [ ] Add monitor-facing color/hue, color/tone, color/notation and reverse-lookup drills after approved display references exist.
 - [ ] Complete PCCS master QA and coverage gate.
 
 ## Phase 3 — Grade 3 relations / schemes
-Non-visual relationship work may proceed only where the source contract permits deterministic derivation from already source-confirmed master facts. It must not bypass Phase 2 display gates for visual questions.
+Non-visual relationship work may proceed only where deterministic derivation is possible from source-confirmed master facts. It must not bypass Phase 2 display gates for visual questions.
 
 - [x] Complementary hue.
-  - [x] Define `pc3.pccs.complementary_hue_number` as a single-skill text-only slice using the source-confirmed 24-position hue circle.
-  - [x] Generate 12 pending-first questions covering all 12 unique opposite hue pairs.
-  - [x] Independently recompute all 12 answers from the master; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0.
-  - [x] Balance correct positions A/B/C/D = 3/3/3/3 and verify no monitor-color dependency.
-  - [x] Add `pccs-complementary-hue-authoring.test.js` for pair coverage, derivation, source refs, choice uniqueness, answer correctness, pending-first audit metadata, and answer-position balance.
-  - [x] Run CI/shared-engine regressions: `Power Color tests` run `33361968699` completed successfully on the authoring commit.
-  - [x] Fix the browser answer-feedback prerequisite before promotion: text-only questions no longer require a conventional-color `colorRef`; `Power Color tests` run `33370259344` passed, including all 12 complementary-hue records.
-  - [x] Promote the 12 verified records record-identically to `grade3-runtime.json`; runtime reached 139 verified / pending 0 with record-equality, duplicate/schema, browser-feedback and shared-engine regression gates.
-- [ ] Same hue / same tone.
-  - [ ] Same hue remains pending a separately justified non-visual formulation.
-  - [x] Define `pc3.relation.same_tone` from the official PCCS notation rule: chromatic colors are written as tone abbreviation + hue number, and the official Grade 3 sample explicitly tests 同一トーン配色.
-  - [x] Generate 12 pending-first text-choice questions, one for each source-confirmed chromatic tone.
-  - [x] Independently resolve the anchor tone from `grade3-pccs-structure.json` and re-derive the unique matching choice; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0.
-  - [x] Balance correct positions A/B/C/D = 3/3/3/3 and keep the batch monitor-independent.
-  - [x] Add `pccs-same-tone-authoring.test.js` for 12-tone coverage, independent notation parsing, source/hue refs, answer uniqueness, pending-first audit metadata, answer-position balance, and text-feedback regression.
-  - [x] `Power Color tests` run `33379830006` completed successfully on the authoring checkpoint.
-  - [x] Promote all 12 records record-identically into `grade3-runtime.json`, add `pc3.relation.same_tone` to runtime skills, preserve the conventional 127-question slice and complementary 12-question slice, and gate exact authoring equality / all 12 tone codes / A-B-C-D balance / 151 verified / pending 0 / shared Power TOEIC Drill Engine execution. `Power Color tests` run `33384827586` completed successfully.
-- [ ] Hue-difference / tone-difference.
+  - [x] Define `pc3.pccs.complementary_hue_number` from the source-confirmed 24-position hue circle.
+  - [x] Generate and independently verify 12 pending-first questions covering all 12 unique opposite hue pairs.
+  - [x] Promote record-identically; runtime reached 139 verified / pending 0.
+- [x] Same tone.
+  - [x] Define `pc3.relation.same_tone` from the official PCCS notation rule and Grade 3 sample alignment.
+  - [x] Generate and independently verify 12 pending-first questions covering all 12 source-confirmed chromatic tones.
+  - [x] Promote record-identically; runtime reached 151 verified / pending 0. PR #437 is the authoritative parallel-main promotion checkpoint.
+  - [x] Keep its exact authoring/runtime equality and shared Power TOEIC Drill Engine gates while allowing later PCCS slices to increase the total runtime count.
+- [x] Same hue.
+  - [x] Confirm the official Grade 3 sample includes 同一色相配色 and the current PCCS notation rule makes the hue number a deterministic non-visual identity.
+  - [x] Define `pc3.relation.same_hue`: same hue number, different tone abbreviation.
+  - [x] Generate 12 pending-first text-only questions; independently re-derive every answer; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0; A/B/C/D = 3/3/3/3.
+  - [x] Gate canonical hue refs, all 12 tone anchors, unique answers, pending-first history, and monitor-independent feedback.
+  - [x] Promote record-identically with shared Power TOEIC session/workout/question-bank regression; runtime reached 163 verified / pending 0. Reconciled workflow run `33386401079` succeeded.
+- [ ] Hue difference.
+  - [x] Define a prerequisite numeric `pc3.relation.hue_difference` slice without guessing named classification boundaries.
+  - [x] Generate 12 pending-first text-only questions covering circular hue differences 1 through 12 exactly once.
+  - [x] Independently recompute every answer as `min(abs(a-b), 24-abs(a-b))`; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0; A/B/C/D = 3/3/3/3.
+  - [x] Gate source refs, circular derivation, 1–12 coverage, unique choices, hue refs, pending-first history, and text-only feedback. Reconciled workflow run `33386401079` succeeded.
+  - [ ] Promote the 12 records record-identically and require runtime 175 verified / pending 0.
+  - [ ] Encode named hue-difference classes only after current authoritative boundary evidence is acquired; do not infer them from secondary material.
+- [ ] Tone difference.
 - [ ] 配色判定.
 - [ ] 明度グラデーション.
 - [ ] Official-sample alignment.
