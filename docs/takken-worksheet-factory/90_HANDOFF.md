@@ -13,12 +13,13 @@ Completed `takken-concept-inheritance-deliberation` reconciliation against the f
 Existing verified evidence is now mapped narrowly:
 
 - `takken-q-57-001` -> `takken-k-inheritance-deliberation-three-month-period`
-- `takken-q-57-001` -> `takken-k-inheritance-deliberation-three-options`
 - `takken-q-57-002` -> `takken-k-inheritance-deliberation-renunciation-family-court`
 
-The existing questions do not directly test the family-court period-extension rule or the pre-choice estate-investigation rule. Those two knowledge items remain explicit Phase 4.3 deficits.
+`takken-q-57-001` asks only the length and start point of the deliberation period. Although its explanation names unconditional acceptance, qualified acceptance, and renunciation, those three options are not independently tested by the question choices. Therefore `takken-k-inheritance-deliberation-three-options` remains uncovered rather than being credited from explanation text.
 
-The central map guard was advanced from 82 to 84 mapped existing questions and now recognizes only the three inheritance-deliberation knowledge IDs that have direct existing question evidence. The two uncovered canonical items were intentionally not inserted into the central covered-ID set.
+The existing questions also do not directly test the family-court period-extension rule or the pre-choice estate-investigation rule. Those three uncovered knowledge items remain explicit Phase 4.3 deficits.
+
+The central map guard was advanced from 82 to 84 mapped existing questions and recognizes only the two inheritance-deliberation knowledge IDs that have direct existing question evidence.
 
 No Phase 2/3 question content was changed. No Phase 4.3 question generation, print generation, or app linkage was started.
 
@@ -32,7 +33,7 @@ No Phase 2/3 question content was changed. No Phase 4.3 question generation, pri
 - Phase 4.2: active — 74/113 completed concepts
 - Canonical knowledge items: 379
 - Existing verified questions mapped: 84
-- Explicit unmapped knowledge gaps: 260
+- Explicit unmapped knowledge gaps: 261
 - Phase 4.3: not started
 - Prints/app integration: not started
 
