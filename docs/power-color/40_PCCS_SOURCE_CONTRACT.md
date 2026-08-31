@@ -11,8 +11,11 @@ Current official Grade 3 material confirms that PCCS is in Grade 3 scope and tha
 Sources:
 - https://www.aft.or.jp/pages/feature/exam3
 - https://www.aft.or.jp/pages/feature/level
+- https://www.aft.or.jp/hcl/
 
 Use these sources to decide whether a PCCS operation belongs in Grade 3 and to align question patterns. Do not copy official sample wording, diagrams, or answer choices.
+
+The current `HAPPY COLOR LIFE` official learning page additionally confirms that PCCS uses hue numbers 1–24, 12 chromatic tones, and the notation rule combining a tone abbreviation with a hue number. It also repeats the new color card 199a exceptions: `s` is not included, while `p` and `lt` use plus-marked representative colors.
 
 ### 2. PCCS system authority — Japan Color Enterprise / Japan Color Research Institute lineage
 Current official product documentation for PCCS confirms:
@@ -26,6 +29,7 @@ Sources:
 - https://sikiken.co.jp/products/60650.html
 - https://sikiken.co.jp/products/60657.html
 - https://sikiken.co.jp/products/67620.html
+- https://www.jcri.jp/wp-content/uploads/2025/02/PCCS_Color_Calc_manual.pdf
 
 ## Master-data rule
 PCCS master data must distinguish four kinds of fields:
@@ -49,6 +53,23 @@ PCCS master data must distinguish four kinds of fields:
 
 No field may silently promote a visually approximated swatch into PCCS truth.
 
+## Current digital-display authority finding
+The current Japan Color Research Institute `PCCS Color Calc` manual provides a materially stronger display-value lead than a generic RGB conversion path:
+- the official software accepts `PCCS ヒュー・トーン入力`;
+- when that input mode is used, the manual states that each hue/tone's representative value is used for conversion;
+- the software outputs sRGB, with color-value conversion specified for D65 illumination and a 2-degree field.
+
+This establishes an authoritative mechanism that can produce PCCS representative sRGB values. It does not, however, publish the complete per-state representative sRGB table in the public manual. Power Color therefore must not reconstruct or guess that table from screenshots or unrelated conversions. The display-value blocker is now narrowed to obtaining an authoritative export/table of the representative values actually used by the current PCCS Color Calc implementation or another current official source publishing the same state-by-state values.
+
+## Japanese hue-name authority audit
+Rechecked 2026-08-31 against current public official Color Certification Association / Japan Color Research Institute materials. The reviewed sources confirm the 24 hue-number system and current hue notations, but no complete public authoritative mapping of all 24 records to Japanese hue names plus readings was found.
+
+Therefore:
+- keep all 24 `nameJa` / `reading` fields `null`;
+- do not populate the familiar textbook-style Japanese names from memory, third-party tables, or inferred notation expansions;
+- partial official mentions such as individual descriptive color phrases do not qualify as a complete 24-record mapping;
+- continue the authority search before filling these fields.
+
 ## Display-value gate
 As of 2026-08-31, the reviewed current official public pages confirm physical PCCS color products and PCCS structure but do not provide a complete authoritative public RGB/HEX table for the PCCS states needed by Power Color.
 
@@ -71,4 +92,4 @@ Source confirmation is complete only when:
 - unsourced RGB/HEX generation is explicitly prohibited;
 - the remaining display-reference blocker is represented in STATUS/HANDOFF rather than bypassed.
 
-Question generation starts only after the specific master slice needed by that question type has both structural truth and approved display references.
+Monitor-facing PCCS question generation starts only after the specific rendered master slice needed by that question type has both structural truth and approved display references. Non-visual structural relationship work remains governed by the relationship derivation rule above.
