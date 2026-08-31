@@ -8,35 +8,20 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Corrected the previous unit 51 Phase 4.2 checkpoint so it conforms to the canonical concept inventory.
+Started canonical concept `takken-concept-ordinary-land-lease-term` from source unit `land-lease-right`.
 
-The prior checkpoint had staged eight verified knowledge items under `takken-concept-lease-deposit-opposability`. That concept ID does not exist in `power-concepts.js`; the canonical inventory has two separate concepts from the same source unit:
+Borrowed Land and Building Lease Act Article 3 was independently checked against e-Gov and split into two atomic verified knowledge items:
 
-- `takken-concept-security-deposit`
-- `takken-concept-building-lease-opposability`
+1. the ordinary land lease initial term is 30 years when no longer term is agreed
+2. if the contract stipulates a term longer than 30 years, that stipulated period is the initial term
 
-The combined model was therefore removed rather than extended.
+The new canonical file is:
 
-Six Civil Code Article 622-2 items now belong to `takken-concept-security-deposit`:
+- `qualifications/takken/data/power-knowledge-items-ordinary-land-lease-term.js`
 
-1. statutory definition of deposit/security money
-2. return after lease termination plus return of the leased property
-3. return after lawful assignment of the lease right
-4. deduction of lease-based monetary obligations from the amount returned
-5. lessor's right to apply the deposit to unpaid lease-based monetary debt
-6. lessee cannot demand that the lessor make that application
+Both items carry stable IDs, `examYear: 2026`, `lawAsOf: 2026-04-01`, verified factcheck status, the e-Gov Borrowed Land and Building Lease Act source, source unit `land-lease-right`, and source fact `u52-f1`.
 
-Two Land and Building Lease Act Article 31 items now belong to `takken-concept-building-lease-opposability`:
-
-1. delivery of the building gives opposability even without registration
-2. the opposability applies against a person who later acquires a property right in the building
-
-Existing verified question mappings were reconciled only where directly tested:
-
-- `takken-q-51-001` -> `takken-k-security-deposit-return-after-end-and-return`, `takken-k-security-deposit-return-net-of-debt`
-- `takken-q-51-002` -> `takken-k-building-lease-opposability-delivery-without-registration`, `takken-k-building-lease-opposability-subsequent-property-right-acquirer`
-
-The definition, lawful-assignment return trigger, lessor application right, and lessee no-demand rule remain explicit Phase 4.3 coverage gaps.
+Existing verified `takken-q-52-001` directly tests both rules. The central `power-question-knowledge-map.js` has deliberately not yet been changed in this checkpoint, so this concept is not counted complete yet and both staged items remain explicit mapping deficits.
 
 No Phase 4.3 questions, prints, or app linkage were created.
 
@@ -48,25 +33,28 @@ No Phase 4.3 questions, prints, or app linkage were created.
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 66/113 completed concepts
-- Canonical knowledge items: 347
+- Canonical knowledge items staged: 349
 - Existing verified questions mapped: 73
-- Explicit unmapped knowledge gaps: 252
+- Explicit unmapped knowledge gaps before q52 mapping: 254
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Start `takken-concept-ordinary-land-lease-term` from source unit `land-lease-right`.
+Finish `takken-concept-ordinary-land-lease-term` by mapping verified `takken-q-52-001` only to:
+
+- `takken-k-ordinary-land-lease-term-thirty-years`
+- `takken-k-ordinary-land-lease-term-longer-contract-controls`
+
+After that mapping passes the central validator, increment the completed concept/mapped-question counts and reduce the two temporary mapping gaps, then advance to `takken-concept-land-lease-opposability` from the same source unit.
 
 Do not start Phase 4.3 until all 113 canonical concepts have been decomposed and existing verified-question mappings have been reconciled.
 
 ## Validation note
 
-The unit 51 correction is structural, not a change to Phase 2/3 question content. The eight staged legal claims were preserved, but their concept IDs and knowledge IDs were normalized to the actual concept inventory.
+The legal source rule was checked against e-Gov Borrowed Land and Building Lease Act Article 3. The source unit `u52-f1` and verified `takken-q-52-001` state the same two-part rule. No Phase 2/3 question content was modified.
 
-`power-question-knowledge-map.js` now expects 73 mapped existing verified questions through unit 51 and explicitly requires both q51 mappings. Its allowed concept IDs and mapped knowledge IDs use the canonical `security-deposit` and `building-lease-opposability` identifiers.
-
-The two replacement knowledge files enforce unique IDs, 2026/2026-04-01 metadata, verified status, statutory primary sources, and source-fact provenance limited to `u51-f1` or `u51-f2` as applicable.
+The new knowledge file enforces unique IDs, 2026/2026-04-01 metadata, verified status, statutory primary source, canonical concept ID, and source-fact provenance limited to `u52-f1`.
 
 ## publication invariant
 
