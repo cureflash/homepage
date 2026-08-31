@@ -6,7 +6,7 @@ const runtime = JSON.parse(await readFile(new URL('../data/grade3-runtime.json',
 const authoring = JSON.parse(await readFile(new URL('../data/grade3-authoring-same-tone-0001-0012.json', import.meta.url), 'utf8'));
 const structure = JSON.parse(await readFile(new URL('../data/grade3-pccs-structure.json', import.meta.url), 'utf8'));
 
-const toneCodes = new Set(structure.tones.map((tone) => tone.code));
+const toneCodes = new Set(structure.tones.map((tone) => tone.notation));
 const parseNotation = (notation) => {
   const match = notation.match(/^([a-z]+)(\d{1,2})$/i);
   assert.ok(match, 'invalid PCCS notation: ' + notation);
