@@ -4,66 +4,43 @@
 - [x] Confirm official Grade 3 scope and official sample-question patterns.
 - [x] Ingest 64 Grade 3 慣用色名 into `grade3-colors.json`.
 - [x] Preserve the source warning that public RGB/hex values are reference display values.
-- [x] Create initial two micro-skills:
-  - `pc3.conventional.color_to_name`
-  - `pc3.conventional.name_to_color`
-- [x] Put a small individually checked 16-question beta bank on the shared Power TOEIC engine.
-- [x] Generate the remaining conventional-color questions.
-  - [x] `color_to_name` checkpoint 0017-0024: 8 generated and individually verified; 0 pending.
-  - [x] `color_to_name` checkpoint 0025-0032: 8 generated and individually verified; 0 pending.
-  - [x] `color_to_name` checkpoint 0033-0040: 8 generated and individually verified; 0 pending.
-  - [x] `color_to_name` checkpoint 0041-0048: 8 generated and individually verified; 0 pending.
-  - [x] `color_to_name` checkpoint 0049-0056: 8 generated and individually verified; 0 pending.
-  - [x] `color_to_name` checkpoint 0057-0064: 8 generated and individually verified; 0 pending. Targets c3-048..051 and c3-053..056.
-  - [x] `color_to_name` checkpoint 0065-0071: 7 generated and individually verified; 0 pending. Targets c3-057..062 and c3-064.
-  - [x] `color_to_name` useful monitor-discriminable state space: 63/64 master refs covered with no target reuse.
-  - [x] `c3-conventional-052` (スカイブルー) deferred for `color_to_name` because its reference display value is identical to 空色.
-  - [x] `name_to_color` checkpoint 0017-0024: 8 generated pending-first and independently verified; 0 pending.
-  - [x] `name_to_color` checkpoint 0025-0032: 8 generated pending-first and independently verified; 0 pending.
-  - [x] `name_to_color` checkpoint 0033-0040: 8 generated pending-first and independently verified; 0 pending; c3-025 was already covered by runtime and was not reused.
-  - [x] `name_to_color` checkpoint 0041-0048: 8 generated pending-first and independently verified; 0 pending. Targets c3-031 through c3-038.
-  - [x] `name_to_color` checkpoint 0049-0056: 8 generated pending-first and independently verified; 0 pending. Targets c3-039, 040, 041, 043, 044, 045, 046, 047; c3-042 was already covered by runtime and was removed after the cross-bank gate detected it.
-  - [x] `name_to_color` checkpoint 0057-0064: 8 generated pending-first and independently verified; 0 pending. Targets c3-048 through c3-055; the c3-052 item excludes c3-017 from its choices because both share the same reference display value.
-  - [x] `name_to_color` checkpoint 0065-0072: 8 generated pending-first and independently verified; 0 pending. Targets c3-056 through c3-062 and c3-064; c3-063 remains covered only by the original runtime seed and is not reused.
-  - [x] `name_to_color` authoritative master state space: 64/64 master refs covered with no target reuse.
-- [x] Independent QA for all conventional-color questions.
-  - [x] Corpus gate covered runtime 16 + authoring 111 = 127 verified questions, pending=0 before promotion.
-  - [x] Canonical target resolution, schema/source refs, exact fingerprints, cross-bank target uniqueness, monitor-discriminable choice sets and answer-position balance pass.
-  - [x] Official association 3級慣用色 reference rechecked 2026-08-31; its public RGB/hex values remain reference values, and 空色/スカイブルー both remain `8ED1E0`.
-- [x] Promote all 111 verified authoring records into `grade3-runtime.json`, preserving the existing 16 runtime records and two skill definitions.
-  - [x] Runtime contains 127 verified questions, pending=0.
-  - [x] Promotion gate requires every staged record to be record-level identical to its runtime counterpart.
-- [x] Post-promotion runtime/shared-engine regression gate.
-  - [x] Runtime `color_to_name=63`, `name_to_color=64`, pending=0.
-  - [x] Duplicate/schema/reference and record-level equality gates pass.
-  - [x] Shared Power TOEIC repository/workout/session integration passes.
-- [x] Conventional-color coverage complete for the useful authoritative monitor state space; do not force a monitor-indistinguishable item merely to claim 64/64.
+- [x] Implement `pc3.conventional.color_to_name` and `pc3.conventional.name_to_color` on the shared Power TOEIC Drill Engine.
+- [x] Generate, independently QA, duplicate/schema/coverage-check, and promote the useful authoritative state space.
+- [x] Runtime now contains 127 verified conventional-color questions: color→name 63 monitor-discriminable states + name→color 64 authoritative states; pending=0.
+- [x] Keep `c3-conventional-052` スカイブルー out of color→name because its authoritative display reference equals 空色 and would be monitor-ambiguous.
 
 ## Phase 2 — Grade 3 PCCS master
 - [x] Confirm authoritative PCCS Grade 3 source boundary and fix `40_PCCS_SOURCE_CONTRACT.md`.
   - [x] Color Certification Association official Grade 3 scope/sample confirms PCCS is in scope.
-  - [x] Current Japan Color Enterprise PCCS documentation confirms a 24-hue system and current tone-based PCCS teaching/reference products.
-  - [x] Current PCCS Color Tone Circle confirms 11 chromatic tone groups `v,b,dp,lt+,sf,d,dk,p+,ltg,g,dkg`, each represented across 12 hues.
+  - [x] Current Japan Color Enterprise / JCRI material confirms the 24-hue system and current tone structure.
   - [x] Structural PCCS truth and monitor display references are separate authorities.
-  - [x] Unsourced RGB/HEX, screenshot sampling, third-party tables and conversion-derived swatches are prohibited.
-- [ ] Build hue/tone/notation master without guessing display values.
-  - [x] Create `grade3-pccs-structure.json` with source-confirmed hue positions 1-24 and their current notations.
-  - [x] Confirm 12 chromatic tone codes/names and preserve the `lt+`/`p+` new-color-card convention separately from canonical `lt`/`p`; record that `s` is omitted from new color card 199a.
-  - [x] Preserve current hue 20 as `V`; the current JCRI manual says `PB` is a future rename, so no premature migration is allowed.
-  - [ ] Confirm all 24 Japanese PCCS hue names/readings from a current authoritative source before filling those fields.
-    - [x] 2026-08-31 public-authority audit: current AFT/JCRI public sources confirm the 24 hue-number/notation structure but no complete authoritative public 24-record Japanese name + reading mapping was found; all fields remain null.
-    - [x] Identify a current first-party material containing the 24 hue names: Japan Color Enterprise `基本色彩掛図〈中級用〉` explicitly includes `色相別と色相名（日本色研配色体系）※24色相`; its public page does not expose the 24 mappings/readings, so no fields are populated yet.
-    - [ ] Acquire the complete 24-record mapping plus readings from an actual current authoritative material and retain auditable source evidence.
-  - [ ] Identify authoritative per-state display references for monitor swatches.
-    - [x] Current JCRI PCCS Color Calc documentation states that PCCS hue-tone input uses each hue/tone representative value and outputs sRGB under D65 / 2-degree conditions.
-    - [x] Current JCRI FAQ states that customer-created PCCS Color Calc figures may be used for private or commercial purposes; direct current licensed-software numeric output is therefore an approved authoritative acquisition path when input/output evidence is retained.
-    - [ ] Obtain the representative per-state sRGB values either from a current official published table/export or by direct numeric output from a current licensed PCCS Color Calc. Do not reconstruct them from screenshots or unrelated conversion tables.
-  - [x] Add `pccs-structure-master.test.js` to gate the structural slice, null display references, source refs, and notation exceptions.
-- [ ] Add color/hue, color/tone, color/notation and reverse-lookup drills.
-- [ ] QA and coverage gate.
+  - [x] Unsourced RGB/HEX, screenshot sampling, third-party tables, Munsell reconstruction, and hand tuning are prohibited.
+- [ ] Complete hue/tone/notation master without guessing display values.
+  - [x] Create `grade3-pccs-structure.json` with 24/24 source-confirmed hue positions and current notations.
+  - [x] Confirm 12/12 chromatic tone codes/names, including `lt+`/`p+` new-card notation and the `s` omission.
+  - [x] Preserve hue 20 as `V` while the current JCRI manual says `PB` is only a future rename.
+  - [ ] Confirm all 24 Japanese PCCS hue names/readings from current authoritative material.
+    - [x] Identify current Japan Color Enterprise `基本色彩掛図〈中級用〉` as a first-party 24-hue-name source.
+    - [ ] Acquire the complete 24 mappings/readings; public product material does not expose the full table.
+  - [ ] Acquire authoritative current per-state display references for monitor swatches.
+    - [x] Current JCRI PCCS Color Calc documentation confirms PCCS hue-tone representative values can be output as sRGB under D65 / 2-degree conditions.
+    - [x] Current JCRI FAQ permits customer-created Color Calc figures for private/commercial use; direct numeric output from a current licensed installation is approved when audit evidence is retained.
+    - [x] Current JCRI `デジタル色彩マニュアル` product documentation confirms a PCCS chart of 288 chromatic + 17 achromatic colors and states that every chart carries RGB hexadecimal and CMYK values. Exact values have not been acquired, and freshness/equivalence to current Color Calc representative values is unverified, so it is a secondary authority lead only and does not populate `displayReference`.
+    - [ ] Obtain current representative per-state numeric sRGB from current licensed Color Calc or a current official table/export with exact auditable values.
+  - [x] `pccs-structure-master.test.js` gates the structural slice and prohibits accidental display-value invention.
+- [ ] Add monitor-facing color/hue, color/tone, color/notation and reverse-lookup drills after approved display references exist.
+- [ ] Complete PCCS master QA and coverage gate.
 
 ## Phase 3 — Grade 3 relations / schemes
+Non-visual relationship work may proceed only where the source contract permits deterministic derivation from already source-confirmed master facts. It must not bypass Phase 2 display gates for visual questions.
+
 - [ ] Complementary hue.
+  - [x] Define `pc3.pccs.complementary_hue_number` as a single-skill text-only slice using the source-confirmed 24-position hue circle.
+  - [x] Generate 12 pending-first questions covering all 12 unique opposite hue pairs.
+  - [x] Independently recompute all 12 answers from the master; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0.
+  - [x] Balance correct positions A/B/C/D = 3/3/3/3 and verify no monitor-color dependency.
+  - [x] Add `pccs-complementary-hue-authoring.test.js` for pair coverage, derivation, source refs, choice uniqueness, answer correctness, pending-first audit metadata, and answer-position balance.
+  - [ ] Run CI/shared-engine regressions and promote the 12 verified records to runtime only if green.
 - [ ] Same hue / same tone.
 - [ ] Hue-difference / tone-difference.
 - [ ] 配色判定.
@@ -71,5 +48,11 @@
 - [ ] Official-sample alignment.
 - [ ] Full Grade 3 pending=0 gate.
 
-## Phase 4
-Only after Grade 3 complete: Grade 2.
+## Phase 4 — Grade 2
+Start only after Grade 3 is completely finished.
+
+## Phase 5 — Grade 1
+Start only after Grade 2 is completely finished.
+
+## Phase B — Explanation video series
+Start only after `color_database_complete: true`. Build the video-series plan/spec/status/handoff first, then produce one safe theme at a time through the existing `cureflash/makemovie` CSV/PowerPoint→YMM4→MP4 pipeline. Do not fork a new video engine.
