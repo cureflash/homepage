@@ -1,6 +1,6 @@
 {
   "project": "power-color",
-  "phase": "grade3_scheme_identification_promoted",
+  "phase": "grade3_relation_boundary_authority_audit",
   "grade": 3,
   "grade3": {
     "conventional_color_master": {
@@ -25,6 +25,16 @@
     },
     "relation_scheme_master": {
       "status": "in_progress",
+      "boundary_audit": {
+        "document": "docs/power-color/41_RELATION_BOUNDARY_AUDIT.md",
+        "checked": "2026-08-31",
+        "new_first_party_evidence": [
+          "JCRI official 2022 business report documents PCCS COLOR CALC-derived 配色形式 calculation and shows concrete adjacent/similar hue and same/similar tone classifications.",
+          "JCRI official color-slide product confirms first-party teaching categories including 対照色相配色 and 同一・類似トーン配色."
+        ],
+        "resolved": "First-party existence and implemented deterministic use of the named relation classes are confirmed.",
+        "still_blocked": "The complete current numeric hue-class boundaries and complete tone-pair/contrast-tone membership rules are not exposed by the located first-party public material; do not extrapolate from sample rows."
+      },
       "complementary_hue_number": {
         "skill": "pc3.pccs.complementary_hue_number",
         "generated": 12, "checked": 12, "verified": 12, "pending": 0,
@@ -60,16 +70,22 @@
           "workflow_run": 33387836920,
           "conclusion": "success"
         },
-        "named_classification_status": "blocked_pending_authoritative_boundaries"
+        "named_classification_status": "blocked_pending_complete_authoritative_boundaries",
+        "first_party_class_existence_confirmed": true
       },
       "tone_difference": {
         "skill": "pc3.relation.tone_difference",
         "status": "blocked_pending_authoritative_grade3_classification_boundaries",
         "authority_audit": {
-          "source": "https://www.jcri.jp/square/journal/pccs_revision",
+          "sources": [
+            "https://www.jcri.jp/square/journal/pccs_revision",
+            "https://www.jcri.jp/wp-content/uploads/2024/11/2022-jigyohokoku.pdf",
+            "https://www.jcri.jp/product/cd_rom_color_slide"
+          ],
           "checked": "2026-08-31",
-          "finding": "JCRI states conventional PCCS has no algorithm defining relationships among tones; visual tone-map layout must not be converted into an invented distance/adjacency model.",
-          "detailed_pccs_substitution_prohibited": true
+          "finding": "Conventional PCCS provides no general tone-relationship algorithm, while JCRI first-party software/material confirms named same/similar tone classification exists. Located public material still does not expose the complete current tone-pair or contrast-tone boundary table.",
+          "detailed_pccs_substitution_prohibited": true,
+          "sample_reverse_engineering_prohibited": true
         }
       },
       "value_gradient": {
@@ -116,7 +132,7 @@
           "conclusion": "success"
         },
         "blocked_expansion": ["contrast_tone", "named_hue_difference"],
-        "next": "Continue authoritative source acquisition for contrast-tone and named hue-difference boundaries before expanding this skill."
+        "next": "Acquire complete current authoritative classification boundaries before expanding this skill; do not infer from the three-color JCRI software sample."
       }
     },
     "runtime_questions": {"verified": 199, "pending": 0, "needs_revision": 0, "rejected": 0},
@@ -135,14 +151,14 @@
   "current_run": {
     "checkpoints_completed": 1,
     "generated": 0,
-    "checked": 12,
-    "verified": 12,
-    "revision_events": 1,
+    "checked": 0,
+    "verified": 0,
+    "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "pc3.scheme.identification: promotion QA found one full-fingerprint duplicate; pc3-scheme-identification-0012 was revised by distractor reordering, independently rechecked, and all 12 records were promoted record-identically to runtime 199"
+      "Authority acquisition checkpoint: located and recorded JCRI first-party software/report evidence confirming implemented adjacent/similar hue and same/similar tone classifications, while preserving the block because complete current boundary tables are still unavailable."
     ]
   },
   "engine_integration": {
@@ -153,5 +169,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 3 source acquisition for the exact current tone-difference/contrast-tone and named hue-difference classification boundaries. Do not derive a distance graph from the conventional PCCS tone-map layout or substitute the detailed-PCCS algorithm. Continue blocking monitor-facing PCCS questions until authoritative display references exist."
+  "next": "Continue Grade 3 source acquisition for complete current named hue-difference and tone-difference/contrast-tone boundary tables or pair memberships. The first-party existence/implementation question is now resolved; do not reverse-engineer missing boundaries from sample rows. Continue blocking monitor-facing PCCS questions until authoritative display references exist."
 }
