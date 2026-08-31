@@ -1,14 +1,14 @@
 {
   "format": "power-toeic-beta-runtime-bank-v1",
-  "generatedAt": "2026-08-30T23:19:48.840Z",
+  "generatedAt": "2026-08-31T00:15:36.462Z",
   "productionApproved": false,
   "notice": "Independent-QA verified candidates only. Final semantic production duplicate clearance is still pending; this bank is for the public beta.",
   "source": {
     "taxonomyVersion": "part5-v1.0",
-    "approvedCandidateCount": 3487,
-    "runtimeQuestionCount": 3485,
-    "quarantinedNearDuplicateCount": 2,
-    "qaRecordCount": 142
+    "approvedCandidateCount": 3584,
+    "runtimeQuestionCount": 3581,
+    "quarantinedNearDuplicateCount": 3,
+    "qaRecordCount": 146
   },
   "betaGlobalSimilarityGate": {
     "passed": true,
@@ -225,6 +225,12 @@
     {
       "id": "p5.vocab.business_context",
       "label": "業務文脈語彙",
+      "categoryId": "vocabulary-usage",
+      "categoryLabel": "語彙・語法"
+    },
+    {
+      "id": "p5.vocab.confusing_words",
+      "label": "類義・混同語",
       "categoryId": "vocabulary-usage",
       "categoryLabel": "語彙・語法"
     },
@@ -54530,6 +54536,1638 @@
       "betaCandidate": true
     },
     {
+      "id": "p5_vocab_business_context_0051",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The project manager requested a progress ____ from every team leader.",
+      "choices": [
+        "discount",
+        "invoice",
+        "update",
+        "lease"
+      ],
+      "correctIndex": 2,
+      "explanation": "A progress 'update' provides the latest information about a project's status.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0052",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company's annual sales ____ exceeded expectations in the fourth quarter.",
+      "choices": [
+        "agenda",
+        "transfer",
+        "vacancy",
+        "revenue"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Revenue' is income generated from business activities such as sales.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0053",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The damaged package was returned to the carrier for ____.",
+      "choices": [
+        "inspection",
+        "forecast",
+        "benefit",
+        "candidate"
+      ],
+      "correctIndex": 0,
+      "explanation": "An 'inspection' is a careful examination to check condition or compliance.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0054",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The executive assistant arranged ground ____ from the airport to the hotel.",
+      "choices": [
+        "inventory",
+        "transportation",
+        "quotation",
+        "deadline"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Transportation' means the service or means of moving people or goods.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0055",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The software license must be renewed before its expiration ____.",
+      "choices": [
+        "shipment",
+        "survey",
+        "date",
+        "branch"
+      ],
+      "correctIndex": 2,
+      "explanation": "An expiration 'date' is the date after which a license or document is no longer valid.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0056",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier offered a volume ____ for orders exceeding 500 units.",
+      "choices": [
+        "receipt",
+        "vacancy",
+        "seminar",
+        "discount"
+      ],
+      "correctIndex": 3,
+      "explanation": "A volume 'discount' is a price reduction for buying a large quantity.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0057",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The customer asked for written ____ that the order had been canceled.",
+      "choices": [
+        "confirmation",
+        "inventory",
+        "interview",
+        "lease"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Confirmation' is evidence or a statement establishing that something has been completed or arranged.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0058",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The office manager ordered additional stationery because current ____ were running low.",
+      "choices": [
+        "refunds",
+        "supplies",
+        "agendas",
+        "candidates"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Supplies' are materials or items kept for routine business use.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0059",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company will announce the successful job ____ early next week.",
+      "choices": [
+        "invoice",
+        "shipment",
+        "candidate",
+        "forecast"
+      ],
+      "correctIndex": 2,
+      "explanation": "A job 'candidate' is a person being considered for a position.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0060",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The meeting room is unavailable because routine ____ is being performed on the air-conditioning system.",
+      "choices": [
+        "quotation",
+        "vacancy",
+        "transfer",
+        "maintenance"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Maintenance' is work done to keep equipment or facilities in good condition.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0061",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The contract requires written ____ from both parties before any major change is made.",
+      "choices": [
+        "approval",
+        "inventory",
+        "survey",
+        "refund"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Approval' is official permission or agreement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0062",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse uses barcode scanners to improve order ____.",
+      "choices": [
+        "agenda",
+        "accuracy",
+        "lease",
+        "vacancy"
+      ],
+      "correctIndex": 1,
+      "explanation": "Order 'accuracy' is the degree to which orders are prepared without errors.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0063",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The restaurant manager reviewed the weekend staffing ____ before approving leave requests.",
+      "choices": [
+        "forecast",
+        "receipt",
+        "schedule",
+        "benefit"
+      ],
+      "correctIndex": 2,
+      "explanation": "A staffing 'schedule' shows when employees are assigned to work.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0064",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The purchasing officer placed an urgent ____ for replacement printer cartridges.",
+      "choices": [
+        "survey",
+        "candidate",
+        "lease",
+        "order"
+      ],
+      "correctIndex": 3,
+      "explanation": "An 'order' is a formal request to purchase goods or services.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0065",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company offered relocation ____ to employees transferred overseas.",
+      "choices": [
+        "assistance",
+        "shipment",
+        "agenda",
+        "invoice"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Assistance' means help or support provided for a task or situation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0066",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The branch exceeded its monthly sales ____ for the third consecutive month.",
+      "choices": [
+        "refund",
+        "target",
+        "vacancy",
+        "quotation"
+      ],
+      "correctIndex": 1,
+      "explanation": "A sales 'target' is a planned or desired level of sales performance.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0067",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manager requested a detailed cost ____ before approving the renovation.",
+      "choices": [
+        "survey",
+        "interview",
+        "breakdown",
+        "shipment"
+      ],
+      "correctIndex": 2,
+      "explanation": "A cost 'breakdown' separates a total cost into its component amounts.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0068",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The customer service team tracks average response ____ for incoming inquiries.",
+      "choices": [
+        "inventory",
+        "agenda",
+        "lease",
+        "time"
+      ],
+      "correctIndex": 3,
+      "explanation": "Response 'time' is the amount of time taken to reply or react.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0069",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company conducted a security ____ after several employees received suspicious emails.",
+      "choices": [
+        "review",
+        "shipment",
+        "candidate",
+        "discount"
+      ],
+      "correctIndex": 0,
+      "explanation": "A security 'review' is an examination of security practices or risks.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0070",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer increased its safety ____ after introducing automated equipment.",
+      "choices": [
+        "refunds",
+        "standards",
+        "vacancies",
+        "quotations"
+      ],
+      "correctIndex": 1,
+      "explanation": "Safety 'standards' are established requirements or levels for safe operation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0071",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The training coordinator recorded each participant's ____ on the sign-in sheet.",
+      "choices": [
+        "forecast",
+        "inventory",
+        "attendance",
+        "lease"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Attendance' indicates whether and how many people are present at an event.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0072",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier guaranteed next-day ____ for orders placed before noon.",
+      "choices": [
+        "survey",
+        "agenda",
+        "candidate",
+        "delivery"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Delivery' is the transportation and handover of goods to a recipient.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0073",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manager asked employees to submit vacation ____ at least two weeks in advance.",
+      "choices": [
+        "requests",
+        "shipments",
+        "invoices",
+        "forecasts"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vacation 'requests' are formal applications for time off.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0074",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse installed additional lighting to improve workplace ____.",
+      "choices": [
+        "vacancy",
+        "safety",
+        "quotation",
+        "refund"
+      ],
+      "correctIndex": 1,
+      "explanation": "Workplace 'safety' refers to conditions and practices that prevent injury.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0075",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance team asked the vendor to clarify the payment ____ listed in the contract.",
+      "choices": [
+        "inventory",
+        "shipment",
+        "terms",
+        "vacancy"
+      ],
+      "correctIndex": 2,
+      "explanation": "Payment 'terms' are the conditions governing when and how payment must be made.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0076",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The accounting team requested a copy of the signed ____ before processing the first payment.",
+      "choices": [
+        "contract",
+        "invoice",
+        "shipment",
+        "vacancy"
+      ],
+      "correctIndex": 0,
+      "explanation": "A signed 'contract' is the agreement that authorizes obligations and payment terms.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0077",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse manager updated the stock ____ after receiving the morning delivery.",
+      "choices": [
+        "forecast",
+        "inventory",
+        "agenda",
+        "candidate"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Inventory' is the record or supply of goods currently held in stock.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0078",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The recruiter scheduled a second ____ with the strongest applicant for Thursday.",
+      "choices": [
+        "inspection",
+        "quotation",
+        "interview",
+        "lease"
+      ],
+      "correctIndex": 2,
+      "explanation": "An 'interview' is a formal meeting used to evaluate a job applicant.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0079",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier sent a revised price ____ after the buyer changed the order quantity.",
+      "choices": [
+        "attendance",
+        "vacancy",
+        "refund",
+        "quotation"
+      ],
+      "correctIndex": 3,
+      "explanation": "A price 'quotation' states the amount a seller proposes to charge.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0080",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The branch posted a job ____ for an experienced customer-service supervisor.",
+      "choices": [
+        "vacancy",
+        "invoice",
+        "shipment",
+        "forecast"
+      ],
+      "correctIndex": 0,
+      "explanation": "A job 'vacancy' is an available position that an employer wants to fill.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0081",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The hotel issued a full ____ after confirming that the reservation had been canceled in time.",
+      "choices": [
+        "agenda",
+        "refund",
+        "inventory",
+        "candidate"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'refund' is money returned to a customer after a cancellation or return.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0082",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The logistics team tracked the overseas ____ until it reached the distribution center.",
+      "choices": [
+        "survey",
+        "lease",
+        "shipment",
+        "benefit"
+      ],
+      "correctIndex": 2,
+      "explanation": "A 'shipment' is a quantity of goods sent from one place to another.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0083",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The department prepared an ____ listing the topics for Monday's planning meeting.",
+      "choices": [
+        "invoice",
+        "forecast",
+        "discount",
+        "agenda"
+      ],
+      "correctIndex": 3,
+      "explanation": "An 'agenda' lists the subjects to be discussed at a meeting.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0084",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The property manager renewed the office ____ for another three years.",
+      "choices": [
+        "lease",
+        "candidate",
+        "survey",
+        "receipt"
+      ],
+      "correctIndex": 0,
+      "explanation": "A 'lease' is a contract granting the use of property for a specified period.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0085",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance director reviewed the quarterly sales ____ before approving the new budget.",
+      "choices": [
+        "attendance",
+        "forecast",
+        "vacancy",
+        "shipment"
+      ],
+      "correctIndex": 1,
+      "explanation": "A sales 'forecast' is an estimate of future sales performance.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0086",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Customers who complete the online ____ will receive a discount code.",
+      "choices": [
+        "invoice",
+        "lease",
+        "survey",
+        "inventory"
+      ],
+      "correctIndex": 2,
+      "explanation": "A 'survey' collects information or opinions from respondents.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0087",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The purchasing clerk attached the delivery ____ to the expense record.",
+      "choices": [
+        "candidate",
+        "agenda",
+        "forecast",
+        "receipt"
+      ],
+      "correctIndex": 3,
+      "explanation": "A 'receipt' provides evidence that goods or payment were received.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0088",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company offers a transportation ____ to employees who commute by train.",
+      "choices": [
+        "benefit",
+        "shipment",
+        "quotation",
+        "vacancy"
+      ],
+      "correctIndex": 0,
+      "explanation": "A 'benefit' is an advantage or form of compensation provided to employees.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0089",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales manager approved a special ____ for the customer because of the large order.",
+      "choices": [
+        "survey",
+        "discount",
+        "candidate",
+        "lease"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'discount' is a reduction from the normal price.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0090",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The hiring committee selected one ____ for the final reference check.",
+      "choices": [
+        "inventory",
+        "invoice",
+        "candidate",
+        "shipment"
+      ],
+      "correctIndex": 2,
+      "explanation": "A 'candidate' is a person being considered for a position.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0091",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The vendor sent an electronic ____ showing the amount due and the payment deadline.",
+      "choices": [
+        "agenda",
+        "benefit",
+        "forecast",
+        "invoice"
+      ],
+      "correctIndex": 3,
+      "explanation": "An 'invoice' is a bill requesting payment for goods or services.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0092",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The operations team conducted a customer-satisfaction ____ after the new service launched.",
+      "choices": [
+        "survey",
+        "lease",
+        "vacancy",
+        "receipt"
+      ],
+      "correctIndex": 0,
+      "explanation": "A 'survey' is used to gather responses about customer satisfaction.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0093",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The contract includes a three-year equipment ____ covering repairs and parts.",
+      "choices": [
+        "attendance",
+        "warranty",
+        "candidate",
+        "agenda"
+      ],
+      "correctIndex": 1,
+      "explanation": "A 'warranty' is a written promise covering repair or replacement under stated conditions.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0094",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company increased its advertising ____ before launching the new product line.",
+      "choices": [
+        "shipment",
+        "receipt",
+        "budget",
+        "vacancy"
+      ],
+      "correctIndex": 2,
+      "explanation": "An advertising 'budget' is the amount of money allocated to promotional activity.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0095",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manager asked for written ____ that the supplier could meet the revised deadline.",
+      "choices": [
+        "inventory",
+        "lease",
+        "candidate",
+        "confirmation"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Confirmation' is a statement or evidence showing that something is certain or agreed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0096",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The warehouse imposed a temporary shipping ____ while the loading dock was being repaired.",
+      "choices": [
+        "restriction",
+        "invoice",
+        "benefit",
+        "agenda"
+      ],
+      "correctIndex": 0,
+      "explanation": "A shipping 'restriction' is a limit or rule affecting when or how goods may be sent.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0097",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consulting firm submitted a detailed project ____ including fees, staffing, and milestones.",
+      "choices": [
+        "refund",
+        "proposal",
+        "vacancy",
+        "attendance"
+      ],
+      "correctIndex": 1,
+      "explanation": "A project 'proposal' describes a planned service or project for a client's consideration.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0098",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The hotel recorded a sharp increase in room ____ during the holiday weekend.",
+      "choices": [
+        "shipment",
+        "quotation",
+        "occupancy",
+        "inventory"
+      ],
+      "correctIndex": 2,
+      "explanation": "Room 'occupancy' is the proportion or number of rooms being used.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0099",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The service center keeps a complete repair ____ for each company vehicle.",
+      "choices": [
+        "discount",
+        "candidate",
+        "agenda",
+        "record"
+      ],
+      "correctIndex": 3,
+      "explanation": "A repair 'record' documents maintenance and repair history.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_business_context_0100",
+      "version": 1,
+      "skillId": "p5.vocab.business_context",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manufacturer changed its packaging to comply with new labeling ____.",
+      "choices": [
+        "refunds",
+        "vacancies",
+        "shipments",
+        "requirements"
+      ],
+      "correctIndex": 3,
+      "explanation": "Labeling 'requirements' are rules or conditions that must be satisfied.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0001",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manager asked Ms. Lee to ____ the training session because the original instructor was unavailable.",
+      "choices": [
+        "conduct",
+        "attend",
+        "occur",
+        "permit"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Conduct' means to organize and lead an activity such as a training session.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0002",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ the attached document carefully before signing the agreement.",
+      "choices": [
+        "revise",
+        "review",
+        "renew",
+        "recover"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Review' means to examine something carefully.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0003",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The airline will ____ passengers by e-mail if the departure time changes.",
+      "choices": [
+        "notice",
+        "remark",
+        "notify",
+        "advertise"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Notify' means to formally inform someone of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0004",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The board decided to ____ the proposal until additional cost data became available.",
+      "choices": [
+        "prevent",
+        "preserve",
+        "predict",
+        "postpone"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Postpone' means to delay an event or decision until a later time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0005",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new software should ____ employees to process orders more quickly.",
+      "choices": [
+        "enable",
+        "ensure",
+        "assure",
+        "insure"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Enable' means to make it possible for someone to do something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0006",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supervisor will ____ that all safety checks are completed before production begins.",
+      "choices": [
+        "assure",
+        "ensure",
+        "insure",
+        "secure"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Ensure' means to make certain that something happens.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0007",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The consultant ____ the client that the revised schedule was realistic.",
+      "choices": [
+        "ensured",
+        "insured",
+        "assured",
+        "secured"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Assured' means told someone confidently in order to remove doubt.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0008",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company decided to ____ the warehouse against fire and flood damage.",
+      "choices": [
+        "ensure",
+        "assure",
+        "secure",
+        "insure"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Insure' means to provide insurance coverage for property or risk.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0009",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Sales increased ____ after the company introduced online ordering.",
+      "choices": [
+        "considerably",
+        "considerable",
+        "considering",
+        "consideration"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Considerably' is the adverb meaning by a large amount.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0011",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manager asked employees to keep personal items ____ from the emergency exit.",
+      "choices": [
+        "apart",
+        "aside",
+        "away",
+        "abroad"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Away from' means at a distance from something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0012",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new branch is ____ located near two major railway stations.",
+      "choices": [
+        "convenient",
+        "convenience",
+        "convene",
+        "conveniently"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Conveniently' modifies 'located' and means in a location that is easy to use or reach.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0013",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The factory must ____ with all local environmental regulations.",
+      "choices": [
+        "comply",
+        "compile",
+        "complete",
+        "compare"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Comply with' means to act according to a rule or requirement.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0015",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The annual conference will ____ of three workshops and a keynote address.",
+      "choices": [
+        "compose",
+        "include",
+        "consist",
+        "contain"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Consist of' is the correct expression for stating the components of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0016",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The committee is ____ of representatives from five regional offices.",
+      "choices": [
+        "consisted",
+        "contained",
+        "included",
+        "composed"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Be composed of' means be made up of particular members or parts.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0017",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier offered to ____ the defective parts at no additional cost.",
+      "choices": [
+        "replace",
+        "relocate",
+        "remove",
+        "repeat"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Replace' means to provide a new item in place of a defective one.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0018",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The technician was able to ____ the missing file from the backup server.",
+      "choices": [
+        "discover",
+        "recover",
+        "cover",
+        "deliver"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Recover' means to retrieve something that was lost or inaccessible.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0019",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company plans to ____ its customer-support team by hiring six additional agents.",
+      "choices": [
+        "extend",
+        "expend",
+        "expand",
+        "expose"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Expand' means to increase the size or scope of something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0020",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The deadline was ____ by one week because several documents arrived late.",
+      "choices": [
+        "expanded",
+        "expended",
+        "exposed",
+        "extended"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Extended' means lengthened in time.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0021",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ your employee identification card when entering the secure area.",
+      "choices": [
+        "present",
+        "prevent",
+        "preserve",
+        "prepare"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Present' means to show or provide something for inspection.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0022",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The revised policy will take ____ on October 1.",
+      "choices": [
+        "affect",
+        "effect",
+        "effective",
+        "effectively"
+      ],
+      "correctIndex": 1,
+      "explanation": "The fixed expression is 'take effect', meaning become operative.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0023",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Rising fuel prices may ____ the company's distribution costs.",
+      "choices": [
+        "effect",
+        "effective",
+        "affect",
+        "affection"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Affect' is a verb meaning to influence something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0024",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The marketing campaign had a positive ____ on online sales.",
+      "choices": [
+        "affect",
+        "effective",
+        "effectively",
+        "effect"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Effect' is a noun meaning a result or influence.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0025",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The office will remain closed ____ Monday because of building maintenance.",
+      "choices": [
+        "through",
+        "thorough",
+        "throughout",
+        "though"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Through Monday' means continuing up to and including Monday.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0026",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The auditor conducted a ____ examination of the company's expense records.",
+      "choices": [
+        "through",
+        "thorough",
+        "though",
+        "throughout"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Thorough' means complete and careful.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0027",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company has offices ____ Japan, including locations in Sapporo and Fukuoka.",
+      "choices": [
+        "through",
+        "thorough",
+        "throughout",
+        "though"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Throughout' means in all parts of a place.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0029",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The sales team exceeded its monthly ____ by twelve percent.",
+      "choices": [
+        "quota",
+        "quote",
+        "quotation",
+        "quality"
+      ],
+      "correctIndex": 0,
+      "explanation": "A 'quota' is a required or expected amount, such as a sales target.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0030",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The technician found that the replacement cable was not ____ with the older device.",
+      "choices": [
+        "competitive",
+        "compatible",
+        "comparable",
+        "capable"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Compatible' means able to work properly with another device or system.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0031",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The two proposals are ____ in cost, but the second offers a shorter delivery time.",
+      "choices": [
+        "compatible",
+        "competitive",
+        "comparable",
+        "capable"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Comparable' means similar enough to be compared.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0032",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company offers highly ____ salaries to attract experienced engineers.",
+      "choices": [
+        "compatible",
+        "comparable",
+        "competent",
+        "competitive"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Competitive' means as good as or better than what others offer.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0033",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new technician is fully ____ of operating the diagnostic equipment without supervision.",
+      "choices": [
+        "capable",
+        "possible",
+        "available",
+        "eligible"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Capable of' means having the ability to do something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0034",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Only full-time employees are ____ for the annual performance bonus.",
+      "choices": [
+        "capable",
+        "eligible",
+        "available",
+        "probable"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Eligible' means meeting the conditions required to receive or do something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0035",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "A conference room is ____ on the third floor from 2:00 to 4:00.",
+      "choices": [
+        "eligible",
+        "possible",
+        "available",
+        "capable"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Available' means free and ready for use.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0036",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The weather forecast indicates that flight delays are ____ this evening.",
+      "choices": [
+        "lively",
+        "like",
+        "likewise",
+        "likely"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Likely' means probable.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0037",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The lobby was unusually ____ during the product launch, with demonstrations and customer interviews taking place continuously.",
+      "choices": [
+        "lively",
+        "likely",
+        "likewise",
+        "live"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Lively' means full of activity and energy.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0038",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The finance team will ____ the figures in the report before it is sent to investors.",
+      "choices": [
+        "justify",
+        "verify",
+        "identify",
+        "classify"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Verify' means to check that information is correct or true.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0040",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "All travel-expense claims must be ____ within ten business days.",
+      "choices": [
+        "provided",
+        "offered",
+        "supplied",
+        "submitted"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Submit' means formally present a document for consideration or approval.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0041",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The supplier agreed to ____ replacement filters to all affected customers.",
+      "choices": [
+        "supply",
+        "submit",
+        "apply",
+        "reply"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Supply' means provide goods or materials that are needed.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0042",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The store will ____ a 15 percent discount to customers who join the loyalty program.",
+      "choices": [
+        "supply",
+        "offer",
+        "submit",
+        "deliver"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Offer' means make something available for acceptance.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0043",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Employees should ____ for reimbursement within 30 days of completing business travel.",
+      "choices": [
+        "reply",
+        "imply",
+        "apply",
+        "comply"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Apply for' means formally request something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0044",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "Please ____ to the meeting invitation by noon on Friday.",
+      "choices": [
+        "apply",
+        "imply",
+        "supply",
+        "reply"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Reply to' means respond to a message or invitation.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0045",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The survey results ____ that customers prefer shorter delivery windows.",
+      "choices": [
+        "imply",
+        "apply",
+        "reply",
+        "comply"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Imply' means suggest something without stating it directly.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0046",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The chairperson asked everyone to ____ from using mobile phones during the presentation.",
+      "choices": [
+        "restrain",
+        "refrain",
+        "retain",
+        "remain"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Refrain from' means deliberately avoid doing something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0047",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The new policy is intended to ____ unnecessary spending on business travel.",
+      "choices": [
+        "refrain",
+        "retain",
+        "restrain",
+        "remain"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Restrain' means limit or control something.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0048",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The company hopes to ____ experienced staff by expanding its professional-development program.",
+      "choices": [
+        "refrain",
+        "remain",
+        "restrain",
+        "retain"
+      ],
+      "correctIndex": 3,
+      "explanation": "'Retain' means keep people or things rather than lose them.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0049",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The regional office will ____ open until 8:00 p.m. during the busy season.",
+      "choices": [
+        "remain",
+        "retain",
+        "refrain",
+        "restrain"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Remain' means continue to be in a particular state.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
+      "id": "p5_vocab_confusing_words_0050",
+      "version": 1,
+      "skillId": "p5.vocab.confusing_words",
+      "categoryId": "vocabulary-usage",
+      "sentence": "The manager asked for a ____ explanation of the unexpected increase in costs.",
+      "choices": [
+        "briefly",
+        "brief",
+        "shortage",
+        "shortly"
+      ],
+      "correctIndex": 1,
+      "explanation": "'Brief' is an adjective meaning concise.",
+      "validationStatus": "verified",
+      "betaCandidate": true
+    },
+    {
       "id": "p5_vocab_phrasal_verb_0001",
       "version": 1,
       "skillId": "p5.vocab.phrasal_verb",
@@ -59498,6 +61136,12 @@
     {
       "id": "p5_det_article_choice_0094",
       "duplicateOf": "p5_det_article_choice_0044",
+      "score": 1,
+      "reason": "exact_normalized_stem"
+    },
+    {
+      "id": "p5_vocab_confusing_words_0010",
+      "duplicateOf": "p5_vocab_adjective_noun_collocation_0096",
       "score": 1,
       "reason": "exact_normalized_stem"
     },

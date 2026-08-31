@@ -2,11 +2,11 @@
 
 ## Current QA state
 
-- Checked: 4,250
-- Verified: 4,152
-- Needs revision: 98
+- Checked: 4,350
+- Verified: 4,249
+- Needs revision: 101
 - Rejected: 0
-- Unchecked `pending_validation`: 150
+- Unchecked `pending_validation`: 50
 - `generation_complete`: `true`
 - `validation_complete`: `false`
 
@@ -14,19 +14,17 @@
 
 Reviewed the oldest 100 unchecked questions in strict backlog order.
 
-- `p5.vocab.phrasal_verb` 0051-0100: 50 checked / 45 verified / 5 needs_revision / 0 rejected.
-- `p5.vocab.business_context` 0001-0050: 50 checked / 50 verified / 0 needs_revision / 0 rejected.
+- `p5.vocab.business_context` 0051-0100: 50 checked / 50 verified / 0 needs_revision / 0 rejected.
+- `p5.vocab.confusing_words` 0001-0050: 50 checked / 47 verified / 3 needs_revision / 0 rejected.
 
 Needs-revision items:
 
-- `p5_vocab_phrasal_verb_0051`: `set out` and `run over` are both defensible.
-- `p5_vocab_phrasal_verb_0079`: `call off several reservations` is not natural target usage.
-- `p5_vocab_phrasal_verb_0081`: keyed `match up ... against` complementation is awkward.
-- `p5_vocab_phrasal_verb_0091`: `lay out` and `run through` are both defensible.
-- `p5_vocab_phrasal_verb_0099`: `replace` and `track down` are both defensible.
+- `p5_vocab_confusing_words_0014`: `contain` and `comprise` both correctly complete the sentence; `combine` is also arguable depending on intended meaning.
+- `p5_vocab_confusing_words_0028`: both `quote` and `quotation` correctly complete `price ____`.
+- `p5_vocab_confusing_words_0039`: both `provide` and `supply` are natural with `two professional references`.
 
 Each item was reviewed individually for unique answer, distractor validity, TOEIC-style naturalness, intended-skill alignment, explanation consistency, and answer-position/template pattern. No exact duplicate was identified within these four reviewed 25-item batches. The persisted source co-locates keys with stems, so strict technical answer-blinding cannot be guaranteed in connector-only access; no item was approved without individual review.
 
 ## Next QA
 
-Continue at `p5_vocab_business_context_0051`.
+Continue at `p5_vocab_confusing_words_0051`.
