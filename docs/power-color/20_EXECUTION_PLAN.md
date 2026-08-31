@@ -59,8 +59,9 @@ Non-visual relationship work may proceed only where deterministic derivation is 
 - [ ] 配色判定.
   - [x] Same-tone and same-hue deterministic sub-relations are independently testable from canonical notation.
   - [x] Define a deterministic `pc3.scheme.identification` subset using only same tone, same hue, complementary hue, and value gradient.
-  - [x] Generate and independently verify 12 pending-first text-only identification questions: 3 per confirmed rule; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3. Workflow run `33388489462` succeeded.
-  - [ ] Promote the 12 verified `pc3.scheme.identification` records record-identically and require runtime 199 verified / pending 0.
+  - [x] Generate and independently verify 12 pending-first text-only identification questions: 3 per confirmed rule; A/B/C/D = 3/3/3/3. Workflow run `33388489462` succeeded.
+  - [x] Run full-fingerprint duplicate gate before promotion; detect one collision (`0012` vs `0003`), revise only the distractor order, independently re-derive the answer, and retain A/B/C/D = 3/3/3/3 with zero remaining duplicates.
+  - [x] Promote the 12 verified `pc3.scheme.identification` records record-identically; runtime reached 199 verified / pending 0. Workflow run `33400487901` succeeded with exact-equality, duplicate, and shared-engine gates.
   - [ ] Extend identification to contrast-tone / named hue-difference classes only after their authoritative boundaries are sourced.
 - [x] 明度グラデーション — deterministic text-only prerequisite slice.
   - [x] Confirm the current official Grade 3 sample explicitly describes the correct characteristic as changing lightness stepwise.
