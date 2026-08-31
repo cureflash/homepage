@@ -35,12 +35,12 @@ Completed checkpoints through the last completed concept: business-definition; l
 
 Current checkpoint:
 - [x] `takken-concept-inheritance-deliberation` is complete. Five Civil Code knowledge items cover the three-month period/start point, the three statutory choices, family-court period extension on request, pre-choice estate investigation, and renunciation by declaration to the family court.
-- [x] `takken-q-57-001` maps only to the three-month period/start-point item and the three-options item it directly tests.
+- [x] `takken-q-57-001` maps only to the three-month period/start-point item it directly tests.
 - [x] `takken-q-57-002` maps only to the family-court renunciation item it directly tests.
-- [x] Period extension and pre-choice estate investigation remain explicit Phase 4.3 deficits because no existing verified question directly measures them.
+- [x] The three-options item, period-extension item, and pre-choice estate-investigation item remain explicit Phase 4.3 deficits because no existing verified question directly measures them.
 - [ ] Start `takken-concept-inheritance-renunciation` from source unit `inheritance-acceptance-renunciation`; extract its canonical knowledge items without reassigning existing question mappings merely because the source unit overlaps.
 
-Current Phase 4.2 totals: 74/113 completed concepts, 379 verified knowledge items, 84 existing verified questions mapped, 260 explicit question-coverage gaps.
+Current Phase 4.2 totals: 74/113 completed concepts, 379 verified knowledge items, 84 existing verified questions mapped, 261 explicit question-coverage gaps.
 
 Exact continuation: start `takken-concept-inheritance-renunciation` from `inheritance-acceptance-renunciation`. Build its canonical knowledge items from primary law, preserving the 2026-04-01 cutoff. Reconcile existing verified evidence only if a question is not already uniquely assigned elsewhere and directly tests the item. Keep Phase 4.3 blocked.
 
