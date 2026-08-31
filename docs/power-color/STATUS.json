@@ -27,13 +27,16 @@
       "status": "in_progress",
       "boundary_audit": {
         "document": "docs/power-color/41_RELATION_BOUNDARY_AUDIT.md",
-        "checked": "2026-08-31",
+        "checked": "2026-09-01",
         "new_first_party_evidence": [
-          "JCRI official 2022 business report documents PCCS COLOR CALC-derived 配色形式 calculation and shows concrete adjacent/similar hue and same/similar tone classifications.",
-          "JCRI official color-slide product confirms first-party teaching categories including 対照色相配色 and 同一・類似トーン配色."
+          "Current 2026 Color Certification Association Grade 3 sample explicitly tests 同一トーン配色, 対照トーン配色, 同一色相配色, 中差色相配色, and 明度のグラデーション.",
+          "Current official Grade 3 sample warns that monitor environments can change displayed color appearance.",
+          "Current Association level/text pages keep PCCS systematic color-scheme work in Grade 3 and state that exam questions follow official-text content.",
+          "Current JCRI material continues to document PCCS 配色形式 instruction/classification but does not publish the complete current boundary tables."
         ],
-        "resolved": "First-party existence and implemented deterministic use of the named relation classes are confirmed.",
-        "still_blocked": "The complete current numeric hue-class boundaries and complete tone-pair/contrast-tone membership rules are not exposed by the located first-party public material; do not extrapolate from sample rows."
+        "resolved": "Current Grade 3 exam scope and first-party existence/implementation of the named relation classes are confirmed.",
+        "still_blocked": "The complete current numeric hue-class boundaries and complete tone-pair/contrast-tone membership rules are not exposed by the located public first-party material; do not extrapolate from sample images or rows.",
+        "public_web_route_status": "rechecked_without_complete_boundary_table"
       },
       "complementary_hue_number": {
         "skill": "pc3.pccs.complementary_hue_number",
@@ -71,7 +74,8 @@
           "conclusion": "success"
         },
         "named_classification_status": "blocked_pending_complete_authoritative_boundaries",
-        "first_party_class_existence_confirmed": true
+        "first_party_class_existence_confirmed": true,
+        "current_grade3_sample_scope_confirmed": true
       },
       "tone_difference": {
         "skill": "pc3.relation.tone_difference",
@@ -80,12 +84,16 @@
           "sources": [
             "https://www.jcri.jp/square/journal/pccs_revision",
             "https://www.jcri.jp/wp-content/uploads/2024/11/2022-jigyohokoku.pdf",
-            "https://www.jcri.jp/product/cd_rom_color_slide"
+            "https://www.jcri.jp/product/cd_rom_color_slide",
+            "https://www.aft.or.jp/pages/feature/exam3",
+            "https://www.aft.or.jp/pages/feature/level",
+            "https://www.aft.or.jp/pages/official-product-orders/index.html"
           ],
-          "checked": "2026-08-31",
-          "finding": "Conventional PCCS provides no general tone-relationship algorithm, while JCRI first-party software/material confirms named same/similar tone classification exists. Located public material still does not expose the complete current tone-pair or contrast-tone boundary table.",
+          "checked": "2026-09-01",
+          "finding": "Current official Grade 3 material explicitly tests 対照トーン配色, while conventional PCCS provides no general tone-relationship algorithm and located public first-party material still does not expose the complete current tone-pair or contrast-tone boundary table.",
           "detailed_pccs_substitution_prohibited": true,
-          "sample_reverse_engineering_prohibited": true
+          "sample_reverse_engineering_prohibited": true,
+          "next_source_route": "current official text/manual/card material or auditable current first-party software output"
         }
       },
       "value_gradient": {
@@ -132,7 +140,7 @@
           "conclusion": "success"
         },
         "blocked_expansion": ["contrast_tone", "named_hue_difference"],
-        "next": "Acquire complete current authoritative classification boundaries before expanding this skill; do not infer from the three-color JCRI software sample."
+        "next": "Acquire complete current authoritative classification boundaries before expanding this skill; do not infer from official sample images or the three-color JCRI software sample."
       }
     },
     "runtime_questions": {"verified": 199, "pending": 0, "needs_revision": 0, "rejected": 0},
@@ -158,7 +166,7 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Authority acquisition checkpoint: located and recorded JCRI first-party software/report evidence confirming implemented adjacent/similar hue and same/similar tone classifications, while preserving the block because complete current boundary tables are still unavailable."
+      "Authority recheck checkpoint: current 2026 Color Certification Association Grade 3 sample/level/text pages and current JCRI PCCS pages reconfirmed the target named schemes and monitor-display warning, but still did not expose the complete current hue/tone boundary tables."
     ]
   },
   "engine_integration": {
@@ -169,5 +177,5 @@
   },
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 3 source acquisition for complete current named hue-difference and tone-difference/contrast-tone boundary tables or pair memberships. The first-party existence/implementation question is now resolved; do not reverse-engineer missing boundaries from sample rows. Continue blocking monitor-facing PCCS questions until authoritative display references exist."
+  "next": "Continue Grade 3 authoritative acquisition through current official text/manual/card material or auditable current first-party software output for the complete named hue-difference and tone-difference/contrast-tone rules. Public first-party web pages have been rechecked without exposing the missing tables. Continue blocking monitor-facing PCCS questions until authoritative display references exist."
 }
