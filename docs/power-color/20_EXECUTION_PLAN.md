@@ -54,7 +54,8 @@ Non-visual relationship work may proceed only where deterministic derivation is 
   - [x] Promote the 12 records record-identically; runtime reached 175 verified / pending 0. Workflow run `33387836920` succeeded.
   - [ ] Encode named hue-difference classes only after current authoritative boundary evidence is acquired; do not infer them from secondary material.
 - [ ] Tone difference.
-  - [ ] Acquire current authoritative tone-distance/adjacency or contrast-tone boundaries before encoding this skill.
+  - [x] Recheck current JCRI authority: conventional PCCS does not define an algorithm for relationships among tones; do not derive distance/adjacency from the tone-map layout.
+  - [ ] Acquire the exact current Grade 3 tone-difference / contrast-tone classification boundary before encoding this skill.
 - [ ] 配色判定.
   - [x] Same-tone and same-hue deterministic sub-relations are independently testable from canonical notation.
   - [x] Define a deterministic `pc3.scheme.identification` subset using only same tone, same hue, complementary hue, and value gradient.

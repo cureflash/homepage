@@ -92,6 +92,21 @@ Therefore:
 - structural master records may be added only for directly confirmed hue/tone/notation facts;
 - monitor-facing PCCS questions remain blocked until every rendered target/choice has an approved display reference source or direct official-software output record.
 
+## Tone-relationship authority audit
+Rechecked 2026-08-31 against the Japan Color Research Institute article `PCCSの改訂に向けて―更なるプラクティカルを目指して―`:
+- JCRI states that the conventional PCCS tone-region divisions and representative-color reference values are defined through Munsell-system tables;
+- critically, it also states that conventional PCCS does not have an algorithm defining relationships among tones;
+- the article presents an enhanced/detailed PCCS as adding an algorithm and coordinate-based capabilities that conventional PCCS lacks.
+
+Source:
+- https://www.jcri.jp/square/journal/pccs_revision
+
+Therefore:
+- do not invent a numeric `tone_distance`, adjacency graph, or nearest-tone rule from the visual layout of the standard tone map;
+- `pc3.relation.tone_difference` remains blocked unless the exact Grade 3 classification/boundary rule required by the current official exam material is directly sourced;
+- contrast-tone classification may be encoded only from an authoritative current rule defining which tone combinations belong to that class; the existence of an official sample label alone is not enough to infer all boundaries;
+- the detailed-PCCS algorithm described by JCRI must not be silently substituted for the conventional PCCS rule set used by the current Grade 3 exam unless current exam authority explicitly adopts that model.
+
 ## Relationship derivation rule
 Once hue positions are individually source-confirmed, relationships such as same hue, hue difference, and complementary hue may be computed from canonical positions. The derived relationship must retain refs to the underlying sourced hue records; it does not require a second external source for the arithmetic relation.
 
