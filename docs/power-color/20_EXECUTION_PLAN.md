@@ -51,7 +51,10 @@
   - [x] Confirm 12 chromatic tone codes/names and preserve the `lt+`/`p+` new-color-card convention separately from canonical `lt`/`p`; record that `s` is omitted from new color card 199a.
   - [x] Preserve current hue 20 as `V`; the current JCRI manual says `PB` is a future rename, so no premature migration is allowed.
   - [ ] Confirm all 24 Japanese PCCS hue names/readings from a current authoritative source before filling those fields.
+    - [x] 2026-08-31 public-authority audit: current AFT/JCRI public sources confirm the 24 hue-number/notation structure but no complete authoritative 24-record Japanese name + reading mapping was found; all fields remain null.
   - [ ] Identify an authoritative per-state display reference for monitor swatches. Current reviewed public official pages do not expose a complete RGB/HEX table; visual PCCS question generation remains blocked until this is resolved.
+    - [x] Narrow the authority path: current JCRI PCCS Color Calc documentation states that PCCS hue-tone input uses each hue/tone representative value and outputs sRGB under D65 / 2-degree conditions.
+    - [ ] Obtain an authoritative export/table of those representative per-state sRGB values; do not reconstruct them from screenshots or unrelated conversion tables.
   - [x] Add `pccs-structure-master.test.js` to gate the structural slice, null display references, source refs, and notation exceptions.
 - [ ] Add color/hue, color/tone, color/notation and reverse-lookup drills.
 - [ ] QA and coverage gate.
