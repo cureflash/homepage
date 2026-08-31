@@ -41,25 +41,28 @@ Non-visual relationship work may proceed only where deterministic derivation is 
 - [x] Same tone.
   - [x] Define `pc3.relation.same_tone` from the official PCCS notation rule and Grade 3 sample alignment.
   - [x] Generate and independently verify 12 pending-first questions covering all 12 source-confirmed chromatic tones.
-  - [x] Promote record-identically; runtime reached 151 verified / pending 0. PR #437 is the authoritative parallel-main promotion checkpoint.
-  - [x] Keep its exact authoring/runtime equality and shared Power TOEIC Drill Engine gates while allowing later PCCS slices to increase the total runtime count.
+  - [x] Promote record-identically; runtime reached 151 verified / pending 0.
 - [x] Same hue.
   - [x] Confirm the official Grade 3 sample includes 同一色相配色 and the current PCCS notation rule makes the hue number a deterministic non-visual identity.
   - [x] Define `pc3.relation.same_hue`: same hue number, different tone abbreviation.
-  - [x] Generate 12 pending-first text-only questions; independently re-derive every answer; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0; A/B/C/D = 3/3/3/3.
-  - [x] Gate canonical hue refs, all 12 tone anchors, unique answers, pending-first history, and monitor-independent feedback.
-  - [x] Promote record-identically with shared Power TOEIC session/workout/question-bank regression; runtime reached 163 verified / pending 0. Reconciled workflow run `33386401079` succeeded.
+  - [x] Generate 12 pending-first text-only questions; independently re-derive every answer; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
+  - [x] Promote record-identically with shared Power TOEIC regression; runtime reached 163 verified / pending 0.
 - [ ] Hue difference.
   - [x] Define a prerequisite numeric `pc3.relation.hue_difference` slice without guessing named classification boundaries.
   - [x] Generate 12 pending-first text-only questions covering circular hue differences 1 through 12 exactly once.
-  - [x] Independently recompute every answer as `min(abs(a-b), 24-abs(a-b))`; 12 checked / 12 verified / 0 revision / 0 rejected / pending 0; A/B/C/D = 3/3/3/3.
-  - [x] Gate source refs, circular derivation, 1–12 coverage, unique choices, hue refs, pending-first history, and text-only feedback. Reconciled workflow run `33386401079` succeeded.
-  - [ ] Promote the 12 records record-identically and require runtime 175 verified / pending 0.
+  - [x] Independently recompute every answer as `min(abs(a-b), 24-abs(a-b))`; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
+  - [x] Promote the 12 records record-identically; runtime reached 175 verified / pending 0. Workflow run `33387836920` succeeded.
   - [ ] Encode named hue-difference classes only after current authoritative boundary evidence is acquired; do not infer them from secondary material.
 - [ ] Tone difference.
+  - [ ] Acquire current authoritative tone-distance/adjacency or contrast-tone boundaries before encoding this skill.
 - [ ] 配色判定.
-- [ ] 明度グラデーション.
-- [ ] Official-sample alignment.
+  - [x] Same-tone and same-hue deterministic sub-relations are already independently testable from canonical notation.
+  - [ ] Add contrast-tone / named hue-difference scheme identification only after their authoritative boundaries are sourced.
+- [x] 明度グラデーション — deterministic text-only prerequisite slice.
+  - [x] Confirm the current official Grade 3 sample explicitly describes the correct characteristic as changing lightness stepwise.
+  - [x] Generate and independently verify 12 pending-first sequence questions; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
+  - [x] Promote record-identically with shared-engine regression; runtime reached 187 verified / pending 0. Workflow runs `33387985332` and `33388149661` succeeded.
+- [ ] Official-sample alignment for remaining named schemes.
 - [ ] Full Grade 3 pending=0 gate.
 
 ## Phase 4 — Grade 2
