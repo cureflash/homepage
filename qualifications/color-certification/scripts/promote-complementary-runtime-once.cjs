@@ -54,7 +54,7 @@ const replacement = `test('runtime bank exposes 139 verified questions and valid
     if (question.presentation.kind === 'prompt_color') {
       assert.equal(question.presentation.promptColorRef, question.colorRef);
       assert.equal(question.choices[question.correctIndex], target.name);
-      question.choices.forEach((choice) => assert.ok(colorByName.has(choice), `Unknown conventional color choice: ${choice}`));
+      question.choices.forEach((choice) => assert.ok(colorByName.has(choice), 'Unknown conventional color choice: ' + choice));
     } else {
       assert.equal(question.presentation.choiceColorRefs.length, 4);
       question.presentation.choiceColorRefs.forEach((ref) => assert.ok(colorById.has(ref)));
@@ -133,7 +133,7 @@ test('promoted complementary-hue answers independently recompute from the 24-pos
   const distribution = [0, 0, 0, 0];
   for (const question of promoted) {
     const match = question.prompt.match(/色相番号(\\d+)/);
-    assert.ok(match, `missing hue number in prompt: ${question.id}`);
+    assert.ok(match, 'missing hue number in prompt: ' + question.id);
     const sourceHue = Number(match[1]);
     const expected = ((sourceHue + 11) % 24) + 1;
     assert.equal(Number(question.choices[question.correctIndex]), expected, question.id);
