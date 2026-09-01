@@ -20,7 +20,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2: 12 verified / pending 0 in `grade2-runtime.json`, all from `pc2.foundation.official_sample_facts`.
+Grade 2 runtime is promoted to 24 verified / pending 0 on this branch: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions`. The runtime promotion gate requires exact equality with both verified authoring batches, zero full-fingerprint duplicates, and execution through the shared Power TOEIC engine.
 
 Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
@@ -33,8 +33,22 @@ The current official Grade 2 sample explicitly states that three hues whose posi
 - [x] Independently recompute every answer using the 8-position interval modulo 24.
 - [x] Verify 12/12; pending 0; A/B/C/D = 3/3/3/3.
 - [x] Add a dedicated authoring/shared-renderer gate.
-- [ ] Promote the verified batch record-identically to `grade2-runtime.json` after the authoring PR is green.
+- [x] Promote the verified batch record-identically to `grade2-runtime.json`; runtime frontier 24.
+
+## Grade 2 Munsell notation checkpoint
+
+The current official Grade 2 TOC places Munsell hue, value, chroma and notation in scope. Current JCRI first-party material independently supplies the nonvisual answer rule:
+- `Munsell Separation` accepts `H V/C` and splits it into hue numeric, hue letters, value numeric, slash and chroma numeric;
+- current JCRI HVC training material explicitly identifies H/V/C as hue/value/chroma;
+- current JCRI Digital Color Manual page publishes concrete Munsell examples such as `2.5R 6/10`, `5R 6/10`, `7.5R 6/12`, and `10R 6/14`.
+
+- [x] Define `pc2.munsell.notation_components` without using display color.
+- [x] Generate 12 pending-first text-only questions using only JCRI-published notation examples or the explicit H/V/C field rule.
+- [x] Independently parse/re-derive every answer before verification.
+- [x] Verify 12/12; pending 0; A/B/C/D = 3/3/3/3.
+- [x] Add dedicated authoring/shared-renderer/fingerprint gate.
+- [ ] Promote the verified Munsell batch record-identically after the current PR is green.
 
 ## Exact next start point
 
-Promote `grade2-authoring-triad-hue-positions-0001-0012.json` record-identically to Grade 2 runtime, update the runtime frontier from 12 to 24, and run full-fingerprint plus shared Power TOEIC engine gates. After promotion, continue the current first-party source inventory in official-text order. Do not generate another named scheme unless its full nonvisual answer rule is explicit.
+First confirm CI for the 24-question triad runtime promotion plus Munsell authoring checkpoint and merge it. Then promote `grade2-authoring-munsell-notation-components-0001-0012.json` record-identically to Grade 2 runtime, moving the frontier 24 → 36, and rerun exact-equality, full-fingerprint and shared-engine gates. After that continue the current first-party source inventory in official-text order.
