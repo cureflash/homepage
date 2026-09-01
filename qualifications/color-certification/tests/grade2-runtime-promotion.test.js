@@ -13,6 +13,10 @@ const naturalComplex = JSON.parse(await readFile(new URL('../data/grade2-authori
 const dominant = JSON.parse(await readFile(new URL('../data/grade2-authoring-dominant-color-tone-0001-0012.json', import.meta.url), 'utf8'));
 const toneOnTone = JSON.parse(await readFile(new URL('../data/grade2-authoring-tone-on-tone-0001-0012.json', import.meta.url), 'utf8'));
 const toneInTone = JSON.parse(await readFile(new URL('../data/grade2-authoring-tone-in-tone-0001-0012.json', import.meta.url), 'utf8'));
+const tonal = JSON.parse(await readFile(new URL('../data/grade2-authoring-tonal-0001-0012.json', import.meta.url), 'utf8'));
+const camaieu = JSON.parse(await readFile(new URL('../data/grade2-authoring-camaieu-faux-camaieu-0001-0012.json', import.meta.url), 'utf8'));
+
+const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu];
 
 function fingerprint(q) {
   return JSON.stringify([q.sentence, q.choices]);
@@ -21,11 +25,11 @@ function fingerprint(q) {
 test('Grade 2 runtime is the record-identical union of verified authoring batches', () => {
   assert.equal(runtime.format, 'power-color-grade2-runtime-v1');
   assert.equal(runtime.grade, 2);
-  assert.equal(runtime.questions.length, 84);
-  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 84);
+  assert.equal(runtime.questions.length, 108);
+  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 108);
   assert.equal(runtime.questions.filter((q) => q.validationStatus === 'pending_validation').length, 0);
-  assert.deepEqual(runtime.questions, [...foundation.questions, ...triad.questions, ...munsell.questions, ...naturalComplex.questions, ...dominant.questions, ...toneOnTone.questions, ...toneInTone.questions]);
-  assert.deepEqual(runtime.skills, [foundation.skill, triad.skill, munsell.skill, naturalComplex.skill, dominant.skill, toneOnTone.skill, toneInTone.skill]);
+  assert.deepEqual(runtime.questions, batches.flatMap((batch) => batch.questions));
+  assert.deepEqual(runtime.skills, batches.map((batch) => batch.skill));
 });
 
 test('Grade 2 runtime has no full-fingerprint duplicates', () => {
@@ -35,7 +39,8 @@ test('Grade 2 runtime has no full-fingerprint duplicates', () => {
 
 test('shared Power TOEIC engine runs all Grade 2 skills', () => {
   const repository = new InMemoryQuestionBank({ questions: runtime.questions, skills: runtime.skills });
-  for (const targetId of [foundation.questions[0].id, triad.questions[0].id, munsell.questions[0].id, naturalComplex.questions[0].id, dominant.questions[0].id, toneOnTone.questions[0].id, toneInTone.questions[0].id]) {
+  for (const batch of batches) {
+    const targetId = batch.questions[0].id;
     const session = new QuizSession({ questionIds: [targetId], repository, now: () => 1000 });
     const question = session.currentQuestion;
     assert.equal(question.id, targetId);
@@ -44,17 +49,9 @@ test('shared Power TOEIC engine runs all Grade 2 skills', () => {
 
   const recipe = createWorkoutRecipe({
     mode: 'TRAINING',
-    totalCount: 21,
-    skillAllocations: [
-      { skillId: 'pc2.foundation.official_sample_facts', count: 3 },
-      { skillId: 'pc2.scheme.triad_hue_positions', count: 3 },
-      { skillId: 'pc2.munsell.notation_components', count: 3 },
-      { skillId: 'pc2.scheme.natural_complex_harmony', count: 3 },
-      { skillId: 'pc2.scheme.dominant_color_tone', count: 3 },
-      { skillId: 'pc2.scheme.tone_on_tone', count: 3 },
-      { skillId: 'pc2.scheme.tone_in_tone', count: 3 }
-    ],
+    totalCount: 27,
+    skillAllocations: batches.map((batch) => ({ skillId: batch.skill.id, count: 3 })),
     seed: 41
   });
-  assert.equal(selectQuestionIds({ repository, recipe }).length, 21);
+  assert.equal(selectQuestionIds({ repository, recipe }).length, 27);
 });
