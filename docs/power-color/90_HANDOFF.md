@@ -6,17 +6,21 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-PR #488 reconciled the current Grade 2 authority against the current Color Certification Association Grade 2 sample page. The unsupported `pc2.image.color_image_rules` route was removed, the original official-sample batch was independently rechecked, questions 0009-0012 were narrowed to explicit current-page wording, and the 12 verified records were promoted record-identically to `grade2-runtime.json`.
+Grade 2 runtime frontier remains 12 verified / pending 0, all `pc2.foundation.official_sample_facts`.
 
-Power Color workflow run `33530981815` succeeded. PR #488 merged to main as `985193bf1de561d10a2e714cb0750ceb1ea6bb44`.
+A new deterministic nonvisual micro-skill is now authoring-complete: `pc2.scheme.triad_hue_positions`.
 
-Grade 2 runtime frontier: 12 verified / pending 0, all `pc2.foundation.official_sample_facts`.
+Authority chain:
+- current Color Certification Association Grade 2 sample explicitly states that three hues whose positions are evenly spaced on the PCCS hue circle form a triad;
+- the existing source-confirmed PCCS structure fixes the hue circle at 24 positions;
+- therefore triad members are separated by 8 hue positions modulo 24.
+
+The batch `grade2-authoring-triad-hue-positions-0001-0012.json` contains 12 pending-first questions that were independently recomputed before verification. Result: 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3. It is text-only and uses no RGB/HEX, image sampling, display color, or inferred diagram geometry.
+
 Grade 3 runtime frontier: 223 verified / pending 0, still incomplete.
-
-The current official Grade 2 text table of contents has also been added to `51_GRADE2_CONCEPT_SOURCE_INVENTORY.md`. It confirms scope for Munsell, natural/complex harmony, dominant schemes, tone-on-tone/tone-in-tone/tonal, camaieu/faux-camaieu, bicolor/tricolor, hue-circle division, image schemes, media, fashion, interior, landscape, conventional colors, and a PCCS tone/value appendix. The TOC establishes scope only; it does not supply unstated derivation rules.
 
 ## Exact next start point
 
-Continue in official-text order with the Grade 2 color-harmony / scheme section because it directly extends the current runtime skill. Locate current first-party text that explicitly states a deterministic nonvisual rule for one of the in-scope schemes. Generate only if the rule itself is auditable and sufficient to derive answers; otherwise record the source gap and move to the next official-text topic.
+First, promote the 12 verified `pc2.scheme.triad_hue_positions` records record-identically to `grade2-runtime.json`, making the Grade 2 runtime frontier 24 if all promotion gates pass. Add/adjust the runtime exact-equality, full-fingerprint duplicate and shared Power TOEIC engine gates without forking a new engine.
 
-Do not revive `pc2.image.color_image_rules` or generate `pc2.scheme.natural_harmony_text` from memory, stale samples, image appearance or TOC labels alone. Monitor-facing questions remain blocked without approved display references.
+After that, continue the Grade 2 current first-party source inventory in official-text order. Do not revive `pc2.image.color_image_rules`, do not generate natural harmony from the TOC alone, and do not derive visual answer choices from screen appearance.

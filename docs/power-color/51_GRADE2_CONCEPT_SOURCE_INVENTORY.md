@@ -19,7 +19,11 @@ Current explicit sample-page facts that can be used without reading image colors
    - three evenly positioned hues on the PCCS hue circle form a triad;
    - Question 1 explicitly names tone-in-tone, split complementary, pentad and tonal schemes as identification targets.
 
-These facts are directly exposed in current page text and/or its published answer section. The reconciled 12-question batch uses only these facts.
+2. `pc2.scheme.triad_hue_positions`
+   - the current official Grade 2 sample explicitly states that three hues whose positions are evenly spaced on the PCCS hue circle form a triad;
+   - the existing source-confirmed PCCS structure fixes the hue circle at 24 positions;
+   - therefore the nonvisual Grade 2 drill may derive an 8-position interval (`24 / 3 = 8`) modulo 24;
+   - no image choice, display color, RGB/HEX, or unstated diagram geometry is needed.
 
 ## Current official-text scope inventory
 
@@ -56,6 +60,5 @@ Likewise, `pc2.scheme.natural_harmony_text` is not present on the current offici
 
 ## Exact next order
 
-1. Keep `pc2.foundation.official_sample_facts` as the current 12-question Grade 2 runtime frontier.
-2. Search current first-party material in official-text order, beginning with the Grade 2 color-harmony / scheme section because it directly extends the existing runtime skill.
-3. Select the next nonvisual micro-skill only when the rule needed for answer derivation is explicitly available from current first-party authority.
+1. Promote the independently verified `pc2.scheme.triad_hue_positions` 12-question batch record-identically after its authoring gate is green.
+2. Then continue current first-party material in official-text order and select another nonvisual micro-skill only when the full answer rule is explicit.

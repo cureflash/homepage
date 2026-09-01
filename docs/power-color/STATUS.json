@@ -21,23 +21,14 @@
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {"verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "active_skill": "pc2.foundation.official_sample_facts",
+    "active_skill": "pc2.scheme.triad_hue_positions",
     "active_skill_questions": {"generated": 12, "checked": 12, "verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0},
     "current_authority": [
       "https://www.aft.or.jp/pages/feature/exam2",
-      "https://www.aft.or.jp/images/text_of-2st-grade_mokuji.pdf"
+      "qualifications/color-certification/data/grade3-pccs-structure.json"
     ],
-    "source_reconciliation": {
-      "status": "complete",
-      "removed_unsupported_route": "pc2.image.color_image_rules",
-      "reconciled_batch": "qualifications/color-certification/data/grade2-authoring-official-sample-facts-0001-0012.json",
-      "runtime_record_identical": true,
-      "ci_workflow_run": 33530981815,
-      "ci_conclusion": "success",
-      "merge_commit": "985193bf1de561d10a2e714cb0750ceb1ea6bb44"
-    },
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Expand the Grade 2 concept/source inventory from current first-party text/scope. Select the next nonvisual micro-skill only when the needed rule is explicit; the official text table of contents establishes scope but is not itself enough to derive unstated rules."
+    "next": "Promote the verified pc2.scheme.triad_hue_positions 12-question batch record-identically to grade2-runtime.json, then run exact-equality, full-fingerprint and shared-engine gates."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -47,20 +38,20 @@
   },
   "current_run": {
     "checkpoints_completed": 2,
-    "generated": 0,
+    "generated": 12,
     "checked": 12,
     "verified": 12,
-    "revision_events": 4,
+    "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled conflicting Grade 2 source authority against the current Association sample page; removed unsupported color-image authoring, minimally revised four sample-name questions, and promoted 12 current-source records record-identically.",
-      "Added current official Grade 2 text-table-of-contents scope to the source inventory and synchronized STATUS without deriving unstated rules."
+      "Confirmed an explicit current first-party triad rule and combined it only with the existing source-confirmed 24-position PCCS structure.",
+      "Generated and independently QA-verified 12 text-only pc2.scheme.triad_hue_positions questions with balanced answer positions and a dedicated renderer/derivation gate."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 2 current first-party source inventory; generate only the next explicit nonvisual rule set with enough learning value."
+  "next": "Promote pc2.scheme.triad_hue_positions record-identically, then continue Grade 2 first-party source inventory in official-text order."
 }
