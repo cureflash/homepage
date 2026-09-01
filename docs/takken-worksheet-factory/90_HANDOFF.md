@@ -8,13 +8,13 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed existing verified-question reconciliation for `takken-concept-real-estate-registration-record`.
+Completed canonical knowledge extraction for `takken-concept-city-quasi-planning-area` from source unit `city-planning-area` and the 2026-04-01 Urban Planning Act baseline.
 
-- `takken-q-60-001` maps only to `takken-k-real-estate-registration-record-title-section` and `takken-k-real-estate-registration-record-rights-section`, because the question directly asks what is recorded in the title and rights sections.
-- `takken-q-60-002` maps only to `takken-k-real-estate-registration-record-section-a-ownership` and `takken-k-real-estate-registration-record-section-b-nonownership`, because the question directly tests the Section A/Section B distinction.
-- `takken-k-real-estate-registration-record-per-property` and `takken-k-real-estate-registration-record-title-rights-division` remain explicit Phase 4.3 deficits because no existing verified question directly measures them.
-
-Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed. No Phase 4.3 question generation, print generation, or app linkage was started.
+- Added 7 atomic knowledge items covering prefectural designation authority for city planning areas, the integrated-city designation requirement, cross-municipality designation, prefectural designation authority for quasi-city planning areas, the requirement that quasi-city planning areas lie outside city planning areas, the land-use/environment-risk designation criteria, and the required hearing of relevant municipalities and the prefectural city planning council.
+- The canonical source remains the Urban Planning Act at the `2026-04-01` cutoff.
+- Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed.
+- Existing question-to-knowledge mapping was intentionally not changed in this extraction checkpoint; direct-evidence reconciliation for `takken-q-61-001` / `takken-q-61-002` is the next exact step.
+- No Phase 4.3 question generation, print generation, or app linkage was started.
 
 ## Status after this run
 
@@ -24,16 +24,16 @@ Existing Phase 2/3 question text, choices, answers, explanations, source referen
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 79/113 completed concepts
-- Concepts with canonical knowledge items: 79
-- Canonical knowledge items: 403
+- Concepts with canonical knowledge items: 80
+- Canonical knowledge items: 410
 - Existing verified questions mapped: 90
-- Explicit unmapped knowledge gaps: 277
+- Explicit unmapped knowledge gaps: 284
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Start canonical knowledge extraction for `takken-concept-city-quasi-planning-area` from source unit `city-planning-area` at the 2026-04-01 baseline. After extraction, reconcile existing verified questions only where they directly measure those items. Keep Phase 4.3 blocked.
+Reconcile `takken-q-61-001` and `takken-q-61-002` only to the `takken-concept-city-quasi-planning-area` knowledge items they directly measure. Do not map the cross-municipality, quasi-area designation-authority, or predesignation-hearing items unless a verified question directly measures them. Then mark the concept checkpoint complete and advance to the next canonical concept. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
