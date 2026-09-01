@@ -6,23 +6,14 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime is 84 verified / pending 0:
-- 12 `pc2.foundation.official_sample_facts`
-- 12 `pc2.scheme.triad_hue_positions`
-- 12 `pc2.munsell.notation_components`
-- 12 `pc2.scheme.natural_complex_harmony`
-- 12 `pc2.scheme.dominant_color_tone`
-- 12 `pc2.scheme.tone_on_tone`
-- 12 `pc2.scheme.tone_in_tone`
+Grade 2 runtime is 84 verified / pending 0 through `pc2.scheme.tone_in_tone`. Runtime exact-equality/full-fingerprint/shared-engine gates cover all seven promoted runtime skills.
 
-`tone_in_tone` is promoted record-identically. Runtime exact-equality/full-fingerprint/shared-engine gates cover all seven promoted runtime skills.
+`pc2.scheme.tonal` is source-resolved and authoring-complete. Current official Grade 2 material explicitly includes tonal as an identification target. Plus Colors and UTO's room independently agree on the retained text-only intersection: the PCCS intermediate/muddy tones `sf`, `d`, `ltg`, `g` are the tonal set. No sample-image appearance or display value was used.
+
+The 12-question tonal batch has been independently re-derived: 12 checked / 12 verified / 0 pending, A/B/C/D = 3/3/3/3. Dedicated authoring/shared-renderer/full-fingerprint gates are present.
 
 Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
-## Next source-resolved work
-
-Current official Grade 2 material explicitly includes `トーナル配色` as an identification target. Do not derive its answer from the official sample image. Resolve only a text-only rule independently corroborated by auditable sources before authoring `pc2.scheme.tonal`.
-
 ## Exact next start point
 
-Cross-check `pc2.scheme.tonal` against current official Grade 2 scope plus explicit auditable nonvisual definitions. If their common intersection is unambiguous, generate a pending-first text-only batch, independently re-derive all answers, run full-fingerprint/shared-renderer gates, then promote only after CI. Do not introduce RGB/HEX, monitor color, image appearance or unstated geometry.
+Run Power Color CI for `pc2.scheme.tonal` and merge if green. Then promote those 12 verified records record-identically after the current 84 runtime records, producing Grade 2 runtime 96 verified / pending 0, and extend exact-equality/full-fingerprint/shared Power TOEIC engine gates.
