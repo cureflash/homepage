@@ -8,13 +8,17 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed existing verified-question reconciliation for `takken-concept-condominium-ownership`.
+Completed canonical knowledge extraction for `takken-concept-real-estate-registration-record` from source unit `real-estate-registration` at the 2026-04-01 baseline.
 
-- `takken-q-59-001` directly measures only `takken-k-condominium-ownership-separate-ownership-conditions`.
-- `takken-q-59-002` directly measures only `takken-k-condominium-ownership-common-part-all-owners`.
-- The other 7 condominium-ownership knowledge items remain explicit Phase 4.3 deficits because no existing verified question directly measures them.
+Added 6 verified canonical knowledge items covering:
+- one registration record per parcel of land or building as an electronic record;
+- division of the registration record into title and rights sections;
+- the title section as the place for registrations concerning description;
+- the rights section as the place for registrations concerning rights;
+- Section A of the rights section for ownership registrations;
+- Section B of the rights section for registrations of rights other than ownership, including mortgages.
 
-No existing Phase 2/3 question text, answer, explanation, source or validation status changed. No Phase 4.3 question generation, print generation, or app linkage was started.
+The statutory sources are the Real Property Registration Act and Real Property Registration Rules at the 2026-04-01 baseline. Existing Phase 2/3 question text, answers, explanations, sources and validation statuses were not changed. Existing verified-question reconciliation is intentionally left for the next Phase 4.2 checkpoint. No Phase 4.3 question generation, print generation, or app linkage was started.
 
 ## Status after this run
 
@@ -24,16 +28,16 @@ No existing Phase 2/3 question text, answer, explanation, source or validation s
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 78/113 completed concepts
-- Concepts with canonical knowledge items: 78
-- Canonical knowledge items: 397
+- Concepts with canonical knowledge items: 79
+- Canonical knowledge items: 403
 - Existing verified questions mapped: 88
-- Explicit unmapped knowledge gaps: 275
+- Explicit unmapped knowledge gaps: 281
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical knowledge items for `takken-concept-real-estate-registration-record` from source unit `real-estate-registration` at the 2026-04-01 baseline, then reconcile existing verified questions only where they directly measure those items. Keep Phase 4.3 blocked.
+Reconcile `takken-q-60-001` and `takken-q-60-002` only where they directly measure the 6 canonical knowledge items for `takken-concept-real-estate-registration-record`. Mark the concept complete only after that mapping checkpoint. Keep Phase 4.3 blocked.
 
 ## publication invariant
 

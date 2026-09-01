@@ -34,14 +34,13 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 Completed checkpoints through the last completed concept: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document; article35-vs-37; eight-restrictions-scope; cooling-off; earnest-money-limit; earnest-money-safeguards; damages-penalty; nonconformity-special-rule; unowned-property-sale; installment-cancellation; installment-ownership-retention; brokerage-fees; supervision-dispositions; declaration-arrival; mistake; fraud; duress; mental-reservation; fictitious-declaration; minor; adult-ward; agency; unauthorized-agency; apparent-agency; acquisitive-prescription; extinctive-prescription; property-transfer-opposability; co-ownership; mortgage; default-damages; contract-cancellation; simultaneous-performance; risk-allocation; sale-earnest; civil-nonconformity; lease-general; security-deposit; building-lease-opposability; ordinary-land-lease-term; land-lease-opposability; fixed-term-land-lease; building-lease-term; fixed-term-building-lease; heirs-order; statutory-inheritance-shares; inheritance-deliberation; inheritance-renunciation; will-effect; reserved-portion; condominium-ownership.
 
 Current checkpoint:
-- [x] Canonical extraction for `takken-concept-condominium-ownership` is complete from the 2026-04-01 baseline of the Condominium Ownership Act.
-- [x] `takken-q-59-001` maps only to `takken-k-condominium-ownership-separate-ownership-conditions`.
-- [x] `takken-q-59-002` maps only to `takken-k-condominium-ownership-common-part-all-owners`.
-- [x] The other 7 condominium-ownership knowledge items remain explicit Phase 4.3 deficits.
+- [x] Canonical extraction for `takken-concept-real-estate-registration-record` is complete from the 2026-04-01 baseline of the Real Property Registration Act and Real Property Registration Rules.
+- [ ] Reconcile `takken-q-60-001` and `takken-q-60-002` only to knowledge items they directly measure.
+- [ ] Any knowledge item without direct existing verified-question evidence remains an explicit Phase 4.3 deficit.
 
-Current Phase 4.2 totals: 78/113 completed concepts, 78 concepts with canonical knowledge items, 397 verified knowledge items, 88 existing verified questions mapped, 275 explicit question-coverage gaps.
+Current Phase 4.2 totals: 78/113 completed concepts, 79 concepts with canonical knowledge items, 403 verified knowledge items, 88 existing verified questions mapped, 281 explicit question-coverage gaps.
 
-Exact continuation: extract canonical knowledge items for `takken-concept-real-estate-registration-record` from source unit `real-estate-registration` at the 2026-04-01 baseline, then reconcile existing verified questions only where they directly measure those items. Keep Phase 4.3 blocked.
+Exact continuation: reconcile `takken-q-60-001` and `takken-q-60-002` against the 6 canonical knowledge items for `takken-concept-real-estate-registration-record`. Mark the concept complete only after that mapping checkpoint. Keep Phase 4.3 blocked.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
