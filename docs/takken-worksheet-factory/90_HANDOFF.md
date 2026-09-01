@@ -8,12 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed canonical knowledge extraction for `takken-concept-area-division` from source unit `area-division` and the 2026-04-01 Urban Planning Act baseline.
+Completed verified-question reconciliation for `takken-concept-area-division`.
 
-- Added four verified atomic knowledge items in `qualifications/takken/data/power-knowledge-items-area-division.js`.
-- The four items cover: the purpose/two-zone structure of area division; the already-built-up component of the urbanization promotion area; the approximately-10-year priority/planned urbanization component; and the urbanization-control-area suppression rule.
-- Each item is tied only to source facts `u62-f1` / `u62-f2` and the e-Gov Urban Planning Act source dated to the 2026-04-01 baseline.
-- Existing verified-question mapping for `takken-q-62-001` / `takken-q-62-002` was intentionally not performed in this checkpoint; direct-measurement reconciliation is the exact next task.
+- Mapped `takken-q-62-001` only to `takken-k-area-division-purpose-and-two-zones`, which it directly measures.
+- Mapped `takken-q-62-002` to the three directly measured city-area rules: existing built-up area, approximately 10-year priority/planned urbanization, and urbanization-control-area suppression.
+- All four canonical knowledge items for the concept now have direct existing verified-question evidence.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed.
 - No Phase 4.3 question generation, print generation, or app linkage was started.
 
@@ -24,17 +23,17 @@ Completed canonical knowledge extraction for `takken-concept-area-division` from
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 80/113 fully reconciled concepts
+- Phase 4.2: active — 81/113 fully reconciled concepts
 - Concepts with canonical knowledge items: 81
 - Canonical knowledge items: 414
-- Existing verified questions mapped: 92
-- Explicit unmapped knowledge gaps: 284
+- Existing verified questions mapped: 94
+- Explicit unmapped knowledge gaps: 280
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile `takken-q-62-001` and `takken-q-62-002` only to the `takken-concept-area-division` knowledge items they directly measure. Leave every unmeasured knowledge item as an explicit Phase 4.3 deficit, then mark `takken-concept-area-division` fully reconciled. Do not begin Phase 4.3.
+Begin canonical knowledge extraction for `takken-concept-use-districts` from source unit `use-districts` and the 2026-04-01 primary-source baseline. Do not begin Phase 4.3.
 
 ## publication invariant
 
