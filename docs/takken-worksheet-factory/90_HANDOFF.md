@@ -8,17 +8,13 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed canonical knowledge extraction for `takken-concept-real-estate-registration-record` from source unit `real-estate-registration` at the 2026-04-01 baseline.
+Completed existing verified-question reconciliation for `takken-concept-real-estate-registration-record`.
 
-Added 6 verified canonical knowledge items covering:
-- one registration record per parcel of land or building as an electronic record;
-- division of the registration record into title and rights sections;
-- the title section as the place for registrations concerning description;
-- the rights section as the place for registrations concerning rights;
-- Section A of the rights section for ownership registrations;
-- Section B of the rights section for registrations of rights other than ownership, including mortgages.
+- `takken-q-60-001` maps only to `takken-k-real-estate-registration-record-title-section` and `takken-k-real-estate-registration-record-rights-section`, because the question directly asks what is recorded in the title and rights sections.
+- `takken-q-60-002` maps only to `takken-k-real-estate-registration-record-section-a-ownership` and `takken-k-real-estate-registration-record-section-b-nonownership`, because the question directly tests the Section A/Section B distinction.
+- `takken-k-real-estate-registration-record-per-property` and `takken-k-real-estate-registration-record-title-rights-division` remain explicit Phase 4.3 deficits because no existing verified question directly measures them.
 
-The statutory sources are the Real Property Registration Act and Real Property Registration Rules at the 2026-04-01 baseline. Existing Phase 2/3 question text, answers, explanations, sources and validation statuses were not changed. Existing verified-question reconciliation is intentionally left for the next Phase 4.2 checkpoint. No Phase 4.3 question generation, print generation, or app linkage was started.
+Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed. No Phase 4.3 question generation, print generation, or app linkage was started.
 
 ## Status after this run
 
@@ -27,17 +23,17 @@ The statutory sources are the Real Property Registration Act and Real Property R
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 78/113 completed concepts
+- Phase 4.2: active — 79/113 completed concepts
 - Concepts with canonical knowledge items: 79
 - Canonical knowledge items: 403
-- Existing verified questions mapped: 88
-- Explicit unmapped knowledge gaps: 281
+- Existing verified questions mapped: 90
+- Explicit unmapped knowledge gaps: 277
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile `takken-q-60-001` and `takken-q-60-002` only where they directly measure the 6 canonical knowledge items for `takken-concept-real-estate-registration-record`. Mark the concept complete only after that mapping checkpoint. Keep Phase 4.3 blocked.
+Start canonical knowledge extraction for `takken-concept-city-quasi-planning-area` from source unit `city-planning-area` at the 2026-04-01 baseline. After extraction, reconcile existing verified questions only where they directly measure those items. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
