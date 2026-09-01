@@ -8,18 +8,15 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed canonical extraction for `takken-concept-will-effect` from source unit `will-reserved-portion`.
+Completed existing-question reconciliation for `takken-concept-will-effect`.
 
-The concept is intentionally limited to the legal effect timing of a will. The same source unit's reserved-portion material belongs to the separate `takken-concept-reserved-portion` and was not mixed into this concept.
+`takken-q-58-001` asks when a will takes effect and its verified correct answer is the testator's death. It therefore directly tests only `takken-k-will-effect-death` and is mapped to that knowledge item.
 
-Two verified Civil Code Article 985 knowledge items were added:
+The second Article 985 knowledge item, `takken-k-will-effect-suspensive-condition-after-death`, is not directly tested by any existing Phase 2/3 question and remains an explicit Phase 4.3 deficit.
 
-- Article 985(1): a will takes effect at the time of the testator's death
-- Article 985(2): when a will has a suspensive condition and that condition is fulfilled after the testator's death, the will takes effect when the condition is fulfilled
+`takken-q-58-002` concerns which heirs have a reserved portion and was deliberately not mapped to will-effect. It remains evidence for the separate `takken-concept-reserved-portion` checkpoint.
 
-`takken-k-will-effect-death` directly carries source fact `u58-f1`. The suspensive-condition rule is a canonical expansion from Article 985(2) and therefore has no Phase 2 source fact ID.
-
-No Phase 2/3 question content was changed. Existing verified-question reconciliation has not yet been completed in this checkpoint, so neither knowledge item has been treated as covered by an existing question yet. No Phase 4.3 generation, print generation, or app linkage was started.
+No Phase 2/3 question content or validation status changed. No Phase 4.3 generation, print generation, or app linkage was started.
 
 ## Status after this run
 
@@ -28,16 +25,16 @@ No Phase 2/3 question content was changed. Existing verified-question reconcilia
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 75/113 completed concepts
+- Phase 4.2: active — 76/113 completed concepts
 - Canonical knowledge items: 384
-- Existing verified questions mapped: 84
-- Explicit unmapped knowledge gaps: 266 before will-effect reconciliation
+- Existing verified questions mapped: 85
+- Explicit unmapped knowledge gaps: 265
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile `takken-q-58-001` and any other genuinely direct existing verified-question evidence against the two `takken-concept-will-effect` knowledge items. `takken-q-58-002` is reserved-portion evidence and must not be mapped to will-effect. After reconciliation, complete `takken-concept-will-effect` and advance to `takken-concept-reserved-portion`. Keep Phase 4.3 blocked.
+Begin canonical knowledge-item extraction for `takken-concept-reserved-portion` from source unit `will-reserved-portion`. Reconcile `takken-q-58-002` only against knowledge items that it directly tests. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
