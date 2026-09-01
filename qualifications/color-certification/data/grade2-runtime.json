@@ -1,101 +1,3486 @@
 {
-  "format":"power-color-grade2-runtime-v1",
-  "grade":2,
-  "productionApproved":false,
-  "notice":"色彩検定2級の現行一次資料から、画像色を読み取らず独立QAできる非visual問題を収録。",
-  "skills":[
-    {"id":"pc2.foundation.official_sample_facts","label":"2級公式出題例：非visual基礎事実","categoryId":"pc2.foundation"},
-    {"id":"pc2.scheme.triad_hue_positions","label":"PCCS：トライアド色相位置","categoryId":"pc2.scheme"},
-    {"id":"pc2.munsell.notation_components","label":"マンセル記号：H V/Cの構成","categoryId":"pc2.munsell"},
-    {"id":"pc2.scheme.natural_complex_harmony","label":"ナチュラル／コンプレックスハーモニー","categoryId":"pc2.scheme"},
-    {"id":"pc2.scheme.dominant_color_tone","label":"ドミナントカラー／ドミナントトーン","categoryId":"pc2.scheme"},
-    {"id":"pc2.scheme.tone_on_tone","label":"トーンオントーン配色","categoryId":"pc2.scheme"},
-    {"id":"pc2.scheme.tone_in_tone","label":"トーンイントーン配色","categoryId":"pc2.scheme"}
+  "format": "power-color-grade2-runtime-v1",
+  "grade": 2,
+  "productionApproved": false,
+  "notice": "色彩検定2級の現行一次資料から、画像色を読み取らず独立QAできる非visual問題を収録。",
+  "skills": [
+    {
+      "id": "pc2.foundation.official_sample_facts",
+      "label": "2級公式出題例：非visual基礎事実",
+      "categoryId": "pc2.foundation"
+    },
+    {
+      "id": "pc2.scheme.triad_hue_positions",
+      "label": "PCCS：トライアド色相位置",
+      "categoryId": "pc2.scheme"
+    },
+    {
+      "id": "pc2.munsell.notation_components",
+      "label": "マンセル記号：H V/Cの構成",
+      "categoryId": "pc2.munsell"
+    },
+    {
+      "id": "pc2.scheme.natural_complex_harmony",
+      "label": "ナチュラル／コンプレックスハーモニー",
+      "categoryId": "pc2.scheme"
+    },
+    {
+      "id": "pc2.scheme.dominant_color_tone",
+      "label": "ドミナントカラー／ドミナントトーン",
+      "categoryId": "pc2.scheme"
+    },
+    {
+      "id": "pc2.scheme.tone_on_tone",
+      "label": "トーンオントーン配色",
+      "categoryId": "pc2.scheme"
+    },
+    {
+      "id": "pc2.scheme.tone_in_tone",
+      "label": "トーンイントーン配色",
+      "categoryId": "pc2.scheme"
+    },
+    {
+      "id": "pc2.scheme.tonal",
+      "label": "トーナル配色",
+      "categoryId": "pc2.scheme"
+    },
+    {
+      "id": "pc2.scheme.camaieu_faux_camaieu",
+      "label": "カマイユ／フォカマイユ配色",
+      "categoryId": "pc2.scheme"
+    }
   ],
-  "questions":[
-    {"id":"pc2-official-sample-facts-0001","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"色彩検定2級の公式出題例で、ヘクサードについて正しいとされている記述はどれですか。","sentence":"色彩検定2級の公式出題例で、ヘクサードについて正しいとされている記述はどれですか。","choices":["無彩色を使用してもよい","無彩色を必ず使用する","無彩色は使用できない","有彩色は使用できない"],"proposedAnswer":"無彩色を使用してもよい","correctIndex":0,"explanation":"現行公式2級出題例の問題1Eでは『ヘクサードには無彩色を使用してもよい』が正答です。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-read current official sample item E and published answer E=3 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0002","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"現行公式2級出題例に照らしたとき、無彩色の使用が許される配色として示されているものはどれですか。","sentence":"現行公式2級出題例に照らしたとき、無彩色の使用が許される配色として示されているものはどれですか。","choices":["トライアド","ヘクサード","スプリットコンプリメンタリー","トーンイントーン"],"proposedAnswer":"ヘクサード","correctIndex":1,"explanation":"現行公式出題例ではヘクサードに無彩色を使用してもよいとされています。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-derived from current official sample item E and answer E=3 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0003","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"現行公式2級出題例では、ダイアード2組を組み合わせることで何をつくれるとされていますか。","sentence":"現行公式2級出題例では、ダイアード2組を組み合わせることで何をつくれるとされていますか。","choices":["トライアド","ペンタード","テトラード","ヘクサード"],"proposedAnswer":"テトラード","correctIndex":2,"explanation":"現行公式2級出題例の問題1Fでは、ダイアード2組からテトラードをつくれる記述が正答です。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-read current official sample item F and published answer F=1 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0004","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"2組のダイアードを組み合わせた配色の名称として、現行公式2級出題例で正答になっているものはどれですか。","sentence":"2組のダイアードを組み合わせた配色の名称として、現行公式2級出題例で正答になっているものはどれですか。","choices":["ヘクサード","ペンタード","トライアド","テトラード"],"proposedAnswer":"テトラード","correctIndex":3,"explanation":"現行公式出題例ではダイアード2組を組み合わせるとテトラードをつくれるとされています。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-derived from current official sample item F and answer F=1 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0005","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"現行公式2級出題例の問題2で、CMYの三原色に対応する混色は何ですか。","sentence":"現行公式2級出題例の問題2で、CMYの三原色に対応する混色は何ですか。","choices":["減法混色","加法混色","中間混色","回転混色"],"proposedAnswer":"減法混色","correctIndex":0,"explanation":"現行公式2級出題例の問題2ではAの解答が『減法』、Dの解答が『CMY』です。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"matched current published answers A=減法 and D=CMY in the same official sample sentence before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0006","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"減法混色の三原色を、現行公式2級出題例と同じアルファベット表記で選んでください。","sentence":"減法混色の三原色を、現行公式2級出題例と同じアルファベット表記で選んでください。","choices":["RGB","CMY","HSV","PCCS"],"proposedAnswer":"CMY","correctIndex":1,"explanation":"現行公式2級出題例では減法混色の三原色をCMYとしています。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-read current published problem2 answers A=減法 and D=CMY before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0007","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"現行公式2級出題例では、PCCS色相環で3色の位置関係が均等な配色を何としていますか。","sentence":"現行公式2級出題例では、PCCS色相環で3色の位置関係が均等な配色を何としていますか。","choices":["ダイアード","テトラード","トライアド","ヘクサード"],"proposedAnswer":"トライアド","correctIndex":2,"explanation":"現行公式2級出題例の問題2では、色相環で3色の位置関係が均等な配色の解答が『トライアド』です。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-read current problem2 sentence and published answer B=トライアド before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0008","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"PCCS色相環上で均等な位置関係にある3色の組合せとして、現行公式2級出題例が示す名称はどれですか。","sentence":"PCCS色相環上で均等な位置関係にある3色の組合せとして、現行公式2級出題例が示す名称はどれですか。","choices":["スプリットコンプリメンタリー","ダイアード","ペンタード","トライアド"],"proposedAnswer":"トライアド","correctIndex":3,"explanation":"現行公式出題例の問題2では、この3色の関係をトライアドとしています。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-derived from current problem2 wording and published answer B=トライアド before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0009","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"現行公式2級出題例の問題1Aで、判別対象として明示されている配色技法はどれですか。","sentence":"現行公式2級出題例の問題1Aで、判別対象として明示されている配色技法はどれですか。","choices":["トーンイントーン配色","ドミナントカラー配色","カマイユ配色","フォカマイユ配色"],"proposedAnswer":"トーンイントーン配色","correctIndex":0,"explanation":"現行公式2級出題例の問題1Aには『トーンイントーン配色』と明示されています。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"verified current official sample question1 A heading directly states トーンイントーン配色 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0010","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"現行公式2級出題例の問題1Bで、判別対象として明示されている配色技法はどれですか。","sentence":"現行公式2級出題例の問題1Bで、判別対象として明示されている配色技法はどれですか。","choices":["テトラード","スプリットコンプリメンタリー","トーナル配色","ヘクサード"],"proposedAnswer":"スプリットコンプリメンタリー","correctIndex":1,"explanation":"現行公式2級出題例の問題1Bには『スプリットコンプリメンタリー』と明示されています。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"verified current official sample question1 B heading directly states スプリットコンプリメンタリー before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0011","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"現行公式2級出題例の問題1Cで、判別対象として明示されている配色技法はどれですか。","sentence":"現行公式2級出題例の問題1Cで、判別対象として明示されている配色技法はどれですか。","choices":["ダイアード","トライアド","ペンタード","ヘクサード"],"proposedAnswer":"ペンタード","correctIndex":2,"explanation":"現行公式2級出題例の問題1Cには『ペンタード』と明示されています。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"verified current official sample question1 C heading directly states ペンタード before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-official-sample-facts-0012","version":2,"grade":2,"taxonomyPath":"grade2/foundation/official_sample_facts","skillId":"pc2.foundation.official_sample_facts","categoryId":"pc2.foundation","questionType":"text_choice","prompt":"現行公式2級出題例の問題1Dで、判別対象として明示されている配色技法はどれですか。","sentence":"現行公式2級出題例の問題1Dで、判別対象として明示されている配色技法はどれですか。","choices":["トライアド","ダイアード","ペンタード","トーナル配色"],"proposedAnswer":"トーナル配色","correctIndex":3,"explanation":"現行公式2級出題例の問題1Dには『トーナル配色』と明示されています。","sourceRefs":["aft_grade2_current_sample_page_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"verified current official sample question1 D heading directly states トーナル配色 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0001","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号1を1色目とするトライアドの残り2色として正しい組合せはどれですか。","sentence":"PCCS24色相環で、色相番号1を1色目とするトライアドの残り2色として正しい組合せはどれですか。","choices":["9と17","8と16","10と18","9と18"],"proposedAnswer":"9と17","correctIndex":0,"explanation":"トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、1から8ずつ進めた9と17が残りの色相番号です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 1+8 and +16 modulo 24 as 9 and 17, then compared with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0002","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号2を1色目とするトライアドの残り2色として正しい組合せはどれですか。","sentence":"PCCS24色相環で、色相番号2を1色目とするトライアドの残り2色として正しい組合せはどれですか。","choices":["11と19","10と18","9と17","10と19"],"proposedAnswer":"10と18","correctIndex":1,"explanation":"トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、2から8ずつ進めた10と18が残りの色相番号です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 2+8 and +16 modulo 24 as 10 and 18, then compared with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0003","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号3を1色目とするトライアドの残り2色として正しい組合せはどれですか。","sentence":"PCCS24色相環で、色相番号3を1色目とするトライアドの残り2色として正しい組合せはどれですか。","choices":["12と20","10と18","11と19","11と20"],"proposedAnswer":"11と19","correctIndex":2,"explanation":"トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、3から8ずつ進めた11と19が残りの色相番号です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 3+8 and +16 modulo 24 as 11 and 19, then compared with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0004","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号4を1色目とするトライアドの残り2色として正しい組合せはどれですか。","sentence":"PCCS24色相環で、色相番号4を1色目とするトライアドの残り2色として正しい組合せはどれですか。","choices":["11と19","13と21","12と21","12と20"],"proposedAnswer":"12と20","correctIndex":3,"explanation":"トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、4から8ずつ進めた12と20が残りの色相番号です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 4+8 and +16 modulo 24 as 12 and 20, then compared with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0005","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号5を1色目とするトライアドの残り2色として正しい組合せはどれですか。","sentence":"PCCS24色相環で、色相番号5を1色目とするトライアドの残り2色として正しい組合せはどれですか。","choices":["13と21","12と20","14と22","13と22"],"proposedAnswer":"13と21","correctIndex":0,"explanation":"トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、5から8ずつ進めた13と21が残りの色相番号です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 5+8 and +16 modulo 24 as 13 and 21, then compared with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0006","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号6を1色目とするトライアドの残り2色として正しい組合せはどれですか。","sentence":"PCCS24色相環で、色相番号6を1色目とするトライアドの残り2色として正しい組合せはどれですか。","choices":["15と23","14と22","13と21","14と23"],"proposedAnswer":"14と22","correctIndex":1,"explanation":"トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、6から8ずつ進めた14と22が残りの色相番号です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 6+8 and +16 modulo 24 as 14 and 22, then compared with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0007","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号7を1色目とするトライアドの残り2色として正しい組合せはどれですか。","sentence":"PCCS24色相環で、色相番号7を1色目とするトライアドの残り2色として正しい組合せはどれですか。","choices":["16と24","14と22","15と23","15と24"],"proposedAnswer":"15と23","correctIndex":2,"explanation":"トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、7から8ずつ進めた15と23が残りの色相番号です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 7+8 and +16 modulo 24 as 15 and 23, then compared with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0008","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号8を1色目とするトライアドの残り2色として正しい組合せはどれですか。","sentence":"PCCS24色相環で、色相番号8を1色目とするトライアドの残り2色として正しい組合せはどれですか。","choices":["15と23","17と1","16と1","16と24"],"proposedAnswer":"16と24","correctIndex":3,"explanation":"トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、8から8ずつ進めた16と24が残りの色相番号です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 8+8 and +16 modulo 24 as 16 and 24, then compared with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0009","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号1と9を含むトライアドを完成させる3色目の色相番号はどれですか。","sentence":"PCCS24色相環で、色相番号1と9を含むトライアドを完成させる3色目の色相番号はどれですか。","choices":["17","16","18","24"],"proposedAnswer":"17","correctIndex":0,"explanation":"トライアドでは3色が色相環上で均等になるため、24色相では8間隔です。1、9に続く3色目は17です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently applied the 8-position interval implied by three equal divisions of the source-confirmed 24-position circle and recomputed the missing hue as 17 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0010","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号4と12を含むトライアドを完成させる3色目の色相番号はどれですか。","sentence":"PCCS24色相環で、色相番号4と12を含むトライアドを完成させる3色目の色相番号はどれですか。","choices":["19","20","21","16"],"proposedAnswer":"20","correctIndex":1,"explanation":"トライアドでは3色が色相環上で均等になるため、24色相では8間隔です。4、12に続く3色目は20です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently applied the 8-position interval implied by three equal divisions of the source-confirmed 24-position circle and recomputed the missing hue as 20 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0011","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号7と15を含むトライアドを完成させる3色目の色相番号はどれですか。","sentence":"PCCS24色相環で、色相番号7と15を含むトライアドを完成させる3色目の色相番号はどれですか。","choices":["22","24","23","1"],"proposedAnswer":"23","correctIndex":2,"explanation":"トライアドでは3色が色相環上で均等になるため、24色相では8間隔です。7、15に続く3色目は23です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently applied the 8-position interval implied by three equal divisions of the source-confirmed 24-position circle and recomputed the missing hue as 23 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-triad-hue-positions-0012","version":1,"grade":2,"taxonomyPath":"grade2/scheme/triad_hue_positions","skillId":"pc2.scheme.triad_hue_positions","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"PCCS24色相環で、色相番号8と16を含むトライアドを完成させる3色目の色相番号はどれですか。","sentence":"PCCS24色相環で、色相番号8と16を含むトライアドを完成させる3色目の色相番号はどれですか。","choices":["23","1","17","24"],"proposedAnswer":"24","correctIndex":3,"explanation":"トライアドでは3色が色相環上で均等になるため、24色相では8間隔です。8、16に続く3色目は24です。","sourceRefs":["aft_grade2_current_sample_page_2026","jcri_2022_report"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently applied the 8-position interval implied by three equal divisions of the source-confirmed 24-position circle and recomputed the missing hue as 24 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0001","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号「2.5R 6/10」の明度（V）はどれですか。","sentence":"マンセル記号「2.5R 6/10」の明度（V）はどれですか。","choices":["6","2.5","10","R"],"proposedAnswer":"6","correctIndex":0,"explanation":"JCRIのMunsell Separationが示すH V/C形式では、空白後・スラッシュ前の数値が明度Vです。したがって2.5R 6/10の明度は6です。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_digital_color_manual_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"parsed the JCRI-published example 2.5R 6/10 as H=2.5R, V=6, C=10 using the explicit H V/C rule before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0002","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号「5R 6/10」の彩度（C）はどれですか。","sentence":"マンセル記号「5R 6/10」の彩度（C）はどれですか。","choices":["6","10","5","R"],"proposedAnswer":"10","correctIndex":1,"explanation":"H V/C形式ではスラッシュ後の数値が彩度Cです。5R 6/10の彩度は10です。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_digital_color_manual_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"parsed the JCRI-published example 5R 6/10 as H=5R, V=6, C=10 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0003","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号「7.5R 6/12」の色相（H）はどれですか。","sentence":"マンセル記号「7.5R 6/12」の色相（H）はどれですか。","choices":["6","12","7.5R","R 6"],"proposedAnswer":"7.5R","correctIndex":2,"explanation":"H V/C形式では先頭の数値と色相英字を合わせた部分が色相Hです。7.5R 6/12のHは7.5Rです。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_digital_color_manual_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"parsed the JCRI-published example 7.5R 6/12 as H=7.5R, V=6, C=12 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0004","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号「10R 6/14」をH・V・Cに分けたものとして正しい組合せはどれですか。","sentence":"マンセル記号「10R 6/14」をH・V・Cに分けたものとして正しい組合せはどれですか。","choices":["H=10, V=R6, C=14","H=10R, V=14, C=6","H=R, V=10, C=6/14","H=10R, V=6, C=14"],"proposedAnswer":"H=10R, V=6, C=14","correctIndex":3,"explanation":"JCRIのH V/C分解規則に従うと、10RがH、6がV、14がCです。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_digital_color_manual_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently split the JCRI-published example 10R 6/14 at the H V/C boundaries before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0005","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号「5R 6/12」で、スラッシュの直後に置かれている属性はどれですか。","sentence":"マンセル記号「5R 6/12」で、スラッシュの直後に置かれている属性はどれですか。","choices":["彩度（C）","明度（V）","色相（H）","色相英字"],"proposedAnswer":"彩度（C）","correctIndex":0,"explanation":"マンセル記号はH V/Cの順で表されるため、スラッシュ後は彩度Cです。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_digital_color_manual_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"applied the explicit H V/C field order to the JCRI-published 5R 6/12 example before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0006","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号のH V/C形式で、Vが表す属性はどれですか。","sentence":"マンセル記号のH V/C形式で、Vが表す属性はどれですか。","choices":["彩度","明度","色相","色相英字"],"proposedAnswer":"明度","correctIndex":1,"explanation":"JCRIは色の三属性をH（色相）・V（明度）・C（彩度）として示しています。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_hvc_training_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently mapped H/V/C to 色相/明度/彩度 from current JCRI HVC material before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0007","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号のH V/C形式で、Cが表す属性はどれですか。","sentence":"マンセル記号のH V/C形式で、Cが表す属性はどれですか。","choices":["明度","色相","彩度","色相数値"],"proposedAnswer":"彩度","correctIndex":2,"explanation":"JCRIのHVC表記ではCは彩度です。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_hvc_training_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently mapped H/V/C to 色相/明度/彩度 from current JCRI HVC material before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0008","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号のH V/C形式で、Hが表す属性はどれですか。","sentence":"マンセル記号のH V/C形式で、Hが表す属性はどれですか。","choices":["彩度","明度","スラッシュ","色相"],"proposedAnswer":"色相","correctIndex":3,"explanation":"JCRIのHVC表記ではHは色相です。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_hvc_training_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently mapped H/V/C to 色相/明度/彩度 from current JCRI HVC material before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0009","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"JCRIのマンセル値分解仕様で「色相数値」と「色相英字」に分けられるのは、H V/Cのどの部分ですか。","sentence":"JCRIのマンセル値分解仕様で「色相数値」と「色相英字」に分けられるのは、H V/Cのどの部分ですか。","choices":["H","V","C","V/C"],"proposedAnswer":"H","correctIndex":0,"explanation":"JCRIのMunsell Separationは、H V/Cを色相数値、色相英字、明度数値、スラッシュ、彩度数値へ分解します。色相数値と色相英字はHを構成します。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-read JCRI's five output fields and grouped hue numeric plus hue letters back into H before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0010","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号「2.5R 6/10」で、色相英字として分解される部分はどれですか。","sentence":"マンセル記号「2.5R 6/10」で、色相英字として分解される部分はどれですか。","choices":["2.5","R","6","10"],"proposedAnswer":"R","correctIndex":1,"explanation":"JCRIの分解仕様ではHを色相数値と色相英字に分けます。2.5Rでは2.5が色相数値、Rが色相英字です。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_digital_color_manual_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"split the JCRI-published H component 2.5R into hue numeric 2.5 and hue letters R before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0011","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号「7.5R 6/12」で、色相数値として分解される部分はどれですか。","sentence":"マンセル記号「7.5R 6/12」で、色相数値として分解される部分はどれですか。","choices":["R","6","7.5","12"],"proposedAnswer":"7.5","correctIndex":2,"explanation":"JCRIの分解仕様では7.5Rの7.5が色相数値、Rが色相英字です。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_digital_color_manual_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"split the JCRI-published H component 7.5R into hue numeric 7.5 and hue letters R before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-munsell-notation-components-0012","version":1,"grade":2,"taxonomyPath":"grade2/munsell/notation_components","skillId":"pc2.munsell.notation_components","categoryId":"pc2.munsell","questionType":"text_choice","prompt":"マンセル記号「5R 6/10」で、明度数値と彩度数値の組合せとして正しいものはどれですか。","sentence":"マンセル記号「5R 6/10」で、明度数値と彩度数値の組合せとして正しいものはどれですか。","choices":["V=5, C=R","V=10, C=6","V=5R, C=10","V=6, C=10"],"proposedAnswer":"V=6, C=10","correctIndex":3,"explanation":"H V/C形式では5RがH、6がV、10がCです。","sourceRefs":["aft_grade2_toc_2026","jcri_munsell_separation_2026","jcri_digital_color_manual_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"parsed the JCRI-published 5R 6/10 example into H=5R, V=6, C=10 before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0001","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"黄に近い色を明るく、青紫に近い色を暗くする明度関係に従う配色はどれですか。","sentence":"黄に近い色を明るく、青紫に近い色を暗くする明度関係に従う配色はどれですか。","choices":["ナチュラルハーモニー","コンプレックスハーモニー","トライアド","トーナル配色"],"proposedAnswer":"ナチュラルハーモニー","correctIndex":0,"explanation":"ナチュラルハーモニーは、黄に近い側を明るく、青紫に近い側を暗くする自然な明度関係に従います。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-read the two independent specialist-industry rules and matched yellow-near=lighter, blue-violet-near=darker to natural harmony before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0002","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"黄に近い色を暗く、青紫に近い色を明るくする配色はどれですか。","sentence":"黄に近い色を暗く、青紫に近い色を明るくする配色はどれですか。","choices":["ナチュラルハーモニー","コンプレックスハーモニー","トーンイントーン配色","ダイアード"],"proposedAnswer":"コンプレックスハーモニー","correctIndex":1,"explanation":"コンプレックスハーモニーは、ナチュラルハーモニーの明度関係を逆にし、黄に近い側を暗く、青紫に近い側を明るくします。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently matched yellow-near=darker, blue-violet-near=lighter to the sourced complex-harmony rule before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0003","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ナチュラルハーモニーの明度関係として正しいものはどれですか。","sentence":"ナチュラルハーモニーの明度関係として正しいものはどれですか。","choices":["黄に近い側を暗くし、青紫に近い側も暗くする","黄に近い側と青紫に近い側を同じ明度にする","黄に近い側を明るくし、青紫に近い側を暗くする","黄に近い側を暗くし、青紫に近い側を明るくする"],"proposedAnswer":"黄に近い側を明るくし、青紫に近い側を暗くする","correctIndex":2,"explanation":"ナチュラルハーモニーは自然の明度関係に従い、黄に近い側を明るく、青紫に近い側を暗くします。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-derived the natural-harmony lightness direction from both checked sources before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0004","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"コンプレックスハーモニーの明度関係として正しいものはどれですか。","sentence":"コンプレックスハーモニーの明度関係として正しいものはどれですか。","choices":["黄に近い側と青紫に近い側を同じ明度にする","黄に近い側を明るくし、青紫に近い側も明るくする","黄に近い側を明るくし、青紫に近い側を暗くする","黄に近い側を暗くし、青紫に近い側を明るくする"],"proposedAnswer":"黄に近い側を暗くし、青紫に近い側を明るくする","correctIndex":3,"explanation":"コンプレックスハーモニーは自然な明度関係を逆転させ、黄に近い側を暗く、青紫に近い側を明るくします。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-derived the complex-harmony reversal from both checked sources before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0005","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ナチュラルハーモニーをつくるとき、2色のうち黄に近い側の明度は相対的にどうしますか。","sentence":"ナチュラルハーモニーをつくるとき、2色のうち黄に近い側の明度は相対的にどうしますか。","choices":["高くする","低くする","必ず同じにする","明度は条件に含まれない"],"proposedAnswer":"高くする","correctIndex":0,"explanation":"ナチュラルハーモニーでは、黄に近い色ほど相対的に明るくします。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently applied the sourced natural-harmony rule to the yellow-near side and obtained higher lightness before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0006","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ナチュラルハーモニーをつくるとき、2色のうち青紫に近い側の明度は相対的にどうしますか。","sentence":"ナチュラルハーモニーをつくるとき、2色のうち青紫に近い側の明度は相対的にどうしますか。","choices":["高くする","低くする","必ず同じにする","彩度だけで決める"],"proposedAnswer":"低くする","correctIndex":1,"explanation":"ナチュラルハーモニーでは、青紫に近い色ほど相対的に暗くします。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently applied the sourced natural-harmony rule to the blue-violet-near side and obtained lower lightness before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0007","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"コンプレックスハーモニーをつくるとき、黄に近い側の明度は相対的にどうしますか。","sentence":"コンプレックスハーモニーをつくるとき、黄に近い側の明度は相対的にどうしますか。","choices":["高くする","必ず同じにする","低くする","色相だけで決める"],"proposedAnswer":"低くする","correctIndex":2,"explanation":"コンプレックスハーモニーでは自然な関係を逆転させるため、黄に近い側を相対的に暗くします。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently applied the sourced complex-harmony reversal to the yellow-near side and obtained lower lightness before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0008","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"コンプレックスハーモニーをつくるとき、青紫に近い側の明度は相対的にどうしますか。","sentence":"コンプレックスハーモニーをつくるとき、青紫に近い側の明度は相対的にどうしますか。","choices":["低くする","必ず同じにする","色相だけで決める","高くする"],"proposedAnswer":"高くする","correctIndex":3,"explanation":"コンプレックスハーモニーでは自然な関係を逆転させるため、青紫に近い側を相対的に明るくします。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently applied the sourced complex-harmony reversal to the blue-violet-near side and obtained higher lightness before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0009","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"自然界で見られる、光の当たる部分が黄み寄りで明るく、影の部分が青み寄りで暗く見える関係に沿う配色名はどれですか。","sentence":"自然界で見られる、光の当たる部分が黄み寄りで明るく、影の部分が青み寄りで暗く見える関係に沿う配色名はどれですか。","choices":["ナチュラルハーモニー","コンプレックスハーモニー","ペンタード","カマイユ配色"],"proposedAnswer":"ナチュラルハーモニー","correctIndex":0,"explanation":"この自然な黄み側が明るく青み側が暗い関係に沿うのがナチュラルハーモニーです。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently matched the described natural light/shade relationship to the sourced natural-harmony definition before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0010","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ナチュラルハーモニーの明度関係を意図的に逆転させた配色はどれですか。","sentence":"ナチュラルハーモニーの明度関係を意図的に逆転させた配色はどれですか。","choices":["トーンオントーン配色","コンプレックスハーモニー","トライアド","ドミナントカラー配色"],"proposedAnswer":"コンプレックスハーモニー","correctIndex":1,"explanation":"コンプレックスハーモニーは、ナチュラルハーモニーの黄側を明るく・青紫側を暗くする関係を逆転させます。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently verified that both checked sources describe complex harmony as the reverse of the natural-harmony lightness relation before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0011","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"次のうち、自然な明度関係に逆らう配色条件はどれですか。","sentence":"次のうち、自然な明度関係に逆らう配色条件はどれですか。","choices":["黄に近い側を明るくし、青紫に近い側を暗くする","黄に近い側と青紫に近い側を同じ明度に固定する","黄に近い側を暗くし、青紫に近い側を明るくする","黄に近い側だけ彩度を上げる"],"proposedAnswer":"黄に近い側を暗くし、青紫に近い側を明るくする","correctIndex":2,"explanation":"自然な明度関係の逆は、黄に近い側を暗くし、青紫に近い側を明るくする条件です。これはコンプレックスハーモニーの基本関係です。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently inverted the sourced natural-harmony lightness relation and obtained yellow-near=darker, blue-violet-near=lighter before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-natural-complex-harmony-0012","version":1,"grade":2,"taxonomyPath":"grade2/scheme/natural_complex_harmony","skillId":"pc2.scheme.natural_complex_harmony","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"次のうち、自然な明度関係に従う配色条件はどれですか。","sentence":"次のうち、自然な明度関係に従う配色条件はどれですか。","choices":["黄に近い側を暗くし、青紫に近い側を明るくする","両方を必ず無彩色にする","両方を必ず同じ明度にする","黄に近い側を明るくし、青紫に近い側を暗くする"],"proposedAnswer":"黄に近い側を明るくし、青紫に近い側を暗くする","correctIndex":3,"explanation":"自然な明度関係に従う条件は、黄に近い側を明るく、青紫に近い側を暗くすることです。これはナチュラルハーモニーの基本関係です。","sourceRefs":["aft_grade2_toc_2026","rockpaint_natural_harmony_2026","daiwahouse_complex_harmony_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently reapplied the shared natural-harmony rule from both checked sources before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0001","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"3色以上の多色配色で、色相に統一感を持たせ、トーンで変化をつける配色はどれですか。","sentence":"3色以上の多色配色で、色相に統一感を持たせ、トーンで変化をつける配色はどれですか。","choices":["ドミナントカラー配色","ドミナントトーン配色","トライアド","トーナル配色"],"proposedAnswer":"ドミナントカラー配色","correctIndex":0,"explanation":"ドミナントカラー配色は、色相を共通要素として統一し、トーンで変化をつける多色配色です。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently matched hue-unified/tone-varied/3+ colors to dominant color before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0002","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"3色以上の多色配色で、トーンに統一感を持たせ、色相で変化をつける配色はどれですか。","sentence":"3色以上の多色配色で、トーンに統一感を持たせ、色相で変化をつける配色はどれですか。","choices":["ドミナントカラー配色","ドミナントトーン配色","トーンオントーン配色","カマイユ配色"],"proposedAnswer":"ドミナントトーン配色","correctIndex":1,"explanation":"ドミナントトーン配色は、トーンを共通要素として統一し、色相で変化をつける多色配色です。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently matched tone-unified/hue-varied/3+ colors to dominant tone before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0003","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ドミナントカラー配色で統一の軸になる属性はどれですか。","sentence":"ドミナントカラー配色で統一の軸になる属性はどれですか。","choices":["明度だけ","彩度だけ","色相","トーン"],"proposedAnswer":"色相","correctIndex":2,"explanation":"ドミナントカラー配色は色相を共通要素としてまとめます。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently identified hue as the shared dimension in dominant color before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0004","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ドミナントトーン配色で統一の軸になる属性はどれですか。","sentence":"ドミナントトーン配色で統一の軸になる属性はどれですか。","choices":["色相番号だけ","明度だけ","彩度だけ","トーン"],"proposedAnswer":"トーン","correctIndex":3,"explanation":"ドミナントトーン配色はトーンを共通要素としてまとめます。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently identified tone as the shared dimension in dominant tone before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0005","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ドミナントカラー配色で主に変化をつける属性はどれですか。","sentence":"ドミナントカラー配色で主に変化をつける属性はどれですか。","choices":["トーン","色相","色数を2色に固定すること","無彩色化"],"proposedAnswer":"トーン","correctIndex":0,"explanation":"色相を統一する一方、トーンで変化をつけるのがドミナントカラー配色です。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently derived tone as the varying dimension when hue is dominant before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0006","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ドミナントトーン配色で主に変化をつける属性はどれですか。","sentence":"ドミナントトーン配色で主に変化をつける属性はどれですか。","choices":["トーン","色相","明度を固定すること","彩度を0にすること"],"proposedAnswer":"色相","correctIndex":1,"explanation":"トーンを統一する一方、色相で変化をつけるのがドミナントトーン配色です。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently derived hue as the varying dimension when tone is dominant before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0007","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"複数のトーンを使いながら、色相を共通させて全体をまとめる考え方に最も対応するものはどれですか。","sentence":"複数のトーンを使いながら、色相を共通させて全体をまとめる考え方に最も対応するものはどれですか。","choices":["ドミナントトーン配色","トーナル配色","ドミナントカラー配色","トライアド"],"proposedAnswer":"ドミナントカラー配色","correctIndex":2,"explanation":"色相を共通させ、トーン側に変化を持たせるためドミナントカラー配色です。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently matched shared hue plus varied tones to dominant color before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0008","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"複数の色相を使いながら、トーンを共通させて全体をまとめる考え方に最も対応するものはどれですか。","sentence":"複数の色相を使いながら、トーンを共通させて全体をまとめる考え方に最も対応するものはどれですか。","choices":["ドミナントカラー配色","トーンオントーン配色","カマイユ配色","ドミナントトーン配色"],"proposedAnswer":"ドミナントトーン配色","correctIndex":3,"explanation":"トーンを共通させ、色相側に変化を持たせるためドミナントトーン配色です。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently matched shared tone plus varied hues to dominant tone before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0009","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ドミナントカラー配色の色数について、独立クロスチェックした規則に合うものはどれですか。","sentence":"ドミナントカラー配色の色数について、独立クロスチェックした規則に合うものはどれですか。","choices":["3色以上の多色配色","必ず2色","必ず4色","色数は1色だけ"],"proposedAnswer":"3色以上の多色配色","correctIndex":0,"explanation":"クロスチェックした資料はいずれもドミナントカラー配色を3色以上の多色配色として扱っています。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently checked the shared 3-or-more-color condition before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0010","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ドミナントトーン配色の色数について、独立クロスチェックした規則に合うものはどれですか。","sentence":"ドミナントトーン配色の色数について、独立クロスチェックした規則に合うものはどれですか。","choices":["必ず2色","3色以上の多色配色","必ず5色","1色のみ"],"proposedAnswer":"3色以上の多色配色","correctIndex":1,"explanation":"クロスチェックした資料はいずれもドミナントトーン配色を3色以上の多色配色として扱っています。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently checked the shared 3-or-more-color condition before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0011","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"ドミナントカラー配色とドミナントトーン配色の区別として正しいものはどれですか。","sentence":"ドミナントカラー配色とドミナントトーン配色の区別として正しいものはどれですか。","choices":["前者はトーン、後者は明度を統一する","前者は彩度、後者は色数を統一する","前者は色相、後者はトーンを統一する","前者も後者も必ず同じ色相にする"],"proposedAnswer":"前者は色相、後者はトーンを統一する","correctIndex":2,"explanation":"ドミナントカラーは色相、ドミナントトーンはトーンが統一の軸です。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently compared the shared dimensions of both schemes before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-dominant-color-tone-0012","version":1,"grade":2,"taxonomyPath":"grade2/scheme/dominant_color_tone","skillId":"pc2.scheme.dominant_color_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"3色以上の配色で、色相をまとめる方式とトーンをまとめる方式の組合せとして正しいものはどれですか。","sentence":"3色以上の配色で、色相をまとめる方式とトーンをまとめる方式の組合せとして正しいものはどれですか。","choices":["色相＝ドミナントトーン、トーン＝ドミナントカラー","色相＝トライアド、トーン＝テトラード","色相＝トーナル、トーン＝カマイユ","色相＝ドミナントカラー、トーン＝ドミナントトーン"],"proposedAnswer":"色相＝ドミナントカラー、トーン＝ドミナントトーン","correctIndex":3,"explanation":"色相を統一するのがドミナントカラー、トーンを統一するのがドミナントトーンです。","sourceRefs":["aft_grade2_toc_2026","onca_dominant_schemes_2022","color_exam_secondary_dominant_2026"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently mapped hue dominance to dominant color and tone dominance to dominant tone before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0001","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンオントーン配色について、独立クロスチェックした共通規則に合うものはどれですか。","sentence":"トーンオントーン配色について、独立クロスチェックした共通規則に合うものはどれですか。","choices":["同一〜類似色相でまとめ、明度差を比較的大きくする","色相を自由にし、明度差を必ず0にする","補色色相だけを使い、明度をそろえる","無彩色だけで構成する"],"proposedAnswer":"同一〜類似色相でまとめ、明度差を比較的大きくする","correctIndex":0,"explanation":"確認した2資料は、トーンオントーンを同一〜類似色相でまとめ、明度差を比較的大きくする配色として一致しています。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently intersected the two source rules and recovered same/similar hue plus comparatively large lightness difference before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0002","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"同一または類似の色相でまとめ、明度差を比較的大きくする配色技法はどれですか。","sentence":"同一または類似の色相でまとめ、明度差を比較的大きくする配色技法はどれですか。","choices":["トーナル配色","トーンオントーン配色","トライアド","コンプレックスハーモニー"],"proposedAnswer":"トーンオントーン配色","correctIndex":1,"explanation":"この2条件は、独立クロスチェックで一致したトーンオントーン配色の非visual規則です。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"matched the explicit shared conditions to tone-on-tone before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0003","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンオントーン配色で統一側に置く属性として、確認した2資料が共通して示すものはどれですか。","sentence":"トーンオントーン配色で統一側に置く属性として、確認した2資料が共通して示すものはどれですか。","choices":["彩度だけ","色数","色相","無彩色比率"],"proposedAnswer":"色相","correctIndex":2,"explanation":"トーンオントーンでは、同一または類似の色相範囲でまとめます。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently identified hue as the common organizing attribute in both checked definitions before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0004","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンオントーン配色で比較的大きく取る差として、確認した2資料が一致しているものはどれですか。","sentence":"トーンオントーン配色で比較的大きく取る差として、確認した2資料が一致しているものはどれですか。","choices":["色数差","色相差","彩度差だけ","明度差"],"proposedAnswer":"明度差","correctIndex":3,"explanation":"両資料ともトーンオントーンでは明度差を大きく取ることを明示しています。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently found large lightness difference in both checked definitions before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0005","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンオントーン配色の条件として適切な組合せはどれですか。","sentence":"トーンオントーン配色の条件として適切な組合せはどれですか。","choices":["色相は同一〜類似、明度差は比較的大きい","色相は必ず補色、明度差は0","色相は自由、明度は必ず同一","色相は必ず無彩色、彩度差だけを大きくする"],"proposedAnswer":"色相は同一〜類似、明度差は比較的大きい","correctIndex":0,"explanation":"採用した共通規則は、同一〜類似色相と比較的大きい明度差の組合せです。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-derived both accepted conditions from the two sources before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0006","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンオントーン配色の色相関係について、今回採用した共通規則はどれですか。","sentence":"トーンオントーン配色の色相関係について、今回採用した共通規則はどれですか。","choices":["補色色相のみ","同一または類似色相","色相は必ず無関係","無彩色のみ"],"proposedAnswer":"同一または類似色相","correctIndex":1,"explanation":"ONCAは同一色相または類似色相、Plus Colorsも同一色相を基本に隣接・類似まで許容するとしています。共通範囲は同一〜類似色相です。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"intersected the explicit hue ranges in both definitions and obtained same/similar hue before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0007","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンオントーン配色で変化を明確にする主要な軸として、今回のクロスチェックで確定したものはどれですか。","sentence":"トーンオントーン配色で変化を明確にする主要な軸として、今回のクロスチェックで確定したものはどれですか。","choices":["使用色数","色名の長さ","明度","無彩色の割合"],"proposedAnswer":"明度","correctIndex":2,"explanation":"今回採用した規則では、同一〜類似色相でまとめた上で明度差を比較的大きくします。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"identified lightness as the explicit contrast axis common to both definitions before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0008","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンオントーン配色で色相をどう扱うかについて、今回の根拠に合う説明はどれですか。","sentence":"トーンオントーン配色で色相をどう扱うかについて、今回の根拠に合う説明はどれですか。","choices":["必ず12段階離す","自由な色相差にする","色相を使わない","同一〜類似の範囲でまとめる"],"proposedAnswer":"同一〜類似の範囲でまとめる","correctIndex":3,"explanation":"両資料が共通して示すのは、色相を同一〜類似の範囲でまとめることです。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-read the hue relation in both definitions and obtained same/similar range before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0009","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"次のうち、今回確定したトーンオントーン配色の共通規則を満たす説明はどれですか。","sentence":"次のうち、今回確定したトーンオントーン配色の共通規則を満たす説明はどれですか。","choices":["近い色相群を使い、明るさの差をはっきりつける","離れた色相だけを使い、明るさをそろえる","同じトーンだけを使い、明るさの差をなくす","無彩色だけを使う"],"proposedAnswer":"近い色相群を使い、明るさの差をはっきりつける","correctIndex":0,"explanation":"同一〜類似色相でまとめ、明度差を比較的大きくするという共通規則に対応します。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"mapped near hue family to same/similar hue and clear brightness difference to large lightness difference before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0010","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"確認した2資料のトーンオントーン配色の説明に共通して含まれる特徴はどれですか。","sentence":"確認した2資料のトーンオントーン配色の説明に共通して含まれる特徴はどれですか。","choices":["明度を必ず同一にする","明度差を比較的大きくする","色相を必ず補色にする","無彩色だけを使う"],"proposedAnswer":"明度差を比較的大きくする","correctIndex":1,"explanation":"ONCAもPlus Colorsも、明度差を大きく取る点を明示しています。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"compared the two source descriptions and identified large lightness difference as shared before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0011","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンオントーン配色で、明度差を比較的大きく取る前提となる色相関係はどれですか。","sentence":"トーンオントーン配色で、明度差を比較的大きく取る前提となる色相関係はどれですか。","choices":["補色色相のみ","対照色相のみ","同一〜類似色相","無彩色のみ"],"proposedAnswer":"同一〜類似色相","correctIndex":2,"explanation":"今回採用した非visual規則では、同一〜類似色相でまとめたうえで明度差を比較的大きくします。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"combined the independently confirmed hue-range condition with the lightness condition before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-on-tone-0012","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_on_tone","skillId":"pc2.scheme.tone_on_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"今回の根拠からトーンオントーン配色について確実に言える組合せはどれですか。","sentence":"今回の根拠からトーンオントーン配色について確実に言える組合せはどれですか。","choices":["色相は自由・明度差は0","補色色相・同一明度","無彩色のみ・明度自由","同一〜類似色相・比較的大きい明度差"],"proposedAnswer":"同一〜類似色相・比較的大きい明度差","correctIndex":3,"explanation":"2資料の共通部分として確定できるのは、同一〜類似色相と比較的大きい明度差です。","sourceRefs":["aft_grade2_toc_2026","onca_commonality_color_schemes_2022","pluscolors_tone_on_tone_2024"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently intersected both checked definitions one final time and recovered the same two conditions before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0001","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンイントーン配色について、独立クロスチェックした共通規則に合うものはどれですか。","sentence":"トーンイントーン配色について、独立クロスチェックした共通規則に合うものはどれですか。","choices":["同一トーンでまとめ、色相で変化をつける","同一色相でまとめ、明度差を大きくする","補色色相だけを使う","無彩色だけで構成する"],"proposedAnswer":"同一トーンでまとめ、色相で変化をつける","correctIndex":0,"explanation":"確認した資料の共通部分は、同一トーンを統一軸にして色相で変化をつけることです。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently intersected the explicit text definitions and recovered same tone plus hue variation before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0002","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"同じトーンを保ちながら色相を変える配色技法はどれですか。","sentence":"同じトーンを保ちながら色相を変える配色技法はどれですか。","choices":["トーンオントーン配色","トーンイントーン配色","ナチュラルハーモニー","トライアド"],"proposedAnswer":"トーンイントーン配色","correctIndex":1,"explanation":"同一トーンを保ち、色相側で変化をつけるのが今回確定したトーンイントーンの共通規則です。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"matched same tone plus hue variation to tone-in-tone before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0003","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンイントーン配色で統一する属性として、今回の共通規則が示すものはどれですか。","sentence":"トーンイントーン配色で統一する属性として、今回の共通規則が示すものはどれですか。","choices":["色数","色相","トーン","無彩色比率"],"proposedAnswer":"トーン","correctIndex":2,"explanation":"トーンイントーンではトーンを同じにして全体をまとめます。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently identified tone as the common unifying dimension before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0004","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンイントーン配色で変化をつける属性として、今回の共通規則が示すものはどれですか。","sentence":"トーンイントーン配色で変化をつける属性として、今回の共通規則が示すものはどれですか。","choices":["使用色数だけ","明度を必ず0にすること","トーン","色相"],"proposedAnswer":"色相","correctIndex":3,"explanation":"同一トーンでまとめた上で、色相を変化させます。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently identified hue as the varying dimension in the checked definitions before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0005","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンイントーン配色の条件として、今回確定した組合せはどれですか。","sentence":"トーンイントーン配色の条件として、今回確定した組合せはどれですか。","choices":["トーンは同一、色相は変化させる","色相は同一、明度差を大きくする","色相もトーンも必ず同一にする","無彩色だけを使う"],"proposedAnswer":"トーンは同一、色相は変化させる","correctIndex":0,"explanation":"今回採用した共通規則は、同一トーンと色相変化の組合せです。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-derived both accepted conditions before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0006","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンイントーン配色について、今回の根拠から確実に言えるトーンの扱いはどれですか。","sentence":"トーンイントーン配色について、今回の根拠から確実に言えるトーンの扱いはどれですか。","choices":["必ず対照トーンにする","同一トーンでまとめる","トーンを使わない","必ず無彩色トーンにする"],"proposedAnswer":"同一トーンでまとめる","correctIndex":1,"explanation":"ONCAとFOLKは同一トーンを明示し、Plus Colorsも同一トーンを基本としているため、この部分は独立に一致します。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"foundation","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"intersected the tone conditions and retained only the explicitly shared same-tone rule before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0007","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"同一トーンのまま異なる色相を組み合わせる考え方に最も対応するものはどれですか。","sentence":"同一トーンのまま異なる色相を組み合わせる考え方に最も対応するものはどれですか。","choices":["トーンオントーン配色","コンプレックスハーモニー","トーンイントーン配色","ダイアード"],"proposedAnswer":"トーンイントーン配色","correctIndex":2,"explanation":"同一トーンを共通にして色相を変えるため、トーンイントーン配色です。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"matched same tone with different hues to the checked tone-in-tone definition before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0008","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンイントーン配色とトーンオントーン配色の違いとして、今回確定した規則に合うものはどれですか。","sentence":"トーンイントーン配色とトーンオントーン配色の違いとして、今回確定した規則に合うものはどれですか。","choices":["両方とも必ず同一色相である","両方とも必ず同一トーンである","前者は無彩色だけ、後者は有彩色だけである","前者はトーンを統一して色相を変え、後者は色相をまとめて明度差を取る"],"proposedAnswer":"前者はトーンを統一して色相を変え、後者は色相をまとめて明度差を取る","correctIndex":3,"explanation":"トーンイントーンは同一トーン＋色相変化、既に確定済みのトーンオントーンは同一〜類似色相＋比較的大きい明度差です。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"independently contrasted the current tone-in-tone rule with the already source-resolved tone-on-tone rule before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0009","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンの持つイメージを共通にしつつ、色相側に変化をつける配色として今回の規則に合うものはどれですか。","sentence":"トーンの持つイメージを共通にしつつ、色相側に変化をつける配色として今回の規則に合うものはどれですか。","choices":["トーンイントーン配色","ナチュラルハーモニー","トーンオントーン配色","テトラード"],"proposedAnswer":"トーンイントーン配色","correctIndex":0,"explanation":"同一トーンを共通軸にして色相で変化をつける配色です。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"mapped common tone image plus hue variation to tone-in-tone before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0010","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"今回のクロスチェックで、トーンイントーン配色の共通性を作る中心属性として確定したものはどれですか。","sentence":"今回のクロスチェックで、トーンイントーン配色の共通性を作る中心属性として確定したものはどれですか。","choices":["色相","トーン","色数","補色関係"],"proposedAnswer":"トーン","correctIndex":1,"explanation":"トーンを同一にすることが共通性の中心です。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"identified tone as the shared organizing attribute in all checked definitions before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0011","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"トーンイントーン配色で、同一トーンを維持したまま変えてよい属性として今回確定したものはどれですか。","sentence":"トーンイントーン配色で、同一トーンを維持したまま変えてよい属性として今回確定したものはどれですか。","choices":["無彩色比率だけ","明度を必ず0にすること","色相","トーンそのもの"],"proposedAnswer":"色相","correctIndex":2,"explanation":"同一トーンを維持し、色相側で変化をつけます。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"re-derived hue as the varying attribute while tone remains fixed before comparing with proposedAnswer","checkedOn":"2026-09-01"}},
-    {"id":"pc2-tone-in-tone-0012","version":1,"grade":2,"taxonomyPath":"grade2/scheme/tone_in_tone","skillId":"pc2.scheme.tone_in_tone","categoryId":"pc2.scheme","questionType":"text_choice","prompt":"今回の根拠からトーンイントーン配色について確実に言える組合せはどれですか。","sentence":"今回の根拠からトーンイントーン配色について確実に言える組合せはどれですか。","choices":["色相を固定・明度差を大きくする","補色色相のみ・トーン自由","無彩色のみ・色相なし","同一トーン・色相で変化"],"proposedAnswer":"同一トーン・色相で変化","correctIndex":3,"explanation":"独立資料の共通部分として確定できるのは、同一トーンでまとめ、色相を変化させることです。","sourceRefs":["aft_grade2_current_sample_page_2026","onca_commonality_color_schemes_2022","pluscolors_tone_in_tone_2024","folk_tone_in_tone"],"difficulty":"standard","validationStatus":"verified","qa":{"generatedAs":"pending_validation","independentRecheck":"intersected all checked definitions one final time and recovered same tone plus hue variation before comparing with proposedAnswer","checkedOn":"2026-09-01"}}
+  "questions": [
+    {
+      "id": "pc2-official-sample-facts-0001",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "色彩検定2級の公式出題例で、ヘクサードについて正しいとされている記述はどれですか。",
+      "sentence": "色彩検定2級の公式出題例で、ヘクサードについて正しいとされている記述はどれですか。",
+      "choices": [
+        "無彩色を使用してもよい",
+        "無彩色を必ず使用する",
+        "無彩色は使用できない",
+        "有彩色は使用できない"
+      ],
+      "proposedAnswer": "無彩色を使用してもよい",
+      "correctIndex": 0,
+      "explanation": "現行公式2級出題例の問題1Eでは『ヘクサードには無彩色を使用してもよい』が正答です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read current official sample item E and published answer E=3 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0002",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "現行公式2級出題例に照らしたとき、無彩色の使用が許される配色として示されているものはどれですか。",
+      "sentence": "現行公式2級出題例に照らしたとき、無彩色の使用が許される配色として示されているものはどれですか。",
+      "choices": [
+        "トライアド",
+        "ヘクサード",
+        "スプリットコンプリメンタリー",
+        "トーンイントーン"
+      ],
+      "proposedAnswer": "ヘクサード",
+      "correctIndex": 1,
+      "explanation": "現行公式出題例ではヘクサードに無彩色を使用してもよいとされています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-derived from current official sample item E and answer E=3 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0003",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "現行公式2級出題例では、ダイアード2組を組み合わせることで何をつくれるとされていますか。",
+      "sentence": "現行公式2級出題例では、ダイアード2組を組み合わせることで何をつくれるとされていますか。",
+      "choices": [
+        "トライアド",
+        "ペンタード",
+        "テトラード",
+        "ヘクサード"
+      ],
+      "proposedAnswer": "テトラード",
+      "correctIndex": 2,
+      "explanation": "現行公式2級出題例の問題1Fでは、ダイアード2組からテトラードをつくれる記述が正答です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read current official sample item F and published answer F=1 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0004",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "2組のダイアードを組み合わせた配色の名称として、現行公式2級出題例で正答になっているものはどれですか。",
+      "sentence": "2組のダイアードを組み合わせた配色の名称として、現行公式2級出題例で正答になっているものはどれですか。",
+      "choices": [
+        "ヘクサード",
+        "ペンタード",
+        "トライアド",
+        "テトラード"
+      ],
+      "proposedAnswer": "テトラード",
+      "correctIndex": 3,
+      "explanation": "現行公式出題例ではダイアード2組を組み合わせるとテトラードをつくれるとされています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-derived from current official sample item F and answer F=1 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0005",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "現行公式2級出題例の問題2で、CMYの三原色に対応する混色は何ですか。",
+      "sentence": "現行公式2級出題例の問題2で、CMYの三原色に対応する混色は何ですか。",
+      "choices": [
+        "減法混色",
+        "加法混色",
+        "中間混色",
+        "回転混色"
+      ],
+      "proposedAnswer": "減法混色",
+      "correctIndex": 0,
+      "explanation": "現行公式2級出題例の問題2ではAの解答が『減法』、Dの解答が『CMY』です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "matched current published answers A=減法 and D=CMY in the same official sample sentence before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0006",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "減法混色の三原色を、現行公式2級出題例と同じアルファベット表記で選んでください。",
+      "sentence": "減法混色の三原色を、現行公式2級出題例と同じアルファベット表記で選んでください。",
+      "choices": [
+        "RGB",
+        "CMY",
+        "HSV",
+        "PCCS"
+      ],
+      "proposedAnswer": "CMY",
+      "correctIndex": 1,
+      "explanation": "現行公式2級出題例では減法混色の三原色をCMYとしています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read current published problem2 answers A=減法 and D=CMY before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0007",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "現行公式2級出題例では、PCCS色相環で3色の位置関係が均等な配色を何としていますか。",
+      "sentence": "現行公式2級出題例では、PCCS色相環で3色の位置関係が均等な配色を何としていますか。",
+      "choices": [
+        "ダイアード",
+        "テトラード",
+        "トライアド",
+        "ヘクサード"
+      ],
+      "proposedAnswer": "トライアド",
+      "correctIndex": 2,
+      "explanation": "現行公式2級出題例の問題2では、色相環で3色の位置関係が均等な配色の解答が『トライアド』です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read current problem2 sentence and published answer B=トライアド before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0008",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "PCCS色相環上で均等な位置関係にある3色の組合せとして、現行公式2級出題例が示す名称はどれですか。",
+      "sentence": "PCCS色相環上で均等な位置関係にある3色の組合せとして、現行公式2級出題例が示す名称はどれですか。",
+      "choices": [
+        "スプリットコンプリメンタリー",
+        "ダイアード",
+        "ペンタード",
+        "トライアド"
+      ],
+      "proposedAnswer": "トライアド",
+      "correctIndex": 3,
+      "explanation": "現行公式出題例の問題2では、この3色の関係をトライアドとしています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-derived from current problem2 wording and published answer B=トライアド before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0009",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "現行公式2級出題例の問題1Aで、判別対象として明示されている配色技法はどれですか。",
+      "sentence": "現行公式2級出題例の問題1Aで、判別対象として明示されている配色技法はどれですか。",
+      "choices": [
+        "トーンイントーン配色",
+        "ドミナントカラー配色",
+        "カマイユ配色",
+        "フォカマイユ配色"
+      ],
+      "proposedAnswer": "トーンイントーン配色",
+      "correctIndex": 0,
+      "explanation": "現行公式2級出題例の問題1Aには『トーンイントーン配色』と明示されています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "verified current official sample question1 A heading directly states トーンイントーン配色 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0010",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "現行公式2級出題例の問題1Bで、判別対象として明示されている配色技法はどれですか。",
+      "sentence": "現行公式2級出題例の問題1Bで、判別対象として明示されている配色技法はどれですか。",
+      "choices": [
+        "テトラード",
+        "スプリットコンプリメンタリー",
+        "トーナル配色",
+        "ヘクサード"
+      ],
+      "proposedAnswer": "スプリットコンプリメンタリー",
+      "correctIndex": 1,
+      "explanation": "現行公式2級出題例の問題1Bには『スプリットコンプリメンタリー』と明示されています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "verified current official sample question1 B heading directly states スプリットコンプリメンタリー before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0011",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "現行公式2級出題例の問題1Cで、判別対象として明示されている配色技法はどれですか。",
+      "sentence": "現行公式2級出題例の問題1Cで、判別対象として明示されている配色技法はどれですか。",
+      "choices": [
+        "ダイアード",
+        "トライアド",
+        "ペンタード",
+        "ヘクサード"
+      ],
+      "proposedAnswer": "ペンタード",
+      "correctIndex": 2,
+      "explanation": "現行公式2級出題例の問題1Cには『ペンタード』と明示されています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "verified current official sample question1 C heading directly states ペンタード before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-official-sample-facts-0012",
+      "version": 2,
+      "grade": 2,
+      "taxonomyPath": "grade2/foundation/official_sample_facts",
+      "skillId": "pc2.foundation.official_sample_facts",
+      "categoryId": "pc2.foundation",
+      "questionType": "text_choice",
+      "prompt": "現行公式2級出題例の問題1Dで、判別対象として明示されている配色技法はどれですか。",
+      "sentence": "現行公式2級出題例の問題1Dで、判別対象として明示されている配色技法はどれですか。",
+      "choices": [
+        "トライアド",
+        "ダイアード",
+        "ペンタード",
+        "トーナル配色"
+      ],
+      "proposedAnswer": "トーナル配色",
+      "correctIndex": 3,
+      "explanation": "現行公式2級出題例の問題1Dには『トーナル配色』と明示されています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "verified current official sample question1 D heading directly states トーナル配色 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号1を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "sentence": "PCCS24色相環で、色相番号1を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "choices": [
+        "9と17",
+        "8と16",
+        "10と18",
+        "9と18"
+      ],
+      "proposedAnswer": "9と17",
+      "correctIndex": 0,
+      "explanation": "トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、1から8ずつ進めた9と17が残りの色相番号です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 1+8 and +16 modulo 24 as 9 and 17, then compared with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号2を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "sentence": "PCCS24色相環で、色相番号2を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "choices": [
+        "11と19",
+        "10と18",
+        "9と17",
+        "10と19"
+      ],
+      "proposedAnswer": "10と18",
+      "correctIndex": 1,
+      "explanation": "トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、2から8ずつ進めた10と18が残りの色相番号です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 2+8 and +16 modulo 24 as 10 and 18, then compared with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号3を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "sentence": "PCCS24色相環で、色相番号3を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "choices": [
+        "12と20",
+        "10と18",
+        "11と19",
+        "11と20"
+      ],
+      "proposedAnswer": "11と19",
+      "correctIndex": 2,
+      "explanation": "トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、3から8ずつ進めた11と19が残りの色相番号です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 3+8 and +16 modulo 24 as 11 and 19, then compared with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号4を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "sentence": "PCCS24色相環で、色相番号4を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "choices": [
+        "11と19",
+        "13と21",
+        "12と21",
+        "12と20"
+      ],
+      "proposedAnswer": "12と20",
+      "correctIndex": 3,
+      "explanation": "トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、4から8ずつ進めた12と20が残りの色相番号です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 4+8 and +16 modulo 24 as 12 and 20, then compared with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号5を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "sentence": "PCCS24色相環で、色相番号5を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "choices": [
+        "13と21",
+        "12と20",
+        "14と22",
+        "13と22"
+      ],
+      "proposedAnswer": "13と21",
+      "correctIndex": 0,
+      "explanation": "トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、5から8ずつ進めた13と21が残りの色相番号です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 5+8 and +16 modulo 24 as 13 and 21, then compared with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号6を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "sentence": "PCCS24色相環で、色相番号6を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "choices": [
+        "15と23",
+        "14と22",
+        "13と21",
+        "14と23"
+      ],
+      "proposedAnswer": "14と22",
+      "correctIndex": 1,
+      "explanation": "トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、6から8ずつ進めた14と22が残りの色相番号です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 6+8 and +16 modulo 24 as 14 and 22, then compared with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号7を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "sentence": "PCCS24色相環で、色相番号7を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "choices": [
+        "16と24",
+        "14と22",
+        "15と23",
+        "15と24"
+      ],
+      "proposedAnswer": "15と23",
+      "correctIndex": 2,
+      "explanation": "トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、7から8ずつ進めた15と23が残りの色相番号です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 7+8 and +16 modulo 24 as 15 and 23, then compared with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号8を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "sentence": "PCCS24色相環で、色相番号8を1色目とするトライアドの残り2色として正しい組合せはどれですか。",
+      "choices": [
+        "15と23",
+        "17と1",
+        "16と1",
+        "16と24"
+      ],
+      "proposedAnswer": "16と24",
+      "correctIndex": 3,
+      "explanation": "トライアドは3色を色相環上で均等に配置します。24色相を3等分すると8なので、8から8ずつ進めた16と24が残りの色相番号です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently divided the source-confirmed 24-position PCCS hue circle by 3, recomputed 8+8 and +16 modulo 24 as 16 and 24, then compared with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号1と9を含むトライアドを完成させる3色目の色相番号はどれですか。",
+      "sentence": "PCCS24色相環で、色相番号1と9を含むトライアドを完成させる3色目の色相番号はどれですか。",
+      "choices": [
+        "17",
+        "16",
+        "18",
+        "24"
+      ],
+      "proposedAnswer": "17",
+      "correctIndex": 0,
+      "explanation": "トライアドでは3色が色相環上で均等になるため、24色相では8間隔です。1、9に続く3色目は17です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the 8-position interval implied by three equal divisions of the source-confirmed 24-position circle and recomputed the missing hue as 17 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号4と12を含むトライアドを完成させる3色目の色相番号はどれですか。",
+      "sentence": "PCCS24色相環で、色相番号4と12を含むトライアドを完成させる3色目の色相番号はどれですか。",
+      "choices": [
+        "19",
+        "20",
+        "21",
+        "16"
+      ],
+      "proposedAnswer": "20",
+      "correctIndex": 1,
+      "explanation": "トライアドでは3色が色相環上で均等になるため、24色相では8間隔です。4、12に続く3色目は20です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the 8-position interval implied by three equal divisions of the source-confirmed 24-position circle and recomputed the missing hue as 20 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号7と15を含むトライアドを完成させる3色目の色相番号はどれですか。",
+      "sentence": "PCCS24色相環で、色相番号7と15を含むトライアドを完成させる3色目の色相番号はどれですか。",
+      "choices": [
+        "22",
+        "24",
+        "23",
+        "1"
+      ],
+      "proposedAnswer": "23",
+      "correctIndex": 2,
+      "explanation": "トライアドでは3色が色相環上で均等になるため、24色相では8間隔です。7、15に続く3色目は23です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the 8-position interval implied by three equal divisions of the source-confirmed 24-position circle and recomputed the missing hue as 23 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-triad-hue-positions-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/triad_hue_positions",
+      "skillId": "pc2.scheme.triad_hue_positions",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "PCCS24色相環で、色相番号8と16を含むトライアドを完成させる3色目の色相番号はどれですか。",
+      "sentence": "PCCS24色相環で、色相番号8と16を含むトライアドを完成させる3色目の色相番号はどれですか。",
+      "choices": [
+        "23",
+        "1",
+        "17",
+        "24"
+      ],
+      "proposedAnswer": "24",
+      "correctIndex": 3,
+      "explanation": "トライアドでは3色が色相環上で均等になるため、24色相では8間隔です。8、16に続く3色目は24です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "jcri_2022_report"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the 8-position interval implied by three equal divisions of the source-confirmed 24-position circle and recomputed the missing hue as 24 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号「2.5R 6/10」の明度（V）はどれですか。",
+      "sentence": "マンセル記号「2.5R 6/10」の明度（V）はどれですか。",
+      "choices": [
+        "6",
+        "2.5",
+        "10",
+        "R"
+      ],
+      "proposedAnswer": "6",
+      "correctIndex": 0,
+      "explanation": "JCRIのMunsell Separationが示すH V/C形式では、空白後・スラッシュ前の数値が明度Vです。したがって2.5R 6/10の明度は6です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_digital_color_manual_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "parsed the JCRI-published example 2.5R 6/10 as H=2.5R, V=6, C=10 using the explicit H V/C rule before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号「5R 6/10」の彩度（C）はどれですか。",
+      "sentence": "マンセル記号「5R 6/10」の彩度（C）はどれですか。",
+      "choices": [
+        "6",
+        "10",
+        "5",
+        "R"
+      ],
+      "proposedAnswer": "10",
+      "correctIndex": 1,
+      "explanation": "H V/C形式ではスラッシュ後の数値が彩度Cです。5R 6/10の彩度は10です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_digital_color_manual_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "parsed the JCRI-published example 5R 6/10 as H=5R, V=6, C=10 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号「7.5R 6/12」の色相（H）はどれですか。",
+      "sentence": "マンセル記号「7.5R 6/12」の色相（H）はどれですか。",
+      "choices": [
+        "6",
+        "12",
+        "7.5R",
+        "R 6"
+      ],
+      "proposedAnswer": "7.5R",
+      "correctIndex": 2,
+      "explanation": "H V/C形式では先頭の数値と色相英字を合わせた部分が色相Hです。7.5R 6/12のHは7.5Rです。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_digital_color_manual_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "parsed the JCRI-published example 7.5R 6/12 as H=7.5R, V=6, C=12 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号「10R 6/14」をH・V・Cに分けたものとして正しい組合せはどれですか。",
+      "sentence": "マンセル記号「10R 6/14」をH・V・Cに分けたものとして正しい組合せはどれですか。",
+      "choices": [
+        "H=10, V=R6, C=14",
+        "H=10R, V=14, C=6",
+        "H=R, V=10, C=6/14",
+        "H=10R, V=6, C=14"
+      ],
+      "proposedAnswer": "H=10R, V=6, C=14",
+      "correctIndex": 3,
+      "explanation": "JCRIのH V/C分解規則に従うと、10RがH、6がV、14がCです。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_digital_color_manual_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently split the JCRI-published example 10R 6/14 at the H V/C boundaries before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号「5R 6/12」で、スラッシュの直後に置かれている属性はどれですか。",
+      "sentence": "マンセル記号「5R 6/12」で、スラッシュの直後に置かれている属性はどれですか。",
+      "choices": [
+        "彩度（C）",
+        "明度（V）",
+        "色相（H）",
+        "色相英字"
+      ],
+      "proposedAnswer": "彩度（C）",
+      "correctIndex": 0,
+      "explanation": "マンセル記号はH V/Cの順で表されるため、スラッシュ後は彩度Cです。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_digital_color_manual_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "applied the explicit H V/C field order to the JCRI-published 5R 6/12 example before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号のH V/C形式で、Vが表す属性はどれですか。",
+      "sentence": "マンセル記号のH V/C形式で、Vが表す属性はどれですか。",
+      "choices": [
+        "彩度",
+        "明度",
+        "色相",
+        "色相英字"
+      ],
+      "proposedAnswer": "明度",
+      "correctIndex": 1,
+      "explanation": "JCRIは色の三属性をH（色相）・V（明度）・C（彩度）として示しています。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_hvc_training_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently mapped H/V/C to 色相/明度/彩度 from current JCRI HVC material before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号のH V/C形式で、Cが表す属性はどれですか。",
+      "sentence": "マンセル記号のH V/C形式で、Cが表す属性はどれですか。",
+      "choices": [
+        "明度",
+        "色相",
+        "彩度",
+        "色相数値"
+      ],
+      "proposedAnswer": "彩度",
+      "correctIndex": 2,
+      "explanation": "JCRIのHVC表記ではCは彩度です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_hvc_training_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently mapped H/V/C to 色相/明度/彩度 from current JCRI HVC material before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号のH V/C形式で、Hが表す属性はどれですか。",
+      "sentence": "マンセル記号のH V/C形式で、Hが表す属性はどれですか。",
+      "choices": [
+        "彩度",
+        "明度",
+        "スラッシュ",
+        "色相"
+      ],
+      "proposedAnswer": "色相",
+      "correctIndex": 3,
+      "explanation": "JCRIのHVC表記ではHは色相です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_hvc_training_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently mapped H/V/C to 色相/明度/彩度 from current JCRI HVC material before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "JCRIのマンセル値分解仕様で「色相数値」と「色相英字」に分けられるのは、H V/Cのどの部分ですか。",
+      "sentence": "JCRIのマンセル値分解仕様で「色相数値」と「色相英字」に分けられるのは、H V/Cのどの部分ですか。",
+      "choices": [
+        "H",
+        "V",
+        "C",
+        "V/C"
+      ],
+      "proposedAnswer": "H",
+      "correctIndex": 0,
+      "explanation": "JCRIのMunsell Separationは、H V/Cを色相数値、色相英字、明度数値、スラッシュ、彩度数値へ分解します。色相数値と色相英字はHを構成します。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read JCRI's five output fields and grouped hue numeric plus hue letters back into H before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号「2.5R 6/10」で、色相英字として分解される部分はどれですか。",
+      "sentence": "マンセル記号「2.5R 6/10」で、色相英字として分解される部分はどれですか。",
+      "choices": [
+        "2.5",
+        "R",
+        "6",
+        "10"
+      ],
+      "proposedAnswer": "R",
+      "correctIndex": 1,
+      "explanation": "JCRIの分解仕様ではHを色相数値と色相英字に分けます。2.5Rでは2.5が色相数値、Rが色相英字です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_digital_color_manual_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "split the JCRI-published H component 2.5R into hue numeric 2.5 and hue letters R before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号「7.5R 6/12」で、色相数値として分解される部分はどれですか。",
+      "sentence": "マンセル記号「7.5R 6/12」で、色相数値として分解される部分はどれですか。",
+      "choices": [
+        "R",
+        "6",
+        "7.5",
+        "12"
+      ],
+      "proposedAnswer": "7.5",
+      "correctIndex": 2,
+      "explanation": "JCRIの分解仕様では7.5Rの7.5が色相数値、Rが色相英字です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_digital_color_manual_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "split the JCRI-published H component 7.5R into hue numeric 7.5 and hue letters R before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-munsell-notation-components-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/munsell/notation_components",
+      "skillId": "pc2.munsell.notation_components",
+      "categoryId": "pc2.munsell",
+      "questionType": "text_choice",
+      "prompt": "マンセル記号「5R 6/10」で、明度数値と彩度数値の組合せとして正しいものはどれですか。",
+      "sentence": "マンセル記号「5R 6/10」で、明度数値と彩度数値の組合せとして正しいものはどれですか。",
+      "choices": [
+        "V=5, C=R",
+        "V=10, C=6",
+        "V=5R, C=10",
+        "V=6, C=10"
+      ],
+      "proposedAnswer": "V=6, C=10",
+      "correctIndex": 3,
+      "explanation": "H V/C形式では5RがH、6がV、10がCです。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "jcri_munsell_separation_2026",
+        "jcri_digital_color_manual_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "parsed the JCRI-published 5R 6/10 example into H=5R, V=6, C=10 before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "黄に近い色を明るく、青紫に近い色を暗くする明度関係に従う配色はどれですか。",
+      "sentence": "黄に近い色を明るく、青紫に近い色を暗くする明度関係に従う配色はどれですか。",
+      "choices": [
+        "ナチュラルハーモニー",
+        "コンプレックスハーモニー",
+        "トライアド",
+        "トーナル配色"
+      ],
+      "proposedAnswer": "ナチュラルハーモニー",
+      "correctIndex": 0,
+      "explanation": "ナチュラルハーモニーは、黄に近い側を明るく、青紫に近い側を暗くする自然な明度関係に従います。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the two independent specialist-industry rules and matched yellow-near=lighter, blue-violet-near=darker to natural harmony before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "黄に近い色を暗く、青紫に近い色を明るくする配色はどれですか。",
+      "sentence": "黄に近い色を暗く、青紫に近い色を明るくする配色はどれですか。",
+      "choices": [
+        "ナチュラルハーモニー",
+        "コンプレックスハーモニー",
+        "トーンイントーン配色",
+        "ダイアード"
+      ],
+      "proposedAnswer": "コンプレックスハーモニー",
+      "correctIndex": 1,
+      "explanation": "コンプレックスハーモニーは、ナチュラルハーモニーの明度関係を逆にし、黄に近い側を暗く、青紫に近い側を明るくします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched yellow-near=darker, blue-violet-near=lighter to the sourced complex-harmony rule before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ナチュラルハーモニーの明度関係として正しいものはどれですか。",
+      "sentence": "ナチュラルハーモニーの明度関係として正しいものはどれですか。",
+      "choices": [
+        "黄に近い側を暗くし、青紫に近い側も暗くする",
+        "黄に近い側と青紫に近い側を同じ明度にする",
+        "黄に近い側を明るくし、青紫に近い側を暗くする",
+        "黄に近い側を暗くし、青紫に近い側を明るくする"
+      ],
+      "proposedAnswer": "黄に近い側を明るくし、青紫に近い側を暗くする",
+      "correctIndex": 2,
+      "explanation": "ナチュラルハーモニーは自然の明度関係に従い、黄に近い側を明るく、青紫に近い側を暗くします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-derived the natural-harmony lightness direction from both checked sources before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "コンプレックスハーモニーの明度関係として正しいものはどれですか。",
+      "sentence": "コンプレックスハーモニーの明度関係として正しいものはどれですか。",
+      "choices": [
+        "黄に近い側と青紫に近い側を同じ明度にする",
+        "黄に近い側を明るくし、青紫に近い側も明るくする",
+        "黄に近い側を明るくし、青紫に近い側を暗くする",
+        "黄に近い側を暗くし、青紫に近い側を明るくする"
+      ],
+      "proposedAnswer": "黄に近い側を暗くし、青紫に近い側を明るくする",
+      "correctIndex": 3,
+      "explanation": "コンプレックスハーモニーは自然な明度関係を逆転させ、黄に近い側を暗く、青紫に近い側を明るくします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-derived the complex-harmony reversal from both checked sources before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ナチュラルハーモニーをつくるとき、2色のうち黄に近い側の明度は相対的にどうしますか。",
+      "sentence": "ナチュラルハーモニーをつくるとき、2色のうち黄に近い側の明度は相対的にどうしますか。",
+      "choices": [
+        "高くする",
+        "低くする",
+        "必ず同じにする",
+        "明度は条件に含まれない"
+      ],
+      "proposedAnswer": "高くする",
+      "correctIndex": 0,
+      "explanation": "ナチュラルハーモニーでは、黄に近い色ほど相対的に明るくします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the sourced natural-harmony rule to the yellow-near side and obtained higher lightness before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ナチュラルハーモニーをつくるとき、2色のうち青紫に近い側の明度は相対的にどうしますか。",
+      "sentence": "ナチュラルハーモニーをつくるとき、2色のうち青紫に近い側の明度は相対的にどうしますか。",
+      "choices": [
+        "高くする",
+        "低くする",
+        "必ず同じにする",
+        "彩度だけで決める"
+      ],
+      "proposedAnswer": "低くする",
+      "correctIndex": 1,
+      "explanation": "ナチュラルハーモニーでは、青紫に近い色ほど相対的に暗くします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the sourced natural-harmony rule to the blue-violet-near side and obtained lower lightness before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "コンプレックスハーモニーをつくるとき、黄に近い側の明度は相対的にどうしますか。",
+      "sentence": "コンプレックスハーモニーをつくるとき、黄に近い側の明度は相対的にどうしますか。",
+      "choices": [
+        "高くする",
+        "必ず同じにする",
+        "低くする",
+        "色相だけで決める"
+      ],
+      "proposedAnswer": "低くする",
+      "correctIndex": 2,
+      "explanation": "コンプレックスハーモニーでは自然な関係を逆転させるため、黄に近い側を相対的に暗くします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the sourced complex-harmony reversal to the yellow-near side and obtained lower lightness before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "コンプレックスハーモニーをつくるとき、青紫に近い側の明度は相対的にどうしますか。",
+      "sentence": "コンプレックスハーモニーをつくるとき、青紫に近い側の明度は相対的にどうしますか。",
+      "choices": [
+        "低くする",
+        "必ず同じにする",
+        "色相だけで決める",
+        "高くする"
+      ],
+      "proposedAnswer": "高くする",
+      "correctIndex": 3,
+      "explanation": "コンプレックスハーモニーでは自然な関係を逆転させるため、青紫に近い側を相対的に明るくします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the sourced complex-harmony reversal to the blue-violet-near side and obtained higher lightness before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "自然界で見られる、光の当たる部分が黄み寄りで明るく、影の部分が青み寄りで暗く見える関係に沿う配色名はどれですか。",
+      "sentence": "自然界で見られる、光の当たる部分が黄み寄りで明るく、影の部分が青み寄りで暗く見える関係に沿う配色名はどれですか。",
+      "choices": [
+        "ナチュラルハーモニー",
+        "コンプレックスハーモニー",
+        "ペンタード",
+        "カマイユ配色"
+      ],
+      "proposedAnswer": "ナチュラルハーモニー",
+      "correctIndex": 0,
+      "explanation": "この自然な黄み側が明るく青み側が暗い関係に沿うのがナチュラルハーモニーです。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched the described natural light/shade relationship to the sourced natural-harmony definition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ナチュラルハーモニーの明度関係を意図的に逆転させた配色はどれですか。",
+      "sentence": "ナチュラルハーモニーの明度関係を意図的に逆転させた配色はどれですか。",
+      "choices": [
+        "トーンオントーン配色",
+        "コンプレックスハーモニー",
+        "トライアド",
+        "ドミナントカラー配色"
+      ],
+      "proposedAnswer": "コンプレックスハーモニー",
+      "correctIndex": 1,
+      "explanation": "コンプレックスハーモニーは、ナチュラルハーモニーの黄側を明るく・青紫側を暗くする関係を逆転させます。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently verified that both checked sources describe complex harmony as the reverse of the natural-harmony lightness relation before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "次のうち、自然な明度関係に逆らう配色条件はどれですか。",
+      "sentence": "次のうち、自然な明度関係に逆らう配色条件はどれですか。",
+      "choices": [
+        "黄に近い側を明るくし、青紫に近い側を暗くする",
+        "黄に近い側と青紫に近い側を同じ明度に固定する",
+        "黄に近い側を暗くし、青紫に近い側を明るくする",
+        "黄に近い側だけ彩度を上げる"
+      ],
+      "proposedAnswer": "黄に近い側を暗くし、青紫に近い側を明るくする",
+      "correctIndex": 2,
+      "explanation": "自然な明度関係の逆は、黄に近い側を暗くし、青紫に近い側を明るくする条件です。これはコンプレックスハーモニーの基本関係です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently inverted the sourced natural-harmony lightness relation and obtained yellow-near=darker, blue-violet-near=lighter before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-natural-complex-harmony-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/natural_complex_harmony",
+      "skillId": "pc2.scheme.natural_complex_harmony",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "次のうち、自然な明度関係に従う配色条件はどれですか。",
+      "sentence": "次のうち、自然な明度関係に従う配色条件はどれですか。",
+      "choices": [
+        "黄に近い側を暗くし、青紫に近い側を明るくする",
+        "両方を必ず無彩色にする",
+        "両方を必ず同じ明度にする",
+        "黄に近い側を明るくし、青紫に近い側を暗くする"
+      ],
+      "proposedAnswer": "黄に近い側を明るくし、青紫に近い側を暗くする",
+      "correctIndex": 3,
+      "explanation": "自然な明度関係に従う条件は、黄に近い側を明るく、青紫に近い側を暗くすることです。これはナチュラルハーモニーの基本関係です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "rockpaint_natural_harmony_2026",
+        "daiwahouse_complex_harmony_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently reapplied the shared natural-harmony rule from both checked sources before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "3色以上の多色配色で、色相に統一感を持たせ、トーンで変化をつける配色はどれですか。",
+      "sentence": "3色以上の多色配色で、色相に統一感を持たせ、トーンで変化をつける配色はどれですか。",
+      "choices": [
+        "ドミナントカラー配色",
+        "ドミナントトーン配色",
+        "トライアド",
+        "トーナル配色"
+      ],
+      "proposedAnswer": "ドミナントカラー配色",
+      "correctIndex": 0,
+      "explanation": "ドミナントカラー配色は、色相を共通要素として統一し、トーンで変化をつける多色配色です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched hue-unified/tone-varied/3+ colors to dominant color before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "3色以上の多色配色で、トーンに統一感を持たせ、色相で変化をつける配色はどれですか。",
+      "sentence": "3色以上の多色配色で、トーンに統一感を持たせ、色相で変化をつける配色はどれですか。",
+      "choices": [
+        "ドミナントカラー配色",
+        "ドミナントトーン配色",
+        "トーンオントーン配色",
+        "カマイユ配色"
+      ],
+      "proposedAnswer": "ドミナントトーン配色",
+      "correctIndex": 1,
+      "explanation": "ドミナントトーン配色は、トーンを共通要素として統一し、色相で変化をつける多色配色です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched tone-unified/hue-varied/3+ colors to dominant tone before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ドミナントカラー配色で統一の軸になる属性はどれですか。",
+      "sentence": "ドミナントカラー配色で統一の軸になる属性はどれですか。",
+      "choices": [
+        "明度だけ",
+        "彩度だけ",
+        "色相",
+        "トーン"
+      ],
+      "proposedAnswer": "色相",
+      "correctIndex": 2,
+      "explanation": "ドミナントカラー配色は色相を共通要素としてまとめます。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified hue as the shared dimension in dominant color before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ドミナントトーン配色で統一の軸になる属性はどれですか。",
+      "sentence": "ドミナントトーン配色で統一の軸になる属性はどれですか。",
+      "choices": [
+        "色相番号だけ",
+        "明度だけ",
+        "彩度だけ",
+        "トーン"
+      ],
+      "proposedAnswer": "トーン",
+      "correctIndex": 3,
+      "explanation": "ドミナントトーン配色はトーンを共通要素としてまとめます。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified tone as the shared dimension in dominant tone before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ドミナントカラー配色で主に変化をつける属性はどれですか。",
+      "sentence": "ドミナントカラー配色で主に変化をつける属性はどれですか。",
+      "choices": [
+        "トーン",
+        "色相",
+        "色数を2色に固定すること",
+        "無彩色化"
+      ],
+      "proposedAnswer": "トーン",
+      "correctIndex": 0,
+      "explanation": "色相を統一する一方、トーンで変化をつけるのがドミナントカラー配色です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently derived tone as the varying dimension when hue is dominant before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ドミナントトーン配色で主に変化をつける属性はどれですか。",
+      "sentence": "ドミナントトーン配色で主に変化をつける属性はどれですか。",
+      "choices": [
+        "トーン",
+        "色相",
+        "明度を固定すること",
+        "彩度を0にすること"
+      ],
+      "proposedAnswer": "色相",
+      "correctIndex": 1,
+      "explanation": "トーンを統一する一方、色相で変化をつけるのがドミナントトーン配色です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently derived hue as the varying dimension when tone is dominant before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "複数のトーンを使いながら、色相を共通させて全体をまとめる考え方に最も対応するものはどれですか。",
+      "sentence": "複数のトーンを使いながら、色相を共通させて全体をまとめる考え方に最も対応するものはどれですか。",
+      "choices": [
+        "ドミナントトーン配色",
+        "トーナル配色",
+        "ドミナントカラー配色",
+        "トライアド"
+      ],
+      "proposedAnswer": "ドミナントカラー配色",
+      "correctIndex": 2,
+      "explanation": "色相を共通させ、トーン側に変化を持たせるためドミナントカラー配色です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched shared hue plus varied tones to dominant color before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "複数の色相を使いながら、トーンを共通させて全体をまとめる考え方に最も対応するものはどれですか。",
+      "sentence": "複数の色相を使いながら、トーンを共通させて全体をまとめる考え方に最も対応するものはどれですか。",
+      "choices": [
+        "ドミナントカラー配色",
+        "トーンオントーン配色",
+        "カマイユ配色",
+        "ドミナントトーン配色"
+      ],
+      "proposedAnswer": "ドミナントトーン配色",
+      "correctIndex": 3,
+      "explanation": "トーンを共通させ、色相側に変化を持たせるためドミナントトーン配色です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched shared tone plus varied hues to dominant tone before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ドミナントカラー配色の色数について、独立クロスチェックした規則に合うものはどれですか。",
+      "sentence": "ドミナントカラー配色の色数について、独立クロスチェックした規則に合うものはどれですか。",
+      "choices": [
+        "3色以上の多色配色",
+        "必ず2色",
+        "必ず4色",
+        "色数は1色だけ"
+      ],
+      "proposedAnswer": "3色以上の多色配色",
+      "correctIndex": 0,
+      "explanation": "クロスチェックした資料はいずれもドミナントカラー配色を3色以上の多色配色として扱っています。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked the shared 3-or-more-color condition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ドミナントトーン配色の色数について、独立クロスチェックした規則に合うものはどれですか。",
+      "sentence": "ドミナントトーン配色の色数について、独立クロスチェックした規則に合うものはどれですか。",
+      "choices": [
+        "必ず2色",
+        "3色以上の多色配色",
+        "必ず5色",
+        "1色のみ"
+      ],
+      "proposedAnswer": "3色以上の多色配色",
+      "correctIndex": 1,
+      "explanation": "クロスチェックした資料はいずれもドミナントトーン配色を3色以上の多色配色として扱っています。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked the shared 3-or-more-color condition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ドミナントカラー配色とドミナントトーン配色の区別として正しいものはどれですか。",
+      "sentence": "ドミナントカラー配色とドミナントトーン配色の区別として正しいものはどれですか。",
+      "choices": [
+        "前者はトーン、後者は明度を統一する",
+        "前者は彩度、後者は色数を統一する",
+        "前者は色相、後者はトーンを統一する",
+        "前者も後者も必ず同じ色相にする"
+      ],
+      "proposedAnswer": "前者は色相、後者はトーンを統一する",
+      "correctIndex": 2,
+      "explanation": "ドミナントカラーは色相、ドミナントトーンはトーンが統一の軸です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently compared the shared dimensions of both schemes before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-dominant-color-tone-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/dominant_color_tone",
+      "skillId": "pc2.scheme.dominant_color_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "3色以上の配色で、色相をまとめる方式とトーンをまとめる方式の組合せとして正しいものはどれですか。",
+      "sentence": "3色以上の配色で、色相をまとめる方式とトーンをまとめる方式の組合せとして正しいものはどれですか。",
+      "choices": [
+        "色相＝ドミナントトーン、トーン＝ドミナントカラー",
+        "色相＝トライアド、トーン＝テトラード",
+        "色相＝トーナル、トーン＝カマイユ",
+        "色相＝ドミナントカラー、トーン＝ドミナントトーン"
+      ],
+      "proposedAnswer": "色相＝ドミナントカラー、トーン＝ドミナントトーン",
+      "correctIndex": 3,
+      "explanation": "色相を統一するのがドミナントカラー、トーンを統一するのがドミナントトーンです。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_dominant_schemes_2022",
+        "color_exam_secondary_dominant_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently mapped hue dominance to dominant color and tone dominance to dominant tone before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンオントーン配色について、独立クロスチェックした共通規則に合うものはどれですか。",
+      "sentence": "トーンオントーン配色について、独立クロスチェックした共通規則に合うものはどれですか。",
+      "choices": [
+        "同一〜類似色相でまとめ、明度差を比較的大きくする",
+        "色相を自由にし、明度差を必ず0にする",
+        "補色色相だけを使い、明度をそろえる",
+        "無彩色だけで構成する"
+      ],
+      "proposedAnswer": "同一〜類似色相でまとめ、明度差を比較的大きくする",
+      "correctIndex": 0,
+      "explanation": "確認した2資料は、トーンオントーンを同一〜類似色相でまとめ、明度差を比較的大きくする配色として一致しています。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently intersected the two source rules and recovered same/similar hue plus comparatively large lightness difference before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "同一または類似の色相でまとめ、明度差を比較的大きくする配色技法はどれですか。",
+      "sentence": "同一または類似の色相でまとめ、明度差を比較的大きくする配色技法はどれですか。",
+      "choices": [
+        "トーナル配色",
+        "トーンオントーン配色",
+        "トライアド",
+        "コンプレックスハーモニー"
+      ],
+      "proposedAnswer": "トーンオントーン配色",
+      "correctIndex": 1,
+      "explanation": "この2条件は、独立クロスチェックで一致したトーンオントーン配色の非visual規則です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "matched the explicit shared conditions to tone-on-tone before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンオントーン配色で統一側に置く属性として、確認した2資料が共通して示すものはどれですか。",
+      "sentence": "トーンオントーン配色で統一側に置く属性として、確認した2資料が共通して示すものはどれですか。",
+      "choices": [
+        "彩度だけ",
+        "色数",
+        "色相",
+        "無彩色比率"
+      ],
+      "proposedAnswer": "色相",
+      "correctIndex": 2,
+      "explanation": "トーンオントーンでは、同一または類似の色相範囲でまとめます。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified hue as the common organizing attribute in both checked definitions before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンオントーン配色で比較的大きく取る差として、確認した2資料が一致しているものはどれですか。",
+      "sentence": "トーンオントーン配色で比較的大きく取る差として、確認した2資料が一致しているものはどれですか。",
+      "choices": [
+        "色数差",
+        "色相差",
+        "彩度差だけ",
+        "明度差"
+      ],
+      "proposedAnswer": "明度差",
+      "correctIndex": 3,
+      "explanation": "両資料ともトーンオントーンでは明度差を大きく取ることを明示しています。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently found large lightness difference in both checked definitions before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンオントーン配色の条件として適切な組合せはどれですか。",
+      "sentence": "トーンオントーン配色の条件として適切な組合せはどれですか。",
+      "choices": [
+        "色相は同一〜類似、明度差は比較的大きい",
+        "色相は必ず補色、明度差は0",
+        "色相は自由、明度は必ず同一",
+        "色相は必ず無彩色、彩度差だけを大きくする"
+      ],
+      "proposedAnswer": "色相は同一〜類似、明度差は比較的大きい",
+      "correctIndex": 0,
+      "explanation": "採用した共通規則は、同一〜類似色相と比較的大きい明度差の組合せです。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-derived both accepted conditions from the two sources before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンオントーン配色の色相関係について、今回採用した共通規則はどれですか。",
+      "sentence": "トーンオントーン配色の色相関係について、今回採用した共通規則はどれですか。",
+      "choices": [
+        "補色色相のみ",
+        "同一または類似色相",
+        "色相は必ず無関係",
+        "無彩色のみ"
+      ],
+      "proposedAnswer": "同一または類似色相",
+      "correctIndex": 1,
+      "explanation": "ONCAは同一色相または類似色相、Plus Colorsも同一色相を基本に隣接・類似まで許容するとしています。共通範囲は同一〜類似色相です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "intersected the explicit hue ranges in both definitions and obtained same/similar hue before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンオントーン配色で変化を明確にする主要な軸として、今回のクロスチェックで確定したものはどれですか。",
+      "sentence": "トーンオントーン配色で変化を明確にする主要な軸として、今回のクロスチェックで確定したものはどれですか。",
+      "choices": [
+        "使用色数",
+        "色名の長さ",
+        "明度",
+        "無彩色の割合"
+      ],
+      "proposedAnswer": "明度",
+      "correctIndex": 2,
+      "explanation": "今回採用した規則では、同一〜類似色相でまとめた上で明度差を比較的大きくします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "identified lightness as the explicit contrast axis common to both definitions before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンオントーン配色で色相をどう扱うかについて、今回の根拠に合う説明はどれですか。",
+      "sentence": "トーンオントーン配色で色相をどう扱うかについて、今回の根拠に合う説明はどれですか。",
+      "choices": [
+        "必ず12段階離す",
+        "自由な色相差にする",
+        "色相を使わない",
+        "同一〜類似の範囲でまとめる"
+      ],
+      "proposedAnswer": "同一〜類似の範囲でまとめる",
+      "correctIndex": 3,
+      "explanation": "両資料が共通して示すのは、色相を同一〜類似の範囲でまとめることです。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the hue relation in both definitions and obtained same/similar range before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "次のうち、今回確定したトーンオントーン配色の共通規則を満たす説明はどれですか。",
+      "sentence": "次のうち、今回確定したトーンオントーン配色の共通規則を満たす説明はどれですか。",
+      "choices": [
+        "近い色相群を使い、明るさの差をはっきりつける",
+        "離れた色相だけを使い、明るさをそろえる",
+        "同じトーンだけを使い、明るさの差をなくす",
+        "無彩色だけを使う"
+      ],
+      "proposedAnswer": "近い色相群を使い、明るさの差をはっきりつける",
+      "correctIndex": 0,
+      "explanation": "同一〜類似色相でまとめ、明度差を比較的大きくするという共通規則に対応します。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "mapped near hue family to same/similar hue and clear brightness difference to large lightness difference before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "確認した2資料のトーンオントーン配色の説明に共通して含まれる特徴はどれですか。",
+      "sentence": "確認した2資料のトーンオントーン配色の説明に共通して含まれる特徴はどれですか。",
+      "choices": [
+        "明度を必ず同一にする",
+        "明度差を比較的大きくする",
+        "色相を必ず補色にする",
+        "無彩色だけを使う"
+      ],
+      "proposedAnswer": "明度差を比較的大きくする",
+      "correctIndex": 1,
+      "explanation": "ONCAもPlus Colorsも、明度差を大きく取る点を明示しています。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "compared the two source descriptions and identified large lightness difference as shared before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンオントーン配色で、明度差を比較的大きく取る前提となる色相関係はどれですか。",
+      "sentence": "トーンオントーン配色で、明度差を比較的大きく取る前提となる色相関係はどれですか。",
+      "choices": [
+        "補色色相のみ",
+        "対照色相のみ",
+        "同一〜類似色相",
+        "無彩色のみ"
+      ],
+      "proposedAnswer": "同一〜類似色相",
+      "correctIndex": 2,
+      "explanation": "今回採用した非visual規則では、同一〜類似色相でまとめたうえで明度差を比較的大きくします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "combined the independently confirmed hue-range condition with the lightness condition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-on-tone-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_on_tone",
+      "skillId": "pc2.scheme.tone_on_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "今回の根拠からトーンオントーン配色について確実に言える組合せはどれですか。",
+      "sentence": "今回の根拠からトーンオントーン配色について確実に言える組合せはどれですか。",
+      "choices": [
+        "色相は自由・明度差は0",
+        "補色色相・同一明度",
+        "無彩色のみ・明度自由",
+        "同一〜類似色相・比較的大きい明度差"
+      ],
+      "proposedAnswer": "同一〜類似色相・比較的大きい明度差",
+      "correctIndex": 3,
+      "explanation": "2資料の共通部分として確定できるのは、同一〜類似色相と比較的大きい明度差です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_on_tone_2024"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently intersected both checked definitions one final time and recovered the same two conditions before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンイントーン配色について、独立クロスチェックした共通規則に合うものはどれですか。",
+      "sentence": "トーンイントーン配色について、独立クロスチェックした共通規則に合うものはどれですか。",
+      "choices": [
+        "同一トーンでまとめ、色相で変化をつける",
+        "同一色相でまとめ、明度差を大きくする",
+        "補色色相だけを使う",
+        "無彩色だけで構成する"
+      ],
+      "proposedAnswer": "同一トーンでまとめ、色相で変化をつける",
+      "correctIndex": 0,
+      "explanation": "確認した資料の共通部分は、同一トーンを統一軸にして色相で変化をつけることです。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently intersected the explicit text definitions and recovered same tone plus hue variation before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "同じトーンを保ちながら色相を変える配色技法はどれですか。",
+      "sentence": "同じトーンを保ちながら色相を変える配色技法はどれですか。",
+      "choices": [
+        "トーンオントーン配色",
+        "トーンイントーン配色",
+        "ナチュラルハーモニー",
+        "トライアド"
+      ],
+      "proposedAnswer": "トーンイントーン配色",
+      "correctIndex": 1,
+      "explanation": "同一トーンを保ち、色相側で変化をつけるのが今回確定したトーンイントーンの共通規則です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "matched same tone plus hue variation to tone-in-tone before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンイントーン配色で統一する属性として、今回の共通規則が示すものはどれですか。",
+      "sentence": "トーンイントーン配色で統一する属性として、今回の共通規則が示すものはどれですか。",
+      "choices": [
+        "色数",
+        "色相",
+        "トーン",
+        "無彩色比率"
+      ],
+      "proposedAnswer": "トーン",
+      "correctIndex": 2,
+      "explanation": "トーンイントーンではトーンを同じにして全体をまとめます。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified tone as the common unifying dimension before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンイントーン配色で変化をつける属性として、今回の共通規則が示すものはどれですか。",
+      "sentence": "トーンイントーン配色で変化をつける属性として、今回の共通規則が示すものはどれですか。",
+      "choices": [
+        "使用色数だけ",
+        "明度を必ず0にすること",
+        "トーン",
+        "色相"
+      ],
+      "proposedAnswer": "色相",
+      "correctIndex": 3,
+      "explanation": "同一トーンでまとめた上で、色相を変化させます。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified hue as the varying dimension in the checked definitions before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンイントーン配色の条件として、今回確定した組合せはどれですか。",
+      "sentence": "トーンイントーン配色の条件として、今回確定した組合せはどれですか。",
+      "choices": [
+        "トーンは同一、色相は変化させる",
+        "色相は同一、明度差を大きくする",
+        "色相もトーンも必ず同一にする",
+        "無彩色だけを使う"
+      ],
+      "proposedAnswer": "トーンは同一、色相は変化させる",
+      "correctIndex": 0,
+      "explanation": "今回採用した共通規則は、同一トーンと色相変化の組合せです。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-derived both accepted conditions before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンイントーン配色について、今回の根拠から確実に言えるトーンの扱いはどれですか。",
+      "sentence": "トーンイントーン配色について、今回の根拠から確実に言えるトーンの扱いはどれですか。",
+      "choices": [
+        "必ず対照トーンにする",
+        "同一トーンでまとめる",
+        "トーンを使わない",
+        "必ず無彩色トーンにする"
+      ],
+      "proposedAnswer": "同一トーンでまとめる",
+      "correctIndex": 1,
+      "explanation": "ONCAとFOLKは同一トーンを明示し、Plus Colorsも同一トーンを基本としているため、この部分は独立に一致します。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "intersected the tone conditions and retained only the explicitly shared same-tone rule before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "同一トーンのまま異なる色相を組み合わせる考え方に最も対応するものはどれですか。",
+      "sentence": "同一トーンのまま異なる色相を組み合わせる考え方に最も対応するものはどれですか。",
+      "choices": [
+        "トーンオントーン配色",
+        "コンプレックスハーモニー",
+        "トーンイントーン配色",
+        "ダイアード"
+      ],
+      "proposedAnswer": "トーンイントーン配色",
+      "correctIndex": 2,
+      "explanation": "同一トーンを共通にして色相を変えるため、トーンイントーン配色です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "matched same tone with different hues to the checked tone-in-tone definition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンイントーン配色とトーンオントーン配色の違いとして、今回確定した規則に合うものはどれですか。",
+      "sentence": "トーンイントーン配色とトーンオントーン配色の違いとして、今回確定した規則に合うものはどれですか。",
+      "choices": [
+        "両方とも必ず同一色相である",
+        "両方とも必ず同一トーンである",
+        "前者は無彩色だけ、後者は有彩色だけである",
+        "前者はトーンを統一して色相を変え、後者は色相をまとめて明度差を取る"
+      ],
+      "proposedAnswer": "前者はトーンを統一して色相を変え、後者は色相をまとめて明度差を取る",
+      "correctIndex": 3,
+      "explanation": "トーンイントーンは同一トーン＋色相変化、既に確定済みのトーンオントーンは同一〜類似色相＋比較的大きい明度差です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently contrasted the current tone-in-tone rule with the already source-resolved tone-on-tone rule before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンの持つイメージを共通にしつつ、色相側に変化をつける配色として今回の規則に合うものはどれですか。",
+      "sentence": "トーンの持つイメージを共通にしつつ、色相側に変化をつける配色として今回の規則に合うものはどれですか。",
+      "choices": [
+        "トーンイントーン配色",
+        "ナチュラルハーモニー",
+        "トーンオントーン配色",
+        "テトラード"
+      ],
+      "proposedAnswer": "トーンイントーン配色",
+      "correctIndex": 0,
+      "explanation": "同一トーンを共通軸にして色相で変化をつける配色です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "mapped common tone image plus hue variation to tone-in-tone before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "今回のクロスチェックで、トーンイントーン配色の共通性を作る中心属性として確定したものはどれですか。",
+      "sentence": "今回のクロスチェックで、トーンイントーン配色の共通性を作る中心属性として確定したものはどれですか。",
+      "choices": [
+        "色相",
+        "トーン",
+        "色数",
+        "補色関係"
+      ],
+      "proposedAnswer": "トーン",
+      "correctIndex": 1,
+      "explanation": "トーンを同一にすることが共通性の中心です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "identified tone as the shared organizing attribute in all checked definitions before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーンイントーン配色で、同一トーンを維持したまま変えてよい属性として今回確定したものはどれですか。",
+      "sentence": "トーンイントーン配色で、同一トーンを維持したまま変えてよい属性として今回確定したものはどれですか。",
+      "choices": [
+        "無彩色比率だけ",
+        "明度を必ず0にすること",
+        "色相",
+        "トーンそのもの"
+      ],
+      "proposedAnswer": "色相",
+      "correctIndex": 2,
+      "explanation": "同一トーンを維持し、色相側で変化をつけます。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-derived hue as the varying attribute while tone remains fixed before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tone-in-tone-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tone_in_tone",
+      "skillId": "pc2.scheme.tone_in_tone",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "今回の根拠からトーンイントーン配色について確実に言える組合せはどれですか。",
+      "sentence": "今回の根拠からトーンイントーン配色について確実に言える組合せはどれですか。",
+      "choices": [
+        "色相を固定・明度差を大きくする",
+        "補色色相のみ・トーン自由",
+        "無彩色のみ・色相なし",
+        "同一トーン・色相で変化"
+      ],
+      "proposedAnswer": "同一トーン・色相で変化",
+      "correctIndex": 3,
+      "explanation": "独立資料の共通部分として確定できるのは、同一トーンでまとめ、色相を変化させることです。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "onca_commonality_color_schemes_2022",
+        "pluscolors_tone_in_tone_2024",
+        "folk_tone_in_tone"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "intersected all checked definitions one final time and recovered same tone plus hue variation before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーナル配色について、独立クロスチェックした共通規則に合うものはどれですか。",
+      "sentence": "トーナル配色について、独立クロスチェックした共通規則に合うものはどれですか。",
+      "choices": [
+        "sf・d・ltg・gの中間色トーンを組み合わせる",
+        "v・b・s・dpだけを組み合わせる",
+        "無彩色だけを組み合わせる",
+        "補色色相だけを組み合わせる"
+      ],
+      "proposedAnswer": "sf・d・ltg・gの中間色トーンを組み合わせる",
+      "correctIndex": 0,
+      "explanation": "確認した2資料はいずれも、トーナル配色にsf・d・ltg・gの4つの中間色（濁色）トーンを用いるとしています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently intersected the two explicit definitions and recovered the same four-tone set sf/d/ltg/g before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーナル配色で用いる4つのPCCSトーンの組合せとして正しいものはどれですか。",
+      "sentence": "トーナル配色で用いる4つのPCCSトーンの組合せとして正しいものはどれですか。",
+      "choices": [
+        "v・b・s・dp",
+        "sf・d・ltg・g",
+        "p・lt・b・v",
+        "dk・dkg・dp・s"
+      ],
+      "proposedAnswer": "sf・d・ltg・g",
+      "correctIndex": 1,
+      "explanation": "トーナル配色の4トーンはsf（ソフト）、d（ダル）、ltg（ライトグレイッシュ）、g（グレイッシュ）です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read both text definitions and independently recovered sf/d/ltg/g before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "次のPCCSトーンのうち、トーナル配色で用いる4トーンに含まれるものはどれですか。",
+      "sentence": "次のPCCSトーンのうち、トーナル配色で用いる4トーンに含まれるものはどれですか。",
+      "choices": [
+        "v",
+        "b",
+        "d",
+        "dp"
+      ],
+      "proposedAnswer": "d",
+      "correctIndex": 2,
+      "explanation": "d（ダル）はsf・d・ltg・gからなるトーナル配色の4トーンに含まれます。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "checked membership against the independently corroborated set {sf,d,ltg,g} before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "次のPCCSトーンのうち、今回確定したトーナル配色の4トーンに含まれないものはどれですか。",
+      "sentence": "次のPCCSトーンのうち、今回確定したトーナル配色の4トーンに含まれないものはどれですか。",
+      "choices": [
+        "sf",
+        "d",
+        "g",
+        "v"
+      ],
+      "proposedAnswer": "v",
+      "correctIndex": 3,
+      "explanation": "トーナル配色で用いる4トーンはsf・d・ltg・gであり、vは含まれません。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "compared all choices against the confirmed four-tone set and identified v as the only nonmember before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "トーナル配色で用いるsf・d・ltg・gは、確認した資料ではどのような色のまとまりとして説明されていますか。",
+      "sentence": "トーナル配色で用いるsf・d・ltg・gは、確認した資料ではどのような色のまとまりとして説明されていますか。",
+      "choices": [
+        "中間色（濁色）",
+        "純色だけ",
+        "無彩色だけ",
+        "高彩度の清色だけ"
+      ],
+      "proposedAnswer": "中間色（濁色）",
+      "correctIndex": 0,
+      "explanation": "確認した資料ではsf・d・ltg・gを中間色（濁色）のトーンとして説明しています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched the four source-listed tones to the sources' own intermediate/muddy-color description before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "sf（ソフト）トーンは、今回確定したトーナル配色の4トーンに含まれますか。",
+      "sentence": "sf（ソフト）トーンは、今回確定したトーナル配色の4トーンに含まれますか。",
+      "choices": [
+        "含まれない",
+        "含まれる",
+        "無彩色の場合だけ含まれる",
+        "色相番号によってのみ決まる"
+      ],
+      "proposedAnswer": "含まれる",
+      "correctIndex": 1,
+      "explanation": "sfはsf・d・ltg・gの4トーンの一つです。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "checked sf directly against the common four-tone set before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ltg（ライトグレイッシュ）トーンについて、今回確定したトーナル配色の規則に合う説明はどれですか。",
+      "sentence": "ltg（ライトグレイッシュ）トーンについて、今回確定したトーナル配色の規則に合う説明はどれですか。",
+      "choices": [
+        "必ず除外する",
+        "無彩色に限り使用する",
+        "使用する4トーンの一つである",
+        "補色色相の場合だけ使用する"
+      ],
+      "proposedAnswer": "使用する4トーンの一つである",
+      "correctIndex": 2,
+      "explanation": "ltgはsf・d・ltg・gの4トーンの一つです。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "checked ltg directly against the common four-tone set before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "g（グレイッシュ）トーンについて、今回確定したトーナル配色の規則に合う説明はどれですか。",
+      "sentence": "g（グレイッシュ）トーンについて、今回確定したトーナル配色の規則に合う説明はどれですか。",
+      "choices": [
+        "必ず除外する",
+        "高彩度色の場合だけ使う",
+        "色相を固定した場合だけ使う",
+        "使用する4トーンの一つである"
+      ],
+      "proposedAnswer": "使用する4トーンの一つである",
+      "correctIndex": 3,
+      "explanation": "gはsf・d・ltg・gの4トーンの一つです。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "checked g directly against the common four-tone set before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "sf・d・ltg・gの範囲から中間色を組み合わせる配色技法はどれですか。",
+      "sentence": "sf・d・ltg・gの範囲から中間色を組み合わせる配色技法はどれですか。",
+      "choices": [
+        "トーナル配色",
+        "トーンオントーン配色",
+        "トライアド",
+        "ナチュラルハーモニー"
+      ],
+      "proposedAnswer": "トーナル配色",
+      "correctIndex": 0,
+      "explanation": "sf・d・ltg・gの中間色トーンを用いるのがトーナル配色です。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "matched the independently corroborated four-tone set to tonal before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "次のうち、トーナル配色で使えるトーンだけからなる組合せはどれですか。",
+      "sentence": "次のうち、トーナル配色で使えるトーンだけからなる組合せはどれですか。",
+      "choices": [
+        "v・sf・g",
+        "sf・d・g",
+        "b・ltg・g",
+        "dp・d・ltg"
+      ],
+      "proposedAnswer": "sf・d・g",
+      "correctIndex": 1,
+      "explanation": "sf・d・gはいずれも確定した4トーンsf・d・ltg・gに含まれます。他の選択肢にはv、b、dpが含まれます。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "tested each choice elementwise against {sf,d,ltg,g} and found only sf/d/g wholly contained before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "次のうち、今回確定したトーナル配色の4トーンをすべて含む組合せはどれですか。",
+      "sentence": "次のうち、今回確定したトーナル配色の4トーンをすべて含む組合せはどれですか。",
+      "choices": [
+        "sf・d・ltg・v",
+        "sf・d・g・b",
+        "sf・d・ltg・g",
+        "d・ltg・g・dp"
+      ],
+      "proposedAnswer": "sf・d・ltg・g",
+      "correctIndex": 2,
+      "explanation": "確定した4トーンはsf・d・ltg・gです。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "compared each four-item set against the independently confirmed canonical set {sf,d,ltg,g} before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-tonal-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/tonal",
+      "skillId": "pc2.scheme.tonal",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "今回の根拠からトーナル配色について確実に言える組合せはどれですか。",
+      "sentence": "今回の根拠からトーナル配色について確実に言える組合せはどれですか。",
+      "choices": [
+        "v・b・s・dpを使う",
+        "無彩色だけを使う",
+        "補色関係だけを使う",
+        "sf・d・ltg・gの中間色トーンを使う"
+      ],
+      "proposedAnswer": "sf・d・ltg・gの中間色トーンを使う",
+      "correctIndex": 3,
+      "explanation": "独立資料の共通部分として確定できるのは、sf・d・ltg・gの4つの中間色トーンを用いることです。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_page_2026",
+        "pluscolors_tonal_2024",
+        "uto_tonal_2023"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "intersected both definitions one final time and recovered the same four-tone middle-color rule before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "カマイユ配色について、独立クロスチェックした共通規則に合う説明はどれですか。",
+      "sentence": "カマイユ配色について、独立クロスチェックした共通規則に合う説明はどれですか。",
+      "choices": [
+        "ほとんど単色に見えるほど色の差を小さくする",
+        "強い補色対比を必ずつくる",
+        "高彩度色だけを使う",
+        "明度差を最大にする"
+      ],
+      "proposedAnswer": "ほとんど単色に見えるほど色の差を小さくする",
+      "correctIndex": 0,
+      "explanation": "確認した2資料は、カマイユをほとんど単色に見えるほど色相や明度・彩度などの差を小さくした配色として説明しています。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently intersected the two explicit definitions and recovered the almost-monochromatic/small-difference rule before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "ほとんど一色に見えるほど近い色を組み合わせる配色技法はどれですか。",
+      "sentence": "ほとんど一色に見えるほど近い色を組み合わせる配色技法はどれですか。",
+      "choices": [
+        "トライアド",
+        "カマイユ配色",
+        "ビコロール配色",
+        "コンプレックスハーモニー"
+      ],
+      "proposedAnswer": "カマイユ配色",
+      "correctIndex": 1,
+      "explanation": "カマイユ配色は、一見すると単色に見えるほど色の差を小さくする配色です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "matched the shared almost-monochromatic definition to camaieu before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "カマイユ配色で小さく保つものとして、確認した2資料に共通する考え方はどれですか。",
+      "sentence": "カマイユ配色で小さく保つものとして、確認した2資料に共通する考え方はどれですか。",
+      "choices": [
+        "使用色数だけ",
+        "色名の文字数",
+        "色相やトーンに関わる差",
+        "必ず彩度だけ"
+      ],
+      "proposedAnswer": "色相やトーンに関わる差",
+      "correctIndex": 2,
+      "explanation": "両資料に共通するのは、色相と明度・彩度を含むトーン側の差を非常に小さくする考え方です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read both definitions and identified small hue plus small lightness/chroma/tone-related differences as the shared condition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "カマイユ配色の性格として、今回の根拠に反するものはどれですか。",
+      "sentence": "カマイユ配色の性格として、今回の根拠に反するものはどれですか。",
+      "choices": [
+        "近い色どうしを使う",
+        "単色に近い見え方をねらう",
+        "色の差を極めて小さくする",
+        "強いコントラストを必須にする"
+      ],
+      "proposedAnswer": "強いコントラストを必須にする",
+      "correctIndex": 3,
+      "explanation": "カマイユは類似性を利用して差を小さくする配色であり、強いコントラストを必須とする規則ではありません。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "contrasted the shared similarity-based definition with strong contrast and identified the latter as incompatible before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "フォカマイユ配色について、独立クロスチェックした共通規則に合う説明はどれですか。",
+      "sentence": "フォカマイユ配色について、独立クロスチェックした共通規則に合う説明はどれですか。",
+      "choices": [
+        "カマイユより少しだけ変化を増やした近似色の配色",
+        "カマイユより必ず最大明度差にする配色",
+        "補色色相だけを使う配色",
+        "無彩色だけで構成する配色"
+      ],
+      "proposedAnswer": "カマイユより少しだけ変化を増やした近似色の配色",
+      "correctIndex": 0,
+      "explanation": "両資料は、フォカマイユをカマイユより少し変化を増やした近い色どうしの配色として説明しています。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "intersected the two faux-camaieu descriptions and recovered slightly more variation than camaieu while remaining close before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "カマイユより少しだけ色相側の変化を増やしつつ、全体として近い色どうしに保つ配色はどれですか。",
+      "sentence": "カマイユより少しだけ色相側の変化を増やしつつ、全体として近い色どうしに保つ配色はどれですか。",
+      "choices": [
+        "トーナル配色",
+        "フォカマイユ配色",
+        "ヘクサード",
+        "ビコロール配色"
+      ],
+      "proposedAnswer": "フォカマイユ配色",
+      "correctIndex": 1,
+      "explanation": "フォカマイユはカマイユより少し色相をずらすなど、わずかに変化を増やす配色です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "matched the independently shared slight-hue-shift/more-variation rule to faux-camaieu before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "フォカマイユ配色でも小さく保たれる差として、確認した資料が共通して示すものはどれですか。",
+      "sentence": "フォカマイユ配色でも小さく保たれる差として、確認した資料が共通して示すものはどれですか。",
+      "choices": [
+        "色数差",
+        "文字数差",
+        "明度・彩度などトーン側の差",
+        "必ず色相差だけ"
+      ],
+      "proposedAnswer": "明度・彩度などトーン側の差",
+      "correctIndex": 2,
+      "explanation": "フォカマイユでも明度・彩度などの差は小さく、近似した印象を保ちます。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the two faux-camaieu definitions and retained small tone/lightness/chroma difference as common before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "カマイユとフォカマイユの違いとして、今回確定した範囲で最も適切な説明はどれですか。",
+      "sentence": "カマイユとフォカマイユの違いとして、今回確定した範囲で最も適切な説明はどれですか。",
+      "choices": [
+        "前者だけが強い補色対比を使う",
+        "前者だけが無彩色を使う",
+        "両者は完全に同じ条件で区別できない",
+        "フォカマイユの方がカマイユよりわずかに変化が大きい"
+      ],
+      "proposedAnswer": "フォカマイユの方がカマイユよりわずかに変化が大きい",
+      "correctIndex": 3,
+      "explanation": "確認した資料はいずれも、フォカマイユをカマイユより少し変化を増やした配色として区別しています。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "compared both source definitions and independently recovered greater-but-still-small variation for faux-camaieu before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "色の共通性・類似性を強く利用し、ほとんど単色に近いまとまりを作るのはどれですか。",
+      "sentence": "色の共通性・類似性を強く利用し、ほとんど単色に近いまとまりを作るのはどれですか。",
+      "choices": [
+        "カマイユ配色",
+        "トライアド",
+        "スプリットコンプリメンタリー",
+        "ビコロール配色"
+      ],
+      "proposedAnswer": "カマイユ配色",
+      "correctIndex": 0,
+      "explanation": "カマイユは色の差を極めて小さくし、ほぼ単色に見えるまとまりを作る配色です。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "matched strong similarity plus almost-monochromatic result to camaieu before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "カマイユの近似感を残しながら、少しだけ動きや変化を加える配色はどれですか。",
+      "sentence": "カマイユの近似感を残しながら、少しだけ動きや変化を加える配色はどれですか。",
+      "choices": [
+        "ヘクサード",
+        "フォカマイユ配色",
+        "トーンオントーン配色",
+        "コンプレックスハーモニー"
+      ],
+      "proposedAnswer": "フォカマイユ配色",
+      "correctIndex": 1,
+      "explanation": "フォカマイユは近似感を維持しながら、カマイユよりわずかに差を増やします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched retained similarity plus slight added variation to faux-camaieu before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "今回の根拠から、カマイユとフォカマイユの両方に共通して確実に言えることはどれですか。",
+      "sentence": "今回の根拠から、カマイユとフォカマイユの両方に共通して確実に言えることはどれですか。",
+      "choices": [
+        "必ず補色関係を使う",
+        "明度差を最大にする",
+        "互いに近い色の関係を利用する",
+        "無彩色だけを使う"
+      ],
+      "proposedAnswer": "互いに近い色の関係を利用する",
+      "correctIndex": 2,
+      "explanation": "両者とも近似した色の共通性を利用する配色で、フォカマイユの方がその差を少し大きくします。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "intersected both scheme definitions and retained close/similar color relationship as common before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    },
+    {
+      "id": "pc2-camaieu-faux-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/scheme/camaieu_faux_camaieu",
+      "skillId": "pc2.scheme.camaieu_faux_camaieu",
+      "categoryId": "pc2.scheme",
+      "questionType": "text_choice",
+      "prompt": "今回のsource contractで、カマイユ／フォカマイユについて問題化しないものはどれですか。",
+      "sentence": "今回のsource contractで、カマイユ／フォカマイユについて問題化しないものはどれですか。",
+      "choices": [
+        "近似した色関係を使うこと",
+        "フォカマイユの方が少し変化が大きいこと",
+        "カマイユが単色に近いこと",
+        "根拠が一致していない厳密な数値色相差"
+      ],
+      "proposedAnswer": "根拠が一致していない厳密な数値色相差",
+      "correctIndex": 3,
+      "explanation": "独立資料の共通部分だけを採用するため、今回の監査で一致していない厳密なPCCS数値境界は問題化しません。",
+      "sourceRefs": [
+        "aft_grade2_toc_2026",
+        "pluscolors_camaieu_2024",
+        "onca_camaieu_2022"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "checked the audit boundary and confirmed that exact numeric PCCS hue differences were deliberately excluded before comparing with proposedAnswer",
+        "checkedOn": "2026-09-01"
+      }
+    }
   ]
 }
