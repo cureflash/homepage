@@ -28,9 +28,9 @@ function promptPositions(prompt) {
   return [Number(match[1]), Number(match[2])];
 }
 
-test('named hue-classification runtime promotion is record-identical and owns the 211-question frontier', () => {
-  assert.equal(runtime.questions.length, 211);
-  assert.equal(runtime.questions.filter((question) => question.validationStatus === 'verified').length, 211);
+test('named hue-classification runtime promotion remains record-identical after later runtime growth', () => {
+  assert.ok(runtime.questions.length >= 211);
+  assert.equal(runtime.questions.filter((question) => question.validationStatus === 'verified').length, runtime.questions.length);
   assert.equal(runtime.questions.filter((question) => question.validationStatus === 'pending_validation').length, 0);
   const promoted = runtime.questions.filter((question) => question.skillId === authoring.skill.id);
   assert.equal(promoted.length, 12);
