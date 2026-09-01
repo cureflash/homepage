@@ -25,7 +25,7 @@
     "active_skill": "pc2.scheme.tonal",
     "active_authoring": {"generated": 12, "checked": 12, "verified": 12, "pending": 0},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Run dedicated tonal authoring CI; if green merge, then promote the 12 verified records record-identically from runtime 84 to 96."
+    "next": "Finish the record-identical pc2.scheme.tonal promotion from runtime 84 to 96; pc2.scheme.camaieu_faux_camaieu is already source-resolved and independently verified as the queued next authoring batch."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -34,10 +34,10 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 4,
-    "generated": 24,
-    "checked": 24,
-    "verified": 48,
+    "checkpoints_completed": 5,
+    "generated": 36,
+    "checked": 36,
+    "verified": 60,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
@@ -46,11 +46,12 @@
       "Promoted the already independently verified pc2.scheme.tone_on_tone batch record-identically into Grade 2 runtime and extended the exact-equality/full-fingerprint/shared-engine frontier from 60 to 72.",
       "Resolved pc2.scheme.tone_in_tone from current official Grade 2 scope plus three explicit auditable text definitions; retained only the shared same-tone + hue-variation rule and independently verified 12 text-only questions with A/B/C/D=3/3/3/3.",
       "Promoted the independently verified pc2.scheme.tone_in_tone batch record-identically into Grade 2 runtime and extended the exact-equality/full-fingerprint/shared-engine frontier from 72 to 84.",
-      "Resolved pc2.scheme.tonal from the current official Grade 2 sample plus two independent explicit definitions; retained only the shared sf/d/ltg/g intermediate-tone membership and independently verified 12 text-only questions with A/B/C/D=3/3/3/3."
+      "Resolved pc2.scheme.tonal from the current official Grade 2 sample plus two independent explicit definitions; retained only the shared sf/d/ltg/g intermediate-tone membership and independently verified 12 text-only questions with A/B/C/D=3/3/3/3.",
+      "While the separate tonal-promotion branch remains incomplete, resolved pc2.scheme.camaieu_faux_camaieu from official Grade 2 scope plus Plus Colors and ONCA; retained only the shared close-color qualitative rules and independently verified 12 text-only questions with A/B/C/D=3/3/3/3, excluding exact numeric PCCS boundaries."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Complete tonal authoring CI and merge, then promote to Grade 2 runtime 96."
+  "next": "Finish tonal runtime promotion 84 to 96, then promote the queued verified camaieu/faux-camaieu batch in order."
 }
