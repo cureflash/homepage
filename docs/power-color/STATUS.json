@@ -23,9 +23,9 @@
     "runtime_questions": {"verified": 84, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone"],
     "active_skill": "pc2.scheme.tonal",
-    "active_authoring": {"generated": 0, "checked": 0, "verified": 0, "pending": 0},
+    "active_authoring": {"generated": 12, "checked": 12, "verified": 12, "pending": 0},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Resolve the next safe nonvisual rule for pc2.scheme.tonal from current official Grade 2 scope plus independently matching auditable sources; author only the explicit common intersection."
+    "next": "Run dedicated tonal authoring CI; if green merge, then promote the 12 verified records record-identically from runtime 84 to 96."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -34,10 +34,10 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 3,
-    "generated": 12,
-    "checked": 12,
-    "verified": 36,
+    "checkpoints_completed": 4,
+    "generated": 24,
+    "checked": 24,
+    "verified": 48,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
@@ -45,11 +45,12 @@
     "checkpoint_breakdown": [
       "Promoted the already independently verified pc2.scheme.tone_on_tone batch record-identically into Grade 2 runtime and extended the exact-equality/full-fingerprint/shared-engine frontier from 60 to 72.",
       "Resolved pc2.scheme.tone_in_tone from current official Grade 2 scope plus three explicit auditable text definitions; retained only the shared same-tone + hue-variation rule and independently verified 12 text-only questions with A/B/C/D=3/3/3/3.",
-      "Promoted the independently verified pc2.scheme.tone_in_tone batch record-identically into Grade 2 runtime and extended the exact-equality/full-fingerprint/shared-engine frontier from 72 to 84."
+      "Promoted the independently verified pc2.scheme.tone_in_tone batch record-identically into Grade 2 runtime and extended the exact-equality/full-fingerprint/shared-engine frontier from 72 to 84.",
+      "Resolved pc2.scheme.tonal from the current official Grade 2 sample plus two independent explicit definitions; retained only the shared sf/d/ltg/g intermediate-tone membership and independently verified 12 text-only questions with A/B/C/D=3/3/3/3."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source and author pc2.scheme.tonal without image-derived or unsourced rules."
+  "next": "Complete tonal authoring CI and merge, then promote to Grade 2 runtime 96."
 }
