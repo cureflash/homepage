@@ -20,10 +20,9 @@
     "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
-    "runtime_questions": {"verified": 24, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions"],
-    "active_skill": "pc2.munsell.notation_components",
-    "active_skill_questions": {"generated": 12, "checked": 12, "verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_questions": {"verified": 36, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components"],
+    "active_skill": null,
     "current_authority": [
       "https://www.aft.or.jp/pages/feature/exam2",
       "https://www.aft.or.jp/images/text_of-2st-grade_mokuji.pdf",
@@ -32,7 +31,7 @@
       "https://www.jcri.jp/product/digital_color_manual"
     ],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "After current PR CI passes and merges, promote the verified pc2.munsell.notation_components 12-question batch record-identically to grade2-runtime.json, then run exact-equality, full-fingerprint and shared-engine gates."
+    "next": "Continue the Grade 2 first-party source inventory in official-text order after Munsell notation. Select the next nonvisual micro-skill only where the complete answer rule is explicit in current first-party material."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -41,7 +40,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 2,
+    "checkpoints_completed": 3,
     "generated": 12,
     "checked": 12,
     "verified": 12,
@@ -51,11 +50,12 @@
     "pending": 0,
     "checkpoint_breakdown": [
       "Promoted pc2.scheme.triad_hue_positions record-identically to the Grade 2 runtime frontier 24 with exact-equality, fingerprint and shared-engine gates.",
-      "Resolved a first-party JCRI Munsell H V/C rule and authored/independently QA-verified 12 pc2.munsell.notation_components text-only questions."
+      "Resolved a first-party JCRI Munsell H V/C rule and authored/independently QA-verified 12 pc2.munsell.notation_components text-only questions.",
+      "Promoted pc2.munsell.notation_components record-identically to the Grade 2 runtime frontier 36 and extended exact-equality, full-fingerprint and shared-engine gates to all three skills."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Merge current green PR, then promote pc2.munsell.notation_components to move Grade 2 runtime 24 -> 36."
+  "next": "Merge the current 36-question runtime promotion after green CI, then resume Grade 2 first-party source inventory in official-text order."
 }

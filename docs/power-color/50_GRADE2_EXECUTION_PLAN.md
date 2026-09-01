@@ -20,7 +20,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is promoted to 24 verified / pending 0 on this branch: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions`. The runtime promotion gate requires exact equality with both verified authoring batches, zero full-fingerprint duplicates, and execution through the shared Power TOEIC engine.
+Grade 2 runtime is 36 verified / pending 0 on the current promotion branch: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions` + 12 `pc2.munsell.notation_components`. The runtime gate requires exact equality with all three verified authoring batches, zero full-fingerprint duplicates, and execution through the shared Power TOEIC engine.
 
 Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
@@ -47,8 +47,8 @@ The current official Grade 2 TOC places Munsell hue, value, chroma and notation 
 - [x] Independently parse/re-derive every answer before verification.
 - [x] Verify 12/12; pending 0; A/B/C/D = 3/3/3/3.
 - [x] Add dedicated authoring/shared-renderer/fingerprint gate.
-- [ ] Promote the verified Munsell batch record-identically after the current PR is green.
+- [x] Promote the verified Munsell batch record-identically; runtime frontier 36.
 
 ## Exact next start point
 
-First confirm CI for the 24-question triad runtime promotion plus Munsell authoring checkpoint and merge it. Then promote `grade2-authoring-munsell-notation-components-0001-0012.json` record-identically to Grade 2 runtime, moving the frontier 24 → 36, and rerun exact-equality, full-fingerprint and shared-engine gates. After that continue the current first-party source inventory in official-text order.
+Confirm CI for the 36-question runtime promotion and merge if green. Then continue the current first-party source inventory in official-text order after Munsell notation. Do not generate another micro-skill unless current first-party material supplies the complete nonvisual answer rule.
