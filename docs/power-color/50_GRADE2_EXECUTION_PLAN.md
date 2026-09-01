@@ -42,21 +42,20 @@ Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED
 - [x] 12 verified text-only questions promoted record-identically.
 
 ### Natural / complex harmony
+- [x] Resolve only the independently corroborated lightness-direction rule.
+- [x] Generate and independently verify 12 text-only questions; A/B/C/D = 3/3/3/3.
+- [x] Promote record-identically; runtime frontier 48.
+- [x] Extend runtime exact-equality/full-fingerprint/shared Power TOEIC engine gate across all four runtime skills.
 
-The current official Grade 2 TOC explicitly places natural harmony and complex harmony in scope, but the public TOC does not state the detailed rule. Two independently checked professional sources state the same nonvisual relation:
-- Rock Paint: natural harmony follows the natural hue/lightness relation, with the hue nearer yellow lighter and the hue nearer blue darker; complex harmony reverses the relation.
-- Daiwa House: natural harmony makes the hue nearer yellow higher in lightness and the hue nearer blue-violet lower; complex harmony makes the hue nearer yellow lower and the hue nearer blue-violet higher.
-
-Only the intersection of those explicit statements is authorized. Do not infer hue-difference limits, tone restrictions, monitor colors, RGB/HEX, or diagram geometry from these sources.
-
-- [x] Define `pc2.scheme.natural_complex_harmony` from the corroborated lightness-direction rule only.
+### Dominant color / dominant tone
+- [x] Current official Grade 2 scope/TOC confirms dominant schemes are in scope.
+- [x] Independently cross-check professional sources and fix only their common nonvisual rule: dominant color unifies hue and varies tone; dominant tone unifies tone and varies hue; both use 3 or more colors.
+- [x] Define `pc2.scheme.dominant_color_tone` from that common rule only.
 - [x] Generate 12 pending-first text-only questions.
-- [x] Independently re-derive every answer from the corroborated rule.
-- [x] Verify 12/12; pending 0; A/B/C/D = 3/3/3/3.
-- [x] Add dedicated authoring/shared-renderer/fingerprint gate.
-- [x] Promote the verified batch record-identically to `grade2-runtime.json`; runtime frontier 48.
-- [x] Extend runtime exact-equality/full-fingerprint/shared Power TOEIC engine gate across all four Grade 2 skills.
+- [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
+- [x] Add a dedicated authoring/shared-renderer/full-fingerprint gate.
+- [ ] Promote record-identically to Grade 2 runtime 60 after authoring CI succeeds.
 
 ## Exact next start point
 
-Continue the official-text source inventory after natural/complex harmony, beginning with dominant schemes. Do not generate another micro-skill unless its complete nonvisual answer rule is explicit and auditable.
+Run the dominant-color/tone authoring CI and merge if green. Then promote its 12 verified records record-identically to runtime 60 and extend exact-equality/full-fingerprint/shared-engine gates. After promotion, continue source inventory to tone-on-tone / tone-in-tone / tonal schemes.
