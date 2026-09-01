@@ -86,7 +86,8 @@
     { questionId: "takken-q-56-002", conceptId: "takken-concept-heirs-order", knowledgeRefs: ["takken-k-heirs-order-spouse-child-half-each"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-57-001", conceptId: "takken-concept-inheritance-deliberation", knowledgeRefs: ["takken-k-inheritance-deliberation-three-month-period"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-57-002", conceptId: "takken-concept-inheritance-deliberation", knowledgeRefs: ["takken-k-inheritance-deliberation-renunciation-family-court"], sourceQuestionValidationStatus: "verified" },
-    { questionId: "takken-q-58-001", conceptId: "takken-concept-will-effect", knowledgeRefs: ["takken-k-will-effect-death"], sourceQuestionValidationStatus: "verified" }
+    { questionId: "takken-q-58-001", conceptId: "takken-concept-will-effect", knowledgeRefs: ["takken-k-will-effect-death"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-58-002", conceptId: "takken-concept-reserved-portion", knowledgeRefs: ["takken-k-reserved-portion-heirs-excluding-siblings"], sourceQuestionValidationStatus: "verified" }
   ];
 
   const knownKnowledgeIds = new Set([
@@ -148,10 +149,11 @@
     "takken-k-fixed-term-building-lease-no-renewal-expiry", "takken-k-fixed-term-building-lease-contract-form", "takken-k-fixed-term-building-lease-prior-explanation", "takken-k-fixed-term-building-lease-no-explanation-invalid",
     "takken-k-heirs-order-spouse-always-heir", "takken-k-heirs-order-children-first-rank", "takken-k-heirs-order-lineal-ascendants-second-rank", "takken-k-heirs-order-siblings-third-rank", "takken-k-heirs-order-spouse-child-half-each",
     "takken-k-inheritance-deliberation-three-month-period", "takken-k-inheritance-deliberation-renunciation-family-court",
-    "takken-k-will-effect-death"
+    "takken-k-will-effect-death",
+    "takken-k-reserved-portion-heirs-excluding-siblings"
   ]);
   const allowedConceptIds = new Set([
-    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document", "takken-concept-article35-vs-37", "takken-concept-eight-restrictions-scope", "takken-concept-cooling-off", "takken-concept-earnest-money-safeguards", "takken-concept-brokerage-fees", "takken-concept-supervision-dispositions", "takken-concept-declaration-arrival", "takken-concept-mistake", "takken-concept-fraud", "takken-concept-mental-reservation", "takken-concept-fictitious-declaration", "takken-concept-minor", "takken-concept-adult-ward", "takken-concept-agency", "takken-concept-apparent-agency", "takken-concept-acquisitive-prescription", "takken-concept-extinctive-prescription", "takken-concept-property-transfer-opposability", "takken-concept-co-ownership", "takken-concept-mortgage", "takken-concept-default-damages", "takken-concept-contract-cancellation", "takken-concept-simultaneous-performance", "takken-concept-risk-allocation", "takken-concept-sale-earnest", "takken-concept-civil-nonconformity", "takken-concept-lease-general", "takken-concept-security-deposit", "takken-concept-building-lease-opposability", "takken-concept-ordinary-land-lease-term", "takken-concept-land-lease-opposability", "takken-concept-fixed-term-land-lease", "takken-concept-building-lease-term", "takken-concept-fixed-term-building-lease", "takken-concept-heirs-order", "takken-concept-inheritance-deliberation", "takken-concept-will-effect"
+    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document", "takken-concept-article35-vs-37", "takken-concept-eight-restrictions-scope", "takken-concept-cooling-off", "takken-concept-earnest-money-safeguards", "takken-concept-brokerage-fees", "takken-concept-supervision-dispositions", "takken-concept-declaration-arrival", "takken-concept-mistake", "takken-concept-fraud", "takken-concept-mental-reservation", "takken-concept-fictitious-declaration", "takken-concept-minor", "takken-concept-adult-ward", "takken-concept-agency", "takken-concept-apparent-agency", "takken-concept-acquisitive-prescription", "takken-concept-extinctive-prescription", "takken-concept-property-transfer-opposability", "takken-concept-co-ownership", "takken-concept-mortgage", "takken-concept-default-damages", "takken-concept-contract-cancellation", "takken-concept-simultaneous-performance", "takken-concept-risk-allocation", "takken-concept-sale-earnest", "takken-concept-civil-nonconformity", "takken-concept-lease-general", "takken-concept-security-deposit", "takken-concept-building-lease-opposability", "takken-concept-ordinary-land-lease-term", "takken-concept-land-lease-opposability", "takken-concept-fixed-term-land-lease", "takken-concept-building-lease-term", "takken-concept-fixed-term-building-lease", "takken-concept-heirs-order", "takken-concept-inheritance-deliberation", "takken-concept-will-effect", "takken-concept-reserved-portion"
   ]);
   const questionIds = new Set();
 
@@ -165,7 +167,7 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 85) throw new Error(`Expected 85 mapped questions through unit 58 q58-001, got ${mappings.length}`);
+  if (mappings.length !== 86) throw new Error(`Expected 86 mapped questions through unit 58 q58-002, got ${mappings.length}`);
   const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
   for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
   if (!questionIds.has("takken-q-15-001")) throw new Error("Brokerage contract document source question mapping is missing");
@@ -215,6 +217,7 @@
   if (!questionIds.has("takken-q-56-001") || !questionIds.has("takken-q-56-002")) throw new Error("Heirs-order source question mappings are missing");
   if (!questionIds.has("takken-q-57-001") || !questionIds.has("takken-q-57-002")) throw new Error("Inheritance-deliberation source question mappings are missing");
   if (!questionIds.has("takken-q-58-001")) throw new Error("Will-effect source question mapping is missing");
+  if (!questionIds.has("takken-q-58-002")) throw new Error("Reserved-portion source question mapping is missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
