@@ -20,7 +20,7 @@
     "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
-    "runtime_questions": {"verified": 108, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_questions": {"verified": 120, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": [
       "pc2.foundation.official_sample_facts",
       "pc2.scheme.triad_hue_positions",
@@ -30,12 +30,13 @@
       "pc2.scheme.tone_on_tone",
       "pc2.scheme.tone_in_tone",
       "pc2.scheme.tonal",
-      "pc2.scheme.camaieu_faux_camaieu"
+      "pc2.scheme.camaieu_faux_camaieu",
+      "pc2.scheme.bicolor_tricolor"
     ],
-    "active_skill": "pc2.scheme.bicolor_tricolor",
-    "active_authoring": {"generated": 12, "checked": 12, "verified": 12, "pending": 0},
+    "active_skill": null,
+    "active_authoring": {"generated": 0, "checked": 0, "verified": 0, "pending": 0},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Promote the independently verified pc2.scheme.bicolor_tricolor batch record-identically from runtime 108 to 120 after its authoring/source gates pass CI."
+    "next": "Acquire an explicit auditable nonvisual rule for the next official-text-order topic, hue-circle division schemes. Generate only if the rule is source-resolved without image appearance, RGB/HEX or unstated geometry."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -44,22 +45,23 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 3,
+    "checkpoints_completed": 4,
     "generated": 12,
-    "checked": 36,
-    "verified": 36,
+    "checked": 48,
+    "verified": 48,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
       "Promoted the already independently verified pc2.scheme.tonal batch record-identically, extending Grade 2 runtime from 84 to 96.",
-      "Promoted the queued independently verified pc2.scheme.camaieu_faux_camaieu batch record-identically, extending Grade 2 runtime from 96 to 108; the runtime gate now covers nine skills with exact equality, full-fingerprint duplicate protection and shared Power TOEIC engine execution.",
-      "Resolved pc2.scheme.bicolor_tricolor from current official Grade 2 scope plus independently matching Plus Colors and MEGASOFT text definitions; retained only clear-contrast 2-color vs 3-color rules and independently verified 12 text-only questions with A/B/C/D=3/3/3/3."
+      "Promoted the queued independently verified pc2.scheme.camaieu_faux_camaieu batch record-identically, extending Grade 2 runtime from 96 to 108; the runtime gate covers nine skills with exact equality, full-fingerprint duplicate protection and shared Power TOEIC engine execution.",
+      "Resolved pc2.scheme.bicolor_tricolor from current official Grade 2 scope plus independently matching Plus Colors and MEGASOFT text definitions; retained only clear-contrast 2-color vs 3-color rules and independently verified 12 text-only questions with A/B/C/D=3/3/3/3.",
+      "Promoted pc2.scheme.bicolor_tricolor record-identically from runtime 108 to 120 and extended the exact-equality/full-fingerprint/shared-engine frontier to ten skills."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Finish bicolor/tricolor authoring CI, then promote runtime 108 to 120 record-identically."
+  "next": "Continue Grade 2 source acquisition at hue-circle division schemes in official-text order."
 }
