@@ -57,6 +57,15 @@ Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED
 - [x] Promote record-identically to Grade 2 runtime 60.
 - [x] Extend runtime exact-equality/full-fingerprint/shared Power TOEIC engine gate across all five runtime skills.
 
+### Tone-on-tone
+- [x] Current official Grade 2 TOC confirms tone-on-tone is in scope.
+- [x] Independently cross-check ONCA and Plus Colors and retain only their common nonvisual rule: same-to-similar hue range with a comparatively large lightness difference.
+- [x] Do not encode Plus Colors' additional chroma-alignment condition because it is not independently established by the second source.
+- [x] Generate 12 pending-first text-only questions.
+- [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
+- [x] Add dedicated authoring/shared-renderer/full-fingerprint gate.
+- [ ] Promote record-identically to Grade 2 runtime 72 after authoring CI succeeds.
+
 ## Exact next start point
 
-Continue the official-text source inventory after dominant schemes, beginning with tone-on-tone / tone-in-tone / tonal schemes. Select the first micro-skill whose complete nonvisual answer rule is explicit and auditable; do not infer tone relationships from display appearance or unstated PCCS diagram geometry.
+Run the `pc2.scheme.tone_on_tone` authoring gate and Power Color CI. If green, merge, then promote its 12 verified records record-identically to runtime 72 and extend exact-equality/full-fingerprint/shared-engine gates. After promotion, continue source inventory to tone-in-tone, then tonal.
