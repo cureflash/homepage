@@ -37,16 +37,15 @@ Grade 2 runtime is 108 verified / pending 0 across nine promoted skills. Grade 3
 - [x] `pc2.scheme.camaieu_faux_camaieu`: 12 verified and promoted; runtime 96 → 108.
 - [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all nine promoted skills.
 
-## Next source-order checkpoint
-
 ### Bicolor / tricolor
 - [x] Current official Grade 2 TOC places bicolor / tricolor next after the resolved scheme group.
-- [ ] Obtain an explicit auditable nonvisual rule.
-- [ ] If first-party public material gives scope but not the rule, independently corroborate the exact retained rule with acceptable secondary sources.
-- [ ] Do not infer the rule from example-image appearance or unstated diagram geometry.
-- [ ] Generate pending-first questions only after the rule is source-resolved.
-- [ ] Independently QA, duplicate/coverage-check and promote only verified records.
+- [x] Independently cross-check Plus Colors and MEGASOFT and retain only their common nonvisual rule: bicolor/bicolore is a clear-contrast two-color scheme; tricolor/tricolore is a clear-contrast three-color scheme; bicolore is also called bicolor.
+- [x] Exclude exact hue differences, PCCS tone boundaries, saturation thresholds, achromatic placement, RGB/HEX, monitor values and image appearance.
+- [x] Generate 12 pending-first text-only questions.
+- [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
+- [x] Add dedicated authoring/shared-renderer/full-fingerprint gate and source audit.
+- [ ] Promote record-identically to Grade 2 runtime 120 after authoring CI is green.
 
 ## Exact next start point
 
-Acquire the bicolor / tricolor nonvisual rule in official-text order. If it cannot be fixed from acceptable authority, record the blocker and proceed only to source acquisition for the next TOC topic; do not invent an answer rule.
+Run the bicolor/tricolor authoring/source gates, then promote the 12 verified records record-identically from runtime 108 to 120. After promotion, continue source acquisition at the next official-text-order topic, hue-circle division schemes.
