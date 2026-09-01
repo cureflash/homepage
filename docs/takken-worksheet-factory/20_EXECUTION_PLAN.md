@@ -38,11 +38,12 @@ Current checkpoint:
 - [x] `takken-q-57-001` maps only to the three-month period/start-point item it directly tests.
 - [x] `takken-q-57-002` maps only to the family-court renunciation item it directly tests.
 - [x] The three-options item, period-extension item, and pre-choice estate-investigation item remain explicit Phase 4.3 deficits because no existing verified question directly measures them.
-- [ ] Start `takken-concept-inheritance-renunciation` from source unit `inheritance-acceptance-renunciation`; extract its canonical knowledge items without reassigning existing question mappings merely because the source unit overlaps.
+- [x] `takken-concept-inheritance-renunciation` canonical extraction is complete for this checkpoint. Three verified knowledge items cover family-court declaration under Civil Code Article 938, the deemed-never-heir effect under Article 939, and the possession-limited preservation duty under Article 940.
+- [ ] Reconcile existing verified questions against the three inheritance-renunciation items without duplicating or reassigning `takken-q-57-002` merely because the source unit overlaps; leave uncovered items as Phase 4.3 deficits, then complete the concept if no direct evidence remains.
 
-Current Phase 4.2 totals: 74/113 completed concepts, 379 verified knowledge items, 84 existing verified questions mapped, 261 explicit question-coverage gaps.
+Current Phase 4.2 totals: 74/113 completed concepts, 382 verified knowledge items, 84 existing verified questions mapped, 264 explicit question-coverage gaps.
 
-Exact continuation: start `takken-concept-inheritance-renunciation` from `inheritance-acceptance-renunciation`. Build its canonical knowledge items from primary law, preserving the 2026-04-01 cutoff. Reconcile existing verified evidence only if a question is not already uniquely assigned elsewhere and directly tests the item. Keep Phase 4.3 blocked.
+Exact continuation: reconcile existing verified questions against `takken-concept-inheritance-renunciation`. Preserve the existing unique `takken-q-57-002` mapping under inheritance-deliberation. Do not infer coverage from shared source fact `u57-f2`; map only genuinely distinct direct evidence. Keep Phase 4.3 blocked.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
