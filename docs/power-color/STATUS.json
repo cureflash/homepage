@@ -22,16 +22,10 @@
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {"verified": 36, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components"],
-    "active_skill": null,
-    "current_authority": [
-      "https://www.aft.or.jp/pages/feature/exam2",
-      "https://www.aft.or.jp/images/text_of-2st-grade_mokuji.pdf",
-      "https://www.jcri.jp/square/tool",
-      "https://www.jcri.jp/product/hvc_color_training",
-      "https://www.jcri.jp/product/digital_color_manual"
-    ],
+    "active_skill": "pc2.scheme.natural_complex_harmony",
+    "active_authoring": {"generated": 12, "checked": 12, "verified": 12, "pending": 0},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Continue the Grade 2 first-party source inventory in official-text order after Munsell notation. Select the next nonvisual micro-skill only where the complete answer rule is explicit in current first-party material."
+    "next": "Promote pc2.scheme.natural_complex_harmony record-identically to runtime 48, extend exact-equality/full-fingerprint/shared-engine gates, then continue the official-text source inventory after natural/complex harmony."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -40,7 +34,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 3,
+    "checkpoints_completed": 1,
     "generated": 12,
     "checked": 12,
     "verified": 12,
@@ -49,13 +43,11 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted pc2.scheme.triad_hue_positions record-identically to the Grade 2 runtime frontier 24 with exact-equality, fingerprint and shared-engine gates.",
-      "Resolved a first-party JCRI Munsell H V/C rule and authored/independently QA-verified 12 pc2.munsell.notation_components text-only questions.",
-      "Promoted pc2.munsell.notation_components record-identically to the Grade 2 runtime frontier 36 and extended exact-equality, full-fingerprint and shared-engine gates to all three skills."
+      "Resolved the shared nonvisual natural/complex harmony lightness-direction rule from official Grade 2 scope plus two independently matching professional sources; authored and independently QA-verified 12 text-only questions with A/B/C/D=3/3/3/3."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Merge the current 36-question runtime promotion after green CI, then resume Grade 2 first-party source inventory in official-text order."
+  "next": "Promote the verified natural/complex harmony authoring batch to Grade 2 runtime 48, then continue Grade 2 source inventory in official-text order."
 }
