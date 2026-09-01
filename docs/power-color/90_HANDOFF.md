@@ -3,31 +3,29 @@
 ## Current checkpoint
 Grade 3 Phase A remains active. Runtime remains 199 verified / pending 0: 127 conventional-color questions + 12 `pc3.pccs.complementary_hue_number` + 12 `pc3.relation.same_tone` + 12 `pc3.relation.same_hue` + 12 `pc3.relation.hue_difference` + 12 `pc3.value.gradient` + 12 `pc3.scheme.identification`. The shared Power TOEIC question-bank/workout/session engine remains the only engine.
 
-Completed this run — 1 source-authority checkpoint:
-1. Opened the current Association-hosted official Grade 3 text table of contents directly from the official Grade-level page and visually verified the PDF. This narrowed the missing named relation rules to exact official-text page ranges: hue relation material at pp.72–83 (`色相に共通性がある配色`, `色相にやや違いがある配色`, `色相に対照性がある配色`) and tone relation material at pp.84–89 (`トーン共通の配色`, `トーン対照の配色`). The TOC also confirms accent color, separation, and gradient at pp.92/94/96.
+Two source/data checkpoints have advanced:
+1. The first-party-only blocker for named hue relations was replaced by the explicit reliable-secondary-source policy in `42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md`. Current Grade 3 first-party material still fixes scope; peer-reviewed evidence supplies the missing PCCS boundaries. `pc3.relation.hue_classification` now has 12 independently verified text-only authoring records covering circular differences 1–12 exactly once. CI run `33463982640` succeeded and PR #459 merged as `4935f8a469408a89a71407cfd685b5f432b1f364`.
+2. DIC Color Design's current PCCS reference was cross-checked against the already source-confirmed 24 positions/notations and supplies all 24 Japanese hue-name mappings. `grade3-pccs-structure.json` now has 24/24 `nameJa` values. Intentional duplicates 14/15 = 青緑 and 17/18 = 青 are gated. Reading fields remain null because an explicit reading source has not yet been acquired.
 
-The public TOC does not expose the actual hue-class boundary table or tone-pair membership rules, so no named boundary, tone-distance graph, contrast-tone rule, or monitor RGB value was inferred or added.
+Current-run question accounting: 12 generated / 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending. Runtime remains 199 because the new named-hue authoring slice has not yet been promoted into the monolithic runtime bank.
 
-Current-run accounting: 0 generated / 0 checked / 0 verified / 0 revision / 0 rejected / 0 pending. Runtime remains 199 verified / pending 0.
-
-Source boundaries retained:
-- The current Color Certification Association Grade 3 sample directly includes 同一トーン配色, 対照トーン配色, 同一色相配色, 中差色相配色 and 明度のグラデーション, and explicitly describes the correct gradient characteristic as changing lightness stepwise.
-- The current official Grade 3 text TOC now fixes the authoritative acquisition target to pp.72–89 instead of a broad web search.
-- The current official sample warns that monitor environments can alter displayed color appearance; monitor display remains a reference channel, not exam-print ground truth.
-- JCRI first-party evidence confirms implemented adjacent/similar hue and same/similar tone classifications, but not their full current boundary tables.
-- `pc3.scheme.identification` continues to cover only rules whose answers can already be derived deterministically from source-confirmed facts. It does not encode contrast-tone or named hue-difference boundaries.
-- Tone-difference/contrast-tone expansion remains unencoded. Current JCRI authority confirms conventional PCCS itself does not provide a general tone-relationship algorithm, so no distance/adjacency rule may be inferred from layout.
-- PCCS Japanese hue names/readings remain 0/24 until a complete current authoritative mapping is acquired.
-- PCCS representative monitor values remain unpopulated; current licensed JCRI PCCS Color Calc direct numeric output remains the approved primary acquisition path.
-- Monitor-facing PCCS questions remain blocked.
-- Hue 20 remains `V` until the authority actually changes it.
+Source boundaries now in force:
+- Current Color Certification Association material remains the Grade 3 scope authority.
+- Reliable secondary structural evidence is allowed only under `42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md`: explicit PCCS identification, auditable rule, no conflict with current first-party material, and independent corroboration where practical.
+- Named hue classification is resolved: 0 same, 1 adjacent, 2–3 similar, 4–7 medium-difference, 8–10 contrast, 11–12 complementary.
+- Peer-reviewed 2019 `工学教育` evidence defines similar tones as adjacent tone regions and gives a coordinate-based judgment. Peer-reviewed 2026 evidence defines contrast tones conceptually and confirms `b` / `dk` as a contrast pair. The complete contrast-tone pair matrix is still under audit.
+- PCCS Japanese hue names are now 24/24 source-confirmed under the accepted specialist-industry source route; readings remain pending.
+- PCCS representative monitor values remain unpopulated. The current licensed JCRI PCCS Color Calc direct numeric output remains the approved primary acquisition path.
+- Monitor-facing PCCS questions remain blocked. No RGB/HEX rule was relaxed.
+- Hue 20 remains `V`; the current JCRI manual treats `PB` only as a future rename, and the current DIC reference also lists `20:V / 青紫`.
 
 Not complete:
-- `pc3.relation.tone_difference` and expansion of scheme identification into contrast-tone / named hue-difference classes because complete explicit current exam classification boundaries are still missing;
-- complete 24-record Japanese hue-name/readings mapping;
-- current representative digital display values for monitor swatches and the visual PCCS question families;
+- runtime promotion of the 12 verified `pc3.relation.hue_classification` records;
+- complete contrast-tone pair-membership evidence and `pc3.relation.tone_difference` generation;
+- explicit readings for the 24 Japanese hue names;
+- current representative digital display values for monitor swatches and visual PCCS question families;
 - full Grade 3 completion, then Grade 2 and Grade 1;
 - `color_database_complete` remains false.
 
 ## Next exact start point
-Acquire current authoritative content corresponding to official Grade 3 text pp.72–89, or equivalent current first-party card/manual/software output that exposes the actual rules. For hue relations, target pp.72–83; for tone common/contrast relations, target pp.84–89. Do not reverse-engineer missing boundaries from sample images, three-color software examples, tone-map layout, secondary sites, or the detailed-PCCS algorithm. Monitor-facing PCCS questions remain blocked until approved display references exist.
+Promote the 12 CI-cleared `pc3.relation.hue_classification` records record-identically into runtime 211 using the same safe promotion/equality/shared-engine approach as prior Power Color runtime promotions. Do not hand-edit or partially rewrite the large monolithic runtime JSON through a lossy interface. In parallel, finish and independently cross-check the conventional Grade 3 contrast-tone pair matrix. Monitor-facing PCCS questions remain blocked until approved display references exist.
