@@ -97,7 +97,7 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 
 ## Exact next order
 
-1. Grade 2 runtime frontier is 72 verified / pending 0 through `pc2.scheme.tone_on_tone`.
-2. `pc2.scheme.tone_in_tone` now has a complete auditable nonvisual intersection: same tone + hue variation. Author and independently QA a text-only batch, then merge only after dedicated Power Color CI.
-3. Promote verified tone-in-tone records record-identically after authoring CI/merge.
-4. Continue source inventory to tonal.
+1. Grade 2 runtime frontier is 84 verified / pending 0 through `pc2.scheme.tone_in_tone`.
+2. Resolve `pc2.scheme.tonal` from the current official Grade 2 scope plus independently matching explicit nonvisual definitions.
+3. If an unambiguous common intersection exists, author and independently QA a text-only tonal batch; do not infer from the official sample image.
+4. Promote only verified tonal records record-identically after dedicated CI/merge.
