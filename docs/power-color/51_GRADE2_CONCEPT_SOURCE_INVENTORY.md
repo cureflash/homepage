@@ -49,6 +49,14 @@ Current JCRI first-party Munsell references:
    - the authorized intersection for Power Color is only: dominant color uses hue as the unifying dimension and tone as the varying dimension; dominant tone uses tone as the unifying dimension and hue as the varying dimension; both are 3-or-more-color schemes;
    - do not infer visual examples, monitor values, or additional boundary rules beyond this intersection.
 
+6. `pc2.scheme.tone_on_tone`
+   - current official Grade 2 TOC places tone-on-tone in scope;
+   - ONCA explicitly defines tone-on-tone as same or similar hue with a comparatively large lightness difference;
+   - Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the official 2020 text, independently states same/adjacent/similar hue with a large lightness difference;
+   - the authorized intersection is only: same-to-similar hue range + comparatively large lightness difference;
+   - Plus Colors additionally states chroma alignment, but ONCA does not independently establish that condition, so Power Color does not encode it here;
+   - no exact numeric hue boundary, tone-map geometry, RGB/HEX, monitor color or image appearance is inferred.
+
 ## Current official-text scope inventory
 
 After Munsell, the current official Grade 2 TOC places the following Power Color-relevant subjects in order:
@@ -75,9 +83,11 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 - Do not infer monitor-facing colors without approved display references.
 - For natural/complex harmony, do not expand beyond the independently corroborated lightness-direction rule.
 - For dominant schemes, do not expand beyond the independently corroborated hue-vs-tone unifying distinction and 3+ color condition without stronger explicit authority.
+- For tone-on-tone, do not encode chroma-equality or exact hue-distance limits from a single secondary source; retain only the independently corroborated same/similar-hue + large-lightness-difference intersection.
 
 ## Exact next order
 
-1. `pc2.scheme.dominant_color_tone` has 12 independently verified text-only authoring records; run its dedicated gate and merge if green.
-2. Promote only after authoring CI is green and runtime exact-equality/full-fingerprint/shared-engine gates are extended.
-3. Then continue the official-text source inventory to tone-on-tone / tone-in-tone / tonal schemes.
+1. `pc2.scheme.dominant_color_tone` is runtime-promoted; Grade 2 runtime frontier is 60 verified / pending 0.
+2. `pc2.scheme.tone_on_tone` has a complete auditable nonvisual intersection and 12 independently verified authoring records; run dedicated CI and merge if green.
+3. Then promote the 12 records record-identically to runtime 72 and extend exact-equality/full-fingerprint/shared-engine gates.
+4. Continue source inventory to tone-in-tone, then tonal.
