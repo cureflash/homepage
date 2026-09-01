@@ -6,19 +6,17 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-A 2026-09-01 re-open of the current Color Certification Association Grade 2 page corrected the previous source-rebase decision. The current official page explicitly contains the PR #483 core facts: hexad may use achromatic color; two dyads can form a tetrad; subtractive mixing/CMY; equally spaced three PCCS hues form a triad; and Question 1 explicitly names tone-in-tone, split complementary, pentad and tonal schemes.
+PR #488 reconciled the current Grade 2 authority against the current Color Certification Association Grade 2 sample page. The unsupported `pc2.image.color_image_rules` route was removed, the original official-sample batch was independently rechecked, questions 0009-0012 were narrowed to explicit current-page wording, and the 12 verified records were promoted record-identically to `grade2-runtime.json`.
 
-The earlier `pc2.image.color_image_rules` promotion was based on a different/stale sample route and is removed from the active corpus. Its authoring JSON and authoring gate are deleted in the current reconciliation branch.
+Power Color workflow run `33530981815` succeeded. PR #488 merged to main as `985193bf1de561d10a2e714cb0750ceb1ea6bb44`.
 
-`grade2-authoring-official-sample-facts-0001-0012.json` has been independently rechecked against the current official page. Questions 0009-0012 were rewritten only to remove unsupported semantic glosses and now ask exactly which scheme name is explicitly shown in Question 1 A-D. QA remains 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
-
-`grade2-runtime.json` now contains those 12 reconciled records record-identically. The shared Power TOEIC question-bank/workout/session engine remains the only engine.
-
-Grade 2 runtime frontier: 12 verified / pending 0.
+Grade 2 runtime frontier: 12 verified / pending 0, all `pc2.foundation.official_sample_facts`.
 Grade 3 runtime frontier: 223 verified / pending 0, still incomplete.
+
+The current official Grade 2 text table of contents has also been added to `51_GRADE2_CONCEPT_SOURCE_INVENTORY.md`. It confirms scope for Munsell, natural/complex harmony, dominant schemes, tone-on-tone/tone-in-tone/tonal, camaieu/faux-camaieu, bicolor/tricolor, hue-circle division, image schemes, media, fashion, interior, landscape, conventional colors, and a PCCS tone/value appendix. The TOC establishes scope only; it does not supply unstated derivation rules.
 
 ## Exact next start point
 
-First confirm the source-reconciliation PR is green and merge it. On the next run, fetch latest main and expand `51_GRADE2_CONCEPT_SOURCE_INVENTORY.md` from current first-party Grade 2 text/scope material. Select the next nonvisual micro-skill only when explicit current authority states the needed rule. Do not revive `pc2.image.color_image_rules` or `pc2.scheme.natural_harmony_text` without a current auditable first-party source.
+Continue in official-text order with the Grade 2 color-harmony / scheme section because it directly extends the current runtime skill. Locate current first-party text that explicitly states a deterministic nonvisual rule for one of the in-scope schemes. Generate only if the rule itself is auditable and sufficient to derive answers; otherwise record the source gap and move to the next official-text topic.
 
-Monitor-facing questions remain blocked without approved display references.
+Do not revive `pc2.image.color_image_rules` or generate `pc2.scheme.natural_harmony_text` from memory, stale samples, image appearance or TOC labels alone. Monitor-facing questions remain blocked without approved display references.

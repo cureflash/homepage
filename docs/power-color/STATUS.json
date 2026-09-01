@@ -1,156 +1,66 @@
 {
   "project": "power-color",
-  "phase": "grade3_named_hue_scheme_runtime_promoted",
-  "grade": 3,
+  "phase": "grade2_active_by_user_override",
+  "active_grade": 2,
+  "checked_on": "2026-09-01",
   "grade3": {
-    "conventional_color_master": {"target":64,"ingested":64,"status":"complete"},
-    "pccs_master": {
-      "status": "structural_nonvisual_master_advanced",
-      "master": "qualifications/color-certification/data/grade3-pccs-structure.json",
-      "source_contract": "docs/power-color/40_PCCS_SOURCE_CONTRACT.md",
-      "secondary_source_amendment": "docs/power-color/42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md",
-      "scope_authority_confirmed": true,
-      "structural_authority_confirmed": true,
-      "hue_positions_and_notations": {"target":24,"source_confirmed":24,"status":"complete"},
-      "hue_japanese_names": {"target":24,"source_confirmed":24,"status":"complete","source":"https://www.dic-color.com/knowledge/pccs.html"},
-      "hue_japanese_name_readings": {"target":24,"source_confirmed":0,"status":"pending_source"},
-      "tone_codes_and_names": {"target":12,"source_confirmed":12,"status":"complete"},
-      "authoritative_public_complete_rgb_hex_table_found": false,
-      "direct_official_color_calc_output_route_approved": true,
-      "visual_question_generation_blocked": true,
-      "hue20_change_watch": "Keep 20:V until current authority actually changes it; current JCRI material only describes PB as a future rename, and the current DIC PCCS reference also lists 20:V / 青紫.",
-      "next": "Acquire source-confirmed Japanese readings if needed and current representative PCCS sRGB values; do not relax the monitor display-value gate."
+    "complete": false,
+    "runtime_questions": {"verified": 223, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "deferred_handoff": "docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md",
+    "remaining_blockers": [
+      "complete auditable conventional PCCS contrast-tone pair matrix",
+      "explicit readings for 24 Japanese PCCS hue names",
+      "approved current representative PCCS display values for monitor-facing drills",
+      "final Grade 3 completion gate"
+    ],
+    "source_display_gates_relaxed": false
+  },
+  "grade2": {
+    "status": "in_progress",
+    "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
+    "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
+    "runtime": "qualifications/color-certification/data/grade2-runtime.json",
+    "runtime_questions": {"verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "active_skill": "pc2.foundation.official_sample_facts",
+    "active_skill_questions": {"generated": 12, "checked": 12, "verified": 12, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "current_authority": [
+      "https://www.aft.or.jp/pages/feature/exam2",
+      "https://www.aft.or.jp/images/text_of-2st-grade_mokuji.pdf"
+    ],
+    "source_reconciliation": {
+      "status": "complete",
+      "removed_unsupported_route": "pc2.image.color_image_rules",
+      "reconciled_batch": "qualifications/color-certification/data/grade2-authoring-official-sample-facts-0001-0012.json",
+      "runtime_record_identical": true,
+      "ci_workflow_run": 33530981815,
+      "ci_conclusion": "success",
+      "merge_commit": "985193bf1de561d10a2e714cb0750ceb1ea6bb44"
     },
-    "relation_scheme_master": {
-      "status": "in_progress",
-      "boundary_audit": {
-        "document": "docs/power-color/41_RELATION_BOUNDARY_AUDIT.md",
-        "secondary_source_amendment": "docs/power-color/42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md",
-        "checked": "2026-09-01",
-        "first_party_evidence": [
-          "Current 2026 Color Certification Association Grade 3 sample explicitly tests 同一トーン配色, 対照トーン配色, 同一色相配色, 中差色相配色, and 明度のグラデーション.",
-          "Current Association level/text pages keep PCCS systematic color-scheme work in Grade 3 and state that exam questions follow official-text content.",
-          "Current JCRI material confirms PCCS relation/scheme instruction but the public first-party web material does not expose all numeric or pair boundaries.",
-          "Current Japan Color Research catalog describes the first-party 色の基本 chart as a PCCS teaching chart for understanding hue- and tone-based 同一・類似・対照 relationships, but its public preview does not expose the actual pair-membership table."
-        ],
-        "accepted_reliable_secondary_evidence": [
-          "2024 Journal of Home Economics of Japan peer-reviewed paper supplies PCCS hue-difference regions through complementary difference.",
-          "2026 J-STAGE emotion research independently confirms hue difference 1 = 隣接 and 2-3 = 類似, and gives a PCCS contrast-tone definition plus a concrete b/dk example.",
-          "2019 工学教育 peer-reviewed Kanazawa Institute of Technology paper, explicitly grounded in color-certification teaching material, defines 類似トーン as adjacent tones and supplies a coordinate-based adjacency judgment.",
-          "2001 日本色彩学会誌 paper explicitly labels multiple PCCS experimental pairs as 対照トーン, including v/lt, dk/sf, dp/b, s/dk, and p/dk; because it is an experimental subset rather than a complete rule, it is corroboration only."
-        ],
-        "resolved": "Named hue classification is source-resolved and runtime-promoted: 0 同一, 1 隣接, 2-3 類似, 4-7 中差, 8-10 対照, 11-12 補色.",
-        "still_blocked": "A complete auditable Grade 3 contrast-tone pair-membership matrix is not yet fixed. Similar-tone adjacency is source-supported, but do not infer missing contrast pairs solely from tone-map appearance or experimental subsets.",
-        "public_web_route_status": "reliable_secondary_route_active_under_explicit_amendment"
-      },
-      "complementary_hue_number": {"skill":"pc3.pccs.complementary_hue_number","generated":12,"checked":12,"verified":12,"pending":0,"runtime_status":"promoted","runtime_total_at_promotion":139},
-      "same_tone": {"skill":"pc3.relation.same_tone","generated":12,"checked":12,"verified":12,"pending":0,"runtime_status":"promoted","runtime_total_at_promotion":151,"official_sample_alignment":true},
-      "same_hue": {"skill":"pc3.relation.same_hue","generated":12,"checked":12,"verified":12,"pending":0,"runtime_status":"promoted","runtime_total_at_promotion":163,"official_sample_alignment":true},
-      "hue_difference": {
-        "skill": "pc3.relation.hue_difference",
-        "authoring_batch": "qualifications/color-certification/data/grade3-authoring-hue-difference-0001-0012.json",
-        "generated": 12,
-        "checked": 12,
-        "verified": 12,
-        "pending": 0,
-        "needs_revision": 0,
-        "rejected": 0,
-        "coverage": "numeric circular hue differences 1-12 exactly once",
-        "derivation": "min(abs(a-b), 24-abs(a-b))",
-        "runtime_status": "promoted",
-        "runtime_promotion": {"promotedRecords":12,"recordLevelEqualityGate":true,"sharedEngineGate":true,"expectedRuntimeTotal":175,"workflow_run":33387836920,"conclusion":"success"}
-      },
-      "hue_classification": {
-        "skill": "pc3.relation.hue_classification",
-        "authoring_batch": "qualifications/color-certification/data/grade3-authoring-hue-classification-0001-0012.json",
-        "generated": 12,
-        "checked": 12,
-        "verified": 12,
-        "pending": 0,
-        "needs_revision": 0,
-        "rejected": 0,
-        "coverage": "numeric circular hue differences 1-12 exactly once across all nonzero named classes",
-        "derivation": "0 same; 1 adjacent; 2-3 similar; 4-7 medium-difference; 8-10 contrast; 11-12 complementary",
-        "authoring_gate": "qualifications/color-certification/tests/pccs-hue-classification-authoring.test.js",
-        "authoring_ci": {"workflow_run":33463982640,"conclusion":"success"},
-        "runtime_status": "promoted",
-        "source_status": "resolved_with_current_first_party_scope_plus_peer_reviewed_boundary_evidence",
-        "runtime_promotion": {"promotedRecords":12,"recordLevelEqualityGate":true,"sharedEngineGate":true,"expectedRuntimeTotal":211,"workflow_run":33464721122,"conclusion":"success","generated_commit":"ef653c67ba1c2028d458cce47a83881b6b87ea86"}
-      },
-      "tone_difference": {
-        "skill": "pc3.relation.tone_difference",
-        "status": "source_acquisition_in_progress",
-        "authority_audit": {
-          "sources": ["https://www.aft.or.jp/pages/feature/exam3","https://www.jstage.jst.go.jp/article/jsee/67/5/67_5_95/_pdf/-char/en","https://www.jstage.jst.go.jp/article/jsre/advpub/0/advpub_24-011/_html/-char/ja","https://sikiken.co.jp/asset/pdf/cata_2024-2025_all.pdf","https://dl.ndl.go.jp/view/prepareDownload?contentNo=1&itemId=info:ndljp/pid/10747479"],
-          "checked": "2026-09-01",
-          "finding": "Current official Grade 3 material tests 対照トーン配色. Current first-party Japan Color Research teaching-material catalog explicitly states that PCCS tone relations include 同一・類似・対照, but its public preview does not expose the actual pair table. Peer-reviewed evidence defines 類似トーン as tone-map adjacency and contrast tones conceptually; a 2001 日本色彩学会誌 experiment explicitly labels multiple individual PCCS contrast-tone pairs, but only as an experimental subset. A complete Grade 3 contrast pair matrix is still not established.",
-          "detailed_pccs_substitution_prohibited": true,
-          "sample_reverse_engineering_prohibited": true,
-          "next_source_route": "Obtain an explicit readable rule/table behind the first-party Japan Color Research 色の基本 / PCCS instructional materials, or a new level-2 source that enumerates all 12 chromatic tone memberships. Use the 2001 experimental table only for pair-level cross-checking, not extrapolation."
-        }
-      },
-      "value_gradient": {
-        "skill": "pc3.value.gradient",
-        "authoring_batch": "qualifications/color-certification/data/grade3-authoring-value-gradient-0001-0012.json",
-        "generated": 12,
-        "checked": 12,
-        "verified": 12,
-        "pending": 0,
-        "needs_revision": 0,
-        "rejected": 0,
-        "coverage": "12 text-only monotonic stepwise lightness-sequence questions; 6 increasing / 6 decreasing; correct-index A/B/C/D = 3/3/3/3",
-        "official_sample_alignment": "Current Grade 3 official sample explicitly states that a value gradient changes lightness stepwise.",
-        "authoring_ci": {"workflow_run":33387985332,"conclusion":"success"},
-        "runtime_status": "promoted",
-        "runtime_promotion": {"promotedRecords":12,"recordLevelEqualityGate":true,"sharedEngineGate":true,"expectedRuntimeTotal":187,"workflow_run":33388149661,"conclusion":"success"}
-      },
-      "scheme_identification": {
-        "skill": "pc3.scheme.identification",
-        "authoring_batches": [
-          "qualifications/color-certification/data/grade3-authoring-scheme-identification-0001-0012.json",
-          "qualifications/color-certification/data/grade3-authoring-scheme-identification-0013-0024.json"
-        ],
-        "generated": 24,
-        "checked": 24,
-        "verified": 24,
-        "pending": 0,
-        "needs_revision": 0,
-        "rejected": 0,
-        "coverage": "3 same-tone + 3 same-hue + 3 complementary-hue + 3 value-gradient + 3 adjacent-hue + 3 similar-hue + 3 medium-difference-hue + 3 contrast-hue identification questions",
-        "derivation": "Uses only already source-confirmed non-visual rules; contrast-tone rules are excluded.",
-        "authoring_gates": ["qualifications/color-certification/tests/pccs-scheme-identification-authoring.test.js","qualifications/color-certification/tests/pccs-scheme-identification-hue-expansion-authoring.test.js"],
-        "duplicate_revision": {
-          "initial_batch": {"detected":1,"question":"pc3-scheme-identification-0012","collision_with":"pc3-scheme-identification-0003","resolution":"reordered distractors only; answer independently re-derived"},
-          "named_hue_expansion": {"detected":2,"questions":["pc3-scheme-identification-0020","pc3-scheme-identification-0024"],"collisions_with":["pc3-scheme-identification-0014","pc3-scheme-identification-0019"],"resolution":"reordered distractors only; independently re-derived answers and correct indexes preserved"},
-          "remaining_duplicates": 0
-        },
-        "runtime_status": "promoted",
-        "runtime_promotion": {"promotedRecords":24,"recordLevelEqualityGate":true,"duplicateFingerprintGate":true,"sharedEngineGate":true,"expectedRuntimeTotal":223,"latestWorkflowRun":33476901313,"conclusion":"success"},
-        "blocked_expansion": ["contrast_tone"],
-        "next": "Keep contrast-tone expansion blocked until the pair matrix is complete."
-      }
-    },
-    "runtime_questions": {"verified":223,"pending":0,"needs_revision":0,"rejected":0},
-    "authoring_questions": {"generated":207,"checked":207,"verified":207,"pending":0,"needs_revision":0,"rejected":0},
-    "conventional_corpus_qa": {"status":"complete","questions_checked":127,"verified":127,"pending":0},
-    "runtime_promotion": {"status":"conventional_plus_verified_pccs_relation_value_scheme_slices_promoted","runtime_total":223,"record_level_equality_gate":true,"shared_engine_gate":true},
-    "micro_skills": {"implemented_runtime":9,"promotion_ready":0,"planned_minimum":14}
+    "monitor_facing_generation_blocked_without_approved_display_values": true,
+    "next": "Expand the Grade 2 concept/source inventory from current first-party text/scope. Select the next nonvisual micro-skill only when the needed rule is explicit; the official text table of contents establishes scope but is not itself enough to derive unstated rules."
+  },
+  "engine_integration": {
+    "shared_power_toeic_session": true,
+    "shared_power_toeic_workout_builder": true,
+    "shared_power_toeic_question_bank_adapter": true,
+    "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 1,
+    "checkpoints_completed": 2,
     "generated": 0,
-    "checked": 0,
-    "verified": 0,
-    "revision_events": 0,
+    "checked": 12,
+    "verified": 12,
+    "revision_events": 4,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Contrast-tone source audit: found a current first-party Japan Color Research catalog statement that its PCCS 色の基本 teaching chart explicitly teaches same/similar/contrast tone relations, but the public preview does not expose the pair-membership table. Independently inspected a 2001 日本色彩学会誌 PCCS experiment that explicitly labels multiple concrete pairs as 対照トーン; because the paper is an experimental subset rather than a complete 12-tone rule, no matrix was extrapolated and no questions were generated."
+      "Reconciled conflicting Grade 2 source authority against the current Association sample page; removed unsupported color-image authoring, minimally revised four sample-name questions, and promoted 12 current-source records record-identically.",
+      "Added current official Grade 2 text-table-of-contents scope to the source inventory and synchronized STATUS without deriving unstated rules."
     ]
   },
-  "engine_integration": {"shared_power_toeic_session":true,"shared_power_toeic_workout_builder":true,"shared_power_toeic_question_bank_adapter":true,"separate_color_engine_forked":false},
+  "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Obtain an explicit readable rule/table behind the first-party Japan Color Research 色の基本 / PCCS instructional materials, or a genuinely new peer-reviewed/university source that enumerates all 12 chromatic contrast-tone memberships. Use the 2001 experimental pair table only for independent pair-level cross-checking. Generate pc3.relation.tone_difference only after a complete auditable matrix is independently cross-checked."
+  "next": "Continue Grade 2 current first-party source inventory; generate only the next explicit nonvisual rule set with enough learning value."
 }
