@@ -71,7 +71,10 @@ Non-visual relationship work may proceed only where deterministic derivation is 
   - [x] Generate and independently verify 12 pending-first text-only identification questions: 3 per confirmed rule; A/B/C/D = 3/3/3/3. Workflow run `33388489462` succeeded.
   - [x] Run full-fingerprint duplicate gate before promotion; detect one collision (`0012` vs `0003`), revise only the distractor order, independently re-derive the answer, and retain A/B/C/D = 3/3/3/3 with zero remaining duplicates.
   - [x] Promote the 12 verified `pc3.scheme.identification` records record-identically; runtime reached 199 verified / pending 0. Workflow run `33400487901` succeeded with exact-equality, duplicate, and shared-engine gates.
-  - [ ] Extend identification to the now-promoted named hue classes; keep contrast-tone expansion blocked until its pair matrix is complete.
+  - [x] Extend identification to source-resolved named hue classes with 12 further text-only records: 3 adjacent + 3 similar + 3 medium-difference + 3 contrast hue; independently re-derive all answers; A/B/C/D = 3/3/3/3.
+  - [x] Before promotion, resolve two full-fingerprint collisions (`0020` vs `0014`, `0024` vs `0019`) by distractor reordering only; preserve the independently re-derived answers and correct indexes.
+  - [x] Promote the additional 12 records record-identically through the established verified-authoring path; runtime reached 223 verified / pending 0. Workflow run `33476901313` succeeded after the duplicate and obsolete-frontier gates were corrected; shared Power TOEIC engine gate passed.
+  - [ ] Keep contrast-tone expansion blocked until its pair matrix is complete.
 - [x] 明度グラデーション — deterministic text-only prerequisite slice.
   - [x] Confirm the current official Grade 3 sample explicitly describes the correct characteristic as changing lightness stepwise.
   - [x] Generate and independently verify 12 pending-first sequence questions; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
