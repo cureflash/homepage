@@ -34,7 +34,8 @@ Current JCRI first-party Munsell references used in this checkpoint:
    - official Grade 2 TOC confirms Munsell hue/value/chroma/notation are in scope;
    - JCRI explicitly defines the H/V/C attributes and the `H V/C` field decomposition;
    - concrete notation strings used in questions are taken only from current JCRI-published examples;
-   - no monitor color or reconstructed Munsell color is used.
+   - no monitor color or reconstructed Munsell color is used;
+   - 12 verified records are promoted record-identically in the 36-question Grade 2 runtime frontier on the current branch.
 
 ## Current official-text scope inventory
 
@@ -67,6 +68,6 @@ Question 1 A-D require judging illustrated PCCS arrangements; do not reconstruct
 
 ## Exact next order
 
-1. Merge the 24-question runtime promotion plus verified Munsell authoring checkpoint after CI is green.
-2. Promote the 12 verified `pc2.munsell.notation_components` questions record-identically, taking Grade 2 runtime 24 → 36.
-3. Continue first-party material in official-text order; do not generate another skill unless its full nonvisual answer rule is explicit.
+1. Merge the 36-question Munsell runtime promotion after CI is green.
+2. Continue first-party material in official-text order after Munsell notation.
+3. Do not generate another skill unless its full nonvisual answer rule is explicit in current first-party material.
