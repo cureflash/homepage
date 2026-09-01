@@ -60,10 +60,15 @@ Current JCRI first-party Munsell references:
    - the authorized intersection is only the four-tone membership `sf`, `d`, `ltg`, `g` and the fact that tonal combines these intermediate/muddy colors;
    - do not infer visual appearance, RGB/HEX, monitor values, tone-map geometry or additional numeric boundaries.
 
+9. `pc2.scheme.camaieu_faux_camaieu`
+   - current official Grade 2 TOC places camaieu / faux-camaieu in scope after tonal;
+   - Plus Colors and ONCA independently support the retained nonvisual intersection: camaieu is almost monochromatic with extremely small hue/tone-related differences; faux-camaieu remains close but introduces slightly more variation, especially by shifting hue while keeping lightness/chroma differences small;
+   - exact numeric PCCS hue-difference boundaries are deliberately not encoded because the independently checked sources do not publish the same numeric boundary;
+   - audit: `docs/power-color/audits/2026-09-01-grade2-camaieu-faux-camaieu.md`.
+
 ## Current official-text scope inventory
 
 After the resolved schemes, the current official Grade 2 TOC next includes:
-- camaieu / faux-camaieu;
 - bicolor / tricolor;
 - hue-circle division schemes;
 - image-based schemes;
@@ -83,6 +88,6 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 ## Exact next order
 
 1. Grade 2 runtime frontier is 84 verified / pending 0 through `pc2.scheme.tone_in_tone`.
-2. `pc2.scheme.tonal` authoring is 12 checked / 12 verified / pending 0 with A/B/C/D = 3/3/3/3.
-3. Run dedicated tonal authoring CI and merge if green.
-4. Promote the verified tonal records record-identically to runtime 96.
+2. `pc2.scheme.tonal` authoring is 12 checked / 12 verified / pending 0 with A/B/C/D = 3/3/3/3 and is still the first runtime-promotion checkpoint.
+3. Complete the record-identical tonal promotion to runtime 96 and extend the shared-engine/full-fingerprint frontier.
+4. `pc2.scheme.camaieu_faux_camaieu` is source-resolved and authoring-complete as a queued independent checkpoint: 12 checked / 12 verified / pending 0, A/B/C/D = 3/3/3/3. Promote it only after the tonal runtime checkpoint is complete.
