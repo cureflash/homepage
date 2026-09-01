@@ -22,61 +22,27 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 84 verified / pending 0: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions` + 12 `pc2.munsell.notation_components` + 12 `pc2.scheme.natural_complex_harmony` + 12 `pc2.scheme.dominant_color_tone` + 12 `pc2.scheme.tone_on_tone` + 12 `pc2.scheme.tone_in_tone`.
-
-Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 84 verified / pending 0 through `pc2.scheme.tone_in_tone`. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
 ## Completed Grade 2 checkpoints
 
-### Official-sample facts
-- [x] 12 verified text-only questions promoted record-identically.
+- [x] `pc2.foundation.official_sample_facts`: 12 verified and promoted.
+- [x] `pc2.scheme.triad_hue_positions`: 12 verified and promoted.
+- [x] `pc2.munsell.notation_components`: 12 verified and promoted.
+- [x] `pc2.scheme.natural_complex_harmony`: 12 verified and promoted.
+- [x] `pc2.scheme.dominant_color_tone`: 12 verified and promoted.
+- [x] `pc2.scheme.tone_on_tone`: 12 verified and promoted.
+- [x] `pc2.scheme.tone_in_tone`: 12 verified and promoted; runtime 84; exact-equality/full-fingerprint/shared-engine gates cover seven skills.
 
-### PCCS triad hue positions
-- [x] Current official Grade 2 sample explicitly states that three hues evenly spaced on the PCCS hue circle form a triad.
-- [x] Reuse source-confirmed 24-position PCCS structure; derive 8-position interval modulo 24.
-- [x] 12 verified text-only questions promoted record-identically.
-
-### Munsell notation
-- [x] Official Grade 2 TOC places Munsell hue/value/chroma/notation in scope.
-- [x] JCRI first-party material explicitly supplies the `H V/C` parsing rule and examples.
-- [x] 12 verified text-only questions promoted record-identically.
-
-### Natural / complex harmony
-- [x] Resolve only the independently corroborated lightness-direction rule.
-- [x] Generate and independently verify 12 text-only questions; A/B/C/D = 3/3/3/3.
-- [x] Promote record-identically; runtime frontier 48.
-- [x] Extend runtime exact-equality/full-fingerprint/shared Power TOEIC engine gate across all four runtime skills.
-
-### Dominant color / dominant tone
-- [x] Current official Grade 2 scope/TOC confirms dominant schemes are in scope.
-- [x] Independently cross-check professional sources and fix only their common nonvisual rule: dominant color unifies hue and varies tone; dominant tone unifies tone and varies hue; both use 3 or more colors.
-- [x] Define `pc2.scheme.dominant_color_tone` from that common rule only.
-- [x] Generate 12 pending-first text-only questions.
-- [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Add a dedicated authoring/shared-renderer/full-fingerprint gate.
-- [x] Promote record-identically to Grade 2 runtime 60.
-- [x] Extend runtime exact-equality/full-fingerprint/shared Power TOEIC engine gate across all five runtime skills.
-
-### Tone-on-tone
-- [x] Current official Grade 2 TOC confirms tone-on-tone is in scope.
-- [x] Independently cross-check ONCA and Plus Colors and retain only their common nonvisual rule: same-to-similar hue range with a comparatively large lightness difference.
-- [x] Do not encode Plus Colors' additional chroma-alignment condition because it is not independently established by the second source.
+### Tonal
+- [x] Current official Grade 2 sample explicitly includes tonal as an identification target.
+- [x] Independently cross-check Plus Colors and UTO's room and retain only their common nonvisual rule: tonal uses the PCCS intermediate/muddy tones `sf`, `d`, `ltg`, `g`.
+- [x] Do not infer image appearance, RGB/HEX, monitor values, tone-map geometry, or extra numeric boundaries.
 - [x] Generate 12 pending-first text-only questions.
 - [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
 - [x] Add dedicated authoring/shared-renderer/full-fingerprint gate.
-- [x] Promote record-identically to Grade 2 runtime 72.
-- [x] Extend runtime exact-equality/full-fingerprint/shared Power TOEIC engine gate across all six runtime skills.
-
-### Tone-in-tone
-- [x] Current official Grade 2 sample explicitly includes tone-in-tone as an identification target.
-- [x] Independently cross-check ONCA, Plus Colors and FOLK and retain only their common nonvisual rule: same tone as the unifying dimension with hue variation.
-- [x] Do not encode Plus Colors' broader similar-tone allowance because it is not independently stated by all checked definitions.
-- [x] Generate 12 pending-first text-only questions.
-- [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Add a dedicated authoring/shared-renderer/full-fingerprint gate.
-- [x] Promote record-identically to Grade 2 runtime 84.
-- [x] Extend runtime exact-equality/full-fingerprint/shared Power TOEIC engine gate across all seven runtime skills.
+- [ ] Promote record-identically to Grade 2 runtime 96 after authoring CI succeeds.
 
 ## Exact next start point
 
-Continue source inventory with `pc2.scheme.tonal`. Current official Grade 2 sample explicitly includes tonal as an identification target. Generate only the explicit nonvisual intersection independently corroborated by acceptable sources; do not infer from the official sample image.
+Run the dedicated `pc2.scheme.tonal` authoring gate and Power Color CI. If green, merge, then promote its 12 verified records record-identically to runtime 96 and extend exact-equality/full-fingerprint/shared-engine gates.
