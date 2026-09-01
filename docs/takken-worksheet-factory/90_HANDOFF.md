@@ -8,13 +8,13 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed canonical knowledge extraction for `takken-concept-use-districts`.
+Fully reconciled `takken-concept-use-districts` against the existing verified Phase 2/3 questions.
 
-- Added `takken-k-use-districts-regional-district`:用途地域 is one of the regional districts under Urban Planning Act Article 8.
-- Added `takken-k-use-districts-building-use-restrictions`: Building Standards Act Article 48 imposes building-use restrictions by use district, with statutory permission exceptions retained in the knowledge item.
-- Both items use the 2026-04-01 law cutoff and statute primary sources.
+- `takken-q-63-001` directly measures only `takken-k-use-districts-regional-district` and is mapped accordingly.
+- `takken-q-63-002` directly measures only `takken-k-use-districts-building-use-restrictions` and is mapped accordingly.
+- The question mapping validator now recognizes both use-district knowledge IDs, the concept, and the two verified source-question mappings.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed.
-- Existing `takken-q-63-001` / `takken-q-63-002` mapping is deliberately left for the next Phase 4.2 checkpoint.
+- No new questions were generated or reclassified in this checkpoint.
 - No Phase 4.3 question generation, print generation, or app linkage was started.
 
 ## Status after this run
@@ -24,17 +24,17 @@ Completed canonical knowledge extraction for `takken-concept-use-districts`.
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 81/113 fully reconciled concepts
+- Phase 4.2: active — 82/113 fully reconciled concepts
 - Concepts with canonical knowledge items: 82
 - Canonical knowledge items: 416
-- Existing verified questions mapped: 94
-- Explicit unmapped knowledge gaps: 282
+- Existing verified questions mapped: 96
+- Explicit unmapped knowledge gaps: 280
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Map `takken-q-63-001` and `takken-q-63-002` only to the `takken-concept-use-districts` knowledge items they directly measure, then mark the concept fully reconciled. Do not begin Phase 4.3.
+Extract and verify canonical knowledge items for `takken-concept-city-planning-decision` from source unit `city-planning-decisions` and the 2026-04-01 primary-law baseline. Do not begin Phase 4.3.
 
 ## publication invariant
 
