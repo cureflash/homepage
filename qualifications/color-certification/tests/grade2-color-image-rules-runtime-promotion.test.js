@@ -9,6 +9,10 @@ const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json',
 const authoring = JSON.parse(await readFile(new URL('../data/grade2-authoring-color-image-rules-0001-0012.json', import.meta.url), 'utf8'));
 const staleBatch = JSON.parse(await readFile(new URL('../data/grade2-authoring-official-sample-facts-0001-0012.json', import.meta.url), 'utf8'));
 
+function fingerprint(q) {
+  return JSON.stringify([q.sentence, q.choices]);
+}
+
 test('Grade 2 current-source runtime promotion is record-identical', () => {
   assert.equal(runtime.format, 'power-color-grade2-runtime-v1');
   assert.equal(runtime.grade, 2);
@@ -17,6 +21,13 @@ test('Grade 2 current-source runtime promotion is record-identical', () => {
   assert.equal(runtime.questions.filter((q) => q.validationStatus === 'pending_validation').length, 0);
   assert.deepEqual(runtime.questions, authoring.questions);
   assert.deepEqual(runtime.skills, [authoring.skill]);
+});
+
+test('Grade 2 runtime has no full-fingerprint duplicate and does not collide with the stale batch', () => {
+  const current = runtime.questions.map(fingerprint);
+  assert.equal(new Set(current).size, current.length);
+  const stale = new Set(staleBatch.questions.map(fingerprint));
+  for (const fp of current) assert.equal(stale.has(fp), false, fp);
 });
 
 test('stale PR #483 batch is not promoted into Grade 2 runtime', () => {
