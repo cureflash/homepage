@@ -8,17 +8,18 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed existing-question reconciliation for `takken-concept-inheritance-renunciation`.
+Completed canonical extraction for `takken-concept-will-effect` from source unit `will-reserved-portion`.
 
-The concept retains its three verified Civil Code knowledge items:
+The concept is intentionally limited to the legal effect timing of a will. The same source unit's reserved-portion material belongs to the separate `takken-concept-reserved-portion` and was not mixed into this concept.
 
-- Article 938: renunciation must be declared to the family court
-- Article 939: a person who renounces is deemed never to have been an heir with respect to that succession
-- Article 940: only a renouncing person who actually possesses estate property at the time of renunciation must preserve that property with the same care as their own property until handoff to an heir or estate liquidator
+Two verified Civil Code Article 985 knowledge items were added:
 
-The existing verified-question map was reviewed against these three items. There is no genuinely distinct existing verified question that directly measures them. `takken-q-57-002` remains uniquely mapped under `takken-concept-inheritance-deliberation`; the shared `u57-f2` source fact is not sufficient evidence to duplicate or reassign that mapping.
+- Article 985(1): a will takes effect at the time of the testator's death
+- Article 985(2): when a will has a suspensive condition and that condition is fulfilled after the testator's death, the will takes effect when the condition is fulfilled
 
-Accordingly, all three inheritance-renunciation knowledge items remain explicit Phase 4.3 question-coverage deficits. No Phase 2/3 question content or mapping was changed. No Phase 4.3 generation, print generation, or app linkage was started.
+`takken-k-will-effect-death` directly carries source fact `u58-f1`. The suspensive-condition rule is a canonical expansion from Article 985(2) and therefore has no Phase 2 source fact ID.
+
+No Phase 2/3 question content was changed. Existing verified-question reconciliation has not yet been completed in this checkpoint, so neither knowledge item has been treated as covered by an existing question yet. No Phase 4.3 generation, print generation, or app linkage was started.
 
 ## Status after this run
 
@@ -28,15 +29,15 @@ Accordingly, all three inheritance-renunciation knowledge items remain explicit 
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 75/113 completed concepts
-- Canonical knowledge items: 382
+- Canonical knowledge items: 384
 - Existing verified questions mapped: 84
-- Explicit unmapped knowledge gaps: 264
+- Explicit unmapped knowledge gaps: 266 before will-effect reconciliation
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Start `takken-concept-will-effect` from source unit `will-reserved-portion`. Extract canonical knowledge items from primary sources under the 2026-04-01 cutoff, then reconcile only genuinely direct existing verified-question evidence. Keep Phase 4.3 blocked.
+Reconcile `takken-q-58-001` and any other genuinely direct existing verified-question evidence against the two `takken-concept-will-effect` knowledge items. `takken-q-58-002` is reserved-portion evidence and must not be mapped to will-effect. After reconciliation, complete `takken-concept-will-effect` and advance to `takken-concept-reserved-portion`. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
