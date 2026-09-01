@@ -87,11 +87,25 @@ The current public Association/JCRI pages and public official-text TOC still do 
 
 The 2022 software sample rows and current public Grade 3 sample images are not sufficient to reverse-engineer all boundaries safely. Screenshot sampling, tone-map geometry, third-party study tables, and detailed-PCCS substitution remain prohibited.
 
+## 2026-09-01 explicit specialist-rule cross-check
+A new independently located Grade 3 study source was checked against the already recorded qualified-expert material. `色彩検定虎の巻` explicitly states the conventional PCCS Grade 3 contrast-tone grouping as:
+- high-lightness clear tones `p / lt / b` paired with low-lightness dark-clear tones `dkg / dk / dp`;
+- high-saturation tones `v / b / s / dp` paired with low-saturation tones `p / ltg / g / dkg`;
+- `sf` and `d` have no contrast-tone counterpart.
+
+Source:
+- https://ameblo.jp/colorcoro/entry-11856521388.html
+
+This agrees with the previously audited qualified-expert source supervised by a Color Certification Level 1 coordinator, which explicitly gives `p / lt / b × dkg / dk / dp`, states high-saturation × low-saturation contrast, and excludes `sf / d` from contrast-tone construction:
+- https://pluscolors.net/color_knowledge/contrast_tone/
+
+The second source is professionally auditable (article supervision by a Color Certification Level 1 coordinator and explicit reference to the 2020 revised official Grade 3 text). This cross-check therefore strengthens the conventional-rule evidence and fixes the exact candidate grouping to test against level-1/2 authority. However, both sources are level-3 under `42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md`. They may corroborate but may not themselves replace the missing first-party / peer-reviewed complete matrix. No matrix is promoted from these sources alone.
+
 ## Decision
 - Keep `pc3.relation.tone_difference` blocked for full implementation.
 - Keep named hue-difference classification blocked for full implementation.
 - Do not infer missing boundaries from common textbook rules, third-party sites, sample-image appearance, tone-map geometry, or the detailed-PCCS revision algorithm.
 - Preserve the already verified numeric circular hue-difference drill because it depends only on the source-confirmed 24-position hue circle and arithmetic, not on named-class boundaries.
-- Treat the generic public-web source route as exhausted for this checkpoint. The remaining authoritative acquisition target is the current official Grade 3 text at pp.72–89, equivalent official card/manual material, or current licensed PCCS Color Calc/related first-party output that explicitly exposes the complete boundaries or pair memberships.
+- Treat the generic public-web source route as exhausted for this checkpoint. The remaining authoritative acquisition target is the current official Grade 3 text at pp.72–89, equivalent official card/manual material, a level-2 academic source that explicitly enumerates the same complete grouping, or current licensed PCCS Color Calc/related first-party output that explicitly exposes the complete boundaries or pair memberships.
 
-This checkpoint narrows the blocker from a broad source search to exact official-text page ranges while preserving the no-inference gate.
+This checkpoint narrows the blocker further: the exact candidate conventional grouping is now independently corroborated at level 3, so the remaining work is no longer rule discovery but authority elevation/cross-check against level 1–2 evidence. The no-inference gate remains intact.
