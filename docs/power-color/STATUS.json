@@ -32,10 +32,10 @@
       "pc2.scheme.tonal",
       "pc2.scheme.camaieu_faux_camaieu"
     ],
-    "active_skill": null,
-    "active_authoring": {"generated": 0, "checked": 0, "verified": 0, "pending": 0},
+    "active_skill": "pc2.scheme.bicolor_tricolor",
+    "active_authoring": {"generated": 12, "checked": 12, "verified": 12, "pending": 0},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Acquire an explicit auditable nonvisual rule for the next official-text-order topic, bicolor / tricolor. Generate only if the rule is source-resolved without image appearance, RGB/HEX or unstated geometry."
+    "next": "Promote the independently verified pc2.scheme.bicolor_tricolor batch record-identically from runtime 108 to 120 after its authoring/source gates pass CI."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -44,21 +44,22 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 2,
-    "generated": 0,
-    "checked": 24,
-    "verified": 24,
+    "checkpoints_completed": 3,
+    "generated": 12,
+    "checked": 36,
+    "verified": 36,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
       "Promoted the already independently verified pc2.scheme.tonal batch record-identically, extending Grade 2 runtime from 84 to 96.",
-      "Promoted the queued independently verified pc2.scheme.camaieu_faux_camaieu batch record-identically, extending Grade 2 runtime from 96 to 108; the runtime gate now covers nine skills with exact equality, full-fingerprint duplicate protection and shared Power TOEIC engine execution."
+      "Promoted the queued independently verified pc2.scheme.camaieu_faux_camaieu batch record-identically, extending Grade 2 runtime from 96 to 108; the runtime gate now covers nine skills with exact equality, full-fingerprint duplicate protection and shared Power TOEIC engine execution.",
+      "Resolved pc2.scheme.bicolor_tricolor from current official Grade 2 scope plus independently matching Plus Colors and MEGASOFT text definitions; retained only clear-contrast 2-color vs 3-color rules and independently verified 12 text-only questions with A/B/C/D=3/3/3/3."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 2 source acquisition at bicolor / tricolor in official-text order."
+  "next": "Finish bicolor/tricolor authoring CI, then promote runtime 108 to 120 record-identically."
 }
