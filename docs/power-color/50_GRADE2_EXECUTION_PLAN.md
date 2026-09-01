@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 108 verified / pending 0 across nine promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 120 verified / pending 0 across ten promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
 ## Completed Grade 2 checkpoints
 
@@ -33,19 +33,20 @@ Grade 2 runtime is 108 verified / pending 0 across nine promoted skills. Grade 3
 - [x] `pc2.scheme.dominant_color_tone`: 12 verified and promoted.
 - [x] `pc2.scheme.tone_on_tone`: 12 verified and promoted.
 - [x] `pc2.scheme.tone_in_tone`: 12 verified and promoted.
-- [x] `pc2.scheme.tonal`: 12 verified and promoted; runtime 84 → 96.
-- [x] `pc2.scheme.camaieu_faux_camaieu`: 12 verified and promoted; runtime 96 → 108.
-- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all nine promoted skills.
+- [x] `pc2.scheme.tonal`: 12 verified and promoted.
+- [x] `pc2.scheme.camaieu_faux_camaieu`: 12 verified and promoted.
+- [x] `pc2.scheme.bicolor_tricolor`: 12 verified and promoted; runtime 108 → 120.
+- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all ten promoted skills.
 
-### Bicolor / tricolor
-- [x] Current official Grade 2 TOC places bicolor / tricolor next after the resolved scheme group.
-- [x] Independently cross-check Plus Colors and MEGASOFT and retain only their common nonvisual rule: bicolor/bicolore is a clear-contrast two-color scheme; tricolor/tricolore is a clear-contrast three-color scheme; bicolore is also called bicolor.
-- [x] Exclude exact hue differences, PCCS tone boundaries, saturation thresholds, achromatic placement, RGB/HEX, monitor values and image appearance.
-- [x] Generate 12 pending-first text-only questions.
-- [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Add dedicated authoring/shared-renderer/full-fingerprint gate and source audit.
-- [ ] Promote record-identically to Grade 2 runtime 120 after authoring CI is green.
+## Next source-order checkpoint
+
+### Hue-circle division schemes
+- [x] Current official Grade 2 TOC places hue-circle division schemes next after bicolor / tricolor.
+- [ ] Obtain an explicit auditable nonvisual rule from acceptable authority.
+- [ ] Do not infer rules from example-image appearance or unstated diagram geometry.
+- [ ] Generate pending-first questions only after the rule is source-resolved.
+- [ ] Independently QA, duplicate/coverage-check and promote only verified records.
 
 ## Exact next start point
 
-Run the bicolor/tricolor authoring/source gates, then promote the 12 verified records record-identically from runtime 108 to 120. After promotion, continue source acquisition at the next official-text-order topic, hue-circle division schemes.
+Acquire the hue-circle division scheme rule in official-text order. If no auditable rule can be fixed, record the blocker and continue only with source acquisition for the next topic.
