@@ -21,9 +21,9 @@ function classify(question) {
   return null;
 }
 
-test('scheme-identification runtime promotion is record-identical and owns the 199-question frontier', () => {
-  assert.equal(runtime.questions.length, 199);
-  assert.equal(runtime.questions.filter((question) => question.validationStatus === 'verified').length, 199);
+test('scheme-identification runtime promotion remains record-identical after later runtime growth', () => {
+  assert.ok(runtime.questions.length >= 199);
+  assert.equal(runtime.questions.filter((question) => question.validationStatus === 'verified').length, runtime.questions.length);
   assert.equal(runtime.questions.filter((question) => question.validationStatus === 'pending_validation').length, 0);
   const promoted = runtime.questions.filter((question) => question.skillId === authoring.skill.id);
   assert.equal(promoted.length, 12);
