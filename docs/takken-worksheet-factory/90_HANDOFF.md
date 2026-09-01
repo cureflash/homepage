@@ -8,18 +8,19 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed `takken-concept-inheritance-deliberation` reconciliation against the five canonical Civil Code knowledge items already extracted from Articles 915 and 938.
+Started `takken-concept-inheritance-renunciation` from source unit `inheritance-acceptance-renunciation` and completed the canonical extraction checkpoint.
 
-Existing verified evidence is now mapped narrowly:
+Added three verified Civil Code knowledge items:
 
-- `takken-q-57-001` -> `takken-k-inheritance-deliberation-three-month-period`
-- `takken-q-57-002` -> `takken-k-inheritance-deliberation-renunciation-family-court`
+- Article 938: renunciation must be declared to the family court
+- Article 939: a person who renounces is deemed never to have been an heir with respect to that succession
+- Article 940: only a renouncing person who actually possesses estate property at the time of renunciation must preserve that property with the same care as their own property until handoff to an heir or estate liquidator
 
-`takken-q-57-001` asks only the length and start point of the deliberation period. Although its explanation names unconditional acceptance, qualified acceptance, and renunciation, those three options are not independently tested by the question choices. Therefore `takken-k-inheritance-deliberation-three-options` remains uncovered rather than being credited from explanation text.
+The Article 940 item uses the post-2023 rule applicable at the `2026-04-01` cutoff; it does not preserve the former broader continuing-management formulation.
 
-The existing questions also do not directly test the family-court period-extension rule or the pre-choice estate-investigation rule. Those three uncovered knowledge items remain explicit Phase 4.3 deficits.
+The existing source unit directly contains only `u57-f2` for the family-court declaration. The Article 939 effect and Article 940 preservation rule are canonical statute-level expansions and intentionally have no sourceFactId.
 
-The central map guard was advanced from 82 to 84 mapped existing questions and recognizes only the two inheritance-deliberation knowledge IDs that have direct existing question evidence.
+No existing verified-question mapping was changed in this checkpoint. In particular, `takken-q-57-002` remains uniquely mapped under the completed inheritance-deliberation concept; the shared `u57-f2` source is not treated as permission to duplicate or reassign that mapping.
 
 No Phase 2/3 question content was changed. No Phase 4.3 question generation, print generation, or app linkage was started.
 
@@ -31,15 +32,15 @@ No Phase 2/3 question content was changed. No Phase 4.3 question generation, pri
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 74/113 completed concepts
-- Canonical knowledge items: 379
+- Canonical knowledge items: 382
 - Existing verified questions mapped: 84
-- Explicit unmapped knowledge gaps: 261
+- Explicit unmapped knowledge gaps: 264
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Start `takken-concept-inheritance-renunciation` from source unit `inheritance-acceptance-renunciation`. Extract its canonical knowledge items from primary law at the `2026-04-01` cutoff. Because `takken-q-57-002` is already uniquely mapped under the completed inheritance-deliberation concept, do not duplicate or reassign it merely because the same source unit also feeds the renunciation concept. Reconcile only genuinely available direct evidence and leave uncovered knowledge as Phase 4.3 deficits. Keep Phase 4.3 blocked.
+Reconcile existing verified questions against the three `takken-concept-inheritance-renunciation` knowledge items. Preserve the existing unique `takken-q-57-002` mapping under inheritance-deliberation and do not infer coverage from the shared source unit. If no genuinely distinct direct question evidence exists, leave the renunciation items as Phase 4.3 deficits, complete the concept, and advance to the next Phase 4.2 concept. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
