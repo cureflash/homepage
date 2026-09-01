@@ -6,25 +6,19 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime is now 108 verified / pending 0 across nine promoted skills:
-- `pc2.foundation.official_sample_facts`
-- `pc2.scheme.triad_hue_positions`
-- `pc2.munsell.notation_components`
-- `pc2.scheme.natural_complex_harmony`
-- `pc2.scheme.dominant_color_tone`
-- `pc2.scheme.tone_on_tone`
-- `pc2.scheme.tone_in_tone`
-- `pc2.scheme.tonal`
-- `pc2.scheme.camaieu_faux_camaieu`
+Grade 2 runtime is 108 verified / pending 0 across nine promoted skills. `pc2.scheme.bicolor_tricolor` is now source-resolved and authoring-complete as the next checkpoint.
 
-This run completed the two queued runtime promotions in canonical order. The already independently verified tonal batch was promoted 84 → 96, then the already independently verified camaieu/faux-camaieu batch was promoted 96 → 108. `grade2-runtime.json` is rebuilt directly from the nine verified authoring batches; the runtime gate requires record-level equality, zero full-fingerprint duplicates and successful execution through the shared Power TOEIC engine.
+Current official Grade 2 text scope places bicolor / tricolor after camaieu / faux-camaieu. Plus Colors and MEGASOFT independently agree on the retained nonvisual intersection:
+- bicolor / bicolore = a clear-contrast two-color scheme;
+- tricolor / tricolore = a clear-contrast three-color scheme;
+- bicolore is also called bicolor.
 
-The old incomplete `power-color-grade2-tonal-promotion` branch is not authority. It only contained a stale gate edit and remains superseded by the current main-line promotion path.
+Power Color does not encode the sources' additional example-specific claims as mandatory rules. Exact hue differences, PCCS tone boundaries, saturation thresholds, achromatic placement, RGB/HEX, monitor values and image appearance are excluded.
 
-No RGB/HEX, monitor values, image-derived answers, screenshot sampling or unstated PCCS geometry were introduced.
+The 12-question batch is independently re-derived: 12 checked / 12 verified / 0 pending, A/B/C/D = 3/3/3/3, with a dedicated text-only authoring gate and source audit.
 
 Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Continue the Grade 2 official-text-order source inventory at `bicolor / tricolor`. First obtain an explicit auditable nonvisual rule from current first-party material or, where first-party scope is explicit but the rule is not public, independently corroborated acceptable secondary material. Generate a micro-skill only if the rule can be re-derived without reading image appearance, RGB/HEX, monitor color or unstated diagram geometry.
+After the bicolor/tricolor authoring/source gate passes CI, promote `pc2.scheme.bicolor_tricolor` record-identically from Grade 2 runtime 108 to 120 and extend exact-equality/full-fingerprint/shared Power TOEIC engine gates. Then continue source acquisition at the next official-text-order topic, hue-circle division schemes.
