@@ -30,15 +30,17 @@
         "first_party_evidence": [
           "Current 2026 Color Certification Association Grade 3 sample explicitly tests 同一トーン配色, 対照トーン配色, 同一色相配色, 中差色相配色, and 明度のグラデーション.",
           "Current Association level/text pages keep PCCS systematic color-scheme work in Grade 3 and state that exam questions follow official-text content.",
-          "Current JCRI material confirms PCCS relation/scheme instruction but the public first-party web material does not expose all numeric or pair boundaries."
+          "Current JCRI material confirms PCCS relation/scheme instruction but the public first-party web material does not expose all numeric or pair boundaries.",
+          "Current Japan Color Research catalog describes the first-party 色の基本 chart as a PCCS teaching chart for understanding hue- and tone-based 同一・類似・対照 relationships, but its public preview does not expose the actual pair-membership table."
         ],
         "accepted_reliable_secondary_evidence": [
           "2024 Journal of Home Economics of Japan peer-reviewed paper supplies PCCS hue-difference regions through complementary difference.",
           "2026 J-STAGE emotion research independently confirms hue difference 1 = 隣接 and 2-3 = 類似, and gives a PCCS contrast-tone definition plus a concrete b/dk example.",
-          "2019 工学教育 peer-reviewed Kanazawa Institute of Technology paper, explicitly grounded in color-certification teaching material, defines 類似トーン as adjacent tones and supplies a coordinate-based adjacency judgment."
+          "2019 工学教育 peer-reviewed Kanazawa Institute of Technology paper, explicitly grounded in color-certification teaching material, defines 類似トーン as adjacent tones and supplies a coordinate-based adjacency judgment.",
+          "2001 日本色彩学会誌 paper explicitly labels multiple PCCS experimental pairs as 対照トーン, including v/lt, dk/sf, dp/b, s/dk, and p/dk; because it is an experimental subset rather than a complete rule, it is corroboration only."
         ],
         "resolved": "Named hue classification is source-resolved and runtime-promoted: 0 同一, 1 隣接, 2-3 類似, 4-7 中差, 8-10 対照, 11-12 補色.",
-        "still_blocked": "A complete auditable Grade 3 contrast-tone pair-membership matrix is not yet fixed. Similar-tone adjacency is source-supported, but do not infer missing contrast pairs solely from tone-map appearance.",
+        "still_blocked": "A complete auditable Grade 3 contrast-tone pair-membership matrix is not yet fixed. Similar-tone adjacency is source-supported, but do not infer missing contrast pairs solely from tone-map appearance or experimental subsets.",
         "public_web_route_status": "reliable_secondary_route_active_under_explicit_amendment"
       },
       "complementary_hue_number": {"skill":"pc3.pccs.complementary_hue_number","generated":12,"checked":12,"verified":12,"pending":0,"runtime_status":"promoted","runtime_total_at_promotion":139},
@@ -79,12 +81,12 @@
         "skill": "pc3.relation.tone_difference",
         "status": "source_acquisition_in_progress",
         "authority_audit": {
-          "sources": ["https://www.aft.or.jp/pages/feature/exam3","https://www.jstage.jst.go.jp/article/jsee/67/5/67_5_95/_pdf/-char/en","https://www.jstage.jst.go.jp/article/jsre/advpub/0/advpub_24-011/_html/-char/ja"],
+          "sources": ["https://www.aft.or.jp/pages/feature/exam3","https://www.jstage.jst.go.jp/article/jsee/67/5/67_5_95/_pdf/-char/en","https://www.jstage.jst.go.jp/article/jsre/advpub/0/advpub_24-011/_html/-char/ja","https://sikiken.co.jp/asset/pdf/cata_2024-2025_all.pdf","https://dl.ndl.go.jp/view/prepareDownload?contentNo=1&itemId=info:ndljp/pid/10747479"],
           "checked": "2026-09-01",
-          "finding": "Current official Grade 3 material tests 対照トーン配色. Peer-reviewed evidence defines 類似トーン as tone-map adjacency and provides an explicit coordinate judgment; current peer-reviewed evidence also defines contrast tones conceptually and confirms b/dk as a contrast pair. A complete Grade 3 contrast pair matrix is still being audited.",
+          "finding": "Current official Grade 3 material tests 対照トーン配色. Current first-party Japan Color Research teaching-material catalog explicitly states that PCCS tone relations include 同一・類似・対照, but its public preview does not expose the actual pair table. Peer-reviewed evidence defines 類似トーン as tone-map adjacency and contrast tones conceptually; a 2001 日本色彩学会誌 experiment explicitly labels multiple individual PCCS contrast-tone pairs, but only as an experimental subset. A complete Grade 3 contrast pair matrix is still not established.",
           "detailed_pccs_substitution_prohibited": true,
           "sample_reverse_engineering_prohibited": true,
-          "next_source_route": "Complete and independently cross-check the conventional Grade 3 contrast-tone pair matrix using reliable auditable sources before full tone_difference generation."
+          "next_source_route": "Obtain an explicit readable rule/table behind the first-party Japan Color Research 色の基本 / PCCS instructional materials, or a new level-2 source that enumerates all 12 chromatic tone memberships. Use the 2001 experimental table only for pair-level cross-checking, not extrapolation."
         }
       },
       "value_gradient": {
@@ -137,18 +139,18 @@
   "current_run": {
     "checkpoints_completed": 1,
     "generated": 0,
-    "checked": 12,
-    "verified": 12,
-    "revision_events": 2,
+    "checked": 0,
+    "verified": 0,
+    "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Named-hue scheme runtime promotion: promoted the already merged 12 verified pc3.scheme.identification records from runtime 211 to 223. The first promotion test exposed an obsolete 211 whole-runtime assertion and two full-fingerprint choice-order collisions. The obsolete frontier gate was generalized; 0020 and 0024 had distractors reordered only, with independently re-derived answers and correct indexes preserved. Workflow run 33476901313 then passed all Power Color tests and committed the promotion result."
+      "Contrast-tone source audit: found a current first-party Japan Color Research catalog statement that its PCCS 色の基本 teaching chart explicitly teaches same/similar/contrast tone relations, but the public preview does not expose the pair-membership table. Independently inspected a 2001 日本色彩学会誌 PCCS experiment that explicitly labels multiple concrete pairs as 対照トーン; because the paper is an experimental subset rather than a complete 12-tone rule, no matrix was extrapolated and no questions were generated."
     ]
   },
   "engine_integration": {"shared_power_toeic_session":true,"shared_power_toeic_workout_builder":true,"shared_power_toeic_question_bank_adapter":true,"separate_color_engine_forked":false},
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue the independent source audit for the conventional Grade 3 contrast-tone pair matrix from sources not already rejected or exhausted. Generate pc3.relation.tone_difference only after an explicit auditable complete matrix is independently cross-checked. Do not infer missing pairs from tone-map appearance, generic study tables, RGB/HEX, screenshots, or a single example. Monitor-facing PCCS drills remain blocked until approved display references exist."
+  "next": "Obtain an explicit readable rule/table behind the first-party Japan Color Research 色の基本 / PCCS instructional materials, or a genuinely new peer-reviewed/university source that enumerates all 12 chromatic contrast-tone memberships. Use the 2001 experimental pair table only for independent pair-level cross-checking. Generate pc3.relation.tone_difference only after a complete auditable matrix is independently cross-checked."
 }
