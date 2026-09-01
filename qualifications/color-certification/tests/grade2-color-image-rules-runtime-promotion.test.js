@@ -6,8 +6,7 @@ import { QuizSession } from '../../../subjects/english/power-toeic/js/core/sessi
 import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/english/power-toeic/js/core/workout-builder.js';
 
 const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json', import.meta.url), 'utf8'));
-const authoring = JSON.parse(await readFile(new URL('../data/grade2-authoring-color-image-rules-0001-0012.json', import.meta.url), 'utf8'));
-const staleBatch = JSON.parse(await readFile(new URL('../data/grade2-authoring-official-sample-facts-0001-0012.json', import.meta.url), 'utf8'));
+const authoring = JSON.parse(await readFile(new URL('../data/grade2-authoring-official-sample-facts-0001-0012.json', import.meta.url), 'utf8'));
 
 function fingerprint(q) {
   return JSON.stringify([q.sentence, q.choices]);
@@ -23,16 +22,9 @@ test('Grade 2 current-source runtime promotion is record-identical', () => {
   assert.deepEqual(runtime.skills, [authoring.skill]);
 });
 
-test('Grade 2 runtime has no full-fingerprint duplicate and does not collide with the stale batch', () => {
-  const current = runtime.questions.map(fingerprint);
-  assert.equal(new Set(current).size, current.length);
-  const stale = new Set(staleBatch.questions.map(fingerprint));
-  for (const fp of current) assert.equal(stale.has(fp), false, fp);
-});
-
-test('stale PR #483 batch is not promoted into Grade 2 runtime', () => {
-  const runtimeIds = new Set(runtime.questions.map((q) => q.id));
-  for (const q of staleBatch.questions) assert.equal(runtimeIds.has(q.id), false, q.id);
+test('Grade 2 runtime has no full-fingerprint duplicates', () => {
+  const fingerprints = runtime.questions.map(fingerprint);
+  assert.equal(new Set(fingerprints).size, fingerprints.length);
 });
 
 test('shared Power TOEIC engine runs the Grade 2 runtime records', () => {
@@ -41,13 +33,13 @@ test('shared Power TOEIC engine runs the Grade 2 runtime records', () => {
   const session = new QuizSession({ questionIds: [targetId], repository, now: () => 1000 });
   const question = session.currentQuestion;
   assert.equal(question.id, targetId);
-  assert.equal(question.skillId, 'pc2.image.color_image_rules');
+  assert.equal(question.skillId, 'pc2.foundation.official_sample_facts');
   assert.equal(session.submitAnswer(question.correctIndex).correct, true);
 
   const recipe = createWorkoutRecipe({
     mode: 'TRAINING',
     totalCount: 8,
-    skillAllocations: [{ skillId: 'pc2.image.color_image_rules', count: 8 }],
+    skillAllocations: [{ skillId: 'pc2.foundation.official_sample_facts', count: 8 }],
     seed: 41
   });
   assert.equal(selectQuestionIds({ repository, recipe }).length, 8);

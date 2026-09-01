@@ -20,7 +20,7 @@ const expectedAnswers = new Map([
   ['pc2-official-sample-facts-0012', 'トーナル配色']
 ]);
 
-test('Grade 2 first-party text-only authoring slice is complete and balanced', () => {
+test('Grade 2 current first-party text-only authoring slice is complete and balanced', () => {
   assert.equal(batch.grade, 2);
   assert.equal(batch.skill.id, 'pc2.foundation.official_sample_facts');
   assert.equal(batch.questions.length, 12);
@@ -37,6 +37,7 @@ test('Grade 2 first-party text-only authoring slice is complete and balanced', (
 
   const answerPositions = [0, 0, 0, 0];
   for (const q of batch.questions) {
+    assert.equal(q.version, 2);
     assert.equal(q.validationStatus, 'verified');
     assert.equal(q.qa.generatedAs, 'pending_validation');
     assert.equal(q.questionType, 'text_choice');
@@ -46,15 +47,15 @@ test('Grade 2 first-party text-only authoring slice is complete and balanced', (
     assert.equal(new Set(q.choices).size, 4);
     assert.equal(q.proposedAnswer, q.choices[q.correctIndex]);
     assert.equal(q.proposedAnswer, expectedAnswers.get(q.id), q.id);
-    assert.deepEqual(q.sourceRefs, ['aft_grade2_sample']);
+    assert.deepEqual(q.sourceRefs, ['aft_grade2_current_sample_page_2026']);
     assert.equal('presentation' in q, false);
-    assert.match(q.qa.independentRecheck, /official|published|re-derived|verified/i);
+    assert.match(q.qa.independentRecheck, /current|official|published|re-derived|verified/i);
     answerPositions[q.correctIndex] += 1;
   }
   assert.deepEqual(answerPositions, [3,3,3,3]);
 });
 
-test('Grade 2 first authoring slice remains non-visual in the shared renderer', () => {
+test('Grade 2 reconciled authoring slice remains non-visual in the shared renderer', () => {
   for (const q of batch.questions) {
     const feedback = getAnswerFeedbackModel(q, new Map());
     assert.equal(feedback.kind, 'text');
