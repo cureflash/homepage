@@ -11,6 +11,8 @@ Primary authority:
 - current official Grade 2 text/scope material;
 - current JCRI / Japan Color Enterprise first-party material where relevant.
 
+When public first-party material confirms Grade 2 scope but does not expose the detailed nonvisual rule, an auditable professional secondary source may be used only when the rule is explicit and independently corroborated. Secondary sources never authorize monitor RGB/HEX or image-derived answers.
+
 Rules:
 1. Use only facts that can be independently re-derived from explicit current authority.
 2. Do not infer answers from sample-image appearance, RGB/HEX, screenshots or unstated diagram geometry.
@@ -20,35 +22,40 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 36 verified / pending 0 on the current promotion branch: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions` + 12 `pc2.munsell.notation_components`. The runtime gate requires exact equality with all three verified authoring batches, zero full-fingerprint duplicates, and execution through the shared Power TOEIC engine.
+Grade 2 runtime is 36 verified / pending 0 on `main`: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions` + 12 `pc2.munsell.notation_components`.
 
 Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
-## Grade 2 triad hue-position checkpoint
+## Completed Grade 2 checkpoints
 
-The current official Grade 2 sample explicitly states that three hues whose positions are evenly spaced on the PCCS hue circle form a triad. The existing source-confirmed Grade 3 PCCS structure fixes the hue circle at 24 positions. Under the user-authorized Grade 3 structural reuse rule, `24 / 3 = 8` is therefore a deterministic text-only derivation, not a visual inference.
+### Official-sample facts
+- [x] 12 verified text-only questions promoted record-identically.
 
-- [x] Define `pc2.scheme.triad_hue_positions` from explicit current Grade 2 authority plus the source-confirmed 24-position PCCS structure.
+### PCCS triad hue positions
+- [x] Current official Grade 2 sample explicitly states that three hues evenly spaced on the PCCS hue circle form a triad.
+- [x] Reuse source-confirmed 24-position PCCS structure; derive 8-position interval modulo 24.
+- [x] 12 verified text-only questions promoted record-identically.
+
+### Munsell notation
+- [x] Official Grade 2 TOC places Munsell hue/value/chroma/notation in scope.
+- [x] JCRI first-party material explicitly supplies the `H V/C` parsing rule and examples.
+- [x] 12 verified text-only questions promoted record-identically.
+
+## Natural / complex harmony checkpoint
+
+The current official Grade 2 TOC explicitly places natural harmony and complex harmony in scope, but the public TOC does not state the detailed rule. Two independently checked professional sources state the same nonvisual relation:
+- Rock Paint: natural harmony follows the natural hue/lightness relation, with the hue nearer yellow lighter and the hue nearer blue darker; complex harmony reverses the relation.
+- Daiwa House: natural harmony makes the hue nearer yellow higher in lightness and the hue nearer blue-violet lower; complex harmony makes the hue nearer yellow lower and the hue nearer blue-violet higher.
+
+Only the intersection of those explicit statements is authorized. Do not infer hue-difference limits, tone restrictions, monitor colors, RGB/HEX, or diagram geometry from these sources.
+
+- [x] Define `pc2.scheme.natural_complex_harmony` from the corroborated lightness-direction rule only.
 - [x] Generate 12 pending-first text-only questions.
-- [x] Independently recompute every answer using the 8-position interval modulo 24.
-- [x] Verify 12/12; pending 0; A/B/C/D = 3/3/3/3.
-- [x] Add a dedicated authoring/shared-renderer gate.
-- [x] Promote the verified batch record-identically to `grade2-runtime.json`; runtime frontier 24.
-
-## Grade 2 Munsell notation checkpoint
-
-The current official Grade 2 TOC places Munsell hue, value, chroma and notation in scope. Current JCRI first-party material independently supplies the nonvisual answer rule:
-- `Munsell Separation` accepts `H V/C` and splits it into hue numeric, hue letters, value numeric, slash and chroma numeric;
-- current JCRI HVC training material explicitly identifies H/V/C as hue/value/chroma;
-- current JCRI Digital Color Manual page publishes concrete Munsell examples such as `2.5R 6/10`, `5R 6/10`, `7.5R 6/12`, and `10R 6/14`.
-
-- [x] Define `pc2.munsell.notation_components` without using display color.
-- [x] Generate 12 pending-first text-only questions using only JCRI-published notation examples or the explicit H/V/C field rule.
-- [x] Independently parse/re-derive every answer before verification.
+- [x] Independently re-derive every answer from the corroborated rule.
 - [x] Verify 12/12; pending 0; A/B/C/D = 3/3/3/3.
 - [x] Add dedicated authoring/shared-renderer/fingerprint gate.
-- [x] Promote the verified Munsell batch record-identically; runtime frontier 36.
+- [ ] Promote the verified batch record-identically to `grade2-runtime.json`; target runtime frontier 48.
 
 ## Exact next start point
 
-Confirm CI for the 36-question runtime promotion and merge if green. Then continue the current first-party source inventory in official-text order after Munsell notation. Do not generate another micro-skill unless current first-party material supplies the complete nonvisual answer rule.
+Promote the verified `pc2.scheme.natural_complex_harmony` batch record-identically from the current 36-question runtime to 48, extend exact-equality/full-fingerprint/shared-engine gates, run Power Color CI, and merge if green. After promotion, continue the official-text source inventory after natural/complex harmony. Do not generate another micro-skill unless its complete nonvisual answer rule is explicit and auditable.

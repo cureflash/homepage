@@ -6,23 +6,25 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-PR #492 merged the first two checkpoints: `pc2.scheme.triad_hue_positions` was promoted record-identically, moving Grade 2 runtime 12 → 24, and `pc2.munsell.notation_components` was authored and independently QA-verified as 12/12 verified / pending 0. Power Color workflow run `33542589855` succeeded before merge; merge commit is `491adae17eacef1f339aadd37a94726b61455765`.
+Grade 2 runtime on `main` is 36 verified / pending 0:
+- 12 `pc2.foundation.official_sample_facts`
+- 12 `pc2.scheme.triad_hue_positions`
+- 12 `pc2.munsell.notation_components`
 
-On branch `power-color-grade2-munsell-runtime`, the verified Munsell batch is now promoted record-identically after the existing foundation + triad records, moving the Grade 2 runtime frontier 24 → 36 verified / pending 0. `grade2-runtime-promotion.test.js` now requires exact equality with all three verified authoring batches, zero full-fingerprint duplicates, and successful execution of each Grade 2 skill through the shared Power TOEIC question-bank/session/workout engine.
+The next official-text area after Munsell was audited. The current official Grade 2 TOC places natural harmony and complex harmony in scope, but the public first-party material does not expose the detailed relation. Two independently checked professional sources agree on the same nonvisual rule:
+- Rock Paint: natural harmony follows the natural hue/lightness relation, making the hue nearer yellow lighter and the hue nearer blue darker; complex harmony reverses it.
+- Daiwa House: natural harmony is yellow-near higher lightness / blue-violet-near lower lightness; complex harmony reverses this.
 
-Munsell authority remains:
-- current official Grade 2 TOC places Munsell hue, value, chroma and notation in scope;
-- current JCRI `Munsell Separation` explicitly accepts `H V/C` and splits it into hue numeric, hue letters, value numeric, slash and chroma numeric;
-- current JCRI HVC training material explicitly maps H/V/C to hue/value/chroma;
-- current JCRI Digital Color Manual page supplies the concrete Munsell notation examples used in the drills.
+Only that intersecting rule is accepted. No hue-difference limit, tone restriction, RGB/HEX, monitor color, screenshot or diagram geometry is inferred.
 
-No RGB/HEX, monitor swatch, screenshot sampling, reconstructed Munsell color or inferred diagram geometry is used.
+`pc2.scheme.natural_complex_harmony` now has 12 pending-first records independently re-derived and verified: 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. Dedicated authoring/shared-renderer/full-fingerprint gates are present on branch `power-color-grade2-natural-complex-harmony`.
 
-Grade 3 runtime frontier remains 223 verified / pending 0 and incomplete.
+Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-1. Confirm Power Color CI for `power-color-grade2-munsell-runtime` and merge its PR if green.
-2. From fresh main, continue the current Grade 2 first-party source inventory in official-text order after Munsell notation.
-3. Select the next nonvisual micro-skill only where current first-party material states the complete answer rule explicitly. Do not derive a rule from the TOC alone.
-4. Do not revive `pc2.image.color_image_rules`, do not derive natural harmony from the TOC alone, and do not derive visual answer choices from screen appearance.
+1. Run Power Color CI for the `pc2.scheme.natural_complex_harmony` authoring checkpoint and merge if green.
+2. From fresh main, promote those 12 verified records record-identically after the current 36 runtime records, producing Grade 2 runtime 48 verified / pending 0.
+3. Extend `grade2-runtime-promotion.test.js` to require exact equality with all four verified authoring batches, zero full-fingerprint duplicates, and shared Power TOEIC engine execution for all four skills.
+4. Run CI and merge the promotion if green.
+5. Continue the official-text source inventory after natural/complex harmony; do not generate a new micro-skill unless its complete nonvisual answer rule is explicit and auditable.
