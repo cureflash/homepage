@@ -8,13 +8,18 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed existing-question reconciliation for `takken-concept-will-effect`.
+Completed canonical knowledge-item extraction for `takken-concept-reserved-portion` from Civil Code Article 1042.
 
-`takken-q-58-001` asks when a will takes effect and its verified correct answer is the testator's death. It therefore directly tests only `takken-k-will-effect-death` and is mapped to that knowledge item.
+Created four verified atomic knowledge items:
 
-The second Article 985 knowledge item, `takken-k-will-effect-suspensive-condition-after-death`, is not directly tested by any existing Phase 2/3 question and remains an explicit Phase 4.3 deficit.
+- brothers and sisters are excluded from reserved-portion entitlement; the other heirs may have a reserved portion;
+- when only lineal ascendants are heirs, the aggregate reserved-portion ratio is one third;
+- in the other Article 1042 cases, the aggregate ratio is one half;
+- when multiple reserved-portion heirs exist, each heir's ratio is the aggregate ratio multiplied by that heir's statutory inheritance share.
 
-`takken-q-58-002` concerns which heirs have a reserved portion and was deliberately not mapped to will-effect. It remains evidence for the separate `takken-concept-reserved-portion` checkpoint.
+The canonical source unit `will-reserved-portion` directly contains only `u58-f2`, the eligible-heirs rule. The additional Article 1042 ratio/allocation items are preserved as atomic statutory knowledge because they belong to the same exam concept, but they currently have no Phase 2/3 question evidence and therefore remain explicit Phase 4.3 deficits.
+
+`takken-q-58-002` is independently verified and directly tests only the eligible-heirs rule. Its mapping is deliberately deferred to the next reconciliation checkpoint rather than treating extraction itself as completed question evidence.
 
 No Phase 2/3 question content or validation status changed. No Phase 4.3 generation, print generation, or app linkage was started.
 
@@ -25,16 +30,16 @@ No Phase 2/3 question content or validation status changed. No Phase 4.3 generat
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 76/113 completed concepts
-- Canonical knowledge items: 384
+- Phase 4.2: active — 76/113 completed concepts; 77 concepts now have canonical knowledge items
+- Canonical knowledge items: 388
 - Existing verified questions mapped: 85
-- Explicit unmapped knowledge gaps: 265
+- Explicit unmapped knowledge gaps: 269
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Begin canonical knowledge-item extraction for `takken-concept-reserved-portion` from source unit `will-reserved-portion`. Reconcile `takken-q-58-002` only against knowledge items that it directly tests. Keep Phase 4.3 blocked.
+Reconcile `takken-q-58-002` only to `takken-k-reserved-portion-heirs-excluding-siblings`, because that is the only extracted knowledge item it directly measures. Leave the one-third, one-half, and multiple-heir allocation items as explicit Phase 4.3 deficits. Then mark `takken-concept-reserved-portion` complete and advance to the next concept in `power-concepts.js`. Keep Phase 4.3 blocked.
 
 ## publication invariant
 

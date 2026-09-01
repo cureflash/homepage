@@ -34,14 +34,13 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 Completed checkpoints through the last completed concept: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document; article35-vs-37; eight-restrictions-scope; cooling-off; earnest-money-limit; earnest-money-safeguards; damages-penalty; nonconformity-special-rule; unowned-property-sale; installment-cancellation; installment-ownership-retention; brokerage-fees; supervision-dispositions; declaration-arrival; mistake; fraud; duress; mental-reservation; fictitious-declaration; minor; adult-ward; agency; unauthorized-agency; apparent-agency; acquisitive-prescription; extinctive-prescription; property-transfer-opposability; co-ownership; mortgage; default-damages; contract-cancellation; simultaneous-performance; risk-allocation; sale-earnest; civil-nonconformity; lease-general; security-deposit; building-lease-opposability; ordinary-land-lease-term; land-lease-opposability; fixed-term-land-lease; building-lease-term; fixed-term-building-lease; heirs-order; statutory-inheritance-shares; inheritance-deliberation; inheritance-renunciation; will-effect.
 
 Current checkpoint:
-- [x] `takken-concept-will-effect` canonical extraction is complete from Civil Code Article 985.
-- [x] `takken-q-58-001` is mapped only to `takken-k-will-effect-death`, which it directly tests.
-- [x] `takken-k-will-effect-suspensive-condition-after-death` remains an explicit Phase 4.3 deficit because no existing verified question directly tests it.
-- [x] `takken-q-58-002` remains unmapped to will-effect because it belongs to `takken-concept-reserved-portion`.
+- [x] Canonical extraction for `takken-concept-reserved-portion` is complete from Civil Code Article 1042.
+- [x] Four verified knowledge items cover eligible heirs, the one-third rule for only lineal ascendants, the general one-half rule, and allocation among multiple heirs by statutory share.
+- [ ] Reconcile `takken-q-58-002` only to the knowledge item it directly tests; leave the remaining Article 1042 items as explicit Phase 4.3 deficits.
 
-Current Phase 4.2 totals: 76/113 completed concepts, 384 verified knowledge items, 85 existing verified questions mapped, 265 explicit question-coverage gaps.
+Current Phase 4.2 totals after extraction: 76/113 completed concepts, 388 verified knowledge items, 85 existing verified questions mapped, 269 explicit question-coverage gaps.
 
-Exact continuation: begin canonical extraction for `takken-concept-reserved-portion` from source unit `will-reserved-portion`. Reuse `takken-q-58-002` only where it directly tests the resulting knowledge item. Keep Phase 4.3 blocked.
+Exact continuation: reconcile `takken-q-58-002` against `takken-concept-reserved-portion`. It directly tests the eligible-heirs rule only. Then mark the concept complete and advance to the next concept. Keep Phase 4.3 blocked.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
