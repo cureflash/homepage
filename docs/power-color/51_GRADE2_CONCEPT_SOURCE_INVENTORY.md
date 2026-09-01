@@ -57,6 +57,15 @@ Current JCRI first-party Munsell references:
    - Plus Colors additionally states chroma alignment, but ONCA does not independently establish that condition, so Power Color does not encode it here;
    - no exact numeric hue boundary, tone-map geometry, RGB/HEX, monitor color or image appearance is inferred.
 
+7. `pc2.scheme.tone_in_tone`
+   - the current official Grade 2 sample explicitly includes tone-in-tone as an identification target, establishing present scope;
+   - ONCA explicitly defines tone-in-tone as same tone with hue variation;
+   - Plus Colors independently defines it as a dominant-tone-family scheme using the same tone, with hue selected freely; it additionally allows similar tones;
+   - FOLK independently describes tone-in-tone as keeping tone aligned while using varied hues, and calls it an same-tone scheme;
+   - the authorized intersection is only: same tone as the unifying dimension + hue variation;
+   - do not encode the broader similar-tone allowance because it is not independently stated by all checked definitions;
+   - no image choice, hue-distance boundary, RGB/HEX, monitor color or tone-map geometry is inferred.
+
 ## Current official-text scope inventory
 
 After Munsell, the current official Grade 2 TOC places the following Power Color-relevant subjects in order:
@@ -84,10 +93,11 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 - For natural/complex harmony, do not expand beyond the independently corroborated lightness-direction rule.
 - For dominant schemes, do not expand beyond the independently corroborated hue-vs-tone unifying distinction and 3+ color condition without stronger explicit authority.
 - For tone-on-tone, do not encode chroma-equality or exact hue-distance limits from a single secondary source; retain only the independently corroborated same/similar-hue + large-lightness-difference intersection.
+- For tone-in-tone, do not encode similar-tone allowance as a required/general rule from Plus Colors alone; retain only the independently shared same-tone + hue-variation intersection.
 
 ## Exact next order
 
-1. `pc2.scheme.dominant_color_tone` is runtime-promoted; Grade 2 runtime frontier is 60 verified / pending 0.
-2. `pc2.scheme.tone_on_tone` has a complete auditable nonvisual intersection and 12 independently verified authoring records; run dedicated CI and merge if green.
-3. Then promote the 12 records record-identically to runtime 72 and extend exact-equality/full-fingerprint/shared-engine gates.
-4. Continue source inventory to tone-in-tone, then tonal.
+1. Grade 2 runtime frontier is 72 verified / pending 0 through `pc2.scheme.tone_on_tone`.
+2. `pc2.scheme.tone_in_tone` now has a complete auditable nonvisual intersection: same tone + hue variation. Author and independently QA a text-only batch, then merge only after dedicated Power Color CI.
+3. Promote verified tone-in-tone records record-identically after authoring CI/merge.
+4. Continue source inventory to tonal.
