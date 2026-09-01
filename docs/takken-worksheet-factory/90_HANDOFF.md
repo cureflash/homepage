@@ -8,17 +8,23 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed existing-question reconciliation for `takken-concept-reserved-portion`.
+Completed canonical knowledge-item extraction for `takken-concept-condominium-ownership` from source unit `condominium-law`, using the Condominium Ownership Act at the 2026-04-01 law cutoff.
 
-`takken-q-58-002` is independently verified and directly tests only `takken-k-reserved-portion-heirs-excluding-siblings`, so it is now mapped to that single knowledge item.
+Added 9 verified atomic knowledge items covering:
 
-The other three verified Article 1042 knowledge items remain explicit Phase 4.3 deficits because the existing Phase 2/3 question bank does not directly test them:
+- conditions under which a structurally and functionally independent building portion may be separately owned;
+- the statutory definition of unit ownership;
+- the definition of an exclusive portion;
+- the definition of a common portion;
+- structural common portions that cannot be the object of unit ownership;
+- creation of common portions by by-law;
+- registration required to assert a by-law common portion against third parties;
+- the principle that common portions belong jointly to all unit owners;
+- the exception for a common portion clearly serving only some unit owners.
 
-- the one-third aggregate reserved-portion ratio when only lineal ascendants are heirs;
-- the general one-half aggregate ratio;
-- allocation among multiple reserved-portion heirs by statutory inheritance share.
+The source-unit facts support only the separate-ownership condition (`u59-f1`) and the all-owner common-ownership principle (`u59-f2`). The other extracted statutory rules are canonical Phase 4.2 knowledge items but remain without existing verified-question evidence.
 
-No Phase 2/3 question content or validation status changed. No Phase 4.3 generation, print generation, or app linkage was started.
+Existing-question reconciliation was intentionally not combined into this checkpoint. `takken-q-59-001` and `takken-q-59-002` remain unmapped until the next checkpoint independently reconciles their exact measured scope. No Phase 2/3 question content or validation status changed. No Phase 4.3 generation, print generation, or app linkage was started.
 
 ## Status after this run
 
@@ -28,16 +34,16 @@ No Phase 2/3 question content or validation status changed. No Phase 4.3 generat
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 77/113 completed concepts
-- Concepts with canonical knowledge items: 77
-- Canonical knowledge items: 388
+- Concepts with canonical knowledge items: 78
+- Canonical knowledge items: 397
 - Existing verified questions mapped: 86
-- Explicit unmapped knowledge gaps: 268
+- Explicit unmapped knowledge gaps: 277
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Begin canonical knowledge-item extraction for `takken-concept-condominium-ownership` from source unit `condominium-law`. Reconcile only existing verified questions that directly measure each extracted item. Keep Phase 4.3 blocked.
+Reconcile `takken-q-59-001` and `takken-q-59-002` only to the `takken-concept-condominium-ownership` knowledge items they directly measure. Leave all other condominium-ownership knowledge items as explicit Phase 4.3 deficits, then mark the concept complete. Keep Phase 4.3 blocked.
 
 ## publication invariant
 
