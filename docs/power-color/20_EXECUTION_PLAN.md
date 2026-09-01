@@ -14,25 +14,28 @@
   - [x] Color Certification Association official Grade 3 scope/sample confirms PCCS is in scope.
   - [x] Current Japan Color Enterprise / JCRI material confirms the 24-hue system and current tone structure.
   - [x] Structural PCCS truth and monitor display references are separate authorities.
-  - [x] Unsourced RGB/HEX, screenshot sampling, third-party tables, Munsell reconstruction, and hand tuning are prohibited.
+  - [x] Unsourced RGB/HEX, screenshot sampling, Munsell reconstruction, and hand tuning are prohibited.
+  - [x] Add `42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md`: when current first-party material confirms scope but does not expose a needed structural rule, permit explicit peer-reviewed / university / specialist-industry evidence under a non-conflict and auditability gate. This does not relax the monitor RGB/HEX gate.
 - [ ] Complete hue/tone/notation master without guessing display values.
   - [x] Create `grade3-pccs-structure.json` with 24/24 source-confirmed hue positions and current notations.
   - [x] Confirm 12/12 chromatic tone codes/names, including `lt+`/`p+` new-card notation and the `s` omission.
   - [x] Preserve hue 20 as `V` while the current JCRI manual says `PB` is only a future rename.
-  - [ ] Confirm all 24 Japanese PCCS hue names/readings from current authoritative material.
-    - [x] Identify current Japan Color Enterprise `基本色彩掛図〈中級用〉` as a first-party 24-hue-name source.
-    - [ ] Acquire the complete 24 mappings/readings; public product material does not expose the full table.
+  - [x] Confirm all 24 Japanese PCCS hue-name mappings.
+    - [x] Identify current Japan Color Enterprise `基本色彩掛図〈中級用〉` as a first-party source proving an official 24-hue-name chart exists.
+    - [x] Use DIC Color Design's current PCCS reference, accepted under the reliable-secondary amendment, to enumerate and cross-check all 24 Japanese names against the already confirmed positions/notations.
+    - [x] Preserve intentional duplicate names: 14/15 = 青緑 and 17/18 = 青.
+    - [ ] Acquire an explicit source for reading fields; keep all `reading` values null until then.
   - [ ] Acquire authoritative current per-state display references for monitor swatches.
     - [x] Current JCRI PCCS Color Calc documentation confirms PCCS hue-tone representative values can be output as sRGB under D65 / 2-degree conditions.
     - [x] Current JCRI FAQ permits customer-created Color Calc figures for private/commercial use; direct numeric output from a current licensed installation is approved when audit evidence is retained.
     - [x] Current JCRI `デジタル色彩マニュアル` product documentation confirms a PCCS chart of 288 chromatic + 17 achromatic colors and states that every chart carries RGB hexadecimal and CMYK values. Exact values have not been acquired, and freshness/equivalence to current Color Calc representative values is unverified, so it remains a secondary authority lead only.
     - [ ] Obtain current representative per-state numeric sRGB from current licensed Color Calc or a current official table/export with exact auditable values.
-  - [x] `pccs-structure-master.test.js` gates the structural slice and prohibits accidental display-value invention.
+  - [x] `pccs-structure-master.test.js` gates positions, notations, 24 Japanese names, hue-20 V, tone codes and the no-display-value invariant.
 - [ ] Add monitor-facing color/hue, color/tone, color/notation and reverse-lookup drills after approved display references exist.
 - [ ] Complete PCCS master QA and coverage gate.
 
 ## Phase 3 — Grade 3 relations / schemes
-Non-visual relationship work may proceed only where deterministic derivation is possible from source-confirmed master facts. It must not bypass Phase 2 display gates for visual questions.
+Non-visual relationship work may proceed only where deterministic derivation is possible from accepted source facts. It must not bypass Phase 2 display gates for visual questions.
 
 - [x] Complementary hue.
   - [x] Define `pc3.pccs.complementary_hue_number` from the source-confirmed 24-position hue circle.
@@ -47,28 +50,28 @@ Non-visual relationship work may proceed only where deterministic derivation is 
   - [x] Define `pc3.relation.same_hue`: same hue number, different tone abbreviation.
   - [x] Generate 12 pending-first text-only questions; independently re-derive every answer; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
   - [x] Promote record-identically with shared Power TOEIC regression; runtime reached 163 verified / pending 0.
-- [ ] Hue difference.
-  - [x] Define a prerequisite numeric `pc3.relation.hue_difference` slice without guessing named classification boundaries.
-  - [x] Generate 12 pending-first text-only questions covering circular hue differences 1 through 12 exactly once.
-  - [x] Independently recompute every answer as `min(abs(a-b), 24-abs(a-b))`; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
-  - [x] Promote the 12 records record-identically; runtime reached 175 verified / pending 0. Workflow run `33387836920` succeeded.
-  - [x] Record JCRI first-party implementation evidence in `41_RELATION_BOUNDARY_AUDIT.md`: official software/report examples confirm named hue-relation classification exists and include adjacent/similar examples, but do not expose the complete boundary table.
-  - [x] Recheck the current 2026 Color Certification Association Grade 3 sample/level/official-text pages and current JCRI PCCS pages; `中差色相配色` remains explicitly in current Grade 3 scope, but the public first-party web material still does not expose the complete named hue-boundary table.
-  - [x] Open and visually verify the current Association-hosted official Grade 3 text TOC; the hue-relation source target is now narrowed to official-text pp.72–83 (`色相に共通性がある配色` / `色相にやや違いがある配色` / `色相に対照性がある配色`).
-  - [ ] Encode named hue-difference classes only after current authoritative complete boundary evidence is acquired from those exact official-text pages or equivalent first-party material; do not extrapolate from official sample images, the three official sample colors, tone-map geometry, or secondary material.
+- [ ] Hue difference / named hue classification.
+  - [x] Define numeric `pc3.relation.hue_difference` as shorter circular distance on the 24-hue circle.
+  - [x] Generate and independently verify 12 numeric questions covering differences 1–12 exactly once.
+  - [x] Promote the numeric records record-identically; runtime reached 175 verified / pending 0. Workflow run `33387836920` succeeded.
+  - [x] Current first-party Grade 3 material confirms named hue relations remain in scope but does not publish all numeric boundaries publicly.
+  - [x] Under `42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md`, cross-check peer-reviewed evidence and fix the named classes as: 0 同一, 1 隣接, 2–3 類似, 4–7 中差, 8–10 対照, 11–12 補色.
+  - [x] Add separate micro-skill `pc3.relation.hue_classification` so numeric distance and named classification remain independently drillable.
+  - [x] Generate and independently verify 12 text-only named-class questions covering differences 1–12 exactly once; A/B/C/D = 3/3/3/3. Workflow run `33463982640` succeeded. PR #459 merged as `4935f8a469408a89a71407cfd685b5f432b1f364`.
+  - [ ] Promote the 12 verified `pc3.relation.hue_classification` records record-identically to runtime 211 with exact-equality and shared-engine gates.
 - [ ] Tone difference.
-  - [x] Recheck current JCRI authority: conventional PCCS does not define an algorithm for relationships among tones; do not derive distance/adjacency from the tone-map layout.
-  - [x] Record JCRI first-party implementation evidence in `41_RELATION_BOUNDARY_AUDIT.md`: official software/report examples confirm same/similar tone classification exists, but do not expose the complete pair-membership/boundary table or contrast-tone rule.
-  - [x] Recheck the current 2026 Color Certification Association Grade 3 sample; `対照トーン配色` remains explicitly tested, but its complete current pair-membership rule is not published on the located first-party web pages.
-  - [x] Open and visually verify the current Association-hosted official Grade 3 text TOC; the tone-relation source target is now narrowed to official-text pp.84–89 (`トーン共通の配色` / `トーン対照の配色`).
-  - [ ] Acquire the exact current Grade 3 tone-difference / contrast-tone classification boundary from those pages or equivalent first-party material before encoding this skill.
+  - [x] Recheck current JCRI authority: conventional PCCS does not define a general numeric tone-distance algorithm; do not invent one from display geometry.
+  - [x] Current official Grade 3 sample explicitly tests `対照トーン配色`.
+  - [x] Peer-reviewed 2019 `工学教育` evidence, explicitly grounded in color-certification teaching material, defines `類似トーン` as vertically/horizontally/diagonally adjacent tone regions and supplies a coordinate judgment.
+  - [x] Peer-reviewed 2026 J-STAGE evidence defines `対照トーン` as large contrast in lightness, saturation, or both and explicitly confirms `b` / `dk` as a contrast pair.
+  - [ ] Complete and independently cross-check the conventional Grade 3 contrast-tone pair-membership matrix before full `pc3.relation.tone_difference` generation; do not infer unlisted pairs solely from tone-map appearance.
 - [ ] 配色判定.
   - [x] Same-tone and same-hue deterministic sub-relations are independently testable from canonical notation.
   - [x] Define a deterministic `pc3.scheme.identification` subset using only same tone, same hue, complementary hue, and value gradient.
   - [x] Generate and independently verify 12 pending-first text-only identification questions: 3 per confirmed rule; A/B/C/D = 3/3/3/3. Workflow run `33388489462` succeeded.
   - [x] Run full-fingerprint duplicate gate before promotion; detect one collision (`0012` vs `0003`), revise only the distractor order, independently re-derive the answer, and retain A/B/C/D = 3/3/3/3 with zero remaining duplicates.
   - [x] Promote the 12 verified `pc3.scheme.identification` records record-identically; runtime reached 199 verified / pending 0. Workflow run `33400487901` succeeded with exact-equality, duplicate, and shared-engine gates.
-  - [ ] Extend identification to contrast-tone / named hue-difference classes only after their authoritative boundaries are sourced.
+  - [ ] Extend identification to named hue classes after their dedicated 12-record slice is promoted; keep contrast-tone expansion blocked until its pair matrix is complete.
 - [x] 明度グラデーション — deterministic text-only prerequisite slice.
   - [x] Confirm the current official Grade 3 sample explicitly describes the correct characteristic as changing lightness stepwise.
   - [x] Generate and independently verify 12 pending-first sequence questions; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
