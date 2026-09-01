@@ -19,9 +19,12 @@ Reserved Grade 3 PCCS/relationship IDs:
 - `pc3.relation.same_hue`
 - `pc3.relation.same_tone`
 - `pc3.relation.hue_difference`
+- `pc3.relation.hue_classification`
 - `pc3.relation.tone_difference`
 - `pc3.scheme.identification`
 - `pc3.value.gradient`
+
+`pc3.relation.hue_difference` measures the numeric shorter distance on the 24-position hue circle. `pc3.relation.hue_classification` is separate because it measures the named PCCS relation class obtained from that distance.
 
 ## QA procedure
 For every question:
@@ -38,7 +41,7 @@ For every question:
 Reject or revise when:
 - two choices intentionally resolve to the same display value and the task depends only on display difference;
 - the distinction is so small that ordinary monitor variation is the only separator;
-- a PCCS mapping or named relation boundary is inferred rather than sourced or deterministically derived under the source contract;
+- a PCCS mapping or named relation boundary is inferred rather than sourced or deterministically derived under the source contract plus any explicit accepted authority amendment;
 - the question is outside the current grade;
 - the answer is only correct because the renderer leaks a name/code.
 
