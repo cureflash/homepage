@@ -41,8 +41,17 @@ Grade 2 runtime is 84 verified / pending 0 through `pc2.scheme.tone_in_tone`. Gr
 - [x] Generate 12 pending-first text-only questions.
 - [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
 - [x] Add dedicated authoring/shared-renderer/full-fingerprint gate.
-- [ ] Promote record-identically to Grade 2 runtime 96 after authoring CI succeeds.
+- [ ] Promote record-identically to Grade 2 runtime 96.
+
+### Camaieu / faux-camaieu — queued after tonal promotion
+- [x] Confirm current official Grade 2 TOC places camaieu / faux-camaieu in scope after tonal.
+- [x] Independently cross-check Plus Colors and ONCA and retain only the common nonvisual rule: camaieu is almost monochromatic with extremely small hue/tone-related differences; faux-camaieu remains close but introduces slightly more variation, especially a small hue shift while lightness/chroma differences remain small.
+- [x] Exclude exact numeric PCCS hue boundaries because the checked sources do not independently publish the same numeric boundary.
+- [x] Generate 12 pending-first text-only questions.
+- [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
+- [x] Add dedicated authoring/shared-renderer/full-fingerprint gate and source audit.
+- [ ] Promote only after tonal runtime promotion is green and merged.
 
 ## Exact next start point
 
-Run the dedicated `pc2.scheme.tonal` authoring gate and Power Color CI. If green, merge, then promote its 12 verified records record-identically to runtime 96 and extend exact-equality/full-fingerprint/shared-engine gates.
+Finish `pc2.scheme.tonal` record-identical runtime promotion from 84 to 96 and extend exact-equality/full-fingerprint/shared-engine gates. Then promote the already verified `pc2.scheme.camaieu_faux_camaieu` batch in order.
