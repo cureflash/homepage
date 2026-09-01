@@ -6,16 +6,25 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime is 84 verified / pending 0 through `pc2.scheme.tone_in_tone`. Runtime exact-equality/full-fingerprint/shared-engine gates cover all seven promoted runtime skills.
+Grade 2 runtime is now 108 verified / pending 0 across nine promoted skills:
+- `pc2.foundation.official_sample_facts`
+- `pc2.scheme.triad_hue_positions`
+- `pc2.munsell.notation_components`
+- `pc2.scheme.natural_complex_harmony`
+- `pc2.scheme.dominant_color_tone`
+- `pc2.scheme.tone_on_tone`
+- `pc2.scheme.tone_in_tone`
+- `pc2.scheme.tonal`
+- `pc2.scheme.camaieu_faux_camaieu`
 
-`pc2.scheme.tonal` is source-resolved and authoring-complete. Current official Grade 2 material explicitly includes tonal as an identification target. Plus Colors and UTO's room independently agree on the retained text-only intersection: the PCCS intermediate/muddy tones `sf`, `d`, `ltg`, `g` are the tonal set. No sample-image appearance or display value was used.
+This run completed the two queued runtime promotions in canonical order. The already independently verified tonal batch was promoted 84 → 96, then the already independently verified camaieu/faux-camaieu batch was promoted 96 → 108. `grade2-runtime.json` is rebuilt directly from the nine verified authoring batches; the runtime gate requires record-level equality, zero full-fingerprint duplicates and successful execution through the shared Power TOEIC engine.
 
-The 12-question tonal batch has been independently re-derived: 12 checked / 12 verified / 0 pending, A/B/C/D = 3/3/3/3. Dedicated authoring/shared-renderer/full-fingerprint gates are present. A parallel `power-color-grade2-tonal-promotion` branch exists, but as last reconciled it had only extended the runtime gate and had not yet changed `grade2-runtime.json`; do not treat runtime 96 as complete until the file and gate agree and CI passes.
+The old incomplete `power-color-grade2-tonal-promotion` branch is not authority. It only contained a stale gate edit and remains superseded by the current main-line promotion path.
 
-`pc2.scheme.camaieu_faux_camaieu` is also source-resolved and authoring-complete as the next queued independent checkpoint. Plus Colors and ONCA agree on the retained nonvisual intersection: camaieu is almost monochromatic with extremely small hue/tone-related differences; faux-camaieu keeps the colors close but introduces slightly more variation, especially a small hue shift while lightness/chroma differences remain small. Exact numeric PCCS hue boundaries are excluded. The batch is 12 checked / 12 verified / 0 pending, A/B/C/D = 3/3/3/3, with a dedicated text-only authoring gate and source audit.
+No RGB/HEX, monitor values, image-derived answers, screenshot sampling or unstated PCCS geometry were introduced.
 
 Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-First finish `pc2.scheme.tonal` record-identical runtime promotion from 84 to 96 and extend exact-equality/full-fingerprint/shared Power TOEIC engine gates. Only after that checkpoint is green and merged, promote the already verified `pc2.scheme.camaieu_faux_camaieu` batch in order. Do not introduce RGB/HEX, monitor values, image-derived answers or unstated numeric PCCS boundaries.
+Continue the Grade 2 official-text-order source inventory at `bicolor / tricolor`. First obtain an explicit auditable nonvisual rule from current first-party material or, where first-party scope is explicit but the rule is not public, independently corroborated acceptable secondary material. Generate a micro-skill only if the rule can be re-derived without reading image appearance, RGB/HEX, monitor color or unstated diagram geometry.
