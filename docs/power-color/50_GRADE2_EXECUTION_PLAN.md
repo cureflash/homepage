@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 36 verified / pending 0 on `main`: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions` + 12 `pc2.munsell.notation_components`.
+Grade 2 runtime is 48 verified / pending 0: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions` + 12 `pc2.munsell.notation_components` + 12 `pc2.scheme.natural_complex_harmony`.
 
 Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
@@ -41,7 +41,7 @@ Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED
 - [x] JCRI first-party material explicitly supplies the `H V/C` parsing rule and examples.
 - [x] 12 verified text-only questions promoted record-identically.
 
-## Natural / complex harmony checkpoint
+### Natural / complex harmony
 
 The current official Grade 2 TOC explicitly places natural harmony and complex harmony in scope, but the public TOC does not state the detailed rule. Two independently checked professional sources state the same nonvisual relation:
 - Rock Paint: natural harmony follows the natural hue/lightness relation, with the hue nearer yellow lighter and the hue nearer blue darker; complex harmony reverses the relation.
@@ -54,8 +54,9 @@ Only the intersection of those explicit statements is authorized. Do not infer h
 - [x] Independently re-derive every answer from the corroborated rule.
 - [x] Verify 12/12; pending 0; A/B/C/D = 3/3/3/3.
 - [x] Add dedicated authoring/shared-renderer/fingerprint gate.
-- [ ] Promote the verified batch record-identically to `grade2-runtime.json`; target runtime frontier 48.
+- [x] Promote the verified batch record-identically to `grade2-runtime.json`; runtime frontier 48.
+- [x] Extend runtime exact-equality/full-fingerprint/shared Power TOEIC engine gate across all four Grade 2 skills.
 
 ## Exact next start point
 
-Promote the verified `pc2.scheme.natural_complex_harmony` batch record-identically from the current 36-question runtime to 48, extend exact-equality/full-fingerprint/shared-engine gates, run Power Color CI, and merge if green. After promotion, continue the official-text source inventory after natural/complex harmony. Do not generate another micro-skill unless its complete nonvisual answer rule is explicit and auditable.
+Continue the official-text source inventory after natural/complex harmony, beginning with dominant schemes. Do not generate another micro-skill unless its complete nonvisual answer rule is explicit and auditable.

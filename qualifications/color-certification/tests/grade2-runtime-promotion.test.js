@@ -9,6 +9,7 @@ const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json',
 const foundation = JSON.parse(await readFile(new URL('../data/grade2-authoring-official-sample-facts-0001-0012.json', import.meta.url), 'utf8'));
 const triad = JSON.parse(await readFile(new URL('../data/grade2-authoring-triad-hue-positions-0001-0012.json', import.meta.url), 'utf8'));
 const munsell = JSON.parse(await readFile(new URL('../data/grade2-authoring-munsell-notation-components-0001-0012.json', import.meta.url), 'utf8'));
+const naturalComplex = JSON.parse(await readFile(new URL('../data/grade2-authoring-natural-complex-harmony-0001-0012.json', import.meta.url), 'utf8'));
 
 function fingerprint(q) {
   return JSON.stringify([q.sentence, q.choices]);
@@ -17,11 +18,11 @@ function fingerprint(q) {
 test('Grade 2 runtime is the record-identical union of verified authoring batches', () => {
   assert.equal(runtime.format, 'power-color-grade2-runtime-v1');
   assert.equal(runtime.grade, 2);
-  assert.equal(runtime.questions.length, 36);
-  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 36);
+  assert.equal(runtime.questions.length, 48);
+  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 48);
   assert.equal(runtime.questions.filter((q) => q.validationStatus === 'pending_validation').length, 0);
-  assert.deepEqual(runtime.questions, [...foundation.questions, ...triad.questions, ...munsell.questions]);
-  assert.deepEqual(runtime.skills, [foundation.skill, triad.skill, munsell.skill]);
+  assert.deepEqual(runtime.questions, [...foundation.questions, ...triad.questions, ...munsell.questions, ...naturalComplex.questions]);
+  assert.deepEqual(runtime.skills, [foundation.skill, triad.skill, munsell.skill, naturalComplex.skill]);
 });
 
 test('Grade 2 runtime has no full-fingerprint duplicates', () => {
@@ -31,7 +32,7 @@ test('Grade 2 runtime has no full-fingerprint duplicates', () => {
 
 test('shared Power TOEIC engine runs all Grade 2 skills', () => {
   const repository = new InMemoryQuestionBank({ questions: runtime.questions, skills: runtime.skills });
-  for (const targetId of [foundation.questions[0].id, triad.questions[0].id, munsell.questions[0].id]) {
+  for (const targetId of [foundation.questions[0].id, triad.questions[0].id, munsell.questions[0].id, naturalComplex.questions[0].id]) {
     const session = new QuizSession({ questionIds: [targetId], repository, now: () => 1000 });
     const question = session.currentQuestion;
     assert.equal(question.id, targetId);
@@ -42,9 +43,10 @@ test('shared Power TOEIC engine runs all Grade 2 skills', () => {
     mode: 'TRAINING',
     totalCount: 12,
     skillAllocations: [
-      { skillId: 'pc2.foundation.official_sample_facts', count: 4 },
-      { skillId: 'pc2.scheme.triad_hue_positions', count: 4 },
-      { skillId: 'pc2.munsell.notation_components', count: 4 }
+      { skillId: 'pc2.foundation.official_sample_facts', count: 3 },
+      { skillId: 'pc2.scheme.triad_hue_positions', count: 3 },
+      { skillId: 'pc2.munsell.notation_components', count: 3 },
+      { skillId: 'pc2.scheme.natural_complex_harmony', count: 3 }
     ],
     seed: 41
   });
