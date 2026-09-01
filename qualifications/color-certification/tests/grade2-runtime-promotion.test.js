@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
-import { InMemoryQuestionBank } from '../../../subjects/english/power-toeic/js/data/question-bank-adapter.js';
-import { QuizSession } from '../../../subjects/english/power-toeic/js/core/session.js';
-import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/english/power-toeic/js/core/workout-builder.js';
+import { InMemoryQuestionBank } from '../../power-toeic/js/question-bank-repository.js';
+import { QuizSession } from '../../power-toeic/js/quiz-session.js';
+import { buildWorkout } from '../../power-toeic/js/workout-builder.js';
 
 const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json', import.meta.url), 'utf8'));
 const foundation = JSON.parse(await readFile(new URL('../data/grade2-authoring-official-sample-facts-0001-0012.json', import.meta.url), 'utf8'));
@@ -13,19 +13,24 @@ const naturalComplex = JSON.parse(await readFile(new URL('../data/grade2-authori
 const dominant = JSON.parse(await readFile(new URL('../data/grade2-authoring-dominant-color-tone-0001-0012.json', import.meta.url), 'utf8'));
 const toneOnTone = JSON.parse(await readFile(new URL('../data/grade2-authoring-tone-on-tone-0001-0012.json', import.meta.url), 'utf8'));
 const toneInTone = JSON.parse(await readFile(new URL('../data/grade2-authoring-tone-in-tone-0001-0012.json', import.meta.url), 'utf8'));
+const tonal = JSON.parse(await readFile(new URL('../data/grade2-authoring-tonal-0001-0012.json', import.meta.url), 'utf8'));
 
 function fingerprint(q) {
-  return JSON.stringify([q.sentence, q.choices]);
+  return JSON.stringify([q.prompt, q.choices]);
 }
 
 test('Grade 2 runtime is the record-identical union of verified authoring batches', () => {
-  assert.equal(runtime.format, 'power-color-grade2-runtime-v1');
+  const authoringBatches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal];
+  const expectedQuestions = authoringBatches.flatMap((batch) => batch.questions);
+  const expectedSkills = authoringBatches.map((batch) => batch.skill);
+
   assert.equal(runtime.grade, 2);
-  assert.equal(runtime.questions.length, 84);
-  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 84);
+  assert.equal(runtime.productionApproved, false);
+  assert.equal(runtime.questions.length, 96);
+  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 96);
   assert.equal(runtime.questions.filter((q) => q.validationStatus === 'pending_validation').length, 0);
-  assert.deepEqual(runtime.questions, [...foundation.questions, ...triad.questions, ...munsell.questions, ...naturalComplex.questions, ...dominant.questions, ...toneOnTone.questions, ...toneInTone.questions]);
-  assert.deepEqual(runtime.skills, [foundation.skill, triad.skill, munsell.skill, naturalComplex.skill, dominant.skill, toneOnTone.skill, toneInTone.skill]);
+  assert.deepEqual(runtime.questions, expectedQuestions);
+  assert.deepEqual(runtime.skills, expectedSkills);
 });
 
 test('Grade 2 runtime has no full-fingerprint duplicates', () => {
@@ -33,28 +38,59 @@ test('Grade 2 runtime has no full-fingerprint duplicates', () => {
   assert.equal(new Set(fingerprints).size, fingerprints.length);
 });
 
-test('shared Power TOEIC engine runs all Grade 2 skills', () => {
-  const repository = new InMemoryQuestionBank({ questions: runtime.questions, skills: runtime.skills });
-  for (const targetId of [foundation.questions[0].id, triad.questions[0].id, munsell.questions[0].id, naturalComplex.questions[0].id, dominant.questions[0].id, toneOnTone.questions[0].id, toneInTone.questions[0].id]) {
-    const session = new QuizSession({ questionIds: [targetId], repository, now: () => 1000 });
-    const question = session.currentQuestion;
-    assert.equal(question.id, targetId);
-    assert.equal(session.submitAnswer(question.correctIndex).correct, true);
+test('Grade 2 runtime records execute through the shared Power TOEIC engine', async () => {
+  const repository = new InMemoryQuestionBank(runtime.questions);
+  const skillFirstIds = [
+    foundation.questions[0].id,
+    triad.questions[0].id,
+    munsell.questions[0].id,
+    naturalComplex.questions[0].id,
+    dominant.questions[0].id,
+    toneOnTone.questions[0].id,
+    toneInTone.questions[0].id,
+    tonal.questions[0].id
+  ];
+
+  for (const id of skillFirstIds) {
+    const session = new QuizSession({ questionBank: repository });
+    await session.start([id]);
+    const question = session.getCurrentQuestion();
+    const result = session.submit(question.correctIndex);
+    assert.equal(result.isCorrect, true);
   }
 
-  const recipe = createWorkoutRecipe({
-    mode: 'TRAINING',
-    totalCount: 21,
-    skillAllocations: [
-      { skillId: 'pc2.foundation.official_sample_facts', count: 3 },
-      { skillId: 'pc2.scheme.triad_hue_positions', count: 3 },
-      { skillId: 'pc2.munsell.notation_components', count: 3 },
-      { skillId: 'pc2.scheme.natural_complex_harmony', count: 3 },
-      { skillId: 'pc2.scheme.dominant_color_tone', count: 3 },
-      { skillId: 'pc2.scheme.tone_on_tone', count: 3 },
-      { skillId: 'pc2.scheme.tone_in_tone', count: 3 }
+  const workout = buildWorkout({
+    questionBank: runtime.questions,
+    totalCount: 24,
+    allocations: [
+      { skillId: foundation.skill.id, count: 3 },
+      { skillId: triad.skill.id, count: 3 },
+      { skillId: munsell.skill.id, count: 3 },
+      { skillId: naturalComplex.skill.id, count: 3 },
+      { skillId: dominant.skill.id, count: 3 },
+      { skillId: toneOnTone.skill.id, count: 3 },
+      { skillId: toneInTone.skill.id, count: 3 },
+      { skillId: tonal.skill.id, count: 3 }
     ],
     seed: 41
   });
-  assert.equal(selectQuestionIds({ repository, recipe }).length, 21);
+
+  assert.equal(workout.length, 24);
+  assert.deepEqual(
+    [...new Set(workout.map((q) => q.skillId))].sort(),
+    authoringSkillIds().sort()
+  );
 });
+
+function authoringSkillIds() {
+  return [
+    foundation.skill.id,
+    triad.skill.id,
+    munsell.skill.id,
+    naturalComplex.skill.id,
+    dominant.skill.id,
+    toneOnTone.skill.id,
+    toneInTone.skill.id,
+    tonal.skill.id
+  ];
+}
