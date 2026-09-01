@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 48 verified / pending 0: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions` + 12 `pc2.munsell.notation_components` + 12 `pc2.scheme.natural_complex_harmony`.
+Grade 2 runtime is 60 verified / pending 0: 12 `pc2.foundation.official_sample_facts` + 12 `pc2.scheme.triad_hue_positions` + 12 `pc2.munsell.notation_components` + 12 `pc2.scheme.natural_complex_harmony` + 12 `pc2.scheme.dominant_color_tone`.
 
 Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
@@ -54,8 +54,9 @@ Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED
 - [x] Generate 12 pending-first text-only questions.
 - [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
 - [x] Add a dedicated authoring/shared-renderer/full-fingerprint gate.
-- [ ] Promote record-identically to Grade 2 runtime 60 after authoring CI succeeds.
+- [x] Promote record-identically to Grade 2 runtime 60.
+- [x] Extend runtime exact-equality/full-fingerprint/shared Power TOEIC engine gate across all five runtime skills.
 
 ## Exact next start point
 
-Run the dominant-color/tone authoring CI and merge if green. Then promote its 12 verified records record-identically to runtime 60 and extend exact-equality/full-fingerprint/shared-engine gates. After promotion, continue source inventory to tone-on-tone / tone-in-tone / tonal schemes.
+Continue the official-text source inventory after dominant schemes, beginning with tone-on-tone / tone-in-tone / tonal schemes. Select the first micro-skill whose complete nonvisual answer rule is explicit and auditable; do not infer tone relationships from display appearance or unstated PCCS diagram geometry.

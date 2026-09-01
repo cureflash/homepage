@@ -6,23 +6,22 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime is 48 verified / pending 0:
+Grade 2 runtime is 60 verified / pending 0:
 - 12 `pc2.foundation.official_sample_facts`
 - 12 `pc2.scheme.triad_hue_positions`
 - 12 `pc2.munsell.notation_components`
 - 12 `pc2.scheme.natural_complex_harmony`
+- 12 `pc2.scheme.dominant_color_tone`
 
-`pc2.scheme.natural_complex_harmony` was promoted record-identically. The runtime gate requires exact equality with all four verified authoring batches, zero full-fingerprint duplicates, and execution through the shared Power TOEIC engine.
+`pc2.scheme.dominant_color_tone` is promoted record-identically from its independently verified authoring batch. The runtime gate requires exact equality with all five verified authoring batches, zero full-fingerprint duplicates, and execution through the shared Power TOEIC engine.
 
-Next authoring checkpoint is `pc2.scheme.dominant_color_tone`. Current Grade 2 official scope/TOC places dominant schemes in scope. Two independent professional sources agree on the nonvisual distinction used here:
-- dominant color: hue is the unifying dimension and tone varies;
-- dominant tone: tone is the unifying dimension and hue varies;
-- both are 3-or-more-color schemes.
-
-The 12-question text-only authoring batch has been independently re-derived: 12 checked / 12 verified / 0 pending, A/B/C/D = 3/3/3/3. No RGB/HEX, monitor color, image appearance or unstated geometry is used. Do not broaden the rule beyond the independently corroborated intersection without stronger authority.
+The accepted dominant-scheme rule remains deliberately narrow:
+- current official Grade 2 scope/TOC confirms dominant schemes are in scope;
+- two independently matching professional sources agree that dominant color unifies hue while tone varies, dominant tone unifies tone while hue varies, and both use three or more colors;
+- no RGB/HEX, monitor color, image appearance or unstated geometry is inferred.
 
 Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Run the dedicated `pc2.scheme.dominant_color_tone` authoring gate and Power Color CI. If green, merge the authoring checkpoint, then promote its 12 verified records record-identically into Grade 2 runtime 48 → 60 and extend exact-equality/full-fingerprint/shared-engine gates. After promotion, continue the official-text source inventory to tone-on-tone / tone-in-tone / tonal schemes.
+Continue the current official Grade 2 text/source inventory after dominant schemes, beginning with tone-on-tone / tone-in-tone / tonal schemes. Resolve a complete auditable nonvisual rule from first-party material where available, or from independently corroborated professional secondary sources only where current first-party material establishes scope but does not expose the detailed rule. Do not generate the next micro-skill until that rule is explicit. Monitor-facing questions remain blocked without approved display references.
