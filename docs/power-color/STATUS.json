@@ -22,10 +22,10 @@
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {"verified": 48, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony"],
-    "active_skill": null,
-    "active_authoring": null,
+    "active_skill": "pc2.scheme.dominant_color_tone",
+    "active_authoring": {"generated": 12, "checked": 12, "verified": 12, "pending": 0},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Continue the official-text source inventory after natural/complex harmony and resolve the first complete auditable nonvisual rule, beginning with dominant schemes."
+    "next": "Run Grade 2 dominant-color/tone authoring CI; if green, merge, then promote the 12 verified records record-identically from runtime 48 to 60."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -34,20 +34,21 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 1,
-    "generated": 0,
-    "checked": 0,
-    "verified": 12,
+    "checkpoints_completed": 2,
+    "generated": 12,
+    "checked": 12,
+    "verified": 24,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted the already independently verified pc2.scheme.natural_complex_harmony batch record-identically into Grade 2 runtime and extended the exact-equality/full-fingerprint/shared-engine frontier from 36 to 48."
+      "Promoted the already independently verified pc2.scheme.natural_complex_harmony batch record-identically into Grade 2 runtime and extended the exact-equality/full-fingerprint/shared-engine frontier from 36 to 48.",
+      "Resolved the common nonvisual dominant-color/dominant-tone rule from current Grade 2 scope plus two independently matching professional sources; authored and independently QA-verified 12 text-only questions with A/B/C/D=3/3/3/3."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 2 source inventory after natural/complex harmony, beginning with dominant schemes; generate only after a complete nonvisual answer rule is explicit and auditable."
+  "next": "Complete dominant-color/tone authoring CI and merge, then promote to Grade 2 runtime 60."
 }
