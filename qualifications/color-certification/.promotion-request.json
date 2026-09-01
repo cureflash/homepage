@@ -1,0 +1,1 @@
+{"authoring":"data/grade3-authoring-hue-classification-0001-0012.json","runtime":"data/grade3-runtime.json","expectedBefore":199,"expectedAfter":211,"notice":"3級慣用色名127問、PCCS補色色相番号12問、同一トーン12問、同一色相12問、数値色相差12問、明度グラデーション12問、配色・関係識別12問、色相差の名称分類12問、計211問を独立QA済みruntimeとして収録。表示RGB/HEXは学習用参考であり、本試験の印刷色を完全再現するものではありません。PCCSの表示色を使う問題は継続作業中です。"}
