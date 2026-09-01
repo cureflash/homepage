@@ -18,35 +18,25 @@ Current JCRI first-party Munsell references:
 ## Source-resolved nonvisual skills
 
 1. `pc2.foundation.official_sample_facts`
-   - current official Grade 2 sample facts retained without image interpretation.
 2. `pc2.scheme.triad_hue_positions`
-   - three evenly spaced PCCS hues; 24-position structure makes the text-only interval derivable.
 3. `pc2.munsell.notation_components`
-   - JCRI explicitly defines H/V/C and `H V/C` decomposition.
 4. `pc2.scheme.natural_complex_harmony`
-   - independently corroborated lightness-direction rule only.
 5. `pc2.scheme.dominant_color_tone`
-   - independently corroborated hue-unity vs tone-unity rules only.
 6. `pc2.scheme.tone_on_tone`
-   - independently corroborated same-to-similar hue + comparatively large lightness difference only.
 7. `pc2.scheme.tone_in_tone`
-   - independently corroborated same-tone + hue-variation rule only.
 8. `pc2.scheme.tonal`
-   - independently corroborated `sf`, `d`, `ltg`, `g` intermediate/muddy-tone membership only.
 9. `pc2.scheme.camaieu_faux_camaieu`
-   - independently corroborated qualitative close-color distinction only; no numeric hue boundary.
 10. `pc2.scheme.bicolor_tricolor`
    - official Grade 2 TOC confirms scope/order;
    - Plus Colors and MEGASOFT independently agree on the retained nonvisual intersection: bicolor/bicolore is a clear-contrast two-color scheme; tricolor/tricolore is a clear-contrast three-color scheme; bicolore is also called bicolor;
    - exact hue differences, PCCS tone boundaries, saturation thresholds, achromatic placement, RGB/HEX, monitor values and image appearance are excluded;
-   - audit: `docs/power-color/audits/2026-09-01-grade2-bicolor-tricolor.md`;
-   - authoring: 12 checked / 12 verified / pending 0, A/B/C/D = 3/3/3/3; not yet runtime-promoted.
+   - audit: `docs/power-color/audits/2026-09-01-grade2-bicolor-tricolor.md`.
 
-The first nine skills are runtime-promoted record-identically. Grade 2 runtime frontier is 108 verified / pending 0. The tenth skill is the queued verified authoring batch.
+All ten are runtime-promoted record-identically. Grade 2 runtime frontier is 120 verified / pending 0.
 
 ## Current official-text scope inventory
 
-The next current official Grade 2 TOC topics after bicolor / tricolor include:
+The next current official Grade 2 TOC topics include:
 - hue-circle division schemes;
 - image-based schemes;
 - visual/media, fashion, interior and landscape color coordination;
@@ -65,7 +55,6 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 
 ## Exact next order
 
-1. Grade 2 runtime frontier is 108 verified / pending 0 across nine skills.
-2. Run the bicolor/tricolor authoring/source gate and promote its 12 verified records record-identically to runtime 120.
-3. Then acquire an explicit nonvisual rule for hue-circle division schemes, the next official-TOC topic.
-4. If no auditable rule can be fixed, record the blocker; do not infer from image appearance or unstated geometry.
+1. Grade 2 runtime frontier is 120 verified / pending 0 across ten skills.
+2. Acquire an explicit nonvisual rule for hue-circle division schemes, the next official-TOC topic.
+3. If no auditable rule can be fixed, record that blocker; do not infer from image appearance or unstated geometry.
