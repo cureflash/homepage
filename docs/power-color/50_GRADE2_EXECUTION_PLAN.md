@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 84 verified / pending 0 through `pc2.scheme.tone_in_tone`. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 108 verified / pending 0 across nine promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
 ## Completed Grade 2 checkpoints
 
@@ -32,26 +32,21 @@ Grade 2 runtime is 84 verified / pending 0 through `pc2.scheme.tone_in_tone`. Gr
 - [x] `pc2.scheme.natural_complex_harmony`: 12 verified and promoted.
 - [x] `pc2.scheme.dominant_color_tone`: 12 verified and promoted.
 - [x] `pc2.scheme.tone_on_tone`: 12 verified and promoted.
-- [x] `pc2.scheme.tone_in_tone`: 12 verified and promoted; runtime 84; exact-equality/full-fingerprint/shared-engine gates cover seven skills.
+- [x] `pc2.scheme.tone_in_tone`: 12 verified and promoted.
+- [x] `pc2.scheme.tonal`: 12 verified and promoted; runtime 84 → 96.
+- [x] `pc2.scheme.camaieu_faux_camaieu`: 12 verified and promoted; runtime 96 → 108.
+- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all nine promoted skills.
 
-### Tonal
-- [x] Current official Grade 2 sample explicitly includes tonal as an identification target.
-- [x] Independently cross-check Plus Colors and UTO's room and retain only their common nonvisual rule: tonal uses the PCCS intermediate/muddy tones `sf`, `d`, `ltg`, `g`.
-- [x] Do not infer image appearance, RGB/HEX, monitor values, tone-map geometry, or extra numeric boundaries.
-- [x] Generate 12 pending-first text-only questions.
-- [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Add dedicated authoring/shared-renderer/full-fingerprint gate.
-- [ ] Promote record-identically to Grade 2 runtime 96.
+## Next source-order checkpoint
 
-### Camaieu / faux-camaieu — queued after tonal promotion
-- [x] Confirm current official Grade 2 TOC places camaieu / faux-camaieu in scope after tonal.
-- [x] Independently cross-check Plus Colors and ONCA and retain only the common nonvisual rule: camaieu is almost monochromatic with extremely small hue/tone-related differences; faux-camaieu remains close but introduces slightly more variation, especially a small hue shift while lightness/chroma differences remain small.
-- [x] Exclude exact numeric PCCS hue boundaries because the checked sources do not independently publish the same numeric boundary.
-- [x] Generate 12 pending-first text-only questions.
-- [x] Independently re-derive all 12; 12 verified / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Add dedicated authoring/shared-renderer/full-fingerprint gate and source audit.
-- [ ] Promote only after tonal runtime promotion is green and merged.
+### Bicolor / tricolor
+- [x] Current official Grade 2 TOC places bicolor / tricolor next after the resolved scheme group.
+- [ ] Obtain an explicit auditable nonvisual rule.
+- [ ] If first-party public material gives scope but not the rule, independently corroborate the exact retained rule with acceptable secondary sources.
+- [ ] Do not infer the rule from example-image appearance or unstated diagram geometry.
+- [ ] Generate pending-first questions only after the rule is source-resolved.
+- [ ] Independently QA, duplicate/coverage-check and promote only verified records.
 
 ## Exact next start point
 
-Finish `pc2.scheme.tonal` record-identical runtime promotion from 84 to 96 and extend exact-equality/full-fingerprint/shared-engine gates. Then promote the already verified `pc2.scheme.camaieu_faux_camaieu` batch in order.
+Acquire the bicolor / tricolor nonvisual rule in official-text order. If it cannot be fixed from acceptable authority, record the blocker and proceed only to source acquisition for the next TOC topic; do not invent an answer rule.
