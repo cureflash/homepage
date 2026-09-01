@@ -6,25 +6,21 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime on `main` is 36 verified / pending 0:
+Grade 2 runtime is now 48 verified / pending 0:
 - 12 `pc2.foundation.official_sample_facts`
 - 12 `pc2.scheme.triad_hue_positions`
 - 12 `pc2.munsell.notation_components`
+- 12 `pc2.scheme.natural_complex_harmony`
 
-The next official-text area after Munsell was audited. The current official Grade 2 TOC places natural harmony and complex harmony in scope, but the public first-party material does not expose the detailed relation. Two independently checked professional sources agree on the same nonvisual rule:
-- Rock Paint: natural harmony follows the natural hue/lightness relation, making the hue nearer yellow lighter and the hue nearer blue darker; complex harmony reverses it.
-- Daiwa House: natural harmony is yellow-near higher lightness / blue-violet-near lower lightness; complex harmony reverses this.
+`pc2.scheme.natural_complex_harmony` was promoted record-identically from its independently verified authoring batch. The runtime gate now requires exact equality with all four verified authoring batches, zero full-fingerprint duplicates, and execution through the shared Power TOEIC engine for all four skills.
 
-Only that intersecting rule is accepted. No hue-difference limit, tone restriction, RGB/HEX, monitor color, screenshot or diagram geometry is inferred.
-
-`pc2.scheme.natural_complex_harmony` now has 12 pending-first records independently re-derived and verified: 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. Dedicated authoring/shared-renderer/full-fingerprint gates are present on branch `power-color-grade2-natural-complex-harmony`.
+The accepted natural/complex harmony rule remains deliberately narrow:
+- current official Grade 2 TOC confirms both schemes are in scope;
+- Rock Paint and Daiwa House independently agree that natural harmony makes the yellow-near side lighter and the blue/blue-violet-near side darker, while complex harmony reverses that relation;
+- no hue-difference limit, tone restriction, RGB/HEX, monitor color, screenshot or diagram geometry is inferred.
 
 Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-1. Run Power Color CI for the `pc2.scheme.natural_complex_harmony` authoring checkpoint and merge if green.
-2. From fresh main, promote those 12 verified records record-identically after the current 36 runtime records, producing Grade 2 runtime 48 verified / pending 0.
-3. Extend `grade2-runtime-promotion.test.js` to require exact equality with all four verified authoring batches, zero full-fingerprint duplicates, and shared Power TOEIC engine execution for all four skills.
-4. Run CI and merge the promotion if green.
-5. Continue the official-text source inventory after natural/complex harmony; do not generate a new micro-skill unless its complete nonvisual answer rule is explicit and auditable.
+Continue the current official Grade 2 text/source inventory immediately after natural/complex harmony, beginning with dominant schemes. Resolve a complete auditable nonvisual rule from first-party material where available, or from independently corroborated professional secondary sources only where current first-party material establishes scope but does not expose the detailed rule. Do not generate the next micro-skill until that rule is explicit. Monitor-facing questions remain blocked without approved display references.
