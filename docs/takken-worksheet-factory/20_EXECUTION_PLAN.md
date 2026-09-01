@@ -34,15 +34,13 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 Completed checkpoints through the last completed concept: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document; article35-vs-37; eight-restrictions-scope; cooling-off; earnest-money-limit; earnest-money-safeguards; damages-penalty; nonconformity-special-rule; unowned-property-sale; installment-cancellation; installment-ownership-retention; brokerage-fees; supervision-dispositions; declaration-arrival; mistake; fraud; duress; mental-reservation; fictitious-declaration; minor; adult-ward; agency; unauthorized-agency; apparent-agency; acquisitive-prescription; extinctive-prescription; property-transfer-opposability; co-ownership; mortgage; default-damages; contract-cancellation; simultaneous-performance; risk-allocation; sale-earnest; civil-nonconformity; lease-general; security-deposit; building-lease-opposability; ordinary-land-lease-term; land-lease-opposability; fixed-term-land-lease; building-lease-term; fixed-term-building-lease; heirs-order; statutory-inheritance-shares; inheritance-deliberation; inheritance-renunciation.
 
 Current checkpoint:
-- [x] `takken-concept-inheritance-renunciation` canonical extraction and existing-question reconciliation are complete.
-- [x] Three verified Civil Code items cover family-court declaration under Article 938, deemed-never-heir effect under Article 939, and the possession-limited preservation duty under Article 940.
-- [x] No genuinely distinct existing verified question directly measures these three items. `takken-q-57-002` remains uniquely mapped to `takken-concept-inheritance-deliberation`; shared source fact `u57-f2` is not treated as permission to duplicate or reassign it.
-- [x] All three inheritance-renunciation items therefore remain explicit Phase 4.3 deficits.
-- [ ] Start `takken-concept-will-effect` from source unit `will-reserved-portion`; extract canonical knowledge items from primary sources before any question expansion.
+- [x] `takken-concept-will-effect` canonical extraction is complete from Civil Code Article 985.
+- [x] Two verified knowledge items cover the death-time effect rule and the special timing rule for a suspensive condition fulfilled after the testator's death.
+- [ ] Reconcile existing verified-question evidence for `takken-concept-will-effect`; map only genuinely direct evidence. Keep Phase 4.3 blocked.
 
-Current Phase 4.2 totals: 75/113 completed concepts, 382 verified knowledge items, 84 existing verified questions mapped, 264 explicit question-coverage gaps.
+Current Phase 4.2 totals after extraction: 75/113 completed concepts, 384 verified knowledge items, 84 existing verified questions mapped, 266 explicit question-coverage gaps before will-effect reconciliation.
 
-Exact continuation: start canonical extraction for `takken-concept-will-effect` from `will-reserved-portion`. Keep Phase 4.3 blocked.
+Exact continuation: reconcile `takken-q-58-001` and any other genuinely direct existing verified-question evidence against `takken-concept-will-effect`. Do not map `takken-q-58-002`, which belongs to the separate `takken-concept-reserved-portion`. Keep Phase 4.3 blocked.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
