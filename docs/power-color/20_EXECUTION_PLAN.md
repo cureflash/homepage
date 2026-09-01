@@ -50,7 +50,7 @@ Non-visual relationship work may proceed only where deterministic derivation is 
   - [x] Define `pc3.relation.same_hue`: same hue number, different tone abbreviation.
   - [x] Generate 12 pending-first text-only questions; independently re-derive every answer; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
   - [x] Promote record-identically with shared Power TOEIC regression; runtime reached 163 verified / pending 0.
-- [ ] Hue difference / named hue classification.
+- [x] Hue difference / named hue classification.
   - [x] Define numeric `pc3.relation.hue_difference` as shorter circular distance on the 24-hue circle.
   - [x] Generate and independently verify 12 numeric questions covering differences 1–12 exactly once.
   - [x] Promote the numeric records record-identically; runtime reached 175 verified / pending 0. Workflow run `33387836920` succeeded.
@@ -58,7 +58,7 @@ Non-visual relationship work may proceed only where deterministic derivation is 
   - [x] Under `42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md`, cross-check peer-reviewed evidence and fix the named classes as: 0 同一, 1 隣接, 2–3 類似, 4–7 中差, 8–10 対照, 11–12 補色.
   - [x] Add separate micro-skill `pc3.relation.hue_classification` so numeric distance and named classification remain independently drillable.
   - [x] Generate and independently verify 12 text-only named-class questions covering differences 1–12 exactly once; A/B/C/D = 3/3/3/3. Workflow run `33463982640` succeeded. PR #459 merged as `4935f8a469408a89a71407cfd685b5f432b1f364`.
-  - [ ] Promote the 12 verified `pc3.relation.hue_classification` records record-identically to runtime 211 with exact-equality and shared-engine gates.
+  - [x] Promote the 12 verified `pc3.relation.hue_classification` records record-identically to runtime 211. The repository-native promotion generated commit `ef653c67ba1c2028d458cce47a83881b6b87ea86`; dedicated exact-equality/frontier/shared-engine gates passed in workflow run `33464721122`.
 - [ ] Tone difference.
   - [x] Recheck current JCRI authority: conventional PCCS does not define a general numeric tone-distance algorithm; do not invent one from display geometry.
   - [x] Current official Grade 3 sample explicitly tests `対照トーン配色`.
@@ -71,7 +71,7 @@ Non-visual relationship work may proceed only where deterministic derivation is 
   - [x] Generate and independently verify 12 pending-first text-only identification questions: 3 per confirmed rule; A/B/C/D = 3/3/3/3. Workflow run `33388489462` succeeded.
   - [x] Run full-fingerprint duplicate gate before promotion; detect one collision (`0012` vs `0003`), revise only the distractor order, independently re-derive the answer, and retain A/B/C/D = 3/3/3/3 with zero remaining duplicates.
   - [x] Promote the 12 verified `pc3.scheme.identification` records record-identically; runtime reached 199 verified / pending 0. Workflow run `33400487901` succeeded with exact-equality, duplicate, and shared-engine gates.
-  - [ ] Extend identification to named hue classes after their dedicated 12-record slice is promoted; keep contrast-tone expansion blocked until its pair matrix is complete.
+  - [ ] Extend identification to the now-promoted named hue classes; keep contrast-tone expansion blocked until its pair matrix is complete.
 - [x] 明度グラデーション — deterministic text-only prerequisite slice.
   - [x] Confirm the current official Grade 3 sample explicitly describes the correct characteristic as changing lightness stepwise.
   - [x] Generate and independently verify 12 pending-first sequence questions; 12 checked / 12 verified / pending 0; A/B/C/D = 3/3/3/3.
