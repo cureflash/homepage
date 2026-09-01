@@ -6,21 +6,24 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime is 60 verified / pending 0:
+Grade 2 runtime is 72 verified / pending 0:
 - 12 `pc2.foundation.official_sample_facts`
 - 12 `pc2.scheme.triad_hue_positions`
 - 12 `pc2.munsell.notation_components`
 - 12 `pc2.scheme.natural_complex_harmony`
 - 12 `pc2.scheme.dominant_color_tone`
+- 12 `pc2.scheme.tone_on_tone`
 
-`pc2.scheme.dominant_color_tone` is promoted record-identically. Runtime exact-equality/full-fingerprint/shared-engine gates cover all five runtime skills.
-
-The next source-resolved skill is `pc2.scheme.tone_on_tone`. Current official Grade 2 scope places it in scope. ONCA and Plus Colors independently agree on the nonvisual intersection used here: same-to-similar hue range with a comparatively large lightness difference. No chroma-equality condition, numeric hue boundary, RGB/HEX, monitor color, image appearance or unstated geometry is inferred.
-
-The 12-question text-only authoring batch has been independently re-derived: 12 checked / 12 verified / 0 pending, A/B/C/D = 3/3/3/3. Dedicated authoring/shared-renderer/full-fingerprint gates are present.
+`pc2.scheme.tone_on_tone` is promoted record-identically. Runtime exact-equality/full-fingerprint/shared-engine gates cover all six runtime skills.
 
 Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
+## Next source-resolved work
+
+Current official Grade 2 material explicitly includes `トーンイントーン配色` in the 2級 sample/scope. Do not derive its answer from the official sample images. Resolve only a text-only rule independently corroborated by auditable sources before authoring `pc2.scheme.tone_in_tone`.
+
+The next planned scheme after tone-in-tone is tonal.
+
 ## Exact next start point
 
-Run Power Color CI for `pc2.scheme.tone_on_tone` and merge if green. Then promote those 12 verified records record-identically after the current 60 runtime records, producing Grade 2 runtime 72 verified / pending 0, and extend exact-equality/full-fingerprint/shared Power TOEIC engine gates. After promotion, continue source inventory to tone-in-tone, then tonal.
+Cross-check `pc2.scheme.tone_in_tone` against the current official Grade 2 scope plus at least two explicit auditable nonvisual definitions. If their common intersection is unambiguous, generate a pending-first 12-question text-only batch, independently re-derive all answers, run full-fingerprint/shared-renderer gates, then promote only after CI. Do not introduce RGB/HEX, monitor color, image appearance or unstated geometry.
