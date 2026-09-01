@@ -23,9 +23,9 @@
     "runtime_questions": {"verified": 72, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone"],
     "active_skill": "pc2.scheme.tone_in_tone",
-    "active_authoring": {"generated": 0, "checked": 0, "verified": 0, "pending": 0},
+    "active_authoring": {"generated": 12, "checked": 12, "verified": 12, "pending": 0},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Resolve the next safe nonvisual rule for pc2.scheme.tone_in_tone from current official Grade 2 scope plus independently matching auditable sources; author only the explicit common intersection."
+    "next": "Run dedicated tone-in-tone authoring CI; if green merge, then promote the 12 verified records record-identically from runtime 72 to 84."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -34,20 +34,21 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 1,
-    "generated": 0,
-    "checked": 0,
-    "verified": 12,
+    "checkpoints_completed": 2,
+    "generated": 12,
+    "checked": 12,
+    "verified": 24,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted the already independently verified pc2.scheme.tone_on_tone batch record-identically into Grade 2 runtime and extended the exact-equality/full-fingerprint/shared-engine frontier from 60 to 72."
+      "Promoted the already independently verified pc2.scheme.tone_on_tone batch record-identically into Grade 2 runtime and extended the exact-equality/full-fingerprint/shared-engine frontier from 60 to 72.",
+      "Resolved pc2.scheme.tone_in_tone from current official Grade 2 scope plus three explicit auditable text definitions; retained only the shared same-tone + hue-variation rule and independently verified 12 text-only questions with A/B/C/D=3/3/3/3."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source and author pc2.scheme.tone_in_tone without image-derived or unsourced rules."
+  "next": "Complete tone-in-tone authoring CI and merge, then promote to Grade 2 runtime 84."
 }
