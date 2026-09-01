@@ -1,48 +1,41 @@
 # Power Color — HANDOFF
 
-Dedicated deferred Grade 3 restart handoff: `docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md`.
+## Active work
 
-## Current checkpoint
-Grade 3 Phase A remains active. Runtime is now 223 verified / pending 0: 127 conventional-color questions + 12 `pc3.pccs.complementary_hue_number` + 12 `pc3.relation.same_tone` + 12 `pc3.relation.same_hue` + 12 `pc3.relation.hue_difference` + 12 `pc3.value.gradient` + 24 `pc3.scheme.identification` + 12 `pc3.relation.hue_classification`. The shared Power TOEIC question-bank/workout/session engine remains the only engine.
+Grade 2 is the active priority by explicit user override while Grade 3 remains incomplete. Grade 3 deferred state is preserved in `docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md`; do not mark Grade 3 complete or relax its source/display gates.
 
-The previously merged 12-question named-hue `pc3.scheme.identification` expansion has now been promoted:
-1. `grade3-authoring-scheme-identification-0013-0024.json` remains text-only and uses only already source-resolved named hue relations: adjacent, similar, medium-difference, and contrast hue, 3 questions each. Contrast-tone rules are not used.
-2. The first 223 promotion attempt exposed two independent gates rather than a source/answer failure. The old hue-classification runtime test still fixed the whole runtime at 211, and the corpus fingerprint gate found two choice-order collisions: `0020` vs `0014` and `0024` vs `0019`.
-3. The obsolete 211 frontier assertion was generalized to allow later runtime growth. For the two fingerprint collisions, distractors only were reordered; the independently re-derived correct relations and correct indexes were preserved. The batch remains 12/12 verified with A/B/C/D = 3/3/3/3.
-4. A 223-frontier runtime gate now requires all 24 scheme-identification records to equal the two authoring batches exactly, independently re-derives the named-hue answers from circular hue distance, and executes the promoted records through the shared Power TOEIC engine.
-5. Repository-native verified-authoring promotion produced runtime 211 → 223. Workflow run `33476901313` succeeded with all Power Color tests passing before committing the promotion result. PR #467 then passed Power Color workflow run `33477069614` and merged to `main` as `3ca5ebaeb1dca9b9d6c61212b4916ffad7c9ba0e`.
+## Grade 2 current checkpoint
 
-Current authoring accounting is 207 generated / 207 checked / 207 verified / 0 needs_revision / 0 rejected / 0 pending. Runtime is 223 verified / pending 0.
+The PR #483 authoring batch must not be runtime-promoted. A fresh 2026-09-01 re-open of the current Color Certification Association Grade 2 page and its currently linked official sample PDF found that the present sample no longer contains the hexad/dyad/CMY items used as the authority for that batch. The old answers are not declared false; the batch is source-stale/unresolved under the current-source contract.
 
-Source boundaries now in force:
-- Current Color Certification Association material remains the Grade 3 scope authority.
-- Reliable secondary structural evidence is allowed only under `42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md`: explicit PCCS identification, auditable rule, no conflict with current first-party material, and independent corroboration where practical.
-- Named hue classification is resolved and runtime-promoted: 0 same, 1 adjacent, 2–3 similar, 4–7 medium-difference, 8–10 contrast, 11–12 complementary.
-- Peer-reviewed 2019 `工学教育` evidence defines similar tones as adjacent tone regions and gives a coordinate-based judgment. Peer-reviewed 2026 evidence defines contrast tones conceptually and confirms `b` / `dk` as a contrast pair. The complete contrast-tone pair matrix is still under audit.
-- Additional targeted academic search on 2026-09-01 found a 2004 Japan Association of Home Economics Education paper that explicitly classifies PCCS tone schemes as same/similar/contrast, but its public text does not expose the tone-pair membership matrix. It therefore confirms the classification vocabulary only and does not unblock generation.
-- A new KAKEN research-results report lead (`KAKENHI-PROJECT-23611015`) explicitly uses `vivid`–`White` and `deep`–`pale` as contrast-tone examples in a PCCS-based experiment. This independently corroborates isolated high/low-contrast examples but still does not enumerate all 12 chromatic PCCS tone-pair memberships, so it does not unblock `pc3.relation.tone_difference` generation.
-- A specialist color-education source supervised by a Color Certification Level 1 coordinator and citing the official Grade 3 text explicitly states the conventional rule groups: high-lightness clear tones `p/lt/b × dkg/dk/dp`, and high-saturation tones × low-saturation tones, with `sf/d` excluded. A second specialist source states the same lightness grouping and compatible saturation grouping. Under the current amendment, these remain corroboration only because the complete machine-readable matrix is not yet supplied by level-1/2 authority.
-- A new first-party Japan Color Research Institute / Japan Color Enterprise catalog lead was checked on 2026-09-01. The current `色の基本` teaching chart is explicitly described as a PCCS instructional chart for understanding hue- and tone-based `同一・類似・対照` relationships, confirming that the conventional three-way tone relation is part of the authoritative PCCS teaching system. The public catalog preview does not expose the chart's actual pair-membership table, so it strengthens first-party scope evidence but still does not supply the complete contrast-tone matrix.
-- A 2001 `日本色彩学会誌` paper was newly inspected. Its experiment uses PCCS and explicitly labels numerous concrete pairs as `対照トーン` (including examples such as `v`–`lt`, `dk`–`sf`, `dp`–`b`, `s`–`dk`, and `p`–`dk`) in a published table. Because the paper selects an experimental subset rather than defining all 12-tone membership rules, it is retained as auditable corroboration only and does not authorize completing the matrix by extrapolation.
-- A fresh independent Grade 3 source cross-check explicitly matches the same candidate grouping: `p/lt/b × dkg/dk/dp`, high-saturation `v/b/s/dp` × low-saturation `p/ltg/g/dkg`, and no contrast-tone partner for `sf/d`. This independently agrees with the already recorded Level-1-coordinator-supervised source and removes ambiguity about what candidate matrix needs authority elevation. Both are still level-3 evidence under the amendment, so no generation is authorized from them alone. Details are recorded in `41_RELATION_BOUNDARY_AUDIT.md`.
-- A 2017 official guide from the International Color Design Association also gives an analogous explicit contrast-tone rule, but it uses a different 20-hue/13-tone system rather than PCCS. It must not be substituted for conventional Grade 3 PCCS and is retained only as non-authoritative comparative evidence.
-- Searches scoped to J-STAGE, CiNii, academic domains, exact `対照トーン` terminology, university repositories, and KAKEN now expose several isolated examples and syllabus-level scope confirmations but still do not expose a complete auditable conventional Grade 3 pair matrix. Do not repeat these same generic routes without a new lead.
-- The current university/vocational syllabus route has now also been exhausted: Nippon Engineering College 2024/2025 and NBS/NDG 2026 materials confirm that same/similar/contrast tone schemes are taught, but do not enumerate the 12-tone matrix. This audit is recorded in `audits/2026-09-01-tone-authority-university-route.md` and was merged through PR #476 after Power Color workflow run `33496393923` succeeded.
-- A fresh official-text-derived specialist route was checked after PR #476. Plus Colors, supervised by a Color Certification Level 1 coordinator and explicitly referencing the 2020 official Grade 3 text, states the contrast-tone concept and concrete examples such as `p`–`dp` and `g`–`v`, and states that `d` and `sf` cannot form contrast-tone pairings. This remains level-3 evidence under `42_RELIABLE_SECONDARY_SOURCE_AMENDMENT.md`; it corroborates the candidate grouping but does not elevate the complete matrix to level 1/2.
-- New first-party route: JCRI's 2022 annual report documents a PCCS Color Calc-derived pair-analysis implementation that accepts converted color data and returns pair-level scheme classifications, with a public sample showing `トーン配色` judgments. The current JCRI Color Calc product page confirms Color Calc remains an active JCRI-produced product. The public sample does not enumerate the full 12-tone contrast matrix, so this does not yet unblock generation; it does narrow authority elevation to obtaining direct JCRI pair-analysis output or an equivalent JCRI table/manual. Audit: `audits/2026-09-01-tone-authority-jcri-pair-analyzer-route.md`.
-- PCCS Japanese hue names are 24/24 source-confirmed under the accepted specialist-industry source route; readings remain pending.
-- PCCS representative monitor values remain unpopulated. The current licensed JCRI PCCS Color Calc direct numeric output remains the approved primary acquisition path.
-- Monitor-facing PCCS questions remain blocked. No RGB/HEX rule was relaxed.
-- Hue 20 remains `V`; the current JCRI manual treats `PB` only as a future rename, and the current DIC reference also lists `20:V / 青紫`.
+Current-source recovery work:
 
-Not complete:
-- complete contrast-tone pair-membership evidence and `pc3.relation.tone_difference` generation;
-- explicit readings for the 24 Japanese hue names;
-- current representative digital display values for monitor swatches and visual PCCS question families;
-- full Grade 3 completion, then Grade 2 and Grade 1;
-- `color_database_complete` remains false.
+1. `docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md` records the current official sample/answer authority and eligible text-only facts.
+2. New micro-skill: `pc2.image.color_image_rules`.
+3. `grade2-authoring-color-image-rules-0001-0012.json` contains 12 current-source text-only questions.
+4. All 12 were independently re-derived from the current sample text plus current published answer key before comparison with proposed answers.
+5. QA result: 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
+6. No sample illustration, screen color, RGB/HEX, or inferred diagram geometry is used.
+7. `grade2-runtime.json` promotes those 12 records record-identically as the first Grade 2 runtime bank.
+8. Runtime gates require exact authoring equality, zero full-fingerprint duplicates, zero collisions with the stale PR #483 batch, exclusion of all stale-batch IDs, and execution through the existing shared Power TOEIC question-bank/workout/session engine.
+9. No Grade 2-specific engine was created.
 
-## Next exact start point
-Do not repeat the exhausted generic J-STAGE/CiNii/university-repository/KAKEN searches, the university/vocational syllabus route, or the already-audited official-text-derived specialist pages. The candidate conventional contrast-tone grouping is independently corroborated at level 3. The strongest remaining level-1 route is now explicit: obtain direct output from JCRI's PCCS pair-analysis implementation for all unordered pairs among the 12 chromatic tones, or obtain an equivalent JCRI/Japan Color Enterprise rule/table/manual or the current official Grade 3 text pp.84–89. Retain auditable input→`トーン配色` output evidence for the software route. Only after the complete candidate matrix is independently cross-checked against level-1/2 evidence may `pc3.relation.tone_difference` be generated. Use the 2001 Japan Color Science Association table only for pair-level cross-checking, not extrapolation.
+Grade 2 runtime frontier after this branch is merged: 12 verified / pending 0.
+Grade 3 remains 223 verified / pending 0 and incomplete.
 
-Monitor-facing PCCS questions remain blocked until approved display references exist.
+## Current source facts used
+
+From current official sample (1), using current published answers E=3 and F=3:
+- clear image: `p` / `lt` tones centered with white;
+- elegant image: `p` / `ltg`, purple-family hues, suppressed lightness difference.
+
+From current official sample (2), using current published answers C=1, E=4, F=2:
+- sports: `p` / `lt` tones;
+- elegant representative tone: `ltg`;
+- urban central color: basic color.
+
+## Exact next start point
+
+First confirm the current PR head is green and merge it. On the next run, fetch latest main and re-open the current Association Grade 2 sample before doing any source-derived work. Then evaluate `pc2.scheme.natural_harmony_text` from current sample (2) D. Generate it only if explicit current authority supports enough non-template learning value; otherwise continue the current Grade 2 concept/source inventory.
+
+Do not revive or promote `grade2-authoring-official-sample-facts-0001-0012.json` unless the exact former first-party sample/version is independently recovered and auditable.
