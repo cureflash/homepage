@@ -1,5 +1,7 @@
 # Power Color — HANDOFF
 
+Dedicated deferred Grade 3 restart handoff: `docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md`.
+
 ## Current checkpoint
 Grade 3 Phase A remains active. Runtime is now 223 verified / pending 0: 127 conventional-color questions + 12 `pc3.pccs.complementary_hue_number` + 12 `pc3.relation.same_tone` + 12 `pc3.relation.same_hue` + 12 `pc3.relation.hue_difference` + 12 `pc3.value.gradient` + 24 `pc3.scheme.identification` + 12 `pc3.relation.hue_classification`. The shared Power TOEIC question-bank/workout/session engine remains the only engine.
 
