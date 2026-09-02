@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 156 verified / pending 0 across thirteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 168 verified / pending 0 across fourteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
 ## Completed Grade 2 checkpoints
 
@@ -39,7 +39,8 @@ Grade 2 runtime is 156 verified / pending 0 across thirteen promoted skills. Gra
 - [x] `pc2.scheme.hue_circle_division`: 12 verified and promoted; runtime 120 → 132.
 - [x] `pc2.image.image_scheme_keywords`: 12 verified and promoted; runtime 132 → 144.
 - [x] `pc2.media.rgb_cmyk_models`: 12 verified and promoted; runtime 144 → 156.
-- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all thirteen promoted skills.
+- [x] `pc2.media.color_management_profiles`: 12 verified and promoted; runtime 156 → 168.
+- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all fourteen promoted skills.
 
 ## Visual Design
 
@@ -65,8 +66,8 @@ Grade 2 runtime is 156 verified / pending 0 across thirteen promoted skills. Gra
 - [x] Exclude RGB/HEX display values, swatches, monitor-facing color identification, screenshots, calibration values, rendering-intent judgments and inferred diagram geometry.
 - [x] Generate pending-first 12 text-choice questions and independently re-derive every answer before accepting proposed answers.
 - [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
-- [ ] Promote `pc2.media.color_management_profiles` record-identically to runtime 156 → 168 and extend exact-equality/full-fingerprint/shared-engine gates.
+- [x] Promote record-identically to runtime 156 → 168 with exact-equality/full-fingerprint/shared-engine gates.
 
 ## Exact next start point
 
-Promote the 12 verified `pc2.media.color_management_profiles` records record-identically into Grade 2 runtime 156 → 168. Re-run schema, full-fingerprint duplicate, coverage, answer-position and shared Power TOEIC engine gates. Visual Design remains source-blocked without relaxing any visual/display gate.
+Continue source acquisition at `コンピュータにおける画像の基本`, the next current official Grade 2 Media Design subtopic after `カラーマネジメントの基本`. Author only if an explicit auditable nonvisual rule can be fixed without image appearance, RGB/HEX, monitor values, screenshots or unstated geometry. Visual Design remains source-blocked.
