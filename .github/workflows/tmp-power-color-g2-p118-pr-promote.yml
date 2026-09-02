@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - .automation-trigger-power-color-g2-p118
+      - docs/power-color/TMP_PROMOTION_TRIGGER.md
 
 permissions:
   contents: write
