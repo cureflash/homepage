@@ -8,15 +8,15 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed the concept-boundary reconciliation checkpoint for `takken-concept-city-planning-project`.
+Completed the knowledge-extraction half-checkpoint for `takken-concept-development-permission` from source unit `development-permission-required`.
 
-- Reconciled the shared source unit `city-planning-decisions` against the existing `takken-concept-city-planning-decision` knowledge set before adding anything.
-- Kept the two Article 15 decision-authority knowledge items under `takken-concept-city-planning-decision`.
-- Moved the four already-verified Article 59 executor/authorization-route knowledge items to a dedicated `takken-concept-city-planning-project` dataset without changing their stable `knowledge_id`, claim, conditions, exceptions, primary source, source fact, or verified status.
-- Reclassified verified `takken-q-64-002` to `takken-concept-city-planning-project`; its four `knowledge_refs` are unchanged. `takken-q-64-001` remains under `takken-concept-city-planning-decision`.
-- No duplicate knowledge claim and no new knowledge item were introduced; canonical knowledge-item count remains 422 and mapped-question count remains 98.
+- Extracted 9 atomic knowledge items against the Urban Planning Act Article 29 baseline as of 2026-04-01.
+- Canonicalized the city/quasi-planning-area general permission rule and permit authority.
+- Canonicalized seven statutory no-permission exceptions: small-scale development, agriculture/forestry/fishery buildings and residences, specified public-interest buildings, urban-planning projects, land readjustment, emergency measures for disasters, and ordinary management/light acts.
+- Each item has a stable `knowledge_id`, claim, conditions, exceptions, importance, 2026 cutoff, primary e-Gov statute reference, source unit/fact refs, and `verified` factcheck status.
+- The new canonical dataset is `qualifications/takken/data/power-knowledge-items-development-permission.js`.
+- Existing verified `takken-q-65-001` and `takken-q-65-002` were deliberately not mapped in this checkpoint; the next checkpoint must map only knowledge they directly measure.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed.
-- `takken-concept-city-planning-project` is now fully reconciled for Phase 4.2.
 - No Phase 4.3 question generation, print generation, or app linkage was started.
 
 ## Status after this run
@@ -27,16 +27,16 @@ Completed the concept-boundary reconciliation checkpoint for `takken-concept-cit
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 84/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 84
-- Canonical knowledge items: 422
+- Concepts with canonical knowledge items: 85
+- Canonical knowledge items: 431
 - Existing verified questions mapped: 98
-- Explicit unmapped knowledge gaps: 280
+- Explicit unmapped knowledge gaps: 289
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Continue in canonical concept order with `takken-concept-development-permission` from source unit `development-permission-required`. Extract atomic knowledge items against the 2026-04-01 primary-law baseline, then map only existing verified questions that directly measure them. Do not begin Phase 4.3.
+Map verified `takken-q-65-001` and `takken-q-65-002` only to the `takken-concept-development-permission` knowledge items they directly measure. Keep every unmeasured Article 29 knowledge item as a Phase 4.3 deficit. After mapping, mark `takken-concept-development-permission` fully reconciled and advance to `takken-concept-development-completion`. Do not begin Phase 4.3.
 
 ## publication invariant
 
