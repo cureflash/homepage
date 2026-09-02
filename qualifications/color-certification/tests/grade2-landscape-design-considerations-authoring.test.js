@@ -8,7 +8,7 @@ const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json',
 
 function fingerprint(q) { return JSON.stringify([q.sentence, q.choices]); }
 
-test('Grade 2 Landscape p122 considerations batch is independently verified, nonvisual, balanced and not promoted before gate', () => {
+test('Grade 2 Landscape p122 considerations batch remains independently verified, nonvisual, balanced and record-identical after promotion', () => {
   assert.equal(batch.grade, 2);
   assert.equal(batch.skill.id, 'pc2.landscape.design_considerations');
   assert.equal(batch.questions.length, 12);
@@ -39,8 +39,8 @@ test('Grade 2 Landscape p122 considerations batch is independently verified, non
     assert.equal(/#[0-9a-f]{3,8}\b/i.test(JSON.stringify(q)), false);
     assert.equal(q.sourceRefs.includes('aft_grade2_current_toc_2026'), true);
     assert.equal(q.sourceRefs.includes('tokyo_landscape_color_guideline_current'), true);
-    assert.equal(runtimeIds.has(q.id), false);
-    assert.equal(runtimeFingerprints.has(fingerprint(q)), false);
+    assert.equal(runtimeIds.has(q.id), true);
+    assert.equal(runtimeFingerprints.has(fingerprint(q)), true);
     assert.equal(ids.has(q.id), false);
     ids.add(q.id);
     positions[q.correctIndex] += 1;
@@ -53,5 +53,6 @@ test('Grade 2 Landscape p122 considerations batch is independently verified, non
   assert.deepEqual(positions, [3, 3, 3, 3]);
   const batchFingerprints = batch.questions.map(fingerprint);
   assert.equal(new Set(batchFingerprints).size, 12);
-  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), false);
+  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), true);
+  assert.deepEqual(runtime.questions.filter((q) => q.skillId === batch.skill.id), batch.questions);
 });
