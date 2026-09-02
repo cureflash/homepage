@@ -54,8 +54,10 @@ Audit: `docs/power-color/audits/2026-09-02-grade2-interior-p105-source-audit.md`
 - Visual Design: source-blocked.
 - Media Design: three resolved/promoted text-only slices.
 - Fashion: basic/trend slice promoted; p.091/p.095/p.096 remain source-blocked.
-- Interior: p.104 source-blocked; both p.105 topics are now source-resolved and verified in authoring, awaiting record-identical runtime promotion.
-- After p.105 promotion, continue official text order to the next Interior topic; do not skip ahead by inventing a rule from a TOC label.
+- Interior p.104: source-blocked.
+- Interior p.105: both topics are source-resolved and verified in authoring, awaiting record-identical runtime promotion.
+- Interior p.107 `インテリア空間のカラーコーディネーション`: source-blocked after review. Public sources confirm the public/private/service subtopics but do not expose a sufficiently explicit deterministic text-only coordination rule. Do not infer from room appearance or color stereotypes.
+- Interior p.110 `インテリアエレメントの色彩分類と色彩傾向`: source-resolved for the narrow base/assort/accent role classification. Current professional material independently corroborates the three roles and conventional 70/25/5 planning split. Audit: `docs/power-color/audits/2026-09-02-grade2-interior-p107-p110-source-audit.md`.
 
 ## Preserved exclusions
 
@@ -64,11 +66,12 @@ Audit: `docs/power-color/audits/2026-09-02-grade2-interior-p105-source-audit.md`
 - No unstated area-ratio or style heuristics.
 - Do not import unrelated four-zone taxonomies into the p.105 three-zone Color Certification slice.
 - Do not broaden room-specific examples or later coordination advice into universal p.105 rules.
+- The p.110 70/25/5 ratio is a conventional planning rule only; never infer measured proportions from an image or floor plan.
 - Keep Grade 3 source/display blockers unchanged.
 
 ## Exact next order
 
-1. Merge the current verified p.105 authoring checkpoint after CI.
-2. Promote `pc2.interior.color_planning_principles` and `pc2.interior.zoning_classification` record-identically; expected runtime 192 → 216 if all gates pass.
-3. Extend exact-equality/full-fingerprint/coverage/shared Power TOEIC engine gates to both promoted skills.
-4. Continue official Grade 2 text order to the next Interior topic.
+1. Promote `pc2.interior.color_planning_principles` and `pc2.interior.zoning_classification` record-identically; expected runtime 192 → 216 if all gates pass.
+2. Extend exact-equality/full-fingerprint/coverage/shared Power TOEIC engine gates to both promoted skills.
+3. Keep p.107 source-blocked.
+4. Then author `pc2.interior.element_color_roles` pending-first from the fixed p.110 narrow source boundary, independently re-solve every record, and run the existing schema/full-fingerprint/answer-position/shared-renderer gates before any promotion.
