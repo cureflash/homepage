@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 300 verified / pending 0 across twenty-five promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
+Grade 2 runtime is 312 verified / pending 0 across twenty-six promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 Latest promoted skills:
 - `pc2.interior.color_planning_principles`: 12 promoted; 192 → 204.
@@ -34,8 +34,9 @@ Latest promoted skills:
 - `pc2.landscape.color_design_harmony_role`: 12 promoted; 264 → 276.
 - `pc2.landscape.regional_color_context`: 12 promoted record-identically; 276 → 288.
 - `pc2.landscape.long_lifecycle_color`: 12 promoted record-identically; 288 → 300.
+- `pc2.landscape.design_considerations`: 12 promoted record-identically; 300 → 312.
 
-All twenty-five promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI run `33665241835`; PR #567 merged as `0f246cc3056c51503c870f9af9fe24b3ea33c833`.
+All twenty-six promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI run `33676939840`; PR #577 merged as `f7661343ba41b9c00cdc9edb2035ce8b86c90f72`.
 
 ## Preserved blocked topics
 
@@ -136,7 +137,7 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-sou
 
 The current official Grade 2 table of contents confirms this topic and its position before p.122. Checked public-sector landscape material supports only broad season/time variability and surrounding-context propositions; it does not expose the official-text classifications, a closed example inventory, or deterministic mappings suitable for a distinct skill. Do not infer season/time→color mappings, fixed hue/value/chroma shifts, weather effects, RGB/HEX/display values, image appearance or unstated illumination geometry.
 
-## Landscape p.122 `景観色彩設計の配慮事項` — source-resolved, authoring verified
+## Landscape p.122 `景観色彩設計の配慮事項` — promoted
 
 Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p122-considerations-source-audit.md`.
 
@@ -150,12 +151,10 @@ Accepted boundary for `pc2.landscape.design_considerations` is conceptual/nonvis
 
 Do not generalize Tokyo-specific numerical/Munsell criteria, infer RGB/HEX/display values, material appearance, fixed hue/tone choices, photograph-derived judgments or unstated geometry.
 
-State: `qualifications/color-certification/data/grade2-authoring-landscape-design-considerations-0001-0012.json` contains 12 records generated pending-first and independently rechecked. 12/12 verified, pending 0, A/B/C/D=3/3/3/3. Pre-promotion schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression passed in workflow run `33674008109`; PR #572 merged as `165132c83eec5fd949e0023a9dfa9bdd62438e97`.
+State: `qualifications/color-certification/data/grade2-authoring-landscape-design-considerations-0001-0012.json` contains 12 records generated pending-first and independently rechecked. 12/12 verified, pending 0, A/B/C/D=3/3/3/3. Pre-promotion schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression passed in workflow run `33674008109`; PR #572 merged as `165132c83eec5fd949e0023a9dfa9bdd62438e97`. All 12 records were then promoted record-identically; runtime 300 → 312 and twenty-five → twenty-six skills. Post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine gate passed in Power Color CI `33676939840`; PR #577 merged as `f7661343ba41b9c00cdc9edb2035ce8b86c90f72`.
 
 ## Exact next start point
 
-Promote all 12 verified `pc2.landscape.design_considerations` records record-identically into Grade 2 runtime, moving runtime 300 → 312 and twenty-five → twenty-six skills. Update the dedicated test from runtime-absence assertions to exact post-promotion equality and run full-fingerprint/shared Power TOEIC engine regression before merge.
-
-After successful promotion, continue official Grade 2 text order at Landscape p.123 `住宅の色彩設計プロセス`.
+Continue official Grade 2 text order at Landscape p.123 `住宅の色彩設計プロセス`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. If public authority is insufficient, record the topic source-blocked rather than manufacturing a 12-question batch.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
