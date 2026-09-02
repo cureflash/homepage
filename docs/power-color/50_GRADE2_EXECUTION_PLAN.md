@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 228 verified / pending 0 across nineteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
+Grade 2 runtime remains 228 verified / pending 0 across nineteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 Latest promoted skills:
 - `pc2.interior.color_planning_principles`: 12 promoted; 192 → 204.
@@ -53,17 +53,11 @@ Accepted rule boundary only:
 - accent color = small emphasis area;
 - 70/25/5 = explicit conventional planning ratio only, never a value inferred from an image or floor plan.
 
-Excluded:
-- no photographs, swatches, sampled pixels or RGB/HEX;
-- no floor-plan geometry or measured image area;
-- no universal hue assignment to any role.
-
 State:
 - [x] pending-first 12 created;
 - [x] independently re-solved all 12 before comparing with proposed answers;
 - [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
 - [x] A/B/C/D = 3/3/3/3;
-- [x] dedicated schema/full-fingerprint/nonvisual/shared-renderer gate;
 - [x] promoted record-identically; runtime 216 → 228.
 
 ## Interior p.111–112 source audit
@@ -86,6 +80,16 @@ Narrow accepted source boundary only:
 
 Only membership in this six-label inventory is source-resolved. Do not infer or author style-to-hue, tone, material, shape, furniture, historical-period, image or display-color mappings from this boundary.
 
+### `pc2.interior.style_name_inventory`
+
+State:
+- [x] pending-first 12 created from membership-only questions;
+- [x] independently re-solved all 12 before comparing with proposed answers;
+- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
+- [x] A/B/C/D = 3/3/3/3;
+- [x] dedicated gate added for schema invariants, six-label membership logic, nonvisual/shared-renderer behavior, zero within-batch fingerprints, and zero fingerprint collision with current runtime;
+- [ ] run gates/CI and promote record-identically only if green.
+
 ## Exact next start point
 
-Create `pc2.interior.style_name_inventory` pending-first using only the fixed six-label p.112 inventory. Independently re-solve every record before comparing with proposed answers. Run schema, full-fingerprint duplicate, answer-position balance, nonvisual/shared-renderer and shared Power TOEIC engine gates. Promote only verified records record-identically. Keep all Grade 3 blockers and source/display gates unchanged.
+Run the new p.112 authoring gate and normal Power Color/shared Power TOEIC regression. If green, promote the 12 verified `pc2.interior.style_name_inventory` records record-identically to runtime, move 228 → 240, extend exact-equality/full-fingerprint/shared-engine coverage to twenty promoted skills, then continue official-text order from the next source inventory item. Keep all Grade 3 blockers and source/display gates unchanged.
