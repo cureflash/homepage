@@ -8,12 +8,12 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled `takken-concept-floor-area-ratio` by mapping the existing verified Phase 2/3 questions only to the knowledge items they directly measure.
+Added canonical atomic knowledge for `takken-concept-setback-height-restrictions` without changing any Phase 2/3 question content, validation status, or existing question mappings.
 
-- `takken-q-70-001` maps only to `takken-k-floor-area-ratio-definition`.
-- `takken-q-70-002` maps only to `takken-k-floor-area-ratio-front-road-under-twelve`.
-- The designated-limit, residential-road-factor, nonresidential-road-factor, lower-of-two, and weighted-average knowledge items remain explicit Phase 4.3 deficits.
-- Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed.
+- Added 9 verified knowledge items sourced to the 2026-04-01 Building Standards Act Article 56 framework and official MLIT slope guidance.
+- Separated the three slope types, road-slope principle, road setback relaxation, adjacent-lot low-rise exclusion, residential/nonresidential adjacent-lot baselines, north-side applicable zones, and low-rise/mid-rise north-side baselines.
+- `takken-q-71-001` remains unmapped in this checkpoint so it can be mapped only to the summary item its choices directly measure.
+- `takken-q-71-002` was not included because shadow restrictions are a separate exam concept.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
 ## Status after this run
@@ -24,16 +24,16 @@ Reconciled `takken-concept-floor-area-ratio` by mapping the existing verified Ph
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 90/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 90
-- Canonical knowledge items: 469
+- Concepts with canonical knowledge items: 91
+- Canonical knowledge items: 478
 - Existing verified questions mapped: 110
-- Explicit unmapped knowledge gaps: 309
+- Explicit unmapped knowledge gaps: 318
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical knowledge items for `takken-concept-setback-height-restrictions` from the 2026-04-01 Building Standards Act Article 56 framework. Keep question mapping limited to directly measured knowledge and do not begin Phase 4.3.
+Map `takken-q-71-001` only to `takken-k-setback-height-three-slope-types`. Keep the other eight setback-height-restrictions knowledge items as explicit Phase 4.3 deficits. Do not map `takken-q-71-002` here because it belongs to the separate `takken-concept-shadow-restrictions` concept. Do not begin Phase 4.3.
 
 ## publication invariant
 
