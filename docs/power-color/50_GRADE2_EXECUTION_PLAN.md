@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 276 verified / pending 0 across twenty-three promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
+Grade 2 runtime is 288 verified / pending 0 across twenty-four promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 Latest promoted skills:
 - `pc2.interior.color_planning_principles`: 12 promoted; 192 → 204.
@@ -31,9 +31,10 @@ Latest promoted skills:
 - `pc2.interior.style_name_inventory`: 12 promoted; 228 → 240.
 - `pc2.landscape.public_nature`: 12 promoted; 240 → 252.
 - `pc2.landscape.element_examples`: 12 promoted; 252 → 264.
-- `pc2.landscape.color_design_harmony_role`: 12 promoted record-identically; 264 → 276.
+- `pc2.landscape.color_design_harmony_role`: 12 promoted; 264 → 276.
+- `pc2.landscape.regional_color_context`: 12 promoted record-identically; 276 → 288.
 
-All twenty-three promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI run `33653881914`; PR #551 merged as `da9e9ab003dc89a53d7fbd90d4d23ebc22f88a12`.
+All twenty-four promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI run `33659280553`; PR #560 merged as `5e1cf1ed51f4c94b9cbee8465eabdb754ae05702`.
 
 ## Preserved blocked topics
 
@@ -42,6 +43,7 @@ All twenty-three promoted skills are covered by exact-equality/full-fingerprint/
 - Interior `インテリア概念の成立` p.104: source-blocked.
 - Interior `インテリア空間のカラーコーディネーション` p.107: source-blocked.
 - Interior `インテリアエレメントの配色の考え方と技法` p.111: source-blocked; generic p.110 role/ratio material is not accepted as a substitute.
+- Landscape p.118 `国内外の景観色彩の事例`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`; current public official material does not expose a closed official-text example set with deterministic nonvisual answer rules.
 
 Do not repeat those routes unless new explicit auditable authority appears.
 
@@ -81,7 +83,7 @@ State:
 - [x] promoted record-identically; runtime 264 → 276 and twenty-two → twenty-three skills;
 - [x] post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine gate passed in workflow run `33653881914`; PR #551 merged.
 
-## Landscape p.118 `地域には地域の色がある` — authoring verified, promotion pending
+## Landscape p.118 `地域には地域の色がある` — promoted
 
 Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-regional-color-source-audit.md`.
 
@@ -101,11 +103,17 @@ State:
 - [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
 - [x] A/B/C/D = 3/3/3/3;
 - [x] dedicated ID/full-fingerprint/source/nonvisual/shared-renderer authoring gate and normal Power Color regression passed in workflow run `33654743141`; PR #553 merged as `e5aac280779d58f891889978bb9f4b6e4740e20f`;
-- [ ] promote the 12 records record-identically; runtime 276 → 288 and twenty-three → twenty-four skills;
-- [ ] extend post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-four skills.
+- [x] promoted all 12 records record-identically; runtime 276 → 288 and twenty-three → twenty-four skills;
+- [x] post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine coverage passed in workflow run `33659280553`; PR #560 merged as `5e1cf1ed51f4c94b9cbee8465eabdb754ae05702`.
+
+## Landscape p.118 `国内外の景観色彩の事例` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
+
+The current official Grade 2 material establishes the scope/order but the publicly auditable material does not expose the official text's closed case-study set together with deterministic nonvisual answer rules. Do not substitute arbitrary outside cases, infer from photographs/display colors, or manufacture region-to-color mappings. Revisit only if new explicit auditable authority appears.
 
 ## Exact next start point
 
-Promote `pc2.landscape.regional_color_context` record-identically into `grade2-runtime.json`. Do not rewrite the verified authoring records during promotion. Require exact-equality, full-fingerprint duplicate protection, shared Power TOEIC question-bank/session/workout regression, and full Power Color CI before merge.
+Continue official text order to Landscape p.120 `人工要素と自然要素の色彩が共存`. Source-acquire an explicit deterministic nonvisual rule boundary before authoring anything. If the boundary cannot be established, record a source blocker and continue in official-text order without guessing.
 
-After promotion, continue official text order to p.118 `国内外の景観色彩の事例`; author only if an explicit deterministic nonvisual source boundary is established. Keep all Grade 3 blockers and source/display gates unchanged.
+Keep all Grade 3 blockers and source/display gates unchanged.

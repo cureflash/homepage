@@ -32,7 +32,7 @@
 - [ ] Full Grade 3 completion gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 276 verified / pending 0 across twenty-three promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 288 verified / pending 0 across twenty-four promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 - [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
 - [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
@@ -66,9 +66,10 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Source-resolve Landscape p.118 `地域には地域の色がある` to a narrow deterministic nonvisual regional-context boundary.
 - [x] Create `pc2.landscape.regional_color_context` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
 - [x] Add and pass the dedicated ID/full-fingerprint/source/nonvisual/shared-renderer authoring gate and normal Power Color regression; workflow run `33654743141`, PR #553 merged.
-- [ ] Promote the 12 verified `pc2.landscape.regional_color_context` records record-identically; runtime 276 → 288 and twenty-three → twenty-four skills.
-- [ ] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-four promoted skills.
-- [ ] Continue official text order to Landscape p.118 `国内外の景観色彩の事例`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
+- [x] Promote the 12 verified `pc2.landscape.regional_color_context` records record-identically; runtime 276 → 288 and twenty-three → twenty-four skills.
+- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-four promoted skills; Power Color CI run `33659280553` succeeded and PR #560 merged.
+- [x] Audit Landscape p.118 `国内外の景観色彩の事例`; keep source-blocked because current public official material does not expose a closed official-text example set with deterministic nonvisual answer rules. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
+- [ ] Continue official text order to Landscape p.120 `人工要素と自然要素の色彩が共存`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
