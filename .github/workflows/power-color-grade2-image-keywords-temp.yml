@@ -16,8 +16,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Generate authoring checkpoint
-        run: python3 .github/scripts/power_color_grade2_image_keywords.py
+      - name: Diagnose generation
+        shell: bash
+        run: |
+          set +e
+          python3 .github/scripts/power_color_grade2_image_keywords.py > /tmp/power-color-debug.txt 2>&1
+          code=$?
+          if [ "$code" -ne 0 ]; then
+            cp /tmp/power-color-debug.txt .github/power-color-grade2-image-keywords-debug.txt
+            git config user.name "Power Color Automation"
+            git config user.email "actions@users.noreply.github.com"
+            git add .github/power-color-grade2-image-keywords-debug.txt
+            git commit -m "chore: capture Grade 2 generation failure"
+            git push origin HEAD:power-color-grade2-image-keywords
+            exit "$code"
+          fi
       - name: Run full Power Color tests
         run: node --test qualifications/color-certification/tests/*.test.js
       - name: Commit checkpoint and remove temporary helpers
