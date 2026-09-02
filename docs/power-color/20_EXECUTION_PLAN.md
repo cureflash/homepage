@@ -70,7 +70,11 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-four promoted skills; Power Color CI run `33659280553` succeeded and PR #560 merged.
 - [x] Audit Landscape p.118 `国内外の景観色彩の事例`; keep source-blocked because current public official material does not expose a closed official-text example set with deterministic nonvisual answer rules. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
 - [x] Audit Landscape p.120 `人工要素と自然要素の色彩が共存`; keep authoring source-blocked because public evidence confirms only the broad coexistence concept, not a sufficiently rich closed deterministic Grade 2 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`.
-- [ ] Continue official text order to Landscape p.120 `ライフサイクルの長い色彩`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
+- [x] Source-resolve Landscape p.120 `ライフサイクルの長い色彩` to a narrow deterministic nonvisual long-duration/surrounding-harmony/large-area/durability boundary. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-long-lifecycle-source-audit.md`.
+- [x] Create `pc2.landscape.long_lifecycle_color` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [x] Add and pass the pre-promotion ID/schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression; workflow run `33661736671`, PR #563 merged as `548b14d26bee4f85570fdb56c865cbbb800ab591`.
+- [ ] Promote the 12 verified `pc2.landscape.long_lifecycle_color` records record-identically; runtime 288 → 300 and twenty-four → twenty-five skills.
+- [ ] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-five promoted skills.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
