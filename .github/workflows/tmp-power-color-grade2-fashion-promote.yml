@@ -1,0 +1,154 @@
+name: Temporary Power Color Grade 2 fashion promotion
+
+on:
+  push:
+    branches:
+      - power-color-grade2-fashion-promote-20260902-1612
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: power-color-grade2-fashion-promote-20260902-1612
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Promote verified fashion batch and sync canonical docs
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const assert = require('assert/strict');
+          const readJson = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
+          const writeJson = (p, v) => fs.writeFileSync(p, JSON.stringify(v, null, 2) + '\n');
+
+          const runtimePath = 'qualifications/color-certification/data/grade2-runtime.json';
+          const batchPath = 'qualifications/color-certification/data/grade2-authoring-basic-trend-color-classification-0001-0012.json';
+          const authoringTestPath = 'qualifications/color-certification/tests/grade2-basic-trend-color-classification-authoring.test.js';
+          const runtimeTestPath = 'qualifications/color-certification/tests/grade2-runtime-promotion.test.js';
+          const statusPath = 'docs/power-color/STATUS.json';
+          const handoffPath = 'docs/power-color/90_HANDOFF.md';
+          const planPath = 'docs/power-color/50_GRADE2_EXECUTION_PLAN.md';
+          const executionPath = 'docs/power-color/20_EXECUTION_PLAN.md';
+          const inventoryPath = 'docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md';
+
+          const runtime = readJson(runtimePath);
+          const batch = readJson(batchPath);
+          assert.equal(runtime.questions.length, 180);
+          assert.equal(runtime.skills.length, 15);
+          assert.equal(runtime.skills.some(s => s.id === batch.skill.id), false);
+          assert.equal(batch.questions.length, 12);
+          assert.equal(batch.questions.every(q => q.validationStatus === 'verified'), true);
+          assert.equal(new Set(runtime.questions.map(q => q.id)).size, 180);
+          assert.equal(batch.questions.some(q => runtime.questions.some(r => r.id === q.id)), false);
+
+          runtime.skills.push(batch.skill);
+          runtime.questions.push(...batch.questions);
+          assert.equal(runtime.questions.length, 192);
+          assert.equal(runtime.skills.length, 16);
+          writeJson(runtimePath, runtime);
+
+          let authoringTest = fs.readFileSync(authoringTestPath, 'utf8');
+          authoringTest = authoringTest.replace(
+            "test('Grade 2 fashion basic/trend authoring batch is independently verified, nonvisual, balanced, and not yet promoted', () => {",
+            "test('Grade 2 fashion basic/trend authoring batch is independently verified, nonvisual, balanced, and record-identically promoted', () => {"
+          );
+          const oldTail = `  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), false);\n  const runtimeIds = new Set(runtime.questions.map((q) => q.id));\n  assert.equal(batch.questions.some((q) => runtimeIds.has(q.id)), false);`;
+          const newTail = `  const runtimeSkill = runtime.skills.find((skill) => skill.id === batch.skill.id);\n  assert.deepEqual(runtimeSkill, batch.skill);\n  const runtimeQuestions = runtime.questions.filter((q) => q.skillId === batch.skill.id);\n  assert.deepEqual(runtimeQuestions, batch.questions);`;
+          assert.equal(authoringTest.includes(oldTail), true);
+          authoringTest = authoringTest.replace(oldTail, newTail);
+          fs.writeFileSync(authoringTestPath, authoringTest);
+
+          let runtimeTest = fs.readFileSync(runtimeTestPath, 'utf8');
+          const imageBasicsImport = "const imageBasics = JSON.parse(await readFile(new URL('../data/grade2-authoring-image-basics-0001-0012.json', import.meta.url), 'utf8'));";
+          const fashionImport = "const basicTrend = JSON.parse(await readFile(new URL('../data/grade2-authoring-basic-trend-color-classification-0001-0012.json', import.meta.url), 'utf8'));";
+          assert.equal(runtimeTest.includes(imageBasicsImport), true);
+          assert.equal(runtimeTest.includes(fashionImport), false);
+          runtimeTest = runtimeTest.replace(imageBasicsImport, imageBasicsImport + '\n' + fashionImport);
+          runtimeTest = runtimeTest.replace(
+            'const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor, hueCircleDivision, imageSchemeKeywords, rgbCmykModels, colorManagementProfiles, imageBasics];',
+            'const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor, hueCircleDivision, imageSchemeKeywords, rgbCmykModels, colorManagementProfiles, imageBasics, basicTrend];'
+          );
+          runtimeTest = runtimeTest.replaceAll('runtime.questions.length, 180', 'runtime.questions.length, 192');
+          runtimeTest = runtimeTest.replaceAll("validationStatus === 'verified').length, 180", "validationStatus === 'verified').length, 192");
+          runtimeTest = runtimeTest.replace('totalCount: 45', 'totalCount: 48');
+          runtimeTest = runtimeTest.replace(').length, 45);', ').length, 48);');
+          fs.writeFileSync(runtimeTestPath, runtimeTest);
+
+          const status = readJson(statusPath);
+          assert.equal(status.grade2.runtime_questions.verified, 180);
+          assert.equal(status.grade2.runtime_skills.length, 15);
+          status.grade2.runtime_questions.verified = 192;
+          status.grade2.runtime_skills.push(batch.skill.id);
+          status.grade2.active_skill = null;
+          status.grade2.active_authoring = null;
+          delete status.grade2.active_authoring_qa;
+          status.grade2.next = 'Continue current official Grade 2 text order after pc2.fashion.basic_trend_color_classification and acquire the next explicit auditable nonvisual rule before authoring.';
+          status.current_run = {
+            checkpoints_completed: 1,
+            generated: 0,
+            checked: 12,
+            verified: 12,
+            revision_events: 0,
+            needs_revision: 0,
+            rejected: 0,
+            pending: 0,
+            checkpoint_breakdown: [
+              'Promoted the previously independently verified pc2.fashion.basic_trend_color_classification 12-question batch record-identically into Grade 2 runtime 180 to 192 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to all sixteen promoted skills.'
+            ]
+          };
+          status.next = 'Acquire explicit auditable authority for the next source-resolvable nonvisual Grade 2 topic after pc2.fashion.basic_trend_color_classification.';
+          writeJson(statusPath, status);
+
+          let handoff = fs.readFileSync(handoffPath, 'utf8');
+          handoff = `# Power Color — HANDOFF\n\n## Active work\n\nGrade 2 is the active priority by explicit user override while Grade 3 remains incomplete. Grade 3 deferred state is preserved in \`docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md\`; do not mark Grade 3 complete or relax its source/display gates.\n\n## Grade 2 current checkpoint\n\nGrade 2 runtime is 192 verified / pending 0 across sixteen promoted skills.\n\n\`pc2.fashion.basic_trend_color_classification\` has been promoted record-identically from its independently verified 12-question authoring batch. The runtime promotion gate now checks the exact union of all sixteen verified authoring batches, 192 verified / pending 0, no full-fingerprint duplicates, and execution through the shared Power TOEIC question-bank/session/workout engine.\n\nThe accepted fashion rule boundary remains narrow and text-only: basic color = repeatedly used standard-color category not defined by current fashion trend; trend color = category whose content changes with era/season; current JAFCA first-party material confirms publication of fashion trend-color information. Do not turn example hues into universal classifications. Do not use fashion-photo appearance, swatches, RGB/HEX, sampled pixels, current displayed-color identification, or unstated style geometry.\n\nVisual Design remains source-blocked because reviewed public first-party material confirms scope/order but does not expose a sufficiently explicit nonvisual answer rule.\n\nGrade 3 runtime remains 223 verified / pending 0 and incomplete.\n\n## Exact next start point\n\nContinue in current official Grade 2 text order after \`ファッションカラーの分類\`. Acquire explicit auditable authority for the next source-resolvable nonvisual topic before authoring. Keep Visual Design source-blocked and keep all existing source/display gates unchanged.\n`;
+          fs.writeFileSync(handoffPath, handoff);
+
+          let plan = fs.readFileSync(planPath, 'utf8');
+          plan = plan.replace('Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills. One additional 12-question fashion batch is independently verified in authoring and awaits record-identical runtime promotion.', 'Grade 2 runtime is 192 verified / pending 0 across sixteen promoted skills.');
+          plan = plan.replace('- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all fifteen promoted skills.', '- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all sixteen promoted skills.');
+          plan = plan.replace('- [ ] Promote the 12 verified records record-identically to runtime 180 → 192.', '- [x] Promote the 12 verified records record-identically to runtime 180 → 192.');
+          plan = plan.replace('- [ ] Change the dedicated gate to exact runtime equality and extend full-fingerprint/coverage/shared Power TOEIC engine gates to all sixteen promoted skills.', '- [x] Change the dedicated gate to exact runtime equality and extend full-fingerprint/coverage/shared Power TOEIC engine gates to all sixteen promoted skills.');
+          plan = plan.replace('Promote `pc2.fashion.basic_trend_color_classification` record-identically from `qualifications/color-certification/data/grade2-authoring-basic-trend-color-classification-0001-0012.json` into Grade 2 runtime 180 → 192. Do not regenerate or rewrite the 12 verified records. Visual Design remains source-blocked.', 'Continue current official Grade 2 text order after `ファッションカラーの分類`. Acquire explicit auditable authority for the next source-resolvable nonvisual topic before authoring. Visual Design remains source-blocked.');
+          fs.writeFileSync(planPath, plan);
+
+          let execution = fs.readFileSync(executionPath, 'utf8');
+          execution = execution.replace('runtime frontier is 180 verified / pending 0 across fifteen promoted skills', 'runtime frontier is 192 verified / pending 0 across sixteen promoted skills');
+          fs.writeFileSync(executionPath, execution);
+
+          let inventory = fs.readFileSync(inventoryPath, 'utf8');
+          if (inventory.includes('16. `pc2.fashion.basic_trend_color_classification`')) {
+            inventory = inventory.replace(/16\. `pc2\.fashion\.basic_trend_color_classification`[^\n]*/, '16. `pc2.fashion.basic_trend_color_classification`');
+          } else {
+            const marker = '15. `pc2.media.image_basics`';
+            assert.equal(inventory.includes(marker), true);
+            inventory = inventory.replace(marker, marker + '\n16. `pc2.fashion.basic_trend_color_classification`');
+          }
+          inventory = inventory.replaceAll('fifteen promoted skills', 'sixteen promoted skills');
+          inventory = inventory.replaceAll('180 verified / pending 0', '192 verified / pending 0');
+          inventory = inventory.replaceAll('The first fifteen skills are runtime-promoted record-identically.', 'All sixteen skills are runtime-promoted record-identically.');
+          inventory = inventory.replaceAll('All fifteen skills are runtime-promoted record-identically.', 'All sixteen skills are runtime-promoted record-identically.');
+          fs.writeFileSync(inventoryPath, inventory);
+          NODE
+
+          cd qualifications/color-certification
+          npm test
+          cd ../..
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qualifications/color-certification/data/grade2-runtime.json \
+                  qualifications/color-certification/tests/grade2-basic-trend-color-classification-authoring.test.js \
+                  qualifications/color-certification/tests/grade2-runtime-promotion.test.js \
+                  docs/power-color/STATUS.json \
+                  docs/power-color/90_HANDOFF.md \
+                  docs/power-color/20_EXECUTION_PLAN.md \
+                  docs/power-color/50_GRADE2_EXECUTION_PLAN.md \
+                  docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md
+          git commit -m 'Power Color Grade 2: promote fashion classification runtime'
+          git push origin HEAD:power-color-grade2-fashion-promote-20260902-1612
