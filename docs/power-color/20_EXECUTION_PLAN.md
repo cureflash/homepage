@@ -32,7 +32,7 @@
 - [ ] Full Grade 3 completion gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 324 verified / pending 0 across twenty-seven promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 336 verified / pending 0 across twenty-eight promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 - [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
 - [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
@@ -88,7 +88,12 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Add and pass the dedicated schema/full-fingerprint/source/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression; workflow run `33677670579`, PR #579 merged as `c3f8c298330209e19e01946ced4d1ea17e40ce3f`.
 - [x] Promote the 12 verified `pc2.landscape.residential_color_design_process` records record-identically; runtime 312 → 324 and twenty-six → twenty-seven skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-seven promoted skills; Power Color CI `33678211235` succeeded and PR #582 merged as `6d64629b0bd8f5c5f305fce21f1d1d48c3a4234a`.
-- [ ] Continue official Grade 2 text order at Landscape p.123 `色を測ることによる周辺環境の把握`; source-resolve a distinct deterministic nonvisual rule set before any authoring, or record source-blocked if public authority is insufficient.
+- [x] Source-resolve Landscape p.123 `色を測ることによる周辺環境の把握` to a narrow deterministic nonvisual visual-colorimetry/Munsell/JIS representation boundary.
+- [x] Create `pc2.landscape.surrounding_environment_measurement` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [x] Add and pass the dedicated source/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression; workflow run `33678931801`, PR #584 merged as `abda2407f0f9339948b12a8b9017a9f78f2b3c4c`.
+- [x] Promote the 12 verified `pc2.landscape.surrounding_environment_measurement` records record-identically; runtime 324 → 336 and twenty-seven → twenty-eight skills.
+- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-eight promoted skills; promotion run `33679550547` succeeded and PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
+- [ ] Continue official Grade 2 text order at Landscape p.124 `配色計画`; source-resolve a distinct deterministic nonvisual rule set before any authoring, or record source-blocked if public authority is insufficient.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.

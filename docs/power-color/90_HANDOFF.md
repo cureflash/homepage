@@ -6,7 +6,7 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime is 324 verified / pending 0 across twenty-seven promoted skills.
+Grade 2 runtime is 336 verified / pending 0 across twenty-eight promoted skills.
 
 Landscape p.118 `国内外の景観色彩の事例`, p.120 `人工要素と自然要素の色彩が共存`, p.120 `大きな面積をもつ色彩`, p.120 `太陽光に影響される色彩`, and p.121 `季節や時間の変化を感じさせる多様な色彩` remain source-blocked under their recorded audits. Do not reopen those routes without new explicit auditable authority.
 
@@ -18,10 +18,14 @@ Accepted p.123 boundary remains structural/nonvisual only. Do not treat the JPMA
 
 All 12 `pc2.landscape.residential_color_design_process` records are now promoted record-identically into `qualifications/color-certification/data/grade2-runtime.json`, moving runtime 312 → 324 and twenty-six → twenty-seven skills. The dedicated authoring contract now checks post-promotion record equality. Exact-equality/full-fingerprint/shared Power TOEIC engine regression passed in Power Color CI `33678211235`; PR #582 merged as `6d64629b0bd8f5c5f305fce21f1d1d48c3a4234a`.
 
+Landscape p.123 `色を測ることによる周辺環境の把握` is source-resolved under `docs/power-color/audits/2026-09-03-grade2-landscape-p123-surrounding-measurement-source-audit.md`. The accepted boundary is text-only: current Grade 2 scope/order, surrounding-environment survey by visual colorimetry, Munsell hue/value/chroma representation, paper/JIS Munsell comparison charts, and the distinction between quantitative color-value review and qualitative surrounding-landscape harmony. No RGB/HEX/display inference, place-specific measured values, local color-limit generalization, unstated geometry/lighting/tolerances or image-derived answers are authorized.
+
+All 12 `pc2.landscape.surrounding_environment_measurement` records were independently rechecked and promoted record-identically. Runtime 324 → 336 and twenty-seven → twenty-eight skills. Authoring CI `33678931801` passed and PR #584 merged as `abda2407f0f9339948b12a8b9017a9f78f2b3c4c`; promotion gate `33679550547` passed and PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
+
 Visual Design, Fashion p.091/p.095/p.096, Interior p.104, p.107 and p.111 remain source-blocked. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Continue current official Grade 2 text order at Landscape p.123 `色を測ることによる周辺環境の把握`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. Do not assume the already accepted residential-process boundary supplies detailed measurement rules. If public authority is insufficient, record the topic source-blocked rather than deriving answers from images, RGB/HEX, display appearance, unsupported measurement values or unstated geometry.
+Continue current official Grade 2 text order at Landscape p.124 `配色計画`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. Do not infer fixed palette values, RGB/HEX/display attributes, image appearance, unstated geometry, or local regulatory limits. If current public authority is insufficient, record the topic source-blocked rather than manufacturing a 12-question batch.
 
 Keep all Grade 3 blockers and source/display gates unchanged. Use only the shared Power TOEIC question-bank/workout/session engine.

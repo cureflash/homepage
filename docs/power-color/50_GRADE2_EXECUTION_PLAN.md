@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 324 verified / pending 0 across twenty-seven promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
+Grade 2 runtime is 336 verified / pending 0 across twenty-eight promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 Latest promoted skills:
 - `pc2.interior.color_planning_principles`: 12 promoted; 192 → 204.
@@ -37,7 +37,7 @@ Latest promoted skills:
 - `pc2.landscape.design_considerations`: 12 promoted record-identically; 300 → 312.
 - `pc2.landscape.residential_color_design_process`: 12 promoted record-identically; 312 → 324.
 
-All twenty-seven promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI run `33678211235`; PR #582 merged as `6d64629b0bd8f5c5f305fce21f1d1d48c3a4234a`.
+All twenty-eight promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed deterministic promotion run `33679550547`; PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
 
 ## Preserved blocked topics
 
@@ -170,8 +170,23 @@ Do not treat the JPMA bullet list as proof of a universal mandatory total order 
 
 State: `qualifications/color-certification/data/grade2-authoring-landscape-residential-color-design-process-0001-0012.json` contains 12 records generated pending-first and independently rechecked. 12/12 verified, pending 0, A/B/C/D=3/3/3/3. Dedicated schema/full-fingerprint/source/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression passed in workflow run `33677670579`; PR #579 merged as `c3f8c298330209e19e01946ced4d1ea17e40ce3f`. All 12 records were then promoted record-identically; runtime 312 → 324 and twenty-six → twenty-seven skills. Post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine gate passed in Power Color CI `33678211235`; PR #582 merged as `6d64629b0bd8f5c5f305fce21f1d1d48c3a4234a`.
 
+## Landscape p.123 `色を測ることによる周辺環境の把握` — promoted
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p123-surrounding-measurement-source-audit.md`.
+
+Accepted boundary for `pc2.landscape.surrounding_environment_measurement` is text-only/nonvisual:
+- the current official Grade 2 scope includes understanding surrounding-environment color by measuring color;
+- current professional training explicitly describes actual surrounding-environment color investigation as visual colorimetry (`視感測色`);
+- landscape review may use quantitative Munsell values while separately evaluating qualitative harmony with surrounding landscape;
+- Munsell representation uses hue, value/lightness and chroma (`色相・明度・彩度`);
+- standardized physical/JIS color charts based on the Munsell system support visual comparison.
+
+Do not infer RGB/HEX/display values, monitor swatches, place-specific measured values, local color limits, fixed palette recommendations, image appearance, unstated observation geometry/lighting/tolerances, or numerical-compliance-equals-harmony claims.
+
+State: 12/12 independently verified and promoted record-identically; runtime 324 → 336 and twenty-seven → twenty-eight skills. Authoring CI `33678931801` passed; PR #584 merged as `abda2407f0f9339948b12a8b9017a9f78f2b3c4c`. Promotion run `33679550547` passed; PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
+
 ## Exact next start point
 
-Continue official Grade 2 text order at Landscape p.123 `色を測ることによる周辺環境の把握`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. Do not assume the residential-process audit supplies detailed measurement rules. If current public authority is insufficient, record the topic source-blocked rather than inferring measurement values, RGB/HEX/display attributes, image appearance or unstated geometry.
+Continue official Grade 2 text order at Landscape p.124 `配色計画`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. Do not infer fixed palette values, RGB/HEX/display attributes, image appearance, unstated geometry, or local regulatory limits. If current public authority is insufficient, record the topic source-blocked rather than manufacturing a 12-question batch.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
