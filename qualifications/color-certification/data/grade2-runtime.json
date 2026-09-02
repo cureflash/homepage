@@ -143,6 +143,11 @@
       "id": "pc2.landscape.surrounding_environment_measurement",
       "label": "景観色彩：色を測ることによる周辺環境の把握",
       "categoryId": "pc2.landscape"
+    },
+    {
+      "id": "pc2.conventional.jis_name_structure",
+      "label": "慣用色名：JIS色名の構造",
+      "categoryId": "pc2.conventional"
     }
   ],
   "questions": [
@@ -10660,6 +10665,367 @@
       "qa": {
         "generatedAs": "pending_validation",
         "independentRecheck": "independently synthesized only the explicitly sourced measurement/standardization facts and retained the separate harmony check before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "現行の色彩検定2級公式目次で、p.128から始まる項目はどれですか。",
+      "sentence": "現行の色彩検定2級公式目次で、p.128から始まる項目はどれですか。",
+      "choices": [
+        "慣用色名（JISの慣用色名より）",
+        "配色計画",
+        "インテリアスタイル",
+        "画像の基本"
+      ],
+      "proposedAnswer": "慣用色名（JISの慣用色名より）",
+      "correctIndex": 0,
+      "explanation": "現行2級公式目次では、p.128から「慣用色名（JISの慣用色名より）」が始まります。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently located the p.128 heading in the current AFT Grade 2 table of contents before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "現行2級公式目次で、慣用色名のうちp.128に置かれている区分はどれですか。",
+      "sentence": "現行2級公式目次で、慣用色名のうちp.128に置かれている区分はどれですか。",
+      "choices": [
+        "外来色名",
+        "和色名",
+        "無彩色の系統色名",
+        "光源色名"
+      ],
+      "proposedAnswer": "和色名",
+      "correctIndex": 1,
+      "explanation": "現行2級公式目次ではp.128に「和色名」が置かれています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently confirmed the p.128 subsection label as 和色名 in the current AFT table of contents before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "現行2級公式目次で、和色名の次にp.132から始まる区分はどれですか。",
+      "sentence": "現行2級公式目次で、和色名の次にp.132から始まる区分はどれですか。",
+      "choices": [
+        "系統色名",
+        "色彩管理",
+        "外来色名",
+        "景観色彩"
+      ],
+      "proposedAnswer": "外来色名",
+      "correctIndex": 2,
+      "explanation": "現行2級公式目次では、p.128の和色名に続いてp.132から外来色名が始まります。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently verified that 外来色名 begins at p.132 after 和色名 in the current AFT table of contents before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "JIS Z 8102:2001で、物体色を系統的に表すことを目的とする色名は何ですか。",
+      "sentence": "JIS Z 8102:2001で、物体色を系統的に表すことを目的とする色名は何ですか。",
+      "choices": [
+        "慣用色名",
+        "商品色名",
+        "流行色名",
+        "系統色名"
+      ],
+      "proposedAnswer": "系統色名",
+      "correctIndex": 3,
+      "explanation": "JIS Z 8102:2001では、物体色を系統的に表すことを目的とする色名を系統色名としています。",
+      "sourceRefs": [
+        "jsa_jis_z8102_2001_preview"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the JIS definition of 系統色名 from the official JIS preview before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "JIS Z 8102:2001で、慣習的な呼び名によって表される色名は何ですか。",
+      "sentence": "JIS Z 8102:2001で、慣習的な呼び名によって表される色名は何ですか。",
+      "choices": [
+        "慣用色名",
+        "系統色名",
+        "測色値",
+        "光源色名"
+      ],
+      "proposedAnswer": "慣用色名",
+      "correctIndex": 0,
+      "explanation": "JIS Z 8102:2001では、慣習的な呼び名によって表される色名を慣用色名としています。",
+      "sourceRefs": [
+        "jsa_jis_z8102_2001_preview"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the JIS definition of 慣用色名 from the official JIS preview before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "JIS Z 8102:2001の色名分類で、系統色名と並ぶ大きな区分はどれですか。",
+      "sentence": "JIS Z 8102:2001の色名分類で、系統色名と並ぶ大きな区分はどれですか。",
+      "choices": [
+        "色差式",
+        "慣用色名",
+        "分光分布",
+        "演色評価数"
+      ],
+      "proposedAnswer": "慣用色名",
+      "correctIndex": 1,
+      "explanation": "JIS Z 8102:2001では、色名を系統色名と慣用色名に分類しています。",
+      "sourceRefs": [
+        "jsa_jis_z8102_2001_preview"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently confirmed the top-level JIS color-name classification before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "JIS Z 8102:2001で、系統色名はさらに何によって区分されますか。",
+      "sentence": "JIS Z 8102:2001で、系統色名はさらに何によって区分されますか。",
+      "choices": [
+        "和色名と外来色名",
+        "暖色名と寒色名",
+        "有彩色の系統色名と無彩色の系統色名",
+        "昼光色名と電球色名"
+      ],
+      "proposedAnswer": "有彩色の系統色名と無彩色の系統色名",
+      "correctIndex": 2,
+      "explanation": "JIS Z 8102:2001では、系統色名を有彩色の系統色名と無彩色の系統色名に分けています。",
+      "sourceRefs": [
+        "jsa_jis_z8102_2001_preview"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently confirmed the chromatic versus achromatic subdivision of systematic color names in the official JIS preview before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "次のうち、現行2級公式目次とJIS Z 8102:2001から直接確認できる関係はどれですか。",
+      "sentence": "次のうち、現行2級公式目次とJIS Z 8102:2001から直接確認できる関係はどれですか。",
+      "choices": [
+        "すべての慣用色名には同一のRGB値がある",
+        "Grade 3の慣用色名一覧はGrade 2と完全一致する",
+        "和色名はすべて無彩色である",
+        "2級公式テキストはJISの慣用色名を扱い、和色名と外来色名を区分している"
+      ],
+      "proposedAnswer": "2級公式テキストはJISの慣用色名を扱い、和色名と外来色名を区分している",
+      "correctIndex": 3,
+      "explanation": "公式目次は「慣用色名（JISの慣用色名より）」を和色名と外来色名に分けています。ほかの選択肢は確認された根拠を超えています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "jsa_jis_z8102_2001_preview"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently cross-checked the AFT section title/subsections and JIS conventional-name classification before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "JISの定義に照らして、色を規則的な方式で表す名称を学ぶときに対応する区分はどれですか。",
+      "sentence": "JISの定義に照らして、色を規則的な方式で表す名称を学ぶときに対応する区分はどれですか。",
+      "choices": [
+        "系統色名",
+        "慣用色名",
+        "外来色名",
+        "和色名"
+      ],
+      "proposedAnswer": "系統色名",
+      "correctIndex": 0,
+      "explanation": "系統色名は、物体色を系統的に表すことを目的とする色名です。",
+      "sourceRefs": [
+        "jsa_jis_z8102_2001_preview"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the explicit JIS systematic-name definition to the wording before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "JISの定義に照らして、昔からの呼び方など慣習的な名称で表す色名に対応する区分はどれですか。",
+      "sentence": "JISの定義に照らして、昔からの呼び方など慣習的な名称で表す色名に対応する区分はどれですか。",
+      "choices": [
+        "有彩色の系統色名",
+        "慣用色名",
+        "無彩色の系統色名",
+        "測色値"
+      ],
+      "proposedAnswer": "慣用色名",
+      "correctIndex": 1,
+      "explanation": "JISでは慣習的な呼び名によって表される色名を慣用色名としています。",
+      "sourceRefs": [
+        "jsa_jis_z8102_2001_preview"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently applied the explicit JIS conventional-name definition to the wording before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "現行2級公式目次の順序として正しいものはどれですか。",
+      "sentence": "現行2級公式目次の順序として正しいものはどれですか。",
+      "choices": [
+        "外来色名→和色名",
+        "色彩管理→配色計画",
+        "和色名→外来色名",
+        "画像の基本→和色名"
+      ],
+      "proposedAnswer": "和色名→外来色名",
+      "correctIndex": 2,
+      "explanation": "現行2級公式目次ではp.128の和色名に続き、p.132から外来色名が配置されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked the p.128 to p.132 subsection sequence in the current AFT table of contents before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-conventional-jis-name-structure-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/conventional/jis_name_structure",
+      "skillId": "pc2.conventional.jis_name_structure",
+      "categoryId": "pc2.conventional",
+      "questionType": "text_choice",
+      "prompt": "JIS Z 8102:2001の分類について正しい説明はどれですか。",
+      "sentence": "JIS Z 8102:2001の分類について正しい説明はどれですか。",
+      "choices": [
+        "慣用色名だけを定義し、系統色名は扱わない",
+        "系統色名は和色名と外来色名だけに分かれる",
+        "RGB値でのみ色名を分類する",
+        "系統色名と慣用色名を区別し、系統色名は有彩色と無彩色の系統色名に分ける"
+      ],
+      "proposedAnswer": "系統色名と慣用色名を区別し、系統色名は有彩色と無彩色の系統色名に分ける",
+      "correctIndex": 3,
+      "explanation": "JIS Z 8102:2001は系統色名と慣用色名を区別し、系統色名を有彩色・無彩色の系統色名に区分しています。",
+      "sourceRefs": [
+        "jsa_jis_z8102_2001_preview"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently reconstructed the JIS top-level and systematic-name subdivision from the official preview before comparing with proposedAnswer",
         "checkedOn": "2026-09-03"
       }
     }
