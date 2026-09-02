@@ -26,7 +26,7 @@
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {
-      "verified": 336,
+      "verified": 348,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0
@@ -59,7 +59,8 @@
       "pc2.landscape.long_lifecycle_color",
       "pc2.landscape.design_considerations",
       "pc2.landscape.residential_color_design_process",
-      "pc2.landscape.surrounding_environment_measurement"
+      "pc2.landscape.surrounding_environment_measurement",
+      "pc2.conventional.jis_name_structure"
     ],
     "active_skill": null,
     "active_authoring": null,
@@ -73,10 +74,10 @@
     },
     "latest_promotion_gate": {
       "status": "passed",
-      "workflow_run": 33679550547,
-      "head": "a20c86ce0bf6929b2542ed6821536e4c059b147f",
-      "pr": 586,
-      "merge_commit": "c2aa6a4384d5a3dc7b967bf932b2486795cadbba"
+      "workflow_run": 33690978044,
+      "head": "564f92f57eb18e78c31ec39263259d243690cf93",
+      "pr": 599,
+      "merge_commit": "61508bbc0a214873d023fb3487e14affe2de3a13"
     },
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "source_blocked": [
@@ -88,7 +89,7 @@
       "Landscape p.124 配色計画",
       "Landscape p.125 色彩管理"
     ],
-    "next": "Reacquire the current official Grade 2 table-of-contents frontier immediately after Landscape p.125 色彩管理 and continue only from the next explicitly confirmed heading. Do not infer the next topic from secondary guides."
+    "next": "Source-acquire the individual Grade 2 p.128 和色名 boundary from current explicit auditable authority. Do not infer Grade 2 membership/readings from Grade 3, and do not infer RGB/HEX/display values or swatch appearance."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -97,7 +98,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 1,
+    "checkpoints_completed": 2,
     "generated": 0,
     "checked": 0,
     "verified": 0,
@@ -106,12 +107,12 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled latest main/open PRs/branches: no open Power Color PR exists and no newer p.125 work is present; runtime remains 336 verified / pending 0 across 28 skills.",
-      "Audited Landscape p.125 色彩管理. Current public authority confirms the official scope/order but does not expose a distinct sufficiently rich deterministic nonvisual p.125 rule set. Recorded source-blocked rather than manufacturing a duplicate or generic construction/paint-management batch."
+      "Reconciled merged PR #597 and promoted pc2.conventional.jis_name_structure record-identically after exact-equality/full-fingerprint/shared-engine verification.",
+      "Grade 2 runtime advanced 336→348 verified and 28→29 skills; Power Color CI 33690978044 succeeded on exact promotion head before PR #599 merged."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Reacquire the current official Grade 2 TOC immediately after Landscape p.125 色彩管理 and continue from the next explicitly confirmed heading only."
+  "next": "Source-acquire the individual Grade 2 p.128 和色名 boundary from current explicit auditable authority. Do not infer Grade 2 membership/readings from Grade 3, and do not infer RGB/HEX/display values or swatch appearance."
 }

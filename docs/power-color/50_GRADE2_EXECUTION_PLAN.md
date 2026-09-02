@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 336 verified / pending 0 across twenty-eight promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
+Grade 2 runtime is 348 verified / pending 0 across twenty-nine promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 Latest promoted skills:
 - `pc2.interior.color_planning_principles`: 12 promoted; 192 → 204.
@@ -38,7 +38,7 @@ Latest promoted skills:
 - `pc2.landscape.residential_color_design_process`: 12 promoted record-identically; 312 → 324.
 - `pc2.landscape.surrounding_environment_measurement`: 12 promoted record-identically; 324 → 336.
 
-All twenty-eight promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed deterministic promotion run `33679550547`; PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
+All twenty-nine promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI `33690978044`; PR #599 merged as `61508bbc0a214873d023fb3487e14affe2de3a13`.
 
 ## Preserved blocked topics
 
@@ -200,8 +200,14 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p125-color-managemen
 
 Current public authority confirms the official Grade 2 p.125 scope/order but does not expose the detailed landscape color-management rule set or a distinct sufficiently rich deterministic nonvisual boundary. Generic construction/paint quality-control procedures, local regulatory limits, RGB/HEX/display conversions, image/sample appearance, inferred tolerances/lighting/geometry, and facts already represented by p.123/p.124 are not accepted as substitutes.
 
+## p.128 `慣用色名（JISの慣用色名より）` — structure promoted
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-p128-jis-conventional-name-structure-source-audit.md`.
+
+`pc2.conventional.jis_name_structure` is limited to current AFT p.128/p.132 scope order and explicit JIS Z 8102:2001 structure: systematic versus conventional names and chromatic/achromatic systematic-name subdivision. Individual Grade 2 name membership, readings, Munsell values, RGB/HEX/display values, swatches, etymology and Grade3→Grade2 inference remain unauthorized. State: 12/12 independently verified and promoted record-identically; runtime 336 → 348 and twenty-eight → twenty-nine skills. Power Color CI `33690978044` passed; PR #599 merged as `61508bbc0a214873d023fb3487e14affe2de3a13`.
+
 ## Exact next start point
 
-The current official Grade 2 table of contents confirms the next frontier after Landscape p.125 as `慣用色名（JISの慣用色名より）` p.128, with `和色名` p.128 followed by `外来色名` p.132. Begin source acquisition at p.128 `和色名`. Author only from an explicit auditable nonvisual name/fact boundary; do not infer monitor colors, RGB/HEX, unverified readings, or name↔appearance mappings.
+Source-acquire the individual Grade 2 p.128 `和色名` boundary from current explicit auditable authority. Do not infer Grade 2 membership or readings from Grade 3, and do not infer RGB/HEX/display values, swatches, Munsell values or appearance. If no sufficiently explicit auditable boundary is available, record the topic source-blocked.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
