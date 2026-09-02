@@ -67,7 +67,7 @@ State:
 
 Do not infer style-to-hue, tone, material, shape, furniture, historical-period, image or display-color mappings.
 
-## Landscape p.116 — active authoring
+## Landscape p.116 — promotion-ready
 
 Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p116-source-audit.md`.
 
@@ -85,8 +85,9 @@ State:
 - [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
 - [x] A/B/C/D = 3/3/3/3;
 - [x] dedicated schema/source-ref/full-fingerprint/nonvisual/shared-renderer gate added;
-- [ ] run gates/CI and promote record-identically only if green.
+- [x] dedicated gate and normal Power Color regression passed in workflow run `33641632788` on head `a712615c2564943e1faa29ff83c956f6081af9c1`;
+- [ ] promote record-identically to runtime and extend exact-equality/full-fingerprint/shared-engine coverage to twenty-one skills.
 
 ## Exact next start point
 
-Run the `pc2.landscape.public_nature` authoring/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color/shared Power TOEIC regression. If green, promote the 12 verified records record-identically to runtime, move 240 → 252 and twenty → twenty-one promoted skills, then continue official-text order. Keep all Grade 3 blockers and source/display gates unchanged.
+Promote the 12 verified `pc2.landscape.public_nature` records record-identically to runtime, move 240 → 252 and twenty → twenty-one promoted skills, extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage, then continue official-text order. Keep all Grade 3 blockers and source/display gates unchanged.
