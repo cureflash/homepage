@@ -1,0 +1,124 @@
+name: Power Color Grade 2 temporary promotion
+on:
+  push:
+    branches:
+      - power-color-grade2-hue-circle-promotion
+permissions:
+  contents: write
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: power-color-grade2-hue-circle-promotion
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Promote verified hue-circle batch and sync canonical docs
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          runtime_path = root / 'qualifications/color-certification/data/grade2-runtime.json'
+          authoring_path = root / 'qualifications/color-certification/data/grade2-authoring-hue-circle-division-0001-0012.json'
+          test_path = root / 'qualifications/color-certification/tests/grade2-runtime-promotion.test.js'
+          status_path = root / 'docs/power-color/STATUS.json'
+          plan_path = root / 'docs/power-color/50_GRADE2_EXECUTION_PLAN.md'
+          handoff_path = root / 'docs/power-color/90_HANDOFF.md'
+          inventory_path = root / 'docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md'
+
+          runtime = json.loads(runtime_path.read_text())
+          authoring = json.loads(authoring_path.read_text())
+          assert len(runtime['questions']) == 120
+          assert len(runtime['skills']) == 10
+          assert len(authoring['questions']) == 12
+          assert all(q['validationStatus'] == 'verified' for q in authoring['questions'])
+          assert authoring['qaSummary']['pending'] == 0
+          assert authoring['skill']['id'] == 'pc2.scheme.hue_circle_division'
+          old_ids = {q['id'] for q in runtime['questions']}
+          assert not old_ids.intersection(q['id'] for q in authoring['questions'])
+          fps = {(q['sentence'], tuple(q['choices'])) for q in runtime['questions']}
+          for q in authoring['questions']:
+              fp = (q['sentence'], tuple(q['choices']))
+              assert fp not in fps
+              fps.add(fp)
+          runtime['skills'].append(authoring['skill'])
+          runtime['questions'].extend(authoring['questions'])
+          assert len(runtime['questions']) == 132
+          runtime_path.write_text(json.dumps(runtime, ensure_ascii=False, indent=2) + '\n')
+
+          test = test_path.read_text()
+          needle = "const bicolorTricolor = JSON.parse(await readFile(new URL('../data/grade2-authoring-bicolor-tricolor-0001-0012.json', import.meta.url), 'utf8'));\n"
+          assert needle in test and 'grade2-authoring-hue-circle-division-0001-0012.json' not in test
+          test = test.replace(needle, needle + "const hueCircleDivision = JSON.parse(await readFile(new URL('../data/grade2-authoring-hue-circle-division-0001-0012.json', import.meta.url), 'utf8'));\n")
+          test = test.replace('const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor];', 'const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor, hueCircleDivision];')
+          test = test.replace("assert.equal(runtime.questions.length, 120);", "assert.equal(runtime.questions.length, 132);")
+          test = test.replace("assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 120);", "assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 132);")
+          test = test.replace("totalCount: 30,", "totalCount: 33,")
+          test = test.replace("assert.equal(selectQuestionIds({ repository, recipe }).length, 30);", "assert.equal(selectQuestionIds({ repository, recipe }).length, 33);")
+          test_path.write_text(test)
+
+          status = json.loads(status_path.read_text())
+          assert status['grade2']['runtime_questions']['verified'] == 120
+          assert status['grade2']['active_skill'] == 'pc2.scheme.hue_circle_division'
+          status['grade2']['runtime_questions'] = {'verified':132,'pending':0,'needs_revision':0,'rejected':0}
+          status['grade2']['runtime_skills'].append('pc2.scheme.hue_circle_division')
+          status['grade2']['active_skill'] = None
+          status['grade2']['active_authoring'] = {'generated':0,'checked':0,'verified':0,'pending':0}
+          status['grade2']['next'] = 'Continue source acquisition at the next official-text-order topic after hue-circle division schemes. Generate only if an explicit auditable nonvisual rule is source-resolved without image appearance, RGB/HEX, monitor values, or unstated geometry.'
+          status['current_run'] = {
+              'checkpoints_completed': 1,
+              'generated': 0,
+              'checked': 12,
+              'verified': 12,
+              'revision_events': 0,
+              'needs_revision': 0,
+              'rejected': 0,
+              'pending': 0,
+              'checkpoint_breakdown': ['Promoted pc2.scheme.hue_circle_division record-identically from verified authoring into Grade 2 runtime 120 to 132 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to eleven promoted skills.']
+          }
+          status['next'] = 'Continue Grade 2 source acquisition at the next official-text-order topic after hue-circle division schemes.'
+          status_path.write_text(json.dumps(status, ensure_ascii=False, indent=2) + '\n')
+
+          plan = plan_path.read_text()
+          plan = plan.replace('Grade 2 runtime is 120 verified / pending 0 across ten promoted skills.', 'Grade 2 runtime is 132 verified / pending 0 across eleven promoted skills.')
+          plan = plan.replace('- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all ten promoted skills.', '- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all eleven promoted skills.')
+          plan = plan.replace('- [ ] Promote `pc2.scheme.hue_circle_division` record-identically to runtime after exact-equality/full-fingerprint/shared-engine gates pass; target runtime 120 → 132.', '- [x] Promote `pc2.scheme.hue_circle_division` record-identically to runtime; runtime 120 → 132 with exact-equality/full-fingerprint/shared-engine gates passing.')
+          old_next = 'Promote `grade2-authoring-hue-circle-division-0001-0012.json` record-identically into `grade2-runtime.json`, extend the runtime gate to eleven batches / 132 verified questions, run the full Power Color CI, and only then continue source acquisition at the next official-text-order topic.'
+          assert old_next in plan
+          plan = plan.replace(old_next, 'Continue source acquisition at the next official-text-order topic after hue-circle division schemes. Author only if an explicit auditable nonvisual rule can be fixed without image appearance, RGB/HEX, monitor values or unstated geometry.')
+          plan_path.write_text(plan)
+
+          handoff = handoff_path.read_text()
+          handoff = handoff.replace('Grade 2 runtime remains 120 verified / pending 0 across ten promoted skills.', 'Grade 2 runtime is now 132 verified / pending 0 across eleven promoted skills.')
+          handoff = handoff.replace('`pc2.scheme.hue_circle_division` now has 12 pending-first questions independently re-derived and QAed: 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3. The dedicated authoring gate enforces text-only rendering, source refs, unique four-choice sets, no presentation/colorRefs, and zero full-fingerprint duplicates inside the batch.', '`pc2.scheme.hue_circle_division` was independently QAed 12/12 verified with A/B/C/D = 3/3/3/3 and is now promoted record-identically. The runtime gate covers all eleven promoted Grade 2 skills with exact record equality, zero full-fingerprint duplicates and shared Power TOEIC engine execution.')
+          old_handoff_next = 'Promote `qualifications/color-certification/data/grade2-authoring-hue-circle-division-0001-0012.json` record-identically into `grade2-runtime.json`, extending Grade 2 runtime 120 → 132. Extend `grade2-runtime-promotion.test.js` to the eleventh batch and require exact record equality, zero full-fingerprint duplicates and shared Power TOEIC engine execution before merge. Then continue source acquisition at the next official-text-order topic.'
+          assert old_handoff_next in handoff
+          handoff = handoff.replace(old_handoff_next, 'Continue source acquisition at the next official-text-order topic after hue-circle division schemes. Do not author a new batch unless an explicit auditable nonvisual rule is fixed; retain all monitor/display and image-inference prohibitions.')
+          handoff_path.write_text(handoff)
+
+          inv = inventory_path.read_text()
+          marker = '10. `pc2.scheme.bicolor_tricolor`'
+          assert marker in inv
+          if '11. `pc2.scheme.hue_circle_division`' not in inv:
+              insertion = '\n11. `pc2.scheme.hue_circle_division`\n   - current official Grade 2 sample plus audited secondary rule resolve dyad, split complementary, tetrad, PCCS pentad and hexad without image interpretation;\n   - authoring 12/12 verified and promoted record-identically;\n   - audit: `docs/power-color/audits/2026-09-02-grade2-hue-circle-division.md`.\n'
+              anchor = '\nAll ten are runtime-promoted record-identically. Grade 2 runtime frontier is 120 verified / pending 0.\n'
+              assert anchor in inv
+              inv = inv.replace(anchor, insertion + '\nAll eleven are runtime-promoted record-identically. Grade 2 runtime frontier is 132 verified / pending 0.\n')
+          inv = inv.replace('1. Grade 2 runtime frontier is 120 verified / pending 0 across ten skills.\n2. Acquire an explicit nonvisual rule for hue-circle division schemes, the next official-TOC topic.\n3. If no auditable rule can be fixed, record that blocker; do not infer from image appearance or unstated geometry.', '1. Grade 2 runtime frontier is 132 verified / pending 0 across eleven skills.\n2. Continue to the next official-TOC topic after hue-circle division schemes and acquire an explicit auditable nonvisual rule before authoring.\n3. If no auditable rule can be fixed, record that blocker; do not infer from image appearance or unstated geometry.')
+          inventory_path.write_text(inv)
+          PY
+      - name: Run Power Color tests
+        run: node --test qualifications/color-certification/tests/*.test.js
+      - name: Commit generated promotion and remove temporary workflow
+        run: |
+          git config user.name "Power Color Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git rm .github/workflows/power-color-grade2-promote-temp.yml
+          git add docs/power-color qualifications/color-certification/data/grade2-runtime.json qualifications/color-certification/tests/grade2-runtime-promotion.test.js
+          git commit -m "power-color: promote Grade 2 hue-circle division"
+          git push origin HEAD:power-color-grade2-hue-circle-promotion
