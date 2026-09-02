@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills. One additional 12-question fashion batch is independently verified in authoring and awaits record-identical runtime promotion. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
 ## Completed Grade 2 checkpoints
 
@@ -85,10 +85,12 @@ Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills. Grad
 - [x] Auditable specialist secondary material referencing the 2020-revised official text explicitly defines basic colors as repeatedly used standard colors independent of fashion trends and trend colors as varying with era/season.
 - [x] Current JAFCA first-party material independently confirms publication of fashion trend-color information.
 - [x] Fix the accepted rule boundary in `docs/power-color/audits/2026-09-02-grade2-fashion-color-classification.md`; exclude universal claims about example hues, current displayed trend-color judgments, fashion-photo appearance, RGB/HEX, sampled pixels and unstated style geometry.
-- [ ] Create `pc2.fashion.basic_trend_color_classification` pending-first authoring and independently re-solve every record before verification.
-- [ ] Run schema/full-fingerprint/coverage/answer-position/shared-renderer gates.
-- [ ] Promote only verified records record-identically and extend shared-engine runtime gates.
+- [x] Create `pc2.fashion.basic_trend_color_classification` as a pending-first 12-question text-choice batch and independently re-solve every record.
+- [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
+- [x] Run the dedicated schema/full-fingerprint/answer-position/shared-renderer authoring gate; PR #520 passed Power Color CI and merged to main.
+- [ ] Promote the 12 verified records record-identically to runtime 180 → 192.
+- [ ] Change the dedicated gate to exact runtime equality and extend full-fingerprint/coverage/shared Power TOEIC engine gates to all sixteen promoted skills.
 
 ## Exact next start point
 
-Create `pc2.fashion.basic_trend_color_classification` pending-first authoring from the fixed narrow nonvisual rule boundary, then independently re-solve every record. Visual Design remains source-blocked.
+Promote `pc2.fashion.basic_trend_color_classification` record-identically from `qualifications/color-certification/data/grade2-authoring-basic-trend-color-classification-0001-0012.json` into Grade 2 runtime 180 → 192. Do not regenerate or rewrite the 12 verified records. Visual Design remains source-blocked.
