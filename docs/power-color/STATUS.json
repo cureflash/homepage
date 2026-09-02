@@ -17,16 +17,17 @@
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {"verified": 276, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature", "pc2.landscape.element_examples", "pc2.landscape.color_design_harmony_role"],
-    "active_skill": null,
-    "active_authoring": null,
-    "active_authoring_qa": null,
+    "active_skill": "pc2.landscape.regional_color_context",
+    "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-regional-color-context-0001-0012.json",
+    "active_authoring_qa": {"generated": 12, "checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
+    "latest_authoring_gate": {"status": "passed", "workflow_run": 33654743141, "head": "20a9d17df4f9d2d1cdfb5b29ac7ef0dcdec913d8", "pr": 553, "merge_commit": "e5aac280779d58f891889978bb9f4b6e4740e20f"},
     "latest_promotion_gate": {"status": "passed", "workflow_run": 33653881914, "head": "ac76eee0b4f1dfc70deffe06b76053cfd956c0b6", "pr": 551, "merge_commit": "da9e9ab003dc89a53d7fbd90d4d23ebc22f88a12"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Continue official-text order at Landscape p.118 地域には地域の色がある. Source-acquire an explicit deterministic nonvisual rule boundary before any authoring; if unavailable, record the blocker and advance without guessing."
+    "next": "Promote pc2.landscape.regional_color_context 12 verified records record-identically to runtime, then continue official-text order at p.120 人工要素と自然要素の色彩が共存. p.118 国内外の景観色彩の事例 is source-blocked under the current public-source gate."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 2,
+    "checkpoints_completed": 3,
     "generated": 0,
     "checked": 0,
     "verified": 0,
@@ -35,12 +36,13 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled latest main and confirmed no competing Power Color PR or branch checkpoint needed reconciliation.",
-      "Promoted pc2.landscape.color_design_harmony_role 12 verified records record-identically through PR #551; runtime 264 -> 276 and twenty-two -> twenty-three promoted skills. Exact-equality/full-fingerprint/shared Power TOEIC engine coverage and full Power Color CI run 33653881914 passed."
+      "Reconciled latest main and PR #553; no open competing Power Color PR remains.",
+      "Accepted prior merged pc2.landscape.regional_color_context authoring/independent-QA state: 12/12 verified, A/B/C/D=3/3/3/3; authoring gate CI run 33654743141 passed.",
+      "Audited p.118 国内外の景観色彩の事例 and recorded it source-blocked because current public authority does not expose a closed official-text case list plus deterministic nonvisual answer rules."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-acquire Landscape p.118 地域には地域の色がある from current authoritative material; do not author unless a deterministic nonvisual boundary is explicit."
+  "next": "Record-identically promote pc2.landscape.regional_color_context 12 verified records (276 -> 288), then source-acquire p.120 人工要素と自然要素の色彩が共存."
 }
