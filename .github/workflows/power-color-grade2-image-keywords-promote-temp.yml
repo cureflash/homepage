@@ -18,13 +18,27 @@ jobs:
           node-version: '22'
       - name: Promote verified image-keyword batch
         run: python3 .github/scripts/power_color_grade2_image_keywords_promote.py
-      - name: Run full Power Color tests
-        run: node --test qualifications/color-certification/tests/*.test.js
+      - name: Diagnose full Power Color tests
+        shell: bash
+        run: |
+          set +e
+          node --test qualifications/color-certification/tests/*.test.js > /tmp/power-color-promotion-debug.txt 2>&1
+          code=$?
+          if [ "$code" -ne 0 ]; then
+            cp /tmp/power-color-promotion-debug.txt .github/power-color-grade2-image-keywords-promotion-debug.txt
+            git config user.name "Power Color Automation"
+            git config user.email "actions@users.noreply.github.com"
+            git add .github/power-color-grade2-image-keywords-promotion-debug.txt
+            git commit -m "chore: capture Grade 2 promotion test failure"
+            git push origin HEAD:power-color-grade2-image-keywords-promotion
+            exit "$code"
+          fi
       - name: Commit promotion and remove temporary helpers
         run: |
           git config user.name "Power Color Automation"
           git config user.email "actions@users.noreply.github.com"
           git rm .github/workflows/power-color-grade2-image-keywords-promote-temp.yml .github/scripts/power_color_grade2_image_keywords_promote.py
+          git rm -f .github/power-color-grade2-image-keywords-promotion-debug.txt
           git add docs/power-color qualifications/color-certification/data/grade2-runtime.json qualifications/color-certification/tests/grade2-runtime-promotion.test.js
           git commit -m "power-color: promote Grade 2 image-scheme keywords"
           git push origin HEAD:power-color-grade2-image-keywords-promotion
