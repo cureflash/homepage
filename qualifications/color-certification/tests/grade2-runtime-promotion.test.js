@@ -30,8 +30,9 @@ const landscapePublicNature = JSON.parse(await readFile(new URL('../data/grade2-
 const landscapeElementExamples = JSON.parse(await readFile(new URL('../data/grade2-authoring-landscape-element-examples-0001-0012.json', import.meta.url), 'utf8'));
 const landscapeColorDesignHarmonyRole = JSON.parse(await readFile(new URL('../data/grade2-authoring-landscape-color-design-harmony-role-0001-0012.json', import.meta.url), 'utf8'));
 const landscapeRegionalColorContext = JSON.parse(await readFile(new URL('../data/grade2-authoring-landscape-regional-color-context-0001-0012.json', import.meta.url), 'utf8'));
+const landscapeLongLifecycleColor = JSON.parse(await readFile(new URL('../data/grade2-authoring-landscape-long-lifecycle-color-0001-0012.json', import.meta.url), 'utf8'));
 
-const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor, hueCircleDivision, imageSchemeKeywords, rgbCmykModels, colorManagementProfiles, imageBasics, basicTrend, interiorColorPlanning, interiorZoning, interiorElementColorRoles, interiorStyleNames, landscapePublicNature, landscapeElementExamples, landscapeColorDesignHarmonyRole, landscapeRegionalColorContext];
+const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor, hueCircleDivision, imageSchemeKeywords, rgbCmykModels, colorManagementProfiles, imageBasics, basicTrend, interiorColorPlanning, interiorZoning, interiorElementColorRoles, interiorStyleNames, landscapePublicNature, landscapeElementExamples, landscapeColorDesignHarmonyRole, landscapeRegionalColorContext, landscapeLongLifecycleColor];
 
 function fingerprint(q) {
   return JSON.stringify([q.sentence, q.choices]);
@@ -40,8 +41,8 @@ function fingerprint(q) {
 test('Grade 2 runtime is the record-identical union of verified authoring batches', () => {
   assert.equal(runtime.format, 'power-color-grade2-runtime-v1');
   assert.equal(runtime.grade, 2);
-  assert.equal(runtime.questions.length, 288);
-  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 288);
+  assert.equal(runtime.questions.length, 300);
+  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 300);
   assert.equal(runtime.questions.filter((q) => q.validationStatus === 'pending_validation').length, 0);
   assert.deepEqual(runtime.questions, batches.flatMap((batch) => batch.questions));
   assert.deepEqual(runtime.skills, batches.map((batch) => batch.skill));
@@ -64,9 +65,9 @@ test('shared Power TOEIC engine runs all Grade 2 skills', () => {
 
   const recipe = createWorkoutRecipe({
     mode: 'TRAINING',
-    totalCount: 72,
+    totalCount: 75,
     skillAllocations: batches.map((batch) => ({ skillId: batch.skill.id, count: 3 })),
     seed: 41
   });
-  assert.equal(selectQuestionIds({ repository, recipe }).length, 72);
+  assert.equal(selectQuestionIds({ repository, recipe }).length, 75);
 });
