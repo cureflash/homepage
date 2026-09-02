@@ -1,0 +1,73 @@
+name: Temporary Power Color Grade 2 p122 considerations PR promotion
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .automation-trigger-power-color-g2-p122-considerations
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'agent/power-color-g2-p122-considerations-promotion-20260903b'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Promote verified batch record-identically
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const runtimePath = 'qualifications/color-certification/data/grade2-runtime.json';
+          const authoringPath = 'qualifications/color-certification/data/grade2-authoring-landscape-design-considerations-0001-0012.json';
+          const promotionTestPath = 'qualifications/color-certification/tests/grade2-runtime-promotion.test.js';
+          const authoringTestPath = 'qualifications/color-certification/tests/grade2-landscape-design-considerations-authoring.test.js';
+          const runtime = JSON.parse(fs.readFileSync(runtimePath, 'utf8'));
+          const authoring = JSON.parse(fs.readFileSync(authoringPath, 'utf8'));
+          if (runtime.skills.some(s => s.id === authoring.skill.id)) { console.log('already promoted'); process.exit(0); }
+          if (authoring.skill.id !== 'pc2.landscape.design_considerations') throw new Error('unexpected skill');
+          if (authoring.questions.length !== 12 || !authoring.questions.every(q => q.validationStatus === 'verified')) throw new Error('authoring batch is not 12 verified records');
+          const fp = q => JSON.stringify([q.sentence, q.choices]);
+          const existingIds = new Set(runtime.questions.map(q => q.id));
+          const existingFps = new Set(runtime.questions.map(fp));
+          if (authoring.questions.some(q => existingIds.has(q.id))) throw new Error('question id already exists');
+          if (authoring.questions.some(q => existingFps.has(fp(q)))) throw new Error('full fingerprint already exists');
+          runtime.skills.push(authoring.skill);
+          runtime.questions.push(...authoring.questions);
+          if (runtime.skills.length !== 26 || runtime.questions.length !== 312) throw new Error(`unexpected totals ${runtime.skills.length}/${runtime.questions.length}`);
+          fs.writeFileSync(runtimePath, JSON.stringify(runtime, null, 2) + '\n');
+
+          let test = fs.readFileSync(promotionTestPath, 'utf8');
+          const importAnchor = "const landscapeLongLifecycleColor = JSON.parse(await readFile(new URL('../data/grade2-authoring-landscape-long-lifecycle-color-0001-0012.json', import.meta.url), 'utf8'));";
+          const importLine = "const landscapeDesignConsiderations = JSON.parse(await readFile(new URL('../data/grade2-authoring-landscape-design-considerations-0001-0012.json', import.meta.url), 'utf8'));";
+          if (!test.includes(importLine)) test = test.replace(importAnchor, `${importAnchor}\n${importLine}`);
+          const oldBatches = 'const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor, hueCircleDivision, imageSchemeKeywords, rgbCmykModels, colorManagementProfiles, imageBasics, basicTrend, interiorColorPlanning, interiorZoning, interiorElementColorRoles, interiorStyleNames, landscapePublicNature, landscapeElementExamples, landscapeColorDesignHarmonyRole, landscapeRegionalColorContext, landscapeLongLifecycleColor];';
+          const newBatches = 'const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor, hueCircleDivision, imageSchemeKeywords, rgbCmykModels, colorManagementProfiles, imageBasics, basicTrend, interiorColorPlanning, interiorZoning, interiorElementColorRoles, interiorStyleNames, landscapePublicNature, landscapeElementExamples, landscapeColorDesignHarmonyRole, landscapeRegionalColorContext, landscapeLongLifecycleColor, landscapeDesignConsiderations];';
+          if (!test.includes(newBatches)) { if (!test.includes(oldBatches)) throw new Error('batches anchor missing'); test = test.replace(oldBatches, newBatches); }
+          test = test.replace('assert.equal(runtime.questions.length, 300);', 'assert.equal(runtime.questions.length, 312);');
+          test = test.replace("assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 300);", "assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 312);");
+          test = test.replace('totalCount: 75,', 'totalCount: 78,');
+          test = test.replace('assert.equal(selectQuestionIds({ repository, recipe }).length, 75);', 'assert.equal(selectQuestionIds({ repository, recipe }).length, 78);');
+          fs.writeFileSync(promotionTestPath, test);
+
+          let authoringTest = fs.readFileSync(authoringTestPath, 'utf8');
+          authoringTest = authoringTest.replace("test('Grade 2 Landscape p122 considerations batch is independently verified, nonvisual, balanced and not promoted before gate', () => {", "test('Grade 2 Landscape p122 considerations batch remains independently verified, nonvisual, balanced and record-identical after promotion', () => {");
+          authoringTest = authoringTest.replace('    assert.equal(runtimeIds.has(q.id), false);\n    assert.equal(runtimeFingerprints.has(fingerprint(q)), false);', '    assert.equal(runtimeIds.has(q.id), true);\n    assert.equal(runtimeFingerprints.has(fingerprint(q)), true);');
+          authoringTest = authoringTest.replace("  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), false);", "  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), true);\n  assert.deepEqual(runtime.questions.filter((q) => q.skillId === batch.skill.id), batch.questions);");
+          fs.writeFileSync(authoringTestPath, authoringTest);
+          NODE
+          node --test qualifications/color-certification/tests/grade2-landscape-design-considerations-authoring.test.js qualifications/color-certification/tests/grade2-runtime-promotion.test.js
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add qualifications/color-certification/data/grade2-runtime.json qualifications/color-certification/tests/grade2-runtime-promotion.test.js qualifications/color-certification/tests/grade2-landscape-design-considerations-authoring.test.js
+          git commit -m "Promote Grade 2 Landscape p122 considerations runtime"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
