@@ -83,7 +83,11 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Add and pass the dedicated schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression; workflow run `33674008109`, PR #572 merged as `165132c83eec5fd949e0023a9dfa9bdd62438e97`.
 - [x] Promote the 12 verified `pc2.landscape.design_considerations` records record-identically; runtime 300 → 312 and twenty-five → twenty-six skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-six promoted skills; Power Color CI `33676939840` succeeded and PR #577 merged as `f7661343ba41b9c00cdc9edb2035ce8b86c90f72`.
-- [ ] Continue official Grade 2 text order at Landscape p.123 `住宅の色彩設計プロセス`; source-resolve a distinct deterministic nonvisual rule set before any authoring, or record it source-blocked if public authority is insufficient.
+- [x] Source-resolve Landscape p.123 `住宅の色彩設計プロセス` to a narrow deterministic nonvisual process boundary using current AFT official scope/order and current JPMA detached-house practical-process corroboration. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p123-residential-process-source-audit.md`.
+- [x] Create `pc2.landscape.residential_color_design_process` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [x] Add and pass the dedicated schema/full-fingerprint/source/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression; workflow run `33677670579`, PR #579 merged as `c3f8c298330209e19e01946ced4d1ea17e40ce3f`.
+- [ ] Promote the 12 verified `pc2.landscape.residential_color_design_process` records record-identically; runtime 312 → 324 and twenty-six → twenty-seven skills.
+- [ ] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-seven promoted skills.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
