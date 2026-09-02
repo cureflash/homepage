@@ -32,7 +32,7 @@ Latest promoted skills:
 - `pc2.landscape.public_nature`: 12 promoted; 240 → 252.
 - `pc2.landscape.element_examples`: 12 promoted record-identically; 252 → 264.
 
-All twenty-two promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The p.117 element-examples promotion CI run `33647175533` succeeded on head `b186638676e1706c1a228af3a0a2c62d2643121c`; PR #546 merged as `ba9bde18a964eebc92c992b38445271b980fae8e`.
+All twenty-two promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The p.117 element-examples promotion CI run `33647175533` succeeded; PR #546 merged as `ba9bde18a964eebc92c992b38445271b980fae8e`.
 
 ## Preserved blocked topics
 
@@ -58,40 +58,40 @@ Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p116-source-audit.md
 - good landscape as a present-and-future common national asset under the Landscape Act basic principles;
 - coordinated efforts by local public bodies, businesses and residents.
 
-State:
-- [x] pending-first 12 created;
-- [x] independently re-solved 12/12 before proposed-answer comparison;
-- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
-- [x] A/B/C/D = 3/3/3/3;
-- [x] dedicated gate and normal regression passed;
-- [x] promoted record-identically; runtime 240 → 252;
-- [x] exact-equality/full-fingerprint/shared-engine coverage extended to twenty-one skills.
+State: 12/12 independently verified and promoted record-identically; runtime 240 → 252.
 
 ## Landscape p.117 `景観をつくる要素` — promoted
 
 Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p117-source-audit.md`.
 
-The current official Grade 2 table of contents fixes `景観をつくる要素` at p.117. Mutsu City's official Landscape Plan supplies an explicit nonvisual list of landscape-composing examples: 建築物, 工作物, 道路, 公園, 河川, 港湾, 屋外広告物, 美化活動, 山, 森林, 公共事業, 個人事業.
+`pc2.landscape.element_examples` remains limited to the explicit authoritative element examples and their directly stated breadth. It must not be treated as a universal closed taxonomy and does not authorize inferred natural/artificial labels, color, material, appearance, RGB/HEX or geometry.
 
-Accepted boundary for `pc2.landscape.element_examples`:
-- use only those explicit examples and the directly stated fact that landscape-composing elements are diverse;
-- may test that the list includes `美化活動` and both `公共事業` / `個人事業`;
-- do not treat the list as a universal closed taxonomy;
-- do not infer natural/artificial category labels, color, material, appearance, RGB/HEX or geometry.
+State: 12/12 independently verified and promoted record-identically; runtime 252 → 264; post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in workflow run `33647175533`.
+
+## Landscape p.117 `景観色彩における色彩設計の役割` — promotion-ready
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p117-color-design-role-source-audit.md`.
+
+Accepted boundary for `pc2.landscape.color_design_harmony_role`:
+- surrounding landscape characteristics and target scale are planning considerations;
+- numerical standards provide a framework that suppresses colors with extreme discordance from surrounding landscape;
+- site-appropriate landscape color planning requires consideration of harmony with surroundings;
+- place and scale are relevant to landscape-harmony thinking and the color-planning process;
+- numerical compliance alone is not the planning endpoint: the standards' purpose and surrounding-streetscape harmony also matter.
+
+Do not generalize Tokyo-specific numerical values into Grade 2 facts. Do not infer RGB/HEX/display values, Munsell limits, image appearance, material recommendations, hue/tone choices or unstated geometry.
 
 State:
+- [x] current AFT Grade 2 scope/order rechecked;
+- [x] deterministic nonvisual boundary source-resolved against current Tokyo Metropolitan Government landscape color guidance;
 - [x] pending-first 12 created;
 - [x] independently re-solved all 12 before proposed-answer comparison;
 - [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
 - [x] A/B/C/D = 3/3/3/3;
-- [x] unsupported classification wording removed and subjective breadth item replaced before gate;
-- [x] dedicated schema/source-ref/full-fingerprint/nonvisual/shared-renderer pre-promotion gate added;
-- [x] dedicated gate and normal Power Color regression passed in workflow run `33644271047` on head `a3d2be3e0230aefb1e733f07ad08ea0cecfe161b`;
-- [x] promoted record-identically; runtime 252 → 264 and twenty-one → twenty-two skills;
-- [x] post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in workflow run `33647175533`.
-
-The adjacent p.117 `景観色彩における色彩設計の役割` remains a separate source-acquisition checkpoint and is not authorized by the element-example source contract.
+- [x] dedicated nonvisual/full-fingerprint/shared-renderer pre-promotion gate and normal regression passed in workflow run `33648021940` on head `21c8520031af219eb5c6e558b555a5d7da6ebe0c`;
+- [x] PR #548 merged as `fd35f8b1539bab415235c752387cdfbacd60afc3`;
+- [ ] promote record-identically to runtime and extend exact-equality/full-fingerprint/shared-engine coverage to twenty-three skills.
 
 ## Exact next start point
 
-Continue official-text order to p.117 `景観色彩における色彩設計の役割`. Source-acquire a deterministic nonvisual rule boundary before any authoring. Keep all Grade 3 blockers and source/display gates unchanged.
+Promote the 12 verified `pc2.landscape.color_design_harmony_role` records record-identically to runtime, move 264 → 276 and twenty-two → twenty-three promoted skills, extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage, then continue official-text order. Keep all Grade 3 blockers and source/display gates unchanged.
