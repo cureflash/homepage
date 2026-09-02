@@ -18,27 +18,24 @@ jobs:
           node-version: '22'
       - name: Promote verified image-keyword batch
         run: python3 .github/scripts/power_color_grade2_image_keywords_promote.py
-      - name: Diagnose full Power Color tests
-        shell: bash
+      - name: Switch authoring gate to promoted-state assertion
         run: |
-          set +e
-          node --test qualifications/color-certification/tests/*.test.js > /tmp/power-color-promotion-debug.txt 2>&1
-          code=$?
-          if [ "$code" -ne 0 ]; then
-            cp /tmp/power-color-promotion-debug.txt .github/power-color-grade2-image-keywords-promotion-debug.txt
-            git config user.name "Power Color Automation"
-            git config user.email "actions@users.noreply.github.com"
-            git add .github/power-color-grade2-image-keywords-promotion-debug.txt
-            git commit -m "chore: capture Grade 2 promotion test failure"
-            git push origin HEAD:power-color-grade2-image-keywords-promotion
-            exit "$code"
-          fi
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('qualifications/color-certification/tests/grade2-image-scheme-keywords-authoring.test.js')
+          s = p.read_text()
+          s = s.replace('runtime-distinct', 'runtime-promoted')
+          s = s.replace("assert.equal(runtimeFp.has(fingerprint(q)),false);", "assert.equal(runtimeFp.has(fingerprint(q)),true);")
+          p.write_text(s)
+          PY
+      - name: Run full Power Color tests
+        run: node --test qualifications/color-certification/tests/*.test.js
       - name: Commit promotion and remove temporary helpers
         run: |
           git config user.name "Power Color Automation"
           git config user.email "actions@users.noreply.github.com"
           git rm .github/workflows/power-color-grade2-image-keywords-promote-temp.yml .github/scripts/power_color_grade2_image_keywords_promote.py
           git rm -f .github/power-color-grade2-image-keywords-promotion-debug.txt
-          git add docs/power-color qualifications/color-certification/data/grade2-runtime.json qualifications/color-certification/tests/grade2-runtime-promotion.test.js
+          git add docs/power-color qualifications/color-certification/data/grade2-runtime.json qualifications/color-certification/tests/grade2-runtime-promotion.test.js qualifications/color-certification/tests/grade2-image-scheme-keywords-authoring.test.js
           git commit -m "power-color: promote Grade 2 image-scheme keywords"
           git push origin HEAD:power-color-grade2-image-keywords-promotion
