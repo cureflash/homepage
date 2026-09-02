@@ -43,7 +43,8 @@ All twenty-five runtime skills were promoted record-identically from independent
 - Landscape p.120 `ライフサイクルの長い色彩`: `pc2.landscape.long_lifecycle_color` promoted record-identically; runtime 288 → 300.
 - Landscape p.120 `大きな面積をもつ色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`; checked public material does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context.
 - Landscape p.120 `太陽光に影響される色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`; checked public material supplies broad outdoor-light context but not the official-text deterministic rule set.
-- Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: next source-acquisition/audit frontier.
+- Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`; checked public material confirms only broad season/time variability and does not expose the official-text deterministic rule set.
+- Landscape p.122 `景観色彩設計の配慮事項`: next source-acquisition/audit frontier.
 
 ## Landscape p.120 accepted long-lifecycle boundary — promoted
 
@@ -57,6 +58,12 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-long-lifecycle-
 - the public-sector premise that public facilities remain for long periods and are seen by many people.
 
 State: 12/12 independently verified, A/B/C/D=3/3/3/3, promoted record-identically; runtime 288 → 300. Post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in CI `33665241835`.
+
+## Landscape p.121 source boundary — blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`.
+
+The official Grade 2 table of contents confirms p.121 and its order, but checked public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set. Do not infer season/time-to-color mappings, fixed hue/value/chroma shifts, weather effects, RGB/HEX/display values, image appearance or unstated illumination geometry.
 
 ## Preserved exclusions
 
@@ -74,10 +81,11 @@ State: 12/12 independently verified, A/B/C/D=3/3/3/3, promoted record-identicall
 - p.120 long-lifecycle material does not authorize specific RGB/HEX, hue/tone/Munsell values, numerical lifetime/repaint cycles, material-specific prescriptions or image-derived answers.
 - p.120 large-area authoring must not be synthesized from the heading, generic area-effect prose, or the already-promoted long-lifecycle large-area caution.
 - p.120 sunlight authoring must not infer fixed appearance changes or illumination geometry from generic outdoor-light material.
+- p.121 season/time authoring must not infer fixed color mappings or appearance changes from generic landscape variability.
 - Keep Grade 3 source/display blockers unchanged.
 
 ## Exact next order
 
 1. Keep previously source-blocked topics blocked unless new explicit auditable authority appears.
-2. Source-audit p.121 `季節や時間の変化を感じさせる多様な色彩` using current official scope/order plus explicit auditable nonvisual authority.
+2. Source-audit p.122 `景観色彩設計の配慮事項` using current official scope/order plus explicit auditable nonvisual authority.
 3. Require a sufficiently rich deterministic rule set before authoring; otherwise record the topic source-blocked and continue official order.
