@@ -15,18 +15,18 @@
     "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
-    "runtime_questions": {"verified": 228, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles"],
-    "active_skill": "pc2.interior.style_name_inventory",
-    "active_authoring": "qualifications/color-certification/data/grade2-authoring-interior-style-name-inventory-0001-0012.json",
-    "active_authoring_qa": {"checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
+    "runtime_questions": {"verified": 240, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory"],
+    "active_skill": "pc2.landscape.public_nature",
+    "active_authoring": null,
+    "active_authoring_qa": null,
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Promote the 12 verified pc2.interior.style_name_inventory records record-identically to runtime only after the dedicated authoring/full-fingerprint/nonvisual/shared-renderer gate and shared Power TOEIC engine regression are green."
+    "next": "Create pc2.landscape.public_nature pending-first only from the narrow p.116 Landscape Act public-asset/cooperation source boundary, independently QA every record, then run schema/full-fingerprint/answer-position/nonvisual/shared-renderer/shared-engine gates before promotion."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
     "checkpoints_completed": 2,
-    "generated": 12,
+    "generated": 0,
     "checked": 12,
     "verified": 12,
     "revision_events": 0,
@@ -34,12 +34,12 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Created pc2.interior.style_name_inventory as a 12-record pending-first p.112 membership-only batch; no style-property, image, RGB/HEX or monitor-facing inference was introduced.",
-      "Independently re-solved all 12 records before proposed-answer comparison: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3; dedicated nonvisual/full-fingerprint/shared-renderer authoring gate added."
+      "Promoted pc2.interior.style_name_inventory 12 record-identically; runtime 228 -> 240; exact-equality/full-fingerprint/shared Power TOEIC engine gates extended to twenty promoted skills.",
+      "Continued official Grade 2 text order to Landscape p.116 and source-resolved only a narrow nonvisual public-nature boundary from current Color Certification scope plus MLIT Landscape Act authority; no visual/color/geometry inference was introduced."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Gate and then record-identically promote pc2.interior.style_name_inventory 12 verified records; runtime remains 228 until promotion."
+  "next": "Begin pending-first authoring for pc2.landscape.public_nature from the fixed p.116 public-asset/cooperation boundary."
 }
