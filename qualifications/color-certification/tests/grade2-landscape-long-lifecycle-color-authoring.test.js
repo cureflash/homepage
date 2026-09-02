@@ -8,7 +8,7 @@ const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json',
 
 function fingerprint(q) { return JSON.stringify([q.sentence, q.choices]); }
 
-test('Grade 2 Landscape p120 long-lifecycle batch is independently verified, nonvisual, balanced and not yet runtime-promoted', () => {
+test('Grade 2 Landscape p120 long-lifecycle batch is independently verified, nonvisual, balanced and runtime-promoted record-identically', () => {
   assert.equal(batch.grade, 2);
   assert.equal(batch.skill.id, 'pc2.landscape.long_lifecycle_color');
   assert.equal(batch.questions.length, 12);
@@ -19,7 +19,7 @@ test('Grade 2 Landscape p120 long-lifecycle batch is independently verified, non
 
   const ids = new Set();
   const positions = [0, 0, 0, 0];
-  const runtimeFingerprints = new Set(runtime.questions.map(fingerprint));
+  const runtimeById = new Map(runtime.questions.map((q) => [q.id, q]));
   for (const q of batch.questions) {
     assert.equal(q.validationStatus, 'verified');
     assert.equal(q.qa.generatedAs, 'pending_validation');
@@ -38,8 +38,7 @@ test('Grade 2 Landscape p120 long-lifecycle batch is independently verified, non
     assert.equal(/#[0-9a-f]{3,8}\b/i.test(JSON.stringify(q)), false);
     assert.equal(q.sourceRefs.includes('aft_grade2_current_toc_2026'), true);
     assert.equal(q.sourceRefs.some((ref) => ref === 'color_prism_landscape_approach_2026' || ref === 'itami_public_facility_landscape_guideline_2022'), true);
-    assert.equal(runtime.questions.some((r) => r.id === q.id), false);
-    assert.equal(runtimeFingerprints.has(fingerprint(q)), false);
+    assert.deepEqual(runtimeById.get(q.id), q);
     assert.equal(ids.has(q.id), false);
     ids.add(q.id);
     positions[q.correctIndex] += 1;
@@ -52,5 +51,5 @@ test('Grade 2 Landscape p120 long-lifecycle batch is independently verified, non
   assert.deepEqual(positions, [3, 3, 3, 3]);
   const batchFingerprints = batch.questions.map(fingerprint);
   assert.equal(new Set(batchFingerprints).size, 12);
-  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), false);
+  assert.deepEqual(runtime.skills.find((skill) => skill.id === batch.skill.id), batch.skill);
 });
