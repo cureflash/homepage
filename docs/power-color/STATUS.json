@@ -2,7 +2,7 @@
   "project": "power-color",
   "phase": "grade2_active_by_user_override",
   "active_grade": 2,
-  "checked_on": "2026-09-02",
+  "checked_on": "2026-09-03",
   "grade3": {
     "complete": false,
     "runtime_questions": {"verified": 223, "pending": 0, "needs_revision": 0, "rejected": 0},
@@ -15,35 +15,33 @@
     "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
-    "runtime_questions": {"verified": 252, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature"],
+    "runtime_questions": {"verified": 264, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature", "pc2.landscape.element_examples"],
     "active_skill": "pc2.landscape.element_examples",
     "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-element-examples-0001-0012.json",
     "active_authoring_qa": {"checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
     "authoring_gate": {"status": "passed", "workflow_run": 33644271047, "head": "a3d2be3e0230aefb1e733f07ad08ea0cecfe161b"},
+    "promotion_gate": {"status": "passed", "workflow_run": 33647175533, "head": "b186638676e1706c1a228af3a0a2c62d2643121c", "pr": 546, "merge_commit": "ba9bde18a964eebc92c992b38445271b980fae8e"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Promote pc2.landscape.element_examples 12 verified records record-identically to grade2-runtime.json, extend exact-equality/full-fingerprint/shared-engine coverage to twenty-two promoted skills, then continue official-text order."
+    "next": "Continue official-text order to p.117 景観色彩における色彩設計の役割 and source-acquire a deterministic nonvisual boundary before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 5,
-    "generated": 12,
-    "checked": 12,
-    "verified": 12,
-    "revision_events": 2,
+    "checkpoints_completed": 2,
+    "generated": 0,
+    "checked": 0,
+    "verified": 0,
+    "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled the existing landscape promotion branch with PR #540 and promoted pc2.landscape.public_nature 12 records record-identically after Power Color CI passed; runtime 240 -> 252 and twenty -> twenty-one promoted skills.",
-      "Source-resolved only the official-text p.117 景観をつくる要素 nonvisual boundary using the current AFT Grade 2 table of contents plus the current Mutsu City Landscape Plan explicit element list.",
-      "Created pc2.landscape.element_examples as a 12-record pending-first batch limited to explicit listed landscape elements; no RGB/HEX, image appearance, formal natural/artificial taxonomy, or unstated geometry was introduced.",
-      "Independently re-solved all 12 before proposed-answer comparison: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. Removed unsupported classification wording and replaced one subjective breadth item with an objective explicit-list membership item before gate.",
-      "Dedicated pc2.landscape.element_examples schema/full-fingerprint/nonvisual/shared-renderer gate plus normal Power Color regression passed in workflow run 33644271047 on head a3d2be3e0230aefb1e733f07ad08ea0cecfe161b; runtime remains 252 until record-identical promotion."
+      "Reconciled latest main, canonical Grade 2 state, open PRs and branches; no competing Power Color checkpoint was present and the exact next frontier remained pc2.landscape.element_examples promotion.",
+      "Promoted all 12 verified pc2.landscape.element_examples records record-identically; updated the dedicated authoring gate from pre-promotion absence to post-promotion exact equality after the first CI exposed that stale assertion. Power Color CI run 33647175533 passed on head b186638676e1706c1a228af3a0a2c62d2643121c; PR #546 merged as ba9bde18a964eebc92c992b38445271b980fae8e. Runtime is now 264 verified / pending 0 across twenty-two skills."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Record-identically promote pc2.landscape.element_examples 12 verified records; runtime remains 252 until promotion."
+  "next": "Source-acquire p.117 景観色彩における色彩設計の役割 without inferring color, display, image or geometry facts."
 }
