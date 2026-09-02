@@ -1,0 +1,67 @@
+name: Temporary Power Color Grade 2 promotion
+
+on:
+  push:
+    branches:
+      - agent/power-color-g2-landscape-color-design-promotion-20260903
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/power-color-g2-landscape-color-design-promotion-20260903
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Promote verified batch record-identically
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const runtimePath = 'qualifications/color-certification/data/grade2-runtime.json';
+          const batchPath = 'qualifications/color-certification/data/grade2-authoring-landscape-color-design-harmony-role-0001-0012.json';
+          const testPath = 'qualifications/color-certification/tests/grade2-runtime-promotion.test.js';
+          const runtime = JSON.parse(fs.readFileSync(runtimePath, 'utf8'));
+          const batch = JSON.parse(fs.readFileSync(batchPath, 'utf8'));
+          if (batch.questions.length !== 12 || batch.questions.some((q) => q.validationStatus !== 'verified')) throw new Error('batch is not 12/12 verified');
+          const skillExists = runtime.skills.some((s) => s.id === batch.skill.id);
+          const questionIds = new Set(runtime.questions.map((q) => q.id));
+          const overlap = batch.questions.filter((q) => questionIds.has(q.id));
+          if (skillExists !== (overlap.length === batch.questions.length)) throw new Error('partial promotion state');
+          if (!skillExists) {
+            if (overlap.length) throw new Error('question ID overlap before promotion');
+            runtime.skills.push(batch.skill);
+            runtime.questions.push(...batch.questions);
+            fs.writeFileSync(runtimePath, JSON.stringify(runtime, null, 2) + '\n');
+          }
+          let test = fs.readFileSync(testPath, 'utf8');
+          if (!test.includes('landscapeColorDesignHarmonyRole')) {
+            const importNeedle = "const landscapeElementExamples = JSON.parse(await readFile(new URL('../data/grade2-authoring-landscape-element-examples-0001-0012.json', import.meta.url), 'utf8'));";
+            if (!test.includes(importNeedle)) throw new Error('promotion test import anchor missing');
+            test = test.replace(importNeedle, importNeedle + "\nconst landscapeColorDesignHarmonyRole = JSON.parse(await readFile(new URL('../data/grade2-authoring-landscape-color-design-harmony-role-0001-0012.json', import.meta.url), 'utf8'));" );
+            const batchNeedle = 'landscapePublicNature, landscapeElementExamples];';
+            if (!test.includes(batchNeedle)) throw new Error('promotion test batch anchor missing');
+            test = test.replace(batchNeedle, 'landscapePublicNature, landscapeElementExamples, landscapeColorDesignHarmonyRole];');
+            test = test.replace("assert.equal(runtime.questions.length, 264);", "assert.equal(runtime.questions.length, 276);");
+            test = test.replace("assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 264);", "assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 276);");
+            test = test.replace("totalCount: 66,", "totalCount: 69,");
+            test = test.replace("assert.equal(selectQuestionIds({ repository, recipe }).length, 66);", "assert.equal(selectQuestionIds({ repository, recipe }).length, 69);");
+            fs.writeFileSync(testPath, test);
+          }
+          NODE
+      - name: Run Power Color tests
+        working-directory: qualifications/color-certification
+        run: npm test
+      - name: Commit intended promotion files
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add qualifications/color-certification/data/grade2-runtime.json qualifications/color-certification/tests/grade2-runtime-promotion.test.js
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Promote Grade 2 landscape color design batch'
+          git push origin HEAD:agent/power-color-g2-landscape-color-design-promotion-20260903
