@@ -14,7 +14,7 @@ Primary authority:
 When public first-party material confirms Grade 2 scope but does not expose the detailed nonvisual rule, an auditable professional secondary source may be used only when the rule is explicit and independently corroborated. Secondary sources never authorize monitor RGB/HEX or image-derived answers.
 
 Rules:
-1. Use only facts that can be independently re-derived from explicit current authority.
+1. Use only facts independently re-derived from explicit current authority.
 2. Do not infer answers from sample-image appearance, RGB/HEX, screenshots or unstated diagram geometry.
 3. Monitor-facing questions remain blocked without approved display references.
 4. Reuse the shared Power TOEIC question-bank/workout/session engine only.
@@ -22,90 +22,76 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 192 verified / pending 0 across sixteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 192 verified / pending 0 across sixteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
-## Completed Grade 2 checkpoints
+Promoted skills:
+1. `pc2.foundation.official_sample_facts`
+2. `pc2.scheme.triad_hue_positions`
+3. `pc2.munsell.notation_components`
+4. `pc2.scheme.natural_complex_harmony`
+5. `pc2.scheme.dominant_color_tone`
+6. `pc2.scheme.tone_on_tone`
+7. `pc2.scheme.tone_in_tone`
+8. `pc2.scheme.tonal`
+9. `pc2.scheme.camaieu_faux_camaieu`
+10. `pc2.scheme.bicolor_tricolor`
+11. `pc2.scheme.hue_circle_division`
+12. `pc2.image.image_scheme_keywords`
+13. `pc2.media.rgb_cmyk_models`
+14. `pc2.media.color_management_profiles`
+15. `pc2.media.image_basics`
+16. `pc2.fashion.basic_trend_color_classification`
 
-- [x] `pc2.foundation.official_sample_facts`: 12 verified and promoted.
-- [x] `pc2.scheme.triad_hue_positions`: 12 verified and promoted.
-- [x] `pc2.munsell.notation_components`: 12 verified and promoted.
-- [x] `pc2.scheme.natural_complex_harmony`: 12 verified and promoted.
-- [x] `pc2.scheme.dominant_color_tone`: 12 verified and promoted.
-- [x] `pc2.scheme.tone_on_tone`: 12 verified and promoted.
-- [x] `pc2.scheme.tone_in_tone`: 12 verified and promoted.
-- [x] `pc2.scheme.tonal`: 12 verified and promoted.
-- [x] `pc2.scheme.camaieu_faux_camaieu`: 12 verified and promoted.
-- [x] `pc2.scheme.bicolor_tricolor`: 12 verified and promoted; runtime 108 → 120.
-- [x] `pc2.scheme.hue_circle_division`: 12 verified and promoted; runtime 120 → 132.
-- [x] `pc2.image.image_scheme_keywords`: 12 verified and promoted; runtime 132 → 144.
-- [x] `pc2.media.rgb_cmyk_models`: 12 verified and promoted; runtime 144 → 156.
-- [x] `pc2.media.color_management_profiles`: 12 verified and promoted; runtime 156 → 168.
-- [x] `pc2.media.image_basics`: 12 verified and promoted; runtime 168 → 180.
-- [x] `pc2.fashion.basic_trend_color_classification`: 12 verified and promoted; runtime 180 → 192.
-- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all sixteen promoted skills.
+All sixteen are promoted record-identically and covered by exact-equality/full-fingerprint/shared-engine gates.
 
-## Visual Design
+## Preserved blocked topics
 
-- [x] Current official Grade 2 TOC confirms `ビジュアルデザインの色彩` follows image-based schemes and contains `ビジュアルデザインとは` / `ビジュアルデザインと色彩`.
-- [x] Audit current public first-party material for an explicit text-only answer rule.
-- [ ] Authoring remains blocked: the reviewed public first-party material exposes scope labels but not a sufficiently explicit nonvisual judgment rule. Do not infer from figures, screenshots, image appearance, RGB/HEX or unstated geometry.
-- [x] Record the blocker in `docs/power-color/audits/2026-09-02-grade2-visual-media-source-audit.md` and continue to the next official-text topic rather than repeating the same unresolved route.
+- Visual Design: scope-confirmed, but no sufficiently explicit public nonvisual rule found.
+- Fashion `ファッションの分類` p.091, `ファッションの配色` p.095, `ファッションにおける配色の事例` p.096: source-blocked after audits.
+- Interior `インテリア概念の成立` p.104: source-blocked; current Interior Industry Association material does not establish the official-text historical propositions.
 
-## Media Design — RGB / CMYK text-only slice
+Do not repeat those routes unless new explicit auditable authority appears.
 
-- [x] Current official Grade 2 TOC explicitly lists `メディアデザインの色彩`, including `画面や印刷における色表現` and `カラーマネジメントの基本`.
-- [x] Current official Grade 2 sample confirms CMY as the subtractive-mixing primaries.
-- [x] Current Adobe professional documentation explicitly corroborates RGB = additive red/green/blue light used for displays, full-intensity RGB = white, and CMYK = subtractive cyan/magenta/yellow plus black for process printing.
-- [x] Fix `pc2.media.rgb_cmyk_models` to those explicit text-only rules only; exclude exact RGB/HEX values, swatches, image appearance, screenshot sampling and device-specific visual judgments.
-- [x] Generate pending-first 12 text-choice questions and independently re-derive every answer before accepting proposed answers.
-- [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Promote record-identically to runtime 144 → 156 with exact-equality/full-fingerprint/shared-engine gates.
+## Interior p.105 — source-resolved
 
-## Media Design — color-management profiles text-only slice
+Audit: `docs/power-color/audits/2026-09-02-grade2-interior-p105-source-audit.md`.
 
-- [x] Current official Grade 2 TOC explicitly lists `カラーマネジメントの基本` at p.086.
-- [x] Current Adobe professional documentation explicitly fixes the retained nonvisual rules for ICC/color profiles, monitor/document profiles, profile-based device translation, embedded-profile purpose, and Assign Profile versus Convert to Profile.
-- [x] Exclude RGB/HEX display values, swatches, monitor-facing color identification, screenshots, calibration values, rendering-intent judgments and inferred diagram geometry.
-- [x] Generate pending-first 12 text-choice questions and independently re-derive every answer before accepting proposed answers.
-- [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Promote record-identically to runtime 156 → 168 with exact-equality/full-fingerprint/shared-engine gates.
+The current official Grade 2 text order places `インテリア色彩の考え方` and `インテリア空間の分類とゾーニング` at p.105. An auditable Cleverly Home Fukushima article uses the same headings, explicitly cites the official Grade 2 text, and states deterministic nonvisual rules. Current DAIKEN professional housing guidance independently corroborates zoning as use-based grouping of spaces.
 
-## Media Design — computer image basics text-only slice
+### `pc2.interior.color_planning_principles`
 
-- [x] Current official Grade 2 text scope places `コンピュータにおける画像の基本` next in Media Design.
-- [x] Current Adobe professional documentation explicitly fixes the retained nonvisual rules: raster = pixel grid and resolution-dependent; raster enlargement can lose detail; vector = mathematically defined points/lines/curves/shapes and scales with crisp edges; photographs are a standard raster use case; logos/technical illustrations are standard vector use cases.
-- [x] Exclude image appearance judgments, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, unstated geometry, device-specific resolution targets and compression-quality judgments.
-- [x] Generate pending-first 12 text-choice questions and independently re-derive every answer before accepting proposed answers.
-- [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Promote record-identically to runtime 168 → 180 and extend exact-equality/full-fingerprint/shared-engine gates.
+Accepted rule boundary only:
+- `生活を包む色彩であること` — interior color continually affects occupants in daily life;
+- `目的や用途に応じた色彩であること` — room role/function should guide color planning;
+- `住むための色彩であること` — account for difficult post-construction change, lasting suitability and maintainability;
+- `利用者に応じた色彩であること` — account for the principal users of the space.
 
-## Fashion — basic/trend color classification text-only slice
+Authoring state:
+- [x] pending-first 12 created;
+- [x] independently re-solved all 12 before comparing with proposed answers;
+- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
+- [x] A/B/C/D = 3/3/3/3;
+- [x] text-only shared-renderer/full-fingerprint gate added;
+- [ ] runtime promotion pending.
 
-- [x] Current official Grade 2 TOC places `ファッションカラーの分類` immediately after Media Design at p.090.
-- [x] Current Grade 2 official sample page confirms fashion color coordination is within the tested professional-application scope.
-- [x] Auditable specialist secondary material referencing the 2020-revised official text explicitly defines basic colors as repeatedly used standard colors independent of fashion trends and trend colors as varying with era/season.
-- [x] Current JAFCA first-party material independently confirms publication of fashion trend-color information.
-- [x] Fix the accepted rule boundary in `docs/power-color/audits/2026-09-02-grade2-fashion-color-classification.md`; exclude universal claims about example hues, current displayed trend-color judgments, fashion-photo appearance, RGB/HEX, sampled pixels and unstated style geometry.
-- [x] Create `pc2.fashion.basic_trend_color_classification` as a pending-first 12-question text-choice batch and independently re-solve every record.
-- [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Run the dedicated schema/full-fingerprint/answer-position/shared-renderer authoring gate; PR #520 passed Power Color CI and merged to main.
-- [x] Promote the 12 verified records record-identically to runtime 180 → 192.
-- [x] Change the dedicated gate to exact runtime equality and extend full-fingerprint/coverage/shared Power TOEIC engine gates to all sixteen promoted skills.
+### `pc2.interior.zoning_classification`
 
-## Fashion — blocked remainder
+Accepted rule boundary only:
+- `パブリックゾーン` = family and visitors / many people share the space;
+- `プライベートゾーン` = a specific individual mainly uses the space;
+- `サービスゾーン` = functional housework and wet/water-use spaces;
+- zoning = grouping spaces by principal use/function for planning.
 
-- [x] `ファッションの分類` p.091: scope/order confirmed, but no sufficiently explicit auditable deterministic category mapping was exposed. Audit: `docs/power-color/audits/2026-09-02-grade2-fashion-classification-source-audit.md`.
-- [x] `ファッションの配色` p.095: scope/order confirmed, but reviewed public accepted authority does not expose the specific deterministic p.095 rule set. Generic fashion advice, area-ratio heuristics, example hues and visual styling are not adequate substitutes. Audit: `docs/power-color/audits/2026-09-02-grade2-fashion-coordination-source-audit.md`.
-- [x] `ファッションにおける配色の事例` p.096: scope/order confirmed, but the public example set and exact example-to-rule mapping are not exposed. Do not reconstruct from photographs, screenshots, RGB/HEX, sampled pixels, remembered textbook examples or unstated geometry. Audit: `docs/power-color/audits/2026-09-02-grade2-fashion-examples-source-audit.md`.
-- [ ] These topics remain authoring-blocked unless future explicit auditable authority is acquired.
+Do not import unrelated four-zone classifications and do not infer from floor-plan geometry.
 
-## Interior — concept establishment p.104 source audit
-
-- [x] Current official Grade 2 TOC places `インテリア概念の成立` at p.104 and the p.105 color/zoning topics immediately after it.
-- [x] Current Interior Industry Association first-party material was reviewed. It explicitly describes modern interior-coordinator roles and workflow, but does not establish the Grade 2 textbook's historical/conceptual p.104 propositions.
-- [x] Record blocker in `docs/power-color/audits/2026-09-02-grade2-interior-concept-source-audit.md` rather than importing modern professional descriptions as textbook history.
-- [ ] p.104 authoring remains blocked unless a future explicit auditable rule source is acquired.
+Authoring state:
+- [x] pending-first 12 created;
+- [x] independently re-solved all 12 before comparing with proposed answers;
+- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
+- [x] A/B/C/D = 3/3/3/3;
+- [x] combined schema/full-fingerprint/shared-renderer gate added;
+- [ ] runtime promotion pending.
 
 ## Exact next start point
 
-Continue current official Grade 2 text order at `インテリア色彩の考え方` p.105, then `インテリア空間の分類とゾーニング` p.105. Acquire an explicit auditable nonvisual answer rule before authoring. Keep Visual Design, Fashion p.091/p.095/p.096, and `インテリア概念の成立` p.104 source-blocked, and keep all Grade 3 source/display gates unchanged.
+After the current authoring PR is green and merged, promote both verified Interior p.105 batches record-identically. Expected runtime is 192 → 216 only if exact-equality, full-fingerprint, coverage, answer-position and shared Power TOEIC engine regressions all pass. Do not rewrite records during promotion. Then continue official Grade 2 text order to the next Interior topic. Keep all Grade 3 blockers and source/display gates unchanged.
