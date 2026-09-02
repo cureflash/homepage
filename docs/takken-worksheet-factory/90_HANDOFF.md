@@ -8,14 +8,14 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed reconciliation for `takken-concept-development-completion`.
+Completed the knowledge-extraction half-checkpoint for `takken-concept-building-confirmation`.
 
-- Kept the 4 canonical Urban Planning Act Article 36 knowledge items unchanged: completion notice, conformity inspection, inspection-certificate issuance, and completion public notice.
-- Mapped verified `takken-q-66-001` only to `takken-k-development-completion-completion-notice`, which it directly measures.
-- Mapped verified `takken-q-66-002` to conformity inspection, inspection-certificate issuance, and completion public notice, all of which are expressly tested by its stem/choices.
-- Updated the canonical mapping validator to 102 mapped existing verified questions through unit 66 and added the development-completion concept/knowledge IDs to its allowlists.
+- Added 9 canonical knowledge items from the 2026-04-01 Building Standards Act Article 6 / 6-2 baseline.
+- Captured the current 1号 / 2号 / 3号 confirmation categories, including the 2025-04-01 reform boundary of 2 floors or more / total floor area over 200㎡ for the new 2号 class and the area-dependent new 3号 class.
+- Separated the work scope for 1号・2号 from 3号, the pre-start confirmation requirement, confirmation by 建築主事等, the designated-confirmation-inspection-body route, and confirmation-certificate issuance.
+- Used the canonical e-Gov 2026-04-01 Building Standards Act reference and current MLIT official confirmation-scope guidance; source unit `building-confirmation` and source facts `u67-f1` / `u67-f2` remain the unit linkage.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed.
-- All 4 development-completion knowledge items now have direct existing-question evidence, reducing explicit Phase 4.3 knowledge gaps from 290 to 286.
+- `takken-q-67-001` and `takken-q-67-002` are still unmapped in the Phase 4 knowledge map; direct-evidence mapping is the next checkpoint.
 - No Phase 4.3 question generation, print generation, or app linkage was started.
 
 ## Status after this run
@@ -26,16 +26,16 @@ Completed reconciliation for `takken-concept-development-completion`.
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 86/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 86
-- Canonical knowledge items: 435
+- Concepts with canonical knowledge items: 87
+- Canonical knowledge items: 444
 - Existing verified questions mapped: 102
-- Explicit unmapped knowledge gaps: 286
+- Explicit unmapped knowledge gaps: 295
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical knowledge items for `takken-concept-building-confirmation` from source unit `building-confirmation`, using the 2026-04-01 baseline and the same verified-only evidence rules. Do not begin Phase 4.3.
+Map verified `takken-q-67-001` and `takken-q-67-002` only to the `building-confirmation` knowledge items they directly measure, then mark `takken-concept-building-confirmation` fully reconciled. Do not begin Phase 4.3.
 
 ## publication invariant
 
