@@ -2,27 +2,27 @@
 
 ## Active work
 
-Grade 2 is the active priority by explicit user override while Grade 3 remains incomplete. Grade 3 deferred state is preserved in `docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md`; do not mark Grade 3 complete or relax its source/display gates.
+Grade 2 is the active priority by explicit user override while Grade 3 remains incomplete. Grade 3 deferred state remains in `docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md`; do not mark Grade 3 complete or relax its source/display gates.
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime is 192 verified / pending 0 across sixteen promoted skills.
+Grade 2 runtime remains 192 verified / pending 0 across sixteen promoted skills. `pc2.fashion.basic_trend_color_classification` is still the latest promoted runtime skill.
 
-`pc2.fashion.basic_trend_color_classification` remains the latest promoted skill. The runtime promotion gate checks the exact union of all sixteen verified authoring batches, 192 verified / pending 0, no full-fingerprint duplicates, and execution through the shared Power TOEIC question-bank/session/workout engine.
+The current run source-resolved both official-text p.105 Interior topics and created two verified authoring batches:
 
-The accepted fashion rule boundary remains narrow and text-only: basic color = repeatedly used standard-color category not defined by current fashion trend; trend color = category whose content changes with era/season. Do not turn example hues into universal classifications. Do not use fashion-photo appearance, swatches, RGB/HEX, sampled pixels, current displayed-color identification, or unstated style geometry.
+- `pc2.interior.color_planning_principles`: 12 checked / 12 verified / pending 0 / A-B-C-D = 3-3-3-3.
+- `pc2.interior.zoning_classification`: 12 checked / 12 verified / pending 0 / A-B-C-D = 3-3-3-3.
 
-Visual Design remains source-blocked because reviewed public first-party material confirms scope/order but does not expose a sufficiently explicit nonvisual answer rule.
+Authority is recorded in `docs/power-color/audits/2026-09-02-grade2-interior-p105-source-audit.md`. The accepted secondary source uses the same headings `インテリアの色彩の考え方` and `インテリア空間の分類とゾーニング`, explicitly cites the official Grade 2 text, and exposes deterministic text-only propositions. DAIKEN current professional guidance independently corroborates zoning as grouping spaces by similar use.
 
-The Fashion chapter has now been audited through p.096. `ファッションの分類` p.091, `ファッションの配色` p.095, and `ファッションにおける配色の事例` p.096 are source-blocked for new authoring because current public accepted authority does not expose sufficiently explicit deterministic nonvisual mappings. Do not substitute generic fashion advice, remembered textbook examples, garment photographs, area-ratio heuristics, current trends, RGB/HEX, swatches, sampled pixels or unstated geometry. Audits:
-- `docs/power-color/audits/2026-09-02-grade2-fashion-classification-source-audit.md`
-- `docs/power-color/audits/2026-09-02-grade2-fashion-coordination-source-audit.md`
-- `docs/power-color/audits/2026-09-02-grade2-fashion-examples-source-audit.md`
+Accepted color-planning boundary: (1) color surrounds daily life and affects occupants, (2) fit color planning to room purpose/use, (3) account for living/maintainability and difficult post-construction change, (4) account for the principal users.
 
-The next Interior topic `インテリア概念の成立` p.104 was also audited. Current Interior Industry Association first-party material explicitly describes the modern role/workflow of interior coordinators, but that does not establish the official Grade 2 text's historical/conceptual p.104 propositions. Therefore p.104 remains source-blocked rather than inferred. Audit: `docs/power-color/audits/2026-09-02-grade2-interior-concept-source-audit.md`.
+Accepted zoning boundary: three classifications only — public = family/visitors/many people share the space; private = a specific individual uses the space; service = functional housework and wet/water-use spaces. Do not import unrelated four-zone taxonomies.
 
-Grade 3 runtime remains 223 verified / pending 0 and incomplete.
+Both batches are text-only. No RGB/HEX, swatches, photographs, sampled pixels, floor-plan geometry, unstated area ratios or monitor-facing judgments are used. The combined authoring gate checks schema invariants, answer-position balance, full fingerprints against both new batches and current runtime, and the existing shared color-choice renderer.
+
+Visual Design, Fashion p.091/p.095/p.096, and Interior p.104 remain source-blocked. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Continue current official Grade 2 text order at `インテリア色彩の考え方` p.105, then `インテリア空間の分類とゾーニング` p.105. Acquire an explicit auditable nonvisual answer rule before authoring. Keep the blocked Fashion topics, `インテリア概念の成立` p.104, Visual Design, and all existing Grade 3 source/display gates unchanged.
+After this authoring PR is green and merged, promote both verified p.105 batches record-identically without rewriting any question. Expected runtime frontier is 192 → 216 if exact-equality, full-fingerprint, coverage, answer-position, shared Power TOEIC question-bank/session/workout, and renderer regressions all pass. Then continue official text order to the next Interior topic.

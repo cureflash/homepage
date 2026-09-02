@@ -7,20 +7,10 @@ Checked: 2026-09-02
 Use the current Color Certification Association Grade 2 page:
 `https://www.aft.or.jp/pages/feature/exam2`
 
-Use the current official Grade 2 text table of contents for scope only:
+Use the current official Grade 2 text table of contents for scope/order only:
 `https://www.aft.or.jp/images/text_of-2st-grade_mokuji.pdf`
 
-Current JCRI first-party Munsell references:
-- `https://www.jcri.jp/square/tool` — `Munsell Separation`, explicitly parses `H V/C`;
-- `https://www.jcri.jp/product/hvc_color_training` — explicitly identifies H/V/C as hue/value/chroma;
-- `https://www.jcri.jp/product/digital_color_manual` — current Munsell notation examples.
-
-Current JAFCA first-party fashion-trend reference:
-- `https://jafca.org/membership/` — explicitly confirms JAFCA Fashion Color trend information is issued twice per year with season-ahead updates.
-
-Current Interior Industry Association first-party references:
-- `https://www.interior.or.jp/ic/about_ic/` — current interior-coordinator role/workflow;
-- `https://www.interior.or.jp/association/` — current association purpose and residential-interior scope.
+Current JCRI / Japan Color Enterprise sources remain authority for applicable color-system facts. Current JAFCA material remains authority for fashion trend-information publication. Current Interior Industry Association material remains authority for modern interior-professional role/scope but not for the blocked p.104 historical propositions.
 
 ## Runtime-promoted nonvisual skills
 
@@ -41,70 +31,44 @@ Current Interior Industry Association first-party references:
 15. `pc2.media.image_basics`
 16. `pc2.fashion.basic_trend_color_classification`
 
-All sixteen skills are runtime-promoted record-identically. Grade 2 runtime frontier is 192 verified / pending 0.
+All sixteen are runtime-promoted record-identically. Grade 2 runtime frontier is 192 verified / pending 0.
 
-## Previously resolved slices
+## Verified authoring awaiting promotion
 
-### `pc2.fashion.basic_trend_color_classification`
-- current official Grade 2 TOC places `ファッションカラーの分類` at p.090;
-- accepted secondary/first-party intersection explicitly fixes the narrow basic-color versus trend-color distinction;
-- universal example-hue claims, current displayed trend-color judgments, fashion-photo appearance, RGB/HEX, sampled pixels and unstated style geometry are excluded;
-- 12/12 independently verified and promoted record-identically; runtime 180 → 192.
+### `pc2.interior.color_planning_principles`
+- official current TOC places `インテリア色彩の考え方` at p.105;
+- auditable Cleverly Home Fukushima material uses the same heading and explicitly cites the official Grade 2 text;
+- retained nonvisual rules are exactly four planning principles: daily-life influence, purpose/use fit, living/maintainability and difficult post-construction change, and principal-user fit;
+- 12 pending-first records independently re-solved: 12 verified / pending 0 / A-B-C-D = 3-3-3-3.
 
-### `pc2.media.rgb_cmyk_models`
-- current official Grade 2 TOC confirms Media Design and specifically `画面や印刷における色表現` / `カラーマネジメントの基本`;
-- current official Grade 2 sample explicitly confirms CMY as the subtractive-mixing primaries;
-- current Adobe professional documentation fixes RGB additive-light/display and CMYK subtractive/process-print rules;
-- exact RGB/HEX values, swatches, screenshots, image appearance and device-specific visual judgments are excluded;
-- 12/12 independently verified and promoted record-identically.
+### `pc2.interior.zoning_classification`
+- official current TOC places `インテリア空間の分類とゾーニング` at p.105;
+- same auditable official-text-referencing material fixes three zones: public, private, service;
+- DAIKEN current professional housing guidance independently corroborates zoning as grouping spaces by similar use/function;
+- 12 pending-first records independently re-solved: 12 verified / pending 0 / A-B-C-D = 3-3-3-3.
 
-### `pc2.media.color_management_profiles`
-- current official Grade 2 TOC explicitly confirms `カラーマネジメントの基本`;
-- current Adobe professional documentation explicitly fixes the retained text-only rules for ICC/color profiles, monitor/document profiles, profile-based translation, embedded-profile purpose, and Assign Profile versus Convert to Profile;
-- RGB/HEX display values, swatches, monitor-facing identification, screenshots, calibration values, rendering-intent judgments and inferred geometry are excluded;
-- 12/12 independently verified, A/B/C/D = 3/3/3/3, and promoted record-identically.
-
-### `pc2.media.image_basics`
-- current official Grade 2 text scope confirms `コンピュータにおける画像の基本` in Media Design;
-- current Adobe professional documentation explicitly fixes raster as a pixel grid / resolution-dependent representation and vector as a mathematically defined representation based on points, lines, curves and shapes;
-- image appearance judgments, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, unstated geometry, device-specific resolution targets and compression-quality judgments are excluded;
-- 12/12 independently verified, A/B/C/D = 3/3/3/3, and promoted record-identically; runtime 168 → 180.
+Audit: `docs/power-color/audits/2026-09-02-grade2-interior-p105-source-audit.md`.
 
 ## Current official-text source frontier
 
-- Visual Design: scope-confirmed, but current public first-party material reviewed does not expose a sufficiently explicit nonvisual answer rule, so `pc2.visual.*` authoring remains blocked rather than inferred.
-- Media Design: RGB/CMYK, color-management profiles, and computer-image basics are promoted.
-- Fashion: `ファッションカラーの分類` narrow basic/trend slice is promoted. `ファッションの分類` p.091, `ファッションの配色` p.095, and `ファッションにおける配色の事例` p.096 are source-blocked after explicit audits because accepted public authority does not expose deterministic nonvisual mappings for those textbook sections.
-- Interior: `インテリア概念の成立` p.104 is source-blocked. Current Interior Industry Association first-party material defines modern professional roles/workflow but does not establish the official-text historical/conceptual propositions. The next source-acquisition frontier is `インテリア色彩の考え方` p.105, followed by `インテリア空間の分類とゾーニング` p.105.
-- Remaining later topics include interior coordination/element color composition/style, landscape color coordination, conventional color names, and the PCCS tone-by-value appendix.
+- Visual Design: source-blocked.
+- Media Design: three resolved/promoted text-only slices.
+- Fashion: basic/trend slice promoted; p.091/p.095/p.096 remain source-blocked.
+- Interior: p.104 source-blocked; both p.105 topics are now source-resolved and verified in authoring, awaiting record-identical runtime promotion.
+- After p.105 promotion, continue official text order to the next Interior topic; do not skip ahead by inventing a rule from a TOC label.
 
-The TOC establishes scope and search order only. Do not generate a micro-skill from a TOC label unless the answer rule is explicit in acceptable authority.
+## Preserved exclusions
 
-## Current blocker audits
-
-- `docs/power-color/audits/2026-09-02-grade2-visual-media-source-audit.md`
-- `docs/power-color/audits/2026-09-02-grade2-fashion-classification-source-audit.md`
-- `docs/power-color/audits/2026-09-02-grade2-fashion-coordination-source-audit.md`
-- `docs/power-color/audits/2026-09-02-grade2-fashion-examples-source-audit.md`
-- `docs/power-color/audits/2026-09-02-grade2-interior-concept-source-audit.md`
-
-## Removed / blocked routes
-
-- Do not recreate `pc2.image.color_image_rules` without current explicit first-party authority.
-- Do not reconstruct official image choices from pixels or screenshots.
-- Do not infer monitor-facing colors without approved display references.
-- Do not broaden any resolved scheme beyond its independently corroborated text-only intersection.
-- Do not author Visual Design terminology from scope labels alone; acquire an explicit auditable rule first.
-- Do not turn example fashion hues into universal basic/trend classifications.
-- Do not convert generic fashion area-ratio advice or outfit styling tips into Grade 2 p.095 facts.
-- Do not reconstruct p.096 fashion examples from images, remembered textbook content, RGB/HEX or sampled pixels.
-- Do not substitute modern interior-coordinator role descriptions for the textbook's p.104 historical/conceptual propositions.
-- The stale incomplete `power-color-grade2-tonal-promotion` branch is not authority.
+- No RGB/HEX, sampled pixels, screenshots, monitor appearance or unsourced display values.
+- No answer derivation from photographs or floor-plan geometry.
+- No unstated area-ratio or style heuristics.
+- Do not import unrelated four-zone taxonomies into the p.105 three-zone Color Certification slice.
+- Do not broaden room-specific examples or later coordination advice into universal p.105 rules.
+- Keep Grade 3 source/display blockers unchanged.
 
 ## Exact next order
 
-1. Grade 2 runtime frontier is 192 verified / pending 0 across sixteen promoted skills.
-2. Keep Visual Design, Fashion p.091/p.095/p.096, and Interior p.104 source-blocked unless future explicit auditable deterministic authority is acquired.
-3. Continue source acquisition at `インテリア色彩の考え方` p.105, then `インテリア空間の分類とゾーニング` p.105.
-4. Author only after fixing an explicit nonvisual answer rule; then use pending-first → independent QA → schema/full-fingerprint/coverage/answer-position/shared-renderer gates → record-identical promotion.
-5. Keep all Grade 3 source/display gates unchanged.
+1. Merge the current verified p.105 authoring checkpoint after CI.
+2. Promote `pc2.interior.color_planning_principles` and `pc2.interior.zoning_classification` record-identically; expected runtime 192 → 216 if all gates pass.
+3. Extend exact-equality/full-fingerprint/coverage/shared Power TOEIC engine gates to both promoted skills.
+4. Continue official Grade 2 text order to the next Interior topic.
