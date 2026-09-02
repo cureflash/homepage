@@ -41,6 +41,7 @@ Grade 2 runtime is 192 verified / pending 0 across sixteen promoted skills. Grad
 - [x] `pc2.media.rgb_cmyk_models`: 12 verified and promoted; runtime 144 → 156.
 - [x] `pc2.media.color_management_profiles`: 12 verified and promoted; runtime 156 → 168.
 - [x] `pc2.media.image_basics`: 12 verified and promoted; runtime 168 → 180.
+- [x] `pc2.fashion.basic_trend_color_classification`: 12 verified and promoted; runtime 180 → 192.
 - [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all sixteen promoted skills.
 
 ## Visual Design
@@ -91,14 +92,20 @@ Grade 2 runtime is 192 verified / pending 0 across sixteen promoted skills. Grad
 - [x] Promote the 12 verified records record-identically to runtime 180 → 192.
 - [x] Change the dedicated gate to exact runtime equality and extend full-fingerprint/coverage/shared Power TOEIC engine gates to all sixteen promoted skills.
 
-## Fashion — classification p.091 source audit
+## Fashion — blocked remainder
 
-- [x] Current official Grade 2 TOC places `ファッションの分類` at p.091 after `ファッションカラーの分類` p.090 and before `ファッションの配色` p.095.
-- [x] Audit current public first-party material and current auditable preparation material for an explicit deterministic nonvisual classification rule.
-- [x] Record blocker: reviewed sources expose scope/topic naming but not a sufficiently explicit auditable category-membership rule; do not infer from garments, silhouettes, photographs, current trends, RGB/HEX, swatches or unstated geometry.
-- [x] Record audit in `docs/power-color/audits/2026-09-02-grade2-fashion-classification-source-audit.md`.
-- [ ] Authoring remains blocked unless a future explicit auditable rule source is acquired.
+- [x] `ファッションの分類` p.091: scope/order confirmed, but no sufficiently explicit auditable deterministic category mapping was exposed. Audit: `docs/power-color/audits/2026-09-02-grade2-fashion-classification-source-audit.md`.
+- [x] `ファッションの配色` p.095: scope/order confirmed, but reviewed public accepted authority does not expose the specific deterministic p.095 rule set. Generic fashion advice, area-ratio heuristics, example hues and visual styling are not adequate substitutes. Audit: `docs/power-color/audits/2026-09-02-grade2-fashion-coordination-source-audit.md`.
+- [x] `ファッションにおける配色の事例` p.096: scope/order confirmed, but the public example set and exact example-to-rule mapping are not exposed. Do not reconstruct from photographs, screenshots, RGB/HEX, sampled pixels, remembered textbook examples or unstated geometry. Audit: `docs/power-color/audits/2026-09-02-grade2-fashion-examples-source-audit.md`.
+- [ ] These topics remain authoring-blocked unless future explicit auditable authority is acquired.
+
+## Interior — concept establishment p.104 source audit
+
+- [x] Current official Grade 2 TOC places `インテリア概念の成立` at p.104 and the p.105 color/zoning topics immediately after it.
+- [x] Current Interior Industry Association first-party material was reviewed. It explicitly describes modern interior-coordinator roles and workflow, but does not establish the Grade 2 textbook's historical/conceptual p.104 propositions.
+- [x] Record blocker in `docs/power-color/audits/2026-09-02-grade2-interior-concept-source-audit.md` rather than importing modern professional descriptions as textbook history.
+- [ ] p.104 authoring remains blocked unless a future explicit auditable rule source is acquired.
 
 ## Exact next start point
 
-Continue current official Grade 2 text order at `ファッションの配色` p.095. Acquire an explicit auditable nonvisual answer rule before authoring. `ファッションの分類` p.091 and Visual Design remain source-blocked.
+Continue current official Grade 2 text order at `インテリア色彩の考え方` p.105, then `インテリア空間の分類とゾーニング` p.105. Acquire an explicit auditable nonvisual answer rule before authoring. Keep Visual Design, Fashion p.091/p.095/p.096, and `インテリア概念の成立` p.104 source-blocked, and keep all Grade 3 source/display gates unchanged.
