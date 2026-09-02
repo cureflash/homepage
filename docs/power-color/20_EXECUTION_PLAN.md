@@ -58,7 +58,10 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Confirm the p.117 dedicated gate and normal Power Color regression are green on authoring head `a3d2be3e0230aefb1e733f07ad08ea0cecfe161b` (workflow run `33644271047`).
 - [x] Promote the 12 verified `pc2.landscape.element_examples` records record-identically; runtime 252 → 264 and twenty-one → twenty-two skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-two promoted skills; promotion CI run `33647175533` succeeded and PR #546 merged.
-- [ ] Continue official text order to Landscape p.117 `景観色彩における色彩設計の役割`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
+- [x] Source-resolve Landscape p.117 `景観色彩における色彩設計の役割` to a deterministic nonvisual surrounding-harmony/context/numerical-standard boundary.
+- [x] Create `pc2.landscape.color_design_harmony_role` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [x] Add and pass the dedicated nonvisual/full-fingerprint/shared-renderer authoring gate and normal Power Color regression; workflow run `33648021940`, PR #548 merged.
+- [ ] Promote only the 12 verified `pc2.landscape.color_design_harmony_role` records record-identically; expected runtime 264 → 276 and twenty-two → twenty-three skills, then extend exact-equality/full-fingerprint/shared-engine coverage.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
