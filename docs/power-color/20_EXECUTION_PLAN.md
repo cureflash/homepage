@@ -98,7 +98,11 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Audit Landscape p.125 `色彩管理`; keep source-blocked because current public authority confirms the official scope/order but does not expose a distinct sufficiently rich deterministic nonvisual p.125 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p125-color-management-source-audit.md`.
 - [x] Source-resolve the narrow p.128 JIS color-name structure boundary and author/independently QA `pc2.conventional.jis_name_structure`: 12/12 verified, pending 0, A/B/C/D=3/3/3/3; PR #597 merged.
 - [x] Promote `pc2.conventional.jis_name_structure` record-identically; runtime 336 → 348 and twenty-eight → twenty-nine skills; exact-equality/full-fingerprint/shared-engine CI `33690978044` succeeded; PR #599 merged.
-- [ ] Source-acquire the individual p.128 `和色名` boundary from explicit current auditable authority. Do not infer Grade 2 membership/readings from Grade 3 or infer monitor/display values.
+- [x] Audit individual p.128 `和色名`; source-blocked because no current explicit auditable authority exposes the Grade 2 pp.128–131 individual subset/readings. Audit: `docs/power-color/audits/2026-09-03-grade2-p128-washokumei-source-audit.md`; PR #603 merged after CI `33693030915` succeeded.
+- [x] Audit individual p.132 `外来色名`; source-blocked because no current explicit auditable authority exposes the Grade 2 pp.132–137 individual subset/readings. Audit: `docs/power-color/audits/2026-09-03-grade2-p132-gairaishokumei-source-audit.md`.
+- [x] Audit p.138 `資料・色名`; source-blocked as a distinct skill because the public official material exposes placement but not the reference pages' current contents. Audit: `docs/power-color/audits/2026-09-03-grade2-p138-color-reference-source-audit.md`.
+- [x] Audit p.142 `資料・配色イメージ手法の確立`; source-blocked as a distinct skill because current public authority does not expose the official procedure sufficiently to authorize production records. Audit: `docs/power-color/audits/2026-09-03-grade2-p142-image-scheme-method-source-audit.md`.
+- [ ] Current public official Grade 2 table-of-contents frontier is exhausted after p.142. Do not mark Grade 2 complete while recorded source-blocked topics remain. Further authoring requires new explicit auditable authority for a recorded blocked topic; do not repeat rejected source routes without new evidence.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
