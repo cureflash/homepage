@@ -1,6 +1,6 @@
 # Power Color — Grade 2 concept/source inventory
 
-Checked: 2026-09-02
+Checked: 2026-09-03
 
 ## Current first-party authority
 
@@ -14,14 +14,15 @@ Current JCRI / Japan Color Enterprise sources remain authority for applicable co
 
 ## Runtime-promoted nonvisual skills
 
-Grade 2 runtime frontier is 252 verified / pending 0 across twenty-one promoted skills. The latest promotions are:
+Grade 2 runtime frontier is 264 verified / pending 0 across twenty-two promoted skills. The latest promotions are:
 - `pc2.interior.color_planning_principles`
 - `pc2.interior.zoning_classification`
 - `pc2.interior.element_color_roles`
 - `pc2.interior.style_name_inventory`
 - `pc2.landscape.public_nature`
+- `pc2.landscape.element_examples`
 
-All were promoted record-identically from independently verified authoring batches. Exact-equality/full-fingerprint/shared-engine gates cover all twenty-one promoted skills.
+All were promoted record-identically from independently verified authoring batches. Exact-equality/full-fingerprint/shared-engine gates cover all twenty-two promoted skills.
 
 ## Current official-text source frontier
 
@@ -35,8 +36,8 @@ All were promoted record-identically from independently verified authoring batch
 - Interior p.111 `インテリアエレメントの配色の考え方と技法`: source-blocked.
 - Interior p.112 `インテリアスタイル`: six-label membership-only boundary promoted as `pc2.interior.style_name_inventory`; no style-property mapping authorized.
 - Landscape p.116 `景観とは / 景観にかかわる近年の動向 / 景観の公共性`: narrow public-nature boundary promoted as `pc2.landscape.public_nature`.
-- Landscape p.117 `景観をつくる要素`: narrow explicit element-example/breadth boundary source-resolved and authored as `pc2.landscape.element_examples`; not yet runtime-promoted.
-- Landscape p.117 `景観色彩における色彩設計の役割`: not yet source-resolved; keep separate from element examples.
+- Landscape p.117 `景観をつくる要素`: narrow explicit element-example/breadth boundary promoted as `pc2.landscape.element_examples`.
+- Landscape p.117 `景観色彩における色彩設計の役割`: not yet source-resolved; this is the exact next source-acquisition checkpoint.
 
 ## Landscape p.116 accepted boundary — promoted
 
@@ -48,7 +49,7 @@ Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p116-source-audit.md
 
 State: 12/12 independently verified and record-identically promoted; runtime 240 → 252.
 
-## Landscape p.117 accepted boundary — active authoring
+## Landscape p.117 accepted boundary — promoted
 
 Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p117-source-audit.md`.
 
@@ -58,14 +59,15 @@ Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p117-source-audit.md
 - the explicit inclusion of `美化活動` as an activity;
 - the explicit inclusion of both `公共事業` and `個人事業`.
 
-Authoring state:
+State:
 - 12 pending-first records created;
 - all 12 independently re-solved before proposed-answer comparison;
 - 12 verified / 0 needs_revision / 0 rejected / 0 pending;
 - A/B/C/D = 3/3/3/3;
 - one unsupported draft classification phrase removed before gate;
-- dedicated schema/source-ref/full-fingerprint/nonvisual/shared-renderer pre-promotion gate added;
-- runtime promotion not yet performed.
+- dedicated schema/source-ref/full-fingerprint/nonvisual/shared-renderer gate passed;
+- all 12 records promoted record-identically; runtime 252 → 264 and twenty-one → twenty-two skills;
+- post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in workflow run `33647175533`.
 
 Do not treat the source list as a universal closed taxonomy. Do not infer natural/artificial labels, color, material, building form, photograph, RGB/HEX, sampled-pixel or unstated geometry properties.
 
@@ -83,6 +85,6 @@ Do not treat the source list as a universal closed taxonomy. Do not infer natura
 
 ## Exact next order
 
-1. Run schema/full-fingerprint/answer-position/nonvisual/shared-renderer/shared Power TOEIC engine gates for `pc2.landscape.element_examples`.
-2. If green, promote the 12 verified records record-identically; expected runtime 252 → 264 and twenty-one → twenty-two promoted skills.
-3. Continue official Grade 2 text order to p.117 `景観色彩における色彩設計の役割` only after that promotion is synchronized.
+1. Source-acquire p.117 `景観色彩における色彩設計の役割` from current authoritative material.
+2. If and only if an explicit deterministic nonvisual rule boundary is established, record the source contract and author pending-first questions.
+3. If no such boundary is publicly auditable, record the source blocker and advance to the next official-text heading without guessing.
