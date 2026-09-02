@@ -14,22 +14,12 @@ Current JCRI / Japan Color Enterprise sources remain authority for applicable co
 
 ## Runtime-promoted nonvisual skills
 
-Grade 2 runtime frontier is 216 verified / pending 0 across eighteen promoted skills. The latest promotions are:
+Grade 2 runtime frontier is 228 verified / pending 0 across nineteen promoted skills. The latest promotions are:
 - `pc2.interior.color_planning_principles`
 - `pc2.interior.zoning_classification`
+- `pc2.interior.element_color_roles`
 
-Both were promoted record-identically from their independently verified p.105 authoring batches. Exact-equality/full-fingerprint/shared-engine gates cover all eighteen promoted skills.
-
-## Verified authoring awaiting promotion
-
-### `pc2.interior.element_color_roles`
-- official current TOC places `インテリアエレメントの色彩分類と色彩傾向` at p.110;
-- audit `docs/power-color/audits/2026-09-02-grade2-interior-p107-p110-source-audit.md` fixes the narrow three-role source boundary;
-- base = broad background/base area;
-- assort = main/supporting secondary area;
-- accent = small emphasis area;
-- 70/25/5 may be used only as an explicit conventional planning ratio, never inferred from image/floor-plan area;
-- 12 pending-first records independently re-solved: 12 verified / pending 0 / A-B-C-D = 3-3-3-3.
+All were promoted record-identically from independently verified authoring batches. Exact-equality/full-fingerprint/shared-engine gates cover all nineteen promoted skills.
 
 ## Current official-text source frontier
 
@@ -37,10 +27,13 @@ Both were promoted record-identically from their independently verified p.105 au
 - Media Design: three resolved/promoted text-only slices.
 - Fashion: basic/trend slice promoted; p.091/p.095/p.096 remain source-blocked.
 - Interior p.104: source-blocked.
-- Interior p.105: both source-resolved skills promoted; runtime reached 216.
+- Interior p.105: both source-resolved skills promoted.
 - Interior p.107 `インテリア空間のカラーコーディネーション`: source-blocked.
-- Interior p.110 `インテリアエレメントの色彩分類と色彩傾向`: source-resolved and independently verified in authoring as `pc2.interior.element_color_roles`.
-- Interior p.111 `インテリアエレメントの配色の考え方と技法`: next source-acquisition target after p.110 promotion.
+- Interior p.110 `インテリアエレメントの色彩分類と色彩傾向`: source-resolved, independently verified and promoted as `pc2.interior.element_color_roles`; runtime reached 228.
+- Interior p.111 `インテリアエレメントの配色の考え方と技法`: source-blocked after targeted audit; current public material does not expose a deterministic nonvisual rule set tied to this section.
+- Interior p.112 `インテリアスタイル`: narrow source-resolved inventory only: `ナチュラル`, `カジュアル`, `オーソドックス`, `クラシック`, `エレガント`, `モダン`.
+
+Audit for p.111–112: `docs/power-color/audits/2026-09-02-grade2-interior-p111-p112-source-audit.md`.
 
 ## Preserved exclusions
 
@@ -49,10 +42,12 @@ Both were promoted record-identically from their independently verified p.105 au
 - No unstated area-ratio or style heuristics.
 - Do not import unrelated four-zone taxonomies into the p.105 three-zone Color Certification slice.
 - The p.110 70/25/5 ratio is a conventional planning rule only; never infer measured proportions from an image or floor plan.
+- p.111 must not reuse generic p.110 role/ratio facts as if they establish p.111 techniques.
+- p.112 currently authorizes six style names only; no style-to-hue, tone, material, shape, furniture, history or image mapping.
 - Keep Grade 3 source/display blockers unchanged.
 
 ## Exact next order
 
-1. Promote `pc2.interior.element_color_roles` record-identically; expected runtime 216 → 228 if all gates pass.
-2. Extend exact-equality/full-fingerprint/coverage/shared Power TOEIC engine gates to the promoted skill.
-3. Acquire explicit auditable nonvisual authority for p.111 before authoring anything from that topic.
+1. Create `pc2.interior.style_name_inventory` pending-first using only the six fixed p.112 labels.
+2. Independently re-solve every record before proposed-answer comparison and classify individually.
+3. Run schema/full-fingerprint/answer-position/nonvisual/shared-renderer/shared Power TOEIC engine gates; promote only verified records record-identically.

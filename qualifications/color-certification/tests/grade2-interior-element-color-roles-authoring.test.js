@@ -8,7 +8,7 @@ const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json',
 
 function fingerprint(q) { return JSON.stringify([q.sentence, q.choices]); }
 
-test('Grade 2 Interior p110 element-role batch is independently verified, nonvisual, balanced and not yet runtime-promoted', () => {
+test('Grade 2 Interior p110 element-role batch is independently verified, nonvisual, balanced and runtime-promoted record-identically', () => {
   assert.equal(batch.grade, 2);
   assert.equal(batch.skill.id, 'pc2.interior.element_color_roles');
   assert.equal(batch.questions.length, 12);
@@ -17,7 +17,6 @@ test('Grade 2 Interior p110 element-role batch is independently verified, nonvis
     correctIndexDistribution: { A: 3, B: 3, C: 3, D: 3 }
   });
   const positions=[0,0,0,0];
-  const runtimeFingerprints = new Set(runtime.questions.map(fingerprint));
   for (const q of batch.questions) {
     assert.equal(q.validationStatus, 'verified');
     assert.equal(q.qa.generatedAs, 'pending_validation');
@@ -29,7 +28,6 @@ test('Grade 2 Interior p110 element-role batch is independently verified, nonvis
     assert.equal('presentation' in q, false);
     assert.equal('colorRefs' in q, false);
     assert.equal(/#[0-9a-f]{3,8}\b/i.test(JSON.stringify(q)), false);
-    assert.equal(runtimeFingerprints.has(fingerprint(q)), false);
     positions[q.correctIndex] += 1;
     const feedback=getAnswerFeedbackModel(q,new Map());
     assert.equal(feedback.kind,'text');
@@ -37,4 +35,6 @@ test('Grade 2 Interior p110 element-role batch is independently verified, nonvis
   }
   assert.deepEqual(positions,[3,3,3,3]);
   assert.equal(new Set(batch.questions.map(fingerprint)).size,12);
+  assert.deepEqual(runtime.skills.find((skill) => skill.id === batch.skill.id), batch.skill);
+  assert.deepEqual(runtime.questions.filter((q) => q.skillId === batch.skill.id), batch.questions);
 });
