@@ -26,7 +26,7 @@
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {
-      "verified": 168,
+      "verified": 180,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0
@@ -45,17 +45,13 @@
       "pc2.scheme.hue_circle_division",
       "pc2.image.image_scheme_keywords",
       "pc2.media.rgb_cmyk_models",
-      "pc2.media.color_management_profiles"
+      "pc2.media.color_management_profiles",
+      "pc2.media.image_basics"
     ],
-    "active_skill": "pc2.media.image_basics",
-    "active_authoring": {
-      "generated": 12,
-      "checked": 12,
-      "verified": 12,
-      "pending": 0
-    },
+    "active_skill": null,
+    "active_authoring": null,
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Promote the independently verified pc2.media.image_basics 12-question batch record-identically into Grade 2 runtime 168 to 180, then extend exact-equality/full-fingerprint/shared Power TOEIC engine gates. Visual Design remains source-blocked."
+    "next": "Continue current official Grade 2 text order from the next source-resolvable nonvisual topic after pc2.media.image_basics. Visual Design remains source-blocked."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -64,8 +60,8 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 3,
-    "generated": 12,
+    "checkpoints_completed": 1,
+    "generated": 0,
     "checked": 12,
     "verified": 12,
     "revision_events": 0,
@@ -73,13 +69,11 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Source-resolved コンピュータにおける画像の基本 from current official Grade 2 scope plus current Adobe professional raster/vector documentation, retaining text-only image representation/scaling/use-case rules and excluding visual inference.",
-      "Authored 12 pc2.media.image_basics questions pending-first from the fixed nonvisual rule set.",
-      "Independently re-solved all 12 records: 12 checked / 12 verified / pending 0, A/B/C/D = 3/3/3/3; added a dedicated authoring/shared-renderer gate while keeping runtime unchanged at 168."
+      "Promoted the previously independently verified pc2.media.image_basics 12-question batch record-identically into Grade 2 runtime 168 to 180 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to all fifteen promoted skills."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote pc2.media.image_basics record-identically from verified authoring into Grade 2 runtime 168 to 180."
+  "next": "Acquire explicit auditable authority for the next source-resolvable nonvisual Grade 2 topic in current official-text order."
 }
