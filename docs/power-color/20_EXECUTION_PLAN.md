@@ -49,7 +49,8 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Continue official text order to Landscape p.116 and source-resolve only the narrow nonvisual `景観の公共性` public-asset/cooperation boundary.
 - [x] Create `pc2.landscape.public_nature` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
 - [x] Add dedicated schema/full-fingerprint/nonvisual/shared-renderer authoring gate for `pc2.landscape.public_nature`.
-- [ ] Run the landscape gate and normal shared-engine regression, then promote only the 12 verified records record-identically; expected runtime 240 → 252 and twenty → twenty-one skills.
+- [x] Confirm the dedicated landscape gate and normal Power Color regression are green on the authoring head (workflow run `33641632788`).
+- [ ] Promote only the 12 verified landscape records record-identically; expected runtime 240 → 252 and twenty → twenty-one skills, then extend exact-equality/full-fingerprint/shared-engine coverage.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
