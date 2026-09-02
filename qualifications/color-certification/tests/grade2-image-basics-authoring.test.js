@@ -10,7 +10,7 @@ function fingerprint(q) {
   return JSON.stringify([q.sentence, q.choices]);
 }
 
-test('Grade 2 image-basics authoring batch is independently verified, nonvisual, balanced, and not yet runtime-promoted', () => {
+test('Grade 2 image-basics authoring batch is independently verified, nonvisual, balanced, and promoted record-identically', () => {
   assert.equal(batch.grade, 2);
   assert.equal(batch.skill.id, 'pc2.media.image_basics');
   assert.equal(batch.questions.length, 12);
@@ -42,6 +42,10 @@ test('Grade 2 image-basics authoring batch is independently verified, nonvisual,
   assert.equal(new Set(batch.questions.map(fingerprint)).size, 12);
   assert.ok(batch.questions.some(q => q.sourceRefs.includes('adobe_raster_vector_2023')));
   assert.ok(batch.questions.some(q => q.sourceRefs.includes('adobe_image_essentials_2024')));
-  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), false);
-  assert.equal(runtime.questions.some((q) => q.skillId === batch.skill.id), false);
+
+  const runtimeById = new Map(runtime.questions.map((q) => [q.id, q]));
+  assert.deepEqual(runtime.skills.find((skill) => skill.id === batch.skill.id), batch.skill);
+  for (const q of batch.questions) {
+    assert.deepEqual(runtimeById.get(q.id), q);
+  }
 });

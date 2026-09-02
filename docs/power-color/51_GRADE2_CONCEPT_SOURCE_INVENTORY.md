@@ -31,9 +31,9 @@ Current JCRI first-party Munsell references:
 12. `pc2.image.image_scheme_keywords`
 13. `pc2.media.rgb_cmyk_models`
 14. `pc2.media.color_management_profiles`
-15. `pc2.media.image_basics` — source-resolved and independently verified in authoring; runtime promotion pending.
+15. `pc2.media.image_basics`
 
-The first fourteen skills are runtime-promoted record-identically. Grade 2 runtime frontier is 168 verified / pending 0.
+All fifteen skills are runtime-promoted record-identically. Grade 2 runtime frontier is 180 verified / pending 0.
 
 ### `pc2.media.rgb_cmyk_models`
 - current official Grade 2 TOC confirms Media Design and specifically `画面や印刷における色表現` / `カラーマネジメントの基本`;
@@ -54,14 +54,14 @@ The first fourteen skills are runtime-promoted record-identically. Grade 2 runti
 - current Adobe professional documentation explicitly fixes raster as a pixel grid / resolution-dependent representation and vector as a mathematically defined representation based on points, lines, curves and shapes;
 - Adobe explicitly states raster enlargement can lose detail while vector scaling can retain crisp edges, and gives photographs as a raster use case and logos/technical illustrations as vector use cases;
 - image appearance judgments, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, unstated geometry, device-specific resolution targets and compression-quality judgments are excluded;
-- 12/12 independently verified, A/B/C/D = 3/3/3/3; runtime promotion pending;
+- 12/12 independently verified, A/B/C/D = 3/3/3/3, and promoted record-identically; runtime 168 → 180;
 - audit: `docs/power-color/audits/2026-09-02-grade2-image-basics.md`.
 
 ## Current official-text scope inventory
 
-The current official Grade 2 TOC frontier is inside the Visual / Media block:
+The current official Grade 2 TOC frontier is immediately after `コンピュータにおける画像の基本`.
 - Visual Design: scope-confirmed, but current public first-party material reviewed does not expose a sufficiently explicit nonvisual answer rule, so `pc2.visual.*` authoring remains blocked rather than inferred.
-- Media Design: RGB/CMYK and color-management profile slices are promoted; computer-image basics is source-resolved and independently verified in authoring.
+- Media Design: RGB/CMYK, color-management profiles, and computer-image basics are promoted.
 - Remaining later topics include fashion, interior and landscape color coordination, conventional color names, and the PCCS tone-by-value appendix.
 
 The TOC establishes scope and search order only. Do not generate a micro-skill from a TOC label unless the answer rule is explicit in acceptable authority.
@@ -77,8 +77,8 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 
 ## Exact next order
 
-1. Grade 2 runtime frontier is 168 verified / pending 0 across fourteen promoted skills.
-2. Promote the independently verified `pc2.media.image_basics` 12-question batch record-identically to runtime 180.
-3. Extend exact-equality/full-fingerprint/coverage/shared-engine gates.
-4. Continue current official Grade 2 text order from the next source-resolvable nonvisual topic.
+1. Grade 2 runtime frontier is 180 verified / pending 0 across fifteen promoted skills.
+2. Continue current official Grade 2 text order after `コンピュータにおける画像の基本`.
+3. Acquire an explicit auditable nonvisual answer rule before creating the next pending-first authoring batch.
+4. Keep exact-equality/full-fingerprint/coverage/shared-engine gates mandatory for all future promotion.
 5. Keep Visual Design source-blocked and do not infer answers from images, RGB/HEX values, monitor values, screenshots or unstated geometry.

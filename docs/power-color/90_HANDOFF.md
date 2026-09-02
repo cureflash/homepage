@@ -6,13 +6,11 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime remains 168 verified / pending 0 across fourteen promoted skills.
+Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills.
 
-The next official Media Design subtopic, `コンピュータにおける画像の基本`, is now source-resolved as `pc2.media.image_basics`. Current official Grade 2 material establishes the scope/order; current Adobe professional documentation explicitly supplies the retained text-only rules: raster = pixel grid / resolution-dependent / scaling can lose detail, vector = mathematically defined shapes / scalable with crisp edges, and standard raster/vector use cases such as photographs versus logos/technical illustrations.
+`pc2.media.image_basics` has been promoted record-identically from its independently verified 12-question authoring batch. The runtime promotion gate now checks the exact union of all fifteen verified authoring batches, 180 verified / pending 0, no full-fingerprint duplicates, and execution through the shared Power TOEIC question-bank/session/workout engine.
 
-The batch was created pending-first and independently re-solved before proposed answers were accepted: 12 checked / 12 verified / 0 needs_revision / 0 rejected / pending 0, A/B/C/D = 3/3/3/3. A dedicated authoring/shared-renderer gate was added. It remains authoring-only; runtime is intentionally still 168.
-
-No image appearance, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, or unstated geometry were used.
+The retained source boundary is unchanged: raster = pixel grid / resolution-dependent / scaling can lose detail; vector = mathematically defined shapes / scalable with crisp edges; standard nonvisual use cases include photographs versus logos/technical illustrations. No image appearance, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, or unstated geometry are used.
 
 Visual Design remains source-blocked because reviewed public first-party material confirms scope/order but does not expose a sufficiently explicit nonvisual answer rule. Do not repeat the same scope-only route or infer from figures/images.
 
@@ -20,4 +18,4 @@ Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Promote the independently verified `pc2.media.image_basics` 12 records record-identically into Grade 2 runtime, taking 168 → 180, then extend exact-equality, full-fingerprint duplicate, coverage and shared Power TOEIC engine gates. After promotion, continue in current official text order to the next source-resolvable nonvisual Grade 2 topic.
+Continue in current official Grade 2 text order after `コンピュータにおける画像の基本`. Acquire explicit auditable authority for the next source-resolvable nonvisual topic before authoring. Keep Visual Design source-blocked and keep all existing source/display gates unchanged.

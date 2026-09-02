@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 168 verified / pending 0 across fourteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
 ## Completed Grade 2 checkpoints
 
@@ -40,7 +40,8 @@ Grade 2 runtime is 168 verified / pending 0 across fourteen promoted skills. Gra
 - [x] `pc2.image.image_scheme_keywords`: 12 verified and promoted; runtime 132 → 144.
 - [x] `pc2.media.rgb_cmyk_models`: 12 verified and promoted; runtime 144 → 156.
 - [x] `pc2.media.color_management_profiles`: 12 verified and promoted; runtime 156 → 168.
-- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all fourteen promoted skills.
+- [x] `pc2.media.image_basics`: 12 verified and promoted; runtime 168 → 180.
+- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all fifteen promoted skills.
 
 ## Visual Design
 
@@ -75,8 +76,8 @@ Grade 2 runtime is 168 verified / pending 0 across fourteen promoted skills. Gra
 - [x] Exclude image appearance judgments, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, unstated geometry, device-specific resolution targets and compression-quality judgments.
 - [x] Generate pending-first 12 text-choice questions and independently re-derive every answer before accepting proposed answers.
 - [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
-- [ ] Promote record-identically to runtime 168 → 180 and extend exact-equality/full-fingerprint/shared-engine gates.
+- [x] Promote record-identically to runtime 168 → 180 and extend exact-equality/full-fingerprint/shared-engine gates.
 
 ## Exact next start point
 
-Promote the independently verified `pc2.media.image_basics` 12-question batch record-identically into Grade 2 runtime 168 → 180, then continue source acquisition in current official Grade 2 text order. Visual Design remains source-blocked.
+Continue source acquisition in current official Grade 2 text order after `コンピュータにおける画像の基本`. Author only the next topic whose nonvisual answer rule can be fixed from explicit auditable authority. Visual Design remains source-blocked.
