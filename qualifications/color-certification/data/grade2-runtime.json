@@ -138,6 +138,11 @@
       "id": "pc2.landscape.residential_color_design_process",
       "label": "景観色彩：住宅の色彩設計プロセス",
       "categoryId": "pc2.landscape"
+    },
+    {
+      "id": "pc2.landscape.surrounding_environment_measurement",
+      "label": "景観色彩：色を測ることによる周辺環境の把握",
+      "categoryId": "pc2.landscape"
     }
   ],
   "questions": [
@@ -10291,6 +10296,370 @@
       "qa": {
         "generatedAs": "pending_validation",
         "independentRecheck": "independently read the three consecutive current official-table-of-contents entries after the residential process heading before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "現行の色彩検定2級公式目次で、p.123に掲載されている項目はどれですか。",
+      "sentence": "現行の色彩検定2級公式目次で、p.123に掲載されている項目はどれですか。",
+      "choices": [
+        "色を測ることによる周辺環境の把握",
+        "ファッションにおける配色の事例",
+        "インテリアスタイル",
+        "画像の基本"
+      ],
+      "proposedAnswer": "色を測ることによる周辺環境の把握",
+      "correctIndex": 0,
+      "explanation": "現行2級公式目次では「色を測ることによる周辺環境の把握」がp.123に置かれています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently located the p.123 surrounding-environment measurement heading in the current AFT Grade 2 table of contents before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "日本塗料工業会の現行実践講座で、実際の周辺環境色彩調査として明示されている方法はどれですか。",
+      "sentence": "日本塗料工業会の現行実践講座で、実際の周辺環境色彩調査として明示されている方法はどれですか。",
+      "choices": [
+        "写真だけによる自動判定",
+        "視感測色",
+        "画面表示だけによる判定",
+        "色を測らない印象評価だけ"
+      ],
+      "proposedAnswer": "視感測色",
+      "correctIndex": 1,
+      "explanation": "日本塗料工業会の2025年度CCS実践編は「実際の周辺環境色彩調査（視感測色）」を明示しています。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified visual colorimetry as the explicitly named surrounding-environment survey method in current JPMA training before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "国土交通省の景観政策実務資料で、マンセル値を構成する3属性として明示されている組合せはどれですか。",
+      "sentence": "国土交通省の景観政策実務資料で、マンセル値を構成する3属性として明示されている組合せはどれですか。",
+      "choices": [
+        "温度・湿度・照度",
+        "幅・高さ・奥行き",
+        "色相・明度・彩度",
+        "赤・緑・青の画面信号"
+      ],
+      "proposedAnswer": "色相・明度・彩度",
+      "correctIndex": 2,
+      "explanation": "国土交通省の景観まちづくりDX資料は、マンセル値を色相・明度・彩度として明示しています。",
+      "sourceRefs": [
+        "mlit_plateau_uc25_12"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the three named Munsell components from the current MLIT landscape-policy material before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "国土交通省の景観政策実務資料で、従来の色彩照合作業に用いられていたものとして明示されているのはどれですか。",
+      "sentence": "国土交通省の景観政策実務資料で、従来の色彩照合作業に用いられていたものとして明示されているのはどれですか。",
+      "choices": [
+        "写真共有サイト",
+        "動画編集ソフト",
+        "住宅模型だけ",
+        "紙のマンセル色票"
+      ],
+      "proposedAnswer": "紙のマンセル色票",
+      "correctIndex": 3,
+      "explanation": "国土交通省の資料では、従来は紙のマンセル色票を用いて色彩を照合していたことが明示されています。",
+      "sourceRefs": [
+        "mlit_plateau_uc25_12"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified paper Munsell color charts as the conventional matching medium explicitly described by MLIT before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観の色彩を定量的に扱う表現として、国土交通省の現行景観政策資料が明示しているものはどれですか。",
+      "sentence": "景観の色彩を定量的に扱う表現として、国土交通省の現行景観政策資料が明示しているものはどれですか。",
+      "choices": [
+        "マンセル値",
+        "好き嫌いの順位だけ",
+        "写真の印象だけ",
+        "建物の高さだけ"
+      ],
+      "proposedAnswer": "マンセル値",
+      "correctIndex": 0,
+      "explanation": "同資料は景観の色彩審査についてマンセル値による定量評価を明示しています。",
+      "sourceRefs": [
+        "mlit_plateau_uc25_12"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified Munsell values as the explicitly named quantitative landscape-color representation before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "国土交通省の景観政策資料で、マンセル値による定量評価とは別に確認が必要とされている観点はどれですか。",
+      "sentence": "国土交通省の景観政策資料で、マンセル値による定量評価とは別に確認が必要とされている観点はどれですか。",
+      "choices": [
+        "画面の解像度",
+        "周辺景観との調和",
+        "ファイル形式",
+        "画像の圧縮率"
+      ],
+      "proposedAnswer": "周辺景観との調和",
+      "correctIndex": 1,
+      "explanation": "同資料はマンセル値による定量評価に加え、特に大規模建築物などでは周辺環境との調和確認が必要としています。",
+      "sourceRefs": [
+        "mlit_plateau_uc25_12"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently separated the explicit qualitative surrounding-harmony check from quantitative Munsell review before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "日本色彩研究所が案内するJIS Z 8721準拠の標準色票は、何を基準とする色のスケールですか。",
+      "sentence": "日本色彩研究所が案内するJIS Z 8721準拠の標準色票は、何を基準とする色のスケールですか。",
+      "choices": [
+        "温度尺度",
+        "距離尺度",
+        "マンセルの表色系",
+        "画面メーカー固有の設定"
+      ],
+      "proposedAnswer": "マンセルの表色系",
+      "correctIndex": 2,
+      "explanation": "日本色彩研究所はJIS標準色票をマンセルの表色系を基準値とした色のスケールと説明しています。",
+      "sourceRefs": [
+        "jcri_jis_standard_color_chart"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently verified that the current JCRI JIS standard color chart is based on the Munsell system before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "日本色彩研究所の現行JIS標準色票の構成品として明示されているものはどれですか。",
+      "sentence": "日本色彩研究所の現行JIS標準色票の構成品として明示されているものはどれですか。",
+      "choices": [
+        "写真から色を自動推定するAI",
+        "建物の3Dモデル",
+        "住宅の施工図",
+        "色比較用マスク"
+      ],
+      "proposedAnswer": "色比較用マスク",
+      "correctIndex": 3,
+      "explanation": "日本色彩研究所のJIS標準色票には、白・灰・黒の色比較用マスクが含まれることが明示されています。",
+      "sourceRefs": [
+        "jcri_jis_standard_color_chart"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently confirmed color-comparison masks as an explicitly listed component of the current JIS standard color chart before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "確認済み資料に照らして、周辺環境の色を標準化して把握する方法として根拠があるものはどれですか。",
+      "sentence": "確認済み資料に照らして、周辺環境の色を標準化して把握する方法として根拠があるものはどれですか。",
+      "choices": [
+        "標準化された色票と視感測色を用いる",
+        "写真の見た目だけで色値を決める",
+        "画面の色を実物の測定値とみなす",
+        "色を測らず建物用途だけで色を決める"
+      ],
+      "proposedAnswer": "標準化された色票と視感測色を用いる",
+      "correctIndex": 0,
+      "explanation": "JPMAは周辺環境色彩調査として視感測色を明示し、MLIT/JCRIはマンセル/JISの紙色票による標準化された比較を裏付けています。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical",
+        "mlit_plateau_uc25_12",
+        "jcri_jis_standard_color_chart"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently combined only the explicitly supported visual-colorimetry and standardized physical-chart facts, rejecting image/display inference before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "マンセル値が基準内であることだけから、確認済み資料上は断定できないものはどれですか。",
+      "sentence": "マンセル値が基準内であることだけから、確認済み資料上は断定できないものはどれですか。",
+      "choices": [
+        "マンセル値で定量評価できること",
+        "周辺景観との調和まで十分であること",
+        "色相・明度・彩度で表せること",
+        "紙のマンセル色票で照合する方法があること"
+      ],
+      "proposedAnswer": "周辺景観との調和まで十分であること",
+      "correctIndex": 1,
+      "explanation": "国土交通省資料では定量基準とは別に周辺景観との調和という定性的確認が必要です。数値適合だけで調和まで断定できません。",
+      "sourceRefs": [
+        "mlit_plateau_uc25_12"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently confirmed that MLIT separates quantitative Munsell review from qualitative surrounding-harmony review before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩の確認について、国土交通省の資料が明示する組合せとして正しいものはどれですか。",
+      "sentence": "景観色彩の確認について、国土交通省の資料が明示する組合せとして正しいものはどれですか。",
+      "choices": [
+        "写真評価だけ・数値評価なし",
+        "数値評価だけ・周辺確認なし",
+        "マンセル値による定量評価・周辺景観との調和確認",
+        "画面RGBだけ・紙色票は使用しない"
+      ],
+      "proposedAnswer": "マンセル値による定量評価・周辺景観との調和確認",
+      "correctIndex": 2,
+      "explanation": "国土交通省資料はマンセル値による定量評価と、周辺環境との調和という定性的確認を別々に明示しています。",
+      "sourceRefs": [
+        "mlit_plateau_uc25_12"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-read the current MLIT passage and selected the only explicitly stated quantitative-plus-qualitative review pair before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-surrounding-environment-measurement-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/surrounding_environment_measurement",
+      "skillId": "pc2.landscape.surrounding_environment_measurement",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "確認済み資料に基づく「周辺環境の色を測って把握する」説明として最も適切なものはどれですか。",
+      "sentence": "確認済み資料に基づく「周辺環境の色を測って把握する」説明として最も適切なものはどれですか。",
+      "choices": [
+        "画面上の見た目をそのまま実物の色値とする",
+        "地域ごとに固定された一色を選ぶ",
+        "数値基準だけで景観調和を決定する",
+        "視感測色やマンセル色票による比較で色を標準化して扱い、周辺との調和は別途確認する"
+      ],
+      "proposedAnswer": "視感測色やマンセル色票による比較で色を標準化して扱い、周辺との調和は別途確認する",
+      "correctIndex": 3,
+      "explanation": "確認済み資料は視感測色、紙のマンセル色票、マンセル値による定量評価を明示し、周辺景観との調和確認を別の観点として扱っています。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical",
+        "mlit_plateau_uc25_12",
+        "jcri_jis_standard_color_chart"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently synthesized only the explicitly sourced measurement/standardization facts and retained the separate harmony check before comparing with proposedAnswer",
         "checkedOn": "2026-09-03"
       }
     }
