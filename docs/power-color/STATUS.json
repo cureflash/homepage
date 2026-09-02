@@ -98,7 +98,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 2,
+    "checkpoints_completed": 3,
     "generated": 0,
     "checked": 0,
     "verified": 0,
@@ -108,7 +108,8 @@
     "pending": 0,
     "checkpoint_breakdown": [
       "Reconciled merged PR #597 and promoted pc2.conventional.jis_name_structure record-identically after exact-equality/full-fingerprint/shared-engine verification.",
-      "Grade 2 runtime advanced 336→348 verified and 28→29 skills; Power Color CI 33690978044 succeeded on exact promotion head before PR #599 merged."
+      "Grade 2 runtime advanced 336→348 verified and 28→29 skills; Power Color CI 33690978044 succeeded on exact promotion head before PR #599 merged.",
+      "Synchronized STATUS/HANDOFF/20_EXECUTION_PLAN/50_GRADE2_EXECUTION_PLAN and advanced the exact next start point to individual p.128 和色名 source acquisition without relaxing Grade 3 gates."
     ]
   },
   "grade2_complete": false,
