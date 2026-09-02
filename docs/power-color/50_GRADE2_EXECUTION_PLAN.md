@@ -91,6 +91,14 @@ Grade 2 runtime is 192 verified / pending 0 across sixteen promoted skills. Grad
 - [x] Promote the 12 verified records record-identically to runtime 180 → 192.
 - [x] Change the dedicated gate to exact runtime equality and extend full-fingerprint/coverage/shared Power TOEIC engine gates to all sixteen promoted skills.
 
+## Fashion — classification p.091 source audit
+
+- [x] Current official Grade 2 TOC places `ファッションの分類` at p.091 after `ファッションカラーの分類` p.090 and before `ファッションの配色` p.095.
+- [x] Audit current public first-party material and current auditable preparation material for an explicit deterministic nonvisual classification rule.
+- [x] Record blocker: reviewed sources expose scope/topic naming but not a sufficiently explicit auditable category-membership rule; do not infer from garments, silhouettes, photographs, current trends, RGB/HEX, swatches or unstated geometry.
+- [x] Record audit in `docs/power-color/audits/2026-09-02-grade2-fashion-classification-source-audit.md`.
+- [ ] Authoring remains blocked unless a future explicit auditable rule source is acquired.
+
 ## Exact next start point
 
-Continue current official Grade 2 text order after `ファッションカラーの分類`. Acquire explicit auditable authority for the next source-resolvable nonvisual topic before authoring. Visual Design remains source-blocked.
+Continue current official Grade 2 text order at `ファッションの配色` p.095. Acquire an explicit auditable nonvisual answer rule before authoring. `ファッションの分類` p.091 and Visual Design remain source-blocked.

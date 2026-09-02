@@ -78,7 +78,7 @@ All sixteen skills are runtime-promoted record-identically. Grade 2 runtime fron
 
 - Visual Design: scope-confirmed, but current public first-party material reviewed does not expose a sufficiently explicit nonvisual answer rule, so `pc2.visual.*` authoring remains blocked rather than inferred.
 - Media Design: RGB/CMYK, color-management profiles, and computer-image basics are promoted.
-- Fashion: `ファッションカラーの分類` has a narrow source-resolved basic/trend text-only slice; later fashion classification/配色 material remains unresolved until separately sourced.
+- Fashion: `ファッションカラーの分類` narrow basic/trend slice is promoted; `ファッションの分類` p.091 is source-blocked after explicit audit; next source-acquisition frontier is `ファッションの配色` p.095.
 - Remaining later topics include interior and landscape color coordination, conventional color names, and the PCCS tone-by-value appendix.
 
 The TOC establishes scope and search order only. Do not generate a micro-skill from a TOC label unless the answer rule is explicit in acceptable authority.
@@ -96,7 +96,7 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 ## Exact next order
 
 1. Grade 2 runtime frontier is 192 verified / pending 0 across sixteen promoted skills.
-2. Create `pc2.fashion.basic_trend_color_classification` pending-first authoring from the fixed source audit.
-3. Independently re-solve every record before verification; then run schema/full-fingerprint/coverage/answer-position/shared-renderer gates.
-4. Promote only verified records record-identically and keep shared Power TOEIC engine regression mandatory.
-5. Keep Visual Design source-blocked and do not infer answers from images, RGB/HEX values, monitor values, screenshots or unstated geometry.
+2. Keep `ファッションの分類` p.091 source-blocked unless a future explicit auditable deterministic classification rule is acquired.
+3. Continue source acquisition at `ファッションの配色` p.095.
+4. Author only after fixing an explicit nonvisual answer rule; then use pending-first → independent QA → schema/full-fingerprint/coverage/answer-position/shared-renderer gates → record-identical promotion.
+5. Keep Visual Design source-blocked and all Grade 3 source/display gates unchanged.
