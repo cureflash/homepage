@@ -34,15 +34,15 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 Completed checkpoints through the last fully reconciled concept: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document; article35-vs-37; eight-restrictions-scope; cooling-off; earnest-money-limit; earnest-money-safeguards; damages-penalty; nonconformity-special-rule; unowned-property-sale; installment-cancellation; installment-ownership-retention; brokerage-fees; supervision-dispositions; declaration-arrival; mistake; fraud; duress; mental-reservation; fictitious-declaration; minor; adult-ward; agency; unauthorized-agency; apparent-agency; acquisitive-prescription; extinctive-prescription; property-transfer-opposability; co-ownership; mortgage; default-damages; contract-cancellation; simultaneous-performance; risk-allocation; sale-earnest; civil-nonconformity; lease-general; security-deposit; building-lease-opposability; ordinary-land-lease-term; land-lease-opposability; fixed-term-land-lease; building-lease-term; fixed-term-building-lease; heirs-order; statutory-inheritance-shares; inheritance-deliberation; inheritance-renunciation; will-effect; reserved-portion; condominium-ownership; real-estate-registration-record; city-quasi-planning-area; area-division; use-districts; city-planning-decision; city-planning-project; development-permission; development-completion.
 
 Current checkpoint:
-- [x] `takken-concept-development-completion` has 4 verified atomic knowledge items against the 2026-04-01 Urban Planning Act Article 36 baseline: completion notice, conformity inspection, inspection-certificate issuance, and completion public notice.
-- [x] `takken-q-66-001` directly maps to the completion-notice item.
-- [x] `takken-q-66-002` directly maps to conformity inspection, inspection-certificate issuance, and completion public notice.
+- [x] `takken-concept-building-confirmation` now has 9 verified atomic knowledge items against the 2026-04-01 Building Standards Act Article 6 / 6-2 baseline: 1号・2号・3号の対象区分、1号/2号と3号の工事範囲、工事着手前確認、建築主事等、指定確認検査機関、確認済証。
+- [x] The 2025-04-01 confirmation-scope reform is reflected: 2 floors or more / total floor area over 200㎡ is the new 2号 scale rule, and the new 3号 small-building class remains area-dependent.
 - [x] Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses remain unchanged.
+- [ ] `takken-q-67-001` / `takken-q-67-002` still need direct-evidence mapping before this concept is fully reconciled.
 - [x] Phase 4.3 remains unstarted.
 
-Current Phase 4.2 totals: 86/113 fully reconciled concepts, 86 concepts with canonical knowledge items, 435 verified knowledge items, 102 existing verified questions mapped, 286 explicit question-coverage gaps.
+Current Phase 4.2 totals: 86/113 fully reconciled concepts, 87 concepts with canonical knowledge items, 444 verified knowledge items, 102 existing verified questions mapped, 295 explicit question-coverage gaps.
 
-Exact continuation: extract canonical knowledge items for `takken-concept-building-confirmation` from source unit `building-confirmation`, preserving the 2026-04-01 baseline and leaving Phase 4.3 unstarted.
+Exact continuation: map `takken-q-67-001` and `takken-q-67-002` only to the `building-confirmation` knowledge items they directly measure, then mark this concept reconciled. Do not begin Phase 4.3.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
