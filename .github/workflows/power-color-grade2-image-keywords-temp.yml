@@ -16,28 +16,25 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Diagnose generation
-        shell: bash
+      - name: Reconcile stale inventory frontier
         run: |
-          set +e
-          python3 .github/scripts/power_color_grade2_image_keywords.py > /tmp/power-color-debug.txt 2>&1
-          code=$?
-          if [ "$code" -ne 0 ]; then
-            cp /tmp/power-color-debug.txt .github/power-color-grade2-image-keywords-debug.txt
-            git config user.name "Power Color Automation"
-            git config user.email "actions@users.noreply.github.com"
-            git add .github/power-color-grade2-image-keywords-debug.txt
-            git commit -m "chore: capture Grade 2 generation failure"
-            git push origin HEAD:power-color-grade2-image-keywords
-            exit "$code"
-          fi
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md')
+          s = p.read_text()
+          s = s.replace('The first ten skills are runtime-promoted record-identically. Grade 2 runtime frontier is 120 verified / pending 0. `pc2.scheme.hue_circle_division` has a 12-question independently verified authoring batch awaiting record-identical runtime promotion.', 'All eleven skills above are runtime-promoted record-identically. Grade 2 runtime frontier is 132 verified / pending 0.')
+          s = s.replace('1. Grade 2 runtime frontier is 120 verified / pending 0 across ten promoted skills.\n2. Promote the independently verified `pc2.scheme.hue_circle_division` 12-question batch record-identically, extending runtime 120 → 132 after exact-equality/full-fingerprint/shared-engine gates pass.\n3. Then continue source acquisition at the next official-TOC topic without inferring answers from images or unstated geometry.', '1. Grade 2 runtime frontier is 132 verified / pending 0 across eleven skills.\n2. Continue to the next official-TOC topic after hue-circle division schemes and acquire an explicit auditable nonvisual rule before authoring.\n3. If no auditable rule can be fixed, record that blocker; do not infer from image appearance or unstated geometry.')
+          p.write_text(s)
+          PY
+      - name: Generate authoring checkpoint
+        run: python3 .github/scripts/power_color_grade2_image_keywords.py
       - name: Run full Power Color tests
         run: node --test qualifications/color-certification/tests/*.test.js
       - name: Commit checkpoint and remove temporary helpers
         run: |
           git config user.name "Power Color Automation"
           git config user.email "actions@users.noreply.github.com"
-          git rm .github/workflows/power-color-grade2-image-keywords-temp.yml .github/scripts/power_color_grade2_image_keywords.py
+          git rm .github/workflows/power-color-grade2-image-keywords-temp.yml .github/scripts/power_color_grade2_image_keywords.py .github/power-color-grade2-image-keywords-debug.txt
           git add docs/power-color qualifications/color-certification/data/grade2-authoring-image-scheme-keywords-0001-0012.json qualifications/color-certification/tests/grade2-image-scheme-keywords-authoring.test.js
           git commit -m "power-color: author Grade 2 image-scheme keywords"
           git push origin HEAD:power-color-grade2-image-keywords
