@@ -35,8 +35,9 @@ Current JAFCA first-party fashion-trend reference:
 13. `pc2.media.rgb_cmyk_models`
 14. `pc2.media.color_management_profiles`
 15. `pc2.media.image_basics`
+16. `pc2.fashion.basic_trend_color_classification`
 
-All fifteen skills are runtime-promoted record-identically. Grade 2 runtime frontier is 180 verified / pending 0.
+All sixteen skills are runtime-promoted record-identically. Grade 2 runtime frontier is 192 verified / pending 0.
 
 ## Source-resolved next skill
 
@@ -94,7 +95,7 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 
 ## Exact next order
 
-1. Grade 2 runtime frontier is 180 verified / pending 0 across fifteen promoted skills.
+1. Grade 2 runtime frontier is 192 verified / pending 0 across sixteen promoted skills.
 2. Create `pc2.fashion.basic_trend_color_classification` pending-first authoring from the fixed source audit.
 3. Independently re-solve every record before verification; then run schema/full-fingerprint/coverage/answer-position/shared-renderer gates.
 4. Promote only verified records record-identically and keep shared Power TOEIC engine regression mandatory.
