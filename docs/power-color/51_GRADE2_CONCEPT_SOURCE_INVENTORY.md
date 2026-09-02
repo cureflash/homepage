@@ -37,12 +37,19 @@ Current JCRI first-party Munsell references:
    - no image appearance, RGB/HEX, monitor value, inferred polygon geometry or unstated tone restriction is used;
    - audit: `docs/power-color/audits/2026-09-02-grade2-hue-circle-division.md`.
 
-The first ten skills are runtime-promoted record-identically. Grade 2 runtime frontier is 120 verified / pending 0. `pc2.scheme.hue_circle_division` has a 12-question independently verified authoring batch awaiting record-identical runtime promotion.
+All eleven skills above are runtime-promoted record-identically. Grade 2 runtime frontier is 132 verified / pending 0.
+
+12. `pc2.image.image_scheme_keywords`
+   - current official Grade 2 TOC confirms the ten image-scheme labels and exact scope/order;
+   - Plus Colors explicitly maps the ten labels to characteristic image words and cites the 2020 revised official text under Level 1 coordinator supervision;
+   - current official Level 1 second-stage sample independently confirms `ダイナミック = 強い・はっきりした・派手な`;
+   - retained questions are text-semantic only; no color appearance, RGB/HEX, monitor value or inferred image geometry;
+   - authoring 12/12 verified, pending 0, awaiting runtime promotion;
+   - audit: `docs/power-color/audits/2026-09-02-grade2-image-scheme-keywords.md`.
 
 ## Current official-text scope inventory
 
-The next current official Grade 2 TOC topics after hue-circle division include:
-- image-based schemes;
+The current official Grade 2 TOC frontier is now after image-based schemes. Remaining later topics include:
 - visual/media, fashion, interior and landscape color coordination;
 - conventional color names;
 - PCCS tone-by-value appendix.
@@ -59,6 +66,6 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 
 ## Exact next order
 
-1. Grade 2 runtime frontier is 120 verified / pending 0 across ten promoted skills.
-2. Promote the independently verified `pc2.scheme.hue_circle_division` 12-question batch record-identically, extending runtime 120 → 132 after exact-equality/full-fingerprint/shared-engine gates pass.
-3. Then continue source acquisition at the next official-TOC topic without inferring answers from images or unstated geometry.
+1. Grade 2 runtime frontier is 132 verified / pending 0 across eleven promoted skills.
+2. Promote the independently verified `pc2.image.image_scheme_keywords` 12-question batch record-identically, extending runtime 132 → 144 after gates pass.
+3. Then continue to Visual Design, without inferring answers from images, RGB/HEX or monitor values.
