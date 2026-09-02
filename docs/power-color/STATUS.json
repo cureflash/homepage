@@ -87,9 +87,10 @@
       "Landscape p.120 太陽光に影響される色彩",
       "Landscape p.121 季節や時間の変化を感じさせる多様な色彩",
       "Landscape p.124 配色計画",
-      "Landscape p.125 色彩管理"
+      "Landscape p.125 色彩管理",
+      "慣用色名 p.128 和色名 individual Grade 2 subset/readings"
     ],
-    "next": "Source-acquire the individual Grade 2 p.128 和色名 boundary from current explicit auditable authority. Do not infer Grade 2 membership/readings from Grade 3, and do not infer RGB/HEX/display values or swatch appearance."
+    "next": "Source-acquire the individual Grade 2 p.132 外来色名 boundary from current explicit auditable authority. Do not infer Grade 2 membership/readings from the full JIS corpus or Grade 3, and do not infer RGB/HEX/display values or swatch appearance."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -98,7 +99,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 3,
+    "checkpoints_completed": 1,
     "generated": 0,
     "checked": 0,
     "verified": 0,
@@ -107,13 +108,11 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled merged PR #597 and promoted pc2.conventional.jis_name_structure record-identically after exact-equality/full-fingerprint/shared-engine verification.",
-      "Grade 2 runtime advanced 336→348 verified and 28→29 skills; Power Color CI 33690978044 succeeded on exact promotion head before PR #599 merged.",
-      "Synchronized STATUS/HANDOFF/20_EXECUTION_PLAN/50_GRADE2_EXECUTION_PLAN and advanced the exact next start point to individual p.128 和色名 source acquisition without relaxing Grade 3 gates."
+      "Audited the individual Grade 2 p.128 和色名 boundary. Current AFT authority confirms scope/order and JIS/JCRI authority confirms the governing JIS conventional-name framework, but no current explicit auditable source exposes the Grade 2 p.128–131 individual subset/readings; recorded source-blocked without Grade3/full-JIS inference."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-acquire the individual Grade 2 p.128 和色名 boundary from current explicit auditable authority. Do not infer Grade 2 membership/readings from Grade 3, and do not infer RGB/HEX/display values or swatch appearance."
+  "next": "Source-acquire the individual Grade 2 p.132 外来色名 boundary from current explicit auditable authority. Do not infer Grade 2 membership/readings from the full JIS corpus or Grade 3, and do not infer RGB/HEX/display values or swatch appearance."
 }
