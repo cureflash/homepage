@@ -29,22 +29,31 @@ Current JCRI first-party Munsell references:
 10. `pc2.scheme.bicolor_tricolor`
 11. `pc2.scheme.hue_circle_division`
 12. `pc2.image.image_scheme_keywords`
-
-All twelve skills above are runtime-promoted record-identically. Grade 2 runtime frontier is 144 verified / pending 0.
-
 13. `pc2.media.rgb_cmyk_models`
-   - current official Grade 2 TOC confirms Media Design and specifically `画面や印刷における色表現` / `カラーマネジメントの基本`;
-   - current official Grade 2 sample explicitly confirms CMY as the subtractive-mixing primaries;
-   - current Adobe professional documentation explicitly fixes the retained text-only rules: RGB = additive red/green/blue light used for displays; full-intensity RGB = white; CMYK = subtractive cyan/magenta/yellow with black added for practical four-color process printing;
-   - exact RGB/HEX values, swatches, screenshots, image appearance, device-specific visual judgments and inferred geometry are excluded;
-   - authoring 12/12 verified, pending 0, A/B/C/D = 3/3/3/3; not yet runtime-promoted;
-   - audit: `docs/power-color/audits/2026-09-02-grade2-visual-media-source-audit.md`.
+14. `pc2.media.color_management_profiles`
+
+All fourteen skills above are runtime-promoted record-identically. Grade 2 runtime frontier is 168 verified / pending 0.
+
+### `pc2.media.rgb_cmyk_models`
+- current official Grade 2 TOC confirms Media Design and specifically `画面や印刷における色表現` / `カラーマネジメントの基本`;
+- current official Grade 2 sample explicitly confirms CMY as the subtractive-mixing primaries;
+- current Adobe professional documentation fixes RGB additive-light/display and CMYK subtractive/process-print rules;
+- exact RGB/HEX values, swatches, screenshots, image appearance and device-specific visual judgments are excluded;
+- 12/12 independently verified and promoted record-identically.
+
+### `pc2.media.color_management_profiles`
+- current official Grade 2 TOC explicitly confirms `カラーマネジメントの基本`;
+- current Adobe professional documentation explicitly fixes the retained text-only rules for ICC/color profiles, monitor/document profiles, profile-based translation, embedded-profile purpose, and Assign Profile versus Convert to Profile;
+- RGB/HEX display values, swatches, monitor-facing identification, screenshots, calibration values, rendering-intent judgments and inferred geometry are excluded;
+- 12/12 independently verified, A/B/C/D = 3/3/3/3, and promoted record-identically;
+- audit: `docs/power-color/audits/2026-09-02-grade2-media-color-management.md`.
 
 ## Current official-text scope inventory
 
-The current official Grade 2 TOC frontier is now inside the Visual / Media block:
-- Visual Design: scope-confirmed, but current public first-party material reviewed does not expose a sufficiently explicit nonvisual answer rule, so `pc2.visual.*` authoring is blocked rather than inferred.
-- Media Design: `pc2.media.rgb_cmyk_models` is source-resolved and verified; later Media Design subtopics remain unreviewed.
+The current official Grade 2 TOC frontier is inside the Visual / Media block:
+- Visual Design: scope-confirmed, but current public first-party material reviewed does not expose a sufficiently explicit nonvisual answer rule, so `pc2.visual.*` authoring remains blocked rather than inferred.
+- Media Design: RGB/CMYK and color-management profile slices are promoted.
+- Next Media Design subtopic in official order: `コンピュータにおける画像の基本`.
 - Remaining later topics include fashion, interior and landscape color coordination, conventional color names, and the PCCS tone-by-value appendix.
 
 The TOC establishes scope and search order only. Do not generate a micro-skill from a TOC label unless the answer rule is explicit in acceptable authority.
@@ -60,7 +69,7 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 
 ## Exact next order
 
-1. Grade 2 runtime frontier is 144 verified / pending 0 across twelve promoted skills.
-2. Promote verified `pc2.media.rgb_cmyk_models` record-identically to runtime 156 and extend exact-equality/full-fingerprint/shared-engine gates.
-3. Keep Visual Design source-blocked; do not repeat the same scope-only route until new explicit authority is available.
-4. Do not infer answers from images, RGB/HEX values, monitor values, screenshots or unstated geometry.
+1. Grade 2 runtime frontier is 168 verified / pending 0 across fourteen promoted skills.
+2. Continue source acquisition at `コンピュータにおける画像の基本`, the next current official Grade 2 Media Design subtopic.
+3. Author only from explicit auditable nonvisual rules.
+4. Keep Visual Design source-blocked and do not infer answers from images, RGB/HEX values, monitor values, screenshots or unstated geometry.
