@@ -8,7 +8,7 @@ const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json',
 
 function fingerprint(q) { return JSON.stringify([q.sentence, q.choices]); }
 
-test('Grade 2 Landscape p117 element-examples batch is independently verified, nonvisual, balanced and not yet runtime-promoted', () => {
+test('Grade 2 Landscape p117 element-examples batch is independently verified, nonvisual, balanced and runtime-promoted record-identically', () => {
   assert.equal(batch.grade, 2);
   assert.equal(batch.skill.id, 'pc2.landscape.element_examples');
   assert.equal(batch.questions.length, 12);
@@ -18,7 +18,6 @@ test('Grade 2 Landscape p117 element-examples batch is independently verified, n
   });
 
   const positions = [0, 0, 0, 0];
-  const runtimeFingerprints = new Set(runtime.questions.map(fingerprint));
   for (const q of batch.questions) {
     assert.equal(q.validationStatus, 'verified');
     assert.equal(q.qa.generatedAs, 'pending_validation');
@@ -34,7 +33,6 @@ test('Grade 2 Landscape p117 element-examples batch is independently verified, n
     assert.equal(/RGB|HEX|swatch|photograph|写真|画像|色相|トーン|素材|建物形状|geometry/i.test(q.prompt + q.explanation), false);
     assert.equal(q.sourceRefs.includes('aft_grade2_current_toc_2026'), true);
     assert.equal(q.sourceRefs.includes('mutsu_landscape_plan_elements_2026'), true);
-    assert.equal(runtimeFingerprints.has(fingerprint(q)), false);
     positions[q.correctIndex] += 1;
 
     const feedback = getAnswerFeedbackModel(q, new Map());
@@ -45,6 +43,7 @@ test('Grade 2 Landscape p117 element-examples batch is independently verified, n
   assert.deepEqual(positions, [3, 3, 3, 3]);
   const batchFingerprints = batch.questions.map(fingerprint);
   assert.equal(new Set(batchFingerprints).size, 12);
-  assert.equal(runtime.questions.some((q) => q.skillId === batch.skill.id), false);
-  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), false);
+  const runtimeQuestions = runtime.questions.filter((q) => q.skillId === batch.skill.id);
+  assert.deepEqual(runtimeQuestions, batch.questions);
+  assert.deepEqual(runtime.skills.find((skill) => skill.id === batch.skill.id), batch.skill);
 });
