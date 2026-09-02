@@ -8,11 +8,12 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled verified question evidence for `takken-concept-shadow-restrictions` without changing existing Phase 2/3 question content or validation status.
+Extracted canonical knowledge for `takken-concept-fire-prevention-zones` without changing existing Phase 2/3 question content or validation status.
 
-- Mapped verified `takken-q-71-002` only to `takken-k-shadow-restrictions-ordinance-designated-scope`.
-- The question choices directly distinguish the statutory rule that Building Standards Act Article 56-2 applies to certain buildings in areas designated by local ordinance; they do not directly test the other eight shadow-restriction knowledge items.
-- Kept the other eight new knowledge items as explicit Phase 4.3 deficits rather than over-mapping them.
+- Added 6 atomic knowledge items based on the 2026-04-01 Urban Planning Act / Building Standards Act framework and official MLIT fire-prevention guidance.
+- Separated regional-district status, the system purpose, Article 61 performance regulation, variation by zone/scale, current-law equivalent extension-prevention performance, and fire-protection requirements for openings exposed to spread risk.
+- Kept verified `takken-q-72-001` and `takken-q-72-002` unchanged and unmapped in this extraction checkpoint. `takken-q-72-001` directly measures the regional-district status; `takken-q-72-002` directly measures only the general scale-dependent fire-performance rule expressed in its choices.
+- The new knowledge items without existing question evidence remain explicit Phase 4.3 deficits.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -24,16 +25,16 @@ Reconciled verified question evidence for `takken-concept-shadow-restrictions` w
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 92/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 92
-- Canonical knowledge items: 487
+- Concepts with canonical knowledge items: 93
+- Canonical knowledge items: 493
 - Existing verified questions mapped: 112
-- Explicit unmapped knowledge gaps: 325
+- Explicit unmapped knowledge gaps: 331
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical knowledge items for `takken-concept-fire-prevention-zones` from the `fire-prevention-zones` source unit and 2026-04-01 primary sources. After extraction, map only existing verified questions that genuinely measure each knowledge item. Do not begin Phase 4.3.
+Map verified `takken-q-72-001` only to `takken-k-fire-prevention-zones-regional-district-status`. Map `takken-q-72-002` only to the fire-prevention knowledge item(s) directly measured by its four choices; do not over-map purpose, equivalent-performance, or opening-detail items. Then mark the concept fully reconciled. Do not begin Phase 4.3.
 
 ## publication invariant
 
