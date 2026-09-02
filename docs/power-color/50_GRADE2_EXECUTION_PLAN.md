@@ -1,6 +1,6 @@
 # Power Color — Grade 2 execution plan
 
-Checked: 2026-09-01
+Checked: 2026-09-02
 
 ## Authority and scope
 
@@ -38,15 +38,15 @@ Grade 2 runtime is 120 verified / pending 0 across ten promoted skills. Grade 3 
 - [x] `pc2.scheme.bicolor_tricolor`: 12 verified and promoted; runtime 108 → 120.
 - [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all ten promoted skills.
 
-## Next source-order checkpoint
+## Hue-circle division schemes
 
-### Hue-circle division schemes
-- [x] Current official Grade 2 TOC places hue-circle division schemes next after bicolor / tricolor.
-- [ ] Obtain an explicit auditable nonvisual rule from acceptable authority.
-- [ ] Do not infer rules from example-image appearance or unstated diagram geometry.
-- [ ] Generate pending-first questions only after the rule is source-resolved.
-- [ ] Independently QA, duplicate/coverage-check and promote only verified records.
+- [x] Current official Grade 2 sample directly confirms the topic remains active by testing split complementary and pentad, permitting achromatic colors in hexad, and accepting two dyads as a tetrad.
+- [x] Resolve an explicit nonvisual rule through the current official sample plus Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the 2020 revised official text.
+- [x] Retain only explicit rules for dyad, split complementary, tetrad, PCCS pentad and hexad; do not infer from example-image appearance or unstated geometry.
+- [x] Generate 12 pending-first text questions and independently re-derive every answer before accepting proposed answers.
+- [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
+- [ ] Promote `pc2.scheme.hue_circle_division` record-identically to runtime after exact-equality/full-fingerprint/shared-engine gates pass; target runtime 120 → 132.
 
 ## Exact next start point
 
-Acquire the hue-circle division scheme rule in official-text order. If no auditable rule can be fixed, record the blocker and continue only with source acquisition for the next topic.
+Promote `grade2-authoring-hue-circle-division-0001-0012.json` record-identically into `grade2-runtime.json`, extend the runtime gate to eleven batches / 132 verified questions, run the full Power Color CI, and only then continue source acquisition at the next official-text-order topic.
