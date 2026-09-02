@@ -5,12 +5,7 @@
   "checked_on": "2026-09-03",
   "grade3": {
     "complete": false,
-    "runtime_questions": {
-      "verified": 223,
-      "pending": 0,
-      "needs_revision": 0,
-      "rejected": 0
-    },
+    "runtime_questions": {"verified": 223, "pending": 0, "needs_revision": 0, "rejected": 0},
     "deferred_handoff": "docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md",
     "remaining_blockers": [
       "complete auditable conventional PCCS contrast-tone pair matrix",
@@ -21,16 +16,11 @@
     "source_display_gates_relaxed": false
   },
   "grade2": {
-    "status": "in_progress",
+    "status": "in_progress_source_blocked_frontier",
     "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
-    "runtime_questions": {
-      "verified": 348,
-      "pending": 0,
-      "needs_revision": 0,
-      "rejected": 0
-    },
+    "runtime_questions": {"verified": 348, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": [
       "pc2.foundation.official_sample_facts",
       "pc2.scheme.triad_hue_positions",
@@ -65,22 +55,17 @@
     "active_skill": null,
     "active_authoring": null,
     "active_authoring_qa": null,
-    "latest_authoring_gate": {
-      "status": "passed",
-      "workflow_run": 33678931801,
-      "head": "8bc7cbce1d44fc6123e6462d077103ada61521ce",
-      "pr": 584,
-      "merge_commit": "abda2407f0f9339948b12a8b9017a9f78f2b3c4c"
-    },
-    "latest_promotion_gate": {
-      "status": "passed",
-      "workflow_run": 33690978044,
-      "head": "564f92f57eb18e78c31ec39263259d243690cf93",
-      "pr": 599,
-      "merge_commit": "61508bbc0a214873d023fb3487e14affe2de3a13"
-    },
+    "latest_authoring_gate": {"status": "passed", "workflow_run": 33678931801, "head": "8bc7cbce1d44fc6123e6462d077103ada61521ce", "pr": 584, "merge_commit": "abda2407f0f9339948b12a8b9017a9f78f2b3c4c"},
+    "latest_promotion_gate": {"status": "passed", "workflow_run": 33690978044, "head": "564f92f57eb18e78c31ec39263259d243690cf93", "pr": 599, "merge_commit": "61508bbc0a214873d023fb3487e14affe2de3a13"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "source_blocked": [
+      "Visual Design unresolved public nonvisual boundaries",
+      "Fashion p.091 ファッションの分類",
+      "Fashion p.095 ファッションの配色",
+      "Fashion p.096 ファッションにおける配色の事例",
+      "Interior p.104 インテリア概念の成立",
+      "Interior p.107 インテリア空間のカラーコーディネーション",
+      "Interior p.111 インテリアエレメントの配色の考え方と技法",
       "Landscape p.118 国内外の景観色彩の事例",
       "Landscape p.120 人工要素と自然要素の色彩が共存",
       "Landscape p.120 大きな面積をもつ色彩",
@@ -89,18 +74,15 @@
       "Landscape p.124 配色計画",
       "Landscape p.125 色彩管理",
       "慣用色名 p.128 和色名 individual Grade 2 subset/readings",
-      "慣用色名 p.132 外来色名 individual Grade 2 subset/readings"
+      "慣用色名 p.132 外来色名 individual Grade 2 subset/readings",
+      "p.138 資料・色名 current reference contents",
+      "p.142 資料・配色イメージ手法の確立 current official procedure"
     ],
-    "next": "Continue in official text order at p.138 資料・色名 and source-acquire only explicit current auditable nonvisual facts. If it is reference-only material without a deterministic examinable boundary, record source-blocked rather than manufacturing questions."
+    "next": "Current public official Grade 2 table-of-contents frontier is exhausted after p.142. Do not mark Grade 2 complete. Resume only if new explicit auditable authority resolves a recorded source-blocked topic; do not repeat rejected source routes without new evidence."
   },
-  "engine_integration": {
-    "shared_power_toeic_session": true,
-    "shared_power_toeic_workout_builder": true,
-    "shared_power_toeic_question_bank_adapter": true,
-    "separate_color_engine_forked": false
-  },
+  "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 2,
+    "checkpoints_completed": 4,
     "generated": 0,
     "checked": 0,
     "verified": 0,
@@ -109,12 +91,14 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled PR #603 after Power Color CI 33693030915 succeeded and merged the p.128 和色名 source-blocked checkpoint as 4839744b7b8ca6c6673c389e55142063895751cb.",
-      "Audited the individual Grade 2 p.132 外来色名 boundary. Current AFT authority confirms scope/order and JIS/JCRI authority confirms the governing JIS conventional-name framework, but no current explicit auditable source exposes the Grade 2 p.132–137 individual subset/readings; recorded source-blocked without full-JIS/Grade3/historical-list inference."
+      "Reconciled PR #603 after Power Color CI 33693030915 succeeded and merged p.128 和色名 source-blocked state as 4839744b7b8ca6c6673c389e55142063895751cb.",
+      "Audited p.132 外来色名; source-blocked because no current explicit auditable authority exposes the Grade 2 pp.132–137 individual subset/readings.",
+      "Audited p.138 資料・色名; source-blocked as a distinct skill because current public authority exposes placement but not the reference pages' full contents.",
+      "Audited p.142 資料・配色イメージ手法の確立; source-blocked as a distinct skill because current public authority does not expose the exact official procedure sufficiently for production answers."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue in official text order at p.138 資料・色名 and source-acquire only explicit current auditable nonvisual facts. If it is reference-only material without a deterministic examinable boundary, record source-blocked rather than manufacturing questions."
+  "next": "Current public official Grade 2 table-of-contents frontier is exhausted after p.142. Keep Grade 2 incomplete and resume only when new explicit auditable authority resolves a recorded source-blocked topic."
 }
