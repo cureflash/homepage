@@ -32,7 +32,7 @@
 - [ ] Full Grade 3 completion gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 336 verified / pending 0 across twenty-eight promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 348 verified / pending 0 across twenty-nine promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 - [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
 - [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
@@ -96,7 +96,9 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Source-resolve Landscape p.123 `色を測ることによる周辺環境の把握`, author/independently QA 12/12 verified, and promote record-identically; runtime 324 → 336 and twenty-seven → twenty-eight skills. Authoring CI `33678931801`; promotion gate `33679550547`; PRs #584/#586.
 - [x] Audit Landscape p.124 `配色計画`; keep source-blocked because the only distinct explicit concept→scheme relation found is already represented in the promoted p.123 residential-process skill, while no sufficiently rich closed nonvisual p.124 rule set is publicly auditable. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p124-color-scheme-plan-source-audit.md`.
 - [x] Audit Landscape p.125 `色彩管理`; keep source-blocked because current public authority confirms the official scope/order but does not expose a distinct sufficiently rich deterministic nonvisual p.125 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p125-color-management-source-audit.md`.
-- [ ] Continue from the current official Grade 2 TOC immediately after p.125: `慣用色名（JISの慣用色名より）` p.128, beginning with `和色名` p.128. Source-resolve an explicit auditable nonvisual name/fact boundary before authoring; do not infer monitor colors or unverified mappings.
+- [x] Source-resolve the narrow p.128 JIS color-name structure boundary and author/independently QA `pc2.conventional.jis_name_structure`: 12/12 verified, pending 0, A/B/C/D=3/3/3/3; PR #597 merged.
+- [x] Promote `pc2.conventional.jis_name_structure` record-identically; runtime 336 → 348 and twenty-eight → twenty-nine skills; exact-equality/full-fingerprint/shared-engine CI `33690978044` succeeded; PR #599 merged.
+- [ ] Source-acquire the individual p.128 `和色名` boundary from explicit current auditable authority. Do not infer Grade 2 membership/readings from Grade 3 or infer monitor/display values.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
