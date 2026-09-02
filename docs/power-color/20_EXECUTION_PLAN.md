@@ -55,7 +55,8 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Continue official text order to Landscape p.117 `景観をつくる要素` and source-resolve only the explicit nonvisual element-example/breadth boundary.
 - [x] Create `pc2.landscape.element_examples` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
 - [x] Add dedicated schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate for `pc2.landscape.element_examples`.
-- [ ] Run the p.117 gate and normal shared-engine regression, then promote only the 12 verified records record-identically; expected runtime 252 → 264 and twenty-one → twenty-two skills.
+- [x] Confirm the p.117 dedicated gate and normal Power Color regression are green on authoring head `a3d2be3e0230aefb1e733f07ad08ea0cecfe161b` (workflow run `33644271047`).
+- [ ] Promote only the 12 verified `pc2.landscape.element_examples` records record-identically; expected runtime 252 → 264 and twenty-one → twenty-two skills, then extend exact-equality/full-fingerprint/shared-engine coverage.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
