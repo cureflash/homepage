@@ -32,7 +32,7 @@
 - [ ] Full Grade 3 completion gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 228 verified / pending 0 across nineteen promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 240 verified / pending 0 across twenty promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 - [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
 - [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
@@ -43,8 +43,11 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Audit p.111 `インテリアエレメントの配色の考え方と技法`; keep source-blocked because no deterministic nonvisual rule set is publicly auditable.
 - [x] Audit p.112 `インテリアスタイル`; source-resolve only the corroborated six-label inventory, excluding all style-property/image/color inference.
 - [x] Create `pc2.interior.style_name_inventory` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
-- [ ] Run the dedicated p.112 authoring/full-fingerprint/nonvisual/shared-renderer gate and normal shared-engine regression on the current branch.
-- [ ] Promote only the 12 verified p.112 records record-identically after all gates pass; extend runtime to 240 and twenty promoted skills.
+- [x] Run the dedicated p.112 authoring/full-fingerprint/nonvisual/shared-renderer gate and normal shared-engine regression.
+- [x] Promote the 12 verified p.112 records record-identically; runtime 228 → 240 and twenty promoted skills.
+- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine gates to all twenty promoted skills.
+- [x] Continue official text order to Landscape p.116 and source-resolve only the narrow nonvisual `景観の公共性` public-asset/cooperation boundary.
+- [ ] Create `pc2.landscape.public_nature` pending-first from that fixed p.116 boundary and independently QA every record before promotion.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
