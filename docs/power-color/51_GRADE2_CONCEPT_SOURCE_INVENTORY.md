@@ -1,6 +1,6 @@
 # Power Color — Grade 2 concept/source inventory
 
-Checked: 2026-09-01
+Checked: 2026-09-02
 
 ## Current first-party authority
 
@@ -31,13 +31,17 @@ Current JCRI first-party Munsell references:
    - Plus Colors and MEGASOFT independently agree on the retained nonvisual intersection: bicolor/bicolore is a clear-contrast two-color scheme; tricolor/tricolore is a clear-contrast three-color scheme; bicolore is also called bicolor;
    - exact hue differences, PCCS tone boundaries, saturation thresholds, achromatic placement, RGB/HEX, monitor values and image appearance are excluded;
    - audit: `docs/power-color/audits/2026-09-01-grade2-bicolor-tricolor.md`.
+11. `pc2.scheme.hue_circle_division`
+   - current official Grade 2 sample explicitly tests split complementary and pentad, permits achromatic colors in hexad, and states that two dyads can form a tetrad;
+   - Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the 2020 revised official text, explicitly fixes the retained nonvisual rules for dyad, split complementary, tetrad, PCCS pentad and hexad;
+   - no image appearance, RGB/HEX, monitor value, inferred polygon geometry or unstated tone restriction is used;
+   - audit: `docs/power-color/audits/2026-09-02-grade2-hue-circle-division.md`.
 
-All ten are runtime-promoted record-identically. Grade 2 runtime frontier is 120 verified / pending 0.
+The first ten skills are runtime-promoted record-identically. Grade 2 runtime frontier is 120 verified / pending 0. `pc2.scheme.hue_circle_division` has a 12-question independently verified authoring batch awaiting record-identical runtime promotion.
 
 ## Current official-text scope inventory
 
-The next current official Grade 2 TOC topics include:
-- hue-circle division schemes;
+The next current official Grade 2 TOC topics after hue-circle division include:
 - image-based schemes;
 - visual/media, fashion, interior and landscape color coordination;
 - conventional color names;
@@ -55,6 +59,6 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 
 ## Exact next order
 
-1. Grade 2 runtime frontier is 120 verified / pending 0 across ten skills.
-2. Acquire an explicit nonvisual rule for hue-circle division schemes, the next official-TOC topic.
-3. If no auditable rule can be fixed, record that blocker; do not infer from image appearance or unstated geometry.
+1. Grade 2 runtime frontier is 120 verified / pending 0 across ten promoted skills.
+2. Promote the independently verified `pc2.scheme.hue_circle_division` 12-question batch record-identically, extending runtime 120 → 132 after exact-equality/full-fingerprint/shared-engine gates pass.
+3. Then continue source acquisition at the next official-TOC topic without inferring answers from images or unstated geometry.
