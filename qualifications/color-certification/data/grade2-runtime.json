@@ -78,6 +78,11 @@
       "id": "pc2.media.image_basics",
       "label": "メディアデザイン：コンピュータにおける画像の基本",
       "categoryId": "pc2.media"
+    },
+    {
+      "id": "pc2.fashion.basic_trend_color_classification",
+      "label": "ファッション：ベーシックカラーとトレンドカラーの分類",
+      "categoryId": "pc2.fashion"
     }
   ],
   "questions": [
@@ -5754,6 +5759,390 @@
       "qa": {
         "generatedAs": "pending_validation",
         "independentRecheck": "independently checked Adobe's vector use cases before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "ベーシックカラーの説明として最も適切なのはどれですか。",
+      "sentence": "ベーシックカラーの説明として最も適切なのはどれですか。",
+      "choices": [
+        "流行のたびに内容が入れ替わる色群",
+        "流行に左右されず繰り返し使われる定番色のカテゴリ",
+        "今季のJAFCA発表色だけを指す",
+        "画面上で最も明るく見える色"
+      ],
+      "proposedAnswer": "流行に左右されず繰り返し使われる定番色のカテゴリ",
+      "correctIndex": 1,
+      "explanation": "ベーシックカラーは、流行に左右されず繰り返し使われる定番色のカテゴリとして扱われます。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "トレンドカラーの説明として最も適切なのはどれですか。",
+      "sentence": "トレンドカラーの説明として最も適切なのはどれですか。",
+      "choices": [
+        "時代や季節によって内容が変化する流行色のカテゴリ",
+        "常に同じ色名だけで構成される定番色",
+        "RGB値が固定された色だけ",
+        "業種に関係なく永久に同じ基本色"
+      ],
+      "proposedAnswer": "時代や季節によって内容が変化する流行色のカテゴリ",
+      "correctIndex": 0,
+      "explanation": "トレンドカラーは、時代や季節によって内容が変化する流行色のカテゴリです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "「流行に依存せず、長く繰り返し使われる定番色」という説明に対応する分類はどれですか。",
+      "sentence": "「流行に依存せず、長く繰り返し使われる定番色」という説明に対応する分類はどれですか。",
+      "choices": [
+        "シーズンカラー",
+        "モニターカラー",
+        "ベーシックカラー",
+        "トレンドカラー"
+      ],
+      "proposedAnswer": "ベーシックカラー",
+      "correctIndex": 2,
+      "explanation": "流行に依存せず繰り返し使われる定番色という定義はベーシックカラーに対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "「時代やシーズンの変化に伴って内容が変わる色」という説明に対応する分類はどれですか。",
+      "sentence": "「時代やシーズンの変化に伴って内容が変わる色」という説明に対応する分類はどれですか。",
+      "choices": [
+        "ベーシックカラー",
+        "無彩色",
+        "固定色",
+        "トレンドカラー"
+      ],
+      "proposedAnswer": "トレンドカラー",
+      "correctIndex": 3,
+      "explanation": "時代や季節で内容が変化する流行色カテゴリはトレンドカラーです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "ベーシックカラーとトレンドカラーの違いとして正しいものはどれですか。",
+      "sentence": "ベーシックカラーとトレンドカラーの違いとして正しいものはどれですか。",
+      "choices": [
+        "ベーシックカラーは定番性をもち、トレンドカラーは時代・季節で変化する",
+        "ベーシックカラーは必ず白黒だけで、トレンドカラーは必ず有彩色である",
+        "ベーシックカラーはRGB、トレンドカラーはCMYKで定義される",
+        "両者は画面上の明るさだけで区別される"
+      ],
+      "proposedAnswer": "ベーシックカラーは定番性をもち、トレンドカラーは時代・季節で変化する",
+      "correctIndex": 0,
+      "explanation": "安全に固定できる違いは、ベーシックカラーの定番性と、トレンドカラーの時代・季節による変化です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "ある色分類について「今季の流行とは無関係に、定番として継続的に使う」と説明されています。該当するのはどれですか。",
+      "sentence": "ある色分類について「今季の流行とは無関係に、定番として継続的に使う」と説明されています。該当するのはどれですか。",
+      "choices": [
+        "トレンドカラー",
+        "ベーシックカラー",
+        "シーズン限定色",
+        "表示機器依存色"
+      ],
+      "proposedAnswer": "ベーシックカラー",
+      "correctIndex": 1,
+      "explanation": "流行とは無関係に定番として継続使用するという説明はベーシックカラーに対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "ある色分類について「春夏と秋冬など、時期に応じて提案内容が変わる」と説明されています。該当するのはどれですか。",
+      "sentence": "ある色分類について「春夏と秋冬など、時期に応じて提案内容が変わる」と説明されています。該当するのはどれですか。",
+      "choices": [
+        "ベーシックカラー",
+        "固定基本色",
+        "トレンドカラー",
+        "ICCプロファイル色"
+      ],
+      "proposedAnswer": "トレンドカラー",
+      "correctIndex": 2,
+      "explanation": "時期に応じて内容が変わるという性質はトレンドカラーに対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "JAFCAについて、今回の出題範囲で根拠が確認されている事実はどれですか。",
+      "sentence": "JAFCAについて、今回の出題範囲で根拠が確認されている事実はどれですか。",
+      "choices": [
+        "すべての業界で共通する永久不変のベーシックカラーを決める",
+        "各色のRGB値を色彩検定の正答として固定する",
+        "写真から流行色を自動判定する",
+        "ファッションのトレンドカラー情報を発信している"
+      ],
+      "proposedAnswer": "ファッションのトレンドカラー情報を発信している",
+      "correctIndex": 3,
+      "explanation": "JAFCAがファッションのトレンドカラー情報を発信していることは一次資料で確認されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "「今年の流行色だから、来年以降も必ず同じ分類になる」という説明が不適切な理由はどれですか。",
+      "sentence": "「今年の流行色だから、来年以降も必ず同じ分類になる」という説明が不適切な理由はどれですか。",
+      "choices": [
+        "トレンドカラーは時代や季節で変化し得るから",
+        "ベーシックカラーは毎日変わるから",
+        "すべての色はRGB値を持たないから",
+        "JAFCAは色情報を発信しないから"
+      ],
+      "proposedAnswer": "トレンドカラーは時代や季節で変化し得るから",
+      "correctIndex": 0,
+      "explanation": "トレンドカラーは時代や季節で内容が変わり得るため、現在の流行を永久不変と扱うことはできません。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "ベーシックカラーについて、今回の根拠から安全に言えることはどれですか。",
+      "sentence": "ベーシックカラーについて、今回の根拠から安全に言えることはどれですか。",
+      "choices": [
+        "特定の一色が全業界で必ずベーシックカラーである",
+        "流行に左右されにくい定番色カテゴリとして扱われる",
+        "毎シーズン必ず全面的に入れ替わる",
+        "画像の見た目だけで一意に判定できる"
+      ],
+      "proposedAnswer": "流行に左右されにくい定番色カテゴリとして扱われる",
+      "correctIndex": 1,
+      "explanation": "今回固定した根拠は、ベーシックカラーが流行に左右されにくい定番色カテゴリであるという一般的性質です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "トレンドカラーについて、今回の根拠から安全に言えることはどれですか。",
+      "sentence": "トレンドカラーについて、今回の根拠から安全に言えることはどれですか。",
+      "choices": [
+        "特定色が永久にトレンドカラーである",
+        "必ずベーシックカラーと同じである",
+        "時代・季節に応じて内容が変わるカテゴリである",
+        "RGB/HEX値だけで分類できる"
+      ],
+      "proposedAnswer": "時代・季節に応じて内容が変わるカテゴリである",
+      "correctIndex": 2,
+      "explanation": "トレンドカラーは時代・季節に応じて内容が変わるカテゴリとして固定されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-fashion-basic-trend-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/fashion/basic_trend_color_classification",
+      "skillId": "pc2.fashion.basic_trend_color_classification",
+      "categoryId": "pc2.fashion",
+      "questionType": "text_choice",
+      "prompt": "次のうち、今回のsource boundaryに反する出題方法はどれですか。",
+      "sentence": "次のうち、今回のsource boundaryに反する出題方法はどれですか。",
+      "choices": [
+        "定番性と流行変化の説明を文章で比較する",
+        "JAFCAがトレンドカラー情報を発信する事実を問う",
+        "時代・季節で変化する分類名を問う",
+        "服の写真を見せ、見た目だけで現在のトレンドカラーか判定させる"
+      ],
+      "proposedAnswer": "服の写真を見せ、見た目だけで現在のトレンドカラーか判定させる",
+      "correctIndex": 3,
+      "explanation": "写真の見た目だけで現在のトレンドカラーかを判定させることは、固定した非visual source boundaryの外です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_fashion_color_style_image",
+        "jafca_membership_trend_color_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
         "checkedOn": "2026-09-02"
       }
     }

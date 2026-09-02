@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills. One additional 12-question fashion batch is independently verified in authoring and awaits record-identical runtime promotion. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 192 verified / pending 0 across sixteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
 ## Completed Grade 2 checkpoints
 
@@ -41,7 +41,7 @@ Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills. One 
 - [x] `pc2.media.rgb_cmyk_models`: 12 verified and promoted; runtime 144 → 156.
 - [x] `pc2.media.color_management_profiles`: 12 verified and promoted; runtime 156 → 168.
 - [x] `pc2.media.image_basics`: 12 verified and promoted; runtime 168 → 180.
-- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all fifteen promoted skills.
+- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all sixteen promoted skills.
 
 ## Visual Design
 
@@ -88,9 +88,9 @@ Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills. One 
 - [x] Create `pc2.fashion.basic_trend_color_classification` as a pending-first 12-question text-choice batch and independently re-solve every record.
 - [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
 - [x] Run the dedicated schema/full-fingerprint/answer-position/shared-renderer authoring gate; PR #520 passed Power Color CI and merged to main.
-- [ ] Promote the 12 verified records record-identically to runtime 180 → 192.
-- [ ] Change the dedicated gate to exact runtime equality and extend full-fingerprint/coverage/shared Power TOEIC engine gates to all sixteen promoted skills.
+- [x] Promote the 12 verified records record-identically to runtime 180 → 192.
+- [x] Change the dedicated gate to exact runtime equality and extend full-fingerprint/coverage/shared Power TOEIC engine gates to all sixteen promoted skills.
 
 ## Exact next start point
 
-Promote `pc2.fashion.basic_trend_color_classification` record-identically from `qualifications/color-certification/data/grade2-authoring-basic-trend-color-classification-0001-0012.json` into Grade 2 runtime 180 → 192. Do not regenerate or rewrite the 12 verified records. Visual Design remains source-blocked.
+Continue current official Grade 2 text order after `ファッションカラーの分類`. Acquire explicit auditable authority for the next source-resolvable nonvisual topic before authoring. Visual Design remains source-blocked.

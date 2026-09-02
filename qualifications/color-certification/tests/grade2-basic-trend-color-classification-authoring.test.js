@@ -10,7 +10,7 @@ function fingerprint(q) {
   return JSON.stringify([q.sentence, q.choices]);
 }
 
-test('Grade 2 fashion basic/trend authoring batch is independently verified, nonvisual, balanced, and not yet promoted', () => {
+test('Grade 2 fashion basic/trend authoring batch is independently verified, nonvisual, balanced, and record-identically promoted', () => {
   assert.equal(batch.grade, 2);
   assert.equal(batch.skill.id, 'pc2.fashion.basic_trend_color_classification');
   assert.equal(batch.questions.length, 12);
@@ -44,7 +44,8 @@ test('Grade 2 fashion basic/trend authoring batch is independently verified, non
   assert.ok(batch.questions.some(q => q.sourceRefs.includes('pluscolors_fashion_color_style_image')));
   assert.ok(batch.questions.some(q => q.sourceRefs.includes('jafca_membership_trend_color_2026')));
 
-  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), false);
-  const runtimeIds = new Set(runtime.questions.map((q) => q.id));
-  assert.equal(batch.questions.some((q) => runtimeIds.has(q.id)), false);
+  const runtimeSkill = runtime.skills.find((skill) => skill.id === batch.skill.id);
+  assert.deepEqual(runtimeSkill, batch.skill);
+  const runtimeQuestions = runtime.questions.filter((q) => q.skillId === batch.skill.id);
+  assert.deepEqual(runtimeQuestions, batch.questions);
 });

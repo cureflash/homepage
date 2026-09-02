@@ -26,7 +26,7 @@
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {
-      "verified": 180,
+      "verified": 192,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0
@@ -46,25 +46,13 @@
       "pc2.image.image_scheme_keywords",
       "pc2.media.rgb_cmyk_models",
       "pc2.media.color_management_profiles",
-      "pc2.media.image_basics"
+      "pc2.media.image_basics",
+      "pc2.fashion.basic_trend_color_classification"
     ],
-    "active_skill": "pc2.fashion.basic_trend_color_classification",
-    "active_authoring": "qualifications/color-certification/data/grade2-authoring-basic-trend-color-classification-0001-0012.json",
-    "active_authoring_qa": {
-      "checked": 12,
-      "verified": 12,
-      "needs_revision": 0,
-      "rejected": 0,
-      "pending": 0,
-      "correct_index_distribution": {
-        "A": 3,
-        "B": 3,
-        "C": 3,
-        "D": 3
-      }
-    },
+    "active_skill": null,
+    "active_authoring": null,
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Promote the 12 independently verified pc2.fashion.basic_trend_color_classification records record-identically into Grade 2 runtime 180 to 192, then extend exact-equality/full-fingerprint/coverage/shared Power TOEIC engine gates."
+    "next": "Continue current official Grade 2 text order after pc2.fashion.basic_trend_color_classification and acquire the next explicit auditable nonvisual rule before authoring."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -73,8 +61,8 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 2,
-    "generated": 12,
+    "checkpoints_completed": 1,
+    "generated": 0,
     "checked": 12,
     "verified": 12,
     "revision_events": 0,
@@ -82,12 +70,11 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Created pc2.fashion.basic_trend_color_classification as a pending-first 12-question text-only authoring batch from the already fixed narrow source boundary, then independently re-solved all 12 records: 12 verified / pending 0 / A-B-C-D 3-3-3-3.",
-      "Added and passed the dedicated schema/full-fingerprint/answer-position/shared-renderer authoring gate; PR #520 passed Power Color CI and merged to main without changing the Grade 3 blockers or source/display gates."
+      "Promoted the previously independently verified pc2.fashion.basic_trend_color_classification 12-question batch record-identically into Grade 2 runtime 180 to 192 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to all sixteen promoted skills."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote pc2.fashion.basic_trend_color_classification record-identically from the merged verified authoring batch into runtime 180 to 192."
+  "next": "Acquire explicit auditable authority for the next source-resolvable nonvisual Grade 2 topic after pc2.fashion.basic_trend_color_classification."
 }

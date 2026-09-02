@@ -83,7 +83,7 @@ Non-visual relationship work may proceed only where deterministic derivation is 
 - [ ] Full Grade 3 pending=0 gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 180 verified / pending 0 across fifteen promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 192 verified / pending 0 across sixteen promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
