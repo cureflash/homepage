@@ -128,6 +128,11 @@
       "id": "pc2.landscape.long_lifecycle_color",
       "label": "景観色彩：ライフサイクルの長い色彩",
       "categoryId": "pc2.landscape"
+    },
+    {
+      "id": "pc2.landscape.design_considerations",
+      "label": "景観色彩：景観色彩設計の配慮事項",
+      "categoryId": "pc2.landscape"
     }
   ],
   "questions": [
@@ -9548,6 +9553,378 @@
       "qa": {
         "generatedAs": "pending_validation",
         "independentRecheck": "independently separated the accepted conceptual boundary from prohibited display-specific data before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩設計で確認済み資料が基本的な配慮として示すものはどれですか。",
+      "sentence": "景観色彩設計で確認済み資料が基本的な配慮として示すものはどれですか。",
+      "choices": [
+        "周辺景観との調和",
+        "画面上のRGB値の一致",
+        "流行色だけへの追随",
+        "写真の色をそのまま採用"
+      ],
+      "proposedAnswer": "周辺景観との調和",
+      "correctIndex": 0,
+      "explanation": "確認済み資料は、景観色彩計画で周辺景観との調和を考慮することを明示しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified surrounding-landscape harmony as the explicit planning consideration before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "数値基準に適合した後の景観色彩計画について、確認済み資料に最も合う考え方はどれですか。",
+      "sentence": "数値基準に適合した後の景観色彩計画について、確認済み資料に最も合う考え方はどれですか。",
+      "choices": [
+        "そこで検討を必ず終了する",
+        "基準設定の主旨と周辺の街並みも考慮する",
+        "数値基準を無視する",
+        "画面表示だけで最終決定する"
+      ],
+      "proposedAnswer": "基準設定の主旨と周辺の街並みも考慮する",
+      "correctIndex": 1,
+      "explanation": "確認済み資料は、数値基準の遵守だけでなく、基準設定の主旨と周辺を含む街並み景観への配慮も必要としています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived that numerical compliance is not the endpoint and standards intent plus streetscape context remain relevant before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩計画を始める際、確認済み資料が先に見極めるよう求めるものはどれですか。",
+      "sentence": "景観色彩計画を始める際、確認済み資料が先に見極めるよう求めるものはどれですか。",
+      "choices": [
+        "SNS上の人気色",
+        "印刷機の機種",
+        "個々の立地",
+        "モニターの色温度"
+      ],
+      "proposedAnswer": "個々の立地",
+      "correctIndex": 2,
+      "explanation": "確認済み資料は、個々の立地を見極めたうえで景観色彩計画を進める考え方を示しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently selected individual site context as the explicit starting consideration before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "確認済み資料が景観への配慮で用いる視点の組合せはどれですか。",
+      "sentence": "確認済み資料が景観への配慮で用いる視点の組合せはどれですか。",
+      "choices": [
+        "上・下・左右",
+        "朝・昼・夜だけ",
+        "屋内・屋外だけ",
+        "遠景・中景・近景"
+      ],
+      "proposedAnswer": "遠景・中景・近景",
+      "correctIndex": 3,
+      "explanation": "確認済み資料は、建築物等の外観について主に遠景・中景・近景の視点から景観配慮を求めています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified distant middle and near views as the explicit planning viewpoints before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "遠景・中景で確認済み資料が主に配慮対象として示すものはどれですか。",
+      "sentence": "遠景・中景で確認済み資料が主に配慮対象として示すものはどれですか。",
+      "choices": [
+        "自然や歴史など景観の骨格となる要素",
+        "スマートフォンの画面配色",
+        "室内家具だけの配色",
+        "一時的な広告画像だけ"
+      ],
+      "proposedAnswer": "自然や歴史など景観の骨格となる要素",
+      "correctIndex": 0,
+      "explanation": "確認済み資料は、遠景・中景では自然や歴史など景観の骨格となる要素への配慮を示しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently mapped distant and middle views to the explicitly stated natural and historical landscape skeleton before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "近景で確認済み資料が重視するものはどれですか。",
+      "sentence": "近景で確認済み資料が重視するものはどれですか。",
+      "choices": [
+        "全国一律の単一色",
+        "地域が連携して蓄積してきた場所の特性",
+        "遠方の山並みだけ",
+        "画面のピクセル値"
+      ],
+      "proposedAnswer": "地域が連携して蓄積してきた場所の特性",
+      "correctIndex": 1,
+      "explanation": "確認済み資料は、近景を地域が連携して蓄積してきた場所の特性に関わる視点として整理しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently mapped near-view consideration to locally accumulated place characteristics before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "確認済み資料が色彩の見え方に関わる計画条件として明示するものはどれですか。",
+      "sentence": "確認済み資料が色彩の見え方に関わる計画条件として明示するものはどれですか。",
+      "choices": [
+        "利用者の血液型",
+        "建物所有者の年齢",
+        "視認距離",
+        "端末の壁紙"
+      ],
+      "proposedAnswer": "視認距離",
+      "correctIndex": 2,
+      "explanation": "確認済み資料は、建築物等の立地や視認距離などを色彩計画で考慮する条件として明示しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified viewing distance as an explicit planning factor before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "確認済み資料が視認距離とあわせて色彩の見え方に関わる要素として挙げるものはどれですか。",
+      "sentence": "確認済み資料が視認距離とあわせて色彩の見え方に関わる要素として挙げるものはどれですか。",
+      "choices": [
+        "気分だけ",
+        "端末解像度だけ",
+        "価格だけ",
+        "配色や素材"
+      ],
+      "proposedAnswer": "配色や素材",
+      "correctIndex": 3,
+      "explanation": "東京都の確認済みガイドラインは、立地や視認距離に加えて、配色や素材による色彩の見え方の違いを扱っています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified arrangement and material as explicitly listed planning factors before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩設計で数値基準と周辺調和の関係を表す説明として最も適切なものはどれですか。",
+      "sentence": "景観色彩設計で数値基準と周辺調和の関係を表す説明として最も適切なものはどれですか。",
+      "choices": [
+        "数値基準を守りつつ、定性的な周辺調和も考慮する",
+        "周辺調和だけ見て数値基準は常に無視する",
+        "数値基準を守れば周辺景観は確認不要である",
+        "どちらも画面RGBで置き換える"
+      ],
+      "proposedAnswer": "数値基準を守りつつ、定性的な周辺調和も考慮する",
+      "correctIndex": 0,
+      "explanation": "確認済み資料は、定量的な色彩基準と定性的な周辺調和の双方を景観色彩計画で扱っています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the coexistence of quantitative criteria and qualitative surrounding-harmony requirements before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "遠景・中景・近景を分けて考える目的に最も近いものはどれですか。",
+      "sentence": "遠景・中景・近景を分けて考える目的に最も近いものはどれですか。",
+      "choices": [
+        "すべての場所で同じ色を使うため",
+        "それぞれの影響範囲で景観への配慮を行うため",
+        "画像処理の解像度を決めるため",
+        "印刷用CMYK値を固定するため"
+      ],
+      "proposedAnswer": "それぞれの影響範囲で景観への配慮を行うため",
+      "correctIndex": 1,
+      "explanation": "確認済み資料は、遠景・中景・近景それぞれの影響範囲の中で景観配慮を行う考え方を示しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified landscape consideration within each viewing range as the purpose of the distant-middle-near framework before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "確認済み資料の考え方に反する景観色彩計画はどれですか。",
+      "sentence": "確認済み資料の考え方に反する景観色彩計画はどれですか。",
+      "choices": [
+        "個々の立地を確認する",
+        "周辺の街並みを考慮する",
+        "数値基準への適合だけで十分として周辺を確認しない",
+        "遠景・中景・近景を必要に応じて考慮する"
+      ],
+      "proposedAnswer": "数値基準への適合だけで十分として周辺を確認しない",
+      "correctIndex": 2,
+      "explanation": "確認済み資料では、数値基準への適合だけでなく、基準の主旨や周辺を含む街並み景観への配慮が必要です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently rejected numerical-compliance-only planning because surrounding context and standards intent are explicitly required before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-design-considerations-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/design_considerations",
+      "skillId": "pc2.landscape.design_considerations",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "今回のsource contractだけからは決められないものはどれですか。",
+      "sentence": "今回のsource contractだけからは決められないものはどれですか。",
+      "choices": [
+        "周辺景観との調和を考慮すること",
+        "個々の立地を見極めること",
+        "遠景・中景・近景の視点を考慮すること",
+        "特定建築物に使うべきRGB値"
+      ],
+      "proposedAnswer": "特定建築物に使うべきRGB値",
+      "correctIndex": 3,
+      "explanation": "今回の境界は景観色彩設計の概念的な配慮事項だけを扱い、特定建築物のRGB値や画面表示値は認可していません。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_current"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently separated the accepted conceptual planning rules from explicitly excluded monitor RGB values before comparing with proposedAnswer",
         "checkedOn": "2026-09-03"
       }
     }
