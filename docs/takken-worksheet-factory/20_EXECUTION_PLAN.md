@@ -34,14 +34,14 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 Completed checkpoints through the last fully reconciled concept: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document; article35-vs-37; eight-restrictions-scope; cooling-off; earnest-money-limit; earnest-money-safeguards; damages-penalty; nonconformity-special-rule; unowned-property-sale; installment-cancellation; installment-ownership-retention; brokerage-fees; supervision-dispositions; declaration-arrival; mistake; fraud; duress; mental-reservation; fictitious-declaration; minor; adult-ward; agency; unauthorized-agency; apparent-agency; acquisitive-prescription; extinctive-prescription; property-transfer-opposability; co-ownership; mortgage; default-damages; contract-cancellation; simultaneous-performance; risk-allocation; sale-earnest; civil-nonconformity; lease-general; security-deposit; building-lease-opposability; ordinary-land-lease-term; land-lease-opposability; fixed-term-land-lease; building-lease-term; fixed-term-building-lease; heirs-order; statutory-inheritance-shares; inheritance-deliberation; inheritance-renunciation; will-effect; reserved-portion; condominium-ownership; real-estate-registration-record; city-quasi-planning-area; area-division; use-districts.
 
 Current checkpoint:
-- [x] Canonical knowledge extraction for `takken-concept-use-districts` is complete from source unit `use-districts` and the 2026-04-01 Urban Planning Act / Building Standards Act baseline.
-- [x] `takken-q-63-001` directly maps only to `takken-k-use-districts-regional-district`.
-- [x] `takken-q-63-002` directly maps only to `takken-k-use-districts-building-use-restrictions`.
-- [x] `takken-concept-use-districts` is fully reconciled without changing the existing Phase 2/3 question content or validation status.
+- [x] Canonical knowledge extraction for `takken-concept-city-planning-decision` is complete from source unit `city-planning-decisions` and the 2026-04-01 Urban Planning Act baseline.
+- [x] Six atomic knowledge items cover the Article 15 prefecture/municipality decision split and the Article 59 municipality/prefecture/national/private project-authorization routes.
+- [ ] Existing verified `takken-q-64-001` / `takken-q-64-002` have not yet been mapped to these items; direct-evidence mapping is the next checkpoint.
+- [x] Existing Phase 2/3 question content and validation status remain unchanged; Phase 4.3 remains unstarted.
 
-Current Phase 4.2 totals: 82/113 fully reconciled concepts, 82 concepts with canonical knowledge items, 416 verified knowledge items, 96 existing verified questions mapped, 280 explicit question-coverage gaps.
+Current Phase 4.2 totals: 82/113 fully reconciled concepts, 83 concepts with canonical knowledge items, 422 verified knowledge items, 96 existing verified questions mapped, 286 explicit question-coverage gaps.
 
-Exact continuation: extract and verify canonical knowledge items for `takken-concept-city-planning-decision` from source unit `city-planning-decisions` and the 2026-04-01 primary-law baseline. Do not begin Phase 4.3.
+Exact continuation: map `takken-q-64-001` / `takken-q-64-002` only to the `takken-concept-city-planning-decision` knowledge items they directly test, then mark the concept fully reconciled if the mapping validator passes. Do not begin Phase 4.3.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
