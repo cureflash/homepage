@@ -8,11 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed reconciliation for `takken-concept-building-confirmation` without changing any Phase 2/3 question content or validation status.
+Extracted canonical knowledge for `takken-concept-roads-frontage` without changing any Phase 2/3 question content or validation status.
 
-- `takken-q-67-001` now maps only to `takken-k-building-confirmation-before-start`, which it directly measures through the requirement to obtain confirmation before construction starts.
-- `takken-q-67-002` now maps only to `takken-k-building-confirmation-building-official`, `takken-k-building-confirmation-designated-body`, and `takken-k-building-confirmation-confirmation-certificate`, which it directly measures.
-- The five category/work-scope knowledge items are intentionally left without existing-question evidence and remain explicit Phase 4.3 deficits rather than being over-mapped.
+- Added 9 verified atomic knowledge items against the 2026-04-01 Building Standards Act Articles 42 and 43 baseline.
+- Separated the Article 42(1) road-width principle, its five statutory road categories, the Article 42(2) deemed-road rule and setback, and the Article 43 frontage requirement.
+- Existing `takken-q-68-001` / `takken-q-68-002` are not yet mapped in this checkpoint. They must be mapped only to the road-width principle and 2m frontage requirement respectively; the seven other items remain explicit Phase 4.3 deficits.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
 ## Status after this run
@@ -23,16 +23,16 @@ Completed reconciliation for `takken-concept-building-confirmation` without chan
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 87/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 87
-- Canonical knowledge items: 444
+- Concepts with canonical knowledge items: 88
+- Canonical knowledge items: 453
 - Existing verified questions mapped: 104
-- Explicit unmapped knowledge gaps: 291
+- Explicit unmapped knowledge gaps: 300
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical knowledge items for `takken-concept-roads-frontage` from the 2026-04-01 Building Standards Act baseline, then map existing verified questions only where they directly measure those items. Do not begin Phase 4.3.
+Map `takken-q-68-001` only to `takken-k-roads-frontage-road-width-principle` and `takken-q-68-002` only to `takken-k-roads-frontage-frontage-two-meters`, then mark `takken-concept-roads-frontage` fully reconciled. Do not begin Phase 4.3.
 
 ## publication invariant
 
