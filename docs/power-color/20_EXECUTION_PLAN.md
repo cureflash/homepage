@@ -63,7 +63,12 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Add and pass the dedicated nonvisual/full-fingerprint/shared-renderer authoring gate and normal Power Color regression; workflow run `33648021940`, PR #548 merged.
 - [x] Promote the 12 verified `pc2.landscape.color_design_harmony_role` records record-identically; runtime 264 → 276 and twenty-two → twenty-three skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-three promoted skills; Power Color CI run `33653881914` succeeded and PR #551 merged.
-- [ ] Continue official text order to Landscape p.118 `地域には地域の色がある`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
+- [x] Source-resolve Landscape p.118 `地域には地域の色がある` to a narrow deterministic nonvisual regional-context boundary.
+- [x] Create `pc2.landscape.regional_color_context` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [x] Add and pass the dedicated ID/full-fingerprint/source/nonvisual/shared-renderer authoring gate and normal Power Color regression; workflow run `33654743141`, PR #553 merged.
+- [ ] Promote the 12 verified `pc2.landscape.regional_color_context` records record-identically; runtime 276 → 288 and twenty-three → twenty-four skills.
+- [ ] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-four promoted skills.
+- [ ] Continue official text order to Landscape p.118 `国内外の景観色彩の事例`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
