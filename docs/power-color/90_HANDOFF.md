@@ -18,4 +18,6 @@ Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Continue source acquisition at the next official-text-order topic after hue-circle division schemes. Do not author a new batch unless an explicit auditable nonvisual rule is fixed; retain all monitor/display and image-inference prohibitions.
+The next official topic, `配色イメージ / イメージ別配色法`, is source-resolved as a text-only label↔keyword micro-skill. `pc2.image.image_scheme_keywords` has 12 independently checked questions: 12 verified / pending 0, A/B/C/D = 3/3/3/3, zero runtime fingerprint overlap. Audit: `docs/power-color/audits/2026-09-02-grade2-image-scheme-keywords.md`.
+
+Promote `qualifications/color-certification/data/grade2-authoring-image-scheme-keywords-0001-0012.json` record-identically into runtime 132 → 144. Extend `grade2-runtime-promotion.test.js` to twelve batches and require exact equality, zero full-fingerprint duplicates and shared Power TOEIC engine execution before merge.

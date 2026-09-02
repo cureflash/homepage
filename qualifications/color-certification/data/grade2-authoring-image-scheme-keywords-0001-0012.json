@@ -1,0 +1,401 @@
+{
+  "format": "power-color-grade2-authoring-v1",
+  "grade": 2,
+  "skill": {
+    "id": "pc2.image.image_scheme_keywords",
+    "label": "イメージ別配色法のイメージ語",
+    "categoryId": "pc2.image"
+  },
+  "sourceContract": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
+  "derivationRule": "Current official Grade 2 text TOC explicitly places image-based color schemes immediately after hue-circle division and lists the ten image-scheme labels. Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the 2020 revised official text, explicitly maps those ten labels to characteristic image words. The current official Level 1 second-stage sample independently confirms Dynamic = strong / clear-cut / flashy. This batch tests only label-to-keyword or keyword-to-label text mappings; no color appearance, RGB/HEX, monitor value, swatch, screenshot, or inferred geometry is used.",
+  "qaSummary": {
+    "generated": 12,
+    "checked": 12,
+    "verified": 12,
+    "needsRevision": 0,
+    "rejected": 0,
+    "pending": 0,
+    "correctIndexDistribution": {
+      "A": 3,
+      "B": 3,
+      "C": 3,
+      "D": 3
+    }
+  },
+  "questions": [
+    {
+      "id": "pc2-image-scheme-keywords-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「エレガント」の代表的なイメージ語の組み合わせはどれですか。",
+      "sentence": "「エレガント」の代表的なイメージ語の組み合わせはどれですか。",
+      "choices": [
+        "女性的な・気品のある・優雅な",
+        "明るい・活発な・親しみやすい",
+        "渋い・大人っぽい・洗練された",
+        "現代的・人工的"
+      ],
+      "proposedAnswer": "女性的な・気品のある・優雅な",
+      "correctIndex": 0,
+      "explanation": "確認済みのイメージ別配色法では、「エレガント」は「女性的な・気品のある・優雅な」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for エレガント independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「カジュアル」の代表的なイメージ語の組み合わせはどれですか。",
+      "sentence": "「カジュアル」の代表的なイメージ語の組み合わせはどれですか。",
+      "choices": [
+        "伝統的な・重厚な・円熟した",
+        "明るい・活発な・親しみやすい",
+        "かわいい・可憐な・愛らしい",
+        "強い・はっきりした・派手な"
+      ],
+      "proposedAnswer": "明るい・活発な・親しみやすい",
+      "correctIndex": 1,
+      "explanation": "確認済みのイメージ別配色法では、「カジュアル」は「明るい・活発な・親しみやすい」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for カジュアル independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「クラシック」の代表的なイメージ語の組み合わせはどれですか。",
+      "sentence": "「クラシック」の代表的なイメージ語の組み合わせはどれですか。",
+      "choices": [
+        "明るい・爽やかな・透明感のある",
+        "若々しい・新鮮な・爽やかな",
+        "伝統的な・重厚な・円熟した",
+        "温もりのある・素朴な・穏やかな"
+      ],
+      "proposedAnswer": "伝統的な・重厚な・円熟した",
+      "correctIndex": 2,
+      "explanation": "確認済みのイメージ別配色法では、「クラシック」は「伝統的な・重厚な・円熟した」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for クラシック independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「クリア」の代表的なイメージ語の組み合わせはどれですか。",
+      "sentence": "「クリア」の代表的なイメージ語の組み合わせはどれですか。",
+      "choices": [
+        "現代的・人工的",
+        "渋い・大人っぽい・洗練された",
+        "女性的な・気品のある・優雅な",
+        "明るい・爽やかな・透明感のある"
+      ],
+      "proposedAnswer": "明るい・爽やかな・透明感のある",
+      "correctIndex": 3,
+      "explanation": "確認済みのイメージ別配色法では、「クリア」は「明るい・爽やかな・透明感のある」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for クリア independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「シック」の代表的なイメージ語の組み合わせはどれですか。",
+      "sentence": "「シック」の代表的なイメージ語の組み合わせはどれですか。",
+      "choices": [
+        "渋い・大人っぽい・洗練された",
+        "強い・はっきりした・派手な",
+        "明るい・活発な・親しみやすい",
+        "かわいい・可憐な・愛らしい"
+      ],
+      "proposedAnswer": "渋い・大人っぽい・洗練された",
+      "correctIndex": 0,
+      "explanation": "確認済みのイメージ別配色法では、「シック」は「渋い・大人っぽい・洗練された」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for シック independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「ダイナミック」の代表的なイメージ語の組み合わせはどれですか。",
+      "sentence": "「ダイナミック」の代表的なイメージ語の組み合わせはどれですか。",
+      "choices": [
+        "温もりのある・素朴な・穏やかな",
+        "強い・はっきりした・派手な",
+        "現代的・人工的",
+        "明るい・爽やかな・透明感のある"
+      ],
+      "proposedAnswer": "強い・はっきりした・派手な",
+      "correctIndex": 1,
+      "explanation": "確認済みのイメージ別配色法では、「ダイナミック」は「強い・はっきりした・派手な」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024",
+        "aft_grade1_second_current_sample_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for ダイナミック independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「ウォームナチュラル」の代表的なイメージ語の組み合わせはどれですか。",
+      "sentence": "「ウォームナチュラル」の代表的なイメージ語の組み合わせはどれですか。",
+      "choices": [
+        "女性的な・気品のある・優雅な",
+        "伝統的な・重厚な・円熟した",
+        "温もりのある・素朴な・穏やかな",
+        "若々しい・新鮮な・爽やかな"
+      ],
+      "proposedAnswer": "温もりのある・素朴な・穏やかな",
+      "correctIndex": 2,
+      "explanation": "確認済みのイメージ別配色法では、「ウォームナチュラル」は「温もりのある・素朴な・穏やかな」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for ウォームナチュラル independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「フレッシュナチュラル」の代表的なイメージ語の組み合わせはどれですか。",
+      "sentence": "「フレッシュナチュラル」の代表的なイメージ語の組み合わせはどれですか。",
+      "choices": [
+        "かわいい・可憐な・愛らしい",
+        "明るい・活発な・親しみやすい",
+        "現代的・人工的",
+        "若々しい・新鮮な・爽やかな"
+      ],
+      "proposedAnswer": "若々しい・新鮮な・爽やかな",
+      "correctIndex": 3,
+      "explanation": "確認済みのイメージ別配色法では、「フレッシュナチュラル」は「若々しい・新鮮な・爽やかな」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for フレッシュナチュラル independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「現代的・人工的」というイメージ語に対応する配色イメージはどれですか。",
+      "sentence": "「現代的・人工的」というイメージ語に対応する配色イメージはどれですか。",
+      "choices": [
+        "モダン",
+        "シック",
+        "クリア",
+        "クラシック"
+      ],
+      "proposedAnswer": "モダン",
+      "correctIndex": 0,
+      "explanation": "確認済みのイメージ別配色法では、「モダン」は「現代的・人工的」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for モダン independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「かわいい・可憐な・愛らしい」というイメージ語に対応する配色イメージはどれですか。",
+      "sentence": "「かわいい・可憐な・愛らしい」というイメージ語に対応する配色イメージはどれですか。",
+      "choices": [
+        "エレガント",
+        "ロマンチック",
+        "カジュアル",
+        "フレッシュナチュラル"
+      ],
+      "proposedAnswer": "ロマンチック",
+      "correctIndex": 1,
+      "explanation": "確認済みのイメージ別配色法では、「ロマンチック」は「かわいい・可憐な・愛らしい」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for ロマンチック independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "色彩検定協会の現行1級2次出題例で、「強い」「はっきりした」「派手な」に対応する配色イメージとして示されているものはどれですか。",
+      "sentence": "色彩検定協会の現行1級2次出題例で、「強い」「はっきりした」「派手な」に対応する配色イメージとして示されているものはどれですか。",
+      "choices": [
+        "モダン",
+        "カジュアル",
+        "ダイナミック",
+        "シック"
+      ],
+      "proposedAnswer": "ダイナミック",
+      "correctIndex": 2,
+      "explanation": "確認済みのイメージ別配色法では、「ダイナミック」は「強い・はっきりした・派手な」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024",
+        "aft_grade1_second_current_sample_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for ダイナミック independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-image-scheme-keywords-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/image/image_scheme_keywords",
+      "skillId": "pc2.image.image_scheme_keywords",
+      "categoryId": "pc2.image",
+      "questionType": "text_choice",
+      "prompt": "「女性的な・気品のある・優雅な」というイメージ語に対応する配色イメージはどれですか。",
+      "sentence": "「女性的な・気品のある・優雅な」というイメージ語に対応する配色イメージはどれですか。",
+      "choices": [
+        "ロマンチック",
+        "クリア",
+        "シック",
+        "エレガント"
+      ],
+      "proposedAnswer": "エレガント",
+      "correctIndex": 3,
+      "explanation": "確認済みのイメージ別配色法では、「エレガント」は「女性的な・気品のある・優雅な」に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "pluscolors_color_scheme_image_2024"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "re-read the explicit text mapping for エレガント independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    }
+  ]
+}

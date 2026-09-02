@@ -47,6 +47,14 @@ Grade 2 runtime is 132 verified / pending 0 across eleven promoted skills. Grade
 - [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
 - [x] Promote `pc2.scheme.hue_circle_division` record-identically to runtime; runtime 120 → 132 with exact-equality/full-fingerprint/shared-engine gates passing.
 
+## Image-based scheme keywords
+
+- [x] Current official Grade 2 TOC confirms `配色イメージ / イメージ別配色法` as the next topic and lists all ten labels.
+- [x] Fix a text-only label↔image-keyword rule from Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the 2020 revised official text.
+- [x] Independently corroborate `ダイナミック = 強い・はっきりした・派手な` against the current Color Certification Association Level 1 second-stage official sample.
+- [x] Generate 12 pending-first text questions; 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3; zero runtime fingerprint overlap.
+- [ ] Promote `pc2.image.image_scheme_keywords` record-identically; target runtime 132 → 144 after exact-equality/full-fingerprint/shared-engine gates.
+
 ## Exact next start point
 
-Continue source acquisition at the next official-text-order topic after hue-circle division schemes. Author only if an explicit auditable nonvisual rule can be fixed without image appearance, RGB/HEX, monitor values or unstated geometry.
+Promote `grade2-authoring-image-scheme-keywords-0001-0012.json` record-identically into `grade2-runtime.json`, extend the runtime gate to twelve batches / 144 verified questions, and require exact record equality, zero full-fingerprint duplicates and shared Power TOEIC engine execution before continuing to Visual Design.
