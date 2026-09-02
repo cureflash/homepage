@@ -69,7 +69,8 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Promote the 12 verified `pc2.landscape.regional_color_context` records record-identically; runtime 276 → 288 and twenty-three → twenty-four skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-four promoted skills; Power Color CI run `33659280553` succeeded and PR #560 merged.
 - [x] Audit Landscape p.118 `国内外の景観色彩の事例`; keep source-blocked because current public official material does not expose a closed official-text example set with deterministic nonvisual answer rules. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
-- [ ] Continue official text order to Landscape p.120 `人工要素と自然要素の色彩が共存`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
+- [x] Audit Landscape p.120 `人工要素と自然要素の色彩が共存`; keep authoring source-blocked because public evidence confirms only the broad coexistence concept, not a sufficiently rich closed deterministic Grade 2 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`.
+- [ ] Continue official text order to Landscape p.120 `ライフサイクルの長い色彩`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
