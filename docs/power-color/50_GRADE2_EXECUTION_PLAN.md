@@ -49,7 +49,7 @@ All twenty-six promoted skills are covered by exact-equality/full-fingerprint/sh
 - Landscape p.120 `人工要素と自然要素の色彩が共存`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`.
 - Landscape p.120 `大きな面積をもつ色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`; public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context.
 - Landscape p.120 `太陽光に影響される色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`; broad outdoor-light context is insufficient to define the official-text deterministic rule set.
-- Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`; checked public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set.
+- Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`; checked public authority does not expose a distinct sufficiently rich deterministic nonvisual Grade 2 rule set.
 
 Do not repeat those routes unless new explicit auditable authority appears.
 
@@ -153,8 +153,26 @@ Do not generalize Tokyo-specific numerical/Munsell criteria, infer RGB/HEX/displ
 
 State: `qualifications/color-certification/data/grade2-authoring-landscape-design-considerations-0001-0012.json` contains 12 records generated pending-first and independently rechecked. 12/12 verified, pending 0, A/B/C/D=3/3/3/3. Pre-promotion schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression passed in workflow run `33674008109`; PR #572 merged as `165132c83eec5fd949e0023a9dfa9bdd62438e97`. All 12 records were then promoted record-identically; runtime 300 → 312 and twenty-five → twenty-six skills. Post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine gate passed in Power Color CI `33676939840`; PR #577 merged as `f7661343ba41b9c00cdc9edb2035ce8b86c90f72`.
 
+## Landscape p.123 `住宅の色彩設計プロセス` — source-resolved, authoring verified
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p123-residential-process-source-audit.md`.
+
+Accepted boundary for `pc2.landscape.residential_color_design_process` is structural/nonvisual only:
+- the current official Grade 2 scope includes `住宅の色彩設計プロセス` p.123;
+- the official scope then places `色を測ることによる周辺環境の把握` p.123, `配色計画` p.124, and `色彩管理` p.125;
+- current JPMA practical training explicitly includes a detached-house color-design exercise and actual surrounding-environment color survey (`視感測色`);
+- the practical process explicitly includes consolidating a color-design concept;
+- a color scheme is explicitly developed based on that concept;
+- proposal-document creation, color-scheme CG creation, presentation and instructor evaluation are explicit practical activities.
+
+Do not treat the JPMA bullet list as proof of a universal mandatory total order except where a relation is explicit. Do not infer RGB/HEX/display values, fixed hue/tone/Munsell recommendations, photograph or CG appearance, numerical measurement values, material appearance, unstated geometry, or detailed content of `色彩管理` beyond its confirmed official inclusion/order.
+
+State: `qualifications/color-certification/data/grade2-authoring-landscape-residential-color-design-process-0001-0012.json` contains 12 records generated pending-first and independently rechecked. 12/12 verified, pending 0, A/B/C/D=3/3/3/3. Dedicated schema/full-fingerprint/source/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression passed in workflow run `33677670579`; PR #579 merged as `c3f8c298330209e19e01946ced4d1ea17e40ce3f`.
+
 ## Exact next start point
 
-Continue official Grade 2 text order at Landscape p.123 `住宅の色彩設計プロセス`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. If public authority is insufficient, record the topic source-blocked rather than manufacturing a 12-question batch.
+Promote all 12 verified `pc2.landscape.residential_color_design_process` records record-identically into Grade 2 runtime, moving runtime 312 → 324 and twenty-six → twenty-seven skills. Update the dedicated authoring test from pre-promotion absence assertions to post-promotion exact equality and run full-fingerprint/shared Power TOEIC engine regression before merge.
+
+After successful promotion, continue current official Grade 2 text order at p.123 `色を測ることによる周辺環境の把握`.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
