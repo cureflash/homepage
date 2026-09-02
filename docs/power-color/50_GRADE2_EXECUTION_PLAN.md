@@ -81,8 +81,31 @@ State:
 - [x] promoted record-identically; runtime 264 → 276 and twenty-two → twenty-three skills;
 - [x] post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine gate passed in workflow run `33653881914`; PR #551 merged.
 
+## Landscape p.118 `地域には地域の色がある` — authoring verified, promotion pending
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-regional-color-source-audit.md`.
+
+Accepted boundary for `pc2.landscape.regional_color_context` is conceptual/relational only:
+- regions may have colors connected with things long present or accumulated there;
+- traditional preserved streetscapes described by the accepted source may use regionally produced natural materials and colors nurtured by regional climate/natural environment;
+- environmental-color planning may begin by learning and respecting colors long present or accumulated in a region to nurture a region-specific landscape;
+- this is not a fixed locality-to-one-color lookup table.
+
+Do not infer or introduce RGB/HEX/display values, monitor swatches, specific region-to-color mappings, hue/tone/Munsell values, image appearance, material appearance, or unstated geometry.
+
+State:
+- [x] current AFT Grade 2 scope/order rechecked;
+- [x] deterministic nonvisual regional-context boundary source-resolved against auditable Japan Fashion Association and Japan Civil Engineering Consultants Association material;
+- [x] pending-first 12 created;
+- [x] independently re-solved all 12 before proposed-answer comparison;
+- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
+- [x] A/B/C/D = 3/3/3/3;
+- [x] dedicated ID/full-fingerprint/source/nonvisual/shared-renderer authoring gate and normal Power Color regression passed in workflow run `33654743141`; PR #553 merged as `e5aac280779d58f891889978bb9f4b6e4740e20f`;
+- [ ] promote the 12 records record-identically; runtime 276 → 288 and twenty-three → twenty-four skills;
+- [ ] extend post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-four skills.
+
 ## Exact next start point
 
-The current official Grade 2 table of contents places p.118 `地域には地域の色がある` next, followed by p.118 `国内外の景観色彩の事例`.
+Promote `pc2.landscape.regional_color_context` record-identically into `grade2-runtime.json`. Do not rewrite the verified authoring records during promotion. Require exact-equality, full-fingerprint duplicate protection, shared Power TOEIC question-bank/session/workout regression, and full Power Color CI before merge.
 
-Source-acquire p.118 `地域には地域の色がある` from current authoritative material. Author pending-first questions only if an explicit deterministic nonvisual rule boundary is established. Otherwise record the source blocker and advance in official-text order without guessing. Keep all Grade 3 blockers and source/display gates unchanged.
+After promotion, continue official text order to p.118 `国内外の景観色彩の事例`; author only if an explicit deterministic nonvisual source boundary is established. Keep all Grade 3 blockers and source/display gates unchanged.

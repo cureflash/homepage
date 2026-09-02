@@ -8,14 +8,18 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 Grade 2 runtime is 276 verified / pending 0 across twenty-three promoted skills.
 
-`pc2.landscape.color_design_harmony_role` was authored pending-first within the source-resolved p.117 nonvisual boundary and independently re-solved before proposed-answer comparison: 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. Its source contract remains `docs/power-color/audits/2026-09-03-grade2-landscape-p117-color-design-role-source-audit.md`; no RGB/HEX/display values, monitor-facing color choices, Munsell numerical limits, image appearance, material recommendation, hue/tone choice or unstated geometry are authorized.
+`pc2.landscape.regional_color_context` was authored pending-first for Landscape p.118 `地域には地域の色がある` after source-resolving a narrow nonvisual regional-context boundary. The accepted source contract is `docs/power-color/audits/2026-09-03-grade2-landscape-p118-regional-color-source-audit.md`.
 
-All 12 verified records are now promoted record-identically to `grade2-runtime.json`. The promotion moved runtime 264 → 276 and twenty-two → twenty-three promoted skills. The pre-promotion authoring test contained an expected stale assertion that the batch was absent from runtime; the gate was converted to the same post-promotion record-equality contract used by prior promoted batches, without rewriting question records. Exact-equality, full-fingerprint duplicate protection, shared Power TOEIC question-bank/session/workout regression and the full Power Color suite passed in workflow run `33653881914`; PR #551 merged as `da9e9ab003dc89a53d7fbd90d4d23ebc22f88a12`.
+The batch contains 12 questions, all independently re-solved before proposed-answer comparison: 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. The dedicated ID/full-fingerprint/source/nonvisual/shared-renderer gate and normal Power Color regression passed in workflow run `33654743141`; PR #553 merged as `e5aac280779d58f891889978bb9f4b6e4740e20f`.
+
+The accepted boundary is conceptual and relational only: regional landscape color may relate to long-existing/accumulated colors, regionally produced natural materials, and climate/natural-environment context. It does not authorize any fixed locality-to-color mapping, RGB/HEX/display values, monitor-facing swatches, Munsell values, hue/tone inference, image appearance, material appearance, or unstated geometry.
+
+The 12 verified records are not yet in runtime. Do not rewrite them during promotion.
 
 Visual Design, Fashion p.091/p.095/p.096, Interior p.104, p.107 and p.111 remain source-blocked. Grade 3 remains 223 verified / pending 0 and incomplete.
 
-The current official Grade 2 table of contents places p.118 `地域には地域の色がある` immediately after the completed p.117 `景観色彩における色彩設計の役割`, followed by p.118 `国内外の景観色彩の事例`.
-
 ## Exact next start point
 
-Continue official-text order at Landscape p.118 `地域には地域の色がある`. Source-acquire current authoritative material and establish an explicit deterministic nonvisual boundary before authoring anything. If no such boundary is publicly auditable, record the source blocker and advance to p.118 `国内外の景観色彩の事例` without guessing. Keep all Grade 3 blockers and source/display gates unchanged.
+Promote all 12 `pc2.landscape.regional_color_context` verified records record-identically into `grade2-runtime.json`, moving runtime 276 → 288 and twenty-three → twenty-four promoted skills. Extend exact-equality/full-fingerprint/shared Power TOEIC question-bank/session/workout gates to the new skill and require full Power Color CI success before merge.
+
+After successful promotion, continue official-text order to Landscape p.118 `国内外の景観色彩の事例`. Source-acquire an explicit deterministic nonvisual boundary before any authoring. Keep all Grade 3 blockers and source/display gates unchanged.
