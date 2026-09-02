@@ -8,6 +8,7 @@ on:
       - 'subjects/english/power-toeic/js/core/session.js'
       - 'subjects/english/power-toeic/js/core/workout-builder.js'
       - 'subjects/english/power-toeic/js/data/question-bank-adapter.js'
+      - '.github/workflows/power-color-tests.yml'
   push:
     branches: [main]
     paths:
@@ -18,16 +19,29 @@ on:
       - 'subjects/english/power-toeic/js/data/question-bank-adapter.js'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Materialize verified Grade 2 color-management promotion
+        if: github.event_name == 'pull_request'
+        run: |
+          node qualifications/color-certification/scripts/promote-grade2-color-management.mjs
+          if ! git diff --quiet -- qualifications/color-certification/data/grade2-runtime.json; then
+            git config user.name github-actions[bot]
+            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+            git add qualifications/color-certification/data/grade2-runtime.json
+            git commit -m "Power Color Grade 2: promote color-management runtime batch"
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
       - name: Run Power Color tests
         working-directory: qualifications/color-certification
         run: npm test
