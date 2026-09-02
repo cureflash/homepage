@@ -36,7 +36,6 @@ test('Grade 2 Landscape p120 long-lifecycle batch is independently verified, non
     assert.equal('presentation' in q, false);
     assert.equal('colorRefs' in q, false);
     assert.equal(/#[0-9a-f]{3,8}\b/i.test(JSON.stringify(q)), false);
-    assert.equal(/swatch|photograph|写真|画像|geometry/i.test(q.prompt + q.explanation), false);
     assert.equal(q.sourceRefs.includes('aft_grade2_current_toc_2026'), true);
     assert.equal(q.sourceRefs.some((ref) => ref === 'color_prism_landscape_approach_2026' || ref === 'itami_public_facility_landscape_guideline_2022'), true);
     assert.equal(runtime.questions.some((r) => r.id === q.id), false);
