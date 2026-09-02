@@ -8,14 +8,19 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills.
 
-`pc2.media.image_basics` has been promoted record-identically from its independently verified 12-question authoring batch. The runtime promotion gate now checks the exact union of all fifteen verified authoring batches, 180 verified / pending 0, no full-fingerprint duplicates, and execution through the shared Power TOEIC question-bank/session/workout engine.
+`pc2.media.image_basics` is promoted record-identically. The runtime promotion gate covers the exact union of all fifteen verified authoring batches, no full-fingerprint duplicates, and the shared Power TOEIC question-bank/session/workout engine.
 
-The retained source boundary is unchanged: raster = pixel grid / resolution-dependent / scaling can lose detail; vector = mathematically defined shapes / scalable with crisp edges; standard nonvisual use cases include photographs versus logos/technical illustrations. No image appearance, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, or unstated geometry are used.
+The next official-text topic is Fashion `ファッションカラーの分類`. A narrow text-only slice is now source-resolved as `pc2.fashion.basic_trend_color_classification`:
+- basic color = a repeatedly used standard-color category not defined by the current fashion trend;
+- trend color = a fashion color-trend category whose content changes with era/season;
+- current JAFCA first-party material independently confirms that JAFCA publishes fashion trend-color information.
 
-Visual Design remains source-blocked because reviewed public first-party material confirms scope/order but does not expose a sufficiently explicit nonvisual answer rule. Do not repeat the same scope-only route or infer from figures/images.
+Do not turn example hues into universal basic/trend classifications. Do not use fashion-photo appearance, swatches, RGB/HEX, sampled pixels, current displayed-color identification, or unstated style geometry. Broader fashion-style/image/color judgments remain unresolved.
+
+Visual Design remains source-blocked because reviewed public first-party material confirms scope/order but does not expose a sufficiently explicit nonvisual answer rule.
 
 Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Continue in current official Grade 2 text order after `コンピュータにおける画像の基本`. Acquire explicit auditable authority for the next source-resolvable nonvisual topic before authoring. Keep Visual Design source-blocked and keep all existing source/display gates unchanged.
+Create `pc2.fashion.basic_trend_color_classification` pending-first authoring from the fixed nonvisual rule boundary in `docs/power-color/audits/2026-09-02-grade2-fashion-color-classification.md`, then independently re-solve every record before verification or runtime promotion.
