@@ -85,9 +85,10 @@
       "Landscape p.120 大きな面積をもつ色彩",
       "Landscape p.120 太陽光に影響される色彩",
       "Landscape p.121 季節や時間の変化を感じさせる多様な色彩",
-      "Landscape p.124 配色計画"
+      "Landscape p.124 配色計画",
+      "Landscape p.125 色彩管理"
     ],
-    "next": "Continue official Grade 2 text order at Landscape p.125 色彩管理. Source-resolve a distinct deterministic nonvisual boundary before authoring; otherwise record source-blocked."
+    "next": "Reacquire the current official Grade 2 table-of-contents frontier immediately after Landscape p.125 色彩管理 and continue only from the next explicitly confirmed heading. Do not infer the next topic from secondary guides."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -96,7 +97,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 2,
+    "checkpoints_completed": 1,
     "generated": 0,
     "checked": 0,
     "verified": 0,
@@ -105,12 +106,12 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled latest main/open PRs/branches after parallel p.123 work: pc2.landscape.surrounding_environment_measurement is already promoted record-identically; runtime is 336 verified / pending 0 across 28 skills, with canonical sync PR #588 merged.",
-      "Audited Landscape p.124 配色計画. Current public authority confirms the scope and concept-based color-scheme relation, but that relation is already promoted under the p.123 residential-process skill and no distinct sufficiently rich p.124 nonvisual rule set was found. Recorded source-blocked rather than duplicate authoring."
+      "Reconciled latest main/open PRs/branches: no open Power Color PR exists and no newer p.125 work is present; runtime remains 336 verified / pending 0 across 28 skills.",
+      "Audited Landscape p.125 色彩管理. Current public authority confirms the official scope/order but does not expose a distinct sufficiently rich deterministic nonvisual p.125 rule set. Recorded source-blocked rather than manufacturing a duplicate or generic construction/paint-management batch."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Landscape p.125 色彩管理 source acquisition/audit. Do not author until a distinct auditable deterministic nonvisual rule set is source-confirmed."
+  "next": "Reacquire the current official Grade 2 TOC immediately after Landscape p.125 色彩管理 and continue from the next explicitly confirmed heading only."
 }
