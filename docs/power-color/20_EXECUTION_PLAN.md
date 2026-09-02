@@ -32,7 +32,7 @@
 - [ ] Full Grade 3 completion gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 252 verified / pending 0 across twenty-one promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 264 verified / pending 0 across twenty-two promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 - [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
 - [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
@@ -56,7 +56,9 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Create `pc2.landscape.element_examples` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
 - [x] Add dedicated schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate for `pc2.landscape.element_examples`.
 - [x] Confirm the p.117 dedicated gate and normal Power Color regression are green on authoring head `a3d2be3e0230aefb1e733f07ad08ea0cecfe161b` (workflow run `33644271047`).
-- [ ] Promote only the 12 verified `pc2.landscape.element_examples` records record-identically; expected runtime 252 → 264 and twenty-one → twenty-two skills, then extend exact-equality/full-fingerprint/shared-engine coverage.
+- [x] Promote the 12 verified `pc2.landscape.element_examples` records record-identically; runtime 252 → 264 and twenty-one → twenty-two skills.
+- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-two promoted skills; promotion CI run `33647175533` succeeded and PR #546 merged.
+- [ ] Continue official text order to Landscape p.117 `景観色彩における色彩設計の役割`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
