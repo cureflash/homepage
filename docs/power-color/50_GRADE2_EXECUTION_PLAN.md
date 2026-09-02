@@ -37,6 +37,7 @@ Latest promoted skills:
 - `pc2.landscape.design_considerations`: 12 promoted record-identically; 300 → 312.
 - `pc2.landscape.residential_color_design_process`: 12 promoted record-identically; 312 → 324.
 - `pc2.landscape.surrounding_environment_measurement`: 12 promoted record-identically; 324 → 336.
+- `pc2.conventional.jis_name_structure`: 12 promoted record-identically; 336 → 348.
 
 All twenty-nine promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI `33690978044`; PR #599 merged as `61508bbc0a214873d023fb3487e14affe2de3a13`.
 
@@ -49,11 +50,15 @@ All twenty-nine promoted skills are covered by exact-equality/full-fingerprint/s
 - Interior `インテリアエレメントの配色の考え方と技法` p.111: source-blocked; generic p.110 role/ratio material is not accepted as a substitute.
 - Landscape p.118 `国内外の景観色彩の事例`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
 - Landscape p.120 `人工要素と自然要素の色彩が共存`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`.
-- Landscape p.120 `大きな面積をもつ色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`; public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context.
-- Landscape p.120 `太陽光に影響される色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`; broad outdoor-light context is insufficient to define the official-text deterministic rule set.
-- Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`; checked public authority does not expose a distinct sufficiently rich deterministic nonvisual Grade 2 rule set.
-- Landscape p.124 `配色計画`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p124-color-scheme-plan-source-audit.md`; only the concept→scheme relation is explicit and it is already represented by p.123.
-- Landscape p.125 `色彩管理`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p125-color-management-source-audit.md`; current public authority confirms scope/order but not a distinct sufficiently rich deterministic nonvisual rule set.
+- Landscape p.120 `大きな面積をもつ色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`.
+- Landscape p.120 `太陽光に影響される色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`.
+- Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`.
+- Landscape p.124 `配色計画`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p124-color-scheme-plan-source-audit.md`.
+- Landscape p.125 `色彩管理`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p125-color-management-source-audit.md`.
+- p.128 `和色名` individual Grade 2 subset/readings: source-blocked under `docs/power-color/audits/2026-09-03-grade2-p128-washokumei-source-audit.md`.
+- p.132 `外来色名` individual Grade 2 subset/readings: source-blocked under `docs/power-color/audits/2026-09-03-grade2-p132-gairaishokumei-source-audit.md`.
+- p.138 `資料・色名`: source-blocked as a distinct skill under `docs/power-color/audits/2026-09-03-grade2-p138-color-reference-source-audit.md`.
+- p.142 `資料・配色イメージ手法の確立`: source-blocked as a distinct skill under `docs/power-color/audits/2026-09-03-grade2-p142-image-scheme-method-source-audit.md`.
 
 Do not repeat those routes unless new explicit auditable authority appears.
 
@@ -206,8 +211,32 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-p128-jis-conventional-name-str
 
 `pc2.conventional.jis_name_structure` is limited to current AFT p.128/p.132 scope order and explicit JIS Z 8102:2001 structure: systematic versus conventional names and chromatic/achromatic systematic-name subdivision. Individual Grade 2 name membership, readings, Munsell values, RGB/HEX/display values, swatches, etymology and Grade3→Grade2 inference remain unauthorized. State: 12/12 independently verified and promoted record-identically; runtime 336 → 348 and twenty-eight → twenty-nine skills. Power Color CI `33690978044` passed; PR #599 merged as `61508bbc0a214873d023fb3487e14affe2de3a13`.
 
+## p.128 `和色名` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-p128-washokumei-source-audit.md`.
+
+Current AFT authority confirms the p.128–p.132 scope/order, while current JCRI/JSA material confirms the JIS Z 8102:2001 conventional-name framework. No current explicit auditable public authority exposes the Grade 2 pp.128–131 individual Japanese-name subset/readings. Do not project the full JIS corpus or Grade 3 records into Grade 2, and do not infer readings, Munsell values, RGB/HEX/display values or swatch appearance. No questions were generated. PR #603 merged after Power Color CI `33693030915` succeeded.
+
+## p.132 `外来色名` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-p132-gairaishokumei-source-audit.md`.
+
+Current AFT authority confirms p.132 placement and p.138 as the following reference section. Current JCRI/JSA material confirms the JIS Z 8102:2001 conventional-name framework but does not publicly expose the current Grade 2 pp.132–137 individual foreign-name subset/readings. Historical or unofficial Grade 2 study lists, the full JIS corpus, and Grade 3 records are not accepted as membership authority. Do not infer readings, etymologies, Munsell values, RGB/HEX/display values or swatch appearance. No questions were generated.
+
+## p.138 `資料・色名` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-p138-color-reference-source-audit.md`.
+
+Current official material confirms the reference section's existence and placement but does not publicly expose the current p.138 reference pages or a closed deterministic nonvisual rule set. An external JIS color-name table is not assumed record-identical to the official Grade 2 pages. Do not manufacture questions from the heading or duplicate `pc2.conventional.jis_name_structure`. No questions were generated.
+
+## p.142 `資料・配色イメージ手法の確立` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-p142-image-scheme-method-source-audit.md`.
+
+Current AFT/JCRI material supports color-image coordination and empirical color-image research generally, but public first-party authority does not expose the exact current p.142 establishment procedure sufficiently to authorize production answers. Historical/secondary step sequences are not promoted as current official facts. Do not infer palette appearance, hue/tone ranges, area ratios, RGB/HEX/display values or duplicate `pc2.image.image_scheme_keywords`. No questions were generated.
+
 ## Exact next start point
 
-Source-acquire the individual Grade 2 p.128 `和色名` boundary from current explicit auditable authority. Do not infer Grade 2 membership or readings from Grade 3, and do not infer RGB/HEX/display values, swatches, Munsell values or appearance. If no sufficiently explicit auditable boundary is available, record the topic source-blocked.
+The current public official Grade 2 table-of-contents frontier is exhausted after p.142. Grade 2 remains incomplete because recorded source-blocked topics remain. Do not repeat a blocked source route without new explicit auditable authority. Further authoring may resume only at a recorded blocked topic for which new authority establishes a sufficiently explicit deterministic boundary.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
