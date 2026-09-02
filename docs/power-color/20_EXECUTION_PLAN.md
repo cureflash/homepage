@@ -47,7 +47,9 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Promote the 12 verified p.112 records record-identically; runtime 228 → 240 and twenty promoted skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine gates to all twenty promoted skills.
 - [x] Continue official text order to Landscape p.116 and source-resolve only the narrow nonvisual `景観の公共性` public-asset/cooperation boundary.
-- [ ] Create `pc2.landscape.public_nature` pending-first from that fixed p.116 boundary and independently QA every record before promotion.
+- [x] Create `pc2.landscape.public_nature` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [x] Add dedicated schema/full-fingerprint/nonvisual/shared-renderer authoring gate for `pc2.landscape.public_nature`.
+- [ ] Run the landscape gate and normal shared-engine regression, then promote only the 12 verified records record-identically; expected runtime 240 → 252 and twenty → twenty-one skills.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
