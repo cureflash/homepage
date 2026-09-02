@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 120 verified / pending 0 across ten promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 132 verified / pending 0 across eleven promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
 ## Completed Grade 2 checkpoints
 
@@ -36,7 +36,7 @@ Grade 2 runtime is 120 verified / pending 0 across ten promoted skills. Grade 3 
 - [x] `pc2.scheme.tonal`: 12 verified and promoted.
 - [x] `pc2.scheme.camaieu_faux_camaieu`: 12 verified and promoted.
 - [x] `pc2.scheme.bicolor_tricolor`: 12 verified and promoted; runtime 108 → 120.
-- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all ten promoted skills.
+- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all eleven promoted skills.
 
 ## Hue-circle division schemes
 
@@ -45,8 +45,8 @@ Grade 2 runtime is 120 verified / pending 0 across ten promoted skills. Grade 3 
 - [x] Retain only explicit rules for dyad, split complementary, tetrad, PCCS pentad and hexad; do not infer from example-image appearance or unstated geometry.
 - [x] Generate 12 pending-first text questions and independently re-derive every answer before accepting proposed answers.
 - [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
-- [ ] Promote `pc2.scheme.hue_circle_division` record-identically to runtime after exact-equality/full-fingerprint/shared-engine gates pass; target runtime 120 → 132.
+- [x] Promote `pc2.scheme.hue_circle_division` record-identically to runtime; runtime 120 → 132 with exact-equality/full-fingerprint/shared-engine gates passing.
 
 ## Exact next start point
 
-Promote `grade2-authoring-hue-circle-division-0001-0012.json` record-identically into `grade2-runtime.json`, extend the runtime gate to eleven batches / 132 verified questions, run the full Power Color CI, and only then continue source acquisition at the next official-text-order topic.
+Continue source acquisition at the next official-text-order topic after hue-circle division schemes. Author only if an explicit auditable nonvisual rule can be fixed without image appearance, RGB/HEX, monitor values or unstated geometry.
