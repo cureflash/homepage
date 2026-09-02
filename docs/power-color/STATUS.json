@@ -52,7 +52,7 @@
     "active_skill": null,
     "active_authoring": null,
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Continue current official Grade 2 text order after pc2.fashion.basic_trend_color_classification and acquire the next explicit auditable nonvisual rule before authoring."
+    "next": "Acquire an explicit auditable nonvisual answer rule for the next official-text topic, ファッションの配色 p.095. ファッションの分類 p.091 is source-blocked."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -61,7 +61,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 1,
+    "checkpoints_completed": 2,
     "generated": 0,
     "checked": 12,
     "verified": 12,
@@ -70,11 +70,12 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted the previously independently verified pc2.fashion.basic_trend_color_classification 12-question batch record-identically into Grade 2 runtime 180 to 192 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to all sixteen promoted skills."
+      "Promoted the previously independently verified pc2.fashion.basic_trend_color_classification 12-question batch record-identically into Grade 2 runtime 180 to 192 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to all sixteen promoted skills.",
+      "Audited the next official-text topic ファッションの分類 p.091. Current public first-party material confirms scope/order but no sufficiently explicit deterministic nonvisual classification rule was found, so authoring is source-blocked rather than inferred; continue at ファッションの配色 p.095."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Acquire explicit auditable authority for the next source-resolvable nonvisual Grade 2 topic after pc2.fashion.basic_trend_color_classification."
+  "next": "Source-acquire ファッションの配色 p.095; do not author until an explicit auditable nonvisual rule is fixed."
 }
