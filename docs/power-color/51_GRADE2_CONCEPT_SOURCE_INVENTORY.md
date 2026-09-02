@@ -10,19 +10,20 @@ Use the current Color Certification Association Grade 2 page:
 Use the current official Grade 2 text table of contents for scope/order only:
 `https://www.aft.or.jp/images/text_of-2st-grade_mokuji.pdf`
 
-Current JCRI / Japan Color Enterprise sources remain authority for applicable color-system facts. Current JAFCA material remains authority for fashion trend-information publication. Current Interior Industry Association material remains authority for modern interior-professional role/scope but not for blocked historical propositions. Current MLIT Landscape Act material remains authority for the p.116 public-nature boundary. Current Mutsu City Landscape Plan material is accepted public-sector authority only for the narrow p.117 explicit element-example boundary recorded below.
+Current JCRI / Japan Color Enterprise sources remain authority for applicable color-system facts. Current JAFCA material remains authority for fashion trend-information publication. Current Interior Industry Association material remains authority for modern interior-professional role/scope but not for blocked historical propositions. Current MLIT Landscape Act material remains authority for the p.116 public-nature boundary. Current Mutsu City Landscape Plan remains accepted public-sector authority only for the narrow p.117 explicit element-example boundary. Current Tokyo Metropolitan Government landscape color guidance remains accepted public-sector authority only for the narrow p.117 color-design-role boundary.
 
 ## Runtime-promoted nonvisual skills
 
-Grade 2 runtime frontier is 264 verified / pending 0 across twenty-two promoted skills. The latest promotions are:
+Grade 2 runtime frontier is 276 verified / pending 0 across twenty-three promoted skills. The latest promotions are:
 - `pc2.interior.color_planning_principles`
 - `pc2.interior.zoning_classification`
 - `pc2.interior.element_color_roles`
 - `pc2.interior.style_name_inventory`
 - `pc2.landscape.public_nature`
 - `pc2.landscape.element_examples`
+- `pc2.landscape.color_design_harmony_role`
 
-All were promoted record-identically from independently verified authoring batches. Exact-equality/full-fingerprint/shared-engine gates cover all twenty-two promoted skills.
+All were promoted record-identically from independently verified authoring batches. Exact-equality/full-fingerprint/shared-engine gates cover all twenty-three promoted skills.
 
 ## Current official-text source frontier
 
@@ -37,39 +38,30 @@ All were promoted record-identically from independently verified authoring batch
 - Interior p.112 `インテリアスタイル`: six-label membership-only boundary promoted as `pc2.interior.style_name_inventory`; no style-property mapping authorized.
 - Landscape p.116 `景観とは / 景観にかかわる近年の動向 / 景観の公共性`: narrow public-nature boundary promoted as `pc2.landscape.public_nature`.
 - Landscape p.117 `景観をつくる要素`: narrow explicit element-example/breadth boundary promoted as `pc2.landscape.element_examples`.
-- Landscape p.117 `景観色彩における色彩設計の役割`: not yet source-resolved; this is the exact next source-acquisition checkpoint.
+- Landscape p.117 `景観色彩における色彩設計の役割`: narrow surrounding-harmony/context/numerical-standard boundary promoted as `pc2.landscape.color_design_harmony_role`.
+- Landscape p.118 `地域には地域の色がある`: exact next source-acquisition checkpoint.
 
-## Landscape p.116 accepted boundary — promoted
+## Landscape p.117 accepted color-design-role boundary — promoted
 
-Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p116-source-audit.md`.
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p117-color-design-role-source-audit.md`.
 
-`pc2.landscape.public_nature` may use only:
-- good landscape as a present-and-future common national asset;
-- coordinated efforts by local public bodies, businesses and residents.
-
-State: 12/12 independently verified and record-identically promoted; runtime 240 → 252.
-
-## Landscape p.117 accepted boundary — promoted
-
-Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p117-source-audit.md`.
-
-`pc2.landscape.element_examples` may use only:
-- explicit examples: 建築物, 工作物, 道路, 公園, 河川, 港湾, 屋外広告物, 美化活動, 山, 森林, 公共事業, 個人事業;
-- the directly supported breadth of that list;
-- the explicit inclusion of `美化活動` as an activity;
-- the explicit inclusion of both `公共事業` and `個人事業`.
+`pc2.landscape.color_design_harmony_role` may use only:
+- surrounding landscape characteristics and target scale as planning considerations;
+- numerical standards as a framework suppressing extreme discordance from surroundings;
+- surrounding harmony as a requirement for site-appropriate landscape color planning;
+- place and scale as relevant planning conditions;
+- the fact that numerical compliance alone is not the planning endpoint.
 
 State:
 - 12 pending-first records created;
 - all 12 independently re-solved before proposed-answer comparison;
 - 12 verified / 0 needs_revision / 0 rejected / 0 pending;
 - A/B/C/D = 3/3/3/3;
-- one unsupported draft classification phrase removed before gate;
-- dedicated schema/source-ref/full-fingerprint/nonvisual/shared-renderer gate passed;
-- all 12 records promoted record-identically; runtime 252 → 264 and twenty-one → twenty-two skills;
-- post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in workflow run `33647175533`.
+- dedicated nonvisual/full-fingerprint/shared-renderer gate passed;
+- all 12 records promoted record-identically; runtime 264 → 276 and twenty-two → twenty-three skills;
+- post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in workflow run `33653881914`; PR #551 merged.
 
-Do not treat the source list as a universal closed taxonomy. Do not infer natural/artificial labels, color, material, building form, photograph, RGB/HEX, sampled-pixel or unstated geometry properties.
+Do not generalize Tokyo-specific numerical values into Grade 2 facts. Do not infer RGB/HEX/display values, Munsell limits, image appearance, material recommendations, hue/tone choices or unstated geometry.
 
 ## Preserved exclusions
 
@@ -85,6 +77,6 @@ Do not treat the source list as a universal closed taxonomy. Do not infer natura
 
 ## Exact next order
 
-1. Source-acquire p.117 `景観色彩における色彩設計の役割` from current authoritative material.
+1. Source-acquire p.118 `地域には地域の色がある` from current authoritative material.
 2. If and only if an explicit deterministic nonvisual rule boundary is established, record the source contract and author pending-first questions.
-3. If no such boundary is publicly auditable, record the source blocker and advance to the next official-text heading without guessing.
+3. If no such boundary is publicly auditable, record the source blocker and advance to p.118 `国内外の景観色彩の事例` without guessing.
