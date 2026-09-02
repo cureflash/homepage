@@ -32,7 +32,7 @@
 - [ ] Full Grade 3 completion gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 300 verified / pending 0 across twenty-five promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 312 verified / pending 0 across twenty-six promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 - [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
 - [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
@@ -81,8 +81,9 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Source-resolve Landscape p.122 `景観色彩設計の配慮事項` to a narrow deterministic nonvisual planning boundary. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p122-considerations-source-audit.md`.
 - [x] Create `pc2.landscape.design_considerations` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
 - [x] Add and pass the dedicated schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression; workflow run `33674008109`, PR #572 merged as `165132c83eec5fd949e0023a9dfa9bdd62438e97`.
-- [ ] Promote the 12 verified `pc2.landscape.design_considerations` records record-identically; runtime 300 → 312 and twenty-five → twenty-six skills.
-- [ ] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-six promoted skills.
+- [x] Promote the 12 verified `pc2.landscape.design_considerations` records record-identically; runtime 300 → 312 and twenty-five → twenty-six skills.
+- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-six promoted skills; Power Color CI `33676939840` succeeded and PR #577 merged as `f7661343ba41b9c00cdc9edb2035ce8b86c90f72`.
+- [ ] Continue official Grade 2 text order at Landscape p.123 `住宅の色彩設計プロセス`; source-resolve a distinct deterministic nonvisual rule set before any authoring, or record it source-blocked if public authority is insufficient.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
