@@ -6,13 +6,13 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime is now 168 verified / pending 0 across fourteen promoted skills.
+Grade 2 runtime remains 168 verified / pending 0 across fourteen promoted skills.
 
-`pc2.media.rgb_cmyk_models` was promoted record-identically from its independently verified 12-question batch, taking runtime 144 → 156.
+The next official Media Design subtopic, `コンピュータにおける画像の基本`, is now source-resolved as `pc2.media.image_basics`. Current official Grade 2 material establishes the scope/order; current Adobe professional documentation explicitly supplies the retained text-only rules: raster = pixel grid / resolution-dependent / scaling can lose detail, vector = mathematically defined shapes / scalable with crisp edges, and standard raster/vector use cases such as photographs versus logos/technical illustrations.
 
-The next Media Design slice, `pc2.media.color_management_profiles`, was source-resolved from the current official Grade 2 TOC plus current Adobe professional documentation. The retained rules are text-only: color-management purpose, ICC/color-profile role, monitor/document profiles, profile-based source/output translation, embedded-profile purpose, and Assign Profile versus Convert to Profile. RGB/HEX display values, swatches, monitor-facing color identification, screenshots, calibration values, rendering-intent judgments and inferred geometry are excluded.
+The batch was created pending-first and independently re-solved before proposed answers were accepted: 12 checked / 12 verified / 0 needs_revision / 0 rejected / pending 0, A/B/C/D = 3/3/3/3. A dedicated authoring/shared-renderer gate was added. It remains authoring-only; runtime is intentionally still 168.
 
-The batch was authored pending-first and independently re-solved before proposed answers were accepted: 12 checked / 12 verified / 0 needs_revision / 0 rejected / pending 0, A/B/C/D = 3/3/3/3. It was then promoted record-identically, taking runtime 156 → 168. Runtime exact-equality, full-fingerprint duplicate and shared Power TOEIC engine gates now cover fourteen promoted skills.
+No image appearance, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, or unstated geometry were used.
 
 Visual Design remains source-blocked because reviewed public first-party material confirms scope/order but does not expose a sufficiently explicit nonvisual answer rule. Do not repeat the same scope-only route or infer from figures/images.
 
@@ -20,4 +20,4 @@ Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Continue source acquisition at `コンピュータにおける画像の基本`, the next current official Grade 2 Media Design subtopic after `カラーマネジメントの基本`. Author only if an explicit auditable nonvisual rule is available without image appearance, RGB/HEX, monitor values, screenshots or unstated geometry. Keep Visual Design blocked until new authority exists.
+Promote the independently verified `pc2.media.image_basics` 12 records record-identically into Grade 2 runtime, taking 168 → 180, then extend exact-equality, full-fingerprint duplicate, coverage and shared Power TOEIC engine gates. After promotion, continue in current official text order to the next source-resolvable nonvisual Grade 2 topic.
