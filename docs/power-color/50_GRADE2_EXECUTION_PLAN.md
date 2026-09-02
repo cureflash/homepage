@@ -22,14 +22,15 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime remains 228 verified / pending 0 across nineteen promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
+Grade 2 runtime is 240 verified / pending 0 across twenty promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 Latest promoted skills:
 - `pc2.interior.color_planning_principles`: 12 promoted; 192 → 204.
 - `pc2.interior.zoning_classification`: 12 promoted; 204 → 216.
-- `pc2.interior.element_color_roles`: 12 promoted record-identically; 216 → 228.
+- `pc2.interior.element_color_roles`: 12 promoted; 216 → 228.
+- `pc2.interior.style_name_inventory`: 12 promoted record-identically; 228 → 240.
 
-All nineteen promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The dedicated p.110 gate asserts exact runtime equality.
+All twenty promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The dedicated p.112 gate asserts exact runtime equality.
 
 ## Preserved blocked topics
 
@@ -41,36 +42,13 @@ All nineteen promoted skills are covered by exact-equality/full-fingerprint/shar
 
 Do not repeat those routes unless new explicit auditable authority appears.
 
-## Interior p.110 — promoted
-
-Audit: `docs/power-color/audits/2026-09-02-grade2-interior-p107-p110-source-audit.md`.
-
-### `pc2.interior.element_color_roles`
-
-Accepted rule boundary only:
-- base color = broad background/base area;
-- assort color = main/supporting secondary area;
-- accent color = small emphasis area;
-- 70/25/5 = explicit conventional planning ratio only, never a value inferred from an image or floor plan.
-
-State:
-- [x] pending-first 12 created;
-- [x] independently re-solved all 12 before comparing with proposed answers;
-- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
-- [x] A/B/C/D = 3/3/3/3;
-- [x] promoted record-identically; runtime 216 → 228.
-
-## Interior p.111–112 source audit
+## Interior p.112 — promoted
 
 Audit: `docs/power-color/audits/2026-09-02-grade2-interior-p111-p112-source-audit.md`.
 
-### p.111
+### `pc2.interior.style_name_inventory`
 
-Source-blocked. Current official scope exposes the section heading but no deterministic public nonvisual rule set. Do not author from generic 70/25/5, images or inferred geometry.
-
-### p.112 `インテリアスタイル`
-
-Narrow accepted source boundary only:
+Accepted boundary remains only membership in:
 - `ナチュラル`
 - `カジュアル`
 - `オーソドックス`
@@ -78,18 +56,27 @@ Narrow accepted source boundary only:
 - `エレガント`
 - `モダン`
 
-Only membership in this six-label inventory is source-resolved. Do not infer or author style-to-hue, tone, material, shape, furniture, historical-period, image or display-color mappings from this boundary.
-
-### `pc2.interior.style_name_inventory`
-
 State:
-- [x] pending-first 12 created from membership-only questions;
+- [x] pending-first 12 created;
 - [x] independently re-solved all 12 before comparing with proposed answers;
 - [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
 - [x] A/B/C/D = 3/3/3/3;
-- [x] dedicated gate added for schema invariants, six-label membership logic, nonvisual/shared-renderer behavior, zero within-batch fingerprints, and zero fingerprint collision with current runtime;
-- [ ] run gates/CI and promote record-identically only if green.
+- [x] dedicated schema/full-fingerprint/nonvisual/shared-renderer gate passed;
+- [x] promoted record-identically; runtime 228 → 240;
+- [x] exact-equality/full-fingerprint/shared Power TOEIC engine coverage extended to twenty skills.
+
+Do not infer style-to-hue, tone, material, shape, furniture, historical-period, image or display-color mappings.
+
+## Landscape p.116 — active source frontier
+
+Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p116-source-audit.md`.
+
+The current official Grade 2 table of contents places `景観とは`, `景観にかかわる近年の動向`, and `景観の公共性` at p.116. Only a narrow nonvisual public-nature boundary is resolved for authoring:
+- good landscape is a present-and-future common national asset under the Landscape Act basic principles;
+- good landscape formation involves coordinated public/community participation;
+- no current administrative counts or year-specific statistics are treated as stable exam facts;
+- no hue, color, material, building-form, photograph, RGB/HEX, sampled-pixel or unstated geometry inference is authorized.
 
 ## Exact next start point
 
-Run the new p.112 authoring gate and normal Power Color/shared Power TOEIC regression. If green, promote the 12 verified `pc2.interior.style_name_inventory` records record-identically to runtime, move 228 → 240, extend exact-equality/full-fingerprint/shared-engine coverage to twenty promoted skills, then continue official-text order from the next source inventory item. Keep all Grade 3 blockers and source/display gates unchanged.
+Create `pc2.landscape.public_nature` pending-first only from the fixed p.116 public-asset/cooperation boundary. Independently re-solve every record before proposed-answer comparison. Run schema, full-fingerprint duplicate, answer-position balance, nonvisual/shared-renderer and shared Power TOEIC engine gates. Promote only verified records record-identically. Keep all Grade 3 blockers and source/display gates unchanged.
