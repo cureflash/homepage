@@ -15,32 +15,32 @@
     "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
-    "runtime_questions": {"verified": 192, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification"],
-    "active_skill": "pc2.interior.color_planning_principles + pc2.interior.zoning_classification",
-    "active_authoring": ["qualifications/color-certification/data/grade2-authoring-interior-color-planning-principles-0001-0012.json", "qualifications/color-certification/data/grade2-authoring-interior-zoning-classification-0001-0012.json"],
+    "runtime_questions": {"verified": 216, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification"],
+    "active_skill": "pc2.interior.element_color_roles",
+    "active_authoring": "qualifications/color-certification/data/grade2-authoring-interior-element-color-roles-0001-0012.json",
+    "active_authoring_qa": {"checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "After CI/main merge, promote the two independently verified Interior p.105 batches record-identically: color_planning_principles 12 and zoning_classification 12; runtime 192 -> 216 if all promotion gates remain green."
+    "next": "Promote pc2.interior.element_color_roles record-identically from verified authoring into runtime 216 -> 228 after CI/main merge, then extend exact-equality/full-fingerprint/coverage/shared Power TOEIC engine gates."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 4,
-    "generated": 24,
-    "checked": 24,
-    "verified": 24,
+    "checkpoints_completed": 3,
+    "generated": 12,
+    "checked": 36,
+    "verified": 36,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Resolved インテリア色彩の考え方 p.105 to four explicit nonvisual planning principles from an auditable source using the same heading and directly citing the official Grade 2 text.",
-      "Generated pending-first pc2.interior.color_planning_principles 12 and independently re-solved all 12: verified 12, A/B/C/D=3/3/3/3.",
-      "Resolved インテリア空間の分類とゾーニング p.105 to the explicit three-zone taxonomy: public/private/service; DAIKEN independently corroborates zoning as use-based grouping.",
-      "Generated pending-first pc2.interior.zoning_classification 12 and independently re-solved all 12: verified 12, A/B/C/D=3/3/3/3; combined authoring gate checks schema, fingerprints and shared text renderer."
+      "Promoted pc2.interior.color_planning_principles 12 record-identically; runtime 192 -> 204.",
+      "Promoted pc2.interior.zoning_classification 12 record-identically; runtime 204 -> 216; exact-equality/full-fingerprint/shared Power TOEIC engine gates passed.",
+      "Authored pc2.interior.element_color_roles 12 pending-first from the fixed p.110 source boundary and independently re-solved all 12: verified 12 / pending 0 / A-B-C-D 3-3-3-3; dedicated nonvisual/shared-renderer gate added."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote both verified Interior p.105 authoring batches record-identically after CI/main merge; do not rewrite records during promotion."
+  "next": "Promote verified pc2.interior.element_color_roles record-identically after CI/main merge."
 }
