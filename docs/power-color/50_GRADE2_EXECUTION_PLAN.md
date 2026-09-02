@@ -44,6 +44,7 @@ All twenty-four promoted skills are covered by exact-equality/full-fingerprint/s
 - Interior `インテリア空間のカラーコーディネーション` p.107: source-blocked.
 - Interior `インテリアエレメントの配色の考え方と技法` p.111: source-blocked; generic p.110 role/ratio material is not accepted as a substitute.
 - Landscape p.118 `国内外の景観色彩の事例`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`; current public official material does not expose a closed official-text example set with deterministic nonvisual answer rules.
+- Landscape p.120 `人工要素と自然要素の色彩が共存`: source-blocked for authoring under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`; public evidence confirms only the broad coexistence concept, not a sufficiently rich closed deterministic Grade 2 rule set.
 
 Do not repeat those routes unless new explicit auditable authority appears.
 
@@ -112,8 +113,14 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-au
 
 The current official Grade 2 material establishes the scope/order but the publicly auditable material does not expose the official text's closed case-study set together with deterministic nonvisual answer rules. Do not substitute arbitrary outside cases, infer from photographs/display colors, or manufacture region-to-color mappings. Revisit only if new explicit auditable authority appears.
 
+## Landscape p.120 `人工要素と自然要素の色彩が共存` — source-blocked for authoring
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`.
+
+The current official table of contents confirms this p.120 topic under `景観色彩における色彩の基礎知識`. Public corroboration confirms artificial and natural elements as legitimate landscape-analysis categories and supports the broad coexistence concept. It does not expose the official text's detailed rule set or a sufficiently rich closed example inventory. Do not manufacture a 12-question batch from heading paraphrases, arbitrary external taxonomies, image/material appearance, or inferred color properties.
+
 ## Exact next start point
 
-Continue official text order to Landscape p.120 `人工要素と自然要素の色彩が共存`. Source-acquire an explicit deterministic nonvisual rule boundary before authoring anything. If the boundary cannot be established, record a source blocker and continue in official-text order without guessing.
+Continue official text order to Landscape p.120 `ライフサイクルの長い色彩`. Source-acquire an explicit deterministic nonvisual rule boundary before authoring anything. If the boundary cannot be established, record a source blocker and continue in official-text order without guessing.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
