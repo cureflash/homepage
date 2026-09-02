@@ -18,28 +18,30 @@
     "runtime_questions": {"verified": 240, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory"],
     "active_skill": "pc2.landscape.public_nature",
-    "active_authoring": null,
-    "active_authoring_qa": null,
+    "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-public-nature-0001-0012.json",
+    "active_authoring_qa": {"checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Create pc2.landscape.public_nature pending-first only from the narrow p.116 Landscape Act public-asset/cooperation source boundary, independently QA every record, then run schema/full-fingerprint/answer-position/nonvisual/shared-renderer/shared-engine gates before promotion."
+    "next": "Run the dedicated pc2.landscape.public_nature authoring/full-fingerprint/nonvisual/shared-renderer gate and normal shared-engine regression; promote the 12 verified records record-identically only if green."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 2,
-    "generated": 0,
-    "checked": 12,
-    "verified": 12,
+    "checkpoints_completed": 4,
+    "generated": 12,
+    "checked": 24,
+    "verified": 24,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
       "Promoted pc2.interior.style_name_inventory 12 record-identically; runtime 228 -> 240; exact-equality/full-fingerprint/shared Power TOEIC engine gates extended to twenty promoted skills.",
-      "Continued official Grade 2 text order to Landscape p.116 and source-resolved only a narrow nonvisual public-nature boundary from current Color Certification scope plus MLIT Landscape Act authority; no visual/color/geometry inference was introduced."
+      "Continued official Grade 2 text order to Landscape p.116 and source-resolved only a narrow nonvisual public-nature boundary from current Color Certification scope plus MLIT Landscape Act authority; no visual/color/geometry inference was introduced.",
+      "Created pc2.landscape.public_nature as a 12-record pending-first batch limited to the p.116 public-asset/cooperation boundary.",
+      "Independently re-solved all 12 landscape records before proposed-answer comparison: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3; dedicated nonvisual/full-fingerprint/shared-renderer authoring gate added."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Begin pending-first authoring for pc2.landscape.public_nature from the fixed p.116 public-asset/cooperation boundary."
+  "next": "Gate and then record-identically promote pc2.landscape.public_nature 12 verified records; runtime remains 240 until promotion."
 }

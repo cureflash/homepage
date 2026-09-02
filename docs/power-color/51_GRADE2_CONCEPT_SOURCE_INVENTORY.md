@@ -39,9 +39,17 @@ Landscape audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p116-sourc
 
 ## Landscape p.116 accepted boundary
 
-A future `pc2.landscape.public_nature` batch may use only these explicit facts:
+`pc2.landscape.public_nature` may use only these explicit facts:
 - good landscape is treated as a present-and-future common national asset under the Landscape Act basic principles;
-- good landscape formation involves coordinated public/community participation.
+- good landscape formation involves coordinated efforts by local public bodies, businesses and residents.
+
+Authoring state:
+- 12 pending-first records created;
+- all 12 independently re-solved before proposed-answer comparison;
+- 12 verified / 0 needs_revision / 0 rejected / 0 pending;
+- A/B/C/D = 3/3/3/3;
+- dedicated schema/source-ref/full-fingerprint/nonvisual/shared-renderer gate added;
+- runtime promotion not yet performed.
 
 Do not convert current administrative counts, current-year policy statistics, or general policy history into stable Grade 2 exam facts merely because they appear in recent government material. Do not infer color, material, building-form, photograph, RGB/HEX, sampled-pixel or unstated geometry properties.
 
@@ -58,6 +66,6 @@ Do not convert current administrative counts, current-year policy statistics, or
 
 ## Exact next order
 
-1. Create `pc2.landscape.public_nature` pending-first using only the fixed p.116 public-asset/cooperation boundary.
-2. Independently re-solve every record before proposed-answer comparison and classify individually.
-3. Run schema/full-fingerprint/answer-position/nonvisual/shared-renderer/shared Power TOEIC engine gates; promote only verified records record-identically.
+1. Run schema/full-fingerprint/answer-position/nonvisual/shared-renderer/shared Power TOEIC engine gates for `pc2.landscape.public_nature`.
+2. If green, promote the 12 verified records record-identically; expected runtime 240 → 252 and twenty → twenty-one promoted skills.
+3. Continue official Grade 2 text order only after that promotion is synchronized.
