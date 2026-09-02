@@ -20,28 +20,26 @@
     "active_skill": "pc2.landscape.public_nature",
     "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-public-nature-0001-0012.json",
     "active_authoring_qa": {"checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
+    "authoring_gate": {"status": "passed", "workflow_run": 33641632788, "head": "a712615c2564943e1faa29ff83c956f6081af9c1"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Run the dedicated pc2.landscape.public_nature authoring/full-fingerprint/nonvisual/shared-renderer gate and normal shared-engine regression; promote the 12 verified records record-identically only if green."
+    "next": "Promote pc2.landscape.public_nature 12 verified records record-identically to grade2-runtime.json, then extend exact-equality/full-fingerprint/shared-engine coverage to twenty-one promoted skills and continue official-text order."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 4,
-    "generated": 12,
-    "checked": 24,
-    "verified": 24,
+    "checkpoints_completed": 1,
+    "generated": 0,
+    "checked": 12,
+    "verified": 12,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted pc2.interior.style_name_inventory 12 record-identically; runtime 228 -> 240; exact-equality/full-fingerprint/shared Power TOEIC engine gates extended to twenty promoted skills.",
-      "Continued official Grade 2 text order to Landscape p.116 and source-resolved only a narrow nonvisual public-nature boundary from current Color Certification scope plus MLIT Landscape Act authority; no visual/color/geometry inference was introduced.",
-      "Created pc2.landscape.public_nature as a 12-record pending-first batch limited to the p.116 public-asset/cooperation boundary.",
-      "Independently re-solved all 12 landscape records before proposed-answer comparison: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3; dedicated nonvisual/full-fingerprint/shared-renderer authoring gate added."
+      "Reconciled PR #539 and confirmed the dedicated pc2.landscape.public_nature authoring/full-fingerprint/nonvisual/shared-renderer gate plus normal Power Color regression passed in workflow run 33641632788 on head a712615c2564943e1faa29ff83c956f6081af9c1. Runtime remains 240 until record-identical promotion."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Gate and then record-identically promote pc2.landscape.public_nature 12 verified records; runtime remains 240 until promotion."
+  "next": "Record-identically promote pc2.landscape.public_nature 12 verified records; runtime remains 240 until promotion."
 }
