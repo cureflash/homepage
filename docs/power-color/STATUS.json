@@ -15,33 +15,35 @@
     "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
-    "runtime_questions": {"verified": 276, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature", "pc2.landscape.element_examples", "pc2.landscape.color_design_harmony_role"],
-    "active_skill": "pc2.landscape.regional_color_context",
-    "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-regional-color-context-0001-0012.json",
-    "active_authoring_qa": {"generated": 12, "checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
+    "runtime_questions": {"verified": 288, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature", "pc2.landscape.element_examples", "pc2.landscape.color_design_harmony_role", "pc2.landscape.regional_color_context"],
+    "active_skill": null,
+    "active_authoring": null,
+    "active_authoring_qa": null,
     "latest_authoring_gate": {"status": "passed", "workflow_run": 33654743141, "head": "20a9d17df4f9d2d1cdfb5b29ac7ef0dcdec913d8", "pr": 553, "merge_commit": "e5aac280779d58f891889978bb9f4b6e4740e20f"},
-    "latest_promotion_gate": {"status": "passed", "workflow_run": 33653881914, "head": "ac76eee0b4f1dfc70deffe06b76053cfd956c0b6", "pr": 551, "merge_commit": "da9e9ab003dc89a53d7fbd90d4d23ebc22f88a12"},
+    "latest_promotion_gate": {"status": "passed", "workflow_run": 33659280553, "head": "d5ce94c0e3f06207027b53e2c6388e5e2a065b81", "pr": 560, "merge_commit": "5e1cf1ed51f4c94b9cbee8465eabdb754ae05702"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Promote pc2.landscape.regional_color_context 12 verified records record-identically to grade2-runtime.json; runtime 276 -> 288 and twenty-three -> twenty-four promoted skills. Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage, then continue official-text order to Landscape p.118 国内外の景観色彩の事例."
+    "source_blocked": ["Landscape p.118 国内外の景観色彩の事例"],
+    "next": "Landscape p.118 国内外の景観色彩の事例 remains source-blocked by docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md. Continue official-text order to p.120 人工要素と自然要素の色彩が共存 and source-acquire an explicit deterministic nonvisual boundary before authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 2,
+    "checkpoints_completed": 3,
     "generated": 0,
     "checked": 0,
     "verified": 0,
-    "revision_events": 0,
+    "revision_events": 1,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled latest main and confirmed no competing open Power Color PR; detected PR #553 had already merged the p.118 regional-color authoring batch.",
-      "Confirmed pc2.landscape.regional_color_context authoring gate passed in workflow run 33654743141 with 12/12 independently verified and A/B/C/D=3/3/3/3; did not duplicate authoring or source investigation."
+      "Reconciled latest main/open PR state and confirmed the p.118 regional-color authoring batch was already independently verified; no duplicate authoring or source investigation was performed.",
+      "Promoted all 12 pc2.landscape.regional_color_context records record-identically into Grade 2 runtime; runtime 276 -> 288 and twenty-three -> twenty-four skills. Exact-union, full-fingerprint and shared Power TOEIC question-bank/session/workout gates pass.",
+      "Fixed the stale pre-promotion authoring-test assertion that required the regional-color records to be absent from runtime; full Power Color CI run 33659280553 then succeeded and PR #560 merged as 5e1cf1ed51f4c94b9cbee8465eabdb754ae05702."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote pc2.landscape.regional_color_context 12 verified records record-identically, then continue to p.118 国内外の景観色彩の事例."
+  "next": "Keep p.118 case studies source-blocked and resume at p.120 人工要素と自然要素の色彩が共存 source acquisition."
 }
