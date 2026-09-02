@@ -67,16 +67,26 @@ State:
 
 Do not infer style-to-hue, tone, material, shape, furniture, historical-period, image or display-color mappings.
 
-## Landscape p.116 — active source frontier
+## Landscape p.116 — active authoring
 
 Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p116-source-audit.md`.
 
-The current official Grade 2 table of contents places `景観とは`, `景観にかかわる近年の動向`, and `景観の公共性` at p.116. Only a narrow nonvisual public-nature boundary is resolved for authoring:
+The current official Grade 2 table of contents places `景観とは`, `景観にかかわる近年の動向`, and `景観の公共性` at p.116. Only a narrow nonvisual public-nature boundary is resolved:
 - good landscape is a present-and-future common national asset under the Landscape Act basic principles;
-- good landscape formation involves coordinated public/community participation;
+- good landscape formation involves coordinated efforts by local public bodies, businesses and residents;
 - no current administrative counts or year-specific statistics are treated as stable exam facts;
 - no hue, color, material, building-form, photograph, RGB/HEX, sampled-pixel or unstated geometry inference is authorized.
 
+### `pc2.landscape.public_nature`
+
+State:
+- [x] pending-first 12 created from the fixed public-asset/cooperation facts;
+- [x] independently re-solved all 12 before comparing with proposed answers;
+- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
+- [x] A/B/C/D = 3/3/3/3;
+- [x] dedicated schema/source-ref/full-fingerprint/nonvisual/shared-renderer gate added;
+- [ ] run gates/CI and promote record-identically only if green.
+
 ## Exact next start point
 
-Create `pc2.landscape.public_nature` pending-first only from the fixed p.116 public-asset/cooperation boundary. Independently re-solve every record before proposed-answer comparison. Run schema, full-fingerprint duplicate, answer-position balance, nonvisual/shared-renderer and shared Power TOEIC engine gates. Promote only verified records record-identically. Keep all Grade 3 blockers and source/display gates unchanged.
+Run the `pc2.landscape.public_nature` authoring/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color/shared Power TOEIC regression. If green, promote the 12 verified records record-identically to runtime, move 240 → 252 and twenty → twenty-one promoted skills, then continue official-text order. Keep all Grade 3 blockers and source/display gates unchanged.
