@@ -88,9 +88,10 @@
       "Landscape p.121 季節や時間の変化を感じさせる多様な色彩",
       "Landscape p.124 配色計画",
       "Landscape p.125 色彩管理",
-      "慣用色名 p.128 和色名 individual Grade 2 subset/readings"
+      "慣用色名 p.128 和色名 individual Grade 2 subset/readings",
+      "慣用色名 p.132 外来色名 individual Grade 2 subset/readings"
     ],
-    "next": "Source-acquire the individual Grade 2 p.132 外来色名 boundary from current explicit auditable authority. Do not infer Grade 2 membership/readings from the full JIS corpus or Grade 3, and do not infer RGB/HEX/display values or swatch appearance."
+    "next": "Continue in official text order at p.138 資料・色名 and source-acquire only explicit current auditable nonvisual facts. If it is reference-only material without a deterministic examinable boundary, record source-blocked rather than manufacturing questions."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -99,7 +100,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 1,
+    "checkpoints_completed": 2,
     "generated": 0,
     "checked": 0,
     "verified": 0,
@@ -108,11 +109,12 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Audited the individual Grade 2 p.128 和色名 boundary. Current AFT authority confirms scope/order and JIS/JCRI authority confirms the governing JIS conventional-name framework, but no current explicit auditable source exposes the Grade 2 p.128–131 individual subset/readings; recorded source-blocked without Grade3/full-JIS inference."
+      "Reconciled PR #603 after Power Color CI 33693030915 succeeded and merged the p.128 和色名 source-blocked checkpoint as 4839744b7b8ca6c6673c389e55142063895751cb.",
+      "Audited the individual Grade 2 p.132 外来色名 boundary. Current AFT authority confirms scope/order and JIS/JCRI authority confirms the governing JIS conventional-name framework, but no current explicit auditable source exposes the Grade 2 p.132–137 individual subset/readings; recorded source-blocked without full-JIS/Grade3/historical-list inference."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-acquire the individual Grade 2 p.132 外来色名 boundary from current explicit auditable authority. Do not infer Grade 2 membership/readings from the full JIS corpus or Grade 3, and do not infer RGB/HEX/display values or swatch appearance."
+  "next": "Continue in official text order at p.138 資料・色名 and source-acquire only explicit current auditable nonvisual facts. If it is reference-only material without a deterministic examinable boundary, record source-blocked rather than manufacturing questions."
 }
