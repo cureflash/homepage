@@ -18,15 +18,15 @@
     "runtime_questions": {"verified": 228, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles"],
     "active_skill": "pc2.interior.style_name_inventory",
-    "active_authoring": null,
-    "active_authoring_qa": null,
+    "active_authoring": "qualifications/color-certification/data/grade2-authoring-interior-style-name-inventory-0001-0012.json",
+    "active_authoring_qa": {"checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Author pc2.interior.style_name_inventory pending-first from the narrow p.112 six-label source boundary, independently QA every record, then run schema/full-fingerprint/answer-position/shared-renderer gates before promotion."
+    "next": "Promote the 12 verified pc2.interior.style_name_inventory records record-identically to runtime only after the dedicated authoring/full-fingerprint/nonvisual/shared-renderer gate and shared Power TOEIC engine regression are green."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 3,
-    "generated": 0,
+    "checkpoints_completed": 2,
+    "generated": 12,
     "checked": 12,
     "verified": 12,
     "revision_events": 0,
@@ -34,13 +34,12 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted pc2.interior.element_color_roles 12 record-identically; runtime 216 -> 228; exact runtime equality and shared Power TOEIC engine gates extended to nineteen skills.",
-      "Audited Interior p.111 インテリアエレメントの配色の考え方と技法; public authority does not expose a deterministic nonvisual rule set, so it remains source-blocked and no questions were generated.",
-      "Audited Interior p.112 インテリアスタイル; fixed only the corroborated six-label nonvisual inventory for the next pending-first authoring batch, with all style-property/image/color mappings still excluded."
+      "Created pc2.interior.style_name_inventory as a 12-record pending-first p.112 membership-only batch; no style-property, image, RGB/HEX or monitor-facing inference was introduced.",
+      "Independently re-solved all 12 records before proposed-answer comparison: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3; dedicated nonvisual/full-fingerprint/shared-renderer authoring gate added."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Begin pending-first authoring for pc2.interior.style_name_inventory from the fixed p.112 six-label boundary."
+  "next": "Gate and then record-identically promote pc2.interior.style_name_inventory 12 verified records; runtime remains 228 until promotion."
 }
