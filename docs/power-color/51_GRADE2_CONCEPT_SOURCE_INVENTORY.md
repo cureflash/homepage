@@ -27,32 +27,25 @@ Current JCRI first-party Munsell references:
 8. `pc2.scheme.tonal`
 9. `pc2.scheme.camaieu_faux_camaieu`
 10. `pc2.scheme.bicolor_tricolor`
-   - official Grade 2 TOC confirms scope/order;
-   - Plus Colors and MEGASOFT independently agree on the retained nonvisual intersection: bicolor/bicolore is a clear-contrast two-color scheme; tricolor/tricolore is a clear-contrast three-color scheme; bicolore is also called bicolor;
-   - exact hue differences, PCCS tone boundaries, saturation thresholds, achromatic placement, RGB/HEX, monitor values and image appearance are excluded;
-   - audit: `docs/power-color/audits/2026-09-01-grade2-bicolor-tricolor.md`.
 11. `pc2.scheme.hue_circle_division`
-   - current official Grade 2 sample explicitly tests split complementary and pentad, permits achromatic colors in hexad, and states that two dyads can form a tetrad;
-   - Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the 2020 revised official text, explicitly fixes the retained nonvisual rules for dyad, split complementary, tetrad, PCCS pentad and hexad;
-   - no image appearance, RGB/HEX, monitor value, inferred polygon geometry or unstated tone restriction is used;
-   - audit: `docs/power-color/audits/2026-09-02-grade2-hue-circle-division.md`.
-
-All eleven skills above are runtime-promoted record-identically. Grade 2 runtime frontier is 132 verified / pending 0.
-
 12. `pc2.image.image_scheme_keywords`
-   - current official Grade 2 TOC confirms the ten image-scheme labels and exact scope/order;
-   - Plus Colors explicitly maps the ten labels to characteristic image words and cites the 2020 revised official text under Level 1 coordinator supervision;
-   - current official Level 1 second-stage sample independently confirms `ダイナミック = 強い・はっきりした・派手な`;
-   - retained questions are text-semantic only; no color appearance, RGB/HEX, monitor value or inferred image geometry;
-   - authoring 12/12 verified, pending 0, promoted record-identically;
-   - audit: `docs/power-color/audits/2026-09-02-grade2-image-scheme-keywords.md`.
+
+All twelve skills above are runtime-promoted record-identically. Grade 2 runtime frontier is 144 verified / pending 0.
+
+13. `pc2.media.rgb_cmyk_models`
+   - current official Grade 2 TOC confirms Media Design and specifically `画面や印刷における色表現` / `カラーマネジメントの基本`;
+   - current official Grade 2 sample explicitly confirms CMY as the subtractive-mixing primaries;
+   - current Adobe professional documentation explicitly fixes the retained text-only rules: RGB = additive red/green/blue light used for displays; full-intensity RGB = white; CMYK = subtractive cyan/magenta/yellow with black added for practical four-color process printing;
+   - exact RGB/HEX values, swatches, screenshots, image appearance, device-specific visual judgments and inferred geometry are excluded;
+   - authoring 12/12 verified, pending 0, A/B/C/D = 3/3/3/3; not yet runtime-promoted;
+   - audit: `docs/power-color/audits/2026-09-02-grade2-visual-media-source-audit.md`.
 
 ## Current official-text scope inventory
 
-The current official Grade 2 TOC frontier is now after image-based schemes. Remaining later topics include:
-- visual/media, fashion, interior and landscape color coordination;
-- conventional color names;
-- PCCS tone-by-value appendix.
+The current official Grade 2 TOC frontier is now inside the Visual / Media block:
+- Visual Design: scope-confirmed, but current public first-party material reviewed does not expose a sufficiently explicit nonvisual answer rule, so `pc2.visual.*` authoring is blocked rather than inferred.
+- Media Design: `pc2.media.rgb_cmyk_models` is source-resolved and verified; later Media Design subtopics remain unreviewed.
+- Remaining later topics include fashion, interior and landscape color coordination, conventional color names, and the PCCS tone-by-value appendix.
 
 The TOC establishes scope and search order only. Do not generate a micro-skill from a TOC label unless the answer rule is explicit in acceptable authority.
 
@@ -62,10 +55,12 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 - Do not reconstruct official image choices from pixels or screenshots.
 - Do not infer monitor-facing colors without approved display references.
 - Do not broaden any resolved scheme beyond its independently corroborated text-only intersection.
+- Do not author Visual Design terminology from scope labels alone; acquire an explicit auditable rule first.
 - The stale incomplete `power-color-grade2-tonal-promotion` branch is not authority.
 
 ## Exact next order
 
 1. Grade 2 runtime frontier is 144 verified / pending 0 across twelve promoted skills.
-2. Continue source acquisition at Visual Design, the next current official-text topic.
-3. Do not infer answers from images, RGB/HEX, monitor values, screenshots or unstated geometry.
+2. Promote verified `pc2.media.rgb_cmyk_models` record-identically to runtime 156 and extend exact-equality/full-fingerprint/shared-engine gates.
+3. Keep Visual Design source-blocked; do not repeat the same scope-only route until new explicit authority is available.
+4. Do not infer answers from images, RGB/HEX values, monitor values, screenshots or unstated geometry.
