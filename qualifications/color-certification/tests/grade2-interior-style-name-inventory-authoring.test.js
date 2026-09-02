@@ -13,7 +13,7 @@ function labelsInChoice(choice) {
   return choice.split('・');
 }
 
-test('Grade 2 Interior p112 style-name batch is independently verified, inventory-only, balanced and not yet runtime-promoted', () => {
+test('Grade 2 Interior p112 style-name batch is independently verified, inventory-only, balanced and runtime-promoted record-identically', () => {
   assert.equal(batch.grade, 2);
   assert.equal(batch.skill.id, 'pc2.interior.style_name_inventory');
   assert.equal(batch.questions.length, 12);
@@ -60,7 +60,7 @@ test('Grade 2 Interior p112 style-name batch is independently verified, inventor
   assert.deepEqual(positions, [3, 3, 3, 3]);
   const batchFingerprints = batch.questions.map(fingerprint);
   assert.equal(new Set(batchFingerprints).size, 12);
-  const runtimeFingerprints = new Set(runtime.questions.map(fingerprint));
-  assert.equal(batchFingerprints.some((fp) => runtimeFingerprints.has(fp)), false);
-  assert.equal(runtime.questions.some((q) => q.skillId === batch.skill.id), false);
+  const runtimeQuestions = runtime.questions.filter((q) => q.skillId === batch.skill.id);
+  assert.deepEqual(runtimeQuestions, batch.questions);
+  assert.deepEqual(runtime.skills.find((skill) => skill.id === batch.skill.id), batch.skill);
 });
