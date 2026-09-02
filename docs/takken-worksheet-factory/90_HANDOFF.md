@@ -8,14 +8,13 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed the mapping half-checkpoint for `takken-concept-development-permission`.
+Completed the knowledge-extraction half-checkpoint for `takken-concept-development-completion`.
 
-- Kept all 9 canonical knowledge items unchanged.
-- Mapped verified `takken-q-65-001` only to `takken-k-development-permission-city-quasi-general-rule` and `takken-k-development-permission-authority`, which the question directly measures.
-- Mapped verified `takken-q-65-002` only to `takken-k-development-permission-public-interest-building-exemption`, because the stem/answer explicitly establishes the existence of that statutory exception.
-- Did not infer coverage for the other Article 29 exceptions from the generic “など” wording.
-- Left six knowledge items as explicit Phase 4.3 deficits: small-scale development, agriculture/forestry/fishery buildings, urban-planning projects, land readjustment, disaster emergency measures, and ordinary management/light acts.
+- Added 4 canonical knowledge items from Urban Planning Act Article 36: completion notice, conformity inspection, inspection-certificate issuance, and completion public notice.
+- Kept source unit `development-permission-procedure` and source facts `u66-f1` / `u66-f2` as the canonical unit linkage.
+- Verified the Article 36 flow against the e-Gov statute text: completion notice -> prompt conformity inspection -> inspection certificate when conforming -> prompt completion public notice.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed.
+- `takken-q-66-001` and `takken-q-66-002` are still unmapped in the Phase 4 knowledge map; that direct-evidence mapping is the next checkpoint.
 - No Phase 4.3 question generation, print generation, or app linkage was started.
 
 ## Status after this run
@@ -26,16 +25,16 @@ Completed the mapping half-checkpoint for `takken-concept-development-permission
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 85/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 85
-- Canonical knowledge items: 431
+- Concepts with canonical knowledge items: 86
+- Canonical knowledge items: 435
 - Existing verified questions mapped: 100
-- Explicit unmapped knowledge gaps: 286
+- Explicit unmapped knowledge gaps: 290
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Start `takken-concept-development-completion`: extract its canonical atomic knowledge items from the source unit and 2026-04-01 primary law, then map only existing verified questions that directly measure those items. Do not begin Phase 4.3.
+Map verified `takken-q-66-001` and `takken-q-66-002` only to the `development-completion` knowledge items they directly measure, then mark `takken-concept-development-completion` fully reconciled. Do not begin Phase 4.3.
 
 ## publication invariant
 
