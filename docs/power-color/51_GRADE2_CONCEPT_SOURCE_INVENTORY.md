@@ -10,7 +10,7 @@ Use the current Color Certification Association Grade 2 page:
 Use the current official Grade 2 text table of contents for scope/order only:
 `https://www.aft.or.jp/images/text_of-2st-grade_mokuji.pdf`
 
-Current JCRI / Japan Color Enterprise sources remain authority for applicable color-system facts. Current JAFCA material remains authority for fashion trend-information publication. Current Interior Industry Association material remains authority for modern interior-professional role/scope but not for blocked historical propositions. Current MLIT Landscape Act material remains authority for the p.116 public-nature boundary. Current Mutsu City Landscape Plan remains accepted public-sector authority only for the narrow p.117 explicit element-example boundary. Current Tokyo Metropolitan Government landscape color guidance remains accepted public-sector authority only for the narrow p.117 color-design-role boundary. Current Japan Fashion Association and Japan Civil Engineering Consultants Association material are accepted only for the narrow p.118 regional-context relationship boundary documented in the source audit.
+Current JCRI / Japan Color Enterprise sources remain authority for applicable color-system facts. Current JAFCA material remains authority for fashion trend-information publication. Current Interior Industry Association material remains authority for modern interior-professional role/scope but not for blocked historical propositions. Current MLIT Landscape Act material remains authority for the p.116 public-nature boundary. Current Mutsu City Landscape Plan remains accepted public-sector authority only for the narrow p.117 explicit element-example boundary. Current Tokyo Metropolitan Government landscape color guidance remains accepted public-sector authority only for the narrow p.117 color-design-role boundary. Current Japan Fashion Association and Japan Civil Engineering Consultants Association material are accepted only for the narrow p.118 regional-context relationship boundary documented in the source audit. Current Color Prism landscape-color material and Itami City public-facility landscape guidance are accepted only for the narrow p.120 long-lifecycle relationship boundary documented in its source audit.
 
 ## Runtime-promoted nonvisual skills
 
@@ -39,6 +39,7 @@ All twenty-four runtime skills were promoted record-identically from independent
 - Landscape p.118 `地域には地域の色がある`: `pc2.landscape.regional_color_context` promoted.
 - Landscape p.118 `国内外の景観色彩の事例`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
 - Landscape p.120 `人工要素と自然要素の色彩が共存`: source-blocked for authoring under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`. Public evidence confirms only the broad coexistence concept, not a sufficiently rich closed deterministic Grade 2 rule set.
+- Landscape p.120 `ライフサイクルの長い色彩`: source-resolved under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-long-lifecycle-source-audit.md`; `pc2.landscape.long_lifecycle_color` is 12/12 independently verified and awaits record-identical runtime promotion.
 
 ## Landscape p.118 accepted regional-context boundary — promoted
 
@@ -51,6 +52,19 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-regional-color-
 - the distinction between contextual regional color thinking and unsupported fixed locality-to-one-color mappings.
 
 State: 12/12 independently verified, A/B/C/D=3/3/3/3, promoted record-identically; runtime 276 → 288. Post-promotion exact-union/full-fingerprint/shared Power TOEIC engine gate passed in CI `33659280553`.
+
+## Landscape p.120 accepted long-lifecycle boundary — verified, awaiting promotion
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-long-lifecycle-source-audit.md`.
+
+`pc2.landscape.long_lifecycle_color` may use only:
+- buildings and bridges as artificial elements that can remain in place for long periods;
+- surrounding harmony as a planning priority over short-term fashion, novelty or individual self-assertion;
+- the explicit caution that artificial landscape colors can occupy large visual areas;
+- durability and weather resistance as relevant considerations for outdoor long-lived elements;
+- the public-sector premise that public facilities remain for long periods and are seen by many people.
+
+State: pending-first batch created, all 12 independently re-solved, 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D=3/3/3/3. Pre-promotion ID/schema/full-fingerprint/nonvisual/shared-renderer gate and normal regression passed in CI `33661736671`; PR #563 merged as `548b14d26bee4f85570fdb56c865cbbb800ab591`. Runtime remains 288 until record-identical promotion.
 
 ## Preserved exclusions
 
@@ -65,10 +79,11 @@ State: 12/12 independently verified, A/B/C/D=3/3/3/3, promoted record-identicall
 - p.118 regional-context material does not authorize fixed region-to-specific-color mappings.
 - p.118 case studies must not be replaced with arbitrary external examples.
 - p.120 artificial/natural coexistence must not be expanded into an invented closed taxonomy or image/material-color inference.
+- p.120 long-lifecycle material does not authorize specific RGB/HEX, hue/tone/Munsell values, numerical lifetime/repaint cycles, material-specific prescriptions or image-derived answers.
 - Keep Grade 3 source/display blockers unchanged.
 
 ## Exact next order
 
 1. Keep p.118 `国内外の景観色彩の事例` source-blocked unless new explicit auditable authority appears.
 2. Keep p.120 `人工要素と自然要素の色彩が共存` source-blocked for authoring under its audit; broad structural context may be retained but does not justify a 12-question batch.
-3. Continue official-text order to p.120 `ライフサイクルの長い色彩` and source-acquire an explicit deterministic nonvisual boundary before authoring anything.
+3. Promote all 12 verified `pc2.landscape.long_lifecycle_color` records record-identically into Grade 2 runtime: 288 → 300 and twenty-four → twenty-five skills, then extend exact-equality/full-fingerprint/shared-engine gates.

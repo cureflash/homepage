@@ -119,8 +119,32 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natu
 
 The current official table of contents confirms this p.120 topic under `景観色彩における色彩の基礎知識`. Public corroboration confirms artificial and natural elements as legitimate landscape-analysis categories and supports the broad coexistence concept. It does not expose the official text's detailed rule set or a sufficiently rich closed example inventory. Do not manufacture a 12-question batch from heading paraphrases, arbitrary external taxonomies, image/material appearance, or inferred color properties.
 
+## Landscape p.120 `ライフサイクルの長い色彩` — verified, awaiting promotion
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-long-lifecycle-source-audit.md`.
+
+Accepted boundary for `pc2.landscape.long_lifecycle_color` is conceptual/relational only:
+- buildings and bridges are artificial elements that can remain in place for long periods;
+- surrounding harmony is prioritized over short-term fashion, novelty or individual self-assertion;
+- artificial landscape colors can occupy large visual areas, so small-consumer-goods-like casual selection is not the planning model;
+- outdoor long-lived artificial elements are exposed to sunlight and weather, making durability/weather resistance relevant;
+- public facilities provide an independently corroborated long-duration/public-visibility premise.
+
+Do not infer or introduce RGB/HEX/display values, monitor swatches, specific hue/tone/Munsell values, numerical lifetime/repaint cycles, material-specific color prescriptions, image appearance or unstated geometry.
+
+State:
+- [x] current AFT Grade 2 scope/order rechecked;
+- [x] deterministic nonvisual long-lifecycle boundary source-resolved against auditable professional/public-sector material;
+- [x] pending-first 12 created;
+- [x] independently re-solved all 12 before proposed-answer comparison;
+- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
+- [x] A/B/C/D = 3/3/3/3;
+- [x] dedicated ID/schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal regression passed in workflow run `33661736671`; PR #563 merged as `548b14d26bee4f85570fdb56c865cbbb800ab591`;
+- [ ] promote all 12 records record-identically; runtime 288 → 300 and twenty-four → twenty-five skills;
+- [ ] extend post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-five skills.
+
 ## Exact next start point
 
-Continue official text order to Landscape p.120 `ライフサイクルの長い色彩`. Source-acquire an explicit deterministic nonvisual rule boundary before authoring anything. If the boundary cannot be established, record a source blocker and continue in official-text order without guessing.
+Promote all 12 verified `pc2.landscape.long_lifecycle_color` records record-identically into Grade 2 runtime: 288 → 300 and twenty-four → twenty-five skills. Then extend exact-equality/full-fingerprint/shared Power TOEIC question-bank/session/workout gates to the complete twenty-five-skill runtime union.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
