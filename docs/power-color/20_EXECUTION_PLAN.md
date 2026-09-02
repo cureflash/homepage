@@ -93,11 +93,10 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Add and pass the dedicated source/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression; workflow run `33678931801`, PR #584 merged as `abda2407f0f9339948b12a8b9017a9f78f2b3c4c`.
 - [x] Promote the 12 verified `pc2.landscape.surrounding_environment_measurement` records record-identically; runtime 324 → 336 and twenty-seven → twenty-eight skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-eight promoted skills; promotion run `33679550547` succeeded and PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
-- [ ] Continue official Grade 2 text order at Landscape p.124 `配色計画`; source-resolve a distinct deterministic nonvisual rule set before any authoring, or record source-blocked if public authority is insufficient.
-
 - [x] Source-resolve Landscape p.123 `色を測ることによる周辺環境の把握`, author/independently QA 12/12 verified, and promote record-identically; runtime 324 → 336 and twenty-seven → twenty-eight skills. Authoring CI `33678931801`; promotion gate `33679550547`; PRs #584/#586.
 - [x] Audit Landscape p.124 `配色計画`; keep source-blocked because the only distinct explicit concept→scheme relation found is already represented in the promoted p.123 residential-process skill, while no sufficiently rich closed nonvisual p.124 rule set is publicly auditable. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p124-color-scheme-plan-source-audit.md`.
-- [ ] Continue official Grade 2 text order at Landscape p.125 `色彩管理`; source-resolve a distinct deterministic nonvisual rule set before any authoring, or record source-blocked if public authority is insufficient.
+- [x] Audit Landscape p.125 `色彩管理`; keep source-blocked because current public authority confirms the official scope/order but does not expose a distinct sufficiently rich deterministic nonvisual p.125 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p125-color-management-source-audit.md`.
+- [ ] Continue from the current official Grade 2 TOC immediately after p.125: `慣用色名（JISの慣用色名より）` p.128, beginning with `和色名` p.128. Source-resolve an explicit auditable nonvisual name/fact boundary before authoring; do not infer monitor colors or unverified mappings.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
