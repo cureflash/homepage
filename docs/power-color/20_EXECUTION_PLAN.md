@@ -42,8 +42,9 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine gates to all nineteen promoted skills.
 - [x] Audit p.111 `インテリアエレメントの配色の考え方と技法`; keep source-blocked because no deterministic nonvisual rule set is publicly auditable.
 - [x] Audit p.112 `インテリアスタイル`; source-resolve only the corroborated six-label inventory, excluding all style-property/image/color inference.
-- [ ] Create `pc2.interior.style_name_inventory` pending-first and independently QA every record before proposed-answer comparison.
-- [ ] Promote only verified p.112 records record-identically after schema/full-fingerprint/answer-position/shared-renderer/shared-engine gates pass.
+- [x] Create `pc2.interior.style_name_inventory` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [ ] Run the dedicated p.112 authoring/full-fingerprint/nonvisual/shared-renderer gate and normal shared-engine regression on the current branch.
+- [ ] Promote only the 12 verified p.112 records record-identically after all gates pass; extend runtime to 240 and twenty promoted skills.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
