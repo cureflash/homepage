@@ -8,7 +8,7 @@ const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json',
 
 function fingerprint(q) { return JSON.stringify([q.sentence, q.choices]); }
 
-test('Grade 2 Landscape p117 color-design harmony-role batch is independently verified, nonvisual, balanced and not yet runtime-promoted', () => {
+test('Grade 2 Landscape p117 color-design harmony-role batch is independently verified, nonvisual, balanced and runtime-promoted record-identically', () => {
   assert.equal(batch.grade, 2);
   assert.equal(batch.skill.id, 'pc2.landscape.color_design_harmony_role');
   assert.equal(batch.questions.length, 12);
@@ -34,7 +34,7 @@ test('Grade 2 Landscape p117 color-design harmony-role batch is independently ve
     assert.equal(/RGB|HEX|swatch|photograph|写真|画像|Munsell|マンセル|色相|トーン|素材|geometry/i.test(q.prompt + q.explanation), false);
     assert.equal(q.sourceRefs.includes('aft_grade2_current_toc_2026'), true);
     assert.equal(q.sourceRefs.includes('tokyo_landscape_color_guideline_2026'), true);
-    assert.equal(runtimeFingerprints.has(fingerprint(q)), false);
+    assert.equal(runtimeFingerprints.has(fingerprint(q)), true);
     positions[q.correctIndex] += 1;
 
     const feedback = getAnswerFeedbackModel(q, new Map());
@@ -45,6 +45,6 @@ test('Grade 2 Landscape p117 color-design harmony-role batch is independently ve
   assert.deepEqual(positions, [3, 3, 3, 3]);
   const batchFingerprints = batch.questions.map(fingerprint);
   assert.equal(new Set(batchFingerprints).size, 12);
-  assert.equal(runtime.questions.some((q) => q.skillId === batch.skill.id), false);
-  assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), false);
+  assert.deepEqual(runtime.questions.filter((q) => q.skillId === batch.skill.id), batch.questions);
+  assert.deepEqual(runtime.skills.find((skill) => skill.id === batch.skill.id), batch.skill);
 });

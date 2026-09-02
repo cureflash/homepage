@@ -113,6 +113,11 @@
       "id": "pc2.landscape.element_examples",
       "label": "景観：景観をつくる要素",
       "categoryId": "pc2.landscape"
+    },
+    {
+      "id": "pc2.landscape.color_design_harmony_role",
+      "label": "景観色彩：色彩設計と周辺調和の役割",
+      "categoryId": "pc2.landscape"
     }
   ],
   "questions": [
@@ -8409,6 +8414,378 @@
         "generatedAs": "pending_validation",
         "independentRecheck": "independently compared each restriction with the explicit multi-example list and selected the only breadth-preserving statement before comparing with proposedAnswer",
         "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩の計画で、周辺との関係について最も適切な考え方はどれですか。",
+      "sentence": "景観色彩の計画で、周辺との関係について最も適切な考え方はどれですか。",
+      "choices": [
+        "周辺の景観との調和を考慮して計画する",
+        "周辺景観とは無関係に色を決める",
+        "所有者の好みだけで色を決める",
+        "数値基準がなければ周辺景観を考慮しない"
+      ],
+      "proposedAnswer": "周辺の景観との調和を考慮して計画する",
+      "correctIndex": 0,
+      "explanation": "景観色彩では、計画地にふさわしい色彩を導くために周辺との調和を加味した色彩計画が求められます。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked the explicit surrounding-harmony planning principle and selected the only option requiring surrounding landscape harmony before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩の数値基準を設定する際に考慮される要素として、確認済み資料と整合するものはどれですか。",
+      "sentence": "景観色彩の数値基準を設定する際に考慮される要素として、確認済み資料と整合するものはどれですか。",
+      "choices": [
+        "建築主の年齢だけ",
+        "周辺の景観特性や対象の規模",
+        "施工会社の従業員数だけ",
+        "建物の販売価格だけ"
+      ],
+      "proposedAnswer": "周辺の景観特性や対象の規模",
+      "correctIndex": 1,
+      "explanation": "東京都景観色彩ガイドラインでは、数値基準は周辺の景観特性や対象の規模などを考慮して設定されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched the listed planning factors against the authoritative text and selected surrounding landscape characteristics and target scale before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩の数値基準の役割として、確認済み資料に明示されているものはどれですか。",
+      "sentence": "景観色彩の数値基準の役割として、確認済み資料に明示されているものはどれですか。",
+      "choices": [
+        "すべての建築物を同じ色にする",
+        "地域ごとの色彩差を完全になくす",
+        "周辺景観に対して極端に違和感の強い色彩を抑制する",
+        "個人の好みを禁止する"
+      ],
+      "proposedAnswer": "周辺景観に対して極端に違和感の強い色彩を抑制する",
+      "correctIndex": 2,
+      "explanation": "数値基準は、周辺の景観に対して極端に違和感の強い色彩を抑制する緩やかな枠組みとして説明されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked the stated purpose of the numerical framework and selected suppression of extremely discordant colors before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩の計画について、数値基準への適合後にも求められる考え方はどれですか。",
+      "sentence": "景観色彩の計画について、数値基準への適合後にも求められる考え方はどれですか。",
+      "choices": [
+        "数値基準に適合すれば周辺景観は考慮しなくてよい",
+        "数値基準に適合すれば計画地の条件は無視できる",
+        "数値基準への適合後は必ず同一色に統一する",
+        "基準の趣旨を踏まえ、周囲の街並みに調和する色彩計画を検討する"
+      ],
+      "proposedAnswer": "基準の趣旨を踏まえ、周囲の街並みに調和する色彩計画を検討する",
+      "correctIndex": 3,
+      "explanation": "数値基準への適合だけでなく、その設定趣旨を踏まえ、周囲の街並みに調和する色彩計画を検討することが示されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently distinguished numerical compliance from the additional stated harmony requirement and selected the only option containing both the standard intent and streetscape harmony before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "計画地にふさわしい景観色彩を導くために必要とされるものはどれですか。",
+      "sentence": "計画地にふさわしい景観色彩を導くために必要とされるものはどれですか。",
+      "choices": [
+        "周辺との調和を加味した丁寧な色彩計画",
+        "周辺を見ずに単独で色を決めること",
+        "数値基準だけを機械的に満たすこと",
+        "建築物の用途だけで色を固定すること"
+      ],
+      "proposedAnswer": "周辺との調和を加味した丁寧な色彩計画",
+      "correctIndex": 0,
+      "explanation": "計画地にふさわしい色彩を導くには、周辺との調和を加味した丁寧な色彩計画が欠かせないとされています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the site-appropriate planning requirement and selected careful planning with surrounding harmony before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観調和の考え方や色彩計画の進め方を検討するとき、確認済み資料が示す条件の組合せはどれですか。",
+      "sentence": "景観調和の考え方や色彩計画の進め方を検討するとき、確認済み資料が示す条件の組合せはどれですか。",
+      "choices": [
+        "所有者の年齢・職業",
+        "場所・規模",
+        "工期・施工人数",
+        "販売価格・広告費"
+      ],
+      "proposedAnswer": "場所・規模",
+      "correctIndex": 1,
+      "explanation": "ガイドラインの活用編は、場所や規模に応じた景観調和の考え方や色彩計画の進め方を確認するものとされています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked the explicit conditions attached to harmony and planning procedures and selected place and scale before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩の数値基準に関する説明として最も適切なものはどれですか。",
+      "sentence": "景観色彩の数値基準に関する説明として最も適切なものはどれですか。",
+      "choices": [
+        "全国のすべての地域で同じ値を使うことを目的とする",
+        "周辺との関係を考えず色を一意に指定する",
+        "周辺景観との極端な不調和を抑えるための枠組みとして機能する",
+        "建築物の用途を色だけで判定するための基準である"
+      ],
+      "proposedAnswer": "周辺景観との極端な不調和を抑えるための枠組みとして機能する",
+      "correctIndex": 2,
+      "explanation": "確認済み資料では、数値基準は周辺景観に対して極端に違和感の強い色彩を抑制する枠組みとして位置づけられています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently compared each description with the documented function of numerical standards and selected the surrounding-discordance suppression role before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩設計における「基準」と「計画」の関係として適切なものはどれですか。",
+      "sentence": "景観色彩設計における「基準」と「計画」の関係として適切なものはどれですか。",
+      "choices": [
+        "基準に適合すれば周辺との調和は不要になる",
+        "計画では基準を無視してよい",
+        "基準と計画は互いに無関係である",
+        "数値基準を確認しつつ、その趣旨と周辺との調和も踏まえて計画する"
+      ],
+      "proposedAnswer": "数値基準を確認しつつ、その趣旨と周辺との調和も踏まえて計画する",
+      "correctIndex": 3,
+      "explanation": "ガイドラインは、数値基準への適合に加えて、基準の趣旨と周辺の街並みとの調和を踏まえた色彩計画を求めています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently combined the documented numerical-standard and harmony requirements and selected the only option preserving both roles before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩の計画で、対象の規模を考慮するという説明と整合するものはどれですか。",
+      "sentence": "景観色彩の計画で、対象の規模を考慮するという説明と整合するものはどれですか。",
+      "choices": [
+        "色彩基準や調和の考え方は対象の規模も踏まえて扱う",
+        "規模に関係なく周辺との調和を考えない",
+        "規模だけで具体的な色名を自動決定する",
+        "規模が大きければ数値基準は不要になる"
+      ],
+      "proposedAnswer": "色彩基準や調和の考え方は対象の規模も踏まえて扱う",
+      "correctIndex": 0,
+      "explanation": "確認済み資料では、数値基準の設定や景観調和の考え方に対象の規模が関係すると明示されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked how scale is used in both the standard framework and planning guidance and selected the only supported statement before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩設計で、計画地ごとの条件を考える理由として最も適切なものはどれですか。",
+      "sentence": "景観色彩設計で、計画地ごとの条件を考える理由として最も適切なものはどれですか。",
+      "choices": [
+        "すべての地域を同一の街並みにするため",
+        "計画地にふさわしく周辺と調和する色彩を検討するため",
+        "周辺景観の違いを無視するため",
+        "数値基準を使わないため"
+      ],
+      "proposedAnswer": "計画地にふさわしく周辺と調和する色彩を検討するため",
+      "correctIndex": 1,
+      "explanation": "計画地にふさわしい色彩を導くには、場所に応じて周辺との調和を考慮する色彩計画が必要です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently linked site appropriateness with the explicit surrounding-harmony requirement and selected the supported planning purpose before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "周辺景観との調和を考える景観色彩設計について、誤っている説明はどれですか。",
+      "sentence": "周辺景観との調和を考える景観色彩設計について、誤っている説明はどれですか。",
+      "choices": [
+        "場所や規模を考慮する",
+        "周辺の景観特性を考慮する",
+        "数値基準に適合すれば周辺との調和は一切考えなくてよい",
+        "基準の趣旨も踏まえて計画する"
+      ],
+      "proposedAnswer": "数値基準に適合すれば周辺との調和は一切考えなくてよい",
+      "correctIndex": 2,
+      "explanation": "数値基準への適合だけで終わらず、周辺との調和や基準の趣旨を踏まえた色彩計画が必要とされています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked all four propositions and identified the numerical-compliance-only statement as the sole contradiction before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-color-design-harmony-role-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/color_design_harmony_role",
+      "skillId": "pc2.landscape.color_design_harmony_role",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩設計の役割をまとめた説明として最も適切なものはどれですか。",
+      "sentence": "景観色彩設計の役割をまとめた説明として最も適切なものはどれですか。",
+      "choices": [
+        "具体的な色を画像から推測して決めること",
+        "全国一律の具体的な色名を決めること",
+        "数値基準だけで周辺条件を無視すること",
+        "数値基準の趣旨、場所や規模、周辺景観との調和を踏まえて色彩を計画すること"
+      ],
+      "proposedAnswer": "数値基準の趣旨、場所や規模、周辺景観との調和を踏まえて色彩を計画すること",
+      "correctIndex": 3,
+      "explanation": "確認済み資料は、数値基準を枠組みとして使いながら、場所・規模や周辺との調和を踏まえて色彩計画を進める考え方を示しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "tokyo_landscape_color_guideline_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently combined the accepted nonvisual planning-role propositions and selected the only option preserving standards, context and surrounding harmony before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
       }
     }
   ]
