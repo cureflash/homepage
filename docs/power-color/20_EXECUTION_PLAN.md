@@ -78,7 +78,11 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Audit Landscape p.120 `大きな面積をもつ色彩`; keep source-blocked because current public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`.
 - [x] Audit Landscape p.120 `太陽光に影響される色彩`; keep source-blocked because current public material confirms only broad outdoor-light context, not a closed deterministic Grade 2 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`.
 - [x] Audit Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`; keep source-blocked because current public authority confirms only broad season/time variability and does not expose a distinct sufficiently rich deterministic nonvisual Grade 2 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`.
-- [ ] Continue official text order with Landscape p.122 `景観色彩設計の配慮事項`; source-resolve a deterministic nonvisual rule set before any authoring, or record it source-blocked if public authority is insufficient.
+- [x] Source-resolve Landscape p.122 `景観色彩設計の配慮事項` to a narrow deterministic nonvisual planning boundary. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p122-considerations-source-audit.md`.
+- [x] Create `pc2.landscape.design_considerations` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [x] Add and pass the dedicated schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression; workflow run `33674008109`, PR #572 merged as `165132c83eec5fd949e0023a9dfa9bdd62438e97`.
+- [ ] Promote the 12 verified `pc2.landscape.design_considerations` records record-identically; runtime 300 → 312 and twenty-five → twenty-six skills.
+- [ ] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-six promoted skills.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
