@@ -26,12 +26,14 @@ Landscape p.124 `配色計画` is source-blocked under `docs/power-color/audits/
 
 Landscape p.125 `色彩管理` is source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p125-color-management-source-audit.md`. Current AFT material confirms the official Grade 2 scope/order and separately describes controlled color reproduction in official learning/exam materials, but public authority does not expose the detailed p.125 landscape rule set. Generic construction/paint quality-control procedures, local regulatory limits, RGB/HEX conversions, image/sample appearance, inferred tolerances/lighting/geometry, or facts already covered by p.123/p.124 are not accepted as substitutes.
 
-
 p.128 `慣用色名（JISの慣用色名より）` narrow structure is source-resolved under `docs/power-color/audits/2026-09-03-grade2-p128-jis-conventional-name-structure-source-audit.md`. `pc2.conventional.jis_name_structure` contains 12 pending-first independently rechecked records, 12/12 verified with A/B/C/D=3/3/3/3, and is promoted record-identically. Runtime 336 → 348 and twenty-eight → twenty-nine skills. Exact-equality/full-fingerprint/shared Power TOEIC engine regression passed in Power Color CI `33690978044`; PR #599 merged as `61508bbc0a214873d023fb3487e14affe2de3a13`. This boundary authorizes only current AFT p.128/p.132 scope order and explicit JIS Z 8102:2001 structural definitions/classification. It does not authorize individual Grade 2 color-name membership, readings, Munsell values, RGB/HEX/display values, swatches, etymology, or Grade3→Grade2 inference.
+
+p.128 `和色名` individual-name authoring is source-blocked under `docs/power-color/audits/2026-09-03-grade2-p128-washokumei-source-audit.md`. Current AFT authority confirms only the p.128–p.132 scope/order. Current JCRI/JSA material confirms the JIS Z 8102:2001 conventional-name framework but does not publicly expose the current Grade 2 pp.128–131 individual subset/readings. Full-JIS Japanese-name corpora and Grade 3 data therefore must not be projected into Grade 2; no individual-name questions were generated.
+
 Visual Design, Fashion p.091/p.095/p.096, Interior p.104, p.107 and p.111 remain source-blocked. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Source-acquire the individual Grade 2 p.128 `和色名` boundary from current explicit auditable authority. Do not infer the Grade 2 list or readings from Grade 3, and do not infer RGB/HEX/display values, swatches, Munsell values or appearance. If no sufficiently explicit auditable individual-name boundary is available, record p.128 `和色名` source-blocked rather than manufacturing questions.
+Source-acquire the individual Grade 2 p.132 `外来色名` boundary from current explicit auditable authority. Do not infer the Grade 2 list or readings from the full JIS corpus or Grade 3, and do not infer RGB/HEX/display values, swatches, Munsell values or appearance. If no sufficiently explicit auditable individual-name boundary is available, record p.132 `外来色名` source-blocked rather than manufacturing questions.
 
 Keep all Grade 3 blockers and source/display gates unchanged. Use only the shared Power TOEIC question-bank/workout/session engine.
