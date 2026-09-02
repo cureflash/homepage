@@ -26,8 +26,9 @@ const interiorColorPlanning = JSON.parse(await readFile(new URL('../data/grade2-
 const interiorZoning = JSON.parse(await readFile(new URL('../data/grade2-authoring-interior-zoning-classification-0001-0012.json', import.meta.url), 'utf8'));
 const interiorElementColorRoles = JSON.parse(await readFile(new URL('../data/grade2-authoring-interior-element-color-roles-0001-0012.json', import.meta.url), 'utf8'));
 const interiorStyleNames = JSON.parse(await readFile(new URL('../data/grade2-authoring-interior-style-name-inventory-0001-0012.json', import.meta.url), 'utf8'));
+const landscapePublicNature = JSON.parse(await readFile(new URL('../data/grade2-authoring-landscape-public-nature-0001-0012.json', import.meta.url), 'utf8'));
 
-const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor, hueCircleDivision, imageSchemeKeywords, rgbCmykModels, colorManagementProfiles, imageBasics, basicTrend, interiorColorPlanning, interiorZoning, interiorElementColorRoles, interiorStyleNames];
+const batches = [foundation, triad, munsell, naturalComplex, dominant, toneOnTone, toneInTone, tonal, camaieu, bicolorTricolor, hueCircleDivision, imageSchemeKeywords, rgbCmykModels, colorManagementProfiles, imageBasics, basicTrend, interiorColorPlanning, interiorZoning, interiorElementColorRoles, interiorStyleNames, landscapePublicNature];
 
 function fingerprint(q) {
   return JSON.stringify([q.sentence, q.choices]);
@@ -36,8 +37,8 @@ function fingerprint(q) {
 test('Grade 2 runtime is the record-identical union of verified authoring batches', () => {
   assert.equal(runtime.format, 'power-color-grade2-runtime-v1');
   assert.equal(runtime.grade, 2);
-  assert.equal(runtime.questions.length, 240);
-  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 240);
+  assert.equal(runtime.questions.length, 252);
+  assert.equal(runtime.questions.filter((q) => q.validationStatus === 'verified').length, 252);
   assert.equal(runtime.questions.filter((q) => q.validationStatus === 'pending_validation').length, 0);
   assert.deepEqual(runtime.questions, batches.flatMap((batch) => batch.questions));
   assert.deepEqual(runtime.skills, batches.map((batch) => batch.skill));
@@ -60,9 +61,9 @@ test('shared Power TOEIC engine runs all Grade 2 skills', () => {
 
   const recipe = createWorkoutRecipe({
     mode: 'TRAINING',
-    totalCount: 60,
+    totalCount: 63,
     skillAllocations: batches.map((batch) => ({ skillId: batch.skill.id, count: 3 })),
     seed: 41
   });
-  assert.equal(selectQuestionIds({ repository, recipe }).length, 60);
+  assert.equal(selectQuestionIds({ repository, recipe }).length, 63);
 });
