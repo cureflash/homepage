@@ -44,7 +44,7 @@ All eleven skills above are runtime-promoted record-identically. Grade 2 runtime
    - Plus Colors explicitly maps the ten labels to characteristic image words and cites the 2020 revised official text under Level 1 coordinator supervision;
    - current official Level 1 second-stage sample independently confirms `ダイナミック = 強い・はっきりした・派手な`;
    - retained questions are text-semantic only; no color appearance, RGB/HEX, monitor value or inferred image geometry;
-   - authoring 12/12 verified, pending 0, awaiting runtime promotion;
+   - authoring 12/12 verified, pending 0, promoted record-identically;
    - audit: `docs/power-color/audits/2026-09-02-grade2-image-scheme-keywords.md`.
 
 ## Current official-text scope inventory
@@ -66,6 +66,6 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 
 ## Exact next order
 
-1. Grade 2 runtime frontier is 132 verified / pending 0 across eleven promoted skills.
-2. Promote the independently verified `pc2.image.image_scheme_keywords` 12-question batch record-identically, extending runtime 132 → 144 after gates pass.
-3. Then continue to Visual Design, without inferring answers from images, RGB/HEX or monitor values.
+1. Grade 2 runtime frontier is 144 verified / pending 0 across twelve promoted skills.
+2. Continue source acquisition at Visual Design, the next current official-text topic.
+3. Do not infer answers from images, RGB/HEX, monitor values, screenshots or unstated geometry.

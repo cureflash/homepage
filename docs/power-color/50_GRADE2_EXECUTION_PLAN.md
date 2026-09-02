@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 132 verified / pending 0 across eleven promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
+Grade 2 runtime is 144 verified / pending 0 across twelve promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete. See `91_GRADE3_DEFERRED_HANDOFF.md`.
 
 ## Completed Grade 2 checkpoints
 
@@ -36,7 +36,7 @@ Grade 2 runtime is 132 verified / pending 0 across eleven promoted skills. Grade
 - [x] `pc2.scheme.tonal`: 12 verified and promoted.
 - [x] `pc2.scheme.camaieu_faux_camaieu`: 12 verified and promoted.
 - [x] `pc2.scheme.bicolor_tricolor`: 12 verified and promoted; runtime 108 → 120.
-- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all eleven promoted skills.
+- [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all twelve promoted skills.
 
 ## Hue-circle division schemes
 
@@ -53,8 +53,8 @@ Grade 2 runtime is 132 verified / pending 0 across eleven promoted skills. Grade
 - [x] Fix a text-only label↔image-keyword rule from Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the 2020 revised official text.
 - [x] Independently corroborate `ダイナミック = 強い・はっきりした・派手な` against the current Color Certification Association Level 1 second-stage official sample.
 - [x] Generate 12 pending-first text questions; 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3; zero runtime fingerprint overlap.
-- [ ] Promote `pc2.image.image_scheme_keywords` record-identically; target runtime 132 → 144 after exact-equality/full-fingerprint/shared-engine gates.
+- [x] Promote `pc2.image.image_scheme_keywords` record-identically; runtime 132 → 144 with exact-equality/full-fingerprint/shared-engine gates passing.
 
 ## Exact next start point
 
-Promote `grade2-authoring-image-scheme-keywords-0001-0012.json` record-identically into `grade2-runtime.json`, extend the runtime gate to twelve batches / 144 verified questions, and require exact record equality, zero full-fingerprint duplicates and shared Power TOEIC engine execution before continuing to Visual Design.
+Continue source acquisition at Visual Design, the next current official Grade 2 text topic. Author only if an explicit auditable nonvisual rule is fixed without image appearance, RGB/HEX, monitor values, screenshots or unstated geometry.
