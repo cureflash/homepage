@@ -44,10 +44,11 @@ test('Grade 2 Interior p105 authoring batches are independently verified, nonvis
   gate(colorPlanning, 'pc2.interior.color_planning_principles', 'grade2/interior/color_planning_principles');
   gate(zoning, 'pc2.interior.zoning_classification', 'grade2/interior/zoning_classification');
 
-  const newFingerprints = [...colorPlanning.questions, ...zoning.questions].map(fingerprint);
-  assert.equal(new Set(newFingerprints).size, 24);
-  const runtimeFingerprints = new Set(runtime.questions.map(fingerprint));
-  assert.ok(newFingerprints.every((fp) => !runtimeFingerprints.has(fp)));
+  const promoted = [...colorPlanning.questions, ...zoning.questions];
+  const promotedIds = new Set(promoted.map((q) => q.id));
+  const runtimePromoted = runtime.questions.filter((q) => promotedIds.has(q.id));
+  assert.deepEqual(runtimePromoted, promoted);
+  assert.equal(new Set(promoted.map(fingerprint)).size, 24);
 
   assert.ok(colorPlanning.questions.every(q => q.sourceRefs.includes('aft_grade2_current_toc_2026')));
   assert.ok(colorPlanning.questions.every(q => q.sourceRefs.includes('cleverlyhome_interior_color_2023_official_text_reference')));
