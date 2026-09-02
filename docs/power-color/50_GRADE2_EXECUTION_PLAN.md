@@ -1,6 +1,6 @@
 # Power Color — Grade 2 execution plan
 
-Checked: 2026-09-02
+Checked: 2026-09-03
 
 ## Authority and scope
 
@@ -22,16 +22,17 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 252 verified / pending 0 across twenty-one promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
+Grade 2 runtime is 264 verified / pending 0 across twenty-two promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 Latest promoted skills:
 - `pc2.interior.color_planning_principles`: 12 promoted; 192 → 204.
 - `pc2.interior.zoning_classification`: 12 promoted; 204 → 216.
 - `pc2.interior.element_color_roles`: 12 promoted; 216 → 228.
 - `pc2.interior.style_name_inventory`: 12 promoted; 228 → 240.
-- `pc2.landscape.public_nature`: 12 promoted record-identically; 240 → 252.
+- `pc2.landscape.public_nature`: 12 promoted; 240 → 252.
+- `pc2.landscape.element_examples`: 12 promoted record-identically; 252 → 264.
 
-All twenty-one promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The p.116 promotion CI run `33643082653` succeeded on reconciled head `9969122da0bc3d6d44fb38f18236ce64e8557a0c` and PR #542 merged to main.
+All twenty-two promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The p.117 element-examples promotion CI run `33647175533` succeeded on head `b186638676e1706c1a228af3a0a2c62d2643121c`; PR #546 merged as `ba9bde18a964eebc92c992b38445271b980fae8e`.
 
 ## Preserved blocked topics
 
@@ -66,7 +67,7 @@ State:
 - [x] promoted record-identically; runtime 240 → 252;
 - [x] exact-equality/full-fingerprint/shared-engine coverage extended to twenty-one skills.
 
-## Landscape p.117 `景観をつくる要素` — promotion-ready
+## Landscape p.117 `景観をつくる要素` — promoted
 
 Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p117-source-audit.md`.
 
@@ -86,10 +87,11 @@ State:
 - [x] unsupported classification wording removed and subjective breadth item replaced before gate;
 - [x] dedicated schema/source-ref/full-fingerprint/nonvisual/shared-renderer pre-promotion gate added;
 - [x] dedicated gate and normal Power Color regression passed in workflow run `33644271047` on head `a3d2be3e0230aefb1e733f07ad08ea0cecfe161b`;
-- [ ] promote record-identically to runtime and extend exact-equality/full-fingerprint/shared-engine coverage to twenty-two skills.
+- [x] promoted record-identically; runtime 252 → 264 and twenty-one → twenty-two skills;
+- [x] post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in workflow run `33647175533`.
 
-The adjacent p.117 `景観色彩における色彩設計の役割` is a separate source-acquisition checkpoint and is not authorized by the current element-example source contract.
+The adjacent p.117 `景観色彩における色彩設計の役割` remains a separate source-acquisition checkpoint and is not authorized by the element-example source contract.
 
 ## Exact next start point
 
-Promote the 12 verified `pc2.landscape.element_examples` records record-identically to runtime, move 252 → 264 and twenty-one → twenty-two promoted skills, extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage, then continue official-text order to p.117 `景観色彩における色彩設計の役割`. Keep all Grade 3 blockers and source/display gates unchanged.
+Continue official-text order to p.117 `景観色彩における色彩設計の役割`. Source-acquire a deterministic nonvisual rule boundary before any authoring. Keep all Grade 3 blockers and source/display gates unchanged.
