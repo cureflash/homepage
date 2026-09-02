@@ -22,10 +22,12 @@ Landscape p.123 `色を測ることによる周辺環境の把握` is source-res
 
 All 12 `pc2.landscape.surrounding_environment_measurement` records were independently rechecked and promoted record-identically. Runtime 324 → 336 and twenty-seven → twenty-eight skills. Authoring CI `33678931801` passed and PR #584 merged as `abda2407f0f9339948b12a8b9017a9f78f2b3c4c`; promotion gate `33679550547` passed and PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
 
+Landscape p.124 `配色計画` is source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p124-color-scheme-plan-source-audit.md`. Current public authority confirms the official scope and the practical relation that a color scheme is created from a color-design concept, but that relation is already promoted in `pc2.landscape.residential_color_design_process`. No distinct sufficiently rich deterministic nonvisual p.124 rule set is publicly auditable, so do not manufacture a duplicate 12-question batch.
+
 Visual Design, Fashion p.091/p.095/p.096, Interior p.104, p.107 and p.111 remain source-blocked. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Continue current official Grade 2 text order at Landscape p.124 `配色計画`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. Do not infer fixed palette values, RGB/HEX/display attributes, image appearance, unstated geometry, or local regulatory limits. If current public authority is insufficient, record the topic source-blocked rather than manufacturing a 12-question batch.
+Continue current official Grade 2 text order at Landscape p.125 `色彩管理`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. Do not infer fixed palette values, RGB/HEX/display attributes, image appearance, local regulatory limits, unstated geometry or measurement tolerances. If current public authority is insufficient, record the topic source-blocked rather than manufacturing a 12-question batch.
 
 Keep all Grade 3 blockers and source/display gates unchanged. Use only the shared Power TOEIC question-bank/workout/session engine.

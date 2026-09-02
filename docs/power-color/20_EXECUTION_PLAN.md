@@ -95,6 +95,10 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-eight promoted skills; promotion run `33679550547` succeeded and PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
 - [ ] Continue official Grade 2 text order at Landscape p.124 `配色計画`; source-resolve a distinct deterministic nonvisual rule set before any authoring, or record source-blocked if public authority is insufficient.
 
+- [x] Source-resolve Landscape p.123 `色を測ることによる周辺環境の把握`, author/independently QA 12/12 verified, and promote record-identically; runtime 324 → 336 and twenty-seven → twenty-eight skills. Authoring CI `33678931801`; promotion gate `33679550547`; PRs #584/#586.
+- [x] Audit Landscape p.124 `配色計画`; keep source-blocked because the only distinct explicit concept→scheme relation found is already represented in the promoted p.123 residential-process skill, while no sufficiently rich closed nonvisual p.124 rule set is publicly auditable. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p124-color-scheme-plan-source-audit.md`.
+- [ ] Continue official Grade 2 text order at Landscape p.125 `色彩管理`; source-resolve a distinct deterministic nonvisual rule set before any authoring, or record source-blocked if public authority is insufficient.
+
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
 

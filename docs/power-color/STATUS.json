@@ -84,9 +84,10 @@
       "Landscape p.120 人工要素と自然要素の色彩が共存",
       "Landscape p.120 大きな面積をもつ色彩",
       "Landscape p.120 太陽光に影響される色彩",
-      "Landscape p.121 季節や時間の変化を感じさせる多様な色彩"
+      "Landscape p.121 季節や時間の変化を感じさせる多様な色彩",
+      "Landscape p.124 配色計画"
     ],
-    "next": "Continue official Grade 2 text order at Landscape p.124 配色計画. Source-resolve a distinct deterministic nonvisual boundary before authoring; otherwise record source-blocked."
+    "next": "Continue official Grade 2 text order at Landscape p.125 色彩管理. Source-resolve a distinct deterministic nonvisual boundary before authoring; otherwise record source-blocked."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -95,23 +96,21 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 4,
-    "generated": 12,
-    "checked": 12,
-    "verified": 12,
+    "checkpoints_completed": 2,
+    "generated": 0,
+    "checked": 0,
+    "verified": 0,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled latest main/open PRs/branches and found PR #584 already covering the exact p.123 surrounding-environment-measurement checkpoint; no duplicate source investigation or authoring was performed.",
-      "Verified PR #584 authoring CI 33678931801 success and merged it as abda2407f0f9339948b12a8b9017a9f78f2b3c4c. The batch contains 12 independently rechecked verified records with A/B/C/D=3/3/3/3 and narrow nonvisual source boundaries.",
-      "Promoted pc2.landscape.surrounding_environment_measurement record-identically: runtime 324 -> 336 and skills 27 -> 28. Dedicated exact-equality/full-fingerprint/shared-engine tests passed in temporary promotion run 33679550547; PR #586 merged as c2aa6a4384d5a3dc7b967bf932b2486795cadbba.",
-      "Synchronized STATUS/HANDOFF/20_EXECUTION_PLAN/50_GRADE2_EXECUTION_PLAN and removed temporary promotion machinery."
+      "Reconciled latest main/open PRs/branches after parallel p.123 work: pc2.landscape.surrounding_environment_measurement is already promoted record-identically; runtime is 336 verified / pending 0 across 28 skills, with canonical sync PR #588 merged.",
+      "Audited Landscape p.124 配色計画. Current public authority confirms the scope and concept-based color-scheme relation, but that relation is already promoted under the p.123 residential-process skill and no distinct sufficiently rich p.124 nonvisual rule set was found. Recorded source-blocked rather than duplicate authoring."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Landscape p.124 配色計画 source acquisition/audit. Do not author until a distinct auditable deterministic nonvisual rule set is source-confirmed."
+  "next": "Landscape p.125 色彩管理 source acquisition/audit. Do not author until a distinct auditable deterministic nonvisual rule set is source-confirmed."
 }
