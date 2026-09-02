@@ -8,14 +8,13 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Completed the knowledge-extraction half-checkpoint for `takken-concept-development-permission` from source unit `development-permission-required`.
+Completed the mapping half-checkpoint for `takken-concept-development-permission`.
 
-- Extracted 9 atomic knowledge items against the Urban Planning Act Article 29 baseline as of 2026-04-01.
-- Canonicalized the city/quasi-planning-area general permission rule and permit authority.
-- Canonicalized seven statutory no-permission exceptions: small-scale development, agriculture/forestry/fishery buildings and residences, specified public-interest buildings, urban-planning projects, land readjustment, emergency measures for disasters, and ordinary management/light acts.
-- Each item has a stable `knowledge_id`, claim, conditions, exceptions, importance, 2026 cutoff, primary e-Gov statute reference, source unit/fact refs, and `verified` factcheck status.
-- The new canonical dataset is `qualifications/takken/data/power-knowledge-items-development-permission.js`.
-- Existing verified `takken-q-65-001` and `takken-q-65-002` were deliberately not mapped in this checkpoint; the next checkpoint must map only knowledge they directly measure.
+- Kept all 9 canonical knowledge items unchanged.
+- Mapped verified `takken-q-65-001` only to `takken-k-development-permission-city-quasi-general-rule` and `takken-k-development-permission-authority`, which the question directly measures.
+- Mapped verified `takken-q-65-002` only to `takken-k-development-permission-public-interest-building-exemption`, because the stem/answer explicitly establishes the existence of that statutory exception.
+- Did not infer coverage for the other Article 29 exceptions from the generic “など” wording.
+- Left six knowledge items as explicit Phase 4.3 deficits: small-scale development, agriculture/forestry/fishery buildings, urban-planning projects, land readjustment, disaster emergency measures, and ordinary management/light acts.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses were not changed.
 - No Phase 4.3 question generation, print generation, or app linkage was started.
 
@@ -26,17 +25,17 @@ Completed the knowledge-extraction half-checkpoint for `takken-concept-developme
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 84/113 fully reconciled concepts
+- Phase 4.2: active — 85/113 fully reconciled concepts
 - Concepts with canonical knowledge items: 85
 - Canonical knowledge items: 431
-- Existing verified questions mapped: 98
-- Explicit unmapped knowledge gaps: 289
+- Existing verified questions mapped: 100
+- Explicit unmapped knowledge gaps: 286
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Map verified `takken-q-65-001` and `takken-q-65-002` only to the `takken-concept-development-permission` knowledge items they directly measure. Keep every unmeasured Article 29 knowledge item as a Phase 4.3 deficit. After mapping, mark `takken-concept-development-permission` fully reconciled and advance to `takken-concept-development-completion`. Do not begin Phase 4.3.
+Start `takken-concept-development-completion`: extract its canonical atomic knowledge items from the source unit and 2026-04-01 primary law, then map only existing verified questions that directly measure those items. Do not begin Phase 4.3.
 
 ## publication invariant
 
