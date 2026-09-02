@@ -32,7 +32,7 @@
 - [ ] Full Grade 3 completion gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 288 verified / pending 0 across twenty-four promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 300 verified / pending 0 across twenty-five promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 - [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
 - [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
@@ -73,8 +73,9 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Source-resolve Landscape p.120 `ライフサイクルの長い色彩` to a narrow deterministic nonvisual long-duration/surrounding-harmony/large-area/durability boundary. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-long-lifecycle-source-audit.md`.
 - [x] Create `pc2.landscape.long_lifecycle_color` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
 - [x] Add and pass the pre-promotion ID/schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression; workflow run `33661736671`, PR #563 merged as `548b14d26bee4f85570fdb56c865cbbb800ab591`.
-- [ ] Promote the 12 verified `pc2.landscape.long_lifecycle_color` records record-identically; runtime 288 → 300 and twenty-four → twenty-five skills.
-- [ ] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-five promoted skills.
+- [x] Promote the 12 verified `pc2.landscape.long_lifecycle_color` records record-identically; runtime 288 → 300 and twenty-four → twenty-five skills.
+- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-five promoted skills; Power Color CI `33665241835` succeeded and PR #567 merged as `0f246cc3056c51503c870f9af9fe24b3ea33c833`.
+- [ ] Continue official text order with Landscape p.120 `大きな面積をもつ色彩`; source-resolve a distinct deterministic nonvisual rule set before any authoring, or record it source-blocked if public authority is insufficient.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
