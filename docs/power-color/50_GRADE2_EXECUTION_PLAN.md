@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 288 verified / pending 0 across twenty-four promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
+Grade 2 runtime is 300 verified / pending 0 across twenty-five promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 Latest promoted skills:
 - `pc2.interior.color_planning_principles`: 12 promoted; 192 → 204.
@@ -33,8 +33,11 @@ Latest promoted skills:
 - `pc2.landscape.element_examples`: 12 promoted; 252 → 264.
 - `pc2.landscape.color_design_harmony_role`: 12 promoted; 264 → 276.
 - `pc2.landscape.regional_color_context`: 12 promoted record-identically; 276 → 288.
+- `pc2.landscape.long_lifecycle_color`: 12 promoted record-identically; 288 → 300.
 
-All twenty-four promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI run `33659280553`; PR #560 merged as `5e1cf1ed51f4c94b9cbee8465eabdb754ae05702`.
+All twenty-five promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI run `33665241835`; PR #567 merged as `0f246cc3056c51503c870f9af9fe24b3ea33c833`.
+
+The first post-promotion normal CI run `33665173739` failed only because the dedicated long-lifecycle authoring test still asserted the pre-promotion condition that the batch must be absent from runtime. The test contract was corrected to assert record-identical runtime equality. No source, display, authoring or product gate was relaxed.
 
 ## Preserved blocked topics
 
@@ -119,7 +122,7 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natu
 
 The current official table of contents confirms this p.120 topic under `景観色彩における色彩の基礎知識`. Public corroboration confirms artificial and natural elements as legitimate landscape-analysis categories and supports the broad coexistence concept. It does not expose the official text's detailed rule set or a sufficiently rich closed example inventory. Do not manufacture a 12-question batch from heading paraphrases, arbitrary external taxonomies, image/material appearance, or inferred color properties.
 
-## Landscape p.120 `ライフサイクルの長い色彩` — verified, awaiting promotion
+## Landscape p.120 `ライフサイクルの長い色彩` — promoted
 
 Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-long-lifecycle-source-audit.md`.
 
@@ -140,11 +143,11 @@ State:
 - [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
 - [x] A/B/C/D = 3/3/3/3;
 - [x] dedicated ID/schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal regression passed in workflow run `33661736671`; PR #563 merged as `548b14d26bee4f85570fdb56c865cbbb800ab591`;
-- [ ] promote all 12 records record-identically; runtime 288 → 300 and twenty-four → twenty-five skills;
-- [ ] extend post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-five skills.
+- [x] promoted all 12 records record-identically; runtime 288 → 300 and twenty-four → twenty-five skills;
+- [x] post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine coverage passed in workflow run `33665241835`; PR #567 merged as `0f246cc3056c51503c870f9af9fe24b3ea33c833`.
 
 ## Exact next start point
 
-Promote all 12 verified `pc2.landscape.long_lifecycle_color` records record-identically into Grade 2 runtime: 288 → 300 and twenty-four → twenty-five skills. Then extend exact-equality/full-fingerprint/shared Power TOEIC question-bank/session/workout gates to the complete twenty-five-skill runtime union.
+Continue current official text order at Landscape p.120 `大きな面積をもつ色彩`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. The already-promoted long-lifecycle proposition that artificial landscape colors can occupy large visual areas is not sufficient by itself for a new micro-skill. If public authority does not expose a sufficiently rich distinct rule set, record the topic source-blocked rather than manufacturing a 12-question batch.
 
 Keep all Grade 3 blockers and source/display gates unchanged.

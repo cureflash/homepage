@@ -15,36 +15,35 @@
     "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
-    "runtime_questions": {"verified": 288, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature", "pc2.landscape.element_examples", "pc2.landscape.color_design_harmony_role", "pc2.landscape.regional_color_context"],
-    "active_skill": "pc2.landscape.long_lifecycle_color",
-    "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-long-lifecycle-color-0001-0012.json",
-    "active_authoring_qa": {"generated": 12, "checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
+    "runtime_questions": {"verified": 300, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature", "pc2.landscape.element_examples", "pc2.landscape.color_design_harmony_role", "pc2.landscape.regional_color_context", "pc2.landscape.long_lifecycle_color"],
+    "active_skill": null,
+    "active_authoring": null,
+    "active_authoring_qa": null,
     "latest_authoring_gate": {"status": "passed", "workflow_run": 33661736671, "head": "c24a5b551bab324be68a85602a0a5e19be63320e", "pr": 563, "merge_commit": "548b14d26bee4f85570fdb56c865cbbb800ab591"},
-    "latest_promotion_gate": {"status": "passed", "workflow_run": 33659280553, "head": "d5ce94c0e3f06207027b53e2c6388e5e2a065b81", "pr": 560, "merge_commit": "5e1cf1ed51f4c94b9cbee8465eabdb754ae05702"},
+    "latest_promotion_gate": {"status": "passed", "workflow_run": 33665241835, "head": "53272c783fce4e08ac5b66a6a7eab3626cab6644", "pr": 567, "merge_commit": "0f246cc3056c51503c870f9af9fe24b3ea33c833"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "source_blocked": ["Landscape p.118 国内外の景観色彩の事例", "Landscape p.120 人工要素と自然要素の色彩が共存"],
-    "next": "Promote all 12 verified pc2.landscape.long_lifecycle_color records record-identically into Grade 2 runtime; runtime 288 -> 300 and twenty-four -> twenty-five skills, then extend exact-equality/full-fingerprint/shared Power TOEIC engine gates."
+    "next": "Continue official-text order at Landscape p.120 大きな面積をもつ色彩. Acquire an auditable deterministic nonvisual source boundary before authoring; do not reuse the already-promoted long-lifecycle large-area proposition as a substitute for a distinct rule set."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 4,
-    "generated": 12,
-    "checked": 12,
-    "verified": 12,
+    "checkpoints_completed": 3,
+    "generated": 0,
+    "checked": 0,
+    "verified": 0,
     "revision_events": 1,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled latest main/open PR state and resumed at Landscape p.120 ライフサイクルの長い色彩 without repeating the preserved p.118/p.120 source-blocked investigations.",
-      "Source-resolved a narrow deterministic nonvisual long-lifecycle boundary: long-duration artificial landscape elements, surrounding harmony over short-term fashion/novelty, large visual-area caution, and outdoor durability/weather-resistance relevance.",
-      "Created pc2.landscape.long_lifecycle_color pending-first and independently re-solved all 12 records: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D=3/3/3/3, with no runtime promotion yet.",
-      "Initial gate falsely treated an explicit negative mention of image-derived answers as image dependency; corrected the gate to structural nonvisual checks. Power Color CI 33661736671 succeeded and PR #563 merged as 548b14d26bee4f85570fdb56c865cbbb800ab591."
+      "Reconciled latest main/open PR state and resumed at the exact 288 -> 300 long-lifecycle promotion checkpoint without repeating source-blocked investigations.",
+      "Promoted all 12 independently verified pc2.landscape.long_lifecycle_color records record-identically into runtime; runtime is now 300 verified / pending 0 across 25 skills.",
+      "Initial post-promotion CI exposed a stale pre-promotion authoring-test assertion. Updated only that test contract to assert record-identical runtime equality; Power Color CI 33665241835 succeeded and PR #567 merged as 0f246cc3056c51503c870f9af9fe24b3ea33c833. No source/product gate was relaxed."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote pc2.landscape.long_lifecycle_color record-identically: runtime 288 -> 300, 24 -> 25 skills, then run exact-equality/full-fingerprint/shared-engine gates."
+  "next": "Landscape p.120 大きな面積をもつ色彩 source acquisition/audit."
 }
