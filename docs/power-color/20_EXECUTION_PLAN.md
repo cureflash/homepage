@@ -32,7 +32,7 @@
 - [ ] Full Grade 3 completion gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 264 verified / pending 0 across twenty-two promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 276 verified / pending 0 across twenty-three promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 - [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
 - [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
@@ -61,7 +61,9 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Source-resolve Landscape p.117 `景観色彩における色彩設計の役割` to a deterministic nonvisual surrounding-harmony/context/numerical-standard boundary.
 - [x] Create `pc2.landscape.color_design_harmony_role` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
 - [x] Add and pass the dedicated nonvisual/full-fingerprint/shared-renderer authoring gate and normal Power Color regression; workflow run `33648021940`, PR #548 merged.
-- [ ] Promote only the 12 verified `pc2.landscape.color_design_harmony_role` records record-identically; expected runtime 264 → 276 and twenty-two → twenty-three skills, then extend exact-equality/full-fingerprint/shared-engine coverage.
+- [x] Promote the 12 verified `pc2.landscape.color_design_harmony_role` records record-identically; runtime 264 → 276 and twenty-two → twenty-three skills.
+- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-three promoted skills; Power Color CI run `33653881914` succeeded and PR #551 merged.
+- [ ] Continue official text order to Landscape p.118 `地域には地域の色がある`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.

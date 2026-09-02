@@ -22,7 +22,7 @@ Rules:
 
 ## Current runtime frontier
 
-Grade 2 runtime is 264 verified / pending 0 across twenty-two promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
+Grade 2 runtime is 276 verified / pending 0 across twenty-three promoted skills. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 Latest promoted skills:
 - `pc2.interior.color_planning_principles`: 12 promoted; 192 → 204.
@@ -30,9 +30,10 @@ Latest promoted skills:
 - `pc2.interior.element_color_roles`: 12 promoted; 216 → 228.
 - `pc2.interior.style_name_inventory`: 12 promoted; 228 → 240.
 - `pc2.landscape.public_nature`: 12 promoted; 240 → 252.
-- `pc2.landscape.element_examples`: 12 promoted record-identically; 252 → 264.
+- `pc2.landscape.element_examples`: 12 promoted; 252 → 264.
+- `pc2.landscape.color_design_harmony_role`: 12 promoted record-identically; 264 → 276.
 
-All twenty-two promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The p.117 element-examples promotion CI run `33647175533` succeeded; PR #546 merged as `ba9bde18a964eebc92c992b38445271b980fae8e`.
+All twenty-three promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI run `33653881914`; PR #551 merged as `da9e9ab003dc89a53d7fbd90d4d23ebc22f88a12`.
 
 ## Preserved blocked topics
 
@@ -44,31 +45,19 @@ All twenty-two promoted skills are covered by exact-equality/full-fingerprint/sh
 
 Do not repeat those routes unless new explicit auditable authority appears.
 
-## Interior p.112 — promoted
-
-Audit: `docs/power-color/audits/2026-09-02-grade2-interior-p111-p112-source-audit.md`.
-
-`pc2.interior.style_name_inventory` remains limited to membership in the six corroborated names `ナチュラル / カジュアル / オーソドックス / クラシック / エレガント / モダン`. No style-to-hue, tone, material, shape, furniture, historical-period, image or display-color mapping is authorized.
-
 ## Landscape p.116 — promoted
 
 Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p116-source-audit.md`.
 
-`pc2.landscape.public_nature` remains limited to:
-- good landscape as a present-and-future common national asset under the Landscape Act basic principles;
-- coordinated efforts by local public bodies, businesses and residents.
-
-State: 12/12 independently verified and promoted record-identically; runtime 240 → 252.
+`pc2.landscape.public_nature` remains limited to good landscape as a present-and-future common national asset and coordinated efforts by local public bodies, businesses and residents. State: 12/12 independently verified and promoted record-identically; runtime 240 → 252.
 
 ## Landscape p.117 `景観をつくる要素` — promoted
 
 Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p117-source-audit.md`.
 
-`pc2.landscape.element_examples` remains limited to the explicit authoritative element examples and their directly stated breadth. It must not be treated as a universal closed taxonomy and does not authorize inferred natural/artificial labels, color, material, appearance, RGB/HEX or geometry.
+`pc2.landscape.element_examples` remains limited to explicit authoritative element examples and their directly stated breadth. It is not a universal closed taxonomy and does not authorize inferred natural/artificial labels, color, material, appearance, RGB/HEX or geometry. State: 12/12 independently verified and promoted record-identically; runtime 252 → 264.
 
-State: 12/12 independently verified and promoted record-identically; runtime 252 → 264; post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in workflow run `33647175533`.
-
-## Landscape p.117 `景観色彩における色彩設計の役割` — promotion-ready
+## Landscape p.117 `景観色彩における色彩設計の役割` — promoted
 
 Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p117-color-design-role-source-audit.md`.
 
@@ -88,10 +77,12 @@ State:
 - [x] independently re-solved all 12 before proposed-answer comparison;
 - [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
 - [x] A/B/C/D = 3/3/3/3;
-- [x] dedicated nonvisual/full-fingerprint/shared-renderer pre-promotion gate and normal regression passed in workflow run `33648021940` on head `21c8520031af219eb5c6e558b555a5d7da6ebe0c`;
-- [x] PR #548 merged as `fd35f8b1539bab415235c752387cdfbacd60afc3`;
-- [ ] promote record-identically to runtime and extend exact-equality/full-fingerprint/shared-engine coverage to twenty-three skills.
+- [x] dedicated nonvisual/full-fingerprint/shared-renderer pre-promotion gate and normal regression passed in workflow run `33648021940`;
+- [x] promoted record-identically; runtime 264 → 276 and twenty-two → twenty-three skills;
+- [x] post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine gate passed in workflow run `33653881914`; PR #551 merged.
 
 ## Exact next start point
 
-Promote the 12 verified `pc2.landscape.color_design_harmony_role` records record-identically to runtime, move 264 → 276 and twenty-two → twenty-three promoted skills, extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage, then continue official-text order. Keep all Grade 3 blockers and source/display gates unchanged.
+The current official Grade 2 table of contents places p.118 `地域には地域の色がある` next, followed by p.118 `国内外の景観色彩の事例`.
+
+Source-acquire p.118 `地域には地域の色がある` from current authoritative material. Author pending-first questions only if an explicit deterministic nonvisual rule boundary is established. Otherwise record the source blocker and advance in official-text order without guessing. Keep all Grade 3 blockers and source/display gates unchanged.
