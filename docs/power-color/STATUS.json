@@ -17,31 +17,33 @@
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {"verified": 264, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature", "pc2.landscape.element_examples"],
-    "active_skill": "pc2.landscape.element_examples",
-    "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-element-examples-0001-0012.json",
+    "active_skill": "pc2.landscape.color_design_harmony_role",
+    "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-color-design-harmony-role-0001-0012.json",
     "active_authoring_qa": {"checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
-    "authoring_gate": {"status": "passed", "workflow_run": 33644271047, "head": "a3d2be3e0230aefb1e733f07ad08ea0cecfe161b"},
-    "promotion_gate": {"status": "passed", "workflow_run": 33647175533, "head": "b186638676e1706c1a228af3a0a2c62d2643121c", "pr": 546, "merge_commit": "ba9bde18a964eebc92c992b38445271b980fae8e"},
+    "authoring_gate": {"status": "passed", "workflow_run": 33648021940, "head": "21c8520031af219eb5c6e558b555a5d7da6ebe0c", "pr": 548, "merge_commit": "fd35f8b1539bab415235c752387cdfbacd60afc3"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Continue official-text order to p.117 景観色彩における色彩設計の役割 and source-acquire a deterministic nonvisual boundary before any authoring."
+    "next": "Promote pc2.landscape.color_design_harmony_role 12 verified records record-identically to grade2-runtime.json, extend exact-equality/full-fingerprint/shared-engine coverage to twenty-three promoted skills, then continue official-text order."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 2,
-    "generated": 0,
-    "checked": 0,
-    "verified": 0,
+    "checkpoints_completed": 5,
+    "generated": 12,
+    "checked": 12,
+    "verified": 12,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled latest main, canonical Grade 2 state, open PRs and branches; no competing Power Color checkpoint was present and the exact next frontier remained pc2.landscape.element_examples promotion.",
-      "Promoted all 12 verified pc2.landscape.element_examples records record-identically; updated the dedicated authoring gate from pre-promotion absence to post-promotion exact equality after the first CI exposed that stale assertion. Power Color CI run 33647175533 passed on head b186638676e1706c1a228af3a0a2c62d2643121c; PR #546 merged as ba9bde18a964eebc92c992b38445271b980fae8e. Runtime is now 264 verified / pending 0 across twenty-two skills."
+      "Reconciled latest main and completed pc2.landscape.element_examples record-identical promotion through PR #546; runtime 252 -> 264 and twenty-one -> twenty-two promoted skills.",
+      "Fixed the stale pre-promotion authoring assertion exposed by the first promotion CI without rewriting question records; Power Color CI run 33647175533 passed.",
+      "Synchronized STATUS/HANDOFF/PLAN/inventory through PR #547 after the element-examples promotion.",
+      "Source-resolved official-text p.117 景観色彩における色彩設計の役割 using current AFT Grade 2 scope/order plus the current Tokyo Metropolitan Government landscape color guideline, limited to deterministic nonvisual surrounding-harmony/context/numerical-standard roles.",
+      "Created pc2.landscape.color_design_harmony_role as 12 pending-first records and independently re-solved all 12 before proposed-answer comparison: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. Dedicated nonvisual/full-fingerprint/shared-renderer gate and normal Power Color regression passed in workflow run 33648021940; PR #548 merged as fd35f8b1539bab415235c752387cdfbacd60afc3."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-acquire p.117 景観色彩における色彩設計の役割 without inferring color, display, image or geometry facts."
+  "next": "Record-identically promote pc2.landscape.color_design_harmony_role 12 verified records; runtime remains 264 until promotion."
 }
