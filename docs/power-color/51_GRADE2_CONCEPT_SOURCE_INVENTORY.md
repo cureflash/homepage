@@ -10,7 +10,7 @@ Use the current Color Certification Association Grade 2 page:
 Use the current official Grade 2 text table of contents for scope/order only:
 `https://www.aft.or.jp/images/text_of-2st-grade_mokuji.pdf`
 
-Current JCRI / Japan Color Enterprise sources remain authority for applicable color-system facts. Current JAFCA material remains authority for fashion trend-information publication. Current Interior Industry Association material remains authority for modern interior-professional role/scope but not for blocked historical propositions. Current MLIT Landscape Act material remains authority for the p.116 public-nature boundary. Current Mutsu City Landscape Plan remains accepted public-sector authority only for the narrow p.117 explicit element-example boundary. Current Tokyo Metropolitan Government landscape color guidance remains accepted public-sector authority only for the narrow p.117 color-design-role boundary. Current Japan Fashion Association and Japan Civil Engineering Consultants Association material are accepted only for the narrow p.118 regional-context relationship boundary documented in the source audit. Current Color Prism landscape-color material and Itami City public-facility landscape guidance are accepted only for the narrow p.120 long-lifecycle relationship boundary documented in its source audit.
+Current JCRI / Japan Color Enterprise sources remain authority for applicable color-system facts. Current JAFCA material remains authority for fashion trend-information publication. Current Interior Industry Association material remains authority for modern interior-professional role/scope but not for blocked historical propositions. Current MLIT Landscape Act material remains authority for the p.116 public-nature boundary. Current Mutsu City Landscape Plan remains accepted public-sector authority only for the narrow p.117 explicit element-example boundary. Current Tokyo Metropolitan Government landscape color guidance remains accepted public-sector authority for the narrow p.117 color-design-role boundary and the separately audited p.122 design-considerations boundary. Current Japan Fashion Association and Japan Civil Engineering Consultants Association material are accepted only for the narrow p.118 regional-context relationship boundary documented in the source audit. Current Color Prism landscape-color material and Itami City public-facility landscape guidance are accepted only for the narrow p.120 long-lifecycle relationship boundary documented in its source audit.
 
 ## Runtime-promoted nonvisual skills
 
@@ -44,7 +44,8 @@ All twenty-five runtime skills were promoted record-identically from independent
 - Landscape p.120 `大きな面積をもつ色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`; checked public material does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context.
 - Landscape p.120 `太陽光に影響される色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`; checked public material supplies broad outdoor-light context but not the official-text deterministic rule set.
 - Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`; checked public material confirms only broad season/time variability and does not expose the official-text deterministic rule set.
-- Landscape p.122 `景観色彩設計の配慮事項`: next source-acquisition/audit frontier.
+- Landscape p.122 `景観色彩設計の配慮事項`: source-resolved as `pc2.landscape.design_considerations`; 12/12 independently verified in authoring, pending promotion.
+- Landscape p.123 `住宅の色彩設計プロセス`: next source-acquisition frontier after p.122 promotion.
 
 ## Landscape p.120 accepted long-lifecycle boundary — promoted
 
@@ -65,6 +66,20 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-sou
 
 The official Grade 2 table of contents confirms p.121 and its order, but checked public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set. Do not infer season/time-to-color mappings, fixed hue/value/chroma shifts, weather effects, RGB/HEX/display values, image appearance or unstated illumination geometry.
 
+## Landscape p.122 accepted design-considerations boundary — authoring verified
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p122-considerations-source-audit.md`.
+
+`pc2.landscape.design_considerations` may use only:
+- surrounding-landscape harmony;
+- applicable numerical criteria together with standards intent and surrounding streetscape, not numerical compliance alone;
+- individual location and relevant landscape resources as planning context;
+- distant, middle and near viewpoints;
+- natural/historical landscape skeleton for distant/middle views and locally accumulated place characteristics for near views;
+- viewing distance, arrangement and material as explicit planning factors without inferring visual outcomes.
+
+State: 12/12 independently verified, pending 0, A/B/C/D=3/3/3/3. Pre-promotion schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression passed in CI `33674008109`; PR #572 merged as `165132c83eec5fd949e0023a9dfa9bdd62438e97`. Runtime remains 300/25 until record-identical promotion.
+
 ## Preserved exclusions
 
 - No RGB/HEX, sampled pixels, screenshots, monitor appearance or unsourced display values.
@@ -82,10 +97,11 @@ The official Grade 2 table of contents confirms p.121 and its order, but checked
 - p.120 large-area authoring must not be synthesized from the heading, generic area-effect prose, or the already-promoted long-lifecycle large-area caution.
 - p.120 sunlight authoring must not infer fixed appearance changes or illumination geometry from generic outdoor-light material.
 - p.121 season/time authoring must not infer fixed color mappings or appearance changes from generic landscape variability.
+- p.122 design-considerations authoring does not authorize Tokyo-specific Munsell limits, fixed hue/tone choices, material appearance, image-derived judgments, RGB/HEX/display values or unstated viewing geometry.
 - Keep Grade 3 source/display blockers unchanged.
 
 ## Exact next order
 
-1. Keep previously source-blocked topics blocked unless new explicit auditable authority appears.
-2. Source-audit p.122 `景観色彩設計の配慮事項` using current official scope/order plus explicit auditable nonvisual authority.
-3. Require a sufficiently rich deterministic rule set before authoring; otherwise record the topic source-blocked and continue official order.
+1. Promote the 12 verified `pc2.landscape.design_considerations` records record-identically into Grade 2 runtime, moving 300 → 312 and twenty-five → twenty-six skills.
+2. Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to all twenty-six promoted skills.
+3. Continue official text order at Landscape p.123 `住宅の色彩設計プロセス` only after successful promotion.
