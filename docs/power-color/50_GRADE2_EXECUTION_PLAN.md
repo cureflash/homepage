@@ -52,6 +52,8 @@ All twenty-eight promoted skills are covered by exact-equality/full-fingerprint/
 - Landscape p.120 `大きな面積をもつ色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`; public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context.
 - Landscape p.120 `太陽光に影響される色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`; broad outdoor-light context is insufficient to define the official-text deterministic rule set.
 - Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`; checked public authority does not expose a distinct sufficiently rich deterministic nonvisual Grade 2 rule set.
+- Landscape p.124 `配色計画`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p124-color-scheme-plan-source-audit.md`; only the concept→scheme relation is explicit and it is already represented by p.123.
+- Landscape p.125 `色彩管理`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p125-color-management-source-audit.md`; current public authority confirms scope/order but not a distinct sufficiently rich deterministic nonvisual rule set.
 
 Do not repeat those routes unless new explicit auditable authority appears.
 
@@ -192,8 +194,14 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p124-color-scheme-pl
 
 Current public authority confirms the p.124 scope and current JPMA practice explicitly links a color-design concept to creation of a color-scheme proposal. That relation is already contained in the promoted p.123 residential-process skill. Checked public landscape material does not expose a distinct sufficiently rich closed p.124 nonvisual rule set. Do not duplicate the concept→scheme relation, infer fixed palettes/hue/tone/Munsell/RGB/HEX values, use image appearance, or generalize local regulatory limits.
 
+## Landscape p.125 `色彩管理` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p125-color-management-source-audit.md`.
+
+Current public authority confirms the official Grade 2 p.125 scope/order but does not expose the detailed landscape color-management rule set or a distinct sufficiently rich deterministic nonvisual boundary. Generic construction/paint quality-control procedures, local regulatory limits, RGB/HEX/display conversions, image/sample appearance, inferred tolerances/lighting/geometry, and facts already represented by p.123/p.124 are not accepted as substitutes.
+
 ## Exact next start point
 
-Continue official Grade 2 text order at Landscape p.125 `色彩管理`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. If current public authority is insufficient, record the topic source-blocked rather than inferring palette values, RGB/HEX/display attributes, image appearance, local regulatory limits, unstated geometry or measurement tolerances.
+The current official Grade 2 table of contents confirms the next frontier after Landscape p.125 as `慣用色名（JISの慣用色名より）` p.128, with `和色名` p.128 followed by `外来色名` p.132. Begin source acquisition at p.128 `和色名`. Author only from an explicit auditable nonvisual name/fact boundary; do not infer monitor colors, RGB/HEX, unverified readings, or name↔appearance mappings.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
