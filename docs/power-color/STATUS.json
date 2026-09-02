@@ -23,12 +23,12 @@
     "latest_authoring_gate": {"status": "passed", "workflow_run": 33654743141, "head": "20a9d17df4f9d2d1cdfb5b29ac7ef0dcdec913d8", "pr": 553, "merge_commit": "e5aac280779d58f891889978bb9f4b6e4740e20f"},
     "latest_promotion_gate": {"status": "passed", "workflow_run": 33659280553, "head": "d5ce94c0e3f06207027b53e2c6388e5e2a065b81", "pr": 560, "merge_commit": "5e1cf1ed51f4c94b9cbee8465eabdb754ae05702"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "source_blocked": ["Landscape p.118 国内外の景観色彩の事例"],
-    "next": "Landscape p.118 国内外の景観色彩の事例 remains source-blocked by docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md. Continue official-text order to p.120 人工要素と自然要素の色彩が共存 and source-acquire an explicit deterministic nonvisual boundary before authoring."
+    "source_blocked": ["Landscape p.118 国内外の景観色彩の事例", "Landscape p.120 人工要素と自然要素の色彩が共存"],
+    "next": "Continue official-text order to Landscape p.120 ライフサイクルの長い色彩 and source-acquire an explicit deterministic nonvisual boundary before authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 3,
+    "checkpoints_completed": 4,
     "generated": 0,
     "checked": 0,
     "verified": 0,
@@ -39,11 +39,12 @@
     "checkpoint_breakdown": [
       "Reconciled latest main/open PR state and confirmed the p.118 regional-color authoring batch was already independently verified; no duplicate authoring or source investigation was performed.",
       "Promoted all 12 pc2.landscape.regional_color_context records record-identically into Grade 2 runtime; runtime 276 -> 288 and twenty-three -> twenty-four skills. Exact-union, full-fingerprint and shared Power TOEIC question-bank/session/workout gates pass.",
-      "Fixed the stale pre-promotion authoring-test assertion that required the regional-color records to be absent from runtime; full Power Color CI run 33659280553 then succeeded and PR #560 merged as 5e1cf1ed51f4c94b9cbee8465eabdb754ae05702."
+      "Fixed the stale pre-promotion authoring-test assertion that required the regional-color records to be absent from runtime; full Power Color CI run 33659280553 then succeeded and PR #560 merged as 5e1cf1ed51f4c94b9cbee8465eabdb754ae05702.",
+      "Audited p.120 人工要素と自然要素の色彩が共存. Public evidence confirms only the broad coexistence concept, not a sufficiently rich closed deterministic Grade 2 rule set, so authoring is source-blocked and the exact next frontier moves to p.120 ライフサイクルの長い色彩."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Keep p.118 case studies source-blocked and resume at p.120 人工要素と自然要素の色彩が共存 source acquisition."
+  "next": "Keep p.118 cases and p.120 artificial/natural coexistence source-blocked; resume at p.120 ライフサイクルの長い色彩 source acquisition."
 }
