@@ -15,20 +15,20 @@
     "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
-    "runtime_questions": {"verified": 312, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature", "pc2.landscape.element_examples", "pc2.landscape.color_design_harmony_role", "pc2.landscape.regional_color_context", "pc2.landscape.long_lifecycle_color", "pc2.landscape.design_considerations"],
-    "active_skill": "pc2.landscape.residential_color_design_process",
-    "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-residential-color-design-process-0001-0012.json",
-    "active_authoring_qa": {"generated": 12, "checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
+    "runtime_questions": {"verified": 324, "pending": 0, "needs_revision": 0, "rejected": 0},
+    "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature", "pc2.landscape.element_examples", "pc2.landscape.color_design_harmony_role", "pc2.landscape.regional_color_context", "pc2.landscape.long_lifecycle_color", "pc2.landscape.design_considerations", "pc2.landscape.residential_color_design_process"],
+    "active_skill": null,
+    "active_authoring": null,
+    "active_authoring_qa": null,
     "latest_authoring_gate": {"status": "passed", "workflow_run": 33677670579, "head": "68f6b831974736715fe01b3131c87e193108e1de", "pr": 579, "merge_commit": "c3f8c298330209e19e01946ced4d1ea17e40ce3f"},
-    "latest_promotion_gate": {"status": "passed", "workflow_run": 33676939840, "head": "afa350e085a6a48cbfb2cfffa4f0f9db1efad6d1", "pr": 577, "merge_commit": "f7661343ba41b9c00cdc9edb2035ce8b86c90f72"},
+    "latest_promotion_gate": {"status": "passed", "workflow_run": 33678211235, "head": "1af1513a9d15ba8474afd94b1dea913422d23b64", "pr": 582, "merge_commit": "6d64629b0bd8f5c5f305fce21f1d1d48c3a4234a"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "source_blocked": ["Landscape p.118 国内外の景観色彩の事例", "Landscape p.120 人工要素と自然要素の色彩が共存", "Landscape p.120 大きな面積をもつ色彩", "Landscape p.120 太陽光に影響される色彩", "Landscape p.121 季節や時間の変化を感じさせる多様な色彩"],
-    "next": "Promote the 12 verified pc2.landscape.residential_color_design_process records record-identically into Grade 2 runtime, then extend exact-equality/full-fingerprint/shared-engine coverage from 26 to 27 skills."
+    "next": "Continue official Grade 2 text order at Landscape p.123 色を測ることによる周辺環境の把握. Source-resolve a distinct deterministic nonvisual boundary before authoring; otherwise record source-blocked."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 5,
+    "checkpoints_completed": 7,
     "generated": 12,
     "checked": 12,
     "verified": 12,
@@ -41,11 +41,13 @@
       "Synchronized STATUS/HANDOFF/20_EXECUTION_PLAN/50_GRADE2_EXECUTION_PLAN and removed the temporary p122 promotion runner/trigger. Power Color CI 33677283379 succeeded; PR #578 merged as ddce24c7d53e7903fd8fce662dab365537828d6a.",
       "Source-resolved current official Grade 2 Landscape p.123 住宅の色彩設計プロセス to a narrow deterministic nonvisual process boundary using the AFT official table-of-contents scope/order plus current JPMA practical detached-house process corroboration.",
       "Created pc2.landscape.residential_color_design_process pending-first and independently rechecked all 12 records: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.",
-      "Dedicated schema/full-fingerprint/source/nonvisual/shared-renderer gate and normal Power Color regression passed in CI 33677670579; PR #579 merged as c3f8c298330209e19e01946ced4d1ea17e40ce3f."
+      "Dedicated schema/full-fingerprint/source/nonvisual/shared-renderer gate and normal Power Color regression passed in CI 33677670579; PR #579 merged as c3f8c298330209e19e01946ced4d1ea17e40ce3f.",
+      "Synchronized the p.123 authoring state in the four canonical docs. Power Color CI 33677991868 succeeded; PR #580 merged as e53192c158291dd340e0fabf1c82226a81bc93a0.",
+      "Promoted all 12 verified pc2.landscape.residential_color_design_process records record-identically, expanding runtime 312 -> 324 and skills 26 -> 27. Exact-equality/full-fingerprint/shared Power TOEIC engine regression passed in Power Color CI 33678211235; PR #582 merged as 6d64629b0bd8f5c5f305fce21f1d1d48c3a4234a."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Record-identically promote pc2.landscape.residential_color_design_process: runtime 312 -> 324, skills 26 -> 27, then run exact-equality/full-fingerprint/shared Power TOEIC engine gate."
+  "next": "Landscape p.123 色を測ることによる周辺環境の把握 source acquisition/audit. Do not author until a distinct auditable deterministic nonvisual rule set is source-confirmed."
 }
