@@ -17,30 +17,32 @@
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {"verified": 252, "pending": 0, "needs_revision": 0, "rejected": 0},
     "runtime_skills": ["pc2.foundation.official_sample_facts", "pc2.scheme.triad_hue_positions", "pc2.munsell.notation_components", "pc2.scheme.natural_complex_harmony", "pc2.scheme.dominant_color_tone", "pc2.scheme.tone_on_tone", "pc2.scheme.tone_in_tone", "pc2.scheme.tonal", "pc2.scheme.camaieu_faux_camaieu", "pc2.scheme.bicolor_tricolor", "pc2.scheme.hue_circle_division", "pc2.image.image_scheme_keywords", "pc2.media.rgb_cmyk_models", "pc2.media.color_management_profiles", "pc2.media.image_basics", "pc2.fashion.basic_trend_color_classification", "pc2.interior.color_planning_principles", "pc2.interior.zoning_classification", "pc2.interior.element_color_roles", "pc2.interior.style_name_inventory", "pc2.landscape.public_nature"],
-    "active_skill": null,
-    "active_authoring": null,
-    "active_authoring_qa": null,
-    "authoring_gate": {"status": "passed", "workflow_run": 33641632788, "head": "a712615c2564943e1faa29ff83c956f6081af9c1"},
+    "active_skill": "pc2.landscape.element_examples",
+    "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-element-examples-0001-0012.json",
+    "active_authoring_qa": {"checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
+    "authoring_gate": {"status": "pending_ci", "skill": "pc2.landscape.element_examples"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Continue official Grade 2 text order from Landscape p.117 景観をつくる要素, source acquisition first; do not author until an explicit auditable nonvisual rule is fixed."
+    "next": "Run the dedicated pc2.landscape.element_examples schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color/shared-engine regression; promote the 12 verified records record-identically only if green."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 2,
-    "generated": 0,
+    "checkpoints_completed": 4,
+    "generated": 12,
     "checked": 12,
     "verified": 12,
-    "revision_events": 0,
+    "revision_events": 1,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled PR #539 and confirmed the dedicated pc2.landscape.public_nature authoring/full-fingerprint/nonvisual/shared-renderer gate plus normal Power Color regression passed in workflow run 33641632788 on head a712615c2564943e1faa29ff83c956f6081af9c1.",
-      "Reused the existing promotion branch and promoted pc2.landscape.public_nature 12 verified records record-identically; runtime 240 -> 252 and exact-equality/full-fingerprint/shared Power TOEIC engine coverage extends to twenty-one promoted skills."
+      "Reconciled the existing landscape promotion branch with PR #540 and promoted pc2.landscape.public_nature 12 records record-identically after Power Color CI passed; runtime 240 -> 252 and twenty -> twenty-one promoted skills.",
+      "Source-resolved only the official-text p.117 景観をつくる要素 nonvisual boundary using the current AFT Grade 2 table of contents plus the current Mutsu City Landscape Plan explicit element list.",
+      "Created pc2.landscape.element_examples as a 12-record pending-first batch limited to explicit listed landscape elements; no RGB/HEX, image appearance, formal natural/artificial taxonomy, or unstated geometry was introduced.",
+      "Independently re-solved all 12 before proposed-answer comparison: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. Removed one unsupported classification phrase before gate and added the dedicated pre-promotion gate."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Acquire an explicit auditable nonvisual source boundary for Landscape p.117 景観をつくる要素 before any new authoring."
+  "next": "Gate pc2.landscape.element_examples and, if green, promote 12 record-identically from runtime 252 to 264; keep Grade 3 incomplete and all source/display gates unchanged."
 }

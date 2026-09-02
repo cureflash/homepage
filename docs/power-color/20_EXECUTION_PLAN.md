@@ -32,7 +32,7 @@
 - [ ] Full Grade 3 completion gate.
 
 ## Phase 4 — Grade 2
-Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 240 verified / pending 0 across twenty promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
+Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 252 verified / pending 0 across twenty-one promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
 - [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
 - [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
@@ -50,7 +50,12 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Create `pc2.landscape.public_nature` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
 - [x] Add dedicated schema/full-fingerprint/nonvisual/shared-renderer authoring gate for `pc2.landscape.public_nature`.
 - [x] Confirm the dedicated landscape gate and normal Power Color regression are green on the authoring head (workflow run `33641632788`).
-- [ ] Promote only the 12 verified landscape records record-identically; expected runtime 240 → 252 and twenty → twenty-one skills, then extend exact-equality/full-fingerprint/shared-engine coverage.
+- [x] Promote the 12 verified `pc2.landscape.public_nature` records record-identically; runtime 240 → 252 and twenty → twenty-one skills.
+- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-one promoted skills; promotion CI run `33643082653` succeeded.
+- [x] Continue official text order to Landscape p.117 `景観をつくる要素` and source-resolve only the explicit nonvisual element-example/breadth boundary.
+- [x] Create `pc2.landscape.element_examples` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [x] Add dedicated schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate for `pc2.landscape.element_examples`.
+- [ ] Run the p.117 gate and normal shared-engine regression, then promote only the 12 verified records record-identically; expected runtime 252 → 264 and twenty-one → twenty-two skills.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
