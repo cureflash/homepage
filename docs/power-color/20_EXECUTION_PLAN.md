@@ -34,36 +34,21 @@
 ## Phase 4 — Grade 2
 Grade 2 is active by explicit user override while the unresolved Grade 3 blockers above are preserved. Current detailed execution authority is `50_GRADE2_EXECUTION_PLAN.md`; runtime frontier is 276 verified / pending 0 across twenty-three promoted skills. This override does not mark Grade 3 complete and does not relax any Grade 3 source/display gate.
 
-- [x] Promote Interior p.105 `pc2.interior.color_planning_principles` record-identically; runtime 192 → 204.
-- [x] Promote Interior p.105 `pc2.interior.zoning_classification` record-identically; runtime 204 → 216.
+- [x] Promote Interior p.105 `pc2.interior.color_planning_principles`; runtime 192 → 204.
+- [x] Promote Interior p.105 `pc2.interior.zoning_classification`; runtime 204 → 216.
 - [x] Keep Interior p.107 source-blocked.
-- [x] Author and independently QA `pc2.interior.element_color_roles` from the fixed p.110 narrow source boundary: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
-- [x] Promote `pc2.interior.element_color_roles` record-identically; runtime 216 → 228.
-- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine gates to all nineteen promoted skills.
-- [x] Audit p.111 `インテリアエレメントの配色の考え方と技法`; keep source-blocked because no deterministic nonvisual rule set is publicly auditable.
-- [x] Audit p.112 `インテリアスタイル`; source-resolve only the corroborated six-label inventory, excluding all style-property/image/color inference.
-- [x] Create `pc2.interior.style_name_inventory` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
-- [x] Run the dedicated p.112 authoring/full-fingerprint/nonvisual/shared-renderer gate and normal shared-engine regression.
-- [x] Promote the 12 verified p.112 records record-identically; runtime 228 → 240 and twenty promoted skills.
-- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine gates to all twenty promoted skills.
-- [x] Continue official text order to Landscape p.116 and source-resolve only the narrow nonvisual `景観の公共性` public-asset/cooperation boundary.
-- [x] Create `pc2.landscape.public_nature` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
-- [x] Add dedicated schema/full-fingerprint/nonvisual/shared-renderer authoring gate for `pc2.landscape.public_nature`.
-- [x] Confirm the dedicated landscape gate and normal Power Color regression are green on the authoring head (workflow run `33641632788`).
-- [x] Promote the 12 verified `pc2.landscape.public_nature` records record-identically; runtime 240 → 252 and twenty → twenty-one skills.
-- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-one promoted skills; promotion CI run `33643082653` succeeded.
-- [x] Continue official text order to Landscape p.117 `景観をつくる要素` and source-resolve only the explicit nonvisual element-example/breadth boundary.
-- [x] Create `pc2.landscape.element_examples` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
-- [x] Add dedicated schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate for `pc2.landscape.element_examples`.
-- [x] Confirm the p.117 dedicated gate and normal Power Color regression are green on authoring head `a3d2be3e0230aefb1e733f07ad08ea0cecfe161b` (workflow run `33644271047`).
-- [x] Promote the 12 verified `pc2.landscape.element_examples` records record-identically; runtime 252 → 264 and twenty-one → twenty-two skills.
-- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-two promoted skills; promotion CI run `33647175533` succeeded and PR #546 merged.
-- [x] Source-resolve Landscape p.117 `景観色彩における色彩設計の役割` to a deterministic nonvisual surrounding-harmony/context/numerical-standard boundary.
-- [x] Create `pc2.landscape.color_design_harmony_role` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
-- [x] Add and pass the dedicated nonvisual/full-fingerprint/shared-renderer authoring gate and normal Power Color regression; workflow run `33648021940`, PR #548 merged.
-- [x] Promote the 12 verified `pc2.landscape.color_design_harmony_role` records record-identically; runtime 264 → 276 and twenty-two → twenty-three skills.
-- [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-three promoted skills; Power Color CI run `33653881914` succeeded and PR #551 merged.
-- [ ] Continue official text order to Landscape p.118 `地域には地域の色がある`; source-acquire a deterministic nonvisual rule boundary before authoring anything.
+- [x] Author/QA/promote `pc2.interior.element_color_roles`; runtime 216 → 228.
+- [x] Keep Interior p.111 source-blocked.
+- [x] Author/QA/promote p.112 `pc2.interior.style_name_inventory`; runtime 228 → 240.
+- [x] Author/QA/promote Landscape p.116 `pc2.landscape.public_nature`; runtime 240 → 252.
+- [x] Author/QA/promote Landscape p.117 `pc2.landscape.element_examples`; runtime 252 → 264.
+- [x] Author/QA/promote Landscape p.117 `pc2.landscape.color_design_harmony_role`; runtime 264 → 276.
+- [x] Source-resolve Landscape p.118 `地域には地域の色がある` to the narrow nonvisual regional-context boundary.
+- [x] Create `pc2.landscape.regional_color_context` pending-first and independently QA all 12: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
+- [x] Pass dedicated source/nonvisual/full-fingerprint/shared-renderer authoring gate; workflow run `33654743141`, PR #553 merged.
+- [ ] Promote `pc2.landscape.regional_color_context` record-identically; runtime 276 → 288 and twenty-three → twenty-four skills.
+- [x] Audit p.118 `国内外の景観色彩の事例`; keep source-blocked because current public authority does not expose a closed official-text example list plus deterministic nonvisual answer rules.
+- [ ] Continue official-text order to p.120 `人工要素と自然要素の色彩が共存`; source-acquire a deterministic nonvisual rule boundary before authoring.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
