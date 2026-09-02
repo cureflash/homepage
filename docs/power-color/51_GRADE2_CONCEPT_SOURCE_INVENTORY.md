@@ -38,22 +38,12 @@ All twenty-five runtime skills were promoted record-identically from independent
 - Landscape p.117 `景観をつくる要素`: `pc2.landscape.element_examples` promoted.
 - Landscape p.117 `景観色彩における色彩設計の役割`: `pc2.landscape.color_design_harmony_role` promoted.
 - Landscape p.118 `地域には地域の色がある`: `pc2.landscape.regional_color_context` promoted.
-- Landscape p.118 `国内外の景観色彩の事例`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
-- Landscape p.120 `人工要素と自然要素の色彩が共存`: source-blocked for authoring under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`. Public evidence confirms only the broad coexistence concept, not a sufficiently rich closed deterministic Grade 2 rule set.
+- Landscape p.118 `国内外の景観色彩の事例`: source-blocked.
+- Landscape p.120 `人工要素と自然要素の色彩が共存`: source-blocked.
 - Landscape p.120 `ライフサイクルの長い色彩`: `pc2.landscape.long_lifecycle_color` promoted record-identically; runtime 288 → 300.
-- Landscape p.120 `大きな面積をもつ色彩`: next source-acquisition/audit frontier. Do not treat the already-promoted long-lifecycle large-area proposition as sufficient by itself for a new skill.
-
-## Landscape p.118 accepted regional-context boundary — promoted
-
-Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-regional-color-source-audit.md`.
-
-`pc2.landscape.regional_color_context` may use only:
-- relationships between regional landscape and colors long present or accumulated in the region;
-- the accepted source statement that traditional preserved streetscapes may use regionally produced natural materials and colors nurtured by regional climate/natural environment;
-- the environmental-color planning method of learning and respecting colors long present or accumulated in a region when nurturing region-specific landscape;
-- the distinction between contextual regional color thinking and unsupported fixed locality-to-one-color mappings.
-
-State: 12/12 independently verified, A/B/C/D=3/3/3/3, promoted record-identically; runtime 276 → 288. Post-promotion exact-union/full-fingerprint/shared Power TOEIC engine gate passed in CI `33659280553`.
+- Landscape p.120 `大きな面積をもつ色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`; checked public material does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context.
+- Landscape p.120 `太陽光に影響される色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`; checked public material supplies broad outdoor-light context but not the official-text deterministic rule set.
+- Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: next source-acquisition/audit frontier.
 
 ## Landscape p.120 accepted long-lifecycle boundary — promoted
 
@@ -66,9 +56,7 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-long-lifecycle-
 - durability and weather resistance as relevant considerations for outdoor long-lived elements;
 - the public-sector premise that public facilities remain for long periods and are seen by many people.
 
-State: pending-first batch created, all 12 independently re-solved, 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D=3/3/3/3. Pre-promotion ID/schema/full-fingerprint/nonvisual/shared-renderer gate and normal regression passed in CI `33661736671`; PR #563 merged as `548b14d26bee4f85570fdb56c865cbbb800ab591`. All 12 records were then promoted record-identically; runtime 288 → 300 and twenty-four → twenty-five skills. Post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in CI `33665241835`; PR #567 merged as `0f246cc3056c51503c870f9af9fe24b3ea33c833`.
-
-The first post-promotion normal CI run failed only because the dedicated authoring test retained a pre-promotion absence assertion. That stale assertion was replaced with record-identical runtime equality; no source/display/product gate was relaxed.
+State: 12/12 independently verified, A/B/C/D=3/3/3/3, promoted record-identically; runtime 288 → 300. Post-promotion exact-equality/full-fingerprint/shared-engine coverage passed in CI `33665241835`.
 
 ## Preserved exclusions
 
@@ -84,11 +72,12 @@ The first post-promotion normal CI run failed only because the dedicated authori
 - p.118 case studies must not be replaced with arbitrary external examples.
 - p.120 artificial/natural coexistence must not be expanded into an invented closed taxonomy or image/material-color inference.
 - p.120 long-lifecycle material does not authorize specific RGB/HEX, hue/tone/Munsell values, numerical lifetime/repaint cycles, material-specific prescriptions or image-derived answers.
-- p.120 large-area authoring must establish a distinct rule set rather than merely restating the already-promoted long-lifecycle large-area caution.
+- p.120 large-area authoring must not be synthesized from the heading, generic area-effect prose, or the already-promoted long-lifecycle large-area caution.
+- p.120 sunlight authoring must not infer fixed appearance changes or illumination geometry from generic outdoor-light material.
 - Keep Grade 3 source/display blockers unchanged.
 
 ## Exact next order
 
-1. Keep p.118 `国内外の景観色彩の事例` source-blocked unless new explicit auditable authority appears.
-2. Keep p.120 `人工要素と自然要素の色彩が共存` source-blocked for authoring under its audit; broad structural context may be retained but does not justify a 12-question batch.
-3. Source-audit p.120 `大きな面積をもつ色彩` using current official scope/order plus explicit auditable nonvisual authority. Require a distinct sufficiently rich rule set before authoring; otherwise record it source-blocked and continue official order.
+1. Keep previously source-blocked topics blocked unless new explicit auditable authority appears.
+2. Source-audit p.121 `季節や時間の変化を感じさせる多様な色彩` using current official scope/order plus explicit auditable nonvisual authority.
+3. Require a sufficiently rich deterministic rule set before authoring; otherwise record the topic source-blocked and continue official order.

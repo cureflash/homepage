@@ -37,8 +37,6 @@ Latest promoted skills:
 
 All twenty-five promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed Power Color CI run `33665241835`; PR #567 merged as `0f246cc3056c51503c870f9af9fe24b3ea33c833`.
 
-The first post-promotion normal CI run `33665173739` failed only because the dedicated long-lifecycle authoring test still asserted the pre-promotion condition that the batch must be absent from runtime. The test contract was corrected to assert record-identical runtime equality. No source, display, authoring or product gate was relaxed.
-
 ## Preserved blocked topics
 
 - Visual Design: scope-confirmed, but no sufficiently explicit public nonvisual rule found.
@@ -46,8 +44,10 @@ The first post-promotion normal CI run `33665173739` failed only because the ded
 - Interior `インテリア概念の成立` p.104: source-blocked.
 - Interior `インテリア空間のカラーコーディネーション` p.107: source-blocked.
 - Interior `インテリアエレメントの配色の考え方と技法` p.111: source-blocked; generic p.110 role/ratio material is not accepted as a substitute.
-- Landscape p.118 `国内外の景観色彩の事例`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`; current public official material does not expose a closed official-text example set with deterministic nonvisual answer rules.
-- Landscape p.120 `人工要素と自然要素の色彩が共存`: source-blocked for authoring under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`; public evidence confirms only the broad coexistence concept, not a sufficiently rich closed deterministic Grade 2 rule set.
+- Landscape p.118 `国内外の景観色彩の事例`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
+- Landscape p.120 `人工要素と自然要素の色彩が共存`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`.
+- Landscape p.120 `大きな面積をもつ色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`; public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context.
+- Landscape p.120 `太陽光に影響される色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`; broad outdoor-light context is insufficient to define the official-text deterministic rule set.
 
 Do not repeat those routes unless new explicit auditable authority appears.
 
@@ -76,16 +76,7 @@ Accepted boundary for `pc2.landscape.color_design_harmony_role`:
 
 Do not generalize Tokyo-specific numerical values into Grade 2 facts. Do not infer RGB/HEX/display values, Munsell limits, image appearance, material recommendations, hue/tone choices or unstated geometry.
 
-State:
-- [x] current AFT Grade 2 scope/order rechecked;
-- [x] deterministic nonvisual boundary source-resolved against current Tokyo Metropolitan Government landscape color guidance;
-- [x] pending-first 12 created;
-- [x] independently re-solved all 12 before proposed-answer comparison;
-- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
-- [x] A/B/C/D = 3/3/3/3;
-- [x] dedicated nonvisual/full-fingerprint/shared-renderer pre-promotion gate and normal regression passed in workflow run `33648021940`;
-- [x] promoted record-identically; runtime 264 → 276 and twenty-two → twenty-three skills;
-- [x] post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine gate passed in workflow run `33653881914`; PR #551 merged.
+State: 12/12 independently verified and promoted record-identically; runtime 264 → 276. Post-promotion shared-engine gate passed in workflow run `33653881914`; PR #551 merged.
 
 ## Landscape p.118 `地域には地域の色がある` — promoted
 
@@ -97,30 +88,19 @@ Accepted boundary for `pc2.landscape.regional_color_context` is conceptual/relat
 - environmental-color planning may begin by learning and respecting colors long present or accumulated in a region to nurture a region-specific landscape;
 - this is not a fixed locality-to-one-color lookup table.
 
-Do not infer or introduce RGB/HEX/display values, monitor swatches, specific region-to-color mappings, hue/tone/Munsell values, image appearance, material appearance, or unstated geometry.
-
-State:
-- [x] current AFT Grade 2 scope/order rechecked;
-- [x] deterministic nonvisual regional-context boundary source-resolved against auditable Japan Fashion Association and Japan Civil Engineering Consultants Association material;
-- [x] pending-first 12 created;
-- [x] independently re-solved all 12 before proposed-answer comparison;
-- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
-- [x] A/B/C/D = 3/3/3/3;
-- [x] dedicated ID/full-fingerprint/source/nonvisual/shared-renderer authoring gate and normal Power Color regression passed in workflow run `33654743141`; PR #553 merged as `e5aac280779d58f891889978bb9f4b6e4740e20f`;
-- [x] promoted all 12 records record-identically; runtime 276 → 288 and twenty-three → twenty-four skills;
-- [x] post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine coverage passed in workflow run `33659280553`; PR #560 merged as `5e1cf1ed51f4c94b9cbee8465eabdb754ae05702`.
+State: 12/12 independently verified and promoted record-identically; runtime 276 → 288. Post-promotion gate passed in CI `33659280553`.
 
 ## Landscape p.118 `国内外の景観色彩の事例` — source-blocked
 
 Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
 
-The current official Grade 2 material establishes the scope/order but the publicly auditable material does not expose the official text's closed case-study set together with deterministic nonvisual answer rules. Do not substitute arbitrary outside cases, infer from photographs/display colors, or manufacture region-to-color mappings. Revisit only if new explicit auditable authority appears.
+The current official Grade 2 material establishes the scope/order but publicly auditable material does not expose the official text's closed case-study set together with deterministic nonvisual answer rules. Do not substitute arbitrary outside cases, infer from photographs/display colors, or manufacture region-to-color mappings.
 
-## Landscape p.120 `人工要素と自然要素の色彩が共存` — source-blocked for authoring
+## Landscape p.120 `人工要素と自然要素の色彩が共存` — source-blocked
 
 Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`.
 
-The current official table of contents confirms this p.120 topic under `景観色彩における色彩の基礎知識`. Public corroboration confirms artificial and natural elements as legitimate landscape-analysis categories and supports the broad coexistence concept. It does not expose the official text's detailed rule set or a sufficiently rich closed example inventory. Do not manufacture a 12-question batch from heading paraphrases, arbitrary external taxonomies, image/material appearance, or inferred color properties.
+Public corroboration confirms artificial and natural elements as legitimate landscape-analysis categories and supports the broad coexistence concept. It does not expose the official text's detailed rule set or a sufficiently rich closed example inventory. Do not manufacture a 12-question batch from heading paraphrases, arbitrary external taxonomies, image/material appearance, or inferred color properties.
 
 ## Landscape p.120 `ライフサイクルの長い色彩` — promoted
 
@@ -135,19 +115,22 @@ Accepted boundary for `pc2.landscape.long_lifecycle_color` is conceptual/relatio
 
 Do not infer or introduce RGB/HEX/display values, monitor swatches, specific hue/tone/Munsell values, numerical lifetime/repaint cycles, material-specific color prescriptions, image appearance or unstated geometry.
 
-State:
-- [x] current AFT Grade 2 scope/order rechecked;
-- [x] deterministic nonvisual long-lifecycle boundary source-resolved against auditable professional/public-sector material;
-- [x] pending-first 12 created;
-- [x] independently re-solved all 12 before proposed-answer comparison;
-- [x] 12 verified / 0 needs_revision / 0 rejected / 0 pending;
-- [x] A/B/C/D = 3/3/3/3;
-- [x] dedicated ID/schema/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal regression passed in workflow run `33661736671`; PR #563 merged as `548b14d26bee4f85570fdb56c865cbbb800ab591`;
-- [x] promoted all 12 records record-identically; runtime 288 → 300 and twenty-four → twenty-five skills;
-- [x] post-promotion exact-equality/full-fingerprint/shared Power TOEIC engine coverage passed in workflow run `33665241835`; PR #567 merged as `0f246cc3056c51503c870f9af9fe24b3ea33c833`.
+State: 12/12 independently verified and promoted record-identically; runtime 288 → 300. Pre-promotion gate passed in workflow run `33661736671`; post-promotion gate passed in CI `33665241835`.
+
+## Landscape p.120 `大きな面積をもつ色彩` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`.
+
+The official table of contents confirms the topic. Public sources confirm only generic large-scale landscape impact and general area-effect ideas. They do not expose a sufficiently rich, closed, deterministic Grade 2 landscape rule set distinct from the already-promoted long-lifecycle large-area caution. Do not turn the heading, generic area-effect prose, or the existing long-lifecycle proposition into a new 12-question skill.
+
+## Landscape p.120 `太陽光に影響される色彩` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`.
+
+The official table of contents confirms the topic. Public material supports broad outdoor-light variation but does not expose the official text's deterministic classifications or fixed nonvisual rules. Do not infer specific hue/brightness/chroma shifts, preferred colors, time-of-day mappings, RGB/HEX/display values or unstated illumination geometry.
 
 ## Exact next start point
 
-Continue current official text order at Landscape p.120 `大きな面積をもつ色彩`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. The already-promoted long-lifecycle proposition that artificial landscape colors can occupy large visual areas is not sufficient by itself for a new micro-skill. If public authority does not expose a sufficiently rich distinct rule set, record the topic source-blocked rather than manufacturing a 12-question batch.
+Continue current official text order at Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. If public authority does not expose a sufficiently rich rule set, record the topic source-blocked rather than manufacturing a batch.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
