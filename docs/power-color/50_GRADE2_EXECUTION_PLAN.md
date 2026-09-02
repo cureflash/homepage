@@ -36,25 +36,27 @@ Grade 2 runtime is 144 verified / pending 0 across twelve promoted skills. Grade
 - [x] `pc2.scheme.tonal`: 12 verified and promoted.
 - [x] `pc2.scheme.camaieu_faux_camaieu`: 12 verified and promoted.
 - [x] `pc2.scheme.bicolor_tricolor`: 12 verified and promoted; runtime 108 → 120.
+- [x] `pc2.scheme.hue_circle_division`: 12 verified and promoted; runtime 120 → 132.
+- [x] `pc2.image.image_scheme_keywords`: 12 verified and promoted; runtime 132 → 144.
 - [x] Runtime exact-equality/full-fingerprint/shared-engine gates cover all twelve promoted skills.
 
-## Hue-circle division schemes
+## Visual Design
 
-- [x] Current official Grade 2 sample directly confirms the topic remains active by testing split complementary and pentad, permitting achromatic colors in hexad, and accepting two dyads as a tetrad.
-- [x] Resolve an explicit nonvisual rule through the current official sample plus Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the 2020 revised official text.
-- [x] Retain only explicit rules for dyad, split complementary, tetrad, PCCS pentad and hexad; do not infer from example-image appearance or unstated geometry.
-- [x] Generate 12 pending-first text questions and independently re-derive every answer before accepting proposed answers.
+- [x] Current official Grade 2 TOC confirms `ビジュアルデザインの色彩` follows image-based schemes and contains `ビジュアルデザインとは` / `ビジュアルデザインと色彩`.
+- [x] Audit current public first-party material for an explicit text-only answer rule.
+- [ ] Authoring remains blocked: the reviewed public first-party material exposes scope labels but not a sufficiently explicit nonvisual judgment rule. Do not infer from figures, screenshots, image appearance, RGB/HEX or unstated geometry.
+- [x] Record the blocker in `docs/power-color/audits/2026-09-02-grade2-visual-media-source-audit.md` and continue to the next official-text topic rather than repeating the same unresolved route.
+
+## Media Design — RGB / CMYK text-only slice
+
+- [x] Current official Grade 2 TOC explicitly lists `メディアデザインの色彩`, including `画面や印刷における色表現` and `カラーマネジメントの基本`.
+- [x] Current official Grade 2 sample confirms CMY as the subtractive-mixing primaries.
+- [x] Current Adobe professional documentation explicitly corroborates RGB = additive red/green/blue light used for displays, full-intensity RGB = white, and CMYK = subtractive cyan/magenta/yellow plus black for process printing.
+- [x] Fix `pc2.media.rgb_cmyk_models` to those explicit text-only rules only; exclude exact RGB/HEX values, swatches, image appearance, screenshot sampling and device-specific visual judgments.
+- [x] Generate pending-first 12 text-choice questions and independently re-derive every answer before accepting proposed answers.
 - [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
-- [x] Promote `pc2.scheme.hue_circle_division` record-identically to runtime; runtime 120 → 132 with exact-equality/full-fingerprint/shared-engine gates passing.
-
-## Image-based scheme keywords
-
-- [x] Current official Grade 2 TOC confirms `配色イメージ / イメージ別配色法` as the next topic and lists all ten labels.
-- [x] Fix a text-only label↔image-keyword rule from Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the 2020 revised official text.
-- [x] Independently corroborate `ダイナミック = 強い・はっきりした・派手な` against the current Color Certification Association Level 1 second-stage official sample.
-- [x] Generate 12 pending-first text questions; 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3; zero runtime fingerprint overlap.
-- [x] Promote `pc2.image.image_scheme_keywords` record-identically; runtime 132 → 144 with exact-equality/full-fingerprint/shared-engine gates passing.
+- [ ] Promote `pc2.media.rgb_cmyk_models` record-identically to runtime 144 → 156 and extend exact-equality/full-fingerprint/shared-engine gates.
 
 ## Exact next start point
 
-Continue source acquisition at Visual Design, the next current official Grade 2 text topic. Author only if an explicit auditable nonvisual rule is fixed without image appearance, RGB/HEX, monitor values, screenshots or unstated geometry.
+Promote the 12 verified `pc2.media.rgb_cmyk_models` records record-identically into Grade 2 runtime 144 → 156. Re-run schema, full-fingerprint duplicate, coverage, answer-position and shared Power TOEIC engine gates. Visual Design remains source-blocked without relaxing any visual/display gate.

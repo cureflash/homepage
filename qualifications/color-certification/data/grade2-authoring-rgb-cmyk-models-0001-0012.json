@@ -1,0 +1,303 @@
+{
+  "format": "power-color-grade2-authoring-v1",
+  "grade": 2,
+  "skill": {
+    "id": "pc2.media.rgb_cmyk_models",
+    "label": "メディアデザイン：RGB/CMYKの基本",
+    "categoryId": "pc2.media"
+  },
+  "sourceContract": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md",
+  "derivationRule": "The current official Grade 2 text TOC explicitly places screen/print color expression and color management inside Media Design. The current official Grade 2 sample independently confirms CMY as the subtractive-mixing primaries. Current Adobe professional documentation explicitly defines RGB as an additive red/green/blue light model used for displays, full-intensity RGB as white, and CMYK as a subtractive cyan/magenta/yellow plus black process-print model. This batch tests only those text-explicit rules; it uses no swatches, screenshots, inferred appearance, exact RGB/HEX values, or unstated geometry.",
+  "qaSummary": {
+    "generated": 12,
+    "checked": 12,
+    "verified": 12,
+    "needsRevision": 0,
+    "rejected": 0,
+    "pending": 0,
+    "correctIndexDistribution": {
+      "A": 3,
+      "B": 3,
+      "C": 3,
+      "D": 3
+    }
+  },
+  "questions": [
+    {
+      "id": "pc2-rgb-cmyk-models-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "RGBカラーモデルの混色方式として正しいものはどれですか。",
+      "sentence": "RGBカラーモデルの混色方式として正しいものはどれですか。",
+      "choices": ["加法混色", "減法混色", "中間混色", "並置混色"],
+      "proposedAnswer": "加法混色",
+      "correctIndex": 0,
+      "explanation": "RGBは赤・緑・青の光を加えて色を表す加法カラーモデルです。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-read Adobe's RGB model definition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "CMYKカラーモデルの混色方式として正しいものはどれですか。",
+      "sentence": "CMYKカラーモデルの混色方式として正しいものはどれですか。",
+      "choices": ["加法混色", "減法混色", "回転混色", "継時混色"],
+      "proposedAnswer": "減法混色",
+      "correctIndex": 1,
+      "explanation": "CMYKはインクなどが光を吸収する性質に基づく減法カラーモデルです。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "aft_grade2_current_sample_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived CMYK as subtractive from the official Grade 2 sample and Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "RGBの3つの基本成分として正しい組み合わせはどれですか。",
+      "sentence": "RGBの3つの基本成分として正しい組み合わせはどれですか。",
+      "choices": ["シアン・マゼンタ・イエロー", "赤・黄・青", "赤・緑・青", "白・灰・黒"],
+      "proposedAnswer": "赤・緑・青",
+      "correctIndex": 2,
+      "explanation": "RGBはRed（赤）、Green（緑）、Blue（青）の光を基本成分とします。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified the three named RGB components from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "CMYの3つの基本成分として正しい組み合わせはどれですか。",
+      "sentence": "CMYの3つの基本成分として正しい組み合わせはどれですか。",
+      "choices": ["赤・緑・青", "赤・黄・青", "白・灰・黒", "シアン・マゼンタ・イエロー"],
+      "proposedAnswer": "シアン・マゼンタ・イエロー",
+      "correctIndex": 3,
+      "explanation": "色彩検定2級の公式出題例でも、減法混色の三原色はCMY、すなわちシアン・マゼンタ・イエローとして扱われています。",
+      "sourceRefs": ["aft_grade2_current_sample_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently read the official Grade 2 sample's CMY answer and Adobe's CMYK model definition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "RGBの赤・緑・青の光を最大強度で重ねたときに得られる色はどれですか。",
+      "sentence": "RGBの赤・緑・青の光を最大強度で重ねたときに得られる色はどれですか。",
+      "choices": ["白", "黒", "灰", "茶"],
+      "proposedAnswer": "白",
+      "correctIndex": 0,
+      "explanation": "加法モデルであるRGBでは、赤・緑・青の光を最大強度で組み合わせると白になります。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently verified Adobe's full-intensity RGB result before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "コンピューターモニターの色表現に用いられる基本モデルとして適切なのはどれですか。",
+      "sentence": "コンピューターモニターの色表現に用いられる基本モデルとして適切なのはどれですか。",
+      "choices": ["CMYK", "RGB", "マンセルH V/C", "PCCSトーン記号"],
+      "proposedAnswer": "RGB",
+      "correctIndex": 1,
+      "explanation": "Adobeの現行技術資料では、RGBの加法カラーはテレビディスプレイやコンピューターモニターで使われると明示されています。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched computer-monitor output to RGB from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "プロセスカラー印刷用の画像を準備するときに基本となるモデルはどれですか。",
+      "sentence": "プロセスカラー印刷用の画像を準備するときに基本となるモデルはどれですか。",
+      "choices": ["RGB", "HSB", "CMYK", "PCCS"],
+      "proposedAnswer": "CMYK",
+      "correctIndex": 2,
+      "explanation": "CMYKはプロセスカラー印刷に用いられる基本的な減法カラーモデルです。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched process-color print preparation to CMYK from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "CMYKのKを実用上追加する主な理由として適切なのはどれですか。",
+      "sentence": "CMYKのKを実用上追加する主な理由として適切なのはどれですか。",
+      "choices": ["光の三原色を4色に増やすため", "色相環を24分割するため", "RGBの白色点を決めるため", "黒インクで暗部の深さやディテールを改善するため"],
+      "proposedAnswer": "黒インクで暗部の深さやディテールを改善するため",
+      "correctIndex": 3,
+      "explanation": "Adobeは、実際の印刷ではシャドウの深さとディテールを向上させるため黒（K）インクを追加すると説明しています。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently read Adobe's stated practical role for K ink before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "「光を加えるほど明るくなる」という説明に対応するモデルはどれですか。",
+      "sentence": "「光を加えるほど明るくなる」という説明に対応するモデルはどれですか。",
+      "choices": ["RGBの加法モデル", "CMYKの減法モデル", "マンセル表色系", "JIS慣用色名"],
+      "proposedAnswer": "RGBの加法モデル",
+      "correctIndex": 0,
+      "explanation": "RGBは光を加えていく加法モデルで、三成分を最大強度で合わせると白になります。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the additive-light description from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "「インクが光の一部を吸収し、残った光を反射して色を表す」という説明に対応するモデルはどれですか。",
+      "sentence": "「インクが光の一部を吸収し、残った光を反射して色を表す」という説明に対応するモデルはどれですか。",
+      "choices": ["RGB", "CMYK", "PCCS", "マンセル"],
+      "proposedAnswer": "CMYK",
+      "correctIndex": 1,
+      "explanation": "CMYKは紙上のインクによる光の吸収特性に基づく減法モデルです。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently read Adobe's CMYK light-absorption explanation before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "次のうち、画面表示と印刷の基本モデルの対応として正しいものはどれですか。",
+      "sentence": "次のうち、画面表示と印刷の基本モデルの対応として正しいものはどれですか。",
+      "choices": ["画面=CMYK、印刷=RGB", "画面=PCCS、印刷=マンセル", "画面=RGB、印刷=CMYK", "画面=CMY、印刷=RGB"],
+      "proposedAnswer": "画面=RGB、印刷=CMYK",
+      "correctIndex": 2,
+      "explanation": "一般的な画面表示はRGB、プロセスカラー印刷はCMYKを基本モデルとします。",
+      "sourceRefs": ["aft_grade2_current_toc_2026", "adobe_color_models_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched both device uses from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "色彩検定2級の公式出題例で、減法混色の三原色の頭文字として示される略号はどれですか。",
+      "sentence": "色彩検定2級の公式出題例で、減法混色の三原色の頭文字として示される略号はどれですか。",
+      "choices": ["RGB", "HVC", "PCCS", "CMY"],
+      "proposedAnswer": "CMY",
+      "correctIndex": 3,
+      "explanation": "現行の色彩検定2級公式出題例では、減法混色の三原色は各色名の頭文字から「CMY」と答える問題が掲載されています。",
+      "sourceRefs": ["aft_grade2_current_sample_2026"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-read the current official Grade 2 sample answer field D before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    }
+  ]
+}

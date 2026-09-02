@@ -6,20 +6,18 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime is now 144 verified / pending 0 across twelve promoted skills.
+Grade 2 runtime remains 144 verified / pending 0 across twelve promoted skills.
 
-The next official-text-order topic, hue-circle division schemes, is now source-resolved without image interpretation. Current official Grade 2 sample explicitly tests split complementary and pentad, permits achromatic colors in hexad, and states that two dyads can form a tetrad. Plus Colors, supervised by a Color Certification Level 1 coordinator and citing the 2020 revised official text, supplies the explicit retained nonvisual rules for dyad, split complementary, tetrad, PCCS pentad and hexad.
+The next official-text topic after image-based schemes is Visual Design. The current official Grade 2 TOC confirms the chapter and its `ビジュアルデザインとは` / `ビジュアルデザインと色彩` subheads, but the reviewed public first-party material does not expose a sufficiently explicit nonvisual answer rule. No `pc2.visual.*` questions were inferred from scope labels, figures, screenshots, image appearance, RGB/HEX or unstated geometry. This route is recorded as source-blocked in `docs/power-color/audits/2026-09-02-grade2-visual-media-source-audit.md`.
 
-`pc2.scheme.hue_circle_division` was independently QAed 12/12 verified with A/B/C/D = 3/3/3/3 and is now promoted record-identically. The runtime gate covers all eleven promoted Grade 2 skills with exact record equality, zero full-fingerprint duplicates and shared Power TOEIC engine execution.
+The next official-text topic, Media Design, is source-resolved for a narrow text-only RGB/CMYK slice. The official TOC explicitly lists `画面や印刷における色表現` and `カラーマネジメントの基本`; the current official Grade 2 sample confirms CMY as subtractive-mixing primaries; current Adobe professional documentation explicitly corroborates RGB as additive red/green/blue light used for displays, full-intensity RGB producing white, and CMYK as the subtractive process-print model with black added in practical four-color printing.
 
-No answer uses RGB/HEX, monitor values, image appearance, screenshot geometry or unstated diagram geometry. Source audit: `docs/power-color/audits/2026-09-02-grade2-hue-circle-division.md`.
+`pc2.media.rgb_cmyk_models` now has 12 pending-first questions independently re-solved before accepting proposed answers: 12 checked / 12 verified / 0 needs_revision / 0 rejected / pending 0, A/B/C/D = 3/3/3/3. Exact RGB/HEX values, swatches, monitor judgments, screenshots and image-derived answers are absent.
 
 Grade 3 runtime remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-The next official topic, `配色イメージ / イメージ別配色法`, is source-resolved as a text-only label↔keyword micro-skill. `pc2.image.image_scheme_keywords` has 12 independently checked questions: 12 verified / pending 0, A/B/C/D = 3/3/3/3, zero runtime fingerprint overlap. Audit: `docs/power-color/audits/2026-09-02-grade2-image-scheme-keywords.md`.
+Promote the verified `qualifications/color-certification/data/grade2-authoring-rgb-cmyk-models-0001-0012.json` records record-identically into `grade2-runtime.json`, taking Grade 2 runtime 144 → 156. Extend the existing runtime-promotion exact-equality, full-fingerprint duplicate, coverage, answer-position and shared Power TOEIC engine gates to the thirteenth promoted skill.
 
-`pc2.image.image_scheme_keywords` is now promoted record-identically; Grade 2 runtime is 144 verified / pending 0 across twelve skills. Exact equality, zero full-fingerprint duplicates and shared Power TOEIC engine execution pass.
-
-Continue source acquisition at Visual Design; retain all monitor/display, RGB/HEX and image-inference prohibitions.
+Keep Visual Design source-blocked until new explicit auditable nonvisual authority is acquired; do not repeat the same scope-only search or relax any display/source gate.

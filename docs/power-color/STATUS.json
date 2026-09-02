@@ -45,15 +45,15 @@
       "pc2.scheme.hue_circle_division",
       "pc2.image.image_scheme_keywords"
     ],
-    "active_skill": null,
+    "active_skill": "pc2.media.rgb_cmyk_models",
     "active_authoring": {
-      "generated": 0,
-      "checked": 0,
-      "verified": 0,
+      "generated": 12,
+      "checked": 12,
+      "verified": 12,
       "pending": 0
     },
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Continue source acquisition at Visual Design, the next current official Grade 2 text topic. Generate only from explicit auditable nonvisual rules; retain image/display/RGB/HEX prohibitions."
+    "next": "Promote pc2.media.rgb_cmyk_models record-identically from the verified 12-question authoring batch into runtime 144 to 156; extend exact-equality/full-fingerprint/shared Power TOEIC engine gates. Visual Design remains scope-confirmed but authoring-blocked until an explicit auditable nonvisual rule is acquired."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -62,22 +62,21 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 3,
+    "checkpoints_completed": 2,
     "generated": 12,
-    "checked": 24,
-    "verified": 24,
+    "checked": 12,
+    "verified": 12,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted pc2.scheme.hue_circle_division record-identically from verified authoring into Grade 2 runtime 120 to 132 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to eleven promoted skills.",
-      "Source-resolved pc2.image.image_scheme_keywords and independently verified 12/12 pending-first text questions with A/B/C/D = 3/3/3/3 and zero runtime fingerprint overlap.",
-      "Promoted pc2.image.image_scheme_keywords record-identically into Grade 2 runtime 132 to 144; extended exact-equality/full-fingerprint/shared Power TOEIC engine gate to twelve promoted skills."
+      "Audited the official Visual Design frontier: current public first-party material confirms scope/order but does not expose a sufficient nonvisual answer rule, so pc2.visual authoring remains blocked without guessing.",
+      "Advanced to the next official Media Design topic and source-resolved pc2.media.rgb_cmyk_models from the current official Grade 2 TOC/sample plus current Adobe professional color-model documentation; authored pending-first and independently verified 12/12 text-only questions with A/B/C/D = 3/3/3/3 and zero intended runtime fingerprint overlap."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 2 source acquisition at Visual Design."
+  "next": "Promote pc2.media.rgb_cmyk_models record-identically to Grade 2 runtime 156."
 }
