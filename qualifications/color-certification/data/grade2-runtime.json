@@ -133,6 +133,11 @@
       "id": "pc2.landscape.design_considerations",
       "label": "景観色彩：景観色彩設計の配慮事項",
       "categoryId": "pc2.landscape"
+    },
+    {
+      "id": "pc2.landscape.residential_color_design_process",
+      "label": "景観色彩：住宅の色彩設計プロセス",
+      "categoryId": "pc2.landscape"
     }
   ],
   "questions": [
@@ -9925,6 +9930,367 @@
       "qa": {
         "generatedAs": "pending_validation",
         "independentRecheck": "independently separated the accepted conceptual planning rules from explicitly excluded monitor RGB values before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "現行の色彩検定2級公式目次で、p.123に掲載されている項目はどれですか。",
+      "sentence": "現行の色彩検定2級公式目次で、p.123に掲載されている項目はどれですか。",
+      "choices": [
+        "住宅の色彩設計プロセス",
+        "ファッションの分類",
+        "カラーマネジメントの基本",
+        "インテリアスタイル"
+      ],
+      "proposedAnswer": "住宅の色彩設計プロセス",
+      "correctIndex": 0,
+      "explanation": "現行の2級公式目次では、生活環境における景観色彩設計の項目として「住宅の色彩設計プロセス」がp.123に置かれています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently located the p.123 residential color-design-process heading in the current AFT Grade 2 table of contents before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "現行2級公式目次で「住宅の色彩設計プロセス」の直後に置かれている項目はどれですか。",
+      "sentence": "現行2級公式目次で「住宅の色彩設計プロセス」の直後に置かれている項目はどれですか。",
+      "choices": [
+        "色彩管理",
+        "色を測ることによる周辺環境の把握",
+        "慣用色名",
+        "配色演習の解答例と解説"
+      ],
+      "proposedAnswer": "色を測ることによる周辺環境の把握",
+      "correctIndex": 1,
+      "explanation": "公式目次では「住宅の色彩設計プロセス」の次に「色を測ることによる周辺環境の把握」がp.123に続きます。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked the adjacent current official-table-of-contents entry following the residential process heading before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "現行2級公式目次で「配色計画」の次に置かれている項目はどれですか。",
+      "sentence": "現行2級公式目次で「配色計画」の次に置かれている項目はどれですか。",
+      "choices": [
+        "色覚説",
+        "照明の表し方",
+        "色彩管理",
+        "ファッションカラーの分類"
+      ],
+      "proposedAnswer": "色彩管理",
+      "correctIndex": 2,
+      "explanation": "現行2級公式目次では、p.124の「配色計画」に続いてp.125に「色彩管理」が置かれています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently verified the current official table-of-contents order from color planning to color management before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "日本塗料工業会の現行実践講座で、色彩設計演習の対象として明示されているものはどれですか。",
+      "sentence": "日本塗料工業会の現行実践講座で、色彩設計演習の対象として明示されているものはどれですか。",
+      "choices": [
+        "スマートフォン画面だけ",
+        "衣服だけ",
+        "食品パッケージだけ",
+        "戸建住宅"
+      ],
+      "proposedAnswer": "戸建住宅",
+      "correctIndex": 3,
+      "explanation": "日本塗料工業会の2025年度CCS実践編では「戸建住宅」色彩設計演習が明示されています。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified detached-house color-design exercise as an explicit JPMA seminar item before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "日本塗料工業会の実践講座で、周辺環境の色を把握する実作業として明示されているものはどれですか。",
+      "sentence": "日本塗料工業会の実践講座で、周辺環境の色を把握する実作業として明示されているものはどれですか。",
+      "choices": [
+        "実際の周辺環境色彩調査（視感測色）",
+        "写真からRGB値を推定すること",
+        "好みだけで代表色を決めること",
+        "モニター表示だけで周辺色を決めること"
+      ],
+      "proposedAnswer": "実際の周辺環境色彩調査（視感測色）",
+      "correctIndex": 0,
+      "explanation": "同講座は「実際の周辺環境色彩調査（視感測色）」を明示しています。画像や画面値からの推測ではありません。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "jpma_ccs_2025_practical"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently found surrounding-environment visual color survey as the explicit practical survey activity before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "周辺環境色彩調査とあわせて、日本塗料工業会の実践講座が明示する検討作業はどれですか。",
+      "sentence": "周辺環境色彩調査とあわせて、日本塗料工業会の実践講座が明示する検討作業はどれですか。",
+      "choices": [
+        "端末ごとのHEX補正",
+        "色彩設計コンセプトをまとめること",
+        "写真の色を自動抽出すること",
+        "固定の外壁色を全国共通で選ぶこと"
+      ],
+      "proposedAnswer": "色彩設計コンセプトをまとめること",
+      "correctIndex": 1,
+      "explanation": "同講座は、グループで意見交換し「色彩設計コンセプトをまとめる」作業を明示しています。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified consolidation of a color-design concept as an explicit practical activity before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "日本塗料工業会の実践講座で、配色案は何に基づいて作成すると明示されていますか。",
+      "sentence": "日本塗料工業会の実践講座で、配色案は何に基づいて作成すると明示されていますか。",
+      "choices": [
+        "流行色ランキング",
+        "画面の既定色",
+        "色彩設計コンセプト",
+        "無作為な色選択"
+      ],
+      "proposedAnswer": "色彩設計コンセプト",
+      "correctIndex": 2,
+      "explanation": "同講座は「コンセプトに基づいた色彩設計（配色案）」の作成を明示しています。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the explicit concept-to-color-scheme relation from the JPMA wording before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "日本塗料工業会の実践講座で、色彩設計案をまとめる成果物として明示されているものはどれですか。",
+      "sentence": "日本塗料工業会の実践講座で、色彩設計案をまとめる成果物として明示されているものはどれですか。",
+      "choices": [
+        "血液型診断表",
+        "色名の暗記表だけ",
+        "モニター校正値だけ",
+        "色彩設計企画書"
+      ],
+      "proposedAnswer": "色彩設計企画書",
+      "correctIndex": 3,
+      "explanation": "同講座では、グループ全員で色彩設計企画書を作成することが明示されています。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified the color-design proposal document as an explicit practical deliverable before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "日本塗料工業会の実践講座で、配色案について作成すると明示されている視覚資料はどれですか。",
+      "sentence": "日本塗料工業会の実践講座で、配色案について作成すると明示されている視覚資料はどれですか。",
+      "choices": [
+        "配色案のCG",
+        "根拠のないRGB一覧",
+        "周辺写真から推測したHEX表",
+        "固定色を示す全国共通表"
+      ],
+      "proposedAnswer": "配色案のCG",
+      "correctIndex": 0,
+      "explanation": "同講座は「配色案のCGを作成する」と明示しています。CGの見た目から問題の答えを推測することは、この問題DBでは認めません。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified creation of a CG for the color scheme as an explicit practical activity before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "日本塗料工業会の実践講座で、作成した色彩設計案に対して行うこととして明示されているものはどれですか。",
+      "sentence": "日本塗料工業会の実践講座で、作成した色彩設計案に対して行うこととして明示されているものはどれですか。",
+      "choices": [
+        "画像だけから正解色を推定する",
+        "プレゼンテーションし講師から評価を得る",
+        "RGB値を唯一の評価基準にする",
+        "周辺環境を確認せず採用する"
+      ],
+      "proposedAnswer": "プレゼンテーションし講師から評価を得る",
+      "correctIndex": 1,
+      "explanation": "同講座では、グループごとに色彩設計案をプレゼンテーションし、講師から評価を得ることが明示されています。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified presentation and instructor evaluation as explicit downstream actions before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "確認済み資料から安全に言える住宅色彩設計プロセスの関係はどれですか。",
+      "sentence": "確認済み資料から安全に言える住宅色彩設計プロセスの関係はどれですか。",
+      "choices": [
+        "写真の見た目だけで配色案を決める",
+        "全国の住宅に同一色を指定する",
+        "色彩設計コンセプトに基づいて配色案を作る",
+        "モニターRGB値を周辺環境の実測値とみなす"
+      ],
+      "proposedAnswer": "色彩設計コンセプトに基づいて配色案を作る",
+      "correctIndex": 2,
+      "explanation": "確認済みJPMA資料は、コンセプトに基づいた色彩設計（配色案）を明示しています。他の選択肢は資料にない推測です。",
+      "sourceRefs": [
+        "jpma_ccs_2025_practical"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently selected the only explicitly sourced process relation and rejected display/image/fixed-color inferences before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-residential-color-design-process-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/residential_color_design_process",
+      "skillId": "pc2.landscape.residential_color_design_process",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "現行2級公式目次で、住宅の色彩設計プロセスに続く3項目の組合せとして正しいものはどれですか。",
+      "sentence": "現行2級公式目次で、住宅の色彩設計プロセスに続く3項目の組合せとして正しいものはどれですか。",
+      "choices": [
+        "照明・色覚説・慣用色名",
+        "ファッション分類・配色・事例",
+        "画像の基本・RGB・CMYK",
+        "周辺環境の把握・配色計画・色彩管理"
+      ],
+      "proposedAnswer": "周辺環境の把握・配色計画・色彩管理",
+      "correctIndex": 3,
+      "explanation": "現行公式目次では、住宅の色彩設計プロセスに続いて、周辺環境の把握、配色計画、色彩管理が並びます。これは公式目次上の範囲・順序の確認であり、全実務に対する絶対的な工程順を主張するものではありません。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently read the three consecutive current official-table-of-contents entries after the residential process heading before comparing with proposedAnswer",
         "checkedOn": "2026-09-03"
       }
     }
