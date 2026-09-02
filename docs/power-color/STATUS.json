@@ -47,15 +47,15 @@
       "pc2.media.rgb_cmyk_models",
       "pc2.media.color_management_profiles"
     ],
-    "active_skill": null,
+    "active_skill": "pc2.media.image_basics",
     "active_authoring": {
-      "generated": 0,
-      "checked": 0,
-      "verified": 0,
+      "generated": 12,
+      "checked": 12,
+      "verified": 12,
       "pending": 0
     },
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Continue source acquisition at コンピュータにおける画像の基本, the next current official Grade 2 Media Design subtopic. Author only from explicit auditable nonvisual rules. Visual Design remains source-blocked."
+    "next": "Promote the independently verified pc2.media.image_basics 12-question batch record-identically into Grade 2 runtime 168 to 180, then extend exact-equality/full-fingerprint/shared Power TOEIC engine gates. Visual Design remains source-blocked."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -64,7 +64,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 4,
+    "checkpoints_completed": 3,
     "generated": 12,
     "checked": 12,
     "verified": 12,
@@ -73,14 +73,13 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted pc2.media.rgb_cmyk_models record-identically from verified authoring into Grade 2 runtime 144 to 156 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to thirteen promoted skills.",
-      "Source-resolved pc2.media.color_management_profiles from the current official Grade 2 TOC plus current Adobe professional color-management documentation, retaining text-only ICC/profile/device-translation rules and excluding display inference.",
-      "Authored pending-first and independently re-solved 12 pc2.media.color_management_profiles questions: 12 checked / 12 verified / pending 0, A/B/C/D = 3/3/3/3.",
-      "Promoted pc2.media.color_management_profiles record-identically into Grade 2 runtime 156 to 168; extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to fourteen promoted skills."
+      "Source-resolved コンピュータにおける画像の基本 from current official Grade 2 scope plus current Adobe professional raster/vector documentation, retaining text-only image representation/scaling/use-case rules and excluding visual inference.",
+      "Authored 12 pc2.media.image_basics questions pending-first from the fixed nonvisual rule set.",
+      "Independently re-solved all 12 records: 12 checked / 12 verified / pending 0, A/B/C/D = 3/3/3/3; added a dedicated authoring/shared-renderer gate while keeping runtime unchanged at 168."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 2 source acquisition at コンピュータにおける画像の基本."
+  "next": "Promote pc2.media.image_basics record-identically from verified authoring into Grade 2 runtime 168 to 180."
 }

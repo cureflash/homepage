@@ -68,6 +68,15 @@ Grade 2 runtime is 168 verified / pending 0 across fourteen promoted skills. Gra
 - [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
 - [x] Promote record-identically to runtime 156 → 168 with exact-equality/full-fingerprint/shared-engine gates.
 
+## Media Design — computer image basics text-only slice
+
+- [x] Current official Grade 2 text scope places `コンピュータにおける画像の基本` next in Media Design.
+- [x] Current Adobe professional documentation explicitly fixes the retained nonvisual rules: raster = pixel grid and resolution-dependent; raster enlargement can lose detail; vector = mathematically defined points/lines/curves/shapes and scales with crisp edges; photographs are a standard raster use case; logos/technical illustrations are standard vector use cases.
+- [x] Exclude image appearance judgments, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, unstated geometry, device-specific resolution targets and compression-quality judgments.
+- [x] Generate pending-first 12 text-choice questions and independently re-derive every answer before accepting proposed answers.
+- [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
+- [ ] Promote record-identically to runtime 168 → 180 and extend exact-equality/full-fingerprint/shared-engine gates.
+
 ## Exact next start point
 
-Continue source acquisition at `コンピュータにおける画像の基本`, the next current official Grade 2 Media Design subtopic after `カラーマネジメントの基本`. Author only if an explicit auditable nonvisual rule can be fixed without image appearance, RGB/HEX, monitor values, screenshots or unstated geometry. Visual Design remains source-blocked.
+Promote the independently verified `pc2.media.image_basics` 12-question batch record-identically into Grade 2 runtime 168 → 180, then continue source acquisition in current official Grade 2 text order. Visual Design remains source-blocked.
