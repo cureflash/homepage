@@ -59,3 +59,5 @@ test('Grade 2 p128 JIS conventional-name structure remains verified, source-boun
   assert.equal(runtime.skills.some((skill) => skill.id === batch.skill.id), true);
   assert.deepEqual(runtime.questions.filter((q) => q.skillId === batch.skill.id), batch.questions);
 });
+
+// Keep an exact-head CI commit after removing the temporary promotion trigger.
