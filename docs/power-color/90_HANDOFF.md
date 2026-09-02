@@ -8,18 +8,16 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 Grade 2 runtime is 288 verified / pending 0 across twenty-four promoted skills.
 
-`pc2.landscape.regional_color_context` for Landscape p.118 `地域には地域の色がある` is now promoted record-identically. The source contract remains `docs/power-color/audits/2026-09-03-grade2-landscape-p118-regional-color-source-audit.md`.
+`pc2.landscape.regional_color_context` for Landscape p.118 `地域には地域の色がある` is promoted record-identically. The 12-question batch remains 12/12 verified, pending 0, A/B/C/D=3/3/3/3. Exact-union, full-fingerprint and shared Power TOEIC question-bank/session/workout gates passed in Power Color CI `33659280553`; PR #560 merged as `5e1cf1ed51f4c94b9cbee8465eabdb754ae05702`.
 
-The batch remains 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. Promotion preserves the authoring records exactly. The runtime exact-union gate, full-fingerprint duplicate gate, shared Power TOEIC question-bank/session/workout gate, and full Power Color regression passed in workflow run `33659280553`; PR #560 merged as `5e1cf1ed51f4c94b9cbee8465eabdb754ae05702`.
+Landscape p.118 `国内外の景観色彩の事例` remains source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
 
-The accepted regional-color boundary remains conceptual and relational only: regional landscape color may relate to long-existing/accumulated colors, regionally produced natural materials, and climate/natural-environment context. It does not authorize any fixed locality-to-color mapping, RGB/HEX/display values, monitor-facing swatches, Munsell values, hue/tone inference, image appearance, material appearance, or unstated geometry.
-
-Landscape p.118 `国内外の景観色彩の事例` is source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`: the current public official material fixes scope/order but does not expose a closed official-text example set with deterministic nonvisual answer rules. Do not substitute arbitrary external cases or infer answers from images/display colors.
+Landscape p.120 `人工要素と自然要素の色彩が共存` was audited under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`. The official current table of contents confirms the topic and order, and public corroboration confirms artificial/natural landscape categories, but the available evidence does not expose a sufficiently rich closed deterministic Grade 2 rule set for a 12-question batch. Keep authoring source-blocked rather than inventing an external taxonomy, inferring colors/material appearance, or generating paraphrase duplicates of the heading.
 
 Visual Design, Fashion p.091/p.095/p.096, Interior p.104, p.107 and p.111 remain source-blocked. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Continue official-text order to Landscape p.120 `人工要素と自然要素の色彩が共存`. Source-acquire an explicit deterministic nonvisual boundary before authoring anything. If no auditable boundary can be established, record the blocker and move to the next official-text item rather than guessing.
+Continue official-text order to Landscape p.120 `ライフサイクルの長い色彩`. Source-acquire an explicit deterministic nonvisual rule boundary before authoring anything. If no auditable boundary can be established, record the blocker and continue in official-text order rather than guessing.
 
 Keep all Grade 3 blockers and source/display gates unchanged. Use only the shared Power TOEIC question-bank/workout/session engine.
