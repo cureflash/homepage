@@ -52,7 +52,7 @@
     "active_skill": null,
     "active_authoring": null,
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Acquire an explicit auditable nonvisual answer rule for the next official-text topic, ファッションの配色 p.095. ファッションの分類 p.091 is source-blocked."
+    "next": "Acquire an explicit auditable nonvisual answer rule for インテリア色彩の考え方 p.105, then インテリア空間の分類とゾーニング p.105. Fashion p.091/p.095/p.096 and インテリア概念の成立 p.104 are source-blocked."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -61,21 +61,22 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 2,
+    "checkpoints_completed": 3,
     "generated": 0,
-    "checked": 12,
-    "verified": 12,
+    "checked": 0,
+    "verified": 0,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted the previously independently verified pc2.fashion.basic_trend_color_classification 12-question batch record-identically into Grade 2 runtime 180 to 192 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to all sixteen promoted skills.",
-      "Audited the next official-text topic ファッションの分類 p.091. Current public first-party material confirms scope/order but no sufficiently explicit deterministic nonvisual classification rule was found, so authoring is source-blocked rather than inferred; continue at ファッションの配色 p.095."
+      "Audited ファッションの配色 p.095. Current public first-party scope is explicit but no deterministic nonvisual p.095 answer rule was exposed; general fashion advice and visual examples were rejected as insufficient authority.",
+      "Audited ファッションにおける配色の事例 p.096. The public example set and exact rule mapping are not exposed, so image/example reconstruction remains blocked rather than inferred.",
+      "Audited インテリア概念の成立 p.104. Current Interior Industry Association first-party material provides modern professional role definitions but does not establish the official-text historical/conceptual propositions, so p.104 authoring remains source-blocked."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-acquire ファッションの配色 p.095; do not author until an explicit auditable nonvisual rule is fixed."
+  "next": "Source-acquire インテリア色彩の考え方 p.105; do not author until an explicit auditable nonvisual rule is fixed."
 }
