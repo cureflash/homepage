@@ -48,10 +48,10 @@
       "pc2.media.color_management_profiles",
       "pc2.media.image_basics"
     ],
-    "active_skill": null,
+    "active_skill": "pc2.fashion.basic_trend_color_classification",
     "active_authoring": null,
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Continue current official Grade 2 text order from the next source-resolvable nonvisual topic after pc2.media.image_basics. Visual Design remains source-blocked."
+    "next": "Create pc2.fashion.basic_trend_color_classification pending-first authoring from the source-fixed text-only distinction between basic colors and trend colors, then independently re-solve every record."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -60,7 +60,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 1,
+    "checkpoints_completed": 2,
     "generated": 0,
     "checked": 12,
     "verified": 12,
@@ -69,11 +69,12 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Promoted the previously independently verified pc2.media.image_basics 12-question batch record-identically into Grade 2 runtime 168 to 180 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to all fifteen promoted skills."
+      "Promoted the previously independently verified pc2.media.image_basics 12-question batch record-identically into Grade 2 runtime 168 to 180 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to all fifteen promoted skills.",
+      "Source-resolved the next official-text topic, ファッションカラーの分類, only for a narrow nonvisual basic-color versus trend-color classification using current official Grade 2 scope/order, current JAFCA first-party trend-information facts, and an auditable specialist secondary definition tied to the 2020-revised official text."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Acquire explicit auditable authority for the next source-resolvable nonvisual Grade 2 topic in current official-text order."
+  "next": "Create pc2.fashion.basic_trend_color_classification pending-first authoring, then independently QA it before any promotion."
 }
