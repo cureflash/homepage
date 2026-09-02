@@ -34,16 +34,15 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 Completed checkpoints through the last fully reconciled concept: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document; article35-vs-37; eight-restrictions-scope; cooling-off; earnest-money-limit; earnest-money-safeguards; damages-penalty; nonconformity-special-rule; unowned-property-sale; installment-cancellation; installment-ownership-retention; brokerage-fees; supervision-dispositions; declaration-arrival; mistake; fraud; duress; mental-reservation; fictitious-declaration; minor; adult-ward; agency; unauthorized-agency; apparent-agency; acquisitive-prescription; extinctive-prescription; property-transfer-opposability; co-ownership; mortgage; default-damages; contract-cancellation; simultaneous-performance; risk-allocation; sale-earnest; civil-nonconformity; lease-general; security-deposit; building-lease-opposability; ordinary-land-lease-term; land-lease-opposability; fixed-term-land-lease; building-lease-term; fixed-term-building-lease; heirs-order; statutory-inheritance-shares; inheritance-deliberation; inheritance-renunciation; will-effect; reserved-portion; condominium-ownership; real-estate-registration-record; city-quasi-planning-area; area-division; use-districts; city-planning-decision; city-planning-project; development-permission; development-completion; building-confirmation; roads-frontage; building-coverage-ratio.
 
 Current checkpoint:
-- [x] `takken-concept-building-coverage-ratio` has 9 verified atomic knowledge items against the 2026-04-01 Building Standards Act Article 53 baseline.
-- [x] `takken-q-69-001` maps only to `takken-k-building-coverage-ratio-definition`.
-- [x] `takken-q-69-002` maps only to the fire/semi-fire relaxation and corner-lot relaxation items that its choices directly test.
-- [x] The designated-limit, combined-relaxation, permit-relaxation and application-exclusion items remain explicit Phase 4.3 deficits rather than being over-mapped from broad wording.
+- [x] `takken-concept-floor-area-ratio` has 7 canonical atomic knowledge items sourced to the 2026-04-01 Building Standards Act Article 52 framework.
+- [x] The items separate the definition, designated limit, front-road-under-12m restriction, residential road factor, nonresidential road factor, lower-of-two rule, and weighted-average treatment where a site spans different restriction zones.
+- [ ] `takken-q-70-001` and `takken-q-70-002` have not yet been mapped to these items; that is the next checkpoint.
 - [x] Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses remain unchanged.
 - [x] Phase 4.3 remains unstarted.
 
-Current Phase 4.2 totals: 89/113 fully reconciled concepts, 89 concepts with canonical knowledge items, 462 verified knowledge items, 108 existing verified questions mapped, 304 explicit question-coverage gaps.
+Current Phase 4.2 totals: 89/113 fully reconciled concepts, 90 concepts with canonical knowledge items, 469 verified knowledge items, 108 existing verified questions mapped, 311 explicit question-coverage gaps.
 
-Exact continuation: extract and source canonical atomic knowledge items for `takken-concept-floor-area-ratio`, then map existing verified questions only where they directly measure those items. Do not begin Phase 4.3.
+Exact continuation: map `takken-q-70-001` only to the floor-area-ratio definition item and map `takken-q-70-002` only to the directly tested front-road-under-12m restriction item. Keep the other five items as explicit Phase 4.3 deficits. Do not begin Phase 4.3.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
