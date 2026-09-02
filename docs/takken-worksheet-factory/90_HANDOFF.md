@@ -8,12 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Fully reconciled `takken-concept-fire-prevention-zones` without changing existing Phase 2/3 question content or validation status.
+Extracted canonical knowledge for `takken-concept-national-land-use-notification` without changing existing Phase 2/3 question content or validation status.
 
-- Kept the 6 canonical fire-prevention knowledge items already extracted from 2026-04-01 primary/official sources.
-- Mapped verified `takken-q-72-001` only to `takken-k-fire-prevention-zones-regional-district-status` because its choices directly test the urban-planning regional-district classification.
-- Mapped verified `takken-q-72-002` only to `takken-k-fire-prevention-zones-requirement-varies-by-zone-scale` because its choices directly test that fire-performance requirements vary with building scale and related conditions.
-- Did not over-map `purpose`, the general Article 61 performance wording, equivalent extension-prevention performance, or opening fire-equipment details. Those four items remain explicit Phase 4.3 deficits.
+- Added 10 canonical atomic knowledge items from the 2026-04-01 National Land Use Planning Act framework and official MLIT land-transaction guidance.
+- Separated post-notification scope, rights-acquirer duty, the 2,000 / 5,000 / 10,000 square-metre statutory thresholds, the two-week deadline, the municipality-to-governor submission route, buying-one-group aggregation, notified purpose/price, and the 2026-04-01 corporate-representative-nationality addition.
+- Existing verified `takken-q-73-001` and `takken-q-73-002` were not changed or mapped in this extraction checkpoint.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -25,16 +24,16 @@ Fully reconciled `takken-concept-fire-prevention-zones` without changing existin
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 93/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 93
-- Canonical knowledge items: 493
+- Concepts with canonical knowledge items: 94
+- Canonical knowledge items: 503
 - Existing verified questions mapped: 114
-- Explicit unmapped knowledge gaps: 329
+- Explicit unmapped knowledge gaps: 339
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical atomic knowledge items for `takken-concept-national-land-use-notification` from 2026-04-01 primary sources. Then map existing verified questions only to the knowledge items their choices directly measure. Do not begin Phase 4.3.
+Map verified `takken-q-73-001` only to the national-land-use knowledge item(s) directly measured by its choices. Map verified `takken-q-73-002` only to the two-week deadline and submission-route item(s) directly measured by its choices. Keep all other national-land-use knowledge items as explicit Phase 4.3 deficits. Do not begin Phase 4.3.
 
 ## publication invariant
 
