@@ -1,0 +1,676 @@
+TAP version 13
+# Subtest: late color-to-name checkpoint is independently verified and internally consistent
+ok 1 - late color-to-name checkpoint is independently verified and internally consistent
+  ---
+  duration_ms: 1.734855
+  type: 'test'
+  ...
+# Subtest: color-to-name useful state-space coverage reaches 63 unique master refs with only c3-052 deferred
+ok 2 - color-to-name useful state-space coverage reaches 63 unique master refs with only c3-052 deferred
+  ---
+  duration_ms: 0.626597
+  type: 'test'
+  ...
+# Subtest: Grade 3 conventional-color master contains 64 stable records
+ok 3 - Grade 3 conventional-color master contains 64 stable records
+  ---
+  duration_ms: 1.546513
+  type: 'test'
+  ...
+# Subtest: runtime bank contains only verified unique questions and validates each presentation domain
+ok 4 - runtime bank contains only verified unique questions and validates each presentation domain
+  ---
+  duration_ms: 2.597327
+  type: 'test'
+  ...
+# Subtest: promoted PCCS complementary-hue runtime records remain record-identical to verified authoring
+ok 5 - promoted PCCS complementary-hue runtime records remain record-identical to verified authoring
+  ---
+  duration_ms: 1.498659
+  type: 'test'
+  ...
+# Subtest: authoring checkpoint 0017-0024 is independently verified and internally consistent
+ok 6 - authoring checkpoint 0017-0024 is independently verified and internally consistent
+  ---
+  duration_ms: 0.59262
+  type: 'test'
+  ...
+# Subtest: authoring checkpoint 0025-0032 is independently verified and internally consistent
+ok 7 - authoring checkpoint 0025-0032 is independently verified and internally consistent
+  ---
+  duration_ms: 0.425631
+  type: 'test'
+  ...
+# Subtest: authoring checkpoint 0033-0040 is independently verified and internally consistent
+ok 8 - authoring checkpoint 0033-0040 is independently verified and internally consistent
+  ---
+  duration_ms: 0.322566
+  type: 'test'
+  ...
+# Subtest: authoring checkpoint 0041-0048 is independently verified and internally consistent
+ok 9 - authoring checkpoint 0041-0048 is independently verified and internally consistent
+  ---
+  duration_ms: 0.348888
+  type: 'test'
+  ...
+# Subtest: authoring checkpoint 0049-0056 is independently verified and internally consistent
+ok 10 - authoring checkpoint 0049-0056 is independently verified and internally consistent
+  ---
+  duration_ms: 0.239192
+  type: 'test'
+  ...
+# Subtest: verified color-to-name coverage does not reuse target master colors
+ok 11 - verified color-to-name coverage does not reuse target master colors
+  ---
+  duration_ms: 0.647708
+  type: 'test'
+  ...
+# Subtest: answer feedback re-shows the correct color for color-to-name questions
+ok 12 - answer feedback re-shows the correct color for color-to-name questions
+  ---
+  duration_ms: 0.802013
+  type: 'test'
+  ...
+# Subtest: color-to-name feedback maps every text choice to its color card
+ok 13 - color-to-name feedback maps every text choice to its color card
+  ---
+  duration_ms: 0.575405
+  type: 'test'
+  ...
+# Subtest: answer feedback names the correct color for name-to-color questions
+ok 14 - answer feedback names the correct color for name-to-color questions
+  ---
+  duration_ms: 0.270545
+  type: 'test'
+  ...
+# Subtest: name-to-color feedback reveals every choice color name after answering
+ok 15 - name-to-color feedback reveals every choice color name after answering
+  ---
+  duration_ms: 0.383678
+  type: 'test'
+  ...
+# Subtest: revealed swatch labels choose readable dark/light text
+ok 16 - revealed swatch labels choose readable dark/light text
+  ---
+  duration_ms: 0.2941
+  type: 'test'
+  ...
+# Subtest: choice color names and color-to-name cards are pre-rendered hidden and then revealed
+ok 17 - choice color names and color-to-name cards are pre-rendered hidden and then revealed
+  ---
+  duration_ms: 0.19774
+  type: 'test'
+  ...
+# Subtest: browser-facing Power Color assets use the same cache-busting version
+ok 18 - browser-facing Power Color assets use the same cache-busting version
+  ---
+  duration_ms: 0.180706
+  type: 'test'
+  ...
+# Subtest: Power TOEIC shared repository/workout/session engine runs a color question
+ok 19 - Power TOEIC shared repository/workout/session engine runs a color question
+  ---
+  duration_ms: 5.574223
+  type: 'test'
+  ...
+# Subtest: shared Power TOEIC engine runs promoted PCCS text-choice questions
+ok 20 - shared Power TOEIC engine runs promoted PCCS text-choice questions
+  ---
+  duration_ms: 0.774418
+  type: 'test'
+  ...
+# Subtest: checkpoint 0057-0064 is individually verified and schema-consistent
+ok 21 - checkpoint 0057-0064 is individually verified and schema-consistent
+  ---
+  duration_ms: 2.234291
+  type: 'test'
+  ...
+# Subtest: 0057-0064 adds eight new color-to-name targets without reusing prior coverage
+ok 22 - 0057-0064 adds eight new color-to-name targets without reusing prior coverage
+  ---
+  duration_ms: 0.547531
+  type: 'test'
+  ...
+# Subtest: monitor-ambiguous sky blue is not emitted as a color-to-name question
+ok 23 - monitor-ambiguous sky blue is not emitted as a color-to-name question
+  ---
+  duration_ms: 0.222179
+  type: 'test'
+  ...
+# Subtest: Grade 3 conventional runtime slice remains exactly 127 verified questions as PCCS runtime grows independently
+ok 24 - Grade 3 conventional runtime slice remains exactly 127 verified questions as PCCS runtime grows independently
+  ---
+  duration_ms: 1.376607
+  type: 'test'
+  ...
+# Subtest: all 111 staged authoring questions were promoted byte-for-byte at the record level
+ok 25 - all 111 staged authoring questions were promoted byte-for-byte at the record level
+  ---
+  duration_ms: 3.621308
+  type: 'test'
+  ...
+# Subtest: all conventional runtime questions satisfy shared schema and canonical reference integrity
+ok 26 - all conventional runtime questions satisfy shared schema and canonical reference integrity
+  ---
+  duration_ms: 0.712577
+  type: 'test'
+  ...
+# Subtest: runtime color-to-name independently resolves 63 useful monitor-discriminable states
+ok 27 - runtime color-to-name independently resolves 63 useful monitor-discriminable states
+  ---
+  duration_ms: 0.94734
+  type: 'test'
+  ...
+# Subtest: runtime name-to-color independently resolves all 64 canonical targets
+ok 28 - runtime name-to-color independently resolves all 64 canonical targets
+  ---
+  duration_ms: 1.417087
+  type: 'test'
+  ...
+# Subtest: the only duplicate master display value is the documented 空色/スカイブルー exception
+ok 29 - the only duplicate master display value is the documented 空色/スカイブルー exception
+  ---
+  duration_ms: 0.387625
+  type: 'test'
+  ...
+# Subtest: runtime IDs, targets, and full fingerprints have no accidental duplicates
+ok 30 - runtime IDs, targets, and full fingerprints have no accidental duplicates
+  ---
+  duration_ms: 1.188025
+  type: 'test'
+  ...
+# Subtest: Grade 2 bicolor/tricolor authoring batch is independently verified and balanced
+ok 31 - Grade 2 bicolor/tricolor authoring batch is independently verified and balanced
+  ---
+  duration_ms: 2.873542
+  type: 'test'
+  ...
+# Subtest: Grade 2 camaieu/faux-camaieu authoring batch is independently verified and balanced
+ok 32 - Grade 2 camaieu/faux-camaieu authoring batch is independently verified and balanced
+  ---
+  duration_ms: 2.753085
+  type: 'test'
+  ...
+# Subtest: Grade 2 dominant color/tone authoring batch is independently verified and balanced
+ok 33 - Grade 2 dominant color/tone authoring batch is independently verified and balanced
+  ---
+  duration_ms: 2.556897
+  type: 'test'
+  ...
+# Subtest: Grade 2 hue-circle division authoring batch is independently verified and balanced
+ok 34 - Grade 2 hue-circle division authoring batch is independently verified and balanced
+  ---
+  duration_ms: 2.554222
+  type: 'test'
+  ...
+# Subtest: Grade 2 image-scheme keyword authoring batch is verified, nonvisual, balanced, and runtime-distinct
+not ok 35 - Grade 2 image-scheme keyword authoring batch is verified, nonvisual, balanced, and runtime-distinct
+  ---
+  duration_ms: 3.364682
+  type: 'test'
+  location: '/home/runner/work/homepage/homepage/qualifications/color-certification/tests/grade2-image-scheme-keywords-authoring.test.js:8:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    true !== false
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/runner/work/homepage/homepage/qualifications/color-certification/tests/grade2-image-scheme-keywords-authoring.test.js:16:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: Grade 2 Munsell notation batch is fully independently verified and balanced
+ok 36 - Grade 2 Munsell notation batch is fully independently verified and balanced
+  ---
+  duration_ms: 2.211536
+  type: 'test'
+  ...
+# Subtest: Munsell notation text questions render without monitor color lookup
+ok 37 - Munsell notation text questions render without monitor color lookup
+  ---
+  duration_ms: 0.564364
+  type: 'test'
+  ...
+# Subtest: Grade 2 natural/complex harmony batch is independently verified and balanced
+ok 38 - Grade 2 natural/complex harmony batch is independently verified and balanced
+  ---
+  duration_ms: 2.513762
+  type: 'test'
+  ...
+# Subtest: Natural/complex harmony text questions render without monitor color lookup
+ok 39 - Natural/complex harmony text questions render without monitor color lookup
+  ---
+  duration_ms: 0.578672
+  type: 'test'
+  ...
+# Subtest: Grade 2 current first-party text-only authoring slice is complete and balanced
+ok 40 - Grade 2 current first-party text-only authoring slice is complete and balanced
+  ---
+  duration_ms: 3.089289
+  type: 'test'
+  ...
+# Subtest: Grade 2 reconciled authoring slice remains non-visual in the shared renderer
+ok 41 - Grade 2 reconciled authoring slice remains non-visual in the shared renderer
+  ---
+  duration_ms: 0.512622
+  type: 'test'
+  ...
+# Subtest: Grade 2 runtime is the record-identical union of verified authoring batches
+ok 42 - Grade 2 runtime is the record-identical union of verified authoring batches
+  ---
+  duration_ms: 4.096556
+  type: 'test'
+  ...
+# Subtest: Grade 2 runtime has no full-fingerprint duplicates
+ok 43 - Grade 2 runtime has no full-fingerprint duplicates
+  ---
+  duration_ms: 1.37795
+  type: 'test'
+  ...
+# Subtest: shared Power TOEIC engine runs all Grade 2 skills
+ok 44 - shared Power TOEIC engine runs all Grade 2 skills
+  ---
+  duration_ms: 7.208971
+  type: 'test'
+  ...
+# Subtest: Grade 2 tonal authoring batch is independently verified and balanced
+ok 45 - Grade 2 tonal authoring batch is independently verified and balanced
+  ---
+  duration_ms: 2.762063
+  type: 'test'
+  ...
+# Subtest: Grade 2 tone-in-tone authoring batch is independently verified and balanced
+ok 46 - Grade 2 tone-in-tone authoring batch is independently verified and balanced
+  ---
+  duration_ms: 2.540485
+  type: 'test'
+  ...
+# Subtest: Grade 2 tone-on-tone authoring batch is independently verified and balanced
+ok 47 - Grade 2 tone-on-tone authoring batch is independently verified and balanced
+  ---
+  duration_ms: 3.085591
+  type: 'test'
+  ...
+# Subtest: Grade 2 triad hue-position authoring is complete, balanced, and independently derivable
+ok 48 - Grade 2 triad hue-position authoring is complete, balanced, and independently derivable
+  ---
+  duration_ms: 3.07478
+  type: 'test'
+  ...
+# Subtest: Grade 2 triad hue-position records remain text-only in the shared renderer
+ok 49 - Grade 2 triad hue-position records remain text-only in the shared renderer
+  ---
+  duration_ms: 0.586347
+  type: 'test'
+  ...
+# Subtest: name-to-color checkpoint 0017-0024 is independently verified and internally consistent
+ok 50 - name-to-color checkpoint 0017-0024 is independently verified and internally consistent
+  ---
+  duration_ms: 2.463543
+  type: 'test'
+  ...
+# Subtest: name-to-color coverage adds eight new master refs without reusing runtime targets
+ok 51 - name-to-color coverage adds eight new master refs without reusing runtime targets
+  ---
+  duration_ms: 0.42563
+  type: 'test'
+  ...
+# Subtest: name-to-color checkpoint 0025-0032 is independently verified and internally consistent
+ok 52 - name-to-color checkpoint 0025-0032 is independently verified and internally consistent
+  ---
+  duration_ms: 2.969311
+  type: 'test'
+  ...
+# Subtest: name-to-color staged coverage reaches 24 unique master refs without target reuse
+ok 53 - name-to-color staged coverage reaches 24 unique master refs without target reuse
+  ---
+  duration_ms: 0.579895
+  type: 'test'
+  ...
+# Subtest: name-to-color checkpoint 0033-0040 is independently verified and internally consistent
+ok 54 - name-to-color checkpoint 0033-0040 is independently verified and internally consistent
+  ---
+  duration_ms: 2.623239
+  type: 'test'
+  ...
+# Subtest: name-to-color staged coverage reaches 32 unique master refs without target reuse
+ok 55 - name-to-color staged coverage reaches 32 unique master refs without target reuse
+  ---
+  duration_ms: 0.567881
+  type: 'test'
+  ...
+# Subtest: name-to-color checkpoint 0041-0048 is independently verified and internally consistent
+ok 56 - name-to-color checkpoint 0041-0048 is independently verified and internally consistent
+  ---
+  duration_ms: 2.623279
+  type: 'test'
+  ...
+# Subtest: name-to-color staged coverage reaches 40 unique master refs without target reuse
+ok 57 - name-to-color staged coverage reaches 40 unique master refs without target reuse
+  ---
+  duration_ms: 0.520247
+  type: 'test'
+  ...
+# Subtest: name-to-color checkpoint 0049-0056 is independently verified and internally consistent
+ok 58 - name-to-color checkpoint 0049-0056 is independently verified and internally consistent
+  ---
+  duration_ms: 2.811571
+  type: 'test'
+  ...
+# Subtest: name-to-color staged coverage reaches 48 unique master refs without target reuse
+ok 59 - name-to-color staged coverage reaches 48 unique master refs without target reuse
+  ---
+  duration_ms: 0.526755
+  type: 'test'
+  ...
+# Subtest: name-to-color checkpoint 0057-0064 is independently verified and internally consistent
+ok 60 - name-to-color checkpoint 0057-0064 is independently verified and internally consistent
+  ---
+  duration_ms: 2.581901
+  type: 'test'
+  ...
+# Subtest: name-to-color staged coverage reaches 56 unique master refs without target reuse
+ok 61 - name-to-color staged coverage reaches 56 unique master refs without target reuse
+  ---
+  duration_ms: 0.49674
+  type: 'test'
+  ...
+# Subtest: name-to-color checkpoint 0065-0072 is independently verified and internally consistent
+ok 62 - name-to-color checkpoint 0065-0072 is independently verified and internally consistent
+  ---
+  duration_ms: 2.790541
+  type: 'test'
+  ...
+# Subtest: name-to-color staged coverage reaches all 64 master refs without target reuse
+ok 63 - name-to-color staged coverage reaches all 64 master refs without target reuse
+  ---
+  duration_ms: 0.685112
+  type: 'test'
+  ...
+# Subtest: Grade 3 complementary-hue authoring batch covers each unique opposite pair exactly once
+ok 64 - Grade 3 complementary-hue authoring batch covers each unique opposite pair exactly once
+  ---
+  duration_ms: 1.745777
+  type: 'test'
+  ...
+# Subtest: Complementary-hue batch has balanced answer positions and no monitor-color dependency
+ok 65 - Complementary-hue batch has balanced answer positions and no monitor-color dependency
+  ---
+  duration_ms: 1.13831
+  type: 'test'
+  ...
+# Subtest: Text-only PCCS questions produce answer feedback without a display-color dependency
+ok 66 - Text-only PCCS questions produce answer feedback without a display-color dependency
+  ---
+  duration_ms: 0.51839
+  type: 'test'
+  ...
+# Subtest: PCCS complementary-hue runtime promotion preserves all 12 verified authoring records exactly
+ok 67 - PCCS complementary-hue runtime promotion preserves all 12 verified authoring records exactly
+  ---
+  duration_ms: 2.485321
+  type: 'test'
+  ...
+# Subtest: promoted complementary-hue answers independently recompute from the 24-position hue circle
+ok 68 - promoted complementary-hue answers independently recompute from the 24-position hue circle
+  ---
+  duration_ms: 0.583432
+  type: 'test'
+  ...
+# Subtest: Grade 3 named hue-classification batch covers differences 1-12 and all sourced boundary regions
+ok 69 - Grade 3 named hue-classification batch covers differences 1-12 and all sourced boundary regions
+  ---
+  duration_ms: 2.279665
+  type: 'test'
+  ...
+# Subtest: Named hue-classification text questions produce feedback without monitor color lookup
+ok 70 - Named hue-classification text questions produce feedback without monitor color lookup
+  ---
+  duration_ms: 0.350687
+  type: 'test'
+  ...
+# Subtest: named hue-classification runtime promotion remains record-identical after later runtime growth
+ok 71 - named hue-classification runtime promotion remains record-identical after later runtime growth
+  ---
+  duration_ms: 2.794719
+  type: 'test'
+  ...
+# Subtest: promoted named hue classifications independently recompute from circular distance and sourced boundaries
+ok 72 - promoted named hue classifications independently recompute from circular distance and sourced boundaries
+  ---
+  duration_ms: 2.968371
+  type: 'test'
+  ...
+# Subtest: shared Power TOEIC engine runs promoted named hue-classification questions
+ok 73 - shared Power TOEIC engine runs promoted named hue-classification questions
+  ---
+  duration_ms: 1.9778
+  type: 'test'
+  ...
+# Subtest: Grade 3 hue-difference batch independently covers numeric circular differences 1-12 exactly once
+ok 74 - Grade 3 hue-difference batch independently covers numeric circular differences 1-12 exactly once
+  ---
+  duration_ms: 3.278364
+  type: 'test'
+  ...
+# Subtest: Hue-difference batch balances answer positions and remains monitor-independent
+ok 75 - Hue-difference batch balances answer positions and remains monitor-independent
+  ---
+  duration_ms: 0.270106
+  type: 'test'
+  ...
+# Subtest: Hue-difference text questions produce feedback without display-color lookup
+ok 76 - Hue-difference text questions produce feedback without display-color lookup
+  ---
+  duration_ms: 0.502489
+  type: 'test'
+  ...
+# Subtest: PCCS hue-difference runtime promotion preserves all 12 verified authoring records exactly
+ok 77 - PCCS hue-difference runtime promotion preserves all 12 verified authoring records exactly
+  ---
+  duration_ms: 2.139583
+  type: 'test'
+  ...
+# Subtest: promoted hue-difference answers independently recompute from the 24-position circle
+ok 78 - promoted hue-difference answers independently recompute from the 24-position circle
+  ---
+  duration_ms: 1.624279
+  type: 'test'
+  ...
+# Subtest: shared Power TOEIC engine runs promoted hue-difference text questions
+ok 79 - shared Power TOEIC engine runs promoted hue-difference text questions
+  ---
+  duration_ms: 1.583943
+  type: 'test'
+  ...
+# Subtest: Grade 3 same-hue batch independently covers 12 anchor tones and 12 source-confirmed hue positions
+ok 80 - Grade 3 same-hue batch independently covers 12 anchor tones and 12 source-confirmed hue positions
+  ---
+  duration_ms: 2.35708
+  type: 'test'
+  ...
+# Subtest: Same-hue batch balances answer positions and remains monitor-independent
+ok 81 - Same-hue batch balances answer positions and remains monitor-independent
+  ---
+  duration_ms: 0.1921
+  type: 'test'
+  ...
+# Subtest: Same-hue text questions produce feedback without display-color lookup
+ok 82 - Same-hue text questions produce feedback without display-color lookup
+  ---
+  duration_ms: 0.331791
+  type: 'test'
+  ...
+# Subtest: PCCS same-hue runtime promotion preserves all 12 verified authoring records exactly
+ok 83 - PCCS same-hue runtime promotion preserves all 12 verified authoring records exactly
+  ---
+  duration_ms: 2.840765
+  type: 'test'
+  ...
+# Subtest: promoted same-hue answers independently resolve to the anchor hue
+ok 84 - promoted same-hue answers independently resolve to the anchor hue
+  ---
+  duration_ms: 0.957291
+  type: 'test'
+  ...
+# Subtest: shared Power TOEIC engine runs promoted same-hue text questions
+ok 85 - shared Power TOEIC engine runs promoted same-hue text questions
+  ---
+  duration_ms: 2.321423
+  type: 'test'
+  ...
+# Subtest: Grade 3 same-tone authoring batch covers all 12 source-confirmed chromatic tones exactly once
+ok 86 - Grade 3 same-tone authoring batch covers all 12 source-confirmed chromatic tones exactly once
+  ---
+  duration_ms: 3.535375
+  type: 'test'
+  ...
+# Subtest: Same-tone batch balances answer positions and has no monitor-color dependency
+ok 87 - Same-tone batch balances answer positions and has no monitor-color dependency
+  ---
+  duration_ms: 0.299901
+  type: 'test'
+  ...
+# Subtest: Same-tone text questions produce feedback without display-color lookup
+ok 88 - Same-tone text questions produce feedback without display-color lookup
+  ---
+  duration_ms: 0.509884
+  type: 'test'
+  ...
+# Subtest: PCCS same-tone runtime promotion preserves all 12 verified authoring records exactly
+ok 89 - PCCS same-tone runtime promotion preserves all 12 verified authoring records exactly
+  ---
+  duration_ms: 2.567524
+  type: 'test'
+  ...
+# Subtest: promoted same-tone answers independently resolve to the anchor tone
+ok 90 - promoted same-tone answers independently resolve to the anchor tone
+  ---
+  duration_ms: 4.115961
+  type: 'test'
+  ...
+# Subtest: Grade 3 scheme-identification batch combines only already confirmed non-visual rules
+ok 91 - Grade 3 scheme-identification batch combines only already confirmed non-visual rules
+  ---
+  duration_ms: 3.525346
+  type: 'test'
+  ...
+# Subtest: Scheme-identification answer feedback remains text-only and monitor-independent
+ok 92 - Scheme-identification answer feedback remains text-only and monitor-independent
+  ---
+  duration_ms: 0.50224
+  type: 'test'
+  ...
+# Subtest: Grade 3 scheme-identification named-hue expansion re-derives every answer independently
+ok 93 - Grade 3 scheme-identification named-hue expansion re-derives every answer independently
+  ---
+  duration_ms: 2.883575
+  type: 'test'
+  ...
+# Subtest: Named-hue scheme expansion stays text-only and monitor-independent
+ok 94 - Named-hue scheme expansion stays text-only and monitor-independent
+  ---
+  duration_ms: 0.541203
+  type: 'test'
+  ...
+# Subtest: scheme-identification runtime promotion is record-identical and owns the 223-question frontier
+ok 95 - scheme-identification runtime promotion is record-identical and owns the 223-question frontier
+  ---
+  duration_ms: 2.902701
+  type: 'test'
+  ...
+# Subtest: original scheme-identification answers remain independently resolvable
+ok 96 - original scheme-identification answers remain independently resolvable
+  ---
+  duration_ms: 0.866451
+  type: 'test'
+  ...
+# Subtest: named-hue scheme-identification expansion independently recomputes from circular hue distance
+ok 97 - named-hue scheme-identification expansion independently recomputes from circular hue distance
+  ---
+  duration_ms: 0.861552
+  type: 'test'
+  ...
+# Subtest: shared Power TOEIC engine runs the promoted named-hue scheme records
+ok 98 - shared Power TOEIC engine runs the promoted named-hue scheme records
+  ---
+  duration_ms: 3.051519
+  type: 'test'
+  ...
+# Subtest: Grade 3 PCCS structural master has the source-confirmed 24 hue positions, notations and Japanese names
+ok 99 - Grade 3 PCCS structural master has the source-confirmed 24 hue positions, notations and Japanese names
+  ---
+  duration_ms: 2.579757
+  type: 'test'
+  ...
+# Subtest: Grade 3 PCCS structural master preserves intentional duplicate Japanese hue names at 14/15 and 17/18
+ok 100 - Grade 3 PCCS structural master preserves intentional duplicate Japanese hue names at 14/15 and 17/18
+  ---
+  duration_ms: 0.238246
+  type: 'test'
+  ...
+# Subtest: Grade 3 PCCS structural master keeps the current hue-20 V notation until the authority changes
+ok 101 - Grade 3 PCCS structural master keeps the current hue-20 V notation until the authority changes
+  ---
+  duration_ms: 0.268793
+  type: 'test'
+  ...
+# Subtest: Grade 3 PCCS structural master has all 12 source-confirmed chromatic tone codes
+ok 102 - Grade 3 PCCS structural master has all 12 source-confirmed chromatic tone codes
+  ---
+  duration_ms: 0.282147
+  type: 'test'
+  ...
+# Subtest: Every PCCS structural fact references a declared authority and monitor-facing generation remains blocked
+ok 103 - Every PCCS structural fact references a declared authority and monitor-facing generation remains blocked
+  ---
+  duration_ms: 0.467825
+  type: 'test'
+  ...
+# Subtest: Grade 3 value-gradient batch has 12 independently derivable text-only questions
+ok 104 - Grade 3 value-gradient batch has 12 independently derivable text-only questions
+  ---
+  duration_ms: 2.896118
+  type: 'test'
+  ...
+# Subtest: Value-gradient batch balances answer positions and text feedback remains monitor-independent
+ok 105 - Value-gradient batch balances answer positions and text feedback remains monitor-independent
+  ---
+  duration_ms: 0.530533
+  type: 'test'
+  ...
+# Subtest: value-gradient runtime promotion preserves all 12 verified authoring records exactly
+ok 106 - value-gradient runtime promotion preserves all 12 verified authoring records exactly
+  ---
+  duration_ms: 1.853338
+  type: 'test'
+  ...
+# Subtest: promoted value-gradient answers independently resolve to the unique monotonic lightness sequence
+ok 107 - promoted value-gradient answers independently resolve to the unique monotonic lightness sequence
+  ---
+  duration_ms: 1.249979
+  type: 'test'
+  ...
+# Subtest: shared Power TOEIC engine runs promoted value-gradient text questions
+ok 108 - shared Power TOEIC engine runs promoted value-gradient text questions
+  ---
+  duration_ms: 1.59329
+  type: 'test'
+  ...
+1..108
+# tests 108
+# suites 0
+# pass 107
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1141.494918
