@@ -23,12 +23,12 @@
     "latest_authoring_gate": {"status": "passed", "workflow_run": 33661736671, "head": "c24a5b551bab324be68a85602a0a5e19be63320e", "pr": 563, "merge_commit": "548b14d26bee4f85570fdb56c865cbbb800ab591"},
     "latest_promotion_gate": {"status": "passed", "workflow_run": 33665241835, "head": "53272c783fce4e08ac5b66a6a7eab3626cab6644", "pr": 567, "merge_commit": "0f246cc3056c51503c870f9af9fe24b3ea33c833"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "source_blocked": ["Landscape p.118 国内外の景観色彩の事例", "Landscape p.120 人工要素と自然要素の色彩が共存", "Landscape p.120 大きな面積をもつ色彩", "Landscape p.120 太陽光に影響される色彩"],
-    "next": "Continue official-text order at Landscape p.121 季節や時間の変化を感じさせる多様な色彩. Acquire an auditable deterministic nonvisual source boundary before authoring."
+    "source_blocked": ["Landscape p.118 国内外の景観色彩の事例", "Landscape p.120 人工要素と自然要素の色彩が共存", "Landscape p.120 大きな面積をもつ色彩", "Landscape p.120 太陽光に影響される色彩", "Landscape p.121 季節や時間の変化を感じさせる多様な色彩"],
+    "next": "Continue official-text order at Landscape p.122 景観色彩設計の配慮事項. Acquire an auditable deterministic nonvisual source boundary before authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 2,
+    "checkpoints_completed": 1,
     "generated": 0,
     "checked": 0,
     "verified": 0,
@@ -37,12 +37,11 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Audited Landscape p.120 大きな面積をもつ色彩. Public authority did not expose a distinct sufficiently rich deterministic nonvisual rule set beyond already-promoted long-lifecycle large-area context; recorded source-blocked rather than manufacturing a new batch.",
-      "Audited the next official topic, Landscape p.120 太陽光に影響される色彩. Public material supported only broad outdoor-light context, not the official-text deterministic rule set; recorded source-blocked without inferring color shifts, RGB/HEX, display values, or illumination geometry."
+      "Audited Landscape p.121 季節や時間の変化を感じさせる多様な色彩. Official scope/order is confirmed, but checked public authority does not expose a sufficiently rich distinct deterministic nonvisual rule set; recorded source-blocked without inferring season/time color mappings, appearance changes, RGB/HEX/display values, or illumination geometry."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Landscape p.121 季節や時間の変化を感じさせる多様な色彩 source acquisition/audit."
+  "next": "Landscape p.122 景観色彩設計の配慮事項 source acquisition/audit."
 }

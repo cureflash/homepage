@@ -48,6 +48,7 @@ All twenty-five promoted skills are covered by exact-equality/full-fingerprint/s
 - Landscape p.120 `人工要素と自然要素の色彩が共存`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`.
 - Landscape p.120 `大きな面積をもつ色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`; public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context.
 - Landscape p.120 `太陽光に影響される色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`; broad outdoor-light context is insufficient to define the official-text deterministic rule set.
+- Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`: source-blocked under `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`; checked public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set.
 
 Do not repeat those routes unless new explicit auditable authority appears.
 
@@ -129,8 +130,14 @@ Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source
 
 The official table of contents confirms the topic. Public material supports broad outdoor-light variation but does not expose the official text's deterministic classifications or fixed nonvisual rules. Do not infer specific hue/brightness/chroma shifts, preferred colors, time-of-day mappings, RGB/HEX/display values or unstated illumination geometry.
 
+## Landscape p.121 `季節や時間の変化を感じさせる多様な色彩` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`.
+
+The current official Grade 2 table of contents confirms this topic and its position before p.122. Checked public-sector landscape material supports only broad season/time variability and surrounding-context propositions; it does not expose the official-text classifications, a closed example inventory, or deterministic mappings suitable for a distinct skill. Do not infer season/time→color mappings, fixed hue/value/chroma shifts, weather effects, RGB/HEX/display values, image appearance or unstated illumination geometry.
+
 ## Exact next start point
 
-Continue current official text order at Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. If public authority does not expose a sufficiently rich rule set, record the topic source-blocked rather than manufacturing a batch.
+Continue current official text order at Landscape p.122 `生活環境における景観色彩設計` → `景観色彩設計の配慮事項`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. If public authority does not expose a sufficiently rich rule set, record the topic source-blocked rather than manufacturing a batch.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
