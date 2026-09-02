@@ -77,7 +77,8 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-five promoted skills; Power Color CI `33665241835` succeeded and PR #567 merged as `0f246cc3056c51503c870f9af9fe24b3ea33c833`.
 - [x] Audit Landscape p.120 `大きな面積をもつ色彩`; keep source-blocked because current public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`.
 - [x] Audit Landscape p.120 `太陽光に影響される色彩`; keep source-blocked because current public material confirms only broad outdoor-light context, not a closed deterministic Grade 2 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-sunlight-source-audit.md`.
-- [ ] Continue official text order with Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`; source-resolve a deterministic nonvisual rule set before any authoring, or record it source-blocked if public authority is insufficient.
+- [x] Audit Landscape p.121 `季節や時間の変化を感じさせる多様な色彩`; keep source-blocked because current public authority confirms only broad season/time variability and does not expose a distinct sufficiently rich deterministic nonvisual Grade 2 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p121-season-time-source-audit.md`.
+- [ ] Continue official text order with Landscape p.122 `景観色彩設計の配慮事項`; source-resolve a deterministic nonvisual rule set before any authoring, or record it source-blocked if public authority is insufficient.
 
 ## Phase 5 — Grade 1
 Start only after Grade 2 is completely finished.
