@@ -6,14 +6,16 @@ Grade 2 is the active priority by explicit user override while Grade 3 remains i
 
 ## Grade 2 current checkpoint
 
-Grade 2 runtime remains 228 verified / pending 0 across nineteen promoted skills.
+Grade 2 runtime is now 240 verified / pending 0 across twenty promoted skills.
 
-`pc2.interior.style_name_inventory` has now been authored pending-first from only the p.112 six-label membership boundary: `ナチュラル`, `カジュアル`, `オーソドックス`, `クラシック`, `エレガント`, `モダン`. No style-to-hue/tone/material/shape/history/image mapping was added.
+`pc2.interior.style_name_inventory` was promoted record-identically from the independently verified p.112 authoring batch. Runtime moved 228 → 240 without rewriting any question. The promotion gate now checks the exact union of all twenty promoted authoring batches, zero full-fingerprint duplicates, and the shared Power TOEIC question-bank/session/workout engine. The dedicated p.112 gate now asserts exact runtime equality.
 
-The 12 new records were independently re-solved before proposed-answer comparison: 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending, with A/B/C/D = 3/3/3/3. Each record retains `qa.generatedAs: pending_validation` provenance. A dedicated authoring gate checks schema-level invariants, six-label membership logic, zero within-batch and runtime full-fingerprint collisions, nonvisual rendering, and confirms that the batch is not yet in runtime.
+Official-text order was then continued to Landscape p.116. The current Color Certification Association table of contents confirms `景観とは`, `景観にかかわる近年の動向`, and `景観の公共性` at p.116. Current MLIT Landscape Act authority source-resolves only a narrow nonvisual public-nature boundary: good landscape is treated as a present-and-future common national asset, and good landscape formation involves coordinated public/community participation. No textbook-specific visual, color, material, RGB/HEX, image or geometry rule was inferred.
 
-Audit authority remains `docs/power-color/audits/2026-09-02-grade2-interior-p111-p112-source-audit.md`. Visual Design, Fashion p.091/p.095/p.096, Interior p.104, p.107 and p.111 remain source-blocked. Grade 3 remains 223 verified / pending 0 and incomplete.
+Audit: `docs/power-color/audits/2026-09-02-grade2-landscape-p116-source-audit.md`.
+
+Visual Design, Fashion p.091/p.095/p.096, Interior p.104, p.107 and p.111 remain source-blocked. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Run the p.112 authoring gate and normal Power Color/shared-engine regression on the current branch. If green, promote all 12 verified `pc2.interior.style_name_inventory` records record-identically to `grade2-runtime.json`, extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty promoted skills, then sync STATUS/HANDOFF/PLAN. Do not rewrite any verified record during promotion and do not add style-property, RGB/HEX, swatch, photograph or monitor-facing questions.
+Create `pc2.landscape.public_nature` pending-first only from the fixed p.116 public-asset/cooperation boundary. Independently re-solve every record before proposed-answer comparison, then run schema/full-fingerprint/answer-position/nonvisual/shared-renderer/shared Power TOEIC engine gates. Promote only verified records record-identically. Do not convert current administrative counts or year-specific policy statistics into stable exam facts, and do not infer visual/color/geometry properties.
