@@ -3,16 +3,16 @@ import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import { getAnswerFeedbackModel } from '../js/color-choice-renderer.js';
 
-const batch = JSON.parse(await readFile(new URL('../data/grade2-authoring-rgb-cmyk-models-0001-0012.json', import.meta.url), 'utf8'));
+const batch = JSON.parse(await readFile(new URL('../data/grade2-authoring-color-management-profiles-0001-0012.json', import.meta.url), 'utf8'));
 const runtime = JSON.parse(await readFile(new URL('../data/grade2-runtime.json', import.meta.url), 'utf8'));
 
 function fingerprint(q) {
   return JSON.stringify([q.sentence, q.choices]);
 }
 
-test('Grade 2 RGB/CMYK authoring batch is independently verified, nonvisual, balanced, and promoted record-identically', () => {
+test('Grade 2 color-management authoring batch is independently verified, nonvisual, balanced, and promoted record-identically', () => {
   assert.equal(batch.grade, 2);
-  assert.equal(batch.skill.id, 'pc2.media.rgb_cmyk_models');
+  assert.equal(batch.skill.id, 'pc2.media.color_management_profiles');
   assert.equal(batch.questions.length, 12);
   assert.deepEqual(batch.qaSummary, {
     generated: 12, checked: 12, verified: 12, needsRevision: 0, rejected: 0, pending: 0,
@@ -24,7 +24,7 @@ test('Grade 2 RGB/CMYK authoring batch is independently verified, nonvisual, bal
     assert.equal(q.validationStatus, 'verified');
     assert.equal(q.qa.generatedAs, 'pending_validation');
     assert.equal(q.questionType, 'text_choice');
-    assert.equal(q.taxonomyPath, 'grade2/media/rgb_cmyk_models');
+    assert.equal(q.taxonomyPath, 'grade2/media/color_management_profiles');
     assert.equal(q.choices.length, 4);
     assert.equal(new Set(q.choices).size, 4);
     assert.equal(q.proposedAnswer, q.choices[q.correctIndex]);
@@ -40,8 +40,9 @@ test('Grade 2 RGB/CMYK authoring batch is independently verified, nonvisual, bal
 
   assert.deepEqual(positions, [3, 3, 3, 3]);
   assert.equal(new Set(batch.questions.map(fingerprint)).size, 12);
-  assert.ok(batch.questions.some(q => q.sourceRefs.includes('aft_grade2_current_sample_2026')));
-  assert.ok(batch.questions.some(q => q.sourceRefs.includes('adobe_color_models_2026')));
+  assert.ok(batch.questions.some(q => q.sourceRefs.includes('adobe_color_management_2026')));
+  assert.ok(batch.questions.some(q => q.sourceRefs.includes('adobe_embed_color_profiles_2026')));
+  assert.ok(batch.questions.some(q => q.sourceRefs.includes('adobe_change_color_profile_2026')));
 
   assert.deepEqual(runtime.skills.find((skill) => skill.id === batch.skill.id), batch.skill);
   assert.deepEqual(runtime.questions.filter((q) => q.skillId === batch.skill.id), batch.questions);

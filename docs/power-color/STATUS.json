@@ -26,7 +26,7 @@
     "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md",
     "runtime": "qualifications/color-certification/data/grade2-runtime.json",
     "runtime_questions": {
-      "verified": 144,
+      "verified": 168,
       "pending": 0,
       "needs_revision": 0,
       "rejected": 0
@@ -43,17 +43,19 @@
       "pc2.scheme.camaieu_faux_camaieu",
       "pc2.scheme.bicolor_tricolor",
       "pc2.scheme.hue_circle_division",
-      "pc2.image.image_scheme_keywords"
+      "pc2.image.image_scheme_keywords",
+      "pc2.media.rgb_cmyk_models",
+      "pc2.media.color_management_profiles"
     ],
-    "active_skill": "pc2.media.rgb_cmyk_models",
+    "active_skill": null,
     "active_authoring": {
-      "generated": 12,
-      "checked": 12,
-      "verified": 12,
+      "generated": 0,
+      "checked": 0,
+      "verified": 0,
       "pending": 0
     },
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Promote pc2.media.rgb_cmyk_models record-identically from the verified 12-question authoring batch into runtime 144 to 156; extend exact-equality/full-fingerprint/shared Power TOEIC engine gates. Visual Design remains scope-confirmed but authoring-blocked until an explicit auditable nonvisual rule is acquired."
+    "next": "Continue source acquisition at コンピュータにおける画像の基本, the next current official Grade 2 Media Design subtopic. Author only from explicit auditable nonvisual rules. Visual Design remains source-blocked."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -62,7 +64,7 @@
     "separate_color_engine_forked": false
   },
   "current_run": {
-    "checkpoints_completed": 2,
+    "checkpoints_completed": 4,
     "generated": 12,
     "checked": 12,
     "verified": 12,
@@ -71,12 +73,14 @@
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Audited the official Visual Design frontier: current public first-party material confirms scope/order but does not expose a sufficient nonvisual answer rule, so pc2.visual authoring remains blocked without guessing.",
-      "Advanced to the next official Media Design topic and source-resolved pc2.media.rgb_cmyk_models from the current official Grade 2 TOC/sample plus current Adobe professional color-model documentation; authored pending-first and independently verified 12/12 text-only questions with A/B/C/D = 3/3/3/3 and zero intended runtime fingerprint overlap."
+      "Promoted pc2.media.rgb_cmyk_models record-identically from verified authoring into Grade 2 runtime 144 to 156 and extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to thirteen promoted skills.",
+      "Source-resolved pc2.media.color_management_profiles from the current official Grade 2 TOC plus current Adobe professional color-management documentation, retaining text-only ICC/profile/device-translation rules and excluding display inference.",
+      "Authored pending-first and independently re-solved 12 pc2.media.color_management_profiles questions: 12 checked / 12 verified / pending 0, A/B/C/D = 3/3/3/3.",
+      "Promoted pc2.media.color_management_profiles record-identically into Grade 2 runtime 156 to 168; extended exact-equality/full-fingerprint/shared Power TOEIC engine gates to fourteen promoted skills."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Promote pc2.media.rgb_cmyk_models record-identically to Grade 2 runtime 156."
+  "next": "Continue Grade 2 source acquisition at コンピュータにおける画像の基本."
 }

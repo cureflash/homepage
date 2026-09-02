@@ -63,6 +63,16 @@
       "id": "pc2.image.image_scheme_keywords",
       "label": "イメージ別配色法のイメージ語",
       "categoryId": "pc2.image"
+    },
+    {
+      "id": "pc2.media.rgb_cmyk_models",
+      "label": "メディアデザイン：RGB/CMYKの基本",
+      "categoryId": "pc2.media"
+    },
+    {
+      "id": "pc2.media.color_management_profiles",
+      "label": "メディアデザイン：カラーマネジメントの基本",
+      "categoryId": "pc2.media"
     }
   ],
   "questions": [
@@ -4620,6 +4630,752 @@
       "qa": {
         "generatedAs": "pending_validation",
         "independentRecheck": "re-read the explicit text mapping for エレガント independently of proposedAnswer, then matched the keyword set to the ten current official Grade 2 image-scheme labels",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "RGBカラーモデルの混色方式として正しいものはどれですか。",
+      "sentence": "RGBカラーモデルの混色方式として正しいものはどれですか。",
+      "choices": [
+        "加法混色",
+        "減法混色",
+        "中間混色",
+        "並置混色"
+      ],
+      "proposedAnswer": "加法混色",
+      "correctIndex": 0,
+      "explanation": "RGBは赤・緑・青の光を加えて色を表す加法カラーモデルです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-read Adobe's RGB model definition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "CMYKカラーモデルの混色方式として正しいものはどれですか。",
+      "sentence": "CMYKカラーモデルの混色方式として正しいものはどれですか。",
+      "choices": [
+        "加法混色",
+        "減法混色",
+        "回転混色",
+        "継時混色"
+      ],
+      "proposedAnswer": "減法混色",
+      "correctIndex": 1,
+      "explanation": "CMYKはインクなどが光を吸収する性質に基づく減法カラーモデルです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "aft_grade2_current_sample_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived CMYK as subtractive from the official Grade 2 sample and Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "RGBの3つの基本成分として正しい組み合わせはどれですか。",
+      "sentence": "RGBの3つの基本成分として正しい組み合わせはどれですか。",
+      "choices": [
+        "シアン・マゼンタ・イエロー",
+        "赤・黄・青",
+        "赤・緑・青",
+        "白・灰・黒"
+      ],
+      "proposedAnswer": "赤・緑・青",
+      "correctIndex": 2,
+      "explanation": "RGBはRed（赤）、Green（緑）、Blue（青）の光を基本成分とします。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified the three named RGB components from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "CMYの3つの基本成分として正しい組み合わせはどれですか。",
+      "sentence": "CMYの3つの基本成分として正しい組み合わせはどれですか。",
+      "choices": [
+        "赤・緑・青",
+        "赤・黄・青",
+        "白・灰・黒",
+        "シアン・マゼンタ・イエロー"
+      ],
+      "proposedAnswer": "シアン・マゼンタ・イエロー",
+      "correctIndex": 3,
+      "explanation": "色彩検定2級の公式出題例でも、減法混色の三原色はCMY、すなわちシアン・マゼンタ・イエローとして扱われています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently read the official Grade 2 sample's CMY answer and Adobe's CMYK model definition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "RGBの赤・緑・青の光を最大強度で重ねたときに得られる色はどれですか。",
+      "sentence": "RGBの赤・緑・青の光を最大強度で重ねたときに得られる色はどれですか。",
+      "choices": [
+        "白",
+        "黒",
+        "灰",
+        "茶"
+      ],
+      "proposedAnswer": "白",
+      "correctIndex": 0,
+      "explanation": "加法モデルであるRGBでは、赤・緑・青の光を最大強度で組み合わせると白になります。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently verified Adobe's full-intensity RGB result before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "コンピューターモニターの色表現に用いられる基本モデルとして適切なのはどれですか。",
+      "sentence": "コンピューターモニターの色表現に用いられる基本モデルとして適切なのはどれですか。",
+      "choices": [
+        "CMYK",
+        "RGB",
+        "マンセルH V/C",
+        "PCCSトーン記号"
+      ],
+      "proposedAnswer": "RGB",
+      "correctIndex": 1,
+      "explanation": "Adobeの現行技術資料では、RGBの加法カラーはテレビディスプレイやコンピューターモニターで使われると明示されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched computer-monitor output to RGB from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "プロセスカラー印刷用の画像を準備するときに基本となるモデルはどれですか。",
+      "sentence": "プロセスカラー印刷用の画像を準備するときに基本となるモデルはどれですか。",
+      "choices": [
+        "RGB",
+        "HSB",
+        "CMYK",
+        "PCCS"
+      ],
+      "proposedAnswer": "CMYK",
+      "correctIndex": 2,
+      "explanation": "CMYKはプロセスカラー印刷に用いられる基本的な減法カラーモデルです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched process-color print preparation to CMYK from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "CMYKのKを実用上追加する主な理由として適切なのはどれですか。",
+      "sentence": "CMYKのKを実用上追加する主な理由として適切なのはどれですか。",
+      "choices": [
+        "光の三原色を4色に増やすため",
+        "色相環を24分割するため",
+        "RGBの白色点を決めるため",
+        "黒インクで暗部の深さやディテールを改善するため"
+      ],
+      "proposedAnswer": "黒インクで暗部の深さやディテールを改善するため",
+      "correctIndex": 3,
+      "explanation": "Adobeは、実際の印刷ではシャドウの深さとディテールを向上させるため黒（K）インクを追加すると説明しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently read Adobe's stated practical role for K ink before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "「光を加えるほど明るくなる」という説明に対応するモデルはどれですか。",
+      "sentence": "「光を加えるほど明るくなる」という説明に対応するモデルはどれですか。",
+      "choices": [
+        "RGBの加法モデル",
+        "CMYKの減法モデル",
+        "マンセル表色系",
+        "JIS慣用色名"
+      ],
+      "proposedAnswer": "RGBの加法モデル",
+      "correctIndex": 0,
+      "explanation": "RGBは光を加えていく加法モデルで、三成分を最大強度で合わせると白になります。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the additive-light description from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "「インクが光の一部を吸収し、残った光を反射して色を表す」という説明に対応するモデルはどれですか。",
+      "sentence": "「インクが光の一部を吸収し、残った光を反射して色を表す」という説明に対応するモデルはどれですか。",
+      "choices": [
+        "RGB",
+        "CMYK",
+        "PCCS",
+        "マンセル"
+      ],
+      "proposedAnswer": "CMYK",
+      "correctIndex": 1,
+      "explanation": "CMYKは紙上のインクによる光の吸収特性に基づく減法モデルです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently read Adobe's CMYK light-absorption explanation before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "次のうち、画面表示と印刷の基本モデルの対応として正しいものはどれですか。",
+      "sentence": "次のうち、画面表示と印刷の基本モデルの対応として正しいものはどれですか。",
+      "choices": [
+        "画面=CMYK、印刷=RGB",
+        "画面=PCCS、印刷=マンセル",
+        "画面=RGB、印刷=CMYK",
+        "画面=CMY、印刷=RGB"
+      ],
+      "proposedAnswer": "画面=RGB、印刷=CMYK",
+      "correctIndex": 2,
+      "explanation": "一般的な画面表示はRGB、プロセスカラー印刷はCMYKを基本モデルとします。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_models_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently matched both device uses from Adobe before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-rgb-cmyk-models-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/rgb_cmyk_models",
+      "skillId": "pc2.media.rgb_cmyk_models",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "色彩検定2級の公式出題例で、減法混色の三原色の頭文字として示される略号はどれですか。",
+      "sentence": "色彩検定2級の公式出題例で、減法混色の三原色の頭文字として示される略号はどれですか。",
+      "choices": [
+        "RGB",
+        "HVC",
+        "PCCS",
+        "CMY"
+      ],
+      "proposedAnswer": "CMY",
+      "correctIndex": 3,
+      "explanation": "現行の色彩検定2級公式出題例では、減法混色の三原色は各色名の頭文字から「CMY」と答える問題が掲載されています。",
+      "sourceRefs": [
+        "aft_grade2_current_sample_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-read the current official Grade 2 sample answer field D before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "カラーマネジメントシステムの基本的な目的として最も適切なのはどれですか。",
+      "sentence": "カラーマネジメントシステムの基本的な目的として最も適切なのはどれですか。",
+      "choices": [
+        "異なるデバイス間で色の見えをできるだけ一貫させる",
+        "すべての画像を同じRGB数値に固定する",
+        "すべての出力をCMYKだけに統一する",
+        "モニターの物理的な色域を拡張する"
+      ],
+      "proposedAnswer": "異なるデバイス間で色の見えをできるだけ一貫させる",
+      "correctIndex": 0,
+      "explanation": "カラーマネジメントは、異なるデバイスや色空間の間で色を適切に解釈・変換し、見えを一貫させるための仕組みです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_management_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-read Adobe's CMS purpose before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "カラーマネジメントで色空間の情報を伝えるために使われるものはどれですか。",
+      "sentence": "カラーマネジメントで色空間の情報を伝えるために使われるものはどれですか。",
+      "choices": [
+        "色相環",
+        "カラープロファイル",
+        "配色カード",
+        "マンセル色票"
+      ],
+      "proposedAnswer": "カラープロファイル",
+      "correctIndex": 1,
+      "explanation": "カラーマネジメントシステムは、デバイスや文書の色空間を記述するカラープロファイルを使って色を解釈・変換します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_management_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the profile role from Adobe CMS documentation before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "ICCプロファイルのICCが示すものとして正しいのはどれですか。",
+      "sentence": "ICCプロファイルのICCが示すものとして正しいのはどれですか。",
+      "choices": [
+        "International Chromatic Circle",
+        "Integrated Color Calibration",
+        "International Color Consortium",
+        "Image Conversion Code"
+      ],
+      "proposedAnswer": "International Color Consortium",
+      "correctIndex": 2,
+      "explanation": "ICCはInternational Color Consortiumの略で、カラープロファイルの標準形式を定めています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_management_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked Adobe's explicit expansion of ICC before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "モニタープロファイルが記述する内容として正しいのはどれですか。",
+      "sentence": "モニタープロファイルが記述する内容として正しいのはどれですか。",
+      "choices": [
+        "印刷機の網点形状",
+        "画像の撮影日時",
+        "文書のページ構成",
+        "モニターが現在どのように色を再現しているか"
+      ],
+      "proposedAnswer": "モニターが現在どのように色を再現しているか",
+      "correctIndex": 3,
+      "explanation": "Adobeはモニタープロファイルを、モニターが現在どのように色を再現しているかを記述するものと説明しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_profiles_2025"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-read Adobe's monitor-profile definition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "文書プロファイルの役割として正しいものはどれですか。",
+      "sentence": "文書プロファイルの役割として正しいものはどれですか。",
+      "choices": [
+        "文書で使う特定のRGBまたはCMYK色空間を定義する",
+        "モニターの解像度を上げる",
+        "プリンターの用紙サイズを指定する",
+        "画像の圧縮率を固定する"
+      ],
+      "proposedAnswer": "文書で使う特定のRGBまたはCMYK色空間を定義する",
+      "correctIndex": 0,
+      "explanation": "文書プロファイルは、その文書がどのRGBまたはCMYK色空間で色値を解釈するかを定義します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_profiles_2025"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked Adobe's document-profile definition before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "画像ファイルにカラープロファイルを埋め込む主な目的はどれですか。",
+      "sentence": "画像ファイルにカラープロファイルを埋め込む主な目的はどれですか。",
+      "choices": [
+        "ファイル容量を必ず小さくする",
+        "別のデバイスやアプリで開いたときの色の一貫性を保ちやすくする",
+        "画像を自動的にCMYKへ変換する",
+        "モニターの色域を広げる"
+      ],
+      "proposedAnswer": "別のデバイスやアプリで開いたときの色の一貫性を保ちやすくする",
+      "correctIndex": 1,
+      "explanation": "埋め込みプロファイルは、ファイルが別の環境で開かれたときにも色の解釈を伝え、一貫した色再現を助けます。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_embed_color_profiles_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently read Adobe's stated purpose for embedding profiles before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "Photoshopの「プロファイルの指定（Assign Profile）」について正しい説明はどれですか。",
+      "sentence": "Photoshopの「プロファイルの指定（Assign Profile）」について正しい説明はどれですか。",
+      "choices": [
+        "必ずRGBからCMYKへ変換する",
+        "画像のピクセル数を変更する",
+        "文書の色値自体は変えず、その値の解釈に使うプロファイルを変更する",
+        "出力先プリンターを自動選択する"
+      ],
+      "proposedAnswer": "文書の色値自体は変えず、その値の解釈に使うプロファイルを変更する",
+      "correctIndex": 2,
+      "explanation": "Assign Profileは文書内の色値を変更せず、それらの値をどの色空間として解釈するかを変更します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_change_color_profile_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked Adobe's Assign Profile behavior before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "Photoshopの「プロファイル変換（Convert to Profile）」の説明として正しいものはどれですか。",
+      "sentence": "Photoshopの「プロファイル変換（Convert to Profile）」の説明として正しいものはどれですか。",
+      "choices": [
+        "文書からすべての色管理情報を削除する",
+        "色値をそのままにしてラベルだけ外す",
+        "モニタープロファイルを物理的に書き換える",
+        "指定した出力先プロファイルの色空間へ文書の色を変換し、そのプロファイルを付与する"
+      ],
+      "proposedAnswer": "指定した出力先プロファイルの色空間へ文書の色を変換し、そのプロファイルを付与する",
+      "correctIndex": 3,
+      "explanation": "Convert to Profileは指定したDestination Spaceへ文書色を変換し、新しいプロファイルを文書に付与します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_change_color_profile_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-read Adobe's Convert to Profile steps before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "異なるデバイス間で同じ数値が異なる色として表示されることがある主な理由はどれですか。",
+      "sentence": "異なるデバイス間で同じ数値が異なる色として表示されることがある主な理由はどれですか。",
+      "choices": [
+        "デバイスごとに色の記録・再現方法や色空間が異なるため",
+        "ICCプロファイルが必ず画像を白黒化するため",
+        "RGBは印刷専用の方式だから",
+        "CMYKは光の加法混色だから"
+      ],
+      "proposedAnswer": "デバイスごとに色の記録・再現方法や色空間が異なるため",
+      "correctIndex": 0,
+      "explanation": "デバイスごとに色の記録・表示方法や色空間が異なるため、同じ数値でも同じ見えになるとは限りません。カラーマネジメントはその差を扱います。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_management_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived device-dependent interpretation from Adobe color-management documentation before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "カラープロファイルが付与されていない文書をAdobe資料では何と呼びますか。",
+      "sentence": "カラープロファイルが付与されていない文書をAdobe資料では何と呼びますか。",
+      "choices": [
+        "ベクター文書",
+        "untagged文書",
+        "校正刷り",
+        "スポットカラー文書"
+      ],
+      "proposedAnswer": "untagged文書",
+      "correctIndex": 1,
+      "explanation": "Adobeは、プロファイルが割り当てられておらず生の色数値だけを持つ文書をuntaggedと説明しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_profiles_2025"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently checked Adobe's definition of an untagged document before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "入力・文書・モニター・出力のプロファイルを使うカラーマネジメントの処理として適切なのはどれですか。",
+      "sentence": "入力・文書・モニター・出力のプロファイルを使うカラーマネジメントの処理として適切なのはどれですか。",
+      "choices": [
+        "すべての機器のRGB数値を同じ値に固定する",
+        "各機器の物理的な色域を同じ大きさにする",
+        "各色空間の記述を基に色を対応する空間へ変換する",
+        "出力機器のプロファイルを無視する"
+      ],
+      "proposedAnswer": "各色空間の記述を基に色を対応する空間へ変換する",
+      "correctIndex": 2,
+      "explanation": "カラーマネジメントシステムは、各プロファイルが記述する色空間を参照して、入力・文書・表示・出力の間で色を変換します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_profiles_2025",
+        "adobe_color_management_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently traced Adobe's profile-based translation flow before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-color-management-profiles-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/media/color_management_profiles",
+      "skillId": "pc2.media.color_management_profiles",
+      "categoryId": "pc2.media",
+      "questionType": "text_choice",
+      "prompt": "カラープロファイルについて不適切な説明はどれですか。",
+      "sentence": "カラープロファイルについて不適切な説明はどれですか。",
+      "choices": [
+        "デバイスや文書の色空間を記述する",
+        "デバイス間の色変換に利用される",
+        "ファイルへ埋め込んで色の解釈を伝えられる",
+        "プロファイルを付けるだけでデバイスの物理的な色域そのものが広がる"
+      ],
+      "proposedAnswer": "プロファイルを付けるだけでデバイスの物理的な色域そのものが広がる",
+      "correctIndex": 3,
+      "explanation": "プロファイルは色空間の記述と変換に使われる情報であり、プロファイルを付与するだけでデバイス自体の物理的な色域が広がるわけではありません。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "adobe_color_profiles_2025",
+        "adobe_embed_color_profiles_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently separated profile description/translation functions from physical device gamut before comparing with proposedAnswer",
         "checkedOn": "2026-09-02"
       }
     }
