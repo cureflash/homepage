@@ -23,27 +23,26 @@
     "latest_authoring_gate": {"status": "passed", "workflow_run": 33661736671, "head": "c24a5b551bab324be68a85602a0a5e19be63320e", "pr": 563, "merge_commit": "548b14d26bee4f85570fdb56c865cbbb800ab591"},
     "latest_promotion_gate": {"status": "passed", "workflow_run": 33665241835, "head": "53272c783fce4e08ac5b66a6a7eab3626cab6644", "pr": 567, "merge_commit": "0f246cc3056c51503c870f9af9fe24b3ea33c833"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "source_blocked": ["Landscape p.118 国内外の景観色彩の事例", "Landscape p.120 人工要素と自然要素の色彩が共存"],
-    "next": "Continue official-text order at Landscape p.120 大きな面積をもつ色彩. Acquire an auditable deterministic nonvisual source boundary before authoring; do not reuse the already-promoted long-lifecycle large-area proposition as a substitute for a distinct rule set."
+    "source_blocked": ["Landscape p.118 国内外の景観色彩の事例", "Landscape p.120 人工要素と自然要素の色彩が共存", "Landscape p.120 大きな面積をもつ色彩", "Landscape p.120 太陽光に影響される色彩"],
+    "next": "Continue official-text order at Landscape p.121 季節や時間の変化を感じさせる多様な色彩. Acquire an auditable deterministic nonvisual source boundary before authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 3,
+    "checkpoints_completed": 2,
     "generated": 0,
     "checked": 0,
     "verified": 0,
-    "revision_events": 1,
+    "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Reconciled latest main/open PR state and resumed at the exact 288 -> 300 long-lifecycle promotion checkpoint without repeating source-blocked investigations.",
-      "Promoted all 12 independently verified pc2.landscape.long_lifecycle_color records record-identically into runtime; runtime is now 300 verified / pending 0 across 25 skills.",
-      "Initial post-promotion CI exposed a stale pre-promotion authoring-test assertion. Updated only that test contract to assert record-identical runtime equality; Power Color CI 33665241835 succeeded and PR #567 merged as 0f246cc3056c51503c870f9af9fe24b3ea33c833. No source/product gate was relaxed."
+      "Audited Landscape p.120 大きな面積をもつ色彩. Public authority did not expose a distinct sufficiently rich deterministic nonvisual rule set beyond already-promoted long-lifecycle large-area context; recorded source-blocked rather than manufacturing a new batch.",
+      "Audited the next official topic, Landscape p.120 太陽光に影響される色彩. Public material supported only broad outdoor-light context, not the official-text deterministic rule set; recorded source-blocked without inferring color shifts, RGB/HEX, display values, or illumination geometry."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Landscape p.120 大きな面積をもつ色彩 source acquisition/audit."
+  "next": "Landscape p.121 季節や時間の変化を感じさせる多様な色彩 source acquisition/audit."
 }
