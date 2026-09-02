@@ -123,6 +123,11 @@
       "id": "pc2.landscape.regional_color_context",
       "label": "景観色彩：地域の気候風土と地域色",
       "categoryId": "pc2.landscape"
+    },
+    {
+      "id": "pc2.landscape.long_lifecycle_color",
+      "label": "景観色彩：ライフサイクルの長い色彩",
+      "categoryId": "pc2.landscape"
     }
   ],
   "questions": [
@@ -9167,6 +9172,382 @@
       "qa": {
         "generatedAs": "pending_validation",
         "independentRecheck": "independently compared the contract boundary with each alternative and selected the only nonvisual contextual formulation before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "景観色彩で「ライフサイクルの長い色彩」として扱う対象の説明として、確認済み資料に最も合うものはどれですか。",
+      "sentence": "景観色彩で「ライフサイクルの長い色彩」として扱う対象の説明として、確認済み資料に最も合うものはどれですか。",
+      "choices": [
+        "建築物や橋など、長期間その場所に存在する人工要素の色彩",
+        "一日だけ掲示する案内の色彩",
+        "季節ごとに入れ替える小物の色彩",
+        "画面上だけで切り替わる表示色"
+      ],
+      "proposedAnswer": "建築物や橋など、長期間その場所に存在する人工要素の色彩",
+      "correctIndex": 0,
+      "explanation": "確認済み資料は、建築物や橋などの人工要素を、長期間その場所にあり続けるためライフサイクルの長い色彩として扱っています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026",
+        "itami_public_facility_landscape_guideline_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified long-duration artificial landscape elements from the accepted source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "長期間残る人工要素の色彩計画で、確認済み資料が優先する考え方はどれですか。",
+      "sentence": "長期間残る人工要素の色彩計画で、確認済み資料が優先する考え方はどれですか。",
+      "choices": [
+        "毎年の流行だけに合わせる",
+        "周辺環境との調和を重視する",
+        "目新しさだけを最大化する",
+        "所有者の個性だけを最優先する"
+      ],
+      "proposedAnswer": "周辺環境との調和を重視する",
+      "correctIndex": 1,
+      "explanation": "ライフサイクルの長い人工要素では、流行・目新しさ・個性の主張よりも周辺との調和を重視することが明示されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently selected surrounding harmony as the explicit planning priority for long-lived artificial elements before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "人工要素の色彩について、衣服や雑貨と同じ感覚で選ぶことに注意が必要とされる理由として最も適切なものはどれですか。",
+      "sentence": "人工要素の色彩について、衣服や雑貨と同じ感覚で選ぶことに注意が必要とされる理由として最も適切なものはどれですか。",
+      "choices": [
+        "人工要素は必ず無彩色だから",
+        "人工要素は必ず室内にあるから",
+        "人工要素の色彩は景観の中で大きな面積を占め得るから",
+        "人工要素は毎日撤去されるから"
+      ],
+      "proposedAnswer": "人工要素の色彩は景観の中で大きな面積を占め得るから",
+      "correctIndex": 2,
+      "explanation": "確認済み資料は、人工要素に使われる色彩は面積が大きくなり得るため、小さな衣服や雑貨と同じ感覚で選ぶと周辺から突出し得ると説明しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently linked the caution about consumer-goods-like selection to the explicitly stated large visual area before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "屋外の人工要素について、長期使用とあわせて確認済み資料が考慮事項として挙げるものはどれですか。",
+      "sentence": "屋外の人工要素について、長期使用とあわせて確認済み資料が考慮事項として挙げるものはどれですか。",
+      "choices": [
+        "毎月の全面交換",
+        "画面解像度",
+        "室内照明だけへの適応",
+        "耐候性や耐久性"
+      ],
+      "proposedAnswer": "耐候性や耐久性",
+      "correctIndex": 3,
+      "explanation": "屋外の建築物等は日常的に太陽光や雨風にさらされるため、確認済み資料は耐候性・耐久性を考慮事項として挙げています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently identified durability and weather resistance as the explicit outdoor long-term consideration before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "公共施設を景観上慎重に扱う理由として、伊丹市の確認済み資料が明示するものはどれですか。",
+      "sentence": "公共施設を景観上慎重に扱う理由として、伊丹市の確認済み資料が明示するものはどれですか。",
+      "choices": [
+        "長期間存在し続け、不特定多数の人の目に触れる機会が多いから",
+        "必ず毎年建て替えるから",
+        "個人だけが見るものだから",
+        "一時的な広告物だけを対象とするから"
+      ],
+      "proposedAnswer": "長期間存在し続け、不特定多数の人の目に触れる機会が多いから",
+      "correctIndex": 0,
+      "explanation": "伊丹市の公共施設景観指針は、公共施設が長期間存在し続け、かつ不特定多数の人の目に触れる機会が多いことを景観形成上の理由として示しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "itami_public_facility_landscape_guideline_2022"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived the public-sector long-duration and broad-visibility premise before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "建築物の外観色を長期的な景観要素として考えるとき、確認済みsource contractに反する判断はどれですか。",
+      "sentence": "建築物の外観色を長期的な景観要素として考えるとき、確認済みsource contractに反する判断はどれですか。",
+      "choices": [
+        "周辺との関係を確認する",
+        "短期的な流行だけを最優先して決める",
+        "長期間残ることを考慮する",
+        "屋外環境への耐久性を考慮する"
+      ],
+      "proposedAnswer": "短期的な流行だけを最優先して決める",
+      "correctIndex": 1,
+      "explanation": "長期間残る人工要素では短期的な流行だけを最優先するのではなく、周辺調和や長期使用条件を考慮することが確認済み境界です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently contrasted the explicit long-term harmony rule with short-term fashion priority before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "「ライフサイクルが長い」という条件から、今回の確認済み資料が直接導く色彩計画上の方向性はどれですか。",
+      "sentence": "「ライフサイクルが長い」という条件から、今回の確認済み資料が直接導く色彩計画上の方向性はどれですか。",
+      "choices": [
+        "毎年別の色へ変更すること",
+        "必ず一つの指定色に統一すること",
+        "一時的な目新しさより周辺との調和を重視すること",
+        "画面上の見え方だけで決めること"
+      ],
+      "proposedAnswer": "一時的な目新しさより周辺との調和を重視すること",
+      "correctIndex": 2,
+      "explanation": "長く残る人工要素の色彩では、目新しさや個性の主張を優先するのではなく、周辺との調和を重視する方向性が明示されています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently derived the stated planning direction from the long-lifecycle premise before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "今回のsource contractだけでは決められないものはどれですか。",
+      "sentence": "今回のsource contractだけでは決められないものはどれですか。",
+      "choices": [
+        "人工要素が長期間残るという性質",
+        "周辺調和を重視するという方向性",
+        "屋外耐久性を考慮する必要性",
+        "外壁に使用すべき具体的なマンセル値"
+      ],
+      "proposedAnswer": "外壁に使用すべき具体的なマンセル値",
+      "correctIndex": 3,
+      "explanation": "確認済み境界は長期性・周辺調和・耐久性という関係までで、具体的なマンセル値や色指定は認可していません。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026",
+        "itami_public_facility_landscape_guideline_2022"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently separated the supported conceptual rules from unsupported specific colorimetry before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "大きな建築物の色彩を考えるとき、確認済み資料に沿う注意点はどれですか。",
+      "sentence": "大きな建築物の色彩を考えるとき、確認済み資料に沿う注意点はどれですか。",
+      "choices": [
+        "景観内で大きな面積を占め得るため、周辺との関係を考慮する",
+        "小物と同じく周辺を見ずに選ぶ",
+        "長期間残らない前提で決める",
+        "流行だけで自動的に決める"
+      ],
+      "proposedAnswer": "景観内で大きな面積を占め得るため、周辺との関係を考慮する",
+      "correctIndex": 0,
+      "explanation": "人工要素の色彩は大きな面積を占め得るため、周辺環境から突出しないよう周辺との関係を考えることが確認済み資料に沿います。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently connected large visual area with the need to consider surrounding landscape before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "屋外人工要素の色彩を長期に維持する観点で、確認済み資料と整合する組合せはどれですか。",
+      "sentence": "屋外人工要素の色彩を長期に維持する観点で、確認済み資料と整合する組合せはどれですか。",
+      "choices": [
+        "短期流行の追随＋頻繁な全面変更",
+        "周辺調和＋耐候性・耐久性への配慮",
+        "個性の最大化＋周辺無視",
+        "画面色の一致＋実物条件の無視"
+      ],
+      "proposedAnswer": "周辺調和＋耐候性・耐久性への配慮",
+      "correctIndex": 1,
+      "explanation": "長期間残る屋外人工要素では、周辺調和を重視し、太陽光や雨風への耐候性・耐久性も考慮するという組合せが確認済み資料に一致します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently combined the two explicitly supported long-term planning considerations before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "長期間存在する公共的な景観要素について、二つの確認済み資料を合わせて言えることはどれですか。",
+      "sentence": "長期間存在する公共的な景観要素について、二つの確認済み資料を合わせて言えることはどれですか。",
+      "choices": [
+        "短期間しか見られないため周辺調和は不要である",
+        "所有者だけが見るため公共的影響はない",
+        "長く存在し多くの人の目に触れ得るため、周辺との調和を重視する理由がある",
+        "毎年撤去されることを前提にすべきである"
+      ],
+      "proposedAnswer": "長く存在し多くの人の目に触れ得るため、周辺との調和を重視する理由がある",
+      "correctIndex": 2,
+      "explanation": "公共施設が長期間存在し多くの人に見られるという公的資料の前提と、長期人工要素では周辺調和を重視するという色彩資料の規則は整合します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026",
+        "itami_public_facility_landscape_guideline_2022"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently reconciled the public-sector duration/visibility premise with the color-planning harmony rule before comparing with proposedAnswer",
+        "checkedOn": "2026-09-03"
+      }
+    },
+    {
+      "id": "pc2-landscape-long-lifecycle-color-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/landscape/long_lifecycle_color",
+      "skillId": "pc2.landscape.long_lifecycle_color",
+      "categoryId": "pc2.landscape",
+      "questionType": "text_choice",
+      "prompt": "「ライフサイクルの長い色彩」の学習範囲として、今回の監査で意図的に除外したものはどれですか。",
+      "sentence": "「ライフサイクルの長い色彩」の学習範囲として、今回の監査で意図的に除外したものはどれですか。",
+      "choices": [
+        "建築物や橋が長期間残るという関係",
+        "周辺との調和を重視するという関係",
+        "耐候性・耐久性を考慮するという関係",
+        "特定色のRGB値や具体的な色指定"
+      ],
+      "proposedAnswer": "特定色のRGB値や具体的な色指定",
+      "correctIndex": 3,
+      "explanation": "今回の監査は非visualな概念関係だけを認可し、RGB値、具体色指定、画像由来の判断などは引き続き除外しています。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "color_prism_landscape_approach_2026",
+        "itami_public_facility_landscape_guideline_2022"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently separated the accepted conceptual boundary from prohibited display-specific data before comparing with proposedAnswer",
         "checkedOn": "2026-09-03"
       }
     }
