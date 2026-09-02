@@ -36,6 +36,7 @@ Latest promoted skills:
 - `pc2.landscape.long_lifecycle_color`: 12 promoted record-identically; 288 → 300.
 - `pc2.landscape.design_considerations`: 12 promoted record-identically; 300 → 312.
 - `pc2.landscape.residential_color_design_process`: 12 promoted record-identically; 312 → 324.
+- `pc2.landscape.surrounding_environment_measurement`: 12 promoted record-identically; 324 → 336.
 
 All twenty-eight promoted skills are covered by exact-equality/full-fingerprint/shared-engine gates. The latest promotion passed deterministic promotion run `33679550547`; PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
 
@@ -185,8 +186,14 @@ Do not infer RGB/HEX/display values, monitor swatches, place-specific measured v
 
 State: 12/12 independently verified and promoted record-identically; runtime 324 → 336 and twenty-seven → twenty-eight skills. Authoring CI `33678931801` passed; PR #584 merged as `abda2407f0f9339948b12a8b9017a9f78f2b3c4c`. Promotion run `33679550547` passed; PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
 
+## Landscape p.124 `配色計画` — source-blocked
+
+Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p124-color-scheme-plan-source-audit.md`.
+
+Current public authority confirms the p.124 scope and current JPMA practice explicitly links a color-design concept to creation of a color-scheme proposal. That relation is already contained in the promoted p.123 residential-process skill. Checked public landscape material does not expose a distinct sufficiently rich closed p.124 nonvisual rule set. Do not duplicate the concept→scheme relation, infer fixed palettes/hue/tone/Munsell/RGB/HEX values, use image appearance, or generalize local regulatory limits.
+
 ## Exact next start point
 
-Continue official Grade 2 text order at Landscape p.124 `配色計画`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. Do not infer fixed palette values, RGB/HEX/display attributes, image appearance, unstated geometry, or local regulatory limits. If current public authority is insufficient, record the topic source-blocked rather than manufacturing a 12-question batch.
+Continue official Grade 2 text order at Landscape p.125 `色彩管理`. Acquire a distinct auditable deterministic nonvisual source boundary before authoring. If current public authority is insufficient, record the topic source-blocked rather than inferring palette values, RGB/HEX/display attributes, image appearance, local regulatory limits, unstated geometry or measurement tolerances.
 
 Keep all Grade 3 blockers and source/display gates unchanged.
