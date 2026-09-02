@@ -20,17 +20,17 @@
     "active_skill": "pc2.landscape.element_examples",
     "active_authoring": "qualifications/color-certification/data/grade2-authoring-landscape-element-examples-0001-0012.json",
     "active_authoring_qa": {"checked": 12, "verified": 12, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 3, "B": 3, "C": 3, "D": 3}},
-    "authoring_gate": {"status": "pending_ci", "skill": "pc2.landscape.element_examples"},
+    "authoring_gate": {"status": "passed", "workflow_run": 33644271047, "head": "a3d2be3e0230aefb1e733f07ad08ea0cecfe161b"},
     "monitor_facing_generation_blocked_without_approved_display_values": true,
-    "next": "Run the dedicated pc2.landscape.element_examples schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color/shared-engine regression; promote the 12 verified records record-identically only if green."
+    "next": "Promote pc2.landscape.element_examples 12 verified records record-identically to grade2-runtime.json, extend exact-equality/full-fingerprint/shared-engine coverage to twenty-two promoted skills, then continue official-text order."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
   "current_run": {
-    "checkpoints_completed": 4,
+    "checkpoints_completed": 5,
     "generated": 12,
     "checked": 12,
     "verified": 12,
-    "revision_events": 1,
+    "revision_events": 2,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
@@ -38,11 +38,12 @@
       "Reconciled the existing landscape promotion branch with PR #540 and promoted pc2.landscape.public_nature 12 records record-identically after Power Color CI passed; runtime 240 -> 252 and twenty -> twenty-one promoted skills.",
       "Source-resolved only the official-text p.117 景観をつくる要素 nonvisual boundary using the current AFT Grade 2 table of contents plus the current Mutsu City Landscape Plan explicit element list.",
       "Created pc2.landscape.element_examples as a 12-record pending-first batch limited to explicit listed landscape elements; no RGB/HEX, image appearance, formal natural/artificial taxonomy, or unstated geometry was introduced.",
-      "Independently re-solved all 12 before proposed-answer comparison: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. Removed one unsupported classification phrase before gate and added the dedicated pre-promotion gate."
+      "Independently re-solved all 12 before proposed-answer comparison: 12 verified / 0 needs_revision / 0 rejected / 0 pending, A/B/C/D = 3/3/3/3. Removed unsupported classification wording and replaced one subjective breadth item with an objective explicit-list membership item before gate.",
+      "Dedicated pc2.landscape.element_examples schema/full-fingerprint/nonvisual/shared-renderer gate plus normal Power Color regression passed in workflow run 33644271047 on head a3d2be3e0230aefb1e733f07ad08ea0cecfe161b; runtime remains 252 until record-identical promotion."
     ]
   },
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Gate pc2.landscape.element_examples and, if green, promote 12 record-identically from runtime 252 to 264; keep Grade 3 incomplete and all source/display gates unchanged."
+  "next": "Record-identically promote pc2.landscape.element_examples 12 verified records; runtime remains 252 until promotion."
 }
