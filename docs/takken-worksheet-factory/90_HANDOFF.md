@@ -8,12 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled the existing verified unit 69 questions against `takken-concept-building-coverage-ratio` without changing any Phase 2/3 question content or validation status.
+Added canonical atomic knowledge for `takken-concept-floor-area-ratio` without changing any Phase 2/3 question content, validation status, or existing question mappings.
 
-- `takken-q-69-001` maps only to the building-coverage-ratio definition item.
-- `takken-q-69-002` maps only to the fire/semi-fire relaxation and corner-lot relaxation items directly tested by its answer choices.
-- The designated-limit, combined-relaxation, permit-relaxation and application-exclusion knowledge remains unmapped rather than being inferred from broad wording.
-- Three of the 9 building-coverage-ratio knowledge items now have direct existing verified-question evidence; the other 6 remain explicit Phase 4.3 deficits.
+- Added 7 verified knowledge items sourced to the 2026-04-01 Building Standards Act Article 52 framework.
+- Separated the floor-area-ratio definition, designated limit, front-road-under-12m restriction, residential road factor, nonresidential road factor, lower-of-two rule, and weighted-average treatment across different restriction zones.
+- `takken-q-70-001` and `takken-q-70-002` remain unmapped in this checkpoint so mapping can be limited to what their actual choices directly measure.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
 ## Status after this run
@@ -24,16 +23,16 @@ Reconciled the existing verified unit 69 questions against `takken-concept-build
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: active — 89/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 89
-- Canonical knowledge items: 462
+- Concepts with canonical knowledge items: 90
+- Canonical knowledge items: 469
 - Existing verified questions mapped: 108
-- Explicit unmapped knowledge gaps: 304
+- Explicit unmapped knowledge gaps: 311
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract and source canonical atomic knowledge items for `takken-concept-floor-area-ratio`, then map existing verified questions only where they directly measure those items. Do not begin Phase 4.3.
+Map `takken-q-70-001` only to `takken-k-floor-area-ratio-definition` and map `takken-q-70-002` only to `takken-k-floor-area-ratio-front-road-under-twelve`. Do not infer the coefficient, lower-of-two, designated-limit, or weighted-average items from the broad wording of those questions. Keep those five as explicit Phase 4.3 deficits. Do not begin Phase 4.3.
 
 ## publication invariant
 
