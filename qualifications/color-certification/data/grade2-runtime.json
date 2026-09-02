@@ -83,6 +83,16 @@
       "id": "pc2.fashion.basic_trend_color_classification",
       "label": "ファッション：ベーシックカラーとトレンドカラーの分類",
       "categoryId": "pc2.fashion"
+    },
+    {
+      "id": "pc2.interior.color_planning_principles",
+      "label": "インテリア：色彩計画の4原則",
+      "categoryId": "pc2.interior"
+    },
+    {
+      "id": "pc2.interior.zoning_classification",
+      "label": "インテリア：空間分類とゾーニング",
+      "categoryId": "pc2.interior"
     }
   ],
   "questions": [
@@ -6143,6 +6153,753 @@
       "qa": {
         "generatedAs": "pending_validation",
         "independentRecheck": "independently re-derived from the fixed basic/trend/JAFCA text-only rule boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "インテリア色彩の考え方として、利用する人を把握して計画するという原則はどれですか。",
+      "sentence": "インテリア色彩の考え方として、利用する人を把握して計画するという原則はどれですか。",
+      "choices": [
+        "生活を包む色彩であること",
+        "目的や用途に応じた色彩であること",
+        "住むための色彩であること",
+        "利用者に応じた色彩であること"
+      ],
+      "proposedAnswer": "利用者に応じた色彩であること",
+      "correctIndex": 3,
+      "explanation": "誰が主に利用する空間かを把握して計画するのは「利用者に応じた色彩であること」です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "部屋ごとの役割や機能に合わせて色彩を計画するという原則はどれですか。",
+      "sentence": "部屋ごとの役割や機能に合わせて色彩を計画するという原則はどれですか。",
+      "choices": [
+        "目的や用途に応じた色彩であること",
+        "住むための色彩であること",
+        "利用者に応じた色彩であること",
+        "生活を包む色彩であること"
+      ],
+      "proposedAnswer": "目的や用途に応じた色彩であること",
+      "correctIndex": 0,
+      "explanation": "部屋の役割・機能に合わせるのは「目的や用途に応じた色彩であること」です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "施工後は簡単に変更できないことや、飽きにくさ・清掃性を考える原則はどれですか。",
+      "sentence": "施工後は簡単に変更できないことや、飽きにくさ・清掃性を考える原則はどれですか。",
+      "choices": [
+        "利用者に応じた色彩であること",
+        "生活を包む色彩であること",
+        "住むための色彩であること",
+        "目的や用途に応じた色彩であること"
+      ],
+      "proposedAnswer": "住むための色彩であること",
+      "correctIndex": 2,
+      "explanation": "変更のしにくさや維持管理を考えるのは「住むための色彩であること」です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "インテリアの色彩が日常的に人へ影響することを認識する原則はどれですか。",
+      "sentence": "インテリアの色彩が日常的に人へ影響することを認識する原則はどれですか。",
+      "choices": [
+        "住むための色彩であること",
+        "生活を包む色彩であること",
+        "目的や用途に応じた色彩であること",
+        "利用者に応じた色彩であること"
+      ],
+      "proposedAnswer": "生活を包む色彩であること",
+      "correctIndex": 1,
+      "explanation": "日常生活を取り巻き継続的に影響する点は「生活を包む色彩であること」です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "「子どもが主に使う部屋か、高齢者が主に使う部屋かを確認する」に最も直接対応する考え方はどれですか。",
+      "sentence": "「子どもが主に使う部屋か、高齢者が主に使う部屋かを確認する」に最も直接対応する考え方はどれですか。",
+      "choices": [
+        "利用者に応じた色彩であること",
+        "住むための色彩であること",
+        "生活を包む色彩であること",
+        "目的や用途に応じた色彩であること"
+      ],
+      "proposedAnswer": "利用者に応じた色彩であること",
+      "correctIndex": 0,
+      "explanation": "主な利用者を確認する行為は利用者に応じた計画に対応します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "「寝室と作業室では役割が異なるので、それぞれの機能に合わせて計画する」に対応する原則はどれですか。",
+      "sentence": "「寝室と作業室では役割が異なるので、それぞれの機能に合わせて計画する」に対応する原則はどれですか。",
+      "choices": [
+        "生活を包む色彩であること",
+        "目的や用途に応じた色彩であること",
+        "利用者に応じた色彩であること",
+        "住むための色彩であること"
+      ],
+      "proposedAnswer": "目的や用途に応じた色彩であること",
+      "correctIndex": 1,
+      "explanation": "空間の役割・用途への適合は目的や用途に応じた色彩です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "「内装は一度施工すると容易に変更できないので、長く使うことを考える」に対応する原則はどれですか。",
+      "sentence": "「内装は一度施工すると容易に変更できないので、長く使うことを考える」に対応する原則はどれですか。",
+      "choices": [
+        "目的や用途に応じた色彩であること",
+        "利用者に応じた色彩であること",
+        "住むための色彩であること",
+        "生活を包む色彩であること"
+      ],
+      "proposedAnswer": "住むための色彩であること",
+      "correctIndex": 2,
+      "explanation": "施工後の変更のしにくさを踏まえるのは住むための色彩です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "「インテリアの色は毎日の生活の中で継続的に人へ作用する」に対応する原則はどれですか。",
+      "sentence": "「インテリアの色は毎日の生活の中で継続的に人へ作用する」に対応する原則はどれですか。",
+      "choices": [
+        "利用者に応じた色彩であること",
+        "住むための色彩であること",
+        "目的や用途に応じた色彩であること",
+        "生活を包む色彩であること"
+      ],
+      "proposedAnswer": "生活を包む色彩であること",
+      "correctIndex": 3,
+      "explanation": "生活を取り巻き継続的に影響する点が生活を包む色彩の原則です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "インテリア色彩の計画で、参照資料が示す4原則に含まれないものはどれですか。",
+      "sentence": "インテリア色彩の計画で、参照資料が示す4原則に含まれないものはどれですか。",
+      "choices": [
+        "画面のRGB値に応じた色彩であること",
+        "生活を包む色彩であること",
+        "住むための色彩であること",
+        "利用者に応じた色彩であること"
+      ],
+      "proposedAnswer": "画面のRGB値に応じた色彩であること",
+      "correctIndex": 0,
+      "explanation": "RGB値による分類はこの4原則に含まれません。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "「清掃しやすい素材を考慮する」という説明と最も結びつく原則はどれですか。",
+      "sentence": "「清掃しやすい素材を考慮する」という説明と最も結びつく原則はどれですか。",
+      "choices": [
+        "生活を包む色彩であること",
+        "住むための色彩であること",
+        "利用者に応じた色彩であること",
+        "目的や用途に応じた色彩であること"
+      ],
+      "proposedAnswer": "住むための色彩であること",
+      "correctIndex": 1,
+      "explanation": "清掃性など維持管理への配慮は住むための色彩に含まれます。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "「その空間を誰が多く利用するかを確認する」理由として最も適切なのはどれですか。",
+      "sentence": "「その空間を誰が多く利用するかを確認する」理由として最も適切なのはどれですか。",
+      "choices": [
+        "部屋のRGB値を固定するため",
+        "施工図の縮尺を決めるため",
+        "利用者に応じた色彩計画を行うため",
+        "すべての部屋を同じ配色にするため"
+      ],
+      "proposedAnswer": "利用者に応じた色彩計画を行うため",
+      "correctIndex": 2,
+      "explanation": "主利用者を把握するのは利用者に応じた色彩計画のためです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-color-planning-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/color_planning_principles",
+      "skillId": "pc2.interior.color_planning_principles",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "インテリア色彩の考え方として適切なのはどれですか。",
+      "sentence": "インテリア色彩の考え方として適切なのはどれですか。",
+      "choices": [
+        "すべての部屋で同一の色彩計画にする",
+        "画面で見た色をそのまま施工色にする",
+        "利用者より流行色を常に優先する",
+        "部屋の目的・用途や主な利用者を踏まえて計画する"
+      ],
+      "proposedAnswer": "部屋の目的・用途や主な利用者を踏まえて計画する",
+      "correctIndex": 3,
+      "explanation": "目的・用途と利用者を踏まえることが明示された原則に合致します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 text-only source boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0001",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "家族や来客を含め、多くの人がともに利用する空間はどのゾーンですか。",
+      "sentence": "家族や来客を含め、多くの人がともに利用する空間はどのゾーンですか。",
+      "choices": [
+        "パブリックゾーン",
+        "プライベートゾーン",
+        "サービスゾーン",
+        "モニターゾーン"
+      ],
+      "proposedAnswer": "パブリックゾーン",
+      "correctIndex": 0,
+      "explanation": "家族や来客を含め多くの人が利用する空間はパブリックゾーンです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference",
+        "daiken_homelife_zoning_2025"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0002",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "家族の中でも特定の個人が主に利用する空間はどのゾーンですか。",
+      "sentence": "家族の中でも特定の個人が主に利用する空間はどのゾーンですか。",
+      "choices": [
+        "サービスゾーン",
+        "プライベートゾーン",
+        "パブリックゾーン",
+        "表示ゾーン"
+      ],
+      "proposedAnswer": "プライベートゾーン",
+      "correctIndex": 1,
+      "explanation": "特定の個人が利用する空間はプライベートゾーンです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference",
+        "daiken_homelife_zoning_2025"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0003",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "家事のための機能的空間や水を使用する水回り空間はどのゾーンですか。",
+      "sentence": "家事のための機能的空間や水を使用する水回り空間はどのゾーンですか。",
+      "choices": [
+        "プライベートゾーン",
+        "パブリックゾーン",
+        "サービスゾーン",
+        "トレンドゾーン"
+      ],
+      "proposedAnswer": "サービスゾーン",
+      "correctIndex": 2,
+      "explanation": "家事・水回りなど機能性を求められる空間はサービスゾーンです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference",
+        "daiken_homelife_zoning_2025"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0004",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "p.105の分類では、住空間は主な生活行為にもとづいて何種類のゾーンに分けられますか。",
+      "sentence": "p.105の分類では、住空間は主な生活行為にもとづいて何種類のゾーンに分けられますか。",
+      "choices": [
+        "1種類",
+        "2種類",
+        "4種類",
+        "3種類"
+      ],
+      "proposedAnswer": "3種類",
+      "correctIndex": 3,
+      "explanation": "この資料ではパブリック・プライベート・サービスの3ゾーンに分類します。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0005",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "来客も家族も利用するリビングのような空間を分類するなら、最も適切なのはどれですか。",
+      "sentence": "来客も家族も利用するリビングのような空間を分類するなら、最も適切なのはどれですか。",
+      "choices": [
+        "パブリックゾーン",
+        "サービスゾーン",
+        "プライベートゾーン",
+        "個人専用ゾーン"
+      ],
+      "proposedAnswer": "パブリックゾーン",
+      "correctIndex": 0,
+      "explanation": "家族と来客など多くの人が共同利用する空間はパブリックゾーンです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0006",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "特定の家族だけが主に使う個室を分類するなら、最も適切なのはどれですか。",
+      "sentence": "特定の家族だけが主に使う個室を分類するなら、最も適切なのはどれですか。",
+      "choices": [
+        "パブリックゾーン",
+        "プライベートゾーン",
+        "サービスゾーン",
+        "共用ゾーン"
+      ],
+      "proposedAnswer": "プライベートゾーン",
+      "correctIndex": 1,
+      "explanation": "特定個人の利用が中心の空間はプライベートゾーンです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0007",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "キッチンや浴室のように家事機能や水使用と結びつく空間を分類するならどれですか。",
+      "sentence": "キッチンや浴室のように家事機能や水使用と結びつく空間を分類するならどれですか。",
+      "choices": [
+        "プライベートゾーン",
+        "パブリックゾーン",
+        "サービスゾーン",
+        "交流ゾーン"
+      ],
+      "proposedAnswer": "サービスゾーン",
+      "correctIndex": 2,
+      "explanation": "家事や水回りの機能空間はサービスゾーンです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0008",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "ゾーニングの説明として最も適切なのはどれですか。",
+      "sentence": "ゾーニングの説明として最も適切なのはどれですか。",
+      "choices": [
+        "色をRGB値だけで分類すること",
+        "家具を価格帯だけで分けること",
+        "写真の見た目で部屋を分類すること",
+        "用途が似た空間をグループ化して配置を考えること"
+      ],
+      "proposedAnswer": "用途が似た空間をグループ化して配置を考えること",
+      "correctIndex": 3,
+      "explanation": "ゾーニングは用途・機能の近い空間をグループ化して配置を考える方法です。",
+      "sourceRefs": [
+        "daiken_homelife_zoning_2025",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0009",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "p.105の3ゾーン分類に含まれる組み合わせはどれですか。",
+      "sentence": "p.105の3ゾーン分類に含まれる組み合わせはどれですか。",
+      "choices": [
+        "パブリック・プライベート・サービス",
+        "パブリック・RGB・CMYK",
+        "ベース・アソート・アクセント",
+        "色相・明度・彩度"
+      ],
+      "proposedAnswer": "パブリック・プライベート・サービス",
+      "correctIndex": 0,
+      "explanation": "p.105の住空間分類はパブリック・プライベート・サービスの3ゾーンです。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0010",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "サービスゾーンの説明として最も適切なのはどれですか。",
+      "sentence": "サービスゾーンの説明として最も適切なのはどれですか。",
+      "choices": [
+        "来客を含む多くの人の共有空間",
+        "家事や水回りなど機能性を求められる空間",
+        "特定個人だけの趣味空間",
+        "画面表示専用の空間"
+      ],
+      "proposedAnswer": "家事や水回りなど機能性を求められる空間",
+      "correctIndex": 1,
+      "explanation": "サービスゾーンは家事・水回りなど機能性を求められる空間です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0011",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "プライベートゾーンの説明として最も適切なのはどれですか。",
+      "sentence": "プライベートゾーンの説明として最も適切なのはどれですか。",
+      "choices": [
+        "来客を中心に使う空間",
+        "家事機能だけを担う空間",
+        "家族の中でも特定の個人が利用する空間",
+        "すべての家族と来客が共同利用する空間"
+      ],
+      "proposedAnswer": "家族の中でも特定の個人が利用する空間",
+      "correctIndex": 2,
+      "explanation": "プライベートゾーンは特定個人の利用を中心とする空間です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
+        "checkedOn": "2026-09-02"
+      }
+    },
+    {
+      "id": "pc2-interior-zoning-0012",
+      "version": 1,
+      "grade": 2,
+      "taxonomyPath": "grade2/interior/zoning_classification",
+      "skillId": "pc2.interior.zoning_classification",
+      "categoryId": "pc2.interior",
+      "questionType": "text_choice",
+      "prompt": "パブリックゾーンの説明として最も適切なのはどれですか。",
+      "sentence": "パブリックゾーンの説明として最も適切なのはどれですか。",
+      "choices": [
+        "特定個人だけが利用する空間",
+        "家事・水回りだけの空間",
+        "表示機器のある空間",
+        "家族や来客を含め多くの人が利用する空間"
+      ],
+      "proposedAnswer": "家族や来客を含め多くの人が利用する空間",
+      "correctIndex": 3,
+      "explanation": "パブリックゾーンは家族や来客を含め多くの人が共同利用する空間です。",
+      "sourceRefs": [
+        "aft_grade2_current_toc_2026",
+        "cleverlyhome_interior_color_2023_official_text_reference"
+      ],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {
+        "generatedAs": "pending_validation",
+        "independentRecheck": "independently re-derived from the fixed Interior p.105 zoning boundary before comparing with proposedAnswer",
         "checkedOn": "2026-09-02"
       }
     }
