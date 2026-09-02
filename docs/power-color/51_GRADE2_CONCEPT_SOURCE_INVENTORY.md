@@ -15,7 +15,10 @@ Current JCRI first-party Munsell references:
 - `https://www.jcri.jp/product/hvc_color_training` — explicitly identifies H/V/C as hue/value/chroma;
 - `https://www.jcri.jp/product/digital_color_manual` — current Munsell notation examples.
 
-## Source-resolved nonvisual skills
+Current JAFCA first-party fashion-trend reference:
+- `https://jafca.org/membership/` — explicitly confirms JAFCA Fashion Color trend information is issued twice per year with season-ahead updates.
+
+## Runtime-promoted nonvisual skills
 
 1. `pc2.foundation.official_sample_facts`
 2. `pc2.scheme.triad_hue_positions`
@@ -35,6 +38,20 @@ Current JCRI first-party Munsell references:
 
 All fifteen skills are runtime-promoted record-identically. Grade 2 runtime frontier is 180 verified / pending 0.
 
+## Source-resolved next skill
+
+### `pc2.fashion.basic_trend_color_classification`
+- current official Grade 2 TOC places `ファッションカラーの分類` immediately after Media Design at p.090;
+- current official Grade 2 sample page confirms fashion color coordination is within Grade 2 professional-application scope;
+- Plus Colors `ファッションカラーとスタイル＆イメージ`, supervised by a Grade 1 Color Certification coordinator and citing the 2020-revised official text, explicitly defines basic colors as repeatedly used standard colors independent of fashion trends and trend colors as varying with era/season;
+- current JAFCA first-party material independently confirms that JAFCA publishes fashion trend-color information;
+- Bunka Fashion College curriculum independently places `ベーシックカラー` and `トレンドカラー` together in fashion-industry color planning;
+- accepted boundary is text-only classification/context; universal example-hue claims, current displayed trend-color judgments, fashion-photo appearance, RGB/HEX, sampled pixels and unstated style geometry are excluded;
+- audit: `docs/power-color/audits/2026-09-02-grade2-fashion-color-classification.md`;
+- authoring has not started; next state must be pending-first.
+
+## Previously resolved Media Design slices
+
 ### `pc2.media.rgb_cmyk_models`
 - current official Grade 2 TOC confirms Media Design and specifically `画面や印刷における色表現` / `カラーマネジメントの基本`;
 - current official Grade 2 sample explicitly confirms CMY as the subtractive-mixing primaries;
@@ -52,17 +69,16 @@ All fifteen skills are runtime-promoted record-identically. Grade 2 runtime fron
 ### `pc2.media.image_basics`
 - current official Grade 2 text scope confirms `コンピュータにおける画像の基本` in Media Design;
 - current Adobe professional documentation explicitly fixes raster as a pixel grid / resolution-dependent representation and vector as a mathematically defined representation based on points, lines, curves and shapes;
-- Adobe explicitly states raster enlargement can lose detail while vector scaling can retain crisp edges, and gives photographs as a raster use case and logos/technical illustrations as vector use cases;
 - image appearance judgments, RGB/HEX values, monitor-facing judgments, screenshots, sampled pixels, unstated geometry, device-specific resolution targets and compression-quality judgments are excluded;
 - 12/12 independently verified, A/B/C/D = 3/3/3/3, and promoted record-identically; runtime 168 → 180;
 - audit: `docs/power-color/audits/2026-09-02-grade2-image-basics.md`.
 
 ## Current official-text scope inventory
 
-The current official Grade 2 TOC frontier is immediately after `コンピュータにおける画像の基本`.
 - Visual Design: scope-confirmed, but current public first-party material reviewed does not expose a sufficiently explicit nonvisual answer rule, so `pc2.visual.*` authoring remains blocked rather than inferred.
 - Media Design: RGB/CMYK, color-management profiles, and computer-image basics are promoted.
-- Remaining later topics include fashion, interior and landscape color coordination, conventional color names, and the PCCS tone-by-value appendix.
+- Fashion: `ファッションカラーの分類` has a narrow source-resolved basic/trend text-only slice; later fashion classification/配色 material remains unresolved until separately sourced.
+- Remaining later topics include interior and landscape color coordination, conventional color names, and the PCCS tone-by-value appendix.
 
 The TOC establishes scope and search order only. Do not generate a micro-skill from a TOC label unless the answer rule is explicit in acceptable authority.
 
@@ -73,12 +89,13 @@ The TOC establishes scope and search order only. Do not generate a micro-skill f
 - Do not infer monitor-facing colors without approved display references.
 - Do not broaden any resolved scheme beyond its independently corroborated text-only intersection.
 - Do not author Visual Design terminology from scope labels alone; acquire an explicit auditable rule first.
+- Do not turn example fashion hues into universal basic/trend classifications.
 - The stale incomplete `power-color-grade2-tonal-promotion` branch is not authority.
 
 ## Exact next order
 
 1. Grade 2 runtime frontier is 180 verified / pending 0 across fifteen promoted skills.
-2. Continue current official Grade 2 text order after `コンピュータにおける画像の基本`.
-3. Acquire an explicit auditable nonvisual answer rule before creating the next pending-first authoring batch.
-4. Keep exact-equality/full-fingerprint/coverage/shared-engine gates mandatory for all future promotion.
+2. Create `pc2.fashion.basic_trend_color_classification` pending-first authoring from the fixed source audit.
+3. Independently re-solve every record before verification; then run schema/full-fingerprint/coverage/answer-position/shared-renderer gates.
+4. Promote only verified records record-identically and keep shared Power TOEIC engine regression mandatory.
 5. Keep Visual Design source-blocked and do not infer answers from images, RGB/HEX values, monitor values, screenshots or unstated geometry.

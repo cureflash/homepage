@@ -78,6 +78,17 @@ Grade 2 runtime is 180 verified / pending 0 across fifteen promoted skills. Grad
 - [x] 12 checked / 12 verified / 0 needs_revision / 0 rejected / 0 pending; A/B/C/D = 3/3/3/3.
 - [x] Promote record-identically to runtime 168 → 180 and extend exact-equality/full-fingerprint/shared-engine gates.
 
+## Fashion — basic/trend color classification text-only slice
+
+- [x] Current official Grade 2 TOC places `ファッションカラーの分類` immediately after Media Design at p.090.
+- [x] Current Grade 2 official sample page confirms fashion color coordination is within the tested professional-application scope.
+- [x] Auditable specialist secondary material referencing the 2020-revised official text explicitly defines basic colors as repeatedly used standard colors independent of fashion trends and trend colors as varying with era/season.
+- [x] Current JAFCA first-party material independently confirms publication of fashion trend-color information.
+- [x] Fix the accepted rule boundary in `docs/power-color/audits/2026-09-02-grade2-fashion-color-classification.md`; exclude universal claims about example hues, current displayed trend-color judgments, fashion-photo appearance, RGB/HEX, sampled pixels and unstated style geometry.
+- [ ] Create `pc2.fashion.basic_trend_color_classification` pending-first authoring and independently re-solve every record before verification.
+- [ ] Run schema/full-fingerprint/coverage/answer-position/shared-renderer gates.
+- [ ] Promote only verified records record-identically and extend shared-engine runtime gates.
+
 ## Exact next start point
 
-Continue source acquisition in current official Grade 2 text order after `コンピュータにおける画像の基本`. Author only the next topic whose nonvisual answer rule can be fixed from explicit auditable authority. Visual Design remains source-blocked.
+Create `pc2.fashion.basic_trend_color_classification` pending-first authoring from the fixed narrow nonvisual rule boundary, then independently re-solve every record. Visual Design remains source-blocked.
