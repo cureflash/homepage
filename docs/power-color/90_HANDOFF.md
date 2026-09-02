@@ -30,10 +30,12 @@ p.128 `慣用色名（JISの慣用色名より）` narrow structure is source-re
 
 p.128 `和色名` individual-name authoring is source-blocked under `docs/power-color/audits/2026-09-03-grade2-p128-washokumei-source-audit.md`. Current AFT authority confirms only the p.128–p.132 scope/order. Current JCRI/JSA material confirms the JIS Z 8102:2001 conventional-name framework but does not publicly expose the current Grade 2 pp.128–131 individual subset/readings. Full-JIS Japanese-name corpora and Grade 3 data therefore must not be projected into Grade 2; no individual-name questions were generated.
 
+p.132 `外来色名` individual-name authoring is source-blocked under `docs/power-color/audits/2026-09-03-grade2-p132-gairaishokumei-source-audit.md`. Current AFT authority confirms p.132 placement and that `資料・色名` follows at p.138. Current JCRI/JSA material confirms the JIS Z 8102:2001 conventional-name framework but does not publicly expose the current Grade 2 pp.132–137 individual foreign-name subset/readings. Historical or unofficial 2級 study lists, the full JIS corpus, and Grade 3 data are not accepted as membership authority; no individual-name questions were generated.
+
 Visual Design, Fashion p.091/p.095/p.096, Interior p.104, p.107 and p.111 remain source-blocked. Grade 3 remains 223 verified / pending 0 and incomplete.
 
 ## Exact next start point
 
-Source-acquire the individual Grade 2 p.132 `外来色名` boundary from current explicit auditable authority. Do not infer the Grade 2 list or readings from the full JIS corpus or Grade 3, and do not infer RGB/HEX/display values, swatches, Munsell values or appearance. If no sufficiently explicit auditable individual-name boundary is available, record p.132 `外来色名` source-blocked rather than manufacturing questions.
+Continue in official text order at p.138 `資料・色名`. Source-acquire only explicit current auditable nonvisual facts. If p.138 is reference-only material without a deterministic examinable boundary, record it source-blocked rather than manufacturing questions.
 
 Keep all Grade 3 blockers and source/display gates unchanged. Use only the shared Power TOEIC question-bank/workout/session engine.
