@@ -11,50 +11,41 @@ Canonical Grade 1 working set:
 - `docs/power-color/61_GRADE1_SOURCE_INVENTORY.md`
 - `docs/power-color/62_GRADE1_SPEC.md`
 
-## Lower-grade preserved state
+## Preserved lower-grade state
 
-Grade 3 remains 223 verified / pending 0 and incomplete. Its deferred authority is `91_GRADE3_DEFERRED_HANDOFF.md`; outstanding blockers remain unchanged.
+Grade 3 remains 223 verified / pending 0 and incomplete with all deferred blockers unchanged. Grade 2 remains 348 verified / pending 0 across 29 promoted skills and incomplete at its recorded source-blocked frontier. No lower-grade source/display gate is relaxed.
 
-Grade 2 remains 348 verified / pending 0 across 29 promoted skills and incomplete at its recorded source-blocked frontier. Detailed authority remains `50_GRADE2_EXECUTION_PLAN.md` and `51_GRADE2_CONCEPT_SOURCE_INVENTORY.md`. Do not reopen rejected Grade 2 source routes without new explicit auditable evidence.
+## Grade 1 completed culture checkpoints
 
-## Grade 1 completed culture checkpoint
+- p.006 `古代ヨーロッパの色彩`: 8/8 verified; CI `33744000544`; PR #618 merged.
+- p.007 `中・近世のヨーロッパの色彩`: 8/8 verified; CI `33745825195`; PR #621 merged.
+- p.010 `近代ヨーロッパと色彩学`: 8/8 verified; CI `33747834603`; PR #623 merged.
+- p.014 `日本の古代の色`: 8/8 verified; CI `33749706830`; PR #625 merged.
+- p.017 `古代から中近世の日本の色彩`: 8/8 verified; PR #628 merged.
+- p.021 `近代の日本の色彩`: 8/8 verified; CI `33755336513`; PR #630 merged.
 
-- p.006 `古代ヨーロッパの色彩`: 8 independently verified text-only records; CI `33744000544`; PR #618 merged.
-- p.007 `中・近世のヨーロッパの色彩`: 8 independently verified text-only records; CI `33745825195`; PR #621 merged.
-- p.010 `近代ヨーロッパと色彩学`: 8 independently verified records; CI `33747834603`; PR #623 merged.
-- p.014 `日本の古代の色`: 8 independently verified records; CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`.
-- p.017 `古代から中近世の日本の色彩`: 8 independently verified records, pending 0, A/B/C/D=2/2/2/2; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`.
-- p.021 `近代の日本の色彩`: 8 pending-first text-only records independently re-solved as 8/8 verified, pending 0, A/B/C/D=2/2/2/2; synchronized Power Color CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`.
+## Grade 1 color-harmony checkpoints
+
+p.024 `色彩調和論とは / ジャッドの色彩調和、四つの原理` is `SECONDARY_CORROBORATION_REQUIRED`; finite accepted state space is 4/4 verified, pending 0; CI `33756393481`; PR #632 merged.
+
+p.025 `シュヴルールの色彩調和論` is `SOURCE_RESOLVED` for the narrow current-AFT-official-sample slice. Exactly three first-party relations were authored and independently re-solved as 3/3 verified, pending 0. Head Power Color CI `33757328587` succeeded; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`. Do not waterfill beyond those three official-sample relations.
+
+p.027 `ルードの色彩調和論` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p027-rood-source-audit.md`. AFT fixes the current heading/order but does not publicly expose the detailed textbook answer set. The accepted text-only boundary is limited to:
+- Library of Congress: Ogden N. Rood, `Modern Chromatics, with Applications to Art and Industry`, 1879.
+- ISCC: colour divided into purity, luminosity, and hue.
+- Metropolitan Museum of Art / ISCC: separated small dots or lines of differing colours may blend perceptually at a suitable viewing distance; distinguish this from palette pigment premixing.
+- ISCC: paired complementary colours may strengthen chromatic presence in painting.
+
+`qualifications/color-certification/data/grade1-authoring-harmony-rood-p027-0001-0004.json` contains exactly four pending-first text-only questions, independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated gate `qualifications/color-certification/tests/grade1-harmony-rood-p027-authoring.test.js` checks source membership, nonvisual rendering, full fingerprints against all eight earlier Grade 1 batches, and shared renderer behavior.
+
+Do not reconstruct the unpublished AFT p.027 body, exact Japanese terminology beyond the public heading, Rood wheel geometry, hue positions, pigment recipes, RGB/HEX/display values, or p.028 Ostwald content.
 
 No Grade 1 runtime promotion has occurred yet.
 
-## p.024 color-harmony checkpoint
-
-p.024 `色彩調和論とは / ジャッドの色彩調和、四つの原理` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p024-color-harmony-judd-source-audit.md`.
-
-`qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json` contains the finite accepted p.024 state space: 4 pending-first text-only questions, independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. One wording defect was corrected before final gate. Synchronized Power Color CI `33756393481` passed; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
-
-Do not waterfill beyond these records, invent exact Japanese AFT labels for the other three Judd principles, reconstruct visual schemes, or duplicate them in adjacent theory batches.
-
-## p.025 Chevreul checkpoint
-
-p.025 `シュヴルールの色彩調和論` is `SOURCE_RESOLVED` for a narrow current-official-sample slice under `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`.
-
-The current AFT Grade 1 first-stage official sample directly exposes and answers these text-only relations:
-- `一つの主調色による調和` → `ドミナント`.
-- This is treated as one of three `類似色の調和`.
-- `類似色の調和` includes `隣接・近似色相による色調類似の調和`.
-
-`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json` contains exactly these three first-party relations. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. The batch deliberately stops at three rather than waterfilling a fourth item.
-
-Dedicated gate `qualifications/color-certification/tests/grade1-harmony-chevreul-p025-authoring.test.js` checks source membership, nonvisual rendering, full fingerprints against all seven earlier Grade 1 batches, and shared renderer behavior. Current-head CI/merge is still required.
-
-Do not reconstruct the official figure, infer RGB/HEX/display values, add unstated Chevreul categories/history, pull p.027 Rood content forward, or duplicate p.024 Judd-only questions.
-
 ## Phase 5 sequencing note
 
-`docs/power-color/20_EXECUTION_PLAN.md` still contains the old Grade-2-complete start sentence. The user's repeated explicit directive makes Grade 1 active despite Grade 2/3 remaining incomplete; STATUS and `60_GRADE1_EXECUTION_PLAN.md` record this operational precedence for Grade 1 only. Mechanical cleanup of the stale top-level sentence remains pending and must not be interpreted as completing or relaxing Grade 2/3.
+`docs/power-color/20_EXECUTION_PLAN.md` still contains the old Grade-2-complete start sentence. The user's repeated explicit directive makes Grade 1 active despite Grade 2/3 remaining incomplete; STATUS and `60_GRADE1_EXECUTION_PLAN.md` record this operational precedence for Grade 1 only. Do not interpret the override as completing or relaxing Grade 2/3.
 
 ## Exact next start point
 
-Pass current-head p.025 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.027 `ルードの色彩調和論` and source-audit it before authoring.
+Pass current-head p.027 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.028 `オストワルトの色彩調和論` and source-audit it before authoring.
