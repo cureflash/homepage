@@ -8,12 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Extracted and source-checked canonical knowledge for `takken-concept-registration-license-tax` without changing existing Phase 2/3 questions or beginning Phase 4.3.
+Reconciled the two existing verified unit 81 questions against the 10 canonical knowledge items for `takken-concept-registration-license-tax` without changing any Phase 2/3 question content or beginning Phase 4.3.
 
-- Added 10 atomic knowledge items covering taxable registrations, national-tax classification, taxpayer, real-estate value tax base, land sale transfer rate, land inheritance transfer rate, building preservation rate, building sale transfer rate, residential-house preservation reduced rate, and residential-house transfer reduced rate.
-- Primary grounding is current National Tax Agency guidance explicitly marked `[令和8年4月1日現在法令等]`, including the registration-tax overview and tax-rate table.
-- The land sale ownership-transfer item records the 1,000分の20 base rate and 1,000分の15 reduced rate through 2029-03-31; residential-house reduced rates are also tied to the current statutory deadlines and conditions stated by NTA.
-- Existing source questions `takken-q-81-001` and `takken-q-81-002` were intentionally not mapped in this extraction checkpoint.
+- `takken-q-81-001` maps only to `takken-k-registration-license-tax-taxable-registration`, because the stem and four choices directly test what registrations, licenses, permits, etc. are subject to registration and license tax.
+- `takken-q-81-002` maps only to `takken-k-registration-license-tax-taxpayer-recipient`, because it directly tests the general taxpayer rule for the person receiving the registration or similar act.
+- The national-tax classification, real-estate value tax base, land/building transfer and preservation rates, and residential-house reduced-rate items remain explicit Phase 4.3 deficits because neither existing question directly measures them.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -24,17 +23,17 @@ Extracted and source-checked canonical knowledge for `takken-concept-registratio
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 104/113 concepts with canonical knowledge extraction complete; 103/113 fully reconciled through question mapping
+- Phase 4.2: active — 104/113 concepts with canonical knowledge extraction complete; 104/113 fully reconciled through question mapping
 - Concepts with canonical knowledge items: 104
 - Canonical knowledge items: 580
-- Existing verified questions mapped: 130
-- Explicit unmapped knowledge gaps: 389
+- Existing verified questions mapped: 132
+- Explicit unmapped knowledge gaps: 387
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile `takken-q-81-001` and `takken-q-81-002` against the 10 canonical `takken-concept-registration-license-tax` knowledge items. Map only knowledge directly measured by each stem and four choices. Keep all other knowledge as explicit Phase 4.3 deficits. Do not begin Phase 4.3.
+Extract and source-check canonical knowledge items for `takken-concept-stamp-tax`, the next concept in canonical order. Keep existing unit 82 question mapping for the following checkpoint. Do not begin Phase 4.3.
 
 ## publication invariant
 
