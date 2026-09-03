@@ -11,9 +11,9 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33782358574, "pr": 676, "merge_commit": "8348d0da0c1ef1b06633c695ebd34feabf9eda2d", "skill": "pc1.color_names.iscc_nbs_p061", "verified": 4},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33784600346, "pr": 680, "merge_commit": "6ba80f478bcb6b221683e94e0e161033dbbcac07", "skill": "pc1.measurement.visual_direct_comparison_p067", "verified": 4},
     "active_section": "測色",
-    "active_topic": "p.066 測色とは",
+    "active_topic": "p.069 物理測色",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.066 測色 — 測色とは before any authoring."
+    "next": "Source-audit p.069 測色 — 物理測色 before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 8, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 files, open PRs, and Grade 1 branches; no competing p.060 work existed.", "Source-audited p.060 色名 — 色を表す言葉の分類 as SECONDARY_CORROBORATION_REQUIRED using current AFT order plus Japan Color Research Institute public authority.", "Authored four p.060 text-only records pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI 33782146996 passed; PR #675 merged as a910f7560fb0743e721181493c9caafd37f3a0d4.", "Source-audited p.061 ISCC-NBS色名法 as SECONDARY_CORROBORATION_REQUIRED using NIST/NBS authority.", "Authored four p.061 text-only records pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI 33782358574 passed; PR #676 merged as 8348d0da0c1ef1b06633c695ebd34feabf9eda2d.", "Source-audited p.062 JISの光源色の色名 as SOURCE_BLOCKED: current JSA primary metadata confirms JIS Z 8110:1995 valid/confirmed 2024-10-21 but does not expose exact normative naming content; no authoring.", "Source-audited p.062 光源色の系統色名 as SOURCE_BLOCKED for the same exact-current-normative-content gap; rejected secondary mirrors as sole authority; CI 33782598087 passed; PR #677 merged as b89194a3f293848589be6e5d0b9b5b2014345ac2.", "Preserved Grade 2 at 348 verified and Grade 3 at 223 verified with all existing source/display blockers intact." ]},
+  "current_run": {"checkpoints_completed": 5, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 files, open PRs, and Grade 1 branches; no competing p.066 work existed.", "Source-audited p.066 測色 — 測色とは as SECONDARY_CORROBORATION_REQUIRED using current AFT order plus CIE 015:2018/ISO-CIE authority; authored four text-only records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; CI 33784408214 passed; PR #679 merged as 189c4f9cf3a81651df7662b187e4cc01967a75c1.", "Source-audited p.067 視感測色―直接比較法 as SECONDARY_CORROBORATION_REQUIRED using current AFT order plus ISO 3668:2017; authored four text-only records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; CI 33784600346 passed; PR #680 merged as 6ba80f478bcb6b221683e94e0e161033dbbcac07.", "Kept all p.066/p.067 authoring nonvisual and unpromoted because no canonical Grade 1 runtime promotion path has yet been executed.", "Preserved Grade 2 at 348 verified and Grade 3 at 223 verified with all existing source/display blockers intact." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.066 測色 — 測色とは before any authoring."
+  "next": "Source-audit p.069 測色 — 物理測色 before any authoring."
 }
