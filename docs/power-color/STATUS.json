@@ -11,9 +11,9 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33798741809, "pr": 702, "merge_commit": "6000009e188a53d48dfecda237a1aa9bf76b873e", "skill": "pc1.business.cmf_concept_to_physical_p119", "verified": 4},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33802026799, "pr": 705, "merge_commit": "e91f2be5fb78bba2ea47dfc2d0fd8a276747268b", "skills": ["pc1.fashion.color_history_p124", "pc1.fashion.color_information_p129"], "verified": 12},
     "active_section": "ファッション",
-    "active_topic": "p.124 ファッションカラーの変遷",
+    "active_topic": "p.133 VMD",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.124 ファッションカラーの変遷 before any authoring."
+    "next": "Source-audit p.133 VMD before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 3, "generated": 0, "checked": 0, "verified": 0, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, open PRs, and Grade 1 branches; no competing p.120-p.122 work existed.", "Source-audited p.120 商品企画におけるCMF® and p.121 CMF®でのカラーバリエーションの検討 as SOURCE_BLOCKED because current public AFT authority exposes headings/order but not deterministic AFT-specific process/rule sets; generic CMF substitution rejected.", "Source-audited p.122 制作におけるCMF®（コトからモノの制作） as SOURCE_BLOCKED for the same authority boundary; no authoring and the 資料・CMF® 素材と工法 risk gate remains intact."]},
+  "current_run": {"checkpoints_completed": 5, "generated": 12, "checked": 12, "verified": 12, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, open Power Color PRs, recent merges, and Grade 1 branches; no competing p.124+ work existed.", "Source-audited p.124 ファッションカラーの変遷 as SECONDARY_CORROBORATION_REQUIRED; authored 8 text-only stage-to-keyword questions from audited JAFCA/BNN/Showa-kan relations and independently QAed 8/8 verified with A/B/C/D=2/2/2/2.", "Source-audited p.129 カラー情報の収集・調査 as SECONDARY_CORROBORATION_REQUIRED; authored 4 text-only JAFCA/Intercolor information-source questions and independently QAed 4/4 verified with A/B/C/D=1/1/1/1.", "Source-audited p.132 カラー情報の整理と分析 as SOURCE_BLOCKED because public authority does not expose the AFT-specific analysis procedure, weighting, sequence, or deliverables; no authoring.", "Source-audited p.132 シーズンテーマカラーの決定 as SOURCE_BLOCKED because JAFCA/Intercolor public selection mechanisms do not establish the unpublished AFT-specific procedure or terminology correspondence; no authoring. PR #705 Power Color CI 33802026799 succeeded and merged as e91f2be5fb78bba2ea47dfc2d0fd8a276747268b."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.124 ファッションカラーの変遷 before any authoring."
+  "next": "Source-audit p.133 VMD before any authoring."
 }
