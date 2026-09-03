@@ -35,5 +35,11 @@ Then continue to p.024 色彩調和論 and later official headings in table-of-c
 ## Known source-risk frontier
 Treat these as explicit blocked candidates until individually resolved: JIS light-source color-name exact content; AFT-specific business/color-marketing/CMF processes; fashion practical procedures; `資料・CMF® 素材と工法`; Grade 1 second-stage printed-color/display authority.
 
+## Completed Grade 1 checkpoints
+- [x] Establish Grade 1 execution plan / source inventory / spec while preserving Grade 2/3 incomplete states and gates.
+- [x] Audit p.006 `古代ヨーロッパの色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow nonvisual ancient-Egypt material / Greek conservation-evidence boundary.
+- [x] Author p.006 `pc1.culture.ancient_europe_materials` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Stop at 8 rather than inflate the four resolved fact families into a 12-question template batch.
+- [x] Add dedicated Grade 1 p.006 schema/full-fingerprint/nonvisual/shared-renderer authoring gate.
+
 ## Exact next start point
-p.006 `古代ヨーロッパの色彩`: complete the source audit, then author only the narrow source-resolved nonvisual fact boundary.
+Run the p.006 dedicated gate and normal Power Color regression on the current authoring head. If green and current, merge the authoring checkpoint. Then audit p.007 `中・近世のヨーロッパの色彩` before any further authoring.
