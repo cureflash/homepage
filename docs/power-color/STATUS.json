@@ -11,23 +11,23 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33802026799, "pr": 705, "merge_commit": "e91f2be5fb78bba2ea47dfc2d0fd8a276747268b", "skills": ["pc1.fashion.color_history_p124", "pc1.fashion.color_information_p129"], "verified": 12},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33804265135, "pr": 709, "merge_commit": "eed268f2ddcd4aae057e306c6b81e1cee1c9cc0d", "skills": ["pc1.fashion.woven_knitted_p135"], "verified": 4},
     "active_section": "ファッション",
-    "active_topic": "p.133 VMD",
+    "active_topic": "p.136 ビジュアルマーチャンダイジング（VMD）の取り組み",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
-    "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
+    "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority", "p.134 繊維の長さと発色性 exact relation"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.133 VMD before any authoring."
+    "next": "Source-audit p.136 ビジュアルマーチャンダイジング（VMD）の取り組み before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 5, "generated": 12, "checked": 12, "verified": 12, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, open Power Color PRs, recent merges, and Grade 1 branches; no competing p.124+ work existed.", "Source-audited p.124 ファッションカラーの変遷 as SECONDARY_CORROBORATION_REQUIRED; authored 8 text-only stage-to-keyword questions from audited JAFCA/BNN/Showa-kan relations and independently QAed 8/8 verified with A/B/C/D=2/2/2/2.", "Source-audited p.129 カラー情報の収集・調査 as SECONDARY_CORROBORATION_REQUIRED; authored 4 text-only JAFCA/Intercolor information-source questions and independently QAed 4/4 verified with A/B/C/D=1/1/1/1.", "Source-audited p.132 カラー情報の整理と分析 as SOURCE_BLOCKED because public authority does not expose the AFT-specific analysis procedure, weighting, sequence, or deliverables; no authoring.", "Source-audited p.132 シーズンテーマカラーの決定 as SOURCE_BLOCKED because JAFCA/Intercolor public selection mechanisms do not establish the unpublished AFT-specific procedure or terminology correspondence; no authoring. PR #705 Power Color CI 33802026799 succeeded and merged as e91f2be5fb78bba2ea47dfc2d0fd8a276747268b."]},
+  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; no competing p.133+ work existed.", "p.133 VMD: SECONDARY_CORROBORATION_REQUIRED; authored and independently QAed 4/4 verified; PR #708 CI 33803997114 success and merged b347fffe5b78189e75ba563d048ba163648a8732.", "p.134 繊維の長さと発色性: SOURCE_BLOCKED because auditable sources establish filament/staple terminology but not the AFT-specific length-to-color-development relation; commercial product routes rejected; no authoring.", "p.135 織物と編物: SECONDARY_CORROBORATION_REQUIRED; authored and independently QAed 4/4 verified from QTEC structural facts; PR #709 test job success and merged eed268f2ddcd4aae057e306c6b81e1cee1c9cc0d."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.133 VMD before any authoring."
+  "next": "Source-audit p.136 ビジュアルマーチャンダイジング（VMD）の取り組み before any authoring."
 }
