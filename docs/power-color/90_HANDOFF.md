@@ -20,9 +20,11 @@ p.053 `オストワルト表色系 — 色相環` is `SECONDARY_CORROBORATION_RE
 
 p.054 `オストワルト表色系 — 色の表示方法` is `SECONDARY_CORROBORATION_REQUIRED`. Peer-reviewed/IES/Japan Color Science Society material resolves only white/black/full-color contents, normalized W+B+C=1, triangular-chart apexes white/black/full color, and the broad notation semantics of hue plus white/black-content information. Exact AFT symbol tables, values and examples remain blocked. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Power Color CI `33772632526` succeeded; PR #660 merged as `ebbae3056c6ccff7bc9aa74b9664a02c8d5b71f5`.
 
+p.054 `オストワルト表色系 — 等色相面` is `SECONDARY_CORROBORATION_REQUIRED`. Current AFT public authority fixes the heading/order only; peer-reviewed Color Research & Application and ChemTexts material resolves the narrow nonvisual structure: for each pure colour a triangle connects that pure colour with white and black, the white-black side lies on the neutral gray axis, white→pure colour is the light clear series, and black→pure colour is the dark clear series. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated source/nonvisual/global-full-fingerprint/shared-renderer gate passed in Power Color CI `33774043678`; PR #663 merged as `b46bab0b1b0619ec02c7a846cc3bddea23336256`.
+
 ## Source/display boundary
 
-Do not reconstruct unpublished AFT wording, numbering/symbol conventions, diagrams, formula layouts, worked examples, thresholds, geometry, RGB/HEX/display values, or monitor-facing judgments. For p.053/p.054, historical or secondary Ostwald notation/diagram variants do not establish the exact current AFT presentation.
+Do not reconstruct unpublished AFT wording, numbering/symbol conventions, diagrams, formula layouts, worked examples, thresholds, geometry, RGB/HEX/display values, or monitor-facing judgments. For Ostwald p.053–p.054, historical or secondary notation/diagram variants do not establish the exact current AFT presentation. The p.054 equal-hue-plane checkpoint authorizes structural relations only, not reconstruction of the AFT figure.
 
 ## Canonical sequencing note
 
@@ -30,4 +32,4 @@ The current AFT official Grade 1 textbook table of contents confirms p.053 `色�
 
 ## Exact next start point
 
-Source-audit p.054 `オストワルト表色系 — 等色相面` before any authoring. Resolve only deterministic nonvisual facts from auditable authority; do not infer unpublished AFT geometry or display values.
+Source-audit p.055 `オストワルト表色系 — 色立体` before any authoring. Resolve only deterministic nonvisual facts from auditable authority; do not infer unpublished AFT geometry, exact diagram layout, or display values.
