@@ -15,7 +15,7 @@
 - p.029 Itten: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
 - p.030 Moon & Spencer: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
 
-## Light/color, color-representation, and color-name frontier
+## Light/color, color-representation, color-name, and measurement frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
 | 1 | 心理的な見えによる色の分類 — 色の様相 | 032 | SECONDARY_CORROBORATION_REQUIRED | 3 audited nonvisual fact families authored; 3/3 verified; PR #647 merged. Not promoted. |
@@ -38,9 +38,9 @@
 | 18 | 色名 — ISCC-NBS色名法 | 061 | SECONDARY_CORROBORATION_REQUIRED | NIST/NBS narrow 267-block/history/Munsell-boundary/central-color boundary only; 4/4 verified; CI 33782358574; PR #676. Not promoted. |
 | 19 | 色名 — JISの光源色の色名 | 062 | SOURCE_BLOCKED | JSA confirms JIS Z 8110:1995 valid and confirmed 2024-10-21, but public primary metadata does not expose exact normative naming content. No authoring. |
 | 20 | 色名 — 光源色の系統色名 | 062 | SOURCE_BLOCKED | Exact current systematic-name construction/inventory/modifier rules unavailable from accepted public primary authority; secondary mirrors rejected. No authoring. |
-| 21 | 測色 — 測色とは | 066 | UNCHECKED | Exact next source-audit frontier. |
-| 22 | 測色 — 視感測色―直接比較法 | 067 | UNCHECKED | Follow only after p.066. |
-| 23 | 測色 — 物理測色 | 069 | UNCHECKED | Follow only after p.067. |
+| 21 | 測色 — 測色とは | 066 | SECONDARY_CORROBORATION_REQUIRED | CIE 015:2018 / ISO-CIE narrow nonvisual boundary; 4/4 verified; CI 33784408214; PR #679. Not promoted. |
+| 22 | 測色 — 視感測色―直接比較法 | 067 | SECONDARY_CORROBORATION_REQUIRED | ISO 3668:2017 narrow direct-comparison boundary; 4/4 verified; CI 33784600346; PR #680. Not promoted. |
+| 23 | 測色 — 物理測色 | 069 | UNCHECKED | Exact next source-audit frontier. |
 
 ## p.056 色相環と色相の表し方 accepted corroborating boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p056-ncs-hue-circle-notation-source-audit.md`.
@@ -84,12 +84,24 @@ Audits:
 - `docs/power-color/audits/2026-09-04-grade1-p062-light-source-systematic-color-names-source-audit.md`
 Current JSA primary catalog confirms `JIS Z 8110:1995` is valid and was confirmed 2024-10-21, but public metadata exposes only identity/status/scope, not the exact normative color-name/systematic-name content. Public secondary mirrors were inspected as discovery evidence only and rejected as sole authority. Do not repeat this route without new primary evidence.
 
+## p.066 測色とは accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p066-colorimetry-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-colorimetry-p066-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-colorimetry-p066-authoring.test.js`.
+Accepted facts are limited to CIE 015:2018 / ISO-CIE statements covering standard colorimetric observers and standard illuminants, tristimulus values, chromaticity coordinates, and colour-space coordinates/colour differences. Unpublished AFT definitions, diagrams, formulas, device procedures, numerical tables, RGB/HEX/display values, and monitor-facing judgments remain excluded.
+
+## p.067 視感測色―直接比較法 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p067-visual-direct-comparison-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-visual-direct-comparison-p067-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-visual-direct-comparison-p067-authoring.test.js`.
+Accepted facts are limited to ISO 3668:2017 public statements that a specimen colour is visually compared against a standard, the standard may be a reference or freshly prepared standard, artificial light sources are used, and comparison occurs in a standard booth. Exact AFT procedures, observation geometry, adaptation, illuminance, lamp specifications, sample dimensions, tolerances, display values, and monitor judgments remain excluded.
+
 ## Known later source-risk candidates
-- JISの光源色の色名 / 光源色の系統色名: now explicitly `SOURCE_BLOCKED`; exact current standard content requires new primary evidence before authoring.
+- JISの光源色の色名 / 光源色の系統色名: explicitly `SOURCE_BLOCKED`; exact current standard content requires new primary evidence before authoring.
 - 色彩とビジネス / カラーマーケティング / CMF®: AFT-specific procedures must not be filled from generic business practice.
 - ファッション: AFT-specific practical procedures require explicit corroboration.
 - 資料・CMF® `素材と工法`: current reference contents are not assumed from generic materials engineering sources.
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.066 `測色 — 測色とは` before authoring. Preserve official order and keep both p.062 topics blocked unless new explicit auditable primary authority appears.
+Source-audit p.069 `測色 — 物理測色` before authoring. Preserve official order and keep both p.062 topics blocked unless new explicit auditable primary authority appears.

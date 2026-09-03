@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 The user explicitly made Grade 1 active while Grade 2/3 remain incomplete. The stale Phase 5 sentence in `20_EXECUTION_PLAN.md` is a known mechanical inconsistency; this explicit override plus STATUS/HANDOFF/this Grade 1 plan controls Grade 1 work only and does not mark Grade 2/3 complete.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, and color-names p.060→p.062 have now been processed in order. p.035 remains source-blocked; p.062 `JISの光源色の色名` and `光源色の系統色名` are also source-blocked because exact current normative JIS content is not exposed by accepted public primary authority. The next official frontier is p.066 測色 `測色とは`, followed by p.067 `視感測色―直接比較法` and p.069 `物理測色`.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, and measurement p.066→p.067 have now been processed in order. p.035 remains source-blocked; p.062 `JISの光源色の色名` and `光源色の系統色名` are also source-blocked because exact current normative JIS content is not exposed by accepted public primary authority. The next official frontier is p.069 測色 `物理測色`.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -56,10 +56,12 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] p.059 `NCS — 色立体と色票集`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33780517855`, PR #673 merged as `9fe69ed87abc5f09006c34b6c08f2a976e400b4a`.
 - [x] p.060 `色名 — 色を表す言葉の分類`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33782146996`, PR #675 merged as `a910f7560fb0743e721181493c9caafd37f3a0d4`.
 - [x] p.061 `色名 — ISCC-NBS色名法`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33782358574`, PR #676 merged as `8348d0da0c1ef1b06633c695ebd34feabf9eda2d`.
-- [x] p.062 `色名 — JISの光源色の色名`: `SOURCE_BLOCKED`; current JSA metadata confirms JIS Z 8110:1995 validity/scope but not exact normative naming content; no authoring.
-- [x] p.062 `色名 — 光源色の系統色名`: `SOURCE_BLOCKED`; exact systematic-name content unavailable from accepted public primary authority; secondary mirrors rejected; no authoring. CI `33782598087`, PR #677 merged as `b89194a3f293848589be6e5d0b9b5b2014345ac2`.
+- [x] p.062 `色名 — JISの光源色の色名`: `SOURCE_BLOCKED`; no authoring.
+- [x] p.062 `色名 — 光源色の系統色名`: `SOURCE_BLOCKED`; no authoring; CI `33782598087`, PR #677 merged as `b89194a3f293848589be6e5d0b9b5b2014345ac2`.
+- [x] p.066 `測色 — 測色とは`: `SECONDARY_CORROBORATION_REQUIRED`; CIE narrow nonvisual boundary; 4/4 verified; CI `33784408214`, PR #679 merged as `189c4f9cf3a81651df7662b187e4cc01967a75c1`.
+- [x] p.067 `測色 — 視感測色―直接比較法`: `SECONDARY_CORROBORATION_REQUIRED`; ISO 3668:2017 narrow nonvisual boundary; 4/4 verified; CI `33784600346`, PR #680 merged as `6ba80f478bcb6b221683e94e0e161033dbbcac07`.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.066 `測色 — 測色とは` before any authoring. Preserve all Grade 2/3 incomplete states and gates. Do not revisit either p.062 source route without new primary evidence.
+Source-audit p.069 `測色 — 物理測色` before any authoring. Preserve all Grade 2/3 incomplete states and gates. Do not revisit either p.062 source route without new primary evidence.
