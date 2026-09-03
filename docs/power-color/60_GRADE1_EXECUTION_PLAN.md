@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 Grade 1 is active by explicit user override. The stale Grade-2-complete wording still present in `20_EXECUTION_PLAN.md` does not mark Grade 2/3 complete and does not supersede the explicit Grade 1 canonical state.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, and color-marketing p.104→p.114 have now been processed in order. The next official frontier is p.119 `CMF® — 概念から実体へ（コトからモノへ）`.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, color-marketing p.104→p.114, and CMF® p.119 have now been processed in order. The next official frontier is p.120 `CMF® — 商品企画におけるCMF®`.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -68,8 +68,9 @@ Confirmed current blockers:
 - [x] p.107 `カラーリサーチ`: `SOURCE_RESOLVED` directly from current AFT official sample; 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33798278490`; PR #700 merged as `29d9bfd02c15e1d41ee449f3f6a0cac2e1d191f7`.
 - [x] p.109 `カラーリサーチの手法`: `SOURCE_RESOLVED` directly from current AFT official sample; 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33798278490`; PR #700.
 - [x] p.114 `カラー戦略`: `SOURCE_BLOCKED`; no authoring; generic strategy substitution rejected.
+- [x] p.119 `CMF® — 概念から実体へ（コトからモノへ）`: `SOURCE_RESOLVED` directly from current AFT official sample; 4/4 verified, pending 0, A/B/C/D=1/1/1/1; global Grade 1 full-fingerprint/nonvisual/shared-renderer gate; CI `33798741809`; PR #702 merged as `6000009e188a53d48dfecda237a1aa9bf76b873e`.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.119 `CMF® — 概念から実体へ（コトからモノへ）` before any authoring. The current AFT official Grade 1 sample contains one direct CMF® statement; use only that explicit fact unless stronger accepted authority resolves additional p.119 facts.
+Source-audit p.120 `CMF® — 商品企画におけるCMF®` before any authoring.
