@@ -11,22 +11,22 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "passed", "workflow_run": 33744000544, "pr": 618, "merge_commit": "fff4022fdf0c4809b135b29c4277ec83def919c2", "skill": "pc1.culture.ancient_europe_materials", "verified": 8},
+    "latest_authoring_gate": {"status": "passed", "workflow_run": 33745825195, "pr": 621, "merge_commit": "6adb39143b0765e65fa0762a9fea75ee6ad76c65", "skill": "pc1.culture.medieval_early_modern_europe_materials", "verified": 8},
     "active_section": "色彩と文化",
-    "active_topic": "p.007 中・近世のヨーロッパの色彩",
+    "active_topic": "p.010 近代ヨーロッパと色彩学",
     "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
-    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p007-medieval-early-modern-europe-source-audit.md",
-    "active_authoring": {"file": "qualifications/color-certification/data/grade1-authoring-culture-medieval-early-modern-europe-0001-0008.json", "skill": "pc1.culture.medieval_early_modern_europe_materials", "generated": 8, "checked": 8, "verified": 8, "pending": 0, "correct_index_distribution": "2/2/2/2", "gate_status": "pending_ci"},
+    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p010-modern-europe-color-science-source-audit.md",
+    "active_authoring": null,
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
-    "next": "Run the p.007 dedicated authoring gate and normal Power Color regression. If green/current, merge; then source-audit p.010 近代ヨーロッパと色彩学 before further authoring."
+    "next": "Author a small pending-first p.010 text-only batch from the resolved Newton/Goethe historical boundary, then independently QA every record."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 2, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main after PR #619 and confirmed no competing open Power Color PR / unmerged Grade 1 authoring work.", "Authored p.007 pc1.culture.medieval_early_modern_europe_materials pending-first and independently re-solved all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; added dedicated nonvisual/source/full-fingerprint/shared-renderer gate."]},
+  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main after PR #619 and confirmed no competing open Power Color PR / unmerged Grade 1 authoring work.", "Authored p.007 pc1.culture.medieval_early_modern_europe_materials pending-first and independently re-solved all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; added dedicated nonvisual/source/full-fingerprint/shared-renderer gate.", "Power Color CI 33745825195 passed on the p.007 authoring head; PR #621 merged as 6adb39143b0765e65fa0762a9fea75ee6ad76c65 after reconciling concurrent Takken-only main changes.", "Audited p.010 近代ヨーロッパと色彩学 as SECONDARY_CORROBORATION_REQUIRED and resolved a narrow Royal Society Newton/prism/light-and-colour plus Klassik Stiftung Weimar Goethe/1810/perception-and-experiment boundary."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Run p.007 gate/regression, merge if green/current, then audit p.010."
+  "next": "Continue Grade 1 culture with p.010 pending-first authoring and independent QA."
 }
