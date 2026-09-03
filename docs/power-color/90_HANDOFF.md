@@ -24,37 +24,38 @@ Grade 2 remains 348 verified / pending 0 across 29 promoted skills and incomplet
 - p.010 `近代ヨーロッパと色彩学`: 8 independently verified records; CI `33747834603`; PR #623 merged.
 - p.014 `日本の古代の色`: 8 independently verified records; CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`.
 - p.017 `古代から中近世の日本の色彩`: 8 independently verified records, pending 0, A/B/C/D=2/2/2/2; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`.
-- p.021 `近代の日本の色彩`: 8 pending-first text-only records independently re-solved as 8/8 verified, pending 0, A/B/C/D=2/2/2/2; synchronized Power Color CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`.
+- p.021 `近代の日本の色彩`: 8 pending-first text-only records independently re-solved as 8/8 verified, pending 0, A/B/C/D=2/2/2/2; CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`.
 
 No Grade 1 runtime promotion has occurred yet.
 
-## p.024 color-harmony checkpoint
+## p.024 Judd checkpoint
 
-p.024 `色彩調和論とは / ジャッドの色彩調和、四つの原理` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p024-color-harmony-judd-source-audit.md`.
-
-`qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json` contains the finite accepted p.024 state space: 4 pending-first text-only questions, independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. One wording defect was corrected before final gate. Synchronized Power Color CI `33756393481` passed; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
-
-Do not waterfill beyond these records, invent exact Japanese AFT labels for the other three Judd principles, reconstruct visual schemes, or duplicate them in adjacent theory batches.
+p.024 is `SECONDARY_CORROBORATION_REQUIRED`. `qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json` contains 4 pending-first text-only questions, independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
 
 ## p.025 Chevreul checkpoint
 
-p.025 `シュヴルールの色彩調和論` is `SOURCE_RESOLVED` for a narrow current-official-sample slice under `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`.
+p.025 is `SOURCE_RESOLVED` for the three current AFT official-sample relations under `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`.
 
-The current AFT Grade 1 first-stage official sample directly exposes and answers these text-only relations:
-- `一つの主調色による調和` → `ドミナント`.
-- This is treated as one of three `類似色の調和`.
-- `類似色の調和` includes `隣接・近似色相による色調類似の調和`.
+`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json` contains exactly those three first-party relations. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. Dedicated source/nonvisual/full-fingerprint/shared-renderer gate passed in Power Color CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`.
 
-`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json` contains exactly these three first-party relations. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. The batch deliberately stops at three rather than waterfilling a fourth item.
+Do not waterfill beyond these three official-sample answer relations or reconstruct the official figure/display values.
 
-Dedicated gate `qualifications/color-certification/tests/grade1-harmony-chevreul-p025-authoring.test.js` checks source membership, nonvisual rendering, full fingerprints against all seven earlier Grade 1 batches, and shared renderer behavior. Current-head CI/merge is still required.
+## p.027 Rood source audit
 
-Do not reconstruct the official figure, infer RGB/HEX/display values, add unstated Chevreul categories/history, pull p.027 Rood content forward, or duplicate p.024 Judd-only questions.
+p.027 `ルードの色彩調和論` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p027-rood-source-audit.md`.
+
+Accepted narrow text-only boundary:
+- Current AFT official TOC places Rood at p.027.
+- The Metropolitan Museum of Art records Ogden Nicholas Rood's `Modern chromatics : with applications to art and industry` (1879).
+- University of Chicago academic literature describes Rood's optical mixture: small adjacent lines/dots of different colours can blend perceptually at sufficient viewing distance.
+- The Met's historical discussion associates Rood's theory with complementary hues placed adjacent/layered and intensified in richness.
+
+This does not expose the complete unpublished AFT p.027 body. Do not invent exact AFT Japanese rule labels, category counts, chromatic-circle geometry, numerical angle relations, RGB/HEX/display answers, or p.028 Ostwald content.
 
 ## Phase 5 sequencing note
 
-`docs/power-color/20_EXECUTION_PLAN.md` still contains the old Grade-2-complete start sentence. The user's repeated explicit directive makes Grade 1 active despite Grade 2/3 remaining incomplete; STATUS and `60_GRADE1_EXECUTION_PLAN.md` record this operational precedence for Grade 1 only. Mechanical cleanup of the stale top-level sentence remains pending and must not be interpreted as completing or relaxing Grade 2/3.
+`docs/power-color/20_EXECUTION_PLAN.md` still contains the old Grade-2-complete start sentence. The user's repeated explicit directive makes Grade 1 active despite Grade 2/3 remaining incomplete; STATUS and `60_GRADE1_EXECUTION_PLAN.md` record this operational precedence for Grade 1 only. Mechanical cleanup remains pending and must not be interpreted as completing or relaxing Grade 2/3.
 
 ## Exact next start point
 
-Pass current-head p.025 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.027 `ルードの色彩調和論` and source-audit it before authoring.
+Pass current-head CI and merge this p.027 source-audit synchronization checkpoint if green/current. Then author only a small pending-first text-only p.027 batch from the corroborated facts above and independently QA every record; stop rather than waterfilling.
