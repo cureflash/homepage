@@ -44,6 +44,8 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] Author p.007 `pc1.culture.medieval_early_modern_europe_materials` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Stop at 8 to avoid repetition beyond the four resolved fact families.
 - [x] Pass dedicated Grade 1 p.007 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression in CI `33745825195`; PR #621 merged as `6adb39143b0765e65fa0762a9fea75ee6ad76c65`.
 - [x] Audit p.010 `近代ヨーロッパと色彩学` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Royal Society Newton/prism/light-and-colour history boundary and Klassik Stiftung Weimar Goethe/1810/perception-and-experiment boundary.
+- [x] Author p.010 `pc1.culture.modern_europe_color_science` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Stop at 8 to avoid repetition beyond the five resolved fact families.
+- [ ] Pass the dedicated Grade 1 p.010 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression; merge current authoring only after the current head is green.
 
 ## Exact next start point
-Author a small pending-first p.010 text-only batch using only the resolved Newton/Goethe relations in `docs/power-color/audits/2026-09-03-grade1-p010-modern-europe-color-science-source-audit.md`, then independently QA every record. Stop before unsupported scientist membership, numerical optics, reconstructed geometry, visual-spectrum questions, or claims of modern scientific correctness.
+Complete the p.010 authoring gate/CI/merge. After merge, audit p.014 `日本の古代の色` using AFT scope first and Imperial Household Agency / NDL / museum / academic authority for individual facts. Do not infer unpublished AFT fact membership or image-derived colour properties.

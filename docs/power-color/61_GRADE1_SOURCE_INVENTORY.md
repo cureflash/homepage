@@ -11,7 +11,7 @@
 |---|---|---:|---|---|
 | 1 | 古代ヨーロッパの色彩 | 006 | SECONDARY_CORROBORATION_REQUIRED | Narrow ancient-Egypt/Greek material and conservation facts are corroborated. `pc1.culture.ancient_europe_materials` has 8 independently rechecked verified records, pending 0, A/B/C/D=2/2/2/2. Authoring gate and normal regression passed in CI `33744000544`; PR #618 merged as `fff4022fdf0c4809b135b29c4277ec83def919c2`. Not yet promoted to runtime. |
 | 2 | 中・近世のヨーロッパの色彩 | 007 | SECONDARY_CORROBORATION_REQUIRED | Narrow Getty/Met/National Gallery manuscript/pigment/material facts are corroborated. `pc1.culture.medieval_early_modern_europe_materials` has 8 independently rechecked verified records, pending 0, A/B/C/D=2/2/2/2. Dedicated gate and normal regression passed in CI `33745825195`; PR #621 merged as `6adb39143b0765e65fa0762a9fea75ee6ad76c65`. Not yet promoted to runtime. |
-| 3 | 近代ヨーロッパと色彩学 | 010 | SECONDARY_CORROBORATION_REQUIRED | AFT exposes heading/order but not body text. Royal Society resolves a narrow Newton/prism/light-and-colour historical boundary; Klassik Stiftung Weimar resolves a narrow Goethe/1810/perception-and-experiment boundary. |
+| 3 | 近代ヨーロッパと色彩学 | 010 | SECONDARY_CORROBORATION_REQUIRED | AFT exposes heading/order but not body text. Royal Society resolves a narrow Newton/prism/light-and-colour historical boundary; Klassik Stiftung Weimar resolves a narrow Goethe/1810/perception-and-experiment boundary. `pc1.culture.modern_europe_color_science` now has 8 independently rechecked verified records, pending 0, A/B/C/D=2/2/2/2; dedicated CI/merge still required. |
 | 4 | 日本の古代の色 | 014 | UNREVIEWED | Prefer AFT + Imperial Household Agency / NDL / museums / academic sources. |
 | 5 | 古代から中近世の日本の色彩 | 017 | UNREVIEWED | Same source hierarchy. |
 | 6 | 近代の日本の色彩 | 021 | UNREVIEWED | Same source hierarchy. |
@@ -63,3 +63,8 @@ Accepted narrow facts only:
 - Royal Society: an 1817 optical work explicitly discussed prism phenomena in relation to Newton's and Goethe's theories of colour.
 
 Do not infer an exhaustive p.010 scientist list, numerical optics, reconstructed prism geometry, RGB/HEX/display values, visual-spectrum answers, or modern scientific validity beyond the institutional descriptions.
+
+## p.010 authored boundary
+Authoring file: `qualifications/color-certification/data/grade1-authoring-culture-modern-europe-color-science-0001-0008.json`.
+
+The 8-record cap is intentional. The audit resolves five narrow fact families; extending beyond eight would increase template repetition without adding source-resolved coverage. Every record is text-only, source-bound and was independently re-solved before `verified` status. The dedicated gate must pass before merge.
