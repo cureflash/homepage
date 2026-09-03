@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 The user explicitly made Grade 1 active while Grade 2/3 remain incomplete. The stale Phase 5 sentence in `20_EXECUTION_PLAN.md` is a known mechanical inconsistency; this explicit override plus STATUS/HANDOFF/this Grade 1 plan controls Grade 1 work only and does not mark Grade 2/3 complete.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021 and color-harmony p.024→p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` is audited/authored within three corroborated nonvisual fact families. p.035 `色の分類` is source-blocked. p.036 `照明の性質を表すもの`, p.039 `測色の照明`, p.041 `グラスマンの法則`, p.046 `XYZ表色系`, p.050 `均等色空間とL*a*b*色空間 — 色差の表示`, p.053 `オストワルト表色系 — 色相環`, p.054 `色の表示方法`, p.054 `等色相面`, p.055 `色立体`, and p.056 NCS `へリングの6主要色` are audited/authored within narrow auditable nonvisual fact families. Next official frontier is p.056 NCS `色相環と色相の表し方` source audit, followed by p.058 `等色相面での色の表示`, p.059 `色の表示方法`, and p.059 `色立体と色票集`.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021 and color-harmony p.024→p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` is audited/authored within three corroborated nonvisual fact families. p.035 `色の分類` is source-blocked. p.036 `照明の性質を表すもの`, p.039 `測色の照明`, p.041 `グラスマンの法則`, p.046 `XYZ表色系`, p.050 `均等色空間とL*a*b*色空間 — 色差の表示`, p.053/p.054/p.055 オストワルト表色系, p.056 NCS `へリングの6主要色`, p.056 `色相環と色相の表し方`, and p.058 `等色相面での色の表示` are audited/authored within narrow auditable nonvisual fact families. Next official frontier is p.059 NCS `色の表示方法` source audit, followed by p.059 `色立体と色票集`.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -48,10 +48,12 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] p.053 `オストワルト表色系 — 色相環`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33772390636`, PR #659.
 - [x] p.054 `オストワルト表色系 — 色の表示方法`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33772632526`, PR #660.
 - [x] p.054 `オストワルト表色系 — 等色相面`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33774043678`, PR #663.
-- [x] p.055 `オストワルト表色系 — 色立体`: `SECONDARY_CORROBORATION_REQUIRED`; three peer-reviewed corroborated structural fact families authored pending-first and independently QA'd 3/3 verified, pending 0, A/B/C/D=1/1/1/0; exact AFT geometry/display details remain blocked; CI `33776217684`, PR #665 merged as `b4755356e76b457b3f230e24276c8b997b7cf101`.
-- [x] p.056 `NCS — へリングの6主要色`: `SECONDARY_CORROBORATION_REQUIRED`; four current NCS first-party nonvisual fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33776482393`, PR #666 merged as `54a23d9043ac2995e5052aa02e56e621995bcc9b`.
+- [x] p.055 `オストワルト表色系 — 色立体`: `SECONDARY_CORROBORATION_REQUIRED`; 3/3 verified; CI `33776217684`, PR #665.
+- [x] p.056 `NCS — へリングの6主要色`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33776482393`, PR #666.
+- [x] p.056 `NCS — 色相環と色相の表し方`: `SECONDARY_CORROBORATION_REQUIRED`; four current NCS first-party nonvisual fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33778046172`, PR #668 merged as `9f695423f1162f6ccbff56435e1d45fa84b54634`.
+- [x] p.058 `NCS — 等色相面での色の表示`: `SECONDARY_CORROBORATION_REQUIRED`; four current NCS first-party nonvisual fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33778226671`, PR #669 merged as `76c1d105568890068e35a0c11ad9f44436b67fc9`.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.056 `NCS — 色相環と色相の表し方` before any authoring. Preserve all Grade 2/3 incomplete states and gates; use current NCS first-party authority only where explicit and do not infer unpublished AFT figure geometry or display values.
+Source-audit p.059 `NCS — 色の表示方法` before any authoring. Preserve all Grade 2/3 incomplete states and gates; use current NCS first-party authority only where explicit and do not infer unpublished AFT figure geometry, display values, or notation details.

@@ -11,9 +11,9 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33776482393, "pr": 666, "merge_commit": "54a23d9043ac2995e5052aa02e56e621995bcc9b", "skill": "pc1.color_representation.ncs_hering_six_colors_p056", "verified": 4},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33778226671, "pr": 669, "merge_commit": "76c1d105568890068e35a0c11ad9f44436b67fc9", "skill": "pc1.color_representation.ncs_equal_hue_plane_p058", "verified": 4},
     "active_section": "色の表示",
-    "active_topic": "p.056 NCS — 色相環と色相の表し方",
+    "active_topic": "p.059 NCS — 色の表示方法",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.056 NCS — 色相環と色相の表し方 before any authoring; use current NCS first-party authority where explicit and do not infer unpublished AFT figure geometry or display values."
+    "next": "Source-audit p.059 NCS — 色の表示方法 before any authoring; use current NCS first-party authority only where explicit and do not infer unpublished AFT figure geometry, display values, or notation details."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 6, "generated": 7, "checked": 7, "verified": 7, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 files, open PRs, and Grade 1 branches; no competing p.055/p.056 work existed.", "Source-audited p.055 オストワルト表色系 — 色立体 as SECONDARY_CORROBORATION_REQUIRED; accepted only the hue-triangle/color-solid relation, clear sequences on the outside surface, and equal-blackness/equal-whiteness scales. Exact AFT geometry/display details remain blocked.", "Authored three p.055 text-only records pending-first and independently re-solved 3/3 verified, pending 0, A/B/C/D=1/1/1/0; dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in CI 33776217684; PR #665 merged as b4755356e76b457b3f230e24276c8b997b7cf101.", "Source-audited p.056 NCS — へリングの6主要色 as SECONDARY_CORROBORATION_REQUIRED using current NCS first-party authority; accepted only the six-colour set, four chromatic elementary colours, explicit pure-yellow perception relation, and NCS-notation foundation role.", "Authored four p.056 text-only records pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1; dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in CI 33776482393; PR #666 merged as 54a23d9043ac2995e5052aa02e56e621995bcc9b.", "Preserved Grade 2 at 348 verified and Grade 3 at 223 verified with all existing source/display blockers intact." ]},
+  "current_run": {"checkpoints_completed": 6, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 files, open PRs, and Grade 1 branches; no competing p.056/p.058 work existed.", "Source-audited p.056 NCS — 色相環と色相の表し方 as SECONDARY_CORROBORATION_REQUIRED using current AFT TOC plus NCS first-party authority.", "Authored four p.056 text-only records pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1; dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in CI 33778046172; PR #668 merged as 9f695423f1162f6ccbff56435e1d45fa84b54634.", "Source-audited p.058 NCS — 等色相面での色の表示 as SECONDARY_CORROBORATION_REQUIRED using current AFT TOC plus NCS first-party authority.", "Authored four p.058 text-only records pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1; dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in CI 33778226671; PR #669 merged as 76c1d105568890068e35a0c11ad9f44436b67fc9.", "Preserved Grade 2 at 348 verified and Grade 3 at 223 verified with all existing source/display blockers intact." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.056 NCS — 色相環と色相の表し方 before any authoring."
+  "next": "Source-audit p.059 NCS — 色の表示方法 before any authoring."
 }
