@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 Grade 1 is active by explicit user override. The stale Grade-2-complete wording still present in `20_EXECUTION_PLAN.md` does not mark Grade 2/3 complete and does not supersede the explicit Grade 1 canonical state.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, color-marketing p.104→p.114, CMF® p.119→p.122, fashion p.124→p.137, and landscape p.140 have now been processed in order. The next official frontier is p.141 `景観計画に基づく届出と手続き`.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, color-marketing p.104→p.114, CMF® p.119→p.122, fashion p.124→p.137, and landscape p.140→p.141 have now been processed in order. The next official frontier is p.142 `景観計画における色彩基準 — 色彩基準の役割`.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -47,8 +47,9 @@ Confirmed current blockers include p.035 `色の分類`; p.062 JIS light-source 
 - [x] p.136 `ビジュアルマーチャンダイジング（VMD）の取り組み`: `SOURCE_BLOCKED`; no AFT-specific initiative/process set; no authoring.
 - [x] p.137 `商品陳列のカラーコーディネーション`: `SOURCE_BLOCKED`; no deterministic AFT-specific product-display color rule set; no authoring.
 - [x] p.140 `景観法の概要` / `景観法の特徴` / `景観計画について`: `SOURCE_RESOLVED`; current MLIT/e-Gov narrow nonvisual boundary; 4/4 verified; CI `33805829029`; PR #711 merged as `e3639e2e439ff04a0d471acf052e6f5b479794d2`.
+- [x] p.141 `景観計画に基づく届出と手続き`: `SOURCE_RESOLVED`; current MLIT/government narrow Article 16 procedure boundary; 4/4 verified, A/B/C/D=1/1/1/1; CI `33807770514`; PR #713 merged as `dc5ff999fa98ed36d5de880d9f572f33de7bbe61`.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.141 `景観計画に基づく届出と手続き` before any authoring.
+Source-audit p.142 `景観計画における色彩基準 — 色彩基準の役割` before any authoring.
