@@ -6,14 +6,14 @@
   "grade3": {"complete": false, "runtime_questions": {"verified": 223, "pending": 0, "needs_revision": 0, "rejected": 0}, "deferred_handoff": "docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md", "remaining_blockers": ["complete auditable conventional PCCS contrast-tone pair matrix", "explicit readings for 24 Japanese PCCS hue names", "approved current representative PCCS display values for monitor-facing drills", "final Grade 3 completion gate"], "source_display_gates_relaxed": false},
   "grade2": {"status": "in_progress_source_blocked_frontier", "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md", "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md", "runtime": "qualifications/color-certification/data/grade2-runtime.json", "runtime_questions": {"verified": 348, "pending": 0, "needs_revision": 0, "rejected": 0}, "runtime_skill_count": 29, "monitor_facing_generation_blocked_without_approved_display_values": true, "source_blocked_count": 18, "complete": false, "next": "Resume only if new explicit auditable authority resolves a recorded Grade 2 source-blocked topic; do not repeat rejected source routes without new evidence."},
   "grade1": {
-    "status": "in_progress_psychology",
+    "status": "in_progress_business",
     "execution_plan": "docs/power-color/60_GRADE1_EXECUTION_PLAN.md",
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33788707578, "pr": 687, "merge_commit": "25ca9c7ce080cad954cd97e3852ab00301f34815", "skill": "pc1.psychology.psychophysical_methods_p080", "verified": 4},
-    "active_section": "色彩心理",
-    "active_topic": "p.082 色の心理的効果 — 記憶色と色記憶",
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33790197091, "pr": 690, "merge_commit": "9f0b6740632c77a982f102ab6bcef35a6a829574", "skill": "pc1.psychology.appearance_stability_p087", "verified": 4},
+    "active_section": "色彩とビジネス",
+    "active_topic": "p.090 色彩効果のビジネス活用",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.082 色彩心理 — 色の心理的効果 — 記憶色と色記憶 before any authoring."
+    "next": "Source-audit p.090 色彩とビジネス — 色彩効果のビジネス活用 before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 5, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 files, open PRs, and Grade 1 branches; no competing p.073/p.080 work existed.", "Source-audited p.073 色彩心理 — 心理学的尺度構成法 as SECONDARY_CORROBORATION_REQUIRED using current AFT first-party scope plus Keio University / University of Electro-Communications academic corroboration; authored four text-only records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; CI 33788360033 passed; PR #686 merged as 4f56e09aadbf0cc5f924834bbb72c8418b7e27a3.", "Source-audited p.080 色彩心理 — 心理物理学的測定法 as SECONDARY_CORROBORATION_REQUIRED using current AFT order plus Tohoku Gakuin University psychophysics authority; authored four text-only records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; CI 33788707578 passed; PR #687 merged as 25ca9c7ce080cad954cd97e3852ab00301f34815.", "Kept all Grade 1 authoring nonvisual and unpromoted because no canonical Grade 1 runtime promotion path has yet been executed.", "Preserved Grade 2 at 348 verified and Grade 3 at 223 verified with all existing source/display blockers intact." ]},
+  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 files, open PRs, and Grade 1 branches; no competing p.082 or later psychology work existed.", "Source-audited p.082 記憶色と色記憶 as SECONDARY_CORROBORATION_REQUIRED; authored four text-only records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; CI 33789935372 passed; PR #689 merged as 1fbe2f72eb790bbc15898320837fbd23cd4e6b94.", "Source-audited p.083 色の見えの変化 as SOURCE_BLOCKED because public AFT authority exposes only heading/order and no deterministic phenomenon set; no authoring and the rejected generic-source route is recorded.", "Source-audited p.087 ものの見えの安定性 as SECONDARY_CORROBORATION_REQUIRED; authored four text-only records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; CI 33790197091 passed; PR #690 merged as 9f0b6740632c77a982f102ab6bcef35a6a829574. Grade 2 remains 348 verified and Grade 3 remains 223 verified with all source/display blockers intact; Grade 1 remains unpromoted." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.082 色彩心理 — 色の心理的効果 — 記憶色と色記憶 before any authoring."
+  "next": "Source-audit p.090 色彩とビジネス — 色彩効果のビジネス活用 before any authoring."
 }
