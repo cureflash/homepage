@@ -10,26 +10,22 @@ Canonical Grade 1 working set: `STATUS.json`, `20_EXECUTION_PLAN.md`, `60_GRADE1
 
 Culture p.006/p.007/p.010/p.014/p.017/p.021 and harmony p.024/p.025/p.027/p.028/p.029/p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` has 3/3 independently verified nonvisual records. p.035 `色の分類` remains `SOURCE_BLOCKED`; no authoring. p.036 `照明の性質を表すもの` has 4/4 independently verified nonvisual records. p.039 `測色の照明` has 4/4 independently verified nonvisual records.
 
-p.041 `グラスマンの法則（加法混色の法則性）` is `SECONDARY_CORROBORATION_REQUIRED`; four current-CIE fact families are 4/4 independently verified. PR #654 merged.
+p.041 `グラスマンの法則（加法混色の法則性）`, p.046 `XYZ表色系`, and p.050 `均等色空間とL*a*b*色空間 — 色差の表示` are `SECONDARY_CORROBORATION_REQUIRED` with 4/4 verified nonvisual records each.
 
-p.046 `XYZ表色系` is `SECONDARY_CORROBORATION_REQUIRED`; four current-CIE fact families are 4/4 independently verified. PR #655 merged.
+p.053 `オストワルト表色系 — 色相環` is `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified. p.054 `色の表示方法` is `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified. p.054 `等色相面` is `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified. Exact AFT symbol tables, values, examples, diagram geometry and display details remain blocked.
 
-p.050 `均等色空間とL*a*b*色空間 — 色差の表示` is `SECONDARY_CORROBORATION_REQUIRED`; four current ISO/CIE/CIE nonvisual fact families are 4/4 independently verified. CI `33770191717`; PR #657 merged.
+p.055 `オストワルト表色系 — 色立体` is `SECONDARY_CORROBORATION_REQUIRED`. Granville, *Color Research & Application* (1994) resolves only the narrow nonvisual structure: Ostwald hue triangles are used to form the color solid; important clear sequences lie on its outside surface; equal-blackness and equal-whiteness scales are defined. Three records were authored pending-first and independently re-solved 3/3 verified, pending 0, A/B/C/D=1/1/1/0. Dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in Power Color CI `33776217684`; PR #665 merged as `b4755356e76b457b3f230e24276c8b997b7cf101`.
 
-p.053 `オストワルト表色系 — 色相環` is `SECONDARY_CORROBORATION_REQUIRED`. University/peer-reviewed/academy authority resolves only the narrow nonvisual boundary: 24 hues; eight principal hues subdivided into three; opposite hues are complementary and their combination is achromatic; corroborated opponent placements include yellow↔ultramarine blue and red↔sea green. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Power Color CI `33772390636` succeeded; PR #659 merged as `6ce6a4e7554b1f714dbbf55bec828e08fe5b3be2`.
-
-p.054 `オストワルト表色系 — 色の表示方法` is `SECONDARY_CORROBORATION_REQUIRED`. Peer-reviewed/IES/Japan Color Science Society material resolves only white/black/full-color contents, normalized W+B+C=1, triangular-chart apexes white/black/full color, and the broad notation semantics of hue plus white/black-content information. Exact AFT symbol tables, values and examples remain blocked. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Power Color CI `33772632526` succeeded; PR #660 merged as `ebbae3056c6ccff7bc9aa74b9664a02c8d5b71f5`.
-
-p.054 `オストワルト表色系 — 等色相面` is `SECONDARY_CORROBORATION_REQUIRED`. Current AFT public authority fixes the heading/order only; peer-reviewed Color Research & Application and ChemTexts material resolves the narrow nonvisual structure: for each pure colour a triangle connects that pure colour with white and black, the white-black side lies on the neutral gray axis, white→pure colour is the light clear series, and black→pure colour is the dark clear series. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated source/nonvisual/global-full-fingerprint/shared-renderer gate passed in Power Color CI `33774043678`; PR #663 merged as `b46bab0b1b0619ec02c7a846cc3bddea23336256`.
+p.056 `NCS — へリングの6主要色` is `SECONDARY_CORROBORATION_REQUIRED`. Current NCS first-party authority resolves only the six elementary colours white/black/yellow/red/blue/green, the four chromatic elementary colours yellow/red/blue/green, the stated pure-yellow perception relation, and the role of the six elementary colours as the foundation of NCS notation. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in Power Color CI `33776482393`; PR #666 merged as `54a23d9043ac2995e5052aa02e56e621995bcc9b`.
 
 ## Source/display boundary
 
-Do not reconstruct unpublished AFT wording, numbering/symbol conventions, diagrams, formula layouts, worked examples, thresholds, geometry, RGB/HEX/display values, or monitor-facing judgments. For Ostwald p.053–p.054, historical or secondary notation/diagram variants do not establish the exact current AFT presentation. The p.054 equal-hue-plane checkpoint authorizes structural relations only, not reconstruction of the AFT figure.
+Do not reconstruct unpublished AFT wording, numbering/symbol conventions, diagrams, formula layouts, worked examples, thresholds, geometry, RGB/HEX/display values, or monitor-facing judgments. Historical or secondary notation/diagram variants do not establish the exact current AFT presentation. NCS first-party structural text may be used only where explicit; do not convert its website swatches or images into display authority.
 
 ## Canonical sequencing note
 
-The current AFT official Grade 1 textbook table of contents confirms p.053 `色相環` → p.054 `色の表示方法` → p.054 `等色相面` → p.055 `色立体` → p.056 NCS `へリングの6主要色`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
+The current AFT official Grade 1 textbook table of contents confirms p.053 `色相環` → p.054 `色の表示方法` → p.054 `等色相面` → p.055 `色立体` → p.056 NCS `へリングの6主要色` → p.056 `色相環と色相の表し方` → p.058 `等色相面での色の表示` → p.059 `色の表示方法` → p.059 `色立体と色票集`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
 
 ## Exact next start point
 
-Source-audit p.055 `オストワルト表色系 — 色立体` before any authoring. Resolve only deterministic nonvisual facts from auditable authority; do not infer unpublished AFT geometry, exact diagram layout, or display values.
+Source-audit p.056 `NCS — 色相環と色相の表し方` before any authoring. Resolve only deterministic nonvisual facts from current NCS/AFT authority; do not infer unpublished AFT figure geometry, exact display colours, or monitor judgments.
