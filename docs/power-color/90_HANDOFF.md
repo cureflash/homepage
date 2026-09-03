@@ -6,7 +6,7 @@ Grade 1 is active by explicit user override. Grade 2 remains 348 verified / pend
 Canonical Grade 1 working set: `STATUS.json`, `20_EXECUTION_PLAN.md`, `60_GRADE1_EXECUTION_PLAN.md`, `61_GRADE1_SOURCE_INVENTORY.md`, `62_GRADE1_SPEC.md`.
 
 ## Grade 1 frontier
-All official Grade 1 items through p.142 are now recorded.
+All official Grade 1 items through p.143 are now recorded.
 
 p.136 `ビジュアルマーチャンダイジング（VMD）の取り組み` is `SOURCE_BLOCKED`. JAVMA and Sugino confirm broad VMD practice, but current public authority does not expose the AFT p.136-specific closed initiative set, terminology, sequence, responsibilities or decision rules. The p.133 basic VMD concept is not reused as a substitute. No authoring.
 
@@ -18,10 +18,14 @@ p.141 `景観計画に基づく届出と手続き` is `SOURCE_RESOLVED`. Current
 
 p.142 `景観計画における色彩基準 — 色彩基準の役割` is `SOURCE_RESOLVED`. Current MLIT/Tokyo/Osaka government authority resolves a narrow nonvisual role boundary: landscape-plan standards operate as action-restriction/regulatory-guidance criteria for good landscape formation; color may be an explicit subject of those restrictions; MLIT favors standards that are as objective as possible; Tokyo guidance requires numerical-standard conformity while also considering the standards' purpose and surrounding streetscape harmony. Four text-only records were created pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1. Exact hue/value/chroma limits, area ratios, exceptions and monitor-facing judgments remain excluded. PR #715 passed Power Color CI `33808114823` and merged as `05f5e7aaeeef2db87ccbe6d932fe671a7412271e`.
 
+p.143 `色彩基準の運用` is `SOURCE_RESOLVED`. The current AFT heading aligns directly with Tokyo's official `東京都景観色彩ガイドライン` operation section. A narrow nonvisual boundary is accepted: Munsell hue/value/chroma provides objective indication but actual appearance can vary with surface condition, transmission and reflection; materials with wide variation should use actual samples where possible during consultation; particularly large buildings may use large mock-ups to share the completion image; richly textured material colors can require comprehensive judgment. Four text-only records were authored pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1.
+
+p.143 `色彩基準における面積比の考え方` is `SOURCE_RESOLVED` only to Tokyo's explicit government example, not as a nationwide universal rule. That example uses basic color on at least 4/5 of each exterior-wall face, emphasis color up to 1/5, applicable accent color up to 1/20, and a combined emphasis+accent total within 1/5. Four text-only records were authored pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1. The two p.143 batches passed Power Color CI `33809583893` and PR #718 merged as `ab5b3fb3dd169fcb44b02691688625b9b64ed6e0`.
+
 Grade 1 runtime remains unpromoted.
 
 ## Source/display boundary
-Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, exact business/CMF/fashion process sequences, fiber-length color-development rules, VMD initiative/color procedures, landscape color judgments, municipality-specific notification thresholds/forms, exact landscape color limits, area ratios, exceptions, or p.143+ color-standard procedures. Do not repeat recorded rejected source routes without new explicit evidence.
+Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, exact business/CMF/fashion process sequences, fiber-length color-development rules, VMD initiative/color procedures, or municipality-specific landscape rules beyond an explicitly cited government example. Tokyo p.143 area ratios remain Tokyo-specific evidence and are not universalized. Do not repeat recorded rejected source routes without new explicit evidence.
 
 ## Exact next start point
-Source-audit p.143 `景観計画における色彩基準 — 色彩基準の運用` before any authoring.
+Source-audit p.144 `景観計画における色彩基準 — 色彩基準の示し方` before any authoring.
