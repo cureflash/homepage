@@ -21,8 +21,8 @@
 |---|---|---:|---|---|
 | 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | 4 independently verified text-only records; synchronized CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`. Not yet promoted. |
 | 2 | シュヴルールの色彩調和論 | 025 | SOURCE_RESOLVED | 3 independently verified text-only records; pending 0; A/B/C/D=1/1/1/0; CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`. Not yet promoted. |
-| 3 | ルードの色彩調和論 | 027 | SECONDARY_CORROBORATION_REQUIRED | 3 pending-first text-only records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. Await current-head authoring CI/merge. |
-| 4 | オストワルトの色彩調和論 | 028 | UNCHECKED | Follow official order. |
+| 3 | ルードの色彩調和論 | 027 | SECONDARY_CORROBORATION_REQUIRED | 3 independently verified text-only records; pending 0; A/B/C/D=1/1/1/0; CI `33758149486`; PR #638 merged as `b89da78340133b5a4abf24408ef4c3930610b917`. Not yet promoted. |
+| 4 | オストワルトの色彩調和論 | 028 | UNCHECKED | Exact next source frontier. |
 | 5 | イッテンの色彩調和論 | 029 | UNCHECKED | Follow official order. |
 | 6 | ムーンとスペンサーの色彩調和論 | 030 | UNCHECKED | Follow official order. |
 
@@ -84,7 +84,7 @@ Accepted first-party facts only:
 - This is treated as one of three `類似色の調和`.
 - `類似色の調和` includes `隣接・近似色相による色調類似の調和`.
 
-`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json`: three pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all seven prior Grade 1 batches. CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`. No runtime promotion yet.
+`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json`: three pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`. No runtime promotion yet.
 
 ## p.027 Rood corroborated boundary
 Audit: `docs/power-color/audits/2026-09-03-grade1-p027-rood-source-audit.md`.
@@ -95,9 +95,9 @@ Accepted narrow nonvisual facts only:
 - University of Chicago academic literature describes Rood's optical mixture: small adjacent lines/dots of different colours can blend perceptually when viewed from sufficient distance.
 - The Met's historical discussion associates Rood's theory with complementary hues placed adjacent/layered and intensified in richness.
 
-`qualifications/color-certification/data/grade1-authoring-harmony-rood-p027-0001-0003.json`: three pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all eight earlier Grade 1 batches. Await current-head CI/merge. No runtime promotion yet.
+`qualifications/color-certification/data/grade1-authoring-harmony-rood-p027-0001-0003.json`: three pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all eight earlier Grade 1 batches. CI `33758149486`; PR #638 merged as `b89da78340133b5a4abf24408ef4c3930610b917`. No runtime promotion yet.
 
 These sources corroborate a narrow Rood theory boundary but do not expose the unpublished AFT p.027 terminology, exact rule labels, category counts or diagrams. Do not infer those, do not create RGB/HEX/display answers, and do not import p.028 Ostwald content.
 
 ## Exact next source frontier
-After current-head p.027 authoring CI/merge, continue in official order to p.028 `オストワルトの色彩調和論` and perform source audit before authoring.
+Continue in official order to p.028 `オストワルトの色彩調和論` and perform source audit before authoring.
