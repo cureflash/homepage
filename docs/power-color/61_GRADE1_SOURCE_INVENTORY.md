@@ -19,8 +19,8 @@
 ## Color-harmony frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
-| 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | 4 independently verified text-only records; pre-sync CI `33756136445`; PR #632 active. No waterfilling beyond audited state space. Not yet promoted. |
-| 2 | シュヴルールの色彩調和論 | 025 | UNCHECKED | Audit after p.024 authoring checkpoint merges. |
+| 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | 4 independently verified text-only records; CI `33756136445`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`. No waterfilling beyond audited state space. Not yet promoted. |
+| 2 | シュヴルールの色彩調和論 | 025 | SOURCE_RESOLVED | Current AFT official sample directly exposes four deterministic nonvisual relations. 4 pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/1. Await current-head gate/merge. |
 | 3 | ルードの色彩調和論 | 027 | UNCHECKED | Follow official order. |
 | 4 | オストワルトの色彩調和論 | 028 | UNCHECKED | Follow official order. |
 | 5 | イッテンの色彩調和論 | 029 | UNCHECKED | Follow official order. |
@@ -77,9 +77,21 @@ Accepted narrow facts only:
 - Current AFT official Grade 1 sample: `ナチュラルハーモニー` is explained under Judd by the `なじみ` principle.
 - Waseda University academic literature: Judd summarized four principles named in English as Order, Familiarity, Similarity, and Unambiguity, and Familiarity corresponds to natural harmony.
 
-`qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json`: four pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/1. The batch deliberately stops at four because the accepted deterministic state space is narrow. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all six earlier Grade 1 culture batches. Pre-sync current-question head CI `33756136445` passed on PR #632.
+`qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json`: four pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/1. The batch deliberately stops at four because the accepted deterministic state space is narrow. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all six earlier Grade 1 culture batches. Current-question CI `33756136445`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
 
-For production Japanese wording, only `なじみ` is directly exposed by current AFT public exam authority. Do not invent exact Japanese AFT labels for the other three principles solely by translation, and do not pull p.025 Chevreul facts into the p.024 batch.
+For production Japanese wording, only `なじみ` is directly exposed by current AFT public exam authority. Do not invent exact Japanese AFT labels for the other three principles solely by translation.
+
+## p.025 accepted official boundary
+Audit: `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`.
+Current AFT official Grade 1 first-stage sample directly resolves only this narrow deterministic state space for production authoring:
+- Chevreul's theory includes `一つの主調色による調和`.
+- `ドミナント` is an example of that harmony.
+- In the official sample this belongs to one of three `類似色` harmonies.
+- The same harmony includes `隣接・近似色相による色調類似の調和`.
+
+`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0004.json`: four pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/1. Dedicated gate includes all seven earlier Grade 1 batches in full-fingerprint checks. Await current-head CI/merge. No runtime promotion yet.
+
+University of Chicago Library historical Chevreul material is retained as background corroboration only and does not expand production answer states. Do not reconstruct the unpublished full AFT classification, infer the official sample figure appearance, create display values, or pull p.027 Rood content into this batch.
 
 ## Exact next source frontier
-After synchronized current-head CI and merge of PR #632, continue in official order to p.025 `シュヴルールの色彩調和論` and perform source audit before authoring.
+After current-head p.025 authoring gate/CI and merge, continue in official order to p.027 `ルードの色彩調和論` and perform source audit before authoring.
