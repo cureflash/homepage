@@ -41,6 +41,8 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] Author p.006 `pc1.culture.ancient_europe_materials` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.
 - [x] Pass dedicated Grade 1 p.006 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression in CI `33744000544`; PR #618 merged as `fff4022fdf0c4809b135b29c4277ec83def919c2`.
 - [x] Audit p.007 `中・近世のヨーロッパの色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Getty/Met/National Gallery manuscript-pigment-material boundary.
+- [x] Author p.007 `pc1.culture.medieval_early_modern_europe_materials` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Stop at 8 to avoid repetition beyond the four resolved fact families.
+- [x] Add dedicated Grade 1 p.007 schema/full-fingerprint/nonvisual/shared-renderer authoring gate.
 
 ## Exact next start point
-Author a small pending-first p.007 text-only batch using only the resolved manuscript/pigment/material relations in `docs/power-color/audits/2026-09-03-grade1-p007-medieval-early-modern-europe-source-audit.md`, then independently QA every record. Stop before template repetition or unsupported symbolism/value/display claims.
+Run the p.007 dedicated gate and normal Power Color regression on the current authoring head. If green and current, merge this authoring checkpoint. Then audit p.010 `近代ヨーロッパと色彩学` before any further authoring.
