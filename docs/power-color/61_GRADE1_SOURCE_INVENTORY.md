@@ -14,7 +14,17 @@
 | 3 | 近代ヨーロッパと色彩学 | 010 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified records; CI `33747834603`; PR #623 merged. Not yet promoted. |
 | 4 | 日本の古代の色 | 014 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified records; current-head CI `33749706830`; PR #625 merged. Not yet promoted. |
 | 5 | 古代から中近世の日本の色彩 | 017 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified text-only records; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`. Not yet promoted. |
-| 6 | 近代の日本の色彩 | 021 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified text-only records; pre-sync CI `33755113622` passed on PR #630. Not yet promoted. |
+| 6 | 近代の日本の色彩 | 021 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified text-only records; synchronized CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`. Not yet promoted. |
+
+## Color-harmony frontier
+| Order | Official heading | Page | Status | Notes |
+|---|---|---:|---|---|
+| 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | Current AFT TOC fixes scope; current AFT Grade 1 sample directly resolves `ナチュラルハーモニー` → Judd `なじみ`; Waseda academic literature corroborates Judd's four-principle framework. Authoring not yet started. |
+| 2 | シュヴルールの色彩調和論 | 025 | UNCHECKED | Audit only after p.024 authoring/QA is safely completed. |
+| 3 | ルードの色彩調和論 | 027 | UNCHECKED | Follow official order. |
+| 4 | オストワルトの色彩調和論 | 028 | UNCHECKED | Follow official order. |
+| 5 | イッテンの色彩調和論 | 029 | UNCHECKED | Follow official order. |
+| 6 | ムーンとスペンサーの色彩調和論 | 030 | UNCHECKED | Follow official order. |
 
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: exact current standard content must be auditable before authoring.
@@ -56,9 +66,18 @@ Accepted narrow facts only:
 - Agency for Cultural Affairs / Cultural Heritage Online: imported aniline (`洋紅`) is documented from the Man'en era (1860–1861) onward and is used as dating evidence for a Meiji multicolour woodblock print.
 - National Diet Library: 和田三造 edited `色名総鑑` (1931) and `配色総鑑` (1930s editions/volumes).
 
-`qualifications/color-certification/data/grade1-authoring-culture-modern-japan-colour-0001-0008.json`: eight pending-first records independently re-solved as verified; pending 0; A/B/C/D=2/2/2/2. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all five prior Grade 1 culture batches. Pre-sync CI `33755113622` passed on PR #630. No runtime promotion yet.
+`qualifications/color-certification/data/grade1-authoring-culture-modern-japan-colour-0001-0008.json`: eight pending-first records independently re-solved as verified; pending 0; A/B/C/D=2/2/2/2. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all five prior Grade 1 culture batches. Synchronized CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`. No runtime promotion yet.
 
 Do not infer exact dye recipes, visual appearance, colour chips, RGB/HEX, exhaustive AFT p.021 membership, or that every externally corroborated Wada fact appears in the official textbook.
 
+## p.024 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-03-grade1-p024-color-harmony-judd-source-audit.md`.
+Accepted narrow facts only:
+- Current AFT official TOC: p.024 contains `色彩調和論とは` and `ジャッドの色彩調和、四つの原理`.
+- Current AFT official Grade 1 sample: `ナチュラルハーモニー` is explained under Judd by the `なじみ` principle.
+- Waseda University academic literature: Judd summarized four principles named in English as Order, Familiarity, Similarity, and Unambiguity, and Familiarity corresponds to natural harmony.
+
+For production Japanese wording, only `なじみ` is directly exposed by current AFT public exam authority. Do not invent exact Japanese AFT labels for the other three principles solely by translation, and do not pull p.025 Chevreul facts into the p.024 batch.
+
 ## Exact next source frontier
-After p.021 current-head synchronization and merge, continue in official order to p.024 `色彩調和論` and perform source audit before any authoring.
+Author a small pending-first p.024 text-only batch only from the accepted audited facts, independently QA it, and avoid waterfilling beyond the narrow state space. After safe completion, continue in official order to p.025 `シュヴルールの色彩調和論`.
