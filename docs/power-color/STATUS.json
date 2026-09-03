@@ -11,23 +11,23 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33761298016, "pr": 644, "merge_commit": "26c7ab8935896b080be8cfd1c93d6537bdb91794", "skill": "pc1.harmony.moon_spencer_p030", "verified": 4},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33762686528, "pr": 647, "merge_commit": "8399c278e87ca3eb1b03fd8b42016266a577b7ad", "skill": "pc1.light_color.appearance_mode_p032", "verified": 3},
     "active_section": "光と色",
-    "active_topic": "p.032 色の様相",
-    "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
-    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p032-color-appearance-mode-source-audit.md",
+    "active_topic": "p.035 色の分類",
+    "active_topic_source_status": "UNCHECKED",
+    "source_audit": null,
     "active_authoring": null,
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Pass current-head p.032 audit CI and merge if green/current; then author only the three audited p.032 nonvisual fact families pending-first and independently QA them."
+    "next": "Source-audit p.035 色の分類 before any authoring; do not reconstruct unpublished AFT taxonomy."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 3, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main through merged p.029 PR #643 and found no competing p.030 work.", "Source-audited/authored p.030 Moon and Spencer within a four-fact nonvisual boundary; independently QA'd 4/4 verified and merged PR #644 after Power Color CI 33761298016 succeeded.", "Source-audited p.032 color-appearance modes as SECONDARY_CORROBORATION_REQUIRED using AFT scope plus Journal of Vision/PubMed and Illuminating Engineering Institute of Japan/CiNii authority; no p.032 authoring performed in this audit checkpoint." ]},
+  "current_run": {"checkpoints_completed": 2, "generated": 3, "checked": 3, "verified": 3, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main through merged p.032 audit PR #645 and found no competing Grade 1 PR for p.032 authoring.", "Authored only the three audited p.032 nonvisual fact families pending-first; independently QA'd 3/3 verified; dedicated full-fingerprint/nonvisual/shared-renderer Power Color CI 33762686528 succeeded and PR #647 merged as 8399c278e87ca3eb1b03fd8b42016266a577b7ad; canonical sync prepared next." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Pass current-head p.032 audit CI and merge if green/current; then author only the three audited p.032 nonvisual fact families pending-first and independently QA them."
+  "next": "Source-audit p.035 色の分類 before any authoring; do not reconstruct unpublished AFT taxonomy."
 }
