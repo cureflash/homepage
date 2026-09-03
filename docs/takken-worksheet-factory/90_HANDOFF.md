@@ -8,11 +8,13 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled existing verified question evidence for `takken-concept-farmland-article3` without changing existing Phase 2/3 question content or validation status.
+Extracted canonical atomic knowledge for `takken-concept-farmland-article4` without changing existing Phase 2/3 questions or mapping `takken-q-75-001` ahead of its required evidence-reconciliation checkpoint.
 
-- Mapped `takken-q-74-001` only to `takken-k-farmland-article3-agricultural-committee-permit` because its four choices directly test whether the Article 3 transaction requires agricultural-committee permission.
-- Mapped `takken-q-74-002` only to `takken-k-farmland-article3-unpermitted-act-invalid` because its four choices directly test the legal effect of performing a permission-required transfer without permission.
-- Kept the other five Article 3 knowledge items unmapped as explicit Phase 4.3 deficits; no rights-transfer scope, efficient-use criterion, regular-engagement criterion, surrounding-use criterion, or abolished minimum-area criterion was over-mapped.
+- Added 6 verified knowledge items for Article 4: self-conversion scope, the meaning of farmland conversion, the permit principle, current permit authority without an area threshold, the urbanization-area prior-notification exception, and the Article 4 / Article 5 rights-transfer distinction.
+- Kept Article 4 separate from `takken-concept-farmland-article5`; no Article 5 knowledge extraction or question mapping was performed.
+- Represented the current 2026 rule that farmland-conversion permits are handled, regardless of conversion area, by the prefectural governor or the mayor of a municipality designated by the Minister of Agriculture, Forestry and Fisheries.
+- Represented the city-planning urbanization-area exception as prior notification to the agricultural committee rather than Article 4 permission.
+- Sources are the 2026-04-01 Farmland Act and official MAFF guidance on farmland-conversion permits, Article 4/5 statistics, current permit authority, and illegal-conversion prevention.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,17 +25,17 @@ Reconciled existing verified question evidence for `takken-concept-farmland-arti
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 95/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 95
-- Canonical knowledge items: 510
+- Phase 4.2: active — 96/113 fully reconciled concepts
+- Concepts with canonical knowledge items: 96
+- Canonical knowledge items: 516
 - Existing verified questions mapped: 118
-- Explicit unmapped knowledge gaps: 341
+- Explicit unmapped knowledge gaps: 347
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical atomic knowledge items for `takken-concept-farmland-article4` from the 2026-04-01 legal framework and primary official sources. Keep Article 4 separate from `takken-concept-farmland-article5`. Do not map `takken-q-75-001` until the following evidence-reconciliation checkpoint. Do not begin Phase 4.3.
+Reconcile verified `takken-q-75-001` against the new `takken-concept-farmland-article4` knowledge items and map only the knowledge directly measured by its four choices. Do not over-map Article 4 knowledge. Do not extract or map `takken-concept-farmland-article5` in the same checkpoint. Do not begin Phase 4.3.
 
 ## publication invariant
 
