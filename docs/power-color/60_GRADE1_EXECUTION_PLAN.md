@@ -48,6 +48,7 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] Audit p.017 `古代から中近世の日本の色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Heian `襲色目` structural/seasonal-event boundary plus explicit Agency for Cultural Affairs Edo kosode period/material/technique catalogue facts.
 - [x] Author p.017 `pc1.culture.ancient_to_early_modern_japan` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; full-fingerprint checked against all prior Grade 1 culture authoring batches; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`.
 - [x] Audit p.021 `近代の日本の色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve a narrow text-only boundary covering Meiji chemical-dye/Yuzen development, imported aniline dating evidence, and NDL bibliographic facts for Wada Sanzō's early-Shōwa colour-reference publications.
+- [x] Author p.021 `pc1.culture.modern_japan_colour` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; dedicated source/nonvisual/full-fingerprint/shared-renderer gate passed on pre-sync head in Power Color CI `33755113622`; PR #630.
 
 ## Exact next start point
-Author a small pending-first p.021 text-only batch only from the accepted audited fact families in `docs/power-color/audits/2026-09-03-grade1-p021-modern-japan-colour-source-audit.md`, then independently QA it. Do not infer unpublished AFT membership, visual appearance, exact colour chips, RGB/HEX, or unaudited dye chemistry.
+After synchronized current-head CI and merge of p.021 authoring, continue in official order to p.024 `色彩調和論` and source-audit it before any authoring. Preserve Grade 2/3 incomplete states and all existing source/display gates.
