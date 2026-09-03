@@ -14,7 +14,7 @@
 | 3 | 近代ヨーロッパと色彩学 | 010 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified records; CI `33747834603`; PR #623 merged. Not yet promoted. |
 | 4 | 日本の古代の色 | 014 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified records; current-head CI `33749706830`; PR #625 merged. Not yet promoted. |
 | 5 | 古代から中近世の日本の色彩 | 017 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified text-only records; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`. Not yet promoted. |
-| 6 | 近代の日本の色彩 | 021 | SECONDARY_CORROBORATION_REQUIRED | Narrow text-only boundary source-resolved from Kyoto National Museum, Agency for Cultural Affairs, and NDL. Authoring not yet started. |
+| 6 | 近代の日本の色彩 | 021 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified text-only records; pre-sync CI `33755113622` passed on PR #630. Not yet promoted. |
 
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: exact current standard content must be auditable before authoring.
@@ -56,7 +56,9 @@ Accepted narrow facts only:
 - Agency for Cultural Affairs / Cultural Heritage Online: imported aniline (`洋紅`) is documented from the Man'en era (1860–1861) onward and is used as dating evidence for a Meiji multicolour woodblock print.
 - National Diet Library: 和田三造 edited `色名総鑑` (1931) and `配色総鑑` (1930s editions/volumes).
 
+`qualifications/color-certification/data/grade1-authoring-culture-modern-japan-colour-0001-0008.json`: eight pending-first records independently re-solved as verified; pending 0; A/B/C/D=2/2/2/2. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all five prior Grade 1 culture batches. Pre-sync CI `33755113622` passed on PR #630. No runtime promotion yet.
+
 Do not infer exact dye recipes, visual appearance, colour chips, RGB/HEX, exhaustive AFT p.021 membership, or that every externally corroborated Wada fact appears in the official textbook.
 
 ## Exact next source frontier
-Author a small pending-first p.021 text-only batch only from the accepted audited fact families, then independently QA it. After p.021 is safely completed, continue in official order to p.024 `色彩調和論`.
+After p.021 current-head synchronization and merge, continue in official order to p.024 `色彩調和論` and perform source audit before any authoring.
