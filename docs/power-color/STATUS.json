@@ -6,28 +6,28 @@
   "grade3": {"complete": false, "runtime_questions": {"verified": 223, "pending": 0, "needs_revision": 0, "rejected": 0}, "deferred_handoff": "docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md", "remaining_blockers": ["complete auditable conventional PCCS contrast-tone pair matrix", "explicit readings for 24 Japanese PCCS hue names", "approved current representative PCCS display values for monitor-facing drills", "final Grade 3 completion gate"], "source_display_gates_relaxed": false},
   "grade2": {"status": "in_progress_source_blocked_frontier", "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md", "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md", "runtime": "qualifications/color-certification/data/grade2-runtime.json", "runtime_questions": {"verified": 348, "pending": 0, "needs_revision": 0, "rejected": 0}, "runtime_skill_count": 29, "monitor_facing_generation_blocked_without_approved_display_values": true, "source_blocked_count": 18, "complete": false, "next": "Resume only if new explicit auditable authority resolves a recorded Grade 2 source-blocked topic; do not repeat rejected source routes without new evidence."},
   "grade1": {
-    "status": "in_progress_culture",
+    "status": "in_progress_color_harmony_theory",
     "execution_plan": "docs/power-color/60_GRADE1_EXECUTION_PLAN.md",
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "passed", "workflow_run": 33751443115, "pr": 628, "merge_commit": "f5d46017a0266641602cd7adb8f79cd3e2b8ba83", "skill": "pc1.culture.ancient_to_early_modern_japan", "verified": 8},
-    "active_section": "色彩と文化",
-    "active_topic": "p.021 近代の日本の色彩",
-    "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
-    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p021-modern-japan-colour-source-audit.md",
+    "latest_authoring_gate": {"status": "passed_pre_sync", "workflow_run": 33755113622, "pr": 630, "merge_commit": null, "skill": "pc1.culture.modern_japan_colour", "verified": 8},
+    "active_section": "色彩調和論",
+    "active_topic": "p.024 色彩調和論",
+    "active_topic_source_status": null,
+    "source_audit": null,
     "active_authoring": null,
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
-    "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. The user's repeated explicit Grade 1 override now resolves operational precedence for Grade 1 only; 60_GRADE1_EXECUTION_PLAN.md records that override while Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup of the stale sentence is still pending.",
-    "next": "Author a small pending-first text-only p.021 batch only from the accepted audited fact families, then independently QA it."
+    "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. The user's repeated explicit Grade 1 override resolves operational precedence for Grade 1 only; 60_GRADE1_EXECUTION_PLAN.md records that override while Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup of the stale sentence is still pending.",
+    "next": "After PR #630 passes synchronized current-head CI and merges, source-audit p.024 色彩調和論 before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 2, "generated": 0, "checked": 0, "verified": 0, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; PR #628 is merged on current main and no competing open Power Color Grade 1 PR was present.", "Audited p.021 近代の日本の色彩 as SECONDARY_CORROBORATION_REQUIRED using current AFT scope plus Kyoto National Museum, Agency for Cultural Affairs, and NDL; fixed a narrow nonvisual authoring boundary and recorded explicit exclusions." ]},
+  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; PR #629 was merged and no competing Grade 1 authoring PR existed.", "Authored 8 pending-first text-only p.021 records from the accepted Kyoto National Museum, Agency for Cultural Affairs, and NDL fact families only.", "Independently re-derived all 8 answers before comparison: 8 verified / 0 needs_revision / 0 rejected / pending 0; A/B/C/D=2/2/2/2; dedicated source/nonvisual/full-fingerprint/shared-renderer gate passed in Power Color CI 33755113622.", "Synchronized Grade 1 plan/source inventory/status/handoff toward p.024 while preserving Grade 2/3 incomplete states and all source/display gates." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Author and independently QA the narrow p.021 text-only batch; keep Grade 2/3 blockers and display gates unchanged."
+  "next": "Pass synchronized current-head CI, merge PR #630, then source-audit p.024 色彩調和論."
 }
