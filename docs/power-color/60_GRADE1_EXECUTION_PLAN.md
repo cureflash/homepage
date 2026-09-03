@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 Grade 1 is active by explicit user override. The stale Grade-2-complete wording still present in `20_EXECUTION_PLAN.md` does not mark Grade 2/3 complete and does not supersede the explicit Grade 1 canonical state.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, color-marketing p.104→p.114, CMF® p.119→p.122, fashion p.124→p.137, and landscape p.140→p.143 have now been processed in order. The next official frontier is p.144 `景観計画における色彩基準 — 色彩基準の示し方`.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, color-marketing p.104→p.114, CMF® p.119→p.122, fashion p.124→p.137, and landscape p.140→p.145 have now been processed in order. The next official frontier is p.146 `色相、明度、彩度と景観形成とのかかわり`.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -25,7 +25,7 @@ Follow the current AFT official Grade 1 textbook table of contents in order. Cul
 - No Grade 1-specific engine fork; use the shared Power TOEIC question-bank/workout/session engine.
 - Lower-grade source-confirmed structure may be reused, but cannot substitute for Grade 1-specific authority.
 - Do not repeat a rejected source route without new evidence.
-- Do not universalize local-government example thresholds or ratios beyond the cited jurisdiction.
+- Do not universalize local-government example thresholds, exception sets or ratios beyond the cited jurisdiction.
 - No monkeypatches.
 
 ## Known source-risk frontier
@@ -52,8 +52,11 @@ Confirmed current blockers include p.035 `色の分類`; p.062 JIS light-source 
 - [x] p.142 `景観計画における色彩基準 — 色彩基準の役割`: `SOURCE_RESOLVED`; current MLIT/Tokyo/Osaka government narrow nonvisual standards-role boundary; 4/4 verified, A/B/C/D=1/1/1/1; CI `33808114823`; PR #715 merged as `05f5e7aaeeef2db87ccbe6d932fe671a7412271e`.
 - [x] p.143 `色彩基準の運用`: `SOURCE_RESOLVED`; Tokyo government operation guidance; 4/4 verified, A/B/C/D=1/1/1/1.
 - [x] p.143 `色彩基準における面積比の考え方`: `SOURCE_RESOLVED` only to Tokyo's explicit example; 4/4 verified, A/B/C/D=1/1/1/1. Combined CI `33809583893`; PR #718 merged as `ab5b3fb3dd169fcb44b02691688625b9b64ed6e0`.
+- [x] p.144 `色彩基準の示し方`: `SOURCE_RESOLVED`; narrow government-explicit Munsell/standards-table structure; 4/4 verified, A/B/C/D=1/1/1/1; CI `33811380255`; PR #720 merged as `59076f90302e282c4255d89c71c49f81d0e21c17`.
+- [x] p.145 `色彩基準の適用除外`: `SOURCE_RESOLVED` only to explicit Tokyo-government exception examples; 4/4 verified, A/B/C/D=1/1/1/1.
+- [x] p.145 `屋外広告物の色彩基準`: `SOURCE_RESOLVED` only to MLIT/current-local-government governance and area-specific standards structure; 4/4 verified, A/B/C/D=1/1/1/1. Combined CI `33811733728`; PR #721 merged as `e4fc8dbf6d19b75f6a1856ea93d756a2f2d8e806`.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.144 `景観計画における色彩基準 — 色彩基準の示し方` before any authoring.
+Source-audit p.146 `色相、明度、彩度と景観形成とのかかわり` before any authoring.
