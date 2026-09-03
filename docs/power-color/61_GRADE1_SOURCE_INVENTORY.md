@@ -19,8 +19,8 @@
 ## Color-harmony frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
-| 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | Current AFT TOC fixes scope; current AFT Grade 1 sample directly resolves `ナチュラルハーモニー` → Judd `なじみ`; Waseda academic literature corroborates Judd's four-principle framework. Authoring not yet started. |
-| 2 | シュヴルールの色彩調和論 | 025 | UNCHECKED | Audit only after p.024 authoring/QA is safely completed. |
+| 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | 4 independently verified text-only records; pre-sync CI `33756136445`; PR #632 active. No waterfilling beyond audited state space. Not yet promoted. |
+| 2 | シュヴルールの色彩調和論 | 025 | UNCHECKED | Audit after p.024 authoring checkpoint merges. |
 | 3 | ルードの色彩調和論 | 027 | UNCHECKED | Follow official order. |
 | 4 | オストワルトの色彩調和論 | 028 | UNCHECKED | Follow official order. |
 | 5 | イッテンの色彩調和論 | 029 | UNCHECKED | Follow official order. |
@@ -77,7 +77,9 @@ Accepted narrow facts only:
 - Current AFT official Grade 1 sample: `ナチュラルハーモニー` is explained under Judd by the `なじみ` principle.
 - Waseda University academic literature: Judd summarized four principles named in English as Order, Familiarity, Similarity, and Unambiguity, and Familiarity corresponds to natural harmony.
 
+`qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json`: four pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/1. The batch deliberately stops at four because the accepted deterministic state space is narrow. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all six earlier Grade 1 culture batches. Pre-sync current-question head CI `33756136445` passed on PR #632.
+
 For production Japanese wording, only `なじみ` is directly exposed by current AFT public exam authority. Do not invent exact Japanese AFT labels for the other three principles solely by translation, and do not pull p.025 Chevreul facts into the p.024 batch.
 
 ## Exact next source frontier
-Author a small pending-first p.024 text-only batch only from the accepted audited facts, independently QA it, and avoid waterfilling beyond the narrow state space. After safe completion, continue in official order to p.025 `シュヴルールの色彩調和論`.
+After synchronized current-head CI and merge of PR #632, continue in official order to p.025 `シュヴルールの色彩調和論` and perform source audit before authoring.
