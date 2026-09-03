@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 Grade 1 is active by explicit user override. The stale Grade-2-complete wording still present in `20_EXECUTION_PLAN.md` does not mark Grade 2/3 complete and does not supersede the explicit Grade 1 canonical state.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, and color-marketing p.104 have now been processed in order. The next official frontier is p.107 `カラーマーケティング — カラーリサーチ`.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, and color-marketing p.104→p.114 have now been processed in order. The next official frontier is p.119 `CMF® — 概念から実体へ（コトからモノへ）`.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -39,6 +39,7 @@ Confirmed current blockers:
 - p.096 `商品企画における色彩`: `SOURCE_BLOCKED`; public AFT authority exposes heading/order but not the AFT-specific product-planning fact set/process/decision rules; generic product-planning substitution is rejected.
 - p.100 `商品デザインにおける色彩` / `製造における色彩` / `流通における色彩`: `SOURCE_BLOCKED`; headings/order are public but the AFT-specific process fact sets, roles, handoffs, and decision rules are not.
 - p.102 `プロモーションにおける色彩` / `小売りにおける色彩`: `SOURCE_BLOCKED`; public AFT material does not expose a deterministic p.102 rule/process set and generic promotion/retail/VMD practice is not a substitute.
+- p.114 `カラー戦略`: `SOURCE_BLOCKED`; current AFT public authority exposes heading/order but not the deterministic p.114 process/rule set; generic color-marketing/branding/strategy practice is not a substitute.
 
 ## Completed Grade 1 checkpoints
 - [x] p.006→p.021 culture: six official topics audited/authored; 8 verified text-only records each.
@@ -54,18 +55,21 @@ Confirmed current blockers:
 - [x] p.062 two JIS light-source-name topics: `SOURCE_BLOCKED`; no authoring.
 - [x] p.066/p.067/p.069 measurement: 4/4 verified each.
 - [x] p.072/p.073/p.080 psychology methods: 4/4 verified each.
-- [x] p.082 `記憶色と色記憶`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33789935372`; PR #689 merged as `1fbe2f72eb790bbc15898320837fbd23cd4e6b94`.
-- [x] p.083 `色の見えの変化`: `SOURCE_BLOCKED`; no authoring; rejected generic-source route recorded.
-- [x] p.087 `ものの見えの安定性`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33790197091`; PR #690 merged as `9f0b6740632c77a982f102ab6bcef35a6a829574`.
-- [x] p.090 `色彩効果のビジネス活用`: `SOURCE_BLOCKED`; no authoring; generic business/marketing substitution rejected.
-- [x] p.093 `カラーコミュニケーションツールの役割`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33792338939`; PR #693 merged as `a28fd5ac83ddedadb9e1cd36e6f46fad89fe9bc2`.
-- [x] p.095 `企業アイデンティティ戦略における色彩`: `SECONDARY_CORROBORATION_REQUIRED`; narrow CI/VI color boundary, 4/4 verified; CI `33794122650`; PR #695 merged as `e28a5911d608a074d99cd46a0ce0e55f2effc6cd`.
-- [x] p.096 `商品企画における色彩`: `SOURCE_BLOCKED`; no authoring; generic product-planning route rejected.
-- [x] p.100 `商品デザインにおける色彩` / `製造における色彩` / `流通における色彩`: `SOURCE_BLOCKED`; no authoring; generic process substitution rejected.
-- [x] p.102 `プロモーションにおける色彩` / `小売りにおける色彩`: `SOURCE_BLOCKED`; no authoring; generic promotion/retail/VMD substitution rejected.
-- [x] p.104 `カラーマーケティングの基本視点`: `SOURCE_RESOLVED` directly from current AFT official sample (`人・モノ・時代`); 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33796187400`; PR #697 merged as `33b0697e7c9372dbd45e043c5b69a9a48d710dea`.
+- [x] p.082 `記憶色と色記憶`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33789935372`; PR #689.
+- [x] p.083 `色の見えの変化`: `SOURCE_BLOCKED`; no authoring.
+- [x] p.087 `ものの見えの安定性`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33790197091`; PR #690.
+- [x] p.090 `色彩効果のビジネス活用`: `SOURCE_BLOCKED`; no authoring.
+- [x] p.093 `カラーコミュニケーションツールの役割`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33792338939`; PR #693.
+- [x] p.095 `企業アイデンティティ戦略における色彩`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33794122650`; PR #695.
+- [x] p.096 `商品企画における色彩`: `SOURCE_BLOCKED`; no authoring.
+- [x] p.100 product-design/manufacturing/distribution: `SOURCE_BLOCKED`; no authoring.
+- [x] p.102 promotion/retail: `SOURCE_BLOCKED`; no authoring.
+- [x] p.104 `カラーマーケティングの基本視点`: `SOURCE_RESOLVED`; 4/4 verified; CI `33796187400`; PR #697.
+- [x] p.107 `カラーリサーチ`: `SOURCE_RESOLVED` directly from current AFT official sample; 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33798278490`; PR #700 merged as `29d9bfd02c15e1d41ee449f3f6a0cac2e1d191f7`.
+- [x] p.109 `カラーリサーチの手法`: `SOURCE_RESOLVED` directly from current AFT official sample; 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33798278490`; PR #700.
+- [x] p.114 `カラー戦略`: `SOURCE_BLOCKED`; no authoring; generic strategy substitution rejected.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.107 `カラーマーケティング — カラーリサーチ` before any authoring. The current AFT official Grade 1 sample includes direct color-research statements and may resolve only those explicit facts; do not infer the unpublished textbook's broader workflow, taxonomy, or sequence from them.
+Source-audit p.119 `CMF® — 概念から実体へ（コトからモノへ）` before any authoring. The current AFT official Grade 1 sample contains one direct CMF® statement; use only that explicit fact unless stronger accepted authority resolves additional p.119 facts.
