@@ -19,9 +19,9 @@
 ## Color-harmony frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
-| 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | 4 independently verified text-only records; synchronized CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`. No waterfilling beyond audited state space. Not yet promoted. |
-| 2 | シュヴルールの色彩調和論 | 025 | SOURCE_RESOLVED | 3 pending-first text-only records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. Current AFT official sample is the answer authority. Await current-head authoring CI/merge. |
-| 3 | ルードの色彩調和論 | 027 | UNCHECKED | Follow official order. |
+| 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | 4 independently verified text-only records; synchronized CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`. Not yet promoted. |
+| 2 | シュヴルールの色彩調和論 | 025 | SOURCE_RESOLVED | 3 independently verified text-only records; pending 0; A/B/C/D=1/1/1/0; CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`. Not yet promoted. |
+| 3 | ルードの色彩調和論 | 027 | SECONDARY_CORROBORATION_REQUIRED | AFT TOC fixes scope; Met and University of Chicago authority resolve only a narrow text-only fact boundary. Authoring not yet started. |
 | 4 | オストワルトの色彩調和論 | 028 | UNCHECKED | Follow official order. |
 | 5 | イッテンの色彩調和論 | 029 | UNCHECKED | Follow official order. |
 | 6 | ムーンとスペンサーの色彩調和論 | 030 | UNCHECKED | Follow official order. |
@@ -55,20 +55,18 @@ Accepted narrow facts only:
 - Agency for Cultural Affairs: mid-Edo `蛇籠桜樹模様小袖` (18th century; 納戸縮緬地; 友禅染・刺繍・摺匹田).
 - Agency for Cultural Affairs: late-Edo `蒲公英蝶模様小袖` (19th century; 黄綸子地; 友禅染・型染; incorporates the hem-pattern fashion described as popular from the mid-Edo period onward).
 
-`qualifications/color-certification/data/grade1-authoring-culture-ancient-to-early-modern-japan-0001-0008.json`: eight pending-first records independently re-solved as verified; pending 0; A/B/C/D=2/2/2/2. Dedicated gate also checks full fingerprints against all four earlier Grade 1 culture batches. No runtime promotion yet.
+`qualifications/color-certification/data/grade1-authoring-culture-ancient-to-early-modern-japan-0001-0008.json`: eight pending-first records independently re-solved as verified; pending 0; A/B/C/D=2/2/2/2. No runtime promotion yet.
 
 Do not infer exact `襲色目` pair tables or names, court-rank rules, symbolic meanings, reconstructed historical appearance, RGB/HEX/display values, image-derived answers, or exhaustive unpublished AFT p.017 membership.
 
 ## p.021 accepted corroborating sources
 Audit: `docs/power-color/audits/2026-09-03-grade1-p021-modern-japan-colour-source-audit.md`.
 Accepted narrow facts only:
-- Kyoto National Museum: Meiji-period development of chemical-dye application to Yuzen; Kyoto `舎密局` opened `染殿` in 1875 and taught practical chemical-dye techniques; museum commentary documents chemical dyes in colour insertion/gradation and coloured paste for `写友禅`.
+- Kyoto National Museum: Meiji-period development of chemical-dye application to Yuzen; Kyoto `舎密局` opened `染殿` in 1875 and taught practical chemical-dye techniques.
 - Agency for Cultural Affairs / Cultural Heritage Online: imported aniline (`洋紅`) is documented from the Man'en era (1860–1861) onward and is used as dating evidence for a Meiji multicolour woodblock print.
 - National Diet Library: 和田三造 edited `色名総鑑` (1931) and `配色総鑑` (1930s editions/volumes).
 
-`qualifications/color-certification/data/grade1-authoring-culture-modern-japan-colour-0001-0008.json`: eight pending-first records independently re-solved as verified; pending 0; A/B/C/D=2/2/2/2. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all five prior Grade 1 culture batches. Synchronized CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`. No runtime promotion yet.
-
-Do not infer exact dye recipes, visual appearance, colour chips, RGB/HEX, exhaustive AFT p.021 membership, or that every externally corroborated Wada fact appears in the official textbook.
+`qualifications/color-certification/data/grade1-authoring-culture-modern-japan-colour-0001-0008.json`: eight pending-first records independently re-solved as verified; pending 0; A/B/C/D=2/2/2/2. Synchronized CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`. No runtime promotion yet.
 
 ## p.024 accepted corroborating boundary
 Audit: `docs/power-color/audits/2026-09-03-grade1-p024-color-harmony-judd-source-audit.md`.
@@ -77,9 +75,7 @@ Accepted narrow facts only:
 - Current AFT official Grade 1 sample: `ナチュラルハーモニー` is explained under Judd by the `なじみ` principle.
 - Waseda University academic literature: Judd summarized four principles named in English as Order, Familiarity, Similarity, and Unambiguity, and Familiarity corresponds to natural harmony.
 
-`qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json`: four pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/1. The batch deliberately stops at four because the accepted deterministic state space is narrow. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all six earlier Grade 1 culture batches. Synchronized CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
-
-For production Japanese wording, only `なじみ` is directly exposed by current AFT public exam authority. Do not invent exact Japanese AFT labels for the other three principles solely by translation.
+`qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json`: four pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/1. Synchronized CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`. No runtime promotion yet.
 
 ## p.025 official-sample boundary
 Audit: `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`.
@@ -88,9 +84,20 @@ Accepted first-party facts only:
 - This is treated as one of three `類似色の調和`.
 - `類似色の調和` includes `隣接・近似色相による色調類似の調和`.
 
-These are directly exposed with answers in the current AFT Grade 1 official sample, so the narrow authoring slice is `SOURCE_RESOLVED` without secondary authority. Do not reconstruct the official figure, infer RGB/HEX/display values, add unstated Chevreul categories, or duplicate p.024 Judd-only questions.
+`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json`: three pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all seven prior Grade 1 batches. CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`. No runtime promotion yet.
 
-`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json`: three pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. The batch stops at the three first-party answer relations rather than waterfilling a fourth item. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all seven prior Grade 1 batches. Await current-head CI/merge. No runtime promotion yet.
+Do not reconstruct the official figure, infer RGB/HEX/display values, add unstated Chevreul categories, or duplicate p.024 Judd-only questions.
+
+## p.027 Rood corroborated boundary
+Audit: `docs/power-color/audits/2026-09-03-grade1-p027-rood-source-audit.md`.
+Status: `SECONDARY_CORROBORATION_REQUIRED`.
+
+Accepted narrow nonvisual facts only:
+- The Met records Ogden Nicholas Rood's `Modern chromatics : with applications to art and industry`, published in 1879.
+- University of Chicago academic literature describes Rood's optical mixture: small adjacent lines/dots of different colours can blend perceptually when viewed from sufficient distance.
+- The Met's historical discussion associates Rood's theory with complementary hues placed adjacent/layered and intensified in richness.
+
+These sources corroborate a narrow Rood theory boundary but do not expose the unpublished AFT p.027 terminology, exact rule labels, category counts or diagrams. Do not infer those, do not create RGB/HEX/display answers, and do not import p.028 Ostwald content.
 
 ## Exact next source frontier
-After current-head p.025 authoring CI and merge, continue in official order to p.027 `ルードの色彩調和論` and perform source audit before any authoring.
+After current-head CI/merge of this p.027 audit synchronization checkpoint, author only a small text-only p.027 batch from the corroborated facts above and independently QA every record. Stop rather than waterfilling beyond the audited state space.
