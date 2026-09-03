@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 The user explicitly made Grade 1 active while Grade 2/3 remain incomplete. The stale Phase 5 sentence in `20_EXECUTION_PLAN.md` is a known mechanical inconsistency; this explicit override plus STATUS/HANDOFF/this Grade 1 plan controls Grade 1 work only and does not mark Grade 2/3 complete.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021 and color-harmony p.024→p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` is audited and authored only within its three corroborated nonvisual fact families. Next official frontier is p.035 `色の分類` source audit.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021 and color-harmony p.024→p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` is audited/authored within three corroborated nonvisual fact families. p.035 `色の分類` is source-blocked because the public AFT material does not expose the exact taxonomy and external CIE material offers multiple possible classifications that must not be substituted by inference. p.036 `照明の性質を表すもの` is audited/authored within four CIE-defined nonvisual fact families. Next official frontier is p.039 `測色の照明` source audit.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -38,9 +38,11 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] p.028 オストワルト: `SECONDARY_CORROBORATION_REQUIRED` + 4/4 verified.
 - [x] p.029 イッテン: `SECONDARY_CORROBORATION_REQUIRED` + 4/4 verified.
 - [x] p.030 ムーンとスペンサー: `SECONDARY_CORROBORATION_REQUIRED` + 4/4 verified.
-- [x] p.032 `色の様相`: `SECONDARY_CORROBORATION_REQUIRED`; 3 audited nonvisual fact families authored pending-first and independently QA'd 3/3 verified, pending 0, A/B/C/D=1/1/1/0; Power Color CI `33762686528`; PR #647 merged as `8399c278e87ca3eb1b03fd8b42016266a577b7ad`.
+- [x] p.032 `色の様相`: `SECONDARY_CORROBORATION_REQUIRED`; 3/3 verified; PR #647 merged.
+- [x] p.035 `色の分類`: `SOURCE_BLOCKED`; exact AFT taxonomy/labels/counts are not publicly auditable; no authoring.
+- [x] p.036 `照明の性質を表すもの`: `SECONDARY_CORROBORATION_REQUIRED`; four CIE-defined nonvisual fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.035 `色の分類` before any authoring. Preserve all Grade 2/3 incomplete states and gates.
+Source-audit p.039 `測色の照明` before any authoring. Preserve all Grade 2/3 incomplete states and gates.
