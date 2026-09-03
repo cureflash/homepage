@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 Grade 1 is active by explicit user override. The stale Grade-2-complete wording still present in `20_EXECUTION_PLAN.md` does not mark Grade 2/3 complete and does not supersede the explicit Grade 1 canonical state.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, and business p.090→p.093 have now been processed in order. The next official frontier is p.095 `コンシューマプロダクツのビジネスプロセスと色彩 — 企業アイデンティティ戦略における色彩`.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, and business p.090→p.096 have now been processed in order. The next official frontier is p.100 `コンシューマプロダクツのビジネスプロセスと色彩 — 商品デザインにおける色彩`.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -36,6 +36,7 @@ Confirmed current blockers:
 - p.062 `光源色の系統色名`: `SOURCE_BLOCKED`; exact current construction/inventory/modifier rules are unavailable from accepted primary authority.
 - p.083 `色知覚の複雑性 — 色の見えの変化`: `SOURCE_BLOCKED`; public AFT authority exposes heading/order only, while generic external color-appearance literature cannot establish the unpublished AFT phenomenon set.
 - p.090 `色彩効果のビジネス活用`: `SOURCE_BLOCKED`; public AFT authority exposes the heading/general business scope only, not a deterministic p.090 fact set; generic business/marketing substitution is rejected.
+- p.096 `商品企画における色彩`: `SOURCE_BLOCKED`; public AFT authority exposes heading/order but not the AFT-specific product-planning fact set/process/decision rules; generic product-planning substitution is rejected.
 
 ## Completed Grade 1 checkpoints
 - [x] p.006→p.021 culture: six official topics audited/authored; 8 verified text-only records each.
@@ -56,8 +57,10 @@ Confirmed current blockers:
 - [x] p.087 `ものの見えの安定性`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33790197091`; PR #690 merged as `9f0b6740632c77a982f102ab6bcef35a6a829574`.
 - [x] p.090 `色彩効果のビジネス活用`: `SOURCE_BLOCKED`; no authoring; generic business/marketing substitution rejected.
 - [x] p.093 `カラーコミュニケーションツールの役割`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33792338939`; PR #693 merged as `a28fd5ac83ddedadb9e1cd36e6f46fad89fe9bc2`.
+- [x] p.095 `企業アイデンティティ戦略における色彩`: `SECONDARY_CORROBORATION_REQUIRED`; narrow CI/VI color boundary, 4/4 verified; CI `33794122650`; PR #695 merged as `e28a5911d608a074d99cd46a0ce0e55f2effc6cd`.
+- [x] p.096 `商品企画における色彩`: `SOURCE_BLOCKED`; no authoring; generic product-planning route rejected.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.095 `コンシューマプロダクツのビジネスプロセスと色彩 — 企業アイデンティティ戦略における色彩` before any authoring. Because this remains inside the known AFT-specific business-risk frontier, generic corporate-branding/process material may corroborate only an explicitly scoped fact and must not be used to invent the AFT-specific process or sequence.
+Source-audit p.100 `コンシューマプロダクツのビジネスプロセスと色彩 — 商品デザインにおける色彩` before any authoring. Because this remains inside the known AFT-specific business-risk frontier, generic product-design/process material may corroborate only an explicitly scoped fact and must not be used to invent the AFT-specific process or sequence.
