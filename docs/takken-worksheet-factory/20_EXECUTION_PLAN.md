@@ -37,13 +37,13 @@ Current checkpoint:
 - [x] `takken-concept-farmland-article4` has 6 canonical atomic knowledge items sourced to the 2026-04-01 Farmland Act framework and official MAFF guidance.
 - [x] Article 4 remains separated from `takken-concept-farmland-article5`: self-conversion scope, conversion meaning, permit principle, current permit authority, urbanization-area notification, and the Article 4 / Article 5 rights-transfer distinction are explicit knowledge items.
 - [x] The 2016 permit-authority change is represented explicitly: no area threshold remains for allocating Article 4 permit authority in 2026; prefectural governors or MAFF-designated municipality mayors are the permit authorities.
-- [x] `takken-q-75-001` remains unmapped in this checkpoint as required; all six new Article 4 knowledge items are explicit Phase 4.3 deficits until the following evidence-reconciliation checkpoint.
+- [x] `takken-q-75-001` is mapped only to `takken-k-farmland-article4-self-conversion-scope`, which is the knowledge directly measured by its four choices. The other five Article 4 knowledge items remain explicit Phase 4.3 deficits.
 - [x] Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses remain unchanged.
 - [x] Phase 4.3 remains unstarted.
 
-Current Phase 4.2 totals: 96/113 fully reconciled concepts, 96 concepts with canonical knowledge items, 516 verified knowledge items, 118 existing verified questions mapped, 347 explicit question-coverage gaps.
+Current Phase 4.2 totals: 96/113 fully reconciled concepts, 96 concepts with canonical knowledge items, 516 verified knowledge items, 119 existing verified questions mapped, 346 explicit question-coverage gaps.
 
-Exact continuation: reconcile verified `takken-q-75-001` against the new `takken-concept-farmland-article4` knowledge items and map only the knowledge directly measured by its four choices. Do not over-map Article 4 knowledge. Do not extract or map `takken-concept-farmland-article5` in the same checkpoint. Do not begin Phase 4.3.
+Exact continuation: extract canonical atomic knowledge items for `takken-concept-farmland-article5` from the 2026-04-01 Farmland Act and official MAFF sources. Do not map `takken-q-75-002` in the same checkpoint. Do not begin Phase 4.3.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
