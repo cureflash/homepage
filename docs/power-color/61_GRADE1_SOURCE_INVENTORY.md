@@ -15,38 +15,28 @@
 - p.029 Itten: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
 - p.030 Moon & Spencer: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
 
-## Light and color frontier
+## Light/color and color-representation frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
 | 1 | 心理的な見えによる色の分類 — 色の様相 | 032 | SECONDARY_CORROBORATION_REQUIRED | 3 audited nonvisual fact families authored; 3/3 verified; PR #647 merged. Not promoted. |
-| 2 | 色の分類 | 035 | SOURCE_BLOCKED | AFT public authority exposes only heading/order. CIE provides multiple legitimate classifications, but no authority ties an exact taxonomy/labels/counts to current AFT p.035. No authoring. |
-| 3 | 照明 — 照明の性質を表すもの | 036 | SECONDARY_CORROBORATION_REQUIRED | Narrow CIE S 017:2020 facts only; 4/4 independently verified. Not promoted. |
-| 4 | 照明 — 測色の照明 | 039 | SECONDARY_CORROBORATION_REQUIRED | Current CIE boundary only: illuminant definition, A, D65, D50. 4/4 independently verified, A/B/C/D=1/1/1/1; CI 33766411922; PR #651 merged. Not promoted. |
-| 5 | 混色 — グラスマンの法則（加法混色の法則性） | 041 | UNCHECKED | Exact next source-audit frontier confirmed by current AFT official table of contents. |
+| 2 | 色の分類 | 035 | SOURCE_BLOCKED | AFT public authority exposes only heading/order. Exact taxonomy/labels/counts remain unauditable. No authoring. |
+| 3 | 照明 — 照明の性質を表すもの | 036 | SECONDARY_CORROBORATION_REQUIRED | Narrow CIE facts only; 4/4 independently verified. Not promoted. |
+| 4 | 照明 — 測色の照明 | 039 | SECONDARY_CORROBORATION_REQUIRED | Current CIE boundary only; 4/4 independently verified; PR #651. Not promoted. |
+| 5 | 混色 — グラスマンの法則（加法混色の法則性） | 041 | SECONDARY_CORROBORATION_REQUIRED | Current CIE S 017:2020 boundary: three-variable sufficiency, tristimulus relevance, continuity, observing-condition limitation. 4/4 verified; CI 33768284181; PR #654. Not promoted. |
+| 6 | 色の表示 — XYZ表色系 | 046 | SECONDARY_CORROBORATION_REQUIRED | Current CIE S 017:2020 boundary: 1931 adoption, [X][Y][Z]+three CMFs, Y↔luminance, ~1°–4° central field. 4/4 verified; CI 33768527950; PR #655. Not promoted. |
+| 7 | 均等色空間とL*a*b*色空間 — 色差の表示 | 050 | UNCHECKED | Exact next source-audit frontier confirmed by current AFT official table of contents. |
 
-## p.032 accepted corroborating boundary
-Audit: `docs/power-color/audits/2026-09-03-grade1-p032-color-appearance-mode-source-audit.md`.
+## p.041 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-03-grade1-p041-grassmann-laws-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-grassmann-laws-p041-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-grassmann-laws-p041-authoring.test.js`.
+Do not infer unpublished AFT numbering conventions, historical alternate formulations, examples, figures, geometry, RGB/HEX/display values, or monitor-facing mixtures.
 
-## p.035 blocked boundary
-Audit: `docs/power-color/audits/2026-09-03-grade1-p035-color-classification-source-audit.md`.
-Do not infer AFT's exact p.035 classification axis, Japanese labels, hierarchy, or closed list from CIE's broader colour vocabulary. Do not duplicate p.032 appearance-mode facts under p.035.
-
-## p.036 accepted corroborating boundary
-Audit: `docs/power-color/audits/2026-09-03-grade1-p036-lighting-properties-source-audit.md`.
-Accepted only luminous flux→lm, luminous intensity→cd, illuminance→lx including 1 lm/m², and colour temperature→same-chromaticity Planckian radiator/K.
-
-## p.039 accepted corroborating boundary
-Audit: `docs/power-color/audits/2026-09-03-grade1-p039-measurement-illuminants-source-audit.md`.
-
-Accepted narrow nonvisual facts only:
-- CIE `illuminant` definition based on a defined relative spectral power distribution;
-- CIE standard illuminant A: typical tungsten-filament lighting / approximately 2856 K Planckian radiator;
-- CIE standard illuminant D65: average daylight / approximately 6500 K correlated colour temperature;
-- CIE standard illuminant D50: daylight / approximately 5000 K correlated colour temperature.
-
-Authoring batch: `qualifications/color-certification/data/grade1-authoring-measurement-illuminants-p039-0001-0004.json`.
-Dedicated gate: `qualifications/color-certification/tests/grade1-measurement-illuminants-p039-authoring.test.js`.
-Do not infer AFT's unpublished complete p.039 list/order/diagrams/application wording, lamp substitutions, spectral-curve appearance, display values, or later JIS light-source colour-name content.
+## p.046 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-03-grade1-p046-xyz-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-xyz-p046-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-xyz-p046-authoring.test.js`.
+Do not infer unpublished AFT diagrams, formula layout, worked examples, chromaticity geometry, RGB/HEX/display values, or visual judgments.
 
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: exact current standard content must be auditable before authoring.
@@ -56,4 +46,4 @@ Do not infer AFT's unpublished complete p.039 list/order/diagrams/application wo
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.041 `グラスマンの法則（加法混色の法則性）` before authoring. Resolve only individually auditable deterministic nonvisual facts and block any unpublished AFT-specific remainder.
+Source-audit p.050 `均等色空間とL*a*b*色空間 — 色差の表示` before authoring. Resolve only individually auditable deterministic nonvisual facts and block any unpublished AFT-specific remainder.
