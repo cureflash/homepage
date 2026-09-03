@@ -12,23 +12,25 @@
 - p.025 Chevreul: narrow `SOURCE_RESOLVED`, 3/3 verified; not promoted.
 - p.027 Rood: `SECONDARY_CORROBORATION_REQUIRED`, 3/3 verified; not promoted.
 - p.028 Ostwald: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
-- p.029 Itten: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; PR #643 merged; not promoted.
-- p.030 Moon & Spencer: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; Power Color CI `33761298016`; PR #644 merged as `26c7ab8935896b080be8cfd1c93d6537bdb91794`; not promoted.
+- p.029 Itten: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
+- p.030 Moon & Spencer: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
 
 ## Light and color frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
-| 1 | 心理的な見えによる色の分類 — 色の様相 | 032 | SECONDARY_CORROBORATION_REQUIRED | Source-audited only; no authoring yet. |
-| 2 | 色の分類 | 035 | UNCHECKED | Follow official order after p.032 authoring/gate. |
+| 1 | 心理的な見えによる色の分類 — 色の様相 | 032 | SECONDARY_CORROBORATION_REQUIRED | 3 audited nonvisual fact families authored; 3/3 verified; CI `33762686528`; PR #647 merged as `8399c278e87ca3eb1b03fd8b42016266a577b7ad`. Not promoted. |
+| 2 | 色の分類 | 035 | UNCHECKED | Exact next source-audit frontier. |
 
 ## p.032 accepted corroborating boundary
 Audit: `docs/power-color/audits/2026-09-03-grade1-p032-color-appearance-mode-source-audit.md`.
 
 Accepted narrow nonvisual facts only:
-- AFT current TOC fixes p.032 membership/order.
-- Journal of Vision/PubMed: mode of color appearance concerns qualitative appearance differences associated with whether light is reflected, emitted, or transmitted.
-- Illuminating Engineering Institute of Japan/CiNii: reflected-surface appearance and self-emitting-light appearance are distinct appearance modes.
-- Journal of Vision/PubMed: mode judgment is not determined solely by the target stimulus; surrounding/depth context can affect it.
+- mode of color appearance concerns qualitative differences associated with reflected/emitted/transmitted light;
+- reflected-surface appearance and self-emitting-light appearance are distinct appearance modes;
+- mode judgment is not determined solely by the target stimulus; surrounding/depth context can affect it.
+
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-light-color-appearance-p032-0001-0003.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-light-color-appearance-p032-authoring.test.js`.
 
 Do not infer the complete unpublished AFT p.032 category inventory, exact Japanese labels/counts, diagrams, threshold luminances, RGB/HEX/display values, or p.035 content.
 
@@ -40,4 +42,4 @@ Do not infer the complete unpublished AFT p.032 category inventory, exact Japane
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-After current-head p.032 audit CI/merge, author only the three audited p.032 nonvisual fact families pending-first and independently QA them. Do not waterfill or reconstruct the unpublished AFT taxonomy.
+Source-audit p.035 `色の分類` before authoring. If AFT public material does not expose an exact taxonomy, classify unresolved exact labels/counts as blocked and only retain individually corroborated deterministic nonvisual facts.
