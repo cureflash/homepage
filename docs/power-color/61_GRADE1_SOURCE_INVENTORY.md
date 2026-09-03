@@ -10,8 +10,8 @@
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
 | 1 | 古代ヨーロッパの色彩 | 006 | SECONDARY_CORROBORATION_REQUIRED | Narrow ancient-Egypt/Greek material and conservation facts are corroborated. `pc1.culture.ancient_europe_materials` has 8 independently rechecked verified records, pending 0, A/B/C/D=2/2/2/2. Authoring gate and normal regression passed in CI `33744000544`; PR #618 merged as `fff4022fdf0c4809b135b29c4277ec83def919c2`. Not yet promoted to runtime. |
-| 2 | 中・近世のヨーロッパの色彩 | 007 | SECONDARY_CORROBORATION_REQUIRED | AFT exposes heading/order but not body text. Getty/Met/National Gallery resolve a narrow text-only manuscript/pigment/material boundary; author only those explicit relations. |
-| 3 | 近代ヨーロッパと色彩学 | 010 | UNREVIEWED | Audit after p.007 authoring/QA checkpoint. |
+| 2 | 中・近世のヨーロッパの色彩 | 007 | SECONDARY_CORROBORATION_REQUIRED | Narrow Getty/Met/National Gallery manuscript/pigment/material facts are corroborated. `pc1.culture.medieval_early_modern_europe_materials` has 8 independently rechecked verified records, pending 0, A/B/C/D=2/2/2/2. Await dedicated gate/normal regression before merge. |
+| 3 | 近代ヨーロッパと色彩学 | 010 | UNREVIEWED | Audit after p.007 authoring gate/merge. |
 | 4 | 日本の古代の色 | 014 | UNREVIEWED | Prefer AFT + Imperial Household Agency / NDL / museums / academic sources. |
 | 5 | 古代から中近世の日本の色彩 | 017 | UNREVIEWED | Same source hierarchy. |
 | 6 | 近代の日本の色彩 | 021 | UNREVIEWED | Same source hierarchy. |
@@ -40,9 +40,14 @@ The 8-record cap is intentional. The audit resolves four narrow fact families; e
 Audit: `docs/power-color/audits/2026-09-03-grade1-p007-medieval-early-modern-europe-source-audit.md`.
 
 Accepted narrow facts only:
-- Getty: medieval manuscript pigments included materials derived from plants, minerals and metals; preparation could involve grinding or chemical/synthetic processing.
+- Getty: medieval manuscript pigments included materials derived from plants, minerals and metals; preparation could involve grinding colored earths or semiprecious stones and mixing with a binding medium, or other chemical/synthetic processing.
 - Getty: ultramarine blue, vermilion red and orpiment yellow are documented among medieval manuscript pigments.
 - Met: the `Belles Heures` used ultramarine made from lapis lazuli.
-- National Gallery: fifteenth-century Italian paintings document expensive ultramarine made from lapis lazuli; selected works also explicitly document gilding and vermilion.
+- National Gallery: Lorenzo Monaco's `The Coronation of the Virgin` documents lapis-lazuli blue described in that work's context as more expensive than gold, together with gilding and vermilion.
 
-Do not generalize these records into a universal medieval palette, symbolic meaning, exact price hierarchy, RGB/HEX/display values, or exhaustive p.007 AFT membership.
+Do not generalize these records into a universal medieval palette, symbolic meaning, exact pigment price hierarchy, RGB/HEX/display values, or exhaustive p.007 AFT membership.
+
+## p.007 authored boundary
+Authoring file: `qualifications/color-certification/data/grade1-authoring-culture-medieval-early-modern-europe-0001-0008.json`.
+
+The 8-record cap is intentional. The audit resolves four narrow fact families; every question stays within those relations and is text-only. All 8 records were created pending-first and independently re-solved as verified before gate execution.
