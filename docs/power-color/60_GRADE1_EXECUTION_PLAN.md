@@ -6,14 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 The user has explicitly overridden the former top-level sequencing condition and made Grade 1 active while Grade 2/3 remain incomplete. Until the stale sentence in `20_EXECUTION_PLAN.md` Phase 5 is mechanically reconciled, this explicit user override plus STATUS/HANDOFF/this Grade 1 plan controls Grade 1 work only. It does not mark Grade 2/3 complete or relax any lower-grade gate.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Begin with `色彩と文化`:
-1. p.006 古代ヨーロッパの色彩
-2. p.007 中・近世のヨーロッパの色彩
-3. p.010 近代ヨーロッパと色彩学
-4. p.014 日本の古代の色
-5. p.017 古代から中近世の日本の色彩
-6. p.021 近代の日本の色彩
-Then continue to p.024 色彩調和論 and later official headings in table-of-contents order.
+Follow the current AFT official Grade 1 textbook table of contents in order. Begin with `色彩と文化`, then continue through `色彩調和論` in official order.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -39,20 +32,18 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 
 ## Completed Grade 1 checkpoints
 - [x] Establish Grade 1 execution plan / source inventory / spec while preserving Grade 2/3 incomplete states and gates.
-- [x] Audit p.006 `古代ヨーロッパの色彩` as `SECONDARY_CORROBORATION_REQUIRED` and author/QA 8/8 verified; CI `33744000544`; PR #618 merged.
-- [x] Audit p.007 `中・近世のヨーロッパの色彩` as `SECONDARY_CORROBORATION_REQUIRED` and author/QA 8/8 verified; CI `33745825195`; PR #621 merged.
-- [x] Audit p.010 `近代ヨーロッパと色彩学` as `SECONDARY_CORROBORATION_REQUIRED` and author/QA 8/8 verified; CI `33747834603`; PR #623 merged.
-- [x] Audit p.014 `日本の古代の色` as `SECONDARY_CORROBORATION_REQUIRED`; resolve a narrow Shosoin/Nara textile-culture boundary.
-- [x] Author p.014 `pc1.culture.ancient_japan_colour` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.
-- [x] Pass synchronized current-head p.014 Power Color CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`.
-- [x] Audit p.017 `古代から中近世の日本の色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Heian `襲色目` structural/seasonal-event boundary plus explicit Agency for Cultural Affairs Edo kosode period/material/technique catalogue facts.
-- [x] Author p.017 `pc1.culture.ancient_to_early_modern_japan` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; full-fingerprint checked against all prior Grade 1 culture authoring batches; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`.
-- [x] Audit p.021 `近代の日本の色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve a narrow text-only boundary covering Meiji chemical-dye/Yuzen development, imported aniline dating evidence, and NDL bibliographic facts for Wada Sanzō's early-Shōwa colour-reference publications.
-- [x] Author p.021 `pc1.culture.modern_japan_colour` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; synchronized CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`.
-- [x] Audit p.024 `色彩調和論とは / ジャッドの色彩調和、四つの原理` as `SECONDARY_CORROBORATION_REQUIRED`; current AFT TOC fixes scope, current AFT Grade 1 sample directly resolves `ナチュラルハーモニー` → Judd `なじみ`, and Waseda academic literature corroborates the four-principle framework; CI `33755869018`; PR #631 merged as `c9c9977f513bd8fdfeaf014e9798d728f1bbe12a`.
-- [x] Author p.024 `pc1.harmony.judd_p024` pending-first and independently QA all 4 finite records: 4/4 verified, pending 0, A/B/C/D=1/1/1/1; wording correction rechecked; synchronized CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
-- [x] Audit p.025 `シュヴルールの色彩調和論` as `SOURCE_RESOLVED` for the narrow current-AFT-official-sample slice: `一つの主調色による調和` → `ドミナント`; one of three `類似色の調和`; includes `隣接・近似色相による色調類似の調和`.
-- [x] Author p.025 `pc1.harmony.chevreul_p025` pending-first and independently QA the complete three-relation first-party state space: 3/3 verified, pending 0, A/B/C/D=1/1/1/0. Stop at three; do not waterfill.
+- [x] p.006 `古代ヨーロッパの色彩`: audit + 8/8 verified; CI `33744000544`; PR #618 merged.
+- [x] p.007 `中・近世のヨーロッパの色彩`: audit + 8/8 verified; CI `33745825195`; PR #621 merged.
+- [x] p.010 `近代ヨーロッパと色彩学`: audit + 8/8 verified; CI `33747834603`; PR #623 merged.
+- [x] p.014 `日本の古代の色`: audit + 8/8 verified; CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`.
+- [x] p.017 `古代から中近世の日本の色彩`: audit + 8/8 verified; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`.
+- [x] p.021 `近代の日本の色彩`: audit + 8/8 verified; CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`.
+- [x] p.024 `色彩調和論とは / ジャッドの色彩調和、四つの原理`: audit + finite 4/4 verified; CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
+- [x] p.025 `シュヴルールの色彩調和論`: `SOURCE_RESOLVED` for current AFT official-sample slice; finite 3/3 verified; head CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`. Stop at three; do not waterfill.
+- [x] p.027 `ルードの色彩調和論`: source audit classified `SECONDARY_CORROBORATION_REQUIRED`; narrow accepted boundary is 1879 `Modern Chromatics`, three constants, optical mixture by separated dots/lines at viewing distance, and complementary-pair enhancement, corroborated by Library of Congress / Metropolitan Museum of Art / ISCC.
+- [x] Author p.027 `pc1.harmony.rood_p027` pending-first and independently re-solve the finite four-record text-only batch: 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated source/nonvisual/full-fingerprint/shared-renderer gate added against all eight prior Grade 1 batches.
+
+No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Pass current-head p.025 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.027 `ルードの色彩調和論` and source-audit it before any authoring. Preserve all Grade 2/3 incomplete states and source/display gates.
+Pass current-head p.027 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.028 `オストワルトの色彩調和論` and source-audit it before any authoring. Preserve all Grade 2/3 incomplete states and source/display gates.
