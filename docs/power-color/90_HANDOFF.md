@@ -4,57 +4,41 @@
 
 Grade 1 is the active priority by explicit user override. Grade 2 and Grade 3 remain incomplete. Do not mark either lower grade complete and do not relax any existing source/display gate.
 
-Canonical Grade 1 working set:
-- `docs/power-color/STATUS.json`
-- `docs/power-color/20_EXECUTION_PLAN.md`
-- `docs/power-color/60_GRADE1_EXECUTION_PLAN.md`
-- `docs/power-color/61_GRADE1_SOURCE_INVENTORY.md`
-- `docs/power-color/62_GRADE1_SPEC.md`
+Canonical Grade 1 working set: `STATUS.json`, `20_EXECUTION_PLAN.md`, `60_GRADE1_EXECUTION_PLAN.md`, `61_GRADE1_SOURCE_INVENTORY.md`, `62_GRADE1_SPEC.md`.
 
 ## Lower-grade preserved state
 
-Grade 3 remains 223 verified / pending 0 and incomplete. Its deferred authority is `91_GRADE3_DEFERRED_HANDOFF.md`; outstanding blockers remain unchanged.
+Grade 3 remains 223 verified / pending 0 and incomplete with its recorded blockers unchanged. Grade 2 remains 348 verified / pending 0 across 29 promoted skills and incomplete at its source-blocked frontier. No lower-grade gate is relaxed.
 
-Grade 2 remains 348 verified / pending 0 across 29 promoted skills and incomplete at its recorded source-blocked frontier. Detailed authority remains `50_GRADE2_EXECUTION_PLAN.md` and `51_GRADE2_CONCEPT_SOURCE_INVENTORY.md`. Do not reopen rejected Grade 2 source routes without new explicit auditable evidence.
+## Grade 1 progress
 
-## Grade 1 completed culture checkpoint
+Culture p.006/p.007/p.010/p.014/p.017/p.021 are source-audited and have 8 independently verified text-only records each. No Grade 1 runtime promotion has occurred yet.
 
-- p.006 `古代ヨーロッパの色彩`: 8 independently verified text-only records; CI `33744000544`; PR #618 merged.
-- p.007 `中・近世のヨーロッパの色彩`: 8 independently verified text-only records; CI `33745825195`; PR #621 merged.
-- p.010 `近代ヨーロッパと色彩学`: 8 independently verified records; CI `33747834603`; PR #623 merged.
-- p.014 `日本の古代の色`: 8 independently verified records; CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`.
-- p.017 `古代から中近世の日本の色彩`: 8 independently verified records, pending 0, A/B/C/D=2/2/2/2; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`.
-- p.021 `近代の日本の色彩`: 8 pending-first text-only records independently re-solved as 8/8 verified, pending 0, A/B/C/D=2/2/2/2; CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`.
+p.024 Judd: `SECONDARY_CORROBORATION_REQUIRED`, finite 4/4 verified; CI `33756393481`; PR #632 merged.
 
-No Grade 1 runtime promotion has occurred yet.
+p.025 Chevreul: `SOURCE_RESOLVED` for three current AFT official-sample relations; 3/3 verified; CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`.
 
-## p.024 Judd checkpoint
+p.027 Rood: `SECONDARY_CORROBORATION_REQUIRED`; finite 3/3 corroborated text-only records verified, pending 0. CI `33758149486`; PR #638 merged as `b89da78340133b5a4abf24408ef4c3930610b917`.
 
-p.024 is `SECONDARY_CORROBORATION_REQUIRED`. `qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json` contains 4 pending-first text-only questions, independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
+## p.028 Ostwald checkpoint
 
-## p.025 Chevreul checkpoint
+p.028 `オストワルトの色彩調和論` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p028-ostwald-source-audit.md`.
 
-p.025 is `SOURCE_RESOLVED` for the three current AFT official-sample relations. `qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json` contains exactly those three first-party relations. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`.
+Accepted narrow nonvisual boundary:
+- Cooper Hewitt/Smithsonian: Ostwald wrote `The Colour Primer` in 1916 and presented a colour system devoted to relationships between colours.
+- Cooper Hewitt summarizes the harmony concept as harmony created by colour order.
+- One scale runs through achromatic colours from white through greys to black.
+- The system is represented in three dimensions as a double cone.
+- Science History Institute's digitized `Die Farbenfibel` record corroborates an original Ostwald colour guide containing sections on achromatic/chromatic colours and colour harmony.
 
-## p.027 Rood checkpoint
+`qualifications/color-certification/data/grade1-authoring-harmony-ostwald-p028-0001-0004.json` contains exactly four pending-first text-only questions, independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated gate `qualifications/color-certification/tests/grade1-harmony-ostwald-p028-authoring.test.js` checks source membership, nonvisual rendering, full fingerprints against all nine earlier Grade 1 batches, and shared renderer behavior.
 
-p.027 `ルードの色彩調和論` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p027-rood-source-audit.md`.
-
-Accepted narrow text-only boundary:
-- The Met records Ogden Nicholas Rood's `Modern chromatics : with applications to art and industry` (1879).
-- University of Chicago academic literature describes Rood's optical mixture: small adjacent lines/dots of different colours can blend perceptually at sufficient viewing distance.
-- The Met's historical discussion associates Rood's theory with complementary hues placed adjacent/layered and intensified in richness.
-
-`qualifications/color-certification/data/grade1-authoring-harmony-rood-p027-0001-0003.json` contains exactly these three corroborated fact families. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. The batch deliberately stops at three rather than waterfilling.
-
-Dedicated gate `qualifications/color-certification/tests/grade1-harmony-rood-p027-authoring.test.js` checks allowed-source membership, nonvisual rendering, full fingerprints against all eight earlier Grade 1 batches, and shared renderer behavior. Current-head CI/merge is still required.
-
-Do not infer unpublished AFT p.027 Japanese rule labels, category counts, chromatic-circle geometry, numerical angle relations, RGB/HEX/display answers, or p.028 Ostwald content.
+Do not reconstruct unpublished AFT p.028 harmony-class names, exact Japanese labels, formulae, double-cone geometry/coordinates, RGB/HEX/display values, image-derived answers, pigment recipes, or p.029 Itten content.
 
 ## Phase 5 sequencing note
 
-`docs/power-color/20_EXECUTION_PLAN.md` still contains the old Grade-2-complete start sentence. The user's repeated explicit directive makes Grade 1 active despite Grade 2/3 remaining incomplete; STATUS and `60_GRADE1_EXECUTION_PLAN.md` record this operational precedence for Grade 1 only. Mechanical cleanup remains pending and must not be interpreted as completing or relaxing Grade 2/3.
+`docs/power-color/20_EXECUTION_PLAN.md` still contains the old Grade-2-complete start sentence. The repeated explicit Grade 1 directive controls Grade 1 work only; Grade 2/3 remain incomplete and gated.
 
 ## Exact next start point
 
-Pass current-head p.027 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.028 `オストワルトの色彩調和論` and source-audit it before authoring.
+Pass current-head p.028 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.029 `イッテンの色彩調和論` and source-audit it before authoring.
