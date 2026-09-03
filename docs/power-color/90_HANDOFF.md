@@ -19,14 +19,12 @@ Grade 2 remains 348 verified / pending 0 across 29 promoted skills and incomplet
 
 ## Grade 1 culture checkpoint
 
-The Grade 1 canonical structure was established in PR #617. Current official order begins with p.006 `古代ヨーロッパの色彩`, then p.007 `中・近世のヨーロッパの色彩`, p.010 `近代ヨーロッパと色彩学`, p.014 `日本の古代の色`, p.017 `古代から中近世の日本の色彩`, and p.021 `近代の日本の色彩`.
+p.006 `古代ヨーロッパの色彩` remains `SECONDARY_CORROBORATION_REQUIRED` at the topic level because AFT does not publish the body text. The narrow audited material/conservation boundary produced `pc1.culture.ancient_europe_materials`: 8 pending-first records, independently re-solved as 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Dedicated schema/source/full-fingerprint/nonvisual/shared-renderer checks and normal Power Color regression passed in CI `33744000544`; PR #618 merged as `fff4022fdf0c4809b135b29c4277ec83def919c2`. These records are authored/verified but not yet promoted to Grade 1 runtime.
 
-p.006 is `SECONDARY_CORROBORATION_REQUIRED`: AFT publicly confirms the heading/order but not the body text. `docs/power-color/audits/2026-09-03-grade1-p006-ancient-europe-source-audit.md` resolves only a narrow nonvisual boundary from museum/scientific authority: Egyptian-blue production/use, Egyptian-faience material/copper coloration, and British Museum conservation evidence for Egyptian blue on Parthenon sculptures. Do not infer symbolic meanings, reconstructed palettes, RGB/HEX/display values, image appearance, or exhaustive unpublished AFT-text membership.
+p.007 `中・近世のヨーロッパの色彩` is now source-audited as `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p007-medieval-early-modern-europe-source-audit.md`. AFT confirms the heading/order but not the body text. The accepted narrow text-only boundary uses Getty, Metropolitan Museum of Art and National Gallery authority for medieval manuscript pigment sources/production, ultramarine from lapis lazuli, documented vermilion/orpiment, and selected fifteenth-century Italian painting material facts.
 
-`qualifications/color-certification/data/grade1-authoring-culture-ancient-europe-materials-0001-0008.json` contains 8 records created pending-first and independently re-solved. Result: checked 8 / verified 8 / needs_revision 0 / rejected 0 / pending 0; A/B/C/D=2/2/2/2. Eight is an intentional cap because the current audit resolves four narrow fact families; do not inflate the batch to 12 through template repetition.
-
-A dedicated Grade 1 p.006 authoring gate checks grade/skill/schema, source allowlist, full-fingerprint uniqueness, nonvisual constraints, answer-position balance, and shared renderer behavior.
+Do not infer universal medieval palettes, color symbolism, exact pigment price hierarchies, RGB/HEX/display values, image appearance, or exhaustive unpublished AFT-text membership.
 
 ## Exact next start point
 
-Run the dedicated p.006 authoring gate and normal Power Color regression on the current authoring head. If green and current with no competing Power Color work, merge it. Then source-audit p.007 `中・近世のヨーロッパの色彩` before any further Grade 1 authoring.
+Author a small pending-first p.007 text-only batch using only the resolved manuscript/pigment/material relations, then independently QA every record. Stop before template repetition or unsupported symbolism/value/display claims. After that, run the dedicated gate and normal Power Color regression before any promotion or move to p.010.
