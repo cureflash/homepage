@@ -9,8 +9,8 @@
 ## Culture chapter frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
-| 1 | 古代ヨーロッパの色彩 | 006 | SECONDARY_CORROBORATION_REQUIRED | AFT exposes scope but not full text. Narrow ancient-Egypt/Greek pigment and polychromy facts can be corroborated by museum scientific/collection authority; do not claim that every corroborated fact is in the unpublished AFT text. |
-| 2 | 中・近世のヨーロッパの色彩 | 007 | UNREVIEWED | Audit after p.006. |
+| 1 | 古代ヨーロッパの色彩 | 006 | SECONDARY_CORROBORATION_REQUIRED | AFT exposes scope but not full text. Narrow ancient-Egypt/Greek material and conservation facts are corroborated. `pc1.culture.ancient_europe_materials` has 8 pending-first independently rechecked records, 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Do not expand beyond the audited fact boundary without new source evidence. |
+| 2 | 中・近世のヨーロッパの色彩 | 007 | UNREVIEWED | Next source-audit target after p.006 gate/merge. |
 | 3 | 近代ヨーロッパと色彩学 | 010 | UNREVIEWED | Audit after p.007. |
 | 4 | 日本の古代の色 | 014 | UNREVIEWED | Prefer AFT + Imperial Household Agency / NDL / museums / academic sources. |
 | 5 | 古代から中近世の日本の色彩 | 017 | UNREVIEWED | Same source hierarchy. |
@@ -27,7 +27,11 @@
 - AFT official Grade 1 TOC: `古代ヨーロッパの色彩` begins p.006.
 - The Metropolitan Museum of Art, `Lump of Blue Paste`: Egyptian blue is a synthetic pigment made from sand, lime, alkali and a copper compound, heated and then grindable as pigment.
 - The Metropolitan Museum of Art, `Egyptian Faience: Technology and Production`: Egyptian faience has a siliceous body and bright glaze; characteristic turquoise blue is created with copper.
-- The Metropolitan Museum of Art, `Papyrus-Making in Egypt`: black/red inks and a range of Egyptian painting pigments are documented; Egyptian blue is identified as a copper-silicate synthetic pigment.
 - British Museum, `Paint and the Parthenon`: surviving Egyptian-blue traces on Parthenon sculptures are detectable by VIL, establishing ancient Greek sculptural polychromy without relying on modern visual reconstruction.
 
 These sources authorize only the stated historical/material facts. They do not authorize unpublished AFT-specific wording, exhaustive p.006 membership, symbolic color meanings, exact palettes, RGB/HEX, or image-based questions.
+
+## p.006 authored boundary
+Authoring file: `qualifications/color-certification/data/grade1-authoring-culture-ancient-europe-materials-0001-0008.json`.
+
+The 8-record cap is intentional. The audit resolves four narrow fact families; extending to the usual 12-record batch would force avoidable template repetition. Every record is text-only, source-bound and independently re-solved before `verified` status.
