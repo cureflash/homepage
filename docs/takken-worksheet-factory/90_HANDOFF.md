@@ -8,11 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Extracted canonical knowledge for `takken-concept-national-land-use-notification` without changing existing Phase 2/3 question content or validation status.
+Reconciled existing verified question evidence for `takken-concept-national-land-use-notification` without changing existing Phase 2/3 question content or validation status.
 
-- Added 10 canonical atomic knowledge items from the 2026-04-01 National Land Use Planning Act framework and official MLIT land-transaction guidance.
-- Separated post-notification scope, rights-acquirer duty, the 2,000 / 5,000 / 10,000 square-metre statutory thresholds, the two-week deadline, the municipality-to-governor submission route, buying-one-group aggregation, notified purpose/price, and the 2026-04-01 corporate-representative-nationality addition.
-- Existing verified `takken-q-73-001` and `takken-q-73-002` were not changed or mapped in this extraction checkpoint.
+- Mapped `takken-q-73-001` only to `takken-k-national-land-use-notification-rights-acquirer` because its four choices test who bears the post-notification duty.
+- Mapped `takken-q-73-002` only to `takken-k-national-land-use-notification-deadline-two-weeks` and `takken-k-national-land-use-notification-route-municipality-prefecture` because its four choices test the deadline and submission route.
+- Kept the other seven national-land-use knowledge items unmapped as explicit Phase 4.3 deficits; no threshold, aggregation, purpose/price, scope, or 2026 nationality item was over-mapped.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,17 +23,17 @@ Extracted canonical knowledge for `takken-concept-national-land-use-notification
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 93/113 fully reconciled concepts
+- Phase 4.2: active — 94/113 fully reconciled concepts
 - Concepts with canonical knowledge items: 94
 - Canonical knowledge items: 503
-- Existing verified questions mapped: 114
-- Explicit unmapped knowledge gaps: 339
+- Existing verified questions mapped: 116
+- Explicit unmapped knowledge gaps: 336
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Map verified `takken-q-73-001` only to the national-land-use knowledge item(s) directly measured by its choices. Map verified `takken-q-73-002` only to the two-week deadline and submission-route item(s) directly measured by its choices. Keep all other national-land-use knowledge items as explicit Phase 4.3 deficits. Do not begin Phase 4.3.
+Extract canonical atomic knowledge items for `takken-concept-farmland-article3` from the 2026-04-01 legal framework and primary official sources. Do not map its existing question(s) until the following evidence-reconciliation checkpoint. Do not begin Phase 4.3.
 
 ## publication invariant
 
