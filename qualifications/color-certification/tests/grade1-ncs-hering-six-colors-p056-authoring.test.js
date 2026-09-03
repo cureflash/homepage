@@ -5,6 +5,24 @@ import { getAnswerFeedbackModel } from '../js/color-choice-renderer.js';
 
 const batch = JSON.parse(await readFile(new URL('../data/grade1-authoring-ncs-hering-six-colors-p056-0001-0004.json', import.meta.url), 'utf8'));
 const priorFiles = [
+  '../data/grade1-authoring-culture-ancient-europe-materials-0001-0008.json',
+  '../data/grade1-authoring-culture-medieval-early-modern-europe-0001-0008.json',
+  '../data/grade1-authoring-culture-modern-europe-color-science-0001-0008.json',
+  '../data/grade1-authoring-culture-ancient-japan-colour-0001-0008.json',
+  '../data/grade1-authoring-culture-ancient-to-early-modern-japan-0001-0008.json',
+  '../data/grade1-authoring-culture-modern-japan-colour-0001-0008.json',
+  '../data/grade1-authoring-harmony-judd-p024-0001-0004.json',
+  '../data/grade1-authoring-harmony-chevreul-p025-0001-0003.json',
+  '../data/grade1-authoring-harmony-rood-p027-0001-0003.json',
+  '../data/grade1-authoring-harmony-ostwald-p028-0001-0004.json',
+  '../data/grade1-authoring-harmony-itten-p029-0001-0004.json',
+  '../data/grade1-authoring-harmony-moon-spencer-p030-0001-0004.json',
+  '../data/grade1-authoring-light-color-appearance-p032-0001-0003.json',
+  '../data/grade1-authoring-lighting-properties-p036-0001-0004.json',
+  '../data/grade1-authoring-measurement-illuminants-p039-0001-0004.json',
+  '../data/grade1-authoring-grassmann-laws-p041-0001-0004.json',
+  '../data/grade1-authoring-xyz-p046-0001-0004.json',
+  '../data/grade1-authoring-cielab-p050-0001-0004.json',
   '../data/grade1-authoring-ostwald-hue-circle-p053-0001-0004.json',
   '../data/grade1-authoring-ostwald-color-notation-p054-0001-0004.json',
   '../data/grade1-authoring-ostwald-equal-hue-plane-p054-0001-0004.json',
@@ -13,7 +31,7 @@ const priorFiles = [
 const prior = await Promise.all(priorFiles.map(async p => JSON.parse(await readFile(new URL(p, import.meta.url), 'utf8'))));
 const fp = q => JSON.stringify([q.sentence, q.choices]);
 
-test('Grade 1 p056 NCS batch gate', () => {
+test('Grade 1 p056 NCS batch remains verified, source-bound, nonvisual and globally unique', () => {
   assert.equal(batch.grade, 1);
   assert.equal(batch.skill.id, 'pc1.color_representation.ncs_hering_six_colors_p056');
   assert.equal(batch.questions.length, 4);
