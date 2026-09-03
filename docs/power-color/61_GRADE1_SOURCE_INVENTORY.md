@@ -15,7 +15,7 @@
 - p.029 Itten: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
 - p.030 Moon & Spencer: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
 
-## Light/color and color-representation frontier
+## Light/color, color-representation, and color-name frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
 | 1 | 心理的な見えによる色の分類 — 色の様相 | 032 | SECONDARY_CORROBORATION_REQUIRED | 3 audited nonvisual fact families authored; 3/3 verified; PR #647 merged. Not promoted. |
@@ -34,10 +34,13 @@
 | 14 | NCS — 等色相面での色の表示 | 058 | SECONDARY_CORROBORATION_REQUIRED | One Colour Triangle per hue, triangle position→nuance, neutrals on vertical side, 1040 notation only. 4/4 verified; CI 33778226671; PR #669. Not promoted. |
 | 15 | NCS — 色の表示方法 | 059 | SECONDARY_CORROBORATION_REQUIRED | Blackness/chromaticness digit-pair interpretation, whiteness formula, 3010→60% whiteness, and S 5020 R50B interpretation only. 4/4 verified; CI 33780351985; PR #672. Not promoted. |
 | 16 | NCS — 色立体と色票集 | 059 | SECONDARY_CORROBORATION_REQUIRED | 3D Colour Space, white-top/black-bottom vertical axis, four chromatic elementary colours arranged around it, and Atlas 2050 all 2,050 Standard Colours arranged by hue/nuance. 4/4 verified; CI 33780517855; PR #673. Not promoted. |
-| 17 | 色名 — 色を表す言葉の分類 | 060 | UNCHECKED | Exact next source-audit frontier. |
-| 18 | 色名 — ISCC-NBS色名法 | 061 | UNCHECKED | Follow only after p.060. |
-| 19 | 色名 — JISの光源色の色名 | 062 | UNCHECKED | Known source-risk candidate; exact current JIS content must be auditable when reached. |
-| 20 | 色名 — 光源色の系統色名 | 062 | UNCHECKED | Known source-risk candidate; do not infer exact system from secondary summaries. |
+| 17 | 色名 — 色を表す言葉の分類 | 060 | SECONDARY_CORROBORATION_REQUIRED | JCRI narrow systematic-vs-conventional/proper boundary only; 4/4 verified; CI 33782146996; PR #675. Not promoted. |
+| 18 | 色名 — ISCC-NBS色名法 | 061 | SECONDARY_CORROBORATION_REQUIRED | NIST/NBS narrow 267-block/history/Munsell-boundary/central-color boundary only; 4/4 verified; CI 33782358574; PR #676. Not promoted. |
+| 19 | 色名 — JISの光源色の色名 | 062 | SOURCE_BLOCKED | JSA confirms JIS Z 8110:1995 valid and confirmed 2024-10-21, but public primary metadata does not expose exact normative naming content. No authoring. |
+| 20 | 色名 — 光源色の系統色名 | 062 | SOURCE_BLOCKED | Exact current systematic-name construction/inventory/modifier rules unavailable from accepted public primary authority; secondary mirrors rejected. No authoring. |
+| 21 | 測色 — 測色とは | 066 | UNCHECKED | Exact next source-audit frontier. |
+| 22 | 測色 — 視感測色―直接比較法 | 067 | UNCHECKED | Follow only after p.066. |
+| 23 | 測色 — 物理測色 | 069 | UNCHECKED | Follow only after p.067. |
 
 ## p.056 色相環と色相の表し方 accepted corroborating boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p056-ncs-hue-circle-notation-source-audit.md`.
@@ -63,12 +66,30 @@ Authoring batch: `qualifications/color-certification/data/grade1-authoring-ncs-c
 Dedicated gate: `qualifications/color-certification/tests/grade1-ncs-color-space-atlas-p059-authoring.test.js`.
 Accepted facts are limited to current NCS first-party statements that NCS Colour Space is 3D; white is at the top and black at the bottom of the vertical axis; four chromatic elementary colours are arranged around it in a circle; and Atlas 2050 contains all 2,050 NCS Standard Colours arranged by hue and nuance. Exact AFT solid geometry/figure, sample placement, swatch appearance, RGB/HEX values, and monitor judgments remain blocked.
 
+## p.060 色を表す言葉の分類 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p060-color-name-classification-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-color-name-classification-p060-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-color-name-classification-p060-authoring.test.js`.
+Accepted facts are limited to the Japan Color Research Institute public statements that systematic color names cover color space by rule, familiar color names can be combined with simple tone modifiers, conventional/proper color names can derive from things/persons, and different conventional/proper names can indicate the same color. Exact AFT taxonomy/count/wording and exact JIS normative content remain blocked.
+
+## p.061 ISCC-NBS色名法 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p061-iscc-nbs-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-iscc-nbs-p061-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-iscc-nbs-p061-authoring.test.js`.
+Accepted facts are limited to NIST/NBS primary material: 267 revised color-name blocks; 1955 revision/NBS Circular 553; elementary block boundaries in Munsell hue/value/chroma; and use of central colors as a faster designation aid for nonborderline colors. Full 267-name inventory, modifier taxonomy, numerical boundaries, centroids, and display values remain excluded.
+
+## p.062 JIS light-source color-name blockers
+Audits:
+- `docs/power-color/audits/2026-09-04-grade1-p062-jis-light-source-color-names-source-audit.md`
+- `docs/power-color/audits/2026-09-04-grade1-p062-light-source-systematic-color-names-source-audit.md`
+Current JSA primary catalog confirms `JIS Z 8110:1995` is valid and was confirmed 2024-10-21, but public metadata exposes only identity/status/scope, not the exact normative color-name/systematic-name content. Public secondary mirrors were inspected as discovery evidence only and rejected as sole authority. Do not repeat this route without new primary evidence.
+
 ## Known later source-risk candidates
-- JISの光源色の色名 / 光源色の系統色名: exact current standard content must be auditable before authoring.
+- JISの光源色の色名 / 光源色の系統色名: now explicitly `SOURCE_BLOCKED`; exact current standard content requires new primary evidence before authoring.
 - 色彩とビジネス / カラーマーケティング / CMF®: AFT-specific procedures must not be filled from generic business practice.
 - ファッション: AFT-specific practical procedures require explicit corroboration.
 - 資料・CMF® `素材と工法`: current reference contents are not assumed from generic materials engineering sources.
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.060 `色名 — 色を表す言葉の分類` before authoring. Preserve official order; do not jump ahead to p.062 JIS topics merely because they are known blocked candidates.
+Source-audit p.066 `測色 — 測色とは` before authoring. Preserve official order and keep both p.062 topics blocked unless new explicit auditable primary authority appears.
