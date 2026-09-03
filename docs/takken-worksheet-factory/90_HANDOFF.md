@@ -8,11 +8,10 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Extracted canonical atomic knowledge items for `takken-concept-replotting-disposition` without changing or mapping existing Phase 2/3 questions.
+Reconciled verified `takken-q-76-002` against `takken-concept-replotting-disposition` without changing existing Phase 2/3 question content or validation state.
 
-- Added 8 verified knowledge items from 土地区画整理法104条: effect start on the day after public notice, replot deemed former land, extinction of rights where no replot is assigned, shift of non-ownership/non-easement rights and restrictions, easement continuity, extinction of easements that lost their benefit, settlement-money fixation, and implementer acquisition of reserved land.
-- Sources are the Land Readjustment Act as of 2026-04-01 and official MLIT land-readjustment operation guidance.
-- `takken-q-76-002` directly measures only the effect-start timing; it has not yet been mapped because extraction and evidence reconciliation remain separate checkpoints.
+- Mapped `takken-q-76-002` only to `takken-k-replotting-disposition-effect-start-next-day`, because its stem and four choices directly measure when the legal effects of replotting disposition begin.
+- The other 7 canonical `takken-concept-replotting-disposition` knowledge items remain explicit Phase 4.3 deficits; they were not over-mapped from a question that does not directly test them.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,17 +22,17 @@ Extracted canonical atomic knowledge items for `takken-concept-replotting-dispos
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 99/113 concepts with canonical knowledge extraction complete; 98/113 fully reconciled through question mapping
+- Phase 4.2: active — 99/113 concepts with canonical knowledge extraction complete; 99/113 fully reconciled through question mapping
 - Concepts with canonical knowledge items: 99
 - Canonical knowledge items: 536
-- Existing verified questions mapped: 121
-- Explicit unmapped knowledge gaps: 362
+- Existing verified questions mapped: 122
+- Explicit unmapped knowledge gaps: 361
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile verified `takken-q-76-002` against `takken-concept-replotting-disposition` and map only the knowledge item or items directly measured by its stem and four choices. Do not start `takken-concept-embankment-regulation` in the same checkpoint. Do not begin Phase 4.3.
+Extract canonical atomic knowledge items for `takken-concept-embankment-regulation` from 2026-04-01 primary sources. Keep knowledge extraction and existing-question evidence mapping as separate checkpoints; do not map its source question in the same checkpoint. Do not begin Phase 4.3.
 
 ## publication invariant
 
