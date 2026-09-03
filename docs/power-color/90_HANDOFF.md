@@ -19,16 +19,16 @@ Grade 2 remains 348 verified / pending 0 across 29 promoted skills and incomplet
 
 ## Grade 1 culture checkpoint
 
-p.006 `古代ヨーロッパの色彩`: `SECONDARY_CORROBORATION_REQUIRED`; `pc1.culture.ancient_europe_materials` has 8 independently verified records, pending 0. CI `33744000544`; PR #618 merged as `fff4022fdf0c4809b135b29c4277ec83def919c2`.
+p.006 `古代ヨーロッパの色彩`: `SECONDARY_CORROBORATION_REQUIRED`; `pc1.culture.ancient_europe_materials` has 8 independently verified records, pending 0. CI `33744000544`; PR #618 merged.
 
-p.007 `中・近世のヨーロッパの色彩`: `SECONDARY_CORROBORATION_REQUIRED`; `pc1.culture.medieval_early_modern_europe_materials` has 8 independently verified records, pending 0. CI `33745825195`; PR #621 merged as `6adb39143b0765e65fa0762a9fea75ee6ad76c65`.
+p.007 `中・近世のヨーロッパの色彩`: `SECONDARY_CORROBORATION_REQUIRED`; `pc1.culture.medieval_early_modern_europe_materials` has 8 independently verified records, pending 0. CI `33745825195`; PR #621 merged.
 
-p.010 `近代ヨーロッパと色彩学`: `SECONDARY_CORROBORATION_REQUIRED`; `pc1.culture.modern_europe_color_science` has 8 independently verified records, pending 0, A/B/C/D=2/2/2/2. Dedicated source/nonvisual/full-fingerprint/shared-renderer checks and normal Power Color regression passed in CI `33747834603`; PR #623 merged as `f26b52f8ef6d8e9426e614c39da9174f068d3d93`. These records are not yet promoted to Grade 1 runtime.
+p.010 `近代ヨーロッパと色彩学`: `SECONDARY_CORROBORATION_REQUIRED`; `pc1.culture.modern_europe_color_science` has 8 independently verified records, pending 0, A/B/C/D=2/2/2/2. CI `33747834603`; PR #623 merged. These records are not yet promoted to Grade 1 runtime.
 
-p.014 `日本の古代の色` is source-audited as `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p014-ancient-japan-colour-source-audit.md`. AFT confirms the heading/order but not the body text. Imperial Household Agency authority resolves the Shosoin/eighth-century Nara-period/material-culture relation. Kyoto National Museum resolves a narrow ancient-textile boundary: Korean-peninsula/Chinese influence in ancient Japan; Asuka/Nara influence from Baekje, Goguryeo, Sui and Tang; textiles `錦`/`綾`/`羅`; dye techniques `臈纈`/`夾纈`/`纐纈`; and Horyuji/Shosoin textiles as surviving ancient material. Selected Kyoto National Museum catalogue records also textually identify Nara-period silk fragments including `緑地唐花文錦`, `赤地唐花文錦`, and `淡青地葡萄唐草文綾`.
+p.014 `日本の古代の色`: `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p014-ancient-japan-colour-source-audit.md`. `pc1.culture.ancient_japan_colour` now has 8 pending-first records independently re-solved as 8/8 verified, pending 0, A/B/C/D=2/2/2/2. The accepted boundary remains only Shosoin eighth-century/Nara-period relations, continental influence, named textile/dye-technique categories, Horyuji/Shosoin surviving-material context, and selected Kyoto National Museum catalogue title/period/material facts. Do not infer dye chemistry, reconstructed appearance, RGB/HEX/display values, court-rank symbolism, universal colour meanings, or exhaustive unpublished AFT membership.
 
-Do not infer exact dye chemistry, reconstructed original colour appearance, RGB/HEX/display values, court-rank symbolism, universal ancient-Japan colour meanings, or exhaustive unpublished AFT p.014 membership.
+Dedicated source/nonvisual/full-fingerprint/shared-renderer checks and normal Power Color regression passed in CI `33749556806` on PR #625 head `86c1bc93bba65d3f377f1cccd15d527189f7aa04`. Canonical STATUS/PLAN/source inventory/handoff synchronization is on the same PR; require a green current-head rerun before merge. No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
 
-Author a small pending-first p.014 text-only batch using only the resolved Shosoin/Nara-period, continental-influence, textile/dye-technique-category and catalogue-record relations. Independently QA every record before any promotion.
+After PR #625 merges green on the synchronized current head, source-audit p.017 `古代から中近世の日本の色彩` in official AFT order. Use AFT scope first and only explicit museum/government/NDL/university/academic text facts for corroboration. Do not infer unpublished AFT membership, image appearance, reconstructed colours or display values.
