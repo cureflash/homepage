@@ -11,23 +11,23 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "passed_pre_sync", "workflow_run": 33755113622, "pr": 630, "merge_commit": null, "skill": "pc1.culture.modern_japan_colour", "verified": 8},
+    "latest_authoring_gate": {"status": "passed", "workflow_run": 33755336513, "pr": 630, "merge_commit": "b69572f7b3e55732e72ac4e0496595bb505d0308", "skill": "pc1.culture.modern_japan_colour", "verified": 8},
     "active_section": "色彩調和論",
-    "active_topic": "p.024 色彩調和論",
-    "active_topic_source_status": null,
-    "source_audit": null,
+    "active_topic": "p.024 色彩調和論とは / ジャッドの色彩調和、四つの原理",
+    "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
+    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p024-color-harmony-judd-source-audit.md",
     "active_authoring": null,
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. The user's repeated explicit Grade 1 override resolves operational precedence for Grade 1 only; 60_GRADE1_EXECUTION_PLAN.md records that override while Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup of the stale sentence is still pending.",
-    "next": "After PR #630 passes synchronized current-head CI and merges, source-audit p.024 色彩調和論 before any authoring."
+    "next": "Author only the narrow p.024 text-only state space accepted by the p.024 audit, pending-first, then independently QA it without translating unstated Japanese AFT labels."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; PR #629 was merged and no competing Grade 1 authoring PR existed.", "Authored 8 pending-first text-only p.021 records from the accepted Kyoto National Museum, Agency for Cultural Affairs, and NDL fact families only.", "Independently re-derived all 8 answers before comparison: 8 verified / 0 needs_revision / 0 rejected / pending 0; A/B/C/D=2/2/2/2; dedicated source/nonvisual/full-fingerprint/shared-renderer gate passed in Power Color CI 33755113622.", "Synchronized Grade 1 plan/source inventory/status/handoff toward p.024 while preserving Grade 2/3 incomplete states and all source/display gates." ]},
+  "current_run": {"checkpoints_completed": 6, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches and completed the p.021 authoring PR #630 on synchronized CI 33755336513; merge commit b69572f7b3e55732e72ac4e0496595bb505d0308.", "p.021 authored 8 pending-first text-only records and independently re-derived all 8 answers: 8 verified / 0 needs_revision / 0 rejected / pending 0; A/B/C/D=2/2/2/2.", "Confirmed the current AFT official Grade 1 TOC: p.024 contains 色彩調和論とは and ジャッドの色彩調和、四つの原理, followed by p.025 Chevreul, p.027 Rood, p.028 Ostwald, p.029 Itten, p.030 Moon/Spencer.", "Confirmed current AFT official sample authority directly tests ナチュラルハーモニー → Judd なじみ.", "Corroborated Judd's four-principle framework and Familiarity/natural-harmony relation with Waseda academic literature; classified p.024 SECONDARY_CORROBORATION_REQUIRED with a narrow nonvisual boundary.", "Synchronized Grade 1 source inventory/execution plan/status toward narrow p.024 authoring while preserving Grade 2/3 incomplete states and all source/display gates." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Pass synchronized current-head CI, merge PR #630, then source-audit p.024 色彩調和論."
+  "next": "Merge the p.024 source-audit checkpoint after current-head CI, then author and independently QA the narrow p.024 text-only state space."
 }
