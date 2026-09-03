@@ -24,6 +24,10 @@ p.069 `測色 — 物理測色` is `SECONDARY_CORROBORATION_REQUIRED`. NIST reso
 
 p.072 `色彩心理 — 心理学的尺度構成法の基本` is `SECONDARY_CORROBORATION_REQUIRED`. Tokyo Metropolitan University and Osaka University independently corroborate the nominal/ordinal/interval/ratio defining properties. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. CI `33786140834`; PR #684 merged as `f83ce35731ba3c20ff8e3a6655dfa0e2c023299b`.
 
+p.073 `色彩心理 — 心理学的尺度構成法` is `SECONDARY_CORROBORATION_REQUIRED`. Current AFT first-party seminar material explicitly confirms that the Grade 1 pp.72–79 section includes `一対比較法` and `SD法`; Keio University and University of Electro-Communications material resolves only the narrow pairwise-comparison / psychological-distance and adjective-pair SD boundaries. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. CI `33788360033`; PR #686 merged as `4f56e09aadbf0cc5f924834bbb72c8418b7e27a3`.
+
+p.080 `色彩心理 — 心理物理学的測定法` is `SECONDARY_CORROBORATION_REQUIRED`. Tohoku Gakuin University psychology material resolves only the classical constant-stimuli / limits / adjustment method boundary and their basic nonvisual procedure distinctions. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. CI `33788707578`; PR #687 merged as `25ca9c7ce080cad954cd97e3852ab00301f34815`.
+
 No Grade 1 runtime promotion has occurred yet.
 
 ## Source/display boundary
@@ -32,8 +36,8 @@ Do not reconstruct unpublished AFT wording, numbering/symbol conventions, diagra
 
 ## Canonical sequencing note
 
-The current AFT official Grade 1 textbook table of contents confirms p.069 `物理測色` → p.072 `心理学的尺度構成法の基本` → p.073 `心理学的尺度構成法`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
+The current AFT official Grade 1 textbook table of contents confirms p.072 `心理学的尺度構成法の基本` → p.073 `心理学的尺度構成法` → p.080 `心理物理学的測定法` → p.082 `記憶色と色記憶`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
 
 ## Exact next start point
 
-Source-audit p.073 `色彩心理 — 心理学的尺度構成法` before any authoring. Keep both p.062 JIS topics blocked unless new explicit auditable primary authority appears.
+Source-audit p.082 `色彩心理 — 色の心理的効果 — 記憶色と色記憶` before any authoring. Keep both p.062 JIS topics blocked unless new explicit auditable primary authority appears.
