@@ -11,9 +11,9 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33764681592, "pr": 649, "merge_commit": "dc23c62332c1137ffdd9d18057f3aa8d7c734ee8", "skill": "pc1.light_color.lighting_properties_p036", "verified": 4},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33766411922, "pr": 651, "merge_commit": "0834e4ee78b475cb8547306e047bdcbaa2d24b79", "skill": "pc1.light_color.measurement_illuminants_p039", "verified": 4},
     "active_section": "光と色",
-    "active_topic": "p.039 測色の照明",
+    "active_topic": "p.041 グラスマンの法則（加法混色の法則性）",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.039 測色の照明 before any authoring; preserve the p.035 SOURCE_BLOCKED boundary and do not reconstruct unpublished AFT p.039 body content."
+    "next": "Source-audit p.041 グラスマンの法則（加法混色の法則性） before any authoring; preserve all prior blocked boundaries and do not infer unpublished AFT details."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 4, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, Grade 1 canonical files, open PRs and in-progress Power Color branches; found no competing p.035/p.036 checkpoint.", "Source-audited p.035 色の分類 as SOURCE_BLOCKED because current AFT public authority does not expose the exact taxonomy and CIE provides multiple possible classifications; recorded rejected repeat routes and authored no p.035 questions.", "Continued official order and source-audited p.036 照明の性質を表すもの as SECONDARY_CORROBORATION_REQUIRED, accepting only four deterministic CIE S 017:2020 nonvisual fact families.", "Authored those four p.036 facts pending-first; independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; dedicated full-fingerprint/nonvisual/shared-renderer gate and Power Color CI 33764681592 succeeded; PR #649 merged as dc23c62332c1137ffdd9d18057f3aa8d7c734ee8; canonical plan/handoff/source inventory synchronized and STATUS finalized." ]},
+  "current_run": {"checkpoints_completed": 3, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, Grade 1 canonical files, open PRs and Power Color branches; found no competing p.039 checkpoint.", "Source-audited p.039 測色の照明 as SECONDARY_CORROBORATION_REQUIRED using current CIE authority only; accepted four nonvisual fact families and blocked unpublished AFT-specific remainder.", "Authored four p.039 records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; dedicated full-fingerprint/nonvisual/shared-renderer gate passed in Power Color CI 33766411922; PR #651 merged as 0834e4ee78b475cb8547306e047bdcbaa2d24b79; canonical Grade 1 files synchronized to p.041 next frontier." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.039 測色の照明 before any authoring; preserve the p.035 SOURCE_BLOCKED boundary and do not reconstruct unpublished AFT p.039 body content."
+  "next": "Source-audit p.041 グラスマンの法則（加法混色の法則性） before any authoring."
 }
