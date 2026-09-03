@@ -28,24 +28,24 @@
 | 8 | オストワルト表色系 — 色相環 | 053 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; CI 33772390636; PR #659. Not promoted. |
 | 9 | オストワルト表色系 — 色の表示方法 | 054 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; CI 33772632526; PR #660. Not promoted. |
 | 10 | オストワルト表色系 — 等色相面 | 054 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; CI 33774043678; PR #663. Not promoted. |
-| 11 | オストワルト表色系 — 色立体 | 055 | SECONDARY_CORROBORATION_REQUIRED | Hue-triangle/color-solid relation, clear sequences on outside surface, equal-blackness/equal-whiteness scales only. 3/3 verified; CI 33776217684; PR #665. Not promoted. |
-| 12 | NCS — へリングの6主要色 | 056 | SECONDARY_CORROBORATION_REQUIRED | Six elementary colours, four chromatic elementary colours, explicit pure-yellow perception relation, and foundation-of-NCS-notation role only. 4/4 verified; CI 33776482393; PR #666. Not promoted. |
-| 13 | NCS — 色相環と色相の表し方 | 056 | UNCHECKED | Exact next source-audit frontier confirmed by current AFT official table of contents. |
-| 14 | NCS — 等色相面での色の表示 | 058 | UNCHECKED | Follow only after p.056 色相環と色相の表し方. |
-| 15 | NCS — 色の表示方法 | 059 | UNCHECKED | Follow in official order. |
-| 16 | NCS — 色立体と色票集 | 059 | UNCHECKED | Follow in official order. |
+| 11 | オストワルト表色系 — 色立体 | 055 | SECONDARY_CORROBORATION_REQUIRED | 3/3 verified; CI 33776217684; PR #665. Not promoted. |
+| 12 | NCS — へリングの6主要色 | 056 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; CI 33776482393; PR #666. Not promoted. |
+| 13 | NCS — 色相環と色相の表し方 | 056 | SECONDARY_CORROBORATION_REQUIRED | Colour Circle/four chromatic elementary colours, R20B, neutral -N, and hue/nuance split only. 4/4 verified; CI 33778046172; PR #668. Not promoted. |
+| 14 | NCS — 等色相面での色の表示 | 058 | SECONDARY_CORROBORATION_REQUIRED | One Colour Triangle per hue, triangle position→nuance, neutrals on vertical side, 1040 notation only. 4/4 verified; CI 33778226671; PR #669. Not promoted. |
+| 15 | NCS — 色の表示方法 | 059 | UNCHECKED | Exact next source-audit frontier confirmed by current AFT official table of contents. |
+| 16 | NCS — 色立体と色票集 | 059 | UNCHECKED | Follow only after p.059 色の表示方法. |
 
-## p.055 accepted corroborating boundary
-Audit: `docs/power-color/audits/2026-09-04-grade1-p055-ostwald-color-solid-source-audit.md`.
-Authoring batch: `qualifications/color-certification/data/grade1-authoring-ostwald-color-solid-p055-0001-0003.json`.
-Dedicated gate: `qualifications/color-certification/tests/grade1-ostwald-color-solid-p055-authoring.test.js`.
-Accepted facts are limited to the hue-triangle/color-solid relation, important clear sequences on the outside surface, and defined equal-blackness/equal-whiteness scales. Exact AFT geometry, orientation, cross-sections, labels, symbols, examples and display values remain blocked.
+## p.056 色相環と色相の表し方 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p056-ncs-hue-circle-notation-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-ncs-hue-circle-notation-p056-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-ncs-hue-circle-notation-p056-authoring.test.js`.
+Accepted facts are limited to the current NCS first-party statements that the Colour Circle describes hue relative to four chromatic elementary colours, `R20B` means red with 20% blue, neutral colours have no hue and use `-N`, and `R20B` is the hue portion of `NCS S 1040-R20B`. Exact AFT diagram geometry, angular placement, label layout, swatch appearance, and display values remain blocked.
 
-## p.056 へリングの6主要色 accepted corroborating boundary
-Audit: `docs/power-color/audits/2026-09-04-grade1-p056-ncs-hering-six-colors-source-audit.md`.
-Authoring batch: `qualifications/color-certification/data/grade1-authoring-ncs-hering-six-colors-p056-0001-0004.json`.
-Dedicated gate: `qualifications/color-certification/tests/grade1-ncs-hering-six-colors-p056-authoring.test.js`.
-Accepted facts are limited to white/black/yellow/red/blue/green as the six elementary colours, yellow/red/blue/green as the four chromatic elementary colours, the explicit pure-yellow perception relation, and the role of the six elementary colours as the foundation of NCS notations. The AFT heading supplies the Hering topic attribution only. Do not infer current AFT figure geometry, historical wording, RGB/HEX values, or monitor judgments.
+## p.058 等色相面での色の表示 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p058-ncs-equal-hue-plane-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-ncs-equal-hue-plane-p058-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-ncs-equal-hue-plane-p058-authoring.test.js`.
+Accepted facts are limited to one NCS Colour Triangle per hue, triangle position defining nuance, neutrals lying along the vertical side, and `1040` meaning 10% blackness / 40% chromaticness. Exact AFT triangle geometry, label placement, orientation beyond explicit source text, swatch appearance, RGB/HEX values, and monitor judgments remain blocked.
 
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: exact current standard content must be auditable before authoring.
@@ -55,4 +55,4 @@ Accepted facts are limited to white/black/yellow/red/blue/green as the six eleme
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.056 `NCS — 色相環と色相の表し方` before authoring. Resolve only individually auditable deterministic nonvisual facts from AFT/NCS authority; do not infer unpublished AFT geometry, notation examples, or display values.
+Source-audit p.059 `NCS — 色の表示方法` before authoring. Resolve only individually auditable deterministic nonvisual facts from AFT/NCS authority; do not infer unpublished AFT geometry, notation layout, swatches, or display values.
