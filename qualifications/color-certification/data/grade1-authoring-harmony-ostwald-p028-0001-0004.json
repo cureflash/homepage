@@ -1,0 +1,106 @@
+{
+  "format": "power-color-grade1-authoring-v1",
+  "grade": 1,
+  "skill": {
+    "id": "pc1.harmony.ostwald_p028",
+    "label": "色彩調和論：オストワルト（p.028 narrow slice）",
+    "categoryId": "pc1.harmony"
+  },
+  "sourceContract": "docs/power-color/audits/2026-09-03-grade1-p028-ostwald-source-audit.md",
+  "derivationRule": "Use only the four audited nonvisual Ostwald fact families from the current AFT p.028 scope plus the peer-reviewed Color Research & Application corroboration: W/B/C defining dimensions; pure/full colour when no black or white is added; neutral black-white axis perpendicular to the hue equator with triangular sections forming a double cone; regular-polygon harmony schemes in later 24-hue versions. Do not infer unpublished AFT labels, notation tables, diagrams, RGB/HEX/display values, or p.029 content.",
+  "qaSummary": {
+    "generated": 4,
+    "checked": 4,
+    "verified": 4,
+    "needsRevision": 0,
+    "rejected": 0,
+    "pending": 0,
+    "correctIndexDistribution": {"A": 1, "B": 1, "C": 1, "D": 1}
+  },
+  "questions": [
+    {
+      "id": "pc1-harmony-ostwald-p028-0001",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/ostwald_p028",
+      "skillId": "pc1.harmony.ostwald_p028",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "査読誌の監査済み資料で、オストワルトの表面色体系を定義する3つの要素として示される組み合わせはどれですか。",
+      "sentence": "査読誌の監査済み資料で、オストワルトの表面色体系を定義する3つの要素として示される組み合わせはどれですか。",
+      "choices": ["白色量・黒色量・純色量", "色相・明度・彩度", "赤・緑・青", "黄・赤・青"],
+      "proposedAnswer": "白色量・黒色量・純色量",
+      "correctIndex": 0,
+      "explanation": "Color Research & Applicationの監査済み論文では、オストワルトは表面色の体系を白色量（W）、黒色量（B）、純色量（C）の3要素で記述したと説明されています。",
+      "sourceRefs": ["wiley_ostwald_harmony_manual"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently re-read the peer-reviewed Ostwald section and confirmed W, B and C as the three defining dimensions before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-ostwald-p028-0002",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/ostwald_p028",
+      "skillId": "pc1.harmony.ostwald_p028",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "同じ監査済み資料で、オストワルト体系の純色について最も適切な説明はどれですか。",
+      "sentence": "同じ監査済み資料で、オストワルト体系の純色について最も適切な説明はどれですか。",
+      "choices": ["白と黒を同量ずつ加えた色", "白も黒も加えていない色", "黒だけを最大量加えた色", "白だけを最大量加えた色"],
+      "proposedAnswer": "白も黒も加えていない色",
+      "correctIndex": 1,
+      "explanation": "監査済み論文は、顔料混合に黒も白も含まれないときにpure colour（純色）が得られると説明しています。",
+      "sourceRefs": ["wiley_ostwald_harmony_manual"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently re-derived the pure-colour condition from the peer-reviewed source before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-ostwald-p028-0003",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/ostwald_p028",
+      "skillId": "pc1.harmony.ostwald_p028",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "オストワルトの色立体について、監査済み資料の説明に合うものはどれですか。",
+      "sentence": "オストワルトの色立体について、監査済み資料の説明に合うものはどれですか。",
+      "choices": ["中性色軸は色相環と同じ平面にだけ置かれる", "各色相は白または黒のどちらか一方とだけ結ばれる", "黒から白への中性色軸が色相の赤道面に垂直で、純色・白・黒を結ぶ断面から二重円錐が構成される", "色立体は無彩色を含まない平面図だけで構成される"],
+      "proposedAnswer": "黒から白への中性色軸が色相の赤道面に垂直で、純色・白・黒を結ぶ断面から二重円錐が構成される",
+      "correctIndex": 2,
+      "explanation": "監査済み論文では、黒から白へ伸びる中性色軸が純色の色相赤道面に垂直に置かれ、各純色と白・黒を結ぶ三角形の断面から全体として二重円錐が構成されると説明されています。",
+      "sourceRefs": ["wiley_ostwald_harmony_manual"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently checked the neutral-axis, hue-equator, triangular-section and double-cone relations in the peer-reviewed source before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-ostwald-p028-0004",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/ostwald_p028",
+      "skillId": "pc1.harmony.ostwald_p028",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "後期の24色相版オストワルト体系で、調和配色の関係を示す方法として監査済み資料が述べるものはどれですか。",
+      "sentence": "後期の24色相版オストワルト体系で、調和配色の関係を示す方法として監査済み資料が述べるものはどれですか。",
+      "choices": ["各色をRGB値だけで並べる", "色票を年代順だけで並べる", "一つの色相だけを固定して他を除外する", "色相環に正多角形を描き、その頂点で調和する2色・3色・4色・6色の組を示す"],
+      "proposedAnswer": "色相環に正多角形を描き、その頂点で調和する2色・3色・4色・6色の組を示す",
+      "correctIndex": 3,
+      "explanation": "Color Research & Applicationの論文は、後期の24色相版では正多角形の頂点を用いて、調和するcouples、triples、quadruples、sextuplesを明確に定義できると説明しています。",
+      "sourceRefs": ["wiley_ostwald_harmony_manual"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently re-read the regular-polygon harmony-scheme statement for later 24-hue versions before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    }
+  ],
+  "sources": [
+    {
+      "id": "wiley_ostwald_harmony_manual",
+      "authority": "Color Research & Application (Wiley), peer-reviewed article",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/col.22818",
+      "use": "Dedicated Ostwald Colour Harmony Manual section: W/B/C dimensions, pure-colour condition, neutral-axis/double-cone structure, and regular-polygon harmony schemes in later 24-hue versions"
+    }
+  ]
+}
