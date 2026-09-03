@@ -11,22 +11,22 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "passed", "workflow_run": 33747834603, "pr": 623, "merge_commit": "f26b52f8ef6d8e9426e614c39da9174f068d3d93", "skill": "pc1.culture.modern_europe_color_science", "verified": 8},
+    "latest_authoring_gate": {"status": "passed", "workflow_run": 33749556806, "pr": 625, "head": "86c1bc93bba65d3f377f1cccd15d527189f7aa04", "skill": "pc1.culture.ancient_japan_colour", "verified": 8},
     "active_section": "色彩と文化",
-    "active_topic": "p.014 日本の古代の色",
-    "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
-    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p014-ancient-japan-colour-source-audit.md",
+    "active_topic": "p.017 古代から中近世の日本の色彩",
+    "active_topic_source_status": "UNREVIEWED",
+    "source_audit": null,
     "active_authoring": null,
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
-    "next": "Author a small pending-first p.014 text-only batch from the resolved Shosoin/Nara-period and ancient-textile boundary, then independently QA every record."
+    "next": "After PR #625 merges green on the synchronized current head, source-audit p.017 古代から中近世の日本の色彩 in official AFT order."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main b2c46e5ed52e863b142a6637fe8d5e8bbeb4c250 after PR #622.", "Authored and independently re-solved p.010 pc1.culture.modern_europe_color_science: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.", "Power Color CI 33747834603 passed; PR #623 merged as f26b52f8ef6d8e9426e614c39da9174f068d3d93.", "Audited p.014 日本の古代の色 as SECONDARY_CORROBORATION_REQUIRED using AFT scope plus Imperial Household Agency and Kyoto National Museum institutional sources."]},
+  "current_run": {"checkpoints_completed": 3, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main 1fcacdd0d325406d623065ad58aad58ed2da1fc4 after PR #624 and confirmed no competing open Power Color Grade 1 PR.", "Authored and independently re-solved p.014 pc1.culture.ancient_japan_colour: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.", "Dedicated p.014 source/nonvisual/full-fingerprint/shared-renderer gate and normal Power Color regression passed in CI 33749556806 on PR #625 head 86c1bc93bba65d3f377f1cccd15d527189f7aa04; canonical synchronization is on the same PR before final merge." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 1 culture with p.014 pending-first authoring and independent QA."
+  "next": "Merge PR #625 only after synchronized current-head CI is green, then source-audit Grade 1 p.017."
 }
