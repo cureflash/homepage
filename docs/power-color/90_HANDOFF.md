@@ -8,24 +8,20 @@ Canonical Grade 1 working set: `STATUS.json`, `20_EXECUTION_PLAN.md`, `60_GRADE1
 
 ## Grade 1 progress
 
-Culture p.006/p.007/p.010/p.014/p.017/p.021 and harmony p.024/p.025/p.027/p.028/p.029/p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` has 3/3 independently verified nonvisual records. p.035 `色の分類` remains `SOURCE_BLOCKED`; no authoring. p.036 `照明の性質を表すもの` has 4/4 independently verified nonvisual records.
+Culture p.006/p.007/p.010/p.014/p.017/p.021 and harmony p.024/p.025/p.027/p.028/p.029/p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` has 3/3 independently verified nonvisual records. p.035 `色の分類` remains `SOURCE_BLOCKED`; no authoring. p.036 `照明の性質を表すもの` has 4/4 independently verified nonvisual records. p.039 `測色の照明` has 4/4 independently verified nonvisual records.
 
-p.039 `測色の照明` is `SECONDARY_CORROBORATION_REQUIRED`. Current CIE authority resolves only four deterministic nonvisual fact families: illuminant definition, CIE standard illuminant A, D65, and D50. These were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Power Color CI `33766411922` succeeded and PR #651 merged as `0834e4ee78b475cb8547306e047bdcbaa2d24b79`. Batch: `qualifications/color-certification/data/grade1-authoring-measurement-illuminants-p039-0001-0004.json`; gate: `qualifications/color-certification/tests/grade1-measurement-illuminants-p039-authoring.test.js`.
+p.041 `グラスマンの法則（加法混色の法則性）` is `SECONDARY_CORROBORATION_REQUIRED`. Current CIE S 017:2020 resolves four deterministic nonvisual fact families: three independent variables necessary/sufficient for a colour match; tristimulus-values relevance rather than component spectral compositions; continuity under gradual component changes; and the explicit limitation that the laws do not hold under all observing conditions. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Power Color CI `33768284181` succeeded; PR #654 merged as `b3e2efbb178948f89f5f1c0926719215caab66da`.
 
-## p.039 accepted boundary
+p.046 `XYZ表色系` is `SECONDARY_CORROBORATION_REQUIRED`. Current CIE S 017:2020 resolves four deterministic nonvisual fact families: adoption in 1931; use of reference stimuli [X][Y][Z] and three CIE colour-matching functions; Y proportional to luminance via V(λ); and applicability to centrally viewed fields of about 1°–4°. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Power Color CI `33768527950` succeeded; PR #655 merged as `c84d76ca7bb9954c4fee3cb61cd6a8d898489f64`.
 
-Only these facts are authored:
-- CIE `illuminant`: radiation with a relative spectral power distribution defined over the wavelength range influencing object-colour perception;
-- standard illuminant A: typical tungsten-filament lighting / approximately 2856 K Planckian radiator;
-- standard illuminant D65: average daylight / approximately 6500 K correlated colour temperature;
-- standard illuminant D50: daylight / approximately 5000 K correlated colour temperature.
+## Source/display boundary
 
-Do not infer the unpublished AFT p.039 complete inventory/order/diagrams/application wording, practical lamp substitutions, spectral-curve appearance, RGB/HEX/display values, or later JIS light-source colour-name content.
+Do not reconstruct unpublished AFT wording, numbering conventions, diagrams, formula layouts, worked examples, geometry, RGB/HEX/display values, or monitor-facing judgments for p.041/p.046. Current CIE terminology is corroborating authority for the narrow authored facts only.
 
 ## Canonical sequencing note
 
-The current AFT official Grade 1 textbook table of contents confirms the next official item after p.039 is p.041 `混色 — グラスマンの法則（加法混色の法則性）`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
+The current AFT official Grade 1 textbook table of contents confirms that after p.041 the next item is p.046 `XYZ表色系`, followed by p.050 `均等色空間とL*a*b*色空間 — 色差の表示`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
 
 ## Exact next start point
 
-Source-audit p.041 `グラスマンの法則（加法混色の法則性）` before any authoring. Resolve only deterministic nonvisual facts from auditable authority; do not reconstruct unpublished AFT details.
+Source-audit p.050 `均等色空間とL*a*b*色空間 — 色差の表示` before any authoring. Resolve only deterministic nonvisual facts from auditable authority; do not reconstruct unpublished AFT details.
