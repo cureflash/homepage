@@ -28,17 +28,20 @@ Grade 2 remains 348 verified / pending 0 across 29 promoted skills and incomplet
 
 No Grade 1 runtime promotion has occurred yet.
 
-## p.024 color-harmony source audit
+## p.024 color-harmony checkpoint
 
 p.024 `色彩調和論とは / ジャッドの色彩調和、四つの原理` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p024-color-harmony-judd-source-audit.md`.
 
 Accepted narrow text-only boundary:
 - Current AFT official Grade 1 TOC places `色彩調和論とは` and `ジャッドの色彩調和、四つの原理` at p.024.
-- The same AFT TOC fixes the subsequent order: p.025 Chevreul, p.027 Rood, p.028 Ostwald, p.029 Itten, p.030 Moon and Spencer.
 - Current AFT official Grade 1 first-stage sample directly resolves `ナチュラルハーモニー` as a scheme explained under Judd by the `なじみ` principle.
 - Waseda University academic literature independently corroborates Judd's four-principle framework (Order, Familiarity, Similarity, Unambiguity) and the Familiarity/natural-harmony relation.
 
-For production Japanese wording, only `なじみ` is directly exposed by current AFT public exam authority. Do not invent exact Japanese AFT labels for the other three principles solely by translation. Do not pull p.025 Chevreul facts into p.024 authoring.
+Authoring file: `qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json`.
+
+The finite accepted state space produced 4 pending-first questions only. All 4 were independently re-solved as verified, pending 0, A/B/C/D=1/1/1/1. One wording defect (`何つ`) was corrected to `いくつ` before the final authoring gate and the affected record was rechecked. Current-question-head Power Color CI `33756136445` passed on PR #632. Dedicated gating covers allowed sources, nonvisual rendering, full fingerprints against all six earlier Grade 1 culture batches, and shared renderer behavior.
+
+Do not waterfill beyond these four records, invent exact Japanese AFT labels for the other three Judd principles, reconstruct visual schemes, or pull p.025 Chevreul content into p.024.
 
 ## Phase 5 sequencing note
 
@@ -46,4 +49,4 @@ For production Japanese wording, only `なじみ` is directly exposed by current
 
 ## Exact next start point
 
-Merge the p.024 source-audit checkpoint after current-head Power Color CI. Then author only the narrow audited p.024 text-only state space pending-first and independently QA it; avoid waterfilling beyond the finite audited facts.
+Pass synchronized current-head Power Color CI and merge PR #632 if green/current. Then continue in official order to p.025 `シュヴルールの色彩調和論` and source-audit it before any authoring.
