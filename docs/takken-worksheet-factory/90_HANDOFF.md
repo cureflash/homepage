@@ -8,12 +8,14 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled the two existing verified source questions for `takken-concept-embankment-regulation` against its 7 canonical knowledge items.
+Extracted canonical knowledge for `takken-concept-legal-permit-notification-comparison` without changing existing Phase 2/3 questions or beginning Phase 4.3.
 
-- `takken-q-77-001` maps only to `takken-k-embankment-regulation-zone-designation-authority`, because its stem and four choices directly test that regulation zones are designated by the prefectural governor or equivalent authority for disaster-prevention regulation.
-- `takken-q-77-002` maps only to the directly measured permit/work-scope items: `takken-k-embankment-regulation-takuzo-zone-permit`, `takken-k-embankment-regulation-special-zone-permit`, and `takken-k-embankment-regulation-covered-works`.
-- The remaining embankment knowledge items stay explicit Phase 4.3 deficits; no question was stretched to cover knowledge not directly measured by its stem and choices.
-- Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
+- Added 8 atomic knowledge items covering the prior-permit nature and target action of Urban Planning Act Article 29 development permission.
+- Separated National Land Use Planning Act Article 23 post-notification into the rights-acquirer actor, contract-after timing, two-week deadline/municipality-to-governor route, and statutory area thresholds.
+- Added farmland cross-comparison knowledge for Article 3 rights-transfer permission and Article 4/5 conversion permission versus the urbanization-area prior-notification exception.
+- Added an explicit cross-regime item distinguishing prior permission from the general Article 23 post-notification system, while retaining statutory exceptions such as National Land Use Planning Act prior-notification/permission areas and farmland notification exceptions.
+- Primary grounding is the 2026-04-01 statutes plus current official MLIT/MAFF guidance.
+- `takken-q-78-001` and `takken-q-78-002` were intentionally not mapped in this extraction checkpoint.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
 ## Status after this run
@@ -23,17 +25,17 @@ Reconciled the two existing verified source questions for `takken-concept-embank
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 100/113 concepts with canonical knowledge extraction complete; 100/113 fully reconciled through question mapping
-- Concepts with canonical knowledge items: 100
-- Canonical knowledge items: 543
+- Phase 4.2: active — 101/113 concepts with canonical knowledge extraction complete; 100/113 fully reconciled through question mapping
+- Concepts with canonical knowledge items: 101
+- Canonical knowledge items: 551
 - Existing verified questions mapped: 124
-- Explicit unmapped knowledge gaps: 364
+- Explicit unmapped knowledge gaps: 372
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical atomic knowledge items for `takken-concept-legal-permit-notification-comparison` from 2026-04-01 primary sources and existing verified source material. Keep existing source-question mapping as a separate later checkpoint. Do not begin Phase 4.3.
+Reconcile `takken-q-78-001` and `takken-q-78-002` against `takken-concept-legal-permit-notification-comparison`. Map only knowledge directly measured by each stem and four choices. Keep all other knowledge as explicit Phase 4.3 deficits. Do not begin Phase 4.3.
 
 ## publication invariant
 
