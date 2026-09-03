@@ -15,7 +15,7 @@
 - p.029 Itten: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
 - p.030 Moon & Spencer: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
 
-## Light/color, color-representation, color-name, and measurement frontier
+## Light/color, color-representation, color-name, measurement, and psychology frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
 | 1 | 心理的な見えによる色の分類 — 色の様相 | 032 | SECONDARY_CORROBORATION_REQUIRED | 3 audited nonvisual fact families authored; 3/3 verified; PR #647 merged. Not promoted. |
@@ -33,14 +33,16 @@
 | 13 | NCS — 色相環と色相の表し方 | 056 | SECONDARY_CORROBORATION_REQUIRED | Colour Circle/four chromatic elementary colours, R20B, neutral -N, and hue/nuance split only. 4/4 verified; CI 33778046172; PR #668. Not promoted. |
 | 14 | NCS — 等色相面での色の表示 | 058 | SECONDARY_CORROBORATION_REQUIRED | One Colour Triangle per hue, triangle position→nuance, neutrals on vertical side, 1040 notation only. 4/4 verified; CI 33778226671; PR #669. Not promoted. |
 | 15 | NCS — 色の表示方法 | 059 | SECONDARY_CORROBORATION_REQUIRED | Blackness/chromaticness digit-pair interpretation, whiteness formula, 3010→60% whiteness, and S 5020 R50B interpretation only. 4/4 verified; CI 33780351985; PR #672. Not promoted. |
-| 16 | NCS — 色立体と色票集 | 059 | SECONDARY_CORROBORATION_REQUIRED | 3D Colour Space, white-top/black-bottom vertical axis, four chromatic elementary colours arranged around it, and Atlas 2050 all 2,050 Standard Colours arranged by hue/nuance. 4/4 verified; CI 33780517855; PR #673. Not promoted. |
+| 16 | NCS — 色立体と色票集 | 059 | SECONDARY_CORROBORATION_REQUIRED | 3D Colour Space, white-top/black-bottom vertical axis, four chromatic elementary colours around it, and Atlas 2050 all 2,050 Standard Colours arranged by hue/nuance. 4/4 verified; CI 33780517855; PR #673. Not promoted. |
 | 17 | 色名 — 色を表す言葉の分類 | 060 | SECONDARY_CORROBORATION_REQUIRED | JCRI narrow systematic-vs-conventional/proper boundary only; 4/4 verified; CI 33782146996; PR #675. Not promoted. |
 | 18 | 色名 — ISCC-NBS色名法 | 061 | SECONDARY_CORROBORATION_REQUIRED | NIST/NBS narrow 267-block/history/Munsell-boundary/central-color boundary only; 4/4 verified; CI 33782358574; PR #676. Not promoted. |
 | 19 | 色名 — JISの光源色の色名 | 062 | SOURCE_BLOCKED | JSA confirms JIS Z 8110:1995 valid and confirmed 2024-10-21, but public primary metadata does not expose exact normative naming content. No authoring. |
 | 20 | 色名 — 光源色の系統色名 | 062 | SOURCE_BLOCKED | Exact current systematic-name construction/inventory/modifier rules unavailable from accepted public primary authority; secondary mirrors rejected. No authoring. |
 | 21 | 測色 — 測色とは | 066 | SECONDARY_CORROBORATION_REQUIRED | CIE 015:2018 / ISO-CIE narrow nonvisual boundary; 4/4 verified; CI 33784408214; PR #679. Not promoted. |
 | 22 | 測色 — 視感測色―直接比較法 | 067 | SECONDARY_CORROBORATION_REQUIRED | ISO 3668:2017 narrow direct-comparison boundary; 4/4 verified; CI 33784600346; PR #680. Not promoted. |
-| 23 | 測色 — 物理測色 | 069 | UNCHECKED | Exact next source-audit frontier. |
+| 23 | 測色 — 物理測色 | 069 | SECONDARY_CORROBORATION_REQUIRED | NIST narrow spectrophotometry/instrument boundary; 4/4 verified; CI 33785943347; PR #683. Not promoted. |
+| 24 | 色彩心理 — 心理学的尺度構成法の基本 | 072 | SECONDARY_CORROBORATION_REQUIRED | University-corroborated nominal/ordinal/interval/ratio defining properties only; 4/4 verified; CI 33786140834; PR #684. Not promoted. |
+| 25 | 色彩心理 — 心理学的尺度構成法 | 073 | UNCHECKED | Exact next source-audit frontier. |
 
 ## p.056 色相環と色相の表し方 accepted corroborating boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p056-ncs-hue-circle-notation-source-audit.md`.
@@ -96,6 +98,18 @@ Authoring batch: `qualifications/color-certification/data/grade1-authoring-visua
 Dedicated gate: `qualifications/color-certification/tests/grade1-visual-direct-comparison-p067-authoring.test.js`.
 Accepted facts are limited to ISO 3668:2017 public statements that a specimen colour is visually compared against a standard, the standard may be a reference or freshly prepared standard, artificial light sources are used, and comparison occurs in a standard booth. Exact AFT procedures, observation geometry, adaptation, illuminance, lamp specifications, sample dimensions, tolerances, display values, and monitor judgments remain excluded.
 
+## p.069 物理測色 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p069-physical-colorimetry-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-physical-colorimetry-p069-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-physical-colorimetry-p069-authoring.test.js`.
+Accepted facts are limited to NIST statements that spectrophotometry quantitatively measures reflectance/transmittance; spectrophotometric measurement illuminates material and detects its optical response; practical CIE colour measurement uses spectroreflectometers for object colours and spectroradiometers for light-source colours; and tristimulus colorimeters are also practical colour-measurement instruments. Exact AFT device taxonomy, optical geometry, wavelength intervals, calibration steps, formulas, diagrams, display values, and monitor judgments remain excluded.
+
+## p.072 心理学的尺度構成法の基本 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p072-psychological-scale-basics-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-psychological-scale-basics-p072-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-psychological-scale-basics-p072-authoring.test.js`.
+Accepted facts are limited to the independently corroborated four scale-level properties: nominal distinguishes categories without order; ordinal preserves rank without guaranteed equal intervals; interval preserves meaningful differences without meaningful absolute-zero ratio interpretation; ratio adds meaningful zero and ratios. Unpublished AFT examples, coding conventions, statistical-treatment rules, later p.073/p.080 methods, diagrams, and numerical examples remain excluded.
+
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: explicitly `SOURCE_BLOCKED`; exact current standard content requires new primary evidence before authoring.
 - 色彩とビジネス / カラーマーケティング / CMF®: AFT-specific procedures must not be filled from generic business practice.
@@ -104,4 +118,4 @@ Accepted facts are limited to ISO 3668:2017 public statements that a specimen co
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.069 `測色 — 物理測色` before authoring. Preserve official order and keep both p.062 topics blocked unless new explicit auditable primary authority appears.
+Source-audit p.073 `色彩心理 — 心理学的尺度構成法` before authoring. Preserve official order and keep both p.062 topics blocked unless new explicit auditable primary authority appears.
