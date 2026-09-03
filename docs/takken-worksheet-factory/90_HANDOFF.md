@@ -8,11 +8,12 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled verified `takken-q-75-001` against the canonical `takken-concept-farmland-article4` knowledge items without changing the existing Phase 2/3 question.
+Extracted canonical atomic knowledge items for `takken-concept-farmland-article5` without changing or mapping the existing Phase 2/3 question.
 
-- Mapped `takken-q-75-001` only to `takken-k-farmland-article4-self-conversion-scope` because its stem and four choices directly test which provision governs a landowner's self-conversion of farmland.
-- Did not map conversion meaning, permit principle, permit authority, urbanization-area notification, or the broader Article 4 / Article 5 rights-transfer distinction; those five knowledge items remain explicit Phase 4.3 deficits.
-- Did not extract or map `takken-concept-farmland-article5` and did not map `takken-q-75-002`.
+- Added 6 verified knowledge items for Article 5: transfer-for-conversion scope; inclusion of grazing land; permit principle; current permit authority without an area threshold; urbanization-area prior notification; and the Article 4 / Article 5 rights-transfer distinction.
+- Sources are the 2026-04-01 Farmland Act plus official MAFF / Regional Agricultural Administration Office guidance and survey definitions.
+- Kept Article 5 distinct from Article 4: Article 5 governs transfer or creation of rights for conversion and also reaches grazing land in the statutory scope.
+- Did not map `takken-q-75-002`; that is the next checkpoint so evidence remains question-specific rather than inferred from the concept.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,17 +24,17 @@ Reconciled verified `takken-q-75-001` against the canonical `takken-concept-farm
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 96/113 fully reconciled concepts
-- Concepts with canonical knowledge items: 96
-- Canonical knowledge items: 516
+- Phase 4.2: active — 97/113 concepts with canonical knowledge extraction complete; 96/113 fully reconciled through question mapping
+- Concepts with canonical knowledge items: 97
+- Canonical knowledge items: 522
 - Existing verified questions mapped: 119
-- Explicit unmapped knowledge gaps: 346
+- Explicit unmapped knowledge gaps: 352
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical atomic knowledge items for `takken-concept-farmland-article5` from the 2026-04-01 Farmland Act and official MAFF sources. Do not map `takken-q-75-002` in the same checkpoint. Do not begin Phase 4.3.
+Reconcile verified `takken-q-75-002` against `takken-concept-farmland-article5` and map only the knowledge item or items directly measured by its stem and four choices. Do not start `takken-concept-provisional-replotting` in the same checkpoint. Do not begin Phase 4.3.
 
 ## publication invariant
 
