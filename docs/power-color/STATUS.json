@@ -11,9 +11,9 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33811733728, "pr": 721, "merge_commit": "e4fc8dbf6d19b75f6a1856ea93d756a2f2d8e806", "skills": ["pc1.landscape.color_standard_exceptions_p145", "pc1.landscape.outdoor_ad_color_standard_p145"], "verified": 8},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33812789294, "pr": 723, "merge_commit": "5cb01bbe550ded78503469eb9d86ab9f2eb32da2", "skills": ["pc1.landscape.color_attributes_p146"], "verified": 4},
     "active_section": "景観色彩",
-    "active_topic": "p.146 色相、明度、彩度と景観形成とのかかわり",
+    "active_topic": "p.148 遠景・中景・近景とは",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.146 色相、明度、彩度と景観形成とのかかわり before any authoring."
+    "next": "Source-audit p.148 遠景・中景・近景とは before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 4, "generated": 12, "checked": 12, "verified": 12, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; no competing p.144/p.145 work existed.", "p.144 色彩基準の示し方: SOURCE_RESOLVED to government-explicit Munsell hue/value/chroma and applicable-part/area table structure; 4/4 verified, A/B/C/D=1/1/1/1; PR #720 CI 33811380255 success and merged 59076f90302e282c4255d89c71c49f81d0e21c17.", "p.145 色彩基準の適用除外: SOURCE_RESOLVED to explicit Tokyo-government exception cases only; 4/4 verified, A/B/C/D=1/1/1/1.", "p.145 屋外広告物の色彩基準: SOURCE_RESOLVED to MLIT/local-government governance and area-specific standards structure only; 4/4 verified, A/B/C/D=1/1/1/1; combined PR #721 CI 33811733728 success and merged e4fc8dbf6d19b75f6a1856ea93d756a2f2d8e806."]},
+  "current_run": {"checkpoints_completed": 2, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; no competing p.146 work existed.", "p.146 色相、明度、彩度と景観形成とのかかわり: SOURCE_RESOLVED to a narrow MLIT-explicit nonvisual boundary; 4/4 verified, A/B/C/D=1/1/1/1; PR #723 CI 33812789294 success and merged 5cb01bbe550ded78503469eb9d86ab9f2eb32da2."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.146 色相、明度、彩度と景観形成とのかかわり before any authoring."
+  "next": "Source-audit p.148 遠景・中景・近景とは before any authoring."
 }

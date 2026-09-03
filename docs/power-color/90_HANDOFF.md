@@ -6,7 +6,7 @@ Grade 1 is active by explicit user override. Grade 2 remains 348 verified / pend
 Canonical Grade 1 working set: `STATUS.json`, `20_EXECUTION_PLAN.md`, `60_GRADE1_EXECUTION_PLAN.md`, `61_GRADE1_SOURCE_INVENTORY.md`, `62_GRADE1_SPEC.md`.
 
 ## Grade 1 frontier
-All official Grade 1 items through p.145 are now recorded.
+All official Grade 1 items through p.146 are now recorded.
 
 p.136 `ビジュアルマーチャンダイジング（VMD）の取り組み` is `SOURCE_BLOCKED`. JAVMA and Sugino confirm broad VMD practice, but current public authority does not expose the AFT p.136-specific closed initiative set, terminology, sequence, responsibilities or decision rules. The p.133 basic VMD concept is not reused as a substitute. No authoring.
 
@@ -28,10 +28,12 @@ p.145 `色彩基準の適用除外` is `SOURCE_RESOLVED` only to Tokyo's explici
 
 p.145 `屋外広告物の色彩基準` is `SOURCE_RESOLVED` only to the public governance/area-specific structure. MLIT states that actual outdoor-advertising regulation is carried out by local governments through ordinances/rules under the Act; current Tokyo and Kyoto material confirms general/area-specific regulatory structures. Exact municipality color thresholds and unpublished AFT examples are excluded. Four records are 4/4 verified, A/B/C/D=1/1/1/1. The two p.145 batches passed Power Color CI `33811733728` and PR #721 merged as `e4fc8dbf6d19b75f6a1856ea93d756a2f2d8e806`.
 
+p.146 `色相、明度、彩度と景観形成とのかかわり` is `SOURCE_RESOLVED`. Current MLIT road-color guidance explicitly resolves a narrow nonvisual boundary: R–Y is generally treated as a warm-color range associated with warmth/liveliness; G–B as a cool-color range often used for calm atmosphere; for otherwise identical objects, brighter colors tend to feel lighter and darker colors heavier; vivid/high-chroma colors generally have higher conspicuity. Four records were created pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1. No swatch appearance, unpublished AFT thresholds or universal aesthetic prescription is inferred. PR #723 passed Power Color CI `33812789294` and merged as `5cb01bbe550ded78503469eb9d86ab9f2eb32da2`.
+
 Grade 1 runtime remains unpromoted.
 
 ## Source/display boundary
-Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, exact business/CMF/fashion process sequences, fiber-length color-development rules, VMD initiative/color procedures, or municipality-specific landscape rules beyond an explicitly cited government example. Tokyo p.143 area ratios and p.145 exception examples remain Tokyo-specific evidence and are not universalized. Outdoor-advertising exact thresholds remain jurisdiction-specific and outside the p.145 authored governance slice. Do not repeat recorded rejected source routes without new explicit evidence.
+Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, exact business/CMF/fashion process sequences, fiber-length color-development rules, VMD initiative/color procedures, or municipality-specific landscape rules beyond an explicitly cited government example. Tokyo p.143 area ratios and p.145 exception examples remain Tokyo-specific evidence and are not universalized. Outdoor-advertising exact thresholds remain jurisdiction-specific and outside the p.145 authored governance slice. p.146 is limited to the explicit MLIT three-attribute relations and does not authorize visual color judgments. Do not repeat recorded rejected source routes without new explicit evidence.
 
 ## Exact next start point
-Source-audit p.146 `色相、明度、彩度と景観形成とのかかわり` before any authoring.
+Source-audit p.148 `遠景・中景・近景とは` before any authoring.
