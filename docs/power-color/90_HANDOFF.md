@@ -14,31 +14,26 @@ Grade 3 remains 223 verified / pending 0 and incomplete with its recorded blocke
 
 Culture p.006/p.007/p.010/p.014/p.017/p.021 are source-audited and have 8 independently verified text-only records each. No Grade 1 runtime promotion has occurred yet.
 
-p.024 Judd: `SECONDARY_CORROBORATION_REQUIRED`, finite 4/4 verified; CI `33756393481`; PR #632 merged.
+Color-harmony p.024 Judd: 4/4 verified. p.025 Chevreul: 3/3 verified. p.027 Rood: 3/3 verified. p.028 Ostwald: 4/4 verified. p.029 Itten: 4/4 verified and merged via PR #643 as `94cccab5c53d994f92f0ee0de7f9d86af9efa3c8`.
 
-p.025 Chevreul: `SOURCE_RESOLVED` for three current AFT official-sample relations; 3/3 verified; CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`.
+## p.030 Moon & Spencer checkpoint
 
-p.027 Rood: `SECONDARY_CORROBORATION_REQUIRED`; finite 3/3 corroborated text-only records verified, pending 0; CI `33758149486`; PR #638 merged as `b89da78340133b5a4abf24408ef4c3930610b917`; canonical sync PR #640 merged as `f63a80b5cf01075b5f3fdce5d389335292499222`.
-
-## p.028 Ostwald checkpoint
-
-p.028 `オストワルトの色彩調和論` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p028-ostwald-source-audit.md`.
+p.030 `ムーンとスペンサーの色彩調和論` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p030-moon-spencer-source-audit.md`.
 
 Accepted narrow nonvisual boundary:
-- Cooper Hewitt/Smithsonian: Ostwald wrote `The Colour Primer` in 1916 and presented a colour system devoted to relationships between colours.
-- Cooper Hewitt summarizes the harmony concept as harmony created by colour order.
-- One scale runs through achromatic colours from white through greys to black.
-- The system is represented in three dimensions as a double cone.
-- Science History Institute's digitized `Die Farbenfibel` record corroborates an original Ostwald colour guide containing sections on achromatic/chromatic colours and colour harmony.
+- AFT current Grade 1 TOC fixes p.030 membership/order.
+- Japan Color Science Association / J-STAGE: harmony/ambiguity regions in Munsell color space; aesthetic measure (`美度`) based on order and complexity.
+- NDL/CiNii/Optica bibliographic authority: three 1944 JOSA papers `Geometric Formulation of Classical Color Harmony`, `Area in Color Harmony`, and `Aesthetic Measure Applied to Color Harmony`.
+- Peer-reviewed later literature: Moon-Spencer spatial balance involves chroma and value; contrast to background/adaptation point is the dominant factor.
 
-`qualifications/color-certification/data/grade1-authoring-harmony-ostwald-p028-0001-0004.json` contains exactly four pending-first text-only questions, independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated gate `qualifications/color-certification/tests/grade1-harmony-ostwald-p028-authoring.test.js` checks source membership, nonvisual rendering, full fingerprints against all nine earlier Grade 1 batches, and shared renderer behavior.
+`qualifications/color-certification/data/grade1-authoring-harmony-moon-spencer-p030-0001-0004.json` contains exactly four pending-first text-only questions, independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated gate `qualifications/color-certification/tests/grade1-harmony-moon-spencer-p030-authoring.test.js` checks source membership, nonvisual rendering, full fingerprints against all prior Grade 1 batches, and shared renderer behavior.
 
-Do not reconstruct unpublished AFT p.028 harmony-class names, exact Japanese labels, formulae, double-cone geometry/coordinates, RGB/HEX/display values, image-derived answers, pigment recipes, or p.029 Itten content.
+Do not reconstruct unpublished AFT p.030 equations, coefficients, thresholds, Japanese terminology, diagrams, area-ratio examples, RGB/HEX/display values, image-derived answers, or p.032 content.
 
-## Phase 5 sequencing note
+## Canonical sequencing note
 
-`docs/power-color/20_EXECUTION_PLAN.md` still contains the old Grade-2-complete start sentence. The repeated explicit Grade 1 directive controls Grade 1 work only; Grade 2/3 remain incomplete and gated.
+`docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence. The explicit Grade 1 directive and Grade 1 canonical files control Grade 1 execution while Grade 2/3 remain incomplete and gated. Mechanical cleanup remains outstanding; do not treat the stale sentence as completion of Grade 2.
 
 ## Exact next start point
 
-Pass current-head p.028 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.029 `イッテンの色彩調和論` and source-audit it before authoring.
+Pass current-head p.030 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.032 `光と色：色の様相` and source-audit it before authoring.
