@@ -34,23 +34,22 @@ p.024 is `SECONDARY_CORROBORATION_REQUIRED`. `qualifications/color-certification
 
 ## p.025 Chevreul checkpoint
 
-p.025 is `SOURCE_RESOLVED` for the three current AFT official-sample relations under `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`.
+p.025 is `SOURCE_RESOLVED` for the three current AFT official-sample relations. `qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json` contains exactly those three first-party relations. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`.
 
-`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json` contains exactly those three first-party relations. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. Dedicated source/nonvisual/full-fingerprint/shared-renderer gate passed in Power Color CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`.
-
-Do not waterfill beyond these three official-sample answer relations or reconstruct the official figure/display values.
-
-## p.027 Rood source audit
+## p.027 Rood checkpoint
 
 p.027 `ルードの色彩調和論` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p027-rood-source-audit.md`.
 
 Accepted narrow text-only boundary:
-- Current AFT official TOC places Rood at p.027.
-- The Metropolitan Museum of Art records Ogden Nicholas Rood's `Modern chromatics : with applications to art and industry` (1879).
+- The Met records Ogden Nicholas Rood's `Modern chromatics : with applications to art and industry` (1879).
 - University of Chicago academic literature describes Rood's optical mixture: small adjacent lines/dots of different colours can blend perceptually at sufficient viewing distance.
 - The Met's historical discussion associates Rood's theory with complementary hues placed adjacent/layered and intensified in richness.
 
-This does not expose the complete unpublished AFT p.027 body. Do not invent exact AFT Japanese rule labels, category counts, chromatic-circle geometry, numerical angle relations, RGB/HEX/display answers, or p.028 Ostwald content.
+`qualifications/color-certification/data/grade1-authoring-harmony-rood-p027-0001-0003.json` contains exactly these three corroborated fact families. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. The batch deliberately stops at three rather than waterfilling.
+
+Dedicated gate `qualifications/color-certification/tests/grade1-harmony-rood-p027-authoring.test.js` checks allowed-source membership, nonvisual rendering, full fingerprints against all eight earlier Grade 1 batches, and shared renderer behavior. Current-head CI/merge is still required.
+
+Do not infer unpublished AFT p.027 Japanese rule labels, category counts, chromatic-circle geometry, numerical angle relations, RGB/HEX/display answers, or p.028 Ostwald content.
 
 ## Phase 5 sequencing note
 
@@ -58,4 +57,4 @@ This does not expose the complete unpublished AFT p.027 body. Do not invent exac
 
 ## Exact next start point
 
-Pass current-head CI and merge this p.027 source-audit synchronization checkpoint if green/current. Then author only a small pending-first text-only p.027 batch from the corroborated facts above and independently QA every record; stop rather than waterfilling.
+Pass current-head p.027 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.028 `オストワルトの色彩調和論` and source-audit it before authoring.

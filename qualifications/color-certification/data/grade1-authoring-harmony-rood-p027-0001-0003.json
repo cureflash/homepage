@@ -1,0 +1,99 @@
+{
+  "format": "power-color-grade1-authoring-v1",
+  "grade": 1,
+  "skill": {
+    "id": "pc1.harmony.rood_p027",
+    "label": "色彩調和論：ルード（p.027 narrow slice）",
+    "categoryId": "pc1.harmony"
+  },
+  "sourceContract": "docs/power-color/audits/2026-09-03-grade1-p027-rood-source-audit.md",
+  "derivationRule": "Use only the three audited nonvisual Rood fact families: Modern Chromatics was published in 1879; Rood described optical mixture from small adjacent lines/dots viewed at sufficient distance; Met historical material associates Rood's theory with complementary hues placed adjacent/layered and intensified. Do not infer unpublished AFT labels, diagrams, category counts, RGB/HEX/display values, or p.028 content.",
+  "qaSummary": {
+    "generated": 3,
+    "checked": 3,
+    "verified": 3,
+    "needsRevision": 0,
+    "rejected": 0,
+    "pending": 0,
+    "correctIndexDistribution": {"A": 1, "B": 1, "C": 1, "D": 0}
+  },
+  "questions": [
+    {
+      "id": "pc1-harmony-rood-p027-0001",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/rood_p027",
+      "skillId": "pc1.harmony.rood_p027",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "メトロポリタン美術館の監査済み資料で、オグデン・ルードの『Modern Chromatics』の刊行年として確認できるものはどれですか。",
+      "sentence": "メトロポリタン美術館の監査済み資料で、オグデン・ルードの『Modern Chromatics』の刊行年として確認できるものはどれですか。",
+      "choices": ["1879年", "1810年", "1704年", "1931年"],
+      "proposedAnswer": "1879年",
+      "correctIndex": 0,
+      "explanation": "メトロポリタン美術館のThomas J. Watson Library所蔵記録では、Ogden Nicholas Roodの『Modern chromatics : with applications to art and industry』は1879年刊行です。",
+      "sourceRefs": ["met_rood_modern_chromatics"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently re-read the Met catalogue record and confirmed the 1879 publication date before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-rood-p027-0002",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/rood_p027",
+      "skillId": "pc1.harmony.rood_p027",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "シカゴ大学の監査済み学術資料で説明される、ルードの光学混色に最も合うものはどれですか。",
+      "sentence": "シカゴ大学の監査済み学術資料で説明される、ルードの光学混色に最も合うものはどれですか。",
+      "choices": ["顔料を容器内で完全に練り合わせる", "異なる色の細かな線や点を並べ、離れて見ることで知覚的に混ざる", "照明を一色だけに固定する", "無彩色だけを段階的に並べる"],
+      "proposedAnswer": "異なる色の細かな線や点を並べ、離れて見ることで知覚的に混ざる",
+      "correctIndex": 1,
+      "explanation": "シカゴ大学の学術資料は、異なる色を細かな線や点として隣接配置し、十分な距離から見ると観察者の眼で混ざって新しい色として知覚されるというルードの説明を紹介しています。",
+      "sourceRefs": ["uchicago_rood_optical_mixture"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently re-derived Rood's optical-mixture relation from the University of Chicago academic text before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-rood-p027-0003",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/rood_p027",
+      "skillId": "pc1.harmony.rood_p027",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "メトロポリタン美術館の監査済み解説で、ルードらの色彩理論に関連して述べられる補色の扱いはどれですか。",
+      "sentence": "メトロポリタン美術館の監査済み解説で、ルードらの色彩理論に関連して述べられる補色の扱いはどれですか。",
+      "choices": ["補色は必ず灰色に置換する", "補色は同じ顔料として扱う", "色相環で反対側の色相を隣接・重ねて用いると互いの豊かさが強調される", "補色は測色から除外する"],
+      "proposedAnswer": "色相環で反対側の色相を隣接・重ねて用いると互いの豊かさが強調される",
+      "correctIndex": 2,
+      "explanation": "メトロポリタン美術館の解説は、シュヴルールとルードの理論に関連して、色相環で反対側にある色相を隣接または重ねて置くと色の豊かさが強められると説明しています。",
+      "sourceRefs": ["met_rood_complementary_context"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently checked the Met historical explanation of complementary-hue adjacency/intensification before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    }
+  ],
+  "sources": [
+    {
+      "id": "met_rood_modern_chromatics",
+      "authority": "The Metropolitan Museum of Art, Thomas J. Watson Library",
+      "url": "https://www.metmuseum.org/art/collection/search/738466",
+      "use": "Primary-work catalogue record: Ogden Nicholas Rood, Modern chromatics, 1879"
+    },
+    {
+      "id": "uchicago_rood_optical_mixture",
+      "authority": "University of Chicago Press / KNOW",
+      "url": "https://www.journals.uchicago.edu/doi/full/10.1086/699818",
+      "use": "Academic discussion of Rood's optical mixture using adjacent small lines/dots viewed at distance"
+    },
+    {
+      "id": "met_rood_complementary_context",
+      "authority": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/ko/perspectives/mary-cassatt-modernist-mother-child",
+      "use": "Historical discussion associating Chevreul/Rood theory with complementary hues placed adjacent/layered and intensified"
+    }
+  ]
+}

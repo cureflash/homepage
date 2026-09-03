@@ -53,7 +53,8 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] Author p.024 `pc1.harmony.judd_p024` pending-first and independently QA all 4 finite records: 4/4 verified, pending 0, A/B/C/D=1/1/1/1; synchronized CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
 - [x] Audit p.025 `シュヴルールの色彩調和論` as `SOURCE_RESOLVED` for the three current-AFT-official-sample answer relations.
 - [x] Author p.025 `pc1.harmony.chevreul_p025` pending-first and independently QA all three first-party relations: 3/3 verified, pending 0, A/B/C/D=1/1/1/0; Power Color CI `33757328587`; PR #636 merged as `0b577fa0263b5f451b4941e1a9f04fe8f8b7f036`.
-- [x] Audit p.027 `ルードの色彩調和論` as `SECONDARY_CORROBORATION_REQUIRED`; official AFT TOC fixes scope while Met/University of Chicago sources resolve only a narrow nonvisual Rood boundary: `Modern Chromatics` (1879), optical mixture by small adjacent lines/dots at viewing distance, and complementary-colour adjacency/intensification context.
+- [x] Audit p.027 `ルードの色彩調和論` as `SECONDARY_CORROBORATION_REQUIRED`; Power Color CI `33757742553`; PR #637 merged as `732ee77794d744c2a0c406806d789668d1085f0e`.
+- [x] Author p.027 `pc1.harmony.rood_p027` pending-first and independently QA the complete narrow corroborated state space: 3/3 verified, pending 0, A/B/C/D=1/1/1/0. Facts are limited to `Modern Chromatics` (1879), optical mixture by adjacent small lines/dots at viewing distance, and complementary-colour adjacency/intensification context. No waterfilling.
 
 ## Exact next start point
-After current-head CI/merge of the p.027 audit synchronization checkpoint, author only the narrow corroborated p.027 Rood text-only facts. Do not invent AFT Japanese rule labels, category counts, diagram geometry, display values, or later-theory content. Preserve all Grade 2/3 incomplete states and gates.
+Pass current-head p.027 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.028 `オストワルトの色彩調和論` and source-audit it before any authoring. Preserve all Grade 2/3 incomplete states and gates.
