@@ -45,7 +45,8 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] Pass dedicated Grade 1 p.007 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression in CI `33745825195`; PR #621 merged as `6adb39143b0765e65fa0762a9fea75ee6ad76c65`.
 - [x] Audit p.010 `近代ヨーロッパと色彩学` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Royal Society Newton/prism/light-and-colour history boundary and Klassik Stiftung Weimar Goethe/1810/perception-and-experiment boundary.
 - [x] Author p.010 `pc1.culture.modern_europe_color_science` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Stop at 8 to avoid repetition beyond the five resolved fact families.
-- [ ] Pass the dedicated Grade 1 p.010 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression; merge current authoring only after the current head is green.
+- [x] Pass the dedicated Grade 1 p.010 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression in CI `33747834603`; PR #623 merged as `f26b52f8ef6d8e9426e614c39da9174f068d3d93`.
+- [x] Audit p.014 `日本の古代の色` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Imperial Household Agency / Kyoto National Museum Shosoin-Nara textile-culture boundary.
 
 ## Exact next start point
-Complete the p.010 authoring gate/CI/merge. After merge, audit p.014 `日本の古代の色` using AFT scope first and Imperial Household Agency / NDL / museum / academic authority for individual facts. Do not infer unpublished AFT fact membership or image-derived colour properties.
+Author a small pending-first p.014 text-only batch using only the resolved Shosoin/Nara-period, continental-influence, textile/dye-technique-category and catalogue-record relations in `docs/power-color/audits/2026-09-03-grade1-p014-ancient-japan-colour-source-audit.md`, then independently QA every record.
