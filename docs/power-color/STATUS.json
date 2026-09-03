@@ -11,9 +11,9 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33790197091, "pr": 690, "merge_commit": "9f0b6740632c77a982f102ab6bcef35a6a829574", "skill": "pc1.psychology.appearance_stability_p087", "verified": 4},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33792338939, "pr": 693, "merge_commit": "a28fd5ac83ddedadb9e1cd36e6f46fad89fe9bc2", "skill": "pc1.business.color_sample_communication_p093", "verified": 4},
     "active_section": "色彩とビジネス",
-    "active_topic": "p.090 色彩効果のビジネス活用",
+    "active_topic": "p.095 コンシューマプロダクツのビジネスプロセスと色彩 — 企業アイデンティティ戦略における色彩",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.090 色彩とビジネス — 色彩効果のビジネス活用 before any authoring."
+    "next": "Source-audit p.095 企業アイデンティティ戦略における色彩 before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 files, open PRs, and Grade 1 branches; no competing p.082 or later psychology work existed.", "Source-audited p.082 記憶色と色記憶 as SECONDARY_CORROBORATION_REQUIRED; authored four text-only records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; CI 33789935372 passed; PR #689 merged as 1fbe2f72eb790bbc15898320837fbd23cd4e6b94.", "Source-audited p.083 色の見えの変化 as SOURCE_BLOCKED because public AFT authority exposes only heading/order and no deterministic phenomenon set; no authoring and the rejected generic-source route is recorded.", "Source-audited p.087 ものの見えの安定性 as SECONDARY_CORROBORATION_REQUIRED; authored four text-only records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; CI 33790197091 passed; PR #690 merged as 9f0b6740632c77a982f102ab6bcef35a6a829574. Grade 2 remains 348 verified and Grade 3 remains 223 verified with all source/display blockers intact; Grade 1 remains unpromoted." ]},
+  "current_run": {"checkpoints_completed": 3, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 files, open PRs, and Grade 1 branches; no competing p.090/p.093 work existed.", "Source-audited p.090 色彩効果のビジネス活用 as SOURCE_BLOCKED because public AFT material exposes the heading/general business scope but not a deterministic p.090 fact set; generic business/marketing substitution was rejected and no questions were authored.", "Source-audited p.093 カラーコミュニケーションツールの役割 as SECONDARY_CORROBORATION_REQUIRED using the AFT official heading/order plus DIC system-owner evidence; authored four text-only records pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1; CI 33792338939 passed; PR #693 merged as a28fd5ac83ddedadb9e1cd36e6f46fad89fe9bc2. Grade 2 remains 348 verified and Grade 3 remains 223 verified with all source/display blockers intact; Grade 1 remains unpromoted." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.090 色彩とビジネス — 色彩効果のビジネス活用 before any authoring."
+  "next": "Source-audit p.095 企業アイデンティティ戦略における色彩 before any authoring."
 }
