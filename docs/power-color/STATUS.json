@@ -6,28 +6,28 @@
   "grade3": {"complete": false, "runtime_questions": {"verified": 223, "pending": 0, "needs_revision": 0, "rejected": 0}, "deferred_handoff": "docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md", "remaining_blockers": ["complete auditable conventional PCCS contrast-tone pair matrix", "explicit readings for 24 Japanese PCCS hue names", "approved current representative PCCS display values for monitor-facing drills", "final Grade 3 completion gate"], "source_display_gates_relaxed": false},
   "grade2": {"status": "in_progress_source_blocked_frontier", "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md", "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md", "runtime": "qualifications/color-certification/data/grade2-runtime.json", "runtime_questions": {"verified": 348, "pending": 0, "needs_revision": 0, "rejected": 0}, "runtime_skill_count": 29, "monitor_facing_generation_blocked_without_approved_display_values": true, "source_blocked_count": 18, "complete": false, "next": "Resume only if new explicit auditable authority resolves a recorded Grade 2 source-blocked topic; do not repeat rejected source routes without new evidence."},
   "grade1": {
-    "status": "in_progress_color_harmony_theory",
+    "status": "in_progress_light_and_color",
     "execution_plan": "docs/power-color/60_GRADE1_EXECUTION_PLAN.md",
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "awaiting_current_head_ci", "workflow_run": null, "pr": null, "merge_commit": null, "skill": "pc1.harmony.moon_spencer_p030", "verified": 4},
-    "active_section": "色彩調和論",
-    "active_topic": "p.030 ムーンとスペンサーの色彩調和論",
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33761298016, "pr": 644, "merge_commit": "26c7ab8935896b080be8cfd1c93d6537bdb91794", "skill": "pc1.harmony.moon_spencer_p030", "verified": 4},
+    "active_section": "光と色",
+    "active_topic": "p.032 色の様相",
     "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
-    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p030-moon-spencer-source-audit.md",
-    "active_authoring": "qualifications/color-certification/data/grade1-authoring-harmony-moon-spencer-p030-0001-0004.json",
+    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p032-color-appearance-mode-source-audit.md",
+    "active_authoring": null,
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Pass current-head p.030 dedicated/Power Color CI and merge if green/current; then source-audit p.032 色の様相 before authoring."
+    "next": "Pass current-head p.032 audit CI and merge if green/current; then author only the three audited p.032 nonvisual fact families pending-first and independently QA them."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 2, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main through merged p.029 PR #643; no open Power Color PR and no p.030 branch existed.", "Source-audited p.030 Moon and Spencer as SECONDARY_CORROBORATION_REQUIRED using current AFT scope plus Japan Color Science Association, NDL/CiNii/Optica bibliographic authority, and peer-reviewed later corroboration.", "Authored four finite text-only p.030 records pending-first and independently re-derived all four answers: 4 verified / pending 0 / A/B/C/D=1/1/1/1.", "Added a dedicated source/nonvisual/full-fingerprint/shared-renderer gate against all prior Grade 1 batches and synchronized Grade 1 canonical files." ]},
+  "current_run": {"checkpoints_completed": 3, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main through merged p.029 PR #643 and found no competing p.030 work.", "Source-audited/authored p.030 Moon and Spencer within a four-fact nonvisual boundary; independently QA'd 4/4 verified and merged PR #644 after Power Color CI 33761298016 succeeded.", "Source-audited p.032 color-appearance modes as SECONDARY_CORROBORATION_REQUIRED using AFT scope plus Journal of Vision/PubMed and Illuminating Engineering Institute of Japan/CiNii authority; no p.032 authoring performed in this audit checkpoint." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Pass current-head p.030 CI and merge if green/current; then source-audit p.032 色の様相."
+  "next": "Pass current-head p.032 audit CI and merge if green/current; then author only the three audited p.032 nonvisual fact families pending-first and independently QA them."
 }
