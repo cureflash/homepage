@@ -32,8 +32,12 @@
 | 12 | NCS — へリングの6主要色 | 056 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; CI 33776482393; PR #666. Not promoted. |
 | 13 | NCS — 色相環と色相の表し方 | 056 | SECONDARY_CORROBORATION_REQUIRED | Colour Circle/four chromatic elementary colours, R20B, neutral -N, and hue/nuance split only. 4/4 verified; CI 33778046172; PR #668. Not promoted. |
 | 14 | NCS — 等色相面での色の表示 | 058 | SECONDARY_CORROBORATION_REQUIRED | One Colour Triangle per hue, triangle position→nuance, neutrals on vertical side, 1040 notation only. 4/4 verified; CI 33778226671; PR #669. Not promoted. |
-| 15 | NCS — 色の表示方法 | 059 | UNCHECKED | Exact next source-audit frontier confirmed by current AFT official table of contents. |
-| 16 | NCS — 色立体と色票集 | 059 | UNCHECKED | Follow only after p.059 色の表示方法. |
+| 15 | NCS — 色の表示方法 | 059 | SECONDARY_CORROBORATION_REQUIRED | Blackness/chromaticness digit-pair interpretation, whiteness formula, 3010→60% whiteness, and S 5020 R50B interpretation only. 4/4 verified; CI 33780351985; PR #672. Not promoted. |
+| 16 | NCS — 色立体と色票集 | 059 | SECONDARY_CORROBORATION_REQUIRED | 3D Colour Space, white-top/black-bottom vertical axis, four chromatic elementary colours arranged around it, and Atlas 2050 all 2,050 Standard Colours arranged by hue/nuance. 4/4 verified; CI 33780517855; PR #673. Not promoted. |
+| 17 | 色名 — 色を表す言葉の分類 | 060 | UNCHECKED | Exact next source-audit frontier. |
+| 18 | 色名 — ISCC-NBS色名法 | 061 | UNCHECKED | Follow only after p.060. |
+| 19 | 色名 — JISの光源色の色名 | 062 | UNCHECKED | Known source-risk candidate; exact current JIS content must be auditable when reached. |
+| 20 | 色名 — 光源色の系統色名 | 062 | UNCHECKED | Known source-risk candidate; do not infer exact system from secondary summaries. |
 
 ## p.056 色相環と色相の表し方 accepted corroborating boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p056-ncs-hue-circle-notation-source-audit.md`.
@@ -47,6 +51,18 @@ Authoring batch: `qualifications/color-certification/data/grade1-authoring-ncs-e
 Dedicated gate: `qualifications/color-certification/tests/grade1-ncs-equal-hue-plane-p058-authoring.test.js`.
 Accepted facts are limited to one NCS Colour Triangle per hue, triangle position defining nuance, neutrals lying along the vertical side, and `1040` meaning 10% blackness / 40% chromaticness. Exact AFT triangle geometry, label placement, orientation beyond explicit source text, swatch appearance, RGB/HEX values, and monitor judgments remain blocked.
 
+## p.059 色の表示方法 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p059-ncs-color-notation-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-ncs-color-notation-p059-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-ncs-color-notation-p059-authoring.test.js`.
+Accepted facts are limited to current NCS first-party explicit notation examples: first digit pair→blackness, second digit pair→chromaticness; whiteness=`100-(blackness+chromaticness)`; 3010→60% whiteness; S 5020 R50B→blackness 50/chromaticness 20/hue R50B. Exact AFT notation layout/examples, swatches, RGB/HEX values, and monitor judgments remain blocked.
+
+## p.059 色立体と色票集 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p059-ncs-color-space-atlas-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-ncs-color-space-atlas-p059-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-ncs-color-space-atlas-p059-authoring.test.js`.
+Accepted facts are limited to current NCS first-party statements that NCS Colour Space is 3D; white is at the top and black at the bottom of the vertical axis; four chromatic elementary colours are arranged around it in a circle; and Atlas 2050 contains all 2,050 NCS Standard Colours arranged by hue and nuance. Exact AFT solid geometry/figure, sample placement, swatch appearance, RGB/HEX values, and monitor judgments remain blocked.
+
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: exact current standard content must be auditable before authoring.
 - 色彩とビジネス / カラーマーケティング / CMF®: AFT-specific procedures must not be filled from generic business practice.
@@ -55,4 +71,4 @@ Accepted facts are limited to one NCS Colour Triangle per hue, triangle position
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.059 `NCS — 色の表示方法` before authoring. Resolve only individually auditable deterministic nonvisual facts from AFT/NCS authority; do not infer unpublished AFT geometry, notation layout, swatches, or display values.
+Source-audit p.060 `色名 — 色を表す言葉の分類` before authoring. Preserve official order; do not jump ahead to p.062 JIS topics merely because they are known blocked candidates.
