@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 The user explicitly made Grade 1 active while Grade 2/3 remain incomplete. The stale Phase 5 sentence in `20_EXECUTION_PLAN.md` is a known mechanical inconsistency; this explicit override plus STATUS/HANDOFF/this Grade 1 plan controls Grade 1 work only and does not mark Grade 2/3 complete.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, and measurement p.066→p.067 have now been processed in order. p.035 remains source-blocked; p.062 `JISの光源色の色名` and `光源色の系統色名` are also source-blocked because exact current normative JIS content is not exposed by accepted public primary authority. The next official frontier is p.069 測色 `物理測色`.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, and psychology p.072 have now been processed in order. p.035 remains source-blocked; p.062 `JISの光源色の色名` and `光源色の系統色名` are also source-blocked because exact current normative JIS content is not exposed by accepted public primary authority. The next official frontier is p.073 色彩心理 `心理学的尺度構成法`.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -60,8 +60,10 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] p.062 `色名 — 光源色の系統色名`: `SOURCE_BLOCKED`; no authoring; CI `33782598087`, PR #677 merged as `b89194a3f293848589be6e5d0b9b5b2014345ac2`.
 - [x] p.066 `測色 — 測色とは`: `SECONDARY_CORROBORATION_REQUIRED`; CIE narrow nonvisual boundary; 4/4 verified; CI `33784408214`, PR #679 merged as `189c4f9cf3a81651df7662b187e4cc01967a75c1`.
 - [x] p.067 `測色 — 視感測色―直接比較法`: `SECONDARY_CORROBORATION_REQUIRED`; ISO 3668:2017 narrow nonvisual boundary; 4/4 verified; CI `33784600346`, PR #680 merged as `6ba80f478bcb6b221683e94e0e161033dbbcac07`.
+- [x] p.069 `測色 — 物理測色`: `SECONDARY_CORROBORATION_REQUIRED`; NIST narrow nonvisual boundary; 4/4 verified; CI `33785943347`, PR #683 merged as `a5d99f69c4e3ed36619faaea5c33f4466cfda566`.
+- [x] p.072 `色彩心理 — 心理学的尺度構成法の基本`: `SECONDARY_CORROBORATION_REQUIRED`; university corroborated nominal/ordinal/interval/ratio boundary; 4/4 verified; CI `33786140834`, PR #684 merged as `f83ce35731ba3c20ff8e3a6655dfa0e2c023299b`.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.069 `測色 — 物理測色` before any authoring. Preserve all Grade 2/3 incomplete states and gates. Do not revisit either p.062 source route without new primary evidence.
+Source-audit p.073 `色彩心理 — 心理学的尺度構成法` before any authoring. Preserve all Grade 2/3 incomplete states and gates. Do not revisit either p.062 source route without new primary evidence.
