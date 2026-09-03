@@ -6,14 +6,14 @@
   "grade3": {"complete": false, "runtime_questions": {"verified": 223, "pending": 0, "needs_revision": 0, "rejected": 0}, "deferred_handoff": "docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md", "remaining_blockers": ["complete auditable conventional PCCS contrast-tone pair matrix", "explicit readings for 24 Japanese PCCS hue names", "approved current representative PCCS display values for monitor-facing drills", "final Grade 3 completion gate"], "source_display_gates_relaxed": false},
   "grade2": {"status": "in_progress_source_blocked_frontier", "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md", "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md", "runtime": "qualifications/color-certification/data/grade2-runtime.json", "runtime_questions": {"verified": 348, "pending": 0, "needs_revision": 0, "rejected": 0}, "runtime_skill_count": 29, "monitor_facing_generation_blocked_without_approved_display_values": true, "source_blocked_count": 18, "complete": false, "next": "Resume only if new explicit auditable authority resolves a recorded Grade 2 source-blocked topic; do not repeat rejected source routes without new evidence."},
   "grade1": {
-    "status": "in_progress_cmf",
+    "status": "in_progress_fashion",
     "execution_plan": "docs/power-color/60_GRADE1_EXECUTION_PLAN.md",
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
     "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33798741809, "pr": 702, "merge_commit": "6000009e188a53d48dfecda237a1aa9bf76b873e", "skill": "pc1.business.cmf_concept_to_physical_p119", "verified": 4},
-    "active_section": "色彩とビジネス",
-    "active_topic": "p.120 CMF® — 商品企画におけるCMF®",
+    "active_section": "ファッション",
+    "active_topic": "p.124 ファッションカラーの変遷",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.120 CMF® — 商品企画におけるCMF® before any authoring."
+    "next": "Source-audit p.124 ファッションカラーの変遷 before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 4, "generated": 12, "checked": 12, "verified": 12, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main and canonical Grade 1 state; no competing p.107/p.109 work existed.", "Source-resolved p.107 カラーリサーチ and p.109 カラーリサーチの手法 directly from the current AFT Grade 1 official sample; authored four narrow text-only records each and independently re-solved 8/8 verified. Power Color CI 33798278490 passed and PR #700 merged.", "Source-audited p.114 カラー戦略 as SOURCE_BLOCKED because no accepted public AFT authority exposes its deterministic process/rule set; generic strategy substitution rejected. Canonical sync CI 33798603991 passed and PR #701 merged.", "Source-resolved p.119 CMF® — 概念から実体へ directly from the current AFT official sample; authored four narrow text-only records and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1. Added a global Grade 1 authoring fingerprint/nonvisual/shared-renderer gate; Power Color CI 33798741809 passed and PR #702 merged as 6000009e188a53d48dfecda237a1aa9bf76b873e. Grade 2 remains 348 verified and Grade 3 remains 223 verified with all gates intact; Grade 1 remains unpromoted."]},
+  "current_run": {"checkpoints_completed": 3, "generated": 0, "checked": 0, "verified": 0, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, open PRs, and Grade 1 branches; no competing p.120-p.122 work existed.", "Source-audited p.120 商品企画におけるCMF® and p.121 CMF®でのカラーバリエーションの検討 as SOURCE_BLOCKED because current public AFT authority exposes headings/order but not deterministic AFT-specific process/rule sets; generic CMF substitution rejected.", "Source-audited p.122 制作におけるCMF®（コトからモノの制作） as SOURCE_BLOCKED for the same authority boundary; no authoring and the 資料・CMF® 素材と工法 risk gate remains intact."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.120 CMF® — 商品企画におけるCMF® before any authoring."
+  "next": "Source-audit p.124 ファッションカラーの変遷 before any authoring."
 }

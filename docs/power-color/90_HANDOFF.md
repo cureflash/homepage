@@ -6,18 +6,20 @@ Grade 1 is active by explicit user override. Grade 2 remains 348 verified / pend
 Canonical Grade 1 working set: `STATUS.json`, `20_EXECUTION_PLAN.md`, `60_GRADE1_EXECUTION_PLAN.md`, `61_GRADE1_SOURCE_INVENTORY.md`, `62_GRADE1_SPEC.md`.
 
 ## Grade 1 frontier
-All official Grade 1 items through p.119 are now recorded.
+All official Grade 1 items through p.122 are now recorded.
 
-p.107 `カラーリサーチ` and p.109 `カラーリサーチの手法` are `SOURCE_RESOLVED` directly from the current AFT Grade 1 official first-stage sample. Four narrow text-only records were authored for each, pending-first and independently re-solved 8/8 verified. Power Color CI `33798278490`; PR #700 merged as `29d9bfd02c15e1d41ee449f3f6a0cac2e1d191f7`.
+p.119 `CMF® — 概念から実体へ（コトからモノへ）` remains `SOURCE_RESOLVED` directly from the current AFT official sample. Four text-only records are verified; no Grade 1 runtime promotion has occurred.
 
-p.114 `カラー戦略` is `SOURCE_BLOCKED`. Current AFT public authority establishes heading/order but not the deterministic p.114 process/rule set; generic strategy substitution is rejected. Canonical sync CI `33798603991`; PR #701 merged as `5e60213fff776392b301a361930febc3cae3e0b5`.
+p.120 `商品企画におけるCMF®` is `SOURCE_BLOCKED`. Current AFT public authority fixes heading/order but does not expose the AFT-specific product-planning process, inputs, deliverables, decision criteria, or closed fact set. Generic CMF/product-planning substitution is rejected.
 
-p.119 `CMF® — 概念から実体へ（コトからモノへ）` is `SOURCE_RESOLVED` directly from the current AFT official sample. The accepted slice is only that CMF® is a viewpoint needed in design when considering color from conceptual color to physical/actual color. Four text-only records were authored pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1. The dedicated gate also scans all Grade 1 authoring batches for full-fingerprint/ID collisions and enforces nonvisual/shared-renderer behavior. Power Color CI `33798741809`; PR #702 merged as `6000009e188a53d48dfecda237a1aa9bf76b873e`.
+p.121 `CMF®でのカラーバリエーションの検討` is `SOURCE_BLOCKED`. Current AFT public authority does not expose deterministic variation-planning criteria, sequence, evaluation method, or decision rules. Generic CMF/product-analysis substitution is rejected.
 
-No Grade 1 runtime promotion has occurred.
+p.122 `制作におけるCMF®（コトからモノの制作）` is `SOURCE_BLOCKED`. Current AFT public authority does not expose the production workflow, material/finish selection logic, handoffs, manufacturing constraints, deliverables, or decision sequence. Generic CMF/materials-engineering substitution is rejected, preserving the separate `資料・CMF® — 素材と工法` risk gate.
+
+No questions were authored for p.120-p.122.
 
 ## Source/display boundary
-Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, or exact business/CMF process sequences. Do not repeat recorded rejected source routes without new explicit evidence.
+Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, exact business/CMF process sequences, or fashion practical procedures. Do not repeat recorded rejected source routes without new explicit evidence.
 
 ## Exact next start point
-Source-audit p.120 `CMF® — 商品企画におけるCMF®` before any authoring.
+Source-audit p.124 `ファッションカラーの変遷` before any authoring.
