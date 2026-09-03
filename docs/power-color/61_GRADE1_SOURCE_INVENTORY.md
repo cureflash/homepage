@@ -20,7 +20,7 @@
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
 | 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | 4 independently verified text-only records; synchronized CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`. No waterfilling beyond audited state space. Not yet promoted. |
-| 2 | シュヴルールの色彩調和論 | 025 | SOURCE_RESOLVED | Current AFT Grade 1 official sample directly exposes `一つの主調色による調和` → `ドミナント`, its treatment as one of three `類似色の調和`, and `隣接・近似色相による色調類似の調和`. Authoring not yet started. |
+| 2 | シュヴルールの色彩調和論 | 025 | SOURCE_RESOLVED | 3 pending-first text-only records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. Current AFT official sample is the answer authority. Await current-head authoring CI/merge. |
 | 3 | ルードの色彩調和論 | 027 | UNCHECKED | Follow official order. |
 | 4 | オストワルトの色彩調和論 | 028 | UNCHECKED | Follow official order. |
 | 5 | イッテンの色彩調和論 | 029 | UNCHECKED | Follow official order. |
@@ -90,5 +90,7 @@ Accepted first-party facts only:
 
 These are directly exposed with answers in the current AFT Grade 1 official sample, so the narrow authoring slice is `SOURCE_RESOLVED` without secondary authority. Do not reconstruct the official figure, infer RGB/HEX/display values, add unstated Chevreul categories, or duplicate p.024 Judd-only questions.
 
+`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json`: three pending-first records independently re-solved as verified; pending 0; A/B/C/D=1/1/1/0. The batch stops at the three first-party answer relations rather than waterfilling a fourth item. Dedicated gate checks source membership, nonvisual rendering, and full fingerprints against all seven prior Grade 1 batches. Await current-head CI/merge. No runtime promotion yet.
+
 ## Exact next source frontier
-After current-head CI and merge of the p.025 source-audit checkpoint, author a small pending-first p.025 text-only batch only from the three official-sample relations and independently QA it. Avoid waterfilling beyond the finite first-party state space.
+After current-head p.025 authoring CI and merge, continue in official order to p.027 `ルードの色彩調和論` and perform source audit before any authoring.
