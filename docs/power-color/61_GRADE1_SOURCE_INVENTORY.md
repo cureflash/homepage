@@ -24,7 +24,8 @@
 | 4 | 照明 — 測色の照明 | 039 | SECONDARY_CORROBORATION_REQUIRED | Current CIE boundary only; 4/4 independently verified; PR #651. Not promoted. |
 | 5 | 混色 — グラスマンの法則（加法混色の法則性） | 041 | SECONDARY_CORROBORATION_REQUIRED | Current CIE S 017:2020 boundary: three-variable sufficiency, tristimulus relevance, continuity, observing-condition limitation. 4/4 verified; CI 33768284181; PR #654. Not promoted. |
 | 6 | 色の表示 — XYZ表色系 | 046 | SECONDARY_CORROBORATION_REQUIRED | Current CIE S 017:2020 boundary: 1931 adoption, [X][Y][Z]+three CMFs, Y↔luminance, ~1°–4° central field. 4/4 verified; CI 33768527950; PR #655. Not promoted. |
-| 7 | 均等色空間とL*a*b*色空間 — 色差の表示 | 050 | UNCHECKED | Exact next source-audit frontier confirmed by current AFT official table of contents. |
+| 7 | 均等色空間とL*a*b*色空間 — 色差の表示 | 050 | SECONDARY_CORROBORATION_REQUIRED | Current ISO/CIE 11664-4:2019 and CIE S 017:2020 boundary: approximately uniform 3D CIELAB, L*/a*/b* coordinates, Euclidean CIELAB colour difference, reflecting/transmitting-object applicability boundary. 4/4 verified; CI 33770191717; PR #657. Not promoted. |
+| 8 | オストワルト表色系 — 色相環 | 053 | UNCHECKED | Exact next source-audit frontier confirmed by current AFT official table of contents. |
 
 ## p.041 accepted corroborating boundary
 Audit: `docs/power-color/audits/2026-09-03-grade1-p041-grassmann-laws-source-audit.md`.
@@ -38,6 +39,12 @@ Authoring batch: `qualifications/color-certification/data/grade1-authoring-xyz-p
 Dedicated gate: `qualifications/color-certification/tests/grade1-xyz-p046-authoring.test.js`.
 Do not infer unpublished AFT diagrams, formula layout, worked examples, chromaticity geometry, RGB/HEX/display values, or visual judgments.
 
+## p.050 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-03-grade1-p050-cielab-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-cielab-p050-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-cielab-p050-authoring.test.js`.
+Accepted facts are limited to CIELAB dimensionality/approximate uniformity, L*/a*/b* rectangular coordinates, Euclidean CIELAB colour difference, and the current ISO/CIE reflecting/transmitting-object applicability boundary. Do not infer unpublished AFT equation layouts, derivations, worked examples, tolerance thresholds, colour-space geometry, RGB/HEX/display values, or visual judgments.
+
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: exact current standard content must be auditable before authoring.
 - 色彩とビジネス / カラーマーケティング / CMF®: AFT-specific procedures must not be filled from generic business practice.
@@ -46,4 +53,4 @@ Do not infer unpublished AFT diagrams, formula layout, worked examples, chromati
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.050 `均等色空間とL*a*b*色空間 — 色差の表示` before authoring. Resolve only individually auditable deterministic nonvisual facts and block any unpublished AFT-specific remainder.
+Source-audit p.053 `オストワルト表色系 — 色相環` before authoring. Resolve only individually auditable deterministic nonvisual facts and block any unpublished AFT-specific remainder.
