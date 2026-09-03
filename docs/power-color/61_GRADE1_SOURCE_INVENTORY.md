@@ -31,48 +31,54 @@
 | 心理学的尺度構成法 | 073 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified |
 | 心理物理学的測定法 | 080 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified |
 | 色の心理的効果 — 記憶色と色記憶 | 082 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; CI 33789935372; PR #689 |
-| 色知覚の複雑性 — 色の見えの変化 | 083 | SOURCE_BLOCKED | public AFT authority exposes heading/order only; no deterministic phenomenon set; no authoring |
+| 色知覚の複雑性 — 色の見えの変化 | 083 | SOURCE_BLOCKED | no deterministic AFT phenomenon set; no authoring |
 | 色知覚の複雑性 — ものの見えの安定性 | 087 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; CI 33790197091; PR #690 |
-| 色彩効果のビジネス活用 | 090 | SOURCE_BLOCKED | public AFT authority exposes heading/general business scope only; no deterministic p.090 fact set; no authoring |
+| 色彩効果のビジネス活用 | 090 | SOURCE_BLOCKED | no deterministic p.090 fact set; no authoring |
 | カラーコミュニケーションツールの役割 | 093 | SECONDARY_CORROBORATION_REQUIRED | narrow DIC system-owner role boundary; 4/4 verified; CI 33792338939; PR #693 |
-| 企業アイデンティティ戦略における色彩 | 095 | SECONDARY_CORROBORATION_REQUIRED | narrow J-Net21 CI/VI + current Hitachi VI color boundary; 4/4 verified; CI 33794122650; PR #695 |
-| 商品企画における色彩 | 096 | SOURCE_BLOCKED | exact AFT product-planning fact set/process/decision rules unavailable; no authoring |
-| 商品デザインにおける色彩 | 100 | SOURCE_BLOCKED | AFT heading/order only; generic product-design process rejected; no authoring |
-| 製造における色彩 | 100 | SOURCE_BLOCKED | AFT heading/order only; generic manufacturing/color-management process rejected; no authoring |
-| 流通における色彩 | 100 | SOURCE_BLOCKED | AFT heading/order only; generic distribution/logistics process rejected; no authoring |
-| プロモーションにおける色彩 | 102 | SOURCE_BLOCKED | AFT heading/order only; generic advertising/promotion practice rejected; no authoring |
-| 小売りにおける色彩 | 102 | SOURCE_BLOCKED | AFT heading/order only; generic retail/VMD practice rejected; no authoring |
-| カラーマーケティングの基本視点 | 104 | SOURCE_RESOLVED | current AFT official sample directly gives `人、モノ、時代`; 4/4 verified; CI 33796187400; PR #697 |
+| 企業アイデンティティ戦略における色彩 | 095 | SECONDARY_CORROBORATION_REQUIRED | narrow CI/VI boundary; 4/4 verified; CI 33794122650; PR #695 |
+| 商品企画における色彩 | 096 | SOURCE_BLOCKED | no exact AFT product-planning rule/process set; no authoring |
+| 商品デザインにおける色彩 | 100 | SOURCE_BLOCKED | generic product-design process rejected; no authoring |
+| 製造における色彩 | 100 | SOURCE_BLOCKED | generic manufacturing/color-management process rejected; no authoring |
+| 流通における色彩 | 100 | SOURCE_BLOCKED | generic distribution/logistics process rejected; no authoring |
+| プロモーションにおける色彩 | 102 | SOURCE_BLOCKED | generic promotion practice rejected; no authoring |
+| 小売りにおける色彩 | 102 | SOURCE_BLOCKED | generic retail/VMD practice rejected; no authoring |
+| カラーマーケティングの基本視点 | 104 | SOURCE_RESOLVED | AFT official sample directly gives 人・モノ・時代; 4/4 verified; CI 33796187400; PR #697 |
+| カラーリサーチ | 107 | SOURCE_RESOLVED | AFT official sample directly confirms continued product-sales/market-evaluation research can improve analysis skill; 4/4 verified; CI 33798278490; PR #700 |
+| カラーリサーチの手法 | 109 | SOURCE_RESOLVED | AFT official sample directly confirms purpose-based planning of quantitative and qualitative research; 4/4 verified; CI 33798278490; PR #700 |
+| カラー戦略 | 114 | SOURCE_BLOCKED | no accepted public AFT authority exposes deterministic p.114 process/rule set; generic strategy substitution rejected; no authoring |
 
-## p.100 consumer-products business-process blockers
-Audit: `docs/power-color/audits/2026-09-04-grade1-p100-consumer-products-process-source-audit.md`.
-Classification: all three p.100 subtopics are `SOURCE_BLOCKED`.
-AFT current public authority fixes `商品デザインにおける色彩`, `製造における色彩`, and `流通における色彩` as p.100 headings but exposes no deterministic AFT-specific process facts, roles, handoffs, deliverables, tolerances, or decision rules. Generic product-design/manufacturing/distribution practice and broad public design/color-tool material were rejected as substitutes.
-
-## p.102 promotion / retail blockers
-Audit: `docs/power-color/audits/2026-09-04-grade1-p102-promotion-retail-source-audit.md`.
-Classification: both p.102 subtopics are `SOURCE_BLOCKED`.
-AFT current public authority fixes `プロモーションにおける色彩` and `小売りにおける色彩` as headings only. Generic advertising, promotion, retail, merchandising, packaging, or VMD material does not establish the unpublished AFT rule/process set and is rejected as a substitute.
-
-## p.104 カラーマーケティングの基本視点 accepted boundary
-Audit: `docs/power-color/audits/2026-09-04-grade1-p104-color-marketing-basic-view-source-audit.md`.
-Authoring batch: `qualifications/color-certification/data/grade1-authoring-color-marketing-basic-view-p104-0001-0004.json`.
-Dedicated gate: `qualifications/color-certification/tests/grade1-color-marketing-basic-view-p104-authoring.test.js`.
+## p.107 カラーリサーチ accepted boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p107-color-research-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-color-research-p107-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-color-research-p107-authoring.test.js`.
 Classification: `SOURCE_RESOLVED`.
-The current AFT official Grade 1 first-stage sample directly establishes the three basic viewpoints of color marketing as `人、モノ、時代`. The authored micro-skill is limited to recognition/completion/exclusion of that explicit three-part set. No broader color-marketing workflow, sequence, research taxonomy, or color decision rule is inferred.
+Use only the explicit current AFT official-sample proposition that continued research into product sales trends and market evaluation can improve one's analysis skill. Do not infer an exhaustive workflow, stage taxonomy, or source inventory.
+
+## p.109 カラーリサーチの手法 accepted boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p109-color-research-methods-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-color-research-methods-p109-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-color-research-methods-p109-authoring.test.js`.
+Classification: `SOURCE_RESOLVED`.
+Use only the explicit current AFT official-sample proposition that quantitative and qualitative research should be planned according to purpose. Do not infer detailed survey-method inventories or procedures from distractors or generic research methodology.
+
+## p.114 カラー戦略 blocker
+Audit: `docs/power-color/audits/2026-09-04-grade1-p114-color-strategy-source-audit.md`.
+Classification: `SOURCE_BLOCKED`.
+The AFT TOC fixes p.114 membership/order, but the current public AFT level/sample material does not expose the deterministic p.114 process, sequence, deliverables, decision rules, or closed fact set. Generic color-marketing, branding, product-planning, promotion, or strategy material is rejected as a substitute.
 
 ## Persistent blocked/risk candidates
 - p.035 `色の分類`: exact AFT taxonomy/labels/counts.
-- p.062 JIS light-source colour names: exact current normative content; do not retry secondary-mirror route without new primary evidence.
-- p.083 `色の見えの変化`: exact AFT phenomenon/rule set; do not retry generic color-appearance substitution without new explicit evidence.
-- p.090 `色彩効果のビジネス活用`: exact deterministic AFT business-effect scope; do not retry generic business/marketing substitution without new explicit evidence.
-- p.096 `商品企画における色彩`: exact AFT product-planning scope/process; do not retry generic product-planning substitution without new explicit evidence.
-- p.100 consumer-products process topics: exact AFT product-design/manufacturing/distribution process facts; do not retry generic industry-process substitution without new explicit evidence.
-- p.102 promotion/retail topics: exact AFT promotion/retail fact sets; do not retry generic advertising/retail/VMD substitution without new explicit evidence.
+- p.062 JIS light-source colour names: exact current normative content.
+- p.083 `色の見えの変化`: exact AFT phenomenon/rule set.
+- p.090 `色彩効果のビジネス活用`: exact deterministic AFT business-effect scope.
+- p.096 `商品企画における色彩`: exact AFT product-planning scope/process.
+- p.100 consumer-products process topics: exact AFT process facts.
+- p.102 promotion/retail topics: exact AFT fact sets.
+- p.114 `カラー戦略`: exact AFT strategy process/rule set; do not repeat generic-strategy route without new evidence.
 - 色彩とビジネス / カラーマーケティング / CMF®: AFT-specific processes must not be filled from generic business practice.
 - ファッション: AFT-specific practical procedures require explicit corroboration.
 - 資料・CMF® `素材と工法`: do not infer textbook content from generic materials-engineering sources.
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.107 `カラーマーケティング — カラーリサーチ` before any authoring. The current AFT official first-stage sample contains direct color-research statements; use those only as explicit primary facts and do not extrapolate an unpublished AFT workflow or exhaustive taxonomy.
+Source-audit p.119 `CMF® — 概念から実体へ（コトからモノへ）` before any authoring. The current AFT official first-stage sample directly states one CMF® relation and may resolve only that explicit fact; do not extrapolate broader unpublished CMF® workflow or process detail.
