@@ -11,23 +11,23 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "awaiting_current_head_ci", "workflow_run": null, "pr": null, "merge_commit": null, "skill": "pc1.harmony.chevreul_p025", "verified": 3},
+    "latest_authoring_gate": {"status": "passed", "workflow_run": 33757328587, "pr": 636, "merge_commit": "0b577fa0263b5f451b4941e1a9f04fe8f8b7f036", "skill": "pc1.harmony.chevreul_p025", "verified": 3},
     "active_section": "色彩調和論",
-    "active_topic": "p.025 シュヴルールの色彩調和論",
-    "active_topic_source_status": "SOURCE_RESOLVED",
-    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md",
-    "active_authoring": "qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json",
+    "active_topic": "p.027 ルードの色彩調和論",
+    "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
+    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p027-rood-source-audit.md",
+    "active_authoring": null,
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. The user's repeated explicit Grade 1 override resolves operational precedence for Grade 1 only; 60_GRADE1_EXECUTION_PLAN.md records that override while Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup of the stale sentence is still pending.",
-    "next": "Pass current-head p.025 dedicated/Power Color CI and merge if green/current, then source-audit p.027 ルードの色彩調和論 before authoring."
+    "next": "Author only the narrow corroborated nonvisual p.027 Rood fact families after the p.027 audit checkpoint merges; do not reconstruct unpublished AFT terminology or diagrams."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 2, "generated": 3, "checked": 3, "verified": 3, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled concurrent PR #634 and latest main before authoring; discarded the duplicate p.025 audit branch rather than merging conflicting source documentation.", "Used only the three p.025 first-party relations already fixed by merged audit authority.", "Authored 3 pending-first text-only records and independently re-derived all 3 answers: 3 verified / pending 0 / A/B/C/D=1/1/1/0.", "Added dedicated source/nonvisual/full-fingerprint/shared-renderer gate against all seven earlier Grade 1 batches.", "Stopped at three records rather than waterfilling beyond the merged official-sample state space." ]},
+  "current_run": {"checkpoints_completed": 4, "generated": 3, "checked": 3, "verified": 3, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled concurrent p.025 source-audit PR #634 and closed duplicate PR #635 unmerged.", "Authored p.025 exactly from the three merged first-party AFT sample relations: 3 pending-first / 3 independently verified / pending 0 / A/B/C/D=1/1/1/0.", "Power Color CI 33757328587 passed and PR #636 merged as 0b577fa0263b5f451b4941e1a9f04fe8f8b7f036.", "Audited p.027 Rood as SECONDARY_CORROBORATION_REQUIRED using AFT TOC plus Met and University of Chicago authority; narrow facts cover Modern Chromatics (1879), optical mixture, and complementary-colour adjacency/intensification context without claiming unpublished AFT wording." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Pass current-head p.025 CI and merge if green/current; then source-audit p.027 ルードの色彩調和論."
+  "next": "Merge the p.027 source-audit synchronization checkpoint after current-head CI, then author and independently QA only its narrow corroborated text-only state space."
 }
