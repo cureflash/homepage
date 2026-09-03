@@ -6,40 +6,31 @@
 - Current official Grade 1 first-stage sample questions: authoritative examples of current testable content/patterns.
 - 2026 Grade 1 second-stage format notice: printed-color selection replaces the former New Color Card 199a operation; content tendency/approximate question count/difficulty remain unchanged.
 
-## Culture chapter frontier
+## Completed culture / harmony frontier
+- p.006/p.007/p.010/p.014/p.017/p.021: `SECONDARY_CORROBORATION_REQUIRED`, 8 verified text-only records each; not promoted.
+- p.024 Judd: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
+- p.025 Chevreul: narrow `SOURCE_RESOLVED`, 3/3 verified; not promoted.
+- p.027 Rood: `SECONDARY_CORROBORATION_REQUIRED`, 3/3 verified; not promoted.
+- p.028 Ostwald: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; not promoted.
+- p.029 Itten: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; PR #643 merged; not promoted.
+- p.030 Moon & Spencer: `SECONDARY_CORROBORATION_REQUIRED`, 4/4 verified; Power Color CI `33761298016`; PR #644 merged as `26c7ab8935896b080be8cfd1c93d6537bdb91794`; not promoted.
+
+## Light and color frontier
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
-| 1 | 古代ヨーロッパの色彩 | 006 | SECONDARY_CORROBORATION_REQUIRED | 8 verified text-only records. Not promoted. |
-| 2 | 中・近世のヨーロッパの色彩 | 007 | SECONDARY_CORROBORATION_REQUIRED | 8 verified text-only records. Not promoted. |
-| 3 | 近代ヨーロッパと色彩学 | 010 | SECONDARY_CORROBORATION_REQUIRED | 8 verified records. Not promoted. |
-| 4 | 日本の古代の色 | 014 | SECONDARY_CORROBORATION_REQUIRED | 8 verified records. Not promoted. |
-| 5 | 古代から中近世の日本の色彩 | 017 | SECONDARY_CORROBORATION_REQUIRED | 8 verified records. Not promoted. |
-| 6 | 近代の日本の色彩 | 021 | SECONDARY_CORROBORATION_REQUIRED | 8 verified records. Not promoted. |
+| 1 | 心理的な見えによる色の分類 — 色の様相 | 032 | SECONDARY_CORROBORATION_REQUIRED | Source-audited only; no authoring yet. |
+| 2 | 色の分類 | 035 | UNCHECKED | Follow official order after p.032 authoring/gate. |
 
-Detailed accepted fact boundaries and exclusions for p.006–p.021 remain authoritative in their dated audit files under `docs/power-color/audits/`.
-
-## Color-harmony frontier
-| Order | Official heading | Page | Status | Notes |
-|---|---|---:|---|---|
-| 1 | 色彩調和論とは / ジャッドの色彩調和、四つの原理 | 024 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified. Not promoted. |
-| 2 | シュヴルールの色彩調和論 | 025 | SOURCE_RESOLVED | 3/3 verified. Not promoted. |
-| 3 | ルードの色彩調和論 | 027 | SECONDARY_CORROBORATION_REQUIRED | 3/3 verified. Not promoted. |
-| 4 | オストワルトの色彩調和論 | 028 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified. Not promoted. |
-| 5 | イッテンの色彩調和論 | 029 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; PR #643 merged as `94cccab5c53d994f92f0ee0de7f9d86af9efa3c8`. Not promoted. |
-| 6 | ムーンとスペンサーの色彩調和論 | 030 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified narrow nonvisual records; current-head CI/merge pending. Not promoted. |
-
-## p.030 accepted corroborating boundary
-Audit: `docs/power-color/audits/2026-09-03-grade1-p030-moon-spencer-source-audit.md`.
+## p.032 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-03-grade1-p032-color-appearance-mode-source-audit.md`.
 
 Accepted narrow nonvisual facts only:
-- Current AFT TOC fixes p.030 membership/order.
-- Japan Color Science Association / J-STAGE: Moon & Spencer defined harmony and ambiguity regions in Munsell color space and defined `美度` from order and complexity.
-- NDL/CiNii/Optica bibliographic records fix the three 1944 JOSA titles: `Geometric Formulation of Classical Color Harmony`, `Area in Color Harmony`, `Aesthetic Measure Applied to Color Harmony`.
-- A later peer-reviewed Journal of General Psychology paper summarizes the Moon-Spencer spatial-balance model as involving chroma and value, with contrast against the background/adaptation point as the dominant factor.
+- AFT current TOC fixes p.032 membership/order.
+- Journal of Vision/PubMed: mode of color appearance concerns qualitative appearance differences associated with whether light is reflected, emitted, or transmitted.
+- Illuminating Engineering Institute of Japan/CiNii: reflected-surface appearance and self-emitting-light appearance are distinct appearance modes.
+- Journal of Vision/PubMed: mode judgment is not determined solely by the target stimulus; surrounding/depth context can affect it.
 
-`qualifications/color-certification/data/grade1-authoring-harmony-moon-spencer-p030-0001-0004.json`: four pending-first text-only records independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1.
-
-Do not infer exact AFT p.030 Japanese terminology, equations, coefficients, interval thresholds, diagrams, area-ratio calculations, RGB/HEX/display values, or p.032 content.
+Do not infer the complete unpublished AFT p.032 category inventory, exact Japanese labels/counts, diagrams, threshold luminances, RGB/HEX/display values, or p.035 content.
 
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: exact current standard content must be auditable before authoring.
@@ -49,4 +40,4 @@ Do not infer exact AFT p.030 Japanese terminology, equations, coefficients, inte
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-After current-head p.030 authoring CI/merge, continue in official order to p.032 `光と色：色の様相` and source-audit before authoring.
+After current-head p.032 audit CI/merge, author only the three audited p.032 nonvisual fact families pending-first and independently QA them. Do not waterfill or reconstruct the unpublished AFT taxonomy.
