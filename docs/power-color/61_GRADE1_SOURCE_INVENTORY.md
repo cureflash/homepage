@@ -42,7 +42,9 @@
 | 22 | 測色 — 視感測色―直接比較法 | 067 | SECONDARY_CORROBORATION_REQUIRED | ISO 3668:2017 narrow direct-comparison boundary; 4/4 verified; CI 33784600346; PR #680. Not promoted. |
 | 23 | 測色 — 物理測色 | 069 | SECONDARY_CORROBORATION_REQUIRED | NIST narrow spectrophotometry/instrument boundary; 4/4 verified; CI 33785943347; PR #683. Not promoted. |
 | 24 | 色彩心理 — 心理学的尺度構成法の基本 | 072 | SECONDARY_CORROBORATION_REQUIRED | University-corroborated nominal/ordinal/interval/ratio defining properties only; 4/4 verified; CI 33786140834; PR #684. Not promoted. |
-| 25 | 色彩心理 — 心理学的尺度構成法 | 073 | UNCHECKED | Exact next source-audit frontier. |
+| 25 | 色彩心理 — 心理学的尺度構成法 | 073 | SECONDARY_CORROBORATION_REQUIRED | AFT first-party pp.72–79 scope explicitly names paired comparison and SD; university sources resolve only four narrow nonvisual method facts. 4/4 verified; CI 33788360033; PR #686. Not promoted. |
+| 26 | 色彩心理 — 心理物理学的測定法 | 080 | SECONDARY_CORROBORATION_REQUIRED | Tohoku Gakuin University resolves only classical constant-stimuli/limits/adjustment definitions and basic procedure distinctions. 4/4 verified; CI 33788707578; PR #687. Not promoted. |
+| 27 | 色彩心理 — 色の心理的効果 — 記憶色と色記憶 | 082 | UNCHECKED | Exact next source-audit frontier. |
 
 ## p.056 色相環と色相の表し方 accepted corroborating boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p056-ncs-hue-circle-notation-source-audit.md`.
@@ -110,6 +112,18 @@ Authoring batch: `qualifications/color-certification/data/grade1-authoring-psych
 Dedicated gate: `qualifications/color-certification/tests/grade1-psychological-scale-basics-p072-authoring.test.js`.
 Accepted facts are limited to the independently corroborated four scale-level properties: nominal distinguishes categories without order; ordinal preserves rank without guaranteed equal intervals; interval preserves meaningful differences without meaningful absolute-zero ratio interpretation; ratio adds meaningful zero and ratios. Unpublished AFT examples, coding conventions, statistical-treatment rules, later p.073/p.080 methods, diagrams, and numerical examples remain excluded.
 
+## p.073 心理学的尺度構成法 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p073-psychological-scaling-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-psychological-scaling-p073-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-psychological-scaling-p073-authoring.test.js`.
+Accepted facts are limited to current AFT first-party confirmation that Grade 1 pp.72–79 include `一対比較法` and `SD法`, plus university corroboration that paired comparison evaluates stimuli/materials two at a time and can indirectly construct a one-dimensional psychological distance/scale, while SD uses adjective-pair scales and may use graded multi-step ratings. Unpublished AFT method inventory, exact questionnaires, Thurstone/Scheffé formulas, factor-analysis procedures, diagrams, numerical examples, and any claim that a five-step SD format is uniquely required remain excluded.
+
+## p.080 心理物理学的測定法 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p080-psychophysical-methods-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-psychophysical-methods-p080-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-psychophysical-methods-p080-authoring.test.js`.
+Accepted facts are limited to Tohoku Gakuin University psychology material identifying the three classical methods as constant stimuli, limits, and adjustment; adjustment is participant-controlled comparison-stimulus matching; constant stimuli uses predetermined comparison values; limits uses ordered ascending/descending series. Unpublished AFT thresholds/formulas, JND/PSE calculations, exact trial counts, increments, counterbalancing, adaptive methods, diagrams, numerical examples, display values, and monitor judgments remain excluded.
+
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: explicitly `SOURCE_BLOCKED`; exact current standard content requires new primary evidence before authoring.
 - 色彩とビジネス / カラーマーケティング / CMF®: AFT-specific procedures must not be filled from generic business practice.
@@ -118,4 +132,4 @@ Accepted facts are limited to the independently corroborated four scale-level pr
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.073 `色彩心理 — 心理学的尺度構成法` before authoring. Preserve official order and keep both p.062 topics blocked unless new explicit auditable primary authority appears.
+Source-audit p.082 `色彩心理 — 色の心理的効果 — 記憶色と色記憶` before authoring. Preserve official order and keep both p.062 topics blocked unless new explicit auditable primary authority appears.
