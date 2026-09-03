@@ -46,6 +46,7 @@
 | カラーリサーチ | 107 | SOURCE_RESOLVED | AFT official sample directly confirms continued product-sales/market-evaluation research can improve analysis skill; 4/4 verified; CI 33798278490; PR #700 |
 | カラーリサーチの手法 | 109 | SOURCE_RESOLVED | AFT official sample directly confirms purpose-based planning of quantitative and qualitative research; 4/4 verified; CI 33798278490; PR #700 |
 | カラー戦略 | 114 | SOURCE_BLOCKED | no accepted public AFT authority exposes deterministic p.114 process/rule set; generic strategy substitution rejected; no authoring |
+| CMF® — 概念から実体へ（コトからモノへ） | 119 | SOURCE_RESOLVED | AFT official sample directly confirms concept-to-physical-color viewpoint; 4/4 verified; global Grade 1 full-fingerprint/nonvisual/shared-renderer gate; CI 33798741809; PR #702 |
 
 ## p.107 カラーリサーチ accepted boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p107-color-research-source-audit.md`.
@@ -66,6 +67,13 @@ Audit: `docs/power-color/audits/2026-09-04-grade1-p114-color-strategy-source-aud
 Classification: `SOURCE_BLOCKED`.
 The AFT TOC fixes p.114 membership/order, but the current public AFT level/sample material does not expose the deterministic p.114 process, sequence, deliverables, decision rules, or closed fact set. Generic color-marketing, branding, product-planning, promotion, or strategy material is rejected as a substitute.
 
+## p.119 CMF® accepted boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p119-cmf-concept-to-physical-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-cmf-concept-to-physical-p119-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-cmf-concept-to-physical-p119-authoring.test.js`.
+Classification: `SOURCE_RESOLVED`.
+Use only the current AFT official-sample proposition that CMF® is a viewpoint needed in design when considering color from conceptual color to physical/actual color. Do not infer unpublished C/M/F component definitions, CMF workflow, materials/process rules, handoffs, deliverables, or decision sequence. The p.119 gate checks the new records against all existing Grade 1 authoring batches for ID/full-fingerprint collision and enforces nonvisual/shared-renderer behavior.
+
 ## Persistent blocked/risk candidates
 - p.035 `色の分類`: exact AFT taxonomy/labels/counts.
 - p.062 JIS light-source colour names: exact current normative content.
@@ -81,4 +89,4 @@ The AFT TOC fixes p.114 membership/order, but the current public AFT level/sampl
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.119 `CMF® — 概念から実体へ（コトからモノへ）` before any authoring. The current AFT official first-stage sample directly states one CMF® relation and may resolve only that explicit fact; do not extrapolate broader unpublished CMF® workflow or process detail.
+Source-audit p.120 `CMF® — 商品企画におけるCMF®` before any authoring.
