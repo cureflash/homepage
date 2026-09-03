@@ -24,7 +24,7 @@ Grade 2 remains 348 verified / pending 0 across 29 promoted skills and incomplet
 - p.010 `近代ヨーロッパと色彩学`: 8 independently verified records; CI `33747834603`; PR #623 merged.
 - p.014 `日本の古代の色`: 8 independently verified records; CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`.
 - p.017 `古代から中近世の日本の色彩`: 8 independently verified records, pending 0, A/B/C/D=2/2/2/2; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`.
-- p.021 `近代の日本の色彩`: 8 pending-first text-only records independently re-solved as 8/8 verified, pending 0, A/B/C/D=2/2/2/2; CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`.
+- p.021 `近代の日本の色彩`: 8 independently verified text-only records, pending 0, A/B/C/D=2/2/2/2; CI `33755336513`; PR #630 merged as `b69572f7b3e55732e72ac4e0496595bb505d0308`.
 
 No Grade 1 runtime promotion has occurred yet.
 
@@ -47,7 +47,7 @@ Accepted narrow text-only boundary:
 
 `qualifications/color-certification/data/grade1-authoring-harmony-rood-p027-0001-0003.json` contains exactly these three corroborated fact families. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. The batch deliberately stops at three rather than waterfilling.
 
-Dedicated gate `qualifications/color-certification/tests/grade1-harmony-rood-p027-authoring.test.js` checks allowed-source membership, nonvisual rendering, full fingerprints against all eight earlier Grade 1 batches, and shared renderer behavior. Current-head CI/merge is still required.
+Dedicated source/nonvisual/full-fingerprint/shared-renderer gate passed in Power Color CI `33758149486`; PR #638 merged as `b89da78340133b5a4abf24408ef4c3930610b917`.
 
 Do not infer unpublished AFT p.027 Japanese rule labels, category counts, chromatic-circle geometry, numerical angle relations, RGB/HEX/display answers, or p.028 Ostwald content.
 
@@ -57,4 +57,4 @@ Do not infer unpublished AFT p.027 Japanese rule labels, category counts, chroma
 
 ## Exact next start point
 
-Pass current-head p.027 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.028 `オストワルトの色彩調和論` and source-audit it before authoring.
+Continue in official order to p.028 `オストワルトの色彩調和論` and source-audit it before authoring.
