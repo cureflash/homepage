@@ -37,6 +37,8 @@
     "active_topic": "p.006 古代ヨーロッパの色彩",
     "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
     "source_audit": "docs/power-color/audits/2026-09-03-grade1-p006-ancient-europe-source-audit.md",
+    "active_authoring": "qualifications/color-certification/data/grade1-authoring-culture-ancient-europe-materials-0001-0008.json",
+    "active_authoring_qa": {"generated": 8, "checked": 8, "verified": 8, "needs_revision": 0, "rejected": 0, "pending": 0, "correct_index_distribution": {"A": 2, "B": 2, "C": 2, "D": 2}},
     "known_source_risk_candidates": [
       "JIS light-source color-name exact current content",
       "AFT-specific business/color-marketing/CMF processes",
@@ -46,7 +48,7 @@
     ],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
-    "next": "Author a small pending-first nonvisual p.006 culture batch using only source-resolved ancient Egyptian pigment/faience and Greek sculptural-polychromy facts; independently QA before any promotion."
+    "next": "Run the dedicated p.006 authoring gate and normal Power Color regression; if green/current, merge. Then source-audit p.007 中・近世のヨーロッパの色彩 before further authoring."
   },
   "engine_integration": {
     "shared_power_toeic_session": true,
@@ -56,21 +58,21 @@
   },
   "current_run": {
     "checkpoints_completed": 2,
-    "generated": 0,
-    "checked": 0,
-    "verified": 0,
+    "generated": 8,
+    "checked": 8,
+    "verified": 8,
     "revision_events": 0,
     "needs_revision": 0,
     "rejected": 0,
     "pending": 0,
     "checkpoint_breakdown": [
-      "Established Grade 1 canonical execution plan, source inventory, and content spec from the current AFT official Grade 1 scope/table-of-contents/sample authority while preserving Grade 2/3 incomplete states and gates.",
-      "Audited p.006 古代ヨーロッパの色彩 as SECONDARY_CORROBORATION_REQUIRED and resolved a narrow nonvisual ancient-Egypt pigment/faience and Greek sculptural-polychromy fact boundary using museum/scientific authority."
+      "Reconciled latest main after PR #617, confirmed no open Power Color PR, and confirmed the old Grade 1 branch is behind main with no unmerged commits.",
+      "Authored p.006 pc1.culture.ancient_europe_materials pending-first from the four narrow audited fact families and independently re-solved all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; added a dedicated nonvisual/source/full-fingerprint/shared-renderer gate."
     ]
   },
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 1 culture from p.006 authoring/independent QA, then proceed in official order to p.007 source audit without weakening lower-grade gates."
+  "next": "Complete the current p.006 authoring CI/merge checkpoint, then continue Grade 1 culture in official order with p.007 source audit."
 }
