@@ -11,23 +11,23 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33812789294, "pr": 723, "merge_commit": "5cb01bbe550ded78503469eb9d86ab9f2eb32da2", "skills": ["pc1.landscape.color_attributes_p146"], "verified": 4},
-    "active_section": "景観色彩",
-    "active_topic": "p.148 遠景・中景・近景とは",
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33814354115, "pr": 726, "merge_commit": "e101a16f216f5a418a5ccf8fbb7b3448f9a3942a", "skills": ["pc1.landscape.distance_zones_p148"], "verified": 4},
+    "active_section": "資料・光と色（1）",
+    "active_topic": "p.152 色の知覚",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
-    "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority", "p.134 繊維の長さと発色性 exact relation", "p.136 AFT-specific VMD initiative set", "p.137 AFT-specific product-display color-coordination rules"],
+    "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority", "p.134 繊維の長さと発色性 exact relation", "p.136 AFT-specific VMD initiative set", "p.137 AFT-specific product-display color-coordination rules", "p.148 AFT-specific near/mid/far color-planning consideration rules"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.148 遠景・中景・近景とは before any authoring."
+    "next": "Source-audit p.152 資料・光と色（1） — 色の知覚 before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 2, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; no competing p.146 work existed.", "p.146 色相、明度、彩度と景観形成とのかかわり: SOURCE_RESOLVED to a narrow MLIT-explicit nonvisual boundary; 4/4 verified, A/B/C/D=1/1/1/1; PR #723 CI 33812789294 success and merged 5cb01bbe550ded78503469eb9d86ab9f2eb32da2."]},
+  "current_run": {"checkpoints_completed": 3, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; no competing p.148 work existed.", "p.148 遠景・中景・近景とは: SECONDARY_CORROBORATION_REQUIRED to a narrow Shinjuku-government/FFPRI nonvisual distance-zone boundary; 4/4 verified, A/B/C/D=1/1/1/1; PR #726 CI 33814354115 success and merged e101a16f216f5a418a5ccf8fbb7b3448f9a3942a.", "p.148 遠景・中景・近景を踏まえた色彩計画における配慮事項: SOURCE_BLOCKED because no public authority exposes the AFT-specific deterministic color-planning consideration set; no authoring."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.148 遠景・中景・近景とは before any authoring."
+  "next": "Source-audit p.152 資料・光と色（1） — 色の知覚 before any authoring."
 }
