@@ -8,11 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Extracted canonical knowledge for `takken-concept-fixed-asset-tax` without changing existing Phase 2/3 questions or beginning Phase 4.3.
+Reconciled the existing verified source questions for `takken-concept-fixed-asset-tax` against its 9 canonical knowledge items without changing Phase 2/3 questions or beginning Phase 4.3.
 
-- Added 9 atomic knowledge items covering municipal-owner taxation, January 1 assessment date, registered/ledger owner, the 1.4% standard rate, exemption thresholds, three-year revaluation, small residential land one-sixth, general residential land one-third, and the new-house reduction.
-- Primary grounding is the Local Tax Act at the 2026-04-01 baseline plus current Osaka City official fixed-asset-tax guidance, including the official page updated 2026-04-01.
-- Existing source question(s) for unit 80 were intentionally not mapped in this extraction checkpoint.
+- `takken-q-80-001` maps only to `takken-k-fixed-asset-tax-municipal-owner-tax`, because the stem and choices directly test the owner taxpayer principle.
+- `takken-q-80-002` maps only to `takken-k-fixed-asset-tax-assessment-date-january1`, because the stem and choices directly test the January 1 assessment date.
+- The registered/ledger owner rule, 1.4% standard rate, exemption thresholds, three-year revaluation, small residential land one-sixth, general residential land one-third, and new-house reduction remain explicit Phase 4.3 deficits because the existing questions do not directly measure them.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,17 +23,17 @@ Extracted canonical knowledge for `takken-concept-fixed-asset-tax` without chang
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 103/113 concepts with canonical knowledge extraction complete; 102/113 fully reconciled through question mapping
+- Phase 4.2: active — 103/113 concepts with canonical knowledge extraction complete; 103/113 fully reconciled through question mapping
 - Concepts with canonical knowledge items: 103
 - Canonical knowledge items: 570
-- Existing verified questions mapped: 128
-- Explicit unmapped knowledge gaps: 381
+- Existing verified questions mapped: 130
+- Explicit unmapped knowledge gaps: 379
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile the existing verified source question(s) for `takken-concept-fixed-asset-tax` against its 9 canonical knowledge items. Map only knowledge directly measured by each stem and four choices. Keep all other knowledge as explicit Phase 4.3 deficits. Do not begin Phase 4.3.
+Extract and source-check canonical atomic knowledge items for `takken-concept-registration-license-tax`, the next concept in canonical order. Defer its existing source-question mapping to the following checkpoint. Do not begin Phase 4.3.
 
 ## publication invariant
 
