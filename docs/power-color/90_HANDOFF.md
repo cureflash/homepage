@@ -8,11 +8,11 @@ Canonical Grade 1 working set: `STATUS.json`, `20_EXECUTION_PLAN.md`, `60_GRADE1
 
 ## Grade 1 progress
 
-Culture p.006/p.007/p.010/p.014/p.017/p.021 and harmony p.024/p.025/p.027/p.028/p.029/p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` has 3/3 independently verified nonvisual records. p.035 `色の分類` remains `SOURCE_BLOCKED`; no authoring. p.036 `照明の性質を表すもの`, p.039 `測色の照明`, p.041 `グラスマンの法則`, p.046 `XYZ表色系`, p.050 `均等色空間とL*a*b*色空間 — 色差の表示`, p.053/p.054/p.055 オストワルト表色系, and p.056 `へリングの6主要色` are audited/authored within narrow source-confirmed nonvisual boundaries.
+Culture p.006/p.007/p.010/p.014/p.017/p.021 and harmony p.024/p.025/p.027/p.028/p.029/p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` has 3/3 independently verified nonvisual records. p.035 `色の分類` remains `SOURCE_BLOCKED`; no authoring. p.036 `照明の性質を表すもの`, p.039 `測色の照明`, p.041 `グラスマンの法則`, p.046 `XYZ表色系`, p.050 `均等色空間とL*a*b*色空間 — 色差の表示`, p.053/p.054/p.055 オストワルト表色系, and p.056/p.058/p.059 NCS are audited/authored within narrow source-confirmed nonvisual boundaries.
 
-p.056 `NCS — 色相環と色相の表し方` is `SECONDARY_CORROBORATION_REQUIRED`. Current NCS first-party authority resolves only the Colour Circle relation to the four chromatic elementary colours, `R20B` as red with 20% blue, neutral `-N` notation, and the hue/nuance split in `NCS S 1040-R20B`. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in Power Color CI `33778046172`; PR #668 merged as `9f695423f1162f6ccbff56435e1d45fa84b54634`.
+p.059 `NCS — 色の表示方法` is `SECONDARY_CORROBORATION_REQUIRED`. Current NCS first-party authority resolves the blackness/chromaticness digit-pair interpretation, whiteness=`100-(blackness+chromaticness)`, nuance `3010`→whiteness 60%, and `S 5020 R50B`→blackness 50/chromaticness 20/hue R50B. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Power Color CI `33780351985` passed; PR #672 merged as `a46f7d8881f2de3283a075bf859204f2de4aff29`.
 
-p.058 `NCS — 等色相面での色の表示` is `SECONDARY_CORROBORATION_REQUIRED`. Current NCS first-party authority resolves only one Colour Triangle per hue, triangle position defining nuance, neutrals along the vertical side, and `1040` meaning 10% blackness / 40% chromaticness. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in Power Color CI `33778226671`; PR #669 merged as `76c1d105568890068e35a0c11ad9f44436b67fc9`.
+p.059 `NCS — 色立体と色票集` is `SECONDARY_CORROBORATION_REQUIRED`. Current NCS first-party authority resolves only the 3D Colour Space, white-top/black-bottom vertical axis, four chromatic elementary colours arranged around it in a circle, and Atlas 2050 containing all 2,050 NCS Standard Colours arranged by hue and nuance. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Power Color CI `33780517855` passed; PR #673 merged as `9fe69ed87abc5f09006c34b6c08f2a976e400b4a`.
 
 ## Source/display boundary
 
@@ -20,8 +20,8 @@ Do not reconstruct unpublished AFT wording, numbering/symbol conventions, diagra
 
 ## Canonical sequencing note
 
-The current AFT official Grade 1 textbook table of contents confirms p.056 NCS `へリングの6主要色` → p.056 `色相環と色相の表し方` → p.058 `等色相面での色の表示` → p.059 `色の表示方法` → p.059 `色立体と色票集`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
+The current AFT official Grade 1 textbook table of contents confirms p.059 NCS `色の表示方法` → p.059 `色立体と色票集` → p.060 色名 `色を表す言葉の分類` → p.061 `ISCC-NBS色名法` → p.062 `JISの光源色の色名` → p.062 `光源色の系統色名`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
 
 ## Exact next start point
 
-Source-audit p.059 `NCS — 色の表示方法` before any authoring. Resolve only deterministic nonvisual facts from current NCS/AFT authority; do not infer unpublished AFT figure geometry, exact display colours, notation layout, or monitor judgments.
+Source-audit p.060 `色名 — 色を表す言葉の分類` before any authoring. Do not let the known p.062 JIS light-source-name blocked candidate pull work out of official order.
