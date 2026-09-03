@@ -47,6 +47,8 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] Author p.010 `pc1.culture.modern_europe_color_science` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Stop at 8 to avoid repetition beyond the five resolved fact families.
 - [x] Pass the dedicated Grade 1 p.010 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression in CI `33747834603`; PR #623 merged as `f26b52f8ef6d8e9426e614c39da9174f068d3d93`.
 - [x] Audit p.014 `日本の古代の色` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Imperial Household Agency / Kyoto National Museum Shosoin-Nara textile-culture boundary.
+- [x] Author p.014 `pc1.culture.ancient_japan_colour` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.
+- [x] Pass the dedicated Grade 1 p.014 source/nonvisual/full-fingerprint/shared-renderer gate and normal Power Color regression in CI `33749556806` on PR #625 head `86c1bc93bba65d3f377f1cccd15d527189f7aa04`.
 
 ## Exact next start point
-Author a small pending-first p.014 text-only batch using only the resolved Shosoin/Nara-period, continental-influence, textile/dye-technique-category and catalogue-record relations in `docs/power-color/audits/2026-09-03-grade1-p014-ancient-japan-colour-source-audit.md`, then independently QA every record.
+After PR #625 is green on the synchronized current head and merged, source-audit p.017 `古代から中近世の日本の色彩` in official AFT order. Do not infer AFT body membership; resolve only explicit public institutional/academic text-only facts.
