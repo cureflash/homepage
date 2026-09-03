@@ -7,7 +7,7 @@
 - 2026 Grade 1 second-stage format notice: printed-color selection replaces the former New Color Card 199a operation; content tendency/approximate question count/difficulty remain unchanged.
 
 ## Processed frontier
-Culture p.006–021, harmony p.024–030, light/color p.032–041, color representation p.046–059, color names p.060–062, measurement p.066–069, psychology p.072–087, business p.090–102, color marketing p.104–114, CMF® p.119–122, fashion p.124–137, and landscape p.140–145 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files; Grade 1 runtime remains unpromoted.
+Culture p.006–021, harmony p.024–030, light/color p.032–041, color representation p.046–059, color names p.060–062, measurement p.066–069, psychology p.072–087, business p.090–102, color marketing p.104–114, CMF® p.119–122, fashion p.124–137, and landscape p.140–146 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files; Grade 1 runtime remains unpromoted.
 
 Recorded source-blocked topics include p.035 `色の分類`, p.062 JIS light-source name topics, p.083 `色の見えの変化`, p.090 `色彩効果のビジネス活用`, p.096/p.100/p.102 business-process topics, p.114 `カラー戦略`, p.120-p.122 CMF® process topics, p.132 `カラー情報の整理と分析` / `シーズンテーマカラーの決定`, p.134 `繊維の長さと発色性`, p.136 `ビジュアルマーチャンダイジング（VMD）の取り組み`, and p.137 `商品陳列のカラーコーディネーション`.
 
@@ -76,6 +76,13 @@ Combined gate: `qualifications/color-certification/tests/grade1-landscape-p145-a
 Classification: `SOURCE_RESOLVED` only to the public governance/area-specific standards structure.
 MLIT establishes that actual outdoor-advertising regulation is implemented by local governments through ordinances/rules; current Tokyo/Kyoto material confirms general and area/district-specific frameworks. Exact municipality thresholds, visual judgments and unpublished AFT examples are excluded. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1. Combined p.145 PR #721 / CI `33811733728`, merged `e4fc8dbf6d19b75f6a1856ea93d756a2f2d8e806`.
 
+## p.146 hue/value/chroma landscape accepted boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p146-landscape-color-attributes-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-landscape-color-attributes-p146-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-landscape-color-attributes-p146-authoring.test.js`.
+Classification: `SOURCE_RESOLVED`.
+Use only the current AFT p.146 heading plus current MLIT road-color guidance: R–Y is generally a warm-color range associated with warmth/liveliness; G–B is generally a cool-color range often used for calm atmosphere; with otherwise identical objects brighter colors tend to feel lighter and darker colors heavier; vivid/high-chroma colors generally have higher conspicuity. Do not infer AFT-unpublished thresholds, swatch appearance, RGB/HEX or universal prescriptions. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1; PR #723 / CI `33812789294`, merged `5cb01bbe550ded78503469eb9d86ab9f2eb32da2`.
+
 ## Persistent blocked/risk candidates
 - p.035 `色の分類`: exact AFT taxonomy/labels/counts.
 - p.062 JIS light-source colour names: exact current normative content.
@@ -91,4 +98,4 @@ MLIT establishes that actual outdoor-advertising regulation is implemented by lo
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.146 `色相、明度、彩度と景観形成とのかかわり` before any authoring.
+Source-audit p.148 `遠景・中景・近景とは` before any authoring.
