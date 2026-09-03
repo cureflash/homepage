@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 The user explicitly made Grade 1 active while Grade 2/3 remain incomplete. The stale Phase 5 sentence in `20_EXECUTION_PLAN.md` is a known mechanical inconsistency; this explicit override plus STATUS/HANDOFF/this Grade 1 plan controls Grade 1 work only and does not mark Grade 2/3 complete.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021 and color-harmony p.024→p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` is audited/authored within three corroborated nonvisual fact families. p.035 `色の分類` is source-blocked. p.036 `照明の性質を表すもの`, p.039 `測色の照明`, p.041 `グラスマンの法則`, p.046 `XYZ表色系`, p.050 `均等色空間とL*a*b*色空間 — 色差の表示`, p.053 `オストワルト表色系 — 色相環`, and p.054 `オストワルト表色系 — 色の表示方法` are audited/authored within narrow auditable nonvisual fact families. Next official frontier is p.054 `オストワルト表色系 — 等色相面` source audit.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021 and color-harmony p.024→p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` is audited/authored within three corroborated nonvisual fact families. p.035 `色の分類` is source-blocked. p.036 `照明の性質を表すもの`, p.039 `測色の照明`, p.041 `グラスマンの法則`, p.046 `XYZ表色系`, p.050 `均等色空間とL*a*b*色空間 — 色差の表示`, p.053 `オストワルト表色系 — 色相環`, p.054 `オストワルト表色系 — 色の表示方法`, and p.054 `オストワルト表色系 — 等色相面` are audited/authored within narrow auditable nonvisual fact families. Next official frontier is p.055 `オストワルト表色系 — 色立体` source audit.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -47,8 +47,9 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] p.050 `均等色空間とL*a*b*色空間 — 色差の表示`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33770191717`, PR #657.
 - [x] p.053 `オストワルト表色系 — 色相環`: `SECONDARY_CORROBORATION_REQUIRED`; four university/peer-reviewed corroborated nonvisual fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33772390636`, PR #659 merged as `6ce6a4e7554b1f714dbbf55bec828e08fe5b3be2`.
 - [x] p.054 `オストワルト表色系 — 色の表示方法`: `SECONDARY_CORROBORATION_REQUIRED`; four peer-reviewed/IES/Japan Color Science Society corroborated nonvisual fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; exact AFT symbol tables/examples remain blocked; CI `33772632526`, PR #660 merged as `ebbae3056c6ccff7bc9aa74b9664a02c8d5b71f5`.
+- [x] p.054 `オストワルト表色系 — 等色相面`: `SECONDARY_CORROBORATION_REQUIRED`; four peer-reviewed corroborated nonvisual structural fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; exact AFT diagram geometry/notation/display details remain blocked; CI `33774043678`, PR #663 merged as `b46bab0b1b0619ec02c7a846cc3bddea23336256`.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.054 `オストワルト表色系 — 等色相面` before any authoring. Preserve all Grade 2/3 incomplete states and gates; do not infer unpublished AFT geometry or display values.
+Source-audit p.055 `オストワルト表色系 — 色立体` before any authoring. Preserve all Grade 2/3 incomplete states and gates; do not infer unpublished AFT geometry, diagram layout, or display values.
