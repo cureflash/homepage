@@ -3,6 +3,8 @@
 ## Authority
 Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this file, `61_GRADE1_SOURCE_INVENTORY.md`, and `62_GRADE1_SPEC.md` as the Grade 1 canonical working set. Grade 2 and Grade 3 remain incomplete; do not relax their source/display gates.
 
+The user has explicitly overridden the former top-level sequencing condition and made Grade 1 active while Grade 2/3 remain incomplete. Until the stale sentence in `20_EXECUTION_PLAN.md` Phase 5 is mechanically reconciled, this explicit user override plus STATUS/HANDOFF/this Grade 1 plan controls Grade 1 work only. It does not mark Grade 2/3 complete or relax any lower-grade gate.
+
 ## Order
 Follow the current AFT official Grade 1 textbook table of contents in order. Begin with `色彩と文化`:
 1. p.006 古代ヨーロッパの色彩
@@ -44,7 +46,8 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] Author p.014 `pc1.culture.ancient_japan_colour` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.
 - [x] Pass synchronized current-head p.014 Power Color CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`.
 - [x] Audit p.017 `古代から中近世の日本の色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Heian `襲色目` structural/seasonal-event boundary plus explicit Agency for Cultural Affairs Edo kosode period/material/technique catalogue facts.
-- [x] Author p.017 `pc1.culture.ancient_to_early_modern_japan` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; full-fingerprint checked against all prior Grade 1 culture authoring batches.
+- [x] Author p.017 `pc1.culture.ancient_to_early_modern_japan` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; full-fingerprint checked against all prior Grade 1 culture authoring batches; PR #628 merged as `f5d46017a0266641602cd7adb8f79cd3e2b8ba83`.
+- [x] Audit p.021 `近代の日本の色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve a narrow text-only boundary covering Meiji chemical-dye/Yuzen development, imported aniline dating evidence, and NDL bibliographic facts for Wada Sanzō's early-Shōwa colour-reference publications.
 
 ## Exact next start point
-After the p.017 current-head gate is green and merged, audit p.021 `近代の日本の色彩` using current AFT scope first, then NDL/museum/university/academic authority for individual facts. Do not infer unpublished AFT membership or visual/color values.
+Author a small pending-first p.021 text-only batch only from the accepted audited fact families in `docs/power-color/audits/2026-09-03-grade1-p021-modern-japan-colour-source-audit.md`, then independently QA it. Do not infer unpublished AFT membership, visual appearance, exact colour chips, RGB/HEX, or unaudited dye chemistry.
