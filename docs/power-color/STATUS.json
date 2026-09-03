@@ -2,7 +2,7 @@
   "project": "power-color",
   "phase": "grade1_active_by_user_override",
   "active_grade": 1,
-  "checked_on": "2026-09-03",
+  "checked_on": "2026-09-04",
   "grade3": {"complete": false, "runtime_questions": {"verified": 223, "pending": 0, "needs_revision": 0, "rejected": 0}, "deferred_handoff": "docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md", "remaining_blockers": ["complete auditable conventional PCCS contrast-tone pair matrix", "explicit readings for 24 Japanese PCCS hue names", "approved current representative PCCS display values for monitor-facing drills", "final Grade 3 completion gate"], "source_display_gates_relaxed": false},
   "grade2": {"status": "in_progress_source_blocked_frontier", "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md", "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md", "runtime": "qualifications/color-certification/data/grade2-runtime.json", "runtime_questions": {"verified": 348, "pending": 0, "needs_revision": 0, "rejected": 0}, "runtime_skill_count": 29, "monitor_facing_generation_blocked_without_approved_display_values": true, "source_blocked_count": 18, "complete": false, "next": "Resume only if new explicit auditable authority resolves a recorded Grade 2 source-blocked topic; do not repeat rejected source routes without new evidence."},
   "grade1": {
@@ -11,9 +11,9 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33770191717, "pr": 657, "merge_commit": "784db68320afccd4e8c79fb4e1f57aa2272c24e3", "skill": "pc1.color_representation.cielab_p050", "verified": 4},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33772632526, "pr": 660, "merge_commit": "ebbae3056c6ccff7bc9aa74b9664a02c8d5b71f5", "skill": "pc1.color_representation.ostwald_color_notation_p054", "verified": 4},
     "active_section": "色の表示",
-    "active_topic": "p.053 オストワルト表色系 — 色相環",
+    "active_topic": "p.054 オストワルト表色系 — 等色相面",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.053 オストワルト表色系 — 色相環 before any authoring; preserve all prior blocked boundaries and do not infer unpublished AFT details."
+    "next": "Source-audit p.054 オストワルト表色系 — 等色相面 before any authoring; preserve exact AFT notation/display boundaries and do not infer unpublished geometry."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 3, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, Grade 1 canonical files, open PRs and Grade 1 branches; no competing p.050 work existed and Grade 2/3 incomplete states/gates were preserved.", "Source-audited p.050 均等色空間とL*a*b*色空間 — 色差の表示 as SECONDARY_CORROBORATION_REQUIRED using current ISO/CIE 11664-4:2019 and CIE S 017:2020; accepted four deterministic nonvisual fact families and blocked unpublished AFT equations/examples/thresholds/diagrams/display values.", "Authored four p.050 records pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1; dedicated full-fingerprint/source/nonvisual/shared-renderer gate passed in Power Color CI 33770191717; PR #657 merged as 784db68320afccd4e8c79fb4e1f57aa2272c24e3; official TOC confirms p.053 オストワルト表色系 — 色相環 next." ]},
+  "current_run": {"checkpoints_completed": 5, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 files, recent merges, open PRs, and Grade 1 branches; no competing p.053/p.054 work existed and Grade 2/3 incomplete states/gates were preserved.", "Source-audited p.053 オストワルト表色系 — 色相環 as SECONDARY_CORROBORATION_REQUIRED; accepted only 24 hues, eight principal hues subdivided into three, opposite-hue complementarity/achromatic combination, and corroborated yellow↔ultramarine-blue / red↔sea-green opponent pairs.", "Authored four p.053 text-only records pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1; dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in CI 33772390636; PR #659 merged as 6ce6a4e7554b1f714dbbf55bec828e08fe5b3be2.", "Source-audited p.054 オストワルト表色系 — 色の表示方法 as SECONDARY_CORROBORATION_REQUIRED; accepted only white/black/full-color contents, W+B+C=1, white/black/full-color triangle apexes, and hue plus white/black-content notation semantics while exact AFT symbol tables/examples remain blocked.", "Authored four p.054 text-only records pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1; dedicated global full-fingerprint/source/nonvisual/shared-renderer gate passed in CI 33772632526; PR #660 merged as ebbae3056c6ccff7bc9aa74b9664a02c8d5b71f5; current AFT official TOC confirms p.054 等色相面 next." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.053 オストワルト表色系 — 色相環 before any authoring."
+  "next": "Source-audit p.054 オストワルト表色系 — 等色相面 before any authoring."
 }
