@@ -1,0 +1,103 @@
+{
+  "format": "power-color-grade1-authoring-v1",
+  "grade": 1,
+  "skill": {
+    "id": "pc1.harmony.rood_p027",
+    "label": "色彩調和論：ルード（p.027 narrow slice）",
+    "categoryId": "pc1.harmony"
+  },
+  "sourceContract": "docs/power-color/audits/2026-09-03-grade1-p027-rood-source-audit.md",
+  "derivationRule": "Use only the four deterministic nonvisual Rood relations corroborated by Library of Congress, Metropolitan Museum of Art, and ISCC. Do not reconstruct unpublished AFT textbook membership, color-wheel geometry, pigment recipes, RGB/HEX/display values, or p.028 Ostwald content.",
+  "qaSummary": {
+    "generated": 4,
+    "checked": 4,
+    "verified": 4,
+    "needsRevision": 0,
+    "rejected": 0,
+    "pending": 0,
+    "correctIndexDistribution": {"A": 1, "B": 1, "C": 1, "D": 1}
+  },
+  "questions": [
+    {
+      "id": "pc1-harmony-rood-p027-0001",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/rood_p027",
+      "skillId": "pc1.harmony.rood_p027",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "ルードの色彩論の主要著作として、1879年に刊行されたものはどれですか。",
+      "sentence": "ルードの色彩論の主要著作として、1879年に刊行されたものはどれですか。",
+      "choices": ["Modern Chromatics, with Applications to Art and Industry", "Theory of Colours", "The Principles of Harmony and Contrast of Colours", "The Art of Color"],
+      "proposedAnswer": "Modern Chromatics, with Applications to Art and Industry",
+      "correctIndex": 0,
+      "explanation": "Library of CongressはOgden N. Roodの『Modern chromatics, with applications to art and industry』を1879年刊として所蔵・公開しています。",
+      "sourceRefs": ["loc_rood_modern_chromatics"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently matched the title and 1879 publication metadata against the Library of Congress record before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-rood-p027-0002",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/rood_p027",
+      "skillId": "pc1.harmony.rood_p027",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "ISCCがルードの『Modern Chromatics』について整理している、色を捉える三つの定数の組合せはどれですか。",
+      "sentence": "ISCCがルードの『Modern Chromatics』について整理している、色を捉える三つの定数の組合せはどれですか。",
+      "choices": ["色相・明度・彩度", "純度・光度・色相", "赤・黄・青", "暖色・寒色・中性色"],
+      "proposedAnswer": "純度・光度・色相",
+      "correctIndex": 1,
+      "explanation": "ISCCはルードが色を purity、luminosity、hue の三つの定数に分けたと説明しています。ここではそれぞれを純度・光度・色相として問うています。",
+      "sourceRefs": ["iscc_rood_summary"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently re-derived the three constants from the ISCC Rood summary before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-rood-p027-0003",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/rood_p027",
+      "skillId": "pc1.harmony.rood_p027",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "ルードが述べた光学的な混色の説明として最も適切なものはどれですか。",
+      "sentence": "ルードが述べた光学的な混色の説明として最も適切なものはどれですか。",
+      "choices": ["顔料をパレット上で完全に練り合わせる", "同じ色だけを広い面積に塗る", "異なる色の小さな点や線を分離して置き、適切な距離から眼で混ざって見えるようにする", "白と黒だけを交互に配置する"],
+      "proposedAnswer": "異なる色の小さな点や線を分離して置き、適切な距離から眼で混ざって見えるようにする",
+      "correctIndex": 2,
+      "explanation": "MetとISCCはいずれも、異なる色の小さな点や線を近接・分離配置し、観察距離によって眼で混ざって知覚される関係をルードの色彩論として説明しています。",
+      "sourceRefs": ["met_rood_optical_mixture", "iscc_rood_summary"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently distinguished optical/perceptual mixture from palette pigment premixing using the Met and ISCC descriptions before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-rood-p027-0004",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/rood_p027",
+      "skillId": "pc1.harmony.rood_p027",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "ISCCのルード解説で、絵画の色彩効果を強める組合せとして述べられているものはどれですか。",
+      "sentence": "ISCCのルード解説で、絵画の色彩効果を強める組合せとして述べられているものはどれですか。",
+      "choices": ["同一の無彩色だけを組み合わせる", "近似した明度だけを組み合わせる", "任意の三色を等面積にする", "補色を対で用いる"],
+      "proposedAnswer": "補色を対で用いる",
+      "correctIndex": 3,
+      "explanation": "ISCCは、ルードが色相環上の補色を対で用いることで絵画の色彩的な存在感を高められると考えた、と要約しています。",
+      "sourceRefs": ["iscc_rood_summary"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently identified the complementary-pair relation in the ISCC Rood summary before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    }
+  ],
+  "sources": [
+    {"id": "loc_rood_modern_chromatics", "authority": "Library of Congress", "url": "https://www.loc.gov/item/11032924/", "use": "Original-work bibliographic authority for title, author and 1879 publication"},
+    {"id": "met_rood_optical_mixture", "authority": "The Metropolitan Museum of Art", "url": "https://www.metmuseum.org/perspectives/seurat", "use": "Museum quotation and explanation of Rood's separated-dot optical-mixture relation"},
+    {"id": "iscc_rood_summary", "authority": "Inter-Society Color Council", "url": "https://www.iscc.org/US-Color-Researchers", "use": "Professional color-science summary of Rood's three constants, optical mixture and complementary-pair relation"}
+  ]
+}
