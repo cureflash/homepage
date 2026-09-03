@@ -52,6 +52,7 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] Audit p.024 `色彩調和論とは / ジャッドの色彩調和、四つの原理` as `SECONDARY_CORROBORATION_REQUIRED`; current AFT TOC fixes scope, current AFT Grade 1 sample directly resolves `ナチュラルハーモニー` → Judd `なじみ`, and Waseda academic literature corroborates the four-principle framework; CI `33755869018`; PR #631 merged as `c9c9977f513bd8fdfeaf014e9798d728f1bbe12a`.
 - [x] Author p.024 `pc1.harmony.judd_p024` pending-first and independently QA all 4 finite records: 4/4 verified, pending 0, A/B/C/D=1/1/1/1; wording correction rechecked; synchronized CI `33756393481`; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
 - [x] Audit p.025 `シュヴルールの色彩調和論` as `SOURCE_RESOLVED` for the narrow current-AFT-official-sample slice: `一つの主調色による調和` → `ドミナント`; one of three `類似色の調和`; includes `隣接・近似色相による色調類似の調和`.
+- [x] Author p.025 `pc1.harmony.chevreul_p025` pending-first and independently QA the complete three-relation first-party state space: 3/3 verified, pending 0, A/B/C/D=1/1/1/0. Stop at three; do not waterfill.
 
 ## Exact next start point
-Author only the three directly exposed p.025 official-sample relations as a small pending-first text-only batch, independently QA every record, and avoid visual reconstruction or waterfilling beyond the finite first-party state space.
+Pass current-head p.025 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.027 `ルードの色彩調和論` and source-audit it before any authoring. Preserve all Grade 2/3 incomplete states and source/display gates.
