@@ -1,0 +1,118 @@
+{
+  "format": "power-color-grade1-authoring-v1",
+  "grade": 1,
+  "skill": {
+    "id": "pc1.harmony.judd_p024",
+    "label": "色彩調和論：ジャッドの四つの原理（p.024 narrow slice）",
+    "categoryId": "pc1.harmony"
+  },
+  "sourceContract": "docs/power-color/audits/2026-09-03-grade1-p024-color-harmony-judd-source-audit.md",
+  "derivationRule": "Use only the audited nonvisual p.024 facts: AFT TOC places Judd's four-principle framework at p.024; current AFT Grade 1 sample directly maps natural harmony to Judd's なじみ principle; Waseda academic literature names Judd's four principles in English and corroborates Familiarity ↔ natural harmony. Do not translate unstated Japanese AFT labels for the other principles, import p.025 Chevreul content, infer visual schemes, or create RGB/HEX/display answers.",
+  "qaSummary": {
+    "generated": 4,
+    "checked": 4,
+    "verified": 4,
+    "needsRevision": 0,
+    "rejected": 0,
+    "pending": 0,
+    "correctIndexDistribution": {"A": 1, "B": 1, "C": 1, "D": 1}
+  },
+  "questions": [
+    {
+      "id": "pc1-harmony-judd-p024-0001",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/judd_p024",
+      "skillId": "pc1.harmony.judd_p024",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "現行の色彩検定1級公式テキスト目次で、ジャッドの色彩調和はいくつの原理として示されていますか。",
+      "sentence": "現行の色彩検定1級公式テキスト目次で、ジャッドの色彩調和はいくつの原理として示されていますか。",
+      "choices": ["四つ", "二つ", "三つ", "五つ"],
+      "proposedAnswer": "四つ",
+      "correctIndex": 0,
+      "explanation": "色彩検定協会の現行1級公式テキスト目次では、p.024に「ジャッドの色彩調和、四つの原理」と明記されています。",
+      "sourceRefs": ["aft_grade1_toc_p024"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently re-read the current AFT Grade 1 TOC p.024 heading and confirmed that it explicitly states four principles before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-judd-p024-0002",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/judd_p024",
+      "skillId": "pc1.harmony.judd_p024",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "色彩検定協会の現行1級1次出題例では、ナチュラルハーモニーはジャッドのどの原理で説明されていますか。",
+      "sentence": "色彩検定協会の現行1級1次出題例では、ナチュラルハーモニーはジャッドのどの原理で説明されていますか。",
+      "choices": ["評価性", "なじみ", "美度", "曖昧性"],
+      "proposedAnswer": "なじみ",
+      "correctIndex": 1,
+      "explanation": "現行AFT公式1級1次出題例では、ナチュラルハーモニーをジャッドの「なじみ」の原理で説明する問題が示されています。",
+      "sourceRefs": ["aft_grade1_sample_harmony"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently solved the current AFT official sample relation and obtained なじみ for Judd's explanation of natural harmony before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-judd-p024-0003",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/judd_p024",
+      "skillId": "pc1.harmony.judd_p024",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "監査済み資料で、ジャッドの Principle of Familiarity（AFT公式出題例では「なじみ」）に対応すると確認できるものはどれですか。",
+      "sentence": "監査済み資料で、ジャッドの Principle of Familiarity（AFT公式出題例では「なじみ」）に対応すると確認できるものはどれですか。",
+      "choices": ["色差式", "測色照明", "ナチュラルハーモニー", "演色評価数"],
+      "proposedAnswer": "ナチュラルハーモニー",
+      "correctIndex": 2,
+      "explanation": "AFT公式出題例と早稲田大学の学術資料の双方から、JuddのFamiliarity／「なじみ」とナチュラルハーモニーの対応を確認できます。",
+      "sourceRefs": ["aft_grade1_sample_harmony", "waseda_judd_four_principles"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently cross-checked the AFT official sample with the Waseda literature review and re-derived Familiarity to natural harmony before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-judd-p024-0004",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/judd_p024",
+      "skillId": "pc1.harmony.judd_p024",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "早稲田大学の監査済み学術資料で、ジャッドがまとめた四原理の一つとして英語名が確認できるものはどれですか。",
+      "sentence": "早稲田大学の監査済み学術資料で、ジャッドがまとめた四原理の一つとして英語名が確認できるものはどれですか。",
+      "choices": ["Principle of Saturation", "Principle of Temperature", "Principle of Reflection", "Principle of Familiarity"],
+      "proposedAnswer": "Principle of Familiarity",
+      "correctIndex": 3,
+      "explanation": "早稲田大学の学術資料は、Juddの四原理を Order, Familiarity, Similarity, Unambiguity と記述しています。この問題ではAFTで未公開の日本語ラベルを推定せず、原資料で確認できる英語名だけを問います。",
+      "sourceRefs": ["waseda_judd_four_principles"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently read the academic list of Judd's four principles and confirmed Principle of Familiarity is explicitly included before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    }
+  ],
+  "sources": [
+    {
+      "id": "aft_grade1_toc_p024",
+      "authority": "色彩検定協会",
+      "url": "https://www.aft.or.jp/images/text_of-1st-grade_mokuji.pdf",
+      "use": "Current official Grade 1 scope/order; p.024 explicitly states ジャッドの色彩調和、四つの原理"
+    },
+    {
+      "id": "aft_grade1_sample_harmony",
+      "authority": "色彩検定協会",
+      "url": "https://www.aft.or.jp/pages/feature/exam1-first",
+      "use": "Current official Grade 1 sample directly maps ナチュラルハーモニー to Judd なじみ"
+    },
+    {
+      "id": "waseda_judd_four_principles",
+      "authority": "Waseda University institutional repository",
+      "url": "https://waseda.repo.nii.ac.jp/record/41939/files/Honbun-7946.pdf",
+      "use": "Academic literature review names Judd's four principles in English and states Familiarity corresponds to natural harmony"
+    }
+  ]
+}
