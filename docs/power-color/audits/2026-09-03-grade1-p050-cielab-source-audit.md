@@ -9,9 +9,9 @@ The current AFT Grade 1 official textbook table of contents places p.050 under `
 ## Auditable authority used
 Current CIE authority:
 
-- ISO/CIE 11664-4:2019 specifies the CIE 1976 L*a*b* colour space and methods for calculating its coordinates and Euclidean colour differences.
-- CIE S 017:2020 e-ILV defines CIE 1976 L*a*b* as a three-dimensional, approximately uniform colour space plotted in rectangular coordinates L*, a*, b*.
-- CIE defines CIE 1976 L*a*b* colour difference as the Euclidean distance between two points in the L*a*b* space.
+- ISO/CIE 11664-4:2019 specifies the CIE 1976 L*a*b* colour space and methods for calculating its coordinates and Euclidean colour differences: https://www.cie.co.at/publications/colorimetry-part-4-cie-1976-lab-colour-space-1
+- CIE S 017:2020 e-ILV defines CIE 1976 L*a*b* as a three-dimensional, approximately uniform colour space plotted in rectangular coordinates L*, a*, b*: https://cie.co.at/eilvterm/17-23-076
+- CIE defines CIE 1976 L*a*b* colour difference as the Euclidean distance between two points in the L*a*b* space: https://cie.co.at/eilvterm/17-23-077
 - ISO/CIE 11664-4:2019 states that the method is for colour stimuli perceived as belonging to reflecting or transmitting objects when a three-dimensional space more uniform than tristimulus space is required; it does not apply to areas perceived as primary self-emitting light sources, except normalized displays simulating reflecting/transmitting objects.
 
 ## Accepted authoring boundary
