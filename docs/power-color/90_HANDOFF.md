@@ -6,20 +6,20 @@ Grade 1 is active by explicit user override. Grade 2 remains 348 verified / pend
 Canonical Grade 1 working set: `STATUS.json`, `20_EXECUTION_PLAN.md`, `60_GRADE1_EXECUTION_PLAN.md`, `61_GRADE1_SOURCE_INVENTORY.md`, `62_GRADE1_SPEC.md`.
 
 ## Grade 1 frontier
-All official Grade 1 items through p.122 are now recorded.
+All official Grade 1 items through p.132 are now recorded.
 
-p.119 `CMF® — 概念から実体へ（コトからモノへ）` remains `SOURCE_RESOLVED` directly from the current AFT official sample. Four text-only records are verified; no Grade 1 runtime promotion has occurred.
+p.124 `ファッションカラーの変遷` is `SECONDARY_CORROBORATION_REQUIRED`. AFT public authority fixes heading/order; JAFCA's official historical work, its publisher's exposed contents, and Showa-kan corroborate the accepted eight stage↔keyword relations. Eight text-only records are independently QAed 8/8 verified; no display inference and no runtime promotion.
 
-p.120 `商品企画におけるCMF®` is `SOURCE_BLOCKED`. Current AFT public authority fixes heading/order but does not expose the AFT-specific product-planning process, inputs, deliverables, decision criteria, or closed fact set. Generic CMF/product-planning substitution is rejected.
+p.129 `カラー情報の収集・調査` is `SECONDARY_CORROBORATION_REQUIRED`. JAFCA and Intercolor explicitly support the narrow domestic consumer/market research + international trend-information input boundary. Four text-only records are independently QAed 4/4 verified. Unpublished AFT-specific survey procedure remains out of scope.
 
-p.121 `CMF®でのカラーバリエーションの検討` is `SOURCE_BLOCKED`. Current AFT public authority does not expose deterministic variation-planning criteria, sequence, evaluation method, or decision rules. Generic CMF/product-analysis substitution is rejected.
+p.132 `カラー情報の整理と分析` is `SOURCE_BLOCKED`. Public sources do not expose the AFT-specific analysis/classification/sequence/weighting/deliverable rules. Generic fashion/marketing workflow substitution is rejected.
 
-p.122 `制作におけるCMF®（コトからモノの制作）` is `SOURCE_BLOCKED`. Current AFT public authority does not expose the production workflow, material/finish selection logic, handoffs, manufacturing constraints, deliverables, or decision sequence. Generic CMF/materials-engineering substitution is rejected, preserving the separate `資料・CMF® — 素材と工法` risk gate.
+p.132 `シーズンテーマカラーの決定` is `SOURCE_BLOCKED`. JAFCA/Intercolor selection descriptions do not establish the AFT-specific decision workflow, criteria, sequence, or exact terminology correspondence. Generic substitution is rejected.
 
-No questions were authored for p.120-p.122.
+PR #705 passed Power Color CI `33802026799` and merged as `e91f2be5fb78bba2ea47dfc2d0fd8a276747268b`. Grade 1 runtime remains unpromoted.
 
 ## Source/display boundary
 Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, exact business/CMF process sequences, or fashion practical procedures. Do not repeat recorded rejected source routes without new explicit evidence.
 
 ## Exact next start point
-Source-audit p.124 `ファッションカラーの変遷` before any authoring.
+Source-audit p.133 `VMD` before any authoring.
