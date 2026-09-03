@@ -11,9 +11,9 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33798278490, "pr": 700, "merge_commit": "29d9bfd02c15e1d41ee449f3f6a0cac2e1d191f7", "skills": ["pc1.business.color_research_p107", "pc1.business.color_research_methods_p109"], "verified": 8},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33798741809, "pr": 702, "merge_commit": "6000009e188a53d48dfecda237a1aa9bf76b873e", "skill": "pc1.business.cmf_concept_to_physical_p119", "verified": 4},
     "active_section": "色彩とビジネス",
-    "active_topic": "p.119 CMF® — 概念から実体へ（コトからモノへ）",
+    "active_topic": "p.120 CMF® — 商品企画におけるCMF®",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.119 CMF® — 概念から実体へ（コトからモノへ） before any authoring."
+    "next": "Source-audit p.120 CMF® — 商品企画におけるCMF® before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 3, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main 2af360ec06ef3f3fef9fd223b44e43b84bf2e727, Grade 1 canonical files, recent Power Color PRs, open PRs, and Grade 1 branches; no competing p.107/p.109 authoring existed.", "Source-resolved p.107 カラーリサーチ directly from the current AFT Grade 1 official sample and authored four narrow text-only records; independently re-solved 4/4 verified, A/B/C/D=1/1/1/1.", "Source-resolved p.109 カラーリサーチの手法 directly from the current AFT official sample and authored four narrow text-only records; independently re-solved 4/4 verified, A/B/C/D=1/1/1/1. Power Color CI 33798278490 passed; PR #700 merged as 29d9bfd02c15e1d41ee449f3f6a0cac2e1d191f7. p.114 カラー戦略 was then audited as SOURCE_BLOCKED because no accepted public AFT authority exposes its deterministic process/rule set and generic strategy material was rejected. Grade 2 remains 348 verified and Grade 3 remains 223 verified with all gates intact; Grade 1 remains unpromoted."]},
+  "current_run": {"checkpoints_completed": 4, "generated": 12, "checked": 12, "verified": 12, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main and canonical Grade 1 state; no competing p.107/p.109 work existed.", "Source-resolved p.107 カラーリサーチ and p.109 カラーリサーチの手法 directly from the current AFT Grade 1 official sample; authored four narrow text-only records each and independently re-solved 8/8 verified. Power Color CI 33798278490 passed and PR #700 merged.", "Source-audited p.114 カラー戦略 as SOURCE_BLOCKED because no accepted public AFT authority exposes its deterministic process/rule set; generic strategy substitution rejected. Canonical sync CI 33798603991 passed and PR #701 merged.", "Source-resolved p.119 CMF® — 概念から実体へ directly from the current AFT official sample; authored four narrow text-only records and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1. Added a global Grade 1 authoring fingerprint/nonvisual/shared-renderer gate; Power Color CI 33798741809 passed and PR #702 merged as 6000009e188a53d48dfecda237a1aa9bf76b873e. Grade 2 remains 348 verified and Grade 3 remains 223 verified with all gates intact; Grade 1 remains unpromoted."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.119 CMF® — 概念から実体へ（コトからモノへ） before any authoring."
+  "next": "Source-audit p.120 CMF® — 商品企画におけるCMF® before any authoring."
 }
