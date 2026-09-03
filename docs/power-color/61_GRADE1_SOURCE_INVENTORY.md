@@ -33,32 +33,29 @@
 | 色の心理的効果 — 記憶色と色記憶 | 082 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; CI 33789935372; PR #689 |
 | 色知覚の複雑性 — 色の見えの変化 | 083 | SOURCE_BLOCKED | public AFT authority exposes heading/order only; no deterministic phenomenon set; no authoring |
 | 色知覚の複雑性 — ものの見えの安定性 | 087 | SECONDARY_CORROBORATION_REQUIRED | 4/4 verified; CI 33790197091; PR #690 |
+| 色彩効果のビジネス活用 | 090 | SOURCE_BLOCKED | public AFT authority exposes heading/general business scope only; no deterministic p.090 fact set; no authoring |
+| カラーコミュニケーションツールの役割 | 093 | SECONDARY_CORROBORATION_REQUIRED | narrow DIC system-owner role boundary; 4/4 verified; CI 33792338939; PR #693 |
 
-## p.082 記憶色と色記憶 accepted corroborating boundary
-Audit: `docs/power-color/audits/2026-09-04-grade1-p082-memory-color-source-audit.md`.
-Authoring batch: `qualifications/color-certification/data/grade1-authoring-memory-color-p082-0001-0004.json`.
-Dedicated gate: `qualifications/color-certification/tests/grade1-memory-color-p082-authoring.test.js`.
-Accepted facts are limited to four nonvisual research-backed relations: familiar-object typical colour can modulate perceived colour; Hansen fruit achromatic settings shifted opposite the typical colour; Bartleson familiar-object memory colours differed from corresponding natural colours and tended toward the dominant chromatic attribute; Pérez-Carpinell memory matching generally showed larger mean colour differences than simultaneous matching and a significant delay-time effect. Exact unpublished AFT definitions/examples, colour coordinates, RGB/HEX/display values, swatches, and universal stimulus-independent memory-colour claims remain excluded.
-
-## p.083 色の見えの変化 blocker
-Audit: `docs/power-color/audits/2026-09-04-grade1-p083-color-appearance-change-source-audit.md`.
+## p.090 色彩効果のビジネス活用 blocker
+Audit: `docs/power-color/audits/2026-09-04-grade1-p090-business-color-effects-source-audit.md`.
 Classification: `SOURCE_BLOCKED`.
-Current AFT public material establishes the heading/order only. General external colour-appearance literature contains many plausible phenomena, but no accepted public authority found in this run ties a deterministic phenomenon inventory to this official AFT item. Selecting one by inference would reconstruct unpublished textbook scope. Do not repeat this generic-source route without new explicit evidence.
+AFT public material confirms the official heading and broader business/color-marketing scope, but not the p.090 fact inventory, taxonomy, examples, process, sequence, or deterministic decision rules. Generic marketing/business-color literature was rejected as a substitute for unpublished AFT scope. Do not repeat that route without new explicit evidence.
 
-## p.087 ものの見えの安定性 accepted corroborating boundary
-Audit: `docs/power-color/audits/2026-09-04-grade1-p087-appearance-stability-source-audit.md`.
-Authoring batch: `qualifications/color-certification/data/grade1-authoring-appearance-stability-p087-0001-0004.json`.
-Dedicated gate: `qualifications/color-certification/tests/grade1-appearance-stability-p087-authoring.test.js`.
-Accepted facts are limited to four nonvisual color-constancy relations: perceived object colour can remain relatively stable despite illumination changes; degree of constancy can depend on observation conditions; in the recorded categorical-color-constancy study longer illumination-observation time improved constancy; and surrounding coloured reference objects improved constancy. Exact unpublished AFT definitions/mechanisms, diagrams, thresholds, numerical values, RGB/HEX/display values, and monitor judgments remain excluded.
+## p.093 カラーコミュニケーションツールの役割 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p093-color-sample-communication-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-color-sample-communication-p093-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-color-sample-communication-p093-authoring.test.js`.
+Accepted facts are limited to four nonvisual system-owner relations: DIC Color Guide use for selecting/communicating colors in design work; use of DIC Color Guide as a color-specification tool in manufacturing; Process Color Note side-by-side spot/process comparison supporting color specification and client confirmation; and DIC Color Chart use for color specification and quality control in offset printing. Exact unpublished AFT definitions, complete `色見本の種類` taxonomy, color values, swatches, and monitor-facing judgments remain excluded.
 
 ## Persistent blocked/risk candidates
 - p.035 `色の分類`: exact AFT taxonomy/labels/counts.
 - p.062 JIS light-source colour names: exact current normative content; do not retry secondary-mirror route without new primary evidence.
 - p.083 `色の見えの変化`: exact AFT phenomenon/rule set; do not retry generic color-appearance substitution without new explicit evidence.
+- p.090 `色彩効果のビジネス活用`: exact deterministic AFT business-effect scope; do not retry generic business/marketing substitution without new explicit evidence.
 - 色彩とビジネス / カラーマーケティング / CMF®: AFT-specific processes must not be filled from generic business practice.
 - ファッション: AFT-specific practical procedures require explicit corroboration.
 - 資料・CMF® `素材と工法`: do not infer textbook content from generic materials-engineering sources.
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.090 `色彩とビジネス — 色彩効果のビジネス活用` before any authoring. Treat the AFT-specific business/process boundary as a known high-risk source frontier from the outset.
+Source-audit p.095 `コンシューマプロダクツのビジネスプロセスと色彩 — 企業アイデンティティ戦略における色彩` before any authoring. Treat the AFT-specific business/process boundary as a known high-risk source frontier from the outset.
