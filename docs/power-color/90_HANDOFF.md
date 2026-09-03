@@ -6,18 +6,20 @@ Grade 1 is active by explicit user override. Grade 2 remains 348 verified / pend
 Canonical Grade 1 working set: `STATUS.json`, `20_EXECUTION_PLAN.md`, `60_GRADE1_EXECUTION_PLAN.md`, `61_GRADE1_SOURCE_INVENTORY.md`, `62_GRADE1_SPEC.md`.
 
 ## Grade 1 frontier
-All official Grade 1 items through p.148 are now recorded in official order. Earlier detailed source decisions remain in `61_GRADE1_SOURCE_INVENTORY.md` and individual audit files.
+All current official Grade 1 textbook TOC content items through p.160 have now been source-audited in order. Earlier detailed decisions remain in `61_GRADE1_SOURCE_INVENTORY.md` and individual audit files.
 
-p.146 `色相、明度、彩度と景観形成とのかかわり` remains `SOURCE_RESOLVED` to the narrow MLIT-explicit nonvisual three-attribute boundary; 4/4 verified; PR #723 / CI `33812789294` / merge `5cb01bbe550ded78503469eb9d86ab9f2eb32da2`.
+p.152 `資料・光と色（1） — 色の知覚` is `SOURCE_RESOLVED` to the current AFT official first-stage sample slice. The sample directly establishes retinal-illuminance-dependent hue change, the Bezold–Brücke phenomenon, invariant wavelengths, and through the official answer key the 474 nm / 571 nm example. Four text-only records were created pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1. No diagram geometry or monitor-facing judgment is used.
 
-p.148 `遠景・中景・近景とは` is `SECONDARY_CORROBORATION_REQUIRED`. AFT public material establishes the heading/order only. Shinjuku Ward's official landscape glossary and FFPRI corroborate the narrow nonvisual core: 遠景・中景・近景 express approximate viewing-distance zones; distant landscape includes ridgelines/terrain outlines, near landscape includes nearby visible building form/shape, and visually recognizable elements differ by viewing distance. Research-specific numerical cutoffs are not generalized. Four records were created pending-first and independently re-solved 4/4 verified, A/B/C/D=1/1/1/1. The dedicated global full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression passed CI `33814354115`; PR #726 merged as `e101a16f216f5a418a5ccf8fbb7b3448f9a3942a`.
+p.157 `資料・光と色（2） — 相関色温度と演色評価数` is `SOURCE_RESOLVED` to narrow current CIE/JLMA definitions: CCT is tied to the nearest Planckian-radiator chromaticity and expressed in K; CIE 1974 general colour rendering index Ra is the mean of eight specified special indices; JLMA explains Ra as a colour-appearance/reproducibility indicator whose higher values mean better reproducibility. Four text-only records were independently re-solved 4/4 verified, A/B/C/D=1/1/1/1.
 
-p.148 `遠景・中景・近景を踏まえた色彩計画における配慮事項` is `SOURCE_BLOCKED`. AFT public material does not expose the subsection's deterministic color-planning consideration set, sequence, thresholds, weighting, exceptions or evaluation procedure. Shinjuku official material resolves only distance-zone definitions; FFPRI resolves viewing-distance effects on visible elements; municipal view-planning material gives broad landscape considerations but not the AFT-specific color-planning rules. Private qualification summaries/design blogs are rejected as authority. No authoring.
+Both dedicated global full-fingerprint/nonvisual/shared-renderer gates and the normal Power Color regression passed workflow `33815760564`; PR #728 merged as `041b51b9a5346d602b5d8fdc7c2d0c6be9751e95`.
+
+p.160 `資料・CMF® — 素材と工法` is `SOURCE_BLOCKED`. AFT public material exposes the heading/order only, not the appendix's closed material inventory, manufacturing/finishing-process set, pairings, selection criteria, exceptions, or diagrams. Generic CMF/materials-engineering taxonomies are rejected as substitutes. No authoring.
 
 Grade 1 runtime remains unpromoted.
 
 ## Source/display boundary
-Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, exact business/CMF/fashion process sequences, fiber-length color-development rules, VMD initiative/color procedures, or AFT-specific near/mid/far color-planning prescriptions. Local-government examples remain jurisdiction-specific and are not universalized. The p.148 distance-zone batch authorizes only the cited nonvisual conceptual relations; it does not authorize numerical distance cutoffs or visual/color judgments. Do not repeat recorded rejected source routes without new explicit evidence.
+Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, exact business/CMF/fashion process sequences, fiber-length color-development rules, VMD initiative/color procedures, AFT-specific near/mid/far color-planning prescriptions, or the p.160 material/process set. Do not repeat recorded rejected source routes without new explicit evidence.
 
 ## Exact next start point
-Source-audit p.152 `資料・光と色（1） — 色の知覚` before any authoring.
+The current AFT Grade 1 official TOC content frontier is exhausted through p.160. Establish the canonical Grade 1 runtime file/promotion gate on the existing shared Power TOEIC question-bank/workout/session engine, then promote only existing verified Grade 1 authoring records record-identically. Do not fork a Grade 1 engine and do not promote blocked or monitor-dependent material.

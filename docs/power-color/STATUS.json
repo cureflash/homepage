@@ -6,28 +6,28 @@
   "grade3": {"complete": false, "runtime_questions": {"verified": 223, "pending": 0, "needs_revision": 0, "rejected": 0}, "deferred_handoff": "docs/power-color/91_GRADE3_DEFERRED_HANDOFF.md", "remaining_blockers": ["complete auditable conventional PCCS contrast-tone pair matrix", "explicit readings for 24 Japanese PCCS hue names", "approved current representative PCCS display values for monitor-facing drills", "final Grade 3 completion gate"], "source_display_gates_relaxed": false},
   "grade2": {"status": "in_progress_source_blocked_frontier", "execution_plan": "docs/power-color/50_GRADE2_EXECUTION_PLAN.md", "concept_source_inventory": "docs/power-color/51_GRADE2_CONCEPT_SOURCE_INVENTORY.md", "runtime": "qualifications/color-certification/data/grade2-runtime.json", "runtime_questions": {"verified": 348, "pending": 0, "needs_revision": 0, "rejected": 0}, "runtime_skill_count": 29, "monitor_facing_generation_blocked_without_approved_display_values": true, "source_blocked_count": 18, "complete": false, "next": "Resume only if new explicit auditable authority resolves a recorded Grade 2 source-blocked topic; do not repeat rejected source routes without new evidence."},
   "grade1": {
-    "status": "in_progress_landscape",
+    "status": "official_toc_audited_runtime_unpromoted",
     "execution_plan": "docs/power-color/60_GRADE1_EXECUTION_PLAN.md",
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33814354115, "pr": 726, "merge_commit": "e101a16f216f5a418a5ccf8fbb7b3448f9a3942a", "skills": ["pc1.landscape.distance_zones_p148"], "verified": 4},
-    "active_section": "資料・光と色（1）",
-    "active_topic": "p.152 色の知覚",
-    "active_topic_source_status": "UNCHECKED",
-    "source_audit": null,
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33815760564, "pr": 728, "merge_commit": "041b51b9a5346d602b5d8fdc7c2d0c6be9751e95", "skills": ["pc1.light.color_perception_p152", "pc1.light.cct_cri_p157"], "verified": 8},
+    "active_section": "post-TOC runtime promotion",
+    "active_topic": "establish the canonical Grade 1 record-identical runtime promotion path and promote only verified authoring records",
+    "active_topic_source_status": "NOT_APPLICABLE",
+    "source_audit": "docs/power-color/audits/2026-09-04-grade1-p160-cmf-materials-processes-source-audit.md",
     "active_authoring": null,
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority", "p.134 繊維の長さと発色性 exact relation", "p.136 AFT-specific VMD initiative set", "p.137 AFT-specific product-display color-coordination rules", "p.148 AFT-specific near/mid/far color-planning consideration rules"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.152 資料・光と色（1） — 色の知覚 before any authoring."
+    "next": "The current AFT Grade 1 official TOC content frontier is exhausted through p.160. Next, establish the canonical Grade 1 runtime file/promotion gate on the shared engine, then promote only existing verified authoring records record-identically; do not create a separate Grade 1 engine."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 3, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; no competing p.148 work existed.", "p.148 遠景・中景・近景とは: SECONDARY_CORROBORATION_REQUIRED to a narrow Shinjuku-government/FFPRI nonvisual distance-zone boundary; 4/4 verified, A/B/C/D=1/1/1/1; PR #726 CI 33814354115 success and merged e101a16f216f5a418a5ccf8fbb7b3448f9a3942a.", "p.148 遠景・中景・近景を踏まえた色彩計画における配慮事項: SOURCE_BLOCKED because no public authority exposes the AFT-specific deterministic color-planning consideration set; no authoring."]},
+  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; no competing p.152+ work existed.", "p.152 資料・光と色（1）—色の知覚: SOURCE_RESOLVED from current AFT official sample; 4/4 verified, A/B/C/D=1/1/1/1.", "p.157 資料・光と色（2）—相関色温度と演色評価数: SOURCE_RESOLVED to narrow CIE/JLMA nonvisual definitions; 4/4 verified, A/B/C/D=1/1/1/1.", "p.160 資料・CMF®—素材と工法: SOURCE_BLOCKED because public AFT authority does not expose the appendix's deterministic material/process set; no authoring. PR #728 CI 33815760564 succeeded and merged as 041b51b9a5346d602b5d8fdc7c2d0c6be9751e95."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.152 資料・光と色（1） — 色の知覚 before any authoring."
+  "next": "Establish the shared-engine Grade 1 record-identical runtime promotion path and promote only verified authoring records."
 }
