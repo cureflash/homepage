@@ -7,7 +7,7 @@
 - 2026 Grade 1 second-stage format notice: printed-color selection replaces the former New Color Card 199a operation; content tendency/approximate question count/difficulty remain unchanged.
 
 ## Processed frontier
-Culture p.006–021, harmony p.024–030, light/color p.032–041, color representation p.046–059, color names p.060–062, measurement p.066–069, psychology p.072–087, business p.090–102, color marketing p.104–114, CMF® p.119–122, fashion p.124–137, and landscape p.140–143 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files; Grade 1 runtime remains unpromoted.
+Culture p.006–021, harmony p.024–030, light/color p.032–041, color representation p.046–059, color names p.060–062, measurement p.066–069, psychology p.072–087, business p.090–102, color marketing p.104–114, CMF® p.119–122, fashion p.124–137, and landscape p.140–145 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files; Grade 1 runtime remains unpromoted.
 
 Recorded source-blocked topics include p.035 `色の分類`, p.062 JIS light-source name topics, p.083 `色の見えの変化`, p.090 `色彩効果のビジネス活用`, p.096/p.100/p.102 business-process topics, p.114 `カラー戦略`, p.120-p.122 CMF® process topics, p.132 `カラー情報の整理と分析` / `シーズンテーマカラーの決定`, p.134 `繊維の長さと発色性`, p.136 `ビジュアルマーチャンダイジング（VMD）の取り組み`, and p.137 `商品陳列のカラーコーディネーション`.
 
@@ -26,35 +26,55 @@ Audit: `docs/power-color/audits/2026-09-04-grade1-p140-landscape-law-basics-sour
 Authoring batch: `qualifications/color-certification/data/grade1-authoring-landscape-law-p140-0001-0004.json`.
 Dedicated gate: `qualifications/color-certification/tests/grade1-landscape-law-p140-authoring.test.js`.
 Classification: `SOURCE_RESOLVED`.
-Use only current MLIT/e-Gov facts: Landscape Act action-regulation/support mechanisms for good landscape formation; Article 8 landscape plans by landscape administrative bodies; landscape-plan action restrictions/regulatory guidance; plan map + plan document representation. Exclude p.141 notification procedure and all visual/color-standard inference. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1; PR #711 / CI `33805829029`, merged `e3639e2e439ff04a0d471acf052e6f5b479794d2`.
+Use only current MLIT/e-Gov facts: Landscape Act action-regulation/support mechanisms for good landscape formation; Article 8 landscape plans by landscape administrative bodies; landscape-plan action restrictions/regulatory guidance; plan map + plan document representation. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1; PR #711 / CI `33805829029`.
 
 ## p.141 landscape notification/procedure accepted boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p141-landscape-notification-procedure-source-audit.md`.
 Authoring batch: `qualifications/color-certification/data/grade1-authoring-landscape-notification-p141-0001-0004.json`.
 Dedicated gate: `qualifications/color-certification/tests/grade1-landscape-notification-p141-authoring.test.js`.
 Classification: `SOURCE_RESOLVED`.
-Use only the current AFT heading plus current MLIT/government facts that directly resolve the Landscape Act Article 16 procedure mapping: `行為の届出` = Article 16(1), `変更届` = Article 16(2), `行為の通知` = Article 16(5). Municipal sources corroborate the change-notification/government-body notification distinction only; do not import local thresholds, forms or preliminary-consultation rules. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1; PR #713 / CI `33807770514`, merged `dc5ff999fa98ed36d5de880d9f572f33de7bbe61`.
+Use only the current AFT heading plus current MLIT/government Article 16 procedure mapping. Four records independently QAed 4/4 verified; PR #713 / CI `33807770514`.
 
 ## p.142 landscape color-standard role accepted boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p142-color-standard-role-source-audit.md`.
 Authoring batch: `qualifications/color-certification/data/grade1-authoring-landscape-color-standard-role-p142-0001-0004.json`.
 Dedicated gate: `qualifications/color-certification/tests/grade1-landscape-color-standard-role-p142-authoring.test.js`.
 Classification: `SOURCE_RESOLVED`.
-Use only the current AFT heading plus current MLIT/Tokyo/Osaka government facts that directly resolve the nonvisual role of landscape color standards: standards operate as action-restriction/regulatory-guidance criteria for good landscape formation; building color may be an explicit subject of those restrictions; MLIT favors standards that are as objective as possible; Tokyo requires numerical-standard conformity while also considering the standards' purpose and surrounding streetscape harmony. Do not import exact numerical limits, area ratios, exceptions, visual judgments or monitor-facing values. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1; PR #715 / CI `33808114823`, merged `05f5e7aaeeef2db87ccbe6d932fe671a7412271e`.
+Use only current MLIT/Tokyo/Osaka facts resolving the nonvisual role of landscape color standards. Four records independently QAed 4/4 verified; PR #715 / CI `33808114823`.
 
 ## p.143 color-standard operation accepted boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p143-color-standard-operation-source-audit.md`.
 Authoring batch: `qualifications/color-certification/data/grade1-authoring-landscape-color-standard-operation-p143-0001-0004.json`.
 Dedicated gate: `qualifications/color-certification/tests/grade1-landscape-color-standard-operation-p143-authoring.test.js`.
 Classification: `SOURCE_RESOLVED`.
-Current Tokyo government guidance explicitly resolves a narrow operational slice matching the AFT heading: Munsell hue/value/chroma provides objective indication but appearance can vary with surface condition, transmission and reflection; actual samples are preferred where possible for materials with large color variation; large mock-ups can support consultation for especially large buildings; richly textured material colors may require comprehensive judgment. No local forms/timing, exact numerical color limits, RGB/HEX or monitor inference. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1.
+Tokyo government guidance resolves objective Munsell indication versus material appearance variation, actual samples, large mock-ups and comprehensive operational judgment. Four records independently QAed 4/4 verified.
 
 ## p.143 color-standard area-ratio accepted boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p143-color-standard-area-ratio-source-audit.md`.
 Authoring batch: `qualifications/color-certification/data/grade1-authoring-landscape-color-standard-area-ratio-p143-0001-0004.json`.
 Dedicated gate: `qualifications/color-certification/tests/grade1-landscape-color-standard-area-ratio-p143-authoring.test.js`.
-Classification: `SOURCE_RESOLVED` only to the explicit Tokyo-government example, not as a nationwide universal rule.
-Accepted example facts: basic color at least 4/5 of each exterior-wall face; emphasis color at most 1/5; applicable accent color at most 1/20; emphasis+accent total within 1/5. Do not generalize beyond the cited Tokyo standard and do not infer visual color appearance. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1. Combined p.143 authoring PR #718 passed CI `33809583893` and merged as `ab5b3fb3dd169fcb44b02691688625b9b64ed6e0`.
+Classification: `SOURCE_RESOLVED` only to the explicit Tokyo-government example, not as a nationwide universal rule. Four records independently QAed 4/4 verified. Combined PR #718 / CI `33809583893`.
+
+## p.144 color-standard presentation accepted boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p144-color-standard-presentation-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-landscape-color-standard-presentation-p144-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-landscape-color-standard-presentation-p144-authoring.test.js`.
+Classification: `SOURCE_RESOLVED`.
+Use only the government-explicit structural relation: standards may be shown with applicable part/area plus Munsell hue/value/chroma; Tokyo's chroma conditions vary by hue group and in some basic-color cases by value range. No graph/swatch inference or universalization. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1; PR #720 / CI `33811380255`, merged `59076f90302e282c4255d89c71c49f81d0e21c17`.
+
+## p.145 color-standard exceptions accepted boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p145-color-standard-exceptions-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-landscape-color-standard-exceptions-p145-0001-0004.json`.
+Combined gate: `qualifications/color-certification/tests/grade1-landscape-p145-authoring.test.js`.
+Classification: `SOURCE_RESOLVED` only to explicit Tokyo-government examples.
+Accepted examples include established region-specific color standards supporting good landscape formation, regional natural/richly textured materials, colors prescribed by other laws, and qualifying uncolored glass whose reflected color is not constant. Do not generalize these examples nationwide. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1.
+
+## p.145 outdoor-advertising color-standard accepted boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p145-outdoor-ad-color-standard-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-landscape-outdoor-ad-color-standard-p145-0001-0004.json`.
+Combined gate: `qualifications/color-certification/tests/grade1-landscape-p145-authoring.test.js`.
+Classification: `SOURCE_RESOLVED` only to the public governance/area-specific standards structure.
+MLIT establishes that actual outdoor-advertising regulation is implemented by local governments through ordinances/rules; current Tokyo/Kyoto material confirms general and area/district-specific frameworks. Exact municipality thresholds, visual judgments and unpublished AFT examples are excluded. Four records independently QAed 4/4 verified, A/B/C/D=1/1/1/1. Combined p.145 PR #721 / CI `33811733728`, merged `e4fc8dbf6d19b75f6a1856ea93d756a2f2d8e806`.
 
 ## Persistent blocked/risk candidates
 - p.035 `色の分類`: exact AFT taxonomy/labels/counts.
@@ -71,4 +91,4 @@ Accepted example facts: basic color at least 4/5 of each exterior-wall face; emp
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.144 `景観計画における色彩基準 — 色彩基準の示し方` before any authoring.
+Source-audit p.146 `色相、明度、彩度と景観形成とのかかわり` before any authoring.
