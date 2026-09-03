@@ -27,8 +27,8 @@
 | 7 | 均等色空間とL*a*b*色空間 — 色差の表示 | 050 | SECONDARY_CORROBORATION_REQUIRED | Current ISO/CIE 11664-4:2019 and CIE S 017:2020 boundary; 4/4 verified; CI 33770191717; PR #657. Not promoted. |
 | 8 | オストワルト表色系 — 色相環 | 053 | SECONDARY_CORROBORATION_REQUIRED | 24 hues; eight principal hues subdivided into three; opposite-hue complementarity/achromatic combination; corroborated yellow↔ultramarine-blue and red↔sea-green opponent placements. 4/4 verified; CI 33772390636; PR #659. Not promoted. |
 | 9 | オストワルト表色系 — 色の表示方法 | 054 | SECONDARY_CORROBORATION_REQUIRED | White/black/full-color contents; W+B+C=1; triangular-chart apexes; broad hue + white/black-content notation semantics. Exact AFT symbol tables/values/examples remain blocked. 4/4 verified; CI 33772632526; PR #660. Not promoted. |
-| 10 | オストワルト表色系 — 等色相面 | 054 | UNCHECKED | Exact next source-audit frontier confirmed by current AFT official table of contents. |
-| 11 | オストワルト表色系 — 色立体 | 055 | UNCHECKED | Follow only after p.054 等色相面. |
+| 10 | オストワルト表色系 — 等色相面 | 054 | SECONDARY_CORROBORATION_REQUIRED | Pure-colour/white/black triangle, shared white-black neutral axis, white→pure-colour light clear series, black→pure-colour dark clear series. Exact AFT geometry/notation/display details remain blocked. 4/4 verified; CI 33774043678; PR #663. Not promoted. |
+| 11 | オストワルト表色系 — 色立体 | 055 | UNCHECKED | Exact next source-audit frontier confirmed by current AFT official table of contents. |
 | 12 | NCS — へリングの6主要色 | 056 | UNCHECKED | Follow only after Ostwald p.055. |
 
 ## p.053 accepted corroborating boundary
@@ -43,6 +43,12 @@ Authoring batch: `qualifications/color-certification/data/grade1-authoring-ostwa
 Dedicated gate: `qualifications/color-certification/tests/grade1-ostwald-color-notation-p054-authoring.test.js`.
 Accepted facts are limited to white/black/full-color contents, W+B+C=1, the white/black/full-color triangle-apex model, and broad notation semantics combining hue with white/black-content information. Exact AFT notation tables, letter values, percentages/examples, display values, and visual judgments remain blocked.
 
+## p.054 等色相面 accepted corroborating boundary
+Audit: `docs/power-color/audits/2026-09-04-grade1-p054-ostwald-equal-hue-plane-source-audit.md`.
+Authoring batch: `qualifications/color-certification/data/grade1-authoring-ostwald-equal-hue-plane-p054-0001-0004.json`.
+Dedicated gate: `qualifications/color-certification/tests/grade1-ostwald-equal-hue-plane-p054-authoring.test.js`.
+Accepted facts are limited to the triangle connecting one pure colour with white and black, the shared white-black neutral axis, the white→pure-colour light clear series, and the black→pure-colour dark clear series. Do not infer exact AFT triangle orientation/dimensions/grid, symbols, chip counts, display values, or perceptual judgments.
+
 ## Known later source-risk candidates
 - JISの光源色の色名 / 光源色の系統色名: exact current standard content must be auditable before authoring.
 - 色彩とビジネス / カラーマーケティング / CMF®: AFT-specific procedures must not be filled from generic business practice.
@@ -51,4 +57,4 @@ Accepted facts are limited to white/black/full-color contents, W+B+C=1, the whit
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next source frontier
-Source-audit p.054 `オストワルト表色系 — 等色相面` before authoring. Resolve only individually auditable deterministic nonvisual facts; do not infer unpublished AFT geometry, exact notation, or display values.
+Source-audit p.055 `オストワルト表色系 — 色立体` before authoring. Resolve only individually auditable deterministic nonvisual facts; do not infer unpublished AFT geometry, exact diagram layout, notation, or display values.
