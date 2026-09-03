@@ -46,8 +46,9 @@ Confirmed current blockers include p.035 `色の分類`; p.062 JIS light-source 
 - [x] p.160 `資料・CMF® — 素材と工法`: `SOURCE_BLOCKED`; no public authority exposes the AFT-aligned deterministic material/process set; no authoring.
 - [x] p.152+p.157 authoring gates and normal Power Color regression passed workflow `33815760564`; PR #728 merged as `041b51b9a5346d602b5d8fdc7c2d0c6be9751e95`.
 - [x] Established `qualifications/color-certification/data/grade1-runtime.json` and `grade1-runtime-promotion.test.js` on the existing shared Power TOEIC engine; promoted p.006 `pc1.culture.ancient_europe_materials` 8/8 verified records record-identically. Deep-equality, full-fingerprint, answer-balance and shared-engine gates passed workflow `33817291831`; PR #730 merged as `273e5f4ebd3204e0f2405c7f72b93eab13d8e1a4`.
+- [x] Promoted p.007 `pc1.culture.medieval_early_modern_europe_materials` 8/8 verified records record-identically. Runtime deep-equality, full-fingerprint, answer-balance and shared-engine gates now cover 16 questions across two skills; Power Color CI `33818785475` succeeded and PR #733 merged as `9f57a5b3e1cf3ec466eabee16a07e099aca4e905`.
 
-Grade 1 runtime is 8 verified / pending 0 across one promoted skill. `productionApproved` remains false.
+Grade 1 runtime is 16 verified / pending 0 across two promoted skills. `productionApproved` remains false.
 
 ## Exact next start point
-Promote the existing p.007 `pc1.culture.medieval_early_modern_europe_materials` 8/8 verified records record-identically through the canonical Grade 1 runtime gate, then continue verified authoring promotion in official TOC order. Preserve all source/display blockers and do not create a Grade 1-specific engine.
+Promote the existing p.010 `pc1.culture.modern_europe_color_science` 8/8 verified records record-identically through the canonical Grade 1 runtime gate. Source contract: `docs/power-color/audits/2026-09-03-grade1-p010-modern-europe-color-science-source-audit.md`. Preserve all source/display blockers and do not create a Grade 1-specific engine.
