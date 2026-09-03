@@ -8,12 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Extracted and source-checked canonical knowledge for `takken-concept-stamp-tax` without changing existing Phase 2/3 questions or beginning Phase 4.3.
+Reconciled the two existing verified `stamp-tax` questions against the 8 canonical `takken-concept-stamp-tax` knowledge items without changing existing Phase 2/3 questions or beginning Phase 4.3.
 
-- Added 8 atomic knowledge items covering the 第1号文書 classification, representative real-estate transfer documents, amount-based taxation, the 1万円未満 non-taxable rule, the no-stated-amount 200円 rule, the current relief period, the 10万円超 relief threshold, and the full current reduced-rate schedule.
-- Primary grounding is National Tax Agency guidance explicitly marked `[令和8年4月1日現在法令等]`: No.7101 for the 第1号文書/normal tax treatment and No.7108 for the real-estate transfer contract relief.
-- The relief item records the current applicable period through 令和9年3月31日 and keeps 10万円以下 outside the relief; 1万円未満 remains non-taxable.
-- Existing source questions `takken-q-82-001` and `takken-q-82-002` were intentionally not mapped in this extraction checkpoint.
+- `takken-q-82-001` maps only to `takken-k-stamp-tax-real-estate-transfer-first-document`, because the stem and choices directly test whether a real-estate transfer contract is a 第1号文書.
+- `takken-q-82-002` maps only to `takken-k-stamp-tax-relief-period` and `takken-k-stamp-tax-relief-threshold`, because the stem and choices directly test the existence of the relief for contracts made in the applicable period and above the applicable amount threshold.
+- The remaining 5 stamp-tax knowledge items stay explicit Phase 4.3 deficits: representative real-estate transfer document examples; amount-based general tax determination; the 1万円未満 non-taxable rule; the no-stated-amount 200円 rule; and the detailed reduced-rate schedule.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -24,17 +23,17 @@ Extracted and source-checked canonical knowledge for `takken-concept-stamp-tax` 
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 105/113 concepts with canonical knowledge extraction complete; 104/113 fully reconciled through question mapping
+- Phase 4.2: active — 105/113 concepts with canonical knowledge extraction complete; 105/113 fully reconciled through existing-question mapping
 - Concepts with canonical knowledge items: 105
 - Canonical knowledge items: 588
-- Existing verified questions mapped: 132
-- Explicit unmapped knowledge gaps: 395
+- Existing verified questions mapped: 134
+- Explicit unmapped knowledge gaps: 392
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile `takken-q-82-001` and `takken-q-82-002` against the 8 canonical `takken-concept-stamp-tax` knowledge items. Map only knowledge directly measured by each stem and four choices. Keep all other knowledge as explicit Phase 4.3 deficits. Do not begin Phase 4.3.
+Extract and source-check canonical knowledge items for `takken-concept-real-estate-transfer-income`, using the 2026-04-01 law cutoff and primary official sources. Keep Phase 4.3 unstarted.
 
 ## publication invariant
 
