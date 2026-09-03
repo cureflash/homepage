@@ -11,7 +11,7 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 Reconciled verified `takken-q-76-001` against `takken-concept-provisional-replotting` without changing the Phase 2/3 source question.
 
 - Mapped `takken-q-76-001` to `takken-k-provisional-replotting-designation-authority` and `takken-k-provisional-replotting-designation-grounds` only.
-- The stem and choices directly test that the施行者 may designate a provisional replotting when statutory necessity exists; they do not directly test consideration standards, use/profit shift, a separately fixed use/profit start date, or unusable-gap compensation.
+- The stem and choices directly test that the project implementer may designate a provisional replotting when statutory necessity exists; they do not directly test consideration standards, use/profit shift, a separately fixed use/profit start date, or unusable-gap compensation.
 - Those remaining 4 knowledge items stay explicit Phase 4.3 deficits.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
