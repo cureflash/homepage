@@ -1,0 +1,87 @@
+{
+  "format": "power-color-grade1-authoring-v1",
+  "grade": 1,
+  "skill": {
+    "id": "pc1.harmony.chevreul_p025",
+    "label": "色彩調和論：シュヴルール（p.025 narrow slice）",
+    "categoryId": "pc1.harmony"
+  },
+  "sourceContract": "docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md",
+  "derivationRule": "Use only the three deterministic nonvisual Chevreul relations directly exposed by the current AFT Grade 1 first-stage sample. Do not reconstruct the unpublished full classification, infer the sample figure appearance, import p.027 Rood content, or create RGB/HEX/display answers.",
+  "qaSummary": {
+    "generated": 3,
+    "checked": 3,
+    "verified": 3,
+    "needsRevision": 0,
+    "rejected": 0,
+    "pending": 0,
+    "correctIndexDistribution": {"A": 1, "B": 1, "C": 1, "D": 0}
+  },
+  "questions": [
+    {
+      "id": "pc1-harmony-chevreul-p025-0001",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/chevreul_p025",
+      "skillId": "pc1.harmony.chevreul_p025",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "現行AFT公式1級1次出題例で、シュヴルールの「一つの主調色による調和」に該当する配色として示されているものはどれですか。",
+      "sentence": "現行AFT公式1級1次出題例で、シュヴルールの「一つの主調色による調和」に該当する配色として示されているものはどれですか。",
+      "choices": ["ドミナント", "セパレーション", "アクセントカラー", "ダイアード"],
+      "proposedAnswer": "ドミナント",
+      "correctIndex": 0,
+      "explanation": "現行AFT公式出題例では、ドミナントのような配色がシュヴルールの「一つの主調色による調和」に該当すると示されています。",
+      "sourceRefs": ["aft_grade1_sample_chevreul"],
+      "difficulty": "foundation",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently solved the AFT sample blank A from the official options and key and obtained ドミナント before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-chevreul-p025-0002",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/chevreul_p025",
+      "skillId": "pc1.harmony.chevreul_p025",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "現行AFT公式1級1次出題例では、シュヴルールの「一つの主調色による調和」は3種類ある何の調和の一つとして扱われていますか。",
+      "sentence": "現行AFT公式1級1次出題例では、シュヴルールの「一つの主調色による調和」は3種類ある何の調和の一つとして扱われていますか。",
+      "choices": ["統一", "類似色", "対比", "同一"],
+      "proposedAnswer": "類似色",
+      "correctIndex": 1,
+      "explanation": "現行AFT公式出題例の解答では、この箇所は「類似色」が正解です。",
+      "sourceRefs": ["aft_grade1_sample_chevreul"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently solved the AFT sample blank B from the official options and key and obtained 類似色 before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    },
+    {
+      "id": "pc1-harmony-chevreul-p025-0003",
+      "version": 1,
+      "grade": 1,
+      "taxonomyPath": "grade1/harmony/chevreul_p025",
+      "skillId": "pc1.harmony.chevreul_p025",
+      "categoryId": "pc1.harmony",
+      "questionType": "text_choice",
+      "prompt": "現行AFT公式1級1次出題例で、シュヴルールの類似色の調和に含まれると示される色相関係はどれですか。",
+      "sentence": "現行AFT公式1級1次出題例で、シュヴルールの類似色の調和に含まれると示される色相関係はどれですか。",
+      "choices": ["補色色相だけ", "同一色相だけ", "隣接・近似色相", "無彩色だけ"],
+      "proposedAnswer": "隣接・近似色相",
+      "correctIndex": 2,
+      "explanation": "現行AFT公式出題例では、「隣接・近似色相による色調類似の調和」が類似色の調和に含まれると示されています。",
+      "sourceRefs": ["aft_grade1_sample_chevreul"],
+      "difficulty": "standard",
+      "validationStatus": "verified",
+      "qa": {"generatedAs": "pending_validation", "independentRecheck": "independently solved the AFT sample blank C from the official options and key and obtained 隣接・近似 before comparing with proposedAnswer", "checkedOn": "2026-09-03"}
+    }
+  ],
+  "sources": [
+    {
+      "id": "aft_grade1_sample_chevreul",
+      "authority": "色彩検定協会",
+      "url": "https://www.aft.or.jp/pages/feature/exam1-first",
+      "use": "Current official Grade 1 first-stage sample directly exposes the three deterministic Chevreul relations used by this batch"
+    }
+  ]
+}
