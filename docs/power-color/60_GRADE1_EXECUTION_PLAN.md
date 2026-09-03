@@ -37,18 +37,13 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 
 ## Completed Grade 1 checkpoints
 - [x] Establish Grade 1 execution plan / source inventory / spec while preserving Grade 2/3 incomplete states and gates.
-- [x] Audit p.006 `古代ヨーロッパの色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow nonvisual ancient-Egypt material / Greek conservation-evidence boundary.
-- [x] Author p.006 `pc1.culture.ancient_europe_materials` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.
-- [x] Pass dedicated Grade 1 p.006 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression in CI `33744000544`; PR #618 merged as `fff4022fdf0c4809b135b29c4277ec83def919c2`.
-- [x] Audit p.007 `中・近世のヨーロッパの色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Getty/Met/National Gallery manuscript-pigment-material boundary.
-- [x] Author p.007 `pc1.culture.medieval_early_modern_europe_materials` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Stop at 8 to avoid repetition beyond the four resolved fact families.
-- [x] Pass dedicated Grade 1 p.007 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression in CI `33745825195`; PR #621 merged as `6adb39143b0765e65fa0762a9fea75ee6ad76c65`.
-- [x] Audit p.010 `近代ヨーロッパと色彩学` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Royal Society Newton/prism/light-and-colour history boundary and Klassik Stiftung Weimar Goethe/1810/perception-and-experiment boundary.
-- [x] Author p.010 `pc1.culture.modern_europe_color_science` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Stop at 8 to avoid repetition beyond the five resolved fact families.
-- [x] Pass the dedicated Grade 1 p.010 schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression in CI `33747834603`; PR #623 merged as `f26b52f8ef6d8e9426e614c39da9174f068d3d93`.
-- [x] Audit p.014 `日本の古代の色` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Imperial Household Agency / Kyoto National Museum Shosoin-Nara textile-culture boundary.
+- [x] Audit p.006 `古代ヨーロッパの色彩` as `SECONDARY_CORROBORATION_REQUIRED` and author/QA 8/8 verified; CI `33744000544`; PR #618 merged.
+- [x] Audit p.007 `中・近世のヨーロッパの色彩` as `SECONDARY_CORROBORATION_REQUIRED` and author/QA 8/8 verified; CI `33745825195`; PR #621 merged.
+- [x] Audit p.010 `近代ヨーロッパと色彩学` as `SECONDARY_CORROBORATION_REQUIRED` and author/QA 8/8 verified; CI `33747834603`; PR #623 merged.
+- [x] Audit p.014 `日本の古代の色` as `SECONDARY_CORROBORATION_REQUIRED`; resolve a narrow Shosoin/Nara textile-culture boundary.
 - [x] Author p.014 `pc1.culture.ancient_japan_colour` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.
-- [x] Pass the dedicated Grade 1 p.014 source/nonvisual/full-fingerprint/shared-renderer gate and normal Power Color regression in CI `33749556806` on PR #625 head `86c1bc93bba65d3f377f1cccd15d527189f7aa04`.
+- [x] Pass synchronized current-head p.014 Power Color CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`.
+- [x] Audit p.017 `古代から中近世の日本の色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Heian `襲色目` structural/seasonal-event boundary plus explicit Agency for Cultural Affairs Edo kosode period/material/technique catalogue facts.
 
 ## Exact next start point
-After PR #625 is green on the synchronized current head and merged, source-audit p.017 `古代から中近世の日本の色彩` in official AFT order. Do not infer AFT body membership; resolve only explicit public institutional/academic text-only facts.
+Author a small pending-first p.017 text-only batch using only `docs/power-color/audits/2026-09-03-grade1-p017-ancient-to-early-modern-japan-source-audit.md`, then independently QA every record. Do not infer exact historical colour-pair tables, reconstructed appearance, court-rank symbolism, image-derived answers, or exhaustive unpublished AFT membership.
