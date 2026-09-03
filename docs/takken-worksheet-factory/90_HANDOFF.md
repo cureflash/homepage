@@ -8,11 +8,14 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled the two existing verified `stamp-tax` questions against the 8 canonical `takken-concept-stamp-tax` knowledge items without changing existing Phase 2/3 questions or beginning Phase 4.3.
+Added and source-checked 4 canonical knowledge items for `takken-concept-real-estate-transfer-income` without changing existing Phase 2/3 questions or beginning Phase 4.3.
 
-- `takken-q-82-001` maps only to `takken-k-stamp-tax-real-estate-transfer-first-document`, because the stem and choices directly test whether a real-estate transfer contract is a 第1号文書.
-- `takken-q-82-002` maps only to `takken-k-stamp-tax-relief-period` and `takken-k-stamp-tax-relief-threshold`, because the stem and choices directly test the existence of the relief for contracts made in the applicable period and above the applicable amount threshold.
-- The remaining 5 stamp-tax knowledge items stay explicit Phase 4.3 deficits: representative real-estate transfer document examples; amount-based general tax determination; the 1万円未満 non-taxable rule; the no-stated-amount 200円 rule; and the detailed reduced-rate schedule.
+- `takken-k-real-estate-transfer-income-separate-taxation`: land/building transfer income is calculated separately from salary and other income under separate taxation.
+- `takken-k-real-estate-transfer-income-classification-reference-date`: long-term/short-term classification uses the ownership period as of January 1 of the year of transfer.
+- `takken-k-real-estate-transfer-income-long-term-over-five-years`: ownership exceeding five years at that reference date is long-term transfer income.
+- `takken-k-real-estate-transfer-income-short-term-five-years-or-less`: ownership of five years or less at that reference date is short-term transfer income.
+- Scope was intentionally limited to the two canonical unit-83 core facts. Special deductions, residential-property exceptions, and other transfer-income rules were not added.
+- Primary evidence is the National Tax Agency's current `土地や建物を売ったとき` guidance, which expressly uses the 2026 sale-year example and states the separate-taxation and January-1/five-year rules.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,17 +26,17 @@ Reconciled the two existing verified `stamp-tax` questions against the 8 canonic
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 105/113 concepts with canonical knowledge extraction complete; 105/113 fully reconciled through existing-question mapping
-- Concepts with canonical knowledge items: 105
-- Canonical knowledge items: 588
+- Phase 4.2: active — 106/113 concepts with canonical knowledge extraction complete; 105/113 fully reconciled through existing-question mapping
+- Concepts with canonical knowledge items: 106
+- Canonical knowledge items: 592
 - Existing verified questions mapped: 134
-- Explicit unmapped knowledge gaps: 392
+- Explicit unmapped knowledge gaps: 396
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract and source-check canonical knowledge items for `takken-concept-real-estate-transfer-income`, using the 2026-04-01 law cutoff and primary official sources. Keep Phase 4.3 unstarted.
+Reconcile the existing verified unit-83 questions against the 4 `takken-concept-real-estate-transfer-income` knowledge items. Map only knowledge that each question directly measures. Keep Phase 4.3 unstarted.
 
 ## publication invariant
 
