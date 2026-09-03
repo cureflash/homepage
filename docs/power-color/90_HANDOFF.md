@@ -32,16 +32,22 @@ No Grade 1 runtime promotion has occurred yet.
 
 p.024 `色彩調和論とは / ジャッドの色彩調和、四つの原理` is `SECONDARY_CORROBORATION_REQUIRED` under `docs/power-color/audits/2026-09-03-grade1-p024-color-harmony-judd-source-audit.md`.
 
-Accepted narrow text-only boundary:
-- Current AFT official Grade 1 TOC places `色彩調和論とは` and `ジャッドの色彩調和、四つの原理` at p.024.
-- Current AFT official Grade 1 first-stage sample directly resolves `ナチュラルハーモニー` as a scheme explained under Judd by the `なじみ` principle.
-- Waseda University academic literature independently corroborates Judd's four-principle framework (Order, Familiarity, Similarity, Unambiguity) and the Familiarity/natural-harmony relation.
+`qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json` contains the finite accepted p.024 state space: 4 pending-first text-only questions, independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. One wording defect was corrected before final gate. Synchronized Power Color CI `33756393481` passed; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
 
-Authoring file: `qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json`.
+Do not waterfill beyond these records, invent exact Japanese AFT labels for the other three Judd principles, reconstruct visual schemes, or duplicate them in adjacent theory batches.
 
-The finite accepted state space produced 4 pending-first questions only. All 4 were independently re-solved as verified, pending 0, A/B/C/D=1/1/1/1. One wording defect (`何つ`) was corrected to `いくつ` before the final authoring gate and the affected record was rechecked. Current-question-head Power Color CI `33756136445` passed on PR #632. Dedicated gating covers allowed sources, nonvisual rendering, full fingerprints against all six earlier Grade 1 culture batches, and shared renderer behavior.
+## p.025 Chevreul source audit
 
-Do not waterfill beyond these four records, invent exact Japanese AFT labels for the other three Judd principles, reconstruct visual schemes, or pull p.025 Chevreul content into p.024.
+p.025 `シュヴルールの色彩調和論` is `SOURCE_RESOLVED` for a narrow current-official-sample slice under `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`.
+
+The current AFT Grade 1 first-stage official sample directly exposes and answers these text-only relations:
+- `一つの主調色による調和` → `ドミナント`.
+- This is treated as one of three `類似色の調和`.
+- `類似色の調和` includes `隣接・近似色相による色調類似の調和`.
+
+Because these relations and answers are current first-party exam-sample authority, no secondary source is required for this narrow slice. This does not resolve the complete unpublished p.025 textbook body.
+
+Do not reconstruct the official figure, infer RGB/HEX/display values, add unstated Chevreul categories/history, pull p.027 Rood content forward, or duplicate p.024 Judd-only questions.
 
 ## Phase 5 sequencing note
 
@@ -49,4 +55,4 @@ Do not waterfill beyond these four records, invent exact Japanese AFT labels for
 
 ## Exact next start point
 
-Pass synchronized current-head Power Color CI and merge PR #632 if green/current. Then continue in official order to p.025 `シュヴルールの色彩調和論` and source-audit it before any authoring.
+Merge the p.025 source-audit checkpoint after current-head Power Color CI. Then author a small pending-first text-only p.025 batch only from the three current AFT official-sample relations and independently QA every record; avoid waterfilling beyond the finite first-party state space.

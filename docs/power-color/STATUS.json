@@ -11,23 +11,23 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "passed_pre_sync", "workflow_run": 33756136445, "pr": 632, "merge_commit": null, "skill": "pc1.harmony.judd_p024", "verified": 4},
+    "latest_authoring_gate": {"status": "passed", "workflow_run": 33756393481, "pr": 632, "merge_commit": "57163579879253d6db9529f268d73ec15f8c3467", "skill": "pc1.harmony.judd_p024", "verified": 4},
     "active_section": "色彩調和論",
     "active_topic": "p.025 シュヴルールの色彩調和論",
-    "active_topic_source_status": null,
-    "source_audit": null,
+    "active_topic_source_status": "SOURCE_RESOLVED",
+    "source_audit": "docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md",
     "active_authoring": null,
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. The user's repeated explicit Grade 1 override resolves operational precedence for Grade 1 only; 60_GRADE1_EXECUTION_PLAN.md records that override while Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup of the stale sentence is still pending.",
-    "next": "After synchronized current-head CI and merge of PR #632, source-audit p.025 シュヴルールの色彩調和論 before any authoring."
+    "next": "After current-head CI and merge of the p.025 source-audit checkpoint, author only the three directly exposed current-AFT official-sample relations as a small pending-first text-only batch and independently QA every record."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 9, "generated": 12, "checked": 12, "verified": 12, "revision_events": 1, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Completed p.021 authoring PR #630 after synchronized CI 33755336513; merge commit b69572f7b3e55732e72ac4e0496595bb505d0308.", "p.021: 8 pending-first text-only records independently re-derived as 8 verified / pending 0 / A/B/C/D=2/2/2/2.", "Audited p.024 Judd color harmony as SECONDARY_CORROBORATION_REQUIRED from current AFT TOC/sample plus Waseda academic corroboration.", "Merged p.024 source audit PR #631 after Power Color CI 33755869018; merge commit c9c9977f513bd8fdfeaf014e9798d728f1bbe12a.", "Authored the finite p.024 state space as 4 pending-first text-only records and independently re-derived all 4 answers: 4 verified / pending 0 / A/B/C/D=1/1/1/1.", "Corrected one unnatural Japanese wording (何つ→いくつ) before final gate and rechecked the affected record.", "Dedicated p.024 source/nonvisual/full-fingerprint/shared-renderer gate passed on current question head in Power Color CI 33756136445.", "Stopped p.024 at four records rather than waterfilling beyond the audited deterministic state space.", "Synchronized Grade 1 plan/source inventory/status/handoff toward p.025 while preserving Grade 2/3 incomplete states and all source/display gates." ]},
+  "current_run": {"checkpoints_completed": 10, "generated": 12, "checked": 12, "verified": 12, "revision_events": 1, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Completed p.021 authoring PR #630 after synchronized CI 33755336513; merge commit b69572f7b3e55732e72ac4e0496595bb505d0308.", "p.021: 8 pending-first text-only records independently re-derived as 8 verified / pending 0 / A/B/C/D=2/2/2/2.", "Audited and merged p.024 Judd source boundary as SECONDARY_CORROBORATION_REQUIRED; CI 33755869018; PR #631 merge c9c9977f513bd8fdfeaf014e9798d728f1bbe12a.", "Authored p.024 finite state space as 4 pending-first text-only records, independently re-derived 4/4 verified, pending 0, A/B/C/D=1/1/1/1; corrected one wording defect before final gate.", "Synchronized p.024 CI 33756393481 passed and PR #632 merged as 57163579879253d6db9529f268d73ec15f8c3467.", "Audited p.025 Chevreul using the current AFT Grade 1 official sample itself; classified narrow official-sample slice SOURCE_RESOLVED.", "Resolved first-party relation: 一つの主調色による調和 → ドミナント.", "Resolved first-party relation: the dominant relation is treated as one of three 類似色の調和.", "Resolved first-party relation: 類似色の調和 includes 隣接・近似色相による色調類似の調和.", "Synchronized Grade 1 plan/source inventory/status/handoff toward small p.025 authoring while preserving Grade 2/3 incomplete states and all source/display gates." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Pass synchronized current-head CI, merge PR #632, then source-audit p.025 シュヴルールの色彩調和論."
+  "next": "Merge the p.025 source-audit checkpoint after current-head CI, then author and independently QA the finite three-relation p.025 text-only slice."
 }
