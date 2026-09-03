@@ -3,10 +3,10 @@
 ## Authority
 Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this file, `61_GRADE1_SOURCE_INVENTORY.md`, and `62_GRADE1_SPEC.md` as the Grade 1 canonical working set. Grade 2 and Grade 3 remain incomplete; do not relax their source/display gates.
 
-Grade 1 is active by explicit user override. The stale Grade-2-complete wording still present in `20_EXECUTION_PLAN.md` does not mark Grade 2/3 complete and does not supersede the explicit Grade 1 canonical state.
+Grade 1 is active by explicit user override. `20_EXECUTION_PLAN.md` is synchronized to this override; this does not mark Grade 2/3 complete and does not relax any lower-grade source/display gate.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, color-marketing p.104→p.114, CMF® p.119→p.122, fashion p.124→p.137, landscape p.140→p.148,資料・光と色 p.152/p.157, and 資料・CMF® p.160 have now been processed in official order. The current official TOC content frontier is exhausted through p.160.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021, color-harmony p.024→p.030, light/color p.032→p.041, color-representation p.046→p.059, color-names p.060→p.062, measurement p.066→p.069, psychology p.072→p.087, business-process p.090→p.102, color-marketing p.104→p.114, CMF® p.119→p.122, fashion p.124→p.137, landscape p.140→p.148,資料・光と色 p.152/p.157, and 資料・CMF® p.160 have now been processed in official order. The current official TOC content frontier is exhausted through p.160. Runtime promotion must also proceed in official TOC order using only existing verified authoring records.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -15,7 +15,7 @@ Follow the current AFT official Grade 1 textbook table of contents in order. Cul
 4. Author only source-resolved deterministic facts, pending-first.
 5. Independently re-solve each question before assigning `verified`, `needs_revision`, or `rejected`.
 6. Check schema, full-fingerprint duplicates, coverage, answer-position distribution, and shared Power TOEIC engine regression.
-7. Promote only verified records, record-identically, into Grade 1 runtime when the canonical Grade 1 runtime promotion path exists.
+7. Promote only verified records, record-identically, into Grade 1 runtime through the canonical Grade 1 runtime promotion gate.
 8. Merge only green/current-head work and synchronize STATUS/HANDOFF/PLAN/source inventory.
 
 ## Global gates
@@ -45,8 +45,9 @@ Confirmed current blockers include p.035 `色の分類`; p.062 JIS light-source 
 - [x] p.157 `資料・光と色（2） — 相関色温度と演色評価数`: `SOURCE_RESOLVED` to narrow CIE/JLMA definitions; 4/4 verified, A/B/C/D=1/1/1/1.
 - [x] p.160 `資料・CMF® — 素材と工法`: `SOURCE_BLOCKED`; no public authority exposes the AFT-aligned deterministic material/process set; no authoring.
 - [x] p.152+p.157 authoring gates and normal Power Color regression passed workflow `33815760564`; PR #728 merged as `041b51b9a5346d602b5d8fdc7c2d0c6be9751e95`.
+- [x] Established `qualifications/color-certification/data/grade1-runtime.json` and `grade1-runtime-promotion.test.js` on the existing shared Power TOEIC engine; promoted p.006 `pc1.culture.ancient_europe_materials` 8/8 verified records record-identically. Deep-equality, full-fingerprint, answer-balance and shared-engine gates passed workflow `33817291831`; PR #730 merged as `273e5f4ebd3204e0f2405c7f72b93eab13d8e1a4`.
 
-No Grade 1 runtime promotion has occurred yet.
+Grade 1 runtime is 8 verified / pending 0 across one promoted skill. `productionApproved` remains false.
 
 ## Exact next start point
-Establish the canonical Grade 1 runtime file and record-identical promotion gate on the existing shared Power TOEIC question-bank/workout/session engine. Promote only existing `verified` Grade 1 authoring records; preserve all source/display blockers and do not create a Grade 1-specific engine.
+Promote the existing p.007 `pc1.culture.medieval_early_modern_europe_materials` 8/8 verified records record-identically through the canonical Grade 1 runtime gate, then continue verified authoring promotion in official TOC order. Preserve all source/display blockers and do not create a Grade 1-specific engine.

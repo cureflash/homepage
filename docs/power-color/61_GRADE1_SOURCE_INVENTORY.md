@@ -7,9 +7,18 @@
 - 2026 Grade 1 second-stage format notice: printed-color selection replaces the former New Color Card 199a operation; content tendency/approximate question count/difficulty remain unchanged.
 
 ## Processed frontier
-All current official Grade 1 textbook TOC content items from culture p.006 through the appendices p.152, p.157 and p.160 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files; Grade 1 runtime remains unpromoted.
+All current official Grade 1 textbook TOC content items from culture p.006 through the appendices p.152, p.157 and p.160 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files. Runtime promotion has begun in the same official order: p.006 `pc1.culture.ancient_europe_materials` is promoted record-identically; p.007 is next.
 
 Recorded source-blocked topics include p.035 `色の分類`, p.062 JIS light-source name topics, p.083 `色の見えの変化`, p.090 `色彩効果のビジネス活用`, p.096/p.100/p.102 business-process topics, p.114 `カラー戦略`, p.120-p.122 CMF® process topics, p.132 `カラー情報の整理と分析` / `シーズンテーマカラーの決定`, p.134 `繊維の長さと発色性`, p.136 `ビジュアルマーチャンダイジング（VMD）の取り組み`, p.137 `商品陳列のカラーコーディネーション`, p.148 `遠景・中景・近景を踏まえた色彩計画における配慮事項`, and p.160 `資料・CMF® — 素材と工法`.
+
+## Grade 1 runtime promotion frontier
+Runtime: `qualifications/color-certification/data/grade1-runtime.json`.
+Promotion gate: `qualifications/color-certification/tests/grade1-runtime-promotion.test.js`.
+Current runtime: 8 verified / pending 0 across one skill; `productionApproved=false`.
+Promoted batch: `qualifications/color-certification/data/grade1-authoring-culture-ancient-europe-materials-0001-0008.json`, p.006 `pc1.culture.ancient_europe_materials`, 8/8 verified, record-identical.
+Gate coverage: runtime↔authoring deep equality, full-fingerprint uniqueness, balanced correct positions, and the existing shared Power TOEIC question-bank/workout/session engine.
+Power Color CI `33817291831` succeeded; PR #730 merged as `273e5f4ebd3204e0f2405c7f72b93eab13d8e1a4`.
+Next batch in official order: `qualifications/color-certification/data/grade1-authoring-culture-medieval-early-modern-europe-0001-0008.json`, p.007 `pc1.culture.medieval_early_modern_europe_materials`, 8/8 verified, pending 0, A/B/C/D=2/2/2/2.
 
 ## p.152 color-perception accepted boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p152-color-perception-source-audit.md`.
@@ -48,4 +57,4 @@ AFT public material exposes the appendix heading/order only. It does not expose 
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next frontier
-The current official Grade 1 textbook TOC content frontier is exhausted through p.160. Next, establish the canonical Grade 1 runtime file and record-identical promotion gate on the existing shared Power TOEIC question-bank/workout/session engine. Promote only existing verified Grade 1 authoring records and preserve every recorded source/display blocker.
+Promote the existing p.007 `pc1.culture.medieval_early_modern_europe_materials` 8/8 verified records record-identically through the canonical shared-engine Grade 1 runtime gate. Continue only verified authoring in official TOC order and preserve every recorded source/display blocker.

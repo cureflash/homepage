@@ -16,10 +16,10 @@ Both dedicated global full-fingerprint/nonvisual/shared-renderer gates and the n
 
 p.160 `資料・CMF® — 素材と工法` is `SOURCE_BLOCKED`. AFT public material exposes the heading/order only, not the appendix's closed material inventory, manufacturing/finishing-process set, pairings, selection criteria, exceptions, or diagrams. Generic CMF/materials-engineering taxonomies are rejected as substitutes. No authoring.
 
-Grade 1 runtime remains unpromoted.
+The canonical Grade 1 runtime/promotion path now exists on the existing shared Power TOEIC question-bank/workout/session engine. p.006 `pc1.culture.ancient_europe_materials` 8/8 verified records were promoted record-identically into `grade1-runtime.json`. The promotion gate enforces runtime↔authoring deep equality, full-fingerprint uniqueness, answer-position balance and shared-engine execution. Power Color CI `33817291831` succeeded and PR #730 merged as `273e5f4ebd3204e0f2405c7f72b93eab13d8e1a4`. Runtime is 8 verified / pending 0 across one skill; `productionApproved` remains false.
 
 ## Source/display boundary
 Do not reconstruct unpublished AFT wording, diagrams, formulas, examples, thresholds, geometry, RGB/HEX/display values, monitor-facing judgments, exact business/CMF/fashion process sequences, fiber-length color-development rules, VMD initiative/color procedures, AFT-specific near/mid/far color-planning prescriptions, or the p.160 material/process set. Do not repeat recorded rejected source routes without new explicit evidence.
 
 ## Exact next start point
-The current AFT Grade 1 official TOC content frontier is exhausted through p.160. Establish the canonical Grade 1 runtime file/promotion gate on the existing shared Power TOEIC question-bank/workout/session engine, then promote only existing verified Grade 1 authoring records record-identically. Do not fork a Grade 1 engine and do not promote blocked or monitor-dependent material.
+Promote the existing p.007 `pc1.culture.medieval_early_modern_europe_materials` batch 8/8 verified records record-identically through the canonical Grade 1 runtime gate. Continue only verified authoring in official TOC order; do not fork a Grade 1 engine and do not promote blocked or monitor-dependent material.
