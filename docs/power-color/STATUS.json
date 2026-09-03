@@ -16,16 +16,17 @@
     "active_topic": "p.007 中・近世のヨーロッパの色彩",
     "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
     "source_audit": "docs/power-color/audits/2026-09-03-grade1-p007-medieval-early-modern-europe-source-audit.md",
+    "active_authoring": {"file": "qualifications/color-certification/data/grade1-authoring-culture-medieval-early-modern-europe-0001-0008.json", "skill": "pc1.culture.medieval_early_modern_europe_materials", "generated": 8, "checked": 8, "verified": 8, "pending": 0, "correct_index_distribution": "2/2/2/2", "gate_status": "pending_ci"},
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
-    "next": "Author a small pending-first p.007 text-only batch from the resolved Getty/Met/National Gallery manuscript-pigment-material boundary, then independently QA every record."
+    "next": "Run the p.007 dedicated authoring gate and normal Power Color regression. If green/current, merge; then source-audit p.010 近代ヨーロッパと色彩学 before further authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main after PR #617 and confirmed no competing open Power Color PR / no unmerged Grade 1 branch work.", "Authored p.006 pc1.culture.ancient_europe_materials pending-first and independently re-solved all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.", "Passed dedicated p.006 authoring gate and normal Power Color regression in CI 33744000544; PR #618 merged as fff4022fdf0c4809b135b29c4277ec83def919c2.", "Audited p.007 中・近世のヨーロッパの色彩 as SECONDARY_CORROBORATION_REQUIRED and resolved a narrow Getty/Met/National Gallery manuscript-pigment-material boundary without symbolism/display inference."]},
+  "current_run": {"checkpoints_completed": 2, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main after PR #619 and confirmed no competing open Power Color PR / unmerged Grade 1 authoring work.", "Authored p.007 pc1.culture.medieval_early_modern_europe_materials pending-first and independently re-solved all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; added dedicated nonvisual/source/full-fingerprint/shared-renderer gate."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 1 culture with p.007 pending-first authoring and independent QA."
+  "next": "Run p.007 gate/regression, merge if green/current, then audit p.010."
 }
