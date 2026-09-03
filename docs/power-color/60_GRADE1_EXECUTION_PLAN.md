@@ -44,6 +44,7 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] Author p.014 `pc1.culture.ancient_japan_colour` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2.
 - [x] Pass synchronized current-head p.014 Power Color CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`.
 - [x] Audit p.017 `古代から中近世の日本の色彩` as `SECONDARY_CORROBORATION_REQUIRED`; resolve only a narrow Heian `襲色目` structural/seasonal-event boundary plus explicit Agency for Cultural Affairs Edo kosode period/material/technique catalogue facts.
+- [x] Author p.017 `pc1.culture.ancient_to_early_modern_japan` pending-first and independently QA all 8 records: 8/8 verified, pending 0, A/B/C/D=2/2/2/2; full-fingerprint checked against all prior Grade 1 culture authoring batches.
 
 ## Exact next start point
-Author a small pending-first p.017 text-only batch using only `docs/power-color/audits/2026-09-03-grade1-p017-ancient-to-early-modern-japan-source-audit.md`, then independently QA every record. Do not infer exact historical colour-pair tables, reconstructed appearance, court-rank symbolism, image-derived answers, or exhaustive unpublished AFT membership.
+After the p.017 current-head gate is green and merged, audit p.021 `近代の日本の色彩` using current AFT scope first, then NDL/museum/university/academic authority for individual facts. Do not infer unpublished AFT membership or visual/color values.

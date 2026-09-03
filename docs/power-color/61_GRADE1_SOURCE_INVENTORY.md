@@ -12,8 +12,8 @@
 | 1 | 古代ヨーロッパの色彩 | 006 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified text-only records; CI `33744000544`; PR #618 merged. Not yet promoted. |
 | 2 | 中・近世のヨーロッパの色彩 | 007 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified text-only records; CI `33745825195`; PR #621 merged. Not yet promoted. |
 | 3 | 近代ヨーロッパと色彩学 | 010 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified records; CI `33747834603`; PR #623 merged. Not yet promoted. |
-| 4 | 日本の古代の色 | 014 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified records; current-head CI `33749706830`; PR #625 merged as `7628b36b7fedec248b7c29a1a4dea47881be9619`. Not yet promoted. |
-| 5 | 古代から中近世の日本の色彩 | 017 | SECONDARY_CORROBORATION_REQUIRED | AFT heading/order plus narrow university/library Heian `襲色目` structure and Agency for Cultural Affairs Edo kosode catalogue relations resolved. |
+| 4 | 日本の古代の色 | 014 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified records; current-head CI `33749706830`; PR #625 merged. Not yet promoted. |
+| 5 | 古代から中近世の日本の色彩 | 017 | SECONDARY_CORROBORATION_REQUIRED | 8 independently verified text-only records authored from the accepted Heian/Edo boundary; awaiting current-head CI/merge. Not yet promoted. |
 | 6 | 近代の日本の色彩 | 021 | UNREVIEWED | Prefer AFT + NDL/museums/university/academic sources. |
 
 ## Known later source-risk candidates
@@ -41,11 +41,13 @@ Audit: `docs/power-color/audits/2026-09-03-grade1-p017-ancient-to-early-modern-j
 Accepted narrow facts only:
 - Okayama Prefectural University Library: Heian `襲色目` as court/aristocratic colour coordination; distinction between `合わせの色目` and layered-garment `襲袿色目`; seasonal/event coordination context.
 - Ochanomizu University / CiNii / IRDB metadata: institutional research record `平安貴族社会における「襲の色目」`; metadata corroborates topic alignment but does not authorize exact pair tables.
-- Agency for Cultural Affairs `文化遺産オンライン`: early-Edo `熨斗雪輪模様小袖` (17th century; dark-brown figured-silk ground; kanoko tie-dye, stitched-resist dyeing, embroidery).
-- Agency for Cultural Affairs: mid-Edo `蛇籠桜樹模様小袖` (18th century; 納戸縮緬地; yuzen, embroidery, surihitta).
-- Agency for Cultural Affairs: late-Edo `蒲公英蝶模様小袖` (19th century; yellow figured silk; yuzen and stencil dyeing; incorporates the hem-pattern fashion described as popular from the mid-Edo period onward).
+- Agency for Cultural Affairs `文化遺産オンライン`: early-Edo `熨斗雪輪模様小袖` (17th century; 濃茶綸子地; 鹿の子絞り・縫い締め絞り・刺繍).
+- Agency for Cultural Affairs: mid-Edo `蛇籠桜樹模様小袖` (18th century; 納戸縮緬地; 友禅染・刺繍・摺匹田).
+- Agency for Cultural Affairs: late-Edo `蒲公英蝶模様小袖` (19th century; 黄綸子地; 友禅染・型染; incorporates the hem-pattern fashion described as popular from the mid-Edo period onward).
+
+`qualifications/color-certification/data/grade1-authoring-culture-ancient-to-early-modern-japan-0001-0008.json`: eight pending-first records independently re-solved as verified; pending 0; A/B/C/D=2/2/2/2. Dedicated gate also checks full fingerprints against all four earlier Grade 1 culture batches. No runtime promotion yet.
 
 Do not infer exact `襲色目` pair tables or names, court-rank rules, symbolic meanings, reconstructed historical appearance, RGB/HEX/display values, image-derived answers, or exhaustive unpublished AFT p.017 membership.
 
 ## Exact next source frontier
-Author a small pending-first p.017 text-only batch from the accepted audit boundary, then independently QA every record.
+After p.017 current-head CI/merge, audit p.021 `近代の日本の色彩` in official order.

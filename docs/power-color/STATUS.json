@@ -11,22 +11,23 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "passed", "workflow_run": 33749706830, "pr": 625, "merge_commit": "7628b36b7fedec248b7c29a1a4dea47881be9619", "skill": "pc1.culture.ancient_japan_colour", "verified": 8},
+    "latest_authoring_gate": {"status": "passed", "workflow_run": 33751443115, "pr": 628, "merge_commit": null, "skill": "pc1.culture.ancient_to_early_modern_japan", "verified": 8},
     "active_section": "色彩と文化",
     "active_topic": "p.017 古代から中近世の日本の色彩",
     "active_topic_source_status": "SECONDARY_CORROBORATION_REQUIRED",
     "source_audit": "docs/power-color/audits/2026-09-03-grade1-p017-ancient-to-early-modern-japan-source-audit.md",
-    "active_authoring": null,
+    "active_authoring": "qualifications/color-certification/data/grade1-authoring-culture-ancient-to-early-modern-japan-0001-0008.json",
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
-    "next": "Author a small pending-first p.017 text-only batch from the audited Heian 襲色目 and Edo kosode catalogue boundary, then independently QA every record."
+    "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 still says Grade 1 starts only after Grade 2 is completely finished, while STATUS/60_GRADE1_EXECUTION_PLAN/user override make Grade 1 active with Grade 2 intentionally incomplete. Resolve this stale top-level condition before beginning p.021.",
+    "next": "Merge the green p.017 authoring PR, then reconcile the stale Grade 1 start condition in 20_EXECUTION_PLAN.md before auditing p.021 近代の日本の色彩."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 4, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main after PR #624 and completed p.014 authoring/independent QA: 8/8 verified, A/B/C/D=2/2/2/2.", "Current-head Power Color CI 33749706830 passed and PR #625 merged as 7628b36b7fedec248b7c29a1a4dea47881be9619.", "Reconciled latest main after PR #625 and confirmed p.017 is the next official culture topic.", "Audited p.017 古代から中近世の日本の色彩 as SECONDARY_CORROBORATION_REQUIRED using AFT scope plus university/library Heian 襲色目 material and Agency for Cultural Affairs Edo kosode catalogue records." ]},
+  "current_run": {"checkpoints_completed": 3, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open PRs/branches; prior p.017 audit branch is fully behind main and no competing Power Color PR existed.", "Authored p.017 pc1.culture.ancient_to_early_modern_japan as 8 pending-first text-only records and independently re-derived all 8 as verified; A/B/C/D=2/2/2/2; no visual/display inference.", "Dedicated p.017 source/nonvisual/full-fingerprint gate plus normal Power Color regression passed in workflow 33751443115 on PR #628 head." ]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Continue Grade 1 culture with p.017 pending-first authoring and independent QA."
+  "next": "Merge PR #628, then resolve the stale Phase 5 Grade 1 start condition in docs/power-color/20_EXECUTION_PLAN.md before p.021 source audit."
 }
