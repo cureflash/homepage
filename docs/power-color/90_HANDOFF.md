@@ -16,9 +16,13 @@ p.061 `色名 — ISCC-NBS色名法` is `SECONDARY_CORROBORATION_REQUIRED`. Four
 
 p.062 `色名 — JISの光源色の色名` and p.062 `光源色の系統色名` remain `SOURCE_BLOCKED`. Current JSA primary metadata confirms `JIS Z 8110:1995` status but does not expose exact normative naming content. Secondary mirrors remain rejected as sole authority. No authoring.
 
-p.066 `測色 — 測色とは` is `SECONDARY_CORROBORATION_REQUIRED`. CIE 015:2018 / ISO-CIE authority resolves only four nonvisual fact families: standard colorimetric observers and standard illuminants, tristimulus values, chromaticity coordinates, and colour-space coordinates/colour differences. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. CI `33784408214` passed; PR #679 merged as `189c4f9cf3a81651df7662b187e4cc01967a75c1`.
+p.066 `測色 — 測色とは` is `SECONDARY_CORROBORATION_REQUIRED`. Four CIE/ISO-CIE-backed nonvisual records are 4/4 verified. CI `33784408214`; PR #679 merged as `189c4f9cf3a81651df7662b187e4cc01967a75c1`.
 
-p.067 `測色 — 視感測色―直接比較法` is `SECONDARY_CORROBORATION_REQUIRED`. ISO 3668:2017 resolves only the narrow specimen-versus-standard comparison boundary: comparison with a standard, reference/freshly prepared standards, artificial light, and a standard booth. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. CI `33784600346` passed; PR #680 merged as `6ba80f478bcb6b221683e94e0e161033dbbcac07`.
+p.067 `測色 — 視感測色―直接比較法` is `SECONDARY_CORROBORATION_REQUIRED`. Four ISO 3668:2017-backed nonvisual records are 4/4 verified. CI `33784600346`; PR #680 merged as `6ba80f478bcb6b221683e94e0e161033dbbcac07`.
+
+p.069 `測色 — 物理測色` is `SECONDARY_CORROBORATION_REQUIRED`. NIST resolves only four narrow fact families: spectrophotometric reflectance/transmittance measurement, illuminate-and-detect measurement principle, spectroreflectometer/spectroradiometer usage boundary, and tristimulus colorimeters as practical colour-measurement instruments. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. CI `33785943347`; PR #683 merged as `a5d99f69c4e3ed36619faaea5c33f4466cfda566`.
+
+p.072 `色彩心理 — 心理学的尺度構成法の基本` is `SECONDARY_CORROBORATION_REQUIRED`. Tokyo Metropolitan University and Osaka University independently corroborate the nominal/ordinal/interval/ratio defining properties. Four records were authored pending-first and independently re-solved 4/4 verified, pending 0, A/B/C/D=1/1/1/1. CI `33786140834`; PR #684 merged as `f83ce35731ba3c20ff8e3a6655dfa0e2c023299b`.
 
 No Grade 1 runtime promotion has occurred yet.
 
@@ -28,8 +32,8 @@ Do not reconstruct unpublished AFT wording, numbering/symbol conventions, diagra
 
 ## Canonical sequencing note
 
-The current AFT official Grade 1 textbook table of contents confirms p.066 `測色とは` → p.067 `視感測色―直接比較法` → p.069 `物理測色`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
+The current AFT official Grade 1 textbook table of contents confirms p.069 `物理測色` → p.072 `心理学的尺度構成法の基本` → p.073 `心理学的尺度構成法`. `docs/power-color/20_EXECUTION_PLAN.md` still contains the stale old Phase 5 start sentence; Grade 2/3 remain incomplete and gated.
 
 ## Exact next start point
 
-Source-audit p.069 `測色 — 物理測色` before any authoring. Keep both p.062 JIS topics blocked unless new explicit auditable primary authority appears.
+Source-audit p.073 `色彩心理 — 心理学的尺度構成法` before any authoring. Keep both p.062 JIS topics blocked unless new explicit auditable primary authority appears.
