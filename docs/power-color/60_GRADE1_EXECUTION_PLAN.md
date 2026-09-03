@@ -6,7 +6,7 @@ Use current `main`, `STATUS.json`, `90_HANDOFF.md`, `20_EXECUTION_PLAN.md`, this
 The user explicitly made Grade 1 active while Grade 2/3 remain incomplete. The stale Phase 5 sentence in `20_EXECUTION_PLAN.md` is a known mechanical inconsistency; this explicit override plus STATUS/HANDOFF/this Grade 1 plan controls Grade 1 work only and does not mark Grade 2/3 complete.
 
 ## Order
-Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021 and color-harmony p.024→p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` is audited/authored within three corroborated nonvisual fact families. p.035 `色の分類` is source-blocked. p.036 `照明の性質を表すもの` is audited/authored within four CIE-defined nonvisual fact families. p.039 `測色の照明` is audited/authored within four current-CIE nonvisual fact families. Next official frontier is p.041 `グラスマンの法則（加法混色の法則性）` source audit.
+Follow the current AFT official Grade 1 textbook table of contents in order. Culture p.006→p.021 and color-harmony p.024→p.030 are audited/authored within accepted narrow source boundaries. p.032 `色の様相` is audited/authored within three corroborated nonvisual fact families. p.035 `色の分類` is source-blocked. p.036 `照明の性質を表すもの`, p.039 `測色の照明`, p.041 `グラスマンの法則`, and p.046 `XYZ表色系` are audited/authored within current-CIE nonvisual fact families. Next official frontier is p.050 `均等色空間とL*a*b*色空間 — 色差の表示` source audit.
 
 ## Per-topic workflow
 1. Reconcile latest main, open Power Color PRs, and in-progress Grade 1 branches.
@@ -40,10 +40,12 @@ Treat these as explicit blocked candidates until individually resolved: JIS ligh
 - [x] p.030 ムーンとスペンサー: `SECONDARY_CORROBORATION_REQUIRED` + 4/4 verified.
 - [x] p.032 `色の様相`: `SECONDARY_CORROBORATION_REQUIRED`; 3/3 verified; PR #647 merged.
 - [x] p.035 `色の分類`: `SOURCE_BLOCKED`; exact AFT taxonomy/labels/counts are not publicly auditable; no authoring.
-- [x] p.036 `照明の性質を表すもの`: `SECONDARY_CORROBORATION_REQUIRED`; four CIE-defined nonvisual fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1.
-- [x] p.039 `測色の照明`: `SECONDARY_CORROBORATION_REQUIRED`; four current-CIE nonvisual fact families (illuminant, A, D65, D50) authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33766411922`, PR #651 merged as `0834e4ee78b475cb8547306e047bdcbaa2d24b79`.
+- [x] p.036 `照明の性質を表すもの`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified.
+- [x] p.039 `測色の照明`: `SECONDARY_CORROBORATION_REQUIRED`; 4/4 verified; CI `33766411922`, PR #651.
+- [x] p.041 `グラスマンの法則（加法混色の法則性）`: `SECONDARY_CORROBORATION_REQUIRED`; four current-CIE fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33768284181`, PR #654 merged as `b3e2efbb178948f89f5f1c0926719215caab66da`.
+- [x] p.046 `XYZ表色系`: `SECONDARY_CORROBORATION_REQUIRED`; four current-CIE fact families authored pending-first and independently QA'd 4/4 verified, pending 0, A/B/C/D=1/1/1/1; CI `33768527950`, PR #655 merged as `c84d76ca7bb9954c4fee3cb61cd6a8d898489f64`.
 
 No Grade 1 runtime promotion has occurred yet.
 
 ## Exact next start point
-Source-audit p.041 `グラスマンの法則（加法混色の法則性）` before any authoring. Preserve all Grade 2/3 incomplete states and gates.
+Source-audit p.050 `均等色空間とL*a*b*色空間 — 色差の表示` before any authoring. Preserve all Grade 2/3 incomplete states and gates.
