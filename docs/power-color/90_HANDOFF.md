@@ -39,9 +39,25 @@ Accepted narrow text-only boundary:
 
 Authoring file: `qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json`.
 
-The finite accepted state space produced 4 pending-first questions only. All 4 were independently re-solved as verified, pending 0, A/B/C/D=1/1/1/1. One wording defect (`何つ`) was corrected to `いくつ` before the final authoring gate and the affected record was rechecked. Current-question-head Power Color CI `33756136445` passed on PR #632. Dedicated gating covers allowed sources, nonvisual rendering, full fingerprints against all six earlier Grade 1 culture batches, and shared renderer behavior.
+The finite accepted state space produced 4 pending-first questions only. All 4 were independently re-solved as verified, pending 0, A/B/C/D=1/1/1/1. One wording defect (`何つ`) was corrected to `いくつ` before the final authoring gate and the affected record was rechecked. Current-question-head Power Color CI `33756136445` passed; PR #632 merged as `57163579879253d6db9529f268d73ec15f8c3467`.
 
-Do not waterfill beyond these four records, invent exact Japanese AFT labels for the other three Judd principles, reconstruct visual schemes, or pull p.025 Chevreul content into p.024.
+Do not waterfill beyond these four records, invent exact Japanese AFT labels for the other three Judd principles, or reconstruct visual schemes.
+
+## p.025 color-harmony checkpoint
+
+p.025 `シュヴルールの色彩調和論` is `SOURCE_RESOLVED` for a narrow four-relation nonvisual state space under `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`.
+
+The current AFT official Grade 1 first-stage sample directly resolves:
+- `一つの主調色による調和` as a Chevreul harmony relation;
+- `ドミナント` as an example of that relation;
+- that the sample handles this as one of three `類似色` harmonies;
+- `隣接・近似色相による色調類似の調和` as included in that harmony.
+
+Authoring file: `qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0004.json`.
+
+Exactly 4 pending-first records were created and independently re-solved as 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Dedicated gate `grade1-harmony-chevreul-p025-authoring.test.js` checks allowed source membership, nonvisual rendering, full fingerprints against all seven earlier Grade 1 batches, and shared renderer behavior. Current-head CI is still required before merge.
+
+University of Chicago Library Chevreul material is background corroboration only. Do not use it to expand the production answer set, reconstruct the unpublished AFT classification, infer the official sample figure appearance, create RGB/HEX/display answers, or import p.027 Rood content.
 
 ## Phase 5 sequencing note
 
@@ -49,4 +65,4 @@ Do not waterfill beyond these four records, invent exact Japanese AFT labels for
 
 ## Exact next start point
 
-Pass synchronized current-head Power Color CI and merge PR #632 if green/current. Then continue in official order to p.025 `シュヴルールの色彩調和論` and source-audit it before any authoring.
+Pass current-head p.025 dedicated/Power Color CI and merge the p.025 checkpoint if green/current. Then continue in official order to p.027 `ルードの色彩調和論` and source-audit it before authoring.
