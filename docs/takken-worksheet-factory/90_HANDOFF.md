@@ -8,11 +8,12 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled the two existing verified source questions for `takken-concept-legal-permit-notification-comparison` against its 8 canonical knowledge items.
+Extracted canonical knowledge for `takken-concept-real-estate-acquisition-tax` without changing existing Phase 2/3 questions or beginning Phase 4.3.
 
-- `takken-q-78-001` maps only to `takken-k-legal-comparison-development-prior-permit` and `takken-k-legal-comparison-development-target-action`, because its stem and choices directly test that Urban Planning Act Article 29 development permission is a prior-permission regime for development action rather than a post-contract land-sale notification.
-- `takken-q-78-002` maps only to `takken-k-legal-comparison-national-land-post-notification-actor`, because its stem and choices directly test that the Article 23 notification is made after contract conclusion by the rights acquirer.
-- The Article 23 two-week route, statutory area thresholds, farmland regimes, and broader cross-regime timing item remain explicit Phase 4.3 deficits; these two questions do not directly measure them.
+- Added 10 atomic knowledge items covering the prefectural levy/taxpayer, acquisition regardless of registration or payment, inheritance non-taxation, tax base, the land one-half tax-base special rule, current tax rates, 2026-04-01 exemption thresholds, new-house deduction, long-life-quality-house deduction, and residential-land reduction.
+- The 2026-04-01 cutoff was checked against the Local Tax Act and Osaka Prefecture's official page updated 2026-04-09; the post-2026-04-01 exemption thresholds and 40–240㎡ new-house floor-area requirement are recorded rather than older figures.
+- Primary grounding is the Local Tax Act at the 2026-04-01 baseline plus current official Osaka Prefecture tax guidance.
+- `takken-q-79-001` and `takken-q-79-002` were intentionally not mapped in this extraction checkpoint.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,17 +24,17 @@ Reconciled the two existing verified source questions for `takken-concept-legal-
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 101/113 concepts with canonical knowledge extraction complete; 101/113 fully reconciled through question mapping
-- Concepts with canonical knowledge items: 101
-- Canonical knowledge items: 551
+- Phase 4.2: active — 102/113 concepts with canonical knowledge extraction complete; 101/113 fully reconciled through question mapping
+- Concepts with canonical knowledge items: 102
+- Canonical knowledge items: 561
 - Existing verified questions mapped: 126
-- Explicit unmapped knowledge gaps: 369
+- Explicit unmapped knowledge gaps: 379
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract canonical atomic knowledge items for `takken-concept-real-estate-acquisition-tax` from 2026-04-01 primary sources and existing verified source material. Keep existing source-question mapping as a separate later checkpoint. Do not begin Phase 4.3.
+Reconcile `takken-q-79-001` and `takken-q-79-002` against `takken-concept-real-estate-acquisition-tax`. Map only knowledge directly measured by each stem and four choices. Keep all other knowledge as explicit Phase 4.3 deficits. Do not begin Phase 4.3.
 
 ## publication invariant
 
