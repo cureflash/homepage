@@ -10,8 +10,8 @@
 | Order | Official heading | Page | Status | Notes |
 |---|---|---:|---|---|
 | 1 | 古代ヨーロッパの色彩 | 006 | SECONDARY_CORROBORATION_REQUIRED | Narrow ancient-Egypt/Greek material and conservation facts are corroborated. `pc1.culture.ancient_europe_materials` has 8 independently rechecked verified records, pending 0, A/B/C/D=2/2/2/2. Authoring gate and normal regression passed in CI `33744000544`; PR #618 merged as `fff4022fdf0c4809b135b29c4277ec83def919c2`. Not yet promoted to runtime. |
-| 2 | 中・近世のヨーロッパの色彩 | 007 | SECONDARY_CORROBORATION_REQUIRED | Narrow Getty/Met/National Gallery manuscript/pigment/material facts are corroborated. `pc1.culture.medieval_early_modern_europe_materials` has 8 independently rechecked verified records, pending 0, A/B/C/D=2/2/2/2. Await dedicated gate/normal regression before merge. |
-| 3 | 近代ヨーロッパと色彩学 | 010 | UNREVIEWED | Audit after p.007 authoring gate/merge. |
+| 2 | 中・近世のヨーロッパの色彩 | 007 | SECONDARY_CORROBORATION_REQUIRED | Narrow Getty/Met/National Gallery manuscript/pigment/material facts are corroborated. `pc1.culture.medieval_early_modern_europe_materials` has 8 independently rechecked verified records, pending 0, A/B/C/D=2/2/2/2. Dedicated gate and normal regression passed in CI `33745825195`; PR #621 merged as `6adb39143b0765e65fa0762a9fea75ee6ad76c65`. Not yet promoted to runtime. |
+| 3 | 近代ヨーロッパと色彩学 | 010 | SECONDARY_CORROBORATION_REQUIRED | AFT exposes heading/order but not body text. Royal Society resolves a narrow Newton/prism/light-and-colour historical boundary; Klassik Stiftung Weimar resolves a narrow Goethe/1810/perception-and-experiment boundary. |
 | 4 | 日本の古代の色 | 014 | UNREVIEWED | Prefer AFT + Imperial Household Agency / NDL / museums / academic sources. |
 | 5 | 古代から中近世の日本の色彩 | 017 | UNREVIEWED | Same source hierarchy. |
 | 6 | 近代の日本の色彩 | 021 | UNREVIEWED | Same source hierarchy. |
@@ -51,3 +51,15 @@ Do not generalize these records into a universal medieval palette, symbolic mean
 Authoring file: `qualifications/color-certification/data/grade1-authoring-culture-medieval-early-modern-europe-0001-0008.json`.
 
 The 8-record cap is intentional. The audit resolves four narrow fact families; every question stays within those relations and is text-only. All 8 records were created pending-first and independently re-solved as verified before gate execution.
+
+## p.010 accepted corroborating sources
+Audit: `docs/power-color/audits/2026-09-03-grade1-p010-modern-europe-color-science-source-audit.md`.
+
+Accepted narrow facts only:
+- Royal Society: Newton's prism/light-and-colour work is documented in the 1670s and later incorporated into `Opticks` (1704).
+- Royal Society: archival records explicitly preserve Newton prism experiments and theory-of-light-and-colours material from 1672, 1675 and 1676.
+- Klassik Stiftung Weimar: Goethe's `Farbenlehre` / `Zur Farbenlehre` was published in 1810 and is represented by preserved experimental apparatus/materials including prisms.
+- Klassik Stiftung Weimar: Goethe investigated physiologically, physically and chemically produced colours and their psychological impressions, placing human sensory perception centrally in his studies.
+- Royal Society: an 1817 optical work explicitly discussed prism phenomena in relation to Newton's and Goethe's theories of colour.
+
+Do not infer an exhaustive p.010 scientist list, numerical optics, reconstructed prism geometry, RGB/HEX/display values, visual-spectrum answers, or modern scientific validity beyond the institutional descriptions.
