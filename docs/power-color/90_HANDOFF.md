@@ -36,7 +36,7 @@ p.024 `色彩調和論とは / ジャッドの色彩調和、四つの原理` is
 
 Do not waterfill beyond these records, invent exact Japanese AFT labels for the other three Judd principles, reconstruct visual schemes, or duplicate them in adjacent theory batches.
 
-## p.025 Chevreul source audit
+## p.025 Chevreul checkpoint
 
 p.025 `シュヴルールの色彩調和論` is `SOURCE_RESOLVED` for a narrow current-official-sample slice under `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`.
 
@@ -45,7 +45,9 @@ The current AFT Grade 1 first-stage official sample directly exposes and answers
 - This is treated as one of three `類似色の調和`.
 - `類似色の調和` includes `隣接・近似色相による色調類似の調和`.
 
-Because these relations and answers are current first-party exam-sample authority, no secondary source is required for this narrow slice. This does not resolve the complete unpublished p.025 textbook body.
+`qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json` contains exactly these three first-party relations. They were created pending-first and independently re-solved as 3/3 verified, pending 0, A/B/C/D=1/1/1/0. The batch deliberately stops at three rather than waterfilling a fourth item.
+
+Dedicated gate `qualifications/color-certification/tests/grade1-harmony-chevreul-p025-authoring.test.js` checks source membership, nonvisual rendering, full fingerprints against all seven earlier Grade 1 batches, and shared renderer behavior. Current-head CI/merge is still required.
 
 Do not reconstruct the official figure, infer RGB/HEX/display values, add unstated Chevreul categories/history, pull p.027 Rood content forward, or duplicate p.024 Judd-only questions.
 
@@ -55,4 +57,4 @@ Do not reconstruct the official figure, infer RGB/HEX/display values, add unstat
 
 ## Exact next start point
 
-Merge the p.025 source-audit checkpoint after current-head Power Color CI. Then author a small pending-first text-only p.025 batch only from the three current AFT official-sample relations and independently QA every record; avoid waterfilling beyond the finite first-party state space.
+Pass current-head p.025 dedicated/Power Color CI and merge if green/current. Then continue in official order to p.027 `ルードの色彩調和論` and source-audit it before authoring.
