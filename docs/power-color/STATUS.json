@@ -11,9 +11,9 @@
     "source_inventory": "docs/power-color/61_GRADE1_SOURCE_INVENTORY.md",
     "spec": "docs/power-color/62_GRADE1_SPEC.md",
     "runtime_questions": {"verified": 0, "pending": 0, "needs_revision": 0, "rejected": 0},
-    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33807770514, "pr": 713, "merge_commit": "dc5ff999fa98ed36d5de880d9f572f33de7bbe61", "skills": ["pc1.landscape.landscape_notification_p141"], "verified": 4},
+    "latest_authoring_gate": {"status": "merged_green", "workflow_run": 33808114823, "pr": 715, "merge_commit": "05f5e7aaeeef2db87ccbe6d932fe671a7412271e", "skills": ["pc1.landscape.color_standard_role_p142"], "verified": 4},
     "active_section": "景観色彩",
-    "active_topic": "p.142 景観計画における色彩基準 — 色彩基準の役割",
+    "active_topic": "p.143 景観計画における色彩基準 — 色彩基準の運用",
     "active_topic_source_status": "UNCHECKED",
     "source_audit": null,
     "active_authoring": null,
@@ -21,13 +21,13 @@
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
     "canonical_inconsistency": "docs/power-color/20_EXECUTION_PLAN.md Phase 5 retains the old Grade-2-complete start sentence. Explicit Grade 1 override plus Grade 1 canonical files control Grade 1 work only; Grade 2/3 remain incomplete and all lower-grade gates remain intact. Mechanical cleanup is still pending.",
-    "next": "Source-audit p.142 景観計画における色彩基準 — 色彩基準の役割 before any authoring."
+    "next": "Source-audit p.143 景観計画における色彩基準 — 色彩基準の運用 before any authoring."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 2, "generated": 4, "checked": 4, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; no competing p.141 work existed.", "p.141 景観計画に基づく届出と手続き: SOURCE_RESOLVED from current AFT scope plus current MLIT/government authority; authored pending-first and independently QAed 4/4 verified, A/B/C/D=1/1/1/1; PR #713 CI 33807770514 success and merged dc5ff999fa98ed36d5de880d9f572f33de7bbe61."]},
+  "current_run": {"checkpoints_completed": 3, "generated": 8, "checked": 8, "verified": 8, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main/open Power Color PRs/Grade 1 branches; no competing p.141 work existed.", "p.141 景観計画に基づく届出と手続き: SOURCE_RESOLVED from current AFT scope plus current MLIT/government authority; authored pending-first and independently QAed 4/4 verified, A/B/C/D=1/1/1/1; PR #713 CI 33807770514 success and merged dc5ff999fa98ed36d5de880d9f572f33de7bbe61.", "p.142 色彩基準の役割: SOURCE_RESOLVED from current AFT scope plus current MLIT/Tokyo/Osaka government authority; authored pending-first and independently QAed 4/4 verified, A/B/C/D=1/1/1/1; PR #715 CI 33808114823 success and merged 05f5e7aaeeef2db87ccbe6d932fe671a7412271e."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Source-audit p.142 景観計画における色彩基準 — 色彩基準の役割 before any authoring."
+  "next": "Source-audit p.143 景観計画における色彩基準 — 色彩基準の運用 before any authoring."
 }
