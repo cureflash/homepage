@@ -105,7 +105,11 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [ ] Current public official Grade 2 table-of-contents frontier is exhausted after p.142. Do not mark Grade 2 complete while recorded source-blocked topics remain. Further authoring requires new explicit auditable authority for a recorded blocked topic; do not repeat rejected source routes without new evidence.
 
 ## Phase 5 — Grade 1
-Start only after Grade 2 is completely finished.
+Grade 1 is active by explicit user override while Grade 2 and Grade 3 remain incomplete with all recorded blockers and source/display gates preserved. Detailed authority is `60_GRADE1_EXECUTION_PLAN.md`.
+- [x] Audit the current official Grade 1 TOC p.006→p.160 in official order; author only source-resolved/corroborated slices.
+- [x] Establish `grade1-runtime.json` and the record-identical Grade 1 promotion gate on the existing shared Power TOEIC question-bank/workout/session engine.
+- [x] Promote p.006 `pc1.culture.ancient_europe_materials` 8/8 verified records record-identically; Power Color CI `33817291831`; PR #730 merged as `273e5f4ebd3204e0f2405c7f72b93eab13d8e1a4`.
+- [ ] Continue verified authoring promotion in official order from p.007 `pc1.culture.medieval_early_modern_europe_materials`; keep `productionApproved=false` and preserve every recorded blocked/monitor-dependent topic.
 
 ## Phase B — Explanation video series
 Start only after `color_database_complete: true`. Build the video-series plan/spec/status/handoff first, then produce one safe theme at a time through the existing `cureflash/makemovie` CSV/PowerPoint→YMM4→MP4 pipeline. Do not fork a new video engine.
