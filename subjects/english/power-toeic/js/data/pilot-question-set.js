@@ -37,39 +37,17 @@ export const PILOT_SKILL_IDS = Object.freeze([
   'p5.conn.during_vs_while'
 ]);
 
+function explanationsFor(ids, text) {
+  return Object.fromEntries(ids.map((id) => [id, text]));
+}
+
 export const PILOT_EXPLANATIONS = Object.freeze({
-  p5_conn_because_vs_because_of_0001: '空欄の直後は「a safety defect ...」で名詞句だ。SVがない！ found は defect を説明する過去分詞だ！ 理由＋名詞句なら because of を選べ！',
-  p5_conn_because_vs_because_of_0002: '空欄の直後は「heavy fog ...」で名詞句だ。SVがない！ 理由＋名詞句なら because of を選べ！',
-  p5_conn_because_vs_because_of_0003: '空欄の直後は「a power failure ...」で名詞句だ。SVがない！ 理由＋名詞句なら because of を選べ！',
-  p5_conn_because_vs_because_of_0004: '空欄の直後は「an unexpected shortage ...」で名詞句だ。SVがない！ 理由＋名詞句なら because of を選べ！',
-  p5_conn_because_vs_because_of_0005: '空欄の直後は「emergency repairs ...」で名詞句だ。SVがない！ 理由＋名詞句なら because of を選べ！',
-  p5_conn_because_vs_because_of_0011: '空欄の直後は「its inventory system(S) went(V) offline」でSVがそろっている！ 理由＋SVなら because を選べ！',
-  p5_conn_because_vs_because_of_0012: '空欄の直後は「her train(S) was delayed(V)」でSVがそろっている！ 理由＋SVなら because を選べ！',
-  p5_conn_because_vs_because_of_0013: '空欄の直後は「several totals(S) had been entered(V) ...」でSVがそろっている！ 理由＋SVなら because を選べ！',
-  p5_conn_because_vs_because_of_0014: '空欄の直後は「the customer line(S) had become(V) ...」でSVがそろっている！ 理由＋SVなら because を選べ！',
-  p5_conn_because_vs_because_of_0015: '空欄の直後は「repeated connection tests(S) showed(V) ...」でSVがそろっている！ 理由＋SVなら because を選べ！',
-
-  p5_conn_despite_vs_although_0001: '空欄の直後は「steady rain ...」で名詞句だ。SVがない！ 逆接＋名詞句なら despite を選べ！',
-  p5_conn_despite_vs_although_0002: '空欄の直後は「a temporary outage ...」で名詞句だ。SVがない！ 逆接＋名詞句なら despite を選べ！',
-  p5_conn_despite_vs_although_0003: '空欄の直後は「a shortage ...」で名詞句だ。SVがない！ 逆接＋名詞句なら despite を選べ！',
-  p5_conn_despite_vs_although_0004: '空欄の直後は「delays ...」で名詞句だ。SVがない！ 逆接＋名詞句なら despite を選べ！',
-  p5_conn_despite_vs_although_0005: '空欄の直後は「renovation work ...」で名詞句だ。SVがない！ 逆接＋名詞句なら despite を選べ！',
-  p5_conn_despite_vs_although_0026: '空欄の直後は「customer traffic(S) declines(V) ...」でSVがある！ 逆接＋SVなら although を選べ！',
-  p5_conn_despite_vs_although_0027: '空欄の直後は「the original contract(S) had been approved(V)」でSVがある！ 逆接＋SVなら although を選べ！',
-  p5_conn_despite_vs_although_0028: '空欄の直後は「several features(S) required(V) ...」でSVがある！ 逆接＋SVなら although を選べ！',
-  p5_conn_despite_vs_although_0029: '空欄の直後は「demand(S) had softened(V) ...」でSVがある！ 逆接＋SVなら although を選べ！',
-  p5_conn_despite_vs_although_0030: '空欄の直後は「the department(S) was(V) close ...」でSVがある！ 逆接＋SVなら although を選べ！',
-
-  p5_conn_during_vs_while_0001: '空欄の直後は「the lunch break」で名詞句だ。SVがない！ 「〜の間に」＋名詞句なら during を選べ！',
-  p5_conn_during_vs_while_0002: '空欄の直後は「the holiday weekend」で名詞句だ。SVがない！ 「〜の間に」＋名詞句なら during を選べ！',
-  p5_conn_during_vs_while_0003: '空欄の直後は「the scheduled maintenance period」で名詞句だ。SVがない！ 「〜の間に」＋名詞句なら during を選べ！',
-  p5_conn_during_vs_while_0004: '空欄の直後は「the afternoon promotion」で名詞句だ。SVがない！ 「〜の間に」＋名詞句なら during を選べ！',
-  p5_conn_during_vs_while_0005: '空欄の直後は「the planning session」で名詞句だ。SVがない！ 「〜の間に」＋名詞句なら during を選べ！',
-  p5_conn_during_vs_while_0026: '空欄の直後は「the technicians(S) were calibrating(V) ...」でSVがある！ 「〜している間」＋SVなら while を選べ！',
-  p5_conn_during_vs_while_0027: '空欄の直後は「the reservation system(S) was being restarted(V)」でSVがある！ 「〜している間」＋SVなら while を選べ！',
-  p5_conn_during_vs_while_0028: '空欄の直後は「the finance team(S) reviews(V) ...」でSVがある！ 「〜している間」＋SVなら while を選べ！',
-  p5_conn_during_vs_while_0029: '空欄の直後は「they(S) are working(V) ...」でSVがある！ 「〜している間」＋SVなら while を選べ！',
-  p5_conn_during_vs_while_0030: '空欄の直後は「workers(S) were completing(V) ...」でSVがある！ 「〜している間」＋SVなら while を選べ！'
+  ...explanationsFor(PILOT_QUESTION_IDS.slice(0, 5), '理由＋名詞句なら because of を選べ！'),
+  ...explanationsFor(PILOT_QUESTION_IDS.slice(5, 10), '理由＋SVなら because を選べ！'),
+  ...explanationsFor(PILOT_QUESTION_IDS.slice(10, 15), '逆接＋名詞句なら despite を選べ！'),
+  ...explanationsFor(PILOT_QUESTION_IDS.slice(15, 20), '逆接＋SVなら although を選べ！'),
+  ...explanationsFor(PILOT_QUESTION_IDS.slice(20, 25), '「〜の間に」＋名詞句なら during を選べ！'),
+  ...explanationsFor(PILOT_QUESTION_IDS.slice(25, 30), '「〜している間」＋SVなら while を選べ！')
 });
 
 export function buildPilotRuntime(payload) {

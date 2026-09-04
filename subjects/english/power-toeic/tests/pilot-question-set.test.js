@@ -14,6 +14,15 @@ const expectedIds = [
   'p5_conn_during_vs_while_0026', 'p5_conn_during_vs_while_0027', 'p5_conn_during_vs_while_0028', 'p5_conn_during_vs_while_0029', 'p5_conn_during_vs_while_0030'
 ];
 
+const expectedRules = [
+  '理由＋名詞句なら because of を選べ！',
+  '理由＋SVなら because を選べ！',
+  '逆接＋名詞句なら despite を選べ！',
+  '逆接＋SVなら although を選べ！',
+  '「〜の間に」＋名詞句なら during を選べ！',
+  '「〜している間」＋SVなら while を選べ！'
+];
+
 test('pilot exposes exactly the selected 30 already-verified questions and three skills', () => {
   const pilot = buildPilotRuntime(betaBank);
   assert.equal(pilot.questions.length, 30);
@@ -24,13 +33,11 @@ test('pilot exposes exactly the selected 30 already-verified questions and three
   assert.ok(pilot.questions.every((question) => question.validationStatus === 'verified'));
 });
 
-test('all 30 pilot explanations are immediate structural decision rules', () => {
+test('all 30 pilot explanations contain only the immediate decision rule', () => {
   assert.equal(Object.keys(PILOT_EXPLANATIONS).length, 30);
   for (const id of expectedIds) {
     const explanation = PILOT_EXPLANATIONS[id];
-    assert.match(explanation, /空欄の直後/);
-    assert.match(explanation, /(名詞句|SV)/);
-    assert.match(explanation, /(選べ|だ！)/);
-    assert.doesNotMatch(explanation, /文脈を確認|意味を正しく|自然につながる/);
+    assert.ok(expectedRules.includes(explanation));
+    assert.doesNotMatch(explanation, /空欄の直後|SVが|名詞句だ|主語|動詞|文脈/);
   }
 });
