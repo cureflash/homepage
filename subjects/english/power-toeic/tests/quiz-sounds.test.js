@@ -28,5 +28,5 @@ test('Power TOEIC plays prompt and answer sounds from the session authority', ()
 });
 
 test('Power TOEIC browser entry refreshes the current build', () => {
-  assert.match(indexHtml, /js\/main\.js\?v=20260904-japanese-explanations-v1/);
+  assert.match(indexHtml, /js\/main\.js\?v=20260904-decision-pilot-30-v1/);
 });
