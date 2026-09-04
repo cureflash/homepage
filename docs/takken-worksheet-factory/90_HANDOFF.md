@@ -8,11 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled the existing verified Unit 88 questions against `takken-concept-landform-disaster-risk` without changing Phase 2/3 question content or beginning Phase 4.3.
+Reconciled the existing verified Unit 88 questions against `takken-concept-landform-disaster-risk` under the direct-measurement rule, without changing Phase 2/3 question content or beginning Phase 4.3.
 
 - `takken-q-88-001` maps only the land-condition-map classifications and purpose knowledge items directly measured by its correct choice.
-- `takken-q-88-002` maps only the general landform/disaster relationship, liquefaction-landforms, and flood/inundation-landforms knowledge items directly measured by its correct choice.
-- Ground-collapse, debris-flow/slope-failure, and storm-surge knowledge items remain explicit Phase 4.3 deficits because neither Unit 88 question directly measures them.
+- `takken-q-88-002` maps only the general landform/disaster-risk relationship. It does not independently test the complete representative-landform lists for each specific hazard.
+- Liquefaction, ground-collapse, debris-flow/slope-failure, flood/inundation, and storm-surge knowledge items remain explicit Phase 4.3 deficits.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -27,7 +27,7 @@ Reconciled the existing verified Unit 88 questions against `takken-concept-landf
 - Concepts with canonical knowledge items: 111
 - Canonical knowledge items: 637
 - Existing verified questions mapped: 146
-- Explicit unmapped knowledge gaps: 425
+- Explicit unmapped knowledge gaps: 427
 - This run generated / checked / verified / revision: 0 / 0 / 0 / 0
 - Phase 4.3: not started
 - Prints/app integration: not started
