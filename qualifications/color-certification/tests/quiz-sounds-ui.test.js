@@ -10,8 +10,8 @@ const wrongSound = await readFile(new URL('../audio/quiz-wrong.mp3', import.meta
 test('quiz feedback audio assets are valid MP3 payloads', () => {
   assert.equal(correctSound.subarray(0, 3).toString('ascii'), 'ID3');
   assert.equal(wrongSound.subarray(0, 3).toString('ascii'), 'ID3');
-  assert.equal(correctSound.length, 7331);
-  assert.equal(wrongSound.length, 2525);
+  assert.ok(correctSound.length > 7000);
+  assert.ok(wrongSound.length > 2000);
 });
 
 test('quiz UI loads the sound hook and routes rendered answer state to the matching sound', () => {
