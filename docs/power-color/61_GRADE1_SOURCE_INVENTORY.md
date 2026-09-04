@@ -7,18 +7,18 @@
 - 2026 Grade 1 second-stage format notice: printed-color selection replaces the former New Color Card 199a operation; content tendency/approximate question count/difficulty remain unchanged.
 
 ## Processed frontier
-All current official Grade 1 textbook TOC content items from culture p.006 through the appendices p.152, p.157 and p.160 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files. Runtime promotion has begun in the same official order: p.006 `pc1.culture.ancient_europe_materials`, p.007 `pc1.culture.medieval_early_modern_europe_materials`, p.010 `pc1.culture.modern_europe_color_science`, and p.014 `pc1.culture.ancient_japan_colour` are promoted record-identically; p.017 is next.
+All current official Grade 1 textbook TOC content items from culture p.006 through the appendices p.152, p.157 and p.160 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files. Runtime promotion has begun in the same official order: p.006 `pc1.culture.ancient_europe_materials`, p.007 `pc1.culture.medieval_early_modern_europe_materials`, p.010 `pc1.culture.modern_europe_color_science`, p.014 `pc1.culture.ancient_japan_colour`, and p.017 `pc1.culture.ancient_to_early_modern_japan` are promoted record-identically; p.021 is next.
 
 Recorded source-blocked topics include p.035 `色の分類`, p.062 JIS light-source name topics, p.083 `色の見えの変化`, p.090 `色彩効果のビジネス活用`, p.096/p.100/p.102 business-process topics, p.114 `カラー戦略`, p.120-p.122 CMF® process topics, p.132 `カラー情報の整理と分析` / `シーズンテーマカラーの決定`, p.134 `繊維の長さと発色性`, p.136 `ビジュアルマーチャンダイジング（VMD）の取り組み`, p.137 `商品陳列のカラーコーディネーション`, p.148 `遠景・中景・近景を踏まえた色彩計画における配慮事項`, and p.160 `資料・CMF® — 素材と工法`.
 
 ## Grade 1 runtime promotion frontier
 Runtime: `qualifications/color-certification/data/grade1-runtime.json`.
 Promotion gate: `qualifications/color-certification/tests/grade1-runtime-promotion.test.js`.
-Current runtime: 32 verified / pending 0 across four skills; `productionApproved=false`.
-Promoted batches: p.006 `pc1.culture.ancient_europe_materials`, p.007 `pc1.culture.medieval_early_modern_europe_materials`, p.010 `pc1.culture.modern_europe_color_science`, and p.014 `pc1.culture.ancient_japan_colour`, 8/8 verified each, record-identical.
-Gate coverage: runtime↔authoring deep equality, full-fingerprint uniqueness, balanced correct positions, and the existing shared Power TOEIC question-bank/workout/session engine.
-Latest Power Color CI `33820380559` succeeded; PR #737 merged as `ce44043d07336ae94cda80dadb5c0930adb15f47`.
-Next batch in official order: `qualifications/color-certification/data/grade1-authoring-culture-ancient-to-early-modern-japan-0001-0008.json`, p.017 `pc1.culture.ancient_to_early_modern_japan`, 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Source contract: `docs/power-color/audits/2026-09-03-grade1-p017-ancient-to-early-modern-japan-source-audit.md`.
+Current runtime: 40 verified / pending 0 across five skills; `productionApproved=false`.
+Promoted batches: p.006 `pc1.culture.ancient_europe_materials`, p.007 `pc1.culture.medieval_early_modern_europe_materials`, p.010 `pc1.culture.modern_europe_color_science`, p.014 `pc1.culture.ancient_japan_colour`, and p.017 `pc1.culture.ancient_to_early_modern_japan`, 8/8 verified each, record-identical.
+Gate coverage: runtime↔authoring deep equality, full-fingerprint uniqueness, balanced correct positions A/B/C/D=10/10/10/10, and the existing shared Power TOEIC question-bank/workout/session engine.
+Latest Power Color CI `33821730264` succeeded; PR #739 merged as `bd1104577755b88eb6e22e0832208b996893007f`.
+Next batch in official order: `qualifications/color-certification/data/grade1-authoring-culture-modern-japan-colour-0001-0008.json`, p.021 `pc1.culture.modern_japan_colour`, 8/8 verified, pending 0, A/B/C/D=2/2/2/2. Source contract: `docs/power-color/audits/2026-09-03-grade1-p021-modern-japan-colour-source-audit.md`.
 
 ## p.152 color-perception accepted boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p152-color-perception-source-audit.md`.
@@ -57,4 +57,4 @@ AFT public material exposes the appendix heading/order only. It does not expose 
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next frontier
-Promote the existing p.017 `pc1.culture.ancient_to_early_modern_japan` 8/8 verified records record-identically through the canonical shared-engine Grade 1 runtime gate. Continue only verified authoring in official TOC order and preserve every recorded source/display blocker.
+Promote the existing p.021 `pc1.culture.modern_japan_colour` 8/8 verified records record-identically through the canonical shared-engine Grade 1 runtime gate. Continue only verified authoring in official TOC order and preserve every recorded source/display blocker.
