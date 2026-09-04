@@ -8,11 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Extracted and source-verified the canonical knowledge items for `takken-concept-real-estate-advertising-rules` without changing Phase 2/3 question content or beginning Phase 4.3.
+Reconciled existing verified Unit 87 questions against `takken-concept-real-estate-advertising-rules` without changing Phase 2/3 question content or beginning Phase 4.3.
 
-- Added 9 atomic knowledge items grounded in the official 不動産の表示に関する公正競争規約・同施行規則.
-- Separated the general misleading-display rule from the exact transaction-mode terms, nearest-station/walking-time display, 80m-per-minute calculation, fractional-minute round-up, nearest/farthest display for multiple lots, metric area display, horizontal-projection land area, and building total-floor-area disclosure.
-- Existing verified Unit 87 questions were not mapped in this extraction checkpoint; all 9 new knowledge items therefore remain explicit Phase 4.3 deficits until the next direct-measurement mapping checkpoint.
+- `takken-q-87-001` directly tests only the prohibition on misleading display and maps only to `takken-k-real-estate-advertising-rules-misleading-display-prohibited`.
+- `takken-q-87-002` also directly tests only the prohibition on misleading display and maps only to the same knowledge item.
+- The other 8 advertising-rules knowledge items remain explicit Phase 4.3 deficits because Unit 87 does not directly test their exact rules.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,18 +23,18 @@ Extracted and source-verified the canonical knowledge items for `takken-concept-
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 110/113 concepts with canonical knowledge extraction complete; 109/113 fully reconciled through existing-question mapping
+- Phase 4.2: active — 110/113 concepts with canonical knowledge extraction complete; 110/113 fully reconciled through existing-question mapping
 - Concepts with canonical knowledge items: 110
 - Canonical knowledge items: 629
-- Existing verified questions mapped: 142
-- Explicit unmapped knowledge gaps: 423
+- Existing verified questions mapped: 144
+- Explicit unmapped knowledge gaps: 422
 - This run generated / checked / verified / revision: 0 / 0 / 0 / 0
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile the existing verified Unit 87 questions against `takken-concept-real-estate-advertising-rules`, mapping only knowledge items that each question directly tests. Keep Phase 4.3 unstarted.
+Extract source-verified atomic knowledge items for `takken-concept-landform-disaster-risk`, then reconcile only directly tested existing Unit 88 questions. Keep Phase 4.3 unstarted.
 
 ## publication invariant
 
