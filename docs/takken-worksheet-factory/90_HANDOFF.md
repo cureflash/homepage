@@ -8,11 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled existing verified Unit 87 questions against `takken-concept-real-estate-advertising-rules` without changing Phase 2/3 question content or beginning Phase 4.3.
+Extracted and source-verified the canonical knowledge items for `takken-concept-landform-disaster-risk` without changing Phase 2/3 question content or beginning Phase 4.3.
 
-- `takken-q-87-001` directly tests only the prohibition on misleading display and maps only to `takken-k-real-estate-advertising-rules-misleading-display-prohibited`.
-- `takken-q-87-002` also directly tests only the prohibition on misleading display and maps only to the same knowledge item.
-- The other 8 advertising-rules knowledge items remain explicit Phase 4.3 deficits because Unit 87 does not directly test their exact rules.
+- Added 8 atomic knowledge items grounded in the official 国土地理院『土地条件図』 guidance.
+- Separated land-condition-map classifications and purpose, the general relationship between landform and natural-disaster risk, and representative landforms associated with liquefaction, ground collapse, debris flow/slope failure, flood/internal-water inundation, and storm-surge flooding.
+- Existing verified Unit 88 questions were not mapped in this extraction checkpoint; all 8 new knowledge items therefore remain explicit Phase 4.3 deficits until the next direct-measurement mapping checkpoint.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,18 +23,18 @@ Reconciled existing verified Unit 87 questions against `takken-concept-real-esta
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 110/113 concepts with canonical knowledge extraction complete; 110/113 fully reconciled through existing-question mapping
-- Concepts with canonical knowledge items: 110
-- Canonical knowledge items: 629
+- Phase 4.2: active — 111/113 concepts with canonical knowledge extraction complete; 110/113 fully reconciled through existing-question mapping
+- Concepts with canonical knowledge items: 111
+- Canonical knowledge items: 637
 - Existing verified questions mapped: 144
-- Explicit unmapped knowledge gaps: 422
+- Explicit unmapped knowledge gaps: 430
 - This run generated / checked / verified / revision: 0 / 0 / 0 / 0
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract source-verified atomic knowledge items for `takken-concept-landform-disaster-risk`, then reconcile only directly tested existing Unit 88 questions. Keep Phase 4.3 unstarted.
+Reconcile the existing verified Unit 88 questions against `takken-concept-landform-disaster-risk`, mapping only knowledge items that each question directly tests. Keep Phase 4.3 unstarted.
 
 ## publication invariant
 
