@@ -8,14 +8,16 @@ Phase 4.1 Concept inventory and Phase 4.2 canonical knowledge extraction / exist
 
 ## Completed in this run
 
-Completed the remaining independent QA for `takken-concept-license-required`.
+Started `takken-concept-license-authority` from the canonical next point.
 
-- Reused mapped existing verified question remains `takken-q-02-001`.
-- Canonical knowledge scope remains `takken-k-license-required-general`.
-- Independently reviewed `takken-power-q-license-required-026`–`049` for answer uniqueness, actor, timing, individual/corporate scope, false substitute procedures, and whether the saved explanation and four choice-specific reasons matched the statutory license rule.
-- All 24 questions passed without revision or rejection.
-- Promoted `takken-power-q-license-required-026`–`049` from `pending_validation` to `verified`.
-- Together with the previously verified `001`–`025` and the reused Phase 2/3 question, this concept is complete at 50/50 represented questions.
+- Reused mapped existing verified question `takken-q-03-001`.
+- Canonical knowledge scope is `takken-k-license-authority-minister-multiple-prefectures` and `takken-k-license-authority-governor-single-prefecture`.
+- Confirmed the governing distinction against current primary/official sources: offices in 2 or more prefectures -> Minister of Land, Infrastructure, Transport and Tourism; offices only within 1 prefecture -> governor of that prefecture.
+- Calculated deficit: 49 generated questions are required for 50 total represented questions.
+- Added `takken-power-q-license-authority-001`–`025` as the first 25-question checkpoint.
+- All 25 new questions remain `pending_validation`; none were promoted before independent QA.
+- Answer positions for the new checkpoint are A/B/C/D = 7/6/6/6.
+- Questions cover direct rule identification, multiple-office cases within one prefecture, offices spanning multiple prefectures, and distractors based on transaction/property/customer geography, entity type, and office count without changing the canonical legal rule.
 - No Phase 2/3 question or validation state was changed.
 - No print or app integration work was started.
 
@@ -28,17 +30,18 @@ Completed the remaining independent QA for `takken-concept-license-required`.
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: complete — 648 canonical knowledge items / 149 existing verified questions mapped / 432 explicit knowledge gaps
 - Phase 4.3 completed concepts: 2/113 (`takken-concept-business-definition`, `takken-concept-license-required`)
-- Just-completed concept: `takken-concept-license-required`
-- Existing verified questions in completed concept: 1
-- Generated questions in completed concept: 49 verified / 0 pending
-- Active-concept total represented: 50/50
-- Phase 4.3 cumulative generated / checked / verified / revision / rejected / pending: 97 / 97 / 97 / 0 / 0 / 0
+- Active concept: `takken-concept-license-authority`
+- Existing verified questions in active concept: 1
+- Generated questions in active concept: 0 verified / 25 pending
+- Active-concept total represented: 26/50
+- Remaining generation for active concept: 24
+- Phase 4.3 cumulative generated / checked / verified / revision / rejected / pending: 122 / 97 / 97 / 0 / 0 / 25
 - Prints/app integration: not started
 
 ## Exact next start
 
-Advance to `takken-concept-license-authority`, the next concept in canonical `power-concepts.js` order. Reuse only genuinely mapped existing verified questions, calculate the deficit to 50, and generate the first maximum-25-question checkpoint as `pending_validation`. Do not promote newly generated questions before independent QA.
+Generate `takken-power-q-license-authority-026`–`049` as the remaining 24-question checkpoint, all `pending_validation`. After the concept reaches 50/50 represented questions, begin independent QA from `takken-power-q-license-authority-001` in question-ID order without consulting saved answers/explanations first.
 
 ## publication invariant
 
-Only independently verified material may enter a public or production pool. Newly generated questions for the next concept must remain unpublished until independent QA completes.
+Only independently verified material may enter a public or production pool. The 25 newly generated license-authority questions remain unpublished until independent QA completes.
