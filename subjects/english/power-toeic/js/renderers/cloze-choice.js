@@ -43,9 +43,13 @@ export class ClozeChoiceRenderer {
         button.setAttribute('aria-label', `${button.textContent} 不正解`);
       }
     });
-    this.explanationEl.textContent = this.currentQuestion?.skillId
-      ? getJapaneseExplanation(this.currentQuestion)
-      : explanation;
+
+    const authoredExplanation = this.currentQuestion?.explanation;
+    this.explanationEl.textContent = typeof authoredExplanation === 'string' && /[ぁ-んァ-ヶ一-龠]/.test(authoredExplanation)
+      ? authoredExplanation
+      : this.currentQuestion?.skillId
+        ? getJapaneseExplanation(this.currentQuestion)
+        : explanation;
     this.explanationEl.hidden = false;
   }
 }
