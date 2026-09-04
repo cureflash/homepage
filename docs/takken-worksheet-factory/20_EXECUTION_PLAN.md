@@ -51,10 +51,10 @@ Final Unit 90 checkpoint:
 `takken-concept-business-definition` progress:
 - [x] Reused 2 existing independently verified questions.
 - [x] Generated first 25 new questions as `pending_validation` in `qualifications/takken/data/power-questions-business-definition.js`.
-- [ ] Generate the remaining 23-question deficit to reach 50 total questions for the concept.
-- [ ] Independently QA all newly generated questions before any new question becomes verified.
+- [x] Generated the remaining 23-question deficit as `pending_validation` in `qualifications/takken/data/power-questions-business-definition-batch2.js`; the concept now has 50 total questions including the 2 reused verified questions.
+- [ ] Independently QA all 48 newly generated questions before any new question becomes verified.
 
-Exact continuation: stay on `takken-concept-business-definition` and generate the remaining 23 questions as `pending_validation`. Do not start independent QA until the concept reaches 50 total questions, and do not treat any newly generated question as verified before that later QA checkpoint.
+Exact continuation: stay on `takken-concept-business-definition` and begin independent QA of the newly generated Phase 4.3 questions in stable-ID order, starting at `takken-power-q-business-definition-001`. Use 25-question checkpoints; do not inspect saved answers/explanations/source refs before independently solving each question.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
