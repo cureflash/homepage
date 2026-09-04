@@ -1,3 +1,5 @@
+import { getJapaneseExplanation } from '../ui/japanese-explanation.js';
+
 export class ClozeChoiceRenderer {
   constructor({ sentenceEl, choicesEl, explanationEl, documentRef = document }) {
     this.sentenceEl = sentenceEl;
@@ -6,11 +8,13 @@ export class ClozeChoiceRenderer {
     this.documentRef = documentRef;
     this.answerHandler = null;
     this.buttons = [];
+    this.currentQuestion = null;
   }
 
   setAnswerHandler(handler) { this.answerHandler = handler; }
 
   render(question) {
+    this.currentQuestion = question;
     this.sentenceEl.textContent = question.sentence;
     this.explanationEl.hidden = true;
     this.explanationEl.textContent = '';
@@ -39,7 +43,9 @@ export class ClozeChoiceRenderer {
         button.setAttribute('aria-label', `${button.textContent} 不正解`);
       }
     });
-    this.explanationEl.textContent = explanation;
+    this.explanationEl.textContent = this.currentQuestion?.skillId
+      ? getJapaneseExplanation(this.currentQuestion)
+      : explanation;
     this.explanationEl.hidden = false;
   }
 }
