@@ -27,6 +27,6 @@ test('Power TOEIC plays prompt and answer sounds from the session authority', ()
   assert.match(soundSource, /sound\.play\(\)/);
 });
 
-test('Power TOEIC browser entry refreshes the quiz-sound build', () => {
-  assert.match(indexHtml, /js\/main\.js\?v=20260904-quiz-sounds-v1/);
+test('Power TOEIC browser entry refreshes the current build', () => {
+  assert.match(indexHtml, /js\/main\.js\?v=20260904-japanese-explanations-v1/);
 });
