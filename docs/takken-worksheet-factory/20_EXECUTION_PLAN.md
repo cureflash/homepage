@@ -29,25 +29,26 @@ ACTIVE. Phase 3 completion gate is satisfied. Canonical specification: `40_POWER
 
 ### 4.2 Canonical knowledge items
 - [x] Decompose every concept into atomic `knowledge_items` with stable IDs, claims, conditions, exceptions, importance, `2026-04-01` cutoff and primary sources.
-- [ ] Map existing verified questions only where they genuinely test the knowledge item; missing evidence remains a Phase 4.3 deficit.
+- [x] Map existing verified questions only where they genuinely test the knowledge item; missing evidence remains a Phase 4.3 deficit.
 
-Completed checkpoints through the last fully reconciled concept: business-definition; license-required; license-authority; license-disqualification; license-validity-renewal; license-transfer; license-change-closure; roster; office-signs; takkenshi-registration; takkenshi-card; exclusive-takkenshi; takkenshi-exclusive-duties; business-guarantee-deposit; business-guarantee-refund; guarantee-association; brokerage-contract-document; brokerage-price-opinion; general-brokerage; exclusive-brokerage; sole-agency-brokerage; reins-registration; brokerage-reporting; advertising-start; contract-start; false-advertising; article35-procedure; article35-items; article37-document; article35-vs-37; eight-restrictions-scope; cooling-off; earnest-money-limit; earnest-money-safeguards; damages-penalty; nonconformity-special-rule; unowned-property-sale; installment-cancellation; installment-ownership-retention; brokerage-fees; supervision-dispositions; declaration-arrival; mistake; fraud; duress; mental-reservation; fictitious-declaration; minor; adult-ward; agency; unauthorized-agency; apparent-agency; acquisitive-prescription; extinctive-prescription; property-transfer-opposability; co-ownership; mortgage; default-damages; contract-cancellation; simultaneous-performance; risk-allocation; sale-earnest; civil-nonconformity; lease-general; security-deposit; building-lease-opposability; ordinary-land-lease-term; land-lease-opposability; fixed-term-land-lease; building-lease-term; fixed-term-building-lease; heirs-order; statutory-inheritance-shares; inheritance-deliberation; inheritance-renunciation; will-effect; reserved-portion; condominium-ownership; real-estate-registration-record; city-quasi-planning-area; area-division; use-districts; city-planning-decision; city-planning-project; development-permission; development-completion; building-confirmation; roads-frontage; building-coverage-ratio; floor-area-ratio; setback-height-restrictions; shadow-restrictions; fire-prevention-zones; national-land-use-notification; farmland-article3; farmland-article4; farmland-article5; provisional-replotting; replotting-disposition; embankment-regulation; legal-permit-notification-comparison; real-estate-acquisition-tax; fixed-asset-tax; registration-license-tax; stamp-tax; real-estate-transfer-income; land-price-public-notice; real-estate-appraisal-methods; flat35-securitization; real-estate-advertising-rules; landform-disaster-risk; housing-market-statistics.
+Completed: all 113/113 concepts have canonical knowledge extraction and existing-question mapping reconciliation complete.
 
-Current checkpoint:
-- [x] `takken-concept-five-question-exemption` has 5 canonical knowledge items grounded in current RETIO official exam guidance.
-- [x] The items separate normal 50-question / registered-course 45-question treatment, the 5-question exemption itself, course eligibility, completion-exam requirement, and the three-year validity window.
-- [x] All 113/113 concepts now have canonical knowledge extraction complete.
-- [x] Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses remain unchanged.
-- [x] Unit 90 existing-question mapping remains for the next checkpoint.
-- [x] Phase 4.3 remains unstarted.
+Final Phase 4.2 totals:
+- 648 verified canonical knowledge items
+- 149 existing verified questions mapped
+- 432 explicit knowledge-item coverage gaps for Phase 4.3
+- Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses unchanged
 
-Current Phase 4.2 totals: 113/113 concepts with canonical knowledge extraction complete, 112/113 fully reconciled through existing-question mapping, 648 verified knowledge items, 147 existing verified questions mapped, 437 explicit question-coverage gaps.
-
-Exact continuation: reconcile existing verified `takken-q-90-001` / `takken-q-90-002` only against directly tested `takken-concept-five-question-exemption` knowledge items. After that reconciliation, close Phase 4.2 and only then advance to the first Phase 4.3 task.
+Final Unit 90 checkpoint:
+- [x] `takken-q-90-001` directly maps to `takken-k-five-question-exemption-normal-50-registered-45` and `takken-k-five-question-exemption-five-questions`.
+- [x] `takken-q-90-002` directly maps to `takken-k-five-question-exemption-course-eligibility`, `takken-k-five-question-exemption-completion-exam-required`, and `takken-k-five-question-exemption-three-year-validity`.
+- [x] Phase 4.2 is complete.
 
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
 - [ ] Reject superficial number/name/template swaps.
+
+Exact continuation: start `takken-concept-business-definition`. Reuse its existing verified questions, generate only the deficit toward 50 questions, and save the first new batch of up to 25 as `pending_validation`. Do not treat any newly generated question as verified before independent QA.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
