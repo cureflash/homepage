@@ -4,7 +4,7 @@ import { createBrowserQuestionReportStore } from './core/question-reports.js';
 import { createReviewEntryFromAttempt, getDueReviewQuestionIds, upsertReviewEntry } from './core/review.js';
 import { QuizSession } from './core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from './core/workout-builder.js';
-import { loadRuntimeQuestionBank } from './data/runtime-bank.js';
+import { loadRuntimeQuestionBank } from './data/runtime-bank.js?v=20260904-short-pilot-v2';
 import { playAnswerSound, playQuestionSound } from './quiz-sounds.js';
 import { ClozeChoiceRenderer } from './renderers/cloze-choice.js';
 import { CharacterPresenter } from './ui/character-presenter.js';
