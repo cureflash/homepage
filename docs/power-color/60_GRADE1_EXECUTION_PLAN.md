@@ -49,8 +49,9 @@ Confirmed current blockers include p.035 `色の分類`; p.062 JIS light-source 
 - [x] Promoted p.007 `pc1.culture.medieval_early_modern_europe_materials` 8/8 verified records record-identically. Runtime gates cover 16 questions across two skills; Power Color CI `33818785475` succeeded and PR #733 merged as `9f57a5b3e1cf3ec466eabee16a07e099aca4e905`.
 - [x] Promoted p.010 `pc1.culture.modern_europe_color_science` 8/8 verified records record-identically. Runtime deep-equality, full-fingerprint, answer-balance and shared-engine gates cover 24 questions across three skills; Power Color CI `33819252791` succeeded and PR #735 merged as `aace9b201ef31c8c7df804c043be61cc359218a0`.
 - [x] Promoted p.014 `pc1.culture.ancient_japan_colour` 8/8 verified records record-identically. Runtime deep-equality, full-fingerprint, A/B/C/D=8/8/8/8 and shared-engine gates cover 32 questions across four skills; Power Color CI `33820380559` succeeded and PR #737 merged as `ce44043d07336ae94cda80dadb5c0930adb15f47`.
+- [x] Promoted p.017 `pc1.culture.ancient_to_early_modern_japan` 8/8 verified records record-identically. Runtime deep-equality, full-fingerprint, A/B/C/D=10/10/10/10 and shared-engine gates cover 40 questions across five skills; Power Color CI `33821730264` succeeded and PR #739 merged as `bd1104577755b88eb6e22e0832208b996893007f`.
 
-Grade 1 runtime is 32 verified / pending 0 across four promoted skills. `productionApproved` remains false.
+Grade 1 runtime is 40 verified / pending 0 across five promoted skills. `productionApproved` remains false.
 
 ## Exact next start point
-Promote the existing p.017 `pc1.culture.ancient_to_early_modern_japan` 8/8 verified records record-identically through the canonical Grade 1 runtime gate. Source contract: `docs/power-color/audits/2026-09-03-grade1-p017-ancient-to-early-modern-japan-source-audit.md`. Preserve all source/display blockers and do not create a Grade 1-specific engine.
+Promote the existing p.021 `pc1.culture.modern_japan_colour` 8/8 verified records record-identically through the canonical Grade 1 runtime gate. Source contract: `docs/power-color/audits/2026-09-03-grade1-p021-modern-japan-colour-source-audit.md`. Preserve all source/display blockers and do not create a Grade 1-specific engine.
