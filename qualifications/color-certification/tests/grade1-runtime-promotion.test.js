@@ -16,7 +16,8 @@ const judd = JSON.parse(await readFile(new URL('../data/grade1-authoring-harmony
 const chevreul = JSON.parse(await readFile(new URL('../data/grade1-authoring-harmony-chevreul-p025-0001-0003.json', import.meta.url), 'utf8'));
 const rood = JSON.parse(await readFile(new URL('../data/grade1-authoring-harmony-rood-p027-0001-0003.json', import.meta.url), 'utf8'));
 const ostwald = JSON.parse(await readFile(new URL('../data/grade1-authoring-harmony-ostwald-p028-0001-0004.json', import.meta.url), 'utf8'));
-const batches = [ancientEurope, medievalEurope, modernEurope, ancientJapan, ancientToEarlyModernJapan, modernJapan, judd, chevreul, rood, ostwald];
+const itten = JSON.parse(await readFile(new URL('../data/grade1-authoring-harmony-itten-p029-0001-0004.json', import.meta.url), 'utf8'));
+const batches = [ancientEurope, medievalEurope, modernEurope, ancientJapan, ancientToEarlyModernJapan, modernJapan, judd, chevreul, rood, ostwald, itten];
 
 function fingerprint(question) {
   return JSON.stringify([question.sentence, question.choices]);
@@ -26,8 +27,8 @@ test('Grade 1 runtime contains only record-identical verified authoring batches'
   assert.equal(runtime.format, 'power-color-grade1-runtime-v1');
   assert.equal(runtime.grade, 1);
   assert.equal(runtime.productionApproved, false);
-  assert.equal(runtime.questions.length, 62);
-  assert.equal(runtime.questions.filter((question) => question.validationStatus === 'verified').length, 62);
+  assert.equal(runtime.questions.length, 66);
+  assert.equal(runtime.questions.filter((question) => question.validationStatus === 'verified').length, 66);
   assert.equal(runtime.questions.filter((question) => question.validationStatus === 'pending_validation').length, 0);
   assert.deepEqual(runtime.questions, batches.flatMap((batch) => batch.questions));
   assert.deepEqual(runtime.skills, batches.map((batch) => batch.skill));
@@ -40,19 +41,19 @@ test('Grade 1 runtime has no full-fingerprint duplicates and keeps answer positi
     acc[question.correctIndex] += 1;
     return acc;
   }, [0, 0, 0, 0]);
-  assert.deepEqual(counts, [16, 16, 16, 14]);
+  assert.deepEqual(counts, [17, 17, 17, 15]);
 });
 
 test('shared Power TOEIC engine runs promoted Grade 1 questions', () => {
   const repository = new InMemoryQuestionBank({ questions: runtime.questions, skills: runtime.skills });
   const recipe = createWorkoutRecipe({
     mode: 'TRAINING',
-    totalCount: 62,
+    totalCount: 66,
     skillAllocations: batches.map((batch) => ({ skillId: batch.skill.id, count: batch.questions.length })),
     seed: 47
   });
   const ids = selectQuestionIds({ repository, recipe });
-  assert.equal(ids.length, 62);
+  assert.equal(ids.length, 66);
   const session = new QuizSession({ questionIds: ids, repository, now: () => 1000 });
   for (let index = 0; index < ids.length; index += 1) {
     const question = session.currentQuestion;
