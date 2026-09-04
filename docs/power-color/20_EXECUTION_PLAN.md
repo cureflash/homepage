@@ -65,7 +65,7 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-three promoted skills; Power Color CI run `33653881914` succeeded and PR #551 merged.
 - [x] Source-resolve Landscape p.118 `地域には地域の色がある` to a narrow deterministic nonvisual regional-context boundary.
 - [x] Create `pc2.landscape.regional_color_context` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
-- [x] Add and pass the dedicated ID/full-fingerprint/source/nonvisual/shared-renderer authoring gate and normal shared-engine regression; workflow run `33654743141`, PR #553 merged.
+- [x] Add and pass the dedicated ID/full-fingerprint/source/nonvisual/shared-renderer authoring gate and normal Power Color regression; workflow run `33654743141`, PR #553 merged.
 - [x] Promote the 12 verified `pc2.landscape.regional_color_context` records record-identically; runtime 276 → 288 and twenty-three → twenty-four skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-four promoted skills; Power Color CI run `33659280553` succeeded and PR #560 merged.
 - [x] Audit Landscape p.118 `国内外の景観色彩の事例`; keep source-blocked because current public official material does not expose a closed official-text example set with deterministic nonvisual answer rules. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p118-cases-source-audit.md`.
@@ -109,9 +109,8 @@ Grade 1 is active by explicit user override while Grade 2 and Grade 3 remain inc
 - [x] Audit the current official Grade 1 TOC p.006→p.160 in official order; author only source-resolved/corroborated slices.
 - [x] Establish `grade1-runtime.json` and the record-identical Grade 1 promotion gate on the existing shared Power TOEIC question-bank/workout/session engine.
 - [x] Promote p.006 `pc1.culture.ancient_europe_materials` 8/8 verified records record-identically; Power Color CI `33817291831`; PR #730 merged as `273e5f4ebd3204e0f2405c7f72b93eab13d8e1a4`.
-- [x] Promote p.007→p.027 verified authoring in official order through p.027 `pc1.harmony.rood_p027`; runtime is 58 verified / pending 0 across nine skills. Latest promotion CI `33827600818`; PR #749 merged as `c054dbd8df0c6e7ee5e7669754784887a574128e`.
-- [x] Promote p.028 `pc1.harmony.ostwald_p028` 4/4 verified records record-identically; runtime is 62 verified / pending 0 across ten skills. Power Color CI `33828345979`; PR #751 merged as `141072272c43de4ff49115edc3acca8b9d969abc`.
-- [ ] Continue verified authoring promotion in official order from p.029 `pc1.harmony.itten_p029`; keep `productionApproved=false` and preserve every recorded blocked/monitor-dependent topic.
+- [x] Promote verified authoring in official order through p.050 `pc1.color_representation.cielab_p050`; runtime is 93 verified / pending 0 across eighteen skills. Latest promotion CI `33840974812`; PR #772 merged as `2d41bb619fb954d7bad282698f7a4dfc21cb77ce`.
+- [ ] Continue verified authoring promotion in official order from p.053 `pc1.color_representation.ostwald_hue_circle_p053`; keep p.035 `SOURCE_BLOCKED`, keep `productionApproved=false`, and preserve every recorded blocked/monitor-dependent topic.
 
 ## Phase B — Explanation video series
 Start only after `color_database_complete: true`. Build the video-series plan/spec/status/handoff first, then produce one safe theme at a time through the existing `cureflash/makemovie` CSV/PowerPoint→YMM4→MP4 pipeline. Do not fork a new video engine.
