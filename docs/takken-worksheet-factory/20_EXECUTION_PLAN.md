@@ -56,12 +56,13 @@ Final Phase 4.2 totals:
 `takken-concept-license-required` progress:
 - [x] Reused 1 existing independently verified question (`takken-q-02-001`).
 - [x] Calculated deficit: 49 new questions required for 50 total represented questions.
-- [x] Generated first 25-question checkpoint as `takken-power-q-license-required-001`–`025` with `pending_validation` status.
-- [x] Generated remaining 24 questions as `takken-power-q-license-required-026`–`049` with `pending_validation` status.
-- [x] Reached 50/50 represented questions: 1 reused verified + 49 generated pending.
-- [ ] Independently QA `takken-power-q-license-required-001`–`025` first, then `026`–`049`; do not inspect saved answers/explanations before solving.
+- [x] Generated first 25-question checkpoint as `takken-power-q-license-required-001`–`025`.
+- [x] Generated remaining 24 questions as `takken-power-q-license-required-026`–`049`.
+- [x] Reached 50/50 represented questions: 1 reused verified + 49 generated.
+- [x] Independently QA'd `takken-power-q-license-required-001`–`025`; all 25 passed without revision and are now `verified`.
+- [ ] Independently QA `takken-power-q-license-required-026`–`049`; do not inspect saved answers/explanations before solving.
 
-Exact continuation: begin independent QA of `takken-power-q-license-required-001`–`025`. All 49 generated questions remain `pending_validation` until individually re-solved and checked.
+Exact continuation: begin independent QA of `takken-power-q-license-required-026`–`049`. Current generated-question QA for this concept: verified 25 / pending 24 / revision 0 / rejected 0.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
