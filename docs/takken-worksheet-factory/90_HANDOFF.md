@@ -8,12 +8,11 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Extracted and source-verified the canonical knowledge items for `takken-concept-flat35-securitization` without changing Phase 2/3 question content or beginning Phase 4.3.
+Reconciled the existing verified Unit 86 questions against `takken-concept-flat35-securitization` without changing Phase 2/3 question content or beginning Phase 4.3.
 
-- Added 10 atomic knowledge items grounded in the official 【フラット３５】 overview and the Housing Finance Agency `証券化支援業務（買取型）の概要`.
-- Recorded 【フラット３５】 as a product provided through cooperation between private financial institutions and the Housing Finance Agency, with all-period fixed interest as its basic rate structure.
-- Decomposed the purchase-type securitization flow into private-financial-institution origination, JHF purchase of the mortgage receivable, collateral trust, MBS issuance, MBS-proceeds funding of the purchase price, servicing by the originating financial institution, remittance of borrower repayments to JHF, and JHF payment of MBS principal and interest to investors.
-- Existing verified Unit 86 questions were not mapped in this extraction checkpoint; all 10 new knowledge items therefore remain explicit Phase 4.3 deficits until the next direct-measurement mapping checkpoint.
+- `takken-q-86-001` maps only to `takken-k-flat35-securitization-all-period-fixed`, because the question directly tests the all-period fixed-rate characteristic.
+- `takken-q-86-002` maps only to `takken-k-flat35-securitization-jhf-purchases-receivable`, because the question directly tests the Housing Finance Agency purchase of mortgage receivables. Its generic wording about funding does not directly test the separate trust, MBS issuance/proceeds, servicing, repayment-remittance, or investor-payment knowledge items.
+- The remaining 8 flat35/securitization knowledge items remain explicit Phase 4.3 deficits.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -24,18 +23,18 @@ Extracted and source-verified the canonical knowledge items for `takken-concept-
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 109/113 concepts with canonical knowledge extraction complete; 108/113 fully reconciled through existing-question mapping
+- Phase 4.2: active — 109/113 concepts with canonical knowledge extraction complete; 109/113 fully reconciled through existing-question mapping
 - Concepts with canonical knowledge items: 109
 - Canonical knowledge items: 620
-- Existing verified questions mapped: 140
-- Explicit unmapped knowledge gaps: 416
+- Existing verified questions mapped: 142
+- Explicit unmapped knowledge gaps: 414
 - This run generated / checked / verified / revision: 0 / 0 / 0 / 0
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Reconcile the existing verified Unit 86 questions against `takken-concept-flat35-securitization`, mapping only knowledge items that each question directly tests. Keep Phase 4.3 unstarted.
+Extract and source-verify canonical knowledge items for `takken-concept-real-estate-advertising-rules`. Keep Phase 4.3 unstarted.
 
 ## publication invariant
 
