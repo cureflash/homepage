@@ -36,12 +36,12 @@ Completed checkpoints through the last fully reconciled concept: business-defini
 Current checkpoint:
 - [x] `takken-concept-landform-disaster-risk` has 8 canonical knowledge items grounded in the official 国土地理院『土地条件図』 guidance.
 - [x] `takken-q-88-001` maps only the land-condition-map classifications and purpose knowledge items that its correct choice directly tests.
-- [x] `takken-q-88-002` maps only the general landform/disaster relationship, liquefaction-landforms, and flood/inundation-landforms knowledge items that its correct choice directly tests.
-- [x] Ground-collapse, debris-flow/slope-failure, and storm-surge knowledge items remain explicit Phase 4.3 deficits because Unit 88 does not directly test them.
+- [x] `takken-q-88-002` maps only the general landform/disaster-risk relationship. Its wording does not independently test the complete representative-landform lists for each specific hazard.
+- [x] Liquefaction, ground-collapse, debris-flow/slope-failure, flood/inundation, and storm-surge knowledge items remain explicit Phase 4.3 deficits.
 - [x] Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses remain unchanged.
 - [x] Phase 4.3 remains unstarted.
 
-Current Phase 4.2 totals: 111/113 concepts with canonical knowledge extraction complete, 111/113 fully reconciled through existing-question mapping, 637 verified knowledge items, 146 existing verified questions mapped, 425 explicit question-coverage gaps.
+Current Phase 4.2 totals: 111/113 concepts with canonical knowledge extraction complete, 111/113 fully reconciled through existing-question mapping, 637 verified knowledge items, 146 existing verified questions mapped, 427 explicit question-coverage gaps.
 
 Exact continuation: extract canonical knowledge items for `takken-concept-housing-market-statistics` from current primary official statistics sources. Do not begin Phase 4.3.
 
