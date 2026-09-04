@@ -8,12 +8,14 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled the two existing verified Unit 84 questions against the 10 canonical `takken-concept-land-price-public-notice` knowledge items without changing Phase 2/3 question content or beginning Phase 4.3.
+Extracted and source-verified the canonical knowledge items for `takken-concept-real-estate-appraisal-methods` without changing Phase 2/3 question content or beginning Phase 4.3.
 
-- `takken-q-84-001` maps only the Land Appraisal Committee determination and the requirement for appraisals from 2 or more real-estate appraisers.
-- `takken-q-84-002` maps only the three appraisal methods: transaction-comparison, income-capitalization, and cost approaches.
-- The other 7 land-price-public-notice knowledge items remain explicit Phase 4.3 deficits; they were not inferred from the existing questions.
-- The existing explicit knowledge/concept allowlists, coverage validation, and question-presence checks in `power-question-knowledge-map.js` remain in force and were extended only for Unit 84.
+- Added 8 atomic knowledge items grounded in the Ministry of Land, Infrastructure, Transport and Tourism `不動産鑑定評価基準`.
+- Kept the three appraisal approaches (原価方式・比較方式・収益方式) distinct from the three basic price methods (原価法・取引事例比較法・収益還元法).
+- For 原価法, recorded the 再調達原価→減価修正 process and its 積算価格 result.
+- For 取引事例比較法, recorded case selection, 事情補正・時点修正, regional/individual-factor comparison, and its 比準価格 result.
+- For 収益還元法, recorded capitalization of expected future net income and its 収益価格 result.
+- Existing verified Unit 85 questions were not mapped in this checkpoint; all 8 new knowledge items therefore remain explicit Phase 4.3 deficits until the next mapping checkpoint determines what the existing questions actually test.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -24,18 +26,18 @@ Reconciled the two existing verified Unit 84 questions against the 10 canonical 
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 107/113 concepts with canonical knowledge extraction complete; 107/113 fully reconciled through existing-question mapping
-- Concepts with canonical knowledge items: 107
-- Canonical knowledge items: 602
+- Phase 4.2: active — 108/113 concepts with canonical knowledge extraction complete; 107/113 fully reconciled through existing-question mapping
+- Concepts with canonical knowledge items: 108
+- Canonical knowledge items: 610
 - Existing verified questions mapped: 138
-- Explicit unmapped knowledge gaps: 400
+- Explicit unmapped knowledge gaps: 408
 - This run generated / checked / verified / revision: 0 / 0 / 0 / 0
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Extract and source-verify canonical knowledge items for `takken-concept-real-estate-appraisal-methods`. Keep Phase 4.3 unstarted.
+Reconcile the existing verified Unit 85 questions against `takken-concept-real-estate-appraisal-methods`, mapping only knowledge items that each question directly tests. Keep Phase 4.3 unstarted.
 
 ## publication invariant
 
