@@ -24,14 +24,14 @@
     "known_source_risk_candidates": ["JIS light-source color-name exact current content", "AFT-specific business/color-marketing/CMF processes", "fashion practical procedures", "資料・CMF 素材と工法", "Grade 1 second-stage printed-color/display authority", "p.134 繊維の長さと発色性 exact relation", "p.136 AFT-specific VMD initiative set", "p.137 AFT-specific product-display color-coordination rules", "p.148 AFT-specific near/mid/far color-planning consideration rules"],
     "monitor_facing_generation_blocked_without_approved_display_values": true,
     "complete": false,
-    "canonical_inconsistency": null,
-    "next": "Keep p.035 色の分類 SOURCE_BLOCKED, then promote the existing 4 verified p.046 XYZ records record-identically through the existing Grade 1 runtime gate."
+    "canonical_inconsistency": "PR #767 failed Power Color CI 33837008110 because the four p.046 runtime records were not record-identical to the canonical verified authoring file. PR #767 was closed unmerged. Do not reuse its runtime payload; the next promotion must copy qualifications/color-certification/data/grade1-authoring-xyz-p046-0001-0004.json questions exactly.",
+    "next": "Keep p.035 色の分類 SOURCE_BLOCKED, then retry p.046 promotion using the four canonical verified authoring records exactly; require deep equality, full-fingerprint, answer-position and shared-engine gates before merge."
   },
   "engine_integration": {"shared_power_toeic_session": true, "shared_power_toeic_workout_builder": true, "shared_power_toeic_question_bank_adapter": true, "separate_color_engine_forked": false},
-  "current_run": {"checkpoints_completed": 2, "generated": 0, "checked": 0, "verified": 4, "revision_events": 0, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main, canonical Grade 1 docs, recent Power Color merges, open PRs and branches; p.041 already had a completed source audit and 4/4 independently verified authoring, so no duplicate source research or authoring was performed.", "Promoted p.041 pc1.light_color.grassmann_laws_p041 4/4 verified records record-identically; runtime reached 85 questions across sixteen skills with A/B/C/D=22/22/22/19. Power Color CI 33835640181 succeeded and PR #765 merged as c08624c521977612cdc32f337e12dac4996ed68e. p.035 remains SOURCE_BLOCKED; next verified official-order batch is p.046 XYZ."]},
+  "current_run": {"checkpoints_completed": 1, "generated": 0, "checked": 0, "verified": 0, "revision_events": 1, "needs_revision": 0, "rejected": 0, "pending": 0, "checkpoint_breakdown": ["Reconciled latest main and open Power Color Grade 1 PRs. PR #767 was still open after Power Color CI 33837008110 failed. Root cause was confirmed as non-record-identical p.046 runtime records versus the canonical 4/4 verified authoring records on main; the gate behaved correctly. PR #767 was closed unmerged, preserving runtime at 85 verified / 16 skills. Exact restart is a fresh p.046 record-identical promotion from the canonical authoring file, with no gate relaxation or monkeypatch."]},
   "grade1_complete": false,
   "grade2_complete": false,
   "grade3_complete": false,
   "color_database_complete": false,
-  "next": "Keep p.035 SOURCE_BLOCKED and promote p.046 XYZ 4 verified records record-identically through the shared-engine Grade 1 runtime gate."
+  "next": "Keep p.035 SOURCE_BLOCKED and retry p.046 XYZ using the canonical 4 verified authoring records record-identically through the shared-engine Grade 1 runtime gate."
 }
