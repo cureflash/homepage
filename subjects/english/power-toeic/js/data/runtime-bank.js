@@ -1,6 +1,6 @@
 import { InMemoryQuestionBank } from './question-bank-adapter.js';
 import { demoQuestions, demoSkills } from './fixtures.js';
-import { buildPilotRuntime } from './pilot-question-set.js';
+import { buildPilotRuntime } from './pilot-question-set.js?v=20260904-short-pilot-v2';
 
 export async function loadRuntimeQuestionBank({ url = './js/data/runtime/beta-bank.json' } = {}) {
   try {
