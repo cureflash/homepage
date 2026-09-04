@@ -109,8 +109,8 @@ Grade 1 is active by explicit user override while Grade 2 and Grade 3 remain inc
 - [x] Audit the current official Grade 1 TOC p.006→p.160 in official order; author only source-resolved/corroborated slices.
 - [x] Establish `grade1-runtime.json` and the record-identical Grade 1 promotion gate on the existing shared Power TOEIC question-bank/workout/session engine.
 - [x] Promote p.006 `pc1.culture.ancient_europe_materials` 8/8 verified records record-identically; Power Color CI `33817291831`; PR #730 merged as `273e5f4ebd3204e0f2405c7f72b93eab13d8e1a4`.
-- [x] Promote p.007→p.025 verified authoring in official order through p.025 `pc1.harmony.chevreul_p025`; runtime is 55 verified / pending 0 across eight skills. Latest promotion CI `33827083351`; PR #747 merged as `0af203dee29de34ea1df2d30ef24d33cf33f6a04`.
-- [ ] Continue verified authoring promotion in official order from p.027 `pc1.harmony.rood_p027`; keep `productionApproved=false` and preserve every recorded blocked/monitor-dependent topic.
+- [x] Promote p.007→p.027 verified authoring in official order through p.027 `pc1.harmony.rood_p027`; runtime is 58 verified / pending 0 across nine skills. Latest promotion CI `33827600818`; PR #749 merged as `c054dbd8df0c6e7ee5e7669754784887a574128e`.
+- [ ] Continue verified authoring promotion in official order from p.028 `pc1.harmony.ostwald_p028`; keep `productionApproved=false` and preserve every recorded blocked/monitor-dependent topic.
 
 ## Phase B — Explanation video series
 Start only after `color_database_complete: true`. Build the video-series plan/spec/status/handoff first, then produce one safe theme at a time through the existing `cureflash/makemovie` CSV/PowerPoint→YMM4→MP4 pipeline. Do not fork a new video engine.
