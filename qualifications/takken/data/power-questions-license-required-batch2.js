@@ -7,7 +7,7 @@
     law_as_of: "2026-04-01",
     primary_source_refs: Object.freeze(["egov-takken-act", "mlit-license"]),
     generation_status: "generated",
-    validation_status: "pending_validation"
+    validation_status: "verified"
   });
 
   const rows = [
@@ -69,7 +69,7 @@
     if (!Array.isArray(q.choice_explanations) || q.choice_explanations.length !== 4 || q.choice_explanations.some((reason) => !reason.trim())) throw new Error(`Invalid choice explanations: ${q.question_id}`);
     if (!Array.isArray(q.primary_source_refs) || q.primary_source_refs.length !== 2 || q.primary_source_refs.some((id) => !allowedSourceIds.has(id))) throw new Error(`Invalid source refs: ${q.question_id}`);
     if (q.exam_year !== 2026 || q.law_as_of !== "2026-04-01") throw new Error(`Invalid legal version: ${q.question_id}`);
-    if (q.validation_status !== "pending_validation") throw new Error(`Unexpected validation status: ${q.question_id}`);
+    if (q.validation_status !== "verified") throw new Error(`Unexpected validation status: ${q.question_id}`);
   }
   if (Math.max(...answerCounts) - Math.min(...answerCounts) > 1) throw new Error(`Answer-position skew: ${answerCounts.join("/")}`);
 
