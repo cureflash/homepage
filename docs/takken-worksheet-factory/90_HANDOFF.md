@@ -4,18 +4,19 @@
 
 Phase 1 unit generation, Phase 2 core-fact four-choice question generation, and Phase 3 solve-all independent validation are complete. All 163/163 current questions are independently checked and verified; pending is zero and `validation_complete: true`.
 
-Phase 4.1 Concept inventory and Phase 4.2 canonical knowledge extraction / existing-question mapping are complete. Phase 4.3 fifty-question drill expansion is now the active subphase. Print generation and app linkage remain later work.
+Phase 4.1 Concept inventory and Phase 4.2 canonical knowledge extraction / existing-question mapping are complete. Phase 4.3 fifty-question drill expansion is the active subphase. Print generation and app linkage remain later work.
 
 ## Completed in this run
 
-Closed the final Phase 4.2 mapping checkpoint for `takken-concept-five-question-exemption` without changing any Phase 2/3 question content.
+Advanced the first Phase 4.3 generation checkpoint for `takken-concept-business-definition` without changing any Phase 2/3 question content or validation status.
 
-- `takken-q-90-001` directly measures the normal 50-question / registered-course 45-question treatment and the five-question exemption itself.
-- `takken-q-90-002` directly measures registration-course eligibility, the requirement to pass the completion examination, and the three-year validity window.
-- Added the Unit 90 mapping shard `qualifications/takken/data/power-question-knowledge-map-unit90.js` alongside the existing mapping file, preserving all prior mappings unchanged.
-- All 113/113 concepts are now reconciled through existing-question mapping.
-- Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
-- No Phase 4.3 questions were generated in this checkpoint.
+- Reused the concept's 2 existing independently verified questions.
+- Added `qualifications/takken/data/power-questions-business-definition.js` with 25 new stable-ID four-choice questions.
+- All 25 new questions are `pending_validation`; none has been promoted to verified.
+- Questions reference only the three canonical knowledge items for this concept: self sale/exchange, agency/brokerage, and the self-lease exclusion.
+- Each question carries `concept_id`, `knowledge_refs`, 2026 exam / `2026-04-01` law cutoff, four distinct choices, answer index, detailed explanation, per-choice explanations, primary source refs, and generation/validation status.
+- The shard validates duplicate IDs/stems, four-choice uniqueness, answer-index range, knowledge/source refs, legal version, validation status, and answer-position skew.
+- No print or app integration work was started.
 
 ## Status after this run
 
@@ -24,18 +25,20 @@ Closed the final Phase 4.2 mapping checkpoint for `takken-concept-five-question-
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: complete — 113/113 concepts reconciled through canonical knowledge extraction and existing-question mapping
-- Canonical knowledge items: 648
-- Existing verified questions mapped: 149
-- Explicit Phase 4.3 knowledge gaps: 432
-- This run generated / checked / verified / revision: 0 / 0 / 0 / 0
-- Phase 4.3: active, no new drill questions generated yet
+- Phase 4.2: complete — 648 canonical knowledge items / 149 existing verified questions mapped / 432 explicit knowledge gaps
+- Phase 4.3 active concept: `takken-concept-business-definition`
+- Existing verified questions in active concept: 2
+- New questions generated this run: 25
+- New questions checked / verified / revision / rejected this run: 0 / 0 / 0 / 0
+- Active-concept total now represented: 27/50
+- Active-concept remaining generation deficit: 23
+- Phase 4.3 pending validation: 25
 - Prints/app integration: not started
 
 ## Exact next start
 
-Start `takken-concept-business-definition` under Phase 4.3. Reuse its existing verified questions, generate only the deficit toward 50 questions, and save the first new batch of up to 25 as `pending_validation`. Do not mark newly generated questions verified until a later independent QA checkpoint.
+Stay on `takken-concept-business-definition`. Generate the remaining 23-question deficit as `pending_validation` so the concept reaches 50 total questions including the 2 reused verified questions. Do not begin the concept's independent QA until generation reaches 50 total, and do not mark any newly generated question verified before that later QA checkpoint.
 
 ## publication invariant
 
-Only independently verified material may enter a public or production pool. A verified knowledge item without verified question evidence remains an explicit Phase 4.3 deficit and cannot satisfy bidirectional publication coverage.
+Only independently verified material may enter a public or production pool. The 25 newly generated Phase 4.3 questions remain unpublished `pending_validation` material.
