@@ -7,18 +7,18 @@
 - 2026 Grade 1 second-stage format notice: printed-color selection replaces the former New Color Card 199a operation; content tendency/approximate question count/difficulty remain unchanged.
 
 ## Processed frontier
-All current official Grade 1 textbook TOC content items from culture p.006 through the appendices p.152, p.157 and p.160 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files. Runtime promotion has begun in the same official order: p.006 `pc1.culture.ancient_europe_materials`, p.007 `pc1.culture.medieval_early_modern_europe_materials`, p.010 `pc1.culture.modern_europe_color_science`, p.014 `pc1.culture.ancient_japan_colour`, p.017 `pc1.culture.ancient_to_early_modern_japan`, and p.021 `pc1.culture.modern_japan_colour` are promoted record-identically; p.024 Judd is next.
+All current official Grade 1 textbook TOC content items from culture p.006 through the appendices p.152, p.157 and p.160 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files. Runtime promotion has begun in the same official order: p.006 `pc1.culture.ancient_europe_materials`, p.007 `pc1.culture.medieval_early_modern_europe_materials`, p.010 `pc1.culture.modern_europe_color_science`, p.014 `pc1.culture.ancient_japan_colour`, p.017 `pc1.culture.ancient_to_early_modern_japan`, p.021 `pc1.culture.modern_japan_colour`, and p.024 `pc1.harmony.judd_p024` are promoted record-identically; p.025 Chevreul is next.
 
 Recorded source-blocked topics include p.035 `色の分類`, p.062 JIS light-source name topics, p.083 `色の見えの変化`, p.090 `色彩効果のビジネス活用`, p.096/p.100/p.102 business-process topics, p.114 `カラー戦略`, p.120-p.122 CMF® process topics, p.132 `カラー情報の整理と分析` / `シーズンテーマカラーの決定`, p.134 `繊維の長さと発色性`, p.136 `ビジュアルマーチャンダイジング（VMD）の取り組み`, p.137 `商品陳列のカラーコーディネーション`, p.148 `遠景・中景・近景を踏まえた色彩計画における配慮事項`, and p.160 `資料・CMF® — 素材と工法`.
 
 ## Grade 1 runtime promotion frontier
 Runtime: `qualifications/color-certification/data/grade1-runtime.json`.
 Promotion gate: `qualifications/color-certification/tests/grade1-runtime-promotion.test.js`.
-Current runtime: 48 verified / pending 0 across six skills; `productionApproved=false`.
-Promoted batches: p.006 `pc1.culture.ancient_europe_materials`, p.007 `pc1.culture.medieval_early_modern_europe_materials`, p.010 `pc1.culture.modern_europe_color_science`, p.014 `pc1.culture.ancient_japan_colour`, p.017 `pc1.culture.ancient_to_early_modern_japan`, and p.021 `pc1.culture.modern_japan_colour`, 8/8 verified each, record-identical.
-Gate coverage: runtime↔authoring deep equality, full-fingerprint uniqueness, balanced correct positions A/B/C/D=12/12/12/12, and the existing shared Power TOEIC question-bank/workout/session engine.
-Latest Power Color CI `33823076377` succeeded; PR #742 merged as `cff1af7f0d56c45f5491aa6999a5f027ed5681db`.
-Next batch in official order: `qualifications/color-certification/data/grade1-authoring-harmony-judd-p024-0001-0004.json`, p.024 `pc1.harmony.judd_p024`, 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Source contract: `docs/power-color/audits/2026-09-03-grade1-p024-color-harmony-judd-source-audit.md`. Its accepted narrow slice uses the AFT p.024 TOC heading, the current AFT Grade 1 sample relation between natural harmony and Judd's `なじみ`, and Waseda academic corroboration of `Principle of Familiarity`; unpublished Japanese labels for the other principles remain out of scope.
+Current runtime: 52 verified / pending 0 across seven skills; `productionApproved=false`.
+Promoted batches: p.006 `pc1.culture.ancient_europe_materials`, p.007 `pc1.culture.medieval_early_modern_europe_materials`, p.010 `pc1.culture.modern_europe_color_science`, p.014 `pc1.culture.ancient_japan_colour`, p.017 `pc1.culture.ancient_to_early_modern_japan`, p.021 `pc1.culture.modern_japan_colour` (8/8 each), and p.024 `pc1.harmony.judd_p024` (4/4), all record-identical.
+Gate coverage: runtime↔authoring deep equality, full-fingerprint uniqueness, balanced correct positions A/B/C/D=13/13/13/13, and the existing shared Power TOEIC question-bank/workout/session engine.
+Latest Power Color CI `33825588357` succeeded; PR #744 merged as `7c8f1a054dbbbfeeff5b1506576f0949531b1dad`.
+Next batch in official order: `qualifications/color-certification/data/grade1-authoring-harmony-chevreul-p025-0001-0003.json`, p.025 `pc1.harmony.chevreul_p025`, 3/3 verified, pending 0, A/B/C/D=1/1/1/0. Source contract: `docs/power-color/audits/2026-09-03-grade1-p025-chevreul-source-audit.md`. Its accepted narrow slice uses only three deterministic nonvisual relations directly exposed by the current AFT Grade 1 first-stage sample; unpublished full classification and figure appearance remain out of scope.
 
 ## p.152 color-perception accepted boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p152-color-perception-source-audit.md`.
@@ -57,4 +57,4 @@ AFT public material exposes the appendix heading/order only. It does not expose 
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next frontier
-Promote the existing p.024 `pc1.harmony.judd_p024` 4/4 verified records record-identically through the canonical shared-engine Grade 1 runtime gate. Continue only verified authoring in official TOC order and preserve every recorded source/display blocker.
+Promote the existing p.025 `pc1.harmony.chevreul_p025` 3/3 verified records record-identically through the canonical shared-engine Grade 1 runtime gate. Continue only verified authoring in official TOC order and preserve every recorded source/display blocker.
