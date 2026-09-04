@@ -5,7 +5,7 @@
   "exam_year": 2026,
   "law_as_of": "2026-04-01",
   "mode": "power_takken_phase4",
-  "next_role": "continue_knowledge_items",
+  "next_role": "expand_power_questions",
   "generation_batch_target": 20,
   "validation_batch_target": 25,
   "active_unit_order": null,
@@ -28,7 +28,7 @@
   "question_generation_policy": "Generate four-choice questions from every independently testable core fact; no fixed count padding. See 30_QUESTION_AND_QA_SPEC.md.",
   "validation_progress": {"next_validation_question_id": null, "checked_question_count": 163, "verified_question_count": 163, "needs_revision_question_count": 0, "rejected_question_count": 0, "pending_validation_question_count": 0},
   "phase4_progress": {
-    "active_subphase": "4.2_knowledge_items",
+    "active_subphase": "4.3_fifty_question_drill",
     "concept_inventory_file": "qualifications/takken/data/power-concepts.js",
     "concept_inventory_complete": true,
     "concept_count": 113,
@@ -145,19 +145,26 @@
       "qualifications/takken/data/power-knowledge-items-five-question-exemption.js"
     ],
     "question_knowledge_map_file": "qualifications/takken/data/power-question-knowledge-map.js",
+    "question_knowledge_map_files": [
+      "qualifications/takken/data/power-question-knowledge-map.js",
+      "qualifications/takken/data/power-question-knowledge-map-unit90.js"
+    ],
     "knowledge_concept_count": 113,
     "knowledge_item_count": 648,
-    "mapped_existing_question_count": 147,
-    "unmapped_knowledge_item_count": 437,
+    "mapped_existing_question_count": 149,
+    "unmapped_knowledge_item_count": 432,
+    "knowledge_extraction_complete": true,
+    "existing_question_mapping_complete": true,
+    "phase4_2_complete": true,
     "completed_concept_ids": [
       "takken-concept-business-definition","takken-concept-license-required","takken-concept-license-authority","takken-concept-license-disqualification","takken-concept-license-validity-renewal","takken-concept-license-transfer","takken-concept-license-change-closure","takken-concept-roster","takken-concept-office-signs","takken-concept-takkenshi-registration","takken-concept-takkenshi-card","takken-concept-exclusive-takkenshi","takken-concept-takkenshi-exclusive-duties","takken-concept-business-guarantee-deposit","takken-concept-business-guarantee-refund","takken-concept-guarantee-association","takken-concept-brokerage-contract-document","takken-concept-brokerage-price-opinion","takken-concept-general-brokerage","takken-concept-exclusive-brokerage","takken-concept-sole-agency-brokerage","takken-concept-reins-registration","takken-concept-brokerage-reporting","takken-concept-advertising-start","takken-concept-contract-start","takken-concept-false-advertising","takken-concept-article35-procedure","takken-concept-article35-items","takken-concept-article37-document","takken-concept-article35-vs-37","takken-concept-eight-restrictions-scope","takken-concept-cooling-off","takken-concept-earnest-money-limit","takken-concept-earnest-money-safeguards","takken-concept-damages-penalty","takken-concept-nonconformity-special-rule","takken-concept-unowned-property-sale","takken-concept-installment-cancellation","takken-concept-installment-ownership-retention","takken-concept-brokerage-fees","takken-concept-supervision-dispositions","takken-concept-declaration-arrival","takken-concept-mistake","takken-concept-fraud","takken-concept-duress","takken-concept-mental-reservation","takken-concept-fictitious-declaration","takken-concept-minor","takken-concept-adult-ward","takken-concept-agency","takken-concept-unauthorized-agency","takken-concept-apparent-agency","takken-concept-acquisitive-prescription","takken-concept-extinctive-prescription","takken-concept-property-transfer-opposability","takken-concept-co-ownership","takken-concept-mortgage","takken-concept-default-damages","takken-concept-contract-cancellation","takken-concept-simultaneous-performance","takken-concept-risk-allocation","takken-concept-sale-earnest","takken-concept-civil-nonconformity","takken-concept-lease-general","takken-concept-security-deposit","takken-concept-building-lease-opposability","takken-concept-ordinary-land-lease-term","takken-concept-land-lease-opposability","takken-concept-fixed-term-land-lease","takken-concept-building-lease-term","takken-concept-fixed-term-building-lease","takken-concept-heirs-order","takken-concept-statutory-inheritance-shares","takken-concept-inheritance-deliberation","takken-concept-inheritance-renunciation","takken-concept-will-effect","takken-concept-reserved-portion","takken-concept-condominium-ownership","takken-concept-real-estate-registration-record","takken-concept-city-quasi-planning-area","takken-concept-area-division","takken-concept-use-districts","takken-concept-city-planning-decision","takken-concept-city-planning-project","takken-concept-development-permission","takken-concept-development-completion","takken-concept-building-confirmation","takken-concept-roads-frontage","takken-concept-building-coverage-ratio","takken-concept-floor-area-ratio","takken-concept-setback-height-restrictions","takken-concept-shadow-restrictions","takken-concept-fire-prevention-zones","takken-concept-national-land-use-notification","takken-concept-farmland-article3","takken-concept-farmland-article4","takken-concept-farmland-article5","takken-concept-provisional-replotting","takken-concept-replotting-disposition","takken-concept-embankment-regulation","takken-concept-legal-permit-notification-comparison","takken-concept-real-estate-acquisition-tax","takken-concept-fixed-asset-tax","takken-concept-registration-license-tax","takken-concept-stamp-tax","takken-concept-real-estate-transfer-income","takken-concept-land-price-public-notice","takken-concept-real-estate-appraisal-methods","takken-concept-flat35-securitization","takken-concept-real-estate-advertising-rules","takken-concept-landform-disaster-risk","takken-concept-housing-market-statistics","takken-concept-five-question-exemption"
     ],
-    "next_concept_id": "takken-concept-five-question-exemption",
-    "next_task": "Reconcile existing verified takken-q-90-001 and takken-q-90-002 only against directly tested five-question-exemption knowledge items. Keep Phase 4.3 unstarted until this final Phase 4.2 mapping checkpoint is complete."
+    "next_concept_id": "takken-concept-business-definition",
+    "next_task": "Phase 4.3: for takken-concept-business-definition, reuse its existing verified questions, generate only the deficit toward 50 questions, and save the first new batch of up to 25 as pending_validation without treating any un-QA question as verified."
   },
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
   "last_completed_unit": "five-question-exemption-review",
-  "last_run_summary": "Phase 4.2 extracted 5 verified canonical knowledge items for the final concept five-question-exemption from current RETIO official exam guidance. All 113/113 concepts now have canonical knowledge extraction complete; 112/113 are fully reconciled through existing-question mapping. Totals are 648 verified knowledge items, 147 mapped existing verified questions, and 437 explicit Phase 4.3 coverage gaps. Unit 90 mapping remains the exact next checkpoint. Phase 2/3 content and statuses remain unchanged; Phase 4.3 remains unstarted.",
-  "updated_at": "2026-09-04T22:28:59+09:00"
+  "last_run_summary": "Phase 4.2 is complete. Existing verified takken-q-90-001 maps directly to the normal-50/registered-45 and five-question-exemption items; takken-q-90-002 maps directly to registration-course eligibility, completion-exam requirement, and three-year validity. All 113 concepts are reconciled through existing-question mapping. Totals are 648 verified knowledge items, 149 mapped existing verified questions, and 432 explicit Phase 4.3 coverage gaps. Phase 2/3 content and statuses remain unchanged. The next task is Phase 4.3 on takken-concept-business-definition.",
+  "updated_at": "2026-09-04T23:28:17+09:00"
 }
