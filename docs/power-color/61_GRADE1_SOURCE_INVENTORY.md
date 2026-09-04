@@ -7,19 +7,19 @@
 - 2026 Grade 1 second-stage format notice: printed-color selection replaces the former New Color Card 199a operation; content tendency/approximate question count/difficulty remain unchanged.
 
 ## Processed frontier
-All current official Grade 1 textbook TOC content items from culture p.006 through the appendices p.152, p.157 and p.160 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files. Runtime promotion has begun in the same official order: p.006, p.007, p.010, p.014, p.017, p.021 culture batches plus p.024 Judd, p.025 Chevreul, p.027 Rood, p.028 Ostwald, p.029 Itten, p.030 Moon & Spencer, and p.032 color appearance are promoted record-identically; p.035 remains blocked and p.036 lighting properties is next.
+All current official Grade 1 textbook TOC content items from culture p.006 through the appendices p.152, p.157 and p.160 have been source-audited in official order. Authoring exists only for source-resolved/corroborated slices recorded in the audit files. Runtime promotion has begun in the same official order: p.006, p.007, p.010, p.014, p.017, p.021 culture batches plus p.024 Judd, p.025 Chevreul, p.027 Rood, p.028 Ostwald, p.029 Itten, p.030 Moon & Spencer, p.032 color appearance, and p.036 lighting properties are promoted record-identically; p.035 remains blocked and p.039 measurement illuminants is next.
 
 Recorded source-blocked topics include p.035 `色の分類`, p.062 JIS light-source name topics, p.083 `色の見えの変化`, p.090 `色彩効果のビジネス活用`, p.096/p.100/p.102 business-process topics, p.114 `カラー戦略`, p.120-p.122 CMF® process topics, p.132 `カラー情報の整理と分析` / `シーズンテーマカラーの決定`, p.134 `繊維の長さと発色性`, p.136 `ビジュアルマーチャンダイジング（VMD）の取り組み`, p.137 `商品陳列のカラーコーディネーション`, p.148 `遠景・中景・近景を踏まえた色彩計画における配慮事項`, and p.160 `資料・CMF® — 素材と工法`.
 
 ## Grade 1 runtime promotion frontier
 Runtime: `qualifications/color-certification/data/grade1-runtime.json`.
 Promotion gate: `qualifications/color-certification/tests/grade1-runtime-promotion.test.js`.
-Current runtime: 73 verified / pending 0 across thirteen skills; `productionApproved=false`.
-Promoted batches: p.006, p.007, p.010, p.014, p.017, p.021 culture batches (8/8 each), p.024 `pc1.harmony.judd_p024` (4/4), p.025 `pc1.harmony.chevreul_p025` (3/3), p.027 `pc1.harmony.rood_p027` (3/3), p.028 `pc1.harmony.ostwald_p028` (4/4), p.029 `pc1.harmony.itten_p029` (4/4), p.030 `pc1.harmony.moon_spencer_p030` (4/4), and p.032 `pc1.light_color.appearance_mode_p032` (3/3), all record-identical.
-Gate coverage: runtime↔authoring deep equality, full-fingerprint uniqueness, auditable correct positions A/B/C/D=19/19/19/16, and the existing shared Power TOEIC question-bank/workout/session engine.
-Latest Power Color CI `33831959960` succeeded; PR #758 merged as `e842a0fca4567a27a674da548408ba4bbb9be3c9`.
+Current runtime: 77 verified / pending 0 across fourteen skills; `productionApproved=false`.
+Promoted batches: p.006, p.007, p.010, p.014, p.017, p.021 culture batches (8/8 each), p.024 `pc1.harmony.judd_p024` (4/4), p.025 `pc1.harmony.chevreul_p025` (3/3), p.027 `pc1.harmony.rood_p027` (3/3), p.028 `pc1.harmony.ostwald_p028` (4/4), p.029 `pc1.harmony.itten_p029` (4/4), p.030 `pc1.harmony.moon_spencer_p030` (4/4), p.032 `pc1.light_color.appearance_mode_p032` (3/3), and p.036 `pc1.light_color.lighting_properties_p036` (4/4), all record-identical.
+Gate coverage: runtime↔authoring deep equality, full-fingerprint uniqueness, auditable correct positions A/B/C/D=20/20/20/17, and the existing shared Power TOEIC question-bank/workout/session engine.
+Latest Power Color CI `33833221416` succeeded; PR #760 merged as `75c503c6270ef6b2a62f1961c1a61223d476fc0f`.
 p.035 `色の分類` remains `SOURCE_BLOCKED`; its exact AFT taxonomy/labels/counts/examples/diagrams are not reconstructed.
-Next promotable batch in official order: `qualifications/color-certification/data/grade1-authoring-lighting-properties-p036-0001-0004.json`, p.036 `pc1.light_color.lighting_properties_p036`, 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Source contract: `docs/power-color/audits/2026-09-03-grade1-p036-lighting-properties-source-audit.md`. Classification: `SECONDARY_CORROBORATION_REQUIRED`. Accepted narrow nonvisual facts are limited to CIE-defined luminous flux→lumen, luminous intensity→candela, illuminance→lux including 1 lx = 1 lm uniformly over 1 m², and colour temperature→same-chromaticity Planckian radiator in kelvin. Do not infer unpublished AFT p.036 inventory/order/formulas/diagrams or p.039 content.
+Next promotable batch in official order: `qualifications/color-certification/data/grade1-authoring-measurement-illuminants-p039-0001-0004.json`, p.039 `pc1.light_color.measurement_illuminants_p039`, 4/4 verified, pending 0, A/B/C/D=1/1/1/1. Source contract: `docs/power-color/audits/2026-09-03-grade1-p039-measurement-illuminants-source-audit.md`. Classification: `SECONDARY_CORROBORATION_REQUIRED`. Accepted narrow nonvisual facts are limited to the audited CIE illuminant definition and current CIE standard illuminants A, D65 and D50 relations already encoded in the verified batch. Do not infer unpublished AFT p.039 inventory/order/diagrams/application wording or any display values.
 
 ## p.152 color-perception accepted boundary
 Audit: `docs/power-color/audits/2026-09-04-grade1-p152-color-perception-source-audit.md`.
@@ -58,4 +58,4 @@ AFT public material exposes the appendix heading/order only. It does not expose 
 - Grade 1 second-stage printed-color items: no monitor-facing substitute without approved display authority.
 
 ## Exact next frontier
-Keep p.035 `SOURCE_BLOCKED`, then promote the existing p.036 `pc1.light_color.lighting_properties_p036` 4/4 verified records record-identically through the canonical shared-engine Grade 1 runtime gate. Continue only verified authoring in official TOC order and preserve every recorded source/display blocker.
+Keep p.035 `SOURCE_BLOCKED`, then promote the existing p.039 `pc1.light_color.measurement_illuminants_p039` 4/4 verified records record-identically through the canonical shared-engine Grade 1 runtime gate. Continue only verified authoring in official TOC order and preserve every recorded source/display blocker.
