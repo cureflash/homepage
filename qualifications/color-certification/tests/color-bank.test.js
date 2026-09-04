@@ -178,8 +178,17 @@ test('choice color names and color-to-name cards are pre-rendered hidden and the
   assert.match(rendererSource, /revealPromptChoiceSwatches/);
 });
 
+test('quiz UI omits runtime notice and keeps answer feedback to one heading', () => {
+  assert.doesNotMatch(indexHtml, /data-role="notice"/);
+  assert.doesNotMatch(mainSource, /data-role="notice"/);
+  assert.doesNotMatch(rendererSource, /'answer-swatch'/);
+  assert.doesNotMatch(rendererSource, /'answer-identity'/);
+  assert.doesNotMatch(rendererSource, /'answer-explanation'/);
+  assert.match(rendererSource, /heading\.textContent = feedback\.title/);
+});
+
 test('browser-facing Power Color assets use the same cache-busting version', () => {
-  const version = '20260830-color-name-swatches-v3';
+  const version = '20260904-answer-feedback-v1';
   assert.match(indexHtml, new RegExp(`styles\\.css\\?v=${version}`));
   assert.match(indexHtml, new RegExp(`js/main\\.js\\?v=${version}`));
   assert.match(mainSource, new RegExp(`color-choice-renderer\\.js\\?v=${version}`));

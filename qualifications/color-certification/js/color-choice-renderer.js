@@ -247,26 +247,6 @@ export class ColorChoiceRenderer {
     heading.textContent = feedback.title;
     card.append(heading);
 
-    if (feedback.showSwatch) {
-      card.append(this.createSwatch(
-        feedback.colorRef,
-        'answer-swatch',
-        `正解の色見本：${feedback.name}`
-      ));
-    }
-
-    const identity = this.documentRef.createElement('div');
-    identity.className = 'answer-identity';
-    identity.textContent = feedback.reading
-      ? `${feedback.name}（${feedback.reading}）`
-      : feedback.name;
-    card.append(identity);
-
-    const detail = this.documentRef.createElement('p');
-    detail.className = 'answer-explanation';
-    detail.textContent = feedback.explanation;
-    card.append(detail);
-
     this.explanationEl.append(card);
     this.explanationEl.hidden = false;
   }
