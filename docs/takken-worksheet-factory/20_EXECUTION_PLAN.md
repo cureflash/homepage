@@ -48,7 +48,13 @@ Final Unit 90 checkpoint:
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
 - [ ] Reject superficial number/name/template swaps.
 
-Exact continuation: start `takken-concept-business-definition`. Reuse its existing verified questions, generate only the deficit toward 50 questions, and save the first new batch of up to 25 as `pending_validation`. Do not treat any newly generated question as verified before independent QA.
+`takken-concept-business-definition` progress:
+- [x] Reused 2 existing independently verified questions.
+- [x] Generated first 25 new questions as `pending_validation` in `qualifications/takken/data/power-questions-business-definition.js`.
+- [ ] Generate the remaining 23-question deficit to reach 50 total questions for the concept.
+- [ ] Independently QA all newly generated questions before any new question becomes verified.
+
+Exact continuation: stay on `takken-concept-business-definition` and generate the remaining 23 questions as `pending_validation`. Do not start independent QA until the concept reaches 50 total questions, and do not treat any newly generated question as verified before that later QA checkpoint.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
