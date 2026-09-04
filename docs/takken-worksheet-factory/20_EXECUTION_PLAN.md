@@ -49,9 +49,11 @@ Final Phase 4.2 totals:
 - [x] Independently QA'd `takken-power-q-business-definition-001`–`025`.
 - [x] Repaired `013` from unspecified `土地` to `宅地` so the stem unambiguously falls within the statutory subject matter, then re-solved it successfully.
 - [x] Promoted `001`–`025` to `verified` after QA.
-- [ ] Independently QA `026`–`048`; these remain `pending_validation`.
+- [x] Independently QA'd `takken-power-q-business-definition-026`–`048` against the statutory transaction categories.
+- [x] Promoted `026`–`048` to `verified`; no repairs were required in this checkpoint.
+- [x] Completed this concept at 50/50 represented questions, with all 48 generated questions independently verified.
 
-Exact continuation: stay on `takken-concept-business-definition` and independently QA `takken-power-q-business-definition-026`–`048` in stable-ID order. Do not begin the next concept until all generated questions for this concept complete QA.
+Exact continuation: advance to the next concept in canonical `power-concepts.js` order. Reuse its mapped existing verified questions, calculate the deficit to 50, and generate the first maximum-25-question `pending_validation` checkpoint. Do not mark newly generated questions verified before independent QA.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
