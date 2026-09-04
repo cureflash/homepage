@@ -8,11 +8,12 @@ Phase 4.1 Concept inventory is complete at 113 concepts. Phase 4.2 Canonical kno
 
 ## Completed in this run
 
-Reconciled the existing verified unit-83 questions against the 4 canonical `takken-concept-real-estate-transfer-income` knowledge items without changing any Phase 2/3 question content or beginning Phase 4.3.
+Added and source-checked 10 canonical knowledge items for `takken-concept-land-price-public-notice` without changing any existing Phase 2/3 question content or beginning Phase 4.3.
 
-- `takken-q-83-001` maps only to `takken-k-real-estate-transfer-income-separate-taxation`.
-- `takken-q-83-002` maps only to `takken-k-real-estate-transfer-income-classification-reference-date` and `takken-k-real-estate-transfer-income-long-term-over-five-years`.
-- `takken-k-real-estate-transfer-income-short-term-five-years-or-less` remains an explicit Phase 4.3 deficit because neither existing unit-83 question directly measures that rule.
+- The canonical items separately model the annual January 1/unit-area normal price, the statutory normal-price definition, and the vacant-land assumption for buildings or use/benefit-restricting rights.
+- They separately model Land Appraisal Committee authority, the requirement to obtain appraisals from 2 or more real-estate appraisers, and consideration of the transaction-comparison, income-capitalization, and cost approaches.
+- They also preserve exam-relevant effects of the system: Official Gazette publication, use of public-notice prices as a transaction indicator, mandatory benchmark use by appraisers for normal-price appraisal in public-notice areas, and benchmark use for specified public-project acquisitions.
+- Primary evidence was independently rechecked against the current e-Gov `地価公示法` and the Ministry of Land, Infrastructure, Transport and Tourism `地価公示制度の概要` page.
 - Existing Phase 2/3 question text, choices, answers, explanations, source references, and validation statuses remain unchanged.
 - Phase 4.3 question generation, print generation, and app linkage were not started.
 
@@ -23,18 +24,18 @@ Reconciled the existing verified unit-83 questions against the 4 canonical `takk
 - Phase 3: complete — checked 163 / verified 163 / revision 0 / rejected 0 / pending 0
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
-- Phase 4.2: active — 106/113 concepts with canonical knowledge extraction complete; 106/113 fully reconciled through existing-question mapping
-- Concepts with canonical knowledge items: 106
-- Canonical knowledge items: 592
+- Phase 4.2: active — 107/113 concepts with canonical knowledge extraction complete; 106/113 fully reconciled through existing-question mapping
+- Concepts with canonical knowledge items: 107
+- Canonical knowledge items: 602
 - Existing verified questions mapped: 136
-- Explicit unmapped knowledge gaps: 393
+- Explicit unmapped knowledge gaps: 403
 - This run generated / checked / verified / revision: 0 / 0 / 0 / 0
 - Phase 4.3: not started
 - Prints/app integration: not started
 
 ## Exact next start
 
-Begin canonical knowledge extraction and source verification for `takken-concept-land-price-public-notice`. Keep Phase 4.3 unstarted.
+Reconcile `takken-q-84-001` and `takken-q-84-002` against the 10 canonical `takken-concept-land-price-public-notice` knowledge items. Map only knowledge each question directly measures. Keep Phase 4.3 unstarted.
 
 ## publication invariant
 
