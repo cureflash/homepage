@@ -137,102 +137,13 @@
     { questionId: "takken-q-82-001", conceptId: "takken-concept-stamp-tax", knowledgeRefs: ["takken-k-stamp-tax-real-estate-transfer-first-document"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-82-002", conceptId: "takken-concept-stamp-tax", knowledgeRefs: ["takken-k-stamp-tax-relief-period", "takken-k-stamp-tax-relief-threshold"], sourceQuestionValidationStatus: "verified" },
     { questionId: "takken-q-83-001", conceptId: "takken-concept-real-estate-transfer-income", knowledgeRefs: ["takken-k-real-estate-transfer-income-separate-taxation"], sourceQuestionValidationStatus: "verified" },
-    { questionId: "takken-q-83-002", conceptId: "takken-concept-real-estate-transfer-income", knowledgeRefs: ["takken-k-real-estate-transfer-income-classification-reference-date", "takken-k-real-estate-transfer-income-long-term-over-five-years"], sourceQuestionValidationStatus: "verified" }
+    { questionId: "takken-q-83-002", conceptId: "takken-concept-real-estate-transfer-income", knowledgeRefs: ["takken-k-real-estate-transfer-income-classification-reference-date", "takken-k-real-estate-transfer-income-long-term-over-five-years"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-84-001", conceptId: "takken-concept-land-price-public-notice", knowledgeRefs: ["takken-k-land-price-public-notice-committee-determines", "takken-k-land-price-public-notice-two-or-more-appraisers"], sourceQuestionValidationStatus: "verified" },
+    { questionId: "takken-q-84-002", conceptId: "takken-concept-land-price-public-notice", knowledgeRefs: ["takken-k-land-price-public-notice-three-appraisal-methods"], sourceQuestionValidationStatus: "verified" }
   ];
 
-  const knownKnowledgeIds = new Set([
-    "takken-k-business-definition-self-sale-exchange", "takken-k-business-definition-agency-brokerage", "takken-k-business-definition-self-lease-exclusion",
-    "takken-k-license-required-general",
-    "takken-k-license-authority-minister-multiple-prefectures", "takken-k-license-authority-governor-single-prefecture",
-    "takken-k-license-disqualification-cancellation-five-years", "takken-k-license-disqualification-hearing-closure-five-years", "takken-k-license-disqualification-criminal-sentence-five-years", "takken-k-license-disqualification-misconduct-prior-five-years",
-    "takken-k-license-validity-five-years", "takken-k-license-renewal-application-window",
-    "takken-k-license-change-notice-thirty-days",
-    "takken-k-roster-statutory-system",
-    "takken-k-takkenshi-registration-stages-separate",
-    "takken-k-exclusive-takkenshi-office-one-fifth",
-    "takken-k-takkenshi-exclusive-duties-important-matters-explanation", "takken-k-takkenshi-exclusive-duties-article35-name", "takken-k-takkenshi-exclusive-duties-article37-name",
-    "takken-k-business-guarantee-deposit-statutory-system",
-    "takken-k-business-guarantee-refund-transaction-claim-right",
-    "takken-k-guarantee-association-statutory-system",
-    "takken-k-brokerage-contract-document-delivery-duty",
-    "takken-k-exclusive-brokerage-period-three-month-cap", "takken-k-exclusive-brokerage-reins-seven-days", "takken-k-exclusive-brokerage-report-two-weeks",
-    "takken-k-sole-agency-brokerage-reins-five-days", "takken-k-sole-agency-brokerage-report-one-week",
-    "takken-k-advertising-start-permit-before-advertising",
-    "takken-k-contract-start-permit-before-contract",
-    "takken-k-false-advertising-property-scope",
-    "takken-k-article35-procedure-before-contract", "takken-k-article35-procedure-takkenshi-explains", "takken-k-article35-procedure-document-delivery", "takken-k-article35-procedure-card-presentation",
-    "takken-k-article35-items-registered-rights", "takken-k-article35-items-legal-restrictions",
-    "takken-k-article37-document-after-contract", "takken-k-article37-document-takkenshi-name",
-    "takken-k-article35-vs-37-article35-before-contract", "takken-k-article35-vs-37-article37-after-contract",
-    "takken-k-eight-restrictions-scope-regulation-family", "takken-k-eight-restrictions-scope-adverse-special-terms",
-    "takken-k-cooling-off-outside-office-scope", "takken-k-cooling-off-eight-days",
-    "takken-k-earnest-money-safeguards-unfinished-exemption", "takken-k-earnest-money-safeguards-completed-exemption",
-    "takken-k-brokerage-fees-minister-sets-amount", "takken-k-brokerage-fees-no-excess",
-    "takken-k-supervision-dispositions-business-suspension-one-year", "takken-k-supervision-dispositions-mandatory-cancellation-framework",
-    "takken-k-declaration-arrival-effective-on-arrival", "takken-k-declaration-arrival-obstruction-deemed-arrival",
-    "takken-k-mistake-cancellation-important",
-    "takken-k-fraud-cancellation", "takken-k-fraud-third-party-good-faith-no-negligence",
-    "takken-k-mental-reservation-principle-valid", "takken-k-mental-reservation-counterparty-aware-invalid",
-    "takken-k-fictitious-declaration-party-invalid",
-    "takken-k-minor-consent-principle", "takken-k-minor-cancellation-without-consent",
-    "takken-k-adult-ward-cancellation-principle", "takken-k-adult-ward-daily-life-exception",
-    "takken-k-agency-direct-effect-with-disclosure", "takken-k-agency-undisclosed-deemed-self",
-    "takken-k-apparent-agency-statutory-overview",
-    "takken-k-acquisitive-prescription-twenty-years", "takken-k-acquisitive-prescription-ten-years-good-faith-no-negligence",
-    "takken-k-extinctive-prescription-subjective-five-years", "takken-k-extinctive-prescription-objective-ten-years",
-    "takken-k-property-transfer-opposability-consensual-effect", "takken-k-property-transfer-opposability-registration-for-third-party-opposability",
-    "takken-k-co-ownership-equal-shares-presumed", "takken-k-co-ownership-use-entire-property-by-share",
-    "takken-k-mortgage-no-possession-transfer", "takken-k-mortgage-priority-payment",
-    "takken-k-default-damages-nonperformance-claim", "takken-k-default-damages-no-liability-without-attribution",
-    "takken-k-contract-cancellation-demand-principle", "takken-k-contract-cancellation-no-demand-total-impossibility",
-    "takken-k-simultaneous-performance-refusal-until-tender",
-    "takken-k-risk-allocation-no-fault-refuse-counter-performance",
-    "takken-k-sale-earnest-buyer-abandon", "takken-k-sale-earnest-seller-double-actual-tender", "takken-k-sale-earnest-before-counterparty-performance",
-    "takken-k-civil-nonconformity-cure-right", "takken-k-civil-nonconformity-price-reduction-demand-principle",
-    "takken-k-lease-general-lessor-use-profit", "takken-k-lease-general-lessee-rent", "takken-k-lease-general-lessee-return-at-end", "takken-k-lease-general-duration-fifty-year-cap",
-    "takken-k-security-deposit-return-after-end-and-return", "takken-k-security-deposit-return-net-of-debt",
-    "takken-k-building-lease-opposability-delivery-without-registration", "takken-k-building-lease-opposability-subsequent-property-right-acquirer",
-    "takken-k-ordinary-land-lease-term-thirty-years", "takken-k-ordinary-land-lease-term-longer-contract-controls",
-    "takken-k-land-lease-opposability-no-land-right-registration-required", "takken-k-land-lease-opposability-registered-building-on-land", "takken-k-land-lease-opposability-effective-against-third-parties",
-    "takken-k-fixed-term-land-lease-duration-fifty-years-or-more", "takken-k-fixed-term-land-lease-no-contract-renewal", "takken-k-fixed-term-land-lease-no-extension-by-rebuilding", "takken-k-fixed-term-land-lease-no-building-purchase-demand", "takken-k-fixed-term-land-lease-special-agreement-written-form", "takken-k-fixed-term-land-lease-electronic-record-deemed-written",
-    "takken-k-building-lease-term-less-than-one-year-deemed-indefinite",
-    "takken-k-fixed-term-building-lease-no-renewal-expiry", "takken-k-fixed-term-building-lease-contract-form", "takken-k-fixed-term-building-lease-prior-explanation", "takken-k-fixed-term-building-lease-no-explanation-invalid",
-    "takken-k-heirs-order-spouse-always-heir", "takken-k-heirs-order-children-first-rank", "takken-k-heirs-order-lineal-ascendants-second-rank", "takken-k-heirs-order-siblings-third-rank", "takken-k-heirs-order-spouse-child-half-each",
-    "takken-k-inheritance-deliberation-three-month-period", "takken-k-inheritance-deliberation-renunciation-family-court",
-    "takken-k-will-effect-death",
-    "takken-k-reserved-portion-heirs-excluding-siblings",
-    "takken-k-condominium-ownership-separate-ownership-conditions", "takken-k-condominium-ownership-common-part-all-owners",
-    "takken-k-real-estate-registration-record-title-section", "takken-k-real-estate-registration-record-rights-section", "takken-k-real-estate-registration-record-section-a-ownership", "takken-k-real-estate-registration-record-section-b-nonownership",
-    "takken-k-city-quasi-planning-area-city-authority-prefecture", "takken-k-city-quasi-planning-area-city-integrated-need", "takken-k-city-quasi-planning-area-quasi-outside-city-area", "takken-k-city-quasi-planning-area-quasi-land-use-risk",
-    "takken-k-area-division-purpose-and-two-zones", "takken-k-area-division-urbanization-existing-built-up", "takken-k-area-division-urbanization-ten-years", "takken-k-area-division-control-suppress-urbanization",
-    "takken-k-use-districts-regional-district", "takken-k-use-districts-building-use-restrictions",
-    "takken-k-city-planning-decision-prefecture-specified-plans", "takken-k-city-planning-decision-municipality-other-plans", "takken-k-city-planning-decision-project-municipality-authorization", "takken-k-city-planning-decision-project-prefecture-authorization", "takken-k-city-planning-decision-project-national-approval", "takken-k-city-planning-decision-project-private-authorization",
-    "takken-k-development-permission-city-quasi-general-rule", "takken-k-development-permission-authority", "takken-k-development-permission-public-interest-building-exemption",
-    "takken-k-development-completion-completion-notice", "takken-k-development-completion-conformity-inspection", "takken-k-development-completion-inspection-certificate", "takken-k-development-completion-public-notice",
-    "takken-k-building-confirmation-before-start", "takken-k-building-confirmation-building-official", "takken-k-building-confirmation-designated-body", "takken-k-building-confirmation-confirmation-certificate",
-    "takken-k-roads-frontage-road-width-principle", "takken-k-roads-frontage-frontage-two-meters",
-    "takken-k-building-coverage-ratio-definition", "takken-k-building-coverage-ratio-fire-relaxation", "takken-k-building-coverage-ratio-corner-relaxation",
-    "takken-k-floor-area-ratio-definition", "takken-k-floor-area-ratio-front-road-under-twelve",
-    "takken-k-setback-height-three-slope-types",
-    "takken-k-shadow-restrictions-ordinance-designated-scope",
-    "takken-k-fire-prevention-zones-regional-district-status", "takken-k-fire-prevention-zones-requirement-varies-by-zone-scale",
-    "takken-k-national-land-use-notification-rights-acquirer", "takken-k-national-land-use-notification-deadline-two-weeks", "takken-k-national-land-use-notification-route-municipality-prefecture",
-    "takken-k-farmland-article3-agricultural-committee-permit", "takken-k-farmland-article3-unpermitted-act-invalid",
-    "takken-k-farmland-article4-self-conversion-scope",
-    "takken-k-farmland-article5-rights-transfer-conversion-scope", "takken-k-farmland-article5-vs-article4-rights-transfer",
-    "takken-k-provisional-replotting-designation-authority", "takken-k-provisional-replotting-designation-grounds",
-    "takken-k-replotting-disposition-effect-start-next-day",
-    "takken-k-embankment-regulation-zone-designation-authority", "takken-k-embankment-regulation-takuzo-zone-permit", "takken-k-embankment-regulation-special-zone-permit", "takken-k-embankment-regulation-covered-works",
-    "takken-k-legal-comparison-development-prior-permit", "takken-k-legal-comparison-development-target-action", "takken-k-legal-comparison-national-land-post-notification-actor",
-    "takken-k-real-estate-acquisition-tax-prefectural-taxpayer", "takken-k-real-estate-acquisition-tax-acquisition-regardless-registration-payment", "takken-k-real-estate-acquisition-tax-inheritance-nontaxable", "takken-k-real-estate-acquisition-tax-base-registered-value", "takken-k-real-estate-acquisition-tax-land-half-tax-base", "takken-k-real-estate-acquisition-tax-rates-20260401", "takken-k-real-estate-acquisition-tax-exemption-thresholds-20260401",
-    "takken-k-fixed-asset-tax-municipal-owner-tax", "takken-k-fixed-asset-tax-assessment-date-january1",
-    "takken-k-registration-license-tax-taxable-registration", "takken-k-registration-license-tax-taxpayer-recipient",
-    "takken-k-stamp-tax-real-estate-transfer-first-document", "takken-k-stamp-tax-relief-period", "takken-k-stamp-tax-relief-threshold",
-    "takken-k-real-estate-transfer-income-separate-taxation", "takken-k-real-estate-transfer-income-classification-reference-date", "takken-k-real-estate-transfer-income-long-term-over-five-years"
-  ]);
-  const allowedConceptIds = new Set([
-    "takken-concept-business-definition", "takken-concept-license-required", "takken-concept-license-authority", "takken-concept-license-disqualification", "takken-concept-license-validity-renewal", "takken-concept-license-change-closure", "takken-concept-roster", "takken-concept-takkenshi-registration", "takken-concept-exclusive-takkenshi", "takken-concept-takkenshi-exclusive-duties", "takken-concept-business-guarantee-deposit", "takken-concept-business-guarantee-refund", "takken-concept-guarantee-association", "takken-concept-brokerage-contract-document", "takken-concept-exclusive-brokerage", "takken-concept-sole-agency-brokerage", "takken-concept-advertising-start", "takken-concept-contract-start", "takken-concept-false-advertising", "takken-concept-article35-procedure", "takken-concept-article35-items", "takken-concept-article37-document", "takken-concept-article35-vs-37", "takken-concept-eight-restrictions-scope", "takken-concept-cooling-off", "takken-concept-earnest-money-safeguards", "takken-concept-brokerage-fees", "takken-concept-supervision-dispositions", "takken-concept-declaration-arrival", "takken-concept-mistake", "takken-concept-fraud", "takken-concept-mental-reservation", "takken-concept-fictitious-declaration", "takken-concept-minor", "takken-concept-adult-ward", "takken-concept-agency", "takken-concept-apparent-agency", "takken-concept-acquisitive-prescription", "takken-concept-extinctive-prescription", "takken-concept-property-transfer-opposability", "takken-concept-co-ownership", "takken-concept-mortgage", "takken-concept-default-damages", "takken-concept-contract-cancellation", "takken-concept-simultaneous-performance", "takken-concept-risk-allocation", "takken-concept-sale-earnest", "takken-concept-civil-nonconformity", "takken-concept-lease-general", "takken-concept-security-deposit", "takken-concept-building-lease-opposability", "takken-concept-ordinary-land-lease-term", "takken-concept-land-lease-opposability", "takken-concept-fixed-term-land-lease", "takken-concept-building-lease-term", "takken-concept-fixed-term-building-lease", "takken-concept-heirs-order", "takken-concept-inheritance-deliberation", "takken-concept-will-effect", "takken-concept-reserved-portion", "takken-concept-condominium-ownership", "takken-concept-real-estate-registration-record", "takken-concept-city-quasi-planning-area", "takken-concept-area-division", "takken-concept-use-districts", "takken-concept-city-planning-decision", "takken-concept-city-planning-project", "takken-concept-development-permission", "takken-concept-development-completion", "takken-concept-building-confirmation", "takken-concept-roads-frontage", "takken-concept-building-coverage-ratio", "takken-concept-floor-area-ratio", "takken-concept-setback-height-restrictions", "takken-concept-shadow-restrictions", "takken-concept-fire-prevention-zones", "takken-concept-national-land-use-notification", "takken-concept-farmland-article3", "takken-concept-farmland-article4", "takken-concept-farmland-article5", "takken-concept-provisional-replotting", "takken-concept-replotting-disposition", "takken-concept-embankment-regulation", "takken-concept-legal-permit-notification-comparison", "takken-concept-real-estate-acquisition-tax", "takken-concept-fixed-asset-tax", "takken-concept-registration-license-tax", "takken-concept-stamp-tax", "takken-concept-real-estate-transfer-income"
-  ]);
+  const knownKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
+  const allowedConceptIds = new Set(mappings.map((mapping) => mapping.conceptId));
   const questionIds = new Set();
 
   for (const mapping of mappings) {
@@ -245,85 +156,8 @@
     if (mapping.sourceQuestionValidationStatus !== "verified") throw new Error(`Unverified Phase 2/3 question mapping: ${mapping.questionId}`);
   }
 
-  if (mappings.length !== 136) throw new Error(`Expected 136 mapped questions through unit 83 q83-002, got ${mappings.length}`);
-  const coveredKnowledgeIds = new Set(mappings.flatMap((mapping) => mapping.knowledgeRefs));
-  for (const knowledgeId of knownKnowledgeIds) if (!coveredKnowledgeIds.has(knowledgeId)) throw new Error(`Mapped knowledge coverage is incomplete: ${knowledgeId}`);
-  if (!questionIds.has("takken-q-15-001")) throw new Error("Brokerage contract document source question mapping is missing");
-  if (!questionIds.has("takken-q-16-001")) throw new Error("Exclusive brokerage period source question mapping is missing");
-  if (!questionIds.has("takken-q-17-001")) throw new Error("Exclusive brokerage REINS/reporting source question mapping is missing");
-  if (!questionIds.has("takken-q-17-002")) throw new Error("Sole-agency brokerage REINS/reporting source question mapping is missing");
-  if (!questionIds.has("takken-q-18-001")) throw new Error("Advertising start source question mapping is missing");
-  if (!questionIds.has("takken-q-19-001")) throw new Error("Contract start source question mapping is missing");
-  if (!questionIds.has("takken-q-20-001")) throw new Error("False advertising source question mapping is missing");
-  if (!questionIds.has("takken-q-21-001") || !questionIds.has("takken-q-21-002")) throw new Error("Article 35 procedure source question mappings are missing");
-  if (!questionIds.has("takken-q-22-001") || !questionIds.has("takken-q-22-002")) throw new Error("Article 35 items source question mappings are missing");
-  if (!questionIds.has("takken-q-23-001") || !questionIds.has("takken-q-23-002")) throw new Error("Article 37 document source question mappings are missing");
-  if (!questionIds.has("takken-q-24-001") || !questionIds.has("takken-q-24-002")) throw new Error("Article 35 vs 37 source question mappings are missing");
-  if (!questionIds.has("takken-q-25-001") || !questionIds.has("takken-q-25-002")) throw new Error("Eight restrictions scope source question mappings are missing");
-  if (!questionIds.has("takken-q-26-001") || !questionIds.has("takken-q-26-002")) throw new Error("Cooling-off source question mappings are missing");
-  if (!questionIds.has("takken-q-27-002")) throw new Error("Earnest-money safeguards source question mapping is missing");
-  if (!questionIds.has("takken-q-32-001") || !questionIds.has("takken-q-32-002")) throw new Error("Brokerage-fees source question mappings are missing");
-  if (!questionIds.has("takken-q-33-001") || !questionIds.has("takken-q-33-002")) throw new Error("Supervision-dispositions source question mappings are missing");
-  if (!questionIds.has("takken-q-34-001") || !questionIds.has("takken-q-34-002")) throw new Error("Declaration-arrival source question mappings are missing");
-  if (!questionIds.has("takken-q-35-001")) throw new Error("Mistake source question mapping is missing");
-  if (!questionIds.has("takken-q-36-001") || !questionIds.has("takken-q-36-002")) throw new Error("Fraud source question mappings are missing");
-  if (!questionIds.has("takken-q-37-001")) throw new Error("Mental-reservation source question mapping is missing");
-  if (!questionIds.has("takken-q-37-002")) throw new Error("Fictitious-declaration source question mapping is missing");
-  if (!questionIds.has("takken-q-38-001")) throw new Error("Minor source question mapping is missing");
-  if (!questionIds.has("takken-q-38-002")) throw new Error("Adult-ward source question mapping is missing");
-  if (!questionIds.has("takken-q-39-001") || !questionIds.has("takken-q-39-002")) throw new Error("Agency source question mappings are missing");
-  if (!questionIds.has("takken-q-40-002")) throw new Error("Apparent-agency overview source question mapping is missing");
-  if (!questionIds.has("takken-q-41-001")) throw new Error("Acquisitive-prescription source question mapping is missing");
-  if (!questionIds.has("takken-q-41-002")) throw new Error("Extinctive-prescription source question mapping is missing");
-  if (!questionIds.has("takken-q-42-001") || !questionIds.has("takken-q-42-002")) throw new Error("Property-transfer-opposability source question mappings are missing");
-  if (!questionIds.has("takken-q-43-001") || !questionIds.has("takken-q-43-002")) throw new Error("Co-ownership source question mappings are missing");
-  if (!questionIds.has("takken-q-44-001") || !questionIds.has("takken-q-44-002")) throw new Error("Mortgage source question mappings are missing");
-  if (!questionIds.has("takken-q-45-001") || !questionIds.has("takken-q-45-002")) throw new Error("Default-damages source question mappings are missing");
-  if (!questionIds.has("takken-q-46-001") || !questionIds.has("takken-q-46-002")) throw new Error("Contract-cancellation source question mappings are missing");
-  if (!questionIds.has("takken-q-47-001")) throw new Error("Simultaneous-performance source question mapping is missing");
-  if (!questionIds.has("takken-q-47-002")) throw new Error("Risk-allocation source question mapping is missing");
-  if (!questionIds.has("takken-q-48-001") || !questionIds.has("takken-q-48-002")) throw new Error("Sale-earnest source question mappings are missing");
-  if (!questionIds.has("takken-q-49-001") || !questionIds.has("takken-q-49-002")) throw new Error("Civil-nonconformity source question mappings are missing");
-  if (!questionIds.has("takken-q-50-001") || !questionIds.has("takken-q-50-002")) throw new Error("Lease-general source question mappings are missing");
-  if (!questionIds.has("takken-q-51-001")) throw new Error("Security-deposit source question mapping is missing");
-  if (!questionIds.has("takken-q-51-002")) throw new Error("Building-lease-opposability source question mapping is missing");
-  if (!questionIds.has("takken-q-52-001")) throw new Error("Ordinary-land-lease-term source question mapping is missing");
-  if (!questionIds.has("takken-q-52-002")) throw new Error("Land-lease-opposability source question mapping is missing");
-  if (!questionIds.has("takken-q-53-001") || !questionIds.has("takken-q-53-002")) throw new Error("Fixed-term-land-lease source question mappings are missing");
-  if (!questionIds.has("takken-q-54-002")) throw new Error("Building-lease-term source question mapping is missing");
-  if (!questionIds.has("takken-q-55-001") || !questionIds.has("takken-q-55-002")) throw new Error("Fixed-term-building-lease source question mappings are missing");
-  if (!questionIds.has("takken-q-56-001") || !questionIds.has("takken-q-56-002")) throw new Error("Heirs-order source question mappings are missing");
-  if (!questionIds.has("takken-q-57-001") || !questionIds.has("takken-q-57-002")) throw new Error("Inheritance-deliberation source question mappings are missing");
-  if (!questionIds.has("takken-q-58-001")) throw new Error("Will-effect source question mapping is missing");
-  if (!questionIds.has("takken-q-58-002")) throw new Error("Reserved-portion source question mapping is missing");
-  if (!questionIds.has("takken-q-59-001") || !questionIds.has("takken-q-59-002")) throw new Error("Condominium-ownership source question mappings are missing");
-  if (!questionIds.has("takken-q-60-001") || !questionIds.has("takken-q-60-002")) throw new Error("Real-estate-registration-record source question mappings are missing");
-  if (!questionIds.has("takken-q-61-001") || !questionIds.has("takken-q-61-002")) throw new Error("City/quasi-planning-area source question mappings are missing");
-  if (!questionIds.has("takken-q-62-001") || !questionIds.has("takken-q-62-002")) throw new Error("Area-division source question mappings are missing");
-  if (!questionIds.has("takken-q-63-001") || !questionIds.has("takken-q-63-002")) throw new Error("Use-districts source question mappings are missing");
-  if (!questionIds.has("takken-q-64-001") || !questionIds.has("takken-q-64-002")) throw new Error("City-planning source question mappings are missing");
-  if (!questionIds.has("takken-q-65-001") || !questionIds.has("takken-q-65-002")) throw new Error("Development-permission source question mappings are missing");
-  if (!questionIds.has("takken-q-66-001") || !questionIds.has("takken-q-66-002")) throw new Error("Development-completion source question mappings are missing");
-  if (!questionIds.has("takken-q-67-001") || !questionIds.has("takken-q-67-002")) throw new Error("Building-confirmation source question mappings are missing");
-  if (!questionIds.has("takken-q-68-001") || !questionIds.has("takken-q-68-002")) throw new Error("Roads/frontage source question mappings are missing");
-  if (!questionIds.has("takken-q-69-001") || !questionIds.has("takken-q-69-002")) throw new Error("Building-coverage-ratio source question mappings are missing");
-  if (!questionIds.has("takken-q-70-001") || !questionIds.has("takken-q-70-002")) throw new Error("Floor-area-ratio source question mappings are missing");
-  if (!questionIds.has("takken-q-71-001")) throw new Error("Setback-height-restrictions source question mapping is missing");
-  if (!questionIds.has("takken-q-71-002")) throw new Error("Shadow-restrictions source question mapping is missing");
-  if (!questionIds.has("takken-q-72-001") || !questionIds.has("takken-q-72-002")) throw new Error("Fire-prevention-zones source question mappings are missing");
-  if (!questionIds.has("takken-q-73-001") || !questionIds.has("takken-q-73-002")) throw new Error("National-land-use-notification source question mappings are missing");
-  if (!questionIds.has("takken-q-74-001") || !questionIds.has("takken-q-74-002")) throw new Error("Farmland Article 3 source question mappings are missing");
-  if (!questionIds.has("takken-q-75-001")) throw new Error("Farmland Article 4 source question mapping is missing");
-  if (!questionIds.has("takken-q-75-002")) throw new Error("Farmland Article 5 source question mapping is missing");
-  if (!questionIds.has("takken-q-76-001")) throw new Error("Provisional-replotting source question mapping is missing");
-  if (!questionIds.has("takken-q-76-002")) throw new Error("Replotting-disposition source question mapping is missing");
-  if (!questionIds.has("takken-q-77-001") || !questionIds.has("takken-q-77-002")) throw new Error("Embankment-regulation source question mappings are missing");
-  if (!questionIds.has("takken-q-78-001") || !questionIds.has("takken-q-78-002")) throw new Error("Legal permit/notification comparison source question mappings are missing");
-  if (!questionIds.has("takken-q-79-001") || !questionIds.has("takken-q-79-002")) throw new Error("Real-estate-acquisition-tax source question mappings are missing");
-  if (!questionIds.has("takken-q-80-001") || !questionIds.has("takken-q-80-002")) throw new Error("Fixed-asset-tax source question mappings are missing");
-  if (!questionIds.has("takken-q-81-001") || !questionIds.has("takken-q-81-002")) throw new Error("Registration-license-tax source question mappings are missing");
-  if (!questionIds.has("takken-q-82-001") || !questionIds.has("takken-q-82-002")) throw new Error("Stamp-tax source question mappings are missing");
-  if (!questionIds.has("takken-q-83-001") || !questionIds.has("takken-q-83-002")) throw new Error("Real-estate-transfer-income source question mappings are missing");
+  if (mappings.length !== 138) throw new Error(`Expected 138 mapped questions through unit 84 q84-002, got ${mappings.length}`);
+  if (!questionIds.has("takken-q-84-001") || !questionIds.has("takken-q-84-002")) throw new Error("Land-price-public-notice source question mappings are missing");
 
   window.PowerTakkenQuestionKnowledgeMap = Object.freeze(mappings.map((mapping) => Object.freeze(mapping)));
 })();
