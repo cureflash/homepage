@@ -39,22 +39,19 @@ Final Phase 4.2 totals:
 - 432 explicit knowledge-item coverage gaps for Phase 4.3
 - Existing Phase 2/3 question text, choices, answers, explanations, source references and validation statuses unchanged
 
-Final Unit 90 checkpoint:
-- [x] `takken-q-90-001` directly maps to `takken-k-five-question-exemption-normal-50-registered-45` and `takken-k-five-question-exemption-five-questions`.
-- [x] `takken-q-90-002` directly maps to `takken-k-five-question-exemption-course-eligibility`, `takken-k-five-question-exemption-completion-exam-required`, and `takken-k-five-question-exemption-three-year-validity`.
-- [x] Phase 4.2 is complete.
-
 ### 4.3 Fifty-question drill expansion
 - [ ] Target 50 verified four-choice questions per concept, reusing verified existing questions and generating only the deficit.
 - [ ] Reject superficial number/name/template swaps.
 
 `takken-concept-business-definition` progress:
 - [x] Reused 2 existing independently verified questions.
-- [x] Generated first 25 new questions as `pending_validation` in `qualifications/takken/data/power-questions-business-definition.js`.
-- [x] Generated the remaining 23-question deficit as `pending_validation` in `qualifications/takken/data/power-questions-business-definition-batch2.js`; the concept now has 50 total questions including the 2 reused verified questions.
-- [ ] Independently QA all 48 newly generated questions before any new question becomes verified.
+- [x] Generated 48 new questions; total concept representation is 50/50.
+- [x] Independently QA'd `takken-power-q-business-definition-001`–`025`.
+- [x] Repaired `013` from unspecified `土地` to `宅地` so the stem unambiguously falls within the statutory subject matter, then re-solved it successfully.
+- [x] Promoted `001`–`025` to `verified` after QA.
+- [ ] Independently QA `026`–`048`; these remain `pending_validation`.
 
-Exact continuation: stay on `takken-concept-business-definition` and begin independent QA of the newly generated Phase 4.3 questions in stable-ID order, starting at `takken-power-q-business-definition-001`. Use 25-question checkpoints; do not inspect saved answers/explanations/source refs before independently solving each question.
+Exact continuation: stay on `takken-concept-business-definition` and independently QA `takken-power-q-business-definition-026`–`048` in stable-ID order. Do not begin the next concept until all generated questions for this concept complete QA.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
