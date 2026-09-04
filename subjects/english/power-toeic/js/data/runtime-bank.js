@@ -1,5 +1,6 @@
 import { InMemoryQuestionBank } from './question-bank-adapter.js';
 import { demoQuestions, demoSkills } from './fixtures.js';
+import { buildPilotRuntime } from './pilot-question-set.js';
 
 export async function loadRuntimeQuestionBank({ url = './js/data/runtime/beta-bank.json' } = {}) {
   try {
@@ -10,14 +11,16 @@ export async function loadRuntimeQuestionBank({ url = './js/data/runtime/beta-ba
     if (!Array.isArray(payload.questions) || !payload.questions.length) throw new Error('runtime bank has no questions');
     if (!Array.isArray(payload.skills) || !payload.skills.length) throw new Error('runtime bank has no skills');
     if (payload.questions.some((question) => question.validationStatus !== 'verified')) throw new Error('runtime bank contains non-verified question');
+
+    const pilot = buildPilotRuntime(payload);
     return {
-      repository: new InMemoryQuestionBank({ questions: payload.questions, skills: payload.skills }),
+      repository: new InMemoryQuestionBank({ questions: pilot.questions, skills: pilot.skills }),
       runtimeInfo: Object.freeze({
         source: 'beta_verified_bank',
-        questionCount: payload.questions.length,
-        skillCount: payload.skills.length,
-        productionApproved: Boolean(payload.productionApproved),
-        notice: payload.notice ?? ''
+        questionCount: pilot.questions.length,
+        skillCount: pilot.skills.length,
+        productionApproved: false,
+        notice: '判断ルール型の解説を確認する30問パイロットです。'
       })
     };
   } catch (error) {
