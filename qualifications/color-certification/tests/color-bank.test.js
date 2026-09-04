@@ -188,10 +188,11 @@ test('quiz UI omits runtime notice and keeps answer feedback to one heading', ()
 });
 
 test('browser-facing Power Color assets use the same cache-busting version', () => {
-  const version = '20260904-answer-feedback-v1';
+  const version = '20260904-quiz-sounds-v1';
   assert.match(indexHtml, new RegExp(`styles\\.css\\?v=${version}`));
   assert.match(indexHtml, new RegExp(`js/main\\.js\\?v=${version}`));
   assert.match(mainSource, new RegExp(`color-choice-renderer\\.js\\?v=${version}`));
+  assert.match(mainSource, new RegExp(`quiz-sounds\\.js\\?v=${version}`));
 });
 
 test('Power TOEIC shared repository/workout/session engine runs a color question', () => {
