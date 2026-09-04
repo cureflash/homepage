@@ -72,7 +72,7 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Audit Landscape p.120 `人工要素と自然要素の色彩が共存`; keep authoring source-blocked because public evidence confirms only the broad coexistence concept, not a sufficiently rich closed deterministic Grade 2 rule set. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-artificial-natural-source-audit.md`.
 - [x] Source-resolve Landscape p.120 `ライフサイクルの長い色彩` to a narrow deterministic nonvisual long-duration/surrounding-harmony/large-area/durability boundary. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-long-lifecycle-source-audit.md`.
 - [x] Create `pc2.landscape.long_lifecycle_color` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
-- [x] Add and pass the pre-promotion ID/schema/full-fingerprint/nonvisual/shared-renderer gate and normal shared-engine regression; workflow run `33661736671`, PR #563 merged as `548b14d26bee4f85570fdb56c865cbbb800ab591`.
+- [x] Add and pass the pre-promotion ID/schema/full-fingerprint/nonvisual/shared-renderer gate and normal Power Color regression; workflow run `33661736671`, PR #563 merged as `548b14d26bee4f85570fdb56c865cbbb800ab591`.
 - [x] Promote the 12 verified `pc2.landscape.long_lifecycle_color` records record-identically; runtime 288 → 300 and twenty-four → twenty-five skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-five promoted skills; Power Color CI `33665241835` succeeded and PR #567 merged as `0f246cc3056c51503c870f9af9fe24b3ea33c833`.
 - [x] Audit Landscape p.120 `大きな面積をもつ色彩`; keep source-blocked because current public authority does not expose a distinct sufficiently rich deterministic nonvisual rule set beyond adjacent/general large-area context. Audit: `docs/power-color/audits/2026-09-03-grade2-landscape-p120-large-area-source-audit.md`.
@@ -90,7 +90,7 @@ Grade 2 is active by explicit user override while the unresolved Grade 3 blocker
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-seven promoted skills; Power Color CI `33678211235` succeeded and PR #582 merged as `6d64629b0bd8f5c5f305fce21f1d1d48c3a4234a`.
 - [x] Source-resolve Landscape p.123 `色を測ることによる周辺環境の把握` to a narrow deterministic nonvisual visual-colorimetry/Munsell/JIS representation boundary.
 - [x] Create `pc2.landscape.surrounding_environment_measurement` pending-first and independently QA every record: 12/12 verified, pending 0, A/B/C/D=3/3/3/3.
-- [x] Add and pass the dedicated source/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal Power Color regression; workflow run `33678931801`, PR #584 merged as `abda2407f0f9339948b12a8b9017a9f78f2b3c4c`.
+- [x] Add and pass the dedicated source/full-fingerprint/nonvisual/shared-renderer pre-promotion gate and normal shared-engine regression; workflow run `33678931801`, PR #584 merged as `abda2407f0f9339948b12a8b9017a9f78f2b3c4c`.
 - [x] Promote the 12 verified `pc2.landscape.surrounding_environment_measurement` records record-identically; runtime 324 → 336 and twenty-seven → twenty-eight skills.
 - [x] Extend exact-equality/full-fingerprint/shared Power TOEIC engine coverage to twenty-eight promoted skills; promotion run `33679550547` succeeded and PR #586 merged as `c2aa6a4384d5a3dc7b967bf932b2486795cadbba`.
 - [x] Source-resolve Landscape p.123 `色を測ることによる周辺環境の把握`, author/independently QA 12/12 verified, and promote record-identically; runtime 324 → 336 and twenty-seven → twenty-eight skills. Authoring CI `33678931801`; promotion gate `33679550547`; PRs #584/#586.
@@ -109,8 +109,8 @@ Grade 1 is active by explicit user override while Grade 2 and Grade 3 remain inc
 - [x] Audit the current official Grade 1 TOC p.006→p.160 in official order; author only source-resolved/corroborated slices.
 - [x] Establish `grade1-runtime.json` and the record-identical Grade 1 promotion gate on the existing shared Power TOEIC question-bank/workout/session engine.
 - [x] Promote p.006 `pc1.culture.ancient_europe_materials` 8/8 verified records record-identically; Power Color CI `33817291831`; PR #730 merged as `273e5f4ebd3204e0f2405c7f72b93eab13d8e1a4`.
-- [x] Promote verified authoring in official order through p.050 `pc1.color_representation.cielab_p050`; runtime is 93 verified / pending 0 across eighteen skills. Latest promotion CI `33840974812`; PR #772 merged as `2d41bb619fb954d7bad282698f7a4dfc21cb77ce`.
-- [ ] Continue verified authoring promotion in official order from p.053 `pc1.color_representation.ostwald_hue_circle_p053`; keep p.035 `SOURCE_BLOCKED`, keep `productionApproved=false`, and preserve every recorded blocked/monitor-dependent topic.
+- [x] Promote verified authoring in official order through p.053 `pc1.color_representation.ostwald_hue_circle_p053`; runtime is 97 verified / pending 0 across nineteen skills. Latest promotion CI `33844823060`; PR #775 merged as `8133eeeebb74a448d95ca33976ac80dd2668ab10`.
+- [ ] Continue verified authoring promotion in official order from p.054 `pc1.color_representation.ostwald_color_notation_p054`; keep p.035 `SOURCE_BLOCKED`, keep `productionApproved=false`, and preserve every recorded blocked/monitor-dependent topic.
 
 ## Phase B — Explanation video series
 Start only after `color_database_complete: true`. Build the video-series plan/spec/status/handoff first, then produce one safe theme at a time through the existing `cureflash/makemovie` CSV/PowerPoint→YMM4→MP4 pipeline. Do not fork a new video engine.
