@@ -1,0 +1,30 @@
+name: Power Color Grade 1 p046 canonical sync temp
+
+on:
+  push:
+    branches:
+      - power-color/grade1-p046-sync-20260904-1409
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: ${{ !contains(github.event.head_commit.message, 'Sync Grade 1 p046 canonical docs') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Sync canonical docs
+        run: node tools/power-color-grade1-sync-p046.mjs
+      - name: Validate JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('docs/power-color/STATUS.json','utf8'))"
+      - name: Commit sync
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/power-color/STATUS.json docs/power-color/90_HANDOFF.md docs/power-color/60_GRADE1_EXECUTION_PLAN.md docs/power-color/61_GRADE1_SOURCE_INVENTORY.md
+          git commit -m "Sync Grade 1 p046 canonical docs"
+          git push origin HEAD:${GITHUB_REF_NAME}
