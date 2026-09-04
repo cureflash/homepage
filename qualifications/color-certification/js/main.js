@@ -1,7 +1,7 @@
 import { QuizSession } from '../../../subjects/english/power-toeic/js/core/session.js';
 import { createWorkoutRecipe, selectQuestionIds } from '../../../subjects/english/power-toeic/js/core/workout-builder.js';
 import { InMemoryQuestionBank } from '../../../subjects/english/power-toeic/js/data/question-bank-adapter.js';
-import { ColorChoiceRenderer } from './color-choice-renderer.js?v=20260830-color-name-swatches-v3';
+import { ColorChoiceRenderer } from './color-choice-renderer.js?v=20260904-answer-feedback-v1';
 
 async function loadJson(url) {
   const response = await fetch(url, { cache: 'no-store' });
@@ -26,7 +26,6 @@ const resultView = document.querySelector('[data-view="result"]');
 const progressEl = document.querySelector('[data-role="progress"]');
 const resultEl = document.querySelector('[data-role="result"]');
 const nextButton = document.querySelector('[data-action="next"]');
-document.querySelector('[data-role="notice"]').textContent = payload.notice;
 
 const renderer = new ColorChoiceRenderer({
   promptEl: document.querySelector('[data-role="prompt"]'),
