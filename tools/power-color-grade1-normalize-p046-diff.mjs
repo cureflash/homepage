@@ -26,3 +26,4 @@ if (promoted.questions.length !== 89 || promoted.skills.length !== 17) throw new
 if (JSON.stringify(promoted.questions.slice(-4)) !== JSON.stringify(authoring.questions)) throw new Error('questions not record-identical');
 if (JSON.stringify(promoted.skills.at(-1)) !== JSON.stringify(authoring.skill)) throw new Error('skill not record-identical');
 console.log('normalized runtime diff and preserved canonical p046 identity');
+// Trigger branch workflow after workflow definition is present.
