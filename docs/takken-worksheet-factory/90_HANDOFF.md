@@ -8,17 +8,17 @@ Phase 4.1 Concept inventory and Phase 4.2 canonical knowledge extraction / exist
 
 ## Completed in this run
 
-Completed the remaining QA for `takken-concept-business-definition` by adjudicating `takken-power-q-business-definition-026`–`048` against the canonical statutory transaction categories.
+Advanced to canonical next concept `takken-concept-license-required`.
 
-- 23 checked.
-- 23 verified.
-- No repairs, answer-index changes, knowledge-ref changes or source-ref changes were required.
-- All 48 generated questions for this concept are now `verified`.
-- Together with the 2 reused Phase 2/3 verified questions, the concept is complete at 50/50 represented questions.
-- Phase 2/3 assets and statuses were not modified.
+- Reused mapped existing verified question `takken-q-02-001`.
+- Canonical knowledge scope remains the single verified item `takken-k-license-required-general`: a person intending to conduct宅地建物取引業 must obtain a Minister of Land, Infrastructure, Transport and Tourism or prefectural governor license; individual/corporation distinction does not remove the duty; conduct outside the statutory宅建業 definition does not create this license duty.
+- Deficit to the 50-question target is 49 new questions.
+- Generated first checkpoint `takken-power-q-license-required-001`–`025` in `qualifications/takken/data/power-questions-license-required.js`.
+- All 25 new questions remain `pending_validation`.
+- Answer positions are A/B/C/D = 7/6/6/6.
+- File-local guards enforce stable IDs, nonduplicate stems, four distinct choices, answer-index bounds, canonical knowledge/source references, 2026-04-01 legal version, pending-only validation status, and answer-position balance.
+- No Phase 2/3 question or validation state was changed.
 - No print or app integration work was started.
-
-The legal boundary used for adjudication remains: self-conducted sale/exchange of land/buildings is within the statutory business definition; agency/brokerage of sale/exchange/lease is within it; self-lease is not. The 2026-04-01 legal cutoff remains unchanged.
 
 ## Status after this run
 
@@ -29,21 +29,17 @@ The legal boundary used for adjudication remains: self-conducted sale/exchange o
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: complete — 648 canonical knowledge items / 149 existing verified questions mapped / 432 explicit knowledge gaps
 - Phase 4.3 completed concepts: 1/113 (`takken-concept-business-definition`)
-- Active concept just completed: `takken-concept-business-definition`
-- Existing verified questions in completed concept: 2
-- Generated questions in completed concept: 48
-- Generated questions verified: 48/48
-- Newly QA'd this run: 23
-- Newly verified this run: 23
-- Repairs this run: 0
-- Remaining generated pending questions for this concept: 0
-- Active-concept total represented: 50/50
+- Active concept: `takken-concept-license-required`
+- Existing verified questions in active concept: 1
+- Generated questions in active concept: 25 pending / 0 newly verified
+- Active-concept total represented: 26/50
+- Remaining generation for active concept: 24
 - Prints/app integration: not started
 
 ## Exact next start
 
-Advance to the next concept in canonical `power-concepts.js` order. Reuse mapped existing verified questions, calculate the deficit to 50, then generate the first maximum-25-question checkpoint as `pending_validation`. Do not mark new questions verified until the subsequent independent QA checkpoint.
+Continue `takken-concept-license-required` with the remaining 24 questions (`takken-power-q-license-required-026`–`049`) as `pending_validation`, bringing the concept to 50 represented questions. Do not QA-promote the current 25 in the same generation checkpoint. After all 49 generated questions exist, begin independent QA in question-ID order.
 
 ## publication invariant
 
-Only independently verified material may enter a public or production pool. Newly generated questions for the next concept must remain unpublished until independent QA completes.
+Only independently verified material may enter a public or production pool. All 25 newly generated license-required questions remain unpublished until independent QA completes.
