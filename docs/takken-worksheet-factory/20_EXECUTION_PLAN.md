@@ -79,10 +79,12 @@ Final Phase 4.2 totals:
 - [x] Canonical scope confirmed as 4 knowledge items: qualifying cancellation and five-year period; hearing-publication/closure avoidance and five-year period; qualifying criminal sentences and five-year period; misconduct within the five years before application.
 - [x] Calculated deficit: 49 new questions required for 50 total represented questions.
 - [x] Generated first 25-question checkpoint as `takken-power-q-license-disqualification-001`–`025`, all `pending_validation`.
-- [ ] Generate remaining 24 questions as `takken-power-q-license-disqualification-026`–`049`.
-- [ ] Independently QA all 49 newly generated questions before promotion.
+- [x] Generated remaining 24 questions as `takken-power-q-license-disqualification-026`–`049`, all `pending_validation`.
+- [x] Reached 50/50 represented questions: 1 reused verified + 49 generated pending QA.
+- [ ] Independently QA `takken-power-q-license-disqualification-001`–`025` before promotion.
+- [ ] Independently QA `takken-power-q-license-disqualification-026`–`049` before promotion.
 
-Exact continuation: generate `takken-power-q-license-disqualification-026`–`049` as the remaining 24-question `pending_validation` checkpoint. Do not mark newly generated questions verified before independent QA.
+Exact continuation: independently solve `takken-power-q-license-disqualification-001`–`025` from the stems and four choices before consulting saved answers/explanations/source refs. Repair and re-solve any defect before `verified` promotion. Do not mark un-QA questions verified.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
