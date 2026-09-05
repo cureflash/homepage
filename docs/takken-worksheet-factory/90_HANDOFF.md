@@ -8,16 +8,15 @@ Phase 4.1 Concept inventory and Phase 4.2 canonical knowledge extraction / exist
 
 ## Completed in this run
 
-Started `takken-concept-license-authority` from the canonical next point.
+Completed the generation half of `takken-concept-license-authority`.
 
 - Reused mapped existing verified question `takken-q-03-001`.
-- Canonical knowledge scope is `takken-k-license-authority-minister-multiple-prefectures` and `takken-k-license-authority-governor-single-prefecture`.
-- Confirmed the governing distinction against current primary/official sources: offices in 2 or more prefectures -> Minister of Land, Infrastructure, Transport and Tourism; offices only within 1 prefecture -> governor of that prefecture.
-- Calculated deficit: 49 generated questions are required for 50 total represented questions.
-- Added `takken-power-q-license-authority-001`–`025` as the first 25-question checkpoint.
-- All 25 new questions remain `pending_validation`; none were promoted before independent QA.
-- Answer positions for the new checkpoint are A/B/C/D = 7/6/6/6.
-- Questions cover direct rule identification, multiple-office cases within one prefecture, offices spanning multiple prefectures, and distractors based on transaction/property/customer geography, entity type, and office count without changing the canonical legal rule.
+- Canonical knowledge scope remains `takken-k-license-authority-minister-multiple-prefectures` and `takken-k-license-authority-governor-single-prefecture`.
+- Added `takken-power-q-license-authority-026`–`049` as the remaining 24-question generation checkpoint.
+- The new checkpoint varies direct rule identification, one-prefecture/multiple-office cases, multi-prefecture cases, irrelevant property/customer/advertising/representative/capital factors, and classification after an office-layout change without introducing a separate change-procedure rule.
+- Answer positions for `026`–`049` are A/B/C/D = 6/6/6/6.
+- All 24 new questions remain `pending_validation`; none were promoted before independent QA.
+- The active concept now has 50/50 represented questions: 1 reused verified + 49 generated pending independent QA.
 - No Phase 2/3 question or validation state was changed.
 - No print or app integration work was started.
 
@@ -32,16 +31,16 @@ Started `takken-concept-license-authority` from the canonical next point.
 - Phase 4.3 completed concepts: 2/113 (`takken-concept-business-definition`, `takken-concept-license-required`)
 - Active concept: `takken-concept-license-authority`
 - Existing verified questions in active concept: 1
-- Generated questions in active concept: 0 verified / 25 pending
-- Active-concept total represented: 26/50
-- Remaining generation for active concept: 24
-- Phase 4.3 cumulative generated / checked / verified / revision / rejected / pending: 122 / 97 / 97 / 0 / 0 / 25
+- Generated questions in active concept: 0 verified / 49 pending
+- Active-concept total represented: 50/50
+- Remaining generation for active concept: 0
+- Phase 4.3 cumulative generated / checked / verified / revision / rejected / pending: 146 / 97 / 97 / 0 / 0 / 49
 - Prints/app integration: not started
 
 ## Exact next start
 
-Generate `takken-power-q-license-authority-026`–`049` as the remaining 24-question checkpoint, all `pending_validation`. After the concept reaches 50/50 represented questions, begin independent QA from `takken-power-q-license-authority-001` in question-ID order without consulting saved answers/explanations first.
+Independently solve `takken-power-q-license-authority-001`–`025` in question-ID order without consulting the saved answers, explanations, or source refs first. Compare only after solving; repair and re-solve any defective item before `verified`. Keep `026`–`049` pending until their own QA checkpoint.
 
 ## publication invariant
 
-Only independently verified material may enter a public or production pool. The 25 newly generated license-authority questions remain unpublished until independent QA completes.
+Only independently verified material may enter a public or production pool. All 49 generated license-authority questions remain unpublished until independent QA completes.
