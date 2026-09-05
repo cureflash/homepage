@@ -78,13 +78,13 @@ Final Phase 4.2 totals:
 - [x] Reused 1 existing independently verified question (`takken-q-04-001`).
 - [x] Canonical scope confirmed as 4 knowledge items: qualifying cancellation and five-year period; hearing-publication/closure avoidance and five-year period; qualifying criminal sentences and five-year period; misconduct within the five years before application.
 - [x] Calculated deficit: 49 new questions required for 50 total represented questions.
-- [x] Generated first 25-question checkpoint as `takken-power-q-license-disqualification-001`–`025`.
-- [x] Generated remaining 24 questions as `takken-power-q-license-disqualification-026`–`049`.
-- [x] Reached 50/50 represented questions: 1 reused verified + 49 generated.
-- [x] Independently QA'd `takken-power-q-license-disqualification-001`–`025`; all 25 passed without revision or rejection and are now `verified`.
+- [x] Generated first 25-question checkpoint as `takken-power-q-license-disqualification-001`–`025`, all `pending_validation`.
+- [x] Generated remaining 24 questions as `takken-power-q-license-disqualification-026`–`049`, all `pending_validation`.
+- [x] Reached 50/50 represented questions: 1 reused verified + 49 generated pending QA.
+- [ ] Independently QA `takken-power-q-license-disqualification-001`–`025` before promotion.
 - [ ] Independently QA `takken-power-q-license-disqualification-026`–`049` before promotion.
 
-Exact continuation: independently solve `takken-power-q-license-disqualification-026`–`049` from the stems and four choices before consulting saved answers/explanations/source refs. Repair and re-solve any defect before `verified` promotion. Do not mark un-QA questions verified.
+Exact continuation: independently solve `takken-power-q-license-disqualification-001`–`025` from the stems and four choices before consulting saved answers/explanations/source refs. Repair and re-solve any defect before `verified` promotion. Do not mark un-QA questions verified.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.

@@ -181,21 +181,21 @@
     "active_concept_id": "takken-concept-license-disqualification",
     "active_concept_target_question_count": 50,
     "active_concept_existing_verified_question_count": 1,
-    "active_concept_generated_pending_question_count": 24,
+    "active_concept_generated_pending_question_count": 49,
     "active_concept_total_question_count": 50,
     "active_concept_remaining_generation_count": 0,
     "phase4_generated_question_count": 195,
-    "phase4_checked_question_count": 171,
-    "phase4_verified_question_count": 171,
+    "phase4_checked_question_count": 146,
+    "phase4_verified_question_count": 146,
     "phase4_needs_revision_question_count": 0,
     "phase4_rejected_question_count": 0,
-    "phase4_pending_validation_question_count": 24,
+    "phase4_pending_validation_question_count": 49,
     "next_concept_id": "takken-concept-license-disqualification",
-    "next_task": "Phase 4.3: independently QA takken-power-q-license-disqualification-026 through 049 before consulting saved answers/explanations/source refs; repair and re-solve any defect before verified promotion."
+    "next_task": "Phase 4.3: independently QA takken-power-q-license-disqualification-001 through 025 before consulting saved answers/explanations/source refs; repair and re-solve any defect before verified promotion. Leave 026 through 049 pending for the following QA checkpoint."
   },
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
-  "last_completed_unit": "license-disqualification-phase4-qa-001-025",
-  "last_run_summary": "Independently QA'd takken-power-q-license-disqualification-001 through 025. All 25 passed without revision or rejection and are now verified. The remaining 026 through 049 stay pending_validation. Phase 2/3 remains unchanged at 163/163 verified with validation_complete true.",
-  "updated_at": "2026-09-05T14:29:40+09:00"
+  "last_completed_unit": "license-disqualification-phase4-generation-batch2",
+  "last_run_summary": "Completed generation for takken-concept-license-disqualification by adding takken-power-q-license-disqualification-026 through 049 as 24 pending_validation questions. The concept is now 50/50 represented with 1 reused verified question and 49 generated pending QA. Phase 2/3 remains unchanged at 163/163 verified with validation_complete true.",
+  "updated_at": "2026-09-05T13:31:37+09:00"
 }
