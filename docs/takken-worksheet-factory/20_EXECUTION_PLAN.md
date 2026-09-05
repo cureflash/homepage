@@ -67,13 +67,13 @@ Final Phase 4.2 totals:
 - [x] Reused 1 existing independently verified question (`takken-q-03-001`).
 - [x] Canonical scope confirmed as the 2 knowledge items for multi-prefecture minister authority and single-prefecture governor authority.
 - [x] Calculated deficit: 49 new questions required for 50 total represented questions.
-- [x] Generated first 25-question checkpoint as `takken-power-q-license-authority-001`–`025`, all `pending_validation`.
-- [x] Generated remaining 24 questions as `takken-power-q-license-authority-026`–`049`, all `pending_validation`.
-- [x] Reached 50/50 represented questions: 1 reused verified + 49 generated pending independent QA.
-- [ ] Independently QA `takken-power-q-license-authority-001`–`025` in question-ID order.
-- [ ] Independently QA `takken-power-q-license-authority-026`–`049` after the first QA checkpoint.
+- [x] Generated first 25-question checkpoint as `takken-power-q-license-authority-001`–`025`.
+- [x] Generated remaining 24 questions as `takken-power-q-license-authority-026`–`049`.
+- [x] Reached 50/50 represented questions: 1 reused verified + 49 generated.
+- [x] Independently QA'd `takken-power-q-license-authority-001`–`025`; all 25 passed without revision or rejection and are now `verified`.
+- [ ] Independently QA `takken-power-q-license-authority-026`–`049`.
 
-Exact continuation: independently solve `takken-power-q-license-authority-001`–`025` without consulting saved answers/explanations first. Compare only after solving, repair any defect as an integrated question/choices/answer/explanation/source change, re-solve, and promote only passing questions to `verified`. Leave `026`–`049` pending until their own QA checkpoint.
+Exact continuation: independently solve `takken-power-q-license-authority-026`–`049` without consulting saved answers/explanations first. Compare only after solving, repair any defect as an integrated question/choices/answer/explanation/source change, re-solve, and promote only passing questions to `verified`.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
