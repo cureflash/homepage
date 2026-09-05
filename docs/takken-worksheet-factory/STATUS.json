@@ -178,21 +178,21 @@
     "active_concept_id": "takken-concept-license-authority",
     "active_concept_target_question_count": 50,
     "active_concept_existing_verified_question_count": 1,
-    "active_concept_generated_pending_question_count": 49,
+    "active_concept_generated_pending_question_count": 24,
     "active_concept_total_question_count": 50,
     "active_concept_remaining_generation_count": 0,
     "phase4_generated_question_count": 146,
-    "phase4_checked_question_count": 97,
-    "phase4_verified_question_count": 97,
+    "phase4_checked_question_count": 122,
+    "phase4_verified_question_count": 122,
     "phase4_needs_revision_question_count": 0,
     "phase4_rejected_question_count": 0,
-    "phase4_pending_validation_question_count": 49,
+    "phase4_pending_validation_question_count": 24,
     "next_concept_id": null,
-    "next_task": "Phase 4.3: independently QA takken-power-q-license-authority-001 through 025 in question-ID order without consulting saved answers/explanations first; keep 026 through 049 pending until their QA checkpoint."
+    "next_task": "Phase 4.3: independently QA takken-power-q-license-authority-026 through 049 in question-ID order without consulting saved answers/explanations first."
   },
   "publication_policy": "verified_only",
   "factcheck_policy": "solve_all_after_question_generation",
-  "last_completed_unit": "license-authority-phase4-generation-026-049",
-  "last_run_summary": "Completed license-authority generation by adding takken-power-q-license-authority-026 through 049 as 24 pending_validation questions. Active concept is now 50/50 represented with 1 reused verified plus 49 generated pending independent QA. Phase 2/3 remains unchanged at 163/163 verified with validation_complete true.",
-  "updated_at": "2026-09-05T09:27:35+09:00"
+  "last_completed_unit": "license-authority-phase4-qa-001-025",
+  "last_run_summary": "Independently QA'd takken-power-q-license-authority-001 through 025. All 25 passed without revision or rejection and were promoted to verified; 026 through 049 remain pending. Phase 2/3 remains unchanged at 163/163 verified with validation_complete true.",
+  "updated_at": "2026-09-05T10:31:28+09:00"
 }
