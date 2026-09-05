@@ -8,13 +8,14 @@ Phase 4.1 Concept inventory and Phase 4.2 canonical knowledge extraction / exist
 
 ## Completed in this run
 
-Completed the first independent QA checkpoint for `takken-concept-license-authority`.
+Completed the remaining independent QA for `takken-concept-license-authority`.
 
-- Reused mapped existing verified question `takken-q-03-001` unchanged.
-- Independently reviewed `takken-power-q-license-authority-001`–`025` against the canonical minister/governor authority distinction.
-- All 25 questions had one unambiguous correct choice and no condition, scope, explanation, or source-reference defect requiring revision.
-- Promoted `001`–`025` from `pending_validation` to `verified`.
-- `026`–`049` remain `pending_validation` for their separate QA checkpoint.
+- Reused mapped existing verified question remains `takken-q-03-001`.
+- Canonical knowledge scope remains `takken-k-license-authority-minister-multiple-prefectures` and `takken-k-license-authority-governor-single-prefecture`.
+- Reviewed `takken-power-q-license-authority-026`–`049` for answer uniqueness, office-location scope, irrelevant property/customer/advertising/representative/capital factors, explanations, and source-reference consistency.
+- All 24 questions passed without revision or rejection.
+- Promoted `takken-power-q-license-authority-026`–`049` from `pending_validation` to `verified`.
+- Together with the previously verified `001`–`025` and the reused Phase 2/3 question, this concept is complete at 50/50 represented questions.
 - No Phase 2/3 question or validation state was changed.
 - No print or app integration work was started.
 
@@ -26,19 +27,18 @@ Completed the first independent QA checkpoint for `takken-concept-license-author
 - `validation_complete`: true
 - Phase 4.1: complete — 113 concepts
 - Phase 4.2: complete — 648 canonical knowledge items / 149 existing verified questions mapped / 432 explicit knowledge gaps
-- Phase 4.3 completed concepts: 2/113 (`takken-concept-business-definition`, `takken-concept-license-required`)
-- Active concept: `takken-concept-license-authority`
-- Existing verified questions in active concept: 1
-- Generated questions in active concept: 25 verified / 24 pending
+- Phase 4.3 completed concepts: 3/113 (`takken-concept-business-definition`, `takken-concept-license-required`, `takken-concept-license-authority`)
+- Just-completed concept: `takken-concept-license-authority`
+- Existing verified questions in completed concept: 1
+- Generated questions in completed concept: 49 verified / 0 pending
 - Active-concept total represented: 50/50
-- Remaining generation for active concept: 0
-- Phase 4.3 cumulative generated / checked / verified / revision / rejected / pending: 146 / 122 / 122 / 0 / 0 / 24
+- Phase 4.3 cumulative generated / checked / verified / revision / rejected / pending: 146 / 146 / 146 / 0 / 0 / 0
 - Prints/app integration: not started
 
 ## Exact next start
 
-Independently solve `takken-power-q-license-authority-026`–`049` in question-ID order without consulting the saved answers, explanations, or source refs first. Compare only after solving; repair and re-solve any defective item before `verified`.
+Advance to `takken-concept-license-disqualification`, the next concept in canonical `power-concepts.js` order. Reuse only genuinely mapped existing verified questions, calculate the deficit to 50, and generate the first maximum-25-question checkpoint as `pending_validation`. Do not promote newly generated questions before independent QA.
 
 ## publication invariant
 
-Only independently verified material may enter a public or production pool. The 24 generated `license-authority` questions `026`–`049` remain unpublished until independent QA completes.
+Only independently verified material may enter a public or production pool. Newly generated questions for the next concept must remain unpublished until independent QA completes.
