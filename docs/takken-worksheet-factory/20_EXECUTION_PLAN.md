@@ -68,9 +68,12 @@ Final Phase 4.2 totals:
 - [x] Canonical scope confirmed as the 2 knowledge items for multi-prefecture minister authority and single-prefecture governor authority.
 - [x] Calculated deficit: 49 new questions required for 50 total represented questions.
 - [x] Generated first 25-question checkpoint as `takken-power-q-license-authority-001`–`025`, all `pending_validation`.
-- [ ] Generate the remaining 24 questions as `takken-power-q-license-authority-026`–`049` before independent QA.
+- [x] Generated remaining 24 questions as `takken-power-q-license-authority-026`–`049`, all `pending_validation`.
+- [x] Reached 50/50 represented questions: 1 reused verified + 49 generated pending independent QA.
+- [ ] Independently QA `takken-power-q-license-authority-001`–`025` in question-ID order.
+- [ ] Independently QA `takken-power-q-license-authority-026`–`049` after the first QA checkpoint.
 
-Exact continuation: generate `takken-power-q-license-authority-026`–`049` as the remaining 24-question `pending_validation` checkpoint. After reaching 50/50 represented questions, begin independent QA from `001` in question-ID order. Do not mark newly generated questions verified before independent QA.
+Exact continuation: independently solve `takken-power-q-license-authority-001`–`025` without consulting saved answers/explanations first. Compare only after solving, repair any defect as an integrated question/choices/answer/explanation/source change, re-solve, and promote only passing questions to `verified`. Leave `026`–`049` pending until their own QA checkpoint.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
