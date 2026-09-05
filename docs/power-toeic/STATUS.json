@@ -39,6 +39,7 @@
     "accessibility_pass": true,
     "release_metadata": "subjects/english/power-toeic-ios/Release/AppStoreMetadata.json",
     "release_asset_manifest": "subjects/english/power-toeic-ios/Release/AssetManifest.json",
+    "release_asset_provenance_guard": true,
     "submission_readiness": "subjects/english/power-toeic-ios/Release/SubmissionReadiness.json",
     "privacy_manifest_template": "subjects/english/power-toeic-ios/Release/PrivacyInfo.xcprivacy",
     "app_target_privacy_manifest": "subjects/english/power-toeic-ios/AppShell/PowerTOEICApp/PrivacyInfo.xcprivacy",
@@ -76,5 +77,5 @@
   "attempt_contexts": ["training", "mixed", "review"],
   "workout_modes": ["QUICK", "TRAINING", "POWER", "WEAKNESS", "CUSTOM", "TEST", "REVIEW"],
   "last_completed_task": "11.3",
-  "updated_at": "2026-08-27T12:12:00+09:00"
+  "updated_at": "2026-08-27T12:20:00+09:00"
 }
