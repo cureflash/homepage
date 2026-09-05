@@ -71,9 +71,10 @@ Final Phase 4.2 totals:
 - [x] Generated remaining 24 questions as `takken-power-q-license-authority-026`–`049`.
 - [x] Reached 50/50 represented questions: 1 reused verified + 49 generated.
 - [x] Independently QA'd `takken-power-q-license-authority-001`–`025`; all 25 passed without revision or rejection and are now `verified`.
-- [ ] Independently QA `takken-power-q-license-authority-026`–`049`.
+- [x] Independently QA'd `takken-power-q-license-authority-026`–`049`; all 24 passed without revision or rejection and are now `verified`.
+- [x] Completed this concept at 50/50 represented questions, with all 49 generated questions independently verified.
 
-Exact continuation: independently solve `takken-power-q-license-authority-026`–`049` without consulting saved answers/explanations first. Compare only after solving, repair any defect as an integrated question/choices/answer/explanation/source change, re-solve, and promote only passing questions to `verified`.
+Exact continuation: advance to `takken-concept-license-disqualification`, the next concept in canonical `power-concepts.js` order. Reuse only genuinely mapped existing verified questions, calculate the deficit to 50, and generate the first maximum-25-question `pending_validation` checkpoint. Do not mark newly generated questions verified before independent QA.
 
 ### 4.4 Question-first QA and explanation completion
 - [ ] Independently solve every newly generated question before verified status.
