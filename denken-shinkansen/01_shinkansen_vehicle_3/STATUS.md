@@ -1,46 +1,48 @@
 # STATUS - 新幹線車両・電験三種
 
-更新日: 2026-09-10
+更新日: 2026-09-11
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 19 / 38
-- current_status: `topic_20_catalog_publication_pending`
-- last_completed_topic: `19 N700S① SiC`
-- active_topic: `20 N700S② 6極誘導電動機`
-- next_start: topic 20をWeb catalogへ登録し、公開参照確認後にPASS計上する
+- exam_aligned_completed_topics: 20 / 38
+- current_status: `topic_21_exam_alignment_complete`
+- last_completed_topic: `20 N700S② 6極誘導電動機`
+- active_topic: `21 N700S③ バッテリー自走`
+- next_start: topic 21 の確定済みEXAM_ALIGNMENTを基に、解説本文・練習問題・解説PDF・練習PDF・PowerPointを制作する
 
 ## 新品質ゲート進捗
-- [x] 01〜19 — PASS
-- [ ] 20 N700S② 6極誘導電動機 — EXAM_ALIGNMENT・本文・15問練習・独立QA・3バイナリGitHub配置・4成果物実在確認まで完了、catalog登録待ち
+- [x] 01〜20 — PASS
+- [ ] 21 N700S③ バッテリー自走 — 制作前EXAM_ALIGNMENT完了、教材成果物は未生成
 
-## 20 EXAM_ALIGNMENT
+## 20 完了確認
+`qualifications/denken-shinkansen/catalog.json` に `20_n700s_six_pole_motor` が登録され、解説PDF・練習PDF・PowerPoint・source Markdownへの公開参照が設定された。topic 20 は内容QA・独立過去問再解答・Visual QA・4成果物実在確認を既に通過済みのため、20/38 PASSへ確定した。
+
+## 21 EXAM_ALIGNMENT
+対象: 第三種電気主任技術者 / 機械・電力。
+
 公式過去問5件:
-1. R6上 機械 問4 — V/f一定制御、6極・66Hz・すべり5%から回転速度を求める。
-2. H28 機械 問4 — 6極・50Hz・トルク200N·mから同期ワット（二次入力）を求める。
-3. H25 機械 問4 — 二次入力、二次銅損、機械出力の配分。
-4. R6上 機械 問3 — 三相誘導機の基本用語、回転磁界、すべり、二次周波数。
-5. R5下 機械 問15 — 誘導電動機の等価回路、比例推移、トルク、すべり。
+1. H30 機械 問12 — リチウムイオン二次電池の正極・負極・電解液、放電時のLiイオン移動、セル電圧。
+2. R3 機械 問12 — 鉛蓄電池の構成、充放電、電解液、過充電時の現象。
+3. R4上 機械 問12 — ナトリウム硫黄電池の構成、セル起電力、セルの直列・並列によるモジュール化。
+4. H26 電力 問5 — 二次電池の種類・用途・充電方式等の正誤判断。
+5. R4下 電力 問11 — 電力需給調整と電力貯蔵、揚水・蓄電池の役割。
 
-参照: 電気技術者試験センター公式過去問・解答、e-sysnet、電験三種まとめました、電験王。参照日2026-08-30。
+参照: 一般財団法人 電気技術者試験センター公式過去問題・公式解答、e-sysnet「電気化学(電池)と電気加工」、電験王、電験三種まとめました。参照日2026-09-11。
 
-## 20 成果物状態
-- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor.md` — GitHubへ配置
-- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor_explanation.pdf` — GitHubへ配置
-- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor_practice.pdf` — GitHubへ配置
-- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor_images.pptx` — GitHubへ配置
+## 21 N700S一次・技術資料
+JR東海の公開情報で、N700Sが停電時にバッテリーで走行可能なシステムを搭載し、異常時対応力を高めていることを確認した。JR東海所属著者によるIEEJ Journal of Industry Applications 2021論文では、バッテリ自走ユニットが主にリチウムイオン電池・接触器・制御装置で構成され、通常時は補助電源装置から充電、自走時はDC 750 Vの電池を通常DC 3000 Vの主変換装置DCリンクへ接続すること、16両編成で8ユニットを搭載することが示されている。
 
-## 独立再解答・QA
-教材だけで選定5件を独立再解答し5/5 PASS。練習15/15も独立再計算・再判定済み。代表値は `1320`, `1254`, `20.94kW`, `4kW`, `96kW`, `2280`, `120Hz`, `80Hz`, `70.7%`, `1194N·m`, `2400V`。
+公開資料で確認できない電池1ユニット当たりのAh、総kWh、実運転時の電流値・継続時間などは真値化しない。教材計算で必要な容量・電力値は、明示した仮定値としてのみ使用する。
 
-## Visual QA
-解説PDF 3ページ、練習PDF 3ページ、PowerPoint 6スライドを生成・再レンダリングし、文字化け・クリップ・重なりなしを確認。GitHub上でも4成果物の実在を確認済み。
-
-## QA判定
-20: `CATALOG_PUBLICATION_PENDING`。教材内容と必須成果物の品質ゲートは通過したが、Web catalog未登録のため完成数19/38のまま維持する。
-
-## Web公開
-20はcatalog未登録。`qualifications/denken-shinkansen/catalog.json` への登録と公開参照確認後にPASS計上する。
+## 21 教材で必須とする範囲
+- 二次電池、充電・放電、SOCの基礎
+- リチウムイオン二次電池の電験三種で問われる構成知識
+- `Q=It` と Ah
+- `E=Pt`、`P=VI`、WhとAhの関係
+- 直列接続と並列接続で電圧・容量がどう変わるか
+- 変換効率を含む必要電力量・運転時間の計算
+- N700Sのバッテリ自走システムと主変換装置DCリンクの接続
+- 実値・公開値・教材用仮定値の区別
 
 ## 次
-20をWeb catalogへ登録し公開参照を確認してPASSへ進める。その後、21 `N700S③ バッテリー自走` の制作前EXAM_ALIGNMENTへ進む。
+topic 21 の解説本文と練習問題を作成し、公式過去問5件の要求知識をすべて教材内でカバーする。保存済み公式正答を先に見ずに独立再解答し、計算QAとVisual QAを通過した後にのみPASS計上する。
