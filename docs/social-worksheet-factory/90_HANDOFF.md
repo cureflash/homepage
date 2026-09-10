@@ -4,12 +4,12 @@
 
 - Canonical implementation path: `subjects/social/worksheets/`
 - Never recreate or use retired `social-worksheets/`.
-- GENERATE scope defined by `00_MASTER_INSTRUCTIONS.md` is **complete**.
+- GENERATE scope defined by `00_MASTER_INSTRUCTIONS.md` is complete.
 - FACTCHECK is manual batch work only.
 - Junior-high generated coverage is fully independently verified.
-- High-school `歴史総合` is fully independently verified and learner-facing: **19 / 19 units**.
-- `日本史探究` FACTCHECK is verified through B(2) `歴史資料と中世の展望`.
-- Pending backlog count: **145 units**.
+- High-school `歴史総合` is fully independently verified and learner-facing: 19 / 19 units.
+- `日本史探究` FACTCHECK is verified through B(3) 鎌倉期の宗教・文化ブロック。
+- Pending backlog count: 140 units.
 - Public selector remains verified-only.
 
 ## FACTCHECK progress this session
@@ -23,42 +23,48 @@
 - Batch 07: 6 opening `日本史探究` units — `FACTCHECK_BATCH_07.md`
 - Batch 08: 7 `日本史探究` A(3) ancient-state/social-change units — `FACTCHECK_BATCH_08.md`
 - Batch 09: 3 `日本史探究` B(1) / B(2) medieval-transition/source units — `FACTCHECK_BATCH_09.md`
+- Batch 10: 5 `日本史探究` B(3) Kamakura-state/economy/culture units — `FACTCHECK_BATCH_10.md`
 
-Total independently verified this session: **54 units**. Pending backlog moved from **199 to 145**.
+Total independently verified this session: 59 units. Pending backlog moved from 199 to 140.
 
-## Batch 09 — `日本史探究` B 中世への転換・資料
+## Batch 10 — `日本史探究` B(3) 鎌倉期
 
 Verified and published:
-
-1. `japanese-history-medieval-transition`
-2. `japanese-history-landholding-transition`
-3. `japanese-history-medieval-sources-outlook`
-
-The current MEXT high-school Geography/History commentary was independently reopened for 日本史探究 B. It explicitly places `貴族政治の変容と武士の政治進出` and `土地支配の変容` in B(1), and requires source collection/reading, attention to source characteristics, multidimensional consideration, and hypothesis formation in B(2).
-
-## Important corrections in Batch 09
-
-- `medieval-transition`: replaced the generated broad causal wording with the formal B(1) framework and the required viewpoints of changing political power and East-Asian relations.
-- `landholding-transition`: removed the unsupported shortcut that `荘園・公領` simply formed the basis of medieval society. The verified wording follows MEXT's land-control transition and its example from ritsuryo land institutions toward warrior landholding.
-- `medieval-sources-outlook`: replaced the arbitrary generated source list with the formal B(2) source-work objective: collect/read information, account for source characteristics, consider the medieval period from multiple perspectives, and express a hypothesis.
-
-## Publication / backlog state
-
-- All three Batch 09 units have unit/fact/sentence `factcheckStatus: "verified"`.
-- No Batch 09 unit contains an image, so no image-license decision was required.
-- All three are loaded by `subjects/social/worksheets/index.html` after the previously verified ancient-state block.
-- Current pending backlog: **145**.
-- The next pending unit remains unpublished.
-
-## Exact next social action
-
-Continue `日本史探究` sequentially into the Kamakura block:
 
 1. `japanese-history-kamakura-shogunate`
 2. `japanese-history-gokenin-landholding`
 3. `japanese-history-song-exchange-medieval-economy`
 4. `japanese-history-mongol-invasions-kamakura-change`
 5. `japanese-history-kamakura-new-buddhism-culture`
+
+The current MEXT high-school Geography/History commentary was independently reopened for 日本史探究 B(3). It explicitly requires `武家政権の成立と展開`、`産業の発達`、`宗教や文化の展開`を基にした理解と、`公武関係の変化`、宋・元などユーラシアとの交流とその影響に着目した考察を示している。
+
+## Important corrections in Batch 10
+
+- `kamakura-shogunate`: generated `東国を基盤とする武家政権` wording was not carried forward without an independently reopened specific source. Learner-facing content now follows MEXT's `武家政権の成立と展開` / `公武関係の変化` framework.
+- `gokenin-landholding`: generated `御家人` / `所領の保障` explanation was not marked verified from the current source alone. The old slug is retained only for compatibility; learner-facing content is now `公武関係の変化と土地支配`, directly following MEXT's stated inquiry into effects on the structure of landholding.
+- `song-exchange-medieval-economy`: replaced broad generated `日宋貿易` wording with the directly supported relationship among 宋銭の流入、流通、生産・商品の流通、貨幣経済の発達。
+- `mongol-invasions-kamakura-change`: removed a simple causal shortcut from 元寇 to 幕府変容 and centered the MEXT-supported international background and domestic political impact of the Mongol invasions.
+- `kamakura-new-buddhism-culture`: replaced the broad `鎌倉新仏教` label as the sole organizing concept with MEXT's framework of continuity/difference from Heian religion and culture and effects on commoners' faith and daily culture.
+
+## Publication / backlog state
+
+- All five Batch 10 units have unit/fact/sentence `factcheckStatus: "verified"`.
+- No Batch 10 unit contains an image, so no image-license decision was required.
+- All five are loaded by `subjects/social/worksheets/index.html` after the verified B(1)/B(2) transition/source block.
+- JavaScript syntax for all five files was checked with `node --check` before publication.
+- Current pending backlog: 140.
+- The next pending unit remains unpublished.
+
+## Exact next social action
+
+Continue `日本史探究` sequentially from the post-Kamakura / later-medieval block:
+
+1. `japanese-history-kenmu-nanbokucho`
+2. `japanese-history-muromachi-shogunate-shugo`
+3. `japanese-history-ming-trade-east-asia`
+4. `japanese-history-ryukyu-kingdom-exchange`
+5. `japanese-history-agriculture-commerce-distribution`
 
 After those, continue in the fixed B-section queue. GENERATE is finished; do not invent additional generation work.
 
