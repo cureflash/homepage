@@ -7,7 +7,7 @@
   "active_unit": null,
   "next_role": "factcheck_manual",
   "last_completed_role": "factcheck",
-  "verified_through": "japanese-history-daimyo-court-temples",
+  "verified_through": "japanese-history-shogunate-finance-kyoho",
   "generation_batch_target": 20,
   "factcheck_policy": "manual_batch",
   "last_generated_batch": [
@@ -21,18 +21,13 @@
     "political-economy-global-issues-inquiry"
   ],
   "last_factchecked_batch": [
-    "japanese-history-early-modern-sources-outlook",
-    "japanese-history-shokuho-unification",
-    "japanese-history-land-survey-sword-hunt",
-    "japanese-history-edo-shogunate-bakuhan",
-    "japanese-history-daimyo-court-temples"
-  ],
-  "unverified_backlog": [
     "japanese-history-foreign-relations-four-gates",
     "japanese-history-status-village-town-society",
     "japanese-history-agriculture-goods-transport",
     "japanese-history-genroku-culture",
-    "japanese-history-shogunate-finance-kyoho",
+    "japanese-history-shogunate-finance-kyoho"
+  ],
+  "unverified_backlog": [
     "japanese-history-tanuma-kansei-reforms",
     "japanese-history-kasei-culture-education-learning",
     "japanese-history-social-change-tenpo-reforms",
@@ -154,7 +149,7 @@
     "political-economy-international-cooperation-economic-institutions",
     "political-economy-global-issues-inquiry"
   ],
-  "pending_factcheck_count": 125,
+  "pending_factcheck_count": 120,
   "prototype_status": "verified",
-  "updated_at": "2026-09-11T01:36:36+09:00"
+  "updated_at": "2026-09-11T02:15:03+09:00"
 }
