@@ -1,6 +1,6 @@
 # Science Worksheet Factory — handoff
 
-Updated: 2026-08-29
+Updated: 2026-09-10
 
 ## Current state
 
@@ -10,56 +10,46 @@ Current authoritative published physics coverage:
 - junior-high grade 2 physics: 120 PDFs
 - junior-high grade 3 physics: 120 PDFs
 - `物理基礎`: 870 PDFs
-- formal `物理`: 3030 PDFs
-- total published physics: 4188 PDFs
+- formal `物理`: 3060 PDFs
+- total published physics: 4218 PDFs
 
-Formal `物理` has 3030 catalog rows / 3030 unique normalized content hashes. All formal-Physics rows use `formal_course=物理`, `grade=null`, 20 problems, `difficulty=basic`, and the shared focused-series publication path. Answer types are `numeric=2110` and `accepted-set=920`. Worksheet modes are `calculation-basic=780`, `calculation-reverse=1330`, and 230 each of retrieval forward/reverse/fill/true-false.
+Formal `物理` now has 3060 catalog rows / 3060 unique normalized content hashes. All formal-Physics rows use `formal_course=物理`, `grade=null`, 20 problems, `difficulty=basic`, and the shared focused-series publication path. Answer types are `numeric=2140` and `accepted-set=920`. Worksheet modes are `calculation-basic=810`, `calculation-reverse=1330`, and 230 each of retrieval forward/reverse/fill/true-false.
 
-## Completed this run — direct series-RLC impedance, 30 PDFs
+## Completed this run — photon energy E=hν, 30 PDFs
 
-- skill: `ac-series-rlc-impedance-numeric`
-- unit: `電気と磁気：交流の基本`
-- learner-visible relation: `Z=√(R²+(XL-XC)²)`
-- learner-visible quantities and units: `Z[Ω]`, `R[Ω]`, `XL[Ω]`, `XC[Ω]`
+- skill: `atomic-photon-energy-numeric`
+- unit: `原子：光子とエネルギー`
+- learner-visible relation: `E=hν`
+- calculation convention: `h=6.63×10^-34 J·s`, `ν=a×10^14 Hz`, so `E=(6.63×a)×10^-20 J`
 - 30 direct-calculation worksheets, each 20 problems
-- answers are rounded to two decimal places
-- new shared relation: `sqrt-square-plus-difference-square`
-- the shared relation accepts exactly three unique nonnegative magnitude inputs and computes the square-root combination directly
-- inverse generation is intentionally rejected because solving the relation backward can have ambiguous branches; no hidden precomputed intermediate and no arbitrary branch choice are used
+- scientific-notation exponents remain learner-visible; the shared formula generator computes the decimal coefficients
+- implementation reuses the existing shared `product` relation and the existing formal-Physics publisher; no duplicate generator or publication path was introduced
 
-This closes the exact numerical gap recorded in the previous handoff. The previous AC batches already covered RMS voltage, resistor AC, average power, AC concepts, coil/capacitor reactance, the signed RLC reactance difference, resonance, phase, and RLC impedance concept retrieval.
-
-## Curriculum basis
-
-The current MEXT High School Course of Study commentary for formal `物理` states that the basic properties of AC circuits are addressed, including capacitor and coil reactance and the impedance of a series circuit containing a resistor, capacitor and coil. The direct RLC impedance checkpoint remains within that stated scope.
-
-The canonical Physics PLAN places `原子・光子・エネルギー準位など基本計算` immediately after `交流の基本`. With the previously identified direct RLC impedance gap now safely closed, that is the next planned production unit. Re-check the current MEXT scope before defining its first mechanically verifiable calculation checkpoint.
+The current MEXT high-school science commentary was rechecked before implementation. The formal `物理` atomic section covers the photon hypothesis/photoelectric effect and atomic spectra/energy levels, so the direct photon-energy relation is within the current scope.
 
 ## Validation and publication
 
-- shared helper change: `scripts/science_worksheet_helpers.py`
-- definitions: `scripts/science_physics_ac_basics.py`
-- relation regression: `tests/test_science_formula_relations.py`
-- independent AC validation: `tests/test_science_physics_ac_basics.py`
-- direct answers are independently recomputed from learner-visible `R`, `XL`, `XC`
-- relation arity/domain checks reject malformed or negative-magnitude inputs
-- inverse generation is explicitly rejected
+- definitions: `scripts/science_physics_atomic.py`
+- publisher registration: `scripts/publish_science_physics.py`
+- independent validation: `tests/test_science_physics_atomic.py`
+- direct answers are independently recomputed from learner-visible coefficients
 - deterministic regeneration and corrupted-answer rejection passed
-- all 30 new normalized hashes are unique and disjoint from the previously published 3000-row formal-Physics catalog
-- prospective generation produced 30 PDFs and validated a 3030-row / 3030-unique-hash catalog
-- prospective validation Actions run `33233248725`: success
-- implementation PR #302 merged as `d335c778554489da887179f2276c30313a66c647`
-- production Actions run `33233342276`: success
-- production passed latest-main confirmation, full formal-Physics regression, generation, post-generation validation, 3030-row catalog/PDF validation and non-force safe push
-- publication commit: `e7219630e91dbd43569ec80a35243db144d78db6` (`Publish 30 formal Physics RLC impedance worksheets`)
-- catalog concurrency audit run `33233342278`: success
-- final contract: 3030 formal-Physics rows / 3030 unique hashes; `numeric=2110`, `accepted-set=920`; calculation-basic 780, calculation-reverse 1330, retrieval forward/reverse/fill/true-false 230 each
+- all 30 new normalized hashes are unique and disjoint from the previously published formal-Physics catalog
+- prospective publication produced 30 PDFs and validated a 3060-row / 3060-unique-hash catalog
+- an initial post-publication regression failed because the collision test compared the newly generated atomic rows against themselves; the test was corrected at the root by excluding the current atomic IDs, matching the established AC regression pattern
+- branch was reconciled with the then-latest `main` before final validation; concurrent changes were in unrelated Japanese/math files
+- PR validation Actions run `34491494429`: success
+- implementation PR #815 merged as `9e379fb5939bb391786ec607fc7a70253c39346c`
+- production Actions run `34491599999`: success
+- production passed latest-main confirmation, full formal-Physics regression, generation, post-generation validation, 3060-row catalog/PDF validation and non-force safe push
+- publication commit: `567b79752109f51c3c6e9332faf4ed833dab7ec8` (`Publish 30 formal Physics photon-energy worksheets`)
+- final contract: 3060 formal-Physics rows / 3060 unique hashes; `numeric=2140`, `accepted-set=920`; calculation-basic 810, calculation-reverse 1330, retrieval forward/reverse/fill/true-false 230 each
 - shared catalog serialization remains `worksheet-catalog-publish-v1`
 
 ## Exact next starting point
 
-Continue formal course `物理` at `原子 / 原子・光子・エネルギー準位など基本計算`, which is the next unit in the canonical Physics PLAN after `交流の基本`.
+Continue formal course `物理` in `原子` with the next canonical progression step for the same relation: reverse calculation of frequency `ν` from photon energy `E` using `E=hν`.
 
-Before implementing the first atomic-physics checkpoint, verify the exact current MEXT scope and select only basic relationships that can be independently recomputed from learner-visible values and mechanically validated. Do not create an RLC reverse series unless an explicit future specification establishes an unambiguous inverse branch.
+Before implementation, re-check the current MEXT scope and retain only a mechanically verifiable, learner-visible formulation. Do not introduce hidden precomputed values or a second publication pipeline.
 
 Preserve deterministic seeds, independent validation, corrupted-answer rejection, normalized-hash uniqueness/existing-catalog collision checks, 20-problem two-page PDFs, `formal_course=物理`, `grade=null`, `worksheet-catalog-publish-v1`, and non-force latest-main push safety. Representative screenshot-based visual QA remains pending.
