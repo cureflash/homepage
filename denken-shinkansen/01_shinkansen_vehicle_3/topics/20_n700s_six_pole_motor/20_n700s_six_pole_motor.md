@@ -77,4 +77,4 @@
 5/5 PASS。教材外知識を補わず、式選択理由と適用条件まで説明できる。
 
 ## QA判定
-CATALOG_PUBLICATION_PENDING。EXAM_ALIGNMENT、本文、練習QA、公式過去問独立再解答、PDF/PPTX生成・Visual QA、GitHub上への必須3バイナリ配置と4成果物実在確認まで完了。`qualifications/denken-shinkansen/catalog.json` への登録前のため、完成数にはまだ計上しない。
+PASS。EXAM_ALIGNMENT、本文、練習QA、公式過去問独立再解答、PDF/PPTX生成・Visual QA、GitHub上への必須3バイナリ配置と4成果物実在確認、`qualifications/denken-shinkansen/catalog.json` への登録を完了。2026-09-11にmain上でcatalog登録と4成果物への参照整合を再確認した。
