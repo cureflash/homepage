@@ -1,7 +1,7 @@
 """Formal Physics atomic-physics checkpoints.
 
-The first checkpoint covers the photon hypothesis with a mechanically verifiable
-coefficient calculation for E=hν. Scientific-notation exponents are kept
+The first progression covers the photon hypothesis with mechanically verifiable
+coefficient calculations for E=hν. Scientific-notation exponents are kept
 learner-visible while the shared formula generator operates on their decimal
 coefficients.
 """
@@ -20,8 +20,8 @@ PHYSICS_ATOMIC_TOPICS = {
         "skill": "atomic-photon-energy-numeric",
         "formula": (
             "光子のエネルギーは E=hν。h=6.63×10^-34 J·s とし、"
-            "ν=a×10^14 Hz とすると E=(6.63×a)×10^-20 J。"
-            "問題では E の係数を求める。"
+            "周波数 ν=a×10^14 Hz、光子エネルギー E=b×10^-20 J と表す。"
+            "E=hν の関係から指定された係数を求める。"
         ),
         "seeds": _PHOTON_ENERGY_SEEDS,
         "spec": {
@@ -52,6 +52,11 @@ PHYSICS_ATOMIC_TOPICS = {
                 "solve_for": "energy_coefficient",
                 "worksheet_mode": "calculation-basic",
                 "description": "E=hν を使い、光子のエネルギーを科学的記数法の係数で求めます。",
+            },
+            "reverse-frequency": {
+                "solve_for": "frequency_coefficient",
+                "worksheet_mode": "calculation-reverse",
+                "description": "E=hν を使い、光子のエネルギーから周波数を科学的記数法の係数で求めます。",
             },
         },
     },
