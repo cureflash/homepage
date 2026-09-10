@@ -1,6 +1,6 @@
 import json, tempfile
 from pathlib import Path
-from scripts.publish_jh3_factorization_roots import SKILLS, SEEDS, gen, independent_answer, validate_problem
+from scripts.publish_jh3_factorization_roots import SKILLS, SEEDS, gen, independent_answer, question_text, validate_problem
 
 
 def test_generators_are_deterministic_and_independently_validated():
@@ -11,6 +11,7 @@ def test_generators_are_deterministic_and_independently_validated():
             assert a==b
             assert len(a)==count
             assert len({json.dumps(p,sort_keys=True) for p in a})==count
+            assert len({question_text(p) for p in a})==count
             for p in a:
                 validate_problem(p)
                 assert tuple(p['answer'])==tuple(independent_answer(p))
