@@ -59,7 +59,7 @@ The current MEXT high-school Geography/History commentary was independently reop
 
 ## Exact next social action
 
-Continue `日本史探究` sequentially from the remaining B(3) later-medieval block:
+Continue `日本史探究` sequentially from the fixed queue:
 
 1. `japanese-history-village-city-autonomy`
 2. `japanese-history-onin-war-sengoku-daimyo`
