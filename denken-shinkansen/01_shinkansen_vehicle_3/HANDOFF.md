@@ -1,14 +1,14 @@
 # HANDOFF - 新幹線車両・電験三種
 
-更新日: 2026-08-30
+更新日: 2026-09-10
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は19/38。01〜19がPASS。次のactive topicは20 `N700S② 6極誘導電動機`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は19/38。01〜19がPASS。active topicは20 `N700S② 6極誘導電動機`。
 
 ## 今回進捗
-20 `N700S② 6極誘導電動機` の制作前EXAM_ALIGNMENT、本文、15問練習、公式過去問独立再解答、練習問題独立計算、ローカルPDF/PPTX生成・Visual QAまで完了した。
+20 `N700S② 6極誘導電動機` の不足していた必須3バイナリを再生成し、内容・計算・Visual QA後にGitHubへ配置した。Markdownを含む4成果物がGitHub上に実在することまで確認した。
 
-ただし、このrunではPDF/PPTXバイナリのGitHub配置まで完了していないため、20はPASS計上しない。状態は `BINARY_PUBLICATION_PENDING`。
+Web catalogへの登録はまだ行っていないため、20はPASS計上しない。状態は `CATALOG_PUBLICATION_PENDING`。
 
 ## 20 EXAM_ALIGNMENT
 対象: 第三種電気主任技術者 / 機械（誘導電動機、極数、同期速度、すべり、二次周波数、二次入力、二次銅損、V/f一定制御）。
@@ -33,15 +33,15 @@
 
 ## 成果物状態
 - `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor.md` — GitHubへ配置
-- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor_explanation.pdf` — ローカル生成済み、GitHub未配置
-- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor_practice.pdf` — ローカル生成済み、GitHub未配置
-- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor_images.pptx` — ローカル生成済み、GitHub未配置
+- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor_explanation.pdf` — GitHubへ配置
+- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor_practice.pdf` — GitHubへ配置
+- `topics/20_n700s_six_pole_motor/20_n700s_six_pole_motor_images.pptx` — GitHubへ配置
 
 ## 独立QA・Visual QA
-練習15/15を独立再計算・再判定。選定公式過去問5件も教材だけで独立再解答し5/5 PASS。解説PDF 3ページ、練習PDF 3ページ、PowerPoint 6スライドをローカルでレンダリングし、文字化け・クリップ・重なりなしを確認した。
+練習15/15を独立再計算・再判定。選定公式過去問5件も教材だけで独立再解答し5/5 PASS。解説PDF 3ページ、練習PDF 3ページ、PowerPoint 6スライドを再レンダリングし、文字化け・クリップ・重なりなしを確認した。GitHub上でも4成果物の実在を確認済み。
 
 ## QA判定
-20: `BINARY_PUBLICATION_PENDING`。GitHub上にPDF/PPTXが揃っていないため、完成数19/38のまま維持する。
+20: `CATALOG_PUBLICATION_PENDING`。必須成果物は揃ったがWeb catalog未登録のため、完成数19/38のまま維持する。
 
 ## 次の正確な開始点
-20 `N700S② 6極誘導電動機` のPDF/PPTXバイナリをGitHubへ配置し、4成果物実在確認後にWeb catalogへ登録して20をPASSへ進める。その後、21 `N700S③ バッテリー自走` の制作前EXAM_ALIGNMENTへ進む。
+`qualifications/denken-shinkansen/catalog.json` に20を登録し、公開参照を確認して20をPASSへ進める。その後、21 `N700S③ バッテリー自走` の制作前EXAM_ALIGNMENTへ進む。
