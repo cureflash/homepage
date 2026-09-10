@@ -8,16 +8,13 @@ Phase 4.1 Concept inventory and Phase 4.2 canonical knowledge extraction / exist
 
 ## Completed in this run
 
-Completed generation for `takken-concept-license-disqualification` to the 50-question represented target.
+Completed the first independent QA checkpoint for `takken-concept-license-disqualification`.
 
-- Reused mapped existing verified question `takken-q-04-001`.
-- Canonical knowledge scope remains 4 items: qualifying cancellation / five-year period; hearing-publication followed by certain closure notification / five-year period and reasonable-cause exception; qualifying criminal sentence / five-year period; misconduct within five years before application.
-- Added `takken-power-q-license-disqualification-026`–`049` as the remaining 24-question checkpoint.
-- All 49 newly generated questions (`001`–`049`) remain `pending_validation`; none were promoted to verified.
-- Active concept now has 50/50 represented questions: 1 existing verified + 49 newly generated pending QA.
-- Batch 2 answer positions are balanced A/B/C/D = 6/6/6/6.
-- Batch 2 validates stable IDs, exact four distinct choices, knowledge refs, source refs, legal version, validation status, duplicate stems, and answer-position skew at load time.
-- The 4 canonical rules were cross-checked against current MLIT license guidance before generation.
+- Reused mapped existing verified question `takken-q-04-001` remains unchanged.
+- Independently checked `takken-power-q-license-disqualification-001`–`025` against the four-choice stems and the 2026-04-01 legal rules for qualifying cancellation, hearing-publication/closure avoidance, criminal sentences, and misconduct within five years before application.
+- Cross-checked the governing five-year rules against current MLIT licensing guidance and the current post-2025 terminology using `拘禁刑以上`.
+- All 25 questions passed without revision or rejection and were promoted from `pending_validation` to `verified`.
+- `takken-power-q-license-disqualification-026`–`049` remain `pending_validation` and unpublished.
 - No Phase 2/3 question or validation state was changed.
 - No print or app integration work was started.
 
@@ -32,16 +29,16 @@ Completed generation for `takken-concept-license-disqualification` to the 50-que
 - Phase 4.3 completed concepts: 3/113 (`takken-concept-business-definition`, `takken-concept-license-required`, `takken-concept-license-authority`)
 - Active concept: `takken-concept-license-disqualification`
 - Existing verified questions in active concept: 1
-- Newly generated in active concept: 49 pending
+- Newly generated in active concept: 49 total = 25 verified + 24 pending
 - Active-concept represented total: 50/50
 - Remaining generation for active concept: 0
-- Phase 4.3 cumulative generated / checked / verified / revision / rejected / pending: 195 / 146 / 146 / 0 / 0 / 49
+- Phase 4.3 cumulative generated / checked / verified / revision / rejected / pending: 195 / 171 / 171 / 0 / 0 / 24
 - Prints/app integration: not started
 
 ## Exact next start
 
-Independently QA `takken-power-q-license-disqualification-001`–`025` from the problem stems and four choices without first consulting stored answer/explanation/source refs. Repair the question, choices, answer, explanation and evidence together if needed, then re-solve before promotion. Leave `026`–`049` pending until their later QA checkpoint.
+Independently QA `takken-power-q-license-disqualification-026`–`049` from the problem stems and four choices without first consulting stored answer/explanation/source refs. Repair the question, choices, answer, explanation and evidence together if needed, then re-solve before promotion.
 
 ## publication invariant
 
-Only independently verified material may enter a public or production pool. All 49 newly generated license-disqualification questions must remain unpublished until independent QA completes.
+Only independently verified material may enter a public or production pool. The remaining 24 newly generated license-disqualification questions must remain unpublished until independent QA completes.
