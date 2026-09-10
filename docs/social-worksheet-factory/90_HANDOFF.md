@@ -8,8 +8,8 @@
 - FACTCHECK is manual batch work only.
 - Junior-high generated coverage is fully independently verified.
 - High-school `歴史総合` is fully independently verified and learner-facing: **19 / 19 units**.
-- `日本史探究` FACTCHECK has started and is verified through the first ancient-history batch.
-- Pending backlog count: **155 units**.
+- `日本史探究` FACTCHECK is verified through the late A(3) ancient-state/social-change block.
+- Pending backlog count: **148 units**.
 - Public selector remains verified-only.
 
 ## FACTCHECK progress this session
@@ -21,42 +21,13 @@
 - Batch 05: 6 `歴史総合` C units — `FACTCHECK_BATCH_05.md`
 - Batch 06: 6 `歴史総合` D units — `FACTCHECK_BATCH_06.md`
 - Batch 07: 6 opening `日本史探究` units — `FACTCHECK_BATCH_07.md`
+- Batch 08: 7 `日本史探究` A(3) ancient-state/social-change units — `FACTCHECK_BATCH_08.md`
 
-Total independently verified this session: **44 units**. Pending backlog moved from **199 to 155**.
+Total independently verified this session: **51 units**. Pending backlog moved from **199 to 148**.
 
-## Batch 07 — `日本史探究` A opening block
+## Batch 08 — `日本史探究` A(3) 古代国家・社会
 
 Verified and published:
-
-1. `japanese-history-paleolithic-environment`
-2. `japanese-history-jomon-society`
-3. `japanese-history-yayoi-agriculture`
-4. `japanese-history-yayoi-polities-exchange`
-5. `japanese-history-kofun-yamato`
-6. `japanese-history-ancient-sources-outlook`
-
-The current MEXT high-school Geography/History commentary is the curriculum authority. Public institutional material from Tokyo National Museum, the National Museum of Japanese History, and the official Jomon archaeological-sites resource was used to independently cross-check specific life/culture claims.
-
-## Important corrections in Batch 07
-
-- The generated curriculum placement was not trusted. MEXT A(1) covers the change from Paleolithic to Jomon culture and the establishment of Yayoi culture; it does not simply contain every pre-Asuka topic.
-- `yayoi-polities-exchange` was moved from generated A(1) to A(2), and rewritten as a case study combining Chinese historical writing and archaeology to examine small-polity formation and political integration.
-- The generated Himiko memorization sentence was removed from that source-method unit rather than approving an unsupported shortcut.
-- `kofun-yamato` was moved from generated A(1) to A(3) `古代の国家・社会の展開と画期`, matching MEXT's explicit `国家の形成と古墳文化` treatment.
-- The Kofun unit now uses distribution, scale, form and grave goods to reason about broad political alliances, rather than defining an unspecified “Yamato government”.
-- `ancient-sources-outlook` now explicitly covers source characteristics/limitations, collection and reading of information, hypothesis formation, and the handoff into A(3).
-
-## Publication / backlog state
-
-- All six Batch 07 units have unit/fact/sentence `factcheckStatus: "verified"`.
-- No Batch 07 unit contains an image, so no image-license decision was required.
-- Learner-facing order follows the formal curriculum structure: A(1) foundation → A(2) source work → A(3) Kofun/state formation, even though the old generation backlog order differed.
-- Current pending backlog: **155**.
-- The next pending unit remains unpublished.
-
-## Exact next social action
-
-Continue `日本史探究` A(3) from:
 
 1. `japanese-history-asuka-state-formation`
 2. `japanese-history-ritsuryo-state`
@@ -66,7 +37,35 @@ Continue `日本史探究` A(3) from:
 6. `japanese-history-sekkan-politics`
 7. `japanese-history-shoen-warrior-rise`
 
-After those, continue to the medieval transition/source-work block in backlog order. GENERATE is finished; do not invent additional generation work.
+The current MEXT high-school Geography/History commentary is the curriculum authority. National Archives chronology and public institutional material from the National Museum of Japanese History, Nara National Museum, Kyoto's official tourism resource, and National Diet Library Search were used to independently cross-check selected concrete claims.
+
+## Important corrections in Batch 08
+
+- `asuka-state-formation`: replaced a simple East-Asia-caused-reform claim with the MEXT state-formation framework; independently anchored the Taika Reform chronology.
+- `ritsuryo-state`: aligned the unit to MEXT's `律令体制の成立過程と諸文化の形成` and independently anchored 701 / 大宝律令.
+- `nara-government-society`: removed unverified `班田収授` emphasis from the generated title/key point; retained independently supported Heijo-kyo and census-register evidence.
+- `tenpyo-culture-east-asia`: grounded the Tang-mission and Todaiji/Buddhist-culture examples in Nara National Museum material.
+- `early-heian-rule`: anchored 794 / Heian-kyo and aligned the second learning point to MEXT's explicit local-rule change and ritsuryo-system transformation.
+- `sekkan-politics`: aligned to MEXT's aristocratic-politics objective and uses Fujiwara Michinaga only as an independently supported exemplar.
+- `shoen-warrior-rise`: the generated title/content overcommitted A(3) to `荘園・公領` and a direct causal explanation of warrior growth. Learner-facing content is now `地方支配の変化と武士の出現`, following MEXT. The old slug remains only for compatibility; detailed landholding treatment stays in the following medieval queue.
+
+## Publication / backlog state
+
+- All seven Batch 08 units have unit/fact/sentence `factcheckStatus: "verified"`.
+- No Batch 08 unit contains an image, so no image-license decision was required.
+- All seven are loaded by `subjects/social/worksheets/index.html` after the previously verified ancient-history block.
+- Current pending backlog: **148**.
+- The next pending unit remains unpublished.
+
+## Exact next social action
+
+Continue `日本史探究` from the medieval transition/source-work block:
+
+1. `japanese-history-medieval-transition`
+2. `japanese-history-landholding-transition`
+3. `japanese-history-medieval-sources-outlook`
+
+After those, continue sequentially into the Kamakura block. GENERATE is finished; do not invent additional generation work.
 
 ## Factcheck discipline retained
 
