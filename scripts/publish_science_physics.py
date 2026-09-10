@@ -27,6 +27,7 @@ try:
     from scripts.science_physics_electromagnetic_induction import PHYSICS_ELECTROMAGNETIC_INDUCTION_PROBLEM_COUNT, PHYSICS_ELECTROMAGNETIC_INDUCTION_TOPICS
     from scripts.science_physics_induction_followup import PHYSICS_INDUCTION_FOLLOWUP_PROBLEM_COUNT, PHYSICS_INDUCTION_FOLLOWUP_TOPICS
     from scripts.science_physics_ac_basics import PHYSICS_AC_BASICS_PROBLEM_COUNT, PHYSICS_AC_BASICS_TOPICS
+    from scripts.science_physics_atomic import PHYSICS_ATOMIC_PROBLEM_COUNT, PHYSICS_ATOMIC_TOPICS
     from scripts.science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from scripts.worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 except ModuleNotFoundError:
@@ -52,6 +53,7 @@ except ModuleNotFoundError:
     from science_physics_electromagnetic_induction import PHYSICS_ELECTROMAGNETIC_INDUCTION_PROBLEM_COUNT, PHYSICS_ELECTROMAGNETIC_INDUCTION_TOPICS
     from science_physics_induction_followup import PHYSICS_INDUCTION_FOLLOWUP_PROBLEM_COUNT, PHYSICS_INDUCTION_FOLLOWUP_TOPICS
     from science_physics_ac_basics import PHYSICS_AC_BASICS_PROBLEM_COUNT, PHYSICS_AC_BASICS_TOPICS
+    from science_physics_atomic import PHYSICS_ATOMIC_PROBLEM_COUNT, PHYSICS_ATOMIC_TOPICS
     from science_worksheet_helpers import generate_formula_drill, generate_retrieval_drill
     from worksheet_factory import normalized_hash, render_pdf, validate, validate_catalog
 
@@ -80,6 +82,7 @@ ALL_TOPICS = {
     **{key: (topic, PHYSICS_ELECTROMAGNETIC_INDUCTION_PROBLEM_COUNT) for key, topic in PHYSICS_ELECTROMAGNETIC_INDUCTION_TOPICS.items()},
     **{key: (topic, PHYSICS_INDUCTION_FOLLOWUP_PROBLEM_COUNT) for key, topic in PHYSICS_INDUCTION_FOLLOWUP_TOPICS.items()},
     **{key: (topic, PHYSICS_AC_BASICS_PROBLEM_COUNT) for key, topic in PHYSICS_AC_BASICS_TOPICS.items()},
+    **{key: (topic, PHYSICS_ATOMIC_PROBLEM_COUNT) for key, topic in PHYSICS_ATOMIC_TOPICS.items()},
 }
 
 def _generate_topic_problems(topic, mode_key, mode, seed, problem_count):
