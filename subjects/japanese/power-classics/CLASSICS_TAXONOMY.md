@@ -16,4 +16,4 @@
 
 ## 現在の先頭未充足skill
 
-`kobun.aux.tari_ri.meaning` — 完了・存続の識別。targetQuestions: 200。2026-09-10 23:58 JST時点で50/200、次は `kobun_aux_tari_ri_meaning_0051`。
+`kobun.aux.tari_ri.meaning` — 完了・存続の識別。targetQuestions: 200。2026-09-11 00:30 JST時点で75/200、次は `kobun_aux_tari_ri_meaning_0076`。
