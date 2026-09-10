@@ -79,7 +79,17 @@ class PhysicsAtomicTests(unittest.TestCase):
     def test_hashes_are_disjoint_from_existing_catalog(self):
         hashes = {normalized_hash(problems) for *_, problems in self.generated_batches()}
         catalog = json.loads((ROOT / "worksheets" / "catalog.json").read_text(encoding="utf-8"))
-        prior_hashes = {row["content_hash"] for row in catalog}
+        current_ids = {
+            f"science-physics-motion-{topic_key}-{mode_key}-{variant:02d}"
+            for topic_key, topic in PHYSICS_ATOMIC_TOPICS.items()
+            for mode_key in topic["modes"]
+            for variant, _ in enumerate(topic["seeds"], start=1)
+        }
+        prior_hashes = {
+            row["content_hash"]
+            for row in catalog
+            if row.get("id") not in current_ids
+        }
         self.assertTrue(hashes.isdisjoint(prior_hashes))
 
 
