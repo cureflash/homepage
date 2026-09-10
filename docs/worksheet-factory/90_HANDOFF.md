@@ -1,6 +1,6 @@
 # Worksheet Factory — handoff
 
-Updated: 2026-08-28
+Updated: 2026-09-10
 
 ## Shared catalog writer safety
 
@@ -8,7 +8,7 @@ The former P1 concurrent-writer risk on authoritative `worksheets/catalog.json` 
 
 All workflows that directly publish the shared worksheet catalog must use repository-wide GitHub Actions concurrency group `worksheet-catalog-publish-v1` with `cancel-in-progress: false`. Preserve `tests/test_worksheet_catalog_writer_concurrency.py`, latest-main reconciliation, non-force pushes, catalog/hash validation, and stable URLs.
 
-The JH3 writer `.github/workflows/math-jh3-publish.yml` is registered in that repository-wide guard.
+The JH3 writer `.github/workflows/math-jh3-publish.yml` remains registered in that repository-wide guard.
 
 ## Current math factory state
 
@@ -23,20 +23,23 @@ Completed grades:
 - 中学1年: done
 - 中学2年: done
 
-The active grade is **中学3年**.
+The active grade is 中学3年.
 
 ## Latest completed run
 
-中学3年の展開・因数分解を4 checkpoint連続で進めた。
+中学3年の次の4 checkpointを検証・公開した。
 
-1. `difference-of-squares-expansion` — `(a+b)(a-b)` の展開 — 3 variants / 3 PDFs
-2. `factor-common-factor` — 共通因数でくくる因数分解 — 3 variants / 3 PDFs
-3. `factor-x2-sum-product` — `x^2+(a+b)x+ab` 型の因数分解 — 3 variants / 3 PDFs
-4. `factor-square-formula` — 平方公式型の因数分解 — 3 variants / 3 PDFs
+1. `factor-difference-squares` — 和と差の積型の因数分解 — 3 variants / 3 PDFs
+2. `expansion-factorization-mixed-100` — 展開・因数分解混合100問 — 3 variants / 3 PDFs
+3. `square-root-basic-value` — 平方根の基本値 — 3 variants / 3 PDFs
+4. `simplify-radical` — 根号の簡単化 — 3 variants / 3 PDFs
 
-中学3年の公開範囲は現在 **8 skills / 24 PDFs**。
+中学3年の公開範囲は現在 12 skills / 36 PDFs。
 
-- publish commit: `4f77b081a34bfe50fdcc0c86b1bcaab9f4eecb4c`
+- publish commit: `5225474c2688657a9ee38f2f551604032d414199`
+- validation workflow run: `34491208403` success
+- PR #814: displayed-problem deduplication and bounded generation
+- PR #817: direct-script validation runner repair
 
 ## Exact next starting point
 
@@ -46,6 +49,6 @@ Read:
 - `curriculum/junior-high/grade-03/PLAN.md`
 - `curriculum/junior-high/grade-03/HANDOFF.md`
 
-Start from **和と差の積型の因数分解**. If safe, continue through **展開・因数分解混合100問系 → 平方根の基本値 → 根号の簡単化** for up to four checkpoints.
+Start from 根号の乗除. If safe, continue through 根号の加減 → 分母の有理化 → 平方根四則混合 for up to four checkpoints.
 
-Before entering square roots, verify current MEXT Grade 3 placement. Continue the deterministic generator → independent validator → duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
+Continue the deterministic generator → independent validator → displayed-problem duplicate/hash guard → PDF → catalog/site validation contract and shared catalog-writer concurrency guard.
