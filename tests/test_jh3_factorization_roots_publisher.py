@@ -1,42 +1,39 @@
-import json, tempfile
+import json,re,sys,tempfile
 from pathlib import Path
-from scripts.publish_jh3_factorization_roots import SKILLS, SEEDS, gen, independent_answer, validate_problem
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+from scripts.publish_jh3_factorization_roots import SKILLS,SEEDS,gen,independent_answer,publish,question_text,validate_problem
+from scripts.worksheet_factory import normalized_hash,validate_catalog
 
-
-def test_generators_are_deterministic_and_independently_validated():
+def main():
+    src=json.loads((ROOT/'worksheets/catalog.json').read_text(encoding='utf-8'))
+    own={f'jh3-{s}-{v:02d}' for s in SKILLS for v,_ in enumerate(SEEDS,1)}
+    old={e['content_hash'] for e in src if e['id'] not in own}; hashes=set()
     for skill,(_,count,_) in SKILLS.items():
-        hashes=[]
+        variants=[]
         for seed in SEEDS:
-            a=gen(skill,seed); b=gen(skill,seed)
-            assert a==b
-            assert len(a)==count
-            assert len({json.dumps(p,sort_keys=True) for p in a})==count
-            for p in a:
-                validate_problem(p)
-                assert tuple(p['answer'])==tuple(independent_answer(p))
-            hashes.append(json.dumps(a,sort_keys=True))
-        assert len(set(hashes))==len(SEEDS)
-
-
-def test_mixed_series_has_balanced_operation_families():
-    ps=gen('expansion-factorization-mixed-100',SEEDS[0])
-    counts={}
-    for p in ps: counts[p['type']]=counts.get(p['type'],0)+1
-    assert counts=={
-        'expand-square':20,
-        'expand-difference':20,
-        'factor-sum-product':20,
-        'factor-square':20,
-        'factor-difference':20,
-    }
-
-
-def test_radical_simplification_is_fully_reduced():
+            ps=gen(skill,seed); assert ps==gen(skill,seed); assert len(ps)==count
+            keys=set(); displayed=set()
+            for p in ps:
+                validate_problem(p); assert tuple(independent_answer(p))==tuple(p['answer'])
+                k=json.dumps(p,sort_keys=True); assert k not in keys; keys.add(k)
+                q=question_text(p); assert q not in displayed; displayed.add(q)
+            h=normalized_hash(ps); assert h not in old and h not in hashes; hashes.add(h); variants.append(frozenset(displayed))
+        assert len(set(variants))==len(SEEDS)
+    for seed in SEEDS:
+        ps=gen('expansion-factorization-mixed-100',seed); counts={}
+        for p in ps: counts[p['type']]=counts.get(p['type'],0)+1
+        assert counts=={'expand-square':20,'expand-difference':20,'factor-sum-product':20,'factor-square':20,'factor-difference':20}
     for seed in SEEDS:
         for p in gen('simplify-radical',seed):
-            k,m=independent_answer(p)
-            assert k>=2 and m>1 and k*k*m==p['n']
+            k,m=independent_answer(p); assert k>=2 and m>1 and k*k*m==p['n']
             d=2
-            while d*d<=m:
-                assert m%(d*d)!=0
-                d+=1
+            while d*d<=m: assert m%(d*d)!=0; d+=1
+    with tempfile.TemporaryDirectory() as td:
+        root=Path(td);(root/'worksheets').mkdir();(root/'worksheets/catalog.json').write_text('[]\n',encoding='utf-8');publish(root)
+        cat=json.loads((root/'worksheets/catalog.json').read_text(encoding='utf-8'));assert len(cat)==12;validate_catalog(cat,root)
+        for e in cat:
+            data=(root/e['url']).read_bytes();assert len(data)>1000;assert len(re.findall(rb'/Type\s*/Page\b',data))==2
+        before=(root/'worksheets/catalog.json').read_text(encoding='utf-8');publish(root);assert before==(root/'worksheets/catalog.json').read_text(encoding='utf-8')
+    text=(ROOT/'scripts/publish_jh3_factorization_roots.py').read_text(encoding='utf-8');assert 'colors.red' in text and 'str(i+1)' in text
+    print('jh3 factorization roots publisher tests: OK')
+if __name__=='__main__':main()

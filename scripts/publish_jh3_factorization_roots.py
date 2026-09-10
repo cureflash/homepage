@@ -47,7 +47,11 @@ def independent_answer(p):
 
 def gen(skill,seed):
     r=random.Random(seed+997*sum(map(ord,skill))); out=[]; seen=set(); target=SKILLS[skill][1]
+    attempts=0; max_attempts=max(1000,target*100)
     while len(out)<target:
+        attempts += 1
+        if attempts > max_attempts:
+            raise RuntimeError(f'could not generate {target} unique displayed problems for {skill}; generated {len(out)}')
         if skill=='factor-difference-squares':
             p={'type':skill,'a':r.randint(2,30)}
         elif skill=='square-root-basic-value':
@@ -62,7 +66,7 @@ def gen(skill,seed):
                 a=r.choice([x for x in range(-9,10) if x]); b=r.choice([x for x in range(-9,10) if x]); p={'type':'factor-sum-product','a':a,'b':b}
             elif i==3: p={'type':'factor-square','a':r.randint(1,12),'sign':r.choice((-1,1))}
             else: p={'type':'factor-difference','a':r.randint(2,30)}
-        p['answer']=independent_answer(p); key=json.dumps(p,sort_keys=True)
+        p['answer']=independent_answer(p); key=question_text(p)
         if key in seen: continue
         seen.add(key); out.append(p)
     return out
