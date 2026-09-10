@@ -77,4 +77,4 @@
 5/5 PASS。教材外知識を補わず、式選択理由と適用条件まで説明できる。
 
 ## QA判定
-BINARY_PUBLICATION_PENDING。EXAM_ALIGNMENT、本文、練習QA、公式過去問独立再解答、PDF/PPTX生成・ローカルVisual QAは完了。ただしGitHub上に必須PDF/PPTXが未配置のため、完成数には計上しない。
+PASS。EXAM_ALIGNMENT、本文、15問練習、公式過去問5件の独立再解答、計算QA、解説PDF 3ページ・練習PDF 3ページ・PowerPoint 6スライドのVisual QAを完了し、必須4成果物をGitHubへ配置してWeb catalogへ登録した。
