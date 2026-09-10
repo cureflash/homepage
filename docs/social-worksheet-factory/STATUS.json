@@ -7,7 +7,7 @@
   "active_unit": null,
   "next_role": "factcheck_manual",
   "last_completed_role": "factcheck",
-  "verified_through": "japanese-history-medieval-sources-outlook",
+  "verified_through": "japanese-history-kamakura-new-buddhism-culture",
   "generation_batch_target": 20,
   "factcheck_policy": "manual_batch",
   "last_generated_batch": [
@@ -21,16 +21,13 @@
     "political-economy-global-issues-inquiry"
   ],
   "last_factchecked_batch": [
-    "japanese-history-medieval-transition",
-    "japanese-history-landholding-transition",
-    "japanese-history-medieval-sources-outlook"
-  ],
-  "unverified_backlog": [
     "japanese-history-kamakura-shogunate",
     "japanese-history-gokenin-landholding",
     "japanese-history-song-exchange-medieval-economy",
     "japanese-history-mongol-invasions-kamakura-change",
-    "japanese-history-kamakura-new-buddhism-culture",
+    "japanese-history-kamakura-new-buddhism-culture"
+  ],
+  "unverified_backlog": [
     "japanese-history-kenmu-nanbokucho",
     "japanese-history-muromachi-shogunate-shugo",
     "japanese-history-ming-trade-east-asia",
@@ -172,7 +169,7 @@
     "political-economy-international-cooperation-economic-institutions",
     "political-economy-global-issues-inquiry"
   ],
-  "pending_factcheck_count": 145,
+  "pending_factcheck_count": 140,
   "prototype_status": "verified",
-  "updated_at": "2026-09-11T00:09:00+09:00"
+  "updated_at": "2026-09-11T00:19:47+09:00"
 }
