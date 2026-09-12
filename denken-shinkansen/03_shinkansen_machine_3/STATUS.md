@@ -5,13 +5,13 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 0 / 16
-- current_status: `topic_01_pdfs_complete`
+- current_status: `topic_01_powerpoint_complete`
 - last_completed_topic: なし
 - active_topic: `01 架線25kVをそのままモーターに入れたらどうなる？`
-- next_start: Topic 01 のsource Markdownを正本として解説画像PowerPointを作成・検証・GitHub正本へ追加する。必須4成果物が揃った後、選定5問を保存済み正答を見ずに独立再解答し、公式解答と照合する
+- next_start: Topic 01 の必須4成果物が揃ったため、選定5問を保存済み正答を見ずに独立再解答し、公式解答と照合する。教材だけで5/5正答かつ根拠説明・カバレッジを確認できた場合のみcompletedへ進める
 
 ## 新品質ゲート進捗
-- [ ] 01 架線25kVをそのままモーターに入れたらどうなる？ — 制作前EXAM_ALIGNMENT、source Markdown、解説本文、3段階例題、12問の練習問題・完全解説、解説PDF、練習PDFまで完了。PowerPoint・完成後独立再解答は未実施
+- [ ] 01 架線25kVをそのままモーターに入れたらどうなる？ — 制作前EXAM_ALIGNMENT、source Markdown、解説本文、3段階例題、12問の練習問題・完全解説、解説PDF、練習PDF、解説画像PowerPointまで完了。完成後独立再解答のみ未実施
 - [ ] 02〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT対象
@@ -27,7 +27,7 @@ source Markdownでは上記5問の要求事項を本文節・例題・練習問�
 - `topics/01_transformer/01_transformer.md`
 - `topics/01_transformer/01_transformer_explanation.pdf`
 - `topics/01_transformer/01_transformer_practice.pdf`
-- 解説画像PowerPoint: 未反映
+- `topics/01_transformer/01_transformer_images.pptx`
 
 解説PDF:
 - A4縦 4ページ
@@ -41,11 +41,17 @@ source Markdownでは上記5問の要求事項を本文節・例題・練習問�
 - 解答・完全解説付き
 - 数値整合とレンダリングを確認済み
 
+解説画像PowerPoint:
+- 16:9、20枚
+- 電験で問う内容、新幹線側の電力経路、変圧器原理、巻数比・電圧比・電流比、一次側換算、簡易等価回路、鉄損・銅損、効率・最大効率、無負荷試験、短絡試験、励磁回路、電圧変動率、解法手順、3段階例題、頻出ミス、過去問対応、出典を収録
+- 図表は自作模式図で構成し、未確認の実車値は追加していない
+- 全20枚レンダリング確認、overflow検査PASS
+
 ## 境界
 新幹線側は系列SPECで確定済みの `架線25 kV → パンタグラフ → 主変圧器 → 二次側交流 → 主変換装置 → 主電動機` の導入に限定した。実車の主変圧器容量、巻数比、二次電圧、損失、効率等の未確認値は追加していない。
 
 ## 01 QA判定
-`IN_PROGRESS`。解説PDF・練習PDFまでGitHub正本へ反映したが、MASTER SPEC必須の解説画像PowerPointと、全必須成果物完成後の選定5問独立再解答・公式解答照合が未完了。完成数は0/16のまま。
+`IN_PROGRESS`。MASTER SPEC必須のsource Markdown、解説PDF、練習PDF、解説画像PowerPointの4成果物はGitHub正本へ揃った。完成後の選定5問独立再解答・公式解答照合が未完了のため、品質ゲートはまだPASS扱いにせず、完成数は0/16のまま。
 
 ## 次
-Topic 01 の解説画像PowerPointを16:9・14〜22枚でsource Markdownから作成し、表示QA後にGitHub正本へ追加する。その後に選定5問の完成後独立再解答を行い、品質ゲートPASS時のみTopic 01をcompletedへ進める。
+選定5問を保存済み正答を見ず、Topic 01 の教材内容だけを使って独立再解答する。公式解答と照合し、5/5正答、必要公式の選択、途中式、言い換え対応、正答理由の説明、教材カバレッジを確認できた場合のみTopic 01をcompletedへ進める。
