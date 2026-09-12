@@ -6,10 +6,13 @@
 
 active topic: `01 複素数・複素指数・フェーザ計算`
 
-解説本文まで完了。完成数は `0 / 20` のまま。
+解説PDFまで完了。完成数は `0 / 20` のまま。
 
 source Markdown:
 `topics/01_complex_numbers_phasors/01_complex_numbers_phasors.md`
+
+解説PDF:
+`topics/01_complex_numbers_phasors/01_complex_numbers_phasors_explanation.pdf`
 
 ## 選定済み公式過去問
 
@@ -33,11 +36,11 @@ source Markdown:
 
 5問・25小問すべて公式解答と一致。
 
-## 完成した解説本文
+## 完成した解説PDF
 
-確定済み10節構成に沿って次を収録済み。
+完成済み解説本文をA4縦3ページへ整理した。
 
-- 直交形式・複素平面・共役複素数・複素除算
+- 直交形式・複素平面・共役・複素除算
 - 極形式・複素指数・オイラーの公式
 - 実効値フェーザと位相
 - `R`、`jωL`、`1/(jωC)`
@@ -50,6 +53,8 @@ source Markdown:
 - `a=e^{j120°}` の意味と三相・同期機・電力系統への接続
 - 選定5問と本文節の対応表
 
+全3ページをレンダリング検査し、文字欠け・重なり・クリッピングなし。
+
 ## 範囲境界
 
 - 対称座標法そのものの詳細は二種電力編へ譲る。
@@ -58,6 +63,6 @@ source Markdown:
 
 ## 次に行うこと
 
-完成した解説本文をもとにTopic 01の解説PDFを作成する。
+Topic 01の練習PDF（解答・完全解説付き）を作成する。
 
-その後、練習PDF・PowerPointを作成し、成果物完成後に教材だけで上記5問を再度独立解答する。最終QA PASS後に初めてTopic 01をcompletedへ変更する。
+その後、PowerPointを作成し、成果物完成後に教材だけで上記5問を再度独立解答する。最終QA PASS後に初めてTopic 01をcompletedへ変更する。
