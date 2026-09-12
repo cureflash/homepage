@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 0 / 12
-- current_status: `topic_01_exam_alignment_research_complete`
+- current_status: `topic_01_exam_alignment_validation_complete`
 - last_completed_topic: `none`
 - active_topic: `01 単位・指数・有効数字`
-- next_start: Topic 01で選定した公式過去問5問を、公式解答を先に見ずに独立再解答し、その後公式解答と照合して要求知識・単位変換・有効数字ルールを本文節へマッピングする
+- next_start: Topic 01の検証済みEXAM_ALIGNMENTと本文節マッピングに沿って解説本文を作成する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -16,7 +16,7 @@
 - [x] 関連する公式過去問を5問選定
 - [x] 参考教材を複数系統確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
-- [ ] 公式解答との照合を伴う独立検証
+- [x] 公式解答との照合を伴う独立検証
 - [ ] 解説本文
 - [ ] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
@@ -25,13 +25,17 @@
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 01 `単位・指数・有効数字` の制作前EXAM_ALIGNMENTを作成した。
+Topic 01 `単位・指数・有効数字` で選定済みの公式過去問5問を、公式解答を先に参照せず独立再解答した後、試験センター公式解答と照合した。
 
-選定した公式過去問は、R8上 理論 問3、R5上 理論 問10、R4上 機械 問11、H29 理論 問14、H28 理論 問16の5問。
+- R8上 理論 問3: (1) / 公式(1)
+- R5上 理論 問10: (4) / 公式(4)
+- R4上 機械 問11: (3) / 公式(3)
+- H29 理論 問14: (5) / 公式(5)
+- H28 理論 問16: (a)(2), (b)(3) / 公式(a)(2), (b)(3)
 
-要求論点は、SI接頭語と10のべき、`mH`・`mA`・`ms`・`m/min`・`kW` の換算、複合単位と次元確認、有効数字、絶対誤差・百分率誤差、中間値の丸めすぎ防止に整理した。
+5問すべて一致。単位換算、10のべき、複合単位、有効数字、絶対誤差・百分率誤差、効率・百分率の要求事項を `MASTER_SPEC.md` の解説プリント最低構成9節へマッピングし、source Markdownに記録した。
 
-新幹線側は `SPEC.md` に明記された 25 kV、MW、kWh を自然な例として使う。未確認の車両出力や消費電力量等を推測して実値化しない。
+選定問題中のインダクタンス・電動機応用等はTopic 01の新規主題にはせず、単位・指数・有効数字の適用文脈としてのみ扱う。
 
 ## 判定
-Topic 01 は `EXAM_ALIGNMENT` 制作前リサーチ段階まで進んだが、まだ `completed` ではない。MASTER_SPEC.md / EXAM_ALIGNMENT_SPEC.md の完成後品質ゲートを通過するまで完成数へ加算しない。
+Topic 01 は制作前EXAM_ALIGNMENTの独立検証まで完了したが、まだ `completed` ではない。本文・成果物作成後に教材だけで公式過去問を独立再解答し、最終QA PASSするまで完成数へ加算しない。
