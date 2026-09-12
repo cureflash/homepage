@@ -6,14 +6,14 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は1/16。Topic 01は品質ゲートPASSでcompleted。active topicは02 `初代0系はどうやって走っていた？`。
 
 ## 今回進捗
-Topic 02 を `topic_02_practice_questions_complete` から `topic_02_practice_pdf_complete` へ1段階進めた。
+Topic 02 を `topic_02_practice_pdf_complete` から `topic_02_powerpoint_complete` へ1段階進めた。
 
 GitHub正本更新:
-- `topics/02_dc_machine/02_dc_machine_practice.pdf` — 練習問題12問＋完全解説をA4縦5ページで組版
+- `topics/02_dc_machine/02_dc_machine_images.pptx` — 解説画像PowerPoint 16:9・20枚
 - `STATUS.md`
 - `HANDOFF.md`
 
-練習PDFは全5ページをレンダリングし、文字欠け・重なり・クリッピング・可読性を確認してPASS。テキスト抽出でも `正答:` 12件を確認した。PowerPoint、完成後独立再解答には着手していない。
+PowerPointは確定済みsourceの範囲だけで構成し、全20枚をレンダリングして文字欠け・重なり・クリッピング・可読性を確認、overflow検査もPASS。0系主電動機の未確認形式・定格値、Topic 03の体系的な速度制御は追加していない。完成後独立再解答には着手していない。
 
 ## Topic 02 EXAM_ALIGNMENT
 公式過去問は直近年度から6問を選定済み。
@@ -77,6 +77,15 @@ GitHub正本更新:
 - 電験で問われる内容、構造・整流、誘導起電力、逆起電力、トルク・電力、他励・分巻・直巻・複巻、損失・効率、10段階解法、3段階例題、新幹線接続、頻出ミス、過去問対応、公式まとめを収録
 - 全4ページをレンダリングし、文字欠け、重なり、クリッピング、改ページ、可読性を確認してPASS
 
+## 解説画像PowerPoint
+`topics/02_dc_machine/02_dc_machine_images.pptx`
+
+- 16:9、20枚
+- 電験で問う内容、0系の電力経路、直流機の構造・整流、誘導起電力、逆起電力、電磁トルク・機械出力、他励・分巻・直巻・複巻、速度・トルク特性、損失・効率、10段階解法、3段階例題、頻出ミス、選定6問の過去問対応、新幹線への接続、公式まとめ、出典を収録
+- 図表は確定済みsourceだけに基づく自作模式図。外部画像は引用していない
+- 0系主電動機の未確認形式・定格値、Topic 03の体系的な速度制御は追加していない
+- 全20枚レンダリング確認PASS、overflow検査PASS
+
 ## 境界
 仕様追加はしていない。0系主電動機の具体的形式・定格値は一次資料で未確認のため追加していない。
 
@@ -85,7 +94,7 @@ Topic 02では過去問対応に必要な `V=E+IaRa`、`E=kΦN` と速度・ト�
 ## QA判定
 Topic 01: `PASS / completed`。
 
-Topic 02: 制作前 `EXAM_ALIGNMENT`、解説本文・3段階例題、解説PDF、12問の練習問題・完全解説、練習PDFまで完了。練習PDFは全ページのレンダリングQAまでPASS。テーマ自体は未完了で、PowerPoint、完成後独立再解答が残る。完成数は1/16。
+Topic 02: 制作前 `EXAM_ALIGNMENT`、解説本文・3段階例題、解説PDF、12問の練習問題・完全解説、練習PDF、解説画像PowerPointまで完了。PowerPointは全20枚のレンダリングQAとoverflow検査までPASS。テーマ自体は未完了で、完成後独立再解答が残る。完成数は1/16。
 
 ## 次の正確な開始点
-Topic 02の確定済みsource範囲だけを使って `topics/02_dc_machine/02_dc_machine_images.pptx` を作成する。全スライドをレンダリングし、文字欠け・重なり・クリッピング・overflow・可読性を確認する。未確認実車値とTopic 03の速度制御体系は追加しない。
+Topic 02の選定6問（R8上問1・2、R7下問1・2、R7上問1・2）を、保存済み正答を先に見ず教材内容だけで独立再解答する。その後、公式解答と照合し、必要公式の選択、途中式、言い換え対応、正答理由、教材カバレッジを確認して品質ゲートを判定する。
