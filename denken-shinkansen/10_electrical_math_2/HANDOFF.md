@@ -10,59 +10,67 @@ Topic 01 `複素数・複素指数・フェーザ計算` は最終QAまでPASS�
 
 active topic: `02 ベクトルと座標変換`
 
-## Topic 01 完成証跡
+current status: `topic_02_exam_alignment_complete`
+
+## Topic 02 制作前EXAM_ALIGNMENT
 
 source Markdown:
-`topics/01_complex_numbers_phasors/01_complex_numbers_phasors.md`
+`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms.md`
 
-解説PDF:
-`topics/01_complex_numbers_phasors/01_complex_numbers_phasors_explanation.pdf`
+source blob SHA:
+`da0aa41a775157f7a584574ca098e1b057f2a9a6`
 
-練習PDF:
-`topics/01_complex_numbers_phasors/01_complex_numbers_phasors_practice.pdf`
+選定公式過去問:
 
-解説画像PowerPoint:
-`topics/01_complex_numbers_phasors/01_complex_numbers_phasors_images.pptx`
+- R8 一次 理論 問1
+- R8 一次 理論 問2
+- R7 一次 理論 問2
+- R7 一次 理論 問7
+- R1 一次 理論 問5
 
-最終QA:
-`topics/01_complex_numbers_phasors/01_complex_numbers_phasors_final_qa.md`
+制作前独立再解答:
 
-## Topic 01 最終QA結果
+- 5問 / 25小問 PASS
+- 公式解答との一致: 25 / 25
+- 参考教材: e-sysnet + 電験王2 の2系統以上
+- 直近年度優先: R8 2問 + R7 2問
 
-- 必須成果物4種: 実在確認PASS
-- 二種一次理論の公式過去問5問のEXAM_ALIGNMENT: PASS
-- 練習PDF: 全12問。問1〜8は一次試験型選択、問9〜12は本試験標準〜複合の記述計算。完全解説付き
-- 完成後独立再解答: 5 / 5問、25 / 25小問 PASS
-- 教材外知識補完: 0件
-- 既実施レンダリングQAと現行blob: 一致確認PASS
-- 実車値 / 仮定値の区別: PASS
-- プログラム・CSV・独立グラフ/波形: 本テーマでは該当なし
+## Topic 02で固定した説明範囲
 
-Topic 01は一次理論へ直接接続する数学テーマのため、二次問題は数合わせで追加していない。
+扱う:
 
-現行blob SHA:
+- 成分表示とベクトル合成
+- 基底と成分
+- 内積と射影
+- 外積の大きさ・向き
+- 直交座標での成分抽出
+- `r=sqrt(x^2+y^2)` と直交座標の対応
+- 2次元回転変換
+- 電界・磁界・ローレンツ力の方向判定
+- 回転対称性による成分の相殺
+- 三相量・回転量への幾何学的接続
 
-- source: `653d2a1671bf1c9f12b3c2e38116cab07bd789d1`
-- 解説PDF: `f4859bfc84af4b0b5c64948d49d9e18367b90ced`
-- 練習PDF: `d2b7e58f216676a84979ea33e85ebb03128e8f88`
-- PowerPoint: `c962cd3fb8adf62dff2631c82ab5ba031507e20a`
+扱わない:
 
-## 範囲境界
+- 対称座標法そのものの詳細
+- Topic 11の一般的な行列・線形連立方程式
+- SPECにない抽象ベクトル解析
 
-- 対称座標法そのものの詳細は二種電力編へ譲る。
-- Topic 11の行列・線形連立方程式をTopic 02で先取りして主題化しない。
-- 高校数学のベクトル基本は既知とし、二種で使う成分・内積・外積・基底・座標変換・回転変換へ接続する。
+二次記述問題は数合わせで追加しない。本テーマの選定過去問は、数学要素が直接問われる一次理論5問で品質ゲートを構成している。
 
 ## 次に行うこと
 
-Topic 02 `ベクトルと座標変換` の制作前EXAM_ALIGNMENTから開始する。
+Topic 02の解説本文と3段階例題を作成する。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`に従い、本文作成より先に次を行う。
+`02_vectors_coordinate_transforms.md` の「過去問から逆算した必須説明」をそのまま教材範囲とし、仕様を追加しない。
 
-- 電気技術者試験センター公式過去問を直近年度優先で調査する
-- 関連公式過去問を原則5問以上選定する
-- 各問の要求知識、使用式、設問型、典型ミスを分解する
-- 参考教材を複数系統確認する
-- source MarkdownへEXAM_ALIGNMENTと教材で必要な説明を記録する
+解説本文では少なくとも次を欠落させない。
 
-この制作前品質ゲートを終えるまで、Topic 02の解説本文には進まない。
+1. `v=v_x e_x+v_y e_y+v_z e_z` と成分・基底の区別
+2. 内積を成分抽出・射影として使う手順
+3. 外積の大きさ・右手系・負電荷での反転
+4. 回転対称性で消える成分と残る成分
+5. 直交座標と半径方向量の読み替え
+6. 2次元回転変換と逆変換
+7. `M=M0 cosθ` や三相120°への接続
+8. `座標系固定→成分化→演算選択→必要成分抽出→符号・単位検算` の標準解法
