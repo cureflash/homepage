@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `06_shinkansen_power_2`
-- exam_aligned_completed_topics: 0 / 22
-- current_status: `topic_01_reanswer_pass`
-- last_completed_topic: `none`
-- active_topic: `01 新幹線を電力系統から見てみる`
-- next_start: 最終QAを行う。成果物の存在、source Markdown・解説PDF・練習PDF・PowerPointの整合、EXAM_ALIGNMENT記録、再独立解答5/5 PASSを確認し、全項目PASSした場合のみTopic 01を `completed` にする
+- exam_aligned_completed_topics: 1 / 22
+- current_status: `topic_01_completed`
+- last_completed_topic: `01 新幹線を電力系統から見てみる`
+- active_topic: `02 信濃川の水で新幹線を何本走らせられる？`
+- next_start: Topic 02 の制作前EXAM_ALIGNMENTを行う。公式過去問を直近年度優先で一次・二次合わせて原則5問以上選定し、二次対象論点では確認できる記述式を最低1問含め、要求知識・式・設問型・参考教材をsource Markdownへ記録する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -28,9 +28,9 @@
   - タービン発電機の直軸過渡リアクタンス代表範囲 `0.2～0.4 p.u.`
   - 駆動点インピーダンスと節点インピーダンス行列 `Z_bus` の関係
   - 短絡容量と系統の強さ・電圧維持能力の関係
-- [x] 補強内容を解説PDFへ同期し、4ページをレンダリングQA PASS
+- [x] 補強内容を解説PDFへ同期し、全ページをレンダリングQA PASS
 - [x] 同じ公式過去問5問で再独立解答（5/5 PASS、教材外知識補完0件）
-- [ ] 最終QA PASS
+- [x] 最終QA PASS
 
 ## 正式な品質ゲート対象
 - H29 一次 電力 問6
@@ -39,16 +39,22 @@
 - R5 二次 電力・管理 問4
 - R6 二次 電力・管理 問4
 
-## 今回進めた内容
-補強済み教材だけを使い、正式選定5問を再度独立解答した。解答確定後に電気技術者試験センター公式解答と照合し、5問すべて一致した。
+一次2問＋二次記述3問。`EXAM_ALIGNMENT_SPEC.md` の二種要件を満たす。
 
-- H29一次問6: `[ハ, ヘ, ニ, ヌ, ル]`
-- R5一次問4: `[イ, ロ, ヘ, ヨ, ニ]`
-- R4二次問3: `sinθ_d=-0.260`, `Y_d=0.162 p.u.`
-- R5二次問4: `V_s≈6.58 kV`, `Q_1≈212 kvar`
-- R6二次問4: `400/400 A`, `406/394 A`, `I_sc≈8.34 kA`
+## Topic 01 最終QA
+判定: `PASS`
 
-教材外知識補完は0件。再独立解答の詳細は `topics/01_power_system_view/01_power_system_view_independent_reanswer.md` に記録した。
+確認済み:
+- 必須source Markdown、解説PDF、練習PDF、解説画像PowerPointがGitHub正本に存在
+- EXAM_ALIGNMENTは正式選定5問の要求事項を本文節へ対応付け済み
+- 練習15問は一次型10問＋二次記述型5問で、正式選定5問の要求事項をマッピング済み
+- 補強後の解説PDFは現行版でレンダリングQA PASS
+- 練習PDFは作成時の全6ページ二系統レンダリングQA済み現行blob
+- PowerPointは作成時の全4枚レンダリング確認・overflow検査PASS済み現行blob
+- 完成後再独立解答は5/5 PASS、教材外知識補完0件
+- Topic 08、12、16、20の本題および未確認実設備値は追加していない
 
-## 判定
-Topic 01 は `reanswer_pass`。再独立解答ゲートは通過したが最終QA未実施のため、まだ `completed` ではない。完成数は `0 / 22` のまま。
+以上によりTopic 01を `completed` とした。完成数は `1 / 22`。
+
+## 次
+Topic 02 `信濃川の水で新幹線を何本走らせられる？` の制作前EXAM_ALIGNMENTから開始する。本文や成果物は、公式過去問から要求事項を確定する前に作成しない。
