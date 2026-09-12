@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 1 / 21
-- current_status: `topic_02_powerpoint_complete`
+- current_status: `topic_02_exam_reanswer_complete`
 - last_completed_topic: `01 25kV架線を一つの等価回路にする`
 - active_topic: `02 架線は長くなるとなぜ電圧が落ちる？`
-- next_start: Topic 02の品質ゲート対象6問を、保存済み正答を見ず教材内容だけで完成後独立再解答する
+- next_start: Topic 02の最終QAを行い、全成果物・EXAM_ALIGNMENT・独立再解答結果の整合を確認する
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -23,30 +23,26 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの完成後独立再解答
+- [x] 公式過去問の教材のみでの完成後独立再解答 6 / 6 PASS
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 02の解説画像PowerPointを作成した。
+Topic 02の品質ゲート対象6問について、完成済み教材の公式・解法手順だけで完成後独立再解答を実施した。
 
-成果物:
-- `topics/02_catenary_voltage_drop/02_catenary_voltage_drop_images.pptx`
+対象:
+- 一次 理論: R6 問2(3)、R1 問5(1)、H27 問1(3)(4)
+- 二次 電力・管理: R5 問4(1)、R1 問4(2)、H27 問3
 
-構成:
-- 16:9、7スライド
-- 一次理論3問の要求事項として、導電率・抵抗率・`R=ρl/S=l/(σS)`・電流密度・`J=σE`・非一様電流密度を図解
-- 直接関連する二次3問の要求事項として、三相線路の電圧降下と進み／遅れの符号、分布負荷の `∫I(x)r dx`・`∫I(x)^2r dx` を図解
-- 温度係数、`IR` と `I²R` の区別、単位換算・半径／直径・単位長さ値の典型ミスを整理
-- 過去問6問と各スライドの対応を最終スライドで明示
+結果:
+- 使用式選択: 6 / 6 PASS
+- 途中式・導出: 6 / 6 PASS
+- 試験センター公式解答との照合: 6 / 6 PASS
+- 教材外知識による補完: 0件
+- 仕様外論点の追加: なし
 
-QA:
-- 全7スライドをレンダリングして表示確認
-- 7 / 7スライドで文字欠け・重なり・ページ外はみ出しなし
-- `slides_test.py` overflow検査 PASS
-
-実車未確認値は追加していない。磁界・静電容量・表皮効果・コロナ等の仕様外論点は追加していない。
+再解答結果は `topics/02_catenary_voltage_drop/02_catenary_voltage_drop.md` の「完成後の独立再解答」に記録した。
 
 ## 判定
 
-Topic 02を `topic_02_powerpoint_complete` とする。完成数は `1 / 21` のまま。次段階は品質ゲート対象6問の完成後独立再解答。
+Topic 02を `topic_02_exam_reanswer_complete` とする。完成数は `1 / 21` のまま。次段階は最終QAであり、通過するまで Topic 02 は `completed` としない。
