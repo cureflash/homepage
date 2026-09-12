@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `06_shinkansen_power_2`
 - exam_aligned_completed_topics: 0 / 22
-- current_status: `topic_01_revision_materials_synced`
+- current_status: `topic_01_reanswer_pass`
 - last_completed_topic: `none`
 - active_topic: `01 新幹線を電力系統から見てみる`
-- next_start: 補強済み教材だけを使い、正式選定5問を再度独立解答する。保存済み正答・制作前独立検証を解答根拠に使わず、5/5 PASSかつ教材外知識補完0件なら最終QAへ進む
+- next_start: 最終QAを行う。成果物の存在、source Markdown・解説PDF・練習PDF・PowerPointの整合、EXAM_ALIGNMENT記録、再独立解答5/5 PASSを確認し、全項目PASSした場合のみTopic 01を `completed` にする
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -29,7 +29,7 @@
   - 駆動点インピーダンスと節点インピーダンス行列 `Z_bus` の関係
   - 短絡容量と系統の強さ・電圧維持能力の関係
 - [x] 補強内容を解説PDFへ同期し、4ページをレンダリングQA PASS
-- [ ] 同じ公式過去問5問で再独立解答
+- [x] 同じ公式過去問5問で再独立解答（5/5 PASS、教材外知識補完0件）
 - [ ] 最終QA PASS
 
 ## 正式な品質ゲート対象
@@ -40,9 +40,15 @@
 - R6 二次 電力・管理 問4
 
 ## 今回進めた内容
-初回独立再解答で不足した3点だけを、Topic 01の既存範囲内で第3節・第7節へ追加した。Topic 08、12、16、20の本題は追加していない。
+補強済み教材だけを使い、正式選定5問を再度独立解答した。解答確定後に電気技術者試験センター公式解答と照合し、5問すべて一致した。
 
-解説PDFも同内容へ更新し、A4縦4ページとしてPDFレンダリングを確認した。文字切れ・重なり・欠落は確認されなかった。
+- H29一次問6: `[ハ, ヘ, ニ, ヌ, ル]`
+- R5一次問4: `[イ, ロ, ヘ, ヨ, ニ]`
+- R4二次問3: `sinθ_d=-0.260`, `Y_d=0.162 p.u.`
+- R5二次問4: `V_s≈6.58 kV`, `Q_1≈212 kvar`
+- R6二次問4: `400/400 A`, `406/394 A`, `I_sc≈8.34 kA`
+
+教材外知識補完は0件。再独立解答の詳細は `topics/01_power_system_view/01_power_system_view_independent_reanswer.md` に記録した。
 
 ## 判定
-Topic 01 は `revision_materials_synced`。まだ `completed` ではない。次工程は同じ5問の再独立解答で、完成数は `0 / 22` のまま。
+Topic 01 は `reanswer_pass`。再独立解答ゲートは通過したが最終QA未実施のため、まだ `completed` ではない。完成数は `0 / 22` のまま。
