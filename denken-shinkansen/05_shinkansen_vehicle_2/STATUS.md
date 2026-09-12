@@ -4,21 +4,26 @@
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: 1 / 39
-- current_status: `topic_02_exam_reanswer_complete`
-- last_completed_topic: `01 0系① 主変圧器の等価回路`
-- active_topic: `02 0系② 整流回路の波形解析`
-- next_start: Topic 02の最終QAを実施し、EXAM_ALIGNMENT・必須成果物・表示QA・独立再解答結果を総合確認する。PASSした場合のみTopic 02を`completed`にする
+- exam_aligned_completed_topics: 2 / 39
+- current_status: `topic_02_completed`
+- last_completed_topic: `02 0系② 整流回路の波形解析`
+- active_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
+- next_start: Topic 03の制作前EXAM_ALIGNMENTを実施する。電験二種の一次・二次を合わせて原則5問以上、二次対象論点では記述式を含め、系列SPECの固定範囲だけで要求事項を確定する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
-- [ ] 02 0系② 整流回路の波形解析 — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題＋完全解説source・練習PDF・解説画像PowerPoint・完成後独立再解答5/5 PASS。最終QA未実施
+- [x] 02 0系② 整流回路の波形解析 — PASS
+- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 未着手
 
-## Topic 02 現在地
-制作前EXAM_ALIGNMENTで一次1問＋二次記述4問の計5問を選定し、要求事項独立検証5/5 PASS。その範囲だけを使って解説本文と3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPointまで完成した。
+## Topic 02 最終結果
+制作前EXAM_ALIGNMENTで一次1問＋二次記述4問の計5問を選定し、要求事項独立検証5/5 PASS。その範囲だけを使って解説本文・3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPointを完成した。
 
-完成教材だけで選定公式過去問5問を再解答し、公式標準解答と5/5一致、教材外知識の補完0件で独立再解答ゲートPASS。記録は次に保存した。
+完成教材だけで選定公式過去問5問を再解答し、公式標準解答と5/5一致、教材外知識の補完0件で独立再解答ゲートPASS。最終QAでEXAM_ALIGNMENT、必須成果物、表示QA、独立再解答、範囲逸脱、未確認実車値の有無を総合確認し、PASSと判定した。
 
+最終QA記録:
+- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_final_qa.md`
+
+独立再解答記録:
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
 
 解説PDF:
@@ -32,8 +37,7 @@
 - 一次試験型8問（全問五肢択一）＋二次試験型4問（記述式）、計12問
 - 全問に解答・完全解説を収録
 - 二次問題は途中式・前提・単位・理由説明を要求
-- 全8ページを200 dpiでレンダリングし、文字欠け・黒四角・重なり・クリッピング・可読性を確認してPASS
-- テキスト抽出でも問1〜問12の収録を確認
+- 全8ページVisual QA PASS
 - 新規の0系実車値・固有回路仕様・Topic 02外論点は追加していない
 
 PowerPoint:
@@ -45,10 +49,8 @@ PowerPoint:
 - `slides_test.py` overflow検査PASS
 - 未確認の0系実車値、インバータ・チョッパ・速度制御等のTopic 02外論点は追加していない
 
-最終QAは未実施。完成数は `1 / 39` のまま。
-
-## Topic 02 制作前EXAM_ALIGNMENT
-公式過去問は一次1問＋二次記述4問の計5問を選定し、制作前の要求事項独立検証は5/5 PASS。
+## Topic 02 EXAM_ALIGNMENT
+公式過去問は一次1問＋二次記述4問の計5問。
 
 - R7 二次 機械・制御 問3 — 単相ダイオードブリッジ、L/C平滑、平均値、負荷電力
 - H30 二次 機械・制御 問3 — 三相サイリスタ変換器、平均直流電圧、交流側基本波、有効・無効電力
@@ -56,7 +58,7 @@ PowerPoint:
 - H27 一次 機械 問2 — 単相半波整流、変圧器一次電流、交流条件、直流偏磁
 - H21 二次 機械・制御 問3 — 三相サイリスタ変換器、制御角、平均直流電圧、電力方向
 
-一次・二次合計5問以上、二次記述式を含める品質ゲートを満たす。インバータ・チョッパ等のTopic 02外の問題は選定していない。
+一次・二次合計5問以上、二次記述式を含める品質ゲートを満たす。
 
 ## Topic 02 完成後独立再解答
 - R7 二次 機械・制御 問3 — PASS
@@ -65,7 +67,7 @@ PowerPoint:
 - H27 一次 機械 問2 — PASS
 - H21 二次 機械・制御 問3 — PASS
 
-5/5で公式標準解答と一致。途中式・極性・単位・理想化条件を完成教材から再構成でき、教材外知識の補完は0件。
+5/5で公式標準解答と一致。途中式・積分条件・極性・単位・理想化条件を完成教材から再構成でき、教材外知識の補完は0件。
 
 ## Topic 02 練習問題対応
 一次8問:
@@ -88,6 +90,12 @@ source:
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis.md`
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_practice_source.md`
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
+- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_final_qa.md`
+
+## Topic 02 境界
+系列SPECにある「整流回路、平均値、実効値、リプル、素子電流、素子電圧、高調波、力率、交流側電流、直流側電圧」と指定グラフだけを扱った。
+
+インバータ、チョッパ、別テーマの速度制御等は追加していない。未確認の0系回路仕様・実車値を推測で実値化していない。三相サイリスタ変換器は二種過去問の一般論点であり、0系固有仕様とは扱っていない。
 
 ## Topic 01 最終結果
 制作前EXAM_ALIGNMENTで選定した公式過去問は一次1問＋二次記述5問の計6問。
@@ -101,15 +109,10 @@ source:
 
 完成教材だけによる完成後独立再解答は6/6 PASS。公式標準解答と全問一致し、教材外知識の補完は0件。
 
-## 実車値・境界
-Topic 01で実値として扱うのは一次資料確認済みの25 kV・60 Hz・1650 kVA・低圧タップ切換・25段のみ。`1650 kVA / 25 kV = 66 A` は計算値であり、実測電流ではない。
-
-Topic 02では新たな0系実車値・未確認回路仕様を追加していない。三相サイリスタ変換器は二種過去問の一般論点として扱い、0系固有仕様とはしていない。
-
 ## QA判定
 Topic 01: `PASS`。
 
-Topic 02: 制作前品質ゲートPASS。解説PDF全3ページ、練習PDF全8ページ、PowerPoint全4枚Visual QA PASS。PowerPoint overflow検査PASS。完成後独立再解答5/5 PASS。最終QA未実施のためテーマ自体は未完了であり、`completed` には数えない。
+Topic 02: `PASS`。制作前EXAM_ALIGNMENT、一次・二次対応、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5、範囲・実車値確認をすべて通過。Topic 02を`completed`とし、完成数を `2 / 39` へ更新した。
 
 ## 次
-Topic 02 `0系② 整流回路の波形解析` の最終QAを実施する。EXAM_ALIGNMENT、必須成果物、表示QA、独立再解答5/5 PASS、範囲逸脱・未確認実車値の有無を総合確認し、PASSした場合のみTopic 02を`completed`にする。
+Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` の制作前EXAM_ALIGNMENTを実施する。二種の一次・二次を合わせて原則5問以上、二次対象論点では記述式を含め、系列SPEC外の論点を追加しない。
