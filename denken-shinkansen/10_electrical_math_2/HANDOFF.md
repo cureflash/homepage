@@ -36,7 +36,7 @@ source blob SHA:
 `topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_images.pptx`
 
 PowerPoint blob SHA:
-`5c911cbcdb52e6c785e71941187611c64af809f2`
+`8730709536aeec283de45296fb940bf26387c37c`
 
 ## Topic 02 制作前EXAM_ALIGNMENT
 
