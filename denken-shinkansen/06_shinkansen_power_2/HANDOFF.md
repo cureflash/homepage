@@ -8,21 +8,43 @@ completed topic: `01 新幹線を電力系統から見てみる`
 
 active topic: `02 信濃川の水で新幹線を何本走らせられる？`
 
-状態: `topic_01_completed`
+状態: `topic_02_exam_alignment_complete`
 
 完成数は `1 / 22`。
 
 Topic 01は、制作前EXAM_ALIGNMENT、解説本文、3段階例題、練習15問、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了した。
 
-source Markdown:
-- `topics/01_power_system_view/01_power_system_view.md`
-- `topics/01_power_system_view/01_power_system_view_practice.md`
-- `topics/01_power_system_view/01_power_system_view_independent_reanswer.md`
+## Topic 02 制作前EXAM_ALIGNMENT
 
-主要成果物:
-- `topics/01_power_system_view/01_power_system_view_explanation.pdf`
-- `topics/01_power_system_view/01_power_system_view_practice.pdf`
-- `topics/01_power_system_view/01_power_system_view_images.pptx`
+source Markdown:
+- `topics/02_hydropower/02_hydropower.md`
+
+正式選定した公式過去問:
+- R8 一次 電力 問5
+- R7 一次 電力 問1
+- R6 一次 電力 問3
+- R5 一次 電力 問1
+- R5 二次 電力・管理 問1
+- R4 二次 電力・管理 問1
+
+一次4問＋二次2問、計6問。二次は水撃作用の論説記述と調整池式発電所の記述計算を含み、二種品質ゲートを満たす。
+
+制作前独立検証・公式解答照合は `6 / 6 PASS`。
+
+確定した本文範囲:
+1. `P=ρgQHη`、有効落差、流量、効率
+2. 調整池式発電所の水量収支と運用
+3. ペルトン・フランシス・カプラン水車の種類と効率特性
+4. 比速度
+5. 電気式調速機とPID制御
+6. 負荷遮断と水撃作用
+7. サージタンク・制圧機、`GD²`、無拘束速度
+8. SPECで指定された信濃川水系と新幹線への接続
+9. 二種一次・二次の再利用可能な解法
+
+選定見直し:
+- R7二次 電力・管理 問1は水力設備の劣化診断が主題で、Topic 02固定範囲外のため採用しない。
+- R6二次 電力・管理にはTopic 02固定範囲に直接対応する水力問題を確認できず採用しない。
 
 ## Topic 01 正式選定した公式過去問
 
@@ -54,11 +76,10 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 02 `信濃川の水で新幹線を何本走らせられる？` の制作前EXAM_ALIGNMENTを行う。
+Topic 02 `信濃川の水で新幹線を何本走らせられる？` の解説本文＋3段階例題を作成する。
 
-- 電気技術者試験センター公式過去問を直近年度優先で調査する。
-- 一次・二次を合わせて原則5問以上を正式選定する。
-- 二次対象論点で確認できる場合は記述式を最低1問含める。
-- 各問の要求知識、使用式、設問型、教材で必要な説明をsource Markdownへ記録する。
-- 参考教材を最低2系統確認する。
-- 過去問から必要範囲を確定する前に解説本文・成果物を作らない。
+- `topics/02_hydropower/02_hydropower.md` の本文節マッピングを上限とする。
+- 一次4問＋二次2問の要求事項を欠落なく扱う。
+- 三種の `P=ρgQHη` から二種の設備特性・調速・水撃・運用へ進める。
+- 新幹線側の実設備値を使う場合はJR東日本等の一次資料で再確認し、実在値・計算値・仮定値を区別する。
+- 仕様外の劣化診断等を追加しない。
