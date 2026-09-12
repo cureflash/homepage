@@ -1,23 +1,23 @@
 # HANDOFF - 新幹線車両・電験三種
 
-更新日: 2026-09-12
+更新日: 2026-09-13
 
 ## 正本・active series
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は21/38。01〜21がPASS。active topicは22 `L0系① リニア同期モータ`。
 
 ## 今回進捗
-Topic 22を `topic_22_practice_pdf_complete` まで進めた。
+Topic 22を `topic_22_powerpoint_complete` まで進めた。
 
-既存source Markdownを正本として、過去問対応範囲を増減せずに練習PDFを作成した。
+既存source Markdownを正本として、過去問対応範囲を増減せずに解説画像PowerPointを作成した。
 
 追加:
-- `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor_practice.pdf`
+- `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor_images.pptx`
 
 更新:
 - `STATUS.md`
 - `HANDOFF.md`
 
-練習PDFはA4縦4ページ。source Markdownの15問（基礎4・本試験標準8・複合応用3）を全問五肢択一で収録し、全問に解答・根拠・計算または誤答ポイントを付けた。数値問題は独立再計算済み、知識問題も再判定して一意解を確認済み。PDFium 200 dpiで全ページを目視し、pdftoppm/PDFiumの2系統でも正常レンダリングを確認した。文字切れ・重なり・欠落なし。
+PowerPointは16:9・4枚。対称三相交流→回転磁界→同期運転→リニア化、同期速度・角速度、同期機と誘導機の区別、同期電動機の自己始動、同期発電機の並列条件、回転同期機からL0系への構造対応をsource Markdownの範囲で図解した。L0系の図は本教材で作図し、最終スライドにJR東海一次資料と電気技術者試験センターの出典を記載。実際の極ピッチ、運転周波数、500 km/h時の具体計算はTopic 23の範囲として未収録。全4枚をレンダリング確認し、overflow検査もPASS。文字切れ・重なり・欠落なし。
 
 ## 品質ゲート対象5問
 1. R7上 機械 問5 — 同期発電機の並列運転条件
@@ -26,7 +26,7 @@ Topic 22を `topic_22_practice_pdf_complete` まで進めた。
 4. H25 機械 問3 — 三相誘導電動機の回転磁界
 5. H19 機械 問15(a) — 同期速度の角速度換算
 
-制作前独立解答と公開解答の照合は5/5 PASS済み。完成後独立再解答は、PowerPointを含む全必須成果物完成後に実施する。
+制作前独立解答と公開解答の照合は5/5 PASS済み。完成後独立再解答は未実施で、次の1段階とする。
 
 ## sourceに収録した必須範囲
 - 対称三相交流と回転磁界、相順
@@ -48,6 +48,9 @@ Topic 22を `topic_22_practice_pdf_complete` まで進めた。
 
 数値問題は再計算し、知識問題も再判定して全15問の一意解を確認済み。練習PDFへの収録後も問題文・選択肢・正答の対応を再確認した。
 
+## PowerPoint QA
+16:9・4枚。全4枚をレンダリングして確認し、overflow検査PASS。文字切れ・重なり・欠落なし。
+
 ## L0系一次資料・境界
 JR東海公式資料 `https://global.jr-central.co.jp/en/company/_pdf/superconducting_maglev.pdf` の確認済み範囲だけを使用。
 
@@ -58,7 +61,7 @@ JR東海公式資料 `https://global.jr-central.co.jp/en/company/_pdf/supercondu
 実際の極ピッチ、実運転周波数、500 km/h時の具体的周波数計算はTopic 23の範囲として未収録。境界を維持した。
 
 ## QA判定
-22: `IN_PROGRESS`。source Markdown、3段階例題、15問練習、解説PDF、練習PDFまで完成。PowerPoint・完成後独立過去問再解答は未完了。完成数は21/38のまま。
+22: `IN_PROGRESS`。source Markdown、3段階例題、15問練習、解説PDF、練習PDF、解説画像PowerPointまで完成。完成後独立過去問再解答は未完了。完成数は21/38のまま。
 
 ## 次の正確な開始点
-`topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor.md` を正本として解説画像PowerPointを作成する。全必須成果物完成後、検証済み5問を保存済み正答を先に見ず教材内容だけで独立再解答し、公式解答と照合して最終PASSを判定する。
+検証済み5問を、保存済み正答を先に見ず、完成教材だけで独立再解答し、公式解答と照合して最終PASSを判定する。
