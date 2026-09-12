@@ -6,13 +6,16 @@
 
 active topic: `01 0系① 主変圧器の等価回路`
 
-制作前EXAM_ALIGNMENT、公式解答照合を伴う要求事項の独立検証、解説本文に続き、解説PDFまで完了。完成数は `0 / 39` のまま。
+制作前EXAM_ALIGNMENT、公式解答照合を伴う要求事項の独立検証、解説本文、解説PDFに続き、練習PDFまで完了。完成数は `0 / 39` のまま。
 
 source Markdown:
 `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit.md`
 
 解説PDF:
 `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_explanation.pdf`
+
+練習PDF:
+`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_practice.pdf`
 
 ## 選定済み公式過去問
 
@@ -40,12 +43,18 @@ source Markdown:
 - 二次試験答案で必要な換算側・途中式・単位・近似条件
 - 選定6問と本文節の対応
 
-## PDF QA
+## 練習PDF
 
-- 7 pages
-- 全ページを画像レンダリング確認
+- 4 pages
+- 一次試験型: 五肢択一8問
+- 二次試験記述型: 4問
+- 解答・完全解説付き
+- 一次/二次換算、無負荷試験、短絡試験、百分率インピーダンス、電圧変動率、効率、最大効率条件を収録
+- 定格電流以外での短絡試験から全負荷銅損へ換算する問題を収録
+- 過去問本文の複製ではなく独自問題・独自数値
+- PDFium / pdftoppmの両方で全ページを画像レンダリング確認
 - 文字欠け・黒四角・クリッピング・重なりなし
-- source Markdownの換算側・成立条件・単位・3段階例題を欠落させていない
+- 全数値問題を独立再計算済み
 
 ## 0系実車情報の扱い
 
@@ -62,6 +71,6 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 01の練習PDF（解答・完全解説付き）を作成する。一次試験型に加え、二次試験へ接続する記述式を含め、途中式・前提・単位・理由説明まで採点可能な形にする。
+Topic 01の解説画像PowerPointを作成する。解説本文・解説PDF・練習PDFの論点を欠落させず、一次・二次の試験対応に必要な式、換算側、成立条件、解法手順を図解する。
 
 PowerPoint、教材だけを使った公式過去問6問の独立再解答、最終QA PASSが残るため、まだTopic 01を`completed`へ変更しない。
