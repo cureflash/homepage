@@ -4,9 +4,13 @@
 
 ## 現在地
 
-active topic: `01 単位・指数・有効数字`
+Topic 01 `単位・指数・有効数字` は最終QAまでPASSし、`completed`。
 
-制作前EXAM_ALIGNMENT、選定5問の公式解答照合付き独立検証、解説本文、解説PDF、練習PDF、解説画像PowerPoint、完成教材だけでの独立再解答まで完了。完成数は `0 / 12` のまま。
+完成数: `1 / 12`
+
+active topic: `02 三角比・三角関数`
+
+## Topic 01 完成証跡
 
 source Markdown:
 `topics/01_units_exponents_significant_figures/01_units_exponents_significant_figures.md`
@@ -20,39 +24,36 @@ source Markdown:
 解説画像PowerPoint:
 `topics/01_units_exponents_significant_figures/01_units_exponents_significant_figures_images.pptx`
 
-解説PDFはA4縦6ページ、練習PDFはA4縦4ページ。PowerPointは16:9・4枚。既存成果物はそのまま維持し、今回新しい教材仕様は追加していない。
+最終QA:
+`topics/01_units_exponents_significant_figures/01_units_exponents_significant_figures_final_qa.md`
 
-## 完成後の独立再解答
+## Topic 01 最終QA結果
 
-2026-09-13実施。
+- 必須成果物4種: 実在確認PASS
+- 三種公式過去問5問のEXAM_ALIGNMENT: PASS
+- 練習PDF: 全15問、基礎4・本試験標準8・複合応用3、五肢択一10で仕様適合PASS
+- 完成後独立再解答: 5 / 5 PASS
+- 教材外知識補完: 0件
+- 既実施レンダリングQAと現行blob: 一致確認PASS
+- 実車値 / 仮定値の区別: PASS
 
-- R8上 理論 問3: 再解答 (1) = 公式 (1)
-- R5上 理論 問10: 再解答 (4) = 公式 (4)
-- R4上 機械 問11: 再解答 (3) = 公式 (3)
-- H29 理論 問14: 再解答 (5) = 公式 (5)
-- H28 理論 問16: 再解答 (a)(2), (b)(3) = 公式 (a)(2), (b)(3)
+現行blob SHA:
 
-5問すべて一致。教材に記載済みの単位換算、`Ψ=LI`、`W=(1/2)LI^2`、`v=L di/dt`、`P=Fv`、効率、有効数字、絶対誤差・百分率誤差だけで根拠まで組み立てられ、教材外知識の補完は不要だった。詳細はsource Markdownへ記録済み。
-
-## Topic 01で確定した教材要求
-
-- 10の整数乗と科学表記
-- SI接頭語 `k`, `M`, `G`, `m`, `μ`, `n`
-- `mH→H`, `mA→A`, `ms→s`, `m/min→m/s`, `W→kW` 等の換算
-- 複合単位と次元確認
-- `C=A·s`, `Ω=V/A`, `W=V·A=J/s`, `H=V·s/A`, `Wb=V·s`, `F=C/V` 等の単位関係
-- 加減算と乗除算で異なる有効数字ルール
-- 中間計算を早く丸めすぎないこと
-- 絶対誤差・百分率誤差
-- 効率・百分率の換算
-- `与えられた量確認→単位統一→式選択→代入→次元確認→有効数字処理→桁の検算` の解法手順
-
-## 新幹線側の扱い
-
-`SPEC.md` にある 25 kV、MW、kWh の範囲を維持。未確認実車値は追加していない。
+- source: `128b76bf19cdaf91f6709d2de549b1e1643f3b10`
+- 解説PDF: `b3b04e00367f462b585229a77151a4c003a433ee`
+- 練習PDF: `6493733102f3e51b0f631371c5064a5fd51db084`
+- PowerPoint: `7733c8f92975f1ec5294ce7ef49813f0401a6cdb`
 
 ## 次に行うこと
 
-1. Topic 01の最終QAを行う。
-2. MASTER / EXAM_ALIGNMENT / 系列SPECの完了条件を全件照合する。
-3. PASSした場合のみTopic 01を `completed` へ変更し、完成数を `1 / 12` に更新する。
+Topic 02 `三角比・三角関数` の制作前EXAM_ALIGNMENTから開始する。
+
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`に従い、本文作成より先に次を行う。
+
+- 電気技術者試験センター公式過去問を直近年度優先で調査する
+- 関連公式過去問を原則5問以上選定する
+- 各問の要求知識、使用式、設問型、典型ミスを分解する
+- 参考教材を複数系統確認する
+- source MarkdownへEXAM_ALIGNMENTと教材で必要な説明を記録する
+
+この制作前品質ゲートを終えるまで、Topic 02の解説本文には進まない。
