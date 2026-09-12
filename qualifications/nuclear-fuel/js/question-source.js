@@ -65,11 +65,18 @@ export function parseTopicMarkdown(markdown, requestedTopicId = null) {
     const answer = fields.get('正答');
     if (!verified || !sentence || !answer) continue;
 
-    const curatedChoices = parseInlineChoices(fields.get('選択肢'));
+    const rawChoices = fields.get('選択肢');
+    const curatedChoices = parseInlineChoices(rawChoices);
+    if (rawChoices != null && !curatedChoices) throw new Error(`Invalid authored choices: ${id}`);
+    if (fields.has('正答選択肢') && !curatedChoices) throw new Error(`Correct choice requires authored choices: ${id}`);
+
     const correctLetter = normalize(fields.get('正答選択肢')).toUpperCase();
     let correctIndex = /^[ABCD]$/.test(correctLetter) ? correctLetter.charCodeAt(0) - 65 : -1;
     if (curatedChoices && correctIndex < 0) correctIndex = curatedChoices.findIndex((choice) => choice === normalize(answer));
     if (curatedChoices && (correctIndex < 0 || correctIndex > 3)) throw new Error(`Invalid curated correct choice: ${id}`);
+    if (curatedChoices && curatedChoices[correctIndex] !== normalize(answer)) {
+      throw new Error(`Authored correct choice does not match canonical answer: ${id}`);
+    }
 
     questions.push({
       id,
