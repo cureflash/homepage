@@ -6,11 +6,16 @@
 
 active topic: `01 新幹線を電力系統から見てみる`
 
-制作前EXAM_ALIGNMENTの全問範囲監査、独立検証、公式解答照合、本文節マッピング、解説本文・3段階例題に続き、練習15問と完全解説まで完了。完成数は `0 / 22` のまま。
+制作前EXAM_ALIGNMENTの全問範囲監査、独立検証、公式解答照合、本文節マッピング、解説本文・3段階例題、練習15問と完全解説に続き、解説PDFまで完了。完成数は `0 / 22` のまま。
 
 source Markdown:
 - `topics/01_power_system_view/01_power_system_view.md`
 - `topics/01_power_system_view/01_power_system_view_practice.md`
+
+今回の成果物:
+- `topics/01_power_system_view/01_power_system_view_explanation.pdf`
+  - A4縦5ページ
+  - 全5ページを180 dpiでレンダリングQA済み
 
 ## 正式選定した公式過去問
 
@@ -34,7 +39,7 @@ source Markdown:
 
 ## 解説source
 
-既存の `01_power_system_view.md` には、検証済み9節の範囲で以下を収録済み。
+`01_power_system_view.md` には、検証済み9節の範囲で以下を収録済み。
 
 1. フェーザと複素数表示
 2. 複素電力とP/Q/S・力率
@@ -46,13 +51,11 @@ source Markdown:
 8. 二次試験の記述手順
 9. 新幹線系統モデルへの接続
 
-加えて、基礎・本試験標準・複合の3段階例題を収録済み。
+基礎・本試験標準・複合の3段階例題も収録済み。
 
-## 今回追加した練習source
+## 練習source
 
-`01_power_system_view_practice.md` を追加した。
-
-構成:
+`01_power_system_view_practice.md`:
 - 全15問
 - 基礎: 4問
 - 本試験標準: 8問
@@ -70,6 +73,16 @@ source Markdown:
 
 練習15問は式・単位・中間値・正答を独立再計算し、一次型10問は一意解、二次型5問は前提・使用式・符号・単位・途中式を含む採点可能な解答になっていることを確認済み。
 
+## 解説PDF
+
+`01_power_system_view_explanation.pdf` を作成した。
+
+source Markdownの範囲に限定し、9節、3段階例題、頻出ミス、正式選定5問の対応表、公式・解法まとめをA4縦5ページへ整理した。
+
+Topic 08の変圧器並列運転、Topic 12の本格的潮流計算、Topic 16の故障種別・対称座標法、Topic 20の安定度は追加していない。
+
+全5ページを180 dpiでレンダリングし、文字欠け・重なり・クリッピングなしを確認済み。
+
 ## 範囲境界
 
 Topic 01は以後の全系統計算に共通する基礎を作る章とする。
@@ -79,16 +92,16 @@ Topic 01は以後の全系統計算に共通する基礎を作る章とする。
 - Topic 16: 故障計算・対称座標法
 - Topic 20: 安定度
 
-今回の練習問題も、複素電力・フェーザ・単位法・％法・基準量・系統等価回路・基本的な三相対称短絡容量までに留め、上記後続テーマの本題を追加していない。
+今回のPDFも、複素電力・フェーザ・単位法・％法・基準量・系統等価回路・基本的な三相対称短絡容量までに留め、上記後続テーマの本題を追加していない。
 
 ## 現在の判定
 
-`topic_01_source_content_complete`
+`topic_01_explanation_pdf_complete`
 
-まだ `completed` ではない。必須成果物と完成後独立再解答が未完了のため、完成数は `0 / 22` のまま。
+まだ `completed` ではない。練習PDF・PowerPoint・完成後独立再解答が未完了のため、完成数は `0 / 22` のまま。
 
 ## 次に行うこと
 
-2つのsource Markdownを正本として、解説PDF、練習PDF、解説画像PowerPointを作成する。
+`01_power_system_view_practice.md` を正本として、練習PDF（解答・完全解説付き）を作成する。
 
-必須成果物完成後も即completedにはしない。最後に上記5問を教材だけで独立再解答し、QA PASS後に初めてTopic 01をcompletedへ変更する。
+その後に解説画像PowerPointを作成する。必須成果物完成後も即completedにはせず、最後に正式選定5問を教材だけで独立再解答し、QA PASS後に初めてTopic 01をcompletedへ変更する。

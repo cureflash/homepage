@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `06_shinkansen_power_2`
 - exam_aligned_completed_topics: 0 / 22
-- current_status: `topic_01_source_content_complete`
+- current_status: `topic_01_explanation_pdf_complete`
 - last_completed_topic: `none`
 - active_topic: `01 新幹線を電力系統から見てみる`
-- next_start: Topic 01のsource Markdown 2ファイルを正本として、解説PDF・練習PDF・解説画像PowerPointを作成する。Topic 08/12/16/20の本題へ範囲を広げない
+- next_start: Topic 01のsource Markdownを正本として、練習PDF（解答・完全解説付き）を作成する。Topic 08/12/16/20の本題へ範囲を広げない
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -22,7 +22,7 @@
 - [x] 解説本文（検証済み9節＋3段階例題）
 - [x] 練習問題・完全解説（15問、一次型10問＋二次記述型5問）
 - [x] 練習問題15問の独立再計算・一意解QA
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 公式過去問5問の教材のみでの独立再解答
@@ -42,15 +42,13 @@
   - 練習15問、完全解説、過去問対応マッピング、練習問題QA
 
 ## 今回進めた内容
-Topic 01を1段階進め、練習プリント用の問題・完全解説を作成した。
+Topic 01を1段階進め、解説PDF `topics/01_power_system_view/01_power_system_view_explanation.pdf` を作成した。
 
-練習問題は全15問とし、基礎4問、本試験標準8問、複合・応用3問で構成した。二種一次型の五肢択一を10問、二次「電力・管理」型の記述問題を5問含め、一次・二次の双方へ接続した。
+A4縦5ページ。source Markdownの既定範囲に従い、フェーザと複素数表示、複素電力とP/Q/S・力率、基準量とp.u.、`Ω ↔ p.u. ↔ %` と基準変更、一線結線図からp.u.等価回路、電圧・位相差とP/Q、三相対称短絡容量、二次試験の記述手順、新幹線系統モデルへの接続を収録した。
 
-扱う範囲は既存本文のフェーザ、複素電力、p.u.・％法、基準変更、一線結線図からの等価回路化、直列・並列合成、電圧・位相差とP/Q、電圧降下近似、三相対称短絡容量に限定した。
+基礎・本試験標準・複合の3段階例題と、正式選定5問の過去問対応表・公式まとめを収録した。Topic 08の変圧器並列運転、Topic 12の本格的潮流計算、Topic 16の故障種別・対称座標法、Topic 20の安定度は追加していない。
 
-15問は式・単位・中間値・正答を独立再計算し、一次型10問は五肢択一として一意解、二次型5問は採点可能な途中式まで確認した。
-
-Topic 08の変圧器並列運転、Topic 12の本格的潮流計算、Topic 16の故障種別・対称座標法、Topic 20の安定度は追加していない。
+PDFは全5ページを180 dpiでレンダリングし、文字欠け・重なり・クリッピングがないことを全ページ目視確認した。
 
 ## 判定
-Topic 01 は `source_content_complete`。まだ `completed` ではない。解説PDF・練習PDF・PowerPointを作成後、正式選定5問を教材だけで独立再解答し、最終QA PASSするまで完成数へ加算しない。
+Topic 01 は `explanation_pdf_complete`。まだ `completed` ではない。次工程は練習PDF作成。練習PDF・PowerPointを作成後、正式選定5問を教材だけで独立再解答し、最終QA PASSするまで完成数へ加算しない。
