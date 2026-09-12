@@ -10,7 +10,7 @@
 
 結果は `5 / 5 PASS`、教材外知識補完は `0件`。
 
-Topic 01 は再独立解答ゲートを通過したが、最終QAは未実施のため、まだ `completed` ではない。
+この再独立解答結果を含む最終QAはPASSし、Topic 01は `completed` となった。
 
 ## 対象
 
@@ -237,6 +237,6 @@ B配電線:
 
 教材外知識補完: `0件`
 
-## 次の品質ゲート
+## 最終QA
 
-最終QAを行う。成果物の存在、source Markdown・解説PDF・練習PDF・PowerPointの整合、EXAM_ALIGNMENT記録、独立再解答5/5 PASSを確認し、全項目PASSした場合のみTopic 01を `completed` にする。
+2026-09-13に成果物存在、EXAM_ALIGNMENT、成果物相互整合、既存レンダリングQA記録を確認し `PASS`。Topic 01は `completed`。詳細は `01_power_system_view.md` の最終QA節および系列 `STATUS.md` / `HANDOFF.md` に記録した。
