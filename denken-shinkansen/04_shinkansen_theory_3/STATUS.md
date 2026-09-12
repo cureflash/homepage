@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 1 / 14
-- current_status: `topic_02_powerpoint_complete`
+- current_status: `topic_02_exam_reanswer_complete`
 - last_completed_topic: `01 新幹線1編成はどれだけ電気を食う？`
 - active_topic: `02 なぜ新幹線は25,000Vなのか`
-- next_start: Topic 02の完成教材だけを使って令和7年度下期 理論 問6を独立再解答し、最終QAを行う
+- next_start: Topic 02の最終QAを行い、PASS時のみcompletedへ更新する
 
 ## Topic 01 進捗
 
@@ -44,29 +44,25 @@
 - [x] 解説PDF
 - [x] 練習問題・練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後の公式過去問独立再解答
+- [x] 完成後の公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 02 `なぜ新幹線は25,000Vなのか` を1段階進め、解説画像PowerPoint作成＋全スライド表示QA・overflow確認まで完了した。
+Topic 02 `なぜ新幹線は25,000Vなのか` を1段階進め、完成後の公式過去問独立再解答を完了した。
 
-- file: `topics/02_why_25kv/02_why_25kv_images.pptx`
-- 16:9、全7スライド
-- `P=VI` と `I=P/V`、`Ploss=I²R`、高電圧化での `1/k`・`1/k²` 関係を図解
-- 教材用仮定値10 MW・0.50 Ωによる25 kV / 5 kV比較を可視化
-- 一閉路の電圧降下 `ΔV=IR`、`Vs=Vr+IR` を模式図化
-- W / J / Wh と送電効率の取り違え防止を整理
-- 令和7年度下期 理論 問6に接続する `V=E-Ir` の2条件連立手順を図解
-- 解法手順を「単位 → 電流 → 抵抗損 → 電圧降下 → 効率 → 検算」で固定
-- 外部画像は使用せず、自作図形のみ
-- 全7スライドをレンダリングし、文字欠け・クリップ・重なりなしを確認
-- overflow検査: `PASS`
-- Topic 03の抵抗率・温度係数・直並列体系、Topic 05の回路網解析、Topic 08の正弦波・実効値、Topic 10の力率は先取りしていない
-- 未確認の新幹線実車値は追加していない
-- 25 kVを唯一絶対の最適値とする断定はしていない
-- 完成後独立再解答は未実施（次工程）
+- 対象: 令和7年度下期 理論 問6
+- 完成教材だけを使い、公式解答確認前に再解答
+- `V=RI` から `V1=6.75 V`、`V2=6.90 V`
+- `V=E-Ir` の2条件連立から `r=0.15 Ω`、`E=7.20 V`
+- 独立解答: 選択肢 `(2)`
+- 独立解答後に公式解答と照合し、公式正答 `(2)` と一致
+- 教材外知識の補完: 0件
+- Topic 03以降の知識: 使用なし
+- 判定: `1 / 1 PASS`
+- source Markdownへ再解答記録を反映済み
+- 最終QAは未実施
 
 ## 判定
 
-Topic 02は `powerpoint_complete`。PowerPoint表示QA・overflow確認は `PASS`。完成数は `1 / 14` のまま。次工程は令和7年度下期 理論 問6の完成教材のみでの独立再解答＋最終QA。
+Topic 02は `exam_reanswer_complete`。完成数は `1 / 14` のまま。次工程は最終QAで、PASS時のみTopic 02を `completed` とし完成数へ加算する。
