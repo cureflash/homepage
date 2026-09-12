@@ -6,16 +6,16 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は22/38。01〜22がPASS。active topicは23 `L0系② 500km/hと周波数制御`。
 
 ## 今回進捗
-Topic 23を1段階進め、source Markdownで確定済みの範囲から解説PDFを作成した。
+Topic 23を1段階進め、source Markdownと制作前EXAM_ALIGNMENTで確定済みの範囲から練習PDFを作成した。
 
 更新:
-- `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control_explanation.pdf`
+- `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control_practice.pdf`
 - `STATUS.md`
 - `HANDOFF.md`
 
-解説PDFは3ページ。全3ページをレンダリングして目視QAし、文字欠け・黒四角・クリッピング・重なりなしでPASSした。本文、3段階例題、選定5過去問との対応、公式まとめを収録している。
+練習PDFはA4縦7ページ、15問。基礎4問、本試験標準8問、複合・応用3問で、全15問を五肢択一とした。各問に解答・根拠・計算過程または誤答ポイントを付けている。全7ページを180 dpiでレンダリングして目視QAし、文字欠け・黒四角・クリッピング・重なりなしでPASSした。
 
-練習PDF・PowerPointはまだ作成していない。完成後独立再解答も未実施。
+PowerPointはまだ作成していない。完成後独立再解答も未実施。
 
 ## Topic 23 品質ゲート対象
 系列SPECの範囲だけで処理できる5問を選定済みで、制作前独立解答は5/5 PASS。
@@ -26,18 +26,14 @@ Topic 23を1段階進め、source Markdownで確定済みの範囲から解説PD
 4. H20 機械 問10 — 磁気飽和、V/f一定、整流器、インバータ、PWM — 解答5
 5. H19 機械 問15(a) — 同期速度・同期角速度 — 解答4
 
-## 解説PDFに反映した範囲
-- `Ns=120f/p`、`ωs=4πf/p`
-- 周波数と同期速度の比例関係、逆算
-- 回転磁界から移動磁界への対応
-- V/fをほぼ一定にする理由、磁気飽和との関係
-- 整流器・インバータ・PWM
+## 練習PDFに反映した範囲
+- `Ns=120f/p`、周波数・極数の逆算
+- `ωs=2πNs/60=4πf/p`
+- V/f一定と磁気飽和の基本
+- 整流器・インバータ・PWMの役割
 - `Pin=√3VIcosφ`、効率、`P=ωT`、`T=P/ω`
-- 同期速度問題、V/f問題、電力・トルク問題の解法手順
-- 基礎・本試験標準・複合の3段階例題
-- 頻出ミス、選定5問との対応、公式まとめ
-
-R7上問4の `T∝VI/f` は当該問題の近似条件としてのみ使用。V/f一定も電験の一般原理として扱い、L0系実機の具体的制御則とは断定していない。
+- R7上問4の問題条件下での `T∝VI/f`
+- JR東海一次資料で確認済みの、周波数による推進コイルN/S切替速度・車両速度制御
 
 ## 除外・境界
 - R8上 機械 問3 — ベクトル制御・始動トルクが必要
@@ -48,10 +44,11 @@ R7上問4の `T∝VI/f` は当該問題の近似条件としてのみ使用。V/
 JR東海一次資料で、時速500 km走行、推進コイルのN/S切替、周波数による切替速度・車両速度制御を確認済み。実機の極ピッチと500 km/h時の実運転周波数は具体値を確定できていないため、実車値として置かない。
 
 ## 現在の状態
-- `current_status`: `topic_23_explanation_pdf_complete`
+- `current_status`: `topic_23_practice_pdf_complete`
 - 完成数: 22/38
 - Topic 23: `IN_PROGRESS`
 - 解説PDF全ページQA: 3/3 PASS
+- 練習PDF全ページQA: 7/7 PASS
 
 ## 次の正確な開始点
-Topic 23のsource Markdownを正本として、練習問題12問以上と解答・完全解説を作成する。少なくとも半数を五肢択一とし、現行SPEC・制作前EXAM_ALIGNMENTの範囲外知識、未確認の実車値、すべり・ベクトル制御等は追加しない。
+Topic 23のsource Markdownと既存PDFを正本として、解説画像PowerPointを作成し全スライドQAを行う。現行SPEC・制作前EXAM_ALIGNMENTの範囲外知識、未確認の実車値、すべり・ベクトル制御等は追加しない。

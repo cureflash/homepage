@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 22 / 38
-- current_status: `topic_23_explanation_pdf_complete`
+- current_status: `topic_23_practice_pdf_complete`
 - last_completed_topic: `22 L0系① リニア同期モータ`
 - active_topic: `23 L0系② 500km/hと周波数制御`
-- next_start: Topic 23のsource Markdownを正本として、練習問題12問以上と解答・完全解説を作成する
+- next_start: Topic 23のsource Markdownと既存PDFを正本として、解説画像PowerPointを作成し全スライドQAを行う
 
 ## 新品質ゲート進捗
 - [x] 01〜22 — PASS
-- [ ] 23 L0系② 500km/hと周波数制御 — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF＋全ページQAまで完了
+- [ ] 23 L0系② 500km/hと周波数制御 — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF＋全ページQA、練習PDF＋全ページQAまで完了
 
 ## 23 EXAM_ALIGNMENT
 品質ゲート対象は次の5問。制作前独立解答は5 / 5 PASS。
@@ -45,10 +45,10 @@ JR東海「超電導リニアの原理」で、時速500 km走行、推進コイ
 ## 23 成果物
 - source Markdown: `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control.md` — EXAM_ALIGNMENT、解説本文、3段階例題まで完了
 - 解説PDF: `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control_explanation.pdf` — 3ページ、全ページQA PASS
-- 練習PDF: 未着手
+- 練習PDF: `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control_practice.pdf` — 7ページ、15問、解答・完全解説付き、全ページQA PASS
 - 解説画像PowerPoint: 未着手
 
-## 23 PDF QA
+## 23 解説PDF QA
 解説PDFを3ページすべてレンダリングして目視確認した。
 
 - 3 / 3ページ PASS
@@ -56,8 +56,18 @@ JR東海「超電導リニアの原理」で、時速500 km走行、推進コイ
 - 本文、3段階例題、過去問対応、公式まとめを収録
 - 未確認のL0系極ピッチ・500 km/h時の実運転周波数、すべり・ベクトル制御は追加していない
 
+## 23 練習PDF QA
+練習PDFを7ページすべて180 dpiでレンダリングして確認した。
+
+- 7 / 7ページ PASS
+- 15問: 基礎4問 / 本試験標準8問 / 複合・応用3問
+- 15 / 15問を五肢択一とし、各問に解答・根拠・計算過程または誤答ポイントを付与
+- 選定5過去問の要求事項を、同期速度・同期角速度、V/f、整流器・インバータ・PWM、三相電力・効率・トルク、L0系の周波数制御で練習できる構成
+- 文字欠け、黒四角、クリッピング、重なりなし
+- すべり、ベクトル制御、未確認の実車極ピッチ・実運転周波数は追加していない
+
 ## 23 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENT 5/5 PASS、解説PDF全ページQA PASS。完成後独立再解答は未実施のため、完成数は22/38のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENT 5/5 PASS、解説PDF・練習PDFの全ページQA PASS。PowerPointと完成後独立再解答は未実施のため、完成数は22/38のまま。
 
 ## 次
-Topic 23の練習問題12問以上と解答・完全解説を作成する。少なくとも半数を五肢択一とし、現行SPECと制作前EXAM_ALIGNMENTの範囲外知識は追加しない。
+Topic 23の解説画像PowerPointを作成し、全スライドをQAする。現行SPEC・制作前EXAM_ALIGNMENTの範囲外知識と未確認実車値は追加しない。
