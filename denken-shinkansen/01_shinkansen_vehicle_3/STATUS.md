@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 21 / 38
-- current_status: `topic_22_explanation_pdf_complete`
+- current_status: `topic_22_practice_pdf_complete`
 - last_completed_topic: `21 N700S③ バッテリー自走`
 - active_topic: `22 L0系① リニア同期モータ`
-- next_start: topic 22 のsource Markdownを正本として練習PDFを作成する。続いて解説画像PowerPointを作成し、全必須成果物完成後に検証済み5問を教材だけで独立再解答する
+- next_start: topic 22 のsource Markdownを正本として解説画像PowerPointを作成する。全必須成果物完成後に検証済み5問を教材だけで独立再解答する
 
 ## 新品質ゲート進捗
 - [x] 01〜21 — PASS
-- [ ] 22 L0系① リニア同期モータ — 制作前EXAM_ALIGNMENT検証、制作前独立解答5/5、解説本文、3段階例題、練習15問と完全解説、解説PDFまで完了。練習PDF/PPTXと完成後独立再解答は未完了
+- [ ] 22 L0系① リニア同期モータ — 制作前EXAM_ALIGNMENT検証、制作前独立解答5/5、解説本文、3段階例題、練習15問と完全解説、解説PDF、練習PDFまで完了。PPTXと完成後独立再解答は未完了
 
 ## 22 EXAM_ALIGNMENT検証結果
 Topic 22単独で完答できる公式過去問5件を品質ゲート対象として確定済み。
@@ -55,8 +55,11 @@ source Markdown:
 ## 22 成果物
 - source Markdown: `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor.md`
 - 解説PDF: `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor_explanation.pdf`
+- 練習PDF: `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor_practice.pdf`
 
 解説PDFはA4縦4ページ。全4ページをレンダリング確認し、文字切れ・重なり・欠落がないことを確認済み。
+
+練習PDFはA4縦4ページ。source Markdownの15問を全問五肢択一で収録し、解答・完全解説を付与。PDFium 200 dpiで全ページ目視確認し、pdftoppm/PDFiumの2系統でも全4ページが正常レンダリングされることを確認した。文字切れ・重なり・欠落なし。
 
 ## L0系一次資料・境界
 JR東海一次資料で以下を確認済み。
@@ -67,7 +70,7 @@ JR東海一次資料で以下を確認済み。
 実際の極ピッチ、実運転周波数、500 km/h時の具体計算はTopic 22へ入れていない。Topic 23との境界を維持している。
 
 ## 22 QA判定
-`IN_PROGRESS`。source Markdownの本文・例題・練習問題と解説PDFは完成したが、必須の練習PDF・PowerPointと完成後の公式過去問独立再解答が未完了。完成数は21/38のまま。
+`IN_PROGRESS`。source Markdownの本文・例題・練習問題、解説PDF、練習PDFは完成したが、必須のPowerPointと完成後の公式過去問独立再解答が未完了。完成数は21/38のまま。
 
 ## 次
-source Markdownから練習PDFを作成する。続いて解説画像PowerPointを作成し、全必須成果物完成後に検証済み5問を教材内容だけで独立再解答し、公式解答と照合して最終PASSを判定する。
+source Markdownから解説画像PowerPointを作成する。全必須成果物完成後に検証済み5問を教材内容だけで独立再解答し、公式解答と照合して最終PASSを判定する。
