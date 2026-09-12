@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 1 / 20
-- current_status: `topic_02_practice_pdf_complete`
+- current_status: `topic_02_powerpoint_complete`
 - last_completed_topic: `01 複素数・複素指数・フェーザ計算`
 - active_topic: `02 ベクトルと座標変換`
-- next_start: Topic 02の解説画像PowerPointを作成し、全スライドQAを行う
+- next_start: Topic 02の公式過去問5問を完成教材だけで独立再解答し、最終QAを行う
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -21,25 +21,26 @@
 - [x] 3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 02 `ベクトルと座標変換` の練習PDFを作成した。
+Topic 02 `ベクトルと座標変換` の解説画像PowerPointを作成した。
 
 成果物:
-- `topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_practice.pdf`
+- `topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_images.pptx`
 
-PDF仕様・QA:
-- A4縦 5ページ
-- 全12問
-- 問1〜8: 二種一次理論を意識した五肢択一
-- 問9〜12: 本試験標準〜複合の記述計算
-- 各問に使用式、選択理由、途中式、符号、単位、検算を含む完全解説
-- 180 dpiで全5ページをレンダリングして目視確認
+PowerPoint仕様・QA:
+- 16:9、4枚
+- スライド1: 成分表示・基底・大きさ・単位ベクトル・成分抽出
+- スライド2: 内積による射影、外積、ローレンツ力、負電荷での方向反転
+- スライド3: 2次元回転変換、逆変換、半径・円周方向から直交成分への読み替え、`M=M0 cosθ`
+- スライド4: 標準解法アルゴリズム、120°三相ベクトル、選定5過去問との対応
+- 全4枚を160 dpi相当でレンダリングし目視確認
+- PPTXパッケージ整合性検査PASS
+- 全shapeのスライド外はみ出し検査PASS
 - 文字切れ、重なり、欠落、黒塗り、ページ外はみ出しなし
-- 成分表示、内積・射影、外積、負電荷の方向反転、回転対称性、半径・円周方向、2次元回転変換、三相120°を演習化
 
 ## 範囲管理
 
@@ -50,9 +51,9 @@ PDF仕様・QA:
 - SPECにない抽象ベクトル解析
 - 未確認の新幹線実車値・設備値
 
-二次記述問題は数合わせで追加していない。本テーマの直接対応は一次理論のベクトル・座標処理であり、問9〜12は二種相当の数学記述演習として既存範囲だけで構成した。
+二次記述問題は数合わせで追加していない。本テーマの直接対応は一次理論のベクトル・座標処理である。
 
 ## 判定
-Topic 02の練習PDF段階をPASSとする。
+Topic 02のPowerPoint段階をPASSとする。
 
 テーマ完成数は `1 / 20` のまま。Topic 02はまだ `completed` ではない。

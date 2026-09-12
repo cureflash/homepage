@@ -10,7 +10,7 @@ Topic 01 `複素数・複素指数・フェーザ計算` は最終QAまでPASS�
 
 active topic: `02 ベクトルと座標変換`
 
-current status: `topic_02_practice_pdf_complete`
+current status: `topic_02_powerpoint_complete`
 
 ## Topic 02 source
 
@@ -32,6 +32,12 @@ source blob SHA:
 練習PDF blob SHA:
 `ce088bb49ee53003e6dce0dcad0bd0ddbf5adfdf`
 
+解説画像PowerPoint:
+`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_images.pptx`
+
+PowerPoint blob SHA:
+`5c911cbcdb52e6c785e71941187611c64af809f2`
+
 ## Topic 02 制作前EXAM_ALIGNMENT
 
 選定公式過去問:
@@ -49,9 +55,9 @@ source blob SHA:
 - 参考教材: e-sysnet + 電験王2 の2系統以上
 - 直近年度優先: R8 2問 + R7 2問
 
-## Topic 02 解説PDFまでの完了内容
+## Topic 02 解説PDF
 
-解説PDFはA4縦3ページ。
+A4縦3ページ。
 
 収録範囲:
 
@@ -83,6 +89,18 @@ A4縦5ページ、全12問。
 - 各問に途中式・使用理由・符号・単位・検算を含む完全解説
 - 全5ページを180 dpiでレンダリングし、文字切れ・重なり・欠落・黒塗り・ページ外はみ出しなしを目視確認済み
 
+## Topic 02 解説画像PowerPoint
+
+16:9、4枚。
+
+- スライド1: 成分表示・基底・大きさ・単位ベクトル・成分抽出
+- スライド2: 内積による射影、外積、ローレンツ力、負電荷での方向反転
+- スライド3: 2次元回転変換、逆変換、半径・円周方向から直交成分への読み替え、`M=M0 cosθ`
+- スライド4: 標準解法アルゴリズム、120°三相ベクトル、選定5過去問との対応
+- 全4枚を160 dpi相当でレンダリングし、文字切れ・重なり・欠落・黒塗り・ページ外はみ出しなしを目視確認済み
+- PPTXパッケージ整合性検査PASS
+- 全shapeのスライド外はみ出し検査PASS
+
 ## 範囲外として維持するもの
 
 - 対称座標法そのものの詳細
@@ -94,6 +112,6 @@ A4縦5ページ、全12問。
 
 ## 次に行うこと
 
-Topic 02の解説画像PowerPointを作成し、全スライドQAを行う。
+Topic 02の完成教材だけを使い、選定公式過去問5問を保存済み正答を先に見ず独立再解答する。
 
-その後に完成教材だけでの公式過去問独立再解答、最終QAが残る。
+その後、必須成果物実在確認・独立再解答結果・教材間整合・範囲管理をまとめた最終QAを行い、PASSした場合のみTopic 02を `completed` とする。
