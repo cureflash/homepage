@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 2 / 16
-- current_status: `topic_03_exam_alignment_complete`
+- current_status: `topic_03_explanation_content_complete`
 - last_completed_topic: `02 初代0系はどうやって走っていた？`
 - active_topic: `03 直流モーターはどうやって速度を変える？`
-- next_start: Topic 03 の確定済みEXAM_ALIGNMENTだけを使い、解説本文9節と3段階例題を作成する
+- next_start: Topic 03 の確定済みsource Markdownだけを使い、解説プリントPDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 制作前EXAM_ALIGNMENT、source Markdown、解説本文、3段階例題、12問の練習問題・完全解説、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。選定5問を教材だけで再解答し公式解答と照合、5/5正答で品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、12問の練習問題・完全解説、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。R8上問1・2、R7下問1・2、R7上問1・2を教材だけで再解答し、公式解答と6/6一致して品質ゲートPASS
-- [ ] 03 直流モーターはどうやって速度を変える？ — 制作前EXAM_ALIGNMENT完了。解説本文以降は未着手
+- [ ] 03 直流モーターはどうやって速度を変える？ — 制作前EXAM_ALIGNMENT、解説本文9節、3段階例題まで完了。解説PDF以降は未着手
 - [ ] 04〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT対象
@@ -139,6 +139,13 @@ source Markdown:
 - 未確認の0系実車定格値・タップ数等は追加しない
 - R4上問1に含まれる回生制動はTopic 09、誘導機VVVF・パワー半導体はTopic 04〜08として先取りしない
 
+解説本文:
+- MASTER SPECの9節構成で作成済み
+- 速度式・始動・電機子電圧制御・界磁制御・抵抗制御・弱め界磁・定トルク／定出力の基本を確定範囲内で説明
+- 3段階例題は、電機子電圧変更、始動抵抗、弱め界磁＋定出力の基本を扱う
+- 選定5過去問の要求事項を本文節・例題へ全件マッピング済み
+- 0系の未確認実車値、回生制動、誘導機VVVF、パワー半導体は追加していない
+
 完成後独立再解答は未実施。全成果物完成後に上記5問を教材だけで再解答する。
 
 ## 境界
@@ -155,7 +162,7 @@ Topic 03は系列SPECの速度制御・始動範囲だけを扱う。回生制�
 `PASS`。制作前 `EXAM_ALIGNMENT`、解説本文・3段階例題、解説PDF、12問の練習問題・完全解説、練習PDF、解説画像PowerPointをGitHub正本へ揃え、完成後に選定6問を保存済み正答を先に見ず教材内容だけで独立再解答した。公式解答との照合は `2 / 4 / 5 / 4 / 5 / 2` で6/6一致。必要公式の選択、途中式、言い換え対応、正答理由、教材カバレッジを確認し、Topic 02をcompletedとした。完成数は2/16。
 
 ## 03 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENTのみ完了。品質ゲートはまだ未判定で、完成数は2/16のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENTと解説本文9節・3段階例題まで完了。選定5問の要求事項は本文・例題へマッピング済みだが、必須成果物と完成後独立再解答が未完了のため、完成数は2/16のまま。
 
 ## 次
-Topic 03の確定済みEXAM_ALIGNMENTだけを使って、MASTER SPECの9節構成に沿う解説本文と3段階例題を作成する。
+Topic 03の確定済みsource Markdownだけを使って、解説プリントPDFを作成する。
