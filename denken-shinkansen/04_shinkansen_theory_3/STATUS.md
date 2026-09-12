@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 1 / 14
-- current_status: `topic_02_explanation_body_complete`
+- current_status: `topic_02_explanation_pdf_complete`
 - last_completed_topic: `01 新幹線1編成はどれだけ電気を食う？`
 - active_topic: `02 なぜ新幹線は25,000Vなのか`
-- next_start: Topic 02の解説PDFを作成し、全ページQAを行う
+- next_start: Topic 02の練習プリントを12問以上・完全解説付きで作成し、全ページ表示QAを行う
 
 ## Topic 01 進捗
 
@@ -41,7 +41,7 @@
 - [x] e-sysnet、電験王、電験三種まとめましたを確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材で必要な説明を固定
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
@@ -49,28 +49,20 @@
 
 ## 今回進めた内容
 
-Topic 02 `なぜ新幹線は25,000Vなのか` の解説本文と3段階例題を `topics/02_why_25kv/02_why_25kv.md` に追加した。
+Topic 02 `なぜ新幹線は25,000Vなのか` を1段階進め、解説PDF作成＋全ページ表示QAまで完了した。
 
-反映内容:
-
-- `V=RI`、`P=VI`、`Ploss=I²R`、`Q=I²Rt` の意味・単位・式変形
-- 同一電力時の `I=P/V` と `Ploss=P²R/V²`
-- 電圧降下 `ΔV=IR`
-- 送電効率の基本
-- 一閉路の内部抵抗 `V=E-Ir` と2条件連立
-- 基礎・本試験標準・複合/ひっかけの3段階例題
-- 令和7年度下期 理論 問6へ必要な中間知識を反映
-- 25 kVと5 kVの教材用仮定比較で、高電圧化による電流・損失低減を確認
-
-境界確認:
-
-- Topic 03の抵抗率・温度係数・直並列体系の先取りなし
-- Topic 05のキルヒホッフ・重ね合わせ・テブナンの先取りなし
-- Topic 08の正弦波・実効値、Topic 10の力率の先取りなし
-- 未確認の新幹線実車値の真値化なし
-- 25 kVを唯一絶対の最適値とする断定なし
-- 完成後独立再解答は未実施
+- file: `topics/02_why_25kv/02_why_25kv_explanation.pdf`
+- A4縦3ページ
+- source Markdownで固定済みの範囲のみで構成
+- `V=RI`、`P=VI`、`Ploss=I²R`、`Q=I²Rt`、`ΔV=IR`、送電効率、内部抵抗 `V=E-Ir` を収録
+- 基礎・本試験標準・複合/ひっかけの3段階例題を収録
+- 令和7年度下期 理論 問6への対応と公式・解法まとめを収録
+- 200 dpiで全3ページをレンダリングし、文字欠け・クリップ・重なり・黒四角・壊れた数式記号なしを確認
+- Topic 03の抵抗率・温度係数・直並列体系、Topic 05の回路網解析、Topic 08の正弦波・実効値、Topic 10の力率は先取りしていない
+- 未確認の新幹線実車値は追加していない
+- 25 kVを唯一絶対の最適値とする断定はしていない
+- 完成後独立再解答は未実施（後工程）
 
 ## 判定
 
-Topic 02は `explanation_body_complete`。完成数は `1 / 14` のまま。次工程は解説PDF作成＋全ページQA。
+Topic 02は `explanation_pdf_complete`。解説PDF表示QAは `PASS`。完成数は `1 / 14` のまま。次工程は12問以上・完全解説付きの練習PDF作成＋全ページ表示QA。
