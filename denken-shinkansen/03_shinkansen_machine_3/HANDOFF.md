@@ -6,14 +6,14 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は1/16。Topic 01は品質ゲートPASSでcompleted。active topicは02 `初代0系はどうやって走っていた？`。
 
 ## 今回進捗
-Topic 02 を `topic_02_exam_alignment_complete` から `topic_02_explanation_complete` へ1段階進めた。
+Topic 02 を `topic_02_explanation_complete` から `topic_02_explanation_pdf_complete` へ1段階進めた。
 
 GitHub正本更新:
-- `topics/02_dc_machine/02_dc_machine.md` — 解説本文・3段階例題を追加し、公式6問を本文節へマッピング
+- `topics/02_dc_machine/02_dc_machine_explanation.pdf` — source Markdownで確定済みの解説をA4縦4ページへ組版
 - `STATUS.md`
 - `HANDOFF.md`
 
-解説PDF、練習問題・練習PDF、PowerPointには着手していない。今回の段階は、制作前EXAM_ALIGNMENTで固定した要求事項を教材本文へ落とし込む段階のみ。
+練習問題・練習PDF、PowerPoint、完成後独立再解答には着手していない。今回の段階は解説PDF作成とPDF単体QAのみ。
 
 ## Topic 02 EXAM_ALIGNMENT
 公式過去問は直近年度から6問を選定済み。
@@ -32,21 +32,23 @@ GitHub正本更新:
 
 公式正答番号は、完成後の独立再解答を汚染しないためsource Markdownへ転記していない。
 
-## 今回作成した解説本文
-source Markdownに次を追加した。
+## 解説PDF
+`topics/02_dc_machine/02_dc_machine_explanation.pdf`
 
-- 電験で問われる直流機論点の明示
-- 電機子・界磁・整流子・ブラシと機械整流
-- `e=Blv`, `v=πDN/60`, `E=kΦN`
-- 逆起電力と `V=E+IaRa`
-- `T=kΦIa` と `Pdev=Tω=EIa`
-- 他励・分巻・直巻・複巻、自己励磁、残留磁気
-- 電機子銅損、界磁入力、機械損、軸出力、効率の電力収支
-- 直流機問題の10段階解法手順
-- 基礎／本試験標準／複合の3段階例題
-- 0系への接続、頻出ミス、過去問対応、公式まとめ
+- A4縦 4ページ
+- source Markdownの教材範囲だけを使用
+- 電験で問われる内容、構造・整流、誘導起電力、逆起電力、トルク・電力、他励・分巻・直巻・複巻、損失・効率、10段階解法、3段階例題、新幹線接続、頻出ミス、過去問対応、公式まとめを収録
+- 全4ページをレンダリングし、文字欠け、重なり、クリッピング、改ページ、可読性を確認してPASS
 
-電力収支では `EIa` を電磁変換電力として扱い、機械損控除後の軸出力と区別した。分巻電動機では線電流 `I`、電機子電流 `Ia`、界磁電流 `If` を分離し、効率計算での取り違えを防ぐ形にした。
+主要式はsource Markdownと同じ:
+- `e=Blv`, `v=πDN/60`
+- `E=kΦN`
+- `V=E+IaRa`
+- `T=kΦIa`
+- `ω=2πN/60`, `Pdev=Tω=EIa`
+- `Pcu=Ia^2Ra`, `η=Pout/Pin`
+
+3段階例題の数値結果もsource Markdownと一致することを確認した。基礎例題 `e≈3.77 V`、本試験標準例題 `N2=1470 min^-1`、複合例題 `η≈78.6 %`。
 
 ## 境界
 仕様追加はしていない。0系主電動機の具体的形式・定格値は一次資料で未確認のため追加していない。
@@ -56,7 +58,7 @@ Topic 02では過去問対応に必要な `V=E+IaRa`、`E=kΦN` と速度・ト�
 ## QA判定
 Topic 01: `PASS / completed`。
 
-Topic 02: 制作前 `EXAM_ALIGNMENT` と解説本文・3段階例題まで完了。公式6問の要求事項は本文各節へ対応付け済み。テーマ自体は未完了で、独立再解答は全成果物完成後に実施する。完成数は1/16。
+Topic 02: 制作前 `EXAM_ALIGNMENT`、解説本文・3段階例題、解説PDFまで完了。解説PDF単体QAはPASS。テーマ自体は未完了で、練習問題・練習PDF、PowerPoint、完成後独立再解答が残る。完成数は1/16。
 
 ## 次の正確な開始点
-Topic 02の解説PDFを作成する。`topics/02_dc_machine/02_dc_machine.md` の解説本文を正本としてA4縦へ組版し、数式、表、改ページ、可読性を確認する。内容を増やすための新規仕様追加や未確認の実車値追加は行わない。
+Topic 02の練習問題を12問以上作成する。三種仕様どおり、基礎20〜30%、本試験標準50〜60%、複合・応用約20%、半数以上を五肢択一とする。数値問題は使用公式・選定理由・代入・中間計算・最終値・検算、知識問題は正答理由と重要誤答肢の誤りまで記載する。選定6問の要求知識をカバーし、未確認実車値とTopic 03の速度制御体系は追加しない。
