@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 1 / 21
-- current_status: `topic_02_explanation_body_complete`
+- current_status: `topic_02_explanation_pdf_complete`
 - last_completed_topic: `01 25kV架線を一つの等価回路にする`
 - active_topic: `02 架線は長くなるとなぜ電圧が落ちる？`
-- next_start: Topic 02の解説PDFを作成し、本文の式・3段階例題・過去問対応表を欠落なく収録して全ページQAする
+- next_start: Topic 02の練習PDF（解答・完全解説付き）を作成し、一次理論中心＋直接関連する二次論点を過去問対応表どおり反映して全ページQAする
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -20,7 +20,7 @@
 - [x] source Markdownへ要求知識・式・設問型・典型ミス・教材内必要説明を固定
 - [x] 公式解答との照合を伴う制作前独立検証 6 / 6 PASS
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの完成後独立再解答
@@ -28,23 +28,32 @@
 
 ## 今回進めた内容
 
-Topic 02の解説本文＋3段階例題を `topics/02_catenary_voltage_drop/02_catenary_voltage_drop.md` へ追加した。
+Topic 02の解説PDFを作成した。
 
-本文収録範囲:
+成果物:
+- `topics/02_catenary_voltage_drop/02_catenary_voltage_drop_explanation.pdf`
+- A4縦 5ページ
+
+PDF収録範囲:
+- このテーマで電験が問う内容
 - 抵抗率・導電率と `R=ρl/S=l/(σS)`
 - 電流密度 `J=I/S`、非一様時の面積積分、局所オーム則 `J=σE`
 - 温度係数による抵抗補正
 - `ΔV=IR` と `P_loss=I²R`
 - 三相線路の単位長さ定数→全長換算と進み/遅れの符号
 - 分布負荷の `∫I(x)r dx` と `∫I(x)²r dx`
+- 基礎・本試験標準・複合ひっかけの3段階例題
+- 頻出ミス
+- 一次3問＋二次3問の過去問対応表
+- 公式・解法まとめ
 
-3段階例題:
-- 基礎: 導電率・円形断面・電流密度・単位長さ電圧
-- 本試験標準: 温度補正→電圧降下→抵抗損
-- 複合・ひっかけ: 単相2線式の分布負荷積分
+Visual QA:
+- 180 dpiで全5ページをレンダリング
+- 5 / 5ページで文字欠け・重なり・ページ外はみ出しなし
+- 未対応グリフになった近似記号・積分上下限表記を修正後に再レンダリングし、全ページPASS
 
-選定過去問6問について本文節との対応表を追加し、制作前に固定した要求事項を全件カバーした。実車未確認値は使わず、例題値は教材用仮定値と明記した。磁界・静電容量・表皮効果・コロナ等は追加していない。
+実車未確認値は使わず、例題値は教材用仮定値のまま。磁界・静電容量・表皮効果・コロナ等は追加していない。
 
 ## 判定
 
-Topic 02を `topic_02_explanation_body_complete` とする。完成数は `1 / 21` のまま。次段階は解説PDF作成＋全ページQA。
+Topic 02を `topic_02_explanation_pdf_complete` とする。完成数は `1 / 21` のまま。次段階は練習PDF作成＋全ページQA。
