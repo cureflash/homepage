@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `06_shinkansen_power_2`
 - exam_aligned_completed_topics: 0 / 22
-- current_status: `topic_01_powerpoint_complete`
+- current_status: `topic_01_independent_reanswer_needs_revision`
 - last_completed_topic: `none`
 - active_topic: `01 新幹線を電力系統から見てみる`
-- next_start: Topic 01の正式選定5問を、保存済み正答を先に見ず、完成教材（解説PDF・練習PDF・PowerPoint・source Markdown）のみで独立再解答する。一次2問・二次記述3問について公式解答と照合し、教材外知識で補っていないことを確認する
+- next_start: Topic 01の完成後独立再解答で判明した3点の不足だけを補強する。タービン発電機の直軸過渡リアクタンス代表範囲、駆動点インピーダンスと節点インピーダンス行列の関係、短絡容量と系統の強さ・電圧維持能力の関係を解説本文へ追加し、該当成果物を同期した後に同じ5問で再試験する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -25,7 +25,7 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問5問の教材のみでの独立再解答
+- [ ] 公式過去問5問の教材のみでの独立再解答（2026-09-13実施: 3/5 PASS、2/5 FAIL。補強後に再実施）
 - [ ] 最終QA PASS
 
 ## 正式な品質ゲート対象
@@ -40,21 +40,26 @@
   - EXAM_ALIGNMENT、制作前独立検証、解説本文、3段階例題
 - `topics/01_power_system_view/01_power_system_view_practice.md`
   - 練習15問、完全解説、過去問対応マッピング、練習問題QA
+- `topics/01_power_system_view/01_power_system_view_independent_reanswer.md`
+  - 完成後独立再解答のQA結果、PASS/FAIL根拠、必要な最小修正点
 
 ## 今回進めた内容
-Topic 01を1段階進め、解説画像PowerPoint `topics/01_power_system_view/01_power_system_view_images.pptx` を作成した。
+Topic 01の次工程である完成後独立再解答を実施した。
 
-16:9・4枚。source Markdownの既定範囲だけを使い、次を整理した。
+正式選定5問のうち、教材本文・練習教材の一般説明だけで完答できたのは3問。
 
-1. 新幹線電力供給系統を `電源フェーザ + 系統インピーダンス + 複素負荷` へ落とす見方
-2. 複素電力 `S=P+jQ`、フェーザ、遅れ・進み・逆潮流の符号
-3. 三相基準量、p.u.、％インピーダンス、基準変更、一線結線図から一相等価回路への手順
-4. `P-Q-電圧`、三相対称短絡容量、二次試験の記述手順
-5. 正式選定5問（一次2＋二次記述3）の要求論点
+- R4 二次 電力・管理 問3: PASS
+- R5 二次 電力・管理 問4: PASS
+- R6 二次 電力・管理 問4: PASS
+- H29 一次 電力 問6: FAIL
+  - タービン発電機の直軸過渡リアクタンス代表範囲 `0.2～0.4 p.u.` が教材本文・練習教材にない
+- R5 一次 電力 問4: FAIL
+  - 駆動点インピーダンスと節点インピーダンス行列の関係が教材本文・練習教材にない
+  - 短絡容量を系統の強さ・電圧維持能力の指標として読む説明が教材本文・練習教材にない
 
-Topic 08の変圧器固有の％Z・並列運転、Topic 12の本格的潮流計算、Topic 16の故障種別・対称座標法、Topic 20の安定度には踏み込んでいない。実設備の未確認値も追加していない。
+制作前EXAM_ALIGNMENT内の保存済み独立検証結果は正答情報を含むため、今回の教材充足判定の解答根拠には使用しなかった。公式解答との照合では、再導出できた3問はいずれも一致した。
 
-PowerPointは全4枚を画像レンダリングで確認し、`slides_test.py` でもoverflowなしを確認した。
+詳細は `topics/01_power_system_view/01_power_system_view_independent_reanswer.md` に記録した。
 
 ## 判定
-Topic 01 は `powerpoint_complete`。まだ `completed` ではない。次工程は正式選定5問を完成教材だけで独立再解答すること。全問PASSし最終QAを通過するまで完成数へ加算しない。
+Topic 01 は `independent_reanswer_needs_revision`。まだ `completed` ではない。`EXAM_ALIGNMENT_SPEC.md` の「教材外知識で補って解いた場合はFAIL」に該当する2問があるため、完成数は `0 / 22` のまま。
