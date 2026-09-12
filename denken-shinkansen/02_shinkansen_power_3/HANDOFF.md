@@ -6,10 +6,10 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は1/16。Topic 01は完成済み、active topicは02 `上越新幹線を水の力で走らせる`。
 
 ## 今回進捗
-Topic 02を1段階進め、練習PDF作成＋全ページ表示QAまで完了した。
+Topic 02を1段階進め、解説画像PowerPoint作成＋全スライド表示QAまで完了した。
 
 更新成果物:
-- `topics/02_hydropower/02_hydropower_practice.pdf`
+- `topics/02_hydropower/02_hydropower_images.pptx`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -53,7 +53,7 @@ Topic 02を1段階進め、練習PDF作成＋全ページ表示QAまで完了し
 
 解説PDF `topics/02_hydropower/02_hydropower_explanation.pdf` はA4縦5ページ。全5ページ200 dpi表示QA `PASS`。
 
-## 今回作成した練習PDF
+## 練習PDF
 `topics/02_hydropower/02_hydropower_practice.pdf`
 
 - A4縦4ページ
@@ -66,10 +66,22 @@ Topic 02を1段階進め、練習PDF作成＋全ページ表示QAまで完了し
 
 200 dpiで全4ページをレンダリングし、文字欠け、クリップ、重なりがないことを確認。表示QAは `PASS`。
 
+## 今回作成した解説画像PowerPoint
+`topics/02_hydropower/02_hydropower_images.pptx`
+
+- 16:9・7枚
+- 水→水車→発電機→鉄道への接続を導入にし、`P=ρgQH` の意味・単位、有効落差と効率、流量・水量・電力量、揚水発電、連続の式とベルヌーイ、水車分類、解法手順を図解
+- 品質ゲート対象7小問の要求論点を固定範囲内で視覚化
+- ダム形式詳細、比速度、キャビテーション、水撃作用、サージタンク、調速機、発電機機種詳細は追加していない
+- LibreOfficeでPDF変換後、全7枚を150 dpiでレンダリングして表示確認。文字欠け・クリップ・重なりなし
+- 全shapeのスライド境界外はみ出し0件、PPTX ZIP整合性PASS
+
+表示QA: `PASS`。
+
 ## 現在状態
-- `current_status`: `topic_02_practice_pdf_complete`
+- `current_status`: `topic_02_powerpoint_complete`
 - 完成数: 1/16のまま
-- Topic 02のPowerPoint・完成後独立再解答は未着手
+- Topic 02の完成後独立再解答・最終QAは未着手
 
 ## 次の正確な開始点
-Topic 02の解説画像PowerPointを作成し、全スライド表示QAを行う。固定範囲外の論点は追加しない。
+Topic 02の品質ゲート対象7小問を、保存済み正答を見ずに完成教材だけで独立再解答する。全問について教材だけで公式選択・途中式・根拠説明ができることを確認し、その後に公式解答と照合して最終QAを行う。
