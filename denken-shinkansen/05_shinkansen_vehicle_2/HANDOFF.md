@@ -7,7 +7,7 @@
 
 Topic 01 `0系① 主変圧器の等価回路` は最終QAまでPASS。完成数は `1 / 39`。
 
-Topic 02 `0系② 整流回路の波形解析` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題・完全解説source、練習PDFまで完了。現在地は `topic_02_practice_pdf_complete`。次は解説画像PowerPoint作成＋全スライドVisual QA・overflow確認。
+Topic 02 `0系② 整流回路の波形解析` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPointまで完了。現在地は `topic_02_powerpoint_complete`。次は完成教材だけによる選定5過去問の独立再解答。
 
 ## Topic 02 EXAM_ALIGNMENT
 選定した公式過去問は一次1問＋二次記述4問の計5問。
@@ -31,7 +31,7 @@ Topic 02 `0系② 整流回路の波形解析` は制作前EXAM_ALIGNMENT、解�
 - 交流条件と直流偏磁
 - 直流側電圧・電流・負荷電力
 
-## Topic 02 source・解説PDF
+## Topic 02 source・PDF
 source:
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis.md`
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_practice_source.md`
@@ -43,31 +43,26 @@ source:
 - `SPEC.md` 指定の入力交流波形、整流後電圧波形、電流波形、フーリエ成分、負荷条件―平均直流電圧を作図
 - 全3ページVisual QA PASS
 
-3段階例題:
-- 基礎: 単相全波整流の平均値・実効値・抵抗負荷電力
-- 本試験標準: 三相サイリスタ変換器の平均直流電圧、基本波電流、有効・無効電力、総合力率
-- 複合: 無平滑・大C・大Lの負荷電力比較
-
-## Topic 02 練習PDF
-成果物:
+練習PDF:
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_practice.pdf`
-
-構成:
 - A4縦 8ページ
 - 一次試験型8問、全問五肢択一
 - 二次試験型4問、途中式・前提・単位・理由説明を要求
 - 合計12問、全問解答・完全解説付き
 - 選定済み5過去問の要求事項へマッピング済み
 - 数値・式は練習source作成時に独立再計算済み
+- 全8ページを200 dpiでレンダリングしVisual QA PASS
 
-QA:
-- 全8ページを200 dpiでレンダリング
-- 文字欠け、黒四角、重なり、クリッピング、可読性を目視確認してPASS
-- テキスト抽出で問1〜問12の収録を確認
-- 新規の0系実車値・固有回路仕様は追加していない
-- インバータ、チョッパ、速度制御等のTopic 02外論点は追加していない
+## Topic 02 PowerPoint
+- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_images.pptx`
+- 16:9、4枚
+- 単相整流、平均値・実効値・リプル、L/C平滑、三相6パルス、制御角α、120°交流側電流、基本波・高調波、P/Q/力率、直流偏磁、二次試験答案手順を図解
+- 図は全て自作模式図、外部画像なし
+- 全4枚レンダリングVisual QA PASS
+- `slides_test.py` overflow検査PASS
+- 新規の0系実車値・固有回路仕様、インバータ・チョッパ・速度制御等のTopic 02外論点は追加していない
 
-PowerPoint、完成教材だけによる選定5過去問の独立再解答、最終QAは未実施。Topic 02は未完成扱いで、完成数は `1 / 39` のまま。
+完成教材だけによる選定5過去問の独立再解答、最終QAは未実施。Topic 02は未完成扱いで、完成数は `1 / 39` のまま。
 
 ## Topic 02 境界
 系列SPECにある「整流回路、平均値、実効値、リプル、素子電流、素子電圧、高調波、力率、交流側電流、直流側電圧」と指定グラフだけを扱う。
@@ -84,17 +79,9 @@ PowerPoint、完成教材だけによる選定5過去問の独立再解答、最
 - 完成教材だけによる公式過去問独立再解答
 - 最終QA
 
-成果物:
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit.md`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_explanation.pdf`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_practice.pdf`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_images.pptx`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_exam_reanswer.md`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_final_qa.md`
-
 Topic 01の選定6問は完成教材だけで6/6再解答PASS、教材外知識の補完0件、最終QA PASS。
 
 ## 次の正確な開始点
-Topic 02 `0系② 整流回路の波形解析` の解説画像PowerPointを、確定済み本文・練習source・既存PDFの範囲だけを使って作成する。全スライドをレンダリングし、Visual QAとoverflow確認を行う。
+Topic 02 `0系② 整流回路の波形解析` の選定公式過去問5問を、保存済み正答を先に見ず、完成教材だけを使って独立再解答する。各問について解法根拠・途中式・単位を確認して結果を記録する。全問PASS後に最終QAへ進む。
 
-完成後独立再解答はPowerPoint完成後に行う。確定済み範囲外の論点や未確認の0系実車値・固有回路仕様は追加しない。
+確定済み範囲外の論点や未確認の0系実車値・固有回路仕様は追加しない。

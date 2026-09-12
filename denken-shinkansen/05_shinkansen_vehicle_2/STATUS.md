@@ -5,17 +5,17 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 1 / 39
-- current_status: `topic_02_practice_pdf_complete`
+- current_status: `topic_02_powerpoint_complete`
 - last_completed_topic: `01 0系① 主変圧器の等価回路`
 - active_topic: `02 0系② 整流回路の波形解析`
-- next_start: Topic 02の解説画像PowerPoint作成＋全スライドVisual QA・overflow確認。確定済みの本文・練習sourceの範囲だけを使い、範囲外論点や未確認の0系実車値は追加しない
+- next_start: Topic 02の選定公式過去問5問を、保存済み正答を先に見ず、完成教材だけで独立再解答し結果を記録する。PASS後に最終QAを行う
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
-- [ ] 02 0系② 整流回路の波形解析 — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題＋完全解説source・練習PDF完了
+- [ ] 02 0系② 整流回路の波形解析 — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題＋完全解説source・練習PDF・解説画像PowerPoint完了
 
 ## Topic 02 現在地
-制作前EXAM_ALIGNMENTで一次1問＋二次記述4問の計5問を選定し、要求事項独立検証5/5 PASS。その範囲だけを使って解説本文と3段階例題、解説PDF、練習問題・完全解説source、練習PDFまで完成した。
+制作前EXAM_ALIGNMENTで一次1問＋二次記述4問の計5問を選定し、要求事項独立検証5/5 PASS。その範囲だけを使って解説本文と3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPointまで完成した。
 
 解説PDF:
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_explanation.pdf`
@@ -32,7 +32,16 @@
 - テキスト抽出でも問1〜問12の収録を確認
 - 新規の0系実車値・固有回路仕様・Topic 02外論点は追加していない
 
-PowerPoint、完成教材だけによる選定公式過去問5問の独立再解答、最終QAは未実施。完成数は `1 / 39` のまま。
+PowerPoint:
+- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_images.pptx`
+- 16:9、4枚
+- 単相半波・全波整流、平均値・実効値・リプル、L/C平滑、三相6パルス、制御角α、120°交流側電流、基本波・高調波、P/Q/力率、直流偏磁、二次試験答案手順を図解
+- 図は全て自作模式図、外部画像なし
+- 全4枚Visual QA PASS
+- `slides_test.py` overflow検査PASS
+- 未確認の0系実車値、インバータ・チョッパ・速度制御等のTopic 02外論点は追加していない
+
+完成教材だけによる選定公式過去問5問の独立再解答、最終QAは未実施。完成数は `1 / 39` のまま。
 
 ## Topic 02 制作前EXAM_ALIGNMENT
 公式過去問は一次1問＋二次記述4問の計5問を選定し、制作前の要求事項独立検証は5/5 PASS。
@@ -78,14 +87,6 @@ source:
 
 完成教材だけによる完成後独立再解答は6/6 PASS。公式標準解答と全問一致し、教材外知識の補完は0件。
 
-## Topic 01 成果物
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit.md`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_explanation.pdf`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_practice.pdf`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_images.pptx`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_exam_reanswer.md`
-- `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_final_qa.md`
-
 ## 実車値・境界
 Topic 01で実値として扱うのは一次資料確認済みの25 kV・60 Hz・1650 kVA・低圧タップ切換・25段のみ。`1650 kVA / 25 kV = 66 A` は計算値であり、実測電流ではない。
 
@@ -94,7 +95,7 @@ Topic 02では新たな0系実車値・未確認回路仕様を追加してい�
 ## QA判定
 Topic 01: `PASS`。
 
-Topic 02: 制作前品質ゲートPASS。解説PDF全3ページ、練習PDF全8ページVisual QA PASS。テーマ自体は未完了であり、`completed` には数えない。
+Topic 02: 制作前品質ゲートPASS。解説PDF全3ページ、練習PDF全8ページ、PowerPoint全4枚Visual QA PASS。PowerPoint overflow検査PASS。テーマ自体は未完了であり、`completed` には数えない。
 
 ## 次
-Topic 02 `0系② 整流回路の波形解析` の解説画像PowerPointを作成し、全スライドVisual QA・overflow確認を行う。完成後独立再解答はまだ行わない。
+Topic 02 `0系② 整流回路の波形解析` の選定公式過去問5問を、完成教材だけで独立再解答する。保存済み正答を先に見ず、解法根拠・途中式・単位を確認して結果を記録する。PASS後に最終QAへ進む。
