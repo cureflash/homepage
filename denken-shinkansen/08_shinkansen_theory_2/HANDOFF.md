@@ -4,58 +4,57 @@
 
 ## 現在地
 
-Topic 01 `25kV架線を一つの等価回路にする` は最終QAまでPASSし、`completed`。
+Topic 01 `25kV架線を一つの等価回路にする` は `completed`。
+
+Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は制作前EXAM_ALIGNMENTまで完了。
 
 完成数: `1 / 21`
 
-active topic: `02 架線は長くなるとなぜ電圧が落ちる？`
+current_status: `topic_02_exam_alignment_complete`
 
-## Topic 01 完成証跡
+## Topic 02 現行成果物
 
 source Markdown:
-`topics/01_catenary_equivalent_circuit/01_catenary_equivalent_circuit.md`
+`topics/02_catenary_voltage_drop/02_catenary_voltage_drop.md`
 
-解説PDF:
-`topics/01_catenary_equivalent_circuit/01_catenary_equivalent_circuit_explanation.pdf`
+現時点では解説本文・解説PDF・練習PDF・PowerPointは未作成。
 
-練習PDF:
-`topics/01_catenary_equivalent_circuit/01_catenary_equivalent_circuit_practice.pdf`
+## Topic 02 EXAM_ALIGNMENT
 
-PowerPoint:
-`topics/01_catenary_equivalent_circuit/01_catenary_equivalent_circuit_images.pptx`
+品質ゲート対象は6問。
 
-最終QA:
-`topics/01_catenary_equivalent_circuit/01_catenary_equivalent_circuit_final_qa.md`
+一次「理論」:
+- R6 問2(3): `R=l/(σS)`、単位長さ直流電圧
+- R1 問5(1): 一様電流密度 `I=JS`
+- H27 問1(3)(4): `J(r)`、局所オーム則 `J=σE`
 
-## Topic 01 最終QA結果
+二次「電力・管理」:
+- R5 問4(1): 4 km三相配電線の電圧降下
+- R1 問4(2): 分布負荷の抵抗損 `∫I(x)²r dx`
+- H27 問3: 分布負荷の抵抗分電圧降下 `∫I(x)R dx`
 
-- 必須成果物4種: GitHub実在確認PASS
-- 過去問: R8/R7/R6/R5/R4/R3の一次理論7問
-- `EXAM_ALIGNMENT_SPEC.md` の二種一般則を確認し、`MASTER_SPEC.md` の `08 理論・二種` 一次中心例外規定を適用
-- 完成後独立再解答: 7 / 7 PASS
-- 教材外知識補完: 0件
-- 実設備 / 教育用等価回路モデルの区別: PASS
-- 解説PDF・練習PDF・PowerPointの既実施レンダリングQAと現行blob: 対応確認PASS
-- Webカタログ: 同checkpointで登録
+制作前独立検証: `6 / 6 PASS`
 
-現行blob SHA:
+R8・R7一次理論は直近年度優先で確認済みだが本Topicへの直接性が低いため不採用。`08 理論・二種` の一次中心原則は維持し、二次は直接関連する3問のみ採用した。
 
-- source: `031a6eaa3c8f0387a9f84255bcfb4c80268079ee`
-- 解説PDF: `f742c808249bd2b1aea2720388cf9f571ea5d4ef`
-- 練習PDF: `95ffd2817647be1620ed4a82ff094973fa4d90ce`
-- PowerPoint: `4285209dc4e2312946e7003ddaebe83d0dd2ff5c`
+複合問題はTopic 02に直接対応する小問だけをマッピングし、磁界・静電容量・表皮効果等をTopic 02の仕様へ追加していない。
+
+温度係数は今回選定した過去問の直接主題ではない。系列 `SPEC.md` の必須項目として扱い、過去問由来とは記録しない。
 
 ## 次に行うこと
 
-Topic 02 `架線は長くなるとなぜ電圧が落ちる？` の制作前EXAM_ALIGNMENTから開始する。
+Topic 02の解説本文＋3段階例題を作成する。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`に従い、本文作成より先に次を行う。
+本文は `SPEC.md` と制作前EXAM_ALIGNMENTに固定した次の範囲だけを扱う。
 
-- 電気技術者試験センター公式過去問を直近年度優先で調査
-- 関連公式過去問を原則5問以上選定
-- 各問の要求知識、使用式、設問型、典型ミスを分解
-- 参考教材を複数系統確認
-- source MarkdownへEXAM_ALIGNMENTと教材で必要な説明を記録
-- `08 理論・二種` は一次理論を中心とし、二次形式を数合わせで追加しない
+- 抵抗率
+- 導電率
+- 温度係数
+- 電流密度
+- 電圧降下
+- ジュール損
+- 電力損失
+- `R = ρl/S`
+- 選定二次問題への接続に必要な最小限の線路電圧降下・分布負荷積分
 
-この制作前品質ゲートを終えるまで、Topic 02の解説本文には進まない。
+本文完成後も、解説PDF→練習PDF→PowerPoint→完成後独立再解答→最終QAの順序を崩さない。
