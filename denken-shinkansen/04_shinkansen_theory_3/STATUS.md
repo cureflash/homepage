@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 1 / 14
-- current_status: `topic_02_practice_pdf_complete`
+- current_status: `topic_02_powerpoint_complete`
 - last_completed_topic: `01 新幹線1編成はどれだけ電気を食う？`
 - active_topic: `02 なぜ新幹線は25,000Vなのか`
-- next_start: Topic 02の解説画像PowerPointを作成し、全スライド表示QAとoverflow確認を行う
+- next_start: Topic 02の完成教材だけを使って令和7年度下期 理論 問6を独立再解答し、最終QAを行う
 
 ## Topic 01 進捗
 
@@ -43,26 +43,30 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題・練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 02 `なぜ新幹線は25,000Vなのか` を1段階進め、練習PDF作成＋全ページ表示QAまで完了した。
+Topic 02 `なぜ新幹線は25,000Vなのか` を1段階進め、解説画像PowerPoint作成＋全スライド表示QA・overflow確認まで完了した。
 
-- file: `topics/02_why_25kv/02_why_25kv_practice.pdf`
-- A4縦5ページ
-- 全12問: 基礎3問 / 本試験標準7問 / 複合・応用2問
-- 全問五肢択一、全問完全解説付き
-- `V=RI`、`P=VI`、`Ploss=I²R`、`Q=I²Rt`、電圧降下、送電効率、一閉路の内部抵抗を反復練習できる構成
-- 同一電力時の高電圧化と抵抗損の比較、2条件から内部抵抗・起電力を求める問題を含む
-- 200 dpiで全5ページをレンダリングし、文字欠け・クリップ・重なり・黒四角・壊れた数式記号なしを確認
+- file: `topics/02_why_25kv/02_why_25kv_images.pptx`
+- 16:9、全7スライド
+- `P=VI` と `I=P/V`、`Ploss=I²R`、高電圧化での `1/k`・`1/k²` 関係を図解
+- 教材用仮定値10 MW・0.50 Ωによる25 kV / 5 kV比較を可視化
+- 一閉路の電圧降下 `ΔV=IR`、`Vs=Vr+IR` を模式図化
+- W / J / Wh と送電効率の取り違え防止を整理
+- 令和7年度下期 理論 問6に接続する `V=E-Ir` の2条件連立手順を図解
+- 解法手順を「単位 → 電流 → 抵抗損 → 電圧降下 → 効率 → 検算」で固定
+- 外部画像は使用せず、自作図形のみ
+- 全7スライドをレンダリングし、文字欠け・クリップ・重なりなしを確認
+- overflow検査: `PASS`
 - Topic 03の抵抗率・温度係数・直並列体系、Topic 05の回路網解析、Topic 08の正弦波・実効値、Topic 10の力率は先取りしていない
 - 未確認の新幹線実車値は追加していない
 - 25 kVを唯一絶対の最適値とする断定はしていない
-- 完成後独立再解答は未実施（後工程）
+- 完成後独立再解答は未実施（次工程）
 
 ## 判定
 
-Topic 02は `practice_pdf_complete`。練習PDF表示QAは `PASS`。完成数は `1 / 14` のまま。次工程は解説画像PowerPoint作成＋全スライド表示QA・overflow確認。
+Topic 02は `powerpoint_complete`。PowerPoint表示QA・overflow確認は `PASS`。完成数は `1 / 14` のまま。次工程は令和7年度下期 理論 問6の完成教材のみでの独立再解答＋最終QA。
