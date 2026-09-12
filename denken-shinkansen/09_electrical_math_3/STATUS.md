@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 1 / 12
-- current_status: `topic_02_practice_pdf_complete`
+- current_status: `topic_02_powerpoint_complete`
 - last_completed_topic: `01 単位・指数・有効数字`
 - active_topic: `02 三角比・三角関数`
-- next_start: Topic 02の解説画像PowerPointを作成する。現行EXAM_ALIGNMENTと解説本文・練習PDFの範囲から追加しない
+- next_start: Topic 02の選定公式過去問5問を、完成教材だけを使って独立再解答する
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -20,30 +20,22 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 02 `三角比・三角関数` の練習PDF（解答・完全解説付き）を作成した。
+Topic 02 `三角比・三角関数` の解説画像PowerPointを作成した。
 
 成果物:
-- `topics/02_trigonometric_functions/02_trigonometric_functions_practice.pdf`
-- A4縦 5ページ
-- 12問（基礎3 / 本試験標準7 / 複合・応用2）
-- 五肢択一8問（12問中2/3）
-- 全問に解答・完全解説
-- 全5ページを180 dpiでレンダリングし、文字切れ・図表欠落・重なり・黒塗り・ページ外はみ出しなしを確認
-- PDFは開封可能で5ページとして認識されることを確認
+- `topics/02_trigonometric_functions/02_trigonometric_functions_images.pptx`
+- 16:9、7枚
+- 収録内容: `sin/cos/tan` と単位円、正弦波 `Ym・ω・f・T・φ`、位相差・進み遅れ・時間差、`sin/cos` 90°変換、`A sin x+B cos x` の合成、R-X-Zと力率、25 kV正弦波モデル、標準解法・頻出ミス
+- 選定過去問5問の要求数学を該当スライドへ接続
+- 全7枚を1600×900相当でレンダリングし、文字切れ・図表欠落・重なり・黒塗りを目視確認
+- 全shapeの座標を検査し、スライドキャンバス外へのはみ出し0件
 
-収録範囲:
-- 度/rad、代表角、正弦波 `Vm・ω・f・T・φ`
-- 初回到達時刻、位相差と時間差
-- `sin/cos` 位相変換、`A sin x+B cos x` の合成
-- 90°位相差、力率 `cosφ`、最大値/実効値
-- 25 kVは「正弦波実効値とする数学例」と明記し、実車波形詳細を仮定していない
-
-全12問の数値・位相を独立計算で再確認した。複素数、極形式・フェーザ、空間ベクトル、微積分、体系的RLC回路解析は追加していない。
+現行EXAM_ALIGNMENT、解説本文、練習PDFの固定範囲から追加していない。複素数、極形式・フェーザ、空間ベクトル、微積分、体系的RLC回路解析は追加していない。
 
 ## 判定
-Topic 02は `practice_pdf_complete`。完成数は `1 / 12` のまま。次工程は解説画像PowerPoint作成。
+Topic 02は `powerpoint_complete`。完成数は `1 / 12` のまま。次工程は完成教材だけを使った選定公式過去問5問の独立再解答。
