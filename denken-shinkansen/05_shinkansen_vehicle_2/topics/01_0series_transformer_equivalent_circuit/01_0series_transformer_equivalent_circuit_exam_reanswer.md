@@ -33,4 +33,4 @@
 
 独立再解答ゲート: `PASS`
 
-Topic 01は独立再解答まで完了。最終QAは未実施のため、まだ `completed` にはしない。
+最終QAも `01_0series_transformer_equivalent_circuit_final_qa.md` でPASS済み。Topic 01は `completed`。
