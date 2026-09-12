@@ -6,13 +6,13 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は2/16。Topic 01・02は品質ゲートPASSでcompleted。active topicは03 `直流モーターはどうやって速度を変える？`。
 
 ## 今回進捗
-Topic 03 を未着手から `topic_03_exam_alignment_complete` へ1段階進めた。
+Topic 03 を `topic_03_exam_alignment_complete` から `topic_03_explanation_content_complete` へ1段階進めた。
 
-制作前EXAM_ALIGNMENTを実施し、直近年度を優先して公式過去問5問を選定した。要求知識・使用式・設問型を分解し、系列SPEC内で教材必須範囲を固定した。完成後独立再解答に備え、公式正答番号はこの段階ではsourceへ記録していない。
+確定済みEXAM_ALIGNMENTと系列SPECだけを使い、MASTER SPECの9節構成に沿う解説本文と3段階例題をsource Markdownへ追加した。選定5過去問が要求する速度式、始動、電機子電圧制御、界磁制御、抵抗制御、弱め界磁、トルク条件を本文節・例題へ全件マッピングした。
 
 GitHub正本更新:
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md` — 新規作成。EXAM_ALIGNMENT、教材必須範囲、範囲境界、完成後ゲートを記録
-- `STATUS.md` — `topic_03_exam_alignment_complete`、完成数2/16、次工程を解説本文＋3段階例題へ更新
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md` — 解説本文9節、3段階例題、過去問→本文／例題マッピングを追加
+- `STATUS.md` — `topic_03_explanation_content_complete`、完成数2/16、次工程を解説プリントPDFへ更新
 - `HANDOFF.md`
 
 ## Topic 03 EXAM_ALIGNMENT
@@ -58,6 +58,16 @@ GitHub正本更新:
 電流・トルク・速度が変化する
 ```
 
+## 解説本文・例題
+source Markdownに次を追加済み。
+
+- 9節: 試験論点、基礎概念、公式と成立条件、解法手順、3段階例題、新幹線接続、頻出ミス、過去問対応、公式まとめ
+- 基礎例題: 電機子電圧変更後の回転速度。`IaRa` を引いた逆起電力比で速度を求める
+- 本試験標準例題: 始動電流を制限する始動抵抗と、逆起電力増加後の抵抗切外し
+- 複合・ひっかけ例題: 弱め界磁時の速度比・トルク比・`P=Tω` による定出力の基本
+
+選定5過去問の要求事項は本文節と例題へ全件マッピング済み。完成後独立再解答は、全成果物完成後まで実施しない。
+
 ## 境界
 仕様追加はしていない。
 
@@ -71,7 +81,7 @@ Topic 01: `PASS / completed`。
 
 Topic 02: `PASS / completed`。MASTER SPEC必須成果物を揃え、完成後独立再解答6/6正答。
 
-Topic 03: `IN_PROGRESS`。制作前EXAM_ALIGNMENT完了。完成後独立再解答は未実施のため、完成数は2/16のまま。
+Topic 03: `IN_PROGRESS`。制作前EXAM_ALIGNMENTと解説本文9節・3段階例題まで完了。必須成果物と完成後独立再解答が未完了のため、完成数は2/16のまま。
 
 ## 次の正確な開始点
-`topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md` の確定済み範囲だけを使い、MASTER SPECの9節構成に沿って解説本文と3段階例題を作成する。
+`topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md` の確定済み本文・例題だけを使い、解説プリントPDFを作成する。
