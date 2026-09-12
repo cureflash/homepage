@@ -5,13 +5,13 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 0 / 16
-- current_status: `topic_01_exam_alignment_gate_pass`
+- current_status: `topic_01_explanation_complete`
 - last_completed_topic: なし
 - active_topic: `01 新幹線の電気はどこから来る？`
-- next_start: Topic 01 の解説本文を作成し、確定した5問の要求事項を本文へ落とす
+- next_start: Topic 01 の解説PDFを作成する
 
 ## 新品質ゲート進捗
-- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・選定5問の独立再解答/公式照合PASS。本文・解説PDF・練習PDF・PowerPointは未完了
+- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・選定5問の独立再解答/公式照合PASS。解説本文まで完了。解説PDF・練習PDF・PowerPointは未完了
 - [ ] 02〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -42,13 +42,27 @@ Topic 01の既定範囲に適合する次の5問へ差し替え済み。
 - R4上 問8: 独立解答 (5) / 公式 (5) — PASS
 - R1 問7: 独立解答 (3) / 公式 (3) — PASS
 
-5/5一致。R6上問11に必要な三相3線式/単相2線式の導体量比較と、R1問7に必要な分路リアクトル・周波数変換所・交直変換所を、既定の「三相交流」「変電所」「電力系統」範囲内の本文必須事項としてsource Markdownへ明示した。
+5/5一致。
 
-source Markdown:
-- `topics/01_power_system_overview/01_power_system_overview.md`
+## 01 解説本文
+`topics/01_power_system_overview/01_power_system_overview.md` に、`MASTER_SPEC.md` の最低構成に沿う解説本文を追加した。
+
+収録済み:
+- 発電→送電→変電→配電→需要家の全体像
+- 新幹線側の発電所→送電線→新幹線変電所→き電回路→電車線→パンタグラフ→車両
+- 単相 `P=VI cosφ`、三相 `P=√3VI cosφ`
+- 三相線路損失 `P_loss=3I²R` と損失率への式変形
+- 高電圧化・力率改善と電流/損失の関係
+- 三相3線式と単相2線式の必要導体量 `3/4` の導出
+- 変電所の昇降圧・電圧調整・系統切換え・系統保護、周波数変換所・交直変換所の用途
+- 再利用可能な解法手順
+- 基礎・本試験標準・複合の3段階例題
+- 選定5問と本文節の対応表
+
+後続Topicの詳細へは踏み込んでいない。
 
 ## 01 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASS。本文と必須成果物が未完了のため、完成数は0/16のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASSし、解説本文も完成。必須成果物のPDF・PowerPointが未完了のため、完成数は0/16のまま。
 
 ## 次
-Topic 01の解説本文を作成する。`MASTER_SPEC.md` の最低構成に従い、確定した必須範囲と5問の要求事項を本文へ落とし、基礎・本試験標準・複合の3段階例題へ接続する。
+Topic 01の解説PDFを、このsource Markdownを正本として作成する。
