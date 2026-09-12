@@ -20,16 +20,32 @@ jobs:
       - name: Verify chunks and assemble exact PDF
         shell: bash
         run: |
-          set -euo pipefail
-          echo '6de9506a77197561afc6557ac6f2ef0c6f4911af18c3ea27fdfd685c0910a932  .tmp_practice_pdf/0.b64' | sha256sum -c -
-          echo 'b5aff99238dd25b8ac9da2d3bfe3b36f3cc43076fd28f698f90297a6039e78bc  .tmp_practice_pdf/1.b64' | sha256sum -c -
-          echo 'e282f4e068e7466311f1cf1e1a329c20e0e31e91662d093fce8d6ba3b7b1e2b7  .tmp_practice_pdf/2.b64' | sha256sum -c -
-          echo '44caf6fdfbc12b097faabcb0a1c26a7b1f1bfb68e2dd3a4c970a15885848d7d7  .tmp_practice_pdf/3.b64' | sha256sum -c -
-          echo 'dd41ad9a9b28c2aee8bbe8b6991500b62e7dca2d4fae0e8fde1ffb66b986025f  .tmp_practice_pdf/4.b64' | sha256sum -c -
-          echo '2def7c5733974a66631ded8420c27d180f52dbc9c02f801ad4cc19029957d1ce  .tmp_practice_pdf/5.b64' | sha256sum -c -
-          echo '97aa00a49d1fe406afee3bc8f4959ef1f29f1a9a5e28c339af962d5cc47173a1  .tmp_practice_pdf/6.b64' | sha256sum -c -
-          echo '65b4e9e75d3825050e46e4f82042585e3fa60d83a4b47c9d028b5915f28213f8  .tmp_practice_pdf/7.b64' | sha256sum -c -
-          cat .tmp_practice_pdf/{0,1,2,3,4,5,6,7}.b64 | base64 -d > /tmp/practice.pdf
+          set -u
+          mkdir -p /tmp/pdfchunks
+          expected=(
+            6de9506a77197561afc6557ac6f2ef0c6f4911af18c3ea27fdfd685c0910a932
+            b5aff99238dd25b8ac9da2d3bfe3b36f3cc43076fd28f698f90297a6039e78bc
+            e282f4e068e7466311f1cf1e1a329c20e0e31e91662d093fce8d6ba3b7b1e2b7
+            44caf6fdfbc12b097faabcb0a1c26a7b1f1bfb68e2dd3a4c970a15885848d7d7
+            dd41ad9a9b28c2aee8bbe8b6991500b62e7dca2d4fae0e8fde1ffb66b986025f
+            2def7c5733974a66631ded8420c27d180f52dbc9c02f801ad4cc19029957d1ce
+            97aa00a49d1fe406afee3bc8f4959ef1f29f1a9a5e28c339af962d5cc47173a1
+            65b4e9e75d3825050e46e4f82042585e3fa60d83a4b47c9d028b5915f28213f8
+          )
+          ok=1
+          for i in 0 1 2 3 4 5 6 7; do
+            src=".tmp_practice_pdf/$i.b64"
+            tr -d '\r\n' < "$src" > "/tmp/pdfchunks/$i.b64"
+            raw_len=$(wc -c < "$src")
+            norm_len=$(wc -c < "/tmp/pdfchunks/$i.b64")
+            raw_sha=$(sha256sum "$src" | awk '{print $1}')
+            norm_sha=$(sha256sum "/tmp/pdfchunks/$i.b64" | awk '{print $1}')
+            echo "chunk=$i raw_len=$raw_len norm_len=$norm_len raw_sha=$raw_sha norm_sha=$norm_sha expected=${expected[$i]}"
+            if [ "$norm_sha" != "${expected[$i]}" ]; then ok=0; fi
+          done
+          test "$ok" -eq 1
+          cat /tmp/pdfchunks/{0,1,2,3,4,5,6,7}.b64 | base64 -d > /tmp/practice.pdf
+          echo "pdf_size=$(wc -c < /tmp/practice.pdf) pdf_blob=$(git hash-object /tmp/practice.pdf)"
           test "$(wc -c < /tmp/practice.pdf)" -eq 20874
           test "$(git hash-object /tmp/practice.pdf)" = '46c5058870ca1fbf5a2aa5be6b878835e79fc050'
       - name: Commit exact PDF
