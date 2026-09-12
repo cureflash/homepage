@@ -10,69 +10,46 @@ Topic 01 `0系の主変圧器を等価回路で解剖する` は最終QAまでPA
 
 active topic: `02 0系の直流主電動機はどんな特性だった？`
 
-current status: `topic_02_exam_alignment_complete`
+current status: `topic_02_explanation_body_complete`
 
-## Topic 02 制作前EXAM_ALIGNMENT
+## Topic 02 現在の成果物
 
 source Markdown:
 `topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics.md`
 
-選定公式過去問:
-
+制作前EXAM_ALIGNMENT:
 - R6 一次 機械 問2
 - H28 一次 機械 問1
 - H28 一次 機械 問5
 - H26 一次 機械 問5
 - H24 二次 機械・制御 問1
 
-一次4問＋二次記述1問、計5問。混合問題はTopic 02のSPECに直接対応する小問だけをゲート対象とし、対象10小問の制作前独立検証は10 / 10で公式解答と整合した。
+一次4問＋二次記述1問、計5問。ゲート対象10小問の制作前独立検証は10 / 10で公式解答と整合済み。
 
-本テーマで固定した範囲:
+今回、解説本文と3段階例題まで作成した。本文では次を回収済み。
 
-- 電機子回路 `V=E+I_aR_a`
-- 逆起電力 `E=kΦω`
-- 電磁トルク `T=kΦI_a`
-- 速度式
-- 直巻電動機の始動トルク・速度特性
+- 電機子回路、ブラシ電圧降下、逆起電力
+- `E=kΦω`、`T=kΦI_a`、速度式
+- 直巻未飽和域の `T∝I_a^2` と磁気飽和の注意
+- 軽負荷時の速度上昇
 - 弱め界磁
-- 出力・損失・効率
-- 速度―トルク、速度―出力、電流―速度グラフ
+- 出力・銅損・ブラシ損・効率
+- 速度―トルク、速度―出力、電流―速度の3特性
+- H24二次問1型の「損失→抵抗→逆起電力→速度→部分負荷端子電圧」解法
+- 基礎・標準・二次相当の3段階例題
 
 本テーマへ追加しない範囲:
-
 - チョッパ制御
 - 誘導電動機
 - VVVF
 - 過渡制御
 
-これらは選定過去問内に混在していてもTopic 02の完成ゲート対象外とする。
-
-## Topic 01 完成証跡
-
-source Markdown:
-`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit.md`
-
-解説PDF:
-`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_explanation.pdf`
-
-練習PDF:
-`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_practice.pdf`
-
-PowerPoint:
-`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_images.pptx`
-
-完成後独立再解答:
-`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_independent_reanswer.md`
-
-最終QA:
-`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_final_qa.md`
+0系主電動機の形式・定格値・実測特性は一次資料未確認のため追加していない。本文中の数値例は教材用仮定値で、特性曲線は模式図として扱う。
 
 ## 次に行うこと
 
-Topic 02の解説本文＋3段階例題を作成する。
+Topic 02の解説PDFを作成する。
 
-制作前EXAM_ALIGNMENTの要求事項をすべて本文節へ対応させ、特にH24二次機械・制御問1の対象(1)〜(4)と同型の「損失→電機子抵抗→逆起電力→速度→部分負荷端子電圧」を途中式付きで解ける状態にする。
+source Markdownの本文と3段階例題を教材化し、MASTER_SPECの最低構成を維持する。速度―トルク、速度―出力、電流―速度の3特性は式との対応が読める模式図にする。根拠のない0系実車曲線や未確認実車値を使わない。
 
-0系主電動機の形式・定格値・制御条件など実車情報を使う場合は、鉄道・メーカー等の一次資料で確認し、公開値・計算値・仮定値を区別する。確認できない実車値は推測しない。
-
-完成数は `1 / 22` のまま。解説本文だけでは `completed` にしない。
+解説PDF完成後も `completed` にはしない。練習PDF、PowerPoint、完成後独立再解答、最終QAが残る。

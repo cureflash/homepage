@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 1 / 22
-- current_status: `topic_02_exam_alignment_complete`
+- current_status: `topic_02_explanation_body_complete`
 - last_completed_topic: `01 0系の主変圧器を等価回路で解剖する`
 - active_topic: `02 0系の直流主電動機はどんな特性だった？`
-- next_start: Topic 02の解説本文と3段階例題を作成する。制作前EXAM_ALIGNMENTで固定した直流機の電機子回路、逆起電力、トルク、速度、直巻特性、弱め界磁、損失・効率、指定3特性グラフを回収し、混合過去問のチョッパ・誘導機・VVVF・過渡制御は追加しない
+- next_start: Topic 02の解説PDFを作成する。解説本文と3段階例題をそのまま教材化し、速度―トルク・速度―出力・電流―速度の3特性は式との対応が分かる模式図として作成する。根拠のない0系実車曲線・実車値は使わない
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -33,7 +33,7 @@
 - [x] 参考教材を複数系統確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] ゲート対象10小問の公式解答照合を伴う要求事項の独立検証: 10 / 10 PASS
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -41,16 +41,22 @@
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 02の制作前EXAM_ALIGNMENTを `topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics.md` に作成した。
+Topic 02のsource Markdownに解説本文と3段階例題を追加した。
 
-確認結果:
+収録した内容:
 
-- 公式過去問: R6一次機械問2、H28一次機械問1・問5、H26一次機械問5、H24二次機械・制御問1
-- 一次4問＋二次記述1問で、二種の一次・二次を含む原則5問以上の品質ゲートを満たす
-- ゲート対象: 各混合問題のうちTopic 02のSPECに直接対応する計10小問
-- 制作前独立検証: 10 / 10で公式解答と整合
-- SPEC外のチョッパ、誘導電動機、VVVF、過渡制御はゲート対象外とし、教材範囲へ追加しない
-- 完成後独立再解答は未実施
+- 電機子回路 `V=E+I_aR_a+V_b`
+- `E=kΦω`、`T=kΦI_a` と速度式
+- 一定界磁での `E∝n`、`T∝I_a`
+- 直巻未飽和域の `Φ∝I_a`、`T∝I_a^2` と磁気飽和の注意
+- 軽負荷時の速度上昇
+- 弱め界磁
+- `P_em=EI_a=Tω`、銅損、ブラシ損、効率
+- 速度―トルク、速度―出力、電流―速度の読み方
+- H24二次問1型の再利用可能な解法手順
+- 基礎・標準・二次相当の3段階例題
+
+範囲外のチョッパ、誘導機、VVVF、過渡制御は追加していない。0系主電動機の未確認実値・未確認実測曲線も追加していない。
 
 ## 判定
-Topic 02は `exam_alignment_complete`。完成数は `1 / 22` のまま。次工程は解説本文＋3段階例題。
+Topic 02は `explanation_body_complete`。完成数は `1 / 22` のまま。次工程は解説PDF作成。
