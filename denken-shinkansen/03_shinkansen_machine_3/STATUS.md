@@ -5,13 +5,13 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 0 / 16
-- current_status: `topic_01_exam_alignment_complete`
+- current_status: `topic_01_source_content_complete`
 - last_completed_topic: なし
 - active_topic: `01 架線25kVをそのままモーターに入れたらどうなる？`
-- next_start: Topic 01 の解説本文・3段階例題・12問以上の練習問題作成。実車の主変圧器容量・二次電圧等は一次資料確認後にのみ使用する
+- next_start: Topic 01 のsource Markdownを基に、解説プリントPDF・練習プリントPDF・解説画像PowerPointを作成する。実車の主変圧器容量・二次電圧等は一次資料確認後にのみ使用する
 
 ## 新品質ゲート進捗
-- [ ] 01 架線25kVをそのままモーターに入れたらどうなる？ — 制作前EXAM_ALIGNMENT完了。本文・解説PDF・練習PDF・PowerPointは未作成
+- [ ] 01 架線25kVをそのままモーターに入れたらどうなる？ — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、12問の練習問題・完全解説までsource Markdownへ反映済み。PDF・PowerPoint・完成後の独立過去問再解答は未実施
 - [ ] 02〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT進捗
@@ -23,21 +23,17 @@
 4. R4下 機械 問8 — 全損失から無負荷損を分離する計算
 5. R4下 機械 問9 — 励磁電流・鉄損・励磁アドミタンス・最大効率
 
-教材で必須とする範囲:
-- 理想変圧器の巻数比・電圧比・電流比・定格容量
-- 二次量の一次側換算と簡易等価回路
-- 鉄損・銅損・負荷率・効率・最大効率条件
-- 無負荷試験・短絡試験と等価定数計算
-- 励磁電流、鉄損電流、磁化電流、励磁アドミタンス
-- 系列SPECで指定された電圧変動率
+source Markdownでは上記5問の要求事項を本文節・例題・練習問題へマッピング済み。公式正答番号は、完成後の独立再解答を汚染しないため転記していない。
 
-source Markdown:
+## 01 source成果物
 - `topics/01_transformer/01_transformer.md`
-
-公式正答番号は、完成後の独立再解答を汚染しないため制作前sourceには転記していない。
+- 解説本文: 巻数比、一次側換算、損失・効率、最大効率、無負荷試験、短絡試験、励磁回路、電圧変動率
+- 3段階例題: 基礎／本試験標準／複合
+- 練習問題: 12問、全問五肢択一、完全解説付き
+- 難易度: 基礎3問、本試験標準7問、複合・応用2問
 
 ## 01 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENTは完了したが、必須成果物と完成後の独立過去問再解答が未完了のため、完成数は0/16のまま。
+`IN_PROGRESS`。source内容は作成済みだが、MASTER SPEC必須の解説PDF・練習PDF・PowerPointと、完成後の選定5問独立再解答が未完了のため、完成数は0/16のまま。
 
 ## 次
-EXAM_ALIGNMENTで確定した要求事項を基にTopic 01の解説本文・3段階例題・12問以上の練習問題を作る。新幹線側の主変圧器実値は一次資料で確認したものだけを使用し、完成後に選定5問を独立再解答して公式解答と照合する。
+Topic 01 のsource Markdownを正本として解説プリントPDF・練習プリントPDF・解説画像PowerPointを作成する。必須成果物完成後、選定5問を公式正答を先に見ず独立再解答し、公式解答と照合して最終PASSを判定する。
