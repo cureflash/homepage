@@ -1,0 +1,49 @@
+name: Temporary machine II Topic 01 practice PDF publisher
+
+on:
+  push:
+    branches:
+      - automation/machine2-topic01-practice-upload
+    paths:
+      - '.github/workflows/tmp-machine2-topic01-practice-upload.yml'
+      - '.tmp-machine2-topic01/**'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: automation/machine2-topic01-practice-upload
+          path: payload
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          path: work
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate validated PDF and progress records
+        run: |
+          python -m pip install --disable-pip-version-check reportlab
+          python payload/.tmp-machine2-topic01/generate.py work
+      - name: Publish to latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd work
+          git config user.name 'denken-shinkansen-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git fetch origin main
+          git rebase origin/main
+          git add denken-shinkansen/07_shinkansen_machine_2/
+          if git diff --cached --quiet; then
+            echo 'No changes to publish.'
+            exit 0
+          fi
+          git commit -m 'Advance machine II Topic 01 practice PDF'
+          git push origin HEAD:main
