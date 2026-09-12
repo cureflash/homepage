@@ -4,15 +4,16 @@
 
 ## 現在地
 
-active topic: `01 0系の主変圧器を等価回路で解剖する`
+Topic 01 `0系の主変圧器を等価回路で解剖する` は最終QAまでPASSし、`completed`。
 
-制作前EXAM_ALIGNMENT、選定6問の公式解答照合・要求事項の独立検証、解説本文、解説PDF、練習PDF、解説画像PowerPointに続き、完成後の独立再解答まで完了。完成数は `0 / 22` のまま。
+完成数: `1 / 22`
+
+active topic: `02 0系の直流主電動機はどんな特性だった？`
+
+## Topic 01 完成証跡
 
 source Markdown:
 `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit.md`
-
-独立再解答記録:
-`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_independent_reanswer.md`
 
 解説PDF:
 `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_explanation.pdf`
@@ -23,41 +24,41 @@ source Markdown:
 PowerPoint:
 `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_images.pptx`
 
-## 選定済み公式過去問
+完成後独立再解答:
+`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_independent_reanswer.md`
 
-- R7 一次 機械 問3
-- R6 二次 機械・制御 問2
-- R3 二次 機械・制御 問2
-- R2 二次 機械・制御 問2
-- H28 二次 機械・制御 問2
-- H27 二次 機械・制御 問2
+最終QA:
+`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_final_qa.md`
 
-一次1問＋二次記述5問。
+## Topic 01 最終QA結果
 
-## 完成後独立再解答
+- 必須成果物4種＋独立再解答記録: 実在確認PASS
+- 過去問: R7一次1問＋R6/R3/R2/H28/H27二次5問
+- 一次・二次を合わせた過去問品質ゲート: PASS
+- 完成後独立再解答: 6 / 6 PASS
+- 教材外知識補完: 0件
+- 実車公開値 / 計算値 / 仮定値の区別: PASS
+- 解説PDF・練習PDF・PowerPointの既実施レンダリングQAと現行blob: 一致確認PASS
 
-6問すべてPASS。
+現行blob SHA:
 
-- R7: 選択肢 `(1)リ (2)カ (3)ヲ (4)ロ (5)ニ`、`R=3.00 Ω`, `Z=9.20 Ω`, `X=8.70 Ω`
-- R6: `g0=5.00×10^-5 S`, `b0=1.20×10^-4 S`, `R=16 Ω`, `X=12 Ω`, `p=4.0 %`, `q=3.0 %`、電圧変動率5.0 % / 2.5 %
-- R3: `%r=0.75 %`, `%x=4.44 %`, `Z=27.2 Ω`, `R=4.54 Ω`, `X=26.8 Ω`, `V2≈423 V`, `QL≈169 kvar`
-- R2: 鉄損400 W、定格銅損624 W、最大効率負荷率80.0 %、最大効率99.0 %、30 %負荷・力率60 %で97.5 %
-- H28: `g0=2.40×10^-6 S`, `b0=1.99×10^-5 S`, `R=35.7 Ω`, `X≈115 Ω`、全負荷電圧変動率4.09 %、半負荷効率97.7 %、半負荷電圧変動率2.04 %
-- H27: 巻数比31.4、定格一次電流15.2 A、短絡インピーダンス3.30 %、`r=5.23 Ω`, `x=13.4 Ω`。フェーザ図を構成し、`qR,qX≪1` を用いて電圧変動率近似式を導出
-
-問題文の数値・条件と完成教材に収録済みの公式・解法だけで途中式・単位・換算側・成立条件を構成できた。計算・導出後に電気技術者試験センターの公式標準解答と照合し、全問一致。教材外知識による補完は不要だった。
+- source: `caaad6b353dfd2e027da6617bd6fb27e93f505d3`
+- 解説PDF: `ec9e71d96b4b7414091bb92505c09523095d1ebe`
+- 練習PDF: `eb91ce4c434401c81f0ef2992b86ca441a80ab8c`
+- PowerPoint: `8b0ce550619afed8da50a05b38f21592d8f2f43b`
+- 独立再解答: `5f3d48b19ecfb1a42df74f93c413c25a2ed04b8c`
 
 ## 次に行うこと
 
-Topic 01の最終QAを行う。
+Topic 02 `0系の直流主電動機はどんな特性だった？` の制作前EXAM_ALIGNMENTから開始する。
 
-確認対象:
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`に従い、本文作成より先に次を行う。
 
-- 必須成果物4種と独立再解答記録がGitHub上に実在する
-- EXAM_ALIGNMENTの要求事項が解説PDF・練習PDF・PowerPointへ漏れなく反映されている
-- source Markdown、PDF、PowerPoint間で式・数値・換算側・単位に矛盾がない
-- 0系の公開値・計算値・仮定値が区別され、未確認定数を実値化していない
-- 一次1問＋二次5問の独立再解答PASSが維持されている
-- PDF/PPTXの既実施レンダリングQA結果と成果物が対応している
+- 電気技術者試験センター公式過去問を直近年度優先で調査
+- 一次・二次合わせ原則5問以上を選定
+- 二次対象論点で該当記述問題があれば最低1問含める
+- 各問の要求知識、使用式、設問型、典型ミスを分解
+- 参考教材を複数系統確認
+- source MarkdownへEXAM_ALIGNMENTと教材で必要な説明を記録
 
-すべてPASSした場合のみTopic 01を `completed` とし、完成数を `1 / 22` に更新する。
+この制作前品質ゲートを終えるまで、Topic 02の解説本文には進まない。
