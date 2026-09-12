@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 1 / 16
-- current_status: `topic_02_powerpoint_complete`
+- current_status: `topic_02_exam_reanswer_complete`
 - last_completed_topic: `01 新幹線の電気はどこから来る？`
 - active_topic: `02 上越新幹線を水の力で走らせる`
-- next_start: Topic 02 の品質ゲート対象7小問を完成教材だけで独立再解答し、最終QAを行う
+- next_start: Topic 02の最終QAを実施し、EXAM_ALIGNMENT・必須成果物・表示QA・独立再解答7/7 PASSを総合確認する。PASSした場合のみTopic 02を`completed`にする
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
-- [ ] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPointまで完了。完成後独立再解答は未着手
+- [ ] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASSまで完了。最終QAは未実施
 - [ ] 03〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -138,5 +138,20 @@ JR東日本一次資料で、信濃川発電所が千手・小千谷・小千谷
 
 判定: 解説画像PowerPoint表示QA `PASS`。
 
+## 02 完成後独立再解答
+記録: `topics/02_hydropower/02_hydropower_exam_reanswer.md`
+
+完成教材だけで品質ゲート対象6問・7小問を再解答し、その後に電気技術者試験センター公式解答と照合した。
+
+- R8上 電力 問2 — (5) — PASS
+- R8上 電力 問15(a) — (5) — PASS
+- R8上 電力 問15(b) — (3) — PASS
+- R7下 電力 問2 — (1) — PASS
+- R7上 電力 問1 — (2) — PASS
+- R3 電力 問2 — (3) — PASS
+- H25 電力 問1 — (4) — PASS
+
+結果: `7/7 PASS`。教材外知識の補完0件。固定範囲外論点の追加0件。
+
 ## 次
-Topic 02の品質ゲート対象7小問を、保存済み正答を見ずに完成教材だけで独立再解答し、公式解答と照合して最終QAを行う。完成数は1/16のまま。
+Topic 02の最終QAを実施する。EXAM_ALIGNMENT、解説PDF・練習PDF・PowerPoint・source Markdownの存在と表示QA、完成後独立再解答7/7 PASS、固定範囲逸脱・未確認実値の有無を総合確認し、PASSした場合のみTopic 02を`completed`として完成数を更新する。
