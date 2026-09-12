@@ -1,46 +1,45 @@
 # HANDOFF - 新幹線車両・電験三種
 
-更新日: 2026-09-11
+更新日: 2026-09-12
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は21/38。01〜21がPASS。次のactive topicは22 `L0系① リニア同期モータ`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は21/38。01〜21がPASS。active topicは22 `L0系① リニア同期モータ`。
 
 ## 今回進捗
-21 `N700S③ バッテリー自走` の生成済み4成果物を現行mainへ引き継げる形で復元し、最終EXAM_ALIGNMENTゲートを完了した。
+22 `L0系① リニア同期モータ` の制作前EXAM_ALIGNMENTを完了した。
 
-成果物:
-- `topics/21_n700s_battery_self_propulsion/21_n700s_battery_self_propulsion.md`
-- `topics/21_n700s_battery_self_propulsion/21_n700s_battery_self_propulsion_explanation.pdf`
-- `topics/21_n700s_battery_self_propulsion/21_n700s_battery_self_propulsion_practice.pdf`
-- `topics/21_n700s_battery_self_propulsion/21_n700s_battery_self_propulsion_images.pptx`
+作成:
+- `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor.md`
 
-生成済みPDF/PPTXは既存の計算・論理QAおよびVisual QA済みblobを無変更で再利用した。解説PDF3ページ、練習PDF2ページ・15問、PowerPoint6スライド。練習は14問が五肢択一、1問が記述計算。
+公式過去問を直近年度から確認し、Topic 22へ直接接続する6問を選定した。
 
-## 21 独立過去問再解答
-保存済み公式正答を先に見ずに教材本文だけで解答を確定し、その後に一般財団法人 電気技術者試験センター公式解答と照合した。
+1. R8上 機械 問3 — 三相交流、回転磁界、周波数制御
+2. R8上 機械 問4 — 同期速度、滑り、回転速度
+3. R8上 機械 問5 — 極数・周波数・同期速度
+4. R7上 機械 問5 — 同期発電機の並列・同期条件
+5. R6上 機械 問5 — 同期電動機、回転磁界、同期引込み
+6. R6上 電力 問15(b) — 周波数・回転速度から磁極数を逆算
 
-1. H30 機械 問12 — 1 / 公式1 / PASS
-2. R3 機械 問12 — 4 / 公式4 / PASS
-3. R4上 機械 問12 — 4 / 公式4 / PASS
-4. H26 電力 問5 — 5 / 公式5 / PASS
-5. R4下 電力 問11 — 5 / 公式5 / PASS
+公式問題は一般財団法人 電気技術者試験センター正本で確認した。説明粒度はe-sysnetと電験王も比較した。外部教材の文章・図・例題は複製していない。
 
-5/5一致。必要知識は教材内のリチウムイオン二次電池、鉛蓄電池、NAS電池、浮動充電、直並列、電力貯蔵・需給調整の各節でカバーされている。
+## 22で確定した必須範囲
+- 対称三相交流から回転磁界が生じる原理
+- 同期速度 `Ns=120f/p`
+- `f=pNs/120`、`p=120f/Ns` の逆算
+- 極数と極対数の区別
+- 誘導電動機の滑りと同期電動機の同期運転の違い
+- 同期状態の意味
+- 回転磁界を直線方向へ展開した移動磁界とリニア同期モータの概念接続
 
-## N700S根拠再確認
-Kenji Sato, Hirokazu Kato, Takafumi Fukushima, “Outstanding Technical Features of Traction System in N700S Shinkansen New Generation Standardized High Speed Train,” IEEJ Journal of Industry Applications, Vol.10 No.4, 2021, DOI:10.1541/ieejjia.20012560 を再照合した。
+## 境界・未確定事項
+L0系固有の地上コイル配置、実際の極ピッチ、実運転周波数、500 km/h時の具体的な周波数計算は今回のEXAM_ALIGNMENTでは真値化していない。実値を教材へ入れる場合はJR東海・鉄道総研等の一次資料で確認する。
 
-確認済み:
-- 自走用ユニットは主にリチウムイオン電池・接触器・制御装置で構成。
-- 通常時は補助電源装置から充電。
-- 自走時はDC 750 Vの電池を、通常DC 3000 Vの主変換装置DCリンクへ接続。
-- 16両編成に8ユニット。
-- 試作車試験は約30 km/hまで。
+23 `L0系② 500km/hと周波数制御` の内容を22へ先取りしない。
 
-未公開のAh、総kWh、実自走電流、実継続時間・距離、セル数、具体的直並列数は真値化していない。
+公式正答番号は、完成後の独立再解答を汚染しないため、22のsource Markdownには転記していない。
 
 ## QA判定
-21: `PASS`。完成数21/38。
+22: `IN_PROGRESS`。制作前EXAM_ALIGNMENTのみ完了。本文・解説PDF・練習PDF・PowerPoint・完成後の独立過去問再解答は未完了。完成数は21/38のまま。
 
 ## 次の正確な開始点
-22 `L0系① リニア同期モータ` の制作前EXAM_ALIGNMENTから開始する。最初に電気技術者試験センター公式過去問を調査し、同期機・同期速度・極数・周波数・移動磁界について必要な知識・式・設問型を確定する。過去問対応範囲が確定する前に本文・練習問題を生成しない。
+`topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor.md` のEXAM_ALIGNMENTに従って、解説本文、基礎・本試験標準・複合の3段階例題、12問以上の練習問題を作る。L0系固有の技術事実・実値は一次資料確認後にのみ使用する。成果物完成後、選定6問を公式正答を先に見ず独立再解答し、公式解答と照合して最終PASSを判定する。
