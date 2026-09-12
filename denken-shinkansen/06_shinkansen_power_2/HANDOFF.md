@@ -1,23 +1,22 @@
 # HANDOFF - 新幹線・電験二種「電力」
 
-更新日: 2026-09-12
+更新日: 2026-09-13
 
 ## 現在地
 
 active topic: `01 新幹線を電力系統から見てみる`
 
-制作前EXAM_ALIGNMENTの全問範囲監査、独立検証、公式解答照合、本文節マッピング、解説本文・3段階例題、練習15問と完全解説、解説PDFに続き、練習PDFまで完了。完成数は `0 / 22` のまま。
+制作前EXAM_ALIGNMENTの全問範囲監査、独立検証、公式解答照合、本文節マッピング、解説本文・3段階例題、練習15問と完全解説、解説PDF、練習PDFに続き、解説画像PowerPointまで完了。完成数は `0 / 22` のまま。
 
 source Markdown:
 - `topics/01_power_system_view/01_power_system_view.md`
 - `topics/01_power_system_view/01_power_system_view_practice.md`
 
 今回の成果物:
-- `topics/01_power_system_view/01_power_system_view_practice.pdf`
-  - A4縦6ページ
-  - 全15問（基礎4・本試験標準8・複合応用3）
-  - 一次型五肢択一10問＋二次「電力・管理」型記述5問
-  - 全6ページを180 dpiでPDFium / pdftoppmの2系統レンダリングQA済み
+- `topics/01_power_system_view/01_power_system_view_images.pptx`
+  - 16:9・4枚
+  - 全4枚を画像レンダリングで目視確認済み
+  - `slides_test.py`: overflowなし
 
 ## 正式選定した公式過去問
 
@@ -37,7 +36,7 @@ source Markdown:
 - R5二次問4: `Vs≈6.58 kV`, `Q1≈212 kvar` → 公式解答一致
 - R6二次問4: `400/400 A`, `406/394 A`, `Isc≈8.34 kA` → 公式解答一致
 
-5問すべてPASS。最終の「教材だけでの独立再解答」は教材成果物完成後に別途行う。
+5問すべてPASS。これは制作前の要求事項検証であり、最終の「教材だけでの独立再解答」はまだ行っていない。
 
 ## 解説source
 
@@ -55,7 +54,7 @@ source Markdown:
 
 基礎・本試験標準・複合の3段階例題も収録済み。
 
-## 練習source
+## 練習source / PDF
 
 `01_power_system_view_practice.md`:
 - 全15問
@@ -73,23 +72,24 @@ source Markdown:
 - R5二次問4 → 問3, 8, 13
 - R6二次問4 → 問5, 6, 11, 14, 15
 
-練習15問は式・単位・中間値・正答を独立再計算し、一次型10問は一意解、二次型5問は前提・使用式・符号・単位・途中式を含む採点可能な解答になっていることを確認済み。
+練習PDF `01_power_system_view_practice.pdf` はA4縦6ページ。PDFium / pdftoppmの2系統で全ページQA済み。
 
 ## 解説PDF
 
-`01_power_system_view_explanation.pdf` を作成済み。
+`01_power_system_view_explanation.pdf` はA4縦5ページ。source Markdownの範囲に限定し、9節、3段階例題、頻出ミス、正式選定5問の対応表、公式・解法まとめを収録。全5ページレンダリングQA済み。
 
-source Markdownの範囲に限定し、9節、3段階例題、頻出ミス、正式選定5問の対応表、公式・解法まとめをA4縦5ページへ整理した。
+## 解説画像PowerPoint
 
-全5ページを180 dpiでレンダリングし、文字欠け・重なり・クリッピングなしを確認済み。
+`01_power_system_view_images.pptx` を作成した。
 
-## 練習PDF
+16:9・4枚で以下を整理した。
+- 新幹線電力供給系統の一線結線図的な見方と `S=P+jQ`
+- フェーザ、三相複素電力、符号規約
+- 三相基準量、p.u.、％法、基準変更、一相等価回路化
+- P/Qと電圧、三相対称短絡容量
+- 二次試験の答案手順と正式品質ゲート5問
 
-`01_power_system_view_practice.pdf` を作成した。
-
-既存の練習sourceを正本とし、15問すべての問題・解答・完全解説をA4縦6ページへ収録した。一次型10問は五肢択一、二次型5問は記述式で、式・代入・単位・途中値・最終値または誤答理由まで含む。
-
-PDFiumとpdftoppmで全6ページを180 dpiレンダリングし、文字欠け・重なり・クリッピング・黒四角なしを確認済み。
+全4枚を画像レンダリングし、文字欠け・重なり・クリッピングがないことを確認した。`slides_test.py` でもoverflowなし。
 
 ## 範囲境界
 
@@ -100,16 +100,16 @@ Topic 01は以後の全系統計算に共通する基礎を作る章とする。
 - Topic 16: 故障計算・対称座標法
 - Topic 20: 安定度
 
-今回の練習PDFも、複素電力・フェーザ・単位法・％法・基準量・系統等価回路・基本的な三相対称短絡容量までに留め、上記後続テーマの本題を追加していない。
+今回のPowerPointも、複素電力・フェーザ・単位法・％法・基準量・系統等価回路・基本的な三相対称短絡容量までに留め、上記後続テーマの本題を追加していない。
 
 ## 現在の判定
 
-`topic_01_practice_pdf_complete`
+`topic_01_powerpoint_complete`
 
-まだ `completed` ではない。PowerPoint・完成後独立再解答が未完了のため、完成数は `0 / 22` のまま。
+まだ `completed` ではない。完成後独立再解答と最終QAが未完了のため、完成数は `0 / 22` のまま。
 
 ## 次に行うこと
 
-`01_power_system_view.md` を正本として、解説画像PowerPointを作成する。
+正式選定5問を、保存済み正答を先に見ず、完成教材（解説PDF・練習PDF・PowerPoint・source Markdown）のみで独立再解答する。一次2問・二次記述3問について公式解答と照合し、教材外知識で補っていないことを確認する。
 
-必須成果物完成後も即completedにはせず、最後に正式選定5問を教材だけで独立再解答し、QA PASS後に初めてTopic 01をcompletedへ変更する。
+全問PASSし最終QAを通過した場合のみTopic 01を `completed` にする。

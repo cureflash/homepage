@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「電力」
 
-更新日: 2026-09-12
+更新日: 2026-09-13
 
 ## 状態
 - active_series: `06_shinkansen_power_2`
 - exam_aligned_completed_topics: 0 / 22
-- current_status: `topic_01_practice_pdf_complete`
+- current_status: `topic_01_powerpoint_complete`
 - last_completed_topic: `none`
 - active_topic: `01 新幹線を電力系統から見てみる`
-- next_start: Topic 01のsource Markdownを正本として、解説画像PowerPointを作成する。Topic 08/12/16/20の本題へ範囲を広げない
+- next_start: Topic 01の正式選定5問を、保存済み正答を先に見ず、完成教材（解説PDF・練習PDF・PowerPoint・source Markdown）のみで独立再解答する。一次2問・二次記述3問について公式解答と照合し、教材外知識で補っていないことを確認する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -24,7 +24,7 @@
 - [x] 練習問題15問の独立再計算・一意解QA
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問5問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
@@ -42,13 +42,19 @@
   - 練習15問、完全解説、過去問対応マッピング、練習問題QA
 
 ## 今回進めた内容
-Topic 01を1段階進め、練習PDF `topics/01_power_system_view/01_power_system_view_practice.pdf` を作成した。
+Topic 01を1段階進め、解説画像PowerPoint `topics/01_power_system_view/01_power_system_view_images.pptx` を作成した。
 
-A4縦6ページ。既存の練習sourceを正本として、全15問（基礎4、本試験標準8、複合・応用3）を収録した。一次型五肢択一10問と二次「電力・管理」型記述5問で、全問に式・代入・単位・中間値・最終値または誤答理由を含む完全解説を付けた。
+16:9・4枚。source Markdownの既定範囲だけを使い、次を整理した。
 
-正式選定5問の要求事項への対応関係はsource Markdownの既存マッピングを維持し、Topic 08の変圧器並列運転、Topic 12の本格的潮流計算、Topic 16の故障種別・対称座標法、Topic 20の安定度は追加していない。
+1. 新幹線電力供給系統を `電源フェーザ + 系統インピーダンス + 複素負荷` へ落とす見方
+2. 複素電力 `S=P+jQ`、フェーザ、遅れ・進み・逆潮流の符号
+3. 三相基準量、p.u.、％インピーダンス、基準変更、一線結線図から一相等価回路への手順
+4. `P-Q-電圧`、三相対称短絡容量、二次試験の記述手順
+5. 正式選定5問（一次2＋二次記述3）の要求論点
 
-PDFは全6ページを180 dpiでPDFiumとpdftoppmの2系統でレンダリングし、文字欠け・重なり・クリッピング・黒四角がないことを全ページ確認した。
+Topic 08の変圧器固有の％Z・並列運転、Topic 12の本格的潮流計算、Topic 16の故障種別・対称座標法、Topic 20の安定度には踏み込んでいない。実設備の未確認値も追加していない。
+
+PowerPointは全4枚を画像レンダリングで確認し、`slides_test.py` でもoverflowなしを確認した。
 
 ## 判定
-Topic 01 は `practice_pdf_complete`。まだ `completed` ではない。次工程は解説画像PowerPoint作成。PowerPoint作成後、正式選定5問を教材だけで独立再解答し、最終QA PASSするまで完成数へ加算しない。
+Topic 01 は `powerpoint_complete`。まだ `completed` ではない。次工程は正式選定5問を完成教材だけで独立再解答すること。全問PASSし最終QAを通過するまで完成数へ加算しない。
