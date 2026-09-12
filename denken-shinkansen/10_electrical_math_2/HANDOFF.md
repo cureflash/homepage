@@ -38,6 +38,12 @@ source blob SHA:
 PowerPoint blob SHA:
 `8730709536aeec283de45296fb940bf26387c37c`
 
+完成後独立再解答記録:
+`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_exam_reanswer.md`
+
+完成後独立再解答記録 blob SHA:
+`f5a03d016507f95a3b4dd09f302ef35e32e8b068`
+
 ## Topic 02 制作前EXAM_ALIGNMENT
 
 選定公式過去問:
@@ -136,7 +142,7 @@ A4縦5ページ、全12問。
 Topic 02の最終QAを行う。
 
 確認対象:
-- source Markdown・解説PDF・練習PDF・PowerPointの実在
+- source Markdown・解説PDF・練習PDF・PowerPoint・完成後独立再解答記録の実在
 - 完成後再解答 5問 / 25小問のPASS記録
 - 教材間の式・符号・用語・範囲の整合
 - SPEC外内容が混入していないこと
