@@ -3,21 +3,17 @@
 更新日: 2026-09-12
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は0/16。active topicは01 `架線25kVをそのままモーターに入れたらどうなる？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は1/16。Topic 01は品質ゲートPASSでcompleted。active topicは02 `初代0系はどうやって走っていた？`。
 
 ## 今回進捗
-Topic 01 を `topic_01_pdfs_complete` から `topic_01_powerpoint_complete` へ1段階進めた。
+Topic 01 を `topic_01_powerpoint_complete` から `topic_01_completed` へ1段階進めた。
 
-GitHub正本へ追加:
-- `topics/01_transformer/01_transformer_images.pptx`
-
-進捗記録更新:
+GitHub正本更新:
+- `topics/01_transformer/01_transformer.md` — 完成後独立再解答・公式解答照合結果を記録
 - `STATUS.md`
 - `HANDOFF.md`
 
-解説画像PowerPointは16:9・20枚。source Markdownを正本として、電験で問う内容、新幹線側の電力経路、変圧器原理、巻数比・電圧比・電流比、一次側換算、簡易等価回路、鉄損・銅損、効率・最大効率、無負荷試験、短絡試験、励磁回路、電圧変動率、解法手順、3段階例題、頻出ミス、過去問対応、出典を収録した。全20枚をレンダリング確認し、overflow検査もPASS。図表は自作模式図で、未確認の実車値は追加していない。
-
-これでTopic 01の必須4成果物（source Markdown、解説PDF、練習PDF、解説画像PowerPoint）は揃った。
+必須4成果物そのものは前段階までに完成済みであり、今回はMASTER SPEC / EXAM_ALIGNMENT SPECで要求される最終品質ゲートだけを実施した。
 
 ## 過去問品質ゲート
 選定対象は変更していない。
@@ -28,13 +24,26 @@ GitHub正本へ追加:
 4. R4下 機械 問8 — 全損失から無負荷損を分離する計算
 5. R4下 機械 問9 — 励磁電流・鉄損・励磁アドミタンス・最大効率
 
-source内で5問の要求事項を本文・例題・練習問題へマッピング済み。MASTER SPECどおり、次段階で保存済み正答を見ずに5問を独立再解答し、公式解答と照合する。現時点では最終PASS扱いにしない。
+公式正答を先に見ず、完成済みTopic 01教材だけを用いて独立再解答した。
+
+- R6上 機械 問8: 独立解答 `4` → 公式 `4` — PASS
+- R6上 機械 問9: `Z=80/40=2.00 Ω`, `r=1200/40^2=0.75 Ω`, `x=sqrt(2.00^2-0.75^2)≈1.85 Ω` より独立解答 `2` → 公式 `2` — PASS
+- R5上 機械 問9: `Pcu=Pi` より負荷率0.50、出力25 kW、全損失500 W、効率約98.0%で独立解答 `4` → 公式 `4` — PASS
+- R4下 機械 問8: `Ptotal=P0+kI^2` の2条件から `k=0.01`, `P0=900 W` で独立解答 `4` → 公式 `4` — PASS
+- R4下 機械 問9: 励磁コンダクタンスは鉄損側、励磁サセプタンスは磁化側なので両者を逆にした選択肢5が誤り。独立解答 `5` → 公式 `5` — PASS
+
+結果: 5/5正答。必要公式の選択、途中式、言い換え対応、正答理由を教材だけで説明でき、教材にない外部知識で補う必要はなかった。品質ゲート `PASS`。
+
+公式解答照合先:
+- R6上: `https://www.shiken.or.jp/chief/upload/20240818_ch_third_a01.pdf`
+- R5上: `https://www.shiken.or.jp/chief/upload/20230820_ch_third_a01.pdf`
+- R4下: `https://www.shiken.or.jp/chief/upload/20230326_ch_third_a01.pdf`
 
 ## 境界
 仕様追加はしていない。新幹線側は系列SPECで確定済みの `架線25 kV → パンタグラフ → 主変圧器 → 二次側交流 → 主変換装置 → 主電動機` の導入に限定。実車の主変圧器容量、巻数比、二次電圧、損失、効率等の未確認値は追加していない。
 
 ## QA判定
-Topic 01: `IN_PROGRESS`。必須4成果物は完成したが、完成後の選定5問独立再解答・公式照合が未完了。完成数は0/16のまま。
+Topic 01: `PASS / completed`。完成数は1/16。
 
 ## 次の正確な開始点
-選定5問を、保存済み正答を先に見ず、`topics/01_transformer/01_transformer.md` と完成成果物だけを使って独立再解答する。公式解答と照合し、5/5正答、必要公式の選択、途中式、言い換え対応、正答理由の説明、教材カバレッジを確認できた場合のみTopic 01をcompletedへ進める。不足が見つかった場合はcompletedにせず、該当成果物を修正する。
+Topic 02 `初代0系はどうやって走っていた？` の制作前 `EXAM_ALIGNMENT` を行う。電験三種「機械」の直流機に対応する公式過去問を直近年度優先で原則5問以上調査し、要求知識・公式・設問型・誤答ポイントと教材必須範囲を確定する。本文はそのマッピング確定後に着手する。
