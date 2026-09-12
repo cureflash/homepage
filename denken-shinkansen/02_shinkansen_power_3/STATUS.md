@@ -1,17 +1,17 @@
 # STATUS - 新幹線・電験三種「電力」
 
-更新日: 2026-09-12
+更新日: 2026-09-13
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 0 / 16
-- current_status: `topic_01_explanation_pdf_complete`
+- current_status: `topic_01_practice_pdf_complete`
 - last_completed_topic: なし
 - active_topic: `01 新幹線の電気はどこから来る？`
-- next_start: Topic 01 の練習PDF（解答・完全解説付き）を作成する
+- next_start: Topic 01 の解説画像PowerPointを作成する
 
 ## 新品質ゲート進捗
-- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・選定5問の独立再解答/公式照合PASS。解説本文・解説PDFまで完了。練習PDF・PowerPointは未完了
+- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・選定5問の独立再解答/公式照合PASS。解説本文・解説PDF・練習PDFまで完了。PowerPointは未完了
 - [ ] 02〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -70,8 +70,20 @@ Topic 01の既定範囲に適合する次の5問へ差し替え済み。
 - 180 dpiで全4ページをPDFiumとpdftoppmの両方でレンダリング確認
 - 文字欠け・重なり・クリッピング・壊れたグリフなし
 
+## 01 練習PDF
+解説本文の既定範囲だけを使い、次を作成した。
+
+- `topics/01_power_system_overview/01_power_system_overview_practice.pdf`
+- A4縦7ページ
+- 全15問: 基礎4問 / 本試験標準8問 / 複合・応用3問
+- 全問五肢択一、解答一覧・完全解説付き
+- 発電→送電→変電→配電、単相/三相有効電力、`3I²R`、損失率、高電圧化、力率改善、導体量`3/4`、変電所/変換所、新幹線への供給経路を演習
+- 数値問題は式・代入・単位・中間値・最終値を再計算済み
+- 180 dpiで全7ページをPDFiumとpdftoppmの両方でレンダリング確認
+- 文字欠け・重なり・クリッピング・壊れたグリフなし
+
 ## 01 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASSし、解説本文・解説PDFまで完成。練習PDF・PowerPointが未完了のため、完成数は0/16のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASSし、解説本文・解説PDF・練習PDFまで完成。PowerPointが未完了のため、完成数は0/16のまま。
 
 ## 次
-Topic 01の練習PDF（解答・完全解説付き）を作成する。
+Topic 01の解説画像PowerPointを作成する。
