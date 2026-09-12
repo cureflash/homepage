@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 0 / 21
-- current_status: `topic_01_independent_reanswer_complete`
-- last_completed_topic: `none`
-- active_topic: `01 25kV架線を一つの等価回路にする`
-- next_start: Topic 01の最終QAを実施し、全ゲートPASS時のみ `completed` へ変更してWebカタログを同じcheckpointで更新する
+- exam_aligned_completed_topics: 1 / 21
+- current_status: `topic_01_completed`
+- last_completed_topic: `01 25kV架線を一つの等価回路にする`
+- active_topic: `02 架線は長くなるとなぜ電圧が落ちる？`
+- next_start: Topic 02の制作前EXAM_ALIGNMENTを行う。公式過去問を直近年度優先で原則5問以上調査し、要求知識・式・設問型・教材内必要説明をsource Markdownへ先に固定する。`08 理論・二種` はMASTER_SPECどおり一次理論を中心とし、二次形式を数合わせで追加しない
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -23,24 +23,21 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 公式過去問の教材のみでの独立再解答
-- [ ] 最終QA PASS
+- [x] 最終QA PASS
 
 ## 今回進めた内容
-Topic 01 `25kV架線を一つの等価回路にする` の完成後独立再解答を実施した。
+Topic 01の最終QAを実施し、`topics/01_catenary_equivalent_circuit/01_catenary_equivalent_circuit_final_qa.md` に記録した。
 
-完成済み教材の説明範囲だけを使い、公式解答・保存済み正答を先に見ずに次の7問を再解答した。
+確認結果:
 
-- R8 一次 理論 問3: `ヨ・ニ・リ・ロ・ホ`
-- R7 一次 理論 問5: `ヘ・イ・ヲ・ヌ・ニ`
-- R6 一次 理論 問3: `ホ・ニ・ヘ・リ・ワ`
-- R5 一次 理論 問3: `ヨ・ロ・イ・ニ・ト`
-- R5 一次 理論 問4: `ト・ヌ・ロ・イ・ホ`
-- R4 一次 理論 問3: `ハ・リ・ホ・ワ・ヲ`
-- R3 一次 理論 問3: `ホ・チ・ワ・ト・ニ`
-
-全7問で公式解答と一致し、必要公式・途中式・根拠を教材外知識なしで再現できた。
-
-再解答時に、source Markdownの制作前独立検証表でR3問3の公式解答欄だけが `ホ・チ・ヲ・ト・ニ` と誤記されていることを検出した。本文と導出は「電流源は開放」で正しく、公式解答も `(3)=ワ` であるため、転記ミスとして `ホ・チ・ワ・ト・ニ` に訂正した。教材理論の追加はしていない。
+- 必須成果物4種のGitHub実在: PASS
+- 一次理論7問のEXAM_ALIGNMENT: PASS
+- 二種一般の一次・二次ゲートに対し、`08 理論・二種` はMASTER_SPECの一次中心例外規定を適用: PASS
+- source Markdownの要求事項と解説PDF・練習PDF・PowerPointの対応: PASS
+- 実設備と教育用等価回路モデルの区別: PASS
+- 既実施レンダリングQAと現行blob SHAの対応: PASS
+- 完成後独立再解答: 7 / 7 PASS、教材外知識補完0件
+- Webカタログ登録: 同checkpointで反映
 
 ## 判定
-完成後の独立再解答ゲートはPASS。Topic 01は最終QAが未実施のため、まだ `completed` ではなく完成数は `0 / 21` のまま。
+Topic 01を `completed` とする。完成数を `1 / 21` に更新し、最初の未完了テーマをTopic 02へ移した。
