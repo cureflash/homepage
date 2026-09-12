@@ -5,17 +5,21 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 1 / 39
-- current_status: `topic_02_powerpoint_complete`
+- current_status: `topic_02_exam_reanswer_complete`
 - last_completed_topic: `01 0系① 主変圧器の等価回路`
 - active_topic: `02 0系② 整流回路の波形解析`
-- next_start: Topic 02の選定公式過去問5問を、保存済み正答を先に見ず、完成教材だけで独立再解答し結果を記録する。PASS後に最終QAを行う
+- next_start: Topic 02の最終QAを実施し、EXAM_ALIGNMENT・必須成果物・表示QA・独立再解答結果を総合確認する。PASSした場合のみTopic 02を`completed`にする
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
-- [ ] 02 0系② 整流回路の波形解析 — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題＋完全解説source・練習PDF・解説画像PowerPoint完了
+- [ ] 02 0系② 整流回路の波形解析 — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題＋完全解説source・練習PDF・解説画像PowerPoint・完成後独立再解答5/5 PASS。最終QA未実施
 
 ## Topic 02 現在地
 制作前EXAM_ALIGNMENTで一次1問＋二次記述4問の計5問を選定し、要求事項独立検証5/5 PASS。その範囲だけを使って解説本文と3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPointまで完成した。
+
+完成教材だけで選定公式過去問5問を再解答し、公式標準解答と5/5一致、教材外知識の補完0件で独立再解答ゲートPASS。記録は次に保存した。
+
+- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
 
 解説PDF:
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_explanation.pdf`
@@ -41,7 +45,7 @@ PowerPoint:
 - `slides_test.py` overflow検査PASS
 - 未確認の0系実車値、インバータ・チョッパ・速度制御等のTopic 02外論点は追加していない
 
-完成教材だけによる選定公式過去問5問の独立再解答、最終QAは未実施。完成数は `1 / 39` のまま。
+最終QAは未実施。完成数は `1 / 39` のまま。
 
 ## Topic 02 制作前EXAM_ALIGNMENT
 公式過去問は一次1問＋二次記述4問の計5問を選定し、制作前の要求事項独立検証は5/5 PASS。
@@ -53,6 +57,15 @@ PowerPoint:
 - H21 二次 機械・制御 問3 — 三相サイリスタ変換器、制御角、平均直流電圧、電力方向
 
 一次・二次合計5問以上、二次記述式を含める品質ゲートを満たす。インバータ・チョッパ等のTopic 02外の問題は選定していない。
+
+## Topic 02 完成後独立再解答
+- R7 二次 機械・制御 問3 — PASS
+- H30 二次 機械・制御 問3 — PASS
+- H29 二次 機械・制御 問3 — PASS
+- H27 一次 機械 問2 — PASS
+- H21 二次 機械・制御 問3 — PASS
+
+5/5で公式標準解答と一致。途中式・極性・単位・理想化条件を完成教材から再構成でき、教材外知識の補完は0件。
 
 ## Topic 02 練習問題対応
 一次8問:
@@ -74,6 +87,7 @@ PowerPoint:
 source:
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis.md`
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_practice_source.md`
+- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
 
 ## Topic 01 最終結果
 制作前EXAM_ALIGNMENTで選定した公式過去問は一次1問＋二次記述5問の計6問。
@@ -95,7 +109,7 @@ Topic 02では新たな0系実車値・未確認回路仕様を追加してい�
 ## QA判定
 Topic 01: `PASS`。
 
-Topic 02: 制作前品質ゲートPASS。解説PDF全3ページ、練習PDF全8ページ、PowerPoint全4枚Visual QA PASS。PowerPoint overflow検査PASS。テーマ自体は未完了であり、`completed` には数えない。
+Topic 02: 制作前品質ゲートPASS。解説PDF全3ページ、練習PDF全8ページ、PowerPoint全4枚Visual QA PASS。PowerPoint overflow検査PASS。完成後独立再解答5/5 PASS。最終QA未実施のためテーマ自体は未完了であり、`completed` には数えない。
 
 ## 次
-Topic 02 `0系② 整流回路の波形解析` の選定公式過去問5問を、完成教材だけで独立再解答する。保存済み正答を先に見ず、解法根拠・途中式・単位を確認して結果を記録する。PASS後に最終QAへ進む。
+Topic 02 `0系② 整流回路の波形解析` の最終QAを実施する。EXAM_ALIGNMENT、必須成果物、表示QA、独立再解答5/5 PASS、範囲逸脱・未確認実車値の有無を総合確認し、PASSした場合のみTopic 02を`completed`にする。
