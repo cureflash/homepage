@@ -1,14 +1,14 @@
 # STATUS - 新幹線車両・電験二種
 
-更新日: 2026-09-12
+更新日: 2026-09-13
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 0 / 39
-- current_status: `topic_01_powerpoint_complete`
+- current_status: `topic_01_independent_reanswer_complete`
 - last_completed_topic: `none`
 - active_topic: `01 0系① 主変圧器の等価回路`
-- next_start: Topic 01の選定済み公式過去問6問を、保存済み正答を見ず、完成教材（解説PDF・練習PDF・PowerPoint・source Markdown）のみで独立再解答する。一次1問・二次記述5問について公式解答と照合し、教材外知識で補っていないことを確認する
+- next_start: Topic 01の最終QAを行う。完成成果物とEXAM_ALIGNMENT、独立再解答記録の整合、一次・二次の要求論点、実車値と計算値・仮定値の区別、成果物の存在を確認し、PASSならTopic 01を`completed`にする
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -22,20 +22,27 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの独立再解答
+- [x] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 01 `0系① 主変圧器の等価回路` の解説画像PowerPointを作成した。
+Topic 01 `0系① 主変圧器の等価回路` の完成教材による公式過去問独立再解答を実施した。
 
-成果物:
-`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_images.pptx`
+記録:
+`topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_exam_reanswer.md`
 
-16:9・4枚。解説本文・解説PDF・練習PDFの論点をもとに、一次・二次試験で必要な巻数比と一次/二次換算、一次換算簡易等価回路、無負荷試験・短絡試験の成立条件、`%Z/%r/%x` と基準量、遅れ/進み力率の電圧変動率、鉄損・銅損・規約効率・最大効率条件、本試験標準の解法手順を整理した。一次の選択肢判断と二次記述の途中式・換算側・成立条件・単位を同じ流れで確認できる構成とした。
+対象は制作前EXAM_ALIGNMENTで選定済みの6問。
 
-0系への接続では、既存の一次資料確認済みである25 kV・60 Hz・1650 kVA・低圧タップ切換・25段だけを実車情報として扱い、`1650 kVA / 25 kV = 66 A` は計算値と明示した。未確認の `R, X, g0, b0, %Z`、鉄損・銅損を実値化していない。
+- R7 一次 機械 問3
+- R6 二次 機械・制御 問2
+- R3 二次 機械・制御 問2
+- R2 二次 機械・制御 問2
+- H28 二次 機械・制御 問2
+- H27 二次 機械・制御 問2
 
-全4枚を画像レンダリングして目視確認し、`slides_test.py` でもoverflowなしを確認した。
+公式問題文を起点に、完成済み教材に収録した公式・解法・成立条件だけで再計算・再導出し、その後に電気技術者試験センターの公式標準解答と照合した。一次1問・二次記述5問の全6問で結果が一致し、教材外知識の補完は不要だった。
+
+確認できた範囲は、巻数比と一次/二次換算、無負荷試験・短絡試験、`%Z/%r/%x`、遅れ力率の電圧変動率、鉄損・銅損・規約効率・最大効率条件、フェーザ関係と一次近似導出を含む。
 
 ## 判定
-Topic 01 はPowerPointまで完了したが、まだ `completed` ではない。選定済み公式過去問6問の完成教材だけでの独立再解答と最終QA PASSが残っている。
+独立再解答ゲートは `PASS`。Topic 01は独立再解答まで完了したが、最終QAが残っているためまだ `completed` ではない。
