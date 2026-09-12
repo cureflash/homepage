@@ -5,19 +5,19 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 1 / 39
-- current_status: `topic_02_explanation_body_complete`
+- current_status: `topic_02_explanation_pdf_complete`
 - last_completed_topic: `01 0系① 主変圧器の等価回路`
 - active_topic: `02 0系② 整流回路の波形解析`
-- next_start: Topic 02の解説PDF作成。確定済み本文だけを使い、入力交流波形、整流後電圧波形、電流波形、フーリエ成分、負荷条件―平均直流電圧を反映する
+- next_start: Topic 02の練習問題・完全解説source作成。制作前EXAM_ALIGNMENTの一次・二次要求を練習へ落とし、範囲外論点や未確認の0系実車値は追加しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
-- [ ] 02 0系② 整流回路の波形解析 — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題完了
+- [ ] 02 0系② 整流回路の波形解析 — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF完了
 
 ## Topic 02 現在地
-制作前EXAM_ALIGNMENTで一次1問＋二次記述4問の計5問を選定し、要求事項独立検証5/5 PASS。その範囲だけを使って解説本文と基礎・本試験標準・複合の3段階例題まで作成した。
+制作前EXAM_ALIGNMENTで一次1問＋二次記述4問の計5問を選定し、要求事項独立検証5/5 PASS。その範囲だけを使って解説本文と基礎・本試験標準・複合の3段階例題を作成し、解説PDFまで完成した。
 
-本文で対応済み:
+解説PDFで対応済み:
 - 単相半波・単相全波の導通と波形
 - 平均値・実効値・リプル
 - リアクトル・コンデンサ平滑と周期定常条件
@@ -28,6 +28,7 @@
 - 有効電力・基本波無効電力・総合力率
 - 交流条件と直流偏磁
 - 二次記述向け解法アルゴリズム
+- 入力交流波形、整流後電圧波形、電流波形、フーリエ成分、負荷条件―平均直流電圧の指定図
 
 3段階例題:
 - 基礎: 単相全波整流の平均値・実効値・抵抗負荷電力
@@ -37,7 +38,12 @@
 source Markdown:
 - `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis.md`
 
-解説PDF・練習PDF・PowerPoint、完成後独立再解答は未実施。完成数は `1 / 39` のまま。
+解説PDF:
+- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_explanation.pdf`
+- A4縦 3ページ
+- 全3ページをレンダリング確認し、文字欠け・重なり・クリッピング・可読性を確認してPASS
+
+練習問題source・練習PDF・PowerPoint、完成後独立再解答は未実施。完成数は `1 / 39` のまま。
 
 ## Topic 02 制作前EXAM_ALIGNMENT
 公式過去問は一次1問＋二次記述4問の計5問を選定し、制作前の要求事項独立検証は5/5 PASS。
@@ -84,7 +90,7 @@ Topic 02では新たな0系実車値・未確認回路仕様を追加してい�
 ## QA判定
 Topic 01: `PASS`。
 
-Topic 02: 制作前品質ゲートPASS、解説本文＋3段階例題完了。テーマ自体は未完了であり、`completed` には数えない。
+Topic 02: 制作前品質ゲートPASS、解説本文＋3段階例題、解説PDFまで完了。解説PDFは全3ページVisual QA PASS。テーマ自体は未完了であり、`completed` には数えない。
 
 ## 次
-Topic 02 `0系② 整流回路の波形解析` の解説PDFを作成する。EXAM_ALIGNMENTと確定済み本文の範囲を越えて仕様を追加しない。
+Topic 02 `0系② 整流回路の波形解析` の練習問題・完全解説sourceを作成する。一次試験型と二次記述型の双方をEXAM_ALIGNMENTへ対応させ、確定済み範囲を越えて仕様を追加しない。
