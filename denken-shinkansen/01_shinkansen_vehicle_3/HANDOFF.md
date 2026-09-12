@@ -3,65 +3,70 @@
 更新日: 2026-09-13
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は21/38。01〜21がPASS。active topicは22 `L0系① リニア同期モータ`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は22/38。01〜22がPASS。次のactive topicは23 `L0系② 500km/hと周波数制御`。
 
 ## 今回進捗
-Topic 22を `topic_22_powerpoint_complete` まで進めた。
-
-既存source Markdownを正本として、過去問対応範囲を増減せずに解説画像PowerPointを作成した。
-
-追加:
-- `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor_images.pptx`
+Topic 22 `L0系① リニア同期モータ` の完成後独立過去問再解答を実施し、最終品質ゲートをPASSした。
 
 更新:
+- `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor.md`
 - `STATUS.md`
 - `HANDOFF.md`
 
-PowerPointは16:9・4枚。対称三相交流→回転磁界→同期運転→リニア化、同期速度・角速度、同期機と誘導機の区別、同期電動機の自己始動、同期発電機の並列条件、回転同期機からL0系への構造対応をsource Markdownの範囲で図解した。L0系の図は本教材で作図し、最終スライドにJR東海一次資料と電気技術者試験センターの出典を記載。実際の極ピッチ、運転周波数、500 km/h時の具体計算はTopic 23の範囲として未収録。全4枚をレンダリング確認し、overflow検査もPASS。文字切れ・重なり・欠落なし。
+既存の解説PDF・練習PDF・解説画像PowerPointは内容を変更していない。
 
-## 品質ゲート対象5問
-1. R7上 機械 問5 — 同期発電機の並列運転条件
-2. R6上 機械 問5 — 同期電動機の自己始動・同期引込み
-3. R5下 機械 問6 — 極数の異なる同期発電機の並行運転
-4. H25 機械 問3 — 三相誘導電動機の回転磁界
-5. H19 機械 問15(a) — 同期速度の角速度換算
+## Topic 22 完成後独立再解答
+完成教材内の記述・公式だけで解答根拠を組み立て、検証済み5問を再解答した。
 
-制作前独立解答と公開解答の照合は5/5 PASS済み。完成後独立再解答は未実施で、次の1段階とする。
+1. R7上 機械 問5
+   - 教材根拠: 周波数・電圧の大きさ・位相の一致、同期検定器
+   - 再解答: 3
+   - 公開解答: 3
+   - PASS
+2. R6上 機械 問5
+   - 教材根拠: 制動巻線、かご形誘導電動機と同じ始動原理、界磁巻線の抵抗短絡、直流励磁、同期引込み
+   - 再解答: 2
+   - 公開解答: 2
+   - PASS
+3. R5下 機械 問6
+   - `f=10×600/120=50 Hz`
+   - `Ns=120×50/8=750 min^-1`
+   - 再解答: 3
+   - 公開解答: 3
+   - PASS
+4. H25 機械 問3
+   - 教材根拠: 一相断線後は単相交番磁界となり、停止状態では正逆の始動トルクが打ち消し合う
+   - 誤りは選択肢3
+   - 再解答: 3
+   - 公開解答: 3
+   - PASS
+5. H19 機械 問15(a)
+   - `Ns=120×60/6=1200 min^-1`
+   - `ωs=2π×1200/60=40π≈125.7 rad/s`
+   - 再解答: 4
+   - 公開解答: 4
+   - PASS
 
-## sourceに収録した必須範囲
-- 対称三相交流と回転磁界、相順
-- 磁極、極対数、電気角と機械角
-- 同期速度 `Ns=120f/p`
-- `f=pNs/120`、`p=120f/Ns`
-- 同期角速度 `ωs=2πNs/60=4πf/p`
-- 誘導電動機の滑り `s=(Ns-N)/Ns`
-- 同期電動機の定常時 `N=Ns`
-- 制動巻線、かご形誘導機と同じ始動原理、界磁巻線の抵抗短絡、直流励磁、同期引込み
-- 同期発電機の並列条件: 周波数・電圧・位相、同期検定器
-- 回転同期機からリニア同期モータへの概念接続
+結果: 5/5 PASS。教材外知識の補完なし。`MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` の完成後独立試験を通過した。
 
-## 練習問題QA
-15問すべて五肢択一。
-- 基礎4問 = 26.7%
-- 本試験標準8問 = 53.3%
-- 複合・応用3問 = 20.0%
+## Topic 22 成果物
+- `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor.md`
+- `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor_explanation.pdf`
+- `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor_practice.pdf`
+- `topics/22_l0_linear_synchronous_motor/22_l0_linear_synchronous_motor_images.pptx`
 
-数値問題は再計算し、知識問題も再判定して全15問の一意解を確認済み。練習PDFへの収録後も問題文・選択肢・正答の対応を再確認した。
+練習15問は全問五肢択一。基礎4/15=26.7%、本試験標準8/15=53.3%、複合・応用3/15=20.0%。PDF/PPTXの既存Visual QAもPASS済み。
 
-## PowerPoint QA
-16:9・4枚。全4枚をレンダリングして確認し、overflow検査PASS。文字切れ・重なり・欠落なし。
-
-## L0系一次資料・境界
-JR東海公式資料 `https://global.jr-central.co.jp/en/company/_pdf/superconducting_maglev.pdf` の確認済み範囲だけを使用。
-
-- リニアモータは通常の回転モータを直線状へ展開したもの。
+## L0系境界
+Topic 22ではJR東海一次資料で確認した次の概念接続まで扱った。
+- リニアモータは回転モータを直線状へ展開したもの。
 - 車上超電導磁石＝回転子、地上推進コイル＝固定子。
-- 地上推進コイルのN/S極と車上磁石の吸引・反発で推進する。
+- 推進コイルと車上磁石の吸引・反発で推進する。
 
-実際の極ピッチ、実運転周波数、500 km/h時の具体的周波数計算はTopic 23の範囲として未収録。境界を維持した。
+実際の極ピッチ、実運転周波数、500 km/h時の具体的周波数計算はTopic 23の範囲としてTopic 22には追加していない。
 
 ## QA判定
-22: `IN_PROGRESS`。source Markdown、3段階例題、15問練習、解説PDF、練習PDF、解説画像PowerPointまで完成。完成後独立過去問再解答は未完了。完成数は21/38のまま。
+22: `PASS`。完成数22/38。
 
 ## 次の正確な開始点
-検証済み5問を、保存済み正答を先に見ず、完成教材だけで独立再解答し、公式解答と照合して最終PASSを判定する。
+23 `L0系② 500km/hと周波数制御` の制作前EXAM_ALIGNMENTから開始する。まず電気技術者試験センター公式過去問を直近年度から調査し、系列SPECで既定された周波数、同期速度、磁界、電磁力、電力変換、速度制御の範囲内で、Topic 23単独で完答できる問題を選定する。範囲外知識を足して問題を無理に通さない。
