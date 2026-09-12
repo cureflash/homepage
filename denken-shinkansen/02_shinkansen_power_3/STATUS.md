@@ -5,13 +5,13 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 0 / 16
-- current_status: `topic_01_exam_alignment_scope_validation_complete`
+- current_status: `topic_01_exam_alignment_gate_pass`
 - last_completed_topic: なし
 - active_topic: `01 新幹線の電気はどこから来る？`
-- next_start: Topic 01 の新選定5問を独立再解答し、公式解答と照合する。範囲内で5/5完答を確認してから本文制作へ進む
+- next_start: Topic 01 の解説本文を作成し、確定した5問の要求事項を本文へ落とす
 
 ## 新品質ゲート進捗
-- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査完了。独立再解答・本文・解説PDF・練習PDF・PowerPointは未完了
+- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・選定5問の独立再解答/公式照合PASS。本文・解説PDF・練習PDF・PowerPointは未完了
 - [ ] 02〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -25,7 +25,7 @@
 5. R7下 電力 問5 — 誘導・同期発電機詳細 → Topic 01境界外
 6. R7下 電力 問6 — 避雷器詳細 → Topic 06・11
 
-Topic 01の既定範囲に適合する次の5問へ差し替えた。
+Topic 01の既定範囲に適合する次の5問へ差し替え済み。
 
 1. R7上 電力 問13 — 三相有効電力・力率・線路損失
 2. R6下 電力 問12 — 三相有効電力・三相線路損失・損失率
@@ -33,13 +33,22 @@ Topic 01の既定範囲に適合する次の5問へ差し替えた。
 4. R4上 電力 問8 — 三相負荷電流・抵抗損失
 5. R1 電力 問7 — 変電所の昇降圧・電圧調整・系統切換え・系統保護
 
-教材必須範囲は `topics/01_power_system_overview/01_power_system_overview.md` に更新済み。詳細章の内容をTopic 01へ逆流させず、`P=√3VI cosφ`、`P_loss=3I^2R`、三相/単相の位置付け、変電所の基本役割まででゲートを構成する。
+## 01 独立再解答
+公式解答を先に見ず5問を再解答し、その後に電気技術者試験センター公式解答と照合した。
+
+- R7上 問13: 独立解答 (2) / 公式 (2) — PASS
+- R6下 問12: 独立解答 (2) / 公式 (2) — PASS
+- R6上 問11: 独立解答 (2) / 公式 (2) — PASS
+- R4上 問8: 独立解答 (5) / 公式 (5) — PASS
+- R1 問7: 独立解答 (3) / 公式 (3) — PASS
+
+5/5一致。R6上問11に必要な三相3線式/単相2線式の導体量比較と、R1問7に必要な分路リアクトル・周波数変換所・交直変換所を、既定の「三相交流」「変電所」「電力系統」範囲内の本文必須事項としてsource Markdownへ明示した。
 
 source Markdown:
 - `topics/01_power_system_overview/01_power_system_overview.md`
 
 ## 01 QA判定
-`IN_PROGRESS`。範囲再監査は完了したが、新選定5問の独立再解答・公式解答照合と必須成果物が未完了のため、完成数は0/16のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASS。本文と必須成果物が未完了のため、完成数は0/16のまま。
 
 ## 次
-新選定5問を公式正答を先に見ず独立再解答し、公式解答と照合する。5/5で教材範囲内完答を確認した後、Topic 01の解説本文・3段階例題・12問以上の練習問題作成へ進む。
+Topic 01の解説本文を作成する。`MASTER_SPEC.md` の最低構成に従い、確定した必須範囲と5問の要求事項を本文へ落とし、基礎・本試験標準・複合の3段階例題へ接続する。
