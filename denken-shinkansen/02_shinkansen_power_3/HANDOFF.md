@@ -6,14 +6,17 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は0/16。active topicは01 `新幹線の電気はどこから来る？`。
 
 ## 今回進捗
-Topic 01を1段階進め、解説本文を完成した。
+Topic 01を1段階進め、解説PDFを完成した。
 
 source Markdown:
 - `topics/01_power_system_overview/01_power_system_overview.md`
 
-本文は `MASTER_SPEC.md` の最低構成と、制作前に確定した5問の要求事項から逆算して作成した。
+解説PDF:
+- `topics/01_power_system_overview/01_power_system_overview_explanation.pdf`
 
-収録した主要内容:
+完成済み本文を正本としてA4縦4ページへ整理した。追加仕様・追加論点は入れていない。
+
+収録内容:
 - 発電→送電→変電→配電→需要家の全体像
 - 新幹線側の発電所→送電線→新幹線変電所→き電回路→電車線→パンタグラフ→車両
 - 単相有効電力 `P=VI cosφ`
@@ -36,7 +39,13 @@ source Markdown:
 4. R4上 電力 問8 — PASS
 5. R1 電力 問7 — PASS
 
-今回の本文で、この5問に必要な知識・式・解法をすべて本文節へ落とした。
+解説PDFは、この5問に必要な知識・式・解法を本文の既定範囲内で整理している。
+
+## PDF QA
+- A4縦4ページ
+- 180 dpiで全ページをPDFiumレンダリング
+- pdftoppmでも全ページレンダリング確認
+- 文字欠け・重なり・クリッピング・壊れたグリフなし
 
 ## Topic 01で維持する境界
 Topic 01は電力編全体の地図を作る章であり、詳細章の内容を逆流させない。
@@ -51,7 +60,7 @@ Topic 01は電力編全体の地図を作る章であり、詳細章の内容を
 - 系統・蓄電詳細 → Topic 15
 
 ## QA判定
-Topic 01: `IN_PROGRESS`。`EXAM_ALIGNMENT_GATE_PASS`、解説本文完成。解説PDF、練習PDF、PowerPointは未完了なので完成数は0/16のまま。
+Topic 01: `IN_PROGRESS`。`EXAM_ALIGNMENT_GATE_PASS`、解説本文・解説PDF完成。練習PDF、PowerPointは未完了なので完成数は0/16のまま。
 
 ## 次の正確な開始点
-`topics/01_power_system_overview/01_power_system_overview.md` を正本としてTopic 01の解説PDFを作成する。本文範囲は追加せず、既存内容をPDF化する。
+Topic 01の解説本文・解説PDFをもとに、練習PDF（解答・完全解説付き）を作成する。

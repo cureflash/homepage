@@ -5,13 +5,13 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 0 / 16
-- current_status: `topic_01_explanation_complete`
+- current_status: `topic_01_explanation_pdf_complete`
 - last_completed_topic: なし
 - active_topic: `01 新幹線の電気はどこから来る？`
-- next_start: Topic 01 の解説PDFを作成する
+- next_start: Topic 01 の練習PDF（解答・完全解説付き）を作成する
 
 ## 新品質ゲート進捗
-- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・選定5問の独立再解答/公式照合PASS。解説本文まで完了。解説PDF・練習PDF・PowerPointは未完了
+- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・選定5問の独立再解答/公式照合PASS。解説本文・解説PDFまで完了。練習PDF・PowerPointは未完了
 - [ ] 02〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -61,8 +61,17 @@ Topic 01の既定範囲に適合する次の5問へ差し替え済み。
 
 後続Topicの詳細へは踏み込んでいない。
 
+## 01 解説PDF
+完成済み本文を正本として、次を作成した。
+
+- `topics/01_power_system_overview/01_power_system_overview_explanation.pdf`
+- A4縦4ページ
+- 本文の既定範囲のみを整理し、追加仕様・追加論点は入れていない
+- 180 dpiで全4ページをPDFiumとpdftoppmの両方でレンダリング確認
+- 文字欠け・重なり・クリッピング・壊れたグリフなし
+
 ## 01 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASSし、解説本文も完成。必須成果物のPDF・PowerPointが未完了のため、完成数は0/16のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASSし、解説本文・解説PDFまで完成。練習PDF・PowerPointが未完了のため、完成数は0/16のまま。
 
 ## 次
-Topic 01の解説PDFを、このsource Markdownを正本として作成する。
+Topic 01の練習PDF（解答・完全解説付き）を作成する。
