@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 0 / 12
-- current_status: `topic_01_explanation_pdf_complete`
+- current_status: `topic_01_practice_pdf_complete`
 - last_completed_topic: `none`
 - active_topic: `01 単位・指数・有効数字`
-- next_start: Topic 01の練習問題と完全解説を作成し、練習PDFへ反映する
+- next_start: Topic 01の解説画像PowerPointを作成する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -19,31 +19,29 @@
 - [x] 公式解答との照合を伴う独立検証
 - [x] 解説本文
 - [x] 解説PDF
-- [ ] 練習PDF（解答・完全解説付き）
+- [x] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 01 `単位・指数・有効数字` の完成済み解説本文から解説PDFを作成した。
+Topic 01 `単位・指数・有効数字` の練習問題と完全解説を作成し、練習PDFへ反映した。
 
 成果物:
-`topics/01_units_exponents_significant_figures/01_units_exponents_significant_figures_explanation.pdf`
+`topics/01_units_exponents_significant_figures/01_units_exponents_significant_figures_practice.pdf`
 
-PDFはA4縦6ページ。source Markdownの既存範囲のみを反映し、追加仕様は設けていない。
+PDFはA4縦4ページ。全15問で、基礎4問・本試験標準8問・複合応用3問、うち五肢択一10問・記述5問とした。`MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` の三種練習問題要件に合わせ、既存source Markdownで確定済みのTopic 01範囲だけで構成している。
 
-収録:
-- 10の整数乗・科学表記
-- SI接頭語 `G`, `M`, `k`, `m`, `μ`, `n`
-- 複合単位・面積・体積・速度の換算
-- 主要電気単位と次元確認
-- 有効数字・絶対誤差・百分率誤差・効率
-- 標準解法手順
-- 基礎・本試験標準・複合の3段階例題
-- `25 kV`, `MW`, `kWh` の新幹線接続
-- 選定5問と本文節の対応
+過去問対応:
+- `mH→H`、10のべき、`LI^2` の桁管理: 問6・問14
+- `mA→A`、`ms→s`、`A/s`、`H·A/s=V`: 問5・問13
+- `m/min→m/s`、百分率効率、`W→kW`: 問10・問15
+- 有効数字と単位演算: 問3・4・7・9・11・12
+- 測定値・絶対誤差・百分率誤差: 問8
 
-PDFは全6ページを170 dpiでレンダリングし、文字欠け・クリッピング・重なり・黒塗り・ページ外はみ出しがないことを確認した。
+各問は正答だけでなく、式選択、単位換算、中間計算、有効数字処理、必要な単位検算を解説に含めた。選定過去問の原文・図・数値は複製していない。
+
+PDFは全4ページを170 dpiでレンダリングし、文字欠け・クリッピング・重なり・黒塗り・ページ外はみ出しがないことを確認した。
 
 ## 判定
-Topic 01 は解説PDFまで完了したが、まだ `completed` ではない。練習PDF・PowerPoint完成後に教材だけで選定5問を独立再解答し、最終QA PASSするまで完成数へ加算しない。
+Topic 01 は練習PDFまで完了したが、まだ `completed` ではない。PowerPoint完成後に教材だけで選定5問を独立再解答し、最終QA PASSするまで完成数へ加算しない。

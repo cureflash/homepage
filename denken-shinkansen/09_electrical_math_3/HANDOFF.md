@@ -6,7 +6,7 @@
 
 active topic: `01 単位・指数・有効数字`
 
-制作前EXAM_ALIGNMENT、選定5問の公式解答照合付き独立検証、解説本文、解説PDFまで完了。完成数は `0 / 12` のまま。
+制作前EXAM_ALIGNMENT、選定5問の公式解答照合付き独立検証、解説本文、解説PDF、練習PDFまで完了。完成数は `0 / 12` のまま。
 
 source Markdown:
 `topics/01_units_exponents_significant_figures/01_units_exponents_significant_figures.md`
@@ -14,7 +14,10 @@ source Markdown:
 解説PDF:
 `topics/01_units_exponents_significant_figures/01_units_exponents_significant_figures_explanation.pdf`
 
-PDFはA4縦6ページ。170 dpiで全ページレンダリングQA済み。source Markdownの既存範囲のみを反映し、追加仕様は設けていない。
+練習PDF:
+`topics/01_units_exponents_significant_figures/01_units_exponents_significant_figures_practice.pdf`
+
+解説PDFはA4縦6ページ、練習PDFはA4縦4ページ。いずれも170 dpiで全ページレンダリングQA済み。source Markdownで確定済みの範囲のみを反映し、追加仕様は設けていない。
 
 ## 選定済み公式過去問と検証結果
 
@@ -39,31 +42,32 @@ PDFはA4縦6ページ。170 dpiで全ページレンダリングQA済み。sourc
 - 効率・百分率の換算
 - `与えられた量確認→単位統一→式選択→代入→次元確認→有効数字処理→桁の検算` の解法手順
 
-## 解説PDFの完成内容
+## 練習PDFの完成内容
 
-source Markdownの解説本文9節を6ページへ反映した。
+全15問:
+- 基礎4問
+- 本試験標準8問
+- 複合・応用3問
+- 五肢択一10問
+- 記述5問
 
-- 10のべきと科学表記
-- SI接頭語表
-- 複合単位・面積・体積・速度換算
-- 主要電気単位と次元確認
-- 有効数字・誤差・効率
-- 標準解法手順
-- 基礎・本試験標準・複合の3段階例題
-- `25 kV`, `MW`, `kWh` による新幹線接続
-- 頻出ミス
-- 選定5問と本文節の対応
-- 公式・解法まとめ
+過去問要求との対応:
+- `mH→H`、10のべき、`LI^2` の桁管理: 問6・問14
+- `mA→A`、`ms→s`、`A/s`、`H·A/s=V`: 問5・問13
+- `m/min→m/s`、百分率効率、`W→kW`: 問10・問15
+- 有効数字と単位演算: 問3・4・7・9・11・12
+- 測定値・絶対誤差・百分率誤差: 問8
+
+各問に完全解説を付け、計算問題では式、単位換算、中間値、最終値、有効数字処理、必要な検算を示した。選定過去問の原文・図・数値は複製していない。
 
 ## 新幹線側の扱い
 
-`SPEC.md` にある 25 kV、MW、kWh を単位・指数の具体例として使用。`2 MW×0.5 h=1 MWh` は仮定例と明記し、未確認実車値は追加していない。
+`SPEC.md` にある 25 kV、MW、kWh の範囲を維持。練習プリントは `SPEC.md` の指示どおり通常の電験三種数学演習として構成し、新幹線題材を必須化していない。
 
 ## 次に行うこと
 
-1. Topic 01の練習問題と完全解説を作成し、練習PDFへ反映する。
-2. 解説画像PowerPointを作成する。
-3. 成果物完成後、選定5問を教材だけで独立再解答する。
-4. 最終QA PASS後にのみTopic 01をcompletedへ変更する。
+1. Topic 01の解説画像PowerPointを作成する。
+2. 成果物完成後、選定5問を教材だけで独立再解答する。
+3. 最終QA PASS後にのみTopic 01をcompletedへ変更する。
 
-解説PDF完成だけで completion 扱いにはしない。
+練習PDF完成だけで completion 扱いにはしない。
