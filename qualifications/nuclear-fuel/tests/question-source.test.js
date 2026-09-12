@@ -73,6 +73,22 @@ test('authored four-choice fields override derived distractors', () => {
   assert.equal(runtime.questions[0].choiceAuthority, 'authored');
 });
 
+test('authored correct-choice letter must match the canonical answer', () => {
+  const invalid = `# NUC-01 作問済み\n\n### NUC-01-Q001\n- 問題文: 正しいものはどれか。\n- 選択肢: ["甲", "乙", "丙", "丁"]\n- 正答選択肢: B\n- 正答: 丙\n- 解説: 丙が正しい。\n- 出典: https://example.com/nuc\n- verified: true\n`;
+  assert.throws(
+    () => buildRuntimeQuestionBank([{ topicId: 'NUC-01', markdown: invalid }]),
+    /does not match canonical answer/
+  );
+});
+
+test('malformed authored choices are rejected instead of silently deriving choices', () => {
+  const invalid = `# NUC-01 作問済み\n\n### NUC-01-Q001\n- 問題文: 正しいものはどれか。\n- 選択肢: ["甲", "乙", "丙"]\n- 正答選択肢: C\n- 正答: 丙\n- 解説: 丙が正しい。\n- 出典: https://example.com/nuc\n- verified: true\n`;
+  assert.throws(
+    () => buildRuntimeQuestionBank([{ topicId: 'NUC-01', markdown: invalid }]),
+    /Invalid authored choices/
+  );
+});
+
 test('runtime records work with the same shared QuizSession engine', () => {
   const runtime = buildRuntimeQuestionBank([{ topicId: 'LAW-01', markdown: fixture }]);
   const repository = new InMemoryQuestionBank(runtime);
