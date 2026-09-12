@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 1 / 16
-- current_status: `topic_02_explanation_body_complete`
+- current_status: `topic_02_explanation_pdf_complete`
 - last_completed_topic: `01 新幹線の電気はどこから来る？`
 - active_topic: `02 上越新幹線を水の力で走らせる`
-- next_start: Topic 02 の解説本文を正本として解説PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 02 の練習プリントを12問以上・完全解説付きで作成し、全ページ表示QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
-- [ ] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT、解説本文・3段階例題まで完了。PDF以降は未着手
+- [ ] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDFまで完了。練習PDF以降は未着手
 - [ ] 03〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -106,5 +106,14 @@ JR東日本一次資料で、信濃川発電所が千手・小千谷・小千谷
 
 固定範囲外のダム形式詳細、比速度、キャビテーション、水撃作用、サージタンク、調速機、発電機機種詳細は追加していない。
 
+## 02 解説PDF
+- file: `topics/02_hydropower/02_hydropower_explanation.pdf`
+- A4縦5ページ
+- 解説本文の固定範囲、3段階例題、過去問対応表、公式・解法まとめを収録
+- 200 dpiで全5ページをレンダリングし、文字欠け・クリップ・重なり・壊れた数式記号がないことを確認
+- 数式表示はPDF互換性を優先し、`rho`、`eta`、`H0`、`A1` 等のASCII表記を使用。意味・計算内容はsource Markdownと同一
+
+判定: 解説PDF表示QA `PASS`。
+
 ## 次
-Topic 02の解説本文を正本として解説PDFを作成し、全ページ表示QAを行う。完成数は1/16のまま。
+Topic 02の練習プリントを12問以上・完全解説付きで作成し、全ページ表示QAを行う。完成数は1/16のまま。

@@ -6,10 +6,10 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は1/16。Topic 01は完成済み、active topicは02 `上越新幹線を水の力で走らせる`。
 
 ## 今回進捗
-Topic 02を1段階進め、解説本文＋3段階例題まで完了した。
+Topic 02を1段階進め、解説PDF作成＋全ページ表示QAまで完了した。
 
 更新成果物:
-- `topics/02_hydropower/02_hydropower.md`
+- `topics/02_hydropower/02_hydropower_explanation.pdf`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -48,28 +48,30 @@ Topic 02を1段階進め、解説本文＋3段階例題まで完了した。
 - 発電機の同期機/誘導機としての詳細は追加しない
 - JR東日本・信濃川発電設備の未確認実値は真値化しない
 
-## 今回作成した解説本文
-`topics/02_hydropower/02_hydropower.md` に以下を追加した。
+## 解説本文
+`topics/02_hydropower/02_hydropower.md` に、電験で問われる範囲、`P=ρgQH` の導出・単位変換、有効落差、効率、流量・水量・電力量換算、揚水発電、連続の式・ベルヌーイ、水車種類、再利用可能な解法手順、3段階例題、過去問対応表まで収録済み。
 
-- 電験で問われる範囲と到達目標
-- 位置エネルギーから `P=ρgQH` を導出し、`P=9.8QH[kW]` へ単位変換
-- 総落差・損失水頭・有効落差
-- 水車効率・発電機効率・総合効率
-- 発電時は効率を掛け、揚水入力は効率で割る関係
-- 流量・水量・流域面積・降水量・流出率と電力量換算
-- 揚水発電の水量収支、発電/揚水時間、一往復電力量効率
-- 連続の式とベルヌーイの定理
-- 衝動/反動水車と代表形式
-- 問題を見たときの再利用可能な解法手順
-- 基礎・本試験標準・複合/ひっかけの3段階例題
-- 選定公式過去問と本文節の対応表
+JR東日本一次資料 `https://www.jreast.co.jp/company/csr/environment/shinanogawa/index.html` で確認した事実だけを新幹線側に使用し、数値例は仮定値として明示している。
 
-JR東日本一次資料 `https://www.jreast.co.jp/company/csr/environment/shinanogawa/index.html` を確認し、信濃川発電所が千手・小千谷・小千谷第二の3発電所の総称で、発電した電気が首都圏・上越線・新幹線の電車や鉄道施設へ送られていることだけを実設備事実として本文へ採用した。数値例は明示的な仮定値とし、未確認実値は使用していない。
+## 今回作成した解説PDF
+`topics/02_hydropower/02_hydropower_explanation.pdf`
+
+- A4縦5ページ
+- source Markdownの固定範囲だけで構成
+- `P=ρgQH`、有効落差、効率、年間電力量、揚水、連続の式・ベルヌーイ、水車分類を収録
+- 基礎・本試験標準・複合/ひっかけの3段階例題を収録
+- 選定過去問6問・7小問への対応表と公式まとめを収録
+- 未確認の信濃川発電設備実値は追加していない
+- 固定範囲外のダム形式詳細、比速度、キャビテーション、水撃作用、サージタンク、調速機、発電機機種詳細は追加していない
+
+200 dpiで全5ページをレンダリングし、文字欠け、クリップ、重なり、壊れた数式記号がないことを確認。表示QAは `PASS`。
+
+PDFでは表示互換性のため `rho`、`eta`、`H0`、`A1` 等のASCII表記を用いたが、意味・計算内容はsource Markdownの `ρ`、`η`、添字表記と同一。
 
 ## 現在状態
-- `current_status`: `topic_02_explanation_body_complete`
+- `current_status`: `topic_02_explanation_pdf_complete`
 - 完成数: 1/16のまま
-- Topic 02の解説PDF・練習PDF・PowerPoint・完成後独立再解答は未着手
+- Topic 02の練習PDF・PowerPoint・完成後独立再解答は未着手
 
 ## 次の正確な開始点
-`topics/02_hydropower/02_hydropower.md` の解説本文を正本として解説PDFを作成し、全ページ表示QAを行う。固定範囲外の論点は追加しない。
+Topic 02の練習プリントを12問以上・完全解説付きで作成し、全ページ表示QAを行う。固定範囲外の論点は追加しない。
