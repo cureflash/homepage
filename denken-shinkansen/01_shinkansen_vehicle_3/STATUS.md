@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 22 / 38
-- current_status: `topic_23_practice_pdf_complete`
+- current_status: `topic_23_powerpoint_complete`
 - last_completed_topic: `22 L0系① リニア同期モータ`
 - active_topic: `23 L0系② 500km/hと周波数制御`
-- next_start: Topic 23のsource Markdownと既存PDFを正本として、解説画像PowerPointを作成し全スライドQAを行う
+- next_start: Topic 23の完成済みsource・PDF・PowerPointだけを使い、選定5過去問を保存済み正答を先に見ず独立再解答して最終品質ゲートを判定する
 
 ## 新品質ゲート進捗
 - [x] 01〜22 — PASS
-- [ ] 23 L0系② 500km/hと周波数制御 — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF＋全ページQA、練習PDF＋全ページQAまで完了
+- [ ] 23 L0系② 500km/hと周波数制御 — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF＋全ページQA、練習PDF＋全ページQA、解説画像PowerPoint＋全スライドQAまで完了
 
 ## 23 EXAM_ALIGNMENT
 品質ゲート対象は次の5問。制作前独立解答は5 / 5 PASS。
@@ -46,7 +46,7 @@ JR東海「超電導リニアの原理」で、時速500 km走行、推進コイ
 - source Markdown: `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control.md` — EXAM_ALIGNMENT、解説本文、3段階例題まで完了
 - 解説PDF: `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control_explanation.pdf` — 3ページ、全ページQA PASS
 - 練習PDF: `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control_practice.pdf` — 7ページ、15問、解答・完全解説付き、全ページQA PASS
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control_images.pptx` — 7スライド、全スライドQA PASS
 
 ## 23 解説PDF QA
 解説PDFを3ページすべてレンダリングして目視確認した。
@@ -66,8 +66,18 @@ JR東海「超電導リニアの原理」で、時速500 km走行、推進コイ
 - 文字欠け、黒四角、クリッピング、重なりなし
 - すべり、ベクトル制御、未確認の実車極ピッチ・実運転周波数は追加していない
 
+## 23 PowerPoint QA
+解説画像PowerPointを16:9・7スライドで作成し、全スライドをレンダリングして確認した。
+
+- 7 / 7スライド PASS
+- `Ns=120f/p`、同期角速度、V/f、整流器→直流→インバータ、三相電力→トルクの解法チェーンを自作模式図で可視化
+- L0系の推進コイルN/S切替と周波数制御を、JR東海一次資料で確認済みの範囲だけで図示
+- 実機の極ピッチ・500 km/h時の実運転周波数は数値化していない
+- 引用画像は使用せず、自作模式図のみ。JR東海一次資料・試験センター等の参照先をスライド内および最終スライドに記載
+- 文字欠け、クリッピング、重なりなし。overflow検査PASS
+
 ## 23 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENT 5/5 PASS、解説PDF・練習PDFの全ページQA PASS。PowerPointと完成後独立再解答は未実施のため、完成数は22/38のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENT 5/5 PASS、解説PDF・練習PDF・PowerPointの表示QA PASS。完成後独立再解答が未実施のため、完成数は22/38のまま。
 
 ## 次
-Topic 23の解説画像PowerPointを作成し、全スライドをQAする。現行SPEC・制作前EXAM_ALIGNMENTの範囲外知識と未確認実車値は追加しない。
+Topic 23の完成済み教材だけを使用し、選定5過去問を保存済み正答を先に見ず独立再解答する。5/5を根拠付きで通過した場合のみTopic 23を`completed`として23/38へ更新する。
