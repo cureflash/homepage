@@ -5,14 +5,15 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 1 / 16
-- current_status: `topic_01_completed`
+- current_status: `topic_02_exam_alignment_complete`
 - last_completed_topic: `01 新幹線の電気はどこから来る？`
 - active_topic: `02 上越新幹線を水の力で走らせる`
-- next_start: Topic 02 の制作前 `EXAM_ALIGNMENT`。公式過去問を直近年度から調査し、水力発電の既定範囲に適合する原則5問以上を選定する
+- next_start: Topic 02 の解説本文＋3段階例題。制作前 `EXAM_ALIGNMENT` の要求事項を固定範囲内で本文へ対応させる
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
-- [ ] 02〜16 — 未着手
+- [ ] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT完了。公式過去問6問・7小問を独立検証し7/7 PASS。本文以降は未着手
+- [ ] 03〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
 前回の6問は、問題全体を教材だけで完答するにはTopic 01境界外の詳細知識が必要と判定し、最終品質ゲート対象から除外した。
@@ -68,5 +69,24 @@ Topic 01の既定範囲に適合する次の5問へ差し替え済み。
 ## 01 QA判定
 `PASS / completed`。`MASTER_SPEC.md` と `EXAM_ALIGNMENT_SPEC.md` の完成条件を満たしたため、完成数を1/16へ更新した。
 
+## 02 制作前EXAM_ALIGNMENT
+source: `topics/02_hydropower/02_hydropower.md`
+
+品質ゲート対象:
+1. R8上 電力 問2 — 理論的包蔵水力・年間電力量
+2. R8上 電力 問15(a)(b) — 揚水発電の出力・入力・運転時間・総合効率
+3. R7下 電力 問2 — 単位体積当たりの運動エネルギー
+4. R7上 電力 問1 — `P=ρgQH` の単位と `9.8QH[kW]`
+5. R3 電力 問2 — 連続の関係とベルヌーイの定理
+6. H25 電力 問1 — 衝動/反動水車と代表形式
+
+制作前独立再解答は7小問すべて公式解答と一致し、`7/7 PASS`。
+
+境界維持:
+- ダム形式・発電所分類の詳細は追加しない
+- 比速度・キャビテーション・水撃作用・サージタンク・調速機は追加しない
+- 発電機の同期機/誘導機としての詳細は追加しない
+- 信濃川発電設備の実値は一次資料確認前に真値化しない
+
 ## 次
-Topic 02「上越新幹線を水の力で走らせる」の制作前 `EXAM_ALIGNMENT` から開始する。`SPEC.md` の既定範囲を越えず、公式過去問を直近年度から調査する。
+Topic 02の解説本文＋基礎・本試験標準・複合/ひっかけの3段階例題を作成する。完成数は1/16のまま。
