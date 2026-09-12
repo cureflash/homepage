@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 1 / 20
-- current_status: `topic_02_exam_reanswer_complete`
-- last_completed_topic: `01 複素数・複素指数・フェーザ計算`
-- active_topic: `02 ベクトルと座標変換`
-- next_start: Topic 02の必須成果物実在確認・教材間整合・範囲管理を含む最終QAを行う
+- exam_aligned_completed_topics: 2 / 20
+- current_status: `topic_02_completed`
+- last_completed_topic: `02 ベクトルと座標変換`
+- active_topic: `03 偏微分・全微分`
+- next_start: Topic 03の制作前EXAM_ALIGNMENTを行う。公式過去問を直近年度優先で原則5問以上調査し、偏微分・全微分・多変数関数・感度・近似に直接必要な要求知識・式・設問型・教材内必要説明をsource Markdownへ先に固定する
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -23,36 +23,21 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 公式過去問の教材のみでの独立再解答
-- [ ] 最終QA PASS
+- [x] 最終QA PASS
 
 ## 今回進めた内容
-Topic 02 `ベクトルと座標変換` の完成後過去問再解答を実施した。
 
-対象:
-- R8 一次 理論 問1: 5/5一致
-- R8 一次 理論 問2: 5/5一致
-- R7 一次 理論 問2: 5/5一致
-- R7 一次 理論 問7: 5/5一致
-- R1 一次 理論 問5: 5/5一致
+Topic 02 `ベクトルと座標変換` の最終QAを実施し、`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_final_qa.md` に記録した。
 
-結果:
-- 5問 / 25小問 PASS
-- 公式解答との一致: 25 / 25
-- 教材外知識の補完: 0件
-- ベクトル合成、射影、外積、負電荷の符号反転、回転対称性、円周方向から直交成分への変換で解答可能であることを再確認
-
-## 範囲管理
-
-追加していないもの:
-
-- 対称座標法そのものの詳細
-- Topic 11の一般的な行列・線形連立方程式
-- SPECにない抽象ベクトル解析
-- 未確認の新幹線実車値・設備値
-
-二次記述問題は数合わせで追加していない。本テーマの直接対応は一次理論のベクトル・座標処理である。
+確認結果:
+- 必須成果物のGitHub実在と現行blob SHA: PASS
+- 二種公式過去問5問・25小問のEXAM_ALIGNMENT: PASS
+- 制作前独立検証: 5問・25小問 PASS
+- 解説PDF・練習PDF・PowerPointの既実施レンダリングQAと現行成果物の対応: PASS
+- 完成後独立再解答: 5問・25小問 PASS、教材外知識補完0件
+- 対称座標法の詳細、一般行列・線形連立方程式、抽象ベクトル解析の追加なし
+- 未確認の新幹線実車値・設備値の追加なし
 
 ## 判定
-Topic 02の完成後過去問再解答段階をPASSとする。
 
-テーマ完成数は `1 / 20` のまま。Topic 02は最終QA前のためまだ `completed` ではない。
+Topic 02を `completed` とする。完成数を `2 / 20` に更新し、最初の未完了テーマをTopic 03へ移した。次工程はTopic 03 `偏微分・全微分` の制作前EXAM_ALIGNMENT。
