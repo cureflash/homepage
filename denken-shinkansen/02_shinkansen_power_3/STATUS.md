@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 1 / 16
-- current_status: `topic_02_practice_pdf_complete`
+- current_status: `topic_02_powerpoint_complete`
 - last_completed_topic: `01 新幹線の電気はどこから来る？`
 - active_topic: `02 上越新幹線を水の力で走らせる`
-- next_start: Topic 02 の解説画像PowerPointを作成し、全スライド表示QAを行う
+- next_start: Topic 02 の品質ゲート対象7小問を完成教材だけで独立再解答し、最終QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
-- [ ] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDFまで完了。PowerPoint以降は未着手
+- [ ] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPointまで完了。完成後独立再解答は未着手
 - [ ] 03〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -127,5 +127,16 @@ JR東日本一次資料で、信濃川発電所が千手・小千谷・小千谷
 
 判定: 練習PDF表示QA `PASS`。
 
+## 02 解説画像PowerPoint
+- file: `topics/02_hydropower/02_hydropower_images.pptx`
+- 16:9・7枚
+- `P=ρgQH` の意味・単位、有効落差と効率、流量・水量・電力量、揚水発電、連続の式とベルヌーイ、水車分類、再利用可能な解法手順を図解
+- 選定過去問7小問の要求論点を固定範囲内で視覚化
+- 固定範囲外のダム形式詳細、比速度、キャビテーション、水撃作用、サージタンク、調速機、発電機機種詳細は追加していない
+- LibreOfficeでPDF変換後、全7枚を150 dpiでレンダリングして表示確認。文字欠け・クリップ・重なりなし
+- PPTX内部の全shapeについてスライド境界外はみ出し0件、ZIP整合性チェックもPASS
+
+判定: 解説画像PowerPoint表示QA `PASS`。
+
 ## 次
-Topic 02の解説画像PowerPointを作成し、全スライド表示QAを行う。完成数は1/16のまま。
+Topic 02の品質ゲート対象7小問を、保存済み正答を見ずに完成教材だけで独立再解答し、公式解答と照合して最終QAを行う。完成数は1/16のまま。
