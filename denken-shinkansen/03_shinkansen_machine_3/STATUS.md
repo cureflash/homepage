@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 1 / 16
-- current_status: `topic_02_practice_questions_complete`
+- current_status: `topic_02_practice_pdf_complete`
 - last_completed_topic: `01 架線25kVをそのままモーターに入れたらどうなる？`
 - active_topic: `02 初代0系はどうやって走っていた？`
-- next_start: Topic 02 の練習問題source 12問を使って練習PDFを作成し、全ページのレンダリングQAを行う
+- next_start: Topic 02 の確定済みsource範囲だけを使って解説画像PowerPointを作成し、全スライドのレンダリング・overflow QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 制作前EXAM_ALIGNMENT、source Markdown、解説本文、3段階例題、12問の練習問題・完全解説、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。選定5問を教材だけで再解答し公式解答と照合、5/5正答で品質ゲートPASS
-- [ ] 02 初代0系はどうやって走っていた？ — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、12問の練習問題・完全解説まで完了。R8上問1・2、R7下問1・2、R7上問1・2の要求事項を練習問題へマッピング済み。練習PDF、PowerPoint、完成後独立再解答は未実施
+- [ ] 02 初代0系はどうやって走っていた？ — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、12問の練習問題・完全解説、練習PDFまで完了。R8上問1・2、R7下問1・2、R7上問1・2の要求事項を練習問題へマッピング済み。PowerPoint、完成後独立再解答は未実施
 - [ ] 03〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT対象
@@ -76,6 +76,7 @@ source Markdown:
 - `topics/02_dc_machine/02_dc_machine.md`
 - `topics/02_dc_machine/02_dc_machine_explanation.pdf`
 - `topics/02_dc_machine/02_dc_machine_practice.md`
+- `topics/02_dc_machine/02_dc_machine_practice.pdf`
 
 解説PDF:
 - A4縦 4ページ
@@ -93,6 +94,14 @@ source Markdown:
 - 選定6過去問の要求事項を全て練習問題へ対応付け済み
 - 未確認の実車値およびTopic 03の速度制御体系は追加していない
 
+練習PDF:
+- A4縦 5ページ
+- sourceの12問を全て五肢択一で収録し、問題文・選択肢・正答・完全解説を欠落なく組版
+- 基礎3問、本試験標準7問、複合・応用2問
+- 全5ページをレンダリングし、文字欠け・重なり・クリッピング・可読性を確認してPASS
+- テキスト抽出でも `正答:` 12件を確認し、全12問の解答収録を確認
+- 未確認の0系実車定格値およびTopic 03の速度制御体系は追加していない
+
 ## 境界
 Topic 01の新幹線側は系列SPECで確定済みの `架線25 kV → パンタグラフ → 主変圧器 → 二次側交流 → 主変換装置 → 主電動機` の導入に限定した。実車の主変圧器容量、巻数比、二次電圧、損失、効率等の未確認値は追加していない。
 
@@ -102,7 +111,7 @@ Topic 02は系列SPECで確定済みの `交流25 kV → 主変圧器 → 整流
 `PASS`。MASTER SPEC必須の4成果物をGitHub正本へ揃え、完成後の選定5問を教材内容だけで独立再解答した。公式解答との照合結果はR6上機械問8=`4`、R6上機械問9=`2`、R5上機械問9=`4`、R4下機械問8=`4`、R4下機械問9=`5`で5/5一致。必要公式の選択、途中式、言い換え対応、正答理由、教材カバレッジを確認し、Topic 01をcompletedとした。完成数は1/16。
 
 ## 02 QA判定
-制作前 `EXAM_ALIGNMENT`、解説本文・3段階例題、解説PDF、12問の練習問題・完全解説まで完了。練習問題は三種仕様の難易度配分と五肢択一比率を満たし、選定6問の要求事項を全てカバーした。テーマ自体は未完了で、練習PDF、PowerPoint、完成後独立再解答が残る。完成数は1/16のまま。
+制作前 `EXAM_ALIGNMENT`、解説本文・3段階例題、解説PDF、12問の練習問題・完全解説、練習PDFまで完了。練習PDFは全5ページをレンダリングしてPASS。テーマ自体は未完了で、PowerPoint、完成後独立再解答が残る。完成数は1/16のまま。
 
 ## 次
-Topic 02 `初代0系はどうやって走っていた？` の `topics/02_dc_machine/02_dc_machine_practice.md` を正本として練習PDFを作成する。問題・選択肢・解答・完全解説を欠落させず組版し、全ページをレンダリングして文字欠け・重なり・ページ切れ・可読性を確認する。未確認実車値とTopic 03の速度制御体系は追加しない。
+Topic 02 `初代0系はどうやって走っていた？` の確定済みsource範囲だけを使って `topics/02_dc_machine/02_dc_machine_images.pptx` を作成する。全スライドをレンダリングし、文字欠け・重なり・クリッピング・overflow・可読性を確認する。未確認実車値とTopic 03の速度制御体系は追加しない。
