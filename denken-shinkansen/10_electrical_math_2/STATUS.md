@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 0 / 20
-- current_status: `topic_01_independent_reanswer_complete`
-- last_completed_topic: `none`
-- active_topic: `01 複素数・複素指数・フェーザ計算`
-- next_start: Topic 01の最終QAを実施し、PASSした場合のみcompletedへ変更する
+- exam_aligned_completed_topics: 1 / 20
+- current_status: `topic_01_completed`
+- last_completed_topic: `01 複素数・複素指数・フェーザ計算`
+- active_topic: `02 ベクトルと座標変換`
+- next_start: Topic 02の制作前EXAM_ALIGNMENTを行う。公式過去問を直近年度優先で原則5問以上調査し、要求知識・式・設問型・教材で必要な説明をsource Markdownへ先に固定する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -22,28 +22,24 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 公式過去問の教材のみでの独立再解答
-- [ ] 最終QA PASS
+- [x] 最終QA PASS
 
 ## 今回進めた内容
-Topic 01 `複素数・複素指数・フェーザ計算` の完成後独立再解答を実施した。
+Topic 01 `複素数・複素指数・フェーザ計算` の最終QAを実施し、`topics/01_complex_numbers_phasors/01_complex_numbers_phasors_final_qa.md` に記録した。
 
-対象:
-- R7 一次 理論 問3
-- R6 一次 理論 問5
-- R5 一次 理論 問4
-- R4 一次 理論 問5
-- R3 一次 理論 問4
+確認結果:
 
-完成教材に記載済みの複素数、フェーザ、RLC複素インピーダンス、理想変成器の `a²Z` 換算、交流テブナン等価、相互インダクタンス、複素電力だけを解法根拠として再解答した。問題文・図・解答群は試験センター公式問題PDFで確認し、各問の導出後に公式解答PDFと照合した。
+- 必須成果物4種のGitHub実在: PASS
+- 二種一次理論の公式過去問5問のEXAM_ALIGNMENT: PASS
+- source Markdownの要求事項と解説PDF・練習PDF・PowerPointの対応: PASS
+- 練習PDF12問（問1〜8一次試験型選択、問9〜12本試験標準〜複合記述計算）: PASS
+- 複素数、フェーザ、RLC、`a²Z`、`S=VI*`、交流テブナン、相互インダクタンスの計算・符号・単位整合: PASS
+- プログラム・CSV・独立グラフ/波形: 本テーマでは該当なし
+- 実車値・仮定値の区別: PASS
+- 既実施レンダリングQAと現行blob SHAの対応: PASS
+- 完成後独立再解答: 5 / 5問、25 / 25小問 PASS、教材外知識補完0件
 
-再解答結果:
-- R7 問3: `(1)ヨ (2)ト (3)ハ (4)ヌ (5)リ` — 5/5一致
-- R6 問5: `(1)ヘ (2)ホ (3)リ (4)ヨ (5)ヲ` — 5/5一致
-- R5 問4: `(1)ト (2)ヌ (3)ロ (4)イ (5)ホ` — 5/5一致
-- R4 問5: `(1)ホ (2)チ (3)ヲ (4)ハ (5)リ` — 5/5一致
-- R3 問4: `(1)ヲ (2)ハ (3)イ (4)リ (5)ニ` — 5/5一致
-
-5問・25小問すべて公式解答と一致。教材だけで必要公式、途中式、位相・符号・電力の根拠を再現でき、教材外知識による補完は不要だった。結果をsource Markdownの `完成後の独立再解答` に記録した。
+Topic 01は一次理論へ直接接続する数学テーマのため、二次問題を数合わせで追加していない。
 
 ## 判定
-Topic 01 は完成後の独立再解答までPASSしたが、まだ `completed` ではない。最終QA PASS後に初めて完成数へ加算する。
+Topic 01を `completed` とする。完成数を `1 / 20` に更新し、最初の未完了テーマをTopic 02へ移した。
