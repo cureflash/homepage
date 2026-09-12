@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 0 / 21
-- current_status: `topic_01_practice_pdf_complete`
+- current_status: `topic_01_powerpoint_complete`
 - last_completed_topic: `none`
 - active_topic: `01 25kV架線を一つの等価回路にする`
-- next_start: Topic 01の解説画像PowerPointを作成する。解説本文・解説PDF・練習PDFの論点を欠落させず、選定7問に必要な回路網定理・解法手順・交流等価回路・最大電力条件を図解する
+- next_start: Topic 01の必須成果物だけを使い、選定7問（R8問3、R7問5、R6問3、R5問3・問4、R4問3、R3問3）を保存済み正答を見ずに独立再解答する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -21,37 +21,32 @@
 - [x] 解説本文
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 01 `25kV架線を一つの等価回路にする` の練習PDFを作成し、GitHub正本へ追加した。
+Topic 01 `25kV架線を一つの等価回路にする` の解説画像PowerPointを作成し、GitHub正本へ追加した。
 
 成果物:
-`topics/01_catenary_equivalent_circuit/01_catenary_equivalent_circuit_practice.pdf`
+`topics/01_catenary_equivalent_circuit/01_catenary_equivalent_circuit_images.pptx`
 
-練習PDFは電験二種一次「理論」型の五肢択一12問と、各問の完全解説で構成した。
+PowerPointは16:9・4枚で、解説本文・解説PDF・練習PDFの論点を図解した。
 
 収録範囲:
-- KCL・節点法
-- KVL・閉路法
-- 重ね合わせの理
-- 電圧源・電流源の等価変換
-- テブナン等価
-- 制御電源を含む場合の試験電源法
-- 平衡ブリッジ
+- 教育用の新幹線き電等価回路と `Vth-Zth-負荷`
+- KCL / KVL、節点法・閉路法の解法手順
+- 重ね合わせの理と独立電源の零化
+- テブナン／ノートン等価、電源変換
+- 制御電源を含む場合の試験電源法との区別
 - 相反定理
-- T形二端子対抵抗回路
-- 交流テブナン・複素インピーダンス・有効電力
-- 直流最大電力伝送
-- 交流共役整合
+- 交流テブナン、複素インピーダンス、有効電力
+- 直流最大電力伝送と交流共役整合
+- 選定7問への過去問マッピング
 
-R8〜R3の選定7問の要求事項へ対応させ、過去問本文は複製せず独自問題・独自数値で構成した。
+実在のATき電回路そのものを単純な `Vth-Zth` 回路と同一視せず、教育用簡略モデルであることを明示した。`MASTER_SPEC.md` の規定どおり、`08 理論・二種` は一次理論中心であるため二次問題を数合わせで追加していない。
 
-`MASTER_SPEC.md` の規定どおり、`08 理論・二種` は一次理論中心であるため、二次試験形式を数合わせで追加していない。
-
-全12問は独立再計算し一意解を確認した。PDFはA4縦5ページ。PDFium / pdftoppmの両方で全5ページを180 dpiレンダリングし、文字欠け・黒四角・クリッピング・重なりがないことを確認した。
+PowerPointはLibreOfficeでPDF化し、全4枚を180 dpiでレンダリングして文字欠け・クリッピング・重なりを確認した。`slides_test.py` のキャンバス外描画検査もPASSした。
 
 ## 判定
-Topic 01 は練習PDFまで完了したが、まだ `completed` ではない。PowerPointを作成し、教材のみでの公式過去問独立再解答と最終QA PASSを通過するまで完成数へ加算しない。
+Topic 01 は必須成果物まで完了したが、まだ `completed` ではない。教材のみでの公式過去問独立再解答と最終QA PASSを通過するまで完成数へ加算しない。
