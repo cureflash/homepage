@@ -3,17 +3,26 @@
 更新日: 2026-09-13
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は1/16。Topic 01は品質ゲートPASSでcompleted。active topicは02 `初代0系はどうやって走っていた？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は2/16。Topic 01・02は品質ゲートPASSでcompleted。次のactive topicは03 `直流モーターはどうやって速度を変える？`。
 
 ## 今回進捗
-Topic 02 を `topic_02_practice_pdf_complete` から `topic_02_powerpoint_complete` へ1段階進めた。
+Topic 02 を `topic_02_powerpoint_complete` から `topic_02_completed` へ1段階進めた。
+
+保存済み正答を先に見ず、Topic 02の選定6問を教材内容だけで独立再解答し、その後に電気技術者試験センター公式解答と照合した。
+
+- R8上 機械 問1: `2` / 公式 `2` — PASS
+- R8上 機械 問2: `4` / 公式 `4` — PASS
+- R7下 機械 問1: `5` / 公式 `5` — PASS
+- R7下 機械 問2: `4` / 公式 `4` — PASS
+- R7上 機械 問1: `5` / 公式 `5` — PASS
+- R7上 機械 問2: `2` / 公式 `2` — PASS
+
+結果は `2 / 4 / 5 / 4 / 5 / 2`、6/6一致。必要公式の選択、途中式、言い換え対応、正答理由、教材カバレッジを確認し、Topic 02をcompletedとした。
 
 GitHub正本更新:
-- `topics/02_dc_machine/02_dc_machine_images.pptx` — 解説画像PowerPoint 16:9・6枚
-- `STATUS.md`
+- `topics/02_dc_machine/02_dc_machine.md` — 独立再解答結果・公式照合・QA判定を記録
+- `STATUS.md` — Topic 02 completed、完成数2/16、次Topic 03へ更新
 - `HANDOFF.md`
-
-PowerPointは確定済みsourceの範囲だけで構成し、自作模式図を含む全6枚をレンダリングして文字欠け・重なり・クリッピング・可読性を確認、overflow検査もPASS。0系主電動機の未確認形式・定格値、Topic 03の体系的な速度制御は追加していない。完成後独立再解答には着手していない。
 
 ## Topic 02 EXAM_ALIGNMENT
 公式過去問は直近年度から6問を選定済み。
@@ -30,71 +39,44 @@ PowerPointは確定済みsourceの範囲だけで構成し、自作模式図を�
 - R7下: `https://www.shiken.or.jp/chief/upload/20260322_ch_third_q03.pdf`
 - R7上: `https://www.shiken.or.jp/chief/upload/20250831_ch_third_q03.pdf`
 
-公式正答番号は、完成後の独立再解答を汚染しないためsource Markdownへ転記していない。
+公式解答:
+- R8上: `https://www.shiken.or.jp/chief/upload/20260830_ch_third_a01.pdf`
+- R7下: `https://www.shiken.or.jp/chief/upload/20260322_ch_third_a01.pdf`
+- R7上: `https://www.shiken.or.jp/chief/upload/20250831_ch_third_a01.pdf`
 
-## 練習問題source
-`topics/02_dc_machine/02_dc_machine_practice.md`
+## Topic 02 成果物
+- `topics/02_dc_machine/02_dc_machine.md`
+- `topics/02_dc_machine/02_dc_machine_explanation.pdf`
+- `topics/02_dc_machine/02_dc_machine_practice.md`
+- `topics/02_dc_machine/02_dc_machine_practice.pdf`
+- `topics/02_dc_machine/02_dc_machine_images.pptx`
 
-- 全12問を五肢択一で作成
-- 基礎3問（25%）
-- 本試験標準7問（約58%）
-- 複合・応用2問（約17%）
-- 数値問題8問、知識・正誤問題4問
-- R8上問1 → 問1、3、9、10
-- R8上問2 → 問2
-- R7下問1 → 問3、9
-- R7下問2 → 問5、12
-- R7上問1 → 問3、9、10
-- R7上問2 → 問7、11
-
-数値問題では、使用公式・選定理由・代入・中間計算・最終値・検算または物理的妥当性を記載した。知識問題では正答理由と主要誤答肢の誤りを記載した。
-
-主要な計算結果を再確認済み:
-- 問2 `e≈2.83 V`
-- 問5 `Ra=0.20 Ω`, `N2≈1526 min^-1`
-- 問6 `η≈80.5 %`
-- 問7 `Ra=0.40 Ω`, `Pcu=250 W`
-- 問8 `T≈28.6 N·m`
-- 問11 `η≈82.3 %`
-- 問12 `N2≈1839 min^-1`, `T2/T1=0.50`
-
-## 練習PDF
-`topics/02_dc_machine/02_dc_machine_practice.pdf`
-
-- A4縦 5ページ
-- sourceの12問を全て五肢択一で収録
-- 問題文、選択肢、正答、完全解説を欠落なく組版
-- 基礎3問、本試験標準7問、複合・応用2問
-- 全5ページをレンダリング確認し、文字欠け・重なり・クリッピング・可読性PASS
-- テキスト抽出で `正答:` 12件を確認
-- 0系の未確認実車定格値、Topic 03の速度制御体系は追加していない
-
-## 既存解説PDF
-`topics/02_dc_machine/02_dc_machine_explanation.pdf`
-
+解説PDF:
 - A4縦 4ページ
-- source Markdownの教材範囲だけを使用
-- 電験で問われる内容、構造・整流、誘導起電力、逆起電力、トルク・電力、他励・分巻・直巻・複巻、損失・効率、10段階解法、3段階例題、新幹線接続、頻出ミス、過去問対応、公式まとめを収録
-- 全4ページをレンダリングし、文字欠け、重なり、クリッピング、改ページ、可読性を確認してPASS
+- 電験論点、構造・整流、誘導起電力、逆起電力、トルク、損失・効率、他励・分巻・直巻・複巻、解法手順、3段階例題、新幹線接続、頻出ミス、選定6問の過去問対応、公式まとめを収録
+- 全4ページ表示QA PASS
 
-## 解説画像PowerPoint
-`topics/02_dc_machine/02_dc_machine_images.pptx`
+練習問題・練習PDF:
+- 12問、全問五肢択一
+- 基礎3問、本試験標準7問、複合・応用2問
+- 数値問題8問、知識・正誤問題4問
+- 完全解説付き
+- 練習PDF A4縦5ページ、全ページ表示QA PASS
 
+解説画像PowerPoint:
 - 16:9、6枚
-- 電験で問う内容と0系の電力経路、直流機の主要式・構造模式図、他励・分巻・直巻・複巻の特性、再利用可能な解法手順と3段階例題、選定6問の過去問対応、公式まとめ・出典を収録
-- 図表は確定済みsourceだけに基づく自作模式図。外部画像は引用していない
-- 0系主電動機の未確認形式・定格値、Topic 03の体系的な速度制御は追加していない
-- 全6枚レンダリング確認PASS、overflow検査PASS
+- 電験で問う内容と0系の電力経路、直流機の主要式・構造模式図、他励・分巻・直巻・複巻の特性、解法手順と3段階例題、選定6問の過去問対応、公式まとめ・出典を収録
+- 全6枚レンダリングQA・overflow検査PASS
 
 ## 境界
 仕様追加はしていない。0系主電動機の具体的形式・定格値は一次資料で未確認のため追加していない。
 
-Topic 02では過去問対応に必要な `V=E+IaRa`、`E=kΦN` と速度・トルク特性まで扱う。電機子電圧制御、界磁制御、直列抵抗、タップ制御、弱め界磁、定トルク／定出力運転などの体系的な速度制御はTopic 03の範囲なので先取りしていない。
+Topic 02では過去問対応に必要な `V=E+IaRa`、`E=kΦN` と速度・トルク特性まで扱った。電機子電圧制御、界磁制御、直列抵抗、タップ制御、弱め界磁、定トルク／定出力運転などの体系的な速度制御はTopic 03の範囲として残している。
 
 ## QA判定
 Topic 01: `PASS / completed`。
 
-Topic 02: 制作前 `EXAM_ALIGNMENT`、解説本文・3段階例題、解説PDF、12問の練習問題・完全解説、練習PDF、解説画像PowerPointまで完了。PowerPointは全6枚のレンダリングQAとoverflow検査までPASS。テーマ自体は未完了で、完成後独立再解答が残る。完成数は1/16。
+Topic 02: `PASS / completed`。MASTER SPEC必須成果物を揃え、完成後独立再解答6/6正答。完成数は2/16。
 
 ## 次の正確な開始点
-Topic 02の選定6問（R8上問1・2、R7下問1・2、R7上問1・2）を、保存済み正答を先に見ず教材内容だけで独立再解答する。その後、公式解答と照合し、必要公式の選択、途中式、言い換え対応、正答理由、教材カバレッジを確認して品質ゲートを判定する。
+Topic 03 `直流モーターはどうやって速度を変える？` の制作前EXAM_ALIGNMENTを開始する。直近年度の公式過去問から、系列SPECで定義済みの直流電動機の速度制御・起動・電機子電圧・界磁・直列抵抗・弱め界磁等に直接対応する問題を調査し、対象問題と教材必須範囲を確定する。
