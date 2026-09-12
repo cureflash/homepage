@@ -10,6 +10,43 @@ Topic 01 `0系の主変圧器を等価回路で解剖する` は最終QAまでPA
 
 active topic: `02 0系の直流主電動機はどんな特性だった？`
 
+current status: `topic_02_exam_alignment_complete`
+
+## Topic 02 制作前EXAM_ALIGNMENT
+
+source Markdown:
+`topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics.md`
+
+選定公式過去問:
+
+- R6 一次 機械 問2
+- H28 一次 機械 問1
+- H28 一次 機械 問5
+- H26 一次 機械 問5
+- H24 二次 機械・制御 問1
+
+一次4問＋二次記述1問、計5問。混合問題はTopic 02のSPECに直接対応する小問だけをゲート対象とし、対象10小問の制作前独立検証は10 / 10で公式解答と整合した。
+
+本テーマで固定した範囲:
+
+- 電機子回路 `V=E+I_aR_a`
+- 逆起電力 `E=kΦω`
+- 電磁トルク `T=kΦI_a`
+- 速度式
+- 直巻電動機の始動トルク・速度特性
+- 弱め界磁
+- 出力・損失・効率
+- 速度―トルク、速度―出力、電流―速度グラフ
+
+本テーマへ追加しない範囲:
+
+- チョッパ制御
+- 誘導電動機
+- VVVF
+- 過渡制御
+
+これらは選定過去問内に混在していてもTopic 02の完成ゲート対象外とする。
+
 ## Topic 01 完成証跡
 
 source Markdown:
@@ -30,35 +67,12 @@ PowerPoint:
 最終QA:
 `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_final_qa.md`
 
-## Topic 01 最終QA結果
-
-- 必須成果物4種＋独立再解答記録: 実在確認PASS
-- 過去問: R7一次1問＋R6/R3/R2/H28/H27二次5問
-- 一次・二次を合わせた過去問品質ゲート: PASS
-- 完成後独立再解答: 6 / 6 PASS
-- 教材外知識補完: 0件
-- 実車公開値 / 計算値 / 仮定値の区別: PASS
-- 解説PDF・練習PDF・PowerPointの既実施レンダリングQAと現行blob: 一致確認PASS
-
-現行blob SHA:
-
-- source: `caaad6b353dfd2e027da6617bd6fb27e93f505d3`
-- 解説PDF: `ec9e71d96b4b7414091bb92505c09523095d1ebe`
-- 練習PDF: `eb91ce4c434401c81f0ef2992b86ca441a80ab8c`
-- PowerPoint: `8b0ce550619afed8da50a05b38f21592d8f2f43b`
-- 独立再解答: `5f3d48b19ecfb1a42df74f93c413c25a2ed04b8c`
-
 ## 次に行うこと
 
-Topic 02 `0系の直流主電動機はどんな特性だった？` の制作前EXAM_ALIGNMENTから開始する。
+Topic 02の解説本文＋3段階例題を作成する。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`に従い、本文作成より先に次を行う。
+制作前EXAM_ALIGNMENTの要求事項をすべて本文節へ対応させ、特にH24二次機械・制御問1の対象(1)〜(4)と同型の「損失→電機子抵抗→逆起電力→速度→部分負荷端子電圧」を途中式付きで解ける状態にする。
 
-- 電気技術者試験センター公式過去問を直近年度優先で調査
-- 一次・二次合わせ原則5問以上を選定
-- 二次対象論点で該当記述問題があれば最低1問含める
-- 各問の要求知識、使用式、設問型、典型ミスを分解
-- 参考教材を複数系統確認
-- source MarkdownへEXAM_ALIGNMENTと教材で必要な説明を記録
+0系主電動機の形式・定格値・制御条件など実車情報を使う場合は、鉄道・メーカー等の一次資料で確認し、公開値・計算値・仮定値を区別する。確認できない実車値は推測しない。
 
-この制作前品質ゲートを終えるまで、Topic 02の解説本文には進まない。
+完成数は `1 / 22` のまま。解説本文だけでは `completed` にしない。
