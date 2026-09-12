@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 0 / 22
-- current_status: `topic_01_powerpoint_complete`
+- current_status: `topic_01_independent_reanswer_complete`
 - last_completed_topic: `none`
 - active_topic: `01 0系の主変圧器を等価回路で解剖する`
-- next_start: Topic 01の選定6問を、保存済み正答を先に見ず、source Markdown・解説PDF・練習PDF・PowerPointだけで独立再解答する。公式選択、途中式、換算側、成立条件・近似条件、単位、根拠まで教材内で完結することを確認する
+- next_start: Topic 01の最終QAを行う。必須成果物4種と完成後独立再解答記録の実在、EXAM_ALIGNMENTとの対応、解説PDF・練習PDF・PowerPoint・source Markdown間の数式・数値・出典・仮定値表示の整合、一次・二次の過去問対応品質ゲートを確認し、すべてPASSした場合のみcompletedへ変更する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -22,19 +22,22 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの独立再解答
+- [x] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 01の解説画像PowerPoint `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_images.pptx` を作成した。
+Topic 01の完成後独立再解答を実施し、記録を `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_independent_reanswer.md` に保存した。
 
-16:9・4枚構成。source Markdown・解説PDF・練習PDFから、一次・二次換算、一次換算簡易等価回路、無負荷試験・短絡試験、`%Z/%r/%x`、遅れ/進み力率の電圧変動率、鉄損・銅損・規約効率・最大効率、並列運転、二次答案の解法フロー、0系主変圧器への接続を式と要点で整理した。
+対象は選定済みの一次1問＋二次記述5問。
 
-0系については一次資料確認済みの `25 kV / 60 Hz`、`1650 kVA`、低圧タップ切換、25段のみを公開値として示し、一次側定格相当電流 `66 A` は公開仕様からの計算値と明示した。0系固有の `R, X, g0, b0, %Z`、鉄損・銅損は未確認のため実値化していない。
+- R7 一次 機械 問3: `(1)リ (2)カ (3)ヲ (4)ロ (5)ニ`、`R=3.00 Ω`, `Z=9.20 Ω`, `X=8.70 Ω`
+- R6 二次 機械・制御 問2: `g0=5.00×10^-5 S`, `b0=1.20×10^-4 S`, `R=16 Ω`, `X=12 Ω`, `p=4.0 %`, `q=3.0 %`、電圧変動率5.0 % / 2.5 %
+- R3 二次 機械・制御 問2: `%r=0.75 %`, `%x=4.44 %`, `Z=27.2 Ω`, `R=4.54 Ω`, `X=26.8 Ω`, `V2≈423 V`, `QL≈169 kvar`
+- R2 二次 機械・制御 問2: 鉄損400 W、定格銅損624 W、最大効率負荷率80.0 %、最大効率99.0 %、30 %負荷・力率60 %で97.5 %
+- H28 二次 機械・制御 問2: `g0=2.40×10^-6 S`, `b0=1.99×10^-5 S`, `R=35.7 Ω`, `X≈115 Ω`、全負荷電圧変動率4.09 %、半負荷効率97.7 %、半負荷電圧変動率2.04 %
+- H27 二次 機械・制御 問2: 巻数比31.4、定格一次電流15.2 A、短絡インピーダンス3.30 %、`r=5.23 Ω`, `x=13.4 Ω`、フェーザ図と電圧変動率近似式を導出
 
-外部図版は使用していない。最終スライドに公式過去問、参考教材、0系実車資料、内部正本をまとめた。
-
-全4スライドをレンダリングして目視確認し、文字欠け・重なり・クリッピングなし。`slides_test.py` のcanvas overflow検査もPASSした。
+6問すべて、問題文の数値・条件と完成教材に収録済みの公式・解法から再計算・再導出でき、計算後の公式標準解答照合で一致した。教材外の知識補完は不要だった。
 
 ## 判定
-Topic 01 はPowerPointまで完了したが、まだ `completed` ではない。次工程は、選定済み一次1問＋二次記述5問を完成教材だけで独立再解答すること。独立再解答と最終QA PASSまでは完成数へ加算しない。
+Topic 01 は独立再解答までPASSしたが、まだ `completed` ではない。次工程は最終QA。最終QA PASSまでは完成数へ加算しない。
