@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 1 / 12
-- current_status: `topic_02_powerpoint_complete`
+- current_status: `topic_02_exam_reanswer_complete`
 - last_completed_topic: `01 単位・指数・有効数字`
 - active_topic: `02 三角比・三角関数`
-- next_start: Topic 02の選定公式過去問5問を、完成教材だけを使って独立再解答する
+- next_start: Topic 02の最終QAを行い、品質ゲートをすべて再確認する
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -21,21 +21,26 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの独立再解答
+- [x] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 02 `三角比・三角関数` の解説画像PowerPointを作成した。
+Topic 02 `三角比・三角関数` の完成後独立再解答を実施した。
 
-成果物:
-- `topics/02_trigonometric_functions/02_trigonometric_functions_images.pptx`
-- 16:9、7枚
-- 収録内容: `sin/cos/tan` と単位円、正弦波 `Ym・ω・f・T・φ`、位相差・進み遅れ・時間差、`sin/cos` 90°変換、`A sin x+B cos x` の合成、R-X-Zと力率、25 kV正弦波モデル、標準解法・頻出ミス
-- 選定過去問5問の要求数学を該当スライドへ接続
-- 全7枚を1600×900相当でレンダリングし、文字切れ・図表欠落・重なり・黒塗りを目視確認
-- 全shapeの座標を検査し、スライドキャンバス外へのはみ出し0件
+記録:
+- `topics/02_trigonometric_functions/02_trigonometric_functions_exam_reanswer.md`
+- 対象: R8上 理論 問8、R7上 理論 問8、R6下 理論 問8、R6上 理論 問15、R5上 理論 問9
+- 5問6小問 / 6小問 PASS
+- 公式解答と全件一致
+- 数値は独立計算でも再確認
+- 複素数、極形式・フェーザ、空間ベクトル、微積分、体系的RLC解析は追加していない
 
-現行EXAM_ALIGNMENT、解説本文、練習PDFの固定範囲から追加していない。複素数、極形式・フェーザ、空間ベクトル、微積分、体系的RLC回路解析は追加していない。
+再解答結果:
+- R8上 問8: (1) `E=20 V`, `P=96 W`
+- R7上 問8: (5) `t=1/480 s`
+- R6下 問8: (3) 最大値倍率2、`π/3`進み
+- R6上 問15: (a)(4), (b)(3) `L=10 mH`, `Wmax=12.5 J`
+- R5上 問9: (3) `cosφ≈0.577`
 
 ## 判定
-Topic 02は `powerpoint_complete`。完成数は `1 / 12` のまま。次工程は完成教材だけを使った選定公式過去問5問の独立再解答。
+Topic 02は `exam_reanswer_complete`。完成数は `1 / 12` のまま。次工程は最終QA。
