@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 1 / 14
-- current_status: `topic_01_completed`
+- current_status: `topic_02_exam_alignment_complete`
 - last_completed_topic: `01 新幹線1編成はどれだけ電気を食う？`
 - active_topic: `02 なぜ新幹線は25,000Vなのか`
-- next_start: Topic 02の制作前EXAM_ALIGNMENTを行う。公式過去問を直近年度優先で原則5問以上調査し、要求知識・式・設問型・教材で必要な説明をsource Markdownへ先に固定する
+- next_start: Topic 02の解説本文と3段階例題（基礎・本試験標準・複合/ひっかけ）を作成する
 
 ## Topic 01 進捗
 
@@ -30,21 +30,36 @@
 - [x] 完成後の公式過去問独立再解答
 - [x] QA PASS
 
+## Topic 02 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] 令和8年度上期・令和7年度下期・令和7年度上期の公式理論問題から直近6候補を確認
+- [x] 候補6問をTopic 02境界で判定
+- [x] 直並列回路、回路網、RLC等を要求する5問をゲート対象外に整理
+- [x] 令和7年度下期 理論 問6をTopic 02単独の独立再解答ゲート対象として確定
+- [x] 5問未満例外を適用
+- [x] e-sysnet、電験王、電験三種まとめましたを確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材で必要な説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 01 `新幹線1編成はどれだけ電気を食う？` の最終QAを実施し、`topics/01_train_power_basics/01_train_power_basics_final_qa.md` に記録した。
+Topic 02 `なぜ新幹線は25,000Vなのか` の制作前EXAM_ALIGNMENTを完了し、`topics/02_why_25kv/02_why_25kv.md` を作成した。
 
 確認結果:
 
-- 必須成果物4種のGitHub実在: PASS
-- 三種公式過去問のEXAM_ALIGNMENT: PASS（5問未満例外を適正適用）
-- source Markdownと解説PDF・練習PDF・PowerPointの対応: PASS
-- 練習PDF15問（基礎4・本試験標準8・複合応用3、全問五肢択一）の仕様適合: PASS
-- 計算・単位・有効数字の整合: PASS
-- 実車値・仮定値の区別: PASS
-- 既実施レンダリングQAと現行blob SHAの対応: PASS
-- 完成後独立再解答: 平成29年度理論問14 1 / 1 PASS、教材外知識補完0件
+- 直近公式過去問6候補を確認: PASS
+- Topic 02単独ゲート対象: 令和7年度下期 理論 問6
+- 5問未満例外: 適用
+- 後続Topic知識の先取り回避: PASS
+- 参考教材2系統以上: PASS
+- 教材で必要な説明事項の固定: PASS
 
 ## 判定
 
-Topic 01を `completed` とする。完成数を `1 / 14` に更新し、最初の未完了テーマをTopic 02へ移した。
+Topic 02は `exam_alignment_complete`。完成数は `1 / 14` のまま。次工程は解説本文＋3段階例題。
