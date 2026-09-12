@@ -5,39 +5,44 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 1 / 21
-- current_status: `topic_01_completed`
+- current_status: `topic_02_exam_alignment_complete`
 - last_completed_topic: `01 25kV架線を一つの等価回路にする`
 - active_topic: `02 架線は長くなるとなぜ電圧が落ちる？`
-- next_start: Topic 02の制作前EXAM_ALIGNMENTを行う。公式過去問を直近年度優先で原則5問以上調査し、要求知識・式・設問型・教材内必要説明をsource Markdownへ先に固定する。`08 理論・二種` はMASTER_SPECどおり一次理論を中心とし、二次形式を数合わせで追加しない
+- next_start: Topic 02の解説本文と3段階例題を作成する。制作前EXAM_ALIGNMENTで固定した一次理論3問＋二次電力・管理3問の要求事項を満たし、`SPEC.md` の抵抗率・導電率・温度係数・電流密度・電圧降下・ジュール損・電力損失・`R=ρl/S` から逸脱しない
 
-## Topic 01 品質ゲート進捗
+## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
-- [x] 公式過去問を一次理論から7問選定
-- [x] `08 理論・二種` は一次理論中心であり二次問題を無理に付けない上位仕様を確認
-- [x] 参考教材を複数系統確認
-- [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
-- [x] 公式解答との照合を伴う要求事項の独立検証
-- [x] 解説本文
-- [x] 解説PDF
-- [x] 練習PDF（解答・完全解説付き）
-- [x] 解説画像PowerPoint
-- [x] 公式過去問の教材のみでの独立再解答
-- [x] 最終QA PASS
+- [x] 公式過去問を直近年度優先で調査
+- [x] 一次理論3問＋二次電力・管理3問を選定
+- [x] `08 理論・二種` の一次中心原則を維持し、二次は直接関連問題だけを採用
+- [x] 参考教材をe-sysnet＋電験王2の複数系統で確認
+- [x] source Markdownへ要求知識・式・設問型・典型ミス・教材内必要説明を固定
+- [x] 公式解答との照合を伴う制作前独立検証 6 / 6 PASS
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習PDF（解答・完全解説付き）
+- [ ] 解説画像PowerPoint
+- [ ] 公式過去問の教材のみでの完成後独立再解答
+- [ ] 最終QA
 
 ## 今回進めた内容
-Topic 01の最終QAを実施し、`topics/01_catenary_equivalent_circuit/01_catenary_equivalent_circuit_final_qa.md` に記録した。
 
-確認結果:
+Topic 02の制作前EXAM_ALIGNMENTを完了し、`topics/02_catenary_voltage_drop/02_catenary_voltage_drop.md` を作成した。
 
-- 必須成果物4種のGitHub実在: PASS
-- 一次理論7問のEXAM_ALIGNMENT: PASS
-- 二種一般の一次・二次ゲートに対し、`08 理論・二種` はMASTER_SPECの一次中心例外規定を適用: PASS
-- source Markdownの要求事項と解説PDF・練習PDF・PowerPointの対応: PASS
-- 実設備と教育用等価回路モデルの区別: PASS
-- 既実施レンダリングQAと現行blob SHAの対応: PASS
-- 完成後独立再解答: 7 / 7 PASS、教材外知識補完0件
-- Webカタログ登録: 同checkpointで反映
+選定過去問:
+
+- 一次 理論 R6 問2(3): 導電率・断面積・単位長さ抵抗・直流電圧
+- 一次 理論 R1 問5(1): 一様電流密度と断面内電流
+- 一次 理論 H27 問1(3)(4): 電流密度・局所オーム則
+- 二次 電力・管理 R5 問4(1): 三相線路の線路定数と電圧降下
+- 二次 電力・管理 R1 問4(2): 分布負荷の `I²R` 損失
+- 二次 電力・管理 H27 問3: 分布負荷の抵抗分電圧降下
+
+R8・R7一次理論も直近年度優先で確認したが、本Topicを直接主題にする問題ではなかったため採用せず、R6以前へ遡った。複合問題は本Topicに直接対応する小問だけをマッピングし、磁界・静電容量・表皮効果等を仕様へ追加していない。
+
+温度係数は選定6問の直接主題ではないが、系列SPECの明示事項として教材必須項目に固定した。過去問出題実績としては扱わない。
 
 ## 判定
-Topic 01を `completed` とする。完成数を `1 / 21` に更新し、最初の未完了テーマをTopic 02へ移した。
+
+Topic 02を `topic_02_exam_alignment_complete` とする。完成数は `1 / 21` のまま。次段階は解説本文＋3段階例題。
