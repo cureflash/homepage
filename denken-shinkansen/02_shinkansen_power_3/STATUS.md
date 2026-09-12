@@ -5,13 +5,13 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 0 / 16
-- current_status: `topic_01_practice_pdf_complete`
+- current_status: `topic_01_powerpoint_complete`
 - last_completed_topic: なし
 - active_topic: `01 新幹線の電気はどこから来る？`
-- next_start: Topic 01 の解説画像PowerPointを作成する
+- next_start: Topic 01 の選定5問を、保存済み正答を先に見ず、完成教材だけで独立再解答し、公式解答と照合する
 
 ## 新品質ゲート進捗
-- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・選定5問の独立再解答/公式照合PASS。解説本文・解説PDF・練習PDFまで完了。PowerPointは未完了
+- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・制作前の選定5問独立再解答/公式照合PASS。解説本文・解説PDF・練習PDF・解説画像PowerPointまで完了。完成後独立再解答は未完了
 - [ ] 02〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -33,7 +33,7 @@ Topic 01の既定範囲に適合する次の5問へ差し替え済み。
 4. R4上 電力 問8 — 三相負荷電流・抵抗損失
 5. R1 電力 問7 — 変電所の昇降圧・電圧調整・系統切換え・系統保護
 
-## 01 独立再解答
+## 01 制作前独立再解答
 公式解答を先に見ず5問を再解答し、その後に電気技術者試験センター公式解答と照合した。
 
 - R7上 問13: 独立解答 (2) / 公式 (2) — PASS
@@ -82,8 +82,21 @@ Topic 01の既定範囲に適合する次の5問へ差し替え済み。
 - 180 dpiで全7ページをPDFiumとpdftoppmの両方でレンダリング確認
 - 文字欠け・重なり・クリッピング・壊れたグリフなし
 
+## 01 解説画像PowerPoint
+解説本文の既定範囲だけを使い、次を作成した。
+
+- `topics/01_power_system_overview/01_power_system_overview_images.pptx`
+- 16:9・4枚
+- Slide 1: 一般電力系統と新幹線側の供給経路
+- Slide 2: 単相/三相有効電力、`3I²R`、高電圧化と損失率
+- Slide 3: 三相交流と新幹線の単相交流25 kV、必要導体量 `3/4`
+- Slide 4: 変電所の4役割と選定5問への接続
+- 後続Topicの詳細論点は追加していない
+- LibreOfficeでPDF化し、pdftoppm 140 dpiで全4枚をレンダリング確認
+- 文字欠け・重なり・クリッピングなし
+
 ## 01 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASSし、解説本文・解説PDF・練習PDFまで完成。PowerPointが未完了のため、完成数は0/16のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASSし、解説本文・解説PDF・練習PDF・解説画像PowerPointまで完成。完成後の独立再解答が未完了のため、完成数は0/16のまま。
 
 ## 次
-Topic 01の解説画像PowerPointを作成する。
+Topic 01の選定5問を、保存済み正答を先に見ず、完成教材だけで独立再解答し、公式解答と照合して最終PASSを判定する。
