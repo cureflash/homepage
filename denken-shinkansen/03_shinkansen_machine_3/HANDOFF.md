@@ -6,14 +6,14 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は1/16。Topic 01は品質ゲートPASSでcompleted。active topicは02 `初代0系はどうやって走っていた？`。
 
 ## 今回進捗
-Topic 02 を `topic_02_explanation_pdf_complete` から `topic_02_practice_questions_complete` へ1段階進めた。
+Topic 02 を `topic_02_practice_questions_complete` から `topic_02_practice_pdf_complete` へ1段階進めた。
 
 GitHub正本更新:
-- `topics/02_dc_machine/02_dc_machine_practice.md` — 練習問題12問と完全解説を作成
+- `topics/02_dc_machine/02_dc_machine_practice.pdf` — 練習問題12問＋完全解説をA4縦5ページで組版
 - `STATUS.md`
 - `HANDOFF.md`
 
-練習PDF、PowerPoint、完成後独立再解答には着手していない。今回の段階は練習問題source作成と数値・範囲QAのみ。
+練習PDFは全5ページをレンダリングし、文字欠け・重なり・クリッピング・可読性を確認してPASS。テキスト抽出でも `正答:` 12件を確認した。PowerPoint、完成後独立再解答には着手していない。
 
 ## Topic 02 EXAM_ALIGNMENT
 公式過去問は直近年度から6問を選定済み。
@@ -58,6 +58,17 @@ GitHub正本更新:
 - 問11 `η≈82.3 %`
 - 問12 `N2≈1839 min^-1`, `T2/T1=0.50`
 
+## 練習PDF
+`topics/02_dc_machine/02_dc_machine_practice.pdf`
+
+- A4縦 5ページ
+- sourceの12問を全て五肢択一で収録
+- 問題文、選択肢、正答、完全解説を欠落なく組版
+- 基礎3問、本試験標準7問、複合・応用2問
+- 全5ページをレンダリング確認し、文字欠け・重なり・クリッピング・可読性PASS
+- テキスト抽出で `正答:` 12件を確認
+- 0系の未確認実車定格値、Topic 03の速度制御体系は追加していない
+
 ## 既存解説PDF
 `topics/02_dc_machine/02_dc_machine_explanation.pdf`
 
@@ -74,7 +85,7 @@ Topic 02では過去問対応に必要な `V=E+IaRa`、`E=kΦN` と速度・ト�
 ## QA判定
 Topic 01: `PASS / completed`。
 
-Topic 02: 制作前 `EXAM_ALIGNMENT`、解説本文・3段階例題、解説PDF、12問の練習問題・完全解説まで完了。練習問題は三種仕様の問題数、難易度配分、五肢択一比率を満たし、選定6問の要求事項を全てカバーした。テーマ自体は未完了で、練習PDF、PowerPoint、完成後独立再解答が残る。完成数は1/16。
+Topic 02: 制作前 `EXAM_ALIGNMENT`、解説本文・3段階例題、解説PDF、12問の練習問題・完全解説、練習PDFまで完了。練習PDFは全ページのレンダリングQAまでPASS。テーマ自体は未完了で、PowerPoint、完成後独立再解答が残る。完成数は1/16。
 
 ## 次の正確な開始点
-`topics/02_dc_machine/02_dc_machine_practice.md` を正本として練習PDFを作成する。全12問の問題文・選択肢・解答・完全解説を欠落させず組版し、全ページをレンダリングして文字欠け、重なり、クリッピング、改ページ、可読性を確認する。未確認実車値とTopic 03の速度制御体系は追加しない。
+Topic 02の確定済みsource範囲だけを使って `topics/02_dc_machine/02_dc_machine_images.pptx` を作成する。全スライドをレンダリングし、文字欠け・重なり・クリッピング・overflow・可読性を確認する。未確認実車値とTopic 03の速度制御体系は追加しない。
