@@ -1,0 +1,57 @@
+name: Temporary Practice PDF Assembly
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tmp-practice-pdf.yml'
+      - '.tmp_practice_pdf/trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify chunks and assemble exact PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo '6de9506a77197561afc6557ac6f2ef0c6f4911af18c3ea27fdfd685c0910a932  .tmp_practice_pdf/0.b64' | sha256sum -c -
+          echo 'b5aff99238dd25b8ac9da2d3bfe3b36f3cc43076fd28f698f90297a6039e78bc  .tmp_practice_pdf/1.b64' | sha256sum -c -
+          echo 'e282f4e068e7466311f1cf1e1a329c20e0e31e91662d093fce8d6ba3b7b1e2b7  .tmp_practice_pdf/2.b64' | sha256sum -c -
+          echo '44caf6fdfbc12b097faabcb0a1c26a7b1f1bfb68e2dd3a4c970a15885848d7d7  .tmp_practice_pdf/3.b64' | sha256sum -c -
+          echo 'dd41ad9a9b28c2aee8bbe8b6991500b62e7dca2d4fae0e8fde1ffb66b986025f  .tmp_practice_pdf/4.b64' | sha256sum -c -
+          echo '2def7c5733974a66631ded8420c27d180f52dbc9c02f801ad4cc19029957d1ce  .tmp_practice_pdf/5.b64' | sha256sum -c -
+          echo '97aa00a49d1fe406afee3bc8f4959ef1f29f1a9a5e28c339af962d5cc47173a1  .tmp_practice_pdf/6.b64' | sha256sum -c -
+          echo '65b4e9e75d3825050e46e4f82042585e3fa60d83a4b47c9d028b5915f28213f8  .tmp_practice_pdf/7.b64' | sha256sum -c -
+          cat .tmp_practice_pdf/{0,1,2,3,4,5,6,7}.b64 | base64 -d > /tmp/practice.pdf
+          test "$(wc -c < /tmp/practice.pdf)" -eq 20874
+          test "$(git hash-object /tmp/practice.pdf)" = '46c5058870ca1fbf5a2aa5be6b878835e79fc050'
+      - name: Commit exact PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          git checkout main
+          git pull --rebase origin main
+          target='denken-shinkansen/05_shinkansen_vehicle_2/topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_practice.pdf'
+          cp /tmp/practice.pdf "$target"
+          git add "$target"
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'Fix Topic 02 vehicle practice PDF bytes'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            git pull --rebase origin main
+          done
+          exit 1
