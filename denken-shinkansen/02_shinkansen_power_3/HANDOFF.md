@@ -6,10 +6,10 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は1/16。Topic 01は完成済み、active topicは02 `上越新幹線を水の力で走らせる`。
 
 ## 今回進捗
-Topic 02を1段階進め、解説画像PowerPoint作成＋全スライド表示QAまで完了した。
+Topic 02を1段階進め、完成教材だけによる公式過去問独立再解答を完了した。品質ゲート対象6問・7小問は公式解答と7/7一致し、教材外知識の補完0件でPASS。
 
 更新成果物:
-- `topics/02_hydropower/02_hydropower_images.pptx`
+- `topics/02_hydropower/02_hydropower_exam_reanswer.md`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -66,7 +66,7 @@ Topic 02を1段階進め、解説画像PowerPoint作成＋全スライド表示Q
 
 200 dpiで全4ページをレンダリングし、文字欠け、クリップ、重なりがないことを確認。表示QAは `PASS`。
 
-## 今回作成した解説画像PowerPoint
+## 解説画像PowerPoint
 `topics/02_hydropower/02_hydropower_images.pptx`
 
 - 16:9・7枚
@@ -78,10 +78,26 @@ Topic 02を1段階進め、解説画像PowerPoint作成＋全スライド表示Q
 
 表示QA: `PASS`。
 
+## 今回完了した完成後独立再解答
+記録: `topics/02_hydropower/02_hydropower_exam_reanswer.md`
+
+完成教材だけで以下を再解答し、その後に電気技術者試験センター公式解答と照合した。
+
+1. R8上 電力 問2 — `14.60 TWh` → (5) — PASS
+2. R8上 電力 問15(a) — 発電 `約192500 kW`、揚水入力 `約213750 kW` → (5) — PASS
+3. R8上 電力 問15(b) — 揚水 `10 h`、電力量効率 `約72.0%` → (3) — PASS
+4. R7下 電力 問2 — `(1/2)ρv^2` → (1) — PASS
+5. R7上 電力 問1 — `N`, `J`, `W`, `kW` の単位連鎖 → (2) — PASS
+6. R3 電力 問2 — `vB=3.63 m/s`, `pB≈315.9 kPa` → (3) — PASS
+7. H25 電力 問1 — 衝動/ペルトン、反動/フランシス、軸方向/プロペラ、クロスフロー → (4) — PASS
+
+結果: `7/7 PASS`。教材外知識補完0件。Topic 02固定範囲外の論点追加0件。
+
 ## 現在状態
-- `current_status`: `topic_02_powerpoint_complete`
+- `current_status`: `topic_02_exam_reanswer_complete`
 - 完成数: 1/16のまま
-- Topic 02の完成後独立再解答・最終QAは未着手
+- Topic 02の完成後独立再解答はPASS
+- 最終QAは未実施
 
 ## 次の正確な開始点
-Topic 02の品質ゲート対象7小問を、保存済み正答を見ずに完成教材だけで独立再解答する。全問について教材だけで公式選択・途中式・根拠説明ができることを確認し、その後に公式解答と照合して最終QAを行う。
+Topic 02の最終QAを実施する。`EXAM_ALIGNMENT`、解説PDF・練習PDF・PowerPoint・source Markdownの存在と表示QA、完成後独立再解答7/7 PASS、固定範囲逸脱・未確認実値の有無を総合確認する。PASSした場合のみTopic 02を`completed`として完成数を2/16へ更新し、Topic 03へ進む。
