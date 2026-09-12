@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 0 / 14
-- current_status: `topic_01_powerpoint_complete`
+- current_status: `topic_01_independent_reanswer_complete`
 - last_completed_topic: なし
 - active_topic: `01 新幹線1編成はどれだけ電気を食う？`
-- next_start: Topic 01の完成教材だけで平成29年度理論問14を独立再解答し、最終QAを行う
+- next_start: Topic 01の最終QAを行い、PASS時のみcompletedへ変更する
 
 ## Topic 01 進捗
 
@@ -27,27 +27,25 @@
 - [x] 解説PDF
 - [x] 練習PDF（15問、全問五肢択一、完全解説）
 - [x] 解説画像PowerPoint
-- [ ] 完成後の公式過去問独立再解答
+- [x] 完成後の公式過去問独立再解答
 - [ ] QA PASS
 
 ## 今回進めた内容
 
-Topic 01の解説画像PowerPointを作成し、GitHub正本へ追加した。
+Topic 01の確定ゲート対象である平成29年度理論問14を、完成教材だけを使って独立再解答した。
 
-成果物:
-`topics/01_train_power_basics/01_train_power_basics_images.pptx`
+判定:
+- (1): 加算の有効数字処理から誤り
+- (2): 除算の有効数字処理から誤り
+- (3): `m=10^-3` と電荷量計算から誤り
+- (4): `10 mA=0.010 A` と単位整合から誤り
+- よって正答は `(5)`
 
-PowerPointは16:9・4枚。既存source Markdownで確定済みの範囲だけを使い、次を可視化した。
+独立解答後に電気技術者試験センター公式解答と照合し、公式正答 `(5)` と一致した。
 
-- 電圧・電流・抵抗・電力・電力量の関係と `V=RI`, `P=VI`, `P=I²R`, `P=V²/R`, `W=Pt`
-- SI接頭語 `M / k / m`、指数表記、単位統一、有効数字
-- Topic 01の標準解法手順
-- SPECで許可された教材用仮定 `10 MW / 25 kV = 400 A`
-- 平成29年度理論問14で要求される技能と頻出ミス
+(5)に含まれる静電容量の単位関係はTopic 04の範囲なので、Topic 01へ新規説明を追加していない。(1)〜(4)をTopic 01教材内の有効数字・SI接頭語・単位処理だけで排除して一意に解答しており、教材外知識の補完は使っていない。
 
-実車消費電力の真値とは扱わず、Topic 05以降の回路網や後続Topicの静電気・電磁気・測定知識も先取りしていない。
-
-全4枚をレンダリング確認し、文字欠け・重なり・クリッピング・ページ外はみ出しがないことを確認した。overflow検査もPASS。
+独立再解答結果は `topics/01_train_power_basics/01_train_power_basics.md` の `独立再解答` 節へ記録した。
 
 ## 注意
 
@@ -55,4 +53,4 @@ PowerPointは16:9・4枚。既存source Markdownで確定済みの範囲だけ�
 
 このため上位仕様の「該当問題が5問未満しか確認できない場合は確認できた全件」例外を適用し、Topic 01のゲート集合は平成29年度理論問14の1問で固定する。
 
-Topic 01はPowerPointまで完了したが、完成後独立再解答・最終QA PASSが未完了のため、完成数には加算しない。
+Topic 01は独立再解答まで完了したが、最終QA PASSが未完了のため、完成数には加算しない。
