@@ -4,147 +4,60 @@
 
 ## 現在地
 
-Topic 01 `複素数・複素指数・フェーザ計算` は最終QAまでPASSし、`completed`。
+Topic 01 `複素数・複素指数・フェーザ計算` は `completed`。
 
-完成数: `1 / 20`
+Topic 02 `ベクトルと座標変換` も最終QAまで完了し `completed`。
 
-active topic: `02 ベクトルと座標変換`
+完成数: `2 / 20`
 
-current status: `topic_02_exam_reanswer_complete`
+current_status: `topic_02_completed`
 
-## Topic 02 source
+active_topic: `03 偏微分・全微分`
+
+## Topic 02 最終QA
+
+記録:
+`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_final_qa.md`
+
+判定: PASS
+
+確認済み:
+- source Markdown
+- 解説PDF
+- 練習PDF
+- 解説画像PowerPoint
+- EXAM_ALIGNMENT
+- 制作前独立検証
+- 完成後独立再解答
+
+品質ゲート対象は二種一次理論の公式過去問5問・25小問。制作前独立検証・完成後独立再解答ともに25 / 25小問 PASS、公式解答と全件一致。完成後再解答の教材外知識補完は0件。
+
+既実施のレンダリング・構造QAと現行blob SHAを照合し、解説PDF3ページ、練習PDF5ページ、PowerPoint4枚の現行成果物がQA対象版と一致することを確認した。
+
+本Topicの範囲は `SPEC.md` の成分表示、内積、外積、基底、座標変換の基本、回転変換に限定している。対称座標法そのものの詳細、Topic 11の一般的な行列・線形連立方程式、抽象ベクトル解析、未確認の新幹線実車値・設備値は追加していない。
+
+## Topic 02 現行成果物
 
 source Markdown:
 `topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms.md`
 
-source blob SHA:
-`92e87f72cd5be5a6710a496d06b16e0df578a2f5`
-
 解説PDF:
 `topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_explanation.pdf`
-
-解説PDF blob SHA:
-`934254383ff400046bee02b10b001a4e3bdec04a`
 
 練習PDF:
 `topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_practice.pdf`
 
-練習PDF blob SHA:
-`ce088bb49ee53003e6dce0dcad0bd0ddbf5adfdf`
-
 解説画像PowerPoint:
 `topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_images.pptx`
 
-PowerPoint blob SHA:
-`8730709536aeec283de45296fb940bf26387c37c`
-
-完成後独立再解答記録:
+完成後独立再解答:
 `topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_exam_reanswer.md`
 
-完成後独立再解答記録 blob SHA:
-`f5a03d016507f95a3b4dd09f302ef35e32e8b068`
-
-## Topic 02 制作前EXAM_ALIGNMENT
-
-選定公式過去問:
-
-- R8 一次 理論 問1
-- R8 一次 理論 問2
-- R7 一次 理論 問2
-- R7 一次 理論 問7
-- R1 一次 理論 問5
-
-制作前独立再解答:
-
-- 5問 / 25小問 PASS
-- 公式解答との一致: 25 / 25
-- 参考教材: e-sysnet + 電験王2 の2系統以上
-- 直近年度優先: R8 2問 + R7 2問
-
-## Topic 02 解説PDF
-
-A4縦3ページ。
-
-収録範囲:
-
-- 成分表示とベクトル合成
-- 基底と成分
-- 大きさと単位ベクトル
-- 内積と射影・成分抽出
-- 外積の大きさ・向き・右手系
-- ローレンツ力 `q(v×B)` と負電荷での反転
-- 回転対称性による成分相殺
-- 直交座標と `r=sqrt(x^2+y^2)`
-- 半径方向・円周方向から直交成分への読み替え
-- 2次元回転変換と逆変換
-- `M=M0 cosθ` と射影
-- 三相120°ベクトルの幾何学的合成
-- 標準解法アルゴリズム
-- 3段階例題
-- 選定5過去問と教材節の対応表
-
-全3ページを180 dpiでレンダリングし、文字切れ・重なり・欠落・黒塗り・ページ外はみ出しがないことを目視確認済み。
-
-## Topic 02 練習PDF
-
-A4縦5ページ、全12問。
-
-- 問1〜8: 二種一次理論を意識した五肢択一
-- 問9〜12: 本試験標準〜複合の記述計算
-- 成分表示、射影、内積、外積、負電荷の方向反転、回転対称性、半径・円周方向、2次元回転変換、三相120°を演習化
-- 各問に途中式・使用理由・符号・単位・検算を含む完全解説
-- 全5ページを180 dpiでレンダリングし、文字切れ・重なり・欠落・黒塗り・ページ外はみ出しなしを目視確認済み
-
-## Topic 02 解説画像PowerPoint
-
-16:9、4枚。
-
-- スライド1: 成分表示・基底・大きさ・単位ベクトル・成分抽出
-- スライド2: 内積による射影、外積、ローレンツ力、負電荷での方向反転
-- スライド3: 2次元回転変換、逆変換、半径・円周方向から直交成分への読み替え、`M=M0 cosθ`
-- スライド4: 標準解法アルゴリズム、120°三相ベクトル、選定5過去問との対応
-- 全4枚を160 dpi相当でレンダリングし、文字切れ・重なり・欠落・黒塗り・ページ外はみ出しなしを目視確認済み
-- PPTXパッケージ整合性検査PASS
-- 全shapeのスライド外はみ出し検査PASS
-
-## Topic 02 完成後過去問再解答
-
-完成教材の説明範囲だけで選定5問を再導出し、公式解答と照合した。
-
-- R8 一次 理論 問1: `(1)カ (2)リ (3)ホ (4)ヲ (5)ロ` — 5/5一致
-  - 球内電界を中心向きベクトルとして扱い、通路方向へ射影して `F_x=-ρqx/(3ε0)`、`m x''=F_x`、単振動周期へ接続。
-- R8 一次 理論 問2: `(1)ル (2)リ (3)ヨ (4)カ (5)ハ` — 5/5一致
-  - `I=λωr`、ビオ・サバール則の外積方向、回転対称性による横成分相殺、軸方向成分の積分、鎖交磁束とファラデー則へ接続。
-- R7 一次 理論 問2: `(1)ヲ (2)ワ (3)チ (4)イ (5)ヨ` — 5/5一致
-  - `M=M0 cosθ` の射影、`M0^2<=L1L2`、磁気エネルギー、角度微分によるトルク、`θ=ωt` から磁束・起電力へ接続。
-- R7 一次 理論 問7: `(1)イ (2)ハ (3)ル (4)ヨ (5)ホ` — 5/5一致
-  - `F=q(v×B)` の外積と負電荷による反転、`|F|=eμ0Hv0`、`a=v0^2/r`、周回周波数を導出。
-- R1 一次 理論 問5: `(1)ト (2)イ (3)ニ (4)ヌ (5)カ` — 5/5一致
-  - `r=sqrt(x^2+y^2)`、円柱内外の磁束密度、円周方向から `B_y` への成分変換と符号反転を使用。
-
-結果:
-
-- 5問 / 25小問 PASS
-- 公式解答との一致: 25 / 25
-- 教材外知識の補完: 0件
-
-## 範囲外として維持するもの
-
-- 対称座標法そのものの詳細
-- Topic 11の一般的な行列・線形連立方程式
-- SPECにない抽象ベクトル解析
-- 未確認の新幹線実車値・設備値
-
-二次記述問題は数合わせで追加しない。本テーマの直接対応は一次理論のベクトル・座標処理である。
+最終QA:
+`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_final_qa.md`
 
 ## 次に行うこと
 
-Topic 02の最終QAを行う。
+Topic 03 `偏微分・全微分` の制作前EXAM_ALIGNMENTを行う。
 
-確認対象:
-- source Markdown・解説PDF・練習PDF・PowerPoint・完成後独立再解答記録の実在
-- 完成後再解答 5問 / 25小問のPASS記録
-- 教材間の式・符号・用語・範囲の整合
-- SPEC外内容が混入していないこと
-
-PASSした場合のみTopic 02を `completed` とし、完成数を `2 / 20` に更新する。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` に従い、電気技術者試験センターの公式過去問を直近年度優先で原則5問以上調査する。偏微分、全微分、多変数関数、感度、近似に直接必要な要求知識・式・設問型・教材内必要説明をsource Markdownへ先に固定する。Topic 04の極値・最適条件やTopic 11の一般行列論を先取りしない。
