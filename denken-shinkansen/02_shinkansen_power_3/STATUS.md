@@ -4,14 +4,14 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 0 / 16
-- current_status: `topic_01_powerpoint_complete`
-- last_completed_topic: なし
-- active_topic: `01 新幹線の電気はどこから来る？`
-- next_start: Topic 01 の選定5問を、保存済み正答を先に見ず、完成教材だけで独立再解答し、公式解答と照合する
+- exam_aligned_completed_topics: 1 / 16
+- current_status: `topic_01_completed`
+- last_completed_topic: `01 新幹線の電気はどこから来る？`
+- active_topic: `02 上越新幹線を水の力で走らせる`
+- next_start: Topic 02 の制作前 `EXAM_ALIGNMENT`。公式過去問を直近年度から調査し、水力発電の既定範囲に適合する原則5問以上を選定する
 
 ## 新品質ゲート進捗
-- [ ] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査・制作前の選定5問独立再解答/公式照合PASS。解説本文・解説PDF・練習PDF・解説画像PowerPointまで完了。完成後独立再解答は未完了
+- [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
 - [ ] 02〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -44,59 +44,29 @@ Topic 01の既定範囲に適合する次の5問へ差し替え済み。
 
 5/5一致。
 
-## 01 解説本文
-`topics/01_power_system_overview/01_power_system_overview.md` に、`MASTER_SPEC.md` の最低構成に沿う解説本文を追加した。
+## 01 成果物
+- source Markdown: `topics/01_power_system_overview/01_power_system_overview.md`
+- 解説PDF: `topics/01_power_system_overview/01_power_system_overview_explanation.pdf`
+- 練習PDF: `topics/01_power_system_overview/01_power_system_overview_practice.pdf`
+- 解説画像PowerPoint: `topics/01_power_system_overview/01_power_system_overview_images.pptx`
+- 完成後QA: `topics/01_power_system_overview/01_power_system_overview_final_qa.md`
 
-収録済み:
-- 発電→送電→変電→配電→需要家の全体像
-- 新幹線側の発電所→送電線→新幹線変電所→き電回路→電車線→パンタグラフ→車両
-- 単相 `P=VI cosφ`、三相 `P=√3VI cosφ`
-- 三相線路損失 `P_loss=3I²R` と損失率への式変形
-- 高電圧化・力率改善と電流/損失の関係
-- 三相3線式と単相2線式の必要導体量 `3/4` の導出
-- 変電所の昇降圧・電圧調整・系統切換え・系統保護、周波数変換所・交直変換所の用途
-- 再利用可能な解法手順
-- 基礎・本試験標準・複合の3段階例題
-- 選定5問と本文節の対応表
+解説PDFはA4縦4ページ、練習PDFはA4縦7ページ・全15問、PowerPointは16:9・4枚。各表示確認は完了済み。
 
-後続Topicの詳細へは踏み込んでいない。
+## 01 完成後独立再解答
+完成教材の既定範囲だけで選定5問を再解答し、解答確定後に公式解答と照合した。
 
-## 01 解説PDF
-完成済み本文を正本として、次を作成した。
+- R7上 問13: (2) — PASS
+- R6下 問12: (2) — PASS
+- R6上 問11: (2) — PASS
+- R4上 問8: (5) — PASS
+- R1 問7: (3) — PASS
 
-- `topics/01_power_system_overview/01_power_system_overview_explanation.pdf`
-- A4縦4ページ
-- 本文の既定範囲のみを整理し、追加仕様・追加論点は入れていない
-- 180 dpiで全4ページをPDFiumとpdftoppmの両方でレンダリング確認
-- 文字欠け・重なり・クリッピング・壊れたグリフなし
-
-## 01 練習PDF
-解説本文の既定範囲だけを使い、次を作成した。
-
-- `topics/01_power_system_overview/01_power_system_overview_practice.pdf`
-- A4縦7ページ
-- 全15問: 基礎4問 / 本試験標準8問 / 複合・応用3問
-- 全問五肢択一、解答一覧・完全解説付き
-- 発電→送電→変電→配電、単相/三相有効電力、`3I²R`、損失率、高電圧化、力率改善、導体量`3/4`、変電所/変換所、新幹線への供給経路を演習
-- 数値問題は式・代入・単位・中間値・最終値を再計算済み
-- 180 dpiで全7ページをPDFiumとpdftoppmの両方でレンダリング確認
-- 文字欠け・重なり・クリッピング・壊れたグリフなし
-
-## 01 解説画像PowerPoint
-解説本文の既定範囲だけを使い、次を作成した。
-
-- `topics/01_power_system_overview/01_power_system_overview_images.pptx`
-- 16:9・4枚
-- Slide 1: 一般電力系統と新幹線側の供給経路
-- Slide 2: 単相/三相有効電力、`3I²R`、高電圧化と損失率
-- Slide 3: 三相交流と新幹線の単相交流25 kV、必要導体量 `3/4`
-- Slide 4: 変電所の4役割と選定5問への接続
-- 後続Topicの詳細論点は追加していない
-- LibreOfficeでPDF化し、pdftoppm 140 dpiで全4枚をレンダリング確認
-- 文字欠け・重なり・クリッピングなし
+結果: `5/5 PASS`。教材外知識の補完0件。
+詳細は `topics/01_power_system_overview/01_power_system_overview_final_qa.md`。
 
 ## 01 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENTゲートはPASSし、解説本文・解説PDF・練習PDF・解説画像PowerPointまで完成。完成後の独立再解答が未完了のため、完成数は0/16のまま。
+`PASS / completed`。`MASTER_SPEC.md` と `EXAM_ALIGNMENT_SPEC.md` の完成条件を満たしたため、完成数を1/16へ更新した。
 
 ## 次
-Topic 01の選定5問を、保存済み正答を先に見ず、完成教材だけで独立再解答し、公式解答と照合して最終PASSを判定する。
+Topic 02「上越新幹線を水の力で走らせる」の制作前 `EXAM_ALIGNMENT` から開始する。`SPEC.md` の既定範囲を越えず、公式過去問を直近年度から調査する。
