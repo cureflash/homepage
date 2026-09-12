@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 0 / 14
-- current_status: `topic_01_explanation_pdf_complete`
+- current_status: `topic_01_practice_pdf_complete`
 - last_completed_topic: なし
 - active_topic: `01 新幹線1編成はどれだけ電気を食う？`
-- next_start: Topic 01の練習PDF（12問以上、解答・完全解説付き）を作成する
+- next_start: Topic 01の解説画像PowerPointを作成する
 
 ## Topic 01 進捗
 
@@ -25,30 +25,40 @@
 - [x] EXAM_ALIGNMENT確定
 - [x] 解説本文
 - [x] 解説PDF
-- [ ] 練習PDF（12問以上、完全解説）
+- [x] 練習PDF（15問、全問五肢択一、完全解説）
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] QA PASS
 
 ## 今回進めた内容
 
-Topic 01の解説PDFを作成し、GitHub正本へ追加した。
+Topic 01の練習PDFを作成し、GitHub正本へ追加した。
 
 成果物:
-`topics/01_train_power_basics/01_train_power_basics_explanation.pdf`
+`topics/01_train_power_basics/01_train_power_basics_practice.pdf`
 
-PDFはsource Markdownの解説本文を正本として、次を収録した。
+問題構成:
+- 15問
+- 基礎4問（26.7%）
+- 本試験標準8問（53.3%）
+- 複合・応用3問（20.0%）
+- 全問五肢択一
+- 解答・完全解説付き
 
-- 電圧・電流・抵抗・電力・電力量の意味と単位
-- `V=RI`、`P=VI`、`P=I^2R`、`P=V^2/R`、`W=Pt`
-- SI接頭語、指数表記、有効数字
-- 単位統一から検算までの解法手順
-- 基礎・本試験標準・複合の3段階例題
-- SPECで許可された仮定 `10 MW / 25 kV = 400 A`
-- 平成29年度理論問14との対応
-- Topic 05以降の回路網解析を先取りしない境界
+扱う範囲はTopic 01のSPEC内に限定した。
 
-PDFはA4縦4ページ。全4ページを画像レンダリングし、本文・表・数式にクリッピング、重なり、黒四角、欠落がないことを確認した。
+- SI接頭語・指数表記
+- `V=RI`
+- `P=VI`, `P=I^2R`, `P=V^2/R`
+- `W=Pt`
+- J / Wh / kWh換算
+- 比例・反比例
+- 有効数字
+- SPECで許可された教材用仮定 `10 MW / 25 kV = 400 A`
+
+直並列回路、キルヒホッフ、静電気、電磁気、測定回路は先取りしていない。
+
+全計算問題を独立再計算して正答肢の一意性を確認。PDFはA4縦3ページをPDFium 200 dpiとpdftoppm 180 dpiの2系統で全ページレンダリングし、クリッピング、重なり、黒四角、欠落がないことを確認した。
 
 ## 注意
 
@@ -56,4 +66,4 @@ PDFはA4縦4ページ。全4ページを画像レンダリングし、本文・�
 
 このため上位仕様の「該当問題が5問未満しか確認できない場合は確認できた全件」例外を適用し、Topic 01のゲート集合は平成29年度理論問14の1問で固定する。
 
-Topic 01は解説PDFまで完了したが、練習PDF・PowerPoint・完成後独立再解答・QA PASSが未完了のため、完成数には加算しない。
+Topic 01は練習PDFまで完了したが、PowerPoint・完成後独立再解答・QA PASSが未完了のため、完成数には加算しない。
