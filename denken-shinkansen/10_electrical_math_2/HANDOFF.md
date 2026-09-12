@@ -10,7 +10,7 @@ Topic 01 `複素数・複素指数・フェーザ計算` は最終QAまでPASS�
 
 active topic: `02 ベクトルと座標変換`
 
-current status: `topic_02_explanation_body_complete`
+current status: `topic_02_explanation_pdf_complete`
 
 ## Topic 02 source
 
@@ -19,6 +19,12 @@ source Markdown:
 
 source blob SHA:
 `92e87f72cd5be5a6710a496d06b16e0df578a2f5`
+
+解説PDF:
+`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_explanation.pdf`
+
+PDF blob SHA:
+`934254383ff400046bee02b10b001a4e3bdec04a`
 
 ## Topic 02 制作前EXAM_ALIGNMENT
 
@@ -37,9 +43,11 @@ source blob SHA:
 - 参考教材: e-sysnet + 電験王2 の2系統以上
 - 直近年度優先: R8 2問 + R7 2問
 
-## Topic 02 解説本文までの完了内容
+## Topic 02 解説PDFまでの完了内容
 
-本文で扱った範囲:
+PDFはA4縦3ページ。
+
+収録範囲:
 
 - 成分表示とベクトル合成
 - 基底と成分
@@ -54,14 +62,10 @@ source blob SHA:
 - `M=M0 cosθ` と射影
 - 三相120°ベクトルの幾何学的合成
 - 標準解法アルゴリズム
+- 3段階例題
+- 選定5過去問と教材節の対応表
 
-3段階例題:
-
-1. 基礎: 内積による必要方向成分の抽出
-2. 本試験標準: 電子のローレンツ力
-3. 複合・ひっかけ: 円周方向ベクトルの直交座標・回転座標変換
-
-source Markdownには、選定5過去問の要求事項と本文節の対応表を追加済み。
+全3ページを180 dpiでレンダリングし、文字切れ・重なり・欠落・黒塗り・ページ外はみ出しがないことを目視確認済み。
 
 ## 範囲外として維持するもの
 
@@ -74,6 +78,6 @@ source Markdownには、選定5過去問の要求事項と本文節の対応表�
 
 ## 次に行うこと
 
-Topic 02の解説PDFを作成し、全ページQAを行う。
+Topic 02の練習PDF（解答・完全解説付き）を作成し、全ページQAを行う。
 
-正本は `02_vectors_coordinate_transforms.md` の現行解説本文とし、PDF化の過程で論点・公式・例題を追加しない。PDF作成後もテーマは未完了であり、その後に練習PDF、PowerPoint、教材のみでの独立再解答、最終QAが残る。
+その後に解説画像PowerPoint、完成教材だけでの公式過去問独立再解答、最終QAが残る。
