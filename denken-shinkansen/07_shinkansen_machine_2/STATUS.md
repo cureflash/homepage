@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-12
+更新日: 2026-09-13
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 0 / 22
-- current_status: `topic_01_practice_pdf_complete`
+- current_status: `topic_01_powerpoint_complete`
 - last_completed_topic: `none`
 - active_topic: `01 0系の主変圧器を等価回路で解剖する`
-- next_start: Topic 01の解説画像PowerPointを作成する。source Markdown・解説PDF・練習PDFの論点を欠落させず、一次・二次の試験対応に必要な式・換算側・成立条件・解法手順を図解する
+- next_start: Topic 01の選定6問を、保存済み正答を先に見ず、source Markdown・解説PDF・練習PDF・PowerPointだけで独立再解答する。公式選択、途中式、換算側、成立条件・近似条件、単位、根拠まで教材内で完結することを確認する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -21,18 +21,20 @@
 - [x] 解説本文
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 01の練習PDF `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_practice.pdf` を作成した。
+Topic 01の解説画像PowerPoint `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_images.pptx` を作成した。
 
-一次試験型の五肢択一8問と、二次試験へ接続する記述式4問の計12問を収録した。一次・二次換算、無負荷試験、短絡試験、`%Z/%r/%x`、遅れ/進み力率の電圧変動率、鉄損・銅損、規約効率、最大効率条件、並列運転を、選定済み公式過去問6問から逆算した要求事項に対応させた。
+16:9・4枚構成。source Markdown・解説PDF・練習PDFから、一次・二次換算、一次換算簡易等価回路、無負荷試験・短絡試験、`%Z/%r/%x`、遅れ/進み力率の電圧変動率、鉄損・銅損・規約効率・最大効率、並列運転、二次答案の解法フロー、0系主変圧器への接続を式と要点で整理した。
 
-二次記述型では、換算側、無負荷・短絡試験の成立条件、途中式、単位、近似条件を答案として示す形にした。定格電流以外で短絡試験を行った場合の全負荷銅損換算、百分率値からオーム値への換算、電圧変動率の二次項、並列運転の負荷分担も扱う。問題は公式過去問本文・図・数値の複製ではなく、教材用の独自設問で構成した。
+0系については一次資料確認済みの `25 kV / 60 Hz`、`1650 kVA`、低圧タップ切換、25段のみを公開値として示し、一次側定格相当電流 `66 A` は公開仕様からの計算値と明示した。0系固有の `R, X, g0, b0, %Z`、鉄損・銅損は未確認のため実値化していない。
 
-全数値問題は独立計算で再確認した。PDFはA4縦5ページを180 dpiで全ページレンダリングし、PDFium / pdftoppmの両方で文字欠け、黒四角、重なり、クリッピングがないことを確認した。
+外部図版は使用していない。最終スライドに公式過去問、参考教材、0系実車資料、内部正本をまとめた。
+
+全4スライドをレンダリングして目視確認し、文字欠け・重なり・クリッピングなし。`slides_test.py` のcanvas overflow検査もPASSした。
 
 ## 判定
-Topic 01 は練習PDFまで完了したが、まだ `completed` ではない。次工程は解説画像PowerPoint作成。PowerPoint作成後、教材だけで選定6問を独立再解答し、最終QA PASSするまで完成数へ加算しない。
+Topic 01 はPowerPointまで完了したが、まだ `completed` ではない。次工程は、選定済み一次1問＋二次記述5問を完成教材だけで独立再解答すること。独立再解答と最終QA PASSまでは完成数へ加算しない。
