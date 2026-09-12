@@ -1,0 +1,11 @@
+@import url('../color-certification/styles.css?v=20260904-answer-feedback-v1');
+
+.prompt{justify-items:stretch;text-align:left;line-height:1.75}
+.choice{justify-items:stretch;text-align:left;line-height:1.55}
+.answer-card{justify-items:stretch}
+.answer-detail{margin:.7rem 0 0}
+.answer-sources{margin:.7rem 0 0;padding-left:1.2rem;font-size:.9rem}
+.answer-sources a{overflow-wrap:anywhere}
+.mixed-grid{margin-top:12px}
+.error{color:#a40000}
+.mode-grid button:disabled{opacity:.5;cursor:default}
