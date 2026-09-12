@@ -6,11 +6,11 @@
 
 Topic 01 `単位・指数・有効数字` は最終QAまでPASSし、`completed`。
 
-Topic 02 `三角比・三角関数` は解説画像PowerPointまで完了。
+Topic 02 `三角比・三角関数` は完成後独立再解答まで完了。
 
 完成数: `1 / 12`
 
-current_status: `topic_02_powerpoint_complete`
+current_status: `topic_02_exam_reanswer_complete`
 
 active topic: `02 三角比・三角関数`
 
@@ -27,6 +27,9 @@ source Markdown:
 
 解説画像PowerPoint:
 `topics/02_trigonometric_functions/02_trigonometric_functions_images.pptx`
+
+完成後独立再解答記録:
+`topics/02_trigonometric_functions/02_trigonometric_functions_exam_reanswer.md`
 
 解説PDFはA4縦3ページで、全ページ表示QA済み。
 
@@ -45,6 +48,17 @@ PowerPointは16:9・7枚。`sin/cos/tan` と単位円、正弦波、位相差、
 - R5上 理論 問9: 力率 `cosφ` とR-X-Z直角三角形
 
 制作前独立検証: `5問・6小問 / 6小問 PASS`
+
+完成後独立再解答: `5問・6小問 / 6小問 PASS`
+
+再解答結果:
+- R8上 問8: (1) `E=20 V`, `P=96 W`
+- R7上 問8: (5) `t=1/480 s`
+- R6下 問8: (3) 最大値倍率2、`π/3`進み
+- R6上 問15: (a)(4), (b)(3) `L=10 mH`, `Wmax=12.5 J`
+- R5上 問9: (3) `cosφ≈0.577`
+
+公式解答と全件一致。数値は独立計算でも再確認済み。
 
 参考教材は e-sysnet、電験王、電験三種まとめましたの複数系統を確認済み。
 
@@ -67,8 +81,6 @@ PowerPointは16:9・7枚。`sin/cos/tan` と単位円、正弦波、位相差、
 
 ## 次に行うこと
 
-Topic 02の選定公式過去問5問を、保存済み正答を先に見ず、完成教材だけを使って独立再解答する。
+Topic 02の最終QAを行う。
 
-教材外知識で補完した場合はFAILとし、各問の根拠を説明できることまで確認する。
-
-その後に最終QAを行い、PASSして初めて `completed` とする。
+必須成果物の実在、EXAM_ALIGNMENT、完成教材間の整合、練習問題仕様、既実施レンダリングQA、完成後独立再解答の記録を再確認し、すべてPASSした場合のみ `completed` とする。
