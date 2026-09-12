@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
-- exam_aligned_completed_topics: 0 / 14
-- current_status: `topic_01_independent_reanswer_complete`
-- last_completed_topic: なし
-- active_topic: `01 新幹線1編成はどれだけ電気を食う？`
-- next_start: Topic 01の最終QAを行い、PASS時のみcompletedへ変更する
+- exam_aligned_completed_topics: 1 / 14
+- current_status: `topic_01_completed`
+- last_completed_topic: `01 新幹線1編成はどれだけ電気を食う？`
+- active_topic: `02 なぜ新幹線は25,000Vなのか`
+- next_start: Topic 02の制作前EXAM_ALIGNMENTを行う。公式過去問を直近年度優先で原則5問以上調査し、要求知識・式・設問型・教材で必要な説明をsource Markdownへ先に固定する
 
 ## Topic 01 進捗
 
@@ -28,29 +28,23 @@
 - [x] 練習PDF（15問、全問五肢択一、完全解説）
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答
-- [ ] QA PASS
+- [x] QA PASS
 
 ## 今回進めた内容
 
-Topic 01の確定ゲート対象である平成29年度理論問14を、完成教材だけを使って独立再解答した。
+Topic 01 `新幹線1編成はどれだけ電気を食う？` の最終QAを実施し、`topics/01_train_power_basics/01_train_power_basics_final_qa.md` に記録した。
 
-判定:
-- (1): 加算の有効数字処理から誤り
-- (2): 除算の有効数字処理から誤り
-- (3): `m=10^-3` と電荷量計算から誤り
-- (4): `10 mA=0.010 A` と単位整合から誤り
-- よって正答は `(5)`
+確認結果:
 
-独立解答後に電気技術者試験センター公式解答と照合し、公式正答 `(5)` と一致した。
+- 必須成果物4種のGitHub実在: PASS
+- 三種公式過去問のEXAM_ALIGNMENT: PASS（5問未満例外を適正適用）
+- source Markdownと解説PDF・練習PDF・PowerPointの対応: PASS
+- 練習PDF15問（基礎4・本試験標準8・複合応用3、全問五肢択一）の仕様適合: PASS
+- 計算・単位・有効数字の整合: PASS
+- 実車値・仮定値の区別: PASS
+- 既実施レンダリングQAと現行blob SHAの対応: PASS
+- 完成後独立再解答: 平成29年度理論問14 1 / 1 PASS、教材外知識補完0件
 
-(5)に含まれる静電容量の単位関係はTopic 04の範囲なので、Topic 01へ新規説明を追加していない。(1)〜(4)をTopic 01教材内の有効数字・SI接頭語・単位処理だけで排除して一意に解答しており、教材外知識の補完は使っていない。
+## 判定
 
-独立再解答結果は `topics/01_train_power_basics/01_train_power_basics.md` の `独立再解答` 節へ記録した。
-
-## 注意
-
-令和8年度上期理論問5と平成30年度理論問5は電力公式に関連するが、並列電源・直並列回路の処理を含むためTopic 01の完成ゲート対象にはしない。令和7年度上期理論問14、平成28年度理論問8、平成23年度理論問14も、問題全体の完答に後続Topicの電磁気等を要するため完成ゲート対象にはしない。
-
-このため上位仕様の「該当問題が5問未満しか確認できない場合は確認できた全件」例外を適用し、Topic 01のゲート集合は平成29年度理論問14の1問で固定する。
-
-Topic 01は独立再解答まで完了したが、最終QA PASSが未完了のため、完成数には加算しない。
+Topic 01を `completed` とする。完成数を `1 / 14` に更新し、最初の未完了テーマをTopic 02へ移した。
