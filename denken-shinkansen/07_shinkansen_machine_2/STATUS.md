@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 1 / 22
-- current_status: `topic_02_practice_pdf_complete`
+- current_status: `topic_02_powerpoint_complete`
 - last_completed_topic: `01 0系の主変圧器を等価回路で解剖する`
 - active_topic: `02 0系の直流主電動機はどんな特性だった？`
-- next_start: Topic 02の解説画像PowerPointを作成する。速度―トルク、速度―出力、電流―速度の3特性を式と対応付け、一次4問＋二次1問の固定EXAM_ALIGNMENTから外れない。チョッパ、誘導機、VVVF、過渡制御は追加しない
+- next_start: Topic 02の固定EXAM_ALIGNMENTで選定したゲート対象10小問を、保存済み正答を見ず教材だけで独立再解答する。10 / 10正答、使用式・途中式・正答理由の説明、教材外知識補完0件を確認する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -36,29 +36,30 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 02の練習PDFを作成した。
+Topic 02の解説画像PowerPointを作成した。
 
 成果物:
-- `topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics_practice.pdf`
-- A4縦 5ページ
-- 一次試験型8問（全問五肢択一）＋二次試験型4問（記述式）の計12問
-- 全問に解答・完全解説を付与
-- 数値問題はすべて教材用仮定値と明示し、0系実車値として扱っていない
-- 全5ページを200 dpiでレンダリングし、文字切れ・図表欠落・ページ外はみ出し・欠損グリフなし
-- 代表計算・全数値解答を別計算で再確認し、数値QA PASS
+- `topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics_images.pptx`
+- 16:9、7枚
+- 電機子回路 `V=E+I_aR_a(+V_b)`、`E=kΦω`、`T=kΦI_a` を図と対応付けた
+- 直巻未飽和域の `Φ∝I_a` → `T∝I_a^2` と磁気飽和時の注意を可視化した
+- SPEC指定の速度―トルク、速度―出力、電流―速度の3特性を模式図で収録し、対応式を明示した
+- 弱め界磁の速度上昇・同一電流時トルク低下を式で対比した
+- H24二次 問1 (1)〜(4)型の「損失→抵抗→逆起電力→速度→電流→端子電圧」を再利用可能な手順として整理した
+- 固定EXAM_ALIGNMENTの一次4問＋二次1問との対応表を収録した
+- チョッパ、誘導機、VVVF、過渡制御は追加していない
+- 0系実車の未確認定格値・実測特性は追加していない
 
-過去問対応:
-- R6一次 機械 問2、H28一次 機械 問1・問5、H26一次 機械 問5に対応する知識・計算を一次型8問で反復
-- H24二次 機械・制御 問1 (1)〜(4)型の「損失→電機子抵抗→逆起電力→速度→部分負荷端子電圧」を記述式で採点可能な形にした
-- 二次記述では使用式、前提、途中式、単位、検算を明示
-- 問題末尾にEXAM_ALIGNMENTとの対応表を収録
-
-範囲外のチョッパ、誘導機、VVVF、過渡制御は追加していない。0系主電動機の未確認実値・実測特性も追加していない。
+QA:
+- LibreOfficeでPDF変換し全7枚を150 dpiでレンダリング確認
+- 文字切れ、図表欠落、ページ外はみ出し、欠損グリフなし
+- PowerPoint再読込、ZIP構造検査PASS
+- 7スライドすべてshape境界がスライド内に収まり、overflow 0件
 
 ## 判定
-Topic 02は `practice_pdf_complete`。完成数は `1 / 22` のまま。次工程は解説画像PowerPoint作成。
+Topic 02は `powerpoint_complete`。完成数は `1 / 22` のまま。次工程は固定EXAM_ALIGNMENTのゲート対象10小問の完成後独立再解答。
