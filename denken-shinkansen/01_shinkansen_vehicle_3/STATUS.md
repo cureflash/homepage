@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 22 / 38
-- current_status: `topic_23_exam_alignment_complete`
+- current_status: `topic_23_explanation_body_complete`
 - last_completed_topic: `22 L0系① リニア同期モータ`
 - active_topic: `23 L0系② 500km/hと周波数制御`
-- next_start: Topic 23の解説本文と基礎・標準・複合の3段階例題を作成し、選定5問の要求事項を本文へ対応させる
+- next_start: Topic 23のsource Markdownを正本として解説PDFを作成し、本文・3段階例題・過去問対応表・公式まとめを収録する
 
 ## 新品質ゲート進捗
 - [x] 01〜22 — PASS
-- [ ] 23 L0系② 500km/hと周波数制御 — 制作前EXAM_ALIGNMENT完了
+- [ ] 23 L0系② 500km/hと周波数制御 — 制作前EXAM_ALIGNMENT、解説本文、3段階例題まで完了
 
 ## 23 EXAM_ALIGNMENT
 品質ゲート対象を次の5問に確定した。
@@ -33,6 +33,21 @@
 
 直近年度候補では、R8上問3はベクトル制御・始動トルク、R8上問4はすべり・二次入力、R6上問4はすべり、R5下問15はすべり周波数が必要なため除外した。系列SPEC外の知識を追加して問題を通していない。
 
+## 23 解説本文
+source Markdownに次を追加した。
+
+- 周波数・極数・同期速度 `Ns=120f/p`
+- 同期角速度 `ωs=4πf/p`
+- 回転磁界から移動磁界への対応
+- V/fをほぼ一定にする理由と適用境界
+- 整流器・インバータ・PWMによる可変周波数交流の基本
+- 三相有効電力、効率、`P=ωT` によるトルク計算
+- 同期速度、V/f、電力・トルクの再利用可能な解法手順
+- 基礎・本試験標準・複合の3段階例題
+- 頻出ミス、選定5問との節マッピング、公式まとめ
+
+R7上問4の `T∝VI/f` は問題条件に従う近似式として扱い、一般式へ拡張していない。V/f一定も電験で問われる一般的な交流機制御として説明し、L0系実機の具体的制御則とは断定していない。
+
 ## 23 L0系一次資料
 JR東海「超電導リニアの原理」で次を確認済み。
 
@@ -43,13 +58,13 @@ JR東海「超電導リニアの原理」で次を確認済み。
 今回確認した一次資料では実機の極ピッチと500 km/h時の実運転周波数の具体値を確定できないため、実車値として置かない。
 
 ## 23 成果物
-- source Markdown: `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control.md` — EXAM_ALIGNMENTまで
+- source Markdown: `topics/23_l0_500kmh_frequency_control/23_l0_500kmh_frequency_control.md` — EXAM_ALIGNMENT、解説本文、3段階例題まで完了
 - 解説PDF: 未着手
 - 練習PDF: 未着手
 - 解説画像PowerPoint: 未着手
 
 ## 23 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENTはPASS。完成数は22/38のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENTは5/5 PASS。選定5問の要求事項を本文各節へマッピング済み。完成後独立再解答は未実施のため、完成数は22/38のまま。
 
 ## 次
-Topic 23の解説本文と3段階例題を作成する。範囲は系列SPECの周波数、同期速度、磁界、電磁力、電力変換、速度制御に限定し、実車の未確認数値は追加しない。
+Topic 23の解説PDFを作成する。source Markdownで確定した範囲だけを組版し、未確認のL0系極ピッチ・500 km/h時の実運転周波数や、除外済みのすべり・ベクトル制御等を追加しない。
