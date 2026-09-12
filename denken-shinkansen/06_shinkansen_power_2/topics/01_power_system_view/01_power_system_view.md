@@ -4,11 +4,9 @@
 
 ## 状態
 
-`reanswer_pass`
+`completed`
 
-制作前EXAM_ALIGNMENT、解説本文、3段階例題、練習15問、解説PDF、練習PDF、解説画像PowerPointまで作成済み。
-
-初回完成後独立再解答は正式選定5問中3問PASS、2問FAILだった。不足3点を既存範囲内で補強した後、同じ5問を補強済み教材だけで再独立解答し、5/5 PASS、教材外知識補完0件となった。最終QAは次工程であり、まだ `completed` ではない。
+制作前EXAM_ALIGNMENT、解説本文、3段階例題、練習15問、解説PDF、練習PDF、解説画像PowerPointを作成し、正式選定5問の完成後再独立解答を5/5 PASS、教材外知識補完0件で通過した。最終QAで成果物存在・試験対応記録・成果物間整合・既存レンダリングQA記録を確認し、Topic 01を `completed` とした。
 
 ## EXAM_ALIGNMENT
 
@@ -530,4 +528,18 @@ FAIL:
 
 詳細な途中式は `01_power_system_view_independent_reanswer.md` に記録した。
 
-最終QAは未実施。次工程で成果物相互の整合を確認し、全項目PASSした場合のみ `completed` にする。
+## 最終QA: 2026-09-13
+
+判定: `PASS`
+
+確認結果:
+- 必須source Markdown、解説PDF、練習PDF、解説画像PowerPointがGitHub正本に存在する。
+- EXAM_ALIGNMENTは一次2問＋二次記述3問の計5問を対象とし、各要求知識を本文節へ対応付けている。
+- 練習sourceは15問（一次型10問＋二次記述型5問）で、選定5問の要求事項を練習問題へ対応付け済み。
+- 解説PDFは補強3点を同期した現行版で、同期時の全ページレンダリングQA記録がPASS。
+- 練習PDFは現行blobが作成時から変更されておらず、作成時に全6ページをPDFium / pdftoppmの2系統でレンダリングQA済み。
+- PowerPointは現行blobが作成時から変更されておらず、全4枚の画像レンダリング確認とoverflow検査PASS済み。
+- 完成後再独立解答は `5 / 5 PASS`、教材外知識補完 `0件`。
+- Topic 08、12、16、20の本題や未確認の実設備値を追加していない。
+
+以上により `EXAM_ALIGNMENT_SPEC.md` のPASS条件を満たし、Topic 01を `completed` とする。
