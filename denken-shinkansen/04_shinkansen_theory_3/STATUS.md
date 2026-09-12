@@ -1,15 +1,15 @@
 # STATUS - 新幹線・電験三種「理論」
 
-更新日: 2026-09-12
+更新日: 2026-09-13
 
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 0 / 14
-- current_status: `topic_01_practice_pdf_complete`
+- current_status: `topic_01_powerpoint_complete`
 - last_completed_topic: なし
 - active_topic: `01 新幹線1編成はどれだけ電気を食う？`
-- next_start: Topic 01の解説画像PowerPointを作成する
+- next_start: Topic 01の完成教材だけで平成29年度理論問14を独立再解答し、最終QAを行う
 
 ## Topic 01 進捗
 
@@ -26,39 +26,28 @@
 - [x] 解説本文
 - [x] 解説PDF
 - [x] 練習PDF（15問、全問五肢択一、完全解説）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] QA PASS
 
 ## 今回進めた内容
 
-Topic 01の練習PDFを作成し、GitHub正本へ追加した。
+Topic 01の解説画像PowerPointを作成し、GitHub正本へ追加した。
 
 成果物:
-`topics/01_train_power_basics/01_train_power_basics_practice.pdf`
+`topics/01_train_power_basics/01_train_power_basics_images.pptx`
 
-問題構成:
-- 15問
-- 基礎4問（26.7%）
-- 本試験標準8問（53.3%）
-- 複合・応用3問（20.0%）
-- 全問五肢択一
-- 解答・完全解説付き
+PowerPointは16:9・4枚。既存source Markdownで確定済みの範囲だけを使い、次を可視化した。
 
-扱う範囲はTopic 01のSPEC内に限定した。
-
-- SI接頭語・指数表記
-- `V=RI`
-- `P=VI`, `P=I^2R`, `P=V^2/R`
-- `W=Pt`
-- J / Wh / kWh換算
-- 比例・反比例
-- 有効数字
+- 電圧・電流・抵抗・電力・電力量の関係と `V=RI`, `P=VI`, `P=I²R`, `P=V²/R`, `W=Pt`
+- SI接頭語 `M / k / m`、指数表記、単位統一、有効数字
+- Topic 01の標準解法手順
 - SPECで許可された教材用仮定 `10 MW / 25 kV = 400 A`
+- 平成29年度理論問14で要求される技能と頻出ミス
 
-直並列回路、キルヒホッフ、静電気、電磁気、測定回路は先取りしていない。
+実車消費電力の真値とは扱わず、Topic 05以降の回路網や後続Topicの静電気・電磁気・測定知識も先取りしていない。
 
-全計算問題を独立再計算して正答肢の一意性を確認。PDFはA4縦3ページをPDFium 200 dpiとpdftoppm 180 dpiの2系統で全ページレンダリングし、クリッピング、重なり、黒四角、欠落がないことを確認した。
+全4枚をレンダリング確認し、文字欠け・重なり・クリッピング・ページ外はみ出しがないことを確認した。overflow検査もPASS。
 
 ## 注意
 
@@ -66,4 +55,4 @@ Topic 01の練習PDFを作成し、GitHub正本へ追加した。
 
 このため上位仕様の「該当問題が5問未満しか確認できない場合は確認できた全件」例外を適用し、Topic 01のゲート集合は平成29年度理論問14の1問で固定する。
 
-Topic 01は練習PDFまで完了したが、PowerPoint・完成後独立再解答・QA PASSが未完了のため、完成数には加算しない。
+Topic 01はPowerPointまで完了したが、完成後独立再解答・最終QA PASSが未完了のため、完成数には加算しない。
