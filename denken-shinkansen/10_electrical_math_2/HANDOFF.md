@@ -10,7 +10,7 @@ Topic 01 `複素数・複素指数・フェーザ計算` は最終QAまでPASS�
 
 active topic: `02 ベクトルと座標変換`
 
-current status: `topic_02_explanation_pdf_complete`
+current status: `topic_02_practice_pdf_complete`
 
 ## Topic 02 source
 
@@ -23,8 +23,14 @@ source blob SHA:
 解説PDF:
 `topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_explanation.pdf`
 
-PDF blob SHA:
+解説PDF blob SHA:
 `934254383ff400046bee02b10b001a4e3bdec04a`
+
+練習PDF:
+`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_practice.pdf`
+
+練習PDF blob SHA:
+`ce088bb49ee53003e6dce0dcad0bd0ddbf5adfdf`
 
 ## Topic 02 制作前EXAM_ALIGNMENT
 
@@ -45,7 +51,7 @@ PDF blob SHA:
 
 ## Topic 02 解説PDFまでの完了内容
 
-PDFはA4縦3ページ。
+解説PDFはA4縦3ページ。
 
 収録範囲:
 
@@ -67,6 +73,16 @@ PDFはA4縦3ページ。
 
 全3ページを180 dpiでレンダリングし、文字切れ・重なり・欠落・黒塗り・ページ外はみ出しがないことを目視確認済み。
 
+## Topic 02 練習PDF
+
+A4縦5ページ、全12問。
+
+- 問1〜8: 二種一次理論を意識した五肢択一
+- 問9〜12: 本試験標準〜複合の記述計算
+- 成分表示、射影、内積、外積、負電荷の方向反転、回転対称性、半径・円周方向、2次元回転変換、三相120°を演習化
+- 各問に途中式・使用理由・符号・単位・検算を含む完全解説
+- 全5ページを180 dpiでレンダリングし、文字切れ・重なり・欠落・黒塗り・ページ外はみ出しなしを目視確認済み
+
 ## 範囲外として維持するもの
 
 - 対称座標法そのものの詳細
@@ -78,6 +94,6 @@ PDFはA4縦3ページ。
 
 ## 次に行うこと
 
-Topic 02の練習PDF（解答・完全解説付き）を作成し、全ページQAを行う。
+Topic 02の解説画像PowerPointを作成し、全スライドQAを行う。
 
-その後に解説画像PowerPoint、完成教材だけでの公式過去問独立再解答、最終QAが残る。
+その後に完成教材だけでの公式過去問独立再解答、最終QAが残る。
