@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 0 / 22
-- current_status: `topic_01_explanation_complete`
+- current_status: `topic_01_explanation_pdf_complete`
 - last_completed_topic: `none`
 - active_topic: `01 0系の主変圧器を等価回路で解剖する`
-- next_start: Topic 01のsource Markdownを基に解説PDFを作成する
+- next_start: Topic 01のsource Markdownを基に練習PDF（解答・完全解説付き）を作成する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -19,22 +19,20 @@
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 公式解答との照合を伴う要求事項の独立検証
 - [x] 解説本文
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 01の解説本文をsource Markdownへ追加した。
+Topic 01の解説PDF `topics/01_0series_transformer_equivalent_circuit/01_0series_transformer_equivalent_circuit_explanation.pdf` を作成した。
 
-本文は確定済み12節マッピングに従い、一次・二次換算、簡易等価回路、無負荷試験・短絡試験、`%Z/%r/%x`、フェーザ図と電圧変動率、鉄損・銅損・規約効率・最大効率、二次答案の書き方までを収録した。
+A4縦6ページ。source Markdownの解説本文に従い、一次・二次換算、簡易等価回路、無負荷試験・短絡試験、`%Z/%r/%x`、フェーザ図と電圧変動率、鉄損・銅損・規約効率・最大効率、並列運転の基本、3段階例題、0系への接続、頻出ミス、選定過去問対応表、公式・解法まとめを収録した。
 
-系列SPECで要求される並列運転の基本も、無負荷二次電圧・位相の一致、循環電流、インピーダンスによる負荷分担、自己容量基準`%Z`とインピーダンス角の関係までに限定して収録した。
+0系固有の等価回路定数、百分率インピーダンス、鉄損・銅損等は一次資料で未確認のため実値として追加していない。例題値は教材用の仮定値のままとした。
 
-例題は3段階とし、基礎の一次換算、本試験標準の無負荷・短絡試験から電圧変動率・効率までの連続計算、複合の並列運転負荷分担を作成した。例題の数値は教材上の仮定値として明記し、0系実車値と混同していない。
-
-0系実車への接続は、既存一次資料確認済みの交流60 Hz 25 kV、主変圧器容量1650 kVA、低圧タップ切換、25段のみを使用した。公開一次資料で確認できていない0系固有の等価回路定数、%インピーダンス、鉄損・銅損等は実値として扱っていない。
+PDFは全6ページを160 dpiでレンダリングし、文字欠け・重なり・クリッピングがないことを目視確認した。
 
 ## 判定
-Topic 01 は解説本文まで完了したが、まだ `completed` ではない。次工程は解説PDF作成。練習PDF・PowerPoint作成後、教材だけで選定6問を独立再解答し、最終QA PASSするまで完成数へ加算しない。
+Topic 01 は解説PDFまで完了したが、まだ `completed` ではない。次工程は練習PDF作成。PowerPoint作成後、教材だけで選定6問を独立再解答し、最終QA PASSするまで完成数へ加算しない。
