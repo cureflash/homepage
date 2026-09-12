@@ -6,10 +6,10 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は1/16。Topic 01は完成済み、active topicは02 `上越新幹線を水の力で走らせる`。
 
 ## 今回進捗
-Topic 02を1段階進め、解説PDF作成＋全ページ表示QAまで完了した。
+Topic 02を1段階進め、練習PDF作成＋全ページ表示QAまで完了した。
 
 更新成果物:
-- `topics/02_hydropower/02_hydropower_explanation.pdf`
+- `topics/02_hydropower/02_hydropower_practice.pdf`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -48,30 +48,28 @@ Topic 02を1段階進め、解説PDF作成＋全ページ表示QAまで完了し
 - 発電機の同期機/誘導機としての詳細は追加しない
 - JR東日本・信濃川発電設備の未確認実値は真値化しない
 
-## 解説本文
+## 解説本文・解説PDF
 `topics/02_hydropower/02_hydropower.md` に、電験で問われる範囲、`P=ρgQH` の導出・単位変換、有効落差、効率、流量・水量・電力量換算、揚水発電、連続の式・ベルヌーイ、水車種類、再利用可能な解法手順、3段階例題、過去問対応表まで収録済み。
 
-JR東日本一次資料 `https://www.jreast.co.jp/company/csr/environment/shinanogawa/index.html` で確認した事実だけを新幹線側に使用し、数値例は仮定値として明示している。
+解説PDF `topics/02_hydropower/02_hydropower_explanation.pdf` はA4縦5ページ。全5ページ200 dpi表示QA `PASS`。
 
-## 今回作成した解説PDF
-`topics/02_hydropower/02_hydropower_explanation.pdf`
+## 今回作成した練習PDF
+`topics/02_hydropower/02_hydropower_practice.pdf`
 
-- A4縦5ページ
-- source Markdownの固定範囲だけで構成
-- `P=ρgQH`、有効落差、効率、年間電力量、揚水、連続の式・ベルヌーイ、水車分類を収録
-- 基礎・本試験標準・複合/ひっかけの3段階例題を収録
-- 選定過去問6問・7小問への対応表と公式まとめを収録
-- 未確認の信濃川発電設備実値は追加していない
+- A4縦4ページ
+- 全12問: 基礎3 / 本試験標準7 / 複合・応用2
+- 全問五肢択一
+- 全問に式、式を選ぶ理由、代入、中間計算、最終値、選択肢、検算または誤答ポイントを含む完全解説を付与
+- 選定過去問で必要な理論水力、有効落差、効率、年間電力量、揚水、水量収支、一往復効率、連続の式、ベルヌーイ、水車分類を固定範囲内で練習可能
+- 未確認の信濃川発電設備実値は使用していない
 - 固定範囲外のダム形式詳細、比速度、キャビテーション、水撃作用、サージタンク、調速機、発電機機種詳細は追加していない
 
-200 dpiで全5ページをレンダリングし、文字欠け、クリップ、重なり、壊れた数式記号がないことを確認。表示QAは `PASS`。
-
-PDFでは表示互換性のため `rho`、`eta`、`H0`、`A1` 等のASCII表記を用いたが、意味・計算内容はsource Markdownの `ρ`、`η`、添字表記と同一。
+200 dpiで全4ページをレンダリングし、文字欠け、クリップ、重なりがないことを確認。表示QAは `PASS`。
 
 ## 現在状態
-- `current_status`: `topic_02_explanation_pdf_complete`
+- `current_status`: `topic_02_practice_pdf_complete`
 - 完成数: 1/16のまま
-- Topic 02の練習PDF・PowerPoint・完成後独立再解答は未着手
+- Topic 02のPowerPoint・完成後独立再解答は未着手
 
 ## 次の正確な開始点
-Topic 02の練習プリントを12問以上・完全解説付きで作成し、全ページ表示QAを行う。固定範囲外の論点は追加しない。
+Topic 02の解説画像PowerPointを作成し、全スライド表示QAを行う。固定範囲外の論点は追加しない。
