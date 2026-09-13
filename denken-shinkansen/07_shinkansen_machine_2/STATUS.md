@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 3 / 22
-- current_status: `topic_04_final_qa_needs_revision`
+- current_status: `topic_04_source_progress_synced`
 - last_completed_topic: `03 0系を210km/hまで加速させる`
 - active_topic: `04 200系のサイリスタ制御を計算する`
-- next_start: Topic 04 source Markdownの進捗不整合を修正する。冒頭「状態」の「解説PDF・練習PDF・解説画像PowerPointは未作成」と末尾「完成後独立再解答 未実施」を、GitHub正本に実在する成果物と独立再解答12/12 PASSへ同期する。教材本文・固定EXAM_ALIGNMENT・仕様範囲は変更しない。その後、最終QAを再実施する
+- next_start: Topic 04の最終QAを再実施する。固定EXAM_ALIGNMENT一次2問＋二次記述3問・12小問、完成後独立再解答12/12 PASS、成果物実在、source Markdown進捗同期、仕様範囲を再確認し、全件PASSなら `completed` にする
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -68,21 +68,16 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 公式過去問の教材のみでの独立再解答: 12 / 12 PASS
+- [x] source Markdownの進捗記録をGitHub正本へ同期
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 04の最終QAを実施した。固定EXAM_ALIGNMENT一次2問＋二次記述3問・ゲート対象12小問、独立再解答記録、GitHub正本の成果物実在、固定範囲を再確認した。
+Topic 04のsource Markdown進捗不整合を修正した。教材本文・固定EXAM_ALIGNMENT・仕様範囲は変更していない。
 
-確認結果:
-- 固定EXAM_ALIGNMENT: 一次2問＋二次記述3問、計5問・12小問を維持
-- 完成後独立再解答: 12 / 12 PASS
-- `04_200series_thyristor_control_explanation.pdf`: GitHub正本に実在
-- `04_200series_thyristor_control_practice.pdf`: GitHub正本に実在
-- `04_200series_thyristor_control_images.pptx`: GitHub正本に実在
-- `04_200series_thyristor_control_reanswer.md`: GitHub正本に実在し12/12 PASSを記録
-- 固定範囲外論点・未確認200系実車値の追加: 0件
-- source Markdown冒頭「状態」: 「解説PDF・練習PDF・解説画像PowerPointは未作成」と記載され、GitHub正本の実在成果物と不整合
-- source Markdown末尾「完成後独立再解答」: 「未実施」と記載され、実在する再解答記録12/12 PASSと不整合
+修正内容:
+- 冒頭「状態」を、解説PDF・練習PDF・解説画像PowerPointがGitHub正本に実在する現状へ同期
+- 末尾「完成後独立再解答」を、`04_200series_thyristor_control_reanswer.md` の `12 / 12 PASS` へ同期
+- 教材外知識・固定範囲外論点による補完0件、未確認200系実車値の追加0件を維持
 
 ## 判定
-Topic 04最終QAは `NEEDS_REVISION`。教材内容・過去問対応はPASS条件を満たしているが、source Markdownの進捗記録がGitHub正本の現状と一致しないため `completed` にはしない。完成数は `3 / 22` のまま。次工程はsource Markdownの進捗不整合修正。
+Topic 04のsource進捗記録はGitHub正本と整合した。`completed` 判定はまだ行わず、完成数は `3 / 22` のまま。次工程は最終QA再実施。
