@@ -12,7 +12,7 @@ Topic 03 `複素数` は `completed`。
 
 完成数: `3 / 12`
 
-current_status: `topic_04_exam_alignment_complete`
+current_status: `topic_04_explanation_source_complete`
 
 active_topic: `04 極形式・フェーザ`
 
@@ -21,7 +21,7 @@ active_topic: `04 極形式・フェーザ`
 source Markdown:
 `topics/04_polar_form_phasor/04_polar_form_phasor.md`
 
-制作前EXAM_ALIGNMENTと公式解答照合付き独立検証まで完了。解説本文、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAは未着手。
+制作前EXAM_ALIGNMENT、公式解答照合付き独立検証、解説本文、3段階例題まで完了。解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAは未着手。
 
 選定公式過去問:
 - R6上 理論 問9: 独立解答 (2) = 公式 (2)
@@ -31,6 +31,26 @@ source Markdown:
 - R3 理論 問8: 独立解答 (5) = 公式 (5)
 
 5問・6小問すべて一致。
+
+## Topic 04 解説本文に収録済み
+
+- `a+jb` と `r∠θ` の相互変換
+- 大きさ・偏角・象限確認
+- 極形式の掛け算・割り算
+- `j=1∠90°`, `-j=1∠-90°` と90°回転
+- 実効値フェーザと最大値の区別
+- 基準位相、進み・遅れ、`sin` / `cos` の統一
+- `V=ZI`, `Z=V/I` の極形式計算
+- `R+jX` とインピーダンス三角形、`cosφ=R/|Z|`
+- フェーザ図の加減算と `jI` の向き
+- 同一角周波数というフェーザ法の成立条件
+- 波形の零交差・山谷からの初期位相判定
+- `25 kV∠0°` に限定した新幹線接続例
+
+3段階例題:
+1. 基礎: 直交形式↔極形式、極形式乗算
+2. 本試験標準: 波形→実効値フェーザ→`Z=V/I`
+3. 複合・ひっかけ: 同周波数フェーザ加算と異周波数分離
 
 ## Topic 04 固定範囲
 
@@ -59,6 +79,6 @@ source Markdown:
 
 ## 次に行うこと
 
-`topics/04_polar_form_phasor/04_polar_form_phasor.md` の固定済みEXAM_ALIGNMENTを使い、解説本文＋3段階例題を作成する。
+`topics/04_polar_form_phasor/04_polar_form_phasor.md` を基に解説PDFを作成し、全ページ表示QAを行う。
 
-過去問から逆算した必須説明13項目を欠落させず、Topic 04の固定範囲を越えない。空間ベクトルは先取りしない。
+固定範囲を越えず、過去問5問・6小問へ必要な中間知識がPDFに落ちていることを確認する。
