@@ -5,16 +5,16 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_04_explanation_pdf_complete`
+- current_status: `topic_04_practice_source_complete`
 - last_completed_topic: `03 直流モーターはどうやって速度を変える？`
 - active_topic: `04 300系でモーターが全部変わった`
-- next_start: Topic 04の練習問題sourceを12問以上で作成し、選定5過去問の要求事項を全件マッピングする
+- next_start: Topic 04の練習PDFを作成し、全ページ表示QA・文字抽出QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
-- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDFまで完了。練習問題・PowerPoint・完成後独立再解答は未完了
+- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題sourceまで完了。練習PDF・PowerPoint・完成後独立再解答は未完了
 - [ ] 05〜16 — 未着手
 
 ## 04 EXAM_ALIGNMENT対象
@@ -49,17 +49,28 @@
 - 200 dpiで全5ページをレンダリングし、文字切れ・重なり・欠落グリフなしを確認
 - PDF文字抽出で主要見出し・公式・過去問番号を確認
 
+## 04 練習問題source
+`topics/04_induction_motor/04_induction_motor_practice.md` を作成済み。
+
+- 全12問、すべて五肢択一
+- 基礎3問／本試験標準7問／複合・応用2問
+- 数値問題は使用式・理由・代入・中間計算・最終値・検算まで記載
+- 知識問題は正答理由と主要誤答肢の誤りを記載
+- 選定5過去問の要求事項を全件マッピング
+- 始動法、Y-Δ、巻線形比例推移、インバータ/V/f・VVVF、ベクトル制御、回生制動、詳細等価回路は追加していない
+
 ## 04 成果物
 - `topics/04_induction_motor/04_induction_motor.md` — EXAM_ALIGNMENT＋解説本文＋3段階例題まで完了
 - `topics/04_induction_motor/04_induction_motor_explanation.pdf` — 完了、表示QA PASS
-- 練習問題source/PDF — 未着手
+- `topics/04_induction_motor/04_induction_motor_practice.md` — 完了
+- 練習PDF — 未着手
 - 解説画像PowerPoint — 未着手
 
 ## 04 品質ゲート
-`IN_PROGRESS`。選定5問の要求事項は解説sourceと解説PDFへ反映済み。練習問題source/PDF、PowerPoint、完成後独立再解答が未完了のため完成数は3/16据え置き。
+`IN_PROGRESS`。選定5問の要求事項は解説source・解説PDF・練習問題sourceへ反映済み。練習PDF、PowerPoint、完成後独立再解答が未完了のため完成数は3/16据え置き。
 
 ## 03 完成記録
 Topic 03は新選定5問（R7下 問2、R6上 問2、R2 問1、R1 問1、H30 問1）を完成教材だけで再解答し5/5正答。`PASS / completed`。
 
 ## 次
-Topic 04の練習問題sourceを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、選定5過去問の要求事項を全件カバーする。始動法、インバータ/VVVF、回生制動等を先取りしない。
+Topic 04の練習PDFを作成する。練習sourceの12問を内容変更せずPDF化し、全ページ表示QA・文字抽出QAを行う。
