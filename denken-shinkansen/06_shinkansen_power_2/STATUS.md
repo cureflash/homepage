@@ -7,8 +7,8 @@
 - exam_aligned_completed_topics: `2 / 22`
 - last_completed_topic: `02 信濃川の水で新幹線を何本走らせられる？`
 - active_topic: `03 川崎発電所は新幹線の負荷変動に追従できる？`
-- current_status: `topic_03_exam_alignment_complete`
-- next_start: Topic 03 の選定公式過去問5問を問題PDFだけで独立に解き、その後に公式解答と照合する制作前独立検証
+- current_status: `topic_03_preproduction_independent_verification_complete`
+- next_start: Topic 03 の本文節マッピングを上限として、解説本文＋基礎・本試験標準・複合の3段階例題を作成する
 
 ## Topic 03 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -19,7 +19,7 @@
 - [x] e-sysnetを含む複数系統の参考教材を確認
 - [x] 制作前EXAM_ALIGNMENT作成
 - [x] 過去問要求事項から本文節マッピング作成
-- [ ] 制作前独立検証・公式解答照合
+- [x] 制作前独立検証・公式解答照合 `5 / 5 PASS`
 - [ ] 解説本文＋3段階例題
 - [ ] 練習問題＋完全解説
 - [ ] 練習問題独立QA
@@ -38,6 +38,7 @@
 
 記録:
 - `topics/03_thermal_power/03_thermal_power.md`
+- `topics/03_thermal_power/03_thermal_power_preproduction_verification.md`
 
 ## Topic 02 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -92,4 +93,4 @@
 `completed`。最終QA PASS、完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0件`。
 
 ## 次
-Topic 03 の制作前独立検証を行う。正式選定5問を公式問題PDFだけで先に解き、解答根拠を記録してから公式解答と照合する。`5 / 5 PASS` を確認するまで解説本文へ進まない。
+Topic 03 の解説本文＋3段階例題を作成する。制作前独立検証 `5 / 5 PASS` を前提とし、`03_thermal_power.md` の本文節マッピングと固定範囲を上限にする。川崎発電所の実設備値はJR東日本等の一次資料で確認できたものだけを使用し、未確認値を置かない。
