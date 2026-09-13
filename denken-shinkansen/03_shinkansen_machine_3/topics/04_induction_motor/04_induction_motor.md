@@ -1,7 +1,7 @@
 # 04 300系でモーターが全部変わった
 
 ## 状態
-制作前 `EXAM_ALIGNMENT`、解説本文、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source/PDF、解説画像PowerPointまで完了。完成後独立再解答は選定5問 `5 / 5 PASS`。最終QA再実施待ち。
+制作前 `EXAM_ALIGNMENT`、解説本文、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source/PDF、解説画像PowerPointまで完了。完成後独立再解答は選定5問 `5 / 5 PASS`。最終QAを再実施し、必須成果物、EXAM_ALIGNMENT、独立再解答、表示QA、範囲境界、進捗整合を全件確認して `PASS / completed`。
 
 ## EXAM_ALIGNMENT
 資格: 第三種電気主任技術者
@@ -457,3 +457,6 @@ Tout = 26040/150.8
 
 ## 独立再解答
 実施済み。詳細は `04_induction_motor_independent_reanswer.md` に記録した。保存済み正答・公式解答を先に見ず、完成教材だけで選定5問を再解答し、導出答案列 `3 / 3 / 5 / 2 / 3` を確定後に公式解答と照合して `5 / 5 PASS`。教材外知識による補完 `0件`、Topic 04固定範囲外の論点追加 `0件`。
+
+## 最終QA
+2026-09-14に再実施。必須成果物の実在、EXAM_ALIGNMENT選定5問の整合、完成後独立再解答 `5 / 5 PASS`、既存のPDF/PPTX表示QA記録、固定範囲境界、進捗記録の整合を確認し、全件PASS。Topic 04を `completed` とする。
