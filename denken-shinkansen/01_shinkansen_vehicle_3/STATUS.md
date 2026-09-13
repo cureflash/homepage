@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 24 / 38
-- current_status: `topic_25_practice_pdf_complete`
+- current_status: `topic_25_powerpoint_complete`
 - last_completed_topic: `24 L0系③ 超電導磁気浮上`
 - active_topic: `25 L0系④ 誘導集電`
-- next_start: Topic 25の解説画像PowerPointを作成し、全スライド表示QA・overflow検査を実施する。選定5問・7小問の要求事項を可視化し、系列SPEC固定範囲外・未確認実車値は追加しない
+- next_start: Topic 25の完成後独立再解答を実施する。選定5問・7小問を保存済み正答を見ず、完成教材だけで再解答し、全件PASSした場合のみTopic 25をcompletedとする
 
 ## 新品質ゲート進捗
 - [x] 01〜24 — PASS
-- [ ] 25 L0系④ 誘導集電 — EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習PDF完了、制作中
+- [ ] 25 L0系④ 誘導集電 — EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習PDF・PowerPoint完了、制作中
 
 ## 25 EXAM_ALIGNMENT
 品質ゲート対象は5問・7小問。制作前解答検証7 / 7 PASS。完成後独立再解答は未実施。
@@ -76,6 +76,15 @@
 - 全5ページを180 dpiでレンダリング確認し、文字切れ・重なり・ページ外はみ出し・破損字形なし
 - 共振方式、Q値、補償・整合回路、高周波インバータ詳細、未確認実車値は追加していない
 - R7下機械問16の三相ダイオード整流条件をL0系実機回路・実損失とは断定していない
+
+## 25 PowerPoint QA
+- `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection_images.pptx` — 3スライド
+- Slide 1: 地上側交流→時間変化する磁界→車上側コイルの磁束変化→誘導起電力→車上電力、相互誘導・結合係数・和動接続、L0系一次資料確認範囲を可視化
+- Slide 2: `X_L=2πfL`、選定問題の三相整流式、1素子平均導通損失、効率・鉄損・銅損・負荷率・力率を可視化
+- Slide 3: 選定5問・7小問を電磁誘導・結合／交流・整流／効率・負荷率の3系統へ整理し、プラレールからL0系までの駆動・給電方式を既存確定内容だけで比較
+- 系列SPEC外の共振方式、Q値、補償・整合回路、高周波インバータ詳細は追加していない
+- 未確認の実運転周波数・定格電力・電圧・電流・伝送効率等は追加していない
+- 全3スライドをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし。overflow検査PASS
 
 ## 24 EXAM_ALIGNMENT
 品質ゲート対象は直近年度優先の6問。制作前解答検証6 / 6 PASS、完成後独立再解答も6 / 6 PASS。
@@ -198,4 +207,4 @@ JR東海「超電導リニアの原理」で、時速500 km走行、推進コイ
 `PASS`。制作前EXAM_ALIGNMENT、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5をすべて通過。Topic 23をcompletedとし、完成数を23/38へ更新した。
 
 ## 次
-Topic 25 `L0系④ 誘導集電` の解説画像PowerPointを作成し、全スライド表示QA・overflow検査を実施する。選定5問・7小問の要求事項を可視化し、系列SPEC固定範囲外・未確認実車値は追加しない。完成後独立再解答はその次の段階とする。
+Topic 25 `L0系④ 誘導集電` の完成後独立再解答を実施する。選定5問・7小問を保存済み正答を見ず、完成教材だけで再解答し、全件PASSした場合のみTopic 25をcompletedとする。
