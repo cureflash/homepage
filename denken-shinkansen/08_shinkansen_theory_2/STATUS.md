@@ -35,7 +35,7 @@
 
 Topic 04のsource進捗記録2箇所を現在地へ同期した。
 
-- `04_catenary_capacitance.md`: 「最終QAは未着手」を、最終QA実施済み・進捗記録同期待ちの状態へ更新
+- `04_catenary_capacitance.md`: 「最終QAは未着手」を、初回最終QA実施済み・source同期済み・再QA待ちへ更新
 - `04_catenary_capacitance_practice.md`: 「完成後独立再解答を実施しない」を、PowerPoint完成済み・独立再解答 `22 / 22 PASS`・最終QA実施済みへ更新
 - 固定範囲、問題本文、解説、正答、PDF、PowerPoint、EXAM_ALIGNMENTは変更していない
 - 一次5問・22小問、二次非採用判断、仕様外論点を追加しない方針を維持
