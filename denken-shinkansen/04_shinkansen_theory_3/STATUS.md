@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 3 / 14
-- current_status: `topic_04_explanation_source_complete`
+- current_status: `topic_04_explanation_pdf_complete`
 - last_completed_topic: `03 架線はただの銅線ではない`
 - active_topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
-- next_start: Topic 04の確定済みsourceを正本として解説PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 04の確定済みEXAM_ALIGNMENTと解説本文を基に、練習問題source・練習PDFを作成し、全ページ表示QAを行う
 
 ## Topic 01 進捗
 
@@ -55,7 +55,7 @@
 - [x] e-sysnet・電験王の説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
@@ -63,25 +63,16 @@
 
 ## 今回進めた内容
 
-Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の解説本文＋3段階例題を完成した。
+Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の解説PDFを完成した。
 
 更新成果物:
-- `topics/04_electric_field_capacitance/04_electric_field_capacitance.md`
+- `topics/04_electric_field_capacitance/04_electric_field_capacitance_explanation.pdf`
 
-本文で確定済みEXAM_ALIGNMENTの要求を次へ対応付けた。
-- クーロン力の向き・重ね合わせ・未知電荷逆算
-- 点電荷の電位、2点間電位差、電気的仕事
-- `C=Q/V`、`C=εS/d`、`ε=ε0εr`
-- 誘電体の面積方向部分挿入を並列容量として処理
-- コンデンサ直列・並列合成
-- 電源接続中のV一定、切離し後のQ保存
-- つなぎ替え時の極性・節点電荷保存
-- `U=1/2CV²=1/2QV=Q²/(2C)` の条件別使い分け
-
-3段階例題:
-- 基礎: 点電荷が作る電位
-- 本試験標準: 電源切離し後に極板間距離を変更
-- 複合・ひっかけ: 直列充電後に同極性並列へつなぎ替え、共通電圧・静電エネルギーを計算
+PDF仕様・QA:
+- A4縦 6ページ
+- 確定済みsourceの本文、3段階例題、6公式過去問への対応、公式・解法まとめを収録
+- 200 dpiで全6ページをレンダリングし、文字欠け・数式欠け・重なり・ページ外はみ出しなしを確認
+- 文字抽出で置換文字0件、例題1〜3・過去問対応・新幹線への接続・静電エネルギー節の存在を確認
 
 境界は維持:
 - 電束密度・ガウスの法則は追加しない
@@ -91,4 +82,4 @@ Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の解説本文＋3
 
 ## 判定
 
-Topic 04は `EXPLANATION_SOURCE_COMPLETE`。完成数は `3 / 14` のまま。次工程は解説PDF＋全ページ表示QA。
+Topic 04は `EXPLANATION_PDF_COMPLETE`。完成数は `3 / 14` のまま。次工程は練習問題source・練習PDF＋全ページ表示QA。
