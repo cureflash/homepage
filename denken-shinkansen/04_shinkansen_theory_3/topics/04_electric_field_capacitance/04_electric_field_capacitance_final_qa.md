@@ -6,13 +6,11 @@
 
 ## 判定
 
-`NEEDS_REVISION`。
+PASS。Topic 04を `completed` とする。
 
-前回FAIL原因だったsource Markdown冒頭の進捗メタデータは現在地へ同期済みであり、必須成果物、過去問対応品質ゲート、表示QA、SPEC境界もPASSを維持している。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで再判定し、新しい仕様は追加していない。
 
-ただし、同じsource Markdown末尾の `## 次工程` に「次は、このsourceを正本として解説PDFを作成」とする旧進捗が残っている。解説PDF・練習PDF・PowerPoint・独立再解答は既に完成しているため、進捗記録整合性ゲートはまだPASSにできない。
-
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで確認し、新しい仕様は追加していない。
+前回FAIL原因だったsource Markdown冒頭・末尾の進捗記録は現在地へ同期済み。必須成果物、過去問対応品質ゲート、表示QA、SPEC境界、完成後独立再解答、進捗記録整合性をすべてPASSとした。
 
 ## 必須成果物の実在確認
 
@@ -20,7 +18,7 @@ GitHub正本上で次を確認した。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| source Markdown | `6a93ace2c5dd31e41456cbf077e8746e2aa02c67` | PASS |
+| source Markdown | `4b9e8efe14737b37daa8586c278b437f9e128613` | PASS |
 | 解説PDF | `8098709ba748057322727f17d2864b543194a022` | PASS |
 | 練習source | `dbaa8ccaa348db11361a42fa0d232d819a29af47` | PASS |
 | 練習PDF | `d7170ae80f0c056d40bafd7a6e35dbb8cd539104` | PASS |
@@ -44,12 +42,12 @@ source Markdownには、クーロン力、電界、電位、平行板容量、�
 
 ## 完成教材間の整合確認
 
-制作時のQA記録と現在の成果物blobを照合した。
+現在の成果物blobと制作時のQA済み成果物を照合した。
 
 - 解説PDF: A4縦6ページ。200 dpi全6ページ表示QAで文字欠け・数式欠け・重なり・ページ外はみ出しなし。文字抽出の置換文字0件。
 - 練習PDF: A4縦4ページ、15問すべて五肢択一。基礎4 / 標準8 / 複合・応用3。200 dpi全4ページ表示QA PASS、置換文字0件。
 - PowerPoint: 16:9・5枚。全5枚表示QAで文字欠け・数式欠け・重なり・判読不能箇所なし。overflow検査PASS。
-- source、解説PDF、練習source/PDF、PowerPointは、Topic 04の固定範囲内で相互に矛盾しない。
+- source、解説PDF、練習source/PDF、PowerPointはTopic 04固定範囲内で相互に矛盾しない。
 
 ## SPEC境界確認
 
@@ -78,26 +76,16 @@ source Markdownには、クーロン力、電界、電位、平行板容量、�
 
 ## 進捗記録整合性
 
-`NEEDS_REVISION`。
+PASS。
 
-前回指摘したsource冒頭は修正済みである。
+source Markdownは現在、
 
-現在:
-- `status: FINAL_QA_NEEDS_REVISION`
-- 更新日: `2026-09-14`
-- 解説PDF・練習PDF・PowerPoint・完成後独立再解答まで完了、と記録済み
+- `status: COMPLETED`
+- 完了判定: 完了
+- 解説PDF・練習PDF・PowerPoint・完成後独立再解答・最終QAまで完了
+- 次工程: Topic 05の制作前EXAM_ALIGNMENT
 
-一方、source末尾には次の旧記録が残る。
-
-```text
-## 次工程
-
-次は、このsourceを正本として解説PDFを作成し、全ページ表示QAを行う。
-```
-
-これはGitHub正本上の実際の完成状況と矛盾する。
-
-教材本文・数式・EXAM_ALIGNMENTの誤りではなく、source Markdown末尾の進捗メタデータ不整合である。次工程ではこの記録だけを現在地へ同期し、教材内容・固定範囲・過去問選定は変更しない。
+となっており、GitHub正本上の実際の完成状況と一致する。
 
 ## 最終判定
 
@@ -110,7 +98,6 @@ source Markdownには、クーロン力、電界、電位、平行板容量、�
 - SPEC境界: PASS
 - 完成後独立再解答: `6 / 6 PASS`
 - 教材外知識補完: `0件`
-- source冒頭進捗記録整合性: PASS
-- source末尾 `次工程` 整合性: FAIL
+- source進捗記録整合性: PASS
 
-結論: `NEEDS_REVISION`。Topic 04は `completed` にしない。次工程はsource Markdown末尾の旧 `次工程` 記録だけを現在地へ同期する。
+Topic 04を `completed` とする。次工程はTopic 05 `パンタグラフから入った電気はどこへ行く？` の制作前EXAM_ALIGNMENT。
