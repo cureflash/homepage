@@ -8,18 +8,27 @@ Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ�
 
 - 完成数: `3 / 14`
 - active topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
-- current status: `topic_04_independent_reanswer_complete`
+- current status: `topic_04_final_qa_needs_revision`
 
 ## 今回進捗
 
-Topic 04の完成後公式過去問独立再解答を実施し、GitHub正本へ記録した。
+Topic 04の最終QAを実施し、GitHub正本へ記録した。
 
-更新:
-- `topics/04_electric_field_capacitance/04_electric_field_capacitance_exam_recheck.md`
+追加・更新:
+- `topics/04_electric_field_capacitance/04_electric_field_capacitance_final_qa.md`
 - `STATUS.md`
 - `HANDOFF.md`
 
-公式解答を先に見ず、完成済み教材だけでゲート対象6問を再解答した。独立解答列は `(2), (4), (4), (4), (3), (2)`。その後に電気技術者試験センター公式解答へ照合し、6/6一致。教材外知識の補完は0問。
+最終QAでは、必須成果物、EXAM_ALIGNMENT、独立再解答6/6、解説PDF・練習PDF・PowerPointの既存表示QA、SPEC境界はすべてPASSした。
+
+ただし `04_electric_field_capacitance.md` 冒頭の進捗メタデータが旧状態のまま残っているため、判定は `NEEDS_REVISION` とした。
+
+残存不整合:
+- `status: EXPLANATION_SOURCE_COMPLETE`
+- `完了判定: 未完了`
+- 「解説PDF・練習PDF・解説画像PowerPoint・完成後独立再解答・最終QAは未実施」
+
+実際には解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで完成済みで、独立再解答は6/6 PASS。教材本文・数式・EXAM_ALIGNMENT・固定範囲の修正は不要。
 
 ## Topic 04 固定範囲
 
@@ -80,7 +89,7 @@ U = 1/2 CV² = 1/2 QV = Q²/(2C)
 
 ## 次に行うこと
 
-Topic 04の最終QAを実施する。必須成果物の実在、EXAM_ALIGNMENT、独立再解答6/6、PDF/PPTX表示QA、SPEC境界、進捗記録の整合を確認し、全件PASSの場合のみ `completed` とする。
+`04_electric_field_capacitance.md` 冒頭の進捗記録だけを現在地へ同期する。教材本文、EXAM_ALIGNMENT、数式、過去問選定、SPEC境界は変更しない。その後、最終QAを再実施する。
 
 ## 固定ルール
 
