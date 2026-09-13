@@ -12,7 +12,7 @@ Topic 03 `複素数` は `completed`。
 
 完成数: `3 / 12`
 
-current_status: `topic_04_practice_pdf_complete`
+current_status: `topic_04_powerpoint_complete`
 
 active_topic: `04 極形式・フェーザ`
 
@@ -27,7 +27,10 @@ source Markdown:
 練習PDF:
 `topics/04_polar_form_phasor/04_polar_form_phasor_practice.pdf`
 
-制作前EXAM_ALIGNMENT、公式解答照合付き独立検証、解説本文、3段階例題、解説PDF＋全ページ表示QA、練習PDF＋全ページ表示QAまで完了。解説画像PowerPoint、完成後独立再解答、最終QAは未着手。
+解説画像PowerPoint:
+`topics/04_polar_form_phasor/04_polar_form_phasor_images.pptx`
+
+制作前EXAM_ALIGNMENT、公式解答照合付き独立検証、解説本文、3段階例題、解説PDF＋全ページ表示QA、練習PDF＋全ページ表示QA、解説画像PowerPoint＋全スライド表示QAまで完了。完成後独立再解答、最終QAは未着手。
 
 選定公式過去問:
 - R6上 理論 問9: 独立解答 (2) = 公式 (2)
@@ -38,12 +41,9 @@ source Markdown:
 
 5問・6小問すべて一致。
 
-## Topic 04 練習PDF QA
+## Topic 04 PowerPoint QA
 
-- A4縦4ページ: PASS
-- 12問: 基礎3 / 本試験標準7 / 複合2
-- 五肢択一9問: PASS
-- 全12問に完全解説: PASS
+- 16:9、全3スライド: PASS
 - 直交形式↔極形式、象限確認: PASS
 - 極形式の乗除算: PASS
 - `j` の+90°回転: PASS
@@ -51,10 +51,12 @@ source Markdown:
 - `sin` / `cos` 統一、進み・遅れ: PASS
 - `V=ZI`, `Z=V/I`、`R+jX`、`cosφ=R/|Z|`: PASS
 - フェーザ加算: PASS
-- 波形から周波数・位相・瞬時値を読む: PASS
 - 同一角周波数の成立条件、異周波数成分の分離: PASS
-- 選定5問・6小問で要求される数学操作を練習可能: PASS
-- 全4ページ200 dpi表示QA: クリッピング、重なり、黒四角、文字化けなし
+- `25 kV∠0°` は数学例に限定: PASS
+- 選定5問・6小問の解法接続を維持: PASS
+- 全3スライド表示QA: クリッピング、重なり、文字化けなし
+- キャンバス外はみ出し検査: PASS
+- ZIP整合性: PASS
 - 固定範囲外の追加なし、未確認実車値の追加なし: PASS
 
 ## Topic 04 固定範囲
@@ -84,6 +86,6 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 04の解説画像PowerPointを作成する。
+Topic 04の選定公式過去問5問・6小問を、完成教材だけを使って独立再解答する。
 
-固定範囲を越えず、練習PDFまでで固めた解法・図示範囲を視覚化する。
+保存済み正答を先に見ず、教材外知識で補完せず、各小問について使用した教材節・式・判断根拠まで記録する。全件PASSしない限り `completed` にしない。
