@@ -4,11 +4,11 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `04`
-- status: `FINAL_QA_NEEDS_REVISION`
+- status: `COMPLETED`
 - 更新日: 2026-09-14
-- 完了判定: 未完了
+- 完了判定: 完了
 
-解説PDF・練習PDF・解説画像PowerPoint・完成後独立再解答まで完了。最終QAはsource進捗記録の不整合によりNEEDS_REVISION判定であり、本更新では進捗メタデータのみを現在地へ同期する。
+解説PDF・練習PDF・解説画像PowerPoint・完成後独立再解答・最終QAまで完了。選定した公式過去問6問は教材だけで独立再解答して `6 / 6 PASS`、教材外知識の補完は0件。Topic 04を `completed` とする。
 
 ## SPEC上の固定範囲
 
@@ -673,4 +673,4 @@ U = 1/2 CV² = 1/2 QV = Q²/(2C)
 
 ## 次工程
 
-次は、最終QAを再実施し、source進捗記録を含む全品質ゲートを再判定する。教材本文・EXAM_ALIGNMENT・数式・過去問選定・SPEC固定範囲は変更しない。
+Topic 05 `パンタグラフから入った電気はどこへ行く？` の制作前EXAM_ALIGNMENTを開始する。MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECの固定範囲に従い、直近年度を優先して公式過去問を確認する。
