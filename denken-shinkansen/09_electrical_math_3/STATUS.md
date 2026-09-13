@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 2 / 12
-- current_status: `topic_03_images_pptx_complete`
+- current_status: `topic_03_exam_reanswer_complete`
 - last_completed_topic: `02 三角比・三角関数`
 - active_topic: `03 複素数`
-- next_start: Topic 03の完成済みsource Markdown・解説PDF・練習PDF・解説画像PowerPointだけを使って、選定済み公式過去問5問・6小問を完成後独立再解答する。保存済み正答は先に見ず、教材外知識の補完を行わない
+- next_start: Topic 03の最終QAを行う。必須成果物の実在、EXAM_ALIGNMENT、完成後独立再解答、既実施PDF/PPTX表示QAとの整合、範囲境界を確認し、PASSした場合のみTopic 03を`completed`とする
 
 ## Topic 03 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -21,27 +21,23 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの完成後独立再解答
+- [x] 公式過去問の教材のみでの完成後独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 03 `複素数` の完成済みsource Markdown・解説PDF・練習PDFを正本として、解説画像PowerPoint `topics/03_complex_numbers/03_complex_numbers_images.pptx` を作成した。
+Topic 03 `複素数` の完成後独立再解答を実施し、記録 `topics/03_complex_numbers/03_complex_numbers_exam_reanswer.md` を追加した。
 
-PowerPoint内容:
-- 16:9、7枚
-- `j²=-1`、実部・虚部、複素平面、絶対値、偏角
-- 四則演算、共役、複素数除算、`1/j=-j`
-- `Z=R+jX` と誘導性・容量性の符号、`|Z|=√(R²+X²)`
-- `Y=1/Z`、並列アドミタンス、虚部相殺
-- `|Z|²=R²+X²` を使う二状態逆算
-- 選定5問・6小問と教材操作の対応
-- 標準解法と頻出ミス
+選定済み公式過去問5問・6小問を再計算し、公式解答PDFとの照合で全件一致した。
 
-極形式・フェーザ、RLC共振、三相結線の体系的説明、力率改善、未確認の新幹線実設備値は追加していない。
+- R8上 理論 問8: (1) `E=20 V`, `P=96 W`
+- R7下 理論 問9: (5) `R≈8.14 Ω`
+- R7下 理論 問15: (a)(3), (b)(3) `I≈11.55 A`, `P=4.0 kW`
+- R7上 理論 問9: (3) `R=2.5 Ω`
+- R6上 理論 問13: (3) `Rp≈(ωL)²/r`
 
-全7枚をレンダリングして表示QAを行い、文字切れ・重なり・欠落・ページ外はみ出しがないことを確認した。キャンバス外はみ出し検査もPASS。
+直交形式の複素数計算、共役、絶対値、アドミタンス、実部・虚部の合成という固定範囲で解答できた。回路側の既知関係はsource Markdownで明記済みの先行教材の既知事項としてのみ接続し、極形式・フェーザ、RLC共振、三相結線の体系的説明、力率改善、複素電力は追加していない。
 
 ## 判定
 
-Topic 03を `topic_03_images_pptx_complete` とする。完成数は `2 / 12` のまま。次工程は完成後独立再解答。
+Topic 03を `topic_03_exam_reanswer_complete` とする。完成数は `2 / 12` のまま。次工程は最終QA。
