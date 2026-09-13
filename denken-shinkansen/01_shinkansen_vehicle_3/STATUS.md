@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 25 / 38
-- current_status: `topic_26_practice_pdf_complete`
+- current_status: `topic_26_powerpoint_complete`
 - last_completed_topic: `25 L0系④ 誘導集電`
 - active_topic: `26 補助電源① 主回路の電気を車内設備へ`
-- next_start: Topic 26の解説画像PowerPointを作成する。選定5問・8小問の判断経路を固定範囲内で可視化し、全スライド表示QA・overflow検査を行う
+- next_start: Topic 26の完成後独立再解答を行う。選定5問・8小問を保存済み正答を先に見ず教材内容だけで解き、根拠・式選択・適用条件まで確認する
 
 ## 新品質ゲート進捗
 - [x] 01〜25 — PASS
-- [ ] 26 補助電源① 主回路の電気を車内設備へ — IN_PROGRESS（制作前EXAM_ALIGNMENT完了、制作前独立解答8 / 8 PASS、解説本文＋3段階例題完成、解説PDF完成・全ページ表示QA PASS、練習PDF完成・全ページ表示QA PASS）
+- [ ] 26 補助電源① 主回路の電気を車内設備へ — IN_PROGRESS（制作前EXAM_ALIGNMENT完了、制作前独立解答8 / 8 PASS、解説本文＋3段階例題完成、解説PDF完成・全ページ表示QA PASS、練習PDF完成・全ページ表示QA PASS、解説画像PowerPoint完成・全スライド表示QA・overflow検査PASS）
 
 ## 26 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・8小問。系列SPEC固定範囲は、補助電源装置、交流、直流、電圧変換、インバータ、電力、効率。
@@ -41,6 +41,14 @@
 - 数値計算を独立再計算し、計算問題の正答が一意であることを確認。正答位置はA/B/C/D/E各3問
 - 180 dpiで全ページ表示QA PASS。文字切れ・重なり・ページ外はみ出しなし
 - 固定範囲外の論点・未確認の新幹線補助電源実値は追加していない
+
+## 26 解説画像PowerPoint
+- PowerPoint: `topics/26_auxiliary_power/26_auxiliary_power_images.pptx`
+- 16:9、4スライド
+- 選定5問・8小問の判断経路を、変換方向、RL半波整流、三相ダイオード整流、効率・損失の4系統で可視化
+- LibreOfficeで全4スライドをPDFレンダリングし表示QA PASS。文字切れ・重なり・ページ外はみ出しなし
+- スライド境界overflow検査0件、PPTX ZIP整合性検査PASS
+- 固定範囲外・未確認実車値の追加なし
 
 ## 26 教材要求事項
 - 補助電源装置を、走行用主回路から得た電力を車内設備向けの電圧・交流/直流へ変換して供給する装置として説明する
