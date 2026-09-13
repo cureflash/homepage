@@ -2,13 +2,15 @@
 
 対象: `04 極形式・フェーザ`
 
-実施日: 2026-09-13
+実施日: 2026-09-14
 
 ## 判定
 
-NEEDS_REVISION。Topic 04はまだ `completed` にしない。
+PASS。Topic 04を `completed` とする。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`09_electrical_math_3/SPEC.md` の範囲内で確認し、新しい仕様は追加していない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`09_electrical_math_3/SPEC.md` の範囲内で再確認し、新しい仕様は追加していない。
+
+前回 `NEEDS_REVISION` の原因だった source Markdown の進捗記録不整合は修正済みであり、今回の再QAで解消を確認した。
 
 ## 必須成果物の実在確認
 
@@ -16,11 +18,13 @@ GitHub正本上で次を確認した。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| source Markdown | `192b3aee9be4e29b10ee9d77b58ab3f3ecab6e6d` | PASS |
+| source Markdown | `87d3da07ee6c61c55bdbbfc362419d12f80f92df` | PASS |
 | 解説PDF | `484c34cdf28543d28576297086206e3ff032e4b0` | PASS |
 | 練習PDF | `b9a95444c37251cabd57f3f0d27fa33238ac6827` | PASS |
 | 解説画像PowerPoint | `33d1c837a649dca1c7361758ddc52b1e364eadfa` | PASS |
 | 完成後独立再解答記録 | `b4dbbcde8e8a716c084c8a703c2fb05a1bb3be0f` | PASS |
+
+解説PDF・練習PDF・PowerPoint・完成後独立再解答記録のblob SHAは前回最終QA時から不変であり、既実施の表示QA・内容QA対象と同一である。前回以降に変更されたのはsource Markdownの進捗記録のみで、教材本文・数式・問題・仕様範囲は変更されていない。
 
 ## EXAM_ALIGNMENT確認
 
@@ -48,11 +52,17 @@ GitHub正本上で次を確認した。
 
 公式解答と全件一致し、固定範囲外の新規説明追加は0件。
 
-## 成果物・範囲確認
+## 成果物・表示QA確認
 
-`HANDOFF.md` に記録された既実施QAでは、解説PDF、練習PDF、PowerPointの表示QAはいずれもPASSしている。
+既実施QAと現行blobの一致を確認した。
 
-固定範囲は次に限定されている。
+- 解説PDF: A4縦4ページ、全ページ表示QA PASS
+- 練習PDF: A4縦4ページ、12問（基礎3 / 標準7 / 複合2）、五肢択一9問、全問完全解説付き、全ページ表示QA PASS
+- PowerPoint: 16:9・3枚、全スライド表示QA・キャンバス外はみ出し検査・ZIP整合性 PASS
+
+## 範囲境界
+
+本Topicは系列SPECどおり次に限定されている。
 
 - `a+jb` と `r∠θ` の相互変換
 - 大きさ・偏角・象限確認
@@ -68,14 +78,15 @@ GitHub正本上で次を確認した。
 
 空間ベクトル、RLC共振、三相結線、力率改善、複素電力、対称座標法等は新規追加していない。未確認の新幹線実設備値も追加していない。
 
-## 不整合
+## 前回指摘事項の再確認
 
-source Markdown `04_polar_form_phasor.md` の進捗記録が現状と同期していない。
+前回FAILだったGitHub正本のsource進捗記録を再確認した。
 
-1. 冒頭 `## 状態` が「EXAM_ALIGNMENT、制作前独立検証、解説本文、3段階例題まで完了」となっており、実在する解説PDF・練習PDF・PowerPoint・完成後独立再解答を反映していない。
-2. 末尾 `# 次工程` が「次は解説PDFを作成」となったままで、現在地 `topic_04_exam_reanswer_complete` と矛盾する。
+- 冒頭 `## 状態`: 解説PDF・練習PDF・PowerPoint・完成後独立再解答・最終QA実施済みの現在地へ同期済み
+- 末尾 `# 次工程`: source進捗不整合修正後に最終QAを再実施する状態へ同期済み
+- 教材本文、EXAM_ALIGNMENT、数式、問題、仕様範囲の変更: なし
 
-教材内容・過去問再解答自体はPASS条件を満たしているが、GitHub正本のsource進捗記録が不整合なため最終QAをPASSにはしない。
+前回の不整合は解消しており、品質ゲートを阻害する残存事項はない。
 
 ## 最終判定
 
@@ -83,8 +94,11 @@ source Markdown `04_polar_form_phasor.md` の進捗記録が現状と同期し�
 - 三種公式過去問5問・6小問のEXAM_ALIGNMENT: PASS
 - 複数系統の参考教材確認: PASS
 - 制作前独立検証: PASS
-- 完成後独立再解答: 5問6小問 / 6小問 PASS
+- 解説本文・解説PDF・練習PDF・PowerPointの対応: PASS
+- 練習問題数・難易度配分・五肢択一比率: PASS
+- 既実施表示QAと現行成果物の対応: PASS
 - 固定範囲・未確認実車値の扱い: PASS
-- GitHub正本のsource進捗同期: FAIL
+- GitHub正本のsource進捗同期: PASS
+- 完成後独立再解答: 5問6小問 / 6小問 PASS
 
-Topic 04は `NEEDS_REVISION`。次工程は `04_polar_form_phasor.md` の状態欄と次工程欄を現状へ同期すること。内容・仕様範囲は変更しない。
+Topic 04を `completed` とする。次工程はTopic 05「ベクトル」の制作前EXAM_ALIGNMENT。
