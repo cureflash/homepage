@@ -1,0 +1,37 @@
+name: tmp-topic04-theory-pdf
+
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-topic04-theory-pdf.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  decode-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Decode and verify PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          out='denken-shinkansen/04_shinkansen_theory_3/topics/04_electric_field_capacitance/04_electric_field_capacitance_explanation.pdf'
+          cat .tmp/topic04_pdf_b64_0.txt .tmp/topic04_pdf_b64_1.txt .tmp/topic04_pdf_b64_2.txt .tmp/topic04_pdf_b64_3.txt .tmp/topic04_pdf_b64_4.txt | base64 -d > "$out"
+          test "$(stat -c%s "$out")" -eq 15660
+          echo '6a845dc559ebef8f90dce7992bf4bcd74d20cf51742c03caceab400323714b56  '"$out" | sha256sum -c -
+          head -c 5 "$out" | grep -q '%PDF-'
+      - name: Commit PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          out='denken-shinkansen/04_shinkansen_theory_3/topics/04_electric_field_capacitance/04_electric_field_capacitance_explanation.pdf'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$out"
+          git commit -m 'Add Topic 04 theory explanation PDF'
+          git pull --rebase origin main
+          git push origin HEAD:main
