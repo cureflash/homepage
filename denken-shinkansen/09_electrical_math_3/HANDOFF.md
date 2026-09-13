@@ -12,7 +12,7 @@ Topic 03 `複素数` は `completed`。
 
 完成数: `3 / 12`
 
-current_status: `topic_04_final_qa_needs_revision`
+current_status: `topic_04_source_progress_synced`
 
 active_topic: `04 極形式・フェーザ`
 
@@ -38,7 +38,7 @@ source Markdown:
 
 制作前EXAM_ALIGNMENT、公式解答照合付き独立検証、解説本文、3段階例題、解説PDF＋全ページ表示QA、練習PDF＋全ページ表示QA、解説画像PowerPoint＋全スライド表示QA、完成後独立再解答まで完了。
 
-最終QAでは教材内容・過去問対応はPASSしたが、source Markdownの進捗記録が古いまま残っているため `NEEDS_REVISION` とした。
+前回最終QAでは教材内容・過去問対応はPASSしたが、source Markdownの進捗記録が古いまま残っていたため `NEEDS_REVISION` とした。本更新でその進捗記録不整合だけを修正済み。
 
 ## Topic 04 完成後独立再解答
 
@@ -88,14 +88,13 @@ source Markdown:
 
 空間ベクトルはTopic 05へ送る。RLC共振、三相結線、力率改善、複素電力、対称座標法等をTopic 04へ新規追加しない。R5下機械問5の同期機、R6上理論問9の高調波は、フェーザ数学の要求事項確認に必要な適用例としてのみ扱う。未確認の新幹線実設備値を追加しない。
 
-## 最終QAで確認した不整合
+## 今回修正した不整合
 
-`topics/04_polar_form_phasor/04_polar_form_phasor.md` に旧進捗が残っている。
+`topics/04_polar_form_phasor/04_polar_form_phasor.md` の進捗記録を現在地へ同期した。
 
-- 冒頭 `## 状態`: 「解説本文、3段階例題まで完了」のまま
-- 末尾 `# 次工程`: 「次は解説PDFを作成」のまま
-
-実際には解説PDF、練習PDF、PowerPoint、完成後独立再解答まで完了しているため、GitHub正本内で進捗記録が矛盾している。
+- 冒頭 `## 状態`: 解説PDF・練習PDF・PowerPoint・完成後独立再解答・最終QA実施済みへ更新
+- 末尾 `# 次工程`: 最終QA再実施へ更新
+- 教材本文、EXAM_ALIGNMENT、数式、問題、仕様範囲は変更なし
 
 ## 参考教材確認
 
@@ -106,6 +105,6 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 04 source Markdownの進捗記録だけを現状へ同期する。
+Topic 04の最終QAを再実施する。
 
-冒頭 `## 状態` と末尾 `# 次工程` を、解説PDF・練習PDF・PowerPoint・完成後独立再解答・最終QA実施済みの現在地へ更新する。教材本文、EXAM_ALIGNMENT、数式、問題、仕様範囲は変更しない。
+必須成果物、EXAM_ALIGNMENT、完成後独立再解答、固定範囲、source Markdownの進捗記録整合を再確認し、全件PASSなら Topic 04を `completed` にする。仕様・教材本文は追加変更しない。
