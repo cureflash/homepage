@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 3 / 12
-- current_status: `topic_04_final_qa_needs_revision`
+- current_status: `topic_04_source_progress_synced`
 - last_completed_topic: `03 複素数`
 - active_topic: `04 極形式・フェーザ`
-- next_start: Topic 04 source Markdownの進捗記録不整合を修正する
+- next_start: Topic 04 最終QAを再実施する
 
 ## Topic 04 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -26,23 +26,16 @@
 
 ## 今回進めた内容
 
-Topic 04 `極形式・フェーザ` の最終QAを実施した。
+Topic 04 `極形式・フェーザ` のsource Markdownに残っていた進捗記録不整合だけを修正した。
 
-確認結果:
-- 必須成果物5種のGitHub正本上の実在: PASS
-- 公式過去問5問・6小問のEXAM_ALIGNMENT: PASS
-- 複数系統の参考教材確認: PASS
-- 制作前独立検証: 5問・6小問 PASS
-- 完成後独立再解答: 5問・6小問 PASS
+修正内容:
+- 冒頭 `## 状態` を、解説PDF・練習PDF・PowerPoint・完成後独立再解答・最終QA実施済みの現在地へ同期
+- 末尾 `# 次工程` を、最終QA再実施へ同期
+- 教材本文、EXAM_ALIGNMENT、数式、問題、仕様範囲は変更なし
 - 固定範囲外の新規説明追加: 0件
-- `04_polar_form_phasor.md` 冒頭の状態欄: FAIL（解説本文＋3段階例題まで完了の旧記録）
-- `04_polar_form_phasor.md` 末尾の次工程欄: FAIL（次は解説PDF作成の旧記録）
-
-最終QA記録:
-`topics/04_polar_form_phasor/04_polar_form_phasor_final_qa.md`
 
 ## 判定
 
-Topic 04は `NEEDS_REVISION`。完成数は `3 / 12` のまま。
+Topic 04はまだ `completed` にしない。完成数は `3 / 12` のまま。
 
-教材内容・過去問対応品質ゲートはPASSしているが、source Markdownの進捗記録が現在地と同期していないため `completed` にはしない。次工程は状態欄と次工程欄の同期修正であり、教材内容・仕様範囲は変更しない。
+前回最終QAで指摘された進捗記録不整合は解消した。次工程は最終QAの再実施であり、必須成果物・過去問対応品質ゲート・進捗記録整合を再確認してPASSなら `completed` とする。
