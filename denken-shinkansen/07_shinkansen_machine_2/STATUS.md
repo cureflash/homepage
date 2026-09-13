@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: 3 / 22
-- current_status: `topic_04_source_progress_synced`
-- last_completed_topic: `03 0系を210km/hまで加速させる`
-- active_topic: `04 200系のサイリスタ制御を計算する`
-- next_start: Topic 04の最終QAを再実施する。固定EXAM_ALIGNMENT一次2問＋二次記述3問・12小問、完成後独立再解答12/12 PASS、成果物実在、source Markdown進捗同期、仕様範囲を再確認し、全件PASSなら `completed` にする
+- exam_aligned_completed_topics: 4 / 22
+- current_status: `topic_04_completed`
+- last_completed_topic: `04 200系のサイリスタ制御を計算する`
+- active_topic: `05 300系の誘導電動機を等価回路で解く`
+- next_start: Topic 05の制作前EXAM_ALIGNMENTを行う。SPEC固定範囲の誘導機一相等価回路、一次抵抗・一次漏れリアクタンス、励磁枝、二次抵抗・二次漏れリアクタンス、`r2'/s`、一次入力・二次入力・二次銅損・機械出力・軸出力・トルク・効率に対応する電験二種公式過去問を一次・二次合わせて原則5問以上調査し、二次記述対象が確認できる場合は少なくとも1問含める
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -69,15 +69,19 @@
 - [x] 解説画像PowerPoint
 - [x] 公式過去問の教材のみでの独立再解答: 12 / 12 PASS
 - [x] source Markdownの進捗記録をGitHub正本へ同期
-- [ ] 最終QA PASS
+- [x] 最終QA PASS
 
 ## 今回進めた内容
-Topic 04のsource Markdown進捗不整合を修正した。教材本文・固定EXAM_ALIGNMENT・仕様範囲は変更していない。
+Topic 04の最終QAを再実施し、`topics/04_200series_thyristor_control/04_200series_thyristor_control_final_qa.md` に記録した。
 
-修正内容:
-- 冒頭「状態」を、解説PDF・練習PDF・解説画像PowerPointがGitHub正本に実在する現状へ同期
-- 末尾「完成後独立再解答」を、`04_200series_thyristor_control_reanswer.md` の `12 / 12 PASS` へ同期
-- 教材外知識・固定範囲外論点による補完0件、未確認200系実車値の追加0件を維持
+確認結果:
+- source Markdown、解説PDF、練習PDF、解説画像PowerPoint、独立再解答記録の実在: PASS
+- 固定EXAM_ALIGNMENTの一次2問＋二次記述3問、ゲート対象12小問: PASS
+- 完成教材のみの独立再解答: 12 / 12 PASS
+- 式・成立条件・途中式・単位と教材内マッピング: PASS
+- 既実施のPDF/PPTX表示QAとPowerPoint ZIP整合性: PASS
+- 教材外知識・固定範囲外論点による補完: 0件
+- 未確認200系実車値の追加: 0件
 
 ## 判定
-Topic 04のsource進捗記録はGitHub正本と整合した。`completed` 判定はまだ行わず、完成数は `3 / 22` のまま。次工程は最終QA再実施。
+Topic 04を `completed` とする。完成数を `4 / 22` へ更新。次工程はTopic 05「300系の誘導電動機を等価回路で解く」の制作前EXAM_ALIGNMENT。
