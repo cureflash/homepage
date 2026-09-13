@@ -5,41 +5,41 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 4 / 21
-- current_status: `topic_04_completed`
+- current_status: `topic_05_exam_alignment_complete`
 - last_completed_topic: `04 架線と車体は巨大なコンデンサなのか？`
 - active_topic: `05 0系主変圧器の鉄心には何が起きている？`
-- next_start: Topic 05の制作前EXAM_ALIGNMENTを実施する。系列SPECの固定範囲を変えず、二種一次・二次の公式過去問を直近年度優先で確認し、直接対応する問題だけを品質ゲート対象として固定する
+- next_start: Topic 05の固定EXAM_ALIGNMENT一次5問・16小問を逆算条件として、解説本文＋3段階例題を作成する。変圧器等価回路、自己／相互インダクタンス、電磁誘導、同期機特性、表皮効果は追加しない
 
-## Topic 04 最終品質ゲート
-- [x] 系列SPEC確認
-- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
-- [x] 一次理論5問・対象22小問を固定
-- [x] 最新実施済み二次R7〜R5を確認
+## Topic 05 制作前EXAM_ALIGNMENT
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] Topic 05固定範囲を確認
+- [x] 二種一次「理論」を直近年度優先で確認
+- [x] 品質ゲート対象を一次5問・16小問に固定
+- [x] R6 問2(1)〜(2): アンペアの周回積分、磁界、磁気エネルギー
+- [x] R5 問2(1): 無限長直線電流の磁束密度
+- [x] R4 問2(1)〜(5): 環状鉄心、磁束、磁気抵抗、磁気回路近似
+- [x] R3 問2(1)〜(5): B-H曲線、ヒステリシス、残留磁束密度、保磁力、損失
+- [x] H30 問2(1)〜(3): 空隙を含む磁気回路、磁気抵抗、磁束密度
+- [x] R8 問2はビオ・サバール＋ファラデー中心のため非採用
+- [x] R7 問2は自己・相互インダクタンス＋トルク＋電磁誘導中心のため非採用
+- [x] R6 問2(3)〜(5)の導電率・表皮効果を除外
+- [x] R5 問2(2)〜(5)の鎖交磁束・ファラデー則を除外
+- [x] H30 問2(4)(5)の自己・相互インダクタンスを除外
+- [x] R7〜R5二次「電力・管理」「機械・制御」を確認
 - [x] 二次に固定範囲の直接対応問題がないため数合わせで採用しない判断を記録
-- [x] R7一次問1の電気影像法をSPEC外として除外
-- [x] H27問1後半の導電率・電流密度・コンダクタンスをSPEC外として除外
-- [x] 解説本文＋3段階例題
-- [x] 解説PDF・全ページ表示QA
-- [x] 練習source＋練習PDF・計算QA `12 / 12 PASS`・全ページ表示QA
-- [x] 解説画像PowerPoint・表示QA・overflow検査PASS
-- [x] 公式過去問の教材のみでの完成後独立再解答 `22 / 22 PASS`
-- [x] 初回最終QAで指摘されたsource進捗記録2箇所を同期
-- [x] 最終QA再実施 `PASS / COMPLETED`
-- [x] Webカタログ登録
+- [x] e-sysnet・電験王の説明粒度を確認
 
 ## 今回進めた内容
 
-Topic 04の最終QAを再実施し、全品質ゲートPASSで `completed` とした。
+Topic 05の制作前EXAM_ALIGNMENTを完成した。
 
-- 固定一次5問・22小問: 独立再解答 `22 / 22 PASS`
+- 固定範囲: アンペアの周回積分、磁界、磁束密度、磁束、透磁率、起磁力、磁気抵抗、磁気回路、B-H曲線、ヒステリシス、磁気エネルギー
+- 品質ゲート対象: 一次「理論」5問・16小問
+- 公式解答照合: 全対象小問で確認済み
 - 二次R7〜R5: 固定範囲への直接対応なし、数合わせなし
-- 教材外知識補完 `0件`
-- SPEC外論点追加 `0件`
-- 解説PDF・練習PDF・PowerPointの既存表示QAを維持
-- 練習12問計算QA `12 / 12 PASS`
-- source進捗記録を `completed` へ同期
-- `qualifications/denken-shinkansen/catalog.json` へTopic 04を登録
+- SPEC外論点追加: 0件
+- source: `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit.md`
 
 ## 判定
 
-Topic 04は `PASS / completed`。完成数は `4 / 21`。次はTopic 05 `0系主変圧器の鉄心には何が起きている？` の制作前EXAM_ALIGNMENT。
+Topic 05は `IN_PROGRESS / exam_alignment_complete`。完成数は `4 / 21` のまま。次は解説本文＋3段階例題。
