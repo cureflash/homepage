@@ -1,20 +1,20 @@
 # STATUS - 新幹線・電験三種「機械」
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_04_explanation_source_complete`
+- current_status: `topic_04_explanation_pdf_complete`
 - last_completed_topic: `03 直流モーターはどうやって速度を変える？`
 - active_topic: `04 300系でモーターが全部変わった`
-- next_start: Topic 04の解説本文＋3段階例題を正本として解説PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 04の練習問題sourceを12問以上で作成し、選定5過去問の要求事項を全件マッピングする
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
-- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題まで完了。PDF以降は未着手
+- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDFまで完了。練習問題・PowerPoint・完成後独立再解答は未完了
 - [ ] 05〜16 — 未着手
 
 ## 04 EXAM_ALIGNMENT対象
@@ -40,17 +40,26 @@
 - 基礎・本試験標準・複合の3段階例題
 - 選定5問の各節への対応マッピング
 
+## 04 解説PDF
+`topics/04_induction_motor/04_induction_motor_explanation.pdf` を作成済み。
+
+- A4縦 5ページ
+- 解説sourceの固定範囲だけを収録
+- 同期速度・滑り・二次周波数・トルク・電力フロー・損失・効率・3段階例題・過去問対応を収録
+- 200 dpiで全5ページをレンダリングし、文字切れ・重なり・欠落グリフなしを確認
+- PDF文字抽出で主要見出し・公式・過去問番号を確認
+
 ## 04 成果物
 - `topics/04_induction_motor/04_induction_motor.md` — EXAM_ALIGNMENT＋解説本文＋3段階例題まで完了
-- 解説PDF — 未着手
+- `topics/04_induction_motor/04_induction_motor_explanation.pdf` — 完了、表示QA PASS
 - 練習問題source/PDF — 未着手
 - 解説画像PowerPoint — 未着手
 
 ## 04 品質ゲート
-`IN_PROGRESS`。選定5問の要求事項は解説sourceへ全件マッピング済み。必須4成果物と完成後独立再解答が未完了のため完成数は3/16据え置き。
+`IN_PROGRESS`。選定5問の要求事項は解説sourceと解説PDFへ反映済み。練習問題source/PDF、PowerPoint、完成後独立再解答が未完了のため完成数は3/16据え置き。
 
 ## 03 完成記録
 Topic 03は新選定5問（R7下 問2、R6上 問2、R2 問1、R1 問1、H30 問1）を完成教材だけで再解答し5/5正答。`PASS / completed`。
 
 ## 次
-Topic 04の解説sourceから解説PDFを生成し、数式・単位・表記と全ページ表示をQAする。始動法、インバータ/VVVF、回生制動等を先取りしない。
+Topic 04の練習問題sourceを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、選定5過去問の要求事項を全件カバーする。始動法、インバータ/VVVF、回生制動等を先取りしない。
