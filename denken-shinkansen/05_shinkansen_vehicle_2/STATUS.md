@@ -5,16 +5,16 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 3 / 39
-- current_status: `topic_04_practice_pdf_complete`
+- current_status: `topic_04_images_pptx_complete`
 - last_completed_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
 - active_topic: `04 0系④ タップ制御と加速特性`
-- next_start: Topic 04の固定済みsource・EXAM_ALIGNMENTだけを使って解説画像PowerPointを作成し、全スライド表示QA・overflow検査を行う
+- next_start: Topic 04の完成教材だけを使い、EXAM_ALIGNMENTで固定した一次・二次過去問を保存済み正答を先に見ず独立再解答する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
-- [ ] 04 0系④ タップ制御と加速特性 — EXAM_ALIGNMENT、解説本文、3段階例題、指定4グラフ、解説PDF、練習問題source、練習PDFまで完了。解説画像PowerPoint以降は未完了
+- [ ] 04 0系④ タップ制御と加速特性 — EXAM_ALIGNMENT、解説本文、3段階例題、指定4グラフ、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。完成後独立再解答・最終QAは未完了
 
 ## Topic 04 成果物
 - source: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration.md`
@@ -29,6 +29,12 @@
   - 全7ページ180 dpi表示QA PASS（欠け・重なり・黒四角・ページ外はみ出しなし）
   - 問1〜問12、一次8問＋二次4問、完全解説を収録
   - 未確認0系実値・範囲外論点の追加なし
+- 解説画像PowerPoint: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_images.pptx`
+  - 16:9・4スライド
+  - SPEC指定4グラフを可視化: タップ条件―主回路電圧、タップ条件―速度トルク特性、速度―けん引力、時間―速度の簡略加速計算
+  - H28一次問1、H28一次問5、H26一次問5、H24二次問1の固定範囲への解法接続を明示
+  - 実タップ段数・実切替値は置かず、模式図またはsourceの教材仮定値と明記
+  - 全4スライド表示QA PASS、overflow検査 PASS
 
 ## 過去問対応
 選定した公式過去問:
