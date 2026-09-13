@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
-- exam_aligned_completed_topics: 1 / 14
-- current_status: `topic_02_exam_reanswer_complete`
-- last_completed_topic: `01 新幹線1編成はどれだけ電気を食う？`
-- active_topic: `02 なぜ新幹線は25,000Vなのか`
-- next_start: Topic 02の最終QAを行い、PASS時のみcompletedへ更新する
+- exam_aligned_completed_topics: 2 / 14
+- current_status: `topic_02_completed`
+- last_completed_topic: `02 なぜ新幹線は25,000Vなのか`
+- active_topic: `03 架線はただの銅線ではない`
+- next_start: Topic 03の制作前EXAM_ALIGNMENTを行い、系列SPECの固定範囲内で公式過去問を直近年度から調査して教材必須説明を確定する
 
 ## Topic 01 進捗
 
@@ -45,24 +45,24 @@
 - [x] 練習問題・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答
-- [ ] 最終QA
+- [x] 最終QA
 
 ## 今回進めた内容
 
-Topic 02 `なぜ新幹線は25,000Vなのか` を1段階進め、完成後の公式過去問独立再解答を完了した。
+Topic 02 `なぜ新幹線は25,000Vなのか` を1段階進め、最終QAを完了した。
 
-- 対象: 令和7年度下期 理論 問6
-- 完成教材だけを使い、公式解答確認前に再解答
-- `V=RI` から `V1=6.75 V`、`V2=6.90 V`
-- `V=E-Ir` の2条件連立から `r=0.15 Ω`、`E=7.20 V`
-- 独立解答: 選択肢 `(2)`
-- 独立解答後に公式解答と照合し、公式正答 `(2)` と一致
+- QA記録: `topics/02_why_25kv/02_why_25kv_final_qa.md`
+- source Markdown・解説PDF・練習PDF・解説画像PowerPointの実在をGitHub正本で確認
+- 現行の解説PDF・練習PDF・PowerPointのblobが既実施表示QA対象版と一致することを確認
+- 練習PDF: 12問、全問五肢択一、完全解説、表示QA PASS
+- PowerPoint: 7枚、表示QA・overflow検査 PASS
+- 令和7年度下期 理論 問6の完成後独立再解答: `1 / 1 PASS`
+- 独立解答: `E=7.20 V`、選択肢 `(2)`、公式正答 `(2)` と一致
 - 教材外知識の補完: 0件
-- Topic 03以降の知識: 使用なし
-- 判定: `1 / 1 PASS`
-- source Markdownへ再解答記録を反映済み
-- 最終QAは未実施
+- Topic 03以降の知識使用: 0件
+- SPEC範囲外の仕様追加: なし
+- 未確認実車値の真値化: なし
 
 ## 判定
 
-Topic 02は `exam_reanswer_complete`。完成数は `1 / 14` のまま。次工程は最終QAで、PASS時のみTopic 02を `completed` とし完成数へ加算する。
+Topic 02は最終QA `PASS / completed`。完成数を `2 / 14` に更新した。次工程はTopic 03「架線はただの銅線ではない」の制作前EXAM_ALIGNMENT。
