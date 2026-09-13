@@ -1,20 +1,20 @@
 # STATUS - 新幹線・電験三種「電力」
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_04_explanation_pdf_complete`
+- current_status: `topic_04_practice_pdf_complete`
 - last_completed_topic: `03 JR東日本はなぜ火力発電所まで持っている？`
 - active_topic: `04 東京―佐世保「原子力新幹線」`
-- next_start: Topic 04の練習PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 04の解説画像PowerPointを作成し、表示QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
 - [x] 02 上越新幹線を水の力で走らせる — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QAまで完了
 - [x] 03 JR東日本はなぜ火力発電所まで持っている？ — EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QA PASS
-- [ ] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDFまで完了。練習PDF以降は未着手
+- [ ] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDFまで完了。PowerPoint以降は未着手
 - [ ] 05〜16 — 未完了
 
 ## Topic 04 現在地
@@ -37,6 +37,16 @@ source: `topics/04_nuclear_power/04_nuclear_power.md`
 - 質量欠損、PWR/BWR、原子力用蒸気タービン、熱効率、3段階例題、6過去問対応表を収録
 - 200 dpiで全4ページをレンダリングし、文字切れ・重なり・黒塗り・表崩れなしを確認
 - PDF preflight: openable / 4 pages / non-scanned。CIDフォントは非埋込だがPDFium 200 dpi表示とテキスト抽出はPASS
+
+練習PDF: `topics/04_nuclear_power/04_nuclear_power_practice.pdf`
+- A4縦6ページ、全12問
+- 基礎3 / 本試験標準7 / 複合2、全問五肢択一・完全解説
+- 固定6過去問の要求事項を全件練習できるよう対応表を収録
+- 質量欠損、`E=Δmc^2`、U-235割合、PWR/BWR、制御棒、原子力用蒸気タービン、`η=Pe/Pth`、J-MWh換算を固定範囲内で出題
+- 数値問題の計算を再検算し、主要値 2700 kg / 7.0875×10^4 kg / 33.3% / 3125 MWth / 3.375 MWh / 288 MWh / 396 MW・1980 MWh を確認
+- 200 dpiで全6ページをレンダリングし、文字切れ・重なり・黒塗り・表崩れ・ページ外はみ出しなしを確認
+- PDF preflight: openable / 6 pages / non-scanned。CIDフォントは非埋込だがPDFium 200 dpi表示とテキスト抽出はPASS
+- 固定範囲外の新型炉、核燃料サイクル、放射線分類・遮蔽、安全法規、詳細燃料加工は追加していない
 
 「むつ」はJAEA一次資料で次を確認済み。
 - 加圧水型原子炉、熱出力36 MWth、低濃縮酸化ウラン
@@ -90,4 +100,4 @@ source: `topics/04_nuclear_power/04_nuclear_power.md`
 固定範囲外の詳細煙風道設備、再熱・再生サイクル、給水加熱器等、燃焼化学・CO2計算、保護装置・継電器・トリップ機構は追加していない。
 
 ## 次
-Topic 04の練習PDFを作成し、全ページ表示QAを行う。完成数は3/16のままとする。
+Topic 04の解説画像PowerPointを作成し、全スライド表示QA・境界外はみ出し検査を行う。完成数は3/16のままとする。
