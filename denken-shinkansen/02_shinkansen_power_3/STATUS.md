@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 1 / 16
-- current_status: `topic_02_exam_reanswer_complete`
-- last_completed_topic: `01 新幹線の電気はどこから来る？`
-- active_topic: `02 上越新幹線を水の力で走らせる`
-- next_start: Topic 02の最終QAを実施し、EXAM_ALIGNMENT・必須成果物・表示QA・独立再解答7/7 PASSを総合確認する。PASSした場合のみTopic 02を`completed`にする
+- exam_aligned_completed_topics: 2 / 16
+- current_status: `topic_02_completed`
+- last_completed_topic: `02 上越新幹線を水の力で走らせる`
+- active_topic: `03 JR東日本はなぜ火力発電所まで持っている？`
+- next_start: Topic 03の制作前EXAM_ALIGNMENTを実施する。`SPEC.md` の固定範囲から追加せず、公式過去問を直近年度から原則5問以上調査し、教材必須説明を確定する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
-- [ ] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASSまで完了。最終QAは未実施
+- [x] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QAまで完了
 - [ ] 03〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -153,5 +153,19 @@ JR東日本一次資料で、信濃川発電所が千手・小千谷・小千谷
 
 結果: `7/7 PASS`。教材外知識の補完0件。固定範囲外論点の追加0件。
 
+## 02 最終QA
+記録: `topics/02_hydropower/02_hydropower_final_qa.md`
+
+- GitHub正本上でsource Markdown・解説PDF・練習PDF・解説画像PowerPoint・独立再解答記録の存在を確認
+- 制作前 `EXAM_ALIGNMENT` の6問・7小問と本文対応表を再確認
+- 既存の全ページ表示QAはいずれもPASS
+- 完成後独立再解答は `7/7 PASS`
+- 主要計算を再計算し、記録値と一致
+- 教材外知識補完0件
+- 固定範囲外論点の追加0件
+- 未確認の信濃川発電設備実値の真値化0件
+
+判定: `PASS / completed`。`MASTER_SPEC.md` と `EXAM_ALIGNMENT_SPEC.md` の完成条件を満たしたため、完成数を2/16へ更新した。
+
 ## 次
-Topic 02の最終QAを実施する。EXAM_ALIGNMENT、解説PDF・練習PDF・PowerPoint・source Markdownの存在と表示QA、完成後独立再解答7/7 PASS、固定範囲逸脱・未確認実値の有無を総合確認し、PASSした場合のみTopic 02を`completed`として完成数を更新する。
+Topic 03「JR東日本はなぜ火力発電所まで持っている？」の制作前EXAM_ALIGNMENTを実施する。公式過去問を直近年度から原則5問以上調査し、`SPEC.md` の火力発電固定範囲内で教材必須説明を確定する。
