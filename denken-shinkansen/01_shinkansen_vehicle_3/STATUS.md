@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 26 / 38
-- current_status: `topic_27_exam_alignment_complete`
+- current_status: `topic_27_explanation_source_complete`
 - last_completed_topic: `26 補助電源① 主回路の電気を車内設備へ`
 - active_topic: `27 補助電源② 車内照明`
-- next_start: Topic 27の解説本文＋3段階例題を作成し、確定した5問・8小問の要求事項を本文各節へ全件マッピングする。系列SPECの固定範囲（LED、光束、光度、照度、lm、cd、lx、照明計算）から広げない
+- next_start: Topic 27の解説本文§1〜§15＋3段階例題を解説PDFへ落とし込み、固定EXAM_ALIGNMENT 5問・8小問への対応を維持して全ページ表示QAを行う。系列SPEC固定範囲から広げない
 
 ## 新品質ゲート進捗
 - [x] 01〜26 — PASS
-- [ ] 27 補助電源② 車内照明 — EXAM_ALIGNMENT_COMPLETE
+- [ ] 27 補助電源② 車内照明 — EXPLANATION_SOURCE_COMPLETE
 
 ## 27 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・8小問。系列SPEC固定範囲は、LED、光束、光度、照度、lm、cd、lx、照明計算。
@@ -34,6 +34,16 @@
 - H27問16のLED配光式は問題文で与えられた式として扱い、一般のLEDへ一般化しない
 - 解法手順を、光源条件判定→量・単位整理→幾何計算→光度→照度→必要なら加算→単位・桁の検算、の順で示す
 - 頻出ミスとしてlm/cd/lxの混同、距離の2乗忘れ、`cosθ`忘れ、水平距離と光路距離の混同、複数光源の加算漏れを扱う
+
+## 27 解説本文
+- `topics/27_cabin_lighting/27_cabin_lighting.md` に§1〜§15の解説本文＋3段階例題を完成
+- 選定5問・8小問の要求事項を本文各節へ全件マッピング済み
+- 基礎例題: 均等放射光源の`lm→cd→lx`と直下照度
+- 本試験標準例題: `r=√(h^2+x^2)`、`cosθ=h/r`を使う斜入射水平面照度
+- 複合例題: 問題文提示のLED配光式と2灯の照度合成
+- 解法順序を`光源条件→単位→幾何→光度→照度→加算→検算`として固定
+- 新幹線車内照明の実値は一次資料で確定していないため真値化せず、例題数値は仮定値と明記
+- 輝度・光束発散度・LED半導体物性等の固定範囲外論点は追加していない
 
 ## 27 範囲境界
 固定範囲を広げないため、次は品質ゲート対象から除外した。
