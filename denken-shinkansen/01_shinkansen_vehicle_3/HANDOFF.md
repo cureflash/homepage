@@ -1,45 +1,45 @@
 # HANDOFF - 新幹線車両・電験三種
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は25/38。01〜25がPASS。次のactive topicは26 `補助電源① 主回路の電気を車内設備へ`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は25/38。01〜25がPASS。active topicは26 `補助電源① 主回路の電気を車内設備へ`。
 
 ## 今回進捗
-Topic 25 `L0系④ 誘導集電` の完成後独立再解答を実施した。選定5問・7小問を、保存済み正答を先に見ず、完成教材に収録した式・適用条件・解法手順だけで再解答し、電気技術者試験センター公式解答と照合した。7 / 7 PASSのためTopic 25を`COMPLETED`とした。
+Topic 26の制作前EXAM_ALIGNMENTを完了した。系列SPEC固定範囲「補助電源装置、交流、直流、電圧変換、インバータ、電力、効率」から、公式過去問5問・8小問を品質ゲート対象に固定し、制作前独立解答は`8 / 8 PASS`。固定範囲外の論点は採用していない。
 
 更新:
-- `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection.md` — 完成後独立再解答結果を追記、`COMPLETED`
-- `STATUS.md` — 完成数25/38、次Topic 26へ更新
+- `topics/26_auxiliary_power/26_auxiliary_power.md` — 新規作成。EXAM_ALIGNMENT、制作前独立解答、教材要求事項、範囲境界を記録
+- `STATUS.md` — `topic_26_exam_alignment_complete`へ更新
 - `HANDOFF.md`
 
-## Topic 25 完成後独立再解答
-1. R7下 機械 問16(a) — `P_D=1.0×36/3=12 W` — 再解答5 / 公式5 — PASS
-2. R7下 機械 問16(b) — `X_L=2π×50×5.56×10^-4≈0.1747 Ω`、与式から`V_d≈262.1 V` — 再解答4 / 公式4 — PASS
-3. R7下 機械 問15(a) — `P_out=37.5 kW`、総損失約`687.4 W`、鉄損=銅損より約`343.7 W`→344 W — 再解答5 / 公式5 — PASS
-4. R7下 機械 問15(b) — `343.7/0.75^2≈611 W` — 再解答2 / 公式2 — PASS
-5. R7上 機械 問9 — 力率1全負荷時の損失比`1/0.98-1`から力率0.8時`η≈97.5%` — 再解答3 / 公式3 — PASS
-6. R6下 理論 問3 — `|e|=30×1/0.1=300 V` — 再解答2 / 公式2 — PASS
-7. R4上 理論 問3 — `M=(86-40-10)/2=18 mH`、`k=18/√(40×10)=0.90` — 再解答2 / 公式2 — PASS
+## Topic 26 品質ゲート対象
+1. R7下 機械 問16(a)(b) — 三相ダイオード整流、交流→直流、電圧低下・導通損失 — 5 / 4 — PASS
+2. R7下 機械 問15(a)(b) — 変圧器の鉄損・銅損、負荷率、効率 — 5 / 2 — PASS
+3. R7上 機械 問9 — 全負荷効率、負荷力率、出力と損失 — 3 — PASS
+4. R3 機械 問16(a)(b) — 単相半波ダイオード整流、RL負荷、平均直流電圧 — 1 / 3 — PASS
+5. H30 機械 問11 — インバータ、オンオフ制御、逆並列ダイオード、波高値、PWM — 5 — PASS
 
-結果: 7 / 7 PASS。必要公式の選択、適用条件、途中計算を完成教材内だけで再構成でき、公式解答と全件一致。仕様外知識や未確認実車値による補完は不要だった。
+結果: 5問・8小問、制作前独立解答`8 / 8 PASS`。
 
 公式正本: https://www.shiken.or.jp/chief/third/qa/
-参照日: 2026-09-13
+参照日: 2026-09-14
 
-## Topic 25 成果物・QA
-- source: `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection.md` — EXAM_ALIGNMENT、解説本文、3段階例題、完成後独立再解答まで完了
-- 解説PDF: `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection_explanation.pdf` — A4縦3ページ、全ページ表示QA PASS
-- 練習PDF: `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection_practice.pdf` — A4縦5ページ、15問、全ページ表示QA PASS
-- PowerPoint: `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection_images.pptx` — 3スライド、表示QA・overflow検査PASS
+## Topic 26 範囲境界
+採用しない:
+- R8上 機械 問9 — 変圧器短絡試験・漏れリアクタンス
+- R8上 機械 問10 — パワー半導体デバイス固有動作
+- R7上 機械 問8 — 単独運転・系統連系保護まで必要
+- R7上 機械 問10 — 直流チョッパ。系列SPECに明示なし
+- R6上 機械 問4 — 同期速度・すべり・誘導電動機速度制御が主題
 
-系列SPEC固定範囲は、電磁誘導、非接触給電、誘導集電、交流、電力変換、効率。共振方式、Q値、補償・整合回路、高周波インバータ詳細、未確認の実機コイル寸法・実運転周波数・定格電力・電圧・電流・伝送効率へは広げていない。R7下機械問16の三相ダイオード整流回路をL0系実機構成とは断定していない。
+チョッパ詳細、系統連系保護、誘導電動機速度制御、変圧器短絡試験・詳細等価回路、半導体素子各論、高調波対策は追加しない。新幹線補助電源の入力電圧、出力電圧、容量、周波数、効率、回路方式は一次資料で確認するまで実値化しない。
 
 ## 現在の状態
-- `current_status`: `topic_25_completed`
+- `current_status`: `topic_26_exam_alignment_complete`
 - 完成数: 25/38
 - 01〜25: PASS
 - active topic: 26 `補助電源① 主回路の電気を車内設備へ`
 
 ## 次の正確な開始点
-Topic 26の制作前EXAM_ALIGNMENTを実施する。系列SPEC固定範囲から関連する公式過去問を直近年度優先で原則5問以上調査し、制作前独立解答と教材要求事項を確定する。
+Topic 26の解説本文＋3段階例題を作成する。まずJR・メーカー・鉄道総研等の一次資料で新幹線の補助電源装置を確認し、実車事項は確認できた内容だけを使用する。選定5問・8小問の要求事項を本文へ全件マッピングし、固定範囲外は追加しない。
