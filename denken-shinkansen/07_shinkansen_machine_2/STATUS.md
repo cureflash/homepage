@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 3 / 22
-- current_status: `topic_04_independent_reanswer_complete`
+- current_status: `topic_04_final_qa_needs_revision`
 - last_completed_topic: `03 0系を210km/hまで加速させる`
 - active_topic: `04 200系のサイリスタ制御を計算する`
-- next_start: Topic 04の最終QAを実施する。固定EXAM_ALIGNMENT 5問・12小問の独立再解答12/12 PASS、解説・練習PDF、PowerPoint、source、表示QA、仕様境界を再確認し、全品質ゲートPASSの場合のみ `completed` とする
+- next_start: Topic 04 source Markdownの進捗不整合を修正する。冒頭「状態」の「解説PDF・練習PDF・解説画像PowerPointは未作成」と末尾「完成後独立再解答 未実施」を、GitHub正本に実在する成果物と独立再解答12/12 PASSへ同期する。教材本文・固定EXAM_ALIGNMENT・仕様範囲は変更しない。その後、最終QAを再実施する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -71,20 +71,18 @@
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 04の固定EXAM_ALIGNMENT一次2問＋二次記述3問、ゲート対象12小問を完成教材の固定範囲だけで独立再解答し、公式解答・標準解答と照合した。再解答記録は `topics/04_200series_thyristor_control/04_200series_thyristor_control_reanswer.md` に保存した。
+Topic 04の最終QAを実施した。固定EXAM_ALIGNMENT一次2問＋二次記述3問・ゲート対象12小問、独立再解答記録、GitHub正本の成果物実在、固定範囲を再確認した。
 
 確認結果:
-- R05 一次 機械 問4 (1)〜(3): 3 / 3 PASS
-- R01 一次 機械 問3 (1)、(2)、(5): 3 / 3 PASS
-- R05 二次 機械・制御 問3 (1)、(2): 2 / 2 PASS
-- H30 二次 機械・制御 問3 (2)〜(4): 3 / 3 PASS
-- H27 二次 機械・制御 問3 (2): 1 / 1 PASS
-- 合計: 12 / 12 PASS
-- 一次選択式を教材内の式・条件だけで根拠付き解答: PASS
-- 二次記述式を平均値積分、有効電力、基本波無効電力まで途中式付きで再導出: PASS
-- 高調波の発生源・基本的影響を固定範囲内で記述: PASS
-- 教材外知識・固定範囲外論点による補完: 0件
-- 200系の未確認実車値の追加: 0件
+- 固定EXAM_ALIGNMENT: 一次2問＋二次記述3問、計5問・12小問を維持
+- 完成後独立再解答: 12 / 12 PASS
+- `04_200series_thyristor_control_explanation.pdf`: GitHub正本に実在
+- `04_200series_thyristor_control_practice.pdf`: GitHub正本に実在
+- `04_200series_thyristor_control_images.pptx`: GitHub正本に実在
+- `04_200series_thyristor_control_reanswer.md`: GitHub正本に実在し12/12 PASSを記録
+- 固定範囲外論点・未確認200系実車値の追加: 0件
+- source Markdown冒頭「状態」: 「解説PDF・練習PDF・解説画像PowerPointは未作成」と記載され、GitHub正本の実在成果物と不整合
+- source Markdown末尾「完成後独立再解答」: 「未実施」と記載され、実在する再解答記録12/12 PASSと不整合
 
 ## 判定
-Topic 04は `independent_reanswer_complete`。完成数は `3 / 22` のまま。次工程は最終QA。
+Topic 04最終QAは `NEEDS_REVISION`。教材内容・過去問対応はPASS条件を満たしているが、source Markdownの進捗記録がGitHub正本の現状と一致しないため `completed` にはしない。完成数は `3 / 22` のまま。次工程はsource Markdownの進捗不整合修正。
