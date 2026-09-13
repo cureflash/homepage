@@ -8,7 +8,7 @@
 - current_status: `topic_03_explanation_pdf_complete`
 - last_completed_topic: `02 架線は長くなるとなぜ電圧が落ちる？`
 - active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
-- next_start: Topic 03のsource Markdownだけを正本として練習PDF（解答・完全解説付き）を作成する。制作前EXAM_ALIGNMENTで固定した一次理論6問・21小問へ接続し、SPEC外論点を追加しない
+- next_start: Topic 03のsource Markdownだけを正本として練習PDF（解答・完全解説付き）を作成する。制作前EXAM_ALIGNMENTで固定した一次理論6問・21小問に接続し、SPEC外論点を追加しない
 
 ## Topic 03 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -45,7 +45,7 @@ PDF収録内容:
 - 一次理論6問・21小問への過去問対応表
 - 公式・解法まとめ
 
-A4縦7ページ。160 dpiで全7ページをレンダリングし、文字切れ・重なり・欠落・破損グリフがないことを確認した。
+A4縦5ページ。全5ページを130 dpiでレンダリングし、文字切れ・重なり・欠落・破損グリフがないことを確認した。
 
 実在架線の未確認値は使用していない。影像法、静電容量、誘電体、静電エネルギー、絶縁設計等は追加していない。
 
