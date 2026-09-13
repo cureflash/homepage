@@ -8,11 +8,11 @@ Topic 01 `25kV架線を一つの等価回路にする` は `completed`。
 
 Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は `completed`。
 
-Topic 03 `25kV架線の周囲にはどんな電界ができる？` は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了。
+Topic 03 `25kV架線の周囲にはどんな電界ができる？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDFまで完了。
 
 完成数: `2 / 21`
 
-current_status: `topic_03_explanation_body_complete`
+current_status: `topic_03_explanation_pdf_complete`
 
 active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 
@@ -55,8 +55,17 @@ R7の電気影像法・静電容量、R6の誘電体入りコンデンサ、R2�
 
 実在架線の線電荷密度・周囲電界等は実値化していない。影像法、静電容量、誘電体、静電エネルギー、絶縁設計は追加していない。
 
+## Topic 03 解説PDF
+
+`topics/03_catenary_electric_field/03_catenary_electric_field_explanation.pdf`
+
+- A4縦7ページ
+- source Markdownで固定した試験論点、成立条件、解法手順、3段階例題、過去問対応表、公式まとめを収録
+- 160 dpiで全7ページをレンダリングし、文字切れ・重なり・欠落・破損グリフなしを確認
+- 新しい論点・実車値・仕様は追加していない
+
 ## 次に行うこと
 
-Topic 03の解説PDFを、`topics/03_catenary_electric_field/03_catenary_electric_field.md` だけを正本として作成する。
+Topic 03の練習PDF（解答・完全解説付き）を、`topics/03_catenary_electric_field/03_catenary_electric_field.md` だけを正本として作成する。
 
-PDFでは本文の試験論点、公式の成立条件、解法手順、3段階例題、過去問対応表を欠落させない。新しい仕様・論点・実車値を追加しない。
+一次理論6問・21小問で要求される球対称・円筒対称・点電荷ベクトル合成・電位積分へ接続する問題構成とし、影像法、静電容量、誘電体等のSPEC外論点を追加しない。
