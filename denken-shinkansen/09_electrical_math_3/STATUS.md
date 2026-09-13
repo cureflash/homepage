@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 4 / 12
-- current_status: `topic_05_practice_pdf_complete`
+- current_status: `topic_05_powerpoint_complete`
 - last_completed_topic: `04 極形式・フェーザ`
 - active_topic: `05 ベクトル`
-- next_start: Topic 05 解説画像PowerPoint
+- next_start: Topic 05 完成教材だけでの公式過去問独立再解答
 
 ## Topic 05 進捗
 - [x] 系列SPEC確認
@@ -22,28 +22,26 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 05 `ベクトル` の練習問題source＋練習PDFを完成した。
+Topic 05 `ベクトル` の解説画像PowerPointを完成した。
 
-`topics/05_vectors/05_vectors_practice.md`
-`topics/05_vectors/05_vectors_practice.pdf`
+`topics/05_vectors/05_vectors_images.pptx`
 
-- 全12問・全問五肢択一
-- 基礎3 / 標準7 / 複合2
-- 固定EXAM_ALIGNMENT 6問の要求事項を全件カバー
-- スカラー/ベクトル、成分・大きさ、和差、60°合成、内積の基本、外積、正負電荷、座標軸、垂直成分、フェーザとの違いを出題
-- 計算独立確認: PASS
-- A4縦3ページ、200 dpi全ページ表示QA: PASS
-- 文字抽出QA: PASS
+- 16:9・4スライド
+- 固定EXAM_ALIGNMENT 6問の判断経路を可視化
+- スカラー/ベクトル、成分・大きさ、同一直線上の和差、60°合成、`v⊥=v sinθ`、外積・右手系・負電荷、フェーザとの違いを整理
+- R8上問4、R7下問2、R7上問11、R6下問4、R4下問4、R4上問4へ対応
+- 全4スライド表示QA: PASS
+- はみ出し検査: PASS
 - 仕様外論点・未確認新幹線実値の追加: 0件
 
 ## 判定
 
-Topic 05は `practice PDF complete / IN_PROGRESS`。
+Topic 05は `PowerPoint complete / IN_PROGRESS`。
 
-完成数は `4 / 12` のまま。次はTopic 05の解説画像PowerPointを作成する。
+完成数は `4 / 12` のまま。次はTopic 05の完成教材だけで公式過去問6問を独立再解答する。

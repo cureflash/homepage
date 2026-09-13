@@ -12,11 +12,11 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
-Topic 05 `ベクトル` は練習PDFまで完了。
+Topic 05 `ベクトル` は解説画像PowerPointまで完了。
 
 完成数: `4 / 12`
 
-current_status: `topic_05_practice_pdf_complete`
+current_status: `topic_05_powerpoint_complete`
 
 active_topic: `05 ベクトル`
 
@@ -60,7 +60,7 @@ active_topic: `05 ベクトル`
 - 文字抽出QA: PASS
 - 仕様外論点・未確認新幹線実値の追加: 0件
 
-## 今回完成した練習source・練習PDF
+## 練習source・練習PDF
 
 `topics/05_vectors/05_vectors_practice.md`
 `topics/05_vectors/05_vectors_practice.pdf`
@@ -79,14 +79,26 @@ active_topic: `05 ベクトル`
 - 文字抽出QA: PASS
 - 仕様外論点・未確認新幹線実値の追加: 0件
 
+## 今回完成した解説画像PowerPoint
+
+`topics/05_vectors/05_vectors_images.pptx`
+
+- 16:9・4スライド
+- 固定EXAM_ALIGNMENT 6問の判断経路を可視化
+- スカラー/ベクトル、成分・大きさ、同一直線上の和差を整理
+- 60°合成、`v⊥=v sinθ`、外積・右手系・負電荷を図解
+- フェーザの位相角と空間ベクトルの方向角を区別
+- 全4スライド表示QA: PASS
+- はみ出し検査: PASS
+- 仕様外論点・未確認新幹線実値の追加: 0件
+
 ## 未作成
 
-- 解説画像PowerPoint
 - 完成後独立再解答記録
 - 最終QA記録
 
 ## 次に行うこと
 
-Topic 05 `ベクトル` の解説画像PowerPointを作成する。
+Topic 05 `ベクトル` の完成教材だけで、固定EXAM_ALIGNMENT 6問を公式解答を先に見ずに独立再解答する。
 
-固定EXAM_ALIGNMENT 6問の判断経路を可視化し、仕様内だけで作成して表示QA・はみ出し検査を行う。仕様外論点や未確認実車値を追加しない。
+教材外知識で補完せず、全問の根拠を教材内へ対応付けて品質ゲートを判定する。仕様外論点や未確認実車値を追加しない。
