@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 2 / 21
-- current_status: `topic_03_final_qa_needs_revision`
+- current_status: `topic_03_practice_artifact_repaired`
 - last_completed_topic: `02 架線は長くなるとなぜ電圧が落ちる？`
 - active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
-- next_start: Topic 03の最終QAで検出した既存source不整合を修正する。練習sourceの文字破損2箇所を直して練習PDFを同期・全ページ表示QAし、解説sourceの状態欄・末尾品質判定を現在地へ同期した後、最終QAを再実施する。新規論点は追加しない
+- next_start: Topic 03の解説source `03_catenary_electric_field.md` の状態欄・末尾品質判定を現在地へ同期し、その後に最終QAを再実施する。新規論点は追加しない
 
 ## Topic 03 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -26,30 +26,29 @@
 - [x] 解説画像PowerPoint
 - [x] 公式過去問の教材のみでの完成後独立再解答
 - [x] 最終QA実施
+- [x] 最終QAで検出した練習source文字破損を修正し、練習PDFへ同期・全ページ表示QA
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 03の最終QAを実施し、記録を `topics/03_catenary_electric_field/03_catenary_electric_field_final_qa.md` に保存した。
+Topic 03の最終QAで検出した練習成果物の不整合を1段階修正した。
 
-確認結果:
+- `03_catenary_electric_field_practice.md`
+  - `問2 対称配置の合成電界` へ修正
+  - `問7 無限長線電荷の電界` へ修正
+- 修正版sourceから練習PDFを再生成してGitHub正本へ同期
+- 練習PDF: A4縦4ページ
+- 全4ページ表示QA: PASS
+- PDFテキスト抽出でも修正後2見出しを確認し、文字破損なし
+- 問題数12、難易度配分、正答・解説、一次6問・21小問への対応は変更なし
+- 二次試験の確認・非採用判断を維持
+- SPEC外論点・新規仕様の追加なし
 
-- 必須成果物6点のGitHub正本上の存在: PASS
-- 一次「理論」6問・21小問のEXAM_ALIGNMENT: PASS
-- 完成後独立再解答21/21: PASS
-- 二次試験の確認・非採用判断: 維持
-- SPEC外論点の教材内容への混入: なし
-- 成果物・進捗記録の相互整合: NEEDS_REVISION
+未解消:
 
-検出した不整合:
-
-1. `03_catenary_electric_field_practice.md` に文字破損2箇所
-   - `問2 対称�q置の合成電界`
-   - `問7 無限��線電荷の電界`
-2. `03_catenary_electric_field.md` の状態欄がPDF・練習問題・PowerPoint未着手のまま、末尾も独立再解答未実施のままで現在地と不一致
-
-過去問対応内容の不足ではなく既存成果物の整合性問題のため、新規仕様・新規論点は追加しない。
+- `03_catenary_electric_field.md` の状態欄・末尾品質判定が古い
+- 上記同期後の最終QA再実施
 
 ## 判定
 
-Topic 03は `topic_03_final_qa_needs_revision`。まだ `completed` ではない。完成数は `2 / 21` のまま。次工程は上記不整合の修正・再表示QA・最終QA再実施。
+Topic 03は `topic_03_practice_artifact_repaired`。まだ `completed` ではない。完成数は `2 / 21` のまま。
