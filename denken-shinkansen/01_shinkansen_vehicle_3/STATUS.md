@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 23 / 38
-- current_status: `topic_24_practice_pdf_complete`
+- current_status: `topic_24_powerpoint_complete`
 - last_completed_topic: `23 L0系② 500km/hと周波数制御`
 - active_topic: `24 L0系③ 超電導磁気浮上`
-- next_start: Topic 24の解説画像PowerPointを作成する。固定範囲と選定6過去問への接続だけを可視化し、系列SPEC外の論点・未確認実車値は追加しない
+- next_start: Topic 24の完成後独立再解答を行う。保存済み正答を先に見ず、完成教材だけで選定6過去問を再解答し、全問を根拠付きで再現できた場合のみcompletedとする
 
 ## 新品質ゲート進捗
 - [x] 01〜23 — PASS
-- [ ] 24 L0系③ 超電導磁気浮上 — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF完了。PowerPoint・完成後独立再解答が未完了
+- [ ] 24 L0系③ 超電導磁気浮上 — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、PowerPoint完了。完成後独立再解答が未完了
 
 ## 24 EXAM_ALIGNMENT
 品質ゲート対象は直近年度優先の6問。式・法則から再導出し、公式解答と6 / 6一致。
@@ -62,7 +62,7 @@ JR東海「超電導リニアの原理」を確認し、Topic 24では次だけ�
 - source Markdown: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev.md` — EXAM_ALIGNMENT、解説本文、3段階例題まで完了
 - 解説PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf` — A4縦2ページ、全ページQA PASS
 - 練習PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_practice.pdf` — A4縦4ページ、15問、解答・完全解説付き、全ページQA PASS
-- 解説画像PowerPoint: 未作成
+- 解説画像PowerPoint: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_images.pptx` — 3スライド、全スライド表示QA・overflow検査PASS
 
 ## 24 解説PDF QA
 - A4縦2ページ
@@ -79,6 +79,13 @@ JR東海「超電導リニアの原理」を確認し、Topic 24では次だけ�
 - L0系固有問題は一次資料確認済みの「超電導磁石の移動→磁束変化→誘導電流→磁気作用→浮上・案内力」と浮上用外部給電不要の範囲だけを使用
 - 全4ページをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし
 - 系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道、未確認実車値は追加していない
+
+## 24 PowerPoint QA
+- 3スライド
+- 磁界の式選択、`H/B`、ファラデー/レンツ、運動起電力、電磁力、L0系の浮上・案内、3段階例題、選定6過去問との対応を可視化
+- JR東海一次資料で確認済みの実車事実だけを使用し、未確認のコイル寸法・磁束密度・電流値・結線値は追加していない
+- 系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道は追加していない
+- 全3スライドをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし。overflow検査PASS
 
 ## 23 EXAM_ALIGNMENT
 品質ゲート対象は次の5問。制作前独立解答は5 / 5 PASS、完成後独立再解答も5 / 5 PASS。
@@ -116,4 +123,4 @@ JR東海「超電導リニアの原理」で、時速500 km走行、推進コイ
 `PASS`。制作前EXAM_ALIGNMENT、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5をすべて通過。Topic 23をcompletedとし、完成数を23/38へ更新した。
 
 ## 次
-Topic 24 `L0系③ 超電導磁気浮上` の解説画像PowerPointを作成する。固定範囲と選定6過去問への接続だけを可視化し、系列SPEC外の論点・未確認実車値を追加しない。
+Topic 24 `L0系③ 超電導磁気浮上` の完成後独立再解答を行う。保存済み正答を先に見ず、完成教材だけで選定6過去問を再解答し、6/6を根拠付きで再現できた場合のみcompletedとする。
