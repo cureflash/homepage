@@ -6,10 +6,10 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は24/38。01〜24がPASS。active topicは25 `L0系④ 誘導集電`。
 
 ## 今回進捗
-Topic 25の解説本文＋3段階例題を完成した。制作前EXAM_ALIGNMENTで確定した5問・7小問の要求事項を全件本文へマッピングし、系列SPEC固定範囲（電磁誘導、非接触給電、誘導集電、交流、電力変換、効率）だけで構成した。
+Topic 25の解説PDFを完成した。sourceの§1〜§13、基礎・本試験標準・複合の3段階例題、制作前EXAM_ALIGNMENTで確定した5問・7小問の教材内対応をA4縦3ページへ反映した。全3ページを180 dpiでレンダリングし、表示QAをPASSした。
 
 更新:
-- `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection.md` — 解説本文＋3段階例題を追加
+- `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection_explanation.pdf` — A4縦3ページ、全ページ表示QA PASS
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -39,6 +39,14 @@ R8上理論問3（磁気エネルギー）、R8上機械問9（変圧器短絡�
 
 共振方式、Q値、補償・整合回路、高周波インバータ詳細、未確認実車値は追加していない。R7下機械問16の三相ダイオード整流回路をL0系実機構成とは断定していない。
 
+## Topic 25 解説PDF QA
+- `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection_explanation.pdf` — A4縦3ページ
+- sourceの§1〜§13、3段階例題、選定5問・7小問の教材内対応を収録
+- 全3ページを180 dpiでレンダリング確認し、文字切れ・重なり・ページ外はみ出し・破損字形なし
+- 系列SPEC外の共振方式、Q値、補償・整合回路、高周波インバータ詳細は追加していない
+- 未確認のL0系コイル寸法・実運転周波数・定格電力・電圧・電流・伝送効率は追加していない
+- R7下機械問16の三相ダイオード整流回路をL0系実機構成とは断定していない
+
 ## L0系一次資料
 - JR東海「超電導リニアの原理」: https://linear-chuo-shinkansen.jr-central.co.jp/about/
 - JR東海「発見！リニア未来シティ」: https://linear-chuo-shinkansen.jr-central.co.jp/linearfuturecity/
@@ -55,10 +63,10 @@ R8上理論問3（磁気エネルギー）、R8上機械問9（変圧器短絡�
 - 電験王3 R5上機械問9: https://denken-ou.com/kikair5-1-9/
 
 ## 現在の状態
-- `current_status`: `topic_25_explanation_source_complete`
+- `current_status`: `topic_25_explanation_pdf_complete`
 - 完成数: 24/38
 - 01〜24: PASS
-- Topic 25: EXAM_ALIGNMENT、解説本文＋3段階例題完了、制作中
+- Topic 25: EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF完了、制作中
 
 ## 次の正確な開始点
-Topic 25の解説PDFを作成し、全ページ表示QAを実施する。sourceの§1〜§13、3段階例題、選定5問・7小問の教材内対応を落とさず反映する。練習PDF・PowerPoint・完成後独立再解答はその後の段階とする。
+Topic 25の練習PDFを作成し、全ページ表示QAを実施する。三種仕様どおり原則12問以上、少なくとも半数を五肢択一、基礎20〜30%・本試験標準50〜60%・複合応用約20%とし、選定5問・7小問の要求事項を全件カバーする。PowerPoint・完成後独立再解答はその後の段階とする。
