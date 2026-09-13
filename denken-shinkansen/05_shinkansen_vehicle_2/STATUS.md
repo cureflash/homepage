@@ -5,17 +5,17 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 4 / 39
-- current_status: `topic_05_explanation_pdf_complete`
+- current_status: `topic_05_practice_source_complete`
 - last_completed_topic: `04 0系④ タップ制御と加速特性`
 - active_topic: `05 0系⑤ 発電ブレーキのエネルギー解析`
-- next_start: Topic 05の練習問題・完全解説sourceを、固定済みEXAM_ALIGNMENTと解説PDFに同期して作成する
+- next_start: Topic 05の練習問題sourceから練習PDFを作成し、全ページ表示QAを行う
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
 - [x] 04 0系④ タップ制御と加速特性 — PASS
-- [ ] 05 0系⑤ 発電ブレーキのエネルギー解析 — EXAM_ALIGNMENT・解説本文・3段階例題・解説PDF完了、練習問題source未着手
+- [ ] 05 0系⑤ 発電ブレーキのエネルギー解析 — EXAM_ALIGNMENT・解説本文・3段階例題・解説PDF・練習問題source完了、練習PDF未着手
 
 ## Topic 05 現在地
 - source: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy.md`
@@ -25,8 +25,13 @@
   - 基礎・本試験標準・複合の3段階例題収録
   - 全5ページ180 dpi Visual QA PASS
 - 解説PDF QA: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_explanation_qa.md`
+- 練習問題source: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_practice_source.md`
+  - 一次8問（全問五肢択一）＋二次記述4問、計12問
+  - 全問完全解説付き
+  - 計算・論理QA `12 / 12 PASS`
+  - R5一次・H24二次の固定範囲へ接続
 - 制作前EXAM_ALIGNMENT: 完了
-- 次工程: 練習問題・完全解説source
+- 次工程: 練習PDF＋全ページ表示QA
 
 ## Topic 05 過去問対応
 公式過去問は一次・二次双方を確認済み。固定範囲へ直接または必須計算基礎として接続するゲート対象:
@@ -55,13 +60,14 @@
 - 時間―速度
 - 制動抵抗の発熱量
 
-解説本文・PDFに実装済み:
+解説本文・PDF・練習問題sourceに実装済み:
 - `E = k_e Φω`、界磁一定なら `E ∝ ω`
 - `I_b = E/(R_a+R_b)`
 - `T_b = k_t Φ I_b`
 - `P_g = E I_b`, `P_R = I_b^2 R_b`, `P_Cu = I_b^2 R_a`, `Q_R = ∫P_R dt`
 - `K = 1/2 m_eq v^2`, `m_eq dv/dt = -F_b`
 - 一定磁束・固定抵抗の教材用簡略モデルによる指定4グラフ
+- 二次記述答案の計算鎖とエネルギー収支検算
 
 追加しない:
 - 回生・四象限運転
