@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 2 / 16
-- current_status: `topic_03_practice_pdf_complete`
+- current_status: `topic_03_powerpoint_complete`
 - last_completed_topic: `02 初代0系はどうやって走っていた？`
 - active_topic: `03 直流モーターはどうやって速度を変える？`
-- next_start: Topic 03 の確定済み解説本文・練習問題sourceだけを使い、解説画像PowerPointを作成する
+- next_start: Topic 03 の完成教材だけを使い、選定5過去問を保存済み正答を見ずに独立再解答し、公式解答と照合する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 必須4成果物と完成後独立再解答まで完了。選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 必須4成果物と完成後独立再解答まで完了。選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
-- [ ] 03 直流モーターはどうやって速度を変える？ — 制作前EXAM_ALIGNMENT、解説本文9節、3段階例題、解説PDF、練習問題source12問、練習PDFまで完了。PowerPoint以降は未着手
+- [ ] 03 直流モーターはどうやって速度を変える？ — 制作前EXAM_ALIGNMENT、解説本文9節、3段階例題、解説PDF、練習問題source12問、練習PDF、解説画像PowerPointまで完了。完成後独立再解答は未実施
 - [ ] 04〜16 — 未着手
 
 ## 01 品質ゲート記録
@@ -101,13 +101,22 @@ source Markdown:
 - 全7ページをレンダリング確認し、文字欠け・重なり・クリッピング・可読性を確認してPASS
 - PDFテキスト抽出で置換文字なし、全12問の収録を確認済み
 
-完成後独立再解答は未実施。PowerPointまで揃えた後に上記5問を教材だけで再解答する。
+解説画像PowerPoint:
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_images.pptx`
+- 16:9、3枚
+- 1枚目: `V=E+IaRa`、`E=kΦN`、`T=kΦIa` と3種類の速度制御を整理
+- 2枚目: 始動時 `E=0`、始動抵抗、段階的切外しを確定済み例題値で図解
+- 3枚目: 定トルク・弱め界磁・定出力の基本と、系列SPECで確定済みの新幹線接続を整理
+- 確定済み解説本文・練習問題sourceの範囲だけを使用し、未確認実車値や後続Topicの論点を追加していない
+- 全3枚をPDF化・レンダリングして確認し、文字欠け・重なり・クリッピング・可読性を確認してPASS。PPTXパッケージ整合性も確認済み
+
+完成後独立再解答は未実施。上記5問を完成教材だけで独立再解答し、公式解答と照合する工程が残る。
 
 ## 境界
 Topic 03は系列SPECの速度制御・始動範囲だけを扱う。回生制動はTopic 09、誘導機のVVVF制御とパワー半導体は後続Topic 04〜08の範囲とし、先取りしない。未確認の0系実車値は真値化しない。
 
 ## 03 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENT、解説本文9節・3段階例題、解説PDF、練習問題source12問、練習PDFまで完了。必須成果物のうちPowerPointが未完で、完成後独立再解答も未実施のため完成数は2/16のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENT、解説本文9節・3段階例題、解説PDF、練習問題source12問、練習PDF、解説画像PowerPointまで完了。完成後独立再解答が未実施のため完成数は2/16のまま。
 
 ## 次
-Topic 03の確定済み解説本文・練習問題sourceだけを使い、解説画像PowerPointを作成する。
+Topic 03の完成教材だけを使い、R6上問2、R4上問1、R3問7、R2問1、R1問1を保存済み正答を見ずに独立再解答し、公式解答と照合する。
