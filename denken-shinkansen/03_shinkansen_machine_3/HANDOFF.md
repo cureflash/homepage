@@ -6,13 +6,13 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は2/16。Topic 01・02は品質ゲートPASSでcompleted。active topicは03 `直流モーターはどうやって速度を変える？`。
 
 ## 今回進捗
-Topic 03 を `topic_03_practice_source_complete` から `topic_03_practice_pdf_complete` へ1段階進めた。
+Topic 03 を `topic_03_practice_pdf_complete` から `topic_03_powerpoint_complete` へ1段階進めた。
 
-確定済み `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.md` だけを使い、問題編12問と解答・完全解説を含む練習プリントPDFを作成した。A4縦7ページ。全ページ表示QAとPDFテキスト確認を行いPASS。未確認実車値や後続Topicの論点は追加していない。
+確定済み `topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md` と `03_dc_motor_speed_control_practice.md` の範囲だけを使い、解説画像PowerPointを作成した。16:9・3枚。全3枚をPDF化・レンダリングして表示QAを行いPASS。PPTXパッケージ整合性も確認済み。未確認実車値や後続Topicの論点は追加していない。
 
 GitHub正本更新:
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.pdf` — 新規作成
-- `STATUS.md` — `topic_03_practice_pdf_complete`、完成数2/16、次工程を解説画像PowerPointへ更新
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_images.pptx` — 新規作成
+- `STATUS.md` — `topic_03_powerpoint_complete`、完成数2/16、次工程を完成後独立再解答へ更新
 - `HANDOFF.md`
 
 ## Topic 03 EXAM_ALIGNMENT
@@ -88,12 +88,25 @@ GitHub正本更新:
 - 未確認の0系実車定格値・タップ数は不使用
 - 回生制動、誘導機VVVF、インバータ、GTO・IGBT・SiCは追加していない
 
+## 解説画像PowerPoint
+`topics/03_dc_motor_speed_control/03_dc_motor_speed_control_images.pptx`
+
+- 16:9、3枚
+- 1枚目: 速度式と `V=E+IaRa`、`E=kΦN`、`T=kΦIa`、電機子電圧・界磁・抵抗の3制御を整理
+- 2枚目: 始動時 `N=0 → E=0`、始動抵抗、速度上昇に伴う段階的切外しを確定済み例題値で整理
+- 3枚目: 低速側の定トルク、高速側の弱め界磁・定出力の基本と、新幹線への接続を整理
+- 確定済み解説本文・練習問題sourceだけを使用
+- 未確認の0系タップ数・主電動機定格値は不使用
+- 回生制動、誘導機VVVF、インバータ、GTO・IGBT・SiCは追加していない
+- 全3枚をPDF化・レンダリング確認し、文字欠け・重なり・クリッピング・可読性を確認してPASS
+- PPTX ZIPパッケージ検査もPASS
+
 ## QA判定
 Topic 01: `PASS / completed`。
 
 Topic 02: `PASS / completed`。完成後独立再解答6/6正答。
 
-Topic 03: `IN_PROGRESS`。制作前EXAM_ALIGNMENT、解説本文9節・3段階例題、解説PDF、練習問題source12問、練習PDFまで完了。PowerPoint・完成後独立再解答は未完了なので、完成数は2/16のまま。
+Topic 03: `IN_PROGRESS`。制作前EXAM_ALIGNMENT、解説本文9節・3段階例題、解説PDF、練習問題source12問、練習PDF、解説画像PowerPointまで完了。完成後独立再解答は未実施なので、完成数は2/16のまま。
 
 ## 次の正確な開始点
-Topic 03の確定済み解説本文・練習問題sourceだけを使い、解説画像PowerPointを作成する。
+Topic 03の完成教材だけを使い、R6上問2、R4上問1、R3問7、R2問1、R1問1を保存済み正答を見ずに独立再解答し、公式解答と照合する。
