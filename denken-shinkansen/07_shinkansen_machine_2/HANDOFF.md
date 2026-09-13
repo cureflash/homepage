@@ -12,35 +12,19 @@ Topic 02 `0系の直流主電動機はどんな特性だった？` も最終QA�
 
 active topic: `03 0系を210km/hまで加速させる`
 
-current status: `topic_03_explanation_source_complete`
+current status: `topic_03_explanation_pdf_complete`
 
 ## Topic 03 今回完了した工程
 
-解説本文＋3段階例題を次へ追加した。
+解説PDFを作成した。
 
+source Markdown:
 `topics/03_0series_acceleration/03_0series_acceleration.md`
 
-本文では次を一続きにした。
+解説PDF:
+`topics/03_0series_acceleration/03_0series_acceleration_explanation.pdf`
 
-- `V=E+I_aR_a`
-- `E=kφω`
-- `T=kφI_a`
-- 電圧制御
-- 0系の低圧タップ切換
-- 弱め界磁
-- 定トルク領域・定出力領域
-- `P=Tω`
-- 歯車比 `i=n_m/n_w`
-- `v=0.06πDn_m/i`
-- `F=T_w/r`
-- `a=(F-F_r)/m`
-- `Jdω/dt=T_M-T_L`
-
-3段階例題は次の役割で作成済み。
-
-1. 基礎: 端子電圧変更から逆起電力・回転速度を求める
-2. 標準: 歯車・車輪を介して列車速度・駆動力・加速度まで求める
-3. 二次相当: 弱め界磁・定出力条件からトルク比・電流・必要端子電圧を求める
+A4縦2ページ。制作前EXAM_ALIGNMENT、本文12節、基礎・標準・二次相当の3段階例題を反映した。全ページを160 dpiでレンダリングし、文字欠け・クリップ・重なりがないことを確認した。
 
 ## 0系一次資料確認
 
@@ -57,9 +41,7 @@ https://www.n-sharyo.co.jp/museum/tec0/tec0-spec.html
 - タップ切替器25段
 - 最高速度210 km/h
 
-`1,480/8=185 kW/台` は資料値からの計算値として明示した。
-
-車輪径・主電動機回転速度は、このrunで一次資料確認できていないため0系実値としては使っていない。標準例題で必要な未確認値は「教材上の仮定値」と明記した。
+`1,480/8=185 kW/台` は資料値からの計算値。車輪径・主電動機回転速度は一次資料未確認のため0系実値として使っていない。例題で必要な未確認値は「教材上の仮定値」と明記した。
 
 ## 過去問品質ゲート
 
@@ -71,9 +53,9 @@ https://www.n-sharyo.co.jp/museum/tec0/tec0-spec.html
 - H25 一次 機械 問3
 - H24 二次 機械・制御 問1(4)
 
-一次4問＋二次記述1問、ゲート対象8小問の制作前公式照合は `8 / 8 PASS`。
+一次4問＋二次記述1問、ゲート対象8小問の制作前公式照合は `8 / 8 PASS`。解説PDFでも要求事項を維持した。
 
-本文はこれらの要求事項を全件収録した。完成後の「教材だけを使う独立再解答」は、PDF・練習PDF・PowerPoint完成後に実施する。
+完成後の「教材だけを使う独立再解答」は、練習PDF・PowerPoint完成後に実施する。
 
 チョッパ制御、回生制動、誘導電動機V/f・ベクトル制御、等価RC回路による厳密な始動過渡は本テーマへ追加していない。
 
@@ -96,6 +78,6 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 03の解説PDFを作成する。
+Topic 03の練習PDF（解答・完全解説付き）を作成する。
 
-正本は `topics/03_0series_acceleration/03_0series_acceleration.md`。本文・3段階例題・EXAM_ALIGNMENTを削らず反映し、実車値はsource内で一次資料確認済みとしたものだけを使用する。PDF作成後も完成数は増やさず、練習PDF・PowerPoint・教材のみ独立再解答・最終QAまで通過した時点で初めてTopic 03をcompletedとする。
+一次試験型に加え、H24二次問1(4)型へ接続する記述計算は、使用式・前提・比例関係・途中式・単位・最終値を採点可能な形で含める。固定範囲外を追加しない。完成数は増やさず、PowerPoint・教材のみ独立再解答・最終QAまで通過した時点で初めてTopic 03をcompletedとする。
