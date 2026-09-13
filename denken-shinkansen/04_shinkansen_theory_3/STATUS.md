@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 3 / 14
-- current_status: `topic_04_practice_pdf_complete`
+- current_status: `topic_04_powerpoint_complete`
 - last_completed_topic: `03 架線はただの銅線ではない`
 - active_topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
-- next_start: Topic 04の確定済みEXAM_ALIGNMENT・解説・練習成果物を基に、解説画像PowerPointを作成して表示QA・overflow検査を行う
+- next_start: Topic 04の完成済み教材だけを使い、確定済み公式過去問6問を保存済み正答を先に見ずに独立再解答する
 
 ## Topic 01 進捗
 
@@ -57,28 +57,25 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の練習問題source・練習PDFを完成した。
+Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の解説画像PowerPointを完成した。
 
 更新成果物:
-- `topics/04_electric_field_capacitance/04_electric_field_capacitance_practice.md`
-- `topics/04_electric_field_capacitance/04_electric_field_capacitance_practice.pdf`
+- `topics/04_electric_field_capacitance/04_electric_field_capacitance_images.pptx`
 
-練習仕様:
-- 全15問、全問五肢択一
-- 基礎4問（26.7%）/ 本試験標準8問（53.3%）/ 複合・応用3問（20.0%）
-- 確定済み6公式過去問の要求事項を全件マッピング
-- 各問に使用式、理由、代入・中間計算、単位、検算または重要誤答理由を収録
+PowerPoint仕様:
+- 16:9、全5スライド
+- 確定済み6公式過去問に必要な判断経路を、点電荷の力・電位、平行板容量・誘電体、V一定/Q保存、つなぎ替え・静電エネルギーの順で図解
+- 解説本文・練習成果物で固定済みの論点だけを使用
 
-PDF仕様・QA:
-- A4縦 4ページ
-- 200 dpiで全4ページをレンダリングし、文字欠け・数式欠け・重なり・ページ外はみ出しなしを確認
-- 文字抽出で置換文字0件
+表示QA:
+- 全5スライドをレンダリングして目視確認し、文字欠け・数式欠け・重なり・判読不能箇所なし
+- `slides_test.py` のoverflow検査PASS
 
 境界は維持:
 - 電束密度・ガウスの法則は追加しない
@@ -88,4 +85,4 @@ PDF仕様・QA:
 
 ## 判定
 
-Topic 04は `PRACTICE_PDF_COMPLETE`。完成数は `3 / 14` のまま。次工程は解説画像PowerPoint＋表示QA・overflow検査。
+Topic 04は `POWERPOINT_COMPLETE`。完成数は `3 / 14` のまま。次工程は確定済み公式過去問6問の完成後独立再解答。
