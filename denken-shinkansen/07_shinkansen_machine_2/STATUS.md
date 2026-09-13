@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 3 / 22
-- current_status: `topic_04_exam_alignment_complete`
+- current_status: `topic_04_explanation_source_complete`
 - last_completed_topic: `03 0系を210km/hまで加速させる`
 - active_topic: `04 200系のサイリスタ制御を計算する`
-- next_start: Topic 04の解説本文＋3段階例題を作成する。固定EXAM_ALIGNMENTの一次2問＋二次記述3問、ゲート対象12小問で要求されたサイリスタ、制御角、三相位相制御整流、平均直流電圧、電流、力率、高調波の基本を全件本文へマッピングし、`V_d(α)=E+I_aR_a`、`T=kΦI_a` で直流主電動機との接続まで説明する。固定範囲外は追加しない
+- next_start: Topic 04のsource Markdownを正本に解説PDFを作成し、全ページ表示QAを行う。固定EXAM_ALIGNMENTの12小問に必要なサイリスタ、制御角、三相全波位相制御整流、平均直流電圧、電流、基本波力率、高調波の基本、直流主電動機との接続を欠落させず、固定範囲外は追加しない
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -63,7 +63,7 @@
 - [x] 参考教材を e-sysnet＋電験王2 の複数系統で確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] ゲート対象12小問の公式解答照合を伴う要求事項の独立検証: 12 / 12 PASS
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -71,22 +71,21 @@
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 04の制作前EXAM_ALIGNMENTを `topics/04_200series_thyristor_control/04_200series_thyristor_control.md` に作成した。
-
-選定過去問:
-- R05 一次 機械 問4
-- R01 一次 機械 問3
-- R05 二次 機械・制御 問3
-- H30 二次 機械・制御 問3
-- H27 二次 機械・制御 問3
+Topic 04の解説本文＋3段階例題を `topics/04_200series_thyristor_control/04_200series_thyristor_control.md` に追加した。
 
 確認結果:
-- 一次2問＋二次記述3問、計5問: PASS
-- 固定範囲に対応するゲート対象12小問の公式解答照合付き独立検証: 12 / 12 PASS
-- サイリスタ、制御角、三相位相制御整流、平均直流電圧、電流、力率、高調波の基本を過去問要求へ対応付け: PASS
-- 直流主電動機との接続に必要な `V_d(α)=E+I_aR_a`、`T=kΦI_a` を本文必須事項として固定: PASS
-- 降圧チョッパ、能動フィルタ設計、サイクロコンバータ固有制御、回生・逆変換、PWM・インバータをゲート対象外として明示: PASS
+- 固定EXAM_ALIGNMENTのゲート対象12小問を本文の節へ全件マッピング: PASS
+- `V_d=(3√2/π)V cosα` の成立条件と60°区間の平均値積分を記述: PASS
+- `α=0`、`0≤α≤π/2`、`α-V_d` の関係を記述: PASS
+- サイリスタ印加電圧、一素子平均電流、平均値・実効値・直流側電流の区別を記述: PASS
+- H30二次条件の `P`、`I_1`、`S_1`、`Q_1` と基本波力率を記述: PASS
+- 基本波力率と高調波を含む総合力率を区別: PASS
+- 高調波の発生源と過熱・振動・誤動作等の基本的影響を記述: PASS
+- `V_d(α)=E+I_aR_a`、`T=kΦI_a` で直流主電動機まで接続: PASS
+- `α-V_d`、`α-I_a`、`α-T` のグラフ原稿を条件付き一般式で固定: PASS
+- 基礎・本試験標準・二次相当の3段階例題を作成: PASS
 - 200系の未確認実車値を追加していない: PASS
+- 固定範囲外のチョッパ、PWM、インバータ、回生、サイクロコンバータ固有制御を追加していない: PASS
 
 ## 判定
-Topic 04は `exam_alignment_complete`。完成数は `3 / 22` のまま。次工程は解説本文＋3段階例題。
+Topic 04は `explanation_source_complete`。完成数は `3 / 22` のまま。次工程は解説PDF＋全ページ表示QA。
