@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「理論」
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 3 / 21
-- current_status: `topic_04_powerpoint_complete`
+- current_status: `topic_04_independent_reanswer_complete`
 - last_completed_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 - active_topic: `04 架線と車体は巨大なコンデンサなのか？`
-- next_start: Topic 04の固定EXAM_ALIGNMENT一次5問・22小問を、保存済み正答を見ず教材内容だけで完成後独立再解答する。二次は直接対応がないため数合わせで追加せず、教材外知識で補完しない
+- next_start: Topic 04の最終QAを実施し、EXAM_ALIGNMENT、成果物、表示QA、完成後独立再解答22/22 PASS、SPEC境界、進捗記録の整合を確認する。全品質ゲートPASS時のみ `completed` にする
 
 ## Topic 04 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -26,22 +26,25 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの完成後独立再解答
+- [x] 公式過去問の教材のみでの完成後独立再解答 `22 / 22 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 04の解説画像PowerPointを完成した。
+Topic 04の固定EXAM_ALIGNMENT一次5問・22小問を完成後独立再解答した。
 
-- `topics/04_catenary_capacitance/04_catenary_capacitance_images.pptx`
-- 16:9、5スライド
-- 固定EXAM_ALIGNMENTの一次5問・22小問で必要な図解だけを収録
-- 二層誘電体の `D` 連続と `E` 分担、平行板の `C=εS/d` と分極、同軸円筒の `D(r)`・`E(r)`・`ln(b/a)`、固定電圧／固定電荷と静電エネルギーを可視化
-- 二次に直接対応問題がないため別論点を件数合わせで追加していない
-- 電気影像法、導電率・コンダクタンス、力率改善、実車容量推定を追加していない
-- 全5スライドをレンダリングして表示QA PASS
-- 領域外はみ出し検査 PASS
+- R6 問1(1)〜(5): `5 / 5 PASS`
+- R5 問1(1)〜(5): `5 / 5 PASS`
+- R3 問1(1)〜(5): `5 / 5 PASS`
+- H27 問1(1)〜(2): `2 / 2 PASS`
+- H24 問5(1)〜(5): `5 / 5 PASS`
+- 合計: `22 / 22 PASS`
+- 教材内の `D=εE`、誘電体境界、同軸円筒、電位積分、電荷保存、静電エネルギーだけで解法を再構成
+- 教材外の電気理論による補完 `0件`
+- 電気影像法、導電率・コンダクタンス、力率改善等の固定範囲外論点追加 `0件`
+- 二次は直接対応なしの既記録を維持し、件数合わせ `0件`
+- 独立再解答記録: `topics/04_catenary_capacitance/04_catenary_capacitance_independent_reanswer.md`
 
 ## 判定
 
-Topic 04は `PowerPoint PASS`。テーマ自体は未完了。完成数は `3 / 21`。
+Topic 04は `independent reanswer PASS`。テーマ自体は未完了。完成数は `3 / 21`。次は最終QA。
