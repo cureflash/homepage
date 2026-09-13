@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 2 / 16
-- current_status: `topic_03_practice_source_alignment_synced`
+- current_status: `topic_03_artifact_alignment_synced`
 - last_completed_topic: `02 初代0系はどうやって走っていた？`
 - active_topic: `03 直流モーターはどうやって速度を変える？`
-- next_start: 解説PDF・練習PDFの過去問対応表を新選定5問へ必要最小限で同期し、PowerPointに旧選定問への直接参照がないことを確認する
+- next_start: 新選定5問を保存済み正答を見ず、完成教材だけで独立再解答し、公式解答と照合する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 必須4成果物と完成後独立再解答まで完了。選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 必須4成果物と完成後独立再解答まで完了。選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
-- [ ] 03 直流モーターはどうやって速度を変える？ — 必須成果物は完成。旧選定の完成後独立再解答で範囲外問題2問を検出したため、仕様外内容を追加せず過去問選定を修正。source Markdownと練習問題sourceのEXAM_ALIGNMENTは新選定5問へ同期済み。PDF類・PowerPoint確認と新選定での独立再解答は未実施
+- [ ] 03 直流モーターはどうやって速度を変える？ — 必須成果物は完成。旧選定の完成後独立再解答で範囲外問題2問を検出したため、仕様外内容を追加せず過去問選定を修正。source Markdown、練習問題source、解説PDF、練習PDFを新選定5問へ同期済み。PowerPointは旧選定問への直接参照なしを確認済み。新選定での完成後独立再解答のみ未実施
 - [ ] 04〜16 — 未着手
 
 ## 01 品質ゲート記録
@@ -95,8 +95,8 @@ source Markdown:
 解説PDF:
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_explanation.pdf`
 - A4縦4ページ
-- 表示QAは既存版でPASS
-- 本文理論は範囲内だが、旧選定過去問への参照が残るため次工程で対応表だけ同期する
+- 新選定5問の対応表へ同期済み
+- 4ページ全ページ表示QA PASS。文字欠け・クリップ・重なりなし
 
 練習問題source:
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.md`
@@ -107,14 +107,15 @@ source Markdown:
 練習PDF:
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.pdf`
 - A4縦7ページ
-- 表示QAは既存版でPASS
-- 問題本文・解説内容は確定範囲内。対応表に旧選定参照があれば次工程で同期する
+- 新選定5問の対応表へ同期済み
+- 7ページ全ページ表示QA PASS。12問すべて五肢択一、解答・解説を保持
 
 解説画像PowerPoint:
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_images.pptx`
 - 16:9、3枚
 - 速度式、始動抵抗、弱め界磁、定トルク／定出力、新幹線接続を図解済み
-- 次工程で旧選定問への直接参照の有無だけ確認し、存在する場合のみ修正する
+- パッケージ内XMLを確認し、R4上問1・R3問7を含む過去問への直接参照なし。修正不要
+- 既存表示QA・パッケージ検査PASSを維持
 
 旧選定での完成後独立再解答:
 - R6上 問2 → 独立2 / 公式2 / 教材のみPASS
@@ -128,7 +129,7 @@ source Markdown:
 Topic 03は系列SPECの速度制御・始動範囲だけを扱う。回生制動はTopic 09、誘導機のVVVF制御とパワー半導体は後続Topic 04〜08の範囲とし、先取りしない。未確認の0系実車値は真値化しない。
 
 ## 03 QA判定
-`IN_PROGRESS`。旧選定の品質ゲートFAIL原因を教材内容ではなく過去問選定の範囲不一致と特定し、Topic 03内だけで解ける公式過去問へ選定を修正した。source Markdownと練習問題sourceのEXAM_ALIGNMENTは新選定5問へ同期済み。PDF類・PowerPoint確認と新選定5問での完成後独立再解答が残るため、完成数は2/16のまま。
+`IN_PROGRESS`。旧選定の品質ゲートFAIL原因を過去問選定の範囲不一致と特定し、Topic 03内だけで解ける公式過去問へ選定を修正した。source Markdown・練習問題source・解説PDF・練習PDFを新選定5問へ同期し、PowerPointに旧選定問への直接参照がないことも確認済み。完成後独立再解答が残るため、完成数は2/16のまま。
 
 ## 次
-解説PDF・練習PDFの過去問対応表を新選定5問へ必要最小限で同期する。PowerPointは旧選定問への直接参照の有無だけ確認し、必要な場合のみ修正する。その後、新選定5問で完成後独立再解答を再実施する。
+新選定5問を保存済み正答を見ず、完成教材だけで独立再解答する。教材だけで根拠まで再構成できることを確認後、公式解答と照合し、1問でも不足があれば未完扱いとして不足箇所だけを修正する。
