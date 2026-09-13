@@ -8,13 +8,15 @@ Topic 01 `単位・指数・有効数字` は `completed`。
 
 Topic 02 `三角比・三角関数` も最終QAまで完了し `completed`。
 
+Topic 03 `複素数` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。最終QAのみ未実施。
+
 完成数: `2 / 12`
 
-current_status: `topic_03_images_pptx_complete`
+current_status: `topic_03_exam_reanswer_complete`
 
 active_topic: `03 複素数`
 
-## Topic 03 制作前EXAM_ALIGNMENT
+## Topic 03 固定EXAM_ALIGNMENT
 
 記録:
 `topics/03_complex_numbers/03_complex_numbers.md`
@@ -26,9 +28,7 @@ active_topic: `03 複素数`
 - R7上 理論 問9
 - R6上 理論 問13
 
-制作前独立検証は5問・6小問すべて公式解答と一致。
-
-過去問から固定した数学範囲:
+固定した数学範囲:
 - `j`, `j²=-1`
 - 実部・虚部
 - 四則演算
@@ -40,28 +40,38 @@ active_topic: `03 複素数`
 - 複素インピーダンス・アドミタンスの直交形式計算
 - 実部・虚部を分けた交流量の合成
 
-参考教材はe-sysnetと電験三種まとめましたの2系統を確認済み。
+R7下問15の三相関係、R7上問9の力率など回路側の既知関係は、source Markdownで明記済みの先行教材の既知事項としてのみ接続する。本Topicの仕様へ新規追加しない。
 
-## 今回完成した工程
+## 成果物
 
-解説画像PowerPoint `topics/03_complex_numbers/03_complex_numbers_images.pptx` を作成した。
+source Markdown:
+`topics/03_complex_numbers/03_complex_numbers.md`
 
-正本は完成済みsource Markdown・解説PDF・練習PDF。内容はTopic 03の固定範囲から増補していない。
+解説PDF:
+`topics/03_complex_numbers/03_complex_numbers_explanation.pdf`
 
-PowerPoint仕様:
-- 16:9、7枚
-- `j²=-1` と複素平面
-- 四則演算・共役・除算・`1/j=-j`
-- `Z=R+jX` と誘導性/容量性の符号・絶対値
-- `Y=1/Z` と並列アドミタンス
-- 二状態の絶対値式から未知量を逆算
-- 選定5問の要求操作マッピング
-- 頻出ミスと標準解法
+練習PDF:
+`topics/03_complex_numbers/03_complex_numbers_practice.pdf`
 
-QA:
-- 全7枚をレンダリングして表示確認
-- 文字切れ、重なり、欠落、ページ外はみ出しなし
-- キャンバス外はみ出し検査PASS
+解説画像PowerPoint:
+`topics/03_complex_numbers/03_complex_numbers_images.pptx`
+
+完成後独立再解答記録:
+`topics/03_complex_numbers/03_complex_numbers_exam_reanswer.md`
+
+既存PDF・PowerPointは各作成工程で表示QA済み。PowerPointはキャンバス外はみ出し検査もPASS済み。
+
+## 完成後独立再解答
+
+選定5問・6小問を再計算し、再計算後に試験センター公式解答PDFと照合した。
+
+- R8上 理論 問8: (1) `E=20 V`, `P=96 W`
+- R7下 理論 問9: (5) `R≈8.14 Ω`
+- R7下 理論 問15: (a)(3), (b)(3) `I≈11.55 A`, `P=4.0 kW`
+- R7上 理論 問9: (3) `R=2.5 Ω`
+- R6上 理論 問13: (3) `Rp≈(ωL)²/r`
+
+5問6小問すべて公式解答と一致。固定範囲内の複素数操作で解答でき、仕様外論点は追加していない。
 
 ## 範囲境界
 
@@ -74,6 +84,6 @@ QA:
 
 ## 次に行うこと
 
-完成済み教材だけを使って、選定済み公式過去問5問・6小問を完成後独立再解答する。
+Topic 03の最終QAを行う。
 
-保存済み正答は先に見ず、教材外知識で補わない。独立再解答後に最終QAを行う。
+必須成果物の実在、EXAM_ALIGNMENT、完成後独立再解答、既実施PDF/PPTX表示QAとの整合、数式・単位、範囲境界を確認する。PASSした場合のみTopic 03を `completed` とし、完成数を `3 / 12` に更新する。その次はTopic 04 `極形式・フェーザ` の制作前EXAM_ALIGNMENT。
