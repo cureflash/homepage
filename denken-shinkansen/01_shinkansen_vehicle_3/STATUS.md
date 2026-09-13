@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 25 / 38
-- current_status: `topic_26_powerpoint_complete`
-- last_completed_topic: `25 L0系④ 誘導集電`
-- active_topic: `26 補助電源① 主回路の電気を車内設備へ`
-- next_start: Topic 26の完成後独立再解答を行う。選定5問・8小問を保存済み正答を先に見ず教材内容だけで解き、根拠・式選択・適用条件まで確認する
+- exam_aligned_completed_topics: 26 / 38
+- current_status: `topic_26_completed`
+- last_completed_topic: `26 補助電源① 主回路の電気を車内設備へ`
+- active_topic: `27 補助電源② 車内照明`
+- next_start: Topic 27の制作前EXAM_ALIGNMENTを行う。系列SPECの固定範囲（LED、光束、光度、照度、lm、cd、lx、照明計算）から広げず、直近年度を優先して公式過去問を原則5問以上選定する
 
 ## 新品質ゲート進捗
-- [x] 01〜25 — PASS
-- [ ] 26 補助電源① 主回路の電気を車内設備へ — IN_PROGRESS（制作前EXAM_ALIGNMENT完了、制作前独立解答8 / 8 PASS、解説本文＋3段階例題完成、解説PDF完成・全ページ表示QA PASS、練習PDF完成・全ページ表示QA PASS、解説画像PowerPoint完成・全スライド表示QA・overflow検査PASS）
+- [x] 01〜26 — PASS
+- [ ] 27 補助電源② 車内照明 — NOT_STARTED
 
 ## 26 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・8小問。系列SPEC固定範囲は、補助電源装置、交流、直流、電圧変換、インバータ、電力、効率。
@@ -71,5 +71,13 @@
 
 チョッパ詳細、系統連系保護、誘導電動機速度制御、変圧器短絡試験・詳細等価回路、半導体素子各論、高調波対策、未確認の新幹線補助電源実値は追加しない。
 
-## 25 完了確認
-Topic 25 `L0系④ 誘導集電` は、source、解説PDF、練習PDF、PowerPoint、完成後独立再解答まで完了。選定5問・7小問の完成後独立再解答は`7 / 7 PASS`で、`COMPLETED`を維持する。
+## 26 完成後独立再解答
+完成済み教材だけを使って選定5問・8小問を再構成し、導出後に公式解答と照合した。
+
+- R7下 機械 問16(a)(b): `5 / 4` — PASS
+- R7下 機械 問15(a)(b): `5 / 2` — PASS
+- R7上 機械 問9: `3` — PASS
+- R3 機械 問16(a)(b): `1 / 3` — PASS
+- H30 機械 問11: `5` — PASS
+
+結果: `8 / 8 PASS`。必要公式、適用条件、途中計算は教材内だけで再構成でき、固定範囲外知識・未確認実車値による補完は0件。Topic 26を`COMPLETED`とする。
