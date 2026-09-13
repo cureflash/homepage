@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 2 / 22
-- current_status: `topic_03_exam_alignment_complete`
+- current_status: `topic_03_explanation_source_complete`
 - last_completed_topic: `02 0系の直流主電動機はどんな特性だった？`
 - active_topic: `03 0系を210km/hまで加速させる`
-- next_start: Topic 03の解説本文＋3段階例題を作成する。EXAM_ALIGNMENTで固定した要求を全件収録し、0系の歯車比・車輪径・主電動機定格・タップ制御仕様等の実車値は一次資料で確認できたものだけを使う
+- next_start: Topic 03の解説PDFを作成する。正本は `topics/03_0series_acceleration/03_0series_acceleration.md` とし、本文・3段階例題・一次資料確認済みの0系実車値だけを反映する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -48,7 +48,7 @@
 - [x] 参考教材を e-sysnet＋電験王2 の複数系統で確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] ゲート対象8小問の公式解答照合を伴う要求事項の独立検証: 8 / 8 PASS
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -56,19 +56,16 @@
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 03の制作前EXAM_ALIGNMENTを作成し、`topics/03_0series_acceleration/03_0series_acceleration.md` に記録した。
+Topic 03の解説本文＋3段階例題を `topics/03_0series_acceleration/03_0series_acceleration.md` に追加した。
 
 確認結果:
-- 一次4問＋二次記述1問、計5問を選定: PASS
-- H28一次 機械 問1: 直流機のトルク・誘導起電力・慣性モーメントと `J dω/dt=T-T_L`
-- H28一次 機械 問5: 直流電気鉄道の直巻電動機
-- H26一次 機械 問5: 始動時の大トルクと直巻電動機
-- H25一次 機械 問3: `P=Tω` と `T_M=J dω/dt+T_L`
-- H24二次 機械・制御 問1(4): 速度・トルク比から必要端子電圧を求める記述計算
-- ゲート対象8小問: 8 / 8で公式解答・標準解答と整合
-- e-sysnet＋電験王2で説明粒度・解法順を確認
-- チョッパ、回生、誘導機V/f、ベクトル制御、等価RC過渡応答は対象外として固定
-- 0系の未確認実車値は追加していない
+- `V=E+I_aR_a`、`E=kφω`、`T=kφI_a`、`P=Tω`、`Jdω/dt=T-T_L` を速度制御・加速へ接続: PASS
+- 電圧制御、タップ制御、弱め界磁、定トルク領域、定出力領域を収録: PASS
+- `主電動機 → 歯車 → 車輪 → 列車速度 → 駆動力・走行抵抗 → 加速度` の再利用可能な解法手順を収録: PASS
+- 基礎・標準・二次相当の3段階例題を作成し、途中式・単位・成立条件を明記: PASS
+- 日本車輌製造の一次資料で0系の2両8主電動機、連続定格1,480 kW・167 km/h、歯数比1:2.17、低圧タップ切換、25段、最高210 km/hを確認: PASS
+- 車輪径・主電動機回転速度など一次資料未確認値を0系実値として追加していない: PASS
+- チョッパ、回生、誘導機V/f、ベクトル制御、厳密な過渡応答は対象外のまま維持: PASS
 
 ## 判定
-Topic 03を `topic_03_exam_alignment_complete` とする。完成数は `2 / 22` のまま。次工程は解説本文＋3段階例題。
+Topic 03を `topic_03_explanation_source_complete` とする。完成数は `2 / 22` のまま。次工程は解説PDF。
