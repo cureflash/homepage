@@ -10,12 +10,15 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `04 200系のサイリスタ制御を計算する`
 
-current status: `topic_04_powerpoint_complete`
+current status: `topic_04_independent_reanswer_complete`
 
 ## Topic 04 現在の成果物
 
 source Markdown:
 `topics/04_200series_thyristor_control/04_200series_thyristor_control.md`
+
+独立再解答記録:
+`topics/04_200series_thyristor_control/04_200series_thyristor_control_reanswer.md`
 
 解説PDF:
 `topics/04_200series_thyristor_control/04_200series_thyristor_control_explanation.pdf`
@@ -26,7 +29,7 @@ source Markdown:
 解説画像PowerPoint:
 `topics/04_200series_thyristor_control/04_200series_thyristor_control_images.pptx`
 
-制作前EXAM_ALIGNMENT、公式解答照合付き要求事項独立検証、解説本文＋3段階例題、解説PDF＋表示QA、練習PDF＋表示QA、解説画像PowerPoint＋表示QAまで完了。完成後の教材のみ独立再解答は未実施。
+制作前EXAM_ALIGNMENT、公式解答照合付き要求事項独立検証、解説本文＋3段階例題、解説PDF＋表示QA、練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後の教材のみ独立再解答12/12 PASSまで完了。最終QAは未実施。
 
 ## Topic 04 固定範囲
 
@@ -57,6 +60,15 @@ source Markdown:
 
 公式解答・標準解答照合後の制作前要求事項独立検証: `12 / 12 PASS`。
 
+完成後教材のみ独立再解答: `12 / 12 PASS`。
+
+内訳:
+- R05 一次 機械 問4: 3 / 3 PASS
+- R01 一次 機械 問3: 3 / 3 PASS
+- R05 二次 機械・制御 問3: 2 / 2 PASS
+- H30 二次 機械・制御 問3: 3 / 3 PASS
+- H27 二次 機械・制御 問3: 1 / 1 PASS
+
 重要式:
 - `V_d=(3√2/π)V cosα ≒ 1.35V cosα`
 - `P=(3√2/π)VI_d cosα`
@@ -64,6 +76,8 @@ source Markdown:
 - `Q_1=(3√2/π)VI_d sinα`（H30二次の条件）
 - `V_d(α)=E+I_aR_a`
 - `T=kΦI_a`
+
+独立再解答では教材外知識・固定範囲外論点による補完は0件。200系の未確認実車値も追加していない。
 
 ## Topic 04 PowerPoint QA
 
@@ -84,6 +98,4 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 04の固定EXAM_ALIGNMENT 5問・12小問を、完成したsource・解説PDF・練習PDF・PowerPointだけを使って独立再解答する。保存済み正答を先に見ず、教材外知識や固定範囲外論点で補完しない。
-
-12 / 12 PASSなら次工程は最終QA。
+Topic 04の最終QAを実施する。固定EXAM_ALIGNMENT 5問・12小問の独立再解答 `12 / 12 PASS`、source、解説PDF、練習PDF、PowerPoint、各表示QA、仕様境界を再確認し、全品質ゲートを満たす場合のみ `completed` とする。
