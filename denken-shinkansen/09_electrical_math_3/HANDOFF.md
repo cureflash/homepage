@@ -10,7 +10,7 @@ Topic 02 `三角比・三角関数` も最終QAまで完了し `completed`。
 
 完成数: `2 / 12`
 
-current_status: `topic_03_exam_alignment_complete`
+current_status: `topic_03_explanation_source_complete`
 
 active_topic: `03 複素数`
 
@@ -42,6 +42,31 @@ active_topic: `03 複素数`
 
 参考教材はe-sysnetと電験三種まとめましたの2系統を確認済み。
 
+## 今回完成した工程
+
+解説本文＋3段階例題を `topics/03_complex_numbers/03_complex_numbers.md` に追加した。
+
+本文構成:
+1. このテーマで電験は何を問うか
+2. `j` と複素平面
+3. 複素数の四則演算
+4. 絶対値
+5. `Z=R+jX`
+6. 逆数とアドミタンス
+7. 問題を見たときの解法手順
+8. 3段階例題
+9. 新幹線・電気工学への接続
+10. 頻出ミス・ひっかけ
+11. 過去問でどう出るか
+12. 公式・解法まとめ
+
+3段階例題:
+- 基礎: 四則演算・共役・絶対値・偏角
+- 本試験標準: `|Z|²=R²+X²` の二状態比較による未知量逆算
+- 複合: 共役を使った `1/Z`、並列アドミタンス合成、`Zeq` への逆変換
+
+選定5問6小問の要求事項は本文節へ全件マッピング済み。
+
 ## 範囲境界
 
 - 極形式 `r∠θ` の体系的な変換・乗除算とフェーザ計算はTopic 04へ送る。
@@ -53,6 +78,6 @@ active_topic: `03 複素数`
 
 ## 次に行うこと
 
-Topic 03 `複素数` の解説本文＋3段階例題を作成する。
+Topic 03 `複素数` の解説PDFを作成する。
 
-`topics/03_complex_numbers/03_complex_numbers.md` のEXAM_ALIGNMENTを固定範囲として、`MASTER_SPEC.md` の解説構成に従う。基礎例題は複素数四則演算、本試験標準例題は `Z=R+jX` と絶対値、複合例題は共役を使った `1/Z` と並列アドミタンスを中心にする。Topic 04以降の仕様は先取りしない。
+正本は `topics/03_complex_numbers/03_complex_numbers.md`。本文内容を増補せず、完成済みsourceをPDF化する。PDF QA後もTopic完了とはせず、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAを順に残す。
