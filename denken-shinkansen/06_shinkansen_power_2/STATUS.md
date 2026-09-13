@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `06_shinkansen_power_2`
-- exam_aligned_completed_topics: `1 / 22`
-- last_completed_topic: `01 新幹線を電力系統から見てみる`
-- active_topic: `02 信濃川の水で新幹線を何本走らせられる？`
-- current_status: `topic_02_final_qa_needs_revision`
-- next_start: `02_hydropower.md` の進捗メタデータと完成後独立再解答結果だけを現状へ同期し、Topic 02 最終QAを再判定する
+- exam_aligned_completed_topics: `2 / 22`
+- last_completed_topic: `02 信濃川の水で新幹線を何本走らせられる？`
+- active_topic: `03 川崎発電所は新幹線の負荷変動に追従できる？`
+- current_status: `topic_03_not_started`
+- next_start: Topic 03 の固定範囲を確認し、二種一次・二次を含む公式過去問を直近年度から調査して制作前EXAM_ALIGNMENTを作成する
 
 ## Topic 02 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -28,16 +28,16 @@
 - [x] 完成後独立再解答 `6 / 6 PASS`
 - [x] 教材外知識補完 `0件`
 - [x] 最終QA実施
-- [ ] 最終QA PASS
+- [x] 最終QA PASS
 
 ## Topic 02 最終QA
 記録:
 - `topics/02_hydropower/02_hydropower_final_qa.md`
 
 判定:
-- `NEEDS_REVISION`
+- `PASS / completed`
 
-PASS確認済み:
+確認済み:
 - 必須成果物はGitHub正本に存在
 - 正式対象は R8/R7/R6/R5一次4問＋R5/R4二次2問
 - 完成後独立再解答 `6 / 6 PASS`、教材外知識補完 `0件`
@@ -47,13 +47,7 @@ PASS確認済み:
 - PowerPoint 16:9・4枚、既存レンダリング/overflow QA済み
 - 固定範囲外の劣化診断、短絡計算、潮流計算等の追加なし
 - 未確認の列車1本電力 `P_train` の数値化なし
-
-未解消:
-- 主source `topics/02_hydropower/02_hydropower.md` 冒頭が `explanation_complete` のまま
-- 同sourceに「練習問題・PDF・PowerPoint・完成後独立再解答は未着手」と残っている
-- 同source末尾の次段階が練習問題作成のまま
-
-実在成果物・完成後QA記録と進捗メタデータが矛盾するため、成果物間同期の最終QAをPASSにしていない。教材本文や仕様範囲は変更不要。
+- 主sourceの進捗メタデータ・完成後独立再解答結果・次段階を現状へ同期済み
 
 ## Topic 02 成果物
 - `topics/02_hydropower/02_hydropower.md`
@@ -67,3 +61,6 @@ PASS確認済み:
 
 ## Topic 01
 `completed`。最終QA PASS、完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0件`。
+
+## 次
+Topic 03 `川崎発電所は新幹線の負荷変動に追従できる？` の制作前EXAM_ALIGNMENTから開始する。系列SPECの固定範囲を上限とし、二種一次・二次を含む過去問対応品質ゲートを先に確定する。
