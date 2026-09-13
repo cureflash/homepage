@@ -10,7 +10,7 @@ Topic 02 `三角比・三角関数` も最終QAまで完了し `completed`。
 
 完成数: `2 / 12`
 
-current_status: `topic_03_explanation_pdf_complete`
+current_status: `topic_03_practice_pdf_complete`
 
 active_topic: `03 複素数`
 
@@ -44,29 +44,32 @@ active_topic: `03 複素数`
 
 ## 今回完成した工程
 
-解説PDF `topics/03_complex_numbers/03_complex_numbers_explanation.pdf` を作成した。
+練習PDF `topics/03_complex_numbers/03_complex_numbers_practice.pdf` を作成した。
 
-正本は完成済みsource Markdown `topics/03_complex_numbers/03_complex_numbers.md`。本文内容は増補せず、次を収録した。
+正本は完成済みsource Markdown `topics/03_complex_numbers/03_complex_numbers.md` と解説PDF。内容はTopic 03の固定範囲から増補していない。
 
-- `j` と複素平面
-- 複素数の四則演算
-- 共役と除算
-- 絶対値
-- `Z=R+jX`
-- 逆数とアドミタンス
-- 直交形式の標準解法手順
-- 基礎／本試験標準／複合の3段階例題
-- 新幹線・電気工学への接続
-- 頻出ミス
-- 選定5問・6小問との対応
-- 公式・解法まとめ
-
-PDF仕様・QA:
+練習PDF仕様:
 - A4縦4ページ
-- 全4ページをレンダリングして表示確認
-- 文字切れ、重なり、欠落、黒四角なし
-- 極形式・フェーザ、RLC共振、三相結線、力率改善等の後続論点は追加していない
-- 未確認の新幹線実設備値は追加していない
+- 12問（基礎3 / 本試験標準7 / 複合・応用2）
+- 五肢択一9問
+- 全問に解答・完全解説付き
+- 選定5問・6小問の要求操作を練習問へマッピング
+
+主な練習内容:
+- `j` の累乗、実部・虚部、共役、絶対値、偏角
+- 複素数の乗算・共役を使った除算
+- `Z=R+jX` の誘導性・容量性の符号と絶対値
+- 二つの絶対値式から未知の `R`,`X` を逆算
+- `1/(R+jX)` とアドミタンス
+- `1/(jX)=-j/X`、`1/(-jX)=+j/X`
+- 並列アドミタンス合成
+- 実部・虚部に分けた電流合成
+- 直列等価インピーダンスから並列等価抵抗への変換
+
+QA:
+- 180 dpiで全4ページをレンダリングして表示確認
+- 文字切れ、重なり、欠落、黒四角、ページ外はみ出しなし
+- 数値解答は独立計算で照合済み
 
 ## 範囲境界
 
@@ -79,6 +82,6 @@ PDF仕様・QA:
 
 ## 次に行うこと
 
-Topic 03 `複素数` の練習PDF（解答・完全解説付き）を作成する。
+Topic 03 `複素数` の解説画像PowerPointを作成する。
 
-解説PDFまで完了しているがTopic完了ではない。練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAを順に残す。
+練習PDFまで完了しているがTopic完了ではない。解説画像PowerPoint、完成後独立再解答、最終QAを順に残す。
