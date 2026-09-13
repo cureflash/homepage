@@ -10,13 +10,13 @@ Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は `completed`�
 
 Topic 03 `25kV架線の周囲にはどんな電界ができる？` は `completed`。
 
-Topic 04 `架線と車体は巨大なコンデンサなのか？` は解説本文＋3段階例題、解説PDF、練習source＋練習PDF、解説画像PowerPoint、各表示QA、完成後独立再解答まで完了。初回最終QAで検出したsource 2ファイルの進捗記録不整合を今回同期済み。次段階は最終QA再実施。
+Topic 04 `架線と車体は巨大なコンデンサなのか？` は最終QA再実施まで完了し、`PASS / completed`。固定一次5問・22小問の独立再解答 `22 / 22 PASS`、二次R7〜R5は固定範囲への直接対応なしで数合わせなし。source進捗記録もcompletedへ同期し、Webカタログへ登録した。
 
-完成数: `3 / 21`
+完成数: `4 / 21`
 
-current_status: `topic_04_source_status_synced`
+current_status: `topic_04_completed`
 
-active_topic: `04 架線と車体は巨大なコンデンサなのか？`
+active_topic: `05 0系主変圧器の鉄心には何が起きている？`
 
 ## Topic 04 固定EXAM_ALIGNMENT
 
@@ -28,75 +28,38 @@ active_topic: `04 架線と車体は巨大なコンデンサなのか？`
 - H27 問1 (1)〜(2): 同軸円筒の `D(r)`、電位積分、単位長さ当たり静電容量
 - H24 問5 (1)〜(5): 平行板、複数容量、電荷保存、静電エネルギー
 
-公式解答との照合済み。完成後独立再解答は `22 / 22 PASS`。
+完成後独立再解答は `22 / 22 PASS`。教材外知識補完 `0件`、固定範囲外論点追加 `0件`、二次数合わせ `0件`。
 
-R7一次問1は静電容量を扱うが、中心解法が電気影像法でSPEC外のため採用しない。H27問1(3)〜(5)の導電率・電流密度・コンダクタンスも固定範囲外のため採用しない。
+R7一次問1は中心解法が電気影像法でSPEC外のため非採用。H27問1(3)〜(5)の導電率・電流密度・コンダクタンスも固定範囲外のため非採用。
 
-二次試験は最新実施済みR7〜R5の「電力・管理」「機械・制御」を確認したが、Topic 04の固定範囲を直接問う問題は採用なし。R5電力・管理の力率改善用コンデンサは無効電力・配電電圧計算が主題で別論点。`08 理論・二種` は一次理論中心なので、二次数合わせはしない。
-
-固定範囲は `SPEC.md` どおり、静電容量、平行板コンデンサ、円筒導体の基本、合成容量、誘電率、誘電体、分極、静電エネルギーのみ。実車形状を直接コンデンサ計算しない。
+二次試験はR7〜R5の「電力・管理」「機械・制御」を確認したが、Topic 04固定範囲を直接問う問題は採用なし。R5電力・管理の力率改善用コンデンサは無効電力・配電電圧計算が主題で別論点。`08 理論・二種` は一次理論中心なので二次数合わせはしない。
 
 ## Topic 04 成果物
 
-source:
-`topics/04_catenary_capacitance/04_catenary_capacitance.md`
+- source: `topics/04_catenary_capacitance/04_catenary_capacitance.md`
+- 解説PDF: `topics/04_catenary_capacitance/04_catenary_capacitance_explanation.pdf`
+- 練習source: `topics/04_catenary_capacitance/04_catenary_capacitance_practice.md`
+- 練習PDF: `topics/04_catenary_capacitance/04_catenary_capacitance_practice.pdf`
+- 解説画像PowerPoint: `topics/04_catenary_capacitance/04_catenary_capacitance_images.pptx`
+- 完成後独立再解答: `topics/04_catenary_capacitance/04_catenary_capacitance_independent_reanswer.md`
+- 最終QA: `topics/04_catenary_capacitance/04_catenary_capacitance_final_qa.md`
 
-解説PDF:
-`topics/04_catenary_capacitance/04_catenary_capacitance_explanation.pdf`
-
-練習source:
-`topics/04_catenary_capacitance/04_catenary_capacitance_practice.md`
-
-練習PDF:
-`topics/04_catenary_capacitance/04_catenary_capacitance_practice.pdf`
-
-解説画像PowerPoint:
-`topics/04_catenary_capacitance/04_catenary_capacitance_images.pptx`
-
-完成後独立再解答記録:
-`topics/04_catenary_capacitance/04_catenary_capacitance_independent_reanswer.md`
-
-最終QA記録:
-`topics/04_catenary_capacitance/04_catenary_capacitance_final_qa.md`
-
-完了:
-- 制作前EXAM_ALIGNMENT
-- 解説本文
-- 3段階例題
-- 一次5問・22小問と本文節の対応表
-- 解説PDF（A4縦6ページ）
-- 解説PDF全6ページ表示QA
-- 練習source（12問、全問五肢択一、完全解説付き）
-- 練習PDF（A4縦4ページ）
-- 練習12問の計算QA `12 / 12 PASS`
-- 練習PDF全4ページ200 dpi表示QA
-- 解説画像PowerPoint（16:9、5スライド）
-- PowerPoint全5スライド表示QA
-- PowerPoint領域外はみ出し検査 PASS
-- 固定一次5問・22小問の完成後独立再解答 `22 / 22 PASS`
-- 初回最終QA実施
-- source進捗記録2箇所の同期
-
-未完了:
-- 最終QA再実施
-- 最終QA PASS時のWebカタログ登録
+全必須成果物、表示QA、計算QA、過去問対応品質ゲート、source整合、Webカタログ登録まで完了。
 
 ## 今回の更新
 
-Topic 04のsource進捗記録2箇所を現在地へ同期した。
+Topic 04の最終QAを再実施した。
 
-1. `04_catenary_capacitance.md` 冒頭の「最終QAは未着手」を、最終QA実施済み・再QA待ちへ更新。
-2. `04_catenary_capacitance_practice.md` 末尾の「完成後独立再解答を実施しない」を、PowerPoint完成済み・独立再解答 `22 / 22 PASS`・最終QA実施済みへ更新。
-3. 固定範囲、問題本文、解説、正答、PDF、PowerPoint、EXAM_ALIGNMENTは変更していない。
-4. 一次5問・22小問、二次直接対応なしの判断、教材外知識補完0件、仕様外論点追加0件を維持。
-
-Topic 04はまだ `completed` にせず、完成数は `3 / 21` を維持する。
+1. source 2ファイルの進捗記録同期を再確認。
+2. 固定一次5問・22小問の独立再解答 `22 / 22 PASS` を再確認。
+3. 解説PDF・練習PDF・PowerPointの既存表示QA、練習12問計算QA、SPEC境界を再確認。
+4. 全件PASSのため `completed` とし、完成数を `4 / 21` へ更新。
+5. 同じcheckpointでWebカタログへTopic 04を登録。
 
 ## 次に行うこと
 
-Topic 04の最終QAを再実施する。
+Topic 05 `0系主変圧器の鉄心には何が起きている？` の制作前EXAM_ALIGNMENTを実施する。
 
-1. source 2ファイルの進捗記録が現在地へ同期済みであることを確認する。
-2. 固定一次5問・22小問の独立再解答 `22 / 22 PASS` を再確認する。
-3. 解説PDF・練習PDF・PowerPointの既存表示QA、練習12問計算QA、SPEC境界を確認する。
-4. 全件PASS時のみ `completed` として完成数を `4 / 21` に進め、同じcheckpointでWebカタログへ登録する。
+系列SPECの固定範囲は、アンペアの周回積分、磁界、磁束密度、磁束、透磁率、起磁力、磁気抵抗、磁気回路、B-H曲線、ヒステリシス、磁気エネルギー。変圧器等価回路は機械編へ譲り、本Topicへ追加しない。
+
+二種一次・二次の公式過去問を直近年度優先で確認し、固定範囲へ直接対応する問題だけを品質ゲート対象として固定する。
