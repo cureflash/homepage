@@ -1,19 +1,22 @@
 # HANDOFF - 新幹線車両・電験二種
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `05_shinkansen_vehicle_2`。
 
 Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路の波形解析`、Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` は最終QAまでPASS。完成数は `3 / 39`。
 
-現在地は `topic_04_explanation_pdf_complete`。Topic 04 `0系④ タップ制御と加速特性` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、SPEC指定4グラフの作図条件、解説PDF、全4ページ表示QAまで完了。
+現在地は `topic_04_practice_source_complete`。Topic 04 `0系④ タップ制御と加速特性` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、SPEC指定4グラフの作図条件、解説PDF、練習問題・完全解説sourceまで完了。
 
 ## Topic 04 成果物
 - source: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration.md`
 - 解説PDF: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_explanation.pdf`
-- PDF: A4縦4ページ、全4ページVisual QA PASS
+- 練習問題source: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_practice_source.md`
+- 解説PDF: A4縦4ページ、全4ページVisual QA PASS
 - SPEC指定4グラフ: タップ条件―主回路電圧、タップ条件―速度トルク特性、速度―けん引力、時間―速度の簡略加速。未確認実車値を使わず、模式図または一定磁束局所近似として表示
+- 練習問題: 一次8問（全問五肢択一）＋二次4問（記述式）、計12問、全問完全解説付き
+- 練習問題の計算独立再確認: `12 / 12 PASS`
 
 ## 過去問対応
 選定公式過去問:
@@ -29,6 +32,27 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
 - H24二次問1: `R_a=0.500 Ω`、`E=188 V`、`V=133 V` — 公式標準解答一致
 
 二種の原則5問以上について、固定範囲へ直接接続できる公式問題として確認できたのは4問。件数合わせのために回生、チョッパ、VVVF、誘導機、き電を混入させない。一次・二次双方は確保している。
+
+## 練習問題sourceで実装した対応
+一次試験型8問:
+- 停止時 `E=0` と起動電流
+- 速度上昇後の逆起電力とタップ切替前後の電流
+- `τ=JR_a/(K_EK_T)` と始動電流指数減衰
+- 慣性モーメントと `1/2 Jω²`
+- 直巻未飽和域 `Φ∝I_a`、`T∝I_a²`
+- 一定磁束局所近似の電圧段―速度トルク特性
+- 電動機トルク→車輪周けん引力
+- 正味けん引力→加速度→時間―速度
+
+二次試験型4問:
+- 簡略始動過渡の微分方程式・時定数・`i_a(t)`・`ω(t)` の導出
+- H24二次固定範囲と同型の、速度・トルク条件から必要端子電圧を逆算する答案
+- トルク→けん引力→加速度→所要時間の複合計算
+- タップ切替を含む離散時間の簡略加速計算
+
+計算確認:
+- 一次8問＋二次4問を独立再計算し `12 / 12 PASS`
+- 0系固有の未確認値を使わず、数値は一般試験モデルまたは教材用仮定値として明示
 
 ## Topic 04 解説本文で確定した内容
 - 停止時 `ω=0 → E=0 → I_a=V_a/R_a`
@@ -82,7 +106,7 @@ sourceで確定した以下を解説PDFへ収録済み:
 0系のタップ段数、各段電圧、主電動機定格、歯車比、車輪径、編成質量等は一次資料で確認できるまで実値として置かない。
 
 ## 次の正確な開始点
-Topic 04の固定範囲とEXAM_ALIGNMENTだけを使って練習問題・完全解説sourceを作成する。一次試験型と二次記述型の双方を含め、件数合わせの範囲外論点は追加しない。
+Topic 04の `04_0series_tap_control_acceleration_practice_source.md` だけを使って練習PDFを作成し、全ページ表示QAを行う。問題・数値・解答・解説・範囲をPDF生成時に変更しない。
 
 ## 完了済みテーマ参照
 - Topic 03 final QA: `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_final_qa.md`
