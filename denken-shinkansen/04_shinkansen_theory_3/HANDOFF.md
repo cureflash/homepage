@@ -8,21 +8,18 @@ Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ�
 
 - 完成数: `3 / 14`
 - active topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
-- current status: `topic_04_practice_pdf_complete`
+- current status: `topic_04_powerpoint_complete`
 
 ## 今回進捗
 
-Topic 04の練習問題source・練習PDFを完成し、GitHub正本へ反映した。
+Topic 04の解説画像PowerPointを完成し、GitHub正本へ反映した。
 
 更新:
-- `topics/04_electric_field_capacitance/04_electric_field_capacitance_practice.md`
-- `topics/04_electric_field_capacitance/04_electric_field_capacitance_practice.pdf`
+- `topics/04_electric_field_capacitance/04_electric_field_capacitance_images.pptx`
 - `STATUS.md`
 - `HANDOFF.md`
 
-練習問題は全15問、全問五肢択一。難易度配分は基礎4問（26.7%）、標準8問（53.3%）、複合3問（20.0%）。確定済み6公式過去問の要求事項を全件マッピングし、正答だけでなく使用式・理由・代入・単位・重要誤答理由まで記載した。
-
-PDFはA4縦4ページ。200 dpi全ページ表示QAで文字欠け・数式欠け・重なり・ページ外はみ出しなし、文字抽出の置換文字0件を確認した。
+PowerPointは16:9・全5スライド。確定済み6公式過去問に必要な判断経路を、点電荷の力・電位、平行板容量・誘電体、V一定/Q保存、つなぎ替え・静電エネルギーの順で可視化した。全5スライド表示QAで文字欠け・数式欠け・重なり・判読不能箇所なし、`slides_test.py` のoverflow検査もPASS。
 
 ## Topic 04 固定範囲
 
@@ -85,7 +82,7 @@ U = 1/2 CV² = 1/2 QV = Q²/(2C)
 
 ## 次に行うこと
 
-Topic 04の解説画像PowerPointを作成する。確定済みEXAM_ALIGNMENT・解説本文・練習問題の固定範囲だけを可視化し、選定6過去問に必要な判断手順を図解する。完成後は全スライド表示QAとoverflow検査を行う。
+Topic 04の完成済み教材だけを使い、確定済み公式過去問6問を保存済み正答を先に見ずに独立再解答する。その後、公式解答と照合して品質ゲートを判定する。
 
 ## 固定ルール
 
