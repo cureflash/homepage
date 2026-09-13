@@ -6,12 +6,12 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は25/38。01〜25がPASS。active topicは26 `補助電源① 主回路の電気を車内設備へ`。
 
 ## 今回進捗
-Topic 26の練習PDFを完成した。A4縦6ページ・全15問（基礎4／標準8／複合3）、全問五肢択一・完全解説付き。選定5問・8小問の要求事項を演習へ全件マッピングし、数値計算の独立再計算と180 dpi全ページ表示QAをPASSした。固定範囲外の論点、未確認の新幹線補助電源実値は追加していない。
+Topic 26の解説画像PowerPointを完成した。16:9・4スライドで、選定5問・8小問の判断経路を固定範囲内で可視化した。全4スライドの表示QA、overflow検査、PPTX ZIP整合性検査をPASSした。固定範囲外の論点、未確認の新幹線補助電源実値は追加していない。
 
 更新:
-- `topics/26_auxiliary_power/26_auxiliary_power_practice.pdf` — 練習PDFを追加
-- `topics/26_auxiliary_power/26_auxiliary_power.md` — 練習PDF進捗・QA・次工程を追記
-- `STATUS.md` — `topic_26_practice_pdf_complete`へ更新
+- `topics/26_auxiliary_power/26_auxiliary_power_images.pptx` — 解説画像PowerPointを追加
+- `topics/26_auxiliary_power/26_auxiliary_power.md` — PowerPoint進捗・QA・次工程を更新
+- `STATUS.md` — `topic_26_powerpoint_complete`へ更新
 - `HANDOFF.md`
 
 ## Topic 26 品質ゲート対象
@@ -21,7 +21,7 @@ Topic 26の練習PDFを完成した。A4縦6ページ・全15問（基礎4／標
 4. R3 機械 問16(a)(b) — 単相半波ダイオード整流、RL負荷、平均直流電圧 — 1 / 3 — PASS
 5. H30 機械 問11 — インバータ、オンオフ制御、逆並列ダイオード、波高値、PWM — 5 — PASS
 
-結果: 5問・8小問、制作前独立解答`8 / 8 PASS`。本文と解説PDFへの要求事項マッピングも5問・8小問すべて完了。
+結果: 5問・8小問、制作前独立解答`8 / 8 PASS`。本文・解説PDF・練習PDF・PowerPointへの要求事項マッピングは全件完了。
 
 公式正本: https://www.shiken.or.jp/chief/third/qa/
 参照日: 2026-09-14
@@ -63,6 +63,17 @@ Topic 26の練習PDFを完成した。A4縦6ページ・全15問（基礎4／標
 - 180 dpi全ページ表示QA PASS。文字切れ・重なり・ページ外はみ出しなし
 - 固定範囲外・未確認実車値の追加なし
 
+## Topic 26 解説画像PowerPoint
+- `topics/26_auxiliary_power/26_auxiliary_power_images.pptx`
+- 16:9、4スライド。選定5問・8小問の判断経路を固定範囲内で可視化
+- Slide 1: 変換方向＋H30問11
+- Slide 2: R3問16(a)(b) RL半波整流
+- Slide 3: R7下問16(a)(b) 三相ダイオード整流
+- Slide 4: R7下問15(a)(b)・R7上問9 効率・損失
+- 全4スライドをLibreOfficeでPDF化し150 dpi表示QA PASS。文字切れ・重なり・ページ外はみ出しなし
+- overflow検査0件、PPTX ZIP整合性検査PASS
+- 固定範囲外・未確認実車値の追加なし
+
 ## Topic 26 範囲境界
 採用しない:
 - R8上 機械 問9 — 変圧器短絡試験・漏れリアクタンス
@@ -74,10 +85,10 @@ Topic 26の練習PDFを完成した。A4縦6ページ・全15問（基礎4／標
 チョッパ詳細、系統連系保護、誘導電動機速度制御、変圧器短絡試験・詳細等価回路、半導体素子各論、高調波対策は追加しない。新幹線補助電源の入力電圧、出力電圧、容量、周波数、効率、回路方式は今回も実値化していない。
 
 ## 現在の状態
-- `current_status`: `topic_26_practice_pdf_complete`
+- `current_status`: `topic_26_powerpoint_complete`
 - 完成数: 25/38
 - 01〜25: PASS
 - active topic: 26 `補助電源① 主回路の電気を車内設備へ`
 
 ## 次の正確な開始点
-Topic 26の解説画像PowerPointを作成する。選定5問・8小問の判断経路を固定範囲内で可視化し、全スライド表示QA・overflow検査を行う。
+Topic 26の完成後独立再解答を行う。選定5問・8小問を保存済み正答を先に見ず教材内容だけで解き、正答だけでなく根拠・式選択・適用条件まで確認する。
