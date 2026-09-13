@@ -6,11 +6,11 @@
 
 Topic 01〜04は `completed`。
 
-Topic 05 `0系主変圧器の鉄心には何が起きている？` は制作前EXAM_ALIGNMENTまで完了。
+Topic 05 `0系主変圧器の鉄心には何が起きている？` は解説本文＋3段階例題まで完了。
 
 完成数: `4 / 21`
 
-current_status: `topic_05_exam_alignment_complete`
+current_status: `topic_05_explanation_source_complete`
 
 active_topic: `05 0系主変圧器の鉄心には何が起きている？`
 
@@ -56,20 +56,25 @@ active_topic: `05 0系主変圧器の鉄心には何が起きている？`
 ## Topic 05 成果物
 
 - source: `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit.md`
-
-現時点では制作前EXAM_ALIGNMENTのみ。解説本文・3段階例題・PDF・練習問題・PowerPoint・完成後独立再解答・最終QAは未着手。
+- 解説本文: 完成
+- 3段階例題: 完成
+- 固定一次5問・16小問の本文対応表: 完成
+- 解説PDF: 未着手
+- 練習問題source/PDF: 未着手
+- 解説画像PowerPoint: 未着手
+- 完成後独立再解答: 未着手
+- 最終QA: 未着手
 
 ## 今回の更新
 
-1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECを再確認。
-2. 一次公式過去問を直近年度から確認し、固定範囲に直接対応する5問・16小問を品質ゲート対象として固定。
-3. 公式解答を対象16小問すべて照合。
-4. 最新実施済み二次R7〜R5の両科目を確認し、直接対応なし・数合わせなしを記録。
-5. e-sysnet・電験王を説明粒度の参考として確認。
-6. Topic 05 source、STATUS、HANDOFFへ反映。
+1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECと現行EXAM_ALIGNMENTを再確認。
+2. `H → B → Φ`、アンペアの周回積分、磁気回路、空隙、B-H・ヒステリシス、磁気エネルギーの解説本文を固定範囲内で作成。
+3. 基礎例題として無限長直線電流、本試験標準例題として空隙を含む磁気回路、複合例題として円柱導体内部の磁気エネルギー＋ヒステリシス損を追加。
+4. 固定一次5問・16小問を本文・例題へ全件マッピング。
+5. 変圧器等価回路、自己／相互インダクタンス、電磁誘導、同期機特性、表皮効果は追加していない。
 
 ## 次に行うこと
 
-Topic 05の解説本文＋3段階例題を作成する。
+Topic 05の解説本文＋3段階例題を解説PDF化し、全ページ表示QAを行う。
 
-固定EXAM_ALIGNMENTの一次5問・16小問を教材だけで解けるよう、アンペアの周回積分 → `H` → `B` → `Φ`、起磁力 → 磁気抵抗 → 磁束、B-H曲線・ヒステリシス、磁気エネルギーまでを固定範囲内で説明する。SPEC外論点は追加しない。
+固定EXAM_ALIGNMENT一次5問・16小問、二次非採用判断、固定範囲は変更しない。
