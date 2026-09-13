@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `05 300系の誘導電動機を等価回路で解く`
 
-current status: `topic_05_powerpoint_complete`
+current status: `topic_05_independent_reanswer_complete`
 
 ## Topic 05 固定範囲
 
@@ -43,7 +43,7 @@ source Markdown:
 - R04 二次 機械・制御 問2: (1)〜(5)
 - H28 二次 機械・制御 問1: (1)〜(5)
 
-一次2問＋二次記述3問、計5問。ゲート対象17小問。公式解答照合付き要求事項独立検証は `17 / 17 PASS`。
+一次2問＋二次記述3問、計5問。ゲート対象17小問。制作前の公式解答照合付き要求事項独立検証は `17 / 17 PASS`。
 
 参考教材は e-sysnet「三相誘導電動機の理論と等価回路」と電験王2の各対応過去問解説を確認済み。
 
@@ -105,6 +105,22 @@ source Markdown:
 - ZIP整合性検査: PASS
 - 仕様外論点・未確認300系実車値の追加: 0件
 
+## 完了した独立再解答
+
+記録:
+`topics/05_300series_induction_motor_equivalent_circuit/05_300series_induction_motor_equivalent_circuit_independent_reanswer.md`
+
+固定5問・17小問を、完成教材に収録した式・解法手順だけで再導出し、公式解答・標準解答と照合した。
+
+- R07 一次 機械 問2(1): PASS
+- H30 一次 機械 問1(1)〜(5): `5 / 5 PASS`
+- R07 二次 機械・制御 問2(1): PASS
+- R04 二次 機械・制御 問2(1)〜(5): `5 / 5 PASS`
+- H28 二次 機械・制御 問1(1)〜(5): `5 / 5 PASS`
+- 合計: `17 / 17 PASS`
+- 教材外知識による補完: 0件
+- 固定範囲外追加: 0件
+
 ## 境界
 
 次は追加しない。
@@ -117,4 +133,4 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 05の固定EXAM_ALIGNMENT 5問・17小問を、保存済み正答・公式解答を先に見ず、現行の解説source・解説PDF・練習PDF・PowerPointだけを使って独立再解答する。教材外知識で補完した小問はFAILとする。
+Topic 05の最終QAを実施する。固定EXAM_ALIGNMENT 5問・17小問、必須成果物の実在、表示QA、独立再解答 `17 / 17 PASS`、仕様境界、進捗記録の整合を確認し、全件PASSの場合だけ `completed` とする。
