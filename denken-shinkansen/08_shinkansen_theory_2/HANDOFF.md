@@ -8,84 +8,64 @@ Topic 01 `25kV架線を一つの等価回路にする` は `completed`。
 
 Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は `completed`。
 
-Topic 03 `25kV架線の周囲にはどんな電界ができる？` は `completed`。制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了した。前回最終QAで検出した練習source文字破損2箇所と解説sourceの進捗記録不整合は修正済みで、最終QA再実施は全件PASS。
+Topic 03 `25kV架線の周囲にはどんな電界ができる？` は `completed`。
+
+Topic 04 `架線と車体は巨大なコンデンサなのか？` は制作前EXAM_ALIGNMENTまで完了。本文以降は未着手。
 
 完成数: `3 / 21`
 
-current_status: `topic_03_completed`
+current_status: `topic_04_exam_alignment_complete`
 
 active_topic: `04 架線と車体は巨大なコンデンサなのか？`
 
-## Topic 03 固定EXAM_ALIGNMENT
+## Topic 04 固定EXAM_ALIGNMENT
 
-品質ゲート対象は一次「理論」6問・21小問。
+品質ゲート対象は一次「理論」5問・22小問。
 
-- R8 問1 (1)〜(3): 球対称の体積電荷分布、ガウスの法則、`F=qE`
-- R5 問1 (1): 同軸円筒間の電界
-- R4 問1 (1)〜(5): 球・球殻の包有電荷、領域別電界、電位
-- H30 問1 (1)〜(4): 点電荷の電界成分、重ね合わせ
-- H23 問1 (1)〜(3): 円筒ガウス面、電位の積分、最大電界
-- H21 問1 (1)〜(5): クーロン力、電界合成、電界0条件
+- R6 問1 (1)〜(5): 二層誘電体の平行板コンデンサ、`D=εE`、各層電界、最大印加電圧
+- R5 問1 (1)〜(5): 同軸円筒の電界・静電容量、半径方向に変化する誘電率
+- R3 問1 (1)〜(5): 二層誘電体の `D`・`E`・電圧、静電エネルギー
+- H27 問1 (1)〜(2): 同軸円筒の `D(r)`、電位積分、単位長さ当たり静電容量
+- H24 問5 (1)〜(5): 平行板、複数容量、電荷保存、静電エネルギー
 
-二次試験も確認対象に含めたが、本Topic固定範囲だけで静電界解析を直接問う問題は採用していない。`08 理論・二種` は一次理論中心であり、数合わせで二次形式や絶縁設計、誘電体、静電容量、高電圧設備等を追加していない。
+公式解答との照合済み。
 
-R7の電気影像法・静電容量、R6の誘電体入りコンデンサ、R2の影像電荷等もSPEC外またはTopic 04のため除外した。この判断は変更していない。
+R7一次問1は静電容量を扱うが、中心解法が電気影像法でSPEC外のため採用しない。H27問1(3)〜(5)の導電率・電流密度・コンダクタンスも固定範囲外のため採用しない。
 
-## Topic 03 成果物
+二次試験は最新実施済みR7〜R5の「電力・管理」「機械・制御」を確認したが、Topic 04の固定範囲を直接問う問題は採用なし。R5電力・管理の力率改善用コンデンサは無効電力・配電電圧計算が主題で別論点。`08 理論・二種` は一次理論中心なので、二次数合わせはしない。
 
-EXAM_ALIGNMENT・解説本文 source:
-`topics/03_catenary_electric_field/03_catenary_electric_field.md`
+固定範囲は `SPEC.md` どおり、静電容量、平行板コンデンサ、円筒導体の基本、合成容量、誘電率、誘電体、分極、静電エネルギーのみ。実車形状を直接コンデンサとして真値計算しない。
 
-解説PDF:
-`topics/03_catenary_electric_field/03_catenary_electric_field_explanation.pdf`
+## Topic 04 成果物
 
-練習 source:
-`topics/03_catenary_electric_field/03_catenary_electric_field_practice.md`
+EXAM_ALIGNMENT source:
+`topics/04_catenary_capacitance/04_catenary_capacitance.md`
 
-練習PDF:
-`topics/03_catenary_electric_field/03_catenary_electric_field_practice.pdf`
-
-解説画像PowerPoint:
-`topics/03_catenary_electric_field/03_catenary_electric_field_images.pptx`
-
-完成後独立再解答記録:
-`topics/03_catenary_electric_field/03_catenary_electric_field_independent_resolve.md`
-
-最終QA記録:
-`topics/03_catenary_electric_field/03_catenary_electric_field_final_qa.md`
-
-## Topic 03 完成後独立再解答
-
-- R8 問1 (1)〜(3): 3/3 PASS
-- R5 問1 (1): 1/1 PASS
-- R4 問1 (1)〜(5): 5/5 PASS
-- H30 問1 (1)〜(4): 4/4 PASS
-- H23 問1 (1)〜(3): 3/3 PASS
-- H21 問1 (1)〜(5): 5/5 PASS
-- 合計: 21/21 PASS
-
-教材外知識による補完なし。固定範囲内の欠落なし。SPEC外論点の追加なし。
+未作成:
+- 解説PDF
+- 練習source / 練習PDF
+- 解説画像PowerPoint
+- 完成後独立再解答記録
+- 最終QA記録
 
 ## 今回の更新
 
-Topic 03の最終QAを再実施し、`PASS / completed` とした。
+Topic 04の制作前EXAM_ALIGNMENTを完了した。
 
-- 必須成果物をGitHub正本で再確認
-- 過去問独立再解答21/21 PASSを再確認
-- 二次試験の確認・非採用判断を維持
-- 練習source文字破損修正済み、練習PDF再生成・全4ページ表示QA PASSを再確認
-- 解説PDF表示QA、PowerPoint表示QA・overflow検査PASSを確認
-- 解説sourceの状態欄・末尾品質判定を完成状態へ同期
-- 完成数を `3 / 21` に更新
-
-教材本文、過去問対応範囲、正答、例題、二次試験の非採用判断は変更していない。新規論点・仕様追加なし。
+- MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECを再確認
+- 公式一次を直近年度から調査し、5問・22小問を固定
+- 最新実施済み二次R7〜R5も確認し、直接対応なしとして非採用
+- e-sysnet＋電験王2の複数系統で説明粒度を確認
+- 必須説明、解法手順、頻出ミス、新幹線への接続範囲をsourceへ固定
+- 公式解答と選定小問の正答を照合
+- SPEC外論点、未確認実車値、新規仕様の追加なし
 
 ## 次に行うこと
 
-Topic 04 `架線と車体は巨大なコンデンサなのか？` の制作前EXAM_ALIGNMENTから開始する。
+Topic 04の解説本文＋3段階例題を作成する。
 
-1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`を再確認する。
-2. 二種一次・二次の公式過去問を直近年度から確認する。
-3. Topic 04固定範囲の静電容量・平行板コンデンサ・円筒導体の基本・合成容量・誘電率・誘電体・分極・静電エネルギーだけで直接対応する問題を選定する。
-4. 二次は直接対応問題が確認できる場合のみ採用し、数合わせで仕様外論点を追加しない。
-5. 制作前独立検証を通過してから本文制作へ進む。
+1. sourceに固定した一次5問・22小問から必要説明を逆算する。
+2. `C=Q/V`、平行板、異種誘電体、同軸円筒、合成容量、分極、静電エネルギーを固定範囲内で説明する。
+3. 基礎・本試験標準・複合の3段階例題を入れる。
+4. R7の電気影像法、H27後半の導電率、力率改善等を追加しない。
+5. 架線・車体は教育用簡略モデルに限定し、実車容量を推測しない。
