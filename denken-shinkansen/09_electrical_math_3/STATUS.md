@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 4 / 12
-- current_status: `topic_05_powerpoint_complete`
+- current_status: `topic_05_exam_reanswer_needs_revision`
 - last_completed_topic: `04 極形式・フェーザ`
 - active_topic: `05 ベクトル`
-- next_start: Topic 05 完成教材だけでの公式過去問独立再解答
+- next_start: Topic 05 独立再解答で不足した中間知識を固定EXAM_ALIGNMENTの範囲内で必要最小限補強
 
 ## Topic 05 進捗
 - [x] 系列SPEC確認
@@ -23,25 +23,27 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 完成教材だけでの公式過去問独立再解答
+- [x] 完成教材だけでの公式過去問独立再解答を実施（2 / 6 PASS、NEEDS_REVISION）
+- [ ] 独立再解答で不足した中間知識の教材補強
+- [ ] 再独立解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 05 `ベクトル` の解説画像PowerPointを完成した。
+Topic 05 `ベクトル` の完成後独立再解答を実施し、品質ゲートを判定した。
 
-`topics/05_vectors/05_vectors_images.pptx`
+`topics/05_vectors/05_vectors_exam_reanswer.md`
 
-- 16:9・4スライド
-- 固定EXAM_ALIGNMENT 6問の判断経路を可視化
-- スカラー/ベクトル、成分・大きさ、同一直線上の和差、60°合成、`v⊥=v sinθ`、外積・右手系・負電荷、フェーザとの違いを整理
-- R8上問4、R7下問2、R7上問11、R6下問4、R4下問4、R4上問4へ対応
-- 全4スライド表示QA: PASS
-- はみ出し検査: PASS
+- 固定EXAM_ALIGNMENT 6問を対象
+- 学習用完成教材だけで最後まで解けた問題: 2 / 6
+- PASS: R6下 理論 問4、R4下 理論 問4
+- FAIL: R8上 理論 問4、R7下 理論 問2、R7上 理論 問11、R4上 理論 問4
+- FAIL理由は、ベクトル操作ではなく、数値・全空欄を確定するための中間知識・式が学習用教材に不足しているため
+- 固定EXAM_ALIGNMENT変更: 0件
 - 仕様外論点・未確認新幹線実値の追加: 0件
 
 ## 判定
 
-Topic 05は `PowerPoint complete / IN_PROGRESS`。
+Topic 05は `NEEDS_REVISION / IN_PROGRESS`。
 
-完成数は `4 / 12` のまま。次はTopic 05の完成教材だけで公式過去問6問を独立再解答する。
+完成数は `4 / 12` のまま。次は固定EXAM_ALIGNMENTを変えず、独立再解答で不足した中間知識だけを学習用教材へ必要最小限補強する。
