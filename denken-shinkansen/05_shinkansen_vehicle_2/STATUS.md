@@ -5,15 +5,40 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 2 / 39
-- current_status: `topic_03_exam_alignment_complete`
+- current_status: `topic_03_explanation_source_complete`
 - last_completed_topic: `02 0系② 整流回路の波形解析`
 - active_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
-- next_start: Topic 03の解説本文を作成する。EXAM_ALIGNMENTで確定した固定範囲だけを使い、3段階例題、4指定グラフ、H28一次・H24二次への解法接続を本文へ実装する
+- next_start: Topic 03の解説PDFを作成する。確定済みsourceだけを使い、3段階例題と4指定グラフをA4縦の解説プリントへ反映する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
-- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文未着手
+- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source完成、解説PDF未着手
+
+## Topic 03 解説本文source
+解説本文を完成した。制作前EXAM_ALIGNMENTで固定した範囲だけを使い、MASTER_SPECの最低構成へ対応させた。
+
+実装済み:
+- `V=E+I_aR_a`
+- `E=k_eΦω`
+- `T=k_tΦI_a`
+- `P_em=EI_a=Tω`
+- `P_Cu=I_a^2R_a`
+- 機械出力・損失・効率
+- 磁束一定時の速度比・トルク比
+- 飽和時は与えられた磁化特性・磁束条件を使う扱い
+- 負荷変化時の動作点追跡
+- 基礎・本試験標準・複合の3段階例題
+- 電機子電流―トルク
+- 回転速度―トルク
+- 回転速度―出力
+- 負荷変化時の動作点
+- H28一次・H24二次への解法接続
+
+4指定グラフは数値実車特性と誤認させない模式図としてsource内へ実装した。未確認の0系主電動機実値は追加していない。始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない。
+
+source:
+- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque.md`
 
 ## Topic 03 EXAM_ALIGNMENT
 制作前EXAM_ALIGNMENTを完了した。
@@ -140,7 +165,7 @@ Topic 01: `PASS`。
 
 Topic 02: `PASS`。制作前EXAM_ALIGNMENT、一次・二次対応、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5、範囲・実車値確認をすべて通過。Topic 02を`completed`とし、完成数を `2 / 39` へ更新した。
 
-Topic 03: 制作前EXAM_ALIGNMENT `PASS`。テーマ自体は未完了で、完成数は `2 / 39` のまま。
+Topic 03: 制作前EXAM_ALIGNMENT `PASS`。解説本文source、3段階例題、4指定グラフまで完成。テーマ自体は未完了で、完成数は `2 / 39` のまま。
 
 ## 次
-Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` の解説本文を作成する。EXAM_ALIGNMENTで確定した固定範囲だけを使い、3段階例題と4指定グラフまで本文へ実装する。
+Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` の解説PDFを作成する。確定済みsource以外の論点や未確認実車値は追加しない。
