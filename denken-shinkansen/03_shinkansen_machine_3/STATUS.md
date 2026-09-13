@@ -5,16 +5,16 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_04_powerpoint_complete`
+- current_status: `topic_04_independent_reanswer_complete`
 - last_completed_topic: `03 直流モーターはどうやって速度を変える？`
 - active_topic: `04 300系でモーターが全部変わった`
-- next_start: Topic 04の完成後独立再解答を、保存済み正答を先に見ず、選定5問について完成教材だけで実施する
+- next_start: Topic 04の最終QAを実施し、必須成果物・EXAM_ALIGNMENT・独立再解答5/5・表示QA・範囲境界・進捗記録の整合を確認する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
-- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。完成後独立再解答は未完了
+- [ ] 04 300系でモーターが全部変わった — 必須成果物完成、選定5問の完成後独立再解答5/5 PASS。最終QA未完了
 - [ ] 05〜16 — 未着手
 
 ## 04 EXAM_ALIGNMENT対象
@@ -80,18 +80,29 @@
 - `slides_test.py` でスライド境界外はみ出し0、PPTX ZIP整合性PASS
 - 始動法、Y-Δ始動、巻線形比例推移、インバータ/V/f・VVVF、ベクトル制御、回生制動、詳細等価回路、未確認実車値は追加していない
 
+## 04 完成後独立再解答
+`topics/04_induction_motor/04_induction_motor_independent_reanswer.md` に詳細を記録済み。
+
+- 保存済み正答・公式解答を先に見ず、完成教材だけで選定5問を再解答
+- 導出した答案列: `3 / 3 / 5 / 2 / 3`
+- 答案確定後に公式解答と照合し、`5 / 5 PASS`
+- 教材外知識による補完: `0件`
+- Topic 04固定範囲外の論点追加: `0件`
+- 使用公式・途中式・正答理由をすべて教材内から再構成できた
+
 ## 04 成果物
 - `topics/04_induction_motor/04_induction_motor.md` — EXAM_ALIGNMENT＋解説本文＋3段階例題まで完了
 - `topics/04_induction_motor/04_induction_motor_explanation.pdf` — 完了、表示QA PASS
 - `topics/04_induction_motor/04_induction_motor_practice.md` — 完了
 - `topics/04_induction_motor/04_induction_motor_practice.pdf` — 完了、表示QA・文字抽出QA PASS
 - `topics/04_induction_motor/04_induction_motor_images.pptx` — 完了、全スライド表示QA・はみ出し検査・ZIP整合性PASS
+- `topics/04_induction_motor/04_induction_motor_independent_reanswer.md` — 完了、選定5問5/5 PASS
 
 ## 04 品質ゲート
-`IN_PROGRESS`。必須4成果物は揃った。選定5問の完成後独立再解答が未完了のため、完成数は3/16据え置き。
+`IN_PROGRESS`。必須成果物と完成後独立再解答 `5 / 5 PASS` まで完了。最終QA未完了のため、完成数は3/16据え置き。
 
 ## 03 完成記録
 Topic 03は新選定5問（R7下 問2、R6上 問2、R2 問1、R1 問1、H30 問1）を完成教材だけで再解答し5/5正答。`PASS / completed`。
 
 ## 次
-Topic 04の完成後独立再解答を実施する。保存済み正答を先に見ず、選定5問を完成教材だけで解き、根拠を教材内から再構成できることを確認する。
+Topic 04の最終QAを実施する。必須成果物の実在と内容整合、EXAM_ALIGNMENTの選定5問固定、完成後独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、固定範囲外追加0件、source・STATUS・HANDOFFの進捗整合を確認し、全件PASSの場合のみ `completed` とする。
