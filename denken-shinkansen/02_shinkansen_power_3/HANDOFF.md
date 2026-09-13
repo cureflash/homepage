@@ -6,53 +6,62 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は3/16。Topic 01〜03は完成済み。active topicは04 `東京―佐世保「原子力新幹線」`。
 
 ## 今回進捗
-Topic 03 `JR東日本はなぜ火力発電所まで持っている？` の最終QAを実施し、品質ゲートをすべて満たしたため `completed` とした。
+Topic 04の制作前EXAM_ALIGNMENTを完了した。
 
 追加成果物:
-- `topics/03_thermal_power/03_thermal_power_final_qa.md`
+- `topics/04_nuclear_power/04_nuclear_power.md`
 
 更新:
 - `STATUS.md`
 - `HANDOFF.md`
 
-## Topic 03 最終QA結果
-- 必須成果物実在: PASS
-- 公式過去問6問・7小問のEXAM_ALIGNMENT: PASS
-- 複数系統の参考教材確認: PASS
-- 制作前独立再解答: 7/7 PASS
-- 解説PDF: A4縦6ページ、既実施200 dpi全ページ表示QA PASS、現行blob一致
-- 練習PDF: A4縦6ページ、12問（基礎3 / 標準7 / 複合2）、全問五肢択一・完全解説、既実施200 dpi全ページ表示QA PASS、現行blob一致
-- PowerPoint: 16:9・7枚、全スライド表示QA・境界外はみ出し・ZIP整合性 PASS、現行blob一致
-- 数式・数値・単位・成立条件: PASS
-- 固定範囲外追加: 0件
-- 未確認実車値の真値化: 0件
-- 完成後独立再解答: 7/7 PASS
+## Topic 04 EXAM_ALIGNMENT
+品質ゲート対象は次の公式過去問6問。
 
-## Topic 03 過去問対応
-1. R8上 電力 問3 — `(1)` / 公式 `(1)` — PASS
-2. R7下 電力 問15(a) — `(4)` / 公式 `(4)` — PASS
-3. R7上 電力 問2 — `(5)` / 公式 `(5)` — PASS
-4. R6上 電力 問3 — `(4)` / 公式 `(4)` — PASS
-5. R3 電力 問15(a) — `(2)` / 公式 `(2)` — PASS
-6. R3 電力 問15(b) — `(4)` / 公式 `(4)` — PASS
-7. R1 電力 問15(a) — `(3)` / 公式 `(3)` — PASS
+1. R8上 電力 問4 — 原子核・質量欠損・結合エネルギー・`E=mc^2`・核分裂
+2. R6上 電力 問4 — U-235核分裂エネルギーと石炭発熱量の換算
+3. R5上 電力 問4 — ウラン燃料中U-235の質量欠損と重油発熱量の換算
+4. H30 電力 問4 — 原子力発電所の蒸気タービン、湿分、蒸気条件、熱効率、蒸気量、回転速度
+5. H27 電力 問4 — 軽水炉、PWR/BWR、冷却材・主要設備・蒸気発生
+6. H21 電力 問4 — 原子力発電と汽力発電の対応、原子炉、U-235/U-238、濃縮燃料
 
-教材外の新規公式・論点補完0件。詳細煙風道設備、再熱・再生サイクル、給水加熱器等、燃焼化学・CO2計算、保護装置・継電器・トリップ機構は追加していない。
+公式問題・公式解答は電気技術者試験センター正本で確認済み。参考教材はe-sysnet、電験王、電験三種まとめましたを確認した。
 
-## Topic 03 成果物
-- `topics/03_thermal_power/03_thermal_power.md`
-- `topics/03_thermal_power/03_thermal_power_explanation.pdf`
-- `topics/03_thermal_power/03_thermal_power_practice.pdf`
-- `topics/03_thermal_power/03_thermal_power_images.pptx`
-- `topics/03_thermal_power/03_thermal_power_powerpoint_qa.md`
-- `topics/03_thermal_power/03_thermal_power_independent_reanswer.md`
-- `topics/03_thermal_power/03_thermal_power_final_qa.md`
+直近年度から調査したが、以下は`SPEC.md`のTopic 04固定範囲を越えるため品質ゲート対象から除外した。
+- R7下: 高速増殖炉、高温ガス炉、核融合
+- R7上: 核燃料サイクル、再処理、MOX燃料、プルサーマル、転換比
+- R6下: α・β・γ線等の放射線分類
+- R5下: 詳細燃料加工、親物質・プルトニウム生成等
+
+仕様外論点を追加していない。
+
+## Topic 04 固定範囲上の必須説明
+過去問要求を固定範囲へマッピングし、次段階で本文化する。
+
+- 原子核、質量欠損、結合エネルギー、`E=Δmc^2`
+- U-235核分裂、中性子、連鎖反応、制御棒
+- 原子炉、冷却材、蒸気発生
+- PWR/BWRの主要設備と蒸気系統差
+- 蒸気タービンと原子力特有の蒸気条件、火力との熱効率差
+- 原子炉熱出力、発電端出力、`η=Pe/Pth`
+- 同期発電機までのエネルギー変換
+- 核分裂エネルギーと燃料発熱量の換算計算
+
+## 「むつ」の扱い
+Topic 04では原子力船「むつ」の原子力設備を架空列車へ流用することが`SPEC.md`で固定されている。
+
+原子炉形式、原子炉熱出力、蒸気条件、タービン・発電設備主要仕様、原子炉区画等は、次段階で一次資料を確認してから本文へ入れる。未確認値は真値化しない。
+
+放射線、遮蔽、事故時安全、法規制、社会的受容等は教材上の検討対象外であり、設計論点へ追加しない。
 
 ## 現在状態
-- `current_status`: `topic_03_completed`
+- `current_status`: `topic_04_exam_alignment_complete`
 - 完成数: `3/16`
 - last completed: Topic 03
 - active: Topic 04 `東京―佐世保「原子力新幹線」`
+- Topic 04完成後独立再解答: 未実施
 
 ## 次の正確な開始点
-Topic 04の制作前EXAM_ALIGNMENTを行う。電気技術者試験センター公式過去問を直近年度から原則5問以上調査し、複数系統の参考教材を確認する。`SPEC.md` のTopic 04固定範囲から仕様を追加せず、要求知識・式・設問型・教材必須説明をsource Markdownへ記録する。
+Topic 04の解説本文＋基礎・本試験標準・複合の3段階例題を作る。
+
+その前提として「むつ」の実在仕様を公的機関・研究機関等の一次資料で確認する。選定6過去問の要求事項を`SPEC.md`固定範囲内で本文へ欠落なくマッピングし、固定範囲外の新型炉・核燃料サイクル・放射線論点等は追加しない。
