@@ -5,15 +5,33 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 2 / 39
-- current_status: `topic_03_explanation_pdf_complete`
+- current_status: `topic_03_practice_source_complete`
 - last_completed_topic: `02 0系② 整流回路の波形解析`
 - active_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
-- next_start: Topic 03の練習問題・完全解説sourceを作成する。確定済みEXAM_ALIGNMENTと解説内容だけを使い、一次試験型に加え二次記述式を含める
+- next_start: Topic 03の練習PDFを作成する。確定済み練習問題sourceを変更せずA4縦へ組版し、全ページVisual QAを行う
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
-- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF完成、練習問題未着手
+- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF・練習問題source完成、練習PDF未着手
+
+## Topic 03 練習問題・完全解説source
+確定済みEXAM_ALIGNMENTと解説本文の固定範囲だけを使って練習問題sourceを作成した。
+
+source:
+- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_practice_source.md`
+
+構成:
+- 一次試験型8問（全問五肢択一）
+- 二次試験型4問（記述式）
+- 合計12問
+- 全問に完全解説を付与
+- H28一次 機械 問1の固定範囲とH24二次 機械・制御 問1の固定範囲へ接続
+- 電機子抵抗、逆起電力、磁束、電機子電流、電磁トルク、回転速度、機械出力、銅損、効率、飽和、4指定グラフ論点を全件カバー
+- 二次問題は使用式、前提、途中式、単位、検算を明示
+- 全数値問題を電圧方程式・電力収支・速度比・トルク比で相互検算済み
+- 未確認の0系主電動機実値・固有仕様は追加していない
+- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
 
 ## Topic 03 解説PDF
 解説本文sourceの確定内容だけを使って解説PDFを作成した。
@@ -177,8 +195,3 @@ source:
 Topic 01: `PASS`。
 
 Topic 02: `PASS`。制作前EXAM_ALIGNMENT、一次・二次対応、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5、範囲・実車値確認をすべて通過。Topic 02を`completed`とし、完成数を `2 / 39` へ更新した。
-
-Topic 03: 制作前EXAM_ALIGNMENT `PASS`。解説本文source、3段階例題、4指定グラフ、解説PDFまで完成。解説PDF全3ページVisual QA PASS。テーマ自体は未完了で、完成数は `2 / 39` のまま。
-
-## 次
-Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` の練習問題・完全解説sourceを作成する。確定済みEXAM_ALIGNMENTと解説内容の範囲だけを使い、一次試験型に加え二次記述式を含める。
