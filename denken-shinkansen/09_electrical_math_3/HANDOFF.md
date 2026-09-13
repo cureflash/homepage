@@ -12,79 +12,78 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
+Topic 05 `ベクトル` は制作前EXAM_ALIGNMENTまで完了。
+
 完成数: `4 / 12`
 
-current_status: `topic_04_completed`
+current_status: `topic_05_exam_alignment_complete`
 
 active_topic: `05 ベクトル`
 
-## Topic 04 最終QA結果
-
-判定: `PASS / completed`
-
-前回 `NEEDS_REVISION` の原因だったsource Markdownの進捗記録不整合を修正後、最終QAを再実施した。
-
-確認結果:
-- 必須成果物: PASS
-- 三種公式過去問5問・6小問のEXAM_ALIGNMENT: PASS
-- 複数系統の参考教材確認: PASS
-- 制作前独立検証: PASS
-- 完成後独立再解答: 5問・6小問すべて公式解答と一致
-- 解説PDF・練習PDF・PowerPoint: 既実施表示QA対象と現行blobが一致
-- 固定範囲外の新規説明追加: 0件
-- 未確認実車値の追加: 0件
-- source進捗記録整合: PASS
-
-最終QA記録:
-`topics/04_polar_form_phasor/04_polar_form_phasor_final_qa.md`
-
-## Topic 04 成果物
+## Topic 05 制作前EXAM_ALIGNMENT
 
 source Markdown:
-`topics/04_polar_form_phasor/04_polar_form_phasor.md`
+`topics/05_vectors/05_vectors.md`
 
-解説PDF:
-`topics/04_polar_form_phasor/04_polar_form_phasor_explanation.pdf`
+選定公式過去問:
+- R7下 理論 問2: 同一直線上の2つのクーロン力を差として合成し未知電荷量を求める
+- R7上 理論 問11: ホール素子で電流・磁界・キャリア運動から電荷偏りの向きを判定する
+- R6下 理論 問4: xyz座標で平行導体A・Bに働く力の向きを判定する
+- R4下 理論 問4: 正三角形配置で60°をなす等大2力を合成する
+- R4上 理論 問4: 磁界に対する速度の垂直成分を取り出して誘導起電力を求める
 
-練習PDF:
-`topics/04_polar_form_phasor/04_polar_form_phasor_practice.pdf`
+制作前独立計算・公式照合:
+- R7下 理論 問2: (3) = 公式 (3) PASS
+- R7上 理論 問11: (4) = 公式 (4) PASS
+- R6下 理論 問4: (2) = 公式 (2) PASS
+- R4下 理論 問4: (3) = 公式 (3) PASS
+- R4上 理論 問4: (3) = 公式 (3) PASS
 
-解説画像PowerPoint:
-`topics/04_polar_form_phasor/04_polar_form_phasor_images.pptx`
+合計 `5 / 5 PASS`。
 
-完成後独立再解答記録:
-`topics/04_polar_form_phasor/04_polar_form_phasor_exam_reanswer.md`
+参考教材はe-sysnetと電験王の2系統を確認済み。正本は試験センター公式問題・公式解答とする。
 
-## Topic 04 完成後独立再解答
+## Topic 05 固定範囲
 
-- R6上 理論 問9: (2) = 公式 (2) PASS
-- R6上 理論 問15: (a)(4), (b)(3) = 公式一致 PASS
-- R5下 機械 問5: (3) = 公式 (3) PASS
-- R5上 理論 問9: (3) = 公式 (3) PASS
-- R3 理論 問8: (5) = 公式 (5) PASS
+系列 `SPEC.md` にある以下だけを扱う。
 
-5問・6小問すべて一致。
+- ベクトルとスカラー
+- 成分表示
+- 和・差
+- 大きさ
+- 単位ベクトル
+- 内積の基本
+- 外積の基本
+- 電界・磁界・力への基本適用
+- フェーザと空間ベクトルの違い
 
-## Topic 04 固定範囲
+ベクトル解析（grad / div / curl）、行列・固有値、テンソル、高度な場の理論、Topic 04で扱っていない交流回路論点は追加しない。
 
-- `a+jb`
-- `r∠θ`
-- 直交形式と極形式の相互変換
-- 大きさと偏角、象限確認
-- 極形式の掛け算・割り算
-- `j=1∠90°`, `-j=1∠-90°`
-- 正弦波交流のフェーザ表示
-- 基準位相、進み・遅れ、位相差
-- 最大値と実効値の区別
-- `V=ZI`, `Z=V/I` の極形式計算
-- フェーザ図
-- 同一角周波数の正弦波に対するフェーザ法の成立条件
-- `交流25 kV` を大きさと位相を持つフェーザとして表す数学例
+## 過去問から固定した必須説明
 
-空間ベクトルはTopic 05へ送る。RLC共振、三相結線、力率改善、複素電力、対称座標法等をTopic 04へ新規追加しない。未確認の新幹線実設備値を追加しない。
+- `x,y,z` 成分と単位ベクトルによる方向表示
+- 反対向きベクトルを差として合成する方法
+- 成分ごとの和・差と大きさ `√(ax²+ay²+az²)`
+- `sin/cos` による平行・垂直成分分解
+- 等大2ベクトル・60°の合成と対称性
+- 内積 `a·b=|a||b|cosθ` の基本と射影
+- 外積 `a×b` の大きさ `|a||b|sinθ` と右手系の向き
+- `q(v×B)`、`I(l×B)` を外積の基本適用例として読む方法
+- 正負電荷・座標軸・視点による方向判定ミスの防止
+- フェーザの位相角と空間ベクトルの空間方向の区別
+
+## 未作成
+
+- 解説本文＋3段階例題
+- 解説PDF
+- 練習問題・完全解説source
+- 練習PDF
+- 解説画像PowerPoint
+- 完成後独立再解答記録
+- 最終QA記録
 
 ## 次に行うこと
 
-Topic 05 `ベクトル` の制作前EXAM_ALIGNMENTを行う。
+Topic 05 `ベクトル` の解説本文＋3段階例題を作成する。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の範囲内で、直近年度優先の公式過去問を原則5問以上調査し、要求事項を固定してから本文制作へ進む。Topic 04へ追加変更は行わない。
+制作前EXAM_ALIGNMENTの5問を固定し、上記必須説明を本文へ全件対応付ける。固定範囲外を追加せず、本文完成まではPDF等の後工程へ進まない。
