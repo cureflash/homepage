@@ -4,25 +4,25 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 23 / 38
-- current_status: `topic_24_powerpoint_complete`
-- last_completed_topic: `23 L0系② 500km/hと周波数制御`
-- active_topic: `24 L0系③ 超電導磁気浮上`
-- next_start: Topic 24の完成後独立再解答を行う。保存済み正答を先に見ず、完成教材だけで選定6過去問を再解答し、全問を根拠付きで再現できた場合のみcompletedとする
+- exam_aligned_completed_topics: 24 / 38
+- current_status: `topic_24_completed`
+- last_completed_topic: `24 L0系③ 超電導磁気浮上`
+- active_topic: `25 L0系④ 誘導集電`
+- next_start: Topic 25の制作前EXAM_ALIGNMENTから開始する。系列SPEC固定範囲に限定し、直近年度優先で関連公式過去問5問以上を調査して要求事項を確定する
 
 ## 新品質ゲート進捗
-- [x] 01〜23 — PASS
-- [ ] 24 L0系③ 超電導磁気浮上 — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、PowerPoint完了。完成後独立再解答が未完了
+- [x] 01〜24 — PASS
+- [ ] 25 L0系④ 誘導集電 — 未着手
 
 ## 24 EXAM_ALIGNMENT
-品質ゲート対象は直近年度優先の6問。式・法則から再導出し、公式解答と6 / 6一致。
+品質ゲート対象は直近年度優先の6問。制作前解答検証6 / 6 PASS、完成後独立再解答も6 / 6 PASS。
 
-1. R8上 理論 問4 — 点磁極が作る磁界、向き、重ね合わせ — 解答3 / 公式3 — PASS
-2. R8上 機械 問2 — 磁界中を動く導体の誘導起電力 `e=Blv` — 解答4 / 公式4 — PASS
-3. R7下 理論 問4 — 円弧電流が作る磁界、向きと合成 — 解答5 / 公式5 — PASS
-4. R7上 理論 問4 — 直線導体・円形コイルが作る磁界 — 解答5 / 公式5 — PASS
-5. R6下 理論 問3 — ファラデーの法則、磁束変化率 — 解答2 / 公式2 — PASS
-6. R6下 理論 問4 — 平行導体の磁界と電磁力方向 — 解答2 / 公式2 — PASS
+1. R8上 理論 問4 — 点磁極が作る磁界、向き、重ね合わせ — 再解答3 / 公式3 — PASS
+2. R8上 機械 問2 — 磁界中を動く導体の誘導起電力 `e=Blv` — 再解答4 / 公式4 — PASS
+3. R7下 理論 問4 — 円弧電流が作る磁界、向きと合成 — 再解答5 / 公式5 — PASS
+4. R7上 理論 問4 — 直線導体・円形コイルが作る磁界 — 再解答5 / 公式5 — PASS
+5. R6下 理論 問3 — ファラデーの法則、磁束変化率 — 再解答2 / 公式2 — PASS
+6. R6下 理論 問4 — 平行導体の磁界と電磁力方向 — 再解答2 / 公式2 — PASS
 
 系列SPECの固定範囲は、超電導磁石、磁界、電磁誘導、誘導電流、電磁力、浮上、案内。R8上理論問3の自己インダクタンス・磁気エネルギー、R6下理論問12の荷電粒子軌道は範囲外として除外した。
 
@@ -59,7 +59,7 @@ JR東海「超電導リニアの原理」を確認し、Topic 24では次だけ�
 コイル寸法、磁束密度、電流値、結線値は確認できていないため実車値として追加していない。
 
 ## 24 成果物
-- source Markdown: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev.md` — EXAM_ALIGNMENT、解説本文、3段階例題まで完了
+- source Markdown: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev.md` — EXAM_ALIGNMENT、解説本文、3段階例題、完成後独立再解答まで完了
 - 解説PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf` — A4縦2ページ、全ページQA PASS
 - 練習PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_practice.pdf` — A4縦4ページ、15問、解答・完全解説付き、全ページQA PASS
 - 解説画像PowerPoint: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_images.pptx` — 3スライド、全スライド表示QA・overflow検査PASS
@@ -86,6 +86,18 @@ JR東海「超電導リニアの原理」を確認し、Topic 24では次だけ�
 - JR東海一次資料で確認済みの実車事実だけを使用し、未確認のコイル寸法・磁束密度・電流値・結線値は追加していない
 - 系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道は追加していない
 - 全3スライドをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし。overflow検査PASS
+
+## 24 完成後独立再解答
+完成教材に収録した式・適用条件・解法手順から選定6問を再構成し、電気技術者試験センター公式解答と照合した。
+
+1. R8上 理論 問4 — `H=m/(4πμ0r^2)`。N極3 mで約`0.704 A/m`、S極1 mで約`6.33 A/m`、同方向に合成して約`7.04 A/m` — 3 / 3 — PASS
+2. R8上 機械 問2 — `v=πDn/60≈39.27 m/s`、1導体`Blv≈7.85 V`、2有効導体で`15.7 V` — 4 / 4 — PASS
+3. R7下 理論 問4 — 放射状直線部0、1/4円弧は内側`4 A/m`・外側`2 A/m`、逆向きなので差`2 A/m` — 5 / 5 — PASS
+4. R7上 理論 問4 — `I1/(2πa)=I2/(2a)`より`I1=πI2` — 5 / 5 — PASS
+5. R6下 理論 問3 — `|e|=30×1/0.1=300 V` — 2 / 2 — PASS
+6. R6下 理論 問4 — 同方向平行電流は引力。Aは`+x`、Bは`-x` — 2 / 2 — PASS
+
+結果: 6 / 6 PASS。必要公式の選択、適用条件、途中計算または方向判定を完成教材内から再構成でき、公式解答と全件一致。Topic 24をcompletedとし、完成数を24 / 38へ更新した。
 
 ## 23 EXAM_ALIGNMENT
 品質ゲート対象は次の5問。制作前独立解答は5 / 5 PASS、完成後独立再解答も5 / 5 PASS。
@@ -123,4 +135,4 @@ JR東海「超電導リニアの原理」で、時速500 km走行、推進コイ
 `PASS`。制作前EXAM_ALIGNMENT、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5をすべて通過。Topic 23をcompletedとし、完成数を23/38へ更新した。
 
 ## 次
-Topic 24 `L0系③ 超電導磁気浮上` の完成後独立再解答を行う。保存済み正答を先に見ず、完成教材だけで選定6過去問を再解答し、6/6を根拠付きで再現できた場合のみcompletedとする。
+Topic 25 `L0系④ 誘導集電` の制作前EXAM_ALIGNMENTから開始する。系列SPEC固定範囲（電磁誘導、非接触給電、誘導集電、交流、電力変換、効率）だけを扱い、直近年度優先で関連公式過去問5問以上を調査して要求事項を確定する。
