@@ -14,7 +14,7 @@ Topic 03 `0系を210km/hまで加速させる` も最終QAまでPASSし、`compl
 
 active topic: `04 200系のサイリスタ制御を計算する`
 
-current status: `topic_04_explanation_pdf_complete`
+current status: `topic_04_practice_pdf_complete`
 
 ## Topic 04 現在の成果物
 
@@ -24,7 +24,10 @@ source Markdown:
 解説PDF:
 `topics/04_200series_thyristor_control/04_200series_thyristor_control_explanation.pdf`
 
-制作前EXAM_ALIGNMENT、公式解答照合付き要求事項独立検証、解説本文＋3段階例題、解説PDF＋全ページ表示QAまで完了。練習PDF、解説画像PowerPointは未作成。
+練習PDF:
+`topics/04_200series_thyristor_control/04_200series_thyristor_control_practice.pdf`
+
+制作前EXAM_ALIGNMENT、公式解答照合付き要求事項独立検証、解説本文＋3段階例題、解説PDF＋全ページ表示QA、練習PDF＋全ページ表示QAまで完了。解説画像PowerPointは未作成。
 
 ## Topic 04 固定範囲
 
@@ -99,6 +102,22 @@ source Markdown:
 - 200系の未確認実車値の追加なし: PASS
 - 固定範囲外の仕様追加なし: PASS
 
+## Topic 04 練習PDF QA
+
+- A4縦5ページ: PASS
+- 全15問、一次試験型の五肢択一10問＋二次試験型の記述5問: PASS
+- 固定EXAM_ALIGNMENTのゲート対象12小問に必要な論点を全件練習可能: PASS
+- 60°区間平均値積分と `V_d=(3√2/π)V cosα`: PASS
+- サイリスタ一素子の平均電流・実効値・直流側電流の区別: PASS
+- H30二次条件の `P`、`I_1`、`S_1`、`Q_1`、基本波力率: PASS
+- 高調波の発生源・基本的影響、基本波力率と総合力率の区別: PASS
+- `V_d=E+I_aR_a`、`T=kΦI_a` による直流主電動機との接続: PASS
+- 数値問題は使用式・理由・代入・単位・中間計算・最終値・検算を収録: PASS
+- 二次記述は前提・途中式・理由説明まで採点可能な形: PASS
+- 全5ページを200 dpiでレンダリングして表示確認。クリッピング、重なり、黒四角、文字化けなし: PASS
+- 200系の未確認実車値の追加なし: PASS
+- 固定範囲外のチョッパ、PWM、インバータ、回生、能動フィルタ補償設計、サイクロコンバータ固有制御の追加なし: PASS
+
 ## Topic 03 完了内容
 
 source Markdown:
@@ -165,9 +184,9 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 04の練習PDF（解答・完全解説付き）を作成する。
+Topic 04の解説画像PowerPointを作成する。
 
-固定EXAM_ALIGNMENTの一次2問＋二次記述3問、ゲート対象12小問と本文の対応を維持し、次を練習可能にする。
+固定EXAM_ALIGNMENTの一次2問＋二次記述3問、ゲート対象12小問と解説・練習PDFの対応を維持し、次を固定範囲で可視化する。
 
 - サイリスタの基本動作と制御角
 - 三相全波位相制御整流器の60°区間平均値積分
@@ -176,6 +195,6 @@ Topic 04の練習PDF（解答・完全解説付き）を作成する。
 - H30二次条件での有効・無効電力と基本波力率
 - 高調波の発生と基本的影響
 - `V_d(α)=E+I_aR_a`、`T=kΦI_a` による直流主電動機との接続
-- 一次試験型の選択式と二次試験型の記述・途中式
+- `α-V_d`、`α-I_a`、`α-T` の3グラフ
 
-固定範囲外は追加しない。200系の実車値を使う場合は一次資料で確認し、資料値・計算値・仮定値を区別する。
+固定範囲外は追加しない。`α-I_a`、`α-T` は教材上の比較モデルとし、200系の未確認実車値を使わない。
