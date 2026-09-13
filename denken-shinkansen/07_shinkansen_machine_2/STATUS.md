@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 4 / 22
-- current_status: `topic_05_practice_pdf_complete`
+- current_status: `topic_05_powerpoint_complete`
 - last_completed_topic: `04 200系のサイリスタ制御を計算する`
 - active_topic: `05 300系の誘導電動機を等価回路で解く`
-- next_start: Topic 05の固定EXAM_ALIGNMENT 5問・17小問と解説・練習内容を維持して、解説画像PowerPointを作成し表示QAを行う
+- next_start: Topic 05の固定EXAM_ALIGNMENT 5問・17小問と完成教材を維持し、公式過去問を教材のみで独立再解答する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -83,21 +83,22 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 05「300系の誘導電動機を等価回路で解く」の練習PDFを作成し、GitHub正本へ反映した。
+Topic 05「300系の誘導電動機を等価回路で解く」の解説画像PowerPointを作成し、GitHub正本へ反映した。
 
 固定条件:
-- 練習PDF: A4縦5ページ
-- 問題数: 15問
-- 一次試験型: 10問、全問五肢択一
-- 二次試験型: 5問、途中式・前提・単位を含む記述式
-- 全15問に解答・完全解説を収録
-- 全5ページ表示QA: PASS
-- 文字抽出QA: PASS
+- PowerPoint: 16:9・4スライド
+- スライド1: 星形結線の相電圧換算、一相分L形等価回路、複素電流の計算順
+- スライド2: `r2'/s` の分解、一次入力→二次入力→機械出力→軸出力の電力フロー、損失・効率
+- スライド3: 電磁トルクと軸トルクの区別、同期速度・滑り・角速度、仮定値例題による照合
+- スライド4: 二種一次・二次の解法手順と固定EXAM_ALIGNMENT 5問・17小問
+- 全4スライド表示QA: PASS
+- overflow検査: PASS
+- ZIP整合性検査: PASS
 - EXAM_ALIGNMENT: 一次2問＋二次記述3問、計5問を維持
 - ゲート対象: 17小問を維持
 - Topic 06の最大トルク・比例推移等の追加: 0件
@@ -106,4 +107,4 @@ Topic 05「300系の誘導電動機を等価回路で解く」の練習PDFを作
 - 未確認300系実車値の追加: 0件
 
 ## 判定
-Topic 05は `topic_05_practice_pdf_complete`。完成数は `4 / 22` のまま。次工程は解説画像PowerPoint＋表示QA。
+Topic 05は `topic_05_powerpoint_complete`。完成数は `4 / 22` のまま。次工程は固定5問・17小問の教材のみでの独立再解答。
