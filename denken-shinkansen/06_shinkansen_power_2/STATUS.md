@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `06_shinkansen_power_2`
 - exam_aligned_completed_topics: 1 / 22
-- current_status: `topic_02_practice_pdf_complete`
+- current_status: `topic_02_powerpoint_complete`
 - last_completed_topic: `01 新幹線を電力系統から見てみる`
 - active_topic: `02 信濃川の水で新幹線を何本走らせられる？`
-- next_start: Topic 02 の解説画像PowerPointを作成し、既存source Markdown・解説PDF・練習PDFの固定範囲と一次4問＋二次2問のEXAM_ALIGNMENTに同期する
+- next_start: Topic 02 の完成後独立再解答を、正式選定した一次4問＋二次2問に対して教材だけを使って実施する
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -23,9 +23,28 @@
 - [x] 練習問題の独立再計算・一意解QA（15/15 PASS）
 - [x] 解説PDF
 - [x] 練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後独立再解答
 - [ ] 最終QA
+
+## Topic 02 解説画像PowerPoint
+成果物:
+- `topics/02_hydropower/02_hydropower_images.pptx`
+
+構成:
+- 16:9、4枚
+- Slide 1: `P=9.8QHη`、調整池水量収支、ピーク/オフピーク流量から出力へ進む二次計算の型
+- Slide 2: ペルトン・フランシス・カプラン水車、部分負荷効率、比速度の対応
+- Slide 3: 電気式調速機の信号経路、負荷遮断、水撃と過速度のトレードオフ、サージタンク・制圧機・`GD²`・無拘束速度
+- Slide 4: 信濃川水系3発電所から鉄道電力への接続、実在値 `44.8万kW`・`316.96 m^3/s`、列車本数・必要流量の記号式
+
+同期・品質:
+- 既存 `02_hydropower.md` の固定範囲から論点を追加していない
+- 一次4問＋二次2問の要求事項を4枚へ対応付けた
+- 未確認の列車1本電力 `P_train` は数値化せず、既存sourceと同じ記号式で扱った
+- 固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
+- 全4枚をレンダリングして視認性を確認
+- `slides_test.py` によるoverflow検査 PASS
 
 ## Topic 02 解説PDF
 成果物:
@@ -163,4 +182,4 @@ source Markdown:
 以上によりTopic 01を `completed` とした。完成数は `1 / 22`。
 
 ## 次
-Topic 02 `信濃川の水で新幹線を何本走らせられる？` の解説画像PowerPointを作成する。既存source Markdown・解説PDF・練習PDFの固定範囲と正式選定6問の要求事項を維持し、固定範囲外の論点や未確認実設備値を追加しない。
+Topic 02 `信濃川の水で新幹線を何本走らせられる？` の完成後独立再解答を実施する。正式選定した一次4問＋二次2問を、現行source Markdown・解説PDF・練習PDF・PowerPointだけを教材として再解答し、教材外知識の補完が必要ならFAILとして不足箇所のみを記録する。
