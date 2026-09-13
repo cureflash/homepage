@@ -8,7 +8,7 @@ completed topic: `01 新幹線を電力系統から見てみる`
 
 active topic: `02 信濃川の水で新幹線を何本走らせられる？`
 
-状態: `topic_02_powerpoint_complete`
+状態: `topic_02_independent_reanswer_complete`
 
 完成数は `1 / 22`。
 
@@ -20,6 +20,7 @@ source Markdown:
 - `topics/02_hydropower/02_hydropower.md`
 - `topics/02_hydropower/02_hydropower_practice.md`
 - `topics/02_hydropower/02_hydropower_practice_qa.md`
+- `topics/02_hydropower/02_hydropower_independent_reanswer.md`
 
 成果物:
 - `topics/02_hydropower/02_hydropower_explanation.pdf`
@@ -57,12 +58,19 @@ source Markdown:
   - 電気式調速機、負荷遮断、水撃と過速度、サージタンク・制圧機、`GD²`、無拘束速度
   - 信濃川水系の実在値と列車本数・必要流量の記号式
   - 全4枚のレンダリング確認、overflow検査PASS
+- 完成後独立再解答
+  - 正式選定した一次4問＋二次2問を現行教材だけで再解答
+  - `6 / 6 PASS`
+  - 教材外知識補完 `0件`
+  - 解答確定後に電気技術者試験センター公式解答と照合し全件一致
 
 解説PDFは、`P=ρgQHη`、調整池水量収支、水車種類、比速度、電気式調速機、負荷遮断、水撃、サージタンク・制圧機、`GD²`、無拘束速度、信濃川水系との接続、二種一次・二次の解法を既存sourceの範囲内で収録した。
 
 練習PDFは `02_hydropower_practice.md` の15問と完全解説をそのまま教材化し、既存 `15 / 15 PASS` の独立再計算・一意解QAと矛盾しないことを確認した。
 
 解説画像PowerPointは、既存source Markdown・解説PDF・練習PDFと同じ固定範囲だけを4枚に整理した。正式選定した一次4問＋二次2問の要求事項を崩さず、未確認の列車1本電力 `P_train` は数値化していない。
+
+完成後独立再解答では、R8一次問5、R7一次問1、R6一次問3、R5一次問1、R5二次問1、R4二次問1を教材だけで再構成した。一次4問の穴埋めは全て公式解答と一致し、R5二次問1は水撃の原因・伝搬とサージタンク・制圧機の設置場所・作用を満たした。R4二次問1は `Qp=28.333 m^3/s`, `Qo=17.222 m^3/s`, `Pp≈14200 kW`, `Po≈8100 kW` となり公式標準解答と一致した。教材外知識補完は0件。
 
 信濃川水系への接続ではJR東日本一次資料だけを使用した。実在値として自営水力発電総出力 `44.8万kW`、2025年水利権更新資料の最大取水量 `316.96 m^3/s` を区別して記録した。列車1本の所要電力は一次資料で条件を固定できていないため仮定値を置かず、列車本数と必要流量は記号式で示した。
 
@@ -113,10 +121,11 @@ Topic 02固定範囲外の劣化診断、短絡計算、潮流計算等は追加
 
 ## 次に行うこと
 
-Topic 02 `信濃川の水で新幹線を何本走らせられる？` の完成後独立再解答を実施する。
+Topic 02 `信濃川の水で新幹線を何本走らせられる？` の最終QAを実施する。
 
-- 正式選定した一次4問＋二次2問を対象にする。
-- 現行source Markdown・解説PDF・練習PDF・PowerPointだけを教材として使う。
-- 保存済み正答を先に見ずに解く。
-- 教材外知識の補完が必要ならFAILとして不足箇所だけを記録する。
-- 固定範囲外の論点や未確認実設備値を追加しない。
+- 必須source Markdown、解説PDF、練習PDF、解説画像PowerPointがGitHub正本に存在することを確認する。
+- 一次4問＋二次2問のEXAM_ALIGNMENTと各教材の論点対応を確認する。
+- source Markdown、解説PDF、練習PDF、PowerPointの同期状態を確認する。
+- 既存のPDF全ページレンダリングQA・PowerPointレンダリング/overflow QAの記録を確認する。
+- 完成後独立再解答 `6 / 6 PASS`、教材外知識補完 `0件` を品質ゲートへ反映する。
+- 全条件がPASSした場合のみTopic 02を `completed` とし、完成数を `2 / 22` へ進める。
