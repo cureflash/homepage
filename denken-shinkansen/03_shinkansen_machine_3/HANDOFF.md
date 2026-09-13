@@ -6,17 +6,24 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は3/16。Topic 01〜03は品質ゲートPASSでcompleted。active topicは04 `300系でモーターが全部変わった`。
 
 ## 今回進捗
-Topic 04を1段階進め、練習PDF `topics/04_induction_motor/04_induction_motor_practice.pdf` を作成した。
+Topic 04を1段階進め、解説画像PowerPoint `topics/04_induction_motor/04_induction_motor_images.pptx` を作成した。
 
-練習sourceの12問と完全解説を内容変更せずA4縦6ページへ収録した。200 dpiで全6ページをレンダリングし、文字切れ・重なり・欠落グリフがないことを確認した。PDF文字抽出でも問1〜12、正答列 `2 / 4 / 4 / 2 / 1 / 3 / 3 / 2 / 3 / 2 / 3 / 2`、主要公式を確認済み。
+16:9・4枚で、系列SPECと確定済みEXAM_ALIGNMENTの固定範囲だけを図解した。
 
-選定5過去問の要求事項マッピングは変更していない。
+- Slide 1: 直流主電動機から三相誘導電動機への転換、固定子・回転子・回転磁界、`Ns`・`s`・`f2`
+- Slide 2: 同期速度→滑り→二次周波数の解法手順、`E2s=sE20`、典型ミス
+- Slide 3: `P1 → P2 → Pm → Pout`、二次銅損・効率、実角速度・同期角速度とトルク
+- Slide 4: 選定5過去問の要求事項マッピングとTopic 04範囲境界
 
-- R8上 機械 問4 → 問2、問8、問12
-- R6下 機械 問4 → 問9、問10、問11
-- R5上 機械 問3 → 問1、問4、問5
-- R5上 機械 問4 → 問2、問3、問6、問7
-- R1 機械 問3 → 問2、問3、問10、問11
+全4枚をレンダリングして文字切れ・意図しない重なりがないことを確認し、`slides_test.py` ではスライド境界外はみ出し0。PPTX ZIP整合性もPASS。SHA-256は `6404af4054a0f9aa46eb2d652f8eb1e3dbad2fbc5add2398fd05db86f8386c1e`。
+
+PowerPoint上の過去問対応は以下。
+
+- R8上 機械 問4 → Slide 1・3
+- R6下 機械 問4 → Slide 3
+- R5上 機械 問3 → Slide 1・2
+- R5上 機械 問4 → Slide 2・3
+- R1 機械 問3 → Slide 2・3
 
 ## EXAM_ALIGNMENT
 選定は変更していない。
@@ -37,10 +44,10 @@ Topic 04を1段階進め、練習PDF `topics/04_induction_motor/04_induction_mot
 - `topics/04_induction_motor/04_induction_motor_explanation.pdf` — 完了、表示QA PASS
 - `topics/04_induction_motor/04_induction_motor_practice.md` — 12問、完全解説付き、選定5問マッピング済み
 - `topics/04_induction_motor/04_induction_motor_practice.pdf` — A4縦6ページ、表示QA・文字抽出QA PASS
-- 解説画像PowerPoint — 未着手
+- `topics/04_induction_motor/04_induction_motor_images.pptx` — 16:9・4枚、全スライド表示QA・はみ出し検査・ZIP整合性PASS
 
 ## QA判定
-Topic 04は `IN_PROGRESS`。練習PDFまで完了したが、PowerPoint、完成後独立再解答が未完了。完成数3/16据え置き。
+Topic 04は `IN_PROGRESS`。必須4成果物は揃ったが、完成後独立再解答が未完了。完成数3/16据え置き。
 
 ## 次の正確な開始点
-Topic 04の解説画像PowerPointを作成する。系列SPECと確定済みEXAM_ALIGNMENTの固定範囲だけを図解し、全スライド表示QA・はみ出し検査を行う。
+Topic 04の完成後独立再解答を実施する。保存済み正答を先に見ず、選定5問を完成教材だけで解き、正答根拠を教材内から再構成できることを確認する。
