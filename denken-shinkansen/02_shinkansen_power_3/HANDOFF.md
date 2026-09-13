@@ -6,10 +6,13 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は2/16。Topic 01・02は完成済み。active topicは03 `JR東日本はなぜ火力発電所まで持っている？`。
 
 ## 今回進捗
-Topic 03を1段階進め、練習PDFを完成した。全12問（基礎3 / 本試験標準7 / 複合・応用2）をすべて五肢択一とし、式・理由・単位・中間計算・検算を含む完全解説を付与した。A4縦6ページを200 dpiで全ページ表示QAし、文字欠け・クリップ・重なり・壊れた数式記号なしでPASS。制作前 `EXAM_ALIGNMENT` の6問・7小問を全件マッピングし、固定範囲外の詳細煙風道設備、再熱/再生サイクル、燃焼化学、保護装置は追加していない。
+Topic 03を1段階進め、解説画像PowerPointを完成した。16:9・7枚。制作前 `EXAM_ALIGNMENT` の6問・7小問で必要な固定範囲を、汽力発電のエネルギー流れ、復水器、蒸気タービン出力・使用蒸気量、熱効率・熱消費率、発電端/送電端・所内率、ガスタービン・コンバインドサイクル、解法アルゴリズム・頻出ミスとして図解した。
+
+全7枚をレンダリングして表示確認し、文字欠け・クリップ・重なりなし。PPTXのスライド境界外はみ出し0件、ZIP整合性PASS。固定範囲外の詳細煙風道設備、再熱/再生サイクル、燃焼化学、保護装置は追加していない。
 
 更新成果物:
-- `topics/03_thermal_power/03_thermal_power_practice.pdf`
+- `topics/03_thermal_power/03_thermal_power_images.pptx`
+- `topics/03_thermal_power/03_thermal_power_powerpoint_qa.md`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -24,7 +27,7 @@ Topic 03を1段階進め、練習PDFを完成した。全12問（基礎3 / 本�
 
 結果: `7/7 PASS`。
 
-## Topic 03で固定した教材範囲
+## Topic 03 固定範囲
 `SPEC.md` から追加しない。
 
 - 汽力発電
@@ -50,84 +53,32 @@ Topic 03を1段階進め、練習PDFを完成した。全12問（基礎3 / 本�
 - ガスタービン・コンバインドサイクルと汽力発電の比較
 
 境界:
-- R7上 問3の節炭器・過熱器・再熱器・電気集じん装置・空気予熱器の詳細通過順は追加しない
-- R6下 問2の再熱/再生サイクル・給水加熱器・節炭器の個別論点は追加しない
-- R7下 問15(b)、R6下 問15(b)の炭素組成・化学量論・CO2計算は追加しない
-- R7下 電力 問3の保護装置・継電器・トリップ機構は追加しない
-- JR東日本川崎発電所等の実設備値は一次資料で確認できたものだけを使用する
+- 詳細煙風道設備は追加しない
+- 再熱/再生サイクル・給水加熱器等の個別論点は追加しない
+- 炭素組成・化学量論・CO2計算は追加しない
+- 保護装置・継電器・トリップ機構は追加しない
+- 川崎発電所等の実設備値はJR東日本一次資料で確認できたものだけを使用する
 
-## Topic 03 source
-- `topics/03_thermal_power/03_thermal_power.md`
-- source状態: `explanation_body_complete`
-- 公式過去問6問・7小問の要求知識・使用式・設問型を記録
-- 参考教材はe-sysnet、電験王、電験三種まとめましたを確認
-- 制作前独立再解答 `7/7 PASS`
-- 解説本文・3段階例題を作成済み
-- 解説PDF: completed / display QA PASS
-- 練習PDF: completed / display QA PASS
-- PowerPoint・完成後独立再解答は未着手
-
-## Topic 03 解説本文の収録内容
-- 汽力発電のエネルギー変換と固定範囲機器の入出力関係
-- 復水器の凝縮・真空度・タービン出口圧力・熱落差・効率の因果関係
-- `P=ηt m_dot(h1-h2)` と使用蒸気量逆算、`kg/s↔t/h`
-- `Qin=mfHf`、`1 kWh=3600 kJ`、発電端熱効率
-- 熱消費率 `η=3600/q` と簡略熱収支 `qP=3600P+Qc`
-- 所内率 `Ps=Pg(1-L)`, `Ws=Wg(1-L)` と逆算
-- ガスタービン・コンバインドサイクルの排熱利用、始動停止、負荷追従、外気温、温排水の定性判断
-- 再利用可能な火力計算の解法手順
-- 基礎例題: 発電端熱効率と熱消費率
-- 本試験標準例題: 蒸気タービンの使用蒸気量
-- 複合・ひっかけ例題: 発電端/送電端電力量と燃料熱量
-- 選定7小問と本文節の対応表
-
-## Topic 03 解説PDF
-- `topics/03_thermal_power/03_thermal_power_explanation.pdf`
-- A4縦6ページ
-- 200 dpiで全6ページ表示QA PASS
-- 制作前6問・7小問の要求論点、3段階例題、過去問対応表、公式まとめを収録
-- 固定範囲外論点の追加0件
-- 未確認実設備値の真値化0件
-
-## Topic 03 練習PDF
-- `topics/03_thermal_power/03_thermal_power_practice.pdf`
-- A4縦6ページ
-- 全12問: 基礎3問 / 本試験標準7問 / 複合・応用2問
-- 全問五肢択一、全問に式・理由・単位・中間計算・検算を含む完全解説を付与
-- 復水器・真空度、熱効率・熱消費率、蒸気タービン出力と使用蒸気量、発熱量と燃料量、所内率と発電端/送電端、コンバインドサイクル比較を収録
-- 制作前6問・7小問の要求論点を全件マッピング
-- 200 dpiで全6ページ表示QA PASS
-- 固定範囲外論点の追加0件
-- 未確認実設備値の真値化0件
-
-## Topic 03 新幹線側一次資料
-JR東日本公式だけを使用。
-
-- `https://www.jreast.co.jp/epd/works/kawasaki/`
-  - 川崎発電所は1930年運転開始、現在は天然ガス主体、発電機4台で列車運行に必要な電力を供給
-- `https://www.jreast.co.jp/company/csr/environment/carbon-neutral/`
-  - 自営火力発電所は神奈川県川崎市、総出力80.9万kW、都市ガス・天然ガスを使用
-- `https://www.jreast.co.jp/esio/our-works/project06.html`
-  - ガスタービン発電と汽力発電を組み合わせる複合サイクル発電を採用
-
-未確認実値の真値化は行っていない。
-
-## Topic 02 完了状態
-Topic 02 `上越新幹線を水の力で走らせる` は、source Markdown・解説PDF・練習PDF・解説画像PowerPoint・完成後独立再解答・最終QAまで完了済み。品質ゲート対象6問・7小問の完成後独立再解答は `7/7 PASS`、判定は `PASS / completed`。
-
-主な成果物:
-- `topics/02_hydropower/02_hydropower.md`
-- `topics/02_hydropower/02_hydropower_explanation.pdf`
-- `topics/02_hydropower/02_hydropower_practice.pdf`
-- `topics/02_hydropower/02_hydropower_images.pptx`
-- `topics/02_hydropower/02_hydropower_exam_reanswer.md`
-- `topics/02_hydropower/02_hydropower_final_qa.md`
+## Topic 03 解説画像PowerPoint
+- `topics/03_thermal_power/03_thermal_power_images.pptx`
+- 16:9・7枚
+- Slide 1: 電験で問われる論点とJR東日本川崎発電所の入口
+- Slide 2: 汽力発電のエネルギー流れと復水器の因果関係
+- Slide 3: `P=ηt m_dot(h1-h2)` と使用蒸気量の本試験標準例題
+- Slide 4: 発熱量・発電端熱効率・熱消費率・簡略復水器熱収支
+- Slide 5: 発電端/送電端・所内率と変動出力の電力量
+- Slide 6: ガスタービン・コンバインドサイクルと本試験比較ポイント
+- Slide 7: 再利用可能な解法アルゴリズムと頻出ミス、選定過去問対応
+- JR東日本一次資料で確認済みの総出力80.9万kW、発電機4台、都市ガス・天然ガス、複合サイクルのみを実設備情報として使用
+- 全7枚レンダリング表示QA PASS
+- スライド境界外はみ出し0件
+- ZIP整合性PASS
 
 ## 現在状態
-- `current_status`: `topic_03_practice_pdf_complete`
+- `current_status`: `topic_03_powerpoint_complete`
 - 完成数: `2/16`
 - last completed: Topic 02
 - active: Topic 03
 
 ## 次の正確な開始点
-Topic 03「JR東日本はなぜ火力発電所まで持っている？」の解説本文・解説PDF・練習PDFを正本として解説画像PowerPointを作成する。制作前 `EXAM_ALIGNMENT` の6問・7小問に対応する固定範囲を維持し、`SPEC.md` から仕様を追加しない。
+Topic 03の完成教材だけを使って、制作前 `EXAM_ALIGNMENT` の6問・7小問を独立再解答する。公式解答は解答確定後に照合し、教材外知識の補完0件を確認する。最終QAはその後。
