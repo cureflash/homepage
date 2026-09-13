@@ -12,11 +12,11 @@ Topic 02 `0系の直流主電動機はどんな特性だった？` も最終QA�
 
 active topic: `03 0系を210km/hまで加速させる`
 
-current status: `topic_03_explanation_pdf_complete`
+current status: `topic_03_practice_pdf_complete`
 
 ## Topic 03 今回完了した工程
 
-解説PDFを作成した。
+練習PDF（解答・完全解説付き）を作成した。
 
 source Markdown:
 `topics/03_0series_acceleration/03_0series_acceleration.md`
@@ -24,24 +24,10 @@ source Markdown:
 解説PDF:
 `topics/03_0series_acceleration/03_0series_acceleration_explanation.pdf`
 
-A4縦2ページ。制作前EXAM_ALIGNMENT、本文12節、基礎・標準・二次相当の3段階例題を反映した。全ページを160 dpiでレンダリングし、文字欠け・クリップ・重なりがないことを確認した。
+練習PDF:
+`topics/03_0series_acceleration/03_0series_acceleration_practice.pdf`
 
-## 0系一次資料確認
-
-日本車輌製造「0系新幹線の主要諸元」:
-https://www.n-sharyo.co.jp/museum/tec0/tec0-spec.html
-
-確認済み:
-- 2両1ユニット8主電動機
-- 主回路4S×2P
-- 連続定格出力1,480 kW / 2両
-- 連続定格速度167 km/h
-- 歯数比29:63=1:2.17
-- 主変圧器低圧側タップ切換による力行制御
-- タップ切替器25段
-- 最高速度210 km/h
-
-`1,480/8=185 kW/台` は資料値からの計算値。車輪径・主電動機回転速度は一次資料未確認のため0系実値として使っていない。例題で必要な未確認値は「教材上の仮定値」と明記した。
+練習PDFはA4縦5ページ・全15問。一次試験型10問＋二次記述型5問とし、数値計算は使用式・理由・代入・中間値・単位・最終値を示した。一次知識問題は正答理由と主要な誤答ポイント、二次記述は採点可能な途中式・前提・単位・理由説明を含めた。全ページを160 dpiでレンダリングし、文字欠け・クリップ・重なりがないことを確認した。
 
 ## 過去問品質ゲート
 
@@ -53,31 +39,30 @@ https://www.n-sharyo.co.jp/museum/tec0/tec0-spec.html
 - H25 一次 機械 問3
 - H24 二次 機械・制御 問1(4)
 
-一次4問＋二次記述1問、ゲート対象8小問の制作前公式照合は `8 / 8 PASS`。解説PDFでも要求事項を維持した。
+一次4問＋二次記述1問、ゲート対象8小問の制作前公式照合は `8 / 8 PASS`。
 
-完成後の「教材だけを使う独立再解答」は、練習PDF・PowerPoint完成後に実施する。
+練習PDFでは、一次型として直流機速度式、`P=Tω`、`J dω/dt=T_M-T_L`、歯車比、列車速度、駆動力、走行抵抗、加速度を反復した。二次型ではH24問1(4)と同じ「速度比→逆起電力、トルク比→電流、端子電圧」の骨格を、途中式付きの独自問題で反復した。
+
+完成後の「教材だけを使う独立再解答」は、解説画像PowerPoint完成後に実施する。
 
 チョッパ制御、回生制動、誘導電動機V/f・ベクトル制御、等価RC回路による厳密な始動過渡は本テーマへ追加していない。
 
-## Topic 02 完成成果物
+## 0系一次資料の扱い
 
-source Markdown:
-`topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics.md`
+日本車輌製造の公開資料で確認済み:
+- 2両1ユニット8主電動機
+- 主回路4S×2P
+- 連続定格出力1,480 kW / 2両
+- 連続定格速度167 km/h
+- 歯数比29:63=1:2.17
+- 主変圧器低圧側タップ切換
+- タップ切替器25段
+- 最高速度210 km/h
 
-解説PDF:
-`topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics_explanation.pdf`
-
-練習PDF:
-`topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics_practice.pdf`
-
-解説画像PowerPoint:
-`topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics_images.pptx`
-
-最終QA記録:
-`topics/02_0series_dc_motor_characteristics/02_0series_dc_motor_characteristics_final_qa.md`
+車輪径・主電動機回転速度は一次資料未確認のため、練習PDFでも実車値として使っていない。必要な数値は「教材上の仮定値」と明記した。
 
 ## 次に行うこと
 
-Topic 03の練習PDF（解答・完全解説付き）を作成する。
+Topic 03の解説画像PowerPointを作成する。
 
-一次試験型に加え、H24二次問1(4)型へ接続する記述計算は、使用式・前提・比例関係・途中式・単位・最終値を採点可能な形で含める。固定範囲外を追加しない。完成数は増やさず、PowerPoint・教材のみ独立再解答・最終QAまで通過した時点で初めてTopic 03をcompletedとする。
+固定EXAM_ALIGNMENTと解説PDF・練習PDFの解法骨格を保ち、仕様外論点を追加しない。PowerPoint完成後、教材だけを使う公式過去問の独立再解答、最終QAの順で進め、そこまでPASSした時点で初めてTopic 03を `completed` とする。
