@@ -6,58 +6,52 @@
 
 Topic 01 `複素数・複素指数・フェーザ計算` は `completed`。
 
-Topic 02 `ベクトルと座標変換` も最終QAまで完了し `completed`。
+Topic 02 `ベクトルと座標変換` は `completed`。
+
+Topic 03 `偏微分・全微分` は制作前EXAM_ALIGNMENTまで完了。
 
 完成数: `2 / 20`
 
-current_status: `topic_02_completed`
+current_status: `topic_03_exam_alignment_complete`
 
 active_topic: `03 偏微分・全微分`
 
-## Topic 02 最終QA
+## Topic 03 制作前EXAM_ALIGNMENT
 
 記録:
-`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_final_qa.md`
+`topics/03_partial_total_differentials/03_partial_total_differentials.md`
 
-判定: PASS
+品質ゲート対象:
+- R7 一次 理論 問2 (2)〜(5)
+- R7 一次 理論 問4 (1)〜(3)
+- R6 一次 理論 問8 (1)〜(3)
+- R1 一次 理論 問1 (1)〜(4)
+- H21 一次 理論 問7 (1)〜(2)
 
-確認済み:
-- source Markdown
-- 解説PDF
-- 練習PDF
-- 解説画像PowerPoint
-- EXAM_ALIGNMENT
-- 制作前独立検証
-- 完成後独立再解答
+計5問・16小問。制作前独立再解答は16/16小問で公式解答と一致。
 
-品質ゲート対象は二種一次理論の公式過去問5問・25小問。制作前独立検証・完成後独立再解答ともに25 / 25小問 PASS、公式解答と全件一致。完成後再解答の教材外知識補完は0件。
+固定範囲:
+- 偏微分
+- 全微分
+- 多変数関数
+- 全時間微分
+- 一次近似
+- 絶対感度・相対感度
 
-既実施のレンダリング・構造QAと現行blob SHAを照合し、解説PDF3ページ、練習PDF5ページ、PowerPoint4枚の現行成果物がQA対象版と一致することを確認した。
-
-本Topicの範囲は `SPEC.md` の成分表示、内積、外積、基底、座標変換の基本、回転変換に限定している。対称座標法そのものの詳細、Topic 11の一般的な行列・線形連立方程式、抽象ベクトル解析、未確認の新幹線実車値・設備値は追加していない。
-
-## Topic 02 現行成果物
-
-source Markdown:
-`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms.md`
-
-解説PDF:
-`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_explanation.pdf`
-
-練習PDF:
-`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_practice.pdf`
-
-解説画像PowerPoint:
-`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_images.pptx`
-
-完成後独立再解答:
-`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_exam_reanswer.md`
-
-最終QA:
-`topics/02_vectors_coordinate_transforms/02_vectors_coordinate_transforms_final_qa.md`
+R7・R6の二次「電力・管理」「機械・制御」も確認したが、本Topicの固定範囲だけで完結する直接問題は採用しない。極値・最適条件はTopic 04、一般行列はTopic 11、微分方程式はTopic 07、反復計算・最適化はTopic 18・19へ送る。
 
 ## 次に行うこと
 
-Topic 03 `偏微分・全微分` の制作前EXAM_ALIGNMENTを行う。
+Topic 03の解説本文＋3段階例題を作成する。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` に従い、電気技術者試験センターの公式過去問を直近年度優先で原則5問以上調査する。偏微分、全微分、多変数関数、感度、近似に直接必要な要求知識・式・設問型・教材内必要説明をsource Markdownへ先に固定する。Topic 04の極値・最適条件やTopic 11の一般行列論を先取りしない。
+本文では、選定5問・16小問から逆算した以下を欠落させない。
+
+- `∂f/∂x` で他変数を固定する意味
+- `df=Σ(∂f/∂xi)dxi`
+- `df/dt=Σ(∂f/∂xi)(dxi/dt)`
+- `Δf≈df` の成立条件
+- 二次微小項を落とす条件
+- `S_x^y=(x/y)(∂y/∂x)` による相対感度
+- 近似条件・符号・単位の検算
+
+3段階例題は基礎、本試験標準、複合・ひっかけの順とし、Topic 04以降の内容を先取りしない。
