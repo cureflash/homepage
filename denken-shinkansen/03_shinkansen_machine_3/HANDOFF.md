@@ -15,7 +15,7 @@ Topic 04を1段階進め、解説画像PowerPoint `topics/04_induction_motor/04_
 - Slide 3: `P1 → P2 → Pm → Pout`、二次銅損・効率、実角速度・同期角速度とトルク
 - Slide 4: 選定5過去問の要求事項マッピングとTopic 04範囲境界
 
-全4枚をレンダリングして文字切れ・意図しない重なりがないことを確認し、`slides_test.py` ではスライド境界外はみ出し0。PPTX ZIP整合性もPASS。SHA-256は `6404af4054a0f9aa46eb2d652f8eb1e3dbad2fbc5add2398fd05db86f8386c1e`。
+全4枚をレンダリングして文字切れ・意図しない重なりがないことを確認し、`slides_test.py` ではスライド境界外はみ出し0。PPTX ZIP整合性もPASS。
 
 PowerPoint上の過去問対応は以下。
 
