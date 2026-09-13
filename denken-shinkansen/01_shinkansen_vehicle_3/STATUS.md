@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 23 / 38
-- current_status: `topic_24_explanation_pdf_complete`
+- current_status: `topic_24_practice_pdf_complete`
 - last_completed_topic: `23 L0系② 500km/hと周波数制御`
 - active_topic: `24 L0系③ 超電導磁気浮上`
-- next_start: Topic 24の練習プリントPDFを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、固定範囲と選定6過去問への接続だけを扱う。系列SPEC外の論点・未確認実車値は追加しない
+- next_start: Topic 24の解説画像PowerPointを作成する。固定範囲と選定6過去問への接続だけを可視化し、系列SPEC外の論点・未確認実車値は追加しない
 
 ## 新品質ゲート進捗
 - [x] 01〜23 — PASS
-- [ ] 24 L0系③ 超電導磁気浮上 — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF完了。練習PDF以降未着手
+- [ ] 24 L0系③ 超電導磁気浮上 — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF完了。PowerPoint・完成後独立再解答が未完了
 
 ## 24 EXAM_ALIGNMENT
 品質ゲート対象は直近年度優先の6問。式・法則から再導出し、公式解答と6 / 6一致。
@@ -61,7 +61,7 @@ JR東海「超電導リニアの原理」を確認し、Topic 24では次だけ�
 ## 24 成果物
 - source Markdown: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev.md` — EXAM_ALIGNMENT、解説本文、3段階例題まで完了
 - 解説PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf` — A4縦2ページ、全ページQA PASS
-- 練習PDF: 未作成
+- 練習PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_practice.pdf` — A4縦4ページ、15問、解答・完全解説付き、全ページQA PASS
 - 解説画像PowerPoint: 未作成
 
 ## 24 解説PDF QA
@@ -70,6 +70,15 @@ JR東海「超電導リニアの原理」を確認し、Topic 24では次だけ�
 - 全2ページをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし
 - 系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道は追加していない
 - 未確認のL0系コイル寸法・磁束密度・電流値・結線値は追加していない
+
+## 24 練習PDF QA
+- A4縦4ページ、全15問五肢択一
+- 基礎4問（26.7%）、本試験標準8問（53.3%）、複合・応用3問（20.0%）
+- 全問に正答、使用式・理由、数値代入・単位・中間値・最終値、検算または誤答ポイントを付与
+- 選定6過去問の要求事項を全件カバー: 点磁極・重ね合わせ、運動起電力、円弧磁界、直線導体・円形コイル、ファラデー、平行導体・電磁力方向
+- L0系固有問題は一次資料確認済みの「超電導磁石の移動→磁束変化→誘導電流→磁気作用→浮上・案内力」と浮上用外部給電不要の範囲だけを使用
+- 全4ページをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし
+- 系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道、未確認実車値は追加していない
 
 ## 23 EXAM_ALIGNMENT
 品質ゲート対象は次の5問。制作前独立解答は5 / 5 PASS、完成後独立再解答も5 / 5 PASS。
@@ -107,4 +116,4 @@ JR東海「超電導リニアの原理」で、時速500 km走行、推進コイ
 `PASS`。制作前EXAM_ALIGNMENT、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5をすべて通過。Topic 23をcompletedとし、完成数を23/38へ更新した。
 
 ## 次
-Topic 24 `L0系③ 超電導磁気浮上` の練習プリントPDFを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とする。固定範囲と選定6過去問への接続だけを扱い、系列SPEC外の論点・未確認実車値を追加しない。
+Topic 24 `L0系③ 超電導磁気浮上` の解説画像PowerPointを作成する。固定範囲と選定6過去問への接続だけを可視化し、系列SPEC外の論点・未確認実車値を追加しない。
