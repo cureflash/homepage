@@ -7,18 +7,23 @@
 
 Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路の波形解析`、Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` は最終QAまでPASS。完成数は `3 / 39`。
 
-現在地は `topic_04_practice_pdf_complete`。Topic 04 `0系④ タップ制御と加速特性` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、SPEC指定4グラフ、解説PDF、練習問題・完全解説source、練習PDFまで完了。
+現在地は `topic_04_images_pptx_complete`。Topic 04 `0系④ タップ制御と加速特性` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、SPEC指定4グラフ、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPointまで完了。
 
 ## Topic 04 成果物
 - source: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration.md`
 - 解説PDF: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_explanation.pdf`
 - 練習問題source: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_practice_source.md`
 - 練習PDF: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_practice.pdf`
+- 解説画像PowerPoint: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_images.pptx`
 - 解説PDF: A4縦4ページ、全4ページVisual QA PASS
 - 練習PDF: A4縦7ページ、全7ページ180 dpi Visual QA PASS。欠け・重なり・黒四角・ページ外はみ出しなし
 - 練習問題: 一次8問（全問五肢択一）＋二次4問（記述式）、計12問、全問完全解説付き
 - 練習問題の計算独立再確認: `12 / 12 PASS`
 - 練習PDFはpractice sourceのみから生成。数値・正答・解法・範囲は変更していない
+- 解説画像PowerPoint: 16:9・4スライド、SPEC指定4グラフを収録
+- PowerPointはH28一次問1、H28一次問5、H26一次問5、H24二次問1の固定範囲への解法接続を可視化
+- 実タップ段数・実切替値は置かず、模式図またはsourceの教材仮定値と明記
+- 全4スライド表示QA PASS、overflow検査 PASS
 
 ## 過去問対応
 選定公式過去問:
@@ -55,7 +60,7 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
 - 速度―けん引力
 - 時間―速度の簡略加速計算
 
-実車特性として描く場合は一次資料値のみを使う。資料値がない場合は模式図または仮定条件による計算例と明示する。
+解説画像PowerPointで4グラフすべて可視化済み。実車特性として描かず、資料値がない箇所は模式図またはsourceの教材仮定値と明示している。
 
 ## 固定境界
 本テーマへ追加しない:
@@ -67,6 +72,6 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
 - 未確認の0系固有数値
 
 ## 次の正確な開始点
-Topic 04の固定済みsource・EXAM_ALIGNMENTを使って解説画像PowerPointを作成する。SPEC指定4グラフと一次・二次過去問への解法接続を可視化し、固定範囲外・未確認実車値を追加しない。完成後、全スライド表示QAとoverflow検査を行う。
+Topic 04の完成教材だけを使い、EXAM_ALIGNMENTで固定したH28一次問1、H28一次問5固定範囲、H26一次問5固定範囲、H24二次機械・制御問1固定範囲を、保存済み正答を先に見ず独立再解答する。教材外知識で補った場合はFAILとする。
 
 Topic 04はまだ `completed` ではない。完成数は `3 / 39`。
