@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 4 / 12
-- current_status: `topic_05_exam_reanswer_needs_revision`
+- current_status: `topic_05_revision_source_complete`
 - last_completed_topic: `04 極形式・フェーザ`
 - active_topic: `05 ベクトル`
-- next_start: Topic 05 独立再解答で不足した中間知識を固定EXAM_ALIGNMENTの範囲内で必要最小限補強
+- next_start: Topic 05 の補強sourceを既存の学習用成果物へ必要最小限同期
 
 ## Topic 05 進捗
 - [x] 系列SPEC確認
@@ -24,26 +24,26 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 完成教材だけでの公式過去問独立再解答を実施（2 / 6 PASS、NEEDS_REVISION）
-- [ ] 独立再解答で不足した中間知識の教材補強
+- [x] 独立再解答FAIL 4問の不足中間知識を補うrevision sourceを作成
+- [ ] revision sourceを学習用成果物へ同期
 - [ ] 再独立解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 05 `ベクトル` の完成後独立再解答を実施し、品質ゲートを判定した。
+Topic 05 `ベクトル` を1段階進め、完成後独立再解答で不足した中間知識だけを `topics/05_vectors/05_vectors_revision_supplement.md` に固定した。
 
-`topics/05_vectors/05_vectors_exam_reanswer.md`
+追加したのは次の4点のみ。
 
-- 固定EXAM_ALIGNMENT 6問を対象
-- 学習用完成教材だけで最後まで解けた問題: 2 / 6
-- PASS: R6下 理論 問4、R4下 理論 問4
-- FAIL: R8上 理論 問4、R7下 理論 問2、R7上 理論 問11、R4上 理論 問4
-- FAIL理由は、ベクトル操作ではなく、数値・全空欄を確定するための中間知識・式が学習用教材に不足しているため
-- 固定EXAM_ALIGNMENT変更: 0件
-- 仕様外論点・未確認新幹線実値の追加: 0件
+- R8上 理論 問4: 点磁極の磁界 `H=|m|/(4πμ0r²)` とN/S極の向き
+- R7下 理論 問2: クーロン力 `F=|Q1Q2|/(4πε0r²)` と同符号/異符号の向き
+- R7上 理論 問11: p形/n形のキャリア移動方向、ホール電界、`|VH|∝I`
+- R4上 理論 問4: 運動起電力 `e=Blv⊥=Blv sinθ`
+
+固定EXAM_ALIGNMENT 6問は変更していない。ベクトル解析、行列・固有値、テンソル、高度な場の理論、未指定交流回路論点、未確認新幹線実値の追加は0件。
 
 ## 判定
 
-Topic 05は `NEEDS_REVISION / IN_PROGRESS`。
+Topic 05は `IN_PROGRESS`、完成数は `4 / 12` のまま。
 
-完成数は `4 / 12` のまま。次は固定EXAM_ALIGNMENTを変えず、独立再解答で不足した中間知識だけを学習用教材へ必要最小限補強する。
+次は補強sourceを既存の解説本文・解説PDFへ同期し、必要箇所だけPowerPoint/練習側も同期する。同期完了前に再独立解答は行わない。
