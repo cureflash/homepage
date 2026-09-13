@@ -12,11 +12,11 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
-Topic 05 `ベクトル` は解説画像PowerPointまで完了。
+Topic 05 `ベクトル` は完成後独立再解答まで実施し、`2 / 6 PASS` のため `NEEDS_REVISION`。
 
 完成数: `4 / 12`
 
-current_status: `topic_05_powerpoint_complete`
+current_status: `topic_05_exam_reanswer_needs_revision`
 
 active_topic: `05 ベクトル`
 
@@ -50,55 +50,41 @@ active_topic: `05 ベクトル`
 
 ベクトル解析（grad / div / curl）、行列・固有値、テンソル、高度な場の理論、Topic 04で扱っていない交流回路論点は追加しない。
 
-## 解説本文・解説PDF
+## 完成済み成果物
 
-`topics/05_vectors/05_vectors_explanation.pdf`
+- `topics/05_vectors/05_vectors.md`
+- `topics/05_vectors/05_vectors_explanation.pdf`
+- `topics/05_vectors/05_vectors_practice.md`
+- `topics/05_vectors/05_vectors_practice.pdf`
+- `topics/05_vectors/05_vectors_images.pptx`
+- `topics/05_vectors/05_vectors_exam_reanswer.md`
 
-- A4縦3ページ
-- source本文の固定範囲、3段階例題、固定6過去問への対応を反映
-- 全3ページ200 dpi表示QA: PASS
-- 文字抽出QA: PASS
-- 仕様外論点・未確認新幹線実値の追加: 0件
+解説PDFはA4縦3ページ、練習PDFは全12問・全問五肢択一、PowerPointは16:9・4スライド。既存の表示QA・文字抽出QA・overflow検査はPASS済み。
 
-## 練習source・練習PDF
+## 完成後独立再解答
 
-`topics/05_vectors/05_vectors_practice.md`
-`topics/05_vectors/05_vectors_practice.pdf`
+`topics/05_vectors/05_vectors_exam_reanswer.md`
 
-- 全12問・全問五肢択一
-- 基礎3 / 標準7 / 複合2
-- 解答・完全解説付き
-- R8上問4: 同方向磁界の加算
-- R7下問2: 反対向き力の符号付き合成
-- R7上問11: `q(v×B)`、右手系、負電荷
-- R6下問4: xyz方向と外積
-- R4下問4: 等大2ベクトル・60°合成
-- R4上問4: `v⊥=v sinθ`
-- 計算独立確認: PASS
-- A4縦3ページ、200 dpi全ページ表示QA: PASS
-- 文字抽出QA: PASS
-- 仕様外論点・未確認新幹線実値の追加: 0件
+判定: `NEEDS_REVISION`
 
-## 今回完成した解説画像PowerPoint
+結果: `2 / 6 PASS`
 
-`topics/05_vectors/05_vectors_images.pptx`
+PASS:
+- R6下 理論 問4: 教材の座標軸固定と「同方向電流の平行導体は互いに引き合う」で (2) まで到達
+- R4下 理論 問4: 問題文に与えられた2導体間力の式と、教材の60°等大2ベクトル合成で `1.70×10^-4 N/m`、(3) まで到達
 
-- 16:9・4スライド
-- 固定EXAM_ALIGNMENT 6問の判断経路を可視化
-- スカラー/ベクトル、成分・大きさ、同一直線上の和差を整理
-- 60°合成、`v⊥=v sinθ`、外積・右手系・負電荷を図解
-- フェーザの位相角と空間ベクトルの方向角を区別
-- 全4スライド表示QA: PASS
-- はみ出し検査: PASS
-- 仕様外論点・未確認新幹線実値の追加: 0件
+FAIL:
+- R8上 理論 問4: 磁界の向きと同方向加算はできるが、点磁極が作る磁界の大きさを求める式が学習用教材にない
+- R7下 理論 問2: 反対向きクーロン力の差は判断できるが、点電荷間の力の大きさを求める式が学習用教材にない
+- R7上 理論 問11: `q(v×B)` と負電荷反転はあるが、p形/n形のキャリア移動方向と電流方向、ホール電界、ホール電圧と電流の比例関係が学習用教材に不足
+- R4上 理論 問4: `v⊥=v sinθ` は求められるが、運動起電力を `B`・導体長・垂直速度へ結ぶ式が学習用教材にない
 
-## 未作成
+公式解答との照合結果は順に `(3), (3), (4), (2), (3), (3)`。
 
-- 完成後独立再解答記録
-- 最終QA記録
+固定EXAM_ALIGNMENTは変更しない。仕様外論点・未確認実車値も追加しない。
 
 ## 次に行うこと
 
-Topic 05 `ベクトル` の完成教材だけで、固定EXAM_ALIGNMENT 6問を公式解答を先に見ずに独立再解答する。
+Topic 05 `ベクトル` の学習用教材を、独立再解答で露呈した不足だけ必要最小限補強する。
 
-教材外知識で補完せず、全問の根拠を教材内へ対応付けて品質ゲートを判定する。仕様外論点や未確認実車値を追加しない。
+対象はR8上問4、R7下問2、R7上問11、R4上問4を最後まで解くための中間知識。固定EXAM_ALIGNMENTと系列SPECの範囲は変えない。補強後に成果物を同期し、再独立解答を行う。
