@@ -60,14 +60,14 @@ JR東海「超電導リニアの原理」を確認し、Topic 24では次だけ�
 
 ## 24 成果物
 - source Markdown: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev.md` — EXAM_ALIGNMENT、解説本文、3段階例題まで完了
-- 解説PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf` — A4縦4ページ、全ページQA PASS
+- 解説PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf` — A4縦2ページ、全ページQA PASS
 - 練習PDF: 未作成
 - 解説画像PowerPoint: 未作成
 
 ## 24 解説PDF QA
-- A4縦4ページ
+- A4縦2ページ
 - §1〜§12、3段階例題、選定6過去問の教材内対応を収録
-- 全4ページをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし
+- 全2ページをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし
 - 系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道は追加していない
 - 未確認のL0系コイル寸法・磁束密度・電流値・結線値は追加していない
 

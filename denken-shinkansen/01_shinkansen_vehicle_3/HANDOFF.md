@@ -13,9 +13,9 @@ Topic 24を1段階進め、解説プリントPDFを完成した。
 - `STATUS.md`
 - `HANDOFF.md`
 
-完成済みの解説本文＋3段階例題を正本としてA4縦4ページに組版した。§1〜§12、磁界・電磁誘導・電磁力の再利用可能な解法手順、基礎・本試験標準・複合の3段階例題、選定6過去問との対応、公式まとめを収録した。
+完成済みの解説本文＋3段階例題を正本としてA4縦2ページに組版した。§1〜§12、磁界・電磁誘導・電磁力の再利用可能な解法手順、基礎・本試験標準・複合の3段階例題、選定6過去問との対応、公式まとめを収録した。
 
-全4ページをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし。系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道、未確認のL0系コイル寸法・磁束密度・電流値・結線値は追加していない。
+全2ページをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし。系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道、未確認のL0系コイル寸法・磁束密度・電流値・結線値は追加していない。
 
 L0系接続はJR東海「超電導リニアの原理」で確認した範囲に限定し、超電導磁石、浮上・案内コイル、誘導電流による浮上、中心へ戻す案内力、浮上高10 cmを使用した。
 
@@ -79,7 +79,7 @@ https://linear-chuo-shinkansen.jr-central.co.jp/about/
 - `current_status`: `topic_24_explanation_pdf_complete`
 - 完成数: 23/38
 - Topic 24: 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF完了。未完成
-- 解説PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf` — A4縦4ページ、全ページQA PASS
+- 解説PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf` — A4縦2ページ、全ページQA PASS
 - 次段階: 練習プリントPDF
 
 ## 次の正確な開始点
