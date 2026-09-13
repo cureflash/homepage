@@ -8,11 +8,11 @@ Topic 01 `25kV架線を一つの等価回路にする` は `completed`。
 
 Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は `completed`。
 
-Topic 03 `25kV架線の周囲にはどんな電界ができる？` は、制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。最終QAで検出した練習sourceの文字破損2箇所は修正し、練習PDFを再生成して全ページ表示QAまで完了した。解説sourceの状態欄・末尾品質判定の同期と最終QA再実施が残っているため、まだ `completed` ではない。
+Topic 03 `25kV架線の周囲にはどんな電界ができる？` は、制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。最終QAで検出した練習sourceの文字破損2箇所は修正し、練習PDFを再生成して全ページ表示QAまで完了した。今回、解説sourceの状態欄・末尾品質判定も現在地へ同期した。残件は最終QAの再実施のみで、まだ `completed` ではない。
 
 完成数: `2 / 21`
 
-current_status: `topic_03_practice_artifact_repaired`
+current_status: `topic_03_source_status_synced`
 
 active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 
@@ -66,24 +66,23 @@ EXAM_ALIGNMENT・解説本文 source:
 
 教材外知識による補完なし。固定範囲内の欠落なし。SPEC外論点の追加なし。
 
-## 今回の修正
+## 今回の更新
 
-最終QAで指摘された練習sourceの2箇所を修正した。
+`03_catenary_electric_field.md` の進捗記録不整合を修正した。
 
-- `問2 対称配置の合成電界`
-- `問7 無限長線電荷の電界`
+- 冒頭の状態欄を、解説PDF・練習PDF・PowerPoint・独立再解答まで完了済みの現在地へ同期
+- 独立再解答21/21 PASSを反映
+- 練習source修正・練習PDF再生成・全4ページ表示QA PASSを反映
+- 末尾品質判定を `topic_03_source_status_synced` へ更新
 
-修正版sourceから練習PDFを再生成し、全4ページの表示QAを実施してPASS。PDFテキスト抽出でも両見出しを確認し、文字破損は残っていない。
-
-過去問対応、問題数12、難易度配分、正答・完全解説は変更していない。新規論点・仕様追加なし。
+教材本文、過去問対応範囲、正答、例題、二次試験の非採用判断は変更していない。新規論点・仕様追加なし。
 
 ## 残件
 
-`03_catenary_electric_field.md` の状態欄と末尾品質判定が古く、現状と不一致のまま。
+最終QAの再実施のみ。
 
 ## 次に行うこと
 
-1. `03_catenary_electric_field.md` の状態欄を、解説PDF・練習PDF・PowerPoint・独立再解答まで完了済みの現在地へ同期する。
-2. 同source末尾の品質判定で、独立再解答21/21 PASSと現状を反映する。
-3. 最終QAを再実施する。
-4. 全件PASSした場合のみTopic 03を `completed` にし、完成数を `3 / 21` に更新する。
+1. GitHub正本の成果物・進捗記録を再照合して最終QAを再実施する。
+2. 一次6問・21小問の対応、二次試験の採否判断、表示QA、成果物相互整合を確認する。
+3. 全件PASSした場合のみTopic 03を `completed` にし、完成数を `3 / 21` に更新する。
