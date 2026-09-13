@@ -8,13 +8,13 @@ Topic 01 `25kV架線を一つの等価回路にする` は `completed`。
 
 Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は `completed`。
 
-Topic 03 `25kV架線の周囲にはどんな電界ができる？` は、制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。最終QAで検出した練習sourceの文字破損2箇所は修正し、練習PDFを再生成して全ページ表示QAまで完了した。今回、解説sourceの状態欄・末尾品質判定も現在地へ同期した。残件は最終QAの再実施のみで、まだ `completed` ではない。
+Topic 03 `25kV架線の周囲にはどんな電界ができる？` は `completed`。制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了した。前回最終QAで検出した練習source文字破損2箇所と解説sourceの進捗記録不整合は修正済みで、最終QA再実施は全件PASS。
 
-完成数: `2 / 21`
+完成数: `3 / 21`
 
-current_status: `topic_03_source_status_synced`
+current_status: `topic_03_completed`
 
-active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
+active_topic: `04 架線と車体は巨大なコンデンサなのか？`
 
 ## Topic 03 固定EXAM_ALIGNMENT
 
@@ -27,11 +27,11 @@ active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 - H23 問1 (1)〜(3): 円筒ガウス面、電位の積分、最大電界
 - H21 問1 (1)〜(5): クーロン力、電界合成、電界0条件
 
-二次試験も確認対象に含めたが、本Topic固定範囲だけで静電界解析を直接問う問題は採用していない。`08 理論・二種` は一次理論中心であり、数合わせで二次形式や絶縁設計、誘電体、静電容量、高電圧設備等を追加しない。
+二次試験も確認対象に含めたが、本Topic固定範囲だけで静電界解析を直接問う問題は採用していない。`08 理論・二種` は一次理論中心であり、数合わせで二次形式や絶縁設計、誘電体、静電容量、高電圧設備等を追加していない。
 
-R7の電気影像法・静電容量、R6の誘電体入りコンデンサ、R2の影像電荷等もSPEC外またはTopic 04のため除外した。この判断は変更しない。
+R7の電気影像法・静電容量、R6の誘電体入りコンデンサ、R2の影像電荷等もSPEC外またはTopic 04のため除外した。この判断は変更していない。
 
-## 成果物
+## Topic 03 成果物
 
 EXAM_ALIGNMENT・解説本文 source:
 `topics/03_catenary_electric_field/03_catenary_electric_field.md`
@@ -54,7 +54,7 @@ EXAM_ALIGNMENT・解説本文 source:
 最終QA記録:
 `topics/03_catenary_electric_field/03_catenary_electric_field_final_qa.md`
 
-## 完成後独立再解答
+## Topic 03 完成後独立再解答
 
 - R8 問1 (1)〜(3): 3/3 PASS
 - R5 問1 (1): 1/1 PASS
@@ -68,21 +68,24 @@ EXAM_ALIGNMENT・解説本文 source:
 
 ## 今回の更新
 
-`03_catenary_electric_field.md` の進捗記録不整合を修正した。
+Topic 03の最終QAを再実施し、`PASS / completed` とした。
 
-- 冒頭の状態欄を、解説PDF・練習PDF・PowerPoint・独立再解答まで完了済みの現在地へ同期
-- 独立再解答21/21 PASSを反映
-- 練習source修正・練習PDF再生成・全4ページ表示QA PASSを反映
-- 末尾品質判定を `topic_03_source_status_synced` へ更新
+- 必須成果物をGitHub正本で再確認
+- 過去問独立再解答21/21 PASSを再確認
+- 二次試験の確認・非採用判断を維持
+- 練習source文字破損修正済み、練習PDF再生成・全4ページ表示QA PASSを再確認
+- 解説PDF表示QA、PowerPoint表示QA・overflow検査PASSを確認
+- 解説sourceの状態欄・末尾品質判定を完成状態へ同期
+- 完成数を `3 / 21` に更新
 
 教材本文、過去問対応範囲、正答、例題、二次試験の非採用判断は変更していない。新規論点・仕様追加なし。
 
-## 残件
-
-最終QAの再実施のみ。
-
 ## 次に行うこと
 
-1. GitHub正本の成果物・進捗記録を再照合して最終QAを再実施する。
-2. 一次6問・21小問の対応、二次試験の採否判断、表示QA、成果物相互整合を確認する。
-3. 全件PASSした場合のみTopic 03を `completed` にし、完成数を `3 / 21` に更新する。
+Topic 04 `架線と車体は巨大なコンデンサなのか？` の制作前EXAM_ALIGNMENTから開始する。
+
+1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`を再確認する。
+2. 二種一次・二次の公式過去問を直近年度から確認する。
+3. Topic 04固定範囲の静電容量・平行板コンデンサ・円筒導体の基本・合成容量・誘電率・誘電体・分極・静電エネルギーだけで直接対応する問題を選定する。
+4. 二次は直接対応問題が確認できる場合のみ採用し、数合わせで仕様外論点を追加しない。
+5. 制作前独立検証を通過してから本文制作へ進む。
