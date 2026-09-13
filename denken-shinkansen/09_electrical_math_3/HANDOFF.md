@@ -1,6 +1,6 @@
 # HANDOFF - 電験三種「電気数学」
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 現在地
 
@@ -10,13 +10,35 @@ Topic 02 `三角比・三角関数` は `completed`。
 
 Topic 03 `複素数` は `completed`。
 
-完成数: `3 / 12`
+Topic 04 `極形式・フェーザ` は `completed`。
 
-current_status: `topic_04_source_progress_synced`
+完成数: `4 / 12`
 
-active_topic: `04 極形式・フェーザ`
+current_status: `topic_04_completed`
 
-## Topic 04 現在の成果物
+active_topic: `05 ベクトル`
+
+## Topic 04 最終QA結果
+
+判定: `PASS / completed`
+
+前回 `NEEDS_REVISION` の原因だったsource Markdownの進捗記録不整合を修正後、最終QAを再実施した。
+
+確認結果:
+- 必須成果物: PASS
+- 三種公式過去問5問・6小問のEXAM_ALIGNMENT: PASS
+- 複数系統の参考教材確認: PASS
+- 制作前独立検証: PASS
+- 完成後独立再解答: 5問・6小問すべて公式解答と一致
+- 解説PDF・練習PDF・PowerPoint: 既実施表示QA対象と現行blobが一致
+- 固定範囲外の新規説明追加: 0件
+- 未確認実車値の追加: 0件
+- source進捗記録整合: PASS
+
+最終QA記録:
+`topics/04_polar_form_phasor/04_polar_form_phasor_final_qa.md`
+
+## Topic 04 成果物
 
 source Markdown:
 `topics/04_polar_form_phasor/04_polar_form_phasor.md`
@@ -33,16 +55,7 @@ source Markdown:
 完成後独立再解答記録:
 `topics/04_polar_form_phasor/04_polar_form_phasor_exam_reanswer.md`
 
-最終QA記録:
-`topics/04_polar_form_phasor/04_polar_form_phasor_final_qa.md`
-
-制作前EXAM_ALIGNMENT、公式解答照合付き独立検証、解説本文、3段階例題、解説PDF＋全ページ表示QA、練習PDF＋全ページ表示QA、解説画像PowerPoint＋全スライド表示QA、完成後独立再解答まで完了。
-
-前回最終QAでは教材内容・過去問対応はPASSしたが、source Markdownの進捗記録が古いまま残っていたため `NEEDS_REVISION` とした。本更新でその進捗記録不整合だけを修正済み。
-
 ## Topic 04 完成後独立再解答
-
-選定5問・6小問を、完成教材で固定した極形式・フェーザの操作と、問題文または既習事項として固定済みの回路・機械関係だけを使って再解答した。
 
 - R6上 理論 問9: (2) = 公式 (2) PASS
 - R6上 理論 問15: (a)(4), (b)(3) = 公式一致 PASS
@@ -50,25 +63,7 @@ source Markdown:
 - R5上 理論 問9: (3) = 公式 (3) PASS
 - R3 理論 問8: (5) = 公式 (5) PASS
 
-5問・6小問すべて一致。固定範囲外の新規説明追加は0件。
-
-## Topic 04 PowerPoint QA
-
-- 16:9、全3スライド: PASS
-- 直交形式↔極形式、象限確認: PASS
-- 極形式の乗除算: PASS
-- `j` の+90°回転: PASS
-- 実効値フェーザ、最大値との区別: PASS
-- `sin` / `cos` 統一、進み・遅れ: PASS
-- `V=ZI`, `Z=V/I`、`R+jX`、`cosφ=R/|Z|`: PASS
-- フェーザ加算: PASS
-- 同一角周波数の成立条件、異周波数成分の分離: PASS
-- `25 kV∠0°` は数学例に限定: PASS
-- 選定5問・6小問の解法接続を維持: PASS
-- 全3スライド表示QA: クリッピング、重なり、文字化けなし
-- キャンバス外はみ出し検査: PASS
-- ZIP整合性: PASS
-- 固定範囲外の追加なし、未確認実車値の追加なし: PASS
+5問・6小問すべて一致。
 
 ## Topic 04 固定範囲
 
@@ -86,25 +81,10 @@ source Markdown:
 - 同一角周波数の正弦波に対するフェーザ法の成立条件
 - `交流25 kV` を大きさと位相を持つフェーザとして表す数学例
 
-空間ベクトルはTopic 05へ送る。RLC共振、三相結線、力率改善、複素電力、対称座標法等をTopic 04へ新規追加しない。R5下機械問5の同期機、R6上理論問9の高調波は、フェーザ数学の要求事項確認に必要な適用例としてのみ扱う。未確認の新幹線実設備値を追加しない。
-
-## 今回修正した不整合
-
-`topics/04_polar_form_phasor/04_polar_form_phasor.md` の進捗記録を現在地へ同期した。
-
-- 冒頭 `## 状態`: 解説PDF・練習PDF・PowerPoint・完成後独立再解答・最終QA実施済みへ更新
-- 末尾 `# 次工程`: 最終QA再実施へ更新
-- 教材本文、EXAM_ALIGNMENT、数式、問題、仕様範囲は変更なし
-
-## 参考教材確認
-
-2026-09-13確認:
-- e-sysnet「単相交流の直列回路」: フェーザ、L/Cの±90°、`Z=|Z|∠θ`、インピーダンス三角形、RL/RCのフェーザ図
-- 電験三種まとめました「インダクタンスと静電容量の位相」: 位相、進み・遅れ、基準の取り方
-- 電験三種まとめました「R6年度上期 理論 問15」: `sin` / `cos` の位相読み替えからL/C判定までの本試験解法粒度
+空間ベクトルはTopic 05へ送る。RLC共振、三相結線、力率改善、複素電力、対称座標法等をTopic 04へ新規追加しない。未確認の新幹線実設備値を追加しない。
 
 ## 次に行うこと
 
-Topic 04の最終QAを再実施する。
+Topic 05 `ベクトル` の制作前EXAM_ALIGNMENTを行う。
 
-必須成果物、EXAM_ALIGNMENT、完成後独立再解答、固定範囲、source Markdownの進捗記録整合を再確認し、全件PASSなら Topic 04を `completed` にする。仕様・教材本文は追加変更しない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の範囲内で、直近年度優先の公式過去問を原則5問以上調査し、要求事項を固定してから本文制作へ進む。Topic 04へ追加変更は行わない。
