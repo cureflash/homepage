@@ -6,10 +6,10 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は2/16。Topic 01・02は完成済み。active topicは03 `JR東日本はなぜ火力発電所まで持っている？`。
 
 ## 今回進捗
-Topic 03を1段階進め、解説PDFを完成した。A4縦6ページ、200 dpiで全6ページをレンダリングして表示QAを行い、文字欠け・クリップ・重なり・壊れた数式記号なしでPASS。制作前 `EXAM_ALIGNMENT` の6問・7小問で要求された固定範囲を収録し、固定範囲外の詳細煙風道設備、再熱/再生サイクル、燃焼化学、保護装置は追加していない。
+Topic 03を1段階進め、練習PDFを完成した。全12問（基礎3 / 本試験標準7 / 複合・応用2）をすべて五肢択一とし、式・理由・単位・中間計算・検算を含む完全解説を付与した。A4縦6ページを200 dpiで全ページ表示QAし、文字欠け・クリップ・重なり・壊れた数式記号なしでPASS。制作前 `EXAM_ALIGNMENT` の6問・7小問を全件マッピングし、固定範囲外の詳細煙風道設備、再熱/再生サイクル、燃焼化学、保護装置は追加していない。
 
 更新成果物:
-- `topics/03_thermal_power/03_thermal_power_explanation.pdf`
+- `topics/03_thermal_power/03_thermal_power_practice.pdf`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -64,7 +64,8 @@ Topic 03を1段階進め、解説PDFを完成した。A4縦6ページ、200 dpi�
 - 制作前独立再解答 `7/7 PASS`
 - 解説本文・3段階例題を作成済み
 - 解説PDF: completed / display QA PASS
-- 練習PDF・PowerPoint・完成後独立再解答は未着手
+- 練習PDF: completed / display QA PASS
+- PowerPoint・完成後独立再解答は未着手
 
 ## Topic 03 解説本文の収録内容
 - 汽力発電のエネルギー変換と固定範囲機器の入出力関係
@@ -85,6 +86,17 @@ Topic 03を1段階進め、解説PDFを完成した。A4縦6ページ、200 dpi�
 - A4縦6ページ
 - 200 dpiで全6ページ表示QA PASS
 - 制作前6問・7小問の要求論点、3段階例題、過去問対応表、公式まとめを収録
+- 固定範囲外論点の追加0件
+- 未確認実設備値の真値化0件
+
+## Topic 03 練習PDF
+- `topics/03_thermal_power/03_thermal_power_practice.pdf`
+- A4縦6ページ
+- 全12問: 基礎3問 / 本試験標準7問 / 複合・応用2問
+- 全問五肢択一、全問に式・理由・単位・中間計算・検算を含む完全解説を付与
+- 復水器・真空度、熱効率・熱消費率、蒸気タービン出力と使用蒸気量、発熱量と燃料量、所内率と発電端/送電端、コンバインドサイクル比較を収録
+- 制作前6問・7小問の要求論点を全件マッピング
+- 200 dpiで全6ページ表示QA PASS
 - 固定範囲外論点の追加0件
 - 未確認実設備値の真値化0件
 
@@ -112,10 +124,10 @@ Topic 02 `上越新幹線を水の力で走らせる` は、source Markdown・�
 - `topics/02_hydropower/02_hydropower_final_qa.md`
 
 ## 現在状態
-- `current_status`: `topic_03_explanation_pdf_complete`
+- `current_status`: `topic_03_practice_pdf_complete`
 - 完成数: `2/16`
 - last completed: Topic 02
 - active: Topic 03
 
 ## 次の正確な開始点
-Topic 03「JR東日本はなぜ火力発電所まで持っている？」の解説本文・解説PDFを正本として練習PDFを作成し、全ページ表示QAを行う。制作前 `EXAM_ALIGNMENT` の6問・7小問に対応する固定範囲を維持し、`SPEC.md` から仕様を追加しない。
+Topic 03「JR東日本はなぜ火力発電所まで持っている？」の解説本文・解説PDF・練習PDFを正本として解説画像PowerPointを作成する。制作前 `EXAM_ALIGNMENT` の6問・7小問に対応する固定範囲を維持し、`SPEC.md` から仕様を追加しない。
