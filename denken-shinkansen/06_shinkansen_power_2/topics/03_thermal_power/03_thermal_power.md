@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_03_source_status_synced`
+`completed`
 
-最終QAで指摘された進捗記録不整合を修正し、状態と次段階のみ現在地へ同期した。正式選定5問の完成後独立再解答は `5 / 5 PASS`。教材本文・EXAM_ALIGNMENT・正式選定5問・固定範囲は変更していない。次段階は最終QA再実施。
+最終QA再実施で、必須成果物、一次3問＋二次2問のEXAM_ALIGNMENT、完成後独立再解答 `5 / 5 PASS`、表示QA、固定範囲境界、進捗記録整合を全件PASSと確認した。教材本文・EXAM_ALIGNMENT・正式選定5問・固定範囲は変更していない。次段階はTopic 04の制作前EXAM_ALIGNMENT。
 
 ## SPEC固定範囲
 
@@ -591,4 +591,4 @@ R1二次問1型なら
 
 ## 次段階
 
-`topic_03_final_qa_rerun`
+`topic_04_exam_alignment`
