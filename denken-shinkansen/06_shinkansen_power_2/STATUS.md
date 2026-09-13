@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `06_shinkansen_power_2`
 - exam_aligned_completed_topics: 1 / 22
-- current_status: `topic_02_powerpoint_complete`
+- current_status: `topic_02_independent_reanswer_complete`
 - last_completed_topic: `01 新幹線を電力系統から見てみる`
 - active_topic: `02 信濃川の水で新幹線を何本走らせられる？`
-- next_start: Topic 02 の完成後独立再解答を、正式選定した一次4問＋二次2問に対して教材だけを使って実施する
+- next_start: Topic 02 の最終QAを実施し、必須成果物・EXAM_ALIGNMENT・成果物間同期・既存レンダリングQA・完成後独立再解答を総合確認する
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -24,7 +24,7 @@
 - [x] 解説PDF
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答（6/6 PASS、教材外知識補完0件）
 - [ ] 最終QA
 
 ## Topic 02 解説画像PowerPoint
@@ -118,6 +118,22 @@ source Markdown:
 - 列車1本の所要電力は未確認のため仮定値を置かず、列車本数・必要流量は記号式で接続
 - Topic 02固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
 
+## Topic 02 完成後独立再解答
+QA記録:
+- `topics/02_hydropower/02_hydropower_independent_reanswer.md`
+
+判定:
+- `6 / 6 PASS`
+- 教材外知識補完 `0件`
+- R8一次 電力 問5: `[ヌ, ロ, ル, カ, ハ]` — PASS
+- R7一次 電力 問1: `[カ, ホ, ヲ, ヌ, ル]` — PASS
+- R6一次 電力 問3: `[チ, ヨ, ホ, リ, ロ]` — PASS
+- R5一次 電力 問1: `[ヘ, ル, ヨ, ホ, ヌ]` — PASS
+- R5二次 電力・管理 問1: 水撃の原因・伝搬、サージタンク、制圧機の設置場所と作用を教材だけで再構成 — PASS
+- R4二次 電力・管理 問1: `Qp=28.333 m^3/s`, `Qo=17.222 m^3/s`, `Pp≈14200 kW`, `Po≈8100 kW` — PASS
+- 解答確定後に電気技術者試験センター公式解答と照合し全件一致
+- 固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
+
 ## Topic 02 正式な品質ゲート対象
 - R8 一次 電力 問5
 - R7 一次 電力 問1
@@ -182,4 +198,4 @@ source Markdown:
 以上によりTopic 01を `completed` とした。完成数は `1 / 22`。
 
 ## 次
-Topic 02 `信濃川の水で新幹線を何本走らせられる？` の完成後独立再解答を実施する。正式選定した一次4問＋二次2問を、現行source Markdown・解説PDF・練習PDF・PowerPointだけを教材として再解答し、教材外知識の補完が必要ならFAILとして不足箇所のみを記録する。
+Topic 02 `信濃川の水で新幹線を何本走らせられる？` の最終QAを実施する。必須成果物の存在、一次4問＋二次2問のEXAM_ALIGNMENT、source/PDF/PPTの同期、既存レンダリングQA、完成後独立再解答 `6 / 6 PASS` を総合確認し、PASSした場合のみTopic 02を `completed` とする。
