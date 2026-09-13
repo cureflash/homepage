@@ -8,11 +8,11 @@ Topic 01 `25kV架線を一つの等価回路にする` は `completed`。
 
 Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は `completed`。
 
-Topic 03 `25kV架線の周囲にはどんな電界ができる？` は、制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。最終QAを実施したが、既存sourceの文字破損と進捗記録不整合を検出したため `completed` にはしていない。
+Topic 03 `25kV架線の周囲にはどんな電界ができる？` は、制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。最終QAで検出した練習sourceの文字破損2箇所は修正し、練習PDFを再生成して全ページ表示QAまで完了した。解説sourceの状態欄・末尾品質判定の同期と最終QA再実施が残っているため、まだ `completed` ではない。
 
 完成数: `2 / 21`
 
-current_status: `topic_03_final_qa_needs_revision`
+current_status: `topic_03_practice_artifact_repaired`
 
 active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 
@@ -56,8 +56,6 @@ EXAM_ALIGNMENT・解説本文 source:
 
 ## 完成後独立再解答
 
-完成済み教材に収録された式・解法手順だけを使い、保存済み正答との照合は解答導出後に実施した。
-
 - R8 問1 (1)〜(3): 3/3 PASS
 - R5 問1 (1): 1/1 PASS
 - R4 問1 (1)〜(5): 5/5 PASS
@@ -68,30 +66,24 @@ EXAM_ALIGNMENT・解説本文 source:
 
 教材外知識による補完なし。固定範囲内の欠落なし。SPEC外論点の追加なし。
 
-## 最終QA結果
+## 今回の修正
 
-PASS:
-- 必須成果物の存在
-- 一次6問・21小問のEXAM_ALIGNMENT
-- 独立再解答21/21
-- 二次試験の確認・非採用判断
-- SPEC外論点を教材内容として追加していないこと
+最終QAで指摘された練習sourceの2箇所を修正した。
 
-NEEDS_REVISION:
-1. `03_catenary_electric_field_practice.md` の問題見出しに文字破損2箇所
-   - `問2 対称�q置の合成電界`
-   - `問7 無限��線電荷の電界`
-2. `03_catenary_electric_field.md` の状態欄・末尾品質判定が古く、現在の成果物・独立再解答済み状態と不一致
-3. 練習source修正後、練習PDFのsource同期確認と全ページ表示QAを再実施する必要がある
+- `問2 対称配置の合成電界`
+- `問7 無限長線電荷の電界`
 
-判定: `topic_03_final_qa_needs_revision`
+修正版sourceから練習PDFを再生成し、全4ページの表示QAを実施してPASS。PDFテキスト抽出でも両見出しを確認し、文字破損は残っていない。
+
+過去問対応、問題数12、難易度配分、正答・完全解説は変更していない。新規論点・仕様追加なし。
+
+## 残件
+
+`03_catenary_electric_field.md` の状態欄と末尾品質判定が古く、現状と不一致のまま。
 
 ## 次に行うこと
 
-Topic 03の既存成果物だけを修正する。新規論点は追加しない。
-
-1. `03_catenary_electric_field_practice.md` の2箇所を「対称配置の合成電界」「無限長線電荷の電界」へ修正する。
-2. 練習PDFを修正版sourceへ同期し、全ページ表示QAを再実施する。
-3. `03_catenary_electric_field.md` の状態欄と末尾品質判定を現在地へ同期する。
-4. 最終QAを再実施する。
-5. 全件PASSした場合のみTopic 03を `completed` にし、完成数を `3 / 21` に更新する。
+1. `03_catenary_electric_field.md` の状態欄を、解説PDF・練習PDF・PowerPoint・独立再解答まで完了済みの現在地へ同期する。
+2. 同source末尾の品質判定で、独立再解答21/21 PASSと現状を反映する。
+3. 最終QAを再実施する。
+4. 全件PASSした場合のみTopic 03を `completed` にし、完成数を `3 / 21` に更新する。
