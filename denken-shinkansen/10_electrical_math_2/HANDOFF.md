@@ -10,11 +10,11 @@ Topic 02 `ベクトルと座標変換` は `completed`。
 
 Topic 03 `偏微分・全微分` は `completed`。
 
-Topic 04 `微分による極値・最適条件` は最終QAまで実施したが、source Markdownの進捗記録不整合により `NEEDS_REVISION`。
+Topic 04 `微分による極値・最適条件` は、前回最終QAで検出したsource Markdownの進捗記録不整合を修正済み。最終QA再判定待ち。
 
 完成数: `3 / 20`
 
-current_status: `topic_04_final_qa_needs_revision`
+current_status: `topic_04_source_progress_synced`
 
 active_topic: `04 微分による極値・最適条件`
 
@@ -63,21 +63,15 @@ PowerPoint QA:
 - 最大電力条件
 - 最適動作点
 
-## 最終QA結果
+## 前回最終QAと修正内容
 
-教材内容・過去問対応・成果物実在はPASS条件を満たしている。
+前回最終QAでは、教材内容・過去問対応・成果物実在はPASS条件を満たしていたが、source Markdown冒頭の状態記録が旧進捗のままだったため `NEEDS_REVISION` とした。
 
-- 必須成果物実在: PASS
-- EXAM_ALIGNMENT 6問・18対象項目: PASS
-- 二次試験対応: PASS
-- 完成後独立再解答: 18/18 PASS
-- 教材外知識補完: 0件
-- PowerPoint表示QA: PASS
-- SPEC外内容の非混入: PASS
+今回、`04_extrema_optimal_conditions.md` を現在地へ同期した。
 
-ただし、`04_extrema_optimal_conditions.md` 冒頭の状態が現在も「解説本文＋3段階例題まで完了。PDF・練習PDF・PowerPointは未着手。」となっており、GitHub正本に実在する成果物と矛盾している。
-
-このため最終判定は `NEEDS_REVISION`。Topic 04を `completed` にはしていない。
+- 冒頭の状態: 解説PDF・練習PDF・PowerPoint・PowerPoint QA・完成後独立再解答まで完了へ修正
+- 末尾の次工程: 最終QA再判定へ修正
+- EXAM_ALIGNMENT、本文、数式、例題、固定範囲は変更していない
 
 ## 実装上の境界
 
@@ -88,8 +82,8 @@ PowerPoint QA:
 
 ## 次に行うこと
 
-Topic 04 source Markdownの進捗記録不整合を修正する。
+Topic 04の最終QAを再判定する。
 
-1. `04_extrema_optimal_conditions.md` 冒頭の状態を、解説PDF・練習PDF・PowerPoint・完成後独立再解答まで完了した現在地へ同期する。
-2. EXAM_ALIGNMENT、本文、数式、練習内容には変更を加えない。
-3. 修正後に最終QAを再判定し、全品質ゲートPASSの場合のみTopic 04を `completed`、完成数を `4 / 20` とする。
+1. source Markdownの状態記録とGitHub正本の実成果物が一致していることを確認する。
+2. 必須成果物、固定EXAM_ALIGNMENT 6問・18対象項目、完成後独立再解答18/18、表示QA、SPEC境界を再確認する。
+3. 全品質ゲートPASSの場合のみTopic 04を `completed`、完成数を `4 / 20` とする。
