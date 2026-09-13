@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 2 / 21
-- current_status: `topic_03_powerpoint_complete`
+- current_status: `topic_03_independent_resolve_complete`
 - last_completed_topic: `02 架線は長くなるとなぜ電圧が落ちる？`
 - active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
-- next_start: Topic 03の完成済み教材だけを使い、EXAM_ALIGNMENTで固定した一次理論6問・21小問を保存済み正答を見ずに独立再解答する。教材外知識やSPEC外論点で補完しない
+- next_start: Topic 03の最終QAを行う。既存成果物の存在・相互整合、EXAM_ALIGNMENT記録、PDF/PPT表示QA記録、独立再解答21/21 PASS、SPEC外論点が混入していないことを確認し、全件PASSした場合のみ `completed` とする
 
 ## Topic 03 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -24,28 +24,25 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの完成後独立再解答
+- [x] 公式過去問の教材のみでの完成後独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 03の解説画像PowerPoint `topics/03_catenary_electric_field/03_catenary_electric_field_images.pptx` を作成した。
+Topic 03の完成後独立再解答を実施し、記録を `topics/03_catenary_electric_field/03_catenary_electric_field_independent_resolve.md` に保存した。
 
-PowerPoint収録内容:
-- 16:9、全5スライド
-- 電荷分布・対称性から解法を選ぶ導入
-- 点電荷の電界、ベクトル合成、`F=qE`
-- 電束密度 `D=εE`、ガウスの法則、包有電荷 `Q_enc`
-- 一様帯電球・球殻の領域別電界
-- 無限長線電荷・円筒ガウス面、`E=λ/(2πεr)`
-- 架線を線電荷とみなす教育用簡略モデル
-- 電位差 `V_A-V_B=-∫E·dl`、`E=-dV/dr`、線電荷の有限基準半径
-- 一次理論6問・21小問へ接続する解法フローと過去問マッピング
+固定済みの一次「理論」6問・21小問を、完成済み教材に収録された式・解法手順だけで解き直し、解答導出後に公式解答と照合した。
 
-全5スライドをレンダリングして目視確認し、文字切れ・重なり・欠落・破損グリフがないことを確認した。`slides_test.py` のoverflow検査もPASS。
+- R8 問1 (1)〜(3): 3/3 PASS
+- R5 問1 (1): 1/1 PASS
+- R4 問1 (1)〜(5): 5/5 PASS
+- H30 問1 (1)〜(4): 4/4 PASS
+- H23 問1 (1)〜(3): 3/3 PASS
+- H21 問1 (1)〜(5): 5/5 PASS
+- 合計: 21/21 PASS
 
-既存EXAM_ALIGNMENTの範囲を維持し、影像法、静電容量、誘電体、静電エネルギー、絶縁設計等は追加していない。二次試験は直接対応問題がないという既存判断を変更していない。実在架線の未確認値は使用していない。
+教材外知識による補完、固定範囲内の欠落、SPEC外論点の追加はいずれもなし。二次試験についても既存EXAM_ALIGNMENTの「Topic 03固定範囲へ直接対応する問題なし」という判断を変更していない。
 
 ## 判定
 
-Topic 03は `topic_03_powerpoint_complete`。まだ `completed` ではない。完成数は `2 / 21` のまま。次工程は公式過去問の教材のみでの完成後独立再解答。
+Topic 03は `topic_03_independent_resolve_complete`。まだ `completed` ではない。完成数は `2 / 21` のまま。次工程は最終QA。
