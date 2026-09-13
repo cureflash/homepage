@@ -7,8 +7,8 @@
 - exam_aligned_completed_topics: `2 / 22`
 - last_completed_topic: `02 信濃川の水で新幹線を何本走らせられる？`
 - active_topic: `03 川崎発電所は新幹線の負荷変動に追従できる？`
-- current_status: `topic_03_practice_pdf_complete`
-- next_start: Topic 03 の解説画像PowerPointを作成し、本文8節・3段階例題・正式選定5問の要求事項を固定範囲内で可視化する
+- current_status: `topic_03_powerpoint_complete`
+- next_start: Topic 03 の完成後独立再解答を実施し、正式選定5問を完成教材のみで再解答する
 
 ## Topic 03 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -25,7 +25,7 @@
 - [x] 練習問題独立QA `15 / 15 PASS`
 - [x] 解説PDF
 - [x] 練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後独立再解答
 - [ ] 最終QA PASS
 
@@ -70,6 +70,20 @@
 - 未確認実設備値の追加 `0件`
 - 固定範囲外知識の追加 `0件`
 
+PowerPoint段階:
+- `topics/03_thermal_power/03_thermal_power_images.pptx`
+- 16:9・4スライド
+- 本文8節・3段階例題・正式選定5問の要求事項を、固定範囲内で図式化
+- コンバインドサイクル構成、発電端/送電端熱収支、蒸気タービン運用と重要補機、大気温度影響と負荷追従、川崎発電所実値と仮定例題を収録
+- 川崎発電所の実値は `809 MW`、発電機4台、都市ガス・天然ガス、2024年度発電効率 `43.1%` のみ使用
+- 夏季 `720 MW`、所内率 `4.0%`、負荷 `670+35 MW` は教材本文どおり仮定値として明示
+- 全4スライドをレンダリングし、文字切れ・重なり・可読性を確認してPASS
+- slide overflow検査 PASS
+- PPTX ZIP整合性 PASS
+- 教材外知識補完 `0件`
+- 未確認実設備値の追加 `0件`
+- 固定範囲外知識の追加 `0件`
+
 記録:
 - `topics/03_thermal_power/03_thermal_power.md`
 - `topics/03_thermal_power/03_thermal_power_preproduction_verification.md`
@@ -77,6 +91,8 @@
 - `topics/03_thermal_power/03_thermal_power_practice_qa.md`
 - `topics/03_thermal_power/03_thermal_power_explanation.pdf`
 - `topics/03_thermal_power/03_thermal_power_practice.pdf`
+- `topics/03_thermal_power/03_thermal_power_images.pptx`
+- `topics/03_thermal_power/03_thermal_power_powerpoint_qa.md`
 
 ## Topic 02 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -131,4 +147,4 @@
 `completed`。最終QA PASS、完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0件`。
 
 ## 次
-Topic 03 の解説画像PowerPointを作成する。本文8節・3段階例題・正式選定5問の要求事項を固定範囲内で可視化し、未確認実設備値を追加しない。
+Topic 03 の完成後独立再解答を実施する。正式選定5問を完成教材のみで解き直し、教材外知識で補完しない。
