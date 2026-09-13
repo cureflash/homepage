@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `05 300系の誘導電動機を等価回路で解く`
 
-current status: `topic_05_independent_reanswer_complete`
+current status: `topic_05_final_qa_needs_revision`
 
 ## Topic 05 固定範囲
 
@@ -121,6 +121,21 @@ source Markdown:
 - 教材外知識による補完: 0件
 - 固定範囲外追加: 0件
 
+## 最終QA結果
+
+記録:
+`topics/05_300series_induction_motor_equivalent_circuit/05_300series_induction_motor_equivalent_circuit_final_qa.md`
+
+判定: `NEEDS_REVISION`
+
+教材内容・成果物・EXAM_ALIGNMENT・独立再解答はすべてPASSしたが、source Markdownの進捗記録だけが現在地と不整合だった。
+
+残存する旧記録:
+- 冒頭状態: `PDF・練習PDF・PowerPoint・完成後独立再解答は未実施`
+- 末尾次工程: 解説PDF作成を指示
+
+GitHub正本には解説PDF、練習PDF、PowerPoint、独立再解答記録がすべて実在するため、この2箇所だけを現在地へ同期する必要がある。
+
 ## 境界
 
 次は追加しない。
@@ -133,4 +148,6 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 05の最終QAを実施する。固定EXAM_ALIGNMENT 5問・17小問、必須成果物の実在、表示QA、独立再解答 `17 / 17 PASS`、仕様境界、進捗記録の整合を確認し、全件PASSの場合だけ `completed` とする。
+Topic 05 source Markdownの進捗記録を現在地へ同期する。
+
+変更対象は状態欄と次工程だけ。教材本文、固定EXAM_ALIGNMENT 5問・17小問、例題、成果物、独立再解答結果、仕様境界は変更しない。同期後に最終QAを再実施する。
