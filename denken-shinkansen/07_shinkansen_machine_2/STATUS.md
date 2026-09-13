@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 4 / 22
-- current_status: `topic_05_explanation_pdf_complete`
+- current_status: `topic_05_practice_pdf_complete`
 - last_completed_topic: `04 200系のサイリスタ制御を計算する`
 - active_topic: `05 300系の誘導電動機を等価回路で解く`
-- next_start: Topic 05の固定EXAM_ALIGNMENT 5問・17小問と解説内容を維持して、練習PDF（解答・完全解説付き）を作成し表示QAを行う
+- next_start: Topic 05の固定EXAM_ALIGNMENT 5問・17小問と解説・練習内容を維持して、解説画像PowerPointを作成し表示QAを行う
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -82,25 +82,28 @@
 - [x] ゲート対象17小問の公式解答照合を伴う要求事項の独立検証: 17 / 17 PASS
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習PDF（解答・完全解説付き）
+- [x] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 05「300系の誘導電動機を等価回路で解く」の解説PDFを作成し、GitHub正本へ反映した。
+Topic 05「300系の誘導電動機を等価回路で解く」の練習PDFを作成し、GitHub正本へ反映した。
 
 固定条件:
-- 解説PDF: A4縦4ページ
-- 全4ページ表示QA: PASS
+- 練習PDF: A4縦5ページ
+- 問題数: 15問
+- 一次試験型: 10問、全問五肢択一
+- 二次試験型: 5問、途中式・前提・単位を含む記述式
+- 全15問に解答・完全解説を収録
+- 全5ページ表示QA: PASS
 - 文字抽出QA: PASS
 - EXAM_ALIGNMENT: 一次2問＋二次記述3問、計5問を維持
 - ゲート対象: 17小問を維持
-- 過去問逆算の教材必須説明12項目: 維持
-- 3段階例題: 基礎／本試験標準／複合・ひっかけを維持
 - Topic 06の最大トルク・比例推移等の追加: 0件
 - R08一次問2の等価回路定数測定法の追加: 0件
+- R04二次問2(6)の入力力率の追加: 0件
 - 未確認300系実車値の追加: 0件
 
 ## 判定
-Topic 05は `topic_05_explanation_pdf_complete`。完成数は `4 / 22` のまま。次工程は練習PDF（解答・完全解説付き）＋表示QA。
+Topic 05は `topic_05_practice_pdf_complete`。完成数は `4 / 22` のまま。次工程は解説画像PowerPoint＋表示QA。
