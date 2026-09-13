@@ -3,37 +3,37 @@
 updated: 2026-09-14
 series: `06_shinkansen_power_2`
 active_topic: `03_thermal_power`
-current_status: `topic_03_post_revision_independent_reanswer_complete`
+current_status: `topic_03_final_qa_needs_revision`
 
 ## 今回完了
 
-密封油ポンプ補強後の正式選定5問について、現行の完成教材だけで完成後独立再解答を再実施した。
+Topic 03 の最終QAを実施した。
 
-結果: `5 / 5 PASS`
+判定: `NEEDS_REVISION / IN_PROGRESS`
 
-- R3 二種一次「電力」問5: `PASS`。前回FAILだった(5)は、教材の「水素冷却発電機の軸封へ密封油を供給し、水素が残る間は非常用電源から継続給電する」という説明から `密封油ポンプ（ヲ）` に一意に到達。
-- H29 二種二次「電力・管理」問1: `PASS`。
-- R1 二種二次「電力・管理」問1: `PASS`。
-- H27 二種一次「電力」問1: `PASS`。
-- H25 二種一次「電力」問1: `PASS`。
+過去問対応品質ゲート自体はPASSしている。
 
-答案確定後に公式解答・標準解答と照合した。教材外知識補完 `0件`、固定範囲外知識の追加 `0件`、正式選定問題の変更 `0件`。
+- 正式選定: 一次3問＋二次2問、計5問を維持
+- 完成後独立再解答: `5 / 5 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 解説PDF: 全4ページ表示QA PASS
+- 練習PDF: 全6ページ表示QA PASS
+- PowerPoint: 全4スライド表示QA、overflow、ZIP整合性PASS
+- 未確認実設備値追加: `0件`
 
-詳細は `topics/03_thermal_power/03_thermal_power_independent_reanswer.md` に記録済み。
+未完了理由は進捗記録の不整合。
+
+- `03_thermal_power.md`: 冒頭状態が `topic_03_explanation_body_and_examples_complete`、末尾次段階が `topic_03_practice_questions_and_full_explanations` のまま
+- `03_thermal_power_practice.md`: 冒頭状態が `practice_content_complete`、末尾次段階が `topic_03_practice_independent_qa` のまま
+
+詳細は `topics/03_thermal_power/03_thermal_power_final_qa.md` に記録済み。
 
 ## 次に行う
 
-Topic 03 の最終QAを実施する。
+主source `03_thermal_power.md` と練習source `03_thermal_power_practice.md` の状態・次段階記録のみを現在地へ同期する。
 
-確認対象:
-1. 必須成果物の実在と内容整合
-2. EXAM_ALIGNMENTの一次3問＋二次2問の固定維持
-3. 完成後独立再解答 `5 / 5 PASS`
-4. 解説PDF・練習PDF・PowerPointの表示QA
-5. 固定範囲外追加 `0件`、未確認実設備値追加 `0件`
-6. source・STATUS・HANDOFFの進捗整合
-
-全件PASSの場合のみ Topic 03 を `completed` にする。
+教材本文、問題、EXAM_ALIGNMENT、正式選定5問、固定範囲は変更しない。同期後に最終QAを再実施し、全件PASSの場合のみ Topic 03 を `completed` とする。
 
 ## 範囲境界
 
