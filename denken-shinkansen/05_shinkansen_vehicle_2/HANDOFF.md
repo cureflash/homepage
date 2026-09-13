@@ -7,16 +7,18 @@
 
 Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路の波形解析`、Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` は最終QAまでPASS。完成数は `3 / 39`。
 
-現在地は `topic_04_practice_source_complete`。Topic 04 `0系④ タップ制御と加速特性` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、SPEC指定4グラフの作図条件、解説PDF、練習問題・完全解説sourceまで完了。
+現在地は `topic_04_practice_pdf_complete`。Topic 04 `0系④ タップ制御と加速特性` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、SPEC指定4グラフ、解説PDF、練習問題・完全解説source、練習PDFまで完了。
 
 ## Topic 04 成果物
 - source: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration.md`
 - 解説PDF: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_explanation.pdf`
 - 練習問題source: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_practice_source.md`
+- 練習PDF: `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_practice.pdf`
 - 解説PDF: A4縦4ページ、全4ページVisual QA PASS
-- SPEC指定4グラフ: タップ条件―主回路電圧、タップ条件―速度トルク特性、速度―けん引力、時間―速度の簡略加速。未確認実車値を使わず、模式図または一定磁束局所近似として表示
+- 練習PDF: A4縦7ページ、全7ページ180 dpi Visual QA PASS。欠け・重なり・黒四角・ページ外はみ出しなし
 - 練習問題: 一次8問（全問五肢択一）＋二次4問（記述式）、計12問、全問完全解説付き
 - 練習問題の計算独立再確認: `12 / 12 PASS`
+- 練習PDFはpractice sourceのみから生成。数値・正答・解法・範囲は変更していない
 
 ## 過去問対応
 選定公式過去問:
@@ -33,60 +35,21 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
 
 二種の原則5問以上について、固定範囲へ直接接続できる公式問題として確認できたのは4問。件数合わせのために回生、チョッパ、VVVF、誘導機、き電を混入させない。一次・二次双方は確保している。
 
-## 練習問題sourceで実装した対応
-一次試験型8問:
-- 停止時 `E=0` と起動電流
-- 速度上昇後の逆起電力とタップ切替前後の電流
-- `τ=JR_a/(K_EK_T)` と始動電流指数減衰
-- 慣性モーメントと `1/2 Jω²`
-- 直巻未飽和域 `Φ∝I_a`、`T∝I_a²`
-- 一定磁束局所近似の電圧段―速度トルク特性
-- 電動機トルク→車輪周けん引力
-- 正味けん引力→加速度→時間―速度
-
-二次試験型4問:
-- 簡略始動過渡の微分方程式・時定数・`i_a(t)`・`ω(t)` の導出
-- H24二次固定範囲と同型の、速度・トルク条件から必要端子電圧を逆算する答案
-- トルク→けん引力→加速度→所要時間の複合計算
-- タップ切替を含む離散時間の簡略加速計算
-
-計算確認:
-- 一次8問＋二次4問を独立再計算し `12 / 12 PASS`
-- 0系固有の未確認値を使わず、数値は一般試験モデルまたは教材用仮定値として明示
-
-## Topic 04 解説本文で確定した内容
-- 停止時 `ω=0 → E=0 → I_a=V_a/R_a`
+## Topic 04 固定内容
+- 停止時 `E=0 → I_a=V_a/R_a`
 - `V_a=E+I_aR_a`
 - `E=k_eΦω`
 - `T=k_tΦI_a`
 - `J dω/dt=T-T_L`
 - 一定界磁・無負荷・電機子インダクタンス無視の簡略始動過渡
-  - `τ=JR_a/(K_EK_T)`
-  - `ω(t)=(V_a/K_E){1-exp(-t/τ)}`
-  - `i_a(t)=(V_a/R_a)exp(-t/τ)`
 - 直巻未飽和域 `Φ∝I_a`、`T∝I_a²` と飽和時の境界
 - 速度上昇→逆起電力増加→電流低下→次電圧段への移行という電流制限の一般原理
 - 一定磁束局所近似の速度―トルク式
-  - `ω=V_a/K_E-{R_a/(K_EK_T)}T`
 - 所要速度・トルクから必要端子電圧を逆算する二次答案手順
 - 電動機トルクから車輪周けん引力への換算
-  - `G=ω_m/ω_w`
-  - `F_t=Nη_gGT_m/r_w`
-- 車両速度
-  - `v=2πr_wn_m/(60G)`
-- 簡略加速
-  - `m_eq dv/dt=F_t-F_r`
-  - `v_{k+1}=v_k+a_kΔt`
-
-## 3段階例題
-- 基礎: 電圧段切替と電流変化
-- 本試験標準: 一定界磁モデルの始動電流指数減衰
-- 複合: 必要電圧→電動機トルク→車輪周力→加速度→所要時間
-
-すべて教材用仮定値と明示し、0系実値として扱っていない。
+- `m_eq dv/dt=F_t-F_r` と離散時間の簡略加速
 
 ## SPEC指定4グラフ
-sourceで確定した以下を解説PDFへ収録済み:
 - タップ条件―主回路電圧
 - タップ条件―速度トルク特性
 - 速度―けん引力
@@ -103,15 +66,7 @@ sourceで確定した以下を解説PDFへ収録済み:
 - チョッパ制御
 - 未確認の0系固有数値
 
-0系のタップ段数、各段電圧、主電動機定格、歯車比、車輪径、編成質量等は一次資料で確認できるまで実値として置かない。
-
 ## 次の正確な開始点
-Topic 04の `04_0series_tap_control_acceleration_practice_source.md` だけを使って練習PDFを作成し、全ページ表示QAを行う。問題・数値・解答・解説・範囲をPDF生成時に変更しない。
-
-## 完了済みテーマ参照
-- Topic 03 final QA: `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_final_qa.md`
-- Topic 03 reanswer: `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_exam_reanswer.md`
-- Topic 02 final QA: `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_final_qa.md`
-- Topic 02 reanswer: `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
+Topic 04の固定済みsource・EXAM_ALIGNMENTを使って解説画像PowerPointを作成する。SPEC指定4グラフと一次・二次過去問への解法接続を可視化し、固定範囲外・未確認実車値を追加しない。完成後、全スライド表示QAとoverflow検査を行う。
 
 Topic 04はまだ `completed` ではない。完成数は `3 / 39`。
