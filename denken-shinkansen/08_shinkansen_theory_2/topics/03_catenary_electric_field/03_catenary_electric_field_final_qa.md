@@ -6,9 +6,9 @@
 
 ## 判定条件
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、`STATUS.md`、`HANDOFF.md` とGitHub正本の既存成果物を突き合わせた。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、`STATUS.md`、`HANDOFF.md` とGitHub正本の既存成果物を再照合した。
 
-Topic 03の固定範囲は次のままとし、新規仕様は追加しない。
+Topic 03の固定範囲は変更しない。
 
 - クーロンの法則
 - 電界
@@ -34,6 +34,7 @@ GitHub正本で次を確認した。
 - `03_catenary_electric_field_practice.pdf`
 - `03_catenary_electric_field_images.pptx`
 - `03_catenary_electric_field_independent_resolve.md`
+- `03_catenary_electric_field_final_qa.md`
 
 判定: PASS
 
@@ -41,56 +42,63 @@ GitHub正本で次を確認した。
 
 固定済みEXAM_ALIGNMENTは一次「理論」6問・21小問。
 
-- R8 問1 (1)〜(3)
-- R5 問1 (1)
-- R4 問1 (1)〜(5)
-- H30 問1 (1)〜(4)
-- H23 問1 (1)〜(3)
-- H21 問1 (1)〜(5)
+- R8 問1 (1)〜(3): 3/3 PASS
+- R5 問1 (1): 1/1 PASS
+- R4 問1 (1)〜(5): 5/5 PASS
+- H30 問1 (1)〜(4): 4/4 PASS
+- H23 問1 (1)〜(3): 3/3 PASS
+- H21 問1 (1)〜(5): 5/5 PASS
 
-完成後独立再解答は `21/21 PASS`。教材外知識による補完なし、固定範囲内の欠落なし、二次試験の採否判断にも変更なし。
-
-判定: PASS
-
-### 3. 範囲逸脱
-
-教材本文では、影像法、静電容量、誘電体、静電エネルギー、絶縁設計をTopic 03の学習内容として追加していない。除外理由・境界の説明として言及している箇所はあるが、教材範囲には含めていない。
+完成後独立再解答は `21/21 PASS`。教材外知識による補完なし、固定範囲内の欠落なし。
 
 判定: PASS
 
-### 4. 成果物・進捗記録の相互整合
+### 3. 二次試験の採否
 
-2件の不整合を検出した。
+二次試験も確認対象に含めたが、本Topicのガウスの法則・電位・静電界解析を固定範囲だけで直接問う問題は採用していない。`08 理論・二種` は一次理論中心であるため、数合わせの二次問題は追加しない既存判断を維持する。
 
-1. `03_catenary_electric_field_practice.md` の問題見出しに文字破損がある。
-   - `問2 対称�q置の合成電界`
-   - `問7 無限��線電荷の電界`
-   正しくは、それぞれ「対称配置の合成電界」「無限長線電荷の電界」である。
-2. `03_catenary_electric_field.md` 冒頭の状態欄が「解説PDF・練習問題・PowerPointは未着手」、末尾の品質判定が「完成後独立再解答: 未実施」のままで、現在のGitHub正本と一致しない。
+判定: PASS
 
-このため、最終QAの「成果物の相互整合」はPASSにできない。
+### 4. 範囲逸脱
 
-判定: NEEDS_REVISION
+影像法、静電容量、誘電体、静電エネルギー、絶縁設計をTopic 03の学習内容として追加していない。実在架線の未確認値も真値扱いしていない。
 
-### 5. 表示QA
+判定: PASS
 
-`HANDOFF.md` には、解説PDF・練習PDFの全ページ表示QA、PowerPointの全スライド表示QAとoverflow検査がPASS済みと記録されている。
+### 5. 前回指摘事項の再確認
 
-ただし練習sourceに文字破損があるため、source修正後は練習PDFを再生成またはsourceとの文字同一性を再確認し、全ページ表示QAを再実施する必要がある。
+前回最終QAで検出した2件を再確認した。
 
-判定: NEEDS_REVISION
+1. 練習sourceの文字破損
+   - `問2 対称配置の合成電界` に修正済み
+   - `問7 無限長線電荷の電界` に修正済み
+   - 修正版sourceから練習PDFを再生成済み
+   - 全4ページ表示QA PASS
+2. 解説sourceの進捗記録不整合
+   - 冒頭状態欄を現在地へ同期済み
+   - 解説PDF・練習PDF・PowerPoint・独立再解答の完了を反映済み
+   - 完成後独立再解答 `21/21 PASS` を反映済み
+
+判定: PASS
+
+### 6. 表示QA
+
+- 解説PDF: 全ページ表示QA PASS
+- 練習PDF: 修正版再生成後、全4ページ表示QA PASS
+- PowerPoint: 全スライド表示QA PASS、overflow検査PASS
+
+判定: PASS
+
+### 7. 成果物相互整合
+
+解説source、練習source、PDF、PowerPoint、独立再解答記録、進捗記録の対象範囲・過去問選定・二次試験非採用判断に矛盾がないことを確認した。
+
+判定: PASS
 
 ## 最終判定
 
-`NEEDS_REVISION`
+`PASS / completed`
 
-Topic 03はまだ `completed` にしない。完成数は `2 / 21` のまま維持する。
+Topic 03は過去問対応品質ゲートを通過した。完成数を `3 / 21` に更新する。
 
-過去問対応品質ゲートそのものは21/21 PASSしている。残件は教材内容の追加ではなく、既存sourceの文字破損と進捗記録不整合の修正・再QAである。
-
-## 次工程
-
-1. `03_catenary_electric_field_practice.md` の2箇所の文字破損を修正する。
-2. 練習PDFを修正版sourceに同期し、全ページ表示QAを再実施する。
-3. `03_catenary_electric_field.md` の状態欄・末尾品質判定を現在地へ同期する。
-4. 最終QAを再実施し、全件PASSした場合のみ `completed`、完成数 `3 / 21` とする。
+新規論点・仕様追加なし。次の未完了テーマはTopic 04 `架線と車体は巨大なコンデンサなのか？`。
