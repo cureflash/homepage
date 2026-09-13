@@ -10,18 +10,18 @@ Topic 01 `新幹線1編成はどれだけ電気を食う？` とTopic 02 `なぜ
 
 active topic: `03 架線はただの銅線ではない`
 
-current status: `topic_03_exam_alignment_complete`
+current status: `topic_03_explanation_source_complete`
 
 ## 今回進捗
 
-Topic 03を1段階進め、制作前EXAM_ALIGNMENTを完了した。
+Topic 03を1段階進め、確定済みEXAM_ALIGNMENTに基づく解説本文＋3段階例題を完成した。
 
 更新成果物:
-- `topics/03_catenary_resistance/03_catenary_resistance.md` — 新規作成
-- `STATUS.md` — `topic_03_exam_alignment_complete`、完成数2/14、次工程を解説本文＋3段階例題へ更新
+- `topics/03_catenary_resistance/03_catenary_resistance.md` — 解説本文、3段階例題、過去問対応表、公式・解法まとめを追加
+- `STATUS.md` — `topic_03_explanation_source_complete`、次工程を解説PDFへ更新
 - `HANDOFF.md`
 
-判定: `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`
+判定: `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`
 
 ## Topic 03 EXAM_ALIGNMENT
 
@@ -49,9 +49,28 @@ Topic 03を1段階進め、制作前EXAM_ALIGNMENTを完了した。
 source Markdown:
 `topics/03_catenary_resistance/03_catenary_resistance.md`
 
-sourceには、各過去問の要求知識・使用式・設問型・教材対応予定、公式資料、参照教材、過去問から逆算した必須説明12項目、完成後独立再解答ゲートを記録済み。
+source内で、6問の要求事項を以下へ接続済み。
 
-公式正答番号・数値解は制作前sourceへ保存していない。完成後、教材内容だけで6問を独立再解答してから公式解答と照合する。
+- `ρ` と `σ=1/ρ`
+- `R=ρl/S` と長さ・断面積の比例関係
+- `mm²→m²`、円形断面 `S=πd²/4`
+- 直列・並列抵抗の成立理由と合成式
+- 全電圧・全電流または合成抵抗から未知抵抗を逆算する手順
+- `Rt=R0{1+α(t-t0)}` と線形近似、抵抗比
+- 一定電圧時の `I∝1/R`
+- 異なる温度係数の抵抗は個別補正後に合成する手順
+- `P=I²R` / `P=V²/R` の同一電流・同一電圧による使い分け
+- `ΔV=IR` と `R=ρl/S` の接続
+- 頻出誤答と検算条件
+
+3段階例題:
+1. 基礎 — 教材用仮定導体で `R=ρl/S`、電圧降下、消費電力
+2. 本試験標準 — `2 Ω + (6 Ω || Rx)` から `Rx` を逆算し、並列各抵抗の電力を比較
+3. 複合・ひっかけ — 異なる温度係数の2抵抗を個別補正し、並列合成と一定電圧時の電流減少率を計算
+
+新幹線接続は、`ρ=3.0×10^-8 Ω·m`、`l=1000 m`、`S=150 mm²`、`I=400 A` の教材用仮定値による単一導体モデルだけを使用し、実車・実測値ではないことを明記した。
+
+公式正答番号・数値解は完成前sourceへ保存していない。完成後、教材内容だけで6問を独立再解答してから公式解答と照合する。
 
 ## 境界確認
 
@@ -146,12 +165,12 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 03の確定済み `topics/03_catenary_resistance/03_catenary_resistance.md` だけを基準に、解説本文と3段階例題を作成する。
+Topic 03の確定済み `topics/03_catenary_resistance/03_catenary_resistance.md` だけを基準に解説PDFを作成し、全ページ表示QAを行う。
 
 - `MASTER_SPEC.md` と `EXAM_ALIGNMENT_SPEC.md` を系列SPECより優先する
-- sourceに固定した12項目の必須説明を欠落させない
-- 基礎例題 / 本試験標準例題 / 複合・ひっかけ例題の3段階を作る
-- `R=ρl/S`、直並列合成、温度係数、発熱・電圧降下を過去問へ接続する
+- sourceに固定した説明・例題だけをPDF化し、新規論点を追加しない
+- 抵抗率・直並列・温度係数・電力・電圧降下の式と単位を欠落させない
+- 6過去問への接続が見える構成を維持する
 - Topic 05以降の論点を先取りしない
 - 未確認の新幹線実車・架線値を真値化しない
 
