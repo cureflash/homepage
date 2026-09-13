@@ -5,16 +5,16 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_04_exam_alignment_complete`
+- current_status: `topic_04_explanation_source_complete`
 - last_completed_topic: `03 直流モーターはどうやって速度を変える？`
 - active_topic: `04 300系でモーターが全部変わった`
-- next_start: Topic 04の確定EXAM_ALIGNMENTに従い、解説本文＋3段階例題を作成する
+- next_start: Topic 04の解説本文＋3段階例題を正本として解説PDFを作成し、全ページ表示QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
-- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT完了、本文以降は未着手
+- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題まで完了。PDF以降は未着手
 - [ ] 05〜16 — 未着手
 
 ## 04 EXAM_ALIGNMENT対象
@@ -26,17 +26,31 @@
 
 直近年度でも始動法、Y-Δ始動、インバータ/V/f制御、詳細等価回路、発電運転・用途材料などTopic 04の固定範囲外を設問全体の正答に必要とする問題は選定から除外した。教材へ仕様外論点を追加して通過させない。
 
+## 04 解説source
+`topics/04_induction_motor/04_induction_motor.md` に以下を追加済み。
+
+- 本試験で問われる中心関係と式の意味
+- 固定子・回転子・かご形回転子・回転磁界
+- 同期速度、滑り、二次周波数、二次誘導起電力
+- 実回転速度・同期速度とトルク式の使い分け
+- `P1 → P2 → Pm → Pout` の電力フロー、二次銅損、効率
+- 再利用可能な解法アルゴリズム
+- 300系への接続。ただし未確認実車値・後続Topicの制御方式は追加していない
+- 頻出ミス、公式まとめ
+- 基礎・本試験標準・複合の3段階例題
+- 選定5問の各節への対応マッピング
+
 ## 04 成果物
-- `topics/04_induction_motor/04_induction_motor.md` — 制作前EXAM_ALIGNMENT、公式過去問5問、参考教材、教材必須範囲、範囲境界を記録済み
+- `topics/04_induction_motor/04_induction_motor.md` — EXAM_ALIGNMENT＋解説本文＋3段階例題まで完了
 - 解説PDF — 未着手
 - 練習問題source/PDF — 未着手
 - 解説画像PowerPoint — 未着手
 
 ## 04 品質ゲート
-`IN_PROGRESS`。独立再解答は必須4成果物完成後に実施するため未実施。完成数は3/16据え置き。
+`IN_PROGRESS`。選定5問の要求事項は解説sourceへ全件マッピング済み。必須4成果物と完成後独立再解答が未完了のため完成数は3/16据え置き。
 
 ## 03 完成記録
 Topic 03は新選定5問（R7下 問2、R6上 問2、R2 問1、R1 問1、H30 問1）を完成教材だけで再解答し5/5正答。`PASS / completed`。
 
 ## 次
-Topic 04のsourceに確定した過去問要求だけを使い、解説本文＋基礎・本試験標準・複合の3段階例題を作る。始動法、インバータ/VVVF、回生制動等を先取りしない。
+Topic 04の解説sourceから解説PDFを生成し、数式・単位・表記と全ページ表示をQAする。始動法、インバータ/VVVF、回生制動等を先取りしない。
