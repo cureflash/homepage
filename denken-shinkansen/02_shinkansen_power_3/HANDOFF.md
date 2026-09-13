@@ -3,94 +3,65 @@
 更新日: 2026-09-14
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は4/16。Topic 01〜04は完成済み。次のactive topicは05 `新幹線を再エネだけで走らせられる？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は4/16。Topic 01〜04は完成済み。active topicは05 `新幹線を再エネだけで走らせられる？`。
 
 ## 今回進捗
-Topic 04の最終QAを再判定し、全品質ゲートPASSで `completed` にした。前回唯一FAILだったsource Markdownの進捗記録不整合は解消済み。仕様追加、教材本文変更、EXAM_ALIGNMENT変更は行っていない。
+Topic 05の制作前EXAM_ALIGNMENTを完了した。本文・PDF等はまだ作成していない。
 
 更新対象:
-- `topics/04_nuclear_power/04_nuclear_power_final_qa.md`
+- `topics/05_renewable_energy/05_renewable_energy.md` 新規作成
 - `STATUS.md`
 - `HANDOFF.md`
 
-## Topic 04 EXAM_ALIGNMENT
-品質ゲート対象は次の公式過去問6問で固定。
+## Topic 05 SPEC固定範囲
+- 太陽光発電
+- 風力発電
+- 地熱発電
+- 燃料電池
+- 発電量変動
+- 設備利用率
+- 系統連系
+- 蓄電池
+- 需給バランス
 
-1. R8上 電力 問4 — 原子核・質量欠損・結合エネルギー・`E=mc^2`・核分裂
-2. R6上 電力 問4 — U-235核分裂エネルギーと石炭発熱量の換算
-3. R5上 電力 問4 — ウラン燃料中のU-235量、質量欠損、重油発熱量換算
-4. H30 電力 問4 — 原子力発電所の蒸気タービン、湿分、蒸気条件、熱効率、蒸気量、回転速度
-5. H27 電力 問4 — 軽水炉、PWR/BWR、冷却材・主要設備・蒸気発生
-6. H21 電力 問4 — 原子力発電と汽力発電の対応、原子炉、U-235/U-238、濃縮燃料
+主題は、変動する再エネ出力を新幹線という大電力負荷へ接続し、発電量と需要量の時間変動を考えること。固定範囲外の発電方式を件数合わせで追加しない。
 
-解説本文・解説PDF・練習PDF・PowerPointで6問の要求事項を全件カバー。固定範囲外の新型炉・核燃料サイクル・放射線分類等は追加していない。
+## Topic 05 EXAM_ALIGNMENT
+品質ゲート対象は次の公式過去問5問で固定。
 
-## 完成後独立再解答
-記録: `topics/04_nuclear_power/04_nuclear_power_independent_reanswer.md`
+1. R8上 電力 問5 — 二次電池、リチウムイオン電池、再エネ出力平滑化、ナトリウム・硫黄電池、エネルギー密度
+2. R7下 電力 問5 — 風力等で用いる誘導発電機、励磁、滑り、系統並列、突入電流
+3. R6上 電力 問5 — 燃料電池の直流出力、電解質分類、反応原理、排熱利用、水素改質
+4. R5上 電力 問5 — 風力発電、風速と出力の `v^3` 関係、発電機の種類、出力変動
+5. R2 電力 問5 — 太陽光発電、セル、パワーコンディショナ、昼間余剰電力、需給調整
 
-再解答結果:
-- R8上 電力 問4: `(2)` — 公式 `(2)` — PASS
-- R6上 電力 問4: `(4)` — 公式 `(4)` — PASS
-- R5上 電力 問4: `(3)` — 公式 `(3)` — PASS
-- H30 電力 問4: `(2)` — 公式 `(2)` — PASS
-- H27 電力 問4: `(1)` — 公式 `(1)` — PASS
-- H21 電力 問4: `(2)` — 公式 `(2)` — PASS
+公式問題・公式解答は電気技術者試験センター正本で確認済み。参考教材はe-sysnet、電験王、電験三種まとめましたの複数系統を確認した。
 
-結果: `6/6 PASS`。
+### 範囲境界
+- R7上 電力 問5: バイオマス主題のため除外。
+- R6下 電力 問5: 地熱を含むが、完答にはバイオマス知識が必要なため除外。地熱自体はSPEC固定範囲として本文で扱う。
+- R5下 電力 問5: 太陽光・風力・燃料電池を含むが、小水力・洋上風力の直流送電まで要求するため除外。
+- R4下 電力 問5、H28 電力 問5: 固定範囲外の発電方式を含むため除外。
 
-確認:
-- 必要公式を完成教材から選択: PASS
-- 計算途中式を完成教材の手順だけで構成: PASS
-- 知識問題の根拠を完成教材内で説明: PASS
-- 教材外知識の補完: 0件
-- 固定範囲外論点の追加: 0件
+## 過去問から逆算した必須事項
+- 太陽光: 直流出力、セル、直列接続、パワーコンディショナ、日射・昼夜による変動
+- 風力: `P ∝ v^3`、出力変動、発電機種類、誘導発電機の励磁・滑り・系統並列・突入電流
+- 地熱: 地下の蒸気・熱水でタービンを回す基本構成と特徴
+- 燃料電池: 直接直流、反応原理、代表分類、排熱利用、改質水素
+- 蓄電池: 一次/二次、リチウムイオン、ナトリウム・硫黄、出力平滑化
+- 設備利用率: `実際の発電電力量 / (定格出力 × 対象時間)`
+- 系統連系・需給: 発電側と需要側の時間変動、直流→交流変換、余剰時の蓄電と不足時の補完
+- 新幹線接続: 未確認の列車消費電力・再エネ設備容量・蓄電容量を実値化しない
 
-## 完成成果物
-- source: `topics/04_nuclear_power/04_nuclear_power.md`
-- 解説PDF: `topics/04_nuclear_power/04_nuclear_power_explanation.pdf`
-- 練習PDF: `topics/04_nuclear_power/04_nuclear_power_practice.pdf`
-- 解説画像PowerPoint: `topics/04_nuclear_power/04_nuclear_power_images.pptx`
-- PowerPoint QA: `topics/04_nuclear_power/04_nuclear_power_powerpoint_qa.md`
-- 独立再解答: `topics/04_nuclear_power/04_nuclear_power_independent_reanswer.md`
-- 最終QA: `topics/04_nuclear_power/04_nuclear_power_final_qa.md` — `PASS / completed`
-
-## 最終QA結果
-全件PASS。
-
-- 必須成果物の実在: PASS
-- 公式過去問6問のEXAM_ALIGNMENT: PASS
-- 複数系統の参考教材確認: PASS
-- 解説PDF・練習PDF・PowerPoint: PASS
-- PowerPoint表示・ファイルQA: PASS
-- source Markdownの進捗整合性: PASS
-- 範囲境界・実在値/架空設定の分離: PASS
-- 完成後独立再解答: 6/6 PASS
-- 教材外知識補完: 0件
-- 仕様外追加: 0件
-
-Topic 04を `completed` とした。
-
-## 「むつ」一次資料境界
-JAEA一次資料で確認済みの範囲だけを実在値として使用。
-
-- PWR（加圧水型）
-- 原子炉熱出力36 MWth
-- 一次冷却水平均温度273.5 ℃
-- 一次冷却系運転圧力110 kg/cm²G
-- 蒸気発生器2基
-- 蒸気圧力40 kg/cm²G
-- 蒸気温度250.6 ℃
-- 乾き度99.75%
-
-実在の「むつ」は蒸気タービンの軸出力で船を推進する。本教材の `蒸気タービン → 同期発電機 → 電力 → 主電動機` はSPEC固定の架空列車側として明示し、未確認の発電端出力・走行性能は設定していない。
+## Topic 04 完了状態
+Topic 04は `completed`。固定6過去問の完成後独立再解答6/6 PASS、最終QA PASS、教材外知識補完0件、仕様外追加0件。
 
 ## 現在状態
-- `current_status`: `topic_04_completed`
+- `current_status`: `topic_05_exam_alignment_complete`
 - 完成数: `4/16`
 - last completed: Topic 04
-- next active: Topic 05 `新幹線を再エネだけで走らせられる？`
-- Topic 04完成後独立再解答: `6/6 PASS`
-- Topic 04最終QA: `PASS / completed`
+- active: Topic 05
+- Topic 05本文以降: 未着手
 
 ## 次の正確な開始点
-Topic 05の制作前EXAM_ALIGNMENT。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`SPEC.md` のTopic 05固定範囲を再確認し、本文やPDFを作る前に公式過去問を直近年度から調査する。固定範囲だけで完答できる関連問題を原則5問以上選定し、要求知識・使用式・設問型・教材で必要な説明をsource Markdownへ記録する。仕様外論点は数合わせで追加しない。
+`topics/05_renewable_energy/05_renewable_energy.md` のEXAM_ALIGNMENTを正本として、Topic 05の解説本文＋3段階例題を作成する。確定済み5過去問の要求知識・式・判断根拠を全件カバーし、SPEC固定範囲外へ広げない。
