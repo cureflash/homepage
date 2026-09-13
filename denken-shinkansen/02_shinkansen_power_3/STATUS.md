@@ -5,16 +5,16 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_04_explanation_body_complete`
+- current_status: `topic_04_explanation_pdf_complete`
 - last_completed_topic: `03 JR東日本はなぜ火力発電所まで持っている？`
 - active_topic: `04 東京―佐世保「原子力新幹線」`
-- next_start: Topic 04の解説PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 04の練習PDFを作成し、全ページ表示QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
 - [x] 02 上越新幹線を水の力で走らせる — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QAまで完了
 - [x] 03 JR東日本はなぜ火力発電所まで持っている？ — EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QA PASS
-- [ ] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題まで完了。解説PDF以降は未着手
+- [ ] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDFまで完了。練習PDF以降は未着手
 - [ ] 05〜16 — 未完了
 
 ## Topic 04 現在地
@@ -30,6 +30,13 @@ source: `topics/04_nuclear_power/04_nuclear_power.md`
 6. H21 電力 問4 — 原子力発電と汽力発電の対応、原子炉、U-235/U-238、濃縮燃料
 
 解説本文では6問の要求事項をすべて固定範囲内でマッピング済み。基礎・本試験標準・複合の3段階例題を作成した。
+
+解説PDF: `topics/04_nuclear_power/04_nuclear_power_explanation.pdf`
+- A4縦4ページ
+- source Markdownの固定範囲だけで構成
+- 質量欠損、PWR/BWR、原子力用蒸気タービン、熱効率、3段階例題、6過去問対応表を収録
+- 200 dpiで全4ページをレンダリングし、文字切れ・重なり・黒塗り・表崩れなしを確認
+- PDF preflight: openable / 4 pages / non-scanned。CIDフォントは非埋込だがPDFium 200 dpi表示とテキスト抽出はPASS
 
 「むつ」はJAEA一次資料で次を確認済み。
 - 加圧水型原子炉、熱出力36 MWth、低濃縮酸化ウラン
@@ -83,4 +90,4 @@ source: `topics/04_nuclear_power/04_nuclear_power.md`
 固定範囲外の詳細煙風道設備、再熱・再生サイクル、給水加熱器等、燃焼化学・CO2計算、保護装置・継電器・トリップ機構は追加していない。
 
 ## 次
-Topic 04の解説PDFを作成し、全ページ表示QAを行う。完成数は3/16のままとする。
+Topic 04の練習PDFを作成し、全ページ表示QAを行う。完成数は3/16のままとする。
