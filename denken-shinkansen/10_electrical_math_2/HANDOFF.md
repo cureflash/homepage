@@ -10,85 +10,78 @@ Topic 02 `ベクトルと座標変換` は `completed`。
 
 Topic 03 `偏微分・全微分` は `completed`。
 
-Topic 04 `微分による極値・最適条件` は最終QA再判定PASSで `completed`。
+Topic 04 `微分による極値・最適条件` は `completed`。
+
+Topic 05 `積分によるエネルギー計算` は制作前EXAM_ALIGNMENT完了。
 
 完成数: `4 / 20`
 
-current_status: `topic_04_completed`
+current_status: `topic_05_exam_alignment_complete`
 
 active_topic: `05 積分によるエネルギー計算`
 
-## Topic 04 完成成果物
+## Topic 05 現在の成果物
 
 source Markdown:
-`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions.md`
+`topics/05_integral_energy/05_integral_energy.md`
 
-解説PDF:
-`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_explanation.pdf`
+解説本文・解説PDF・練習PDF・PowerPointは未着手。
 
-練習PDF:
-`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_practice.pdf`
+## Topic 05 固定EXAM_ALIGNMENT
 
-解説画像PowerPoint:
-`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_images.pptx`
+品質ゲート対象は一次5問＋二次1問、計6問・16対象項目。
 
-PowerPoint QA:
-`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_powerpoint_qa.md`
+- R7 一次 理論 問2 (2)
+  - 結合コイルの磁気エネルギー
+  - 後続のトルク微分・電磁誘導は不採用
+- R6 一次 理論 問2 (1)〜(2)
+  - `H(r)`、`w_m=1/2 μH^2`、体積積分
+  - 抵抗・表皮効果は不採用
+- R4 二次 機械・制御 問3 (1)
+  - 三相整流電圧の平均値積分
+  - RMSから波高値への変換
+  - PWM・V/f等の後続設問は不採用
+- R3 一次 理論 問2 (4)〜(5)
+  - 一周期エネルギーと `P_avg=fE_cycle`
+- R2 一次 理論 問2 (1)〜(5)
+  - `W=1/2 LI^2`
+  - 鎖交磁束保存
+  - 外力の仕事と磁気エネルギー収支
+- H25 一次 理論 問1 (1)〜(5)
+  - コンデンサ蓄積エネルギー
+  - 一定電圧下の誘電体引抜き
+  - 電源とのエネルギー授受と外力の仕事
 
-完成後独立再解答:
-`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_exam_reanswer.md`
+制作前再導出・公式解答照合は `16 / 16 PASS`。
 
-最終QA:
-`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_final_qa.md`
+これは制作前の要求事項検証であり、完成後独立再解答ではない。完成後は教材のみで同じ6問・16対象項目を再解答する。
 
-## Topic 04 品質ゲート結果
+## SPEC固定範囲
 
-固定EXAM_ALIGNMENT:
+- `E=∫Pdt`
+- `W=∫Fdx`
+- 電界・磁界のエネルギー
+- 平均値
+- RMSとの関係
 
-- R8 一次 機械 問3 (2)〜(3)
-- R7 一次 機械 問2 (1)〜(5)
-- R7 一次 理論 問5 (3)〜(5)
-- R7 一次 理論 問3 (3)〜(5)
-- R7 二次 機械・制御 問1 (5)a〜b
-- R3 二次 機械・制御 問1 (4)〜(6)
-
-計6問・18対象項目。制作前独立再導出18/18、完成後独立再解答18/18で公式解答・標準解答と一致。教材外知識による補完は0件。
-
-固定範囲:
-- 一変数関数の極値
-- 二階微分による判定
-- パラメータ依存
-
-電験への接続:
-- 最大トルク条件
-- 最大効率条件
-- 最大電力条件
-- 最適動作点
-
-最終QA再判定:
-- 必須成果物実在: PASS
-- EXAM_ALIGNMENT: PASS
-- 二次試験対応: PASS
-- 独立再解答: PASS
-- 表示QA: PASS
-- source進捗整合: PASS
-- SPEC外内容の非混入: PASS
-
-総合判定: `PASS / completed`。
+新幹線への接続は、力行・回生電力を時間積分して電力量を求める範囲に限定する。
 
 ## 実装上の境界
 
-- R7二次同期調相機のような絶対値最小点は微分不能点を直接比較する
-- 最適点と最大値のパラメータ依存を分けて読む
-- 多変数最適化、ラグランジュ未定乗数法、反復計算・数値最適化は先取りしない
-- 実車固有の制御則・未確認実機値は追加しない
+- Topic 06の運転曲線、位置・速度・加速度解析を先取りしない
+- Topic 07・08以降の微分方程式・過渡応答を先取りしない
+- Topic 13以降のフーリエ解析・高調波分解を先取りしない
+- 選定問題のうち固定範囲外の後続小問を件数合わせで採用しない
+- 実車固有の制御則や未確認実車値を追加しない
+- 平均値とRMSを明確に区別する
+- 電界・磁界エネルギーでは、電源接続条件・線形性・保存される量を明示する
 
 ## 次に行うこと
 
-Topic 05 `積分によるエネルギー計算` の制作前EXAM_ALIGNMENTを行う。
+Topic 05の解説本文＋3段階例題を作成する。
 
-1. `SPEC.md` の固定範囲 `E=∫Pdt`、`W=∫Fdx`、電界・磁界エネルギー、平均値、RMSとの関係を確認する。
-2. 電気技術者試験センターの二種公式過去問を直近年度から調査する。
-3. 本Topicへ直接対応する一次・二次の過去問を原則5問以上選定する。二次の直接対応問題が確認できる場合は最低1問含める。
-4. 要求知識・式・設問型・教材内必要説明をsource MarkdownのEXAM_ALIGNMENTとして固定する。
-5. 件数合わせでTopic 06以降やSPEC外論点を追加しない。
+1. 固定EXAM_ALIGNMENT 6問・16対象項目を全件本文へマッピングする。
+2. `E=∫Pdt`、`W=∫Fdx`、電界・磁界エネルギー、平均値、RMSの定義・単位・成立条件・使い分けを説明する。
+3. 基礎、本試験標準、複合・ひっかけの3段階例題を作る。
+4. 二次試験R4機械・制御問3 (1)へ接続できるよう、RMSで与えられた波形から平均値を積分で導く途中式を省略しない。
+5. SPEC外論点、Topic 06以降、選定問題の対象外小問は追加しない。
