@@ -12,7 +12,7 @@ Topic 03 `複素数` は `completed`。
 
 完成数: `3 / 12`
 
-current_status: `topic_04_powerpoint_complete`
+current_status: `topic_04_exam_reanswer_complete`
 
 active_topic: `04 極形式・フェーザ`
 
@@ -30,16 +30,22 @@ source Markdown:
 解説画像PowerPoint:
 `topics/04_polar_form_phasor/04_polar_form_phasor_images.pptx`
 
-制作前EXAM_ALIGNMENT、公式解答照合付き独立検証、解説本文、3段階例題、解説PDF＋全ページ表示QA、練習PDF＋全ページ表示QA、解説画像PowerPoint＋全スライド表示QAまで完了。完成後独立再解答、最終QAは未着手。
+完成後独立再解答記録:
+`topics/04_polar_form_phasor/04_polar_form_phasor_exam_reanswer.md`
 
-選定公式過去問:
-- R6上 理論 問9: 独立解答 (2) = 公式 (2)
-- R6上 理論 問15: 独立解答 (a)(4), (b)(3) = 公式一致
-- R5下 機械 問5: 独立解答 (3) = 公式 (3)
-- R5上 理論 問9: 独立解答 (3) = 公式 (3)
-- R3 理論 問8: 独立解答 (5) = 公式 (5)
+制作前EXAM_ALIGNMENT、公式解答照合付き独立検証、解説本文、3段階例題、解説PDF＋全ページ表示QA、練習PDF＋全ページ表示QA、解説画像PowerPoint＋全スライド表示QA、完成後独立再解答まで完了。最終QAのみ未着手。
 
-5問・6小問すべて一致。
+## Topic 04 完成後独立再解答
+
+選定5問・6小問を、完成教材で固定した極形式・フェーザの操作と、問題文または既習事項として固定済みの回路・機械関係だけを使って再解答した。
+
+- R6上 理論 問9: (2) = 公式 (2) PASS
+- R6上 理論 問15: (a)(4), (b)(3) = 公式一致 PASS
+- R5下 機械 問5: (3) = 公式 (3) PASS
+- R5上 理論 問9: (3) = 公式 (3) PASS
+- R3 理論 問8: (5) = 公式 (5) PASS
+
+5問・6小問すべて一致。固定範囲外の新規説明追加は0件。
 
 ## Topic 04 PowerPoint QA
 
@@ -86,6 +92,6 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 04の選定公式過去問5問・6小問を、完成教材だけを使って独立再解答する。
+Topic 04の最終QAを実施する。
 
-保存済み正答を先に見ず、教材外知識で補完せず、各小問について使用した教材節・式・判断根拠まで記録する。全件PASSしない限り `completed` にしない。
+必須成果物の実在、EXAM_ALIGNMENTと教材の同期、完成後独立再解答5問・6小問のPASS、表示QA、固定範囲境界を再確認し、全件PASSした場合のみ `completed` にする。
