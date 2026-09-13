@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 2 / 21
-- current_status: `topic_03_practice_pdf_complete`
+- current_status: `topic_03_powerpoint_complete`
 - last_completed_topic: `02 架線は長くなるとなぜ電圧が落ちる？`
 - active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
-- next_start: Topic 03のsource Markdownと練習問題を正本として解説画像PowerPointを作成する。制作前EXAM_ALIGNMENTで固定した一次理論6問・21小問に接続し、SPEC外論点を追加しない
+- next_start: Topic 03の完成済み教材だけを使い、EXAM_ALIGNMENTで固定した一次理論6問・21小問を保存済み正答を見ずに独立再解答する。教材外知識やSPEC外論点で補完しない
 
 ## Topic 03 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -23,31 +23,29 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの完成後独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 03の練習問題source `topics/03_catenary_electric_field/03_catenary_electric_field_practice.md` と練習PDF `topics/03_catenary_electric_field/03_catenary_electric_field_practice.pdf` を作成した。
+Topic 03の解説画像PowerPoint `topics/03_catenary_electric_field/03_catenary_electric_field_images.pptx` を作成した。
 
-練習PDF収録内容:
-- 全12問、すべて一次試験型の五肢択一
-- 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
-- 点電荷の電界・負電荷に働く力
-- 点電荷の成分分解・ベクトル合成・電界0条件
-- 電束・電束密度・ガウスの法則
+PowerPoint収録内容:
+- 16:9、全5スライド
+- 電荷分布・対称性から解法を選ぶ導入
+- 点電荷の電界、ベクトル合成、`F=qE`
+- 電束密度 `D=εE`、ガウスの法則、包有電荷 `Q_enc`
 - 一様帯電球・球殻の領域別電界
-- 無限長線電荷・同軸円筒の電界
-- 電位差の積分・電位傾度
-- 球殻で領域をまたぐ電位積分
-- 全問の正答、途中式、理由、単位、典型ミスを含む完全解説
-- 一次理論6問・21小問への過去問対応表
+- 無限長線電荷・円筒ガウス面、`E=λ/(2πεr)`
+- 架線を線電荷とみなす教育用簡略モデル
+- 電位差 `V_A-V_B=-∫E·dl`、`E=-dV/dr`、線電荷の有限基準半径
+- 一次理論6問・21小問へ接続する解法フローと過去問マッピング
 
-A4縦5ページ。全5ページを130 dpiでレンダリングし、文字切れ・重なり・欠落・破損グリフがないことを確認した。
+全5スライドをレンダリングして目視確認し、文字切れ・重なり・欠落・破損グリフがないことを確認した。`slides_test.py` のoverflow検査もPASS。
 
-既存EXAM_ALIGNMENTの二次試験確認結果を維持し、直接対応問題がないため記述式を数合わせで追加していない。実在架線の未確認値は使用していない。影像法、静電容量、誘電体、静電エネルギー、絶縁設計等は追加していない。
+既存EXAM_ALIGNMENTの範囲を維持し、影像法、静電容量、誘電体、静電エネルギー、絶縁設計等は追加していない。二次試験は直接対応問題がないという既存判断を変更していない。実在架線の未確認値は使用していない。
 
 ## 判定
 
-Topic 03は `topic_03_practice_pdf_complete`。まだ `completed` ではない。完成数は `2 / 21` のまま。次工程は解説画像PowerPoint。
+Topic 03は `topic_03_powerpoint_complete`。まだ `completed` ではない。完成数は `2 / 21` のまま。次工程は公式過去問の教材のみでの完成後独立再解答。

@@ -8,11 +8,11 @@ Topic 01 `25kV架線を一つの等価回路にする` は `completed`。
 
 Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は `completed`。
 
-Topic 03 `25kV架線の周囲にはどんな電界ができる？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDFまで完了。
+Topic 03 `25kV架線の周囲にはどんな電界ができる？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPointまで完了。
 
 完成数: `2 / 21`
 
-current_status: `topic_03_practice_pdf_complete`
+current_status: `topic_03_powerpoint_complete`
 
 active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 
@@ -30,7 +30,7 @@ active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 - H23 問1 (1)〜(3): 円筒ガウス面、電位の積分、最大電界
 - H21 問1 (1)〜(5): クーロン力、電界合成、電界0条件
 
-公式問題・公式解答で対象と正答を照合済み。完成後独立再解答は教材完成後に実施する。
+公式問題・公式解答で対象と正答を照合済み。完成後独立再解答は未実施。
 
 二次試験も確認対象に含めたが、本Topicの固定範囲だけで静電界解析を直接問う問題は今回確認した範囲では採用しない。`MASTER_SPEC.md` の `08 理論・二種` は一次中心・無理に二次形式を付けないという原則に従う。
 
@@ -64,8 +64,29 @@ PDF:
 - 影像法、静電容量、誘電体、静電エネルギー、絶縁設計等の追加なし
 - A4縦5ページ、全5ページ130 dpi表示QA PASS
 
+## Topic 03 解説画像PowerPoint
+
+PowerPoint:
+`topics/03_catenary_electric_field/03_catenary_electric_field_images.pptx`
+
+- 16:9、全5スライド
+- 電荷分布・対称性から点電荷／球対称／円筒対称の解法を選ぶ導入
+- 点電荷の電界、成分分解・ベクトル合成、`F=qE`
+- `D=εE`、ガウスの法則、包有電荷 `Q_enc`
+- 一様帯電球・球殻の領域別電界
+- 無限長線電荷の円筒ガウス面と `E=λ/(2πεr)`
+- 25 kV架線を線電荷とみなす教育用簡略モデル
+- 電位差の積分、`E=-dV/dr`、線電荷の有限基準半径
+- 一次理論6問・21小問への解法フローと過去問マッピング
+- 実在架線の未確認値なし
+- SPEC外論点の追加なし
+- 全5スライドレンダリング目視QA PASS
+- `slides_test.py` overflow検査 PASS
+
 ## 次に行うこと
 
-Topic 03の解説画像PowerPointを、`03_catenary_electric_field.md` と `03_catenary_electric_field_practice.md` を正本として作成する。
+Topic 03の完成後独立再解答を実施する。
 
-一次理論6問・21小問で要求される球対称・円筒対称・点電荷ベクトル合成・電位積分へ接続する図に限定し、影像法、静電容量、誘電体等のSPEC外論点を追加しない。
+`03_catenary_electric_field.md`、`03_catenary_electric_field_practice.md`、解説PDF、練習PDF、解説画像PowerPointだけを教材として使い、EXAM_ALIGNMENTで固定した一次理論6問・21小問を保存済み正答を見ずに解く。教材外知識で補完せず、各小問について使用した教材内の節・式・解法を記録する。
+
+独立再解答が全件PASSするまではTopic 03を `completed` にしない。影像法、静電容量、誘電体等のSPEC外論点を追加しない。
