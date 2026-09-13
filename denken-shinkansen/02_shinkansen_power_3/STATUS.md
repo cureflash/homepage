@@ -4,20 +4,20 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_04_source_status_synced`
-- last_completed_topic: `03 JR東日本はなぜ火力発電所まで持っている？`
-- active_topic: `04 東京―佐世保「原子力新幹線」`
-- next_start: Topic 04の最終QAを再判定し、全品質ゲートPASSの場合のみ `completed` にする
+- exam_aligned_completed_topics: 4 / 16
+- current_status: `topic_04_completed`
+- last_completed_topic: `04 東京―佐世保「原子力新幹線」`
+- active_topic: `05 新幹線を再エネだけで走らせられる？`
+- next_start: Topic 05の制作前EXAM_ALIGNMENT。公式過去問を先に調査し、SPEC固定範囲だけで品質ゲート対象を確定する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
 - [x] 02 上越新幹線を水の力で走らせる — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QAまで完了
 - [x] 03 JR東日本はなぜ火力発電所まで持っている？ — EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QA PASS
-- [ ] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、source進捗記録同期まで完了。次は最終QA再判定
+- [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、source進捗同期、最終QA PASS
 - [ ] 05〜16 — 未完了
 
-## Topic 04 現在地
+## Topic 04 完了記録
 source: `topics/04_nuclear_power/04_nuclear_power.md`
 
 品質ゲート対象は固定済みの公式過去問6問。
@@ -30,24 +30,22 @@ source: `topics/04_nuclear_power/04_nuclear_power.md`
 6. H21 電力 問4 — 原子力発電と汽力発電の対応、原子炉、U-235/U-238、濃縮燃料
 
 ### 完成済み成果物
-- source Markdown: `topics/04_nuclear_power/04_nuclear_power.md` — 現行成果物・独立再解答6/6 PASSへ進捗記録同期済み
+- source Markdown: `topics/04_nuclear_power/04_nuclear_power.md`
 - 解説PDF: `topics/04_nuclear_power/04_nuclear_power_explanation.pdf` — A4縦4ページ、全ページ表示QA PASS
 - 練習PDF: `topics/04_nuclear_power/04_nuclear_power_practice.pdf` — A4縦6ページ、12問、全ページ表示QA PASS
 - 解説画像PowerPoint: `topics/04_nuclear_power/04_nuclear_power_images.pptx` — 16:9・2枚、固定6過去問の要求事項を収録し、全スライド表示QA・境界外はみ出し・ZIP整合性 PASS
 - PowerPoint QA: `topics/04_nuclear_power/04_nuclear_power_powerpoint_qa.md`
 - 完成後独立再解答: `topics/04_nuclear_power/04_nuclear_power_independent_reanswer.md` — `(2),(4),(3),(2),(1),(2)`、公式解答と6/6一致、教材外知識補完0件
-- 最終QA: `topics/04_nuclear_power/04_nuclear_power_final_qa.md` — 前回判定 `NEEDS_REVISION`。source進捗不整合を解消したため次段階で再判定する
-
-PowerPointではJAEA一次資料で確認済みの「むつ」実在値とSPEC固定の架空列車部分を分離した。未確認の列車発電端出力・走行性能は真値化していない。
+- 最終QA: `topics/04_nuclear_power/04_nuclear_power_final_qa.md` — `PASS / completed`
 
 固定範囲外の新型炉、核燃料サイクル、放射線分類・遮蔽、安全法規、詳細燃料加工は追加していない。
 
-完成後独立再解答は6/6 PASS。教材だけで必要公式・判断根拠・選択肢を確定でき、教材外知識の補完は0件だった。
+JAEA一次資料で確認済みの「むつ」実在値とSPEC固定の架空列車部分を分離し、未確認の列車発電端出力・走行性能は真値化していない。
 
-前回最終QAで唯一FAILだった `04_nuclear_power.md` の進捗記録不整合を修正した。冒頭状態、`### 独立再解答`、`## 次段階` を現行成果物へ同期し、教材本文・EXAM_ALIGNMENT・PDF・PowerPoint・問題内容・固定範囲は変更していない。
+前回最終QAで唯一FAILだったsource進捗不整合は解消済み。再判定で必須成果物、EXAM_ALIGNMENT、独立再解答、範囲境界、source進捗整合が全件PASSとなったためTopic 04を `completed` とした。
 
 ## Topic 03
 Topic 03は最終QA PASSで `completed`。最終QA記録: `topics/03_thermal_power/03_thermal_power_final_qa.md`。
 
 ## 次
-Topic 04の最終QAを再判定する。必須成果物、EXAM_ALIGNMENT、独立再解答、範囲境界、source進捗整合を再確認し、全件PASSの場合のみTopic 04を `completed` とする。完成数はそれまで3/16のままとする。
+Topic 05「新幹線を再エネだけで走らせられる？」の制作前EXAM_ALIGNMENTから開始する。本文や成果物を先に作らず、公式過去問を調査してSPEC固定範囲内の品質ゲート対象を確定する。完成数は `4 / 16`。
