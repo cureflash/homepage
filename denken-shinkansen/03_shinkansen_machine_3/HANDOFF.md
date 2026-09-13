@@ -6,24 +6,21 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は3/16。Topic 01〜03は品質ゲートPASSでcompleted。active topicは04 `300系でモーターが全部変わった`。
 
 ## 今回進捗
-Topic 04を1段階進め、解説画像PowerPoint `topics/04_induction_motor/04_induction_motor_images.pptx` を作成した。
+Topic 04を1段階進め、完成後独立再解答を実施した。
 
-16:9・4枚で、系列SPECと確定済みEXAM_ALIGNMENTの固定範囲だけを図解した。
+保存済み正答・公式解答を先に見ず、完成教材だけでEXAM_ALIGNMENTの選定5問を解答し、答案確定後に公式解答と照合した。
 
-- Slide 1: 直流主電動機から三相誘導電動機への転換、固定子・回転子・回転磁界、`Ns`・`s`・`f2`
-- Slide 2: 同期速度→滑り→二次周波数の解法手順、`E2s=sE20`、典型ミス
-- Slide 3: `P1 → P2 → Pm → Pout`、二次銅損・効率、実角速度・同期角速度とトルク
-- Slide 4: 選定5過去問の要求事項マッピングとTopic 04範囲境界
+結果: `5 / 5 PASS`
 
-全4枚をレンダリングして文字切れ・意図しない重なりがないことを確認し、`slides_test.py` ではスライド境界外はみ出し0。PPTX ZIP整合性もPASS。
+- R8上 機械 問4 → 導出 `(3)` / 公式 `(3)` PASS
+- R6下 機械 問4 → 導出 `(3)` / 公式 `(3)` PASS
+- R5上 機械 問3 → 導出 `(5)` / 公式 `(5)` PASS
+- R5上 機械 問4 → 導出 `(2)` / 公式 `(2)` PASS
+- R1 機械 問3 → 導出 `(3)` / 公式 `(3)` PASS
 
-PowerPoint上の過去問対応は以下。
+答案列は `3 / 3 / 5 / 2 / 3`。教材外知識による補完 `0件`、固定範囲外論点の追加 `0件`。使用公式・途中式・正答理由を教材内から再構成できた。
 
-- R8上 機械 問4 → Slide 1・3
-- R6下 機械 問4 → Slide 3
-- R5上 機械 問3 → Slide 1・2
-- R5上 機械 問4 → Slide 2・3
-- R1 機械 問3 → Slide 2・3
+詳細は `topics/04_induction_motor/04_induction_motor_independent_reanswer.md` に記録済み。
 
 ## EXAM_ALIGNMENT
 選定は変更していない。
@@ -45,9 +42,10 @@ PowerPoint上の過去問対応は以下。
 - `topics/04_induction_motor/04_induction_motor_practice.md` — 12問、完全解説付き、選定5問マッピング済み
 - `topics/04_induction_motor/04_induction_motor_practice.pdf` — A4縦6ページ、表示QA・文字抽出QA PASS
 - `topics/04_induction_motor/04_induction_motor_images.pptx` — 16:9・4枚、全スライド表示QA・はみ出し検査・ZIP整合性PASS
+- `topics/04_induction_motor/04_induction_motor_independent_reanswer.md` — 完成後独立再解答5/5 PASS
 
 ## QA判定
-Topic 04は `IN_PROGRESS`。必須4成果物は揃ったが、完成後独立再解答が未完了。完成数3/16据え置き。
+Topic 04は `IN_PROGRESS`。必須成果物と完成後独立再解答 `5 / 5 PASS` まで完了。最終QA未完了のため完成数3/16据え置き。
 
 ## 次の正確な開始点
-Topic 04の完成後独立再解答を実施する。保存済み正答を先に見ず、選定5問を完成教材だけで解き、正答根拠を教材内から再構成できることを確認する。
+Topic 04の最終QAを実施する。必須成果物の実在と内容整合、EXAM_ALIGNMENTの選定5問固定、完成後独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、固定範囲外追加0件、source・STATUS・HANDOFFの進捗整合を確認し、全件PASSの場合のみ `completed` とする。
