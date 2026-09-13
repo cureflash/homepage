@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 4 / 21
-- current_status: `topic_05_explanation_source_complete`
+- current_status: `topic_05_explanation_pdf_complete`
 - last_completed_topic: `04 架線と車体は巨大なコンデンサなのか？`
 - active_topic: `05 0系主変圧器の鉄心には何が起きている？`
-- next_start: Topic 05の解説本文＋3段階例題を解説PDF化し、全ページ表示QAを行う。固定EXAM_ALIGNMENT一次5問・16小問、二次非採用判断、固定範囲を変更しない
+- next_start: Topic 05の練習問題source＋練習PDFを作成する。固定EXAM_ALIGNMENT一次5問・16小問、二次非採用判断、固定範囲を変更しない
 
 ## Topic 05 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -33,7 +33,7 @@
 - [x] 制作前EXAM_ALIGNMENT
 - [x] 解説本文
 - [x] 3段階例題
-- [ ] 解説PDF＋表示QA
+- [x] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
@@ -41,19 +41,16 @@
 
 ## 今回進めた内容
 
-Topic 05の解説本文＋3段階例題を完成した。
+Topic 05の解説PDFを完成した。
 
-- `H` / `B` / `Φ`、透磁率、アンペアの周回積分を整理
-- 無限長直線電流・一様電流密度の円柱導体を導出
-- 起磁力、磁気抵抗、磁気回路、環状鉄心の厳密積分と近似を説明
-- 空隙を含む直列磁気回路を説明
-- B-H曲線、磁気飽和、残留磁束密度、保磁力、ヒステリシス損を説明
-- 線形媒質の磁気エネルギー密度と体積積分を説明
-- 基礎／本試験標準／複合・ひっかけの3段階例題を追加
-- 固定一次5問・16小問を本文・例題へ全件マッピング
+- `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit_explanation.pdf`
+- A4縦6ページ
+- 全6ページを200 dpiでレンダリングし、表示QA PASS
+- 文字抽出で置換文字0件を確認
+- 固定一次5問・16小問の本文対応を維持
+- R7〜R5二次に直接対応がないため、二次数合わせは行っていない
 - 変圧器等価回路、自己／相互インダクタンス、電磁誘導、同期機特性、表皮効果の追加: 0件
-- source: `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit.md`
 
 ## 判定
 
-Topic 05は `IN_PROGRESS / explanation_source_complete`。完成数は `4 / 21` のまま。次は解説PDF＋全ページ表示QA。
+Topic 05は `IN_PROGRESS / explanation_pdf_complete`。完成数は `4 / 21` のまま。次は練習問題source＋練習PDF。
