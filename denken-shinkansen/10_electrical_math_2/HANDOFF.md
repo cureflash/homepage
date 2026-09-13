@@ -8,11 +8,11 @@ Topic 01 `複素数・複素指数・フェーザ計算` は `completed`。
 
 Topic 02 `ベクトルと座標変換` は `completed`。
 
-Topic 03 `偏微分・全微分` は解説PDFまで完了。
+Topic 03 `偏微分・全微分` は練習PDFまで完了。
 
 完成数: `2 / 20`
 
-current_status: `topic_03_explanation_pdf_complete`
+current_status: `topic_03_practice_pdf_complete`
 
 active_topic: `03 偏微分・全微分`
 
@@ -42,20 +42,21 @@ R7・R6の二次「電力・管理」「機械・制御」も確認したが、�
 
 ## 今回追加した成果物
 
-`topics/03_partial_total_differentials/03_partial_total_differentials_explanation.pdf`
+`topics/03_partial_total_differentials/03_partial_total_differentials_practice.pdf`
 
-- A4縦6ページ
-- source固定範囲のみ
-- 3段階例題を収録
-- 選定5問・16小問の対応表を収録
-- 頻出ミス、標準解法、公式・解法まとめを収録
-- 未確認の実車値・特性式・感度係数は追加していない
+- A4縦6ページ・全12問
+- 問1〜8: 二種一次理論を意識した五肢択一
+- 問9〜12: 本試験標準〜複合の記述計算
+- 全問に使用式、適用理由、代入、中間値、最終値、検算を付した
+- 偏微分、全微分、全時間微分、一次近似、絶対感度・相対感度を演習化
+- 選定5問・16小問の要求知識を維持
+- Topic 04/07/11/18/19の後続論点、未確認の実車値・特性式・感度係数は追加していない
 
-全6ページをレンダリングし、文字欠け、重なり、はみ出し、空白ページなし。主要節・数式・過去問対応表も全ページで確認済み。
+全6ページを180 dpiでレンダリングし、文字欠け、重なり、はみ出し、黒塗り、空白ページなしを確認済み。
 
 ## 次に行うこと
 
-Topic 03の練習PDF（解答・完全解説付き）を作成する。
+Topic 03の解説画像PowerPointを作成する。
 
 固定範囲と過去問対応を維持し、次を追加しない。
 
@@ -65,4 +66,4 @@ Topic 03の練習PDF（解答・完全解説付き）を作成する。
 - Topic 18・19の反復計算・最適化
 - 未確認の新幹線実車値・特性式・感度係数
 
-練習PDF後もTopic 03は未完了。解説画像PowerPoint、教材のみでの完成後独立再解答、最終QA PASSが残る。
+PowerPoint後もTopic 03は未完了。教材のみでの完成後独立再解答、最終QA PASSが残る。
