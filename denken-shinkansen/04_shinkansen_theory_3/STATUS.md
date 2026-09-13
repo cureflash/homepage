@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
-- exam_aligned_completed_topics: 2 / 14
-- current_status: `topic_03_independent_reanswer_complete`
-- last_completed_topic: `02 なぜ新幹線は25,000Vなのか`
-- active_topic: `03 架線はただの銅線ではない`
-- next_start: Topic 03の最終QAを実施し、全成果物・EXAM_ALIGNMENT・独立再解答結果を確認してcompleted可否を判定する
+- exam_aligned_completed_topics: 3 / 14
+- current_status: `topic_03_completed`
+- last_completed_topic: `03 架線はただの銅線ではない`
+- active_topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
+- next_start: Topic 04の制作前EXAM_ALIGNMENTを実施し、系列SPECの固定範囲だけで公式理論過去問・参考教材・教材必須説明を確定する
 
 ## Topic 01 進捗
 
@@ -43,26 +43,26 @@
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答
-- [ ] 最終QA
+- [x] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 03 `架線はただの銅線ではない` を1段階進め、完成教材だけを根拠に選定済み公式過去問6問を独立再解答した。公式解答は解答確定後に開いて照合した。
+Topic 03 `架線はただの銅線ではない` の最終QAを実施した。
 
 追加成果物:
-- 独立再解答記録: `topics/03_catenary_resistance/03_catenary_resistance_exam_recheck.md`
+- `topics/03_catenary_resistance/03_catenary_resistance_final_qa.md`
 
-独立再解答結果:
-- 令和8年度上期 理論 問7: `(4)` / 公式 `(4)`
-- 令和7年度下期 理論 問5: `(1)` / 公式 `(1)`
-- 令和6年度下期 理論 問7: `(4)` / 公式 `(4)`
-- 令和5年度上期 理論 問7: `(3)` / 公式 `(3)`
-- 令和4年度下期 理論 問7: `(2)` / 公式 `(2)`
-- 令和2年度 理論 問5: `(4)` / 公式 `(4)`
-- 一致: `6 / 6`
-- 教材外知識の補完が必要な問題: `0`
+最終QA結果:
+- 必須成果物実在: PASS
+- 公式過去問6問のEXAM_ALIGNMENT: PASS
+- 解説PDF: A4縦3ページ、既実施200 dpi全ページ表示QA PASS、現行blob一致
+- 練習PDF: A4縦6ページ、15問（基礎4 / 標準8 / 複合・応用3）、全問五肢択一・完全解説、既実施200 dpi全ページ表示QA PASS、現行blob一致
+- PowerPoint: 16:9・7枚、全スライド表示QA・overflow検査 PASS、現行blob一致
+- 未確認実車値の真値化: 0件
 - SPEC範囲外の仕様追加: なし
+- 完成後独立再解答: `6 / 6 PASS`
+- 教材外知識補完: `0件`
 
 ## 判定
 
-Topic 03は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。過去問対応品質ゲートの独立再解答段階はPASSしたが、最終QA未実施のため完成数は `2 / 14` のまま。次工程は最終QA。
+Topic 03は `COMPLETED`。完成数を `3 / 14` とし、active topicをTopic 04 `25,000Vでなぜ車体へ電気が飛ばない？` へ移す。
