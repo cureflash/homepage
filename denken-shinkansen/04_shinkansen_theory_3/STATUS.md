@@ -1,15 +1,15 @@
 # STATUS - 新幹線・電験三種「理論」
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 3 / 14
-- current_status: `topic_04_explanation_pdf_complete`
+- current_status: `topic_04_practice_pdf_complete`
 - last_completed_topic: `03 架線はただの銅線ではない`
 - active_topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
-- next_start: Topic 04の確定済みEXAM_ALIGNMENTと解説本文を基に、練習問題source・練習PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 04の確定済みEXAM_ALIGNMENT・解説・練習成果物を基に、解説画像PowerPointを作成して表示QA・overflow検査を行う
 
 ## Topic 01 進捗
 
@@ -56,30 +56,36 @@
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source・練習PDF
+- [x] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の解説PDFを完成した。
+Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の練習問題source・練習PDFを完成した。
 
 更新成果物:
-- `topics/04_electric_field_capacitance/04_electric_field_capacitance_explanation.pdf`
+- `topics/04_electric_field_capacitance/04_electric_field_capacitance_practice.md`
+- `topics/04_electric_field_capacitance/04_electric_field_capacitance_practice.pdf`
+
+練習仕様:
+- 全15問、全問五肢択一
+- 基礎4問（26.7%）/ 本試験標準8問（53.3%）/ 複合・応用3問（20.0%）
+- 確定済み6公式過去問の要求事項を全件マッピング
+- 各問に使用式、理由、代入・中間計算、単位、検算または重要誤答理由を収録
 
 PDF仕様・QA:
-- A4縦 6ページ
-- 確定済みsourceの本文、3段階例題、6公式過去問への対応、公式・解法まとめを収録
-- 200 dpiで全6ページをレンダリングし、文字欠け・数式欠け・重なり・ページ外はみ出しなしを確認
-- 文字抽出で置換文字0件、例題1〜3・過去問対応・新幹線への接続・静電エネルギー節の存在を確認
+- A4縦 4ページ
+- 200 dpiで全4ページをレンダリングし、文字欠け・数式欠け・重なり・ページ外はみ出しなしを確認
+- 文字抽出で置換文字0件
 
 境界は維持:
 - 電束密度・ガウスの法則は追加しない
 - 絶縁破壊電界、必要離隔距離、沿面距離、アーク、絶縁協調は追加しない
-- RC過渡、容量性リアクタンス、RLC・交流位相は後続Topicへ送る
+- RC過渡、容量性リアクタンス、RLC・交流位相は追加しない
 - 未確認の実車静電容量・電界強度・碍子寸法等を真値化しない
 
 ## 判定
 
-Topic 04は `EXPLANATION_PDF_COMPLETE`。完成数は `3 / 14` のまま。次工程は練習問題source・練習PDF＋全ページ表示QA。
+Topic 04は `PRACTICE_PDF_COMPLETE`。完成数は `3 / 14` のまま。次工程は解説画像PowerPoint＋表示QA・overflow検査。
