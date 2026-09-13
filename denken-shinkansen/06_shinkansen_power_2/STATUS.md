@@ -7,8 +7,37 @@
 - exam_aligned_completed_topics: `2 / 22`
 - last_completed_topic: `02 信濃川の水で新幹線を何本走らせられる？`
 - active_topic: `03 川崎発電所は新幹線の負荷変動に追従できる？`
-- current_status: `topic_03_not_started`
-- next_start: Topic 03 の固定範囲を確認し、二種一次・二次を含む公式過去問を直近年度から調査して制作前EXAM_ALIGNMENTを作成する
+- current_status: `topic_03_exam_alignment_complete`
+- next_start: Topic 03 の選定公式過去問5問を問題PDFだけで独立に解き、その後に公式解答と照合する制作前独立検証
+
+## Topic 03 品質ゲート
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] Topic 03固定範囲を確認し、範囲追加なし
+- [x] 二種一次3問＋二次2問、計5問を正式選定
+- [x] 二次論説記述2問を含む
+- [x] 直近年度から候補を確認し、固定範囲外問題を除外
+- [x] e-sysnetを含む複数系統の参考教材を確認
+- [x] 制作前EXAM_ALIGNMENT作成
+- [x] 過去問要求事項から本文節マッピング作成
+- [ ] 制作前独立検証・公式解答照合
+- [ ] 解説本文＋3段階例題
+- [ ] 練習問題＋完全解説
+- [ ] 練習問題独立QA
+- [ ] 解説PDF
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後独立再解答
+- [ ] 最終QA PASS
+
+正式対象:
+- R3 一次 電力 問5
+- H29 二次 電力・管理 問1
+- R1 二次 電力・管理 問1
+- H27 一次 電力 問1
+- H25 一次 電力 問1
+
+記録:
+- `topics/03_thermal_power/03_thermal_power.md`
 
 ## Topic 02 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -63,4 +92,4 @@
 `completed`。最終QA PASS、完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0件`。
 
 ## 次
-Topic 03 `川崎発電所は新幹線の負荷変動に追従できる？` の制作前EXAM_ALIGNMENTから開始する。系列SPECの固定範囲を上限とし、二種一次・二次を含む過去問対応品質ゲートを先に確定する。
+Topic 03 の制作前独立検証を行う。正式選定5問を公式問題PDFだけで先に解き、解答根拠を記録してから公式解答と照合する。`5 / 5 PASS` を確認するまで解説本文へ進まない。
