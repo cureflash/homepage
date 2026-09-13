@@ -1,20 +1,20 @@
 # STATUS - 新幹線車両・電験二種
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 3 / 39
-- current_status: `topic_04_explanation_pdf_complete`
+- current_status: `topic_04_practice_source_complete`
 - last_completed_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
 - active_topic: `04 0系④ タップ制御と加速特性`
-- next_start: Topic 04の固定範囲とEXAM_ALIGNMENTだけを使って練習問題・完全解説sourceを作成する
+- next_start: Topic 04の練習問題・完全解説sourceだけを使って練習PDFを作成し、全ページ表示QAを行う
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
-- [ ] 04 0系④ タップ制御と加速特性 — EXAM_ALIGNMENT、解説本文、3段階例題、指定4グラフ、解説PDF、全4ページ表示QAまで完了。練習問題以降は未完了
+- [ ] 04 0系④ タップ制御と加速特性 — EXAM_ALIGNMENT、解説本文、3段階例題、指定4グラフ、解説PDF、練習問題・完全解説sourceまで完了。練習PDF以降は未完了
 
 ## Topic 04 現在地
 source:
@@ -27,6 +27,15 @@ source:
 - SPEC指定4グラフを収録。未確認実車値を使わず、模式図または一定磁束局所近似として明示
 - 基礎・本試験標準・複合の3段階例題を収録
 - 全4ページVisual QA: PASS（欠け・重なり・黒四角・グラフ欠落なし）
+
+練習問題source:
+- `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_practice_source.md`
+- 一次試験型8問: 全問五肢択一
+- 二次試験型4問: 途中式・前提・単位・理由説明を含む記述式
+- 合計12問、全問完全解説付き
+- 計算独立再確認: `12 / 12 PASS`
+- 選定4過去問の固定範囲と、起動電流・始動過渡・直巻始動トルク・必要電圧逆算・けん引力・簡略加速を練習可能にした
+- 範囲外論点・未確認0系実値の追加なし
 
 系列SPECの固定範囲:
 - タップ切替
