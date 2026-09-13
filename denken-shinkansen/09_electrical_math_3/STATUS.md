@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 3 / 12
-- current_status: `topic_04_powerpoint_complete`
+- current_status: `topic_04_exam_reanswer_complete`
 - last_completed_topic: `03 複素数`
 - active_topic: `04 極形式・フェーザ`
-- next_start: Topic 04の公式過去問を完成教材だけで独立再解答する
+- next_start: Topic 04の最終QAを行う
 
 ## Topic 04 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -21,30 +21,26 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの完成後独立再解答
+- [x] 公式過去問の教材のみでの完成後独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 04 `極形式・フェーザ` の固定範囲とEXAM_ALIGNMENTを基準に、`topics/04_polar_form_phasor/04_polar_form_phasor_images.pptx` を作成した。
+Topic 04 `極形式・フェーザ` の選定公式過去問5問・6小問を、完成教材で固定した極形式・フェーザの操作と、問題文または既習事項として固定済みの回路・機械関係だけを使って独立再解答した。
+
+再解答記録:
+`topics/04_polar_form_phasor/04_polar_form_phasor_exam_reanswer.md`
 
 確認結果:
-- 16:9、全3スライド: PASS
-- 直交形式 `a+jb` ↔ 極形式 `r∠θ` と象限確認を図示: PASS
-- 極形式の乗算・除算を図示: PASS
-- `j=1∠90°` と `jI` の+90°回転を図示: PASS
-- 正弦波の最大値・実効値・初期位相とフェーザ対応を図示: PASS
-- `sin` / `cos` の統一、進み・遅れを図示: PASS
-- `Z=V/I`、インピーダンス角、`cosφ=R/|Z|` を図示: PASS
-- フェーザ加算を直交形式へ戻して処理する手順を図示: PASS
-- 同一角周波数でのフェーザ法成立条件と異周波数成分の分離を図示: PASS
-- `25 kV∠0°` は数学例に限定し、未確認実設備値を追加していない: PASS
-- 選定5問・6小問への解法接続を維持: PASS
-- 全3スライドをレンダリングして表示確認。クリッピング、重なり、文字化けなし: PASS
-- キャンバス外はみ出し検査: PASS
-- PPTX ZIP整合性: PASS
-- 空間ベクトル、RLC共振、三相結線、力率改善、複素電力等の固定範囲外を追加していない: PASS
+- R6上 理論 問9: (2) / 公式 (2) PASS
+- R6上 理論 問15: (a)(4), (b)(3) / 公式一致 PASS
+- R5下 機械 問5: (3) / 公式 (3) PASS
+- R5上 理論 問9: (3) / 公式 (3) PASS
+- R3 理論 問8: (5) / 公式 (5) PASS
+- 公式解答一致: 5問・6小問 / 6小問 PASS
+- `sin` / `cos` 統一、最大値・実効値、`Z=V/I`、`j` の+90°回転、`cosφ=R/|Z|`、異周波数成分の分離、波形からの初期位相判定を完成教材から再現: PASS
+- 空間ベクトル、RLC共振、三相結線、力率改善、複素電力、対称座標法等の固定範囲外の新規追加: 0件
 
 ## 判定
 
-Topic 04を `topic_04_powerpoint_complete` とする。完成数は `3 / 12` のまま。次工程は公式過去問5問・6小問の完成教材だけによる独立再解答。
+Topic 04を `topic_04_exam_reanswer_complete` とする。完成数は `3 / 12` のまま。次工程は最終QAであり、まだ `completed` にはしない。
