@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 2 / 14
-- current_status: `topic_02_completed`
+- current_status: `topic_03_exam_alignment_complete`
 - last_completed_topic: `02 なぜ新幹線は25,000Vなのか`
 - active_topic: `03 架線はただの銅線ではない`
-- next_start: Topic 03の制作前EXAM_ALIGNMENTを行い、系列SPECの固定範囲内で公式過去問を直近年度から調査して教材必須説明を確定する
+- next_start: Topic 03の確定済みEXAM_ALIGNMENTに従い、解説本文と3段階例題を作成する
 
 ## Topic 01 進捗
 
@@ -47,22 +47,40 @@
 - [x] 完成後の公式過去問独立再解答
 - [x] 最終QA
 
+## Topic 03 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] GitHub上のSTATUS / HANDOFF / 既存成果物確認
+- [x] 直近年度を優先して公式理論過去問を確認
+- [x] Topic 03固定範囲でゲート対象6問を確定
+- [x] Topic 05以降へ送る境界論点を整理
+- [x] e-sysnet、電験王、電験三種まとめましたの説明粒度を確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 02 `なぜ新幹線は25,000Vなのか` を1段階進め、最終QAを完了した。
+Topic 03 `架線はただの銅線ではない` を1段階進め、制作前EXAM_ALIGNMENTを完了した。
 
-- QA記録: `topics/02_why_25kv/02_why_25kv_final_qa.md`
-- source Markdown・解説PDF・練習PDF・解説画像PowerPointの実在をGitHub正本で確認
-- 現行の解説PDF・練習PDF・PowerPointのblobが既実施表示QA対象版と一致することを確認
-- 練習PDF: 12問、全問五肢択一、完全解説、表示QA PASS
-- PowerPoint: 7枚、表示QA・overflow検査 PASS
-- 令和7年度下期 理論 問6の完成後独立再解答: `1 / 1 PASS`
-- 独立解答: `E=7.20 V`、選択肢 `(2)`、公式正答 `(2)` と一致
-- 教材外知識の補完: 0件
-- Topic 03以降の知識使用: 0件
+- source Markdown: `topics/03_catenary_resistance/03_catenary_resistance.md`
+- ゲート対象公式過去問: 6問
+  - 令和8年度上期 理論 問7
+  - 令和7年度下期 理論 問5
+  - 令和6年度下期 理論 問7
+  - 令和5年度上期 理論 問7
+  - 令和4年度下期 理論 問7
+  - 令和2年度 理論 問5
+- 固定論点: 抵抗率、導電率、長さ、断面積、直列・並列、温度係数、温度と抵抗、電圧降下、発熱
+- 近接問題のうち、キルヒホッフ則・複数電源回路・最大電力供給を必要とする問題は後続Topicへ分離
+- 公式正答は制作前sourceへ保存せず、完成後独立再解答で照合する
+- 未確認の架線実車値の真値化: なし
 - SPEC範囲外の仕様追加: なし
-- 未確認実車値の真値化: なし
 
 ## 判定
 
-Topic 02は最終QA `PASS / completed`。完成数を `2 / 14` に更新した。次工程はTopic 03「架線はただの銅線ではない」の制作前EXAM_ALIGNMENT。
+Topic 03は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `2 / 14` のまま。次工程は、確定済みsource Markdownだけを基準に解説本文＋3段階例題を作成する。
