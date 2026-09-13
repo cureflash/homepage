@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 3 / 12
-- current_status: `topic_04_exam_reanswer_complete`
+- current_status: `topic_04_final_qa_needs_revision`
 - last_completed_topic: `03 複素数`
 - active_topic: `04 極形式・フェーザ`
-- next_start: Topic 04の最終QAを行う
+- next_start: Topic 04 source Markdownの進捗記録不整合を修正する
 
 ## Topic 04 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -26,21 +26,23 @@
 
 ## 今回進めた内容
 
-Topic 04 `極形式・フェーザ` の選定公式過去問5問・6小問を、完成教材で固定した極形式・フェーザの操作と、問題文または既習事項として固定済みの回路・機械関係だけを使って独立再解答した。
-
-再解答記録:
-`topics/04_polar_form_phasor/04_polar_form_phasor_exam_reanswer.md`
+Topic 04 `極形式・フェーザ` の最終QAを実施した。
 
 確認結果:
-- R6上 理論 問9: (2) / 公式 (2) PASS
-- R6上 理論 問15: (a)(4), (b)(3) / 公式一致 PASS
-- R5下 機械 問5: (3) / 公式 (3) PASS
-- R5上 理論 問9: (3) / 公式 (3) PASS
-- R3 理論 問8: (5) / 公式 (5) PASS
-- 公式解答一致: 5問・6小問 / 6小問 PASS
-- `sin` / `cos` 統一、最大値・実効値、`Z=V/I`、`j` の+90°回転、`cosφ=R/|Z|`、異周波数成分の分離、波形からの初期位相判定を完成教材から再現: PASS
-- 空間ベクトル、RLC共振、三相結線、力率改善、複素電力、対称座標法等の固定範囲外の新規追加: 0件
+- 必須成果物5種のGitHub正本上の実在: PASS
+- 公式過去問5問・6小問のEXAM_ALIGNMENT: PASS
+- 複数系統の参考教材確認: PASS
+- 制作前独立検証: 5問・6小問 PASS
+- 完成後独立再解答: 5問・6小問 PASS
+- 固定範囲外の新規説明追加: 0件
+- `04_polar_form_phasor.md` 冒頭の状態欄: FAIL（解説本文＋3段階例題まで完了の旧記録）
+- `04_polar_form_phasor.md` 末尾の次工程欄: FAIL（次は解説PDF作成の旧記録）
+
+最終QA記録:
+`topics/04_polar_form_phasor/04_polar_form_phasor_final_qa.md`
 
 ## 判定
 
-Topic 04を `topic_04_exam_reanswer_complete` とする。完成数は `3 / 12` のまま。次工程は最終QAであり、まだ `completed` にはしない。
+Topic 04は `NEEDS_REVISION`。完成数は `3 / 12` のまま。
+
+教材内容・過去問対応品質ゲートはPASSしているが、source Markdownの進捗記録が現在地と同期していないため `completed` にはしない。次工程は状態欄と次工程欄の同期修正であり、教材内容・仕様範囲は変更しない。
