@@ -5,48 +5,38 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_03_completed`
+- current_status: `topic_04_exam_alignment_complete`
 - last_completed_topic: `03 直流モーターはどうやって速度を変える？`
 - active_topic: `04 300系でモーターが全部変わった`
-- next_start: Topic 04について公式過去問を直近年度から調査し、系列SPECの範囲内で `EXAM_ALIGNMENT` を作成する
+- next_start: Topic 04の確定EXAM_ALIGNMENTに従い、解説本文＋3段階例題を作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
-- [ ] 04〜16 — 未着手
+- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT完了、本文以降は未着手
+- [ ] 05〜16 — 未着手
 
-## 03 EXAM_ALIGNMENT対象
-1. R7下 機械 問2 — 永久磁石直流電動機、`Pcu=Ia^2Ra`、`E=V-IaRa`、一定磁束で速度比
-2. R6上 機械 問2 — 他励直流電動機の電機子電圧変更、`E=V-IaRa`、一定界磁で `E∝N`
-3. R2 機械 問1 — 電機子・界磁独立制御、`T=kΦIa`、弱め界磁
-4. R1 機械 問1 — 永久磁石直流電動機、一定トルク・一定磁束での速度計算
-5. H30 機械 問1 — 始動抵抗、逆起電力、段階的抵抗切外し
+## 04 EXAM_ALIGNMENT対象
+1. R8上 機械 問4 — かご形三相誘導電動機、同期速度、同期ワット（二次入力）、トルク・機械出力
+2. R6下 機械 問4 — 三相入力、滑り、鉄損・一次銅損・二次銅損、`Pc2=sP2`
+3. R5上 機械 問3 — 回転磁界、固定子・回転子、変圧器との対応、滑りによる二次誘導起電力
+4. R5上 機械 問4 — `Ns=120f/p`、`N=(1-s)Ns`、機械出力からトルク
+5. R1 機械 問3 — 同期速度、滑り、二次入力・二次銅損、入力・出力・効率
 
-旧選定のR4上 問1とR3 問7はTopic 03外の回生制動・誘導機／同期機始動法を含むため、教材へ仕様外論点を追加せず上記2問へ差し替えた。
+直近年度でも始動法、Y-Δ始動、インバータ/V/f制御、詳細等価回路、発電運転・用途材料などTopic 04の固定範囲外を設問全体の正答に必要とする問題は選定から除外した。教材へ仕様外論点を追加して通過させない。
 
-## 03 成果物
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md` — 新EXAM_ALIGNMENT・独立再解答結果を記録済み
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_explanation.pdf` — 新選定5問へ同期済み、A4縦4ページ、同期版の全ページ表示QA PASS
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.md` — 12問、全問五肢択一、新選定5問へ同期済み
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.pdf` — 新選定5問へ同期済み、A4縦7ページ、同期版の全ページ表示QA PASS
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_images.pptx` — 16:9、3枚。旧選定問への直接参照なし、既存表示QA・パッケージ検査PASS
+## 04 成果物
+- `topics/04_induction_motor/04_induction_motor.md` — 制作前EXAM_ALIGNMENT、公式過去問5問、参考教材、教材必須範囲、範囲境界を記録済み
+- 解説PDF — 未着手
+- 練習問題source/PDF — 未着手
+- 解説画像PowerPoint — 未着手
 
-PDF同期版は2026-09-13の既存QA済みblobをGitHub正本へ復元した。現在blob SHAは解説PDF `fcc5bfd05cda2c26171dad7204880b98d33a9541`、練習PDF `b9f974706c4ba4ee818d7aabef817854cca5ed5a`。
+## 04 品質ゲート
+`IN_PROGRESS`。独立再解答は必須4成果物完成後に実施するため未実施。完成数は3/16据え置き。
 
-## 03 完成後独立再解答
-| 過去問 | 独立再解答 | 公式解答 | 教材のみ | 判定 |
-|---|---:|---:|---|---|
-| R7下 機械 問2 | 4 | 4 | 可 | PASS |
-| R6上 機械 問2 | 2 | 2 | 可 | PASS |
-| R2 機械 問1 | 1 | 1 | 可 | PASS |
-| R1 機械 問1 | 4 | 4 | 可 | PASS |
-| H30 機械 問1 | 4 | 4 | 可 | PASS |
-
-使用した関係は `Pcu=Ia^2Ra`、`V=E+IaRa`、`E=kΦN`、`T=kΦIa`、始動時 `E=0`。全てTopic 03教材内に存在し、仕様外知識による補完は不要。
-
-## 03 QA判定
-`PASS / completed`。完成数を3/16へ更新する。
+## 03 完成記録
+Topic 03は新選定5問（R7下 問2、R6上 問2、R2 問1、R1 問1、H30 問1）を完成教材だけで再解答し5/5正答。`PASS / completed`。
 
 ## 次
-Topic 04「300系でモーターが全部変わった」を開始する。本文より先に公式過去問調査と `EXAM_ALIGNMENT` を行い、系列SPECにある誘導機範囲を越えて仕様を追加しない。
+Topic 04のsourceに確定した過去問要求だけを使い、解説本文＋基礎・本試験標準・複合の3段階例題を作る。始動法、インバータ/VVVF、回生制動等を先取りしない。
