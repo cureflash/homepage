@@ -8,15 +8,15 @@ Topic 01 `0系の主変圧器を等価回路で解剖する` は最終QAまでPA
 
 Topic 02 `0系の直流主電動機はどんな特性だった？` も最終QAまでPASSし、`completed`。
 
-完成数: `2 / 22`
+Topic 03 `0系を210km/hまで加速させる` も最終QAまでPASSし、`completed`。
 
-active topic: `03 0系を210km/hまで加速させる`
+完成数: `3 / 22`
 
-current status: `topic_03_independent_reanswer_complete`
+active topic: `04 200系のサイリスタ制御を計算する`
 
-## Topic 03 今回完了した工程
+current status: `topic_03_completed`
 
-完成済み教材だけを使う公式過去問の独立再解答を実施し、ゲート対象8小問を `8 / 8 PASS` とした。
+## Topic 03 完了内容
 
 source Markdown:
 `topics/03_0series_acceleration/03_0series_acceleration.md`
@@ -30,7 +30,10 @@ source Markdown:
 解説画像PowerPoint:
 `topics/03_0series_acceleration/03_0series_acceleration_images.pptx`
 
-## 過去問品質ゲート
+最終QA記録:
+`topics/03_0series_acceleration/03_0series_acceleration_final_qa.md`
+
+## Topic 03 過去問品質ゲート
 
 固定EXAM_ALIGNMENT:
 - H28 一次 機械 問1
@@ -42,16 +45,26 @@ source Markdown:
 一次4問＋二次記述1問、ゲート対象8小問。
 
 独立再解答結果:
-- H28 問1 (1): `T=K I_f i_a` → トルク（ト） / PASS
-- H28 問1 (2): `E=K I_f ω_m` → 誘導起電力（リ） / PASS
-- H28 問1 (3): `Jdω/dt=T-T_L` → 慣性モーメント（ヘ） / PASS
-- H28 問5 (1): 大始動トルクを得る旧来の直流鉄道用は直巻電動機（チ） / PASS
-- H26 問5 (1): 必要なのは始動時のトルク（ロ） / PASS
-- H26 問5 (2): 使用されたのは直巻電動機（リ） / PASS
-- H25 問3 (1): `P=Tω` → 回転角速度（ヨ） / PASS
-- H24 二次 問1(4): `E_1=187.5 V`、`R_a=0.500 Ω`、`E_2=125 V`、`I_a2=10 A`、`V_2=132.5 V≒133 V` / PASS
+- H28 問1 (1): トルク（ト） / PASS
+- H28 問1 (2): 誘導起電力（リ） / PASS
+- H28 問1 (3): 慣性モーメント（ヘ） / PASS
+- H28 問5 (1): 直巻電動機（チ） / PASS
+- H26 問5 (1): 始動時のトルク（ロ） / PASS
+- H26 問5 (2): 直巻電動機（リ） / PASS
+- H25 問3 (1): 回転角速度（ヨ） / PASS
+- H24 二次 問1(4): `132.5 V ≒ 133 V` / PASS
 
 公式解答・標準解答照合後も `8 / 8 PASS`。教材外のチョッパ、回生、誘導機V/f・ベクトル制御、等価RC始動過渡を補わず完答した。
+
+## Topic 03 最終QA
+
+- 必須4成果物の実在と現行blob確認: PASS
+- 解説PDF・練習PDF・PowerPointの現行blobが制作時の表示QA対象と同一: PASS
+- 代表計算の独立再計算: PASS
+- 実車値 / 一次資料からの計算値 / 教材上の仮定値の区別: PASS
+- 未確認の車輪径・主電動機回転速度・各タップ電圧を実車値化していない: PASS
+- 仕様外論点の追加なし: PASS
+- 完成後独立再解答: 8 / 8 PASS
 
 ## 0系一次資料の扱い
 
@@ -69,14 +82,19 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 03の最終QAを行う。
+Topic 04 `200系のサイリスタ制御を計算する` の制作前EXAM_ALIGNMENTを行う。
 
-確認対象:
-- source Markdown、解説PDF、練習PDF、PowerPointの内容整合
-- 固定EXAM_ALIGNMENT全8小問の教材内カバーと独立再解答8/8 PASSの記録
-- 公式・単位・途中式・成立条件
-- 実車値、資料値からの計算値、教材上の仮定値の区別
-- 仕様外論点の混入がないこと
-- 各成果物の表示・可読性の既存QA記録
+SPEC固定範囲:
+- サイリスタ
+- 制御角
+- 位相制御整流
+- 平均直流電圧
+- 電流
+- 力率
+- 高調波の基本
+- 直流主電動機との接続
+- 制御角―平均直流電圧
+- 制御角―主電動機電流
+- 制御角―トルク
 
-全項目PASSならTopic 03を `completed` とし、完成数を `3 / 22` へ進める。
+電験二種公式過去問を一次・二次合わせて原則5問以上調査し、二次記述対象が確認できる場合は少なくとも1問含める。固定範囲外は追加しない。
