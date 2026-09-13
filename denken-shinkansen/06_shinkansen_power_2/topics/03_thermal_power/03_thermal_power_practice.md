@@ -1,12 +1,12 @@
 # Topic 03 練習問題・完全解説 - 川崎発電所は新幹線の負荷変動に追従できる？
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 状態
 
-`practice_content_complete`
+`topic_03_source_status_synced`
 
-本ファイルは `03_thermal_power.md` の解説本文を正本として作成した練習プリント用sourceである。
+本ファイルは `03_thermal_power.md` の解説本文を正本として作成した練習プリント用sourceである。最終QAで指摘された進捗記録不整合を修正し、状態と次段階のみ現在地へ同期した。問題・解説・過去問対応マッピング・固定範囲は変更していない。
 
 - 全15問
 - 基礎: 4問
@@ -516,4 +516,4 @@ Topic 03 の固定範囲であるガスタービン、蒸気タービン、排�
 
 ## 次段階
 
-`topic_03_practice_independent_qa`
+`topic_03_final_qa_rerun`
