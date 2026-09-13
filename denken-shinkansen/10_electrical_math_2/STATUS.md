@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 3 / 20
-- current_status: `topic_04_exam_alignment_complete`
+- current_status: `topic_04_explanation_source_complete`
 - last_completed_topic: `03 偏微分・全微分`
 - active_topic: `04 微分による極値・最適条件`
-- next_start: Topic 04の解説本文＋3段階例題を作成する。`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions.md` の固定EXAM_ALIGNMENTだけを根拠に、一変数関数の極値、二階微分判定、パラメータ依存を、最大トルク・最大効率・最大電力・最適動作点へ接続する。多変数最適化・数値最適化は追加しない
+- next_start: Topic 04の解説PDFを作成し、全ページ表示QAを行う。source Markdownの完成本文だけを根拠にし、多変数最適化・数値最適化・反復最適化は追加しない
 
 ## Topic 04 品質ゲート進捗
 
@@ -23,7 +23,7 @@
 - [x] source Markdownへ要求知識・式・設問型・教材内必要説明を固定
 - [x] 制作前独立再導出 6問・18項目 PASS
 - [x] 公式解答・標準解答との照合 18/18一致
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -32,14 +32,16 @@
 
 ## 今回進めた内容
 
-Topic 04 `微分による極値・最適条件` の制作前EXAM_ALIGNMENTを完了し、`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions.md` を追加した。
+Topic 04 `微分による極値・最適条件` の解説本文＋3段階例題を `topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions.md` に追加した。
 
-- R8一次機械問3、R7一次機械問2、R7一次理論問5・問3、R7二次機械・制御問1、R3二次機械・制御問1を採用
-- 一変数の停留条件、二階微分判定、定義域・微分不能点、パラメータ依存を固定
-- 最大効率、最大トルク、最大電力、最小電流／最適励磁点への必要説明を固定
-- 制作前再導出18/18対象項目で公式解答・標準解答と一致
-- 多変数最適化、ラグランジュ未定乗数法、反復最適化、一般的な数値最適化を追加していない
+- 一変数の極値候補、一次微分の符号変化、二階微分判定を説明
+- 端点・定義域・微分不能点を候補に含める手順を説明
+- パラメータを固定して一変数で最適化し、最適点と最大値のパラメータ依存を分けて読む手順を説明
+- 最大電力、変圧器最大効率、誘導電動機最大トルク、同期調相機の最小電流へ接続
+- 基礎／本試験標準／複合・ひっかけの3段階例題を追加
+- 固定EXAM_ALIGNMENT 6問・18対象項目を本文へ18/18マッピング
+- 多変数最適化、ラグランジュ未定乗数法、反復最適化、一般的な数値最適化は追加していない
 
 ## 判定
 
-Topic 04は `exam_alignment_complete`。完成数は `3 / 20` のまま。次工程は解説本文＋3段階例題。
+Topic 04は `explanation_source_complete`。完成数は `3 / 20` のまま。次工程は解説PDF＋全ページ表示QA。
