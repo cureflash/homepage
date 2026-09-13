@@ -6,26 +6,23 @@
 
 ## 判定
 
-`NEEDS_REVISION`。Topic 04はまだ `completed` にしない。
+`PASS`。Topic 04を `completed` とする。
 
-教材内容、公式過去問対応、独立再解答、成果物実在はPASS条件を満たしているが、source Markdown冒頭の進捗記録が現状と不整合である。
-
-`04_extrema_optimal_conditions.md` の「状態」が現在も「解説本文＋3段階例題まで完了。PDF・練習PDF・PowerPointは未着手。」となっている一方、GitHub正本には解説PDF・練習PDF・PowerPoint・PowerPoint QA・完成後独立再解答が実在する。
-
-MASTER_SPECはGitHub正本と実在成果物で完了判定することを要求しているため、この進捗不整合を残したまま `completed` にはしない。
+前回 `NEEDS_REVISION` の唯一の要因だったsource Markdownの進捗記録不整合は解消済み。再判定時点で、必須成果物、EXAM_ALIGNMENT、独立再解答、表示QA、SPEC境界、進捗記録の整合をすべて確認した。
 
 ## 必須成果物の実在確認
 
 GitHub正本上で次を確認した。
 
-| 成果物 | blob SHA | 判定 |
-|---|---|---|
-| source Markdown | `68907d171b319d89c0794adaddc9c4f0f74f7b27` | 内容PASS / 進捗記録のみ要修正 |
-| 解説PDF | `91b8df2d9c4b9bf7178e08ffaf35569437823893` | PASS |
-| 練習PDF | `9f6fcd8b2c182b9517b89cde46464280e8c1f1a1` | PASS |
-| 解説画像PowerPoint | `6db11711bb41db9f52a2f6805213f5ac555d20e8` | PASS |
-| PowerPoint QA | `f06b11d770af3b59a77ebf09c9dda213a41b23b7` | PASS |
-| 完成後独立再解答記録 | `4744c9859255fa3e82b314868ab51f6da5bdd0b5` | PASS |
+| 成果物 | 判定 |
+|---|---|
+| source Markdown | PASS |
+| 解説PDF | PASS |
+| 練習PDF | PASS |
+| 解説画像PowerPoint | PASS |
+| PowerPoint QA | PASS |
+| 完成後独立再解答記録 | PASS |
+| 最終QA記録 | PASS |
 
 ## EXAM_ALIGNMENT確認
 
@@ -60,7 +57,7 @@ source Markdownには要求知識・式・設問型・教材内必要説明が�
 - パラメータ依存
 - 物理的定義域・端点・微分不能点の確認
 
-主要条件を確認した。
+主要条件:
 
 - 変圧器最大効率: `P_i=α^2P_{cN}=P_c`
 - 抵抗負荷最大電力: `P(R)=16R/(R+1)^2`、`R=1 Ω`
@@ -72,9 +69,10 @@ source Markdownには要求知識・式・設問型・教材内必要説明が�
 
 ## 表示・成果物整合
 
-PowerPoint QAは16:9・4枚、全スライド表示、文字切れ・重なり・文字化け、キャンバス外はみ出し、ZIP整合性をPASSしている。
-
-解説PDF・練習PDFは制作時に全ページ表示QA済みとして進捗記録され、現行成果物がGitHub正本に実在する。
+- PowerPoint: 16:9・4枚、全スライド表示、文字切れ・重なり・文字化け、キャンバス外はみ出し、ZIP整合性すべてPASS
+- 解説PDF: 制作時の全ページ表示QA PASS
+- 練習PDF: 制作時の全ページ表示QA PASS
+- source Markdown: 実成果物・独立再解答・最終QA済みの現在地へ同期済み
 
 ## 最終判定
 
@@ -84,9 +82,9 @@ PowerPoint QAは16:9・4枚、全スライド表示、文字切れ・重なり�
 - 完成後独立再解答18/18: PASS
 - 教材外知識補完0件: PASS
 - SPEC外内容の非混入: PASS
-- PowerPoint表示QA: PASS
-- source Markdown進捗記録と実成果物の整合: FAIL
+- 表示QA: PASS
+- source Markdown進捗記録と実成果物の整合: PASS
 
-判定は `NEEDS_REVISION`。
+総合判定: `PASS / completed`。
 
-次工程は `04_extrema_optimal_conditions.md` の状態記録を実成果物と独立再解答済みの現在地へ同期し、その後に最終QAを再判定する。
+次工程は Topic 05 `積分によるエネルギー計算` の制作前EXAM_ALIGNMENT。
