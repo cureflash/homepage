@@ -5,12 +5,12 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 4 / 21
-- current_status: `topic_05_exam_alignment_complete`
+- current_status: `topic_05_explanation_source_complete`
 - last_completed_topic: `04 架線と車体は巨大なコンデンサなのか？`
 - active_topic: `05 0系主変圧器の鉄心には何が起きている？`
-- next_start: Topic 05の固定EXAM_ALIGNMENT一次5問・16小問を逆算条件として、解説本文＋3段階例題を作成する。変圧器等価回路、自己／相互インダクタンス、電磁誘導、同期機特性、表皮効果は追加しない
+- next_start: Topic 05の解説本文＋3段階例題を解説PDF化し、全ページ表示QAを行う。固定EXAM_ALIGNMENT一次5問・16小問、二次非採用判断、固定範囲を変更しない
 
-## Topic 05 制作前EXAM_ALIGNMENT
+## Topic 05 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
 - [x] Topic 05固定範囲を確認
 - [x] 二種一次「理論」を直近年度優先で確認
@@ -29,17 +29,31 @@
 - [x] 二次に固定範囲の直接対応問題がないため数合わせで採用しない判断を記録
 - [x] e-sysnet・電験王の説明粒度を確認
 
+## Topic 05 制作進捗
+- [x] 制作前EXAM_ALIGNMENT
+- [x] 解説本文
+- [x] 3段階例題
+- [ ] 解説PDF＋表示QA
+- [ ] 練習問題source＋練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 05の制作前EXAM_ALIGNMENTを完成した。
+Topic 05の解説本文＋3段階例題を完成した。
 
-- 固定範囲: アンペアの周回積分、磁界、磁束密度、磁束、透磁率、起磁力、磁気抵抗、磁気回路、B-H曲線、ヒステリシス、磁気エネルギー
-- 品質ゲート対象: 一次「理論」5問・16小問
-- 公式解答照合: 全対象小問で確認済み
-- 二次R7〜R5: 固定範囲への直接対応なし、数合わせなし
-- SPEC外論点追加: 0件
+- `H` / `B` / `Φ`、透磁率、アンペアの周回積分を整理
+- 無限長直線電流・一様電流密度の円柱導体を導出
+- 起磁力、磁気抵抗、磁気回路、環状鉄心の厳密積分と近似を説明
+- 空隙を含む直列磁気回路を説明
+- B-H曲線、磁気飽和、残留磁束密度、保磁力、ヒステリシス損を説明
+- 線形媒質の磁気エネルギー密度と体積積分を説明
+- 基礎／本試験標準／複合・ひっかけの3段階例題を追加
+- 固定一次5問・16小問を本文・例題へ全件マッピング
+- 変圧器等価回路、自己／相互インダクタンス、電磁誘導、同期機特性、表皮効果の追加: 0件
 - source: `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit.md`
 
 ## 判定
 
-Topic 05は `IN_PROGRESS / exam_alignment_complete`。完成数は `4 / 21` のまま。次は解説本文＋3段階例題。
+Topic 05は `IN_PROGRESS / explanation_source_complete`。完成数は `4 / 21` のまま。次は解説PDF＋全ページ表示QA。
