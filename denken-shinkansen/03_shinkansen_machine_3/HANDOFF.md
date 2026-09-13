@@ -6,24 +6,21 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は2/16。Topic 01・02は品質ゲートPASSでcompleted。active topicは03 `直流モーターはどうやって速度を変える？`。
 
 ## 今回進捗
-Topic 03の旧EXAM_ALIGNMENTで範囲外だった2問を、教材側へ仕様外知識を追加せず公式過去問側で差し替えた。
+Topic 03の練習問題sourceに残っていた旧EXAM_ALIGNMENT参照を、新選定5問へ必要最小限で同期した。問題本文・解説は確定範囲内のため変更していない。
 
-差し替え:
-- R4上 機械 問1 → R7下 機械 問2
-- R3 機械 問7 → H30 機械 問1
+新しい対応:
+- R7下 機械 問2 → 問1・5・9。`Pcu=Ia^2Ra` から `Ra` を逆算する段階は解説本文で直接対応し、練習問題では `I^2R`、`E=V-IaRa`、永久磁石機の速度比を分割確認
+- R6上 機械 問2 → 問4・11
+- R2 機械 問1 → 問3・8・10・11・12
+- R1 機械 問1 → 問5
+- H30 機械 問1 → 問2・6・7
+- 抵抗制御の補強 → 問9
 
-新選定5問:
-1. R7下 機械 問2 — 永久磁石直流電動機。銅損から `Ra`、逆起電力、一定磁束で速度比
-2. R6上 機械 問2 — 他励直流電動機の電機子電圧変更と回転速度
-3. R2 機械 問1 — 他励電動機の電機子・界磁独立制御、トルク、弱め界磁
-4. R1 機械 問1 — 永久磁石直流電動機の電圧変更と速度
-5. H30 機械 問1 — 始動抵抗、逆起電力、段階的抵抗切外し
-
-R7下問2は `Ra=0.75 Ω`、`E=10.5 V`、`N=2625 min^-1` で選択肢4。H30問1は `R1=1.5 Ω`、速度上昇後 `E=100 V`、`R2=0.5 Ω` で選択肢4。いずれもTopic 03の確定範囲だけで解法を構成できる。
+旧選定のR4上 機械 問1、R3 機械 問7への参照は練習問題sourceから除去した。回生制動、誘導機・同期機の始動法などの仕様外論点は追加していない。
 
 GitHub正本更新:
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md` — EXAM_ALIGNMENTを新選定5問へ更新。差し替え理由・範囲確認・旧選定FAIL履歴を記録
-- `STATUS.md` — `topic_03_exam_alignment_reselected_source_updated` へ更新。完成数2/16据え置き
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.md` — EXAM_ALIGNMENT対応を新選定5問へ同期。問題本文・解説は変更なし
+- `STATUS.md` — `topic_03_practice_source_alignment_synced` へ更新。完成数2/16据え置き
 - `HANDOFF.md`
 - Webカタログは未更新。品質ゲート未通過のため登録しない
 
@@ -55,7 +52,7 @@ GitHub正本更新:
 ## 既存成果物
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md` — 新EXAM_ALIGNMENTへ更新済み
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_explanation.pdf` — A4縦4ページ、既存表示QA PASS。旧過去問対応表の同期が未実施
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.md` — 12問、全問五肢択一。問題本文は変更不要だがEXAM_ALIGNMENT対応欄の同期が未実施
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.md` — 12問、全問五肢択一。EXAM_ALIGNMENT対応を新選定5問へ同期済み。問題本文・解説は変更なし
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.pdf` — A4縦7ページ、既存表示QA PASS。対応表の同期確認が未実施
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_images.pptx` — 16:9、3枚、既存表示QA・パッケージ検査PASS。旧選定問への直接参照の有無確認が未実施
 
@@ -64,7 +61,7 @@ Topic 01: `PASS / completed`。
 
 Topic 02: `PASS / completed`。完成後独立再解答6/6正答。
 
-Topic 03: `IN_PROGRESS`。旧選定のFAIL原因だった範囲不一致を解消する新選定5問を確定し、source Markdownへ反映した。成果物内対応表の同期と新選定5問での完成後独立再解答が残るため、完成数は2/16のまま。
+Topic 03: `IN_PROGRESS`。新選定5問は確定済みで、source Markdownと練習問題sourceのEXAM_ALIGNMENT同期まで完了した。解説PDF・練習PDFの対応表同期、PowerPoint確認、新選定5問での完成後独立再解答が残るため、完成数は2/16のまま。
 
 ## 次の正確な開始点
-`03_dc_motor_speed_control_practice.md` のEXAM_ALIGNMENT対応を新選定5問へ必要最小限で修正する。続いて解説PDF・練習PDFの過去問対応表を同期し全ページ表示QA、PowerPointは旧選定問への直接参照がある場合のみ修正する。その後、新選定5問を保存済み正答を見ず完成教材だけで独立再解答し、公式解答と照合する。
+解説PDF・練習PDFの過去問対応表を新選定5問へ必要最小限で同期し、全ページ表示QAを行う。PowerPointは旧選定問への直接参照の有無だけ確認し、存在する場合のみ修正する。その後、新選定5問を保存済み正答を見ず完成教材だけで独立再解答し、公式解答と照合する。
