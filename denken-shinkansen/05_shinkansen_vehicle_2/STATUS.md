@@ -4,16 +4,42 @@
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: 2 / 39
-- current_status: `topic_03_independent_reanswer_complete`
-- last_completed_topic: `02 0系② 整流回路の波形解析`
-- active_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
-- next_start: Topic 03の最終QAを行い、全品質ゲートを満たす場合のみ`completed`にする
+- exam_aligned_completed_topics: 3 / 39
+- current_status: `topic_03_completed`
+- last_completed_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
+- active_topic: `04 0系④ タップ制御と加速特性`
+- next_start: Topic 04の制作前EXAM_ALIGNMENTを行い、系列SPECの固定範囲だけで一次・二次の公式過去問、要求知識・式・設問型・教材必須説明を確定する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
-- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF・練習問題source・練習PDF・解説画像PowerPoint完成、完成後独立再解答5/5 PASS、最終QA未実施
+- [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
+
+## Topic 03 最終QA
+最終QA記録:
+- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_final_qa.md`
+
+確認結果:
+- 必須成果物存在: PASS
+- 直近年度からの公式過去問調査: PASS
+- 一次・二次過去問マッピング: PASS
+- 二次記述式への接続: PASS
+- 解説本文・3段階例題: PASS
+- SPEC指定4グラフ: PASS
+- 練習問題の一次/二次接続: PASS
+- 解説PDF全3ページVisual QA: PASS
+- 練習PDF全9ページVisual QA: PASS
+- PowerPoint全2枚Visual QA: PASS
+- PowerPoint overflow検査: PASS
+- 完成教材だけでの独立再解答: 5/5 PASS
+- 教材外知識の補完: 0件
+- 固定範囲外論点への依存: 0件
+- 範囲逸脱: なし
+- 未確認実車値の実値化: なし
+
+二種の「原則5問以上」は、R8〜R4の公式一次「機械」を確認して固定範囲への直接対応問題がないことを記録したうえで、遡って確認できたH28一次・H24二次の直接対応部分を全件対象とした。件数合わせのために整流作用、電機子反作用、ブラシレスDC、始動過渡、チョッパ、回生を混入させていない。
+
+Topic 03を `completed` とし、完成数を `3 / 39` へ更新した。
 
 ## Topic 03 完成後独立再解答
 完成済み教材だけを使い、制作前EXAM_ALIGNMENTで固定した一次1問2小問・二次1問3小問を再解答した。
@@ -244,3 +270,5 @@ source:
 Topic 01: `PASS`。
 
 Topic 02: `PASS`。制作前EXAM_ALIGNMENT、一次・二次対応、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5、範囲・実車値確認をすべて通過。Topic 02を`completed`とし、完成数を `2 / 39` へ更新した。
+
+Topic 03: `PASS`。制作前EXAM_ALIGNMENT、一次・二次対応、解説PDF・練習PDF・PowerPointの表示QA、SPEC指定4グラフ、完成後独立再解答5/5、範囲・実車値確認をすべて通過。Topic 03を`completed`とし、完成数を `3 / 39` へ更新した。
