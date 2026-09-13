@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 4 / 22
-- current_status: `topic_05_final_qa_needs_revision`
+- current_status: `topic_05_source_progress_synced`
 - last_completed_topic: `04 200系のサイリスタ制御を計算する`
 - active_topic: `05 300系の誘導電動機を等価回路で解く`
-- next_start: Topic 05 source Markdownの旧進捗記録を現在地へ同期し、教材本文・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない
+- next_start: Topic 05の最終QAを再実施し、source Markdown同期後の整合を確認する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -86,30 +86,22 @@
 - [x] 解説画像PowerPoint
 - [x] 公式過去問の教材のみでの独立再解答: 17 / 17 PASS
 - [x] 最終QA実施: `NEEDS_REVISION`（source Markdownの旧進捗記録が残存）
-- [ ] source Markdown進捗記録の同期
+- [x] source Markdown進捗記録の同期
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 05「300系の誘導電動機を等価回路で解く」の最終QAを実施した。
+Topic 05「300系の誘導電動機を等価回路で解く」のsource Markdown進捗記録を現在地へ同期した。
 
-確認結果:
-- 必須成果物実在: PASS
-- EXAM_ALIGNMENT: 一次2問＋二次記述3問、計5問を維持
-- ゲート対象: 17小問を維持
-- 完成後独立再解答: 17 / 17 PASS
-- 教材外知識による補完: 0件
+変更内容:
+- 冒頭状態欄の「PDF・練習PDF・PowerPoint・完成後独立再解答は未実施」を削除し、既存成果物と `17 / 17 PASS` の独立再解答完了を反映
+- 末尾次工程を「解説PDF作成」から「最終QA再実施」へ更新
+- 教材本文: 変更なし
+- 固定EXAM_ALIGNMENT: 一次2問＋二次記述3問、計5問・17小問のまま
+- 例題・成果物・独立再解答結果: 変更なし
 - Topic 06の最大トルク・比例推移等の追加: 0件
 - R08一次問2の等価回路定数測定法の追加: 0件
 - R04二次問2(6)の入力力率の追加: 0件
 - 未確認300系実車値の追加: 0件
-- 解説PDF表示QA・文字抽出QA: PASS
-- 練習PDF表示QA・文字抽出QA: PASS
-- PowerPoint表示QA・overflow・ZIP整合性: PASS
-- source Markdown進捗記録の整合: FAIL
-
-source Markdown冒頭に `PDF・練習PDF・PowerPoint・完成後独立再解答は未実施`、末尾にPDF作成を次工程とする旧記録が残っているため、最終判定は `NEEDS_REVISION` とした。
-
-最終QA記録: `topics/05_300series_induction_motor_equivalent_circuit/05_300series_induction_motor_equivalent_circuit_final_qa.md`
 
 ## 判定
-Topic 05は `topic_05_final_qa_needs_revision`。完成数は `4 / 22` のまま。次工程はsource Markdown進捗記録の同期。
+Topic 05は `topic_05_source_progress_synced`。完成数は `4 / 22` のまま。次工程は最終QA再実施。
