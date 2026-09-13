@@ -5,270 +5,83 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 3 / 39
-- current_status: `topic_03_completed`
+- current_status: `topic_04_exam_alignment_complete`
 - last_completed_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
 - active_topic: `04 0系④ タップ制御と加速特性`
-- next_start: Topic 04の制作前EXAM_ALIGNMENTを行い、系列SPECの固定範囲だけで一次・二次の公式過去問、要求知識・式・設問型・教材必須説明を確定する
+- next_start: Topic 04の確定済みEXAM_ALIGNMENTだけを使って解説本文と3段階例題を作成する。0系固有のタップ方式・数値を使う場合は一次資料を先に確認する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
+- [ ] 04 0系④ タップ制御と加速特性 — EXAM_ALIGNMENT完了、教材制作未完了
 
-## Topic 03 最終QA
-最終QA記録:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_final_qa.md`
-
-確認結果:
-- 必須成果物存在: PASS
-- 直近年度からの公式過去問調査: PASS
-- 一次・二次過去問マッピング: PASS
-- 二次記述式への接続: PASS
-- 解説本文・3段階例題: PASS
-- SPEC指定4グラフ: PASS
-- 練習問題の一次/二次接続: PASS
-- 解説PDF全3ページVisual QA: PASS
-- 練習PDF全9ページVisual QA: PASS
-- PowerPoint全2枚Visual QA: PASS
-- PowerPoint overflow検査: PASS
-- 完成教材だけでの独立再解答: 5/5 PASS
-- 教材外知識の補完: 0件
-- 固定範囲外論点への依存: 0件
-- 範囲逸脱: なし
-- 未確認実車値の実値化: なし
-
-二種の「原則5問以上」は、R8〜R4の公式一次「機械」を確認して固定範囲への直接対応問題がないことを記録したうえで、遡って確認できたH28一次・H24二次の直接対応部分を全件対象とした。件数合わせのために整流作用、電機子反作用、ブラシレスDC、始動過渡、チョッパ、回生を混入させていない。
-
-Topic 03を `completed` とし、完成数を `3 / 39` へ更新した。
-
-## Topic 03 完成後独立再解答
-完成済み教材だけを使い、制作前EXAM_ALIGNMENTで固定した一次1問2小問・二次1問3小問を再解答した。
-
-独立再解答記録:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_exam_reanswer.md`
-
-結果:
-- H28 一次 機械 問1 (1): `ト`（トルク） — 公式解答一致
-- H28 一次 機械 問1 (2): `リ`（誘導起電力） — 公式解答一致
-- H24 二次 機械・制御 問1 (1): `R_a=0.500 Ω` — 公式標準解答一致
-- H24 二次 機械・制御 問1 (2): `E=188 V` — 公式標準解答一致
-- H24 二次 機械・制御 問1 (4): `V=133 V` — 公式標準解答一致
-
-判定:
-- 対象5小問: `5/5 PASS`
-- 教材外知識の補完: 0件
-- 固定範囲外論点への依存: 0件
-- 未確認の0系主電動機実値・固有仕様の追加: 0件
-
-## Topic 03 解説画像PowerPoint
-確定済みEXAM_ALIGNMENT・解説本文・練習教材の固定範囲だけを使って作成した。
-
-PowerPoint:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_images.pptx`
-- 16:9、2枚
-- 電機子電圧方程式 `V=E+I_aR_a`、`E=k_eΦω`、`T=k_tΦI_a`、`EI_a=Tω`、`I_a²R_a` を式の接続と電力・損失で図解
-- `SPEC.md` 指定4グラフ（電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点）を模式図で収録
-- H28一次の式の意味識別と、H24二次の損失→`R_a`→`E`→速度比・トルク比→新動作点の答案順を図解
-- 飽和時は `Φ∝I_f` を無条件に使わず、与えられた磁束条件を使う注意を明記
-- 図は全て自作模式図、外部画像なし
-- 全2枚Visual QA PASS
-- `slides_test.py` overflow検査PASS
-- 未確認の0系主電動機実値・固有仕様は追加していない
-- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
-
-## Topic 03 練習PDF
-確定済み練習問題sourceの問題文・選択肢・数値・解説を変更せずA4縦へ組版した。
-
-練習PDF:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_practice.pdf`
-- A4縦 9ページ
-- 一次試験型8問（全問五肢択一）＋二次試験型4問（記述式）、計12問
-- 全問に解答・完全解説を収録
-- 二次問題は使用式、前提、途中式、単位、検算を収録
-- 全9ページVisual QA PASS
-- PDF最適化前後のレンダリング差分 0ページ
-- 未確認の0系主電動機実値・固有仕様は追加していない
-- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
-
-## Topic 03 練習問題・完全解説source
-確定済みEXAM_ALIGNMENTと解説本文の固定範囲だけを使って練習問題sourceを作成した。
-
+## Topic 04 制作前EXAM_ALIGNMENT
 source:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_practice_source.md`
+- `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration.md`
 
-構成:
-- 一次試験型8問（全問五肢択一）
-- 二次試験型4問（記述式）
-- 合計12問
-- 全問に完全解説を付与
-- H28一次 機械 問1の固定範囲とH24二次 機械・制御 問1の固定範囲へ接続
-- 電機子抵抗、逆起電力、磁束、電機子電流、電磁トルク、回転速度、機械出力、銅損、効率、飽和、4指定グラフ論点を全件カバー
-- 二次問題は使用式、前提、途中式、単位、検算を明示
-- 全数値問題を電圧方程式・電力収支・速度比・トルク比で相互検算済み
-- 未確認の0系主電動機実値・固有仕様は追加していない
-- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
+系列SPECの固定範囲:
+- タップ切替
+- 主回路電圧
+- 電機子電流
+- 起動電流
+- 加速
+- けん引力
+- 速度上昇
+- 電流制限
+- 動作点移動
+- タップ条件―主回路電圧
+- タップ条件―速度トルク特性
+- 速度―けん引力
+- 時間―速度の簡略加速計算
 
-## Topic 03 解説PDF
-解説本文sourceの確定内容だけを使って解説PDFを作成した。
+選定した公式過去問:
+- H28 一次 機械 問1 — 直流電動機の始動、電圧方程式、回転運動方程式、慣性、始動電流過渡
+- H28 一次 機械 問5 — 固定範囲部分: 鉄道用直巻電動機と大始動トルク
+- H26 一次 機械 問5 — 固定範囲部分: 直流電気車の始動トルクと直巻電動機
+- H24 二次 機械・制御 問1 — 固定範囲部分(1)(2)(4): 電機子抵抗、誘導起電力、速度・トルク条件から必要端子電圧を逆算
 
-解説PDF:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_explanation.pdf`
-- A4縦 3ページ
-- 基礎・本試験標準・複合の3段階例題を収録
-- 電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点の4指定グラフを収録
-- 全3ページVisual QA PASS
-- 4グラフは条件を明記した模式図であり、実車数値特性ではない
-- 未確認の0系主電動機実値は追加していない
-- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
+制作前の公式解答照合:
+- H28 一次 機械 問1: (1)ト、(2)リ、(3)ヘ、(4)ロ、(5)ニ — 一致
+- H28 一次 機械 問5: 固定範囲(1)=チ（直巻） — 一致
+- H26 一次 機械 問5: 固定範囲(1)=ロ（始動時のトルク）、(2)=リ（直巻） — 一致
+- H24 二次 機械・制御 問1: `R_a=0.500 Ω`、`E=188 V`、`V=133 V` — 公式標準解答一致
 
-## Topic 03 解説本文source
-解説本文を完成した。制作前EXAM_ALIGNMENTで固定した範囲だけを使い、MASTER_SPECの最低構成へ対応させた。
+二種の一次・二次合計「原則5問以上」は維持するが、固定範囲へ直接接続できる公式問題として確認できたのは上記4問。件数合わせのために回生、チョッパ、VVVF、誘導機、き電等を追加しない。一次・二次双方を含み、確認できた固定範囲対応問題を全件対象とする。
 
-実装済み:
-- `V=E+I_aR_a`
-- `E=k_eΦω`
-- `T=k_tΦI_a`
-- `P_em=EI_a=Tω`
-- `P_Cu=I_a^2R_a`
-- 機械出力・損失・効率
-- 磁束一定時の速度比・トルク比
-- 飽和時は与えられた磁化特性・磁束条件を使う扱い
-- 負荷変化時の動作点追跡
-- 基礎・本試験標準・複合の3段階例題
-- 電機子電流―トルク
-- 回転速度―トルク
-- 回転速度―出力
-- 負荷変化時の動作点
-- H28一次・H24二次への解法接続
+教材必須説明として確定:
+- 停止時 `E=0` と起動電流
+- `V_a=E+I_aR_a`、`E=k_eΦω`、`T=k_tΦI_a`
+- `J dω/dt=T-T_L` による始動・加速
+- 直巻電動機の未飽和域 `Φ∝I_a` と高始動トルク
+- タップ上昇による主回路電圧・速度トルク特性・動作点の移動
+- 速度上昇→逆起電力増加→電流低下→次段への移行という電流制限の一般原理
+- 電動機トルクから車輪周けん引力への換算
+- `m_eq dv/dt=F_t-F_r` による簡略加速
+- SPEC指定4グラフ
 
-4指定グラフは数値実車特性と誤認させない模式図としてsource内へ実装した。未確認の0系主電動機実値は追加していない。始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない。
+境界:
+- 発電ブレーキ・回生はTopic 05以降
+- サイリスタ位相制御はTopic 08
+- 誘導電動機・PWM・VVVF・四象限運転はTopic 10以降
+- チョッパ制御は本テーマへ追加しない
+- 未確認の0系タップ段数・電圧・主電動機定格・歯車比・車輪径・編成質量等は実値化しない
 
-source:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque.md`
+Topic 04は `completed` ではない。完成数は `3 / 39` のまま。
 
-## Topic 03 EXAM_ALIGNMENT
-制作前EXAM_ALIGNMENTを完了した。
+## 完了済みテーマ
+### Topic 03
+- 最終QA: `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_final_qa.md`
+- 完成後独立再解答: `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_exam_reanswer.md`
+- 判定: PASS、5/5、教材外知識補完0件
 
-直近年度優先でR8〜R4の公式一次「機械」5年度分を確認したが、直流機の直接出題はなかった。公式アーカイブを遡り、系列SPECの固定範囲に直接対応する問題として次を選定した。
+### Topic 02
+- 最終QA: `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_final_qa.md`
+- 完成後独立再解答: `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
+- 判定: PASS、5/5、教材外知識補完0件
 
-- H28 一次 機械 問1 — 固定範囲対応部分(1)(2): 電磁トルク、誘導起電力、電圧方程式
-- H24 二次 機械・制御 問1 — 固定範囲対応部分(1)(2)(4): 銅損、電機子抵抗、誘導起電力、速度比、トルク比、動作点
+### Topic 01
+- 最終QAまでPASS
+- 完成後独立再解答: 6/6 PASS、教材外知識補完0件
 
-H28一次の慣性・回転運動エネルギー・始動過渡、H24二次の可逆チョッパ・通流率・回生制動は固定範囲外のため採用していない。H28一次・H24二次の固定範囲部分は制作前に独立計算・判定し、公式解答と一致した。
-
-二種の原則5問以上については、直近5年度の公式一次機械を先に調査したうえで直接対応問題が存在しないことを確認した。件数合わせのために整流作用、電機子反作用、ブラシレスDC、チョッパ、回生、始動過渡を混入させず、一次・二次双方の直接対応問題だけを採用した。
-
-確定した必須説明:
-- `V=E+I_aR_a`
-- `E=k_eΦω`
-- `T=k_tΦI_a`
-- `P_em=EI_a=Tω`
-- `P_Cu=I_a^2R_a`
-- 機械出力・損失・効率
-- 磁束一定時の速度比・トルク比
-- 飽和時は `Φ∝I_f` を無条件に使わず与条件に従う
-- 電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点の4指定グラフ
-
-source:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque.md`
-
-## Topic 02 最終結果
-制作前EXAM_ALIGNMENTで一次1問＋二次記述4問の計5問を選定し、要求事項独立検証5/5 PASS。その範囲だけを使って解説本文・3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPointを完成した。
-
-完成教材だけで選定公式過去問5問を再解答し、公式標準解答と5/5一致、教材外知識の補完0件で独立再解答ゲートPASS。最終QAでEXAM_ALIGNMENT、必須成果物、表示QA、独立再解答、範囲逸脱、未確認実車値の有無を総合確認し、PASSと判定した。
-
-最終QA記録:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_final_qa.md`
-
-独立再解答記録:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
-
-解説PDF:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_explanation.pdf`
-- A4縦 3ページ
-- 全3ページVisual QA PASS
-
-練習PDF:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_practice.pdf`
-- A4縦 8ページ
-- 一次試験型8問（全問五肢択一）＋二次試験型4問（記述式）、計12問
-- 全問に解答・完全解説を収録
-- 二次問題は途中式・前提・単位・理由説明を要求
-- 全8ページVisual QA PASS
-- 新規の0系実車値・固有回路仕様・Topic 02外論点は追加していない
-
-PowerPoint:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_images.pptx`
-- 16:9、4枚
-- 単相半波・全波整流、平均値・実効値・リプル、L/C平滑、三相6パルス、制御角α、120°交流側電流、基本波・高調波、P/Q/力率、直流偏磁、二次試験答案手順を図解
-- 図は全て自作模式図、外部画像なし
-- 全4枚Visual QA PASS
-- `slides_test.py` overflow検査PASS
-- 未確認の0系実車値、インバータ・チョッパ・速度制御等のTopic 02外論点は追加していない
-
-## Topic 02 EXAM_ALIGNMENT
-公式過去問は一次1問＋二次記述4問の計5問。
-
-- R7 二次 機械・制御 問3 — 単相ダイオードブリッジ、L/C平滑、平均値、負荷電力
-- H30 二次 機械・制御 問3 — 三相サイリスタ変換器、平均直流電圧、交流側基本波、有効・無効電力
-- H29 二次 機械・制御 問3 — 単相ダイオード整流、平均値・実効値、C/L平滑
-- H27 一次 機械 問2 — 単相半波整流、変圧器一次電流、交流条件、直流偏磁
-- H21 二次 機械・制御 問3 — 三相サイリスタ変換器、制御角、平均直流電圧、電力方向
-
-一次・二次合計5問以上、二次記述式を含める品質ゲートを満たす。
-
-## Topic 02 完成後独立再解答
-- R7 二次 機械・制御 問3 — PASS
-- H30 二次 機械・制御 問3 — PASS
-- H29 二次 機械・制御 問3 — PASS
-- H27 一次 機械 問2 — PASS
-- H21 二次 機械・制御 問3 — PASS
-
-5/5で公式標準解答と一致。途中式・積分条件・極性・単位・理想化条件を完成教材から再構成でき、教材外知識の補完は0件。
-
-## Topic 02 練習問題対応
-一次8問:
-1. 単相全波整流の平均値・実効値・抵抗負荷電力
-2. 単相半波整流の平均値・実効値
-3. L/Cの周期定常条件
-4. 三相6パルスブリッジの平均直流電圧
-5. 三相サイリスタの制御角と平均直流電圧
-6. 120°方形波電流の全実効値・基本波・高調波
-7. 基本波変位力率と総合力率
-8. 直流分と変圧器直流偏磁
-
-二次4問:
-1. 無平滑・大C・大Lの負荷電力比較
-2. 三相サイリスタ変換器の `Vdc`, `I1`, `P`, `Q1`, `I`, `λ`
-3. 制御角・直流電圧極性・電力方向
-4. 半波電流の1周期平均と変圧器直流偏磁の判定手順
-
-source:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis.md`
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_practice_source.md`
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_final_qa.md`
-
-## Topic 02 境界
-系列SPECにある「整流回路、平均値、実効値、リプル、素子電流、素子電圧、高調波、力率、交流側電流、直流側電圧」と指定グラフだけを扱った。
-
-インバータ、チョッパ、別テーマの速度制御等は追加していない。未確認の0系回路仕様・実車値を推測で実値化していない。三相サイリスタ変換器は二種過去問の一般論点であり、0系固有仕様とは扱っていない。
-
-## Topic 01 最終結果
-制作前EXAM_ALIGNMENTで選定した公式過去問は一次1問＋二次記述5問の計6問。
-
-- R7 一次 機械 問3
-- R6 二次 機械・制御 問2
-- R3 二次 機械・制御 問2
-- R2 二次 機械・制御 問2
-- H28 二次 機械・制御 問2
-- H27 二次 機械・制御 問2
-
-完成教材だけによる完成後独立再解答は6/6 PASS。公式標準解答と全問一致し、教材外知識の補完は0件。
-
-## QA判定
-Topic 01: `PASS`。
-
-Topic 02: `PASS`。制作前EXAM_ALIGNMENT、一次・二次対応、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5、範囲・実車値確認をすべて通過。Topic 02を`completed`とし、完成数を `2 / 39` へ更新した。
-
-Topic 03: `PASS`。制作前EXAM_ALIGNMENT、一次・二次対応、解説PDF・練習PDF・PowerPointの表示QA、SPEC指定4グラフ、完成後独立再解答5/5、範囲・実車値確認をすべて通過。Topic 03を`completed`とし、完成数を `3 / 39` へ更新した。
+詳細な制作履歴・式・出典・QA記録は各topicのsource、exam_reanswer、final_qaを正本とする。
