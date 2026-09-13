@@ -5,16 +5,16 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_04_final_qa_needs_revision`
+- current_status: `topic_04_source_progress_synced`
 - last_completed_topic: `03 直流モーターはどうやって速度を変える？`
 - active_topic: `04 300系でモーターが全部変わった`
-- next_start: Topic 04解説sourceの進捗不整合だけを修正する。冒頭の状態欄と末尾の独立再解答欄を現状へ同期し、仕様・本文・過去問選定・成果物内容は変更しない
+- next_start: Topic 04の最終QAを再実施する。前回指摘した解説source進捗欄2箇所の修正を確認し、必須成果物・EXAM_ALIGNMENT・独立再解答5/5・表示QA・範囲境界を再確認してPASSならcompletedにする
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
-- [ ] 04 300系でモーターが全部変わった — 必須成果物・独立再解答5/5・表示QAはPASS。解説sourceに旧進捗が残るため最終QA `NEEDS_REVISION`
+- [ ] 04 300系でモーターが全部変わった — 必須成果物・独立再解答5/5・表示QAはPASS。前回最終QAで検出した解説sourceの旧進捗2箇所を修正済み。最終QA再実施待ち
 - [ ] 05〜16 — 未着手
 
 ## 04 EXAM_ALIGNMENT対象
@@ -40,13 +40,11 @@
 - 基礎・本試験標準・複合の3段階例題
 - 選定5問の各節への対応マッピング
 
-最終QAで進捗記録の不整合を検出した。
+前回最終QAで検出した進捗記録の不整合2箇所を修正済み。
 
-- 冒頭状態欄が「解説PDF・練習問題・PowerPointは未着手」のまま
-- 末尾の独立再解答欄が「未実施」のまま
-- 実際には両PDF・PowerPoint・独立再解答5/5 PASSまで完了済み
-
-本文・式・EXAM_ALIGNMENT・範囲境界そのものには変更を要する不整合は確認していない。
+- 冒頭状態欄を、解説PDF・練習source/PDF・PowerPoint・独立再解答まで完了した現状へ同期
+- 末尾独立再解答欄を、答案列 `3 / 3 / 5 / 2 / 3`・公式照合 `5 / 5 PASS`・教材外知識補完0件・範囲外追加0件の実績へ同期
+- 本文・式・EXAM_ALIGNMENT・3段階例題・範囲境界は変更していない
 
 ## 04 解説PDF
 `topics/04_induction_motor/04_induction_motor_explanation.pdf` を作成済み。
@@ -99,7 +97,7 @@
 - 使用公式・途中式・正答理由をすべて教材内から再構成できた
 
 ## 04 成果物
-- `topics/04_induction_motor/04_induction_motor.md` — EXAM_ALIGNMENT＋解説本文＋3段階例題まで完了。ただし進捗欄2箇所が旧状態
+- `topics/04_induction_motor/04_induction_motor.md` — EXAM_ALIGNMENT＋解説本文＋3段階例題＋進捗記録同期まで完了
 - `topics/04_induction_motor/04_induction_motor_explanation.pdf` — 完了、表示QA PASS
 - `topics/04_induction_motor/04_induction_motor_practice.md` — 完了
 - `topics/04_induction_motor/04_induction_motor_practice.pdf` — 完了、表示QA・文字抽出QA PASS
@@ -107,23 +105,23 @@
 - `topics/04_induction_motor/04_induction_motor_independent_reanswer.md` — 完了、選定5問5/5 PASS
 
 ## 04 最終QA
-判定: `NEEDS_REVISION`
+前回判定: `NEEDS_REVISION`
 
-PASS確認:
+前回PASS確認:
 - 必須成果物はGitHub正本上に全件実在
 - EXAM_ALIGNMENTの選定5問はsource・練習source・独立再解答・STATUS/HANDOFFで一致
 - 完成後独立再解答は `5 / 5 PASS`、教材外知識補完0件
 - PDF/PPTXの既存表示QA記録は全件PASS
 - Topic 04固定範囲外の追加0件
 
-要修正:
-- `04_induction_motor.md` 冒頭状態欄が成果物未着手の旧記録
-- 同ファイル末尾の独立再解答欄が「未実施」の旧記録
+前回要修正だった以下2件は修正済み:
+- `04_induction_motor.md` 冒頭状態欄の旧記録
+- 同ファイル末尾の独立再解答欄の旧記録
 
-進捗記録整合が品質ゲートを満たさないため `completed` にはしない。完成数は3/16据え置き。
+最終QAの再実施前なので、まだ `completed` には変更しない。完成数は3/16据え置き。
 
 ## 03 完成記録
 Topic 03は新選定5問（R7下 問2、R6上 問2、R2 問1、R1 問1、H30 問1）を完成教材だけで再解答し5/5正答。`PASS / completed`。
 
 ## 次
-Topic 04解説sourceの進捗不整合だけを修正する。冒頭状態欄と末尾の独立再解答欄を現在地へ同期し、本文、例題、EXAM_ALIGNMENT、固定範囲、PDF/PPTXは変更しない。その後に最終QAを再実施する。
+Topic 04の最終QAを再実施する。進捗記録2箇所の修正がGitHub正本へ反映されていることを確認し、必須成果物・EXAM_ALIGNMENT・独立再解答5/5・表示QA・範囲境界が全件PASSなら `completed` にして完成数を4/16へ進める。
