@@ -5,15 +5,28 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 2 / 39
-- current_status: `topic_03_explanation_source_complete`
+- current_status: `topic_03_explanation_pdf_complete`
 - last_completed_topic: `02 0系② 整流回路の波形解析`
 - active_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
-- next_start: Topic 03の解説PDFを作成する。確定済みsourceだけを使い、3段階例題と4指定グラフをA4縦の解説プリントへ反映する
+- next_start: Topic 03の練習問題・完全解説sourceを作成する。確定済みEXAM_ALIGNMENTと解説内容だけを使い、一次試験型に加え二次記述式を含める
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
-- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source完成、解説PDF未着手
+- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF完成、練習問題未着手
+
+## Topic 03 解説PDF
+解説本文sourceの確定内容だけを使って解説PDFを作成した。
+
+解説PDF:
+- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_explanation.pdf`
+- A4縦 3ページ
+- 基礎・本試験標準・複合の3段階例題を収録
+- 電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点の4指定グラフを収録
+- 全3ページVisual QA PASS
+- 4グラフは条件を明記した模式図であり、実車数値特性ではない
+- 未確認の0系主電動機実値は追加していない
+- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
 
 ## Topic 03 解説本文source
 解説本文を完成した。制作前EXAM_ALIGNMENTで固定した範囲だけを使い、MASTER_SPECの最低構成へ対応させた。
@@ -165,7 +178,7 @@ Topic 01: `PASS`。
 
 Topic 02: `PASS`。制作前EXAM_ALIGNMENT、一次・二次対応、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5、範囲・実車値確認をすべて通過。Topic 02を`completed`とし、完成数を `2 / 39` へ更新した。
 
-Topic 03: 制作前EXAM_ALIGNMENT `PASS`。解説本文source、3段階例題、4指定グラフまで完成。テーマ自体は未完了で、完成数は `2 / 39` のまま。
+Topic 03: 制作前EXAM_ALIGNMENT `PASS`。解説本文source、3段階例題、4指定グラフ、解説PDFまで完成。解説PDF全3ページVisual QA PASS。テーマ自体は未完了で、完成数は `2 / 39` のまま。
 
 ## 次
-Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` の解説PDFを作成する。確定済みsource以外の論点や未確認実車値は追加しない。
+Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` の練習問題・完全解説sourceを作成する。確定済みEXAM_ALIGNMENTと解説内容の範囲だけを使い、一次試験型に加え二次記述式を含める。
