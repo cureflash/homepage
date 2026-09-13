@@ -5,16 +5,16 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 3 / 16
-- current_status: `topic_04_practice_pdf_complete`
+- current_status: `topic_04_powerpoint_complete`
 - last_completed_topic: `03 直流モーターはどうやって速度を変える？`
 - active_topic: `04 300系でモーターが全部変わった`
-- next_start: Topic 04の解説画像PowerPointを作成し、全スライド表示QA・はみ出し検査を行う
+- next_start: Topic 04の完成後独立再解答を、保存済み正答を先に見ず、選定5問について完成教材だけで実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
-- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。PowerPoint・完成後独立再解答は未完了
+- [ ] 04 300系でモーターが全部変わった — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。完成後独立再解答は未完了
 - [ ] 05〜16 — 未着手
 
 ## 04 EXAM_ALIGNMENT対象
@@ -68,18 +68,31 @@
 - PDF文字抽出で問1〜12、正答列 `2 / 4 / 4 / 2 / 1 / 3 / 3 / 2 / 3 / 2 / 3 / 2`、主要公式を確認
 - Topic 04固定範囲外の論点・未確認実車値は追加していない
 
+## 04 解説画像PowerPoint
+`topics/04_induction_motor/04_induction_motor_images.pptx` を作成済み。
+
+- 16:9・4枚
+- Slide 1: 直流主電動機から三相誘導電動機への転換、固定子・回転子・回転磁界、`Ns`・`s`・`f2`
+- Slide 2: 同期速度→滑り→二次周波数の解法手順、`E2s=sE20`、典型ミス
+- Slide 3: `P1 → P2 → Pm → Pout`、二次銅損・効率、実角速度・同期角速度とトルク
+- Slide 4: 選定5過去問の要求事項マッピングとTopic 04範囲境界
+- 全4枚をレンダリングし、文字切れ・意図しない重なりなしを確認
+- `slides_test.py` でスライド境界外はみ出し0、PPTX ZIP整合性PASS
+- SHA-256: `6404af4054a0f9aa46eb2d652f8eb1e3dbad2fbc5add2398fd05db86f8386c1e`
+- 始動法、Y-Δ始動、巻線形比例推移、インバータ/V/f・VVVF、ベクトル制御、回生制動、詳細等価回路、未確認実車値は追加していない
+
 ## 04 成果物
 - `topics/04_induction_motor/04_induction_motor.md` — EXAM_ALIGNMENT＋解説本文＋3段階例題まで完了
 - `topics/04_induction_motor/04_induction_motor_explanation.pdf` — 完了、表示QA PASS
 - `topics/04_induction_motor/04_induction_motor_practice.md` — 完了
 - `topics/04_induction_motor/04_induction_motor_practice.pdf` — 完了、表示QA・文字抽出QA PASS
-- 解説画像PowerPoint — 未着手
+- `topics/04_induction_motor/04_induction_motor_images.pptx` — 完了、全スライド表示QA・はみ出し検査・ZIP整合性PASS
 
 ## 04 品質ゲート
-`IN_PROGRESS`。選定5問の要求事項は解説source・解説PDF・練習問題source・練習PDFへ反映済み。PowerPoint、完成後独立再解答が未完了のため完成数は3/16据え置き。
+`IN_PROGRESS`。必須4成果物は揃った。選定5問の完成後独立再解答が未完了のため、完成数は3/16据え置き。
 
 ## 03 完成記録
 Topic 03は新選定5問（R7下 問2、R6上 問2、R2 問1、R1 問1、H30 問1）を完成教材だけで再解答し5/5正答。`PASS / completed`。
 
 ## 次
-Topic 04の解説画像PowerPointを作成する。系列SPECと確定済みEXAM_ALIGNMENTの固定範囲だけを図解し、全スライド表示QA・はみ出し検査を行う。
+Topic 04の完成後独立再解答を実施する。保存済み正答を先に見ず、選定5問を完成教材だけで解き、根拠を教材内から再構成できることを確認する。
