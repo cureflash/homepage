@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 2 / 14
-- current_status: `topic_03_exam_alignment_complete`
+- current_status: `topic_03_explanation_source_complete`
 - last_completed_topic: `02 なぜ新幹線は25,000Vなのか`
 - active_topic: `03 架線はただの銅線ではない`
-- next_start: Topic 03の確定済みEXAM_ALIGNMENTに従い、解説本文と3段階例題を作成する
+- next_start: Topic 03の確定済み解説本文sourceを基準に、解説PDFを作成して全ページ表示QAを行う
 
 ## Topic 01 進捗
 
@@ -56,7 +56,7 @@
 - [x] Topic 05以降へ送る境界論点を整理
 - [x] e-sysnet、電験王、電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
@@ -65,22 +65,20 @@
 
 ## 今回進めた内容
 
-Topic 03 `架線はただの銅線ではない` を1段階進め、制作前EXAM_ALIGNMENTを完了した。
+Topic 03 `架線はただの銅線ではない` を1段階進め、確定済みEXAM_ALIGNMENTに基づく解説本文と3段階例題をsource Markdownへ実装した。
 
 - source Markdown: `topics/03_catenary_resistance/03_catenary_resistance.md`
-- ゲート対象公式過去問: 6問
-  - 令和8年度上期 理論 問7
-  - 令和7年度下期 理論 問5
-  - 令和6年度下期 理論 問7
-  - 令和5年度上期 理論 問7
-  - 令和4年度下期 理論 問7
-  - 令和2年度 理論 問5
-- 固定論点: 抵抗率、導電率、長さ、断面積、直列・並列、温度係数、温度と抵抗、電圧降下、発熱
-- 近接問題のうち、キルヒホッフ則・複数電源回路・最大電力供給を必要とする問題は後続Topicへ分離
-- 公式正答は制作前sourceへ保存せず、完成後独立再解答で照合する
+- 6過去問の要求事項を本文節へ対応付け
+- 抵抗率・導電率、`R=ρl/S`、`mm²→m²`、直列・並列合成、未知抵抗逆算、温度係数、一定電圧時の電流変化、発熱・電力、電圧降下を説明
+- 3段階例題:
+  - 基礎: 抵抗率から導体抵抗・電圧降下・消費電力
+  - 本試験標準: 直列＋並列回路から未知抵抗と消費電力を逆算
+  - 複合・ひっかけ: 異なる温度係数の2抵抗を個別補正し、並列合成・一定電圧時の電流変化率まで計算
+- 新幹線接続は教材用仮定値の単一導体モデルに限定し、実車値とは明記して区別
+- キルヒホッフ則・複数電源回路・最大電力供給・RLC等の後続Topic論点は追加していない
 - 未確認の架線実車値の真値化: なし
 - SPEC範囲外の仕様追加: なし
 
 ## 判定
 
-Topic 03は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `2 / 14` のまま。次工程は、確定済みsource Markdownだけを基準に解説本文＋3段階例題を作成する。
+Topic 03は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `2 / 14` のまま。次工程は、このsourceだけを基準に解説PDFを作成し、全ページ表示QAを行う。
