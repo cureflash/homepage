@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 4 / 22
-- current_status: `topic_05_independent_reanswer_complete`
+- current_status: `topic_05_final_qa_needs_revision`
 - last_completed_topic: `04 200系のサイリスタ制御を計算する`
 - active_topic: `05 300系の誘導電動機を等価回路で解く`
-- next_start: Topic 05の最終QAを実施し、固定EXAM_ALIGNMENT・成果物実在・独立再解答17 / 17 PASS・仕様境界・進捗記録を確認する
+- next_start: Topic 05 source Markdownの旧進捗記録を現在地へ同期し、教材本文・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -85,26 +85,31 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 公式過去問の教材のみでの独立再解答: 17 / 17 PASS
+- [x] 最終QA実施: `NEEDS_REVISION`（source Markdownの旧進捗記録が残存）
+- [ ] source Markdown進捗記録の同期
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 05「300系の誘導電動機を等価回路で解く」の完成後独立再解答を実施し、結果をGitHub正本へ記録した。
+Topic 05「300系の誘導電動機を等価回路で解く」の最終QAを実施した。
 
-固定条件:
+確認結果:
+- 必須成果物実在: PASS
 - EXAM_ALIGNMENT: 一次2問＋二次記述3問、計5問を維持
 - ゲート対象: 17小問を維持
-- R07一次機械問2(1): PASS
-- H30一次機械問1(1)〜(5): 5 / 5 PASS
-- R07二次機械・制御問2(1): PASS
-- R04二次機械・制御問2(1)〜(5): 5 / 5 PASS
-- H28二次機械・制御問1(1)〜(5): 5 / 5 PASS
-- 合計: 17 / 17 PASS
+- 完成後独立再解答: 17 / 17 PASS
 - 教材外知識による補完: 0件
 - Topic 06の最大トルク・比例推移等の追加: 0件
 - R08一次問2の等価回路定数測定法の追加: 0件
 - R04二次問2(6)の入力力率の追加: 0件
 - 未確認300系実車値の追加: 0件
-- 独立再解答記録: `topics/05_300series_induction_motor_equivalent_circuit/05_300series_induction_motor_equivalent_circuit_independent_reanswer.md`
+- 解説PDF表示QA・文字抽出QA: PASS
+- 練習PDF表示QA・文字抽出QA: PASS
+- PowerPoint表示QA・overflow・ZIP整合性: PASS
+- source Markdown進捗記録の整合: FAIL
+
+source Markdown冒頭に `PDF・練習PDF・PowerPoint・完成後独立再解答は未実施`、末尾にPDF作成を次工程とする旧記録が残っているため、最終判定は `NEEDS_REVISION` とした。
+
+最終QA記録: `topics/05_300series_induction_motor_equivalent_circuit/05_300series_induction_motor_equivalent_circuit_final_qa.md`
 
 ## 判定
-Topic 05は `topic_05_independent_reanswer_complete`。完成数は `4 / 22` のまま。次工程は最終QA。
+Topic 05は `topic_05_final_qa_needs_revision`。完成数は `4 / 22` のまま。次工程はsource Markdown進捗記録の同期。
