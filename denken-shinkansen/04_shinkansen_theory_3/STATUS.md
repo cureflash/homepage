@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 3 / 14
-- current_status: `topic_04_source_metadata_synced`
+- current_status: `topic_04_final_qa_rerun_needs_revision`
 - last_completed_topic: `03 架線はただの銅線ではない`
 - active_topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
-- next_start: Topic 04の最終QAを再実施し、source進捗記録整合性を含む全品質ゲートを再判定する。教材本文・EXAM_ALIGNMENT・数式・固定範囲は変更しない
+- next_start: Topic 04 source Markdown末尾の旧 `次工程` 記録だけを現在地へ同期する。教材本文・EXAM_ALIGNMENT・数式・固定範囲は変更しない
 
 ## Topic 01 進捗
 
@@ -59,30 +59,30 @@
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答
-- [x] source Markdown進捗メタデータ同期
-- [ ] 最終QA PASS — 前回 `NEEDS_REVISION` の原因を修正済み。再判定待ち
+- [x] source Markdown冒頭進捗メタデータ同期
+- [x] 最終QA再実施
+- [ ] 最終QA PASS — source末尾の旧 `次工程` 記録が残るため `NEEDS_REVISION`
 
 ## 今回進めた内容
 
-Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` のsource Markdown冒頭に残っていた旧進捗記録を現在地へ同期した。
+Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の最終QAを再実施した。
 
-更新:
-- `topics/04_electric_field_capacitance/04_electric_field_capacitance.md`
+再確認結果:
+- 必須成果物: PASS
+- 過去問6問のEXAM_ALIGNMENT: PASS
+- 3段階例題・中間知識: PASS
+- 練習問題仕様: PASS
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- SPEC境界: PASS
+- 完成後独立再解答: `6 / 6 PASS`
+- 教材外知識補完: `0件`
+- source冒頭進捗記録: PASS
+- source末尾 `次工程` 記録: FAIL
 
-修正内容:
-- `status: EXPLANATION_SOURCE_COMPLETE` → `FINAL_QA_NEEDS_REVISION`
-- 更新日を `2026-09-14` へ同期
-- 「解説PDF・練習PDF・PowerPoint・独立再解答が未実施」という旧記録を、実際の完成状況へ同期
+source末尾には「次は、このsourceを正本として解説PDFを作成」とする旧記録が残っているが、解説PDF・練習PDF・PowerPoint・独立再解答は既に完成している。
 
-変更していないもの:
-- 教材本文
-- 数式
-- EXAM_ALIGNMENT
-- 過去問選定6問
-- SPEC固定範囲・境界
-
-過去問独立再解答 `6 / 6 PASS`、教材外知識補完 `0件` は維持している。
+教材本文・数式・EXAM_ALIGNMENT・過去問選定6問・SPEC固定範囲は変更していない。
 
 ## 判定
 
-Topic 04はまだ `completed` にしない。完成数は `3 / 14` のまま。次工程は最終QAの再実施。
+Topic 04は `NEEDS_REVISION`。完成数は `3 / 14` のまま。次工程はsource Markdown末尾の旧 `次工程` 記録だけを現在地へ同期する。
