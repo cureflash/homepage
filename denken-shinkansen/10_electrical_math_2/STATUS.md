@@ -5,44 +5,46 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 3 / 20
-- current_status: `topic_04_source_progress_synced`
-- last_completed_topic: `03 偏微分・全微分`
-- active_topic: `04 微分による極値・最適条件`
-- next_start: Topic 04の最終QAを再判定する。source Markdownの状態記録とGitHub正本の実成果物が一致していることを確認し、全品質ゲートPASSの場合のみ `completed` とする
+- exam_aligned_completed_topics: 4 / 20
+- current_status: `topic_04_completed`
+- last_completed_topic: `04 微分による極値・最適条件`
+- active_topic: `05 積分によるエネルギー計算`
+- next_start: Topic 05の制作前EXAM_ALIGNMENTを実施する。公式過去問を直近年度優先で調査し、二種相当の直接対応問題を原則5問以上選定して要求知識・式・設問型を固定する
 
-## Topic 04 品質ゲート進捗
+## Topic 04 最終品質ゲート
 
 - [x] 系列SPEC確認
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
 - [x] 公式過去問を直近年度優先で調査
-- [x] R8一次を確認し、直接対応する機械問3を採用
-- [x] 最新掲載のR7二次を確認し、機械・制御問1を採用
-- [x] 一次4問＋二次2問、計6問・対象18項目を選定
-- [x] 参考教材を電験王2＋e-sysnet＋オーム社の複数系統で確認
+- [x] 一次4問＋二次2問、計6問・18対象項目を選定
 - [x] source Markdownへ要求知識・式・設問型・教材内必要説明を固定
-- [x] 制作前独立再導出 6問・18項目 PASS
-- [x] 公式解答・標準解答との照合 18/18一致
+- [x] 制作前独立再導出 18 / 18 PASS
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [x] 公式過去問の教材のみでの完成後独立再解答
-- [x] 最終QA実施
-- [x] source Markdown進捗記録の不整合修正
-- [ ] 最終QA再判定
+- [x] PowerPoint表示QA
+- [x] 完成後独立再解答 18 / 18 PASS
+- [x] 教材外知識補完 0件
+- [x] source Markdown進捗記録同期
+- [x] 最終QA再判定 PASS
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 04 `微分による極値・最適条件` のsource Markdown進捗記録を、GitHub正本の実成果物へ同期した。
+Topic 04 `微分による極値・最適条件` の最終QAを再判定した。
 
-- 冒頭の状態を、解説PDF・練習PDF・PowerPoint・PowerPoint QA・完成後独立再解答まで完了した現在地へ修正
-- 末尾の次工程を「最終QA再判定」へ同期
-- EXAM_ALIGNMENT、本文、数式、例題、固定範囲には変更なし
-- 多変数最適化・数値最適化等のSPEC外論点は追加していない
+- 必須成果物実在: PASS
+- 二種相当EXAM_ALIGNMENT 6問・18対象項目: PASS
+- 二次試験対応: PASS
+- 完成後独立再解答: 18 / 18 PASS
+- 教材外知識による補完: 0件
+- 表示QA: PASS
+- source Markdownと実成果物の進捗整合: PASS
+- 多変数最適化・数値最適化等のSPEC外論点追加: なし
 
 ## 判定
 
-前回最終QAで検出したsource Markdownの進捗記録不整合は修正済み。最終QAの再判定は次工程とし、Topic 04はまだ `completed` にしない。
+Topic 04は `PASS / completed`。
 
-完成数は `3 / 20` のまま。次工程は最終QA再判定。
+完成数は `4 / 20`。次工程は Topic 05 `積分によるエネルギー計算` の制作前EXAM_ALIGNMENT。
