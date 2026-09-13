@@ -14,14 +14,17 @@ Topic 03 `0系を210km/hまで加速させる` も最終QAまでPASSし、`compl
 
 active topic: `04 200系のサイリスタ制御を計算する`
 
-current status: `topic_04_explanation_source_complete`
+current status: `topic_04_explanation_pdf_complete`
 
 ## Topic 04 現在の成果物
 
 source Markdown:
 `topics/04_200series_thyristor_control/04_200series_thyristor_control.md`
 
-制作前EXAM_ALIGNMENT、公式解答照合付き要求事項独立検証、解説本文＋3段階例題まで完了。解説PDF、練習PDF、解説画像PowerPointは未作成。
+解説PDF:
+`topics/04_200series_thyristor_control/04_200series_thyristor_control_explanation.pdf`
+
+制作前EXAM_ALIGNMENT、公式解答照合付き要求事項独立検証、解説本文＋3段階例題、解説PDF＋全ページ表示QAまで完了。練習PDF、解説画像PowerPointは未作成。
 
 ## Topic 04 固定範囲
 
@@ -60,7 +63,7 @@ source Markdown:
 
 本文では `V_d` を60°区間の平均値積分から導出し、`α=0`、`0≤α≤π/2`、素子電流の平均値・実効値、基本波力率と高調波を含む総合力率の区別まで説明済み。
 
-`α-V_d`、`α-I_a`、`α-T` は、未確認実車値を用いず、`E`・`R_a`・`kΦ` を固定した教材上の比較モデルとして一般式を確定済み。
+`α-V_d`、`α-I_a`、`α-T` は、未確認実車値を用いず、`E`・`R_a`・`kΦ` を固定した教材上の比較モデルとして扱う。
 
 高調波はR05二次問3(1)(2)の範囲で、半導体電力変換装置が発生源となり、過熱・振動・電子機器誤動作等を生じ得る基本まで扱う。
 
@@ -77,6 +80,23 @@ source Markdown:
 - 高調波の発生源・基本的影響: PASS
 - 直流主電動機の電流・トルクへの接続: PASS
 - 基礎・本試験標準・二次相当の3段階例題: PASS
+- 固定範囲外の仕様追加なし: PASS
+
+## Topic 04 解説PDF QA
+
+- A4縦4ページ: PASS
+- ゲート対象12小問に必要な内容を欠落なく収録: PASS
+- 60°区間平均値積分と `V_d=(3√2/π)V cosα`: PASS
+- `α=0`、`0≤α≤π/2`、`α-V_d`: PASS
+- 電流の平均値・実効値・直流側電流の区別: PASS
+- H30二次条件の `P`、`I_1`、`S_1`、`Q_1`、基本波力率: PASS
+- 高調波の発生源・基本的影響: PASS
+- `V_d(α)=E+I_aR_a`、`T=kΦI_a` による直流主電動機への接続: PASS
+- `α-V_d`、`α-I_a`、`α-T` の3グラフ: PASS
+- `α-I_a`、`α-T` は教材上の比較モデルで実車値ではないと明記: PASS
+- 基礎・本試験標準・二次相当の3段階例題: PASS
+- 全4ページをレンダリングして表示確認。クリッピング、重なり、黒四角、文字化けなし: PASS
+- 200系の未確認実車値の追加なし: PASS
 - 固定範囲外の仕様追加なし: PASS
 
 ## Topic 03 完了内容
@@ -145,9 +165,9 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 04のsource Markdownを正本に解説PDFを作成し、全ページ表示QAを行う。
+Topic 04の練習PDF（解答・完全解説付き）を作成する。
 
-固定EXAM_ALIGNMENTの12小問と本文の対応を維持し、次をPDFから欠落させない。
+固定EXAM_ALIGNMENTの一次2問＋二次記述3問、ゲート対象12小問と本文の対応を維持し、次を練習可能にする。
 
 - サイリスタの基本動作と制御角
 - 三相全波位相制御整流器の60°区間平均値積分
@@ -156,6 +176,6 @@ Topic 04のsource Markdownを正本に解説PDFを作成し、全ページ表示
 - H30二次条件での有効・無効電力と基本波力率
 - 高調波の発生と基本的影響
 - `V_d(α)=E+I_aR_a`、`T=kΦI_a` による直流主電動機との接続
-- 基礎・本試験標準・二次相当の3段階例題
+- 一次試験型の選択式と二次試験型の記述・途中式
 
 固定範囲外は追加しない。200系の実車値を使う場合は一次資料で確認し、資料値・計算値・仮定値を区別する。
