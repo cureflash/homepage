@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 4 / 12
-- current_status: `topic_05_explanation_source_complete`
+- current_status: `topic_05_explanation_pdf_complete`
 - last_completed_topic: `04 極形式・フェーザ`
 - active_topic: `05 ベクトル`
-- next_start: Topic 05 解説PDF
+- next_start: Topic 05 練習PDF
 
 ## Topic 05 進捗
 - [x] 系列SPEC確認
@@ -20,7 +20,7 @@
 - [x] 制作前独立計算・公式解答照合 6 / 6 PASS
 - [x] 固定範囲をSPEC内に限定
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
@@ -28,26 +28,20 @@
 
 ## 今回進めた内容
 
-Topic 05 `ベクトル` の解説本文＋3段階例題を完成した。
+Topic 05 `ベクトル` の解説PDFを完成した。
 
-制作前EXAM_ALIGNMENTで固定した6問の要求事項を本文へ全件対応付けた。
+`topics/05_vectors/05_vectors_explanation.pdf`
 
-収録内容:
-- スカラーと空間ベクトルの区別
-- `x,y,z` 成分と単位ベクトル
-- 和・差、大きさ、符号付き1次元合成
-- `sin/cos` による成分分解
-- 等大2ベクトル・60°の合成と対称性
-- 内積の基本と射影
-- 外積の基本、右手系、`q(v×B)`、`I(l×B)`
-- 正負電荷・座標軸・視点による方向判定
-- フェーザと空間ベクトルの違い
-- 3段階例題（基礎／本試験標準／複合・ひっかけ）
-
-固定した必須説明12項目は本文と例題で全件カバーした。ベクトル解析・行列・固有値・テンソル・高度な場の理論・未指定交流回路論点は追加していない。未確認の新幹線実値も追加していない。
+- A4縦3ページ
+- source本文の固定範囲、3段階例題、固定6過去問への対応を反映
+- スカラー/ベクトル、成分、和差、大きさ、単位ベクトル、内積基本、外積基本、方向判定、フェーザとの違いを収録
+- 60°等大2ベクトル合成を図示
+- 全3ページ200 dpi表示QA: PASS
+- 文字抽出QA: PASS
+- 仕様外論点・未確認新幹線実値の追加: 0件
 
 ## 判定
 
-Topic 05は `explanation source complete / IN_PROGRESS`。
+Topic 05は `explanation PDF complete / IN_PROGRESS`。
 
-完成数は `4 / 12` のまま。次はTopic 05の解説PDFを作成する。
+完成数は `4 / 12` のまま。次はTopic 05の練習PDF（解答・完全解説付き）を作成する。

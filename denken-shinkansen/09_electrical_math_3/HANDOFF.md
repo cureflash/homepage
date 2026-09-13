@@ -12,11 +12,11 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
-Topic 05 `ベクトル` は解説本文＋3段階例題まで完了。
+Topic 05 `ベクトル` は解説PDFまで完了。
 
 完成数: `4 / 12`
 
-current_status: `topic_05_explanation_source_complete`
+current_status: `topic_05_explanation_pdf_complete`
 
 active_topic: `05 ベクトル`
 
@@ -74,9 +74,19 @@ active_topic: `05 ベクトル`
 
 6過去問それぞれについて本文節との対応表もsourceに記録済み。
 
+## 完了した解説PDF
+
+`topics/05_vectors/05_vectors_explanation.pdf`
+
+- A4縦3ページ
+- source本文の固定範囲、3段階例題、固定6過去問への対応を反映
+- 60°等大2ベクトル合成を図示
+- 全3ページ200 dpi表示QA: PASS
+- 文字抽出QA: PASS
+- 仕様外論点・未確認新幹線実値の追加: 0件
+
 ## 未作成
 
-- 解説PDF
 - 練習問題・完全解説source
 - 練習PDF
 - 解説画像PowerPoint
@@ -85,6 +95,6 @@ active_topic: `05 ベクトル`
 
 ## 次に行うこと
 
-Topic 05 `ベクトル` の解説PDFを作成する。
+Topic 05 `ベクトル` の練習PDF（解答・完全解説付き）を作成する。
 
-source本文・3段階例題・固定6過去問への対応をそのままPDFへ反映し、全ページ表示QAを行う。仕様外論点や未確認実車値を追加しない。
+固定EXAM_ALIGNMENT 6問と解説内容へ接続し、仕様内だけで作成して全ページ表示QAを行う。仕様外論点や未確認実車値を追加しない。
