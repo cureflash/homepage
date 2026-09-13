@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 2 / 16
-- current_status: `topic_03_exam_alignment_reselected_source_updated`
+- current_status: `topic_03_practice_source_alignment_synced`
 - last_completed_topic: `02 初代0系はどうやって走っていた？`
 - active_topic: `03 直流モーターはどうやって速度を変える？`
-- next_start: 解説PDF・練習問題source/PDFの過去問対応表を新選定5問へ必要最小限で同期し、PowerPointに旧選定問への直接参照がないことを確認する
+- next_start: 解説PDF・練習PDFの過去問対応表を新選定5問へ必要最小限で同期し、PowerPointに旧選定問への直接参照がないことを確認する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 必須4成果物と完成後独立再解答まで完了。選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 必須4成果物と完成後独立再解答まで完了。選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
-- [ ] 03 直流モーターはどうやって速度を変える？ — 必須成果物は完成。旧選定の完成後独立再解答で範囲外問題2問を検出したため、仕様外内容を追加せず過去問選定を修正。source MarkdownのEXAM_ALIGNMENTは新選定5問へ更新済み。成果物内対応表の同期と新選定での独立再解答は未実施
+- [ ] 03 直流モーターはどうやって速度を変える？ — 必須成果物は完成。旧選定の完成後独立再解答で範囲外問題2問を検出したため、仕様外内容を追加せず過去問選定を修正。source Markdownと練習問題sourceのEXAM_ALIGNMENTは新選定5問へ同期済み。PDF類・PowerPoint確認と新選定での独立再解答は未実施
 - [ ] 04〜16 — 未着手
 
 ## 01 品質ゲート記録
@@ -101,8 +101,8 @@ source Markdown:
 練習問題source:
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.md`
 - 全12問を五肢択一で作成済み
-- 問題本文の確定範囲に変更は不要
-- EXAM_ALIGNMENT対応欄は旧選定のままなので次工程で新選定へ同期する
+- 問題本文・解説の確定範囲は変更せず、EXAM_ALIGNMENT対応欄だけを新選定5問へ同期済み
+- R7下問2の `Pcu=Ia^2Ra` から `Ra` を逆算する段階は解説本文で直接対応し、練習問題では `I^2R`、`E=V-IaRa`、永久磁石機の速度比を分割確認する
 
 練習PDF:
 - `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.pdf`
@@ -128,7 +128,7 @@ source Markdown:
 Topic 03は系列SPECの速度制御・始動範囲だけを扱う。回生制動はTopic 09、誘導機のVVVF制御とパワー半導体は後続Topic 04〜08の範囲とし、先取りしない。未確認の0系実車値は真値化しない。
 
 ## 03 QA判定
-`IN_PROGRESS`。旧選定の品質ゲートFAIL原因を教材内容ではなく過去問選定の範囲不一致と特定し、Topic 03内だけで解ける公式過去問へ選定を修正した。source MarkdownのEXAM_ALIGNMENTは修正済み。成果物内対応表の同期と新選定5問での完成後独立再解答が残るため、完成数は2/16のまま。
+`IN_PROGRESS`。旧選定の品質ゲートFAIL原因を教材内容ではなく過去問選定の範囲不一致と特定し、Topic 03内だけで解ける公式過去問へ選定を修正した。source Markdownと練習問題sourceのEXAM_ALIGNMENTは新選定5問へ同期済み。PDF類・PowerPoint確認と新選定5問での完成後独立再解答が残るため、完成数は2/16のまま。
 
 ## 次
-解説PDF・練習問題source/PDFの過去問対応表を新選定5問へ必要最小限で同期する。PowerPointは旧選定問への直接参照の有無だけ確認し、必要な場合のみ修正する。その後、新選定5問で完成後独立再解答を再実施する。
+解説PDF・練習PDFの過去問対応表を新選定5問へ必要最小限で同期する。PowerPointは旧選定問への直接参照の有無だけ確認し、必要な場合のみ修正する。その後、新選定5問で完成後独立再解答を再実施する。
