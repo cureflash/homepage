@@ -10,18 +10,26 @@ Topic 01 `新幹線1編成はどれだけ電気を食う？` とTopic 02 `なぜ
 
 active topic: `03 架線はただの銅線ではない`
 
-current status: `topic_03_explanation_source_complete`
+current status: `topic_03_explanation_pdf_complete`
 
 ## 今回進捗
 
-Topic 03を1段階進め、確定済みEXAM_ALIGNMENTに基づく解説本文＋3段階例題を完成した。
+Topic 03を1段階進め、確定済みEXAM_ALIGNMENTと解説本文だけを基準に解説PDFを完成した。
 
 更新成果物:
-- `topics/03_catenary_resistance/03_catenary_resistance.md` — 解説本文、3段階例題、過去問対応表、公式・解法まとめを追加
-- `STATUS.md` — `topic_03_explanation_source_complete`、次工程を解説PDFへ更新
+- `topics/03_catenary_resistance/03_catenary_resistance_explanation.pdf` — A4縦3ページの解説PDF
+- `STATUS.md` — `topic_03_explanation_pdf_complete`、次工程を練習問題source・練習PDFへ更新
 - `HANDOFF.md`
 
-判定: `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`
+解説PDF QA:
+- 200 dpiで全3ページを再レンダリング
+- 文字切れ・重なり・黒塗り・欠落なし
+- PDF preflightで3ページ、openable、非暗号化、非スキャンを確認
+- 選定済み6過去問への接続、3段階例題、公式・解法まとめを維持
+- 新幹線接続はsourceにある教材用仮定値だけを使用
+- Topic 05以降の論点、未確認実車値、SPEC外内容の追加なし
+
+判定: `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`
 
 ## Topic 03 EXAM_ALIGNMENT
 
@@ -48,6 +56,9 @@ Topic 03を1段階進め、確定済みEXAM_ALIGNMENTに基づく解説本文＋
 
 source Markdown:
 `topics/03_catenary_resistance/03_catenary_resistance.md`
+
+解説PDF:
+`topics/03_catenary_resistance/03_catenary_resistance_explanation.pdf`
 
 source内で、6問の要求事項を以下へ接続済み。
 
@@ -165,12 +176,12 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 03の確定済み `topics/03_catenary_resistance/03_catenary_resistance.md` だけを基準に解説PDFを作成し、全ページ表示QAを行う。
+Topic 03の確定済みEXAM_ALIGNMENT、source Markdown、解説PDFを基準に練習問題source・練習PDFを作成する。
 
-- `MASTER_SPEC.md` と `EXAM_ALIGNMENT_SPEC.md` を系列SPECより優先する
-- sourceに固定した説明・例題だけをPDF化し、新規論点を追加しない
-- 抵抗率・直並列・温度係数・電力・電圧降下の式と単位を欠落させない
-- 6過去問への接続が見える構成を維持する
+- 三種の練習問題は原則12問以上
+- 少なくとも半数を五肢択一形式にする
+- 基礎20〜30%、本試験標準50〜60%、複合・応用約20%を目安にする
+- 選定済み6過去問が要求する抵抗率・直並列・温度係数・電力・電圧降下を練習できるようにする
 - Topic 05以降の論点を先取りしない
 - 未確認の新幹線実車・架線値を真値化しない
 
