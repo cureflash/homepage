@@ -4,198 +4,66 @@
 
 ## 状態
 - active_series: `06_shinkansen_power_2`
-- exam_aligned_completed_topics: 1 / 22
-- current_status: `topic_02_independent_reanswer_complete`
+- exam_aligned_completed_topics: `1 / 22`
 - last_completed_topic: `01 新幹線を電力系統から見てみる`
 - active_topic: `02 信濃川の水で新幹線を何本走らせられる？`
-- next_start: Topic 02 の最終QAを実施し、必須成果物・EXAM_ALIGNMENT・成果物間同期・既存レンダリングQA・完成後独立再解答を総合確認する
+- current_status: `topic_02_final_qa_needs_revision`
+- next_start: `02_hydropower.md` の進捗メタデータと完成後独立再解答結果だけを現状へ同期し、Topic 02 最終QAを再判定する
 
-## Topic 02 品質ゲート進捗
-- [x] 系列SPEC確認
-- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
-- [x] 一次4問＋二次2問の計6問を正式選定
-- [x] 二次記述問題を含めた品質ゲートを確保
+## Topic 02 品質ゲート
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] 一次4問＋二次2問、計6問を正式選定
+- [x] 二次論説記述1問＋二次記述計算1問を含む
 - [x] 参考教材を複数系統確認
-- [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
-- [x] 制作前独立検証・公式解答照合（6/6 PASS）
-- [x] 解説本文（本文節＋3段階例題）
-- [x] 練習問題・完全解説（15問、一次型10問＋二次記述型5問）
-- [x] 練習問題の独立再計算・一意解QA（15/15 PASS）
+- [x] 制作前EXAM_ALIGNMENT
+- [x] 制作前独立検証・公式解答照合 `6 / 6 PASS`
+- [x] 解説本文9節＋3段階例題
+- [x] 練習15問・完全解説
+  - 一次型10問
+  - 二次記述型5問
+- [x] 練習問題独立再計算・一意解QA `15 / 15 PASS`
 - [x] 解説PDF
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
-- [x] 完成後独立再解答（6/6 PASS、教材外知識補完0件）
-- [ ] 最終QA
+- [x] 完成後独立再解答 `6 / 6 PASS`
+- [x] 教材外知識補完 `0件`
+- [x] 最終QA実施
+- [ ] 最終QA PASS
 
-## Topic 02 解説画像PowerPoint
-成果物:
+## Topic 02 最終QA
+記録:
+- `topics/02_hydropower/02_hydropower_final_qa.md`
+
+判定:
+- `NEEDS_REVISION`
+
+PASS確認済み:
+- 必須成果物はGitHub正本に存在
+- 正式対象は R8/R7/R6/R5一次4問＋R5/R4二次2問
+- 完成後独立再解答 `6 / 6 PASS`、教材外知識補完 `0件`
+- 練習15問の独立QA `15 / 15 PASS`
+- 解説PDF A4縦6ページ、既存全ページレンダリングQA済み
+- 練習PDF A4縦6ページ、既存全ページレンダリングQA済み
+- PowerPoint 16:9・4枚、既存レンダリング/overflow QA済み
+- 固定範囲外の劣化診断、短絡計算、潮流計算等の追加なし
+- 未確認の列車1本電力 `P_train` の数値化なし
+
+未解消:
+- 主source `topics/02_hydropower/02_hydropower.md` 冒頭が `explanation_complete` のまま
+- 同sourceに「練習問題・PDF・PowerPoint・完成後独立再解答は未着手」と残っている
+- 同source末尾の次段階が練習問題作成のまま
+
+実在成果物・完成後QA記録と進捗メタデータが矛盾するため、成果物間同期の最終QAをPASSにしていない。教材本文や仕様範囲は変更不要。
+
+## Topic 02 成果物
+- `topics/02_hydropower/02_hydropower.md`
+- `topics/02_hydropower/02_hydropower_practice.md`
+- `topics/02_hydropower/02_hydropower_practice_qa.md`
+- `topics/02_hydropower/02_hydropower_independent_reanswer.md`
+- `topics/02_hydropower/02_hydropower_final_qa.md`
+- `topics/02_hydropower/02_hydropower_explanation.pdf`
+- `topics/02_hydropower/02_hydropower_practice.pdf`
 - `topics/02_hydropower/02_hydropower_images.pptx`
 
-構成:
-- 16:9、4枚
-- Slide 1: `P=9.8QHη`、調整池水量収支、ピーク/オフピーク流量から出力へ進む二次計算の型
-- Slide 2: ペルトン・フランシス・カプラン水車、部分負荷効率、比速度の対応
-- Slide 3: 電気式調速機の信号経路、負荷遮断、水撃と過速度のトレードオフ、サージタンク・制圧機・`GD²`・無拘束速度
-- Slide 4: 信濃川水系3発電所から鉄道電力への接続、実在値 `44.8万kW`・`316.96 m^3/s`、列車本数・必要流量の記号式
-
-同期・品質:
-- 既存 `02_hydropower.md` の固定範囲から論点を追加していない
-- 一次4問＋二次2問の要求事項を4枚へ対応付けた
-- 未確認の列車1本電力 `P_train` は数値化せず、既存sourceと同じ記号式で扱った
-- 固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
-- 全4枚をレンダリングして視認性を確認
-- `slides_test.py` によるoverflow検査 PASS
-
-## Topic 02 解説PDF
-成果物:
-- `topics/02_hydropower/02_hydropower_explanation.pdf`
-
-同期内容:
-- 9節の解説本文
-- 基礎・本試験標準・複合ひっかけの3段階例題
-- 一次4問＋二次2問のEXAM_ALIGNMENT
-- `P=ρgQHη`、調整池水量収支、比速度、調速機、水撃、`GD²`、無拘束速度
-- JR東日本一次資料による自営水力発電総出力 `44.8万kW` と最大取水量 `316.96 m^3/s`
-- 正式選定過去問と参考教材・一次資料の出典
-
-PDF QA:
-- A4縦6ページ
-- 全6ページをPDFiumでレンダリング確認し、文字切れ・重なり・黒塗り・欠落なし
-- pdftoppm / PDFiumの2系統レンダリングを実施し、内容崩れなし
-- 列車1本の所要電力には未確認の仮定値を追加していない
-- Topic 02固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
-
-## Topic 02 練習PDF
-成果物:
-- `topics/02_hydropower/02_hydropower_practice.pdf`
-
-同期内容:
-- 全15問
-- 基礎4問・本試験標準8問・複合応用3問
-- 二種一次型五肢択一10問
-- 二種二次「電力・管理」型記述5問
-- 全問の完全解説
-- 正式選定6問の過去問対応マッピング
-
-PDF QA:
-- A4縦6ページ
-- PDFium / pdftoppm の2系統で全6ページをレンダリング確認し、文字切れ・重なり・黒塗り・欠落なし
-- 既存 `02_hydropower_practice.md` の15問・完全解説と同期
-- 既存 `15 / 15 PASS` の独立再計算・一意解QAと矛盾なし
-- Topic 02固定範囲外の劣化診断、短絡計算、潮流計算等を追加していない
-
-## Topic 02 練習問題独立QA
-QA記録:
-- `topics/02_hydropower/02_hydropower_practice_qa.md`
-
-判定:
-- `15 / 15 PASS`
-- 一次型10問は各問で正答肢が一意
-- 問1、2、11、12の数値・単位・丸めは独立再計算で保存解説と一致
-- 問3はピーク・オフピーク双方で移し替え水量を満たす組合せが一意
-- 二次型5問は途中式または記述採点要点が採点可能な形で整合
-- 正式選定6問の要求事項は既存問題マッピングから欠落なし
-- 固定範囲外の劣化診断、短絡計算、潮流計算等の追加なし
-
-## Topic 02 練習問題
-source Markdown:
-- `topics/02_hydropower/02_hydropower_practice.md`
-
-構成:
-- 全15問
-- 基礎4問・本試験標準8問・複合応用3問
-- 二種一次型五肢択一10問
-- 二種二次「電力・管理」型記述5問
-- 正式選定6問の要求事項を全て問題マッピングに含む
-- 固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
-
-## Topic 02 解説本文QA
-- 制作前に確定した9節の本文節マッピング内で作成
-- 一次4問＋二次2問の要求事項を本文へ反映
-- 基礎・本試験標準・複合ひっかけの3段階例題を作成
-- 信濃川水系の実在値はJR東日本一次資料で確認した値だけを使用
-- 自営水力発電総出力 `44.8万kW` と最大取水量 `316.96 m^3/s` は実在値として区別
-- 列車1本の所要電力は未確認のため仮定値を置かず、列車本数・必要流量は記号式で接続
-- Topic 02固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
-
-## Topic 02 完成後独立再解答
-QA記録:
-- `topics/02_hydropower/02_hydropower_independent_reanswer.md`
-
-判定:
-- `6 / 6 PASS`
-- 教材外知識補完 `0件`
-- R8一次 電力 問5: `[ヌ, ロ, ル, カ, ハ]` — PASS
-- R7一次 電力 問1: `[カ, ホ, ヲ, ヌ, ル]` — PASS
-- R6一次 電力 問3: `[チ, ヨ, ホ, リ, ロ]` — PASS
-- R5一次 電力 問1: `[ヘ, ル, ヨ, ホ, ヌ]` — PASS
-- R5二次 電力・管理 問1: 水撃の原因・伝搬、サージタンク、制圧機の設置場所と作用を教材だけで再構成 — PASS
-- R4二次 電力・管理 問1: `Qp=28.333 m^3/s`, `Qo=17.222 m^3/s`, `Pp≈14200 kW`, `Po≈8100 kW` — PASS
-- 解答確定後に電気技術者試験センター公式解答と照合し全件一致
-- 固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
-
-## Topic 02 正式な品質ゲート対象
-- R8 一次 電力 問5
-- R7 一次 電力 問1
-- R6 一次 電力 問3
-- R5 一次 電力 問1
-- R5 二次 電力・管理 問1
-- R4 二次 電力・管理 問1
-
-一次4問＋二次2問、計6問。二次は論説記述1問＋記述計算1問を含む。`EXAM_ALIGNMENT_SPEC.md` の二種要件を満たす。
-
-source Markdown:
-- `topics/02_hydropower/02_hydropower.md`
-
-選定見直し:
-- R7二次 電力・管理 問1は水力発電所を題材にするが、劣化診断・MT/PT/UT・絶縁診断が主題でTopic 02固定範囲外のため不採用。
-- R6二次 電力・管理にはTopic 02固定範囲に直接対応する水力問題を確認できず不採用。
-
-## Topic 01 品質ゲート進捗
-- [x] 系列SPEC確認
-- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
-- [x] 一次2問＋二次記述3問の計5問を正式選定
-- [x] 参考教材を複数系統確認
-- [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
-- [x] 公式解答との照合を伴う要求事項の独立検証
-- [x] 解説本文（9節＋3段階例題）
-- [x] 練習問題・完全解説（15問、一次型10問＋二次記述型5問）
-- [x] 練習問題15問の独立再計算・一意解QA
-- [x] 解説PDF
-- [x] 練習PDF
-- [x] 解説画像PowerPoint
-- [x] 初回完成後独立再解答（3/5 PASS、2/5 FAIL）
-- [x] FAIL原因3点の最小補強
-  - タービン発電機の直軸過渡リアクタンス代表範囲 `0.2～0.4 p.u.`
-  - 駆動点インピーダンスと節点インピーダンス行列 `Z_bus` の関係
-  - 短絡容量と系統の強さ・電圧維持能力の関係
-- [x] 補強内容を解説PDFへ同期し、全ページをレンダリングQA PASS
-- [x] 同じ公式過去問5問で再独立解答（5/5 PASS、教材外知識補完0件）
-- [x] 最終QA PASS
-
-## Topic 01 正式な品質ゲート対象
-- H29 一次 電力 問6
-- R5 一次 電力 問4
-- R4 二次 電力・管理 問3
-- R5 二次 電力・管理 問4
-- R6 二次 電力・管理 問4
-
-一次2問＋二次記述3問。`EXAM_ALIGNMENT_SPEC.md` の二種要件を満たす。
-
-## Topic 01 最終QA
-判定: `PASS`
-
-確認済み:
-- 必須source Markdown、解説PDF、練習PDF、解説画像PowerPointがGitHub正本に存在
-- EXAM_ALIGNMENTは正式選定5問の要求事項を本文節へ対応付け済み
-- 練習15問は一次型10問＋二次記述型5問で、正式選定5問の要求事項をマッピング済み
-- 補強後の解説PDFは現行版でレンダリングQA PASS
-- 練習PDFは現行blobが作成時から変更されておらず、作成時に全6ページをPDFium / pdftoppmの2系統でレンダリングQA済み。
-- PowerPointは現行blobが作成時から変更されておらず、全4枚の画像レンダリング確認とoverflow検査PASS済み現行blob
-- 完成後再独立解答は5/5 PASS、教材外知識補完0件
-- Topic 08、12、16、20の本題および未確認実設備値は追加していない
-
-以上によりTopic 01を `completed` とした。完成数は `1 / 22`。
-
-## 次
-Topic 02 `信濃川の水で新幹線を何本走らせられる？` の最終QAを実施する。必須成果物の存在、一次4問＋二次2問のEXAM_ALIGNMENT、source/PDF/PPTの同期、既存レンダリングQA、完成後独立再解答 `6 / 6 PASS` を総合確認し、PASSした場合のみTopic 02を `completed` とする。
+## Topic 01
+`completed`。最終QA PASS、完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0件`。
