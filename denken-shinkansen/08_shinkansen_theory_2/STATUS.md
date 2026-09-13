@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 3 / 21
-- current_status: `topic_04_independent_reanswer_complete`
+- current_status: `topic_04_final_qa_needs_revision`
 - last_completed_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 - active_topic: `04 架線と車体は巨大なコンデンサなのか？`
-- next_start: Topic 04の最終QAを実施し、EXAM_ALIGNMENT、成果物、表示QA、完成後独立再解答22/22 PASS、SPEC境界、進捗記録の整合を確認する。全品質ゲートPASS時のみ `completed` にする
+- next_start: Topic 04のsource 2ファイルに残る進捗記録不整合だけを修正する。`04_catenary_capacitance.md` 冒頭の「最終QAは未着手」と、`04_catenary_capacitance_practice.md` 末尾の「完成後独立再解答を実施しない」を現在地へ同期する。固定範囲・問題本文・解説・正答・PDF・PowerPoint・EXAM_ALIGNMENTは変更しない。その後、最終QAを再実施する
 
 ## Topic 04 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -27,24 +27,30 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 公式過去問の教材のみでの完成後独立再解答 `22 / 22 PASS`
-- [ ] 最終QA
+- [x] 最終QA実施 → `NEEDS_REVISION`
+- [ ] source進捗記録2箇所の同期
+- [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-Topic 04の固定EXAM_ALIGNMENT一次5問・22小問を完成後独立再解答した。
+Topic 04の最終QAを実施した。
 
-- R6 問1(1)〜(5): `5 / 5 PASS`
-- R5 問1(1)〜(5): `5 / 5 PASS`
-- R3 問1(1)〜(5): `5 / 5 PASS`
-- H27 問1(1)〜(2): `2 / 2 PASS`
-- H24 問5(1)〜(5): `5 / 5 PASS`
-- 合計: `22 / 22 PASS`
-- 教材内の `D=εE`、誘電体境界、同軸円筒、電位積分、電荷保存、静電エネルギーだけで解法を再構成
-- 教材外の電気理論による補完 `0件`
-- 電気影像法、導電率・コンダクタンス、力率改善等の固定範囲外論点追加 `0件`
-- 二次は直接対応なしの既記録を維持し、件数合わせ `0件`
-- 独立再解答記録: `topics/04_catenary_capacitance/04_catenary_capacitance_independent_reanswer.md`
+PASS:
+- 必須成果物の存在
+- 一次5問・22小問のEXAM_ALIGNMENT
+- 完成後独立再解答 `22 / 22 PASS`
+- 教材外知識補完 `0件`
+- 固定範囲外論点追加 `0件`
+- 二次数合わせ `0件`
+- 解説PDF・練習PDF・PowerPointの既存表示QA
+- 練習12問の計算QA `12 / 12 PASS`
+
+NEEDS_REVISION:
+- `04_catenary_capacitance.md` 冒頭が「最終QAは未着手」のまま
+- `04_catenary_capacitance_practice.md` 末尾が「完成後独立再解答を実施しない」のまま
+
+最終QA記録: `topics/04_catenary_capacitance/04_catenary_capacitance_final_qa.md`
 
 ## 判定
 
-Topic 04は `independent reanswer PASS`。テーマ自体は未完了。完成数は `3 / 21`。次は最終QA。
+Topic 04は `NEEDS_REVISION / IN_PROGRESS`。技術・試験対応品質はPASSだが、正本間の進捗記録不整合が残るため `completed` にはしない。完成数は `3 / 21` のまま。Webカタログ登録も最終QA PASSまで保留する。
