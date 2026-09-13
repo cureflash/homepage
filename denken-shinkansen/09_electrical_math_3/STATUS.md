@@ -5,12 +5,12 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 4 / 12
-- current_status: `topic_05_exam_alignment_complete`
+- current_status: `topic_05_explanation_source_complete`
 - last_completed_topic: `04 極形式・フェーザ`
 - active_topic: `05 ベクトル`
-- next_start: Topic 05 解説本文＋3段階例題
+- next_start: Topic 05 解説PDF
 
-## Topic 05 制作前EXAM_ALIGNMENT
+## Topic 05 進捗
 - [x] 系列SPEC確認
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
 - [x] 最新R8上から公式過去問を調査
@@ -19,7 +19,7 @@
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立計算・公式解答照合 6 / 6 PASS
 - [x] 固定範囲をSPEC内に限定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -28,22 +28,26 @@
 
 ## 今回進めた内容
 
-Topic 05 `ベクトル` の制作前EXAM_ALIGNMENTを完了した。
+Topic 05 `ベクトル` の解説本文＋3段階例題を完成した。
 
-選定公式過去問:
-- R8上 理論 問4: 一直線上のN極・S極が作る磁界のベクトル合成
-- R7下 理論 問2: 同一直線上のクーロン力のベクトル差
-- R7上 理論 問11: ホール素子の電流・磁界・力の向き
-- R6下 理論 問4: xyz座標での平行導体間の力の向き
-- R4下 理論 問4: 60°をなす2力のベクトル合成
-- R4上 理論 問4: 速度の垂直成分と `sinθ`
+制作前EXAM_ALIGNMENTで固定した6問の要求事項を本文へ全件対応付けた。
 
-6問とも独立計算・方向判定後に公式解答と照合し、`6 / 6 PASS`。
+収録内容:
+- スカラーと空間ベクトルの区別
+- `x,y,z` 成分と単位ベクトル
+- 和・差、大きさ、符号付き1次元合成
+- `sin/cos` による成分分解
+- 等大2ベクトル・60°の合成と対称性
+- 内積の基本と射影
+- 外積の基本、右手系、`q(v×B)`、`I(l×B)`
+- 正負電荷・座標軸・視点による方向判定
+- フェーザと空間ベクトルの違い
+- 3段階例題（基礎／本試験標準／複合・ひっかけ）
 
-固定範囲は `SPEC.md` にあるベクトルとスカラー、成分表示、和・差、大きさ、単位ベクトル、内積の基本、外積の基本、フェーザと空間ベクトルの違いのみ。ベクトル解析・高等線形代数・未指定の交流回路論点は追加しない。
+固定した必須説明12項目は本文と例題で全件カバーした。ベクトル解析・行列・固有値・テンソル・高度な場の理論・未指定交流回路論点は追加していない。未確認の新幹線実値も追加していない。
 
 ## 判定
 
-Topic 05は `EXAM_ALIGNMENT complete / IN_PROGRESS`。
+Topic 05は `explanation source complete / IN_PROGRESS`。
 
-完成数は `4 / 12` のまま。次はTopic 05の解説本文＋3段階例題を作成する。
+完成数は `4 / 12` のまま。次はTopic 05の解説PDFを作成する。
