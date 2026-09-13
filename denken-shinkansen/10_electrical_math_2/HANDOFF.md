@@ -8,15 +8,15 @@ Topic 01 `複素数・複素指数・フェーザ計算` は `completed`。
 
 Topic 02 `ベクトルと座標変換` は `completed`。
 
-Topic 03 `偏微分・全微分` は制作前EXAM_ALIGNMENTまで完了。
+Topic 03 `偏微分・全微分` は解説本文＋3段階例題まで完了。
 
 完成数: `2 / 20`
 
-current_status: `topic_03_exam_alignment_complete`
+current_status: `topic_03_explanation_source_complete`
 
 active_topic: `03 偏微分・全微分`
 
-## Topic 03 制作前EXAM_ALIGNMENT
+## Topic 03 EXAM_ALIGNMENT
 
 記録:
 `topics/03_partial_total_differentials/03_partial_total_differentials.md`
@@ -40,18 +40,38 @@ active_topic: `03 偏微分・全微分`
 
 R7・R6の二次「電力・管理」「機械・制御」も確認したが、本Topicの固定範囲だけで完結する直接問題は採用しない。極値・最適条件はTopic 04、一般行列はTopic 11、微分方程式はTopic 07、反復計算・最適化はTopic 18・19へ送る。
 
+## 今回追加した解説本文
+
+本文は次を収録済み。
+
+- 多変数関数と固定量／変化量の整理
+- `∂y/∂x` の意味と単位
+- `dy=Σ(∂y/∂xi)dxi`
+- `dy/dt=Σ(∂y/∂xi)(dxi/dt)`
+- 場の量での位置固定 `∂/∂t`
+- `Δy≈dy` と二次微小項の比較
+- `S_x^y=(x/y)(∂y/∂x)` による相対感度
+- `G=A/(1+AH)` でAには低感度でもHには低感度でないこと
+- 標準解法8段階
+- 新幹線への接続は概念式 `y=f(V,f,s,...)` の全微分まで
+
+3段階例題:
+- 基礎: `P=V^2/R`
+- 本試験標準: `Zx={k/(1-k)}Zs`
+- 複合・ひっかけ: `G=A/(1+AH)`
+
+選定5問・16小問は本文節へマッピング済み。
+
 ## 次に行うこと
 
-Topic 03の解説本文＋3段階例題を作成する。
+Topic 03の解説PDFをsource Markdownだけから作成し、全ページQAを行う。
 
-本文では、選定5問・16小問から逆算した以下を欠落させない。
+PDFではsourceの固定範囲を維持し、次を追加しない。
 
-- `∂f/∂x` で他変数を固定する意味
-- `df=Σ(∂f/∂xi)dxi`
-- `df/dt=Σ(∂f/∂xi)(dxi/dt)`
-- `Δf≈df` の成立条件
-- 二次微小項を落とす条件
-- `S_x^y=(x/y)(∂y/∂x)` による相対感度
-- 近似条件・符号・単位の検算
+- Topic 04の極値・最適条件
+- Topic 07の微分方程式・指数応答
+- Topic 11の一般行列
+- Topic 18・19の反復計算・最適化
+- 未確認の新幹線実車値・特性式・感度係数
 
-3段階例題は基礎、本試験標準、複合・ひっかけの順とし、Topic 04以降の内容を先取りしない。
+解説PDF後もTopic 03は未完了。練習PDF、解説画像PowerPoint、教材のみでの完成後独立再解答、最終QA PASSが残る。
