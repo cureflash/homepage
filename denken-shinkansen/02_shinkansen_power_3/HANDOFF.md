@@ -6,10 +6,10 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は3/16。Topic 01〜03は完成済み。active topicは04 `東京―佐世保「原子力新幹線」`。
 
 ## 今回進捗
-Topic 04の最終QAを実施した。教材・過去問対応・独立再解答はPASSだが、source Markdownの進捗記録が現行成果物と不整合のため最終判定を `NEEDS_REVISION` とした。Topic 04はまだ `completed` にしていない。
+Topic 04を1段階進め、前回最終QAで唯一FAILだったsource Markdownの進捗記録不整合を解消した。教材本文・EXAM_ALIGNMENT・PDF・PowerPoint・問題内容・固定範囲は変更していない。
 
 更新対象:
-- `topics/04_nuclear_power/04_nuclear_power_final_qa.md`
+- `topics/04_nuclear_power/04_nuclear_power.md`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -54,8 +54,18 @@ Topic 04の最終QAを実施した。教材・過去問対応・独立再解答�
 - 独立再解答: `topics/04_nuclear_power/04_nuclear_power_independent_reanswer.md`
 - 最終QA: `topics/04_nuclear_power/04_nuclear_power_final_qa.md`
 
-## 最終QA結果
-判定: `NEEDS_REVISION`。
+## source進捗同期
+`04_nuclear_power.md` の進捗記録を現行成果物へ同期した。
+
+同期箇所:
+- 冒頭 `## 状態`: `source_status_synced` へ更新し、解説PDF・練習PDF・PowerPoint・独立再解答6/6 PASSまで完了済みと記録
+- `### 独立再解答`: 6問の実結果 `(2),(4),(3),(2),(1),(2)` と6/6 PASSを記録
+- `## 次段階`: 最終QA再判定へ更新
+
+教材本文、3段階例題、EXAM_ALIGNMENT、固定6過去問、一次資料境界、問題内容は変更していない。
+
+## 前回最終QA結果
+前回判定は `NEEDS_REVISION`。
 
 PASS:
 - 必須成果物の実在
@@ -66,12 +76,10 @@ PASS:
 - 範囲境界・実在値/架空設定の分離
 - 完成後独立再解答6/6
 
-FAIL:
+前回唯一のFAIL:
 - source Markdownの進捗整合性
 
-`04_nuclear_power.md` 冒頭は依然 `explanation_body_complete` で、解説PDF・練習PDF・PowerPoint・完成後独立再解答を「未着手」と記録している。末尾の `### 独立再解答` も「現段階では未実施」と記録したまま。一方、GitHub正本には全成果物と6/6 PASSの独立再解答記録が実在する。
-
-教材内容や試験対応の問題ではなく進捗記録だけの不整合なので、次段階ではsource Markdownの進捗記録だけを同期する。本文・EXAM_ALIGNMENT・PDF・PowerPoint・問題内容・固定範囲は変更しない。
+このFAIL原因は今回解消済み。最終QA記録そのものはまだ前回判定のままで、次段階で再判定する。Topic 04はまだ `completed` にしていない。
 
 ## 「むつ」一次資料境界
 JAEA一次資料で確認済みの範囲だけを実在値として使用。
@@ -88,12 +96,13 @@ JAEA一次資料で確認済みの範囲だけを実在値として使用。
 実在の「むつ」は蒸気タービンの軸出力で船を推進する。本教材の `蒸気タービン → 同期発電機 → 電力 → 主電動機` はSPEC固定の架空列車側として明示し、未確認の発電端出力・走行性能は設定していない。
 
 ## 現在状態
-- `current_status`: `topic_04_final_qa_needs_revision`
+- `current_status`: `topic_04_source_status_synced`
 - 完成数: `3/16`
 - last completed: Topic 03
 - active: Topic 04 `東京―佐世保「原子力新幹線」`
 - Topic 04完成後独立再解答: `6/6 PASS`
-- Topic 04最終QA: `NEEDS_REVISION`
+- Topic 04前回最終QA: `NEEDS_REVISION`
+- 前回FAIL原因のsource進捗不整合: 解消済み
 
 ## 次の正確な開始点
-`04_nuclear_power.md` の進捗記録だけを現行成果物へ同期する。同期後に最終QAを再判定し、全件PASSの場合のみTopic 04を `completed` とする。
+Topic 04の最終QAを再判定する。必須成果物、EXAM_ALIGNMENT、独立再解答、範囲境界、source進捗整合を再確認し、全件PASSの場合のみTopic 04を `completed` とする。
