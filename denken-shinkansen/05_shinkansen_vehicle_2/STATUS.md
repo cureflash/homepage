@@ -5,20 +5,28 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 3 / 39
-- current_status: `topic_04_explanation_body_complete`
+- current_status: `topic_04_explanation_pdf_complete`
 - last_completed_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
 - active_topic: `04 0系④ タップ制御と加速特性`
-- next_start: Topic 04の確定済みsourceだけを使って解説PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 04の固定範囲とEXAM_ALIGNMENTだけを使って練習問題・完全解説sourceを作成する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
-- [ ] 04 0系④ タップ制御と加速特性 — EXAM_ALIGNMENT、解説本文、3段階例題、指定4グラフの作図条件まで完了。解説PDF以降は未完了
+- [ ] 04 0系④ タップ制御と加速特性 — EXAM_ALIGNMENT、解説本文、3段階例題、指定4グラフ、解説PDF、全4ページ表示QAまで完了。練習問題以降は未完了
 
 ## Topic 04 現在地
 source:
 - `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration.md`
+
+解説PDF:
+- `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration_explanation.pdf`
+- A4縦 4ページ
+- sourceで確定した固定範囲だけを使用
+- SPEC指定4グラフを収録。未確認実車値を使わず、模式図または一定磁束局所近似として明示
+- 基礎・本試験標準・複合の3段階例題を収録
+- 全4ページVisual QA: PASS（欠け・重なり・黒四角・グラフ欠落なし）
 
 系列SPECの固定範囲:
 - タップ切替
