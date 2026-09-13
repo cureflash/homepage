@@ -2,7 +2,7 @@
 
 ## 状態
 
-解説本文・解説PDF・練習PDF・PowerPoint・PowerPoint QA・完成後独立再解答まで完了。最終QA再判定待ち。
+解説本文・解説PDF・練習PDF・PowerPoint・PowerPoint QA・完成後独立再解答・最終QAまで完了。Topic 04は `completed`。
 
 本テーマは `SPEC.md` の固定範囲どおり、以下だけを扱う。
 
@@ -749,7 +749,7 @@
 
 ## 次工程
 
-解説本文・解説PDF・練習PDF・PowerPoint・PowerPoint QA・完成後独立再解答まで完了。次は最終QAを再判定する。
+Topic 04は最終QA PASSにより `completed`。次は Topic 05「積分によるエネルギー計算」の制作前EXAM_ALIGNMENT。
 
 本文では以下を先取りしない。
 
