@@ -8,11 +8,11 @@ Topic 01 `25kV架線を一つの等価回路にする` は `completed`。
 
 Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は `completed`。
 
-Topic 03 `25kV架線の周囲にはどんな電界ができる？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDFまで完了。
+Topic 03 `25kV架線の周囲にはどんな電界ができる？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDFまで完了。
 
 完成数: `2 / 21`
 
-current_status: `topic_03_explanation_pdf_complete`
+current_status: `topic_03_practice_pdf_complete`
 
 active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 
@@ -36,36 +36,36 @@ active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 
 R7の電気影像法・静電容量、R6の誘電体入りコンデンサ、R2の影像電荷等はSPEC外またはTopic 04のため除外した。静電容量、誘電体の分極、静電エネルギー、絶縁設計、高電圧設備一般をTopic 03へ追加しない。
 
-参考教材はe-sysnet「クーロンの法則」「電界とガウスの法則」と電験王2を確認済み。文章・図は複製せず、説明範囲・解法順の確認だけに使用する。
+## Topic 03 解説本文・解説PDF
 
-## Topic 03 解説本文
+source:
+`topics/03_catenary_electric_field/03_catenary_electric_field.md`
 
-`03_catenary_electric_field.md` に以下を収録済み。
-
-- クーロンの法則と点電荷の電界
-- 点電荷のベクトル合成、対称配置、電界0条件
-- 電束・電束密度、`D=εE`、ガウスの法則
-- 球対称、一様帯電球、球殻の領域別電界
-- 円筒対称、無限長線電荷、同軸円筒
-- 電位・電位差、`E=-dV/dr`、電界の積分
-- 線電荷の有限基準半径に対する対数形電位差
-- 架線を無限長線電荷とする教育用簡略モデル
-- 基礎・本試験標準・複合ひっかけの3段階例題
-- 6問・21小問への本文節マッピング
-
-実在架線の線電荷密度・周囲電界等は実値化していない。影像法、静電容量、誘電体、静電エネルギー、絶縁設計は追加していない。
-
-## Topic 03 解説PDF
-
+解説PDF:
 `topics/03_catenary_electric_field/03_catenary_electric_field_explanation.pdf`
 
-- A4縦5ページ
-- source Markdownで固定した試験論点、成立条件、解法手順、3段階例題、過去問対応表、公式まとめを収録
-- 全5ページを130 dpiでレンダリングし、文字切れ・重なり・欠落・破損グリフなしを確認
-- 新しい論点・実車値・仕様は追加していない
+解説PDFはA4縦5ページ。source Markdownで固定した試験論点、成立条件、解法手順、3段階例題、過去問対応表、公式まとめを収録し、全ページ表示QA済み。
+
+## Topic 03 練習PDF
+
+source:
+`topics/03_catenary_electric_field/03_catenary_electric_field_practice.md`
+
+PDF:
+`topics/03_catenary_electric_field/03_catenary_electric_field_practice.pdf`
+
+- 全12問、すべて一次試験型五肢択一
+- 基礎3 / 本試験標準6 / 複合・ひっかけ3
+- 一次理論6問・21小問の固定要求へマッピング
+- SPEC必須の電束・電束密度・電位傾度も収録
+- 正答だけでなく、式・理由・単位・中間値・典型ミスまで解説
+- 二次試験は既存EXAM_ALIGNMENTどおり、直接対応がないため数合わせの記述式を追加していない
+- 実在架線の未確認値なし
+- 影像法、静電容量、誘電体、静電エネルギー、絶縁設計等の追加なし
+- A4縦5ページ、全5ページ130 dpi表示QA PASS
 
 ## 次に行うこと
 
-Topic 03の練習PDF（解答・完全解説付き）を、`topics/03_catenary_electric_field/03_catenary_electric_field.md` だけを正本として作成する。
+Topic 03の解説画像PowerPointを、`03_catenary_electric_field.md` と `03_catenary_electric_field_practice.md` を正本として作成する。
 
-一次理論6問・21小問で要求される球対称・円筒対称・点電荷ベクトル合成・電位積分へ接続する問題構成とし、影像法、静電容量、誘電体等のSPEC外論点を追加しない。
+一次理論6問・21小問で要求される球対称・円筒対称・点電荷ベクトル合成・電位積分へ接続する図に限定し、影像法、静電容量、誘電体等のSPEC外論点を追加しない。

@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 2 / 21
-- current_status: `topic_03_explanation_pdf_complete`
+- current_status: `topic_03_practice_pdf_complete`
 - last_completed_topic: `02 架線は長くなるとなぜ電圧が落ちる？`
 - active_topic: `03 25kV架線の周囲にはどんな電界ができる？`
-- next_start: Topic 03のsource Markdownだけを正本として練習PDF（解答・完全解説付き）を作成する。制作前EXAM_ALIGNMENTで固定した一次理論6問・21小問に接続し、SPEC外論点を追加しない
+- next_start: Topic 03のsource Markdownと練習問題を正本として解説画像PowerPointを作成する。制作前EXAM_ALIGNMENTで固定した一次理論6問・21小問に接続し、SPEC外論点を追加しない
 
 ## Topic 03 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -22,33 +22,32 @@
 - [x] 公式問題・公式解答との照合
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習PDF（解答・完全解説付き）
+- [x] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの完成後独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 03の解説PDF `topics/03_catenary_electric_field/03_catenary_electric_field_explanation.pdf` を作成した。
+Topic 03の練習問題source `topics/03_catenary_electric_field/03_catenary_electric_field_practice.md` と練習PDF `topics/03_catenary_electric_field/03_catenary_electric_field_practice.pdf` を作成した。
 
-PDF収録内容:
-- 本試験での論点と到達目標
-- クーロンの法則、点電荷の電界、`F=qE` と負電荷の向き
-- 点電荷のベクトル合成と電界0条件
-- 電束・電束密度、`D=εE`、ガウスの法則
-- 球対称、一様体積電荷球、球殻の領域別 `Q_enc`
-- 円筒対称、無限長線電荷、同軸円筒の `E∝1/r`
-- 電位・電位差、`E=-dV/dr`、電界の積分
-- 無限長線電荷で有限基準半径を使う条件
-- 架線を無限長線電荷とする教育用簡略モデル
-- 基礎・本試験標準・複合ひっかけの3段階例題
+練習PDF収録内容:
+- 全12問、すべて一次試験型の五肢択一
+- 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
+- 点電荷の電界・負電荷に働く力
+- 点電荷の成分分解・ベクトル合成・電界0条件
+- 電束・電束密度・ガウスの法則
+- 一様帯電球・球殻の領域別電界
+- 無限長線電荷・同軸円筒の電界
+- 電位差の積分・電位傾度
+- 球殻で領域をまたぐ電位積分
+- 全問の正答、途中式、理由、単位、典型ミスを含む完全解説
 - 一次理論6問・21小問への過去問対応表
-- 公式・解法まとめ
 
 A4縦5ページ。全5ページを130 dpiでレンダリングし、文字切れ・重なり・欠落・破損グリフがないことを確認した。
 
-実在架線の未確認値は使用していない。影像法、静電容量、誘電体、静電エネルギー、絶縁設計等は追加していない。
+既存EXAM_ALIGNMENTの二次試験確認結果を維持し、直接対応問題がないため記述式を数合わせで追加していない。実在架線の未確認値は使用していない。影像法、静電容量、誘電体、静電エネルギー、絶縁設計等は追加していない。
 
 ## 判定
 
-Topic 03は `topic_03_explanation_pdf_complete`。まだ `completed` ではない。完成数は `2 / 21` のまま。次工程は練習PDF（解答・完全解説付き）。
+Topic 03は `topic_03_practice_pdf_complete`。まだ `completed` ではない。完成数は `2 / 21` のまま。次工程は解説画像PowerPoint。
