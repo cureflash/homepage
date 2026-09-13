@@ -3,15 +3,14 @@
 更新日: 2026-09-14
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は25/38。01〜25がPASS。active topicは26 `補助電源① 主回路の電気を車内設備へ`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は26/38。01〜26がPASS。active topicは27 `補助電源② 車内照明`。
 
 ## 今回進捗
-Topic 26の解説画像PowerPointを完成した。16:9・4スライドで、選定5問・8小問の判断経路を固定範囲内で可視化した。全4スライドの表示QA、overflow検査、PPTX ZIP整合性検査をPASSした。固定範囲外の論点、未確認の新幹線補助電源実値は追加していない。
+Topic 26の完成後独立再解答を実施した。選定5問・8小問を完成教材内の式・適用条件・解法手順だけで再構成し、導出後に電気技術者試験センター公式解答と照合して`8 / 8 PASS`。固定範囲外知識・未確認実車値による補完は0件で、Topic 26を`COMPLETED`とした。
 
 更新:
-- `topics/26_auxiliary_power/26_auxiliary_power_images.pptx` — 解説画像PowerPointを追加
-- `topics/26_auxiliary_power/26_auxiliary_power.md` — PowerPoint進捗・QA・次工程を更新
-- `STATUS.md` — `topic_26_powerpoint_complete`へ更新
+- `topics/26_auxiliary_power/26_auxiliary_power.md` — 完成後独立再解答8 / 8 PASSと`COMPLETED`を記録
+- `STATUS.md` — 完成数26/38、active topicをTopic 27へ更新
 - `HANDOFF.md`
 
 ## Topic 26 品質ゲート対象
@@ -21,7 +20,7 @@ Topic 26の解説画像PowerPointを完成した。16:9・4スライドで、選
 4. R3 機械 問16(a)(b) — 単相半波ダイオード整流、RL負荷、平均直流電圧 — 1 / 3 — PASS
 5. H30 機械 問11 — インバータ、オンオフ制御、逆並列ダイオード、波高値、PWM — 5 — PASS
 
-結果: 5問・8小問、制作前独立解答`8 / 8 PASS`。本文・解説PDF・練習PDF・PowerPointへの要求事項マッピングは全件完了。
+制作前独立解答`8 / 8 PASS`、完成後独立再解答`8 / 8 PASS`。本文・解説PDF・練習PDF・PowerPointへの要求事項マッピングも全件完了。
 
 公式正本: https://www.shiken.or.jp/chief/third/qa/
 参照日: 2026-09-14
@@ -74,6 +73,15 @@ Topic 26の解説画像PowerPointを完成した。16:9・4スライドで、選
 - overflow検査0件、PPTX ZIP整合性検査PASS
 - 固定範囲外・未確認実車値の追加なし
 
+## Topic 26 完成後独立再解答
+- R7下 機械 問16(a)(b): `5 / 4` — PASS
+- R7下 機械 問15(a)(b): `5 / 2` — PASS
+- R7上 機械 問9: `3` — PASS
+- R3 機械 問16(a)(b): `1 / 3` — PASS
+- H30 機械 問11: `5` — PASS
+
+結果: `8 / 8 PASS`。必要公式の選択、適用条件、途中計算を完成教材内だけで再構成し、公式解答と全件一致。固定範囲外知識・未確認実車値による補完は0件。
+
 ## Topic 26 範囲境界
 採用しない:
 - R8上 機械 問9 — 変圧器短絡試験・漏れリアクタンス
@@ -85,10 +93,10 @@ Topic 26の解説画像PowerPointを完成した。16:9・4スライドで、選
 チョッパ詳細、系統連系保護、誘導電動機速度制御、変圧器短絡試験・詳細等価回路、半導体素子各論、高調波対策は追加しない。新幹線補助電源の入力電圧、出力電圧、容量、周波数、効率、回路方式は今回も実値化していない。
 
 ## 現在の状態
-- `current_status`: `topic_26_powerpoint_complete`
-- 完成数: 25/38
-- 01〜25: PASS
-- active topic: 26 `補助電源① 主回路の電気を車内設備へ`
+- `current_status`: `topic_26_completed`
+- 完成数: 26/38
+- 01〜26: PASS
+- active topic: 27 `補助電源② 車内照明`
 
 ## 次の正確な開始点
-Topic 26の完成後独立再解答を行う。選定5問・8小問を保存済み正答を先に見ず教材内容だけで解き、正答だけでなく根拠・式選択・適用条件まで確認する。
+Topic 27の制作前EXAM_ALIGNMENTを行う。系列SPECの固定範囲は、LED、光束、光度、照度、lm、cd、lx、照明計算。固定範囲から広げず、直近年度を優先して公式過去問を原則5問以上選定し、制作前独立解答で正答・根拠・適用条件を確認する。
