@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `04 200系のサイリスタ制御を計算する`
 
-current status: `topic_04_independent_reanswer_complete`
+current status: `topic_04_final_qa_needs_revision`
 
 ## Topic 04 現在の成果物
 
@@ -29,7 +29,13 @@ source Markdown:
 解説画像PowerPoint:
 `topics/04_200series_thyristor_control/04_200series_thyristor_control_images.pptx`
 
-制作前EXAM_ALIGNMENT、公式解答照合付き要求事項独立検証、解説本文＋3段階例題、解説PDF＋表示QA、練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後の教材のみ独立再解答12/12 PASSまで完了。最終QAは未実施。
+制作前EXAM_ALIGNMENT、公式解答照合付き要求事項独立検証、解説本文＋3段階例題、解説PDF＋表示QA、練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後の教材のみ独立再解答12/12 PASSまで完了している。
+
+最終QAでは、教材内容・過去問対応・成果物実在はPASS条件を満たす一方、source Markdownの進捗記録に不整合を確認したため `NEEDS_REVISION` とした。
+
+不整合:
+- source冒頭「状態」に「解説PDF・練習PDF・解説画像PowerPointは未作成」と残っているが、3成果物はGitHub正本に実在する。
+- source末尾「完成後独立再解答」に「未実施」と残っているが、`04_200series_thyristor_control_reanswer.md` が実在し12/12 PASSである。
 
 ## Topic 04 固定範囲
 
@@ -96,6 +102,12 @@ source Markdown:
 - LibreOfficeでPDF化し、表示QAでクリッピング・重なり・文字化けなし: PASS
 - PPTX ZIP整合性: PASS
 
+## 最終QA結果
+
+`NEEDS_REVISION`。
+
+過去問ゲート・教材内容・成果物実在はPASSだが、source Markdownの進捗記録がGitHub正本の現状と一致しないため `completed` にしない。
+
 ## 次に行うこと
 
-Topic 04の最終QAを実施する。固定EXAM_ALIGNMENT 5問・12小問の独立再解答 `12 / 12 PASS`、source、解説PDF、練習PDF、PowerPoint、各表示QA、仕様境界を再確認し、全品質ゲートを満たす場合のみ `completed` とする。
+Topic 04 source Markdownの進捗不整合だけを修正する。冒頭「状態」を実在成果物に同期し、末尾「完成後独立再解答」を実施済み12/12 PASSへ更新する。教材本文、固定EXAM_ALIGNMENT、過去問選定、仕様範囲は変更しない。その後、最終QAを再実施する。
