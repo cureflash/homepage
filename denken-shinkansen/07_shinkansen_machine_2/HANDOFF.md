@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `05 300系の誘導電動機を等価回路で解く`
 
-current status: `topic_05_practice_pdf_complete`
+current status: `topic_05_powerpoint_complete`
 
 ## Topic 05 固定範囲
 
@@ -91,6 +91,20 @@ source Markdown:
 - 文字抽出QA: PASS
 - 仕様外論点・未確認300系実車値の追加: 0件
 
+## 完了した解説画像PowerPoint
+
+`topics/05_300series_induction_motor_equivalent_circuit/05_300series_induction_motor_equivalent_circuit_images.pptx`
+
+- 16:9・4スライド
+- 星形結線の相電圧換算、一相分L形等価回路、複素電流の計算順を図解
+- `r2'/s` の分解と、一次入力→二次入力→機械出力→軸出力の電力フローを図解
+- 電磁トルクと軸トルク、同期速度・滑り・角速度の使い分けを図解
+- 二種一次・二次の解法手順と固定EXAM_ALIGNMENT 5問・17小問を収録
+- 全4スライド表示QA: PASS
+- overflow検査: PASS
+- ZIP整合性検査: PASS
+- 仕様外論点・未確認300系実車値の追加: 0件
+
 ## 境界
 
 次は追加しない。
@@ -103,4 +117,4 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 05の固定EXAM_ALIGNMENT 5問・17小問、解説source、解説PDF、練習PDFを維持し、解説画像PowerPointを作成して表示QAを行う。
+Topic 05の固定EXAM_ALIGNMENT 5問・17小問を、保存済み正答・公式解答を先に見ず、現行の解説source・解説PDF・練習PDF・PowerPointだけを使って独立再解答する。教材外知識で補完した小問はFAILとする。
