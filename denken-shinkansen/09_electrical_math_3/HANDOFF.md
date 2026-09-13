@@ -12,7 +12,7 @@ Topic 03 `複素数` は `completed`。
 
 完成数: `3 / 12`
 
-current_status: `topic_04_explanation_source_complete`
+current_status: `topic_04_explanation_pdf_complete`
 
 active_topic: `04 極形式・フェーザ`
 
@@ -21,7 +21,10 @@ active_topic: `04 極形式・フェーザ`
 source Markdown:
 `topics/04_polar_form_phasor/04_polar_form_phasor.md`
 
-制作前EXAM_ALIGNMENT、公式解答照合付き独立検証、解説本文、3段階例題まで完了。解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAは未着手。
+解説PDF:
+`topics/04_polar_form_phasor/04_polar_form_phasor_explanation.pdf`
+
+制作前EXAM_ALIGNMENT、公式解答照合付き独立検証、解説本文、3段階例題、解説PDF＋全ページ表示QAまで完了。練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAは未着手。
 
 選定公式過去問:
 - R6上 理論 問9: 独立解答 (2) = 公式 (2)
@@ -32,25 +35,22 @@ source Markdown:
 
 5問・6小問すべて一致。
 
-## Topic 04 解説本文に収録済み
+## Topic 04 解説PDF QA
 
-- `a+jb` と `r∠θ` の相互変換
-- 大きさ・偏角・象限確認
-- 極形式の掛け算・割り算
-- `j=1∠90°`, `-j=1∠-90°` と90°回転
-- 実効値フェーザと最大値の区別
-- 基準位相、進み・遅れ、`sin` / `cos` の統一
-- `V=ZI`, `Z=V/I` の極形式計算
-- `R+jX` とインピーダンス三角形、`cosφ=R/|Z|`
-- フェーザ図の加減算と `jI` の向き
-- 同一角周波数というフェーザ法の成立条件
-- 波形の零交差・山谷からの初期位相判定
-- `25 kV∠0°` に限定した新幹線接続例
-
-3段階例題:
-1. 基礎: 直交形式↔極形式、極形式乗算
-2. 本試験標準: 波形→実効値フェーザ→`Z=V/I`
-3. 複合・ひっかけ: 同周波数フェーザ加算と異周波数分離
+- A4縦4ページ: PASS
+- 直交形式↔極形式、象限確認: PASS
+- 極形式の乗除算、`j` の+90°回転: PASS
+- 正弦波→実効値フェーザ、最大値との区別: PASS
+- 基準位相、進み・遅れ、`sin` / `cos` 統一: PASS
+- `V=ZI`, `Z=V/I`、`R+jX`、`cosφ=R/|Z|`: PASS
+- フェーザ図の加減算と `jI`: PASS
+- 同一角周波数の成立条件、異周波数成分の分離: PASS
+- 波形零交差・山谷からの初期位相判定: PASS
+- `25 kV∠0°` の数学例: PASS
+- 基礎・本試験標準・複合の3段階例題: PASS
+- 選定5問・6小問の要求事項をPDFへ反映: PASS
+- 全4ページ180 dpi表示QA: クリッピング、重なり、黒四角、文字化けなし
+- 固定範囲外の追加なし、未確認実車値の追加なし: PASS
 
 ## Topic 04 固定範囲
 
@@ -79,6 +79,6 @@ source Markdown:
 
 ## 次に行うこと
 
-`topics/04_polar_form_phasor/04_polar_form_phasor.md` を基に解説PDFを作成し、全ページ表示QAを行う。
+Topic 04の練習PDF（解答・完全解説付き）を作成する。
 
-固定範囲を越えず、過去問5問・6小問へ必要な中間知識がPDFに落ちていることを確認する。
+固定範囲を越えず、選定5問・6小問で必要な操作を練習できる問題構成にする。
