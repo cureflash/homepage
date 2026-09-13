@@ -4,52 +4,25 @@
 
 ## 現在地
 
-Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の直流主電動機はどんな特性だった？`、Topic 03 `0系を210km/hまで加速させる` は最終QAまでPASSし、`completed`。
+Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の直流主電動機はどんな特性だった？`、Topic 03 `0系を210km/hまで加速させる`、Topic 04 `200系のサイリスタ制御を計算する` は最終QAまでPASSし、`completed`。
 
-完成数: `3 / 22`
+完成数: `4 / 22`
 
-active topic: `04 200系のサイリスタ制御を計算する`
+active topic: `05 300系の誘導電動機を等価回路で解く`
 
-current status: `topic_04_source_progress_synced`
+current status: `topic_04_completed`
 
-## Topic 04 現在の成果物
+## Topic 04 完了確認
 
-source Markdown:
-`topics/04_200series_thyristor_control/04_200series_thyristor_control.md`
+最終QA記録:
+`topics/04_200series_thyristor_control/04_200series_thyristor_control_final_qa.md`
 
-独立再解答記録:
-`topics/04_200series_thyristor_control/04_200series_thyristor_control_reanswer.md`
-
-解説PDF:
-`topics/04_200series_thyristor_control/04_200series_thyristor_control_explanation.pdf`
-
-練習PDF:
-`topics/04_200series_thyristor_control/04_200series_thyristor_control_practice.pdf`
-
-解説画像PowerPoint:
-`topics/04_200series_thyristor_control/04_200series_thyristor_control_images.pptx`
-
-制作前EXAM_ALIGNMENT、公式解答照合付き要求事項独立検証、解説本文＋3段階例題、解説PDF＋表示QA、練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後の教材のみ独立再解答12/12 PASSまで完了している。
-
-前回最終QAで見つかったsource Markdownの進捗不整合は修正済み。冒頭「状態」は実在成果物へ、末尾「完成後独立再解答」は12/12 PASSの再解答記録へ同期した。教材本文・固定EXAM_ALIGNMENT・仕様範囲は変更していない。
-
-## Topic 04 固定範囲
-
-- サイリスタ
-- 制御角
-- 位相制御整流
-- 平均直流電圧
-- 電流
-- 力率
-- 高調波の基本
-- 直流主電動機との接続
-- 制御角―平均直流電圧
-- 制御角―主電動機電流
-- 制御角―トルク
-
-固定範囲外の降圧チョッパ、PWM、インバータ、回生・逆変換、能動フィルタ補償設計、サイクロコンバータ固有制御は追加しない。200系の回路定数・制御角・主電動機電流等は一次資料未確認のため実車値として置かない。
-
-## Topic 04 過去問品質ゲート
+成果物:
+- source Markdown: `topics/04_200series_thyristor_control/04_200series_thyristor_control.md`
+- 独立再解答: `topics/04_200series_thyristor_control/04_200series_thyristor_control_reanswer.md`
+- 解説PDF: `topics/04_200series_thyristor_control/04_200series_thyristor_control_explanation.pdf`
+- 練習PDF: `topics/04_200series_thyristor_control/04_200series_thyristor_control_practice.pdf`
+- 解説画像PowerPoint: `topics/04_200series_thyristor_control/04_200series_thyristor_control_images.pptx`
 
 固定EXAM_ALIGNMENT:
 - R05 一次 機械 問4: (1)〜(3)
@@ -58,50 +31,27 @@ source Markdown:
 - H30 二次 機械・制御 問3: (2)〜(4)
 - H27 二次 機械・制御 問3: (2)
 
-一次2問＋二次記述3問、計5問。ゲート対象12小問。
+一次2問＋二次記述3問、計5問・ゲート対象12小問。完成後教材のみ独立再解答 `12 / 12 PASS`。教材外知識・固定範囲外論点による補完0件、未確認200系実車値の追加0件。
 
-公式解答・標準解答照合後の制作前要求事項独立検証: `12 / 12 PASS`。
+最終QAでは、必須成果物実在、EXAM_ALIGNMENT反映、式・成立条件・途中式・単位、既実施PDF/PPTX表示QA、PowerPoint ZIP整合性、仕様境界を再確認し全件PASS。
 
-完成後教材のみ独立再解答: `12 / 12 PASS`。
+## Topic 05 固定範囲
 
-内訳:
-- R05 一次 機械 問4: 3 / 3 PASS
-- R01 一次 機械 問3: 3 / 3 PASS
-- R05 二次 機械・制御 問3: 2 / 2 PASS
-- H30 二次 機械・制御 問3: 3 / 3 PASS
-- H27 二次 機械・制御 問3: 1 / 1 PASS
+SPECに従い、次だけを扱う。
 
-重要式:
-- `V_d=(3√2/π)V cosα ≒ 1.35V cosα`
-- `P=(3√2/π)VI_d cosα`
-- `I_1=(√6/π)I_d`
-- `Q_1=(3√2/π)VI_d sinα`（H30二次の条件）
-- `V_d(α)=E+I_aR_a`
-- `T=kΦI_a`
-
-独立再解答では教材外知識・固定範囲外論点による補完は0件。200系の未確認実車値も追加していない。
-
-## Topic 04 PowerPoint QA
-
-- 16:9・1スライドの解法マップ: PASS
-- 固定5問・12小問に必要な論点を可視化: PASS
-- 60°区間平均値積分と `V_d=(3√2/π)V cosα`: PASS
-- `α=0`、`0≤α≤π/2` と制御角―平均直流電圧: PASS
-- 直流側電流・一素子平均電流・一素子実効値・交流側線電流の区別: PASS
-- `I_T(av)=I_d/3`、`I_T(rms)=I_d/√3`、R01抵抗負荷型の一素子平均電流式を収録: PASS
-- H30二次条件の `P`、`I_1`、`S_1`、`Q_1`、基本波力率: PASS
-- 基本波力率と総合力率を区別: PASS
-- 高調波は発生源と基本的影響までに限定: PASS
-- `V_d→I_a→T` と `α-V_d`、`α-I_a`、`α-T` の読み方を収録: PASS
-- `α-I_a`、`α-T` は `E`・`R_a`・`kΦ` 一定の教材比較モデルとして扱い、未確認実車値を使っていない: PASS
-- 仕様外論点の追加なし: PASS
-- LibreOfficeでPDF化し、表示QAでクリッピング・重なり・文字化けなし: PASS
-- PPTX ZIP整合性: PASS
-
-## 最終QA状態
-
-前回はsource Markdown進捗不整合により `NEEDS_REVISION`。その不整合は今回修正済み。`completed` 判定はまだ行っていない。
+- 一次抵抗・一次漏れリアクタンス
+- 励磁枝
+- 二次抵抗・二次漏れリアクタンス
+- `r2'/s`
+- 一次入力
+- 二次入力
+- 二次銅損
+- 機械出力
+- 軸出力
+- トルク
+- 効率
+- 一相分等価回路から電流、出力、損失、トルクを順に求める計算
 
 ## 次に行うこと
 
-Topic 04の最終QAを再実施する。固定EXAM_ALIGNMENT一次2問＋二次記述3問・12小問、完成後独立再解答12/12 PASS、成果物実在、source Markdown進捗同期、固定範囲外追加0件を確認し、全件PASSなら `completed` にする。
+Topic 05の制作前EXAM_ALIGNMENTを行う。上記固定範囲に直接対応する電験二種公式過去問を一次・二次合わせて原則5問以上調査し、二次記述対象が確認できる場合は少なくとも1問含める。混合問題はTopic 05へ直接対応する小問だけをゲート対象とし、SPEC外論点を件数合わせで追加しない。
