@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `06_shinkansen_power_2`
 - exam_aligned_completed_topics: 1 / 22
-- current_status: `topic_02_practice_qa_complete`
+- current_status: `topic_02_explanation_pdf_complete`
 - last_completed_topic: `01 新幹線を電力系統から見てみる`
 - active_topic: `02 信濃川の水で新幹線を何本走らせられる？`
-- next_start: Topic 02 の解説PDFを作成し、本文・3段階例題・EXAM_ALIGNMENT・出典・数式・単位をsource Markdownと同期する
+- next_start: Topic 02 の練習PDFを作成し、15問・完全解説・一次型10問・二次記述型5問を既存source Markdownと同期する
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -21,11 +21,30 @@
 - [x] 解説本文（本文節＋3段階例題）
 - [x] 練習問題・完全解説（15問、一次型10問＋二次記述型5問）
 - [x] 練習問題の独立再計算・一意解QA（15/15 PASS）
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
 - [ ] 最終QA
+
+## Topic 02 解説PDF
+成果物:
+- `topics/02_hydropower/02_hydropower_explanation.pdf`
+
+同期内容:
+- 9節の解説本文
+- 基礎・本試験標準・複合ひっかけの3段階例題
+- 一次4問＋二次2問のEXAM_ALIGNMENT
+- `P=ρgQHη`、調整池水量収支、比速度、調速機、水撃、`GD²`、無拘束速度
+- JR東日本一次資料による自営水力発電総出力 `44.8万kW` と最大取水量 `316.96 m^3/s`
+- 正式選定過去問と参考教材・一次資料の出典
+
+PDF QA:
+- A4縦6ページ
+- 全6ページをPDFiumでレンダリング確認し、文字切れ・重なり・黒塗り・欠落なし
+- pdftoppm / PDFiumの2系統レンダリングを実施し、内容崩れなし
+- 列車1本の所要電力には未確認の仮定値を追加していない
+- Topic 02固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
 
 ## Topic 02 練習問題独立QA
 QA記録:
@@ -118,11 +137,11 @@ source Markdown:
 - 練習15問は一次型10問＋二次記述型5問で、正式選定5問の要求事項をマッピング済み
 - 補強後の解説PDFは現行版でレンダリングQA PASS
 - 練習PDFは作成時の全6ページ二系統レンダリングQA済み現行blob
-- PowerPointは作成時の全4枚レンダリング確認・overflow検査PASS済み現行blob
+- PowerPointは現行blobが作成時から変更されておらず、全4枚の画像レンダリング確認とoverflow検査PASS済み現行blob
 - 完成後再独立解答は5/5 PASS、教材外知識補完0件
 - Topic 08、12、16、20の本題および未確認実設備値は追加していない
 
 以上によりTopic 01を `completed` とした。完成数は `1 / 22`。
 
 ## 次
-Topic 02 `信濃川の水で新幹線を何本走らせられる？` の解説PDFを作成する。既存source Markdownの本文・3段階例題・EXAM_ALIGNMENT・出典・数式・単位を同期し、固定範囲外の論点は追加しない。
+Topic 02 `信濃川の水で新幹線を何本走らせられる？` の練習PDFを作成する。既存の15問・完全解説・問題マッピングをそのまま同期し、一次型10問＋二次記述型5問の構成と固定範囲を維持する。
