@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 2 / 16
-- current_status: `topic_03_explanation_body_complete`
+- current_status: `topic_03_explanation_pdf_complete`
 - last_completed_topic: `02 上越新幹線を水の力で走らせる`
 - active_topic: `03 JR東日本はなぜ火力発電所まで持っている？`
-- next_start: Topic 03の解説本文を正本として解説PDFを作成し、全ページ表示QAを行う。制作前EXAM_ALIGNMENTの6問・7小問に対応する内容を欠落させず、`SPEC.md` の固定範囲から追加しない
+- next_start: Topic 03の解説本文・解説PDFを正本として練習PDFを作成し、全ページ表示QAを行う。制作前EXAM_ALIGNMENTの6問・7小問に対応する固定範囲を維持する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT範囲再監査、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
 - [x] 02 上越新幹線を水の力で走らせる — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QAまで完了
-- [ ] 03 JR東日本はなぜ火力発電所まで持っている？ — 制作前EXAM_ALIGNMENT、解説本文・3段階例題完了。解説PDF以降は未着手
+- [ ] 03 JR東日本はなぜ火力発電所まで持っている？ — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDFまで完了。練習PDF以降は未着手
 - [ ] 04〜16 — 未着手
 
 ## 01 EXAM_ALIGNMENT範囲再監査
@@ -196,7 +196,7 @@ source: `topics/03_thermal_power/03_thermal_power.md`
 - R7上 問3の節炭器・過熱器・再熱器・電気集じん装置・空気予熱器の詳細通過順は追加しない
 - R6下 問2の再熱/再生サイクル・給水加熱器・節炭器の個別論点は追加しない
 - R7下 問15(b)、R6下 問15(b)の炭素組成・化学量論・CO2計算は追加しない
-- R7下 問3の保護装置・継電器・トリップ機構は追加しない
+- R7下 電力 問3の保護装置・継電器・トリップ機構は追加しない
 - JR東日本川崎発電所等の実設備値は一次資料で確認できたものだけを使用する
 
 ## 03 解説本文
@@ -217,5 +217,15 @@ JR東日本一次資料で、川崎発電所が1930年運転開始、現在は�
 
 固定範囲外の詳細煙風道設備、再熱/再生サイクル、燃焼化学、保護装置は追加していない。
 
+## 03 解説PDF
+- file: `topics/03_thermal_power/03_thermal_power_explanation.pdf`
+- A4縦6ページ
+- 制作前EXAM_ALIGNMENT 6問・7小問の固定範囲を収録
+- 汽力発電のエネルギー流れ、復水器・真空度、蒸気タービン出力/蒸気量、発熱量・発電端熱効率、熱消費率、所内率、コンバインドサイクル、3段階例題、過去問対応表、公式まとめを収録
+- 固定範囲外の詳細煙風道設備、再熱/再生サイクル、燃焼化学、保護装置は追加していない
+- 200 dpiで全6ページをレンダリングし、文字欠け・クリップ・重なり・壊れた数式記号がないことを確認
+
+判定: 解説PDF表示QA `PASS`。
+
 ## 次
-Topic 03の解説本文を正本として解説PDFを作成し、全ページ表示QAを行う。完成数は2/16のまま。
+Topic 03の解説本文・解説PDFを正本として練習PDFを作成し、全ページ表示QAを行う。制作前EXAM_ALIGNMENTの6問・7小問に対応する固定範囲を維持する。完成数は2/16のまま。
