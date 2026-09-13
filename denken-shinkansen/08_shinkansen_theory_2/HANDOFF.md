@@ -10,11 +10,11 @@ Topic 02 `架線は長くなるとなぜ電圧が落ちる？` は `completed`�
 
 Topic 03 `25kV架線の周囲にはどんな電界ができる？` は `completed`。
 
-Topic 04 `架線と車体は巨大なコンデンサなのか？` は解説本文＋3段階例題、解説PDF、練習source＋練習PDF、解説画像PowerPoint、各表示QA、完成後独立再解答まで完了。最終QAを実施したが、source 2ファイルの進捗記録不整合により `NEEDS_REVISION`。
+Topic 04 `架線と車体は巨大なコンデンサなのか？` は解説本文＋3段階例題、解説PDF、練習source＋練習PDF、解説画像PowerPoint、各表示QA、完成後独立再解答まで完了。初回最終QAで検出したsource 2ファイルの進捗記録不整合を今回同期済み。次段階は最終QA再実施。
 
 完成数: `3 / 21`
 
-current_status: `topic_04_final_qa_needs_revision`
+current_status: `topic_04_source_status_synced`
 
 active_topic: `04 架線と車体は巨大なコンデンサなのか？`
 
@@ -74,39 +74,29 @@ source:
 - PowerPoint全5スライド表示QA
 - PowerPoint領域外はみ出し検査 PASS
 - 固定一次5問・22小問の完成後独立再解答 `22 / 22 PASS`
-- 最終QA実施
+- 初回最終QA実施
+- source進捗記録2箇所の同期
 
 未完了:
-- `04_catenary_capacitance.md` 冒頭の進捗記録同期
-- `04_catenary_capacitance_practice.md` 末尾の進捗記録同期
 - 最終QA再実施
 - 最終QA PASS時のWebカタログ登録
 
 ## 今回の更新
 
-Topic 04の最終QAを実施した。
+Topic 04のsource進捗記録2箇所を現在地へ同期した。
 
-品質ゲートの技術内容はPASS:
-- 一次5問・22小問の独立再解答 `22 / 22 PASS`
-- 教材外知識補完 `0件`
-- 固定範囲外論点追加 `0件`
-- 二次数合わせ `0件`
-- 必須成果物実在
-- 解説PDF・練習PDF・PowerPoint表示QA PASS
-- 練習12問計算QA `12 / 12 PASS`
+1. `04_catenary_capacitance.md` 冒頭の「最終QAは未着手」を、最終QA実施済み・再QA待ちへ更新。
+2. `04_catenary_capacitance_practice.md` 末尾の「完成後独立再解答を実施しない」を、PowerPoint完成済み・独立再解答 `22 / 22 PASS`・最終QA実施済みへ更新。
+3. 固定範囲、問題本文、解説、正答、PDF、PowerPoint、EXAM_ALIGNMENTは変更していない。
+4. 一次5問・22小問、二次直接対応なしの判断、教材外知識補完0件、仕様外論点追加0件を維持。
 
-ただし正本間の状態記録に2件の不整合を検出した。
-
-1. 主source冒頭が「最終QAは未着手」のまま。
-2. 練習source末尾が「完成後独立再解答を実施しない」のまま。
-
-このため最終判定は `NEEDS_REVISION / IN_PROGRESS`。Topic 04はまだ `completed` にせず、完成数は `3 / 21` を維持する。Webカタログ登録も保留する。
+Topic 04はまだ `completed` にせず、完成数は `3 / 21` を維持する。
 
 ## 次に行うこと
 
-Topic 04のsource進捗記録2箇所だけを現在地へ同期する。
+Topic 04の最終QAを再実施する。
 
-1. `04_catenary_capacitance.md` 冒頭 `## 状態` を、最終QA実施済み・進捗記録同期待ちへ更新する。
-2. `04_catenary_capacitance_practice.md` 末尾 `## 品質ゲート上の位置付け` を、PowerPoint完成済み・独立再解答 `22 / 22 PASS` 済みへ更新する。
-3. 固定範囲、問題本文、解説、正答、PDF、PowerPoint、EXAM_ALIGNMENTは変更しない。
-4. 同期後に最終QAを再実施し、全件PASS時のみ `completed` として完成数を `4 / 21` に進め、同じcheckpointでWebカタログへ登録する。
+1. source 2ファイルの進捗記録が現在地へ同期済みであることを確認する。
+2. 固定一次5問・22小問の独立再解答 `22 / 22 PASS` を再確認する。
+3. 解説PDF・練習PDF・PowerPointの既存表示QA、練習12問計算QA、SPEC境界を確認する。
+4. 全件PASS時のみ `completed` として完成数を `4 / 21` に進め、同じcheckpointでWebカタログへ登録する。
