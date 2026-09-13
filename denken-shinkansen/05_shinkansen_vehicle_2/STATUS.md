@@ -5,15 +5,31 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 2 / 39
-- current_status: `topic_03_practice_pdf_complete`
+- current_status: `topic_03_images_pptx_complete`
 - last_completed_topic: `02 0系② 整流回路の波形解析`
 - active_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
-- next_start: Topic 03の解説画像PowerPointを作成し、全スライドVisual QAを行う
+- next_start: Topic 03の完成教材だけでH28一次・H24二次の固定範囲を独立再解答する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
-- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF・練習問題source・練習PDF完成、解説画像PowerPoint未着手
+- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF・練習問題source・練習PDF・解説画像PowerPoint完成、完成後独立再解答未実施
+
+## Topic 03 解説画像PowerPoint
+確定済みEXAM_ALIGNMENT・解説本文・練習教材の固定範囲だけを使って作成した。
+
+PowerPoint:
+- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_images.pptx`
+- 16:9、2枚
+- 電機子電圧方程式 `V=E+I_aR_a`、`E=k_eΦω`、`T=k_tΦI_a`、`EI_a=Tω`、`I_a²R_a` を式の接続と電力・損失で図解
+- `SPEC.md` 指定4グラフ（電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点）を模式図で収録
+- H28一次の式の意味識別と、H24二次の損失→`R_a`→`E`→速度比・トルク比→新動作点の答案順を図解
+- 飽和時は `Φ∝I_f` を無条件に使わず、与えられた磁束条件を使う注意を明記
+- 図は全て自作模式図、外部画像なし
+- 全2枚Visual QA PASS
+- `slides_test.py` overflow検査PASS
+- 未確認の0系主電動機実値・固有仕様は追加していない
+- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
 
 ## Topic 03 練習PDF
 確定済み練習問題sourceの問題文・選択肢・数値・解説を変更せずA4縦へ組版した。
