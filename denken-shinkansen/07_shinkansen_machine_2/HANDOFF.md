@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `05 300系の誘導電動機を等価回路で解く`
 
-current status: `topic_05_exam_alignment_complete`
+current status: `topic_05_explanation_source_complete`
 
 ## Topic 05 固定範囲
 
@@ -31,7 +31,7 @@ SPECに従い、次だけを扱う。
 
 滑り・同期速度は `r2'/s` と出力・トルク計算に必要な前提としてのみ扱う。
 
-## Topic 05 制作前EXAM_ALIGNMENT
+## Topic 05 EXAM_ALIGNMENT
 
 source Markdown:
 `topics/05_300series_induction_motor_equivalent_circuit/05_300series_induction_motor_equivalent_circuit.md`
@@ -47,7 +47,24 @@ source Markdown:
 
 参考教材は e-sysnet「三相誘導電動機の理論と等価回路」と電験王2の各対応過去問解説を確認済み。
 
-過去問逆算の教材必須説明12項目もsource Markdownへ固定済み。L形等価回路、励磁枝、`r2'/s`、一次・二次電流、二次入力、二次銅損、機械出力、軸出力、トルク、一次入力、効率を欠落させない。
+## 完了した解説source
+
+過去問逆算の教材必須説明12項目を本文へ `12 / 12` マッピング済み。
+
+本文は次を収録した。
+
+- 星形結線の線間電圧→相電圧換算
+- 一相分L形等価回路と各定数の意味
+- 同期速度・滑り・`r2'/s`
+- 励磁電流、二次電流一次換算値、一次電流の複素計算
+- 一次入力→二次入力→二次銅損→機械出力→軸出力の電力フロー
+- 電磁トルクと軸トルクの区別
+- 励磁損・一次銅損・二次銅損・効率
+- 二種一次の選択式解法
+- 二種二次の記述計算手順と単位換算
+- 3段階例題（基礎／本試験標準／複合・ひっかけ）
+
+例題の数値はすべて教材上の仮定値として明記し、未確認300系実車値は使用していない。
 
 ## 境界
 
@@ -61,4 +78,4 @@ source Markdown:
 
 ## 次に行うこと
 
-固定EXAM_ALIGNMENT 5問・17小問を変えずに、解説本文＋3段階例題を作成する。source Markdownに記録済みの必須説明12項目を本文へ全件マッピングする。Topic 06以降の論点や未確認300系実車値は追加しない。
+Topic 05のsource Markdownを正本として解説PDFを作成する。固定EXAM_ALIGNMENT 5問・17小問と本文内容は変えず、A4縦の解説PDFへ落とし込み、全ページ表示QAを行う。
