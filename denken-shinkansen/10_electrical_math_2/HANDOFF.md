@@ -8,11 +8,11 @@ Topic 01 `複素数・複素指数・フェーザ計算` は `completed`。
 
 Topic 02 `ベクトルと座標変換` は `completed`。
 
-Topic 03 `偏微分・全微分` は解説画像PowerPointまで完了。
+Topic 03 `偏微分・全微分` は完成後独立再解答まで完了。最終QAのみ未完了。
 
 完成数: `2 / 20`
 
-current_status: `topic_03_images_pptx_complete`
+current_status: `topic_03_exam_reanswer_complete`
 
 active_topic: `03 偏微分・全微分`
 
@@ -21,6 +21,9 @@ active_topic: `03 偏微分・全微分`
 記録:
 `topics/03_partial_total_differentials/03_partial_total_differentials.md`
 
+完成後独立再解答記録:
+`topics/03_partial_total_differentials/03_partial_total_differentials_exam_reanswer.md`
+
 品質ゲート対象:
 - R7 一次 理論 問2 (2)〜(5)
 - R7 一次 理論 問4 (1)〜(3)
@@ -28,7 +31,7 @@ active_topic: `03 偏微分・全微分`
 - R1 一次 理論 問1 (1)〜(4)
 - H21 一次 理論 問7 (1)〜(2)
 
-計5問・16小問。制作前独立再解答は16/16小問で公式解答と一致。
+計5問・16小問。制作前独立再解答、完成後独立再解答とも16/16小問で公式解答と一致。
 
 固定範囲:
 - 偏微分
@@ -38,40 +41,38 @@ active_topic: `03 偏微分・全微分`
 - 一次近似
 - 絶対感度・相対感度
 
-R7・R6の二次「電力・管理」「機械・制御」も確認したが、本Topicの固定範囲だけで完結する直接問題は採用しない。極値・最適条件はTopic 04、一般行列はTopic 11、微分方程式はTopic 07、反復計算・最適化はTopic 18・19へ送る。
+R7・R6の二次「電力・管理」「機械・制御」も確認済みだが、本Topicの固定範囲だけで完結する直接問題は採用しない。極値・最適条件はTopic 04、一般行列はTopic 11、微分方程式はTopic 07、反復計算・最適化はTopic 18・19へ送る。
 
 ## 今回追加した成果物
 
-`topics/03_partial_total_differentials/03_partial_total_differentials_images.pptx`
+`topics/03_partial_total_differentials/03_partial_total_differentials_exam_reanswer.md`
 
-- 16:9・全4枚
-- 偏微分と全微分の使い分けを、固定量・変化量の判定から模式化
-- 全時間微分を、`I1(t), I2(t), θ(t)` から `Φ1` への依存関係と各微分項で可視化
-- 一次近似は二次微小項を無次元比で比較し、相対感度は `S_A^G` と `S_H^G` の違いを図示
-- 選定5問・16小問と教材論点の対応表、公式一次資料・参考教材を最終スライドへ記載
-- 外部図版は使用せず、自作の模式図・数式・表のみを使用
-- Topic 04/07/11/18/19の後続論点、未確認の実車値・特性式・感度係数は追加していない
+完成教材から次を再導出した。
 
-PowerPointをPDFへ変換し、全4枚を180 dpiでレンダリングして文字欠け、重なり、はみ出し、黒塗り、空白スライドなしを確認済み。`slides_test.py` によるスライド外はみ出し検査もPASS。
+- R7 問2: `W=1/2 L1I1^2+1/2 L2I2^2+M0I1I2cosθ`、`∂W/∂θ=-M0I1I2sinθ`、`Φ1=L1I1+M0I2cosωt`、`e=ωM0I2sinωt`
+- R7 問4: `Es=(1-k)E`、`Ex=kE`、平衡条件から `Zx={k/(1-k)}Zs`
+- R6 問8: `G=A/(1+AH)`、`|AH|≫1` で `G≈1/H`、`S_A^G=1/(1+AH)` よりA変動への低感度
+- R1 問1: `Q=It`、`E=It/(εS)`、`D=It/S`、`J=∂D/∂t=I/S`、`I=SJ`
+- H21 問7: `Δn=Δp`、`R=K(n0Δp+p0Δn+ΔnΔp)`、条件確認後 `R≈Kn0Δp`
+
+公式解答との照合結果は5問・対象16小問すべて一致。固定範囲外の論点は追加していない。
 
 ## 次に行うこと
 
-Topic 03の完成後独立再解答を行う。
+Topic 03の最終QAを行う。
 
-完成教材（source Markdown・解説PDF・練習PDF・解説画像PowerPoint）のみを使い、保存済み正答を先に見ずに次の5問・16小問を再解答し、独立再解答記録をGitHub正本へ保存する。
+確認対象:
+- source Markdown
+- 解説PDF
+- 練習PDF
+- 解説画像PowerPoint
+- 完成後独立再解答記録
 
-- R7 一次 理論 問2 (2)〜(5)
-- R7 一次 理論 問4 (1)〜(3)
-- R6 一次 理論 問8 (1)〜(3)
-- R1 一次 理論 問1 (1)〜(4)
-- H21 一次 理論 問7 (1)〜(2)
+確認項目:
+- EXAM_ALIGNMENTの5問・16小問が全成果物と再解答記録で欠落なく接続されていること
+- 数式、符号、単位、近似条件、相対感度の説明に矛盾がないこと
+- PDF・PowerPointに文字欠け、重なり、はみ出し、黒塗り、空白ページ・スライドがないこと
+- Topic 04/07/11/18/19の後続論点を先取りしていないこと
+- 未確認の新幹線実車値・特性式・感度係数を追加していないこと
 
-固定範囲と過去問対応を維持し、次を追加しない。
-
-- Topic 04の極値・最適条件
-- Topic 07の微分方程式・指数応答
-- Topic 11の一般行列
-- Topic 18・19の反復計算・最適化
-- 未確認の新幹線実車値・特性式・感度係数
-
-独立再解答後も最終QA PASSまでTopic 03は `completed` にしない。
+全項目PASSの場合のみTopic 03を `completed` にし、完成数を `3 / 20` へ更新してTopic 04へ進む。
