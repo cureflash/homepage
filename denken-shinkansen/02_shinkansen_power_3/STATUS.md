@@ -32,10 +32,10 @@ source: `topics/04_nuclear_power/04_nuclear_power.md`
 ### 完成済み成果物
 - 解説PDF: `topics/04_nuclear_power/04_nuclear_power_explanation.pdf` — A4縦4ページ、全ページ表示QA PASS
 - 練習PDF: `topics/04_nuclear_power/04_nuclear_power_practice.pdf` — A4縦6ページ、12問、全ページ表示QA PASS
-- 解説画像PowerPoint: `topics/04_nuclear_power/04_nuclear_power_images.pptx` — 16:9・7枚、表示QA・境界外はみ出し・ZIP整合性 PASS
+- 解説画像PowerPoint: `topics/04_nuclear_power/04_nuclear_power_images.pptx` — 16:9・2枚、固定6過去問の要求事項を収録し、全スライド表示QA・境界外はみ出し・ZIP整合性 PASS
 - PowerPoint QA: `topics/04_nuclear_power/04_nuclear_power_powerpoint_qa.md`
 
-PowerPointでは固定6過去問の要求事項を全件可視化し、JAEA一次資料で確認済みの「むつ」実在値とSPEC固定の架空列車部分を分離した。未確認の列車発電端出力・走行性能は真値化していない。
+PowerPointではJAEA一次資料で確認済みの「むつ」実在値とSPEC固定の架空列車部分を分離した。未確認の列車発電端出力・走行性能は真値化していない。
 
 固定範囲外の新型炉、核燃料サイクル、放射線分類・遮蔽、安全法規、詳細燃料加工は追加していない。
 
