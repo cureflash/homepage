@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 3 / 21
-- current_status: `topic_04_practice_pdf_complete`
+- current_status: `topic_04_powerpoint_complete`
 - last_completed_topic: `03 25kV架線の周囲にはどんな電界ができる？`
 - active_topic: `04 架線と車体は巨大なコンデンサなのか？`
-- next_start: Topic 04の解説画像PowerPointを作成し、固定EXAM_ALIGNMENTの一次5問・22小問で必要な図解だけを可視化する。二次の数合わせや電気影像法・導電率・力率改善等のSPEC外論点を追加しない
+- next_start: Topic 04の固定EXAM_ALIGNMENT一次5問・22小問を、保存済み正答を見ず教材内容だけで完成後独立再解答する。二次は直接対応がないため数合わせで追加せず、教材外知識で補完しない
 
 ## Topic 04 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -25,24 +25,23 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 04の練習source＋練習PDFを完成した。
+Topic 04の解説画像PowerPointを完成した。
 
-- `topics/04_catenary_capacitance/04_catenary_capacitance_practice.md`
-- `topics/04_catenary_capacitance/04_catenary_capacitance_practice.pdf`
-- 12問すべて五肢択一、基礎3／本試験標準6／複合・ひっかけ3
-- 固定EXAM_ALIGNMENTの一次5問・22小問で要求される操作を練習問題へ対応付け
-- 二層誘電体、同軸円筒、位置依存誘電率、分極、直並列合成、固定電圧／固定電荷、電荷保存、静電エネルギーを固定範囲内で収録
-- 二次に直接対応問題がないため記述式を数合わせで追加していない
+- `topics/04_catenary_capacitance/04_catenary_capacitance_images.pptx`
+- 16:9、5スライド
+- 固定EXAM_ALIGNMENTの一次5問・22小問で必要な図解だけを収録
+- 二層誘電体の `D` 連続と `E` 分担、平行板の `C=εS/d` と分極、同軸円筒の `D(r)`・`E(r)`・`ln(b/a)`、固定電圧／固定電荷と静電エネルギーを可視化
+- 二次に直接対応問題がないため別論点を件数合わせで追加していない
 - 電気影像法、導電率・コンダクタンス、力率改善、実車容量推定を追加していない
-- 全12問の数値計算を独立スクリプトで再計算し `12 / 12 PASS`
-- PDFはA4縦4ページ。200 dpiで全4ページをレンダリングし、クリッピング・重なり・文字化け・欠落なしを確認
+- 全5スライドをレンダリングして表示QA PASS
+- 領域外はみ出し検査 PASS
 
 ## 判定
 
-Topic 04は `practice PDF PASS`。テーマ自体は未完了。完成数は `3 / 21`。
+Topic 04は `PowerPoint PASS`。テーマ自体は未完了。完成数は `3 / 21`。
