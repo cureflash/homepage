@@ -4,7 +4,7 @@ updated: 2026-09-14
 series: `06_shinkansen_power_2`
 active_topic: `03_thermal_power`
 theme: 川崎発電所は新幹線の負荷変動に追従できる？
-current_status: `topic_03_seal_oil_artifacts_synced_and_display_qa_complete`
+current_status: `topic_03_post_revision_independent_reanswer_complete`
 
 ## EXAM_ALIGNMENT
 
@@ -17,7 +17,8 @@ current_status: `topic_03_seal_oil_artifacts_synced_and_display_qa_complete`
 
 制作前独立検証: `5 / 5 PASS`。
 練習15問の独立QA: `15 / 15 PASS`（密封油補強前の基準結果）。
-完成後独立再解答（密封油補強前）: `4 / 5 PASS`。R3一次「電力」問5(5)のみ、教材から `密封油ポンプ` を一意に導けずFAIL。
+密封油補強前の完成後独立再解答: `4 / 5 PASS`。R3一次「電力」問5(5)のみ、教材から `密封油ポンプ` を一意に導けずFAILだった。
+密封油補強後の完成後独立再解答: `5 / 5 PASS`。教材外知識補完 `0件`、固定範囲外追加 `0件`。
 
 ## 密封油ポンプ補強
 
@@ -33,7 +34,7 @@ current_status: `topic_03_seal_oil_artifacts_synced_and_display_qa_complete`
 - 固定範囲外知識の追加: `0件`
 - 未確認実設備値の追加: `0件`
 
-正式5問の補強後独立再解答はまだ実施していないため、品質ゲート判定は前回の `4 / 5 PASS` のまま維持する。
+補強後、正式5問を現行教材だけで再度独立再解答し、全5問で公式解答・標準解答と一致した。前回FAILだったR3一次「電力」問5(5)も、教材の密封油ポンプ説明から `ヲ` に一意に到達できた。
 
 ## Gate checklist
 
@@ -47,9 +48,9 @@ current_status: `topic_03_seal_oil_artifacts_synced_and_display_qa_complete`
 - [x] 解説画像PowerPoint
 - [x] 密封油ポンプsource補強
 - [x] 密封油ポンプをPDF・PowerPointへ同期＋表示QA
-- [ ] 補強後の正式5問完成後独立再解答 `5 / 5 PASS`
+- [x] 補強後の正式5問完成後独立再解答 `5 / 5 PASS`
 - [ ] 最終QA / completed
 
 ## next_start
 
-正式選定5問を現行教材だけで完成後独立再解答する。R3一次「電力」問5(5)が教材だけから `密封油ポンプ` に一意に到達できることを確認する。`5 / 5 PASS` の場合のみ次段階で最終QAへ進む。固定範囲は変更しない。
+Topic 03 の最終QAを実施する。必須成果物、EXAM_ALIGNMENT、正式5問の完成後独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、固定範囲境界、source・STATUS・HANDOFFの整合を確認し、全件PASSの場合のみ `completed` とする。仕様は追加しない。
