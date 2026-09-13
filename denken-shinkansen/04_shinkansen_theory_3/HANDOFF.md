@@ -8,29 +8,30 @@ Topic 01 `新幹線1編成はどれだけ電気を食う？` とTopic 02 `なぜ
 
 - 完成数: `2 / 14`
 - active topic: `03 架線はただの銅線ではない`
-- current status: `topic_03_powerpoint_complete`
+- current status: `topic_03_independent_reanswer_complete`
 
 ## 今回進捗
 
-Topic 03を1段階進め、確定済みEXAM_ALIGNMENT・解説本文・解説PDF・練習PDFを基準に解説画像PowerPointを完成した。
+Topic 03を1段階進め、完成教材だけを根拠として選定済み公式過去問6問を独立再解答した。公式解答は独立解答確定後に照合した。
 
-更新成果物:
-- `topics/03_catenary_resistance/03_catenary_resistance_images.pptx`
+追加成果物:
+- `topics/03_catenary_resistance/03_catenary_resistance_exam_recheck.md`
 - `STATUS.md`
 - `HANDOFF.md`
 
-PowerPoint仕様:
-- 16:9、7枚
-- 抵抗率・長さ・断面積、直列・並列、温度係数、発熱・消費電力・電圧降下、3段階例題、新幹線接続を可視化
-- 新幹線接続値は既存sourceの教材用仮定値のみを使用
-- 後続Topicのキルヒホッフ則、最大電力供給、正弦波、RLC等は追加していない
+独立再解答結果:
+1. 令和8年度上期 理論 問7 → `(4)` / 公式 `(4)`
+2. 令和7年度下期 理論 問5 → `(1)` / 公式 `(1)`
+3. 令和6年度下期 理論 問7 → `(4)` / 公式 `(4)`
+4. 令和5年度上期 理論 問7 → `(3)` / 公式 `(3)`
+5. 令和4年度下期 理論 問7 → `(2)` / 公式 `(2)`
+6. 令和2年度 理論 問5 → `(4)` / 公式 `(4)`
 
-PowerPoint QA:
-- 全7枚をレンダリングして表示確認
-- 文字切れ・重なり・欠落なし
-- overflow検査 PASS
+- 公式解答との一致: `6 / 6`
+- 教材外知識の補完が必要な問題: `0`
+- SPEC範囲外の仕様追加: なし
 
-判定: `POWERPOINT_COMPLETE / IN_PROGRESS`
+判定: `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`
 
 ## Topic 03 EXAM_ALIGNMENT
 
@@ -63,6 +64,7 @@ PowerPoint QA:
 - 練習source: `topics/03_catenary_resistance/03_catenary_resistance_practice.md`
 - 練習PDF: `topics/03_catenary_resistance/03_catenary_resistance_practice.pdf`
 - 解説画像PowerPoint: `topics/03_catenary_resistance/03_catenary_resistance_images.pptx`
+- 独立再解答記録: `topics/03_catenary_resistance/03_catenary_resistance_exam_recheck.md`
 
 ## 境界確認
 
@@ -79,17 +81,17 @@ Topic 03へ追加しないもの:
 
 ## 次に行うこと
 
-Topic 03の完成教材だけを使って、選定済み公式過去問6問を独立再解答し、公式解答と照合する。
+Topic 03の最終QAを実施する。
 
-対象:
-1. 令和8年度上期 理論 問7
-2. 令和7年度下期 理論 問5
-3. 令和6年度下期 理論 問7
-4. 令和5年度上期 理論 問7
-5. 令和4年度下期 理論 問7
-6. 令和2年度 理論 問5
+確認対象:
+- EXAM_ALIGNMENTの6問がすべて教材内で根拠説明されていること
+- 独立再解答記録が公式解答6 / 6一致であること
+- 解説PDF・練習PDF・PowerPoint・source Markdownが相互に範囲矛盾していないこと
+- 未確認実車値を真値として扱っていないこと
+- SPEC外の後続Topic論点を追加していないこと
+- 全成果物がGitHub正本に存在すること
 
-1問でも教材外知識を補わないと解けない場合、または根拠を教材内で説明できない場合は `NEEDS_REVISION`。独立再解答と最終QAを通過するまで `completed` としない。
+最終QAをPASSした場合のみTopic 03を `completed` とし、完成数を `3 / 14` に更新してTopic 04へ進む。
 
 ## 固定ルール
 
