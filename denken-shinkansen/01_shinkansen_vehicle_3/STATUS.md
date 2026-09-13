@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 23 / 38
-- current_status: `topic_24_explanation_content_complete`
+- current_status: `topic_24_explanation_pdf_complete`
 - last_completed_topic: `23 L0系② 500km/hと周波数制御`
 - active_topic: `24 L0系③ 超電導磁気浮上`
-- next_start: Topic 24の解説プリントPDFを、完成済み解説本文＋3段階例題から作成する。系列SPEC外の論点・未確認実車値は追加しない
+- next_start: Topic 24の練習プリントPDFを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、固定範囲と選定6過去問への接続だけを扱う。系列SPEC外の論点・未確認実車値は追加しない
 
 ## 新品質ゲート進捗
 - [x] 01〜23 — PASS
-- [ ] 24 L0系③ 超電導磁気浮上 — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題完了。PDF以降未着手
+- [ ] 24 L0系③ 超電導磁気浮上 — 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF完了。練習PDF以降未着手
 
 ## 24 EXAM_ALIGNMENT
 品質ゲート対象は直近年度優先の6問。式・法則から再導出し、公式解答と6 / 6一致。
@@ -60,9 +60,16 @@ JR東海「超電導リニアの原理」を確認し、Topic 24では次だけ�
 
 ## 24 成果物
 - source Markdown: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev.md` — EXAM_ALIGNMENT、解説本文、3段階例題まで完了
-- 解説PDF: 未作成
+- 解説PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf` — A4縦4ページ、全ページQA PASS
 - 練習PDF: 未作成
 - 解説画像PowerPoint: 未作成
+
+## 24 解説PDF QA
+- A4縦4ページ
+- §1〜§12、3段階例題、選定6過去問の教材内対応を収録
+- 全4ページをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし
+- 系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道は追加していない
+- 未確認のL0系コイル寸法・磁束密度・電流値・結線値は追加していない
 
 ## 23 EXAM_ALIGNMENT
 品質ゲート対象は次の5問。制作前独立解答は5 / 5 PASS、完成後独立再解答も5 / 5 PASS。
@@ -100,4 +107,4 @@ JR東海「超電導リニアの原理」で、時速500 km走行、推進コイ
 `PASS`。制作前EXAM_ALIGNMENT、解説PDF・練習PDF・PowerPointの表示QA、完成後独立再解答5/5をすべて通過。Topic 23をcompletedとし、完成数を23/38へ更新した。
 
 ## 次
-Topic 24 `L0系③ 超電導磁気浮上` の解説プリントPDFを作成する。完成済み本文＋3段階例題を使い、系列SPEC外の論点・未確認実車値を追加しない。
+Topic 24 `L0系③ 超電導磁気浮上` の練習プリントPDFを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とする。固定範囲と選定6過去問への接続だけを扱い、系列SPEC外の論点・未確認実車値を追加しない。

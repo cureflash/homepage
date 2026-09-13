@@ -6,16 +6,18 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は23/38。01〜23がPASS。active topicは24 `L0系③ 超電導磁気浮上`。
 
 ## 今回進捗
-Topic 24を1段階進め、解説本文＋3段階例題を完了した。
+Topic 24を1段階進め、解説プリントPDFを完成した。
 
 更新:
-- `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev.md`
+- `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf`
 - `STATUS.md`
 - `HANDOFF.md`
 
-制作前EXAM_ALIGNMENTで固定した6過去問の要求事項から逆算し、`H/B`、磁界式の使い分け、重ね合わせ、ファラデー/レンツ、運動起電力、電磁力、方向判定を本文へ収録。基礎・本試験標準・複合の3段階例題と再利用可能な解法手順も追加した。
+完成済みの解説本文＋3段階例題を正本としてA4縦4ページに組版した。§1〜§12、磁界・電磁誘導・電磁力の再利用可能な解法手順、基礎・本試験標準・複合の3段階例題、選定6過去問との対応、公式まとめを収録した。
 
-L0系接続はJR東海「超電導リニアの原理」で確認した範囲に限定し、超電導磁石、浮上・案内コイル、誘導電流による浮上、中心へ戻す案内力、浮上高10 cmを使用した。未確認のコイル寸法・磁束密度・電流値・結線値は追加していない。
+全4ページをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし。系列SPEC外の自己インダクタンス・磁気エネルギー・荷電粒子軌道、未確認のL0系コイル寸法・磁束密度・電流値・結線値は追加していない。
+
+L0系接続はJR東海「超電導リニアの原理」で確認した範囲に限定し、超電導磁石、浮上・案内コイル、誘導電流による浮上、中心へ戻す案内力、浮上高10 cmを使用した。
 
 ## Topic 24 品質ゲート対象
 1. R8上 理論 問4 — 点磁極が作る磁界・重ね合わせ — 3 / 3 — PASS
@@ -74,13 +76,14 @@ https://linear-chuo-shinkansen.jr-central.co.jp/about/
 未確認の実車数値は追加しない。
 
 ## 現在の状態
-- `current_status`: `topic_24_explanation_content_complete`
+- `current_status`: `topic_24_explanation_pdf_complete`
 - 完成数: 23/38
-- Topic 24: 制作前EXAM_ALIGNMENT、解説本文＋3段階例題完了。未完成
-- 次段階: 解説プリントPDF
+- Topic 24: 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF完了。未完成
+- 解説PDF: `topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev_explanation.pdf` — A4縦4ページ、全ページQA PASS
+- 次段階: 練習プリントPDF
 
 ## 次の正確な開始点
-`topics/24_l0_superconducting_maglev/24_l0_superconducting_maglev.md` の完成済み本文と3段階例題を正本として、解説プリントPDFを作成する。内容を広げず、選定6問へ必要な式・適用条件・解法手順とJR東海一次資料で確認済みのL0系接続だけを載せる。
+Topic 24の練習プリントPDFを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、基礎20〜30%、本試験標準50〜60%、複合・応用約20%を目安にする。問題は固定範囲と選定6過去問へ接続し、系列SPEC外の論点・未確認実車値を追加しない。解答は式・代入・単位・中間値・最終値・選択肢番号・検算まで示す。
 
 ## 直前完了テーマ
 Topic 23 `L0系② 500km/hと周波数制御` は完成後独立再解答5/5 PASSを含め全品質ゲートPASS済み。完成成果物はsource Markdown、解説PDF、練習PDF15問、PowerPoint 7スライド。
