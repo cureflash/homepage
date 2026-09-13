@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_03_exam_alignment_complete`
+`topic_03_preproduction_independent_verification_complete`
 
-制作前EXAM_ALIGNMENTまで完了。解説本文には未着手。次段階は、選定した公式過去問5問を問題PDFだけで独立に解き、その後に公式解答と照合する制作前独立検証。
+制作前EXAM_ALIGNMENTと制作前独立検証まで完了。正式選定5問は公式問題PDFだけで先に解答し、答案確定後に公式解答と照合して `5 / 5 PASS`。解説本文には未着手。次段階は、本文節マッピングを上限とした解説本文＋3段階例題。
 
 ## SPEC固定範囲
 
@@ -230,10 +230,20 @@ https://www.shiken.or.jp/chief/upload/20130831_ch_second_a01.pdf
 
 ## 制作前独立検証
 
-未実施。
+完了。詳細記録:
+- `topics/03_thermal_power/03_thermal_power_preproduction_verification.md`
 
-次段階では、先に保存済み正答を参照せず、上記5問を公式問題PDFだけで独立に解く。その後に公式解答と照合し、`5 / 5 PASS` かつ教材予定範囲だけで根拠を説明できることを確認する。FAILがあれば本文制作へ進まず、EXAM_ALIGNMENTまたは本文節マッピングを修正する。
+結果:
+- R3一次 電力 問5: `PASS`
+- H29二次 電力・管理 問1: `PASS`
+- R1二次 電力・管理 問1: `PASS`
+- H27一次 電力 問1: `PASS`
+- H25一次 電力 問1: `PASS`
+- 合計: `5 / 5 PASS`
+- 固定範囲外知識の追加: `0件`
+
+選定変更・本文節マッピング変更は不要。本文制作へ進行可能。
 
 ## 次段階
 
-`topic_03_preproduction_independent_verification`
+`topic_03_explanation_body_and_examples`
