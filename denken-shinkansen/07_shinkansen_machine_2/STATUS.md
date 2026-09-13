@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 3 / 22
-- current_status: `topic_04_practice_pdf_complete`
+- current_status: `topic_04_powerpoint_complete`
 - last_completed_topic: `03 0系を210km/hまで加速させる`
 - active_topic: `04 200系のサイリスタ制御を計算する`
-- next_start: Topic 04の解説画像PowerPointを作成する。固定EXAM_ALIGNMENTの一次2問＋二次記述3問、ゲート対象12小問と解説・練習PDFの対応を維持し、固定範囲外は追加しない
+- next_start: Topic 04の固定EXAM_ALIGNMENT一次2問＋二次記述3問、ゲート対象12小問を、完成教材だけで公式解答を先に見ず独立再解答する。教材外知識や固定範囲外論点で補完しない
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -66,27 +66,28 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 04の固定EXAM_ALIGNMENTと解説本文を正本に、`topics/04_200series_thyristor_control/04_200series_thyristor_control_practice.pdf` を作成した。
+Topic 04の固定EXAM_ALIGNMENT、解説本文、解説・練習PDFを正本に、`topics/04_200series_thyristor_control/04_200series_thyristor_control_images.pptx` を作成した。
 
 確認結果:
-- A4縦5ページ、全15問で作成: PASS
-- 一次試験型の五肢択一10問＋二次試験型の記述5問: PASS
-- 固定EXAM_ALIGNMENTのゲート対象12小問に必要な論点を全件練習可能: PASS
+- 16:9・1スライドの解法マップとして作成: PASS
+- 固定EXAM_ALIGNMENTの一次2問＋二次記述3問、ゲート対象12小問に必要な論点を可視化: PASS
 - 三相全波位相制御整流器の60°区間平均値積分と `V_d=(3√2/π)V cosα`: PASS
-- サイリスタ一素子の平均電流・実効値・直流側電流の区別: PASS
+- `α=0`、`0≤α≤π/2`、制御角―平均直流電圧の関係: PASS
+- サイリスタ一素子の平均電流・実効値・直流側電流の区別と代表式: PASS
 - H30二次条件の `P`、`I_1`、`S_1`、`Q_1`、基本波力率: PASS
-- 高調波の発生源・基本的影響、基本波力率と総合力率の区別: PASS
-- `V_d=E+I_aR_a`、`T=kΦI_a` による直流主電動機との接続: PASS
-- 数値問題は使用式・理由・代入・単位・中間計算・最終値・検算を収録: PASS
-- 記述問題は前提・途中式・理由説明まで採点可能な形で収録: PASS
-- 全5ページを200 dpiでレンダリングして表示QA。クリッピング、重なり、黒四角、文字化けなし: PASS
+- 基本波力率と高調波を含む総合力率を区別: PASS
+- 高調波の発生源・基本的影響を固定範囲内で収録: PASS
+- `V_d=E+I_aR_a`、`T=kΦI_a` と `α-V_d`、`α-I_a`、`α-T` の読み方を収録: PASS
+- `α-I_a`、`α-T` は `E`・`R_a`・`kΦ` 一定の教材上の比較モデルと明記: PASS
 - 200系の未確認実車値を追加していない: PASS
 - 固定範囲外のチョッパ、PWM、インバータ、回生、能動フィルタ補償設計、サイクロコンバータ固有制御を追加していない: PASS
+- LibreOfficeで全スライドPDF化し表示QA。クリッピング、重なり、文字化けなし: PASS
+- PPTX ZIP整合性検査: PASS
 
 ## 判定
-Topic 04は `practice_pdf_complete`。完成数は `3 / 22` のまま。次工程は解説画像PowerPoint。
+Topic 04は `powerpoint_complete`。完成数は `3 / 22` のまま。次工程は固定5問・12小問の教材のみ独立再解答。
