@@ -12,11 +12,11 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
-Topic 05 `ベクトル` は完成後独立再解答で `2 / 6 PASS` となり、FAIL 4問の不足中間知識を補うrevision sourceまで作成済み。学習用成果物への同期は未実施。
+Topic 05 `ベクトル` は完成後独立再解答で `2 / 6 PASS` となり、FAIL 4問の不足中間知識を補うrevision sourceを作成済み。今回、その4点を学習用の解説source `05_vectors.md` へ同期した。解説PDF等への再同期は未実施。
 
 完成数: `4 / 12`
 
-current_status: `topic_05_revision_source_complete`
+current_status: `topic_05_revision_explanation_source_synced`
 
 active_topic: `05 ベクトル`
 
@@ -77,21 +77,19 @@ FAIL:
 
 公式解答との照合は `(3), (3), (4), (2), (3), (3)`。
 
-## 今回作成した補強source
+## 補強内容と同期状況
 
-`topics/05_vectors/05_vectors_revision_supplement.md`
-
-追加内容は不足4点に限定した。
+`topics/05_vectors/05_vectors_revision_supplement.md` で固定した不足4点:
 
 - 点磁極: `H=|m|/(4πμ0r²)`、N極から外向き・S極へ内向き
 - 点電荷: `F=|Q1Q2|/(4πε0r²)`、同符号は反発・異符号は引力
 - ホール素子: p形は正孔が慣用電流と同方向、n形は電子が反対方向。`q(v×B)` で偏りを判定し、p/nでホール電界の向きが反転。固定条件では `|VH|∝I`
 - 運動起電力: `e=Blv⊥=Blv sinθ`
 
-固定EXAM_ALIGNMENT変更0件、仕様外論点追加0件、未確認新幹線実値追加0件。
+今回、上記4点を `topics/05_vectors/05_vectors.md` の §14 と過去問要求事項対応表へ同期済み。
+
+固定EXAM_ALIGNMENT変更0件、既存3段階例題変更0件、仕様外論点追加0件、未確認新幹線実値追加0件。
 
 ## 次に行うこと
 
-補強sourceを学習用成果物へ同期する。
-
-最低限 `05_vectors.md` と `05_vectors_explanation.pdf` へ反映し、必要箇所だけ `05_vectors_images.pptx` / 練習側も同期する。同期後、保存済み正答を見ず固定6問を再独立解答する。
+補強済み `05_vectors.md` を `05_vectors_explanation.pdf` へ同期する。必要性を確認した上で `05_vectors_images.pptx` / 練習側も最小限同期する。学習用成果物の同期完了後、保存済み正答を見ず固定6問を再独立解答する。
