@@ -7,8 +7,8 @@
 - exam_aligned_completed_topics: `2 / 22`
 - last_completed_topic: `02 信濃川の水で新幹線を何本走らせられる？`
 - active_topic: `03 川崎発電所は新幹線の負荷変動に追従できる？`
-- current_status: `topic_03_practice_questions_and_full_explanations_complete`
-- next_start: Topic 03 の練習15問を、保存済み解答を見ずに独立再計算・一意解・記述答案QAする
+- current_status: `topic_03_practice_independent_qa_complete`
+- next_start: Topic 03 の解説PDFを作成し、本文8節・3段階例題・EXAM_ALIGNMENT・出典・数式・単位をsource Markdownと同期させる
 
 ## Topic 03 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -22,7 +22,7 @@
 - [x] 制作前独立検証・公式解答照合 `5 / 5 PASS`
 - [x] 解説本文8節＋3段階例題
 - [x] 練習問題＋完全解説
-- [ ] 練習問題独立QA
+- [x] 練習問題独立QA `15 / 15 PASS`
 - [ ] 解説PDF
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
@@ -44,6 +44,9 @@
 - 正式選定5問の要求事項を全件マッピング
 - 計算問題は使用式・選定理由・代入・単位・中間値・最終値・検算まで記載
 - 論説記述は大気温度影響、重要補機継続理由、負荷追従を答案化
+- 独立QAは保存済み解答を見ずに全15問を再計算・再判定し、一次10問の一意解と二次5問の採点可能性を確認
+- 独立QA `15 / 15 PASS`
+- 教材外知識補完 `0件`
 - 未確認の川崎発電所個別負荷率―効率曲線、新幹線1本当たり電力、実設備ランプレートは使用していない
 - 固定範囲外知識の追加 `0件`
 
@@ -51,6 +54,7 @@
 - `topics/03_thermal_power/03_thermal_power.md`
 - `topics/03_thermal_power/03_thermal_power_preproduction_verification.md`
 - `topics/03_thermal_power/03_thermal_power_practice.md`
+- `topics/03_thermal_power/03_thermal_power_practice_qa.md`
 
 ## Topic 02 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -105,4 +109,4 @@
 `completed`。最終QA PASS、完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0件`。
 
 ## 次
-Topic 03 の練習15問を独立QAする。`03_thermal_power_practice.md` の保存済み解答を先に見ず、一次型は一意解と計算値、二次型は必要論点・因果・採点可能性を確認し、固定範囲外の知識で補完しない。
+Topic 03 の解説PDFを作成する。`03_thermal_power.md` の本文8節・3段階例題・EXAM_ALIGNMENT・出典・数式・単位を同期し、固定範囲外の知識を追加しない。
