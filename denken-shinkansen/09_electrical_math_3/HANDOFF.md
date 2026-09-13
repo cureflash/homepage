@@ -10,7 +10,7 @@ Topic 02 `三角比・三角関数` も最終QAまで完了し `completed`。
 
 完成数: `2 / 12`
 
-current_status: `topic_03_explanation_source_complete`
+current_status: `topic_03_explanation_pdf_complete`
 
 active_topic: `03 複素数`
 
@@ -44,28 +44,29 @@ active_topic: `03 複素数`
 
 ## 今回完成した工程
 
-解説本文＋3段階例題を `topics/03_complex_numbers/03_complex_numbers.md` に追加した。
+解説PDF `topics/03_complex_numbers/03_complex_numbers_explanation.pdf` を作成した。
 
-本文構成:
-1. このテーマで電験は何を問うか
-2. `j` と複素平面
-3. 複素数の四則演算
-4. 絶対値
-5. `Z=R+jX`
-6. 逆数とアドミタンス
-7. 問題を見たときの解法手順
-8. 3段階例題
-9. 新幹線・電気工学への接続
-10. 頻出ミス・ひっかけ
-11. 過去問でどう出るか
-12. 公式・解法まとめ
+正本は完成済みsource Markdown `topics/03_complex_numbers/03_complex_numbers.md`。本文内容は増補せず、次を収録した。
 
-3段階例題:
-- 基礎: 四則演算・共役・絶対値・偏角
-- 本試験標準: `|Z|²=R²+X²` の二状態比較による未知量逆算
-- 複合: 共役を使った `1/Z`、並列アドミタンス合成、`Zeq` への逆変換
+- `j` と複素平面
+- 複素数の四則演算
+- 共役と除算
+- 絶対値
+- `Z=R+jX`
+- 逆数とアドミタンス
+- 直交形式の標準解法手順
+- 基礎／本試験標準／複合の3段階例題
+- 新幹線・電気工学への接続
+- 頻出ミス
+- 選定5問・6小問との対応
+- 公式・解法まとめ
 
-選定5問6小問の要求事項は本文節へ全件マッピング済み。
+PDF仕様・QA:
+- A4縦4ページ
+- 全4ページをレンダリングして表示確認
+- 文字切れ、重なり、欠落、黒四角なし
+- 極形式・フェーザ、RLC共振、三相結線、力率改善等の後続論点は追加していない
+- 未確認の新幹線実設備値は追加していない
 
 ## 範囲境界
 
@@ -78,6 +79,6 @@ active_topic: `03 複素数`
 
 ## 次に行うこと
 
-Topic 03 `複素数` の解説PDFを作成する。
+Topic 03 `複素数` の練習PDF（解答・完全解説付き）を作成する。
 
-正本は `topics/03_complex_numbers/03_complex_numbers.md`。本文内容を増補せず、完成済みsourceをPDF化する。PDF QA後もTopic完了とはせず、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAを順に残す。
+解説PDFまで完了しているがTopic完了ではない。練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAを順に残す。
