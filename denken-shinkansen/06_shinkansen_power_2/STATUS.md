@@ -4,7 +4,7 @@ updated: 2026-09-14
 series: `06_shinkansen_power_2`
 active_topic: `03_thermal_power`
 theme: 川崎発電所は新幹線の負荷変動に追従できる？
-current_status: `topic_03_final_qa_needs_revision`
+current_status: `topic_03_source_status_synced`
 
 ## EXAM_ALIGNMENT
 
@@ -21,7 +21,7 @@ current_status: `topic_03_final_qa_needs_revision`
 
 ## 最終QA
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+直前判定: `NEEDS_REVISION / IN_PROGRESS`
 
 PASS:
 - 必須成果物実在
@@ -33,9 +33,9 @@ PASS:
 - 固定範囲外追加 `0件`
 - 未確認実設備値追加 `0件`
 
-FAIL:
-- `03_thermal_power.md` の状態・次段階が旧進捗のまま
-- `03_thermal_power_practice.md` の状態・次段階が旧進捗のまま
+直前FAILだった進捗記録不整合は今回解消:
+- `03_thermal_power.md` の状態・次段階を現在地へ同期
+- `03_thermal_power_practice.md` の状態・次段階を現在地へ同期
 
 詳細: `topics/03_thermal_power/03_thermal_power_final_qa.md`
 
@@ -53,9 +53,9 @@ FAIL:
 - [x] 密封油ポンプをPDF・PowerPointへ同期＋表示QA
 - [x] 補強後の正式5問完成後独立再解答 `5 / 5 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
-- [ ] source進捗記録の同期
+- [x] source進捗記録の同期
 - [ ] 最終QA再実施 / completed
 
 ## next_start
 
-主source `03_thermal_power.md` と練習source `03_thermal_power_practice.md` の状態・次段階記録のみを現在地へ同期する。教材本文・問題・EXAM_ALIGNMENT・正式選定5問・固定範囲は変更しない。その後に最終QAを再実施する。
+Topic 03 の最終QAを再実施する。主source・練習sourceの進捗記録同期を確認し、必須成果物、一次3問＋二次2問のEXAM_ALIGNMENT、完成後独立再解答 `5 / 5 PASS`、表示QA、固定範囲境界を再確認する。全件PASSの場合のみ Topic 03 を `completed` とする。
