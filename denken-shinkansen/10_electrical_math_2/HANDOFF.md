@@ -10,11 +10,11 @@ Topic 02 `ベクトルと座標変換` は `completed`。
 
 Topic 03 `偏微分・全微分` は `completed`。
 
-Topic 04 `微分による極値・最適条件` は完成後独立再解答まで完了。
+Topic 04 `微分による極値・最適条件` は最終QAまで実施したが、source Markdownの進捗記録不整合により `NEEDS_REVISION`。
 
 完成数: `3 / 20`
 
-current_status: `topic_04_exam_reanswer_complete`
+current_status: `topic_04_final_qa_needs_revision`
 
 active_topic: `04 微分による極値・最適条件`
 
@@ -38,6 +38,9 @@ PowerPoint QA:
 完成後独立再解答:
 `topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_exam_reanswer.md`
 
+最終QA:
+`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_final_qa.md`
+
 ## Topic 04 品質ゲート対象
 
 - R8 一次 機械 問3 (2)〜(3)
@@ -60,14 +63,21 @@ PowerPoint QA:
 - 最大電力条件
 - 最適動作点
 
-## 完成後独立再解答
+## 最終QA結果
 
-- R8 一次 機械 問3 (2)〜(3): `(2)ロ (3)ヌ`、2/2 PASS
-- R7 一次 機械 問2 (1)〜(5): `(1)ハ (2)ヌ (3)ル (4)チ (5)ワ`、5/5 PASS
-- R7 一次 理論 問5 (3)〜(5): `(3)ヲ (4)ヌ (5)ニ`、3/3 PASS
-- R7 一次 理論 問3 (3)〜(5): `(3)ハ (4)ヌ (5)リ`、3/3 PASS
-- R7 二次 機械・制御 問1 (5)a〜b: `I=|E-1|/X_s`、`E=1.0 p.u.`、2/2 PASS
-- R3 二次 機械・制御 問1 (4)〜(6): `T(s)`、`s_m=r'_2/sqrt(r_1^2+x^2)`、`T_m=(3p/(4πf))V_1^2/{r_1+sqrt(r_1^2+x^2)}`、3/3 PASS
+教材内容・過去問対応・成果物実在はPASS条件を満たしている。
+
+- 必須成果物実在: PASS
+- EXAM_ALIGNMENT 6問・18対象項目: PASS
+- 二次試験対応: PASS
+- 完成後独立再解答: 18/18 PASS
+- 教材外知識補完: 0件
+- PowerPoint表示QA: PASS
+- SPEC外内容の非混入: PASS
+
+ただし、`04_extrema_optimal_conditions.md` 冒頭の状態が現在も「解説本文＋3段階例題まで完了。PDF・練習PDF・PowerPointは未着手。」となっており、GitHub正本に実在する成果物と矛盾している。
+
+このため最終判定は `NEEDS_REVISION`。Topic 04を `completed` にはしていない。
 
 ## 実装上の境界
 
@@ -78,10 +88,8 @@ PowerPoint QA:
 
 ## 次に行うこと
 
-Topic 04の最終QAを実施する。
+Topic 04 source Markdownの進捗記録不整合を修正する。
 
-1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECと成果物の整合を確認する。
-2. 固定EXAM_ALIGNMENT 6問・18対象項目の教材内カバレッジを再確認する。
-3. 完成後独立再解答18/18 PASSと教材外知識補完0件を確認する。
-4. 解説PDF・練習PDF・PowerPoint・QA記録・sourceの進捗記録を照合する。
-5. 全品質ゲートPASSの場合のみTopic 04を `completed` とし、完成数を `4 / 20` へ更新する。
+1. `04_extrema_optimal_conditions.md` 冒頭の状態を、解説PDF・練習PDF・PowerPoint・完成後独立再解答まで完了した現在地へ同期する。
+2. EXAM_ALIGNMENT、本文、数式、練習内容には変更を加えない。
+3. 修正後に最終QAを再判定し、全品質ゲートPASSの場合のみTopic 04を `completed`、完成数を `4 / 20` とする。
