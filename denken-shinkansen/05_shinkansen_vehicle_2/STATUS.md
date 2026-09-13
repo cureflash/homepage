@@ -5,15 +5,34 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 2 / 39
-- current_status: `topic_03_images_pptx_complete`
+- current_status: `topic_03_independent_reanswer_complete`
 - last_completed_topic: `02 0系② 整流回路の波形解析`
 - active_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
-- next_start: Topic 03の完成教材だけでH28一次・H24二次の固定範囲を独立再解答する
+- next_start: Topic 03の最終QAを行い、全品質ゲートを満たす場合のみ`completed`にする
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
-- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF・練習問題source・練習PDF・解説画像PowerPoint完成、完成後独立再解答未実施
+- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF・練習問題source・練習PDF・解説画像PowerPoint完成、完成後独立再解答5/5 PASS、最終QA未実施
+
+## Topic 03 完成後独立再解答
+完成済み教材だけを使い、制作前EXAM_ALIGNMENTで固定した一次1問2小問・二次1問3小問を再解答した。
+
+独立再解答記録:
+- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_exam_reanswer.md`
+
+結果:
+- H28 一次 機械 問1 (1): `ト`（トルク） — 公式解答一致
+- H28 一次 機械 問1 (2): `リ`（誘導起電力） — 公式解答一致
+- H24 二次 機械・制御 問1 (1): `R_a=0.500 Ω` — 公式標準解答一致
+- H24 二次 機械・制御 問1 (2): `E=188 V` — 公式標準解答一致
+- H24 二次 機械・制御 問1 (4): `V=133 V` — 公式標準解答一致
+
+判定:
+- 対象5小問: `5/5 PASS`
+- 教材外知識の補完: 0件
+- 固定範囲外論点への依存: 0件
+- 未確認の0系主電動機実値・固有仕様の追加: 0件
 
 ## Topic 03 解説画像PowerPoint
 確定済みEXAM_ALIGNMENT・解説本文・練習教材の固定範囲だけを使って作成した。
