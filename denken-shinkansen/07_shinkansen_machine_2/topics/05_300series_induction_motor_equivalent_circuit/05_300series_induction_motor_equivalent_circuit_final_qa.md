@@ -6,17 +6,17 @@
 
 ## 判定
 
-`NEEDS_REVISION`。Topic 05はまだ `completed` にしない。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` の範囲内で確認し、新しい仕様は追加していない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` の範囲内で再確認し、新しい仕様は追加していない。
 
-教材内容・過去問対応・成果物自体は品質ゲートを満たしているが、source Markdownの進捗記録が現在のGitHub正本と不整合であるため、最終QAをPASSにできない。
+前回唯一のFAILだったsource Markdown進捗記録は同期済みで、旧記録 `PDF・練習PDF・PowerPoint・完成後独立再解答は未実施` はGitHub正本から消えている。教材内容・過去問対応・成果物・表示QA・仕様境界を再確認し、全品質ゲートをPASSとする。
 
 ## 必須成果物の実在確認
 
 GitHub正本上で次を確認した。
 
-- source Markdown: PASS (`c258d6520cf7d73bbc8196603f370e7b38c31136`)
+- source Markdown: PASS (`8399b476cabdab54cca0b18463400d8dc3ee70fd`)
 - 解説PDF: PASS (`78a676bfd35455bf83a58ae7e0bd508fa6cbd06e`)
 - 練習PDF: PASS (`4d1a90eda8116debb6719d020c8d3c788e843251`)
 - 解説画像PowerPoint: PASS (`be6f27a9f0acb0d13f3226330c8e45ca3976fe25`)
@@ -36,7 +36,7 @@ GitHub正本上で次を確認した。
 
 ## 完成後独立再解答
 
-`05_300series_induction_motor_equivalent_circuit_independent_reanswer.md` を確認した。
+`05_300series_induction_motor_equivalent_circuit_independent_reanswer.md` を再確認した。
 
 - 一次試験: 6 / 6 PASS
 - 二次試験: 11 / 11 PASS
@@ -65,18 +65,6 @@ GitHub正本上で次を確認した。
 - T形等価回路のテブナン変換・始動トルク
 - 未確認300系実車の回路定数・電流・損失等
 
-## 進捗記録不整合
-
-source Markdown冒頭の「状態」に、現在も次の旧記録が残っている。
-
-- `PDF・練習PDF・PowerPoint・完成後独立再解答は未実施`
-
-また末尾の「次工程」も、現在も解説PDF作成を指している。
-
-しかしGitHub正本には解説PDF、練習PDF、PowerPoint、独立再解答記録がすべて実在し、STATUS/HANDOFFでは独立再解答完了まで進んでいる。
-
-この不整合は最終QAの進捗記録整合条件を満たさないため、Topic 05は `NEEDS_REVISION` とする。
-
 ## 最終判定
 
 - 必須成果物: PASS
@@ -84,10 +72,10 @@ source Markdown冒頭の「状態」に、現在も次の旧記録が残って�
 - ゲート対象17小問の教材反映: PASS
 - 完成後独立再解答: 17 / 17 PASS
 - 既実施表示QA: PASS
+- source Markdown進捗記録の整合: PASS
 - 仕様外論点の追加なし: PASS
 - 未確認実車値の真値化なし: PASS
-- source Markdown進捗記録の整合: FAIL
 
-判定: `NEEDS_REVISION`。
+判定: `PASS / completed`。
 
-次工程はsource Markdownの状態・次工程を現在地へ同期すること。教材本文・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
+次はTopic 06「誘導電動機の最大トルクはどこで出る？」の制作前EXAM_ALIGNMENT。
