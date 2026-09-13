@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `06_shinkansen_power_2`
 - exam_aligned_completed_topics: 1 / 22
-- current_status: `topic_02_explanation_pdf_complete`
+- current_status: `topic_02_practice_pdf_complete`
 - last_completed_topic: `01 新幹線を電力系統から見てみる`
 - active_topic: `02 信濃川の水で新幹線を何本走らせられる？`
-- next_start: Topic 02 の練習PDFを作成し、15問・完全解説・一次型10問・二次記述型5問を既存source Markdownと同期する
+- next_start: Topic 02 の解説画像PowerPointを作成し、既存source Markdown・解説PDF・練習PDFの固定範囲と一次4問＋二次2問のEXAM_ALIGNMENTに同期する
 
 ## Topic 02 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -22,7 +22,7 @@
 - [x] 練習問題・完全解説（15問、一次型10問＋二次記述型5問）
 - [x] 練習問題の独立再計算・一意解QA（15/15 PASS）
 - [x] 解説PDF
-- [ ] 練習PDF
+- [x] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
 - [ ] 最終QA
@@ -45,6 +45,25 @@ PDF QA:
 - pdftoppm / PDFiumの2系統レンダリングを実施し、内容崩れなし
 - 列車1本の所要電力には未確認の仮定値を追加していない
 - Topic 02固定範囲外の劣化診断、短絡計算、潮流計算等は追加していない
+
+## Topic 02 練習PDF
+成果物:
+- `topics/02_hydropower/02_hydropower_practice.pdf`
+
+同期内容:
+- 全15問
+- 基礎4問・本試験標準8問・複合応用3問
+- 二種一次型五肢択一10問
+- 二種二次「電力・管理」型記述5問
+- 全問の完全解説
+- 正式選定6問の過去問対応マッピング
+
+PDF QA:
+- A4縦6ページ
+- PDFium / pdftoppm の2系統で全6ページをレンダリング確認し、文字切れ・重なり・黒塗り・欠落なし
+- 既存 `02_hydropower_practice.md` の15問・完全解説と同期
+- 既存 `15 / 15 PASS` の独立再計算・一意解QAと矛盾なし
+- Topic 02固定範囲外の劣化診断、短絡計算、潮流計算等を追加していない
 
 ## Topic 02 練習問題独立QA
 QA記録:
@@ -136,7 +155,7 @@ source Markdown:
 - EXAM_ALIGNMENTは正式選定5問の要求事項を本文節へ対応付け済み
 - 練習15問は一次型10問＋二次記述型5問で、正式選定5問の要求事項をマッピング済み
 - 補強後の解説PDFは現行版でレンダリングQA PASS
-- 練習PDFは作成時の全6ページ二系統レンダリングQA済み現行blob
+- 練習PDFは現行blobが作成時から変更されておらず、作成時に全6ページをPDFium / pdftoppmの2系統でレンダリングQA済み。
 - PowerPointは現行blobが作成時から変更されておらず、全4枚の画像レンダリング確認とoverflow検査PASS済み現行blob
 - 完成後再独立解答は5/5 PASS、教材外知識補完0件
 - Topic 08、12、16、20の本題および未確認実設備値は追加していない
@@ -144,4 +163,4 @@ source Markdown:
 以上によりTopic 01を `completed` とした。完成数は `1 / 22`。
 
 ## 次
-Topic 02 `信濃川の水で新幹線を何本走らせられる？` の練習PDFを作成する。既存の15問・完全解説・問題マッピングをそのまま同期し、一次型10問＋二次記述型5問の構成と固定範囲を維持する。
+Topic 02 `信濃川の水で新幹線を何本走らせられる？` の解説画像PowerPointを作成する。既存source Markdown・解説PDF・練習PDFの固定範囲と正式選定6問の要求事項を維持し、固定範囲外の論点や未確認実設備値を追加しない。
