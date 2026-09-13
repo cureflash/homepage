@@ -1,12 +1,12 @@
 # Topic 03 - 川崎発電所は新幹線の負荷変動に追従できる？
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 状態
 
-`topic_03_explanation_body_and_examples_complete`
+`topic_03_source_status_synced`
 
-制作前EXAM_ALIGNMENT、制作前独立検証、本文8節、基礎・本試験標準・複合の3段階例題まで完了。正式選定5問は公式問題PDFだけで先に解答し、答案確定後に公式解答と照合して `5 / 5 PASS`。次段階は練習問題＋完全解説。
+最終QAで指摘された進捗記録不整合を修正し、状態と次段階のみ現在地へ同期した。正式選定5問の完成後独立再解答は `5 / 5 PASS`。教材本文・EXAM_ALIGNMENT・正式選定5問・固定範囲は変更していない。次段階は最終QA再実施。
 
 ## SPEC固定範囲
 
@@ -591,4 +591,4 @@ R1二次問1型なら
 
 ## 次段階
 
-`topic_03_practice_questions_and_full_explanations`
+`topic_03_final_qa_rerun`
