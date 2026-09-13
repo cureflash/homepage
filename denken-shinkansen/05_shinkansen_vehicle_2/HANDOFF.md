@@ -7,7 +7,26 @@
 
 Topic 01 `0系① 主変圧器の等価回路` とTopic 02 `0系② 整流回路の波形解析` は最終QAまでPASS。完成数は `2 / 39`。
 
-現在地は `topic_03_explanation_pdf_complete`。Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、4指定グラフのsource実装に加え、解説PDFまで完了した。次は練習問題・完全解説source作成。
+現在地は `topic_03_practice_source_complete`。Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` は制作前EXAM_ALIGNMENT、解説本文、3段階例題、4指定グラフ、解説PDF、練習問題・完全解説sourceまで完了した。次は練習PDF作成と全ページVisual QA。
+
+## Topic 03 練習問題・完全解説source
+source:
+- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_practice_source.md`
+
+構成:
+- 一次試験型8問（全問五肢択一）
+- 二次試験型4問（記述式）
+- 合計12問
+- 全問に完全解説を付与
+- H28一次 機械 問1の固定範囲とH24二次 機械・制御 問1の固定範囲へ接続
+- 電機子抵抗、逆起電力、磁束、電機子電流、電磁トルク、回転速度、機械出力、銅損、効率、飽和を全件カバー
+- 4指定グラフに対応する電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点を問題化
+- 二次問題は使用式、前提、途中式、単位、検算まで記載
+- 数値問題は電圧方程式、電力収支、速度比、トルク比で相互検算済み
+- 未確認の0系主電動機実値・固有仕様は追加していない
+- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
+
+練習PDFは未作成。次工程ではsourceの問題文・選択肢・数値・解説を変更せず組版する。
 
 ## Topic 03 解説PDF
 - `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_explanation.pdf`
@@ -147,6 +166,6 @@ PowerPoint:
 Topic 01の選定6問は完成教材だけで6/6再解答PASS、教材外知識の補完0件、最終QA PASS。
 
 ## 次の正確な開始点
-Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` の練習問題・完全解説sourceを作成する。
+Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` の練習PDFを作成する。
 
-確定済みEXAM_ALIGNMENTと解説内容だけを使い、一次試験型に加え二次記述式を含める。未確認の0系実車値は追加せず、始動過渡・チョッパ・回生等の範囲外論点も追加しない。
+確定済み `03_0series_dc_motor_voltage_torque_practice_source.md` の問題文・選択肢・数値・解説を変更せずA4縦へ組版し、全ページVisual QAを行う。未確認の0系実車値は追加せず、始動過渡・チョッパ・回生等の範囲外論点も追加しない。
