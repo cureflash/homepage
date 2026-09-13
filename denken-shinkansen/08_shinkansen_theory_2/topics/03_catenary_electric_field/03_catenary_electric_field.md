@@ -137,7 +137,7 @@ R7は電気影像法と静電容量、R6は誘電体入りコンデンサが中�
 - H30 一次 理論: https://www.shiken.or.jp/chief/upload/20180901_ch_second_q01.pdf
 - H30 一次 解答: https://www.shiken.or.jp/chief/upload/20180901_ch_second_a01.pdf
 - H23 一次 理論: https://www.shiken.or.jp/chief/upload/20110903_ch_second_q01.pdf
-- H23 一次 解答: https://www.shiken.or.jp/chief/upload/20090905_ch_second_a01.pdf
+- H23 一次 解答: https://www.shiken.or.jp/chief/upload/20110903_ch_second_a01.pdf
 - H21 一次 理論: https://www.shiken.or.jp/chief/upload/20090905_ch_second_q01.pdf
 - H21 一次 解答: https://www.shiken.or.jp/chief/upload/20090905_ch_second_a01.pdf
 - 公式過去問題一覧: https://www.shiken.or.jp/chief/second/qa/
