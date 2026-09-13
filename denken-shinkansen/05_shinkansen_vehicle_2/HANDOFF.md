@@ -7,234 +7,27 @@
 
 Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路の波形解析`、Topic 03 `0系③ 直流主電動機の電圧方程式とトルク` は最終QAまでPASS。完成数は `3 / 39`。
 
-現在地は `topic_03_completed`。次はTopic 04 `0系④ タップ制御と加速特性` の制作前EXAM_ALIGNMENTから開始する。
+現在地は `topic_04_exam_alignment_complete`。Topic 04 `0系④ タップ制御と加速特性` の制作前EXAM_ALIGNMENTまで完了した。
 
-## Topic 03 最終QA
-記録:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_final_qa.md`
-
-確認結果:
-- 必須成果物存在: PASS
-- 直近年度からの公式過去問調査: PASS
-- 一次・二次過去問マッピング: PASS
-- 二次記述式への接続: PASS
-- 解説本文・3段階例題: PASS
-- SPEC指定4グラフ: PASS
-- 練習問題の一次/二次接続: PASS
-- 解説PDF全3ページVisual QA: PASS
-- 練習PDF全9ページVisual QA: PASS
-- PowerPoint全2枚Visual QA: PASS
-- PowerPoint overflow検査: PASS
-- 完成教材だけでの独立再解答: 5/5 PASS
-- 教材外知識の補完: 0件
-- 固定範囲外論点への依存: 0件
-- 範囲逸脱: なし
-- 未確認実車値の実値化: なし
-
-二種の「原則5問以上」は、R8〜R4の公式一次「機械」を確認して固定範囲への直接対応問題がないことを記録したうえで、遡って確認できたH28一次・H24二次の直接対応部分を全件対象とした。件数合わせのために固定範囲外論点を追加していない。
-
-Topic 03は `completed`。
-
-## Topic 03 完成後独立再解答
-記録:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_exam_reanswer.md`
-
-結果:
-- H28 一次 機械 問1 (1): `ト`（トルク） — 公式解答一致
-- H28 一次 機械 問1 (2): `リ`（誘導起電力） — 公式解答一致
-- H24 二次 機械・制御 問1 (1): `R_a=0.500 Ω` — 公式標準解答一致
-- H24 二次 機械・制御 問1 (2): `E=188 V` — 公式標準解答一致
-- H24 二次 機械・制御 問1 (4): `V=133 V` — 公式標準解答一致
-
-判定:
-- 対象5小問: `5/5 PASS`
-- 教材外知識の補完: 0件
-- 固定範囲外論点への依存: 0件
-- 未確認の0系主電動機実値・固有仕様の追加: 0件
-
-## Topic 03 解説画像PowerPoint
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_images.pptx`
-- 16:9、2枚
-- 電機子電圧方程式、逆起電力、電磁トルク、電磁変換電力、電機子銅損を式の接続として図解
-- `SPEC.md` 指定4グラフ（電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点）を模式図で収録
-- H28一次の固定範囲にある式の意味識別と、H24二次の固定範囲にある損失→`R_a`→`E`→速度比・トルク比→新動作点の答案順を図解
-- 飽和時は `Φ∝I_f` を無条件に使わず与えられた磁束条件を使う注意を明記
-- 図は全て自作模式図、外部画像なし
-- 全2枚Visual QA PASS
-- `slides_test.py` overflow検査PASS
-- 未確認の0系主電動機実値・固有仕様は追加していない
-- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
-
-## Topic 03 練習PDF
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_practice.pdf`
-- A4縦 9ページ
-- 一次試験型8問（全問五肢択一）＋二次試験型4問（記述式）、計12問
-- 確定済みsourceの問題文・選択肢・数値・解説を変更せず組版
-- 全問に解答・完全解説を収録
-- 二次問題は使用式、前提、途中式、単位、検算を収録
-- 全9ページVisual QA PASS
-- PDF最適化前後のレンダリング差分 0ページ
-- 未確認の0系主電動機実値・固有仕様は追加していない
-- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
-
-## Topic 03 練習問題・完全解説source
+## Topic 04 制作前EXAM_ALIGNMENT
 source:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_practice_source.md`
+- `topics/04_0series_tap_control_acceleration/04_0series_tap_control_acceleration.md`
 
-構成:
-- 一次試験型8問（全問五肢択一）
-- 二次試験型4問（記述式）
-- 合計12問
-- 全問に完全解説を付与
-- H28一次 機械 問1の固定範囲とH24二次 機械・制御 問1の固定範囲へ接続
-- 電機子抵抗、逆起電力、磁束、電機子電流、電磁トルク、回転速度、機械出力、銅損、効率、飽和を全件カバー
-- 4指定グラフに対応する電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点を問題化
-- 二次問題は使用式、前提、途中式、単位、検算まで記載
-- 数値問題は電圧方程式、電力収支、速度比、トルク比で相互検算済み
-- 未確認の0系主電動機実値・固有仕様は追加していない
-- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
+選定公式過去問:
+- H28 一次 機械 問1 — 直流電動機の始動、電圧方程式、回転運動方程式、慣性、始動電流過渡
+- H28 一次 機械 問5 — 固定範囲(1): 鉄道用直巻電動機と大始動トルク
+- H26 一次 機械 問5 — 固定範囲(1)(2): 直流電気車の始動トルクと直巻電動機
+- H24 二次 機械・制御 問1 — 固定範囲(1)(2)(4): 電機子抵抗、誘導起電力、速度・トルク条件から必要端子電圧を逆算
 
-## Topic 03 解説PDF
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_explanation.pdf`
-- A4縦 3ページ
-- 基礎・本試験標準・複合の3段階例題を収録
-- 電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点の4指定グラフを収録
-- 全3ページVisual QA PASS
-- 4グラフは一定電圧・一定磁束等の条件を明記した模式図であり、実車数値特性ではない
-- 未確認の0系主電動機実値は追加していない
-- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
+制作前照合:
+- H28一次問1: (1)ト、(2)リ、(3)ヘ、(4)ロ、(5)ニ — 公式解答一致
+- H28一次問5: (1)=チ（直巻） — 公式解答一致
+- H26一次問5: (1)=ロ（始動時のトルク）、(2)=リ（直巻） — 公式解答一致
+- H24二次問1: `R_a=0.500 Ω`、`E=188 V`、`V=133 V` — 公式標準解答一致
 
-## Topic 03 解説本文source
-source:
-- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque.md`
+二種の原則5問以上について、固定範囲へ直接接続できる公式問題として確認できたのは4問。件数合わせのために回生、チョッパ、VVVF、誘導機、き電を混入させない。一次・二次双方は確保している。
 
-実装済み:
-- 電機子電圧方程式 `V=E+I_aR_a`
-- 逆起電力 `E=k_eΦω`
-- 電磁トルク `T=k_tΦI_a`
-- 電磁変換電力 `P_em=EI_a=Tω`
-- 電機子銅損 `P_Cu=I_a²R_a`
-- 機械出力、損失、効率
-- 磁束一定時の速度比・トルク比
-- 飽和時の磁束条件の扱い
-- 負荷変化時の動作点追跡
-- 基礎・本試験標準・複合の3段階例題
-- 電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点の4指定グラフ
-- H28一次・H24二次への解法接続
-
-4グラフは実車特性ではなく、一定電圧・一定磁束等の条件を明記した模式図として実装した。
-
-未確認の0系主電動機実値は追加していない。始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない。
-
-## Topic 03 制作前EXAM_ALIGNMENT
-直近年度優先でR8〜R4の公式一次「機械」5年度分を確認したが、直流機の直接出題はなかった。公式アーカイブを遡り、系列SPECの固定範囲へ直接対応する問題として次を選定した。
-
-- H28 一次 機械 問1 — 固定範囲対応部分(1)(2): 電磁トルク、誘導起電力、電圧方程式
-- H24 二次 機械・制御 問1 — 固定範囲対応部分(1)(2)(4): 銅損、電機子抵抗、誘導起電力、速度比、トルク比、動作点
-
-制作前の独立計算・判定を行い、H28一次・H24二次とも公式解答と一致した。
-
-二種の原則5問以上については、直近5年度の公式一次機械を先に調査したうえで直接対応問題が存在しないことを確認した。件数を合わせるために固定範囲外の整流作用、電機子反作用、ブラシレスDC、始動過渡、チョッパ、回生を混入させていない。一次・二次双方は確保している。
-
-確定した必須説明:
-- `V=E+I_aR_a`
-- `E=k_eΦω`
-- `T=k_tΦI_a`
-- `P_em=EI_a=Tω`
-- `P_Cu=I_a^2R_a`
-- 機械出力・損失・効率
-- 磁束一定時の速度比・トルク比
-- 飽和時は `Φ∝I_f` を無条件に使わず、与えられた磁化特性・磁束条件に従う
-- 電機子電流―トルク、回転速度―トルク、回転速度―出力、負荷変化時の動作点の4指定グラフ
-
-完成後独立再解答は5/5 PASS。最終QAもPASS。
-
-## Topic 03 境界
-系列SPECの固定範囲である電機子抵抗、逆起電力、磁束、電機子電流、電磁トルク、回転速度、機械出力、銅損、効率、飽和を考慮する場合の扱いだけを対象とする。
-
-H28一次問1の慣性モーメント・回転運動エネルギー・始動過渡、H24二次問1の可逆チョッパ・通流率・回生制動は後続テーマへ送り、本テーマでは扱わない。未確認の0系実車値・固有仕様も推測で追加しない。
-
-## Topic 02 最終QA
-最終QA記録:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_final_qa.md`
-
-確認結果:
-- 必須成果物存在: PASS
-- 一次・二次過去問マッピング: PASS
-- 二次記述式を含む: PASS
-- 解説本文・3段階例題: PASS
-- 練習問題の一次/二次接続: PASS
-- 解説PDF全3ページVisual QA: PASS
-- 練習PDF全8ページVisual QA: PASS
-- PowerPoint全4枚Visual QA: PASS
-- PowerPoint overflow検査: PASS
-- 完成教材だけでの独立再解答: 5/5 PASS
-- 教材外知識の補完: 0件
-- 範囲逸脱: なし
-- 未確認実車値の実値化: なし
-
-Topic 02を `completed` とした。
-
-## Topic 02 EXAM_ALIGNMENT
-選定した公式過去問は一次1問＋二次記述4問の計5問。
-
-- R7 二次 機械・制御 問3
-- H30 二次 機械・制御 問3
-- H29 二次 機械・制御 問3
-- H27 一次 機械 問2
-- H21 二次 機械・制御 問3
-
-制作前要求事項の独立検証は5/5 PASS。一次・二次合計5問以上、二次記述式を含める品質ゲートを満たした。
-
-## Topic 02 成果物
-source:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis.md`
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_practice_source.md`
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_final_qa.md`
-
-解説PDF:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_explanation.pdf`
-- A4縦 3ページ、全ページVisual QA PASS
-
-練習PDF:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_practice.pdf`
-- A4縦 8ページ
-- 一次試験型8問＋二次試験型4問、計12問
-- 全問解答・完全解説付き
-- 全ページVisual QA PASS
-
-PowerPoint:
-- `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_images.pptx`
-- 16:9、4枚
-- 全4枚Visual QA PASS
-- `slides_test.py` overflow検査PASS
-
-## Topic 02 完成後独立再解答
-- R7 二次 機械・制御 問3 — PASS
-- H30 二次 機械・制御 問3 — PASS
-- H29 二次 機械・制御 問3 — PASS
-- H27 一次 機械 問2 — PASS
-- H21 二次 機械・制御 問3 — PASS
-
-5/5で公式標準解答と一致。教材外知識の補完0件。
-
-## Topic 01 完了内容
-- 制作前EXAM_ALIGNMENT
-- 公式解答照合を伴う要求事項の独立検証
-- 解説本文・3段階例題
-- 解説PDF
-- 練習PDF
-- 解説画像PowerPoint
-- 完成教材だけによる公式過去問独立再解答
-- 最終QA
-
-Topic 01の選定6問は完成教材だけで6/6再解答PASS、教材外知識の補完0件、最終QA PASS。
-
-## 次の正確な開始点
-Topic 04 `0系④ タップ制御と加速特性` の制作前EXAM_ALIGNMENTを行う。
-
-系列SPECの固定範囲:
+## Topic 04 固定範囲
 - タップ切替
 - 主回路電圧
 - 電機子電流
@@ -245,10 +38,44 @@ Topic 04 `0系④ タップ制御と加速特性` の制作前EXAM_ALIGNMENTを�
 - 電流制限
 - 動作点移動
 
-指定する計算・グラフ:
+指定計算・グラフ:
 - タップ条件―主回路電圧
 - タップ条件―速度トルク特性
 - 速度―けん引力
 - 時間―速度の簡略加速計算
 
-公式過去問を直近年度から調査し、要求知識・式・設問型・教材必須説明を固定する。後続Topicの論点や未確認実車値は追加しない。
+## 教材で必須にする説明
+- 停止時 `E=0` と起動電流
+- `V_a=E+I_aR_a`
+- `E=k_eΦω`
+- `T=k_tΦI_a`
+- `J dω/dt=T-T_L`
+- 直巻電動機の未飽和域 `Φ∝I_a` と大始動トルク
+- タップ上昇による主回路電圧・速度トルク特性・動作点の移動
+- 速度上昇→逆起電力増加→電流低下→次段への移行という電流制限の一般原理
+- 電動機トルクから車輪周けん引力への換算
+- `m_eq dv/dt=F_t-F_r` による簡略加速
+- SPEC指定4グラフ
+
+## 境界
+本テーマへ追加しない:
+- 発電ブレーキ・回生エネルギー解析（Topic 05）
+- サイリスタ位相制御（Topic 08）
+- 誘導電動機・PWM・VVVF・四象限運転（Topic 10以降）
+- チョッパ制御
+- 未確認の0系固有数値
+
+0系のタップ段数、各段電圧、主電動機定格、歯車比、車輪径、編成質量等は一次資料で確認できるまで実値として置かない。
+
+## 次の正確な開始点
+Topic 04の確定済みEXAM_ALIGNMENTだけを使い、解説本文と3段階例題を作成する。
+
+0系固有のタップ方式・数値を本文へ入れる場合は、JR・鉄道総研・メーカー・学会等の一次資料を先に確認する。後続Topicの論点は追加しない。
+
+## 完了済みテーマ参照
+- Topic 03 final QA: `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_final_qa.md`
+- Topic 03 reanswer: `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_exam_reanswer.md`
+- Topic 02 final QA: `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_final_qa.md`
+- Topic 02 reanswer: `topics/02_0series_rectifier_waveform_analysis/02_0series_rectifier_waveform_analysis_exam_reanswer.md`
+
+Topic 04はまだ `completed` ではない。完成数は `3 / 39`。
