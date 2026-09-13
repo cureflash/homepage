@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 3 / 22
-- current_status: `topic_04_powerpoint_complete`
+- current_status: `topic_04_independent_reanswer_complete`
 - last_completed_topic: `03 0系を210km/hまで加速させる`
 - active_topic: `04 200系のサイリスタ制御を計算する`
-- next_start: Topic 04の固定EXAM_ALIGNMENT一次2問＋二次記述3問、ゲート対象12小問を、完成教材だけで公式解答を先に見ず独立再解答する。教材外知識や固定範囲外論点で補完しない
+- next_start: Topic 04の最終QAを実施する。固定EXAM_ALIGNMENT 5問・12小問の独立再解答12/12 PASS、解説・練習PDF、PowerPoint、source、表示QA、仕様境界を再確認し、全品質ゲートPASSの場合のみ `completed` とする
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -67,27 +67,24 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの独立再解答
+- [x] 公式過去問の教材のみでの独立再解答: 12 / 12 PASS
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 04の固定EXAM_ALIGNMENT、解説本文、解説・練習PDFを正本に、`topics/04_200series_thyristor_control/04_200series_thyristor_control_images.pptx` を作成した。
+Topic 04の固定EXAM_ALIGNMENT一次2問＋二次記述3問、ゲート対象12小問を完成教材の固定範囲だけで独立再解答し、公式解答・標準解答と照合した。再解答記録は `topics/04_200series_thyristor_control/04_200series_thyristor_control_reanswer.md` に保存した。
 
 確認結果:
-- 16:9・1スライドの解法マップとして作成: PASS
-- 固定EXAM_ALIGNMENTの一次2問＋二次記述3問、ゲート対象12小問に必要な論点を可視化: PASS
-- 三相全波位相制御整流器の60°区間平均値積分と `V_d=(3√2/π)V cosα`: PASS
-- `α=0`、`0≤α≤π/2`、制御角―平均直流電圧の関係: PASS
-- サイリスタ一素子の平均電流・実効値・直流側電流の区別と代表式: PASS
-- H30二次条件の `P`、`I_1`、`S_1`、`Q_1`、基本波力率: PASS
-- 基本波力率と高調波を含む総合力率を区別: PASS
-- 高調波の発生源・基本的影響を固定範囲内で収録: PASS
-- `V_d=E+I_aR_a`、`T=kΦI_a` と `α-V_d`、`α-I_a`、`α-T` の読み方を収録: PASS
-- `α-I_a`、`α-T` は `E`・`R_a`・`kΦ` 一定の教材上の比較モデルと明記: PASS
-- 200系の未確認実車値を追加していない: PASS
-- 固定範囲外のチョッパ、PWM、インバータ、回生、能動フィルタ補償設計、サイクロコンバータ固有制御を追加していない: PASS
-- LibreOfficeで全スライドPDF化し表示QA。クリッピング、重なり、文字化けなし: PASS
-- PPTX ZIP整合性検査: PASS
+- R05 一次 機械 問4 (1)〜(3): 3 / 3 PASS
+- R01 一次 機械 問3 (1)、(2)、(5): 3 / 3 PASS
+- R05 二次 機械・制御 問3 (1)、(2): 2 / 2 PASS
+- H30 二次 機械・制御 問3 (2)〜(4): 3 / 3 PASS
+- H27 二次 機械・制御 問3 (2): 1 / 1 PASS
+- 合計: 12 / 12 PASS
+- 一次選択式を教材内の式・条件だけで根拠付き解答: PASS
+- 二次記述式を平均値積分、有効電力、基本波無効電力まで途中式付きで再導出: PASS
+- 高調波の発生源・基本的影響を固定範囲内で記述: PASS
+- 教材外知識・固定範囲外論点による補完: 0件
+- 200系の未確認実車値の追加: 0件
 
 ## 判定
-Topic 04は `powerpoint_complete`。完成数は `3 / 22` のまま。次工程は固定5問・12小問の教材のみ独立再解答。
+Topic 04は `independent_reanswer_complete`。完成数は `3 / 22` のまま。次工程は最終QA。
