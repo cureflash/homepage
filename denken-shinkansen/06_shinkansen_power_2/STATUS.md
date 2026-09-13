@@ -7,8 +7,8 @@
 - exam_aligned_completed_topics: `2 / 22`
 - last_completed_topic: `02 信濃川の水で新幹線を何本走らせられる？`
 - active_topic: `03 川崎発電所は新幹線の負荷変動に追従できる？`
-- current_status: `topic_03_practice_independent_qa_complete`
-- next_start: Topic 03 の解説PDFを作成し、本文8節・3段階例題・EXAM_ALIGNMENT・出典・数式・単位をsource Markdownと同期させる
+- current_status: `topic_03_explanation_pdf_complete`
+- next_start: Topic 03 の練習PDFを作成し、`03_thermal_power_practice.md` の全15問・完全解説、一次10問＋二次5問の構成、独立QA `15 / 15 PASS` を同期する
 
 ## Topic 03 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -23,7 +23,7 @@
 - [x] 解説本文8節＋3段階例題
 - [x] 練習問題＋完全解説
 - [x] 練習問題独立QA `15 / 15 PASS`
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
@@ -35,6 +35,15 @@
 - R1 二次 電力・管理 問1
 - H27 一次 電力 問1
 - H25 一次 電力 問1
+
+解説PDF段階:
+- `topics/03_thermal_power/03_thermal_power_explanation.pdf`
+- A4縦4ページ
+- 本文8節・3段階例題・EXAM_ALIGNMENT・正式選定5問の要求事項を同期
+- 200 dpiで全4ページをレンダリングし、文字切れ・重なり・表崩れ・数式・単位・出典表示を確認してPASS
+- 川崎発電所の実値は一次資料確認済みの総出力 `809 MW`、2024年度発電効率 `43.1%`、発電機4台、都市ガス・天然ガス、2021年6月新1号機運転開始のみ使用
+- 未確認の個別負荷率―効率曲線、新幹線1本当たり電力、実設備ランプレートは使用していない
+- 固定範囲外知識の追加 `0件`
 
 練習問題段階:
 - 全15問
@@ -55,6 +64,7 @@
 - `topics/03_thermal_power/03_thermal_power_preproduction_verification.md`
 - `topics/03_thermal_power/03_thermal_power_practice.md`
 - `topics/03_thermal_power/03_thermal_power_practice_qa.md`
+- `topics/03_thermal_power/03_thermal_power_explanation.pdf`
 
 ## Topic 02 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -109,4 +119,4 @@
 `completed`。最終QA PASS、完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0件`。
 
 ## 次
-Topic 03 の解説PDFを作成する。`03_thermal_power.md` の本文8節・3段階例題・EXAM_ALIGNMENT・出典・数式・単位を同期し、固定範囲外の知識を追加しない。
+Topic 03 の練習PDFを作成する。`03_thermal_power_practice.md` の全15問・完全解説を同期し、一次10問＋二次5問の構成と独立QA `15 / 15 PASS` を維持し、固定範囲外の知識を追加しない。
