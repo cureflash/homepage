@@ -6,11 +6,12 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は25/38。01〜25がPASS。active topicは26 `補助電源① 主回路の電気を車内設備へ`。
 
 ## 今回進捗
-Topic 26の解説PDFを完成した。A4縦2ページに本文§1〜§14、3段階例題、選定5問・8小問へのマッピングを収録。180 dpiで全ページをレンダリングし、文字切れ・重なり・ページ外はみ出しがないことを確認して表示QA PASSとした。固定範囲外の論点、未確認の新幹線補助電源実値は追加していない。
+Topic 26の練習PDFを完成した。A4縦6ページ・全15問（基礎4／標準8／複合3）、全問五肢択一・完全解説付き。選定5問・8小問の要求事項を演習へ全件マッピングし、数値計算の独立再計算と180 dpi全ページ表示QAをPASSした。固定範囲外の論点、未確認の新幹線補助電源実値は追加していない。
 
 更新:
-- `topics/26_auxiliary_power/26_auxiliary_power_explanation.pdf` — 解説PDFを追加
-- `STATUS.md` — `topic_26_explanation_pdf_complete`へ更新
+- `topics/26_auxiliary_power/26_auxiliary_power_practice.pdf` — 練習PDFを追加
+- `topics/26_auxiliary_power/26_auxiliary_power.md` — 練習PDF進捗・QA・次工程を追記
+- `STATUS.md` — `topic_26_practice_pdf_complete`へ更新
 - `HANDOFF.md`
 
 ## Topic 26 品質ゲート対象
@@ -54,6 +55,14 @@ Topic 26の解説PDFを完成した。A4縦2ページに本文§1〜§14、3段�
 
 3段階例題は、基礎=効率、本試験標準=RL半波整流、複合=三相整流のリアクタンス＋導通損失。
 
+## Topic 26 練習PDF
+- `topics/26_auxiliary_power/26_auxiliary_power_practice.pdf`
+- A4縦6ページ、15問（基礎4／標準8／複合3）、全問五肢択一・完全解説付き
+- 選定5問・8小問を演習へ全件マッピング済み
+- 数値計算を独立再計算し、正答の一意性を確認。正答位置A/B/C/D/E各3問
+- 180 dpi全ページ表示QA PASS。文字切れ・重なり・ページ外はみ出しなし
+- 固定範囲外・未確認実車値の追加なし
+
 ## Topic 26 範囲境界
 採用しない:
 - R8上 機械 問9 — 変圧器短絡試験・漏れリアクタンス
@@ -65,10 +74,10 @@ Topic 26の解説PDFを完成した。A4縦2ページに本文§1〜§14、3段�
 チョッパ詳細、系統連系保護、誘導電動機速度制御、変圧器短絡試験・詳細等価回路、半導体素子各論、高調波対策は追加しない。新幹線補助電源の入力電圧、出力電圧、容量、周波数、効率、回路方式は今回も実値化していない。
 
 ## 現在の状態
-- `current_status`: `topic_26_explanation_pdf_complete`
+- `current_status`: `topic_26_practice_pdf_complete`
 - 完成数: 25/38
 - 01〜25: PASS
 - active topic: 26 `補助電源① 主回路の電気を車内設備へ`
 
 ## 次の正確な開始点
-Topic 26の練習PDFを作成する。三種要件に従い12問以上、少なくとも半数を五肢択一とし、選定5問・8小問の要求事項を演習でカバーする。完成後に全ページ表示QAを行い、固定範囲外・未確認実車値は追加しない。
+Topic 26の解説画像PowerPointを作成する。選定5問・8小問の判断経路を固定範囲内で可視化し、全スライド表示QA・overflow検査を行う。
