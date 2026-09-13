@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 4 / 21
-- current_status: `topic_05_practice_pdf_complete`
+- current_status: `topic_05_powerpoint_complete`
 - last_completed_topic: `04 架線と車体は巨大なコンデンサなのか？`
 - active_topic: `05 0系主変圧器の鉄心には何が起きている？`
-- next_start: Topic 05の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT一次5問・16小問、二次非採用判断、固定範囲を変更しない
+- next_start: Topic 05の完成教材のみで固定EXAM_ALIGNMENT一次5問・16小問を独立再解答する。二次非採用判断、固定範囲を変更しない
 
 ## Topic 05 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -35,25 +35,28 @@
 - [x] 3段階例題
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 05の練習問題source＋練習PDFを完成した。
+Topic 05の解説画像PowerPointを完成した。
 
-- `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit_practice.md`
-- `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit_practice.pdf`
-- 全12問、すべて五肢択一
-- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3
-- 正答一意性・計算再検算: `12 / 12 PASS`
-- A4縦3ページ、200 dpi全ページ表示QA PASS
-- 固定一次5問・16小問を練習問題へマッピング
+- `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit_images.pptx`
+- 16:9、5スライド
+- Slide 1: `I → NI → H → B → Φ` と本Topicの3本柱
+- Slide 2: アンペアの周回積分、無限長直線電流、円柱導体内部、磁気エネルギー
+- Slide 3: 起磁力・磁気抵抗・空隙を含む磁気回路、環状鉄心の厳密積分と近似
+- Slide 4: B-H曲線、磁気飽和、残留磁束密度、保磁力、ヒステリシス損
+- Slide 5: 固定一次5問・16小問への対応と固定範囲境界
+- 全5スライドをレンダリングし、クリッピング・重なり・欠落・文字化けなし
+- `slides_test.py` overflow検査 PASS
+- PPTX ZIP整合性 PASS
 - R7〜R5二次に直接対応がないため、二次数合わせは行っていない
-- 変圧器等価回路、自己／相互インダクタンス、電磁誘導、同期機特性、表皮効果の追加: 0件
+- 変圧器等価回路、自己／相互インダクタンス、ファラデーの法則、誘導起電力、同期機特性、表皮効果の追加: 0件
 - 実車未確認値の使用: 0件
 
 ## 判定
 
-Topic 05は `IN_PROGRESS / practice_pdf_complete`。完成数は `4 / 21` のまま。次は解説画像PowerPoint。
+Topic 05は `IN_PROGRESS / powerpoint_complete`。完成数は `4 / 21` のまま。次は完成後独立再解答。
