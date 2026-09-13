@@ -6,10 +6,10 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は24/38。01〜24がPASS。active topicは25 `L0系④ 誘導集電`。
 
 ## 今回進捗
-Topic 25の練習PDFを完成した。A4縦5ページ、15問すべて五肢択一で、基礎4問（26.7%）・本試験標準8問（53.3%）・複合応用3問（20.0%）。制作前EXAM_ALIGNMENTで確定した5問・7小問の要求事項を全件カバーし、全5ページを180 dpiでレンダリングして表示QAをPASSした。
+Topic 25の解説画像PowerPointを完成した。3スライドで、地上側交流から車上電源までの誘導集電、相互誘導・結合係数、交流リアクタンス・三相整流、効率・損失、選定5問・7小問の解法系統、プラレールからL0系までの駆動・給電方式を可視化した。全3スライドをレンダリング確認し、表示QA・overflow検査をPASSした。
 
 更新:
-- `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection_practice.pdf` — A4縦5ページ、15問、解答・完全解説付き、全ページ表示QA PASS
+- `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection_images.pptx` — 3スライド、全スライド表示QA・overflow検査PASS
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -57,6 +57,15 @@ R8上理論問3（磁気エネルギー）、R8上機械問9（変圧器短絡�
 - 共振方式、Q値、補償・整合回路、高周波インバータ詳細、未確認実車値は追加していない
 - R7下機械問16の三相ダイオード整流条件をL0系実機回路・実損失とは断定していない
 
+## Topic 25 PowerPoint QA
+- `topics/25_l0_inductive_power_collection/25_l0_inductive_power_collection_images.pptx` — 3スライド
+- Slide 1: 誘導集電の電力流れ、ファラデー、相互誘導、`M=k√(L1L2)`、和動接続、L0系一次資料確認範囲を可視化
+- Slide 2: `X_L=2πfL`、選定問題の三相整流式、`P_D=V_FI_d/3`、効率・鉄損・銅損・負荷率・力率を可視化
+- Slide 3: 選定5問・7小問を3系統の解法へ整理し、プラレール・0系・300系以降・L0系の駆動／給電を比較
+- 系列SPEC外の共振方式、Q値、補償・整合回路、高周波インバータ詳細は追加していない
+- 未確認の実機コイル寸法、実運転周波数、定格電力、電圧・電流、伝送効率は追加していない
+- 全3スライドをレンダリング確認し、文字切れ・重なり・ページ外はみ出しなし。overflow検査PASS
+
 ## L0系一次資料
 - JR東海「超電導リニアの原理」: https://linear-chuo-shinkansen.jr-central.co.jp/about/
 - JR東海「発見！リニア未来シティ」: https://linear-chuo-shinkansen.jr-central.co.jp/linearfuturecity/
@@ -73,10 +82,10 @@ R8上理論問3（磁気エネルギー）、R8上機械問9（変圧器短絡�
 - 電験王3 R5上機械問9: https://denken-ou.com/kikair5-1-9/
 
 ## 現在の状態
-- `current_status`: `topic_25_practice_pdf_complete`
+- `current_status`: `topic_25_powerpoint_complete`
 - 完成数: 24/38
 - 01〜24: PASS
-- Topic 25: EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF完了、制作中
+- Topic 25: EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、PowerPoint完了、制作中
 
 ## 次の正確な開始点
-Topic 25の解説画像PowerPointを作成し、全スライド表示QA・overflow検査を実施する。選定5問・7小問の要求事項を可視化し、系列SPEC固定範囲外・未確認実車値は追加しない。完成後独立再解答はその次の段階とする。
+Topic 25の完成後独立再解答を実施する。選定5問・7小問を保存済み正答を見ず、完成教材だけで再解答し、全件PASSした場合のみTopic 25を`COMPLETED`とする。
