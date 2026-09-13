@@ -4,42 +4,42 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 3 / 21
-- current_status: `topic_04_source_status_synced`
-- last_completed_topic: `03 25kV架線の周囲にはどんな電界ができる？`
-- active_topic: `04 架線と車体は巨大なコンデンサなのか？`
-- next_start: Topic 04の最終QAを再実施する。固定一次5問・22小問の独立再解答 `22 / 22 PASS`、既存表示QA、練習12問計算QA、source進捗記録の同期を確認し、全件PASS時のみ `completed` として完成数を `4 / 21` に進め、同じcheckpointでWebカタログへ登録する
+- exam_aligned_completed_topics: 4 / 21
+- current_status: `topic_04_completed`
+- last_completed_topic: `04 架線と車体は巨大なコンデンサなのか？`
+- active_topic: `05 0系主変圧器の鉄心には何が起きている？`
+- next_start: Topic 05の制作前EXAM_ALIGNMENTを実施する。系列SPECの固定範囲を変えず、二種一次・二次の公式過去問を直近年度優先で確認し、直接対応する問題だけを品質ゲート対象として固定する
 
-## Topic 04 品質ゲート進捗
+## Topic 04 最終品質ゲート
 - [x] 系列SPEC確認
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
-- [x] 公式一次過去問を直近年度優先で調査
-- [x] 一次理論5問・対象22小問を選定
-- [x] 最新実施済み二次R7〜R5の電力・管理／機械・制御を確認
+- [x] 一次理論5問・対象22小問を固定
+- [x] 最新実施済み二次R7〜R5を確認
 - [x] 二次に固定範囲の直接対応問題がないため数合わせで採用しない判断を記録
 - [x] R7一次問1の電気影像法をSPEC外として除外
 - [x] H27問1後半の導電率・電流密度・コンダクタンスをSPEC外として除外
-- [x] 参考教材をe-sysnet＋電験王2の複数系統で確認
-- [x] source Markdownへ要求知識・式・設問型・典型ミス・教材内必要説明を固定
-- [x] 公式問題・公式解答との照合
 - [x] 解説本文＋3段階例題
-- [x] 解説PDF
-- [x] 練習PDF（解答・完全解説付き）
-- [x] 解説画像PowerPoint
+- [x] 解説PDF・全ページ表示QA
+- [x] 練習source＋練習PDF・計算QA `12 / 12 PASS`・全ページ表示QA
+- [x] 解説画像PowerPoint・表示QA・overflow検査PASS
 - [x] 公式過去問の教材のみでの完成後独立再解答 `22 / 22 PASS`
-- [x] 最終QA実施 → `NEEDS_REVISION`
-- [x] source進捗記録2箇所の同期
-- [ ] 最終QA再実施
+- [x] 初回最終QAで指摘されたsource進捗記録2箇所を同期
+- [x] 最終QA再実施 `PASS / COMPLETED`
+- [x] Webカタログ登録
 
 ## 今回進めた内容
 
-Topic 04のsource進捗記録2箇所を現在地へ同期した。
+Topic 04の最終QAを再実施し、全品質ゲートPASSで `completed` とした。
 
-- `04_catenary_capacitance.md`: 「最終QAは未着手」を、初回最終QA実施済み・source同期済み・再QA待ちへ更新
-- `04_catenary_capacitance_practice.md`: 「完成後独立再解答を実施しない」を、PowerPoint完成済み・独立再解答 `22 / 22 PASS`・最終QA実施済みへ更新
-- 固定範囲、問題本文、解説、正答、PDF、PowerPoint、EXAM_ALIGNMENTは変更していない
-- 一次5問・22小問、二次非採用判断、仕様外論点を追加しない方針を維持
+- 固定一次5問・22小問: 独立再解答 `22 / 22 PASS`
+- 二次R7〜R5: 固定範囲への直接対応なし、数合わせなし
+- 教材外知識補完 `0件`
+- SPEC外論点追加 `0件`
+- 解説PDF・練習PDF・PowerPointの既存表示QAを維持
+- 練習12問計算QA `12 / 12 PASS`
+- source進捗記録を `completed` へ同期
+- `qualifications/denken-shinkansen/catalog.json` へTopic 04を登録
 
 ## 判定
 
-Topic 04は `IN_PROGRESS`。前回最終QAで指摘された進捗記録不整合は解消したが、仕様どおり次段階で最終QAを再実施してPASSを確認するまで `completed` にはしない。完成数は `3 / 21` のまま。Webカタログ登録も最終QA PASSまで保留する。
+Topic 04は `PASS / completed`。完成数は `4 / 21`。次はTopic 05 `0系主変圧器の鉄心には何が起きている？` の制作前EXAM_ALIGNMENT。
