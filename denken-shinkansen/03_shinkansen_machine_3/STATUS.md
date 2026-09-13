@@ -5,15 +5,15 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 2 / 16
-- current_status: `topic_03_practice_source_complete`
+- current_status: `topic_03_practice_pdf_complete`
 - last_completed_topic: `02 初代0系はどうやって走っていた？`
 - active_topic: `03 直流モーターはどうやって速度を変える？`
-- next_start: Topic 03 の確定済み練習問題sourceだけを使い、問題編と解答・完全解説を含む練習プリントPDFを作成する
+- next_start: Topic 03 の確定済み解説本文・練習問題sourceだけを使い、解説画像PowerPointを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 必須4成果物と完成後独立再解答まで完了。選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 必須4成果物と完成後独立再解答まで完了。選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
-- [ ] 03 直流モーターはどうやって速度を変える？ — 制作前EXAM_ALIGNMENT、解説本文9節、3段階例題、解説PDF、練習問題source12問まで完了。練習PDF以降は未着手
+- [ ] 03 直流モーターはどうやって速度を変える？ — 制作前EXAM_ALIGNMENT、解説本文9節、3段階例題、解説PDF、練習問題source12問、練習PDFまで完了。PowerPoint以降は未着手
 - [ ] 04〜16 — 未着手
 
 ## 01 品質ゲート記録
@@ -93,13 +93,21 @@ source Markdown:
 - 練習問題内の全数値計算を再計算し整合確認済み
 - 回生制動、誘導機VVVF、パワー半導体、未確認実車値は追加していない
 
-完成後独立再解答は未実施。練習PDF、PowerPointまで揃えた後に上記5問を教材だけで再解答する。
+練習PDF:
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.pdf`
+- A4縦7ページ
+- 確定済み練習問題sourceだけを組版し、問題編12問と解答・完全解説を収録
+- EXAM_ALIGNMENT対応と範囲境界を維持し、未確認実車値や後続Topicの論点を追加していない
+- 全7ページをレンダリング確認し、文字欠け・重なり・クリッピング・可読性を確認してPASS
+- PDFテキスト抽出で置換文字なし、全12問の収録を確認済み
+
+完成後独立再解答は未実施。PowerPointまで揃えた後に上記5問を教材だけで再解答する。
 
 ## 境界
 Topic 03は系列SPECの速度制御・始動範囲だけを扱う。回生制動はTopic 09、誘導機のVVVF制御とパワー半導体は後続Topic 04〜08の範囲とし、先取りしない。未確認の0系実車値は真値化しない。
 
 ## 03 QA判定
-`IN_PROGRESS`。制作前EXAM_ALIGNMENT、解説本文9節・3段階例題、解説PDF、練習問題source12問まで完了。必須成果物のうち練習PDF・PowerPointが未完で、完成後独立再解答も未実施のため完成数は2/16のまま。
+`IN_PROGRESS`。制作前EXAM_ALIGNMENT、解説本文9節・3段階例題、解説PDF、練習問題source12問、練習PDFまで完了。必須成果物のうちPowerPointが未完で、完成後独立再解答も未実施のため完成数は2/16のまま。
 
 ## 次
-Topic 03の確定済み `03_dc_motor_speed_control_practice.md` だけを使い、問題編と解答・完全解説を含む練習プリントPDFを作成する。
+Topic 03の確定済み解説本文・練習問題sourceだけを使い、解説画像PowerPointを作成する。
