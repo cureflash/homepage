@@ -7,8 +7,8 @@
 - exam_aligned_completed_topics: `2 / 22`
 - last_completed_topic: `02 信濃川の水で新幹線を何本走らせられる？`
 - active_topic: `03 川崎発電所は新幹線の負荷変動に追従できる？`
-- current_status: `topic_03_powerpoint_complete`
-- next_start: Topic 03 の完成後独立再解答を実施し、正式選定5問を完成教材のみで再解答する
+- current_status: `topic_03_independent_reanswer_needs_revision`
+- next_start: R3一次「電力」問5の(5)を教材だけで解けるよう、固定範囲内の所内電力／発電機運用に水素密封油ポンプの役割と停電時継続理由を補強し、必要成果物を同期した後に独立再解答を再実施する
 
 ## Topic 03 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -26,7 +26,8 @@
 - [x] 解説PDF
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答を実施 `4 / 5 PASS`
+- [ ] 完成後独立再解答 `5 / 5 PASS`
 - [ ] 最終QA PASS
 
 正式対象:
@@ -35,6 +36,22 @@
 - R1 二次 電力・管理 問1
 - H27 一次 電力 問1
 - H25 一次 電力 問1
+
+完成後独立再解答:
+- 記録: `topics/03_thermal_power/03_thermal_power_independent_reanswer.md`
+- H29二次 問1: PASS
+- R1二次 問1: PASS
+- H27一次 問1: PASS
+- H25一次 問1: PASS
+- R3一次 問5: FAIL
+  - (1)〜(4)は教材のみで `[ヌ, ホ, ワ, リ]` まで再構成可能
+  - (5)は教材だけでは一意に確定不可
+  - 公式解答確認後、(5)は `ヲ = 密封油ポンプ`
+  - 現行教材に水素冷却発電機の軸封部へ密封油を供給し、水素漏えい防止のため停止後も継続運転する説明がない
+  - 教材外知識で補完せずFAIL扱い
+- 完全PASS: `4 / 5`
+- 教材外知識補完: `0件`
+- 固定範囲外知識の追加: `0件`
 
 解説PDF段階:
 - `topics/03_thermal_power/03_thermal_power_explanation.pdf`
@@ -93,6 +110,7 @@ PowerPoint段階:
 - `topics/03_thermal_power/03_thermal_power_practice.pdf`
 - `topics/03_thermal_power/03_thermal_power_images.pptx`
 - `topics/03_thermal_power/03_thermal_power_powerpoint_qa.md`
+- `topics/03_thermal_power/03_thermal_power_independent_reanswer.md`
 
 ## Topic 02 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -121,30 +139,8 @@ PowerPoint段階:
 判定:
 - `PASS / completed`
 
-確認済み:
-- 必須成果物はGitHub正本に存在
-- 正式対象は R8/R7/R6/R5一次4問＋R5/R4二次2問
-- 完成後独立再解答 `6 / 6 PASS`、教材外知識補完 `0件`
-- 練習15問の独立QA `15 / 15 PASS`
-- 解説PDF A4縦6ページ、既存全ページレンダリングQA済み
-- 練習PDF A4縦6ページ、既存全ページレンダリングQA済み
-- PowerPoint 16:9・4枚、既存レンダリング/overflow QA済み
-- 固定範囲外の劣化診断、短絡計算、潮流計算等の追加なし
-- 未確認の列車1本電力 `P_train` の数値化なし
-- 主sourceの進捗メタデータ・完成後独立再解答結果・次段階を現状へ同期済み
-
-## Topic 02 成果物
-- `topics/02_hydropower/02_hydropower.md`
-- `topics/02_hydropower/02_hydropower_practice.md`
-- `topics/02_hydropower/02_hydropower_practice_qa.md`
-- `topics/02_hydropower/02_hydropower_independent_reanswer.md`
-- `topics/02_hydropower/02_hydropower_final_qa.md`
-- `topics/02_hydropower/02_hydropower_explanation.pdf`
-- `topics/02_hydropower/02_hydropower_practice.pdf`
-- `topics/02_hydropower/02_hydropower_images.pptx`
-
 ## Topic 01
 `completed`。最終QA PASS、完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0件`。
 
 ## 次
-Topic 03 の完成後独立再解答を実施する。正式選定5問を完成教材のみで解き直し、教材外知識で補完しない。
+R3一次「電力」問5の不足論点を、Topic 03固定範囲内で教材へ補強して成果物を同期する。補強後、正式選定5問の完成後独立再解答を再実施する。
