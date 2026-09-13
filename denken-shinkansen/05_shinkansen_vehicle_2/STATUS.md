@@ -5,15 +5,29 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 2 / 39
-- current_status: `topic_03_practice_source_complete`
+- current_status: `topic_03_practice_pdf_complete`
 - last_completed_topic: `02 0系② 整流回路の波形解析`
 - active_topic: `03 0系③ 直流主電動機の電圧方程式とトルク`
-- next_start: Topic 03の練習PDFを作成する。確定済み練習問題sourceを変更せずA4縦へ組版し、全ページVisual QAを行う
+- next_start: Topic 03の解説画像PowerPointを作成し、全スライドVisual QAを行う
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
-- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF・練習問題source完成、練習PDF未着手
+- [ ] 03 0系③ 直流主電動機の電圧方程式とトルク — 制作前EXAM_ALIGNMENT PASS、解説本文source・解説PDF・練習問題source・練習PDF完成、解説画像PowerPoint未着手
+
+## Topic 03 練習PDF
+確定済み練習問題sourceの問題文・選択肢・数値・解説を変更せずA4縦へ組版した。
+
+練習PDF:
+- `topics/03_0series_dc_motor_voltage_torque/03_0series_dc_motor_voltage_torque_practice.pdf`
+- A4縦 9ページ
+- 一次試験型8問（全問五肢択一）＋二次試験型4問（記述式）、計12問
+- 全問に解答・完全解説を収録
+- 二次問題は使用式、前提、途中式、単位、検算を収録
+- 全9ページVisual QA PASS
+- PDF最適化前後のレンダリング差分 0ページ
+- 未確認の0系主電動機実値・固有仕様は追加していない
+- 始動過渡、慣性、チョッパ、回生、電機子反作用、整流作用、速度制御方式は追加していない
 
 ## Topic 03 練習問題・完全解説source
 確定済みEXAM_ALIGNMENTと解説本文の固定範囲だけを使って練習問題sourceを作成した。
