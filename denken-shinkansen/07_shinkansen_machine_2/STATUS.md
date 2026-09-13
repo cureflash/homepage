@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 2 / 22
-- current_status: `topic_03_images_pptx_complete`
+- current_status: `topic_03_independent_reanswer_complete`
 - last_completed_topic: `02 0系の直流主電動機はどんな特性だった？`
 - active_topic: `03 0系を210km/hまで加速させる`
-- next_start: Topic 03の公式過去問を教材だけで独立再解答する。固定EXAM_ALIGNMENTの一次4問＋二次記述1問・ゲート対象8小問を保存済み正答を見ずに再解答し、教材外知識を補わず8/8 PASSを確認する
+- next_start: Topic 03の最終QAを行う。EXAM_ALIGNMENT、解説本文、解説PDF、練習PDF、解説画像PowerPoint、教材のみ独立再解答8/8 PASSの整合、仕様外論点混入、実車値/計算値/仮定値の区別を確認し、PASSならTopic 03をcompletedへ進める
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -52,20 +52,27 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 公式過去問の教材のみでの独立再解答
+- [x] 公式過去問の教材のみでの独立再解答: 8 / 8 PASS
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 03の解説画像PowerPoint `topics/03_0series_acceleration/03_0series_acceleration_images.pptx` を作成した。
+Topic 03の固定EXAM_ALIGNMENTについて、完成済み教材だけを使う独立再解答を実施した。
+
+対象と結果:
+- H28 一次 機械 問1 (1): トルク（ト） / PASS
+- H28 一次 機械 問1 (2): 誘導起電力（リ） / PASS
+- H28 一次 機械 問1 (3): 慣性モーメント（ヘ） / PASS
+- H28 一次 機械 問5 (1): 直巻電動機（チ） / PASS
+- H26 一次 機械 問5 (1): 始動時のトルク（ロ） / PASS
+- H26 一次 機械 問5 (2): 直巻電動機（リ） / PASS
+- H25 一次 機械 問3 (1): 回転角速度（ヨ） / PASS
+- H24 二次 機械・制御 問1 (4): `132.5 V ≒ 133 V` / PASS
 
 確認結果:
-- 16:9、全5スライド: PASS
-- 端子電圧・逆起電力・トルク、タップ制御、弱め界磁、定トルク/定出力、歯車比、車輪、列車速度、走行抵抗、加速度の固定範囲を図解: PASS
-- H24二次「機械・制御」問1(4)型の「速度比→逆起電力、トルク比→電流、端子電圧」の解法骨格を収録: PASS
-- 0系実車値、一次資料からの計算値、教材上の仮定値を区別し、未確認の車輪径・主電動機回転速度を実車値化していない: PASS
-- 外部画像は転載せず、図版はPowerPoint内で作図。0系実車値を使うスライドに一次資料を明記し、最終スライドに出典を集約: PASS
-- チョッパ、回生、誘導機V/f・ベクトル制御、厳密なRC始動過渡を追加していない: PASS
-- 全5スライドをレンダリングし、文字欠け・クリップ・重なりを確認。`slides_test.py` もPASS: PASS
+- 教材内の `T=kφI_a`、`E=kφω`、`Jdω/dt=T-T_L`、`P=Tω` だけで一次対象を解答: PASS
+- H24二次は `E∝n`、`T∝I_a`、`V=E+I_aR_a+V_b` を使い、`E_1=187.5 V`、`R_a=0.500 Ω`、`E_2=125 V`、`I_a2=10 A`、`V_2=132.5 V` と途中式まで再構成: PASS
+- 公式解答・標準解答との照合: 8 / 8 PASS
+- チョッパ、回生、誘導機V/f・ベクトル制御、等価RC始動過渡を補わずにゲート対象を完答: PASS
 
 ## 判定
-Topic 03を `topic_03_images_pptx_complete` とする。完成数は `2 / 22` のまま。次工程は公式過去問の教材のみでの独立再解答。
+Topic 03を `topic_03_independent_reanswer_complete` とする。完成数は `2 / 22` のまま。次工程は最終QA。
