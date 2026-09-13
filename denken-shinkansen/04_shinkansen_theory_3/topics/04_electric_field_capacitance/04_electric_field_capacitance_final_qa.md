@@ -6,7 +6,11 @@
 
 ## 判定
 
-`NEEDS_REVISION`。教材内容・過去問対応品質ゲート・表示QA・SPEC境界はPASSだが、source Markdownの進捗記録が現状と一致していないため、まだ `completed` としない。
+`NEEDS_REVISION`。
+
+前回FAIL原因だったsource Markdown冒頭の進捗メタデータは現在地へ同期済みであり、必須成果物、過去問対応品質ゲート、表示QA、SPEC境界もPASSを維持している。
+
+ただし、同じsource Markdown末尾の `## 次工程` に「次は、このsourceを正本として解説PDFを作成」とする旧進捗が残っている。解説PDF・練習PDF・PowerPoint・独立再解答は既に完成しているため、進捗記録整合性ゲートはまだPASSにできない。
 
 `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで確認し、新しい仕様は追加していない。
 
@@ -16,7 +20,7 @@ GitHub正本上で次を確認した。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| source Markdown | `b5ce95c8e2fd56eccfe3ae324ea730c78f13eca3` | PASS |
+| source Markdown | `6a93ace2c5dd31e41456cbf077e8746e2aa02c67` | PASS |
 | 解説PDF | `8098709ba748057322727f17d2864b543194a022` | PASS |
 | 練習source | `dbaa8ccaa348db11361a42fa0d232d819a29af47` | PASS |
 | 練習PDF | `d7170ae80f0c056d40bafd7a6e35dbb8cd539104` | PASS |
@@ -64,7 +68,7 @@ source Markdownには、クーロン力、電界、電位、平行板容量、�
 
 ## 完成後独立再解答
 
-完成教材だけを使い、公式解答確認前に6問を独立再解答した記録を再確認した。
+完成教材だけを使った独立再解答記録を再確認した。
 
 - 独立解答列: `(2), (4), (4), (4), (3), (2)`
 - 公式解答列: `(2), (4), (4), (4), (3), (2)`
@@ -74,17 +78,26 @@ source Markdownには、クーロン力、電界、電位、平行板容量、�
 
 ## 進捗記録整合性
 
-FAIL。
+`NEEDS_REVISION`。
 
-`04_electric_field_capacitance.md` 冒頭の状態欄が、現在も次の旧進捗のまま残っている。
+前回指摘したsource冒頭は修正済みである。
 
-- `status: EXPLANATION_SOURCE_COMPLETE`
-- `完了判定: 未完了`
-- 「解説PDF・練習PDF・解説画像PowerPoint・完成後独立再解答・最終QAは未実施」
+現在:
+- `status: FINAL_QA_NEEDS_REVISION`
+- 更新日: `2026-09-14`
+- 解説PDF・練習PDF・PowerPoint・完成後独立再解答まで完了、と記録済み
 
-しかしGitHub正本では、解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで既に実在し、独立再解答は6/6 PASSである。
+一方、source末尾には次の旧記録が残る。
 
-教材本文・数式・EXAM_ALIGNMENT自体の誤りではなく、source Markdownの進捗メタデータ不整合である。次工程ではこの状態記録だけを現在地へ同期し、教材内容・固定範囲・過去問選定は変更しない。
+```text
+## 次工程
+
+次は、このsourceを正本として解説PDFを作成し、全ページ表示QAを行う。
+```
+
+これはGitHub正本上の実際の完成状況と矛盾する。
+
+教材本文・数式・EXAM_ALIGNMENTの誤りではなく、source Markdown末尾の進捗メタデータ不整合である。次工程ではこの記録だけを現在地へ同期し、教材内容・固定範囲・過去問選定は変更しない。
 
 ## 最終判定
 
@@ -97,6 +110,7 @@ FAIL。
 - SPEC境界: PASS
 - 完成後独立再解答: `6 / 6 PASS`
 - 教材外知識補完: `0件`
-- source Markdown進捗記録整合性: FAIL
+- source冒頭進捗記録整合性: PASS
+- source末尾 `次工程` 整合性: FAIL
 
-結論: `NEEDS_REVISION`。Topic 04は `completed` にしない。次工程はsource Markdown冒頭の進捗記録を現状へ同期する。
+結論: `NEEDS_REVISION`。Topic 04は `completed` にしない。次工程はsource Markdown末尾の旧 `次工程` 記録だけを現在地へ同期する。
