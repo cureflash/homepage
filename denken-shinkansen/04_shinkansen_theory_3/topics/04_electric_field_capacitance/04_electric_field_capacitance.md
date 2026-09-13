@@ -4,11 +4,11 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `04`
-- status: `EXPLANATION_SOURCE_COMPLETE`
-- 更新日: 2026-09-13
+- status: `FINAL_QA_NEEDS_REVISION`
+- 更新日: 2026-09-14
 - 完了判定: 未完了
 
-制作前EXAM_ALIGNMENTと解説本文・3段階例題まで完了。解説PDF・練習PDF・解説画像PowerPoint・完成後独立再解答・最終QAは未実施。
+解説PDF・練習PDF・解説画像PowerPoint・完成後独立再解答まで完了。最終QAはsource進捗記録の不整合によりNEEDS_REVISION判定であり、本更新では進捗メタデータのみを現在地へ同期する。
 
 ## SPEC上の固定範囲
 
@@ -657,7 +657,6 @@ C = εS/d
 並列コンデンサ:
 Ceq = C1 + C2 + ...
 電圧が共通
-
 直列コンデンサ:
 1/Ceq = 1/C1 + 1/C2 + ...
 各コンデンサの電荷の大きさが等しい
