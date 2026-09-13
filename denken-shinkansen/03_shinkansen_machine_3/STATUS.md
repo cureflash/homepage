@@ -5,50 +5,16 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 2 / 16
-- current_status: `topic_03_artifact_alignment_synced`
+- current_status: `topic_03_powerpoint_alignment_verified`
 - last_completed_topic: `02 初代0系はどうやって走っていた？`
 - active_topic: `03 直流モーターはどうやって速度を変える？`
-- next_start: 新選定5問を保存済み正答を見ず、完成教材だけで独立再解答し、公式解答と照合する
+- next_start: 解説PDF・練習PDFの過去問対応表を新選定5問へ必要最小限で同期し、全ページ表示QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 必須4成果物と完成後独立再解答まで完了。選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 必須4成果物と完成後独立再解答まで完了。選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
-- [ ] 03 直流モーターはどうやって速度を変える？ — 必須成果物は完成。旧選定の完成後独立再解答で範囲外問題2問を検出したため、仕様外内容を追加せず過去問選定を修正。source Markdown、練習問題source、解説PDF、練習PDFを新選定5問へ同期済み。PowerPointは旧選定問への直接参照なしを確認済み。新選定での完成後独立再解答のみ未実施
+- [ ] 03 直流モーターはどうやって速度を変える？ — 必須成果物は存在。旧選定の完成後独立再解答で範囲外問題2問を検出したため、仕様外内容を追加せず過去問選定を修正。source Markdownと練習問題sourceは新選定5問へ同期済み。PowerPointは旧選定問への直接参照がないことを確認済み。PDF類の同期と新選定での独立再解答は未実施
 - [ ] 04〜16 — 未着手
-
-## 01 品質ゲート記録
-EXAM_ALIGNMENT対象:
-1. R6上 機械 問8 — 巻数比・一次側換算・簡易等価回路
-2. R6上 機械 問9 — 短絡試験・等価抵抗・漏れリアクタンス
-3. R5上 機械 問9 — 鉄損・銅損・負荷率・最大効率
-4. R4下 機械 問8 — 全損失から無負荷損を分離する計算
-5. R4下 機械 問9 — 励磁電流・鉄損・励磁アドミタンス・最大効率
-
-成果物:
-- `topics/01_transformer/01_transformer.md`
-- `topics/01_transformer/01_transformer_explanation.pdf`
-- `topics/01_transformer/01_transformer_practice.pdf`
-- `topics/01_transformer/01_transformer_images.pptx`
-
-独立再解答結果: `4 / 2 / 4 / 4 / 5`、5/5一致。QA=`PASS / completed`。
-
-## 02 品質ゲート記録
-EXAM_ALIGNMENT対象:
-1. R8上 機械 問1 — 分巻・直巻の発電機／電動機特性、自己励磁、残留磁気、始動トルク、整流子・ブラシとブラシレス化
-2. R8上 機械 問2 — 磁界中を動く導体の誘導起電力、発電機作用、導体速度
-3. R7下 機械 問1 — 直流分巻電動機の速度特性・トルク特性、特性グラフ
-4. R7下 機械 問2 — 永久磁石直流電動機の銅損、電機子抵抗、逆起電力、回転速度
-5. R7上 機械 問1 — 直巻・分巻・複巻電動機の結線と特性、始動トルク
-6. R7上 機械 問2 — 始動時の逆起電力、始動電流、電機子抵抗、銅損、出力、効率
-
-成果物:
-- `topics/02_dc_machine/02_dc_machine.md`
-- `topics/02_dc_machine/02_dc_machine_explanation.pdf`
-- `topics/02_dc_machine/02_dc_machine_practice.md`
-- `topics/02_dc_machine/02_dc_machine_practice.pdf`
-- `topics/02_dc_machine/02_dc_machine_images.pptx`
-
-独立再解答結果: `2 / 4 / 5 / 4 / 5 / 2`、6/6一致。QA=`PASS / completed`。
 
 ## 03 EXAM_ALIGNMENT対象
 新選定:
@@ -71,65 +37,33 @@ EXAM_ALIGNMENT対象:
 - R7下問2: `Ra=3/2^2=0.75 Ω`、`E=12-2×0.75=10.5 V`、`N=3000×10.5/12=2625 min^-1` → 選択肢4
 - H30問1: `R1=200/100-0.5=1.5 Ω`、速度上昇後 `E=200-50×2.0=100 V`、`R2=(200-100)/100-0.5=0.5 Ω` → 選択肢4
 
-source Markdown:
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md`
-- EXAM_ALIGNMENTを新選定5問へ更新済み
-- 旧選定でのFAIL理由は履歴として保持
-
-確定範囲:
+## 03 確定範囲
 - `V=E+IaRa`、`E=kΦN`、`N=(V-IaRa)/(kΦ)`
 - `Pcu=Ia^2Ra` から電機子抵抗を求め、速度計算へ接続する範囲
-- 始動時 `E=0` と始動抵抗
+- 始動時 `N=0 → E=0` と始動抵抗
 - 電機子電圧制御、界磁制御、抵抗制御、弱め界磁
 - 系列SPECで指定されたタップ制御、定トルク運転・定出力運転の基本
 - 新幹線接続はSPEC既定の `変圧器側で電圧を変える → 主電動機へ加わる電圧が変わる → 電流・トルク・速度が変化する` に限定
 - 未確認の0系実車定格値・タップ数等は追加しない
 - 回生制動はTopic 09、誘導機VVVF・パワー半導体はTopic 04〜08として先取りしない
 
-解説本文:
-- MASTER SPECの9節構成で作成済み
-- 速度式・始動・電機子電圧制御・界磁制御・抵抗制御・弱め界磁・定トルク／定出力の基本を確定範囲内で説明
-- 3段階例題は、電機子電圧変更、始動抵抗、弱め界磁＋定出力の基本を扱う
-- source内の過去問対応表は新選定5問へ更新済み
+## 03 成果物状況
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control.md` — 新EXAM_ALIGNMENTへ更新済み。旧選定FAIL理由は履歴として保持
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_explanation.pdf` — A4縦4ページ。既存表示QA PASS。旧選定参照を新選定5問へ同期する工程が残る
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.md` — 12問、全問五肢択一。EXAM_ALIGNMENT対応を新選定5問へ同期済み
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.pdf` — A4縦7ページ。既存表示QA PASS。過去問対応表の同期確認・必要修正が残る
+- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_images.pptx` — 16:9、3枚。2026-09-13にパッケージ内XMLを確認し、R4上問1・R3問7を含む過去問への直接参照なし。修正不要。既存表示QA・パッケージ検査PASSを維持
 
-解説PDF:
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_explanation.pdf`
-- A4縦4ページ
-- 新選定5問の対応表へ同期済み
-- 4ページ全ページ表示QA PASS。文字欠け・クリップ・重なりなし
-
-練習問題source:
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.md`
-- 全12問を五肢択一で作成済み
-- 問題本文・解説の確定範囲は変更せず、EXAM_ALIGNMENT対応欄だけを新選定5問へ同期済み
-- R7下問2の `Pcu=Ia^2Ra` から `Ra` を逆算する段階は解説本文で直接対応し、練習問題では `I^2R`、`E=V-IaRa`、永久磁石機の速度比を分割確認する
-
-練習PDF:
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_practice.pdf`
-- A4縦7ページ
-- 新選定5問の対応表へ同期済み
-- 7ページ全ページ表示QA PASS。12問すべて五肢択一、解答・解説を保持
-
-解説画像PowerPoint:
-- `topics/03_dc_motor_speed_control/03_dc_motor_speed_control_images.pptx`
-- 16:9、3枚
-- 速度式、始動抵抗、弱め界磁、定トルク／定出力、新幹線接続を図解済み
-- パッケージ内XMLを確認し、R4上問1・R3問7を含む過去問への直接参照なし。修正不要
-- 既存表示QA・パッケージ検査PASSを維持
-
-旧選定での完成後独立再解答:
+## 旧選定での完成後独立再解答
 - R6上 問2 → 独立2 / 公式2 / 教材のみPASS
 - R4上 問1 → 独立4 / 公式4 / 教材のみFAIL
 - R3 問7 → 独立1 / 公式1 / 教材のみFAIL
-- R2 問1 → 独立1 / 公式1 / 教材のみPASS
-- R1 問1 → 独立4 / 公式4 / 教材のみPASS
+- R2 機械 問1 → 独立1 / 公式1 / 教材のみPASS
+- R1 機械 問1 → 独立4 / 公式4 / 教材のみPASS
 - 選択肢の公式一致は5/5だが、教材のみで完結したのは3/5
 
-## 境界
-Topic 03は系列SPECの速度制御・始動範囲だけを扱う。回生制動はTopic 09、誘導機のVVVF制御とパワー半導体は後続Topic 04〜08の範囲とし、先取りしない。未確認の0系実車値は真値化しない。
-
 ## 03 QA判定
-`IN_PROGRESS`。旧選定の品質ゲートFAIL原因を過去問選定の範囲不一致と特定し、Topic 03内だけで解ける公式過去問へ選定を修正した。source Markdown・練習問題source・解説PDF・練習PDFを新選定5問へ同期し、PowerPointに旧選定問への直接参照がないことも確認済み。完成後独立再解答が残るため、完成数は2/16のまま。
+`IN_PROGRESS`。source Markdownと練習問題sourceの新選定5問への同期、PowerPointの旧選定問直接参照なし確認まで完了。PDF類の同期と新選定5問での完成後独立再解答が残るため、完成数は2/16のまま。
 
 ## 次
-新選定5問を保存済み正答を見ず、完成教材だけで独立再解答する。教材だけで根拠まで再構成できることを確認後、公式解答と照合し、1問でも不足があれば未完扱いとして不足箇所だけを修正する。
+解説PDF・練習PDFの過去問対応表を新選定5問へ必要最小限で同期し、全ページ表示QAを行う。その後、新選定5問を保存済み正答を見ず完成教材だけで独立再解答し、公式解答と照合する。
