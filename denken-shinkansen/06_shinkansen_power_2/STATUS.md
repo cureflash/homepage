@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「電力」
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 状態
 - active_series: `06_shinkansen_power_2`
 - exam_aligned_completed_topics: `2 / 22`
 - last_completed_topic: `02 信濃川の水で新幹線を何本走らせられる？`
 - active_topic: `03 川崎発電所は新幹線の負荷変動に追従できる？`
-- current_status: `topic_03_independent_reanswer_needs_revision`
-- next_start: R3一次「電力」問5の(5)を教材だけで解けるよう、固定範囲内の所内電力／発電機運用に水素密封油ポンプの役割と停電時継続理由を補強し、必要成果物を同期した後に独立再解答を再実施する
+- current_status: `topic_03_seal_oil_revision_source_complete`
+- next_start: R3一次「電力」問5(5)の密封油ポンプ補強を主source・練習source・解説PDF・練習PDF・PowerPointへ必要最小限で同期し、表示QA後に正式選定5問の完成後独立再解答を再実施する
 
 ## Topic 03 品質ゲート
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -27,6 +27,8 @@
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答を実施 `4 / 5 PASS`
+- [x] R3一次問5(5)の不足原因を特定し、補強sourceを作成
+- [ ] 密封油ポンプ補強を全教材成果物へ同期
 - [ ] 完成後独立再解答 `5 / 5 PASS`
 - [ ] 最終QA PASS
 
@@ -37,7 +39,24 @@
 - H27 一次 電力 問1
 - H25 一次 電力 問1
 
-完成後独立再解答:
+## 今回の補強段階
+記録:
+- `topics/03_thermal_power/03_thermal_power_seal_oil_revision.md`
+
+確認結果:
+- R3一次「電力」問5の公式解答は `(1)〜(5) = [ヌ, ホ, ワ, リ, ヲ]`
+- (5) の `ヲ` は `密封油ポンプ`
+- 水素冷却発電機では軸封部へ密封油を供給し、水素漏えいを防ぐ
+- 通常交流電源喪失後も水素が残る間は軸封維持が必要なため、密封油ポンプは非常用電源による継続給電対象となる
+- JICA Technical Guidelines および JICA / 九州電力の発電設備技術資料で役割と非常用ポンプ構成を確認
+- これは既存固定範囲 `所内電力 / 発電機運用` の中間知識補強であり、新規仕様論点ではない
+- 固定範囲外知識の追加: `0件`
+
+注意:
+- この段階では補強sourceのみ作成。主source、練習source、PDF、PowerPointは未同期
+- したがって完成後独立再解答の判定は前回の `4 / 5 PASS` のまま維持し、Topic 03を `completed` にしない
+
+## 完成後独立再解答（前回）
 - 記録: `topics/03_thermal_power/03_thermal_power_independent_reanswer.md`
 - H29二次 問1: PASS
 - R1二次 問1: PASS
@@ -47,100 +66,44 @@
   - (1)〜(4)は教材のみで `[ヌ, ホ, ワ, リ]` まで再構成可能
   - (5)は教材だけでは一意に確定不可
   - 公式解答確認後、(5)は `ヲ = 密封油ポンプ`
-  - 現行教材に水素冷却発電機の軸封部へ密封油を供給し、水素漏えい防止のため停止後も継続運転する説明がない
-  - 教材外知識で補完せずFAIL扱い
+  - 現行教材に水素冷却発電機の軸封部へ密封油を供給し、水素漏えいを防ぐため停止後も継続運転する説明が不足
 - 完全PASS: `4 / 5`
 - 教材外知識補完: `0件`
 - 固定範囲外知識の追加: `0件`
 
-解説PDF段階:
+## 既存成果物
+解説source:
+- `topics/03_thermal_power/03_thermal_power.md`
+- 本文8節＋3段階例題
+
+練習source:
+- `topics/03_thermal_power/03_thermal_power_practice.md`
+- 全15問、基礎4 / 本試験標準8 / 複合・応用3
+- 一次型10問＋二次記述型5問
+- 独立QA `15 / 15 PASS`
+
+解説PDF:
 - `topics/03_thermal_power/03_thermal_power_explanation.pdf`
 - A4縦4ページ
-- 本文8節・3段階例題・EXAM_ALIGNMENT・正式選定5問の要求事項を同期
-- 200 dpiで全4ページをレンダリングし、文字切れ・重なり・表崩れ・数式・単位・出典表示を確認してPASS
-- 川崎発電所の実値は一次資料確認済みの総出力 `809 MW`、2024年度発電効率 `43.1%`、発電機4台、都市ガス・天然ガス、2021年6月新1号機運転開始のみ使用
-- 未確認の個別負荷率―効率曲線、新幹線1本当たり電力、実設備ランプレートは使用していない
-- 固定範囲外知識の追加 `0件`
+- 200 dpi全ページ表示QA PASS
 
-練習問題段階:
-- 全15問
-- 基礎4 / 本試験標準8 / 複合・応用3
-- 一次型五肢択一10問
-- 二次「電力・管理」型記述5問
-- 正式選定5問の要求事項を全件マッピング
-- 計算問題は使用式・選定理由・代入・単位・中間値・最終値・検算まで記載
-- 論説記述は大気温度影響、重要補機継続理由、負荷追従を答案化
-- 独立QAは保存済み解答を見ずに全15問を再計算・再判定し、一次10問の一意解と二次5問の採点可能性を確認
-- 独立QA `15 / 15 PASS`
-- 教材外知識補完 `0件`
-- 未確認の川崎発電所個別負荷率―効率曲線、新幹線1本当たり電力、実設備ランプレートは使用していない
-- 固定範囲外知識の追加 `0件`
-
-練習PDF段階:
+練習PDF:
 - `topics/03_thermal_power/03_thermal_power_practice.pdf`
 - A4縦6ページ
-- `03_thermal_power_practice.md` の全15問・完全解説を同期
-- 一次型10問＋二次記述型5問、基礎4 / 本試験標準8 / 複合・応用3を維持
-- 練習問題独立QA `15 / 15 PASS` と正答・途中式・単位・記述答案を同期
-- 200 dpiで全6ページをレンダリングし、文字切れ・重なり・表崩れ・数式・単位を確認してPASS
-- 教材外知識補完 `0件`
-- 未確認実設備値の追加 `0件`
-- 固定範囲外知識の追加 `0件`
+- 200 dpi全ページ表示QA PASS
 
-PowerPoint段階:
+PowerPoint:
 - `topics/03_thermal_power/03_thermal_power_images.pptx`
 - 16:9・4スライド
-- 本文8節・3段階例題・正式選定5問の要求事項を、固定範囲内で図式化
-- コンバインドサイクル構成、発電端/送電端熱収支、蒸気タービン運用と重要補機、大気温度影響と負荷追従、川崎発電所実値と仮定例題を収録
-- 川崎発電所の実値は `809 MW`、発電機4台、都市ガス・天然ガス、2024年度発電効率 `43.1%` のみ使用
-- 夏季 `720 MW`、所内率 `4.0%`、負荷 `670+35 MW` は教材本文どおり仮定値として明示
-- 全4スライドをレンダリングし、文字切れ・重なり・可読性を確認してPASS
-- slide overflow検査 PASS
-- PPTX ZIP整合性 PASS
-- 教材外知識補完 `0件`
-- 未確認実設備値の追加 `0件`
-- 固定範囲外知識の追加 `0件`
+- 全スライド表示QA・overflow・ZIP整合性 PASS
 
-記録:
-- `topics/03_thermal_power/03_thermal_power.md`
-- `topics/03_thermal_power/03_thermal_power_preproduction_verification.md`
-- `topics/03_thermal_power/03_thermal_power_practice.md`
-- `topics/03_thermal_power/03_thermal_power_practice_qa.md`
-- `topics/03_thermal_power/03_thermal_power_explanation.pdf`
-- `topics/03_thermal_power/03_thermal_power_practice.pdf`
-- `topics/03_thermal_power/03_thermal_power_images.pptx`
-- `topics/03_thermal_power/03_thermal_power_powerpoint_qa.md`
-- `topics/03_thermal_power/03_thermal_power_independent_reanswer.md`
+川崎発電所の実値は一次資料確認済みの総出力 `809 MW`、2024年度発電効率 `43.1%`、発電機4台、都市ガス・天然ガス、2021年6月新1号機運転開始のみ使用。未確認の個別負荷率―効率曲線、新幹線1本当たり電力、実設備ランプレートは使用していない。
 
-## Topic 02 品質ゲート
-- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
-- [x] 一次4問＋二次2問、計6問を正式選定
-- [x] 二次論説記述1問＋二次記述計算1問を含む
-- [x] 参考教材を複数系統確認
-- [x] 制作前EXAM_ALIGNMENT
-- [x] 制作前独立検証・公式解答照合 `6 / 6 PASS`
-- [x] 解説本文9節＋3段階例題
-- [x] 練習15問・完全解説
-  - 一次型10問
-  - 二次記述型5問
-- [x] 練習問題独立再計算・一意解QA `15 / 15 PASS`
-- [x] 解説PDF
-- [x] 練習PDF
-- [x] 解説画像PowerPoint
-- [x] 完成後独立再解答 `6 / 6 PASS`
-- [x] 教材外知識補完 `0件`
-- [x] 最終QA実施
-- [x] 最終QA PASS
-
-## Topic 02 最終QA
-記録:
-- `topics/02_hydropower/02_hydropower_final_qa.md`
-
-判定:
-- `PASS / completed`
+## Topic 02
+`PASS / completed`。一次4問＋二次2問の独立再解答 `6 / 6 PASS`、練習QA `15 / 15 PASS`、教材外知識補完 `0件`。
 
 ## Topic 01
 `completed`。最終QA PASS、完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0件`。
 
 ## 次
-R3一次「電力」問5の不足論点を、Topic 03固定範囲内で教材へ補強して成果物を同期する。補強後、正式選定5問の完成後独立再解答を再実施する。
+補強sourceの密封油ポンプ論点を、Topic 03固定範囲を広げず主source・練習source・PDF・PowerPointへ同期する。同期と表示QAが完了するまで独立再解答の再判定・最終QAへ進めない。
