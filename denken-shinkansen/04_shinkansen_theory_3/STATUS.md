@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 3 / 14
-- current_status: `topic_04_powerpoint_complete`
+- current_status: `topic_04_independent_reanswer_complete`
 - last_completed_topic: `03 架線はただの銅線ではない`
 - active_topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
-- next_start: Topic 04の完成済み教材だけを使い、確定済み公式過去問6問を保存済み正答を先に見ずに独立再解答する
+- next_start: Topic 04の最終QAを実施し、必須成果物・EXAM_ALIGNMENT・独立再解答・表示QA・SPEC境界を再確認する
 
 ## Topic 01 進捗
 
@@ -58,24 +58,25 @@
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後の公式過去問独立再解答
+- [x] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の解説画像PowerPointを完成した。
+Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` の完成後公式過去問独立再解答を実施した。
 
 更新成果物:
-- `topics/04_electric_field_capacitance/04_electric_field_capacitance_images.pptx`
+- `topics/04_electric_field_capacitance/04_electric_field_capacitance_exam_recheck.md`
 
-PowerPoint仕様:
-- 16:9、全5スライド
-- 確定済み6公式過去問に必要な判断経路を、点電荷の力・電位、平行板容量・誘電体、V一定/Q保存、つなぎ替え・静電エネルギーの順で図解
-- 解説本文・練習成果物で固定済みの論点だけを使用
-
-表示QA:
-- 全5スライドをレンダリングして目視確認し、文字欠け・数式欠け・重なり・判読不能箇所なし
-- `slides_test.py` のoverflow検査PASS
+独立再解答:
+- 令和8年度上期 理論 問1: `(2)`
+- 令和8年度上期 理論 問2: `(4)`
+- 令和8年度上期 理論 問6: `(4)`
+- 令和7年度下期 理論 問1: `(4)`
+- 令和7年度下期 理論 問2: `(3)`
+- 令和7年度上期 理論 問1: `(2)`
+- 公式解答との一致: `6 / 6 PASS`
+- 教材外知識の補完: `0問`
 
 境界は維持:
 - 電束密度・ガウスの法則は追加しない
@@ -85,4 +86,4 @@ PowerPoint仕様:
 
 ## 判定
 
-Topic 04は `POWERPOINT_COMPLETE`。完成数は `3 / 14` のまま。次工程は確定済み公式過去問6問の完成後独立再解答。
+Topic 04は `INDEPENDENT_REANSWER_COMPLETE`。品質ゲート対象6問は `6 / 6 PASS`。完成数は `3 / 14` のまま。次工程は最終QA。
