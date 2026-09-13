@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `05 300系の誘導電動機を等価回路で解く`
 
-current status: `topic_05_explanation_source_complete`
+current status: `topic_05_explanation_pdf_complete`
 
 ## Topic 05 固定範囲
 
@@ -66,6 +66,17 @@ source Markdown:
 
 例題の数値はすべて教材上の仮定値として明記し、未確認300系実車値は使用していない。
 
+## 完了した解説PDF
+
+`topics/05_300series_induction_motor_equivalent_circuit/05_300series_induction_motor_equivalent_circuit_explanation.pdf`
+
+- A4縦4ページ
+- sourceの固定EXAM_ALIGNMENT 5問・17小問と本文内容を維持
+- 必須説明12項目と3段階例題を収録
+- 全4ページ表示QA: PASS
+- 文字抽出QA: PASS
+- 仕様外論点・未確認300系実車値の追加: 0件
+
 ## 境界
 
 次は追加しない。
@@ -78,4 +89,4 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 05のsource Markdownを正本として解説PDFを作成する。固定EXAM_ALIGNMENT 5問・17小問と本文内容は変えず、A4縦の解説PDFへ落とし込み、全ページ表示QAを行う。
+Topic 05の固定EXAM_ALIGNMENT 5問・17小問と解説内容を維持し、練習PDF（解答・完全解説付き）を作成して表示QAを行う。
