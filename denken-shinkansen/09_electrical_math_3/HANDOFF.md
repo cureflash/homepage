@@ -8,61 +8,57 @@ Topic 01 `単位・指数・有効数字` は `completed`。
 
 Topic 02 `三角比・三角関数` は `completed`。
 
-Topic 03 `複素数` も最終QAまで完了し `completed`。
+Topic 03 `複素数` は `completed`。
 
 完成数: `3 / 12`
 
-current_status: `topic_03_completed`
+current_status: `topic_04_exam_alignment_complete`
 
 active_topic: `04 極形式・フェーザ`
 
-## Topic 03 完了記録
+## Topic 04 現在の成果物
 
 source Markdown:
-`topics/03_complex_numbers/03_complex_numbers.md`
+`topics/04_polar_form_phasor/04_polar_form_phasor.md`
 
-解説PDF:
-`topics/03_complex_numbers/03_complex_numbers_explanation.pdf`
+制作前EXAM_ALIGNMENTと公式解答照合付き独立検証まで完了。解説本文、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAは未着手。
 
-練習PDF:
-`topics/03_complex_numbers/03_complex_numbers_practice.pdf`
+選定公式過去問:
+- R6上 理論 問9: 独立解答 (2) = 公式 (2)
+- R6上 理論 問15: 独立解答 (a)(4), (b)(3) = 公式一致
+- R5下 機械 問5: 独立解答 (3) = 公式 (3)
+- R5上 理論 問9: 独立解答 (3) = 公式 (3)
+- R3 理論 問8: 独立解答 (5) = 公式 (5)
 
-解説画像PowerPoint:
-`topics/03_complex_numbers/03_complex_numbers_images.pptx`
+5問・6小問すべて一致。
 
-完成後独立再解答:
-`topics/03_complex_numbers/03_complex_numbers_exam_reanswer.md`
+## Topic 04 固定範囲
 
-最終QA:
-`topics/03_complex_numbers/03_complex_numbers_final_qa.md`
+- `a+jb`
+- `r∠θ`
+- 直交形式と極形式の相互変換
+- 大きさと偏角、象限確認
+- 極形式の掛け算・割り算
+- `j=1∠90°`, `-j=1∠-90°`
+- 正弦波交流のフェーザ表示
+- 基準位相、進み・遅れ、位相差
+- 最大値と実効値の区別
+- `V=ZI`, `Z=V/I` の極形式計算
+- フェーザ図
+- 同一角周波数の正弦波に対するフェーザ法の成立条件
+- `交流25 kV` を大きさと位相を持つフェーザとして表す数学例
 
-最終QAはPASS。選定した公式過去問5問・6小問は完成教材のみで独立再解答し、すべて公式解答と一致した。
+空間ベクトルはTopic 05へ送る。RLC共振、三相結線、力率改善、複素電力、対称座標法等をTopic 04へ新規追加しない。R5下機械問5の同期機、R6上理論問9の高調波は、フェーザ数学の要求事項確認に必要な適用例としてのみ扱う。未確認の新幹線実設備値を追加しない。
 
-- R8上 理論 問8: (1) `E=20 V`, `P=96 W`
-- R7下 理論 問9: (5) `R≈8.14 Ω`
-- R7下 理論 問15: (a)(3), (b)(3) `I≈11.55 A`, `P=4.0 kW`
-- R7上 理論 問9: (3) `R=2.5 Ω`
-- R6上 理論 問13: (3) `Rp≈(ωL)²/r`
+## 参考教材確認
 
-既存PDF・PowerPointは各作成工程で表示QA済みで、現行blobはそのQA対象から変更されていない。練習PDFは12問（基礎3 / 標準7 / 複合2）、五肢択一9問、全問完全解説付き。
-
-## Topic 03 範囲境界
-
-- `j`, `j²=-1`
-- 実部・虚部
-- 四則演算
-- 共役複素数
-- 絶対値
-- 偏角の意味と象限確認
-- `Z=R+jX`
-- `1/j=-j`
-- 複素インピーダンス・アドミタンスの直交形式計算
-- 実部・虚部を分けた交流量の合成
-
-極形式 `r∠θ` の体系的変換・乗除算とフェーザはTopic 04へ送る。空間ベクトルはTopic 05へ送る。RLC共振、三相結線、力率改善、複素電力はTopic 03へ新規追加していない。未確認の新幹線実設備値も追加していない。
+2026-09-13確認:
+- e-sysnet「単相交流の直列回路」: フェーザ、L/Cの±90°、`Z=|Z|∠θ`、インピーダンス三角形、RL/RCのフェーザ図
+- 電験三種まとめました「インダクタンスと静電容量の位相」: 位相、進み・遅れ、基準の取り方
+- 電験三種まとめました「R6年度上期 理論 問15」: `sin` / `cos` の位相読み替えからL/C判定までの本試験解法粒度
 
 ## 次に行うこと
 
-Topic 04 `極形式・フェーザ` の制作前EXAM_ALIGNMENTを行う。
+`topics/04_polar_form_phasor/04_polar_form_phasor.md` の固定済みEXAM_ALIGNMENTを使い、解説本文＋3段階例題を作成する。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` に従い、公式過去問を直近年度から原則5問以上選定し、複数系統の参考教材を確認する。過去問から必要な知識・式・解法を逆算し、Topic 04の固定範囲と教材内要求事項をsource Markdownへ記録する。Topic 05以降の内容は先取りしない。
+過去問から逆算した必須説明13項目を欠落させず、Topic 04の固定範囲を越えない。空間ベクトルは先取りしない。
