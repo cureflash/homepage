@@ -1,15 +1,15 @@
 # STATUS - 電験二種「電気数学」
 
-更新日: 2026-09-13
+更新日: 2026-09-14
 
 ## 状態
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 3 / 20
-- current_status: `topic_04_practice_pdf_complete`
+- current_status: `topic_04_images_pptx_complete`
 - last_completed_topic: `03 偏微分・全微分`
 - active_topic: `04 微分による極値・最適条件`
-- next_start: Topic 04の解説画像PowerPointを作成し、全スライド表示QAを行う。固定EXAM_ALIGNMENT 6問・18対象項目から逆算し、一変数極値・判定・定義域・パラメータ依存の範囲を超えない
+- next_start: Topic 04の固定EXAM_ALIGNMENT 6問・18対象項目を、完成教材だけを使って保存済み正答を見ずに独立再解答し、公式解答・標準解答と照合する
 
 ## Topic 04 品質ゲート進捗
 
@@ -26,25 +26,23 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 04 `微分による極値・最適条件` の練習PDF `topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_practice.pdf` を作成した。
+Topic 04 `微分による極値・最適条件` の解説画像PowerPoint `topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_images.pptx` を作成した。
 
-- A4縦6ページ、全12問
-- 問1〜8: 二種一次を意識した五肢択一
-- 問9〜12: 二次試験へ接続する記述式
-- 解答は使用式、選択理由、中間計算、最終値、単位、判定理由・検算を収録
-- R8一次機械問3、R7一次機械問2、R7一次理論問5・問3、R7二次機械・制御問1、R3二次機械・制御問1の固定6問・18対象項目を練習側でもカバー
-- 一変数極値、二階微分判定、定義域・微分不能点、パラメータ依存、最大電力・最大効率・最大トルク・最小電流だけを扱った
+- 16:9、全4スライド
+- 一変数極値の候補・判定、物理的定義域、端点・微分不能点を可視化
+- R7一次理論問5・問3に接続する最大電力条件、R8一次機械問3に接続する最大効率条件を収録
+- R7一次機械問2・R3二次機械・制御問1に接続する最大トルク時滑り、分母最小化、二階微分判定、パラメータ依存を収録
+- R7二次機械・制御問1の `I(E)=|E-1|/X_s` を使い、微分不能点が最小になる場合を可視化
 - 多変数最適化、ラグランジュ未定乗数法、反復・数値最適化は追加していない
-- 問題・解答の主要式を独立計算で再確認済み
-- 全6ページを180 dpiでレンダリングし、文字切れ・重なり・黒四角・空白ページ・領域外はみ出しなし
-- PDFテキスト抽出で置換文字 `�` 0件、黒四角 `■` 0件
+- 全4スライドを表示確認し、文字切れ・重なり・文字化け・空白ページなし
+- キャンバス外はみ出しなし、ZIP整合性PASS
 
 ## 判定
 
-Topic 04は `practice_pdf_complete`。完成数は `3 / 20` のまま。次工程は解説画像PowerPoint＋全スライド表示QA。
+Topic 04は `images_pptx_complete`。完成数は `3 / 20` のまま。次工程は完成教材のみで固定6問・18対象項目を独立再解答する。
