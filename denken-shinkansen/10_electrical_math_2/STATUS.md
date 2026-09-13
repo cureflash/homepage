@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 3 / 20
-- current_status: `topic_04_explanation_source_complete`
+- current_status: `topic_04_explanation_pdf_complete`
 - last_completed_topic: `03 偏微分・全微分`
 - active_topic: `04 微分による極値・最適条件`
-- next_start: Topic 04の解説PDFを作成し、全ページ表示QAを行う。source Markdownの完成本文だけを根拠にし、多変数最適化・数値最適化・反復最適化は追加しない
+- next_start: Topic 04の練習PDF（解答・完全解説付き）を作成し、全ページ表示QAを行う。固定EXAM_ALIGNMENT 6問・18対象項目から逆算し、一変数極値・判定・定義域・パラメータ依存の範囲を超えない
 
 ## Topic 04 品質ゲート進捗
 
@@ -24,7 +24,7 @@
 - [x] 制作前独立再導出 6問・18項目 PASS
 - [x] 公式解答・標準解答との照合 18/18一致
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 公式過去問の教材のみでの完成後独立再解答
@@ -32,16 +32,19 @@
 
 ## 今回進めた内容
 
-Topic 04 `微分による極値・最適条件` の解説本文＋3段階例題を `topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions.md` に追加した。
+Topic 04 `微分による極値・最適条件` の解説PDF `topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_explanation.pdf` を作成した。
 
-- 一変数の極値候補、一次微分の符号変化、二階微分判定を説明
-- 端点・定義域・微分不能点を候補に含める手順を説明
-- パラメータを固定して一変数で最適化し、最適点と最大値のパラメータ依存を分けて読む手順を説明
+- A4縦6ページ
+- source Markdownの完成本文だけを根拠に構成
+- 一変数の極値候補、一次微分の符号変化、二階微分判定を収録
+- 端点・定義域・微分不能点、パラメータ依存を収録
 - 最大電力、変圧器最大効率、誘導電動機最大トルク、同期調相機の最小電流へ接続
-- 基礎／本試験標準／複合・ひっかけの3段階例題を追加
-- 固定EXAM_ALIGNMENT 6問・18対象項目を本文へ18/18マッピング
+- 基礎／本試験標準／複合・ひっかけの3段階例題を収録
+- 対応公式過去問6問を明示
 - 多変数最適化、ラグランジュ未定乗数法、反復最適化、一般的な数値最適化は追加していない
+- 全6ページを160 dpiでレンダリングして表示確認し、文字切れ・重なり・黒四角・領域外はみ出しなし
+- PDFテキスト抽出でも置換文字 `�` と黒四角 `■` が0件であることを確認
 
 ## 判定
 
-Topic 04は `explanation_source_complete`。完成数は `3 / 20` のまま。次工程は解説PDF＋全ページ表示QA。
+Topic 04は `explanation_pdf_complete`。完成数は `3 / 20` のまま。次工程は練習PDF＋全ページ表示QA。

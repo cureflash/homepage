@@ -10,11 +10,11 @@ Topic 02 `ベクトルと座標変換` は `completed`。
 
 Topic 03 `偏微分・全微分` は `completed`。
 
-Topic 04 `微分による極値・最適条件` は解説本文＋3段階例題まで完了。
+Topic 04 `微分による極値・最適条件` は解説PDFまで完了。
 
 完成数: `3 / 20`
 
-current_status: `topic_04_explanation_source_complete`
+current_status: `topic_04_explanation_pdf_complete`
 
 active_topic: `04 微分による極値・最適条件`
 
@@ -22,6 +22,9 @@ active_topic: `04 微分による極値・最適条件`
 
 source Markdown:
 `topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions.md`
+
+解説PDF:
+`topics/04_extrema_optimal_conditions/04_extrema_optimal_conditions_explanation.pdf`
 
 品質ゲート対象:
 - R8 一次 機械 問3 (2)〜(3)
@@ -44,13 +47,20 @@ source Markdown:
 - 最大電力条件
 - 最適動作点
 
-本文で実装済み:
+解説PDFで実装済み:
 - `f'(x)=0` は候補条件であり、それだけで最大・最小を確定しない
 - `f'` の符号変化と `f''` による判定
 - 物理的定義域、端点、微分不能点の確認
 - パラメータを固定した一変数最適化
 - 変圧器の `P_i=P_c`、交流負荷の最大電力、誘導電動機最大トルク、同期調相機の最小電流
 - 基礎／本試験標準／複合・ひっかけの3段階例題
+- 公式過去問6問への接続
+
+PDF QA:
+- A4縦6ページ
+- 全6ページを160 dpiで表示確認
+- 文字切れ・重なり・黒四角・領域外はみ出しなし
+- テキスト抽出の置換文字 `�` 0件、黒四角 `■` 0件
 
 実装上の境界:
 - R7二次同期調相機のような絶対値最小点は微分不能点を直接比較する
@@ -60,10 +70,11 @@ source Markdown:
 
 ## 次に行うこと
 
-Topic 04の解説PDFを作成する。
+Topic 04の練習PDF（解答・完全解説付き）を作成する。
 
-1. 完成済みsource Markdownだけを根拠にする。
-2. 一変数極値、判定、定義域、パラメータ依存、4つの電験接続、3段階例題を落とさない。
-3. 二次試験に対応できるよう、途中式と判定理由を省略しない。
-4. PDF生成後に全ページ表示QAを行う。
-5. 練習PDF・PowerPointへは解説PDF完了後に進む。
+1. 固定EXAM_ALIGNMENT 6問・18対象項目を練習問題側でも落とさない。
+2. 一次試験型だけでなく、二次試験に接続する記述式・途中式・判定理由を含める。
+3. 解答は使用式、選択理由、中間計算、最終値、検算まで示す。
+4. 一変数極値、判定、定義域、パラメータ依存の固定範囲を超えない。
+5. PDF生成後に全ページ表示QAを行う。
+6. PowerPointへは練習PDF完了後に進む。
