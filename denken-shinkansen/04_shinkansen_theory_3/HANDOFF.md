@@ -8,14 +8,18 @@ Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ�
 
 - 完成数: `3 / 14`
 - active topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
-- current status: `topic_04_final_qa_rerun_needs_revision`
+- current status: `topic_04_source_next_step_synced`
 
 ## 今回進捗
 
-Topic 04の最終QAを再実施した。
+Topic 04 source Markdown末尾の旧 `## 次工程` 記録を現在地へ同期した。
 
-前回FAIL原因だったsource冒頭の進捗メタデータは同期済みで、次を再確認した。
+変更は進捗記録のみ。
+- 旧「次は、このsourceを正本として解説PDFを作成」を削除
+- 次工程を「最終QAを再実施し、source進捗記録を含む全品質ゲートを再判定」へ更新
+- 教材本文・EXAM_ALIGNMENT・数式・固定範囲・過去問選定6問は変更していない
 
+既存確認結果:
 - 必須成果物: PASS
 - 過去問6問のEXAM_ALIGNMENT: PASS
 - 3段階例題・教材中間知識: PASS
@@ -25,9 +29,7 @@ Topic 04の最終QAを再実施した。
 - 完成後独立再解答: `6 / 6 PASS`
 - 教材外知識補完: `0件`
 
-ただし、`04_electric_field_capacitance.md` 末尾の `## 次工程` に「次は、このsourceを正本として解説PDFを作成」とする旧進捗が残っている。解説PDF等は既に完成しているため、進捗記録整合性はまだFAILとした。
-
-教材本文・数式・EXAM_ALIGNMENT・固定範囲・過去問選定6問は変更していない。
+最終QAの再判定は次runで行うため、現時点では `NEEDS_REVISION`、完成数 `3 / 14` を維持する。
 
 ## Topic 04 固定範囲
 
@@ -88,7 +90,7 @@ U = 1/2 CV² = 1/2 QV = Q²/(2C)
 
 ## 次に行うこと
 
-`04_electric_field_capacitance.md` 末尾の旧 `## 次工程` 記録だけを現在地へ同期する。教材本文、EXAM_ALIGNMENT、数式、過去問選定、SPEC境界は変更しない。その後、最終QAを再判定する。
+Topic 04の最終QAを再実施する。source進捗記録を含めて全品質ゲートを再判定し、PASSした場合のみ `completed` にする。教材本文、EXAM_ALIGNMENT、数式、過去問選定、SPEC境界は変更しない。
 
 ## 固定ルール
 
