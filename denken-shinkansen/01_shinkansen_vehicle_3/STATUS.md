@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 25 / 38
-- current_status: `topic_26_explanation_source_complete`
+- current_status: `topic_26_explanation_pdf_complete`
 - last_completed_topic: `25 L0系④ 誘導集電`
 - active_topic: `26 補助電源① 主回路の電気を車内設備へ`
-- next_start: Topic 26の解説PDFを作成する。本文§1〜§14、3段階例題、選定5問・8小問へのマッピングを収録し、全ページ表示QAを行う
+- next_start: Topic 26の練習PDFを作成する。三種要件に従い12問以上、少なくとも半数を五肢択一とし、選定5問・8小問の要求事項を演習でカバーし、全ページ表示QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01〜25 — PASS
-- [ ] 26 補助電源① 主回路の電気を車内設備へ — IN_PROGRESS（制作前EXAM_ALIGNMENT完了、制作前独立解答8 / 8 PASS、解説本文＋3段階例題完成）
+- [ ] 26 補助電源① 主回路の電気を車内設備へ — IN_PROGRESS（制作前EXAM_ALIGNMENT完了、制作前独立解答8 / 8 PASS、解説本文＋3段階例題完成、解説PDF完成・全ページ表示QA PASS）
 
 ## 26 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・8小問。系列SPEC固定範囲は、補助電源装置、交流、直流、電圧変換、インバータ、電力、効率。
@@ -25,9 +25,12 @@
 
 制作前独立解答: `8 / 8 PASS`。
 
-## 26 解説本文
+## 26 解説本文・PDF
 - §1〜§14と3段階例題を完成
 - 選定5問・8小問の要求事項を本文へ全件マッピング済み
+- 解説PDF: `topics/26_auxiliary_power/26_auxiliary_power_explanation.pdf`
+- A4縦2ページ。§1〜§14、3段階例題、選定5問・8小問へのマッピングを収録
+- 180 dpiで全ページ表示QA PASS。文字切れ・重なり・ページ外はみ出しなし
 - N700系に補助電源装置が納入され、N700系7000番代・8000番代では補助電源装置の最適配置による冗長化が行われたことを東芝一次資料で確認
 - 実車の入力電圧、出力電圧、容量、周波数、効率、内部回路方式は一次資料で確定できないため実値化していない
 
