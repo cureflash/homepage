@@ -8,31 +8,29 @@ Topic 01 `新幹線1編成はどれだけ電気を食う？` とTopic 02 `なぜ
 
 - 完成数: `2 / 14`
 - active topic: `03 架線はただの銅線ではない`
-- current status: `topic_03_practice_pdf_complete`
+- current status: `topic_03_powerpoint_complete`
 
 ## 今回進捗
 
-Topic 03を1段階進め、確定済みEXAM_ALIGNMENTと系列SPECの固定範囲だけで練習問題source・練習PDFを完成した。
+Topic 03を1段階進め、確定済みEXAM_ALIGNMENT・解説本文・解説PDF・練習PDFを基準に解説画像PowerPointを完成した。
 
 更新成果物:
-- `topics/03_catenary_resistance/03_catenary_resistance_practice.md`
-- `topics/03_catenary_resistance/03_catenary_resistance_practice.pdf`
+- `topics/03_catenary_resistance/03_catenary_resistance_images.pptx`
 - `STATUS.md`
 - `HANDOFF.md`
 
-練習問題仕様:
-- 全15問、全問五肢択一
-- 基礎4問（26.7%）/ 本試験標準8問（53.3%）/ 複合・応用3問（20.0%）
-- 使用式・理由・代入・中間値・最終値・主要誤答ポイントを解説
-- 新幹線接続値は既存sourceにある教材用仮定値のみを使用し、実車値として扱っていない
+PowerPoint仕様:
+- 16:9、7枚
+- 抵抗率・長さ・断面積、直列・並列、温度係数、発熱・消費電力・電圧降下、3段階例題、新幹線接続を可視化
+- 新幹線接続値は既存sourceの教材用仮定値のみを使用
+- 後続Topicのキルヒホッフ則、最大電力供給、正弦波、RLC等は追加していない
 
-PDF QA:
-- A4縦6ページ
-- 200 dpiで全6ページを再レンダリング
-- 文字切れ・重なり・黒塗り・欠落なし
-- preflight: 6ページ、openable、非暗号化、非スキャン
+PowerPoint QA:
+- 全7枚をレンダリングして表示確認
+- 文字切れ・重なり・欠落なし
+- overflow検査 PASS
 
-判定: `PRACTICE_PDF_COMPLETE / IN_PROGRESS`
+判定: `POWERPOINT_COMPLETE / IN_PROGRESS`
 
 ## Topic 03 EXAM_ALIGNMENT
 
@@ -64,6 +62,7 @@ PDF QA:
 - 解説PDF: `topics/03_catenary_resistance/03_catenary_resistance_explanation.pdf`
 - 練習source: `topics/03_catenary_resistance/03_catenary_resistance_practice.md`
 - 練習PDF: `topics/03_catenary_resistance/03_catenary_resistance_practice.pdf`
+- 解説画像PowerPoint: `topics/03_catenary_resistance/03_catenary_resistance_images.pptx`
 
 ## 境界確認
 
@@ -80,9 +79,17 @@ Topic 03へ追加しないもの:
 
 ## 次に行うこと
 
-Topic 03の確定済みEXAM_ALIGNMENT・解説PDF・練習PDFを基準に、解説画像PowerPoint `03_catenary_resistance_images.pptx` を作成する。
+Topic 03の完成教材だけを使って、選定済み公式過去問6問を独立再解答し、公式解答と照合する。
 
-その後、完成教材だけで選定済み公式過去問6問を独立再解答し、公式解答と照合する。最終QAを通過するまで `completed` としない。
+対象:
+1. 令和8年度上期 理論 問7
+2. 令和7年度下期 理論 問5
+3. 令和6年度下期 理論 問7
+4. 令和5年度上期 理論 問7
+5. 令和4年度下期 理論 問7
+6. 令和2年度 理論 問5
+
+1問でも教材外知識を補わないと解けない場合、または根拠を教材内で説明できない場合は `NEEDS_REVISION`。独立再解答と最終QAを通過するまで `completed` としない。
 
 ## 固定ルール
 
