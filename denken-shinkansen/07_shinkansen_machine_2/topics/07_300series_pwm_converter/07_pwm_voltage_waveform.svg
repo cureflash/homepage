@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+  <rect width="960" height="520" fill="white"/>
+  <text x="480" y="34" text-anchor="middle" font-family="sans-serif" font-size="24">PWM converter voltage waveform (normalized)</text>
+  <text x="480" y="58" text-anchor="middle" font-family="sans-serif" font-size="13">Conceptual SPWM; modulation 0.80 and carrier ratio 20 are drawing assumptions, not 300-series actual values.</text>
+  <line x1="88" y1="78" x2="88" y2="444" stroke="black" stroke-width="1.4"/>
+  <line x1="88" y1="444" x2="932" y2="444" stroke="black" stroke-width="1.4"/>
+  <line x1="88" y1="261" x2="932" y2="261" stroke="#9ca3af" stroke-width="1"/>
+  <text x="510" y="500" text-anchor="middle" font-family="sans-serif" font-size="15">Time t / T (fundamental periods)</text>
+  <text x="24" y="261" transform="rotate(-90 24 261)" text-anchor="middle" font-family="sans-serif" font-size="15">v_pwm / V_step</text>
+  <text x="78" y="119" text-anchor="end" font-family="sans-serif" font-size="12">+1</text>
+  <text x="78" y="411" text-anchor="end" font-family="sans-serif" font-size="12">-1</text>
+  <polyline points="88,407 98,407 98,115 113,115 113,407 123,407 123,115 143,115 143,407 150,407 150,115 174,115 174,407 181,407 181,115 205,115 205,407 212,407 212,115 236,115 236,407 243,407 243,115 263,115 263,407 273,407 273,115 288,115 288,407 298,407 298,115 313,115 313,407 323,407 323,115 343,115 343,407 350,407 350,115 374,115 374,407 381,407 381,115 405,115 405,407 412,407 412,115 436,115 436,407 443,407 443,115 463,115 463,407 473,407 473,115 488,115 488,407 498,407 498,115 513,115 513,407 523,407 523,115 543,115 543,407 550,407 550,115 574,115 574,407 581,407 581,115 605,115 605,407 612,407 612,115 636,115 636,407 643,407 643,115 663,115 663,407 673,407 673,115 688,115 688,407 698,407 698,115 713,115 713,407 723,407 723,115 743,115 743,407 750,407 750,115 774,115 774,407 781,407 781,115 805,115 805,407 812,407 812,115 836,115 836,407 843,407 843,115 863,115 863,407 873,407 873,115 888,115 888,407 898,407 898,115 913,115 913,407 932,407" fill="none" stroke="#2563eb" stroke-width="2.6"/>
+  <path d="M88 261 C141 115 246 115 299 261 C352 407 457 407 510 261 C563 115 668 115 721 261 C774 407 879 407 932 261" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <path d="M88 407 L109 115 L130 407 L151 115 L172 407 L193 115 L214 407 L235 115 L256 407 L277 115 L298 407 L319 115 L340 407 L361 115 L382 407 L403 115 L424 407 L445 115 L466 407 L487 115 L508 407 L529 115 L550 407 L571 115 L592 407 L613 115 L634 407 L655 115 L676 407 L697 115 L718 407 L739 115 L760 407 L781 115 L802 407 L823 115 L844 407 L865 115 L886 407 L907 115 L928 407" fill="none" stroke="#16a34a" stroke-width="1.2" opacity="0.75"/>
+  <line x1="108" y1="92" x2="138" y2="92" stroke="#dc2626" stroke-width="2"/><text x="146" y="97" font-family="sans-serif" font-size="12">reference</text>
+  <line x1="108" y1="112" x2="138" y2="112" stroke="#16a34a" stroke-width="2"/><text x="146" y="117" font-family="sans-serif" font-size="12">carrier</text>
+  <line x1="108" y1="132" x2="138" y2="132" stroke="#2563eb" stroke-width="2.6"/><text x="146" y="137" font-family="sans-serif" font-size="12">PWM step</text>
+</svg>
