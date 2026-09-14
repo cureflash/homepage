@@ -6,15 +6,15 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は5/16。Topic 01〜05は品質ゲートPASSでcompleted。active topicは06 `新幹線はどうやって速度を変えている？`。
 
 ## 今回進捗
-Topic 06の練習PDFを完成した。
+Topic 06の解説画像PowerPointを完成した。
 
-- PDF: `topics/06_power_electronics/06_power_electronics_practice.pdf`
-- A4縦5ページ
-- 完成済み練習sourceの12問・完全解説を反映
-- 全問五肢択一、基礎3 / 本試験標準7 / 複合・応用2
-- 200 dpi全ページ表示QA `PASS`
-- 文字抽出QA `PASS`（問1〜12、正答12件、品質確認項目を確認）
-- 固定EXAM_ALIGNMENT 5問・7小問を維持
+- PowerPoint: `topics/06_power_electronics/06_power_electronics_images.pptx`
+- 16:9・4スライド
+- 主回路の電力変換系列、三相整流6パルス、直流チョッパ、R-L負荷・インバータ通流、PWM・VVVF・同期速度を可視化
+- 固定EXAM_ALIGNMENT 5問・7小問を全件対応
+- 全4スライド表示QA `PASS`
+- overflow検査 `0件`
+- PPTX ZIP整合性 `PASS`
 - 固定範囲外論点・未確認実車値の追加 `0件`
 - 完成数は `5 / 16` のまま
 
@@ -59,7 +59,10 @@ Topic 06の練習PDFを完成した。
 - 練習PDF: 完了（A4縦5ページ）
 - 練習PDF表示QA: `PASS`
 - 練習PDF文字抽出QA: `PASS`
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 完了（16:9・4スライド）
+- PowerPoint表示QA: `PASS`
+- PowerPoint overflow検査: `0件`
+- PPTX ZIP整合性: `PASS`
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 - 完成数: `5 / 16`
@@ -72,10 +75,10 @@ Topic 06の練習PDFを完成した。
 - R6上 問16(a)(b): 問9、問10
 
 ## 現在状態
-- `current_status`: `topic_06_practice_pdf_complete`
+- `current_status`: `topic_06_powerpoint_complete`
 - last completed: Topic 05 `誘導電動機はなぜ勝手に回る？`
 - active: Topic 06 `新幹線はどうやって速度を変えている？`
 - 完成数: `5 / 16`
 
 ## 次の正確な開始点
-Topic 06の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問・7小問と固定範囲を維持し、全スライド表示QA・overflow検査を行う。固定範囲外論点・未確認実車値は追加しない。
+Topic 06の完成後独立再解答を、固定EXAM_ALIGNMENT 5問・7小問について完成教材だけで実施する。固定範囲外知識で補完した場合は正答でもFAILとする。

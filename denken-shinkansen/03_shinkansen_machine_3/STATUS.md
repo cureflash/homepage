@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 5 / 16
-- current_status: `topic_06_practice_pdf_complete`
+- current_status: `topic_06_powerpoint_complete`
 - last_completed_topic: `05 誘導電動機はなぜ勝手に回る？`
 - active_topic: `06 新幹線はどうやって速度を変えている？`
-- next_start: Topic 06の解説画像PowerPointを作成し、全スライド表示QA・overflow検査を行う。固定EXAM_ALIGNMENT 5問・7小問と固定範囲を維持し、固定範囲外論点や未確認実車値は追加しない
+- next_start: Topic 06の完成後独立再解答を、固定EXAM_ALIGNMENT 5問・7小問について完成教材だけで実施する。固定範囲外知識で補完した場合は正答でもFAILとする
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -16,7 +16,7 @@
 - [x] 03 直流モーターはどうやって速度を変える？ — 品質ゲートPASS / completed
 - [x] 04 300系でモーターが全部変わった — 品質ゲートPASS / completed
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
-- [ ] 06 新幹線はどうやって速度を変えている？ — EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題source、練習PDFまで完了
+- [ ] 06 新幹線はどうやって速度を変えている？ — EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了
 - [ ] 07〜16 — 未完了
 
 ## Topic 06 EXAM_ALIGNMENT
@@ -85,6 +85,18 @@
 - 固定範囲外論点の追加 `0件`
 - 未確認実車値の追加 `0件`
 
+### 解説画像PowerPoint
+`topics/06_power_electronics/06_power_electronics_images.pptx`
+
+- 16:9・4スライド
+- 固定EXAM_ALIGNMENT 5問・7小問を可視化
+- 主回路の電力変換系列、三相整流6パルス、直流チョッパ、R-L負荷・インバータ通流、PWM・VVVF・同期速度を収録
+- 全4スライド表示QA `PASS`
+- overflow検査 `0件`
+- PPTX ZIP整合性 `PASS`
+- 固定範囲外論点の追加 `0件`
+- 未確認実車値の追加 `0件`
+
 ## Topic 06 現在の品質状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前検証: `7 / 7 PASS`
@@ -98,7 +110,10 @@
 - 練習PDF: 完了（A4縦5ページ）
 - 練習PDF表示QA: `PASS`
 - 練習PDF文字抽出QA: `PASS`
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 完了（16:9・4スライド）
+- PowerPoint表示QA: `PASS`
+- PowerPoint overflow検査: `0件`
+- PPTX ZIP整合性: `PASS`
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 - 完成数: `5 / 16`
