@@ -10,11 +10,11 @@ Topic 03 `偏微分・全微分` は `completed`。
 Topic 04 `微分による極値・最適条件` は `completed`。
 Topic 05 `積分によるエネルギー計算` は `completed`。
 
-Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題sourceまで完了。
+Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDFまで完了。
 
 完成数: `5 / 20`
 
-current_status: `topic_06_practice_source_complete`
+current_status: `topic_06_practice_pdf_complete`
 
 active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
@@ -46,6 +46,20 @@ active_topic: `06 微積分で新幹線の運転曲線を解析する`
 - 一次型8問は正答一意
 - 教材外知識補完0件
 - 固定範囲外追加0件
+
+## Topic 06 練習PDF
+
+`topics/06_calculus_train_curve/06_calculus_train_curve_practice.pdf`
+
+- A4縦6ページ
+- 全12問（一次型8問＋二次記述型4問）と完全解説を反映
+- 固定EXAM_ALIGNMENT 5問・15対象項目を維持
+- 200 dpi全6ページ表示QA `PASS`
+- 文字抽出QA `PASS`
+- 文字欠け・黒四角・重なり・クリップ 0件
+- 教材外知識補完0件
+- 固定範囲外追加0件
+- 未確認の実車運転曲線・実車回生効率の追加0件
 
 ## Topic 06 SPEC固定範囲
 
@@ -100,6 +114,6 @@ active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
 ## 次に行うこと
 
-練習問題source `06_calculus_train_curve_practice.md` を正本として、全12問・解答・完全解説を欠落なく練習PDFへ反映する。PDF化後は全ページ表示QAを行う。
+Topic 06の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問・15対象項目と固定範囲を維持し、全スライド表示QA・overflow検査を行う。固定範囲外論点・未確認実車値は追加しない。
 
-この段階ではPowerPoint・完成後独立再解答へ進まない。
+この段階では完成後独立再解答・最終QAへ進まない。
