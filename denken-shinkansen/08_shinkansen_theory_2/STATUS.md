@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_exam_alignment_complete`
+- current_status: `topic_06_explanation_source_complete`
 - last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: Topic 06の解説本文＋3段階例題。固定EXAM_ALIGNMENTの一次5問・16小問を逆算して固定範囲だけで構成する
+- next_start: Topic 06の解説PDFを作成し、全ページ表示QAを行う。固定一次5問・16小問、二次非採用判断、固定範囲を変更しない
 
 ## Topic 06 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -29,8 +29,8 @@
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
-- [ ] 解説本文
-- [ ] 3段階例題
+- [x] 解説本文
+- [x] 3段階例題
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
@@ -39,16 +39,20 @@
 
 ## 今回進めた内容
 
-Topic 06の制作前EXAM_ALIGNMENTを完了した。
+Topic 06の解説本文＋3段階例題を完成した。
 
-- 公式一次過去問を直近年度から確認し、一次5問・16小問を品質ゲート対象に固定
-- R8の見かけ上の直接対応小問は前段の範囲外計算へ依存するため除外
-- R7〜R5二次の両科目を確認し、固定範囲だけで直接解ける問題がないため不採用
-- 二次試験の件数合わせ: 0件
+- ファラデー則、レンツ則、磁束と鎖交磁束の区別を整理
+- `Ψ=Li`、一定 `L` の `e=-Ldi/dt`、位置依存 `L` の `e=-d(Li)/dt` を明記
+- 抵抗ゼロ短絡コイルの鎖交磁束保存 `L(0)I=L(x)i` を説明
+- 相互インダクタンス、結合係数、結合コイルの磁気エネルギーを説明
+- `L=N²/R`、`M=N1N2/R` を与えられた磁気抵抗から導出
+- `M(θ)=M0cosθ` と移動コイルの連鎖律を、トルクへ広げず固定範囲内で説明
+- 基礎／本試験標準／複合の3段階例題を追加
+- 固定一次5問・16小問の要求事項を本文・例題へ全件マッピング
+- 二次数合わせ: 0件
 - 固定範囲外論点の追加: 0件
-- 公式解答照合: `16 / 16`
-- 解説本文・例題・PDF等の制作: 未着手
+- PDF等の制作: 未着手
 
 ## 判定
 
-Topic 06は `topic_06_exam_alignment_complete`。完成数は `5 / 21` のまま。次は固定一次5問・16小問を逆算した解説本文＋3段階例題。
+Topic 06は `topic_06_explanation_source_complete`。完成数は `5 / 21` のまま。次は解説PDF＋全ページ表示QA。
