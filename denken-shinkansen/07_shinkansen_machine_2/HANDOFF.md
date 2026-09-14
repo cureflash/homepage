@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `06 誘導電動機の最大トルクはどこで出る？`
 
-current status: `topic_06_independent_reanswer_complete`
+current status: `topic_06_final_qa_needs_revision`
 
 ## Topic 06 固定範囲
 
@@ -70,28 +70,30 @@ source Markdown:
 - 周波数変更比較: `06_frequency_comparison.svg`
 - 計算QA: `06_induction_motor_maximum_torque_calculation_qa.md`
 - 完成後独立再解答: `06_induction_motor_maximum_torque_independent_reanswer.md`
+- 最終QA記録: `06_induction_motor_maximum_torque_final_qa.md`
 
 計算プログラム・4比較グラフはPython構文・数値assert・SVG XML parse・ローカル表示QAをPASS済み。未確認300系実車値は使用していない。
 
+完成後独立再解答は固定6問・20小問すべて `20 / 20 PASS`。教材外知識による補完、固定範囲外論点の追加、未確認300系実車値の使用はいずれも0件。
+
 ## Topic 06 今回完了した工程
 
-固定6問・20小問を完成教材だけで独立再解答し、公式解答・標準解答と照合した。
+最終QAを実施した。
 
-- R07一次 機械 問2: 5 / 5 PASS
-- H25一次 機械 問1(1): 1 / 1 PASS
-- R07二次 機械・制御 問2(1),(3): 2 / 2 PASS
-- R03二次 機械・制御 問1(1)〜(6): 6 / 6 PASS
-- R02二次 機械・制御 問1(1)〜(4): 4 / 4 PASS
-- H23二次 機械・制御 問1(1),(2): 2 / 2 PASS
+PASS:
+- 必須成果物の実在
+- 一次2問＋二次記述4問、計6問・20小問の固定EXAM_ALIGNMENT
+- 完成後独立再解答 `20 / 20 PASS`
+- 計算プログラム・SPEC指定4比較グラフQA
+- 仕様境界
+- 未確認実車値の真値化なし
 
-合計: `20 / 20 PASS`
+FAIL:
+- source Markdown冒頭の進捗記録が旧状態のまま残存
+- 現在も `解説PDF・練習PDF・PowerPoint・計算プログラム／比較グラフ・完成後独立再解答は未着手` と記載されている
 
-教材外知識による補完: 0件
-
-固定範囲外論点の追加: 0件
-
-未確認300系実車値の使用: 0件
+このため最終判定は `NEEDS_REVISION`。Topic 06はまだ `completed` にしない。
 
 ## 次に行うこと
 
-Topic 06の最終QAを実施する。必須成果物、EXAM_ALIGNMENT、完成後独立再解答 `20 / 20 PASS`、表示QA、source進捗記録、固定範囲境界を確認し、すべてPASSの場合のみ `completed` とする。
+source Markdownの進捗記録だけを現在地へ同期する。教材本文、固定EXAM_ALIGNMENT、過去問選定、数式、成果物は変更しない。同期後に最終QAを再実施する。
