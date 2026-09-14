@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_powerpoint_complete`
+- current_status: `topic_06_independent_reanswer_needs_revision`
 - last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: Topic 06の完成後独立再解答を行う。固定一次5問・16小問を保存済み正答を見ず教材だけで再解答し、二次非採用判断と固定範囲を変更しない
+- next_start: Topic 06のH30問2(4)(5)で判明したEXAM_ALIGNMENTと教材内カバレッジの不整合を、固定範囲を変更せずに是正し、完成後独立再解答を再実施する
 
 ## Topic 06 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -34,22 +34,24 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後独立再解答
+- [ ] 完成後独立再解答（実施済み: `14 / 16 PASS`、H30問2(4)(5)は教材外補完が必要でNEEDS_REVISION）
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 06の解説画像PowerPointを完成した。
+Topic 06の完成後独立再解答を実施した。
 
-- 16:9、3スライド
-- `Ψ=NΦ` と `e=-dΨ/dt`、自己インダクタンス、相互インダクタンス、結合係数、磁気エネルギー、位置・角度変化を固定範囲内で図解
-- 固定一次5問・16小問への接続をスライド内に維持
-- R7〜R5二次に直接対応がないため非採用判断を維持し、数合わせ0件
-- 磁気回路の再展開、トルク・電磁力、フェーザ、変圧器等価回路を追加せず固定範囲外論点0件
-- 未確認実車値0件。0系主変圧器は教育用簡略図として扱った
-- 全3スライドをレンダリングし、表示QA PASS
-- overflow検査 PASS、ZIP整合性 PASS
+- R7 問2(1)(2)(4)(5): `4 / 4 PASS`
+- R5 問2(2)〜(4): `3 / 3 PASS`
+- R2 問2(1)〜(5): `5 / 5 PASS`
+- H28 問1(3)(5): `2 / 2 PASS`
+- H30 問2(4)(5): `0 / 2 PASS`
+- 合計 `14 / 16 PASS`
+- H30問2(4)(5)は、公式問題の3枝磁気回路から有効磁気抵抗と磁束分流を求める中間知識が現教材にないため、教材だけでは選択肢を確定できない
+- Topic 05の磁気回路知識を補完すれば公式解答 `ヌ / イ` と一致するが、EXAM_ALIGNMENT_SPECに従い教材外補完としてFAIL扱い
+- 二次非採用判断は維持、数合わせ0件
+- 固定範囲外論点の教材追加0件
 
 ## 判定
 
-Topic 06は `topic_06_powerpoint_complete`。完成数は `5 / 21` のまま。次は完成後独立再解答。
+Topic 06は `topic_06_independent_reanswer_needs_revision`。完成数は `5 / 21` のまま。最終QAへは進めない。
