@@ -2,11 +2,11 @@
 
 テーマ: `06 25kVからどうやって電圧が誘導される？`
 
-実施日: 2026-09-14
+再々実施日: 2026-09-15
 
 ## 判定条件
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、`STATUS.md`、`HANDOFF.md` とGitHub正本の既存成果物を再照合した。固定範囲は変更しない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、`STATUS.md`、`HANDOFF.md` とGitHub正本の既存成果物を再照合した。固定範囲・EXAM_ALIGNMENTは変更しない。
 
 二次試験は確認対象に含めるが、本Topic固定範囲へ直接対応する問題がないため、同期機・変圧器・送電線等の周辺論点を数合わせで追加しない。
 
@@ -63,25 +63,22 @@ R7〜R5の二次「電力・管理」「機械・制御」を確認済み。Topi
 
 ### 6. 成果物相互整合・進捗記録
 
-前回指摘した練習sourceの旧 `H30 問2(4)(5)` は除去され、現行EXAM_ALIGNMENTの `H21 問2(2)(3)` へ同期済み。練習source、主source、独立再解答記録の選定5問・16小問は一致している。
+前回までに指摘した不整合は解消済みである。
 
-ただし主source `06_transformer_electromagnetic_induction.md` の進捗記録が現在地へ未同期である。
+- 練習source: 旧 `H30 問2(4)(5)` を除去し、現行EXAM_ALIGNMENTの `H21 問2(2)(3)` へ同期済み
+- 主source: 最終QA実施回数・判定・次工程を現在地へ同期済み
+- 主source、練習source、独立再解答記録の選定5問・16小問は一致
+- 必須成果物の実在と表示QA記録は一致
+- 教材本文・数式・例題・問題・正答・固定範囲に新たな不整合なし
 
-- 冒頭状態欄: `最終QAは未着手`
-- 制作段階判定: `最終QA: 未実施`
-- 判定: `topic_06_independent_reanswer_complete`
-- 次工程: `Topic 06の最終QAを実施する`
-
-実際には最終QAを一度実施し、その指摘だった練習source同期まで完了しているため、上記はGitHub正本内の進捗記録不整合である。教材本文・問題・正答・固定範囲の不具合は確認していない。
-
-判定: `NEEDS_REVISION`
+判定: `PASS`
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-技術内容、修正版一次5問・16小問の独立再解答 `16 / 16 PASS`、二次非採用判断、表示QA、SPEC境界、練習sourceのH21同期はPASS。残件は主sourceの進捗記録だけである。
+修正版一次5問・16小問は完成教材だけで `16 / 16 PASS`。二次非採用判断、表示QA、SPEC境界、成果物相互整合、進捗記録も全件PASS。教材外補完0件、固定範囲外追加0件、二次数合わせ0件。
 
-Topic 06は `completed` にしない。完成数は `5 / 21` のまま。
+Topic 06を `completed` とし、完成数を `6 / 21` に更新する。
 
-次工程は主sourceの状態欄・制作段階判定・次工程を現在地へ同期する。教材本文・EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTX・固定範囲は変更しない。
+次工程はTopic 07 `0系のモーターはなぜ力を出せる？` の制作前EXAM_ALIGNMENT。
