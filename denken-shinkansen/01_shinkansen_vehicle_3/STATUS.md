@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 28 / 38
-- current_status: `topic_29_practice_pdf_complete`
+- current_status: `topic_29_powerpoint_complete`
 - last_completed_topic: `28 空調・電熱`
 - active_topic: `29 コンプレッサ・ポンプ・ファン`
-- next_start: Topic 29の完成済み解説本文・解説PDF・練習source/PDFをもとに解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問の解法経路と系列SPEC固定範囲（コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率）を維持し、範囲外論点・未確認実車値を追加しない
+- next_start: Topic 29の完成済み教材だけを使って固定EXAM_ALIGNMENT 5問を完成後独立再解答し、公式解答との一致・教材外知識補完0件・固定範囲外追加0件を確認する
 
 ## 新品質ゲート進捗
 - [x] 01〜28 — PASS
-- [ ] 29 コンプレッサ・ポンプ・ファン — PRACTICE_PDF_COMPLETE
+- [ ] 29 コンプレッサ・ポンプ・ファン — POWERPOINT_COMPLETE
 
 ## 29 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率。
@@ -53,12 +53,23 @@
 - PDF: A4縦4ページ、180 dpi全4ページ表示QA PASS、文字抽出でQ1〜Q15を確認
 - 固定範囲外論点追加 `0件`、未確認実車値追加 `0件`
 
+## 29 PowerPoint
+- 16:9、4スライド
+- スライド1: 固定5問の共通解法軸（流量換算 → 全揚程 → 水動力 → 効率 → 余裕・台数）
+- スライド2: ポンプ所要出力、効率連鎖、余裕係数・台数切上げ
+- スライド3: ファンの `Q∝n`、`T∝n^2`、`P∝n^3` とコンプレッサの軸出力
+- スライド4: 固定5問と教材節・正答の対応
+- 全4スライド表示QA PASS
+- overflow `0件`
+- PPTX ZIP整合性 PASS
+- 固定範囲外論点追加 `0件`、未確認実車値追加 `0件`
+
 ## 29 成果物
 - 解説source / EXAM_ALIGNMENT: `topics/29_compressor_pump_fan/29_compressor_pump_fan.md` — 本文＋3段階例題まで完成
 - 解説PDF: `topics/29_compressor_pump_fan/29_compressor_pump_fan_explanation.pdf` — A4縦4ページ、§1〜§15・3段階例題・固定5問マッピング、180 dpi全ページ表示QA PASS
 - 練習source: `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.md` — 15問、完全解説、固定5問マッピング、独立QA 15/15 PASS
 - 練習PDF: `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: `topics/29_compressor_pump_fan/29_compressor_pump_fan_images.pptx` — 16:9・4スライド、表示QA・overflow・ZIP整合性PASS
 - 完成後独立再解答・最終QA: 未着手
 
 ## 28 EXAM_ALIGNMENT

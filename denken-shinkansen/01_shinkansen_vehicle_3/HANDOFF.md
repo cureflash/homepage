@@ -6,12 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は28/38。01〜28がPASS。active topicは29 `コンプレッサ・ポンプ・ファン`。
 
 ## 今回進捗
-Topic 29 `コンプレッサ・ポンプ・ファン` の練習source＋練習PDFを完成した。全15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説で、正答位置はA/B/C/D/E各3問。固定5過去問の要求事項を練習問題へ全件マッピングし、独立計算・論理QA `15 / 15 PASS`。PDFはA4縦4ページ、180 dpi全4ページ表示QA PASS。系列SPEC固定範囲外論点、未確認実車値の追加は0件。
+Topic 29 `コンプレッサ・ポンプ・ファン` の解説画像PowerPointを完成した。16:9・4スライドで、固定5過去問の解法経路を「流量換算 → 全揚程 → 水動力 → 効率 → 余裕・台数」「ファンの `Q∝n`、`T∝n^2`、`P∝n^3`」「コンプレッサの軸出力 `P=Tω`」へ可視化した。全4スライド表示QA PASS、overflow `0件`、PPTX ZIP整合性PASS。系列SPEC固定範囲外論点、未確認実車値の追加は0件。
 
 更新:
-- `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.md` — 15問＋完全解説、固定5問マッピング、独立QA 15/15 PASS
-- `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS
-- `STATUS.md` — `topic_29_practice_pdf_complete` へ更新
+- `topics/29_compressor_pump_fan/29_compressor_pump_fan_images.pptx` — 16:9・4スライド、表示QA・overflow・ZIP整合性PASS
+- `STATUS.md` — `topic_29_powerpoint_complete` へ更新
 - `HANDOFF.md`
 
 ## Topic 29 固定EXAM_ALIGNMENT
@@ -52,6 +51,16 @@ Topic 29 `コンプレッサ・ポンプ・ファン` の練習source＋練習PD
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
 
+## PowerPoint QA
+- サイズ: 16:9
+- スライド数: 4
+- 全4スライド表示QA: PASS
+- overflow: `0件`
+- ZIP整合性: PASS
+- 固定5過去問への可視化対応: `5 / 5`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+
 ## 範囲境界
 追加していない:
 - 圧縮機の断熱・等温・ポリトロープ圧縮仕事
@@ -62,11 +71,11 @@ Topic 29 `コンプレッサ・ポンプ・ファン` の練習source＋練習PD
 - 未確認の新幹線コンプレッサ・ポンプ・ファン実車値
 
 ## 現在の状態
-- `current_status`: `topic_29_practice_pdf_complete`
+- `current_status`: `topic_29_powerpoint_complete`
 - 完成数: 28/38
 - 01〜28: PASS
 - active topic: 29 `コンプレッサ・ポンプ・ファン`
-- Topic 29: PRACTICE_PDF_COMPLETE / IN_PROGRESS
+- Topic 29: POWERPOINT_COMPLETE / IN_PROGRESS
 
 ## 次の正確な開始点
-Topic 29の完成済み解説本文・解説PDF・練習source/PDFをもとに解説画像PowerPointを作成する。固定5問の解法経路と系列SPEC固定範囲（コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率）を維持し、範囲外論点を追加しない。未確認の新幹線コンプレッサ・ポンプ・ファン実車値を真値化しない。
+Topic 29の完成済み教材だけを使って固定EXAM_ALIGNMENT 5問を完成後独立再解答する。公式解答との一致だけでなく、教材だけで公式選択・途中式・単位換算・正答理由まで完結するか確認し、教材外知識補完、固定範囲外追加、未確認実車値追加を0件に保つ。
