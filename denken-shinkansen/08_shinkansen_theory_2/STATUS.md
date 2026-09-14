@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 6 / 21
-- current_status: `topic_07_explanation_source_complete`
+- current_status: `topic_07_explanation_pdf_complete`
 - last_completed_topic: `06 25kVからどうやって電圧が誘導される？`
 - active_topic: `07 0系のモーターはなぜ力を出せる？`
-- next_start: Topic 07の解説PDFを作成し、全ページ表示QAを実施する
+- next_start: Topic 07の練習問題source＋練習PDFを作成する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -59,7 +59,7 @@
 - [x] 二次数合わせ 0件
 - [x] 直流機特性・固定範囲外論点の追加 0件
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋表示QA
+- [x] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答 25小問
@@ -67,20 +67,19 @@
 
 ## 今回進めた内容
 
-Topic 07の解説本文＋3段階例題を完成した。
+Topic 07の解説PDFを完成した。
 
-- 固定一次過去問: 5問
-- 固定対象: 25小問
-- 25小問の要求事項を本文へ全件マッピング
-- `F=qE`、`F=q(v×B)`、円運動、サイクロトロン周波数、加速電圧、比電荷、`F=BIl`を固定範囲内で解説
-- 3段階例題: 基礎／標準／複合を各1問
-- 例題数値を独立再計算済み
-- 二次直接対応: 0問の判断を維持
-- 二次数合わせ: 0件
+- A4縦3ページ
+- sourceの固定範囲・3段階例題をPDFへ反映
+- 固定一次過去問: 5問・25小問を維持
+- 二次直接対応なし・二次数合わせ0件の判断を維持
+- 200 dpiで全3ページをレンダリングし、表示QA `3 / 3 PASS`
+- 文字抽出QA PASS
+- 例題数値の独立再計算結果を維持
 - 固定範囲外論点追加: 0件
 - 直流機特性追加: 0件
 - 完成後独立再解答: 未実施
 
 ## 判定
 
-Topic 07は `explanation source complete / IN_PROGRESS`。完成数は `6 / 21` のまま。次工程は解説PDF作成＋全ページ表示QA。
+Topic 07は `explanation PDF complete / IN_PROGRESS`。完成数は `6 / 21` のまま。次工程は練習問題source＋練習PDF作成。
