@@ -12,11 +12,11 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
-Topic 05 `ベクトル` は完成後独立再解答で `2 / 6 PASS` となり、FAIL 4問の不足中間知識を補うrevision sourceを作成済み。今回、その4点を学習用の解説source `05_vectors.md` へ同期した。解説PDF等への再同期は未実施。
+Topic 05 `ベクトル` は完成後独立再解答で `2 / 6 PASS` となり、FAIL 4問の不足中間知識を補うrevision sourceを作成済み。4点は学習用の解説source `05_vectors.md` へ同期済みで、今回さらに解説PDFへ同期した。PowerPoint / 練習側への必要最小限の同期確認は未実施。
 
 完成数: `4 / 12`
 
-current_status: `topic_05_revision_explanation_source_synced`
+current_status: `topic_05_revision_explanation_pdf_synced`
 
 active_topic: `05 ベクトル`
 
@@ -86,10 +86,14 @@ FAIL:
 - ホール素子: p形は正孔が慣用電流と同方向、n形は電子が反対方向。`q(v×B)` で偏りを判定し、p/nでホール電界の向きが反転。固定条件では `|VH|∝I`
 - 運動起電力: `e=Blv⊥=Blv sinθ`
 
-今回、上記4点を `topics/05_vectors/05_vectors.md` の §14 と過去問要求事項対応表へ同期済み。
+同期済み:
+- `topics/05_vectors/05_vectors.md`
+- `topics/05_vectors/05_vectors_explanation.pdf`
+
+更新後の解説PDFはA4縦4ページ。200 dpi全ページ表示QAと文字抽出確認を実施し、クリップ・重なり・欠落は確認されていない。
 
 固定EXAM_ALIGNMENT変更0件、既存3段階例題変更0件、仕様外論点追加0件、未確認新幹線実値追加0件。
 
 ## 次に行うこと
 
-補強済み `05_vectors.md` を `05_vectors_explanation.pdf` へ同期する。必要性を確認した上で `05_vectors_images.pptx` / 練習側も最小限同期する。学習用成果物の同期完了後、保存済み正答を見ず固定6問を再独立解答する。
+補強4点について `05_vectors_images.pptx` / 練習側に同期が必要かを確認し、必要箇所だけ最小限同期する。学習用成果物の同期完了後、保存済み正答を見ず固定6問を再独立解答する。
