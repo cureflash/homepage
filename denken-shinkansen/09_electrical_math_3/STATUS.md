@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `09_electrical_math_3`
-- exam_aligned_completed_topics: 4 / 12
-- current_status: `topic_05_progress_record_synced`
-- last_completed_topic: `04 極形式・フェーザ`
-- active_topic: `05 ベクトル`
-- next_start: `Topic 05 最終QA再判定`
+- exam_aligned_completed_topics: 5 / 12
+- current_status: `topic_05_completed`
+- last_completed_topic: `05 ベクトル`
+- active_topic: `06 微分① ダイヤの傾きは速度`
+- next_start: `Topic 06 制作前EXAM_ALIGNMENT`
 
 ## Topic 05 進捗
 - [x] 系列SPEC確認
@@ -32,24 +32,20 @@
 - [x] 再独立解答 6 / 6 PASS
 - [x] 最終QA実施
 - [x] `05_vectors.md` の進捗記録不整合を修正
-- [ ] 最終QA再判定
+- [x] 最終QA再判定 PASS
 
 ## 今回進めた内容
 
-Topic 05 `ベクトル` の最終QAで指摘された `topics/05_vectors/05_vectors.md` の進捗記録不整合を修正した。
+Topic 05 `ベクトル` の最終QAを再判定した。
 
-修正範囲:
-- 冒頭 `## 状態` を現在地へ同期
-- 末尾 `# 次工程` を最終QA再判定へ更新
+前回FAIL理由だった `05_vectors.md` の進捗記録不整合が解消済みであることを確認。前回QA後に変更されたのはsource Markdownの進捗記録だけで、解説PDF、練習source/PDF、PowerPoint、完成後独立再解答記録、revision supplementは同一blobを維持している。
 
-教材本文、固定EXAM_ALIGNMENT、3段階例題、練習問題、PDF、PowerPointは変更していない。
-
-補強後完成教材による再独立解答 `6 / 6 PASS`、教材外知識による補完0件、固定範囲外追加0件、未確認新幹線実値追加0件の状態を維持している。
+固定EXAM_ALIGNMENT 6問、制作前独立検証 `6 / 6 PASS`、補強後完成教材による再独立解答 `6 / 6 PASS`、教材外知識補完0件、固定範囲外追加0件、未確認新幹線実値追加0件を再確認した。
 
 ## 判定
 
-`IN_PROGRESS`。
+`COMPLETED`。
 
-進捗記録不整合は解消したが、前回最終QAは `NEEDS_REVISION` 判定のため、Topic 05はまだ `completed` にしない。完成数は `4 / 12` のまま。
+Topic 05は過去問対応品質ゲートと最終QAを全件PASSしたため `completed` とする。完成数は `5 / 12`。
 
-次は教材・成果物を変更せず、Topic 05の最終QAを再判定する。
+次は Topic 06 `微分① ダイヤの傾きは速度` の制作前EXAM_ALIGNMENT。
