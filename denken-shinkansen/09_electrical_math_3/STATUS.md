@@ -31,9 +31,9 @@
 
 Topic 06 `微分① ダイヤの傾きは速度` の解説画像PowerPointを完成した。
 
-`topics/06_derivative_1/06_derivative_1_images.pptx` を16:9・4枚で作成し、平均変化率→接線の傾き→微分係数、`v(t)=dx/dt` と多項式・三角関数・合成関数の基本、折れ線 `i-t` グラフの区間傾き・`mA/ms=A/s`、固定EXAM_ALIGNMENT 4問で使う数学操作を可視化した。
+`topics/06_derivative_1/06_derivative_1_images.pptx` を16:9・3枚で作成し、平均変化率→接線の傾き→微分係数、`v(t)=dx/dt` と多項式・三角関数・合成関数の基本、折れ線 `i-t` グラフの区間傾き・`mA/ms=A/s`、固定EXAM_ALIGNMENT 4問で使う数学操作を可視化した。
 
-全4枚をレンダリングして表示確認し、文字切れ・重なり・黒塗り・破損文字なし。スライド境界オーバーフロー検査PASS、PPTX ZIP整合性PASS。
+全3枚をレンダリングして表示確認し、文字切れ・重なり・黒塗り・破損文字なし。スライド境界オーバーフロー検査PASS、PPTX ZIP整合性PASS。
 
 固定EXAM_ALIGNMENT 4問、練習12問、Topic 06の範囲は変更していない。固定範囲外追加0件、未確認新幹線実値追加0件。
 
