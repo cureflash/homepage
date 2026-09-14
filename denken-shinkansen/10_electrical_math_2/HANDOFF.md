@@ -12,11 +12,11 @@ Topic 03 `偏微分・全微分` は `completed`。
 
 Topic 04 `微分による極値・最適条件` は `completed`。
 
-Topic 05 `積分によるエネルギー計算` は完成後独立再解答まで完了。最終QAは未実施。
+Topic 05 `積分によるエネルギー計算` は最終QAまで実施したが、source Markdownの進捗記録不整合により `NEEDS_REVISION`。
 
 完成数: `4 / 20`
 
-current_status: `topic_05_exam_reanswer_complete`
+current_status: `topic_05_final_qa_needs_revision`
 
 active_topic: `05 積分によるエネルギー計算`
 
@@ -39,6 +39,9 @@ PowerPoint QA:
 
 完成後独立再解答:
 `topics/05_integral_energy/05_integral_energy_exam_reanswer.md`
+
+最終QA:
+`topics/05_integral_energy/05_integral_energy_final_qa.md`
 
 解説本文＋3段階例題: 完成。
 
@@ -94,6 +97,28 @@ PowerPoint: 16:9、全5スライド。LibreOffice PDF変換・全スライド表
 
 固定範囲外追加: 0件。
 
+## 最終QA
+
+`NEEDS_REVISION / IN_PROGRESS`。
+
+PASS:
+- 必須成果物実在
+- 固定6問・16対象項目
+- 二次試験対応
+- 完成後独立再解答16/16
+- 教材外知識補完0件
+- SPEC外内容の非混入
+- 表示QA
+
+FAIL:
+- source Markdown進捗記録と実成果物の整合
+
+旧進捗は3箇所。
+
+1. 冒頭状態欄が「解説PDF・練習PDF・PowerPointは未着手」のまま。
+2. 固定EXAM_ALIGNMENT対応表直後が「完成後独立再解答は未実施」のまま。
+3. 末尾次工程が「次は解説PDF」のまま。
+
 ## SPEC固定範囲
 
 - `E=∫Pdt`
@@ -116,6 +141,6 @@ PowerPoint: 16:9、全5スライド。LibreOffice PDF変換・全スライド表
 
 ## 次に行うこと
 
-Topic 05の最終QAを実施する。
+source Markdownの進捗記録3箇所を、実成果物・完成後独立再解答・最終QA済みの現在地へ同期する。
 
-固定6問・16対象項目、必須成果物、表示QA、SPEC境界、source Markdownを含む進捗記録整合を確認し、全件PASSの場合のみ `completed` とする。
+教材本文、固定EXAM_ALIGNMENT、数式、例題、SPEC固定範囲は変更しない。
