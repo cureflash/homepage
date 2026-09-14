@@ -6,11 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は28/38。01〜28がPASS。active topicは29 `コンプレッサ・ポンプ・ファン`。
 
 ## 今回進捗
-Topic 29 `コンプレッサ・ポンプ・ファン` の解説本文＋3段階例題を完成した。制作前に固定した公式過去問5問の要求事項を、系列SPEC固定範囲（コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率）だけで本文へ全件マッピングした。範囲外論点、未確認実車値の追加は0件。
+Topic 29 `コンプレッサ・ポンプ・ファン` の解説PDFを完成した。A4縦4ページで、§1〜§15、3段階例題、固定5問の解法経路を収録。180 dpiで全4ページ表示QA PASS。系列SPEC固定範囲外論点、未確認実車値の追加は0件。
 
 更新:
-- `topics/29_compressor_pump_fan/29_compressor_pump_fan.md` — §1〜§15、固定5問マッピング、3段階例題を追加
-- `STATUS.md` — `topic_29_explanation_source_complete` へ更新
+- `topics/29_compressor_pump_fan/29_compressor_pump_fan_explanation.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS
+- `STATUS.md` — `topic_29_explanation_pdf_complete` へ更新
 - `HANDOFF.md`
 
 ## Topic 29 固定EXAM_ALIGNMENT
@@ -49,11 +49,11 @@ Topic 29 `コンプレッサ・ポンプ・ファン` の解説本文＋3段階�
 - 未確認の新幹線コンプレッサ・ポンプ・ファン実車値
 
 ## 現在の状態
-- `current_status`: `topic_29_explanation_source_complete`
+- `current_status`: `topic_29_explanation_pdf_complete`
 - 完成数: 28/38
 - 01〜28: PASS
 - active topic: 29 `コンプレッサ・ポンプ・ファン`
-- Topic 29: EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS
+- Topic 29: EXPLANATION_PDF_COMPLETE / IN_PROGRESS
 
 ## 次の正確な開始点
-`topics/29_compressor_pump_fan/29_compressor_pump_fan.md` の完成済み解説本文＋3段階例題をもとに解説PDFを作成する。固定5問の解法経路を維持し、系列SPEC固定範囲外を追加しない。未確認の新幹線コンプレッサ・ポンプ・ファン実車値を真値化しない。
+Topic 29の完成済み解説本文・解説PDFをもとに練習source/PDFを作成する。固定5問の解法経路と系列SPEC固定範囲（コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率）を維持し、範囲外論点を追加しない。未確認の新幹線コンプレッサ・ポンプ・ファン実車値を真値化しない。
