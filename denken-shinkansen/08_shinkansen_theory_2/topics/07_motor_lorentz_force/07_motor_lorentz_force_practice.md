@@ -207,6 +207,6 @@ x方向には力がないので通過時間は `t=L/vx=0.020/(4.0×10^6)=5.0×10
 
 # 次工程
 
-練習PDF `07_motor_lorentz_force_practice.pdf` を作成済み。A4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`。
+練習PDF `07_motor_lorentz_force_practice.pdf` は完成済み。A4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`。解説画像PowerPointも完成済み（16:9・5枚、表示QA `5 / 5 PASS`、overflow・ZIP整合性PASS）。完成後独立再解答は固定5問・25小問 `25 / 25 PASS`。
 
-次工程は解説画像PowerPoint作成。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
+次工程はTopic 07の最終QA再実施。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
