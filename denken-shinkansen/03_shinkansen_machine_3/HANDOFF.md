@@ -6,17 +6,15 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は4/16。Topic 01〜04は品質ゲートPASSでcompleted。active topicは05 `誘導電動機はなぜ勝手に回る？`。
 
 ## 今回進捗
-Topic 05の解説画像PowerPointを完成した。
+Topic 05の完成後独立再解答を完了した。
 
-成果物:
-- `topics/05_induction_motor_principle/05_induction_motor_principle_images.pptx`
-- 16:9、5スライド
-- 回転磁界→電磁誘導→回転子電流→トルク、同期速度・滑り・二次周波数、電力フロー、`P2=Tωs` / `Pm=Tωm`、最大トルク・比例推移、固定EXAM_ALIGNMENTへの接続を図解
-- 全5スライドをPDF化して表示QAし、文字切れ・重なり・欠落グリフなし
-- スライド領域外はみ出し `0件`
-- PPTX ZIP整合性 `PASS`
-- 固定5問・6小問の要求事項を維持
-- 仕様外論点・未確認実車値の追加は0件
+- 固定EXAM_ALIGNMENT 5問・6小問を変更していない
+- 完成教材だけを使用し、公式解答を先に見ずに答案を確定
+- 答案列: `(3), (1), (3), (2), (3), (1)`
+- 公式解答との一致: `6 / 6 PASS`
+- 教材外知識による補完: `0件`
+- Topic 05固定範囲外論点の追加: `0件`
+- 判定: `PASS / 最終QAへ進行可`
 
 ## Topic 05 固定EXAM_ALIGNMENT
 選定は変更していない。
@@ -27,7 +25,7 @@ Topic 05の解説画像PowerPointを完成した。
 - R6上 機械 問15(a)(b) — 滑り・トルク比例、比例推移、実回転速度
 - R4下 機械 問2 — 二次銅損、二次入力、機械変換電力、機械損、軸出力
 
-制作前独立検証は `6 / 6 PASS`。完成後独立再解答を汚染しないため、正答番号はsourceへ保存していない。
+制作前独立検証は `6 / 6 PASS`。完成後独立再解答も `6 / 6 PASS`。
 
 ## Topic 05 固定範囲
 系列SPECに従い、次だけを扱う。
@@ -75,8 +73,10 @@ Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御�
 - PowerPoint表示QA: `PASS`
 - PowerPointはみ出し検査: `PASS / 0件`
 - PowerPoint ZIP整合性: `PASS`
-- 完成後独立再解答: 未着手
+- 完成後独立再解答: `6 / 6 PASS`
+- 教材外知識による補完: `0件`
 - 固定範囲外追加: `0件`
+- 最終QA: 未実施
 - 完成数: `4 / 16` 据え置き
 
 ## Topic 04 完成記録
@@ -89,10 +89,10 @@ Topic 04 `300系でモーターが全部変わった` は最終QA `PASS / comple
 - 解説PDF・練習PDF・PowerPointの表示QA: PASS
 
 ## 現在状態
-- `current_status`: `topic_05_powerpoint_complete`
+- `current_status`: `topic_05_independent_reanswer_complete`
 - 完成数: `4/16`
 - last completed: Topic 04 `300系でモーターが全部変わった`
 - active: Topic 05 `誘導電動機はなぜ勝手に回る？`
 
 ## 次の正確な開始点
-Topic 05の固定EXAM_ALIGNMENTと完成済み4成果物を変更せず、選定5問・6小問を完成教材だけで独立再解答する。保存済み正答を先に見ず、教材外知識で補完しない。
+Topic 05の固定EXAM_ALIGNMENTと完成済み成果物を変更せず、必須成果物・EXAM_ALIGNMENT・完成後独立再解答・表示QA・範囲境界・進捗整合を最終QAする。全件PASSの場合のみ `completed` にする。
