@@ -2,23 +2,14 @@
 
 updated: 2026-09-15
 series: `06_shinkansen_power_2`
-active_topic: `05`
-current_status: `topic_05_source_progress_synced`
+active_topic: `06`
+current_status: `topic_05_completed`
 
 ## 今回完了
 
-Topic 05「新幹線を再エネ主体で走らせるには？」の主source進捗記録を現在の成果物実態へ同期した。
+Topic 05「新幹線を再エネ主体で走らせるには？」の最終QAを再実施し、`PASS / completed` とした。
 
-成果物:
-- `topics/05_renewable_energy/05_renewable_energy.md`
-
-変更内容:
-- `preproduction_independent_verification_complete` の旧状態を `topic_05_source_progress_synced` へ更新
-- 「本文・例題・PDF・PowerPointは未実施」という旧記録を削除
-- 解説本文、練習source・独立QA、解説PDF、練習PDF、PowerPoint、完成後独立再解答まで完了済みであることを反映
-- 末尾の旧next stepを最終QA再実施へ同期
-
-維持した品質ゲート:
+確認済み:
 - 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問28小問
 - 完成後独立再解答: `5 / 5問、28 / 28小問 PASS`
 - 練習問題独立QA: `15 / 15 PASS`
@@ -26,18 +17,25 @@ Topic 05「新幹線を再エネ主体で走らせるには？」の主source進
 - 練習PDF: `6 / 6ページ表示QA PASS`
 - PowerPoint: `5 / 5スライド表示QA PASS`、overflow・ZIP整合性PASS
 - 系列SPEC固定9項目・4可視化: PASS
+- source・STATUS・HANDOFF進捗整合: PASS
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実設備値依存: `0件`
 
-教材本文、固定EXAM_ALIGNMENT、過去問選定、数式、練習問題、PDF/PPTX、固定範囲は変更していない。前回最終QAは `NEEDS_REVISION / IN_PROGRESS` のままで、再判定は未実施。
+前回 `NEEDS_REVISION` の原因だった主source進捗記録不整合は解消済み。教材本文、固定EXAM_ALIGNMENT、過去問選定、数式、練習問題、PDF/PPTX、固定範囲は変更していない。
+
+完成数: `5 / 22`
 
 ## 次に行う
 
-Topic 05の最終QAを再実施する。必須成果物、固定EXAM_ALIGNMENT 5問28小問、完成後独立再解答 `5 / 5問・28 / 28小問 PASS`、練習15問、PDF/PPTX表示QA、系列SPEC固定9項目・4可視化、source・STATUS・HANDOFFの進捗整合、固定範囲境界を確認し、全件PASSの場合のみ `completed` とする。
+Topic 06「275kVを受ける新幹線変電所の中身」の制作前EXAM_ALIGNMENTを行う。
 
-## Topic 05 範囲境界
+1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 06固定範囲を確認する。
+2. 電気技術者試験センターの第二種一次「電力」と二次「電力・管理」を直近年度から調査する。
+3. 二次対象論点で該当記述問題が確認できる場合は最低1問含め、一次・二次合計で原則5問以上を正式選定する。
+4. 各問題の要求知識・式・設問型を固定し、件数合わせで範囲外問題を追加しない。
+5. 保存済み正答を見ない制作前独立検証を実施し、全件PASS後に本文制作へ進む。
 
-Topic 05では、太陽光・風力・地熱・蓄電・設備利用率・出力変動・需給調整・系統連系・必要予備力と、系列SPEC指定4可視化だけを扱う。
+## Topic 06 固定範囲
 
-送配電設備容量の詳細、無効電力・電圧制御、FRT、同期安定度、経済負荷配分、電力市場・制度各論は後続Topicまたは固定範囲外であり、このTopicへ追加しない。
+系列SPECに記載された「変電所、母線、変圧器、遮断器」と「単線結線図、損失」だけを開始時の固定範囲とする。後続Topic 07以降のスコット結線、変形ウッドブリッジ、ルーフ・デルタ、％Z、ATき電、線路電圧降下、対称座標法、保護協調等は件数合わせで追加しない。
