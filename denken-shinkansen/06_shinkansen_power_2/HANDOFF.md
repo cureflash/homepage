@@ -3,37 +3,38 @@
 updated: 2026-09-14
 series: `06_shinkansen_power_2`
 active_topic: `04`
-current_status: `topic_04_independent_reanswer_complete`
+current_status: `topic_04_final_qa_needs_revision`
 
 ## 今回完了
 
-Topic 04「むつの原子炉を積んだ原子力新幹線を東京から佐世保まで走らせる」の完成後独立再解答を完了した。
+Topic 04「むつの原子炉を積んだ原子力新幹線を東京から佐世保まで走らせる」の最終QAを実施した。
 
-成果物:
-- `topics/04_nuclear_power/04_nuclear_power_independent_reanswer.md`
-- 一次: `3 / 3 PASS`
-- 二次: `2 / 2 PASS`
-- 合計: `5 / 5 PASS`
-- 保存済み正答は答案確定後にのみ照合
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
+PASS:
+- 正式選定5問: 一次3問＋二次2問
+- 完成後独立再解答: `5 / 5 PASS`
+- 練習15問独立QA: `15 / 15 PASS`
+- 解説PDF: A4縦6ページ、200 dpi全6ページPASS
+- 練習PDF: A4縦7ページ、200 dpi全7ページPASS
+- PowerPoint: 16:9・4枚、表示QA・overflow・ZIP整合性PASS
 - 教材外知識補完: `0件`
-- SPEC外追加: `0件`
+- 固定範囲外追加: `0件`
 - 未確認実設備値依存: `0件`
-- 正式選定5問の変更: `0件`
 
-正式選定5問は変更なし:
-- R7 二種一次「電力」問5
-- H22 二種一次「電力」問1
-- R3 二種一次「電力」問5
-- R1 二種二次「電力・管理」問1
-- R3 二種二次「電力・管理」問6
+FAIL:
+- 系列SPECの「効率を変えた場合の走行可能出力」が未収録。
+- 系列SPECの「東京―佐世保間の必要走行エネルギーとの比較」が未収録。
+- 主source・解説source・練習sourceの進捗記録が現在地と不整合。
 
-完成教材のみで、蒸気状態・ランキンサイクル・非常用電源・停止時補機・速度調定率と並列負荷分担まで全件再構成できた。練習15問独立QA `15 / 15 PASS` も維持している。
+最終QA記録:
+- `topics/04_nuclear_power/04_nuclear_power_final_qa.md`
 
 ## 次に行う
 
-Topic 04 の最終QAを実施する。
+系列SPECで欠けている2項目だけを固定範囲内で解説sourceへ補強し、`04_nuclear_power.md`、`04_nuclear_power_explanation_source.md`、`04_nuclear_power_practice.md` の進捗記録を現在地へ同期する。
 
-必須成果物、EXAM_ALIGNMENT、正式5問 `5 / 5 PASS`、練習15問 `15 / 15 PASS`、PDF/PPTX表示QA、固定範囲境界、進捗記録の整合を確認し、全件PASSの場合のみ `completed` とする。
+未確認実値は追加せず、教材用条件は仮定値と明示する。正式選定5問、EXAM_ALIGNMENT、既存過去問解法は変更しない。補強後、影響するPDF/PPTXへ同期し、最終QAを再実施する。
 
 ## 範囲境界
 
