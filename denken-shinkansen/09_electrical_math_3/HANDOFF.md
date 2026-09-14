@@ -14,11 +14,11 @@ Topic 04 `極形式・フェーザ` は `completed`。
 
 Topic 05 `ベクトル` は、初回完成後独立再解答 `2 / 6 PASS` で不足した4点を解説source / PDF、練習source / PDF、PowerPointへ必要最小限補強済み。補強後の再独立解答は `6 / 6 PASS`。
 
-最終QAを実施した結果、過去問対応品質ゲートと成果物自体はPASSしたが、`05_vectors.md` の進捗記録が古いまま残っているため `NEEDS_REVISION / IN_PROGRESS`。
+最終QAで指摘された `05_vectors.md` の進捗記録不整合は修正済み。教材本文・成果物・固定EXAM_ALIGNMENTは変更していない。次は最終QAの再判定を行う。
 
 完成数: `4 / 12`
 
-current_status: `topic_05_final_qa_needs_revision`
+current_status: `topic_05_progress_record_synced`
 
 active_topic: `05 ベクトル`
 
@@ -76,7 +76,7 @@ active_topic: `05 ベクトル`
 
 固定EXAM_ALIGNMENT、既存3段階例題、初回PASS済み2問は変更していない。仕様外論点・未確認新幹線実値の追加は0件。
 
-## 最終QA結果
+## 最終QAの前回結果
 
 PASS:
 - 必須成果物の実在
@@ -87,17 +87,10 @@ PASS:
 - 固定範囲外追加0件
 - 未確認新幹線実値追加0件
 
-FAIL:
-- `05_vectors.md` 冒頭 `## 状態` が「既存PDF等への再同期と再独立解答は未実施」のまま
-- `05_vectors.md` 末尾 `# 次工程` が解説PDF・練習・PowerPoint同期と再独立解答を未実施として残している
-
-したがってTopic 05はまだ `completed` にしない。
+前回FAILだった `05_vectors.md` の進捗記録不整合は今回解消済み。
 
 ## 次に行うこと
 
-`05_vectors.md` の進捗記録だけを現在地へ同期する。
+Topic 05の最終QAを再判定する。
 
-- 冒頭 `## 状態`: 解説PDF・練習source/PDF・PowerPoint補強同期済み、再独立解答 `6 / 6 PASS`、最終QAで進捗記録不整合のみ指摘された状態へ修正
-- 末尾 `# 次工程`: 進捗記録修正後に最終QA再判定へ修正
-
-教材本文、EXAM_ALIGNMENT、3段階例題、練習問題、PDF、PowerPointは変更しない。
+教材本文、EXAM_ALIGNMENT、3段階例題、練習問題、PDF、PowerPointは変更しない。前回FAIL理由だった進捗記録不整合の解消を確認し、品質ゲート全件PASSなら `completed` へ進める。
