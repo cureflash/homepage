@@ -4,31 +4,24 @@
 
 ## 現在地
 
-Topic 01 `複素数・複素指数・フェーザ計算` は `completed`。
-Topic 02 `ベクトルと座標変換` は `completed`。
-Topic 03 `偏微分・全微分` は `completed`。
-Topic 04 `微分による極値・最適条件` は `completed`。
-Topic 05 `積分によるエネルギー計算` は `completed`。
-Topic 06 `微積分で新幹線の運転曲線を解析する` は `completed`。
+Topic 01〜06は `completed`。
 
 完成数: `6 / 20`
 
-current_status: `topic_07_exam_reanswer_complete`
+current_status: `topic_07_final_qa_needs_revision`
 
 active_topic: `07 一階常微分方程式`
-
-## Topic 06 最終状態
-
-固定EXAM_ALIGNMENTは一次4問＋二次1問、計5問・15対象項目。完成後独立再解答 `15 / 15 PASS`、最終QA `PASS / completed`。
-
-source:
-`topics/06_calculus_train_curve/06_calculus_train_curve.md`
 
 ## Topic 07 source
 
 `topics/07_first_order_ode/07_first_order_ode.md`
 
-制作前EXAM_ALIGNMENT、制作前独立再解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。最終QAは未実施。
+制作前EXAM_ALIGNMENT、制作前独立再解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、表示QA、完成後独立再解答まで完了。
+
+最終QA記録:
+`topics/07_first_order_ode/07_first_order_ode_final_qa.md`
+
+判定は `NEEDS_REVISION / IN_PROGRESS`。技術内容・成果物・過去問対応はPASSだが、主sourceの進捗記録2箇所が旧状態のため未完了。
 
 ## Topic 07 固定範囲
 
@@ -51,7 +44,7 @@ source:
 
 Topic 08の二階常微分方程式、Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしない。
 
-## Topic 07 固定EXAM_ALIGNMENT
+## 固定EXAM_ALIGNMENT
 
 品質ゲート対象は一次5問・22小問。
 
@@ -61,162 +54,66 @@ Topic 08の二階常微分方程式、Topic 09のラプラス変換、Topic 10�
 - R5 一次 理論 問5 (1)〜(5): RL一階微分方程式、電流連続性、指数減衰、`τ=L/(R1+R2)`、コイル電圧。
 - R4 一次 理論 問4 (1)〜(5): KCL/KVLからの一階微分方程式、指数立上り・減衰、スイッチ切替、時定数変化。
 
-対象小問数: `2 + 5 + 5 + 5 + 5 = 22`。
+対象小問数: `22`。
 
-## 制作前独立再解答
+二次試験は直近R7〜R5「機械・制御」を確認したが、Topic 09〜10相当の伝達関数・ラプラス領域が中心のため件数合わせで追加しない。
 
-固定5問・22小問を問題文とTopic 07固定範囲の式から再導出し、公式解答と照合した。
+## 完成教材
 
-- R8 問6 (1)〜(2): `(ト, ホ)` → `2 / 2 PASS`
-- R7 問6 (1)〜(5): `(リ, ヘ, ル, ヨ, ホ)` → `5 / 5 PASS`
-- R6 問4 (1)〜(5): `(ハ, ヌ, ロ, カ, ト)` → `5 / 5 PASS`
-- R5 問5 (1)〜(5): `(ホ, カ, ヌ, ヘ, イ)` → `5 / 5 PASS`
-- R4 問4 (1)〜(5): `(ワ, カ, イ, ヨ, チ)` → `5 / 5 PASS`
+- 解説PDF: `topics/07_first_order_ode/07_first_order_ode_explanation.pdf`
+  - A4縦5ページ
+  - 200 dpi全5ページ表示QA・文字抽出QA PASS
+- 練習source: `topics/07_first_order_ode/07_first_order_ode_practice.md`
+  - 全12問・全問五肢択一
+  - 基礎3／標準6／複合3
+  - 独立計算・正答一意性 `12 / 12 PASS`
+- 練習PDF: `topics/07_first_order_ode/07_first_order_ode_practice.pdf`
+  - A4縦4ページ
+  - 200 dpi全4ページ表示QA・文字抽出QA PASS
+- PowerPoint: `topics/07_first_order_ode/07_first_order_ode_images.pptx`
+  - 16:9・5枚
+  - 全5枚表示QA、overflow、ZIP整合性 PASS
+- PowerPoint QA: `topics/07_first_order_ode/07_first_order_ode_powerpoint_qa.md`
 
-合計 `22 / 22 PASS`。
+教材外知識補完0件、固定範囲外追加0件、Topic 08〜10先取り0件、二次記述の件数合わせ0件、未確認実車値追加0件。
 
-教材外知識補完: 0件。
-固定範囲外追加: 0件。
-
-## 二次試験の扱い
-
-2026-09-15時点でR8二次試験は未実施。直近R7〜R5の二次「機械・制御」を確認したが、自動制御問題は伝達関数・周波数応答・ラプラス領域の時間応答を中心とし、Topic 09〜10の固定範囲に属する。
-
-したがってTopic 07では二次問題を件数合わせで追加しない。一次5問で品質ゲートを固定する。
-
-## 解説本文 完了内容
-
-sourceへ次を実装済み。
-
-- `A dy/dt+B y=C` と標準形
-- 変数分離によるRL自然応答
-- 同次解＋定常特解
-- 初期値・最終値・時定数から `y=y∞+(y0-y∞)e^{-t/τ}` を構成
-- C電圧・L電流の連続性と `0- / 0+ / ∞` の区別
-- RCの `R_eq` と `τ=R_eq C`
-- RLの `R_eq` と `τ=L/R_eq`
-- KCL/KVLから一つの未知量へ縮約する手順
-- コンデンサ電荷保存と `q=CV`, `i=dq/dt`
-- 時間領域の一次遅れ `T dy/dt+y=Ku`
-- 本試験用解法アルゴリズム
-- 頻出ミス
-- 固定5問・22小問の教材内対応表
-
-3段階例題:
-1. RL回路の立上り
-2. 抵抗網からRC時定数を求める標準問題
-3. 二つのコンデンサの電荷保存から一階方程式を作る複合問題
-
-固定5問・22小問は本文へ全件マッピング済み。
-教材外知識補完0件、固定範囲外追加0件、未確認実車値追加0件。
-
-## Topic 07 解説PDF
-
-`topics/07_first_order_ode/07_first_order_ode_explanation.pdf`
-
-- A4縦5ページ
-- 解説本文、3段階例題、本試験用解法アルゴリズム、頻出ミス、固定一次5問・22小問対応、範囲境界を収録
-- 200 dpi 全5ページ表示QA: PASS
-- 文字抽出QA: PASS
-- 固定一次5問・22小問との対応維持: PASS
-- 教材外知識補完: 0件
-- 固定範囲外追加: 0件
-- 未確認実車値追加: 0件
-
-## Topic 07 練習問題source
-
-`topics/07_first_order_ode/07_first_order_ode_practice.md`
-
-- 全12問・全問五肢択一
-- 基礎3問／標準6問／複合3問
-- 固定一次5問・22小問へ全件接続
-- R8: 問4
-- R7: 問10・11
-- R6: 問3・6・7
-- R5: 問2・5・9
-- R4: 問1・8・9
-- 時間領域一次遅れ: 問12
-- 独立計算・正答一意性 `12 / 12 PASS`
-- 五肢重複0件
-- Topic 08〜10先取り0件
-- 二次記述の件数合わせ0件
-- 未確認実車値追加0件
-
-## Topic 07 練習PDF
-
-`topics/07_first_order_ode/07_first_order_ode_practice.pdf`
-
-- A4縦4ページ
-- 全12問・全問五肢択一＋完全解説
-- 基礎3問／標準6問／複合3問
-- 固定一次5問・22小問へ全件接続
-- 200 dpi 全4ページ表示QA: PASS
-- 文字抽出QA: PASS
-- 全12問・完全解説の同期: PASS
-- 独立計算・正答一意性 `12 / 12 PASS`
-- Topic 08〜10先取り0件
-- 二次記述の件数合わせ0件
-- 未確認実車値追加0件
-
-## Topic 07 解説画像PowerPoint
-
-`topics/07_first_order_ode/07_first_order_ode_images.pptx`
-
-QA:
-`topics/07_first_order_ode/07_first_order_ode_powerpoint_qa.md`
-
-- 16:9・全5スライド
-- 一階式から `y0`・`y∞`・`τ` を求めて指数応答へ落とす本試験解法経路を可視化
-- 同次解＋定常特解、RC/RL時定数、C/Lの連続性、スイッチ切替、電荷保存を収録
-- 固定R8/R7/R6/R5/R4一次5問・22小問との対応表を収録
-- 全5スライド表示QA: `5 / 5 PASS`
-- 文字切れ・重なり・空白ページ・文字化け: なし
-- overflow: 0件
-- PPTX ZIP整合性: PASS
-- 教材外知識補完: 0件
-- 固定範囲外追加: 0件
-- Topic 08〜10先取り: 0件
-- 二次記述の件数合わせ: 0件
-- 未確認実車値追加: 0件
-
-## Topic 07 完成後独立再解答
+## 完成後独立再解答
 
 記録:
 `topics/07_first_order_ode/07_first_order_ode_exam_reanswer.md`
 
-完成教材の式・解法手順から固定一次5問・22小問を再導出し、再導出後に電気技術者試験センター公式解答と照合した。
+- R8: `2 / 2 PASS`
+- R7: `5 / 5 PASS`
+- R6: `5 / 5 PASS`
+- R5: `5 / 5 PASS`
+- R4: `5 / 5 PASS`
+- 合計: `22 / 22 PASS`
 
-- R8 問6 (1)〜(2): `(ト, ホ)` → `2 / 2 PASS`
-- R7 問6 (1)〜(5): `(リ, ヘ, ル, ヨ, ホ)` → `5 / 5 PASS`
-- R6 問4 (1)〜(5): `(ハ, ヌ, ロ, カ, ト)` → `5 / 5 PASS`
-- R5 問5 (1)〜(5): `(ホ, カ, ヌ, ヘ, イ)` → `5 / 5 PASS`
-- R4 問4 (1)〜(5): `(ワ, カ, イ, ヨ, チ)` → `5 / 5 PASS`
+教材外知識補完、固定範囲外追加、Topic 08〜10先取り、二次記述の件数合わせ、未確認実車値依存はいずれも0件。
 
-合計: `22 / 22 PASS`。
+## 最終QA
 
-- 教材外知識補完: 0件
-- 固定範囲外追加: 0件
-- Topic 08〜10先取り: 0件
-- 二次記述の件数合わせ: 0件
-- 未確認実車値依存: 0件
+記録:
+`topics/07_first_order_ode/07_first_order_ode_final_qa.md`
 
-## 参考調査
+判定: `NEEDS_REVISION / IN_PROGRESS`
 
-公式:
-- 電気技術者試験センター 第二種過去問題
-- R8/R7/R6/R5/R4 一次理論の該当過渡現象問題・公式解答
+PASS:
+- 必須成果物実在
+- 固定一次5問・22小問
+- 完成後独立再解答 `22 / 22 PASS`
+- PDF / PowerPoint表示QA
+- SPEC境界
 
-学習資料:
-- e-sysnet「過渡現象」: RC/RL時定数、C/Lの初期・定常状態、指数応答
-- 電験王2 R7/R6/R5年度一覧: 一次過渡現象問題と二次自動制御問題の論点境界
+FAIL:
+1. 主sourceの `## 状態` が「解説PDF以降は未実施」の旧記録。
+2. 主sourceの `## 次工程` が「次は解説PDF」の旧記録。
 
 ## 次に行うこと
 
-Topic 07の最終QAを行う。
+主source `topics/07_first_order_ode/07_first_order_ode.md` の旧進捗2箇所だけを実成果物へ同期する。
 
-- 必須成果物の実在を確認する
-- 解説PDF、練習PDF、PowerPointの表示QA記録を確認する
-- 固定一次5問・22小問の完成後独立再解答 `22 / 22 PASS` を確認する
-- sourceの進捗記録と実成果物の整合を確認する
-- Topic 08〜10先取り、二次記述の件数合わせ、未確認実車値追加が0件であることを確認する
-- 全品質ゲートPASSの場合のみ `completed` とする
+- `## 状態` を完成後独立再解答まで完了・最終QA `NEEDS_REVISION` の現在地へ更新
+- `## 次工程` を最終QA再判定へ更新
+- 教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、PDF、PowerPointは変更しない
+- 同期後に最終QAを再実施し、全品質ゲートPASSの場合のみ `completed` とする
