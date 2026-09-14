@@ -14,11 +14,11 @@ Topic 04 `極形式・フェーザ` は `completed`。
 
 Topic 05 `ベクトル` は `completed`。
 
-Topic 06 `微分① ダイヤの傾きは速度` は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了。固定4問の制作前独立検証は `4 / 4 PASS`。仕様外論点を件数合わせで追加していない。
+Topic 06 `微分① ダイヤの傾きは速度` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDFまで完了。固定4問の制作前独立検証は `4 / 4 PASS`。仕様外論点を件数合わせで追加していない。
 
 完成数: `5 / 12`
 
-current_status: `topic_06_explanation_source_complete`
+current_status: `topic_06_explanation_pdf_complete`
 
 active_topic: `06 微分① ダイヤの傾きは速度`
 
@@ -67,6 +67,12 @@ active_topic: `06 微分① ダイヤの傾きは速度`
   - 3段階例題
   - 固定4過去問への教材内マッピング
   - 範囲境界
+- `topics/06_derivative_1/06_derivative_1_explanation.pdf`
+  - A4縦4ページ
+  - 200 dpi全ページ表示QA PASS
+  - 文字抽出QA PASS
+  - 固定4過去問への教材内マッピングを収録
+  - 固定範囲外追加0件、未確認実車値追加0件
 
 3段階例題:
 1. 基礎: 多項式の導関数と指定点での微分係数
@@ -75,6 +81,6 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 ## 次に行うこと
 
-Topic 06 の解説PDFを作成する。
+Topic 06 の練習問題sourceを作成する。
 
-`topics/06_derivative_1/06_derivative_1.md` の解説本文＋3段階例題を正本とし、平均変化率→接線→導関数→電気グラフへの接続を視覚化する。固定EXAM_ALIGNMENT 4問から逆算した説明だけを収録し、Topic 07以降の論点を先取りしない。
+三種の仕様どおり原則12問以上、少なくとも半数を五肢択一とし、固定EXAM_ALIGNMENT 4問から逆算した範囲だけで、平均変化率・局所傾き・導関数・多項式/三角関数/合成関数・折れ線グラフ・単位換算を練習できる構成にする。Topic 07以降の論点は先取りしない。

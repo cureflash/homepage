@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 5 / 12
-- current_status: `topic_06_explanation_source_complete`
+- current_status: `topic_06_explanation_pdf_complete`
 - last_completed_topic: `05 ベクトル`
 - active_topic: `06 微分① ダイヤの傾きは速度`
-- next_start: `Topic 06 解説PDF`
+- next_start: `Topic 06 練習問題source`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -20,7 +20,7 @@
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立計算・公式解答照合 `4 / 4 PASS`
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -29,18 +29,18 @@
 
 ## 今回進めた内容
 
-Topic 06 `微分① ダイヤの傾きは速度` の解説本文＋3段階例題を完成した。
+Topic 06 `微分① ダイヤの傾きは速度` の解説PDFを完成した。
 
-固定4問から逆算した必須説明として、平均変化率、割線と接線、微分係数・導関数、多項式・三角関数・合成関数の基本、`v(t)=dx/dt`、区分的直線グラフの傾き、`mA/ms=A/s`、局所的な `ΔI/ΔV` と逆数、有限変化・相対変化までを本文へ配置した。
+`topics/06_derivative_1/06_derivative_1.md` の解説本文＋3段階例題を正本とし、平均変化率→接線→導関数→電気グラフへの接続をA4縦4ページに整理した。固定EXAM_ALIGNMENT 4問への教材内マッピングも収録した。
 
-3段階例題は、基礎の多項式微分、本試験標準の位置関数から瞬間速度、複合・ひっかけの折れ線 `i-t` グラフの傾き比較で構成した。新幹線の位置関数は実車値と誤認しないよう仮想モデルと明記した。
+200 dpiで全4ページを表示確認し、文字切れ・重なり・欠落グリフがないことを確認した。文字抽出でも主要論点、3段階例題、固定4問、範囲境界を確認した。
 
 R7上問13、R6下問3、R5上問10、R4下問7の固定EXAM_ALIGNMENTは変更していない。極値・2階微分・加速度、積分、電気公式の体系説明、指数関数・RC/RL過渡現象等の後続Topic論点は追加していない。固定範囲外追加0件、未確認新幹線実値追加0件。
 
 ## 判定
 
-`EXPLANATION SOURCE COMPLETE`。
+`EXPLANATION PDF COMPLETE`。
 
 Topic 06は教材制作中のため `completed` にはしない。完成数は `5 / 12` のまま。
 
-次は Topic 06 の解説PDFを作成する。
+次は Topic 06 の練習問題sourceを作成する。
