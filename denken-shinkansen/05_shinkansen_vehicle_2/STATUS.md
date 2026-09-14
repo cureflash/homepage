@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 6 / 39
-- current_status: `topic_07_explanation_source_complete`
+- current_status: `topic_07_explanation_pdf_complete`
 - last_completed_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
 - active_topic: `07 直流主回路の高出力化`
-- next_start: Topic 07の解説PDF作成＋全ページ表示QA。固定EXAM_ALIGNMENT一次4問＋二次1問・15対象項目と完成済み本文を変更しない
+- next_start: Topic 07の練習source作成。固定EXAM_ALIGNMENT一次4問＋二次1問・15対象項目と固定範囲を変更しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -17,7 +17,7 @@
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
-- [ ] 07 直流主回路の高出力化 — 解説source完了 / 制作中
+- [ ] 07 直流主回路の高出力化 — 解説PDF完了 / 練習教材未実施
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -76,6 +76,17 @@
 - 教材用例題以外の未確認実車値補完: `0件`
 - 固定範囲外追加: `0件`
 
+## Topic 07 解説PDF
+- `07_dc_main_circuit_high_output_explanation.pdf`: `completed`
+- A4縦5ページ
+- 180 dpi全5ページ Visual QA: `PASS`
+- 文字抽出・欠落グリフ確認: `PASS`
+- 3段階例題: 3 / 3収録
+- SPEC指定3グラフ: 3 / 3収録
+- 固定一次4問＋二次1問・15対象項目: 維持
+- 未確認実車値の真値化: `0件`
+- 固定範囲外追加: `0件`
+
 ## Topic 07 固定範囲
 - 主回路構成比較
 - 定格電圧
@@ -95,4 +106,4 @@
 - 位相制御、サイリスタ点弧角、誘導電動機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱設計
 - 出典で確認できない100系・200系の編成出力、主回路総損失、効率、冷却容量、けん引力・速度特性
 
-次工程はTopic 07の解説PDF作成＋全ページ表示QA。
+次工程はTopic 07の練習source作成。
