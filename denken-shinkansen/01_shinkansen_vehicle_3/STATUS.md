@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 27 / 38
-- current_status: `topic_28_exam_alignment_complete`
+- current_status: `topic_28_explanation_source_complete`
 - last_completed_topic: `27 補助電源② 車内照明`
 - active_topic: `28 空調・電熱`
-- next_start: Topic 28の解説本文＋3段階例題を作成し、固定EXAM_ALIGNMENT 5問・10小問の要求事項を本文各節へ全件マッピングする。仕様外論点・未確認実車値を追加しない
+- next_start: Topic 28の解説PDFを作成し、§1〜§15、3段階例題、固定EXAM_ALIGNMENT 5問・10小問への対応を収録する。全ページ表示QAを行い、仕様外論点・未確認実車値を追加しない
 
 ## 新品質ゲート進捗
 - [x] 01〜27 — PASS
-- [ ] 28 空調・電熱 — IN_PROGRESS / EXAM_ALIGNMENT PASS (`10 / 10`)
+- [ ] 28 空調・電熱 — IN_PROGRESS / EXAM_ALIGNMENT PASS (`10 / 10`) / explanation source complete
 
 ## 28 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・10小問。系列SPEC固定範囲は、空調、電熱、ジュール熱、熱量、電力、効率。
@@ -34,6 +34,16 @@
 - 単位換算`1 kW=1 kJ/s`、`1 kWh=3.6 MJ`、`1 h=3600 s`、`1 min=60 s`を固定する
 - 解法手順を、加熱対象・過程の分解→質量と温度差→必要熱量→効率/COP→電力・時間へ逆算→単位・桁の検算、の順で示す
 - 頻出ミスとして、効率を掛ける/割る方向、COPと効率、kWとkWh、MJとkJ、時間換算、潜熱対象質量の取り違えを扱う
+
+## 28 解説本文
+- `topics/28_air_conditioning_heating/28_air_conditioning_heating.md` に§1〜§15の解説本文＋3段階例題を完成
+- 固定5問・10小問の要求事項を本文各節と例題へ全件マッピング済み
+- 基礎例題: `V^2/R`から電力を求め、`Q=Pt`でジュール熱を計算
+- 本試験標準例題: 氷の融解潜熱＋水の顕熱を加算し、熱効率から加熱時間を逆算
+- 複合例題: 体積→質量、`Q=mcΔT`、COP、`kJ/kW→s→h`を一続きで処理
+- 解法順序を`加熱過程→質量・温度差→必要熱量→効率/COP→電力・時間→単位・桁の検算`として固定
+- 新幹線車内空調・電熱の未確認実車値は真値化していない
+- 熱伝導・加熱方式各論・冷凍サイクル詳細・湿度等の固定範囲外論点は追加していない
 
 ## 28 範囲境界
 固定範囲を広げないため、次は品質ゲート対象から除外した。
