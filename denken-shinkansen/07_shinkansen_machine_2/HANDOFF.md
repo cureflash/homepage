@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `07 300系のPWMコンバータは何をしている？`
 
-current status: `topic_07_explanation_source_complete`
+current status: `topic_07_explanation_pdf_complete`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
@@ -71,8 +71,21 @@ Topic 08以降のVVVFインバータ詳細、ベクトル制御、電流制御�
 
 固定EXAM_ALIGNMENTは変更していない。MPPT、電力貯蔵装置設計、昇圧コンバータ設計、能動フィルタ設計、Topic 08以降の論点、未確認300系実車値の追加は0件。
 
+## Topic 07 解説PDF完了
+
+解説PDF:
+`topics/07_300series_pwm_converter/07_300series_pwm_converter_explanation.pdf`
+
+- A4縦4ページ
+- 200 dpi全4ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- source Markdownの解説本文＋3段階例題を同期
+- 固定5問・17小問への接続を維持
+- 固定範囲外論点による件数合わせ: 0件
+- 未確認300系実車値の追加: 0件
+
 ## 次に行うこと
 
-Topic 07の解説PDFを作成し、全ページ表示QAを行う。
+Topic 07の練習PDF（解答・完全解説付き）を作成し、全ページ表示QAを行う。
 
-source Markdownの解説本文と3段階例題をPDFへ同期し、固定5問・17小問への接続を維持する。PDF段階でも仕様外論点・未確認実車値を追加しない。
+一次試験型に加えて二次試験へ接続する記述式問題を含め、固定5問・17小問への接続を維持する。練習PDF段階でも仕様外論点・未確認実車値を追加しない。
