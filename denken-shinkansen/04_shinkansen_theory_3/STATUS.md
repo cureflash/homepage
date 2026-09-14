@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 5 / 14
-- current_status: `topic_06_explanation_source_complete`
+- current_status: `topic_06_explanation_pdf_complete`
 - last_completed_topic: `05 パンタグラフから入った電気はどこへ行く？`
 - active_topic: `06 0系の変圧器は何をしていた？`
-- next_start: Topic 06の解説PDFを作成する。完成したsourceの本文・3段階例題・過去問要求事項を反映し、Topic 06固定範囲外と未確認実車値は追加しない
+- next_start: Topic 06の練習問題source・練習PDFを作成する。選定5過去問の要求事項とTopic 06固定範囲を維持し、後続Topic論点と未確認実車値は追加しない
 
 ## Topic 01 進捗
 
@@ -94,7 +94,7 @@
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
@@ -102,21 +102,24 @@
 
 ## 今回進めた内容
 
-Topic 06 `0系の変圧器は何をしていた？` の解説本文＋3段階例題を完成した。
+Topic 06 `0系の変圧器は何をしていた？` の解説PDFを完成した。
 
 反映内容:
-- 磁界 `H`、磁束密度 `B`、磁束 `Φ`、透磁率 `μ` と単位
-- アンペアの法則、起磁力 `ℱ=NI`、磁気抵抗 `Rm=l/(μA)`、磁気回路
+- A4縦2ページ・2段組
+- sourceの本文・3段階例題・選定5過去問への要求事項を反映
+- `B=μH`、`Φ=BA`、起磁力、磁気抵抗・磁気回路
 - ファラデーの法則・レンツの法則
 - `Ψ=NΦ`、`L=NΦ/I`、自己誘導
 - `M=k√(L1L2)`、加極性・減極性の直列合成
 - `W=LI²/2` と電流変化時の比例関係
 - 理想変圧器 `V1/V2=N1/N2` への接続
 - 基礎・本試験標準・複合ひっかけの3段階例題
-- 選定5過去問の要求事項を本文へ全件マッピング
+- 選定5過去問の要求事項をPDF内へ明示
+- 200 dpi全2ページ表示QA PASS
+- 文字抽出QA PASS（文字化け・欠落検出なし）
 
 Topic 07以降の電磁力・交流回路・力率・三相・半導体等、変圧器損失・詳細等価回路、未確認0系実車値は追加していない。完成後独立再解答はまだ実施していない。
 
 ## 判定
 
-Topic 06は `topic_06_explanation_source_complete`。完成数は `5 / 14` のまま。次は解説PDF。
+Topic 06は `topic_06_explanation_pdf_complete`。完成数は `5 / 14` のまま。次は練習問題source・練習PDF。
