@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_powerpoint_complete`
+- current_status: `topic_07_independent_reanswer_complete`
 - last_completed_topic: `06 新幹線はどうやって速度を変えている？`
 - active_topic: `07 GTO→IGBT→SiCで何が変わった？`
-- next_start: Topic 07の完成後独立再解答を実施する。保存済み正答を先に見ず、固定EXAM_ALIGNMENT 5問を完成済み教材だけで再解答し、教材外・固定範囲外知識による補完を行わない
+- next_start: Topic 07の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT 5問、完成後独立再解答 `5 / 5 PASS`、表示QA、source進捗整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -17,7 +17,7 @@
 - [x] 04 300系でモーターが全部変わった — 品質ゲートPASS / completed
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
 - [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
-- [ ] 07 GTO→IGBT→SiCで何が変わった？ — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint完了
+- [ ] 07 GTO→IGBT→SiCで何が変わった？ — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答完了、最終QA未実施
 - [ ] 08〜16 — 未完了
 
 ## Topic 07 EXAM_ALIGNMENT
@@ -31,9 +31,15 @@
 
 制作前検証答案列: `(1), (2), (5), (2), (3)`
 
-公式解答との一致: `5 / 5 PASS`
+制作前公式照合: `5 / 5 PASS`
 
-固定範囲外知識による補完: `0件`
+完成後独立答案列: `(1), (2), (5), (2), (3)`
+
+完成後公式照合: `5 / 5 PASS`
+
+教材外・固定範囲外知識による補完: `0件`
+
+固定EXAM_ALIGNMENT変更: `0件`
 
 ## Topic 07 固定範囲
 系列SPECどおり以下だけを扱う。
@@ -55,6 +61,8 @@
 - 制作前検証 `5 / 5 PASS`
 - 解説本文＋3段階例題完成
 - 固定5問の本文マッピング `5 / 5`
+- 完成後独立再解答 `5 / 5 PASS`
+- 教材外・固定範囲外知識による補完 `0件`
 - 固定範囲外追加 `0件`
 - 未確認実車値追加 `0件`
 
@@ -123,7 +131,8 @@
 - 練習問題source: 完了（12問、独立QA `12 / 12 PASS`）
 - 練習PDF: 完了（A4縦4ページ、表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
 - 解説画像PowerPoint: 完了（16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX整合性 `PASS`）
-- 完成後独立再解答: 未実施
+- 完成後独立再解答: `5 / 5 PASS`
+- 教材外・固定範囲外知識による補完: `0件`
 - 最終QA: 未実施
 - 固定範囲外論点の追加: `0件`
 - 未確認実車値の追加: `0件`
