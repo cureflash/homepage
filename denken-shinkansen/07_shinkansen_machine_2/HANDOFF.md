@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `08 VVVFインバータで三相交流を作る`
 
-current status: `topic_08_explanation_source_complete`
+current status: `topic_08_explanation_pdf_complete`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
@@ -207,11 +207,25 @@ source:
 
 固定EXAM_ALIGNMENTは変更していない。V/f制御、ベクトル制御、デッドタイム設計、素子選定、整流器設計、負荷電流経路の詳細、未確認300系実車値の追加は0件。
 
+## Topic 08 解説PDF完了
+
+解説PDF:
+`topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_explanation.pdf`
+
+- A4縦4ページ
+- 200 dpi全4ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- source Markdownの解説本文＋3段階例題を同期
+- 固定一次3問＋二次記述2問、計5問・13小問への接続を維持
+- H22/R04型 `V_phase,peak=kE_d/2`、`V_LL1=√3 kE_d/(2√2)` とH28型 `V_LL,rms=√(2/3)E_d` を収録
+- 固定範囲外論点の追加: 0件
+- 未確認300系実車値の追加: 0件
+
 ## 次に行うこと
 
-Topic 08の解説PDFを作成し、全ページ表示QAを行う。
+Topic 08の練習問題sourceを作成する。
 
-- source Markdownの解説本文＋3段階例題を同期
-- 固定5問・13小問への接続を維持
-- H22/R04型とH28型の導出をPDF上でも省略しない
-- V/f制御・ベクトル制御等のTopic 09論点を追加しない
+- 一次試験型＋二次記述型で構成する
+- 固定5問・13小問への接続を維持する
+- 解答は途中式・理由・単位まで採点可能な完全解説にする
+- V/f制御、ベクトル制御、デッドタイム設計、素子選定、整流器設計等の固定範囲外論点を追加しない
