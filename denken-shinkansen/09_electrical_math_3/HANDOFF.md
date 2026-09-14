@@ -14,11 +14,11 @@ Topic 04 `極形式・フェーザ` は `completed`。
 
 Topic 05 `ベクトル` は `completed`。
 
-Topic 06 `微分① ダイヤの傾きは速度` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題sourceまで完了。固定4問の制作前独立検証は `4 / 4 PASS`。練習12問の独立計算は `12 / 12 PASS`。仕様外論点を件数合わせで追加していない。
+Topic 06 `微分① ダイヤの傾きは速度` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。固定4問の制作前独立検証は `4 / 4 PASS`。練習12問の独立計算は `12 / 12 PASS`。練習PDFはA4縦6ページで、200 dpi全ページ表示QA・文字抽出QAともPASS。仕様外論点を件数合わせで追加していない。
 
 完成数: `5 / 12`
 
-current_status: `topic_06_practice_source_complete`
+current_status: `topic_06_practice_pdf_complete`
 
 active_topic: `06 微分① ダイヤの傾きは速度`
 
@@ -80,6 +80,13 @@ active_topic: `06 微分① ダイヤの傾きは速度`
   - 固定4過去問へ全件対応付け
   - 独立計算 `12 / 12 PASS`
   - 固定範囲外追加0件、未確認実車値追加0件
+- `topics/06_derivative_1/06_derivative_1_practice.pdf`
+  - A4縦6ページ
+  - 全12問・全解答・完全解説を収録
+  - 固定4過去問への対応表を収録
+  - 200 dpi全6ページ表示QA PASS
+  - 文字抽出QA PASS
+  - 固定範囲外追加0件、未確認実車値追加0件
 
 3段階例題:
 1. 基礎: 多項式の導関数と指定点での微分係数
@@ -88,6 +95,6 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 ## 次に行うこと
 
-Topic 06 の練習PDF（解答・完全解説付き）を作成する。
+Topic 06 の解説画像PowerPointを作成する。
 
-`06_derivative_1_practice.md` を正本とし、全12問・全解説・固定EXAM_ALIGNMENT対応を欠落なくPDF化する。Topic 07以降の論点は先取りしない。PDF化後は全ページ表示QAと文字抽出QAを行う。
+固定EXAM_ALIGNMENT 4問と、解説本文・3段階例題・練習問題で確定したTopic 06の範囲だけを図解する。Topic 07以降の論点は先取りしない。作成後は全スライド表示QAとオーバーフロー確認を行う。
