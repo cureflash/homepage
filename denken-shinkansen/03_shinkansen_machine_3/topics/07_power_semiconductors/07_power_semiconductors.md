@@ -2,9 +2,9 @@
 
 更新日: 2026-09-15
 
-状態: `independent_reanswer_complete`
+状態: `completed`
 
-制作前 `EXAM_ALIGNMENT` を固定し、解説本文＋3段階例題、解説PDF、練習問題source/PDF、解説画像PowerPointまで完成。完成済み教材だけで固定5問を独立再解答し、公式解答との照合は `5 / 5 PASS`。最終QAは未実施。
+制作前 `EXAM_ALIGNMENT` を固定し、解説本文＋3段階例題、解説PDF、練習問題source/PDF、解説画像PowerPointまで完成。完成済み教材だけで固定5問を独立再解答し、公式解答との照合は `5 / 5 PASS`。最終QAも全件PASSとし、Topic 07を `completed` とする。
 
 ## EXAM_ALIGNMENT
 
@@ -503,8 +503,12 @@ Ploss = 134 W
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外論点の追加: `0件`
 - 未確認実車値の追加: `0件`
-- 最終QA: 未実施
+- 最終QA: `PASS`
+
+## 最終QA
+
+2026-09-15に実施。必須成果物の実在、固定EXAM_ALIGNMENT 5問の整合、完成後独立再解答 `5 / 5 PASS`、解説PDF・練習PDF・PowerPointの既存表示QA記録、source進捗整合、固定範囲境界を再確認し、全件PASS。教材外・固定範囲外知識による補完 `0件`、固定範囲外論点・未確認実車値の追加 `0件`。Topic 07を `completed` とする。
 
 ## 次工程
 
-Topic 07の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT 5問、独立再解答 `5 / 5 PASS`、表示QA、source進捗整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
+Topic 08「N700Sのモーターはなぜ小さくできた？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
