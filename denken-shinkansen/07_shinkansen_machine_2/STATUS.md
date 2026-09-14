@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 5 / 22
-- current_status: `topic_06_calculation_graphs_complete`
+- current_status: `topic_06_independent_reanswer_complete`
 - last_completed_topic: `05 300系の誘導電動機を等価回路で解く`
 - active_topic: `06 誘導電動機の最大トルクはどこで出る？`
-- next_start: Topic 06の固定6問・20小問を完成教材のみで独立再解答する
+- next_start: Topic 06の最終QAを実施する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -103,30 +103,25 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 計算プログラム・指定比較グラフ
-- [ ] 公式過去問の教材のみでの独立再解答
+- [x] 公式過去問の教材のみでの独立再解答: 20 / 20 PASS
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 06「誘導電動機の最大トルクはどこで出る？」の計算プログラムとSPEC指定4比較グラフを完成し、GitHub正本へ反映した。
+Topic 06「誘導電動機の最大トルクはどこで出る？」の完成後独立再解答を実施し、GitHub正本へ記録した。
 
 確認内容:
-- 計算プログラム: `06_induction_motor_maximum_torque_calc.py`
-- 速度―トルク特性: `06_speed_torque.svg`
-- 二次抵抗変更比較: `06_rotor_resistance_comparison.svg`
-- 電圧変更比較: `06_voltage_comparison.svg`
-- 周波数変更比較: `06_frequency_comparison.svg`
-- 数値条件は教材本文§9.2・§9.3の教材用仮定値と同期
-- 50 Hz: `n_s=1500 min^-1`, `X=0.80 Ω`, `s_m=0.12127`, `T_m=372.79 N·m`
-- 二次抵抗2倍: `s_m=0.24254`、`T_m=372.79 N·m`で比例推移を確認
-- 160 V: `T_m=238.59 N·m`、200 V時比 `0.640`で`V^2`則を確認
-- 60 Hz: `n_s=1800 min^-1`, `X=0.96 Ω`, `s_m=0.10198`, `T_m=269.61 N·m`
-- 周波数比較は電圧・抵抗・漏れインダクタンスを固定し、`X=2πfL`を反映
-- Python構文・内蔵数値assert: PASS
-- 4 SVG XML parse: PASS
-- 4 SVG ローカルレンダリング: PASS
+- 固定EXAM_ALIGNMENT: 一次2問＋二次記述4問、計6問・20小問
+- R07一次 機械 問2: 5 / 5 PASS
+- H25一次 機械 問1(1): 1 / 1 PASS
+- R07二次 機械・制御 問2(1),(3): 2 / 2 PASS
+- R03二次 機械・制御 問1(1)〜(6): 6 / 6 PASS
+- R02二次 機械・制御 問1(1)〜(4): 4 / 4 PASS
+- H23二次 機械・制御 問1(1),(2): 2 / 2 PASS
+- 合計: `20 / 20 PASS`
+- 教材外知識による補完: 0件
+- 固定範囲外論点の追加: 0件
 - 未確認300系実車値の使用: 0件
-- 固定EXAM_ALIGNMENT 6問・20小問と制作前独立検証 `20 / 20 PASS` は変更なし
-- 固定範囲外論点およびTopic 07以降の論点追加: 0件
+- 独立再解答記録: `06_induction_motor_maximum_torque_independent_reanswer.md`
 
 ## 判定
-Topic 06は `topic_06_calculation_graphs_complete`。完成数は `5 / 22` のまま。次は固定6問・20小問の完成教材のみでの独立再解答。
+Topic 06は `topic_06_independent_reanswer_complete`。完成数は `5 / 22` のまま。次は最終QA。
