@@ -4,11 +4,11 @@
 
 ## 現在地
 
-Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘導される？` は解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDFまで完了。
+Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘導される？` は解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPointまで完了。
 
 完成数: `5 / 21`
 
-current_status: `topic_06_practice_pdf_complete`
+current_status: `topic_06_powerpoint_complete`
 
 active_topic: `06 25kVからどうやって電圧が誘導される？`
 
@@ -73,6 +73,17 @@ PDF: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagn
 - 二次数合わせ0件、固定範囲外追加0件、未確認実車値0件
 - A4縦4ページ、全4ページ200 dpi表示QA PASS
 
+## 解説画像PowerPoint
+
+PPTX: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_images.pptx`
+
+- 16:9、3スライド
+- ファラデー則とレンツ則、自己インダクタンス、相互インダクタンス、位置・角度変化、過去問接続を図解
+- 固定一次5問・16小問への接続を維持
+- 二次数合わせ0件、固定範囲外追加0件、未確認実車値0件
+- 全3スライド表示QA PASS
+- overflow検査 PASS、ZIP整合性 PASS
+
 ## Topic 06 成果物・進捗
 
 - source: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction.md`
@@ -81,21 +92,20 @@ PDF: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagn
 - 解説本文＋3段階例題: 完了
 - 解説PDF＋表示QA: 完了
 - 練習問題source＋練習PDF＋表示QA: 完了
+- 解説画像PowerPoint＋表示QA: 完了
 - 固定範囲外追加: 0件
 - 二次数合わせ: 0件
-- 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未着手
 - 最終QA: 未着手
 
 ## 今回の更新
 
-1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06 sourceを確認。
-2. 固定一次5問・16小問から逆算して練習12問と完全解説を作成。
-3. 全12問を再計算し、正答一意性12/12 PASS。
-4. A4縦4ページの練習PDFを作成し、全4ページを200 dpiで表示QA。文字切れ・重なり・ページ外はみ出し・文字化けなし。
-5. 固定一次5問・16小問、二次非採用判断、固定範囲を維持。仕様外追加0件。
-6. 練習source/PDF、STATUS、HANDOFFをGitHub正本へ反映した。
+1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06 sourceと練習sourceを確認。
+2. Topic 06固定範囲だけで16:9・3スライドの解説画像PowerPointを作成。
+3. 全3スライドをレンダリングして表示QAし、overflow検査とZIP整合性を確認。すべてPASS。
+4. 固定一次5問・16小問、二次非採用判断、固定範囲を維持。仕様外追加0件。
+5. PowerPoint、STATUS、HANDOFFをGitHub正本へ反映した。
 
 ## 次に行うこと
 
-Topic 06の解説画像PowerPointを作成する。固定一次5問・16小問、二次非採用判断、固定範囲を変更しない。
+Topic 06の完成後独立再解答を行う。保存済み正答を先に見ず、固定一次5問・16小問を教材内容だけで再解答し、教材外補完が0件か確認する。二次非採用判断と固定範囲を変更しない。

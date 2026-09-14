@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_practice_pdf_complete`
+- current_status: `topic_06_powerpoint_complete`
 - last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: Topic 06の解説画像PowerPointを作成する。固定一次5問・16小問、二次非採用判断、固定範囲を変更しない
+- next_start: Topic 06の完成後独立再解答を行う。固定一次5問・16小問を保存済み正答を見ず教材だけで再解答し、二次非採用判断と固定範囲を変更しない
 
 ## Topic 06 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -33,24 +33,23 @@
 - [x] 3段階例題
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 06の練習問題source＋練習PDFを完成した。
+Topic 06の解説画像PowerPointを完成した。
 
-- 12問すべて五肢択一
-- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3
-- ファラデー則、レンツ則、自己・相互インダクタンス、結合係数、磁気エネルギーを固定範囲内で出題
-- 固定一次5問・16小問への練習接続を維持
+- 16:9、3スライド
+- `Ψ=NΦ` と `e=-dΨ/dt`、自己インダクタンス、相互インダクタンス、結合係数、磁気エネルギー、位置・角度変化を固定範囲内で図解
+- 固定一次5問・16小問への接続をスライド内に維持
 - R7〜R5二次に直接対応がないため非採用判断を維持し、数合わせ0件
-- 固定範囲外論点の追加0件、未確認実車値0件
-- 全12問を再計算し、正答一意性 `12 / 12 PASS`
-- A4縦4ページを200 dpiで全ページレンダリングし、表示QA PASS
-- 文字切れ、重なり、ページ外はみ出し、文字化けを認めず
+- 磁気回路の再展開、トルク・電磁力、フェーザ、変圧器等価回路を追加せず固定範囲外論点0件
+- 未確認実車値0件。0系主変圧器は教育用簡略図として扱った
+- 全3スライドをレンダリングし、表示QA PASS
+- overflow検査 PASS、ZIP整合性 PASS
 
 ## 判定
 
-Topic 06は `topic_06_practice_pdf_complete`。完成数は `5 / 21` のまま。次は解説画像PowerPoint。
+Topic 06は `topic_06_powerpoint_complete`。完成数は `5 / 21` のまま。次は完成後独立再解答。
