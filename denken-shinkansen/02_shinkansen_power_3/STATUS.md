@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_06_completed`
+- current_status: `topic_07_exam_alignment_complete`
 - last_completed_topic: `06 275,000Vをどうやって25,000Vにする？`
 - active_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
-- next_start: Topic 07の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 07の解説本文＋3段階例題を作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
@@ -17,7 +17,7 @@
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、最終QA PASS
 - [x] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問、必須成果物、表示QA、修正版教材での独立再解答5/5 PASS、教材外知識補完0件、SPEC境界を最終QAで確認し `completed`
 - [x] 06 275,000Vをどうやって25,000Vにする？ — 固定5過去問、必須成果物、表示QA、完成後独立再解答5/5 PASS、教材外知識補完0件、source進捗整合・SPEC境界を最終QAで確認し `completed`
-- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 未着手
+- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 制作前EXAM_ALIGNMENT完了。固定5問・8小問、制作前独立検証 `8 / 8 PASS`。次は解説本文＋3段階例題
 - [ ] 08〜16 — 未完了
 
 ## Topic 05 完了記録
@@ -75,5 +75,19 @@ PowerPoint QA: `topics/06_substation/06_substation_powerpoint_qa.md`
 
 SPEC固定範囲は変電所、変圧器、母線、遮断器、断路器、計器用変成器、避雷器、保護リレー、受電電圧、き電電圧。GIS、調相設備、短絡電流・遮断容量・%インピーダンス計算、配電線詳細保護、三相→単相変換方式等は追加していない。
 
+## Topic 07 進捗記録
+source: `topics/07_phase_conversion/07_phase_conversion.md`
+
+固定5過去問・8小問:
+- R7下 理論 問15(a)(b) — 線間/相電圧・三相電力 — `(3),(3)` PASS
+- R5下 理論 問15(a)(b) — Y/Δ・三相電力 — `(3),(4)` PASS
+- R4上 機械 問9 — スコット結線・二次90° — `(3)` PASS
+- H30 電力 問8 — 変圧比・三相電力 — `(3)` PASS
+- H27 機械 問7 — スコット結線・三相側不平衡緩和 — `(3)` PASS
+
+制作前独立検証 `8 / 8 PASS`。公式問題・公式解答を正本とし、電験王・電験三種まとめましたの複数系統で説明粒度と解法を確認した。
+
+Topic 07固定範囲は三相交流、単相交流、線間/相電圧、三相電力、き電用変圧器、相変換、三相側負荷平衡、スコット結線、変形ウッドブリッジ結線、ルーフ・デルタ結線。二種相当の厳密ベクトル導出、Topic 08以降の電圧降下・線路損失・き電回路詳細、力率改善、短絡・保護へは拡張していない。
+
 ## 次
-Topic 07「なぜ三相交流をそのまま架線へ流さない？」の制作前EXAM_ALIGNMENTを実施する。
+Topic 07「なぜ三相交流をそのまま架線へ流さない？」の解説本文＋3段階例題を作成する。
