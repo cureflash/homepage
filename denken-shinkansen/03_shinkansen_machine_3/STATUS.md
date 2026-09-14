@@ -4,18 +4,18 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: 4 / 16
-- current_status: `topic_05_independent_reanswer_complete`
-- last_completed_topic: `04 300系でモーターが全部変わった`
-- active_topic: `05 誘導電動機はなぜ勝手に回る？`
-- next_start: Topic 05の固定EXAM_ALIGNMENTと完成済み成果物を変更せず、必須成果物・EXAM_ALIGNMENT・完成後独立再解答・表示QA・範囲境界・進捗整合を最終QAする。全件PASSの場合のみcompletedへ進める
+- exam_aligned_completed_topics: 5 / 16
+- current_status: `topic_05_completed`
+- last_completed_topic: `05 誘導電動機はなぜ勝手に回る？`
+- active_topic: `06 新幹線はどうやって速度を変えている？`
+- next_start: Topic 06の制作前EXAM_ALIGNMENT。系列SPECのTopic 06固定範囲だけで、公式過去問を直近年度優先で原則5問以上調査し、要求知識・式・設問型を逆算する。仕様外論点を追加して件数を合わせない
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
 - [x] 04 300系でモーターが全部変わった — 必須成果物・EXAM_ALIGNMENT・独立再解答5/5・表示QA・範囲境界・進捗整合を再確認し、最終QA `PASS / completed`
-- [ ] 05 誘導電動機はなぜ勝手に回る？ — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。固定5問・6小問を完成教材だけで独立再解答し `6 / 6 PASS`。最終QA未実施
+- [x] 05 誘導電動機はなぜ勝手に回る？ — 必須成果物・EXAM_ALIGNMENT・完成後独立再解答6/6・表示QA・範囲境界・進捗整合を確認し、最終QA `PASS / completed`
 - [ ] 06〜16 — 未完了
 
 ## 05 EXAM_ALIGNMENT対象
@@ -122,7 +122,21 @@ Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御�
 - 公式解答との一致: `6 / 6 PASS`
 - 教材外知識による補完: `0件`
 - Topic 05固定範囲外論点の追加: `0件`
-- 判定: `PASS / 最終QAへ進行可`
+- 判定: `PASS`
+
+## 05 最終QA
+2026-09-14に実施し、全件PASS。
+
+- 必須成果物の実在: `PASS`
+- EXAM_ALIGNMENT 5問・6小問の整合: `PASS`
+- 完成後独立再解答: `6 / 6 PASS`
+- 教材外知識による補完: `0件`
+- 解説PDF・練習PDF・PowerPoint表示QA記録: `PASS`
+- PowerPointはみ出し検査: `PASS / 0件`
+- PowerPoint ZIP整合性: `PASS`
+- Topic 05固定範囲外論点の追加: `0件`
+- 進捗記録整合: `PASS`
+- 判定: `PASS / completed`
 
 ## 05 現在の品質状態
 - 制作前EXAM_ALIGNMENT: 完了
@@ -143,8 +157,8 @@ Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御�
 - PowerPoint ZIP整合性: `PASS`
 - 完成後独立再解答: `6 / 6 PASS`
 - 教材外知識による補完: `0件`
-- 最終QA: 未実施
-- 完成数: `4 / 16` 据え置き
+- 最終QA: `PASS / completed`
+- 完成数: `5 / 16`
 
 ## 04 完成記録
 Topic 04 `300系でモーターが全部変わった` は最終QA `PASS / completed`。
