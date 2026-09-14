@@ -6,16 +6,21 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は4/16。Topic 01〜04は完成済み。active topicは05 `新幹線を再エネだけで走らせられる？`。
 
 ## 今回進捗
-Topic 05 sourceの冒頭状態・末尾次工程を、解説PDF同期済みの現在地へ同期した。教材本文、固定5過去問、SPEC固定範囲、除外問題は変更していない。
+Topic 05の修正版教材だけで、制作前EXAM_ALIGNMENTの固定5過去問を再独立再解答した。
 
-補強・PDF同期済みの内容:
-1. R2 電力 問5 — 地表に入射する太陽光エネルギーの代表値 `約1 kJ/(m²·s)`（=`約1 kW/m²`）
-2. R8上 電力 問5 — ナトリウム・硫黄電池の単位質量当たりエネルギー密度は、同問では鉛蓄電池の約3倍として扱う
+再解答結果:
+- R8上 電力 問5: `(4)` = 公式 `(4)` — PASS
+- R7下 電力 問5: `(5)` = 公式 `(5)` — PASS
+- R6上 電力 問5: `(1)` = 公式 `(1)` — PASS
+- R5上 電力 問5: `(2)` = 公式 `(2)` — PASS
+- R2 電力 問5: `(3)` = 公式 `(3)` — PASS
 
-解説PDFはA4縦4ページ。200 dpiで全4ページを表示確認済みで、クリップ・重なり・文字化けなし。日射代表値は1ページ目、NaS電池比較は2ページ目に明示されている。
+公式解答との一致 `5/5`、教材のみ完結 `5/5`、教材外知識補完 `0件`。初回FAILの原因だった日射代表値とNaS電池エネルギー密度比較は、修正版source・解説PDFの記述だけで選択肢確定に使えることを確認した。
+
+固定5過去問、SPEC固定範囲、除外問題は変更していない。独立再解答artifactは更新済み。sourceのEXAM_ALIGNMENT・進捗メタデータへの今回結果同期と最終QAは未実施のため、まだ `completed` にはしない。
 
 今回更新対象:
-- `topics/05_renewable_energy/05_renewable_energy.md`
+- `topics/05_renewable_energy/05_renewable_energy_independent_reanswer.md`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -41,14 +46,7 @@ Topic 05 sourceの冒頭状態・末尾次工程を、解説PDF同期済みの�
 4. R5上 電力 問5 — 風力発電、風速と出力の `v^3` 関係、発電機の種類、出力変動
 5. R2 電力 問5 — 太陽光発電、日射エネルギー、セル、パワーコンディショナ、昼間余剰電力
 
-初回独立再解答:
-- R8上 問5: `(4)` = 公式 `(4)`。正答照合PASS。ただしNaS電池のエネルギー密度比較が未収録だったためNEEDS_REVISION。
-- R7下 問5: `(5)` = 公式 `(5)`。PASS。
-- R6上 問5: `(1)` = 公式 `(1)`。PASS。
-- R5上 問5: `(2)` = 公式 `(2)`。PASS。
-- R2 問5: `(3)` = 公式 `(3)`。ただし地表日射代表値が未収録だったため教材のみ完結FAIL。
-
-R8上問5とR2問5の不足はsource・解説PDFへ補強済み。修正版教材での再独立再解答は未実施なので `completed` にはしない。
+修正版教材での再独立再解答は全5問PASS。詳細は `topics/05_renewable_energy/05_renewable_energy_independent_reanswer.md`。
 
 ### 範囲境界
 - R7上 電力 問5: バイオマス主題のため除外。
@@ -57,19 +55,19 @@ R8上問5とR2問5の不足はsource・解説PDFへ補強済み。修正版教�
 - R4下 電力 問5、H28 電力 問5: 固定範囲外の発電方式を含むため除外。
 
 ## 成果物
-- source: `topics/05_renewable_energy/05_renewable_energy.md` — 補強内容・進捗メタデータ同期済み
+- source: `topics/05_renewable_energy/05_renewable_energy.md` — 補強内容・PDF同期済み。今回の再独立再解答結果は未同期
 - 解説PDF: `topics/05_renewable_energy/05_renewable_energy_explanation.pdf` — 補強内容同期済み、A4縦4ページ、200 dpi全ページ表示QA PASS
 - 練習PDF: `topics/05_renewable_energy/05_renewable_energy_practice.pdf`
 - 解説画像PowerPoint: `topics/05_renewable_energy/05_renewable_energy_images.pptx`
 - PowerPoint QA: `topics/05_renewable_energy/05_renewable_energy_powerpoint_qa.md`
-- 独立再解答: `topics/05_renewable_energy/05_renewable_energy_independent_reanswer.md` — 初回FAIL記録
+- 独立再解答: `topics/05_renewable_energy/05_renewable_energy_independent_reanswer.md` — 修正版教材で5/5 PASSへ更新済み
 
 ## 現在状態
-- `current_status`: `topic_05_source_status_synced`
+- `current_status`: `topic_05_independent_reanswer_pass`
 - 完成数: `4/16`
 - last completed: Topic 04
 - active: Topic 05
-- Topic 05判定: 初回は公式正答5/5一致、完成後教材のみゲート `NEEDS_REVISION / FAIL`。修正版PDFでの再独立再解答は未実施
+- Topic 05判定: 完成後独立再解答ゲート `PASS`。source同期・最終QA前のため未完了
 
 ## 次の正確な開始点
-Topic 05の修正版教材だけで固定5過去問を再独立再解答し、教材外知識の補完なしで5/5正答できるか再判定する。固定5過去問、SPEC固定範囲、除外問題は変更しない。
+Topic 05 sourceのEXAM_ALIGNMENT・進捗メタデータへ再独立再解答 `5/5 PASS` を同期する。固定5過去問、SPEC固定範囲、除外問題は変更しない。その後に最終QAを実施する。
