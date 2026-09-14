@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 6 / 22
-- current_status: `topic_07_explanation_source_complete`
+- current_status: `topic_07_explanation_pdf_complete`
 - last_completed_topic: `06 誘導電動機の最大トルクはどこで出る？`
 - active_topic: `07 300系のPWMコンバータは何をしている？`
-- next_start: Topic 07の解説PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 07の練習PDF（解答・完全解説付き）を作成し、全ページ表示QAを行う
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -118,7 +118,7 @@
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] ゲート対象17小問の公式解答／標準解答照合を伴う制作前独立検証: 17 / 17 PASS
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] SPEC指定4波形
@@ -126,15 +126,17 @@
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 07「300系のPWMコンバータは何をしている？」の解説本文＋3段階例題を完成した。
+Topic 07「300系のPWMコンバータは何をしている？」の解説PDFを完成した。
 
 確認内容:
+- A4縦4ページ
+- 200 dpi全4ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- source Markdownの解説本文＋3段階例題を同期
 - 固定EXAM_ALIGNMENTは一次2問＋二次記述3問、計5問・17小問から変更なし
-- 固定17小問と教材で欠落不可の10項目を本文対応表へ全件マッピング
-- 正弦波PWM、変調率、DCリンク電圧、リアクトルのフェーザ式、力率1、有効・無効電流、逆変換・回生、高調波まで固定範囲内で解説
-- 3段階例題: 基礎／本試験標準／複合・ひっかけを各1問
+- 固定17小問への接続を維持
 - 固定範囲外論点による件数合わせ: 0件
 - 未確認300系実車値の追加: 0件
 
 ## 判定
-Topic 07は `topic_07_explanation_source_complete`。完成数は `6 / 22` のまま。次は解説PDFを作成し、全ページ表示QAを行う。
+Topic 07は `topic_07_explanation_pdf_complete`。完成数は `6 / 22` のまま。次は練習PDF（解答・完全解説付き）を作成し、全ページ表示QAを行う。
