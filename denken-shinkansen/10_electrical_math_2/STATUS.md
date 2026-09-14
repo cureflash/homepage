@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 6 / 20
-- current_status: `topic_07_exam_reanswer_complete`
+- current_status: `topic_07_final_qa_needs_revision`
 - last_completed_topic: `06 微積分で新幹線の運転曲線を解析する`
 - active_topic: `07 一階常微分方程式`
-- next_start: Topic 07の最終QA。必須成果物、表示QA、固定一次5問・22小問の完成後独立再解答 `22 / 22 PASS`、source進捗整合、固定範囲境界を再確認し、全品質ゲートPASSの場合のみ `completed` とする
+- next_start: Topic 07主source `topics/07_first_order_ode/07_first_order_ode.md` の旧進捗2箇所（`## 状態`、`## 次工程`）だけを実成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF・PowerPointは変更しない
 
 ## Topic 06
 
@@ -38,33 +38,33 @@
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 `22 / 22 PASS`
-- [ ] 最終QA
+- [x] 最終QA実施 → `NEEDS_REVISION`
+- [ ] source進捗記録2箇所の同期
+- [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 07 `一階常微分方程式` の完成後独立再解答を実施した。
+Topic 07 `一階常微分方程式` の最終QAを実施した。
 
 記録:
-- `topics/07_first_order_ode/07_first_order_ode_exam_reanswer.md`
+- `topics/07_first_order_ode/07_first_order_ode_final_qa.md`
 
-結果:
-- R8 一次 理論 問6 (1)〜(2): `(ト, ホ)` → `2 / 2 PASS`
-- R7 一次 理論 問6 (1)〜(5): `(リ, ヘ, ル, ヨ, ホ)` → `5 / 5 PASS`
-- R6 一次 理論 問4 (1)〜(5): `(ハ, ヌ, ロ, カ, ト)` → `5 / 5 PASS`
-- R5 一次 理論 問5 (1)〜(5): `(ホ, カ, ヌ, ヘ, イ)` → `5 / 5 PASS`
-- R4 一次 理論 問4 (1)〜(5): `(ワ, カ, イ, ヨ, チ)` → `5 / 5 PASS`
-- 合計: `22 / 22 PASS`
+PASS項目:
+- 必須成果物実在
+- 固定一次5問・22小問
+- 完成後独立再解答 `22 / 22 PASS`
+- 解説PDF・練習PDF・PowerPointの表示QA
+- 教材外知識補完0件
+- 固定範囲外追加0件
+- Topic 08〜10先取り0件
+- 二次記述の件数合わせ0件
+- 未確認実車値依存0件
 
-QA:
-- 各小問を完成教材の式・解法手順から再導出: PASS
-- 再導出後の公式解答照合: `22 / 22 PASS`
-- 教材外知識補完: 0件
-- 固定範囲外追加: 0件
-- Topic 08〜10先取り: 0件
-- 二次記述の件数合わせ: 0件
-- 未確認実車値依存: 0件
+FAIL項目:
+- 主source `07_first_order_ode.md` の `## 状態` が「解説PDF以降は未実施」の旧記録
+- 同sourceの `## 次工程` が「次は解説PDF」の旧記録
 
 ## 判定
 
-Topic 07は `EXAM_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `6 / 20` のまま。次は最終QA。
+Topic 07は `NEEDS_REVISION / IN_PROGRESS`。完成数は `6 / 20` のまま。次は主sourceの旧進捗2箇所だけを同期する。
