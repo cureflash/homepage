@@ -5,17 +5,17 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 4 / 16
-- current_status: `topic_05_practice_source_complete`
+- current_status: `topic_05_practice_pdf_complete`
 - last_completed_topic: `04 300系でモーターが全部変わった`
 - active_topic: `05 誘導電動機はなぜ勝手に回る？`
-- next_start: Topic 05の固定EXAM_ALIGNMENT、完成済み解説source・解説PDF・練習問題sourceを維持して練習PDFを作成する。12問・全問五肢択一・完全解説をそのまま反映し、表示QAと文字抽出QAを実施する。仕様外論点・未確認実車値は追加しない
+- next_start: Topic 05の固定EXAM_ALIGNMENT、完成済み解説source・解説PDF・練習問題source・練習PDFを維持して解説画像PowerPointを作成する。仕様外論点・未確認実車値は追加しない
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
 - [x] 04 300系でモーターが全部変わった — 必須成果物・EXAM_ALIGNMENT・独立再解答5/5・表示QA・範囲境界・進捗整合を再確認し、最終QA `PASS / completed`
-- [ ] 05 誘導電動機はなぜ勝手に回る？ — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題sourceまで完了。固定5問・6小問を教材へマッピング済み。練習PDF、PowerPoint、完成後独立再解答は未着手
+- [ ] 05 誘導電動機はなぜ勝手に回る？ — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題source、練習PDFまで完了。固定5問・6小問を教材へマッピング済み。PowerPoint、完成後独立再解答は未着手
 - [ ] 06〜16 — 未完了
 
 ## 05 EXAM_ALIGNMENT対象
@@ -95,6 +95,15 @@ Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御�
 - 知識問題は正答理由と主要誤答肢の誤りを記載
 - 固定範囲外論点・未確認実車値の追加 `0件`
 
+## 05 練習PDF
+`topics/05_induction_motor_principle/05_induction_motor_principle_practice.pdf` を作成済み。
+
+- A4縦 6ページ
+- 12問・全問五肢択一、基礎3 / 本試験標準7 / 複合・応用2、完全解説をsourceから反映
+- 200 dpiで全6ページをレンダリングし、文字切れ・重なり・欠落グリフなしを確認
+- PDF文字抽出で問1〜問12、正答表示、主要公式・数値、品質確認欄を確認
+- 固定範囲外論点・未確認実車値の追加 `0件`
+
 ## 05 現在の品質状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前独立検証: `6 / 6 PASS`
@@ -105,7 +114,9 @@ Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御�
 - 解説PDF表示QA: `PASS`
 - 解説PDF文字抽出QA: `PASS`
 - 練習問題source: 完了（12問、固定5問・6小問を全件マッピング）
-- 練習PDF: 未着手
+- 練習PDF: 完了
+- 練習PDF表示QA: `PASS`
+- 練習PDF文字抽出QA: `PASS`
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未着手
 - 完成数: `4 / 16` 据え置き
