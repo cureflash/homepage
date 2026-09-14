@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `06 誘導電動機の最大トルクはどこで出る？`
 
-current status: `topic_06_explanation_source_complete`
+current status: `topic_06_explanation_pdf_complete`
 
 ## Topic 05 完了記録
 
@@ -90,26 +90,20 @@ source Markdown:
 
 ## Topic 06 今回完了した工程
 
-解説本文＋3段階例題をsource Markdownへ追加した。
+解説PDFを完成し、GitHub正本へ反映した。
 
-本文で固定した内容:
-- `n_s=120f/P`、`s=(n_s-n)/n_s`、`f_2=sf`
-- 一相分簡易等価回路からのトルク式導出
-- `s_m=r_2'/sqrt(r_1^2+X^2)` の導出
-- 停動トルクと最大トルク式
-- 二次抵抗変更時の比例推移と、最大トルク値不変／最大トルク時滑り変化の区別
-- 同期速度近傍だけでの `T∝s`
-- 電圧変更時の `T∝V_1^2`
-- 周波数変更時の `n_s∝f` と、インダクタンス一定なら `X=2πfL` も変化する条件整理
-- 速度―トルク特性の読み方と過去問型解法アルゴリズム
+成果物:
+`topics/06_induction_motor_maximum_torque/06_induction_motor_maximum_torque_explanation.pdf`
 
-3段階例題:
-- 基礎: 同期速度・すべり・二次周波数
-- 本試験標準: 最大トルク条件と比例推移
-- 複合・ひっかけ: 周波数変更時にリアクタンスを暗黙固定しない比較
-
-固定20小問と教材で欠落不可の12項目を本文へマッピング済み。未確認300系実車値、逆相制動、二重かご形詳細、Topic 07以降の論点は追加していない。
+確認内容:
+- A4縦5ページ
+- source Markdownの§0〜§13、3段階例題、固定EXAM_ALIGNMENTを反映
+- 全5ページを180 dpiでレンダリングし、文字切れ・重なり・ページ外はみ出し・黒塗り等なし: `5 / 5 PASS`
+- PDF文字抽出QA: PASS
+- 固定EXAM_ALIGNMENT 6問・20小問と制作前独立検証 `20 / 20 PASS` を変更していない
+- 計算プログラム・指定比較グラフは後続工程として分離したまま
+- 未確認300系実車値、逆相制動、二重かご形詳細、Topic 07以降の論点は追加していない
 
 ## 次に行うこと
 
-Topic 06の解説PDFを作成し、全ページ表示QAを行う。source Markdownの式・3段階例題・固定EXAM_ALIGNMENTをそのまま反映し、計算プログラム・比較グラフは後続工程として分離する。
+Topic 06の練習PDF（解答・完全解説付き）を作成する。固定EXAM_ALIGNMENTの一次・二次双方へ接続し、固定範囲外論点は件数合わせで追加しない。
