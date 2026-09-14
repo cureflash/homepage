@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 29 / 38
-- current_status: `topic_30_powerpoint_complete`
+- current_status: `topic_30_independent_reanswer_complete`
 - last_completed_topic: `29 コンプレッサ・ポンプ・ファン`
 - active_topic: `30 ATC① 新幹線は列車をどう検知する？`
-- next_start: Topic 30の完成後独立再解答。固定EXAM_ALIGNMENT 5問を完成教材だけで再解答し、教材外知識補完・固定範囲外追加がないか判定する
+- next_start: Topic 30の最終QA。必須成果物、固定5問の完成後独立再解答 `5 / 5 PASS`、表示QA、進捗記録整合、固定範囲境界をまとめて判定する
 
 ## 新品質ゲート進捗
 - [x] 01〜29 — PASS
-- [ ] 30 ATC① 新幹線は列車をどう検知する？ — POWERPOINT_COMPLETE
+- [ ] 30 ATC① 新幹線は列車をどう検知する？ — INDEPENDENT_REANSWER_COMPLETE
 
 ## 30 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知。
@@ -24,7 +24,9 @@
 5. H27 理論 問6 — スイッチ開閉前後で全電流が同じ条件から未知抵抗を求める — `2` — PASS
 
 制作前独立解答: `5 / 5 PASS`。
+完成後独立再解答: `5 / 5 PASS`。
 公式解答との不一致: `0件`。
+教材外知識補完: `0件`。
 固定範囲外論点の件数合わせ追加: `0件`。
 未確認実車値追加: `0件`。
 
@@ -34,7 +36,8 @@
 - 練習source: `topics/30_atc_train_detection/30_atc_train_detection_practice.md` — 15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説、固定5問を全件マッピング
 - 練習PDF: `topics/30_atc_train_detection/30_atc_train_detection_practice.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
 - 解説画像PowerPoint: `topics/30_atc_train_detection/30_atc_train_detection_images.pptx` — 16:9・4枚、固定5問の解法経路を可視化、全4枚表示QA PASS、ZIP整合性PASS
-- 完成後独立再解答・最終QA: 未着手
+- 完成後独立再解答記録: `topics/30_atc_train_detection/30_atc_train_detection_final_qa.md` — `5 / 5 PASS`
+- 最終QA判定: 未着手
 
 ## 30 練習QA
 - 問題数: `15 / 15`
@@ -59,6 +62,17 @@
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
+## 30 完成後独立再解答
+- R8上 理論 問7 — `Rx=VR/(IR-V)` → 選択肢4 — PASS
+- R7上 理論 問6 — `R2=25Ω, R1=225Ω`、短絡時 `0.444...A` → 選択肢2 — PASS
+- R7上 理論 問7 — 閉時 `Req=4Ω`、`10||R=2Ω` より `R=2.5Ω` → 選択肢1 — PASS
+- R5下 理論 問7 — `R1=20Ω, R2=30Ω, r=60Ω` → 選択肢5 — PASS
+- H27 理論 問6 — 開閉時の等価抵抗条件を連立し `R4=1Ω, R3=2Ω` → 選択肢2 — PASS
+- 合計: `5 / 5 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+
 ## 30 範囲境界
 追加しない:
 - ATC信号の周波数・符号化・情報伝送（Topic 31）
@@ -72,4 +86,4 @@
 Topic 29 `コンプレッサ・ポンプ・ファン` は固定5問の完成後独立再解答 `5 / 5 PASS`、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 30の固定5過去問を、完成教材だけを使って保存済み正答を先に見ず独立再解答する。教材外知識補完、固定範囲外追加、未確認実車値依存がないことを確認し、品質ゲート判定を記録する。
+Topic 30の最終QAを実施する。必須成果物の存在、固定5問の完成後独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、source・STATUS・HANDOFFの進捗整合、固定範囲境界をまとめて確認し、`PASS / completed` または `NEEDS_REVISION` を判定する。
