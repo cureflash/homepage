@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「理論」
 
-更新日: 2026-09-14
+更新日: 2026-09-15
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_final_qa_rerun_needs_revision`
+- current_status: `topic_06_source_progress_synced`
 - last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: Topic 06主sourceの進捗記録を現在地へ同期する
+- next_start: Topic 06の最終QAを再々実施する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -40,26 +40,25 @@
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 練習sourceの過去問対応表をH21選定へ同期
 - [x] 最終QA再実施: `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 主sourceの進捗記録を現在地へ同期
+- [x] 主sourceの進捗記録を現在地へ同期
 - [ ] 最終QA再々実施
 
 ## 今回進めた内容
 
-Topic 06の最終QAを再実施した。
+Topic 06主source `06_transformer_electromagnetic_induction.md` の進捗記録だけを現在地へ同期した。
 
-- 必須成果物: PASS
-- 修正版一次5問・16小問の独立再解答: `16 / 16 PASS`
-- 練習sourceのH21同期: PASS
-- 二次非採用判断: PASS
-- SPEC境界: PASS
-- 表示QA・計算QA: PASS
-- 教材外知識補完: 0件
+- 冒頭状態欄: 最終QA未着手という旧記録を、最終QA2回実施済みへ更新
+- 制作段階判定: `最終QA: 未実施` と旧判定 `topic_06_independent_reanswer_complete` を現在地へ同期
+- 次工程: 最終QA再々実施へ更新
+- 教材本文: 変更なし
+- EXAM_ALIGNMENT: 変更なし
+- 数式・例題・問題: 変更なし
+- PDF / PowerPoint: 変更なし
+- 固定一次5問・16小問: 変更なし
+- 修正版独立再解答 `16 / 16 PASS`: 維持
 - 二次数合わせ: 0件
 - 固定範囲外論点の追加: 0件
-- 成果物相互整合・進捗記録: NEEDS_REVISION
-
-残件は主source `06_transformer_electromagnetic_induction.md` の進捗記録のみ。冒頭に `最終QAは未着手`、制作段階判定に `最終QA: 未実施`、次工程に `Topic 06の最終QAを実施する` が残っており、実際の現在地と不整合である。教材本文・問題・正答・固定範囲の不具合は確認していない。
 
 ## 判定
 
-Topic 06は `topic_06_final_qa_rerun_needs_revision`。完成数は `5 / 21` のまま。次工程は主sourceの進捗記録同期で、教材本文・EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTX・固定範囲は変更しない。
+Topic 06は `topic_06_source_progress_synced`。完成数は `5 / 21` のまま。次工程は最終QA再々実施で、全品質ゲートPASSの場合のみ `completed` とする。
