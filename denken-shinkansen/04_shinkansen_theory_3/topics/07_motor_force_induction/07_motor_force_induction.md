@@ -1,7 +1,7 @@
 # Topic 07 モーターはなぜ回る？
 
 更新日: 2026-09-15
-status: `explanation_source_complete`
+status: `explanation_pdf_complete`
 
 ## 1. SPEC固定範囲
 
@@ -583,7 +583,7 @@ e = Blv sinθ
 | 0系への接続と未確認実車値を使わない境界 | §15 | PASS |
 | 固定5問の要求事項 | §7、本文・例題 | 全件マッピング済み |
 
-## 19. source段階品質確認
+## 19. 現段階品質確認
 
 - EXAM_ALIGNMENT 5問: `固定維持`
 - 制作前独立検証: `5 / 5 PASS`
@@ -592,10 +592,10 @@ e = Blv sinθ
 - 直流機の電圧方程式・界磁方式・速度制御の追加: `0件`
 - Topic 08以降の論点追加: `0件`
 - 未確認0系実車値の真値化: `0件`
-- 解説PDF: 未着手
+- 解説PDF: `A4縦4ページ / 200 dpi全4ページ表示QA PASS / 文字抽出QA PASS`
 - 練習問題source・練習PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
-次工程: 固定EXAM_ALIGNMENTと本文を変更せず、解説PDFを作成して全ページ表示QAを行う。
+次工程: 固定EXAM_ALIGNMENTと解説本文を変更せず、練習問題source・練習PDFを作成する。
