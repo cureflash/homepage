@@ -14,11 +14,11 @@ Topic 04 `極形式・フェーザ` は `completed`。
 
 Topic 05 `ベクトル` は `completed`。
 
-Topic 06 `微分① ダイヤの傾きは速度` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。固定4問の制作前独立検証は `4 / 4 PASS`。練習12問の独立計算は `12 / 12 PASS`。練習PDFはA4縦6ページで、200 dpi全ページ表示QA・文字抽出QAともPASS。仕様外論点を件数合わせで追加していない。
+Topic 06 `微分① ダイヤの傾きは速度` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。固定4問の制作前独立検証は `4 / 4 PASS`。練習12問の独立計算は `12 / 12 PASS`。練習PDFはA4縦6ページで、200 dpi全ページ表示QA・文字抽出QAともPASS。PowerPointは16:9・4枚で、全スライド表示QA・オーバーフロー検査・ZIP整合性PASS。仕様外論点を件数合わせで追加していない。
 
 完成数: `5 / 12`
 
-current_status: `topic_06_practice_pdf_complete`
+current_status: `topic_06_powerpoint_complete`
 
 active_topic: `06 微分① ダイヤの傾きは速度`
 
@@ -87,6 +87,16 @@ active_topic: `06 微分① ダイヤの傾きは速度`
   - 200 dpi全6ページ表示QA PASS
   - 文字抽出QA PASS
   - 固定範囲外追加0件、未確認実車値追加0件
+- `topics/06_derivative_1/06_derivative_1_images.pptx`
+  - 16:9・4枚
+  - 平均変化率→接線→微分係数を図解
+  - `v(t)=dx/dt`、多項式・三角関数・合成関数の基本を図解
+  - 折れ線 `i-t` グラフの区間傾き・絶対値比較・`mA/ms=A/s` を図解
+  - 固定4過去問で使う数学操作を4件すべて可視化
+  - 全4枚表示QA PASS
+  - オーバーフロー検査PASS
+  - PPTX ZIP整合性PASS
+  - 固定範囲外追加0件、未確認実車値追加0件
 
 3段階例題:
 1. 基礎: 多項式の導関数と指定点での微分係数
@@ -95,6 +105,6 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 ## 次に行うこと
 
-Topic 06 の解説画像PowerPointを作成する。
+完成したTopic 06教材だけを使って、固定EXAM_ALIGNMENT 4問を公式解答を先に見ず独立再解答する。
 
-固定EXAM_ALIGNMENT 4問と、解説本文・3段階例題・練習問題で確定したTopic 06の範囲だけを図解する。Topic 07以降の論点は先取りしない。作成後は全スライド表示QAとオーバーフロー確認を行う。
+各問について、教材内のどの節・スライド・練習論点だけで解答できたかを記録し、教材外知識補完が1件でもあればPASSにしない。固定4問・仕様範囲は変更しない。
