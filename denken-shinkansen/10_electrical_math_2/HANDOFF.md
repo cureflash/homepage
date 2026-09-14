@@ -26,10 +26,10 @@ active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
 `topics/06_calculus_train_curve/06_calculus_train_curve_explanation.pdf`
 
-- A4縦5ページ
+- A4縦2ページ
 - 固定EXAM_ALIGNMENT 5問・15対象項目を反映
-- 3段階例題を反映
-- 200 dpiで5 / 5ページ表示QA PASS
+- 中心式・解法手順・3段階例題・頻出ミス・範囲境界を収録
+- 200 dpiで2 / 2ページ表示QA PASS
 - 文字欠け・黒四角・重なり・クリップ 0件
 - 教育用モデル値と実車値を区別
 - Topic 07以降・未確認実車値の追加 0件
