@@ -1,6 +1,6 @@
 # HANDOFF - 新幹線・電験二種「理論」
 
-更新日: 2026-09-14
+更新日: 2026-09-15
 
 ## 現在地
 
@@ -10,11 +10,11 @@ Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘�
 
 修正版EXAM_ALIGNMENTの一次5問・16小問を完成教材だけで再度独立再解答し、`16 / 16 PASS`。教材外知識補完0件、二次数合わせ0件、固定範囲外論点追加0件。
 
-初回最終QAで検出した練習sourceの旧H30選定は現行H21選定へ同期済み。今回最終QAを再実施し、技術内容・独立再解答・表示QA・SPEC境界・練習source同期はPASSしたが、主sourceの進捗記録が旧状態のため `NEEDS_REVISION / IN_PROGRESS` とした。
+初回最終QAで検出した練習sourceの旧H30選定は現行H21選定へ同期済み。2回目の最終QAでは技術内容・独立再解答・表示QA・SPEC境界・練習source同期はPASSしたが、主sourceの進捗記録だけが旧状態のため `NEEDS_REVISION / IN_PROGRESS` とした。今回、その主source進捗記録を現在地へ同期した。
 
 完成数: `5 / 21`
 
-current_status: `topic_06_final_qa_rerun_needs_revision`
+current_status: `topic_06_source_progress_synced`
 
 active_topic: `06 25kVからどうやって電圧が誘導される？`
 
@@ -85,7 +85,7 @@ R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認済
 
 ## 最終QA再実施
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+直近判定: `NEEDS_REVISION / IN_PROGRESS`
 
 PASS:
 - 必須成果物
@@ -95,27 +95,21 @@ PASS:
 - SPEC境界
 - 表示QA・計算QA
 
-要修正:
-- 主source冒頭状態欄に `最終QAは未着手` が残る。
-- 主source制作段階判定に `最終QA: 未実施`、`topic_06_independent_reanswer_complete` が残る。
-- 主source次工程に `Topic 06の最終QAを実施する` が残る。
-
-教材本文・EXAM_ALIGNMENT・問題・正答・固定範囲の不具合は確認していない。
+前回要修正だった主source進捗記録は今回同期済み。教材本文・EXAM_ALIGNMENT・問題・正答・固定範囲は変更していない。
 
 ## 今回の更新
 
-1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06成果物を再照合。
-2. 練習sourceの旧H30→現行H21同期済みを確認。
-3. 修正版一次5問・16小問の独立再解答 `16 / 16 PASS`、二次非採用、表示QA、SPEC境界を再確認。
-4. 主sourceの進捗記録だけが旧状態であることを検出。
-5. 最終QA記録・STATUS・HANDOFFへ `NEEDS_REVISION` を反映。
+1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06主sourceを再照合。
+2. 主source冒頭の `最終QAは未着手` を現在地へ同期。
+3. 制作段階判定の `最終QA: 未実施` と旧判定 `topic_06_independent_reanswer_complete` を現在地へ同期。
+4. 主sourceの次工程を最終QA再々実施へ更新。
+5. 教材本文・EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTX・固定範囲は変更していない。
 
 ## 次に行うこと
 
-主source `06_transformer_electromagnetic_induction.md` の進捗記録だけを現在地へ同期する。
+Topic 06の最終QAを再々実施する。
 
-1. 冒頭状態欄の `最終QAは未着手` を、最終QA再実施済み・進捗記録同期待ちの状態へ直す。
-2. 制作段階判定の `最終QA: 未実施` と `topic_06_independent_reanswer_complete` を現在地へ同期する。
-3. 次工程を「主source同期後に最終QAを再実施」へ更新する。
-4. 教材本文・EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTX・固定範囲は変更しない。
-5. 同期後に最終QAを再実施し、全件PASSの場合のみTopic 06を `completed` として完成数を `6 / 21` に進める。
+1. 主source・練習source・独立再解答記録・最終QA記録・実在成果物の相互整合を確認する。
+2. 修正版一次5問・16小問 `16 / 16 PASS` と二次非採用判断を維持できることを確認する。
+3. SPEC境界、表示QA、教材外知識補完0件、二次数合わせ0件を確認する。
+4. 全件PASSの場合のみTopic 06を `completed` とし、完成数を `6 / 21` に進める。
