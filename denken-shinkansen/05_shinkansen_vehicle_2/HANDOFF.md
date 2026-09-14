@@ -7,7 +7,7 @@
 
 Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路の波形解析`、Topic 03 `0系③ 直流主電動機の電圧方程式とトルク`、Topic 04 `0系④ タップ制御と加速特性` は最終QAまでPASS。完成数は `4 / 39`。
 
-現在地は `topic_05_practice_source_complete`。active topicはTopic 05 `0系⑤ 発電ブレーキのエネルギー解析`。
+現在地は `topic_05_practice_pdf_complete`。active topicはTopic 05 `0系⑤ 発電ブレーキのエネルギー解析`。
 
 ## Topic 05 成果物
 - source: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy.md`
@@ -22,7 +22,12 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
   - 二次記述4問
   - 全12問に途中式・条件・単位・検算を含む完全解説
   - 計算・論理QA `12 / 12 PASS`
-  - PDFは次工程
+- 練習PDF: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_practice.pdf`
+  - A4縦3ページ
+  - 一次8問＋二次記述4問
+  - 全問に正答・完全解説
+  - 全3ページ180 dpi Visual QA PASS
+- 練習PDF QA: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_practice_qa.md`
 
 ## Topic 05 EXAM_ALIGNMENT
 系列SPECの固定範囲:
@@ -55,8 +60,8 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
 
 二種の一次・二次合計「原則5問以上」は維持するが、固定範囲を守って公式公開問題からゲート化できたのは2問。件数合わせのためにR6の誘導機回生、H28のチョッパ・回生、H23二次の誘導機制動、H24二次問1後半の可逆チョッパ等を追加しない。
 
-## Topic 05 練習問題source
-一次8問＋二次4問、計12問を固定範囲だけで作成した。
+## Topic 05 練習問題・PDF
+一次8問＋二次4問、計12問を固定範囲だけで作成し、PDFへ収録した。
 
 主な計算結果:
 - 一次2: `150 V`
@@ -70,7 +75,7 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
 - 二次3: `ΔK=43.2 MJ`, `Q_R=34.56 MJ`
 - 二次4: `τ_b=112.5 s`, `t≈123.6 s`, `ΔK=58.32 MJ`, `Q_R=48.6 MJ`
 
-全12問を再計算し `12 / 12 PASS`。数値はH24固定範囲の値を明示して使う箇所以外、すべて教材用仮定値。0系実値として扱っていない。
+全12問を再計算し `12 / 12 PASS`。数値はH24固定範囲の値を明示して使う箇所以外、すべて教材用仮定値。0系実値として扱っていない。練習PDFは全3ページ180 dpi表示QA PASS。
 
 ## Topic 05 固定境界
 追加しない:
@@ -82,9 +87,9 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
 - 未確認の0系固有数値
 
 ## 次の正確な開始点
-Topic 05の練習PDFを作成する。
+Topic 05の解説画像PowerPointを作成する。
 
-`05_0series_dynamic_brake_energy_practice_source.md` の一次8問＋二次4問をそのまま使い、問題・正答・完全解説を収録する。作成後は全ページ表示QAを行い、問題欠落、式・単位・選択肢・改ページ崩れを確認する。範囲追加はしない。
+SPEC指定4グラフ（速度―制動力、速度―制動電力、時間―速度、制動抵抗の発熱量）と、R5一次・H24二次の固定範囲への解法接続を、既存source・解説PDF・練習PDFの範囲だけで可視化する。作成後は全スライド表示QAを行う。範囲追加はしない。
 
 ## Topic 04 完了記録
 - 最終QA: `PASS`
