@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 4 / 14
-- current_status: `topic_05_explanation_source_complete`
+- current_status: `topic_05_explanation_pdf_complete`
 - last_completed_topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
 - active_topic: `05 パンタグラフから入った電気はどこへ行く？`
-- next_start: Topic 05の確定sourceから解説PDFを作成する。選定6過去問への対応と系列SPEC境界を維持し、後続Topic論点・未確認実車値は追加しない
+- next_start: Topic 05の確定sourceと完成済み解説PDFを変更せず、練習問題source・練習PDFを作成する。選定6過去問の要求事項を全件練習へ落とし込み、後続Topic論点・未確認実車値は追加しない
 
 ## Topic 01 進捗
 
@@ -74,7 +74,7 @@
 - [x] e-sysnet・電験三種まとめました・電験王の説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
@@ -82,21 +82,18 @@
 
 ## 今回進めた内容
 
-Topic 05 `パンタグラフから入った電気はどこへ行く？` の解説本文＋3段階例題を完成した。
+Topic 05 `パンタグラフから入った電気はどこへ行く？` の解説PDFを完成した。
 
-確定EXAM_ALIGNMENTの6過去問から逆算し、以下を本文へ収録した。
-
-- 直列・並列、合成抵抗、分圧・分流
-- 同一起電力・同一内部抵抗の電池並列の基本
-- KCL / KVL、枝電流法、負の電流の解釈
-- 重ね合わせの理と電源を零にするときの扱い
-- テブナン・ノートン等価回路
-- 負荷電力、最大電力条件 `RL=Rth`
-- 本試験で再利用できる解法手順
-- 3段階例題（直並列、複数電源KCL＋重ね合わせ、テブナン＋ノートン＋最大電力）
-
-選定6問の要求事項を教材内節へ全件マッピングした。新幹線側は「教育用等価回路」と明記し、実車の内部配線・保護回路・主回路定数は推測していない。Topic 06以降の磁気・交流・三相・半導体論点は追加していない。
+成果物:
+- `topics/05_dc_network/05_dc_network_explanation.pdf`
+- A4縦 6ページ
+- 確定EXAM_ALIGNMENTの6過去問と完成済みsourceの固定範囲だけを収録
+- 直列・並列、合成抵抗、分圧・分流、同一電池並列、KCL / KVL、枝電流法、重ね合わせ、テブナン・ノートン、負荷電力・最大電力、3段階例題、過去問対応表を収録
+- 新幹線側は「教育用等価回路」と明記し、実車内部配線・保護回路・主回路定数は推測していない
+- Topic 06以降の磁気・交流・三相・半導体論点は追加していない
+- 200 dpiで全6ページをレンダリングし、文字切れ・重なり・欠落グリフなしを確認
+- PDF文字抽出で主要見出し、主要公式、選定過去問、3段階例題、「教育用等価回路」を確認
 
 ## 判定
 
-Topic 05は `EXPLANATION_SOURCE_COMPLETE`。完成数は `4 / 14` 据え置き。次工程は解説PDF。
+Topic 05は `EXPLANATION_PDF_COMPLETE`。完成数は `4 / 14` 据え置き。次工程は練習問題source・練習PDF。
