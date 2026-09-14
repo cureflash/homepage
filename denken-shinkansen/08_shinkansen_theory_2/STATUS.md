@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_source_progress_synced`
-- last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
-- active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: Topic 06の最終QAを再々実施する
+- exam_aligned_completed_topics: 6 / 21
+- current_status: `topic_06_completed`
+- last_completed_topic: `06 25kVからどうやって電圧が誘導される？`
+- active_topic: `07 0系のモーターはなぜ力を出せる？`
+- next_start: Topic 07の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -19,7 +19,7 @@
 - [x] R5 問2(2)〜(4): 鎖交磁束変化、速度、ファラデー則
 - [x] R2 問2(1)〜(5): 自己インダクタンス、鎖交磁束保存、磁気エネルギー
 - [x] H28 問1(3)(5): `Ψ=Li`、`W=Li²/2`
-- [x] H30 問2(4)(5)は旧完成後独立再解答でTopic 05依存を検出したため除外
+- [x] H30 問2(4)(5)はTopic 05依存を検出したため除外
 - [x] H21 問2(2)(3)を代替採用: 同一磁路で `L∝N²`、`M∝N1N2`
 - [x] 品質ゲート対象を一次5問・16小問に維持
 - [x] 修正版公式解答照合 `16 / 16`
@@ -41,24 +41,20 @@
 - [x] 練習sourceの過去問対応表をH21選定へ同期
 - [x] 最終QA再実施: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主sourceの進捗記録を現在地へ同期
-- [ ] 最終QA再々実施
+- [x] 最終QA再々実施: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 06主source `06_transformer_electromagnetic_induction.md` の進捗記録だけを現在地へ同期した。
+Topic 06の最終QAを再々実施し、全品質ゲートPASSを確認した。
 
-- 冒頭状態欄: 最終QA未着手という旧記録を、最終QA2回実施済みへ更新
-- 制作段階判定: `最終QA: 未実施` と旧判定 `topic_06_independent_reanswer_complete` を現在地へ同期
-- 次工程: 最終QA再々実施へ更新
-- 教材本文: 変更なし
-- EXAM_ALIGNMENT: 変更なし
-- 数式・例題・問題: 変更なし
-- PDF / PowerPoint: 変更なし
-- 固定一次5問・16小問: 変更なし
-- 修正版独立再解答 `16 / 16 PASS`: 維持
+- 修正版一次5問・16小問: `16 / 16 PASS`
+- 教材外知識補完: 0件
 - 二次数合わせ: 0件
-- 固定範囲外論点の追加: 0件
+- 固定範囲外論点追加: 0件
+- 解説PDF・練習PDF・PowerPointの表示QA記録: PASS維持
+- 練習source・主source・独立再解答記録・最終QA記録の相互整合: PASS
+- Topic 06: `completed`
 
 ## 判定
 
-Topic 06は `topic_06_source_progress_synced`。完成数は `5 / 21` のまま。次工程は最終QA再々実施で、全品質ゲートPASSの場合のみ `completed` とする。
+Topic 06は `completed`。完成数は `6 / 21`。次工程はTopic 07 `0系のモーターはなぜ力を出せる？` の制作前EXAM_ALIGNMENT。
