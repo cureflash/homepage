@@ -3,17 +3,18 @@
 updated: 2026-09-14
 series: `06_shinkansen_power_2`
 active_topic: `04`
-current_status: `topic_04_explanation_pdf_complete`
+current_status: `topic_04_practice_pdf_complete`
 
 ## 今回完了
 
-Topic 04「むつの原子炉を積んだ原子力新幹線を東京から佐世保まで走らせる」の解説PDFを完成した。
+Topic 04「むつの原子炉を積んだ原子力新幹線を東京から佐世保まで走らせる」の練習PDFを完成した。
 
 成果物:
-- `topics/04_nuclear_power/04_nuclear_power_explanation.pdf`
-- A4縦6ページ
-- `04_nuclear_power_explanation_source.md` の本文、3段階例題、固定EXAM_ALIGNMENT、出典、数式・単位を同期
-- 200 dpi全6ページ表示QA: `6 / 6 PASS`
+- `topics/04_nuclear_power/04_nuclear_power_practice.pdf`
+- A4縦7ページ
+- `04_nuclear_power_practice.md` の全15問（一次型10問＋二次記述5問）と完全解説を同期
+- 200 dpi全7ページ表示QA: `7 / 7 PASS`
+- 問題15問・解答15問の文字抽出確認: `PASS`
 - クリップ・重なり・黒四角・日本語欠落: `0件`
 
 正式選定5問は変更なし:
@@ -27,9 +28,9 @@ Topic 04「むつの原子炉を積んだ原子力新幹線を東京から佐世
 
 ## 次に行う
 
-Topic 04 の練習PDFを作成する。
+Topic 04 の解説画像PowerPointを作成する。
 
-`04_nuclear_power_practice.md` の全15問（一次型10問＋二次記述5問）と完全解説をそのまま同期し、生成後に全ページ表示QAを行う。問題・正答・固定EXAM_ALIGNMENT・固定範囲は変更しない。
+固定EXAM_ALIGNMENT 5問の要求事項と、解説本文・練習問題で確定した範囲だけを可視化する。SPEC外論点・未確認実設備値を追加しない。
 
 ## 範囲境界
 
