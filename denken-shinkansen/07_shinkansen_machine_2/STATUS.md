@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 6 / 22
-- current_status: `topic_06_completed`
+- current_status: `topic_07_exam_alignment_complete`
 - last_completed_topic: `06 誘導電動機の最大トルクはどこで出る？`
 - active_topic: `07 300系のPWMコンバータは何をしている？`
-- next_start: Topic 07の制作前EXAM_ALIGNMENTを行う
+- next_start: Topic 07の解説本文＋3段階例題を作成する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -108,17 +108,33 @@
 - [x] source Markdown進捗記録の同期
 - [x] 最終QA再実施: `PASS / completed`
 
+## Topic 07 品質ゲート進捗
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 公式過去問を一次2問＋二次記述3問、計5問選定
+- [x] 混合問題は固定範囲へ直接対応する小問だけをゲート対象として明示
+- [x] MPPT、蓄電装置設計、昇圧コンバータ設計、能動フィルタ設計を固定範囲外として除外
+- [x] 参考教材を e-sysnet＋電験王2 の複数系統で確認
+- [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
+- [x] ゲート対象17小問の公式解答／標準解答照合を伴う制作前独立検証: 17 / 17 PASS
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習PDF（解答・完全解説付き）
+- [ ] 解説画像PowerPoint
+- [ ] SPEC指定4波形
+- [ ] 公式過去問の教材のみでの独立再解答
+- [ ] 最終QA PASS
+
 ## 今回進めた内容
-Topic 06「誘導電動機の最大トルクはどこで出る？」の最終QAを再実施した。
+Topic 07「300系のPWMコンバータは何をしている？」の制作前EXAM_ALIGNMENTを完了した。
 
 確認内容:
-- 必須成果物の実在: PASS
-- 固定EXAM_ALIGNMENT: 一次2問＋二次記述4問、計6問・20小問を維持
-- 完成後独立再解答: `20 / 20 PASS`
-- 計算プログラム・SPEC指定4比較グラフQA: PASS
-- source Markdown進捗記録の整合: PASS
-- 仕様外論点の追加: 0件
-- 未確認300系実車値の真値化: 0件
+- 固定EXAM_ALIGNMENT: H22・H27一次2問＋H24・R01・R05二次記述3問、計5問
+- 固定範囲へ直接対応するゲート対象: 17小問
+- 公式問題・公式解答／標準解答による制作前独立検証: `17 / 17 PASS`
+- 参考教材: e-sysnet＋電験王2の複数系統
+- 固定範囲外論点による件数合わせ: 0件
+- 未確認300系実車値の追加: 0件
 
 ## 判定
-Topic 06は `PASS / completed`。完成数は `6 / 22`。次はTopic 07「300系のPWMコンバータは何をしている？」の制作前EXAM_ALIGNMENT。
+Topic 07は `topic_07_exam_alignment_complete`。完成数は `6 / 22` のまま。次は固定17小問から逆算した解説本文＋3段階例題を作成する。
