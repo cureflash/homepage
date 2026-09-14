@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は制作前EXAM_ALIGNMENTまで完了。
+Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は解説本文＋3段階例題まで完了。
 
 完成数: `6 / 21`
 
-current_status: `topic_07_exam_alignment_complete`
+current_status: `topic_07_explanation_source_complete`
 
 active_topic: `07 0系のモーターはなぜ力を出せる？`
 
-次工程: Topic 07の解説本文＋3段階例題。固定一次5問・25小問の要求事項を全件教材へマッピングする。
+次工程: Topic 07の解説PDFを作成し、全ページ表示QAを実施する。
 
 ## Topic 06 完了記録
 
@@ -78,10 +78,23 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 - `F=BIl` を多数の移動電荷に働くローレンツ力の総和として接続すること
 - 0系直流主電動機は「磁界中の電流に力が働く」導入例に限定すること
 
+## Topic 07 解説source完成内容
+
+- 試験論点→電界中の荷電粒子→時間変化電界→ローレンツ力→円運動→加速電圧・比電荷→電流が受ける力→0系への接続、の順で解説。
+- 固定一次5問・25小問を教材節へ全件マッピング。
+- `F=BIl` を移動電荷へのローレンツ力総和から導出。
+- 直流機特性・後続Topic論点は追加していない。
+- 3段階例題を作成。
+  - 基礎: 磁界中の電子のローレンツ力・円運動
+  - 標準: 一様電界領域を通過する電子
+  - 複合: 加速電圧・円運動・サイクロトロン周波数・比電荷
+- 例題数値は独立再計算済み。
+
 ## Topic 07 成果物
 
 - source: `topics/07_motor_lorentz_force/07_motor_lorentz_force.md`
-- 解説本文: 未作成
+- 解説本文: 完了
+- 3段階例題: 完了
 - 解説PDF: 未作成
 - 練習source / 練習PDF: 未作成
 - 解説画像PowerPoint: 未作成
@@ -90,14 +103,14 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 
 ## 今回の更新
 
-1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFFを再照合。
-2. Topic 07固定範囲へ直接対応する公式一次過去問を直近年度から調査。
-3. R7問7、R5問6、R3問6、R1問7、H25問6の5問・25小問を固定。
-4. 公式解答25小問を照合。
-5. R8問1のTopic 03依存、半導体問題、二次の非直接対応問題を除外し、数合わせをしない判断を記録。
-6. Topic 07 source、STATUS、HANDOFFへ制作前EXAM_ALIGNMENTを反映。
+1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、Topic 07 sourceを再照合。
+2. 固定EXAM_ALIGNMENTを変更せず、解説本文を作成。
+3. 固定5問・25小問の要求事項を全件教材へマッピング。
+4. 基礎・標準・複合の3段階例題を作成し、数値を独立再計算。
+5. 二次非採用判断、二次数合わせ0件、固定範囲外追加0件を維持。
+6. Topic 07 source、STATUS、HANDOFFをGitHub正本へ反映。
 7. 完成数は `6 / 21` のまま。
 
 ## 次に行うこと
 
-`topics/07_motor_lorentz_force/07_motor_lorentz_force.md` の固定EXAM_ALIGNMENTを変えず、解説本文＋3段階例題を作成する。固定5問・25小問と「教材で欠落不可の内容」を全件マッピングし、直流機特性や後続Topicの論点を追加しない。
+`topics/07_motor_lorentz_force/07_motor_lorentz_force.md` を正本として解説PDFを作成し、全ページ表示QAを実施する。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
