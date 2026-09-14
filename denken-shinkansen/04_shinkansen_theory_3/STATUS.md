@@ -1,15 +1,15 @@
 # STATUS - 新幹線・電験三種「理論」
 
-更新日: 2026-09-14
+更新日: 2026-09-15
 
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 5 / 14
-- current_status: `topic_06_final_qa_needs_revision`
+- current_status: `topic_06_source_progress_synced`
 - last_completed_topic: `05 パンタグラフから入った電気はどこへ行く？`
 - active_topic: `06 0系の変圧器は何をしていた？`
-- next_start: Topic 06主source `06_transformer_magnetics.md` の進捗記録だけをGitHub正本の現在地へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・仕様範囲は変更しない
+- next_start: Topic 06の最終QAを再実施する。教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・成果物は変更せず、進捗記録整合性を含む全品質ゲートを再確認する
 
 ## Topic 01 進捗
 
@@ -99,35 +99,30 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `5 / 5 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: source進捗記録不整合）
-- [ ] source Markdown進捗記録同期
+- [x] source Markdown進捗記録同期
 - [ ] 最終QA再実施
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 06 `0系の変圧器は何をしていた？` の最終QAを実施した。
+Topic 06 `0系の変圧器は何をしていた？` の主source進捗記録をGitHub正本の現在地へ同期した。
 
-判定:
-- 必須成果物: PASS
-- 固定EXAM_ALIGNMENT 5問: PASS
-- 完成後独立再解答: `5 / 5 PASS`
-- 教材外知識補完: `0問`
-- 後続Topic知識への依存: `0問`
-- 未確認0系実車値への依存: `0問`
-- SPEC境界: PASS
-- source進捗記録整合性: FAIL
+変更した進捗記録:
+- 冒頭 `status`: `EXPLANATION_SOURCE_COMPLETE` → `PROGRESS_RECORD_SYNCED`
+- 完了判定: `in_progress` → `未完了`
+- 冒頭説明: 解説PDF・練習PDF・PowerPoint・完成後独立再解答 `5 / 5 PASS` を実態へ同期
+- source末尾 `完成後独立再解答`: `未実施` → `5 / 5 PASS`
+- source末尾 `最終QA`: `未実施` → `NEEDS_REVISION`（進捗記録不整合のみ）
+- `次工程`: 解説PDF作成 → 最終QA再実施
 
-FAIL理由:
-- 主source冒頭が `status: EXPLANATION_SOURCE_COMPLETE` のまま
-- 「完成後独立再解答は未実施」と記載されたまま
-- source末尾が `完成後独立再解答: 未実施` / `最終QA: 未実施` のまま
-- `次工程` が「解説PDFを作成する」のまま
-
-GitHub正本には解説PDF、練習PDF、PowerPoint、完成後独立再解答 `5 / 5 PASS` が存在するため、進捗記録と実態が不整合。
-
-最終QA記録:
-- `topics/06_transformer_magnetics/06_transformer_magnetics_final_qa.md`
+変更していないもの:
+- 教材本文
+- 固定EXAM_ALIGNMENT 5問
+- 数式
+- 3段階例題
+- SPEC固定範囲・境界
+- PDF / PowerPoint等の既存成果物
 
 ## 判定
 
-Topic 06は `topic_06_final_qa_needs_revision`。完成数は `5 / 14` のまま。次は主sourceの進捗記録だけを現在地へ同期する。
+Topic 06は `topic_06_source_progress_synced`。完成数は `5 / 14` のまま。次は最終QA再実施。
