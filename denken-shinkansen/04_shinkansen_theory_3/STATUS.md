@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 5 / 14
-- current_status: `topic_06_practice_pdf_complete`
+- current_status: `topic_06_powerpoint_complete`
 - last_completed_topic: `05 パンタグラフから入った電気はどこへ行く？`
 - active_topic: `06 0系の変圧器は何をしていた？`
-- next_start: Topic 06の解説画像PowerPointを作成する。選定5過去問の要求事項とTopic 06固定範囲を維持し、後続Topic論点と未確認実車値は追加しない
+- next_start: Topic 06の完成後公式過去問独立再解答を、固定EXAM_ALIGNMENT 5問について完成教材だけで実施する。教材外・固定範囲外知識で補完した場合は正答でもFAILとする
 
 ## Topic 01 進捗
 
@@ -96,30 +96,29 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 06 `0系の変圧器は何をしていた？` の練習問題source・練習PDFを完成した。
+Topic 06 `0系の変圧器は何をしていた？` の解説画像PowerPointを完成した。
 
 反映内容:
-- 全15問、全問五肢択一
-- 基礎4問 / 本試験標準8問 / 複合・応用3問
-- 正答位置 `(1)〜(5)` 各3問
-- R8上問3: 鎖交磁束・自己インダクタンス・磁気エネルギー
-- R7下問3: `Ψ=NΦ`、`L=NΦ/I`
-- R6上問3: 磁気諸量の単位
-- R5上問3: 起磁力・磁気抵抗・磁束・比例関係
-- R4上問3: 相互インダクタンス・結合係数・直列加極性/減極性
-- 系列SPEC固定範囲のファラデー・レンツ、理想変圧器巻数比も練習化
-- 15問独立再計算 PASS
-- A4縦4ページ、200 dpi全ページ表示QA PASS
-- 文字抽出QA PASS
+- `topics/06_transformer_magnetics/06_transformer_magnetics_images.pptx`
+- 16:9・4スライド
+- 磁界・磁束・磁束密度・透磁率と磁気回路の基本関係を可視化
+- `Rm=l/(μA)`、`Φ=Fm/Rm=NI/Rm` と比例関係を整理
+- `Ψ=NΦ`、`L=NΦ/I`、`W=1/2 LI²`、`M=k√(L1L2)`、直列 `±2M` を可視化
+- ファラデー・レンツ、理想変圧器巻数比 `V1/V2=N1/N2` を固定範囲内で整理
+- R8上問3 / R7下問3 / R6上問3 / R5上問3 / R4上問3 の要求事項を全件対応
+- 全4スライド表示QA `4 / 4 PASS`
+- スライド外形はみ出し `0件`
+- PPTX ZIP整合性 `PASS`
+- Topic 07以降の論点、変圧器損失・詳細等価回路、未確認0系実車値の追加 `0件`
 
-Topic 07以降の電磁力・交流回路・力率・三相・半導体等、変圧器損失・詳細等価回路、未確認0系実車値は追加していない。完成後独立再解答はまだ実施していない。
+完成後独立再解答はまだ実施していない。
 
 ## 判定
 
-Topic 06は `topic_06_practice_pdf_complete`。完成数は `5 / 14` のまま。次は解説画像PowerPoint。
+Topic 06は `topic_06_powerpoint_complete`。完成数は `5 / 14` のまま。次は完成教材だけで固定5過去問を独立再解答する。
