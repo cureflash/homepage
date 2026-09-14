@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 6 / 21
-- current_status: `topic_07_progress_records_synced`
-- last_completed_topic: `06 25kVからどうやって電圧が誘導される？`
-- active_topic: `07 0系のモーターはなぜ力を出せる？`
-- next_start: Topic 07の最終QAを再実施する
+- exam_aligned_completed_topics: 7 / 21
+- current_status: `topic_07_completed`
+- last_completed_topic: `07 0系のモーターはなぜ力を出せる？`
+- active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
+- next_start: Topic 08の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -66,19 +66,20 @@
 - [x] 完成後独立再解答 25小問: `25 / 25 PASS`
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source・練習sourceの旧進捗記録を現在地へ同期
+- [x] 最終QA再実施: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 07の進捗記録不整合を修正した。
+Topic 07の最終QAを再実施し、全品質ゲートPASSで `completed` とした。
 
-- 主source冒頭を実在成果物へ同期
-- 主source固定品質ゲートを完成後独立再解答 `25 / 25 PASS` へ同期
-- 主source次工程を最終QA再実施へ更新
-- 練習source次工程をPowerPoint・完成後独立再解答の実績へ同期し、次工程を最終QA再実施へ更新
-- 教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・成果物は変更していない
+- 固定一次5問・25小問の完成後独立再解答: `25 / 25 PASS`
+- 教材外知識補完: 0件
 - 固定範囲外論点追加: 0件
-- 二次数合わせ: 0件
+- 直流機特性追加: 0件
+- R7〜R5二次の非採用判断を維持し、二次数合わせ: 0件
+- 解説PDF・練習PDF・PowerPointの表示QA: PASS
+- 主source・練習source・独立再解答・成果物の相互整合: PASS
 
 ## 判定
 
-Topic 07は `IN_PROGRESS`。初回最終QAで唯一残った進捗記録不整合を解消した。完成数は `6 / 21` のまま。次工程は最終QA再実施。
+Topic 07は `PASS / completed`。完成数は `7 / 21`。次工程はTopic 08 `L0系はどうやって磁石だけで浮いて進む？` の制作前EXAM_ALIGNMENT。
