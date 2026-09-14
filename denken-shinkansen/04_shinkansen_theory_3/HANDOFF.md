@@ -6,26 +6,37 @@
 
 Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ新幹線は25,000Vなのか`、Topic 03 `架線はただの銅線ではない`、Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？`、Topic 05 `パンタグラフから入った電気はどこへ行く？` は最終QAまでPASSし、`completed`。
 
-Topic 06 `0系の変圧器は何をしていた？` は解説PDFまで完了。次は練習問題source・練習PDF。
+Topic 06 `0系の変圧器は何をしていた？` は練習問題source・練習PDFまで完了。次は解説画像PowerPoint。
 
 - 完成数: `5 / 14`
 - last completed: `05 パンタグラフから入った電気はどこへ行く？`
 - active topic: `06 0系の変圧器は何をしていた？`
-- current status: `topic_06_explanation_pdf_complete`
+- current status: `topic_06_practice_pdf_complete`
 - Topic 06 source: `topics/06_transformer_magnetics/06_transformer_magnetics.md`
 - Topic 06 explanation PDF: `topics/06_transformer_magnetics/06_transformer_magnetics_explanation.pdf`
+- Topic 06 practice source: `topics/06_transformer_magnetics/06_transformer_magnetics_practice.md`
+- Topic 06 practice PDF: `topics/06_transformer_magnetics/06_transformer_magnetics_practice.pdf`
 
 ## 今回進捗
 
-Topic 06の解説PDFを作成した。A4縦2ページ・2段組で、sourceの本文・3段階例題・選定5過去問への解法接続を反映した。
+Topic 06の練習問題source・練習PDFを作成した。
 
-- 令和8年度上期 理論 問3: `Ψ=LI`、`W=LI²/2`
-- 令和7年度下期 理論 問3: `L=NΦ/I`
-- 令和6年度上期 理論 問3: 磁気諸量の単位
-- 令和5年度上期 理論 問3: 起磁力・磁気抵抗・磁気回路
-- 令和4年度上期 理論 問3: 相互インダクタンス・結合係数
+- 全15問、全問五肢択一
+- 基礎4 / 標準8 / 複合3
+- 正答位置 `(1)〜(5)` 各3問
+- 15問独立再計算 PASS
+- A4縦4ページ、200 dpi全ページ表示QA PASS
+- 文字抽出QA PASS
 
-PDFにはファラデーの法則・レンツの法則、自己誘導・相互誘導、磁気エネルギー、理想変圧器巻数比まで系列SPEC固定範囲を収録した。200 dpi全2ページ表示QA、文字抽出QAともPASS。後続Topic論点、変圧器損失・詳細等価回路、未確認0系実車値は追加していない。
+選定5過去問との対応:
+
+- 令和8年度上期 理論 問3: Q4, Q7, Q8
+- 令和7年度下期 理論 問3: Q7
+- 令和6年度上期 理論 問3: Q1, Q2
+- 令和5年度上期 理論 問3: Q3, Q5, Q6, Q13
+- 令和4年度上期 理論 問3: Q9, Q10, Q11, Q14
+
+系列SPEC固定範囲のファラデー・レンツ、理想変圧器巻数比はQ12・Q15で練習化した。
 
 ## Topic 06 固定範囲
 
@@ -50,9 +61,9 @@ PDFにはファラデーの法則・レンツの法則、自己誘導・相互�
 ```text
 Φ = BA
 B = μH
-ℱ = NI
+Fm = NI
 Rm = l / (μA)
-Φ = ℱ / Rm = NI / Rm
+Φ = Fm / Rm = NI / Rm
 Ψ = NΦ
 L = Ψ / I = NΦ / I
 W = 1/2 LI²
@@ -73,9 +84,9 @@ V1 / V2 = N1 / N2
 
 ## 次に行うこと
 
-Topic 06の練習問題source・練習PDFを作成する。
+Topic 06の解説画像PowerPointを作成する。
 
-選定5過去問の要求事項とTopic 06固定範囲を維持し、後続Topic論点・未確認実車値は追加しない。完成後独立再解答はまだ行わない。
+選定5過去問の要求事項とTopic 06固定範囲を維持し、後続Topic論点・未確認実車値は追加しない。完成後独立再解答はPowerPoint完成後に実施する。
 
 ## 固定ルール
 
