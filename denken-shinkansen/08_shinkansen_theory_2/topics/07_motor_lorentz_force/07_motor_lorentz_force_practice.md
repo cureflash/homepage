@@ -2,7 +2,7 @@
 
 ## 状態
 
-練習問題source＋練習PDFを完成。固定EXAM_ALIGNMENTは一次5問・25小問のまま、R7〜R5二次は固定範囲へ直接対応する問題がないため数合わせの記述式を追加していない。固定範囲外論点の追加は0件。練習PDFはA4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`。
+練習問題source＋練習PDFを完成。固定EXAM_ALIGNMENTは一次5問・25小問のまま、R7〜R5二次は固定範囲へ直接対応する問題がないため数合わせの記述式を追加していない。固定範囲外論点の追加は0件。練習PDFはA4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`。完成後独立再解答 `25 / 25 PASS`、最終QA再実施 `PASS / completed`。
 
 - 一次試験型: 12問（すべて五肢択一）
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
@@ -207,6 +207,6 @@ x方向には力がないので通過時間は `t=L/vx=0.020/(4.0×10^6)=5.0×10
 
 # 次工程
 
-練習PDF `07_motor_lorentz_force_practice.pdf` は完成済み。A4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`。解説画像PowerPointも完成済み（16:9・5枚、表示QA `5 / 5 PASS`、overflow・ZIP整合性PASS）。完成後独立再解答は固定5問・25小問 `25 / 25 PASS`。
+Topic 07は最終QA再実施 `PASS / completed`。練習PDF `07_motor_lorentz_force_practice.pdf` はA4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`。解説画像PowerPointも完成済み（16:9・5枚、表示QA `5 / 5 PASS`、overflow・ZIP整合性PASS）。完成後独立再解答は固定5問・25小問 `25 / 25 PASS`。
 
-次工程はTopic 07の最終QA再実施。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
+系列の次工程はTopic 08 `L0系はどうやって磁石だけで浮いて進む？` の制作前EXAM_ALIGNMENT。
