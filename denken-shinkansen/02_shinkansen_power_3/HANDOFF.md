@@ -15,7 +15,7 @@ Topic 06を1段階進め、解説画像PowerPoint `topics/06_substation/06_subst
 - 文字欠け 0、クリップ 0、意図しない重なり 0
 - `slides_test.py` 境界外はみ出し 0件 PASS
 - `unzip -t` PPTX ZIP整合性 PASS
-- SHA-256 `56121bee8ad2408569cb703a4b7f4447875733489632b5c681ba5ddf475acab6`
+- SHA-256 `a4c134f225e0002cad96a10cdb080a6df885b6f5286ea85e6fc339cf98fa51a3`
 
 PowerPoint QA: `topics/06_substation/06_substation_powerpoint_qa.md`
 
