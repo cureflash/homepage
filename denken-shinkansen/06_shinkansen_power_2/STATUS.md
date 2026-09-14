@@ -4,27 +4,27 @@ updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `05`
 theme: 新幹線を再エネ主体で走らせるには？
-current_status: `topic_05_powerpoint_complete`
+current_status: `topic_05_independent_reanswer_complete`
 completed_topics: `4 / 22`
 
 ## Topic 05 current result
 
-解説画像PowerPointを作成し、`05_renewable_energy_explanation_source.md` の系列SPEC固定9項目と4可視化を同期した。16:9・5スライド。全スライド表示QA `5 / 5 PASS`、overflow `0件`、PPTX ZIP整合性PASS。固定EXAM_ALIGNMENT 5問28小問への接続、固定範囲、教材用仮定値表記を維持し、固定範囲外論点・未確認実設備値は追加していない。
+完成教材だけを使って、固定EXAM_ALIGNMENTの第二種一次「電力」4問＋二次「電力・管理」1問を完成後独立再解答した。解答確定後に公式解答・標準解答へ照合し、`5 / 5問、28 / 28小問 PASS`。教材外知識補完、固定範囲外追加、未確認実設備値依存はいずれも0件。固定EXAM_ALIGNMENTと対象範囲は変更していない。
 
 今回の成果物:
-- `topics/05_renewable_energy/05_renewable_energy_images.pptx`
-- `topics/05_renewable_energy/05_renewable_energy_powerpoint_qa.md`
-- PowerPoint: 16:9 `5スライド`
-- 表示QA: `5 / 5 PASS`
-- `slides_test.py`: `PASS / No overflow detected`
-- ZIP整合性: `PASS / No errors detected`
+- `topics/05_renewable_energy/05_renewable_energy_independent_reanswer.md`
+- 完成後独立再解答: `5 / 5問、28 / 28小問 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外知識追加: `0件`
+- 未確認実設備値依存: `0件`
 
 品質ゲート対象:
 - 正式選定: 一次4問＋二次1問 = `5問`
 - 制作前独立検証: `5 / 5問、28 / 28小問 PASS`
 - 練習問題QA: `15 / 15 PASS`
+- 完成後独立再解答: `5 / 5問、28 / 28小問 PASS`
 - 固定EXAM_ALIGNMENT 5問28小問への接続維持
-- 系列SPEC固定9項目・4可視化をPowerPointへ同期
+- 系列SPEC固定9項目・4可視化を維持
 - 教材外知識補完: `0件`
 - 固定範囲外知識追加: `0件`
 - 未確認実設備値追加: `0件`
@@ -45,10 +45,10 @@ R7二次問6(9)(10)の制度各論、一次「法規」の供給予備力問題�
 - [x] Topic 05 解説PDF `6 / 6ページ表示QA PASS`
 - [x] Topic 05 練習PDF `6 / 6ページ表示QA PASS`
 - [x] Topic 05 解説画像PowerPoint `5 / 5スライド表示QA PASS`
-- [ ] Topic 05 完成後独立再解答
+- [x] Topic 05 完成後独立再解答 `5 / 5問、28 / 28小問 PASS`
 - [ ] Topic 05 最終QA
 - [ ] Topic 05 completed
 
 ## next_start
 
-Topic 05の完成後独立再解答を行う。固定EXAM_ALIGNMENTの一次4問＋二次1問・28小問を、保存済み正答を先に見ず、完成教材だけで再解答する。教材外知識補完が1件でも必要ならPASSにしない。
+Topic 05の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT、正式5問28小問の独立再解答、練習15問、PDF/PPTX表示QA、固定範囲境界、進捗記録の整合を確認し、全件PASSの場合のみ `completed` とする。
