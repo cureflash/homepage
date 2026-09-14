@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-14
+更新日: 2026-09-15
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 6 / 22
-- current_status: `topic_07_powerpoint_complete`
+- current_status: `topic_07_waveforms_complete`
 - last_completed_topic: `06 誘導電動機の最大トルクはどこで出る？`
 - active_topic: `07 300系のPWMコンバータは何をしている？`
-- next_start: Topic 07のSPEC指定4波形（交流電圧・PWM電圧・交流側電流・DCリンク電圧）を成果物化し、表示・整合性QAを行う
+- next_start: Topic 07の固定5問・17小問を完成教材のみで独立再解答し、結果を記録する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -121,23 +121,31 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] SPEC指定4波形
+- [x] SPEC指定4波形
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 07「300系のPWMコンバータは何をしている？」の解説画像PowerPointを完成した。
+Topic 07「300系のPWMコンバータは何をしている？」のSPEC指定4波形を独立成果物化した。
+
+成果物:
+- `topics/07_300series_pwm_converter/07_pwm_converter_waveforms.py`
+- `topics/07_300series_pwm_converter/07_ac_voltage_waveform.svg`
+- `topics/07_300series_pwm_converter/07_pwm_voltage_waveform.svg`
+- `topics/07_300series_pwm_converter/07_ac_current_waveform.svg`
+- `topics/07_300series_pwm_converter/07_dc_link_voltage_waveform.svg`
+- `topics/07_300series_pwm_converter/07_pwm_converter_waveforms_qa.md`
 
 確認内容:
-- 16:9・4スライド
-- 全4スライド表示QA: `4 / 4 PASS`
-- overflow検査: PASS
-- ZIP整合性: PASS
-- PWMスイッチング／変調率、リアクトル・力率1・`I_P/I_Q`、DCリンク電圧条件、回生・高調波、固定過去問対応を可視化
-- 交流電圧・PWM電圧・交流側電流・DCリンク電圧は相互関係を概念表示したが、SPEC指定4波形の独立成果物化は未実施
+- SPEC指定4波形: 交流電圧／PWM電圧／交流側電流／DCリンク電圧を全件成果物化
+- 数値・論理QA: PASS
+- SVG XML整合性: `4 / 4 PASS`
+- 表示QA: `4 / 4 PASS`
+- 力率1概念例で交流電圧・交流側電流の同相性を確認
+- PWM描画用の変調率0.80・搬送波比20、DCリンク描画用2%リプルは仮定値として明示
 - 固定EXAM_ALIGNMENTは一次2問＋二次記述3問、計5問・17小問から変更なし
 - 未確認300系実車値の追加: 0件
 - MPPT、蓄電装置設計、昇圧コンバータ設計、能動フィルタ設計、Topic 08以降の固定範囲外論点追加: 0件
 
 ## 判定
-Topic 07は `topic_07_powerpoint_complete`。完成数は `6 / 22` のまま。次はSPEC指定4波形を成果物化し、表示・整合性QAを行う。
+Topic 07は `topic_07_waveforms_complete`。完成数は `6 / 22` のまま。次は固定5問・17小問を完成教材のみで独立再解答する。
