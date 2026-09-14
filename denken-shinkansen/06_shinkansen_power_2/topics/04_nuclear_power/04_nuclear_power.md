@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_04_source_spec_reinforcement_complete`
+`completed`
 
-最終QAで未収録と判定された系列SPECの2項目「効率を変えた場合の走行可能出力」「東京―佐世保間の必要走行エネルギーとの比較」を、固定範囲内の教材用仮定値だけで解説sourceへ補強した。正式選定5問、EXAM_ALIGNMENT、既存過去問解法は変更していない。既存の解説PDF・PowerPointは補強内容の同期前であり、次段階で更新する。
+系列SPECで要求された計算・可視化4項目、固定EXAM_ALIGNMENT、一次・二次の過去問対応、練習問題、PDF/PPTX表示QA、完成後独立再解答を確認し、最終QA再実施で全品質ゲートをPASSした。正式選定5問、EXAM_ALIGNMENT、既存過去問解法は変更していない。
 
 ## SPEC固定範囲
 
@@ -387,13 +387,14 @@ Bの出力―周波数傾きは
 - 解説本文＋3段階例題: 完了
 - 練習問題＋完全解説source: 完了
 - 練習15問独立QA: `15 / 15 PASS`
-- 解説PDF: 作成済み・表示QA PASS（今回のSPEC補強内容は未同期）
-- 練習PDF: 作成済み・表示QA PASS
-- PowerPoint: 作成済み・表示QA PASS（今回のSPEC補強内容は未同期）
+- 解説PDF: A4縦7ページ、200 dpi全7ページ表示QA `PASS`、系列SPEC補強同期済み
+- 練習PDF: A4縦7ページ、200 dpi全7ページ表示QA `PASS`
+- PowerPoint: 16:9・5枚、全5枚表示QA・overflow・ZIP整合性 `PASS`、系列SPEC補強同期済み
 - 完成後独立再解答: `5 / 5 PASS`
-- 最終QA: 実施済み、`NEEDS_REVISION`
-- 系列SPEC不足2項目の解説source補強: 完了
-- 進捗記録同期: 完了
-- Topic 04 completed: 未達
+- 最終QA再実施: `PASS`
+- 系列SPEC計算・可視化4項目: 全件収録
+- 固定範囲外追加: `0件`
+- 未確認実設備値追加: `0件`
+- Topic 04 completed: 完了
 
-次段階: 今回追加した系列SPEC2項目を解説PDF・解説画像PowerPointへ同期し、表示QAを行う。正式選定5問・EXAM_ALIGNMENT・既存過去問解法は変更しない。
+次段階: Topic 05「新幹線を再エネ主体で走らせるには？」の制作前EXAM_ALIGNMENTを実施する。
