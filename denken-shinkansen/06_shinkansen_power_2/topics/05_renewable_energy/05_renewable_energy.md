@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_05_source_progress_synced`
+`completed`
 
-解説本文＋3段階例題、練習問題＋完全解説source、練習問題独立QA `15 / 15 PASS`、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答 `5 / 5問・28 / 28小問 PASS` まで完了済み。最終QAは進捗記録不整合のみを理由に `NEEDS_REVISION` であり、本更新では教材本文・固定EXAM_ALIGNMENT・過去問選定・数式・問題・PDF/PPTX・固定範囲を変更しない。次工程は最終QA再実施とする。
+解説本文＋3段階例題、練習問題＋完全解説source、練習問題独立QA `15 / 15 PASS`、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答 `5 / 5問・28 / 28小問 PASS`、最終QA再実施まで完了済み。固定EXAM_ALIGNMENT、過去問選定、数式、問題、PDF/PPTX、固定範囲を変更せず、全品質ゲートをPASSした。
 
 ## SPEC固定範囲
 
@@ -428,4 +428,4 @@ https://www.shiken.or.jp/chief/upload/20150905_ch_second_a01.pdf
 - 未確認実設備値の追加: `0件`
 - 制作前独立検証: `5 / 5問、28 / 28小問 PASS`
 
-固定EXAM_ALIGNMENTと制作前独立検証結果は変更しない。解説本文・練習問題・PDF/PPTX・完成後独立再解答まで完了済みで、次工程は最終QA再実施とする。固定範囲外の制度各論、無効電力・電圧制御、FRT、同期安定度、経済負荷配分等を追加しない。
+固定EXAM_ALIGNMENTと制作前独立検証結果は変更しない。解説本文・練習問題・PDF/PPTX・完成後独立再解答まで完了済み。最終QA再実施で全件PASSを確認し、Topic 05を `completed` とする。次工程はTopic 06「275kVを受ける新幹線変電所の中身」の制作前EXAM_ALIGNMENT。固定範囲外の制度各論、無効電力・電圧制御、FRT、同期安定度、経済負荷配分等を追加しない。
