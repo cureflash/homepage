@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は最終QAまで実施したが、進捗記録不整合のため `NEEDS_REVISION / IN_PROGRESS`。
+Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は初回最終QAで検出された主source・練習sourceの進捗記録不整合を解消済み。最終QA再実施待ち。
 
 完成数: `6 / 21`
 
-current_status: `topic_07_final_qa_needs_revision`
+current_status: `topic_07_progress_records_synced`
 
 active_topic: `07 0系のモーターはなぜ力を出せる？`
 
-次工程: Topic 07の主source・練習sourceの旧進捗記録を現在地へ同期する。
+次工程: Topic 07の最終QAを再実施する。
 
 ## Topic 06 完了記録
 
@@ -119,29 +119,28 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 - PowerPoint overflow検査: PASS
 - PowerPoint ZIP整合性: PASS
 - 完成後独立再解答: `topics/07_motor_lorentz_force/07_motor_lorentz_force_independent_reanswer.md` 完了（固定5問・25小問 `25 / 25 PASS`）
-- 最終QA: `topics/07_motor_lorentz_force/07_motor_lorentz_force_final_qa.md` 実施済み（`NEEDS_REVISION / IN_PROGRESS`）
+- 初回最終QA: `topics/07_motor_lorentz_force/07_motor_lorentz_force_final_qa.md` 実施済み（`NEEDS_REVISION / IN_PROGRESS`）
 
-## Topic 07 最終QAで確認した残件
+## Topic 07 初回最終QAの残件と是正
 
-技術内容・試験対応・表示QAはPASS。未完了理由は進捗記録のみ。
+初回最終QAでは技術内容・試験対応・表示QAはPASSし、未完了理由は進捗記録のみだった。
 
-- 主source冒頭が「PDF・練習問題・PowerPoint・完成後独立再解答は未実施」のまま
-- 主sourceの固定品質ゲートが「完成後独立再解答: 未実施」のまま
-- 主sourceの次工程が「解説PDFを作成」のまま
-- 練習sourceの次工程が「解説画像PowerPoint作成」のまま
+- 主source冒頭の旧状態 → 同期済み
+- 主source固定品質ゲートの「完成後独立再解答: 未実施」 → `25 / 25 PASS` へ同期済み
+- 主source次工程の「解説PDFを作成」 → 最終QA再実施へ同期済み
+- 練習source次工程の「解説画像PowerPoint作成」 → 実績と最終QA再実施へ同期済み
 
-教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・成果物は変更せず、上記の進捗記録だけを現在地へ同期する必要がある。
+教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・成果物は変更していない。
 
 ## 今回の更新
 
-1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、Topic 07成果物を再照合。
-2. 固定一次5問・25小問の完成後独立再解答 `25 / 25 PASS`、二次非採用判断、固定範囲、表示QAを確認。
-3. 必須成果物の実在を確認。
-4. 主source・練習sourceに旧進捗記録が残ることを検出。
-5. 最終QAを `NEEDS_REVISION / IN_PROGRESS` と判定。
-6. 最終QA記録・STATUS・HANDOFFをGitHub正本へ反映。
-7. 完成数は `6 / 21` のまま。
+1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、直近のTheory2変更を確認。
+2. 既存のTopic 07成果物と初回最終QAをreconcileし、重複制作を回避。
+3. 初回最終QAで指摘された主source・練習sourceの進捗記録だけを現在地へ同期。
+4. 固定一次5問・25小問、二次非採用判断、固定範囲、教材本文、数式、例題、問題、正答、成果物は変更していない。
+5. STATUS・HANDOFFを `topic_07_progress_records_synced` へ更新。
+6. 完成数は `6 / 21` のまま。
 
 ## 次に行うこと
 
-Topic 07の主source・練習sourceの旧進捗記録を現在地へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、正答、成果物は変更しない。
+Topic 07の最終QAを再実施する。独立再解答 `25 / 25 PASS`、二次非採用判断、固定範囲、成果物・表示QA・進捗記録の相互整合を確認し、全品質ゲート通過時のみ `completed` とする。
