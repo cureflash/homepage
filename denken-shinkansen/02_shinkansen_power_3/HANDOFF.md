@@ -6,10 +6,10 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は4/16。Topic 01〜04は完成済み。active topicは05 `新幹線を再エネだけで走らせられる？`。
 
 ## 今回進捗
-Topic 05の解説本文＋3段階例題を完成した。制作前EXAM_ALIGNMENTで固定した5過去問は変更せず、要求知識・式・判断根拠を本文へ全件マッピングした。
+Topic 05の解説PDFを完成した。制作前EXAM_ALIGNMENTで固定した5過去問は変更せず、完成済み本文・主要数式・3段階例題・固定5過去問への対応をA4縦5ページへ収録した。200 dpiで全5ページをレンダリング確認し、文字欠け・重なり・ページ外はみ出しなしでPASS。SPEC固定範囲外の論点、未確認実車値は追加していない。
 
 更新対象:
-- `topics/05_renewable_energy/05_renewable_energy.md`
+- `topics/05_renewable_energy/05_renewable_energy_explanation.pdf`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -46,11 +46,11 @@ Topic 05の解説本文＋3段階例題を完成した。制作前EXAM_ALIGNMENT
 
 ### 範囲境界
 - R7上 電力 問5: バイオマス主題のため除外。
-- R6下 電力 問5: 地熱を含むが、完答にはバイオマス知識が必要なため除外。地熱自体はSPEC固定範囲として本文で扱う。
+- R6下 電力 問5: 地熱を含むが、完答にはバイオマス知識が必要なため除外。地熱自体はSPEC固定範囲として本文・PDFで扱う。
 - R5下 電力 問5: 太陽光・風力・燃料電池を含むが、小水力・洋上風力の直流送電まで要求するため除外。
 - R4下 電力 問5、H28 電力 問5: 固定範囲外の発電方式を含むため除外。
 
-## 完成した本文
+## 完成した解説本文・PDF
 - 太陽光: 直流出力、セル直列、パワーコンディショナ、日射・昼夜による変動
 - 風力: `P=(1/2)ρAv^3` の導出、`P∝v^3`、誘導発電機の滑り・励磁・系統並列・突入電流
 - 地熱: 地下の蒸気・熱水→タービン→発電機の基本構成
@@ -65,15 +65,22 @@ Topic 05の解説本文＋3段階例題を完成した。制作前EXAM_ALIGNMENT
 2. 標準 — 風速変化と `v^3` 出力比
 3. 複合 — 太陽光・仮定鉄道負荷・蓄電池の時間別需給
 
+解説PDF:
+- `topics/05_renewable_energy/05_renewable_energy_explanation.pdf`
+- A4縦5ページ
+- 200 dpi全ページ表示QA PASS
+- 固定5過去問の要求事項を収録
+- 仕様外論点追加0件
+
 ## Topic 04 完了状態
 Topic 04は `completed`。固定6過去問の完成後独立再解答6/6 PASS、最終QA PASS、教材外知識補完0件、仕様外追加0件。
 
 ## 現在状態
-- `current_status`: `topic_05_explanation_body_complete`
+- `current_status`: `topic_05_explanation_pdf_complete`
 - 完成数: `4/16`
 - last completed: Topic 04
 - active: Topic 05
-- Topic 05未着手: 解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA
+- Topic 05未着手: 練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA
 
 ## 次の正確な開始点
-`topics/05_renewable_energy/05_renewable_energy.md` を正本としてTopic 05の解説PDFを作成する。本文・数式・3段階例題・固定5過去問への対応をA4縦へ収録し、全ページ表示QAを行う。仕様外論点は追加しない。
+Topic 05の練習PDFを作成する。固定5過去問の要求事項を維持し、三種仕様どおり原則12問以上、本試験形式を中心に完全解説を付ける。完成後に全ページ表示QAを行う。SPEC固定範囲外の論点は追加しない。
