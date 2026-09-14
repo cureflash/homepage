@@ -4,14 +4,14 @@
 
 ## 現在地
 
-Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ新幹線は25,000Vなのか`、Topic 03 `架線はただの銅線ではない`、Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？`、Topic 05 `パンタグラフから入った電気はどこへ行く？` は最終QAまでPASSし、`completed`。
+Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ新幹線は25,000Vなのか`、Topic 03 `架線はただの銅線ではない`、Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？`、Topic 05 `パンタグラフから入った電気はどこへ行く？`、Topic 06 `0系の変圧器は何をしていた？` は最終QAまでPASSし、`completed`。
 
-Topic 06 `0系の変圧器は何をしていた？` は最終QAで検出された主sourceの進捗記録不整合を修正し、GitHub正本の現在地へ同期済み。過去問対応品質ゲート自体は固定5問 `5 / 5 PASS`。次は最終QA再実施。
+Topic 06は進捗記録同期後に最終QAを再実施し、必須成果物、固定EXAM_ALIGNMENT 5問、教材内マッピング、既存表示QA、SPEC境界、完成後独立再解答、進捗記録整合性を全件PASSした。完成後独立再解答は `5 / 5 PASS`、教材外知識補完・後続Topic知識依存・未確認0系実車値依存はいずれも0問。
 
-- 完成数: `5 / 14`
-- last completed: `05 パンタグラフから入った電気はどこへ行く？`
-- active topic: `06 0系の変圧器は何をしていた？`
-- current status: `topic_06_source_progress_synced`
+- 完成数: `6 / 14`
+- last completed: `06 0系の変圧器は何をしていた？`
+- active topic: `07 モーターはなぜ回る？`
+- current status: `topic_06_completed`
 - Topic 06 source: `topics/06_transformer_magnetics/06_transformer_magnetics.md`
 - Topic 06 explanation PDF: `topics/06_transformer_magnetics/06_transformer_magnetics_explanation.pdf`
 - Topic 06 practice source: `topics/06_transformer_magnetics/06_transformer_magnetics_practice.md`
@@ -22,25 +22,21 @@ Topic 06 `0系の変圧器は何をしていた？` は最終QAで検出され�
 
 ## 今回進捗
 
-Topic 06主source `06_transformer_magnetics.md` の進捗記録だけをGitHub正本の現在地へ同期した。
+Topic 06の最終QAを再実施し、`PASS / completed` とした。
 
-同期内容:
-- `status: PROGRESS_RECORD_SYNCED`
-- 完了判定は最終QA再実施前のため `未完了`
-- 解説PDF・練習PDF・PowerPoint完成を反映
-- 完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0問` を反映
-- 最終QAは `NEEDS_REVISION`（進捗記録不整合のみ）と反映
-- `次工程` を最終QA再実施へ更新
+確認結果:
+- 必須成果物: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 3段階例題・教材内マッピング: PASS
+- 練習15問・既存表示QA: PASS
+- 完成後独立再解答: `5 / 5 PASS`
+- 教材外知識補完: `0問`
+- 後続Topic知識への依存: `0問`
+- 未確認0系実車値への依存: `0問`
+- SPEC固定範囲・境界: PASS
+- source進捗記録整合性: PASS
 
-変更していないもの:
-- 教材本文
-- 固定EXAM_ALIGNMENT 5問
-- 数式
-- 3段階例題
-- SPEC固定範囲・境界
-- 既存PDF / PowerPoint
-
-完成数は `5 / 14` のまま。最終QAを再実施して全品質ゲートがPASSするまでTopic 06を `completed` としない。
+今回変更したのは主sourceの完了メタデータ、最終QA記録、STATUS、HANDOFFのみ。教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・PDF / PowerPoint内容は変更していない。
 
 ## Topic 06 固定範囲
 
@@ -79,7 +75,7 @@ V1 / V2 = N1 / N2
 
 ## Topic 06 境界確認
 
-- Topic 07の電磁力、導体に働く力、運動導体の誘導起電力、モータの回転原理を完成ゲートへ混在させない。
+- Topic 07の電磁力、導体に働く力、運動導体の誘導起電力、モータの回転原理をTopic 06完成ゲートへ混在させない。
 - Topic 08・09の正弦波、実効値、RLC、リアクタンス、インピーダンス、交流位相を追加しない。
 - Topic 10・11の力率、無効電力、三相交流、Y・Δを追加しない。
 - Topic 12・13の半導体、スイッチング、PWMを追加しない。
@@ -88,19 +84,7 @@ V1 / V2 = N1 / N2
 
 ## 次に行うこと
 
-Topic 06の最終QAを再実施する。
-
-確認対象:
-- 必須成果物の実在
-- 固定EXAM_ALIGNMENT 5問と教材マッピング
-- 完成後独立再解答 `5 / 5 PASS`
-- 教材外知識補完 `0問`
-- 後続Topic知識への依存 `0問`
-- 未確認0系実車値への依存 `0問`
-- SPEC固定範囲・境界
-- source進捗記録整合性
-
-教材本文・EXAM_ALIGNMENT・数式・3段階例題・成果物は変更しない。全件PASSした場合のみTopic 06を `completed` とする。
+Topic 07 `モーターはなぜ回る？` の制作前EXAM_ALIGNMENTを実施する。本文作成前に公式理論過去問を直近年度優先で調査し、系列SPEC固定範囲内のゲート対象を確定する。
 
 ## 固定ルール
 
