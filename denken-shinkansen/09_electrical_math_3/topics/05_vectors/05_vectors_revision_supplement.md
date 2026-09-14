@@ -99,14 +99,15 @@ R4上 理論 問4では、既存本文§5の `v⊥=v sinθ` とこの式を接�
 - 解説PDF `05_vectors_explanation.pdf`
 - 練習source `05_vectors_practice.md`
 - 練習PDF `05_vectors_practice.pdf`
+- 解説画像PowerPoint `05_vectors_images.pptx`
 
 練習は12問構成を維持し、問3・7・9・10だけを補強4点へ置換した。更新後PDFはA4縦4ページで、200 dpi全ページ表示QAを実施した。
 
-PowerPointへの補強同期は未実施。固定EXAM_ALIGNMENT、既存3段階例題、PASS済み2問は変更していない。仕様外論点・未確認新幹線実値の追加は0件。
+PowerPointは16:9・4枚構成を維持し、補強4点のみ必要最小限同期した。全4枚をレンダリング表示確認し、`slides_test.py` でオーバーフローなしを確認した。固定EXAM_ALIGNMENT、既存3段階例題、PASS済み2問は変更していない。仕様外論点・未確認新幹線実値の追加は0件。
 
 ## 7. 次工程
 
-補強4点をPowerPointへ必要最小限同期する。学習用成果物の同期完了後、保存済み正答を見ず固定6問を完成教材だけで再独立解答する。
+完成教材だけを使い、保存済み正答を見ず固定6問を再独立解答する。
 
 ## 公式問題
 
