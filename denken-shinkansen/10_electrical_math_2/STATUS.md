@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 4 / 20
-- current_status: `topic_05_source_progress_synced`
+- current_status: `topic_05_final_qa_recheck_needs_revision`
 - last_completed_topic: `04 微分による極値・最適条件`
 - active_topic: `05 積分によるエネルギー計算`
-- next_start: Topic 05最終QAを再判定し、source進捗記録整合を含む全品質ゲートを確認する。教材本文・EXAM_ALIGNMENT・数式・例題・固定範囲は変更しない
+- next_start: Topic 05 source Markdownの制作前再導出節末尾に残る未実施扱いの進捗表現1箇所を、完成後独立再解答16 / 16 PASS済みの現在地へ同期する。教材本文・EXAM_ALIGNMENT・数式・例題・固定範囲は変更しない
 
 ## Topic 05 制作品質ゲート
 
@@ -26,18 +26,26 @@
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 16 / 16 PASS
 - [x] 教材外知識補完 0件確認
-- [x] 最終QA実施
-- [x] source進捗記録整合
+- [x] 最終QA再判定
+- [ ] source進捗記録最終整合
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 05 `積分によるエネルギー計算` のsource Markdown進捗記録3箇所を実成果物の現在地へ同期した。
+Topic 05 `積分によるエネルギー計算` の最終QAを再判定した。
 
-修正:
-- 冒頭状態欄を、解説PDF・練習PDF・PowerPoint・完成後独立再解答・最終QAまで実施済みへ同期
-- 固定EXAM_ALIGNMENT対応表直後を、完成後独立再解答 `16 / 16 PASS`・教材外知識補完0件・固定範囲外追加0件へ同期
-- 末尾次工程を、最終QA再判定へ同期
+PASS:
+- 必須成果物実在
+- 固定EXAM_ALIGNMENT 一次5問＋二次1問、計6問・16対象項目
+- 二次試験直接対応1問
+- 完成後独立再解答 `16 / 16 PASS`
+- 教材外知識補完0件
+- 固定範囲外追加0件
+- SPEC境界
+- 解説PDF・練習PDF・PowerPointの表示QA
+- 前回指摘したsource旧進捗3箇所の同期
+
+再確認で、source Markdownの `制作前再導出・公式照合` 節末尾に「最終品質ゲートでは完成教材だけを使って改めて独立再解答する」という未実施扱いの文が1箇所残っていることを確認した。実際には完成後独立再解答 `16 / 16 PASS` 済みのため、進捗記録整合のみ `NEEDS_REVISION`。
 
 変更していないもの:
 - 教材本文
@@ -49,6 +57,6 @@ Topic 05 `積分によるエネルギー計算` のsource Markdown進捗記録3�
 
 ## 判定
 
-Topic 05は `IN_PROGRESS`。
+Topic 05は `NEEDS_REVISION / IN_PROGRESS`。
 
-source進捗記録整合は解消済み。完成数は `4 / 20` のまま。次工程は最終QA再判定。
+完成数は `4 / 20` のまま。次工程はsource Markdownの残存進捗表現1箇所の同期。
