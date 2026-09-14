@@ -6,11 +6,11 @@
 
 Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ新幹線は25,000Vなのか`、Topic 03 `架線はただの銅線ではない`、Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` は最終QAまでPASSし、`completed`。
 
-Topic 05 `パンタグラフから入った電気はどこへ行く？` は最終QAを実施したが、source Markdownの進捗記録不整合により `NEEDS_REVISION`。
+Topic 05 `パンタグラフから入った電気はどこへ行く？` は、前回最終QAで唯一FAILだったsource Markdownの進捗記録不整合を解消済み。次は最終QA再実施。
 
 - 完成数: `4 / 14`
 - active topic: `05 パンタグラフから入った電気はどこへ行く？`
-- current status: `topic_05_final_qa_needs_revision`
+- current status: `topic_05_source_progress_synced`
 - source: `topics/05_dc_network/05_dc_network.md`
 - explanation PDF: `topics/05_dc_network/05_dc_network_explanation.pdf`
 - practice source: `topics/05_dc_network/05_dc_network_practice.md`
@@ -21,22 +21,15 @@ Topic 05 `パンタグラフから入った電気はどこへ行く？` は最�
 
 ## 今回進捗
 
-Topic 05の最終QAを実施した。
+`05_dc_network.md` の進捗記録のみをGitHub正本の現在地へ同期した。
 
-PASS:
-- 必須成果物6点の実在
-- EXAM_ALIGNMENT 6問
-- 完成後独立再解答 `6 / 6`
-- 教材外知識補完 `0問`
-- 解説PDF・練習PDF・PowerPointの制作時表示QA
-- SPEC境界
+同期箇所:
+- 冒頭 `status`: `EXPLANATION_SOURCE_COMPLETE` → `PROGRESS_RECORD_SYNCED`
+- 冒頭説明: 後続成果物未実施の記録を、全成果物＋完成後独立再解答完了へ更新
+- 過去問対応節の進捗注記: 完成後独立再解答 `6 / 6 PASS`、教材外知識補完 `0問` を反映
+- 末尾 `次工程`: 解説PDF作成 → 最終QA再実施
 
-FAIL:
-- `05_dc_network.md` 冒頭が `status: EXPLANATION_SOURCE_COMPLETE` のまま
-- 冒頭説明が解説PDF・練習PDF・PowerPoint・完成後独立再解答を未実施と記録したまま
-- 末尾 `次工程` が「解説PDFを作成する」のまま
-
-教材内容・数式・過去問選定・成果物には今回変更を加えていない。
+教材本文の技術内容、EXAM_ALIGNMENT 6問、数式、3段階例題、PDF/PPTX成果物、SPEC固定範囲は変更していない。
 
 ## Topic 05 固定範囲
 
@@ -79,9 +72,17 @@ PL = Vth² RL / (Rth + RL)²
 
 ## 次に行うこと
 
-教材本文・EXAM_ALIGNMENT・数式・成果物は変更せず、`05_dc_network.md` の進捗記録だけをGitHub正本の現在地へ同期する。
+Topic 05の最終QAを再実施する。
 
-具体的には、冒頭を「完成後独立再解答まで完了・最終QAは進捗記録不整合によりNEEDS_REVISION」と整合させ、末尾 `次工程` を「進捗記録同期後に最終QAを再実施」へ更新する。その後に最終QAを再実施し、全件PASSの場合のみ `completed` とする。
+確認対象:
+- 必須成果物の実在
+- EXAM_ALIGNMENT 6問と教材内マッピング
+- 完成後独立再解答 `6 / 6 PASS` と教材外知識補完 `0問`
+- 解説PDF・練習PDF・PowerPointの表示QA記録
+- SPEC境界
+- source / STATUS / HANDOFF の進捗記録整合性
+
+全件PASSの場合のみTopic 05を `completed` とし、完成数を `5 / 14` へ進める。FAILがあれば内容を特定して `NEEDS_REVISION` のままとする。
 
 ## 固定ルール
 
