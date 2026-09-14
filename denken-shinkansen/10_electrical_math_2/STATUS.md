@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 5 / 20
-- current_status: `topic_06_exam_reanswer_complete`
+- current_status: `topic_06_final_qa_needs_revision`
 - last_completed_topic: `05 積分によるエネルギー計算`
 - active_topic: `06 微積分で新幹線の運転曲線を解析する`
-- next_start: Topic 06の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT 5問・15対象項目の完成後独立再解答 `15 / 15 PASS`、表示QA、SPEC範囲境界、進捗記録の整合を確認し、全件PASSの場合のみ `completed` とする
+- next_start: Topic 06 source Markdownの旧進捗2箇所だけを実成果物へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、PDF、PowerPointの技術内容は変更しない
 
 ## Topic 06 制作品質ゲート
 
@@ -28,26 +28,31 @@
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 15 / 15 PASS
-- [ ] 最終QA
+- [x] 最終QA
+- [ ] source進捗記録の同期
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 06 `微積分で新幹線の運転曲線を解析する` の完成後独立再解答を実施した。
+Topic 06 `微積分で新幹線の運転曲線を解析する` の最終QAを実施した。
 
 記録:
-`topics/06_calculus_train_curve/06_calculus_train_curve_exam_reanswer.md`
+`topics/06_calculus_train_curve/06_calculus_train_curve_final_qa.md`
 
-結果:
-- 固定EXAM_ALIGNMENT 一次4問＋二次1問、計5問・15対象項目を完成教材の式・解法から再導出
-- 一次4問 `14 / 14 PASS`
-- 二次1問 `1 / 1 PASS`
-- 合計 `15 / 15 PASS`
-- 公式解答・標準解答と全件一致
-- 教材外知識補完 0件
-- 固定範囲外追加 0件
-- 未確認実車値依存 0件
+確認結果:
+- 必須成果物: PASS
+- 固定EXAM_ALIGNMENT 一次4問＋二次1問、計5問・15対象項目: PASS
+- 完成後独立再解答: `15 / 15 PASS`
+- 教材外知識補完: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+- PDF / PowerPoint表示QA: PASS
+- source Markdown進捗記録と実成果物の整合: FAIL
+
+source Markdownに残る旧進捗:
+1. `## 状態` が「解説PDF以降は未着手」
+2. `## 次工程` が「解説PDFを作成する。練習PDF、PowerPoint、完成後独立再解答にはまだ進まない」
 
 ## 判定
 
-Topic 06は `exam_reanswer_complete`。完成数は `5 / 20` のまま。次は最終QA。
+Topic 06は `NEEDS_REVISION / IN_PROGRESS`。完成数は `5 / 20` のまま。次はsource Markdownの旧進捗2箇所だけを現在地へ同期する。
