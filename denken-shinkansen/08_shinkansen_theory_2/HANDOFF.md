@@ -4,23 +4,19 @@
 
 ## 現在地
 
-Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘導される？` は解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPointまで完了している。
+Topic 01〜06は `completed`。Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再々実施まで完了し、全品質ゲート `PASS / completed`。
 
-旧EXAM_ALIGNMENTの完成後独立再解答は `14 / 16 PASS / NEEDS_REVISION` となり、H30問2(4)(5)がTopic 05の磁気回路知識を前提とする不整合を検出した。このため固定範囲を増やさずH30を除外し、H21問2(2)(3)へ差し替えた。
+完成数: `6 / 21`
 
-修正版EXAM_ALIGNMENTの一次5問・16小問を完成教材だけで再度独立再解答し、`16 / 16 PASS`。教材外知識補完0件、二次数合わせ0件、固定範囲外論点追加0件。
+current_status: `topic_06_completed`
 
-初回最終QAで検出した練習sourceの旧H30選定は現行H21選定へ同期済み。2回目の最終QAでは技術内容・独立再解答・表示QA・SPEC境界・練習source同期はPASSしたが、主sourceの進捗記録だけが旧状態のため `NEEDS_REVISION / IN_PROGRESS` とした。今回、その主source進捗記録を現在地へ同期した。
+active_topic: `07 0系のモーターはなぜ力を出せる？`
 
-完成数: `5 / 21`
-
-current_status: `topic_06_source_progress_synced`
-
-active_topic: `06 25kVからどうやって電圧が誘導される？`
+次工程: Topic 07の制作前EXAM_ALIGNMENT。
 
 ## Topic 06 固定範囲
 
-系列SPECどおり、次だけを扱う。
+系列SPECどおり、次だけを扱った。
 
 - ファラデーの法則
 - レンツの法則
@@ -30,7 +26,7 @@ active_topic: `06 25kVからどうやって電圧が誘導される？`
 - 結合係数
 - 磁気エネルギー
 
-中心式は `e = -N dΦ/dt`。磁界・磁気回路そのものはTopic 05、電磁力・トルクはTopic 07、フェーザ・交流回路は後続Topicへ譲る。変圧器等価回路等も追加しない。
+中心式は `e = -N dΦ/dt`。磁界・磁気回路そのものはTopic 05、電磁力・トルクはTopic 07、フェーザ・交流回路は後続Topicへ譲る。変圧器等価回路等も追加していない。
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 
@@ -42,26 +38,11 @@ active_topic: `06 25kVからどうやって電圧が誘導される？`
 - H28 問1 (3)(5): `Ψ=Li`、`W=Li²/2`。公式解答 `ヨ / ル`
 - H21 問2 (2)(3): 同一磁路で `L∝N²`、`M∝N1N2`。公式解答 `ヨ / ヘ`
 
-H30問2(4)(5)は旧選定から除外済み。3枝磁気回路の合成磁気抵抗・磁束分流を前提とし、Topic 05依存となるためである。H21問2(2)(3)は共通磁気抵抗が比で消え、Topic 06の自己・相互インダクタンスだけで完結する。
+旧H30問2(4)(5)は3枝磁気回路の合成磁気抵抗・磁束分流を前提としてTopic 05依存になるため除外。固定範囲を増やさずH21問2(2)(3)へ差し替えた。
 
-R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認済みだが、Topic 06固定範囲だけで直接解かせる問題は確認できていない。`08 理論・二種` は一次理論中心のため、二次問題を数合わせで追加しない。
+R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認済みだが、Topic 06固定範囲だけで直接解かせる問題は確認できない。`08 理論・二種` は一次理論中心のため、二次問題を数合わせで追加していない。
 
-## Topic 06 教材内容
-
-- `Ψ=NΦ` と `e=-dΨ/dt=-N dΦ/dt`
-- レンツ則の負号と基準方向
-- 自己インダクタンス `Ψ=Li`
-- 一定 `L` の `e=-Ldi/dt` と、位置依存時の `e=-d(Li)/dt`
-- 抵抗ゼロ短絡コイルの鎖交磁束保存 `L(0)I=L(x)i`
-- 相互インダクタンス、`M0=k√(L1L2)`、`0<=k<=1`
-- 同一磁路で `L∝N²`、`M∝N1N2`
-- 2巻線の磁気エネルギー `W=1/2 L1i1² + 1/2 L2i2² ± Mi1i2`
-- `M(θ)=M0cosθ` の鎖交磁束・誘導起電力。トルクは扱わない
-- 移動コイルの `e=-(dΨ/dl)v`
-- 単一コイルの磁気エネルギー `W=Li²/2=Ψ²/(2L)`
-- 0系主変圧器は電磁誘導の導入例に限定し、未確認実車値・等価回路・フェーザへ広げない
-
-## 成果物
+## Topic 06 成果物
 
 - source: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction.md`
 - 練習source: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_practice.md`
@@ -71,45 +52,27 @@ R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認済
 - 独立再解答記録: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_independent_reanswer.md`
 - 最終QA記録: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_final_qa.md`
 
-## 修正版独立再解答
+## Topic 06 最終品質ゲート
 
-- R7: `4 / 4 PASS`
-- R5: `3 / 3 PASS`
-- R2: `5 / 5 PASS`
-- H28: `2 / 2 PASS`
-- H21: `2 / 2 PASS`
-- 合計: `16 / 16 PASS`
+- 修正版一次5問・16小問: `16 / 16 PASS`
 - 教材外知識補完: 0件
 - 二次数合わせ: 0件
 - 固定範囲外論点追加: 0件
-
-## 最終QA再実施
-
-直近判定: `NEEDS_REVISION / IN_PROGRESS`
-
-PASS:
-- 必須成果物
-- 修正版一次5問・16小問の独立再解答
-- 練習sourceのH21選定同期
-- 二次非採用判断
-- SPEC境界
-- 表示QA・計算QA
-
-前回要修正だった主source進捗記録は今回同期済み。教材本文・EXAM_ALIGNMENT・問題・正答・固定範囲は変更していない。
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- 練習12問の正答一意性・独立再計算: `12 / 12 PASS`
+- 主source・練習source・独立再解答記録・最終QA記録の相互整合: PASS
+- 最終判定: `PASS / completed`
 
 ## 今回の更新
 
-1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06主sourceを再照合。
-2. 主source冒頭の `最終QAは未着手` を現在地へ同期。
-3. 制作段階判定の `最終QA: 未実施` と旧判定 `topic_06_independent_reanswer_complete` を現在地へ同期。
-4. 主sourceの次工程を最終QA再々実施へ更新。
-5. 教材本文・EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTX・固定範囲は変更していない。
+1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS、HANDOFF、Topic 06成果物を再照合。
+2. Topic 06最終QAを再々実施し、前回までの進捗記録不整合が解消済みであることを確認。
+3. Topic 06主sourceと最終QA記録を `completed` へ同期。
+4. STATUS / HANDOFFの完成数を `6 / 21` へ更新。
+5. 教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTX・固定範囲は変更していない。
 
 ## 次に行うこと
 
-Topic 06の最終QAを再々実施する。
+Topic 07 `0系のモーターはなぜ力を出せる？` の制作前EXAM_ALIGNMENTを実施する。
 
-1. 主source・練習source・独立再解答記録・最終QA記録・実在成果物の相互整合を確認する。
-2. 修正版一次5問・16小問 `16 / 16 PASS` と二次非採用判断を維持できることを確認する。
-3. SPEC境界、表示QA、教材外知識補完0件、二次数合わせ0件を確認する。
-4. 全件PASSの場合のみTopic 06を `completed` とし、完成数を `6 / 21` に進める。
+系列SPECの固定範囲は、ローレンツ力、`F=q(v×B)`、`F=BIl`、電子の運動、電界中・磁界中の荷電粒子、円運動、電子の比電荷。直流機そのものの特性は機械編へ譲り、仕様外論点を追加しない。
