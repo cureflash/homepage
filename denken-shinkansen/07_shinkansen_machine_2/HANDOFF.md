@@ -4,13 +4,13 @@
 
 ## 現在地
 
-Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の直流主電動機はどんな特性だった？`、Topic 03 `0系を210km/hまで加速させる`、Topic 04 `200系のサイリスタ制御を計算する`、Topic 05 `300系の誘導電動機を等価回路で解く`、Topic 06 `誘導電動機の最大トルクはどこで出る？` は最終QAまでPASSし、`completed`。
+Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の直流主電動機はどんな特性だった？`、Topic 03 `0系を210km/hまで加速させる`、Topic 04 `200系のサイリスタ制御を計算する`、Topic 05 `300系の誘導電動機を等価回路で解く`、Topic 06 `誘導電動機の最大トルクはどこで出る？`、Topic 07 `300系のPWMコンバータは何をしている？` は最終QAまでPASSし、`completed`。
 
-完成数: `6 / 22`
+完成数: `7 / 22`
 
-active topic: `07 300系のPWMコンバータは何をしている？`
+active topic: `08 VVVFインバータで三相交流を作る`
 
-current status: `topic_07_source_progress_synced`
+current status: `topic_07_completed`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
@@ -150,41 +150,30 @@ PowerPoint:
 - 固定範囲外論点の追加: 0件
 - 未確認300系実車値の追加: 0件
 
-## Topic 07 最終QA
+## Topic 07 最終QA完了
 
 成果物:
 `topics/07_300series_pwm_converter/07_300series_pwm_converter_final_qa.md`
 
-直前判定: `NEEDS_REVISION / IN_PROGRESS`。
+判定: `PASS / completed`。
 
-PASS:
-- 必須成果物
-- 固定EXAM_ALIGNMENT 一次2問＋二次記述3問、計5問・17小問
-- 完成後独立再解答 `17 / 17 PASS`
-- SPEC指定4波形QA
-- 固定範囲外論点の追加0件
-- 未確認300系実車値の真値化0件
-
-直前FAILだったsource Markdown進捗記録2箇所は今回同期済み。
-
-## Topic 07 source進捗記録同期完了
-
-`topics/07_300series_pwm_converter/07_300series_pwm_converter.md` の進捗記録のみを現在地へ同期した。
-
-- 冒頭「状態」: 完成後独立再解答 `17 / 17 PASS`・最終QA `NEEDS_REVISION` へ更新
-- 末尾「次工程」: 最終QA再実施へ更新
-- 教材本文・固定EXAM_ALIGNMENT・数式・例題は変更なし
-- PDF/PPTX/波形成果物は変更なし
+- 必須成果物: PASS
+- 固定EXAM_ALIGNMENT 一次2問＋二次記述3問、計5問・17小問: PASS
+- 完成後独立再解答: `17 / 17 PASS`
+- SPEC指定4波形QA: PASS
+- source Markdown進捗整合: PASS
 - 固定範囲外論点の追加: 0件
-- 未確認300系実車値の追加: 0件
+- 未確認300系実車値の真値化: 0件
 
-Topic 07はまだ `completed` にしない。
+前回 `NEEDS_REVISION` の唯一の理由だったsource Markdown旧進捗記録2箇所は解消済み。教材本文・固定EXAM_ALIGNMENT・数式・例題・成果物は変更せず、進捗記録のみ現在地へ同期した。
 
 ## 次に行うこと
 
-Topic 07の最終QAを再実施する。
+Topic 08 `VVVFインバータで三相交流を作る` の制作前EXAM_ALIGNMENTを行う。
 
-- source Markdown進捗整合を再確認
-- 固定5問・17小問の `17 / 17 PASS` を維持確認
-- 必須成果物・4波形QA・仕様境界を再確認
-- 全品質ゲートPASSの場合のみ `completed` にする
+- `SPEC.md` 第8章の固定範囲を確認
+- 公式過去問を直近年度から調査し、一次・二次合わせ原則5問以上を選定
+- 二次試験に直接対応する記述問題が確認できる場合は最低1問含める
+- 混合問題はTopic 08固定範囲へ直接対応する小問だけをゲート対象にする
+- 固定範囲外論点による件数合わせをしない
+- source Markdownへ制作前EXAM_ALIGNMENTを記録してから本文制作へ進む
