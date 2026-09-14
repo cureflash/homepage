@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 5 / 16
-- current_status: `topic_06_powerpoint_complete`
+- current_status: `topic_06_independent_reanswer_complete`
 - last_completed_topic: `05 新幹線を再エネだけで走らせられる？`
 - active_topic: `06 275,000Vをどうやって25,000Vにする？`
-- next_start: Topic 06の完成教材だけで固定5過去問を独立再解答し、教材外知識補完がないことを確認する
+- next_start: Topic 06のsourceへ完成後独立再解答 `5 / 5 PASS` を同期し、その後に最終QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
@@ -16,7 +16,7 @@
 - [x] 03 JR東日本はなぜ火力発電所まで持っている？ — EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QA PASS
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、最終QA PASS
 - [x] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問、必須成果物、表示QA、修正版教材での独立再解答5/5 PASS、教材外知識補完0件、SPEC境界を最終QAで確認し `completed`
-- [ ] 06 275,000Vをどうやって25,000Vにする？ — 制作前EXAM_ALIGNMENT・固定5過去問の制作前独立検証5/5 PASS、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPointまで完了。次は完成後独立再解答
+- [ ] 06 275,000Vをどうやって25,000Vにする？ — 制作前EXAM_ALIGNMENT・固定5過去問の制作前独立検証5/5 PASS、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答5/5 PASSまで完了。次はsource同期後に最終QA
 - [ ] 07〜16 — 未完了
 
 ## Topic 05 完了記録
@@ -50,6 +50,7 @@ source: `topics/06_substation/06_substation.md`
 練習PDF: `topics/06_substation/06_substation_practice.pdf`
 解説画像PowerPoint: `topics/06_substation/06_substation_images.pptx`
 PowerPoint QA: `topics/06_substation/06_substation_powerpoint_qa.md`
+独立再解答: `topics/06_substation/06_substation_independent_reanswer.md`
 
 固定5過去問:
 - R7下 電力 問6 — 避雷器 — `(1)` PASS
@@ -66,7 +67,9 @@ PowerPoint QA: `topics/06_substation/06_substation_powerpoint_qa.md`
 
 解説画像PowerPointは16:9・4枚。固定5過去問の要求事項を全件可視化し、全4枚表示QA、`slides_test.py` による境界外はみ出し検査、PPTX ZIP整合性をPASS。固定範囲外論点・未確認実値の追加は0件。
 
+完成後独立再解答は `(1), (4), (1), (4), (5)` で公式解答と `5 / 5` 一致。教材のみ完結 `5 / 5`、教材外知識補完 `0件`、固定範囲外追加 `0件`。
+
 SPEC固定範囲は変電所、変圧器、母線、遮断器、断路器、計器用変成器、避雷器、保護リレー、受電電圧、き電電圧。GIS、調相設備、短絡電流・遮断容量・%インピーダンス計算、配電線詳細保護、三相→単相変換方式等は追加していない。
 
 ## 次
-Topic 06「275,000Vをどうやって25,000Vにする？」の完成教材だけを使い、固定5過去問を保存済み正答を見ずに独立再解答する。教材外知識補完が1件でもあればFAILとする。
+Topic 06 sourceの状態・EXAM_ALIGNMENT・次工程へ完成後独立再解答 `5 / 5 PASS` を同期する。教材本文・固定5過去問・SPEC境界は変更しない。同期後に最終QAを行う。
