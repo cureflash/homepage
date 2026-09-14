@@ -1,17 +1,17 @@
 # HANDOFF - 新幹線・電験三種「理論」
 
-更新日: 2026-09-14
+更新日: 2026-09-15
 
 ## 現在地
 
 Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ新幹線は25,000Vなのか`、Topic 03 `架線はただの銅線ではない`、Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？`、Topic 05 `パンタグラフから入った電気はどこへ行く？` は最終QAまでPASSし、`completed`。
 
-Topic 06 `0系の変圧器は何をしていた？` は最終QAを実施したが、主sourceの進捗記録不整合により `NEEDS_REVISION`。過去問対応品質ゲート自体は固定5問 `5 / 5 PASS`。
+Topic 06 `0系の変圧器は何をしていた？` は最終QAで検出された主sourceの進捗記録不整合を修正し、GitHub正本の現在地へ同期済み。過去問対応品質ゲート自体は固定5問 `5 / 5 PASS`。次は最終QA再実施。
 
 - 完成数: `5 / 14`
 - last completed: `05 パンタグラフから入った電気はどこへ行く？`
 - active topic: `06 0系の変圧器は何をしていた？`
-- current status: `topic_06_final_qa_needs_revision`
+- current status: `topic_06_source_progress_synced`
 - Topic 06 source: `topics/06_transformer_magnetics/06_transformer_magnetics.md`
 - Topic 06 explanation PDF: `topics/06_transformer_magnetics/06_transformer_magnetics_explanation.pdf`
 - Topic 06 practice source: `topics/06_transformer_magnetics/06_transformer_magnetics_practice.md`
@@ -22,30 +22,25 @@ Topic 06 `0系の変圧器は何をしていた？` は最終QAを実施した�
 
 ## 今回進捗
 
-Topic 06の最終QAを実施した。
+Topic 06主source `06_transformer_magnetics.md` の進捗記録だけをGitHub正本の現在地へ同期した。
 
-PASS項目:
-- 必須成果物の実在
-- 固定EXAM_ALIGNMENT 5問と教材マッピング
-- 完成後独立再解答 `5 / 5 PASS`
-- 教材外知識補完 `0問`
-- 後続Topic知識への依存 `0問`
-- 未確認0系実車値への依存 `0問`
-- Topic 06固定範囲と境界
+同期内容:
+- `status: PROGRESS_RECORD_SYNCED`
+- 完了判定は最終QA再実施前のため `未完了`
+- 解説PDF・練習PDF・PowerPoint完成を反映
+- 完成後独立再解答 `5 / 5 PASS`、教材外知識補完 `0問` を反映
+- 最終QAは `NEEDS_REVISION`（進捗記録不整合のみ）と反映
+- `次工程` を最終QA再実施へ更新
 
-FAIL項目:
-- `06_transformer_magnetics.md` の進捗記録整合性
+変更していないもの:
+- 教材本文
+- 固定EXAM_ALIGNMENT 5問
+- 数式
+- 3段階例題
+- SPEC固定範囲・境界
+- 既存PDF / PowerPoint
 
-主sourceは現在も、
-- `status: EXPLANATION_SOURCE_COMPLETE`
-- 「完成後独立再解答は未実施」
-- `完成後独立再解答: 未実施`
-- `最終QA: 未実施`
-- 次工程「解説PDFを作成する」
-
-となっている。一方GitHub正本には解説PDF、練習PDF、PowerPoint、独立再解答 `5 / 5 PASS` が存在する。
-
-したがって最終判定は `NEEDS_REVISION / in_progress`。完成数は増やさない。
+完成数は `5 / 14` のまま。最終QAを再実施して全品質ゲートがPASSするまでTopic 06を `completed` としない。
 
 ## Topic 06 固定範囲
 
@@ -93,23 +88,19 @@ V1 / V2 = N1 / N2
 
 ## 次に行うこと
 
-Topic 06主source `06_transformer_magnetics.md` の進捗記録だけをGitHub正本の現在地へ同期する。
+Topic 06の最終QAを再実施する。
 
-変更対象:
-- 冒頭 `status`
-- 完了判定説明
-- 完成後独立再解答の状態
-- 最終QAの状態
-- `次工程`
-
-変更しないもの:
-- 教材本文
-- 固定EXAM_ALIGNMENT 5問
-- 数式
-- 3段階例題
+確認対象:
+- 必須成果物の実在
+- 固定EXAM_ALIGNMENT 5問と教材マッピング
+- 完成後独立再解答 `5 / 5 PASS`
+- 教材外知識補完 `0問`
+- 後続Topic知識への依存 `0問`
+- 未確認0系実車値への依存 `0問`
 - SPEC固定範囲・境界
+- source進捗記録整合性
 
-同期後に最終QAを再実施し、PASSするまで `completed` としない。
+教材本文・EXAM_ALIGNMENT・数式・3段階例題・成果物は変更しない。全件PASSした場合のみTopic 06を `completed` とする。
 
 ## 固定ルール
 
