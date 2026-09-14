@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 7 / 16
-- current_status: `topic_08_exam_alignment_complete`
+- current_status: `topic_08_explanation_source_complete`
 - last_completed_topic: `07 GTO→IGBT→SiCで何が変わった？`
 - active_topic: `08 N700Sのモーターはなぜ小さくできた？`
-- next_start: Topic 08の解説本文＋3段階例題を作成する。固定EXAM_ALIGNMENT 4問・5小問を全件本文へ接続し、N700S実車記述はJR東海・メーカー一次資料で確認した事項だけを使う
+- next_start: Topic 08の解説PDFを作成する。完成済み本文・3段階例題・固定EXAM_ALIGNMENT 4問・5小問のマッピングを同期し、A4縦で全ページ表示QA・文字抽出QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -18,7 +18,7 @@
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
 - [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
-- [ ] 08 N700Sのモーターはなぜ小さくできた？ — 制作前EXAM_ALIGNMENT完了 / 制作中
+- [ ] 08 N700Sのモーターはなぜ小さくできた？ — 解説本文＋3段階例題完了 / 制作中
 - [ ] 09〜16 — 未完了
 
 ## Topic 08 EXAM_ALIGNMENT
@@ -54,7 +54,7 @@
 - `Ns = 120f / P`
 - 4極と6極の同期速度・必要周波数比較
 
-実車での小型軽量化理由はJR東海・メーカー一次資料に基づく。現段階ではN700S主電動機の極数、回転速度、質量、寸法、削減率等を推測しない。単純に「6極にすれば小さくなる」と一般化しない。
+実車記述はJR東海・メーカー一次資料に基づく。N700Sでは新幹線初の6極駆動モーター、4極から6極への変更、小型軽量化、N700A比で1台車当たり約140 kgの軽量化、SiC素子使用主変換装置を一次資料で確認済み。確認できていない主電動機回転速度・寸法等は推測しない。単純に「6極にすれば小さくなる」と一般化しない。
 
 ## Topic 08 成果物・品質状態
 ### 解説source
@@ -63,8 +63,11 @@
 - 制作前EXAM_ALIGNMENT完成
 - 公式過去問4問・5小問を固定
 - 制作前検証 `5 / 5 PASS`
+- 解説本文＋3段階例題完成
+- 固定4問・5小問の本文マッピング `4問・5小問 / 全件`
+- JR東海・メーカー一次資料で6極化・小型軽量化・SiC主変換装置を確認
 - 固定範囲外知識による補完 `0件`
-- 仕様外論点追加 `0件`
+- 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
 
 ## Topic 07 EXAM_ALIGNMENT
