@@ -6,11 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は27/38。01〜27がPASS。active topicは28 `空調・電熱`。
 
 ## 今回進捗
-Topic 28 `空調・電熱` の制作前EXAM_ALIGNMENTを完了した。系列SPEC固定範囲 `空調、電熱、ジュール熱、熱量、電力、効率` だけで完結する公式過去問5問・10小問を固定し、保存済み正答を先に見ずに独立計算した後、電気技術者試験センター公式解答と照合した。結果は `10 / 10 PASS`。仕様外論点・未確認実車値の追加は0件。
+Topic 28 `空調・電熱` の解説本文＋3段階例題を完成した。制作前に固定済みの公式過去問5問・10小問から逆算した要求事項を、§1〜§15と例題へ全件マッピングした。解法は`加熱過程→質量・温度差→必要熱量→効率/COP→電力・時間→単位・桁の検算`で統一。仕様外論点・未確認実車値の追加は0件。
 
 更新:
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating.md` — EXAM_ALIGNMENT、制作前独立解答、範囲境界、教材要求事項を新規作成
-- `STATUS.md` — `topic_28_exam_alignment_complete`へ更新
+- `topics/28_air_conditioning_heating/28_air_conditioning_heating.md` — §1〜§15、3段階例題、過去問要求事項マッピングを追加
+- `STATUS.md` — `topic_28_explanation_source_complete`へ更新
 - `HANDOFF.md`
 
 ## Topic 28 品質ゲート対象
@@ -49,6 +49,14 @@ Topic 28 `空調・電熱` の制作前EXAM_ALIGNMENTを完了した。系列SPE
 - `1 kW=1 kJ/s`、`1 kWh=3.6 MJ`、時間・熱量の単位換算
 - 加熱対象・過程→質量・温度差→熱量→効率/COP→電力・時間→検算の解法順序
 
+## Topic 28 解説本文
+- §1〜§15を完成
+- §2〜§12で固定5問・10小問の要求事項を全件カバー
+- 例題1: `100 V`、`10 Ω`、`5 min`から`Q=300 kJ`を求めるジュール熱基礎
+- 例題2: `5 kg`の氷の融解＋水の顕熱を加算し、熱効率`70 %`、`2.0 kW`から`約32.4 min`を逆算
+- 例題3: 水`0.300 m^3`を質量換算し、`Q=mcΔT`、COP`4.0`、`1.5 kW`から`約2.61 h`を逆算
+- 新幹線車内空調・電熱は一般的な電力負荷として接続するだけに留め、未確認の容量・COP・電圧・消費電力・設定温度等は真値化していない
+
 ## Topic 28 範囲境界
 追加しない:
 - 熱伝導率、熱抵抗、熱流、対流、放射伝熱
@@ -67,14 +75,14 @@ Topic 28 `空調・電熱` の制作前EXAM_ALIGNMENTを完了した。系列SPE
 - R3 機械 問17 — 放射伝熱・熱抵抗
 
 ## 現在の状態
-- `current_status`: `topic_28_exam_alignment_complete`
+- `current_status`: `topic_28_explanation_source_complete`
 - 完成数: 27/38
 - 01〜27: PASS
 - active topic: 28 `空調・電熱`
-- Topic 28: EXAM_ALIGNMENT PASS / 教材制作未完了
+- Topic 28: EXAM_ALIGNMENT PASS / 解説本文＋3段階例題完成 / PDF以降未着手
 
 ## 次の正確な開始点
-Topic 28の解説本文＋3段階例題を作成する。固定EXAM_ALIGNMENT 5問・10小問の要求事項を本文各節へ全件マッピングし、固定範囲外論点・未確認実車値を追加しない。
+Topic 28の解説PDFを作成する。§1〜§15、3段階例題、固定5問・10小問への対応を収録し、全ページ表示QAを行う。固定範囲外論点・未確認実車値を追加しない。
 
 ## 直前完了 Topic 27
 Topic 27 `補助電源② 車内照明` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。選定5問・8小問は完成後も`8 / 8 PASS`で`COMPLETED`。
