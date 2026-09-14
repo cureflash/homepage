@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `07 300系のPWMコンバータは何をしている？`
 
-current status: `topic_07_independent_reanswer_complete`
+current status: `topic_07_final_qa_needs_revision`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
@@ -150,8 +150,32 @@ PowerPoint:
 - 固定範囲外論点の追加: 0件
 - 未確認300系実車値の追加: 0件
 
+## Topic 07 最終QA
+
+成果物:
+`topics/07_300series_pwm_converter/07_300series_pwm_converter_final_qa.md`
+
+判定: `NEEDS_REVISION / IN_PROGRESS`。
+
+PASS:
+- 必須成果物
+- 固定EXAM_ALIGNMENT 一次2問＋二次記述3問、計5問・17小問
+- 完成後独立再解答 `17 / 17 PASS`
+- SPEC指定4波形QA
+- 固定範囲外論点の追加0件
+- 未確認300系実車値の真値化0件
+
+FAIL:
+- source Markdown進捗記録の整合
+  - 冒頭「状態」に `完成後独立再解答と最終QAは未実施` が残存
+  - 末尾「次工程」が完成後独立再解答のまま残存
+
+技術内容やEXAM_ALIGNMENTの不足ではなく、進捗記録のみの不整合である。Topic 07はまだ `completed` にしない。
+
 ## 次に行うこと
 
-Topic 07の最終QAを実施する。
+Topic 07 source Markdownの旧進捗記録2箇所を現在地へ同期する。
 
-固定5問・17小問の独立再解答結果、必須成果物、表示QA、source進捗整合、SPEC固定範囲を確認し、品質ゲートの最終判定を行う。
+- 冒頭「状態」を、完成後独立再解答 `17 / 17 PASS`・最終QA `NEEDS_REVISION` に更新
+- 末尾「次工程」を、source進捗同期後の最終QA再実施へ更新
+- 教材本文、固定EXAM_ALIGNMENT、数式、例題、PDF/PPTX/波形成果物は変更しない
