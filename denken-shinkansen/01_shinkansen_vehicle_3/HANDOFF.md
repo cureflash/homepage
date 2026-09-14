@@ -6,12 +6,12 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は29/38。01〜29がPASS。active topicは30 `ATC① 新幹線は列車をどう検知する？`。
 
 ## 今回進捗
-Topic 30の解説画像PowerPointを完成した。16:9・4枚で、軌道回路の列車なし/あり、車軸短絡による受信側状態変化、直列・並列・分圧・短絡、固定EXAM_ALIGNMENT 5問の解法経路、再利用可能な解法アルゴリズムを固定範囲内で可視化した。全4枚表示QA PASS、ZIP整合性PASS。Topic 31・32への範囲拡張、未確認実車値追加はいずれも0件。
+Topic 30の完成後独立再解答を実施した。固定EXAM_ALIGNMENT 5問を、完成教材に収録済みのオームの法則、直列・並列合成、分圧、枝電流、開放・短絡、スイッチ状態ごとの等価回路化だけで再導出し、`5 / 5 PASS`。教材外知識補完、Topic 31・32への範囲拡張、未確認実車値追加はいずれも0件。最終QA判定は次工程とする。
 
 更新:
-- `topics/30_atc_train_detection/30_atc_train_detection_images.pptx` — 16:9・4枚、固定5問の解法経路を可視化、表示QA・ZIP整合性PASS
-- `STATUS.md` — `topic_30_powerpoint_complete` へ更新
-- `HANDOFF.md` — 次開始点をTopic 30完成後独立再解答へ更新
+- `topics/30_atc_train_detection/30_atc_train_detection_final_qa.md` — 完成後独立再解答 `5 / 5 PASS` を記録。最終QAは未実施
+- `STATUS.md` — `topic_30_independent_reanswer_complete` へ更新
+- `HANDOFF.md` — 次開始点をTopic 30最終QAへ更新
 
 ## Topic 30 固定EXAM_ALIGNMENT
 1. R8上 理論 問7 — 並列抵抗の電圧・電流から未知抵抗式を導出 — `4` — PASS
@@ -20,19 +20,18 @@ Topic 30の解説画像PowerPointを完成した。16:9・4枚で、軌道回路
 4. R5下 理論 問7 — 切換スイッチ3状態の電流から未知抵抗を求める — `5` — PASS
 5. H27 理論 問6 — スイッチ開閉前後で全電流が同じ条件から未知抵抗を求める — `2` — PASS
 
-制作前独立解答: `5 / 5 PASS`。公式解答との不一致0件。
+制作前独立解答: `5 / 5 PASS`。
+完成後独立再解答: `5 / 5 PASS`。
+公式解答との不一致0件。教材外知識補完0件。
 
-## PowerPoint完成内容
-- 16:9、4スライド
-- Slide 1: 軌道回路の列車なし/ありと車軸短絡による受信側電気状態の変化
-- Slide 2: オームの法則、直列・並列、開放・短絡、分圧・枝電流
-- Slide 3: 固定5過去問それぞれの解法経路と共通する等価回路読み替え
-- Slide 4: `回路状態を読む → 開放/短絡/並列枝を反映 → 合成抵抗/分圧 → 電圧・電流 → 状態比較` の再利用手順と固定範囲境界
-- 固定5問要求事項: `5 / 5` 可視化
-- 表示QA: `4 / 4 PASS`
-- ZIP整合性: PASS
-- 固定範囲外論点追加: 0件
-- 未確認実車値追加: 0件
+## 完成後独立再解答
+- R8上 理論 問7: `I=V/R+V/Rx` から `Rx=VR/(IR-V)` → 選択肢4
+- R7上 理論 問6: `R1=9R2`、`R1=24(R2||15)` を連立し `R2=25Ω, R1=225Ω`。短絡時 `I=100/225=0.444...A` → 選択肢2
+- R7上 理論 問7: 開時 `12Ω`、閉時電流3倍から閉時 `4Ω`。`10||R=2Ω` より `R=2.5Ω` → 選択肢1
+- R5下 理論 問7: `R1=20Ω, R2=30Ω`、`30||r=20Ω` より `r=60Ω` → 選択肢5
+- H27 理論 問6: 開閉時とも `Req=10/3Ω`。2本の等価回路式を連立し `R4=1Ω, R3=2Ω` → 選択肢2
+
+判定: `5 / 5 PASS`。
 
 ## Topic 30 固定範囲
 扱う:
@@ -54,10 +53,10 @@ Topic 30の解説画像PowerPointを完成した。16:9・4枚で、軌道回路
 - 未確認の新幹線軌道回路電圧・電流・車軸短絡抵抗・リレー動作値
 
 ## 現在の状態
-- `current_status`: `topic_30_powerpoint_complete`
+- `current_status`: `topic_30_independent_reanswer_complete`
 - 完成数: 29/38
 - 01〜29: PASS
 - active topic: 30 `ATC① 新幹線は列車をどう検知する？`
 
 ## 次の正確な開始点
-Topic 30の固定5過去問を完成教材だけで独立再解答する。保存済み正答を先に見ず、教材だけで公式選択・等価回路化・途中式・選択肢照合まで再構築し、教材外知識補完、固定範囲外追加、未確認実車値依存が0件か判定する。
+Topic 30の最終QAを実施する。必須成果物の存在、固定5問の完成後独立再解答 `5 / 5 PASS`、解説PDF・練習PDF・PowerPointの表示QA、source・STATUS・HANDOFFの進捗記録整合、固定範囲境界を確認し、`PASS / completed` または `NEEDS_REVISION` を判定する。
