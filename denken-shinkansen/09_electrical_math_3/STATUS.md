@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 5 / 12
-- current_status: `topic_06_powerpoint_complete`
+- current_status: `topic_06_exam_reanswer_needs_revision`
 - last_completed_topic: `05 ベクトル`
 - active_topic: `06 微分① ダイヤの傾きは速度`
-- next_start: `Topic 06 完成教材だけでの公式過去問独立再解答`
+- next_start: `Topic 06 完成後独立再解答で不足した4件の前提をSPEC範囲内で最小補強`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -24,23 +24,28 @@
 - [x] 練習問題source
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 完成教材だけでの公式過去問独立再解答
+- [x] 完成教材だけでの公式過去問独立再解答 `0 / 4 PASS / NEEDS_REVISION`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 06 `微分① ダイヤの傾きは速度` の解説画像PowerPointを完成した。
+Topic 06 `微分① ダイヤの傾きは速度` の完成後独立再解答を実施した。
 
-`topics/06_derivative_1/06_derivative_1_images.pptx` を16:9・3枚で作成し、平均変化率→接線の傾き→微分係数、`v(t)=dx/dt` と多項式・三角関数・合成関数の基本、折れ線 `i-t` グラフの区間傾き・`mA/ms=A/s`、固定EXAM_ALIGNMENT 4問で使う数学操作を可視化した。
+固定4問の数学操作そのものは教材で再構築できるが、問題全体を正答するには次の教材外前提が必要だった。
 
-全3枚をレンダリングして表示確認し、文字切れ・重なり・黒塗り・破損文字なし。スライド境界オーバーフロー検査PASS、PPTX ZIP整合性PASS。
+- R7上 理論 問13: `h_fe` を `I_B`,`I_C` から求める電流増幅率の関係
+- R6下 理論 問3: `|e|=N|dΦ/dt|`
+- R5上 理論 問10: `|v|=L|di/dt|` の意味・成立条件・使い方
+- R4下 理論 問7: 並列合成抵抗と抵抗温度係数の関係
 
-固定EXAM_ALIGNMENT 4問、練習12問、Topic 06の範囲は変更していない。固定範囲外追加0件、未確認新幹線実値追加0件。
+`EXAM_ALIGNMENT_SPEC.md` の「教材に書かれていない知識を外部知識で補った場合はFAIL」に従い、完成後独立再解答は `0 / 4 PASS`、判定は `NEEDS_REVISION` とした。
+
+固定EXAM_ALIGNMENT 4問、Topic 06の範囲、練習12問、PDF、PowerPointは変更していない。仕様外論点・未確認新幹線実値の追加は0件。
 
 ## 判定
 
-`POWERPOINT COMPLETE`。
+`NEEDS_REVISION`。
 
-Topic 06は教材制作中のため `completed` にはしない。完成数は `5 / 12` のまま。
+Topic 06は品質ゲート未通過のため `completed` にしない。完成数は `5 / 12` のまま。
 
-次は完成教材だけで固定4過去問を独立再解答する。
+次は不足した4件の前提を、Topic 06の固定範囲と「電気分野への最小限の接続」を超えない形で補強する。
