@@ -3,32 +3,31 @@
 updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `05`
-current_status: `topic_05_practice_independent_qa_complete`
+current_status: `topic_05_explanation_pdf_complete`
 
 ## 今回完了
 
-Topic 05「新幹線を再エネ主体で走らせるには？」の練習15問を独立再計算・再判定し、練習問題独立QAを完了した。
+Topic 05「新幹線を再エネ主体で走らせるには？」の解説PDFを作成した。
 
 成果物:
-- `topics/05_renewable_energy/05_renewable_energy_practice_qa.md`
+- `topics/05_renewable_energy/05_renewable_energy_explanation.pdf`
 
 結果:
-- 全15問: `15 / 15 PASS`
-- 一次型10問: 正答肢一意 `10 / 10 PASS`
-- 二次記述型5問: 途中式・単位・因果・必要キーワードを採点可能 `5 / 5 PASS`
+- A4縦6ページ
+- 200 dpi全ページ表示QA: `6 / 6 PASS`
+- 固定EXAM_ALIGNMENT: 一次4問＋二次1問、28小問への接続維持
+- 系列SPEC固定9項目を全件収録
+- 固定4可視化（時刻別発電量、新幹線需要曲線、発電量と需要量の差、必要蓄電容量）を全件収録
+- 3段階例題・公式・単位・出典・頻出ミスを同期
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実設備値追加: `0件`
 
-数値問題は独立再計算し、設備利用率、風速3乗則、時刻別需給差、累積エネルギー差、必要蓄電容量、SOC、必要予備力の数値・符号・単位が完全解説と一致した。固定EXAM_ALIGNMENTの一次4問＋二次1問・28小問への接続も維持している。
-
-系列SPECの固定4可視化に対応する時刻別発電量・新幹線需要曲線・発電量と需要量の差・必要蓄電容量は、問8・9・13で再計算確認した。
-
-R7二次問6(9)(10)の制度各論、一次「法規」の供給予備力問題、無効電力・電圧制御、FRT、同期安定度、経済負荷配分は追加していない。
+R7二次問6(9)(10)の制度各論、一次「法規」の供給予備力問題、無効電力・電圧制御、FRT、同期安定度、経済負荷配分は追加していない。可視化の数値は解説source例題3の教材用仮定値を使用した。
 
 ## 次に行う
 
-Topic 05の解説PDFを作成する。`05_renewable_energy_explanation_source.md` の完成本文・3段階例題・固定EXAM_ALIGNMENT・出典・数式・単位をPDFへ同期し、作成後に全ページ表示QAを行う。
+Topic 05の練習PDFを作成する。`05_renewable_energy_practice.md` の一次型10問＋二次記述型5問、完全解説、採点可能な途中式・単位・理由説明をPDFへ同期し、作成後に全ページ表示QAを行う。
 
 ## Topic 05 範囲境界
 

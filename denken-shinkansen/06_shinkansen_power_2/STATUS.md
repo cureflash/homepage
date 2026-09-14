@@ -4,25 +4,24 @@ updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `05`
 theme: 新幹線を再エネ主体で走らせるには？
-current_status: `topic_05_practice_independent_qa_complete`
+current_status: `topic_05_explanation_pdf_complete`
 completed_topics: `4 / 22`
 
 ## Topic 05 current result
 
-練習15問の独立再計算・一意解QAを完了した。一次型10問＋二次記述型5問を問題文から再解答し、保存済み完全解説と照合して `15 / 15 PASS`。一次型は全10問で正答肢一意、二次型は全5問で途中式・単位・因果・必要キーワードを採点可能な形で確定できる。
+解説PDFを作成し、`05_renewable_energy_explanation_source.md` の完成本文・3段階例題・固定EXAM_ALIGNMENT・出典・数式・単位を同期した。A4縦6ページ、200 dpi全ページ表示QA `6 / 6 PASS`。系列SPEC固定9項目と4可視化を収録し、固定範囲外論点・未確認実設備値は追加していない。
 
 今回の成果物:
-- `topics/05_renewable_energy/05_renewable_energy_practice_qa.md`
-- 練習問題独立QA: `15 / 15 PASS`
-- 一次型正答一意性: `10 / 10 PASS`
-- 二次記述型採点可能性: `5 / 5 PASS`
+- `topics/05_renewable_energy/05_renewable_energy_explanation.pdf`
+- PDF: A4縦 `6ページ`
+- 表示QA: `6 / 6 PASS`（200 dpi）
 
 品質ゲート対象:
 - 正式選定: 一次4問＋二次1問 = `5問`
 - 制作前独立検証: `5 / 5問、28 / 28小問 PASS`
 - 練習問題QA: `15 / 15 PASS`
 - 固定EXAM_ALIGNMENT 5問28小問への接続維持
-- 系列SPECの時刻別発電量・新幹線需要曲線・需給差・必要蓄電容量を問8・9・13で再計算確認
+- 系列SPEC固定9項目・4可視化を解説PDFへ同期
 - 教材外知識補完: `0件`
 - 固定範囲外知識追加: `0件`
 - 未確認実設備値追加: `0件`
@@ -40,7 +39,7 @@ R7二次問6(9)(10)の制度各論、一次「法規」の供給予備力問題�
 - [x] Topic 05 解説本文＋3段階例題
 - [x] Topic 05 練習問題＋完全解説source
 - [x] Topic 05 練習問題独立QA `15 / 15 PASS`
-- [ ] Topic 05 解説PDF
+- [x] Topic 05 解説PDF `6 / 6ページ表示QA PASS`
 - [ ] Topic 05 練習PDF
 - [ ] Topic 05 解説画像PowerPoint
 - [ ] Topic 05 完成後独立再解答
@@ -49,4 +48,4 @@ R7二次問6(9)(10)の制度各論、一次「法規」の供給予備力問題�
 
 ## next_start
 
-Topic 05の解説PDFを作成する。`05_renewable_energy_explanation_source.md` の完成本文・3段階例題・固定EXAM_ALIGNMENT・出典・数式・単位を同期し、系列SPEC固定9項目と4可視化の範囲を維持する。PDF作成後は全ページ表示QAを行い、固定範囲外論点・未確認実設備値を追加しない。
+Topic 05の練習PDFを作成する。`05_renewable_energy_practice.md` の一次型10問＋二次記述型5問と完全解説を同期し、作成後に全ページ表示QAを行う。固定EXAM_ALIGNMENT 5問28小問への接続、固定範囲、仮定値表記を維持する。
