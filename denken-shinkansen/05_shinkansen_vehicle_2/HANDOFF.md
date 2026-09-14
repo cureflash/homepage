@@ -7,7 +7,7 @@
 
 Topic 01〜06は最終QAまで `PASS`。完成数は `6 / 39`。
 
-現在地は `topic_07_practice_source_complete`。active topicは Topic 07 `直流主回路の高出力化`。
+現在地は `topic_07_practice_pdf_complete`。active topicは Topic 07 `直流主回路の高出力化`。
 
 ## Topic 06 完了記録
 固定EXAM_ALIGNMENTは一次3問＋二次2問、計5問。
@@ -122,12 +122,28 @@ QA記録: `07_dc_main_circuit_high_output_explanation_pdf_qa.md`
 
 未確認の実車搭載数・編成出力・主回路総損失・効率・冷却容量・けん引力―速度特性は使っていない。数値問題の条件は教材用仮定値と明記した。
 
-## 次の正確な開始点
-Topic 07 `直流主回路の高出力化` の練習PDFを作成する。
+## Topic 07 練習PDF 完了記録
 
-1. `07_dc_main_circuit_high_output_practice_source.md` を正本としてPDF化する。
-2. 一次8問＋二次4問と完全解説を欠落なく収録する。
-3. A4縦で作成し、全ページ表示QAと文字抽出QAを行う。
+`07_dc_main_circuit_high_output_practice.pdf` を作成した。
+
+- A4縦3ページ
+- 一次8問＋二次4問、全問完全解説付き
+- 180 dpi全3ページ表示QA: `PASS`
+- 文字抽出QA: `PASS`
+- 計算・論理: `12 / 12 PASS`
+- 固定一次4問＋二次1問・15対象項目を維持
+- 教材外知識補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値の真値化: `0件`
+
+QA記録: `07_dc_main_circuit_high_output_practice_qa.md`
+
+## 次の正確な開始点
+Topic 07 `直流主回路の高出力化` の解説画像PowerPointを作成する。
+
+1. `07_dc_main_circuit_high_output.md` と確定済み解説PDFを正本としてPowerPoint化する。
+2. SPEC指定3グラフ「世代別出力比較」「出力―損失」「出力―発熱」を固定範囲内で可視化する。
+3. 全スライド表示QA、overflow検査、PPTX整合性を確認する。
 4. 固定一次4問＋二次1問・15対象項目を変更しない。
 5. 未確認の編成出力・主回路総損失・冷却容量・けん引力特性を補完しない。
 6. 位相制御、誘導機、VVVF、回生、IGBT/SiC、詳細熱設計を追加しない。
