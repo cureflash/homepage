@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 6 / 21
-- current_status: `topic_07_practice_pdf_complete`
+- current_status: `topic_07_powerpoint_complete`
 - last_completed_topic: `06 25kVからどうやって電圧が誘導される？`
 - active_topic: `07 0系のモーターはなぜ力を出せる？`
-- next_start: Topic 07の解説画像PowerPointを作成する
+- next_start: Topic 07の固定一次5問・25小問を完成教材だけで独立再解答する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -62,18 +62,19 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source
 - [x] 練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後独立再解答 25小問
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 07の練習PDFを完成した。
+Topic 07の解説画像PowerPointを完成した。
 
-- `07_motor_lorentz_force_practice.pdf` を作成（A4縦4ページ）
-- 練習sourceの一次型12問・正答・完全解説を収録
-- 200 dpi全4ページ表示QA `4 / 4 PASS`
-- 文字抽出QA: `PASS`
+- `07_motor_lorentz_force_images.pptx` を作成（16:9・5枚）
+- 電界と磁界の力、磁界中の円運動、加速電圧と比電荷、電界中の電子運動、`F=BIl`と0系への接続を可視化
+- 約200 dpi全5スライド表示QA `5 / 5 PASS`
+- overflow検査: `PASS`
+- PPTX ZIP整合性: `PASS`
 - 固定一次5問・25小問のEXAM_ALIGNMENTは変更なし
 - 二次非採用判断・二次数合わせ0件を維持
 - 固定範囲外論点追加: 0件
@@ -83,4 +84,4 @@ Topic 07の練習PDFを完成した。
 
 ## 判定
 
-Topic 07は `practice PDF complete / IN_PROGRESS`。完成数は `6 / 21` のまま。次工程は解説画像PowerPoint作成。
+Topic 07は `PowerPoint complete / IN_PROGRESS`。完成数は `6 / 21` のまま。次工程は固定一次5問・25小問の完成後独立再解答。
