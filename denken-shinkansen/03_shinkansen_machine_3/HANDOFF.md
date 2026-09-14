@@ -6,13 +6,14 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は5/16。Topic 01〜05は品質ゲートPASSでcompleted。active topicは06 `新幹線はどうやって速度を変えている？`。
 
 ## 今回進捗
-Topic 06の解説本文＋3段階例題を完成した。
+Topic 06の解説PDFを完成した。
 
-- source: `topics/06_power_electronics/06_power_electronics.md`
+- PDF: `topics/06_power_electronics/06_power_electronics_explanation.pdf`
+- A4縦 5ページ
 - 固定EXAM_ALIGNMENT 5問・7小問は変更なし
-- パワー半導体、電力変換分類、単相整流、三相整流、チョッパ、単相ブリッジインバータ、PWM・VVVF、同期速度までを固定範囲内で説明
-- 基礎・本試験標準・複合の3段階例題を作成
-- 選定5問・7小問の要求事項を本文へ `7 / 7` マッピング
+- 完成済みsourceのパワー半導体、回路分類、単相整流、三相整流、直流チョッパ、単相ブリッジインバータ、PWM・VVVF、同期速度、3段階例題、過去問対応を同期
+- 200 dpi全5ページの表示QA `PASS`
+- PDF文字抽出QA `PASS`
 - 未確認実車値の追加 `0件`
 - ベクトル制御・回生制動・MPPT・系統連系保護・単独運転検出・詳細高調波解析の追加 `0件`
 - 完成数は `5 / 16` のまま
@@ -83,6 +84,15 @@ R8上問3はV/f・VVVFを含むが設問全体でベクトル制御が必要な�
 - 3段階例題
 - 選定5問・7小問の本文マッピング `7 / 7`
 
+## Topic 06 解説PDF
+`topics/06_power_electronics/06_power_electronics_explanation.pdf` を作成済み。
+
+- A4縦 5ページ
+- 固定EXAM_ALIGNMENTと完成済みsourceの範囲だけを収録
+- 200 dpi全5ページの表示QAで文字切れ・重なり・欠落グリフなし
+- PDF文字抽出で主要見出し、主要公式、固定5問・7小問、例題数値、範囲境界を確認
+- 固定範囲外論点・未確認実車値の追加 `0件`
+
 ## Topic 06 品質状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 公式過去問: 5問・7小問固定
@@ -91,7 +101,9 @@ R8上問3はV/f・VVVFを含むが設問全体でベクトル制御が必要な�
 - 解説本文: 完了
 - 3段階例題: 完了
 - 選定5問・7小問の本文マッピング: `7 / 7` 完了
-- 解説PDF: 未着手
+- 解説PDF: 完了
+- 解説PDF表示QA: `PASS`
+- 解説PDF文字抽出QA: `PASS`
 - 練習問題source: 未着手
 - 練習PDF: 未着手
 - 解説画像PowerPoint: 未着手
@@ -172,10 +184,10 @@ Topic 04 `300系でモーターが全部変わった` は最終QA `PASS / comple
 - 解説PDF・練習PDF・PowerPointの表示QA: PASS
 
 ## 現在状態
-- `current_status`: `topic_06_explanation_source_complete`
+- `current_status`: `topic_06_explanation_pdf_complete`
 - 完成数: `5/16`
 - last completed: Topic 05 `誘導電動機はなぜ勝手に回る？`
 - active: Topic 06 `新幹線はどうやって速度を変えている？`
 
 ## 次の正確な開始点
-Topic 06の解説PDFを作成する。完成済みsourceの固定EXAM_ALIGNMENT 5問・7小問、解説本文、3段階例題を反映し、表示QA・文字抽出QAを行う。系列SPEC固定範囲だけを使い、ベクトル制御・回生制動・MPPT等の範囲外論点、未確認実車値は追加しない。
+Topic 06の練習問題sourceを作成する。固定EXAM_ALIGNMENT 5問・7小問を全件マッピングし、原則12問以上・少なくとも半数を五肢択一、本試験標準中心、解答は式・理由・検算まで記載する。系列SPEC固定範囲だけを使い、ベクトル制御・回生制動・MPPT等の範囲外論点、未確認実車値は追加しない。
