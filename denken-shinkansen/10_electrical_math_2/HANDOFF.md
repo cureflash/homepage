@@ -10,11 +10,11 @@ Topic 03 `偏微分・全微分` は `completed`。
 Topic 04 `微分による極値・最適条件` は `completed`。
 Topic 05 `積分によるエネルギー計算` は `completed`。
 
-Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPoint＋PowerPoint QAまで完了。
+Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPoint＋PowerPoint QA＋完成後独立再解答まで完了。
 
 完成数: `5 / 20`
 
-current_status: `topic_06_powerpoint_complete`
+current_status: `topic_06_exam_reanswer_complete`
 
 active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
@@ -81,6 +81,22 @@ QA記録:
 - 固定範囲外追加0件
 - 未確認実車値追加0件
 
+## Topic 06 完成後独立再解答
+
+`topics/06_calculus_train_curve/06_calculus_train_curve_exam_reanswer.md`
+
+- 固定EXAM_ALIGNMENT 一次4問＋二次1問、計5問・15対象項目を完成教材の式・解法から再導出
+- R5 一次 理論 問6: `5 / 5 PASS`
+- R3 一次 理論 問6: `5 / 5 PASS`
+- H28 一次 理論 問4: `3 / 3 PASS`
+- H25 一次 機械 問3 (1): `1 / 1 PASS`
+- H23 二次 電力・管理 問5 (1)-[A]: `1 / 1 PASS`
+- 合計 `15 / 15 PASS`
+- 公式解答・標準解答と全件一致
+- 教材外知識補完0件
+- 固定範囲外追加0件
+- 未確認実車値依存0件
+
 ## Topic 06 SPEC固定範囲
 
 中心式:
@@ -114,6 +130,7 @@ QA記録:
 - H23 二次 電力・管理 問5 (1)-[A]: エネルギー収支から加速を判断
 
 制作前独立再導出・公式解答照合: `15 / 15 PASS`。
+完成後独立再解答・公式解答照合: `15 / 15 PASS`。
 教材外知識補完: 0件。
 固定範囲外追加: 0件。
 
@@ -134,6 +151,4 @@ QA記録:
 
 ## 次に行うこと
 
-Topic 06の完成後独立再解答を行う。保存済み正答を先に見ず、完成教材だけで固定5問・15対象項目を全件再導出し、公式解答・標準解答と照合する。教材外知識で補完した場合はFAILとする。
-
-この段階では最終QAへ進まない。
+Topic 06の最終QAを行う。必須成果物、固定5過去問・15対象項目の完成後独立再解答 `15 / 15 PASS`、表示QA、SPEC範囲境界、source・STATUS・HANDOFFの進捗整合を確認する。全品質ゲートPASSの場合のみ `completed` とする。
