@@ -54,34 +54,30 @@ jobs:
           def clean(s):
               s = s.replace('`','')
               s = html.escape(s, quote=False)
-              s = re.sub(r'\^(\-?\d+)', r'<super>\1</super>', s)
-              return s
+              return re.sub(r'\^(\-?\d+)', r'<super>\1</super>', s)
 
           story = [Paragraph('電験二種 理論 - Topic 07 練習問題', title),
                    Paragraph('0系のモーターはなぜ力を出せる？', h1),
                    Paragraph('固定EXAM_ALIGNMENT: 一次5問・25小問 / 二次数合わせ0件', small),
                    Spacer(1, 5)]
           group = []
-          in_table = False
           table_lines = []
 
           def flush_group():
-              nonlocal group
               if group:
-                  story.append(KeepTogether(group))
-                  group = []
+                  story.append(KeepTogether(list(group)))
+                  group.clear()
 
           def flush_table():
-              nonlocal table_lines, in_table
               if table_lines:
                   for raw in table_lines:
-                      if set(raw.replace('|','').replace('-','').replace(' ','').strip()) == set():
+                      stripped = raw.replace('|','').replace('-','').replace(' ','').strip()
+                      if not stripped:
                           continue
                       cells = [c.strip() for c in raw.strip().strip('|').split('|')]
                       if cells and cells[0] not in ('---',''):
                           story.append(Paragraph(' / '.join(clean(c) for c in cells), small))
-                  table_lines = []
-              in_table = False
+                  table_lines.clear()
 
           for raw in body.splitlines():
               line = raw.strip()
@@ -96,10 +92,10 @@ jobs:
               if line.startswith('## '):
                   flush_group(); flush_table(); story.append(Paragraph(clean(line[3:]), h1)); continue
               if line.startswith('### '):
-                  flush_group(); flush_table(); group = [Paragraph(clean(line[4:]), h2)]; continue
+                  flush_group(); flush_table(); group.append(Paragraph(clean(line[4:]), h2)); continue
               if line.startswith('|'):
-                  flush_group(); in_table = True; table_lines.append(line); continue
-              if in_table:
+                  flush_group(); table_lines.append(line); continue
+              if table_lines:
                   flush_table()
               style = small if re.match(r'^\d+\.', line) else base
               group.append(Paragraph(clean(line), style))
