@@ -1,14 +1,14 @@
 # STATUS - 電験三種「電気数学」
 
-更新日: 2026-09-14
+更新日: 2026-09-15
 
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 5 / 12
-- current_status: `topic_06_exam_reanswer_needs_revision`
+- current_status: `topic_06_revision_supplement_complete`
 - last_completed_topic: `05 ベクトル`
 - active_topic: `06 微分① ダイヤの傾きは速度`
-- next_start: `Topic 06 完成後独立再解答で不足した4件の前提をSPEC範囲内で最小補強`
+- next_start: `Topic 06 補強4点を学習用成果物へ必要最小限同期`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -25,27 +25,25 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 完成教材だけでの公式過去問独立再解答 `0 / 4 PASS / NEEDS_REVISION`
+- [x] 独立再解答FAIL 4件の不足前提を補強sourceへ固定範囲内で最小補強
+- [ ] 補強4点を学習用成果物へ同期
+- [ ] 補強後の完成教材だけで固定4問を再独立解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 06 `微分① ダイヤの傾きは速度` の完成後独立再解答を実施した。
+Topic 06 `微分① ダイヤの傾きは速度` の独立再解答FAIL 4件について、固定EXAM_ALIGNMENTを変更せず、問題全体を最後まで解くために不足していた前提だけを `topics/06_derivative_1/06_derivative_1_revision_supplement.md` へ補強した。
 
-固定4問の数学操作そのものは教材で再構築できるが、問題全体を正答するには次の教材外前提が必要だった。
-
-- R7上 理論 問13: `h_fe` を `I_B`,`I_C` から求める電流増幅率の関係
+追加した最小接続:
+- R7上 理論 問13: 当該設問での `h_fe=I_C/I_B`
 - R6下 理論 問3: `|e|=N|dΦ/dt|`
-- R5上 理論 問10: `|v|=L|di/dt|` の意味・成立条件・使い方
-- R4下 理論 問7: 並列合成抵抗と抵抗温度係数の関係
+- R5上 理論 問10: `|v|=L|di/dt|`
+- R4下 理論 問7: `R(T+ΔT)=R(T)(1+αΔT)` と並列合成抵抗
 
-`EXAM_ALIGNMENT_SPEC.md` の「教材に書かれていない知識を外部知識で補った場合はFAIL」に従い、完成後独立再解答は `0 / 4 PASS`、判定は `NEEDS_REVISION` とした。
-
-固定EXAM_ALIGNMENT 4問、Topic 06の範囲、練習12問、PDF、PowerPointは変更していない。仕様外論点・未確認新幹線実値の追加は0件。
+半導体回路、ファラデー則、自己誘導、抵抗温度特性の体系説明は追加していない。Topic 07以降の数学論点、未確認新幹線実値の追加も0件。
 
 ## 判定
 
-`NEEDS_REVISION`。
+`NEEDS_REVISION` 継続。
 
-Topic 06は品質ゲート未通過のため `completed` にしない。完成数は `5 / 12` のまま。
-
-次は不足した4件の前提を、Topic 06の固定範囲と「電気分野への最小限の接続」を超えない形で補強する。
+補強sourceは完成したが、学習用成果物への同期と補強後の独立再解答は未実施のため、Topic 06はまだ `completed` にしない。完成数は `5 / 12` のまま。
