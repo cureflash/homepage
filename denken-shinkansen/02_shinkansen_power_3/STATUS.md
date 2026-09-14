@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 5 / 16
-- current_status: `topic_06_source_reanswer_synced`
-- last_completed_topic: `05 新幹線を再エネだけで走らせられる？`
-- active_topic: `06 275,000Vをどうやって25,000Vにする？`
-- next_start: Topic 06の最終QAを実施する
+- exam_aligned_completed_topics: 6 / 16
+- current_status: `topic_06_completed`
+- last_completed_topic: `06 275,000Vをどうやって25,000Vにする？`
+- active_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
+- next_start: Topic 07の制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
@@ -16,8 +16,9 @@
 - [x] 03 JR東日本はなぜ火力発電所まで持っている？ — EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QA PASS
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、最終QA PASS
 - [x] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問、必須成果物、表示QA、修正版教材での独立再解答5/5 PASS、教材外知識補完0件、SPEC境界を最終QAで確認し `completed`
-- [ ] 06 275,000Vをどうやって25,000Vにする？ — 制作前EXAM_ALIGNMENT・固定5過去問の制作前独立検証5/5 PASS、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答5/5 PASS、source同期まで完了。次は最終QA
-- [ ] 07〜16 — 未完了
+- [x] 06 275,000Vをどうやって25,000Vにする？ — 固定5過去問、必須成果物、表示QA、完成後独立再解答5/5 PASS、教材外知識補完0件、source進捗整合・SPEC境界を最終QAで確認し `completed`
+- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 未着手
+- [ ] 08〜16 — 未完了
 
 ## Topic 05 完了記録
 source: `topics/05_renewable_energy/05_renewable_energy.md`
@@ -44,13 +45,14 @@ PowerPoint QA: `topics/05_renewable_energy/05_renewable_energy_powerpoint_qa.md`
 
 固定範囲外のバイオマス、小水力、洋上風力の直流送電等は追加していない。未確認の新幹線消費電力・再エネ設備容量・蓄電容量は実値化していない。
 
-## Topic 06 制作進捗
+## Topic 06 完了記録
 source: `topics/06_substation/06_substation.md`
 解説PDF: `topics/06_substation/06_substation_explanation.pdf`
 練習PDF: `topics/06_substation/06_substation_practice.pdf`
 解説画像PowerPoint: `topics/06_substation/06_substation_images.pptx`
 PowerPoint QA: `topics/06_substation/06_substation_powerpoint_qa.md`
 独立再解答: `topics/06_substation/06_substation_independent_reanswer.md`
+最終QA: `topics/06_substation/06_substation_final_qa.md`
 
 固定5過去問:
 - R7下 電力 問6 — 避雷器 — `(1)` PASS
@@ -67,9 +69,11 @@ PowerPoint QA: `topics/06_substation/06_substation_powerpoint_qa.md`
 
 解説画像PowerPointは16:9・4枚。固定5過去問の要求事項を全件可視化し、全4枚表示QA、`slides_test.py` による境界外はみ出し検査、PPTX ZIP整合性をPASS。固定範囲外論点・未確認実値の追加は0件。
 
-完成後独立再解答は `(1), (4), (1), (4), (5)` で公式解答と `5 / 5` 一致。教材のみ完結 `5 / 5`、教材外知識補完 `0件`、固定範囲外追加 `0件`。この結果をsourceの状態・EXAM_ALIGNMENT・次工程へ同期済み。
+完成後独立再解答は `(1), (4), (1), (4), (5)` で公式解答と `5 / 5` 一致。教材のみ完結 `5 / 5`、教材外知識補完 `0件`、固定範囲外追加 `0件`。sourceの状態・EXAM_ALIGNMENT・次工程への同期も確認済み。
+
+最終QAでは必須成果物の実在、固定5過去問のEXAM_ALIGNMENT、複数系統の参考教材、表示QA、完成後独立再解答、source進捗整合、SPEC固定範囲・除外境界を確認し、全件PASS。Topic 06を `completed` とした。
 
 SPEC固定範囲は変電所、変圧器、母線、遮断器、断路器、計器用変成器、避雷器、保護リレー、受電電圧、き電電圧。GIS、調相設備、短絡電流・遮断容量・%インピーダンス計算、配電線詳細保護、三相→単相変換方式等は追加していない。
 
 ## 次
-Topic 06の最終QAを実施する。教材本文・固定5過去問・SPEC境界は変更しない。
+Topic 07「なぜ三相交流をそのまま架線へ流さない？」の制作前EXAM_ALIGNMENTを実施する。
