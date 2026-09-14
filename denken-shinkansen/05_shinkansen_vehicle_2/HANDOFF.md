@@ -7,7 +7,7 @@
 
 Topic 01〜05は最終QAまで `PASS`。完成数は `5 / 39`。
 
-現在地は `topic_06_explanation_source_complete`。active topicは Topic 06 `0系⑥ 主回路全体の電力・損失・効率`。
+現在地は `topic_06_explanation_pdf_complete`。active topicは Topic 06 `0系⑥ 主回路全体の電力・損失・効率`。
 
 ## Topic 05 完了記録
 - final QA: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_final_qa.md` — `PASS`
@@ -52,6 +52,14 @@ source:
 - 選定5過去問の要求事項を本文へ全件マッピング済み。
 - SPEC指定4グラフの作図条件を定義。学習用数値は明示的な仮定値のみ。
 
+## Topic 06 解説PDF 完了内容
+- `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_explanation.pdf`
+- A4縦5ページ。
+- 本文、3段階例題、一次3問＋二次2問への接続、SPEC指定4グラフを収録。
+- 全5ページ180 dpi Visual QA PASS。文字欠け・重なり・ページ外はみ出しなし。
+- グラフ・例題は学習用仮定値のみ。未確認0系実車値は追加していない。
+- サイリスタ位相制御、チョッパ、誘導機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱モデルは追加していない。
+
 ## Topic 06 固定範囲
 扱う内容:
 - 主変圧器損失
@@ -76,10 +84,10 @@ source:
 - 整流器損失はTopic 02を前提に交流入力と直流出力の差として扱い、後世代のスイッチング損失モデルへ拡張しない。
 
 ## 次の正確な開始点
-Topic 06の解説PDFを作成する。
+Topic 06の練習問題・完全解説sourceを作成する。
 
-1. `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency.md` を正本として使う。
-2. 本文・3段階例題・選定5過去問への接続・SPEC指定4グラフの説明を固定範囲内で収録する。
-3. 未確認0系実値は追加しない。
-4. PDF生成後、全ページを画像化してVisual QAを行う。
-5. 練習問題・PowerPoint・完成後独立再解答はこの次工程以降とし、今回は作らない。
+1. `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency.md` と確定済みEXAM_ALIGNMENTを正本として使う。
+2. 一次型と二次記述型を含め、確定済み一次3問＋二次2問の要求事項を固定範囲内で反映する。
+3. 未確認0系実値、後続Topic論点、件数合わせの問題は追加しない。
+4. 各問に完全解説を付け、計算・論理を検算する。
+5. 練習PDF・PowerPoint・完成後独立再解答はこの次工程以降とし、今回は作らない。
