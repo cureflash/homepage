@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 6 / 14
-- current_status: `topic_07_exam_alignment_complete`
+- current_status: `topic_07_explanation_source_complete`
 - last_completed_topic: `06 0系の変圧器は何をしていた？`
 - active_topic: `07 モーターはなぜ回る？`
-- next_start: Topic 07の解説本文＋3段階例題を作成する
+- next_start: Topic 07の解説PDFを作成し、全ページ表示QAを行う
 
 ## Topic 01 進捗
 
@@ -113,7 +113,7 @@
 - [x] 固定範囲外の直流機詳細・後続Topic論点・未確認実車値を境界整理
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
@@ -122,18 +122,22 @@
 
 ## 今回進めた内容
 
-Topic 07 `モーターはなぜ回る？` の制作前EXAM_ALIGNMENTを完了した。
+Topic 07 `モーターはなぜ回る？` の解説本文＋3段階例題を完成した。
 
-確認・固定内容:
-- 令和8年度上期～令和7年度の直近磁気系問題を確認し、Topic 07へ直接対応しない問題は件数合わせで採用しなかった。
-- 固定公式過去問: R6下問4、R5下問4、R4上問4、R2問3、H28問12の5問。
-- 制作前独立検証: `5 / 5 PASS`。
-- 必須論点: `F=BIl sinθ`、フレミング左手則、平行導体の電磁力、コイルの偶力・トルク、`F=qvB sinθ`、運動導体の誘導起電力、フレミング右手則、逆起電力の基本。
-- 直流機の電圧方程式・界磁方式・速度制御、Topic 08以降、未確認0系実車値は除外。
-- e-sysnet・電験王・電験三種まとめましたを補助確認し、sourceへ出典・教材必須説明・予定マッピングを記録した。
+固定EXAM_ALIGNMENT 5問は変更せず、次を本文へ収録・マッピングした。
+
+- `F=BIl sinθ` の意味・角度・単位とフレミング左手則
+- 平行導体の同方向引力・逆方向反発、および矩形ループの合成電磁力
+- コイルの偶力・回転トルク `τ=NIAB sinφ`
+- ローレンツ力 `F=qvB sinθ` の導出、負電荷の向き、円運動
+- 運動導体の誘導起電力 `e=Blv sinθ` とフレミング右手則
+- 逆起電力の基本概念
+- 0系は直流主電動機の実在例としてのみ接続し、未確認実車値は使用しない
+
+3段階例題は、基礎の導体電磁力、本試験標準の直線導体＋矩形ループ、複合・ひっかけのコイルトルク＋運動導体誘導起電力で構成した。
 
 Topic 07 source: `topics/07_motor_force_induction/07_motor_force_induction.md`
 
 ## 判定
 
-Topic 07は `exam_alignment_complete`。完成数は `6 / 14` のまま。次は固定EXAM_ALIGNMENTを変えずに解説本文＋3段階例題を作成する。
+Topic 07は `explanation_source_complete`。完成数は `6 / 14` のまま。次は固定EXAM_ALIGNMENTと本文を変えずに解説PDFを作成し、全ページ表示QAを行う。
