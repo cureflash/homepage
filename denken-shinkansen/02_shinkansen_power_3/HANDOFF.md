@@ -6,16 +6,16 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は4/16。Topic 01〜04は完成済み。active topicは05 `新幹線を再エネだけで走らせられる？`。
 
 ## 今回進捗
-Topic 05の初回独立再解答で判明した既存EXAM_ALIGNMENTの不足2点だけをsource本文へ補強した。固定5過去問、SPEC固定範囲、除外問題は変更していない。
+Topic 05の初回独立再解答で不足した既存要求事項2点を補強済みsourceから解説PDFへ同期した。固定5過去問、SPEC固定範囲、除外問題は変更していない。
 
-補強内容:
+同期した内容:
 1. R2 電力 問5 — 地表に入射する太陽光エネルギーの代表値 `約1 kJ/(m²·s)`（=`約1 kW/m²`）
 2. R8上 電力 問5 — ナトリウム・硫黄電池の単位質量当たりエネルギー密度は、同問では鉛蓄電池の約3倍として扱う
 
-公式問題本文を再確認し、上記2点が実際の空欄判定に必要な要求事項であることを確認した。source内の状態・EXAM_ALIGNMENTカバレッジ・独立再解答記録・次工程も現在地へ同期した。
+解説PDFはA4縦4ページ。200 dpiで全4ページを表示確認し、クリップ・重なり・文字化けなし。日射代表値は1ページ目、NaS電池比較は2ページ目に明示されていることを確認した。
 
-更新対象:
-- `topics/05_renewable_energy/05_renewable_energy.md`
+今回更新対象:
+- `topics/05_renewable_energy/05_renewable_energy_explanation.pdf`
 - `STATUS.md`
 - `HANDOFF.md`
 
@@ -48,7 +48,7 @@ Topic 05の初回独立再解答で判明した既存EXAM_ALIGNMENTの不足2点
 - R5上 問5: `(2)` = 公式 `(2)`。PASS。
 - R2 問5: `(3)` = 公式 `(3)`。ただし地表日射代表値が未収録だったため教材のみ完結FAIL。
 
-今回、R8上問5とR2問5の不足はsourceへ補強済み。解説PDF等の既存成果物はまだ補強前内容なので、再独立解答は実施しない。
+R8上問5とR2問5の不足はsource・解説PDFへ補強済み。ただし修正版教材での再独立再解答は未実施なので `completed` にはしない。
 
 ### 範囲境界
 - R7上 電力 問5: バイオマス主題のため除外。
@@ -56,20 +56,20 @@ Topic 05の初回独立再解答で判明した既存EXAM_ALIGNMENTの不足2点
 - R5下 電力 問5: 太陽光・風力・燃料電池を含むが、小水力・洋上風力の直流送電まで要求するため除外。
 - R4下 電力 問5、H28 電力 問5: 固定範囲外の発電方式を含むため除外。
 
-## 完成済み成果物
-- source: `topics/05_renewable_energy/05_renewable_energy.md` — 今回補強済み
-- 解説PDF: `topics/05_renewable_energy/05_renewable_energy_explanation.pdf` — 補強内容は未同期
+## 成果物
+- source: `topics/05_renewable_energy/05_renewable_energy.md` — 知識内容は補強済み。冒頭状態・末尾次工程はPDF未同期時点のため次工程で同期する
+- 解説PDF: `topics/05_renewable_energy/05_renewable_energy_explanation.pdf` — 補強内容同期済み、A4縦4ページ、200 dpi全ページ表示QA PASS
 - 練習PDF: `topics/05_renewable_energy/05_renewable_energy_practice.pdf`
 - 解説画像PowerPoint: `topics/05_renewable_energy/05_renewable_energy_images.pptx`
 - PowerPoint QA: `topics/05_renewable_energy/05_renewable_energy_powerpoint_qa.md`
 - 独立再解答: `topics/05_renewable_energy/05_renewable_energy_independent_reanswer.md` — 初回FAIL記録
 
 ## 現在状態
-- `current_status`: `topic_05_source_gap_repaired`
+- `current_status`: `topic_05_explanation_pdf_resynced`
 - 完成数: `4/16`
 - last completed: Topic 04
 - active: Topic 05
-- Topic 05判定: 初回は公式正答5/5一致、完成後教材のみゲート `NEEDS_REVISION / FAIL`
+- Topic 05判定: 初回は公式正答5/5一致、完成後教材のみゲート `NEEDS_REVISION / FAIL`。修正版PDFでの再独立再解答は未実施
 
 ## 次の正確な開始点
-Topic 05の解説PDFを補強済みsourceへ同期する。追加した `約1 kJ/(m²·s)` と、NaS電池の単位質量当たりエネルギー密度が鉛蓄電池の約3倍という2点が学習者向けPDFにも入っていることを全ページ表示QAで確認する。固定5過去問、SPEC固定範囲、除外問題は変更しない。
+Topic 05 sourceの冒頭状態・末尾次工程だけを、解説PDF同期済みの現在地へそろえる。教材本文、固定5過去問、SPEC固定範囲、除外問題は変更しない。
