@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_final_qa_needs_revision`
+- current_status: `topic_06_practice_alignment_synced`
 - last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: 練習sourceの過去問対応表を現行EXAM_ALIGNMENTへ同期する
+- next_start: Topic 06の最終QAを再実施する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -38,23 +38,22 @@
 - [x] EXAM_ALIGNMENT是正: H30問2(4)(5) → H21問2(2)(3)
 - [x] 修正版EXAM_ALIGNMENT完成後独立再解答: `16 / 16 PASS`
 - [x] 最終QA実施: `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 練習sourceの過去問対応表をH21選定へ同期
+- [x] 練習sourceの過去問対応表をH21選定へ同期
 - [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-Topic 06の最終QAを実施した。
+Topic 06の練習sourceに残っていた旧EXAM_ALIGNMENT記録を現行選定へ同期した。
 
-- 必須成果物: PASS
-- 修正版一次5問・16小問の独立再解答: `16 / 16 PASS`
-- 教材外知識補完: 0件
+- `H30 問2(4)(5)` の過去問対応行を削除
+- `H21 問2(2)(3)` の過去問対応行を追加
+- H21の要求論点を `L∝N²`、`M∝N1N2` と記録
+- 対応練習問題は既存の問5を維持
+- 練習問題・正答・解説本文は変更なし
+- 固定一次5問・16小問は変更なし
 - 二次数合わせ: 0件
 - 固定範囲外論点の追加: 0件
-- 表示QA・計算QA: PASS
-- 成果物相互整合: NEEDS_REVISION
-
-不整合は `06_transformer_electromagnetic_induction_practice.md` の「過去問対応」表。旧選定のH30問2(4)(5)が残り、現行のH21問2(2)(3)が反映されていない。練習問題・正答そのものの不具合は確認していない。
 
 ## 判定
 
-Topic 06は `topic_06_final_qa_needs_revision`。完成数は `5 / 21` のまま。次工程は練習sourceの記録同期で、技術内容・問題・正答・固定範囲は変更しない。
+Topic 06は `topic_06_practice_alignment_synced`。前回最終QAの指摘事項は修正済みだが、最終QA再実施前のため完成数は `5 / 21` のまま。次工程は最終QA再実施。

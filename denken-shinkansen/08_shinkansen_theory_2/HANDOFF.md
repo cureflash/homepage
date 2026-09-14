@@ -10,11 +10,11 @@ Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘�
 
 修正版EXAM_ALIGNMENTの一次5問・16小問を完成教材だけで再度独立再解答し、`16 / 16 PASS`。教材外知識補完0件、二次数合わせ0件、固定範囲外論点追加0件。
 
-最終QAを実施した結果、技術内容・独立再解答・表示QA・SPEC境界はPASSしたが、練習sourceの「過去問対応」表だけ旧H30選定が残っているため `NEEDS_REVISION / IN_PROGRESS` とした。
+前回最終QAでは、技術内容・独立再解答・表示QA・SPEC境界はPASSしたが、練習sourceの「過去問対応」表だけ旧H30選定が残っていたため `NEEDS_REVISION / IN_PROGRESS` とした。今回その表を現行H21選定へ同期済み。最終QA再実施前のため、Topic 06はまだcompleted扱いにしない。
 
 完成数: `5 / 21`
 
-current_status: `topic_06_final_qa_needs_revision`
+current_status: `topic_06_practice_alignment_synced`
 
 active_topic: `06 25kVからどうやって電圧が誘導される？`
 
@@ -38,7 +38,7 @@ active_topic: `06 25kVからどうやって電圧が誘導される？`
 
 - R7 問2 (1)(2)(4)(5): 結合係数、結合コイルの磁気エネルギー、鎖交磁束、ファラデーの法則。公式解答 `ヲ / ワ / イ / ヨ`
 - R5 問2 (2)〜(4): 鎖交磁束の変化、速度、ファラデーの法則。公式解答 `イ / ニ / ロ`
-- R2 問2 (1)〜(5): `Ψ=Li`、`W=Li²/2`、鎖交磁束保存、位置依存自己インダクタンス。公式解答 `イ / ヨ / ワ / ロ / ヌ`
+- R2 問2 (1)〜(5): `Ψ=Li`、`W=Li²/2`、鎖交磁束保存、磁気エネルギー。公式解答 `イ / ヨ / ワ / ロ / ヌ`
 - H28 問1 (3)(5): `Ψ=Li`、`W=Li²/2`。公式解答 `ヨ / ル`
 - H21 問2 (2)(3): 同一磁路で `L∝N²`、`M∝N1N2`。公式解答 `ヨ / ヘ`
 
@@ -85,7 +85,7 @@ R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認済
 
 ## 最終QA
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+前回判定: `NEEDS_REVISION / IN_PROGRESS`
 
 PASS:
 - 必須成果物
@@ -94,21 +94,20 @@ PASS:
 - SPEC境界
 - 表示QA・計算QA
 
-要修正:
+前回指摘:
 - `06_transformer_electromagnetic_induction_practice.md` の「過去問対応」表が旧 `H30 問2(4)(5)` のまま。
 - 現行EXAM_ALIGNMENTの `H21 問2(2)(3)` へ同期されていない。
-- 同ファイル末尾の「固定一次5問・16小問への練習接続: PASS」と記録上不整合。
 
-練習問題・正答・固定範囲自体の不具合は確認していない。
+今回、上記2点を修正済み。練習問題・正答・固定範囲自体は変更していない。最終QA再実施は次工程とする。
 
 ## 今回の更新
 
 1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06成果物を再照合。
-2. 最終QAを実施。
-3. 修正版EXAM_ALIGNMENTの独立再解答 `16 / 16 PASS`、二次非採用、表示QA、SPEC境界を再確認。
-4. 練習sourceの過去問対応表に旧H30選定が残る不整合を検出。
-5. 最終QA記録・STATUS・HANDOFFへ `NEEDS_REVISION` を反映。
+2. 練習sourceの過去問対応表から旧H30問2(4)(5)を除外。
+3. 現行EXAM_ALIGNMENTのH21問2(2)(3)を追加し、既存問5へ対応付け。
+4. 技術内容・問題・正答・固定範囲は変更していない。
+5. STATUS / HANDOFFを `topic_06_practice_alignment_synced` へ更新。
 
 ## 次に行うこと
 
-`06_transformer_electromagnetic_induction_practice.md` の過去問対応表だけを現行EXAM_ALIGNMENTへ同期する。H30問2(4)(5)の記載をH21問2(2)(3)へ置き換え、技術内容・問題・正答・固定範囲は変更しない。その後、最終QAを再実施する。
+Topic 06の最終QAを再実施する。必須成果物、修正版一次5問・16小問の独立再解答、練習sourceを含む成果物相互整合、二次非採用判断、SPEC境界を再確認し、PASSした場合のみ `completed` へ更新する。
