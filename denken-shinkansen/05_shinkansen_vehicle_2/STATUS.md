@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 6 / 39
-- current_status: `topic_07_independent_reanswer_needs_revision`
+- current_status: `topic_07_source_reinforcement_complete`
 - last_completed_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
 - active_topic: `07 直流主回路の高出力化`
-- next_start: Topic 07のH21一次「機械」問2(2)だけを補強する。負荷損を規定の基準巻線温度へ補正して規約効率へ用いることを、固定範囲内で解説source・必要な学習成果物へ同期する。固定EXAM_ALIGNMENTは変更しない
+- next_start: Topic 07の補強済み解説source・練習sourceを解説PDF・練習PDF・解説画像PowerPointへ同期し、表示QA・文字抽出QA・PowerPoint整合性QAを再実施する。固定EXAM_ALIGNMENT・問題数・正答・指定3グラフは変更しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -17,7 +17,7 @@
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
-- [ ] 07 直流主回路の高出力化 — 解説PDF＋練習PDF＋PowerPoint完了 / 完成後独立再解答 `14 / 15 PASS / NEEDS_REVISION`。H21一次 問2(2)の「負荷損を基準巻線温度へ補正」が学習本文・練習で不足
+- [ ] 07 直流主回路の高出力化 — H21一次 問2(2)の不足を解説source・練習sourceへ補強済み。既存PDF・PowerPointは補強後sourceへ未同期のため、完成後独立再解答 `14 / 15 PASS / NEEDS_REVISION` の判定を維持
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -60,7 +60,7 @@
 - H28 一次 機械 問5: (1)のみ — 大きな始動トルクを要求する電気鉄道と直流直巻電動機
 - H26 一次 機械 問5: (1)(2) — 始動時トルク、直流直巻電動機
 - H22 一次 機械 問1: 全小問 — 効率、定格出力、実測効率・規約効率、固定損・負荷損・漂遊負荷損
-- H21 一次 機械 問2: 全小問 — 無負荷損・負荷損、規約効率、負荷率と出力・負荷損
+- H21 一次 機械 問2: 全小問 — 無負荷損・負荷損・基準巻線温度・規約効率・負荷率と出力・負荷損
 - H24 二次 機械・制御 問1: (1)(2)のみ — 電機子抵抗、誘導起電力の記述計算
 - 後続Topicの位相制御・誘導機・VVVF・回生・IGBT/SiCを件数合わせで採用: `0件`
 - 完成後独立再解答: 一次 `12 / 13 PASS`、二次 `2 / 2 PASS`、合計 `14 / 15 PASS / NEEDS_REVISION`
@@ -68,6 +68,11 @@
 - 教材外知識補完が必要だった項目: H21一次 問2(2)の「負荷損を基準巻線温度へ補正」1件
 
 ## Topic 07 解説source
+- `07_dc_main_circuit_high_output.md`: H21一次 問2(2)不足の補強完了
+- §7: 規約効率へ用いる負荷損は測定時温度の値をそのまま使わず、規定の基準巻線温度へ補正して扱うことを追加
+- §8: `P_c` は基準巻線温度へ補正済みの定格電流時負荷損として `m^2P_c` を適用することを追加
+- §12: 規約効率問題では基準巻線温度への補正確認を解法手順へ追加
+- 温度補正式・温度上昇計算・詳細熱設計の追加: `0件`
 - 解説本文＋3段階例題: `completed`
 - 固定一次4問＋二次1問・15対象項目: 本文へ全件マッピング
 - 実車一次資料・学会資料で確認した主電動機:
@@ -79,10 +84,10 @@
 - 固定範囲外追加: `0件`
 
 ## Topic 07 解説PDF
-- `07_dc_main_circuit_high_output_explanation.pdf`: `completed`
-- A4縦5ページ
-- 180 dpi全5ページ Visual QA: `PASS`
-- 文字抽出・欠落グリフ確認: `PASS`
+- `07_dc_main_circuit_high_output_explanation.pdf`: 既存版は完成済みだが、H21一次 問2(2)補強後sourceへ未同期
+- 既存版: A4縦5ページ
+- 既存版180 dpi全5ページ Visual QA: `PASS`
+- 既存版文字抽出・欠落グリフ確認: `PASS`
 - 3段階例題: 3 / 3収録
 - SPEC指定3グラフ: 3 / 3収録
 - 固定一次4問＋二次1問・15対象項目: 維持
@@ -90,32 +95,35 @@
 - 固定範囲外追加: `0件`
 
 ## Topic 07 練習source
-- `07_dc_main_circuit_high_output_practice_source.md`: `completed`
+- `07_dc_main_circuit_high_output_practice_source.md`: H21一次 問2(2)不足の補強完了
+- 一次3: 実測効率・規約効率・漂遊負荷損に「負荷損は基準巻線温度へ補正」を追加
+- 一次4: `P_c` を基準巻線温度へ補正済みの値と明記して `m^2P_c` と規約効率を計算
+- 二次2: 同じ基準巻線温度条件を記述式解法へ追加
 - 一次試験型: 8問、すべて五肢択一
 - 二次試験型: 4問、途中式・前提・単位・検算を含む記述式
 - 合計: 12問、全問完全解説付き
-- 固定一次4問＋二次1問・15対象項目へ接続
+- 正答・数値条件・問題数変更: `0件`
 - 独立計算・論理・正答一意性QA: `12 / 12 PASS`
 - 教材外知識補完: `0件`
 - 未確認実車値の真値化: `0件`
 - 固定範囲外追加: `0件`
 
 ## Topic 07 練習PDF
-- `07_dc_main_circuit_high_output_practice.pdf`: `completed`
-- A4縦3ページ
+- `07_dc_main_circuit_high_output_practice.pdf`: 既存版は完成済みだが、H21一次 問2(2)補強後sourceへ未同期
+- 既存版: A4縦3ページ
 - 一次8問＋二次4問、全問完全解説付き
-- 180 dpi全3ページ Visual QA: `PASS`
-- 文字抽出QA: `PASS`
+- 既存版180 dpi全3ページ Visual QA: `PASS`
+- 既存版文字抽出QA: `PASS`
 - 計算・論理: `12 / 12 PASS`
 - 固定一次4問＋二次1問・15対象項目: 維持
 - 未確認実車値の真値化: `0件`
 - 固定範囲外追加: `0件`
 
 ## Topic 07 解説画像PowerPoint
-- `07_dc_main_circuit_high_output_images.pptx`: `completed`
+- `07_dc_main_circuit_high_output_images.pptx`: 既存版は完成済みだが、H21一次 問2(2)補強後sourceへ未同期
 - 16:9・4スライド
 - SPEC指定3グラフ・可視化対象: 3 / 3収録
-- 180 dpi全4スライド Visual QA: `PASS`
+- 既存版180 dpi全4スライド Visual QA: `PASS`
 - overflow: `0件`
 - PowerPoint ZIP整合性: `PASS`
 - 固定一次4問＋二次1問・15対象項目: 維持
@@ -126,11 +134,13 @@
 - `07_dc_main_circuit_high_output_independent_reanswer.md`: `completed`
 - 固定5過去問の独立解答と公式解答・標準解答: `15 / 15` 一致
 - 教材のみ品質ゲート: 一次 `12 / 13 PASS`、二次 `2 / 2 PASS`、合計 `14 / 15 PASS`
-- `FAIL`: H21一次 機械 問2(2)。負荷損を測定値から規定の基準巻線温度へ補正して扱う知識が、完成した学習本文・練習から不足
+- `FAIL`: H21一次 機械 問2(2)。負荷損を測定値から規定の基準巻線温度へ補正して扱う知識が、当時の完成教材に不足
+- source上の不足補強: `completed`
+- learner-facing PDF・PowerPoint同期後の再独立再解答: `未実施`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 判定: `NEEDS_REVISION`
+- 現在判定: `NEEDS_REVISION`
 
 ## Topic 07 固定範囲
 - 主回路構成比較
@@ -151,4 +161,4 @@
 - 位相制御、サイリスタ点弧角、誘導電動機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱設計
 - 出典で確認できない100系・200系の編成出力、主回路総損失、効率、冷却容量、けん引力・速度特性
 
-次工程はTopic 07のH21一次 問2(2)不足だけを固定範囲内で補強し、解説source・必要な学習成果物へ同期する。
+次工程は補強済みsourceを解説PDF・練習PDF・解説画像PowerPointへ同期し、表示QA・文字抽出QA・PowerPoint整合性QAを再実施する。固定EXAM_ALIGNMENT、問題数、正答、指定3グラフは変更しない。
