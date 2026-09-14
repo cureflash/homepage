@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: 5 / 16
-- current_status: `topic_06_independent_reanswer_complete`
-- last_completed_topic: `05 誘導電動機はなぜ勝手に回る？`
-- active_topic: `06 新幹線はどうやって速度を変えている？`
-- next_start: Topic 06の最終QAを実施する。固定EXAM_ALIGNMENT 5問・7小問の独立再解答、必須成果物、表示QA、範囲境界、source・STATUS・HANDOFFの進捗整合を確認し、全件PASSの場合のみcompletedとする
+- exam_aligned_completed_topics: 6 / 16
+- current_status: `topic_06_completed`
+- last_completed_topic: `06 新幹線はどうやって速度を変えている？`
+- active_topic: `07 GTO→IGBT→SiCで何が変わった？`
+- next_start: Topic 07の制作前EXAM_ALIGNMENTを実施する。MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPECを基準に、直近の公式過去問から関連問題を調査し、固定範囲だけで品質ゲート対象を確定する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -16,7 +16,7 @@
 - [x] 03 直流モーターはどうやって速度を変える？ — 品質ゲートPASS / completed
 - [x] 04 300系でモーターが全部変わった — 品質ゲートPASS / completed
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
-- [ ] 06 新幹線はどうやって速度を変えている？ — EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了
+- [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
 - [ ] 07〜16 — 未完了
 
 ## Topic 06 EXAM_ALIGNMENT
@@ -64,6 +64,7 @@
 - 解説本文＋3段階例題完成
 - 固定5問・7小問の本文マッピング `7 / 7`
 - 完成後独立再解答 `7 / 7 PASS`
+- 最終QA `PASS`
 - 固定範囲外追加 `0件`
 
 ### 解説PDF
@@ -107,6 +108,19 @@
 - 固定範囲外論点の追加 `0件`
 - 未確認実車値の追加 `0件`
 
+## Topic 06 最終QA
+2026-09-14に実施。
+
+- 必須成果物の実在: `PASS`
+- 固定EXAM_ALIGNMENT 5問・7小問の整合: `PASS`
+- 完成後独立再解答: `7 / 7 PASS`
+- 解説PDF・練習PDF・PowerPointの既存表示QA記録: `PASS`
+- 固定範囲境界: `PASS`
+- source・STATUS・HANDOFF進捗整合: `PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- 固定範囲外論点・未確認実車値の追加: `0件`
+- 判定: `PASS / completed`
+
 ## Topic 06 現在の品質状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前検証: `7 / 7 PASS`
@@ -126,5 +140,5 @@
 - PPTX ZIP整合性: `PASS`
 - 完成後独立再解答: `7 / 7 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 未実施
-- 完成数: `5 / 16`
+- 最終QA: `PASS`
+- 完成数: `6 / 16`
