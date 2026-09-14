@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は解説PDF＋練習PDF＋解説画像PowerPointまで完了。
+Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は完成後独立再解答まで完了。
 
 完成数: `6 / 21`
 
-current_status: `topic_07_powerpoint_complete`
+current_status: `topic_07_independent_reanswer_complete`
 
 active_topic: `07 0系のモーターはなぜ力を出せる？`
 
-次工程: Topic 07の固定一次5問・25小問を完成教材だけで独立再解答する。
+次工程: Topic 07の最終QAを実施する。
 
 ## Topic 06 完了記録
 
@@ -118,19 +118,19 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 - PowerPoint表示QA: 約200 dpi全5スライド `5 / 5 PASS`
 - PowerPoint overflow検査: PASS
 - PowerPoint ZIP整合性: PASS
-- 完成後独立再解答: 未実施
+- 完成後独立再解答: `topics/07_motor_lorentz_force/07_motor_lorentz_force_independent_reanswer.md` 完了（固定5問・25小問 `25 / 25 PASS`）
 - 最終QA: 未実施
 
 ## 今回の更新
 
-1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、Topic 07 sourceを再照合。
+1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、Topic 07成果物を再照合。
 2. 固定一次5問・25小問のEXAM_ALIGNMENT、二次非採用判断、固定範囲を変更せず進行。
-3. 解説画像PowerPointを作成（16:9・5枚）。
-4. 約200 dpi全5スライド表示QA `5 / 5 PASS`、overflow検査 `PASS`、PPTX ZIP整合性 `PASS`。
-5. 二次数合わせ0件、固定範囲外追加0件、直流機特性追加0件、未確認実車値依存0件を維持。
-6. PowerPoint・STATUS・HANDOFFをGitHub正本へ反映。
+3. 完成教材だけで固定一次5問・25小問の解法を再構成し、公式解答と照合。
+4. R7/R5/R3/R1/H25はいずれも `5 / 5 PASS`、合計 `25 / 25 PASS`。
+5. 教材外知識補完0件、固定範囲外追加0件、直流機特性追加0件、二次数合わせ0件。
+6. 独立再解答記録・STATUS・HANDOFFをGitHub正本へ反映。
 7. 完成数は `6 / 21` のまま。
 
 ## 次に行うこと
 
-Topic 07の固定一次5問・25小問を、保存済み正答を見ずに完成教材だけで独立再解答する。二次非採用判断・固定範囲は変更しない。
+Topic 07の最終QAを実施する。独立再解答 `25 / 25 PASS`、二次非採用判断、固定範囲、成果物・表示QA・進捗記録の相互整合を確認し、全品質ゲート通過時のみ `completed` とする。
