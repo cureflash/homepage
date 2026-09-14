@@ -5,38 +5,34 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 4 / 16
-- current_status: `topic_05_powerpoint_complete`
+- current_status: `topic_05_independent_reanswer_needs_revision`
 - last_completed_topic: `04 東京―佐世保「原子力新幹線」`
 - active_topic: `05 新幹線を再エネだけで走らせられる？`
-- next_start: Topic 05の固定5過去問を、完成教材だけを使って独立再解答する
+- next_start: Topic 05の固定EXAM_ALIGNMENTを変更せず、独立再解答で判明した既存要求事項2点だけを教材へ補強する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
 - [x] 02 上越新幹線を水の力で走らせる — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QAまで完了
 - [x] 03 JR東日本はなぜ火力発電所まで持っている？ — EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QA PASS
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、source進捗同期、最終QA PASS
-- [ ] 05 新幹線を再エネだけで走らせられる？ — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint完了。完成後独立再解答以降は未着手
+- [ ] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問の完成後独立再解答を実施。公式解答とは5/5一致したが、教材のみ完結ゲートでR2問5 FAIL、R8上問5に固定要求事項の未収録を確認したため `NEEDS_REVISION`
 - [ ] 06〜16 — 未完了
 
 ## Topic 05 現在地
 source: `topics/05_renewable_energy/05_renewable_energy.md`
+独立再解答: `topics/05_renewable_energy/05_renewable_energy_independent_reanswer.md`
 
-制作前EXAM_ALIGNMENTで固定した公式過去問5問を変更せず、解説本文・3段階例題・解説PDF・練習PDFに続き、解説画像PowerPoint `topics/05_renewable_energy/05_renewable_energy_images.pptx` を完成した。16:9・4枚。太陽光、風力、地熱、燃料電池、発電量変動、設備利用率、系統連系、蓄電池、需給バランスをSPEC固定範囲内で可視化し、固定5過去問の要求事項へ対応。全4枚レンダリング目視確認、`slides_test.py`、PPTX ZIP整合性ともPASS。未確認の列車消費電力・再エネ設備容量・蓄電容量は実値化しておらず、SPEC固定範囲外の論点も追加していない。
+制作前EXAM_ALIGNMENTで固定した5問を変更せず、完成教材だけで独立再解答した。候補解答は `(4),(5),(1),(2),(3)` で公式解答と5/5一致した。
 
-固定5過去問とPowerPointの対応:
-1. R8上 電力 問5 — 蓄電池・出力平滑化 → Slide 3・4
-2. R7下 電力 問5 — 風力・誘導発電機・系統並列 → Slide 2・3・4
-3. R6上 電力 問5 — 燃料電池 → Slide 2・4
-4. R5上 電力 問5 — 風力・`P ∝ v^3` → Slide 2・4
-5. R2 電力 問5 — 太陽光・パワーコンディショナ・需給 → Slide 1〜4
+ただし `EXAM_ALIGNMENT_SPEC.md` の「教材外知識で補完した場合はFAIL」を適用すると、R2 電力 問5は教材内に地表日射の代表値 `約1 kJ/(m²·s)` がなく、選択肢(3)と(4)を教材だけで区別できないためFAIL。またR8上 電力 問5は選択肢自体は教材から(4)へ絞れるが、制作前EXAM_ALIGNMENTで要求事項に固定した「ナトリウム・硫黄電池の単位質量当たりエネルギー密度が鉛蓄電池の約3倍」が教材に明示されていない。
 
-SPEC固定範囲の地熱・設備利用率・発電量変動もSlide 1〜3に収録。
+判定: `NEEDS_REVISION / FAIL`。Topic 05はcompletedにしない。完成数は `4 / 16` のまま。
 
-### 未着手成果物
-- 完成後独立再解答
-- 最終QA
+### 補強対象（既存EXAM_ALIGNMENT内のみ）
+1. R2 電力 問5 — 地表に入射する太陽光エネルギーの代表値 `約1 kJ/(m²·s)`
+2. R8上 電力 問5 — ナトリウム・硫黄電池の単位質量当たりエネルギー密度は鉛蓄電池の約3倍
 
-固定範囲外のバイオマス、小水力、洋上風力の直流送電等は追加していない。地熱発電はSPEC固定範囲なので教材へ収録するが、品質ゲート対象過去問は変更していない。
+固定5過去問、SPEC固定範囲、除外問題は変更しない。バイオマス、小水力、洋上風力の直流送電等を追加しない。
 
 ## Topic 04
 Topic 04は最終QA PASSで `completed`。固定6過去問の完成後独立再解答6/6 PASS、教材外知識補完0件、仕様外追加0件。
@@ -51,4 +47,4 @@ Topic 04は最終QA PASSで `completed`。固定6過去問の完成後独立再�
 - 最終QA: `topics/04_nuclear_power/04_nuclear_power_final_qa.md`
 
 ## 次
-Topic 05の固定5過去問を完成教材だけで独立再解答する。保存済み正答を先に見ず、教材外知識で補完しない。完成数は `4 / 16` のまま。
+Topic 05の固定EXAM_ALIGNMENTを変更せず、上記2点だけを教材へ補強する。仕様追加は行わない。補強後に影響成果物を同期し、固定5問を再度完成教材だけで独立再解答する。
