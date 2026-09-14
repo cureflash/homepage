@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `06 誘導電動機の最大トルクはどこで出る？`
 
-current status: `topic_06_explanation_pdf_complete`
+current status: `topic_06_practice_pdf_complete`
 
 ## Topic 05 完了記録
 
@@ -90,20 +90,23 @@ source Markdown:
 
 ## Topic 06 今回完了した工程
 
-解説PDFを完成し、GitHub正本へ反映した。
+練習PDF（解答・完全解説付き）を完成し、GitHub正本へ反映する。
 
 成果物:
-`topics/06_induction_motor_maximum_torque/06_induction_motor_maximum_torque_explanation.pdf`
+`topics/06_induction_motor_maximum_torque/06_induction_motor_maximum_torque_practice.pdf`
 
 確認内容:
 - A4縦5ページ
-- source Markdownの§0〜§13、3段階例題、固定EXAM_ALIGNMENTを反映
-- 全5ページを180 dpiでレンダリングし、文字切れ・重なり・ページ外はみ出し・黒塗り等なし: `5 / 5 PASS`
+- 一次試験型10問＋二次記述5問、計15問
+- 一次試験型10問は全問五肢択一、正答位置A/B/C/D/Eを各2問に分散
+- 二次記述はトルク式導出、最大トルク条件、比例推移、小滑り近似、周波数変更比較を途中式付きで扱う
+- 数値は教材用仮定値として明示し、未確認300系実車値を使用していない
+- 全15問に解答・完全解説を付け、公式選択理由・代入・中間計算・単位・検算または適用条件を示した
+- 全5ページ200 dpi表示QA: `5 / 5 PASS`
 - PDF文字抽出QA: PASS
 - 固定EXAM_ALIGNMENT 6問・20小問と制作前独立検証 `20 / 20 PASS` を変更していない
-- 計算プログラム・指定比較グラフは後続工程として分離したまま
 - 未確認300系実車値、逆相制動、二重かご形詳細、Topic 07以降の論点は追加していない
 
 ## 次に行うこと
 
-Topic 06の練習PDF（解答・完全解説付き）を作成する。固定EXAM_ALIGNMENTの一次・二次双方へ接続し、固定範囲外論点は件数合わせで追加しない。
+Topic 06の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 6問・20小問を維持し、固定範囲外論点は件数合わせで追加しない。
