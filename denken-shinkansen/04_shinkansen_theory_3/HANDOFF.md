@@ -4,87 +4,74 @@
 
 ## 現在地
 
-Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ新幹線は25,000Vなのか`、Topic 03 `架線はただの銅線ではない`、Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？`、Topic 05 `パンタグラフから入った電気はどこへ行く？`、Topic 06 `0系の変圧器は何をしていた？` は最終QAまでPASSし、`completed`。
+Topic 01〜06は最終QAまでPASSし、`completed`。
 
-Topic 06は進捗記録同期後に最終QAを再実施し、必須成果物、固定EXAM_ALIGNMENT 5問、教材内マッピング、既存表示QA、SPEC境界、完成後独立再解答、進捗記録整合性を全件PASSした。完成後独立再解答は `5 / 5 PASS`、教材外知識補完・後続Topic知識依存・未確認0系実車値依存はいずれも0問。
+Topic 07 `モーターはなぜ回る？` は制作前EXAM_ALIGNMENTを完了した。系列SPEC固定範囲内で公式理論過去問5問を固定し、制作前独立検証は `5 / 5 PASS`。直近年度の磁気系問題でもTopic 07へ直接対応しないものは件数合わせで採用していない。
 
 - 完成数: `6 / 14`
 - last completed: `06 0系の変圧器は何をしていた？`
 - active topic: `07 モーターはなぜ回る？`
-- current status: `topic_06_completed`
-- Topic 06 source: `topics/06_transformer_magnetics/06_transformer_magnetics.md`
-- Topic 06 explanation PDF: `topics/06_transformer_magnetics/06_transformer_magnetics_explanation.pdf`
-- Topic 06 practice source: `topics/06_transformer_magnetics/06_transformer_magnetics_practice.md`
-- Topic 06 practice PDF: `topics/06_transformer_magnetics/06_transformer_magnetics_practice.pdf`
-- Topic 06 PowerPoint: `topics/06_transformer_magnetics/06_transformer_magnetics_images.pptx`
-- Topic 06 independent reanswer: `topics/06_transformer_magnetics/06_transformer_magnetics_exam_recheck.md`
-- Topic 06 final QA: `topics/06_transformer_magnetics/06_transformer_magnetics_final_qa.md`
+- current status: `topic_07_exam_alignment_complete`
+- Topic 07 source: `topics/07_motor_force_induction/07_motor_force_induction.md`
 
 ## 今回進捗
 
-Topic 06の最終QAを再実施し、`PASS / completed` とした。
+Topic 07の制作前EXAM_ALIGNMENTを作成し、次の5問を固定した。
 
-確認結果:
-- 必須成果物: PASS
-- 固定EXAM_ALIGNMENT 5問: PASS
-- 3段階例題・教材内マッピング: PASS
-- 練習15問・既存表示QA: PASS
-- 完成後独立再解答: `5 / 5 PASS`
-- 教材外知識補完: `0問`
-- 後続Topic知識への依存: `0問`
-- 未確認0系実車値への依存: `0問`
-- SPEC固定範囲・境界: PASS
-- source進捗記録整合性: PASS
+- 令和6年度下期 理論 問4: 平行導体間の電磁力と向き
+- 令和5年度下期 理論 問4: 直線導体の磁界中でループ導体に働く合成電磁力
+- 令和4年度上期 理論 問4: 運動導体の誘導起電力
+- 令和2年度 理論 問3: 一様磁界中の電流ループに働く偶力
+- 平成28年度 理論 問12: ローレンツ力の導出・向き・電子の運動
 
-今回変更したのは主sourceの完了メタデータ、最終QA記録、STATUS、HANDOFFのみ。教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・PDF / PowerPoint内容は変更していない。
+制作前独立検証は公式解答照合まで `5 / 5 PASS`。
 
-## Topic 06 固定範囲
+固定過去問から逆算し、教材必須説明として以下をsourceへ固定した。
 
-- 電流と磁界
-- アンペアの法則の基本
-- 磁束
+- `F = BIl sinθ`
+- フレミング左手則
+- 平行導体の電磁力
+- コイルの偶力・回転トルク
+- `F = qvB sinθ`
+- 運動導体の誘導起電力 `e = Blv sinθ`
+- フレミング右手則
+- 逆起電力の基本概念
+
+補助資料としてe-sysnet、電験王、電験三種まとめましたを確認し、URLと参照日をsourceへ記録した。
+
+## Topic 07 固定範囲
+
+- 磁界
 - 磁束密度
-- 透磁率
-- 起磁力
-- 磁気抵抗
-- 磁気回路
+- 電流が磁界から受ける力
+- フレミング左手則
+- ローレンツ力の基本
+- 電磁力
+- コイルに働くトルク
 - 電磁誘導
-- ファラデーの法則
-- レンツの法則
-- 自己誘導
-- 相互誘導
-- インダクタンス
-- 磁気エネルギー
+- 逆起電力
+- フレミング右手則
 
-必須関係式・判断:
+主要式:
 
 ```text
-Φ = BA
-B = μH
-Fm = NI
-Rm = l / (μA)
-Φ = Fm / Rm = NI / Rm
-Ψ = NΦ
-L = Ψ / I = NΦ / I
-W = 1/2 LI²
-M = k√(L1L2)
-Lseries = L1 + L2 ± 2M
-e = -N dΦ/dt
-V1 / V2 = N1 / N2
+F = BIl sinθ
+F = qvB sinθ
+e = Blv sinθ
 ```
 
-## Topic 06 境界確認
+`e = Blv sinθ` は固定過去問を解くために必要な運動導体の誘導起電力として扱う。
 
-- Topic 07の電磁力、導体に働く力、運動導体の誘導起電力、モータの回転原理をTopic 06完成ゲートへ混在させない。
-- Topic 08・09の正弦波、実効値、RLC、リアクタンス、インピーダンス、交流位相を追加しない。
-- Topic 10・11の力率、無効電力、三相交流、Y・Δを追加しない。
-- Topic 12・13の半導体、スイッチング、PWMを追加しない。
-- 変圧器の損失・効率・電圧変動率・詳細等価回路を必須範囲へ広げない。
-- 0系主変圧器の未確認実車値・内部巻線・結線・保護回路を推測しない。
+## Topic 07 境界
+
+- 直流機の電圧方程式、界磁方式、速度制御は機械編へ送り、このTopicの完成ゲートへ入れない。
+- Topic 08以降の正弦波、実効値、RLC、力率、三相交流、半導体、PWMを追加しない。
+- 0系直流主電動機の未確認実車値・内部巻線・結線・制御方式を推測しない。
+- Topic 06の磁界・磁束密度等は電磁力を解くための前提として必要最小限のみ再利用する。
 
 ## 次に行うこと
 
-Topic 07 `モーターはなぜ回る？` の制作前EXAM_ALIGNMENTを実施する。本文作成前に公式理論過去問を直近年度優先で調査し、系列SPEC固定範囲内のゲート対象を確定する。
+固定EXAM_ALIGNMENT 5問を変更せず、Topic 07の解説本文＋3段階例題を作成する。
 
 ## 固定ルール
 
