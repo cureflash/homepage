@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験三種「電力」
 
-更新日: 2026-09-14
+更新日: 2026-09-15
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 5 / 16
-- current_status: `topic_06_practice_pdf_complete`
+- current_status: `topic_06_powerpoint_complete`
 - last_completed_topic: `05 新幹線を再エネだけで走らせられる？`
 - active_topic: `06 275,000Vをどうやって25,000Vにする？`
-- next_start: Topic 06の解説画像PowerPointを作成し、全スライド表示QA・はみ出し検査を行う
+- next_start: Topic 06の完成教材だけで固定5過去問を独立再解答し、教材外知識補完がないことを確認する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
@@ -16,7 +16,7 @@
 - [x] 03 JR東日本はなぜ火力発電所まで持っている？ — EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QA PASS
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、最終QA PASS
 - [x] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問、必須成果物、表示QA、修正版教材での独立再解答5/5 PASS、教材外知識補完0件、SPEC境界を最終QAで確認し `completed`
-- [ ] 06 275,000Vをどうやって25,000Vにする？ — 制作前EXAM_ALIGNMENT・固定5過去問の制作前独立検証5/5 PASS、解説本文＋3段階例題、解説PDF、練習PDFまで完了。次は解説画像PowerPoint
+- [ ] 06 275,000Vをどうやって25,000Vにする？ — 制作前EXAM_ALIGNMENT・固定5過去問の制作前独立検証5/5 PASS、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPointまで完了。次は完成後独立再解答
 - [ ] 07〜16 — 未完了
 
 ## Topic 05 完了記録
@@ -48,6 +48,8 @@ PowerPoint QA: `topics/05_renewable_energy/05_renewable_energy_powerpoint_qa.md`
 source: `topics/06_substation/06_substation.md`
 解説PDF: `topics/06_substation/06_substation_explanation.pdf`
 練習PDF: `topics/06_substation/06_substation_practice.pdf`
+解説画像PowerPoint: `topics/06_substation/06_substation_images.pptx`
+PowerPoint QA: `topics/06_substation/06_substation_powerpoint_qa.md`
 
 固定5過去問:
 - R7下 電力 問6 — 避雷器 — `(1)` PASS
@@ -62,7 +64,9 @@ source: `topics/06_substation/06_substation.md`
 
 練習PDFはA4縦3ページ・全12問、全問五肢択一。難易度は基礎3／標準7／複合2、全問に完全解説を付けた。固定5過去問は避雷器=問8・12、計器用変成器=問3・5・11・12、過電流継電器=問9・10、断路器=問6・12、真空遮断器=問7へ接続した。200 dpi全3ページ表示QA PASS、文字抽出QA PASS。数値問題は問1=8,800回、問4=440A、問5=3.5A、問11=2.75Aを別計算で再確認し `4 / 4 PASS`。
 
+解説画像PowerPointは16:9・4枚。固定5過去問の要求事項を全件可視化し、全4枚表示QA、`slides_test.py` による境界外はみ出し検査、PPTX ZIP整合性をPASS。固定範囲外論点・未確認実値の追加は0件。
+
 SPEC固定範囲は変電所、変圧器、母線、遮断器、断路器、計器用変成器、避雷器、保護リレー、受電電圧、き電電圧。GIS、調相設備、短絡電流・遮断容量・%インピーダンス計算、配電線詳細保護、三相→単相変換方式等は追加していない。
 
 ## 次
-Topic 06「275,000Vをどうやって25,000Vにする？」の解説画像PowerPointを作成する。固定5過去問の要求事項とSPEC境界を維持し、完成後は全スライド表示QA・境界外はみ出し検査を行う。
+Topic 06「275,000Vをどうやって25,000Vにする？」の完成教材だけを使い、固定5過去問を保存済み正答を見ずに独立再解答する。教材外知識補完が1件でもあればFAILとする。
