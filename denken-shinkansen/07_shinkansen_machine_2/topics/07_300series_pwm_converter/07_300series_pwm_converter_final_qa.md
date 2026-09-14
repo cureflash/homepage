@@ -6,17 +6,17 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` の範囲内で確認し、新しい仕様は追加していない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` の範囲内で再確認し、新しい仕様は追加していない。
 
-固定EXAM_ALIGNMENT、完成後独立再解答、必須成果物、SPEC指定4波形QA、仕様境界はPASSしている。一方、source Markdownの進捗記録が実在成果物と不整合のため、この時点では `completed` にしない。
+前回 `NEEDS_REVISION` の唯一の理由だった source Markdown の旧進捗記録2箇所は同期済み。今回の再QAでは、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、SPEC指定4波形QA、source進捗整合、仕様境界をすべてPASSした。
 
 ## 必須成果物
 
 GitHub正本上で実在を確認した。
 
-- source Markdown: PASS (`4c8b703527a7d56f3a63609531ed334d1b08d189`)
+- source Markdown: PASS (`3b2937fcc352e68b71c077aa91c18849678b9af8`)
 - 解説PDF: PASS (`e47219e6719a5e5d1f2d1338a5793bb393eb7a40`)
 - 練習PDF: PASS (`b374f0c3351ad819b41880a01f8ee8a756821e72`)
 - 解説画像PowerPoint: PASS (`34aeddf2249415f76b47bddc629fa21487ce56a1`)
@@ -25,7 +25,7 @@ GitHub正本上で実在を確認した。
 - 交流電圧 SVG: PASS (`7c7fc713c79fd0586c6831ead3fac42ce60fe702`)
 - 交流側電流 SVG: PASS (`1161c7489837c34d67630216c9c32c5b7d22b788`)
 - DCリンク電圧 SVG: PASS (`87d90d9b1277cb5222be75cc7650e47dbb651264`)
-- PWM電圧 SVG: PASS
+- PWM電圧 SVG: PASS (`fa8926dd2228c27df7b7b7bea5fd0a4df0fe4c3b`)
 - 完成後独立再解答記録: PASS (`b7f3988579173c6f38a8b55fd26d319704546d7a`)
 
 ## EXAM_ALIGNMENT
@@ -71,14 +71,9 @@ GitHub正本上で実在を確認した。
 
 ## source進捗整合
 
-FAIL。
+前回FAILだった旧記録は解消済み。
 
-source Markdownには、実在する完成後独立再解答記録と矛盾する旧進捗が残っている。
-
-1. 冒頭「状態」に `完成後独立再解答と最終QAは未実施` とあるが、完成後独立再解答は実施済みで `17 / 17 PASS`。
-2. 末尾「次工程」に `次は固定5問・17小問を完成教材だけで独立再解答し、結果を記録する` とあるが、この工程も完了済み。
-
-教材本文、EXAM_ALIGNMENT、数式、例題、成果物自体の不合格ではなく、進捗記録だけの不整合である。
+現在のsource Markdownは、解説本文＋3段階例題、解説PDF、練習PDF、PowerPoint、SPEC指定4波形、完成後独立再解答、最終QA再実施まで完了した状態へ同期し、次工程をTopic 08「VVVFインバータで三相交流を作る」の制作前EXAM_ALIGNMENTとしている。
 
 ## 仕様境界
 
@@ -98,10 +93,10 @@ source Markdownには、実在する完成後独立再解答記録と矛盾す�
 - ゲート対象17小問の教材反映: PASS
 - 完成後独立再解答: `17 / 17 PASS`
 - SPEC指定4波形QA: PASS
+- source Markdown進捗記録の整合: PASS
 - 仕様外論点の追加なし: PASS
 - 未確認実車値の真値化なし: PASS
-- source Markdown進捗記録の整合: FAIL
 
-判定: `NEEDS_REVISION / IN_PROGRESS`。
+判定: `PASS / completed`。
 
-次はsource Markdownの旧進捗記録2箇所を、完成後独立再解答済み・最終QA `NEEDS_REVISION` の現在地へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、例題、成果物は変更しない。
+次は Topic 08「VVVFインバータで三相交流を作る」の制作前EXAM_ALIGNMENT。
