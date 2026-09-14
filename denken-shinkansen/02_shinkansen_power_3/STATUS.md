@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 5 / 16
-- current_status: `topic_06_exam_alignment_complete`
+- current_status: `topic_06_explanation_source_complete`
 - last_completed_topic: `05 新幹線を再エネだけで走らせられる？`
 - active_topic: `06 275,000Vをどうやって25,000Vにする？`
-- next_start: Topic 06の固定EXAM_ALIGNMENTから逆算して解説本文＋3段階例題を作成する
+- next_start: Topic 06の解説本文＋3段階例題から解説PDFを作成し、全ページ表示QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
@@ -16,7 +16,7 @@
 - [x] 03 JR東日本はなぜ火力発電所まで持っている？ — EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QA PASS
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、最終QA PASS
 - [x] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問、必須成果物、表示QA、修正版教材での独立再解答5/5 PASS、教材外知識補完0件、SPEC境界を最終QAで確認し `completed`
-- [ ] 06 275,000Vをどうやって25,000Vにする？ — 制作前EXAM_ALIGNMENT完了、固定5過去問の制作前独立検証5/5 PASS。次は解説本文＋3段階例題
+- [ ] 06 275,000Vをどうやって25,000Vにする？ — 制作前EXAM_ALIGNMENT・固定5過去問の制作前独立検証5/5 PASS、解説本文＋3段階例題完成。次は解説PDF＋全ページ表示QA
 - [ ] 07〜16 — 未完了
 
 ## Topic 05 完了記録
@@ -44,7 +44,7 @@ PowerPoint QA: `topics/05_renewable_energy/05_renewable_energy_powerpoint_qa.md`
 
 固定範囲外のバイオマス、小水力、洋上風力の直流送電等は追加していない。未確認の新幹線消費電力・再エネ設備容量・蓄電容量は実値化していない。
 
-## Topic 06 制作前EXAM_ALIGNMENT
+## Topic 06 制作進捗
 source: `topics/06_substation/06_substation.md`
 
 固定5過去問:
@@ -54,7 +54,9 @@ source: `topics/06_substation/06_substation.md`
 - R3 電力 問8 — 断路器 — `(4)` PASS
 - R2 電力 問7 — 真空遮断器 — `(5)` PASS
 
-制作前独立検証 `5 / 5 PASS`。SPEC固定範囲は変電所、変圧器、母線、遮断器、断路器、計器用変成器、避雷器、保護リレー、受電電圧、き電電圧。GIS、調相設備、短絡電流・遮断容量・%インピーダンス計算、配電線詳細保護、三相→単相変換方式等は件数合わせで追加していない。
+制作前独立検証 `5 / 5 PASS`。固定5過去問の要求事項から逆算した解説本文＋3段階例題をsourceへ完成し、全件を教材節へマッピング済み。
+
+SPEC固定範囲は変電所、変圧器、母線、遮断器、断路器、計器用変成器、避雷器、保護リレー、受電電圧、き電電圧。GIS、調相設備、短絡電流・遮断容量・%インピーダンス計算、配電線詳細保護、三相→単相変換方式等は件数合わせで追加していない。
 
 ## 次
-Topic 06「275,000Vをどうやって25,000Vにする？」の解説本文＋3段階例題を、固定5過去問の要求事項から逆算して作成する。個別変電所の未確認実設備値を一般化せず、Topic 07以降の論点を先取りしない。
+Topic 06「275,000Vをどうやって25,000Vにする？」の解説PDFをsourceから作成し、全ページ表示QAを行う。個別変電所の未確認実設備値を一般化せず、Topic 07以降の論点を先取りしない。
