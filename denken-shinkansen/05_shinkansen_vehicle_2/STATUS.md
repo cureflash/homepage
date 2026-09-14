@@ -5,17 +5,17 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 4 / 39
-- current_status: `topic_05_powerpoint_complete`
+- current_status: `topic_05_independent_reanswer_complete`
 - last_completed_topic: `04 0系④ タップ制御と加速特性`
 - active_topic: `05 0系⑤ 発電ブレーキのエネルギー解析`
-- next_start: Topic 05の完成教材だけで、選定済みR5一次・H24二次の固定範囲を独立再解答する
+- next_start: Topic 05の最終QAを実施し、必須成果物・過去問対応・独立再解答・表示QA・範囲境界を確認する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
 - [x] 04 0系④ タップ制御と加速特性 — PASS
-- [ ] 05 0系⑤ 発電ブレーキのエネルギー解析 — EXAM_ALIGNMENT・解説本文・3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint完了、完成後独立再解答未実施
+- [ ] 05 0系⑤ 発電ブレーキのエネルギー解析 — EXAM_ALIGNMENT・解説本文・3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答完了、最終QA未実施
 
 ## Topic 05 現在地
 - source: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy.md`
@@ -42,8 +42,13 @@
   - R5一次・H24二次の固定範囲への解法接続を収録
   - 全5スライドVisual QA・overflow検査・ZIP整合性 PASS
 - PowerPoint QA: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_images_qa.md`
+- 完成後独立再解答: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_independent_reanswer.md`
+  - 固定範囲5チェックポイント `5 / 5 PASS`
+  - R5一次: `(2)=ホ`, `(3)=チ`, 車上抵抗消費の説明を再構築
+  - H24二次: `R_a=0.500 Ω`, `E=187.5 V ≒ 188 V` を途中式付きで再導出
+  - 教材外知識補完・範囲外論点・未確認0系実値の追加はいずれも0件
 - 制作前EXAM_ALIGNMENT: 完了
-- 次工程: 完成教材だけによる独立再解答
+- 次工程: 最終QA
 
 ## Topic 05 過去問対応
 公式過去問は一次・二次双方を確認済み。固定範囲へ直接または必須計算基礎として接続するゲート対象:
