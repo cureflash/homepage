@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 29 / 38
-- current_status: `topic_30_practice_pdf_complete`
+- current_status: `topic_30_powerpoint_complete`
 - last_completed_topic: `29 コンプレッサ・ポンプ・ファン`
 - active_topic: `30 ATC① 新幹線は列車をどう検知する？`
-- next_start: Topic 30の解説画像PowerPoint。固定EXAM_ALIGNMENT 5問の解法経路を可視化し、後続Topic 31・32の論点へ広げない
+- next_start: Topic 30の完成後独立再解答。固定EXAM_ALIGNMENT 5問を完成教材だけで再解答し、教材外知識補完・固定範囲外追加がないか判定する
 
 ## 新品質ゲート進捗
 - [x] 01〜29 — PASS
-- [ ] 30 ATC① 新幹線は列車をどう検知する？ — PRACTICE_PDF_COMPLETE
+- [ ] 30 ATC① 新幹線は列車をどう検知する？ — POWERPOINT_COMPLETE
 
 ## 30 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知。
@@ -33,7 +33,7 @@
 - 解説PDF: `topics/30_atc_train_detection/30_atc_train_detection_explanation.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
 - 練習source: `topics/30_atc_train_detection/30_atc_train_detection_practice.md` — 15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説、固定5問を全件マッピング
 - 練習PDF: `topics/30_atc_train_detection/30_atc_train_detection_practice.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: `topics/30_atc_train_detection/30_atc_train_detection_images.pptx` — 16:9・4枚、固定5問の解法経路を可視化、全4枚表示QA PASS、ZIP整合性PASS
 - 完成後独立再解答・最終QA: 未着手
 
 ## 30 練習QA
@@ -46,6 +46,16 @@
 - 複数正答: `0件`
 - 練習PDF表示QA: 180 dpi `4 / 4 PASS`
 - 練習PDF文字抽出QA: PASS
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+
+## 30 PowerPoint QA
+- 画面比率: `16:9`
+- スライド数: `4`
+- 内容: 軌道回路の列車なし/あり、直列・並列・分圧・短絡、固定5過去問の解法経路、再利用解法アルゴリズム
+- 固定EXAM_ALIGNMENT要求事項: `5 / 5` 可視化
+- 表示QA: `4 / 4 PASS`
+- ZIP整合性: PASS
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
@@ -62,4 +72,4 @@
 Topic 29 `コンプレッサ・ポンプ・ファン` は固定5問の完成後独立再解答 `5 / 5 PASS`、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 30の解説画像PowerPointを作成する。固定5過去問の回路状態変化、直列・並列、分圧、短絡、車軸短絡による受信側状態変化を固定範囲内で可視化し、Topic 31・32の論点や未確認実車値を追加しない。
+Topic 30の固定5過去問を、完成教材だけを使って保存済み正答を先に見ず独立再解答する。教材外知識補完、固定範囲外追加、未確認実車値依存がないことを確認し、品質ゲート判定を記録する。
