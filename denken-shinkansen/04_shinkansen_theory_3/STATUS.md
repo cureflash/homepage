@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 6 / 14
-- current_status: `topic_06_completed`
+- current_status: `topic_07_exam_alignment_complete`
 - last_completed_topic: `06 0系の変圧器は何をしていた？`
 - active_topic: `07 モーターはなぜ回る？`
-- next_start: Topic 07の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 07の解説本文＋3段階例題を作成する
 
 ## Topic 01 進捗
 
@@ -103,24 +103,37 @@
 - [x] 最終QA再実施
 - [x] 最終QA PASS
 
+## Topic 07 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] GitHub上のSTATUS / HANDOFF / 既存成果物確認（Topic 07既存成果物なし）
+- [x] 直近年度を優先して公式理論過去問を確認
+- [x] Topic 07固定範囲でゲート対象5問を確定
+- [x] 制作前独立検証 `5 / 5 PASS`
+- [x] 固定範囲外の直流機詳細・後続Topic論点・未確認実車値を境界整理
+- [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 06 `0系の変圧器は何をしていた？` の最終QAを再実施した。
+Topic 07 `モーターはなぜ回る？` の制作前EXAM_ALIGNMENTを完了した。
 
-確認結果:
-- 必須成果物: PASS
-- 固定EXAM_ALIGNMENT 5問: PASS
-- 3段階例題・教材内マッピング: PASS
-- 練習15問・既存表示QA: PASS
-- 完成後独立再解答: `5 / 5 PASS`
-- 教材外知識補完: `0問`
-- 後続Topic知識への依存: `0問`
-- 未確認0系実車値への依存: `0問`
-- SPEC固定範囲・境界: PASS
-- source進捗記録整合性: PASS
+確認・固定内容:
+- 令和8年度上期～令和7年度の直近磁気系問題を確認し、Topic 07へ直接対応しない問題は件数合わせで採用しなかった。
+- 固定公式過去問: R6下問4、R5下問4、R4上問4、R2問3、H28問12の5問。
+- 制作前独立検証: `5 / 5 PASS`。
+- 必須論点: `F=BIl sinθ`、フレミング左手則、平行導体の電磁力、コイルの偶力・トルク、`F=qvB sinθ`、運動導体の誘導起電力、フレミング右手則、逆起電力の基本。
+- 直流機の電圧方程式・界磁方式・速度制御、Topic 08以降、未確認0系実車値は除外。
+- e-sysnet・電験王・電験三種まとめましたを補助確認し、sourceへ出典・教材必須説明・予定マッピングを記録した。
 
-教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・PDF / PowerPoint内容は変更していない。主sourceの完了メタデータ、最終QA記録、STATUS、HANDOFFのみ現在地へ同期した。
+Topic 07 source: `topics/07_motor_force_induction/07_motor_force_induction.md`
 
 ## 判定
 
-Topic 06は `PASS / completed`。完成数は `6 / 14`。次はTopic 07 `モーターはなぜ回る？` の制作前EXAM_ALIGNMENT。
+Topic 07は `exam_alignment_complete`。完成数は `6 / 14` のまま。次は固定EXAM_ALIGNMENTを変えずに解説本文＋3段階例題を作成する。
