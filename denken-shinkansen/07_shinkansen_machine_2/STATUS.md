@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 6 / 22
-- current_status: `topic_07_final_qa_needs_revision`
+- current_status: `topic_07_source_progress_synced`
 - last_completed_topic: `06 誘導電動機の最大トルクはどこで出る？`
 - active_topic: `07 300系のPWMコンバータは何をしている？`
-- next_start: Topic 07 source Markdownの旧進捗記録2箇所を現在地へ同期する
+- next_start: Topic 07の最終QAを再実施する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -124,25 +124,18 @@
 - [x] SPEC指定4波形
 - [x] 公式過去問の教材のみでの独立再解答: 17 / 17 PASS
 - [x] 最終QA実施: `NEEDS_REVISION`（source Markdownの旧進捗記録2箇所が残存）
-- [ ] source Markdown進捗記録の同期
+- [x] source Markdown進捗記録の同期
 - [ ] 最終QA再実施: `PASS / completed`
 
 ## 今回進めた内容
-Topic 07「300系のPWMコンバータは何をしている？」の最終QAを実施した。
+Topic 07「300系のPWMコンバータは何をしている？」のsource Markdown進捗記録を現在地へ同期した。
 
-成果物:
-- `topics/07_300series_pwm_converter/07_300series_pwm_converter_final_qa.md`
-
-確認内容:
-- 固定EXAM_ALIGNMENT: 一次2問＋二次記述3問、計5問・17小問
-- 完成後独立再解答: `17 / 17 PASS`
-- 必須成果物: PASS
-- SPEC指定4波形QA: PASS
+変更内容:
+- 冒頭「状態」を完成後独立再解答 `17 / 17 PASS`・最終QA `NEEDS_REVISION` へ同期
+- 末尾「次工程」を最終QA再実施へ同期
+- 教材本文、固定EXAM_ALIGNMENT、数式、例題、PDF/PPTX/波形成果物は変更なし
 - 固定範囲外論点の追加: 0件
 - 未確認300系実車値の追加: 0件
-- source Markdown進捗整合: FAIL
-  - 冒頭に「完成後独立再解答と最終QAは未実施」が残存
-  - 末尾「次工程」が完成後独立再解答のまま
 
 ## 判定
-Topic 07は `NEEDS_REVISION / IN_PROGRESS`。完成数は `6 / 22` のまま。次はsource Markdownの旧進捗記録2箇所を現在地へ同期する。
+Topic 07は source進捗記録同期まで完了。完成数は `6 / 22` のまま。次は最終QAを再実施する。
