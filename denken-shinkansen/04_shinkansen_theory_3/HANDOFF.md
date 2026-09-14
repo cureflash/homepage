@@ -6,38 +6,27 @@
 
 Topic 01〜06は最終QAまでPASSし、`completed`。
 
-Topic 07 `モーターはなぜ回る？` は制作前EXAM_ALIGNMENTに続き、解説本文＋3段階例題まで完成した。固定公式過去問5問と制作前独立検証 `5 / 5 PASS` は変更していない。
+Topic 07 `モーターはなぜ回る？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題に続き、解説PDFまで完成した。固定公式過去問5問と制作前独立検証 `5 / 5 PASS` は変更していない。
 
 - 完成数: `6 / 14`
 - last completed: `06 0系の変圧器は何をしていた？`
 - active topic: `07 モーターはなぜ回る？`
-- current status: `topic_07_explanation_source_complete`
+- current status: `topic_07_explanation_pdf_complete`
 - Topic 07 source: `topics/07_motor_force_induction/07_motor_force_induction.md`
+- Topic 07 explanation PDF: `topics/07_motor_force_induction/07_motor_force_induction_explanation.pdf`
 
 ## 今回進捗
 
-固定EXAM_ALIGNMENT 5問から逆算した必須事項を、解説本文と3段階例題へ全件マッピングした。
+固定EXAM_ALIGNMENTと解説本文を変更せず、解説PDFを作成した。
 
-本文収録:
-
-- `F = BIl sinθ` の意味・成立条件・角度・単位
-- フレミング左手則
-- 平行導体の電磁力と `F/l = μI1I2/(2πr)`
-- 直線導体の横にある矩形ループの近側・遠側電磁力の合成
-- コイルの偶力と `τ = NIAB sinφ`
-- `F = qvB sinθ` の導出、負電荷の向き、磁気力による円運動
-- 運動導体の誘導起電力 `e = Blv sinθ`
-- フレミング右手則
-- 逆起電力の基本概念
-- 0系直流主電動機への一般原理接続
-
-3段階例題:
-
-1. 基礎: 一様磁界中の直線導体に働く力
-2. 本試験標準: 直線導体＋矩形ループの合成電磁力
-3. 複合・ひっかけ: コイルのトルク＋運動導体の誘導起電力
-
-固定5問の要求事項は全件本文へマッピング済み。直流機の電圧方程式・界磁方式・速度制御、Topic 08以降、未確認0系実車値の追加は0件。
+- A4縦4ページ
+- 固定5問の要求事項を全件収録
+- 3段階例題（基礎／本試験標準／複合・ひっかけ）を収録
+- 200 dpi全4ページ表示QA: `PASS`
+- 文字抽出QA: `PASS`
+- 直流機の電圧方程式・界磁方式・速度制御の追加: `0件`
+- Topic 08以降の論点追加: `0件`
+- 未確認0系実車値の追加: `0件`
 
 ## Topic 07 固定過去問
 
@@ -81,7 +70,7 @@ e = Blv sinθ
 
 ## 次に行うこと
 
-固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 07の解説PDFを作成し、全ページ表示QAを行う。
+固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 07の練習問題source・練習PDFを作成する。
 
 ## 固定ルール
 
