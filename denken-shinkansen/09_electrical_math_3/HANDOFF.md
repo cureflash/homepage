@@ -4,23 +4,21 @@
 
 ## 現在地
 
-Topic 01〜05は `completed`。
+Topic 01〜06は `completed`。
 
-Topic 06 `微分① ダイヤの傾きは速度` は、制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習source/PDF、解説画像PowerPoint、補強、補強後の独立再解答まで完了している。
+Topic 06 `微分① ダイヤの傾きは速度` は最終QA再判定まで完了し、`PASS / completed`。補強後の完成教材だけで固定4問を再独立解答し、公式解答と `4 / 4` 一致。教材外知識補完0件、固定範囲外追加0件、未確認新幹線実値追加0件。
 
-補強後の完成教材だけで固定4問を再独立解答し、公式解答と `4 / 4` 一致。過去問対応品質ゲートはPASS。
+前回最終QAで唯一FAILだった主source `06_derivative_1.md` の進捗記録不整合は解消済み。必須成果物、既存表示QA、固定EXAM_ALIGNMENT、仕様境界、GitHub正本の進捗整合を再確認し、全品質ゲートPASSとした。
 
-前回最終QAで唯一FAILだった主source `06_derivative_1.md` の進捗記録不整合を今回解消した。冒頭状態、完成後独立再解答の到達状態、末尾次工程を現在地へ同期済み。教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・PDF・練習・PowerPointは変更していない。
+完成数: `6 / 12`
 
-完成数: `5 / 12`
+current_status: `topic_06_completed`
 
-current_status: `topic_06_source_progress_synced`
-
-active_topic: `06 微分① ダイヤの傾きは速度`
+active_topic: `07 微分② 速度を微分すると加速度`
 
 ## Topic 06 固定EXAM_ALIGNMENT
 
-品質ゲート対象は次の4問で固定する。
+品質ゲート対象は次の4問で固定。
 
 - R7上 理論 問13: トランジスタ静特性グラフから局所的な `ΔI/ΔV` とその逆数を読む
 - R6下 理論 問3: 直線的な磁束変化の `ΔΦ/Δt` を計算する
@@ -31,20 +29,9 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 三種は原則5問以上だが、追加候補はTopic 07以降の極値・2階微分、Topic 08の積分、Topic 10の指数関数・RC/RL過渡現象、またはレンツの法則等の専門論点を必要とするため採用しない。H16理論問9はR5上理論問10と同型のため件数合わせで重複カウントしない。
 
-## 最初の完成後独立再解答で不足した前提
+## 補強と完成後独立再解答
 
-| 過去問 | 教材だけでできた数学操作 | 不足していた前提 |
-|---|---|---|
-| R7上 理論 問13 | 局所的な `ΔI/ΔV` と逆数、`S↔Ω` | 当該設問での `h_fe=I_C/I_B` |
-| R6下 理論 問3 | 直線変化から `ΔΦ/Δt=10 Wb/s` | `|e|=N|dΦ/dt|` |
-| R5上 理論 問10 | 各区間の `|Δi/Δt|` 比較、`mA/ms=A/s` | `|v|=L|di/dt|` |
-| R4下 理論 問7 | `(r21-r20)/r20` の相対変化整理 | 抵抗温度係数の一次関係と並列合成抵抗 |
-
-最初の完成後独立再解答: `0 / 4 PASS / NEEDS_REVISION`。
-
-## 補強と再独立解答
-
-補強source `06_derivative_1_revision_supplement.md` に次だけを追加し、学習用補強PDFへ同期済み。
+初回の完成後独立再解答は `0 / 4 PASS / NEEDS_REVISION`。不足した前提だけを補強source/PDFへ最小追加した。
 
 1. R7上 理論 問13: `h_fe=I_C/I_B`
 2. R6下 理論 問3: `|e|=N|dΦ/dt|`
@@ -58,34 +45,24 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 - R5上 理論 問10: `(4)` PASS
 - R4下 理論 問7: `(2)` PASS
 
-公式解答照合 `4 / 4 PASS`。教材外知識補完0件、固定EXAM_ALIGNMENT変更0件、Topic 07以降の数学論点追加0件、専門分野の体系説明追加0件、未確認新幹線実値追加0件。
-
-詳細記録: `topics/06_derivative_1/06_derivative_1_exam_reanswer.md`
+公式解答照合 `4 / 4 PASS`。詳細記録: `topics/06_derivative_1/06_derivative_1_exam_reanswer.md`
 
 ## 最終QA
 
 記録: `topics/06_derivative_1/06_derivative_1_final_qa.md`
 
-前回判定: `NEEDS_REVISION / IN_PROGRESS`
+最終判定: `PASS / completed`
 
-前回PASS:
-- 必須成果物
-- 固定EXAM_ALIGNMENT 4問
-- 制作前独立検証 `4 / 4 PASS`
-- 補強後完成教材による独立再解答 `4 / 4 PASS`
-- 仕様境界
-- 教材外補完0件
-- 固定範囲外追加0件
-- 未確認新幹線実値追加0件
-
-前回FAILは主sourceの進捗記録不整合のみだったが、今回同期済み。
-
-同期済み:
-- 冒頭 `## 状態`: 補強後 `4 / 4 PASS`・最終QA実施済みへ更新
-- `# 完成後独立再解答`: 補強後 `4 / 4 PASS` を追記
-- `# 次工程`: 最終QA再判定へ更新
-
-次は最終QAを再判定する。
+- 必須成果物: PASS
+- 固定EXAM_ALIGNMENT 4問: PASS
+- 制作前独立検証: `4 / 4 PASS`
+- 補強後完成教材による独立再解答: `4 / 4 PASS`
+- 教材外補完: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値追加: 0件
+- 仕様境界: PASS
+- 表示QA・成果物整合: PASS
+- GitHub正本の進捗整合: PASS
 
 ## Topic 06 制作範囲
 
@@ -124,6 +101,6 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 ## 次に行うこと
 
-Topic 06の最終QAを再判定する。
+Topic 07「微分② 速度を微分すると加速度」の制作前EXAM_ALIGNMENT。
 
-前回FAILだったsource進捗記録不整合が解消したこと、固定4問の補強後 `4 / 4 PASS`、必須成果物、表示QA、仕様境界を再確認する。PASSならTopic 06を `completed` とし、完成数を `6 / 12` へ更新する。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近年度を優先して公式過去問を調査し、Topic 07だけで直接対応できる問題を選定する。件数合わせの仕様外論点追加はしない。
