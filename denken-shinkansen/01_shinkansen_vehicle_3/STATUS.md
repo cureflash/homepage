@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 27 / 38
-- current_status: `topic_28_explanation_source_complete`
+- current_status: `topic_28_explanation_pdf_complete`
 - last_completed_topic: `27 補助電源② 車内照明`
 - active_topic: `28 空調・電熱`
-- next_start: Topic 28の解説PDFを作成し、§1〜§15、3段階例題、固定EXAM_ALIGNMENT 5問・10小問への対応を収録する。全ページ表示QAを行い、仕様外論点・未確認実車値を追加しない
+- next_start: Topic 28の練習PDFを作成する。三種仕様に従い12問以上、基礎20〜30%・本試験標準50〜60%・複合約20%、少なくとも半数を五肢択一とし、完全解説と固定EXAM_ALIGNMENT 5問・10小問への対応を収録する。全ページ表示QAを行い、仕様外論点・未確認実車値を追加しない
 
 ## 新品質ゲート進捗
 - [x] 01〜27 — PASS
-- [ ] 28 空調・電熱 — IN_PROGRESS / EXAM_ALIGNMENT PASS (`10 / 10`) / explanation source complete
+- [ ] 28 空調・電熱 — IN_PROGRESS / EXAM_ALIGNMENT PASS (`10 / 10`) / explanation source complete / explanation PDF complete
 
 ## 28 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・10小問。系列SPEC固定範囲は、空調、電熱、ジュール熱、熱量、電力、効率。
@@ -42,6 +42,14 @@
 - 本試験標準例題: 氷の融解潜熱＋水の顕熱を加算し、熱効率から加熱時間を逆算
 - 複合例題: 体積→質量、`Q=mcΔT`、COP、`kJ/kW→s→h`を一続きで処理
 - 解法順序を`加熱過程→質量・温度差→必要熱量→効率/COP→電力・時間→単位・桁の検算`として固定
+- 新幹線車内空調・電熱の未確認実車値は真値化していない
+- 熱伝導・加熱方式各論・冷凍サイクル詳細・湿度等の固定範囲外論点は追加していない
+
+## 28 解説PDF
+- 解説PDF: `topics/28_air_conditioning_heating/28_air_conditioning_heating_explanation.pdf`
+- A4縦4ページ。§1〜§15、ジュール熱・顕熱・潜熱・複数過程、熱効率、COP、単位換算、7段階解法、3段階例題、固定5問・10小問対応表を収録
+- 固定5問・10小問の要求事項をPDF内へ全件マッピング済み
+- 180 dpiで全4ページ表示QA PASS。文字切れ・重なり・ページ外はみ出し・破損グリフなし
 - 新幹線車内空調・電熱の未確認実車値は真値化していない
 - 熱伝導・加熱方式各論・冷凍サイクル詳細・湿度等の固定範囲外論点は追加していない
 
