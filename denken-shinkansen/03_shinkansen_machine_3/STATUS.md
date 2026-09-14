@@ -5,17 +5,17 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 4 / 16
-- current_status: `topic_05_practice_pdf_complete`
+- current_status: `topic_05_powerpoint_complete`
 - last_completed_topic: `04 300系でモーターが全部変わった`
 - active_topic: `05 誘導電動機はなぜ勝手に回る？`
-- next_start: Topic 05の固定EXAM_ALIGNMENT、完成済み解説source・解説PDF・練習問題source・練習PDFを維持して解説画像PowerPointを作成する。仕様外論点・未確認実車値は追加しない
+- next_start: Topic 05の固定EXAM_ALIGNMENTと完成済み教材を変更せず、選定5問・6小問を完成教材だけで独立再解答する。保存済み正答を先に見ず、教材外知識で補完しない
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
 - [x] 02 初代0系はどうやって走っていた？ — 選定6問を教材だけで再解答し6/6正答、品質ゲートPASS
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
 - [x] 04 300系でモーターが全部変わった — 必須成果物・EXAM_ALIGNMENT・独立再解答5/5・表示QA・範囲境界・進捗整合を再確認し、最終QA `PASS / completed`
-- [ ] 05 誘導電動機はなぜ勝手に回る？ — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題source、練習PDFまで完了。固定5問・6小問を教材へマッピング済み。PowerPoint、完成後独立再解答は未着手
+- [ ] 05 誘導電動機はなぜ勝手に回る？ — 制作前EXAM_ALIGNMENT、解説本文、3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。固定5問・6小問を教材へマッピング済み。完成後独立再解答は未着手
 - [ ] 06〜16 — 未完了
 
 ## 05 EXAM_ALIGNMENT対象
@@ -104,6 +104,16 @@ Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御�
 - PDF文字抽出で問1〜問12、正答表示、主要公式・数値、品質確認欄を確認
 - 固定範囲外論点・未確認実車値の追加 `0件`
 
+## 05 解説画像PowerPoint
+`topics/05_induction_motor_principle/05_induction_motor_principle_images.pptx` を作成済み。
+
+- 16:9、5スライド
+- 回転磁界→電磁誘導→回転子電流→トルク、同期速度・滑り・二次周波数、電力フロー、`P2=Tωs` / `Pm=Tωm`、最大トルク・比例推移、固定EXAM_ALIGNMENT 5問・6小問への接続を図解
+- 全スライドをPDF化して表示確認し、文字切れ・重なり・欠落グリフなしを確認
+- スライド領域外はみ出し `0件`
+- PPTX ZIP整合性 `PASS`
+- 固定範囲外論点・未確認実車値の追加 `0件`
+
 ## 05 現在の品質状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前独立検証: `6 / 6 PASS`
@@ -117,7 +127,10 @@ Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御�
 - 練習PDF: 完了
 - 練習PDF表示QA: `PASS`
 - 練習PDF文字抽出QA: `PASS`
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 完了（16:9、5スライド）
+- PowerPoint表示QA: `PASS`
+- PowerPointはみ出し検査: `PASS / 0件`
+- PowerPoint ZIP整合性: `PASS`
 - 完成後独立再解答: 未着手
 - 完成数: `4 / 16` 据え置き
 
