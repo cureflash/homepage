@@ -6,11 +6,11 @@
 
 Topic 01〜04は `completed`。
 
-Topic 05 `0系主変圧器の鉄心には何が起きている？` は最終QAまで実施したが、source 2ファイルの進捗記録不整合により `NEEDS_REVISION`。
+Topic 05 `0系主変圧器の鉄心には何が起きている？` は、初回最終QAで検出されたsource 2ファイルの進捗記録不整合を解消済み。技術内容・固定EXAM_ALIGNMENT・練習問題・正答・二次非採用判断は変更していない。
 
 完成数: `4 / 21`
 
-current_status: `topic_05_final_qa_needs_revision`
+current_status: `topic_05_source_status_synced`
 
 active_topic: `05 0系主変圧器の鉄心には何が起きている？`
 
@@ -60,35 +60,25 @@ active_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - 3段階例題: 完成
 - 固定一次5問・16小問の本文対応表: 完成
 - 解説PDF: 完成（A4縦6ページ）
-- 解説PDF表示QA: 全6ページPASS（200 dpiレンダリング、文字抽出の置換文字0件）
+- 解説PDF表示QA: 全6ページPASS
 - 練習問題source: 完成（12問、全問五肢択一、基礎3 / 標準6 / 複合3）
 - 練習PDF: 完成（A4縦3ページ）
-- 練習問題QA: 正答一意性・計算再検算 `12 / 12 PASS`、200 dpi全3ページ表示QA PASS
+- 練習問題QA: 正答一意性・計算再検算 `12 / 12 PASS`、全3ページ表示QA PASS
 - 解説画像PowerPoint: 完成（16:9、5スライド）
 - PowerPoint QA: 全5スライド表示QA、overflow検査、ZIP整合性すべてPASS
-- 完成後独立再解答: 完成（`topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit_independent_reanswer.md`）
+- 完成後独立再解答: 完成
 - 独立再解答結果: 固定一次5問・16小問 `16 / 16 PASS`、教材外補完0件、固定範囲外追加0件
-- 最終QA: 実施済み（`topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit_final_qa.md`）
-- 最終QA判定: `NEEDS_REVISION / IN_PROGRESS`
-
-## 最終QAで検出した残件
-
-技術内容、固定EXAM_ALIGNMENT、二次非採用判断、独立再解答、表示QAはPASS。
-
-進捗記録のみ不整合が残る。
-
-1. `05_transformer_magnetic_circuit.md` 冒頭状態欄が「解説本文＋3段階例題まで完成。PDF・練習問題・PowerPoint・完成後独立再解答・最終QAは未着手」のまま。
-2. `05_transformer_magnetic_circuit_practice.md` 冒頭状態欄が「練習問題source＋練習PDFまで完成」のまま。
-
-この2ファイルを現在地へ同期するまで `completed` にしない。
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 初回最終QAの残件: source進捗記録2箇所のみ
+- source進捗記録同期: 完了
 
 ## 今回の更新
 
-1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFFとGitHub正本成果物を再確認。
-2. 必須成果物、固定一次5問・16小問の独立再解答 `16 / 16 PASS`、二次非採用判断、固定範囲、表示QA・計算QAを確認。
-3. source 2ファイルの旧進捗記録を検出したため、最終QAを `NEEDS_REVISION` とした。
+1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFFとGitHub正本を再確認。
+2. `05_transformer_magnetic_circuit.md` の状態欄・末尾進捗を現在地へ同期。
+3. `05_transformer_magnetic_circuit_practice.md` の状態欄を現在地へ同期。
 4. 技術内容、固定EXAM_ALIGNMENT、問題・正答、二次非採用判断は変更していない。
 
 ## 次に行うこと
 
-`05_transformer_magnetic_circuit.md` と `05_transformer_magnetic_circuit_practice.md` の状態記録だけをGitHub正本の現在地へ同期する。その後に最終QAを再実施し、全品質ゲートPASSの場合のみTopic 05を `completed` にする。
+Topic 05の最終QAを再実施する。必須成果物、固定一次5問・16小問の独立再解答 `16 / 16 PASS`、二次非採用判断、表示QA、source進捗記録の整合を再確認し、全品質ゲートPASSの場合のみ `completed` にする。
