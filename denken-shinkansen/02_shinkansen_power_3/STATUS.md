@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_explanation_source_complete`
+- current_status: `topic_07_explanation_pdf_complete`
 - last_completed_topic: `06 275,000Vをどうやって25,000Vにする？`
 - active_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
-- next_start: Topic 07の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う
+- next_start: Topic 07の練習PDFを作成し、全ページ表示QA・文字抽出QA・正答一意性を確認する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
@@ -17,7 +17,7 @@
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、最終QA PASS
 - [x] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問、必須成果物、表示QA、修正版教材での独立再解答5/5 PASS、教材外知識補完0件、SPEC境界を最終QAで確認し `completed`
 - [x] 06 275,000Vをどうやって25,000Vにする？ — 固定5過去問、必須成果物、表示QA、完成後独立再解答5/5 PASS、教材外知識補完0件、source進捗整合・SPEC境界を最終QAで確認し `completed`
-- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 制作前EXAM_ALIGNMENT完了、固定5問・8小問、制作前独立検証 `8 / 8 PASS`。解説本文＋3段階例題を完成し、固定範囲の要求事項を教材節へマッピング済み。次は解説PDF
+- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 制作前EXAM_ALIGNMENT完了、固定5問・8小問、制作前独立検証 `8 / 8 PASS`。解説本文＋3段階例題、解説PDFまで完成。解説PDFはA4縦4ページ、200 dpi全4ページ表示QA・文字抽出QA PASS。次は練習PDF
 - [ ] 08〜16 — 未完了
 
 ## Topic 05 完了記録
@@ -77,6 +77,7 @@ SPEC固定範囲は変電所、変圧器、母線、遮断器、断路器、計�
 
 ## Topic 07 進捗記録
 source: `topics/07_phase_conversion/07_phase_conversion.md`
+解説PDF: `topics/07_phase_conversion/07_phase_conversion_explanation.pdf`
 
 固定5過去問・8小問:
 - R7下 理論 問15(a)(b) — 線間/相電圧・三相電力 — `(3),(3)` PASS
@@ -89,9 +90,11 @@ source: `topics/07_phase_conversion/07_phase_conversion.md`
 
 解説本文＋3段階例題をsourceへ完成。Y/Δの線間・相関係、平衡三相電力、単相大容量負荷と三相側不平衡、スコット結線の二次90°・T側一次巻数 `√3/2`、変形ウッドブリッジ結線・ルーフ・デルタ結線の概略を固定範囲内で整理した。新幹線側は鉄道・運輸機構の公開資料を一次資料として確認した。
 
+解説PDFはA4縦4ページ。固定5問・8小問へ接続するY/Δの線間・相関係、三相有効電力、単相負荷と三相側不平衡、スコット結線、3方式比較、3段階例題、頻出ミス、過去問対応表を収録した。200 dpi全4ページ表示QA PASS、文字抽出QA PASS。黒四角・欠損文字・はみ出しは最終レンダーで0件。
+
 Topic 07固定範囲は三相交流、単相交流、線間/相電圧、三相電力、き電用変圧器、相変換、三相側負荷平衡、スコット結線、変形ウッドブリッジ結線、ルーフ・デルタ結線。二種相当の厳密ベクトル導出、Topic 08以降の電圧降下・線路損失・き電回路詳細、Topic 10の力率改善、Topic 11の短絡・保護へは拡張していない。未確認の個別設備定格・配置も実値化していない。
 
 固定過去問に含まれるTopic 07外の既習論点を理由に仕様は追加していない。完成後独立再解答時に、完成教材だけで固定5問・8小問へ対応できるかを改めて品質ゲート判定する。
 
 ## 次
-Topic 07「なぜ三相交流をそのまま架線へ流さない？」の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。
+Topic 07「なぜ三相交流をそのまま架線へ流さない？」の練習PDFを作成し、全ページ表示QA・文字抽出QA・正答一意性を確認する。
