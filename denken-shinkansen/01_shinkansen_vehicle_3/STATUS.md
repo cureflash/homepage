@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 28 / 38
-- current_status: `topic_29_explanation_pdf_complete`
+- current_status: `topic_29_practice_pdf_complete`
 - last_completed_topic: `28 空調・電熱`
 - active_topic: `29 コンプレッサ・ポンプ・ファン`
-- next_start: Topic 29の完成済み解説本文・解説PDFをもとに練習source/PDFを作成する。固定EXAM_ALIGNMENT 5問の解法経路と系列SPEC固定範囲（コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率）を維持し、範囲外論点・未確認実車値を追加しない
+- next_start: Topic 29の完成済み解説本文・解説PDF・練習source/PDFをもとに解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問の解法経路と系列SPEC固定範囲（コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率）を維持し、範囲外論点・未確認実車値を追加しない
 
 ## 新品質ゲート進捗
 - [x] 01〜28 — PASS
-- [ ] 29 コンプレッサ・ポンプ・ファン — EXPLANATION_PDF_COMPLETE
+- [ ] 29 コンプレッサ・ポンプ・ファン — PRACTICE_PDF_COMPLETE
 
 ## 29 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率。
@@ -43,10 +43,21 @@
 - 3段階例題: コンプレッサ軸出力 / ポンプ必要電動機入力 / ファン速度低下
 - 固定範囲外追加 `0件`、未確認実車値追加 `0件`
 
+## 29 練習問題
+- 全15問、全問五肢択一、完全解説付き
+- 難易度: 基礎4 / 標準8 / 複合3
+- 正答位置: A/B/C/D/E各3問
+- 独立計算・論理QA: `15 / 15 PASS`
+- 固定EXAM_ALIGNMENT 5問の要求事項へ `5 / 5` 対応
+- コンプレッサは電動機側の軸出力・トルク・回転速度・効率だけを扱い、圧縮機熱力学は追加していない
+- PDF: A4縦4ページ、180 dpi全4ページ表示QA PASS、文字抽出でQ1〜Q15を確認
+- 固定範囲外論点追加 `0件`、未確認実車値追加 `0件`
+
 ## 29 成果物
 - 解説source / EXAM_ALIGNMENT: `topics/29_compressor_pump_fan/29_compressor_pump_fan.md` — 本文＋3段階例題まで完成
 - 解説PDF: `topics/29_compressor_pump_fan/29_compressor_pump_fan_explanation.pdf` — A4縦4ページ、§1〜§15・3段階例題・固定5問マッピング、180 dpi全ページ表示QA PASS
-- 練習source/PDF: 未着手
+- 練習source: `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.md` — 15問、完全解説、固定5問マッピング、独立QA 15/15 PASS
+- 練習PDF: `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答・最終QA: 未着手
 
