@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 29 / 38
-- current_status: `topic_30_explanation_pdf_complete`
+- current_status: `topic_30_practice_pdf_complete`
 - last_completed_topic: `29 コンプレッサ・ポンプ・ファン`
 - active_topic: `30 ATC① 新幹線は列車をどう検知する？`
-- next_start: Topic 30の練習問題source/PDF。原則12問以上、少なくとも半数を五肢択一とし、固定EXAM_ALIGNMENT 5問の要求事項へ全件接続して完全解説を付ける
+- next_start: Topic 30の解説画像PowerPoint。固定EXAM_ALIGNMENT 5問の解法経路を可視化し、後続Topic 31・32の論点へ広げない
 
 ## 新品質ゲート進捗
 - [x] 01〜29 — PASS
-- [ ] 30 ATC① 新幹線は列車をどう検知する？ — EXPLANATION_PDF_COMPLETE
+- [ ] 30 ATC① 新幹線は列車をどう検知する？ — PRACTICE_PDF_COMPLETE
 
 ## 30 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知。
@@ -29,22 +29,24 @@
 未確認実車値追加: `0件`。
 
 ## 30 成果物
-- 解説source / EXAM_ALIGNMENT: `topics/30_atc_train_detection/30_atc_train_detection.md` — 制作前EXAM_ALIGNMENT＋解説本文§1〜§15＋3段階例題完成、解説PDF完成状態へ進捗同期
-- 解説本文: 完成。固定5問要求事項を全件マッピング
+- 解説source / EXAM_ALIGNMENT: `topics/30_atc_train_detection/30_atc_train_detection.md` — 制作前EXAM_ALIGNMENT＋解説本文§1〜§15＋3段階例題
 - 解説PDF: `topics/30_atc_train_detection/30_atc_train_detection_explanation.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
-- 練習source / PDF: 未着手
+- 練習source: `topics/30_atc_train_detection/30_atc_train_detection_practice.md` — 15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説、固定5問を全件マッピング
+- 練習PDF: `topics/30_atc_train_detection/30_atc_train_detection_practice.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答・最終QA: 未着手
 
-## 30 解説本文・PDFの対応
-- §1〜§5: 試験論点、軌道回路、`V=IR`、直並列、開放・短絡
-- §6〜§10: 分圧、枝電流、車軸短絡、リレー、スイッチ開閉
-- §11〜§15: 再利用可能な解法手順、頻出ミス、新幹線接続、固定5問マッピング、公式まとめ
-- 3段階例題: 並列未知抵抗 / 分圧＋並列追加＋短絡 / 車軸短絡を模した教材用回路模型
-- 固定5問要求事項: `5 / 5` 本文・PDF接続
-- 解説PDF表示QA: 180 dpi `4 / 4 PASS`
-- 解説PDF文字抽出QA: PASS
-- 仕様外論点追加: `0件`
+## 30 練習QA
+- 問題数: `15 / 15`
+- 基礎/標準/複合: `4 / 8 / 3`
+- 五肢択一: `15 / 15`
+- 正答位置: A/B/C/D/E各3問
+- 固定EXAM_ALIGNMENT要求事項: `5 / 5` マッピング
+- 独立計算・論理QA: `15 / 15 PASS`
+- 複数正答: `0件`
+- 練習PDF表示QA: 180 dpi `4 / 4 PASS`
+- 練習PDF文字抽出QA: PASS
+- 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
 ## 30 範囲境界
@@ -60,4 +62,4 @@
 Topic 29 `コンプレッサ・ポンプ・ファン` は固定5問の完成後独立再解答 `5 / 5 PASS`、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 30の練習問題source/PDFを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、全問に完全解説を付ける。固定5過去問の要求事項を全件カバーし、Topic 31・32の論点や未確認実車値を追加しない。
+Topic 30の解説画像PowerPointを作成する。固定5過去問の回路状態変化、直列・並列、分圧、短絡、車軸短絡による受信側状態変化を固定範囲内で可視化し、Topic 31・32の論点や未確認実車値を追加しない。
