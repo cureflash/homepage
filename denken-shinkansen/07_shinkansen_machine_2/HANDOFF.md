@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `06 誘導電動機の最大トルクはどこで出る？`
 
-current status: `topic_06_powerpoint_complete`
+current status: `topic_06_calculation_graphs_complete`
 
 ## Topic 05 完了記録
 
@@ -90,23 +90,30 @@ source Markdown:
 
 ## Topic 06 今回完了した工程
 
-解説画像PowerPointを完成し、GitHub正本へ反映した。
+計算プログラムとSPEC指定4比較グラフを完成し、GitHub正本へ反映した。
 
 成果物:
-`topics/06_induction_motor_maximum_torque/06_induction_motor_maximum_torque_images.pptx`
+- `topics/06_induction_motor_maximum_torque/06_induction_motor_maximum_torque_calc.py`
+- `topics/06_induction_motor_maximum_torque/06_speed_torque.svg`
+- `topics/06_induction_motor_maximum_torque/06_rotor_resistance_comparison.svg`
+- `topics/06_induction_motor_maximum_torque/06_voltage_comparison.svg`
+- `topics/06_induction_motor_maximum_torque/06_frequency_comparison.svg`
+- `topics/06_induction_motor_maximum_torque/06_induction_motor_maximum_torque_calculation_qa.md`
 
 確認内容:
-- 16:9・4スライド
-- 同期速度→すべり→二次周波数→トルク式→最大トルク条件の解法線を整理
-- 最大トルク条件、比例推移、二次抵抗変更、電圧変更、周波数変更を固定範囲内で図解
-- 周波数変更は電圧・抵抗・インダクタンス固定条件を明示し、`X=2πfL` によりリアクタンスも変更
-- 数値は教材用仮定値のみで、未確認300系実車値は使用していない
-- 全4スライド表示QA: `4 / 4 PASS`
-- overflow検査: PASS
-- PPTX ZIP整合性: PASS
-- 固定EXAM_ALIGNMENT 6問・20小問と制作前独立検証 `20 / 20 PASS` を変更していない
+- 教材本文§9.2・§9.3と同じ教材用仮定値を使用
+- 50 Hz基準: `n_s=1500 min^-1`, `X=0.80 Ω`, `s_m=0.12127`, `T_m=372.79 N·m`
+- 二次抵抗 `0.10→0.20 Ω`: `s_m` は2倍、最大トルク値は不変
+- 電圧 `200→160 V`: 最大トルク比 `0.640` で `V^2` 則と一致
+- 周波数 `50→60 Hz`: 電圧・抵抗・漏れインダクタンス固定、`X=0.80→0.96 Ω`、`n_s=1500→1800 min^-1`
+- 60 Hz: `s_m=0.10198`, `T_m=269.61 N·m`
+- Python構文・内蔵数値assert: PASS
+- 4 SVG XML parse: PASS
+- 4 SVG ローカルレンダリング: PASS
+- 未確認300系実車値は使用していない
+- 固定EXAM_ALIGNMENT 6問・20小問と制作前独立検証 `20 / 20 PASS` は変更していない
 - 二重かご形詳細、損失計算、回転磁界相互詳細、逆相制動、Topic 07以降の論点は追加していない
 
 ## 次に行うこと
 
-Topic 06の計算プログラム・指定比較グラフを作成する。速度―トルク特性、二次抵抗変更、電圧変更、周波数変更のSPEC指定4比較だけを扱い、周波数比較では固定条件を明記して `X=2πfL` を反映する。
+Topic 06の固定6問・20小問を、完成教材だけを使って独立再解答する。公式問題・公式解答と照合し、教材外知識で補完しない。
