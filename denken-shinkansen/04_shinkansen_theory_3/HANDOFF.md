@@ -6,27 +6,28 @@
 
 Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ新幹線は25,000Vなのか`、Topic 03 `架線はただの銅線ではない`、Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` は最終QAまでPASSし、`completed`。
 
-Topic 05 `パンタグラフから入った電気はどこへ行く？` は解説PDFまで完了。
+Topic 05 `パンタグラフから入った電気はどこへ行く？` は練習問題source・練習PDFまで完了。
 
 - 完成数: `4 / 14`
 - active topic: `05 パンタグラフから入った電気はどこへ行く？`
-- current status: `topic_05_explanation_pdf_complete`
+- current status: `topic_05_practice_pdf_complete`
 - source: `topics/05_dc_network/05_dc_network.md`
 - explanation PDF: `topics/05_dc_network/05_dc_network_explanation.pdf`
+- practice source: `topics/05_dc_network/05_dc_network_practice.md`
+- practice PDF: `topics/05_dc_network/05_dc_network_practice.pdf`
 
 ## 今回進捗
 
-確定済みEXAM_ALIGNMENTと完成済みsourceから、Topic 05の解説PDFを完成した。
+確定済みEXAM_ALIGNMENT、完成済みsource・解説PDFを変更せず、Topic 05の練習問題source・練習PDFを完成した。
 
 成果物:
-- `topics/05_dc_network/05_dc_network_explanation.pdf`
-- A4縦 6ページ
-- 固定済みEXAM_ALIGNMENT 6問とsourceの範囲だけを収録
-- 直列・並列、合成抵抗、分圧・分流、同一電池並列、KCL / KVL、枝電流法、重ね合わせ、テブナン・ノートン、負荷電力・最大電力を収録
-- 3段階例題と選定6過去問への対応表を収録
-- 新幹線側は「教育用等価回路」と明記し、実車内部配線・保護回路・主回路定数は推測していない
-- 200 dpiで全6ページをレンダリングし、文字切れ・重なり・欠落グリフなしを確認
-- PDF文字抽出で主要見出し、主要公式、過去問番号、例題、「教育用等価回路」を確認
+- 全15問、全問五肢択一
+- 基礎4問 / 本試験標準8問 / 複合・応用3問
+- 正答位置1〜5を各3問に分散
+- 選定6過去問の要求事項を全件練習へマッピング
+- 全15問を問題文から独立再計算し、正答一意性を確認
+- A4縦5ページ、200 dpi全ページ表示QA PASS
+- PDF文字抽出でQ1〜Q15、主要数値、解答・完全解説を確認
 - 仕様外論点・未確認実車値の追加は0件
 
 ゲート対象公式過去問:
@@ -36,6 +37,14 @@ Topic 05 `パンタグラフから入った電気はどこへ行く？` は解�
 4. 令和6年度上期 理論 問5 — テブナン等価回路、負荷電力
 5. 令和6年度上期 理論 問7 — 等価抵抗、最大電力供給条件
 6. 令和6年度下期 理論 問6 — 複数電源、KCL/KVL、枝電流
+
+練習問題対応:
+- R8上 問5 → Q9, Q15
+- R8上 問7 → Q4, Q5, Q7
+- R7下 問5 → Q2, Q3, Q8
+- R6上 問5 → Q12, Q14
+- R6上 問7 → Q14, Q15
+- R6下 問6 → Q6, Q10, Q11, Q14
 
 完成後独立再解答はまだ実施しない。
 
@@ -80,7 +89,7 @@ PL = Vth² RL / (Rth + RL)²
 
 ## 次に行うこと
 
-Topic 05の確定EXAM_ALIGNMENT、完成済みsource・解説PDFを変更せず、練習問題source・練習PDFを作成する。三種仕様どおり原則12問以上、少なくとも半数を五肢択一とし、選定6過去問の要求事項を全件カバーする。仕様外論点・未確認実車値は追加しない。
+Topic 05の確定source、解説PDF、練習問題source・練習PDFを変更せず、解説画像PowerPointを作成する。選定6過去問の解法に必要な回路関係・KCL/KVL・重ね合わせ・テブナン/ノートン・負荷電力・最大電力を固定範囲内で可視化する。仕様外論点・未確認実車値は追加しない。
 
 ## 固定ルール
 
