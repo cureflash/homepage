@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 5 / 39
-- current_status: `topic_06_explanation_source_complete`
+- current_status: `topic_06_explanation_pdf_complete`
 - last_completed_topic: `05 0系⑤ 発電ブレーキのエネルギー解析`
 - active_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
-- next_start: Topic 06の解説sourceを正本として解説PDFを生成し、全ページ表示QAを行う
+- next_start: Topic 06の練習問題・完全解説sourceを作成する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -16,7 +16,7 @@
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
-- [ ] 06 0系⑥ 主回路全体の電力・損失・効率 — 解説本文＋3段階例題完了
+- [ ] 06 0系⑥ 主回路全体の電力・損失・効率 — 解説PDF＋全ページ表示QA完了
 
 ## Topic 05 最終結果
 - final QA: `PASS`
@@ -64,6 +64,14 @@ source:
 - 軸出力と車輪側出力の境界を明示し、未確認の0系駆動系損失は実値化していない。
 - 基礎・本試験標準・複合の3段階例題を作成し、選定5過去問の要求事項を本文へ全件マッピングした。
 - SPEC指定4グラフの作図条件を定義した。使用数値は学習用仮定値で、0系実車値とはしていない。
+
+## Topic 06 解説PDF
+- 解説PDF: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_explanation.pdf`
+- A4縦5ページ。
+- 解説本文、3段階例題、一次3問＋二次2問の過去問接続、SPEC指定4グラフを固定範囲内で収録。
+- 全5ページを180 dpiでレンダリングし、Visual QA PASS。文字欠け・重なり・ページ外はみ出しなし。
+- グラフ・例題の数値は学習用仮定値。未確認0系実車値は追加していない。
+- サイリスタ位相制御、チョッパ、誘導機、PWM/VVVF、回生、IGBT/SiC、詳細熱モデルは追加していない。
 
 ## Topic 06 固定範囲
 SPEC記載:
