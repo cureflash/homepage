@@ -4,7 +4,7 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT`、解説本文、3段階例題、解説PDF、練習問題source＋PDF、解説画像PowerPoint、完成後独立再解答まで完了。固定一次5問・25小問の完成後独立再解答は `25 / 25 PASS`。初回最終QAでは技術内容・試験対応品質ゲートはPASSだが、主source・練習sourceの旧進捗記録不整合により `NEEDS_REVISION / IN_PROGRESS`。本更新で進捗記録を実在成果物へ同期し、次工程を最終QA再実施とする。
+制作前 `EXAM_ALIGNMENT`、解説本文、3段階例題、解説PDF、練習問題source＋PDF、解説画像PowerPoint、完成後独立再解答、最終QA再実施まで完了。固定一次5問・25小問の完成後独立再解答は `25 / 25 PASS`。教材外知識補完0件、二次数合わせ0件、固定範囲外論点追加0件。最終QA再実施で成果物相互整合・進捗記録を含む全品質ゲート `PASS / completed`。
 
 本テーマは `SPEC.md` の固定範囲どおり、次だけを扱う。
 
@@ -546,8 +546,9 @@ R7・R6・R5の二次「電力・管理」「機械・制御」を確認した�
 - 練習source＋練習PDF: 完了（12問、数値・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、200 dpi `4 / 4 PASS`）
 - 解説画像PowerPoint: 完了（16:9・5枚、表示QA `5 / 5 PASS`、overflow・ZIP整合性PASS）
 - 完成後独立再解答: `25 / 25 PASS`
+- 最終QA再実施: `PASS / completed`
 - 教材外知識補完: 0件
 
 ## 次工程
 
-Topic 07の最終QAを再実施する。固定一次5問・25小問の独立再解答 `25 / 25 PASS`、二次非採用判断、固定範囲、成果物・表示QA・進捗記録の相互整合を確認し、全品質ゲート通過時のみ `completed` とする。
+Topic 07は `completed`。系列の次工程はTopic 08 `L0系はどうやって磁石だけで浮いて進む？` の制作前EXAM_ALIGNMENT。
