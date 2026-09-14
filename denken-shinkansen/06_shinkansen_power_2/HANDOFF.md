@@ -3,37 +3,39 @@
 updated: 2026-09-14
 series: `06_shinkansen_power_2`
 active_topic: `04`
-current_status: `topic_04_source_spec_reinforcement_complete`
+current_status: `topic_04_pdf_powerpoint_sync_complete`
 
 ## 今回完了
 
-Topic 04「むつの原子炉を積んだ原子力新幹線を東京から佐世保まで走らせる」を1段階進めた。
-
-前回最終QAで不足していた系列SPECの2項目を解説sourceへ追加した。
+Topic 04を1段階進め、前段階でsourceへ補強した系列SPECの2項目を解説PDF・解説画像PowerPointへ同期した。
 
 - 効率を変えた場合の走行可能出力
 - 東京―佐世保間の必要走行エネルギーとの比較
 
-計算条件:
+反映条件:
 - 実値として使用したのは既確認の「むつ」原子炉熱出力36 MW
 - 架空主発電機効率、所内率、主変換装置効率、主電動機効率、機械伝達効率、走行時間、平均必要車輪出力は教材用仮定値と明示
-- 熱→軸効率20/25/30%で車輪出力を比較
-- 東京―佐世保の教材用走行条件から必要走行エネルギーを算出し、各効率ケースの供給可能エネルギーと比較
+- 熱→軸効率20/25/30%に対する車輪出力5.93/7.41/8.89 MWを可視化
+- 教材用東京―佐世保条件の必要走行エネルギー32 MWhと、各効率ケース47.4/59.3/71.2 MWhを比較
+- 実車性能・実運転時分・原子力設備の成立性を示す値ではないことを明示
 
-併せて `04_nuclear_power.md`、`04_nuclear_power_explanation_source.md`、`04_nuclear_power_practice.md` の進捗記録を現在地へ同期した。
+成果物QA:
+- 解説PDF: A4縦7ページ、200 dpi全7ページ表示QA `PASS`
+- PowerPoint: 16:9・5枚、全5枚表示QA `PASS`
+- `slides_test.py`: `PASS / No overflow detected`
+- PPTX ZIP整合性: `PASS / No errors detected`
 
 維持:
 - 正式選定5問: 一次3問＋二次2問
 - 完成後独立再解答: `5 / 5 PASS`
 - 練習15問独立QA: `15 / 15 PASS`
+- 練習問題本文: 変更なし
 - 固定範囲外追加: `0件`
 - 未確認実設備値追加: `0件`
 
 ## 次に行う
 
-今回の補強内容を解説PDF・解説画像PowerPointへ同期し、表示QAを行う。
-
-練習問題本文・正式選定5問・EXAM_ALIGNMENT・既存過去問解法は変更しない。同期後に最終QAを再実施する。
+系列SPEC補強同期後の最終QAを再実施する。PASSした場合のみTopic 04を `completed` にする。
 
 ## 範囲境界
 
