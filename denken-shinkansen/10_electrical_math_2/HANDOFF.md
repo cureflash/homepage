@@ -12,11 +12,11 @@ Topic 03 `偏微分・全微分` は `completed`。
 
 Topic 04 `微分による極値・最適条件` は `completed`。
 
-Topic 05 `積分によるエネルギー計算` は解説本文＋3段階例題・解説PDF・練習PDF・解説画像PowerPointまで完成。
+Topic 05 `積分によるエネルギー計算` は完成後独立再解答まで完了。最終QAは未実施。
 
 完成数: `4 / 20`
 
-current_status: `topic_05_images_pptx_complete`
+current_status: `topic_05_exam_reanswer_complete`
 
 active_topic: `05 積分によるエネルギー計算`
 
@@ -36,6 +36,9 @@ source Markdown:
 
 PowerPoint QA:
 `topics/05_integral_energy/05_integral_energy_powerpoint_qa.md`
+
+完成後独立再解答:
+`topics/05_integral_energy/05_integral_energy_exam_reanswer.md`
 
 解説本文＋3段階例題: 完成。
 
@@ -74,21 +77,22 @@ PowerPoint: 16:9、全5スライド。LibreOffice PDF変換・全スライド表
 
 完成本文・解説PDF・練習PDF・PowerPointでは固定6問・16対象項目を全件マッピング済み。
 
-## 解説画像PowerPoint
+## 完成後独立再解答
 
-- 16:9、全5スライド
-- Slide 1: `E=∫Pdt` / `W=∫Fdx` / `W=∫w dV`、平均値/RMS、解法判定
-- Slide 2: R4二次 問3(1) の RMS→波高値→三相全波整流平均値積分
-- Slide 3: H25一次 問1の電界エネルギー、一定電圧、電源との授受、外力仕事
-- Slide 4: R7/R6/R2 の磁気エネルギー、結合、円柱体積積分、鎖交磁束保存
-- Slide 5: 固定6問・16対象項目対応表とSPEC境界
+完成教材の式・解法だけで固定6問・16対象項目を再導出し、公式解答・標準解答と照合した。
 
-表示QA:
-- LibreOffice PDF変換: PASS
-- 全5スライド表示確認: PASS
-- 文字切れ・重なり・空白ページ・文字化け: なし
-- キャンバス外はみ出し: なし
-- ZIP整合性: PASS
+- R7 一次 理論 問2 (2): `(2)ワ` PASS
+- R6 一次 理論 問2 (1)〜(2): `(1)チ (2)ヌ` PASS
+- R4 二次 機械・制御 問3 (1): `E_d=297 V` PASS
+- R3 一次 理論 問2 (4)〜(5): `(4)チ (5)カ` PASS
+- R2 一次 理論 問2 (1)〜(5): `(1)イ (2)ヨ (3)ワ (4)ロ (5)ヌ` PASS
+- H25 一次 理論 問1 (1)〜(5): `(1)ハ (2)ホ (3)リ (4)イ (5)ロ` PASS
+
+一次15 / 15、二次1 / 1、合計 `16 / 16 PASS`。
+
+教材外知識補完: 0件。
+
+固定範囲外追加: 0件。
 
 ## SPEC固定範囲
 
@@ -112,6 +116,6 @@ PowerPoint: 16:9、全5スライド。LibreOffice PDF変換・全スライド表
 
 ## 次に行うこと
 
-完成教材だけを使い、保存済み正答を先に見ずに固定6問・16対象項目を独立再解答し、公式解答・標準解答と照合する。
+Topic 05の最終QAを実施する。
 
-教材外知識で補完せず、固定SPEC外論点を追加しない。16 / 16一致後に最終QAへ進む。
+固定6問・16対象項目、必須成果物、表示QA、SPEC境界、source Markdownを含む進捗記録整合を確認し、全件PASSの場合のみ `completed` とする。
