@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="100%" height="100%" fill="white"/>
+<text x="480" y="34" text-anchor="middle" font-family="sans-serif" font-size="24">Speed-torque characteristic (baseline)</text>
+<text x="480" y="56" text-anchor="middle" font-family="sans-serif" font-size="13">4 poles; r1=0.20 ohm; X50=0.80 ohm; max at s=0.121, T=372.8 N m</text>
+<line x1="90.0" y1="70" x2="90.0" y2="525" stroke="#dddddd" stroke-width="1"/>
+<text x="90.0" y="549" text-anchor="middle" font-family="sans-serif" font-size="13">0</text>
+<line x1="230.0" y1="70" x2="230.0" y2="525" stroke="#dddddd" stroke-width="1"/>
+<text x="230.0" y="549" text-anchor="middle" font-family="sans-serif" font-size="13">255</text>
+<line x1="370.0" y1="70" x2="370.0" y2="525" stroke="#dddddd" stroke-width="1"/>
+<text x="370.0" y="549" text-anchor="middle" font-family="sans-serif" font-size="13">510</text>
+<line x1="510.0" y1="70" x2="510.0" y2="525" stroke="#dddddd" stroke-width="1"/>
+<text x="510.0" y="549" text-anchor="middle" font-family="sans-serif" font-size="13">765</text>
+<line x1="650.0" y1="70" x2="650.0" y2="525" stroke="#dddddd" stroke-width="1"/>
+<text x="650.0" y="549" text-anchor="middle" font-family="sans-serif" font-size="13">1020</text>
+<line x1="790.0" y1="70" x2="790.0" y2="525" stroke="#dddddd" stroke-width="1"/>
+<text x="790.0" y="549" text-anchor="middle" font-family="sans-serif" font-size="13">1275</text>
+<line x1="930.0" y1="70" x2="930.0" y2="525" stroke="#dddddd" stroke-width="1"/>
+<text x="930.0" y="549" text-anchor="middle" font-family="sans-serif" font-size="13">1530</text>
+<line x1="90" y1="525.0" x2="930" y2="525.0" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="530.0" text-anchor="end" font-family="sans-serif" font-size="13">0</text>
+<line x1="90" y1="434.0" x2="930" y2="434.0" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="439.0" text-anchor="end" font-family="sans-serif" font-size="13">80</text>
+<line x1="90" y1="343.0" x2="930" y2="343.0" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="348.0" text-anchor="end" font-family="sans-serif" font-size="13">160</text>
+<line x1="90" y1="252.0" x2="930" y2="252.0" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="257.0" text-anchor="end" font-family="sans-serif" font-size="13">240</text>
+<line x1="90" y1="161.0" x2="930" y2="161.0" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="166.0" text-anchor="end" font-family="sans-serif" font-size="13">320</text>
+<line x1="90" y1="70.0" x2="930" y2="70.0" stroke="#dddddd" stroke-width="1"/>
+<text x="78" y="75.0" text-anchor="end" font-family="sans-serif" font-size="13">400</text>
+<line x1="90" y1="525" x2="930" y2="525" stroke="black" stroke-width="1.4"/>
+<line x1="90" y1="70" x2="90" y2="525" stroke="black" stroke-width="1.4"/>
+<text x="510.0" y="580" text-anchor="middle" font-family="sans-serif" font-size="16">Rotor speed n [min^-1]</text>
+<text x="25" y="297.5" transform="rotate(-90 25 297.5)" text-anchor="middle" font-family="sans-serif" font-size="16">Electromagnetic torque T [N m]</text>
+<polyline points="913.4,524.1 903.0,420.6 892.6,332.2 882.2,260.5 871.8,205.1 861.3,164.2 850.9,135.7 840.5,117.1 830.1,106.4 819.6,101.6 809.2,101.3 798.8,104.2 788.4,109.5 777.9,116.4 767.5,124.5 757.1,133.2 746.7,142.4 736.2,151.8 725.8,161.2 715.4,170.5 705.0,179.7 694.6,188.7 684.1,197.5 673.7,205.9 663.3,214.1 652.9,222.0 642.4,229.6 632.0,237.0 621.6,244.0 611.2,250.8 600.7,257.3 590.3,263.5 579.9,269.5 569.5,275.3 559.1,280.9 548.6,286.2 538.2,291.3 527.8,296.2 517.4,301.0 506.9,305.6 496.5,309.9 486.1,314.2 475.7,318.3 465.2,322.2 454.8,326.0 444.4,329.7 434.0,333.2 423.5,336.7 413.1,340.0 402.7,343.2 392.3,346.3 381.9,349.3 371.4,352.2 361.0,355.0 350.6,357.7 340.2,360.4 329.7,362.9 319.3,365.4 308.9,367.8 298.5,370.2 288.0,372.4 277.6,374.7 267.2,376.8 256.8,378.9 246.4,380.9 235.9,382.9 225.5,384.9 215.1,386.7 204.7,388.6 194.2,390.4 183.8,392.1 173.4,393.8 163.0,395.4 152.5,397.1 142.1,398.6 131.7,400.2 121.3,401.7 110.8,403.1 100.4,404.6 90.0,406.0" fill="none" stroke="#2563eb" stroke-width="3"/>
+<line x1="110" y1="90" x2="144" y2="90" stroke="#2563eb" stroke-width="3"/>
+<text x="154" y="95" font-family="sans-serif" font-size="14">50 Hz, 200 V, r2'=0.10 ohm</text>
+<circle cx="813.7" cy="100.9" r="5" fill="#2563eb"/>
+</svg>
