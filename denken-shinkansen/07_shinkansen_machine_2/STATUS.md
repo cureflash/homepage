@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: 5 / 22
-- current_status: `topic_06_source_progress_synced`
-- last_completed_topic: `05 300系の誘導電動機を等価回路で解く`
-- active_topic: `06 誘導電動機の最大トルクはどこで出る？`
-- next_start: Topic 06の最終QAを再実施する
+- exam_aligned_completed_topics: 6 / 22
+- current_status: `topic_06_completed`
+- last_completed_topic: `06 誘導電動機の最大トルクはどこで出る？`
+- active_topic: `07 300系のPWMコンバータは何をしている？`
+- next_start: Topic 07の制作前EXAM_ALIGNMENTを行う
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -106,18 +106,19 @@
 - [x] 公式過去問の教材のみでの独立再解答: 20 / 20 PASS
 - [x] 最終QA実施: `NEEDS_REVISION`（source Markdownの旧進捗記録が残存）
 - [x] source Markdown進捗記録の同期
-- [ ] 最終QA PASS
+- [x] 最終QA再実施: `PASS / completed`
 
 ## 今回進めた内容
-Topic 06「誘導電動機の最大トルクはどこで出る？」のsource Markdown進捗記録を現在地へ同期した。
+Topic 06「誘導電動機の最大トルクはどこで出る？」の最終QAを再実施した。
 
-変更内容:
-- 冒頭状態欄から「解説PDF・練習PDF・PowerPoint・計算プログラム／比較グラフ・完成後独立再解答は未着手」という旧記録を除去
-- 解説PDF・練習PDF・PowerPoint・計算プログラム／SPEC指定4比較グラフ・完成後独立再解答まで完了済みであることを反映
-- 制作前独立検証 `20 / 20 PASS`、完成後独立再解答 `20 / 20 PASS` を反映
-- 前回最終QAがsource進捗不整合だけを理由に `NEEDS_REVISION` だったことを明記
-- 末尾の次工程を「最終QA再実施」へ同期
-- 教材本文、固定EXAM_ALIGNMENT、過去問選定、数式、成果物は変更なし
+確認内容:
+- 必須成果物の実在: PASS
+- 固定EXAM_ALIGNMENT: 一次2問＋二次記述4問、計6問・20小問を維持
+- 完成後独立再解答: `20 / 20 PASS`
+- 計算プログラム・SPEC指定4比較グラフQA: PASS
+- source Markdown進捗記録の整合: PASS
+- 仕様外論点の追加: 0件
+- 未確認300系実車値の真値化: 0件
 
 ## 判定
-Topic 06は `topic_06_source_progress_synced`。完成数は `5 / 22` のまま。次は最終QAを再実施する。
+Topic 06は `PASS / completed`。完成数は `6 / 22`。次はTopic 07「300系のPWMコンバータは何をしている？」の制作前EXAM_ALIGNMENT。
