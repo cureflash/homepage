@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 4 / 14
-- current_status: `topic_05_final_qa_needs_revision`
+- current_status: `topic_05_source_progress_synced`
 - last_completed_topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
 - active_topic: `05 パンタグラフから入った電気はどこへ行く？`
-- next_start: Topic 05の教材内容は変更せず、`05_dc_network.md` 冒頭の進捗メタデータ・進捗説明と末尾 `次工程` をGitHub正本の現在地へ同期する。その後に最終QAを再実施する
+- next_start: Topic 05の最終QAを再実施する。教材内容・EXAM_ALIGNMENT・数式・成果物は変更せず、進捗記録整合性を含む全品質ゲートがPASSした場合のみ `completed` とする
 
 ## Topic 01 進捗
 
@@ -79,29 +79,28 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答
 - [x] 最終QA実施（`NEEDS_REVISION`: source進捗記録不整合）
+- [x] source Markdown進捗記録同期
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 05 `パンタグラフから入った電気はどこへ行く？` の最終QAを実施した。
+Topic 05 `パンタグラフから入った電気はどこへ行く？` のsource Markdown進捗記録をGitHub正本の現在地へ同期した。
 
-確認結果:
-- 必須成果物6点の実在: PASS
-- EXAM_ALIGNMENT 6問: PASS
-- 完成後独立再解答: `6 / 6 PASS`
-- 教材外知識補完: `0問`
-- 解説PDF・練習PDF・PowerPointの制作時表示QA: PASS
-- SPEC境界: PASS
-- source進捗記録整合性: FAIL
+同期内容:
+- 冒頭 `status` を `PROGRESS_RECORD_SYNCED` へ更新
+- 冒頭説明を、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了済みの状態へ更新
+- 過去問対応節の進捗注記を、完成後独立再解答 `6 / 6 PASS`・教材外知識補完 `0問` へ同期
+- 末尾 `次工程` を最終QA再実施へ更新
 
-FAIL理由:
-- `05_dc_network.md` 冒頭が `status: EXPLANATION_SOURCE_COMPLETE` のまま
-- 冒頭説明が解説PDF・練習PDF・PowerPoint・独立再解答を「未実施」と記録したまま
-- 末尾 `次工程` が「解説PDFを作成する」のまま
+変更していないもの:
+- 教材本文の技術内容
+- EXAM_ALIGNMENT 6問
+- 数式・3段階例題
+- 解説PDF・練習source/PDF・PowerPoint
+- SPEC固定範囲・境界
 
-最終QA記録:
-- `topics/05_dc_network/05_dc_network_final_qa.md`
+既存の品質ゲート結果は、完成後独立再解答 `6 / 6 PASS`、教材外知識補完 `0問`、表示QA PASSを維持する。
 
 ## 判定
 
-Topic 05は `NEEDS_REVISION`。教材内容・EXAM_ALIGNMENT・過去問対応品質ゲート自体はPASSだが、GitHub正本内の進捗記録不整合が残るため `completed` としない。完成数は `4 / 14` 据え置き。次工程はsource Markdownの進捗記録同期。
+Topic 05はまだ `completed` としない。前回最終QAの唯一のFAIL要因だったsource進捗記録不整合を解消したため、次工程は最終QA再実施。完成数は `4 / 14` 据え置き。
