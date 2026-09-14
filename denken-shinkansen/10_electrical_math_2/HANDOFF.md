@@ -13,7 +13,7 @@ Topic 06 `微積分で新幹線の運転曲線を解析する` は `completed`�
 
 完成数: `6 / 20`
 
-current_status: `topic_07_practice_pdf_complete`
+current_status: `topic_07_powerpoint_complete`
 
 active_topic: `07 一階常微分方程式`
 
@@ -28,7 +28,7 @@ source:
 
 `topics/07_first_order_ode/07_first_order_ode.md`
 
-制作前EXAM_ALIGNMENT、制作前独立再解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。PowerPoint以降は未実施。
+制作前EXAM_ALIGNMENT、制作前独立再解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。完成後独立再解答以降は未実施。
 
 ## Topic 07 固定範囲
 
@@ -158,6 +158,27 @@ sourceへ次を実装済み。
 - 二次記述の件数合わせ0件
 - 未確認実車値追加0件
 
+## Topic 07 解説画像PowerPoint
+
+`topics/07_first_order_ode/07_first_order_ode_images.pptx`
+
+QA:
+`topics/07_first_order_ode/07_first_order_ode_powerpoint_qa.md`
+
+- 16:9・全5スライド
+- 一階式から `y0`・`y∞`・`τ` を求めて指数応答へ落とす本試験解法経路を可視化
+- 同次解＋定常特解、RC/RL時定数、C/Lの連続性、スイッチ切替、電荷保存を収録
+- 固定R8/R7/R6/R5/R4一次5問・22小問との対応表を収録
+- 全5スライド表示QA: `5 / 5 PASS`
+- 文字切れ・重なり・空白ページ・文字化け: なし
+- overflow: 0件
+- PPTX ZIP整合性: PASS
+- 教材外知識補完: 0件
+- 固定範囲外追加: 0件
+- Topic 08〜10先取り: 0件
+- 二次記述の件数合わせ: 0件
+- 未確認実車値追加: 0件
+
 ## 参考調査
 
 公式:
@@ -170,10 +191,11 @@ sourceへ次を実装済み。
 
 ## 次に行うこと
 
-Topic 07の解説画像PowerPointを作成する。
+Topic 07の完成後独立再解答を行う。
 
-- 固定一次5問・22小問への解法経路を可視化する
-- 変数分離、一階線形標準形、初期値・最終値・時定数、RC/RL、電荷保存、スイッチ切替を本文と矛盾なく整理する
-- Topic 08以降を先取りしない
-- 表示QA、overflow、PPTX ZIP整合性を確認する
-- 未確認実車値を追加しない
+- 完成教材だけを使う
+- 保存済み正答を先に見ず、固定一次5問・22小問を独立再解答する
+- 再導出結果を公式解答と照合する
+- 教材外知識補完が必要な小問がないことを記録する
+- 固定範囲外を品質ゲート対象へ追加しない
+- 合格後に最終QAへ進む
