@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_06_completed`
+- current_status: `topic_07_exam_alignment_complete`
 - last_completed_topic: `06 新幹線はどうやって速度を変えている？`
 - active_topic: `07 GTO→IGBT→SiCで何が変わった？`
-- next_start: Topic 07の制作前EXAM_ALIGNMENTを実施する。MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPECを基準に、直近の公式過去問から関連問題を調査し、固定範囲だけで品質ゲート対象を確定する
+- next_start: Topic 07の解説本文＋3段階例題を作成する。固定EXAM_ALIGNMENT 5問を解ける中間知識を欠落なく入れ、系列SPEC固定範囲だけを扱う。新幹線側の採用素子・回路方式は一次資料確認後に記述する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -17,7 +17,56 @@
 - [x] 04 300系でモーターが全部変わった — 品質ゲートPASS / completed
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
 - [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
-- [ ] 07〜16 — 未完了
+- [ ] 07 GTO→IGBT→SiCで何が変わった？ — 制作前EXAM_ALIGNMENT完了
+- [ ] 08〜16 — 未完了
+
+## Topic 07 EXAM_ALIGNMENT
+品質ゲート対象は公式過去問5問で固定する。
+
+1. R5上 機械 問10 — IGBTとパワーMOSFETの逆方向導通、電圧駆動、ユニポーラ/バイポーラ、テイル電流、SiC
+2. R2 機械 問10 — IGBT/MOSFETの電圧駆動、キャリア蓄積、スイッチング損失、オン状態抵抗、SiC
+3. H30 機械 問11 — IGBTのオンオフ制御、逆並列ダイオード、インバータ、PWM
+4. H29 機械 問10 — ダイオード、サイリスタ、MOSFET、IGBTの定常オン・オフと逆方向電流
+5. H23 機械 問10 — 整流ダイオード、サイリスタ、パワートランジスタ、MOSFET、IGBTの役割・特性
+
+制作前検証答案列: `(1), (2), (5), (2), (3)`
+
+公式解答との一致: `5 / 5 PASS`
+
+固定範囲外知識による補完: `0件`
+
+## Topic 07 固定範囲
+系列SPECどおり以下だけを扱う。
+
+- ダイオード、サイリスタ、GTO、IGBT、MOSFETの基本、SiC
+- オン状態、オフ状態
+- 導通損失、スイッチング損失、スイッチング周波数
+- 発熱、冷却、変換効率
+- `損失減少 → 発熱減少 → 冷却装置小型化 → 主変換装置小型化 → 車両軽量化`
+
+半導体物性の詳細には深入りしない。バンド構造、結晶構造、キャリア移動度等を独立論点として追加しない。新幹線側は系列SPECの世代イメージを入口とし、実際の採用素子・回路方式は一次資料で確認してから記述する。未確認実車値は追加しない。
+
+## Topic 07 成果物
+### 解説source
+`topics/07_power_semiconductors/07_power_semiconductors.md`
+
+- 制作前EXAM_ALIGNMENT完成
+- 公式過去問5問を固定
+- 制作前検証 `5 / 5 PASS`
+- 固定範囲外追加 `0件`
+- 解説本文・3段階例題は未着手
+
+## Topic 07 現在の品質状態
+- 制作前EXAM_ALIGNMENT: 完了
+- 制作前検証: `5 / 5 PASS`
+- 解説本文: 未着手
+- 3段階例題: 未着手
+- 解説PDF: 未着手
+- 練習問題source/PDF: 未着手
+- 解説画像PowerPoint: 未着手
+- 完成後独立再解答: 未実施
+- 最終QA: 未実施
+- 完成数: `6 / 16`
 
 ## Topic 06 EXAM_ALIGNMENT
 品質ゲート対象は5問・7小問で固定する。
