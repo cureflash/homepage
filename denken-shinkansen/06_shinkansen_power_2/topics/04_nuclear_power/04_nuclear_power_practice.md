@@ -4,7 +4,7 @@
 
 ## 状態
 
-`topic_04_practice_questions_and_full_explanations_complete`
+`topic_04_source_spec_reinforcement_complete`
 
 本ファイルは `04_nuclear_power.md` の固定EXAM_ALIGNMENTと `04_nuclear_power_explanation_source.md` の完成本文だけを土台にした練習プリント用sourceである。公式過去問の転載ではなく、正式選定5問の要求事項を同型問題へ転用できるか確認する独自問題とする。
 
@@ -460,3 +460,14 @@ B: `40 - 12 = 28 MW`
 - Topic 04 SPEC固有: 熱出力、タービン出力、発電端、所内電力、多段効率 → 問3, 7, 11, 15
 
 固定5過去問の要求事項は全て練習問題へ接続した。範囲外論点の追加は `0件`、未確認実設備値の追加は `0件`。
+
+## 進捗同期
+
+- 練習問題＋完全解説source: 完了
+- 練習15問独立QA: `15 / 15 PASS`
+- 練習PDF: 作成済み・表示QA PASS
+- 解説PDF・PowerPoint: 作成済みだが、今回の系列SPEC補強2項目は未同期
+- 完成後独立再解答: 正式5問 `5 / 5 PASS`
+- 今回、練習問題・解答本文の変更: `0件`
+- 固定EXAM_ALIGNMENTの変更: `0件`
+- 次段階: 系列SPEC補強2項目を解説PDF・PowerPointへ同期する
