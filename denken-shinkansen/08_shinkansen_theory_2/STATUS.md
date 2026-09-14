@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_explanation_source_complete`
+- current_status: `topic_06_explanation_pdf_complete`
 - last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: Topic 06の解説PDFを作成し、全ページ表示QAを行う。固定一次5問・16小問、二次非採用判断、固定範囲を変更しない
+- next_start: Topic 06の練習問題source＋練習PDFを作成する。固定一次5問・16小問、二次非採用判断、固定範囲を変更しない
 
 ## Topic 06 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -31,7 +31,7 @@
 - [x] 制作前EXAM_ALIGNMENT
 - [x] 解説本文
 - [x] 3段階例題
-- [ ] 解説PDF＋表示QA
+- [x] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
@@ -39,20 +39,16 @@
 
 ## 今回進めた内容
 
-Topic 06の解説本文＋3段階例題を完成した。
+Topic 06の解説PDFを完成した。
 
-- ファラデー則、レンツ則、磁束と鎖交磁束の区別を整理
-- `Ψ=Li`、一定 `L` の `e=-Ldi/dt`、位置依存 `L` の `e=-d(Li)/dt` を明記
-- 抵抗ゼロ短絡コイルの鎖交磁束保存 `L(0)I=L(x)i` を説明
-- 相互インダクタンス、結合係数、結合コイルの磁気エネルギーを説明
-- `L=N²/R`、`M=N1N2/R` を与えられた磁気抵抗から導出
-- `M(θ)=M0cosθ` と移動コイルの連鎖律を、トルクへ広げず固定範囲内で説明
-- 基礎／本試験標準／複合の3段階例題を追加
-- 固定一次5問・16小問の要求事項を本文・例題へ全件マッピング
-- 二次数合わせ: 0件
-- 固定範囲外論点の追加: 0件
-- PDF等の制作: 未着手
+- 解説本文＋3段階例題をA4縦4ページへ収録
+- ファラデー則、レンツ則、自己・相互インダクタンス、結合係数、磁気エネルギーを固定範囲内で整理
+- 固定一次5問・16小問への対応を維持
+- R7〜R5二次に直接対応がないため非採用判断を維持し、数合わせ0件
+- 固定範囲外論点の追加0件
+- 全4ページを200 dpiでレンダリングし、表示QA PASS
+- 文字切れ、重なり、ページ外はみ出し、文字化けを認めず
 
 ## 判定
 
-Topic 06は `topic_06_explanation_source_complete`。完成数は `5 / 21` のまま。次は解説PDF＋全ページ表示QA。
+Topic 06は `topic_06_explanation_pdf_complete`。完成数は `5 / 21` のまま。次は練習問題source＋練習PDF。
