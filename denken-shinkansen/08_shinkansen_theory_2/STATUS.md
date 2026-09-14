@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_explanation_pdf_complete`
+- current_status: `topic_06_practice_pdf_complete`
 - last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: Topic 06の練習問題source＋練習PDFを作成する。固定一次5問・16小問、二次非採用判断、固定範囲を変更しない
+- next_start: Topic 06の解説画像PowerPointを作成する。固定一次5問・16小問、二次非採用判断、固定範囲を変更しない
 
 ## Topic 06 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -19,7 +19,7 @@
 - [x] R5 問2(2)〜(4): 鎖交磁束変化、速度、ファラデー則
 - [x] R2 問2(1)〜(5): 自己インダクタンス、鎖交磁束保存、磁気エネルギー
 - [x] H30 問2(4)(5): 自己・相互インダクタンス
-- [x] H28 問1(3)(5): `Φ=LI`、`W=LI²/2`
+- [x] H28 問1(3)(5): `Ψ=Li`、`W=Li²/2`
 - [x] 品質ゲート対象を一次5問・16小問に固定
 - [x] 公式解答照合 `16 / 16`
 - [x] R7〜R5二次「電力・管理」「機械・制御」を全6科目確認
@@ -32,23 +32,25 @@
 - [x] 解説本文
 - [x] 3段階例題
 - [x] 解説PDF＋表示QA
-- [ ] 練習問題source＋練習PDF
+- [x] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 06の解説PDFを完成した。
+Topic 06の練習問題source＋練習PDFを完成した。
 
-- 解説本文＋3段階例題をA4縦4ページへ収録
-- ファラデー則、レンツ則、自己・相互インダクタンス、結合係数、磁気エネルギーを固定範囲内で整理
-- 固定一次5問・16小問への対応を維持
+- 12問すべて五肢択一
+- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3
+- ファラデー則、レンツ則、自己・相互インダクタンス、結合係数、磁気エネルギーを固定範囲内で出題
+- 固定一次5問・16小問への練習接続を維持
 - R7〜R5二次に直接対応がないため非採用判断を維持し、数合わせ0件
-- 固定範囲外論点の追加0件
-- 全4ページを200 dpiでレンダリングし、表示QA PASS
+- 固定範囲外論点の追加0件、未確認実車値0件
+- 全12問を再計算し、正答一意性 `12 / 12 PASS`
+- A4縦4ページを200 dpiで全ページレンダリングし、表示QA PASS
 - 文字切れ、重なり、ページ外はみ出し、文字化けを認めず
 
 ## 判定
 
-Topic 06は `topic_06_explanation_pdf_complete`。完成数は `5 / 21` のまま。次は練習問題source＋練習PDF。
+Topic 06は `topic_06_practice_pdf_complete`。完成数は `5 / 21` のまま。次は解説画像PowerPoint。
