@@ -4,9 +4,9 @@
 
 ## 現在地
 
-`INDEPENDENT_REANSWER_COMPLETE`
+`NEEDS_REVISION / IN_PROGRESS`
 
-このrunでは完成後独立再解答まで実施する。最終QA判定は次工程で行う。
+完成後独立再解答は `5 / 5 PASS`。最終QAでは、必須成果物・過去問対応・表示QA・固定範囲境界はPASSしたが、主source Markdownの進捗記録に旧状態が残っているため、Topic 30はまだ `completed` にしない。
 
 ## 対象
 
@@ -42,8 +42,45 @@
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
-## 独立再解答判定
+## 最終QA
 
-`5 / 5 PASS`
+### 必須成果物
+- 解説source / EXAM_ALIGNMENT: PASS
+- 解説PDF: PASS
+- 練習source: PASS
+- 練習PDF: PASS
+- 解説画像PowerPoint: PASS
+- 完成後独立再解答記録: PASS
 
-固定5問は完成教材の式・判断手順だけで再導出できた。次工程で必須成果物、表示QA、進捗記録整合、固定範囲境界をまとめて最終QAする。
+### 過去問対応品質ゲート
+- 固定公式過去問: `5問`
+- 制作前独立解答: `5 / 5 PASS`
+- 完成後独立再解答: `5 / 5 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+- 判定: PASS
+
+### 表示QA
+- 解説PDF: A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
+- 練習PDF: A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
+- PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、ZIP整合性PASS
+- 判定: PASS
+
+### 進捗記録整合
+- `STATUS.md`: 現在地と実在成果物に整合
+- `HANDOFF.md`: 現在地と実在成果物に整合
+- `30_atc_train_detection.md`: FAIL
+  - 冒頭「状態」に `練習・PowerPoint・完成後独立再解答は未着手` と残っている。
+  - 実際には練習source/PDF、PowerPoint、完成後独立再解答まで完了しているため、進捗記録が実態と不一致。
+
+### 固定範囲境界
+PASS。Topic 31の信号周波数・符号化・情報伝送、Topic 32の速度照査・論理回路・フェイルセーフ、リレーシーケンス、保護リレー方式、RC/RL/RLC過渡現象、軌道回路方式各論、未確認実車値は追加していない。
+
+## 最終判定
+
+`NEEDS_REVISION / IN_PROGRESS`
+
+品質内容そのものはPASSしているが、主source Markdownの旧進捗1箇所を現在地へ同期する必要がある。教材本文、固定EXAM_ALIGNMENT、数式、例題、PDF、練習問題、PowerPoint、固定範囲は変更不要。
+
+次工程: `30_atc_train_detection.md` 冒頭の進捗記録だけを実在成果物へ同期し、その後に最終QAを再判定する。
