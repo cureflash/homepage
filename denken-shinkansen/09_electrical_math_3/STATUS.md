@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 5 / 12
-- current_status: `topic_06_exam_alignment_complete`
+- current_status: `topic_06_explanation_source_complete`
 - last_completed_topic: `05 ベクトル`
 - active_topic: `06 微分① ダイヤの傾きは速度`
-- next_start: `Topic 06 解説本文＋3段階例題`
+- next_start: `Topic 06 解説PDF`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -19,7 +19,7 @@
 - [x] 参考教材を複数系統確認（e-sysnet含む）
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立計算・公式解答照合 `4 / 4 PASS`
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
@@ -29,16 +29,18 @@
 
 ## 今回進めた内容
 
-Topic 06 `微分① ダイヤの傾きは速度` の制作前EXAM_ALIGNMENTを完了した。
+Topic 06 `微分① ダイヤの傾きは速度` の解説本文＋3段階例題を完成した。
 
-固定対象は R7上 理論 問13、R6下 理論 問3、R5上 理論 問10、R4下 理論 問7 の4問。平均変化率、グラフの傾き、局所的な傾き、区分的直線の `Δy/Δx` を中心に、Topic 06で必要な数学操作へ対応付けた。制作前独立検証は `4 / 4 PASS`。
+固定4問から逆算した必須説明として、平均変化率、割線と接線、微分係数・導関数、多項式・三角関数・合成関数の基本、`v(t)=dx/dt`、区分的直線グラフの傾き、`mA/ms=A/s`、局所的な `ΔI/ΔV` と逆数、有限変化・相対変化までを本文へ配置した。
 
-三種は原則5問以上だが、5問目を作るために極値・2階微分、積分、指数関数・RC/RL過渡現象、レンツの法則等の後続Topic論点を追加しない。R5上問10と同型のH16問9も件数合わせには数えない。固定範囲外追加0件、未確認新幹線実値追加0件。
+3段階例題は、基礎の多項式微分、本試験標準の位置関数から瞬間速度、複合・ひっかけの折れ線 `i-t` グラフの傾き比較で構成した。新幹線の位置関数は実車値と誤認しないよう仮想モデルと明記した。
+
+R7上問13、R6下問3、R5上問10、R4下問7の固定EXAM_ALIGNMENTは変更していない。極値・2階微分・加速度、積分、電気公式の体系説明、指数関数・RC/RL過渡現象等の後続Topic論点は追加していない。固定範囲外追加0件、未確認新幹線実値追加0件。
 
 ## 判定
 
-`EXAM_ALIGNMENT COMPLETE`。
+`EXPLANATION SOURCE COMPLETE`。
 
-Topic 06は制作前品質ゲートを通過したが、教材成果物は未制作のため `completed` にはしない。完成数は `5 / 12` のまま。
+Topic 06は教材制作中のため `completed` にはしない。完成数は `5 / 12` のまま。
 
-次は Topic 06 の解説本文＋3段階例題を作成する。
+次は Topic 06 の解説PDFを作成する。
