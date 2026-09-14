@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 4 / 12
-- current_status: `topic_05_final_qa_needs_revision`
+- current_status: `topic_05_progress_record_synced`
 - last_completed_topic: `04 極形式・フェーザ`
 - active_topic: `05 ベクトル`
-- next_start: `05_vectors.md` の進捗記録不整合を修正
+- next_start: `Topic 05 最終QA再判定`
 
 ## Topic 05 進捗
 - [x] 系列SPEC確認
@@ -31,27 +31,25 @@
 - [x] 補強4点をPowerPointへ必要最小限同期
 - [x] 再独立解答 6 / 6 PASS
 - [x] 最終QA実施
-- [ ] `05_vectors.md` の進捗記録不整合を修正
+- [x] `05_vectors.md` の進捗記録不整合を修正
 - [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-Topic 05 `ベクトル` の最終QAを実施した。
+Topic 05 `ベクトル` の最終QAで指摘された `topics/05_vectors/05_vectors.md` の進捗記録不整合を修正した。
 
-確認結果:
-- 必須成果物: 実在
-- 固定EXAM_ALIGNMENT: 公式過去問6問を維持
-- 補強後完成教材による再独立解答: `6 / 6 PASS`
-- 教材外知識による補完: 0件
-- 固定範囲外の新規論点追加: 0件
-- 未確認新幹線実値追加: 0件
+修正範囲:
+- 冒頭 `## 状態` を現在地へ同期
+- 末尾 `# 次工程` を最終QA再判定へ更新
 
-ただし `topics/05_vectors/05_vectors.md` の冒頭 `## 状態` と末尾 `# 次工程` が補強source同期直後の古い記録のままで、解説PDF・練習PDF・PowerPointへの同期および再独立解答 `6 / 6 PASS` 完了後の現在地と一致しない。
+教材本文、固定EXAM_ALIGNMENT、3段階例題、練習問題、PDF、PowerPointは変更していない。
+
+補強後完成教材による再独立解答 `6 / 6 PASS`、教材外知識による補完0件、固定範囲外追加0件、未確認新幹線実値追加0件の状態を維持している。
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`IN_PROGRESS`。
 
-過去問対応品質ゲート自体はPASSしているが、GitHub正本のsource進捗記録不整合が残るためTopic 05は `completed` にしない。完成数は `4 / 12` のまま。
+進捗記録不整合は解消したが、前回最終QAは `NEEDS_REVISION` 判定のため、Topic 05はまだ `completed` にしない。完成数は `4 / 12` のまま。
 
-次は教材本文や成果物を変更せず、`05_vectors.md` の冒頭状態欄と末尾次工程だけを現在地へ同期し、その後に最終QAを再判定する。
+次は教材・成果物を変更せず、Topic 05の最終QAを再判定する。
