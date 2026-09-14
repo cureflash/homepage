@@ -6,15 +6,12 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は5/16。Topic 01〜05は完成済み。active topicは06 `275,000Vをどうやって25,000Vにする？`。
 
 ## 今回進捗
-Topic 06を1段階進め、完成教材だけで固定5過去問を独立再解答した。
+Topic 06を1段階進め、完成後独立再解答 `5 / 5 PASS` を `topics/06_substation/06_substation.md` の状態・EXAM_ALIGNMENT・次工程へ同期した。
 
-結果は `(1), (4), (1), (4), (5)` で公式解答と `5 / 5 PASS`。教材のみ完結 `5 / 5`、教材外知識補完 `0件`、固定範囲外追加 `0件`。固定5過去問・SPEC固定範囲・除外境界は変更していない。
-
-独立再解答記録:
-- `topics/06_substation/06_substation_independent_reanswer.md`
+教材本文・固定5過去問・SPEC固定範囲・除外境界は変更していない。sourceには公式解答一致 `5 / 5`、教材のみ完結 `5 / 5`、教材外知識補完 `0件`、固定範囲外追加 `0件` を反映済み。
 
 ## 現在状態
-- `current_status`: `topic_06_independent_reanswer_complete`
+- `current_status`: `topic_06_source_reanswer_synced`
 - 完成数: `5/16`
 - last completed: Topic 05
 - active: Topic 06 `275,000Vをどうやって25,000Vにする？`
@@ -30,6 +27,7 @@ Topic 06を1段階進め、完成教材だけで固定5過去問を独立再解�
 
 EXAM_ALIGNMENT / 解説source:
 - `topics/06_substation/06_substation.md`
+- 完成後独立再解答結果を同期済み
 
 解説PDF:
 - `topics/06_substation/06_substation_explanation.pdf`
@@ -80,4 +78,4 @@ EXAM_ALIGNMENT / 解説source:
 - 未確認の個別新幹線変電所受電電圧・変圧器容量・遮断器定格等を実値化しない
 
 ## 次の正確な開始点
-`topics/06_substation/06_substation.md` の状態・EXAM_ALIGNMENT・次工程を、完成後独立再解答 `5 / 5 PASS` へ同期する。教材本文・固定5過去問・SPEC境界は変更しない。同期後に最終QAを実施する。
+Topic 06の最終QAを実施する。必須成果物、固定5過去問の教材内マッピング、完成後独立再解答 `5 / 5 PASS`、表示QA、source進捗整合、SPEC境界を確認し、全件PASSの場合のみ `completed` とする。
