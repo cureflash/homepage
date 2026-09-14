@@ -6,18 +6,19 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は6/16。Topic 01〜06は完成済み。active topicは07 `なぜ三相交流をそのまま架線へ流さない？`。
 
 ## 今回進捗
-Topic 07の解説本文＋3段階例題を `topics/07_phase_conversion/07_phase_conversion.md` へ完成した。制作前EXAM_ALIGNMENTの固定5問・8小問と `SPEC.md` の固定範囲は変更していない。
+Topic 07の解説PDF `topics/07_phase_conversion/07_phase_conversion_explanation.pdf` を完成した。A4縦4ページで、200 dpi全4ページ表示QA・文字抽出QAともPASS。黒四角・欠損文字・はみ出しは0件。
 
-本文ではY/Δの線間・相関係、平衡三相電力、単相大容量負荷と三相側不平衡、スコット結線の二次90°・T側一次巻数 `√3/2`、変形ウッドブリッジ結線・ルーフ・デルタ結線の概略を扱った。3段階例題は線間→相電圧、三相有効電力、スコット結線の巻数・位相・負荷平衡で構成した。新幹線側の相変換方式は鉄道・運輸機構の公開資料を一次資料として確認した。
+PDFにはY/Δの線間・相関係、平衡三相電力、単相大容量負荷と三相側不平衡、スコット結線の二次90°・T側一次巻数 `√3/2`、変形ウッドブリッジ結線・ルーフ・デルタ結線の概略、3段階例題、頻出ミス、固定5問・8小問への対応表を収録した。
 
-Topic 08以降の電圧降下・線路損失、Topic 10の力率改善、Topic 11の短絡・保護、二種相当の厳密ベクトル導出、未確認の個別設備定格・配置は追加していない。固定過去問に含まれるTopic 07外の既習論点を理由に仕様を広げず、完成後独立再解答で教材外補完の有無を再判定する。
+制作前EXAM_ALIGNMENTの固定5問・8小問と `SPEC.md` の固定範囲は変更していない。Topic 08以降の電圧降下・線路損失、Topic 10の力率改善、Topic 11の短絡・保護、二種相当の厳密ベクトル導出、未確認の個別設備定格・配置は追加していない。
 
 ## 現在状態
-- `current_status`: `topic_07_explanation_source_complete`
+- `current_status`: `topic_07_explanation_pdf_complete`
 - 完成数: `6/16`
 - last completed: Topic 06 `275,000Vをどうやって25,000Vにする？`
 - active: Topic 07 `なぜ三相交流をそのまま架線へ流さない？`
 - source: `topics/07_phase_conversion/07_phase_conversion.md`
+- 解説PDF: `topics/07_phase_conversion/07_phase_conversion_explanation.pdf`
 
 ## Topic 07 固定過去問
 1. R7下 理論 問15(a)(b) — 線間/相電圧・三相電力 — `(3),(3)` PASS
@@ -61,4 +62,4 @@ Topic 08以降の電圧降下・線路損失、Topic 10の力率改善、Topic 1
 - スコット、変形ウッドブリッジ、ルーフ・デルタの目的を新幹線き電用変圧器として概略比較すること
 
 ## 次の正確な開始点
-Topic 07「なぜ三相交流をそのまま架線へ流さない？」の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。固定5問・8小問とSPEC境界を維持し、PDF後もTopic 07を `completed` にはしない。
+Topic 07「なぜ三相交流をそのまま架線へ流さない？」の練習PDFを作成し、全ページ表示QA・文字抽出QA・正答一意性を確認する。固定5問・8小問とSPEC境界を維持し、練習PDF後もTopic 07を `completed` にはしない。
