@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 5 / 39
-- current_status: `topic_06_final_qa_needs_revision`
+- current_status: `topic_06_source_progress_synced`
 - last_completed_topic: `05 0系⑤ 発電ブレーキのエネルギー解析`
 - active_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
-- next_start: Topic 06の主sourceと練習sourceに残る旧進捗記録だけを現在地へ同期する
+- next_start: Topic 06の最終QAを再実施し、全品質ゲートPASSの場合のみcompletedへ進める
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -16,7 +16,7 @@
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
-- [ ] 06 0系⑥ 主回路全体の電力・損失・効率 — 最終QA `NEEDS_REVISION`（source進捗記録不整合）
+- [ ] 06 0系⑥ 主回路全体の電力・損失・効率 — source進捗記録同期済み、最終QA再実施待ち
 
 ## Topic 06 EXAM_ALIGNMENT
 品質ゲート対象の公式過去問:
@@ -51,15 +51,14 @@
 - 判定: `PASS`。
 
 ## Topic 06 最終QA
+- 前回判定: `NEEDS_REVISION`。
 - 必須成果物: `PASS`。
 - 一次3問＋二次2問の過去問マッピング: `PASS`。
 - 完成後独立再解答: `22 / 22 PASS`。
 - 解説PDF・練習PDF・PowerPoint表示QA: `PASS`。
 - 固定範囲・未確認0系実値: `PASS`。
-- 進捗記録整合性: `FAIL`。
-- 主sourceに「PDF・練習問題・PowerPointは未着手」「次工程は解説PDF」が残存。
-- 練習sourceに「次工程は練習PDF」「PowerPointと完成後独立再解答はまだ行わない」が残存。
-- 判定: `NEEDS_REVISION`。教材内容・EXAM_ALIGNMENT・成果物自体には修正要因なし。
+- 前回FAIL要因だった進捗記録不整合は、主source・練習sourceとも現在地へ同期済み。
+- 最終QA再実施前のため、まだ `completed` にはしない。
 
 ## Topic 06 解説画像PowerPoint
 - 16:9・4スライド。
@@ -92,4 +91,4 @@ SPEC記載:
 - サイリスタ位相制御、チョッパ、誘導機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱モデル
 - 未確認の0系固有損失値、冷却容量、編成出力、歯車損失
 
-次工程は主sourceと練習sourceの旧進捗記録だけを同期する。Topic 06は再最終QA通過までは `completed` にしない。
+次工程はTopic 06の最終QA再実施。全品質ゲートPASSの場合のみ `completed` にして完成数を `6 / 39` へ進める。
