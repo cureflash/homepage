@@ -3,17 +3,20 @@
 更新日: 2026-09-14
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は5/16。Topic 01〜05は品質ゲートPASSでcompleted。active topicは06 `新幹線はどうやって速度を変えている？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は6/16。Topic 01〜06は品質ゲートPASSでcompleted。active topicは07 `GTO→IGBT→SiCで何が変わった？`。
 
 ## 今回進捗
-Topic 06の完成後独立再解答を完了した。
+Topic 06の最終QAを完了し、`PASS / completed` とした。
 
-- 固定EXAM_ALIGNMENT 5問・7小問を完成教材の式・判断手順だけで再導出
-- 独立答案列: `(5), (2), (2), (2), (3), (5), (2)`
-- 公式解答との一致: `7 / 7 PASS`
+- 必須成果物の実在を確認
+- 固定EXAM_ALIGNMENT 5問・7小問の整合を確認
+- 完成後独立再解答 `7 / 7 PASS`
+- 解説PDF・練習PDF・PowerPointの既存表示QA記録を確認
+- 固定範囲境界を確認
+- source・STATUS・HANDOFFの進捗整合を確認
 - 教材外・固定範囲外知識による補完: `0件`
-- sourceへ独立再解答結果を記録し、現行成果物・進捗へ同期
-- 完成数は `5 / 16` のまま
+- 固定範囲外論点・未確認実車値の追加: `0件`
+- 完成数を `6 / 16` へ更新
 
 ## Topic 06 EXAM_ALIGNMENT
 品質ゲート対象は5問・7小問で固定。
@@ -69,8 +72,8 @@ Topic 06の完成後独立再解答を完了した。
 - PPTX ZIP整合性: `PASS`
 - 完成後独立再解答: `7 / 7 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 未実施
-- 完成数: `5 / 16`
+- 最終QA: `PASS`
+- 完成数: `6 / 16`
 
 ## 練習問題sourceのEXAM_ALIGNMENT対応
 - R8上 問10: 問1、問11
@@ -80,10 +83,10 @@ Topic 06の完成後独立再解答を完了した。
 - R6上 問16(a)(b): 問9、問10
 
 ## 現在状態
-- `current_status`: `topic_06_independent_reanswer_complete`
-- last completed: Topic 05 `誘導電動機はなぜ勝手に回る？`
-- active: Topic 06 `新幹線はどうやって速度を変えている？`
-- 完成数: `5 / 16`
+- `current_status`: `topic_06_completed`
+- last completed: Topic 06 `新幹線はどうやって速度を変えている？`
+- active: Topic 07 `GTO→IGBT→SiCで何が変わった？`
+- 完成数: `6 / 16`
 
 ## 次の正確な開始点
-Topic 06の最終QAを実施する。固定EXAM_ALIGNMENT 5問・7小問の独立再解答 `7 / 7 PASS`、必須成果物、表示QA、範囲境界、source・STATUS・HANDOFFの進捗整合を確認し、全件PASSの場合のみ `completed` とする。
+Topic 07の制作前EXAM_ALIGNMENTを実施する。MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPECを基準に、直近の公式過去問から関連問題を調査し、固定範囲だけで品質ゲート対象を確定する。
