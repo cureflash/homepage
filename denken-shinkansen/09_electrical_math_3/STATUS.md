@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `09_electrical_math_3`
-- exam_aligned_completed_topics: 5 / 12
-- current_status: `topic_06_source_progress_synced`
-- last_completed_topic: `05 ベクトル`
-- active_topic: `06 微分① ダイヤの傾きは速度`
-- next_start: `Topic 06 最終QA再判定`
+- exam_aligned_completed_topics: 6 / 12
+- current_status: `topic_06_completed`
+- last_completed_topic: `06 微分① ダイヤの傾きは速度`
+- active_topic: `07 微分② 速度を微分すると加速度`
+- next_start: `Topic 07 制作前EXAM_ALIGNMENT`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -30,23 +30,18 @@
 - [x] 補強後の完成教材だけで固定4問を再独立解答 `4 / 4 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
 - [x] source Markdownの旧進捗記録を現在地へ同期
-- [ ] 最終QA再判定
+- [x] 最終QA再判定 `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 06の主source `topics/06_derivative_1/06_derivative_1.md` に残っていた旧進捗記録3箇所を現在地へ同期した。
+Topic 06の最終QAを再判定した。
 
-同期内容:
-- 冒頭状態を補強後 `4 / 4 PASS`・最終QA実施済みへ更新
-- `# 完成後独立再解答` に補強後 `4 / 4 PASS` を追記
-- `# 次工程` を「最終QA再判定」へ更新
+前回唯一FAILだった主sourceの進捗記録不整合が解消されていることを確認し、固定4過去問の補強後独立再解答 `4 / 4 PASS`、必須成果物、既存表示QA、仕様境界、GitHub正本の進捗整合を再確認した。
 
-教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・PDF・練習・PowerPointは変更していない。
-
-固定4過去問、補強後の独立再解答 `4 / 4 PASS`、教材外知識補完0件、固定範囲外追加0件、未確認新幹線実値追加0件を維持。
+教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・PDF・練習・PowerPointは変更していない。仕様追加、教材外知識補完、固定範囲外追加、未確認新幹線実値追加はいずれも0件。
 
 ## 判定
 
-Topic 06は `NEEDS_REVISION / IN_PROGRESS` のまま。
+Topic 06は `PASS / completed`。
 
-前回最終QAで唯一FAILだったsource進捗記録不整合は解消した。次工程で最終QAを再判定し、全品質ゲートを再確認する。完成数は `5 / 12` のまま。
+完成数は `6 / 12`。次はTopic 07「微分② 速度を微分すると加速度」の制作前EXAM_ALIGNMENT。
