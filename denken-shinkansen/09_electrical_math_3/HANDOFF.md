@@ -14,11 +14,11 @@ Topic 04 `極形式・フェーザ` は `completed`。
 
 Topic 05 `ベクトル` は `completed`。
 
-Topic 06 `微分① ダイヤの傾きは速度` は制作前EXAM_ALIGNMENTまで完了。固定4問の制作前独立検証は `4 / 4 PASS`。仕様外論点を件数合わせで追加していない。
+Topic 06 `微分① ダイヤの傾きは速度` は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了。固定4問の制作前独立検証は `4 / 4 PASS`。仕様外論点を件数合わせで追加していない。
 
 完成数: `5 / 12`
 
-current_status: `topic_06_exam_alignment_complete`
+current_status: `topic_06_explanation_source_complete`
 
 active_topic: `06 微分① ダイヤの傾きは速度`
 
@@ -47,6 +47,8 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 - 合成関数の基本
 - `v(t)=dx/dt`
 - 区分的直線グラフの傾き比較
+- 局所的な `ΔI/ΔV` と逆数
+- 有限変化・相対変化
 
 扱わない内容:
 - 極値・最大最小、2階微分、加速度: Topic 07
@@ -58,10 +60,21 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 ## Topic 06 既存成果物
 
-- `topics/06_derivative_1/06_derivative_1.md` — 制作前EXAM_ALIGNMENT、制作前独立検証 `4 / 4 PASS`
+- `topics/06_derivative_1/06_derivative_1.md`
+  - 制作前EXAM_ALIGNMENT
+  - 制作前独立検証 `4 / 4 PASS`
+  - 解説本文
+  - 3段階例題
+  - 固定4過去問への教材内マッピング
+  - 範囲境界
+
+3段階例題:
+1. 基礎: 多項式の導関数と指定点での微分係数
+2. 本試験標準: 仮想の列車位置関数を微分して瞬間速度を求める
+3. 複合・ひっかけ: 折れ線 `i-t` グラフの区間傾き、符号・絶対値、`mA/ms=A/s` の単位換算
 
 ## 次に行うこと
 
-Topic 06 の解説本文＋3段階例題を `topics/06_derivative_1/06_derivative_1.md` に追加する。
+Topic 06 の解説PDFを作成する。
 
-固定EXAM_ALIGNMENT 4問から逆算した必須説明だけを収録し、Topic 07以降の論点を先取りしない。
+`topics/06_derivative_1/06_derivative_1.md` の解説本文＋3段階例題を正本とし、平均変化率→接線→導関数→電気グラフへの接続を視覚化する。固定EXAM_ALIGNMENT 4問から逆算した説明だけを収録し、Topic 07以降の論点を先取りしない。
