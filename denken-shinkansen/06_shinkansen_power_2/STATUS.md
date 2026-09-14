@@ -4,12 +4,12 @@ updated: 2026-09-14
 series: `06_shinkansen_power_2`
 active_topic: `04`
 theme: むつの原子炉を積んだ原子力新幹線を東京から佐世保まで走らせる
-current_status: `topic_04_preproduction_independent_verification_complete`
+current_status: `topic_04_explanation_source_complete`
 completed_topics: `3 / 22`
 
 ## Topic 04 current result
 
-制作前独立検証完了。
+解説本文＋3段階例題を完成。
 
 正式選定5問:
 - R7 二種一次「電力」問5
@@ -18,20 +18,22 @@ completed_topics: `3 / 22`
 - R1 二種二次「電力・管理」問1
 - R3 二種二次「電力・管理」問6
 
-独立検証:
-- 一次3問＋二次2問、計 `5 / 5 PASS`
-- R7一次問5: エントロピー、熱量、潜熱、過熱蒸気、臨界点を独立解答し全一致
-- H22一次問1: ランキンサイクル、入口圧力、湿り度、抽気、給水を独立解答し全一致
-- R3一次問5: 安全停止、保護・制御回路、継続時間、ディーゼル発電機、密封油ポンプを独立解答し全一致
-- R1二次問1: ターニングギヤ電動機・発電機（水素）密封油ポンプ電動機と継続運転理由が標準解答と一致
-- R3二次問6: 速度調定率 `3.0 %`、負荷30 MW減少時 `50.25 Hz / A 80 MW / B 70 MW` で標準解答と一致
-- 固定範囲外知識による補完: `0件`
-- 正式選定差し替え: 不要
+今回の反映:
+- JAEA一次資料・JAEA運営ATOMICAで「むつ」の実設備値を再確認
+- 実値として使用: PWR 1基、原子炉熱出力約36 MW、一次冷却2ループ・約270℃・約110 kg/cm²、二次側蒸気約250℃・約40 kg/cm²、主機蒸気タービン10,000馬力、高圧給水加熱器後約150℃
+- JAEA資料で約6%炉出力までの比較的小さい負荷変動への自己制御追従を確認
+- T-s線図、潜熱、過熱蒸気、臨界点、ランキンサイクル、再熱・再生、熱効率、多段効率、所内電力、停止時補機、速度調定率、並列負荷分担を本文化
+- 基礎／標準／複合の3段階例題を作成
+- 固定5過去問の要求事項を本文へ全件マッピング
+- 仮定した効率値はすべて仮定値と明示
 - SPEC外追加: `0件`
-- 「むつ」未確認実値の追加: `0件`
+- 未確認実値の追加: `0件`
+
+制作前独立検証は `5 / 5 PASS` のまま維持。
 
 source:
-`topics/04_nuclear_power/04_nuclear_power.md`
+- `topics/04_nuclear_power/04_nuclear_power.md`（EXAM_ALIGNMENT・制作前独立検証）
+- `topics/04_nuclear_power/04_nuclear_power_explanation_source.md`（解説本文＋3段階例題）
 
 ## Gate checklist
 
@@ -40,8 +42,9 @@ source:
 - [x] Topic 03 completed
 - [x] Topic 04 制作前EXAM_ALIGNMENT
 - [x] Topic 04 制作前独立検証
-- [ ] Topic 04 解説本文＋3段階例題
+- [x] Topic 04 解説本文＋3段階例題
+- [ ] Topic 04 練習問題＋完全解説source
 
 ## next_start
 
-Topic 04 の解説本文＋3段階例題を制作する。固定済みEXAM_ALIGNMENTの5問が解ける粒度を満たし、`SPEC.md` の固定範囲を越えない。本文制作時に使用する「むつ」の原子炉形式・熱出力・蒸気条件・主機タービン仕様等はJAEA等の一次資料で再確認し、未確認値は推測しない。
+Topic 04 の練習問題＋完全解説sourceを制作する。固定済みEXAM_ALIGNMENTと完成した解説本文だけを土台とし、二種一次型に加えて二次「電力・管理」へ接続する記述・計算問題を含める。固定範囲を越えず、核燃料サイクル・放射線・新型炉等を追加しない。
