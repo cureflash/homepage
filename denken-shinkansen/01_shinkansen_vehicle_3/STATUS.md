@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 29 / 38
-- current_status: `topic_30_explanation_source_complete`
+- current_status: `topic_30_explanation_pdf_complete`
 - last_completed_topic: `29 コンプレッサ・ポンプ・ファン`
 - active_topic: `30 ATC① 新幹線は列車をどう検知する？`
-- next_start: Topic 30の解説PDF。完成済み解説本文§1〜§15＋3段階例題をA4縦へ整形し、固定EXAM_ALIGNMENT 5問の解法経路を維持して全ページ表示QAを行う
+- next_start: Topic 30の練習問題source/PDF。原則12問以上、少なくとも半数を五肢択一とし、固定EXAM_ALIGNMENT 5問の要求事項へ全件接続して完全解説を付ける
 
 ## 新品質ゲート進捗
 - [x] 01〜29 — PASS
-- [ ] 30 ATC① 新幹線は列車をどう検知する？ — EXPLANATION_SOURCE_COMPLETE
+- [ ] 30 ATC① 新幹線は列車をどう検知する？ — EXPLANATION_PDF_COMPLETE
 
 ## 30 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知。
@@ -29,19 +29,21 @@
 未確認実車値追加: `0件`。
 
 ## 30 成果物
-- 解説source / EXAM_ALIGNMENT: `topics/30_atc_train_detection/30_atc_train_detection.md` — 制作前EXAM_ALIGNMENT＋解説本文§1〜§15＋3段階例題完成
+- 解説source / EXAM_ALIGNMENT: `topics/30_atc_train_detection/30_atc_train_detection.md` — 制作前EXAM_ALIGNMENT＋解説本文§1〜§15＋3段階例題完成、解説PDF完成状態へ進捗同期
 - 解説本文: 完成。固定5問要求事項を全件マッピング
-- 解説PDF: 未着手
+- 解説PDF: `topics/30_atc_train_detection/30_atc_train_detection_explanation.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
 - 練習source / PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答・最終QA: 未着手
 
-## 30 解説本文の対応
+## 30 解説本文・PDFの対応
 - §1〜§5: 試験論点、軌道回路、`V=IR`、直並列、開放・短絡
 - §6〜§10: 分圧、枝電流、車軸短絡、リレー、スイッチ開閉
 - §11〜§15: 再利用可能な解法手順、頻出ミス、新幹線接続、固定5問マッピング、公式まとめ
 - 3段階例題: 並列未知抵抗 / 分圧＋並列追加＋短絡 / 車軸短絡を模した教材用回路模型
-- 固定5問要求事項: `5 / 5` 本文接続
+- 固定5問要求事項: `5 / 5` 本文・PDF接続
+- 解説PDF表示QA: 180 dpi `4 / 4 PASS`
+- 解説PDF文字抽出QA: PASS
 - 仕様外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
@@ -58,4 +60,4 @@
 Topic 29 `コンプレッサ・ポンプ・ファン` は固定5問の完成後独立再解答 `5 / 5 PASS`、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 30の解説PDFを作成する。解説本文§1〜§15＋3段階例題をそのまま試験対応教材へ落とし込み、固定5問の解法経路と系列SPEC固定範囲を維持する。後続Topic 31・32の論点へ広げない。
+Topic 30の練習問題source/PDFを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、全問に完全解説を付ける。固定5過去問の要求事項を全件カバーし、Topic 31・32の論点や未確認実車値を追加しない。
