@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 26 / 38
-- current_status: `topic_27_practice_pdf_complete`
+- current_status: `topic_27_powerpoint_complete`
 - last_completed_topic: `26 補助電源① 主回路の電気を車内設備へ`
 - active_topic: `27 補助電源② 車内照明`
-- next_start: Topic 27の解説画像PowerPointを作成し、固定EXAM_ALIGNMENT 5問・8小問の判断経路を固定範囲内で可視化する。全スライド表示QA・境界overflow・PPTX整合性を確認する。系列SPEC固定範囲から広げない
+- next_start: Topic 27の完成後独立再解答を行い、固定EXAM_ALIGNMENT 5問・8小問を完成教材だけで再構成して公式解答と照合する。固定範囲外知識・未確認実車値で補完しない
 
 ## 新品質ゲート進捗
 - [x] 01〜26 — PASS
-- [ ] 27 補助電源② 車内照明 — PRACTICE_PDF_COMPLETE
+- [ ] 27 補助電源② 車内照明 — POWERPOINT_COMPLETE
 
 ## 27 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・8小問。系列SPEC固定範囲は、LED、光束、光度、照度、lm、cd、lx、照明計算。
@@ -62,6 +62,15 @@
 - 数値計算を独立再計算し、各数値問題の正答が選択肢内で一意であることを確認。正答位置はA/B/C/D/E各3問
 - 180 dpiで全5ページ表示QA PASS。文字切れ・重なり・ページ外はみ出し・破損グリフなし
 - 新幹線車内照明の未確認実車値は使用せず、輝度・光束発散度・LED半導体物性等の固定範囲外論点も追加していない
+
+## 27 解説画像PowerPoint
+- PowerPoint: `topics/27_cabin_lighting/27_cabin_lighting_images.pptx`
+- 16:9、4スライド
+- 固定5問・8小問の判断経路を、`lm→cd→lx`、直下/斜入射の幾何、複数光源の照度合成、問題文提示LED配光、7段階解法・過去問マッピングとして可視化
+- LibreOfficeで全4スライドをPDFレンダリングし表示QA PASS。文字切れ・重なり・ページ外はみ出しなし
+- スライド境界overflow検査0件、PPTX ZIP整合性検査PASS
+- LED配光式`I(θ)=I(0)cosθ`を問題文提示条件として明記し、一般化していない
+- 輝度・光束発散度・LED半導体物性・未確認実車値の追加なし
 
 ## 27 範囲境界
 固定範囲を広げないため、次は品質ゲート対象から除外した。
