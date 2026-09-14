@@ -1,6 +1,6 @@
 # HANDOFF - 電験二種「電気数学」
 
-更新日: 2026-09-14
+更新日: 2026-09-15
 
 ## 現在地
 
@@ -10,11 +10,11 @@ Topic 03 `偏微分・全微分` は `completed`。
 Topic 04 `微分による極値・最適条件` は `completed`。
 Topic 05 `積分によるエネルギー計算` は `completed`。
 
-Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPoint＋PowerPoint QA＋完成後独立再解答＋最終QAまで完了。最終QAはsource Markdownの旧進捗2箇所に不整合があるため `NEEDS_REVISION`。
+Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPoint＋PowerPoint QA＋完成後独立再解答＋最終QAまで完了。最終QAで指摘されたsource Markdownの旧進捗2箇所は実成果物へ同期済み。現在は最終QA再判定待ち。
 
 完成数: `5 / 20`
 
-current_status: `topic_06_final_qa_needs_revision`
+current_status: `topic_06_source_progress_synced`
 
 active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
@@ -22,11 +22,11 @@ active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
 `topics/06_calculus_train_curve/06_calculus_train_curve.md`
 
-最終QAで確認した進捗記録不整合:
-- `## 状態` が「解説本文＋3段階例題まで完了。解説PDF以降は未着手」のまま
-- `## 次工程` が「解説PDFを作成する。練習PDF、PowerPoint、完成後独立再解答にはまだ進まない」のまま
+最終QAで指摘された進捗記録不整合2箇所は同期済み:
+- `## 状態` を実成果物の現在地へ更新
+- `## 次工程` を最終QA再判定へ更新
 
-教材本文・固定EXAM_ALIGNMENT・数式・例題の技術内容には修正要求なし。
+教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF・PowerPointの技術内容は変更していない。
 
 ## Topic 06 解説PDF
 
@@ -107,7 +107,7 @@ QA記録:
 
 `topics/06_calculus_train_curve/06_calculus_train_curve_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+前回判定: `NEEDS_REVISION / IN_PROGRESS`
 
 PASS項目:
 - 必須成果物実在
@@ -118,8 +118,10 @@ PASS項目:
 - SPEC外内容の非混入
 - PDF / PowerPoint表示QA
 
-FAIL項目:
+前回FAIL項目:
 - source Markdown進捗記録と実成果物の整合
+
+このFAIL原因は今回のsource同期で解消済み。最終QA記録自体はまだ再判定していない。
 
 ## Topic 06 SPEC固定範囲
 
@@ -175,4 +177,4 @@ FAIL項目:
 
 ## 次に行うこと
 
-Topic 06 source Markdownの旧進捗2箇所だけを実成果物へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、PDF、PowerPointの技術内容は変更しない。その後、最終QAを再判定し、全件PASSの場合のみ `completed` とする。
+Topic 06の最終QAを再判定する。教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、PDF、PowerPointの技術内容は変更しない。前回FAILだったsource進捗記録整合が解消され、全品質ゲートPASSを確認できた場合のみ `completed` とする。
