@@ -13,79 +13,22 @@ Topic 06 `微積分で新幹線の運転曲線を解析する` は `completed`�
 
 完成数: `6 / 20`
 
-current_status: `topic_06_completed`
+current_status: `topic_07_exam_alignment_complete`
 
 active_topic: `07 一階常微分方程式`
 
 ## Topic 06 最終状態
 
+固定EXAM_ALIGNMENTは一次4問＋二次1問、計5問・15対象項目。完成後独立再解答 `15 / 15 PASS`、最終QA `PASS / completed`。
+
 source:
 `topics/06_calculus_train_curve/06_calculus_train_curve.md`
 
-解説PDF:
-`topics/06_calculus_train_curve/06_calculus_train_curve_explanation.pdf`
+## Topic 07 source
 
-練習source:
-`topics/06_calculus_train_curve/06_calculus_train_curve_practice.md`
+`topics/07_first_order_ode/07_first_order_ode.md`
 
-練習PDF:
-`topics/06_calculus_train_curve/06_calculus_train_curve_practice.pdf`
-
-PowerPoint:
-`topics/06_calculus_train_curve/06_calculus_train_curve_images.pptx`
-
-PowerPoint QA:
-`topics/06_calculus_train_curve/06_calculus_train_curve_powerpoint_qa.md`
-
-完成後独立再解答:
-`topics/06_calculus_train_curve/06_calculus_train_curve_exam_reanswer.md`
-
-最終QA:
-`topics/06_calculus_train_curve/06_calculus_train_curve_final_qa.md`
-
-最終QA再判定: `PASS / completed`。
-
-## Topic 06 品質ゲート結果
-
-固定EXAM_ALIGNMENTは一次4問＋二次1問、計5問・15対象項目。
-
-- R5 一次 理論 問6 (1)〜(5): `5 / 5 PASS`
-- R3 一次 理論 問6 (1)〜(5): `5 / 5 PASS`
-- H28 一次 理論 問4 (1)〜(3): `3 / 3 PASS`
-- H25 一次 機械 問3 (1): `1 / 1 PASS`
-- H23 二次 電力・管理 問5 (1)-[A]: `1 / 1 PASS`
-- 合計: `15 / 15 PASS`
-
-- 公式解答・標準解答と全件一致
-- 教材外知識補完: 0件
-- 固定範囲外追加: 0件
-- 未確認実車値依存: 0件
-- 解説PDF表示QA: PASS
-- 練習PDF表示QA・文字抽出QA: PASS
-- PowerPoint表示QA・overflow・ZIP整合性: PASS
-- 前回FAILだったsource進捗記録不整合: 解消済み
-
-## Topic 06 SPEC固定範囲
-
-中心式:
-- `v=dx/dt`
-- `a=dv/dt`
-- `a=v dv/dx`
-- `x=∫vdt`
-- `t=∫dx/v(x)`
-- `E=∫Fdx`
-
-扱う内容:
-- 位置―時間
-- 速度―時間
-- 速度―位置
-- 加速度
-- 走行距離
-- 所要時間
-- 牽引仕事
-- 回生エネルギー
-
-Topic 07以降の常微分方程式一般論、ラプラス変換、伝達関数、半導体の移動度・電流、インバータ制御、ガバナ・周波数特性は追加していない。公開ダイヤから詳細な実車運転曲線を推定せず、未確認の実車回生効率も真値化していない。
+制作前EXAM_ALIGNMENT完了。制作前独立再解答・公式解答照合は未実施。
 
 ## Topic 07 固定範囲
 
@@ -98,15 +41,62 @@ Topic 07以降の常微分方程式一般論、ラプラス変換、伝達関数
 - 同次解・特解の基本
 - 指数応答
 - 時定数
-
-代表例:
-- `L di/dt + Ri = V`
 - RC・RL・一次遅れ
 
-Topic 08以降の二階常微分方程式、ラプラス変換、伝達関数等を先取りしない。
+代表式:
+- `L di/dt + Ri = V`
+- `y(t)=y∞+(y0-y∞)e^{-t/τ}`
+- RC: `τ=R_eq C`
+- RL: `τ=L/R_eq`
+
+Topic 08の二階常微分方程式、Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしない。
+
+## Topic 07 固定EXAM_ALIGNMENT
+
+品質ゲート対象は一次5問・22小問。
+
+- R8 一次 理論 問6 (1)〜(2): RL立上り、初期条件、時定数。C-L結合となる(3)〜(5)は除外。
+- R7 一次 理論 問6 (1)〜(5): コンデンサ初期電荷、電荷保存、KVL、`i=dq/dt`、一階線形微分方程式、定常値。
+- R6 一次 理論 問4 (1)〜(5): RC初期値・定常値、過渡項、端子から見た等価抵抗、`τ=R_eq C`。
+- R5 一次 理論 問5 (1)〜(5): RL一階微分方程式、電流連続性、指数減衰、`τ=L/(R1+R2)`、コイル電圧。
+- R4 一次 理論 問4 (1)〜(5): KCL/KVLからの一階微分方程式、指数立上り・減衰、スイッチ切替、時定数変化。
+
+対象小問数: `2 + 5 + 5 + 5 + 5 = 22`。
+
+## 二次試験の扱い
+
+2026-09-15時点でR8二次試験は未実施。直近R7〜R5の二次「機械・制御」を確認したが、自動制御問題は伝達関数・周波数応答・ラプラス領域の時間応答を中心とし、Topic 09〜10の固定範囲に属する。
+
+したがってTopic 07では二次問題を件数合わせで追加しない。一次5問で品質ゲートを固定する。
+
+## 教材に必須の説明
+
+- `dy/dt + ay=b` の同次解＋定常特解
+- 初期条件から積分定数を決める手順
+- コンデンサ電圧の連続性
+- コイル電流の連続性
+- スイッチ切替前後の初期値継承
+- RCの時定数とC端子から見た等価抵抗
+- RLの時定数とL端子から見た等価抵抗
+- 立上りと自然減衰
+- 一次遅れ `T dy/dt + y=Ku` の時間領域表現
+- `e^{-t/τ}` の符号・係数・初期値・最終値の読み分け
+
+## 参考調査
+
+公式:
+- 電気技術者試験センター 第二種過去問題
+- R8/R7/R6/R5/R4 一次理論の該当過渡現象問題
+
+学習資料:
+- e-sysnet「過渡現象」: RC/RL時定数、C/Lの初期・定常状態、指数応答
+- 電験王2 R7/R6/R5年度一覧: 一次過渡現象問題と二次自動制御問題の論点境界
 
 ## 次に行うこと
 
-Topic 07 `一階常微分方程式` の制作前EXAM_ALIGNMENTを行う。
+固定した一次5問・22小問について、保存済み正答を先に見ずに制作前独立再解答を行う。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` の固定範囲を維持し、公式過去問を直近年度優先で調査する。二種相当の品質ゲート対象を一次・二次合わせて原則5問以上選定し、二次試験対応論点が確認できる場合は最低1問含める。件数合わせでTopic 08以降やSPEC外論点を追加しない。
+- 22小問すべてをTopic 07固定範囲だけで解く
+- その後、電気技術者試験センター公式解答と照合する
+- 教材外補完が必要な小問があれば、解説本文へ進まずEXAM_ALIGNMENTを見直す
+- `22 / 22 PASS` の場合のみ、解説本文＋3段階例題へ進む
