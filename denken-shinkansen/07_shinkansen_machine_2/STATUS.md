@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 5 / 22
-- current_status: `topic_06_final_qa_needs_revision`
+- current_status: `topic_06_source_progress_synced`
 - last_completed_topic: `05 300系の誘導電動機を等価回路で解く`
 - active_topic: `06 誘導電動機の最大トルクはどこで出る？`
-- next_start: Topic 06 source Markdownの旧進捗記録を現在地へ同期する
+- next_start: Topic 06の最終QAを再実施する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -105,21 +105,19 @@
 - [x] 計算プログラム・指定比較グラフ
 - [x] 公式過去問の教材のみでの独立再解答: 20 / 20 PASS
 - [x] 最終QA実施: `NEEDS_REVISION`（source Markdownの旧進捗記録が残存）
+- [x] source Markdown進捗記録の同期
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 06「誘導電動機の最大トルクはどこで出る？」の最終QAを実施し、`NEEDS_REVISION` と判定した。
+Topic 06「誘導電動機の最大トルクはどこで出る？」のsource Markdown進捗記録を現在地へ同期した。
 
-確認内容:
-- 必須成果物の実在: PASS
-- 固定EXAM_ALIGNMENT: 一次2問＋二次記述4問、計6問・20小問: PASS
-- 完成後独立再解答: `20 / 20 PASS`
-- 教材外知識による補完: 0件
-- 固定範囲外論点の追加: 0件
-- 計算プログラム・SPEC指定4比較グラフQA: PASS
-- 未確認300系実車値の使用: 0件
-- source Markdown冒頭に `解説PDF・練習PDF・PowerPoint・計算プログラム／比較グラフ・完成後独立再解答は未着手` という旧進捗が残存: FAIL
-- 最終QA記録: `06_induction_motor_maximum_torque_final_qa.md`
+変更内容:
+- 冒頭状態欄から「解説PDF・練習PDF・PowerPoint・計算プログラム／比較グラフ・完成後独立再解答は未着手」という旧記録を除去
+- 解説PDF・練習PDF・PowerPoint・計算プログラム／SPEC指定4比較グラフ・完成後独立再解答まで完了済みであることを反映
+- 制作前独立検証 `20 / 20 PASS`、完成後独立再解答 `20 / 20 PASS` を反映
+- 前回最終QAがsource進捗不整合だけを理由に `NEEDS_REVISION` だったことを明記
+- 末尾の次工程を「最終QA再実施」へ同期
+- 教材本文、固定EXAM_ALIGNMENT、過去問選定、数式、成果物は変更なし
 
 ## 判定
-Topic 06は `topic_06_final_qa_needs_revision`。完成数は `5 / 22` のまま。次はsource Markdownの進捗記録だけを現在地へ同期する。
+Topic 06は `topic_06_source_progress_synced`。完成数は `5 / 22` のまま。次は最終QAを再実施する。
