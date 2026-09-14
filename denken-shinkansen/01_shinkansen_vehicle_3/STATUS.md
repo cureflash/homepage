@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 28 / 38
-- current_status: `topic_29_powerpoint_complete`
-- last_completed_topic: `28 空調・電熱`
-- active_topic: `29 コンプレッサ・ポンプ・ファン`
-- next_start: Topic 29の完成済み教材だけを使って固定EXAM_ALIGNMENT 5問を完成後独立再解答し、公式解答との一致・教材外知識補完0件・固定範囲外追加0件を確認する
+- exam_aligned_completed_topics: 29 / 38
+- current_status: `topic_29_completed`
+- last_completed_topic: `29 コンプレッサ・ポンプ・ファン`
+- active_topic: `30 ATC① 新幹線は列車をどう検知する？`
+- next_start: Topic 30の制作前EXAM_ALIGNMENT。公式過去問を直近年度から確認し、系列SPEC固定範囲（レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知）へ直接対応する問題だけを固定して独立解答する
 
 ## 新品質ゲート進捗
-- [x] 01〜28 — PASS
-- [ ] 29 コンプレッサ・ポンプ・ファン — POWERPOINT_COMPLETE
+- [x] 01〜29 — PASS
+- [ ] 30 ATC① 新幹線は列車をどう検知する？ — NOT_STARTED
 
 ## 29 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率。
@@ -24,100 +24,51 @@
 5. H18 機械 問10 — ポンプ揚水、損失水頭、ポンプ効率・電動機効率、必要電動機入力 — `3` — PASS
 
 制作前独立解答: `5 / 5 PASS`。
-教材外知識による正答補完: `0件`。
-固定範囲外論点追加: `0件`。
-未確認実車値追加: `0件`。
-
-直近年度から確認したが、R8上〜R5の電動機応用でTopic 29へ直接対応しない巻上機・減速機・はずみ車等を件数合わせで採用していない。圧縮機固有の熱力学計算を要求する公式過去問は今回の調査範囲で確認できず、冷凍サイクル・断熱圧縮等は追加しない。
-
-## 29 解説本文
-- §1〜§15を作成
-- 回転出力 `P=Tω`、`ω=2πN/60`
-- 水動力 `P_w=ρgQH`、水に対する `9.8QH [kW]`
-- 流量の時間単位換算、実揚程・損失水頭・全揚程
-- ポンプ効率・電動機効率と入力/出力の向き
-- 余裕係数、台数切上げ
-- ファンの `Q∝n`、`T∝n^2`、`P∝n^3`
-- コンプレッサは軸出力・トルク・回転速度・効率までに限定
-- 固定5問の解法経路を本文へ `5 / 5` マッピング
-- 3段階例題: コンプレッサ軸出力 / ポンプ必要電動機入力 / ファン速度低下
-- 固定範囲外追加 `0件`、未確認実車値追加 `0件`
-
-## 29 練習問題
-- 全15問、全問五肢択一、完全解説付き
-- 難易度: 基礎4 / 標準8 / 複合3
-- 正答位置: A/B/C/D/E各3問
-- 独立計算・論理QA: `15 / 15 PASS`
-- 固定EXAM_ALIGNMENT 5問の要求事項へ `5 / 5` 対応
-- コンプレッサは電動機側の軸出力・トルク・回転速度・効率だけを扱い、圧縮機熱力学は追加していない
-- PDF: A4縦4ページ、180 dpi全4ページ表示QA PASS、文字抽出でQ1〜Q15を確認
-- 固定範囲外論点追加 `0件`、未確認実車値追加 `0件`
-
-## 29 PowerPoint
-- 16:9、4スライド
-- スライド1: 固定5問の共通解法軸（流量換算 → 全揚程 → 水動力 → 効率 → 余裕・台数）
-- スライド2: ポンプ所要出力、効率連鎖、余裕係数・台数切上げ
-- スライド3: ファンの `Q∝n`、`T∝n^2`、`P∝n^3` とコンプレッサの軸出力
-- スライド4: 固定5問と教材節・正答の対応
-- 全4スライド表示QA PASS
-- overflow `0件`
-- PPTX ZIP整合性 PASS
-- 固定範囲外論点追加 `0件`、未確認実車値追加 `0件`
-
-## 29 成果物
-- 解説source / EXAM_ALIGNMENT: `topics/29_compressor_pump_fan/29_compressor_pump_fan.md` — 本文＋3段階例題まで完成
-- 解説PDF: `topics/29_compressor_pump_fan/29_compressor_pump_fan_explanation.pdf` — A4縦4ページ、§1〜§15・3段階例題・固定5問マッピング、180 dpi全ページ表示QA PASS
-- 練習source: `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.md` — 15問、完全解説、固定5問マッピング、独立QA 15/15 PASS
-- 練習PDF: `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS
-- 解説画像PowerPoint: `topics/29_compressor_pump_fan/29_compressor_pump_fan_images.pptx` — 16:9・4スライド、表示QA・overflow・ZIP整合性PASS
-- 完成後独立再解答・最終QA: 未着手
-
-## 28 EXAM_ALIGNMENT
-品質ゲート対象は公式過去問5問・10小問。系列SPEC固定範囲は、空調、電熱、ジュール熱、熱量、電力、効率。
-
-1. R8上 機械 問17(a)(b) — 木材・水の顕熱、蒸発潜熱、総合効率、乾燥時間 — `5 / 2` — PASS
-2. R7上 機械 問17(a)(b) — 氷の融解熱、水の顕熱、電熱装置の熱効率・消費電力・時間 — `2 / 2` — PASS
-3. R4上 機械 問17(a)(b) — ヒートポンプのCOP、消費電力量、供給熱量、水温上昇 — `5 / 5` — PASS
-4. R1 機械 問17(a)(b) — 水の加熱熱量、COP、消費電力の逆算 — `2 / 3` — PASS
-5. H28 機械 問17(a)(b) — 水の加熱熱量、COP、加熱時間 — `2 / 2` — PASS
-
-制作前独立解答: `10 / 10 PASS`。
-完成後独立再解答: `10 / 10 PASS`。
+完成後独立再解答: `5 / 5 PASS`。
 教材外知識補完: `0件`。
 固定範囲外論点追加: `0件`。
 未確認実車値追加: `0件`。
 
-## 28 成果物
-- 解説source: `topics/28_air_conditioning_heating/28_air_conditioning_heating.md`
-- 解説PDF: `topics/28_air_conditioning_heating/28_air_conditioning_heating_explanation.pdf`
-- 練習source: `topics/28_air_conditioning_heating/28_air_conditioning_heating_practice.md`
-- 練習PDF: `topics/28_air_conditioning_heating/28_air_conditioning_heating_practice.pdf`
-- 解説画像PowerPoint: `topics/28_air_conditioning_heating/28_air_conditioning_heating_images.pptx`
-- 完成後独立再解答・最終QA: `topics/28_air_conditioning_heating/28_air_conditioning_heating_final_qa.md`
+完成後再導出値:
+- R4下 問11: `13.14 kW` → 4
+- H30 問10: `673.75 kW`、`7台` → 4
+- H29 問12: `Q∝n`、`T∝n^2`、`P∝n^3` → 4
+- H27 問12: `11.79 kW` → 5
+- H18 問10: `20.19 kW` → 3
 
-## 28 最終QA
-- 固定5問・10小問を完成教材の式・判断経路だけで再計算し、公式解答と`10 / 10`一致
-- 顕熱`Q=mcΔT`、潜熱`Q=mL`、複数過程`Q_total=ΣQ`、熱効率`η=Q_use/(Pt)`、COPと各逆算、単位換算を教材内で完結
-- 解説PDF: A4縦4ページ、180 dpi全ページ表示QA PASS
-- 練習PDF: A4縦5ページ・15問、180 dpi全ページ表示QA PASS、正答位置A/B/C/D/E各3問
-- PowerPoint: 16:9・4スライド、全スライド表示QA PASS、overflow `0件`、ZIP整合性PASS
+## 29 成果物
+- 解説source / EXAM_ALIGNMENT: `topics/29_compressor_pump_fan/29_compressor_pump_fan.md`
+- 解説PDF: `topics/29_compressor_pump_fan/29_compressor_pump_fan_explanation.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS
+- 練習source: `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.md` — 15問、独立QA `15 / 15 PASS`
+- 練習PDF: `topics/29_compressor_pump_fan/29_compressor_pump_fan_practice.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS
+- 解説画像PowerPoint: `topics/29_compressor_pump_fan/29_compressor_pump_fan_images.pptx` — 16:9・4スライド、表示QA・overflow・ZIP整合性PASS
+- 完成後独立再解答・最終QA: `topics/29_compressor_pump_fan/29_compressor_pump_fan_final_qa.md` — `5 / 5 PASS / COMPLETED`
+
+## 29 範囲境界
+追加していない:
+- 圧縮機の断熱・等温・ポリトロープ圧縮仕事
+- 冷媒物性、冷凍サイクル、p-h線図、COP詳細
+- ポンプのキャビテーション、NPSH、詳細配管設計
+- ファンの翼形・騒音・ダクト設計
+- 巻上機、エレベータ、はずみ車、減速機
+- 未確認の新幹線コンプレッサ・ポンプ・ファン実車値
+
+## 29 最終QA
+- 固定5問を完成教材の式・判断経路だけで再解答し、公式解答と`5 / 5`一致
+- 流量換算、全揚程、水動力、効率連鎖、余裕係数、台数切上げ、ファン相似則を教材内で完結
+- 教材外知識補完 `0件`
+- 固定範囲外論点追加 `0件`
+- 未確認実車値追加 `0件`
 - 最終判定: `PASS / COMPLETED`
 
-## 28 範囲境界
-追加していない:
-- 熱伝導率、熱抵抗、熱流、対流、放射伝熱
-- 誘導加熱の表皮効果・浸透深さ・透磁率、誘電加熱、アーク加熱等の方式各論
-- 冷媒物性、冷凍サイクル詳細、p-h線図、エンタルピー計算
-- 湿度、換気、空気線図、顕熱比等の空調設計論点
-- 未確認の新幹線車内空調・電熱実車値
-
 ## 次テーマ
-Topic 29 `コンプレッサ・ポンプ・ファン` を進行中。
+Topic 30 `ATC① 新幹線は列車をどう検知する？`
 系列SPEC固定範囲:
-- コンプレッサ
-- ポンプ
-- ファン
-- 電動機応用
-- トルク
-- 出力
-- 効率
+- レール
+- 軌道回路
+- 車軸短絡
+- 電圧
+- 電流
+- 短絡
+- リレー
+- 列車検知
