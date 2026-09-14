@@ -6,23 +6,28 @@
 
 Topic 01〜06は最終QAまでPASSし、`completed`。
 
-Topic 07 `モーターはなぜ回る？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題に続き、解説PDFまで完成した。固定公式過去問5問と制作前独立検証 `5 / 5 PASS` は変更していない。
+Topic 07 `モーターはなぜ回る？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDFに続き、練習問題source・練習PDFまで完成した。固定公式過去問5問と制作前独立検証 `5 / 5 PASS` は変更していない。
 
 - 完成数: `6 / 14`
 - last completed: `06 0系の変圧器は何をしていた？`
 - active topic: `07 モーターはなぜ回る？`
-- current status: `topic_07_explanation_pdf_complete`
+- current status: `topic_07_practice_pdf_complete`
 - Topic 07 source: `topics/07_motor_force_induction/07_motor_force_induction.md`
 - Topic 07 explanation PDF: `topics/07_motor_force_induction/07_motor_force_induction_explanation.pdf`
+- Topic 07 practice source: `topics/07_motor_force_induction/07_motor_force_induction_practice.md`
+- Topic 07 practice PDF: `topics/07_motor_force_induction/07_motor_force_induction_practice.pdf`
 
 ## 今回進捗
 
-固定EXAM_ALIGNMENTと解説本文を変更せず、解説PDFを作成した。
+固定EXAM_ALIGNMENTと解説本文を変更せず、練習問題source・練習PDFを作成した。
 
-- A4縦4ページ
-- 固定5問の要求事項を全件収録
-- 3段階例題（基礎／本試験標準／複合・ひっかけ）を収録
-- 200 dpi全4ページ表示QA: `PASS`
+- 全15問、全問五肢択一
+- 基礎4問／本試験標準8問／複合・応用3問
+- 正答位置 `(1)〜(5)` は各3問
+- 固定5問の要求事項を全件練習へ接続
+- 独立再計算・再判定: `15 / 15 PASS`
+- PDF: A4縦5ページ
+- 200 dpi全5ページ表示QA: `PASS`
 - 文字抽出QA: `PASS`
 - 直流機の電圧方程式・界磁方式・速度制御の追加: `0件`
 - Topic 08以降の論点追加: `0件`
@@ -70,7 +75,7 @@ e = Blv sinθ
 
 ## 次に行うこと
 
-固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 07の練習問題source・練習PDFを作成する。
+固定EXAM_ALIGNMENT・解説本文・練習問題を変更せず、Topic 07の解説画像PowerPointを作成する。
 
 ## 固定ルール
 
