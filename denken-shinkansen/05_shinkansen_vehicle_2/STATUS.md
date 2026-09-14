@@ -5,20 +5,23 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 4 / 39
-- current_status: `topic_05_final_qa_needs_revision`
+- current_status: `topic_05_source_progress_synced`
 - last_completed_topic: `04 0系④ タップ制御と加速特性`
 - active_topic: `05 0系⑤ 発電ブレーキのエネルギー解析`
-- next_start: Topic 05の内容・数式・過去問選定を変更せず、source Markdownと練習sourceに残る旧進捗記録だけを現在地へ同期する
+- next_start: Topic 05の最終QAを再実施し、source Markdownと練習sourceの旧進捗記録不整合が解消したことを確認する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
 - [x] 02 0系② 整流回路の波形解析 — PASS
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
 - [x] 04 0系④ タップ制御と加速特性 — PASS
-- [ ] 05 0系⑤ 発電ブレーキのエネルギー解析 — 最終QA `NEEDS_REVISION`。成果物・過去問対応・独立再解答・表示QAはPASSだが、source内の旧進捗記録が実在成果物と不整合
+- [ ] 05 0系⑤ 発電ブレーキのエネルギー解析 — 前回最終QAは `NEEDS_REVISION`。成果物・過去問対応・独立再解答・表示QAはPASS。指摘されたsource内の旧進捗記録は現在地へ同期済みで、最終QA再実施待ち
 
 ## Topic 05 現在地
 - source: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy.md`
+  - 旧「解説PDF等未実施」を実在成果物へ同期済み
+  - 完成後独立再解答を `5 / 5 PASS` へ同期済み
+  - 次工程を最終QA再実施へ同期済み
 - 解説PDF: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_explanation.pdf`
   - A4縦5ページ
   - SPEC指定4グラフ収録
@@ -30,6 +33,7 @@
   - 全問完全解説付き
   - 計算・論理QA `12 / 12 PASS`
   - R5一次・H24二次の固定範囲へ接続
+  - 旧「PDF自体は次工程」を練習PDF・表示QA済みへ同期済み
 - 練習PDF: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_practice.pdf`
   - A4縦3ページ
   - 一次8問（全問五肢択一）＋二次記述4問
@@ -48,11 +52,12 @@
   - H24二次: `R_a=0.500 Ω`, `E=187.5 V ≒ 188 V` を途中式付きで再導出
   - 教材外知識補完・範囲外論点・未確認0系実値の追加はいずれも0件
 - 最終QA: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_final_qa.md`
-  - 判定: `NEEDS_REVISION`
+  - 前回判定: `NEEDS_REVISION`
   - 成果物存在・EXAM_ALIGNMENT・独立再解答・範囲境界・表示QA: PASS
-  - 不整合: source Markdownに「解説PDF等未実施」「独立再解答未実施」「次は解説PDF作成」が残存、練習sourceに「PDF自体は次工程」が残存
+  - 前回指摘のsource進捗記録不整合は修正済み
+  - 再QAは次工程
 - 制作前EXAM_ALIGNMENT: 完了
-- 次工程: source内の旧進捗記録だけを同期
+- 次工程: 最終QA再実施
 
 ## Topic 05 過去問対応
 公式過去問は一次・二次双方を確認済み。固定範囲へ直接または必須計算基礎として接続するゲート対象:
