@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 4 / 21
-- current_status: `topic_05_independent_reanswer_complete`
+- current_status: `topic_05_final_qa_needs_revision`
 - last_completed_topic: `04 架線と車体は巨大なコンデンサなのか？`
 - active_topic: `05 0系主変圧器の鉄心には何が起きている？`
-- next_start: Topic 05の最終QAを実施し、独立再解答16/16、成果物、表示QA、固定範囲、進捗記録の整合を確認する。PASSの場合のみcompletedにする
+- next_start: Topic 05の解説source・練習sourceに残る旧進捗記録を現在地へ同期する。技術内容・固定EXAM_ALIGNMENT・問題・正答・二次非採用判断は変更しない
 
 ## Topic 05 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -37,24 +37,25 @@
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答
-- [ ] 最終QA
+- [x] 最終QA実施（`NEEDS_REVISION`）
 
 ## 今回進めた内容
 
-Topic 05の完成後独立再解答を完了した。
+Topic 05の最終QAを実施した。
 
-- `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit_independent_reanswer.md` を作成
-- R6 問2(1)〜(2): `チ / ヌ`、`2 / 2 PASS`
-- R5 問2(1): `ワ`、`1 / 1 PASS`
-- R4 問2(1)〜(5): `ヌ / ト / カ / リ / ヲ`、`5 / 5 PASS`
-- R3 問2(1)〜(5): `ハ / ヨ / ヌ / チ / カ`、`5 / 5 PASS`
-- H30 問2(1)〜(3): `ハ / ヨ / リ`、`3 / 3 PASS`
-- 固定一次5問・16小問合計: `16 / 16 PASS`
-- 公式問題の条件から教材内の式だけで導出した後、電気技術者試験センター公式解答と照合
+- 必須成果物はGitHub正本上に全件存在
+- 固定一次5問・16小問の独立再解答は `16 / 16 PASS`
 - 教材外の電気理論による補完: 0件
-- R7〜R5二次に直接対応がない判断を維持し、二次数合わせは行っていない
-- 変圧器等価回路、自己／相互インダクタンス、ファラデーの法則、誘導起電力、同期機特性、表皮効果の追加: 0件
+- 固定範囲外論点の追加: 0件
+- R7〜R5二次に直接対応がない判断を維持し、二次数合わせ: 0件
+- 解説PDF: A4縦6ページ、全ページ表示QA PASS
+- 練習PDF: A4縦3ページ、全ページ表示QA PASS
+- 練習12問: 正答一意性・計算再検算 `12 / 12 PASS`
+- PowerPoint: 16:9・5スライド、全スライド表示QA・overflow検査・ZIP整合性PASS
+- `05_transformer_magnetic_circuit.md` 冒頭状態欄がPDF・練習・PowerPoint・独立再解答を未着手扱いのまま残っていることを検出
+- `05_transformer_magnetic_circuit_practice.md` 冒頭状態欄が練習PDF完成時点のまま残っていることを検出
+- 技術内容・固定EXAM_ALIGNMENT・二次非採用判断・独立再解答結果には矛盾なし
 
 ## 判定
 
-Topic 05は `IN_PROGRESS / independent_reanswer_complete`。完成数は `4 / 21` のまま。次は最終QA。
+Topic 05は `NEEDS_REVISION / IN_PROGRESS`。未完了理由はsource 2ファイルの進捗記録不整合のみ。完成数は `4 / 21` のまま。次はsource状態記録の同期。
