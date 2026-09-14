@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 6 / 39
-- current_status: `topic_07_practice_pdf_complete`
+- current_status: `topic_07_powerpoint_complete`
 - last_completed_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
 - active_topic: `07 直流主回路の高出力化`
-- next_start: Topic 07の解説画像PowerPoint作成＋全スライド表示QA。固定EXAM_ALIGNMENT一次4問＋二次1問・15対象項目と固定範囲を変更しない
+- next_start: Topic 07の完成後独立再解答。固定EXAM_ALIGNMENT一次4問＋二次1問・15対象項目を、保存済み正答を見ずに完成教材だけで再解答する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -17,7 +17,7 @@
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
-- [ ] 07 直流主回路の高出力化 — 解説PDF＋練習PDF完了 / PowerPoint以降未実施
+- [ ] 07 直流主回路の高出力化 — 解説PDF＋練習PDF＋PowerPoint完了 / 完成後独立再解答以降未実施
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -109,6 +109,17 @@
 - 未確認実車値の真値化: `0件`
 - 固定範囲外追加: `0件`
 
+## Topic 07 解説画像PowerPoint
+- `07_dc_main_circuit_high_output_images.pptx`: `completed`
+- 16:9・4スライド
+- SPEC指定3グラフ・可視化対象: 3 / 3収録
+- 180 dpi全4スライド Visual QA: `PASS`
+- overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- 固定一次4問＋二次1問・15対象項目: 維持
+- 未確認実車値の真値化: `0件`
+- 固定範囲外追加: `0件`
+
 ## Topic 07 固定範囲
 - 主回路構成比較
 - 定格電圧
@@ -128,4 +139,4 @@
 - 位相制御、サイリスタ点弧角、誘導電動機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱設計
 - 出典で確認できない100系・200系の編成出力、主回路総損失、効率、冷却容量、けん引力・速度特性
 
-次工程はTopic 07の解説画像PowerPoint作成＋全スライド表示QA。
+次工程はTopic 07の完成後独立再解答。
