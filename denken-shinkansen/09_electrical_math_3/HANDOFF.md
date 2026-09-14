@@ -12,11 +12,13 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
-Topic 05 `ベクトル` は、初回完成後独立再解答 `2 / 6 PASS` で不足した4点を解説source / PDF、練習source / PDF、PowerPointへ必要最小限補強済み。補強後の再独立解答は `6 / 6 PASS`。最終QAのみ未実施。
+Topic 05 `ベクトル` は、初回完成後独立再解答 `2 / 6 PASS` で不足した4点を解説source / PDF、練習source / PDF、PowerPointへ必要最小限補強済み。補強後の再独立解答は `6 / 6 PASS`。
+
+最終QAを実施した結果、過去問対応品質ゲートと成果物自体はPASSしたが、`05_vectors.md` の進捗記録が古いまま残っているため `NEEDS_REVISION / IN_PROGRESS`。
 
 完成数: `4 / 12`
 
-current_status: `topic_05_exam_reanswer_complete`
+current_status: `topic_05_final_qa_needs_revision`
 
 active_topic: `05 ベクトル`
 
@@ -61,6 +63,7 @@ active_topic: `05 ベクトル`
 - `topics/05_vectors/05_vectors_images.pptx`
 - `topics/05_vectors/05_vectors_exam_reanswer.md`
 - `topics/05_vectors/05_vectors_revision_supplement.md`
+- `topics/05_vectors/05_vectors_final_qa.md`
 
 ## 補強内容
 
@@ -73,17 +76,28 @@ active_topic: `05 ベクトル`
 
 固定EXAM_ALIGNMENT、既存3段階例題、初回PASS済み2問は変更していない。仕様外論点・未確認新幹線実値の追加は0件。
 
-## 再独立解答結果
+## 最終QA結果
 
-- R8上 理論 問4: `H≈7.04 A/m` → `(3)` PASS
-- R7下 理論 問2: `Q≈2.47×10^-6 C` → `(3)` PASS
-- R7上 理論 問11: ①正・②負、n形は電界反対、`VH` は `I` に比例 → `(4)` PASS
-- R6下 理論 問4: A `+x`、B `-x` → `(2)` PASS
-- R4下 理論 問4: `F0≈1.70×10^-4 N/m` → `(3)` PASS
-- R4上 理論 問4: `e≈4.3 mV` → `(3)` PASS
+PASS:
+- 必須成果物の実在
+- 固定EXAM_ALIGNMENT 6問
+- 制作前独立検証 6 / 6
+- 補強後完成教材による再独立解答 6 / 6
+- 教材外知識による補完0件
+- 固定範囲外追加0件
+- 未確認新幹線実値追加0件
 
-教材外知識による補完0件。過去問対応品質ゲートはPASS。
+FAIL:
+- `05_vectors.md` 冒頭 `## 状態` が「既存PDF等への再同期と再独立解答は未実施」のまま
+- `05_vectors.md` 末尾 `# 次工程` が解説PDF・練習・PowerPoint同期と再独立解答を未実施として残している
+
+したがってTopic 05はまだ `completed` にしない。
 
 ## 次に行うこと
 
-Topic 05の最終QAを実施する。必須成果物の実在、EXAM_ALIGNMENT、再独立解答 `6 / 6 PASS`、PDF/PPTX表示QA記録、進捗記録、仕様境界を確認し、全件PASSなら `completed` にする。
+`05_vectors.md` の進捗記録だけを現在地へ同期する。
+
+- 冒頭 `## 状態`: 解説PDF・練習source/PDF・PowerPoint補強同期済み、再独立解答 `6 / 6 PASS`、最終QAで進捗記録不整合のみ指摘された状態へ修正
+- 末尾 `# 次工程`: 進捗記録修正後に最終QA再判定へ修正
+
+教材本文、EXAM_ALIGNMENT、3段階例題、練習問題、PDF、PowerPointは変更しない。
