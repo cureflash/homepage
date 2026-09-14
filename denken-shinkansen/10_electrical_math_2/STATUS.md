@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 4 / 20
-- current_status: `topic_05_images_pptx_complete`
+- current_status: `topic_05_exam_reanswer_complete`
 - last_completed_topic: `04 微分による極値・最適条件`
 - active_topic: `05 積分によるエネルギー計算`
-- next_start: Topic 05の完成教材だけを使い、固定済み6問・16対象項目を保存済み正答を先に見ず独立再解答し、公式解答・標準解答と照合する
+- next_start: Topic 05の最終QAを実施し、固定6問・16対象項目、必須成果物、表示QA、SPEC境界、進捗記録整合を確認する
 
 ## Topic 05 制作品質ゲート
 
@@ -24,26 +24,30 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
-- [ ] 完成後独立再解答 16 / 16 PASS
-- [ ] 教材外知識補完 0件確認
+- [x] 完成後独立再解答 16 / 16 PASS
+- [x] 教材外知識補完 0件確認
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 05 `積分によるエネルギー計算` の解説画像PowerPointを完成した。
+Topic 05 `積分によるエネルギー計算` の完成後独立再解答を完了した。
 
-- 16:9、全5スライド
-- `E=∫Pdt`、`W=∫Fdx`、体積積分、平均値/RMSの使い分けを図解
-- R4二次の RMS→波高値→三相全波整流平均値積分を可視化
-- H25一次のコンデンサエネルギー、一定電圧条件、電源との授受、外力仕事を可視化
-- R7/R6/R2の磁気エネルギー、結合コイル、円柱導体の体積積分、鎖交磁束保存を可視化
-- 固定EXAM_ALIGNMENT: 一次5問＋二次1問、計6問・16対象項目を変更せず全件接続
-- LibreOffice PDF変換・全5スライド表示・overflow検査・ZIP整合性を全てPASS
-- Topic 06以降、選定問題の対象外小問、未確認実車値・実車固有制御則は追加していない
+- 固定EXAM_ALIGNMENT: 一次5問＋二次1問、計6問・16対象項目
+- 完成教材の式・解法だけで全対象項目を再導出
+- 一次: 15 / 15対象項目 PASS
+- 二次: 1 / 1対象項目 PASS
+- 合計: 16 / 16対象項目 PASS
+- 公式解答・標準解答と全件一致
+- 教材外知識による補完: 0件
+- 固定範囲外追加: 0件
+- Topic 06以降、トルクのエネルギー微分、表皮効果、PWM、V/f制御、未確認実車値は使用していない
+
+独立再解答記録:
+`topics/05_integral_energy/05_integral_energy_exam_reanswer.md`
 
 ## 判定
 
-Topic 05の解説画像PowerPointは `PASS`。テーマ自体は未完了。
+Topic 05の完成後独立再解答は `PASS`。テーマ自体は未完了。
 
-完成数は `4 / 20`。次工程は Topic 05の完成後独立再解答。
+完成数は `4 / 20`。次工程は Topic 05の最終QA。
