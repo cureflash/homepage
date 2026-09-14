@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 6 / 22
-- current_status: `topic_07_independent_reanswer_complete`
+- current_status: `topic_07_final_qa_needs_revision`
 - last_completed_topic: `06 誘導電動機の最大トルクはどこで出る？`
 - active_topic: `07 300系のPWMコンバータは何をしている？`
-- next_start: Topic 07の最終QAを実施し、EXAM_ALIGNMENT・成果物・source進捗・仕様境界を再確認する
+- next_start: Topic 07 source Markdownの旧進捗記録2箇所を現在地へ同期する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -123,25 +123,26 @@
 - [x] 解説画像PowerPoint
 - [x] SPEC指定4波形
 - [x] 公式過去問の教材のみでの独立再解答: 17 / 17 PASS
-- [ ] 最終QA PASS
+- [x] 最終QA実施: `NEEDS_REVISION`（source Markdownの旧進捗記録2箇所が残存）
+- [ ] source Markdown進捗記録の同期
+- [ ] 最終QA再実施: `PASS / completed`
 
 ## 今回進めた内容
-Topic 07「300系のPWMコンバータは何をしている？」の完成後独立再解答を完了した。
+Topic 07「300系のPWMコンバータは何をしている？」の最終QAを実施した。
 
 成果物:
-- `topics/07_300series_pwm_converter/07_300series_pwm_converter_independent_reanswer.md`
+- `topics/07_300series_pwm_converter/07_300series_pwm_converter_final_qa.md`
 
 確認内容:
 - 固定EXAM_ALIGNMENT: 一次2問＋二次記述3問、計5問・17小問
-- H22一次機械問3: `5 / 5 PASS`
-- H27一次機械問3: `3 / 3 PASS`
-- H24二次機械・制御問3: `4 / 4 PASS`
-- R01二次機械・制御問3: `3 / 3 PASS`
-- R05二次機械・制御問3: `2 / 2 PASS`
-- 完成教材のみでの独立再解答: `17 / 17 PASS`
-- 教材外知識による補完: 0件
+- 完成後独立再解答: `17 / 17 PASS`
+- 必須成果物: PASS
+- SPEC指定4波形QA: PASS
 - 固定範囲外論点の追加: 0件
 - 未確認300系実車値の追加: 0件
+- source Markdown進捗整合: FAIL
+  - 冒頭に「完成後独立再解答と最終QAは未実施」が残存
+  - 末尾「次工程」が完成後独立再解答のまま
 
 ## 判定
-Topic 07は `topic_07_independent_reanswer_complete`。完成数は `6 / 22` のまま。次は最終QA。
+Topic 07は `NEEDS_REVISION / IN_PROGRESS`。完成数は `6 / 22` のまま。次はsource Markdownの旧進捗記録2箇所を現在地へ同期する。
