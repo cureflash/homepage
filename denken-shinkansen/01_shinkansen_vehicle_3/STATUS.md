@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 26 / 38
-- current_status: `topic_27_explanation_pdf_complete`
+- current_status: `topic_27_practice_pdf_complete`
 - last_completed_topic: `26 補助電源① 主回路の電気を車内設備へ`
 - active_topic: `27 補助電源② 車内照明`
-- next_start: Topic 27の練習問題を原則12問以上で作成し、完全解説付き練習PDFへ落とし込む。固定EXAM_ALIGNMENT 5問・8小問の要求事項を演習へ全件マッピングし、全ページ表示QAを行う。系列SPEC固定範囲から広げない
+- next_start: Topic 27の解説画像PowerPointを作成し、固定EXAM_ALIGNMENT 5問・8小問の判断経路を固定範囲内で可視化する。全スライド表示QA・境界overflow・PPTX整合性を確認する。系列SPEC固定範囲から広げない
 
 ## 新品質ゲート進捗
 - [x] 01〜26 — PASS
-- [ ] 27 補助電源② 車内照明 — EXPLANATION_PDF_COMPLETE
+- [ ] 27 補助電源② 車内照明 — PRACTICE_PDF_COMPLETE
 
 ## 27 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・8小問。系列SPEC固定範囲は、LED、光束、光度、照度、lm、cd、lx、照明計算。
@@ -52,6 +52,16 @@
 - 180 dpiで全4ページ表示QA PASS。文字切れ・重なり・ページ外はみ出し・破損グリフなし
 - 新幹線車内照明の未確認実車値は真値化していない
 - 輝度・光束発散度・LED半導体物性等の固定範囲外論点は追加していない
+
+## 27 練習PDF
+- 練習PDF: `topics/27_cabin_lighting/27_cabin_lighting_practice.pdf`
+- source: `topics/27_cabin_lighting/27_cabin_lighting_practice.md`
+- A4縦5ページ、全15問。基礎4問／標準8問／複合3問、全問五肢択一・完全解説付き
+- 固定5問・8小問の要求事項を演習へ全件マッピング済み
+- 対応: R7上問12=Q2・Q7・Q9・Q14、R6下問17(a)(b)=Q2・Q6・Q7・Q12、R6上問17(a)=Q2・Q3・Q5、R5下問17(a)(b)=Q5・Q8・Q10・Q14、H27問16(a)(b)=Q11・Q12・Q13・Q15
+- 数値計算を独立再計算し、各数値問題の正答が選択肢内で一意であることを確認。正答位置はA/B/C/D/E各3問
+- 180 dpiで全5ページ表示QA PASS。文字切れ・重なり・ページ外はみ出し・破損グリフなし
+- 新幹線車内照明の未確認実車値は使用せず、輝度・光束発散度・LED半導体物性等の固定範囲外論点も追加していない
 
 ## 27 範囲境界
 固定範囲を広げないため、次は品質ゲート対象から除外した。
