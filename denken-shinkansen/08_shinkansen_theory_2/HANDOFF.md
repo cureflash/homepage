@@ -4,19 +4,19 @@
 
 ## 現在地
 
-Topic 01〜04は `completed`。
+Topic 01〜05は `completed`。
 
-Topic 05 `0系主変圧器の鉄心には何が起きている？` は、初回最終QAで検出されたsource 2ファイルの進捗記録不整合を解消済み。技術内容・固定EXAM_ALIGNMENT・練習問題・正答・二次非採用判断は変更していない。
+Topic 05 `0系主変圧器の鉄心には何が起きている？` は最終QA再実施まで完了し、`PASS / completed`。固定一次5問・16小問の独立再解答は `16 / 16 PASS`、教材外補完0件、固定範囲外追加0件、二次数合わせ0件。初回最終QAで検出されたsource進捗記録不整合も解消済み。
 
-完成数: `4 / 21`
+完成数: `5 / 21`
 
-current_status: `topic_05_source_status_synced`
+current_status: `topic_05_completed`
 
-active_topic: `05 0系主変圧器の鉄心には何が起きている？`
+active_topic: `06 25kVからどうやって電圧が誘導される？`
 
 ## Topic 05 固定範囲
 
-系列SPECどおり、次だけを扱う。
+系列SPECどおり、次だけを扱った。
 
 - アンペアの周回積分
 - 磁界
@@ -30,7 +30,7 @@ active_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - ヒステリシス
 - 磁気エネルギー
 
-変圧器等価回路は機械編、自己／相互インダクタンス・ファラデーの法則・誘導起電力はTopic 06へ譲る。同期機特性・表皮効果も本Topicへ追加しない。
+変圧器等価回路は機械編、自己／相互インダクタンス・ファラデーの法則・誘導起電力はTopic 06へ譲った。同期機特性・表皮効果もTopic 05へ追加していない。
 
 ## Topic 05 固定EXAM_ALIGNMENT
 
@@ -51,34 +51,29 @@ active_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - H30 問2(4)(5): 自己・相互インダクタンスのため除外
 - R2 問2: 磁気エネルギーを含むが自己インダクタンス中心のため品質ゲート対象には加えない
 
-二次試験はR7〜R5の「電力・管理」「機械・制御」を確認したが、本Topic固定範囲だけで直接解かせる問題は確認できなかった。同期機の界磁・飽和に触れる問題はあるが、同期リアクタンス、フェーザ、同期機特性が主題なので採用しない。`08 理論・二種` は一次理論中心のため、二次問題を数合わせで追加しない。
+二次試験はR7〜R5の「電力・管理」「機械・制御」を確認したが、Topic 05固定範囲だけで直接解かせる問題は確認できなかった。同期機の界磁・飽和に触れる問題は同期リアクタンス、フェーザ、同期機特性が主題なので採用していない。`08 理論・二種` は一次理論中心のため、二次問題を数合わせで追加していない。
 
-## Topic 05 成果物
+## Topic 05 成果物・QA
 
 - source: `topics/05_transformer_magnetic_circuit/05_transformer_magnetic_circuit.md`
-- 解説本文: 完成
-- 3段階例題: 完成
-- 固定一次5問・16小問の本文対応表: 完成
-- 解説PDF: 完成（A4縦6ページ）
-- 解説PDF表示QA: 全6ページPASS
+- 解説PDF: 完成（A4縦6ページ、全ページ表示QA PASS）
 - 練習問題source: 完成（12問、全問五肢択一、基礎3 / 標準6 / 複合3）
-- 練習PDF: 完成（A4縦3ページ）
-- 練習問題QA: 正答一意性・計算再検算 `12 / 12 PASS`、全3ページ表示QA PASS
+- 練習PDF: 完成（A4縦3ページ、全ページ表示QA PASS）
+- 練習問題QA: 正答一意性・計算再検算 `12 / 12 PASS`
 - 解説画像PowerPoint: 完成（16:9、5スライド）
 - PowerPoint QA: 全5スライド表示QA、overflow検査、ZIP整合性すべてPASS
-- 完成後独立再解答: 完成
-- 独立再解答結果: 固定一次5問・16小問 `16 / 16 PASS`、教材外補完0件、固定範囲外追加0件
-- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- 初回最終QAの残件: source進捗記録2箇所のみ
+- 完成後独立再解答: 固定一次5問・16小問 `16 / 16 PASS`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（source進捗記録不整合のみ）
 - source進捗記録同期: 完了
+- 最終QA再実施: `PASS / completed`
 
 ## 今回の更新
 
-1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFFとGitHub正本を再確認。
-2. `05_transformer_magnetic_circuit.md` の状態欄・末尾進捗を現在地へ同期。
-3. `05_transformer_magnetic_circuit_practice.md` の状態欄を現在地へ同期。
+1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 05成果物を再確認。
+2. Topic 05最終QAを再実施し、全品質ゲートPASSを確認。
+3. Topic 05を `completed`、完成数を `5 / 21` へ更新。
 4. 技術内容、固定EXAM_ALIGNMENT、問題・正答、二次非採用判断は変更していない。
 
 ## 次に行うこと
 
-Topic 05の最終QAを再実施する。必須成果物、固定一次5問・16小問の独立再解答 `16 / 16 PASS`、二次非採用判断、表示QA、source進捗記録の整合を再確認し、全品質ゲートPASSの場合のみ `completed` にする。
+Topic 06 `25kVからどうやって電圧が誘導される？` の制作前EXAM_ALIGNMENTを行う。系列SPECの固定範囲を維持し、二種一次・二次の公式過去問を直近年度優先で確認して品質ゲート対象を固定する。本文制作はEXAM_ALIGNMENT固定後に行う。

@@ -63,23 +63,18 @@ R7〜R5の二次「電力・管理」「機械・制御」を確認済み。Topi
 
 ### 6. 成果物相互整合・進捗記録
 
-技術内容、固定EXAM_ALIGNMENT、二次非採用判断、独立再解答結果には矛盾を確認しなかった。
+技術内容、固定EXAM_ALIGNMENT、二次非採用判断、独立再解答結果に矛盾を確認しなかった。
 
-ただし進捗記録に不整合が残る。
+初回最終QAで検出した `05_transformer_magnetic_circuit.md` と `05_transformer_magnetic_circuit_practice.md` の旧進捗記録はGitHub正本の現在地へ同期済み。再確認時点で、必須成果物・独立再解答・QA状態との不整合はない。
 
-- `05_transformer_magnetic_circuit.md` 冒頭状態欄が「解説本文＋3段階例題まで完成。PDF・練習問題・PowerPoint・完成後独立再解答・最終QAは未着手」のままで、GitHub正本上の実在成果物と一致しない。
-- `05_transformer_magnetic_circuit_practice.md` 冒頭状態欄が「練習問題source＋練習PDFまで完成」のままで、PowerPoint完成・独立再解答 `16 / 16 PASS`・今回の最終QA実施を反映していない。
-
-進捗正本間の不整合を残したまま `completed` にはしない。
-
-判定: NEEDS_REVISION
+判定: PASS
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-過去問対応、独立再解答、成果物、表示QA、固定範囲はPASS。未完了理由はsource 2ファイルの進捗記録不整合のみ。
+固定一次5問・16小問は `16 / 16 PASS`。二次非採用判断、表示QA、固定範囲、成果物相互整合もPASS。教材外補完0件、固定範囲外追加0件、二次数合わせ0件。
 
-完成数は `4 / 21` のまま維持する。
+Topic 05を `completed` とし、完成数を `5 / 21` に更新する。
 
-次工程は `05_transformer_magnetic_circuit.md` と `05_transformer_magnetic_circuit_practice.md` の状態記録をGitHub正本の現在地へ同期する。技術内容、固定EXAM_ALIGNMENT、問題・正答、二次非採用判断は変更しない。同期後に最終QAを再実施し、全件PASSの場合のみ `completed` とする。
+次工程はTopic 06 `25kVからどうやって電圧が誘導される？` の制作前EXAM_ALIGNMENT。

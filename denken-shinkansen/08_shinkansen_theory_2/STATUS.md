@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 4 / 21
-- current_status: `topic_05_source_status_synced`
-- last_completed_topic: `04 架線と車体は巨大なコンデンサなのか？`
-- active_topic: `05 0系主変圧器の鉄心には何が起きている？`
-- next_start: Topic 05の最終QAを再実施する。技術内容・固定EXAM_ALIGNMENT・問題・正答・二次非採用判断は変更せず、全品質ゲートPASSの場合のみcompletedにする
+- exam_aligned_completed_topics: 5 / 21
+- current_status: `topic_05_completed`
+- last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
+- active_topic: `06 25kVからどうやって電圧が誘導される？`
+- next_start: Topic 06の制作前EXAM_ALIGNMENT。系列SPECの固定範囲だけを対象に、二種一次・二次の公式過去問を直近年度優先で確認し、品質ゲート対象を固定してから本文へ進む
 
 ## Topic 05 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -36,24 +36,27 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint
-- [x] 完成後独立再解答
+- [x] 完成後独立再解答 `16 / 16 PASS`
 - [x] 初回最終QA実施（`NEEDS_REVISION`）
 - [x] 解説source・練習sourceの旧進捗記録を現在地へ同期
-- [ ] 最終QA再実施
+- [x] 最終QA再実施 `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 05を1段階進め、初回最終QAで検出されたsource進捗記録2箇所の不整合を解消した。
+Topic 05の最終QAを再実施し、全品質ゲートPASSを確認して `completed` にした。
 
-- `05_transformer_magnetic_circuit.md` の状態欄を、必須成果物・独立再解答・初回最終QAまで実施済みの現在地へ同期
-- 同source末尾の独立再解答・次工程記録も現在地へ同期
-- `05_transformer_magnetic_circuit_practice.md` の状態欄を現在地へ同期
+- 必須成果物: 全件存在
+- 固定一次5問・16小問の独立再解答: `16 / 16 PASS`
+- 教材外補完: 0件
+- 固定範囲外論点の追加: 0件
+- 二次試験の件数合わせ: 0件
+- 二次非採用判断: 維持
+- 表示QA・計算QA: PASS
+- source進捗記録: 整合確認
 - 技術内容の変更: 0件
 - 固定EXAM_ALIGNMENTの変更: 0件
 - 練習問題・正答の変更: 0件
-- 二次非採用判断の変更: 0件
-- 固定範囲外論点の追加: 0件
 
 ## 判定
 
-Topic 05は `IN_PROGRESS`。初回最終QAの唯一の残件だったsource進捗記録不整合は解消済み。完成数は `4 / 21` のまま。次は最終QA再実施。
+Topic 05は `completed`。完成数は `5 / 21`。次はTopic 06 `25kVからどうやって電圧が誘導される？` の制作前EXAM_ALIGNMENT。
