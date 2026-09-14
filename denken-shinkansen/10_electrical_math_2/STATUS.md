@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 5 / 20
-- current_status: `topic_06_practice_source_complete`
+- current_status: `topic_06_practice_pdf_complete`
 - last_completed_topic: `05 積分によるエネルギー計算`
 - active_topic: `06 微積分で新幹線の運転曲線を解析する`
-- next_start: 練習問題source全12問・完全解説を正本として練習PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 06の解説画像PowerPointを作成し、全スライド表示QA・overflow検査を行う。固定EXAM_ALIGNMENT 5問・15対象項目と固定範囲を維持し、固定範囲外論点・未確認実車値を追加しない
 
 ## Topic 06 制作品質ゲート
 
@@ -24,7 +24,7 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source（一次型8問＋二次記述4問・完全解説）
-- [ ] 練習PDF（解答・完全解説付き）
+- [x] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
 - [ ] 完成後独立再解答
@@ -33,26 +33,23 @@
 
 ## 今回進めた内容
 
-Topic 06 `微積分で新幹線の運転曲線を解析する` の練習問題・完全解説sourceを作成した。
+Topic 06 `微積分で新幹線の運転曲線を解析する` の練習PDFを完成した。
 
 成果物:
-`topics/06_calculus_train_curve/06_calculus_train_curve_practice.md`
+`topics/06_calculus_train_curve/06_calculus_train_curve_practice.pdf`
 
-構成:
-- 全12問
-- 一次型8問
-- 二次記述型4問
-- 全問に式・理由・単位・検算または収支説明を付与
-
-固定EXAM_ALIGNMENT接続:
-- R5 一次 理論 問6: 問2、問10
-- R3 一次 理論 問6: 問4、問9
-- H28 一次 理論 問4(1)〜(3): 問5、問9
-- H25 一次 機械 問3(1): 問8
-- H23 二次 電力・管理 問5(1)-[A]: 問11、問12
-
-独立計算QA `12 / 12 PASS`。一次型8問は正答一意。教材外知識補完0件、固定範囲外追加0件。未確認の実車運転曲線・実車回生効率は追加していない。
+構成・QA:
+- A4縦6ページ
+- 全12問（一次型8問＋二次記述型4問）
+- 練習sourceの問題・解答・完全解説を反映
+- 固定EXAM_ALIGNMENT 一次4問＋二次1問、計5問・15対象項目を維持
+- 200 dpi全6ページ表示QA `PASS`
+- 文字抽出QA `PASS`
+- 文字欠け・黒四角・重なり・クリップ 0件
+- 教材外知識補完 0件
+- 固定範囲外追加 0件
+- 未確認の実車運転曲線・実車回生効率の追加 0件
 
 ## 判定
 
-Topic 06は `practice_source_complete`。完成数は `5 / 20` のまま。次は練習PDF作成＋全ページ表示QA。
+Topic 06は `practice_pdf_complete`。完成数は `5 / 20` のまま。次は解説画像PowerPoint作成＋表示QA・overflow検査。
