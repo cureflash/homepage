@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 7 / 22
-- current_status: `topic_08_exam_alignment_complete`
+- current_status: `topic_08_explanation_source_complete`
 - last_completed_topic: `07 300系のPWMコンバータは何をしている？`
 - active_topic: `08 VVVFインバータで三相交流を作る`
-- next_start: Topic 08の解説本文＋3段階例題を作成する
+- next_start: Topic 08の解説PDFを作成し、全ページ表示QAを行う
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -136,7 +136,7 @@
 - [x] 参考教材を e-sysnet＋電験王2 の複数系統で確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] ゲート対象13小問の公式解答／標準解答照合を伴う制作前独立検証: 13 / 13 PASS
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -145,16 +145,16 @@
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 08「VVVFインバータで三相交流を作る」の制作前EXAM_ALIGNMENTを完了した。
+Topic 08「VVVFインバータで三相交流を作る」の解説本文＋3段階例題を完成し、source Markdownへ反映した。
 
-固定EXAM_ALIGNMENT:
-- R07 一次 機械 問4: (4),(5)
-- H22 一次 機械 問3: (1)〜(3)
-- H19 一次 機械 問4: (1),(2)
-- R04 二次 機械・制御 問3: (4),(5)
-- H28 二次 機械・制御 問3: (1)〜(4)
-
-一次3問＋二次記述2問、計5問・13小問。制作前独立検証は `13 / 13 PASS`。固定範囲外論点による件数合わせは0件。
+- 固定5問・13小問を本文へ `13 / 13` マッピング
+- 三相2レベル6スイッチ、120°位相差、正弦波PWM、信号波・三角波キャリア、変調率、相端電圧・線間電圧、基本波、高調波、スイッチング周波数を固定範囲内で説明
+- H22/R04型 `V_phase,peak=kE_d/2`、`V_LL1=√3 kE_d/(2√2)` を導出
+- H28型 `V_LL,rms=√(2/3)E_d` を波形の二乗平均から導出
+- 3の整数倍次数高調波が三相線間電圧で相殺される理由を説明
+- 基礎／本試験標準／複合・ひっかけの3段階例題を追加
+- V/f制御、ベクトル制御、デッドタイム設計、素子選定、整流器設計、負荷電流経路詳細の追加: 0件
+- 未確認300系実車値の追加: 0件
 
 ## 判定
-Topic 08は `topic_08_exam_alignment_complete`。完成数は `7 / 22` のまま。次は解説本文＋3段階例題。
+Topic 08は `topic_08_explanation_source_complete`。完成数は `7 / 22` のまま。次は解説PDF＋全ページ表示QA。
