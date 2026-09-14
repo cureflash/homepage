@@ -12,11 +12,11 @@ Topic 03 `偏微分・全微分` は `completed`。
 
 Topic 04 `微分による極値・最適条件` は `completed`。
 
-Topic 05 `積分によるエネルギー計算` は最終QAまで実施したが、source Markdownの進捗記録不整合により `NEEDS_REVISION`。
+Topic 05 `積分によるエネルギー計算` は最終QAで指摘されたsource Markdownの旧進捗3箇所を同期済み。最終QA再判定待ち。
 
 完成数: `4 / 20`
 
-current_status: `topic_05_final_qa_needs_revision`
+current_status: `topic_05_source_progress_synced`
 
 active_topic: `05 積分によるエネルギー計算`
 
@@ -99,7 +99,7 @@ PowerPoint: 16:9、全5スライド。LibreOffice PDF変換・全スライド表
 
 ## 最終QA
 
-`NEEDS_REVISION / IN_PROGRESS`。
+前回判定は `NEEDS_REVISION / IN_PROGRESS`。
 
 PASS:
 - 必須成果物実在
@@ -110,14 +110,16 @@ PASS:
 - SPEC外内容の非混入
 - 表示QA
 
-FAIL:
+前回FAIL:
 - source Markdown進捗記録と実成果物の整合
 
-旧進捗は3箇所。
+このFAIL原因だった旧進捗3箇所は今回同期済み。
 
-1. 冒頭状態欄が「解説PDF・練習PDF・PowerPointは未着手」のまま。
-2. 固定EXAM_ALIGNMENT対応表直後が「完成後独立再解答は未実施」のまま。
-3. 末尾次工程が「次は解説PDF」のまま。
+1. 冒頭状態欄を実成果物・独立再解答・最終QA済みへ同期。
+2. 固定EXAM_ALIGNMENT対応表直後を独立再解答16/16 PASSへ同期。
+3. 末尾次工程を最終QA再判定へ同期。
+
+最終QAの再判定は次工程で行う。
 
 ## SPEC固定範囲
 
@@ -141,6 +143,6 @@ FAIL:
 
 ## 次に行うこと
 
-source Markdownの進捗記録3箇所を、実成果物・完成後独立再解答・最終QA済みの現在地へ同期する。
+Topic 05最終QAを再判定し、source進捗記録整合を含む全品質ゲートを確認する。
 
 教材本文、固定EXAM_ALIGNMENT、数式、例題、SPEC固定範囲は変更しない。
