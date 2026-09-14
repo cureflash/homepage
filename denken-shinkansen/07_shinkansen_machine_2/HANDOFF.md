@@ -1,6 +1,6 @@
 # HANDOFF - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-14
+更新日: 2026-09-15
 
 ## 現在地
 
@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `07 300系のPWMコンバータは何をしている？`
 
-current status: `topic_07_powerpoint_complete`
+current status: `topic_07_waveforms_complete`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
@@ -106,7 +106,6 @@ PowerPoint:
 
 - 16:9・4スライド
 - PWMスイッチング／変調率、DCリンクと交流基本波電圧、リアクトルのフェーザ式、力率1・`I_P/I_Q`、回生・高調波、固定過去問対応を可視化
-- 交流電圧・PWM電圧・交流側電流・DCリンク電圧は相互関係を概念表示したが、SPEC指定4波形の独立成果物化は未実施
 - 全4スライド表示QA: `4 / 4 PASS`
 - overflow検査: PASS
 - ZIP整合性: PASS
@@ -114,8 +113,29 @@ PowerPoint:
 - 固定範囲外論点による件数合わせ: 0件
 - 未確認300系実車値の追加: 0件
 
+## Topic 07 SPEC指定4波形完了
+
+成果物:
+- `topics/07_300series_pwm_converter/07_pwm_converter_waveforms.py`
+- `topics/07_300series_pwm_converter/07_ac_voltage_waveform.svg`
+- `topics/07_300series_pwm_converter/07_pwm_voltage_waveform.svg`
+- `topics/07_300series_pwm_converter/07_ac_current_waveform.svg`
+- `topics/07_300series_pwm_converter/07_dc_link_voltage_waveform.svg`
+- `topics/07_300series_pwm_converter/07_pwm_converter_waveforms_qa.md`
+
+確認:
+- 交流電圧／PWM電圧／交流側電流／DCリンク電圧をSPECどおり全4件独立成果物化
+- 数値・論理QA: PASS
+- SVG XML整合性: `4 / 4 PASS`
+- 表示QA: `4 / 4 PASS`
+- 力率1概念例で交流電圧と交流側電流の同相性を確認
+- PWM図の変調率0.80・搬送波比20、DCリンク図の2%リプルは描画用仮定値と明示
+- 固定5問・17小問への接続を維持
+- 未確認300系実車値の追加: 0件
+- MPPT、蓄電装置設計、昇圧コンバータ設計、能動フィルタ設計、Topic 08以降の固定範囲外論点追加: 0件
+
 ## 次に行うこと
 
-Topic 07のSPEC指定4波形（交流電圧・PWM電圧・交流側電流・DCリンク電圧）を独立成果物として作成し、表示・整合性QAを行う。
+Topic 07の固定5問・17小問を、完成教材だけを使って独立再解答する。
 
-固定5問・17小問への接続とSPEC固定範囲を維持し、仕様外論点・未確認実車値を追加しない。
+保存済み正答を先に見ず、教材だけで公式選択・途中式・記述理由まで再構成できるかを確認する。固定EXAM_ALIGNMENTとSPEC固定範囲は変更しない。
