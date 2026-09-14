@@ -6,16 +6,13 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は5/16。Topic 01〜05は品質ゲートPASSでcompleted。active topicは06 `新幹線はどうやって速度を変えている？`。
 
 ## 今回進捗
-Topic 06の解説画像PowerPointを完成した。
+Topic 06の完成後独立再解答を完了した。
 
-- PowerPoint: `topics/06_power_electronics/06_power_electronics_images.pptx`
-- 16:9・4スライド
-- 主回路の電力変換系列、三相整流6パルス、直流チョッパ、R-L負荷・インバータ通流、PWM・VVVF・同期速度を可視化
-- 固定EXAM_ALIGNMENT 5問・7小問を全件対応
-- 全4スライド表示QA `PASS`
-- overflow検査 `0件`
-- PPTX ZIP整合性 `PASS`
-- 固定範囲外論点・未確認実車値の追加 `0件`
+- 固定EXAM_ALIGNMENT 5問・7小問を完成教材の式・判断手順だけで再導出
+- 独立答案列: `(5), (2), (2), (2), (3), (5), (2)`
+- 公式解答との一致: `7 / 7 PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- sourceへ独立再解答結果を記録し、現行成果物・進捗へ同期
 - 完成数は `5 / 16` のまま
 
 ## Topic 06 EXAM_ALIGNMENT
@@ -32,6 +29,13 @@ Topic 06の解説画像PowerPointを完成した。
 公式解答との一致: `7 / 7 PASS`
 
 固定範囲外知識による補完: `0件`
+
+## Topic 06 完成後独立再解答
+独立答案列: `(5), (2), (2), (2), (3), (5), (2)`
+
+公式解答との一致: `7 / 7 PASS`
+
+教材外・固定範囲外知識による補完: `0件`
 
 ## Topic 06 固定範囲
 系列SPECに従い、次だけを扱う。
@@ -63,7 +67,8 @@ Topic 06の解説画像PowerPointを完成した。
 - PowerPoint表示QA: `PASS`
 - PowerPoint overflow検査: `0件`
 - PPTX ZIP整合性: `PASS`
-- 完成後独立再解答: 未実施
+- 完成後独立再解答: `7 / 7 PASS`
+- 教材外・固定範囲外知識による補完: `0件`
 - 最終QA: 未実施
 - 完成数: `5 / 16`
 
@@ -75,10 +80,10 @@ Topic 06の解説画像PowerPointを完成した。
 - R6上 問16(a)(b): 問9、問10
 
 ## 現在状態
-- `current_status`: `topic_06_powerpoint_complete`
+- `current_status`: `topic_06_independent_reanswer_complete`
 - last completed: Topic 05 `誘導電動機はなぜ勝手に回る？`
 - active: Topic 06 `新幹線はどうやって速度を変えている？`
 - 完成数: `5 / 16`
 
 ## 次の正確な開始点
-Topic 06の完成後独立再解答を、固定EXAM_ALIGNMENT 5問・7小問について完成教材だけで実施する。固定範囲外知識で補完した場合は正答でもFAILとする。
+Topic 06の最終QAを実施する。固定EXAM_ALIGNMENT 5問・7小問の独立再解答 `7 / 7 PASS`、必須成果物、表示QA、範囲境界、source・STATUS・HANDOFFの進捗整合を確認し、全件PASSの場合のみ `completed` とする。
