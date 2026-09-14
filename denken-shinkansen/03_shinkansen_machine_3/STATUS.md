@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_practice_source_complete`
+- current_status: `topic_07_practice_pdf_complete`
 - last_completed_topic: `06 新幹線はどうやって速度を変えている？`
 - active_topic: `07 GTO→IGBT→SiCで何が変わった？`
-- next_start: Topic 07の練習PDFを作成する。完成済み練習source12問をそのまま反映し、全ページ表示QA・文字抽出QAを行う。固定EXAM_ALIGNMENT 5問・固定範囲を変更せず、固定範囲外論点・未確認実車値を追加しない
+- next_start: Topic 07の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問・固定範囲・完成済み教材内容を変更せず、固定範囲外論点・未確認実車値を追加しない
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -17,7 +17,7 @@
 - [x] 04 300系でモーターが全部変わった — 品質ゲートPASS / completed
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
 - [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
-- [ ] 07 GTO→IGBT→SiCで何が変わった？ — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題source完了
+- [ ] 07 GTO→IGBT→SiCで何が変わった？ — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題source・練習PDF完了
 - [ ] 08〜16 — 未完了
 
 ## Topic 07 EXAM_ALIGNMENT
@@ -68,7 +68,7 @@
 - 固定範囲外論点の追加 `0件`
 - 未確認実車値の追加 `0件`
 
-### PDF QA記録
+### 解説PDF QA記録
 `topics/07_power_semiconductors/07_power_semiconductors_explanation_pdf_qa.md`
 
 ### 練習問題source
@@ -82,6 +82,20 @@
 - 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
 
+### 練習PDF
+`topics/07_power_semiconductors/07_power_semiconductors_practice.pdf`
+
+- A4縦4ページ
+- 全12問・全問五肢択一＋完全解説
+- 200 dpi全4ページ表示QA `4 / 4 PASS`
+- 文字抽出QA `PASS`
+- 固定EXAM_ALIGNMENT 5問・固定範囲を維持
+- 固定範囲外論点の追加 `0件`
+- 未確認実車値の追加 `0件`
+
+### 練習PDF QA記録
+`topics/07_power_semiconductors/07_power_semiconductors_practice_pdf_qa.md`
+
 ## Topic 07 現在の品質状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前検証: `5 / 5 PASS`
@@ -92,7 +106,7 @@
 - 解説PDF表示QA: `PASS`
 - 解説PDF文字抽出QA: `PASS`
 - 練習問題source: 完了（12問、独立QA `12 / 12 PASS`）
-- 練習PDF: 未着手
+- 練習PDF: 完了（A4縦4ページ、表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
