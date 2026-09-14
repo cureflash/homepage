@@ -2,15 +2,15 @@
 
 対象: `06 0系の変圧器は何をしていた？`
 
-実施日: 2026-09-14
+実施日: 2026-09-15
 
 ## 判定
 
-`NEEDS_REVISION / in_progress`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで判定し、新しい仕様は追加していない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで再判定し、新しい仕様は追加していない。
 
-必須成果物、固定EXAM_ALIGNMENT 5問、完成後独立再解答、SPEC境界はPASSした。一方、主source `06_transformer_magnetics.md` の進捗記録がGitHub正本の実態と一致していないため、Topic 06はまだ `completed` としない。
+前回 `NEEDS_REVISION` の唯一のFAIL要因だった主source進捗記録不整合は解消済み。必須成果物、固定EXAM_ALIGNMENT 5問、完成後独立再解答、既存表示QA、SPEC境界、進捗記録整合性を全件PASSしたため、Topic 06を `completed` とする。
 
 ## 必須成果物の実在確認
 
@@ -18,7 +18,7 @@ GitHub正本上で次を確認した。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| source Markdown | `0ea6e8788851eda04726cbea62ac0342cb7ee8ee` | PASS |
+| source Markdown | `d3ae48e678c4133d5c0e928f3f557c8c0bf97a26` | PASS |
 | 解説PDF | `f148459a58a0966030c8201aeefcdbcce3067f06` | PASS |
 | 練習source | `e0cb1dab3caf527192169928939f7853c5d289e3` | PASS |
 | 練習PDF | `3de26cec80adfb57732e374db9decc2bb7ffc961` | PASS |
@@ -37,9 +37,17 @@ Topic 06固定範囲で選定した公式理論過去問5問について、要�
 
 source Markdownは `B=μH`、`Φ=BA`、アンペアの法則、`ℱ=NI`、`Rm=l/(μA)`、`Φ=ℱ/Rm`、`Ψ=NΦ`、`L=Ψ/I`、`W=LI²/2`、`M=k√(L1L2)`、`Lseries=L1+L2±2M`、ファラデーの法則、レンツの法則、理想変圧器巻数比、3段階例題を収録し、5問の要求事項を全件マッピングしている。
 
+## 完成教材・表示QA
+
+前回最終QA時点でPASS済みの制作時QAを再確認した。今回変更したのは進捗記録だけであり、PDF・PowerPointのblob SHAは前回QA時から不変である。
+
+- 解説PDF: A4縦2ページ。200 dpi全ページ表示QA・文字抽出QA PASS。
+- 練習PDF: A4縦4ページ、15問すべて五肢択一。基礎4 / 標準8 / 複合・応用3。200 dpi全ページ表示QA・文字抽出QA・15問再計算 PASS。
+- PowerPoint: 16:9・4枚。全4枚表示QA・PPTX整合性 PASS。
+
 ## 完成後独立再解答
 
-`06_transformer_magnetics_exam_recheck.md` を確認した。
+`06_transformer_magnetics_exam_recheck.md` を再確認した。
 
 - 独立解答列: `(1), (3), (2), (2), (2)`
 - 公式解答列: `(1), (3), (2), (2), (2)`
@@ -47,8 +55,6 @@ source Markdownは `B=μH`、`Φ=BA`、アンペアの法則、`ℱ=NI`、`Rm=l/
 - 教材外知識の補完: `0問`
 - 後続Topic知識への依存: `0問`
 - 未確認0系実車値への依存: `0問`
-
-過去問対応品質ゲート自体はPASSしている。
 
 ## SPEC境界確認
 
@@ -65,24 +71,17 @@ source Markdownは `B=μH`、`Φ=BA`、アンペアの法則、`ℱ=NI`、`Rm=l/
 
 ## 進捗記録整合性
 
-FAIL。
+PASS。
 
-`06_transformer_magnetics.md` 冒頭は現在も、
+`06_transformer_magnetics.md` は現在、
 
-- `status: EXPLANATION_SOURCE_COMPLETE`
-- `完了判定: in_progress`
-- 「完成後独立再解答は未実施」
+- `status: COMPLETED`
+- `完了判定: completed`
+- 全成果物・完成後独立再解答・最終QA完了
+- 独立再解答 `5 / 5 PASS`、教材外知識補完 `0問`
+- 次工程: Topic 07の制作前EXAM_ALIGNMENT
 
-となっている。
-
-さらに末尾 `source段階品質確認` は、
-
-- `完成後独立再解答: 未実施`
-- `最終QA: 未実施`
-
-のままで、`次工程` も「このsourceを正本として解説PDFを作成する」と記録されている。
-
-しかしGitHub正本には、解説PDF、練習PDF、PowerPoint、完成後独立再解答 `5 / 5 PASS` がすでに存在する。したがってsource進捗記録と実態が不整合である。
+へ同期済みで、GitHub正本上の実際の完成状況と一致している。
 
 ## 最終判定
 
@@ -90,10 +89,13 @@ FAIL。
 - 三種公式過去問5問のEXAM_ALIGNMENT: PASS
 - 教材で必要な中間知識: PASS
 - 3段階例題: PASS
-- 練習問題数・本試験形式: PASS
+- 練習問題数・難易度配分・本試験形式: PASS
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
 - SPEC境界: PASS
 - 完成後独立再解答: `5 / 5 PASS`
 - 教材外知識補完: `0件`
-- source進捗記録整合性: FAIL
+- 後続Topic知識への依存: `0件`
+- 未確認0系実車値への依存: `0件`
+- source進捗記録整合性: PASS
 
-結論: `NEEDS_REVISION`。完成数は `5 / 14` のまま。次は `06_transformer_magnetics.md` の進捗記録だけをGitHub正本の現在地へ同期し、教材本文・固定EXAM_ALIGNMENT・数式・例題・仕様範囲は変更しない。
+結論: `PASS / completed`。Topic 06を完成数へ加算し、次はTopic 07「モーターはなぜ回る？」の制作前EXAM_ALIGNMENTへ進む。
