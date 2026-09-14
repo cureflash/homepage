@@ -52,7 +52,7 @@
 - 意図しない重なり: 0
 - スライド境界外はみ出し: 0 (`slides_test.py` PASS)
 - PPTX ZIP整合性: PASS (`unzip -t`)
-- SHA-256: `e82fb743bab4fa95e830619ef36e6f267e2f7ecf14d0536721424b9f45172fbf`
+- SHA-256: `7ae80edc84aa93411deacbb82ae4173567d67a78eab4683ba0b2f5185b524599`
 
 判定: `PASS`。
 
