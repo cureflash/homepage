@@ -12,11 +12,11 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
-Topic 05 `ベクトル` は完成後独立再解答で `2 / 6 PASS` となり、FAIL 4問の不足中間知識を補強中。解説source・解説PDFに続き、今回、練習source / PDFへ必要最小限同期した。PowerPointへの同期と再独立解答は未実施。
+Topic 05 `ベクトル` は完成後独立再解答で `2 / 6 PASS` となり、FAIL 4問の不足中間知識を補強中。解説source / PDF、練習source / PDF、PowerPointへ必要最小限同期済み。再独立解答は未実施。
 
 完成数: `4 / 12`
 
-current_status: `topic_05_revision_practice_synced`
+current_status: `topic_05_revision_powerpoint_synced`
 
 active_topic: `05 ベクトル`
 
@@ -91,14 +91,14 @@ FAIL:
 - `topics/05_vectors/05_vectors_explanation.pdf`
 - `topics/05_vectors/05_vectors_practice.md`
 - `topics/05_vectors/05_vectors_practice.pdf`
+- `topics/05_vectors/05_vectors_images.pptx`
 
 練習は12問構成を維持し、問3・7・9・10だけを補強4点へ置換した。更新後PDFはA4縦4ページで、200 dpi全ページ表示QAを実施し、クリップ・重なり・欠落は確認されていない。
 
-未同期:
-- `topics/05_vectors/05_vectors_images.pptx`
+PowerPointは16:9・4枚構成を維持し、補強4点だけを既存スライドへ同期した。全4枚をレンダリングして表示確認し、`slides_test.py` でオーバーフローなしを確認した。
 
 固定EXAM_ALIGNMENT変更0件、既存3段階例題変更0件、仕様外論点追加0件、未確認新幹線実値追加0件。
 
 ## 次に行うこと
 
-補強4点をPowerPointへ必要最小限同期する。学習用成果物の同期完了後、保存済み正答を見ず固定6問を完成教材だけで再独立解答する。
+保存済み正答を見ず固定6問を完成教材だけで再独立解答する。
