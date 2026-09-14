@@ -3,21 +3,23 @@
 更新日: 2026-09-14
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は4/16。Topic 01〜04は品質ゲートPASSでcompleted。active topicは05 `誘導電動機はなぜ勝手に回る？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は5/16。Topic 01〜05は品質ゲートPASSでcompleted。active topicは06 `新幹線はどうやって速度を変えている？`。
 
 ## 今回進捗
-Topic 05の完成後独立再解答を完了した。
+Topic 05の最終QAを完了し、`PASS / completed` とした。
 
-- 固定EXAM_ALIGNMENT 5問・6小問を変更していない
-- 完成教材だけを使用し、公式解答を先に見ずに答案を確定
-- 答案列: `(3), (1), (3), (2), (3), (1)`
-- 公式解答との一致: `6 / 6 PASS`
-- 教材外知識による補完: `0件`
-- Topic 05固定範囲外論点の追加: `0件`
-- 判定: `PASS / 最終QAへ進行可`
+- 必須成果物の実在を確認
+- 固定EXAM_ALIGNMENT 5問・6小問の整合を確認
+- 完成後独立再解答 `6 / 6 PASS`
+- 教材外知識による補完 `0件`
+- 解説PDF・練習PDF・PowerPointの既存表示QA記録 `PASS`
+- PowerPointはみ出し `0件`、ZIP整合性 `PASS`
+- Topic 05固定範囲外論点の追加 `0件`
+- 進捗記録整合 `PASS`
+- 完成数を `5 / 16` へ更新
 
-## Topic 05 固定EXAM_ALIGNMENT
-選定は変更していない。
+## Topic 05 完成記録
+固定EXAM_ALIGNMENTは変更していない。
 
 - R8上 機械 問4 — 同期速度、同期ワット（二次入力）、トルク
 - R6下 機械 問3 — 最大トルク、二次抵抗、比例推移
@@ -25,10 +27,10 @@ Topic 05の完成後独立再解答を完了した。
 - R6上 機械 問15(a)(b) — 滑り・トルク比例、比例推移、実回転速度
 - R4下 機械 問2 — 二次銅損、二次入力、機械変換電力、機械損、軸出力
 
-制作前独立検証は `6 / 6 PASS`。完成後独立再解答も `6 / 6 PASS`。
+制作前独立検証 `6 / 6 PASS`、完成後独立再解答 `6 / 6 PASS`、最終QA `PASS / completed`。
 
 ## Topic 05 固定範囲
-系列SPECに従い、次だけを扱う。
+系列SPECに従い、次だけを扱った。
 
 - 回転磁界
 - 電磁誘導
@@ -54,9 +56,9 @@ Topic 05の完成後独立再解答を完了した。
 - 最大トルク、二次抵抗と比例推移
 - 問題文で与えられた微小滑り領域の `T∝s` の条件付き使用
 
-Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御、発電運転・回生制動、単相誘導電動機、円線図・詳細等価回路、未確認実車値は追加しない。
+Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御、発電運転・回生制動、単相誘導電動機、円線図・詳細等価回路、未確認実車値は追加していない。
 
-## Topic 05 現在の品質状態
+## Topic 05 品質状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前独立検証: `6 / 6 PASS`
 - 解説本文: 完了
@@ -76,8 +78,8 @@ Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御�
 - 完成後独立再解答: `6 / 6 PASS`
 - 教材外知識による補完: `0件`
 - 固定範囲外追加: `0件`
-- 最終QA: 未実施
-- 完成数: `4 / 16` 据え置き
+- 最終QA: `PASS / completed`
+- 完成数: `5 / 16`
 
 ## Topic 04 完成記録
 Topic 04 `300系でモーターが全部変わった` は最終QA `PASS / completed`。
@@ -89,10 +91,10 @@ Topic 04 `300系でモーターが全部変わった` は最終QA `PASS / comple
 - 解説PDF・練習PDF・PowerPointの表示QA: PASS
 
 ## 現在状態
-- `current_status`: `topic_05_independent_reanswer_complete`
-- 完成数: `4/16`
-- last completed: Topic 04 `300系でモーターが全部変わった`
-- active: Topic 05 `誘導電動機はなぜ勝手に回る？`
+- `current_status`: `topic_05_completed`
+- 完成数: `5/16`
+- last completed: Topic 05 `誘導電動機はなぜ勝手に回る？`
+- active: Topic 06 `新幹線はどうやって速度を変えている？`
 
 ## 次の正確な開始点
-Topic 05の固定EXAM_ALIGNMENTと完成済み成果物を変更せず、必須成果物・EXAM_ALIGNMENT・完成後独立再解答・表示QA・範囲境界・進捗整合を最終QAする。全件PASSの場合のみ `completed` にする。
+Topic 06の制作前 `EXAM_ALIGNMENT` を行う。系列SPECのTopic 06固定範囲だけで、公式過去問を直近年度優先で原則5問以上調査し、要求知識・使用式・設問型・教材で必要な説明を逆算する。範囲外論点を追加して件数を合わせない。
