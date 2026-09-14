@@ -4,18 +4,18 @@ updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `05`
 theme: 新幹線を再エネ主体で走らせるには？
-current_status: `topic_05_final_qa_needs_revision`
+current_status: `topic_05_source_progress_synced`
 completed_topics: `4 / 22`
 
 ## Topic 05 current result
 
-最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` とした。技術内容、必須成果物、固定EXAM_ALIGNMENT、一次4問＋二次1問・28小問の完成後独立再解答、練習15問、PDF/PPTX表示QA、系列SPEC固定9項目・4可視化、固定範囲境界はPASS。
+最終QAは `NEEDS_REVISION / IN_PROGRESS`。技術内容、必須成果物、固定EXAM_ALIGNMENT、一次4問＋二次1問・28小問の完成後独立再解答、練習15問、PDF/PPTX表示QA、系列SPEC固定9項目・4可視化、固定範囲境界はPASS。
 
-未完了理由は進捗記録のみ。主source `topics/05_renewable_energy/05_renewable_energy.md` 冒頭が `preproduction_independent_verification_complete` のままで、「本文・例題・PDF・PowerPointは未実施」と記録されており、GitHub上の実成果物と不一致。
+未完了理由だった主source `topics/05_renewable_energy/05_renewable_energy.md` の旧進捗記録を現在の成果物実態へ同期した。教材本文、固定EXAM_ALIGNMENT、過去問選定、数式、問題、PDF/PPTX、固定範囲は変更していない。
 
 今回の成果物:
-- `topics/05_renewable_energy/05_renewable_energy_final_qa.md`
-- 最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- `topics/05_renewable_energy/05_renewable_energy.md` — 進捗記録同期
+- 最終QA: 前回 `NEEDS_REVISION / IN_PROGRESS`。再実施待ち
 - 完成後独立再解答: `5 / 5問、28 / 28小問 PASS`
 - 教材外知識補完: `0件`
 - 固定範囲外知識追加: `0件`
@@ -50,9 +50,9 @@ R7二次問6(9)(10)の制度各論、一次「法規」の供給予備力問題�
 - [x] Topic 05 解説画像PowerPoint `5 / 5スライド表示QA PASS`
 - [x] Topic 05 完成後独立再解答 `5 / 5問、28 / 28小問 PASS`
 - [x] Topic 05 最終QA実施 `NEEDS_REVISION`
-- [ ] Topic 05 主source進捗記録同期
+- [x] Topic 05 主source進捗記録同期
 - [ ] Topic 05 completed
 
 ## next_start
 
-`topics/05_renewable_energy/05_renewable_energy.md` の進捗記録だけを現在の成果物実態へ同期する。教材本文、固定EXAM_ALIGNMENT、過去問選定、数式、問題、PDF/PPTX、固定範囲は変更しない。同期後に最終QAを再実施する。
+Topic 05の最終QAを再実施する。必須成果物、固定EXAM_ALIGNMENT 5問28小問、完成後独立再解答 `5 / 5問・28 / 28小問 PASS`、練習15問、PDF/PPTX表示QA、系列SPEC固定9項目・4可視化、source・STATUS・HANDOFFの進捗整合、固定範囲境界を確認し、全件PASSの場合のみ `completed` とする。
