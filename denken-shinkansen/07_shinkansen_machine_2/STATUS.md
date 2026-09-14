@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 5 / 22
-- current_status: `topic_06_powerpoint_complete`
+- current_status: `topic_06_calculation_graphs_complete`
 - last_completed_topic: `05 300系の誘導電動機を等価回路で解く`
 - active_topic: `06 誘導電動機の最大トルクはどこで出る？`
-- next_start: Topic 06の計算プログラム・指定比較グラフを作成する
+- next_start: Topic 06の固定6問・20小問を完成教材のみで独立再解答する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -102,26 +102,31 @@
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
-- [ ] 計算プログラム・指定比較グラフ
+- [x] 計算プログラム・指定比較グラフ
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 06「誘導電動機の最大トルクはどこで出る？」の解説画像PowerPointを完成し、GitHub正本へ反映した。
+Topic 06「誘導電動機の最大トルクはどこで出る？」の計算プログラムとSPEC指定4比較グラフを完成し、GitHub正本へ反映した。
 
 確認内容:
-- 16:9・4スライド
-- 固定EXAM_ALIGNMENT: 一次2問＋二次記述4問、計6問・20小問を維持
-- 制作前独立検証: `20 / 20 PASS` を維持
-- 同期速度→すべり→二次周波数→トルク式→最大トルク条件の解法線を図解
-- 最大トルク条件、比例推移、二次抵抗変更、電圧変更、周波数変更を固定範囲内で整理
-- 周波数変更は電圧・抵抗・インダクタンス固定条件を明示し、`X=2πfL` によりリアクタンスも変化させた
-- 数値は教材用仮定値のみを使用し、未確認300系実車値を使用していない
-- 全4スライド表示QA: `4 / 4 PASS`
-- overflow検査: PASS
-- PPTX ZIP整合性: PASS
-- H25一次問1(2)〜(5)の二重かご形詳細、R07二次問2(2)の損失計算、R02二次問1(5)〜(7)の回転磁界相互詳細、H23二次問1(3),(4)の逆相制動は追加していない
-- Topic 07以降のPWMコンバータ・力率制御・インバータ・高調波・ベクトル制御の追加: 0件
+- 計算プログラム: `06_induction_motor_maximum_torque_calc.py`
+- 速度―トルク特性: `06_speed_torque.svg`
+- 二次抵抗変更比較: `06_rotor_resistance_comparison.svg`
+- 電圧変更比較: `06_voltage_comparison.svg`
+- 周波数変更比較: `06_frequency_comparison.svg`
+- 数値条件は教材本文§9.2・§9.3の教材用仮定値と同期
+- 50 Hz: `n_s=1500 min^-1`, `X=0.80 Ω`, `s_m=0.12127`, `T_m=372.79 N·m`
+- 二次抵抗2倍: `s_m=0.24254`、`T_m=372.79 N·m`で比例推移を確認
+- 160 V: `T_m=238.59 N·m`、200 V時比 `0.640`で`V^2`則を確認
+- 60 Hz: `n_s=1800 min^-1`, `X=0.96 Ω`, `s_m=0.10198`, `T_m=269.61 N·m`
+- 周波数比較は電圧・抵抗・漏れインダクタンスを固定し、`X=2πfL`を反映
+- Python構文・内蔵数値assert: PASS
+- 4 SVG XML parse: PASS
+- 4 SVG ローカルレンダリング: PASS
+- 未確認300系実車値の使用: 0件
+- 固定EXAM_ALIGNMENT 6問・20小問と制作前独立検証 `20 / 20 PASS` は変更なし
+- 固定範囲外論点およびTopic 07以降の論点追加: 0件
 
 ## 判定
-Topic 06は `topic_06_powerpoint_complete`。完成数は `5 / 22` のまま。次は計算プログラム・指定比較グラフ。
+Topic 06は `topic_06_calculation_graphs_complete`。完成数は `5 / 22` のまま。次は固定6問・20小問の完成教材のみでの独立再解答。
