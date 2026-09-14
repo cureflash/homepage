@@ -6,11 +6,11 @@
 
 ## 判定
 
-`NEEDS_REVISION`。Topic 05はまだ `completed` としない。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで判定し、新しい仕様は追加していない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで再判定し、新しい仕様は追加していない。
 
-必須成果物、EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC境界はPASS。ただしsource Markdownの進捗記録がGitHub正本上の実際の完成状況と一致しないため、進捗記録整合性のみFAILとする。
+前回 `NEEDS_REVISION` の唯一のFAIL要因だったsource Markdown進捗記録不整合は解消済み。必須成果物、EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC境界、進捗記録整合性を全件PASSしたため、Topic 05を `completed` とする。
 
 ## 必須成果物の実在確認
 
@@ -18,7 +18,7 @@ GitHub正本上で次を確認した。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| source Markdown | `610c1e40da9cf5c3e1db1668469e7afa2b3d290c` | PASS |
+| source Markdown | `0228f96ae500519282b410dab79c52db2c89d2e1` | PASS |
 | 解説PDF | `8b2858818297a6cd3f44b87c79d0e1595f412dde` | PASS |
 | 練習source | `cb76f9ac9f8742c5b6d79f5c5625fb7122d03c1f` | PASS |
 | 練習PDF | `2d1dc070a7ccb681e278373f5e8f43aeff935c91` | PASS |
@@ -27,7 +27,7 @@ GitHub正本上で次を確認した。
 
 ## EXAM_ALIGNMENT確認
 
-Topic 05固定範囲で選定した公式理論過去問6問について、要求知識と教材内対応がsource Markdownに記録されていることを確認した。
+Topic 05固定範囲で選定した公式理論過去問6問について、要求知識と教材内対応をsource Markdownで再確認した。
 
 1. 令和8年度上期 理論 問5 — 同一電池並列、内部抵抗合成、負荷電流・負荷電力
 2. 令和8年度上期 理論 問7 — 並列回路、KCL、未知抵抗逆算
@@ -40,7 +40,7 @@ source Markdownは直列・並列、合成抵抗、分圧・分流、KCL/KVL、�
 
 ## 完成教材・表示QA
 
-制作時のGitHub進捗記録を再確認した。
+既存の制作時QA記録を再確認した。
 
 - 解説PDF: A4縦6ページ。200 dpi全6ページ表示QAで文字切れ・重なり・欠落グリフなし。文字抽出QA済み。
 - 練習PDF: A4縦5ページ、15問すべて五肢択一。基礎4 / 標準8 / 複合・応用3。200 dpi全5ページ表示QAで文字切れ・重なり・欠落グリフなし。15問独立再計算済み。
@@ -71,19 +71,17 @@ source Markdownは直列・並列、合成抵抗、分圧・分流、KCL/KVL、�
 
 ## 進捗記録整合性
 
-FAIL。
+PASS。
 
-`05_dc_network.md` 冒頭は現在も、
+`05_dc_network.md` は現在、
 
-- `status: EXPLANATION_SOURCE_COMPLETE`
-- 完了判定: 未完了
-- 「解説PDF・練習問題・練習PDF・解説画像PowerPoint・完成後独立再解答・最終QAは未実施」
+- `status: COMPLETED`
+- `完了判定: completed`
+- 全成果物・完成後独立再解答・最終QA完了
+- 独立再解答 `6 / 6 PASS`、教材外知識補完 `0問`
+- 次工程: Topic 06の制作前EXAM_ALIGNMENT
 
-となっている。
-
-さらに末尾 `次工程` は「本sourceから解説PDFを作成する」のままである。
-
-実際には解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで完了済みであり、GitHub正本内部で進捗記録が矛盾している。
+へ同期済みで、GitHub正本上の実際の完成状況と一致している。
 
 ## 最終判定
 
@@ -96,6 +94,6 @@ FAIL。
 - SPEC境界: PASS
 - 完成後独立再解答: `6 / 6 PASS`
 - 教材外知識補完: `0件`
-- source進捗記録整合性: FAIL
+- source進捗記録整合性: PASS
 
-結論: `NEEDS_REVISION`。教材内容は変更せず、次工程ではsource Markdownの冒頭進捗メタデータ・進捗説明・末尾 `次工程` だけをGitHub正本の現在地へ同期する。その後、最終QAを再実施する。
+結論: `PASS / completed`。Topic 05を完成数へ加算し、次はTopic 06「0系の変圧器は何をしていた？」の制作前EXAM_ALIGNMENTへ進む。
