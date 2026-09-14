@@ -3,6 +3,7 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Iterable
 
 
 @dataclass(frozen=True)
@@ -65,7 +66,7 @@ def torque_nm(
 
 
 def make_curve(
-    *, phase_voltage_v: float, frequency_hz: float, r2_ohm: float, samples: int = 240
+    *, phase_voltage_v: float, frequency_hz: float, r2_ohm: float, samples: int = 80
 ) -> list[tuple[float, float]]:
     # Ordinary motoring region only: 0 < s <= 1.
     points: list[tuple[float, float]] = []
