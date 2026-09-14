@@ -6,29 +6,29 @@
 
 Topic 01 `新幹線1編成はどれだけ電気を食う？`、Topic 02 `なぜ新幹線は25,000Vなのか`、Topic 03 `架線はただの銅線ではない`、Topic 04 `25,000Vでなぜ車体へ電気が飛ばない？` は最終QAまでPASSし、`completed`。
 
-Topic 05 `パンタグラフから入った電気はどこへ行く？` は練習問題source・練習PDFまで完了。
+Topic 05 `パンタグラフから入った電気はどこへ行く？` は解説画像PowerPointまで完了。
 
 - 完成数: `4 / 14`
 - active topic: `05 パンタグラフから入った電気はどこへ行く？`
-- current status: `topic_05_practice_pdf_complete`
+- current status: `topic_05_powerpoint_complete`
 - source: `topics/05_dc_network/05_dc_network.md`
 - explanation PDF: `topics/05_dc_network/05_dc_network_explanation.pdf`
 - practice source: `topics/05_dc_network/05_dc_network_practice.md`
 - practice PDF: `topics/05_dc_network/05_dc_network_practice.pdf`
+- images PowerPoint: `topics/05_dc_network/05_dc_network_images.pptx`
 
 ## 今回進捗
 
-確定済みEXAM_ALIGNMENT、完成済みsource・解説PDFを変更せず、Topic 05の練習問題source・練習PDFを完成した。
+確定済みEXAM_ALIGNMENT、完成済みsource・解説PDF・練習問題source・練習PDFを変更せず、Topic 05の解説画像PowerPointを完成した。
 
 成果物:
-- 全15問、全問五肢択一
-- 基礎4問 / 本試験標準8問 / 複合・応用3問
-- 正答位置1〜5を各3問に分散
-- 選定6過去問の要求事項を全件練習へマッピング
-- 全15問を問題文から独立再計算し、正答一意性を確認
-- A4縦5ページ、200 dpi全ページ表示QA PASS
-- PDF文字抽出でQ1〜Q15、主要数値、解答・完全解説を確認
-- 仕様外論点・未確認実車値の追加は0件
+- 16:9、3スライド
+- 直列・並列・分圧・分流、KCL/KVL・枝電流法、重ね合わせ、テブナン・ノートン、負荷電力・最大電力を選定6過去問へ接続
+- 新幹線側の計算回路は「教育用等価回路」と明示
+- 実車内部配線・保護回路・主回路定数の推測なし
+- Topic 06以降の磁気・電磁誘導・交流・RLC・力率・三相・半導体・PWMの追加なし
+- LibreOffice全3スライド表示QA PASS
+- PPTX ZIP整合性検査PASS
 
 ゲート対象公式過去問:
 1. 令和8年度上期 理論 問5 — 同一電池の並列、内部抵抗合成、負荷電力
@@ -46,7 +46,7 @@ Topic 05 `パンタグラフから入った電気はどこへ行く？` は練�
 - R6上 問7 → Q14, Q15
 - R6下 問6 → Q6, Q10, Q11, Q14
 
-完成後独立再解答はまだ実施しない。
+完成後独立再解答は未実施。
 
 ## Topic 05 固定範囲
 
@@ -89,7 +89,7 @@ PL = Vth² RL / (Rth + RL)²
 
 ## 次に行うこと
 
-Topic 05の確定source、解説PDF、練習問題source・練習PDFを変更せず、解説画像PowerPointを作成する。選定6過去問の解法に必要な回路関係・KCL/KVL・重ね合わせ・テブナン/ノートン・負荷電力・最大電力を固定範囲内で可視化する。仕様外論点・未確認実車値は追加しない。
+Topic 05の完成済みsource、解説PDF、練習問題source・練習PDF、解説画像PowerPointを変更せず、選定6過去問を完成教材だけで独立再解答する。保存済み正答は先に見ず、教材外知識補完が必要な設問があればFAILとして記録する。
 
 ## 固定ルール
 
