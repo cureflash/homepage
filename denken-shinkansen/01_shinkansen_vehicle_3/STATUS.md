@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 28 / 38
-- current_status: `topic_29_exam_alignment_complete`
+- current_status: `topic_29_explanation_source_complete`
 - last_completed_topic: `28 空調・電熱`
 - active_topic: `29 コンプレッサ・ポンプ・ファン`
-- next_start: Topic 29の解説本文＋3段階例題を、固定EXAM_ALIGNMENT 5問の要求事項から逆算して作成する。系列SPEC固定範囲（コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率）外は追加しない
+- next_start: Topic 29の解説本文＋3段階例題をもとに解説PDFを作成する。固定EXAM_ALIGNMENT 5問の解法経路と系列SPEC固定範囲（コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率）を維持し、範囲外論点・未確認実車値を追加しない
 
 ## 新品質ゲート進捗
 - [x] 01〜28 — PASS
-- [ ] 29 コンプレッサ・ポンプ・ファン — EXAM_ALIGNMENT_COMPLETE
+- [ ] 29 コンプレッサ・ポンプ・ファン — EXPLANATION_SOURCE_COMPLETE
 
 ## 29 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率。
@@ -30,9 +30,21 @@
 
 直近年度から確認したが、R8上〜R5の電動機応用でTopic 29へ直接対応しない巻上機・減速機・はずみ車等を件数合わせで採用していない。圧縮機固有の熱力学計算を要求する公式過去問は今回の調査範囲で確認できず、冷凍サイクル・断熱圧縮等は追加しない。
 
+## 29 解説本文
+- §1〜§15を作成
+- 回転出力 `P=Tω`、`ω=2πN/60`
+- 水動力 `P_w=ρgQH`、水に対する `9.8QH [kW]`
+- 流量の時間単位換算、実揚程・損失水頭・全揚程
+- ポンプ効率・電動機効率と入力/出力の向き
+- 余裕係数、台数切上げ
+- ファンの `Q∝n`、`T∝n^2`、`P∝n^3`
+- コンプレッサは軸出力・トルク・回転速度・効率までに限定
+- 固定5問の解法経路を本文へ `5 / 5` マッピング
+- 3段階例題: コンプレッサ軸出力 / ポンプ必要電動機入力 / ファン速度低下
+- 固定範囲外追加 `0件`、未確認実車値追加 `0件`
+
 ## 29 成果物
-- 解説source / EXAM_ALIGNMENT: `topics/29_compressor_pump_fan/29_compressor_pump_fan.md`
-- 解説本文: 未着手
+- 解説source / EXAM_ALIGNMENT: `topics/29_compressor_pump_fan/29_compressor_pump_fan.md` — 本文＋3段階例題まで完成
 - 解説PDF: 未着手
 - 練習source/PDF: 未着手
 - 解説画像PowerPoint: 未着手
