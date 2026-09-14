@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は解説本文＋3段階例題まで完了。
+Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は解説PDF＋全ページ表示QAまで完了。
 
 完成数: `6 / 21`
 
-current_status: `topic_07_explanation_source_complete`
+current_status: `topic_07_explanation_pdf_complete`
 
 active_topic: `07 0系のモーターはなぜ力を出せる？`
 
-次工程: Topic 07の解説PDFを作成し、全ページ表示QAを実施する。
+次工程: Topic 07の練習問題source＋練習PDFを作成する。
 
 ## Topic 06 完了記録
 
@@ -95,7 +95,9 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 - source: `topics/07_motor_lorentz_force/07_motor_lorentz_force.md`
 - 解説本文: 完了
 - 3段階例題: 完了
-- 解説PDF: 未作成
+- 解説PDF: `topics/07_motor_lorentz_force/07_motor_lorentz_force_explanation.pdf` 完了（A4縦3ページ）
+- 解説PDF表示QA: 200 dpi全3ページ `3 / 3 PASS`
+- 解説PDF文字抽出QA: PASS
 - 練習source / 練習PDF: 未作成
 - 解説画像PowerPoint: 未作成
 - 完成後独立再解答: 未実施
@@ -104,13 +106,13 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 ## 今回の更新
 
 1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、Topic 07 sourceを再照合。
-2. 固定EXAM_ALIGNMENTを変更せず、解説本文を作成。
-3. 固定5問・25小問の要求事項を全件教材へマッピング。
-4. 基礎・標準・複合の3段階例題を作成し、数値を独立再計算。
+2. 固定EXAM_ALIGNMENTを変更せず、解説sourceからA4縦3ページの解説PDFを作成。
+3. 200 dpiで全3ページをレンダリングし、クリッピング・重なり・文字欠けを確認して `3 / 3 PASS`。
+4. PDF文字抽出QAを実施しPASS。
 5. 二次非採用判断、二次数合わせ0件、固定範囲外追加0件を維持。
-6. Topic 07 source、STATUS、HANDOFFをGitHub正本へ反映。
+6. 解説PDF、STATUS、HANDOFFをGitHub正本へ反映。
 7. 完成数は `6 / 21` のまま。
 
 ## 次に行うこと
 
-`topics/07_motor_lorentz_force/07_motor_lorentz_force.md` を正本として解説PDFを作成し、全ページ表示QAを実施する。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
+Topic 07の練習問題source＋練習PDFを作成する。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
