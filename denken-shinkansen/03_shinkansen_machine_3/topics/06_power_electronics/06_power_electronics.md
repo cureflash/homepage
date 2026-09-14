@@ -2,9 +2,9 @@
 
 更新日: 2026-09-14
 
-状態: `independent_reanswer_complete`
+状態: `completed`
 
-固定済み `EXAM_ALIGNMENT` を基準に、解説本文・3段階例題・解説PDF・練習問題source/PDF・解説画像PowerPointまで完成済み。固定5問・7小問を完成教材だけの解法で再導出し、公式解答との照合は `7 / 7 PASS`。最終QAは未実施。
+固定済み `EXAM_ALIGNMENT` を基準に、解説本文・3段階例題・解説PDF・練習問題source/PDF・解説画像PowerPointまで完成済み。固定5問・7小問を完成教材だけの解法で再導出し、公式解答との照合は `7 / 7 PASS`。最終QAも全件PASSし、Topic 06を `completed` とする。
 
 ## EXAM_ALIGNMENT
 
@@ -590,7 +590,11 @@ VVVFは可変電圧・可変周波数の交流を作る。インバータのス�
 - 未確認実車値: 追加 `0件`。
 - ベクトル制御、回生制動、MPPT、系統連系保護、単独運転検出、詳細な高調波解析: 追加 `0件`。
 - 仕様外論点による過去問件数合わせ: `0件`。
-- 最終QA: 未実施。
+- 最終QA: `PASS`。
+
+## 最終QA
+
+2026-09-14に実施。必須成果物の実在、固定EXAM_ALIGNMENT 5問・7小問の整合、完成後独立再解答 `7 / 7 PASS`、既存の解説PDF・練習PDF・PowerPoint表示QA記録、固定範囲境界、source・STATUS・HANDOFFの進捗整合を確認し、全件PASS。教材外・固定範囲外知識による補完 `0件`、固定範囲外論点・未確認実車値の追加 `0件`。Topic 06を `completed` とする。
 
 ## 解説PDF
 
@@ -605,4 +609,4 @@ VVVFは可変電圧・可変周波数の交流を作る。インバータのス�
 
 ## 次段階
 
-Topic 06の最終QAを実施する。固定EXAM_ALIGNMENT 5問・7小問の独立再解答 `7 / 7 PASS`、必須成果物、表示QA、範囲境界、source・STATUS・HANDOFFの進捗整合を確認し、全件PASSの場合のみ `completed` とする。
+Topic 07「GTO→IGBT→SiCで何が変わった？」の制作前EXAM_ALIGNMENTを実施する。MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPECの固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
