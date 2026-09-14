@@ -10,11 +10,11 @@ Topic 06 `微分① ダイヤの傾きは速度` は、制作前EXAM_ALIGNMENT�
 
 補強後の完成教材だけで固定4問を再独立解答し、公式解答と `4 / 4` 一致。過去問対応品質ゲートはPASS。
 
-最終QAを実施した結果、教材・成果物・過去問対応・仕様境界はPASSだが、主source `06_derivative_1.md` の進捗記録が補強前の状態のまま残っているため `NEEDS_REVISION / IN_PROGRESS` とした。
+前回最終QAで唯一FAILだった主source `06_derivative_1.md` の進捗記録不整合を今回解消した。冒頭状態、完成後独立再解答の到達状態、末尾次工程を現在地へ同期済み。教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・PDF・練習・PowerPointは変更していない。
 
 完成数: `5 / 12`
 
-current_status: `topic_06_final_qa_needs_revision`
+current_status: `topic_06_source_progress_synced`
 
 active_topic: `06 微分① ダイヤの傾きは速度`
 
@@ -66,9 +66,9 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 記録: `topics/06_derivative_1/06_derivative_1_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+前回判定: `NEEDS_REVISION / IN_PROGRESS`
 
-PASS:
+前回PASS:
 - 必須成果物
 - 固定EXAM_ALIGNMENT 4問
 - 制作前独立検証 `4 / 4 PASS`
@@ -78,15 +78,14 @@ PASS:
 - 固定範囲外追加0件
 - 未確認新幹線実値追加0件
 
-FAILは主sourceの進捗記録不整合のみ。
+前回FAILは主sourceの進捗記録不整合のみだったが、今回同期済み。
 
-`06_derivative_1.md` に次の旧状態が残る。
+同期済み:
+- 冒頭 `## 状態`: 補強後 `4 / 4 PASS`・最終QA実施済みへ更新
+- `# 完成後独立再解答`: 補強後 `4 / 4 PASS` を追記
+- `# 次工程`: 最終QA再判定へ更新
 
-- 冒頭 `## 状態`: 補強前 `0 / 4 PASS / NEEDS_REVISION`、最終QA未着手
-- `# 完成後独立再解答`: 補強前FAILのみで、補強後 `4 / 4 PASS` が未同期
-- `# 次工程`: 既完了の補強・再独立再解答を指している
-
-教材内容の不足ではない。
+次は最終QAを再判定する。
 
 ## Topic 06 制作範囲
 
@@ -125,8 +124,6 @@ FAILは主sourceの進捗記録不整合のみ。
 
 ## 次に行うこと
 
-`topics/06_derivative_1/06_derivative_1.md` の進捗記録だけを現在地へ同期する。
+Topic 06の最終QAを再判定する。
 
-修正対象は冒頭状態、完成後独立再解答の到達状態、末尾次工程のみ。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、PDF、練習、PowerPointは変更しない。
-
-同期後に最終QAを再判定する。
+前回FAILだったsource進捗記録不整合が解消したこと、固定4問の補強後 `4 / 4 PASS`、必須成果物、表示QA、仕様境界を再確認する。PASSならTopic 06を `completed` とし、完成数を `6 / 12` へ更新する。
