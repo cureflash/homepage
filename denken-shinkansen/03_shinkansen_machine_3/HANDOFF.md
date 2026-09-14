@@ -6,16 +6,16 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `6 / 16`。Topic 01〜06は品質ゲートPASSでcompleted。active topicは07「GTO→IGBT→SiCで何が変わった？」。
 
 ## 今回進捗
-Topic 07の練習PDFを完成した。
+Topic 07の解説画像PowerPointを完成した。
 
-- PDF: `topics/07_power_semiconductors/07_power_semiconductors_practice.pdf`
-- QA: `topics/07_power_semiconductors/07_power_semiconductors_practice_pdf_qa.md`
-- A4縦4ページ
-- 全12問・全問五肢択一＋完全解説
-- 基礎3／本試験標準7／複合・応用2
-- 200 dpi全4ページ表示QA `4 / 4 PASS`
-- 文字抽出QA `PASS`
-- 練習sourceの独立計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`を維持
+- PowerPoint: `topics/07_power_semiconductors/07_power_semiconductors_images.pptx`
+- QA: `topics/07_power_semiconductors/07_power_semiconductors_powerpoint_qa.md`
+- 16:9・4枚
+- 固定EXAM_ALIGNMENT 5問の判定軸、導通損失・スイッチング損失、インバータ＋逆並列ダイオード＋PWM、GTO→IGBT→SiCと小型軽量化因果を可視化
+- 外部画像不使用。図表はPowerPoint図形で独自作成
+- 全4スライド表示QA `4 / 4 PASS`
+- overflow `0件`
+- PowerPoint ZIP整合性 `PASS`
 - 固定EXAM_ALIGNMENT 5問・固定範囲は変更なし
 - 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
@@ -58,7 +58,7 @@ Topic 07の練習PDFを完成した。
 - 解説PDF文字抽出QA: `PASS`
 - 練習問題source: 完了（12問、独立QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`）
 - 練習PDF: 完了（A4縦4ページ、表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 完了（16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX整合性 `PASS`）
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 - 固定範囲外論点の追加: `0件`
@@ -66,9 +66,9 @@ Topic 07の練習PDFを完成した。
 - 完成数: `6 / 16`
 
 ## 次に行う
-Topic 07の解説画像PowerPointを作成する。
+Topic 07の完成後独立再解答を実施する。
 
-固定EXAM_ALIGNMENT 5問・固定範囲・完成済み教材内容を変更せず、試験解法と `GTO → IGBT → SiC` の比較、導通損失・スイッチング損失、損失低減から小型軽量化までの因果を可視化する。固定範囲外論点・未確認実車値を追加しない。
+保存済み正答を先に見ず、固定EXAM_ALIGNMENT 5問を完成済み教材だけで再解答し、教材外・固定範囲外知識による補完を行わない。解答後に公式解答と照合し、各問の根拠を教材内の節へ接続する。
 
 ## Topic 07 新幹線側確認資料
 - 三菱電機技報「新幹線電車用電機品」: 300系と同じGTO PWMコンバータ／インバータ方式を確認

@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_practice_pdf_complete`
+- current_status: `topic_07_powerpoint_complete`
 - last_completed_topic: `06 新幹線はどうやって速度を変えている？`
 - active_topic: `07 GTO→IGBT→SiCで何が変わった？`
-- next_start: Topic 07の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問・固定範囲・完成済み教材内容を変更せず、固定範囲外論点・未確認実車値を追加しない
+- next_start: Topic 07の完成後独立再解答を実施する。保存済み正答を先に見ず、固定EXAM_ALIGNMENT 5問を完成済み教材だけで再解答し、教材外・固定範囲外知識による補完を行わない
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -17,7 +17,7 @@
 - [x] 04 300系でモーターが全部変わった — 品質ゲートPASS / completed
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
 - [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
-- [ ] 07 GTO→IGBT→SiCで何が変わった？ — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題source・練習PDF完了
+- [ ] 07 GTO→IGBT→SiCで何が変わった？ — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint完了
 - [ ] 08〜16 — 未完了
 
 ## Topic 07 EXAM_ALIGNMENT
@@ -96,6 +96,21 @@
 ### 練習PDF QA記録
 `topics/07_power_semiconductors/07_power_semiconductors_practice_pdf_qa.md`
 
+### 解説画像PowerPoint
+`topics/07_power_semiconductors/07_power_semiconductors_images.pptx`
+
+- 16:9・4枚
+- 固定EXAM_ALIGNMENT 5問の判定軸、導通損失・スイッチング損失、インバータ＋逆並列ダイオード＋PWM、GTO→IGBT→SiCと小型軽量化因果を可視化
+- 外部画像不使用（PowerPoint図形で独自作成）
+- 全4スライド表示QA `4 / 4 PASS`
+- overflow `0件`
+- PowerPoint ZIP整合性 `PASS`
+- 固定範囲外論点の追加 `0件`
+- 未確認実車値の追加 `0件`
+
+### PowerPoint QA記録
+`topics/07_power_semiconductors/07_power_semiconductors_powerpoint_qa.md`
+
 ## Topic 07 現在の品質状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前検証: `5 / 5 PASS`
@@ -107,7 +122,7 @@
 - 解説PDF文字抽出QA: `PASS`
 - 練習問題source: 完了（12問、独立QA `12 / 12 PASS`）
 - 練習PDF: 完了（A4縦4ページ、表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 完了（16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX整合性 `PASS`）
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 - 固定範囲外論点の追加: `0件`
