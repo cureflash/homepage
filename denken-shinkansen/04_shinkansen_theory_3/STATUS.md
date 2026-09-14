@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 4 / 14
-- current_status: `topic_05_practice_pdf_complete`
+- current_status: `topic_05_powerpoint_complete`
 - last_completed_topic: `04 25,000Vでなぜ車体へ電気が飛ばない？`
 - active_topic: `05 パンタグラフから入った電気はどこへ行く？`
-- next_start: Topic 05の確定source・解説PDF・練習問題source・練習PDFを変更せず、解説画像PowerPointを作成する。選定6過去問の要求事項を可視化し、後続Topic論点・未確認実車値は追加しない
+- next_start: Topic 05の完成済みsource・解説PDF・練習問題source・練習PDF・解説画像PowerPointを変更せず、選定6過去問を完成教材だけで独立再解答する。保存済み正答は先に見ず、教材外知識補完があればFAIL
 
 ## Topic 01 進捗
 
@@ -76,28 +76,23 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 05 `パンタグラフから入った電気はどこへ行く？` の練習問題source・練習PDFを完成した。
+Topic 05 `パンタグラフから入った電気はどこへ行く？` の解説画像PowerPointを完成した。
 
 成果物:
-- `topics/05_dc_network/05_dc_network_practice.md`
-- `topics/05_dc_network/05_dc_network_practice.pdf`
-- 全15問、全問五肢択一
-- 基礎4問 / 本試験標準8問 / 複合・応用3問
-- 確定EXAM_ALIGNMENT 6問の要求事項を全件マッピング
-- 直列・並列、分圧・分流、KCL / KVL、複数電源、重ね合わせ、テブナン・ノートン、同一電池並列、負荷電力、最大電力を固定範囲内で演習化
-- 正答位置1〜5を各3問に分散
-- 全15問を独立再計算し、正答一意性を確認
-- 回路は教育用とし、実車内部配線・保護回路・主回路定数を推測していない
-- Topic 06以降の磁気・交流・三相・半導体論点は追加していない
-- 練習PDFはA4縦5ページ、200 dpiで全ページをレンダリングし、文字切れ・重なり・欠落グリフなしを確認
-- PDF文字抽出でQ1〜Q15、主要公式・数値、解答・完全解説を確認
+- `topics/05_dc_network/05_dc_network_images.pptx`
+- 16:9、3スライド
+- 選定6過去問の要求事項を、直列・並列・分圧・分流、KCL/KVL・枝電流法、重ね合わせ、テブナン・ノートン、負荷電力・最大電力の順で可視化
+- 回路は「教育用等価回路」とし、実車内部配線・保護回路・主回路定数を推測していない
+- Topic 06以降の磁気・電磁誘導・交流・RLC・力率・三相・半導体・PWMは追加していない
+- LibreOfficeで全3スライドをレンダリングし、文字切れ・重なり・欠落グリフなしを確認
+- PPTX ZIP整合性検査PASS
 
 ## 判定
 
-Topic 05は `PRACTICE_PDF_COMPLETE`。完成数は `4 / 14` 据え置き。次工程は解説画像PowerPoint。
+Topic 05は `POWERPOINT_COMPLETE`。完成数は `4 / 14` 据え置き。次工程は完成教材だけによる選定6過去問の独立再解答。
