@@ -7,7 +7,7 @@
 
 Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路の波形解析`、Topic 03 `0系③ 直流主電動機の電圧方程式とトルク`、Topic 04 `0系④ タップ制御と加速特性` は最終QAまでPASS。完成数は `4 / 39`。
 
-現在地は `topic_05_powerpoint_complete`。active topicはTopic 05 `0系⑤ 発電ブレーキのエネルギー解析`。
+現在地は `topic_05_independent_reanswer_complete`。active topicはTopic 05 `0系⑤ 発電ブレーキのエネルギー解析`。
 
 ## Topic 05 成果物
 - source: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy.md`
@@ -34,6 +34,11 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
   - R5一次・H24二次の固定範囲への解法接続を収録
   - 全5スライドVisual QA・overflow検査・ZIP整合性 PASS
 - PowerPoint QA: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_images_qa.md`
+- 完成後独立再解答: `topics/05_0series_dynamic_brake_energy/05_0series_dynamic_brake_energy_independent_reanswer.md`
+  - 固定範囲5チェックポイント `5 / 5 PASS`
+  - R5一次 `(2)=ホ`, `(3)=チ` と車上抵抗消費の説明を教材だけで再構築
+  - H24二次 `(1)(2)` は `R_a=0.500 Ω`, `E=187.5 V ≒ 188 V` を途中式付きで再導出
+  - 教材外知識補完・固定範囲外論点・未確認0系実値の追加はいずれも0件
 
 ## Topic 05 EXAM_ALIGNMENT
 系列SPECの固定範囲:
@@ -96,6 +101,19 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
 
 グラフはsource複合例題の教材用仮定値を使用。全5スライドVisual QA・overflow検査・ZIP整合性 PASS。
 
+## Topic 05 完成後独立再解答
+完成教材だけで固定範囲を再解答し、公式解答・標準解答と照合した。
+
+- R5 一次 機械 問2
+  - `(2)=ホ`（制動）— PASS
+  - `(3)=チ`（電気エネルギー）— PASS
+  - 他列車で消費できない場合の車上抵抗消費 — PASS
+- H24 二次 機械・制御 問1
+  - `(1) R_a=0.500 Ω` — PASS
+  - `(2) E=187.5 V ≒ 188 V` — PASS
+
+合計 `5 / 5 PASS`。教材外知識による補完なし。可逆チョッパ、回生、誘導機制動等の固定範囲外論点には依存していない。
+
 ## Topic 05 固定境界
 追加しない:
 - 回生電力を架線へ戻す回路・回生失効・四象限運転
@@ -106,12 +124,17 @@ Topic 01 `0系① 主変圧器の等価回路`、Topic 02 `0系② 整流回路�
 - 未確認の0系固有数値
 
 ## 次の正確な開始点
-Topic 05の完成教材だけで、選定済み公式過去問の固定範囲を独立再解答する。
+Topic 05の最終QAを実施する。
 
-- R5 一次 機械 問2: `(2)(3)` と車上抵抗消費の記述
-- H24 二次 機械・制御 問1: `(1)(2)` のみ
+確認対象:
+- MASTER SPEC / EXAM_ALIGNMENT SPEC / 系列SPECの必須成果物が揃っていること
+- R5一次・H24二次の固定範囲に対するEXAM_ALIGNMENTが維持されていること
+- 完成後独立再解答 `5 / 5 PASS` が成果物と整合すること
+- PDF/PPTXの既存Visual QAがPASSであること
+- 回生・可逆チョッパ・誘導機・VVVF等の後続論点を追加していないこと
+- 未確認0系実値を真値として扱っていないこと
 
-保存済み正答を先に見ず、教材だけで式・途中計算・理由を再構築する。教材外知識で補完した場合はFAIL。範囲外の可逆チョッパ・回生・誘導機制動等は扱わない。
+全件PASSならTopic 05を `completed` とし、完成数を `5 / 39` に進める。FAIL/不整合があれば `completed` にせず、その根本原因だけを修正する。
 
 ## Topic 04 完了記録
 - 最終QA: `PASS`
