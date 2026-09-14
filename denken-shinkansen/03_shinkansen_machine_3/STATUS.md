@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 5 / 16
-- current_status: `topic_06_explanation_source_complete`
+- current_status: `topic_06_explanation_pdf_complete`
 - last_completed_topic: `05 誘導電動機はなぜ勝手に回る？`
 - active_topic: `06 新幹線はどうやって速度を変えている？`
-- next_start: Topic 06の解説PDFを作成する。完成済みsourceの固定EXAM_ALIGNMENT 5問・7小問、解説本文、3段階例題を同期し、表示QA・文字抽出QAを行う。固定範囲外論点や未確認実車値は追加しない
+- next_start: Topic 06の練習問題sourceを作成する。固定EXAM_ALIGNMENT 5問・7小問を全件マッピングし、原則12問以上・少なくとも半数を五肢択一、本試験標準中心、解答は式・理由・検算まで記載する。固定範囲外論点や未確認実車値は追加しない
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 選定5問を教材だけで再解答し5/5正答、品質ゲートPASS
@@ -16,7 +16,7 @@
 - [x] 03 直流モーターはどうやって速度を変える？ — 必須4成果物を新選定5問へ同期。完成後独立再解答5/5正答、品質ゲートPASS
 - [x] 04 300系でモーターが全部変わった — 必須成果物・EXAM_ALIGNMENT・独立再解答5/5・表示QA・範囲境界・進捗整合を再確認し、最終QA `PASS / completed`
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 必須成果物・EXAM_ALIGNMENT・完成後独立再解答6/6・表示QA・範囲境界・進捗整合を確認し、最終QA `PASS / completed`
-- [ ] 06 新幹線はどうやって速度を変えている？ — 制作前EXAM_ALIGNMENT 5問・7小問、解説本文＋3段階例題、本文マッピング `7 / 7` 完了
+- [ ] 06 新幹線はどうやって速度を変えている？ — 制作前EXAM_ALIGNMENT 5問・7小問、解説本文＋3段階例題、本文マッピング `7 / 7`、解説PDF・表示QA・文字抽出QA完了
 - [ ] 07〜16 — 未完了
 
 ## 06 EXAM_ALIGNMENT対象
@@ -76,6 +76,16 @@ R8上問3はV/f・VVVFを含むが設問全体の正答にベクトル制御が�
 - 固定5問・7小問を本文へ `7 / 7` マッピング
 - 固定範囲外論点・未確認実車値の追加 `0件`
 
+## 06 解説PDF
+`topics/06_power_electronics/06_power_electronics_explanation.pdf` を作成済み。
+
+- A4縦 5ページ
+- 固定EXAM_ALIGNMENTと完成済みsourceの範囲だけを収録
+- パワー半導体、回路分類、単相整流、三相整流、直流チョッパ、単相ブリッジインバータ、PWM・VVVF、同期速度、3段階例題、過去問対応を収録
+- 200 dpiで全5ページをレンダリングし、文字切れ・重なり・欠落グリフなしを確認
+- PDF文字抽出で主要見出し、主要公式、固定5問・7小問、例題数値、範囲境界を確認
+- 固定範囲外論点・未確認実車値の追加 `0件`
+
 ## 06 現在の品質状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 公式過去問: 5問・7小問を固定
@@ -85,7 +95,9 @@ R8上問3はV/f・VVVFを含むが設問全体の正答にベクトル制御が�
 - 解説本文: 完了
 - 3段階例題: 完了
 - 選定5問・7小問の本文マッピング: `7 / 7` 完了
-- 解説PDF: 未着手
+- 解説PDF: 完了
+- 解説PDF表示QA: `PASS`
+- 解説PDF文字抽出QA: `PASS`
 - 練習問題source: 未着手
 - 練習PDF: 未着手
 - 解説画像PowerPoint: 未着手
