@@ -6,47 +6,41 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は28/38。01〜28がPASS。active topicは29 `コンプレッサ・ポンプ・ファン`。
 
 ## 今回進捗
-Topic 28 `空調・電熱` の完成後独立再解答・最終QAを実施した。固定EXAM_ALIGNMENT 5問・10小問を完成教材の式・判断経路だけで再計算し、公式解答と `10 / 10 PASS`。教材外知識補完、固定範囲外論点追加、未確認実車値追加はいずれも0件。Topic 28を `PASS / COMPLETED` とした。
+Topic 29 `コンプレッサ・ポンプ・ファン` の制作前EXAM_ALIGNMENTを完了した。系列SPEC固定範囲（コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率）へ直接接続する公式過去問5問を固定し、問題条件から独立に再構成して `5 / 5 PASS`。固定範囲外論点、未確認実車値による補完は0件。
 
 更新:
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating_final_qa.md` — 完成後独立再解答・最終QAを新規記録
-- `STATUS.md` — 完成数28/38、Topic 29へ進行
+- `topics/29_compressor_pump_fan/29_compressor_pump_fan.md` — EXAM_ALIGNMENT、制作前独立解答、範囲境界を新規記録
+- `STATUS.md` — `topic_29_exam_alignment_complete` へ更新
 - `HANDOFF.md`
 
-## Topic 28 最終QA
-1. R8上 機械 問17(a)(b) — `173364 kJ`、`3.98 h` → `5 / 2` — PASS
-2. R7上 機械 問17(a)(b) — `1.33 kW`、`14.7 min` → `2 / 2` — PASS
-3. R4上 機械 問17(a)(b) — `97.2 MJ`、`82.85 ℃` → `5 / 5` — PASS
-4. R1 機械 問17(a)(b) — `100.529 MJ`、`1.164 kW` → `2 / 3` — PASS
-5. H28 機械 問17(a)(b) — `136.519 MJ`、`7.075 h` → `2 / 2` — PASS
+## Topic 29 固定EXAM_ALIGNMENT
+1. R4下 機械 問11 — ポンプ揚水、損失水頭、ポンプ効率・電動機効率 — 導出`13.14 kW` → `4` — PASS
+2. H30 機械 問10 — ポンプ揚水、余裕係数、必要台数 — 導出`673.75 kW`、`7台` → `4` — PASS
+3. H29 機械 問12 — 送風機の負荷特性 — `T∝n^2`、`Q∝n`、`P∝n^3` → `4` — PASS
+4. H27 機械 問12 — 実揚程・全揚程、ポンプ効率、余裕係数 — 導出`11.79 kW` → `5` — PASS
+5. H18 機械 問10 — ポンプ揚水、損失水頭、ポンプ効率・電動機効率 — 導出`20.19 kW` → `3` — PASS
 
-結果: `10 / 10 PASS`。
+結果: `5 / 5 PASS`。
 
-教材だけで完結した項目:
-- 顕熱 `Q=mcΔT`
-- 潜熱 `Q=mL`
-- 複数過程 `Q_total=ΣQ`
-- 熱効率 `η=Q_use/(Pt)` と逆算
-- ヒートポンプ `COP=Q_out/W_in` と逆算
-- `kW / kJ/s / kWh / MJ / s / min / h` の単位換算
-- 過程ごとの質量整理
+教材で必須となる要求事項:
+- 回転出力 `P=Tω`、`ω=2πN/60`
+- 水動力 `P_w=ρgQH` と、水に対する `9.8QH [kW]`
+- 流量の `m^3/h`・`m^3/min` → `m^3/s` 換算
+- 実揚程、損失水頭、全揚程
+- ポンプ効率・電動機効率と入力/出力の向き
+- 余裕係数と台数切上げ
+- 送風機の `Q∝n`、`T∝n^2`、`P∝n^3`
+- コンプレッサはSPEC固定範囲として軸出力・トルク・回転速度・効率まで扱う
 
-## Topic 28 成果物
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating.md`
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating_explanation.pdf`
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating_practice.md`
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating_practice.pdf`
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating_images.pptx`
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating_final_qa.md`
-
-解説PDF・練習PDF・PowerPointの表示QAは既にPASS済み。固定範囲外の熱伝導、熱抵抗、熱流、加熱方式各論、冷凍サイクル詳細、湿度・空気線図、未確認実車値は追加していない。
+## 直近年度の範囲判定
+R8上〜R5の機械科目を直近から確認したが、Topic 29へ直接対応しない巻上機・減速機・はずみ車等を件数合わせで採用していない。圧縮機固有の熱力学計算を要求する公式過去問は今回の調査範囲で確認できないため、断熱・等温・ポリトロープ圧縮仕事、冷凍サイクル等は追加しない。
 
 ## 現在の状態
-- `current_status`: `topic_28_completed`
+- `current_status`: `topic_29_exam_alignment_complete`
 - 完成数: 28/38
 - 01〜28: PASS
 - active topic: 29 `コンプレッサ・ポンプ・ファン`
-- Topic 29: NOT_STARTED
+- Topic 29: EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS
 
 ## 次の正確な開始点
-Topic 29の制作前EXAM_ALIGNMENTを行う。系列SPEC固定範囲は `コンプレッサ、ポンプ、ファン、電動機応用、トルク、出力、効率`。公式過去問を直近年度から調査し、固定範囲だけで完結する問題を原則5問以上選定する。保存済み正答に依存しない制作前独立解答を行い、要求事項を分解してから本文制作へ進む。固定範囲外論点を件数合わせで追加しない。
+`topics/29_compressor_pump_fan/29_compressor_pump_fan.md` の固定5問から要求事項を逆算し、解説本文＋3段階例題を作成する。全5問の解法経路を本文へマッピングする。系列SPEC固定範囲外を追加しない。未確認の新幹線コンプレッサ・ポンプ・ファン実車値を真値化しない。
