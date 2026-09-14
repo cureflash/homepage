@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は解説PDF＋練習問題sourceまで完了。
+Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は解説PDF＋練習PDFまで完了。
 
 完成数: `6 / 21`
 
-current_status: `topic_07_practice_source_complete`
+current_status: `topic_07_practice_pdf_complete`
 
 active_topic: `07 0系のモーターはなぜ力を出せる？`
 
-次工程: Topic 07の練習PDFを作成する。
+次工程: Topic 07の解説画像PowerPointを作成する。
 
 ## Topic 06 完了記録
 
@@ -111,21 +111,23 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 - 解説PDF文字抽出QA: PASS
 - 練習source: `topics/07_motor_lorentz_force/07_motor_lorentz_force_practice.md` 完了
 - 練習問題独立QA: `12 / 12 PASS`
-- 練習PDF: 未作成
+- 練習PDF: `topics/07_motor_lorentz_force/07_motor_lorentz_force_practice.pdf` 完了（A4縦4ページ）
+- 練習PDF表示QA: 200 dpi全4ページ `4 / 4 PASS`
+- 練習PDF文字抽出QA: PASS
 - 解説画像PowerPoint: 未作成
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
 ## 今回の更新
 
-1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、Topic 07 source、直近の系列変更を再照合。
-2. 既存の解説PDF完了状態を引き継ぎ、重複生成せず次工程へ進行。
-3. 固定EXAM_ALIGNMENTを変更せず、一次型12問の練習問題source＋完全解説を作成。
-4. 問題文・選択肢だけから12問を独立再計算し `12 / 12 PASS`、正答一意性 `12 / 12 PASS`。
-5. 二次非採用判断、二次数合わせ0件、固定範囲外追加0件を維持。
-6. 練習source、STATUS、HANDOFFをGitHub正本へ反映。
+1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、Topic 07 sourceを再照合。
+2. 固定一次5問・25小問のEXAM_ALIGNMENT、二次非採用判断、固定範囲を変更せず進行。
+3. 練習sourceの12問・正答・完全解説から練習PDFを作成（A4縦4ページ）。
+4. 200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`。
+5. 二次数合わせ0件、固定範囲外追加0件、未確認実車値依存0件を維持。
+6. 練習PDF・STATUS・HANDOFFをGitHub正本へ反映。
 7. 完成数は `6 / 21` のまま。
 
 ## 次に行うこと
 
-Topic 07の練習PDFを作成する。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
+Topic 07の解説画像PowerPointを作成する。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
