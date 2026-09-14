@@ -6,11 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は26/38。01〜26がPASS。active topicは27 `補助電源② 車内照明`。
 
 ## 今回進捗
-Topic 27の解説本文§1〜§15＋3段階例題を完成した。制作前に固定した公式過去問5問・8小問の要求事項を本文各節へ全件マッピングし、系列SPEC固定範囲`LED、光束、光度、照度、lm、cd、lx、照明計算`から広げていない。
+Topic 27の解説PDFを完成した。解説本文§1〜§15＋3段階例題をA4縦4ページへ落とし込み、固定EXAM_ALIGNMENT 5問・8小問の要求事項をPDF内へ全件マッピングした。180 dpiで全4ページ表示QA PASS。系列SPEC固定範囲`LED、光束、光度、照度、lm、cd、lx、照明計算`から広げていない。
 
 更新:
-- `topics/27_cabin_lighting/27_cabin_lighting.md` — 解説本文§1〜§15、3段階例題、過去問要求事項マッピングを追加
-- `STATUS.md` — `topic_27_explanation_source_complete`へ更新
+- `topics/27_cabin_lighting/27_cabin_lighting_explanation.pdf` — A4縦4ページ、固定5問・8小問対応、表示QA PASS
+- `STATUS.md` — `topic_27_explanation_pdf_complete`へ更新
 - `HANDOFF.md`
 
 ## Topic 27 品質ゲート対象
@@ -46,6 +46,15 @@ Topic 27の解説本文§1〜§15＋3段階例題を完成した。制作前に�
 
 例題数値は照明計算理解用の仮定値で、実車仕様ではない。
 
+## Topic 27 解説PDF
+- `topics/27_cabin_lighting/27_cabin_lighting_explanation.pdf`
+- A4縦4ページ
+- 光束・光度・照度、均等放射、直下・斜入射、複数光源、問題文提示LED配光式、7段階解法、3段階例題、過去問対応表を収録
+- 固定5問・8小問の要求事項を全件マッピング済み
+- 180 dpiで全4ページ表示QA PASS。文字切れ・重なり・ページ外はみ出し・破損グリフなし
+- 未確認の新幹線車内照明実値は真値化していない
+- 輝度・光束発散度・LED半導体物性等の固定範囲外論点は追加していない
+
 ## Topic 27 参考教材
 - e-sysnet「照明工学の計算」
   - https://e-sysnet.com/%E7%85%A7%E6%98%8E%E8%A8%88%E7%AE%97/
@@ -71,13 +80,13 @@ Topic 27の解説本文§1〜§15＋3段階例題を完成した。制作前に�
 - 未確認の新幹線車内照明の光束・照度・消費電力・器具数等の実車値
 
 ## 現在の状態
-- `current_status`: `topic_27_explanation_source_complete`
+- `current_status`: `topic_27_explanation_pdf_complete`
 - 完成数: 26/38
 - 01〜26: PASS
 - active topic: 27 `補助電源② 車内照明`
 
 ## 次の正確な開始点
-Topic 27の解説本文§1〜§15＋3段階例題を解説PDFへ落とし込む。固定EXAM_ALIGNMENT 5問・8小問への対応を維持したまま全ページ表示QAを行い、系列SPEC固定範囲から広げない。
+Topic 27の練習問題を原則12問以上で作成し、完全解説付き練習PDFへ落とし込む。固定EXAM_ALIGNMENT 5問・8小問の要求事項を演習へ全件マッピングし、全ページ表示QAを行う。系列SPEC固定範囲から広げない。
 
 ## 直前完了 Topic 26
 Topic 26 `補助電源① 主回路の電気を車内設備へ` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。選定5問・8小問は完成後も`8 / 8 PASS`で`COMPLETED`。固定範囲外知識・未確認実車値による補完は0件。
