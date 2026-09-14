@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_exam_alignment_revised`
+- current_status: `topic_06_independent_reanswer_complete`
 - last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: 修正版EXAM_ALIGNMENTの一次5問・16小問を、完成教材だけで独立再解答する
+- next_start: Topic 06の最終QAを実施する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -19,9 +19,8 @@
 - [x] R5 問2(2)〜(4): 鎖交磁束変化、速度、ファラデー則
 - [x] R2 問2(1)〜(5): 自己インダクタンス、鎖交磁束保存、磁気エネルギー
 - [x] H28 問1(3)(5): `Ψ=Li`、`W=Li²/2`
-- [x] H30 問2(4)(5)は完成後独立再解答で3枝磁気回路の合成・磁束分流というTopic 05依存を検出したため除外
+- [x] H30 問2(4)(5)は旧完成後独立再解答で3枝磁気回路の合成・磁束分流というTopic 05依存を検出したため除外
 - [x] H21 問2(2)(3)を代替採用: 同一磁路で `L∝N²`、`M∝N1N2`
-- [x] H21公式解答照合: (2) `ヨ=2.25`、(3) `ヘ=3`
 - [x] 品質ゲート対象を一次5問・16小問に維持
 - [x] 修正版公式解答照合 `16 / 16`
 - [x] R7〜R5二次「電力・管理」「機械・制御」を全6科目確認済み
@@ -37,22 +36,23 @@
 - [x] 解説画像PowerPoint
 - [x] 旧EXAM_ALIGNMENT完成後独立再解答: `14 / 16 PASS / NEEDS_REVISION`
 - [x] EXAM_ALIGNMENT是正: H30問2(4)(5) → H21問2(2)(3)
-- [ ] 修正版EXAM_ALIGNMENT完成後独立再解答
+- [x] 修正版EXAM_ALIGNMENT完成後独立再解答: `16 / 16 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 06の旧EXAM_ALIGNMENTで検出した不整合を、固定範囲を変更せずに是正した。
+修正版EXAM_ALIGNMENTの一次5問・16小問を、完成教材だけで独立再解答した。
 
-- H30問2(4)(5)は、自己・相互インダクタンスの計算前に3枝磁気回路の合成磁気抵抗・磁束分流を必要とするため、Topic 06単独の品質ゲート対象として不適切と確定
-- H30の不足知識をTopic 06へ追加せず、Topic 05との境界を維持
-- 代替としてH21一次理論問2(2)(3)を公式問題・公式解答で確認
-- H21(2): `L∝N²` より `(1.5N/N)²=2.25` → `ヨ`
-- H21(3): `M∝N1N2` より `(1.5N×2N)/N²=3` → `ヘ`
-- 修正版も一次5問・16小問を維持し、公式解答照合 `16 / 16`
-- 二次非採用判断・数合わせ0件を維持
-- 固定範囲外論点の追加0件
+- R7問2(1)(2)(4)(5): `ヲ / ワ / イ / ヨ`、`4 / 4 PASS`
+- R5問2(2)〜(4): `イ / ニ / ロ`、`3 / 3 PASS`
+- R2問2(1)〜(5): `イ / ヨ / ワ / ロ / ヌ`、`5 / 5 PASS`
+- H28問1(3)(5): `ヨ / ル`、`2 / 2 PASS`
+- H21問2(2)(3): `ヨ / ヘ`、`2 / 2 PASS`
+- 合計 `16 / 16 PASS`
+- 教材外知識補完 0件
+- 二次数合わせ 0件
+- 固定範囲外論点の追加 0件
 
 ## 判定
 
-Topic 06は `topic_06_exam_alignment_revised`。完成数は `5 / 21` のまま。修正版の完成後独立再解答を次工程とし、最終QAへはまだ進めない。
+Topic 06は `topic_06_independent_reanswer_complete`。完成数は `5 / 21` のまま。次工程は最終QAで、まだ `completed` にはしない。
