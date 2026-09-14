@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_04_preproduction_independent_verification_complete`
+`topic_04_source_spec_reinforcement_complete`
 
-制作前EXAM_ALIGNMENTで正式選定した第二種一次「電力」3問＋二次「電力・管理」2問、計5問を、公式解答を先に見ずに独立解答し、その後で公式標準解答と照合した。5 / 5 PASS。次段階は解説本文＋3段階例題の制作。
+最終QAで未収録と判定された系列SPECの2項目「効率を変えた場合の走行可能出力」「東京―佐世保間の必要走行エネルギーとの比較」を、固定範囲内の教材用仮定値だけで解説sourceへ補強した。正式選定5問、EXAM_ALIGNMENT、既存過去問解法は変更していない。既存の解説PDF・PowerPointは補強内容の同期前であり、次段階で更新する。
 
 ## SPEC固定範囲
 
@@ -384,12 +384,16 @@ Bの出力―周波数傾きは
 - 固定範囲外の件数合わせ: 0件
 - 「むつ」未確認実値の追加: 0件
 - 制作前独立検証: `5 / 5 PASS`
-- 解説本文: 未着手
-- 解説PDF: 未着手
-- 練習問題・完全解説: 未着手
-- 練習PDF: 未着手
-- PowerPoint: 未着手
-- 完成後独立再解答: 未実施
-- 最終QA: 未実施
+- 解説本文＋3段階例題: 完了
+- 練習問題＋完全解説source: 完了
+- 練習15問独立QA: `15 / 15 PASS`
+- 解説PDF: 作成済み・表示QA PASS（今回のSPEC補強内容は未同期）
+- 練習PDF: 作成済み・表示QA PASS
+- PowerPoint: 作成済み・表示QA PASS（今回のSPEC補強内容は未同期）
+- 完成後独立再解答: `5 / 5 PASS`
+- 最終QA: 実施済み、`NEEDS_REVISION`
+- 系列SPEC不足2項目の解説source補強: 完了
+- 進捗記録同期: 完了
+- Topic 04 completed: 未達
 
-次段階: 固定済みEXAM_ALIGNMENTと制作前独立検証結果を入力として、Topic 04の解説本文＋3段階例題を制作する。本文制作時に初めて「むつ」の実設備値をJAEA等の一次資料で再確認し、未確認値を推測しない。
+次段階: 今回追加した系列SPEC2項目を解説PDF・解説画像PowerPointへ同期し、表示QAを行う。正式選定5問・EXAM_ALIGNMENT・既存過去問解法は変更しない。
