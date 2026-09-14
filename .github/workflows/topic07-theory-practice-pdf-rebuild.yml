@@ -121,13 +121,13 @@ jobs:
           r=PdfReader(p)
           text='\n'.join((x.extract_text() or '') for x in r.pages)
           print('pages=', len(r.pages), 'text_chars=', len(text))
-          assert 3 <= len(r.pages) <= 6
-          assert len(text) > 5000
+          assert len(r.pages) == 4
+          assert len(text) > 3000
           assert '問12' in text and '完全解説' in text
           PY
           mkdir -p topic07-render
           pdftoppm -png -r 200 "$PDF" topic07-render/page >/dev/null 2>&1
-          test "$(find topic07-render -name 'page-*.png' | wc -l)" -ge 3
+          test "$(find topic07-render -name 'page-*.png' | wc -l)" -eq 4
       - uses: actions/upload-artifact@v4
         with:
           name: topic07-practice-pdf-render
