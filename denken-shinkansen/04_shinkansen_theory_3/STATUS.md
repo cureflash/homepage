@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 5 / 14
-- current_status: `topic_06_exam_alignment_complete`
+- current_status: `topic_06_explanation_source_complete`
 - last_completed_topic: `05 パンタグラフから入った電気はどこへ行く？`
 - active_topic: `06 0系の変圧器は何をしていた？`
-- next_start: Topic 06の解説本文＋3段階例題を作成する。制作前EXAM_ALIGNMENTで固定した5過去問の要求事項と系列SPECの固定範囲を欠落なく収録し、後続Topic論点・未確認実車値は追加しない
+- next_start: Topic 06の解説PDFを作成する。完成したsourceの本文・3段階例題・過去問要求事項を反映し、Topic 06固定範囲外と未確認実車値は追加しない
 
 ## Topic 01 進捗
 
@@ -93,7 +93,7 @@
 - [x] 固定範囲外の後続Topic論点・未確認実車値を境界整理
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
@@ -102,19 +102,21 @@
 
 ## 今回進めた内容
 
-Topic 06 `0系の変圧器は何をしていた？` の制作前EXAM_ALIGNMENTを完成した。
+Topic 06 `0系の変圧器は何をしていた？` の解説本文＋3段階例題を完成した。
 
-確認結果:
-- 公式理論過去問: 令和8年度上期、令和7年度下期、令和6年度上期、令和5年度上期、令和4年度上期から各1問、計5問を選定
-- 制作前独立検証: `5 / 5 PASS`
-- SPEC固定範囲だけで完答: `5 / 5 PASS`
-- 後続Topic知識への依存: `0問`
-- 未確認実車値への依存: `0問`
-- 参考教材: e-sysnet、電験王、電験三種まとめましたを確認
-- source Markdown: `topics/06_transformer_magnetics/06_transformer_magnetics.md`
+反映内容:
+- 磁界 `H`、磁束密度 `B`、磁束 `Φ`、透磁率 `μ` と単位
+- アンペアの法則、起磁力 `ℱ=NI`、磁気抵抗 `Rm=l/(μA)`、磁気回路
+- ファラデーの法則・レンツの法則
+- `Ψ=NΦ`、`L=NΦ/I`、自己誘導
+- `M=k√(L1L2)`、加極性・減極性の直列合成
+- `W=LI²/2` と電流変化時の比例関係
+- 理想変圧器 `V1/V2=N1/N2` への接続
+- 基礎・本試験標準・複合ひっかけの3段階例題
+- 選定5過去問の要求事項を本文へ全件マッピング
 
-磁気回路、自己・相互インダクタンス、磁気エネルギーを過去問品質ゲートに固定し、系列SPECで必須の電磁誘導・ファラデー／レンツ・理想変圧器巻数比も後続本文の必須説明として明示した。Topic 07以降の電磁力・交流回路・力率・三相・半導体等は追加していない。
+Topic 07以降の電磁力・交流回路・力率・三相・半導体等、変圧器損失・詳細等価回路、未確認0系実車値は追加していない。完成後独立再解答はまだ実施していない。
 
 ## 判定
 
-Topic 06は `topic_06_exam_alignment_complete`。完成数は `5 / 14` のまま。次は解説本文＋3段階例題。
+Topic 06は `topic_06_explanation_source_complete`。完成数は `5 / 14` のまま。次は解説PDF。
