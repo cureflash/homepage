@@ -3,20 +3,23 @@
 更新日: 2026-09-15
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `6 / 16`。Topic 01〜06は品質ゲートPASSでcompleted。active topicは07「GTO→IGBT→SiCで何が変わった？」。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `7 / 16`。Topic 01〜07は品質ゲートPASSでcompleted。active topicは08「N700Sのモーターはなぜ小さくできた？」。
 
 ## 今回進捗
-Topic 07の完成後独立再解答を完了した。
+Topic 07の最終QAを完了し、`PASS / completed` とした。
 
+- 必須成果物の実在: `PASS`
 - 固定EXAM_ALIGNMENT: 5問のまま変更なし
-- 独立答案列: `(1), (2), (5), (2), (3)`
-- 公式解答との一致: `5 / 5 PASS`
-- 各問の根拠を完成済み教材内の§2・§3・§4・§9へ接続
+- 完成後独立再解答: `5 / 5 PASS`
+- 解説PDF表示QA・文字抽出QA: `PASS`
+- 練習PDF表示QA・文字抽出QA: `PASS`
+- PowerPoint表示QA・overflow・ZIP整合性: `PASS`
+- source進捗整合: `PASS`
+- 固定範囲境界: `PASS`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
-- source内の旧進捗記録を実在成果物へ同期
-- 完成数は `6 / 16` のまま
+- 完成数: `7 / 16`
 
 ## Topic 07 EXAM_ALIGNMENT
 品質ゲート対象は5問で固定。
@@ -48,7 +51,7 @@ Topic 07の完成後独立再解答を完了した。
 
 半導体物性の詳細には深入りしない。バンド構造、結晶構造、キャリア移動度等を独立論点として追加しない。新幹線側の実際の採用素子・回路方式は一次・技術資料で確認した内容だけを書く。未確認実車値は追加しない。
 
-## Topic 07 現在の品質状態
+## Topic 07 完了状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前検証: `5 / 5 PASS`
 - 解説本文: 完了
@@ -61,16 +64,16 @@ Topic 07の完成後独立再解答を完了した。
 - 練習PDF: 完了（A4縦4ページ、表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
 - 解説画像PowerPoint: 完了（16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX整合性 `PASS`）
 - 完成後独立再解答: `5 / 5 PASS`
+- 最終QA: `PASS / completed`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 未実施
 - 固定範囲外論点の追加: `0件`
 - 未確認実車値の追加: `0件`
-- 完成数: `6 / 16`
+- 完成数: `7 / 16`
 
 ## 次に行う
-Topic 07の最終QAを実施する。
+Topic 08「N700Sのモーターはなぜ小さくできた？」の制作前EXAM_ALIGNMENTを実施する。
 
-必須成果物、固定EXAM_ALIGNMENT 5問、完成後独立再解答 `5 / 5 PASS`、表示QA、source進捗整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近年度を優先して公式過去問を調査する。Topic 08の固定範囲は誘導電動機、極数、同期速度、周波数、回転速度、すべり、トルク、出力、高速回転、小型軽量化、SiC主変換装置との関係であり、実車での小型軽量化理由はJR東海・メーカー資料に基づく。単純に「6極にすれば小さくなる」と一般化しない。
 
 ## Topic 07 新幹線側確認資料
 - 三菱電機技報「新幹線電車用電機品」: 300系と同じGTO PWMコンバータ／インバータ方式を確認
