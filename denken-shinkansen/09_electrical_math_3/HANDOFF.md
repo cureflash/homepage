@@ -12,44 +12,56 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
-Topic 05 `ベクトル` は最終QA再判定まで完了し、`completed`。初回完成後独立再解答 `2 / 6 PASS` で不足した4点を必要最小限補強後、再独立解答 `6 / 6 PASS`。前回最終QAで指摘されたsource進捗記録不整合も解消し、再QAで全品質ゲートPASSを確認した。
+Topic 05 `ベクトル` は `completed`。
+
+Topic 06 `微分① ダイヤの傾きは速度` は制作前EXAM_ALIGNMENTまで完了。固定4問の制作前独立検証は `4 / 4 PASS`。仕様外論点を件数合わせで追加していない。
 
 完成数: `5 / 12`
 
-current_status: `topic_05_completed`
+current_status: `topic_06_exam_alignment_complete`
 
 active_topic: `06 微分① ダイヤの傾きは速度`
 
-## Topic 05 最終結果
+## Topic 06 固定EXAM_ALIGNMENT
 
-固定EXAM_ALIGNMENT 6問は変更していない。
+品質ゲート対象は次の4問で固定する。
 
-- R8上 理論 問4: 一直線上のN極・S極が点Aに作る磁界を向き込みで合成
-- R7下 理論 問2: 同一直線上の2つのクーロン力を差として合成し未知電荷量を求める
-- R7上 理論 問11: ホール素子で電流・磁界・キャリア運動から電荷偏りの向きを判定
-- R6下 理論 問4: xyz座標で平行導体A・Bに働く力の向きを判定
-- R4下 理論 問4: 正三角形配置で60°をなす等大2力を合成
-- R4上 理論 問4: 速度の垂直成分と `sinθ` を使って誘導起電力を求める
+- R7上 理論 問13: トランジスタ静特性グラフから局所的な `ΔI/ΔV` とその逆数を読む
+- R6下 理論 問3: 直線的な磁束変化の `ΔΦ/Δt` を計算する
+- R5上 理論 問10: `i-t` 折れ線グラフの各区間で `Δi/Δt` を比較する
+- R4下 理論 問7: 20℃と21℃の抵抗値から有限区間の変化量・変化率を式で扱う
 
-制作前独立計算・公式照合: `6 / 6 PASS`
-補強後完成教材による再独立解答: `6 / 6 PASS`
-最終QA再判定: `PASS / completed`
+制作前独立計算・公式照合: `4 / 4 PASS`
 
-教材外知識による補完0件、固定範囲外追加0件、未確認新幹線実値追加0件。
+三種は原則5問以上だが、確認した追加候補はTopic 07以降の極値・2階微分、Topic 08の積分、Topic 10の指数関数・RC/RL過渡現象、またはレンツの法則等の専門論点を必要とするため採用しない。H16理論問9はR5上理論問10と同型のため、件数合わせで重複カウントしない。
 
-## Topic 05 既存成果物
+## Topic 06 制作範囲
 
-- `topics/05_vectors/05_vectors.md`
-- `topics/05_vectors/05_vectors_explanation.pdf`
-- `topics/05_vectors/05_vectors_practice.md`
-- `topics/05_vectors/05_vectors_practice.pdf`
-- `topics/05_vectors/05_vectors_images.pptx`
-- `topics/05_vectors/05_vectors_exam_reanswer.md`
-- `topics/05_vectors/05_vectors_revision_supplement.md`
-- `topics/05_vectors/05_vectors_final_qa.md`
+扱う内容:
+- 平均変化率
+- 接線
+- 微分係数
+- 導関数
+- 多項式の微分
+- 三角関数の微分
+- 合成関数の基本
+- `v(t)=dx/dt`
+- 区分的直線グラフの傾き比較
+
+扱わない内容:
+- 極値・最大最小、2階微分、加速度: Topic 07
+- 積分: Topic 08
+- 電荷・磁束等の微分公式の体系説明: Topic 09
+- 指数関数、RC/RL過渡現象: Topic 10
+
+固定範囲外追加0件、未確認新幹線実値追加0件。
+
+## Topic 06 既存成果物
+
+- `topics/06_derivative_1/06_derivative_1.md` — 制作前EXAM_ALIGNMENT、制作前独立検証 `4 / 4 PASS`
 
 ## 次に行うこと
 
-Topic 06 `微分① ダイヤの傾きは速度` の制作前EXAM_ALIGNMENTを行う。
+Topic 06 の解説本文＋3段階例題を `topics/06_derivative_1/06_derivative_1.md` に追加する。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` に従い、まず公式過去問を調査して対象問題・要求知識・教材範囲を固定する。仕様外論点を件数合わせで追加しない。
+固定EXAM_ALIGNMENT 4問から逆算した必須説明だけを収録し、Topic 07以降の論点を先取りしない。
