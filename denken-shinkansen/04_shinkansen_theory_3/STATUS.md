@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 6 / 14
-- current_status: `topic_07_explanation_source_complete`
+- current_status: `topic_07_explanation_pdf_complete`
 - last_completed_topic: `06 0系の変圧器は何をしていた？`
 - active_topic: `07 モーターはなぜ回る？`
-- next_start: Topic 07の解説PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 07の練習問題source・練習PDFを作成する
 
 ## Topic 01 進捗
 
@@ -114,7 +114,7 @@
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
@@ -122,22 +122,20 @@
 
 ## 今回進めた内容
 
-Topic 07 `モーターはなぜ回る？` の解説本文＋3段階例題を完成した。
+Topic 07 `モーターはなぜ回る？` の解説PDFを完成し、GitHub正本へ反映した。
 
-固定EXAM_ALIGNMENT 5問は変更せず、次を本文へ収録・マッピングした。
-
-- `F=BIl sinθ` の意味・角度・単位とフレミング左手則
-- 平行導体の同方向引力・逆方向反発、および矩形ループの合成電磁力
-- コイルの偶力・回転トルク `τ=NIAB sinφ`
-- ローレンツ力 `F=qvB sinθ` の導出、負電荷の向き、円運動
-- 運動導体の誘導起電力 `e=Blv sinθ` とフレミング右手則
-- 逆起電力の基本概念
-- 0系は直流主電動機の実在例としてのみ接続し、未確認実車値は使用しない
-
-3段階例題は、基礎の導体電磁力、本試験標準の直線導体＋矩形ループ、複合・ひっかけのコイルトルク＋運動導体誘導起電力で構成した。
+- A4縦4ページ
+- 固定EXAM_ALIGNMENT 5問の要求事項を全件収録
+- 3段階例題（基礎／本試験標準／複合・ひっかけ）を収録
+- 200 dpi全4ページ表示QA: `PASS`
+- 文字抽出QA: `PASS`
+- 直流機の電圧方程式・界磁方式・速度制御の追加: `0件`
+- Topic 08以降の論点追加: `0件`
+- 未確認0系実車値の追加: `0件`
 
 Topic 07 source: `topics/07_motor_force_induction/07_motor_force_induction.md`
+Topic 07 explanation PDF: `topics/07_motor_force_induction/07_motor_force_induction_explanation.pdf`
 
 ## 判定
 
-Topic 07は `explanation_source_complete`。完成数は `6 / 14` のまま。次は固定EXAM_ALIGNMENTと本文を変えずに解説PDFを作成し、全ページ表示QAを行う。
+Topic 07は `explanation_pdf_complete`。完成数は `6 / 14` のまま。次は固定EXAM_ALIGNMENTと解説本文を変更せず、練習問題source・練習PDFを作成する。
