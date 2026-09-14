@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `06 誘導電動機の最大トルクはどこで出る？`
 
-current status: `topic_06_final_qa_needs_revision`
+current status: `topic_06_source_progress_synced`
 
 ## Topic 06 固定範囲
 
@@ -78,22 +78,17 @@ source Markdown:
 
 ## Topic 06 今回完了した工程
 
-最終QAを実施した。
+source Markdownの進捗記録だけを現在地へ同期した。
 
-PASS:
-- 必須成果物の実在
-- 一次2問＋二次記述4問、計6問・20小問の固定EXAM_ALIGNMENT
-- 完成後独立再解答 `20 / 20 PASS`
-- 計算プログラム・SPEC指定4比較グラフQA
-- 仕様境界
-- 未確認実車値の真値化なし
+同期内容:
+- 冒頭状態欄の旧記録「解説PDF・練習PDF・PowerPoint・計算プログラム／比較グラフ・完成後独立再解答は未着手」を除去
+- 解説PDF・練習PDF・PowerPoint・計算プログラム／SPEC指定4比較グラフ・完成後独立再解答が完了済みであることを反映
+- 制作前独立検証 `20 / 20 PASS` と完成後独立再解答 `20 / 20 PASS` を反映
+- 前回最終QAがsource進捗不整合だけを理由に `NEEDS_REVISION` だったことを反映
+- 末尾の次工程を最終QA再実施へ同期
 
-FAIL:
-- source Markdown冒頭の進捗記録が旧状態のまま残存
-- 現在も `解説PDF・練習PDF・PowerPoint・計算プログラム／比較グラフ・完成後独立再解答は未着手` と記載されている
-
-このため最終判定は `NEEDS_REVISION`。Topic 06はまだ `completed` にしない。
+教材本文、固定EXAM_ALIGNMENT、過去問選定、数式、成果物は変更していない。
 
 ## 次に行うこと
 
-source Markdownの進捗記録だけを現在地へ同期する。教材本文、固定EXAM_ALIGNMENT、過去問選定、数式、成果物は変更しない。同期後に最終QAを再実施する。
+Topic 06の最終QAを再実施する。必須成果物、固定6問・20小問、完成後独立再解答、計算／グラフQA、source進捗整合、仕様境界を再確認し、すべてPASSなら `completed` にする。
