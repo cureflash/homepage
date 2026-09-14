@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+  <rect width="960" height="520" fill="white"/>
+  <text x="480" y="34" text-anchor="middle" font-family="sans-serif" font-size="24">DC-link voltage waveform (normalized conceptual ripple)</text>
+  <text x="480" y="58" text-anchor="middle" font-family="sans-serif" font-size="13">Illustrative 2% ripple is a drawing assumption, not a 300-series actual value.</text>
+  <line x1="88" y1="78" x2="88" y2="444" stroke="black" stroke-width="1.4"/>
+  <line x1="88" y1="444" x2="932" y2="444" stroke="black" stroke-width="1.4"/>
+  <line x1="88" y1="261" x2="932" y2="261" stroke="#9ca3af" stroke-width="1"/>
+  <line x1="88" y1="156" x2="932" y2="156" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="88" y1="366" x2="932" y2="366" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="78" y="160" text-anchor="end" font-family="sans-serif" font-size="12">1.02</text>
+  <text x="78" y="265" text-anchor="end" font-family="sans-serif" font-size="12">1.00</text>
+  <text x="78" y="370" text-anchor="end" font-family="sans-serif" font-size="12">0.98</text>
+  <text x="510" y="500" text-anchor="middle" font-family="sans-serif" font-size="15">Time t / T (fundamental periods)</text>
+  <text x="24" y="261" transform="rotate(-90 24 261)" text-anchor="middle" font-family="sans-serif" font-size="15">E_d / E_d,avg</text>
+  <path d="M88 156 C114 156 140 366 193 366 C246 366 272 156 299 156 C326 156 352 366 405 366 C458 366 484 156 510 156 C536 156 562 366 615 366 C668 366 694 156 721 156 C748 156 774 366 827 366 C880 366 906 156 932 156" fill="none" stroke="#2563eb" stroke-width="2.6"/>
+  <text x="116" y="98" font-family="sans-serif" font-size="12">DC component centered at 1.00 pu</text>
+</svg>
