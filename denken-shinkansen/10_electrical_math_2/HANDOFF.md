@@ -12,15 +12,15 @@ Topic 03 `偏微分・全微分` は `completed`。
 
 Topic 04 `微分による極値・最適条件` は `completed`。
 
-Topic 05 `積分によるエネルギー計算` は、前回最終QAで指摘されたsource進捗記録不整合の修正まで完了。次は最終QA再判定。
+Topic 05 `積分によるエネルギー計算` は最終QA再判定まで完了し、`completed`。
 
-完成数: `4 / 20`
+完成数: `5 / 20`
 
-current_status: `topic_05_source_progress_final_synced`
+current_status: `topic_05_completed`
 
-active_topic: `05 積分によるエネルギー計算`
+active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
-## Topic 05 現在の成果物
+## Topic 05 完成成果物
 
 source Markdown:
 `topics/05_integral_energy/05_integral_energy.md`
@@ -42,8 +42,6 @@ PowerPoint QA:
 
 最終QA:
 `topics/05_integral_energy/05_integral_energy_final_qa.md`
-
-解説本文＋3段階例題: 完成。
 
 解説PDF: A4縦6ページ、全6ページ200 dpi表示QA PASS。
 
@@ -97,18 +95,19 @@ PowerPoint: 16:9、全5スライド。LibreOffice PDF変換・全スライド表
 
 固定範囲外追加: 0件。
 
-## 前回最終QAと今回の修正
+## Topic 05 最終QA
 
-前回最終QA総合判定は `NEEDS_REVISION / IN_PROGRESS`。
+総合判定: `PASS / completed`。
 
-教材・過去問対応・表示QAはPASSで、FAILはsource Markdownの進捗記録不整合だけだった。
-
-今回、source Markdownを再確認し、以下を現在地へ同期した。
-
-- `制作前再導出・公式照合` 節末尾: 完成後独立再解答を未実施扱いしていた表現を、`16 / 16 PASS`・教材外知識補完0件の実績へ修正
-- `次工程`: source進捗記録最終整合完了、次は最終QA再判定へ修正
-
-教材本文・固定EXAM_ALIGNMENT・数式・例題・固定範囲は変更していない。
+確認済み:
+- 必須成果物実在
+- 二種相当EXAM_ALIGNMENT 6問・16対象項目
+- 二次試験直接対応1問
+- 完成後独立再解答16/16
+- 教材外知識補完0件
+- SPEC外内容の非混入
+- PDF / PowerPoint表示QA
+- source進捗記録と実成果物の整合
 
 ## SPEC固定範囲
 
@@ -122,7 +121,7 @@ PowerPoint: 16:9、全5スライド。LibreOffice PDF変換・全スライド表
 
 ## 実装上の境界
 
-- Topic 06の運転曲線、位置・速度・加速度解析を先取りしない
+- Topic 06の運転曲線、位置・速度・加速度解析をTopic 05へ混入しない
 - Topic 07・08以降の微分方程式・過渡応答を先取りしない
 - Topic 13以降のフーリエ解析・高調波分解を先取りしない
 - 選定問題のうち固定範囲外の後続小問を件数合わせで採用しない
@@ -132,6 +131,6 @@ PowerPoint: 16:9、全5スライド。LibreOffice PDF変換・全スライド表
 
 ## 次に行うこと
 
-Topic 05の最終QAを再判定し、source進捗記録整合を含む全品質ゲートを確認する。
+Topic 06 `微積分で新幹線の運転曲線を解析する` の制作前EXAM_ALIGNMENT。
 
-教材本文、固定EXAM_ALIGNMENT、数式、例題、SPEC固定範囲は変更しない。
+公式過去問を直近年度優先で調査し、SPEC固定範囲へ直接対応する問題だけを選定する。二種相当の一次・二次対応品質ゲートに従い、制作前独立検証まで行う。仕様外論点を件数合わせで追加しない。
