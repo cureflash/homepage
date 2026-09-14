@@ -1,0 +1,149 @@
+name: Topic07 theory practice PDF rebuild
+
+on:
+  push:
+    branches:
+      - automation/theory2-topic07-pdf-rebuild-20260915
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: automation/theory2-topic07-pdf-rebuild-20260915
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF tools
+        run: |
+          python -m pip install --disable-pip-version-check reportlab pypdf
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+      - name: Build PDF from canonical practice source
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import html, re
+          from reportlab.lib.pagesizes import A4
+          from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, KeepTogether
+          from reportlab.lib.styles import ParagraphStyle
+          from reportlab.lib.enums import TA_CENTER
+          from reportlab.lib import colors
+          from reportlab.pdfbase import pdfmetrics
+          from reportlab.pdfbase.cidfonts import UnicodeCIDFont
+
+          root = Path('denken-shinkansen/08_shinkansen_theory_2/topics/07_motor_lorentz_force')
+          src = root / '07_motor_lorentz_force_practice.md'
+          out = root / '07_motor_lorentz_force_practice.pdf'
+          text = src.read_text(encoding='utf-8')
+          body = text.split('# 問題', 1)[1].split('# 独立QA', 1)[0]
+
+          pdfmetrics.registerFont(UnicodeCIDFont('HeiseiKakuGo-W5'))
+          base = ParagraphStyle('base', fontName='HeiseiKakuGo-W5', fontSize=8.2, leading=11.0, spaceAfter=2.2)
+          small = ParagraphStyle('small', parent=base, fontSize=7.7, leading=10.0)
+          h1 = ParagraphStyle('h1', parent=base, fontSize=12.6, leading=16, spaceBefore=6, spaceAfter=4)
+          h2 = ParagraphStyle('h2', parent=base, fontSize=10.2, leading=13, spaceBefore=4, spaceAfter=2)
+          title = ParagraphStyle('title', parent=base, fontSize=16, leading=20, alignment=TA_CENTER, spaceAfter=8)
+
+          def clean(s):
+              s = s.replace('`','')
+              s = html.escape(s, quote=False)
+              s = re.sub(r'\^(\-?\d+)', r'<super>\1</super>', s)
+              return s
+
+          story = [Paragraph('電験二種 理論 - Topic 07 練習問題', title),
+                   Paragraph('0系のモーターはなぜ力を出せる？', h1),
+                   Paragraph('固定EXAM_ALIGNMENT: 一次5問・25小問 / 二次数合わせ0件', small),
+                   Spacer(1, 5)]
+          group = []
+          in_table = False
+          table_lines = []
+
+          def flush_group():
+              nonlocal group
+              if group:
+                  story.append(KeepTogether(group))
+                  group = []
+
+          def flush_table():
+              nonlocal table_lines, in_table
+              if table_lines:
+                  for raw in table_lines:
+                      if set(raw.replace('|','').replace('-','').replace(' ','').strip()) == set():
+                          continue
+                      cells = [c.strip() for c in raw.strip().strip('|').split('|')]
+                      if cells and cells[0] not in ('---',''):
+                          story.append(Paragraph(' / '.join(clean(c) for c in cells), small))
+                  table_lines = []
+              in_table = False
+
+          for raw in body.splitlines():
+              line = raw.strip()
+              if not line:
+                  if group:
+                      group.append(Spacer(1,2))
+                  continue
+              if line.startswith('# 正答一覧'):
+                  flush_group(); flush_table(); story.append(PageBreak()); story.append(Paragraph('正答一覧', title)); continue
+              if line.startswith('# 完全解説'):
+                  flush_group(); flush_table(); story.append(Paragraph('完全解説', h1)); continue
+              if line.startswith('## '):
+                  flush_group(); flush_table(); story.append(Paragraph(clean(line[3:]), h1)); continue
+              if line.startswith('### '):
+                  flush_group(); flush_table(); group = [Paragraph(clean(line[4:]), h2)]; continue
+              if line.startswith('|'):
+                  flush_group(); in_table = True; table_lines.append(line); continue
+              if in_table:
+                  flush_table()
+              style = small if re.match(r'^\d+\.', line) else base
+              group.append(Paragraph(clean(line), style))
+          flush_group(); flush_table()
+
+          def footer(canvas, doc):
+              canvas.saveState(); canvas.setFont('HeiseiKakuGo-W5', 7.2); canvas.setFillColor(colors.grey)
+              canvas.drawString(36, 18, '電験二種 理論 Topic 07 練習プリント')
+              canvas.drawRightString(A4[0]-36, 18, str(doc.page)); canvas.restoreState()
+
+          doc = SimpleDocTemplate(str(out), pagesize=A4, rightMargin=36, leftMargin=36, topMargin=34, bottomMargin=34,
+                                  title='Topic 07 練習問題 - 0系のモーターはなぜ力を出せる？')
+          doc.build(story, onFirstPage=footer, onLaterPages=footer)
+          print(out)
+          PY
+      - name: Verify PDF and render all pages at 200 dpi
+        shell: bash
+        run: |
+          PDF=denken-shinkansen/08_shinkansen_theory_2/topics/07_motor_lorentz_force/07_motor_lorentz_force_practice.pdf
+          python - <<'PY'
+          from pypdf import PdfReader
+          p='denken-shinkansen/08_shinkansen_theory_2/topics/07_motor_lorentz_force/07_motor_lorentz_force_practice.pdf'
+          r=PdfReader(p)
+          text='\n'.join((x.extract_text() or '') for x in r.pages)
+          print('pages=', len(r.pages), 'text_chars=', len(text))
+          assert 3 <= len(r.pages) <= 6
+          assert len(text) > 5000
+          assert '問12' in text and '完全解説' in text
+          PY
+          mkdir -p topic07-render
+          pdftoppm -png -r 200 "$PDF" topic07-render/page >/dev/null 2>&1
+          test "$(find topic07-render -name 'page-*.png' | wc -l)" -ge 3
+      - uses: actions/upload-artifact@v4
+        with:
+          name: topic07-practice-pdf-render
+          path: |
+            denken-shinkansen/08_shinkansen_theory_2/topics/07_motor_lorentz_force/07_motor_lorentz_force_practice.pdf
+            topic07-render/*.png
+      - name: Commit rebuilt PDF and clean temporary files
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add denken-shinkansen/08_shinkansen_theory_2/topics/07_motor_lorentz_force/07_motor_lorentz_force_practice.pdf
+          git rm -rf .tmp_pdf_chunks .github/workflows/topic07-theory-practice-pdf-rebuild.yml
+          git commit -m 'Rebuild Topic 07 theory practice PDF'
+          git push origin HEAD:automation/theory2-topic07-pdf-rebuild-20260915
