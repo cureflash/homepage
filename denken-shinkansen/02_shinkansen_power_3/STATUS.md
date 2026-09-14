@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_practice_pdf_complete`
+- current_status: `topic_07_powerpoint_complete`
 - last_completed_topic: `06 275,000Vをどうやって25,000Vにする？`
 - active_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
-- next_start: Topic 07の解説画像PowerPointを作成し、表示QA・はみ出し検査・PPTX整合性を確認する
+- next_start: Topic 07の完成教材だけを使って固定5問・8小問を独立再解答し、教材外知識補完の有無まで記録する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
@@ -17,7 +17,7 @@
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、最終QA PASS
 - [x] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問、必須成果物、表示QA、修正版教材での独立再解答5/5 PASS、教材外知識補完0件、SPEC境界を最終QAで確認し `completed`
 - [x] 06 275,000Vをどうやって25,000Vにする？ — 固定5過去問、必須成果物、表示QA、完成後独立再解答5/5 PASS、教材外知識補完0件、source進捗整合・SPEC境界を最終QAで確認し `completed`
-- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 制作前EXAM_ALIGNMENT完了、固定5問・8小問、制作前独立検証 `8 / 8 PASS`。解説本文＋3段階例題、解説PDF、練習PDFまで完成。練習PDFはA4縦3ページ・12問全問五肢択一、200 dpi全3ページ表示QA・文字抽出QA・正答一意性PASS。次は解説画像PowerPoint
+- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 制作前EXAM_ALIGNMENT完了、固定5問・8小問、制作前独立検証 `8 / 8 PASS`。解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPointまで完成。PowerPointは16:9・4枚、全4枚表示QA・はみ出し検査・PPTX整合性PASS。次は完成教材だけで独立再解答
 - [ ] 08〜16 — 未完了
 
 ## Topic 05 完了記録
@@ -80,6 +80,8 @@ source: `topics/07_phase_conversion/07_phase_conversion.md`
 解説PDF: `topics/07_phase_conversion/07_phase_conversion_explanation.pdf`
 練習PDF: `topics/07_phase_conversion/07_phase_conversion_practice.pdf`
 練習PDF QA: `topics/07_phase_conversion/07_phase_conversion_practice_qa.md`
+解説画像PowerPoint: `topics/07_phase_conversion/07_phase_conversion_images.pptx`
+PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
 
 固定5過去問・8小問:
 - R7下 理論 問15(a)(b) — 線間/相電圧・三相電力 — `(3),(3)` PASS
@@ -96,9 +98,11 @@ source: `topics/07_phase_conversion/07_phase_conversion.md`
 
 練習PDFはA4縦3ページ・全12問、全問五肢択一。難易度は基礎3／標準7／複合2で、全問に正答・途中式または理由説明・主要誤答の説明を付けた。固定5問・8小問のTopic 07要求事項を全件練習可能にし、200 dpi全3ページ表示QA・文字抽出QA・正答一意性をPASS。数値問題は8問を別計算で再確認し `8 / 8 PASS`。
 
+解説画像PowerPointは16:9・4枚。固定5問・8小問の要求事項を全件可視化し、全4枚表示QA、`slides_test.py` による境界外はみ出し検査、PPTX ZIP整合性をPASS。SPEC固定範囲外の追加・未確認実値の追加は0件。
+
 Topic 07固定範囲は三相交流、単相交流、線間/相電圧、三相電力、き電用変圧器、相変換、三相側負荷平衡、スコット結線、変形ウッドブリッジ結線、ルーフ・デルタ結線。二種相当の厳密ベクトル導出、Topic 08以降の電圧降下・線路損失・き電回路詳細、Topic 10の力率改善、Topic 11の短絡・保護へは拡張していない。未確認の個別設備定格・配置も実値化していない。
 
 固定過去問に含まれるTopic 07外の既習論点を理由に仕様は追加していない。完成後独立再解答時に、完成教材だけで固定5問・8小問へ対応できるかを改めて品質ゲート判定する。
 
 ## 次
-Topic 07「なぜ三相交流をそのまま架線へ流さない？」の解説画像PowerPointを作成し、表示QA・はみ出し検査・PPTX整合性を確認する。
+Topic 07「なぜ三相交流をそのまま架線へ流さない？」の完成教材だけを使って固定5問・8小問を独立再解答し、教材外知識補完の有無まで記録する。
