@@ -2,7 +2,7 @@
 
 ## 状態
 
-解説本文＋3段階例題、解説PDF、練習PDF、PowerPoint、完成後独立再解答、最終QAまで実施済み。最終QAで指摘された旧進捗記録を現在地へ同期済み。
+解説本文＋3段階例題、解説PDF、練習PDF、PowerPoint、完成後独立再解答、最終QA再判定まで完了。Topic 05は `completed`。
 
 本テーマは `SPEC.md` の固定範囲どおり、以下だけを扱う。
 
@@ -694,4 +694,4 @@ RMSの `220 V` をそのまま `cosθ` の振幅へ入れると `√2` が欠け
 
 ## 次工程
 
-解説本文、解説PDF、練習PDF、PowerPoint、完成後独立再解答、source進捗記録最終整合まで完了。次は最終QAを再判定する。SPEC外論点やTopic 06以降の内容は追加しない。
+Topic 05は `completed`。次は Topic 06 `微積分で新幹線の運転曲線を解析する` の制作前EXAM_ALIGNMENT。SPEC外論点は追加しない。
