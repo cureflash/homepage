@@ -4,9 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-一次・二次の過去問対応品質ゲート、練習問題、既存PDF/PPTX表示QAはPASSしている。ただし、系列 `SPEC.md` が明示する計算・可視化2項目が成果物に未収録で、source Markdownの進捗記録にも旧状態が残るため、Topic 04 はまだ `completed` にしない。
+前回 `NEEDS_REVISION` となった系列SPEC不足2項目をsource・解説PDF・PowerPointへ同期した後、最終QAを再実施した。上位仕様、一次・二次の過去問対応品質ゲート、練習問題、必須成果物、表示QA、系列SPEC計算・可視化、固定範囲境界を再確認し、全件PASSとした。
 
 ## 確認結果
 
@@ -17,39 +17,27 @@
 | 必須成果物 | PASS | 解説source、練習source、解説PDF、練習PDF、解説画像PowerPointがGitHub正本上に実在 |
 | 練習問題 | PASS | 15問（一次型10＋二次記述5）、独立QA `15 / 15 PASS` |
 | 完成後独立再解答 | PASS | 正式5問 `5 / 5 PASS`。教材外知識補完 `0件` |
-| 解説PDF表示QA | PASS | A4縦6ページ、200 dpi全6ページ `6 / 6 PASS` |
-| 練習PDF表示QA | PASS | A4縦7ページ、200 dpi全7ページ `7 / 7 PASS`、問題15問・解答15問の文字抽出PASS |
-| PowerPoint表示QA | PASS | 16:9・4スライド、全4枚表示QA、overflow、ZIP整合性PASS |
-| 過去問固定範囲境界 | PASS | 核燃料サイクル・放射線・法規制・新型炉等の追加 `0件`、未確認実設備値追加 `0件` |
-| 系列SPEC計算・可視化 | FAIL | 「効率を変えた場合の走行可能出力」「東京―佐世保間の必要走行エネルギーとの比較」が未収録 |
-| 進捗記録整合 | FAIL | 主source・解説source・練習sourceに旧進捗が残る |
+| 解説PDF表示QA | PASS | A4縦7ページ、200 dpi全7ページ `7 / 7 PASS` |
+| 練習PDF表示QA | PASS | A4縦7ページ、200 dpi全7ページ `7 / 7 PASS` |
+| PowerPoint表示QA | PASS | 16:9・5スライド、全5枚表示QA、overflow、ZIP整合性PASS |
+| 系列SPEC計算・可視化 | PASS | 4項目すべてsource・成果物へ収録 |
+| 実値/仮定値区別 | PASS | 「むつ」原子炉熱出力36 MW以外の列車側効率・所内率・走行条件は教材用仮定値と明示 |
+| 固定範囲境界 | PASS | 核燃料サイクル・放射線・法規制・新型炉等の追加 `0件` |
+| 未確認実設備値 | PASS | 追加 `0件` |
+| 進捗記録 | PASS | `04_nuclear_power.md`、`STATUS.md`、`HANDOFF.md` を completed / Topic 05開始へ同期 |
 
-## 系列SPEC未充足
+## 系列SPEC計算・可視化
 
-`06_shinkansen_power_2/SPEC.md` のTopic 04は、多段エネルギーフローに加えて次の4項目を計算・可視化対象としている。
+`06_shinkansen_power_2/SPEC.md` のTopic 04で要求される4項目を全件確認した。
 
-1. 原子炉熱出力―車輪出力
-2. 効率を変えた場合の走行可能出力
-3. 東京―佐世保間の必要走行エネルギーとの比較
-4. 発車・加速・惰行・停車を想定した負荷変化
+1. 原子炉熱出力―車輪出力: 収録済み
+2. 効率を変えた場合の走行可能出力: 収録済み
+3. 東京―佐世保間の必要走行エネルギーとの比較: 収録済み
+4. 発車・加速・惰行・停車を想定した負荷変化: 収録済み
 
-現行成果物では、1は多段効率式・例題で、4は負荷変動・負荷追従の説明で扱っている。一方、2の効率変化に対する出力比較と、3の東京―佐世保間の必要走行エネルギー比較は、`04_nuclear_power_explanation_source.md` とPowerPoint QA記録の双方に存在しない。
+補強した感度計算は、原子炉熱出力 `36 MW` と教材用仮定値 `η_g=0.96`、所内率 `a=0.05`、`η_c=0.97`、`η_m=0.95`、`η_d=0.98` を用い、熱→軸効率 `20/25/30%` に対して車輪出力 `5.93/7.41/8.89 MW`。独立再計算でも一致した。
 
-したがって、過去問5問を解けることだけでは系列SPECを完了したことにならない。
-
-## 進捗記録の不整合
-
-### `04_nuclear_power.md`
-
-冒頭状態が `topic_04_preproduction_independent_verification_complete` のまま。末尾の品質ゲートも、解説本文・PDF・練習問題・練習PDF・PowerPoint・完成後独立再解答を未実施としており、現在地と一致しない。
-
-### `04_nuclear_power_explanation_source.md`
-
-状態が `topic_04_explanation_source_complete`、末尾の次段階が「練習問題＋完全解説sourceを作成」のまま。実際には練習source、両PDF、PowerPoint、完成後独立再解答まで完了済み。
-
-### `04_nuclear_power_practice.md`
-
-冒頭状態が `topic_04_practice_questions_and_full_explanations_complete` のままで、完成テーマとしての現在地に同期していない。
+教材用東京―佐世保条件 `t=8.0 h`、平均必要車輪出力 `4.0 MW` では必要走行エネルギー `32 MWh`。上記3ケースの供給可能エネルギー `47.4/59.3/71.2 MWh` も独立再計算と一致した。実車性能・実運転時分・設備成立性を示す値ではない。
 
 ## 過去問対応品質ゲート
 
@@ -67,16 +55,20 @@
 
 ## 必須成果物の実在確認
 
-- `04_nuclear_power.md` — blob `7dcba2bcae9e5ffccf47b75ab72b8aae9f2b6f6a`
-- `04_nuclear_power_explanation_source.md` — blob `d05de1d706f14b36c03abcf71f80eb361b226410`
-- `04_nuclear_power_explanation.pdf` — blob `1ecb19ba3ea513ed6ed594e62f7936d3a9653d97`
-- `04_nuclear_power_practice.md` — blob `15efc8ceb62ee72321caa5af79316f846057028f`
+- `04_nuclear_power.md` — blob `4e81aac1fbd402a80efdf1ffc0529ebe2e8c549d`
+- `04_nuclear_power_explanation_source.md` — blob `ef1c42db55be56cb36cf111a4d622ec06512526e`
+- `04_nuclear_power_explanation.pdf` — blob `946a4a3e2b576579ad05d5e54d609c9064939e01`
+- `04_nuclear_power_practice.md` — blob `682f3f639931827ea7d0d2fa3811051d8df99065`
 - `04_nuclear_power_practice.pdf` — blob `45a590897c1ba574cb45d230e0d3f0b894b47a67`
-- `04_nuclear_power_images.pptx` — blob `bf1fdddd725f738b49a0de3dfaca8a7c5e6a319b`
+- `04_nuclear_power_images.pptx` — blob `a5f5b1b2b4c20706b06e881d621812f5232f0c4f`
 - `04_nuclear_power_practice_qa.md` — blob `287089ac914102112be18e6088948689f2319f12`
-- `04_nuclear_power_powerpoint_qa.md` — blob `617e546a56efa9d63f719f85d59334a9f6c05dbf`
+- `04_nuclear_power_powerpoint_qa.md` — blob `308acbd7325b556ab2c16609e268dea1b0569007`
 - `04_nuclear_power_independent_reanswer.md` — blob `12c8d2a412b707af42b974e83fbbbc1a174e13b5`
 
-## 次段階
+## 完了判定
 
-系列SPECで欠けている2項目だけを固定範囲内で解説sourceへ補強し、進捗記録を現在地へ同期する。未確認実値は追加せず、必要な教材用条件は仮定値と明示する。正式選定5問、EXAM_ALIGNMENT、既存の過去問解法は変更しない。その後、影響するPDF/PPTXへ同期し、最終QAを再実施する。
+Topic 04 は `completed`。
+
+完成数: `4 / 22`
+
+次はTopic 05「新幹線を再エネ主体で走らせるには？」の制作前EXAM_ALIGNMENTを行う。
