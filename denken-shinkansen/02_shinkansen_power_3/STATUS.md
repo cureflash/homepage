@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 5 / 16
-- current_status: `topic_06_explanation_source_complete`
+- current_status: `topic_06_explanation_pdf_complete`
 - last_completed_topic: `05 新幹線を再エネだけで走らせられる？`
 - active_topic: `06 275,000Vをどうやって25,000Vにする？`
-- next_start: Topic 06の解説本文＋3段階例題から解説PDFを作成し、全ページ表示QAを行う
+- next_start: Topic 06の練習PDFを作成し、全ページ表示QA・数値問題の独立再計算を行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
@@ -16,7 +16,7 @@
 - [x] 03 JR東日本はなぜ火力発電所まで持っている？ — EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答7/7 PASS、最終QA PASS
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、最終QA PASS
 - [x] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問、必須成果物、表示QA、修正版教材での独立再解答5/5 PASS、教材外知識補完0件、SPEC境界を最終QAで確認し `completed`
-- [ ] 06 275,000Vをどうやって25,000Vにする？ — 制作前EXAM_ALIGNMENT・固定5過去問の制作前独立検証5/5 PASS、解説本文＋3段階例題完成。次は解説PDF＋全ページ表示QA
+- [ ] 06 275,000Vをどうやって25,000Vにする？ — 制作前EXAM_ALIGNMENT・固定5過去問の制作前独立検証5/5 PASS、解説本文＋3段階例題、解説PDF＋全ページ表示QA完了。次は練習PDF
 - [ ] 07〜16 — 未完了
 
 ## Topic 05 完了記録
@@ -46,6 +46,7 @@ PowerPoint QA: `topics/05_renewable_energy/05_renewable_energy_powerpoint_qa.md`
 
 ## Topic 06 制作進捗
 source: `topics/06_substation/06_substation.md`
+解説PDF: `topics/06_substation/06_substation_explanation.pdf`
 
 固定5過去問:
 - R7下 電力 問6 — 避雷器 — `(1)` PASS
@@ -56,7 +57,9 @@ source: `topics/06_substation/06_substation.md`
 
 制作前独立検証 `5 / 5 PASS`。固定5過去問の要求事項から逆算した解説本文＋3段階例題をsourceへ完成し、全件を教材節へマッピング済み。
 
+解説PDFはA4縦4ページ。200 dpiで全4ページをレンダリングして表示QAを行い、文字切れ・数式欠落・表や図のはみ出し・欠落文字なしを確認した。文字抽出QAもPASS。
+
 SPEC固定範囲は変電所、変圧器、母線、遮断器、断路器、計器用変成器、避雷器、保護リレー、受電電圧、き電電圧。GIS、調相設備、短絡電流・遮断容量・%インピーダンス計算、配電線詳細保護、三相→単相変換方式等は件数合わせで追加していない。
 
 ## 次
-Topic 06「275,000Vをどうやって25,000Vにする？」の解説PDFをsourceから作成し、全ページ表示QAを行う。個別変電所の未確認実設備値を一般化せず、Topic 07以降の論点を先取りしない。
+Topic 06「275,000Vをどうやって25,000Vにする？」の練習PDFを作成する。MASTER_SPECに従い原則12問以上、少なくとも半数は五肢択一、全問完全解説とし、固定5過去問・SPEC境界を変更しない。PDF化後は全ページ表示QAと数値問題の独立再計算を行う。

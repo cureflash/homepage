@@ -6,9 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は5/16。Topic 01〜05は完成済み。active topicは06 `275,000Vをどうやって25,000Vにする？`。
 
 ## 今回進捗
-Topic 06を1段階進め、制作前EXAM_ALIGNMENTで固定した5過去問とSPEC固定範囲から逆算して、解説本文＋3段階例題を完成した。
+Topic 06を1段階進め、完成済み解説本文＋3段階例題から解説PDF `topics/06_substation/06_substation_explanation.pdf` を作成した。
 
-本文へ収録した中心事項:
+PDFはA4縦4ページ。200 dpiで全4ページをレンダリングし、文字切れ・数式欠落・表や図のはみ出し・欠落文字がないことを確認した。文字抽出QAもPASS。固定5過去問・SPEC固定範囲・除外境界は変更していない。
+
+主な収録事項:
 - 変電所の受電・変圧・開閉・計測・保護の役割分担
 - 変圧器の巻数比・電圧比、理想変圧器の電流比
 - 母線の共通接続・分岐機能
@@ -18,16 +20,10 @@ Topic 06を1段階進め、制作前EXAM_ALIGNMENTで固定した5過去問とSP
 - ZnO避雷器の非線形抵抗、続流抑制、ギャップレス
 - 過電流継電器の反限時・反限時定限時・定限時・瞬時の識別
 - 受電側275kV例と交流25kVき電側の区別
-
-3段階例題:
-1. 基礎: 275kV→25kVの教材用理想変圧器の巻数比
-2. 標準: CT 1000A/5Aの二次電流計算＋二次開放禁止
-3. 複合: 遮断器/断路器、CT/保護リレー、避雷器、真空遮断器の正誤判定
-
-固定5過去問の要求事項は本文節へ全件マッピング済み。GIS、調相設備、短絡電流・遮断容量・%インピーダンス計算、配電線詳細保護、三相→単相変換方式等は追加していない。
+- 3段階例題と固定5過去問への教材内マッピング
 
 ## 現在状態
-- `current_status`: `topic_06_explanation_source_complete`
+- `current_status`: `topic_06_explanation_pdf_complete`
 - 完成数: `5/16`
 - last completed: Topic 05
 - active: Topic 06 `275,000Vをどうやって25,000Vにする？`
@@ -43,6 +39,12 @@ Topic 06を1段階進め、制作前EXAM_ALIGNMENTで固定した5過去問とSP
 
 EXAM_ALIGNMENT / 解説source:
 - `topics/06_substation/06_substation.md`
+
+解説PDF:
+- `topics/06_substation/06_substation_explanation.pdf`
+- A4縦4ページ
+- 200 dpi全ページ表示QA PASS
+- 文字抽出QA PASS
 
 ## Topic 06 SPEC固定範囲
 - 変電所
@@ -65,4 +67,4 @@ EXAM_ALIGNMENT / 解説source:
 - 未確認の個別新幹線変電所受電電圧・変圧器容量・遮断器定格等を実値化しない
 
 ## 次の正確な開始点
-`topics/06_substation/06_substation.md` の完成本文＋3段階例題から解説PDFを作成する。PDF化後は全ページをレンダリングし、文字切れ・数式欠落・表や図のはみ出しを表示QAする。固定5過去問・SPEC境界は変更しない。
+`topics/06_substation/06_substation.md` を正本sourceとして練習PDFを作成する。MASTER_SPECに従い原則12問以上、少なくとも半数は五肢択一、全問に完全解説を付ける。PDF化後は全ページをレンダリングして表示QAし、数値問題は別計算で独立再計算する。固定5過去問・SPEC境界は変更しない。
