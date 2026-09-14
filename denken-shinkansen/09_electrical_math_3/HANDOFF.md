@@ -8,11 +8,11 @@ Topic 01〜05は `completed`。
 
 Topic 06 `微分① ダイヤの傾きは速度` は、制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習source/PDF、解説画像PowerPointまで完成済み。最初の完成後独立再解答は、数学操作自体は4問とも教材内で再構築できたが、問題全体の正答に不足前提があり `0 / 4 PASS / NEEDS_REVISION` だった。
 
-その不足4件を補強sourceへ最小追加し、今回その内容を学習用の補強PDFへ同期した。
+不足4件を補強source/PDFへ最小追加した後、完成教材だけで固定4問を再独立解答し、公式解答と `4 / 4` 一致した。過去問対応品質ゲートはPASS。最終QAは未実施。
 
 完成数: `5 / 12`
 
-current_status: `topic_06_revision_artifacts_synced`
+current_status: `topic_06_exam_reanswer_passed`
 
 active_topic: `06 微分① ダイヤの傾きは速度`
 
@@ -40,23 +40,25 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 最初の完成後独立再解答: `0 / 4 PASS / NEEDS_REVISION`。
 
-## 補強と今回の同期
+## 補強と再独立解答
 
-補強source `06_derivative_1_revision_supplement.md` に次だけを追加済み。
+補強source `06_derivative_1_revision_supplement.md` に次だけを追加し、学習用補強PDFへ同期済み。
 
 1. R7上 理論 問13: `h_fe=I_C/I_B`
 2. R6下 理論 問3: `|e|=N|dΦ/dt|`
 3. R5上 理論 問10: `|v|=L|di/dt|`
 4. R4下 理論 問7: `R(T+ΔT)=R(T)(1+αΔT)` と `r=R1R2/(R1+R2)`
 
-今回、この4点を学習用の補強PDFへ同期した。
+補強後の完成教材だけで固定4問を再独立解答した結果:
 
-- `topics/06_derivative_1/06_derivative_1_revision_supplement.pdf`
-  - A4縦2ページ
-  - 200 dpi表示QA `2 / 2 PASS`
-  - 文字抽出QA PASS
+- R7上 理論 問13: `(2)` PASS
+- R6下 理論 問3: `(2)` PASS
+- R5上 理論 問10: `(4)` PASS
+- R4下 理論 問7: `(2)` PASS
 
-既存の解説PDF、練習PDF、解説画像PowerPoint、3段階例題、練習12問は変更していない。
+公式解答照合 `4 / 4 PASS`。教材外知識補完0件、固定EXAM_ALIGNMENT変更0件、Topic 07以降の数学論点追加0件、専門分野の体系説明追加0件、未確認新幹線実値追加0件。
+
+詳細記録: `topics/06_derivative_1/06_derivative_1_exam_reanswer.md`
 
 ## Topic 06 制作範囲
 
@@ -85,6 +87,7 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 - `topics/06_derivative_1/06_derivative_1.md`
 - `topics/06_derivative_1/06_derivative_1_revision_supplement.md`
+- `topics/06_derivative_1/06_derivative_1_exam_reanswer.md`
 - `topics/06_derivative_1/06_derivative_1_explanation.pdf`
 - `topics/06_derivative_1/06_derivative_1_practice.md`
 - `topics/06_derivative_1/06_derivative_1_practice.pdf`
@@ -93,4 +96,4 @@ active_topic: `06 微分① ダイヤの傾きは速度`
 
 ## 次に行うこと
 
-補強後の完成教材だけを使い、保存済み正答を先に見ず固定4問を再独立解答する。再独立解答が全件PASSした後に最終QAへ進む。
+Topic 06の最終QAを実施し、必須成果物、固定EXAM_ALIGNMENT、補強後 `4 / 4 PASS`、表示QA、進捗記録、仕様境界を確認する。
