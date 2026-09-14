@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 6 / 14
-- current_status: `topic_07_powerpoint_complete`
+- current_status: `topic_07_independent_reanswer_complete`
 - last_completed_topic: `06 0系の変圧器は何をしていた？`
 - active_topic: `07 モーターはなぜ回る？`
-- next_start: Topic 07の完成後公式過去問独立再解答を、固定EXAM_ALIGNMENT 5問について完成教材だけで実施する
+- next_start: Topic 07の最終QAを実施し、固定EXAM_ALIGNMENT・独立再解答・必須成果物・source進捗整合・SPEC境界を確認する
 
 ## Topic 01 進捗
 
@@ -117,33 +117,28 @@
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後の公式過去問独立再解答
+- [x] 完成後の公式過去問独立再解答 `5 / 5 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 07 `モーターはなぜ回る？` の解説画像PowerPointを完成し、GitHub正本へ反映した。
+Topic 07 `モーターはなぜ回る？` の完成後公式過去問独立再解答を実施し、GitHub正本へ記録した。
 
-- `topics/07_motor_force_induction/07_motor_force_induction_images.pptx`
-- 16:9・4スライド
-- `F=BIl sinθ`、フレミング左手則、平行導体の引力・反発を可視化
-- コイルの偶力・トルク `τ=NIAB sinφ` と角度定義を可視化
-- ローレンツ力 `F=|q|vB sinθ`、負電荷の向き、`v⊥B` の円運動を整理
-- 運動導体の誘導起電力 `e=Blv sinθ`、フレミング右手則、逆起電力の因果を整理
-- 固定EXAM_ALIGNMENT 5問の要求事項を全件対応
-- 全4スライド表示QA `4 / 4 PASS`
-- スライド外形はみ出し `0件`
-- PPTX ZIP整合性 `PASS`
-- 直流機の電圧方程式・界磁方式・速度制御の追加 `0件`
-- Topic 08以降の論点追加 `0件`
-- 未確認0系実車値の追加 `0件`
+- 記録: `topics/07_motor_force_induction/07_motor_force_induction_exam_recheck.md`
+- 固定5問の独立解答列: `(2), (2), (3), (3), (2)`
+- 電気技術者試験センター公式解答と `5 / 5` 一致
+- 教材だけで必要公式・途中式・方向判定を再構成可能: PASS
+- 教材外知識の補完: `0問`
+- 直流機詳細・Topic 08以降への依存: `0問`
+- 未確認0系実車値への依存: `0問`
 
 Topic 07 source: `topics/07_motor_force_induction/07_motor_force_induction.md`
 Topic 07 explanation PDF: `topics/07_motor_force_induction/07_motor_force_induction_explanation.pdf`
 Topic 07 practice source: `topics/07_motor_force_induction/07_motor_force_induction_practice.md`
 Topic 07 practice PDF: `topics/07_motor_force_induction/07_motor_force_induction_practice.pdf`
 Topic 07 PowerPoint: `topics/07_motor_force_induction/07_motor_force_induction_images.pptx`
+Topic 07 reanswer: `topics/07_motor_force_induction/07_motor_force_induction_exam_recheck.md`
 
 ## 判定
 
-Topic 07は `topic_07_powerpoint_complete`。完成数は `6 / 14` のまま。次は固定5過去問を完成教材だけで独立再解答する。公式解答やsourceに保存された制作前検証結果を先に見ず、教材外・固定範囲外知識で補完した場合は正答でもFAILとする。
+Topic 07は `topic_07_independent_reanswer_complete`。完成数は `6 / 14` のまま。次は最終QAを実施し、過去問対応、必須成果物、source進捗整合、SPEC境界を確認する。最終QAを通過するまで `completed` にはしない。
