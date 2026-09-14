@@ -4,31 +4,19 @@
 
 ## 現在地
 
-Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は初回最終QAで検出された主source・練習sourceの進捗記録不整合を解消済み。最終QA再実施待ち。
+Topic 01〜07は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は最終QA再実施で全品質ゲートPASS。
 
-完成数: `6 / 21`
+完成数: `7 / 21`
 
-current_status: `topic_07_progress_records_synced`
+current_status: `topic_07_completed`
 
-active_topic: `07 0系のモーターはなぜ力を出せる？`
+active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 
-次工程: Topic 07の最終QAを再実施する。
-
-## Topic 06 完了記録
-
-Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再々実施まで完了し、全品質ゲート `PASS / completed`。
-
-- 固定一次5問・16小問: `16 / 16 PASS`
-- 教材外知識補完: 0件
-- 二次数合わせ: 0件
-- 固定範囲外論点追加: 0件
-- 解説PDF・練習PDF・PowerPoint表示QA: PASS
-- 練習12問の正答一意性・独立再計算: `12 / 12 PASS`
-- 主source・練習source・独立再解答記録・最終QA記録の相互整合: PASS
+次工程: Topic 08の制作前EXAM_ALIGNMENTを実施する。
 
 ## Topic 07 固定範囲
 
-系列SPECどおり、次だけを扱う。
+系列SPECどおり、次だけを扱った。
 
 - ローレンツ力
 - `F=q(v×B)`
@@ -39,7 +27,7 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 - 円運動
 - 電子の比電荷
 
-直流機そのものの等価回路、速度特性、トルク特性、始動法、速度制御等は機械系列へ譲る。
+直流機そのものの等価回路、速度特性、トルク特性、始動法、速度制御等は機械系列へ譲った。
 
 ## Topic 07 固定EXAM_ALIGNMENT
 
@@ -59,88 +47,38 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 - R8 問7・R2 問7: 半導体論点でTopic 16側のため非採用。
 - R6・R4: Topic 07固定範囲だけで完結する直接対応問題を確認できず非採用。
 - R7〜R5二次「電力・管理」「機械・制御」: 固定範囲だけを直接解かせる記述問題は確認できず、数合わせで採用しない。
-- 2026年度R8二次は制作前調査時点では未実施。
+- 2026年度R8二次は制作時点では未実施。
 
-## 教材で欠落不可の内容
+## Topic 07 完了記録
 
-- `F=q(v×B)` と `F=|q|vB sinθ`
-- 電子の負電荷による力方向の反転
-- `F=qE` と電界中の運動方程式
-- x・y成分を分離した粒子運動
-- 磁気力が仕事をせず速さを変えないこと
-- `|q|vB=mv²/r`
-- `r=mv/(|q|B)`
-- `ωc=|q|B/m`、`f=|q|B/(2πm)`、`T=2πm/(|q|B)`
-- 加速電圧 `|q|V=mv²/2`
-- 電子の比電荷 `e/m`
-- `B[T]` と `H[A/m]` の区別、真空中 `B=μ0H`
-- 電流が受ける力。直交時 `F=BIl`、一般に `F=BIl sinθ`
-- `F=BIl` を多数の移動電荷に働くローレンツ力の総和として接続すること
-- 0系直流主電動機は「磁界中の電流に力が働く」導入例に限定すること
+- 解説source: 完了
+- 解説PDF: A4縦3ページ、200 dpi表示QA `3 / 3 PASS`、文字抽出QA PASS
+- 練習source: 一次型12問、基礎3 / 標準6 / 複合3
+- 練習問題QA: 数値・論理 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`
+- 練習PDF: A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS
+- 解説画像PowerPoint: 16:9・5枚、表示QA `5 / 5 PASS`、overflow・ZIP整合性PASS
+- 完成後独立再解答: 固定5問・25小問 `25 / 25 PASS`
+- 教材外知識補完: 0件
+- 固定範囲外論点追加: 0件
+- 直流機特性追加: 0件
+- 二次数合わせ: 0件
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（進捗記録不整合のみ）
+- 主source・練習sourceの進捗記録同期: 完了
+- 最終QA再実施: `PASS / completed`
 
-## Topic 07 解説source完成内容
+## Topic 08 固定範囲
 
-- 試験論点→電界中の荷電粒子→時間変化電界→ローレンツ力→円運動→加速電圧・比電荷→電流が受ける力→0系への接続、の順で解説。
-- 固定一次5問・25小問を教材節へ全件マッピング。
-- `F=BIl` を移動電荷へのローレンツ力総和から導出。
-- 直流機特性・後続Topic論点は追加していない。
-- 3段階例題を作成。
-  - 基礎: 磁界中の電子のローレンツ力・円運動
-  - 標準: 一様電界領域を通過する電子
-  - 複合: 加速電圧・円運動・サイクロトロン周波数・比電荷
-- 例題数値は独立再計算済み。
+系列SPECどおり、次を対象に制作前EXAM_ALIGNMENTを行う。
 
-## Topic 07 練習source完成内容
+- ファラデーの法則
+- レンツの法則
+- 誘導電流
+- 渦電流
+- 電磁力
+- 磁気エネルギー
 
-- `07_motor_lorentz_force_practice.md` を作成。
-- 一次型12問、すべて五肢択一。
-- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3。
-- 固定一次5問・25小問の要求事項を全件練習問題へ接続。
-- `F=q(v×B)`、`F=BIl`、電界中の電子運動、時間変化電界、円運動、サイクロトロン周波数、加速電圧、比電荷、`B/H` 区別を収録。
-- 問題文・選択肢だけから独立再計算 `12 / 12 PASS`。
-- 正答一意性 `12 / 12 PASS`、五肢重複0件。
-- 固定範囲外知識依存0件、未確認実車値依存0件、二次数合わせ0件。
-
-## Topic 07 成果物
-
-- source: `topics/07_motor_lorentz_force/07_motor_lorentz_force.md`
-- 解説本文: 完了
-- 3段階例題: 完了
-- 解説PDF: `topics/07_motor_lorentz_force/07_motor_lorentz_force_explanation.pdf` 完了（A4縦3ページ）
-- 解説PDF表示QA: 200 dpi全3ページ `3 / 3 PASS`
-- 解説PDF文字抽出QA: PASS
-- 練習source: `topics/07_motor_lorentz_force/07_motor_lorentz_force_practice.md` 完了
-- 練習問題独立QA: `12 / 12 PASS`
-- 練習PDF: `topics/07_motor_lorentz_force/07_motor_lorentz_force_practice.pdf` 完了（A4縦4ページ）
-- 練習PDF表示QA: 200 dpi全4ページ `4 / 4 PASS`
-- 練習PDF文字抽出QA: PASS
-- 解説画像PowerPoint: `topics/07_motor_lorentz_force/07_motor_lorentz_force_images.pptx` 完了（16:9・5枚）
-- PowerPoint表示QA: 約200 dpi全5スライド `5 / 5 PASS`
-- PowerPoint overflow検査: PASS
-- PowerPoint ZIP整合性: PASS
-- 完成後独立再解答: `topics/07_motor_lorentz_force/07_motor_lorentz_force_independent_reanswer.md` 完了（固定5問・25小問 `25 / 25 PASS`）
-- 初回最終QA: `topics/07_motor_lorentz_force/07_motor_lorentz_force_final_qa.md` 実施済み（`NEEDS_REVISION / IN_PROGRESS`）
-
-## Topic 07 初回最終QAの残件と是正
-
-初回最終QAでは技術内容・試験対応・表示QAはPASSし、未完了理由は進捗記録のみだった。
-
-- 主source冒頭の旧状態 → 同期済み
-- 主source固定品質ゲートの「完成後独立再解答: 未実施」 → `25 / 25 PASS` へ同期済み
-- 主source次工程の「解説PDFを作成」 → 最終QA再実施へ同期済み
-- 練習source次工程の「解説画像PowerPoint作成」 → 実績と最終QA再実施へ同期済み
-
-教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・成果物は変更していない。
-
-## 今回の更新
-
-1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、直近のTheory2変更を確認。
-2. 既存のTopic 07成果物と初回最終QAをreconcileし、重複制作を回避。
-3. 初回最終QAで指摘された主source・練習sourceの進捗記録だけを現在地へ同期。
-4. 固定一次5問・25小問、二次非採用判断、固定範囲、教材本文、数式、例題、問題、正答、成果物は変更していない。
-5. STATUS・HANDOFFを `topic_07_progress_records_synced` へ更新。
-6. 完成数は `6 / 21` のまま。
+L0系・超電導リニアは、超電導磁石→地上コイル→誘導電流→電磁力→浮上・案内という接続に用いる。超電導物性そのものへは深入りしない。
 
 ## 次に行うこと
 
-Topic 07の最終QAを再実施する。独立再解答 `25 / 25 PASS`、二次非採用判断、固定範囲、成果物・表示QA・進捗記録の相互整合を確認し、全品質ゲート通過時のみ `completed` とする。
+Topic 08の制作前EXAM_ALIGNMENTを実施する。MASTER_SPEC・EXAM_ALIGNMENT_SPEC・系列SPECの範囲を維持し、二種一次・二次の公式過去問を確認して直接対応問題だけを固定する。件数合わせで範囲外論点を追加しない。
