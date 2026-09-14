@@ -10,17 +10,23 @@ Topic 03 `偏微分・全微分` は `completed`。
 Topic 04 `微分による極値・最適条件` は `completed`。
 Topic 05 `積分によるエネルギー計算` は `completed`。
 
-Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPoint＋PowerPoint QA＋完成後独立再解答まで完了。
+Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPoint＋PowerPoint QA＋完成後独立再解答＋最終QAまで完了。最終QAはsource Markdownの旧進捗2箇所に不整合があるため `NEEDS_REVISION`。
 
 完成数: `5 / 20`
 
-current_status: `topic_06_exam_reanswer_complete`
+current_status: `topic_06_final_qa_needs_revision`
 
 active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
 ## Topic 06 source
 
 `topics/06_calculus_train_curve/06_calculus_train_curve.md`
+
+最終QAで確認した進捗記録不整合:
+- `## 状態` が「解説本文＋3段階例題まで完了。解説PDF以降は未着手」のまま
+- `## 次工程` が「解説PDFを作成する。練習PDF、PowerPoint、完成後独立再解答にはまだ進まない」のまま
+
+教材本文・固定EXAM_ALIGNMENT・数式・例題の技術内容には修正要求なし。
 
 ## Topic 06 解説PDF
 
@@ -97,6 +103,24 @@ QA記録:
 - 固定範囲外追加0件
 - 未確認実車値依存0件
 
+## Topic 06 最終QA
+
+`topics/06_calculus_train_curve/06_calculus_train_curve_final_qa.md`
+
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
+PASS項目:
+- 必須成果物実在
+- 二種相当EXAM_ALIGNMENT 5問・15対象項目
+- 二次試験対応
+- 完成後独立再解答 `15 / 15 PASS`
+- 教材外知識補完0件
+- SPEC外内容の非混入
+- PDF / PowerPoint表示QA
+
+FAIL項目:
+- source Markdown進捗記録と実成果物の整合
+
 ## Topic 06 SPEC固定範囲
 
 中心式:
@@ -151,4 +175,4 @@ QA記録:
 
 ## 次に行うこと
 
-Topic 06の最終QAを行う。必須成果物、固定5過去問・15対象項目の完成後独立再解答 `15 / 15 PASS`、表示QA、SPEC範囲境界、source・STATUS・HANDOFFの進捗整合を確認する。全品質ゲートPASSの場合のみ `completed` とする。
+Topic 06 source Markdownの旧進捗2箇所だけを実成果物へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、PDF、PowerPointの技術内容は変更しない。その後、最終QAを再判定し、全件PASSの場合のみ `completed` とする。
