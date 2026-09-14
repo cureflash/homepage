@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 6 / 20
-- current_status: `topic_07_explanation_source_complete`
+- current_status: `topic_07_explanation_pdf_complete`
 - last_completed_topic: `06 微積分で新幹線の運転曲線を解析する`
 - active_topic: `07 一階常微分方程式`
-- next_start: Topic 07の解説PDF。固定一次5問・22小問との対応、3段階例題、頻出ミス、範囲境界を収録し全ページ表示QAを行う
+- next_start: Topic 07の練習問題source。固定一次5問・22小問へ接続し、Topic 07固定範囲内で本試験型の問題と完全解説を作る
 
 ## Topic 06
 
@@ -32,7 +32,7 @@
 - [x] 直近R7〜R5二次「機械・制御」を確認し、Topic 09〜10相当の伝達関数・ラプラス領域問題を件数合わせで追加しないことを確認
 - [x] 制作前独立再解答・公式解答照合 `22 / 22 PASS`
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
@@ -43,28 +43,35 @@
 
 ## 今回進めた内容
 
-Topic 07 `一階常微分方程式` の解説本文＋3段階例題をsource Markdownへ追加した。
+Topic 07 `一階常微分方程式` の解説PDFを完成した。
 
-本文では次を固定範囲内で説明した。
-- 変数分離形
-- `A dy/dt+B y=C` と `dy/dt+ay=b`
-- 同次解＋定常特解
-- `y=y∞+(y0-y∞)e^{-t/τ}`
-- コンデンサ電圧・コイル電流の連続性
+成果物:
+- `topics/07_first_order_ode/07_first_order_ode_explanation.pdf`
+- A4縦5ページ
+
+収録内容:
+- 変数分離形、一階線形微分方程式、同次解＋定常特解
+- 初期値・最終値・時定数からの指数応答
 - RCの `τ=R_eq C`
 - RLの `τ=L/R_eq`
-- スイッチ切替前後の初期値継承
-- 電荷保存と `q=CV`, `i=dq/dt`
-- 時間領域の一次遅れ `T dy/dt+y=Ku`
+- スイッチ切替とC電圧・L電流の連続性
+- KCL/KVLによる一未知量への縮約
+- 電荷保存から一階方程式を作る手順
+- 時間領域の一次遅れ
+- 本試験用解法アルゴリズム
+- 基礎／本試験標準／複合の3段階例題
+- 頻出ミス
+- 固定一次5問・22小問の対応
+- Topic 08〜10を先取りしない範囲境界
 
-3段階例題は、RL立上り、抵抗網を含むRC応答、二つのコンデンサの電荷再配分を扱った。
-
-固定一次5問・22小問は教材内対応表で全件マッピング済み。
-
-教材外知識補完: 0件。
-固定範囲外追加: 0件。
-未確認実車値追加: 0件。
+QA:
+- 200 dpi 全5ページ表示QA: PASS
+- 文字抽出QA: PASS
+- 固定一次5問・22小問との対応維持: PASS
+- 教材外知識補完: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値追加: 0件
 
 ## 判定
 
-Topic 07は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `6 / 20` のまま。次は解説PDF。
+Topic 07は `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `6 / 20` のまま。次は練習問題source。
