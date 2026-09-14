@@ -13,7 +13,7 @@ Topic 06 `微積分で新幹線の運転曲線を解析する` は `completed`�
 
 完成数: `6 / 20`
 
-current_status: `topic_07_practice_source_complete`
+current_status: `topic_07_practice_pdf_complete`
 
 active_topic: `07 一階常微分方程式`
 
@@ -28,7 +28,7 @@ source:
 
 `topics/07_first_order_ode/07_first_order_ode.md`
 
-制作前EXAM_ALIGNMENT、制作前独立再解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題sourceまで完了。練習PDF以降は未実施。
+制作前EXAM_ALIGNMENT、制作前独立再解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。PowerPoint以降は未実施。
 
 ## Topic 07 固定範囲
 
@@ -142,6 +142,22 @@ sourceへ次を実装済み。
 - 二次記述の件数合わせ0件
 - 未確認実車値追加0件
 
+## Topic 07 練習PDF
+
+`topics/07_first_order_ode/07_first_order_ode_practice.pdf`
+
+- A4縦4ページ
+- 全12問・全問五肢択一＋完全解説
+- 基礎3問／標準6問／複合3問
+- 固定一次5問・22小問へ全件接続
+- 200 dpi 全4ページ表示QA: PASS
+- 文字抽出QA: PASS
+- 全12問・完全解説の同期: PASS
+- 独立計算・正答一意性 `12 / 12 PASS`
+- Topic 08〜10先取り0件
+- 二次記述の件数合わせ0件
+- 未確認実車値追加0件
+
 ## 参考調査
 
 公式:
@@ -154,11 +170,10 @@ sourceへ次を実装済み。
 
 ## 次に行うこと
 
-Topic 07の練習PDFを作成する。
+Topic 07の解説画像PowerPointを作成する。
 
-- `07_first_order_ode_practice.md` の全12問・完全解説を同期する
-- A4縦で作成する
-- 固定一次5問・22小問への接続を維持する
-- 全ページ表示QA・文字抽出QAを行う
-- Topic 08以降の論点を先取りしない
+- 固定一次5問・22小問への解法経路を可視化する
+- 変数分離、一階線形標準形、初期値・最終値・時定数、RC/RL、電荷保存、スイッチ切替を本文と矛盾なく整理する
+- Topic 08以降を先取りしない
+- 表示QA、overflow、PPTX ZIP整合性を確認する
 - 未確認実車値を追加しない
