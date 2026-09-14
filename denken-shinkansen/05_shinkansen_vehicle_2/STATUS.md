@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 5 / 39
-- current_status: `topic_06_practice_pdf_complete`
+- current_status: `topic_06_powerpoint_complete`
 - last_completed_topic: `05 0系⑤ 発電ブレーキのエネルギー解析`
 - active_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
-- next_start: Topic 06の解説画像PowerPointを作成し、全スライド表示QA・overflow検査・PPTX整合性確認を行う
+- next_start: Topic 06の完成後独立再解答を、固定EXAM_ALIGNMENT一次3問＋二次2問について完成教材だけで実施する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -16,7 +16,7 @@
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
-- [ ] 06 0系⑥ 主回路全体の電力・損失・効率 — 練習PDFまで完了
+- [ ] 06 0系⑥ 主回路全体の電力・損失・効率 — 解説画像PowerPointまで完了
 
 ## Topic 06 EXAM_ALIGNMENT
 品質ゲート対象の公式過去問:
@@ -35,15 +35,17 @@
 - 練習source: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_practice_source.md`
 - 練習PDF: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_practice.pdf`
 - 練習PDF QA: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_practice_qa.md`
+- 解説画像PowerPoint: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_images.pptx`
+- PowerPoint QA: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_images_qa.md`
 
-## Topic 06 練習PDF
-- A4縦3ページ。
-- 一次8問（全問五肢択一）＋二次記述4問、合計12問。
-- 完成済み練習sourceの問題・正答・完全解説・途中式・単位・検算を反映。
-- 180 dpi全3ページ Visual QA `PASS`。
-- 文字抽出QA `PASS`。
-- 計算・論理 `12 / 12 PASS`。
-- 数値はすべて教材用仮定値。未確認0系実車値は追加していない。
+## Topic 06 解説画像PowerPoint
+- 16:9・4スライド。
+- 主回路エネルギーフロー、機器別損失内訳、負荷率―総合効率、入力電力―車輪側出力、条件変更時の損失感度比較を可視化。
+- 固定EXAM_ALIGNMENT一次3問＋二次2問へ接続。
+- 180 dpi全4スライド Visual QA `PASS`。
+- overflow検査: `0件`。
+- PPTX ZIP整合性: `PASS`。
+- 数値は教材用仮定値のみ。未確認0系実車値は追加していない。
 
 ## Topic 06 固定範囲
 SPEC記載:
@@ -67,4 +69,4 @@ SPEC記載:
 - サイリスタ位相制御、チョッパ、誘導機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱モデル
 - 未確認の0系固有損失値、冷却容量、編成出力、歯車損失
 
-次工程は解説画像PowerPointのみ。完成後独立再解答・最終QAはその後に行う。
+次工程は完成後独立再解答。最終QAはその後に行う。

@@ -7,7 +7,7 @@
 
 Topic 01〜05は最終QAまで `PASS`。完成数は `5 / 39`。
 
-現在地は `topic_06_practice_pdf_complete`。active topicは Topic 06 `0系⑥ 主回路全体の電力・損失・効率`。
+現在地は `topic_06_powerpoint_complete`。active topicは Topic 06 `0系⑥ 主回路全体の電力・損失・効率`。
 
 ## Topic 06 EXAM_ALIGNMENT
 source:
@@ -42,7 +42,13 @@ source:
   - 180 dpi全ページ Visual QA `PASS`
   - 文字抽出QA `PASS`
   - 計算・論理 `12 / 12 PASS`
-- PowerPoint: 未着手
+- 解説画像PowerPoint: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_images.pptx`
+- PowerPoint QA: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_images_qa.md`
+  - 16:9・4スライド
+  - SPEC指定の4可視化対象を反映
+  - 180 dpi全4スライド Visual QA `PASS`
+  - overflow `0件`
+  - PPTX ZIP整合性 `PASS`
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
@@ -70,10 +76,11 @@ source:
 - 整流器損失は交流入力と直流出力の差として扱い、後世代のスイッチング損失モデルへ拡張しない。
 
 ## 次の正確な開始点
-Topic 06の解説画像PowerPointを作成する。
+Topic 06の完成後独立再解答を実施する。
 
-1. 固定EXAM_ALIGNMENT一次3問＋二次2問と固定範囲を維持する。
-2. 主回路エネルギーフロー、損失内訳、負荷率―総合効率、条件変更時比較を、既存source・解説PDFの範囲だけで可視化する。
-3. 未確認0系実値を追加しない。
-4. 全スライド表示QA、overflow検査、PPTX ZIP整合性確認を行う。
-5. 完成後独立再解答・最終QAはこの次工程以降とする。
+1. 固定EXAM_ALIGNMENTのR8一次、R5一次、H30一次、R2二次、H22二次を対象にする。
+2. 公式解答・保存済み正答を先に見ず、完成教材だけで解法を再構築する。
+3. 教材外知識で補完した場合は正答でもFAILとする。
+4. 各小問・記述計算の結果と根拠を独立再解答記録へ残す。
+5. 固定範囲外の問題・論点を追加しない。
+6. 最終QAは独立再解答の次工程とする。
