@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 6 / 22
-- current_status: `topic_07_practice_pdf_complete`
+- current_status: `topic_07_powerpoint_complete`
 - last_completed_topic: `06 誘導電動機の最大トルクはどこで出る？`
 - active_topic: `07 300系のPWMコンバータは何をしている？`
-- next_start: Topic 07の解説画像PowerPointを作成し、全スライド表示・overflow・ZIP整合性QAを行う
+- next_start: Topic 07のSPEC指定4波形（交流電圧・PWM電圧・交流側電流・DCリンク電圧）を成果物化し、表示・整合性QAを行う
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -120,25 +120,24 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] SPEC指定4波形
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 07「300系のPWMコンバータは何をしている？」の練習PDF（解答・完全解説付き）を完成した。
+Topic 07「300系のPWMコンバータは何をしている？」の解説画像PowerPointを完成した。
 
 確認内容:
-- A4縦6ページ
-- 一次試験型10問＋二次記述5問、計15問
-- 全15問に解答・完全解説を付与
-- 200 dpi全6ページ表示QA: `6 / 6 PASS`
-- 文字抽出QA: PASS
-- 数値・正答整合QA: `15 / 15 PASS`
+- 16:9・4スライド
+- 全4スライド表示QA: `4 / 4 PASS`
+- overflow検査: PASS
+- ZIP整合性: PASS
+- PWMスイッチング／変調率、リアクトル・力率1・`I_P/I_Q`、DCリンク電圧条件、回生・高調波、固定過去問対応を可視化
+- 交流電圧・PWM電圧・交流側電流・DCリンク電圧は相互関係を概念表示したが、SPEC指定4波形の独立成果物化は未実施
 - 固定EXAM_ALIGNMENTは一次2問＋二次記述3問、計5問・17小問から変更なし
-- 固定17小問への接続を維持
-- 教材数値は仮定値として明示し、未確認300系実車値の追加: 0件
-- MPPT、蓄電装置設計、昇圧コンバータ設計、能動フィルタ設計等の固定範囲外論点追加: 0件
+- 未確認300系実車値の追加: 0件
+- MPPT、蓄電装置設計、昇圧コンバータ設計、能動フィルタ設計、Topic 08以降の固定範囲外論点追加: 0件
 
 ## 判定
-Topic 07は `topic_07_practice_pdf_complete`。完成数は `6 / 22` のまま。次は解説画像PowerPointを作成し、全スライド表示・overflow・ZIP整合性QAを行う。
+Topic 07は `topic_07_powerpoint_complete`。完成数は `6 / 22` のまま。次はSPEC指定4波形を成果物化し、表示・整合性QAを行う。
