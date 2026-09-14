@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 5 / 21
-- current_status: `topic_06_independent_reanswer_complete`
+- current_status: `topic_06_final_qa_needs_revision`
 - last_completed_topic: `05 0系主変圧器の鉄心には何が起きている？`
 - active_topic: `06 25kVからどうやって電圧が誘導される？`
-- next_start: Topic 06の最終QAを実施する
+- next_start: 練習sourceの過去問対応表を現行EXAM_ALIGNMENTへ同期する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -37,22 +37,24 @@
 - [x] 旧EXAM_ALIGNMENT完成後独立再解答: `14 / 16 PASS / NEEDS_REVISION`
 - [x] EXAM_ALIGNMENT是正: H30問2(4)(5) → H21問2(2)(3)
 - [x] 修正版EXAM_ALIGNMENT完成後独立再解答: `16 / 16 PASS`
-- [ ] 最終QA
+- [x] 最終QA実施: `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 練習sourceの過去問対応表をH21選定へ同期
+- [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-修正版EXAM_ALIGNMENTの一次5問・16小問を、完成教材だけで独立再解答した。
+Topic 06の最終QAを実施した。
 
-- R7問2(1)(2)(4)(5): `ヲ / ワ / イ / ヨ`、`4 / 4 PASS`
-- R5問2(2)〜(4): `イ / ニ / ロ`、`3 / 3 PASS`
-- R2問2(1)〜(5): `イ / ヨ / ワ / ロ / ヌ`、`5 / 5 PASS`
-- H28問1(3)(5): `ヨ / ル`、`2 / 2 PASS`
-- H21問2(2)(3): `ヨ / ヘ`、`2 / 2 PASS`
-- 合計 `16 / 16 PASS`
-- 教材外知識補完 0件
-- 二次数合わせ 0件
-- 固定範囲外論点の追加 0件
+- 必須成果物: PASS
+- 修正版一次5問・16小問の独立再解答: `16 / 16 PASS`
+- 教材外知識補完: 0件
+- 二次数合わせ: 0件
+- 固定範囲外論点の追加: 0件
+- 表示QA・計算QA: PASS
+- 成果物相互整合: NEEDS_REVISION
+
+不整合は `06_transformer_electromagnetic_induction_practice.md` の「過去問対応」表。旧選定のH30問2(4)(5)が残り、現行のH21問2(2)(3)が反映されていない。練習問題・正答そのものの不具合は確認していない。
 
 ## 判定
 
-Topic 06は `topic_06_independent_reanswer_complete`。完成数は `5 / 21` のまま。次工程は最終QAで、まだ `completed` にはしない。
+Topic 06は `topic_06_final_qa_needs_revision`。完成数は `5 / 21` のまま。次工程は練習sourceの記録同期で、技術内容・問題・正答・固定範囲は変更しない。
