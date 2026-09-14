@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 5 / 22
-- current_status: `topic_06_independent_reanswer_complete`
+- current_status: `topic_06_final_qa_needs_revision`
 - last_completed_topic: `05 300系の誘導電動機を等価回路で解く`
 - active_topic: `06 誘導電動機の最大トルクはどこで出る？`
-- next_start: Topic 06の最終QAを実施する
+- next_start: Topic 06 source Markdownの旧進捗記録を現在地へ同期する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -104,24 +104,22 @@
 - [x] 解説画像PowerPoint
 - [x] 計算プログラム・指定比較グラフ
 - [x] 公式過去問の教材のみでの独立再解答: 20 / 20 PASS
+- [x] 最終QA実施: `NEEDS_REVISION`（source Markdownの旧進捗記録が残存）
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 06「誘導電動機の最大トルクはどこで出る？」の完成後独立再解答を実施し、GitHub正本へ記録した。
+Topic 06「誘導電動機の最大トルクはどこで出る？」の最終QAを実施し、`NEEDS_REVISION` と判定した。
 
 確認内容:
-- 固定EXAM_ALIGNMENT: 一次2問＋二次記述4問、計6問・20小問
-- R07一次 機械 問2: 5 / 5 PASS
-- H25一次 機械 問1(1): 1 / 1 PASS
-- R07二次 機械・制御 問2(1),(3): 2 / 2 PASS
-- R03二次 機械・制御 問1(1)〜(6): 6 / 6 PASS
-- R02二次 機械・制御 問1(1)〜(4): 4 / 4 PASS
-- H23二次 機械・制御 問1(1),(2): 2 / 2 PASS
-- 合計: `20 / 20 PASS`
+- 必須成果物の実在: PASS
+- 固定EXAM_ALIGNMENT: 一次2問＋二次記述4問、計6問・20小問: PASS
+- 完成後独立再解答: `20 / 20 PASS`
 - 教材外知識による補完: 0件
 - 固定範囲外論点の追加: 0件
+- 計算プログラム・SPEC指定4比較グラフQA: PASS
 - 未確認300系実車値の使用: 0件
-- 独立再解答記録: `06_induction_motor_maximum_torque_independent_reanswer.md`
+- source Markdown冒頭に `解説PDF・練習PDF・PowerPoint・計算プログラム／比較グラフ・完成後独立再解答は未着手` という旧進捗が残存: FAIL
+- 最終QA記録: `06_induction_motor_maximum_torque_final_qa.md`
 
 ## 判定
-Topic 06は `topic_06_independent_reanswer_complete`。完成数は `5 / 22` のまま。次は最終QA。
+Topic 06は `topic_06_final_qa_needs_revision`。完成数は `5 / 22` のまま。次はsource Markdownの進捗記録だけを現在地へ同期する。
