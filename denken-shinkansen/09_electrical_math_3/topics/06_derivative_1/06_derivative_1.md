@@ -2,7 +2,7 @@
 
 ## 状態
 
-`EXAM_ALIGNMENT` 制作前調査・制作前独立検証、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、補強source/PDF、補強後の完成教材だけによる再独立解答、最終QAまで実施。補強後の再独立解答は `4 / 4 PASS`。最終QAでは教材・成果物・過去問対応・仕様境界はPASSし、主sourceの進捗記録不整合だけが残ったため `NEEDS_REVISION` とした。今回、その進捗記録を現在地へ同期した。次は最終QA再判定。
+`EXAM_ALIGNMENT` 制作前調査・制作前独立検証、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、補強source/PDF、補強後の完成教材だけによる再独立解答、最終QA再判定まで実施。補強後の再独立解答は `4 / 4 PASS`。前回最終QAで唯一FAILだった主sourceの進捗記録不整合を解消後に再判定し、必須成果物・固定EXAM_ALIGNMENT・表示QA・仕様境界・進捗整合は全件PASS。Topic 06は `completed`。次はTopic 07の制作前EXAM_ALIGNMENT。
 
 本テーマは `SPEC.md` の範囲どおり、位置‐時間グラフの傾きから速度を導入し、平均変化率、接線、微分係数、導関数、多項式の微分、三角関数の微分、合成関数の基本までを扱う。極値・最大最小、2階微分・加速度、積分、RC/RL過渡現象、電気量・磁束の微分公式そのものの体系化は後続Topicへ送る。
 
@@ -612,4 +612,4 @@ Topic 06ではこの基本形までを扱う。複雑な連鎖律や陰関数微
 
 # 次工程
 
-主sourceの進捗記録は現在地へ同期済み。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、PDF、練習、PowerPointは変更していない。次はTopic 06の最終QAを再判定する。
+Topic 06は最終QA再判定で `PASS / completed`。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、PDF、練習、PowerPointは変更していない。次はTopic 07「微分② 速度を微分すると加速度」の制作前EXAM_ALIGNMENT。
