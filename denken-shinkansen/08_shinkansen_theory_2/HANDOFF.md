@@ -10,9 +10,11 @@ Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘�
 
 修正版EXAM_ALIGNMENTの一次5問・16小問を完成教材だけで再度独立再解答し、`16 / 16 PASS`。教材外知識補完0件、二次数合わせ0件、固定範囲外論点追加0件。
 
+最終QAを実施した結果、技術内容・独立再解答・表示QA・SPEC境界はPASSしたが、練習sourceの「過去問対応」表だけ旧H30選定が残っているため `NEEDS_REVISION / IN_PROGRESS` とした。
+
 完成数: `5 / 21`
 
-current_status: `topic_06_independent_reanswer_complete`
+current_status: `topic_06_final_qa_needs_revision`
 
 active_topic: `06 25kVからどうやって電圧が誘導される？`
 
@@ -63,10 +65,11 @@ R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認済
 
 - source: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction.md`
 - 練習source: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_practice.md`
-- 解説PDF: 完了・表示QA PASS
+- 解説PDF: A4縦4ページ・表示QA PASS
 - 練習PDF: A4縦4ページ・12問・表示QA PASS
 - 解説画像PowerPoint: 16:9・3スライド・表示QA / overflow / ZIP整合性 PASS
 - 独立再解答記録: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_independent_reanswer.md`
+- 最終QA記録: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_final_qa.md`
 
 ## 修正版独立再解答
 
@@ -80,16 +83,32 @@ R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認済
 - 二次数合わせ: 0件
 - 固定範囲外論点追加: 0件
 
-旧 `14 / 16 PASS / NEEDS_REVISION` はH30問2(4)(5)の選定不整合を検出した履歴として独立再解答記録内に残す。修正版ではH21問2(2)(3)を教材§7の比例関係だけで解き、Topic 05の磁気回路計算を補完していない。
+## 最終QA
+
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
+PASS:
+- 必須成果物
+- 修正版一次5問・16小問の独立再解答
+- 二次非採用判断
+- SPEC境界
+- 表示QA・計算QA
+
+要修正:
+- `06_transformer_electromagnetic_induction_practice.md` の「過去問対応」表が旧 `H30 問2(4)(5)` のまま。
+- 現行EXAM_ALIGNMENTの `H21 問2(2)(3)` へ同期されていない。
+- 同ファイル末尾の「固定一次5問・16小問への練習接続: PASS」と記録上不整合。
+
+練習問題・正答・固定範囲自体の不具合は確認していない。
 
 ## 今回の更新
 
-1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06 sourceを確認。
-2. 修正版EXAM_ALIGNMENTの一次5問・16小問を、完成教材だけで独立再解答。
-3. 解法を導出した後に公式解答と照合し、`16 / 16 PASS` を確認。
-4. 教材外知識補完0件、二次数合わせ0件、固定範囲外論点追加0件を確認。
-5. 独立再解答記録・STATUS・HANDOFFへ反映。
+1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06成果物を再照合。
+2. 最終QAを実施。
+3. 修正版EXAM_ALIGNMENTの独立再解答 `16 / 16 PASS`、二次非採用、表示QA、SPEC境界を再確認。
+4. 練習sourceの過去問対応表に旧H30選定が残る不整合を検出。
+5. 最終QA記録・STATUS・HANDOFFへ `NEEDS_REVISION` を反映。
 
 ## 次に行うこと
 
-Topic 06の最終QAを実施する。独立再解答はPASSしたが、この段階では `completed` へ進めない。
+`06_transformer_electromagnetic_induction_practice.md` の過去問対応表だけを現行EXAM_ALIGNMENTへ同期する。H30問2(4)(5)の記載をH21問2(2)(3)へ置き換え、技術内容・問題・正答・固定範囲は変更しない。その後、最終QAを再実施する。
