@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `07 300系のPWMコンバータは何をしている？`
 
-current status: `topic_07_practice_pdf_complete`
+current status: `topic_07_powerpoint_complete`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
@@ -99,8 +99,23 @@ Topic 08以降のVVVFインバータ詳細、ベクトル制御、電流制御�
 - 教材数値は仮定値として明示し、未確認300系実車値の追加: 0件
 - MPPT、蓄電装置設計、昇圧コンバータ設計、能動フィルタ設計等の固定範囲外論点追加: 0件
 
+## Topic 07 解説画像PowerPoint完了
+
+PowerPoint:
+`topics/07_300series_pwm_converter/07_300series_pwm_converter_images.pptx`
+
+- 16:9・4スライド
+- PWMスイッチング／変調率、DCリンクと交流基本波電圧、リアクトルのフェーザ式、力率1・`I_P/I_Q`、回生・高調波、固定過去問対応を可視化
+- 交流電圧・PWM電圧・交流側電流・DCリンク電圧は相互関係を概念表示したが、SPEC指定4波形の独立成果物化は未実施
+- 全4スライド表示QA: `4 / 4 PASS`
+- overflow検査: PASS
+- ZIP整合性: PASS
+- 固定EXAM_ALIGNMENTは一次2問＋二次記述3問、計5問・17小問から変更なし
+- 固定範囲外論点による件数合わせ: 0件
+- 未確認300系実車値の追加: 0件
+
 ## 次に行うこと
 
-Topic 07の解説画像PowerPointを作成し、全スライド表示QA・overflow検査・ZIP整合性確認を行う。
+Topic 07のSPEC指定4波形（交流電圧・PWM電圧・交流側電流・DCリンク電圧）を独立成果物として作成し、表示・整合性QAを行う。
 
 固定5問・17小問への接続とSPEC固定範囲を維持し、仕様外論点・未確認実車値を追加しない。
