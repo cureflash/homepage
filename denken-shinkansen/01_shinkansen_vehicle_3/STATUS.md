@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 26 / 38
-- current_status: `topic_27_powerpoint_complete`
-- last_completed_topic: `26 補助電源① 主回路の電気を車内設備へ`
-- active_topic: `27 補助電源② 車内照明`
-- next_start: Topic 27の完成後独立再解答を行い、固定EXAM_ALIGNMENT 5問・8小問を完成教材だけで再構成して公式解答と照合する。固定範囲外知識・未確認実車値で補完しない
+- exam_aligned_completed_topics: 27 / 38
+- current_status: `topic_27_completed`
+- last_completed_topic: `27 補助電源② 車内照明`
+- active_topic: `28 空調・電熱`
+- next_start: Topic 28の制作前EXAM_ALIGNMENTを行い、系列SPEC固定範囲だけで対応する公式過去問を選定・独立解答する。仕様外論点・未確認実車値を追加しない
 
 ## 新品質ゲート進捗
-- [x] 01〜26 — PASS
-- [ ] 27 補助電源② 車内照明 — POWERPOINT_COMPLETE
+- [x] 01〜27 — PASS
+- [ ] 28 空調・電熱 — NOT_STARTED
 
 ## 27 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・8小問。系列SPEC固定範囲は、LED、光束、光度、照度、lm、cd、lx、照明計算。
@@ -80,6 +80,17 @@
 - R5上 機械 問12 — 光束発散度・輝度を含む単位判断が必要なため除外
 
 輝度、光束発散度、色温度、演色性、分光分布、LEDのpn接合・再結合・蛍光体・半導体材料、他光源の構造・点灯回路、JIS推奨照度値の暗記、未確認の新幹線車内照明実値は追加しない。
+
+## 27 完成後独立再解答
+完成済み教材だけを使って固定EXAM_ALIGNMENT 5問・8小問を再計算し、導出後に電気技術者試験センター公式解答と照合した。
+
+- R7上 機械 問12: `4` — PASS
+- R6下 機械 問17(a)(b): `2 / 3` — PASS
+- R6上 機械 問17(a): `2` — PASS
+- R5下 機械 問17(a)(b): `2 / 3` — PASS
+- H27 機械 問16(a)(b): `4 / 3` — PASS
+
+結果: `8 / 8 PASS`。必要公式、幾何条件、単位、逆二乗、余弦、複数光源加算、問題文提示LED配光式の扱いを完成教材だけで再構成でき、固定範囲外知識・未確認実車値による補完は0件。Topic 27を`COMPLETED`とする。
 
 ## 26 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・8小問。系列SPEC固定範囲は、補助電源装置、交流、直流、電圧変換、インバータ、電力、効率。
