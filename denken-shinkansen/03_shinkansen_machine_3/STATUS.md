@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_independent_reanswer_complete`
-- last_completed_topic: `06 新幹線はどうやって速度を変えている？`
-- active_topic: `07 GTO→IGBT→SiCで何が変わった？`
-- next_start: Topic 07の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT 5問、完成後独立再解答 `5 / 5 PASS`、表示QA、source進捗整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする
+- exam_aligned_completed_topics: 7 / 16
+- current_status: `topic_07_completed`
+- last_completed_topic: `07 GTO→IGBT→SiCで何が変わった？`
+- active_topic: `08 N700Sのモーターはなぜ小さくできた？`
+- next_start: Topic 08の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -17,8 +17,9 @@
 - [x] 04 300系でモーターが全部変わった — 品質ゲートPASS / completed
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
 - [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
-- [ ] 07 GTO→IGBT→SiCで何が変わった？ — 制作前EXAM_ALIGNMENT・解説本文＋3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答完了、最終QA未実施
-- [ ] 08〜16 — 未完了
+- [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
+- [ ] 08 N700Sのモーターはなぜ小さくできた？ — 未着手
+- [ ] 09〜16 — 未完了
 
 ## Topic 07 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問で固定する。
@@ -62,6 +63,7 @@
 - 解説本文＋3段階例題完成
 - 固定5問の本文マッピング `5 / 5`
 - 完成後独立再解答 `5 / 5 PASS`
+- 最終QA `PASS`
 - 教材外・固定範囲外知識による補完 `0件`
 - 固定範囲外追加 `0件`
 - 未確認実車値追加 `0件`
@@ -119,24 +121,20 @@
 ### PowerPoint QA記録
 `topics/07_power_semiconductors/07_power_semiconductors_powerpoint_qa.md`
 
-## Topic 07 現在の品質状態
-- 制作前EXAM_ALIGNMENT: 完了
-- 制作前検証: `5 / 5 PASS`
-- 解説本文: 完了
-- 3段階例題: 完了
-- 固定5問の本文マッピング: `5 / 5`
-- 解説PDF: 完了
-- 解説PDF表示QA: `PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 練習問題source: 完了（12問、独立QA `12 / 12 PASS`）
-- 練習PDF: 完了（A4縦4ページ、表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
-- 解説画像PowerPoint: 完了（16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX整合性 `PASS`）
+## Topic 07 最終QA
+- 必須成果物の実在: `PASS`
+- 固定EXAM_ALIGNMENT 5問: `PASS`
 - 完成後独立再解答: `5 / 5 PASS`
+- 解説PDF表示QA・文字抽出QA: `PASS`
+- 練習PDF表示QA・文字抽出QA: `PASS`
+- PowerPoint表示QA・overflow・ZIP整合性: `PASS`
+- source進捗整合: `PASS`
+- 固定範囲境界: `PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 未実施
 - 固定範囲外論点の追加: `0件`
 - 未確認実車値の追加: `0件`
-- 完成数: `6 / 16`
+- 判定: `PASS / completed`
+- 完成数: `7 / 16`
 
 ## Topic 06 完了要約
 Topic 06「新幹線はどうやって速度を変えている？」は品質ゲートPASS / completed。固定5問・7小問の完成後独立再解答 `7 / 7 PASS`、解説PDF・練習PDF・PowerPoint・表示QA・範囲境界を確認済み。教材外・固定範囲外知識による補完 `0件`。
