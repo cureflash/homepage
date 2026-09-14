@@ -4,75 +4,100 @@
 
 ## 現在地
 
-Topic 01〜06は `completed`。Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再々実施まで完了し、全品質ゲート `PASS / completed`。
+Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は制作前EXAM_ALIGNMENTまで完了。
 
 完成数: `6 / 21`
 
-current_status: `topic_06_completed`
+current_status: `topic_07_exam_alignment_complete`
 
 active_topic: `07 0系のモーターはなぜ力を出せる？`
 
-次工程: Topic 07の制作前EXAM_ALIGNMENT。
+次工程: Topic 07の解説本文＋3段階例題。固定一次5問・25小問の要求事項を全件教材へマッピングする。
 
-## Topic 06 固定範囲
+## Topic 06 完了記録
 
-系列SPECどおり、次だけを扱った。
+Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再々実施まで完了し、全品質ゲート `PASS / completed`。
 
-- ファラデーの法則
-- レンツの法則
-- 誘導起電力
-- 自己インダクタンス
-- 相互インダクタンス
-- 結合係数
-- 磁気エネルギー
-
-中心式は `e = -N dΦ/dt`。磁界・磁気回路そのものはTopic 05、電磁力・トルクはTopic 07、フェーザ・交流回路は後続Topicへ譲る。変圧器等価回路等も追加していない。
-
-## Topic 06 修正版EXAM_ALIGNMENT
-
-品質ゲート対象は一次「理論」5問・16小問。
-
-- R7 問2 (1)(2)(4)(5): 結合係数、結合コイルの磁気エネルギー、鎖交磁束、ファラデーの法則。公式解答 `ヲ / ワ / イ / ヨ`
-- R5 問2 (2)〜(4): 鎖交磁束の変化、速度、ファラデーの法則。公式解答 `イ / ニ / ロ`
-- R2 問2 (1)〜(5): `Ψ=Li`、`W=Li²/2`、鎖交磁束保存、磁気エネルギー。公式解答 `イ / ヨ / ワ / ロ / ヌ`
-- H28 問1 (3)(5): `Ψ=Li`、`W=Li²/2`。公式解答 `ヨ / ル`
-- H21 問2 (2)(3): 同一磁路で `L∝N²`、`M∝N1N2`。公式解答 `ヨ / ヘ`
-
-旧H30問2(4)(5)は3枝磁気回路の合成磁気抵抗・磁束分流を前提としてTopic 05依存になるため除外。固定範囲を増やさずH21問2(2)(3)へ差し替えた。
-
-R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認済みだが、Topic 06固定範囲だけで直接解かせる問題は確認できない。`08 理論・二種` は一次理論中心のため、二次問題を数合わせで追加していない。
-
-## Topic 06 成果物
-
-- source: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction.md`
-- 練習source: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_practice.md`
-- 解説PDF: A4縦4ページ・表示QA PASS
-- 練習PDF: A4縦4ページ・12問・表示QA PASS
-- 解説画像PowerPoint: 16:9・3スライド・表示QA / overflow / ZIP整合性 PASS
-- 独立再解答記録: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_independent_reanswer.md`
-- 最終QA記録: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_final_qa.md`
-
-## Topic 06 最終品質ゲート
-
-- 修正版一次5問・16小問: `16 / 16 PASS`
+- 固定一次5問・16小問: `16 / 16 PASS`
 - 教材外知識補完: 0件
 - 二次数合わせ: 0件
 - 固定範囲外論点追加: 0件
 - 解説PDF・練習PDF・PowerPoint表示QA: PASS
 - 練習12問の正答一意性・独立再計算: `12 / 12 PASS`
 - 主source・練習source・独立再解答記録・最終QA記録の相互整合: PASS
-- 最終判定: `PASS / completed`
+
+## Topic 07 固定範囲
+
+系列SPECどおり、次だけを扱う。
+
+- ローレンツ力
+- `F=q(v×B)`
+- `F=BIl`
+- 電子の運動
+- 電界中の荷電粒子
+- 磁界中の荷電粒子
+- 円運動
+- 電子の比電荷
+
+直流機そのものの等価回路、速度特性、トルク特性、始動法、速度制御等は機械系列へ譲る。
+
+## Topic 07 固定EXAM_ALIGNMENT
+
+品質ゲート対象は一次「理論」5問・25小問。
+
+- R7 問7 (1)〜(5): 磁界中の電子、ローレンツ力の向き・大きさ、円運動、周波数・周期。公式解答 `イ / ハ / ル / ヨ / ホ`
+- R5 問6 (1)〜(5): 交流電界中の電子、`F=-eE`、運動方程式、速度・位置の積分、周期運動。公式解答 `ル / カ / ヨ / ワ / ニ`
+- R3 問6 (1)〜(5): 一様電界領域を通過する電子、通過時間、力、速度成分、軌道変位。公式解答 `リ / ヘ / ハ / ル / ロ`
+- R1 問7 (1)〜(5): 磁界中の電子、ローレンツ力、円運動半径、サイクロトロン角周波数。公式解答 `ヌ / ワ / ホ / イ / ヲ`
+- H25 問6 (1)〜(5): サイクロトロン共鳴、向心力、軌道半径、加速電圧、角周波数。公式解答 `ワ / ヲ / ト / チ / ヨ`
+
+公式問題・公式解答の25小問を照合済み。
+
+### 除外判断
+
+- R8 問1: 球内電界をガウスの法則から導出する必要がありTopic 03依存のため非採用。
+- R8 問7・R2 問7: 半導体論点でTopic 16側のため非採用。
+- R6・R4: Topic 07固定範囲だけで完結する直接対応問題を確認できず非採用。
+- R7〜R5二次「電力・管理」「機械・制御」: 固定範囲だけを直接解かせる記述問題は確認できず、数合わせで採用しない。
+- 2026年度R8二次は制作前調査時点では未実施。
+
+## 教材で欠落不可の内容
+
+- `F=q(v×B)` と `F=|q|vB sinθ`
+- 電子の負電荷による力方向の反転
+- `F=qE` と電界中の運動方程式
+- x・y成分を分離した粒子運動
+- 磁気力が仕事をせず速さを変えないこと
+- `|q|vB=mv²/r`
+- `r=mv/(|q|B)`
+- `ωc=|q|B/m`、`f=|q|B/(2πm)`、`T=2πm/(|q|B)`
+- 加速電圧 `|q|V=mv²/2`
+- 電子の比電荷 `e/m`
+- `B[T]` と `H[A/m]` の区別、真空中 `B=μ0H`
+- 電流が受ける力。直交時 `F=BIl`、一般に `F=BIl sinθ`
+- `F=BIl` を多数の移動電荷に働くローレンツ力の総和として接続すること
+- 0系直流主電動機は「磁界中の電流に力が働く」導入例に限定すること
+
+## Topic 07 成果物
+
+- source: `topics/07_motor_lorentz_force/07_motor_lorentz_force.md`
+- 解説本文: 未作成
+- 解説PDF: 未作成
+- 練習source / 練習PDF: 未作成
+- 解説画像PowerPoint: 未作成
+- 完成後独立再解答: 未実施
+- 最終QA: 未実施
 
 ## 今回の更新
 
-1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、STATUS、HANDOFF、Topic 06成果物を再照合。
-2. Topic 06最終QAを再々実施し、前回までの進捗記録不整合が解消済みであることを確認。
-3. Topic 06主sourceと最終QA記録を `completed` へ同期。
-4. STATUS / HANDOFFの完成数を `6 / 21` へ更新。
-5. 教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTX・固定範囲は変更していない。
+1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFFを再照合。
+2. Topic 07固定範囲へ直接対応する公式一次過去問を直近年度から調査。
+3. R7問7、R5問6、R3問6、R1問7、H25問6の5問・25小問を固定。
+4. 公式解答25小問を照合。
+5. R8問1のTopic 03依存、半導体問題、二次の非直接対応問題を除外し、数合わせをしない判断を記録。
+6. Topic 07 source、STATUS、HANDOFFへ制作前EXAM_ALIGNMENTを反映。
+7. 完成数は `6 / 21` のまま。
 
 ## 次に行うこと
 
-Topic 07 `0系のモーターはなぜ力を出せる？` の制作前EXAM_ALIGNMENTを実施する。
-
-系列SPECの固定範囲は、ローレンツ力、`F=q(v×B)`、`F=BIl`、電子の運動、電界中・磁界中の荷電粒子、円運動、電子の比電荷。直流機そのものの特性は機械編へ譲り、仕様外論点を追加しない。
+`topics/07_motor_lorentz_force/07_motor_lorentz_force.md` の固定EXAM_ALIGNMENTを変えず、解説本文＋3段階例題を作成する。固定5問・25小問と「教材で欠落不可の内容」を全件マッピングし、直流機特性や後続Topicの論点を追加しない。
