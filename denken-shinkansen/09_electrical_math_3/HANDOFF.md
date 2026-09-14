@@ -12,11 +12,11 @@ Topic 03 `複素数` は `completed`。
 
 Topic 04 `極形式・フェーザ` は `completed`。
 
-Topic 05 `ベクトル` は完成後独立再解答で `2 / 6 PASS` となり、FAIL 4問の不足中間知識を補強中。解説source / PDF、練習source / PDF、PowerPointへ必要最小限同期済み。再独立解答は未実施。
+Topic 05 `ベクトル` は、初回完成後独立再解答 `2 / 6 PASS` で不足した4点を解説source / PDF、練習source / PDF、PowerPointへ必要最小限補強済み。補強後の再独立解答は `6 / 6 PASS`。最終QAのみ未実施。
 
 完成数: `4 / 12`
 
-current_status: `topic_05_revision_powerpoint_synced`
+current_status: `topic_05_exam_reanswer_complete`
 
 active_topic: `05 ベクトル`
 
@@ -31,7 +31,10 @@ active_topic: `05 ベクトル`
 - R4下 理論 問4: 正三角形配置で60°をなす等大2力を合成
 - R4上 理論 問4: 速度の垂直成分と `sinθ` を使って誘導起電力を求める
 
-制作前独立計算・公式照合は `6 / 6 PASS`。
+制作前独立計算・公式照合: `6 / 6 PASS`
+補強後完成教材による再独立解答: `6 / 6 PASS`
+
+再独立解答の選択肢は `(3), (3), (4), (2), (3), (3)` で試験センター公式解答と全件一致。
 
 ## 固定範囲
 
@@ -59,46 +62,28 @@ active_topic: `05 ベクトル`
 - `topics/05_vectors/05_vectors_exam_reanswer.md`
 - `topics/05_vectors/05_vectors_revision_supplement.md`
 
-## 完成後独立再解答
+## 補強内容
 
-初回判定: `NEEDS_REVISION`
-
-結果: `2 / 6 PASS`
-
-PASS:
-- R6下 理論 問4
-- R4下 理論 問4
-
-FAIL:
-- R8上 理論 問4: 点磁極が作る磁界の大きさの式が不足
-- R7下 理論 問2: 点電荷間のクーロン力の大きさの式が不足
-- R7上 理論 問11: p形/n形のキャリアと電流方向、ホール電界、ホール電圧と電流の比例関係が不足
-- R4上 理論 問4: 運動起電力を `B`・導体長・垂直速度へ結ぶ式が不足
-
-公式解答との照合は `(3), (3), (4), (2), (3), (3)`。
-
-## 補強内容と同期状況
-
-固定した不足4点:
+初回再解答FAIL 4問について、次だけを追加した。
 
 - 点磁極: `H=|m|/(4πμ0r²)`、N極から外向き・S極へ内向き
 - 点電荷: `F=|Q1Q2|/(4πε0r²)`、同符号は反発・異符号は引力
-- ホール素子: p形は正孔が慣用電流と同方向、n形は電子が反対方向。`q(v×B)` で偏りを判定し、p/nでホール電界の向きが反転。固定条件では `|VH|∝I`
+- ホール素子: p形/n形のキャリアと電流方向、`q(v×B)`、ホール電界反転、`|VH|∝I`
 - 運動起電力: `e=Blv⊥=Blv sinθ`
 
-同期済み:
-- `topics/05_vectors/05_vectors.md`
-- `topics/05_vectors/05_vectors_explanation.pdf`
-- `topics/05_vectors/05_vectors_practice.md`
-- `topics/05_vectors/05_vectors_practice.pdf`
-- `topics/05_vectors/05_vectors_images.pptx`
+固定EXAM_ALIGNMENT、既存3段階例題、初回PASS済み2問は変更していない。仕様外論点・未確認新幹線実値の追加は0件。
 
-練習は12問構成を維持し、問3・7・9・10だけを補強4点へ置換した。更新後PDFはA4縦4ページで、200 dpi全ページ表示QAを実施し、クリップ・重なり・欠落は確認されていない。
+## 再独立解答結果
 
-PowerPointは16:9・4枚構成を維持し、補強4点だけを既存スライドへ同期した。全4枚をレンダリングして表示確認し、`slides_test.py` でオーバーフローなしを確認した。
+- R8上 理論 問4: `H≈7.04 A/m` → `(3)` PASS
+- R7下 理論 問2: `Q≈2.47×10^-6 C` → `(3)` PASS
+- R7上 理論 問11: ①正・②負、n形は電界反対、`VH` は `I` に比例 → `(4)` PASS
+- R6下 理論 問4: A `+x`、B `-x` → `(2)` PASS
+- R4下 理論 問4: `F0≈1.70×10^-4 N/m` → `(3)` PASS
+- R4上 理論 問4: `e≈4.3 mV` → `(3)` PASS
 
-固定EXAM_ALIGNMENT変更0件、既存3段階例題変更0件、仕様外論点追加0件、未確認新幹線実値追加0件。
+教材外知識による補完0件。過去問対応品質ゲートはPASS。
 
 ## 次に行うこと
 
-保存済み正答を見ず固定6問を完成教材だけで再独立解答する。
+Topic 05の最終QAを実施する。必須成果物の実在、EXAM_ALIGNMENT、再独立解答 `6 / 6 PASS`、PDF/PPTX表示QA記録、進捗記録、仕様境界を確認し、全件PASSなら `completed` にする。
