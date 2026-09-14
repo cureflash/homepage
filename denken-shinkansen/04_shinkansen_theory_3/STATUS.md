@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
-- exam_aligned_completed_topics: 5 / 14
-- current_status: `topic_06_source_progress_synced`
-- last_completed_topic: `05 パンタグラフから入った電気はどこへ行く？`
-- active_topic: `06 0系の変圧器は何をしていた？`
-- next_start: Topic 06の最終QAを再実施する。教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・成果物は変更せず、進捗記録整合性を含む全品質ゲートを再確認する
+- exam_aligned_completed_topics: 6 / 14
+- current_status: `topic_06_completed`
+- last_completed_topic: `06 0系の変圧器は何をしていた？`
+- active_topic: `07 モーターはなぜ回る？`
+- next_start: Topic 07の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 01 進捗
 
@@ -100,29 +100,27 @@
 - [x] 完成後の公式過去問独立再解答 `5 / 5 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: source進捗記録不整合）
 - [x] source Markdown進捗記録同期
-- [ ] 最終QA再実施
-- [ ] 最終QA PASS
+- [x] 最終QA再実施
+- [x] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 06 `0系の変圧器は何をしていた？` の主source進捗記録をGitHub正本の現在地へ同期した。
+Topic 06 `0系の変圧器は何をしていた？` の最終QAを再実施した。
 
-変更した進捗記録:
-- 冒頭 `status`: `EXPLANATION_SOURCE_COMPLETE` → `PROGRESS_RECORD_SYNCED`
-- 完了判定: `in_progress` → `未完了`
-- 冒頭説明: 解説PDF・練習PDF・PowerPoint・完成後独立再解答 `5 / 5 PASS` を実態へ同期
-- source末尾 `完成後独立再解答`: `未実施` → `5 / 5 PASS`
-- source末尾 `最終QA`: `未実施` → `NEEDS_REVISION`（進捗記録不整合のみ）
-- `次工程`: 解説PDF作成 → 最終QA再実施
+確認結果:
+- 必須成果物: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 3段階例題・教材内マッピング: PASS
+- 練習15問・既存表示QA: PASS
+- 完成後独立再解答: `5 / 5 PASS`
+- 教材外知識補完: `0問`
+- 後続Topic知識への依存: `0問`
+- 未確認0系実車値への依存: `0問`
+- SPEC固定範囲・境界: PASS
+- source進捗記録整合性: PASS
 
-変更していないもの:
-- 教材本文
-- 固定EXAM_ALIGNMENT 5問
-- 数式
-- 3段階例題
-- SPEC固定範囲・境界
-- PDF / PowerPoint等の既存成果物
+教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・PDF / PowerPoint内容は変更していない。主sourceの完了メタデータ、最終QA記録、STATUS、HANDOFFのみ現在地へ同期した。
 
 ## 判定
 
-Topic 06は `topic_06_source_progress_synced`。完成数は `5 / 14` のまま。次は最終QA再実施。
+Topic 06は `PASS / completed`。完成数は `6 / 14`。次はTopic 07 `モーターはなぜ回る？` の制作前EXAM_ALIGNMENT。
