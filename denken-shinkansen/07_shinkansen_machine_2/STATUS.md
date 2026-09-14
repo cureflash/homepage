@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 7 / 22
-- current_status: `topic_08_explanation_pdf_complete`
+- current_status: `topic_08_practice_source_complete`
 - last_completed_topic: `07 300系のPWMコンバータは何をしている？`
 - active_topic: `08 VVVFインバータで三相交流を作る`
-- next_start: Topic 08の練習問題sourceを作成し、一次試験型＋二次記述型で固定5問13小問へ接続する
+- next_start: Topic 08の練習PDFを作成し、全ページ表示QA・文字抽出QA・数値正答整合QAを実施する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -138,6 +138,7 @@
 - [x] ゲート対象13小問の公式解答／標準解答照合を伴う制作前独立検証: 13 / 13 PASS
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
+- [x] 練習問題source（一次10問＋二次記述5問、全15問完全解説）
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 計算プログラム・指定波形/FFT
@@ -145,15 +146,16 @@
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 08「VVVFインバータで三相交流を作る」の解説PDFを完成し、GitHub正本へ反映した。
+Topic 08「VVVFインバータで三相交流を作る」の練習問題sourceを完成し、GitHub正本へ反映した。
 
-- A4縦4ページ
-- 200 dpi全4ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: PASS
-- source Markdownの解説本文＋3段階例題を同期
-- 固定一次3問＋二次記述2問、計5問・13小問への接続を維持
+- source: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_practice.md`
+- 一次試験型10問＋二次記述5問、計15問
+- 全15問に解答・完全解説を付与
+- 数値再計算: `15 / 15 PASS`
+- 一次問題の正答一意性: `10 / 10 PASS`
+- 固定一次3問＋二次記述2問、計5問・13小問へ `13 / 13` 接続
 - V/f制御、ベクトル制御、デッドタイム設計、素子選定、整流器設計、負荷電流経路詳細の追加: 0件
 - 未確認300系実車値の追加: 0件
 
 ## 判定
-Topic 08は `topic_08_explanation_pdf_complete`。完成数は `7 / 22` のまま。次は練習問題source。
+Topic 08は `topic_08_practice_source_complete`。完成数は `7 / 22` のまま。次は練習PDF作成＋表示QA・文字抽出QA・数値正答整合QA。
