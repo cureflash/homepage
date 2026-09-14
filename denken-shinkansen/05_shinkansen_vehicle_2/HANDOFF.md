@@ -7,7 +7,7 @@
 
 Topic 01〜06は最終QAまで `PASS`。完成数は `6 / 39`。
 
-現在地は `topic_07_practice_pdf_complete`。active topicは Topic 07 `直流主回路の高出力化`。
+現在地は `topic_07_powerpoint_complete`。active topicは Topic 07 `直流主回路の高出力化`。
 
 ## Topic 06 完了記録
 固定EXAM_ALIGNMENTは一次3問＋二次2問、計5問。
@@ -138,12 +138,30 @@ QA記録: `07_dc_main_circuit_high_output_explanation_pdf_qa.md`
 
 QA記録: `07_dc_main_circuit_high_output_practice_qa.md`
 
-## 次の正確な開始点
-Topic 07 `直流主回路の高出力化` の解説画像PowerPointを作成する。
+## Topic 07 解説画像PowerPoint 完了記録
 
-1. `07_dc_main_circuit_high_output.md` と確定済み解説PDFを正本としてPowerPoint化する。
-2. SPEC指定3グラフ「世代別出力比較」「出力―損失」「出力―発熱」を固定範囲内で可視化する。
-3. 全スライド表示QA、overflow検査、PPTX整合性を確認する。
-4. 固定一次4問＋二次1問・15対象項目を変更しない。
-5. 未確認の編成出力・主回路総損失・冷却容量・けん引力特性を補完しない。
-6. 位相制御、誘導機、VVVF、回生、IGBT/SiC、詳細熱設計を追加しない。
+`07_dc_main_circuit_high_output_images.pptx` を作成した。
+
+- 16:9・4スライド
+- スライド1: 直流主回路の共通骨格、`P_in=VI`、`P_loss=P_in-P_out`、`η=P_out/P_in`、`E=V-I_aR_a-V_b`、直巻機始動トルク、負荷率、高速化
+- スライド2: 確認済み実車値 `185 / 230 / 230 kW` による世代別出力比較と定格電圧・電流・冷却方式
+- スライド3: 教材用仮定モデルによる出力―損失、`m^2P_c`、`I^2R` 感度
+- スライド4: 教材用仮定モデルによる出力―発熱、冷却方式、H24二次問1(1)(2)の解法経路
+- SPEC指定3グラフ: 3 / 3収録
+- 180 dpi全4スライド表示QA: `PASS`
+- overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- 固定一次4問＋二次1問・15対象項目を維持
+- 未確認実車値の真値化: `0件`
+- 固定範囲外論点追加: `0件`
+
+QA記録: `07_dc_main_circuit_high_output_images_qa.md`
+
+## 次の正確な開始点
+Topic 07 `直流主回路の高出力化` の完成後独立再解答を実施する。
+
+1. 固定一次4問＋二次1問・15対象項目を保存済み正答を見ずに完成教材だけで再解答する。
+2. 教材外知識補完が必要になった項目は `FAIL / NEEDS_REVISION` とし、勝手に固定範囲を拡張しない。
+3. 一次・二次の公式解答・標準解答と照合し、対象項目単位でPASS/FAILを記録する。
+4. 未確認の編成出力・主回路総損失・冷却容量・けん引力特性を補完しない。
+5. 位相制御、誘導機、VVVF、回生、IGBT/SiC、詳細熱設計を追加しない。
