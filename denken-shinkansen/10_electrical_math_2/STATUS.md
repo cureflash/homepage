@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 5 / 20
-- current_status: `topic_06_explanation_source_complete`
+- current_status: `topic_06_explanation_pdf_complete`
 - last_completed_topic: `05 積分によるエネルギー計算`
 - active_topic: `06 微積分で新幹線の運転曲線を解析する`
-- next_start: 固定EXAM_ALIGNMENT 5問・15対象項目と完成した解説本文＋3段階例題を維持し、解説PDFを作成する
+- next_start: 固定EXAM_ALIGNMENT 5問・15対象項目と解説PDFの範囲を維持し、練習問題・完全解説を作成する
 
 ## Topic 06 制作品質ゲート
 
@@ -22,7 +22,7 @@
 - [x] 教材外知識補完 0件確認
 - [x] Topic 07以降・半導体定常ドリフト・インバータ制御・ガバナ特性等を品質ゲート対象から除外
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
@@ -32,20 +32,21 @@
 
 ## 今回進めた内容
 
-Topic 06 `微積分で新幹線の運転曲線を解析する` の解説本文＋3段階例題を完成した。
+Topic 06 `微積分で新幹線の運転曲線を解析する` の解説PDFを作成した。
 
-本文では固定EXAM_ALIGNMENTの全5問・15対象項目を次へ接続した。
+成果物:
+`topics/06_calculus_train_curve/06_calculus_train_curve_explanation.pdf`
 
-- R5 一次 理論 問6 (1)〜(5): 力→加速度→速度→位置の二段積分、初期条件、周期条件
-- R3 一次 理論 問6 (1)〜(5): 通過時間、一定加速度、区間別の速度・変位
-- H28 一次 理論 問4 (1)〜(3): `E=V/l` → `F=eE` → `a=F/m*`
-- H25 一次 機械 問3 (1): `P=Tω` と並進運動 `P=Fv` の対応
-- H23 二次 電力・管理 問5 (1)-[A]: エネルギー収支から加速を判断
+A4縦5ページ。固定EXAM_ALIGNMENT 5問・15対象項目と解説本文＋3段階例題を反映し、Topic 07以降の論点・未確認の実車運転曲線は追加していない。
 
-3段階例題は、一定加速度、`v-x` 曲線、区間運転＋牽引仕事・回生エネルギーで構成した。数値は教育用モデル値と明記し、未確認の実車値は追加していない。
+表示QA:
+- 5 / 5ページを200 dpiでレンダリング確認
+- 文字欠け・黒四角・重なり・クリップ: 0件
+- 数式・単位・表の表示: PASS
+- 教育用モデル値と実車値の区別: PASS
 
-制作前独立検証 `15 / 15 PASS`、固定範囲外追加 `0件` を維持している。
+制作前独立検証 `15 / 15 PASS`、教材外知識補完 `0件`、固定範囲外追加 `0件` を維持。
 
 ## 判定
 
-Topic 06は `explanation_source_complete`。完成数は `5 / 20` のまま。次は解説PDF。
+Topic 06は `explanation_pdf_complete`。完成数は `5 / 20` のまま。次は練習問題・完全解説。
