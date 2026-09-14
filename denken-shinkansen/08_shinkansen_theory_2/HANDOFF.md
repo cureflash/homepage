@@ -4,11 +4,11 @@
 
 ## 現在地
 
-Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘導される？` は解説本文＋3段階例題まで完了。
+Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘導される？` は解説本文＋3段階例題＋解説PDF＋全ページ表示QAまで完了。
 
 完成数: `5 / 21`
 
-current_status: `topic_06_explanation_source_complete`
+current_status: `topic_06_explanation_pdf_complete`
 
 active_topic: `06 25kVからどうやって電圧が誘導される？`
 
@@ -78,7 +78,8 @@ R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認し
 - 二次数合わせ: 0件
 - 解説本文: 完了
 - 3段階例題: 完了
-- 解説PDF: 未着手
+- 解説PDF: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_explanation.pdf`
+- 解説PDF表示QA: A4縦4ページ、全4ページ200 dpiレンダリング確認、PASS
 - 練習問題source/PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未着手
@@ -87,12 +88,12 @@ R7〜R5の二次「電力・管理」「機械・制御」を全6科目確認し
 ## 今回の更新
 
 1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06 sourceを確認。
-2. 固定一次5問・16小問から逆算して解説本文を作成。
-3. 基礎・本試験標準・複合の3段階例題を作成。
-4. 16小問の要求事項を本文・例題へ全件対応付け。
-5. 二次非採用判断と固定範囲を維持し、仕様外追加0件。
-6. Topic 06 source、STATUS、HANDOFFをGitHub正本へ反映する。
+2. 固定済み解説本文＋3段階例題から解説PDFを作成。
+3. A4縦4ページを200 dpiで全ページレンダリング。
+4. 文字切れ、重なり、ページ外はみ出し、文字化けがないことを確認し表示QA PASS。
+5. 固定一次5問・16小問、二次非採用判断、固定範囲を維持し、仕様外追加0件。
+6. 解説PDF、STATUS、HANDOFFをGitHub正本へ反映。
 
 ## 次に行うこと
 
-Topic 06の解説PDFを作成し、全ページ表示QAを行う。固定一次5問・16小問、二次非採用判断、固定範囲を変更しない。
+Topic 06の練習問題source＋練習PDFを作成する。固定一次5問・16小問、二次非採用判断、固定範囲を変更しない。
