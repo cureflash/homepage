@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 6 / 22
-- current_status: `topic_07_explanation_pdf_complete`
+- current_status: `topic_07_practice_pdf_complete`
 - last_completed_topic: `06 誘導電動機の最大トルクはどこで出る？`
 - active_topic: `07 300系のPWMコンバータは何をしている？`
-- next_start: Topic 07の練習PDF（解答・完全解説付き）を作成し、全ページ表示QAを行う
+- next_start: Topic 07の解説画像PowerPointを作成し、全スライド表示・overflow・ZIP整合性QAを行う
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -119,24 +119,26 @@
 - [x] ゲート対象17小問の公式解答／標準解答照合を伴う制作前独立検証: 17 / 17 PASS
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習PDF（解答・完全解説付き）
+- [x] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] SPEC指定4波形
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 07「300系のPWMコンバータは何をしている？」の解説PDFを完成した。
+Topic 07「300系のPWMコンバータは何をしている？」の練習PDF（解答・完全解説付き）を完成した。
 
 確認内容:
-- A4縦4ページ
-- 200 dpi全4ページ表示QA: `4 / 4 PASS`
+- A4縦6ページ
+- 一次試験型10問＋二次記述5問、計15問
+- 全15問に解答・完全解説を付与
+- 200 dpi全6ページ表示QA: `6 / 6 PASS`
 - 文字抽出QA: PASS
-- source Markdownの解説本文＋3段階例題を同期
+- 数値・正答整合QA: `15 / 15 PASS`
 - 固定EXAM_ALIGNMENTは一次2問＋二次記述3問、計5問・17小問から変更なし
 - 固定17小問への接続を維持
-- 固定範囲外論点による件数合わせ: 0件
-- 未確認300系実車値の追加: 0件
+- 教材数値は仮定値として明示し、未確認300系実車値の追加: 0件
+- MPPT、蓄電装置設計、昇圧コンバータ設計、能動フィルタ設計等の固定範囲外論点追加: 0件
 
 ## 判定
-Topic 07は `topic_07_explanation_pdf_complete`。完成数は `6 / 22` のまま。次は練習PDF（解答・完全解説付き）を作成し、全ページ表示QAを行う。
+Topic 07は `topic_07_practice_pdf_complete`。完成数は `6 / 22` のまま。次は解説画像PowerPointを作成し、全スライド表示・overflow・ZIP整合性QAを行う。
