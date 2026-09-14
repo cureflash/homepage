@@ -7,7 +7,7 @@
 
 Topic 01〜05は最終QAまで `PASS`。完成数は `5 / 39`。
 
-現在地は `topic_06_powerpoint_complete`。active topicは Topic 06 `0系⑥ 主回路全体の電力・損失・効率`。
+現在地は `topic_06_independent_reanswer_complete`。active topicは Topic 06 `0系⑥ 主回路全体の電力・損失・効率`。
 
 ## Topic 06 EXAM_ALIGNMENT
 source:
@@ -49,7 +49,15 @@ source:
   - 180 dpi全4スライド Visual QA `PASS`
   - overflow `0件`
   - PPTX ZIP整合性 `PASS`
-- 完成後独立再解答: 未実施
+- 完成後独立再解答: `PASS`
+- 独立再解答記録: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_independent_reanswer.md`
+  - 固定5問すべて公式解答・標準解答と一致
+  - 一次3問・15小問 `15 / 15 PASS`
+  - 二次2問・7設問 `7 / 7 PASS`
+  - 全チェックポイント `22 / 22 PASS`
+  - 教材外知識補完 `0件`
+  - 固定範囲外追加 `0件`
+  - 未確認0系実値追加 `0件`
 - 最終QA: 未実施
 
 ## Topic 06 固定範囲
@@ -76,11 +84,11 @@ source:
 - 整流器損失は交流入力と直流出力の差として扱い、後世代のスイッチング損失モデルへ拡張しない。
 
 ## 次の正確な開始点
-Topic 06の完成後独立再解答を実施する。
+Topic 06の最終QAを実施する。
 
-1. 固定EXAM_ALIGNMENTのR8一次、R5一次、H30一次、R2二次、H22二次を対象にする。
-2. 公式解答・保存済み正答を先に見ず、完成教材だけで解法を再構築する。
-3. 教材外知識で補完した場合は正答でもFAILとする。
-4. 各小問・記述計算の結果と根拠を独立再解答記録へ残す。
-5. 固定範囲外の問題・論点を追加しない。
-6. 最終QAは独立再解答の次工程とする。
+1. 必須成果物が実在し、各QAがPASSであることを確認する。
+2. 固定EXAM_ALIGNMENT一次3問＋二次2問と教材マッピングを再確認する。
+3. 完成後独立再解答 `5 / 5 PASS`、一次 `15 / 15`、二次 `7 / 7` を確認する。
+4. source・練習source・STATUS・HANDOFFの進捗記録に旧状態や矛盾が残っていないか確認する。
+5. 固定範囲外論点・未確認0系実値の混入がないことを確認する。
+6. 全品質ゲートがPASSの場合のみTopic 06を `completed` とし、完成数を `6 / 39` に進める。
