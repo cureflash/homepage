@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 27 / 38
-- current_status: `topic_28_practice_pdf_complete`
+- current_status: `topic_28_powerpoint_complete`
 - last_completed_topic: `27 補助電源② 車内照明`
 - active_topic: `28 空調・電熱`
-- next_start: Topic 28の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問・10小問の解法・判断経路を可視化し、表示QA・スライド境界overflow検査・PPTX整合性検査を行う。仕様外論点・未確認実車値は追加しない
+- next_start: Topic 28の完成教材だけを使って固定EXAM_ALIGNMENT 5問・10小問を保存済み正答を見ずに独立再解答し、教材外知識補完0件を確認して品質ゲート判定を行う
 
 ## 新品質ゲート進捗
 - [x] 01〜27 — PASS
-- [ ] 28 空調・電熱 — IN_PROGRESS / EXAM_ALIGNMENT PASS (`10 / 10`) / explanation source complete / explanation PDF complete / practice PDF complete
+- [ ] 28 空調・電熱 — IN_PROGRESS / EXAM_ALIGNMENT PASS (`10 / 10`) / explanation source complete / explanation PDF complete / practice PDF complete / PowerPoint complete
 
 ## 28 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・10小問。系列SPEC固定範囲は、空調、電熱、ジュール熱、熱量、電力、効率。
@@ -56,6 +56,14 @@
 - 数値計算を独立再計算し、各数値問題の正答が選択肢内で一意であることを確認
 - 正答位置はA/B/C/D/E各3問
 - 180 dpiで全5ページ表示QA PASS。文字切れ・重なり・ページ外はみ出し・破損グリフなし
+- 固定範囲外論点・未確認実車値の追加なし
+
+## 28 解説画像PowerPoint
+- PowerPoint: `topics/28_air_conditioning_heating/28_air_conditioning_heating_images.pptx`
+- 16:9・4スライド。解法フロー、顕熱/潜熱/質量整理、熱効率ηとCOPの区別、固定5問・10小問への対応を可視化
+- 固定5問・10小問の判断経路を全件収録。R8上・R7上は顕熱/潜熱/η、R4上・R1・H28はCOP系へ明示的に分岐
+- 全4スライド表示QA PASS。文字切れ・重なり・破損グリフなし
+- スライド境界overflow検査 `0件`、PPTX ZIP整合性検査 PASS
 - 固定範囲外論点・未確認実車値の追加なし
 
 ## 28 範囲境界

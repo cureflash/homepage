@@ -6,20 +6,19 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は27/38。01〜27がPASS。active topicは28 `空調・電熱`。
 
 ## 今回進捗
-Topic 28 `空調・電熱` の練習source＋練習PDFを完成した。A4縦5ページ、全15問（基礎4／標準8／複合3）、全問五肢択一・完全解説付き。固定EXAM_ALIGNMENT 5問・10小問を演習へ全件マッピングし、数値計算を独立再計算して正答の一意性を確認した。正答位置はA/B/C/D/E各3問。180 dpiで全5ページ表示QA PASS。仕様外論点・未確認実車値の追加は0件。
+Topic 28 `空調・電熱` の解説画像PowerPointを完成した。16:9・4スライドで、固定EXAM_ALIGNMENT 5問・10小問の解法・判断経路を可視化した。全4スライド表示QA PASS、スライド境界overflow 0件、PPTX ZIP整合性検査PASS。仕様外論点・未確認実車値の追加は0件。
 
 更新:
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating_practice.md`
-- `topics/28_air_conditioning_heating/28_air_conditioning_heating_practice.pdf`
-- `STATUS.md` — `topic_28_practice_pdf_complete`へ更新
+- `topics/28_air_conditioning_heating/28_air_conditioning_heating_images.pptx`
+- `STATUS.md` — `topic_28_powerpoint_complete`へ更新
 - `HANDOFF.md`
 
 ## Topic 28 品質ゲート対象
-1. R8上 機械 問17(a)(b) — 木材・水の顕熱、蒸発潜熱、総合効率、乾燥時間 — `5 / 2` — PASS
-2. R7上 機械 問17(a)(b) — 氷の融解熱、水の顕熱、電熱装置の熱効率・消費電力・時間 — `2 / 2` — PASS
-3. R4上 機械 問17(a)(b) — ヒートポンプのCOP、消費電力量、供給熱量、水温上昇 — `5 / 5` — PASS
-4. R1 機械 問17(a)(b) — 水の加熱熱量、COP、消費電力 — `2 / 3` — PASS
-5. H28 機械 問17(a)(b) — 水の加熱熱量、COP、加熱時間 — `2 / 2` — PASS
+1. R8上 機械 問17(a)(b) — 木材・水の顕熱、蒸発潜熱、乾燥器の消費電力・総合効率から必要時間を求める — `5 / 2` — PASS
+2. R7上 機械 問17(a)(b) — 氷の融解と水の温度上昇に必要な熱量を、電熱装置の熱効率・消費電力・時間へ接続する — `2 / 2` — PASS
+3. R4上 機械 問17(a)(b) — ヒートポンプ式電気給湯器の消費電力量とCOPから供給熱量を求め、水の温度上昇へつなぐ — `5 / 5` — PASS
+4. R1 機械 問17(a)(b) — 水の加熱に必要な熱量を求め、COPと運転時間からヒートポンプの消費電力を逆算する — `2 / 3` — PASS
+5. H28 機械 問17(a)(b) — 水の加熱に必要な熱量と、ヒートポンプの消費電力・COPから加熱時間を求める — `2 / 2` — PASS
 
 制作前独立解答: `10 / 10 PASS`。
 
@@ -47,6 +46,16 @@ Topic 28 `空調・電熱` の練習source＋練習PDFを完成した。A4縦5�
 - 正答位置A/B/C/D/E各3問
 - 180 dpi全5ページ表示QA PASS。文字切れ・重なり・ページ外はみ出し・破損グリフなし
 
+## Topic 28 解説画像PowerPoint
+- PPTX: `topics/28_air_conditioning_heating/28_air_conditioning_heating_images.pptx`
+- 16:9・4スライド
+- slide 1: `加熱過程→必要熱量→η/COP→逆算→検算` の共通解法フローと抵抗加熱/ヒートポンプ分岐
+- slide 2: 顕熱 `Q=mcΔT`、潜熱 `Q=mL`、複数過程 `Q_total=ΣQ`、過程別質量整理
+- slide 3: 熱効率 `η` と `COP` の意味・エネルギー流れ・逆算式・単位換算
+- slide 4: 固定5問・10小問と教材節の対応、試験前チェック
+- 全4スライド表示QA PASS、境界overflow `0件`、PPTX ZIP整合性 PASS
+- 仕様外論点・未確認実車値の追加なし
+
 ## Topic 28 範囲境界
 追加しない:
 - 熱伝導率、熱抵抗、熱流、対流、放射伝熱
@@ -65,14 +74,14 @@ Topic 28 `空調・電熱` の練習source＋練習PDFを完成した。A4縦5�
 - R3 機械 問17 — 放射伝熱・熱抵抗
 
 ## 現在の状態
-- `current_status`: `topic_28_practice_pdf_complete`
+- `current_status`: `topic_28_powerpoint_complete`
 - 完成数: 27/38
 - 01〜27: PASS
 - active topic: 28 `空調・電熱`
-- Topic 28: EXAM_ALIGNMENT PASS / 解説本文完成 / 解説PDF完成 / 練習PDF完成 / PowerPoint以降未着手
+- Topic 28: EXAM_ALIGNMENT PASS / 解説本文完成 / 解説PDF完成 / 練習PDF完成 / PowerPoint完成 / 完成後独立再解答は未着手
 
 ## 次の正確な開始点
-Topic 28の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問・10小問の解法・判断経路を可視化し、表示QA、スライド境界overflow検査、PPTX ZIP整合性検査を行う。固定範囲外論点・未確認実車値を追加しない。
+Topic 28の完成教材だけを使い、固定EXAM_ALIGNMENT 5問・10小問を保存済み正答を見ずに独立再解答する。各小問について教材内の式・判断経路だけで完結するかを確認し、教材外知識補完0件を条件に品質ゲート判定を行う。固定範囲外論点を補足して通過させない。
 
 ## 直前完了 Topic 27
 Topic 27 `補助電源② 車内照明` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。選定5問・8小問は完成後も`8 / 8 PASS`で`COMPLETED`。
