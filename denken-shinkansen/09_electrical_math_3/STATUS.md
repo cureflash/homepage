@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 5 / 12
-- current_status: `topic_06_explanation_pdf_complete`
+- current_status: `topic_06_practice_source_complete`
 - last_completed_topic: `05 ベクトル`
 - active_topic: `06 微分① ダイヤの傾きは速度`
-- next_start: `Topic 06 練習問題source`
+- next_start: `Topic 06 練習PDF`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -21,7 +21,7 @@
 - [x] 制作前独立計算・公式解答照合 `4 / 4 PASS`
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
@@ -29,18 +29,18 @@
 
 ## 今回進めた内容
 
-Topic 06 `微分① ダイヤの傾きは速度` の解説PDFを完成した。
+Topic 06 `微分① ダイヤの傾きは速度` の練習問題sourceを完成した。
 
-`topics/06_derivative_1/06_derivative_1.md` の解説本文＋3段階例題を正本とし、平均変化率→接線→導関数→電気グラフへの接続をA4縦4ページに整理した。固定EXAM_ALIGNMENT 4問への教材内マッピングも収録した。
+`topics/06_derivative_1/06_derivative_1_practice.md` に全12問・全問五肢択一、基礎3 / 標準7 / 複合2を作成した。平均変化率、微分係数・導関数、多項式/三角関数/合成関数、`v(t)=dx/dt`、直線・折れ線の傾き、局所的な `ΔI/ΔV` と逆数、有限変化・相対変化を固定範囲内で練習できる構成とした。
 
-200 dpiで全4ページを表示確認し、文字切れ・重なり・欠落グリフがないことを確認した。文字抽出でも主要論点、3段階例題、固定4問、範囲境界を確認した。
+固定EXAM_ALIGNMENT 4問に対して、R7上問13は問8・11、R6下問3は問6、R5上問10は問7、R4下問7は問9へ対応付けた。全12問を独立計算し `12 / 12 PASS`。
 
-R7上問13、R6下問3、R5上問10、R4下問7の固定EXAM_ALIGNMENTは変更していない。極値・2階微分・加速度、積分、電気公式の体系説明、指数関数・RC/RL過渡現象等の後続Topic論点は追加していない。固定範囲外追加0件、未確認新幹線実値追加0件。
+極値・2階微分・加速度、積分、指数関数・RC/RL過渡現象、電気公式の体系説明、専門回路理論は追加していない。固定範囲外追加0件、未確認新幹線実値追加0件。
 
 ## 判定
 
-`EXPLANATION PDF COMPLETE`。
+`PRACTICE SOURCE COMPLETE`。
 
 Topic 06は教材制作中のため `completed` にはしない。完成数は `5 / 12` のまま。
 
-次は Topic 06 の練習問題sourceを作成する。
+次は Topic 06 の練習PDF（解答・完全解説付き）を作成する。
