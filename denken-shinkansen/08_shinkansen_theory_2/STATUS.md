@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 6 / 21
-- current_status: `topic_07_independent_reanswer_complete`
+- current_status: `topic_07_final_qa_needs_revision`
 - last_completed_topic: `06 25kVからどうやって電圧が誘導される？`
 - active_topic: `07 0系のモーターはなぜ力を出せる？`
-- next_start: Topic 07の最終QAを実施する
+- next_start: Topic 07の主source・練習sourceの旧進捗記録を現在地へ同期する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -64,25 +64,23 @@
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答 25小問: `25 / 25 PASS`
-- [ ] 最終QA
+- [x] 最終QA: `NEEDS_REVISION / IN_PROGRESS`
 
 ## 今回進めた内容
 
-Topic 07の完成後独立再解答を実施した。
+Topic 07の最終QAを実施した。
 
-- 固定一次5問・25小問を完成教材の式・解法だけで再構成
-- R7 問7: `5 / 5 PASS`
-- R5 問6: `5 / 5 PASS`
-- R3 問6: `5 / 5 PASS`
-- R1 問7: `5 / 5 PASS`
-- H25 問6: `5 / 5 PASS`
-- 合計: `25 / 25 PASS`
-- 教材外の電気理論による補完: 0件
+- 必須成果物の実在: PASS
+- 固定一次5問・25小問の完成後独立再解答: `25 / 25 PASS`
+- 教材外知識補完: 0件
 - 固定範囲外論点追加: 0件
 - 直流機特性追加: 0件
 - 二次数合わせ: 0件
-- 独立再解答記録: `topics/07_motor_lorentz_force/07_motor_lorentz_force_independent_reanswer.md`
+- 解説PDF・練習PDF・PowerPoint表示QA記録: PASS
+- 主source冒頭・固定品質ゲート・次工程に旧進捗が残存
+- 練習source次工程に旧進捗が残存
+- 最終QA記録: `topics/07_motor_lorentz_force/07_motor_lorentz_force_final_qa.md`
 
 ## 判定
 
-Topic 07は `independent reanswer complete / IN_PROGRESS`。完成数は `6 / 21` のまま。次工程は最終QA。
+Topic 07は `NEEDS_REVISION / IN_PROGRESS`。技術内容と試験対応品質ゲートはPASSだが、主source・練習sourceの進捗記録が実在成果物と不整合。完成数は `6 / 21` のまま。次工程は進捗記録の同期。
