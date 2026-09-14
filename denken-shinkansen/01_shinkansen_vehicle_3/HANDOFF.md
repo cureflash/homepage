@@ -6,12 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は26/38。01〜26がPASS。active topicは27 `補助電源② 車内照明`。
 
 ## 今回進捗
-Topic 27の練習問題source＋練習PDFを完成した。全15問を基礎4／標準8／複合3で構成し、全問五肢択一・完全解説付き。固定EXAM_ALIGNMENT 5問・8小問の要求事項を演習へ全件マッピングした。数値計算を独立再計算し、正答位置はA/B/C/D/E各3問。PDFはA4縦5ページ、180 dpiで全ページ表示QA PASS。系列SPEC固定範囲`LED、光束、光度、照度、lm、cd、lx、照明計算`から広げていない。
+Topic 27の解説画像PowerPointを完成した。16:9・4スライドで、固定EXAM_ALIGNMENT 5問・8小問の判断経路を`lm→cd→lx`、直下/斜入射の幾何、複数光源の照度合成、問題文提示LED配光、7段階解法・過去問マッピングとして可視化した。LibreOffice表示QA、境界overflow、PPTX ZIP整合性はすべてPASS。系列SPEC固定範囲`LED、光束、光度、照度、lm、cd、lx、照明計算`から広げていない。
 
 更新:
-- `topics/27_cabin_lighting/27_cabin_lighting_practice.md` — 15問、完全解説・過去問マッピング・QA記録
-- `topics/27_cabin_lighting/27_cabin_lighting_practice.pdf` — A4縦5ページ、15問、表示QA PASS
-- `STATUS.md` — `topic_27_practice_pdf_complete`へ更新
+- `topics/27_cabin_lighting/27_cabin_lighting_images.pptx` — 16:9、4スライド、表示QA・overflow・ZIP整合性PASS
+- `STATUS.md` — `topic_27_powerpoint_complete`へ更新
 - `HANDOFF.md`
 
 ## Topic 27 品質ゲート対象
@@ -66,6 +65,18 @@ Topic 27の練習問題source＋練習PDFを完成した。全15問を基礎4／
 - 180 dpiで全5ページ表示QA PASS。文字切れ・重なり・ページ外はみ出し・破損グリフなし
 - 未確認実車値・固定範囲外論点の追加なし
 
+## Topic 27 解説画像PowerPoint
+- `topics/27_cabin_lighting/27_cabin_lighting_images.pptx`
+- 16:9、4スライド
+- Slide 1: 光束・光度・照度と`lm→cd→lx`の判断経路
+- Slide 2: 直下/斜入射の幾何、`r=√(h^2+x^2)`、`cosθ=h/r`、照度式
+- Slide 3: 複数光源の照度加算と問題文提示LED配光`I(θ)=I(0)cosθ`
+- Slide 4: 7段階解法と固定5問・8小問のEXAM_ALIGNMENT
+- LibreOfficeで全4スライド表示QA PASS。文字切れ・重なり・ページ外はみ出しなし
+- スライド境界overflow検査0件、PPTX ZIP整合性検査PASS
+- LED配光式は問題文提示条件として明記し、全LEDへ一般化していない
+- 未確認実車値・固定範囲外論点の追加なし
+
 ## Topic 27 参考教材
 - e-sysnet「照明工学の計算」
   - https://e-sysnet.com/%E7%85%A7%E6%98%8E%E8%A8%88%E7%AE%97/
@@ -91,13 +102,13 @@ Topic 27の練習問題source＋練習PDFを完成した。全15問を基礎4／
 - 未確認の新幹線車内照明の光束・照度・消費電力・器具数等の実車値
 
 ## 現在の状態
-- `current_status`: `topic_27_practice_pdf_complete`
+- `current_status`: `topic_27_powerpoint_complete`
 - 完成数: 26/38
 - 01〜26: PASS
 - active topic: 27 `補助電源② 車内照明`
 
 ## 次の正確な開始点
-Topic 27の解説画像PowerPointを作成し、固定EXAM_ALIGNMENT 5問・8小問の判断経路を固定範囲内で可視化する。全スライド表示QA、境界overflow検査、PPTX ZIP整合性検査を行う。系列SPEC固定範囲から広げない。
+Topic 27の完成後独立再解答を行う。固定EXAM_ALIGNMENT 5問・8小問を、保存済み正答を先に見ず、完成した解説本文・解説PDF・練習PDF・PowerPointの内容だけで再構成し、その後に公式解答と照合する。固定範囲外知識・未確認実車値で補完しない。
 
 ## 直前完了 Topic 26
 Topic 26 `補助電源① 主回路の電気を車内設備へ` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。選定5問・8小問は完成後も`8 / 8 PASS`で`COMPLETED`。固定範囲外知識・未確認実車値による補完は0件。
