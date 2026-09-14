@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 5 / 20
-- current_status: `topic_06_powerpoint_complete`
+- current_status: `topic_06_exam_reanswer_complete`
 - last_completed_topic: `05 積分によるエネルギー計算`
 - active_topic: `06 微積分で新幹線の運転曲線を解析する`
-- next_start: Topic 06の完成後独立再解答を、保存済み正答を先に見ず完成教材だけで実施する。固定EXAM_ALIGNMENT 5問・15対象項目を全件再導出し、教材外知識補完0件を確認する
+- next_start: Topic 06の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT 5問・15対象項目の完成後独立再解答 `15 / 15 PASS`、表示QA、SPEC範囲境界、進捗記録の整合を確認し、全件PASSの場合のみ `completed` とする
 
 ## Topic 06 制作品質ゲート
 
@@ -27,32 +27,27 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答 15 / 15 PASS
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 06 `微積分で新幹線の運転曲線を解析する` の解説画像PowerPointを完成した。
+Topic 06 `微積分で新幹線の運転曲線を解析する` の完成後独立再解答を実施した。
 
-成果物:
-`topics/06_calculus_train_curve/06_calculus_train_curve_images.pptx`
+記録:
+`topics/06_calculus_train_curve/06_calculus_train_curve_exam_reanswer.md`
 
-QA記録:
-`topics/06_calculus_train_curve/06_calculus_train_curve_powerpoint_qa.md`
-
-構成・QA:
-- 16:9、全5スライド
-- 時間領域 `F→a→v→x`、位置領域 `a=v dv/dx` / `t=∫dx/v(x)`、仕事・回生エネルギー、固定EXAM_ALIGNMENT対応表を可視化
-- 固定EXAM_ALIGNMENT 一次4問＋二次1問、計5問・15対象項目を維持
-- 全5スライド表示QA `PASS`
-- overflow 0件
-- ZIP整合性 `PASS`
-- 文字切れ・重なり・空白ページ・文字化け 0件
+結果:
+- 固定EXAM_ALIGNMENT 一次4問＋二次1問、計5問・15対象項目を完成教材の式・解法から再導出
+- 一次4問 `14 / 14 PASS`
+- 二次1問 `1 / 1 PASS`
+- 合計 `15 / 15 PASS`
+- 公式解答・標準解答と全件一致
 - 教材外知識補完 0件
 - 固定範囲外追加 0件
-- 未確認の実車運転曲線・実車回生効率の追加 0件
+- 未確認実車値依存 0件
 
 ## 判定
 
-Topic 06は `powerpoint_complete`。完成数は `5 / 20` のまま。次は完成後独立再解答。
+Topic 06は `exam_reanswer_complete`。完成数は `5 / 20` のまま。次は最終QA。
