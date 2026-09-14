@@ -4,12 +4,12 @@ updated: 2026-09-14
 series: `06_shinkansen_power_2`
 active_topic: `04`
 theme: むつの原子炉を積んだ原子力新幹線を東京から佐世保まで走らせる
-current_status: `topic_04_powerpoint_complete`
+current_status: `topic_04_independent_reanswer_complete`
 completed_topics: `3 / 22`
 
 ## Topic 04 current result
 
-解説画像PowerPointを作成し、表示・機械QAを完了。
+完成後独立再解答を実施し、正式選定した一次3問＋二次2問の計5問を `5 / 5 PASS`。
 
 正式選定5問:
 - R7 二種一次「電力」問5
@@ -19,16 +19,17 @@ completed_topics: `3 / 22`
 - R3 二種二次「電力・管理」問6
 
 今回の確認:
-- `topics/04_nuclear_power/04_nuclear_power_images.pptx` を作成
-- 16:9・4スライド
-- 固定5問の要求事項を全件可視化
-- 制作前独立検証: `5 / 5 PASS` を維持
-- 練習15問独立QA: `15 / 15 PASS` を維持
-- 全4スライド表示QA: `PASS`
-- `slides_test.py`: `PASS / No overflow detected`
-- PPTX ZIP整合性: `PASS`
+- `topics/04_nuclear_power/04_nuclear_power_independent_reanswer.md` を作成
+- 保存済み正答を解答根拠に使わず、答案確定後に公式解答・標準解答と照合
+- 完成後独立再解答: `5 / 5 PASS`
+- 一次: `3 / 3 PASS`
+- 二次: `2 / 2 PASS`
+- 教材外知識補完: `0件`
 - SPEC外追加: `0件`
-- 未確認実値追加: `0件`
+- 未確認実値依存: `0件`
+- 正式選定5問の変更: `0件`
+- 練習15問独立QA: `15 / 15 PASS` を維持
+- PDF/PPTX成果物は変更なし
 
 ## Gate checklist
 
@@ -43,9 +44,9 @@ completed_topics: `3 / 22`
 - [x] Topic 04 解説PDF
 - [x] Topic 04 練習PDF
 - [x] Topic 04 解説画像PowerPoint
-- [ ] Topic 04 完成後独立再解答
+- [x] Topic 04 完成後独立再解答
 - [ ] Topic 04 最終QA
 
 ## next_start
 
-Topic 04 の正式選定5問を、完成教材だけを使って独立再解答する。保存済み正答を先に見ず、教材外知識補完・SPEC外論点・未確認実値に依存しないことを確認する。
+Topic 04 の最終QAを実施する。必須成果物、EXAM_ALIGNMENT、正式5問 `5 / 5 PASS`、練習15問 `15 / 15 PASS`、PDF/PPTX表示QA、固定範囲境界、進捗記録の整合を確認し、全件PASSの場合のみ `completed` とする。
