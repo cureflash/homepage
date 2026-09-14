@@ -7,7 +7,7 @@
 
 Topic 01〜05は最終QAまで `PASS`。完成数は `5 / 39`。
 
-現在地は `topic_06_final_qa_needs_revision`。active topicは Topic 06 `0系⑥ 主回路全体の電力・損失・効率`。
+現在地は `topic_06_source_progress_synced`。active topicは Topic 06 `0系⑥ 主回路全体の電力・損失・効率`。
 
 ## Topic 06 EXAM_ALIGNMENT
 source:
@@ -58,12 +58,15 @@ source:
   - 教材外知識補完 `0件`
   - 固定範囲外追加 `0件`
   - 未確認0系実値追加 `0件`
-- 最終QA: `NEEDS_REVISION`
+- 最終QA: 前回 `NEEDS_REVISION`
 - 最終QA記録: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_final_qa.md`
   - 必須成果物・過去問対応・独立再解答・表示QA・固定範囲はすべてPASS
-  - 主sourceの状態欄に「PDF・練習問題・PowerPointは未着手」「次工程は解説PDF」が残存
-  - 練習sourceに「次工程は練習PDF」「PowerPointと完成後独立再解答はまだ行わない」が残存
-  - 進捗記録整合性だけFAILのため `completed` にはしていない
+  - 前回FAIL要因はsource進捗記録不整合のみ
+- source進捗記録同期: 完了
+  - 主sourceの「PDF・練習問題・PowerPointは未着手」「次工程は解説PDF」を解消
+  - 主sourceの完成後独立再解答予定表現を `22 / 22 PASS` の実績へ同期
+  - 練習sourceの「次工程は練習PDF」「PowerPointと完成後独立再解答はまだ行わない」を解消
+  - 教材本文・EXAM_ALIGNMENT・数式・問題・PDF/PPTX・固定範囲は変更していない
 
 ## Topic 06 固定範囲
 扱う内容:
@@ -89,9 +92,11 @@ source:
 - 整流器損失は交流入力と直流出力の差として扱い、後世代のスイッチング損失モデルへ拡張しない。
 
 ## 次の正確な開始点
-Topic 06の主sourceと練習sourceに残る旧進捗記録だけを現在地へ同期する。
+Topic 06の最終QAを再実施する。
 
-1. `06_0series_main_circuit_power_loss_efficiency.md` の状態欄から「PDF・練習問題・PowerPointは未着手」「次工程は解説PDF」を除き、全成果物＋独立再解答＋最終QA実施済みの現在地へ同期する。
-2. `06_0series_main_circuit_power_loss_efficiency_practice_source.md` の「次工程は練習PDF」「PowerPointと完成後独立再解答はまだ行わない」を現在地へ同期する。
-3. 教材本文・EXAM_ALIGNMENT・数式・問題・PDF/PPTX・固定範囲は変更しない。
-4. 同期後に最終QAを再実施し、全件PASSの場合のみTopic 06を `completed` として完成数を `6 / 39` に進める。
+1. 必須成果物の実在を再確認する。
+2. 固定EXAM_ALIGNMENT一次3問＋二次2問と完成後独立再解答 `22 / 22 PASS` を再確認する。
+3. 解説PDF・練習PDF・PowerPoint表示QAを再確認する。
+4. 主source・練習sourceの進捗記録不整合が解消済みであることを確認する。
+5. 固定範囲外論点・未確認0系実値の追加がないことを確認する。
+6. 全件PASSの場合のみTopic 06を `completed` とし、完成数を `6 / 39` に進める。
