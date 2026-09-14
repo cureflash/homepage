@@ -10,11 +10,11 @@ Topic 03 `偏微分・全微分` は `completed`。
 Topic 04 `微分による極値・最適条件` は `completed`。
 Topic 05 `積分によるエネルギー計算` は `completed`。
 
-Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDFまで完了。
+Topic 06 `微積分で新幹線の運転曲線を解析する` は、制作前EXAM_ALIGNMENT＋制作前独立検証＋解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPoint＋PowerPoint QAまで完了。
 
 完成数: `5 / 20`
 
-current_status: `topic_06_practice_pdf_complete`
+current_status: `topic_06_powerpoint_complete`
 
 active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
@@ -60,6 +60,26 @@ active_topic: `06 微積分で新幹線の運転曲線を解析する`
 - 教材外知識補完0件
 - 固定範囲外追加0件
 - 未確認の実車運転曲線・実車回生効率の追加0件
+
+## Topic 06 解説画像PowerPoint
+
+`topics/06_calculus_train_curve/06_calculus_train_curve_images.pptx`
+
+QA記録:
+`topics/06_calculus_train_curve/06_calculus_train_curve_powerpoint_qa.md`
+
+- 16:9、全5スライド
+- Slide 1: 中心式と x-t / v-t / v-x の読み分け
+- Slide 2: R5/R3/H28へ接続する `F→a→v→x`
+- Slide 3: `a=v dv/dx`、`t=∫dx/v(x)`、距離積分
+- Slide 4: H25/H23へ接続する `P=Fv` / `P=Tω` とエネルギー収支
+- Slide 5: 固定5過去問・15対象項目対応表と範囲境界
+- 全5スライド表示QA `PASS`
+- overflow 0件
+- ZIP整合性 `PASS`
+- 文字切れ・重なり・空白ページ・文字化け 0件
+- 固定範囲外追加0件
+- 未確認実車値追加0件
 
 ## Topic 06 SPEC固定範囲
 
@@ -114,6 +134,6 @@ active_topic: `06 微積分で新幹線の運転曲線を解析する`
 
 ## 次に行うこと
 
-Topic 06の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問・15対象項目と固定範囲を維持し、全スライド表示QA・overflow検査を行う。固定範囲外論点・未確認実車値は追加しない。
+Topic 06の完成後独立再解答を行う。保存済み正答を先に見ず、完成教材だけで固定5問・15対象項目を全件再導出し、公式解答・標準解答と照合する。教材外知識で補完した場合はFAILとする。
 
-この段階では完成後独立再解答・最終QAへ進まない。
+この段階では最終QAへ進まない。
