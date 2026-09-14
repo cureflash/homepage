@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 5 / 12
-- current_status: `topic_06_exam_reanswer_passed`
+- current_status: `topic_06_final_qa_needs_revision`
 - last_completed_topic: `05 ベクトル`
 - active_topic: `06 微分① ダイヤの傾きは速度`
-- next_start: `Topic 06 最終QA`
+- next_start: `Topic 06 source進捗記録同期`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -28,26 +28,38 @@
 - [x] 独立再解答FAIL 4件の不足前提を補強sourceへ固定範囲内で最小補強
 - [x] 補強4点を学習用成果物へ同期
 - [x] 補強後の完成教材だけで固定4問を再独立解答 `4 / 4 PASS`
-- [ ] 最終QA
+- [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
+- [ ] source Markdownの旧進捗記録を現在地へ同期
+- [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-補強後の完成教材だけを使い、固定EXAM_ALIGNMENT 4問を公式解答を先に見ず再独立解答した。
+Topic 06の最終QAを実施した。
 
-再独立解答:
-- R7上 理論 問13: `(2)` PASS
-- R6下 理論 問3: `(2)` PASS
-- R5上 理論 問10: `(4)` PASS
-- R4下 理論 問7: `(2)` PASS
+PASS:
+- 必須成果物の実在
+- 固定EXAM_ALIGNMENT 4問
+- 制作前独立検証 `4 / 4 PASS`
+- 補強後の完成教材だけによる再独立解答 `4 / 4 PASS`
+- 教材外知識補完0件
+- 固定範囲外追加0件
+- 未確認新幹線実値追加0件
+- 仕様境界
 
-公式解答との一致は `4 / 4 PASS`。教材外知識による補完、固定EXAM_ALIGNMENT変更、Topic 07以降の数学論点追加、専門分野の体系説明追加、未確認新幹線実値追加はいずれも0件。
+FAILは主source `topics/06_derivative_1/06_derivative_1.md` の進捗記録不整合のみ。
 
-記録:
-- `topics/06_derivative_1/06_derivative_1_exam_reanswer.md`
-- `topics/06_derivative_1/06_derivative_1_revision_supplement.md`
+残存する旧記録:
+- 冒頭状態が補強前 `0 / 4 PASS / NEEDS_REVISION` のまま
+- 完成後独立再解答節に補強後 `4 / 4 PASS` が未同期
+- 次工程が既完了の「不足4件を補強して再独立再解答」のまま
+
+教材本文・固定EXAM_ALIGNMENT・数式・例題・PDF・練習・PowerPointには変更不要。
+
+最終QA記録:
+- `topics/06_derivative_1/06_derivative_1_final_qa.md`
 
 ## 判定
 
-過去問対応品質ゲートは `PASS`。
+Topic 06は `NEEDS_REVISION / IN_PROGRESS`。
 
-ただしTopic 06の最終QAは未実施のため、まだ `completed` にしない。完成数は `5 / 12` のまま。
+過去問対応品質ゲート自体はPASSしているが、GitHub正本のsource進捗記録が現在地と不整合なため、まだ `completed` にしない。完成数は `5 / 12` のまま。
