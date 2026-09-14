@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は解説PDF＋全ページ表示QAまで完了。
+Topic 01〜06は `completed`。Topic 07 `0系のモーターはなぜ力を出せる？` は解説PDF＋練習問題sourceまで完了。
 
 完成数: `6 / 21`
 
-current_status: `topic_07_explanation_pdf_complete`
+current_status: `topic_07_practice_source_complete`
 
 active_topic: `07 0系のモーターはなぜ力を出せる？`
 
-次工程: Topic 07の練習問題source＋練習PDFを作成する。
+次工程: Topic 07の練習PDFを作成する。
 
 ## Topic 06 完了記録
 
@@ -90,6 +90,17 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
   - 複合: 加速電圧・円運動・サイクロトロン周波数・比電荷
 - 例題数値は独立再計算済み。
 
+## Topic 07 練習source完成内容
+
+- `07_motor_lorentz_force_practice.md` を作成。
+- 一次型12問、すべて五肢択一。
+- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3。
+- 固定一次5問・25小問の要求事項を全件練習問題へ接続。
+- `F=q(v×B)`、`F=BIl`、電界中の電子運動、時間変化電界、円運動、サイクロトロン周波数、加速電圧、比電荷、`B/H` 区別を収録。
+- 問題文・選択肢だけから独立再計算 `12 / 12 PASS`。
+- 正答一意性 `12 / 12 PASS`、五肢重複0件。
+- 固定範囲外知識依存0件、未確認実車値依存0件、二次数合わせ0件。
+
 ## Topic 07 成果物
 
 - source: `topics/07_motor_lorentz_force/07_motor_lorentz_force.md`
@@ -98,21 +109,23 @@ Topic 06 `25kVからどうやって電圧が誘導される？` は最終QA再�
 - 解説PDF: `topics/07_motor_lorentz_force/07_motor_lorentz_force_explanation.pdf` 完了（A4縦3ページ）
 - 解説PDF表示QA: 200 dpi全3ページ `3 / 3 PASS`
 - 解説PDF文字抽出QA: PASS
-- 練習source / 練習PDF: 未作成
+- 練習source: `topics/07_motor_lorentz_force/07_motor_lorentz_force_practice.md` 完了
+- 練習問題独立QA: `12 / 12 PASS`
+- 練習PDF: 未作成
 - 解説画像PowerPoint: 未作成
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
 ## 今回の更新
 
-1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、Topic 07 sourceを再照合。
-2. 固定EXAM_ALIGNMENTを変更せず、解説sourceからA4縦3ページの解説PDFを作成。
-3. 200 dpiで全3ページをレンダリングし、クリッピング・重なり・文字欠けを確認して `3 / 3 PASS`。
-4. PDF文字抽出QAを実施しPASS。
+1. 最新main、MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、STATUS、HANDOFF、Topic 07 source、直近の系列変更を再照合。
+2. 既存の解説PDF完了状態を引き継ぎ、重複生成せず次工程へ進行。
+3. 固定EXAM_ALIGNMENTを変更せず、一次型12問の練習問題source＋完全解説を作成。
+4. 問題文・選択肢だけから12問を独立再計算し `12 / 12 PASS`、正答一意性 `12 / 12 PASS`。
 5. 二次非採用判断、二次数合わせ0件、固定範囲外追加0件を維持。
-6. 解説PDF、STATUS、HANDOFFをGitHub正本へ反映。
+6. 練習source、STATUS、HANDOFFをGitHub正本へ反映。
 7. 完成数は `6 / 21` のまま。
 
 ## 次に行うこと
 
-Topic 07の練習問題source＋練習PDFを作成する。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
+Topic 07の練習PDFを作成する。固定一次5問・25小問、二次非採用判断、固定範囲は変更しない。
