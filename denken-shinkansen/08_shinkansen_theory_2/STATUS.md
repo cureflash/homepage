@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 6 / 21
-- current_status: `topic_07_powerpoint_complete`
+- current_status: `topic_07_independent_reanswer_complete`
 - last_completed_topic: `06 25kVからどうやって電圧が誘導される？`
 - active_topic: `07 0系のモーターはなぜ力を出せる？`
-- next_start: Topic 07の固定一次5問・25小問を完成教材だけで独立再解答する
+- next_start: Topic 07の最終QAを実施する
 
 ## Topic 06 修正版EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -63,25 +63,26 @@
 - [x] 練習問題source
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後独立再解答 25小問
+- [x] 完成後独立再解答 25小問: `25 / 25 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 07の解説画像PowerPointを完成した。
+Topic 07の完成後独立再解答を実施した。
 
-- `07_motor_lorentz_force_images.pptx` を作成（16:9・5枚）
-- 電界と磁界の力、磁界中の円運動、加速電圧と比電荷、電界中の電子運動、`F=BIl`と0系への接続を可視化
-- 約200 dpi全5スライド表示QA `5 / 5 PASS`
-- overflow検査: `PASS`
-- PPTX ZIP整合性: `PASS`
-- 固定一次5問・25小問のEXAM_ALIGNMENTは変更なし
-- 二次非採用判断・二次数合わせ0件を維持
+- 固定一次5問・25小問を完成教材の式・解法だけで再構成
+- R7 問7: `5 / 5 PASS`
+- R5 問6: `5 / 5 PASS`
+- R3 問6: `5 / 5 PASS`
+- R1 問7: `5 / 5 PASS`
+- H25 問6: `5 / 5 PASS`
+- 合計: `25 / 25 PASS`
+- 教材外の電気理論による補完: 0件
 - 固定範囲外論点追加: 0件
 - 直流機特性追加: 0件
-- 未確認実車値依存: 0件
-- 完成後独立再解答: 未実施
+- 二次数合わせ: 0件
+- 独立再解答記録: `topics/07_motor_lorentz_force/07_motor_lorentz_force_independent_reanswer.md`
 
 ## 判定
 
-Topic 07は `PowerPoint complete / IN_PROGRESS`。完成数は `6 / 21` のまま。次工程は固定一次5問・25小問の完成後独立再解答。
+Topic 07は `independent reanswer complete / IN_PROGRESS`。完成数は `6 / 21` のまま。次工程は最終QA。
