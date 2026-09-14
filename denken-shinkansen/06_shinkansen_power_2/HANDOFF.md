@@ -3,11 +3,18 @@
 updated: 2026-09-14
 series: `06_shinkansen_power_2`
 active_topic: `04`
-current_status: `topic_04_practice_independent_qa_complete`
+current_status: `topic_04_explanation_pdf_complete`
 
 ## 今回完了
 
-Topic 04「むつの原子炉を積んだ原子力新幹線を東京から佐世保まで走らせる」の練習15問独立QAを完了した。
+Topic 04「むつの原子炉を積んだ原子力新幹線を東京から佐世保まで走らせる」の解説PDFを完成した。
+
+成果物:
+- `topics/04_nuclear_power/04_nuclear_power_explanation.pdf`
+- A4縦6ページ
+- `04_nuclear_power_explanation_source.md` の本文、3段階例題、固定EXAM_ALIGNMENT、出典、数式・単位を同期
+- 200 dpi全6ページ表示QA: `6 / 6 PASS`
+- クリップ・重なり・黒四角・日本語欠落: `0件`
 
 正式選定5問は変更なし:
 - R7 二種一次「電力」問5
@@ -16,30 +23,13 @@ Topic 04「むつの原子炉を積んだ原子力新幹線を東京から佐世
 - R1 二種二次「電力・管理」問1
 - R3 二種二次「電力・管理」問6
 
-制作前独立検証 `5 / 5 PASS` を維持。
-
-## 練習独立QA
-
-`topics/04_nuclear_power/04_nuclear_power_practice_qa.md`
-
-結果:
-- 全15問: `15 / 15 PASS`
-- 一次型10問: `10 / 10 PASS`、各問の正答肢は一意
-- 二次記述型5問: `5 / 5 PASS`
-- 数値問題は独立再計算し、符号・単位・丸めを確認
-- 記述問題は途中式・前提・因果・必要キーワードを採点可能な形で確認
-- 固定5過去問への要求事項マッピング維持
-- 教材外知識補完 `0件`
-- SPEC外追加 `0件`
-- 未確認実設備値追加 `0件`
-
-特に速度調定率問題は、問9・10・14で負荷増減と周波数変化の符号、並列機の分担量、`ΣΔP = ΔP_load` を再計算して整合確認した。問7・11・15は熱出力、軸出力、発電端、所内電力、外部利用可能出力、後段効率の段階を分離して再計算した。
+制作前独立検証 `5 / 5 PASS`、練習15問独立QA `15 / 15 PASS` を維持。教材外知識補完、SPEC外追加、未確認実設備値追加はいずれも `0件`。
 
 ## 次に行う
 
-解説PDFを作成する。
+Topic 04 の練習PDFを作成する。
 
-`04_nuclear_power_explanation_source.md` の本文、3段階例題、固定EXAM_ALIGNMENT、出典、数式、単位を同期し、生成後に全ページ表示QAを行う。
+`04_nuclear_power_practice.md` の全15問（一次型10問＋二次記述5問）と完全解説をそのまま同期し、生成後に全ページ表示QAを行う。問題・正答・固定EXAM_ALIGNMENT・固定範囲は変更しない。
 
 ## 範囲境界
 
