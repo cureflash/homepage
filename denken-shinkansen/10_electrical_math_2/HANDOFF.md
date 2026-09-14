@@ -12,11 +12,11 @@ Topic 03 `偏微分・全微分` は `completed`。
 
 Topic 04 `微分による極値・最適条件` は `completed`。
 
-Topic 05 `積分によるエネルギー計算` は解説本文＋3段階例題・解説PDF・練習PDFまで完成。
+Topic 05 `積分によるエネルギー計算` は解説本文＋3段階例題・解説PDF・練習PDF・解説画像PowerPointまで完成。
 
 完成数: `4 / 20`
 
-current_status: `topic_05_practice_pdf_complete`
+current_status: `topic_05_images_pptx_complete`
 
 active_topic: `05 積分によるエネルギー計算`
 
@@ -31,13 +31,19 @@ source Markdown:
 練習PDF:
 `topics/05_integral_energy/05_integral_energy_practice.pdf`
 
+解説画像PowerPoint:
+`topics/05_integral_energy/05_integral_energy_images.pptx`
+
+PowerPoint QA:
+`topics/05_integral_energy/05_integral_energy_powerpoint_qa.md`
+
 解説本文＋3段階例題: 完成。
 
 解説PDF: A4縦6ページ、全6ページ200 dpi表示QA PASS。
 
 練習PDF: A4縦7ページ、全12問（一次型五肢択一8問＋二次記述型4問）、解答・完全解説付き。全7ページ200 dpi表示QA PASS。
 
-PowerPoint: 未着手。
+PowerPoint: 16:9、全5スライド。LibreOffice PDF変換・全スライド表示・overflow検査・ZIP整合性すべてPASS。
 
 ## Topic 05 固定EXAM_ALIGNMENT
 
@@ -66,31 +72,23 @@ PowerPoint: 未着手。
 
 制作前再導出・公式解答照合は `16 / 16 PASS`。
 
-完成本文・解説PDF・練習PDFでは固定6問・16対象項目を全件マッピング済み。完成後独立再解答はPowerPoint完成後に教材のみで同じ対象を再解答する。
+完成本文・解説PDF・練習PDF・PowerPointでは固定6問・16対象項目を全件マッピング済み。
 
-## 完成した練習PDF
+## 解説画像PowerPoint
 
-- A4縦7ページ
-- 一次型五肢択一8問＋二次記述型4問、計12問
-- 全問に解答・完全解説
-- 数値問題は使用公式・理由・代入・中間計算・単位・最終値・検算を収録
-- `E=∫Pdt` と力行・回生の符号
-- `W=∫Fdx`
-- 一周期エネルギーと `P_avg=fE_cycle`
-- 平均値とRMSの区別、正弦波 `X_m=√2X_rms`
-- 三相全波整流 `E_d=(3√2/π)V_ab` の積分導出
-- 電界エネルギー、一定電圧時の電源とのエネルギー授受
-- 磁界エネルギー、結合コイル相互項、円柱導体の体積積分
-- 短絡コイルの鎖交磁束保存と外力仕事
-- 固定6問・16対象項目の対応表
+- 16:9、全5スライド
+- Slide 1: `E=∫Pdt` / `W=∫Fdx` / `W=∫w dV`、平均値/RMS、解法判定
+- Slide 2: R4二次 問3(1) の RMS→波高値→三相全波整流平均値積分
+- Slide 3: H25一次 問1の電界エネルギー、一定電圧、電源との授受、外力仕事
+- Slide 4: R7/R6/R2 の磁気エネルギー、結合、円柱体積積分、鎖交磁束保存
+- Slide 5: 固定6問・16対象項目対応表とSPEC境界
 
 表示QA:
-- 全7ページを200 dpiで再レンダリング
-- 欠けなし
-- 重なりなし
-- 文字化けなし
-- A4ページ外へのはみ出しなし
-- `PASS`
+- LibreOffice PDF変換: PASS
+- 全5スライド表示確認: PASS
+- 文字切れ・重なり・空白ページ・文字化け: なし
+- キャンバス外はみ出し: なし
+- ZIP整合性: PASS
 
 ## SPEC固定範囲
 
@@ -114,10 +112,6 @@ PowerPoint: 未着手。
 
 ## 次に行うこと
 
-Topic 05の解説画像PowerPointを作成する。
+完成教材だけを使い、保存済み正答を先に見ずに固定6問・16対象項目を独立再解答し、公式解答・標準解答と照合する。
 
-1. 固定EXAM_ALIGNMENT 6問・16対象項目の解法接続を図解する。
-2. `E=∫Pdt`、`W=∫Fdx`、平均値/RMS、電界・磁界エネルギーの使い分けを可視化する。
-3. RMS→波高値→平均値積分、電源接続条件、鎖交磁束保存を図で追える構成にする。
-4. SPEC外論点、Topic 06以降、選定問題の対象外小問は追加しない。
-5. 完成後に全スライド表示QAを行う。
+教材外知識で補完せず、固定SPEC外論点を追加しない。16 / 16一致後に最終QAへ進む。
