@@ -6,16 +6,15 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は4/16。Topic 01〜04は品質ゲートPASSでcompleted。active topicは05 `誘導電動機はなぜ勝手に回る？`。
 
 ## 今回進捗
-Topic 05の練習問題sourceを完成した。
+Topic 05の練習PDFを完成した。
 
 成果物:
-- `topics/05_induction_motor_principle/05_induction_motor_principle_practice.md`
-- 全12問、全問五肢択一
-- 基礎3 / 本試験標準7 / 複合・応用2
-- 回転原理、同期速度・滑り・二次周波数、`r2/s`、三相一次入力、二次入力・二次銅損・機械変換電力、同期ワット、効率、最大トルク、比例推移、未知損失を含む電力フローを収録
-- 固定5問・6小問の要求事項を全件マッピング
-- 数値問題は式選択理由、代入、中間計算、最終値、検算まで記載
-- 知識問題は正答理由と主要誤答肢の誤りを記載
+- `topics/05_induction_motor_principle/05_induction_motor_principle_practice.pdf`
+- A4縦 6ページ
+- 全12問・全問五肢択一、基礎3 / 本試験標準7 / 複合・応用2、完全解説を練習問題sourceから反映
+- 固定5問・6小問の要求事項を維持
+- 200 dpiで全6ページをレンダリングし、文字切れ・重なり・欠落グリフなしを確認
+- PDF文字抽出で問1〜問12、正答表示、主要公式・数値、品質確認欄を確認
 - 仕様外論点・未確認実車値の追加は0件
 
 ## Topic 05 固定EXAM_ALIGNMENT
@@ -68,7 +67,9 @@ Y-Δ始動、始動補償器、インバータ/V/f・VVVF・ベクトル制御�
 - 解説PDF表示QA: `PASS`
 - 解説PDF文字抽出QA: `PASS`
 - 練習問題source: 完了（12問、固定5問・6小問を全件マッピング）
-- 練習PDF: 未着手
+- 練習PDF: 完了
+- 練習PDF表示QA: `PASS`
+- 練習PDF文字抽出QA: `PASS`
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未着手
 - 固定範囲外追加: `0件`
@@ -84,10 +85,10 @@ Topic 04 `300系でモーターが全部変わった` は最終QA `PASS / comple
 - 解説PDF・練習PDF・PowerPointの表示QA: PASS
 
 ## 現在状態
-- `current_status`: `topic_05_practice_source_complete`
+- `current_status`: `topic_05_practice_pdf_complete`
 - 完成数: `4/16`
 - last completed: Topic 04 `300系でモーターが全部変わった`
 - active: Topic 05 `誘導電動機はなぜ勝手に回る？`
 
 ## 次の正確な開始点
-Topic 05の固定EXAM_ALIGNMENT、完成済み解説source・解説PDF・練習問題sourceを変更せず、練習PDFを作成する。12問・全問五肢択一・完全解説をそのまま反映し、表示QAと文字抽出QAを実施する。仕様外論点・未確認実車値は追加しない。
+Topic 05の固定EXAM_ALIGNMENT、完成済み解説source・解説PDF・練習問題source・練習PDFを変更せず、解説画像PowerPointを作成する。仕様外論点・未確認実車値は追加しない。
