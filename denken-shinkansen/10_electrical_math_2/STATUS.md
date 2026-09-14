@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 6 / 20
-- current_status: `topic_07_powerpoint_complete`
+- current_status: `topic_07_exam_reanswer_complete`
 - last_completed_topic: `06 微積分で新幹線の運転曲線を解析する`
 - active_topic: `07 一階常微分方程式`
-- next_start: Topic 07の完成教材だけを使い、保存済み正答を先に見ずに固定一次5問・22小問を独立再解答し、公式解答と照合する
+- next_start: Topic 07の最終QA。必須成果物、表示QA、固定一次5問・22小問の完成後独立再解答 `22 / 22 PASS`、source進捗整合、固定範囲境界を再確認し、全品質ゲートPASSの場合のみ `completed` とする
 
 ## Topic 06
 
@@ -37,38 +37,34 @@
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答 `22 / 22 PASS`
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 07 `一階常微分方程式` の解説画像PowerPointを完成した。
+Topic 07 `一階常微分方程式` の完成後独立再解答を実施した。
 
-成果物:
-- `topics/07_first_order_ode/07_first_order_ode_images.pptx`
-- `topics/07_first_order_ode/07_first_order_ode_powerpoint_qa.md`
+記録:
+- `topics/07_first_order_ode/07_first_order_ode_exam_reanswer.md`
 
-構成:
-- 16:9・全5スライド
-- 一階式から `y0`・`y∞`・`τ` を求める本試験解法経路
-- 同次解＋定常特解と指数応答
-- RC `τ=R_eq C` / RL `τ=L/R_eq` と連続性
-- `0- → 0+ → ∞` の切替手順とR7型電荷保存
-- 固定R8/R7/R6/R5/R4一次5問・22小問との対応表
+結果:
+- R8 一次 理論 問6 (1)〜(2): `(ト, ホ)` → `2 / 2 PASS`
+- R7 一次 理論 問6 (1)〜(5): `(リ, ヘ, ル, ヨ, ホ)` → `5 / 5 PASS`
+- R6 一次 理論 問4 (1)〜(5): `(ハ, ヌ, ロ, カ, ト)` → `5 / 5 PASS`
+- R5 一次 理論 問5 (1)〜(5): `(ホ, カ, ヌ, ヘ, イ)` → `5 / 5 PASS`
+- R4 一次 理論 問4 (1)〜(5): `(ワ, カ, イ, ヨ, チ)` → `5 / 5 PASS`
+- 合計: `22 / 22 PASS`
 
 QA:
-- 全5スライド表示QA: `5 / 5 PASS`
-- 文字切れ・重なり・空白ページ・文字化け: なし
-- overflow: 0件
-- PPTX ZIP整合性: PASS
-- 固定一次5問・22小問との接続: 維持
+- 各小問を完成教材の式・解法手順から再導出: PASS
+- 再導出後の公式解答照合: `22 / 22 PASS`
 - 教材外知識補完: 0件
 - 固定範囲外追加: 0件
 - Topic 08〜10先取り: 0件
 - 二次記述の件数合わせ: 0件
-- 未確認実車値追加: 0件
+- 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 07は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `6 / 20` のまま。次は完成後独立再解答。
+Topic 07は `EXAM_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `6 / 20` のまま。次は最終QA。
