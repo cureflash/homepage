@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `07 300系のPWMコンバータは何をしている？`
 
-current status: `topic_07_waveforms_complete`
+current status: `topic_07_independent_reanswer_complete`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
@@ -134,8 +134,24 @@ PowerPoint:
 - 未確認300系実車値の追加: 0件
 - MPPT、蓄電装置設計、昇圧コンバータ設計、能動フィルタ設計、Topic 08以降の固定範囲外論点追加: 0件
 
+## Topic 07 完成後独立再解答完了
+
+成果物:
+`topics/07_300series_pwm_converter/07_300series_pwm_converter_independent_reanswer.md`
+
+- H22 一次 機械 問3: `5 / 5 PASS`
+- H27 一次 機械 問3: `3 / 3 PASS`
+- H24 二次 機械・制御 問3: `4 / 4 PASS`
+- R01 二次 機械・制御 問3: `3 / 3 PASS`
+- R05 二次 機械・制御 問3: `2 / 2 PASS`
+- 合計: `17 / 17 PASS`
+- 完成教材だけで公式選択、途中式、記述理由を再構成
+- 教材外知識による補完: 0件
+- 固定範囲外論点の追加: 0件
+- 未確認300系実車値の追加: 0件
+
 ## 次に行うこと
 
-Topic 07の固定5問・17小問を、完成教材だけを使って独立再解答する。
+Topic 07の最終QAを実施する。
 
-保存済み正答を先に見ず、教材だけで公式選択・途中式・記述理由まで再構成できるかを確認する。固定EXAM_ALIGNMENTとSPEC固定範囲は変更しない。
+固定5問・17小問の独立再解答結果、必須成果物、表示QA、source進捗整合、SPEC固定範囲を確認し、品質ゲートの最終判定を行う。
