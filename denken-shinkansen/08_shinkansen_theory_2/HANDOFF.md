@@ -4,11 +4,11 @@
 
 ## 現在地
 
-Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘導される？` は解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPointまで完了。
+Topic 01〜05は `completed`。Topic 06 `25kVからどうやって電圧が誘導される？` は解説本文＋3段階例題＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPointまで完了。完成後独立再解答を実施し、`14 / 16 PASS` で `NEEDS_REVISION`。
 
 完成数: `5 / 21`
 
-current_status: `topic_06_powerpoint_complete`
+current_status: `topic_06_independent_reanswer_needs_revision`
 
 active_topic: `06 25kVからどうやって電圧が誘導される？`
 
@@ -33,7 +33,7 @@ active_topic: `06 25kVからどうやって電圧が誘導される？`
 - R7 問2 (1)(2)(4)(5): 結合係数、結合コイルの磁気エネルギー、鎖交磁束、ファラデーの法則。公式解答 `ヲ / ワ / イ / ヨ`
 - R5 問2 (2)〜(4): 鎖交磁束の変化、速度、ファラデーの法則。公式解答 `イ / ニ / ロ`
 - R2 問2 (1)〜(5): `Ψ=Li`、`W=Li²/2`、鎖交磁束保存、位置依存自己インダクタンス。公式解答 `イ / ヨ / ワ / ロ / ヌ`
-- H30 問2 (4)(5): `L=N1²/R`、`M=N1N2/R`。公式解答 `ヌ / イ`
+- H30 問2 (4)(5): `L=N1²/R`、`M=N1N2/R` として選定済み。公式解答 `ヌ / イ`
 - H28 問1 (3)(5): `Ψ=Li`、`W=Li²/2`。公式解答 `ヨ / ル`
 
 R8問2後半は前段のビオ・サバール依存、R7問2(3)はトルク、R5問2(1)(5)はTopic 05依存、H30問2(1)〜(3)とH28問1(1)(2)(4)もTopic 05側のため固定ゲートから除外する。
@@ -84,6 +84,23 @@ PPTX: `topics/06_transformer_electromagnetic_induction/06_transformer_electromag
 - 全3スライド表示QA PASS
 - overflow検査 PASS、ZIP整合性 PASS
 
+## 完成後独立再解答
+
+記録: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction_independent_reanswer.md`
+
+- R7: `4 / 4 PASS`
+- R5: `3 / 3 PASS`
+- R2: `5 / 5 PASS`
+- H28: `2 / 2 PASS`
+- H30: `0 / 2 PASS`
+- 合計: `14 / 16 PASS`
+
+H30問2(4)(5)では不整合を検出した。公式問題の `R` は各a-d枝の磁気抵抗で、正答へ到達するには3枝磁気回路の合成と磁束分流から、コイル1から見た有効磁気抵抗 `3R/2` と右枝の共有磁束を導く必要がある。現教材§7は与えられた単一共通磁路の `R` から `L=N²/R`、`M=N1N2/R` へ接続する説明に限定しており、この中間知識を含まない。
+
+Topic 05の磁気回路知識を教材外補完すれば、(4) `L1=2N1²/(3R)` → `ヌ`、(5) `M=N1N2/(3R)` → `イ` と公式解答へ一致する。しかし `EXAM_ALIGNMENT_SPEC.md` の独立試験条件では教材外補完はFAILなので、H30の2小問はPASS扱いしない。
+
+このrunでは原因だけを記録し、固定範囲変更・仕様追加・H30の勝手な除外はしていない。
+
 ## Topic 06 成果物・進捗
 
 - source: `topics/06_transformer_electromagnetic_induction/06_transformer_electromagnetic_induction.md`
@@ -95,17 +112,17 @@ PPTX: `topics/06_transformer_electromagnetic_induction/06_transformer_electromag
 - 解説画像PowerPoint＋表示QA: 完了
 - 固定範囲外追加: 0件
 - 二次数合わせ: 0件
-- 完成後独立再解答: 未着手
+- 完成後独立再解答: 実施済み、`14 / 16 PASS / NEEDS_REVISION`
 - 最終QA: 未着手
 
 ## 今回の更新
 
-1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06 sourceと練習sourceを確認。
-2. Topic 06固定範囲だけで16:9・3スライドの解説画像PowerPointを作成。
-3. 全3スライドをレンダリングして表示QAし、overflow検査とZIP整合性を確認。すべてPASS。
-4. 固定一次5問・16小問、二次非採用判断、固定範囲を維持。仕様外追加0件。
-5. PowerPoint、STATUS、HANDOFFをGitHub正本へ反映した。
+1. MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / Topic 06 sourceを再確認。
+2. 固定一次5問・16小問を教材内容だけで独立再解答。
+3. R7・R5・R2・H28は14小問すべてPASS。
+4. H30問2(4)(5)は教材外の磁気回路合成・磁束分流が必要と判定し、2小問FAIL。
+5. 二次非採用判断、固定範囲、仕様を変更せず、独立再解答記録・STATUS・HANDOFFへ反映。
 
 ## 次に行うこと
 
-Topic 06の完成後独立再解答を行う。保存済み正答を先に見ず、固定一次5問・16小問を教材内容だけで再解答し、教材外補完が0件か確認する。二次非採用判断と固定範囲を変更しない。
+H30問2(4)(5)のEXAM_ALIGNMENTと教材内カバレッジの不整合を、Topic 06固定範囲を変更せずに是正する。その後、固定一次5問・16小問の完成後独立再解答を再実施する。最終QAは独立再解答PASS後に行う。
