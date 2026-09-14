@@ -4,11 +4,11 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `06`
-- status: `PROGRESS_RECORD_SYNCED`
+- status: `COMPLETED`
 - 更新日: 2026-09-15
-- 完了判定: 未完了
+- 完了判定: `completed`
 
-解説本文・3段階例題・解説PDF・練習問題source/練習PDF・解説画像PowerPoint・完成後独立再解答まで完了。完成後独立再解答は選定5問すべて `5 / 5 PASS`、教材外知識補完 `0問`。最終QAは教材内容・過去問対応・成果物・表示QA・SPEC境界がPASSだったが、本sourceの進捗記録不整合により `NEEDS_REVISION`。今回は教材内容を変更せず、進捗記録のみGitHub正本の現在地へ同期した。
+解説本文・3段階例題・解説PDF・練習問題source/練習PDF・解説画像PowerPoint・完成後独立再解答・最終QAまで完了。完成後独立再解答は選定5問すべて `5 / 5 PASS`、教材外知識補完 `0問`。進捗記録同期後の最終QA再実施で、必須成果物、EXAM_ALIGNMENT、教材内マッピング、表示QA、SPEC境界、独立再解答、進捗記録整合性を全件PASSし、Topic 06を `completed` とした。
 
 ## SPEC上の固定範囲
 
@@ -679,8 +679,8 @@ Lsub = L1 + L2 - 2M
 - 後続Topic論点の追加: `0件`
 - 未確認0系実車値の真値化: `0件`
 - 完成後独立再解答: `5 / 5 PASS`（教材外知識補完 `0問`）
-- 最終QA: `NEEDS_REVISION`（source進捗記録不整合のみ。本同期後に再実施）
+- 最終QA: `PASS / completed`
 
 ## 次工程
 
-進捗記録の同期が完了したため、教材本文・EXAM_ALIGNMENT・数式・3段階例題・成果物を変更せず最終QAを再実施する。全品質ゲートがPASSした場合のみTopic 06を `completed` とする。
+Topic 06は最終QAまでPASSし `completed`。次はTopic 07「モーターはなぜ回る？」の制作前EXAM_ALIGNMENTへ進む。
