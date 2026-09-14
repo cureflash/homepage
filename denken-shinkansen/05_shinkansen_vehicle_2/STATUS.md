@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 5 / 39
-- current_status: `topic_06_explanation_pdf_complete`
+- current_status: `topic_06_practice_source_complete`
 - last_completed_topic: `05 0系⑤ 発電ブレーキのエネルギー解析`
 - active_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
-- next_start: Topic 06の練習問題・完全解説sourceを作成する
+- next_start: Topic 06の練習PDFを生成し、全ページ表示QAを行う
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -16,7 +16,7 @@
 - [x] 03 0系③ 直流主電動機の電圧方程式とトルク — PASS
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
-- [ ] 06 0系⑥ 主回路全体の電力・損失・効率 — 解説PDF＋全ページ表示QA完了
+- [ ] 06 0系⑥ 主回路全体の電力・損失・効率 — 練習問題・完全解説source完了
 
 ## Topic 05 最終結果
 - final QA: `PASS`
@@ -73,6 +73,16 @@ source:
 - グラフ・例題の数値は学習用仮定値。未確認0系実車値は追加していない。
 - サイリスタ位相制御、チョッパ、誘導機、PWM/VVVF、回生、IGBT/SiC、詳細熱モデルは追加していない。
 
+## Topic 06 練習問題・完全解説source
+- 練習source: `topics/06_0series_main_circuit_power_loss_efficiency/06_0series_main_circuit_power_loss_efficiency_practice_source.md`
+- 一次試験型8問はすべて五肢択一。
+- 二次試験型4問は途中式・前提・単位・検算を含む記述式。
+- 合計12問すべてに完全解説を付与し、計算・論理QA `12 / 12 PASS`。
+- 選定一次3問＋二次2問の要求事項を、損失分類、規約効率、無負荷・短絡試験、最大効率条件、部分負荷効率へ接続した。
+- 整流器損失、主回路全体の収支、発熱、条件変更時の損失比較は固定範囲補強として出題した。
+- 全数値は教材用仮定値。未確認0系実値は使用していない。
+- 後続Topic論点は追加していない。
+
 ## Topic 06 固定範囲
 SPEC記載:
 - 主変圧器損失
@@ -91,4 +101,4 @@ SPEC記載:
 - 入力電力―車輪側出力
 - 条件変更時の損失比較
 
-次工程では、この固定範囲と確定済み5過去問から外れる論点を追加しない。未確認の0系固有損失値・冷却容量・歯車損失等は実値として置かない。
+次工程では、この練習sourceを正本として練習PDFを生成し、全ページ表示QAを行う。固定範囲外の論点や未確認の0系固有損失値・冷却容量・歯車損失等は追加しない。
