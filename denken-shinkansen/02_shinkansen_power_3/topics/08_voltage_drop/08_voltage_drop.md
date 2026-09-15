@@ -1,9 +1,9 @@
 # 08 新幹線の変電所はなぜ数十kmおき？
 
 ## 状態
-`explanation_source_complete`。制作前EXAM_ALIGNMENTで固定した公式過去問5問・7小問から逆算し、解説本文§1〜§9と3段階例題を完成した。固定5問・7小問の要求事項を本文へ全件マッピングし、Topic 09以降の論点・未確認の実設備値は追加していない。
+`explanation_pdf_complete`。制作前EXAM_ALIGNMENTで固定した公式過去問5問・7小問から逆算し、解説本文§1〜§9と3段階例題、解説PDFまで完成した。固定5問・7小問の要求事項を本文・PDFへ反映し、Topic 09以降の論点・未確認の実設備値は追加していない。
 
-解説PDF、練習問題、練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答、最終QAは未着手。次はこのsourceを正本として解説PDFを作成する。
+解説PDFはA4縦4ページ。200 dpi全4ページ表示QA PASS、文字抽出QA PASS。練習問題source、練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答、最終QAは未着手。次はこのsourceと解説PDFを正本として練習問題sourceを作成する。
 
 ## SPEC固定範囲
 `SPEC.md` のTopic 08から範囲を追加しない。
@@ -440,4 +440,4 @@ B-CにはC負荷だけが流れる。
 - 未確認の新幹線変電所間隔・実設備値の真値化: 0件
 
 ## 次工程
-このsourceを正本としてTopic 08の解説PDFを作成する。
+このsourceと解説PDFを正本としてTopic 08の練習問題sourceを作成する。
