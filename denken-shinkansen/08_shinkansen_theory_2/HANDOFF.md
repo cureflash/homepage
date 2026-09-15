@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜09は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source、練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QAまで実施した。
+Topic 01〜09は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source、練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、練習source末尾の旧進捗記録同期まで実施した。
 
 完成数: `9 / 21`
 
-current_status: `topic_10_final_qa_needs_revision`
+current_status: `topic_10_practice_progress_synced`
 
 active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
 
-次工程: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md` 末尾の旧進捗記録だけを現在地へ同期する。教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+次工程: Topic 10の最終QAを再実施する。教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
 
 ## Topic 10 固定範囲
 
@@ -109,7 +109,7 @@ H30二次「電力・管理」問5には高調波電流、直列リアクトル�
 
 ## Topic 10 練習問題source
 
-- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md`: 内容完成
+- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md`: 内容完成・進捗記録同期済み
 - 一次試験型12問、全問五肢択一
 - 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
 - 正答一意性: `12 / 12 PASS`
@@ -117,7 +117,7 @@ H30二次「電力・管理」問5には高調波電流、直列リアクトル�
 - 固定一次5問・20小問への練習接続: `20 / 20`
 - 二次採用0問・二次数合わせ0件を維持
 - 固定範囲外・未確認実設備値追加: 0件
-- 末尾の `# 次工程` だけが練習PDF作成前の旧進捗のまま。次runで進捗記録のみ同期する
+- 末尾 `# 次工程` を練習PDF・PowerPoint・完成後独立再解答・初回最終QAまで完了した現在地へ同期済み
 
 ## Topic 10 練習PDF
 
@@ -167,9 +167,10 @@ H30二次「電力・管理」問5には高調波電流、直列リアクトル�
 - 必須成果物: `PASS`
 - PDF/PPTX表示QA・文字抽出・整合性: `PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL`
-- exact blocker: 練習source末尾が現在も「次は練習PDF作成」「完成後独立再解答は未実施」とする旧進捗
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 初回進捗記録整合: `FAIL`
+- 初回exact blocker: 練習source末尾が「次は練習PDF作成」「完成後独立再解答は未実施」とする旧進捗
+- 初回判定: `NEEDS_REVISION / IN_PROGRESS`
+- 上記exact blockerは今回同期済み。最終QA再実施待ち
 
 ## Topic 10 参考資料
 
@@ -212,7 +213,7 @@ Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALI
 - Topic 10 制作前EXAM_ALIGNMENT: `PASS`
 - Topic 10 解説本文＋3段階例題: `completed`
 - Topic 10 解説PDF＋表示QA: `completed`
-- Topic 10 練習問題source: 内容 `completed`、進捗記録同期待ち
+- Topic 10 練習問題source: `completed / 進捗記録同期済み`
 - Topic 10 練習PDF＋表示QA: `completed / 3 / 3 PASS`
 - Topic 10 練習PDF文字抽出QA: `PASS`
 - Topic 10 練習問題: `12問 / 正答一意性・数値再計算 12 / 12 PASS`
@@ -227,8 +228,9 @@ Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALI
 - Topic 10 未確認実設備値追加: `0件`
 - Topic 10 完成後独立再解答: `20 / 20 PASS`
 - Topic 10 教材外知識補完: `0件`
-- Topic 10 最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- Topic 10 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- Topic 10 初回QA blocker: `解消済み / 最終QA再実施待ち`
 
 ## 次に行うこと
 
-`topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md` 末尾の `# 次工程` だけを、練習PDF・PowerPoint・完成後独立再解答・初回最終QAまで完了した現在地へ同期する。固定EXAM_ALIGNMENT、教材本文、12問、正答、PDF/PPTXは変更しない。同期後に最終QAを再実施し、PASS時のみ `completed` とする。
+Topic 10の最終QAを再実施し、固定一次5問・20小問の独立再解答結果、二次非採用判断、必須成果物、PDF/PPTX QA、SPEC境界、進捗記録整合を再確認する。PASS時のみ `completed` とする。
