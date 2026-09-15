@@ -1,9 +1,9 @@
 # 08 新幹線の変電所はなぜ数十kmおき？
 
 ## 状態
-`independent_reanswer_synced`。制作前EXAM_ALIGNMENTで固定した公式過去問5問・7小問から逆算し、解説本文§1〜§9と3段階例題、解説PDF、練習問題source・PDF、解説画像PowerPointまで完成した。完成後ブラインド独立再解答は `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件で、この結果をEXAM_ALIGNMENTと進捗記録へ同期済み。固定5問・7小問、教材本文、成果物、Topic 08のSPEC固定範囲は変更していない。
+`completed`。制作前EXAM_ALIGNMENTで固定した公式過去問5問・7小問から逆算し、解説本文§1〜§9と3段階例題、解説PDF、練習問題source・PDF、解説画像PowerPointまで完成した。完成後ブラインド独立再解答は `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。最終QAで必須成果物、現行EXAM_ALIGNMENT、独立再解答、表示・ファイルQA、SPEC境界を再確認し `PASS / completed` とした。固定5問・7小問、教材本文、成果物、Topic 08のSPEC固定範囲は変更していない。
 
-解説PDFはA4縦4ページで200 dpi全4ページ表示QA・文字抽出QAともPASS。練習PDFはA4縦4ページで200 dpi全4ページ表示QA・文字抽出QAともPASS、練習12問の数値・論理再検算 `12 / 12 PASS`。解説画像PowerPointは16:9・4枚で表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性PASS。次はTopic 08の最終QAを実施する。
+解説PDFはA4縦4ページで200 dpi全4ページ表示QA・文字抽出QAともPASS。練習PDFはA4縦4ページで200 dpi全4ページ表示QA・文字抽出QAともPASS、練習12問の数値・論理再検算 `12 / 12 PASS`。解説画像PowerPointは16:9・4枚で表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性PASS。最終QAは `08_voltage_drop_final_qa.md`。次はTopic 09「変電所からパンタグラフまでどう送る？」の制作前EXAM_ALIGNMENTを開始する。
 
 ## SPEC固定範囲
 `SPEC.md` のTopic 08から範囲を追加しない。
@@ -70,6 +70,7 @@ R8上 電力 問8は、電圧降下・線路損失を含む一方、機械的強
 - SPEC固定範囲外追加: `0件`
 
 詳細記録: `08_voltage_drop_independent_reanswer.md`
+最終QA: `08_voltage_drop_final_qa.md` — `PASS / completed`
 
 ### 公式正本
 - 過去問一覧: https://www.shiken.or.jp/chief/third/qa/
@@ -455,4 +456,4 @@ B-CにはC負荷だけが流れる。
 - 未確認の新幹線変電所間隔・実設備値の真値化: 0件
 
 ## 次工程
-Topic 08の最終QAを実施する。教材本文・固定5問・7小問・成果物・SPEC固定範囲は変更しない。
+Topic 09「変電所からパンタグラフまでどう送る？」の制作前EXAM_ALIGNMENTを開始する。
