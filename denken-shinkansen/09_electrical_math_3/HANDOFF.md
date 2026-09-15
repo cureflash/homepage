@@ -6,15 +6,15 @@
 
 Topic 01〜06は `completed`。
 
-Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。制作前独立解答は `5 / 5 PASS`、練習12問の独立計算QAは `12 / 12 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
+Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。制作前独立解答 `5 / 5 PASS`、練習12問の独立計算QA `12 / 12 PASS`、完成後独立再解答 `5 / 5 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
 
 完成数: `6 / 12`
 
-current_status: `topic_07_images_pptx_complete`
+current_status: `topic_07_independent_reanswer_complete`
 
 active_topic: `07 微分② 速度を微分すると加速度`
 
-next_start: `Topic 07 完成教材だけでの公式過去問独立再解答`
+next_start: `Topic 07 最終QA`
 
 ## Topic 07 固定EXAM_ALIGNMENT
 
@@ -33,7 +33,7 @@ next_start: `Topic 07 完成教材だけでの公式過去問独立再解答`
 - R5下問12: `a=eE/m0` 一定より `v∝t`、`x∝t²`、`K∝t²`。
 - R3問7: `P(R)=(nE)²R/(R+nr)²` を微分し `R=nr`、したがって `I=E/(2r)`。
 - R1問12: `a=qE/m`、`d/2=(1/2)at²` より `t=sqrt(md/(qE))`。
-- H27問12: `a=eE/m`、偏向板通過時間 `l/v` より `u=elE/(mv)`、変位合計 `X=eldE/(mv²)`。
+- H27問12: `a=eE/m`、偏向板通過時間 `l/v` より `u=elE/(mv)`、変位を整理して `X=eldE/(mv²)`。
 
 ## Topic 07 制作範囲
 
@@ -91,6 +91,20 @@ next_start: `Topic 07 完成教材だけでの公式過去問独立再解答`
 - PPTX ZIP/XML整合性 PASS
 - 固定EXAM_ALIGNMENT変更0件、仕様外論点・未確認新幹線実値追加0件
 
+### 完成後独立再解答
+`topics/07_derivative_2/07_derivative_2_exam_reanswer.md`
+
+完成教材に収録した式・解法手順だけで固定5問を再構成し、解答 `(3),(5),(4),(1),(5)`。電気技術者試験センター公式解答と `5 / 5` 一致した。
+
+- 完成教材だけで公式・接続式を選択: PASS
+- 完成教材だけで途中式を構成: PASS
+- 完成教材だけで選択肢まで到達: `5 / 5 PASS`
+- 教材外知識による補完: 0件
+- 固定EXAM_ALIGNMENT変更: 0件
+- Topic 08以降の数学論点追加: 0件
+- 電子回路・ブラウン管等の専門体系説明追加: 0件
+- 未確認新幹線実値追加: 0件
+
 ## 候補除外
 
 - R7下 理論 問12: 正答にTopic 07の微分・加速度計算を必要としない
@@ -108,6 +122,6 @@ Topic 06 `微分① ダイヤの傾きは速度` は `PASS / completed`。補強
 
 ## 次に行うこと
 
-Topic 07の完成教材だけを使って固定5過去問を独立再解答する。
+Topic 07の最終QAを実施する。
 
-公式解答を先に見て逆算せず、主source・解説PDF・練習source/PDF・解説画像PowerPointだけで解答を再構成し、各問について教材内で必要知識が完結しているか判定する。公式解答との一致だけでなく、教材外知識補完0件を確認する。固定範囲外論点、再出題重複、未確認新幹線実値は追加しない。
+必須成果物、固定EXAM_ALIGNMENT 5問、完成後独立再解答 `5 / 5 PASS`、解説PDF・練習PDF・PowerPointの表示QA、source・STATUS・HANDOFFの進捗整合、Topic 07固定範囲と後続Topic境界を確認する。仕様外論点、再出題重複、未確認新幹線実値は追加しない。
