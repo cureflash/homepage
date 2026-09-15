@@ -8,15 +8,15 @@ Topic 01〜06は `completed`。
 
 Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。制作前独立解答 `5 / 5 PASS`、練習12問の独立計算QA `12 / 12 PASS`、完成後独立再解答 `5 / 5 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
 
-最終QAは `NEEDS_REVISION / IN_PROGRESS`。技術内容・成果物・表示QA・固定範囲はPASSで、未完了理由は主sourceの旧進捗記録2箇所のみ。
+初回最終QAは `NEEDS_REVISION / IN_PROGRESS` だったが、未完了理由だった主sourceの旧進捗記録2箇所は実成果物へ同期済み。技術内容・成果物・表示QA・固定範囲は変更していない。現在は最終QA再判定待ち。
 
 完成数: `6 / 12`
 
-current_status: `topic_07_final_qa_needs_revision`
+current_status: `topic_07_source_progress_synced`
 
 active_topic: `07 微分② 速度を微分すると加速度`
 
-next_start: `Topic 07 主source旧進捗2箇所の同期`
+next_start: `Topic 07 最終QA再判定`
 
 ## Topic 07 固定EXAM_ALIGNMENT
 
@@ -63,7 +63,7 @@ next_start: `Topic 07 主source旧進捗2箇所の同期`
 ### 主source
 `topics/07_derivative_2/07_derivative_2.md`
 
-固定5問の要求事項を本文§2〜§14と3段階例題へ全件対応付け済み。仕様外論点、再出題重複、未確認新幹線実値の追加は0件。
+固定5問の要求事項を本文§2〜§14と3段階例題へ全件対応付け済み。仕様外論点、再出題重複、未確認新幹線実値の追加は0件。旧進捗2箇所は実成果物へ同期済み。
 
 ### 解説PDF
 `topics/07_derivative_2/07_derivative_2_explanation.pdf`
@@ -110,7 +110,7 @@ next_start: `Topic 07 主source旧進捗2箇所の同期`
 ### 最終QA
 `topics/07_derivative_2/07_derivative_2_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`。
+初回判定: `NEEDS_REVISION / IN_PROGRESS`。
 
 PASS項目:
 - 必須成果物実在
@@ -122,11 +122,11 @@ PASS項目:
 - 固定範囲・後続Topic境界
 - 教材外補完、仕様外追加、未確認新幹線実値追加はいずれも0件
 
-FAIL項目:
-1. 主source冒頭 `## 状態` に「解説PDF、練習問題、練習PDF、PowerPoint、完成後独立再解答は未実施」と残っている。
-2. 主source末尾 `## 解説本文段階の判定` に「次工程は解説PDF作成と全ページ表示QA」と残っている。
+初回FAIL項目だった主sourceの旧進捗2箇所は同期済み:
+1. 冒頭 `## 状態` を実在成果物・完成後独立再解答まで完了済みに更新。
+2. 末尾の旧 `## 解説本文段階の判定` を現在の進捗判定へ更新し、次工程を最終QA再判定へ変更。
 
-技術本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX成果物は変更不要。上記2箇所の進捗記録だけを実態へ同期する。
+技術本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX成果物は変更していない。次runで最終QAを再判定する。
 
 ## 候補除外
 
@@ -145,9 +145,6 @@ Topic 06 `微分① ダイヤの傾きは速度` は `PASS / completed`。補強
 
 ## 次に行うこと
 
-主source `topics/07_derivative_2/07_derivative_2.md` の旧進捗2箇所だけを実成果物へ同期する。
+Topic 07の最終QAを再判定する。
 
-- 冒頭 `## 状態`
-- 末尾 `## 解説本文段階の判定`
-
-教材本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・独立再解答内容は変更しない。同期後、Topic 07の最終QAを再判定する。
+主sourceの旧進捗2箇所は同期済み。教材本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・独立再解答内容は変更しない。過去問対応品質ゲート、成果物実在、表示QA、固定範囲、進捗整合を再確認し、PASSなら `completed` とする。
