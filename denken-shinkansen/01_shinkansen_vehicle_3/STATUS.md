@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 30 / 38
-- current_status: `topic_31_exam_alignment_complete`
+- current_status: `topic_31_explanation_source_complete`
 - last_completed_topic: `30 ATC① 新幹線は列車をどう検知する？`
 - active_topic: `31 ATC② 地上から車上へどう情報を送る？`
-- next_start: Topic 31の解説本文＋3段階例題。固定5問・6対象項目を教材本文へ全件マッピングする
+- next_start: Topic 31の解説PDF。本文§1〜§15・3段階例題・固定5問6対象項目の対応を反映し、全ページ表示QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01〜30 — PASS
-- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 制作前EXAM_ALIGNMENT完了（固定5問・6対象項目、`6 / 6 PASS`）
+- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 解説本文＋3段階例題完成（固定5問・6対象項目を本文へ `6 / 6` マッピング）
 
 ## 31 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、信号、周波数、情報伝送、センサ、デジタル信号、論理判断。
@@ -31,6 +31,20 @@ Topic 32の速度照査・ブレーキ指令・フィードバック・ブロッ
 未確認新幹線ATC実車値追加: `0件`。
 
 source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
+
+## 31 解説source
+- 本文: §1〜§15
+- 3段階例題: 基礎「周期と周波数」／標準「標本化条件」／複合「デジタル処理時間と条件判断」
+- 固定EXAM_ALIGNMENT: `6 / 6` 本文マッピング済み
+- 周期・周波数: `f=1/T`, `T=1/f`
+- 処理時間: `t_instruction=CPI/f`
+- A-D変換: 標本化→量子化→符号化
+- 標本化条件: `f_s>=2f_max`, `T_s<=1/(2f_max)`
+- 情報伝送: 伝送路、雑音、多重化、搬送波、変調波、圧縮
+- センサ・信号処理: アナログ→A-D→デジタル処理、D-A、インタフェース
+- 論理判断: 条件分岐・反復の追跡まで
+- Topic 32範囲追加: `0件`
+- 未確認実車値追加: `0件`
 
 ## 30 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知。
@@ -112,4 +126,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 30 `ATC① 新幹線は列車をどう検知する？` は固定5問の完成後独立再解答 `5 / 5 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 31 `ATC② 地上から車上へどう情報を送る？` は制作前EXAM_ALIGNMENT完了。次は固定5問・6対象項目を全件対応させた解説本文＋3段階例題を作成する。
+Topic 31 `ATC② 地上から車上へどう情報を送る？` は解説本文＋3段階例題まで完了。次は解説PDFを作成し、全ページ表示QAを行う。
