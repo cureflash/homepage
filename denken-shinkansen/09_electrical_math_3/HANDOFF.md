@@ -6,15 +6,15 @@
 
 Topic 01〜06は `completed`。
 
-Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題sourceまで完了。制作前独立解答は `5 / 5 PASS`、練習12問の独立計算QAは `12 / 12 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
+Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。制作前独立解答は `5 / 5 PASS`、練習12問の独立計算QAは `12 / 12 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
 
 完成数: `6 / 12`
 
-current_status: `topic_07_practice_source_complete`
+current_status: `topic_07_practice_pdf_complete`
 
 active_topic: `07 微分② 速度を微分すると加速度`
 
-next_start: `Topic 07 練習PDF`
+next_start: `Topic 07 解説画像PowerPoint`
 
 ## Topic 07 固定EXAM_ALIGNMENT
 
@@ -110,6 +110,20 @@ next_start: `Topic 07 練習PDF`
 - R1理論問12: 問5・6（一様電界中の一定加速度と移動時間）
 - H27理論問12: 問8（二方向運動を共通時間で接続）
 
+## Topic 07 練習PDF
+
+成果物: `topics/07_derivative_2/07_derivative_2_practice.pdf`
+
+- A4縦4ページ
+- 練習sourceの全12問、五肢選択肢、完全解説を収録
+- 固定5過去問との対応と独立計算QAを収録
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- クリッピング、重なり、文字化け: 0件
+- 固定EXAM_ALIGNMENT変更: 0件
+- 制作前独立検証 `5 / 5 PASS`、練習独立計算QA `12 / 12 PASS` を維持
+- 仕様外論点・再出題重複・未確認新幹線実値の追加: 0件
+
 ## 候補除外
 
 - R7下 理論 問12: 正答にTopic 07の微分・加速度計算を必要としない
@@ -137,6 +151,7 @@ Topic 07:
 - `topics/07_derivative_2/07_derivative_2.md`（EXAM_ALIGNMENT＋解説本文＋3段階例題）
 - `topics/07_derivative_2/07_derivative_2_explanation.pdf`
 - `topics/07_derivative_2/07_derivative_2_practice.md`（12問＋完全解説、独立計算QA `12 / 12 PASS`）
+- `topics/07_derivative_2/07_derivative_2_practice.pdf`
 
 Topic 06:
 - `topics/06_derivative_1/06_derivative_1.md`
@@ -151,6 +166,6 @@ Topic 06:
 
 ## 次に行うこと
 
-`topics/07_derivative_2/07_derivative_2_practice.md` を正本として練習PDFを作成する。
+Topic 07の解説画像PowerPointを作成する。
 
-全12問＋完全解説を同期し、全ページ表示QA・文字抽出QAを行う。固定5問、固定範囲、制作前 `5 / 5 PASS`、練習独立計算 `12 / 12 PASS` を維持し、積分による一般導出、電子回路・ブラウン管の専門解説、RC/RL過渡現象等を先取りしない。仕様外論点追加、再出題の重複カウント、未確認新幹線実値の追加はしない。
+固定5過去問、固定範囲、制作前 `5 / 5 PASS`、練習独立計算 `12 / 12 PASS` を維持する。解説本文と既存PDFの内容から、二階微分、位置・速度・加速度の対応、速度と加速度の符号、極大・極小、`a=v dv/dx`、可変抵抗最大電力の解法を視覚化し、積分、RC/RL過渡現象、電子回路・ブラウン管の専門解説等を先取りしない。仕様外論点追加、再出題の重複カウント、未確認新幹線実値の追加はしない。
