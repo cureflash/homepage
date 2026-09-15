@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 8 / 21
-- current_status: `topic_09_blind_reanswer_ready`
+- current_status: `topic_09_independent_reanswer_complete`
 - last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 - active_topic: `09 新幹線の25kV交流をフェーザで表す`
-- next_start: 保存済み公式正答値を先読みしない状態で、完成教材だけを使って固定一次5問・11小問を独立再解答する
+- next_start: Topic 09の最終QAを実施し、固定EXAM_ALIGNMENT・成果物・独立再解答・進捗記録・SPEC境界を総点検する
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -67,26 +67,20 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後独立再解答: `BLIND-READY`（次runで実施）
+- [x] 完成後独立再解答: `11 / 11 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 09を `topic_09_blind_reanswer_ready` まで進めた。
+Topic 09を `topic_09_independent_reanswer_complete` まで進めた。
 
-- `topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` のEXAM_ALIGNMENT表から保存済み公式正答値だけを除去した
-- 問題年度・問番号・対象小問・要求知識・設問型は変更していない
-- 「公式解答照合 `11 / 11 PASS`」の事実は保持した
-- HANDOFFには既に個別正答値を残していない
-- この編集runでは独立再解答を実施していない
-- 固定一次5問・11小問、二次採用0問、二次数合わせ0件、固定範囲、技術本文、成果物はいずれも変更していない
-
-## blind再解答準備
-
-MASTER_SPECの必須先読みとEXAM_ALIGNMENT_SPECの「保存済み正答を先に見ずに独立再解答する」条件を両立できる状態にした。主sourceの品質ゲート表は個別正答値を持たず、照合済みという事実だけを保持する。
-
-次runでは、必須先読み対象に保存済み公式正答値がないことを確認した上で、完成教材だけを使って固定一次5問・11小問を独立再解答する。
+- 保存済み個別公式正答値を先読みせず、完成教材だけで固定一次5問・11小問を独立再解答した
+- 独立答案を公式解答と事後照合し、`11 / 11 PASS`
+- 教材だけで使用式選択・途中式構築・選択肢判定・正答理由説明が可能であることを確認した
+- `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_reanswer.md` を追加した
+- 固定EXAM_ALIGNMENT、二次採用0問、二次数合わせ0件、固定範囲、技術本文、成果物はいずれも変更していない
+- 教材外知識補完、後続Topic論点追加、未確認実設備値追加はいずれも0件
 
 ## 判定
 
-Topic 09は `BLIND_REANSWER_READY / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は完成後独立再解答。
+Topic 09は `INDEPENDENT_REANSWER_PASS / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は最終QA。
