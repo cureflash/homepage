@@ -4,17 +4,17 @@
 
 ## 現在地
 
-Topic 01〜08は `completed`。Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで実施した。
+Topic 01〜08は `completed`。Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA再実施まで完了した。
 
-最終QAは `NEEDS_REVISION / IN_PROGRESS`。主source・練習sourceの旧進捗表現は同期済みで、未完了理由は同期後の最終QA再実施が未実施であることのみ。
+最終QA再実施は `NEEDS_REVISION / IN_PROGRESS`。技術内容・固定EXAM_ALIGNMENT・独立再解答・二次非採用判断・成果物・表示QA・SPEC境界はPASS。未完了理由は練習source末尾の残存進捗表現1箇所のみ。
 
 完成数: `8 / 21`
 
-current_status: `topic_09_source_progress_synced`
+current_status: `topic_09_final_qa_rerun_needs_revision`
 
 active_topic: `09 新幹線の25kV交流をフェーザで表す`
 
-次工程: Topic 09の最終QAを再実施し、成果物相互整合・進捗記録を再判定する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF・PowerPointは変更しない。
+次工程: `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_practice.md` 末尾の `# 次工程` だけを現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF・PowerPointは変更しない。
 
 ## Topic 09 固定範囲
 
@@ -63,7 +63,7 @@ R7・R6・R5二次「電力・管理」「機械・制御」を確認したが�
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md`
 - 固定11小問への本文マッピング `11 / 11`
 - 品質ゲート表の個別公式正答値は除去済み。問題選定・要求知識・照合済み事実は保持
-- 冒頭・末尾の旧進捗表現は、完成後独立再解答・最終QA実施済みの現在地へ同期済み
+- 冒頭・末尾の進捗表現は現在地へ同期済み
 
 解説PDF:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_explanation.pdf`
@@ -80,7 +80,7 @@ R7・R6・R5二次「電力・管理」「機械・制御」を確認したが�
 - 正答一意性・数値再計算: `12 / 12 PASS`
 - 固定5問・11小問への練習接続: `11 / 11`
 - PDF A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`
-- source末尾の旧進捗表現は、完成後独立再解答・最終QA実施済みの現在地へ同期済み
+- 旧「次はPowerPoint」表現は同期済みだが、末尾に「次は主sourceを同期し、その後最終QA」と残存している。主source同期済みの現在地と矛盾するため次工程でこの1箇所だけを同期する
 
 PowerPoint:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_images.pptx`
@@ -101,9 +101,8 @@ PowerPoint:
 最終QA:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_final_qa.md`
 - 過去問対応、独立再解答、二次非採用判断、必須成果物、表示QA、SPEC境界: PASS
-- 旧判定時は成果物相互整合・進捗記録のみFAIL
+- 再実施で練習source末尾の残存進捗表現1箇所を検出
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
-- 旧進捗表現同期後の再判定は未実施
 
 固定EXAM_ALIGNMENT変更0件、二次採用0問、二次数合わせ0件、固定範囲外追加0件、未確認実設備値追加0件。
 
@@ -118,15 +117,15 @@ PowerPoint:
 
 公式解答との照合は `11 / 11 PASS`。教材だけで使用式を選択し、途中式を再構築し、選択肢を一意に判定し、正答理由を説明できた。外部知識による補完は行っていない。
 
-## 最終QAで確認した未完了理由
+## 最終QA再実施で確認した未完了理由
 
-旧最終QAで確認した進捗記録不整合はすべて解消済み。
+前回指摘の主source進捗不整合は解消済み。
 
-1. `09_25kv_ac_phasor.md` 冒頭の旧状態・旧次工程 → 同期済み
-2. `09_25kv_ac_phasor.md` 末尾の `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`・旧次工程 → 同期済み
-3. `09_25kv_ac_phasor_practice.md` 末尾の旧「次は解説画像PowerPointを作成する」 → 同期済み
+残存する不整合は1箇所のみ。
 
-現在の未完了理由は、同期後の最終QA再実施が未実施であることのみ。
+1. `09_25kv_ac_phasor_practice.md` 末尾の `# 次工程` が「次は主sourceに残る旧進捗表現を現在地へ同期し、その後最終QAを再実施する」のまま。主sourceは既に同期済みであり、現在地と一致しない。
+
+技術本文、固定EXAM_ALIGNMENT、数式、例題、問題、正答、PDF、PowerPointには変更不要。
 
 ## 参考資料
 
@@ -167,7 +166,7 @@ PowerPoint:
 - 固定範囲外追加: `0件`
 - 未確認実設備値追加: `0件`
 - 完成後独立再解答: `11 / 11 PASS`
-- 最終QA: `NEEDS_REVISION / IN_PROGRESS`（同期後再実施待ち）
+- 最終QA再実施: `NEEDS_REVISION / IN_PROGRESS`（練習source残存進捗表現1箇所）
 
 ## Topic 08 以前
 
@@ -175,4 +174,4 @@ Topic 01〜08は `completed`。Topic 08の最終QAは、固定一次4問・6小�
 
 ## 次に行うこと
 
-Topic 09の最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF・PowerPointは変更しない。
+`topics/09_25kv_ac_phasor/09_25kv_ac_phasor_practice.md` 末尾の残存進捗表現1箇所だけを現在地へ同期する。その後、最終QAを再々実施する。
