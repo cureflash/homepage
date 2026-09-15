@@ -1,192 +1,200 @@
 %PDF-1.4
-%ABCD ReportLab Generated PDF document (opensource)
+%UTF8
 1 0 obj
-<<
-/F1 2 0 R /F2 3 0 R /F3 4 0 R
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 2 0 obj
-<<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
->>
+<< /Type /Font /Subtype /CIDFontType0 /BaseFont /HeiseiKakuGo-W5 /CIDSystemInfo << /Registry (Adobe) /Ordering (Japan1) /Supplement 2 >> >>
 endobj
 3 0 obj
-<<
-/BaseFont /HeiseiKakuGo-W5 /DescendantFonts [ <<
-/BaseFont /HeiseiKakuGo-W5 /CIDSystemInfo <<
-/Ordering (Japan1) /Registry (Adobe) /Supplement 2
->> /DW 1000 /FontDescriptor <<
-/Ascent 752 /CapHeight 737 /Descent -221 /Flags 4 /FontBBox [ -92 -250 1010 922 ] /FontName /HeiseKakuGo-W5 
-  /ItalicAngle 0 /StemH 0 /StemV 114 /Type /FontDescriptor /XHeight 553
->> /Subtype /CIDFontType0 /Type /Font 
-  /W [ 1 [ 277 305 500 668 668 906 727 305 445 445 
-  508 668 305 379 305 539 ] 17 26 668 27 [ 305 305 668 668 668 566 871 727 637 652 
-  699 574 555 676 687 242 492 664 582 789 
-  707 734 582 734 605 605 641 668 727 945 
-  609 609 574 445 668 445 668 668 590 555 
-  609 547 602 574 391 609 582 234 277 539 
-  234 895 582 605 602 602 387 508 441 582 
-  562 781 531 570 555 449 246 449 668 ] 231 632 500 ]
->> ] /Encoding /UniJIS-UCS2-H /Name /F2 /Subtype /Type0 /Type /Font
->>
+<< /Type /Font /Subtype /Type0 /BaseFont /HeiseiKakuGo-W5 /Encoding /UniJIS-UTF8-H /DescendantFonts [2 0 R] >>
 endobj
 4 0 obj
-<<
-/BaseFont /HeiseiMin-W3 /DescendantFonts [ <<
-/BaseFont /HeiseiMin-W3 /CIDSystemInfo <<
-/Ordering (Japan1) /Registry (Adobe) /Supplement 2
->> /DW 1000 /FontDescriptor <<
-/Ascent 723 /CapHeight 709 /Descent -241 /Flags 6 /FontBBox [ -123 -257 1001 910 ] /FontName /HeiseiMin-W3 
-  /ItalicAngle 0 /StemV 69 /Type /FontDescriptor /XHeight 450
->> /Subtype /CIDFontType0 /Type /Font 
-  /W [ 1 [ 250 333 408 500 ] 5 [ 500 833 778 180 333 ] 10 [ 333 500 564 250 333 250 278 500 ] 18 26 500 27 
-  28 278 29 31 564 32 [ 444 921 722 667 ] 36 [ 667 722 611 556 722 ] 41 
-  [ 722 333 389 722 611 889 722 ] 48 [ 722 556 722 667 556 611 722 ] 55 [ 722 944 722 ] 58 [ 722 611 333 500 333 469 500 333 444 500 
-  444 500 444 333 500 ] 73 [ 500 278 ] 75 
-  [ 278 500 278 778 500 ] 80 82 500 83 [ 333 389 278 500 ] 87 [ 500 722 500 ] 90 [ 500 444 480 200 480 333 ] 
-  97 [ 278 ] 99 [ 200 ] 101 [ 333 500 ] 103 [ 500 167 ] 107 [ 500 ] 
-  109 [ 500 333 ] 111 [ 333 556 ] 113 [ 556 500 ] 117 [ 250 ] 119 [ 350 333 444 ] 
-  123 [ 500 ] 126 [ 444 333 ] 128 137 333 138 [ 1000 889 276 611 722 889 310 667 278 ] 147 
-  [ 278 500 722 500 564 760 564 760 ] 157 158 300 159 [ 500 300 750 ] 162 163 750 164 
-  169 722 170 [ 667 611 ] 172 174 611 175 178 333 
-  179 185 722 187 191 722 192 [ 556 444 ] 194 203 
-  444 204 207 278 208 214 500 216 222 500 
-  223 [ 556 722 611 500 389 980 444 ] 231 [ 500 ] 323 [ 500 ] 325 [ 500 ] 327 389 
-  500 ]
->> ] /Encoding /UniJIS-UCS2-H /Name /F3 /Subtype /Type0 /Type /Font
->>
+<< /Length 1587 >>
+stream
+0 G 0 g 0.8 w
+BT /FJ 19 Tf 45 805 Td (Topic 07 直流主回路の高出力化) Tj ET
+BT /FJ 10 Tf 45 780 Td (電験二種：一次4問＋二次1問・15項目に固定。後続技術は扱わない。) Tj ET
+BT /FJ 13 Tf 45 752 Td (1. 試験で問うこと) Tj ET
+BT /FJ 10 Tf 45 732 Td (定格電圧・電流・軸出力・損失・効率を同じ電力収支で扱う。) Tj ET
+BT /FJ 10 Tf 45 714 Td (直流直巻電動機は大きな始動トルクを得やすい。未飽和域では T∝Ia^2。) Tj ET
+BT /FJ 13 Tf 45 688 Td (2. 共通骨格と実車確認値) Tj ET
+BT /FJ 10 Tf 45 668 Td (交流入力 → 主変圧器 → 整流部 → 直流主電動機 → 軸出力) Tj ET
+BT /FJ 10 Tf 45 646 Td (0系 MT200B: 185 kW, 415 V, 490 A, 2200 rpm, 自己通風) Tj ET
+BT /FJ 10 Tf 45 628 Td (100系 MT202: 230 kW, 625 V, 405 A, 2900 rpm, 他力通風) Tj ET
+BT /FJ 10 Tf 45 610 Td (200系 MT201: 230 kW, 475 V, 530 A, 2150 rpm) Tj ET
+BT /FJ 10 Tf 60 592 Td (冷却：強制風冷 14 m3/min) Tj ET
+BT /FJ 10 Tf 45 568 Td (1台当たり連続定格出力は 185→230 kW、約24.3%増。) Tj ET
+BT /FJ 12 Tf 45 555 Td (世代別出力比較 [kW]) Tj ET
+BT /FJ 9 Tf 48 492 Td (0系) Tj ET
+105 485 268.25 18 re S
+BT /FA 9 Tf 450 491 Td (185) Tj ET
+BT /FJ 9 Tf 48 454 Td (100系) Tj ET
+105 447 333.5 18 re S
+BT /FA 9 Tf 450 453 Td (230) Tj ET
+BT /FJ 9 Tf 48 416 Td (200系) Tj ET
+105 409 333.5 18 re S
+BT /FA 9 Tf 450 415 Td (230) Tj ET
+BT /FJ 10 Tf 45 350 Td (注意：高出力化を電流増加だけで説明しない。電圧・電流・損失・冷却を同時に見る。) Tj ET
+endstream
 endobj
 5 0 obj
-<<
-/Contents 13 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 12 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595 842] /Resources << /Font << /FA 1 0 R /FJ 3 0 R >> >> /Contents 4 0 R >>
 endobj
 6 0 obj
-<<
-/Contents 14 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 12 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 1852 >>
+stream
+0 G 0 g 0.8 w
+BT /FJ 17 Tf 45 805 Td (3. 電力収支・直流機・効率) Tj ET
+BT /FA 11 Tf 55 775 Td (P_in=VI,  P_loss=P_in-P_out,  eta=P_out/P_in) Tj ET
+BT /FA 11 Tf 55 752 Td (V=E+IaRa+Vb,  P_Cu=Ia^2Ra,  P_b=VbIa) Tj ET
+BT /FA 11 Tf 55 730 Td (E=V-IaRa-Vb) Tj ET
+BT /FJ 11 Tf 45 700 Td (回転機の定格出力は通常、機械側の有効出力。入力との差が損失になる。) Tj ET
+BT /FJ 13 Tf 45 670 Td (4. 実測効率・規約効率・損失分類) Tj ET
+BT /FJ 10 Tf 45 648 Td (実測効率：実負荷で入力と出力を直接測定。規約効率：損失を測定・算出して規約で求める。) Tj ET
+BT /FJ 10 Tf 45 628 Td (固定損、負荷損、漂遊負荷損を区別する。) Tj ET
+BT /FJ 12 Tf 45 596 Td (H21一次 問2\(2\) の必須中間知識) Tj ET
+42 548 505 38 re S
+BT /FJ 10 Tf 52 566 Td (規約効率に用いる負荷損は、測定時温度の値をそのまま使わず、) Tj ET
+BT /FJ 10 Tf 52 550 Td (規定の基準巻線温度へ補正した値として扱う。) Tj ET
+BT /FJ 9 Tf 45 520 Td (Topic 07では「基準巻線温度へ補正する」という判断まで。温度補正式・詳細熱設計は追加しない。) Tj ET
+BT /FJ 13 Tf 45 486 Td (5. 出力―損失（教材用仮定モデル）) Tj ET
+BT /FA 10 Tf 55 462 Td (P_out=230m [kW],  P_loss=8+12m^2 [kW]) Tj ET
+85 275 m 85 430 l S
+85 275 m 500 275 l S
+85.0 331.0 m 124.0 331.84 l S
+124.0 331.84 m 163.0 334.36 l S
+163.0 334.36 m 202.0 338.56 l S
+202.0 338.56 m 241.0 344.44 l S
+241.0 344.44 m 280.0 352.0 l S
+280.0 352.0 m 319.0 361.24 l S
+319.0 361.24 m 358.0 372.15999999999997 l S
+358.0 372.15999999999997 m 397.0 384.76 l S
+397.0 384.76 m 436.0 399.03999999999996 l S
+436.0 399.03999999999996 m 475.0 415.0 l S
+BT /FJ 9 Tf 100 245 Td (負荷率 m → 出力は一次比例、抵抗性負荷損は m^2 に比例) Tj ET
+endstream
 endobj
 7 0 obj
-<<
-/Contents 15 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 12 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595 842] /Resources << /Font << /FA 1 0 R /FJ 3 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<<
-/Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 12 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Length 2095 >>
+stream
+0 G 0 g 0.8 w
+BT /FJ 17 Tf 45 805 Td (6. 負荷率・発熱・冷却・高速化) Tj ET
+BT /FA 11 Tf 55 775 Td (P_load=m^2 P_c,  P_out=m S_n cosphi) Tj ET
+BT /FJ 10 Tf 45 750 Td (P_c は規定の基準巻線温度へ補正済みの定格電流時負荷損を使う。) Tj ET
+BT /FJ 10 Tf 45 722 Td (損失電力は定常的には発熱へ接続する。P_heat と P_loss は同程度。銅損は I^2R。) Tj ET
+BT /FJ 10 Tf 45 702 Td (0系は自己通風、100系は他力通風、200系は強制風冷。詳細熱設計は Topic 09。) Tj ET
+BT /FA 11 Tf 45 674 Td (編成出力 P_train=N P_m。N は確認済み値だけを使い、未確認実車値は真値化しない。) Tj ET
+BT /FA 11 Tf 45 646 Td (高速域の基本関係 P=Fv。速度は km/h→m/s に変換。) Tj ET
+BT /FJ 13 Tf 45 610 Td (7. 問題を見たときの解法手順) Tj ET
+BT /FJ 10 Tf 55 585 Td (1. 既知量 V, I, P_out, V_b, m を抜き出す。) Tj ET
+BT /FJ 10 Tf 55 562 Td (2. 定格出力が入力か軸出力か確認する。) Tj ET
+BT /FJ 10 Tf 55 539 Td (3. kW/W、km/h/m/s をそろえる。) Tj ET
+BT /FJ 10 Tf 55 516 Td (4. P_in=VI → 損失 → 効率の順で整理する。) Tj ET
+BT /FJ 10 Tf 55 493 Td (5. 規約効率では P_c が基準巻線温度補正済みか確認する。) Tj ET
+BT /FJ 10 Tf 55 470 Td (6. 負荷率では m と m^2 を混同しない。) Tj ET
+BT /FJ 10 Tf 55 447 Td (7. 最後に 0<eta<1、入力>出力、損失>=0 を検算する。) Tj ET
+BT /FJ 13 Tf 45 392 Td (出力―発熱（教材用仮定モデル）) Tj ET
+85 210 m 85 360 l S
+85 210 m 500 210 l S
+85.0 266.0 m 124.0 266.84 l S
+124.0 266.84 m 163.0 269.36 l S
+163.0 269.36 m 202.0 273.56 l S
+202.0 273.56 m 241.0 279.44 l S
+241.0 279.44 m 280.0 287.0 l S
+280.0 287.0 m 319.0 296.24 l S
+319.0 296.24 m 358.0 307.15999999999997 l S
+358.0 307.15999999999997 m 397.0 319.76 l S
+397.0 319.76 m 436.0 334.03999999999996 l S
+436.0 334.03999999999996 m 475.0 350.0 l S
+BT /FJ 9 Tf 100 182 Td (P_heat と P_loss は定常的に同程度。実車の温度上昇・熱抵抗・冷却容量は推定しない。) Tj ET
+endstream
 endobj
 9 0 obj
-<<
-/Contents 17 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 12 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595 842] /Resources << /Font << /FA 1 0 R /FJ 3 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<<
-/PageMode /UseNone /Pages 12 0 R /Type /Catalog
->>
+<< /Length 1522 >>
+stream
+0 G 0 g 0.8 w
+BT /FJ 17 Tf 45 805 Td (8. 3段階例題) Tj ET
+BT /FJ 12 Tf 45 775 Td (基礎：入力・損失・効率) Tj ET
+BT /FJ 9 Tf 55 752 Td (V=600 V, I=400 A, P_out=220 kW) Tj ET
+BT /FJ 9 Tf 55 734 Td (P_in=240 kW, P_loss=20 kW, 効率=91.7%。) Tj ET
+BT /FJ 12 Tf 45 700 Td (本試験標準：電機子抵抗と誘導起電力) Tj ET
+BT /FJ 9 Tf 55 678 Td (V=200 V, P_out=3.75 kW, Ia=20 A, Vb=2.5 V。) Tj ET
+BT /FJ 9 Tf 55 660 Td (鉄損・界磁損・機械損は無視。P_b=50 W, P_Cu=200 W。) Tj ET
+BT /FJ 9 Tf 55 642 Td (R_a=0.500 Ω, E=187.5 V。ブラシ損を先に差し引く。) Tj ET
+BT /FJ 12 Tf 45 606 Td (複合：高速化・入力・発熱（教材用仮定値）) Tj ET
+BT /FJ 9 Tf 55 584 Td (F=180 kN, 効率=90%一定。200 km/h → v=55.56 m/s。) Tj ET
+BT /FJ 9 Tf 55 566 Td (P_out=10.0 MW, P_in=11.11 MW, P_loss=1.11 MW。) Tj ET
+BT /FJ 9 Tf 55 548 Td (220 km/h → P_out=11.0 MW, P_in=12.22 MW, P_loss=1.22 MW。) Tj ET
+BT /FJ 9 Tf 55 530 Td (実車走行抵抗・けん引力特性は推定しない。) Tj ET
+BT /FJ 13 Tf 45 486 Td (頻出ミス) Tj ET
+BT /FJ 10 Tf 55 464 Td (・定格出力を電気入力と誤読する。) Tj ET
+BT /FJ 10 Tf 55 442 Td (・ブラシ損を銅損へ混ぜる。) Tj ET
+BT /FJ 10 Tf 55 420 Td (・負荷損を基準巻線温度へ補正せず規約効率へ使う。) Tj ET
+BT /FJ 10 Tf 55 398 Td (・出力の m 比例と抵抗損の m^2 比例を混同する。) Tj ET
+BT /FJ 10 Tf 55 376 Td (・km/h をそのまま P=Fv へ代入する。) Tj ET
+endstream
 endobj
 11 0 obj
-<<
-/Author (OpenAI) /CreationDate (D:20260914190730+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260914190730+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (\376\377\000T\000o\000p\000i\000c\000 \0000\0007\000 v\364mAN;V\336\215\3570n\232\330Q\372R\233S\026) /Trapped /False
->>
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595 842] /Resources << /Font << /FA 1 0 R /FJ 3 0 R >> >> /Contents 10 0 R >>
 endobj
 12 0 obj
-<<
-/Count 5 /Kids [ 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R ] /Type /Pages
->>
+<< /Length 1798 >>
+stream
+0 G 0 g 0.8 w
+BT /FJ 17 Tf 45 805 Td (9. 固定EXAM_ALIGNMENT・範囲境界) Tj ET
+BT /FJ 10 Tf 50 770 Td (H28 一次 機械 問5\(1\) — 大きな始動トルク、直流直巻電動機) Tj ET
+BT /FJ 10 Tf 50 742 Td (H26 一次 機械 問5\(1\)\(2\) — 始動トルク、直流直巻電動機) Tj ET
+BT /FJ 10 Tf 50 714 Td (H22 一次 機械 問1 — 効率、定格出力、固定損・負荷損・漂遊負荷損) Tj ET
+BT /FJ 10 Tf 50 686 Td (H21 一次 機械 問2 — 基準巻線温度、規約効率、m と m^2P_c) Tj ET
+BT /FJ 10 Tf 50 658 Td (H24 二次 機械・制御 問1\(1\)\(2\) — 電機子銅損、電機子抵抗、誘導起電力) Tj ET
+BT /FJ 12 Tf 45 610 Td (固定品質ゲート：一次4問＋二次1問・15対象項目。採用範囲外小問は必須知識にしない。) Tj ET
+BT /FJ 13 Tf 45 575 Td (追加しない範囲) Tj ET
+BT /FJ 10 Tf 55 550 Td (位相制御、サイリスタ点弧角、誘導電動機、PWM/VVVF、回生・四象限運転、IGBT/SiC。) Tj ET
+BT /FJ 10 Tf 55 530 Td (温度補正式、温度上昇、熱抵抗、時定数など詳細熱設計。) Tj ET
+BT /FJ 10 Tf 55 510 Td (未確認の編成定格出力、主回路総損失・総合効率、冷却容量、実車けん引力―速度特性。) Tj ET
+BT /FJ 13 Tf 45 470 Td (主な出典) Tj ET
+BT /FJ 9 Tf 55 446 Td (電気技術者試験センター 第二種過去問題・解答（H28/H26/H22/H21一次、H24二次）) Tj ET
+BT /FJ 9 Tf 55 426 Td (日立評論 1986年3月号「最新技術を応用した100系新幹線電車の電気品」) Tj ET
+BT /FJ 9 Tf 55 406 Td (電気学会雑誌 102巻2号（1982）200系新幹線電車の解説) Tj ET
+BT /FJ 11 Tf 45 360 Td (このPDFは補強済みsourceへ同期済み。H21の基準巻線温度補正判断を収録。) Tj ET
+endstream
 endobj
 13 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2401
->>
-stream
-Gatm==``@d&:XAWQkW@OWEAT!V+PuOJ5AMDM=$:^M282FHsj:m,TPbu^RaeY1ce.\9dPRT3Ek6GJ)/R0.g=j<ak,,P+WenImUI]A'(ZJS9k)'=M>2,*ok',/Pjm1bLA"%,+47d:]qbt?PcdrY5g1$-$/<!g0%XFm8uiqrc2f'>b+Ik>_99T2F%u$%JhI'=:J0U\WFg@)B$To%r1/L,F1SI:ndA`PU<DlL$Ztp2MYXZIh]i4A>$@s>Rq44P.o)@hW<\5O2:i](;b5=n9+a\\!:FO<!5_cgV'F)SP$k8;@T&\)s89oDn+O=^n`q:-G%S!<HZ4qb3J>E7g3QjV^08DT6Db7_9ckP6Y-MZ;XTKNo2:#lk%d#([i?'_apTD=ZdD9?a.TT\-bW/'1<5\"H!4El<N_Tf>M)lg9Qc'`N+d436,QLZ#,W=VNl?4]\2APHdO_OOcN.p:_Bkh`lb`CCg:F/4I+<g^2D`#\TjUKKlLb=7]i=mS/*O'>t2@-.&%4I""@KL?L-B8Z%^2F5Z$N@pT/5]VjUp:#q!*j\7X:,qJ4akVA5CX$$iS,-O48QP49JThK8Qr'o0jltYUal:%d'R'`nVh]PbI'VH?(aA&]2294E!\&)L8XD'(Sq#[_oe:/]BkbWlXI&><RcrZlK,4[!mdaiam&;#bm07:/`$4Tr/%2mB5e#%lt8b3.Y(DL:4Dj?EC8R3N3L(-6i*)_j4b(JkRFOl(_6Y!1gL$O;a*U;b-98fD/2KKYmVd\_oj50d$qRTjn-/on."n"R$?^&;nP\^Gb2ee-oCpmo#$Au*FLsb(>eW/6'a8`;9^;p(`g!mHJ1kkUkWeZ%J^A.m47aFcR%pqZmO,(OYbS#0q;F]@R!hRc$%B/JtGo/K719-q%7$Z)$]f`.)iljV"jd0WToR-GZ3h('uurPE:jdF>5=p[G>pd3'.F$K:fRe$!1U&VYh-7A,V[<iK6)d1Q+b([daRO`;s*0/nPuLMr3sWdS"qWX\mbuS1T\p";9QA=9U=+,bKP:SB?_0VihNuGh?%`oqTtcVI.EdOP\Gn=[j"ogr!2*q6.T7QQCDEiZF(Qj-o==%5)1EjJK7pUR.O2KrueC9IE*OI+<"s2/=4iGp>n#Q0JpNh\U>=h2-mqjbG,(//mXJ=bb)f<N"XKSYp)Va!R#t3,r><&V_ALNXr58^4FFZ8<S)4q-@*nF)Q5jM&h\0dn>a84bCUBelT)Y#j0OfA>"d5!dltbIZPhdp#$D:&FRNnf''D9jW]J,9c&0!nio4:f<cYCAOLPj)=f=7jE5H/HqaGF.@p+hVa>,rgBDSh<#rXDG0I8P'><Sj2'ipI=R@g(`fGgE@.r9TRPp0%V;<P\^,\3[)F"@jJF@)Iag7c6?3c&p+IYba.^!+kC_,1!HV7<-:Q-(Ce8f&FEl4%#o,#Y[Vc7F_=W)OEuf2@YS=@9O"^atks!b:Z=]j[3NJOTeuLA(r"AC5<_L0MS6&snZe%'Di&b=X-$2$HfN&`\k0dX>Nh'P5XiPT^71$1a#^<$Ckad&fa.;5l1(?Cs?T!_q%G(-"aSBtNiC.CgUIU@MqrW>B^6R`q1qq)ZII2"ScphFoEl5.$a%&:QFdN6/C.8ktL\]nB>I`=4g@'7]-T>t#B4SUsr]OQ"e[Y\?&/EXB3kI$DdEDt*f"<oQO;n*mB[6sK2a.VBN%d,;gfieZ?hVKN?s6]01G4CcPmI&Pb@2,;c`A2R+_j)>'Z_cm\=A__sJcm4V62S.M"R4K9H*ZC;%gdq1N0eGfA]kfgp(UDWAB11Q.AZ'`?3jH(s/_@C,mta#!NA=sjq(B/J6`W`Li,(S9iQpK-&qAmHf/blQ!]m'>][?b82\#`!dHWVC3N3'APOQsqk_R8$dP2%Cl+DokZshLlV`[=DNR'^I]aO`,"[)&<fiGaso'j;?@b'7Roh_jdJZJ'd(57rqHlO"aZm?_WX2!GoXZ2j3A$[g8[n8V?d&9(^cV!lYrh`!@4u(6"9f1gJ]JY#I50#b_UfP!Rd%NVZ-&agQ=k)/*/SPFMdX+=1=$)XZ+.(EECBgXk8gd):E)@V(Q7f:K]5!S0-lZ%TiZG!@A_V:l@I9UcmjF4Zmi7.^1.&P8mg%,12Y).KiY8$*LWr#dd_qQ<(>d^,R6,Rq#@BdT2haN],kEu<%Y:^&_6bDr3A*1_VtX(X66$LRb,mNdOb"?i@qJ]ON)2kF#ISM*jUWo54!+Q$"S9rVW/jkKdGneigZ3JO>X4.1Qh\MlFj)s:3(f8ual_O']k6C>B7]2tAeh%<)@Od#VTLGapoS7FMYK2Gc,QVi6Gha)N*3aKmRSd0#ZAI<7)c-6erQ6CWT6EKM`EfFdd&W/f;n/DnYN&UZZeB(W/-RFLH^ku`[M\!lC0jnOVu\HZ,#U(q6\Y.XoAD65MY,~>endstream
+<< /Type /Page /Parent 14 0 R /MediaBox [0 0 595 842] /Resources << /Font << /FA 1 0 R /FJ 3 0 R >> >> /Contents 12 0 R >>
 endobj
 14 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2644
->>
-stream
-Gau0E>B_#F%Y!$5@.nD4]Lb3hDo8!?I7WX6HZ9d-[$H-A`/PL9>2,4p-J>c^p:hCD0/Fi67Z't+S5;Q]#^ub>&E$([pePolSdFq/+?k9-KiDN#.AY(E)!m,mKAOp;I\VRk(Ib'2RfC=cmk5=m+G4cA#R+Zk]-Ca"Uf9P+:61W?,>`[h!$eW$`CT+[lF/uJRcja'RQp_6OuPk0r]Qp:II*H\Zc"\nk*DI.W;/)(j7F+cEW6Z(.ku96$IhmUX"mnFq,4:R<7Q`kUK-;U@tZ@K<YT+rG/P340:HJQ@A;[fi1'p'p3@iL:!bBBkQVLWp+Hp&<Z8Wua:]!VYu)83bm:+.Oo1/;-f9q`6g+D0clHZ.'0>,O=V9$t)&l&fbXMaO8?B]M2.pV<k%PRE8l%t,I%.^tLmtc1Dc<trG,b9(()@\YSsjln/_Vk%ST7p=_<4JSn$K=H.kHYZo1XK=lXWa*/UW>\F\7!mqIOO6Dd,A9ME=-C3.?iODX\DgE!oaO6T[RSiVq!5)]<d@7dj.X^=):H5od1AQE.>@mEWCh0V>"3aZ`c"6)>:_3!VedOat7Fj[e,GG,'h!,7pAN1RA%##X965:$Vn?%ef2SnG't2D8e"ag?r95#03YrZrf:X6c&a9A`4CZrPp:]cg^q]PW-q-]@djD`$'bg_uUJFF>hRXo7e84CN_ah1+OAQrTIXikjUf)@V/E1m=Kc52M!QpImNDl4(?`Qj8q"E>'.W8@RW!*-mBY=Cq"'Al!\o72D*kQ6p#(U4`#EE^HHMgTO0'*=I=JEU/r>p4/^kLRHU\H(puB89V*&@jn\G/+bJkS-E1PNW4]hLF4t^9cf(<tH\^F.*WH$*Y9OL^,)!'>#fur84WGrn\)>2Ch'm8b%MS=R+rNA0]^DOrjrA,LYI-dpFi3TET3,U&]"OkM=k[Ztha:Ar>NBnp*,T/i;3#L6o9<^:9U\.\;6k6?m:?X4Bs>9M"8MQe0eEF[TXH17\FaRK"4Kn8%6Srhj;eS+.5aBC(b)gTruR^2kjNiB5aLTu';decSNt1Z07A/q$u+21n]%_)LXff\>3#UBb_D<TnII`0D-S6;C\";&D"7Qb#]2"PT_0.rm2\mgNbsTb,6a.TOi1et$;Q"m/!b^"h^k=Qd]8^77ltQ!HjZLN2J@B.=q!rc1CQ@rHSKE6.u[:JE3uf."dYALn,lpd?mX_O"Q`:V*@rKZf"l5<LYFW'-'GddbA`uW+5k-8d2)*R'G?!9)Li!`T-A36E4%tC:TNiYe$`/(_CafJ/Q66Tou*I(8P\^IMRJI#kZegpoS8]SJ1]!C5(`!+E:ZRWUpj$4!/!kc&Jt"/?DfM5gA.MdfR@P2q\)&g0"N+]k)]G67$dX5"`"k__o?)o5/UG?`c.?_Gb!lOpfW>9s)+<nYLsX=jK^;Mi7tU',WS7?c@(r=]T^qr\9UefR&p=TO(\12fom3X_k%o*pT6B*K(%F52/&=Pi>N5+N&AYW([4X[k^YXeZ.AVYq_sarGPj7NYaH#IF51t(Zm6#ZJ]JGk:!94lCWR5>!WGt>Ac.hRXdPS.bem53BgbsjN0Ae$*9oEB>t-`X84F)5/gZtqaKW8aG8AVmR4=12(nm\W)sgd']sbhQ,7uLZiSnCRLQS`8FW%gfhESoYH?nG8qV^6o>eLZ]\M/`a+D16r<A&1-@@`4Z$6P(k'tV?C;Cqg1,\<I>W_moZC:SAbh^d[:P$4enl$X#:?jS]=f#)&n^kE:<iNd4o4]9-sHo*HW"C1`+&MBD'`DmY=q+'J.TE6fng'ARfi(KaY$(C[7B]u8n>4C/:TdbaP*=ao!TukepMi$$]o?[pYc6:AKVh'h\95Ra%2k*I\_f_7:HunOUQE-etRnG\:A7^mI8XClh1kNf3X)IVmM1^HD)4BU;8I?aXU+KoP1o`qc`*eMB<2PX)a<aEq_I[<BZEHliiD;+DH8UJKpIq":28PuI3s]uF3AH6*ig]j;0a",*cf6&^6rN1$eDB?o2\"qFP`>%bLWhbq8l6%P%$L,TN8/.<oU`=anI=R>hW4i=7hVN$bUaB;k"8\nZ5ZAXK'qfiKe40(j.=aH_l>G)>/*[]n&?5Y6m)K$`Y`ln!5tea%&nmW&OMI#J.<3\3X!^scp_\QjB3b<$kk]QaT]?04>&`X7I5tq?[?*;#!h6,$/CLrcj1uNbh*PlYr(<JY*pJVLclr\(`6]pd*Np!Kp<9KPIJg]!EYmjTeCbl7>Y>>/F;2t1Ici\ERbm?iiYl2DInYm!.n41O2uQt$>,!b@L/?RJ;+7o0-ab'gNKnka>8a77%;UtPt9NFijWXcT`=%K``6NAO(^BW^)L[W&Y=Mld?-gkJAI!t6g,)2Jrgg3`[%7O")G>+JE(<S0TBnpUoGE?RA-<Oo,0D=COqU?""C[h=9M5oHmTfqg-uO9/$*DKl=5G"R"Ok+L5Q`48&]MK-8(!fbE+SVB4s=WE8lOFriLl@084f$S@X0IGc1$TEnN4(5%ZFs,0N1o)Q8-PbT)iN(pWj/WK#5?[+Mf(F<oShdUu2us)N\4c2Nms%!1f0`o>g:_7<B5`VT^N$P*!839PW'qOjd'<PJ&pfW'\-4t9RaUV8#0Xiab[JaO%WEm2"jhf.EIj*`h`[YjDEhnFW)QEm<m9GP7U!11LUg]~>endstream
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
 endobj
 15 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2757
->>
-stream
-Gatm=Bi?!A')b#/U)bD4AVXr1h;,]dLF$KaKXdF-@b"p5@:0K^^lkh;ZM(bGB%GMgbQWP3eC9oZ1@s%]/IK;nK%&aO;614ba%o,IA2-1uKJ%C%gaIUk%XoL=M_#i*<2mT2r3,>a^,r(j,"Pd8+e]`JDFf$)880%)<$RZE5cP"g)C=32,:sm`rn8d##:M"rgZPBJ+[U'p"#P$+bPJCtFW+.u7EID5^JT$A>(I=\I5*i;L-Lb$/X48rdaY[qM%tfGf$I^08fXmSi@7c,<F):=YlVA.CBc2/'H@Nt8T;Gg'319AX`dQ9\VCquXRND&#]hCRs5C0=d83$AM`J9H7gEEDU4Z@gKnq^!=[eQTaT`<N1_FE)lJW-Agema<OeCYQ)JR9D_I-ge'eP!cqcIK,*lFCi%JsUiOqB!M8kpd[:!"L4ASTQ#ah."?;SX-`^u&MMi;fIn<F;d1lJnKgPuh<=?"I"87MYGpU?[K(dR(TAaUogmh`[%l*%oV?Qks\f=U#Q([]#%baQ=-[/r@]bJYck_8C[V33K4'Jp*&/Wk4Bi07s$JeG$DZ<*?Ib-:`RgM]FXSG@EP4A;,LE:M\Xp4M7J[_f912Z>^Zdf=E=u,$nhBfRLt\+j1nu%)4.SSVe^8AWK@[''D,oK?pZR!bJN&DQcVBCmQ7f51^[oS;Bc_lpEnV50XI0*+dp!_aVsl;BMrF&b=5Y*1Y+(^Alpt-i7ZlVV+S8O_S+C'\S"Nu91fk:20+%%Nb<j7G&&\=:Qs?a`g,_iO_?GL?=4$8jVJbDacX05]5Yuk_scaX!E[AKfN*(\oo,5q#Mj1lFGLVDV`7B1VD*UMg`hPWTDq2.68^BbmuJBd/Zq8\:U.q0*m2*/?CP2D]#LfBj;PT,)j0[h=5\Ol?X\,PnN78H3.,K9jPf*kV>+l.9RI>*E6[MHg8HrVLR9c<.;Nein4ol`Vu+BE6j_.23'sjtOWGm*B01T$&!9u6ZJIYR6Bc)6oW)`qVZD,3j5@5i<M?(Qd'&P>G['OD/+H`Z$rrUYWc8mkrEk^59ik:8eR$-lmNCnT##\!j6<5lQE(Coj[.IK2QdGgMB't>qaI0PK_H#D1Q`C0?bhNMkZSQThKZi3jQN.nR;=73#E+."EQENjUp<\nt!F"FIo$F1"R19JeRF(Lgma'T+94sZ<kdH(aLjD7!i(h.C15hso]1^2XF-1QkGNh`LMkjEuQ`d#3lcRM:hE%@bba\,<6KSRo*13WmBoNe5Q-^:`TWEj520'6egVVsh7*CH98K(X4X@&,\MH:`:Wf"9<(1Aj$\h7hmE%'`R6="P*I$Q0rM,09r&;li>*b\U^@?k`<>D/K#F!8]GmTbLp3Ml$c%u(^[n<h8QC%Bd!f[BO)o&IRN&#bM]MJS\PX:V5/?*24d,h3Y%@,ikUa]LMD#ZW[^<X2(mb7]1Wc9NU@"Xq0+8H@aKBnfU&rXhJt6NA,PFEIkXiLu1;aiT`KiC^aB)*nu+@Vp3LP9Ld&Z+oeD=rdU*[j5oIc9NVa_N`d(pp`uWFm8H"Ys@+iK%to#-35+rJmM%fXA*N%`!Z-#UI$S[WE"qZU+X[X=?+>"b2[5ZOGLLpJW&1oW<*?+*ZpO7";tf@O?3Th5sRqmTU-FsCb<7jWj&<c,13.W;?bW%lJe.E-m8P0.-#&bTVtIUJhMirBS<QS\4EEi,sYrebn(635=%g\4N8Y?UB>;?GQZ"6;WBWTqFrHs+lD<#h5)(Y$[sd-o!5YXdOS!*/,\l<\to+jCn,8E23=sr`Uooh?;N_)>YoIfT4g/5B'CU]>.A9*A:/(NG(WirQ0.CUO"lV2ZP_^9ij=DK2+Cunq3F-)/7b%P3\2?gWcM;+.o$RmnDW2LLJpUV^WjZ[aRRH$mdl%51\Vh%l@s+7Re&-8GPFmSRCp)!Ea)JZ4d0bhDo>RH50R":?suasQEbt>B#!'rB+3P]iKN&eO+*pl+[;GkY'VY8#6/"Wdu,JnUE+!O$)?[0aH+MGYhP"#load=oTS9?._\5R0p8k55YW5I_aN0qX9)ibTHA&B%K3bbNm09WZe+g*n@1;+c?Ookd,#C[/s8t_YAG8Fg/T..K.$HJIM0Ktr)dS0Zgm#FjEfuT=8Wfq@)E5SB_8$c[<D,Tf`A^\O$`D0PMXqfZfU+jHe7cTdW"TK2.=UI@"P?e)dN\s)cnt7qd:Esp^oR?pp_K'o?ip,kM7Nb%N084*3g7.$iH0R$%5C*\7U*ME!XE],_tHK,<'^mp\E?`E-4hd(pDf4gaLKH/i)]5KBcTh^P2Z"Rj(<@50h:t6t;0pBl1-V7&.,89C)Du1Cc!Z+2KnPiiR4J<hIIor0\cPPGqWK+m6$J^JOJL("^(:]Q*L/s"eN,O1GD&bF;N7D+%88:XmF,U/*2qFb2N5+#,K)JB-5-4t$l09XG@/RqimU(V9.FQH9`&K%W']=)11[fKJbmB<B<hrGAD<p<C('a.2HR9N&bfj`91([KjGJQML,m0g3,/h)A83[Kl^@r]>fJq<2*Y<*3e7nO=2+5hm>?mCUR,/EnZ@\[^9G+RYdK3ZD[t5*c`\eCeVe6>cK'[t]9&Y:&CY@Hi3ZnI:<u^%Jbhm1RKpKP8`LFA/0bq4bY`LG\CZ?,s$?J[3lZY4M]FZn>8EhJ&;YKN#=AhC##?E:MmsHeY0"q0;EOYqGj)maa\)%kY!lHHZ+/oO+Y^6b3*OEbs>"baY/jF0S6m2q#,@aYj(W'%Rh4GSDaJ%K"J\2u+R:q_*B-J<^&MkORt8?,bb%b@_6H~>endstream
-endobj
-16 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1506
->>
-stream
-Gau0DD/\/e&H88._#PLA't&'-78dI#&+/(Z"#@X@>2?ttJgGR,fl>`I8=Bb-J);8XOd<'b40'<bP/o`Mm^_@@-Z]Lea6e,V@-g>+%Y*T!$PpKi4:FOl+1#&=hY!IG&^8TgjQ6PYs0:SVh[(b$jmFm5!a**;gYj7e67:4&6qEGjO9kn4;ODGJ1n9#?80lF^0H.[&GClRs(S,ssbmlpmpOO!8C%ss27iMB#iPM\u%H[m2cWL+0**BID.1rM%>?BO9Wo8hM+&U.%_iU9W"]<d0&4]t*]9%dK=I<s<"Ba-m`Fo&lmKW-KS0KN+6A?>!E?O&pfEnqOh%4!,?P;9XB5Gt#h%!tJ\MAt=K-c+WZ/>mbC@g0/_>%Qh]1EJnM,\dh!UW#nH[`=kh;bRSos/fQ^Sb6%63>Gf2g!5!\]&WJHAUGKV&Ue6JNio-)II588@ZLZcY46EZcG&>`/HMNYuS-Bor%6i2Kcn('@%Qr.1oqf28nSa]DsQ-lunk%FB-tT$lEuH_(-Lk4G.ipb%=)'L,51J=3eFMh-C%[3_WNbH6n[iH'T9?)T-1C'sMHS$@,#8rD.qr>oi_$L(,\Pj];g]<7'ID@:=>@&Qf%?WA:Ybj'f(M?5HksBtGR"ZRUCN4rjiSpQ-qMnT'2EqlU\C0#)DrYm';I]#>m4_JJ]WD%kkcU;I4,(4(?6'DQNnDeH@3%DmBe;_/jP$%YrS:Sq5AE$YqAX&:?.K9qR_6ass&BXX]Ki?GT;ND,q+jmP!;Sg>NT'ku3%Y>q@j>R,;-aHeT:&&pYOPVId6-`8GN[,[\0R=AG`5D@I^e3g'4j.M2@[-:@f/B#.b3_1PP&&68[/+_6#5ku[3=sgNqcHYlb,(]WJg"DVDUZDUc?fRR8ep]UKr3Yb83JAFX@C!g>R=okhHr?Rmd3TNFbB@(*0%fS$%DUL1h]0[:(2J98X%BGE2/.6W;s.0["YNXkrDVH1,iii)P@&"5ffBJ3GbpT[--iou]WOqh%5?bFM]fcXR/FXkQ%pZdVs^gQVq(WE=OIqfo3&Ko0(RrNL7YhG<jOolFf_P+jU,q6e/,YP.`g;s;V'$9[E&a-!Z?i5grn>GgA-2XI]7`EUE*,3rSM#^(O^YH&9CSpke[=s<bIRB,4:>9k?)Imh`(;J;CKj#gmoN1I?;`/$?9mO<(\[V)]:p*k([csY/O<t,ITY=KT;'cC>DR3DMM*LVmpM.%&&]b#9T&Ee3Q:cQ7^!2]b'go6u"MO%cC,"D8qr8lK4mfP_HOXT)Rg*T8d&SbbL@2X`*9^a')i<h<BDcl-,\e*'9MsmH%%aRubi"4B%%Yoh+e]rN;gX"jBJm2P*=oGHJAA&j?+O>p><GW5rCrJJm!45?er<pfl^R9_2BqgUkW-cB3#ZV,4M)_;"AXY2#'bkhH9[Nd;TErFpJ;X\@cYE8,2R[&ZPKH$Y6'6b#7n>4^f\$PtA.j,Xo!&09^VVP"WP#GM<4Z6(6::G@Mj^bSW<=b\/*A?1b'g\VN2Cs#E~>endstream
-endobj
-17 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2370
->>
-stream
-Gau`UkuSf_&HC$_+l5ju#VVRm[B`I&+_f5V(lTI@O"G7CJE$b<+d=7*rp?8E?"ji<Y"_Pm%]rbM*V5cJ**OckIjLHYa$Mm,LukO480nIq6CO2PK2qGP0R#Fq4\@^!BSZ;Ijr[HLIQX>*17_^[K`WtgSsWq0<[s!7e$7=N#,Pf0Lp_7.Z&2r`bB9nc*C*Hk/ZC1U6_s"m"-)[,]D:.f6j"o6WVA`t>:T>602UWqMnrL((5[Ut0!/,*gZ_,6Hc;[:2me@=pp%gEf=%f)]@04hYlhM2#Qk@m-Va]&B]ASE0-mMN<+N)pGDM,fa:Nt]/-n1:%0T<F+<'VY#tY[gIM0G"j&7**g@Z'FL]Qi_Cga1'qO_-@E!_pBOp,I@m+Q,&]/"-cKO]ui17/\/:7.Vd=ub.u>/,k0]!8]k%W-Ih%PdSXEs4_\],otG/T3VAe..(A&Dg:3-";!;.r.`O'"3UHa]0H:NB*kFR>MThKG;CY4;m2<W7lU[/>#)Z]<O+'DlJZ).bLEY26F'n/"7q'P,Lg`SR4BWEdYGep^<,?"ODZnA;]_8GoeJTIS,-]j9,L*!bZ^cPX,W1foj^[\q*fFEIOn[41NE^N8ZK)29OdSQ>VpMlEb65]s`9lUmM$Je&&2L#ou6aRLM\9e=t<ZNBQI5H%IU>Y#@%`-KB]8:DIZ0'^\2+Vr5hNo^*o&?H;<hQ=5$=aS.27[Mjjmg/AL>58$;;#b0,'3\X0q?7r[/MVOH9b!;<,k.%RUcMJ`Yo1YA`1Y5FV#c4oc9qPDtM&GqGC?4MAfB;;`<9\HnHm=%Dq1%[NC"##hB,0VcOl)ls=&.HPA`V'PqrXV#>7DNF4O"i3G4;#Mm"D-g;6@`&+1VPBr5CkAUPH*DPK=jWA.JbSPsm(r8ECA(KQ`jERKT%Yc$4_.^@_RDYe!=*e/n9)`]@!;?IBObi!Cbjq"Ws[HZ6QWd6qIQOKc(qLZh';EMJZ0onY?o4(=Dh$Xpjb.c+"l0^-k;]WsY,;"9L%DBO3;?3dm.86f#,f+p9eTAW`T3c-RFr'V#jE*NX$mT?_>Xn[,`%MoNN'=t=mM8N)WC#i*IK^6!+??u-a$bc;UP]W_'h*,SEI_Ac&lq8enB??gY6?P,SUan=O\;"]GT&%5^,#i;oW[ETjA86i4lHdAqB4EMq'^t1p4s#_49B,g623r\SYDoU$R0(A%lPZgs,L,5pW[Yek4XL4%q4MWcM:*@,9J!nME\!H]&<(]kiBV)$nO%d'RO!L,<'4VPX96_s@9s'gqKJSiY#56OCJ`JVXI]"\+Ji^L0/Wi0Z6$"!<I1E"VA!*Z%UI!1]\btLq*^6l/9us!'5YT4DG5h0l]@47l&;,5M)oF&8CXdt$PKk"cfQZd6f1Pn8m`nW9"p!VJ4)%MI<6HmPn5JTiTAhr2A9+<`<rLp@^UbF:Dl0^o#tp=DK<msR&][qB0D.W4?/34LrI:=q.4`h8D?n,!pEITMp[d9e%:8`RNo9Xnr:EBs*1[]M<&U8fj%0SETqo/0mc-d]GH!6o1d1>a@MK>M/gh<D-6=FOf+*m3ofHu7]/D?cKM(%PFbN9Z7nGZ_D4_&UX7Y_N,Yk@+X/=Yl"TDJNJ!k%.eq+J3/l^UhI!?B`FK`F[iINuS\\7Y<-"%"]'jo;7XksI->&!9):g>=Na$(0n%99Nh5b9RI`SYIQ'+AQ>=n/lnM3pCXWlBs`,uK>/b&V5!S&!@,<>r7"*C<h&6Qn+0&<bB,l"4B:QC>c*mp%>G%jo7ejaT5bnat"U*jBj`Y!_o78=1ql1O/f^t[(P<@]qDaBK5!H\>)6V'Zg1D49J`9\+!_cs8_O%$U%6C^q6#&534oUGh:!:i1H<Xg_od8HsHu1`hB59MQkB6Bod;l=R;Gb/CAs(F24'EV.CKi-3V8Fcu.8,jR079V1>HO#ZV>/+fh!/GeP6^%6#1Y)KX"jR")ui+VX:ZD8*Sco7LpWu>:&(QS]+F9X1(Is1FO=.HQ!9!0dHnf;I64seGcU53N_hBa>RIOEP=XdP>4'2?4P^S*f3R6Bl=^mJ!bI;[hnSTZ`G7fNZr>mTfE;Z\C.l@ECV;kC-%rMLU_@ZkBB29%Z`&$?uKD`##+N'CPmK(:?0.DF22KCHul1B1L[#k(E'WhN4bd9IT["AR2G12..1.*.LI0hhEuA@_uDc;a:OBN5NR&c7hu"@<!Tc]V>^D)-1[$1L?pI+P9W#eiK[!i5nF*)Rr1;9MAK(GVGH?Gm4n#ns1/D?.E`!emgsiCdI&E_ZtaJPp!?8\TaXBf`2HEBApm*W"GhC@Pj!DHnIo&(R&J]S;Xn:gRBmZnq:5oe5!L2(\1d#Ei$cl%H"oLm,)l<"`ClFU0?-T0Oru>GHd(Y#$2ppGZX3^5`~>endstream
+<< /Type /Catalog /Pages 14 0 R >>
 endobj
 xref
-0 18
+0 16
 0000000000 65535 f 
-0000000061 00000 n 
-0000000112 00000 n 
-0000000219 00000 n 
-0000001109 00000 n 
-0000002612 00000 n 
-0000002817 00000 n 
-0000003022 00000 n 
-0000003227 00000 n 
-0000003432 00000 n 
-0000003637 00000 n 
-0000003707 00000 n 
-0000004068 00000 n 
-0000004152 00000 n 
-0000006645 00000 n 
-0000009381 00000 n 
-0000012230 00000 n 
-0000013828 00000 n 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000240 00000 n 
+0000000366 00000 n 
+0000002004 00000 n 
+0000002141 00000 n 
+0000004044 00000 n 
+0000004181 00000 n 
+0000006327 00000 n 
+0000006464 00000 n 
+0000008038 00000 n 
+0000008177 00000 n 
+0000010027 00000 n 
+0000010166 00000 n 
+0000010250 00000 n 
 trailer
-<<
-/ID 
-[<67dd283465c4e1943c3c182d75678b07><67dd283465c4e1943c3c182d75678b07>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 11 0 R
-/Root 10 0 R
-/Size 18
->>
+<< /Size 16 /Root 15 0 R >>
 startxref
-16290
+10301
 %%EOF
