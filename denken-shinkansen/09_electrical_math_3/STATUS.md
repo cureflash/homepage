@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 6 / 12
-- current_status: `topic_07_practice_pdf_complete`
+- current_status: `topic_07_images_pptx_complete`
 - last_completed_topic: `06 微分① ダイヤの傾きは速度`
 - active_topic: `07 微分② 速度を微分すると加速度`
-- next_start: `Topic 07 解説画像PowerPoint`
+- next_start: `Topic 07 完成教材だけでの公式過去問独立再解答`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -45,22 +45,22 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 07「微分② 速度を微分すると加速度」の練習PDFを完成した。
+Topic 07「微分② 速度を微分すると加速度」の解説画像PowerPointを完成した。
 
-成果物は `topics/07_derivative_2/07_derivative_2_practice.pdf`。A4縦4ページで、練習sourceの全12問（基礎3／標準7／複合2）と完全解説、固定5過去問との対応、独立計算QAを収録した。
+成果物は `topics/07_derivative_2/07_derivative_2_images.pptx`。16:9・4枚で、二階微分と位置・速度・加速度の対応、速度と加速度の符号、連鎖律と `a=v dv/dx`、極大・極小、可変抵抗の最大電力、固定5過去問への教材内マッピングを可視化した。
 
-200 dpi全ページ表示QA `4 / 4 PASS`。クリッピング、重なり、文字化けは0件。文字抽出QAもPASSし、問1〜問12、固定5過去問対応、`12 / 12 PASS`、主要数式・最終値を抽出確認した。
+全4スライドをレンダリングして表示QA `4 / 4 PASS`。overflow検査PASS、クリッピング・重なり・文字化け0件、PPTX ZIP/XML整合性PASS。
 
 固定5過去問、制作前独立検証 `5 / 5 PASS`、練習独立計算QA `12 / 12 PASS`、固定範囲は変更していない。積分による一般導出、電気量・磁束等の微積分体系、RC/RL過渡現象、一般特性曲線体系、電子回路・ブラウン管の専門解説へは拡張せず、未確認新幹線実値の追加も0件。
 
 ## 判定
 
-Topic 07は `topic_07_practice_pdf_complete / IN_PROGRESS`。
+Topic 07は `topic_07_images_pptx_complete / IN_PROGRESS`。
 
-完成数は `6 / 12` のまま。次は解説画像PowerPoint。
+完成数は `6 / 12` のまま。次は完成教材だけで固定5過去問を独立再解答する。
