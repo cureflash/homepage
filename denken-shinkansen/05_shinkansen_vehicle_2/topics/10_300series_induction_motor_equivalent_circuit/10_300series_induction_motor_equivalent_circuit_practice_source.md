@@ -4,7 +4,7 @@
 
 ## 状態
 
-Topic 10 の固定済み `EXAM_ALIGNMENT` と解説本文・解説PDFだけを使い、練習問題sourceを作成した。
+Topic 10 の固定済み `EXAM_ALIGNMENT` と解説本文・解説PDFだけを使い、練習問題sourceを作成し、練習PDFまで完成した。
 
 - 一次試験型: 8問（すべて五肢択一）
 - 二次試験型: 4問（途中式・前提・単位・検算を含む記述式）
@@ -14,7 +14,7 @@ Topic 10 の固定済み `EXAM_ALIGNMENT` と解説本文・解説PDFだけを�
 - 未確認の300系実車抵抗・リアクタンス・電圧・電流・周波数・効率・制御定数は使用しない
 - Topic 11以降のPWMコンバータ、VVVF、V/f、回生・四象限運転、高調波、ベクトル制御は扱わない
 
-作成後、保存した正答欄を参照せずに式・数値・論理・正答一意性を独立再計算し、`12 / 12 PASS` とした。
+作成後、保存した正答欄を参照せずに式・数値・論理・正答一意性を独立再計算し、`12 / 12 PASS` とした。練習PDFはA4縦3ページ、180 dpi表示 `3 / 3 PASS`、文字抽出PASS、PDF収録値の独立再計算 `12 / 12 PASS`。
 
 ## EXAM_ALIGNMENT対応
 
@@ -681,6 +681,18 @@ T(s)≈3Vφ^2(r2'/s)/[ωs(r2'/s)^2]
 - Topic 11〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
+## 練習PDF QA
+
+- `10_300series_induction_motor_equivalent_circuit_practice.pdf`: `completed`
+- A4縦3ページ
+- 180 dpi全3ページ表示: `3 / 3 PASS`
+- 文字抽出: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件`
+- PDF収録値の独立再計算: `12 / 12 PASS`
+- 固定一次3問＋二次2問・22答案要素: 維持
+- 固定範囲外追加・Topic 11〜13先取り・未確認300系実車値追加: `0件`
+- SHA-256: `f5dfaf9d3964190bc377ae47e442f6eee630658a92da5d65e7f1140fed166b72`
+- Git blob SHA-1: `4c6bdefa78383a57074e017e6ef6eea958b50bbb`
+
 ## 次工程
 
-練習PDFを作成し、全ページ表示QA・文字抽出QA・数値論理QAを行う。
+解説画像PowerPointを作成し、SPEC指定4グラフを収録して表示QA・overflow・PowerPoint ZIP整合性を行う。
