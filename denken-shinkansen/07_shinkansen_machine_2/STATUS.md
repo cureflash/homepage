@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `9 / 22`
-- current_status: `topic_10_explanation_source_complete`
+- current_status: `topic_10_explanation_pdf_complete`
 - last_completed_topic: `09 誘導電動機を自由に操るには？`
 - active_topic: `10 新幹線はモーターを発電機にして止まる`
-- next_start: Topic 10 解説PDF
+- next_start: Topic 10 練習問題・完全解説source
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -59,8 +59,18 @@
 - [x] 固定5問・15答案要素を本文へマッピング
 - [x] 固定範囲外論点・未確認実車値の追加 0件
 
+## Topic 10 解説PDF
+- [x] `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_explanation.pdf`
+- [x] A4縦4ページ
+- [x] 200 dpi全ページ表示QA `4 / 4 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件`
+- [x] 固定一次4問＋二次1問・15答案要素を維持
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3` 収録
+- [x] 固定範囲外論点・未確認実車値の追加 `0件`
+- [x] SHA-256 `4fbb34ed2d2f8d88be5b685ddeaba697ca1177cfa552777e065ddde66d14be77`
+
 ## 今回進めた内容
-Topic 10の解説本文＋3段階例題を完成した。固定EXAM_ALIGNMENTは変更せず、誘導機の発電機運転、四象限、主回路の回生電力フロー、PWM変換器の二次記述計算、回生効率までを本文へ接続した。
+Topic 10の解説PDFを完成し、GitHub正本へ反映した。固定EXAM_ALIGNMENT・解説本文は変更せず、A4縦4ページへ固定範囲と3段階例題を収録した。200 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA PASS。固定範囲外論点・未確認実車値の追加は0件。
 
 ## 判定
-Topic 10は `topic_10_explanation_source_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。
+Topic 10は `topic_10_explanation_pdf_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は練習問題・完全解説sourceを作成する。
