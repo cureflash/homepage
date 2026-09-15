@@ -1,0 +1,72 @@
+name: Temporary Theory3 Topic09 PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tmp-theory3-topic09-pdf.yml'
+      - '.tmp_theory3_topic09/topic09.html.gz.b64'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install PDF dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk poppler-utils
+          python -m pip install --upgrade 'weasyprint==68.0'
+      - name: Build and verify Topic 09 explanation PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 -d .tmp_theory3_topic09/topic09.html.gz.b64 | gzip -d > /tmp/topic09.html
+          target='denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_explanation.pdf'
+          weasyprint /tmp/topic09.html "$target"
+          pages=$(pdfinfo "$target" | awk '/^Pages:/ {print $2}')
+          test "$pages" = '4'
+          pdftotext -layout "$target" /tmp/topic09.txt
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('/tmp/topic09.txt').read_text(encoding='utf-8', errors='replace')
+          assert '\ufffd' not in s
+          keys=[
+              'Topic 09','50Hz','60Hz','XL = 2πfL','XC = 1/(2πfC)','f0 = 1/(2π√LC)',
+              '例題1','例題2','例題3','R8上 理論 問8','R7下 理論 問8','R6下 理論 問9',
+              'R6上 理論 問8','R5下 理論 問8','R5上 理論 問8'
+          ]
+          missing=[k for k in keys if k not in s]
+          assert not missing, missing
+          PY
+          mkdir -p /tmp/render
+          pdftoppm -r 200 -png "$target" /tmp/render/page >/dev/null 2>&1
+          test "$(find /tmp/render -maxdepth 1 -name 'page-*.png' | wc -l)" -eq 4
+          test -s /tmp/render/page-1.png
+          test -s /tmp/render/page-2.png
+          test -s /tmp/render/page-3.png
+          test -s /tmp/render/page-4.png
+          echo "pdf_pages=$pages"
+          echo "pdf_size=$(wc -c < "$target")"
+          echo "pdf_sha256=$(sha256sum "$target" | awk '{print $1}')"
+      - name: Commit PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          target='denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_explanation.pdf'
+          git add "$target"
+          git commit -m 'Add Topic 09 theory explanation PDF'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+          done
+          exit 1
