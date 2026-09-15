@@ -1,7 +1,7 @@
 # 07 なぜ三相交流をそのまま架線へ流さない？
 
 ## 状態
-`independent_reanswer_complete`。解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPointまで完成済み。初回完成後独立再解答で教材外補完6小問を検出して `NEEDS_REVISION` とし、EXAM_ALIGNMENT再監査で現行SPEC固定範囲だけで完答できる公式過去問を3問へ見直した。改定3問は保存済み正答を先に見ず、公式問題文と完成教材だけで再解答後に公式解答と照合し、`3 / 3 PASS`・教材外知識補完0件となった。次はTopic 07最終QAを行う。
+`completed`。解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPointまで完成済み。初回完成後独立再解答で教材外補完6小問を検出して `NEEDS_REVISION` とし、EXAM_ALIGNMENT再監査で現行SPEC固定範囲だけで完答できる公式過去問を3問へ見直した。改定3問は保存済み正答を先に見ず、公式問題文と完成教材だけで再解答後に公式解答と照合し、`3 / 3 PASS`・教材外知識補完0件。練習PDF QA・PowerPointの過去問対応も現行3問へ同期し、最終QAを `PASS / completed` とした。
 
 ## SPEC固定範囲
 `SPEC.md` のTopic 07から範囲を追加しない。
@@ -134,7 +134,7 @@ H30電力問8は、完成済みTopic 06の変圧比 `V1/V2=N1/N2` から一次�
 
 ### 3. 単相負荷と三相側不平衡
 - 三相の一相だけから大容量単相負荷を取ると三相側を不平衡にすること。
-- 単相2回路を作り、二次側負荷をできるだけ平衡させる目的を説明する。
+- 単相2回路を作り、二次側の二回路の負荷をできるだけ平衡させる目的を説明する。
 - 不平衡率の厳密計算や対称座標法へは進まない。
 
 ### 4. スコット結線
@@ -362,8 +362,9 @@ M変圧器の一次全巻数が1000巻のスコット結線を考える。
 - EXAM_ALIGNMENT再監査: `07_phase_conversion_exam_alignment_reaudit.md`
 - 初回完成後独立再解答: `07_phase_conversion_independent_reanswer.md` / 公式解答 `8 / 8` 一致、教材のみ完結 `2 / 8` のため `NEEDS_REVISION`
 - 改定完成後独立再解答: `07_phase_conversion_independent_reanswer_revised.md` / 公式解答 `3 / 3` 一致、教材のみ完結 `3 / 3 PASS`、教材外知識補完0件
+- 最終QA: `07_phase_conversion_final_qa.md` / `PASS / completed`
 - SPEC固定範囲外追加: 0件
 - 未確認実設備定格・配置の追加: 0件
 
 ## 次工程
-Topic 07最終QAを実施し、必須成果物、改定EXAM_ALIGNMENT、独立再解答 `3 / 3 PASS`、既存表示QA、SPEC境界、source・STATUS・HANDOFFの進捗整合を確認する。
+Topic 07は `completed`。次はTopic 08 `新幹線の変電所はなぜ数十kmおき？` の制作前EXAM_ALIGNMENTを行う。
