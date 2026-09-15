@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: `9 / 22`
-- current_status: `topic_10_practice_source_progress_synced`
-- last_completed_topic: `09 誘導電動機を自由に操るには？`
-- active_topic: `10 新幹線はモーターを発電機にして止まる`
-- next_start: Topic 10 最終QA再実施
+- exam_aligned_completed_topics: `10 / 22`
+- current_status: `topic_10_completed`
+- last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
+- active_topic: `11 GTO→IGBT→SiCの損失を計算する`
+- next_start: Topic 11 制作前EXAM_ALIGNMENT
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -20,6 +20,7 @@
 - [x] Topic 07 最終QA PASS
 - [x] Topic 08 最終QA PASS
 - [x] Topic 09 最終QA PASS
+- [x] Topic 10 最終QA PASS
 
 ## Topic 10 制作前EXAM_ALIGNMENT
 - [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列`SPEC.md`確認
@@ -128,11 +129,11 @@
 - [x] 完成後独立再解答 `15 / 15 PASS`
 - [x] 練習問題・PDF/PPTX QA: PASS
 - [x] 固定範囲境界・未確認実車値: PASS
-- [ ] 進捗記録整合: 前回FAIL、修正済み・再判定待ち
-- 判定: 前回 `NEEDS_REVISION / IN_PROGRESS`、再判定待ち
+- [x] 進捗記録整合: PASS
+- 判定: `PASS / completed`
 
 ## 今回進めた内容
-Topic 10練習source末尾の旧進捗記録だけを実成果物へ同期した。教材本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTXは変更していない。完成後独立再解答 `15 / 15 PASS` と固定範囲境界を維持している。
+Topic 10の最終QAを再実施した。前回唯一FAILだった練習source末尾の旧進捗記録は同期済みで、必須成果物、固定一次4問＋二次1問・15答案要素、完成後独立再解答 `15 / 15 PASS`、練習・表示QA、固定範囲境界、進捗記録整合を全件PASS確認した。教材本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTXは変更していない。
 
 ## 判定
-Topic 10は `topic_10_practice_source_progress_synced / IN_PROGRESS`。完成数は `9 / 22` のまま。次は最終QAを再実施する。
+Topic 10は `PASS / completed`。完成数は `10 / 22`。次はTopic 11「GTO→IGBT→SiCの損失を計算する」の制作前EXAM_ALIGNMENT。
