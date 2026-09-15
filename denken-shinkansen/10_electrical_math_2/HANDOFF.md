@@ -8,7 +8,7 @@ Topic 01〜07は `completed`。
 
 完成数: `7 / 20`
 
-current_status: `topic_08_explanation_pdf_complete`
+current_status: `topic_08_practice_source_complete`
 
 active_topic: `08 二階常微分方程式`
 
@@ -133,12 +133,30 @@ source:
 
 解説PDF品質判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
+## Topic 08 練習source完了記録
+
+練習source:
+`topics/08_second_order_ode/08_second_order_ode_practice.md`
+
+- 全12問、全問五肢択一
+- 基礎3問／標準6問／複合3問
+- 固定一次5問・15小問の要求事項へ全件接続
+- 特性方程式、根分類、初期条件、RLC、機械系、`ω_n`・`ζ`・`ω_d`、二次遅れの時間領域表現を反復
+- 各問に途中式・理由・単位・検算を含む完全解説
+- 独立計算・正答一意性QA: `12 / 12 PASS`
+- Topic 09〜10先取り: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値追加: 0件
+
+練習source品質判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
 ## 次に行うこと
 
-Topic 08の練習問題sourceを作成する。
+Topic 08の練習PDFを作成する。
 
-1. 固定一次5問・15小問の要求事項へ全件接続する。
-2. 二種一次相当の選択式を中心に、本試験標準・複合問題を含める。
-3. 解答は途中式・理由・単位・検算を省略しない。
+1. 正本は `topics/08_second_order_ode/08_second_order_ode_practice.md` とする。
+2. 全12問・完全解説を収録する。
+3. 固定一次5問・15小問への接続を維持する。
 4. Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしない。
 5. 未確認実車値や固定範囲外論点を追加しない。
+6. PDF作成後は全ページ表示QA・文字抽出QAを行う。
