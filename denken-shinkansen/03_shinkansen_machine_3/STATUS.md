@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 7 / 16
-- current_status: `topic_08_images_pptx_complete`
+- current_status: `topic_08_independent_reanswer_complete`
 - last_completed_topic: `07 GTO→IGBT→SiCで何が変わった？`
 - active_topic: `08 N700Sのモーターはなぜ小さくできた？`
-- next_start: Topic 08の完成後独立再解答を実施する。固定EXAM_ALIGNMENT 4問・5小問を完成教材だけで再導出し、公式解答と照合する。教材外・固定範囲外知識による補完0件を確認する
+- next_start: Topic 08の最終QAを実施する。必須成果物の実在、固定EXAM_ALIGNMENT 4問・5小問、完成後独立再解答 `5 / 5 PASS`、PDF/PPTX QA、source進捗整合、固定範囲境界を確認する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -18,7 +18,7 @@
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
 - [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
-- [ ] 08 N700Sのモーターはなぜ小さくできた？ — 解説画像PowerPoint完了 / 制作中
+- [ ] 08 N700Sのモーターはなぜ小さくできた？ — 完成後独立再解答 `5 / 5 PASS` / 最終QA待ち
 - [ ] 09〜16 — 未完了
 
 ## Topic 08 EXAM_ALIGNMENT
@@ -33,7 +33,13 @@
 
 制作前公式照合: `5 / 5 PASS`
 
-固定範囲外知識による補完: `0件`
+完成後独立答案列: `(2), (2), (1), (2), (1)`
+
+完成後公式照合: `5 / 5 PASS`
+
+教材外・固定範囲外知識による補完: `0件`
+
+固定EXAM_ALIGNMENT変更: `0件`
 
 5問へ件数合わせするため、等価回路、二次入力・二次銅損、二次抵抗制御、ベクトル制御、始動法等は追加しない。直近年度から遡って確認した関連問題のうち、Topic 08固定範囲だけで設問全体または独立小問を完結できるものは上記4問である。
 
@@ -65,6 +71,7 @@
 - 制作前検証 `5 / 5 PASS`
 - 解説本文＋3段階例題完成
 - 固定4問・5小問の本文マッピング `4問・5小問 / 全件`
+- 完成後独立再解答 `5 / 5 PASS`
 - JR東海・メーカー一次資料で6極化・小型軽量化・SiC主変換装置を確認
 - 固定範囲外知識による補完 `0件`
 - 固定範囲外論点追加 `0件`
