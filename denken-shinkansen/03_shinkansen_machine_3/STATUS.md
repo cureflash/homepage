@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 8 / 16
-- current_status: `topic_09_images_pptx_complete`
+- current_status: `topic_09_independent_reanswer_complete`
 - last_completed_topic: `08 N700Sのモーターはなぜ小さくできた？`
 - active_topic: `09 新幹線はどうやって電気で止まる？`
-- next_start: Topic 09の完成後独立再解答を実施する。固定EXAM_ALIGNMENT 5問と固定範囲は変更しない
+- next_start: Topic 09の最終QAを実施する。固定EXAM_ALIGNMENT 5問・固定範囲・完成後独立再解答結果は変更しない
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -33,6 +33,10 @@
 制作前答案列: `(4), (3), (2), (5), (1)`
 
 制作前公式照合: `5 / 5 PASS`
+
+完成後独立答案列: `(4), (3), (2), (5), (1)`
+
+完成後公式照合: `5 / 5 PASS`
 
 教材外・固定範囲外知識による補完: `0件`
 
@@ -68,6 +72,7 @@ R7上問3、R6上問3、R4上問1、H27問2、H26問16、H29問3は回生・発�
 - 解説本文＋3段階例題完成
 - 固定5問の本文マッピング `5 / 5 全件`
 - `P=Fv`、`P=Tω`、`ω=2πN/60`、`E=mv²/2`、`E=Jω²/2`、`P=ΔE/t`、回生効率、負の滑りによる誘導機発電運転を固定範囲内で接続
+- 完成後独立再解答 `5 / 5 PASS`
 - 教材外・固定範囲外知識による補完 `0件`
 - 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
