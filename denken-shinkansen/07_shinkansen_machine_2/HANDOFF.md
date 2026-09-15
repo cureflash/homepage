@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `08 VVVFインバータで三相交流を作る`
 
-current status: `topic_08_practice_source_complete`
+current status: `topic_08_practice_pdf_complete`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
@@ -236,12 +236,27 @@ source:
 - 固定範囲外論点の追加: 0件
 - 未確認300系実車値の追加: 0件
 
+## Topic 08 練習PDF完了
+
+練習PDF:
+`topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_practice.pdf`
+
+- A4縦5ページ
+- 一次試験型10問＋二次記述5問、計15問
+- 全15問に解答・完全解説を付与
+- 200 dpi全5ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: PASS
+- 数値正答整合QA: `15 / 15 PASS`
+- 一次問題の正答一意性: `10 / 10 PASS`
+- 固定5問・13小問への接続: `13 / 13 PASS`
+- 固定範囲外論点の追加: 0件
+- 未確認300系実車値の追加: 0件
+
 ## 次に行うこと
 
-Topic 08の練習PDFを作成する。
+Topic 08の解説画像PowerPointを作成する。
 
-- 練習問題sourceの一次10問＋二次5問を同期する
-- 解答・途中式・理由・単位を省略しない
-- 全ページ表示QA・文字抽出QA・数値正答整合QAを行う
+- 三相2レベル6スイッチ構成、PWM信号波/キャリア、相電圧/線間電圧、180°通電、高調波相殺、固定過去問対応を可視化する
+- 全スライド表示QA・overflow検査・ZIP整合性QAを行う
 - 固定5問・13小問への接続を維持する
 - V/f制御、ベクトル制御、デッドタイム設計、素子選定、整流器設計等の固定範囲外論点を追加しない
