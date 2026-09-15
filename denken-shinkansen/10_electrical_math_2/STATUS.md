@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 7 / 20
-- current_status: `topic_08_source_progress_synced`
-- last_completed_topic: `07 一階常微分方程式`
-- active_topic: `08 二階常微分方程式`
-- next_start: Topic 08の最終QAを再判定する。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、問題、PDF、PowerPoint、完成後独立再解答は変更しない
+- exam_aligned_completed_topics: 8 / 20
+- current_status: `topic_08_completed`
+- last_completed_topic: `08 二階常微分方程式`
+- active_topic: `09 ラプラス変換`
+- next_start: Topic 09の制作前EXAM_ALIGNMENT。公式過去問を直近年度優先で調査し、SPEC固定範囲だけで要求知識・式・設問型・教材内必要説明を固定する
 
 ## Topic 07 制作品質ゲート
 
@@ -52,27 +52,30 @@
 - [x] 完成後独立再解答 `15 / 15 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
 - [x] source進捗記録2箇所の同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 08 `二階常微分方程式` のsource Markdownに残っていた旧進捗2箇所だけを現在地へ同期した。
+Topic 08 `二階常微分方程式` の最終QAを再判定した。
 
-変更:
-- `topics/08_second_order_ode/08_second_order_ode.md` 冒頭 `## 状態`
-- 同source末尾 `## 次工程`
-
-不変更:
-- 教材本文
-- 固定EXAM_ALIGNMENT 一次5問・15小問
-- 数式・3段階例題
-- 練習問題
-- 解説PDF・練習PDF・PowerPoint
-- 完成後独立再解答 `15 / 15 PASS`
+確認結果:
+- 必須成果物実在: PASS
+- 固定EXAM_ALIGNMENT 一次5問・15小問: PASS
+- 制作前独立再解答 `15 / 15 PASS`: 維持
+- 完成後独立再解答 `15 / 15 PASS`: 維持
+- 解説PDF表示QA `5 / 5 PASS`: 維持
+- 練習PDF表示QA `5 / 5 PASS`: 維持
+- PowerPoint表示QA `5 / 5 PASS`: 維持
+- source進捗記録2箇所: 実成果物と整合
+- Topic 09〜10先取り: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 08は `IN_PROGRESS`。完成数は `7 / 20` のまま。
+Topic 08は `PASS / completed`。
 
-次は最終QA再判定。
+完成数は `8 / 20`。
+
+次はTopic 09 `ラプラス変換` の制作前EXAM_ALIGNMENT。
