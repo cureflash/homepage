@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: 7 / 22
-- current_status: `topic_08_practice_pdf_complete`
+- current_status: `topic_08_powerpoint_complete`
 - last_completed_topic: `07 300系のPWMコンバータは何をしている？`
 - active_topic: `08 VVVFインバータで三相交流を作る`
-- next_start: Topic 08の解説画像PowerPointを作成し、全スライド表示QA・overflow検査・ZIP整合性QAを実施する
+- next_start: Topic 08のSPEC指定計算プログラムを作成し、スイッチング波形・相電圧/線間電圧・基本波・FFT/高調波成分を同一条件から生成して数値/論理QA・表示QAを実施する
 
 ## Topic 01 品質ゲート進捗
 - [x] 系列SPEC確認
@@ -140,25 +140,23 @@
 - [x] 解説PDF
 - [x] 練習問題source（一次10問＋二次記述5問、全15問完全解説）
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 計算プログラム・指定波形/FFT
 - [ ] 公式過去問の教材のみでの独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
-Topic 08「VVVFインバータで三相交流を作る」の練習PDFを完成し、GitHub正本へ反映した。
+Topic 08「VVVFインバータで三相交流を作る」の解説画像PowerPointを完成し、GitHub正本へ反映した。
 
-- PDF: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_practice.pdf`
-- A4縦5ページ
-- 一次試験型10問＋二次記述5問、計15問
-- 全15問に解答・完全解説を付与
-- 200 dpi全5ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: PASS
-- 数値正答整合QA: `15 / 15 PASS`
-- 一次問題の正答一意性: `10 / 10 PASS`
-- 固定一次3問＋二次記述2問、計5問・13小問へ `13 / 13` 接続
-- V/f制御、ベクトル制御、デッドタイム設計、素子選定、整流器設計、負荷電流経路詳細の追加: 0件
+- PowerPoint: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_images.pptx`
+- 16:9・4スライド
+- 三相2レベル6スイッチ構成、PWM信号波/キャリア、相電圧/線間電圧、180°通電、高調波相殺、固定過去問対応を可視化
+- 全4スライド表示QA: `4 / 4 PASS`
+- 視覚的クリップ・境界確認: PASS
+- ZIP/OOXML整合性: PASS
+- 固定一次3問＋二次記述2問、計5問・13小問への接続を維持
+- V/f制御、ベクトル制御、デッドタイム設計、素子選定、整流器設計等の固定範囲外論点追加: 0件
 - 未確認300系実車値の追加: 0件
 
 ## 判定
-Topic 08は `topic_08_practice_pdf_complete`。完成数は `7 / 22` のまま。次は解説画像PowerPoint作成＋表示QA・overflow検査・ZIP整合性QA。
+Topic 08は `topic_08_powerpoint_complete`。完成数は `7 / 22` のまま。次はSPEC指定の計算プログラム＋スイッチング波形・相電圧/線間電圧・基本波・FFT/高調波成分。
