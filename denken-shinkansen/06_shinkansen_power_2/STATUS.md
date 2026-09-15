@@ -4,12 +4,12 @@ updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `08`
 theme: 主変圧器を％インピーダンスで見る
-current_status: `topic_08_explanation_pdf_complete`
+current_status: `topic_08_practice_source_complete`
 completed_topics: `7 / 22`
 
 ## Topic 08 current result
 
-Topic 08「主変圧器を％インピーダンスで見る」の解説PDFを完成。
+Topic 08「主変圧器を％インピーダンスで見る」の練習問題・完全解説sourceを完成。
 
 正式固定:
 1. 令和7年度 第二種二次「電力・管理」問3 — `2 / 2答案要素 PASS`
@@ -19,7 +19,7 @@ Topic 08「主変圧器を％インピーダンスで見る」の解説PDFを完
 
 制作前独立再解答は一次 `5 / 5空欄`、二次 `12 / 12答案要素`、合計 `4 / 4問・17 / 17答案要素 PASS` を維持。
 
-解説PDFはA4縦3ページ。固定9項目、正式4過去問への接続、3段階例題を収録。200 dpi表示QA `3 / 3 PASS`、文字抽出QA PASS。主要数値 `3.50 kA / 400 MV·A / 158.0 kV / 32 MV·A / 48 MV·A / 0.262 kA` を再確認済み。
+練習sourceは全15問。基礎4／本試験標準8／複合・応用3、二種一次型五肢択一10問＋二種二次型記述5問。全問に完全解説を付し、数値・論理QA `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`、固定9項目 `9 / 9`、正式4過去問要求への接続 `4 / 4問・17 / 17答案要素` を確認済み。
 
 固定範囲外論点追加、後続Topic依存、未確認実設備値追加、正式固定4問の変更はいずれも0件。原則5問へ合わせるための仕様追加も0件。
 
@@ -37,8 +37,9 @@ Topic 08「主変圧器を％インピーダンスで見る」の解説PDFを完
   - [x] 制作前独立再解答
   - [x] 解説本文＋3段階例題
   - [x] 解説PDF
-  - [ ] 練習問題・完全解説source
+  - [x] 練習問題・完全解説source
+  - [ ] 練習PDF
 
 ## next_start
 
-Topic 08の練習問題・完全解説sourceを作成する。完成済み解説source・解説PDFを正本とし、固定EXAM_ALIGNMENT・正式4過去問・固定9項目を変更しない。二種一次型に加え、二次「電力・管理」に接続する記述式を含め、各問を固定範囲内で独立検算する。
+Topic 08の練習PDFを作成する。`topics/08_transformer_percent_impedance/08_transformer_percent_impedance_practice.md` を正本とし、全15問・完全解説・数式・単位・選択肢を欠落なく収録する。固定EXAM_ALIGNMENT・正式4過去問・固定9項目は変更しない。
