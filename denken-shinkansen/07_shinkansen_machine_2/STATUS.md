@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `8 / 22`
-- current_status: `topic_09_explanation_source_complete`
+- current_status: `topic_09_explanation_pdf_complete`
 - last_completed_topic: `08 VVVFインバータで三相交流を作る`
 - active_topic: `09 誘導電動機を自由に操るには？`
-- next_start: Topic 09の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う
+- next_start: Topic 09の練習問題sourceを作成する
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -37,8 +37,16 @@
 - [x] ベクトル制御は磁束成分・トルク成分、d軸/q軸の概念まで
 - [x] Topic 10以降・厳密座標変換・制御器設計の追加 0件
 
+## Topic 09 解説PDF
+- [x] `09_induction_motor_control_explanation.pdf` 作成
+- [x] A4縦4ページ
+- [x] 200 dpi全ページ表示QA `4 / 4 PASS`
+- [x] 文字抽出QA PASS
+- [x] 3段階例題・固定5問18小問の解法経路をPDFへ維持
+- [x] 固定範囲外論点・未確認300系実車値の追加 0件
+
 ## 今回進めた内容
-Topic 09「誘導電動機を自由に操るには？」の解説本文＋3段階例題を完成した。固定一次3問＋二次2問・18小問を全件教材内へ接続し、総極数と極対数の記号差、同期速度・滑り・二次周波数、V/f一定、定トルク、弱め磁束・定出力、ベクトル制御概念までをSPEC範囲内で整理した。固定範囲外論点・未確認300系実車値は追加していない。
+Topic 09「誘導電動機を自由に操るには？」の解説PDFを完成した。A4縦4ページで、同期速度・滑り・二次周波数、V/f一定、定トルク、弱め磁束・定出力、ベクトル制御概念、3段階例題、固定一次3問＋二次2問・18小問への解法経路を収録した。200 dpi全4ページ表示QAと文字抽出QAはPASS。固定範囲外論点・未確認300系実車値は追加していない。
 
 ## 判定
-Topic 09は `explanation_source_complete`。完成数は `8 / 22` のまま。次は解説PDF＋全ページ表示QA・文字抽出QA。
+Topic 09は `explanation_pdf_complete`。完成数は `8 / 22` のまま。次は練習問題sourceを作成する。
