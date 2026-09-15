@@ -9,7 +9,7 @@ Topic 01〜08は最終QAまで `PASS / completed`。
 
 active topic: `09 誘導電動機を自由に操るには？`
 
-current status: `topic_09_final_qa_needs_revision`
+current status: `topic_09_source_progress_synced`
 
 ## Topic 09 固定EXAM_ALIGNMENT
 固定過去問:
@@ -67,6 +67,7 @@ current status: `topic_09_final_qa_needs_revision`
 - 固定EXAM_ALIGNMENT・固定範囲・問題・正答の変更: 0件
 - 固定範囲外追加: 0件
 - 未確認300系実車制御値追加: 0件
+- 練習source旧進捗記録の同期: 完了
 
 ## 完成後独立再解答結果
 - R02 一次 機械 問3 (1)〜(5): `(ワ, ハ, ル, ロ, ト)`、`5 / 5 PASS`
@@ -98,7 +99,7 @@ current status: `topic_09_final_qa_needs_revision`
 - H26一次型の定加速域 `V/f` 一定、定出力域 `V一定・I_M一定・f_s可変`。
 - ベクトル制御は磁束生成成分・トルク生成成分、d軸/q軸の概念まで。
 
-## 最終QA結果
+## 前回最終QA結果
 判定: `NEEDS_REVISION / IN_PROGRESS`
 
 PASS:
@@ -111,14 +112,11 @@ PASS:
 - PowerPoint表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性 PASS
 - Topic 10以降・厳密Park/Clarke変換・制御器設計・センサレス推定器設計・未確認300系実車値の混入なし
 
-未完了理由:
-- `09_induction_motor_control_practice.md` 末尾の `## 次工程` が「この練習問題sourceから練習PDFを作成」の旧記録のまま。
-- 練習PDF、PowerPoint、完成後独立再解答は既に完了しており、進捗記録がGitHub上の実成果物と不整合。
+前回未完了理由:
+- `09_induction_motor_control_practice.md` 末尾 `## 次工程` の旧進捗記録1箇所のみ。
+
+## 今回の同期
+`09_induction_motor_control_practice.md` 末尾を、実在する練習PDF・PowerPoint・完成後独立再解答の現在地へ同期済み。技術本文、15問、解答・解説、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTXは変更していない。
 
 ## 次に行うこと
-`09_induction_motor_control_practice.md` の旧進捗記録だけを実成果物へ同期する。
-
-- 末尾 `## 次工程` を現在地へ更新する。
-- 技術本文、15問、解答・解説、固定EXAM_ALIGNMENT、問題・正答は変更しない。
-- PDF/PPTX成果物は変更しない。
-- 同期後、Topic 09最終QAを再判定する。
+Topic 09最終QAを再判定する。前回唯一の不整合だった練習source進捗記録が解消されていることを確認し、全品質ゲートが維持されていれば `PASS / completed` とする。
