@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 7 / 21
-- current_status: `topic_08_powerpoint_complete`
+- current_status: `topic_08_independent_reanswer_complete`
 - last_completed_topic: `07 0系のモーターはなぜ力を出せる？`
 - active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
-- next_start: Topic 08の完成後独立再解答を行う
+- next_start: Topic 08の最終QAを行う
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -54,25 +54,24 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答: `6 / 6 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 08「L0系はどうやって磁石だけで浮いて進む？」の解説画像PowerPointを完成した。
+Topic 08「L0系はどうやって磁石だけで浮いて進む？」の完成後独立再解答を完了した。
 
-- `08_maglev_electromagnetic_induction_images.pptx`
-- 16:9・5枚
-- 固定範囲6項目を可視化
-- 固定一次4問・6小問への解法接続を維持
-- 200 dpi全5スライド表示QA: `5 / 5 PASS`
-- overflow検査: `PASS`
-- PPTX ZIP整合性: `PASS`
+- 対象: 固定一次4問・6小問
+- 独立答案: R7問2(2) `ワ`、R5問2(2)〜(4) `イ / ニ / ロ`、R2問2(2) `ヨ`、H28問1(5) `ル`
+- 公式解答照合: `6 / 6 PASS`
+- 教材だけで使用式・途中式・選択肢判定を再構築: `PASS`
+- 教材外知識補完: `0件`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 固定範囲外論点追加: `0件`
 - 超電導物性・未確認実設備値追加: `0件`
+- 記録: `08_maglev_electromagnetic_induction_reanswer.md`
 
 ## 判定
 
-Topic 08は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `7 / 21` のまま。次工程は完成教材だけで固定一次4問・6小問を独立再解答する。
+Topic 08は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `7 / 21` のまま。次工程は最終QA。
