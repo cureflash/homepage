@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_10_completed`
+- current_status: `topic_11_exam_alignment_complete`
 - last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
 - active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 制作前EXAM_ALIGNMENT
+- next_start: Topic 11 解説本文＋3段階例題
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -132,8 +132,34 @@
 - [x] 進捗記録整合: PASS
 - 判定: `PASS / completed`
 
+## Topic 11 制作前EXAM_ALIGNMENT
+- [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列`SPEC.md`確認
+- [x] Topic 11固定範囲「GTO・IGBT・SiC・導通損失・スイッチング損失・ON電圧・スイッチングエネルギー・スイッチング周波数・素子数・発熱・冷却・変換効率」を確認
+- [x] 一次4問＋二次記述1問、計5問を固定
+- [x] 固定範囲へ直接対応する15答案要素を品質ゲート対象化
+- [x] 制作前独立検証 `15 / 15 PASS`
+- [x] 固定範囲外論点による件数合わせ `0件`
+- [x] Topic 12以降の極数・同期機・蓄電池・制御系論点の追加 `0件`
+- [x] 未確認実車半導体定格・損失・温度・冷却性能の真値化 `0件`
+- [x] 公式確認できない古いGTO問題を固定過去問として採用 `0件`
+
+### 固定過去問
+- R07 一次 機械 問4: (3),(5)
+- R06 一次 機械 問2: (4)
+- R02 一次 機械 問2: (3)〜(5)
+- R04 一次 機械 問4: (1)〜(5)
+- H22 二次 機械・制御 問3: (1),(2)
+
+### 制作前独立検証
+- R07 一次 機械 問4: `2 / 2 PASS`
+- R06 一次 機械 問2: `1 / 1 PASS`
+- R02 一次 機械 問2: `3 / 3 PASS`
+- R04 一次 機械 問4: `5 / 5 PASS`
+- H22 二次 機械・制御 問3: `4 / 4 PASS`
+- 合計: `15 / 15 PASS`
+
 ## 今回進めた内容
-Topic 10の最終QAを再実施した。前回唯一FAILだった練習source末尾の旧進捗記録は同期済みで、必須成果物、固定一次4問＋二次1問・15答案要素、完成後独立再解答 `15 / 15 PASS`、練習・表示QA、固定範囲境界、進捗記録整合を全件PASS確認した。教材本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTXは変更していない。
+Topic 11「GTO→IGBT→SiCの損失を計算する」の制作前EXAM_ALIGNMENTを完了した。公式二種過去問から一次4問＋二次1問・15答案要素を固定し、制作前独立検証 `15 / 15 PASS`。件数合わせの固定範囲外追加、未確認実車値の真値化、非公式転載だけによる古いGTO問題の固定はいずれも0件。Topic 11 sourceを新規作成し、固定過去問・要求知識・使用式・参考教材・教材マッピング予定・固定範囲境界を記録した。
 
 ## 判定
-Topic 10は `PASS / completed`。完成数は `10 / 22`。次はTopic 11「GTO→IGBT→SiCの損失を計算する」の制作前EXAM_ALIGNMENT。
+Topic 11は `topic_11_exam_alignment_complete / IN_PROGRESS`。完成数は `10 / 22`。次は解説本文＋3段階例題。
