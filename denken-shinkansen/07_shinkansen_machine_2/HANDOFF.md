@@ -9,7 +9,7 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_10_practice_pdf_complete`
+current status: `topic_10_powerpoint_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -115,11 +115,23 @@ source完成内容:
 - 未確認実車値追加: `0件`
 - SHA-256: `b18a4dafb0123a73d6b87ccaf75bd887cf7dcee6e4d510e9b6310fa5ecabc33d`
 
-## 次に行うこと
-Topic 10の解説画像PowerPointを作成する。
+## Topic 10 解説画像PowerPoint
+- `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_images.pptx`: `completed`
+- 16:9・4枚
+- 固定電力フロー、`s<0` 発電機運転、四象限、H24二次型フェーザ/PWM計算、回生効率を可視化
+- Visual QA: `4 / 4 PASS`（1600×900相当）
+- overflow: `0件`
+- ZIP整合性: `PASS`
+- 固定5過去問・15答案要素: 維持
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `77807ae3a7bbd10e7110a79316dacad7eaedb609d2ec4a482cfe473a5b5c310d`
 
-1. Topic 10の固定EXAM_ALIGNMENT、固定範囲、15答案要素を変更しない。
-2. 回生の固定電力フロー、誘導機の `s<0` 発電機運転、四象限運転、H24二次型フェーザ/PWM計算、回生効率を可視化する。
-3. PowerPoint表示QA・overflow・ZIP整合性を確認する。
+## 次に行うこと
+Topic 10の完成後独立再解答を行う。
+
+1. 固定5過去問・15答案要素を変更しない。
+2. 保存済み正答を先に見ず、完成教材だけで一次4問＋二次1問を再解答する。
+3. 教材外知識で補完した場合はFAILとする。
 4. H27/H24の除外小問、Topic 11/16、未確認実車値を追加しない。
-5. 完成後独立再解答へは先行しない。
+5. 独立再解答後にSTATUS/HANDOFFを同期し、最終QAへは先行しない。

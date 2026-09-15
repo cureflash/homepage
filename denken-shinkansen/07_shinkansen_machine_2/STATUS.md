@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `9 / 22`
-- current_status: `topic_10_practice_pdf_complete`
+- current_status: `topic_10_powerpoint_complete`
 - last_completed_topic: `09 誘導電動機を自由に操るには？`
 - active_topic: `10 新幹線はモーターを発電機にして止まる`
-- next_start: Topic 10 解説画像PowerPoint
+- next_start: Topic 10 完成後独立再解答
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -90,8 +90,21 @@
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 - [x] SHA-256 `b18a4dafb0123a73d6b87ccaf75bd887cf7dcee6e4d510e9b6310fa5ecabc33d`
 
+## Topic 10 解説画像PowerPoint
+- [x] `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_images.pptx`
+- [x] 16:9・4枚
+- [x] 回生固定電力フローを可視化
+- [x] 誘導機の `s<0` 発電機運転と四象限運転を可視化
+- [x] H24二次型 `P=V_L I`、`V_v=V_L+jXI`、PWM変調率を可視化
+- [x] 回生効率と固定5過去問の接続を可視化
+- [x] 1600×900相当の全4枚表示QA `4 / 4 PASS`
+- [x] overflow `0件`
+- [x] ZIP整合性 PASS
+- [x] 固定範囲外論点・未確認実車値の追加 `0件`
+- [x] SHA-256 `77807ae3a7bbd10e7110a79316dacad7eaedb609d2ec4a482cfe473a5b5c310d`
+
 ## 今回進めた内容
-Topic 10の練習PDFを完成し、一次10問＋二次5問の全15問と完全解説を収録した。200 dpi全6ページ表示QA `6 / 6 PASS`、文字抽出QA PASS、数値・論理再検算 `15 / 15 PASS`。固定5過去問・15答案要素を維持し、H27/H24の除外小問、Topic 11/16、未確認実車値の追加は0件。
+Topic 10の解説画像PowerPointを完成した。16:9・4枚で、固定電力フロー、誘導機の `s<0` 発電機運転、四象限運転、H24二次型フェーザ/PWM計算、回生効率を可視化した。全4枚表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS。固定5過去問・15答案要素を維持し、H27/H24の除外小問、Topic 11/16、未確認実車値の追加は0件。
 
 ## 判定
-Topic 10は `topic_10_practice_pdf_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は解説画像PowerPointを作成する。
+Topic 10は `topic_10_powerpoint_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は完成教材のみで固定5過去問・15答案要素を独立再解答する。
