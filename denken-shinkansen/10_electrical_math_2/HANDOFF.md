@@ -8,11 +8,11 @@ Topic 01〜08は `completed`。
 
 完成数: `8 / 20`
 
-current_status: `topic_09_explanation_source_complete`
+current_status: `topic_09_explanation_pdf_complete`
 
 active_topic: `09 ラプラス変換`
 
-次工程: Topic 09の解説PDF。
+次工程: Topic 09の練習問題source。
 
 ## 上位仕様
 
@@ -145,6 +145,9 @@ Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取�
 source:
 `topics/09_laplace_transform/09_laplace_transform.md`
 
+解説PDF:
+`topics/09_laplace_transform/09_laplace_transform_explanation.pdf`
+
 ### Topic 09 固定範囲
 
 - ラプラス変換の定義
@@ -205,8 +208,22 @@ H18 問4 (1)は公式標準解答どおり初期値 `y0` を任意のまま残�
 
 固定5問・6対象設問への本文マッピングは `6 / 6`。Topic 10先取り、固定範囲外追加、未確認実車値依存はいずれも0件。
 
+### Topic 09 解説PDF
+
+`topics/09_laplace_transform/09_laplace_transform_explanation.pdf`
+
+QA:
+- A4縦5ページ
+- 200 dpi全ページ表示QA `5 / 5 PASS`
+- 文字抽出QA `PASS`
+- 固定二次5問・6対象設問の反映 `6 / 6`
+- 3段階例題反映: PASS
+- Topic 10先取り: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
 ## 次に行うこと
 
-Topic 09 `ラプラス変換` の解説PDFを1段階進める。
+Topic 09 `ラプラス変換` の練習問題sourceを1段階進める。
 
-完成済み主sourceだけを反映し、固定EXAM_ALIGNMENTとTopic 10境界を変更しない。
+固定済みEXAM_ALIGNMENTの5問・6対象設問と完成済み解説だけを根拠にし、Topic 10の伝達関数・極・零点を追加しない。
