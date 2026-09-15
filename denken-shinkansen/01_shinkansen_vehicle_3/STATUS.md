@@ -5,14 +5,32 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 31 / 38
-- current_status: `topic_31_completed`
+- current_status: `topic_32_exam_alignment_complete`
 - last_completed_topic: `31 ATC② 地上から車上へどう情報を送る？`
 - active_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
-- next_start: Topic 32の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 32の固定EXAM_ALIGNMENTを維持して解説本文＋3段階例題を作成する
 
 ## 新品質ゲート進捗
 - [x] 01〜31 — PASS
-- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 未着手
+- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 制作前EXAM_ALIGNMENT完了
+
+## 32 EXAM_ALIGNMENT
+品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
+
+1. R8上 機械 問13 — ブロック線図・負帰還・伝達関数 — `4` — PASS
+2. R7下 機械 問18(a) — 一次遅れ閉ループ伝達関数 — `2` — PASS
+3. R7下 機械 問18(b) — 周波数応答・ボード線図 — `2` — PASS
+4. R6下 機械 問13 — P・I・Dと定常・過渡特性 — `2` — PASS
+5. R6下 機械 問14 — AND・OR・NOT、論理式、タイムチャート — `3` — PASS
+6. R6上 機械 問13 — シーケンス・フィードバック・インタロック — `2` — PASS
+
+制作前独立解答: `6 / 6 PASS`。
+公式解答との不一致: `0件`。
+教材外知識補完: `0件`。
+固定範囲外知識による正答補完: `0件`。
+未確認新幹線ATC実車値追加: `0件`。
+
+source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 
 ## 31 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、信号、周波数、情報伝送、センサ、デジタル信号、論理判断。
@@ -199,4 +217,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 31 `ATC② 地上から車上へどう情報を送る？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 32 `ATC③ 新幹線をどう自動で減速させる？` の制作前EXAM_ALIGNMENTから開始する。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
+Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は制作前EXAM_ALIGNMENT完了。固定5問・6対象項目を変更せず、次は解説本文＋3段階例題を作成する。
