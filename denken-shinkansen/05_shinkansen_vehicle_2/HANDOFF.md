@@ -5,15 +5,13 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜06は最終QAまで `PASS`。完成数は `6 / 39`。
+Topic 01〜07は最終QAまで `PASS`。完成数は `7 / 39`。
 
-現在地は `topic_07_progress_records_synced`。active topicは Topic 07 `直流主回路の高出力化`。
+現在地は `topic_07_completed`。次のactive topicは Topic 08 `位相制御と平均直流電圧`。
 
-H21一次「機械」問2(2)の不足「負荷損を規定の基準巻線温度へ補正」を固定範囲内で補強し、解説PDF・練習PDF・PowerPointへの同期と各QAまで完了。補強済み完成教材だけで固定一次4問＋二次1問・15対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `2 / 2 PASS`、合計 `15 / 15 PASS`。教材外知識補完は0件。
+Topic 07はH21一次「機械」問2(2)の不足「負荷損を規定の基準巻線温度へ補正」を固定範囲内で補強し、解説PDF・練習PDF・PowerPointへの同期と各QAまで完了。補強済み完成教材だけで固定一次4問＋二次1問・15対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `2 / 2 PASS`、合計 `15 / 15 PASS`。教材外知識補完は0件。
 
-直近のTopic 07最終QAは、成果物・過去問対応・表示QA・固定範囲はPASSだが、主sourceと練習sourceの旧進捗記録だけで `NEEDS_REVISION` だった。本runで `07_dc_main_circuit_high_output.md` と `07_dc_main_circuit_high_output_practice_source.md` の旧「PDF/PPTX未同期」「再独立再解答未実施」「練習PDF未同期」を実態へ同期した。技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更していない。
-
-Topic 07は最終QA再実施前なので、まだ `completed` にしない。
+直近のTopic 07最終QAで指摘されていた主source・練習sourceの旧進捗記録不整合も解消済み。最終QAを再実施し、必須成果物、固定EXAM_ALIGNMENT、再独立再解答、表示QA、進捗整合、固定範囲を全件再確認して `PASS / completed` とした。
 
 ## Topic 06 完了記録
 - 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問
@@ -23,7 +21,7 @@ Topic 07は最終QA再実施前なので、まだ `completed` にしない。
 - 最終QA: `PASS / completed`
 
 ## Topic 07 固定範囲
-`SPEC.md` の次だけを扱う。
+`SPEC.md` の次だけを扱った。
 
 - 主回路構成比較
 - 定格電圧
@@ -35,7 +33,7 @@ Topic 07は最終QA再実施前なので、まだ `completed` にしない。
 - 高速化との関係
 - 指定グラフ: 世代別出力比較、出力―損失、出力―発熱
 
-追加しない:
+追加していない:
 - 位相制御、サイリスタ点弧角
 - 誘導電動機、PWM/VVVF
 - 回生・四象限運転
@@ -129,28 +127,24 @@ H21一次 問2(2)補強:
 前回FAILだったH21一次 問2(2)は、補強後教材の「負荷損を規定の基準巻線温度へ補正して扱う」説明だけで再構築でき、`PASS`。
 
 ## Topic 07 最終QA
-`07_dc_main_circuit_high_output_final_qa.md` の直近判定は `NEEDS_REVISION`。
+`07_dc_main_circuit_high_output_final_qa.md` を再実施済み。
 
-直近QAでPASS済み:
-- 必須成果物存在
-- 固定一次4問＋二次1問・15対象項目の維持
-- 完成後独立再解答 `15 / 15 PASS`
-- 解説PDF・練習PDF・PowerPointの各表示QA
-- 練習問題 `12 / 12 PASS`
-- 固定範囲外追加0件
-- 未確認実車値追加0件
-
-直近QAでFAILだった進捗記録:
-- 主sourceの「PDF/PPTX未同期」「再独立再解答未実施」
-- 練習sourceの「練習PDF未同期」
-
-この2件は本runで実態へ同期済み。最終QA自体はまだ再実施していないため、直近判定を勝手に `PASS` へ変更しない。
+- 必須成果物存在: `PASS`
+- 固定EXAM_ALIGNMENT: 一次4問＋二次1問・15対象項目を維持
+- 完成後独立再解答: `15 / 15 PASS`
+- 解説PDF・練習PDF・PowerPointの各表示QA: `PASS`
+- 練習問題: `12 / 12 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- 前回FAILだった主source・練習sourceの旧進捗記録不整合: 解消
+- 最終判定: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 07最終QAを再実施する。
+Topic 08 `位相制御と平均直流電圧` の制作前EXAM_ALIGNMENTを開始する。
 
-1. `07_dc_main_circuit_high_output.md` と `07_dc_main_circuit_high_output_practice_source.md` に旧進捗記録が残っていないことを確認する。
-2. 必須成果物、固定一次4問＋二次1問・15対象項目、補強後再独立再解答 `15 / 15 PASS`、解説PDF・練習PDF・PowerPoint各QAを再確認する。
-3. 固定範囲外追加・未確認実車値追加が0件であることを確認する。
-4. 全件PASSの場合のみ Topic 07を `completed` とし、完成数を `7 / 39` へ更新する。
-5. 技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更しない。
+1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`を正本として固定範囲を確認する。
+2. 電気技術者試験センター公式の二種一次・二次過去問を直近年度優先で調査する。
+3. 一次・二次を合わせ原則5問以上を固定し、二次対象論点で該当記述問題が確認できる場合は最低1問含める。
+4. 過去問の要求知識・式・設問型を分解し、制作前独立検証を行う。
+5. Topic 08より後の誘導機、VVVF、回生、IGBT/SiC等を件数合わせで先取りしない。
