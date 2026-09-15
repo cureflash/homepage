@@ -8,11 +8,11 @@ Topic 01〜09は `completed`。
 
 完成数: `9 / 20`
 
-current_status: `topic_09_completed`
+current_status: `topic_10_exam_alignment_complete`
 
 active_topic: `10 伝達関数・極・零点`
 
-次工程: Topic 10の制作前EXAM_ALIGNMENTを作成する。MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECの範囲内で、直近年度優先の公式過去問を調査し、二種相当の対応問題を固定する。
+次工程: Topic 10の解説本文＋3段階例題を作成する。固定二次5問・11対象設問を全件カバーし、Topic 12/15およびラウス・フルビッツ法の一般手順を先取りしない。
 
 ## 上位仕様
 
@@ -330,8 +330,47 @@ QA:
 
 総合判定: `PASS / completed`。
 
+## Topic 10 現在地
+
+テーマ: `伝達関数・極・零点`
+
+source:
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros.md`
+
+### Topic 10 固定範囲
+
+- 伝達関数
+- 極
+- 零点
+- 一次遅れ
+- 二次遅れ
+- ステップ応答
+- インパルス応答
+- 安定性との関係
+- 簡略新幹線速度モデル `M dv/dt + Dv = F` から `V(s)/F(s)=1/(Ms+D)` を導く
+
+Topic 12の固有値・状態空間、Topic 15の対数・dB・周波数応答・ボード線図、ラウス・フルビッツ法の一般手順、定常偏差・畳み込みの独立論点化は行わない。
+
+### Topic 10 EXAM_ALIGNMENT
+
+固定二次5問・11対象設問。
+
+- R7 二次 機械・制御 問4 (1),(4)
+- R6 二次 機械・制御 問4 (1),(3)
+- R4 二次 機械・制御 問4 (1),(3)
+- R3 二次 機械・制御 問4 (1)〜(4)
+- R2 二次 機械・制御 問4 (2)
+
+R5 問4は周波数応答・ゲイン特性中心でTopic 15を先取りするため非採用。
+
+制作前独立再解答・公式標準解答照合: `11 / 11 PASS`。
+
+教材外知識補完、固定範囲外追加、未確認実車値依存はいずれも0件。
+
+current_status: `topic_10_exam_alignment_complete / IN_PROGRESS`。
+
 ## 次に行うこと
 
-Topic 10 `伝達関数・極・零点` の制作前EXAM_ALIGNMENTを作成する。
+Topic 10 `伝達関数・極・零点` の解説本文＋3段階例題を作成する。
 
-MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECの範囲内で、直近年度優先の公式過去問を調査し、二種相当の対応問題を固定する。仕様外論点を件数合わせで追加しない。
+固定二次5問・11対象設問を全件カバーし、Topic 12/15およびラウス・フルビッツ法の一般手順を先取りしない。仕様外論点を件数合わせで追加しない。
