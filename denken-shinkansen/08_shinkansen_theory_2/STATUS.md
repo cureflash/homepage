@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 7 / 21
-- current_status: `topic_08_exam_alignment_complete`
+- current_status: `topic_08_explanation_source_complete`
 - last_completed_topic: `07 0系のモーターはなぜ力を出せる？`
 - active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
-- next_start: Topic 08の解説本文＋3段階例題を作成する
+- next_start: Topic 08の解説PDFを作成し、全ページ表示QAを行う
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -35,28 +35,22 @@
 - [x] 主source・練習sourceの進捗記録同期
 - [x] 最終QA再実施: `PASS / completed`
 
-## Topic 08 制作前EXAM_ALIGNMENT
+## Topic 08 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
 - [x] 固定範囲: ファラデーの法則、レンツの法則、誘導電流、渦電流、電磁力、磁気エネルギー
-- [x] R8 問2はビオ・サバール依存のため非採用
 - [x] R7 一次 理論 問2(2): 結合コイル系の磁気エネルギー
 - [x] R5 一次 理論 問2(2)〜(4): 磁束変化、速度、ファラデー則
 - [x] R2 一次 理論 問2(2): `W=LI²/2`
 - [x] H28 一次 理論 問1(5): `W=LI²/2`
 - [x] 品質ゲート対象を一次4問・6小問に固定
 - [x] 公式解答照合 `6 / 6`
-- [x] R6二次「電力・管理」問3を確認し、零相電流・系統解析が前提のため非採用
-- [x] H24二次「電力・管理」問3を確認し、零相電流・相互インピーダンス・遮へい線が前提のため非採用
-- [x] 直近二次「電力・管理」「機械・制御」を確認し、固定範囲だけの直接対応問題なし
-- [x] 二次数合わせ 0件
-- [x] 固定範囲外論点の追加 0件
-- [x] 超電導物性の追加 0件
-- [x] e-sysnet / 電験王の説明粒度・解法順を確認
+- [x] 二次の直接対応問題なし、二次数合わせ0件
+- [x] 固定範囲外論点・超電導物性追加0件
 
 ## Topic 08 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
-- [ ] 解説本文
-- [ ] 3段階例題
+- [x] 解説本文
+- [x] 3段階例題
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
@@ -65,15 +59,15 @@
 
 ## 今回進めた内容
 
-Topic 08「L0系はどうやって磁石だけで浮いて進む？」の制作前EXAM_ALIGNMENTを完成した。
+Topic 08「L0系はどうやって磁石だけで浮いて進む？」の解説本文＋3段階例題を完成した。
 
-- 一次「理論」4問・6小問を固定
-- 公式解答照合: `6 / 6`
-- 二次試験の直接対応候補も確認したが固定範囲外知識が前提のため採用0問
+- 固定一次4問・6小問を本文へ `6 / 6` マッピング
+- ファラデー則、レンツ則、誘導電流、渦電流、電磁力、磁気エネルギーを固定範囲内で収録
+- 3段階例題: 基礎／本試験標準／複合・ひっかけ
 - 二次数合わせ: `0件`
 - 固定範囲外論点追加: `0件`
-- 超電導物性追加: `0件`
+- 超電導物性・未確認実設備値追加: `0件`
 
 ## 判定
 
-Topic 08は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `7 / 21` のまま。次工程は固定EXAM_ALIGNMENTに沿った解説本文＋3段階例題。
+Topic 08は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `7 / 21` のまま。次工程は解説PDF＋全ページ表示QA。
