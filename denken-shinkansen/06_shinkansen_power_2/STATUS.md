@@ -4,7 +4,7 @@ updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `07`
 theme: 三相電力をどう25kVの単相へ変える？
-current_status: `topic_07_practice_pdf_complete`
+current_status: `topic_07_powerpoint_complete`
 completed_topics: `6 / 22`
 
 ## Topic 06 final result
@@ -108,6 +108,26 @@ QA:
 - 固定範囲外論点追加: `0件`
 - 未確認実設備値追加: `0件`
 
+## Topic 07 解説画像PowerPoint
+
+成果物:
+- `topics/07_feeding_transformer/07_feeding_transformer_images.pptx`
+- `topics/07_feeding_transformer/07_feeding_transformer_powerpoint_qa.md`
+
+構成:
+- 16:9・5スライド
+- 三相フェーザ、スコット結線、平衡時一次電流・利用率、不平衡・逆相、3結線比較を図解
+
+QA:
+- 200 dpi相当レンダリング表示QA: `5 / 5 PASS`
+- レンダリング寸法: `1601 × 900`
+- `slides_test.py`: `PASS / No overflow detected`
+- PPTX ZIP整合性: `PASS`
+- 固定10項目カバレッジ: `10 / 10`
+- 正式2過去問要求への接続: `2 / 2`
+- 固定範囲外論点追加: `0件`
+- 未確認実設備値追加: `0件`
+
 ## Gate checklist
 
 - [x] Topic 01 completed
@@ -116,8 +136,8 @@ QA:
 - [x] Topic 04 completed
 - [x] Topic 05 completed
 - [x] Topic 06 completed
-- [ ] Topic 07 EXAM_ALIGNMENT・独立検証・解説source・解説PDF・練習source・練習PDF complete / PowerPoint未着手
+- [ ] Topic 07 EXAM_ALIGNMENT・独立検証・解説source・解説PDF・練習source・練習PDF・PowerPoint complete / 完成後独立再解答未実施
 
 ## next_start
 
-Topic 07の解説画像PowerPointを作成する。固定10項目、正式2過去問の要求事項、完成済み解説source・練習sourceの内容だけを使い、フェーザ関係と結線比較を図解する。固定範囲外論点・未確認実設備値を追加しない。
+Topic 07の固定EXAM_ALIGNMENT一次1問＋二次1問を、完成教材だけを使い保存済み正答を見ずに独立再解答する。固定範囲外知識・未確認実設備値で補完しない。

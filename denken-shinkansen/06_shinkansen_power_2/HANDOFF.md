@@ -3,33 +3,32 @@
 updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `07`
-current_status: `topic_07_practice_pdf_complete`
+current_status: `topic_07_powerpoint_complete`
 
 ## 今回完了
 
-Topic 07「三相電力をどう25kVの単相へ変える？」の練習PDFを完成した。
+Topic 07「三相電力をどう25kVの単相へ変える？」の解説画像PowerPointを完成した。
 
 成果物:
-- `topics/07_feeding_transformer/07_feeding_transformer_practice.pdf`
+- `topics/07_feeding_transformer/07_feeding_transformer_images.pptx`
+- `topics/07_feeding_transformer/07_feeding_transformer_powerpoint_qa.md`
+
+構成:
+1. 対称三相交流とフェーザ
+2. スコット結線の構成と `√3/2`
+3. 平衡時の一次三相電流と結線利用率
+4. 三相側不平衡と逆相
+5. スコット・変形ウッドブリッジ・ルーフ・デルタ比較
 
 QA:
-- A4縦 `6ページ`
-- 200 dpi全ページ表示QA `6 / 6 PASS`
-- 文字抽出QA `PASS`
-- 全15問収録 `15 / 15`
-- 一次型五肢択一 `10 / 10 source正答と一致`
-- 二次記述型 `5 / 5 source数値・論理と一致`
+- 16:9 `5スライド`
+- 1601×900全スライド表示QA `5 / 5 PASS`
+- `slides_test.py`: `PASS / No overflow detected`
+- PPTX ZIP整合性: `PASS`
 - 固定10項目カバレッジ `10 / 10`
 - 正式2過去問要求への接続 `2 / 2`
 - 固定範囲外論点追加 `0件`
 - 未確認実設備値追加 `0件`
-
-主要数値はsourceと独立再計算結果を照合済み。
-- 問5 `|I_UV| = 762.1 A`
-- 問7 `I_U = 115.47 A`
-- 問12 `I_U = I_V = 94.48 A`, `P_m = 10.39 MVA`, `P_t = 9.00 MVA`, `k_u = 0.9282`
-- 問13 `I_U = 96.23 A`, `I'_m = 41.67 A`, `I_V = 63.65 A`
-- 問14 `k_u = 2/(1+2/√3) = 0.9282`
 
 ## 固定した公式過去問
 
@@ -47,7 +46,7 @@ QA:
 
 合計 `2 / 2問 PASS`、`12 / 12答案要素 PASS`。固定範囲外知識補完は0件。
 
-練習source/PDFでは、H23一次問6を問1・2・5・11、H23二次問2を問3・6・7・8・9・10・12・13・14へ接続した。変形ウッドブリッジ・ルーフ・デルタは現行公式アーカイブで直接問題を確定できていないため、正式過去問件数へ水増しせず、SPEC固定事項として問4・15で扱う。
+PowerPointではH23一次問6のフェーザ解法をSlide 1、H23二次問2のスコット結線計算をSlides 2–3へ接続した。変形ウッドブリッジ・ルーフ・デルタは現行公式アーカイブで直接問題を確定できていないため、正式過去問件数へ水増しせず、SPEC固定事項としてSlide 5で構成比較のみ扱った。
 
 ## 境界
 
@@ -73,9 +72,9 @@ Topic 07固定範囲は、三相交流、単相負荷、相変換、スコット
 
 ## 次に行う
 
-Topic 07の解説画像PowerPointのみを作成する。
+Topic 07の完成後独立再解答のみを実施する。
 
-- 固定10項目と正式2過去問要求を維持する
-- 完成済み解説source・練習sourceからフェーザ関係と結線比較を図解する
-- 固定範囲外論点・未確認実設備値を追加しない
-- 完成後独立再解答・最終QAにはまだ進まない
+- 固定EXAM_ALIGNMENTの一次1問＋二次1問を対象にする
+- 完成教材だけを使い、保存済み正答・公式解答を先に見ない
+- 固定範囲外知識・未確認実設備値で補完しない
+- 最終QAにはまだ進まない
