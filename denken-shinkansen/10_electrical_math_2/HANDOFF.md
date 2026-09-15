@@ -8,11 +8,11 @@ Topic 01〜09は `completed`。
 
 完成数: `9 / 20`
 
-current_status: `topic_10_explanation_source_complete`
+current_status: `topic_10_explanation_pdf_complete`
 
 active_topic: `10 伝達関数・極・零点`
 
-次工程: Topic 10の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。固定二次5問・11対象設問と固定範囲境界を変更しない。
+次工程: Topic 10の練習問題sourceを作成し、固定二次5問・11対象設問へ接続する。固定範囲境界を変更しない。
 
 ## 上位仕様
 
@@ -337,6 +337,9 @@ QA:
 source:
 `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros.md`
 
+解説PDF:
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_explanation.pdf`
+
 ### Topic 10 固定範囲
 
 - 伝達関数
@@ -392,10 +395,26 @@ R5 問4は周波数応答・ゲイン特性中心でTopic 15を先取りする�
 
 Topic 12/15先取り、ラウス・フルビッツ法の一般手順追加、定常偏差・畳み込みの独立論点化、固定範囲外追加、未確認実車値依存はいずれも0件。
 
-current_status: `topic_10_explanation_source_complete / IN_PROGRESS`。
+### Topic 10 解説PDF
+
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_explanation.pdf`
+
+QA:
+- A4縦5ページ
+- 200 dpi全ページ表示QA `5 / 5 PASS`
+- 文字抽出QA `PASS`
+- 固定二次5問・11対象設問の反映 `11 / 11`
+- 3段階例題反映: PASS
+- Topic 12/15先取り: 0件
+- ラウス・フルビッツ法一般手順追加: 0件
+- 定常偏差・畳み込みの独立論点化: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
+current_status: `topic_10_explanation_pdf_complete / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 10 `伝達関数・極・零点` の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。
+Topic 10 `伝達関数・極・零点` の練習問題sourceを作成し、固定二次5問・11対象設問へ接続する。
 
-固定二次5問・11対象設問と固定範囲境界を変更しない。
+固定範囲境界を変更しない。
