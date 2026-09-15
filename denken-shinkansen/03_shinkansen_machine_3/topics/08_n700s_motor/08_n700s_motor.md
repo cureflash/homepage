@@ -2,9 +2,9 @@
 
 更新日: 2026-09-15
 
-状態: `INDEPENDENT_REANSWER_COMPLETE`
+状態: `completed`
 
-制作前 `EXAM_ALIGNMENT` を固定したまま、解説本文＋基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成した。固定4問・5小問の要求事項を全件接続し、練習12問の独立計算・論理QAは `12 / 12 PASS`。完成済み教材だけで固定4問・5小問を再導出し、公式解答との照合は `5 / 5 PASS`。仕様外論点・未確認実車値は追加していない。
+制作前 `EXAM_ALIGNMENT` を固定したまま、解説本文＋基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成した。固定4問・5小問の要求事項を全件接続し、練習12問の独立計算・論理QAは `12 / 12 PASS`。完成済み教材だけで固定4問・5小問を再導出し、公式解答との照合は `5 / 5 PASS`。最終QAも全件PASSとし、Topic 08を `completed` とする。
 
 ## EXAM_ALIGNMENT
 
@@ -516,6 +516,27 @@ Pout = Tω
 
 未確認実車値追加: `0件`
 
+## 現在の品質状態
+
+- 制作前EXAM_ALIGNMENT: 完了
+- 制作前検証: `5 / 5 PASS`
+- 解説本文: 完了
+- 3段階例題: 完了
+- 固定4問・5小問の本文マッピング: `全件`
+- 解説PDF: 完了（A4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
+- 練習問題source: 完了（12問、独立QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`）
+- 練習PDF: 完了（A4縦3ページ、200 dpi全3ページ表示QA `3 / 3 PASS`、文字抽出QA `PASS`）
+- 解説画像PowerPoint: 完了（16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX整合性 `PASS`）
+- 完成後独立再解答: `5 / 5 PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+- 最終QA: `PASS`
+
+## 最終QA
+
+2026-09-15に実施。必須成果物の実在、固定EXAM_ALIGNMENT 4問・5小問の整合、完成後独立再解答 `5 / 5 PASS`、解説PDF・練習PDF・PowerPointの既存表示QA記録、source進捗整合、固定範囲境界を再確認し、全件PASS。教材外・固定範囲外知識による補完 `0件`、固定範囲外論点・未確認実車値の追加 `0件`。Topic 08を `completed` とする。
+
 ## 次工程
 
-Topic 08の最終QAを実施し、必須成果物の実在、固定EXAM_ALIGNMENT 4問・5小問、完成後独立再解答 `5 / 5 PASS`、PDF/PPTX QA、source進捗整合、固定範囲境界を再確認する。
+Topic 09「新幹線はどうやって電気で止まる？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
