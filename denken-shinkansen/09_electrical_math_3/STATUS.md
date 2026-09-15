@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 7 / 12
-- current_status: `topic_08_preproduction_independent_check_complete`
+- current_status: `topic_08_explanation_source_complete`
 - last_completed_topic: `07 微分② 速度を微分すると加速度`
 - active_topic: `08 積分 速度曲線の面積は距離`
-- next_start: `Topic 08 解説本文＋3段階例題`
+- next_start: `Topic 08 解説PDF`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -60,7 +60,7 @@
 - [x] 参考教材を複数系統確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立計算・公式解答照合 `5 / 5問・9 / 9答案要素 PASS`
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
@@ -70,22 +70,28 @@
 
 ## 今回進めた内容
 
-Topic 08「積分 速度曲線の面積は距離」の固定5問を、公式問題の条件・波形・選択肢から独立に再導出した後、電気技術者試験センターの公式解答と照合した。
+Topic 08「積分 速度曲線の面積は距離」の解説本文＋3段階例題を主sourceへ追加した。
 
-独立解答は次のとおり。
+固定EXAM_ALIGNMENTから逆算し、次を収録した。
 
-- R8上 機械 問16: `(a)(2), (b)(2)`
-- R3 機械 問16: `(a)(1), (b)(3)`
-- R1 理論 問18: `(a)(1), (b)(4)`
-- H28 機械 問16: `(a)(5), (b)(2)`
-- H24 機械 問10: `(5)`
+- 不定積分・原始関数・積分定数
+- 定積分と符号付き面積
+- 多項式・正弦・余弦の基本積分
+- `θ=ωt+φ` の必要範囲の置換
+- 波形平均と区分積分
+- 積分器の面積・蓄積量の釣合い
+- `x=∫v(t)dt` と速度―時間グラフの面積
+- `t=∫dx/v(x)`
+- `a=v dv/dx` から `v²-v0²=2a(x-x0)` の導出
+- 基礎／本試験標準／複合の3段階例題
+- 固定5過去問から教材節への対応表
 
-公式解答との照合は `5 / 5問・9 / 9答案要素 PASS`。固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、未確認新幹線実値追加0件。
+整流回路・A-D変換器そのものの装置解説、Topic 09の電気量の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は追加していない。新幹線接続の数値例は実車値ではなく積分説明用の仮定として明記した。
 
-整流回路・A-D変換器そのものの機器解説は既習事項のままとし、Topic 08へ仕様追加していない。
+固定5問・9答案要素の制作前独立検証 `9 / 9 PASS` は維持。
 
 ## 判定
 
-Topic 08は `topic_08_preproduction_independent_check_complete / IN_PROGRESS`。
+Topic 08は `topic_08_explanation_source_complete / IN_PROGRESS`。
 
-完成数は `7 / 12`。次工程は解説本文＋3段階例題。
+完成数は `7 / 12`。次工程は解説PDF。
