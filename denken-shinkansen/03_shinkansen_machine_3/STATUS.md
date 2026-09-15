@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 8 / 16
-- current_status: `topic_09_explanation_source_complete`
+- current_status: `topic_09_explanation_pdf_complete`
 - last_completed_topic: `08 N700Sのモーターはなぜ小さくできた？`
 - active_topic: `09 新幹線はどうやって電気で止まる？`
-- next_start: Topic 09の解説PDFを作成し、固定5問・3段階例題・固定範囲を維持して表示QAと文字抽出QAを行う
+- next_start: Topic 09の練習問題sourceを作成し、三種仕様どおり原則12問以上、少なくとも半数を五肢択一とし、固定EXAM_ALIGNMENT 5問と固定範囲だけに接続する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -71,6 +71,20 @@ R7上問3、R6上問3、R4上問1、H27問2、H26問16、H29問3は回生・発�
 - 教材外・固定範囲外知識による補完 `0件`
 - 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
+
+### 解説PDF
+`topics/09_regenerative_braking/09_regenerative_braking_explanation.pdf`
+
+- A4縦3ページ
+- 200 dpi全3ページ表示QA `3 / 3 PASS`
+- 文字抽出QA `PASS`
+- 3段階例題・固定5問への教材内マッピングを収録
+- 固定EXAM_ALIGNMENT変更 `0件`
+- 固定範囲外論点の追加 `0件`
+- 未確認実車値の追加 `0件`
+
+### 解説PDF QA記録
+`topics/09_regenerative_braking/09_regenerative_braking_explanation_pdf_qa.md`
 
 ## Topic 08 EXAM_ALIGNMENT
 品質ゲート対象は、系列SPECの固定範囲だけで完結する公式過去問4問・5小問で固定する。
