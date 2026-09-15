@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 7 / 16
-- current_status: `topic_08_practice_source_complete`
+- current_status: `topic_08_practice_pdf_complete`
 - last_completed_topic: `07 GTO→IGBT→SiCで何が変わった？`
 - active_topic: `08 N700Sのモーターはなぜ小さくできた？`
-- next_start: Topic 08の練習PDFを作成する。練習sourceの全12問・完全解説を同期し、A4縦で全ページ表示QA・文字抽出QAを実施する。固定EXAM_ALIGNMENT 4問・5小問と固定範囲は変更しない
+- next_start: Topic 08の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 4問・5小問と固定範囲を変更せず、4極・6極と周波数・同期速度、滑り・出力・トルク、N700Sの6極モーターとSiC駆動システムの関係を可視化し、全スライド表示QA・overflow・PPTX整合性を確認する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -18,7 +18,7 @@
 - [x] 05 誘導電動機はなぜ勝手に回る？ — 品質ゲートPASS / completed
 - [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
-- [ ] 08 N700Sのモーターはなぜ小さくできた？ — 練習問題source完了 / 制作中
+- [ ] 08 N700Sのモーターはなぜ小さくできた？ — 練習PDF完了 / 制作中
 - [ ] 09〜16 — 未完了
 
 ## Topic 08 EXAM_ALIGNMENT
@@ -93,6 +93,20 @@
 - 正答一意性 `12 / 12 PASS`
 - 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
+
+### 練習PDF
+`topics/08_n700s_motor/08_n700s_motor_practice.pdf`
+
+- A4縦3ページ
+- 全12問・全問五肢択一＋完全解説
+- 200 dpi全3ページ表示QA `3 / 3 PASS`
+- 文字抽出QA `PASS`
+- 固定EXAM_ALIGNMENT 4問・5小問を維持
+- 固定範囲外論点追加 `0件`
+- 未確認実車値追加 `0件`
+
+### 練習PDF QA記録
+`topics/08_n700s_motor/08_n700s_motor_practice_pdf_qa.md`
 
 ## Topic 07 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問で固定する。

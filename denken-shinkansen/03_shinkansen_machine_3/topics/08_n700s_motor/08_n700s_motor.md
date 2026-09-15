@@ -2,9 +2,9 @@
 
 更新日: 2026-09-15
 
-状態: `PRACTICE_SOURCE_COMPLETE`
+状態: `PRACTICE_PDF_COMPLETE`
 
-制作前 `EXAM_ALIGNMENT` を固定したまま、解説本文＋基礎・本試験標準・複合の3段階例題、解説PDF、練習問題sourceまで完成した。固定4問・5小問の要求事項を全件接続し、練習12問の独立計算・論理QAは `12 / 12 PASS`。仕様外論点・未確認実車値は追加していない。
+制作前 `EXAM_ALIGNMENT` を固定したまま、解説本文＋基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDFまで完成した。固定4問・5小問の要求事項を全件接続し、練習12問の独立計算・論理QAは `12 / 12 PASS`。練習PDFはA4縦3ページ、200 dpi全3ページ表示QA `3 / 3 PASS`、文字抽出QA `PASS`。仕様外論点・未確認実車値は追加していない。
 
 ## EXAM_ALIGNMENT
 
@@ -442,6 +442,20 @@ Pout = Tω
   - https://railway.jr-central.co.jp/train/shinkansen/n700s/
   - N700Sの力行制御方式がVVVF制御であること、床下機器の小型・軽量化を確認。
 
+## 練習PDF
+
+`08_n700s_motor_practice.pdf`
+
+- A4縦3ページ
+- 全12問・全問五肢択一＋完全解説
+- 基礎3／本試験標準7／複合・応用2
+- 200 dpi全3ページ表示QA `3 / 3 PASS`
+- 文字抽出QA `PASS`
+- 固定EXAM_ALIGNMENT 4問・5小問を維持
+- 固定範囲外論点追加 `0件`
+- 未確認実車値追加 `0件`
+- QA記録: `08_n700s_motor_practice_pdf_qa.md`
+
 ## 次工程
 
-練習PDFを作成する。`08_n700s_motor_practice.md` の全12問・完全解説を同期し、A4縦で全ページ表示QA・文字抽出QAを実施する。固定EXAM_ALIGNMENT、仕様範囲、実車一次資料の境界は変更しない。
+解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 4問・5小問の判定軸、4極・6極と周波数・同期速度の関係、滑り・出力・トルク、N700Sの6極モーターとSiC駆動システムの関係を、固定範囲内で可視化する。外部資料の図を複製せず独自図形で作成し、全スライド表示QA・overflow・PPTX整合性を確認する。

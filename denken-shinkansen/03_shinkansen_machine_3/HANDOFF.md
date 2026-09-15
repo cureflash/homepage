@@ -6,13 +6,17 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `7 / 16`。Topic 01〜07は品質ゲートPASSでcompleted。active topicは08「N700Sのモーターはなぜ小さくできた？」。
 
 ## 今回進捗
-Topic 08の練習問題sourceを完成した。
+Topic 08の練習PDFを完成した。
 
-- 練習問題source: `topics/08_n700s_motor/08_n700s_motor_practice.md`
-- 全12問・全問五肢択一
+- 練習PDF: `topics/08_n700s_motor/08_n700s_motor_practice.pdf`
+- A4縦3ページ
+- 全12問・全問五肢択一＋完全解説
 - 基礎3／本試験標準7／複合・応用2
+- 200 dpi全3ページ表示QA: `3 / 3 PASS`
+- 文字抽出QA: `PASS`
+- QA記録: `topics/08_n700s_motor/08_n700s_motor_practice_pdf_qa.md`
 - 固定EXAM_ALIGNMENT 4問・5小問へ全件接続
-- 独立計算・論理QA: `12 / 12 PASS`
+- 練習問題独立計算・論理QA: `12 / 12 PASS`
 - 正答一意性: `12 / 12 PASS`
 - 品質ゲート対象: 公式過去問4問・5小問
 - 制作前独立検証: `5 / 5 PASS`
@@ -74,7 +78,11 @@ Topic 08の練習問題sourceを完成した。
 - 練習問題数: `12問`（基礎3／標準7／複合2、全問五肢択一）
 - 練習問題独立QA: `12 / 12 PASS`
 - 練習問題正答一意性: `12 / 12 PASS`
-- 練習PDF: 未着手
+- 練習PDF: 完了
+- 練習PDFページ数: A4縦3ページ
+- 練習PDF表示QA: `3 / 3 PASS`
+- 練習PDF文字抽出QA: `PASS`
+- 練習PDF QA記録: `topics/08_n700s_motor/08_n700s_motor_practice_pdf_qa.md`
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
@@ -83,9 +91,9 @@ source: `topics/08_n700s_motor/08_n700s_motor.md`
 practice source: `topics/08_n700s_motor/08_n700s_motor_practice.md`
 
 ## 次に行う
-Topic 08の練習PDFを作成する。
+Topic 08の解説画像PowerPointを作成する。
 
-練習sourceの全12問・完全解説を同期し、A4縦で全ページ表示QA・文字抽出QAを実施する。固定EXAM_ALIGNMENT 4問・5小問、系列SPECの固定範囲、実車一次資料の境界は変更しない。
+固定EXAM_ALIGNMENT 4問・5小問の判定軸、4極・6極と周波数・同期速度の関係、滑り・出力・トルク、N700Sの6極モーターとSiC駆動システムの関係を、系列SPECの固定範囲内で可視化する。外部資料の図を複製せず独自図形で作成し、全スライド表示QA・overflow・PPTX整合性を確認する。固定範囲・実車一次資料の境界は変更しない。
 
 ## Topic 07 完了要約
 Topic 07「GTO→IGBT→SiCで何が変わった？」は品質ゲートPASS / completed。
