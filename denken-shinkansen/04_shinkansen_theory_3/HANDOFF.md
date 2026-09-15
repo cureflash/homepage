@@ -6,19 +6,19 @@
 
 Topic 01〜07は最終QAまでPASSし、`completed`。
 
-Topic 08 `新幹線の交流25kVとは何なのか` は最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS`。過去問対応品質ゲート、必須成果物、既存表示QA、SPEC境界はPASSしている。未完了理由は主source・練習sourceの進捗記録が実在成果物より古いことだけである。
+Topic 08 `新幹線の交流25kVとは何なのか` は主source・練習sourceの旧進捗記録を実在成果物へ同期済み。過去問対応品質ゲート、必須成果物、既存表示QA、SPEC境界はPASSしており、最終QA再実施待ちの `IN_PROGRESS` である。
 
 - 完成数: `7 / 14`
 - last completed: `07 モーターはなぜ回る？`
 - active topic: `08 新幹線の交流25kVとは何なのか`
-- current status: `topic_08_final_qa_needs_revision`
-- next start: 主source・練習sourceの進捗記録だけを実成果物へ同期する
+- current status: `topic_08_source_progress_synced`
+- next start: Topic 08の最終QAを再実施する
 
 ## 今回進捗
 
-Topic 08の最終QAを実施し、記録を `topics/08_ac_25kv_basics/08_ac_25kv_basics_final_qa.md` に追加した。
+Topic 08の主source `08_ac_25kv_basics.md` と練習source `08_ac_25kv_basics_practice.md` に残っていた旧進捗記録だけを実態へ同期した。
 
-PASS:
+維持している品質ゲート:
 - 固定公式過去問: `4問`（MASTER_SPEC / EXAM_ALIGNMENT_SPECの5問未満例外）
 - 完成後独立再解答: `4 / 4 PASS`
 - 独立解答列: `(5), (3), (5), (1)`
@@ -26,18 +26,13 @@ PASS:
 - 練習問題: 15問、独立再計算・再判定 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
 - 解説PDF: 200 dpi表示QA `2 / 2 PASS`、文字抽出QA PASS
 - 練習PDF: 200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS
-- PowerPoint: 既存進捗記録で表示QA `4 / 4 PASS`、overflow検査PASS、ZIP整合性PASS
+- PowerPoint: 表示QA `4 / 4 PASS`、overflow検査PASS、ZIP整合性PASS
 - 教材外知識補完: `0問`
 - RLC・リアクタンス・力率・三相・高調波等の後続Topic依存: `0問`
 - 非正弦波論点への依存: `0問`
 - 未確認新幹線実車値依存: `0問`
 
-FAIL:
-- 主source `08_ac_25kv_basics.md` の冒頭statusが `EXPLANATION_SOURCE_COMPLETE` のまま
-- 主source §23が「解説PDF・練習・PowerPoint: 未着手」「完成後独立再解答: 未実施」「次工程: 解説PDF作成」のまま
-- 練習source `08_ac_25kv_basics_practice.md` のstageが `PRACTICE_PDF_COMPLETE` のまま
-
-教材本文、固定EXAM_ALIGNMENT、問題、解答、PDF/PPTX成果物の技術内容には修正理由なし。次工程は進捗メタデータだけを同期する。
+教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、解答、PDF/PPTX成果物の技術内容は変更していない。次工程は最終QA再実施のみ。
 
 ## Topic 08 固定過去問
 
@@ -100,7 +95,7 @@ FAIL:
 - source: `topics/08_ac_25kv_basics/08_ac_25kv_basics.md`
   - EXAM_ALIGNMENT: 完成
   - 解説本文＋3段階例題: 完成
-  - 進捗記録: 要同期
+  - 進捗記録: 同期済み
 - 解説PDF: `topics/08_ac_25kv_basics/08_ac_25kv_basics_explanation.pdf`
   - A4縦2ページ
   - 200 dpi表示QA `2 / 2 PASS`
@@ -110,7 +105,7 @@ FAIL:
   - 全15問・全問五肢択一
   - 独立再計算・再判定 `15 / 15 PASS`
   - 正答一意性 `15 / 15 PASS`
-  - 進捗記録: 要同期
+  - 進捗記録: 同期済み
 - 練習PDF: `topics/08_ac_25kv_basics/08_ac_25kv_basics_practice.pdf`
   - A4縦4ページ
   - 200 dpi表示QA `4 / 4 PASS`
@@ -124,14 +119,12 @@ FAIL:
 - 完成後独立再解答記録: `topics/08_ac_25kv_basics/08_ac_25kv_basics_exam_recheck.md`
   - 固定4問 `4 / 4 PASS`
 - 最終QA記録: `topics/08_ac_25kv_basics/08_ac_25kv_basics_final_qa.md`
-  - `NEEDS_REVISION / IN_PROGRESS`
-  - 唯一のFAIL: source進捗記録整合性
+  - 現記録は `NEEDS_REVISION / IN_PROGRESS`
+  - 前回唯一のFAILだったsource進捗記録は同期済み。再判定待ち。
 
 ## 次に行うこと
 
-主source・練習sourceの進捗記録だけを、解説PDF・練習PDF・PowerPoint・完成後独立再解答まで完了している実態へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、解答、PDF/PPTX内容は変更しない。
-
-同期後、Topic 08の最終QAを再実施し、全品質ゲートPASSの場合のみ`completed`とする。
+Topic 08の最終QAを再実施する。全品質ゲートPASSの場合のみ`completed`とし、完成数を更新する。
 
 ## 固定ルール
 
