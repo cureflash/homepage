@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜09は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source、練習PDF＋表示QAまで完了した。
+Topic 01〜09は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source、練習PDF＋表示QA、解説画像PowerPoint＋表示QAまで完了した。
 
 完成数: `9 / 21`
 
-current_status: `topic_10_practice_pdf_complete`
+current_status: `topic_10_powerpoint_complete`
 
 active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
 
-次工程: 解説画像PowerPointを作成し、全スライド表示QA・overflow・PPTX整合性を確認する。固定範囲外、未確認実設備値、二次数合わせは追加しない。
+次工程: 完成教材だけを使い、保存済み正答を先に見ず、固定一次5問・20小問を独立再解答する。固定範囲外、未確認実設備値、二次数合わせは追加しない。
 
 ## Topic 10 固定範囲
 
@@ -130,9 +130,19 @@ H30二次「電力・管理」問5には高調波電流、直列リアクトル�
 - 二次採用0問・二次数合わせ0件を維持
 - 固定範囲外・未確認実設備値追加: 0件
 
+## Topic 10 解説画像PowerPoint
+
+- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_images.pptx`: `completed`
+- 16:9・5スライド
+- `XL/XC`の周波数依存、直列共振、Q値、損失を含む並列回路、50/55/60Hz教育用比較を収録
+- 200 dpi全スライド表示QA: `5 / 5 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- 固定一次5問・20小問、二次採用0問、二次数合わせ0件を維持
+- 固定範囲外・未確認実設備値追加: 0件
+
 ## Topic 10 未制作
 
-- 解説画像PowerPoint
 - 完成後独立再解答
 - 最終QA
 
@@ -181,14 +191,17 @@ Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALI
 - Topic 10 練習PDF＋表示QA: `completed / 3 / 3 PASS`
 - Topic 10 練習PDF文字抽出QA: `PASS`
 - Topic 10 練習問題: `12問 / 正答一意性・数値再計算 12 / 12 PASS`
+- Topic 10 解説画像PowerPoint: `completed / 5 slides / 5 / 5 PASS`
+- Topic 10 PowerPoint overflow: `0件`
+- Topic 10 PowerPoint ZIP整合性: `PASS`
 - Topic 10 固定一次: `5問 / 20小問`
 - Topic 10 練習接続: `20 / 20`
 - Topic 10 二次採用: `0問`
 - Topic 10 二次数合わせ: `0件`
 - Topic 10 固定範囲外追加: `0件`
 - Topic 10 未確認実設備値追加: `0件`
-- Topic 10 完成後独立再解答: `未実施（教材完成後）`
+- Topic 10 完成後独立再解答: `未実施`
 
 ## 次に行うこと
 
-Topic 10の解説画像PowerPointを作成し、全スライド表示QA・overflow・PPTX整合性を確認する。
+Topic 10の完成教材だけを使い、保存済み正答を先に見ず、固定一次5問・20小問を独立再解答する。
