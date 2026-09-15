@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 8 / 20
-- current_status: `topic_09_practice_pdf_complete`
+- current_status: `topic_09_powerpoint_complete`
 - last_completed_topic: `08 二階常微分方程式`
 - active_topic: `09 ラプラス変換`
-- next_start: Topic 09の解説画像PowerPoint。固定二次5問・6対象設問と本文・練習の要点を16:9で可視化し、表示QAを行う
+- next_start: Topic 09の完成後独立再解答。固定二次5問・6対象設問を、保存済み正答を先に見ず完成教材だけで再解答する
 
 ## Topic 07 制作品質ゲート
 
@@ -71,32 +71,33 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF
-- [ ] 解説画像PowerPoint
-- [ ] PowerPoint表示QA
+- [x] 解説画像PowerPoint
+- [x] PowerPoint表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 09 `ラプラス変換` の練習PDFを完成し、GitHub正本へ反映した。
+Topic 09 `ラプラス変換` の解説画像PowerPointを完成し、GitHub正本へ反映した。
 
 確認結果:
-- A4縦4ページ
-- 全12問（一次型8問／二次記述型4問）と完全解説を反映
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- 固定二次5問・6対象設問への接続を維持
-- 独立計算・正答一意性QA: `12 / 12 PASS` を維持
-- Topic 10先取り: 0件
+- 16:9・5枚
+- 固定二次5問・6対象設問を全件可視化
+- 定義・代表変換対・微分/積分の変換・初期値・RLC変換・部分分数分解・逆変換を収録
+- R6/H29/H25/H24/H18の固定要求を教材内の解法へ接続
+- 全スライド表示QA: `5 / 5 PASS`
+- overflow: 0件
+- PPTX ZIP/XML整合性・再レンダリング: `PASS`
+- Topic 10内容の先取り: 0件
 - 件数合わせの固定範囲外追加: 0件
 - 教材外知識補完: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 09は `PRACTICE_PDF_COMPLETE / IN_PROGRESS`。
+Topic 09は `POWERPOINT_COMPLETE / IN_PROGRESS`。
 
 完成数は `8 / 20` のまま。
 
-次はTopic 09の解説画像PowerPoint。
+次はTopic 09の完成後独立再解答。
