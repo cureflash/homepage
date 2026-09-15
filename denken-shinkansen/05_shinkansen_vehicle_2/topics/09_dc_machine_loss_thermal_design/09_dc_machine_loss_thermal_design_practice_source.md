@@ -12,7 +12,7 @@ Topic 09 の確定済み `EXAM_ALIGNMENT`、解説本文、解説PDFの固定範
 - 数値問題は教材用条件のみを使用し、未確認の100系・200系実車損失・温度・冷却容量・保守周期を使わない
 - 誘導電動機、PWM/VVVF、回生、IGBT/SiC、詳細絶縁寿命モデル、熱流体解析は扱わない
 
-作成後、保存した正答欄を使わずに式・数値・論理・正答一意性を再確認し、`12 / 12 PASS` とした。次工程は練習PDFである。
+作成後、保存した正答欄を使わずに式・数値・論理・正答一意性を再確認し、`12 / 12 PASS` とした。練習PDFも完成・QA PASS。次工程は解説画像PowerPointである。
 
 ## EXAM_ALIGNMENT対応
 
@@ -617,4 +617,4 @@ P_loss=7.0+2.0
 
 ## 次工程
 
-`09_dc_machine_loss_thermal_design_practice.pdf` を作成し、全12問・完全解説を同期して表示QA・文字抽出QAを実施する。
+練習PDFは完成・QA PASS。次工程は `09_dc_machine_loss_thermal_design_images.pptx` を作成し、SPEC指定3可視化を固定済み条件から収録して表示QA・overflow・ZIP整合性QAを実施する。
