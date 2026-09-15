@@ -4,9 +4,9 @@
 
 ## 状態
 
-`source_progress_synced`
+`completed`
 
-制作前EXAM_ALIGNMENT、正式2過去問の制作前独立検証、解説本文＋3段階例題、解説PDF、練習問題＋完全解説source/PDF、解説画像PowerPoint、完成後独立再解答まで完了済み。直近の最終QAは技術内容・過去問対応・成果物QAが全件PASSで、主sourceの進捗記録不整合のみを理由に `NEEDS_REVISION / IN_PROGRESS` と判定された。本更新ではその進捗記録だけを実成果物へ同期した。次工程は最終QA再実施である。
+制作前EXAM_ALIGNMENT、正式2過去問の制作前独立検証、解説本文＋3段階例題、解説PDF、練習問題＋完全解説source/PDF、解説画像PowerPoint、完成後独立再解答、最終QA再実施まで完了済み。技術内容・過去問対応・成果物QA・進捗整合を全件再確認し、`PASS / completed` とした。次工程はTopic 08の制作前EXAM_ALIGNMENTである。
 
 ## SPEC固定範囲
 
@@ -709,5 +709,5 @@ V相線電流の大きさは、二成分が90°なので、
 - 練習PDF: 完了（A4縦6ページ、表示QA `6 / 6 PASS`、文字抽出QA PASS）
 - 解説画像PowerPoint: 完了（16:9・5枚、表示QA `5 / 5 PASS`、overflow 0件、ZIP整合性PASS）
 - 完成後独立再解答: `2 / 2問 PASS`、`12 / 12答案要素 PASS`
-- 最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物QAはPASS。主source進捗記録不整合のみが理由。今回その不整合を同期済み）
-- 次工程: 最終QA再実施
+- 最終QA: `PASS / completed`
+- 次工程: Topic 08「主変圧器を％インピーダンスで見る」の制作前EXAM_ALIGNMENT
