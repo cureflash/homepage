@@ -6,19 +6,38 @@
 
 Topic 01〜08は最終QAまでPASSし、`completed`。
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は制作前EXAM_ALIGNMENTを完了した。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は解説本文＋3段階例題まで完成した。
 
 - 完成数: `8 / 14`
 - last completed: `08 新幹線の交流25kVとは何なのか`
 - active topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- current status: `topic_09_exam_alignment_complete`
-- next start: Topic 09の解説本文＋3段階例題を作成する
+- current status: `topic_09_explanation_source_complete`
+- next start: Topic 09の解説PDFを作成して全ページ表示QA・文字抽出QAを行う
 
 ## 今回進捗
 
-Topic 09の制作前EXAM_ALIGNMENTを実施した。
+Topic 09の固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を作成した。
 
-品質ゲート:
+本文カバー:
+- `ZR=R`、`ZL=jXL`、`ZC=-jXC`
+- `XL=2πfL`、`XC=1/(2πfC)`と50Hz→60Hzの変化
+- `Z=R+jX`、`|Z|`、位相の進み遅れ
+- RL・RC・RLC直列回路
+- 並列枝電流と理想LCの打消し
+- 直列共振 `XL=XC`、`f0=1/(2π√LC)`、共振時`Z=R`
+- 共振前後の容量性/誘導性
+- 周波数変化問題の再利用可能な解法手順
+- 固定R8上問8の`P=I²R`は既習の抵抗損失としてのみ使用
+
+3段階例題:
+1. 基礎: 50Hz/60HzでのL・Cリアクタンス比較
+2. 本試験標準: RC直列回路の周波数変化と電流計算
+3. 複合: 直列共振と理想並列LCの区別、共振前後の位相判断
+
+固定6過去問の要求事項は本文へ `6 / 6` マッピングした。Topic 10以降の力率・三相・半導体等、未確認の新幹線実車回路・周波数切替方式は追加していない。
+
+## Topic 09 品質ゲート
+
 - 固定公式過去問: `6問`
 - 制作前独立検証: `6 / 6 PASS`
 - 独立答案列: `(1), (5), (3), (3), (2), (3)`
@@ -104,8 +123,9 @@ f0 = 1 / (2π√LC)
 - source: `topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc.md`
   - EXAM_ALIGNMENT: 完成
   - 制作前独立検証: `6 / 6 PASS`
-  - status: `EXAM_ALIGNMENT_COMPLETE`
-- 解説本文: 未作成
+  - 解説本文＋3段階例題: 完成
+  - 固定過去問→本文マッピング: `6 / 6`
+  - status: `EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF: 未作成
 - 練習source / PDF: 未作成
 - 解説画像PowerPoint: 未作成
@@ -114,7 +134,7 @@ f0 = 1 / (2π√LC)
 
 ## 次に行うこと
 
-固定EXAM_ALIGNMENTを変更せず、Topic 09の解説本文＋3段階例題を作成する。
+固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 09の解説PDFを作成して全ページ表示QA・文字抽出QAを行う。
 
 ## 固定ルール
 
