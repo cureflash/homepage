@@ -6,14 +6,15 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は30/38。01〜30がPASS。active topicは31 `ATC② 地上から車上へどう情報を送る？`。
 
 ## 今回進捗
-Topic 31の解説PDFを完成した。本文§1〜§15・3段階例題・制作前に固定した公式過去問5問6対象項目の対応を収録し、A4縦4ページ、180 dpi全4ページ表示QA PASS、文字抽出QA PASSとした。固定EXAM_ALIGNMENTは `6 / 6` を維持している。
+Topic 31の練習source/PDFを完成した。15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説とし、正答位置はA/B/C/D/E各3問。制作前に固定した公式過去問5問・6対象項目を `6 / 6` 練習マッピングし、独立数値・論理QA `15 / 15 PASS`。PDFはA4縦4ページ、180 dpi全4ページ表示QA PASS、文字抽出QA PASS。
 
-新幹線側はJRTTで確認した「速度信号用電流をレールへ流し、先頭車の受電器で受信する」という地上→車上の基本経路だけに留めた。Topic 32の速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR、未確認のATC実車周波数値・符号体系・ビットレートは追加していない。
+Topic 32の速度検出・速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR具体回路、未確認のATC実車周波数値・符号体系・ビットレート、固定過去問に不要な通信方式各論は追加していない。
 
 更新:
-- `topics/31_atc_signal_transmission/31_atc_signal_transmission_explanation.pdf` — A4縦4ページ、§1〜§15・3段階例題・固定5問6対象項目を収録。180 dpi `4 / 4 PASS`、文字抽出QA PASS
-- `STATUS.md` — `topic_31_explanation_pdf_complete` へ更新
-- `HANDOFF.md` — 次開始点をTopic 31練習source/PDFへ更新
+- `topics/31_atc_signal_transmission/31_atc_signal_transmission_practice.md` — 15問、4/8/3、全問五肢択一＋完全解説、固定6対象項目を全件マッピング
+- `topics/31_atc_signal_transmission/31_atc_signal_transmission_practice.pdf` — A4縦4ページ、180 dpi `4 / 4 PASS`、文字抽出QA PASS
+- `STATUS.md` — `topic_31_practice_pdf_complete` へ更新
+- `HANDOFF.md` — 次開始点をTopic 31解説画像PowerPointへ更新
 
 ## Topic 31 固定EXAM_ALIGNMENT
 1. R7下 機械 問14 — フローチャートの条件分岐・反復による論理判断 — `3` — PASS
@@ -26,34 +27,24 @@ Topic 31の解説PDFを完成した。本文§1〜§15・3段階例題・制作�
 制作前独立解答: `6 / 6 PASS`。
 本文マッピング: `6 / 6 PASS`。
 解説PDF反映: `6 / 6 PASS`。
+練習マッピング: `6 / 6 PASS`。
+練習独立QA: `15 / 15 PASS`。
 公式解答との不一致: `0件`。
 固定範囲外知識による正答補完: `0件`。
 固定範囲外追加: `0件`。
 未確認実車値追加: `0件`。
 
-## Topic 31 解説source
-- §1 試験論点
-- §2 新幹線ATCの地上→車上情報伝送
-- §3 信号・周期・周波数
-- §4 パルス信号とCPI/処理時間
-- §5 アナログ/デジタル、A-D/D-A、インタフェース
-- §6 標本化・量子化・符号化
-- §7 標本化定理
-- §8 伝送路・雑音
-- §9 多重化・搬送波・変調波
-- §10 データ圧縮
-- §11 条件分岐・反復
-- §12 解法アルゴリズム
-- §13 基礎例題: 周期と周波数
-- §14 標準例題: 標本化条件
-- §15 複合例題: デジタル処理時間と条件判断
-
-## Topic 31 解説PDF QA
-- path: `topics/31_atc_signal_transmission/31_atc_signal_transmission_explanation.pdf`
-- A4縦: 4ページ
+## Topic 31 練習QA
+- source: `topics/31_atc_signal_transmission/31_atc_signal_transmission_practice.md`
+- PDF: `topics/31_atc_signal_transmission/31_atc_signal_transmission_practice.pdf`
+- 15問（基礎4／標準8／複合3）
+- 五肢択一: `15 / 15`
+- 正答位置: A/B/C/D/E各3問
+- 固定5問・6対象項目: `6 / 6`
+- 独立数値・論理QA: `15 / 15 PASS`
+- 複数正答: `0件`
 - 180 dpi表示QA: `4 / 4 PASS`
 - 文字抽出QA: PASS
-- 固定5問・6対象項目: `6 / 6` 反映
 - Topic 32範囲追加: `0件`
 - 未確認実車値追加: `0件`
 
@@ -76,13 +67,15 @@ Topic 31の解説PDFを完成した。本文§1〜§15・3段階例題・制作�
 - 固定過去問に不要な通信方式各論
 
 ## 現在の状態
-- `current_status`: `topic_31_explanation_pdf_complete`
+- `current_status`: `topic_31_practice_pdf_complete`
 - 完成数: 30/38
 - 01〜30: PASS
 - active topic: 31 `ATC② 地上から車上へどう情報を送る？`
 - Topic 31制作前独立解答: `6 / 6 PASS`
 - Topic 31本文マッピング: `6 / 6 PASS`
 - Topic 31解説PDF反映: `6 / 6 PASS`
+- Topic 31練習マッピング: `6 / 6 PASS`
+- Topic 31練習独立QA: `15 / 15 PASS`
 
 ## 次の正確な開始点
-Topic 31の練習source/PDFを作成する。固定5問・6対象項目へ接続する三種問題を作成し、独立計算・論理QA、全ページ表示QA、文字抽出QAを行う。
+Topic 31の解説画像PowerPointを作成する。固定5問・6対象項目の解法経路を可視化し、16:9表示QA・PPTX ZIP整合性を確認する。
