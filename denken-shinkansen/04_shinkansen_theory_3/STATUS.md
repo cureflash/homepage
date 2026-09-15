@@ -1,15 +1,15 @@
 # STATUS - 新幹線・電験三種「理論」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 8 / 14
-- current_status: `topic_09_explanation_pdf_complete`
+- current_status: `topic_09_practice_pdf_complete`
 - last_completed_topic: `08 新幹線の交流25kVとは何なのか`
 - active_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- next_start: Topic 09の練習問題source・練習PDFを作成する
+- next_start: Topic 09の解説画像PowerPointを作成する
 
 ## Topic 01 進捗
 
@@ -155,19 +155,19 @@
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source・練習PDF
+- [x] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の解説PDFを完成し、GitHub正本へ反映した。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の練習問題source・練習PDFを完成し、GitHub正本へ反映した。
 
-A4縦4ページ。200 dpi全ページ表示QA `4 / 4 PASS`、表示欠け・重なり・文字化け0件、文字抽出QA `PASS`（U+FFFD 0件）。固定6過去問の要求事項、3段階例題、制作前独立検証 `6 / 6 PASS` を維持している。
+全15問、全問五肢択一（基礎4 / 本試験標準8 / 複合・応用3）。独立再計算・論理確認 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`。A4縦2ページ、200 dpi全ページ表示QA `2 / 2 PASS`、表示欠け・重なり・文字化け0件、文字抽出QA `PASS`（U+FFFD 0件）。固定6過去問要求への接続 `6 / 6`。
 
 Topic 10以降の力率・三相・半導体等、未確認の新幹線実車回路・切替方式は追加していない。
 
 ## 判定
 
-現在 `topic_09_explanation_pdf_complete / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の練習問題source・練習PDFを作成する。
+現在 `topic_09_practice_pdf_complete / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の解説画像PowerPointを作成する。
