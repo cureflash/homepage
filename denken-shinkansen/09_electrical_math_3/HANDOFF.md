@@ -10,17 +10,17 @@ Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、�
 
 完成後独立再解答は `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`。積分操作自体ではなく、固定過去問を積分式へ接続する電気的前提3群が学習用教材に不足していた。教材外知識で補ってPASS扱いしていない。
 
-不足3群は `08_integral_distance_revision_supplement.md` へ固定範囲内で最小補強済み。R8上の相電圧→線間電圧・線間波形、R3のリアクトル電圧符号・磁気エネルギー・導通終了、H28の固定問のサイリスタ導通対・無点弧時波形だけを追加し、三相回路・整流回路・リアクトル・サイリスタの体系説明には拡張していない。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
+不足3群は `08_integral_distance_revision_supplement.md` へ固定範囲内で最小補強し、`08_integral_distance_revision_supplement.pdf` へ学習用追加教材として同期済み。R8上の相電圧→線間電圧・線間波形、R3のリアクトル電圧符号・磁気エネルギー・導通終了、H28の固定問のサイリスタ導通対・無点弧時波形だけを追加し、三相回路・整流回路・リアクトル・サイリスタの体系説明には拡張していない。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
 
 完成数: `7 / 12`
 
-current_status: `topic_08_revision_supplement_source_complete`
+current_status: `topic_08_revision_supplement_pdf_complete`
 
 last_completed_topic: `07 微分② 速度を微分すると加速度`
 
 active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `Topic 08 補強3点を学習用補強PDFへ同期`
+next_start: `Topic 08 補強後の完成教材だけで固定5問を再独立解答`
 
 ## Topic 07 完了記録
 
@@ -212,7 +212,19 @@ FAIL理由は数学計算ではなく、公式問題文から積分式へ入る�
 
 不足前提への対応 `3 / 3`。三相回路・整流回路・リアクトル・サイリスタの体系説明追加0件、固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、未確認新幹線実値追加0件。
 
-現段階では補強sourceのみ。品質ゲートの再判定は未実施。
+### 学習用補強PDF
+
+成果物: `topics/08_integral_distance/08_integral_distance_revision_supplement.pdf`
+
+- A4縦2ページ
+- R8上・R3・H28の不足前提と既存積分式への接続だけを収録
+- 200 dpi表示QA: `2 / 2 PASS`
+- 文字抽出QA: PASS
+- クリッピング、重なり、文字化け: 0件
+- 固定EXAM_ALIGNMENT変更: 0件
+- Topic 09〜11先取り、専門分野の体系説明追加、未確認新幹線実値追加: 0件
+
+補強PDF同期まで完了。品質ゲートの再判定はまだ実施していない。
 
 ### source
 
@@ -223,11 +235,12 @@ FAIL理由は数学計算ではなく、公式問題文から積分式へ入る�
 - `topics/08_integral_distance/08_integral_distance_images.pptx`
 - `topics/08_integral_distance/08_integral_distance_exam_reanswer.md`
 - `topics/08_integral_distance/08_integral_distance_revision_supplement.md`
+- `topics/08_integral_distance/08_integral_distance_revision_supplement.pdf`
 
 参考教材は電験王、電験三種まとめました、電気主任技術者のナレッジノート等を複数系統確認。e-sysnetは検索対象に含めたが、固定5問へ直接対応するページを確認できなかったため無関係なページは引用していない。
 
 ## 次に行うこと
 
-補強3点を学習用の補強PDFへ同期し、表示・文字抽出QAを行う。既存の解説PDF・練習PDF・解説画像PowerPointは変更せず、補強内容は追加教材として独立させる。
+補強PDFを含む完成教材だけで固定5問・9答案要素を、保存済み正答を先に見ず再独立解答する。教材外知識による補完は禁止する。
 
-補強PDF同期後に、完成教材だけで固定5問を再独立解答する。Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は先取りしない。
+PASS後に最終QAへ進む。Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は先取りしない。
