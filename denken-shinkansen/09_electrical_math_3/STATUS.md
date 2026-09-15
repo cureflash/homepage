@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 7 / 12
-- current_status: `topic_08_final_qa_needs_revision`
+- current_status: `topic_08_source_progress_synced`
 - last_completed_topic: `07 微分② 速度を微分すると加速度`
 - active_topic: `08 積分 速度曲線の面積は距離`
-- next_start: `Topic 08 主source・練習sourceの旧進捗記録2箇所を実成果物へ同期`
+- next_start: `Topic 08 最終QA再判定`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -70,21 +70,19 @@
 - [x] 補強3点を学習用補強PDFへ同期
 - [x] 補強後の完成教材だけで固定5問を再独立解答 `5 / 5問・9 / 9答案要素 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 主source・練習sourceの旧進捗記録2箇所を現在地へ同期
+- [x] 主source・練習sourceの旧進捗記録2箇所を現在地へ同期
 - [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-Topic 08「積分 速度曲線の面積は距離」の最終QAを実施した。
+Topic 08「積分 速度曲線の面積は距離」の主source冒頭 `## 状態` と練習source末尾の旧進捗記録を、実在成果物・補強後独立再解答まで完了している現在地へ同期した。
 
-必須成果物、固定5問・9答案要素のEXAM_ALIGNMENT、補強後独立再解答 `5 / 5問・9 / 9答案要素 PASS`、練習QA、既存のPDF/PPTX表示QA記録、固定範囲境界はPASS。
-
-未完了理由は進捗記録2箇所のみ。主source冒頭が「解説本文＋3段階例題まで完了／次は解説PDF」、練習source末尾が「次は練習PDF作成」の旧記録のままで、実在成果物と不一致だった。技術本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・補強成果物・独立再解答は変更していない。
+技術本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・補強成果物・独立再解答結果は変更していない。
 
 固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、専門分野の体系説明追加0件、未確認新幹線実値追加0件。
 
 ## 判定
 
-Topic 08は `topic_08_final_qa_needs_revision / IN_PROGRESS`。
+Topic 08は `topic_08_source_progress_synced / IN_PROGRESS`。
 
-完成数は `7 / 12`。次工程は主source・練習sourceの旧進捗記録2箇所だけを実成果物へ同期する。
+完成数は `7 / 12`。次工程は最終QA再判定。
