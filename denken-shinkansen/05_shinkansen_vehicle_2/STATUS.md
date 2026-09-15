@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_09_explanation_pdf_complete`
+- current_status: `topic_09_practice_source_complete`
 - last_completed_topic: `08 位相制御と平均直流電圧`
 - active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09の練習問題・完全解説source。固定一次4問＋二次1問・14対象項目を維持し、一次は五肢択一、二次は途中式・前提・単位・検算を含む記述式として作成する
+- next_start: Topic 09の練習PDF。練習sourceの一次8問＋二次4問・完全解説を同期し、表示QA・文字抽出QA・計算論理QAを実施する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -378,4 +378,19 @@
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
 
-次工程はTopic 09 `直流機方式の損失・熱設計` の練習問題・完全解説source。
+## Topic 09 練習source
+- `09_dc_machine_loss_thermal_design_practice_source.md`: `completed`
+- 一次試験型: 8問、すべて五肢択一
+- 二次試験型: 4問、途中式・前提・単位・検算を含む記述式
+- 合計: 12問、全問完全解説付き
+- 固定一次4問＋二次1問・14対象項目: `14 / 14`接続
+- 独立計算・論理・正答一意性QA: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次記述の途中式・前提・単位・検算: `4 / 4 PASS`
+- 教材外知識補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- 練習PDF: `未制作`
+
+次工程はTopic 09 `直流機方式の損失・熱設計` の練習PDF。
