@@ -4,9 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-技術内容・過去問対応・成果物QAはすべてPASS。未完了理由は主source `09_dc_machine_loss_thermal_design.md` 冒頭の進捗記録不整合のみ。
+前回の唯一のFAIL要因だった主source `09_dc_machine_loss_thermal_design.md` 冒頭 `## 状態` の旧進捗2記述は実成果物へ同期済み。再判定で、技術内容・過去問対応・成果物QA・固定範囲境界・進捗記録整合を全件PASS確認した。
 
 ## 必須成果物
 
@@ -48,26 +48,22 @@
 
 ## 進捗記録整合
 
-`FAIL`
+`PASS`
 
-主source `09_dc_machine_loss_thermal_design.md` の `## 状態` に、実成果物と矛盾する旧進捗が残っている。
-
-残存記述:
+前回残存していた次の旧進捗2記述は主sourceから除去・同期済みである。
 
 - 「解説PDF、練習source/PDF、解説画像PowerPointは未制作」
 - 「次工程は解説PDF」
 
-実態:
+再確認した実態:
 
 - 解説PDF: completed / QA PASS
 - 練習source/PDF: completed / QA PASS
 - PowerPoint: completed / QA PASS
 - 完成後独立再解答: `14 / 14 PASS`
 
-このため進捗記録整合を品質ゲート上 `FAIL` とし、Topic 09 はまだ `completed` にしない。
+進捗記録と実成果物の矛盾は `0件`。
 
-## exact blocker
+## 最終判定
 
-主source冒頭 `## 状態` の旧進捗2記述だけを実成果物へ同期する必要がある。技術本文、固定EXAM_ALIGNMENT、数式、例題、練習問題・正答、PDF/PPTX、独立再解答は変更不要。
-
-次工程: 主sourceの進捗記録だけを同期し、その後に最終QAを再判定する。
+Topic 09は `PASS / completed`。完成数は `9 / 39` とする。次工程はTopic 10 `300系① 誘導電動機等価回路` の制作前EXAM_ALIGNMENT。
