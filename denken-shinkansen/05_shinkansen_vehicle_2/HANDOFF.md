@@ -7,9 +7,9 @@
 
 Topic 01〜09は最終QAまで `PASS`。完成数は `9 / 39`。
 
-現在地は `topic_10_practice_source_complete`。Topic 10 `300系① 誘導電動機等価回路` は制作前EXAM_ALIGNMENT（一次3問＋二次2問、22答案要素、制作前独立検証 `22 / 22 PASS`）、解説本文＋3段階例題、解説PDF、練習問題・完全解説sourceまで完成。練習sourceは一次8問＋二次4問の計12問、独立計算・論理・正答一意性 `12 / 12 PASS`、固定5問・22答案要素へ `22 / 22` 接続。固定範囲外追加・Topic 11〜13先取り・未確認300系実車値追加は `0件`。
+現在地は `topic_10_practice_pdf_complete`。Topic 10 `300系① 誘導電動機等価回路` は制作前EXAM_ALIGNMENT（一次3問＋二次2問、22答案要素、制作前独立検証 `22 / 22 PASS`）、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDFまで完成。練習PDFはA4縦3ページ、一次8問＋二次4問・完全解説を収録し、180 dpi表示 `3 / 3 PASS`、文字抽出PASS、数値・論理 `12 / 12 PASS`。固定5問・22答案要素へ `22 / 22` 接続し、固定範囲外追加・Topic 11〜13先取り・未確認300系実車値追加は `0件`。
 
-次工程はTopic 10の練習PDF。一次8問＋二次4問・完全解説をA4縦へ収録し、全ページ表示QA・文字抽出QA・数値論理QAを行う。
+次工程はTopic 10の解説画像PowerPoint。SPEC指定4グラフ（トルク―すべり、出力―すべり、効率―負荷率、二次抵抗変更時の特性）を収録し、表示QA・overflow・PowerPoint ZIP整合性を確認する。
 
 ## Topic 01〜06
 - Topic 01〜06: 最終QA `PASS / completed`
@@ -242,9 +242,25 @@ source: `topics/10_300series_induction_motor_equivalent_circuit/10_300series_ind
 - Topic 11〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
-## 次の正確な開始点
-Topic 10 `300系① 誘導電動機等価回路` の練習PDF。
+## Topic 10 練習PDF
+- `10_300series_induction_motor_equivalent_circuit_practice.pdf`: `completed`
+- A4縦3ページ
+- 一次8問＋二次4問、全12問・完全解説を収録
+- 180 dpi全3ページ Visual QA: `3 / 3 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件`
+- 計算・論理QA: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次の途中式・前提・単位・検算: `4 / 4 PASS`
+- 固定一次3問＋二次2問・22答案要素: 維持
+- 固定範囲外追加: `0件`
+- Topic 11〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+- SHA-256: `f5dfaf9d3964190bc377ae47e442f6eee630658a92da5d65e7f1140fed166b72`
+- Git blob SHA-1: `4c6bdefa78383a57074e017e6ef6eea958b50bbb`
 
-1. 一次8問＋二次4問・完全解説をA4縦へ収録する。
-2. 全ページ表示QA・文字抽出QA・数値論理QAを実施する。
+## 次の正確な開始点
+Topic 10 `300系① 誘導電動機等価回路` の解説画像PowerPoint。
+
+1. SPEC指定4グラフ（トルク―すべり、出力―すべり、効率―負荷率、二次抵抗変更時の特性）を収録する。
+2. 表示QA・overflow・PowerPoint ZIP整合性を実施する。
 3. 固定一次3問＋二次2問・22答案要素を維持し、300系未確認実車値・Topic 11以降を追加しない。
