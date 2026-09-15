@@ -6,15 +6,15 @@
 
 Topic 01〜08は `completed`。Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで実施した。
 
-最終QAは `NEEDS_REVISION / IN_PROGRESS`。未完了理由は主source・練習sourceの旧進捗表現のみ。
+最終QAは `NEEDS_REVISION / IN_PROGRESS`。未完了理由は主sourceの旧進捗表現のみ。練習source末尾の旧進捗表現は同期済み。
 
 完成数: `8 / 21`
 
-current_status: `topic_09_final_qa_needs_revision`
+current_status: `topic_09_practice_progress_synced`
 
 active_topic: `09 新幹線の25kV交流をフェーザで表す`
 
-次工程: 主source・練習sourceに残る旧進捗表現を、完成後独立再解答・最終QA実施済みの現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF・PowerPointは変更しない。
+次工程: 主sourceに残る旧進捗表現を、完成後独立再解答・最終QA実施済みの現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF・PowerPointは変更しない。
 
 ## Topic 09 固定範囲
 
@@ -80,7 +80,7 @@ R7・R6・R5二次「電力・管理」「機械・制御」を確認したが�
 - 正答一意性・数値再計算: `12 / 12 PASS`
 - 固定5問・11小問への練習接続: `11 / 11`
 - PDF A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`
-- 技術内容はPASSだが、source末尾の次工程がPowerPoint作成前の状態のまま残存
+- source末尾の旧進捗表現は、完成後独立再解答・最終QA実施済みの現在地へ同期済み
 
 PowerPoint:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_images.pptx`
@@ -130,10 +130,9 @@ PowerPoint:
    - 「次は解説PDF作成＋全ページ表示QA」
    が残存。
 3. `09_25kv_ac_phasor_practice.md` 末尾
-   - 「次は解説画像PowerPointを作成する」
-   が残存。
+   - 旧「次は解説画像PowerPointを作成する」は同期済み。
 
-次工程では上記進捗表現だけを同期し、技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・成果物は変更しない。
+次工程では主sourceの上記進捗表現だけを同期し、技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・成果物は変更しない。
 
 ## 参考資料
 
@@ -182,4 +181,4 @@ Topic 01〜08は `completed`。Topic 08の最終QAは、固定一次4問・6小�
 
 ## 次に行うこと
 
-Topic 09の主source・練習sourceに残る旧進捗表現だけを現在地へ同期する。同期後、最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF・PowerPointは変更しない。
+Topic 09の主sourceに残る旧進捗表現だけを現在地へ同期する。同期後、最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF・PowerPointは変更しない。
