@@ -4,20 +4,112 @@
 
 ## 現在地
 
-Topic 01〜09は `completed`。Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA再々実施まで完了し、`PASS / completed`。
+Topic 01〜09は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENTまで完了した。
 
 完成数: `9 / 21`
 
-current_status: `topic_09_completed`
+current_status: `topic_10_exam_alignment_complete`
 
 active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
 
-次工程: Topic 10制作前EXAM_ALIGNMENT。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`の固定範囲から開始し、一次・二次を確認してから本文制作へ進む。
+次工程: 固定一次5問・20小問から逆算し、Topic 10の解説本文＋3段階例題を作成する。固定範囲外、未確認実設備値、二次数合わせは追加しない。
 
-## Topic 09 固定範囲
+## Topic 10 固定範囲
 
 系列SPECどおり、次だけを扱う。
 
+- 誘導リアクタンス
+- 容量リアクタンス
+- 複素インピーダンス
+- 直列共振
+- 並列共振
+- 共振周波数
+- Q値
+- 周波数特性
+- 位相特性
+
+中心式:
+- `ω=2πf`
+- `XL=ωL`
+- `XC=1/(ωC)`
+- 直列RLC: `Z=R+j(XL-XC)`
+- 共振: `ω0=1/√(LC)`、`f0=1/(2π√(LC))`
+- 直列共振Q値: `Q=ω0L/R=1/(ω0CR)`
+
+境界:
+- フィルタ・遮断周波数・ゲイン設計 → Topic 11
+- 三相回路 → Topic 12
+- 複素電力・力率・無効電力 → Topic 13
+- 過渡現象 → Topic 15
+- 高調波系統計算、変圧器・進相コンデンサ設備設計、百分率リアクタンス → Topic 10へ追加しない
+
+50Hz/60Hz比較は、同一の教育用RLCモデルで周波数だけを変え、`XL`、`XC`、`Z`、電流、位相がどう変わるかを示す。未確認の新幹線実設備定数は真値として置かない。
+
+## Topic 10 固定EXAM_ALIGNMENT
+
+品質ゲート対象は一次「理論」5問・20小問。
+
+- R8 問5(1)〜(5): RLC直列共振、共振電流、Q値、L端子電圧、電圧拡大条件
+- R3 問4(1)(2): LC並列部の共振条件、共振角周波数
+- H30 問6(1)〜(5): R-L枝＋C並列回路の合成アドミタンス、位相条件、`|Y|`最小、共振時位相
+- H28 問6(1)〜(5): RC/rL枝、`XL`・`XC`、周波数依存、位相特性
+- H24 問2(1)(2)(5): RLC合成インピーダンス、電圧・電流同相条件、回路定数関係
+
+公式問題・公式解答の対象20小問は照合済み。完成後は保存済み正答を先に見ず、完成教材だけで20小問を独立再解答する。
+
+## Topic 10 二次試験の扱い
+
+R8二次試験は2026-11-15実施予定で、2026-09-16時点では未実施。最新完了年度のR7〜R5二次「電力・管理」「機械・制御」を確認し、Topic 10固定範囲だけで完結する問題は品質ゲートへ採用しない。
+
+H30二次「電力・管理」問5には高調波電流、直列リアクトル、進相コンデンサを含む回路の周波数依存・共振条件が現れるが、完答には高調波等価回路、変圧器・電力設備、百分率リアクタンス等が必要。本TopicのRLC理論だけへ切り出すと二次問題としての解法経路を欠くため非採用。
+
+二次採用0問、二次数合わせ0件。
+
+## Topic 10 現在の成果物
+
+制作前source:
+- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc.md`
+- 制作前EXAM_ALIGNMENTを収録
+- 固定一次5問・20小問
+- 公式問題・公式解答照合済み
+- 二次採用0問・二次数合わせ0件
+- Topic 11以降の論点追加0件
+- 未確認実設備値追加0件
+
+未制作:
+- 解説本文＋3段階例題
+- 解説PDF＋表示QA
+- 練習問題source＋練習PDF
+- 解説画像PowerPoint
+- 完成後独立再解答
+- 最終QA
+
+## Topic 10 参考資料
+
+参照日: 2026-09-16
+
+公式正本:
+- 電気技術者試験センター「第二種電気主任技術者試験の問題と解答」 https://www.shiken.or.jp/chief/second/qa/
+- R8一次「理論」問5
+- R3一次「理論」問4
+- H30一次「理論」問6
+- H28一次「理論」問6
+- H24一次「理論」問2
+- H30二次「電力・管理」問5（非採用判断用）
+
+説明粒度・解法確認:
+- e-sysnet「RLC並列共振回路」 https://e-sysnet.com/parallel-resonant-circuit/
+- e-sysnet「単相交流の直列回路」 https://e-sysnet.com/ac-series/
+- 電験王2 R3理論問4 https://denken-ou.com/c2/rironr3-4/
+- 電験王2 H30理論問6 https://denken-ou.com/c2/rironh30-6/
+- 電験王2 H28理論問6 https://denken-ou.com/c2/rironh28-6/
+- 電験王2 H24理論問2 https://denken-ou.com/c2/rironh24-2/
+
+## Topic 09 完了記録
+
+Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA再々実施まで完了し、`PASS / completed`。
+
+固定範囲:
 - 瞬時値
 - 実効値
 - 平均値
@@ -27,135 +119,37 @@ active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？
 - フェーザ
 - 複素インピーダンス
 
-境界:
-- 共振・Q値・周波数特性 → Topic 10
-- フィルタ・周波数応答 → Topic 11
-- 三相回路 → Topic 12
-- 複素電力・力率・無効電力 → Topic 13
-
-新幹線25kV交流は理論を具体化する導入・応用に用いる。未確認の実設備値・回路定数は真値として追加しない。
-
-## Topic 09 固定EXAM_ALIGNMENT
-
-品質ゲート対象は一次「理論」5問・11小問。
-
+固定EXAM_ALIGNMENT:
 - R7 問3(1)(2): `V̇L=jωL İ`、フェーザ位相、ベクトル三角形
 - R5 問4(1): 複素インピーダンス合成、`İ=V̇/Ż`
 - R3 問4(3)(4): `jωL`、`1/(jωC)`、合成インピーダンス、フェーザ電流
 - H26 問3(1)(2): `V̇S-V̇R=jωL İ`、フェーザ差・大きさ
 - H21 問3(1)〜(4): 複素アドミタンス／インピーダンス、フェーザ、実効値⇔最大値、瞬時値
 
-公式解答照合: `11 / 11 PASS`
+完成後独立再解答 `11 / 11 PASS`。教材外知識補完0件、二次採用0問、二次数合わせ0件、固定範囲外追加0件、未確認実設備値追加0件。
 
-直近年度から固定範囲だけで選定し、R8の共振/Q値等はTopic 10、計測ブリッジはTopic 20側として非採用。R7/R5/R3も後続論点へ進む小問は採用していない。範囲を広げずH26・H21まで遡って5問を確保した。
-
-## 二次試験の扱い
-
-R7・R6・R5二次「電力・管理」「機械・制御」を確認したが、Topic 09固定範囲だけを直接問う記述問題は確認できなかった。同期機、誘導機、変圧器、系統、故障計算、整流器、制御等の固有知識が主となる問題は非採用。
-
-二次採用0問、二次数合わせ0件。`08 理論・二種` は一次理論中心で、無理に二次形式を付けないというMASTER_SPECを維持した。
-
-## Topic 09 完成済み成果物
-
-解説source:
+成果物:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md`
-- 固定11小問への本文マッピング `11 / 11`
-- 品質ゲート表の個別公式正答値は除去済み
-- 進捗記録は `completed` とTopic 10開始へ同期済み
-
-解説PDF:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_explanation.pdf`
-- A4縦4ページ
-- 200 dpi表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- クリッピング・重なり・文字化け: 0件
-
-練習問題:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_practice.md`
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_practice.pdf`
-- 一次試験型12問、全問五肢択一
-- 基礎3 / 本試験標準6 / 複合・ひっかけ3
-- 正答一意性・数値再計算: `12 / 12 PASS`
-- 固定5問・11小問への練習接続: `11 / 11`
-- PDF A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`
-- 進捗記録は `completed` とTopic 10開始へ同期済み
-
-PowerPoint:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_images.pptx`
-- 16:9・5スライド
-- 200 dpi表示QA: `5 / 5 PASS`
-- ZIP整合性: `PASS`
-- クリッピング・重なり・文字化け: 0件
-
-完成後独立再解答:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_reanswer.md`
-- 完成教材だけで固定一次5問・11小問を再導出
-- 公式解答との事後照合: `11 / 11 PASS`
-- 教材外知識補完: 0件
-- 固定範囲外論点追加: 0件
-- 二次数合わせ: 0件
-- 後続Topic論点・未確認実設備値追加: 0件
-
-最終QA:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_final_qa.md`
-- 過去問対応、独立再解答、二次非採用判断、必須成果物、表示QA、SPEC境界、進捗記録整合: 全件PASS
-- 判定: `PASS / completed`
-
-固定EXAM_ALIGNMENT変更0件、二次採用0問、二次数合わせ0件、固定範囲外追加0件、未確認実設備値追加0件。
-
-## Topic 09 完成後独立再解答結果
-
-独立答案:
-- R7 問3(1)(2): `ヨ`, `ト`
-- R5 問4(1): `ト`
-- R3 問4(3)(4): `イ`, `リ`
-- H26 問3(1)(2): `カ`, `ニ`
-- H21 問3(1)〜(4): `チ`, `ル`, `ハ`, `ワ`
-
-公式解答との照合は `11 / 11 PASS`。教材だけで使用式を選択し、途中式を再構築し、選択肢を一意に判定し、正答理由を説明できた。外部知識による補完は行っていない。
-
-## 参考資料
-
-参照日: 2026-09-15
-
-公式正本:
-- 電気技術者試験センター「第二種電気主任技術者試験の問題と解答」 https://www.shiken.or.jp/chief/second/qa/
-- R7 一次 理論 https://www.shiken.or.jp/chief/upload/20250831_ch_second_q01.pdf
-- R5 一次 理論 https://www.shiken.or.jp/chief/upload/20230819_ch_second_q01.pdf
-- R3 一次 理論 https://www.shiken.or.jp/chief/upload/20210821_ch_second_q01.pdf
-- H26 一次 理論 https://www.shiken.or.jp/chief/upload/20140906_ch_second_q01.pdf
-- H21 一次 理論 https://www.shiken.or.jp/chief/upload/20090905_ch_second_q01.pdf
-
-説明粒度・解法確認:
-- e-sysnet「単相交流の直列回路」 https://e-sysnet.com/ac-series/
-- 電験王2 R7年度ページ https://denken-ou.com/c2/r7/
-- 電験王2 R5理論問4 https://denken-ou.com/c2/rironr5-4/
-- 電験王2 R3理論問4 https://denken-ou.com/c2/rironr3-4/
-- 電験王2 H26理論問3 https://denken-ou.com/c2/rironh26-3/
-- 電験王2 H21理論問3 https://denken-ou.com/c2/rironh21-3/
 
 ## 品質ゲート現在値
 
-- 制作前EXAM_ALIGNMENT: `PASS`
-- 固定一次: `5問 / 11小問`
-- 公式解答照合: `11 / 11 PASS`
-- 解説本文マッピング: `11 / 11`
-- 解説PDF表示QA: `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 練習問題QA: `12 / 12 PASS`
-- 練習接続: `11 / 11`
-- 練習PDF表示QA: `4 / 4 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
-- PowerPoint ZIP整合性: `PASS`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- 固定範囲外追加: `0件`
-- 未確認実設備値追加: `0件`
-- 完成後独立再解答: `11 / 11 PASS`
-- 進捗記録整合: `PASS`
-- 最終QA再々実施: `PASS / completed`
+- Topic 01〜09: `PASS / completed`
+- 完成数: `9 / 21`
+- Topic 10 制作前EXAM_ALIGNMENT: `PASS`
+- Topic 10 固定一次: `5問 / 20小問`
+- Topic 10 公式問題・公式解答照合: `20小問確認済み`
+- Topic 10 二次採用: `0問`
+- Topic 10 二次数合わせ: `0件`
+- Topic 10 固定範囲外追加: `0件`
+- Topic 10 未確認実設備値追加: `0件`
+- Topic 10 完成後独立再解答: `未実施（教材完成後）`
 
 ## 次に行うこと
 
-Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」の制作前EXAM_ALIGNMENTを実施する。
+Topic 10の固定5問・20小問と必須説明から逆算して、解説本文＋3段階例題を作成する。
