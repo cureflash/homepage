@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `09_electrical_math_3`
-- exam_aligned_completed_topics: 6 / 12
-- current_status: `topic_07_source_progress_synced`
-- last_completed_topic: `06 微分① ダイヤの傾きは速度`
-- active_topic: `07 微分② 速度を微分すると加速度`
-- next_start: `Topic 07 最終QA再判定`
+- exam_aligned_completed_topics: 7 / 12
+- current_status: `topic_07_completed`
+- last_completed_topic: `07 微分② 速度を微分すると加速度`
+- active_topic: `08 積分 速度曲線の面積は距離`
+- next_start: `Topic 08 制作前EXAM_ALIGNMENT`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -49,18 +49,18 @@
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source旧進捗2箇所の同期
-- [ ] 最終QA再判定
+- [x] 最終QA再判定 `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 07「微分② 速度を微分すると加速度」の主source `07_derivative_2.md` に残っていた旧進捗2箇所を、実在成果物と現在地へ同期した。
+Topic 07「微分② 速度を微分すると加速度」の最終QAを再判定した。
 
-冒頭 `## 状態` は解説PDF・練習問題source/PDF・PowerPoint・完成後独立再解答まで完了済みへ更新。末尾の旧「解説本文段階の判定」は現在の進捗判定へ更新し、次工程を最終QA再判定とした。
+初回最終QAで唯一FAILだった主sourceの旧進捗2箇所が解消済みであることを確認。固定EXAM_ALIGNMENT 5問、制作前独立検証 `5 / 5 PASS`、完成後独立再解答 `5 / 5 PASS`、練習独立計算QA `12 / 12 PASS`、必須成果物、PDF/PPTX表示QA、固定範囲、後続Topic境界を再確認し、全品質ゲートPASSとした。
 
-技術本文、固定EXAM_ALIGNMENT 5問、数式、3段階例題、問題・正答、PDF/PPTX成果物は変更していない。制作前 `5 / 5 PASS`、練習独立計算QA `12 / 12 PASS`、完成後独立再解答 `5 / 5 PASS` を維持。仕様外論点・未確認新幹線実値の追加は0件。
+教材外知識補完・仕様外論点追加・未確認新幹線実値追加はいずれも0件。技術本文・固定過去問・問題・正答・成果物内容は変更していない。
 
 ## 判定
 
-Topic 07は `topic_07_source_progress_synced / IN_PROGRESS`。
+Topic 07は `PASS / completed`。
 
-過去問対応品質ゲートは `5 / 5 PASS`。完成数は `6 / 12` のまま。次は最終QAを再判定する。
+完成数は `7 / 12`。次の未完了テーマはTopic 08「積分 速度曲線の面積は距離」で、次工程は制作前EXAM_ALIGNMENT。
