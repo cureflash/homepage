@@ -204,4 +204,4 @@
 
 # 次工程
 
-練習sourceの進捗記録は現在地へ同期済み。次はTopic 09最終QAを再々実施する。
+Topic 09は `completed`。次はTopic 10の制作前EXAM_ALIGNMENTを実施する。
