@@ -6,12 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は品質ゲートPASSでcompleted。active topicは10「新幹線の速度はどう自動制御される？」。
 
 ## 今回進捗
-Topic 10「新幹線の速度はどう自動制御される？」の解説画像PowerPointを完成し、全スライド表示QA・overflow・PPTX ZIP整合性QAまで完了した。
+Topic 10の完成後独立再解答前ゲートを監査し、`BLIND_REANSWER_BLOCKED` とした。必須先読み対象の `STATUS.md`、`HANDOFF.md`、主sourceに制作前答案番号・導出が残っており、「保存済み正答を先に見ずに完成後独立再解答する」条件と両立しないため、今回は独立再解答を実施していない。監査記録は `topics/10_automatic_control/10_automatic_control_blind_reanswer_gate.md` に保存した。
 
 - 品質ゲート対象: 公式過去問5件
 - 固定問題: R8上 問13、R7下 問13、R5下 問18(a)、R5上 問13、R4上 問15(a)
-- 制作前答案列: `(4), (3), (5), (1), (2)`
-- 制作前公式照合: `5 / 5 PASS`
+- 制作前検証: `5 / 5 PASS`
 - 解説本文＋3段階例題: 完成
 - 固定5件の本文マッピング: `5 / 5 全件`
 - 解説PDF: A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`
@@ -29,6 +28,7 @@ Topic 10「新幹線の速度はどう自動制御される？」の解説画像
 - 固定EXAM_ALIGNMENT 5件への接続: `5 / 5`
 - 独立計算・論理QA: `12 / 12 PASS`
 - 正答一意性QA: `12 / 12 PASS`
+- 完成後独立再解答前ゲート: `BLIND_REANSWER_BLOCKED`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外論点追加: `0件`
@@ -52,6 +52,8 @@ source: `topics/10_automatic_control/10_automatic_control.md`
 PowerPoint: `topics/10_automatic_control/10_automatic_control_images.pptx`
 
 PowerPoint QA: `topics/10_automatic_control/10_automatic_control_powerpoint_qa.md`
+
+独立再解答前ゲート監査: `topics/10_automatic_control/10_automatic_control_blind_reanswer_gate.md`
 
 ## Topic 10 EXAM_ALIGNMENT
 品質ゲート対象は5件で固定。
@@ -82,6 +84,7 @@ PowerPoint QA: `topics/10_automatic_control/10_automatic_control_powerpoint_qa.m
 - 練習問題source: 完了（12問、全問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`）
 - 練習PDF: 完了（A4縦6ページ、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`）
 - 解説画像PowerPoint: 完了（16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`）
+- 完成後独立再解答前ゲート: `BLIND_REANSWER_BLOCKED`
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -89,7 +92,7 @@ PowerPoint QA: `topics/10_automatic_control/10_automatic_control_powerpoint_qa.m
 - 未確認実車値追加: `0件`
 
 ## 次に行う
-Topic 10の完成後独立再解答を、保存済み正答を先に見ず完成教材だけで実施する。固定5件を全問正答でき、根拠説明まで教材内で完結するか確認する。
+Topic 10の固定問題選定・要求知識・教材内マッピング・制作前検証 `5 / 5 PASS` は維持したまま、必須先読み対象の `STATUS.md`、`HANDOFF.md`、`topics/10_automatic_control/10_automatic_control.md` から制作前答案番号・完成済み導出結果を除去する。教材本文・PDF・練習問題・PowerPoint・固定EXAM_ALIGNMENT自体は変更しない。その後のrunで公式解答を先に見ず完成教材だけで固定5件を独立再解答する。
 
 ## Topic 09 完了要約
 Topic 09「新幹線はどうやって電気で止まる？」は品質ゲートPASS / completed。
