@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `8 / 22`
-- current_status: `topic_09_independent_reanswer_complete`
+- current_status: `topic_09_final_qa_needs_revision`
 - last_completed_topic: `08 VVVFインバータで三相交流を作る`
 - active_topic: `09 誘導電動機を自由に操るには？`
-- next_start: Topic 09の最終QAを実施する
+- next_start: Topic 09練習sourceの旧進捗記録を実成果物へ同期する
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -87,8 +87,20 @@
 - [x] 固定EXAM_ALIGNMENT・固定範囲・問題・正答の変更 0件
 - [x] Topic 10以降・厳密Park/Clarke変換・制御器設計・センサレス推定器設計・未確認300系実車値の追加 0件
 
+## Topic 09 最終QA
+- [x] 必須成果物5件の存在確認 PASS
+- [x] 一次3問＋二次2問・18小問のEXAM_ALIGNMENT確認 PASS
+- [x] 完成後独立再解答 `18 / 18 PASS`、教材外補完0件を確認
+- [x] 解説PDF表示QA `4 / 4 PASS`・文字抽出QA PASSの記録確認
+- [x] 練習PDF表示QA `6 / 6 PASS`・文字抽出QA・主要計算再検算PASSの記録確認
+- [x] PowerPoint表示QA `4 / 4 PASS`・overflow 0件・ZIP整合性PASSの記録確認
+- [x] 固定範囲境界 PASS
+- [ ] 進捗記録整合: `09_induction_motor_control_practice.md` 末尾が「次は練習PDF作成」の旧記録のまま
+
 ## 今回進めた内容
-Topic 09「誘導電動機を自由に操るには？」の完成後独立再解答を実施した。固定一次3問＋二次2問・18小問を、保存済み公式解答・標準解答を先に見ず完成教材だけで再構築し、その後公式解答へ照合。`18 / 18 PASS`、教材外知識補完0件。固定EXAM_ALIGNMENT・固定範囲・成果物内容は変更していない。
+Topic 09「誘導電動機を自由に操るには？」の最終QAを実施した。技術内容、必須成果物、一次3問＋二次2問・18小問、完成後独立再解答 `18 / 18 PASS`、PDF/PPTX QA、固定範囲境界はPASS。
+
+未完了理由は進捗記録1箇所のみ。`09_induction_motor_control_practice.md` 末尾の `## 次工程` が「この練習問題sourceから練習PDFを作成」と残っており、実在する練習PDF・PowerPoint・独立再解答の現在地と不整合。
 
 ## 判定
-Topic 09は `independent_reanswer_complete`。完成数は `8 / 22` のまま。次は最終QAを実施する。
+Topic 09は `NEEDS_REVISION / IN_PROGRESS`。完成数は `8 / 22` のまま。次は練習sourceの旧進捗記録だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
