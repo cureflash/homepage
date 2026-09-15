@@ -6,58 +6,48 @@
 
 Topic 01〜07は最終QAまでPASSし、`completed`。
 
-Topic 07 `モーターはなぜ回る？` は最終QA再実施で全品質ゲートPASS。固定公式過去問5問の完成後独立再解答は `5 / 5 PASS`、教材外知識補完・後続Topic依存・未確認0系実車値依存はいずれも `0問`。
+Topic 08 `新幹線の交流25kVとは何なのか` は制作前EXAM_ALIGNMENTまで完了。系列SPECの固定範囲だけで問題全体を解ける公式過去問を直近年度から遡って確認し、現行公式過去問から確認できた全4問を固定した。制作前独立検証は `4 / 4 PASS`。
 
 - 完成数: `7 / 14`
 - last completed: `07 モーターはなぜ回る？`
 - active topic: `08 新幹線の交流25kVとは何なのか`
-- current status: `topic_07_completed`
-- next start: Topic 08の制作前EXAM_ALIGNMENT
+- current status: `topic_08_exam_alignment_complete`
+- next start: Topic 08の解説本文＋3段階例題
 
 ## 今回進捗
 
-Topic 07の最終QAを再実施した。
+Topic 08の制作前EXAM_ALIGNMENTを完成した。
 
 確認結果:
-- 必須成果物の実在: PASS
-- 固定EXAM_ALIGNMENT 5問: PASS
-- 3段階例題: PASS
-- 練習15問: `15 / 15 PASS`
-- 解説PDF: A4縦4ページ、200 dpi表示QA・文字抽出QA PASS
-- 練習PDF: A4縦5ページ、200 dpi表示QA・文字抽出QA PASS
-- PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、はみ出し0件、PPTX整合性PASS
-- 完成後独立再解答: `5 / 5 PASS`
-- SPEC境界: PASS
-- 主source・練習sourceの進捗記録整合性: PASS
+- MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC: 確認済み
+- Topic 08既存成果物: なし
+- 固定公式過去問: `4問`
+- 制作前独立検証: `4 / 4 PASS`
+- 5問未満例外: 適用。固定範囲だけで完結すると公式正本で確認できた全件を対象化
+- e-sysnet・電験王・電験三種まとめました: 説明粒度確認済み
+- RLC・リアクタンス・力率・三相・高調波等の後続Topic混入: `0件`
+- 未確認新幹線実車値追加: `0件`
 
-教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習15問・PDF/PPTX成果物の技術内容は変更していない。
+## Topic 08 固定過去問
 
-## Topic 07 固定過去問
+- 令和7年度上期 理論 問8: 正弦波電流の瞬時値から指定値へ最初に到達する時刻
+- 令和6年度下期 理論 問8: 位相・最大値が異なる同一周波数正弦波電圧の合成
+- 令和3年度 理論 問8: 波形から最大値・周波数・位相を読み、瞬時値式を選択
+- 平成21年度 理論 問9: 正弦波電流の瞬時値から指定値へ最初に到達する時刻
 
-- 令和6年度下期 理論 問4: 平行導体間の電磁力と向き
-- 令和5年度下期 理論 問4: 直線導体の磁界中でループ導体に働く合成電磁力
-- 令和4年度上期 理論 問4: 運動導体の誘導起電力
-- 令和2年度 理論 問3: 一様磁界中の電流ループに働く偶力
-- 平成28年度 理論 問12: ローレンツ力の導出・向き・電子の運動
+制作前独立検証: `4 / 4 PASS`
 
-制作前独立検証: `5 / 5 PASS`
-完成後独立再解答: `5 / 5 PASS`
+令和7年度上期 問8と平成21年度 問9は同一内容の再出題。要求事項は重複カウントしない。
 
-## Topic 07 成果物
+### 固定しなかった近接問題
 
-- source: `topics/07_motor_force_induction/07_motor_force_induction.md`
-- explanation PDF: `topics/07_motor_force_induction/07_motor_force_induction_explanation.pdf`
-- practice source: `topics/07_motor_force_induction/07_motor_force_induction_practice.md`
-- practice PDF: `topics/07_motor_force_induction/07_motor_force_induction_practice.pdf`
-- PowerPoint: `topics/07_motor_force_induction/07_motor_force_induction_images.pptx`
-- reanswer: `topics/07_motor_force_induction/07_motor_force_induction_exam_recheck.md`
-- final QA: `topics/07_motor_force_induction/07_motor_force_induction_final_qa.md`
+- 令和8年度上期 理論 問8: RC・リアクタンス・消費電力を要するためTopic 09/10側
+- 令和4年度下期 理論 問8: 波形率・波高率、三角波・方形波比較が主題で固定範囲外
+- 平成30年度 理論 問8: R・L・誘導性負荷・力率を要するためTopic 09/10側
+- 平成18年度 理論 問8: R6下問8同型だが、現行の電気技術者試験センター公式オンライン過去問で公式PDFを直接確認できないためゲート対象外
 
-## 次に行うこと
+## Topic 08 固定範囲
 
-Topic 08 `新幹線の交流25kVとは何なのか` の制作前EXAM_ALIGNMENTを開始する。
-
-系列SPECのTopic 08固定範囲:
 - 交流 / 直流
 - 正弦波
 - 瞬時値 / 最大値 / 実効値 / 平均値
@@ -65,7 +55,7 @@ Topic 08 `新幹線の交流25kVとは何なのか` の制作前EXAM_ALIGNMENT�
 - 位相 / 位相差
 - ベクトル表示の基本
 
-系列SPECの重要公式:
+重要公式:
 
 ```text
 v = Vm sinωt
@@ -75,7 +65,19 @@ V = Vm/√2
 I = Im/√2
 ```
 
-制作前に公式過去問を直近年度から調査し、三種は原則5問以上を固定する。Topic 09以降のRLC・リアクタンス・インピーダンス、Topic 10の力率、Topic 11の三相交流、Topic 12以降の半導体・PWMは勝手に追加しない。
+新幹線接続は「25kVは実効値として扱う」ことまで。周波数切替はTopic 09へ送る。
+
+## Topic 08 成果物
+
+- source: `topics/08_ac_25kv_basics/08_ac_25kv_basics.md`
+
+解説PDF・練習source/PDF・PowerPoint・完成後独立再解答・最終QAは未着手。
+
+## 次に行うこと
+
+固定4問の要求事項と系列SPEC固定範囲だけを使い、Topic 08の解説本文＋3段階例題を作成する。
+
+本文では、瞬時値式、`T=1/f`、`ω=2πf`、最大値/実効値、平均値、位相・位相差、同一周波数正弦波の基本ベクトル合成、波形読取を固定4問へ明示的にマッピングする。
 
 ## 固定ルール
 
