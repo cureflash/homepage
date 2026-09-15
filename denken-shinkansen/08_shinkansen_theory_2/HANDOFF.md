@@ -4,231 +4,133 @@
 
 ## 現在地
 
-Topic 01〜10は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source、練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答、進捗記録同期、最終QA再実施まで完了し、`PASS / completed`。
+Topic 01〜10は `PASS / completed`。完成数は `10 / 21`。
 
-完成数: `10 / 21`
-
-current_status: `topic_10_completed`
+current_status: `topic_11_exam_alignment_complete`
 
 active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 
-次工程: Topic 11の制作前EXAM_ALIGNMENTを実施する。系列SPECの固定範囲を起点に、公式過去問を一次・二次とも確認し、直接対応問題だけを品質ゲート対象へ固定する。
+Topic 11は制作前EXAM_ALIGNMENTまで完了。次工程は解説本文＋基礎／本試験標準／複合・ひっかけの3段階例題。
 
-## Topic 10 固定範囲
+## Topic 11 source
 
-系列SPECどおり、次だけを扱う。
+- `topics/11_atc_frequency_filter/11_atc_frequency_filter.md`
+- stage: `EXAM_ALIGNMENT_COMPLETE`
+- completion: `IN_PROGRESS`
 
-- 誘導リアクタンス
-- 容量リアクタンス
-- 複素インピーダンス
-- 直列共振
-- 並列共振
-- 共振周波数
-- Q値
-- 周波数特性
-- 位相特性
+## Topic 11 固定範囲
 
-中心式:
-- `ω=2πf`
-- `XL=ωL`
-- `XC=1/(ωC)`
-- 直列RLC: `Z=R+j(XL-XC)`
-- 共振: `ω0=1/√(LC)`、`f0=1/(2π√(LC))`
-- 直列共振Q値: `Q=ω0L/R=1/(ω0CR)`
+系列SPECどおり次だけを扱う。
+
+- RLC共振
+- 周波数応答
+- ローパス
+- ハイパス
+- バンドパス
+- 遮断周波数
+- ゲイン
+- 位相
+
+ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現しない。「特定周波数を選択する教育用回路」として扱う。
 
 境界:
-- フィルタ・遮断周波数・ゲイン設計 → Topic 11
-- 三相回路 → Topic 12
-- 複素電力・力率・無効電力 → Topic 13
-- 過渡現象 → Topic 15
-- 高調波系統計算、変圧器・進相コンデンサ設備設計、百分率リアクタンス → Topic 10へ追加しない
 
-50Hz/60Hz比較は、同一の教育用RLCモデルで周波数だけを変え、`XL`、`XC`、`Z`、電流、位相がどう変わるかを示す。未確認の新幹線実設備定数は真値として置かない。
+- 実車ATCの未確認回路・定数・信号周波数を真値化しない
+- 電力用能動フィルタのインバータ・高調波補償制御を追加しない
+- 自動制御のラプラス領域伝達関数・フィードバック設計を追加しない
+- オペアンプ能動フィルタを追加しない
+- Topic 12以降の三相回路・複素電力・高調波・過渡現象を先取りしない
 
-## Topic 10 固定EXAM_ALIGNMENT
+## Topic 11 固定EXAM_ALIGNMENT
 
-品質ゲート対象は一次「理論」5問・20小問。
+品質ゲート対象は一次「理論」5問・25小問。
 
-- R8 問5(1)〜(5): RLC直列共振、共振電流、Q値、L端子電圧、電圧拡大条件
-- R3 問4(1)(2): LC並列部の共振条件、共振角周波数
-- H30 問6(1)〜(5): R-L枝＋C並列回路の合成アドミタンス、位相条件、`|Y|`最小、共振時位相
-- H28 問6(1)〜(5): RC/rL枝、`XL`・`XC`、周波数依存、位相特性
-- H24 問2(1)(2)(5): RLC合成インピーダンス、電圧・電流同相条件、L/C/Rの関係
+- H28 問8(1)〜(5): 周波数測定、交流ブリッジ、`ω=2πf`
+- H27 問2(1)〜(5): RC回路、振幅、位相、周波数依存
+- H25 問3(1)〜(5): 可変周波数交流回路、特定周波数での零条件
+- H24 問7(1)〜(5): 測定回路の周波数特性、周波数非依存補償
+- H22 問4(1)〜(5): ヘイブリッジ、回路定数からの周波数特定
 
-公式問題・公式解答20小問は照合済み。完成後独立再解答は保存済み正答を先に見ず、完成教材だけで実施し `20 / 20 PASS`。
+公式問題・公式解答25小問は照合済み。完成後ブラインド独立再解答を妨げないため、個別正答番号は主sourceへ保存していない。
 
-## Topic 10 二次試験の扱い
+## Topic 11 二次試験の扱い
 
-R8二次試験は2026-11-15実施予定で、2026-09-16時点では未実施。最新完了年度のR7〜R5二次「電力・管理」「機械・制御」を確認し、Topic 10固定範囲だけで完結する問題は品質ゲートへ採用しない。
+2026-09-16時点でR8二次は未実施。R7〜R5二次「電力・管理」「機械・制御」を確認した。
 
-H30二次「電力・管理」問5には高調波電流、直列リアクトル、進相コンデンサを含む回路の周波数依存・共振条件が現れるが、完答には高調波等価回路、変圧器・電力設備、百分率リアクタンス等が必要。本TopicのRLC理論だけへ切り出すと二次問題としての解法経路を欠くため非採用。
+- R7: 固定範囲だけで完結する直接対応問題なし
+- R6: 固定範囲だけで完結する直接対応問題なし
+- R5 機械・制御 問3「電力用能動フィルタ」: パワーエレクトロニクス・高調波補償・制御が主で、固定範囲だけでは完答できないため非採用
+- R5 機械・制御 問4「ゲイン特性曲線からの伝達関数」: 自動制御の伝達関数体系が主で、固定範囲外の追加が必要になるため非採用
 
-二次採用0問、二次数合わせ0件。
+二次採用 `0問`、二次数合わせ `0件`。
 
-## Topic 10 解説source完成内容
+## Topic 11 本文で必ず接続する事項
 
-主source:
-- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc.md`
+固定過去問と系列SPECから逆算し、次を本文へ収録する。
 
-反映済み:
-- EXAM_ALIGNMENT 一次5問・20小問
-- `ω=2πf`、`XL=ωL`、`XC=1/(ωC)`
-- 直列RLCの複素インピーダンス、位相、共振条件
-- `Q=ω0L/R=1/(ω0CR)` と共振時端子電圧
-- 理想並列LCのアドミタンス
-- R-L枝＋C並列の合成アドミタンス
-- 損失枝で `Im(Y)=0` と `|Y|`最小を区別する解法
-- 周波数によらず成立する条件の係数比較手順
-- 教育用RLCモデルによる50Hz/55Hz/60Hz比較
-- 3段階例題: 基礎／本試験標準／複合ひっかけ
-- 固定5問・20小問→本文マッピング: 全件接続
-- 完成後独立再解答: `20 / 20 PASS`
-- Topic 11以降の先取り: 0件
-- 未確認実設備値追加: 0件
+- `ω=2πf`、`ZR=R`、`ZL=jωL`、`ZC=1/(jωC)`
+- 周波数応答 `H(jω)=Vout/Vin` の大きさと位相
+- RCローパス `1/(1+jωRC)`
+- RCハイパス `jωRC/(1+jωRC)`
+- 遮断周波数 `fc=1/(2πRC)` と振幅比 `1/sqrt(2)`
+- ゲイン、必要時の `20log10|H|`
+- 直列RLC＋R出力の教育用バンドパスと `f0=1/(2πsqrt(LC))`
+- 低周波／高周波／共振付近からフィルタ特性を判定する手順
+- 交流ブリッジの複素平衡式から未知周波数を求める手順
+- 周波数依存項を相殺して電圧比を一定にする補償条件
+- ATCとの接続は「特定周波数を通す／抑える」という概念まで
 
-教育用50/60Hzモデル:
-- `R=10 Ω`
-- `L=0.100 H`
-- `C=83.74 μF`
-- `V=100 V`
-- 50Hz: 容量性、`|Z|≈11.98 Ω`、`I≈8.35 A`
-- 55Hz: 共振、`|Z|=10.00 Ω`、`I=10.00 A`
-- 60Hz: 誘導性、`|Z|≈11.67 Ω`、`I≈8.57 A`
+## Topic 11 制作前QA
 
-上記は教育用仮定値であり、新幹線実設備値ではない。
+- MASTER_SPEC: `PASS`
+- EXAM_ALIGNMENT_SPEC: `PASS`
+- 系列SPEC: `PASS`
+- 固定一次: `5問 / 25小問`
+- 公式問題・公式解答照合: `25 / 25確認済み`
+- 二次確認: `R7〜R5確認済み`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認ATC実設備値追加: `0件`
 
-## Topic 10 解説PDF
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 
-- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_explanation.pdf`: `completed`
-- A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- クリッピング・重なり・文字化け: 0件
-- 固定一次5問・20小問、二次採用0問、二次数合わせ0件を維持
-- 固定範囲外・未確認実設備値追加: 0件
-
-## Topic 10 練習問題source
-
-- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md`: `completed`
-- 一次試験型12問、全問五肢択一
-- 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
-- 正答一意性: `12 / 12 PASS`
-- 数値再計算: `12 / 12 PASS`
-- 固定一次5問・20小問への練習接続: `20 / 20`
-- 二次採用0問・二次数合わせ0件を維持
-- 固定範囲外・未確認実設備値追加: 0件
-- 進捗記録はTopic 10 completed状態へ同期済み
-
-## Topic 10 練習PDF
-
-- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.pdf`: `completed`
-- A4縦3ページ
-- 一次試験型12問＋正答一覧＋完全解説
-- 200 dpi全ページ表示QA: `3 / 3 PASS`
-- 文字抽出QA: `PASS`
-- クリッピング・重なり・文字化け: 0件
-- 正答一意性・数値再計算 `12 / 12 PASS` を維持
-- 固定一次5問・20小問への練習接続 `20 / 20`
-- 二次採用0問・二次数合わせ0件を維持
-- 固定範囲外・未確認実設備値追加: 0件
-
-## Topic 10 解説画像PowerPoint
-
-- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_images.pptx`: `completed`
-- 16:9・5スライド
-- `XL/XC`の周波数依存、直列共振、Q値、損失を含む並列回路、50/55/60Hz教育用比較を収録
-- 200 dpi全スライド表示QA: `5 / 5 PASS`
-- overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- 固定一次5問・20小問、二次採用0問、二次数合わせ0件を維持
-- 固定範囲外・未確認実設備値追加: 0件
-
-## Topic 10 完成後独立再解答
-
-- 記録: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_reanswer.md`
-- 保存済み個別公式正答値を先読みせず、全答案確定後に公式解答と照合
-- R8 問5: `5 / 5 PASS`
-- R3 問4(1)(2): `2 / 2 PASS`
-- H30 問6: `5 / 5 PASS`
-- H28 問6: `5 / 5 PASS`
-- H24 問2(1)(2)(5): `3 / 3 PASS`
-- 合計: `20 / 20 PASS`
-- 教材外知識補完: `0件`
-- 固定範囲外論点追加: `0件`
-- 二次採用0問・二次数合わせ0件を維持
-- Topic 11以降の論点・未確認実設備値追加: `0件`
-
-## Topic 10 最終QA
-
-- 記録: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_final_qa.md`
-- 技術内容・固定EXAM_ALIGNMENT: `PASS`
-- 完成後独立再解答: `20 / 20 PASS`
-- 二次非採用判断: `PASS`
-- 必須成果物: `PASS`
-- PDF/PPTX表示QA・文字抽出・整合性: `PASS`
-- SPEC境界: `PASS`
-- 前回exact blocker: 練習source末尾の旧進捗記録
-- exact blocker: `解消済み`
-- 最終QA再実施: `PASS / completed`
-
-## Topic 10 参考資料
+## 参考資料
 
 参照日: 2026-09-16
 
 公式正本:
 - 電気技術者試験センター「第二種電気主任技術者試験の問題と解答」 https://www.shiken.or.jp/chief/second/qa/
-- R8一次「理論」問5
-- R3一次「理論」問4
-- H30一次「理論」問6
-- H28一次「理論」問6
-- H24一次「理論」問2
-- H30二次「電力・管理」問5（非採用判断用）
 
 説明粒度・解法確認:
 - e-sysnet「RLC並列共振回路」 https://e-sysnet.com/parallel-resonant-circuit/
-- e-sysnet「単相交流の直列回路」 https://e-sysnet.com/ac-series/
-- 電験王2 R3理論問4 https://denken-ou.com/c2/rironr3-4/
-- 電験王2 H30理論問6 https://denken-ou.com/c2/rironh30-6/
-- 電験王2 H28理論問6 https://denken-ou.com/c2/rironh28-6/
-- 電験王2 H24理論問2 https://denken-ou.com/c2/rironh24-2/
+- 電験王2 H28理論問8 https://denken-ou.com/c2/rironh28-8/
+- 電験王2 H27理論問2 https://denken-ou.com/c2/rironh27-2/
+- 電験王2 H25理論問3 https://denken-ou.com/c2/rironh25-3/
+- 電験王2 H24理論問7 https://denken-ou.com/c2/rironh24-7/
+- 電験王2 H22理論問4 https://denken-ou.com/c2/rironh22-4/
 
-## Topic 09 完了記録
+## 直前完了Topic
 
-Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA再々実施まで完了し、`PASS / completed`。
+Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は `PASS / completed`。
 
-固定EXAM_ALIGNMENT:
-- R7 問3(1)(2)
-- R5 問4(1)
-- R3 問4(3)(4)
-- H26 問3(1)(2)
-- H21 問3(1)〜(4)
-
-完成後独立再解答 `11 / 11 PASS`。教材外知識補完0件、二次採用0問、二次数合わせ0件、固定範囲外追加0件、未確認実車値追加0件。
+- 固定一次5問・20小問
+- 完成後独立再解答 `20 / 20 PASS`
+- 二次採用0問・二次数合わせ0件
+- 解説source/PDF、練習source/PDF、PowerPoint、表示QA、最終QAまで完了
+- 固定範囲外追加0件、未確認実設備値追加0件
 
 ## 品質ゲート現在値
 
 - Topic 01〜10: `PASS / completed`
 - 完成数: `10 / 21`
-- Topic 10 制作前EXAM_ALIGNMENT: `PASS`
-- Topic 10 解説本文＋3段階例題: `completed`
-- Topic 10 解説PDF＋表示QA: `completed`
-- Topic 10 練習問題source: `completed`
-- Topic 10 練習PDF＋表示QA: `completed / 3 / 3 PASS`
-- Topic 10 練習PDF文字抽出QA: `PASS`
-- Topic 10 練習問題: `12問 / 正答一意性・数値再計算 12 / 12 PASS`
-- Topic 10 解説画像PowerPoint: `completed / 5 slides / 5 / 5 PASS`
-- Topic 10 PowerPoint overflow: `0件`
-- Topic 10 PowerPoint ZIP整合性: `PASS`
-- Topic 10 固定一次: `5問 / 20小問`
-- Topic 10 練習接続: `20 / 20`
-- Topic 10 二次採用: `0問`
-- Topic 10 二次数合わせ: `0件`
-- Topic 10 固定範囲外追加: `0件`
-- Topic 10 未確認実設備値追加: `0件`
-- Topic 10 完成後独立再解答: `20 / 20 PASS`
-- Topic 10 教材外知識補完: `0件`
-- Topic 10 最終QA: `PASS / completed`
+- Topic 11 制作前EXAM_ALIGNMENT: `PASS / completed`
+- Topic 11 固定一次: `5問 / 25小問`
+- Topic 11 二次採用: `0問`
+- Topic 11 二次数合わせ: `0件`
+- Topic 11 固定範囲外追加: `0件`
+- Topic 11 未確認ATC実設備値追加: `0件`
 
 ## 次に行うこと
 
-Topic 11「ATCはなぜ特定の周波数を見分けられる？」の制作前EXAM_ALIGNMENTを実施する。一次・二次の公式過去問を確認し、固定範囲へ直接対応する問題だけを品質ゲート対象として固定する。
+Topic 11の固定一次5問・25小問と系列SPECだけを使い、解説本文＋3段階例題を作成する。
