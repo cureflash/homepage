@@ -4,9 +4,9 @@
 
 ## 現在地
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / COMPLETED`
 
-完成後独立再解答は `5 / 5 PASS`。最終QAでは、必須成果物・過去問対応・表示QA・固定範囲境界はPASSしたが、主source Markdownの進捗記録に旧状態が残っているため、Topic 30はまだ `completed` にしない。
+完成後独立再解答は `5 / 5 PASS`。必須成果物・過去問対応・表示QA・進捗記録整合・固定範囲境界を再確認し、全品質ゲートPASSと判定する。
 
 ## 対象
 
@@ -68,19 +68,19 @@
 - 判定: PASS
 
 ### 進捗記録整合
-- `STATUS.md`: 現在地と実在成果物に整合
-- `HANDOFF.md`: 現在地と実在成果物に整合
-- `30_atc_train_detection.md`: FAIL
-  - 冒頭「状態」に `練習・PowerPoint・完成後独立再解答は未着手` と残っている。
-  - 実際には練習source/PDF、PowerPoint、完成後独立再解答まで完了しているため、進捗記録が実態と不一致。
+- `STATUS.md`: PASS
+- `HANDOFF.md`: PASS
+- `30_atc_train_detection.md`: PASS
+  - 冒頭「状態」は、練習source/PDF、PowerPoint、完成後独立再解答まで完了している実在成果物と整合。
+  - 旧進捗 `練習・PowerPoint・完成後独立再解答は未着手` は残っていない。
 
 ### 固定範囲境界
 PASS。Topic 31の信号周波数・符号化・情報伝送、Topic 32の速度照査・論理回路・フェイルセーフ、リレーシーケンス、保護リレー方式、RC/RL/RLC過渡現象、軌道回路方式各論、未確認実車値は追加していない。
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / COMPLETED`
 
-品質内容そのものはPASSしているが、主source Markdownの旧進捗1箇所を現在地へ同期する必要がある。教材本文、固定EXAM_ALIGNMENT、数式、例題、PDF、練習問題、PowerPoint、固定範囲は変更不要。
+必須成果物、固定5問の完成後独立再解答 `5 / 5 PASS`、表示QA、進捗記録整合、固定範囲境界をすべて満たす。Topic 30を `completed` とする。
 
-次工程: `30_atc_train_detection.md` 冒頭の進捗記録だけを実在成果物へ同期し、その後に最終QAを再判定する。
+次工程: Topic 31 `ATC② 地上から車上へどう情報を送る？` の制作前EXAM_ALIGNMENT。教材本文・固定EXAM_ALIGNMENT・数式・例題・PDF・練習問題・PowerPoint・固定範囲は変更しない。
