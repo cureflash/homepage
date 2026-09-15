@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
-- exam_aligned_completed_topics: 8 / 14
-- current_status: `topic_09_practice_source_progress_synced`
-- last_completed_topic: `08 新幹線の交流25kVとは何なのか`
-- active_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- next_start: Topic 09の最終QAを再実施する
+- exam_aligned_completed_topics: 9 / 14
+- current_status: `topic_09_completed`
+- last_completed_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
+- active_topic: `10 新幹線が使う電力は「W」だけではない`
+- next_start: Topic 10の制作前EXAM_ALIGNMENTを開始する
 
 ## Topic 01 進捗
 
@@ -161,17 +161,17 @@
 - [x] 完成後の公式過去問独立再解答 `6 / 6 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: 練習source進捗記録不整合）
 - [x] 練習source進捗記録同期
-- [ ] 最終QA再実施
-- [ ] 最終QA PASS
+- [x] 最終QA再実施
+- [x] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の練習source進捗記録を、実在する成果物へ同期した。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の最終QAを再実施し、`PASS / completed` とした。
 
-`09_hokuriku_frequency_rlc_practice.md` の `stage` を `PRACTICE_PDF_COMPLETE` から `INDEPENDENT_REANSWER_COMPLETE` へ更新し、旧「次はPowerPoint作成」を削除。PowerPoint・完成後独立再解答が既に完了し、最終QAは進捗記録不整合だけがFAILだった事実へ合わせた。
+前回唯一FAILだった練習source進捗記録は実成果物へ同期済み。固定6過去問の完成後独立再解答 `6 / 6 PASS`、教材外補完0問、必須成果物、解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗記録整合を全件PASS確認した。
 
-教材本文・固定EXAM_ALIGNMENT・練習15問・正答・解説・PDF・PowerPointの技術内容は変更していない。固定6過去問の完成後独立再解答 `6 / 6 PASS` とSPEC境界も変更なし。
+教材本文・固定EXAM_ALIGNMENT・練習15問・正答・解説・PDF・PowerPointの技術内容は変更していない。主source・練習sourceへ完了進捗だけを同期した。
 
 ## 判定
 
-現在 `topic_09_practice_source_progress_synced / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の最終QAを再実施する。最終QAがPASSするまで `completed` としない。
+現在 `topic_09_completed`。完成数は `9 / 14`。次はTopic 10 `新幹線が使う電力は「W」だけではない` の制作前EXAM_ALIGNMENTを開始する。
