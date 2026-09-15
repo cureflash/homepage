@@ -8,7 +8,7 @@ Topic 01〜07は `completed`。
 
 完成数: `7 / 20`
 
-current_status: `topic_08_exam_reanswer_complete`
+current_status: `topic_08_final_qa_needs_revision`
 
 active_topic: `08 二階常微分方程式`
 
@@ -213,13 +213,35 @@ PowerPoint品質判定: `PASS / POWERPOINT_COMPLETE`
 
 品質判定: `PASS / EXAM_REANSWER_COMPLETE`
 
+## Topic 08 最終QA記録
+
+最終QA:
+`topics/08_second_order_ode/08_second_order_ode_final_qa.md`
+
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
+PASS:
+- 必須成果物実在
+- 固定一次5問・15小問のEXAM_ALIGNMENT
+- 制作前独立再解答 `15 / 15 PASS`
+- 完成後独立再解答 `15 / 15 PASS`
+- 解説PDF表示QA `5 / 5 PASS`
+- 練習PDF表示QA `5 / 5 PASS`
+- PowerPoint表示QA `5 / 5 PASS`
+- Topic 09〜10先取り 0件
+- 固定範囲外追加 0件
+- 未確認実車値依存 0件
+
+FAIL:
+- `08_second_order_ode.md` 冒頭 `## 状態` が解説source完了時点の旧進捗
+- 同source末尾 `## 次工程` が「解説PDF作成」の旧進捗
+
+教材内容・試験対応そのものの不足ではなく、GitHub正本内の進捗記録不整合だけが残っている。
+
 ## 次に行うこと
 
-Topic 08の最終QAを実施する。
+`topics/08_second_order_ode/08_second_order_ode.md` の旧進捗2箇所だけを現在地へ同期する。
 
-1. 必須成果物の実在を確認する。
-2. PDF・PowerPointの表示QA記録を確認する。
-3. 固定一次5問・15小問のEXAM_ALIGNMENTと完成後独立再解答 `15 / 15 PASS` を確認する。
-4. source進捗記録と実成果物の整合を確認する。
-5. Topic 09〜10先取り、固定範囲外追加、未確認実車値依存がないことを確認する。
-6. 全品質ゲートPASSの場合のみ `completed` とする。
+- 冒頭 `## 状態` を、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了済みの状態へ更新する。
+- 末尾 `## 次工程` を、source同期後の最終QA再判定へ更新する。
+- 教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、問題、PDF、PowerPoint、完成後独立再解答は変更しない。
