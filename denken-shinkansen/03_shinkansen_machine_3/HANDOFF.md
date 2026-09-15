@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `8 / 16`。Topic 01〜08は品質ゲートPASSでcompleted。active topicは09「新幹線はどうやって電気で止まる？」。
 
 ## 今回進捗
-Topic 09「新幹線はどうやって電気で止まる？」の解説PDFを完成した。
+Topic 09「新幹線はどうやって電気で止まる？」の練習問題sourceを完成した。
 
 - 品質ゲート対象: 公式過去問5問
 - 制作前答案列: `(4), (3), (2), (5), (1)`
@@ -14,18 +14,21 @@ Topic 09「新幹線はどうやって電気で止まる？」の解説PDFを完
 - 解説本文＋3段階例題: 完了
 - 固定5問の本文マッピング: `5 / 5 全件`
 - 解説PDF: A4縦3ページ
-- 200 dpi全3ページ表示QA: `3 / 3 PASS`
-- 文字抽出QA: `PASS`
+- 解説PDF表示QA: `3 / 3 PASS`
+- 練習問題source: 12問・全問五肢択一
+- 構成: 基礎3／本試験標準7／複合・応用2
+- 固定EXAM_ALIGNMENT 5問への接続: `全件`
+- 独立計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 - source: `topics/09_regenerative_braking/09_regenerative_braking.md`
-- PDF: `topics/09_regenerative_braking/09_regenerative_braking_explanation.pdf`
-- QA: `topics/09_regenerative_braking/09_regenerative_braking_explanation_pdf_qa.md`
+- practice source: `topics/09_regenerative_braking/09_regenerative_braking_practice.md`
 - 完成数: `8 / 16`
 
-固定範囲外の誘導機構造・スリップリング・直流機始動/速度制御・発電機外部特性・チョッパ・二次入力/二次銅損・ベクトル制御等は追加していない。例題で使った車両条件は計算練習用の仮定値と明記した。
+固定範囲外の誘導機構造・スリップリング・直流機始動/速度制御・発電機外部特性・チョッパ・二次入力/二次銅損・ベクトル制御等は追加していない。数値問題は通常の電験三種型または計算練習用仮定値とし、未確認実車値を真値として扱っていない。
 
 ## Topic 09 EXAM_ALIGNMENT
 品質ゲート対象は5問で固定。
@@ -73,17 +76,23 @@ Topic 09「新幹線はどうやって電気で止まる？」の解説PDFを完
 - 解説PDF: 完了
 - 解説PDF表示QA: `3 / 3 PASS`
 - 解説PDF文字抽出QA: `PASS`
-- 練習問題source/PDF: 未着手
+- 練習問題source: 完了
+- 練習問題: 全12問・全問五肢択一
+- 練習問題独立QA: `12 / 12 PASS`
+- 練習問題正答一意性: `12 / 12 PASS`
+- 練習PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
 source: `topics/09_regenerative_braking/09_regenerative_braking.md`
 
-## 次に行う
-Topic 09の練習問題sourceを作成する。
+practice source: `topics/09_regenerative_braking/09_regenerative_braking_practice.md`
 
-三種仕様どおり原則12問以上、少なくとも半数を五肢択一とし、固定EXAM_ALIGNMENT 5問から逆算した固定範囲だけを扱う。固定範囲外論点や未確認実車値を追加しない。
+## 次に行う
+Topic 09の練習PDFを作成する。
+
+全12問・完全解説を練習問題sourceと同期し、全ページ表示QAと文字抽出QAを実施する。固定EXAM_ALIGNMENT 5問、固定範囲、正答を変更しない。
 
 ## Topic 08 完了要約
 Topic 08「N700Sのモーターはなぜ小さくできた？」は品質ゲートPASS / completed。
