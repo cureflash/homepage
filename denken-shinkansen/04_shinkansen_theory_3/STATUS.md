@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 7 / 14
-- current_status: `topic_08_independent_reanswer_complete`
+- current_status: `topic_08_final_qa_needs_revision`
 - last_completed_topic: `07 モーターはなぜ回る？`
 - active_topic: `08 新幹線の交流25kVとは何なのか`
-- next_start: Topic 08の最終QAを実施する
+- next_start: Topic 08の主source・練習sourceの進捗記録だけを実成果物へ同期する
 
 ## Topic 01 進捗
 
@@ -138,22 +138,34 @@
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `4 / 4 PASS`
+- [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習sourceの進捗記録不整合）
+- [ ] source進捗記録同期
+- [ ] 最終QA再実施
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 08 `新幹線の交流25kVとは何なのか` の完成後公式過去問独立再解答を完了し、GitHub正本へ反映した。
+Topic 08 `新幹線の交流25kVとは何なのか` の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。
 
-- 固定公式過去問: `4問`
-- 独立解答列: `(5), (3), (5), (1)`
-- 公式解答列: `(5), (3), (5), (1)`
-- 公式解答との一致: `4 / 4 PASS`
-- 教材だけで必要公式・途中式・選択肢を確定: `4 / 4 PASS`
-- 教材外知識補完: `0問`
-- RLC・リアクタンス・力率・三相・高調波等の後続Topic依存: `0問`
-- 非正弦波論点への依存: `0問`
-- 未確認新幹線実車値依存: `0問`
+PASS項目:
+- 必須成果物: 全件実在
+- 固定公式過去問: `4問`（5問未満例外）
+- 完成後独立再解答: `4 / 4 PASS`
+- 練習問題: `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
+- 解説PDF: 200 dpi表示QA `2 / 2 PASS`、文字抽出QA PASS
+- 練習PDF: 200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS
+- PowerPoint: 既存記録で表示QA `4 / 4 PASS`、overflow・ZIP整合性PASS
+- 教材外知識補完: `0件`
+- 後続Topic依存: `0件`
+- 未確認新幹線実車値依存: `0件`
+
+FAIL項目:
+- 主source冒頭statusが `EXPLANATION_SOURCE_COMPLETE` のまま
+- 主source §23が「解説PDF・練習・PowerPoint: 未着手」「完成後独立再解答: 未実施」「次工程: 解説PDF作成」のまま
+- 練習source stageが `PRACTICE_PDF_COMPLETE` のまま
+
+教材本文・固定EXAM_ALIGNMENT・問題・解答・既存成果物の技術内容に修正理由はない。
 
 ## 判定
 
-現在 `topic_08_independent_reanswer_complete`。完成数は `7 / 14` のまま。次はTopic 08の最終QAを実施する。
+現在 `topic_08_final_qa_needs_revision`。完成数は `7 / 14` のまま。次は主source・練習sourceの進捗記録だけを実成果物へ同期し、その後に最終QAを再実施する。
