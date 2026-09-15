@@ -12,13 +12,13 @@
 
 ## 必須成果物の実在確認
 
-GitHub正本上で次を確認した。
+GitHub正本上で次を確認した。最終QA判定後に主source・練習sourceへ完了進捗だけを同期したため、下表はその同期後の現行blob SHAである。教材本文・問題・解答の技術内容は変更していない。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| source Markdown | `59acd2c0bb0fa6ddc1472ea6c1ebc6178115a4cf` | PASS |
+| source Markdown | `5d2bd55286974c19cc1ed799783c253c712b7d1c` | PASS |
 | 解説PDF | `deb268be3332cd66b2c153472dbf68686cd59954` | PASS |
-| 練習source | `7c94bd299165b8cd115e8066e1e91781f7a9e72a` | PASS |
+| 練習source | `79f7e3ce36ceabad3a91a3caca71238794308f02` | PASS |
 | 練習PDF | `83bcca508a46980bb50b5407f21de2b676337dfe` | PASS |
 | 解説画像PowerPoint | `6d955a2f729a5ea37c5a87f8f68a8fcfa98e4056` | PASS |
 | 完成後独立再解答 | `4385b743d303773de141f3e9819ce0312b8abfca` | PASS |
@@ -67,7 +67,9 @@ source Markdownでは5問の要求事項を全件本文・例題へマッピン�
 
 - 主source: 練習PDF、PowerPoint、完成後独立再解答まで実態と一致
 - 練習source: PowerPoint、完成後独立再解答まで実態と一致
-- STATUS / HANDOFF: 最終QA再実施を次工程として保持し、実態と一致
+- STATUS / HANDOFF: 最終QA再実施を次工程として保持し、判定時点の実態と一致
+
+最終QA判定後、主source・練習source・STATUS・HANDOFFへ `completed` とTopic 08開始点を同期済み。
 
 判定: PASS。
 
