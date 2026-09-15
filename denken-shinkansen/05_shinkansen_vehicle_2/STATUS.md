@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 9 / 39
-- current_status: `topic_10_explanation_pdf_complete`
+- current_status: `topic_10_practice_source_complete`
 - last_completed_topic: `09 直流機方式の損失・熱設計`
 - active_topic: `10 300系① 誘導電動機等価回路`
-- next_start: Topic 10の練習問題・完全解説sourceを制作する。固定一次3問＋二次2問・22答案要素へ接続し、一次択一と二次記述を固定範囲内で構成する
+- next_start: Topic 10の練習PDFを制作する。一次8問＋二次4問・完全解説を収録し、全ページ表示QA・文字抽出QA・数値論理QAを行う
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -500,4 +500,18 @@
 - Topic 11〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
-次工程はTopic 10 `300系① 誘導電動機等価回路` の練習問題・完全解説source。
+## Topic 10 練習source
+- `10_300series_induction_motor_equivalent_circuit_practice_source.md`: `completed`
+- 一次試験型: 8問、すべて五肢択一
+- 二次試験型: 4問、途中式・前提・単位・検算を含む記述式
+- 合計: 12問、全問完全解説付き
+- 固定一次3問＋二次2問・22答案要素: `22 / 22`接続
+- 独立計算・論理・正答一意性QA: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次記述の途中式・前提・単位・検算: `4 / 4 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- Topic 11〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+
+次工程はTopic 10 `300系① 誘導電動機等価回路` の練習PDF。一次8問＋二次4問・完全解説を収録し、全ページ表示QA・文字抽出QA・数値論理QAを行う。
