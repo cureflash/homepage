@@ -6,16 +6,23 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は32/38。01〜32がPASS。active topicは33 `COMTRAC① 東海道新幹線全体をどう監視する？`。
 
 ## 今回進捗
-Topic 33の固定EXAM_ALIGNMENT 5問と解説本文§1〜§15＋3段階例題を変更せず、解説PDFを完成した。A4縦4ページ、180 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA PASS。固定5問を `5 / 5` 反映し、系列SPEC固定範囲（列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送）だけを扱った。
+Topic 33の固定EXAM_ALIGNMENT 5問と解説本文§1〜§15＋3段階例題・解説PDFを変更せず、練習source / PDFを完成した。
 
-本文・PDFでは2進数の相互変換・加減算、変数と代入、更新順序、条件分岐・反復・フローチャート追跡、伝送路・雑音・多重化・変調波・圧縮、標本化→量子化→符号化、標本化条件 `f_s>=2f_max`、`n` bitの表現数 `2^n` を扱う。3段階例題は基礎「2進数の相互変換」、標準「フローチャートの変数更新」、複合「標本化・符号化・伝送用語」。
+source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_practice.md`
+PDF: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_practice.pdf`
 
-JR東海一次資料で確認できるCOMTRACの運転管理・全列車状況監視だけを新幹線側へ接続した。列車番号・列車位置・ダイヤは情報処理上のデータ例として扱い、COMTRAC内部のbit割当、位置表現方式、更新周期、伝送速度、通信プロトコル、具体的アルゴリズムは断定していない。
-
-Topic 34のAND・OR・NOT・真理値表・インターロック・進路制御追加0件、Topic 35の運転整理・番線変更・冗長化追加0件、未確認COMTRAC内部仕様追加0件。
-
-source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
-PDF: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_explanation.pdf`
+- 全15問（基礎4／標準8／複合3）
+- 全問五肢択一＋完全解説
+- 正答位置 A/B/C/D/E各3問
+- 固定5過去問 `5 / 5` 練習マッピング
+- 独立数値・論理QA `15 / 15 PASS`
+- 複数正答 `0件`
+- PDF A4縦5ページ
+- 180 dpi全ページ表示QA `5 / 5 PASS`
+- 文字抽出QA PASS
+- Topic 34範囲追加 `0件`
+- Topic 35範囲追加 `0件`
+- 未確認COMTRAC内部仕様追加 `0件`
 
 ## Topic 33 固定EXAM_ALIGNMENT
 1. R7下 機械 問14 — フローチャート・変数更新・条件分岐・反復 — `3` — PASS
@@ -28,37 +35,12 @@ PDF: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_explanation.pdf
 公式解答との不一致: `0件`。
 固定範囲外知識による正答補完: `0件`。
 
-## Topic 33 解説source
-- 本文: §1〜§15
-- 3段階例題: 基礎「2進数の相互変換」／標準「フローチャートの変数更新」／複合「標本化・符号化・伝送用語」
-- 固定EXAM_ALIGNMENT: `5 / 5` 本文マッピング済み
-- 2進数: 桁の重み、10進数との相互変換、加減算、`2^n`
-- 情報処理: 変数、代入、更新順序、条件分岐、反復、フローチャート追跡
-- A-D変換: 標本化→量子化→符号化
-- 標本化条件: `f_s>=2f_max`, `T_s<=1/(2f_max)`
-- データ伝送: 伝送路、雑音、多重化、搬送波、変調波、圧縮
-- JR東海公開範囲のCOMTRAC運転管理・全列車状況監視のみ接続
-- Topic 34範囲追加: `0件`
-- Topic 35範囲追加: `0件`
-- 未確認COMTRAC内部仕様追加: `0件`
-
-## Topic 33 解説PDF
-- `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_explanation.pdf`
-- A4縦4ページ
-- 本文§1〜§15、3段階例題、固定5問の対応を収録
-- 180 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: PASS
-- 固定EXAM_ALIGNMENT: `5 / 5` 反映
-- Topic 34範囲追加: `0件`
-- Topic 35範囲追加: `0件`
-- 未確認COMTRAC内部仕様追加: `0件`
-
-## 制作前独立解答の要点
-- R7下 機械 問14: `(A,B)=(12,5)->(17,11)->(28,23)->(51,23)` で選択肢3。
-- R5上 機械 問14: `(A,B)=(12,5)->(17,26)->(43,26)` で選択肢3。
-- R4下 機械 問13: 雑音・多重化・変調波・標本化・圧縮の組合せから選択肢3。
-- R4下 理論 問14: 時間波形表示にFFTは必須ではないため誤りは選択肢5。
-- R1 機械 問14: `A+B=42`, `A-B=12` より `B=15=(1111)2`、選択肢2。
+## Topic 33 練習マッピング
+- R7下 機械 問14 — Q6, Q7, Q8, Q14
+- R5上 機械 問14 — Q6, Q7, Q8, Q14
+- R4下 機械 問13 — Q4, Q10, Q11, Q15
+- R4下 理論 問14 — Q3, Q4, Q9, Q12, Q15
+- R1 機械 問14 — Q1, Q2, Q5, Q13
 
 ## Topic 33 固定範囲境界
 扱う:
@@ -72,21 +54,17 @@ PDF: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_explanation.pdf
 追加しない:
 - Topic 34のAND・OR・NOT・真理値表・インターロック・進路制御
 - Topic 35の運転整理・番線変更・冗長化
-- COMTRAC内部の未確認データ形式、ビット割当、更新周期、伝送速度、通信プロトコル、具体的アルゴリズム
-- 固定過去問に不要な高度なプログラミング言語仕様、データベース設計、ネットワークプロトコル各論
-
-## 直前完了
-Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASSで `PASS / COMPLETED`。完成数32/38。
+- COMTRAC内部の未確認データ形式、bit割当、更新周期、伝送速度、通信プロトコル、具体的アルゴリズム
 
 ## 現在の状態
-- `current_status`: `topic_33_explanation_pdf_complete`
+- `current_status`: `topic_33_practice_pdf_complete`
 - 完成数: 32/38
 - 01〜32: PASS
-- active topic: 33 `COMTRAC① 東海道新幹線全体をどう監視する？`
 - Topic 33制作前EXAM_ALIGNMENT: `5 / 5 PASS`
 - Topic 33解説source: 完了
 - Topic 33解説PDF: 完了
-- Topic 33練習・PowerPoint: 未着手
+- Topic 33練習source / PDF: 完了
+- Topic 33 PowerPoint: 未着手
 
 ## 次の正確な開始点
-Topic 33の固定EXAM_ALIGNMENT 5問と解説本文§1〜§15＋3段階例題を変更せず、練習source / PDFを作成する。列車番号・列車位置・ダイヤは情報処理上のデータ例として扱い、Topic 34/35範囲と未確認COMTRAC内部仕様は追加しない。
+Topic 33の固定EXAM_ALIGNMENT、解説本文、練習source/PDFを変更せず、解説画像PowerPointを作成する。Topic 34/35範囲と未確認COMTRAC内部仕様は追加しない。
