@@ -7,7 +7,7 @@
 
 Topic 01〜07は最終QAまで `PASS`。完成数は `7 / 39`。
 
-現在地は `topic_08_powerpoint_complete`。active topicは Topic 08 `位相制御と平均直流電圧`。制作前EXAM_ALIGNMENTとして一次3問＋二次2問・20対象項目を固定し、制作前独立検証は一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。解説本文＋3段階例題・解説PDF・練習source・練習PDF・解説画像PowerPointまで完成。練習sourceは一次8問＋二次4問の計12問、全問完全解説付きで、固定20対象項目へ `20 / 20` 接続、独立計算・論理・正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、180 dpi全ページ表示QA・文字抽出QA・計算論理 `12 / 12 PASS`。PowerPointは16:9・4スライド、SPEC指定4可視化 `4 / 4`、2400×1350 px全スライド表示QA・overflow・ZIP整合性 `PASS`。完成後独立再解答は未実施。
+現在地は `topic_08_independent_reanswer_passed`。active topicは Topic 08 `位相制御と平均直流電圧`。制作前EXAM_ALIGNMENTとして一次3問＋二次2問・20対象項目を固定し、制作前独立検証は一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。解説本文＋3段階例題・解説PDF・練習source・練習PDF・解説画像PowerPointまで完成。練習sourceは一次8問＋二次4問の計12問、全問完全解説付きで、固定20対象項目へ `20 / 20` 接続、独立計算・論理・正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、180 dpi全ページ表示QA・文字抽出QA・計算論理 `12 / 12 PASS`。PowerPointは16:9・4スライド、SPEC指定4可視化 `4 / 4`、2400×1350 px全スライド表示QA・overflow・ZIP整合性 `PASS`。完成教材だけで固定5過去問・20対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。教材外知識補完・固定範囲外追加・未確認実車値追加はいずれも0件。次は最終QA。
 
 Topic 07はH21一次「機械」問2(2)の不足「負荷損を規定の基準巻線温度へ補正」を固定範囲内で補強し、解説PDF・練習PDF・PowerPointへの同期と各QAまで完了。補強済み完成教材だけで固定一次4問＋二次1問・15対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `2 / 2 PASS`、合計 `15 / 15 PASS`。教材外知識補完は0件。主source・練習sourceの旧進捗記録不整合も解消し、最終QA `PASS / completed`。
 
@@ -245,11 +245,35 @@ source: `topics/08_phase_control_average_dc_voltage/08_phase_control_average_dc_
 - 未確認実車値追加: `0件`
 - SHA-256: `1578b88af3b059ff7a6040d75e98c04c9538dc3720465f673b8b1fe75621544c`
 
-## 次の正確な開始点
-Topic 08 `位相制御と平均直流電圧` の完成後独立再解答。
+## Topic 08 完成後独立再解答
+`08_phase_control_average_dc_voltage_independent_reanswer.md` を作成済み。
 
-1. 完成教材だけを使い、固定R8一次問4、R5一次問4(1)〜(3)、R1一次問3、H30二次問3(1)〜(4)、H25二次問3(1)〜(3)を再解答する。
-2. 一次13項目＋二次7項目、計20項目を公式解答・標準解答と照合する。
-3. 教材外知識補完が必要な項目はFAILとし、固定範囲内だけで補強対象を特定する。
-4. `08_phase_control_average_dc_voltage_independent_reanswer.md` に記録する。
-5. 固定EXAM_ALIGNMENT、固定範囲、問題数・正答は変更しない。
+- R8一次 問4: `5 / 5 PASS` — `(ル,ニ,ヘ,ロ,ヌ)`
+- R5一次 問4(1)〜(3): `3 / 3 PASS` — `(ロ,ワ,ヲ)`
+- R1一次 問3: `5 / 5 PASS` — `(ハ,ヲ,カ,ト,ヌ)`
+- H30二次 問3(1)〜(4): `4 / 4 PASS`
+  - (1) `T2,T6`
+  - (2) `Vdc1=(3√2/π)V1cosα1`
+  - (3) `Pac1=(3√2/π)V1Idcosα1`
+  - (4) `Qac1=(3√2/π)V1Idsinα1`
+- H25二次 問3(1)〜(3): `3 / 3 PASS`
+  - (1) `v1,i1,iL` 波形が公式標準解答と一致
+  - (2) `IL=(V/R)√{[2(π-α)+sin2α]/(2π)}`
+  - (3) `π/2<α<π`
+- 一次合計: `13 / 13 PASS`
+- 二次合計: `7 / 7 PASS`
+- 総合: `20 / 20 PASS`
+- 教材外知識補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- 判定: `PASS`
+
+## 次の正確な開始点
+Topic 08 `位相制御と平均直流電圧` の最終QA。
+
+1. 必須成果物の存在と内容を再確認する。
+2. 固定一次3問＋二次2問・20対象項目、完成後独立再解答 `20 / 20 PASS` を確認する。
+3. 解説PDF・練習PDF・PowerPointの既存表示QA、練習 `12 / 12 PASS`、固定範囲を確認する。
+4. 主source・練習source・STATUS・HANDOFFの進捗記録整合を確認する。
+5. 全品質ゲートPASSならTopic 08を `completed` とし、完成数を `8 / 39` へ更新する。
