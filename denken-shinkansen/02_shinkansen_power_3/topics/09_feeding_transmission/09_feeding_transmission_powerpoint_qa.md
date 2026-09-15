@@ -58,7 +58,7 @@
 - スライド境界外はみ出し: 0 (`slides_test.py` PASS)
 - PPTX ZIP整合性: PASS (`unzip -t`)
 - PPTX内固定5問表記確認: 5問すべて存在
-- SHA-256: `e504522a1756e1655244a8e1930b7b4b9fa6c0bccf9fafc64c04f9c1da8fb064`
+- SHA-256: `505b470186eed460757440985a8da21a59765f0f678ed581c5517baf5d9efb66`
 
 判定: `PASS`。
 
