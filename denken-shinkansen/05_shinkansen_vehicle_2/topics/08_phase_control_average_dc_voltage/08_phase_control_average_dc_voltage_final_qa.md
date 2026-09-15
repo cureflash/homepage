@@ -74,20 +74,18 @@ SPEC固定範囲のサイリスタ、点弧角、位相制御、平均直流電�
 固定範囲: `PASS`。
 
 ## 進捗記録整合
-技術内容・成果物・過去問対応はPASSだが、source Markdownの進捗記録に旧状態が残っている。
+前回最終QAで唯一FAILだった進捗記録不整合を再確認した。
 
 `08_phase_control_average_dc_voltage.md`:
-- 冒頭 `## 状態` が「次工程は解説PDF作成＋全ページ表示QA」のまま。
-- 末尾 `## 次工程` が「Topic 08 解説PDFを作成」のまま。
-- 実際には解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了しているため不整合。
+- 冒頭 `## 状態` は解説PDF・練習source/PDF・PowerPoint・完成後独立再解答 `20 / 20 PASS` まで完了した現在地へ同期済み。
+- 末尾 `## 次工程` は「Topic 08の最終QAを再判定する」へ同期済み。
 
 `08_phase_control_average_dc_voltage_practice_source.md`:
-- 冒頭 `## 状態` が「練習PDFは未作成」「次工程は本sourceを練習PDFへ同期」のまま。
-- 実際には練習PDFとQAまで完了しているため不整合。
+- 冒頭 `## 状態` は練習PDF作成・QA完了、完成後独立再解答 `20 / 20 PASS`、次工程最終QA再判定へ同期済み。
 
-STATUS.md / HANDOFF.md は完成後独立再解答完了・次工程最終QAとして現在地と整合している。
+STATUS.md / HANDOFF.md も最終QA再判定待ちとして現在地と整合していた。
 
-進捗記録整合: `FAIL`。
+進捗記録整合: `PASS`。
 
 ## 品質ゲート判定
 - 必須成果物存在: PASS
@@ -101,8 +99,8 @@ STATUS.md / HANDOFF.md は完成後独立再解答完了・次工程最終QAと�
 - 教材外知識補完: 0件
 - 固定範囲外追加: 0件
 - 未確認実車値追加: 0件
-- source進捗記録整合: FAIL
+- source進捗記録整合: PASS
 
-最終QA: `NEEDS_REVISION`。
+最終QA: `PASS / completed`。
 
-Topic 08はまだ `completed` にしない。次工程は、教材本文・数式・固定EXAM_ALIGNMENT・問題・PDF/PPTXを変更せず、主sourceの旧進捗2箇所と練習sourceの旧進捗1箇所だけを実在成果物と完成後独立再解答 `20 / 20 PASS` の現在地へ同期すること。その後に最終QAを再判定する。
+Topic 08を `completed` とする。次工程は Topic 09 `直流機方式の損失・熱設計` の制作前EXAM_ALIGNMENT。
