@@ -8,11 +8,11 @@ Topic 01〜08は `completed`。
 
 完成数: `8 / 20`
 
-current_status: `topic_09_exam_reanswer_complete`
+current_status: `topic_09_final_qa_needs_revision`
 
 active_topic: `09 ラプラス変換`
 
-次工程: Topic 09の最終QA。
+次工程: Topic 09主sourceの `## 状態` と `## 次工程` の旧進捗2箇所だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・完成後独立再解答は変更しない。
 
 ## 上位仕様
 
@@ -160,6 +160,9 @@ PowerPoint:
 完成後独立再解答:
 `topics/09_laplace_transform/09_laplace_transform_exam_reanswer.md`
 
+最終QA:
+`topics/09_laplace_transform/09_laplace_transform_final_qa.md`
+
 ### Topic 09 固定範囲
 
 - ラプラス変換の定義
@@ -300,8 +303,34 @@ QA:
 - 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
+### Topic 09 最終QA
+
+`topics/09_laplace_transform/09_laplace_transform_final_qa.md`
+
+判定: `NEEDS_REVISION / IN_PROGRESS`。
+
+PASS:
+- 必須成果物実在
+- 固定二次5問・6対象設問
+- 完成後独立再解答 `6 / 6 PASS`
+- 解説PDF・練習PDF・PowerPoint表示QA
+- 教材外知識補完0件
+- Topic 10先取り0件
+- 固定範囲外追加0件
+- 未確認実車値依存0件
+
+FAIL:
+- 主source `09_laplace_transform.md` の進捗記録2箇所が旧状態
+  - 冒頭 `## 状態` が解説本文完成時点のまま
+  - 末尾 `## 次工程` が「解説PDFへ反映」のまま
+
+技術内容の修正は不要。進捗記録だけを実成果物へ同期した後、最終QAを再判定する。
+
 ## 次に行うこと
 
-Topic 09 `ラプラス変換` の最終QAを1段階進める。
+Topic 09主sourceの進捗記録2箇所だけを同期する。
 
-必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認し、全品質ゲートPASSの場合のみ `completed` とする。
+- `## 状態`: 解説PDF、練習source/PDF、PowerPoint、完成後独立再解答、最終QA `NEEDS_REVISION` まで完了した現在地へ同期
+- `## 次工程`: source進捗同期後の最終QA再判定へ同期
+
+教材本文、固定EXAM_ALIGNMENT、数式、例題、練習問題、PDF、PowerPoint、完成後独立再解答は変更しない。
