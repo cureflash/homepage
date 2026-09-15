@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_11_explanation_source_complete`
+- current_status: `topic_11_explanation_pdf_complete`
 - last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
 - active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 解説PDF
+- next_start: Topic 11 練習問題source
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -172,8 +172,20 @@
 - [x] N700Sの7%消費電力量削減をSiC単独効果として扱わない
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 
+## Topic 11 解説PDF
+- [x] `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_explanation.pdf`
+- [x] A4縦4ページ
+- [x] 200 dpi全4ページ表示QA `4 / 4 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 固定一次4問＋二次1問・15答案要素を維持
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3` 収録
+- [x] GTO→IGBT→SiC比較は定性的設計観点と確認済みN700S SiC採用に限定
+- [x] N700Sの7%削減をSiC単独効果として扱わない
+- [x] 固定範囲外論点・未確認実車値の追加 `0件`
+- [x] SHA-256 `a1fb0e6e845a57a2ad8575abbe6fa124ff92ba375934c75b3cc371a9766d02fd`
+
 ## 今回進めた内容
-Topic 11「GTO→IGBT→SiCの損失を計算する」の解説本文＋3段階例題を完成した。固定一次4問＋二次1問・15答案要素を本文へ `15 / 15` マッピングし、導通損失、スイッチング損失、H22二次型の素子平均電流、素子数を含む総損失、発熱・冷却・変換効率まで固定範囲内で接続した。実車接続はJR東海・東芝等の公式資料で確認できるN700SのSiC主変換装置に限定し、未確認の実機損失・温度・冷却性能は追加していない。
+Topic 11「GTO→IGBT→SiCの損失を計算する」の解説PDFを完成した。A4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA PASS。固定一次4問＋二次1問・15答案要素、3段階例題、固定範囲境界を維持し、未確認実車値追加は0件。
 
 ## 判定
-Topic 11は `topic_11_explanation_source_complete / IN_PROGRESS`。完成数は `10 / 22`。次は解説PDF。
+Topic 11は `topic_11_explanation_pdf_complete / IN_PROGRESS`。完成数は `10 / 22`。次は練習問題source。

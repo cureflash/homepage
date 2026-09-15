@@ -9,7 +9,7 @@ Topic 01〜10は最終QAまで `PASS / completed`。
 
 active topic: `11 GTO→IGBT→SiCの損失を計算する`
 
-current status: `topic_11_explanation_source_complete`
+current status: `topic_11_explanation_pdf_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -203,10 +203,23 @@ H22二次の独立計算代表値:
 - 未確認実車値追加: `0件`
 - 完成後独立再解答は未実施。全成果物完成後に別ゲートとして行う
 
-## 次に行うこと
-Topic 11「GTO→IGBT→SiCの損失を計算する」の解説PDFを作成する。
+## Topic 11 解説PDF
+- `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_explanation.pdf`: `completed`
+- A4縦4ページ
+- 200 dpi全4ページ Visual QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- 固定一次4問＋二次1問・15答案要素: 維持
+- 3段階例題: `3 / 3`収録
+- GTO→IGBT→SiC比較: 定性的設計観点＋確認済みN700S SiC採用に限定
+- N700Sの7%削減: SiC単独効果へ誤帰属なし
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `a1fb0e6e845a57a2ad8575abbe6fa124ff92ba375934c75b3cc371a9766d02fd`
 
-1. sourceの固定5問・15答案要素、固定範囲、3段階例題を変更しない。
-2. A4縦の解説PDFへ、導通損失・スイッチング損失・H22二次型平均電流・総損失／熱／効率を読める形で収録する。
-3. GTO→IGBT→SiC比較は定性的な設計観点と確認済みN700S SiC採用に限定し、異条件の実機値を横並び比較しない。
-4. 全ページ表示QA・文字抽出QAを実施し、結果をSTATUS/HANDOFFへ記録する。
+## 次に行うこと
+Topic 11「GTO→IGBT→SiCの損失を計算する」の練習問題sourceを作成する。
+
+1. 一次試験型に加え、固定二次論点へ接続する記述式問題を含める。
+2. 解答は途中式・前提・単位・理由説明を採点可能な形で示す。
+3. 固定5問・15答案要素へ接続し、固定範囲外論点・未確認実車値を追加しない。
+4. 独立計算・論理QAと一次問題の正答一意性QAを実施して記録する。
