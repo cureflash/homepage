@@ -9,41 +9,44 @@ Topic 01〜08は最終QAまで `PASS / completed`。
 
 active topic: `09 誘導電動機を自由に操るには？`
 
-current status: `topic_08_completed`
+current status: `topic_09_exam_alignment_complete`
 
-## Topic 08 最終結果
-固定EXAM_ALIGNMENT:
-- R07 一次 機械 問4: (4),(5)
-- H22 一次 機械 問3: (1)〜(3)
-- H19 一次 機械 問4: (1),(2)
-- R04 二次 機械・制御 問3: (4),(5)
-- H28 二次 機械・制御 問3: (1)〜(4)
+## Topic 09 制作前EXAM_ALIGNMENT
+固定過去問:
+- R02 一次 機械 問3: (1)〜(5)
+- H26 一次 機械 問5: (3)〜(5)
+- H25 一次 機械 問3: (3),(4)
+- R04 二次 機械・制御 問3: (6)
+- R02 二次 機械・制御 問1: (1)〜(7)
 
-一次3問＋二次記述2問、計5問・13小問。制作前独立検証・完成後独立再解答はいずれも `13 / 13 PASS`。
+一次3問＋二次記述2問、計5問。ゲート対象18小問。制作前独立検証 `18 / 18 PASS`。
 
-最終QA: `PASS / completed`。
+固定範囲:
+- V/f制御
+- 磁束
+- 定トルク領域
+- 弱め磁束領域
+- 定出力領域
+- 速度制御
+- ベクトル制御の概念
+- d軸・q軸の概念
 
-確認済み:
-- 必須成果物: PASS
-- 練習問題: 一次10問＋二次記述5問、数値QA `15 / 15 PASS`
-- 解説PDF・練習PDF・PowerPoint表示QA: PASS
-- SPEC指定の計算プログラム・スイッチング波形・相/線間電圧・基本波・FFT/高調波: PASS
-- source進捗記録整合: PASS
-- 教材外知識補完: 0件
-- 固定範囲外論点の追加: 0件
-- 未確認300系実車値の追加: 0件
+境界:
+- ベクトル制御は概念説明中心。厳密な座標変換は必須にしない。
+- Topic 10の回生・四象限運転は持ち込まない。
+- 厳密なPark/Clarke変換、電流制御器設計、センサレス推定器設計は追加しない。
+- 未確認300系実車制御値を真値として追加しない。
 
-## Topic 08 成果物
-- source: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase.md`
-- 解説PDF: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_explanation.pdf`
-- 練習source: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_practice.md`
-- 練習PDF: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_practice.pdf`
-- PowerPoint: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_images.pptx`
-- 計算プログラム: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_calc.py`
-- 指定波形/FFT: `08_switching_waveforms.svg`、`08_phase_voltage_waveforms.svg`、`08_line_voltage_waveforms.svg`、`08_fundamental_waveform.svg`、`08_fft_harmonics.svg`
-- 計算/波形QA: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_calculation_qa.md`
-- 独立再解答: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_independent_reanswer.md`
-- 最終QA: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_final_qa.md`
+成果物:
+- `topics/09_induction_motor_control/09_induction_motor_control.md`
 
 ## 次に行うこと
-Topic 09「誘導電動機を自由に操るには？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`SPEC.md` 第9章の固定範囲だけを対象とし、一次・二次を含む公式過去問を直近年度から確認する。件数合わせで範囲外論点を追加しない。
+Topic 09の解説本文＋3段階例題を作成する。
+
+1. 固定5問・18小問を変更しない。
+2. 本文の各節へ18小問を全件マッピングする。
+3. `N_s=120f/p`、`N=(1-s)N_s`、`f_2=sf`、`Φ∝V/f`、`P=Tω` の意味・成立条件・変形式・誤りやすい点を説明する。
+4. 定トルク→基底速度→弱め磁束・定出力のつながりをSPEC範囲内で整理する。
+5. ベクトル制御は磁束成分とトルク成分の分離、d軸/q軸の概念までとし、厳密座標変換へ広げない。
+6. 基礎・標準・複合の3段階例題を作成する。
+7. 固定範囲外論点・未確認実車値を追加しない。
