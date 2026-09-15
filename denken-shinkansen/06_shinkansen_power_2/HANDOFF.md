@@ -3,27 +3,24 @@
 updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `06`
-current_status: `topic_06_powerpoint_complete`
+current_status: `topic_06_independent_reanswer_complete`
 
 ## 今回完了
 
-Topic 06「275kVを受ける新幹線変電所の中身」の解説画像PowerPointを完成した。
+Topic 06「275kVを受ける新幹線変電所の中身」の完成後独立再解答を完了した。
 
-- 16:9 / 5スライド
-- 固定5過去問の解法経路を可視化
-- 系列SPEC固定6項目: `6 / 6`
-- 全5スライド表示QA: `5 / 5 PASS`
-- 文字切れ・重なり・図形はみ出し: `0件`
-- `slides_test.py`: `PASS / No overflow detected`
-- PPTX ZIP整合性: `PASS`
-- 問題・正答・EXAM_ALIGNMENT変更: `0件`
+- 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問
+- 一次: `20 / 20小問 PASS`
+- 二次: `3 / 3設問 PASS`
+- 合計: `5 / 5問 PASS`
+- 教材外知識補完: `0件`
 - 固定範囲外論点追加: `0件`
 - 後続Topic知識への依存追加: `0件`
-- 未確認実設備値追加: `0件`
+- 未確認実設備値への依存: `0件`
+- 問題・正答・EXAM_ALIGNMENT変更: `0件`
 
 追加成果物:
-- `topics/06_substation/06_substation_images.pptx`
-- `topics/06_substation/06_substation_powerpoint_qa.md`
+- `topics/06_substation/06_substation_independent_reanswer.md`
 
 既存成果物:
 - `topics/06_substation/06_substation_explanation_source.md`
@@ -31,19 +28,23 @@ Topic 06「275kVを受ける新幹線変電所の中身」の解説画像PowerPo
 - `topics/06_substation/06_substation_practice.md`
 - `topics/06_substation/06_substation_practice_qa.md`
 - `topics/06_substation/06_substation_practice.pdf`
+- `topics/06_substation/06_substation_images.pptx`
+- `topics/06_substation/06_substation_powerpoint_qa.md`
 
-制作前品質ゲートは引き続き、正式5問 `5 / 5問 PASS`、一次 `20 / 20小問 PASS`、二次 `3 / 3設問 PASS`。
+制作前品質ゲートも引き続き、正式5問 `5 / 5問 PASS`、一次 `20 / 20小問 PASS`、二次 `3 / 3設問 PASS`。
 
 完成数: `5 / 22`
 
 ## 次に行う
 
-Topic 06の完成後独立再解答を行う。
+Topic 06の最終QAを実施する。
 
-1. 固定EXAM_ALIGNMENTの一次4問＋二次1問を対象とする。
-2. 完成教材だけを使い、保存済み正答を先に見ずに解く。
-3. 教材外知識で補完した場合は正答してもFAILとする。
-4. 固定範囲外論点、後続Topic知識、未確認実設備値を追加しない。
+1. 必須成果物が実在することを確認する。
+2. 固定EXAM_ALIGNMENTの一次4問＋二次1問と完成後独立再解答 `5 / 5問 PASS` の整合を確認する。
+3. 練習15問、解説PDF・練習PDF・PowerPointの既存QA結果を確認する。
+4. 固定範囲外論点、後続Topic知識、未確認実設備値が追加されていないことを確認する。
+5. source・STATUS・HANDOFF等の進捗記録を確認し、旧状態が残っていれば教材内容を変更せずexact blockerとして記録する。
+6. 全品質ゲートPASSの場合のみTopic 06を `completed` とする。
 
 ## Topic 06 固定範囲
 
