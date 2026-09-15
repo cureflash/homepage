@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 8 / 14
-- current_status: `topic_09_practice_pdf_complete`
+- current_status: `topic_09_powerpoint_complete`
 - last_completed_topic: `08 新幹線の交流25kVとは何なのか`
 - active_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- next_start: Topic 09の解説画像PowerPointを作成する
+- next_start: Topic 09の完成後公式過去問独立再解答を実施する
 
 ## Topic 01 進捗
 
@@ -156,18 +156,18 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の練習問題source・練習PDFを完成し、GitHub正本へ反映した。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の解説画像PowerPointを完成し、GitHub正本へ反映した。
 
-全15問、全問五肢択一（基礎4 / 本試験標準8 / 複合・応用3）。独立再計算・論理確認 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`。A4縦2ページ、200 dpi全ページ表示QA `2 / 2 PASS`、表示欠け・重なり・文字化け0件、文字抽出QA `PASS`（U+FFFD 0件）。固定6過去問要求への接続 `6 / 6`。
+16:9・4枚。50Hz→60Hzでの`XL`/`XC`変化、複素インピーダンスとRCフェーザ、直列共振と理想並列LC、解法手順と固定6過去問対応表を可視化した。固定6過去問要求への接続 `6 / 6`。全4枚表示QA `4 / 4 PASS`、overflow `0件`、文字欠け・重なり・文字化け `0件`、ZIP/XML整合性 `PASS`。
 
 Topic 10以降の力率・三相・半導体等、未確認の新幹線実車回路・切替方式は追加していない。
 
 ## 判定
 
-現在 `topic_09_practice_pdf_complete / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の解説画像PowerPointを作成する。
+現在 `topic_09_powerpoint_complete / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の完成後公式過去問独立再解答を実施する。
