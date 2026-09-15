@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は品質ゲートPASSでcompleted。active topicは10「新幹線の速度はどう自動制御される？」。
 
 ## 今回進捗
-Topic 10の完成後blind独立再解答を完了した。公式解答・保存済み正答を先に見ず、公式問題文と完成教材だけで固定5件を再導出し、答案 `(4),(3),(5),(1),(2)` を得た。再解答後に公式解答と照合して `5 / 5 PASS`。教材外・固定範囲外知識による補完、固定EXAM_ALIGNMENT変更、固定範囲外論点追加、未確認実車値追加はいずれも0件。
+Topic 10の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。技術内容・過去問対応・必須成果物・表示QA・固定範囲境界は全件PASS。唯一のFAILは練習source `topics/10_automatic_control/10_automatic_control_practice.md` 末尾の旧次工程1箇所で、既に完成済みの練習PDF・QAより進捗記録が古い。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTXは変更していない。
 
 - 品質ゲート対象: 公式過去問5件
 - 固定問題: R8上 問13、R7下 問13、R5下 問18(a)、R5上 問13、R4上 問15(a)
@@ -20,11 +20,12 @@ Topic 10の完成後blind独立再解答を完了した。公式解答・保存�
 - 完成後独立再解答前ゲート: `BLIND_REANSWER_READY`（再解答開始時に条件遵守済み）
 - 完成後独立再解答: `(4),(3),(5),(1),(2)` / `5 / 5 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 未実施
+- 最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- source進捗整合: `FAIL`（練習source末尾1箇所のみ）
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
-- 完成数: `9 / 16`
+- 完成数: `9 / 16` のまま
 
 固定範囲は、目標値・制御量・操作量・外乱、フィードバック/フィードフォワード、開ループ/閉ループ、ブロック線図、伝達関数、一次/二次遅れ、時定数、定常偏差、安定性、`G(s)/(1+G(s)H(s))`。PID、ボード線図、ナイキスト線図、ベクトル軌跡、シーケンス制御等は件数合わせで追加しない。実車の制御アルゴリズムは推測しない。
 
@@ -58,6 +59,21 @@ Topic 10の完成後blind独立再解答を完了した。公式解答・保存�
 - R5下 機械 問18(b): 比例プラス積分要素まで拡張するため除外。
 - R4上 機械 問15(b): ベクトル軌跡が固定範囲外のため除外。
 
+## Topic 10 最終QA
+- 必須成果物の実在: `PASS`
+- 固定EXAM_ALIGNMENT 5件: `PASS`
+- 完成後blind独立再解答: `5 / 5 PASS`
+- 解説PDF表示QA・文字抽出QA: `PASS`
+- 練習PDF表示QA・文字抽出QA: `PASS`
+- PowerPoint表示QA・overflow・ZIP整合性: `PASS`
+- 固定範囲境界: `PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+- source進捗整合: `FAIL`
+- exact blocker: 練習source末尾に `次工程: このsourceを基に練習PDFを作成し、全ページ表示QA・文字抽出QAを行う。` が残るが、練習PDFとQAは既に完成済み
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## Topic 10 現在地
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前独立検証: `5 / 5 PASS`
@@ -71,10 +87,10 @@ Topic 10の完成後blind独立再解答を完了した。公式解答・保存�
 - 完成後独立再解答前ゲート: `BLIND_REANSWER_READY`（条件遵守済み）
 - 完成後独立再解答: `5 / 5 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 未実施
+- 最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
 ## 次に行う
-Topic 10の最終QAを実施し、必須成果物・表示QA・進捗整合・SPEC境界・独立再解答結果を総合判定する。
+`topics/10_automatic_control/10_automatic_control_practice.md` 末尾の旧次工程1箇所だけを実成果物へ同期する。その後にTopic 10の最終QAを再実施する。
