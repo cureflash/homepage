@@ -9,7 +9,7 @@ Topic 01〜08は最終QAまで `PASS / completed`。
 
 active topic: `09 誘導電動機を自由に操るには？`
 
-current status: `topic_09_independent_reanswer_complete`
+current status: `topic_09_final_qa_needs_revision`
 
 ## Topic 09 固定EXAM_ALIGNMENT
 固定過去問:
@@ -98,12 +98,27 @@ current status: `topic_09_independent_reanswer_complete`
 - H26一次型の定加速域 `V/f` 一定、定出力域 `V一定・I_M一定・f_s可変`。
 - ベクトル制御は磁束生成成分・トルク生成成分、d軸/q軸の概念まで。
 
-## 次に行うこと
-Topic 09の最終QAを実施する。
+## 最終QA結果
+判定: `NEEDS_REVISION / IN_PROGRESS`
 
-1. 必須成果物（source、解説PDF、練習source/PDF、PowerPoint）の存在と内容整合を確認する。
-2. 固定一次3問＋二次2問・18小問のEXAM_ALIGNMENTと完成後独立再解答 `18 / 18 PASS` を確認する。
-3. PDF/PPTXの表示QA・文字抽出QA・overflow/PPTX整合性記録を確認する。
-4. source・STATUS・HANDOFFの進捗記録が現在地と一致しているか確認する。
-5. Topic 10以降、厳密Park/Clarke変換、制御器設計、センサレス推定器設計、未確認300系実車値が混入していないことを確認する。
-6. 全品質ゲートPASSならTopic 09を `completed` とし、完成数を `9 / 22` に更新する。
+PASS:
+- 必須成果物5件の存在
+- 固定一次3問＋二次2問・18小問のEXAM_ALIGNMENT
+- 完成後独立再解答 `18 / 18 PASS`
+- 教材外知識補完 0件
+- 解説PDF表示QA `4 / 4 PASS`、文字抽出QA PASS
+- 練習PDF表示QA `6 / 6 PASS`、文字抽出QA・主要計算再検算 PASS
+- PowerPoint表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性 PASS
+- Topic 10以降・厳密Park/Clarke変換・制御器設計・センサレス推定器設計・未確認300系実車値の混入なし
+
+未完了理由:
+- `09_induction_motor_control_practice.md` 末尾の `## 次工程` が「この練習問題sourceから練習PDFを作成」の旧記録のまま。
+- 練習PDF、PowerPoint、完成後独立再解答は既に完了しており、進捗記録がGitHub上の実成果物と不整合。
+
+## 次に行うこと
+`09_induction_motor_control_practice.md` の旧進捗記録だけを実成果物へ同期する。
+
+- 末尾 `## 次工程` を現在地へ更新する。
+- 技術本文、15問、解答・解説、固定EXAM_ALIGNMENT、問題・正答は変更しない。
+- PDF/PPTX成果物は変更しない。
+- 同期後、Topic 09最終QAを再判定する。
