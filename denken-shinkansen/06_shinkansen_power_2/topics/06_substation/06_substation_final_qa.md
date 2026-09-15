@@ -4,9 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-上位仕様、固定EXAM_ALIGNMENT、一次・二次の過去問対応品質ゲート、練習問題、必須成果物、既存表示QA、系列SPEC固定6項目、固定範囲境界を再確認した。技術内容・成果物はPASSだが、主source `06_substation.md` の進捗記録が実態と一致していないため、Topic 06はまだ `completed` にしない。
+前回 `NEEDS_REVISION / IN_PROGRESS` の唯一の未完了理由だった主source進捗記録3箇所を現在の成果物実態へ同期した後、最終QAを再実施した。上位仕様、固定EXAM_ALIGNMENT、一次・二次の過去問対応品質ゲート、練習問題、必須成果物、既存表示QA、系列SPEC固定6項目、固定範囲境界、進捗整合を再確認し、全件PASSとした。
 
 ## 確認結果
 
@@ -23,7 +23,7 @@
 | 系列SPEC固定6項目 | PASS | 変電所、母線、変圧器、遮断器、単線結線図、損失を維持 |
 | 固定範囲境界 | PASS | スコット結線、％インピーダンス、ATき電、短絡計算、保護協調、雷サージ等の後続Topic論点を追加していない |
 | 未確認実設備値 | PASS | 追加・依存 `0件` |
-| 進捗記録 | FAIL | `06_substation.md` が旧状態 `practice_source_complete` のままで、本文冒頭と末尾に「次工程は練習15問の独立QA」が残存 |
+| 進捗記録 | PASS | `06_substation.md` を `completed` へ同期し、`STATUS.md`・`HANDOFF.md` をTopic 07開始へ更新 |
 
 ## 過去問対応品質ゲート
 
@@ -42,7 +42,7 @@
 
 ## 必須成果物の実在確認
 
-- `06_substation.md` — blob `1e5812992c340e9e07437766c008ad59ec87b7f5`
+- `06_substation.md` — blob `4ea39eb5ec10180871b32fa2c47e3cb86d64a9e0`
 - `06_substation_explanation_source.md` — blob `fe4b44ba760ae617468460afad02b227e6919a68`
 - `06_substation_explanation.pdf` — blob `7dbc6fe33260b024c32e1994a9df610ee0dbbbdb`
 - `06_substation_practice.md` — blob `eb093671b647b44ccaa7544c494b477dc19937ee`
@@ -52,13 +52,10 @@
 - `06_substation_powerpoint_qa.md` — blob `83a14d248bfef888e56a5aeb18f5dce259639274`
 - `06_substation_independent_reanswer.md` — blob `937bff9c63783da2c597caf50a486a36c111da28`
 
-## exact blocker
+## 完了判定
 
-`06_substation.md` の教材本文・固定EXAM_ALIGNMENT・数式・問題・成果物は変更不要。進捗記録だけを実態へ同期する必要がある。
+Topic 06 は `completed`。
 
-修正対象:
-1. `## 状態` の `practice_source_complete`
-2. 冒頭の「次工程は練習15問の独立QA」
-3. 末尾進捗要約の「次工程: 練習15問の独立QA」
+完成数: `6 / 22`
 
-次段階では上記3箇所だけを `topic_06_independent_reanswer_complete`／「次は最終QA再実施」へ同期し、技術内容・固定EXAM_ALIGNMENT・問題・PDF/PPTXは変更しない。
+次はTopic 07「三相電力をどう25kVの単相へ変える？」の制作前EXAM_ALIGNMENTを行う。
