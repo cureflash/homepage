@@ -9,7 +9,7 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_10_explanation_source_complete`
+current status: `topic_10_explanation_pdf_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -75,17 +75,22 @@ source完成内容:
 
 例題上の効率・電圧等は教材上の設定値であり、未確認実車値として扱っていない。
 
+## Topic 10 解説PDF
+- `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_explanation.pdf`: `completed`
+- A4縦4ページ
+- 200 dpi全4ページ Visual QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件`
+- 固定一次4問＋二次1問・15答案要素: 維持
+- 3段階例題: `3 / 3`収録
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `4fbb34ed2d2f8d88be5b685ddeaba697ca1177cfa552777e065ddde66d14be77`
+
 ## 次に行うこと
-固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 10の解説PDFを作成する。
+Topic 10の練習問題・完全解説sourceを作成する。
 
-PDFでは最低限、次を欠落させない。
-1. 誘導機の `s<0` 発電機運転
-2. 力行と回生の電力フロー
-3. `P_m=Tω` と四象限
-4. `車輪 → 誘導電動機 → インバータ → DCリンク → コンバータ → 架線`
-5. H24二次型のフェーザ式・有効電力式・PWM変調率
-6. 回生効率
-7. 基礎・本試験標準・複合の3段階例題
-8. 過去問への接続
-
-生成後は全ページ表示QA・文字抽出QAを行う。練習問題・PowerPointへは先行しない。
+1. 固定一次4問＋二次1問・15答案要素を変更しない。
+2. 一次試験型は五肢択一、二次試験型は途中式・前提・単位・検算を含む記述式とする。
+3. 問題は固定範囲の力行、回生、誘導機発電運転、四象限、DCリンク、PWMコンバータ、架線回生、回生効率だけで構成する。
+4. H27の回生失効・電力貯蔵・運行間隔、H24二次の無効電流・出力可能領域、Topic 11/16、未確認実車値を追加しない。
+5. 練習PDF・PowerPointへは先行しない。
