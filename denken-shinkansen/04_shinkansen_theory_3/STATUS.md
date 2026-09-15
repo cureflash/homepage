@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 8 / 14
-- current_status: `topic_08_completed`
+- current_status: `topic_09_exam_alignment_complete`
 - last_completed_topic: `08 新幹線の交流25kVとは何なのか`
 - active_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- next_start: Topic 09の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 09の解説本文＋3段階例題を作成する
 
 ## Topic 01 進捗
 
@@ -143,14 +143,31 @@
 - [x] 最終QA再実施
 - [x] 最終QA PASS
 
+## Topic 09 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] GitHub上のSTATUS / HANDOFF / 既存成果物確認（Topic 09既存成果物なし）
+- [x] 直近年度を優先して公式理論過去問を確認
+- [x] Topic 09固定範囲でゲート対象6問を確定
+- [x] 制作前独立検証 `6 / 6 PASS`
+- [x] Topic 10以降の力率・三相・半導体等と未確認実車情報を境界整理
+- [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA PASS
+
 ## 今回進めた内容
 
-Topic 08 `新幹線の交流25kVとは何なのか` の最終QAを再実施し、全品質ゲートPASSで `completed` とした。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の制作前EXAM_ALIGNMENTを完了した。
 
-固定公式過去問4問は完成教材だけで `4 / 4 PASS`。教材外知識補完、後続Topic知識依存、非正弦波論点依存、未確認新幹線実車値依存はいずれも0件。前回唯一FAILだった主source・練習sourceの進捗記録も同期済みで、整合性PASSを確認した。
+令和8年度上期〜令和5年度上期の公式理論過去問から、系列SPEC固定範囲で解ける6問を品質ゲート対象として固定。RLC・リアクタンス・インピーダンス・周波数変化・直列共振・並列共振の基本を対象とし、制作前独立検証は `6 / 6 PASS`。
 
-教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、練習15問、問題・正答、PDF/PPTX成果物の技術内容は変更していない。
+Topic 10以降の力率・三相・半導体等を件数合わせで追加せず、新幹線側の未確認実車回路・周波数切替方式も推測していない。source Markdownへ固定過去問、公式出典、独立検証、参考教材、教材必須事項を記録した。
 
 ## 判定
 
-現在 `topic_08_completed / completed`。完成数は `8 / 14`。次はTopic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の制作前EXAM_ALIGNMENTを実施する。
+現在 `topic_09_exam_alignment_complete / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の解説本文＋3段階例題を作成する。
