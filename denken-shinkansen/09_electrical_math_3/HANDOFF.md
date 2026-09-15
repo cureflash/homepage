@@ -6,17 +6,17 @@
 
 Topic 01〜07は `completed`。
 
-Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENTと固定5問の制作前独立計算・公式解答照合まで完了。独立解答は `5 / 5問・9 / 9答案要素 PASS`。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
+Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題まで完了。独立解答は `5 / 5問・9 / 9答案要素 PASS`。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
 
 完成数: `7 / 12`
 
-current_status: `topic_08_preproduction_independent_check_complete`
+current_status: `topic_08_explanation_source_complete`
 
 last_completed_topic: `07 微分② 速度を微分すると加速度`
 
 active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `Topic 08 解説本文＋3段階例題`
+next_start: `Topic 08 解説PDF`
 
 ## Topic 07 完了記録
 
@@ -104,6 +104,25 @@ next_start: `Topic 08 解説本文＋3段階例題`
 - H28 理論 問3: 磁界・Biot-Savartの専門論点が支配的で固定範囲外。
 - R5下 機械 問18(b): 制御系の積分要素であり、伝達関数・制御理論が主題。
 
+### 解説本文＋3段階例題
+
+主sourceへ固定EXAM_ALIGNMENTから逆算した解説本文を追加済み。
+
+収録内容:
+- 不定積分・原始関数・積分定数
+- 定積分と符号付き面積
+- 多項式・正弦・余弦の基本積分
+- `θ=ωt+φ` の必要範囲の置換
+- 波形平均と区分積分
+- 二重積分形A-D変換器を面積・蓄積量の釣合いとして読む方法
+- `x=∫v(t)dt`
+- `t=∫dx/v(x)`
+- `a=v dv/dx` から `v²-v0²=2a(x-x0)` の導出
+- 基礎／本試験標準／複合の3段階例題
+- 固定5問から教材節への対応表
+
+新幹線の数値例は積分説明用の仮定と明記し、未確認実車値は使用していない。
+
 ### source
 
 - `topics/08_integral_distance/08_integral_distance.md`
@@ -112,8 +131,8 @@ next_start: `Topic 08 解説本文＋3段階例題`
 
 ## 次に行うこと
 
-Topic 08の解説本文＋3段階例題を、固定EXAM_ALIGNMENTから逆算した必須説明だけで作る。
+Topic 08の解説PDFを、完成した主sourceだけから作る。
 
-最低限、定積分と符号付き面積、多項式・三角関数の基本積分、必要範囲の置換、波形平均と区分積分、`x=∫v(t)dt`、`t=∫dx/v(x)`、一定加速度条件での `v²-v0²=2a(x-x0)` 導出を扱う。
+固定5問へ必要な定積分・符号付き面積・波形平均・区分積分・三角関数積分と、系列SPEC固定の運転曲線接続・3段階例題を収録する。
 
 Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は先取りしない。
