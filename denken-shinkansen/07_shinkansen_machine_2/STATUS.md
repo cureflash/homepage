@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `7 / 22`
-- current_status: `topic_08_independent_reanswer_complete`
+- current_status: `topic_08_final_qa_needs_revision`
 - last_completed_topic: `07 300系のPWMコンバータは何をしている？`
 - active_topic: `08 VVVFインバータで三相交流を作る`
-- next_start: Topic 08の最終QAを実施し、過去問対応・必須成果物・進捗記録・SPEC境界を総合判定する
+- next_start: Topic 08の主source冒頭・末尾と練習source末尾に残る旧進捗記録3箇所だけを実態へ同期し、技術本文・固定EXAM_ALIGNMENT・数式・問題/正答・PDF/PPTX・計算/波形は変更しない。同期後に最終QAを再実施する
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -35,24 +35,27 @@
 - [x] 解説画像PowerPoint
 - [x] 計算プログラム・指定波形/FFT
 - [x] 公式過去問の教材のみでの独立再解答: `13 / 13 PASS`
-- [ ] 最終QA PASS
+- [ ] 最終QA PASS — 2026-09-15最終QAは進捗記録不整合3箇所のみで `NEEDS_REVISION`
 
 ## 今回進めた内容
-Topic 08の完成後独立再解答を実施した。固定EXAM_ALIGNMENTの一次3問＋二次記述2問、計5問・13小問を完成教材の式・解法手順だけで再導出し、公式解答・標準解答と照合した。
+Topic 08の最終QAを実施した。固定EXAM_ALIGNMENT、完成後独立再解答、必須成果物、練習・PDF/PPTX表示QA、SPEC指定計算/波形QA、固定範囲を総合確認した。
 
 成果物:
-- `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_independent_reanswer.md`
+- `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_final_qa.md`
 
-確認:
-- 固定5問・13小問: `13 / 13 PASS`
-- R07一次: PWM、スイッチング周波数を教材だけで判定
-- H22一次: 三角波、変調率、`√3 k E_d/(2√2)`を教材だけで再導出
-- H19一次: 基本波、直流電圧可変不要を教材だけで判定
-- R04二次: `134 V`、`164 V`を教材だけで再計算
-- H28二次: `Q5/Q6`、相/線間波形、3n次高調波、`√(2/3)E_d`を教材だけで再構築
+PASS:
+- 固定一次3問＋二次記述2問、計5問・13小問を維持
+- 完成後独立再解答: `13 / 13 PASS`
+- 練習15問、解説PDF、練習PDF、PowerPointの既存QA: PASS
+- SPEC指定のスイッチング波形・相電圧/線間電圧・基本波・FFT/高調波QA: PASS
 - 教材外知識補完: 0件
 - 固定範囲外論点の追加: 0件
 - 未確認300系実車値の追加: 0件
 
+exact blocker:
+1. `08_vvvf_inverter_three_phase.md` 冒頭が「解説PDFまで完成」「練習PDF以降は未着手」の旧記録。
+2. 同source末尾の次工程が「練習問題sourceを作成」の旧記録。
+3. `08_vvvf_inverter_three_phase_practice.md` 末尾の次工程が「練習PDFを作成」の旧記録。
+
 ## 判定
-Topic 08は `topic_08_independent_reanswer_complete`。完成数は `7 / 22` のまま。次は最終QA。
+Topic 08は `topic_08_final_qa_needs_revision`。技術内容・過去問対応・成果物はPASSだが、進捗記録3箇所が実態と不整合のため `completed` にしない。完成数は `7 / 22` のまま。次はこの3箇所だけを同期し、その後に最終QAを再実施する。
