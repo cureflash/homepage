@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜09は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QAまで完了した。
+Topic 01〜09は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題sourceまで完了した。
 
 完成数: `9 / 21`
 
-current_status: `topic_10_explanation_pdf_complete`
+current_status: `topic_10_practice_source_complete`
 
 active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
 
-次工程: 固定一次5問・20小問へ接続する練習問題sourceを作成する。固定範囲外、未確認実設備値、二次数合わせは追加しない。
+次工程: 練習問題sourceを練習PDFへ反映し、全ページ表示QA・文字抽出QAを行う。固定範囲外、未確認実設備値、二次数合わせは追加しない。
 
 ## Topic 10 固定範囲
 
@@ -106,9 +106,20 @@ H30二次「電力・管理」問5には高調波電流、直列リアクトル�
 - 固定一次5問・20小問、二次採用0問、二次数合わせ0件を維持
 - 固定範囲外・未確認実設備値追加: 0件
 
+## Topic 10 練習問題source
+
+- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md`: `completed`
+- 一次試験型12問、全問五肢択一
+- 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
+- 正答一意性: `12 / 12 PASS`
+- 数値再計算: `12 / 12 PASS`
+- 固定一次5問・20小問への練習接続: `20 / 20`
+- 二次採用0問・二次数合わせ0件を維持
+- 固定範囲外・未確認実設備値追加: 0件
+
 ## Topic 10 未制作
 
-- 練習問題source＋練習PDF
+- 練習PDF
 - 解説画像PowerPoint
 - 完成後独立再解答
 - 最終QA
@@ -154,7 +165,10 @@ Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALI
 - Topic 10 制作前EXAM_ALIGNMENT: `PASS`
 - Topic 10 解説本文＋3段階例題: `completed`
 - Topic 10 解説PDF＋表示QA: `completed`
+- Topic 10 練習問題source: `completed`
+- Topic 10 練習問題: `12問 / 正答一意性・数値再計算 12 / 12 PASS`
 - Topic 10 固定一次: `5問 / 20小問`
+- Topic 10 練習接続: `20 / 20`
 - Topic 10 二次採用: `0問`
 - Topic 10 二次数合わせ: `0件`
 - Topic 10 固定範囲外追加: `0件`
@@ -163,4 +177,4 @@ Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALI
 
 ## 次に行うこと
 
-Topic 10の固定5問・20小問へ接続する練習問題sourceを作成する。
+Topic 10の練習問題sourceから練習PDFを作成し、全ページ表示QA・文字抽出QAを行う。
