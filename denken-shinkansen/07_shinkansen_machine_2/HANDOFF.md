@@ -9,7 +9,7 @@ Topic 01〜07は最終QAまで `PASS / completed`。
 
 active topic: `08 VVVFインバータで三相交流を作る`
 
-current status: `topic_08_independent_reanswer_complete`
+current status: `topic_08_final_qa_needs_revision`
 
 ## Topic 08 固定EXAM_ALIGNMENT
 - R07 一次 機械 問4: (4),(5)
@@ -40,6 +40,7 @@ current status: `topic_08_independent_reanswer_complete`
 - 練習PDF: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_practice.pdf`
 - PowerPoint: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_images.pptx`
 - 独立再解答: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_independent_reanswer.md`
+- 最終QA記録: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_final_qa.md`
 
 ## Topic 08 計算プログラム・指定波形/FFT完了
 成果物:
@@ -87,5 +88,25 @@ QA:
 - 固定範囲外論点追加: 0件
 - 未確認300系実車値追加: 0件
 
+## Topic 08 最終QA
+`08_vvvf_inverter_three_phase_final_qa.md` を作成し、総合判定は `NEEDS_REVISION / IN_PROGRESS`。
+
+PASS:
+- 必須成果物の実在
+- 固定一次3問＋二次記述2問、計5問・13小問
+- 完成後独立再解答 `13 / 13 PASS`
+- 練習15問と解説PDF・練習PDF・PowerPointの既存QA
+- SPEC指定の計算プログラム・5波形/FFT QA
+- 固定範囲外論点追加0件
+- 未確認300系実車値追加0件
+
+exact blockerは進捗記録3箇所のみ。
+
+1. `08_vvvf_inverter_three_phase.md` 冒頭が「解説PDFまで完成」「練習PDF以降は未着手」の旧記録。
+2. 同source末尾の次工程が「練習問題sourceを作成」の旧記録。
+3. `08_vvvf_inverter_three_phase_practice.md` 末尾の次工程が「練習PDFを作成」の旧記録。
+
+技術内容・固定EXAM_ALIGNMENT・数式・問題/正答・PDF/PPTX・計算/波形には修正理由なし。
+
 ## 次に行うこと
-Topic 08の最終QAを実施し、固定EXAM_ALIGNMENT、独立再解答、必須成果物、計算/波形QA、source・STATUS・HANDOFFの進捗整合、SPEC境界を総合判定する。未整合が1件でもあれば `completed` にしない。
+上記3箇所の進捗記録だけを実成果物へ同期する。技術本文、固定EXAM_ALIGNMENT、数式、問題/正答、PDF/PPTX、計算プログラム・波形内容は変更しない。同期後にTopic 08の最終QAを再実施し、全件PASSの場合のみ `completed` とする。
