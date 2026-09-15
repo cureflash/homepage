@@ -9,7 +9,7 @@ Topic 01〜10は最終QAまで `PASS / completed`。
 
 active topic: `11 GTO→IGBT→SiCの損失を計算する`
 
-current status: `topic_11_explanation_pdf_complete`
+current status: `topic_11_practice_source_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -216,10 +216,22 @@ H22二次の独立計算代表値:
 - 未確認実車値追加: `0件`
 - SHA-256: `a1fb0e6e845a57a2ad8575abbe6fa124ff92ba375934c75b3cc371a9766d02fd`
 
-## 次に行うこと
-Topic 11「GTO→IGBT→SiCの損失を計算する」の練習問題sourceを作成する。
+## Topic 11 練習問題source
+- `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_practice.md`: `completed`
+- 一次試験型10問: 全問五肢択一
+- 二次試験型5問: 記述・途中式／前提／単位／検算または論証付き
+- 独立計算・論理QA: `15 / 15 PASS`
+- 一次正答一意性QA: `10 / 10 PASS`
+- 固定5過去問・15答案要素: `15 / 15` 接続
+- J/W、μs/s、kHz/Hzの単位換算QA: PASS
+- 素子1個と装置全体の損失区別: PASS
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
 
-1. 一次試験型に加え、固定二次論点へ接続する記述式問題を含める。
-2. 解答は途中式・前提・単位・理由説明を採点可能な形で示す。
-3. 固定5問・15答案要素へ接続し、固定範囲外論点・未確認実車値を追加しない。
-4. 独立計算・論理QAと一次問題の正答一意性QAを実施して記録する。
+## 次に行うこと
+Topic 11「GTO→IGBT→SiCの損失を計算する」の練習PDFを作成する。
+
+1. 練習sourceの一次10問＋二次5問、解答・完全解説を変更せずPDF化する。
+2. A4縦で全問・解説を読める形にし、表示QA・文字抽出QAを実施する。
+3. 主要数値を再計算し、一次正答一意性 `10 / 10 PASS` を維持する。
+4. 固定5問・15答案要素、固定範囲、未確認実車値0件を維持する。
