@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_09_independent_reanswer_passed`
+- current_status: `topic_09_final_qa_needs_revision`
 - last_completed_topic: `08 位相制御と平均直流電圧`
 - active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09の最終QA。固定一次4問＋二次1問・14対象項目の完成後独立再解答 `14 / 14 PASS`、必須成果物、表示QA、進捗記録整合、固定範囲境界を再確認する
+- next_start: Topic 09主source `09_dc_machine_loss_thermal_design.md` の `## 状態` に残る旧進捗2記述だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題/正答・PDF/PPTX・独立再解答は変更しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -441,4 +441,17 @@
 - 未確認実車値追加: `0件`
 - 独立再解答判定: `PASS`
 
-次工程はTopic 09 `直流機方式の損失・熱設計` の最終QA。
+## Topic 09 最終QA
+- `09_dc_machine_loss_thermal_design_final_qa.md`: 新規作成
+- 必須成果物: `PASS`
+- 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問・14対象項目を維持
+- 完成後独立再解答: 一次 `11 / 11 PASS`、二次 `3 / 3 PASS`、合計 `14 / 14 PASS`
+- 解説PDF・練習PDF・PowerPoint QA: `PASS`
+- 練習問題の計算・論理・正答一意性: `12 / 12 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- 進捗記録整合: `FAIL` — 主source `## 状態` に「解説PDF、練習source/PDF、解説画像PowerPointは未制作」「次工程は解説PDF」の旧記述が残存
+- 最終判定: `NEEDS_REVISION / IN_PROGRESS`
+
+次工程はTopic 09主sourceの旧進捗2記述だけを実成果物へ同期する。
