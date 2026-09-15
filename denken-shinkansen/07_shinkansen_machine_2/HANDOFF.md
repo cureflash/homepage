@@ -9,7 +9,7 @@ Topic 01〜10は最終QAまで `PASS / completed`。
 
 active topic: `11 GTO→IGBT→SiCの損失を計算する`
 
-current status: `topic_11_blind_reanswer_ready`
+current status: `topic_11_independent_reanswer_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -197,9 +197,10 @@ source完成内容:
 - 制作前独立検証: `15 / 15 PASS`
 - 独立再解答前ゲート: `BLIND_REANSWER_READY`
 - 制作前の保存済み答案・完成済み導出結果は必須先読みsourceから除去済み
+- 完成後独立再解答: `15 / 15 PASS`
+- 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 完成後独立再解答は未実施
 
 ## Topic 11 解説PDF
 - `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_explanation.pdf`: `completed`
@@ -261,5 +262,18 @@ source完成内容:
 - 未確認実車値追加: `0件`
 - 判定: `BLIND_REANSWER_READY`
 
+## Topic 11 完成後独立再解答
+- 公式解答・保存済み正答を先に見ず、完成教材だけで固定5問を再解答した。
+- R07 一次 機械 問4: `2 / 2 PASS`
+- R06 一次 機械 問2: `1 / 1 PASS`
+- R02 一次 機械 問2: `3 / 3 PASS`
+- R04 一次 機械 問4: `5 / 5 PASS`
+- H22 二次 機械・制御 問3: `4 / 4 PASS`
+- 合計: `15 / 15 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+- 固定5問・15答案要素、教材本文、練習問題、PDF/PPTXは変更していない。
+
 ## 次に行うこと
-公式解答・保存済み正答を先に見ず、完成教材だけを使って固定5問・15答案要素を独立再解答する。解答完了後に公式解答・標準解答と照合し、教材外知識補完の有無を判定する。
+Topic 11の最終QAを実施し、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX表示QA、進捗記録整合、固定範囲境界を総合判定する。
