@@ -2,14 +2,14 @@
 
 updated: 2026-09-15
 series: `06_shinkansen_power_2`
-active_topic: `06`
-theme: 275kVを受ける新幹線変電所の中身
-current_status: `topic_06_source_progress_synced`
-completed_topics: `5 / 22`
+active_topic: `07`
+theme: 三相電力をどう25kVの単相へ変える？
+current_status: `topic_06_completed`
+completed_topics: `6 / 22`
 
-## Topic 06 current result
+## Topic 06 final result
 
-主source `topics/06_substation/06_substation.md` の旧進捗記録3箇所を現在地へ同期した。`## 状態`、冒頭の次工程、末尾進捗要約の次工程だけを修正し、教材本文・固定EXAM_ALIGNMENT・数式・問題・PDF/PPTXは変更していない。前回最終QAで唯一のblockerだった進捗記録不整合は解消済み。次は最終QAを再実施する。
+Topic 06「275kVを受ける新幹線変電所の中身」の最終QAを再実施し、`PASS / completed` とした。前回唯一のblockerだった主source進捗記録3箇所は同期済み。教材本文・固定EXAM_ALIGNMENT・数式・問題・PDF/PPTX・固定範囲は変更していない。
 
 品質ゲート:
 - 制作前独立検証: `5 / 5問 PASS`
@@ -33,8 +33,8 @@ completed_topics: `5 / 22`
 - 固定範囲外論点追加: `0件`
 - 後続Topic知識への依存追加: `0件`
 - 未確認実設備値追加: `0件`
-- 前回最終QA: `NEEDS_REVISION`
-- 前回exact blocker: `06_substation.md` の進捗記録3箇所 → `RESOLVED`
+- source進捗整合: `PASS`
+- 最終QA: `PASS / completed`
 
 成果物:
 - `topics/06_substation/06_substation.md`
@@ -55,17 +55,9 @@ completed_topics: `5 / 22`
 - [x] Topic 03 completed
 - [x] Topic 04 completed
 - [x] Topic 05 completed
-- [x] Topic 06 制作前EXAM_ALIGNMENT
-- [x] Topic 06 制作前独立検証
-- [x] Topic 06 解説本文＋3段階例題
-- [x] Topic 06 解説PDF＋全ページ表示QA
-- [x] Topic 06 練習問題＋完全解説source
-- [x] Topic 06 練習15問の独立QA
-- [x] Topic 06 練習PDF＋全ページ表示QA
-- [x] Topic 06 解説画像PowerPoint＋表示QA
-- [x] Topic 06 完成後独立再解答
-- [ ] Topic 06 最終QA PASS
+- [x] Topic 06 completed
+- [ ] Topic 07 制作前EXAM_ALIGNMENT
 
 ## next_start
 
-Topic 06の最終QAを再実施する。固定一次4問＋二次1問、完成後独立再解答、練習15問、PDF/PPTX表示QA、SPEC固定6項目、固定範囲境界、source進捗整合を再確認し、全件PASSの場合のみ `completed` とする。
+Topic 07「三相電力をどう25kVの単相へ変える？」の制作前EXAM_ALIGNMENTを行う。系列SPECの固定範囲「スコット、変形ウッドブリッジ、ルーフ・デルタ」と「フェーザ図、結線比較」だけを正本とし、第二種一次「電力」・二次「電力・管理」の公式過去問を直近年度優先で調査する。二次対象論点で該当記述問題が確認できる場合は最低1問を含め、件数合わせでTopic 08以降の論点を混ぜない。
