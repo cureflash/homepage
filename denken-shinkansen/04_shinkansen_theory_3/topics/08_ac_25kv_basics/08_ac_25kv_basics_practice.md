@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `08`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `source_progress_synced`
 - 更新日: 2026-09-15
 
 ## 固定範囲
@@ -290,3 +290,11 @@ sin(x+π)=-sinx なので v=100sinx-50sinx=50sinx。最大値50 V、実効値50/
 - 正答一意性: `15 / 15 PASS`
 - 固定4過去問要求との接続: `4 / 4`
 - 後続Topic論点・非正弦波論点・未確認実車値の追加: `0件`
+- 解説画像PowerPoint: `16:9・4枚 / 表示QA 4 / 4 PASS / overflow 0件 / ZIP整合性PASS`
+- 完成後の公式過去問独立再解答: `4 / 4 PASS`。教材外知識補完・後続Topic依存・未確認新幹線実車値依存はいずれも `0問`。
+- 最終QA: `NEEDS_REVISION / IN_PROGRESS（技術内容はPASS、進捗記録不整合のみ。source同期後の再実施待ち）`
+- source進捗記録同期: `完了`
+
+## 次工程
+
+Topic 08の最終QAを再実施する。
