@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 6 / 14
-- current_status: `topic_07_final_qa_needs_revision`
+- current_status: `topic_07_source_progress_synced`
 - last_completed_topic: `06 0系の変圧器は何をしていた？`
 - active_topic: `07 モーターはなぜ回る？`
-- next_start: Topic 07の主source・練習sourceに残る旧進捗記録だけを実成果物へ同期する
+- next_start: Topic 07の最終QAを再実施する
 
 ## Topic 01 進捗
 
@@ -119,27 +119,20 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `5 / 5 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習sourceの進捗記録不整合）
-- [ ] source進捗記録同期
+- [x] source進捗記録同期
 - [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-Topic 07 `モーターはなぜ回る？` の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` とした。
+Topic 07 `モーターはなぜ回る？` の主source・練習sourceに残っていた旧進捗記録をGitHub正本上の実成果物へ同期した。
 
-- 最終QA記録: `topics/07_motor_force_induction/07_motor_force_induction_final_qa.md`
-- 固定EXAM_ALIGNMENT 5問: PASS
-- 完成後独立再解答: `5 / 5 PASS`
-- 必須成果物: PASS
-- 解説PDF・練習PDF・PowerPoint既存QA: PASS
-- SPEC境界: PASS
-- 教材外知識補完: `0件`
-- 直流機詳細・後続Topic依存: `0件`
-- 未確認0系実車値依存: `0件`
-- 主source進捗記録整合性: FAIL
-- 練習source進捗記録整合性: FAIL
-
-主sourceは `status: explanation_pdf_complete` のまま、練習・PowerPoint・完成後独立再解答を未着手/未実施と記録している。練習sourceもPowerPoint・完成後独立再解答を未実施としている。技術内容・成果物にはFAILなし。
+- 主source `status`: `source_progress_synced`
+- 練習問題source・練習PDF: 完成済みへ同期
+- 解説画像PowerPoint: `16:9・4枚 / 表示QA 4 / 4 PASS / はみ出し0件 / PPTX整合性PASS` へ同期
+- 完成後独立再解答: `5 / 5 PASS` へ同期
+- 教材外知識補完・後続Topic依存・未確認0系実車値依存: 各 `0問`
+- 教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習15問・PDF/PPTX成果物: 変更なし
 
 ## 判定
 
-Topic 07は `topic_07_final_qa_needs_revision`。完成数は `6 / 14` のまま。次は教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・成果物を変更せず、主sourceと練習sourceの旧進捗記録だけを実成果物へ同期する。
+Topic 07は `topic_07_source_progress_synced`。完成数は `6 / 14` のまま。次は最終QAを再実施し、全品質ゲートPASS時のみ `completed` とする。
