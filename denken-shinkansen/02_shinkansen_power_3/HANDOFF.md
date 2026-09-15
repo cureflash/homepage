@@ -6,9 +6,9 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `7 / 16`。Topic 01〜07は完成済み。
 
 ## 今回進捗
-Topic 08 `新幹線の変電所はなぜ数十kmおき？` を1段階進め、解説本文§1〜§9＋3段階例題を完成した。
+Topic 08 `新幹線の変電所はなぜ数十kmおき？` を1段階進め、解説PDFを完成した。
 
-制作前EXAM_ALIGNMENTで固定した5問・7小問の要求事項を本文へ全件マッピングした。
+`topics/08_voltage_drop/08_voltage_drop.md` の完成済み解説本文§1〜§9、3段階例題、固定5問・7小問へのマッピングだけを使い、A4縦4ページへ反映した。200 dpi全4ページ表示QAは `4 / 4 PASS`、文字抽出QAもPASS。SPEC固定範囲外論点・未確認実設備値の追加は0件。
 
 現行品質ゲート:
 - R7下 電力 問16 (a)(b) — 三相3線式の電圧降下、力率、線路損失
@@ -19,14 +19,10 @@ Topic 08 `新幹線の変電所はなぜ数十kmおき？` を1段階進め、�
 
 制作前独立検証は `7 / 7 PASS`。完成後のブラインド独立再解答を汚染しないため、正答番号はsource・STATUS・HANDOFFへ保存していない。
 
-解説本文では、`R=rl`、`X=xl`、`R∝l/A`、`P=√3VIcosφ`、`ΔV≒√3I(Rcosφ+Xsinφ)`、`P_loss=3I²R`、2回線の電力分担、力率の異なる複数負荷の `Icosφ / Isinφ` 分解、損失率・効率、再利用できる解法手順まで収録した。
-
-3段階例題:
-- 基礎: R・Xと電圧降下・線路損失
-- 本試験標準: 許容電圧降下率から最大負荷電力を逆算
-- 複合: 力率の異なる複数負荷を区間ごとに成分合成
+解説PDFには、`R=rl`、`X=xl`、`R∝l/A`、`P=√3VIcosφ`、`ΔV≒√3I(Rcosφ+Xsinφ)`、`P_loss=3I²R`、2回線の電力分担、力率の異なる複数負荷の `Icosφ / Isinφ` 分解、損失率・効率、再利用できる解法手順、3段階例題、固定5問の対応表を収録した。
 
 source: `topics/08_voltage_drop/08_voltage_drop.md`
+解説PDF: `topics/08_voltage_drop/08_voltage_drop_explanation.pdf`
 
 ## 範囲境界
 SPEC固定範囲は、抵抗、リアクタンス、インピーダンス、電圧降下、電力損失、力率、送電端、受電端、電力、効率のみ。
@@ -36,13 +32,12 @@ Topic 09以降へ先回りしない。ATき電方式、帰線、線路インダ�
 実際の新幹線変電所間隔や個別設備値も一次資料確認前に真値化していない。
 
 ## 現在状態
-- `current_status`: `topic_08_explanation_source_complete`
+- `current_status`: `topic_08_explanation_pdf_complete`
 - 完成数: `7 / 16`
 - last completed: Topic 07 `なぜ三相交流をそのまま架線へ流さない？`
 - active: Topic 08 `新幹線の変電所はなぜ数十kmおき？`
 
 未完成:
-- 解説PDF
 - 練習問題source
 - 練習PDF
 - 解説画像PowerPoint
@@ -50,6 +45,6 @@ Topic 09以降へ先回りしない。ATき電方式、帰線、線路インダ�
 - 最終QA
 
 ## 次の正確な開始点
-Topic 08の解説PDFを作成する。
+Topic 08の練習問題sourceを作成する。
 
-`topics/08_voltage_drop/08_voltage_drop.md` の完成済み解説本文・3段階例題・固定5問7小問を正本として使い、解法経路を省略せずPDFへ反映する。Topic 09以降の論点・未確認の実設備値は追加しない。PDF作成後に表示QA・文字抽出QAを行い、STATUS・HANDOFFを次工程へ同期する。
+`topics/08_voltage_drop/08_voltage_drop.md` と解説PDFの固定範囲・固定5問7小問を正本として、電験三種本試験型へ接続する練習問題と完全解説を作る。Topic 09以降の論点・未確認の実設備値は追加しない。
