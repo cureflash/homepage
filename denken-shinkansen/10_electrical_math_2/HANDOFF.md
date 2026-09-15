@@ -8,7 +8,7 @@ Topic 01〜07は `completed`。
 
 完成数: `7 / 20`
 
-current_status: `topic_08_practice_source_complete`
+current_status: `topic_08_practice_pdf_complete`
 
 active_topic: `08 二階常微分方程式`
 
@@ -150,13 +150,29 @@ source:
 
 練習source品質判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
+## Topic 08 練習PDF完了記録
+
+練習PDF:
+`topics/08_second_order_ode/08_second_order_ode_practice.pdf`
+
+- A4縦 5ページ
+- 全12問（基礎3問／標準6問／複合3問）＋完全解説を収録
+- 固定一次5問・15小問への接続を維持
+- 200 dpi 全5ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: `PASS`
+- 独立計算・正答一意性: `12 / 12 PASS`
+- Topic 09〜10先取り: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値追加: 0件
+
+練習PDF品質判定: `PASS / PRACTICE_PDF_COMPLETE`
+
 ## 次に行うこと
 
-Topic 08の練習PDFを作成する。
+Topic 08の解説画像PowerPointを作成する。
 
-1. 正本は `topics/08_second_order_ode/08_second_order_ode_practice.md` とする。
-2. 全12問・完全解説を収録する。
-3. 固定一次5問・15小問への接続を維持する。
-4. Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしない。
-5. 未確認実車値や固定範囲外論点を追加しない。
-6. PDF作成後は全ページ表示QA・文字抽出QAを行う。
+1. 固定一次5問・15小問の解法経路を可視化する。
+2. 特性方程式、根分類、`ω_n`・`ζ`・`ω_d`、RLC初期条件を中心に構成する。
+3. Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしない。
+4. 未確認実車値や固定範囲外論点を追加しない。
+5. 作成後は全スライド表示QA・overflow・PPTX整合性を確認する。
