@@ -2,9 +2,9 @@
 
 更新日: 2026-09-15
 
-状態: `explanation_source_complete`
+状態: `explanation_pdf_complete`
 
-制作前 `EXAM_ALIGNMENT` を完了し、系列 `SPEC.md` の固定範囲だけで完結する第三種「機械」公式過去問5問を固定した。制作前独立検証は `5 / 5 PASS`。本更新では、固定5問から逆算した解説本文、解法アルゴリズム、基礎・本試験標準・複合の3段階例題を追加した。件数合わせの仕様外論点、未確認実車値は追加しない。
+制作前 `EXAM_ALIGNMENT` を完了し、系列 `SPEC.md` の固定範囲だけで完結する第三種「機械」公式過去問5問を固定した。制作前独立検証は `5 / 5 PASS`。固定5問から逆算した解説本文、解法アルゴリズム、基礎・本試験標準・複合の3段階例題を解説PDFへ反映し、200 dpi表示QAと文字抽出QAを完了した。件数合わせの仕様外論点、未確認実車値は追加しない。
 
 ## EXAM_ALIGNMENT
 
@@ -491,7 +491,10 @@ Prec,avg = Erec/t
 - 解説本文: 完了
 - 3段階例題: 完了
 - 固定5問の本文マッピング: `5 / 5 全件`
-- 解説PDF: 未着手
+- 解説PDF: 完了
+- 解説PDF: A4縦3ページ
+- 解説PDF 200 dpi表示QA: `3 / 3 PASS`
+- 解説PDF文字抽出QA: `PASS`
 - 練習問題source/PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
@@ -500,6 +503,10 @@ Prec,avg = Erec/t
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
+解説PDF: `09_regenerative_braking_explanation.pdf`
+
+QA記録: `09_regenerative_braking_explanation_pdf_qa.md`
+
 ## 次工程
 
-解説本文と3段階例題を正本として、Topic 09の解説PDFを作成する。固定EXAM_ALIGNMENT 5問、固定範囲、仮定値の明示を維持する。
+Topic 09の練習問題sourceを作成する。三種仕様どおり原則12問以上、少なくとも半数を五肢択一とし、固定EXAM_ALIGNMENT 5問から逆算した固定範囲だけを扱う。
