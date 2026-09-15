@@ -6,15 +6,15 @@
 
 Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、主source進捗記録同期、最終QAまで実施済み。
 
-最終QAは `NEEDS_REVISION / IN_PROGRESS`。技術内容・過去問対応・成果物QAはPASSだが、主sourceに制作前の旧進捗表現が1箇所残っている。
+最終QAは `NEEDS_REVISION / IN_PROGRESS`。技術内容・過去問対応・成果物QAはPASSで、未完了理由だった主sourceの旧進捗表現は今回現在地へ同期済み。最終QA再実施待ち。
 
 完成数: `7 / 21`
 
-current_status: `topic_08_final_qa_needs_revision`
+current_status: `topic_08_source_progress_synced`
 
 active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 
-次工程: 主sourceの残存旧進捗表現1箇所を現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答は変更しない。
+次工程: Topic 08最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答は変更しない。
 
 ## Topic 08 固定範囲
 
@@ -128,7 +128,7 @@ L0系・超電導リニアは `超電導磁石 → 地上コイル → 誘導電
 
 記録: `08_maglev_electromagnetic_induction_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+直近判定: `NEEDS_REVISION / IN_PROGRESS`
 
 PASS項目:
 - 必須成果物の実在
@@ -139,9 +139,8 @@ PASS項目:
 - 固定範囲境界
 - 技術本文・数式・例題・問題・正答の相互整合
 
-未完了理由:
-- 主sourceのEXAM_ALIGNMENT直後に `完成後は保存済み正答を先に見ず、完成教材だけでこの6小問を独立再解答する。` という制作前の旧進捗表現が1箇所残存。
+直近未完了理由だった主sourceの制作前旧進捗表現は、完成後独立再解答 `6 / 6 PASS`・教材外知識補完0件の現在地へ同期済み。source冒頭状態と次工程も現在地へ同期し、技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答は変更していない。
 
 ## 次に行うこと
 
-主sourceの残存旧進捗表現を、完成後独立再解答 `6 / 6 PASS` 済みの現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答は変更しない。その後、最終QAを再実施する。
+Topic 08の最終QAを再実施する。必須成果物、固定一次4問・6小問、完成後独立再解答 `6 / 6 PASS`、二次非採用判断、表示QA、source進捗整合、固定範囲境界を再確認し、全件PASSなら `completed` とする。
