@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 6 / 39
-- current_status: `topic_07_practice_pdf_resynced`
+- current_status: `topic_07_powerpoint_resynced`
 - last_completed_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
 - active_topic: `07 直流主回路の高出力化`
-- next_start: Topic 07のH21一次 問2(2)補強を解説画像PowerPointへ同期し、180 dpi全4スライド表示QA・overflow・PowerPoint ZIP整合性を再確認する。固定EXAM_ALIGNMENT・指定3グラフ・実車値は変更しない
+- next_start: Topic 07の補強済み完成教材だけを使い、固定一次4問＋二次1問・15対象項目を保存済み正答を先に見ずに再独立再解答する。公式解答・標準解答と照合し、教材外知識補完0件を確認する。固定EXAM_ALIGNMENTは変更しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -17,7 +17,7 @@
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
-- [ ] 07 直流主回路の高出力化 — H21一次 問2(2)不足のsource補強後、解説PDF・練習PDFへの同期と再QAまで完了。PowerPointは補強後sourceへ未同期。直近の完成後独立再解答は補強前教材に対する `14 / 15 PASS / NEEDS_REVISION` を維持
+- [ ] 07 直流主回路の高出力化 — H21一次 問2(2)不足のsource補強後、解説PDF・練習PDF・PowerPointへの同期と各QAまで完了。直近の完成後独立再解答は補強前教材に対する `14 / 15 PASS / NEEDS_REVISION`。補強済み完成教材だけでの再独立再解答は未実施
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -125,13 +125,17 @@
 - 固定範囲外追加: `0件`
 
 ## Topic 07 解説画像PowerPoint
-- `07_dc_main_circuit_high_output_images.pptx`: 既存版は完成済みだが、H21一次 問2(2)補強後sourceへ未同期
+- `07_dc_main_circuit_high_output_images.pptx`: H21一次 問2(2)補強後sourceへ同期済み
 - 16:9・4スライド
 - SPEC指定3グラフ・可視化対象: 3 / 3収録
-- 既存版180 dpi全4スライド Visual QA: `PASS`
+- H21一次 問2(2)「規約効率に用いる負荷損は規定の基準巻線温度へ補正した値を使う」をスライド3へ同期
+- 温度補正式・温度上昇計算・詳細熱設計の追加: `0件`
+- 180 dpi全4スライド Visual QA: `PASS`
 - overflow: `0件`
 - PowerPoint ZIP整合性: `PASS`
+- 日本語グリフ欠落: `0件`
 - 固定一次4問＋二次1問・15対象項目: 維持
+- SHA-256: `77bd13135ee4e314f3146068ed02d53ae8aba02883edf4e9d4d89ea9c7665bb3`
 - 未確認実車値の真値化: `0件`
 - 固定範囲外追加: `0件`
 
@@ -141,10 +145,8 @@
 - 補強前教材のみ品質ゲート: 一次 `12 / 13 PASS`、二次 `2 / 2 PASS`、合計 `14 / 15 PASS`
 - `FAIL`: H21一次 機械 問2(2)。負荷損を測定値から規定の基準巻線温度へ補正して扱う知識が、当時の完成教材に不足
 - source上の不足補強: `completed`
-- 解説PDFへの補強同期: `completed`
-- 練習PDFへの補強同期: `completed`
-- PowerPointへの補強同期: `未実施`
-- 補強済み教材だけでの再独立再解答: `未実施`
+- 解説PDF・練習PDF・PowerPointへの補強同期: `completed`
+- 補強済み完成教材だけでの再独立再解答: `未実施`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
@@ -169,4 +171,4 @@
 - 位相制御、サイリスタ点弧角、誘導電動機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱設計
 - 出典で確認できない100系・200系の編成出力、主回路総損失、効率、冷却容量、けん引力・速度特性
 
-次工程はH21一次 問2(2)補強を解説画像PowerPointへ同期し、180 dpi全スライド表示QA・overflow・ZIP整合性を再実施する。固定EXAM_ALIGNMENT・指定3グラフ・実車値は変更しない。
+次工程は補強済み完成教材だけで固定一次4問＋二次1問・15対象項目を再独立再解答し、公式解答・標準解答と照合する。教材外知識補完が1件でも必要ならPASSにせず、exact missing knowledgeを記録する。固定EXAM_ALIGNMENTは変更しない。
