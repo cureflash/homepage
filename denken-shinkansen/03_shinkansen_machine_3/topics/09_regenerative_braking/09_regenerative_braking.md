@@ -2,9 +2,9 @@
 
 更新日: 2026-09-15
 
-状態: `independent_reanswer_complete`
+状態: `completed`
 
-制作前 `EXAM_ALIGNMENT` を完了し、系列 `SPEC.md` の固定範囲だけで完結する第三種「機械」公式過去問5問を固定した。制作前独立検証は `5 / 5 PASS`。固定5問から逆算した解説本文、解法アルゴリズム、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source・PDF、解説画像PowerPointまで完成済み。完成教材だけを用いた固定5過去問の独立再解答も `5 / 5 PASS`。件数合わせの仕様外論点、未確認実車値は追加していない。
+制作前 `EXAM_ALIGNMENT` を完了し、系列 `SPEC.md` の固定範囲だけで完結する第三種「機械」公式過去問5問を固定した。制作前独立検証は `5 / 5 PASS`。固定5問から逆算した解説本文、解法アルゴリズム、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source・PDF、解説画像PowerPointまで完成済み。完成教材だけを用いた固定5過去問の独立再解答も `5 / 5 PASS`。最終QAも全件PASSとし、Topic 09を completed とする。件数合わせの仕様外論点、未確認実車値は追加していない。
 
 ## EXAM_ALIGNMENT
 
@@ -599,7 +599,7 @@ QA記録: `09_regenerative_braking_powerpoint_qa.md`
 - PowerPoint overflow: `0件`
 - PowerPoint ZIP整合性: `PASS`
 - 完成後独立再解答: `5 / 5 PASS`
-- 最終QA: 未実施
+- 最終QA: `PASS`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
@@ -618,6 +618,10 @@ PowerPoint: `09_regenerative_braking_images.pptx`
 
 PowerPoint QA記録: `09_regenerative_braking_powerpoint_qa.md`
 
+## 最終QA
+
+2026-09-15に実施。必須成果物の実在、固定EXAM_ALIGNMENT 5問の整合、完成後独立再解答 `5 / 5 PASS`、解説PDF・練習PDF・PowerPointの既存表示QA記録、source進捗整合、固定範囲境界を再確認し、全件PASS。教材外・固定範囲外知識による補完 `0件`、固定範囲外論点・未確認実車値の追加 `0件`。Topic 09を `completed` とする。
+
 ## 次工程
 
-Topic 09の最終QAを実施する。固定EXAM_ALIGNMENT 5問、固定範囲、完成後独立再解答結果は変更しない。
+Topic 10「新幹線の速度はどう自動制御される？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
