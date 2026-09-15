@@ -6,21 +6,21 @@
 
 Topic 01〜07は `completed`。
 
-Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで実施。制作前は `5 / 5問・9 / 9答案要素 PASS`、練習12問の独立計算QAは `12 / 12 PASS`、練習PDF表示QAは `5 / 5 PASS`、PowerPointは全5枚表示QA PASS・overflow 0件・PPTX ZIP整合性PASS。
+Topic 08 `積分 速度曲線の面積は距離` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、初回完成後独立再解答、不足前提3群の最小補強source/PDF、補強後の再独立解答まで実施。
 
-完成後独立再解答は `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`。積分操作自体ではなく、固定過去問を積分式へ接続する電気的前提3群が学習用教材に不足していた。教材外知識で補ってPASS扱いしていない。
+初回完成後独立再解答は `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`。不足はR8上の相電圧→線間電圧・線間波形、R3のリアクトル電圧符号・磁気エネルギー・導通終了、H28のサイリスタ導通対・無点弧時波形の3群だけだった。
 
-不足3群は `08_integral_distance_revision_supplement.md` へ固定範囲内で最小補強し、`08_integral_distance_revision_supplement.pdf` へ学習用追加教材として同期済み。R8上の相電圧→線間電圧・線間波形、R3のリアクトル電圧符号・磁気エネルギー・導通終了、H28の固定問のサイリスタ導通対・無点弧時波形だけを追加し、三相回路・整流回路・リアクトル・サイリスタの体系説明には拡張していない。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
+不足3群を `08_integral_distance_revision_supplement.md` / `.pdf` へ固定範囲内で最小補強後、完成教材だけで固定5問を再独立解答し、`5 / 5問・9 / 9答案要素 PASS`。公式解答との不一致0件、教材外知識補完0件。固定EXAM_ALIGNMENT変更、Topic 09〜11先取り、専門分野の体系説明追加、未確認新幹線実値追加はいずれも0件。
 
 完成数: `7 / 12`
 
-current_status: `topic_08_revision_supplement_pdf_complete`
+current_status: `topic_08_exam_reanswer_after_revision_complete`
 
 last_completed_topic: `07 微分② 速度を微分すると加速度`
 
 active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `Topic 08 補強後の完成教材だけで固定5問を再独立解答`
+next_start: `Topic 08 最終QA`
 
 ## Topic 07 完了記録
 
@@ -84,21 +84,7 @@ next_start: `Topic 08 補強後の完成教材だけで固定5問を再独立解
 - H28 機械 問16: 単相サイリスタ全波整流回路。波形面積と制御遅れ角から平均出力電圧を求める。
 - H24 機械 問10: 単相サイリスタ全波整流回路。`Vd=(1/π)∫_α^π √2Va sinθ dθ` を計算して制御遅れ角との関係を判定する。
 
-### 制作前独立計算・公式解答照合
-
-2026-09-15実施。公式問題の条件・波形・選択肢から再導出し、その後に電気技術者試験センターの公式解答PDFと照合した。
-
-- R8上 機械 問16: 独立 `(a)(2), (b)(2)` / 公式 `(a)(2), (b)(2)` / PASS
-- R3 機械 問16: 独立 `(a)(1), (b)(3)` / 公式 `(a)(1), (b)(3)` / PASS
-- R1 理論 問18: 独立 `(a)(1), (b)(4)` / 公式 `(a)(1), (b)(4)` / PASS
-- H28 機械 問16: 独立 `(a)(5), (b)(2)` / 公式 `(a)(5), (b)(2)` / PASS
-- H24 機械 問10: 独立 `(5)` / 公式 `(5)`。PASS
-
-判定: `5 / 5問・9 / 9答案要素 PASS`。
-
-固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、未確認新幹線実値追加0件。整流回路・A-D変換器そのものの装置解説は既習事項のままとし、Topic 08へ仕様追加していない。
-
-詳細計算は `topics/08_integral_distance/08_integral_distance.md` に記録済み。
+制作前独立計算・公式解答照合は `5 / 5問・9 / 9答案要素 PASS`。固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、未確認新幹線実値追加0件。
 
 ### 除外方針
 
@@ -108,139 +94,77 @@ next_start: `Topic 08 補強後の完成教材だけで固定5問を再独立解
 - H28 理論 問3: 磁界・Biot-Savartの専門論点が支配的で固定範囲外。
 - R5下 機械 問18(b): 制御系の積分要素であり、伝達関数・制御理論が主題。
 
+## Topic 08 成果物・QA
+
 ### 解説本文＋3段階例題
 
-主sourceへ固定EXAM_ALIGNMENTから逆算した解説本文を追加済み。
+主source: `topics/08_integral_distance/08_integral_distance.md`
 
-収録内容:
-- 不定積分・原始関数・積分定数
-- 定積分と符号付き面積
-- 多項式・正弦・余弦の基本積分
-- `θ=ωt+φ` の必要範囲の置換
-- 波形平均と区分積分
-- 二重積分形A-D変換器を面積・蓄積量の釣合いとして読む方法
-- `x=∫v(t)dt`
-- `t=∫dx/v(x)`
-- `a=v dv/dx` から `v²-v0²=2a(x-x0)` の導出
-- 基礎／本試験標準／複合の3段階例題
-- 固定5問から教材節への対応表
-
-新幹線の数値例は積分説明用の仮定と明記し、未確認実車値は使用していない。
+固定5問から逆算し、不定積分・定積分・符号付き面積、多項式・正弦・余弦の基本積分、必要範囲の置換、波形平均・区分積分、面積・蓄積量の釣合い、`x=∫v(t)dt`、`t=∫dx/v(x)`、`a=v dv/dx` から一定加速度式への導出、3段階例題を収録。新幹線の数値例は仮定と明記。
 
 ### 解説PDF
 
-成果物: `topics/08_integral_distance/08_integral_distance_explanation.pdf`
+`topics/08_integral_distance/08_integral_distance_explanation.pdf`
 
 - A4縦4ページ
-- 主sourceの固定範囲、3段階例題、固定5過去問への教材内対応を収録
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: PASS
-- クリッピング、重なり、文字化け: 0件
-- 固定EXAM_ALIGNMENT変更: 0件
-- Topic 09〜11先取り、未確認新幹線実値追加: 0件
+- 200 dpi表示QA `4 / 4 PASS`
+- 文字抽出QA PASS
+- クリッピング、重なり、文字化け0件
 
-### 練習問題source
+### 練習source / PDF
 
-成果物: `topics/08_integral_distance/08_integral_distance_practice.md`
+- `topics/08_integral_distance/08_integral_distance_practice.md`
+- `topics/08_integral_distance/08_integral_distance_practice.pdf`
 
-- 全12問・全問五肢択一
-- 難易度: 基礎3 / 標準7 / 複合2
-- 固定5過去問の数学要求へ全件接続
-- 正弦波定積分、符号付き面積、波形平均、区分積分、面積・蓄積量の釣合いを収録
-- 系列SPEC固定の `x=∫vdt`、`t=∫dx/v(x)`、一定加速度式の積分導出も範囲内で収録
-- 独立計算・正答一意性QA: `12 / 12 PASS`
-- 固定EXAM_ALIGNMENT変更: 0件
-- Topic 09〜11先取り、未確認新幹線実値追加: 0件
-
-### 練習PDF
-
-成果物: `topics/08_integral_distance/08_integral_distance_practice.pdf`
-
-- A4縦5ページ
-- 練習sourceの全12問・全問五肢択一と全問の完全解説を収録
-- 固定5過去問への対応表、Topic 08固定範囲との対応を収録
-- 200 dpi全ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: PASS
-- 主要計算再検算: `12 / 12 PASS`
-- クリッピング、重なり、文字化け: 0件
-- 固定EXAM_ALIGNMENT変更: 0件
-- Topic 09〜11先取り、未確認新幹線実値追加: 0件
+全12問・全問五肢択一、基礎3／標準7／複合2。独立計算・正答一意性QA `12 / 12 PASS`。PDFはA4縦5ページ、200 dpi表示QA `5 / 5 PASS`、文字抽出QA PASS。
 
 ### 解説画像PowerPoint
 
-成果物: `topics/08_integral_distance/08_integral_distance_images.pptx`
+`topics/08_integral_distance/08_integral_distance_images.pptx`
 
-- 16:9・5枚
-- 定積分と符号付き面積、波形平均、区分積分、面積・蓄積量の釣合いを固定5過去問へ接続
-- `x=∫v(t)dt`、`t=∫dx/v(x)`、`a=v dv/dx` から一定加速度式への導出を系列SPEC固定範囲内で可視化
-- 全5枚表示QA: PASS
-- overflow: 0件
-- グラフと式の整合確認: PASS
-- PPTX ZIP整合性: PASS
+16:9・5枚。全5枚表示QA PASS、overflow 0件、グラフと式の整合確認PASS、PPTX ZIP整合性PASS。
+
+### 初回完成後独立再解答
+
+`topics/08_integral_distance/08_integral_distance_exam_reanswer.md`
+
+初回判定は `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`。
+
+不足3群:
+- R8上 機械 問16: 相電圧→線間電圧・線間波形
+- R3 機械 問16(a): リアクトル電圧符号・磁気エネルギー・導通終了
+- H28 機械 問16(a): サイリスタ導通対・無点弧時波形
+
+教材外知識を補ってPASS扱いした件数0件。
+
+### 独立再解答FAIL補強
+
+- source: `topics/08_integral_distance/08_integral_distance_revision_supplement.md`
+- PDF: `topics/08_integral_distance/08_integral_distance_revision_supplement.pdf`
+
+不足3群だけを固定範囲内で最小補強。PDFはA4縦2ページ、200 dpi表示QA `2 / 2 PASS`、文字抽出QA PASS。三相回路・整流回路・リアクトル・サイリスタの体系説明追加0件。
+
+### 補強後の再独立解答
+
+2026-09-16実施。補強PDFを含む完成教材だけから固定5問・9答案要素を再導出し、その後に公式解答と照合した。
+
+- R8上 機械 問16: `(a)(2), (b)(2)` / PASS
+- R3 機械 問16: `(a)(1), (b)(3)` / PASS
+- R1 理論 問18: `(a)(1), (b)(4)` / PASS
+- H28 機械 問16: `(a)(5), (b)(2)` / PASS
+- H24 機械 問10: `(5)` / PASS
+
+判定: `5 / 5問・9 / 9答案要素 PASS`。
+
+- 公式解答との不一致: 0件
+- 教材外知識補完: 0件
 - 固定EXAM_ALIGNMENT変更: 0件
-- Topic 09〜11先取り、未確認新幹線実値追加: 0件
+- Topic 09〜11先取り: 0件
+- 専門分野の体系説明追加: 0件
+- 未確認新幹線実値追加: 0件
 
-### 完成後独立再解答
-
-成果物: `topics/08_integral_distance/08_integral_distance_exam_reanswer.md`
-
-判定: `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`。
-
-PASS:
-- R1 理論 問18: (a)(1), (b)(4)
-- H24 機械 問10: (5)
-- R3 機械 問16(b): (3)
-- H28 機械 問16(b): (2)
-
-FAIL理由は数学計算ではなく、公式問題文から積分式へ入るための前提不足。
-
-- R8上 機械 問16: 相電圧→線間電圧 `VLL=√3Vph` と、相電圧から線間電圧の区間波形を作る接続が学習用教材にない。
-- R3 機械 問16(a): `vL=Ldi/dt` の符号、`WL=(1/2)Li²`、電流0まで導通が続くという接続が学習用教材にない。
-- H28 機械 問16(a): 半周期ごとのサイリスタ導通対と、無点弧時に該当半周期の出力が消えるという波形選択の接続が学習用教材にない。
-
-固定EXAM_ALIGNMENT変更0件。教材外知識を補ってPASS扱いした件数0件。Topic 09〜11先取り0件。未確認新幹線実値追加0件。
-
-### 独立再解答FAIL補強source
-
-成果物: `topics/08_integral_distance/08_integral_distance_revision_supplement.md`
-
-2026-09-16、上記FAIL 3群だけを固定範囲内で最小補強した。
-
-- R8上 機械 問16: `vab=va-vb`、`VLL=√3Vs`、`VLL,max=√6Vs`、最大線間電圧の `π/3` 区間へ接続
-- R3 機械 問16(a): `vL=Ldi/dt` の符号、`WL=(1/2)Li²`、電流0で導通終了する条件へ接続
-- H28 機械 問16(a): 固定問の `T1・T4` / `T2・T3` 導通対と、無点弧で該当半周期の出力区間が消える条件へ接続
-
-不足前提への対応 `3 / 3`。三相回路・整流回路・リアクトル・サイリスタの体系説明追加0件、固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、未確認新幹線実値追加0件。
-
-### 学習用補強PDF
-
-成果物: `topics/08_integral_distance/08_integral_distance_revision_supplement.pdf`
-
-- A4縦2ページ
-- R8上・R3・H28の不足前提と既存積分式への接続だけを収録
-- 200 dpi表示QA: `2 / 2 PASS`
-- 文字抽出QA: PASS
-- クリッピング、重なり、文字化け: 0件
-- 固定EXAM_ALIGNMENT変更: 0件
-- Topic 09〜11先取り、専門分野の体系説明追加、未確認新幹線実値追加: 0件
-
-補強PDF同期まで完了。品質ゲートの再判定はまだ実施していない。
-
-### source
-
-- `topics/08_integral_distance/08_integral_distance.md`
-- `topics/08_integral_distance/08_integral_distance_explanation.pdf`
-- `topics/08_integral_distance/08_integral_distance_practice.md`
-- `topics/08_integral_distance/08_integral_distance_practice.pdf`
-- `topics/08_integral_distance/08_integral_distance_images.pptx`
-- `topics/08_integral_distance/08_integral_distance_exam_reanswer.md`
-- `topics/08_integral_distance/08_integral_distance_revision_supplement.md`
-- `topics/08_integral_distance/08_integral_distance_revision_supplement.pdf`
-
-参考教材は電験王、電験三種まとめました、電気主任技術者のナレッジノート等を複数系統確認。e-sysnetは検索対象に含めたが、固定5問へ直接対応するページを確認できなかったため無関係なページは引用していない。
+過去問対応品質ゲートはPASS。ただし最終QA未実施のためTopic 08はまだ `completed` にしない。
 
 ## 次に行うこと
 
-補強PDFを含む完成教材だけで固定5問・9答案要素を、保存済み正答を先に見ず再独立解答する。教材外知識による補完は禁止する。
-
-PASS後に最終QAへ進む。Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は先取りしない。
+Topic 08の最終QAを実施し、必須成果物、固定EXAM_ALIGNMENT、補強後 `5 / 5問・9 / 9答案要素 PASS`、PDF/PPTX表示QA、source進捗整合、仕様境界を確認する。
