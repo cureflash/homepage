@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 30 / 38
-- current_status: `topic_31_powerpoint_complete`
+- current_status: `topic_31_independent_reanswer_complete`
 - last_completed_topic: `30 ATC① 新幹線は列車をどう検知する？`
 - active_topic: `31 ATC② 地上から車上へどう情報を送る？`
-- next_start: Topic 31の完成後独立再解答。固定5問・6対象項目を完成教材のみで再解答し、公式解答と照合する
+- next_start: Topic 31の最終QA。必須成果物、完成後独立再解答 `6 / 6 PASS`、表示QA、進捗記録整合、固定範囲境界を再確認する
 
 ## 新品質ゲート進捗
 - [x] 01〜30 — PASS
-- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 解説本文＋3段階例題＋解説PDF＋練習source/PDF＋解説画像PowerPoint完成（固定5問・6対象項目を `6 / 6` マッピング）
+- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 解説本文＋3段階例題＋解説PDF＋練習source/PDF＋解説画像PowerPoint＋完成後独立再解答完成（固定5問・6対象項目を `6 / 6 PASS`）
 
 ## 31 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、信号、周波数、情報伝送、センサ、デジタル信号、論理判断。
@@ -25,7 +25,9 @@
 6. R4上 機械 問14 — センサ・アナログ/デジタル・A-D/D-A・インタフェース — `2` — PASS
 
 制作前独立解答: `6 / 6 PASS`。
+完成後独立再解答: `6 / 6 PASS`。
 公式解答との不一致: `0件`。
+教材外知識補完: `0件`。
 固定範囲外知識による正答補完: `0件`。
 Topic 32の速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR追加: `0件`。
 未確認新幹線ATC実車値追加: `0件`。
@@ -93,6 +95,20 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - PPTX ZIP整合性: PASS
 - Topic 32範囲追加: `0件`
 - 未確認実車値追加: `0件`
+
+## 31 完成後独立再解答
+- R7下 機械 問14 — 条件分岐・反復を追跡し `(A,B)=(51,23)` → 選択肢3 — PASS
+- R5上 機械 問18(a) — `T=1/(2.5 GHz)=0.4 ns` → 選択肢3 — PASS
+- R5上 機械 問18(b) — `f=4/(20 ns)=200 MHz` → 選択肢4 — PASS
+- R4下 機械 問13 — 雑音・多重化・変調波・標本化・圧縮を対応 → 選択肢3 — PASS
+- R4下 理論 問14 — 時間波形表示にFFTは必須ではない → 選択肢5 — PASS
+- R4上 機械 問14 — アナログ/デジタル・A-D/D-A・インタフェースを対応 → 選択肢2 — PASS
+- 合計: `6 / 6 PASS`
+- 公式解答との不一致: `0件`
+- 教材外知識補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+- 記録: `topics/31_atc_signal_transmission/31_atc_signal_transmission_final_qa.md`
 
 ## 30 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知。
@@ -174,4 +190,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 30 `ATC① 新幹線は列車をどう検知する？` は固定5問の完成後独立再解答 `5 / 5 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 31 `ATC② 地上から車上へどう情報を送る？` は解説画像PowerPointまで完了。次は固定5問・6対象項目を完成教材のみで独立再解答し、公式解答と照合する。
+Topic 31 `ATC② 地上から車上へどう情報を送る？` は完成後独立再解答まで完了。固定5問・6対象項目は `6 / 6 PASS`、教材外知識補完・固定範囲外追加・未確認実車値追加はいずれも0件。次は最終QAを実施する。
