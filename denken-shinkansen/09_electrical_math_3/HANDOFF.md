@@ -6,21 +6,21 @@
 
 Topic 01〜07は `completed`。
 
-Topic 08 `積分 速度曲線の面積は距離` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、初回完成後独立再解答、不足前提3群の最小補強source/PDF、補強後の再独立解答、最終QAまで実施。
+Topic 08 `積分 速度曲線の面積は距離` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、初回完成後独立再解答、不足前提3群の最小補強source/PDF、補強後の再独立解答、初回最終QAまで実施。
 
 補強後の完成教材だけによる固定5問・9答案要素の再独立解答は `5 / 5問・9 / 9答案要素 PASS`。技術内容、固定EXAM_ALIGNMENT、必須成果物、練習QA、既存表示QA記録、仕様境界はPASS。
 
-最終QAは `NEEDS_REVISION / IN_PROGRESS`。唯一の未完了理由は進捗記録2箇所で、主source冒頭が「解説本文＋3段階例題まで完了／次は解説PDF」、練習source末尾が「次は練習PDF作成」の旧記録のまま。実際には後続成果物まで完成しているため、この2箇所だけを実成果物へ同期してから最終QAを再判定する。
+初回最終QAで唯一の未完了理由だった進捗記録2箇所は、主source冒頭と練習source末尾とも実成果物へ同期済み。技術本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・補強成果物・独立再解答結果は変更していない。次は最終QAを再判定する。
 
 完成数: `7 / 12`
 
-current_status: `topic_08_final_qa_needs_revision`
+current_status: `topic_08_source_progress_synced`
 
 last_completed_topic: `07 微分② 速度を微分すると加速度`
 
 active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `主source・練習sourceの旧進捗記録2箇所を実成果物へ同期`
+next_start: `Topic 08 最終QA再判定`
 
 ## Topic 07 完了記録
 
@@ -167,7 +167,7 @@ next_start: `主source・練習sourceの旧進捗記録2箇所を実成果物へ
 
 `topics/08_integral_distance/08_integral_distance_final_qa.md`
 
-判定は `NEEDS_REVISION / IN_PROGRESS`。
+初回判定は `NEEDS_REVISION / IN_PROGRESS`。
 
 PASS項目:
 - 必須成果物の実在
@@ -178,13 +178,13 @@ PASS項目:
 - PDF/PPTXの既存表示QA記録
 - 固定範囲・後続Topic境界
 
-FAIL項目はsource進捗整合のみ。
+初回FAIL項目はsource進捗整合のみだった。
 
-- 主source `08_integral_distance.md` 冒頭 `## 状態`: 「解説本文＋3段階例題まで完了」「次工程は解説PDF」の旧記録
-- 練習source `08_integral_distance_practice.md` 末尾: 「次工程は練習PDF作成」の旧記録
+- 主source `08_integral_distance.md` 冒頭 `## 状態`
+- 練習source `08_integral_distance_practice.md` 末尾
 
-技術本文・数式・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・補強成果物・独立再解答は変更せず、この2箇所だけを現在地へ同期する。
+この2箇所は2026-09-16に実成果物へ同期済み。技術本文・数式・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・補強成果物・独立再解答は変更していない。
 
 ## 次に行うこと
 
-主source冒頭と練習source末尾の旧進捗記録2箇所だけを、実在成果物・補強後独立再解答・最終QA実施済みの現在地へ同期する。その後にTopic 08最終QAを再判定する。
+Topic 08の最終QAを再判定する。初回最終QAでFAILだったsource進捗整合が解消していることを確認し、他の品質ゲートを再確認したうえで `PASS / completed` 可否を判定する。
