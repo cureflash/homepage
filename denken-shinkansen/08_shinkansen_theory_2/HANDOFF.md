@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。
+Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、主source進捗記録同期まで完了。
 
 完成数: `7 / 21`
 
-current_status: `topic_08_independent_reanswer_complete`
+current_status: `topic_08_source_progress_synced`
 
 active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 
-次工程: 主sourceの旧進捗2箇所を実成果物へ同期する。
+次工程: Topic 08の最終QAを実施する。
 
 ## Topic 08 固定範囲
 
@@ -127,15 +127,14 @@ L0系・超電導リニアは `超電導磁石 → 地上コイル → 誘導電
 - 固定範囲外論点追加: `0件`
 - 超電導物性・未確認実設備値追加: `0件`
 
-## 既知の進捗記録不整合
+## 進捗記録整合
 
-主source `08_maglev_electromagnetic_induction.md` の技術本文・固定EXAM_ALIGNMENTは有効だが、進捗記録が旧状態のまま。
+主source `08_maglev_electromagnetic_induction.md` の旧進捗2箇所は実成果物へ同期済み。
 
-1. 冒頭に「解説PDF、練習問題source＋練習PDF、PowerPoint、完成後独立再解答、最終QAは未実施」と残っている。
-2. 末尾 `## 次工程` が「解説PDFを作成し、全ページ表示QA」のまま。
-
-技術内容、固定EXAM_ALIGNMENT、数式、例題、問題、PDF/PPTX、独立再解答結果は変更しない。
+- 冒頭状態欄は、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了した現在地を記録
+- 末尾 `## 次工程` は最終QAへ更新
+- 技術本文、固定EXAM_ALIGNMENT、数式、例題、問題、PDF/PPTX、独立再解答結果は変更していない
 
 ## 次に行うこと
 
-主sourceの上記2箇所だけを実成果物へ同期する。その後、必須成果物、固定EXAM_ALIGNMENT、独立再解答 `6 / 6 PASS`、PDF/PPTX表示QA、source進捗整合、固定範囲境界を確認する最終QAを実施し、全件PASSの場合のみ `completed` とする。
+必須成果物、固定EXAM_ALIGNMENT、独立再解答 `6 / 6 PASS`、PDF/PPTX表示QA、source進捗整合、固定範囲境界を確認する最終QAを実施する。全件PASSの場合のみ `completed` とする。
