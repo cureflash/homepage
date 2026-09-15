@@ -9,7 +9,7 @@ Topic 01〜08は最終QAまで `PASS / completed`。
 
 active topic: `09 誘導電動機を自由に操るには？`
 
-current status: `topic_09_images_pptx_complete`
+current status: `topic_09_independent_reanswer_complete`
 
 ## Topic 09 固定EXAM_ALIGNMENT
 固定過去問:
@@ -19,7 +19,7 @@ current status: `topic_09_images_pptx_complete`
 - R04 二次 機械・制御 問3: (6)
 - R02 二次 機械・制御 問1: (1)〜(7)
 
-一次3問＋二次記述2問、計5問。ゲート対象18小問。制作前独立検証 `18 / 18 PASS`。
+一次3問＋二次記述2問、計5問。ゲート対象18小問。制作前独立検証 `18 / 18 PASS`、完成後独立再解答 `18 / 18 PASS`。
 
 固定範囲:
 - V/f制御
@@ -62,8 +62,18 @@ current status: `topic_09_images_pptx_complete`
 - 200 dpi全スライド表示QA: `4 / 4 PASS`
 - overflow検査: 0件
 - PPTX ZIP整合性: PASS
+- 完成後独立再解答: `18 / 18 PASS`
+- 教材外知識補完: 0件
+- 固定EXAM_ALIGNMENT・固定範囲・問題・正答の変更: 0件
 - 固定範囲外追加: 0件
 - 未確認300系実車制御値追加: 0件
+
+## 完成後独立再解答結果
+- R02 一次 機械 問3 (1)〜(5): `(ワ, ハ, ル, ロ, ト)`、`5 / 5 PASS`
+- H26 一次 機械 問5 (3)〜(5): `(カ, ヲ, ニ)`、`3 / 3 PASS`
+- H25 一次 機械 問3 (3),(4): `(ニ, ル)`、`2 / 2 PASS`
+- R04 二次 機械・制御 問3 (6): 50 Hz→25 Hzで信号波振幅 `0.9→0.45`、周期2倍、`1 / 1 PASS`
+- R02 二次 機械・制御 問1 (1)〜(7): `1800, 1710, 90 min^-1, 3 Hz, 90, 1800, 0 min^-1`、`7 / 7 PASS`
 
 解説source:
 - `topics/09_induction_motor_control/09_induction_motor_control.md`
@@ -89,10 +99,11 @@ current status: `topic_09_images_pptx_complete`
 - ベクトル制御は磁束生成成分・トルク生成成分、d軸/q軸の概念まで。
 
 ## 次に行うこと
-Topic 09の完成教材だけで固定5問・18小問を独立再解答する。
+Topic 09の最終QAを実施する。
 
-1. 保存済みの公式解答・標準解答を先に見ずに再解答する。
-2. 解説source・解説PDF・練習source/PDF・PowerPointの内容だけで式選択・途中式・理由説明まで組み立てる。
-3. 18小問すべてについて正答可否と教材外知識補完の有無を記録する。
-4. Topic 10以降、厳密Park/Clarke変換、制御器設計、センサレス推定器設計、未確認300系実車値を追加しない。
-5. `18 / 18 PASS` かつ教材外知識補完0件なら、次に最終QAを行う。
+1. 必須成果物（source、解説PDF、練習source/PDF、PowerPoint）の存在と内容整合を確認する。
+2. 固定一次3問＋二次2問・18小問のEXAM_ALIGNMENTと完成後独立再解答 `18 / 18 PASS` を確認する。
+3. PDF/PPTXの表示QA・文字抽出QA・overflow/PPTX整合性記録を確認する。
+4. source・STATUS・HANDOFFの進捗記録が現在地と一致しているか確認する。
+5. Topic 10以降、厳密Park/Clarke変換、制御器設計、センサレス推定器設計、未確認300系実車値が混入していないことを確認する。
+6. 全品質ゲートPASSならTopic 09を `completed` とし、完成数を `9 / 22` に更新する。
