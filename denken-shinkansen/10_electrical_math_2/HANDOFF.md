@@ -8,11 +8,11 @@ Topic 01〜08は `completed`。
 
 完成数: `8 / 20`
 
-current_status: `topic_09_practice_pdf_complete`
+current_status: `topic_09_powerpoint_complete`
 
 active_topic: `09 ラプラス変換`
 
-次工程: Topic 09の解説画像PowerPoint。
+次工程: Topic 09の完成後独立再解答。
 
 ## 上位仕様
 
@@ -154,6 +154,9 @@ source:
 練習PDF:
 `topics/09_laplace_transform/09_laplace_transform_practice.pdf`
 
+PowerPoint:
+`topics/09_laplace_transform/09_laplace_transform_images.pptx`
+
 ### Topic 09 固定範囲
 
 - ラプラス変換の定義
@@ -263,8 +266,23 @@ QA:
 - 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
+### Topic 09 解説画像PowerPoint
+
+`topics/09_laplace_transform/09_laplace_transform_images.pptx`
+
+QA:
+- 16:9・5枚
+- 固定二次5問・6対象設問を全件可視化
+- 定義・代表変換対・微分/積分の変換・初期値・RLC変換・部分分数分解・逆変換を収録
+- 全スライド表示QA `5 / 5 PASS`
+- overflow: 0件
+- PPTX ZIP/XML整合性・再レンダリング: `PASS`
+- Topic 10内容の先取り: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
 ## 次に行うこと
 
-Topic 09 `ラプラス変換` の解説画像PowerPointを1段階進める。
+Topic 09 `ラプラス変換` の完成後独立再解答を1段階進める。
 
-固定二次5問・6対象設問と本文・練習の要点を16:9で可視化し、全スライド表示QA・overflow確認・PPTX整合性確認を行う。
+固定二次5問・6対象設問を、保存済み正答を先に見ず、完成教材だけで再解答し、教材外知識補完の有無を記録する。
