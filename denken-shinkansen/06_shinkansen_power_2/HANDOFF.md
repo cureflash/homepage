@@ -1,52 +1,53 @@
 # HANDOFF
 
-updated: 2026-09-15
+updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `07`
-current_status: `topic_07_powerpoint_complete`
+current_status: `topic_07_independent_reanswer_complete`
 
 ## 今回完了
 
-Topic 07「三相電力をどう25kVの単相へ変える？」の解説画像PowerPointを完成した。
+Topic 07「三相電力をどう25kVの単相へ変える？」の完成後独立再解答を完了した。
 
 成果物:
-- `topics/07_feeding_transformer/07_feeding_transformer_images.pptx`
-- `topics/07_feeding_transformer/07_feeding_transformer_powerpoint_qa.md`
+- `topics/07_feeding_transformer/07_feeding_transformer_independent_reanswer.md`
 
-構成:
-1. 対称三相交流とフェーザ
-2. スコット結線の構成と `√3/2`
-3. 平衡時の一次三相電流と結線利用率
-4. 三相側不平衡と逆相
-5. スコット・変形ウッドブリッジ・ルーフ・デルタ比較
+結果:
+- H23一次「理論」問6: `5 / 5空欄 PASS`
+- H23二次「機械・制御」問2: `7 / 7答案要素 PASS`
+- 合計: `2 / 2問 PASS`、`12 / 12答案要素 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 後続Topic知識依存: `0件`
+- 未確認実設備値依存: `0件`
 
-QA:
-- 16:9 `5スライド`
-- 1601×900全スライド表示QA `5 / 5 PASS`
-- `slides_test.py`: `PASS / No overflow detected`
-- PPTX ZIP整合性: `PASS`
-- 固定10項目カバレッジ `10 / 10`
-- 正式2過去問要求への接続 `2 / 2`
-- 固定範囲外論点追加 `0件`
-- 未確認実設備値追加 `0件`
+完成教材の説明・公式・解法手順だけを解答根拠として再構成し、答案確定後に公式解答・標準解答と照合した。
 
 ## 固定した公式過去問
 
 1. 平成23年度 第二種一次「理論」問6
    - 対称三相交流の複素フェーザ
    - 相間電流、電流フェーザ合成、実効値
-   - 制作前独立検証 `5 / 5空欄 PASS`
+   - 完成後再解答 `5 / 5空欄 PASS`
 2. 平成23年度 第二種二次「機械・制御」問2
    - スコット結線
    - 主座/T座巻数比
    - 一次三相電流
    - 巻線容量
    - 結線利用率
-   - 制作前独立検証 `7 / 7答案要素 PASS`
+   - 完成後再解答 `7 / 7答案要素 PASS`
 
 合計 `2 / 2問 PASS`、`12 / 12答案要素 PASS`。固定範囲外知識補完は0件。
 
-PowerPointではH23一次問6のフェーザ解法をSlide 1、H23二次問2のスコット結線計算をSlides 2–3へ接続した。変形ウッドブリッジ・ルーフ・デルタは現行公式アーカイブで直接問題を確定できていないため、正式過去問件数へ水増しせず、SPEC固定事項としてSlide 5で構成比較のみ扱った。
+## 現在の必須成果物
+
+- `topics/07_feeding_transformer/07_feeding_transformer.md`
+- `topics/07_feeding_transformer/07_feeding_transformer_explanation.pdf`
+- `topics/07_feeding_transformer/07_feeding_transformer_practice.md`
+- `topics/07_feeding_transformer/07_feeding_transformer_practice.pdf`
+- `topics/07_feeding_transformer/07_feeding_transformer_images.pptx`
+- `topics/07_feeding_transformer/07_feeding_transformer_powerpoint_qa.md`
+- `topics/07_feeding_transformer/07_feeding_transformer_independent_reanswer.md`
 
 ## 境界
 
@@ -72,9 +73,11 @@ Topic 07固定範囲は、三相交流、単相負荷、相変換、スコット
 
 ## 次に行う
 
-Topic 07の完成後独立再解答のみを実施する。
+Topic 07の最終QAのみを実施する。
 
-- 固定EXAM_ALIGNMENTの一次1問＋二次1問を対象にする
-- 完成教材だけを使い、保存済み正答・公式解答を先に見ない
-- 固定範囲外知識・未確認実設備値で補完しない
-- 最終QAにはまだ進まない
+- 必須成果物の実在を確認する
+- 固定EXAM_ALIGNMENT一次1問＋二次1問の完成後再解答 `2 / 2問・12 / 12答案要素 PASS` を確認する
+- 練習15問、解説PDF、練習PDF、PowerPointのQA記録を確認する
+- 固定範囲外追加が0件であることを確認する
+- 主source・STATUS・HANDOFFの進捗記録整合を確認する
+- 全件PASSの場合のみ `completed` とする
