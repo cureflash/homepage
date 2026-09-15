@@ -3,11 +3,11 @@
 updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `08`
-current_status: `topic_08_explanation_pdf_complete`
+current_status: `topic_08_practice_source_complete`
 
 ## 今回完了
 
-Topic 08「主変圧器を％インピーダンスで見る」の解説PDFを完成した。
+Topic 08「主変圧器を％インピーダンスで見る」の練習問題・完全解説sourceを完成した。
 
 正式固定4問は変更なし:
 1. R7 二次「電力・管理」問3 — `2 / 2答案要素 PASS`
@@ -17,20 +17,20 @@ Topic 08「主変圧器を％インピーダンスで見る」の解説PDFを完
 
 制作前独立再解答は一次 `5 / 5空欄`、二次 `12 / 12答案要素`、合計 `4 / 4問・17 / 17答案要素 PASS` を維持した。
 
-## 解説PDF
+## 練習source
 
-- ファイル: `topics/08_transformer_percent_impedance/08_transformer_percent_impedance_explanation.pdf`
-- A4縦: `3ページ`
-- 200 dpi表示QA: `3 / 3 PASS`
-- 文字抽出QA: `PASS`
-- 固定9項目収録: `9 / 9`
+- ファイル: `topics/08_transformer_percent_impedance/08_transformer_percent_impedance_practice.md`
+- 全15問
+- 基礎: 4問
+- 本試験標準: 8問
+- 複合・応用: 3問
+- 二種一次型五肢択一: 10問
+- 二種二次型記述: 5問
+- 全問完全解説付き
+- 数値・論理QA: `15 / 15 PASS`
+- 一次正答一意性: `10 / 10 PASS`
+- 固定9項目: `9 / 9`
 - 正式4過去問要求の接続: `4 / 4問・17 / 17答案要素`
-- 3段階例題: `3 / 3`
-- 主要数値再確認: `3.50 kA / 400 MV·A / 158.0 kV / 32 MV·A / 48 MV·A / 0.262 kA`
-- ファイルサイズ: `3748 bytes`
-- SHA-256: `ad09fe19cc305635b1d65a4ea3e818ecc270cf3b6852a72bc9e5807c89704d1c`
-
-表示上の文字欠け、重なり、ページ外は確認されなかった。数式・単位もsourceと照合した。
 
 ## Topic 08 境界
 
@@ -54,12 +54,14 @@ Topic 08「主変圧器を％インピーダンスで見る」の解説PDFを完
 - 故障種別別の短絡解析
 - 保護協調
 
-送電線インピーダンスや遮断電流が過去問中に与えられる場合は既知条件としてのみ使用する。
+送電線インピーダンスや遮断電流は問題中の既知条件としてのみ使用した。
 
 ## QA
 
 - 固定9項目: `9 / 9`
 - 正式過去問要求: `4 / 4問・17 / 17答案要素`
+- 練習問題数値・論理QA: `15 / 15 PASS`
+- 一次正答一意性: `10 / 10 PASS`
 - 固定範囲外論点追加: `0件`
 - 後続Topic依存: `0件`
 - 未確認実設備値追加: `0件`
@@ -68,4 +70,4 @@ Topic 08「主変圧器を％インピーダンスで見る」の解説PDFを完
 
 ## 次に行う
 
-Topic 08の練習問題・完全解説sourceを作成する。二種一次型に加え、二次「電力・管理」に接続する記述式を含める。固定EXAM_ALIGNMENT・正式4過去問・固定9項目は変更しない。
+Topic 08の練習PDFを作成する。`08_transformer_percent_impedance_practice.md` を正本とし、全15問・完全解説・数式・単位・選択肢を欠落なく収録する。固定EXAM_ALIGNMENT・正式4過去問・固定9項目は変更しない。
