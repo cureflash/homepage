@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_powerpoint_exam_alignment_synced`
-- last_completed_topic: `06 275,000Vをどうやって25,000Vにする？`
-- active_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
-- next_start: Topic 07最終QAを再判定する
+- exam_aligned_completed_topics: 7 / 16
+- current_status: `topic_07_completed`
+- last_completed_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
+- active_topic: `08 新幹線の変電所はなぜ数十kmおき？`
+- next_start: Topic 08制作前EXAM_ALIGNMENTを行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -17,7 +17,7 @@
 - [x] 04 東京―佐世保「原子力新幹線」 — completed
 - [x] 05 新幹線を再エネだけで走らせられる？ — completed
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
-- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 改定EXAM_ALIGNMENT 3問の完成後独立再解答 `3 / 3 PASS`、教材外知識補完0件。練習PDF QAとPowerPoint Slide 4・PowerPoint QAを改定3問へ同期し、PowerPoint再表示QA・はみ出し・ZIP整合性PASS。最終QA再判定前のため未完了
+- [x] 07 なぜ三相交流をそのまま架線へ流さない？ — completed。改定EXAM_ALIGNMENT 3問を完成教材だけで独立再解答し `3 / 3 PASS`、教材外知識補完0件。練習PDF QA・PowerPoint Slide 4・PowerPoint QAを現行3問へ同期し、最終QA PASS
 - [ ] 08 新幹線の変電所はなぜ数十kmおき？
 - [ ] 09 変電所からパンタグラフまでどう送る？
 - [ ] 10 新幹線が突然大電力を使ったら？
@@ -28,7 +28,7 @@
 - [ ] 15 回生した電気はどこへ行く？
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
-## Topic 07 進捗記録
+## Topic 07 完了記録
 source: `topics/07_phase_conversion/07_phase_conversion.md`
 EXAM_ALIGNMENT再監査: `topics/07_phase_conversion/07_phase_conversion_exam_alignment_reaudit.md`
 解説PDF: `topics/07_phase_conversion/07_phase_conversion_explanation.pdf`
@@ -36,60 +36,22 @@ EXAM_ALIGNMENT再監査: `topics/07_phase_conversion/07_phase_conversion_exam_al
 練習PDF QA: `topics/07_phase_conversion/07_phase_conversion_practice_qa.md`
 解説画像PowerPoint: `topics/07_phase_conversion/07_phase_conversion_images.pptx`
 PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
-初回独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer.md`
 改定独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer_revised.md`
 最終QA: `topics/07_phase_conversion/07_phase_conversion_final_qa.md`
 
-## 現行EXAM_ALIGNMENT
-品質ゲートは現行SPEC固定範囲へ直接対応する次の3問。
-
-- R4上 機械 問9 — スコット結線・二次90°
-- H30 電力 問8 — 変圧比・三相電力
-- H22 理論 問9 — Y結線・線間/相関係・三相電力・中性線電流
-
-改定完成後独立再解答:
-- R4上 機械 問9: `(3)` / 公式 `(3)` / PASS
-- H30 電力 問8: `(3)` / 公式 `(3)` / PASS
-- H22 理論 問9: `(4)` / 公式 `(4)` / PASS
+現行品質ゲート:
+- R4上 機械 問9 — `(3)` / PASS
+- H30 電力 問8 — `(3)` / PASS
+- H22 理論 問9 — `(4)` / PASS
 
 集計:
 - 公式解答一致: `3 / 3 PASS`
 - 教材のみ完結: `3 / 3 PASS`
 - 教材外知識補完: `0件`
 - SPEC固定範囲外追加: `0件`
-
-## 今回同期した不整合
-前回最終QAの残件を順に是正した。
-
-- 練習PDF QA: 旧5問対応から改定3問へ同期済み
-- PowerPoint Slide 4: 旧5問対応表から改定3問へ同期済み
-- PowerPoint QA: 旧5問・8小問から改定3問・3解答項目へ同期済み
-- PowerPoint QA末尾: 次工程を最終QA再判定へ同期済み
-
-PowerPointは16:9・4枚を維持し、1601×900再レンダリング `4 / 4 PASS`、`slides_test.py` PASS、`unzip -t` PASS。教材範囲・練習問題数・改定EXAM_ALIGNMENTは変更していない。
-
-再監査で除外したR7下理論問15、R5下理論問15、H27機械問7は現行品質ゲートとして扱わない。
-
-## Topic 07 SPEC固定範囲
-- 三相交流
-- 単相交流
-- 線間電圧
-- 相電圧
-- 三相電力
-- き電用変圧器
-- 相変換
-- 三相側の負荷平衡
-- スコット結線
-- 変形ウッドブリッジ結線
-- ルーフ・デルタ結線
-
-境界:
-- 二種相当の厳密ベクトル導出を追加しない
-- Topic 08以降の電圧降下・線路損失・き電回路詳細へ広げない
-- Topic 10の力率改善へ広げない
-- Topic 11の短絡・保護へ広げない
-- 変形ウッドブリッジ結線・ルーフ・デルタ結線は概略に留める
-- 未確認の個別新幹線変電所の結線・定格・配置を実値化しない
+- 練習PDF QA: PASS
+- PowerPoint QA: PASS
+- 最終QA: `PASS / completed`
 
 ## 次
-Topic 07最終QAを再判定する。現行EXAM_ALIGNMENT 3問の `3 / 3 PASS`、必須成果物、PDF/PPTX QA、進捗記録、SPEC境界がすべて整合していることを確認したうえでのみ `completed` とする。
+Topic 08 `新幹線の変電所はなぜ数十kmおき？` の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 08固定範囲から追加しない。
