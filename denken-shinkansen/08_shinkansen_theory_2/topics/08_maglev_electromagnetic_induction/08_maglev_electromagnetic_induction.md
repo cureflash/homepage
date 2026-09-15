@@ -6,7 +6,7 @@
 
 制作前 `EXAM_ALIGNMENT` を固定したまま、解説本文＋3段階例題を完成した。品質ゲート対象は一次「理論」4問・6小問のまま変更せず、二次採用0問・二次数合わせ0件を維持する。固定範囲外論点、超電導物性、未確認実設備値は追加していない。
 
-解説PDF、練習問題source＋練習PDF、PowerPoint、完成後独立再解答まで完了。独立再解答は `6 / 6 PASS`、教材外知識補完0件。最終QAは一度実施済みで `NEEDS_REVISION / IN_PROGRESS`。指摘された進捗表現を現在地へ同期し、最終QA再実施待ち。
+解説PDF、練習問題source＋練習PDF、PowerPoint、完成後独立再解答、進捗記録同期、最終QA再実施まで完了。完成後独立再解答は `6 / 6 PASS`、教材外知識補完0件。最終QA再実施も全品質ゲート `PASS / completed`。
 
 本テーマは `SPEC.md` の固定範囲どおり、次だけを扱う。
 
@@ -353,4 +353,4 @@ W = 0.40 + 0.45 - 0.24 = 0.61 J
 
 ## 次工程
 
-解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、PowerPoint、完成後独立再解答まで完了。主sourceの進捗表現同期まで完了。次は必須成果物、固定EXAM_ALIGNMENT、独立再解答 `6 / 6 PASS`、PDF/PPTX表示QA、source進捗整合、固定範囲境界を確認する最終QAを再実施する。
+Topic 08は最終QA再実施まで完了し、`PASS / completed`。次はTopic 09「新幹線の25kV交流をフェーザで表す」の制作前EXAM_ALIGNMENT。
