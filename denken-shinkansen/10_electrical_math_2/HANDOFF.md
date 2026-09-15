@@ -8,7 +8,7 @@ Topic 01〜07は `completed`。
 
 完成数: `7 / 20`
 
-current_status: `topic_08_powerpoint_complete`
+current_status: `topic_08_exam_reanswer_complete`
 
 active_topic: `08 二階常微分方程式`
 
@@ -190,12 +190,36 @@ PowerPoint QA:
 
 PowerPoint品質判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 08 完成後独立再解答完了記録
+
+完成後独立再解答:
+`topics/08_second_order_ode/08_second_order_ode_exam_reanswer.md`
+
+固定一次5問・15小問を完成教材だけで再解答し、各答案を確定後に公式解答と照合した。
+
+- R8 一次 理論 問1 (4)〜(5): `(ラ, ロ)` → `2 / 2 PASS`
+- R8 一次 理論 問6 (3)〜(4): `(チ, ヨ)` → `2 / 2 PASS`
+- R3 一次 理論 問5 (1)〜(4): `(ホ, ル, ヌ, ハ)` → `4 / 4 PASS`
+- H28 一次 理論 問3 (1)〜(5): `(ル, ト, ハ, カ, ヘ)` → `5 / 5 PASS`
+- H24 一次 理論 問3 (1)〜(2): `(ニ, ト)` → `2 / 2 PASS`
+
+完成後独立再解答: `15 / 15 PASS`
+
+- 教材外知識補完: 0件
+- Topic 09〜10先取り: 0件
+- 固定範囲外追加: 0件
+- 二次記述の件数合わせ: 0件
+- 未確認実車値依存: 0件
+
+品質判定: `PASS / EXAM_REANSWER_COMPLETE`
+
 ## 次に行うこと
 
-Topic 08の完成後独立再解答を実施する。
+Topic 08の最終QAを実施する。
 
-1. 固定一次5問・15小問を完成教材だけで解く。
-2. 保存済み正答を先に見ず、解答・途中式・根拠を独立に再構成する。
-3. 公式解答と照合し、教材外知識による補完がないか確認する。
-4. Topic 09〜10や固定範囲外論点で補わない。
-5. PASS後に最終QAへ進む。
+1. 必須成果物の実在を確認する。
+2. PDF・PowerPointの表示QA記録を確認する。
+3. 固定一次5問・15小問のEXAM_ALIGNMENTと完成後独立再解答 `15 / 15 PASS` を確認する。
+4. source進捗記録と実成果物の整合を確認する。
+5. Topic 09〜10先取り、固定範囲外追加、未確認実車値依存がないことを確認する。
+6. 全品質ゲートPASSの場合のみ `completed` とする。
