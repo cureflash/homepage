@@ -7,9 +7,11 @@
 
 Topic 01〜06は最終QAまで `PASS`。完成数は `6 / 39`。
 
-現在地は `topic_07_source_reinforcement_complete`。active topicは Topic 07 `直流主回路の高出力化`。
+現在地は `topic_07_explanation_pdf_resynced`。active topicは Topic 07 `直流主回路の高出力化`。
 
-完成後独立再解答で不足したH21一次「機械」問2(2)の「負荷損を規定の基準巻線温度へ補正」を、固定範囲内で解説source・練習sourceへ補強済み。固定EXAM_ALIGNMENT、問題数、正答、実車値は変更していない。既存PDF・PowerPointは補強後sourceへ未同期なので、Topic 07はまだ `completed` ではない。
+完成後独立再解答で不足したH21一次「機械」問2(2)の「負荷損を規定の基準巻線温度へ補正」を固定範囲内で解説source・練習sourceへ補強済み。本runでは同一点を解説PDFへ同期し、180 dpi全5ページ表示QA・文字抽出QAを再実施してPASS。固定EXAM_ALIGNMENT、実車値、3段階例題、指定3グラフは変更していない。練習PDF・PowerPointは補強後sourceへ未同期。
+
+直近の完成後独立再解答は補強前教材に対する `14 / 15 PASS / NEEDS_REVISION` のため、Topic 07はまだ `completed` ではない。次は練習PDFの補強同期。
 
 ## Topic 06 完了記録
 固定EXAM_ALIGNMENTは一次3問＋二次2問、計5問。
@@ -99,19 +101,21 @@ H21一次 問2(2)補強:
 
 ## Topic 07 解説PDF
 
-`07_dc_main_circuit_high_output_explanation.pdf` の既存版はA4縦5ページで完成済み。
+`07_dc_main_circuit_high_output_explanation.pdf` はH21一次 問2(2)補強後sourceへ同期済み。
 
+- A4縦5ページ
 - 3段階例題を途中式付きで収録
+- H21一次 問2(2)の基準巻線温度補正を収録
 - SPEC指定3グラフを収録
   - 世代別出力比較: 確認済み実車値 `185 / 230 / 230 kW`
   - 出力―損失: 教材用仮定値
   - 出力―発熱: 教材用仮定値
-- 既存版180 dpi全5ページ表示QA: `PASS`
-- 既存版文字抽出・欠落グリフ確認: `PASS`
+- 180 dpi全5ページ表示QA: `PASS`
+- 文字抽出・Unicode置換文字確認: `PASS / 0件`
 - 固定一次4問＋二次1問・15対象項目を維持
+- SHA-256: `a93dca994182676ecbd02b8823efb42a4f70cf710ff7d6feac24332a0cfabd75`
 - 未確認実車値の真値化: `0件`
 - 固定範囲外追加: `0件`
-- H21一次 問2(2)補強後sourceへの同期: `未実施`
 
 QA記録: `07_dc_main_circuit_high_output_explanation_pdf_qa.md`
 
@@ -132,7 +136,7 @@ QA記録: `07_dc_main_circuit_high_output_explanation_pdf_qa.md`
 
 ## Topic 07 練習PDF
 
-`07_dc_main_circuit_high_output_practice.pdf` の既存版はA4縦3ページで完成済み。
+`07_dc_main_circuit_high_output_practice.pdf` の既存版はA4縦3ページで完成済みだが、H21一次 問2(2)補強後sourceへ未同期。
 
 - 一次8問＋二次4問、全問完全解説付き
 - 既存版180 dpi全3ページ表示QA: `PASS`
@@ -148,12 +152,8 @@ QA記録: `07_dc_main_circuit_high_output_practice_qa.md`
 
 ## Topic 07 解説画像PowerPoint
 
-`07_dc_main_circuit_high_output_images.pptx` の既存版は16:9・4スライドで完成済み。
+`07_dc_main_circuit_high_output_images.pptx` の既存版は16:9・4スライドで完成済みだが、H21一次 問2(2)補強後sourceへ未同期。
 
-- スライド1: 直流主回路の共通骨格、`P_in=VI`、`P_loss=P_in-P_out`、`η=P_out/P_in`、`E=V-I_aR_a-V_b`、直巻機始動トルク、負荷率、高速化
-- スライド2: 確認済み実車値 `185 / 230 / 230 kW` による世代別出力比較と定格電圧・電流・冷却方式
-- スライド3: 教材用仮定モデルによる出力―損失、`m^2P_c`、`I^2R` 感度
-- スライド4: 教材用仮定モデルによる出力―発熱、冷却方式、H24二次問1(1)(2)の解法経路
 - SPEC指定3グラフ: 3 / 3収録
 - 既存版180 dpi全4スライド表示QA: `PASS`
 - overflow: `0件`
@@ -167,32 +167,33 @@ QA記録: `07_dc_main_circuit_high_output_images_qa.md`
 
 ## Topic 07 完成後独立再解答
 
-`07_dc_main_circuit_high_output_independent_reanswer.md` を作成済み。
+`07_dc_main_circuit_high_output_independent_reanswer.md` は補強前教材に対する既存記録を保持する。
 
 - 固定一次4問＋二次1問・15対象項目を保存済み正答を先に見ずに再解答
 - 独立解答と公式解答・標準解答の値・語句一致: `15 / 15`
-- 教材のみ品質ゲート: 一次 `12 / 13 PASS`、二次 `2 / 2 PASS`、合計 `14 / 15 PASS`
+- 補強前教材のみ品質ゲート: 一次 `12 / 13 PASS`、二次 `2 / 2 PASS`、合計 `14 / 15 PASS`
 - H28一次 問5(1): `1 / 1 PASS`
 - H26一次 問5(1)(2): `2 / 2 PASS`
 - H22一次 問1: `5 / 5 PASS`
 - H21一次 問2: `4 / 5 PASS`
 - H24二次 問1(1)(2): `2 / 2 PASS`
-- `FAIL`: H21一次 問2(2)「負荷損を基準巻線温度へ補正」。公式解答とは一致したが、当時の完成した学習本文・練習および明示済み既習範囲から根拠を再構築できず、外部知識補完が必要だった
+- `FAIL`: H21一次 問2(2)「負荷損を基準巻線温度へ補正」。公式解答とは一致したが、当時の完成学習教材から根拠を再構築できず外部知識補完が必要だった
 - source上の不足補強: `completed`
-- learner-facing PDF・PowerPoint同期後の再独立再解答: `未実施`
+- 解説PDFへの補強同期: `completed`
+- 練習PDF・PowerPointへの補強同期: `未実施`
+- 補強済み完成教材だけでの再独立再解答: `未実施`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 - 現在判定: `NEEDS_REVISION`
 
 ## 次の正確な開始点
-Topic 07 `直流主回路の高出力化` の補強済みsourceを学習成果物へ同期する。
+Topic 07 `直流主回路の高出力化` の補強済み練習sourceを練習PDFへ同期する。
 
-1. 解説PDFへ「規約効率に用いる負荷損は規定の基準巻線温度へ補正」を同期する。
-2. 練習PDFの一次3・一次4・二次2へ同一点を同期する。問題数・正答・数値条件は変更しない。
-3. 解説画像PowerPointの関連する損失・規約効率説明へ同一点だけを同期する。指定3グラフは変更しない。
-4. PDFは全ページ表示QA・文字抽出QA、PowerPointは全スライド表示QA・overflow・ZIP整合性を再実施する。
+1. 一次3へ基準巻線温度補正の用語判断を同期する。
+2. 一次4・二次2へ「`P_c` は基準巻線温度へ補正済み」とする条件・解法を同期する。
+3. 問題数・正答・数値条件は変更しない。
+4. 180 dpi全ページ表示QA・文字抽出QA・計算/論理整合を再実施する。
 5. 固定EXAM_ALIGNMENT、採用過去問、15対象項目は変更しない。
 6. 位相制御、誘導機、VVVF、回生、IGBT/SiC、詳細熱設計を追加しない。
 7. 未確認の編成出力・主回路総損失・冷却容量・けん引力特性を補完しない。
-8. 学習成果物同期後に補強済み教材だけで完成後独立再解答を再実施し、`15 / 15` の教材のみPASSを確認する。
