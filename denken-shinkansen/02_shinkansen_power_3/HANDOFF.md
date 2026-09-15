@@ -6,14 +6,14 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は6/16。Topic 01〜06は完成済み。active topicは07 `なぜ三相交流をそのまま架線へ流さない？`。
 
 ## 今回進捗
-Topic 07の解説画像PowerPoint `topics/07_phase_conversion/07_phase_conversion_images.pptx` を完成した。16:9・4枚で、三相→単相2回路、Y/Δの線間・相関係と三相電力、スコット結線の二次90°・T側一次巻数 `√3/2`・負荷平衡、スコット／変形ウッドブリッジ／ルーフ・デルタの概略比較、固定5過去問への対応を可視化した。
+Topic 07の完成後独立再解答を実施し、`topics/07_phase_conversion/07_phase_conversion_independent_reanswer.md` へ記録した。
 
-全4枚表示QA、`slides_test.py` による境界外はみ出し検査、PPTX ZIP整合性をPASS。固定5問・8小問の要求事項を全件収録し、QA記録は `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`。
+固定5問・8小問は公式解答と `8 / 8` 一致したが、完成教材だけで完結できたのは `2 / 8`。R7下理論問15(a)(b)は並列RLCの相殺・有効電力、R5下理論問15(a)(b)は力率とインピーダンスの関係、H27機械問7はΔ-Y/Y-Δの30°位相差が現在の学習用教材にないため、合計6小問で教材外知識補完が必要だった。
 
-制作前EXAM_ALIGNMENTの固定5問・8小問と `SPEC.md` の固定範囲は変更していない。Topic 08以降の電圧降下・線路損失、Topic 10の力率改善、Topic 11の短絡・保護、対称座標法・不平衡率の厳密計算、二種相当の厳密ベクトル導出、未確認の個別設備定格・配置は追加していない。
+`EXAM_ALIGNMENT_SPEC.md` は教材外知識で補って解いた場合をFAILとするため、判定は `NEEDS_REVISION`。Topic 07は `completed` にしていない。固定過去問を通すためだけのSPEC外追加も行っていない。
 
 ## 現在状態
-- `current_status`: `topic_07_powerpoint_complete`
+- `current_status`: `topic_07_independent_reanswer_needs_revision`
 - 完成数: `6/16`
 - last completed: Topic 06 `275,000Vをどうやって25,000Vにする？`
 - active: Topic 07 `なぜ三相交流をそのまま架線へ流さない？`
@@ -23,15 +23,26 @@ Topic 07の解説画像PowerPoint `topics/07_phase_conversion/07_phase_conversio
 - 練習PDF QA: `topics/07_phase_conversion/07_phase_conversion_practice_qa.md`
 - 解説画像PowerPoint: `topics/07_phase_conversion/07_phase_conversion_images.pptx`
 - PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
+- 独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer.md`
 
-## Topic 07 固定過去問
-1. R7下 理論 問15(a)(b) — 線間/相電圧・三相電力 — `(3),(3)` PASS
-2. R5下 理論 問15(a)(b) — Y/Δ・三相電力 — `(3),(4)` PASS
-3. R4上 機械 問9 — スコット結線・二次90°・鉄道給電 — `(3)` PASS
-4. H30 電力 問8 — 変圧比・三相電力 — `(3)` PASS
-5. H27 機械 問7 — スコット結線・三相→直交二相・負荷平衡 — `(3)` PASS
+## Topic 07 固定過去問と完成後判定
+1. R7下 理論 問15(a)(b) — 独立解答 `(3),(3)` / 公式 `(3),(3)` / 教材のみ `FAIL, FAIL`
+2. R5下 理論 問15(a)(b) — 独立解答 `(3),(4)` / 公式 `(3),(4)` / 教材のみ `FAIL, FAIL`
+3. R4上 機械 問9 — 独立解答 `(3)` / 公式 `(3)` / 教材のみ `PASS`
+4. H30 電力 問8 — 独立解答 `(3)` / 公式 `(3)` / 教材のみ `PASS`
+5. H27 機械 問7 — 独立解答 `(3)` / 公式 `(3)` / 教材のみ `FAIL`
 
-制作前独立検証: `5問・8小問 / 8 PASS`。
+公式解答との一致: `8 / 8`
+教材のみ完結: `2 / 8`
+教材外知識補完が必要: `6 / 8`
+SPEC固定範囲外追加: `0件`
+
+## FAIL理由
+- R7下 理論 問15(a)(b): 並列L/Cの無効電流相殺 `ωL=1/(ωC)` と並列RLCの有効電力処理がTopic 07の学習用教材にない。
+- R5下 理論 問15(a)(b): `|Z|=V/I`、`cosφ=R/|Z|` からR/Xを求める中間知識がTopic 07の学習用教材にない。
+- H27 機械 問7: Δ-Y/Y-Δの一次二次位相差30°がTopic 07の学習用教材にない。スコット結線部分だけでは誤り肢を一意に確定できない。
+
+不足事項はいずれもTopic 07固定範囲そのものではないため、今回の品質ゲート通過だけを目的に教材へ追加していない。
 
 ## Topic 07 SPEC固定範囲
 - 三相交流
@@ -55,33 +66,11 @@ Topic 07の解説画像PowerPoint `topics/07_phase_conversion/07_phase_conversio
 - 変形ウッドブリッジ結線・ルーフ・デルタ結線は概略に留める
 - 未確認の個別新幹線変電所の結線・定格・配置を実値化しない
 
-## 過去問から逆算した教材必須事項
-- Y結線の `V_L=√3 V_phase`
-- 三相有効電力 `P=√3 V_L I_L cosφ = 3V_phase I_phase cosφ`
-- 大容量単相負荷を三相の一相だけから取ると三相側不平衡を生じること
-- スコット結線はM/T変圧器2台で三相を直交する二つの単相（二相）へ変換すること
-- スコット二次の2回路は180°ではなく90°位相差
-- T側一次巻数がM側の `√3/2` に対応する基本関係
-- 二相側負荷を平衡させると三相側不平衡を抑えられること
-- スコット、変形ウッドブリッジ、ルーフ・デルタの目的を新幹線き電用変圧器として概略比較すること
-
-## 練習PDF
-- 全12問・全問五肢択一
-- 基礎3／標準7／複合2
-- 正答: `(3),(4),(3),(3),(4),(4),(3),(2),(2),(1),(2),(4)`
-- 数値問題独立再計算: `8 / 8 PASS`
-- 200 dpi全3ページ表示QA: PASS
-- 文字抽出QA: PASS
-- 正答一意性: PASS
-- 固定5問・8小問の要求事項: 全件マッピング済み
-
-## 解説画像PowerPoint
-- 16:9・4枚
-- 固定5問・8小問の要求事項: 全件可視化
-- 全4枚表示QA: PASS
-- 境界外はみ出し: 0件 (`slides_test.py` PASS)
-- PPTX ZIP整合性: PASS
+## 既存成果物QA
+- 解説PDF: A4縦4ページ、200 dpi全4ページ表示QA・文字抽出QA PASS
+- 練習PDF: A4縦3ページ・全12問・全問五肢択一、数値問題独立再計算 `8 / 8 PASS`、表示QA・文字抽出QA・正答一意性PASS
+- 解説画像PowerPoint: 16:9・4枚、全4枚表示QA、境界外はみ出し0件、PPTX ZIP整合性PASS
 - SPEC固定範囲外追加: 0件
 
 ## 次の正確な開始点
-Topic 07「なぜ三相交流をそのまま架線へ流さない？」の完成教材だけを使い、保存済み正答を先に見ず固定5問・8小問を独立再解答する。公式解答との一致だけでなく、教材外知識補完が発生しないことまで記録する。この段階でも独立再解答PASS・最終QA前にTopic 07を `completed` にはしない。
+Topic 07のEXAM_ALIGNMENTを再監査する。教材外補完を要したR7下理論問15、R5下理論問15、H27機械問7について、Topic 07のSPEC固定範囲内だけで完答できる公式過去問への差替え、または固定対象の見直しが可能かを直近年度から確認する。固定範囲は拡張しない。
