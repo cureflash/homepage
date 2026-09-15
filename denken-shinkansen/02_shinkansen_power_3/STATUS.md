@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 7 / 16
-- current_status: `topic_07_completed`
+- current_status: `topic_08_exam_alignment_complete`
 - last_completed_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
 - active_topic: `08 新幹線の変電所はなぜ数十kmおき？`
-- next_start: Topic 08制作前EXAM_ALIGNMENTを行う
+- next_start: Topic 08の固定EXAM_ALIGNMENT 5問・7小問から逆算して解説本文＋3段階例題を作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -18,7 +18,7 @@
 - [x] 05 新幹線を再エネだけで走らせられる？ — completed
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
 - [x] 07 なぜ三相交流をそのまま架線へ流さない？ — completed。改定EXAM_ALIGNMENT 3問を完成教材だけで独立再解答し `3 / 3 PASS`、教材外知識補完0件。練習PDF QA・PowerPoint Slide 4・PowerPoint QAを現行3問へ同期し、最終QA PASS
-- [ ] 08 新幹線の変電所はなぜ数十kmおき？
+- [ ] 08 新幹線の変電所はなぜ数十kmおき？ — 制作前EXAM_ALIGNMENT完了。公式5問・7小問を固定し、制作前独立検証 `7 / 7 PASS`。SPEC固定範囲外追加0件。本文・成果物は未着手
 - [ ] 09 変電所からパンタグラフまでどう送る？
 - [ ] 10 新幹線が突然大電力を使ったら？
 - [ ] 11 架線事故ではどうやって電気を止める？
@@ -40,9 +40,9 @@ PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
 最終QA: `topics/07_phase_conversion/07_phase_conversion_final_qa.md`
 
 現行品質ゲート:
-- R4上 機械 問9 — `(3)` / PASS
-- H30 電力 問8 — `(3)` / PASS
-- H22 理論 問9 — `(4)` / PASS
+- R4上 機械 問9 — PASS
+- H30 電力 問8 — PASS
+- H22 理論 問9 — PASS
 
 集計:
 - 公式解答一致: `3 / 3 PASS`
@@ -53,5 +53,21 @@ PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
 - PowerPoint QA: PASS
 - 最終QA: `PASS / completed`
 
+## Topic 08 制作前EXAM_ALIGNMENT
+source: `topics/08_voltage_drop/08_voltage_drop.md`
+
+固定5問・7小問:
+- R7下 電力 問16 (a)(b)
+- R7下 電力 問17 (a)(b)
+- R7上 電力 問13
+- R6上 電力 問13
+- R5上 電力 問12
+
+集計:
+- 制作前独立検証: `7 / 7 PASS`
+- SPEC固定範囲外追加: `0件`
+- R8上 電力 問8: 電圧降下・線路損失以外に機械的強度・コロナ・サージを要求するため品質ゲートから除外
+- 正答番号: 完成後ブラインド独立再解答の汚染防止のため進捗記録へ未保存
+
 ## 次
-Topic 08 `新幹線の変電所はなぜ数十kmおき？` の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 08固定範囲から追加しない。
+Topic 08 `新幹線の変電所はなぜ数十kmおき？` の解説本文＋3段階例題を作成する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` と固定5問・7小問から必要事項を逆算し、Topic 09以降の論点を追加しない。
