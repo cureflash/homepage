@@ -4,9 +4,9 @@
 
 ## 状態
 
-`explanation_source_complete`
+`explanation_pdf_complete`
 
-制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題まで完了。解説PDF・練習問題・PowerPointは未着手。次工程は解説PDF作成＋全ページ表示QA。
+制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題・解説PDF＋全ページ表示QAまで完了。練習問題・PowerPointは未着手。次工程は練習問題＋完全解説source作成。
 
 ## SPEC固定範囲
 
@@ -309,7 +309,7 @@ https://www.shiken.or.jp/chief/upload/20100904_ch_second_a01.pdf
 
 公式 `リ・ヨ・ロ・ル・カ` と `5 / 5` 一致。変圧器本体の振動・騒音低減だけで解答でき、環境設備一般へ範囲を広げる必要はない。
 
-### 5. 平成21年度 一次「電力」問1
+### 5. 平成21年度 一次試験 電力 問1
 
 独立答案:
 - (1) 局部過熱 `ヌ`
@@ -346,6 +346,20 @@ https://www.shiken.or.jp/chief/upload/20090905_ch_second_a01.pdf
 - 固定範囲外論点の追加: `0件`
 - 未確認実設備値の追加: `0件`
 
+## 解説PDF工程
+
+`06_substation_explanation_source.md` だけを本文sourceとして `06_substation_explanation.pdf` を作成し、200 dpiで全6ページを画像化して表示QAした。
+
+- A4縦: `6ページ`
+- 全ページ表示QA: `6 / 6 PASS`
+- 単線結線図: 単母線・複母線・ユニット方式を収録
+- 変圧器損失: `P_loss = P_0 + P_L`、`P_cu = I^2R`、漂遊負荷損を収録
+- 3段階例題: `3 / 3`
+- 正式5過去問マッピング: `5 / 5`
+- 文字切れ・重なり・欠落: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実設備値追加: `0件`
+
 ## 今回の判定
 
 - 制作前EXAM_ALIGNMENT: `COMPLETE`
@@ -354,8 +368,9 @@ https://www.shiken.or.jp/chief/upload/20090905_ch_second_a01.pdf
 - 二次1問: `3 / 3設問 PASS`
 - 固定6項目への対応: `6 / 6`
 - 解説本文＋3段階例題: `COMPLETE`
-- 正式5過去問の本文マッピング: `5 / 5`
+- 解説PDF＋全ページ表示QA: `COMPLETE / 6 / 6 PASS`
+- 正式5過去問の本文・PDFマッピング: `5 / 5`
 - 件数合わせの固定範囲外問題追加: `0件`
 - 後続Topic論点の追加: `0件`
 - 未確認実設備値の追加: `0件`
-- 次工程: 解説PDF作成＋全ページ表示QA
+- 次工程: 練習問題＋完全解説source作成
