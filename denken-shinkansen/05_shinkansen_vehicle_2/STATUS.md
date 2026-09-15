@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 7 / 39
-- current_status: `topic_08_practice_pdf_complete`
+- current_status: `topic_08_powerpoint_complete`
 - last_completed_topic: `07 直流主回路の高出力化`
 - active_topic: `08 位相制御と平均直流電圧`
-- next_start: Topic 08の解説画像PowerPoint作成。SPEC指定4可視化（点弧角―平均直流電圧、点弧角―力率、位相制御波形、高調波成分）を16:9スライドへ同期し、全スライド表示QA・overflow・PPTX整合性を確認する。固定一次3問＋二次2問・20対象項目を維持し、固定範囲外論点と未確認実車値を追加しない
+- next_start: Topic 08の完成後独立再解答。完成教材のみを使い、固定一次3問＋二次2問・20対象項目を再解答して公式解答・標準解答と照合する。教材外知識補完、固定範囲外追加、未確認実車値追加は0件を維持する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -18,7 +18,7 @@
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
 - [x] 07 直流主回路の高出力化 — PASS
-- [ ] 08 位相制御と平均直流電圧 — 解説source・解説PDF・練習source・練習PDF完成 / PowerPoint未着手
+- [ ] 08 位相制御と平均直流電圧 — 解説source・解説PDF・練習source・練習PDF・PowerPoint完成 / 完成後独立再解答未実施
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -222,7 +222,7 @@
 - 電気学会資料で200系の力行時サイリスタ位相制御を確認
 - 未確認の100系・200系実車電圧・電流・詳細転流条件を真値化: `0件`
 - 後続Topicのチョッパ、回生、誘導機、PWM/VVVF、IGBT/SiC追加: `0件`
-- 解説PDF・練習source・練習PDF: `completed` / PowerPoint: 未着手
+- 解説PDF・練習source・練習PDF・PowerPoint: `completed`
 
 ## Topic 08 解説PDF
 - `08_phase_control_average_dc_voltage_explanation.pdf`
@@ -267,6 +267,23 @@
 - 未確認実車値追加: `0件`
 - SHA-256: `d41119b0fc93db1229be81804956c03a7e3c8f7d00b1ee0430a171fe4101ba70`
 
+## Topic 08 解説画像PowerPoint
+- `08_phase_control_average_dc_voltage_images.pptx`
+- 16:9・4スライド
+- SPEC指定4可視化: `4 / 4`収録
+  - 点弧角―平均直流電圧: `Vd/Vd0 = cosα`
+  - 点弧角―力率: 基本波力率 `cosα` と総合力率 `λ=(3/π)cosα` を区別
+  - 位相制御波形: 単相抵抗負荷 `α=60°` と三相120°通電線電流
+  - 高調波成分: 1次・5次・7次・11次・13次を比較し、R8単相C入力の3次高調波とは区別
+- 2400×1350 pxで全4スライド Visual QA: `PASS`
+- overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- 日本語グリフ欠落: `0件`
+- 固定一次3問＋二次2問・20対象項目: 維持
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `1578b88af3b059ff7a6040d75e98c04c9538dc3720465f673b8b1fe75621544c`
+
 ## Topic 08 固定範囲
 - サイリスタ
 - 点弧角
@@ -284,4 +301,4 @@
 - 位相制御波形
 - 高調波成分
 
-次工程はTopic 08 `位相制御と平均直流電圧` の解説画像PowerPoint作成。SPEC指定4可視化を16:9スライドへ同期し、全スライド表示QA・overflow・PPTX整合性を確認する。固定EXAM_ALIGNMENTと固定範囲は変更しない。
+次工程はTopic 08 `位相制御と平均直流電圧` の完成後独立再解答。完成教材だけを使い、固定一次3問＋二次2問・20対象項目を公式解答・標準解答と照合する。教材外知識補完が必要な項目はFAILとし、固定EXAM_ALIGNMENTと固定範囲は変更しない。
