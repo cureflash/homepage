@@ -6,28 +6,28 @@
 
 Topic 01〜08は最終QAまでPASSし、`completed`。
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は練習問題source・練習PDFまで完成した。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は解説画像PowerPointまで完成した。
 
 - 完成数: `8 / 14`
 - last completed: `08 新幹線の交流25kVとは何なのか`
 - active topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- current status: `topic_09_practice_pdf_complete`
-- next start: Topic 09の解説画像PowerPointを作成する
+- current status: `topic_09_powerpoint_complete`
+- next start: Topic 09の完成後公式過去問独立再解答を実施する
 
 ## 今回進捗
 
-Topic 09の固定EXAM_ALIGNMENTと解説本文を変更せず、練習問題source・練習PDFを作成した。
+Topic 09の固定EXAM_ALIGNMENT・解説本文・練習問題を変更せず、解説画像PowerPointを作成した。
 
-- 全15問、全問五肢択一
-- 基礎4 / 本試験標準8 / 複合・応用3
-- 独立再計算・論理確認: `15 / 15 PASS`
-- 正答一意性: `15 / 15 PASS`
-- 正答位置: `(1)〜(5)` 各3問
+- 16:9・4枚
+- Slide 1: 50Hz→60Hzでの`XL` / `XC`変化
+- Slide 2: 複素インピーダンス、RCフェーザ
+- Slide 3: 直列共振と理想並列LC、共振前後の位相
+- Slide 4: 解法手順、固定6過去問対応表
 - 固定6過去問要求への接続: `6 / 6`
-- 練習PDF: A4縦2ページ
-- 200 dpi全ページ表示QA: `2 / 2 PASS`
-- 表示欠け・重なり・文字化け: `0件`
-- 文字抽出QA: `PASS`（U+FFFD 0件）
+- 全ページ表示QA: `4 / 4 PASS`
+- overflow: `0件`
+- 文字欠け・重なり・文字化け: `0件`
+- ZIP/XML整合性: `PASS`
 - SPEC境界外論点・未確認実車値追加: `0件`
 
 ## Topic 09 品質ゲート
@@ -123,13 +123,13 @@ f0 = 1 / (2π√LC)
 - 解説PDF: 完成（A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
 - 練習source: 完成（15問、全問五肢択一、独立QA `15 / 15 PASS`）
 - 練習PDF: 完成（A4縦2ページ、200 dpi表示QA `2 / 2 PASS`、文字抽出QA `PASS`）
-- 解説画像PowerPoint: 未作成
+- 解説画像PowerPoint: 完成（16:9・4枚、表示QA `4 / 4 PASS`、固定6過去問要求 `6 / 6`）
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
 ## 次に行うこと
 
-固定EXAM_ALIGNMENT・解説本文・練習問題を変更せず、Topic 09の解説画像PowerPointを作成する。
+固定EXAM_ALIGNMENT・解説本文・練習問題・PowerPointを変更せず、Topic 09の完成後公式過去問独立再解答を実施する。
 
 ## 固定ルール
 
