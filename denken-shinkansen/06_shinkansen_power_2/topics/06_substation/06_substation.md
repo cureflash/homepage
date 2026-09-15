@@ -4,9 +4,9 @@
 
 ## 状態
 
-`preproduction_independent_verification_complete`
+`explanation_source_complete`
 
-制作前EXAM_ALIGNMENTと制作前独立検証まで完了。本文・例題・PDF・PowerPointは未着手。次工程は解説本文＋3段階例題の作成。
+制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題まで完了。解説PDF・練習問題・PowerPointは未着手。次工程は解説PDF作成＋全ページ表示QA。
 
 ## SPEC固定範囲
 
@@ -334,6 +334,18 @@ https://www.shiken.or.jp/chief/upload/20090905_ch_second_a01.pdf
 
 したがって、制作前品質ゲートをPASSし、解説本文＋3段階例題の作成へ進める。
 
+## 解説本文工程
+
+`06_substation_explanation_source.md` に解説本文＋3段階例題を作成した。
+
+- SPEC固定6項目の本文収録: `6 / 6`
+- 基礎・本試験標準・複合の3段階例題: `3 / 3`
+- 正式5過去問の本文節へのマッピング: `5 / 5`
+- 一次・二次の再利用可能な解法手順: 収録済み
+- 教材用数値: 仮定値と明記
+- 固定範囲外論点の追加: `0件`
+- 未確認実設備値の追加: `0件`
+
 ## 今回の判定
 
 - 制作前EXAM_ALIGNMENT: `COMPLETE`
@@ -341,8 +353,9 @@ https://www.shiken.or.jp/chief/upload/20090905_ch_second_a01.pdf
 - 一次4問: `20 / 20小問 PASS`
 - 二次1問: `3 / 3設問 PASS`
 - 固定6項目への対応: `6 / 6`
+- 解説本文＋3段階例題: `COMPLETE`
+- 正式5過去問の本文マッピング: `5 / 5`
 - 件数合わせの固定範囲外問題追加: `0件`
 - 後続Topic論点の追加: `0件`
 - 未確認実設備値の追加: `0件`
-- 本文制作: 未着手
-- 次工程: 解説本文＋3段階例題
+- 次工程: 解説PDF作成＋全ページ表示QA
