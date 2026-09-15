@@ -9,7 +9,7 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_10_explanation_pdf_complete`
+current status: `topic_10_practice_source_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -54,7 +54,7 @@ current status: `topic_10_explanation_pdf_complete`
 - R05: 制動時の運動エネルギー→電気エネルギー変換、回生ブレーキ
 - H28: 電力回生、誘導電動機、滑り
 - H27: 直流側→交流側の逆変換、架線回生電力を力行車が消費
-- H24二次: `Vv=VL+jXI`、力率1で `I=30 A`、`Vv≈101 V`、`K≈0.949`、`tanφ=0.120`
+- H24二次: `Vv=VL+jXI`、`I=30 A`、`Vv≈101 V`、`K≈0.949`、`tanφ=0.120`
 
 ## Topic 10 source
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant.md`
@@ -86,11 +86,27 @@ source完成内容:
 - 未確認実車値追加: `0件`
 - SHA-256: `4fbb34ed2d2f8d88be5b685ddeaba697ca1177cfa552777e065ddde66d14be77`
 
-## 次に行うこと
-Topic 10の練習問題・完全解説sourceを作成する。
+## Topic 10 練習問題source
+- `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_practice.md`: `completed`
+- 一次試験型10問: 全問五肢択一
+- 二次試験型5問: 記述・途中式／前提／単位／検算または論証付き
+- 独立計算・論理QA: `15 / 15 PASS`
+- 一次正答一意性: `10 / 10 PASS`
+- 固定5過去問・15答案要素: 全件接続
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
 
-1. 固定一次4問＋二次1問・15答案要素を変更しない。
-2. 一次試験型は五肢択一、二次試験型は途中式・前提・単位・検算を含む記述式とする。
-3. 問題は固定範囲の力行、回生、誘導機発電運転、四象限、DCリンク、PWMコンバータ、架線回生、回生効率だけで構成する。
-4. H27の回生失効・電力貯蔵・運行間隔、H24二次の無効電流・出力可能領域、Topic 11/16、未確認実車値を追加しない。
-5. 練習PDF・PowerPointへは先行しない。
+主な数値再計算:
+- `s=(1800-1890)/1800=-0.05`
+- `0.95×0.98×0.97=0.90307`
+- `V_L=200 V, P=6.0 kW, X=0.40 Ω` → `I=30 A`, `V_v=200.36 V`, `K=0.9445`
+- 二次型 `V_L=100 V, P=3.0 kW, X=0.40 Ω, E_d=150 V` → `I=30 A`, `V_v=100.717 V`, `K=0.94957`, `tanφ=0.120`
+
+## 次に行うこと
+Topic 10の練習PDFを作成する。
+
+1. `10_regenerative_braking_four_quadrant_practice.md` の15問・正答・完全解説を変更しない。
+2. 一次10問＋二次5問をPDFへ収録する。
+3. 全ページ表示QA・文字抽出QA・数値再検算を行う。
+4. 固定一次4問＋二次1問・15答案要素と固定範囲を維持する。
+5. 解説画像PowerPoint・完成後独立再解答へは先行しない。
