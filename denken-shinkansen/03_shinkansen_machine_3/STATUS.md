@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `9 / 16`
-- current_status: `topic_10_blind_reanswer_ready`
+- current_status: `topic_10_independent_reanswer_complete`
 - last_completed_topic: `09 新幹線はどうやって電気で止まる？`
 - active_topic: `10 新幹線の速度はどう自動制御される？`
-- next_start: 公式解答・保存済み正答を先に見ず、完成教材だけで固定5件を独立再解答する
+- next_start: Topic 10の最終QAを実施し、必須成果物・表示QA・進捗整合・SPEC境界・独立再解答結果を総合判定する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -20,7 +20,7 @@
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
-- [ ] 10 新幹線の速度はどう自動制御される？ — 全必須成果物完成、固定5件接続 `5 / 5`、blind独立再解答前ゲート `READY`
+- [ ] 10 新幹線の速度はどう自動制御される？ — 全必須成果物完成、固定5件接続 `5 / 5`、完成後blind独立再解答 `5 / 5 PASS`、最終QA未実施
 - [ ] 11〜16 — 未完了
 
 ## Topic 10 EXAM_ALIGNMENT
@@ -33,9 +33,11 @@
 5. R4上 機械 問15(a) — フィードバック系、制御対象の合成、一巡伝達関数
 
 - 制作前独立検証: `5 / 5 PASS`
+- 完成後blind独立再解答: `(4),(3),(5),(1),(2)` / `5 / 5 PASS`
+- 教材だけで公式選択・途中式構成・選択肢照合: `5 / 5 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 制作前答案番号・完成済み導出結果: blind再解答のため必須先読み対象から除去済み
+- 制作前答案番号・完成済み導出結果: blind再解答開始前に必須先読み対象から除去済み
 
 ### 非選定
 R7上問13、R6下問13、R6上問13、R5下問13、R5下問18(b)、R4上問15(b)は、行過ぎ量、PID、シーケンス制御・インタロック・タイムチャート、ボード線図、比例プラス積分要素、ベクトル軌跡等のTopic 10固定範囲外を正答に必要とするため、全部または該当小問を除外する。
@@ -61,13 +63,14 @@ R7上問13、R6下問13、R6上問13、R5下問13、R5下問18(b)、R4上問15(b
 - 練習PDF: `topics/10_automatic_control/10_automatic_control_practice.pdf` — A4縦6ページ、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`
 - 解説画像PowerPoint: `topics/10_automatic_control/10_automatic_control_images.pptx` — 16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`
 - 独立再解答前ゲート: `topics/10_automatic_control/10_automatic_control_blind_reanswer_gate.md` — `BLIND_REANSWER_READY`
-- 完成後独立再解答: 未実施
+- 完成後独立再解答: `(4),(3),(5),(1),(2)` / `5 / 5 PASS`
+- 教材外・固定範囲外知識による補完: `0件`
 - 最終QA: 未実施
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
 ## 今回進捗
-前回BLOCKED要因だった Topic 10 の制作前答案番号・完成済み導出結果を `STATUS.md`、`HANDOFF.md`、主sourceの必須先読み対象から除去した。固定問題選定、要求知識、教材内マッピング、制作前検証 `5 / 5 PASS` は維持し、教材本文・PDF・練習問題・PowerPoint・固定EXAM_ALIGNMENTは変更していない。
+Topic 10の完成後blind独立再解答を実施した。公式解答・保存済み正答を先に見ず、公式問題文と完成教材だけで固定5件を再導出し、答案 `(4),(3),(5),(1),(2)` を得た。再解答後に公式解答と照合して `5 / 5 PASS`。教材外・固定範囲外知識による補完、固定EXAM_ALIGNMENT変更、固定範囲外論点追加、未確認実車値追加はいずれも0件。
 
 ## 次工程
-完成教材だけを使用して固定5件を独立再解答する。再解答完了後に公式解答と照合し、教材外知識補完の有無を判定する。
+Topic 10の最終QAを実施し、必須成果物・表示QA・進捗整合・SPEC境界・独立再解答結果を総合判定する。
