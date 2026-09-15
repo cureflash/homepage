@@ -6,25 +6,27 @@
 
 Topic 01〜09は最終QAまでPASSし、`completed`。
 
-Topic 10 `新幹線が使う電力は「W」だけではない` は制作前EXAM_ALIGNMENTまで完了した。
+Topic 10 `新幹線が使う電力は「W」だけではない` は解説本文＋3段階例題まで完了した。
 
 - 完成数: `9 / 14`
 - last completed: `09 北陸新幹線は50Hzと60Hzをどう走る？`
 - active topic: `10 新幹線が使う電力は「W」だけではない`
-- current status: `topic_10_exam_alignment_complete / IN_PROGRESS`
-- next start: Topic 10の解説本文＋3段階例題を作成する
+- current status: `topic_10_explanation_source_complete / IN_PROGRESS`
+- next start: Topic 10の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う
 
 ## 今回進捗
 
-Topic 10の制作前EXAM_ALIGNMENTを完了した。
+Topic 10の解説本文＋3段階例題を完成した。
 
-- 公式理論過去問: `5問・6答案要素`
+- 固定公式過去問: `5問・6答案要素`
 - 制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
-- e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
-- source Markdownへ固定EXAM_ALIGNMENT・教材必須事項・境界を記録
-- Topic 11の三相交流による件数合わせ: `0問`
-- Topic 12以降の半導体・Topic 13側の高調波による件数合わせ: `0問`
-- 電力・法規の三相設備論による件数合わせ: `0問`
+- 固定5問・6答案要素を本文へ `6 / 6` マッピング
+- `P[W]`、`Q[var]`、`S[VA]`、力率、電力三角形、複素電力の基本を説明
+- `R-XL`の`cosφ=R/|Z|`、`P=I²R`、純リアクタンス枝の`Q=V²/X`を固定過去問へ接続
+- 電流の同相成分・直交成分と並列抵抗追加後のフェーザ合成を説明
+- コンデンサによる力率改善を`Q1-Q2`で整理
+- 基礎・本試験標準・複合の3段階例題を追加
+- Topic 11の三相交流、Topic 12以降の半導体、Topic 13側の高調波の追加: `0件`
 - 未確認新幹線実車力率・補償方式の追加: `0件`
 
 完成後独立再解答の先読み汚染を避けるため、制作前検証の正答番号・個別数値解答は必須先読み正本へ保存していない。
@@ -93,8 +95,9 @@ cosφ = P / S
 - source: `topics/10_power_factor/10_power_factor.md`
   - EXAM_ALIGNMENT: 完成
   - 制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
-  - status: `EXAM_ALIGNMENT_COMPLETE`
-- 解説本文: 未着手
+  - 解説本文＋3段階例題: 完成
+  - 固定過去問要求マッピング: `6 / 6`
+  - status: `EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF: 未着手
 - 練習source・練習PDF: 未着手
 - 解説画像PowerPoint: 未着手
@@ -103,7 +106,7 @@ cosφ = P / S
 
 ## 次に行うこと
 
-固定5問・6答案要素を教材だけで解けることを逆算条件として、Topic 10の解説本文＋基礎・本試験標準・複合の3段階例題を作成する。系列SPECの固定範囲を越えない。
+完成したsource Markdownを基にTopic 10の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。固定5問・6答案要素と系列SPEC境界を維持する。
 
 ## 固定ルール
 
