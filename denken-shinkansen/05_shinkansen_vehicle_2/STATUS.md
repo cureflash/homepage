@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_09_powerpoint_complete`
+- current_status: `topic_09_independent_reanswer_passed`
 - last_completed_topic: `08 位相制御と平均直流電圧`
 - active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09の完成後独立再解答。固定一次4問＋二次1問・14対象項目を、保存済み正答を先に見ず完成教材のみで再解答し、公式解答・標準解答と照合する
+- next_start: Topic 09の最終QA。固定一次4問＋二次1問・14対象項目の完成後独立再解答 `14 / 14 PASS`、必須成果物、表示QA、進捗記録整合、固定範囲境界を再確認する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -425,4 +425,20 @@
 - 未確認実車値追加: `0件`
 - SHA-256: `7d46b0184b8716ccd9f0f0ea016792a4ae6d7f5f9e0439963310c552c92fc404`
 
-次工程はTopic 09 `直流機方式の損失・熱設計` の完成後独立再解答。
+## Topic 09 完成後独立再解答
+- `09_dc_machine_loss_thermal_design_independent_reanswer.md`: 新規作成
+- R8一次 機械 問1(1)(2): `2 / 2 PASS`
+- R6一次 機械 問2(3): `1 / 1 PASS`
+- R5一次 機械 問1(1)(2)(3)(5): `4 / 4 PASS`
+- H23一次 機械 問2(2)〜(5): `4 / 4 PASS`
+- H22二次 機械・制御 問2(1)〜(3): `3 / 3 PASS`
+- 一次合計: `11 / 11 PASS`
+- 二次合計: `3 / 3 PASS`
+- 総合: `14 / 14 PASS`
+- 教材外知識補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- 独立再解答判定: `PASS`
+
+次工程はTopic 09 `直流機方式の損失・熱設計` の最終QA。
