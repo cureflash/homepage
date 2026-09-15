@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 9 / 21
-- current_status: `topic_10_independent_reanswer_complete`
+- current_status: `topic_10_final_qa_needs_revision`
 - last_completed_topic: `09 新幹線の25kV交流をフェーザで表す`
 - active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
-- next_start: Topic 10最終QA
+- next_start: Topic 10練習source末尾の旧進捗記録だけを現在地へ同期
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -100,24 +100,27 @@
 - [x] 練習PDF＋表示QA
 - [x] 解説画像PowerPoint＋表示QA
 - [x] 完成後独立再解答: `20 / 20 PASS`
-- [ ] 最終QA
+- [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 練習source末尾の旧進捗記録同期
+- [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-Topic 10の完成後独立再解答を実施し、固定一次5問・20小問を完成教材だけで再導出した。
+Topic 10の最終QAを実施した。
 
-- 独立再解答記録: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_reanswer.md`
-- 保存済み個別公式正答値は再導出前に参照せず、全答案確定後に公式解答と照合
-- R8 問5: `5 / 5 PASS`
-- R3 問4(1)(2): `2 / 2 PASS`
-- H30 問6: `5 / 5 PASS`
-- H28 問6: `5 / 5 PASS`
-- H24 問2(1)(2)(5): `3 / 3 PASS`
-- 合計: `20 / 20 PASS`
+- 固定一次5問・20小問の完成後独立再解答: `20 / 20 PASS`
 - 教材外知識補完: `0件`
-- 二次採用0問・二次数合わせ0件を維持
-- 固定範囲外・Topic 11以降の論点、未確認実設備値の追加0件
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 必須成果物: `PASS`
+- 解説PDF表示QA・文字抽出QA: `PASS`
+- 練習PDF表示QA・文字抽出QA: `PASS`
+- 練習12問正答一意性・数値再計算: `12 / 12 PASS`
+- PowerPoint表示QA・overflow・ZIP整合性: `PASS`
+- 固定範囲・SPEC境界: `PASS`
+- 進捗記録整合: `FAIL`
+- exact blocker: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md` 末尾が現在も「次は練習PDF作成」「完成後独立再解答は未実施」とする旧進捗のまま
 
 ## 判定
 
-Topic 10は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `9 / 21` のまま。次工程は最終QA。
+Topic 10は `NEEDS_REVISION / IN_PROGRESS`。技術内容と品質ゲートはPASSだが、練習source末尾の旧進捗記録1箇所が実成果物と不整合。完成数は `9 / 21` のまま。次工程は当該進捗記録だけを同期し、教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
