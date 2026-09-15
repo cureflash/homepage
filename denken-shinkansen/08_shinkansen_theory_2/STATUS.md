@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 9 / 21
-- current_status: `topic_10_powerpoint_complete`
+- current_status: `topic_10_independent_reanswer_complete`
 - last_completed_topic: `09 新幹線の25kV交流をフェーザで表す`
 - active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
-- next_start: Topic 10完成後独立再解答（固定一次5問・20小問）
+- next_start: Topic 10最終QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -99,23 +99,25 @@
 - [x] 練習問題source
 - [x] 練習PDF＋表示QA
 - [x] 解説画像PowerPoint＋表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答: `20 / 20 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 10の解説画像PowerPointを完成し、表示QA・overflow・PPTX整合性を確認した。
+Topic 10の完成後独立再解答を実施し、固定一次5問・20小問を完成教材だけで再導出した。
 
-- 成果物: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_images.pptx`
-- 16:9・5スライド
-- 収録: `XL/XC`の周波数依存、直列共振、Q値、損失を含む並列回路、50/55/60Hz教育用比較
-- 200 dpi全スライド表示QA: `5 / 5 PASS`
-- overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- 固定一次5問・20小問を維持
+- 独立再解答記録: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_reanswer.md`
+- 保存済み個別公式正答値は再導出前に参照せず、全答案確定後に公式解答と照合
+- R8 問5: `5 / 5 PASS`
+- R3 問4(1)(2): `2 / 2 PASS`
+- H30 問6: `5 / 5 PASS`
+- H28 問6: `5 / 5 PASS`
+- H24 問2(1)(2)(5): `3 / 3 PASS`
+- 合計: `20 / 20 PASS`
+- 教材外知識補完: `0件`
 - 二次採用0問・二次数合わせ0件を維持
-- Topic 11以降の論点、未確認実設備値の追加0件
+- 固定範囲外・Topic 11以降の論点、未確認実設備値の追加0件
 
 ## 判定
 
-Topic 10は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `9 / 21` のまま。次工程は完成教材だけで固定一次5問・20小問を独立再解答する。
+Topic 10は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `9 / 21` のまま。次工程は最終QA。
