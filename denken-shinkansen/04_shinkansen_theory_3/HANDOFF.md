@@ -8,12 +8,12 @@ Topic 01〜06は最終QAまでPASSし、`completed`。
 
 Topic 07 `モーターはなぜ回る？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source・練習PDF、解説画像PowerPoint、完成後公式過去問独立再解答まで完了している。固定公式過去問5問は公式解答と `5 / 5 PASS`。
 
-最終QAでは技術内容・必須成果物・過去問対応・既存表示QA・SPEC境界はすべてPASSしたが、主sourceと練習sourceの進捗記録が実成果物より古いため `NEEDS_REVISION / IN_PROGRESS` とした。
+前回最終QAで唯一FAILだった主source・練習sourceの旧進捗記録を、GitHub正本上の実成果物へ同期した。教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTX成果物は変更していない。次は最終QA再実施。
 
 - 完成数: `6 / 14`
 - last completed: `06 0系の変圧器は何をしていた？`
 - active topic: `07 モーターはなぜ回る？`
-- current status: `topic_07_final_qa_needs_revision`
+- current status: `topic_07_source_progress_synced`
 - Topic 07 source: `topics/07_motor_force_induction/07_motor_force_induction.md`
 - Topic 07 explanation PDF: `topics/07_motor_force_induction/07_motor_force_induction_explanation.pdf`
 - Topic 07 practice source: `topics/07_motor_force_induction/07_motor_force_induction_practice.md`
@@ -24,24 +24,23 @@ Topic 07 `モーターはなぜ回る？` は制作前EXAM_ALIGNMENT、解説本
 
 ## 今回進捗
 
-Topic 07の最終QAを実施した。
+Topic 07のsource進捗記録を実成果物へ同期した。
 
-PASS:
+同期内容:
+- 主source `status`: `source_progress_synced`
+- 主sourceの練習問題source・練習PDF: 完成済みへ同期
+- 主sourceのPowerPoint: `16:9・4枚 / 表示QA 4 / 4 PASS / はみ出し0件 / PPTX整合性PASS` へ同期
+- 主sourceの完成後独立再解答: `5 / 5 PASS` へ同期
+- 練習sourceの完成後独立再解答: `5 / 5 PASS` へ同期
+- 主source・練習sourceの次工程: 最終QA再実施へ同期
+
+変更なし:
+- 教材本文
 - 固定EXAM_ALIGNMENT 5問
-- 完成後独立再解答 `5 / 5 PASS`
-- 必須成果物の実在
-- 解説PDF・練習PDF・PowerPointの既存QA
-- 練習15問の独立再計算・再判定 `15 / 15 PASS`
-- SPEC固定範囲と境界
-- 教材外知識補完 `0件`
-- 直流機詳細・Topic 08以降への依存 `0件`
-- 未確認0系実車値への依存 `0件`
-
-FAIL:
-- 主source `07_motor_force_induction.md` の進捗記録が旧状態
-- 練習source `07_motor_force_induction_practice.md` の進捗記録が旧状態
-
-主sourceには `status: explanation_pdf_complete`、練習・PowerPoint・完成後独立再解答が未着手/未実施という記録が残る。練習sourceにもPowerPoint・完成後独立再解答が未実施という記録が残る。
+- 数式・3段階例題
+- 練習15問と完全解説
+- 解説PDF・練習PDF・PowerPoint
+- SPEC固定範囲・境界
 
 ## Topic 07 固定過去問
 
@@ -86,21 +85,17 @@ e = Blv sinθ
 
 ## 次に行うこと
 
-主sourceと練習sourceの進捗記録だけを実成果物へ同期する。
+Topic 07の最終QAを再実施する。
 
-変更対象:
-- `07_motor_force_induction.md` の status、現段階品質確認、次工程
-- `07_motor_force_induction_practice.md` の完成後独立再解答記録、次工程
-
-変更しないもの:
-- 教材本文
+確認対象:
+- 必須成果物の実在
 - 固定EXAM_ALIGNMENT 5問
-- 数式・3段階例題
-- 練習15問と解説
-- PDF / PowerPoint
-- SPEC固定範囲・境界
+- 完成後独立再解答 `5 / 5 PASS`
+- 解説PDF・練習PDF・PowerPoint既存QA
+- SPEC境界
+- 主source・練習sourceの進捗記録整合性
 
-同期後に最終QAを再実施し、全件PASSした場合のみ Topic 07を `completed` とする。
+全件PASSした場合のみ Topic 07を `completed` とし、完成数を `7 / 14` に更新してTopic 08へ進む。
 
 ## 固定ルール
 
