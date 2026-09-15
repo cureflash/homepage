@@ -6,33 +6,42 @@
 
 Topic 01〜06は最終QAまでPASSし、`completed`。
 
-Topic 07 `モーターはなぜ回る？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source・練習PDF、解説画像PowerPointに続き、完成後公式過去問独立再解答まで完了した。固定公式過去問5問は公式解答と `5 / 5` 一致した。
+Topic 07 `モーターはなぜ回る？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source・練習PDF、解説画像PowerPoint、完成後公式過去問独立再解答まで完了している。固定公式過去問5問は公式解答と `5 / 5 PASS`。
+
+最終QAでは技術内容・必須成果物・過去問対応・既存表示QA・SPEC境界はすべてPASSしたが、主sourceと練習sourceの進捗記録が実成果物より古いため `NEEDS_REVISION / IN_PROGRESS` とした。
 
 - 完成数: `6 / 14`
 - last completed: `06 0系の変圧器は何をしていた？`
 - active topic: `07 モーターはなぜ回る？`
-- current status: `topic_07_independent_reanswer_complete`
+- current status: `topic_07_final_qa_needs_revision`
 - Topic 07 source: `topics/07_motor_force_induction/07_motor_force_induction.md`
 - Topic 07 explanation PDF: `topics/07_motor_force_induction/07_motor_force_induction_explanation.pdf`
 - Topic 07 practice source: `topics/07_motor_force_induction/07_motor_force_induction_practice.md`
 - Topic 07 practice PDF: `topics/07_motor_force_induction/07_motor_force_induction_practice.pdf`
 - Topic 07 PowerPoint: `topics/07_motor_force_induction/07_motor_force_induction_images.pptx`
 - Topic 07 reanswer: `topics/07_motor_force_induction/07_motor_force_induction_exam_recheck.md`
+- Topic 07 final QA: `topics/07_motor_force_induction/07_motor_force_induction_final_qa.md`
 
 ## 今回進捗
 
-固定EXAM_ALIGNMENT・教材本文・練習問題・PowerPointを変更せず、Topic 07の完成後公式過去問独立再解答を実施した。
+Topic 07の最終QAを実施した。
 
-- 令和6年度下期 理論 問4 → `(2)`
-- 令和5年度下期 理論 問4 → `(2)`
-- 令和4年度上期 理論 問4 → `(3)`
-- 令和2年度 理論 問3 → `(3)`
-- 平成28年度 理論 問12 → `(2)`
-- 公式解答との一致: `5 / 5 PASS`
-- 教材だけで必要公式・途中式・方向判定を再構成可能: PASS
-- 教材外知識の補完: `0問`
-- 直流機詳細・Topic 08以降への依存: `0問`
-- 未確認0系実車値への依存: `0問`
+PASS:
+- 固定EXAM_ALIGNMENT 5問
+- 完成後独立再解答 `5 / 5 PASS`
+- 必須成果物の実在
+- 解説PDF・練習PDF・PowerPointの既存QA
+- 練習15問の独立再計算・再判定 `15 / 15 PASS`
+- SPEC固定範囲と境界
+- 教材外知識補完 `0件`
+- 直流機詳細・Topic 08以降への依存 `0件`
+- 未確認0系実車値への依存 `0件`
+
+FAIL:
+- 主source `07_motor_force_induction.md` の進捗記録が旧状態
+- 練習source `07_motor_force_induction_practice.md` の進捗記録が旧状態
+
+主sourceには `status: explanation_pdf_complete`、練習・PowerPoint・完成後独立再解答が未着手/未実施という記録が残る。練習sourceにもPowerPoint・完成後独立再解答が未実施という記録が残る。
 
 ## Topic 07 固定過去問
 
@@ -77,16 +86,21 @@ e = Blv sinθ
 
 ## 次に行うこと
 
-Topic 07の最終QAを実施する。
+主sourceと練習sourceの進捗記録だけを実成果物へ同期する。
 
-確認項目:
-- 固定EXAM_ALIGNMENT 5問と完成後独立再解答 `5 / 5 PASS`
-- 必須成果物の存在
-- 解説PDF・練習PDF・PowerPointの既存QA記録
-- source Markdownの進捗記録と実成果物の整合
-- SPEC固定範囲と境界
+変更対象:
+- `07_motor_force_induction.md` の status、現段階品質確認、次工程
+- `07_motor_force_induction_practice.md` の完成後独立再解答記録、次工程
 
-不整合が1件でもあれば `NEEDS_REVISION` とし、修正後に再QAする。最終QAを通過するまで `completed` としない。
+変更しないもの:
+- 教材本文
+- 固定EXAM_ALIGNMENT 5問
+- 数式・3段階例題
+- 練習15問と解説
+- PDF / PowerPoint
+- SPEC固定範囲・境界
+
+同期後に最終QAを再実施し、全件PASSした場合のみ Topic 07を `completed` とする。
 
 ## 固定ルール
 
