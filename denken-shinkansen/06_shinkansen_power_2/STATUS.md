@@ -4,12 +4,12 @@ updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `06`
 theme: 275kVを受ける新幹線変電所の中身
-current_status: `topic_06_practice_pdf_complete`
+current_status: `topic_06_powerpoint_complete`
 completed_topics: `5 / 22`
 
 ## Topic 06 current result
 
-練習PDFを完成した。`06_substation_practice.md` の全15問＋完全解説を同期し、一次型10問・二次記述型5問、基礎4 / 標準8 / 複合3を変更していない。A4縦4ページ、200 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA PASS。正式5過去問・系列SPEC固定6項目への接続を維持し、教材外知識補完・固定範囲外論点追加・未確認実設備値追加はいずれも0件。
+解説画像PowerPointを完成した。16:9・5スライドで、固定5過去問と系列SPEC固定6項目「変電所、母線、変圧器、遮断器、単線結線図、損失」の解法経路を可視化した。全5スライド表示QA `5 / 5 PASS`、`slides_test.py` overflow 0件、PPTX ZIP整合性PASS。固定範囲外論点・後続Topic知識・未確認実設備値の追加は0件。
 
 品質ゲート:
 - 制作前独立検証: `5 / 5問 PASS`
@@ -22,6 +22,9 @@ completed_topics: `5 / 22`
 - 二次記述型: `5 / 5 PASS`
 - 練習15問独立QA: `15 / 15 PASS`
 - 練習PDF: A4縦 `4ページ` / 200 dpi `4 / 4 PASS` / 文字抽出QA PASS
+- 解説画像PowerPoint: 16:9 `5スライド` / 表示QA `5 / 5 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
 - 正式5過去問への練習問題マッピング: `5 / 5`
 - 固定範囲外論点追加: `0件`
 - 後続Topic知識への依存追加: `0件`
@@ -33,6 +36,8 @@ completed_topics: `5 / 22`
 - `topics/06_substation/06_substation_practice.md`
 - `topics/06_substation/06_substation_practice_qa.md`
 - `topics/06_substation/06_substation_practice.pdf`
+- `topics/06_substation/06_substation_images.pptx`
+- `topics/06_substation/06_substation_powerpoint_qa.md`
 
 ## Gate checklist
 
@@ -48,8 +53,10 @@ completed_topics: `5 / 22`
 - [x] Topic 06 練習問題＋完全解説source
 - [x] Topic 06 練習15問の独立QA
 - [x] Topic 06 練習PDF＋全ページ表示QA
-- [ ] Topic 06 解説画像PowerPoint＋表示QA
+- [x] Topic 06 解説画像PowerPoint＋表示QA
+- [ ] Topic 06 完成後独立再解答
+- [ ] Topic 06 最終QA
 
 ## next_start
 
-Topic 06の解説画像PowerPointを作成する。完成済み解説sourceと固定EXAM_ALIGNMENTを正本とし、正式5過去問・SPEC固定6項目の解法経路を可視化する。固定範囲外論点、後続Topic知識、未確認実設備値は追加しない。
+固定EXAM_ALIGNMENTの一次4問＋二次1問を、完成教材だけを使って保存済み正答を先に見ず独立再解答する。教材外知識を補って解いた場合はFAILとし、固定範囲外論点、後続Topic知識、未確認実設備値は追加しない。

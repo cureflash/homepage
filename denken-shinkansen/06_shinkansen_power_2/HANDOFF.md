@@ -3,34 +3,34 @@
 updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `06`
-current_status: `topic_06_practice_pdf_complete`
+current_status: `topic_06_powerpoint_complete`
 
 ## 今回完了
 
-Topic 06「275kVを受ける新幹線変電所の中身」の練習PDFを完成した。
+Topic 06「275kVを受ける新幹線変電所の中身」の解説画像PowerPointを完成した。
 
-- `06_substation_practice.md` の全15問＋完全解説を同期
-- 一次型10問 / 二次記述型5問
-- 基礎4 / 標準8 / 複合3
-- A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: PASS
-- 正式5過去問へのマッピング: `5 / 5`
+- 16:9 / 5スライド
+- 固定5過去問の解法経路を可視化
 - 系列SPEC固定6項目: `6 / 6`
-- 問題・正答変更: `0件`
-- 教材外知識補完: `0件`
+- 全5スライド表示QA: `5 / 5 PASS`
+- 文字切れ・重なり・図形はみ出し: `0件`
+- `slides_test.py`: `PASS / No overflow detected`
+- PPTX ZIP整合性: `PASS`
+- 問題・正答・EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外論点追加: `0件`
 - 後続Topic知識への依存追加: `0件`
 - 未確認実設備値追加: `0件`
 
 追加成果物:
-- `topics/06_substation/06_substation_practice.pdf`
+- `topics/06_substation/06_substation_images.pptx`
+- `topics/06_substation/06_substation_powerpoint_qa.md`
 
 既存成果物:
 - `topics/06_substation/06_substation_explanation_source.md`
 - `topics/06_substation/06_substation_explanation.pdf`
 - `topics/06_substation/06_substation_practice.md`
 - `topics/06_substation/06_substation_practice_qa.md`
+- `topics/06_substation/06_substation_practice.pdf`
 
 制作前品質ゲートは引き続き、正式5問 `5 / 5問 PASS`、一次 `20 / 20小問 PASS`、二次 `3 / 3設問 PASS`。
 
@@ -38,12 +38,12 @@ Topic 06「275kVを受ける新幹線変電所の中身」の練習PDFを完成�
 
 ## 次に行う
 
-Topic 06の解説画像PowerPointを作成し、表示QAを行う。
+Topic 06の完成後独立再解答を行う。
 
-1. 完成済み `06_substation_explanation_source.md` と固定EXAM_ALIGNMENTを正本とする。
-2. 正式5過去問と系列SPEC固定6項目の解法経路を可視化する。
-3. スコット結線、％Z、ATき電、短絡計算、保護協調、雷サージ等を追加しない。
-4. 未確認の新幹線実設備値を追加しない。
+1. 固定EXAM_ALIGNMENTの一次4問＋二次1問を対象とする。
+2. 完成教材だけを使い、保存済み正答を先に見ずに解く。
+3. 教材外知識で補完した場合は正答してもFAILとする。
+4. 固定範囲外論点、後続Topic知識、未確認実設備値を追加しない。
 
 ## Topic 06 固定範囲
 
