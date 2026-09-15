@@ -4,9 +4,9 @@
 
 ## 状態
 
-`practice_source_complete`
+`topic_06_independent_reanswer_complete`
 
-制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題・解説PDF＋全ページ表示QA・練習問題＋完全解説sourceまで完了。次工程は練習15問の独立QA。
+制作前EXAM_ALIGNMENT・制作前独立検証・解説本文＋3段階例題・解説PDF＋全ページ表示QA・練習問題＋完全解説source・練習15問の独立QA・練習PDF＋全ページ表示QA・解説画像PowerPoint＋表示QA・完成後独立再解答まで完了。次工程は最終QA再実施。
 
 ## SPEC固定範囲
 
@@ -390,4 +390,4 @@ https://www.shiken.or.jp/chief/upload/20090905_ch_second_a01.pdf
 - 件数合わせの固定範囲外問題追加: `0件`
 - 後続Topic論点の追加: `0件`
 - 未確認実設備値の追加: `0件`
-- 次工程: 練習15問の独立QA
+- 次工程: 最終QA再実施
