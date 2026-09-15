@@ -4,31 +4,27 @@ updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `06`
 theme: 275kVを受ける新幹線変電所の中身
-current_status: `topic_06_preproduction_independent_verification_complete`
+current_status: `topic_06_explanation_source_complete`
 completed_topics: `5 / 22`
 
 ## Topic 06 current result
 
-制作前独立検証を完了。正式選定した一次4問＋二次1問を、保存済み正答・公式解答を先に見ずに独立解答し、答案確定後に電気技術者試験センター公式解答・標準解答と照合した。
-
-結果:
-- R2 一次「電力」問7: `5 / 5小問 PASS`
-- H30 二次「電力・管理」問2: `3 / 3設問 PASS`
-- H28 一次「電力」問3: `5 / 5小問 PASS`
-- H22 一次「電力」問2: `5 / 5小問 PASS`
-- H21 一次「電力」問1: `5 / 5小問 PASS`
+解説本文＋3段階例題を完成した。制作前に固定した一次4問＋二次1問・計5問と、系列SPEC固定6項目だけから逆算して本文を構成している。
 
 品質ゲート:
-- 正式選定: 一次4問＋二次1問 = `5問`
+- 制作前独立検証: `5 / 5問 PASS`
 - 一次: `20 / 20小問 PASS`
 - 二次: `3 / 3設問 PASS`
-- 全5問: `5 / 5問 PASS`
-- SPEC固定6項目への対応: `6 / 6`
-- 固定範囲外知識による補完: `0件`
-- 後続Topic知識への依存: `0件`
-- 未確認実設備値への依存: `0件`
+- SPEC固定6項目の本文収録: `6 / 6`
+- 基礎・本試験標準・複合の3段階例題: `3 / 3`
+- 正式5過去問の本文節へのマッピング: `5 / 5`
+- 固定範囲外論点追加: `0件`
+- 後続Topic知識への依存追加: `0件`
+- 未確認実設備値追加: `0件`
+- 教材用数値: 仮定値と明記
 
-制作前品質ゲートをPASSしたため、本文制作へ進行可能。
+解説source:
+- `topics/06_substation/06_substation_explanation_source.md`
 
 ## Gate checklist
 
@@ -39,8 +35,9 @@ completed_topics: `5 / 22`
 - [x] Topic 05 completed
 - [x] Topic 06 制作前EXAM_ALIGNMENT
 - [x] Topic 06 制作前独立検証
-- [ ] Topic 06 解説本文＋3段階例題
+- [x] Topic 06 解説本文＋3段階例題
+- [ ] Topic 06 解説PDF＋全ページ表示QA
 
 ## next_start
 
-Topic 06の解説本文＋3段階例題を作成する。正式5問と系列SPEC固定範囲「変電所、母線、変圧器、遮断器」「単線結線図、損失」だけから逆算し、後続Topic 07以降の論点や未確認実設備値を追加しない。
+`topics/06_substation/06_substation_explanation_source.md` を唯一の本文sourceとしてTopic 06の解説PDFを作成し、全ページ表示QAを行う。固定範囲「変電所、母線、変圧器、遮断器」「単線結線図、損失」から拡張せず、スコット結線、％Z、ATき電、短絡計算、保護協調、雷サージ等を追加しない。
