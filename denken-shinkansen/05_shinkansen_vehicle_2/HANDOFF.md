@@ -7,9 +7,9 @@
 
 Topic 01〜07は最終QAまで `PASS`。完成数は `7 / 39`。
 
-現在地は `topic_08_final_qa_needs_revision`。active topicは Topic 08 `位相制御と平均直流電圧`。制作前EXAM_ALIGNMENTとして一次3問＋二次2問・20対象項目を固定し、制作前独立検証は一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。解説本文＋3段階例題・解説PDF・練習source・練習PDF・解説画像PowerPointまで完成。練習sourceは一次8問＋二次4問の計12問、全問完全解説付きで、固定20対象項目へ `20 / 20` 接続、独立計算・論理・正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、180 dpi全ページ表示QA・文字抽出QA・計算論理 `12 / 12 PASS`。PowerPointは16:9・4スライド、SPEC指定4可視化 `4 / 4`、2400×1350 px全スライド表示QA・overflow・ZIP整合性 `PASS`。完成教材だけで固定5過去問・20対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。教材外知識補完・固定範囲外追加・未確認実車値追加はいずれも0件。
+現在地は `topic_08_progress_record_synced`。active topicは Topic 08 `位相制御と平均直流電圧`。制作前EXAM_ALIGNMENTとして一次3問＋二次2問・20対象項目を固定し、制作前独立検証は一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。解説本文＋3段階例題・解説PDF・練習source・練習PDF・解説画像PowerPointまで完成。練習sourceは一次8問＋二次4問の計12問、全問完全解説付きで、固定20対象項目へ `20 / 20` 接続、独立計算・論理・正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、180 dpi全ページ表示QA・文字抽出QA・計算論理 `12 / 12 PASS`。PowerPointは16:9・4スライド、SPEC指定4可視化 `4 / 4`、2400×1350 px全スライド表示QA・overflow・ZIP整合性 `PASS`。完成教材だけで固定5過去問・20対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。教材外知識補完・固定範囲外追加・未確認実車値追加はいずれも0件。
 
-最終QAでは技術内容・成果物・過去問対応は全件PASSだが、主sourceの旧進捗2箇所と練習sourceの旧進捗1箇所が実在成果物と不整合のため `NEEDS_REVISION`。Topic 08はまだ `completed` にしない。次は進捗記録3箇所だけを現在地へ同期し、その後に最終QAを再判定する。
+前回最終QAで唯一FAILだった主source旧進捗2箇所と練習source旧進捗1箇所は、実在成果物と完成後独立再解答 `20 / 20 PASS` の現在地へ同期済み。教材本文・数式・固定EXAM_ALIGNMENT・問題・PDF/PPTXは変更していない。Topic 08はまだ `completed` にせず、次は最終QAだけを再判定する。
 
 Topic 07はH21一次「機械」問2(2)の不足「負荷損を規定の基準巻線温度へ補正」を固定範囲内で補強し、解説PDF・練習PDF・PowerPointへの同期と各QAまで完了。補強済み完成教材だけで固定一次4問＋二次1問・15対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `2 / 2 PASS`、合計 `15 / 15 PASS`。教材外知識補完は0件。主source・練習sourceの旧進捗記録不整合も解消し、最終QA `PASS / completed`。
 
@@ -198,6 +198,7 @@ source: `topics/08_phase_control_average_dc_voltage/08_phase_control_average_dc_
 - 未確認の100系・200系実車電圧・電流・詳細転流条件を真値化: `0件`
 - 後続Topic追加: `0件`
 - 解説PDF・練習source・練習PDF・PowerPoint: `completed`
+- 前回最終QAで指摘された主source旧進捗2箇所: `同期済み`
 
 ## Topic 08 解説PDF
 - `08_phase_control_average_dc_voltage_explanation.pdf`
@@ -229,6 +230,7 @@ source: `topics/08_phase_control_average_dc_voltage/08_phase_control_average_dc_
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
+- 前回最終QAで指摘された練習source旧進捗1箇所: `同期済み`
 
 ## Topic 08 解説画像PowerPoint
 - `08_phase_control_average_dc_voltage_images.pptx`
@@ -272,7 +274,7 @@ source: `topics/08_phase_control_average_dc_voltage/08_phase_control_average_dc_
 - 判定: `PASS`
 
 ## Topic 08 最終QA
-`08_phase_control_average_dc_voltage_final_qa.md` を作成済み。
+`08_phase_control_average_dc_voltage_final_qa.md` の前回判定は `NEEDS_REVISION`。
 
 - 必須成果物存在: `PASS`
 - 固定EXAM_ALIGNMENT: 一次3問＋二次2問・20対象項目を維持
@@ -282,17 +284,13 @@ source: `topics/08_phase_control_average_dc_voltage/08_phase_control_average_dc_
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 主source冒頭 `## 状態`: 解説PDF作成を次工程とする旧進捗が残存
-- 主source末尾 `## 次工程`: 解説PDF作成を次工程とする旧進捗が残存
-- 練習source冒頭 `## 状態`: 練習PDF未作成とする旧進捗が残存
-- 進捗記録整合: `FAIL`
-- 最終判定: `NEEDS_REVISION`
+- 前回唯一のFAIL要因だった主source旧進捗2箇所・練習source旧進捗1箇所: `同期済み`
+- 再判定: `未実施`
 
 ## 次の正確な開始点
-Topic 08 `位相制御と平均直流電圧` の進捗記録同期。
+Topic 08 `位相制御と平均直流電圧` の最終QA再判定。
 
-1. `08_phase_control_average_dc_voltage.md` 冒頭 `## 状態` を、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答 `20 / 20 PASS` 完了の現在地へ同期する。
-2. 同source末尾 `## 次工程` を、最終QA再判定へ同期する。
-3. `08_phase_control_average_dc_voltage_practice_source.md` 冒頭 `## 状態` の「練習PDF未作成」を解消し、練習PDF・QA完了と完成後独立再解答 `20 / 20 PASS` を記録する。
-4. 技術本文、数式、固定一次3問＋二次2問・20対象項目、練習問題、PDF/PPTXは変更しない。
-5. 3箇所同期後、Topic 08最終QAを再判定する。
+1. 主source・練習sourceの進捗記録が実在成果物と完成後独立再解答 `20 / 20 PASS` に同期済みであることを確認する。
+2. 必須成果物、固定一次3問＋二次2問・20対象項目、練習12問、PDF/PPTX各QA、固定範囲を再確認する。
+3. 技術本文、数式、固定EXAM_ALIGNMENT、問題、PDF/PPTXは変更しない。
+4. 全品質ゲートがPASSなら Topic 08を `completed` にし、完成数を `8 / 39` へ更新する。
