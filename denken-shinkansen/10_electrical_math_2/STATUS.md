@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 8 / 20
-- current_status: `topic_09_practice_source_complete`
+- current_status: `topic_09_practice_pdf_complete`
 - last_completed_topic: `08 二階常微分方程式`
 - active_topic: `09 ラプラス変換`
-- next_start: Topic 09の練習PDF。完成済み練習sourceをそのまま反映し、全ページ表示QA・文字抽出QAを行う
+- next_start: Topic 09の解説画像PowerPoint。固定二次5問・6対象設問と本文・練習の要点を16:9で可視化し、表示QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -70,7 +70,7 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source
-- [ ] 練習PDF
+- [x] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
 - [ ] 完成後独立再解答
@@ -79,15 +79,15 @@
 
 ## 今回進めた内容
 
-Topic 09 `ラプラス変換` の練習問題・完全解説sourceを完成した。
+Topic 09 `ラプラス変換` の練習PDFを完成し、GitHub正本へ反映した。
 
 確認結果:
-- 全12問
-- 一次型8問／二次記述型4問
-- 固定二次5問・6対象設問へ全件接続
-- 微分の変換・積分の変換・初期値・代表変換対・部分分数分解・逆変換を反復
-- 一階・二階微分方程式のラプラス変換による解き直しを収録
-- 独立計算・正答一意性QA: `12 / 12 PASS`
+- A4縦6ページ
+- 全12問（一次型8問／二次記述型4問）と完全解説を反映
+- 200 dpi全ページ表示QA: `6 / 6 PASS`
+- 文字抽出QA: `PASS`
+- 固定二次5問・6対象設問への接続を維持
+- 独立計算・正答一意性QA: `12 / 12 PASS` を維持
 - Topic 10先取り: 0件
 - 件数合わせの固定範囲外追加: 0件
 - 教材外知識補完: 0件
@@ -95,8 +95,8 @@ Topic 09 `ラプラス変換` の練習問題・完全解説sourceを完成し�
 
 ## 判定
 
-Topic 09は `PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`。
+Topic 09は `PRACTICE_PDF_COMPLETE / IN_PROGRESS`。
 
 完成数は `8 / 20` のまま。
 
-次はTopic 09の練習PDF。
+次はTopic 09の解説画像PowerPoint。
