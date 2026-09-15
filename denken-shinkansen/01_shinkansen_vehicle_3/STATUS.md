@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 31 / 38
-- current_status: `topic_32_explanation_pdf_complete`
+- current_status: `topic_32_practice_pdf_complete`
 - last_completed_topic: `31 ATC② 地上から車上へどう情報を送る？`
 - active_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
-- next_start: Topic 32の固定EXAM_ALIGNMENTと解説本文/PDFを維持して練習source/PDFを作成する
+- next_start: Topic 32の固定EXAM_ALIGNMENTと解説/練習成果物を維持して解説画像PowerPointを作成する
 
 ## 新品質ゲート進捗
 - [x] 01〜31 — PASS
-- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 解説PDF完了
+- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 練習PDF完了
 
 ## 32 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
@@ -54,6 +54,34 @@ source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 - 文字抽出QA: PASS
 - 固定EXAM_ALIGNMENT: `6 / 6` 反映
 - 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+
+## 32 練習source / PDF
+- source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control_practice.md`
+- PDF: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control_practice.pdf`
+- 全15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説
+- 正答位置: A/B/C/D/E各3問
+- 固定5問・6対象項目: `6 / 6` 練習マッピング
+- 独立数値・論理QA: `15 / 15 PASS`
+- 複数正答: `0件`
+- A4縦4ページ、180 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- 固定範囲外論点追加: `0件`
+- Topic 30/31範囲の再説明追加: `0件`
+- 未確認実車値追加: `0件`
+
+## 32 練習QA
+- 問題数: `15 / 15`
+- 基礎/標準/複合: `4 / 8 / 3`
+- 五肢択一: `15 / 15`
+- 正答位置: A/B/C/D/E各3問
+- 固定EXAM_ALIGNMENT要求事項: `6 / 6` マッピング
+- 独立数値・論理再計算: `15 / 15 PASS`
+- 複数正答: `0件`
+- 練習PDF表示QA: 180 dpi `4 / 4 PASS`
+- 練習PDF文字抽出QA: PASS
+- 固定範囲外論点追加: `0件`
+- Topic 30/31範囲の再説明追加: `0件`
 - 未確認実車値追加: `0件`
 
 ## 31 EXAM_ALIGNMENT
@@ -241,4 +269,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 31 `ATC② 地上から車上へどう情報を送る？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は解説PDF完了。固定5問・6対象項目と本文/PDFを変更せず、次は練習source/PDFを作成する。
+Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は練習source/PDF完了。固定5問・6対象項目と解説/練習成果物を変更せず、次は解説画像PowerPointを作成する。
