@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: 6 / 39
-- current_status: `topic_07_progress_records_synced`
-- last_completed_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
-- active_topic: `07 直流主回路の高出力化`
-- next_start: Topic 07最終QAを再実施し、主source・練習sourceの旧進捗記録不整合が解消したこと、必須成果物、固定一次4問＋二次1問・15対象項目、補強後再独立再解答 `15 / 15 PASS`、各表示QA、固定範囲外追加0件を再確認する。全件PASSの場合のみ `completed` として完成数を `7 / 39` へ進める
+- exam_aligned_completed_topics: 7 / 39
+- current_status: `topic_07_completed`
+- last_completed_topic: `07 直流主回路の高出力化`
+- active_topic: `08 位相制御と平均直流電圧`
+- next_start: Topic 08の制作前EXAM_ALIGNMENT。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列`SPEC.md`の固定範囲に従い、公式二種一次・二次過去問を直近年度優先で調査し、一次・二次を合わせ原則5問以上、二次対象論点で確認できる場合は記述式を最低1問含めて固定する。後続Topicを件数合わせで追加しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -17,7 +17,8 @@
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
-- [ ] 07 直流主回路の高出力化 — 補強後再独立再解答 `15 / 15 PASS`。直近最終QAで指摘されたsource進捗記録不整合は同期済み。最終QA再実施待ち
+- [x] 07 直流主回路の高出力化 — PASS
+- [ ] 08 位相制御と平均直流電圧 — 未着手
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -162,7 +163,6 @@
 - 独立再解答判定: `PASS`
 
 ## Topic 07 最終QA
-直近の最終QA記録では、以下はPASS済み。
 - 必須成果物: `PASS`
 - 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問・15対象項目を維持
 - 完成後独立再解答: `15 / 15 PASS`
@@ -172,12 +172,8 @@
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-
-直近最終QAでのFAIL要因:
-- 主sourceのPDF/PPTX未同期・再独立再解答未実施という旧進捗記録
-- 練習sourceの練習PDF未同期という旧進捗記録
-
-上記2件の旧進捗記録は本runで実態へ同期済み。直近判定 `NEEDS_REVISION` は履歴として維持し、最終QAを再実施して全件PASSを確認するまではTopic 07を `completed` にしない。
+- 前回FAIL要因だった主source・練習sourceの旧進捗記録不整合: 解消
+- 最終判定: `PASS / completed`
 
 ## Topic 07 固定範囲
 - 主回路構成比較
@@ -194,8 +190,8 @@
 - 出力―損失
 - 出力―発熱
 
-範囲外として追加しない:
+範囲外として追加していない:
 - 位相制御、サイリスタ点弧角、誘導電動機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱設計
 - 出典で確認できない100系・200系の編成出力、主回路総損失、効率、冷却容量、けん引力・速度特性
 
-次工程はTopic 07最終QA再実施。主source・練習sourceの進捗記録同期を確認し、必須成果物、固定一次4問＋二次1問・15対象項目、補強後再独立再解答 `15 / 15 PASS`、各表示QA、固定範囲外追加0件を再確認する。全件PASSの場合のみ `completed` として完成数を `7 / 39` へ進める。
+次工程はTopic 08 `位相制御と平均直流電圧` の制作前EXAM_ALIGNMENT。
