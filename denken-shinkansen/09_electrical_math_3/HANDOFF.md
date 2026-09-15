@@ -6,15 +6,15 @@
 
 Topic 01〜06は `completed`。
 
-Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。制作前独立解答は `5 / 5 PASS`、練習12問の独立計算QAは `12 / 12 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
+Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。制作前独立解答は `5 / 5 PASS`、練習12問の独立計算QAは `12 / 12 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
 
 完成数: `6 / 12`
 
-current_status: `topic_07_practice_pdf_complete`
+current_status: `topic_07_images_pptx_complete`
 
 active_topic: `07 微分② 速度を微分すると加速度`
 
-next_start: `Topic 07 解説画像PowerPoint`
+next_start: `Topic 07 完成教材だけでの公式過去問独立再解答`
 
 ## Topic 07 固定EXAM_ALIGNMENT
 
@@ -56,73 +56,40 @@ next_start: `Topic 07 解説画像PowerPoint`
 
 過去問を完結させるために必要な `F=qE`、`F=ma`、直並列抵抗、`P=I²R` は既習の電気・物理前提として最小限接続し、Topic 07の主題へ追加しない。
 
-## Topic 07 解説本文＋3段階例題
+## Topic 07 成果物
 
-主source `topics/07_derivative_2/07_derivative_2.md` に解説本文を追加済み。
+### 主source
+`topics/07_derivative_2/07_derivative_2.md`
 
-本文の主な節:
-- 位置・速度・加速度と二階微分
-- 速度と加速度の符号による速さの増減
-- 一定加速度運動の基本関係
-- 一様電界中の電荷の一定加速度運動
-- 二方向運動の軸分解
-- 増加・減少と極大・極小
-- 可変抵抗の最大電力を微分で求める手順
-- 連鎖律と `a=v dv/dx`
-- 新幹線の位置・速度・加速度グラフ対応
-- 固定5過去問への教材内マッピング
+固定5問の要求事項を本文§2〜§14と3段階例題へ全件対応付け済み。仕様外論点、再出題重複、未確認新幹線実値の追加は0件。
 
-3段階例題:
-1. 基礎: `x(t)` から `v(t)`・`a(t)` を求める
-2. 本試験標準: 一様電界中の点電荷の移動時間
-3. 複合・ひっかけ: `P(R)=144R/(R+3)²` の最大条件
-
-固定5問の要求事項は本文§2〜§14へ全件対応付け済み。仕様外論点、再出題重複、未確認新幹線実値の追加は0件。
-
-## Topic 07 解説PDF
-
-成果物: `topics/07_derivative_2/07_derivative_2_explanation.pdf`
+### 解説PDF
+`topics/07_derivative_2/07_derivative_2_explanation.pdf`
 
 - A4縦3ページ
-- 主sourceの固定範囲、3段階例題、固定5過去問への教材内マッピングを収録
-- 200 dpi全ページ表示QA: `3 / 3 PASS`
-- 文字抽出QA: PASS
-- クリッピング、重なり、文字化け: 0件
-- 固定EXAM_ALIGNMENT変更: 0件
-- 仕様外論点・再出題重複・未確認新幹線実値の追加: 0件
+- 200 dpi表示QA `3 / 3 PASS`
+- 文字抽出QA PASS
+- クリッピング、重なり、文字化け0件
 
-## Topic 07 練習問題source
+### 練習source / PDF
+- `topics/07_derivative_2/07_derivative_2_practice.md`
+- `topics/07_derivative_2/07_derivative_2_practice.pdf`
 
-成果物: `topics/07_derivative_2/07_derivative_2_practice.md`
+全12問・全問五肢択一、基礎3 / 標準7 / 複合2、完全解説付き。固定5過去問の要求事項を全件練習へ接続し、独立計算QA `12 / 12 PASS`。PDFはA4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS。
 
-- 全12問・全問五肢択一
-- 基礎3 / 標準7 / 複合2
-- 完全解説付き
-- 固定5過去問の要求事項を全件練習へ接続
-- 独立計算QA: `12 / 12 PASS`
-- 複数正答、単位不整合、固定範囲外前提依存: 0件
-- 未確認新幹線実値: 0件
+### 解説画像PowerPoint
+`topics/07_derivative_2/07_derivative_2_images.pptx`
 
-主な対応:
-- R6上理論問7: 問10・12（可変抵抗電力の微分最大化）
-- R5下理論問12: 問1・5・7（二階微分・一定加速度・時間依存性）
-- R3理論問7: 問10・11（負荷電力最大条件と回路電流）
-- R1理論問12: 問5・6（一様電界中の一定加速度と移動時間）
-- H27理論問12: 問8（二方向運動を共通時間で接続）
-
-## Topic 07 練習PDF
-
-成果物: `topics/07_derivative_2/07_derivative_2_practice.pdf`
-
-- A4縦4ページ
-- 練習sourceの全12問、五肢選択肢、完全解説を収録
-- 固定5過去問との対応と独立計算QAを収録
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: PASS
-- クリッピング、重なり、文字化け: 0件
-- 固定EXAM_ALIGNMENT変更: 0件
-- 制作前独立検証 `5 / 5 PASS`、練習独立計算QA `12 / 12 PASS` を維持
-- 仕様外論点・再出題重複・未確認新幹線実値の追加: 0件
+- 16:9・4スライド
+- Slide 1: 二階微分と位置 `x(t)` → 速度 `v(t)` → 加速度 `a(t)` の対応
+- Slide 2: 速度・加速度の符号と速さの増減、連鎖律、`a=v dv/dx`
+- Slide 3: 極大・極小、可変抵抗の最大電力を `P(R)` の微分で解く手順
+- Slide 4: 固定5過去問と教材内節の対応、後続Topicとの境界
+- 全4スライド表示QA `4 / 4 PASS`
+- overflow検査 PASS
+- クリッピング、重なり、文字化け0件
+- PPTX ZIP/XML整合性 PASS
+- 固定EXAM_ALIGNMENT変更0件、仕様外論点・未確認新幹線実値追加0件
 
 ## 候補除外
 
@@ -137,35 +104,10 @@ next_start: `Topic 07 解説画像PowerPoint`
 
 Topic 06 `微分① ダイヤの傾きは速度` は `PASS / completed`。補強後の完成教材だけで固定4問を再独立解答し、公式解答と `4 / 4` 一致。教材外知識補完0件、固定範囲外追加0件、未確認新幹線実値追加0件。
 
-固定EXAM_ALIGNMENT:
-- R7上 理論 問13
-- R6下 理論 問3
-- R5上 理論 問10
-- R4下 理論 問7
-
 最終QA記録: `topics/06_derivative_1/06_derivative_1_final_qa.md`
-
-## 既存成果物
-
-Topic 07:
-- `topics/07_derivative_2/07_derivative_2.md`（EXAM_ALIGNMENT＋解説本文＋3段階例題）
-- `topics/07_derivative_2/07_derivative_2_explanation.pdf`
-- `topics/07_derivative_2/07_derivative_2_practice.md`（12問＋完全解説、独立計算QA `12 / 12 PASS`）
-- `topics/07_derivative_2/07_derivative_2_practice.pdf`
-
-Topic 06:
-- `topics/06_derivative_1/06_derivative_1.md`
-- `topics/06_derivative_1/06_derivative_1_revision_supplement.md`
-- `topics/06_derivative_1/06_derivative_1_exam_reanswer.md`
-- `topics/06_derivative_1/06_derivative_1_final_qa.md`
-- `topics/06_derivative_1/06_derivative_1_explanation.pdf`
-- `topics/06_derivative_1/06_derivative_1_practice.md`
-- `topics/06_derivative_1/06_derivative_1_practice.pdf`
-- `topics/06_derivative_1/06_derivative_1_images.pptx`
-- `topics/06_derivative_1/06_derivative_1_revision_supplement.pdf`
 
 ## 次に行うこと
 
-Topic 07の解説画像PowerPointを作成する。
+Topic 07の完成教材だけを使って固定5過去問を独立再解答する。
 
-固定5過去問、固定範囲、制作前 `5 / 5 PASS`、練習独立計算 `12 / 12 PASS` を維持する。解説本文と既存PDFの内容から、二階微分、位置・速度・加速度の対応、速度と加速度の符号、極大・極小、`a=v dv/dx`、可変抵抗最大電力の解法を視覚化し、積分、RC/RL過渡現象、電子回路・ブラウン管の専門解説等を先取りしない。仕様外論点追加、再出題の重複カウント、未確認新幹線実値の追加はしない。
+公式解答を先に見て逆算せず、主source・解説PDF・練習source/PDF・解説画像PowerPointだけで解答を再構成し、各問について教材内で必要知識が完結しているか判定する。公式解答との一致だけでなく、教材外知識補完0件を確認する。固定範囲外論点、再出題重複、未確認新幹線実値は追加しない。
