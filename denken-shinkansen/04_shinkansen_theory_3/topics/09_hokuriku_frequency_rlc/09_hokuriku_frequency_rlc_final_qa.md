@@ -6,21 +6,21 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで最終QAを実施した。新しい仕様・固定範囲外論点は追加していない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで最終QAを再実施した。新しい仕様・固定範囲外論点は追加していない。
 
-技術内容・過去問対応・必須成果物・既存表示QAはPASS。未完了理由は進捗記録1箇所のみで、練習sourceの状態・次工程が実在成果物より古い。
+前回唯一FAILだった練習sourceの旧進捗記録が実成果物へ同期済みであることを再確認した。技術内容・固定EXAM_ALIGNMENT・練習問題・PDF・PowerPointは変更していない。
 
 ## 必須成果物の実在確認
 
-GitHub正本上で次を確認した。
+GitHub正本上で次を確認した。最終QA判定に合わせて主source・練習sourceへ完了進捗のみ同期した。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| source Markdown | `07a0c3de44f0f8403c2a646691cddaef408890d2` | PASS |
+| source Markdown | `3c8583cc2c27ebe78a7d2dc08d23c4b0fb5fcb92` | PASS |
 | 解説PDF | `6cf3c47b1f50c64a50cc96931b714ea4201b36a0` | PASS |
-| 練習source | `b74a8561287a1fbdc51656ee857efb73741ecf93` | PASS（内容） / FAIL（進捗記録） |
+| 練習source | `7e8bbf550b0e98b8ee50ad358692d315db990bb5` | PASS |
 | 練習PDF | `2bd3628c28e1229506c3c9e5bfcf0002a7cfe231` | PASS |
 | 解説画像PowerPoint | `c7716a2d6c31d4c03237d64b540805cf2a45540a` | PASS |
 | 完成後独立再解答 | `2bebcc46fd877ba8f02e57bf518be86a1614de22` | PASS |
@@ -70,16 +70,13 @@ GitHub正本上で次を確認した。
 
 ## 進捗記録整合性
 
-主sourceは `INDEPENDENT_REANSWER_COMPLETE` で、最終QAを次工程としており、最終QA開始時点の実態と一致していた。
+前回最終QAで唯一FAILだった練習sourceの旧進捗記録は、実成果物へ同期済みであることを再確認した。
 
-練習sourceには次の旧進捗が残る。
+- 主source: 完成後独立再解答まで実態と一致し、最終QA判定後 `COMPLETED` へ同期
+- 練習source: PowerPoint・完成後独立再解答まで実態と一致し、最終QA判定後 `COMPLETED` へ同期
+- STATUS / HANDOFF: 最終QA再実施を次工程として保持しており、判定時点の実態と一致
 
-- `stage: PRACTICE_PDF_COMPLETE`
-- `次工程`: 「解説画像PowerPointを作成する。完成後独立再解答が済むまで completed にしない」
-
-しかしGitHub正本には解説画像PowerPointが既に存在し、PowerPoint QAはPASS、完成後独立再解答も `6 / 6 PASS` である。このため練習sourceの進捗記録が実態と不一致。
-
-判定: FAIL。
+判定: PASS。
 
 ## 最終判定
 
@@ -94,6 +91,6 @@ GitHub正本上で次を確認した。
 - 教材外知識補完: `0件`
 - 後続Topic知識への依存: `0件`
 - 未確認新幹線実車情報への依存: `0件`
-- source進捗記録整合性: FAIL（練習source 1箇所）
+- source進捗記録整合性: PASS
 
-結論: Topic 09は `NEEDS_REVISION / IN_PROGRESS`。技術成果物は変更せず、次は練習sourceの旧進捗記録だけを実成果物へ同期し、その後に最終QAを再実施する。完成数は `8 / 14` のままとする。
+結論: Topic 09は `PASS / completed`。完成数を `9 / 14` とし、次はTopic 10「新幹線が使う電力は「W」だけではない」の制作前EXAM_ALIGNMENTへ進む。
