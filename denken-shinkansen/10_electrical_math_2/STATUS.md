@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 8 / 20
-- current_status: `topic_09_final_qa_needs_revision`
+- current_status: `topic_09_source_progress_synced`
 - last_completed_topic: `08 二階常微分方程式`
 - active_topic: `09 ラプラス変換`
-- next_start: Topic 09主sourceの `## 状態` と `## 次工程` の旧進捗2箇所だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・完成後独立再解答は変更しない
+- next_start: Topic 09の最終QAを再判定する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・完成後独立再解答は変更しない
 
 ## Topic 07 制作品質ゲート
 
@@ -75,35 +75,32 @@
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 `6 / 6 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
-- [ ] source進捗記録2箇所の同期
+- [x] source進捗記録2箇所の同期
 - [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 09 `ラプラス変換` の最終QAを実施し、GitHub正本へ記録した。
+Topic 09 `ラプラス変換` の主source進捗記録2箇所を実成果物へ同期した。
 
-確認結果:
-- 必須成果物実在: PASS
-- 固定二次5問・6対象設問: PASS
-- 完成後独立再解答: `6 / 6 PASS`
-- 解説PDF表示・文字抽出QA: PASS
-- 練習PDF表示・文字抽出QA: PASS
-- PowerPoint表示・overflow・ZIP/XML整合性QA: PASS
+変更箇所:
+- 冒頭 `## 状態`
+- 末尾 `## 次工程`
+
+維持事項:
+- 固定二次5問・6対象設問: 変更なし
+- 完成後独立再解答: `6 / 6 PASS` を維持
+- 技術本文・数式・3段階例題: 変更なし
+- 練習問題・解説PDF・練習PDF・PowerPoint: 変更なし
 - Topic 10先取り: 0件
 - 件数合わせの固定範囲外追加: 0件
 - 教材外知識補完: 0件
 - 未確認実車値依存: 0件
-- 主source進捗記録整合: FAIL
-
-FAILは `09_laplace_transform.md` の進捗記録2箇所のみ。
-- 冒頭 `## 状態` が解説本文完成時点の旧状態
-- 末尾 `## 次工程` が「解説PDFへ反映」の旧状態
 
 ## 判定
 
-Topic 09は `FINAL_QA_NEEDS_REVISION / IN_PROGRESS`。
+Topic 09は `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。
 
 完成数は `8 / 20` のまま。
 
-次は主sourceの進捗記録2箇所だけを実成果物へ同期する。
+次は最終QAを再判定する。
