@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_11_exam_alignment_complete`
+- current_status: `topic_11_explanation_source_complete`
 - last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
 - active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 解説本文＋3段階例題
+- next_start: Topic 11 解説PDF
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -158,8 +158,22 @@
 - H22 二次 機械・制御 問3: `4 / 4 PASS`
 - 合計: `15 / 15 PASS`
 
+## Topic 11 解説source
+- [x] §1 試験論点・IGBT正式名称・素子識別
+- [x] §2 ON導通損失・OFF漏れ電流の区別
+- [x] §3 `W_sw=∫vi dt`、`W_off=V_dc I_dc T_2/2`、`P_sw=f_sw(W_on+W_off)`
+- [x] §4 H22二次型のIGBT／逆並列ダイオード導通区間・平均電流積分
+- [x] §5 素子数を含む総損失・発熱・冷却・変換効率
+- [x] §6 GTO→IGBT→SiC比較とN700S接続
+- [x] 解法手順・頻出ミス・公式まとめ
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3`
+- [x] 固定5問・15答案要素を本文へ `15 / 15` マッピング
+- [x] JR東海・東芝・三菱電機の公式資料を実車／メーカー根拠として追加
+- [x] N700Sの7%消費電力量削減をSiC単独効果として扱わない
+- [x] 固定範囲外論点・未確認実車値の追加 `0件`
+
 ## 今回進めた内容
-Topic 11「GTO→IGBT→SiCの損失を計算する」の制作前EXAM_ALIGNMENTを完了した。公式二種過去問から一次4問＋二次1問・15答案要素を固定し、制作前独立検証 `15 / 15 PASS`。件数合わせの固定範囲外追加、未確認実車値の真値化、非公式転載だけによる古いGTO問題の固定はいずれも0件。Topic 11 sourceを新規作成し、固定過去問・要求知識・使用式・参考教材・教材マッピング予定・固定範囲境界を記録した。
+Topic 11「GTO→IGBT→SiCの損失を計算する」の解説本文＋3段階例題を完成した。固定一次4問＋二次1問・15答案要素を本文へ `15 / 15` マッピングし、導通損失、スイッチング損失、H22二次型の素子平均電流、素子数を含む総損失、発熱・冷却・変換効率まで固定範囲内で接続した。実車接続はJR東海・東芝等の公式資料で確認できるN700SのSiC主変換装置に限定し、未確認の実機損失・温度・冷却性能は追加していない。
 
 ## 判定
-Topic 11は `topic_11_exam_alignment_complete / IN_PROGRESS`。完成数は `10 / 22`。次は解説本文＋3段階例題。
+Topic 11は `topic_11_explanation_source_complete / IN_PROGRESS`。完成数は `10 / 22`。次は解説PDF。
