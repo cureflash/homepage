@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 8 / 21
-- current_status: `topic_09_practice_pdf_complete`
+- current_status: `topic_09_powerpoint_complete`
 - last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 - active_topic: `09 新幹線の25kV交流をフェーザで表す`
-- next_start: Topic 09の解説画像PowerPoint作成
+- next_start: Topic 09の完成後独立再解答
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -66,23 +66,19 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 09「新幹線の25kV交流をフェーザで表す」の練習問題source＋練習PDFを完成した。
+Topic 09「新幹線の25kV交流をフェーザで表す」の解説画像PowerPointを完成した。
 
-- source: `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_practice.md`
-- PDF: `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_practice.pdf`
-- 一次試験型12問、すべて五肢択一
-- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3
-- 正答一意性・数値再計算: `12 / 12 PASS`
-- 固定一次5問・11小問への練習接続: `11 / 11`
-- PDF: A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
+- PowerPoint: `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_images.pptx`
+- 16:9・5スライド
+- 正弦波・実効値・位相差、複素数表示、フェーザ、R/L/C複素インピーダンス、解法手順、固定過去問接続を可視化
+- 200 dpi全5スライド表示QA: `5 / 5 PASS`
+- ZIP整合性: `PASS`
 - クリッピング・重なり・文字化け: 0件
 - 固定一次5問・11小問を変更せず維持
 - 二次採用: 0問
@@ -92,4 +88,4 @@ Topic 09「新幹線の25kV交流をフェーザで表す」の練習問題sourc
 
 ## 判定
 
-Topic 09は `PRACTICE_PDF_COMPLETE / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は解説画像PowerPoint作成。
+Topic 09は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は完成教材だけによる固定5問・11小問の独立再解答。
