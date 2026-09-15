@@ -4,21 +4,23 @@
 
 ## 現在地
 
-Topic 01〜06は `completed`。
+Topic 01〜07は `completed`。
 
-Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。制作前独立解答 `5 / 5 PASS`、練習12問の独立計算QA `12 / 12 PASS`、完成後独立再解答 `5 / 5 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
+Topic 07 `微分② 速度を微分すると加速度` は最終QA再判定まで完了。制作前独立解答 `5 / 5 PASS`、練習12問の独立計算QA `12 / 12 PASS`、完成後独立再解答 `5 / 5 PASS`。初回最終QAで唯一FAILだった主sourceの旧進捗2箇所は同期済みで、再判定では必須成果物・固定EXAM_ALIGNMENT・表示QA・仕様境界・進捗整合を確認し `PASS / completed` とした。
 
-初回最終QAは `NEEDS_REVISION / IN_PROGRESS` だったが、未完了理由だった主sourceの旧進捗記録2箇所は実成果物へ同期済み。技術内容・成果物・表示QA・固定範囲は変更していない。現在は最終QA再判定待ち。
+完成数: `7 / 12`
 
-完成数: `6 / 12`
+current_status: `topic_07_completed`
 
-current_status: `topic_07_source_progress_synced`
+last_completed_topic: `07 微分② 速度を微分すると加速度`
 
-active_topic: `07 微分② 速度を微分すると加速度`
+active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `Topic 07 最終QA再判定`
+next_start: `Topic 08 制作前EXAM_ALIGNMENT`
 
-## Topic 07 固定EXAM_ALIGNMENT
+## Topic 07 完了記録
+
+### 固定EXAM_ALIGNMENT
 
 品質ゲート対象は次の5問で固定。
 
@@ -28,18 +30,11 @@ next_start: `Topic 07 最終QA再判定`
 - R1 理論 問12: 一様電界中で静止から放出された点電荷の一定加速度運動から移動時間を求める
 - H27 理論 問12: ブラウン管偏向板中の電子について、電界による加速度、通過時間、横方向速度、偏向量を求める
 
-制作前独立解答は順に `(3),(5),(4),(1),(5)`。電気技術者試験センター公式解答と全件一致し、`5 / 5 PASS`。
+制作前独立解答は `(3),(5),(4),(1),(5)` で公式解答と `5 / 5 PASS`。完成後独立再解答も同じく `5 / 5 PASS`。教材外知識補完0件、固定EXAM_ALIGNMENT変更0件、仕様外論点追加0件、未確認新幹線実値追加0件。
 
-独立計算要点:
-- R6上問7: `P2=E²R1²R2/[rR1+(r+R1)R2]²` を微分し、`R2=rR1/(r+R1)` で極大。
-- R5下問12: `a=eE/m0` 一定より `v∝t`、`x∝t²`、`K∝t²`。
-- R3問7: `P(R)=(nE)²R/(R+nr)²` を微分し `R=nr`、したがって `I=E/(2r)`。
-- R1問12: `a=qE/m`、`d/2=(1/2)at²` より `t=sqrt(md/(qE))`。
-- H27問12: `a=eE/m`、偏向板通過時間 `l/v` より `u=elE/(mv)`、変位を整理して `X=eldE/(mv²)`。
+### 制作範囲
 
-## Topic 07 制作範囲
-
-扱う内容:
+扱った内容:
 - 二階微分
 - 速度 `v=dx/dt`
 - 加速度 `a=dv/dt=d²x/dt²`
@@ -49,102 +44,54 @@ next_start: `Topic 07 最終QA再判定`
 - `a=v dv/dx`
 - 発車・加速・定速・惰行・制動の位置・速度・加速度グラフ対応
 
-扱わない内容:
+後続Topicへ残した内容:
 - 積分による一般的な運動公式の導出: Topic 08
 - 電荷・電流、磁束・誘導起電力、電力量等の微積分体系: Topic 09
 - 指数関数、RC/RL過渡現象、一階微分方程式: Topic 10
 - 一般的な特性曲線読解の体系化: Topic 11
-- 電子回路、ブラウン管、RLC等の専門解説への範囲拡張
 
-過去問を完結させるために必要な `F=qE`、`F=ma`、直並列抵抗、`P=I²R` は既習の電気・物理前提として最小限接続し、Topic 07の主題へ追加しない。
+過去問を完結させるために必要な `F=qE`、`F=ma`、直並列抵抗、`P=I²R` は既習の電気・物理前提として最小限接続し、Topic 07の主題へ追加していない。
 
-## Topic 07 成果物
+### 成果物
 
-### 主source
-`topics/07_derivative_2/07_derivative_2.md`
+- 主source: `topics/07_derivative_2/07_derivative_2.md`
+- 解説PDF: `topics/07_derivative_2/07_derivative_2_explanation.pdf`
+- 練習source: `topics/07_derivative_2/07_derivative_2_practice.md`
+- 練習PDF: `topics/07_derivative_2/07_derivative_2_practice.pdf`
+- 解説画像PowerPoint: `topics/07_derivative_2/07_derivative_2_images.pptx`
+- 完成後独立再解答: `topics/07_derivative_2/07_derivative_2_exam_reanswer.md`
+- 最終QA: `topics/07_derivative_2/07_derivative_2_final_qa.md`
 
-固定5問の要求事項を本文§2〜§14と3段階例題へ全件対応付け済み。仕様外論点、再出題重複、未確認新幹線実値の追加は0件。旧進捗2箇所は実成果物へ同期済み。
+表示QA:
+- 解説PDF: A4縦3ページ、200 dpi `3 / 3 PASS`、文字抽出QA PASS
+- 練習PDF: A4縦4ページ、200 dpi `4 / 4 PASS`、文字抽出QA PASS
+- PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、overflow・ZIP/XML整合性PASS
 
-### 解説PDF
-`topics/07_derivative_2/07_derivative_2_explanation.pdf`
+## Topic 08 固定仕様範囲
 
-- A4縦3ページ
-- 200 dpi表示QA `3 / 3 PASS`
-- 文字抽出QA PASS
-- クリッピング、重なり、文字化け0件
+系列 `SPEC.md` のTopic 08は「積分 速度曲線の面積は距離」。
 
-### 練習source / PDF
-- `topics/07_derivative_2/07_derivative_2_practice.md`
-- `topics/07_derivative_2/07_derivative_2_practice.pdf`
+主題:
+- 速度を積分して走行距離を求め、積分を蓄積量として理解する
+- 中心式: `x=∫v(t)dt`
 
-全12問・全問五肢択一、基礎3 / 標準7 / 複合2、完全解説付き。固定5過去問の要求事項を全件練習へ接続し、独立計算QA `12 / 12 PASS`。PDFはA4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS。
+扱う内容:
+- 不定積分
+- 定積分
+- 原始関数
+- 面積
+- 多項式・三角関数の基本積分
+- 必要範囲の置換積分
 
-### 解説画像PowerPoint
-`topics/07_derivative_2/07_derivative_2_images.pptx`
+新幹線接続:
+- 速度―時間グラフの面積から走行距離を求める
+- `t=∫dx/v(x)` から運転曲線と所要時間を結ぶ
+- 一定加速度条件で `v²-v0²=2ax` を微積分から導出する
 
-- 16:9・4スライド
-- Slide 1: 二階微分と位置 `x(t)` → 速度 `v(t)` → 加速度 `a(t)` の対応
-- Slide 2: 速度・加速度の符号と速さの増減、連鎖律、`a=v dv/dx`
-- Slide 3: 極大・極小、可変抵抗の最大電力を `P(R)` の微分で解く手順
-- Slide 4: 固定5過去問と教材内節の対応、後続Topicとの境界
-- 全4スライド表示QA `4 / 4 PASS`
-- overflow検査 PASS
-- クリッピング、重なり、文字化け0件
-- PPTX ZIP/XML整合性 PASS
-- 固定EXAM_ALIGNMENT変更0件、仕様外論点・未確認新幹線実値追加0件
-
-### 完成後独立再解答
-`topics/07_derivative_2/07_derivative_2_exam_reanswer.md`
-
-完成教材に収録した式・解法手順だけで固定5問を再構成し、解答 `(3),(5),(4),(1),(5)`。電気技術者試験センター公式解答と `5 / 5` 一致した。
-
-- 完成教材だけで公式・接続式を選択: PASS
-- 完成教材だけで途中式を構成: PASS
-- 完成教材だけで選択肢まで到達: `5 / 5 PASS`
-- 教材外知識による補完: 0件
-- 固定EXAM_ALIGNMENT変更: 0件
-- Topic 08以降の数学論点追加: 0件
-- 電子回路・ブラウン管等の専門体系説明追加: 0件
-- 未確認新幹線実値追加: 0件
-
-### 最終QA
-`topics/07_derivative_2/07_derivative_2_final_qa.md`
-
-初回判定: `NEEDS_REVISION / IN_PROGRESS`。
-
-PASS項目:
-- 必須成果物実在
-- 固定EXAM_ALIGNMENT 5問
-- 制作前独立検証 `5 / 5 PASS`
-- 完成後独立再解答 `5 / 5 PASS`
-- 練習独立計算QA `12 / 12 PASS`
-- PDF/PPTX表示QA・成果物整合
-- 固定範囲・後続Topic境界
-- 教材外補完、仕様外追加、未確認新幹線実値追加はいずれも0件
-
-初回FAIL項目だった主sourceの旧進捗2箇所は同期済み:
-1. 冒頭 `## 状態` を実在成果物・完成後独立再解答まで完了済みに更新。
-2. 末尾の旧 `## 解説本文段階の判定` を現在の進捗判定へ更新し、次工程を最終QA再判定へ変更。
-
-技術本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX成果物は変更していない。次runで最終QAを再判定する。
-
-## 候補除外
-
-- R7下 理論 問12: 正答にTopic 07の微分・加速度計算を必要としない
-- R7上 理論 問12: 電界・熱運動・エネルギーが主でTopic 07の操作が必須でない
-- R6上 理論 問12: エネルギー保存から速度を求める問題で加速度・二階微分が直接不要
-- R4上 理論 問9: RLC専門論点が支配的
-- H19 理論 問5: R6上 理論 問7の再出題
-- H23 理論 問12: R5下 理論 問12の再出題
-
-## Topic 06 完了記録
-
-Topic 06 `微分① ダイヤの傾きは速度` は `PASS / completed`。補強後の完成教材だけで固定4問を再独立解答し、公式解答と `4 / 4` 一致。教材外知識補完0件、固定範囲外追加0件、未確認新幹線実値追加0件。
-
-最終QA記録: `topics/06_derivative_1/06_derivative_1_final_qa.md`
+仕様外論点を件数合わせで追加しない。
 
 ## 次に行うこと
 
-Topic 07の最終QAを再判定する。
+Topic 08の制作前EXAM_ALIGNMENTを作る。
 
-主sourceの旧進捗2箇所は同期済み。教材本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・独立再解答内容は変更しない。過去問対応品質ゲート、成果物実在、表示QA、固定範囲、進捗整合を再確認し、PASSなら `completed` とする。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` を正本とし、直近年度を優先してTopic 08の積分操作が解法に直接必要な公式過去問を調査する。三種は原則5問以上、直接該当が5問未満なら確認できた全件を固定対象とする。再出題重複やTopic 09以降の論点を件数合わせで追加しない。
