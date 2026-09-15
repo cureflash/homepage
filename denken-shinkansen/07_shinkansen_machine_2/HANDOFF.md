@@ -9,7 +9,7 @@ Topic 01〜10は最終QAまで `PASS / completed`。
 
 active topic: `11 GTO→IGBT→SiCの損失を計算する`
 
-current status: `topic_11_practice_source_complete`
+current status: `topic_11_practice_pdf_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -228,10 +228,18 @@ H22二次の独立計算代表値:
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
 
-## 次に行うこと
-Topic 11「GTO→IGBT→SiCの損失を計算する」の練習PDFを作成する。
+## Topic 11 練習PDF
+- `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_practice.pdf`: `completed`
+- A4縦7ページ
+- 一次10問＋二次5問・完全解説を収録
+- 200 dpi全7ページ Visual QA: `7 / 7 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- 主要数値再計算: Q3/Q4/Q9〜Q15 PASS
+- 一次正答一意性QA: `10 / 10 PASS` 維持
+- 固定5過去問・15答案要素: 維持
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `da6fd46d57ebea60acd2657b91fcb91a008ca5a8328cb81776c7a5debf2b2aa7`
 
-1. 練習sourceの一次10問＋二次5問、解答・完全解説を変更せずPDF化する。
-2. A4縦で全問・解説を読める形にし、表示QA・文字抽出QAを実施する。
-3. 主要数値を再計算し、一次正答一意性 `10 / 10 PASS` を維持する。
-4. 固定5問・15答案要素、固定範囲、未確認実車値0件を維持する。
+## 次に行うこと
+Topic 11「GTO→IGBT→SiCの損失を計算する」の解説画像PowerPointを作成する。固定5問・15答案要素と固定範囲を維持し、表示QA・overflow・PPTX整合性を確認する。

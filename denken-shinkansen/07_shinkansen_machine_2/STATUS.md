@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_11_practice_source_complete`
+- current_status: `topic_11_practice_pdf_complete`
 - last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
 - active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 練習PDF
+- next_start: Topic 11 解説画像PowerPoint
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -195,8 +195,20 @@
 - [x] 素子1個と装置全体の損失区別 PASS
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 
+## Topic 11 練習PDF
+- [x] `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_practice.pdf`
+- [x] A4縦7ページ
+- [x] 一次10問＋二次5問・完全解説を収録
+- [x] 200 dpi全7ページ表示QA `7 / 7 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 主要数値再計算 Q3/Q4/Q9〜Q15 PASS
+- [x] 一次正答一意性 `10 / 10 PASS` を維持
+- [x] 固定一次4問＋二次1問・15答案要素と固定範囲を維持
+- [x] 固定範囲外論点・未確認実車値の追加 `0件`
+- [x] SHA-256 `da6fd46d57ebea60acd2657b91fcb91a008ca5a8328cb81776c7a5debf2b2aa7`
+
 ## 今回進めた内容
-Topic 11「GTO→IGBT→SiCの損失を計算する」の練習問題sourceを完成した。一次10問＋二次記述5問、独立計算・論理QA `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`。固定5過去問・15答案要素へ `15 / 15` 接続し、固定範囲外論点・未確認実車値の追加は0件。
+Topic 11「GTO→IGBT→SiCの損失を計算する」の練習PDFを完成した。A4縦7ページ、一次10問＋二次5問・完全解説を収録。200 dpi表示QA `7 / 7 PASS`、文字抽出QA PASS、主要数値再計算 PASS。固定5過去問・15答案要素と固定範囲を維持し、固定範囲外論点・未確認実車値の追加は0件。
 
 ## 判定
-Topic 11は `topic_11_practice_source_complete / IN_PROGRESS`。完成数は `10 / 22`。次は練習PDF。
+Topic 11は `topic_11_practice_pdf_complete / IN_PROGRESS`。完成数は `10 / 22`。次は解説画像PowerPoint。
