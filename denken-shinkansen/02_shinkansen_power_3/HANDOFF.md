@@ -6,20 +6,20 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `8 / 16`。Topic 01〜08は完成済み。
 
 ## 今回進捗
-Topic 09 `変電所からパンタグラフまでどう送る？` の解説PDFを完成した。
+Topic 09 `変電所からパンタグラフまでどう送る？` の練習問題sourceを完成した。
 
-source `topics/09_feeding_transmission/09_feeding_transmission.md` の§1〜§14と3段階例題を正本として、`topics/09_feeding_transmission/09_feeding_transmission_explanation.pdf` を作成した。
+`topics/09_feeding_transmission/09_feeding_transmission_practice_source.md` を作成し、固定5問・7小問から逆算した電験三種「電力」型12問と完全解説を収録した。
 
-PDF QA:
-- A4縦4ページ
-- 200 dpi全4ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: PASS
-- §1〜§14収録: PASS
-- 3段階例題収録: PASS
-- 固定5問・7小問マッピング掲載: `7 / 7`
-- 数値・論理再検算: PASS
-
-固定範囲・過去問対応は変更していない。SPEC固定範囲外追加、Topic 10以降の先取り、未確認新幹線実設備値の真値化はいずれも0件。
+練習source QA:
+- 全12問・全問五肢択一
+- 難易度: 基礎3 / 本試験標準7 / 複合2
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- 固定5問・7小問への接続: `7 / 7`
+- 線間値／相値、mS→S、T形・π形KVL/KCL、複素符号を再検算
+- SPEC固定範囲外追加: `0件`
+- Topic 10以降の先取り: `0件`
+- 未確認実設備値の真値化: `0件`
 
 ## Topic 09 固定過去問
 品質ゲート対象は変更していない。
@@ -57,9 +57,14 @@ R8上 電力 問8、およびR7上・R7下の送電関連候補のうち、機�
 - 解説PDF表示QA: 200 dpi `4 / 4 PASS`
 - 解説PDF文字抽出QA: PASS
 - 解説PDF数値・論理再検算: PASS
+- 練習問題source: 全12問・全問五肢択一
+- 練習難易度: 基礎3 / 本試験標準7 / 複合2
+- 練習source数値・論理独立再計算: `12 / 12 PASS`
+- 練習source正答一意性: `12 / 12 PASS`
+- 練習source固定5問・7小問への接続: `7 / 7`
 - SPEC固定範囲外追加: `0件`
 - 未確認実設備値の真値化: `0件`
-- 練習 / PowerPoint: 未着手
+- 練習PDF / PowerPoint: 未着手
 - 完成後ブラインド独立再解答: 未着手
 
 ## 直前完了テーマ
@@ -78,12 +83,12 @@ PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
 完成後独立再解答: `topics/08_voltage_drop/08_voltage_drop_independent_reanswer.md`
 
 ## 現在状態
-- `current_status`: `topic_09_explanation_pdf_complete`
+- `current_status`: `topic_09_practice_source_complete`
 - 完成数: `8 / 16`
 - last completed: Topic 08 `新幹線の変電所はなぜ数十kmおき？`
 - active: Topic 09 `変電所からパンタグラフまでどう送る？`
 
 ## 次の正確な開始点
-Topic 09の練習問題sourceを作成する。
+Topic 09の練習PDFを作成する。
 
-固定5問・7小問へ接続し、三種向けの問題数・難易度・五肢択一要件を満たす練習問題と完全解説を作成し、数値・論理・正答一意性を独立検証する。
+`09_feeding_transmission_practice_source.md` の12問＋完全解説を正本とし、PDF化後に全ページ表示QA、文字抽出QA、数値・論理・正答一意性の再検算を行う。
