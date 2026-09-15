@@ -7,9 +7,9 @@
 
 Topic 01〜08は最終QAまで `PASS`。完成数は `8 / 39`。
 
-現在地は `topic_09_practice_pdf_complete`。Topic 09 `直流機方式の損失・熱設計` は、制作前EXAM_ALIGNMENTの固定一次4問＋二次1問・14対象項目を変更せず、解説本文＋3段階例題、解説PDF、練習問題・完全解説sourceに続いて練習PDFまで完成した。練習PDFはA4縦4ページ、一次8問＋二次4問、全12問。180 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、計算・論理QA `12 / 12 PASS`。
+現在地は `topic_09_powerpoint_complete`。Topic 09 `直流機方式の損失・熱設計` は、制作前EXAM_ALIGNMENTの固定一次4問＋二次1問・14対象項目を変更せず、解説本文＋3段階例題、解説PDF、練習問題・完全解説source/PDF、解説画像PowerPointまで完成した。PowerPointは16:9・4スライド、SPEC指定3可視化 `3 / 3` を収録し、Visual QA `4 / 4 PASS`、overflow `0件`、ZIP整合性 `PASS`。
 
-次工程はTopic 09の解説画像PowerPoint。SPEC指定3可視化（負荷率―効率、出力―損失、簡略熱モデルによる時間―温度）を固定範囲内で可視化し、表示QA・overflow・ZIP整合性QAを実施する。固定範囲外論点・未確認実車値は追加しない。
+次工程はTopic 09の完成後独立再解答。固定一次4問＋二次1問・14対象項目を、保存済み正答を先に見ず完成教材のみで再解答し、公式解答・標準解答と照合する。教材外知識補完・固定範囲外論点・未確認実車値追加は行わない。
 
 ## Topic 01〜06
 - Topic 01〜06: 最終QA `PASS / completed`
@@ -141,10 +141,26 @@ source: `topics/09_dc_machine_loss_thermal_design/09_dc_machine_loss_thermal_des
 - SHA-256: `1a3f6cbb92a6fb3333aa647236b271e50aeda30b1fb73b9132e74565e788047f`
 - Git blob SHA-1: `549b9ba99b73d4cafe9a57bb2fdaadb2dbce7535`
 
-## 次の正確な開始点
-Topic 09 `直流機方式の損失・熱設計` の解説画像PowerPoint。
+## Topic 09 解説画像PowerPoint
+- `09_dc_machine_loss_thermal_design_images.pptx`: `completed`
+- 16:9・4スライド
+- SPEC指定3可視化: `3 / 3`収録
+  - 負荷率―効率
+  - 出力―損失
+  - 簡略熱モデルによる時間―温度
+- 2401×1350 pxで全4スライド Visual QA: `4 / 4 PASS`
+- overflow: `0件 / PASS`
+- PowerPoint ZIP整合性: `PASS`
+- 日本語グリフ欠落: `0件`
+- 固定一次4問＋二次1問・14対象項目: 維持
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `7d46b0184b8716ccd9f0f0ea016792a4ae6d7f5f9e0439963310c552c92fc404`
 
-1. SPEC指定3可視化（負荷率―効率、出力―損失、簡略熱モデルによる時間―温度）を固定済み計算条件から作成する。
-2. 固定一次4問＋二次1問・14対象項目を変更しない。
-3. 表示QA・overflow・PowerPoint ZIP整合性QAを実施する。
-4. 誘導機、PWM/VVVF、回生、IGBT/SiC、詳細熱設計、未確認実車値を追加しない。
+## 次の正確な開始点
+Topic 09 `直流機方式の損失・熱設計` の完成後独立再解答。
+
+1. 固定一次4問＋二次1問・14対象項目を、保存済み正答を先に見ず完成教材のみで再解答する。
+2. 独立解答後に公式解答・標準解答と照合し、一次・二次を分けて一致数を記録する。
+3. 教材外知識補完、固定EXAM_ALIGNMENT変更、固定範囲外論点、未確認実車値追加を行わない。
