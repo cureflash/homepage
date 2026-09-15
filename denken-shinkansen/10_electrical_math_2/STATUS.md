@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 8 / 20
-- current_status: `topic_09_exam_reanswer_complete`
+- current_status: `topic_09_final_qa_needs_revision`
 - last_completed_topic: `08 二階常微分方程式`
 - active_topic: `09 ラプラス変換`
-- next_start: Topic 09の最終QA。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認する
+- next_start: Topic 09主sourceの `## 状態` と `## 次工程` の旧進捗2箇所だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・完成後独立再解答は変更しない
 
 ## Topic 07 制作品質ゲート
 
@@ -74,30 +74,36 @@
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 `6 / 6 PASS`
-- [ ] 最終QA
+- [x] 最終QA実施 → `NEEDS_REVISION`
+- [ ] source進捗記録2箇所の同期
+- [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 09 `ラプラス変換` の完成後独立再解答を実施し、GitHub正本へ反映した。
+Topic 09 `ラプラス変換` の最終QAを実施し、GitHub正本へ記録した。
 
 確認結果:
-- 固定二次5問・6対象設問を完成教材の式・解法だけで再導出
-- R6 問4 (4): `11e^{-t}-16e^{-2t}+5e^{-3t}`
-- H29 問4 (1)〜(2): `2 / 2 PASS`
-- H25 問4 (1): `(1/2)sin 2t`
-- H24 問4 (1): `t-1+e^{-t}`
-- H18 問4 (1): `y0+(1/(2J))(1-cos 2t)`
+- 必須成果物実在: PASS
+- 固定二次5問・6対象設問: PASS
 - 完成後独立再解答: `6 / 6 PASS`
-- Topic 10内容の先取り: 0件
+- 解説PDF表示・文字抽出QA: PASS
+- 練習PDF表示・文字抽出QA: PASS
+- PowerPoint表示・overflow・ZIP/XML整合性QA: PASS
+- Topic 10先取り: 0件
 - 件数合わせの固定範囲外追加: 0件
 - 教材外知識補完: 0件
 - 未確認実車値依存: 0件
+- 主source進捗記録整合: FAIL
+
+FAILは `09_laplace_transform.md` の進捗記録2箇所のみ。
+- 冒頭 `## 状態` が解説本文完成時点の旧状態
+- 末尾 `## 次工程` が「解説PDFへ反映」の旧状態
 
 ## 判定
 
-Topic 09は `EXAM_REANSWER_COMPLETE / IN_PROGRESS`。
+Topic 09は `FINAL_QA_NEEDS_REVISION / IN_PROGRESS`。
 
 完成数は `8 / 20` のまま。
 
-次はTopic 09の最終QA。
+次は主sourceの進捗記録2箇所だけを実成果物へ同期する。
