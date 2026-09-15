@@ -439,4 +439,4 @@
 
 ## 次工程
 
-練習PDF、PowerPoint、計算プログラム・指定波形/FFT、完成後独立再解答まで完了済み。次はTopic 08の最終QAを再実施し、進捗記録整合を含めて総合判定する。
+Topic 08は最終QA `PASS / completed`。次はTopic 09「誘導電動機を自由に操るには？」の制作前EXAM_ALIGNMENTを行う。
