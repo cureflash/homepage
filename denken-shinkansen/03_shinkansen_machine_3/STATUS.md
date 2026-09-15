@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験三種「機械」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 9 / 16
-- current_status: `topic_10_exam_alignment_complete`
+- current_status: `topic_10_explanation_source_complete`
 - last_completed_topic: `09 新幹線はどうやって電気で止まる？`
 - active_topic: `10 新幹線の速度はどう自動制御される？`
-- next_start: Topic 10の解説本文＋3段階例題を作成し、固定5件を本文へ全件マッピングする
+- next_start: Topic 10の解説本文＋3段階例題を基に解説PDFを作成し、表示QA・文字抽出QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -20,7 +20,7 @@
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
-- [ ] 10 新幹線の速度はどう自動制御される？ — 制作前EXAM_ALIGNMENT `5 / 5 PASS`
+- [ ] 10 新幹線の速度はどう自動制御される？ — 解説source完成・固定5件本文マッピング `5 / 5`
 - [ ] 11〜16 — 未完了
 
 ## Topic 10 EXAM_ALIGNMENT
@@ -71,13 +71,15 @@ R7上問13、R6下問13、R6上問13、R5下問13、R5下問18(b)、R4上問15(b
 - 制作前EXAM_ALIGNMENT完成
 - 公式過去問5件を固定
 - 制作前独立検証 `5 / 5 PASS`
-- 解説本文: 未着手
-- 3段階例題: 未着手
+- 解説本文＋3段階例題: 完成
+- 固定5件の本文マッピング `5 / 5 全件`
+- ブロック線図、負帰還 `G/(1+GH)`、一次遅れ・時定数、R-L/R-C伝達関数、二次遅れ、定常偏差、安定性を固定範囲内で接続
 - 解説PDF: 未着手
 - 練習問題source/PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
+- 固定EXAM_ALIGNMENT変更 `0件`
 - 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
 
