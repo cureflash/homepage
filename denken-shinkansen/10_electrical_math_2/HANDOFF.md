@@ -252,9 +252,9 @@ QA:
 `topics/09_laplace_transform/09_laplace_transform_practice.pdf`
 
 QA:
-- A4縦6ページ
+- A4縦4ページ
 - 全12問（一次型8問／二次記述型4問）＋完全解説を反映
-- 200 dpi全ページ表示QA `6 / 6 PASS`
+- 200 dpi全ページ表示QA `4 / 4 PASS`
 - 文字抽出QA `PASS`
 - 固定二次5問・6対象設問への接続を維持
 - 独立計算・正答一意性 `12 / 12 PASS` を維持
