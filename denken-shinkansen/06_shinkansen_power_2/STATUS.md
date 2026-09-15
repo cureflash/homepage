@@ -4,7 +4,7 @@ updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `07`
 theme: 三相電力をどう25kVの単相へ変える？
-current_status: `topic_07_independent_reanswer_complete`
+current_status: `topic_07_final_qa_needs_revision`
 completed_topics: `6 / 22`
 
 ## Topic 06 final result
@@ -144,6 +144,17 @@ QA:
 - 後続Topic知識依存: `0件`
 - 未確認実設備値依存: `0件`
 
+## Topic 07 最終QA
+
+成果物:
+- `topics/07_feeding_transformer/07_feeding_transformer_final_qa.md`
+
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
+技術内容・正式2過去問・完成後独立再解答・練習15問・PDF/PPTX表示QA・固定10項目・固定範囲境界は全件PASS。
+
+未完了理由は進捗記録のみ。主source `07_feeding_transformer.md` の冒頭が `explanation_source_complete`・「PDF・練習問題・PowerPointは未着手」のままで、末尾 `現在地` も後続成果物を未着手としており、GitHub上の実成果物と不整合。
+
 ## Gate checklist
 
 - [x] Topic 01 completed
@@ -152,8 +163,8 @@ QA:
 - [x] Topic 04 completed
 - [x] Topic 05 completed
 - [x] Topic 06 completed
-- [x] Topic 07 EXAM_ALIGNMENT・制作前独立検証・解説source・解説PDF・練習source・練習PDF・PowerPoint・完成後独立再解答 complete / 最終QA未実施
+- [ ] Topic 07 最終QA `NEEDS_REVISION` / 主source進捗記録同期待ち
 
 ## next_start
 
-Topic 07の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT、正式2問の完成後独立再解答、練習15問、PDF/PPTX表示QA、固定範囲境界、主source・STATUS・HANDOFFの進捗整合を確認し、全件PASSの場合のみ `completed` とする。
+Topic 07の主source `topics/07_feeding_transformer/07_feeding_transformer.md` の冒頭状態と末尾 `現在地` を実成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・固定範囲は変更しない。同期後に最終QAを再実施する。
