@@ -2,9 +2,9 @@
 
 更新日: 2026-09-15
 
-状態: `practice_pdf_complete`
+状態: `independent_reanswer_complete`
 
-制作前 `EXAM_ALIGNMENT` を完了し、系列 `SPEC.md` の固定範囲だけで完結する第三種「機械」公式過去問5問を固定した。制作前独立検証は `5 / 5 PASS`。固定5問から逆算した解説本文、解法アルゴリズム、基礎・本試験標準・複合の3段階例題を解説PDFへ反映済み。練習問題sourceは12問・全問五肢択一で作成し、独立計算・論理QAと正答一意性はいずれも `12 / 12 PASS`。練習PDFはA4縦6ページで、全12問・完全解説を収録し、200 dpi全ページ表示QA `6 / 6 PASS`、文字抽出QA `PASS`。件数合わせの仕様外論点、未確認実車値は追加しない。
+制作前 `EXAM_ALIGNMENT` を完了し、系列 `SPEC.md` の固定範囲だけで完結する第三種「機械」公式過去問5問を固定した。制作前独立検証は `5 / 5 PASS`。固定5問から逆算した解説本文、解法アルゴリズム、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source・PDF、解説画像PowerPointまで完成済み。完成教材だけを用いた固定5過去問の独立再解答も `5 / 5 PASS`。件数合わせの仕様外論点、未確認実車値は追加していない。
 
 ## EXAM_ALIGNMENT
 
@@ -512,6 +512,69 @@ Prec,avg = Erec/t
 
 QA記録: `09_regenerative_braking_practice_pdf_qa.md`
 
+## 解説画像PowerPoint
+
+`09_regenerative_braking_images.pptx`
+
+- 16:9・4枚
+- 力行/回生のエネルギーフロー、負の滑りによる発電機運転、四象限運転の概念、`P=Fv`・`P=Tω`・運動エネルギー・回生効率、発電制動と回生制動の処理先を可視化
+- 固定EXAM_ALIGNMENT 5問との接続 `5 / 5 全件`
+- 外部画像不使用（PowerPoint図形で独自作成）
+- 全4スライド表示QA `4 / 4 PASS`
+- overflow `0件`
+- PowerPoint ZIP整合性 `PASS`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- 固定範囲外論点追加 `0件`
+- 未確認実車値追加 `0件`
+
+QA記録: `09_regenerative_braking_powerpoint_qa.md`
+
+## 完成後独立再解答
+
+実施日: 2026-09-15。
+
+完成済み教材の本文・例題・解法アルゴリズムだけを根拠に、固定EXAM_ALIGNMENT 5問を再導出した後、電気技術者試験センター公式解答と照合した。
+
+1. R8上 機械 問11
+   - `Pload=mgv=1000×9.8×0.5=4.9 kW`
+   - 機械効率 `η=0.90` より、電動機出力 `Pmotor=4.9/0.90≈5.44 kW`
+   - 選択肢では `5.5 kW`。
+   - 答案 `(4)` → 公式 `(4)`、PASS。
+2. R2 機械 問11
+   - `ω1=2π×1500/60≈157.1 rad/s`、`ω2=2π×1000/60≈104.7 rad/s`
+   - `ΔE=50(ω1²-ω2²)/2≈3.43×10^5 J=343 kJ`
+   - `Pavg=ΔE/2≈171.5 kW`
+   - 答案 `(3)` → 公式 `(3)`、PASS。
+3. H29 機械 問2
+   - 回転方向と界磁方向を保ったまま回生へ移ると、誘導起電力の向きそのものを逆転する必要はない。
+   - 回生時は電流が電源側へ流れ、界磁が同じなら `T∝ΦIa` よりトルク方向も反転して制動トルクとなる。
+   - 誤りは「誘導起電力の方向が反転する」。
+   - 答案 `(2)` → 公式 `(2)`、PASS。
+4. H25 機械 問10
+   - `n=N/60`
+   - `ω=2πn`
+   - `P=Tω` より `T=P/ω`
+   - 回転体の運動エネルギーは `E=Jω0²/2`
+   - この組合せは選択肢 `(5)`。
+   - 答案 `(5)` → 公式 `(5)`、PASS。
+5. H24 機械 問11
+   - 慣性モーメントが大きいほど同一角速度で蓄える回転運動エネルギー `Jω²/2` は大きい。
+   - 発生電力を抵抗で熱として消費するのが発電制動、電源へ返還して再利用するのが回生制動。
+   - この組合せは選択肢 `(1)`。
+   - 答案 `(1)` → 公式 `(1)`、PASS。
+
+完成後独立答案列: `(4), (3), (2), (5), (1)`
+
+完成後公式照合: `5 / 5 PASS`
+
+教材外・固定範囲外知識による補完: `0件`
+
+固定EXAM_ALIGNMENT変更: `0件`
+
+固定範囲外論点追加: `0件`
+
+未確認実車値追加: `0件`
+
 ## 現在の品質状態
 
 - 制作前EXAM_ALIGNMENT: 完了
@@ -531,8 +594,11 @@ QA記録: `09_regenerative_braking_practice_pdf_qa.md`
 - 練習問題PDF: A4縦6ページ
 - 練習問題PDF 200 dpi表示QA: `6 / 6 PASS`
 - 練習問題PDF文字抽出QA: `PASS`
-- 解説画像PowerPoint: 未着手
-- 完成後独立再解答: 未実施
+- 解説画像PowerPoint: 完了（16:9・4枚）
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- 完成後独立再解答: `5 / 5 PASS`
 - 最終QA: 未実施
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外論点追加: `0件`
@@ -548,6 +614,10 @@ QA記録: `09_regenerative_braking_practice_pdf_qa.md`
 
 練習問題PDF QA記録: `09_regenerative_braking_practice_pdf_qa.md`
 
+PowerPoint: `09_regenerative_braking_images.pptx`
+
+PowerPoint QA記録: `09_regenerative_braking_powerpoint_qa.md`
+
 ## 次工程
 
-Topic 09の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問と固定範囲は変更しない。
+Topic 09の最終QAを実施する。固定EXAM_ALIGNMENT 5問、固定範囲、完成後独立再解答結果は変更しない。
