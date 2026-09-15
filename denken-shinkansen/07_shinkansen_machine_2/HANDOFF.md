@@ -9,7 +9,7 @@ Topic 01〜10は最終QAまで `PASS / completed`。
 
 active topic: `11 GTO→IGBT→SiCの損失を計算する`
 
-current status: `topic_11_powerpoint_complete`
+current status: `topic_11_blind_reanswer_ready`
 
 ## Topic 10 固定範囲
 - 力行
@@ -179,10 +179,6 @@ source完成内容:
 - H22 二次 機械・制御 問3: `4 / 4 PASS`
 - 合計: `15 / 15 PASS`
 
-H22二次の独立計算代表値:
-- 遅れ力率0.866、IGBT平均電流: `42.0 A`
-- 遅れ力率0、逆並列ダイオード平均電流: `22.5 A`
-
 ## Topic 11 source
 - `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal.md`
 - 制作前EXAM_ALIGNMENT: `completed`
@@ -199,9 +195,11 @@ H22二次の独立計算代表値:
 - JR東海、東芝、三菱電機の公式資料を実車・メーカー根拠として記録
 - N700SのN700A比7%消費電力量削減は車両全体の効果として扱い、SiC単独効果へ誤帰属しない
 - 制作前独立検証: `15 / 15 PASS`
+- 独立再解答前ゲート: `BLIND_REANSWER_READY`
+- 制作前の保存済み答案・完成済み導出結果は必須先読みsourceから除去済み
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 完成後独立再解答は未実施。全成果物完成後に別ゲートとして行う
+- 完成後独立再解答は未実施
 
 ## Topic 11 解説PDF
 - `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_explanation.pdf`: `completed`
@@ -253,5 +251,15 @@ H22二次の独立計算代表値:
 - 未確認実車値追加: `0件`
 - SHA-256: `bd195a931abecfa723e895f8082f7e54964bb9c88afba52420cde6777a31b704`
 
+## Topic 11 独立再解答前ゲート
+- `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
+- `HANDOFF.md` のH22二次代表数値解を除去
+- main sourceの制作前各答案要素の完成済み導出結果・数値解を除去
+- 固定5問・15答案要素、要求知識、使用式、教材内マッピングは変更なし
+- 教材本文・PDF・練習問題・PowerPoint・固定EXAM_ALIGNMENTは変更なし
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+- 判定: `BLIND_REANSWER_READY`
+
 ## 次に行うこと
-Topic 11の独立再解答前ゲートを行う。`HANDOFF.md` に保存されているH22二次の代表数値解を除去し、固定5問・15答案要素と教材成果物を変更せず、保存済み正答を見ない新runから完成後独立再解答できる状態にする。
+公式解答・保存済み正答を先に見ず、完成教材だけを使って固定5問・15答案要素を独立再解答する。解答完了後に公式解答・標準解答と照合し、教材外知識補完の有無を判定する。
