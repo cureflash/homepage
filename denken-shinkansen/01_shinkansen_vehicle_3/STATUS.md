@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 30 / 38
-- current_status: `topic_31_source_progress_synced`
-- last_completed_topic: `30 ATC① 新幹線は列車をどう検知する？`
-- active_topic: `31 ATC② 地上から車上へどう情報を送る？`
-- next_start: Topic 31の最終QAを再判定し、進捗記録整合を含む全品質ゲートを確認する
+- exam_aligned_completed_topics: 31 / 38
+- current_status: `topic_31_completed`
+- last_completed_topic: `31 ATC② 地上から車上へどう情報を送る？`
+- active_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
+- next_start: Topic 32の制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
-- [x] 01〜30 — PASS
-- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 固定5問・6対象項目 `6 / 6 PASS`、必須成果物・表示QA・固定範囲境界PASS。主sourceの旧進捗記録を実在成果物へ同期済み。最終QA再判定待ち
+- [x] 01〜31 — PASS
+- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 未着手
 
 ## 31 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、信号、周波数、情報伝送、センサ、デジタル信号、論理判断。
@@ -111,15 +111,13 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - 記録: `topics/31_atc_signal_transmission/31_atc_signal_transmission_final_qa.md`
 
 ## 31 最終QA
-前回判定は `NEEDS_REVISION / IN_PROGRESS`。
+`PASS / COMPLETED`。
 - 必須成果物: PASS
 - 固定5問・6対象項目の完成後独立再解答: `6 / 6 PASS`
 - 解説PDF / 練習PDF / PowerPoint表示QA: PASS
+- 進捗記録整合: PASS
 - 固定範囲境界: PASS
-- 前回の進捗記録整合: FAIL
-  - `31_atc_signal_transmission.md` 冒頭の旧進捗記録が実在成果物と不整合だった
-- 今回、主sourceの状態欄・次工程を実在成果物へ同期済み
-- 最終QA再判定は次工程とし、この段階ではTopic 31をまだ `completed` にしない
+- Topic 31を `completed` とし、完成数を31/38へ更新
 
 ## 30 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知。
@@ -198,7 +196,7 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - 未確認の新幹線軌道回路電圧・電流・車軸短絡抵抗・リレー動作値
 
 ## 直前完了
-Topic 30 `ATC① 新幹線は列車をどう検知する？` は固定5問の完成後独立再解答 `5 / 5 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
+Topic 31 `ATC② 地上から車上へどう情報を送る？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 31 `ATC② 地上から車上へどう情報を送る？` は主sourceの旧進捗記録を実在成果物へ同期済み。次は最終QAを再判定する。
+Topic 32 `ATC③ 新幹線をどう自動で減速させる？` の制作前EXAM_ALIGNMENTから開始する。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
