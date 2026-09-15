@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_09_exam_alignment_complete`
+- current_status: `topic_09_explanation_source_complete`
 - last_completed_topic: `08 位相制御と平均直流電圧`
 - active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09の解説本文＋3段階例題。固定一次4問＋二次1問・14対象項目から逆算し、SPEC固定範囲だけで本文を作成する
+- next_start: Topic 09の解説PDF。固定一次4問＋二次1問・14対象項目、3段階例題、SPEC指定3可視化を収録して表示・文字抽出QAを行う
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -347,4 +347,20 @@
 - 後続Topicの誘導機・PWM/VVVF・回生・IGBT/SiCを件数合わせで採用: `0件`
 - 未確認の100系・200系実車損失・温度・冷却容量・保守周期を真値化: `0件`
 
-次工程はTopic 09 `直流機方式の損失・熱設計` の解説本文＋3段階例題。
+## Topic 09 解説source
+- `09_dc_machine_loss_thermal_design.md`: 解説本文＋3段階例題 `completed`
+- 固定一次4問＋二次1問・14対象項目: 本文へ全件マッピング
+- 銅損 `I^2R`、鉄損、機械損、雑負荷損、固定損・負荷依存損、規約効率、損失分離を固定範囲内で整理
+- 最大効率の簡略条件: `P_0=x^2P_vN`、`x_max=sqrt(P_0/P_vN)` を成立条件付きで導出
+- 簡略熱モデル: `C_th dθ/dt=P_loss-θ/R_th`、`τ=R_thC_th`、`θ(t)=P_lossR_th(1-e^{-t/τ})` をSPEC指定範囲で整理
+- 3段階例題: 基礎・本試験標準・複合を各1問、途中式・成立条件・検算付き
+- SPEC指定3可視化の計算条件: `3 / 3`確定
+  - 負荷率―効率
+  - 出力―損失
+  - 簡略熱モデルによる時間―温度
+- Topic 07で確認済みの0系MT200B 185 kW自己通風、100系MT202 230 kW他力通風、200系MT201 230 kW強制風冷14 m3/minだけを実車接続に再利用
+- 教材用熱モデルの `R_th`,`C_th` 等を実車値として扱う: `0件`
+- 誘導機、PWM/VVVF、回生、IGBT/SiC、詳細絶縁寿命モデル、熱流体解析の追加: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+
+次工程はTopic 09 `直流機方式の損失・熱設計` の解説PDF。
