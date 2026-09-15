@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_09_practice_pdf_complete`
+- current_status: `topic_09_powerpoint_complete`
 - last_completed_topic: `08 位相制御と平均直流電圧`
 - active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09の解説画像PowerPoint。SPEC指定3可視化（負荷率―効率、出力―損失、簡略熱モデルによる時間―温度）を固定済み計算条件から作成し、表示QA・overflow・ZIP整合性QAを実施する
+- next_start: Topic 09の完成後独立再解答。固定一次4問＋二次1問・14対象項目を、保存済み正答を先に見ず完成教材のみで再解答し、公式解答・標準解答と照合する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -408,4 +408,21 @@
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
 
-次工程はTopic 09 `直流機方式の損失・熱設計` の解説画像PowerPoint。
+## Topic 09 解説画像PowerPoint
+- `09_dc_machine_loss_thermal_design_images.pptx`: `completed`
+- 16:9・4スライド
+- SPEC指定3可視化: `3 / 3`収録
+  - 負荷率―効率
+  - 出力―損失
+  - 簡略熱モデルによる時間―温度
+- 2401×1350 pxで全4スライド Visual QA: `4 / 4 PASS`
+- overflow: `0件 / PASS`
+- PowerPoint ZIP整合性: `PASS`
+- 日本語グリフ欠落: `0件`
+- 固定一次4問＋二次1問・14対象項目: 維持
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `7d46b0184b8716ccd9f0f0ea016792a4ae6d7f5f9e0439963310c552c92fc404`
+
+次工程はTopic 09 `直流機方式の損失・熱設計` の完成後独立再解答。
