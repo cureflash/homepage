@@ -6,31 +6,28 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `8 / 16`。Topic 01〜08は品質ゲートPASSでcompleted。active topicは09「新幹線はどうやって電気で止まる？」。
 
 ## 今回進捗
-Topic 09「新幹線はどうやって電気で止まる？」の練習PDFを完成した。
+Topic 09「新幹線はどうやって電気で止まる？」の解説画像PowerPointを完成した。
 
 - 品質ゲート対象: 公式過去問5問
 - 制作前答案列: `(4), (3), (2), (5), (1)`
 - 制作前公式照合: `5 / 5 PASS`
 - 解説本文＋3段階例題: 完了
 - 固定5問の本文マッピング: `5 / 5 全件`
-- 解説PDF: A4縦3ページ
-- 解説PDF表示QA: `3 / 3 PASS`
-- 練習問題source: 12問・全問五肢択一
-- 構成: 基礎3／本試験標準7／複合・応用2
-- 固定EXAM_ALIGNMENT 5問への接続: `全件`
-- 独立計算・論理QA: `12 / 12 PASS`
-- 正答一意性: `12 / 12 PASS`
-- 練習PDF: A4縦6ページ・全12問＋完全解説
-- 練習PDF 200 dpi表示QA: `6 / 6 PASS`
-- 練習PDF文字抽出QA: `PASS`
+- 解説PDF: A4縦3ページ、表示QA `3 / 3 PASS`
+- 練習問題source: 12問・全問五肢択一、独立QA `12 / 12 PASS`
+- 練習PDF: A4縦6ページ、表示QA `6 / 6 PASS`
+- 解説画像PowerPoint: 16:9・4枚
+- PowerPoint固定EXAM_ALIGNMENT接続: `5 / 5 全件`
+- PowerPoint表示QA: `4 / 4 PASS`
+- overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- 外部画像: `0点`（PowerPoint図形で独自作成）
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
-- source: `topics/09_regenerative_braking/09_regenerative_braking.md`
-- practice source: `topics/09_regenerative_braking/09_regenerative_braking_practice.md`
-- practice PDF: `topics/09_regenerative_braking/09_regenerative_braking_practice.pdf`
-- practice PDF QA: `topics/09_regenerative_braking/09_regenerative_braking_practice_pdf_qa.md`
+- PowerPoint: `topics/09_regenerative_braking/09_regenerative_braking_images.pptx`
+- PowerPoint QA: `topics/09_regenerative_braking/09_regenerative_braking_powerpoint_qa.md`
 - 完成数: `8 / 16`
 
 固定範囲外の誘導機構造・スリップリング・直流機始動/速度制御・発電機外部特性・チョッパ・二次入力/二次銅損・ベクトル制御等は追加していない。数値問題は通常の電験三種型または計算練習用仮定値とし、未確認実車値を真値として扱っていない。
@@ -89,7 +86,11 @@ Topic 09「新幹線はどうやって電気で止まる？」の練習PDFを完
 - 練習PDF: A4縦6ページ
 - 練習PDF表示QA: `6 / 6 PASS`
 - 練習PDF文字抽出QA: `PASS`
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 完了
+- 解説画像PowerPoint: 16:9・4枚
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
@@ -101,8 +102,12 @@ practice PDF: `topics/09_regenerative_braking/09_regenerative_braking_practice.p
 
 practice PDF QA: `topics/09_regenerative_braking/09_regenerative_braking_practice_pdf_qa.md`
 
+PowerPoint: `topics/09_regenerative_braking/09_regenerative_braking_images.pptx`
+
+PowerPoint QA: `topics/09_regenerative_braking/09_regenerative_braking_powerpoint_qa.md`
+
 ## 次に行う
-Topic 09の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 5問、固定範囲、正答を変更しない。
+Topic 09の完成後独立再解答を実施する。保存済み正答を先に見ず、完成教材だけで固定EXAM_ALIGNMENT 5問を再解答する。固定EXAM_ALIGNMENT 5問、固定範囲、正答は変更しない。
 
 ## Topic 08 完了要約
 Topic 08「N700Sのモーターはなぜ小さくできた？」は品質ゲートPASS / completed。
