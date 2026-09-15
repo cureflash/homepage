@@ -7,11 +7,13 @@
 
 Topic 01〜06は最終QAまで `PASS`。完成数は `6 / 39`。
 
-現在地は `topic_07_final_qa_needs_revision`。active topicは Topic 07 `直流主回路の高出力化`。
+現在地は `topic_07_progress_records_synced`。active topicは Topic 07 `直流主回路の高出力化`。
 
 H21一次「機械」問2(2)の不足「負荷損を規定の基準巻線温度へ補正」を固定範囲内で補強し、解説PDF・練習PDF・PowerPointへの同期と各QAまで完了。補強済み完成教材だけで固定一次4問＋二次1問・15対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `2 / 2 PASS`、合計 `15 / 15 PASS`。教材外知識補完は0件。
 
-Topic 07の最終QAを実施した結果、成果物・過去問対応・表示QA・固定範囲はPASSだが、主sourceと練習sourceの進捗記録に「PDF/PPTX未同期」「再独立再解答未実施」「練習PDF未同期」という旧状態が残っているため `NEEDS_REVISION`。Topic 07はまだ `completed` にしない。
+直近のTopic 07最終QAは、成果物・過去問対応・表示QA・固定範囲はPASSだが、主sourceと練習sourceの旧進捗記録だけで `NEEDS_REVISION` だった。本runで `07_dc_main_circuit_high_output.md` と `07_dc_main_circuit_high_output_practice_source.md` の旧「PDF/PPTX未同期」「再独立再解答未実施」「練習PDF未同期」を実態へ同期した。技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更していない。
+
+Topic 07は最終QA再実施前なので、まだ `completed` にしない。
 
 ## Topic 06 完了記録
 - 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問
@@ -63,6 +65,11 @@ H21一次 問2(2)補強:
 - §12: 規約効率問題の解法手順に基準巻線温度確認を追加
 - 温度補正式・温度上昇計算・詳細熱設計は追加していない
 
+進捗記録同期:
+- 解説PDF・練習PDF・PowerPointへの補強同期済みを反映
+- 補強後再独立再解答 `15 / 15 PASS` を反映
+- 「PDF/PPTX未同期」「再独立再解答未実施」の旧記録を解消
+
 確認済み実車値:
 - 0系 MT200B: 185 kW / 415 V / 490 A / 2,200 rpm / 自己通風
 - 100系 MT202: 230 kW / 625 V / 405 A / 2,900 rpm / 他力通風
@@ -87,6 +94,7 @@ H21一次 問2(2)補強:
 - 独立計算・論理・正答一意性QA: `12 / 12 PASS`
 - PDF: A4縦3ページ、180 dpi全ページ Visual QA `PASS`
 - 文字抽出・Unicode置換文字: `PASS / 0件`
+- 「練習PDF未同期」の旧進捗記録: 解消
 - SHA-256: `85dd16819a4d209a1e5700a2447dd6cc3412e6bd6da19c0eebd817ac130819bb`
 
 ### 解説画像PowerPoint
@@ -121,9 +129,9 @@ H21一次 問2(2)補強:
 前回FAILだったH21一次 問2(2)は、補強後教材の「負荷損を規定の基準巻線温度へ補正して扱う」説明だけで再構築でき、`PASS`。
 
 ## Topic 07 最終QA
-`07_dc_main_circuit_high_output_final_qa.md` を作成済み。
+`07_dc_main_circuit_high_output_final_qa.md` の直近判定は `NEEDS_REVISION`。
 
-PASS:
+直近QAでPASS済み:
 - 必須成果物存在
 - 固定一次4問＋二次1問・15対象項目の維持
 - 完成後独立再解答 `15 / 15 PASS`
@@ -132,17 +140,17 @@ PASS:
 - 固定範囲外追加0件
 - 未確認実車値追加0件
 
-FAIL:
-- `07_dc_main_circuit_high_output.md` の状態欄・完成後独立再解答欄に、PDF/PPTX未同期・再独立再解答未実施という旧進捗が残存
-- `07_dc_main_circuit_high_output_practice_source.md` の状態欄・次工程に、練習PDF未同期という旧進捗が残存
+直近QAでFAILだった進捗記録:
+- 主sourceの「PDF/PPTX未同期」「再独立再解答未実施」
+- 練習sourceの「練習PDF未同期」
 
-最終判定: `NEEDS_REVISION`。
+この2件は本runで実態へ同期済み。最終QA自体はまだ再実施していないため、直近判定を勝手に `PASS` へ変更しない。
 
 ## 次の正確な開始点
-Topic 07のsource進捗記録だけを現在地へ同期する。
+Topic 07最終QAを再実施する。
 
-1. `07_dc_main_circuit_high_output.md` の状態欄を、解説PDF・練習PDF・PowerPoint同期済み、補強後再独立再解答 `15 / 15 PASS`、最終QAは進捗記録不整合のみ `NEEDS_REVISION` へ更新する。
-2. 同ファイル末尾の完成後独立再解答欄を、補強前 `14 / 15` を履歴として残しつつ、補強後 `15 / 15 PASS` と現在地へ更新する。
-3. `07_dc_main_circuit_high_output_practice_source.md` の状態欄と次工程から「練習PDF未同期」を除き、PDF同期・表示QA済みへ更新する。
-4. 技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更しない。
-5. 同期後はTopic 07最終QAを再実施し、全件PASSの場合のみ `completed` として完成数を `7 / 39` へ進める。
+1. `07_dc_main_circuit_high_output.md` と `07_dc_main_circuit_high_output_practice_source.md` に旧進捗記録が残っていないことを確認する。
+2. 必須成果物、固定一次4問＋二次1問・15対象項目、補強後再独立再解答 `15 / 15 PASS`、解説PDF・練習PDF・PowerPoint各QAを再確認する。
+3. 固定範囲外追加・未確認実車値追加が0件であることを確認する。
+4. 全件PASSの場合のみ Topic 07を `completed` とし、完成数を `7 / 39` へ更新する。
+5. 技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更しない。
