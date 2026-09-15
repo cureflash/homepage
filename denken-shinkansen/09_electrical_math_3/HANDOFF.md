@@ -6,17 +6,17 @@
 
 Topic 01〜07は `completed`。
 
-Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題sourceまで完了。独立解答は `5 / 5問・9 / 9答案要素 PASS`、練習12問の独立計算QAは `12 / 12 PASS`。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
+Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。独立解答は `5 / 5問・9 / 9答案要素 PASS`、練習12問の独立計算QAは `12 / 12 PASS`、練習PDF表示QAは `5 / 5 PASS`。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
 
 完成数: `7 / 12`
 
-current_status: `topic_08_practice_source_complete`
+current_status: `topic_08_practice_pdf_complete`
 
 last_completed_topic: `07 微分② 速度を微分すると加速度`
 
 active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `Topic 08 練習PDF`
+next_start: `Topic 08 解説画像PowerPoint`
 
 ## Topic 07 完了記録
 
@@ -148,18 +148,33 @@ next_start: `Topic 08 練習PDF`
 - 固定EXAM_ALIGNMENT変更: 0件
 - Topic 09〜11先取り、未確認新幹線実値追加: 0件
 
+### 練習PDF
+
+成果物: `topics/08_integral_distance/08_integral_distance_practice.pdf`
+
+- A4縦5ページ
+- 練習sourceの全12問・全問五肢択一と全問の完全解説を収録
+- 固定5過去問への対応表、Topic 08固定範囲との対応を収録
+- 200 dpi全ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: PASS
+- 主要計算再検算: `12 / 12 PASS`
+- クリッピング、重なり、文字化け: 0件
+- 固定EXAM_ALIGNMENT変更: 0件
+- Topic 09〜11先取り、未確認新幹線実値追加: 0件
+
 ### source
 
 - `topics/08_integral_distance/08_integral_distance.md`
 - `topics/08_integral_distance/08_integral_distance_explanation.pdf`
 - `topics/08_integral_distance/08_integral_distance_practice.md`
+- `topics/08_integral_distance/08_integral_distance_practice.pdf`
 
 参考教材は電験王、電験三種まとめました、電気主任技術者のナレッジノート等を複数系統確認。e-sysnetは検索対象に含めたが、固定5問へ直接対応するページを確認できなかったため無関係なページは引用していない。
 
 ## 次に行うこと
 
-Topic 08の練習問題sourceを正本として、練習PDF（解答・完全解説付き）を作成する。
+Topic 08の解説画像PowerPointを作成する。
 
-PDF化後は全ページ表示QA・文字抽出QA・主要計算再検算を行い、固定5問への対応と固定範囲を維持する。
+PowerPointでは固定5過去問で必要な正弦波定積分、符号付き面積、波形平均、区分積分、面積・蓄積量の釣合いと、系列SPEC固定の運転曲線接続を可視化する。固定EXAM_ALIGNMENTと固定範囲を変更しない。
 
 Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は先取りしない。
