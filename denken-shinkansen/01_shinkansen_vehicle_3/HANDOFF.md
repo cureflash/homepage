@@ -6,16 +6,16 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は30/38。01〜30がPASS。active topicは31 `ATC② 地上から車上へどう情報を送る？`。
 
 ## 今回進捗
-Topic 31の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物、解説PDF・練習PDF・PowerPoint表示QA、固定範囲境界はすべてPASS。
+Topic 31を1段階進め、主source `31_atc_signal_transmission.md` の旧進捗記録を実在成果物へ同期した。状態欄を解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了済みに更新し、末尾の次工程も最終QA再判定へ同期した。
 
-未完了理由は主source `31_atc_signal_transmission.md` 冒頭の進捗記録1箇所のみ。`PDF・練習・PowerPoint・完成後独立再解答は未着手` と残っており、実在する解説PDF、練習source/PDF、PowerPoint、完成後独立再解答記録と不整合。技術内容や固定EXAM_ALIGNMENTには修正不要。
+教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、PDF、練習問題、PowerPoint、固定範囲は変更していない。固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、練習独立QA `15 / 15 PASS`、各表示QAは維持している。
 
 Topic 32の速度検出・速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR具体回路、未確認のATC実車周波数値・符号体系・ビットレート、固定過去問に不要な通信方式各論は追加していない。
 
 更新:
-- `topics/31_atc_signal_transmission/31_atc_signal_transmission_final_qa.md` — 最終QA `NEEDS_REVISION / IN_PROGRESS` を記録
-- `STATUS.md` — `topic_31_final_qa_needs_revision` へ更新
-- `HANDOFF.md` — 次開始点を主source進捗記録同期へ更新
+- `topics/31_atc_signal_transmission/31_atc_signal_transmission.md` — 状態欄・次工程を実在成果物へ同期
+- `STATUS.md` — `topic_31_source_progress_synced` へ更新
+- `HANDOFF.md` — 次開始点を最終QA再判定へ更新
 
 ## Topic 31 固定EXAM_ALIGNMENT
 1. R7下 機械 問14 — フローチャートの条件分岐・反復による論理判断 — `3` — PASS
@@ -77,14 +77,15 @@ PowerPoint可視化: `6 / 6 PASS`。
 - 未確認実車値追加: `0件`
 
 ## Topic 31 最終QA
-`NEEDS_REVISION / IN_PROGRESS`。
+前回判定は `NEEDS_REVISION / IN_PROGRESS`。
 - 必須成果物: PASS
 - 完成後独立再解答: `6 / 6 PASS`
 - 表示QA: PASS
 - 固定範囲境界: PASS
-- 進捗記録整合: FAIL
-  - `31_atc_signal_transmission.md` 冒頭に `PDF・練習・PowerPoint・完成後独立再解答は未着手` が残存
-- Topic 31はまだ `completed` にしない
+- 前回の進捗記録整合: FAIL
+  - `31_atc_signal_transmission.md` の旧進捗記録が実在成果物と不整合だった
+- 今回、状態欄・次工程を実在成果物へ同期済み
+- 最終QA再判定は次工程。再判定前なのでTopic 31はまだ `completed` にしない
 
 ## Topic 31 固定範囲
 扱う:
@@ -105,7 +106,7 @@ PowerPoint可視化: `6 / 6 PASS`。
 - 固定過去問に不要な通信方式各論
 
 ## 現在の状態
-- `current_status`: `topic_31_final_qa_needs_revision`
+- `current_status`: `topic_31_source_progress_synced`
 - 完成数: 30/38
 - 01〜30: PASS
 - active topic: 31 `ATC② 地上から車上へどう情報を送る？`
@@ -116,7 +117,8 @@ PowerPoint可視化: `6 / 6 PASS`。
 - Topic 31練習独立QA: `15 / 15 PASS`
 - Topic 31 PowerPoint可視化: `6 / 6 PASS`
 - Topic 31完成後独立再解答: `6 / 6 PASS`
-- Topic 31最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- Topic 31 source進捗記録: 同期済み
+- Topic 31最終QA: 前回 `NEEDS_REVISION / IN_PROGRESS`、再判定待ち
 
 ## 次の正確な開始点
-`topics/31_atc_signal_transmission/31_atc_signal_transmission.md` 冒頭の進捗記録だけを実在成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・PDF・練習問題・PowerPoint・固定範囲は変更しない。同期後、最終QAを再判定する。
+Topic 31の最終QAを再判定する。必須成果物、固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、解説PDF・練習PDF・PowerPoint表示QA、固定範囲境界、source進捗記録整合を確認し、全件PASSなら `completed` とする。
