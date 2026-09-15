@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 7 / 39
-- current_status: `topic_08_independent_reanswer_passed`
+- current_status: `topic_08_final_qa_needs_revision`
 - last_completed_topic: `07 直流主回路の高出力化`
 - active_topic: `08 位相制御と平均直流電圧`
-- next_start: Topic 08の最終QA。必須成果物、固定一次3問＋二次2問・20対象項目、完成後独立再解答 `20 / 20 PASS`、表示QA、進捗記録整合、固定範囲を再確認し、全件PASSならcompletedへ更新する
+- next_start: Topic 08の主source旧進捗2箇所と練習source旧進捗1箇所だけを実在成果物・完成後独立再解答 `20 / 20 PASS` の現在地へ同期する。教材本文・数式・固定EXAM_ALIGNMENT・問題・PDF/PPTXは変更しない。その後に最終QAを再判定する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -18,7 +18,7 @@
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
 - [x] 07 直流主回路の高出力化 — PASS
-- [ ] 08 位相制御と平均直流電圧 — 解説source・解説PDF・練習source・練習PDF・PowerPoint完成 / 完成後独立再解答 `20 / 20 PASS` / 最終QA未実施
+- [ ] 08 位相制御と平均直流電圧 — 解説source・解説PDF・練習source・練習PDF・PowerPoint完成 / 完成後独立再解答 `20 / 20 PASS` / 最終QA `NEEDS_REVISION`（source進捗記録3箇所が旧状態）
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -317,4 +317,19 @@
 - 未確認実車値追加: `0件`
 - 独立再解答判定: `PASS`
 
-次工程はTopic 08 `位相制御と平均直流電圧` の最終QA。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、進捗記録整合、固定範囲を再確認し、全品質ゲートPASSなら `completed` とする。
+## Topic 08 最終QA
+- 必須成果物: `PASS`
+- 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問・20対象項目を維持
+- 完成後独立再解答: `20 / 20 PASS`
+- 解説PDF・練習PDF・PowerPointの表示/構造QA: `PASS`
+- 練習問題: `12 / 12 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- 主source冒頭状態: 「次工程は解説PDF作成」の旧進捗が残存
+- 主source末尾次工程: 「解説PDFを作成」の旧進捗が残存
+- 練習source冒頭状態: 「練習PDFは未作成」の旧進捗が残存
+- 進捗記録整合: `FAIL`
+- 最終判定: `NEEDS_REVISION`
+
+次工程はTopic 08の進捗記録同期。主source旧進捗2箇所と練習source旧進捗1箇所だけを現在地へ同期し、技術内容・数式・固定EXAM_ALIGNMENT・問題・成果物は変更しない。その後に最終QAを再判定する。
