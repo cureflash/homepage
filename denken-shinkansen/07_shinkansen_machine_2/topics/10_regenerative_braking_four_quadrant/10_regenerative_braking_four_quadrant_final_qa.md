@@ -6,11 +6,11 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
 `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` の範囲内で再確認し、新しい仕様は追加していない。
 
-技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、練習問題QA、PDF/PPTX表示QA、固定範囲境界はPASS。未完了理由は進捗記録1箇所のみで、`10_regenerative_braking_four_quadrant_practice.md` 末尾 `## 次工程` が「練習PDFを作成する」という旧状態のまま残っている。
+前回 `NEEDS_REVISION` の唯一の理由だった `10_regenerative_braking_four_quadrant_practice.md` 末尾の旧進捗記録は同期済み。今回の再QAでは、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、練習問題QA、PDF/PPTX表示QA、進捗記録整合、仕様境界をすべてPASSした。
 
 ## 必須成果物
 
@@ -18,7 +18,7 @@ GitHub正本上で実在を確認した。
 
 - source Markdown: PASS (`7ff80a0d9a016d4ff2d93d5cc6266f9cafc3901b`)
 - 解説PDF: PASS (`f3f492378095f8e8c2685ac7ed5377157fa2fa1d`)
-- 練習source: PASS (`67c7151125cc90b08a070ea76e21aa7c09da573d`)
+- 練習source: PASS (`0d4c0bd6d215f2a5cd8da624a48f4ff2ddb32f41`)
 - 練習PDF: PASS (`11d0922d158a50ccd35c0ea0f8cd7a09ac24cc2e`)
 - 解説画像PowerPoint: PASS (`3f5daff770cc5fb79fd6fa86abe0449619470e7e`)
 
@@ -57,13 +57,9 @@ GitHub正本上で実在を確認した。
 
 ## 進捗記録整合
 
-FAIL。
+前回FAILだった `10_regenerative_braking_four_quadrant_practice.md` 末尾 `## 次工程` は、練習PDF、PowerPoint、完成後独立再解答まで完了済みで最終QA再実施を行う現在地へ同期済み。前回検出した旧「練習PDFを作成する」という不整合は解消した。
 
-`10_regenerative_braking_four_quadrant_practice.md` 末尾は現在も次の旧進捗を指している。
-
-`固定EXAM_ALIGNMENTと問題・正答を変更せず、練習PDFを作成して全ページ表示QA・文字抽出QA・数値再検算を行う。`
-
-実際には練習PDF、PowerPoint、完成後独立再解答まで完了済みであるため、GitHub正本内の進捗記録が実態と一致していない。教材内容・問題・正答を変更せず、この進捗記録だけを同期する必要がある。
+判定: `PASS`。
 
 ## 仕様境界
 
@@ -81,10 +77,10 @@ FAIL。
 - 一次4問＋二次記述1問・15答案要素の過去問対応: PASS
 - 完成後独立再解答: `15 / 15 PASS`
 - 練習・PDF/PPTX QA: PASS
+- 前回進捗記録不整合の解消: PASS
 - 仕様外論点の追加なし: PASS
 - 未確認実車値の真値化なし: PASS
-- 進捗記録整合: FAIL
 
-判定: `NEEDS_REVISION / IN_PROGRESS`。
+判定: `PASS / completed`。
 
-次は `10_regenerative_braking_four_quadrant_practice.md` 末尾の旧進捗記録だけを現在地へ同期する。
+Topic 10を完成数へ加算し、系列完成数は `10 / 22`。次は Topic 11「GTO→IGBT→SiCの損失を計算する」の制作前EXAM_ALIGNMENT。
