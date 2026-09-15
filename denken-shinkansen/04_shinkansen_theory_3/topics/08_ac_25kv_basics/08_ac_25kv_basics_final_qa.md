@@ -6,21 +6,19 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで最終QAを実施した。新しい仕様・固定範囲外論点は追加していない。
-
-過去問対応品質ゲート、必須成果物、既存表示QA、SPEC境界はPASSしている。未完了理由は主source・練習sourceの進捗記録が実在成果物より古いことだけである。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`04_shinkansen_theory_3/SPEC.md` の既定範囲だけで最終QAを再実施した。新しい仕様・固定範囲外論点は追加していない。
 
 ## 必須成果物の実在確認
 
-GitHub正本上で次を確認した。
+GitHub正本上で次を確認した。最終QA判定に合わせて主source・練習sourceへ完了進捗だけを同期しており、教材本文・問題・解答の技術内容は変更していない。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| source Markdown | `b3ed61c3865a45b8eb34be3c1d09808978e1285e` | PASS |
+| source Markdown | `7aa2e12a64f4b38f8558f5b7e0402573f385726e` | PASS |
 | 解説PDF | `71884f1f9bff2c875f9f28faeaadb76bc397dd2a` | PASS |
-| 練習source | `46a16a0da5e365fd47f2cb7e7d642fcd4a9b1491` | PASS |
+| 練習source | `dc62fbdca8edad5f41646278d1322dc172834122` | PASS |
 | 練習PDF | `d960b49387bb70273848e3df2cbca0e9acd42e1e` | PASS |
 | 解説画像PowerPoint | `3219339e558ebe17e7f46e7939c6c35b884e4932` | PASS |
 | 完成後独立再解答 | `37fbfdd3dc9b4498918507bc367f1329608d6edf` | PASS |
@@ -51,7 +49,7 @@ GitHub正本上で次を確認した。
 - 練習問題: 15問、全問五肢択一、基礎4 / 標準8 / 複合3、独立再計算・再判定 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
 - 解説PDF: A4縦2ページ、200 dpi全2ページ表示QA・文字抽出QA PASS
 - 練習PDF: A4縦4ページ、200 dpi全4ページ表示QA・文字抽出QA PASS
-- PowerPoint: 16:9・4枚、既存進捗記録で表示QA `4 / 4 PASS`、overflow検査PASS、ZIP整合性PASS
+- PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、overflow検査PASS、ZIP整合性PASS
 
 判定: PASS。
 
@@ -71,15 +69,15 @@ GitHub正本上で次を確認した。
 
 ## 進捗記録整合性
 
-ここだけFAIL。
+前回最終QAで唯一FAILだった主source・練習sourceの旧進捗記録は、実成果物へ同期済みであることを再確認した。
 
-主source `08_ac_25kv_basics.md` は、実際には解説PDF、練習PDF、PowerPoint、完成後独立再解答まで存在するのに、冒頭statusが `EXPLANATION_SOURCE_COMPLETE` のままで、§23も「解説PDF・練習・PowerPoint: 未着手」「完成後独立再解答: 未実施」「次工程: 解説PDF作成」と記録している。
+- 主source: 解説PDF、練習PDF、PowerPoint、完成後独立再解答まで実態と一致
+- 練習source: PowerPoint、完成後独立再解答まで実態と一致
+- STATUS / HANDOFF: 最終QA再実施を次工程として保持し、判定時点の実態と一致
 
-練習source `08_ac_25kv_basics_practice.md` も、実際にはPowerPoint・完成後独立再解答まで完了しているのに、stageが `PRACTICE_PDF_COMPLETE` のままである。
+最終QA判定後、主source・練習source・STATUS・HANDOFFへ `completed` とTopic 09開始点を同期する。
 
-教材本文、固定EXAM_ALIGNMENT、問題、解答、PDF/PPTX成果物自体の技術内容に修正理由はない。次工程では進捗メタデータだけを実態へ同期する。
-
-判定: FAIL。
+判定: PASS。
 
 ## 最終判定
 
@@ -94,6 +92,6 @@ GitHub正本上で次を確認した。
 - 教材外知識補完: `0件`
 - 後続Topic知識への依存: `0件`
 - 未確認新幹線実車値への依存: `0件`
-- source進捗記録整合性: FAIL
+- source進捗記録整合性: PASS
 
-結論: Topic 08は `NEEDS_REVISION / IN_PROGRESS`。完成数は `7 / 14` のまま。次は主source・練習sourceの進捗記録だけを実成果物へ同期し、その後に最終QAを再実施する。
+結論: Topic 08は `PASS / completed`。完成数を `8 / 14` とし、次はTopic 09「北陸新幹線は50Hzと60Hzをどう走る？」の制作前EXAM_ALIGNMENTへ進む。
