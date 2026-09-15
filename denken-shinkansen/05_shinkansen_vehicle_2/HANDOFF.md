@@ -5,11 +5,11 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜08は最終QAまで `PASS`。完成数は `8 / 39`。
+Topic 01〜09は最終QAまで `PASS`。完成数は `9 / 39`。
 
-現在地は `topic_09_source_progress_synced`。Topic 09 `直流機方式の損失・熱設計` は、必須成果物、固定一次4問＋二次1問・14対象項目、完成後独立再解答 `14 / 14 PASS`、PDF/PPTX QA、固定範囲境界までPASS。前回最終QAの唯一のFAILだった主source `09_dc_machine_loss_thermal_design.md` 冒頭 `## 状態` の旧進捗2記述は実成果物へ同期済み。
+現在地は `topic_09_completed`。Topic 09 `直流機方式の損失・熱設計` は、必須成果物、固定一次4問＋二次1問・14対象項目、完成後独立再解答 `14 / 14 PASS`、PDF/PPTX QA、固定範囲境界、進捗記録整合を全件PASSし、最終QA `PASS / completed`。
 
-次工程はTopic 09最終QAの再判定。技術本文、固定EXAM_ALIGNMENT、数式、例題、練習問題・正答、PDF/PPTX、完成後独立再解答は変更せず、進捗記録整合を含む全品質ゲートを再確認し、PASS時のみ `completed` とする。
+次工程はTopic 10 `300系① 誘導電動機等価回路` の制作前EXAM_ALIGNMENT。二種の一次・二次を合わせ原則5問以上を直近年度優先で調査し、二次対応論点で確認できる記述問題を最低1問含める。SPEC固定範囲外を件数合わせで追加しない。
 
 ## Topic 01〜06
 - Topic 01〜06: 最終QA `PASS / completed`
@@ -176,7 +176,7 @@ source: `topics/09_dc_machine_loss_thermal_design/09_dc_machine_loss_thermal_des
 - 独立再解答判定: `PASS`
 
 ## Topic 09 最終QA
-- `09_dc_machine_loss_thermal_design_final_qa.md`: `NEEDS_REVISION / IN_PROGRESS`
+- `09_dc_machine_loss_thermal_design_final_qa.md`: `PASS / completed`
 - 必須成果物: `PASS`
 - 固定一次4問＋二次1問・14対象項目: 維持
 - 完成後独立再解答: 一次 `11 / 11 PASS`、二次 `3 / 3 PASS`、合計 `14 / 14 PASS`
@@ -185,13 +185,13 @@ source: `topics/09_dc_machine_loss_thermal_design/09_dc_machine_loss_thermal_des
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 直近判定時の進捗記録整合: `FAIL`
-- 前回exact blocker: 主source `## 状態` の旧進捗2記述のみ
-- blocker対応: `同期済み / 再判定待ち`
+- 前回exact blockerだった主source旧進捗2記述: `同期済み`
+- 進捗記録整合: `PASS`
+- 最終判定: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 09 `直流機方式の損失・熱設計` の最終QA再判定。
+Topic 10 `300系① 誘導電動機等価回路` の制作前EXAM_ALIGNMENT。
 
-1. 主source進捗記録が実成果物と一致していることを再確認する。
-2. 固定一次4問＋二次1問・14対象項目、完成後独立再解答 `14 / 14 PASS`、必須成果物・PDF/PPTX QA、固定範囲境界を再確認する。
-3. 全件PASSなら Topic 09を `PASS / completed` とし、完成数を `9 / 39` へ更新する。
+1. `SPEC.md` のTopic 10固定範囲だけを対象にする。
+2. 第二種公式過去問を直近年度優先で調査し、一次・二次を合わせ原則5問以上、二次対応論点で確認できる記述問題を最低1問含める。
+3. 固定範囲外の後続Topicを件数合わせで追加せず、制作前独立検証を通過してから本文制作へ進む。
