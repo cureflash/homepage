@@ -1,14 +1,14 @@
 # STATUS - 電験三種「電気数学」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 7 / 12
-- current_status: `topic_08_practice_pdf_complete`
+- current_status: `topic_08_explanation_pptx_complete`
 - last_completed_topic: `07 微分② 速度を微分すると加速度`
 - active_topic: `08 積分 速度曲線の面積は距離`
-- next_start: `Topic 08 解説画像PowerPoint`
+- next_start: `Topic 08 完成後独立再解答`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -64,22 +64,22 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 08「積分 速度曲線の面積は距離」の練習PDF（解答・完全解説付き）を完成した。
+Topic 08「積分 速度曲線の面積は距離」の解説画像PowerPointを完成した。
 
-成果物: `topics/08_integral_distance/08_integral_distance_practice.pdf`。A4縦5ページ。練習sourceの全12問・全問五肢択一（基礎3／標準7／複合2）と全問の完全解説、固定5過去問への対応表、Topic 08固定範囲との対応を収録した。
+成果物: `topics/08_integral_distance/08_integral_distance_images.pptx`。16:9・5枚。固定5過去問で必要な定積分と符号付き面積、波形平均、区分積分、面積・蓄積量の釣合いを可視化し、系列SPEC固定の `x=∫v(t)dt`、`t=∫dx/v(x)`、一定加速度式の積分導出も収録した。
 
-200 dpi全ページ表示QA `5 / 5 PASS`、文字抽出QA PASS。主要計算を再検算し `12 / 12 PASS`。クリッピング・重なり・文字化け0件。
+全5枚表示QA PASS、overflow 0件、PPTX ZIP整合性PASS。グラフと式の対応も確認した。
 
 固定EXAM_ALIGNMENT変更0件。Topic 09〜11先取り、未確認新幹線実値追加0件。
 
 ## 判定
 
-Topic 08は `topic_08_practice_pdf_complete / IN_PROGRESS`。
+Topic 08は `topic_08_explanation_pptx_complete / IN_PROGRESS`。
 
-完成数は `7 / 12`。次工程は解説画像PowerPoint。
+完成数は `7 / 12`。次工程は完成教材だけでの固定5過去問独立再解答。

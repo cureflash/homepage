@@ -1,22 +1,22 @@
 # HANDOFF - 電験三種「電気数学」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 現在地
 
 Topic 01〜07は `completed`。
 
-Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。独立解答は `5 / 5問・9 / 9答案要素 PASS`、練習12問の独立計算QAは `12 / 12 PASS`、練習PDF表示QAは `5 / 5 PASS`。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
+Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。独立解答は `5 / 5問・9 / 9答案要素 PASS`、練習12問の独立計算QAは `12 / 12 PASS`、練習PDF表示QAは `5 / 5 PASS`、PowerPointは全5枚表示QA PASS・overflow 0件・PPTX ZIP整合性PASS。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
 
 完成数: `7 / 12`
 
-current_status: `topic_08_practice_pdf_complete`
+current_status: `topic_08_explanation_pptx_complete`
 
 last_completed_topic: `07 微分② 速度を微分すると加速度`
 
 active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `Topic 08 解説画像PowerPoint`
+next_start: `Topic 08 完成後独立再解答`
 
 ## Topic 07 完了記録
 
@@ -162,19 +162,34 @@ next_start: `Topic 08 解説画像PowerPoint`
 - 固定EXAM_ALIGNMENT変更: 0件
 - Topic 09〜11先取り、未確認新幹線実値追加: 0件
 
+### 解説画像PowerPoint
+
+成果物: `topics/08_integral_distance/08_integral_distance_images.pptx`
+
+- 16:9・5枚
+- 定積分と符号付き面積、波形平均、区分積分、面積・蓄積量の釣合いを固定5過去問へ接続
+- `x=∫v(t)dt`、`t=∫dx/v(x)`、`a=v dv/dx` から一定加速度式への導出を系列SPEC固定範囲内で可視化
+- 全5枚表示QA: PASS
+- overflow: 0件
+- グラフと式の整合確認: PASS
+- PPTX ZIP整合性: PASS
+- 固定EXAM_ALIGNMENT変更: 0件
+- Topic 09〜11先取り、未確認新幹線実値追加: 0件
+
 ### source
 
 - `topics/08_integral_distance/08_integral_distance.md`
 - `topics/08_integral_distance/08_integral_distance_explanation.pdf`
 - `topics/08_integral_distance/08_integral_distance_practice.md`
 - `topics/08_integral_distance/08_integral_distance_practice.pdf`
+- `topics/08_integral_distance/08_integral_distance_images.pptx`
 
 参考教材は電験王、電験三種まとめました、電気主任技術者のナレッジノート等を複数系統確認。e-sysnetは検索対象に含めたが、固定5問へ直接対応するページを確認できなかったため無関係なページは引用していない。
 
 ## 次に行うこと
 
-Topic 08の解説画像PowerPointを作成する。
+Topic 08の完成教材だけで固定5過去問を独立再解答し、公式解答と照合する。
 
-PowerPointでは固定5過去問で必要な正弦波定積分、符号付き面積、波形平均、区分積分、面積・蓄積量の釣合いと、系列SPEC固定の運転曲線接続を可視化する。固定EXAM_ALIGNMENTと固定範囲を変更しない。
+固定EXAM_ALIGNMENTと固定範囲を変更しない。教材外知識を補完して正答した場合はFAIL扱いとする。
 
 Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は先取りしない。
