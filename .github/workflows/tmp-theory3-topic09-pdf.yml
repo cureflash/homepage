@@ -26,18 +26,8 @@ jobs:
           test -s "$target"
           test "$(pdfinfo "$target" | awk '/^Pages:/ {print $2}')" = '4'
           pdftotext -layout "$target" /tmp/topic09.txt
-          python - <<'PY'
-          from pathlib import Path
-          s=Path('/tmp/topic09.txt').read_text(encoding='utf-8', errors='replace')
-          assert '\ufffd' not in s
-          keys=[
-              'Topic 09','50Hz','60Hz','XL = 2πfL','XC = 1/(2πfC)','f0 = 1/(2π√LC)',
-              '例題1','例題2','例題3','R8上 理論 問8','R7下 理論 問8','R6下 理論 問9',
-              'R6上 理論 問8','R5下 理論 問8','R5上 理論 問8'
-          ]
-          missing=[k for k in keys if k not in s]
-          assert not missing, missing
-          PY
+          test "$(grep -o $'\357\277\275' /tmp/topic09.txt | wc -l)" -eq 0
+          for key in 'Topic 09' '50Hz' '60Hz' 'XL = 2πfL' 'XC = 1/(2πfC)' 'f0 = 1/(2π√LC)' '例題1' '例題2' '例題3' 'R8上 理論 問8' 'R7下 理論 問8' 'R6下 理論 問9' 'R6上 理論 問8' 'R5下 理論 問8' 'R5上 理論 問8'; do grep -Fq "$key" /tmp/topic09.txt; done
           mkdir -p /tmp/render
           pdftoppm -r 200 -png "$target" /tmp/render/page >/dev/null 2>&1
           test "$(find /tmp/render -maxdepth 1 -name 'page-*.png' | wc -l)" -eq 4
@@ -46,110 +36,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python - <<'PY'
-          from pathlib import Path
-
-          topic = Path('denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc.md')
-          s = topic.read_text(encoding='utf-8')
-          old = 'status: `EXPLANATION_SOURCE_COMPLETE`'
-          new = 'status: `EXPLANATION_PDF_COMPLETE`'
-          assert s.count(old) == 1
-          s = s.replace(old, new, 1)
-          old = '解説本文＋3段階例題は完成。次は固定EXAM_ALIGNMENTと本文を変更せず、解説PDFを作成して全ページ表示QA・文字抽出QAを行う。完成後独立再解答が済むまで`completed`にしない。'
-          new = '解説PDF・全ページ表示QA・文字抽出QAまで完了。次は固定EXAM_ALIGNMENTと本文を変更せず、練習問題source・練習問題PDFを作成する。完成後独立再解答が済むまで`completed`にしない。'
-          assert s.count(old) == 1
-          topic.write_text(s.replace(old, new, 1), encoding='utf-8')
-
-          qa = Path('denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_explanation_qa.md')
-          qa.write_text('''# Topic 09 解説PDF QA
-
-更新日: 2026-09-15
-判定: `PASS`
-
-- 対象: `09_hokuriku_frequency_rlc_explanation.pdf`
-- 形式: A4縦 4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 表示欠け・重なり・文字化け: `0件`
-- 文字抽出QA: `PASS`（U+FFFD 0件）
-- 固定公式過去問6問の要求事項: PDF内へ反映済み
-- 制作前独立検証: `6 / 6 PASS` 維持
-- SPEC境界外論点の追加: `0件`
-- 未確認の新幹線実車値追加: `0件`
-
-固定過去問は令和8年度上期 理論 問8、令和7年度下期 理論 問8、令和6年度下期 理論 問9、令和6年度上期 理論 問8、令和5年度下期 理論 問8、令和5年度上期 理論 問8。
-
-本QAは解説PDFの成果物・表示・文字抽出・固定範囲の確認であり、完成後独立再解答および最終QAは後工程で実施する。
-''', encoding='utf-8')
-
-          status = Path('denken-shinkansen/04_shinkansen_theory_3/STATUS.md')
-          s = status.read_text(encoding='utf-8')
-          reps = [
-              ('- current_status: `topic_09_explanation_source_complete`', '- current_status: `topic_09_explanation_pdf_complete`'),
-              ('- next_start: Topic 09の解説PDFを作成して全ページ表示QA・文字抽出QAを行う', '- next_start: Topic 09の練習問題source・練習PDFを作成する'),
-              ('- [ ] 解説PDF\n- [ ] 練習問題source・練習PDF', '- [x] 解説PDF\n- [ ] 練習問題source・練習PDF'),
-          ]
-          for old, new in reps:
-              assert s.count(old) == 1, old
-              s = s.replace(old, new, 1)
-          marker = '## 今回進めた内容\n'
-          assert s.count(marker) == 1
-          s = s.split(marker, 1)[0] + marker + '''
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の解説PDFを完成し、GitHub正本へ反映した。
-
-A4縦4ページ。200 dpi全ページ表示QA `4 / 4 PASS`、表示欠け・重なり・文字化け0件、文字抽出QA `PASS`（U+FFFD 0件）。固定6過去問の要求事項、3段階例題、制作前独立検証 `6 / 6 PASS` を維持している。
-
-Topic 10以降の力率・三相・半導体等、未確認の新幹線実車回路・切替方式は追加していない。
-
-## 判定
-
-現在 `topic_09_explanation_pdf_complete / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の練習問題source・練習PDFを作成する。
-'''
-          status.write_text(s, encoding='utf-8')
-
-          handoff = Path('denken-shinkansen/04_shinkansen_theory_3/HANDOFF.md')
-          s = handoff.read_text(encoding='utf-8')
-          reps = [
-              ('Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は解説本文＋3段階例題まで完成した。', 'Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は解説PDFまで完成した。'),
-              ('- current status: `topic_09_explanation_source_complete`', '- current status: `topic_09_explanation_pdf_complete`'),
-              ('- next start: Topic 09の解説PDFを作成して全ページ表示QA・文字抽出QAを行う', '- next start: Topic 09の練習問題source・練習PDFを作成する'),
-              ('  - status: `EXPLANATION_SOURCE_COMPLETE`', '  - status: `EXPLANATION_PDF_COMPLETE`'),
-              ('- 解説PDF: 未作成', '- 解説PDF: 完成（A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`）'),
-              ('固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 09の解説PDFを作成して全ページ表示QA・文字抽出QAを行う。', '固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 09の練習問題source・練習PDFを作成する。'),
-          ]
-          for old, new in reps:
-              assert s.count(old) == 1, old
-              s = s.replace(old, new, 1)
-          start = '## 今回進捗\n'
-          end = '## Topic 09 品質ゲート\n'
-          assert s.count(start) == 1 and s.count(end) == 1
-          before, rest = s.split(start, 1)
-          _, after = rest.split(end, 1)
-          progress = '''## 今回進捗
-
-Topic 09の固定EXAM_ALIGNMENTと解説本文を変更せず、解説PDFを作成した。
-
-- A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 表示欠け・重なり・文字化け: `0件`
-- 文字抽出QA: `PASS`（U+FFFD 0件）
-- 固定6過去問要求: PDF内へ反映済み
-- 制作前独立検証: `6 / 6 PASS` 維持
-- SPEC境界外論点・未確認実車値追加: `0件`
-
-'''
-          s = before + progress + end + after
-          handoff.write_text(s, encoding='utf-8')
-          PY
-
+          echo 'ZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgp0b3BpYyA9IFBhdGgoJ2Rlbmtlbi1zaGlua2Fuc2VuLzA0X3NoaW5rYW5zZW5fdGhlb3J5XzMvdG9waWNzLzA5X2hva3VyaWt1X2ZyZXF1ZW5jeV9ybGMvMDlfaG9rdXJpa3VfZnJlcXVlbmN5X3JsYy5tZCcpCnMgPSB0b3BpYy5yZWFkX3RleHQoZW5jb2Rpbmc9J3V0Zi04JykKb2xkID0gJ3N0YXR1czogYEVYUExBTkFUSU9OX1NPVVJDRV9DT01QTEVURWAnCm5ldyA9ICdzdGF0dXM6IGBFWFBMQU5BVElPTl9QREZfQ09NUExFVEVgJwphc3NlcnQgcy5jb3VudChvbGQpID09IDEsICgndG9waWMgc3RhdHVzJywgcy5jb3VudChvbGQpKQpzID0gcy5yZXBsYWNlKG9sZCwgbmV3LCAxKQpvbGQgPSAn6Kej6Kqs5pys5paH77yLM+autemajuS+i+mhjOOBr+WujOaIkOOAguasoeOBr+WbuuWumkVYQU1fQUxJR05NRU5U44Go5pys5paH44KS5aSJ5pu044Gb44Ga44CB6Kej6KqsUERG44KS5L2c5oiQ44GX44Gm5YWo44Oa44O844K46KGo56S6UUHjg7vmloflrZfmir3lh7pRQeOCkuihjOOBhuOAguWujOaIkOW+jOeLrOeri+WGjeino+etlOOBjOa4iOOCgOOBvuOBp2Bjb21wbGV0ZWRg44Gr44GX44Gq44GE44CCJwpuZXcgPSAn6Kej6KqsUERG44O75YWo44Oa44O844K46KGo56S6UUHjg7vmloflrZfmir3lh7pRQeOBvuOBp+WujOS6huOAguasoeOBr+WbuuWumkVYQU1fQUxJR05NRU5U44Go5pys5paH44KS5aSJ5pu044Gb44Ga44CB57e057+S5ZWP6aGMc291cmNl44O757e057+S5ZWP6aGMUERG44KS5L2c5oiQ44GZ44KL44CC5a6M5oiQ5b6M54us56uL5YaN6Kej562U44GM5riI44KA44G+44GnYGNvbXBsZXRlZGDjgavjgZfjgarjgYTjgIInCmFzc2VydCBzLmNvdW50KG9sZCkgPT0gMSwgKCd0b3BpYyBuZXh0Jywgcy5jb3VudChvbGQpKQp0b3BpYy53cml0ZV90ZXh0KHMucmVwbGFjZShvbGQsIG5ldywgMSksIGVuY29kaW5nPSd1dGYtOCcpCgpxYSA9IFBhdGgoJ2Rlbmtlbi1zaGlua2Fuc2VuLzA0X3NoaW5rYW5zZW5fdGhlb3J5XzMvdG9waWNzLzA5X2hva3VyaWt1X2ZyZXF1ZW5jeV9ybGMvMDlfaG9rdXJpa3VfZnJlcXVlbmN5X3JsY19leHBsYW5hdGlvbl9xYS5tZCcpCnFhLndyaXRlX3RleHQoIiIiIyBUb3BpYyAwOSDop6PoqqxQREYgUUEKCuabtOaWsOaXpTogMjAyNi0wOS0xNQrliKTlrpo6IGBQQVNTYAoKLSDlr77osaE6IGAwOV9ob2t1cmlrdV9mcmVxdWVuY3lfcmxjX2V4cGxhbmF0aW9uLnBkZmAKLSDlvaLlvI86IEE057imIDTjg5rjg7zjgrgKLSAyMDAgZHBp5YWo44Oa44O844K46KGo56S6UUE6IGA0IC8gNCBQQVNTYAotIOihqOekuuasoOOBkeODu+mHjeOBquOCiuODu+aWh+Wtl+WMluOBkTogYDDku7ZgCi0g5paH5a2X5oq95Ye6UUE6IGBQQVNTYO+8iFUrRkZGRCAw5Lu277yJCi0g5Zu65a6a5YWs5byP6YGO5Y675ZWPNuWVj+OBruimgeaxguS6i+mghTogUERG5YaF44G45Y+N5pig5riI44G/Ci0g5Yi25L2c5YmN54us56uL5qSc6Ki8OiBgNiAvIDYgUEFTU2Ag57at5oyBCi0gU1BFQ+Wig+eVjOWkluirlueCueOBrui/veWKoDogYDDku7ZgCi0g5pyq56K66KqN44Gu5paw5bm557ea5a6f6LuK5YCk6L+95YqgOiBgMOS7tmAKCuWbuuWumumBjuWOu+WVj+OBr+S7pOWSjDjlubTluqbkuIrmnJ8g55CG6KuWIOWVjzjjgIHku6Tlkow35bm05bqm5LiL5pyfIOeQhuirliDllY8444CB5Luk5ZKMNuW5tOW6puS4i+acnyDnkIboq5Yg5ZWPOeOAgeS7pOWSjDblubTluqbkuIrmnJ8g55CG6KuWIOWVjzjjgIHku6Tlkow15bm05bqm5LiL5pyfIOeQhuirliDllY8444CB5Luk5ZKMNeW5tOW6puS4iuacnyDnkIboq5Yg5ZWPOOOAggoK5pysUUHjga/op6PoqqxQREbjga7miJDmnpznianjg7vooajnpLrjg7vmloflrZfmir3lh7rjg7vlm7rlrprnr4Tlm7Ljga7norroqo3jgafjgYLjgorjgIHlrozmiJDlvozni6znq4vlho3op6PnrZTjgYrjgojjgbPmnIDntYJRQeOBr+W+jOW3peeoi+OBp+Wun+aWveOBmeOCi+OAggoiIiIsIGVuY29kaW5nPSd1dGYtOCcpCgpzdGF0dXMgPSBQYXRoKCdkZW5rZW4tc2hpbmthbnNlbi8wNF9zaGlua2Fuc2VuX3RoZW9yeV8zL1NUQVRVUy5tZCcpCnMgPSBzdGF0dXMucmVhZF90ZXh0KGVuY29kaW5nPSd1dGYtOCcpCnJlcHMgPSBbCiAgICAoJy0gY3VycmVudF9zdGF0dXM6IGB0b3BpY18wOV9leHBsYW5hdGlvbl9zb3VyY2VfY29tcGxldGVgJywgJy0gY3VycmVudF9zdGF0dXM6IGB0b3BpY18wOV9leHBsYW5hdGlvbl9wZGZfY29tcGxldGVgJyksCiAgICAoJy0gbmV4dF9zdGFydDogVG9waWMgMDnjga7op6PoqqxQREbjgpLkvZzmiJDjgZfjgablhajjg5rjg7zjgrjooajnpLpRQeODu+aWh+Wtl+aKveWHulFB44KS6KGM44GGJywgJy0gbmV4dF9zdGFydDogVG9waWMgMDnjga7nt7Tnv5LllY/poYxzb3VyY2Xjg7vnt7Tnv5JQREbjgpLkvZzmiJDjgZnjgosnKSwKICAgICgnLSBbIF0g6Kej6KqsUERGXG4tIFsgXSDnt7Tnv5LllY/poYxzb3VyY2Xjg7vnt7Tnv5JQREYnLCAnLSBbeF0g6Kej6KqsUERGXG4tIFsgXSDnt7Tnv5LllY/poYxzb3VyY2Xjg7vnt7Tnv5JQREYnKSwKXQpmb3Igb2xkLCBuZXcgaW4gcmVwczoKICAgIGFzc2VydCBzLmNvdW50KG9sZCkgPT0gMSwgKG9sZCwgcy5jb3VudChvbGQpKQogICAgcyA9IHMucmVwbGFjZShvbGQsIG5ldywgMSkKbWFya2VyID0gJyMjIOS7iuWbnumAsuOCgeOBn+WGheWuuVxuJwphc3NlcnQgcy5jb3VudChtYXJrZXIpID09IDEKcyA9IHMuc3BsaXQobWFya2VyLCAxKVswXSArIG1hcmtlciArICIiIgpUb3BpYyAwOSBg5YyX6Zm45paw5bm557ea44GvNTBIeuOBqDYwSHrjgpLjganjgYbotbDjgovvvJ9gIOOBruino+iqrFBERuOCkuWujOaIkOOBl+OAgUdpdEh1Yuato+acrOOBuOWPjeaYoOOBl+OBn+OAggoKQTTnuKY044Oa44O844K444CCMjAwIGRwaeWFqOODmuODvOOCuOihqOekulFBIGA0IC8gNCBQQVNTYOOAgeihqOekuuasoOOBkeODu+mHjeOBquOCiuODu+aWh+Wtl+WMluOBkTDku7bjgIHmloflrZfmir3lh7pRQSBgUEFTU2DvvIhVK0ZGRkQgMOS7tu+8ieOAguWbuuWumjbpgY7ljrvllY/jga7opoHmsYLkuovpoIXjgIEz5q616ZqO5L6L6aGM44CB5Yi25L2c5YmN54us56uL5qSc6Ki8IGA2IC8gNiBQQVNTYCDjgpLntq3mjIHjgZfjgabjgYTjgovjgIIKClRvcGljIDEw5Lul6ZmN44Gu5Yqb546H44O75LiJ55u444O75Y2K5bCO5L2T562J44CB5pyq56K66KqN44Gu5paw5bm557ea5a6f6LuK5Zue6Lev44O75YiH5pu/5pa55byP44Gv6L+95Yqg44GX44Gm44GE44Gq44GE44CCCgojIyDliKTlrpoKCuePvuWcqCBgdG9waWNfMDlfZXhwbGFuYXRpb25fcGRmX2NvbXBsZXRlIC8gSU5fUFJPR1JFU1Ng44CC5a6M5oiQ5pWw44GvIGA4IC8gMTRg44CC5qyh44GvVG9waWMgMDnjga7nt7Tnv5LllY/poYxzb3VyY2Xjg7vnt7Tnv5JQREbjgpLkvZzmiJDjgZnjgovjgIIKIiIiCnN0YXR1cy53cml0ZV90ZXh0KHMsIGVuY29kaW5nPSd1dGYtOCcpCgpoYW5kb2ZmID0gUGF0aCgnZGVua2VuLXNoaW5rYW5zZW4vMDRfc2hpbmthbnNlbl90aGVvcnlfMy9IQU5ET0ZGLm1kJykKcyA9IGhhbmRvZmYucmVhZF90ZXh0KGVuY29kaW5nPSd1dGYtOCcpCnJlcHMgPSBbCiAgICAoJ1RvcGljIDA5IGDljJfpmbjmlrDlubnnt5rjga81MEh644GoNjBIeuOCkuOBqeOBhui1sOOCi++8n2Ag44Gv6Kej6Kqs5pys5paH77yLM+autemajuS+i+mhjOOBvuOBp+WujOaIkOOBl+OBn+OAgicsICdUb3BpYyAwOSBg5YyX6Zm45paw5bm557ea44GvNTBIeuOBqDYwSHrjgpLjganjgYbotbDjgovvvJ9gIOOBr+ino+iqrFBERuOBvuOBp+WujOaIkOOBl+OBn+OAgicpLAogICAgKCctIGN1cnJlbnQgc3RhdHVzOiBgdG9waWNfMDlfZXhwbGFuYXRpb25fc291cmNlX2NvbXBsZXRlYCcsICctIGN1cnJlbnQgc3RhdHVzOiBgdG9waWNfMDlfZXhwbGFuYXRpb25fcGRmX2NvbXBsZXRlYCcpLAogICAgKCctIG5leHQgc3RhcnQ6IFRvcGljIDA544Gu6Kej6KqsUERG44KS5L2c5oiQ44GX44Gm5YWo44Oa44O844K46KGo56S6UUHjg7vmloflrZfmir3lh7pRQeOCkuihjOOBhicsICctIG5leHQgc3RhcnQ6IFRvcGljIDA544Gu57e057+S5ZWP6aGMc291cmNl44O757e057+SUERG44KS5L2c5oiQ44GZ44KLJyksCiAgICAoJyAgLSBzdGF0dXM6IGBFWFBMQU5BVElPTl9TT1VSQ0VfQ09NUExFVEVgJywgJyAgLSBzdGF0dXM6IGBFWFBMQU5BVElPTl9QREZfQ09NUExFVEVgJyksCiAgICAoJy0g6Kej6KqsUERGOiDmnKrkvZzmiJAnLCAnLSDop6PoqqxQREY6IOWujOaIkO+8iEE057imNOODmuODvOOCuOOAgTIwMCBkcGnooajnpLpRQSBgNCAvIDQgUEFTU2DjgIHmloflrZfmir3lh7pRQSBgUEFTU2DvvIknKSwKICAgICgn5Zu65a6aRVhBTV9BTElHTk1FTlTjgajop6PoqqzmnKzmlofjgpLlpInmm7TjgZvjgZrjgIFUb3BpYyAwOeOBruino+iqrFBERuOCkuS9nOaIkOOBl+OBpuWFqOODmuODvOOCuOihqOekulFB44O75paH5a2X5oq95Ye6UUHjgpLooYzjgYbjgIInLCAn5Zu65a6aRVhBTV9BTElHTk1FTlTjgajop6PoqqzmnKzmlofjgpLlpInmm7TjgZvjgZrjgIFUb3BpYyAwOeOBrue3tOe/kuWVj+mhjHNvdXJjZeODu+e3tOe/klBERuOCkuS9nOaIkOOBmeOCi+OAgicpLApdCmZvciBvbGQsIG5ldyBpbiByZXBzOgogICAgYXNzZXJ0IHMuY291bnQob2xkKSA9PSAxLCAob2xkLCBzLmNvdW50KG9sZCkpCiAgICBzID0gcy5yZXBsYWNlKG9sZCwgbmV3LCAxKQpzdGFydCA9ICcjIyDku4rlm57pgLLmjZdcbicKZW5kID0gJyMjIFRvcGljIDA5IOWTgeizquOCsuODvOODiFxuJwphc3NlcnQgcy5jb3VudChzdGFydCkgPT0gMSBhbmQgcy5jb3VudChlbmQpID09IDEKYmVmb3JlLCByZXN0ID0gcy5zcGxpdChzdGFydCwgMSkKXywgYWZ0ZXIgPSByZXN0LnNwbGl0KGVuZCwgMSkKcHJvZ3Jlc3MgPSAiIiIjIyDku4rlm57pgLLmjZcKClRvcGljIDA544Gu5Zu65a6aRVhBTV9BTElHTk1FTlTjgajop6PoqqzmnKzmlofjgpLlpInmm7TjgZvjgZrjgIHop6PoqqxQREbjgpLkvZzmiJDjgZfjgZ/jgIIKCi0gQTTnuKY044Oa44O844K4Ci0gMjAwIGRwaeWFqOODmuODvOOCuOihqOekulFBOiBgNCAvIDQgUEFTU2AKLSDooajnpLrmrKDjgZHjg7vph43jgarjgorjg7vmloflrZfljJbjgZE6IGAw5Lu2YAotIOaWh+Wtl+aKveWHulFBOiBgUEFTU2DvvIhVK0ZGRkQgMOS7tu+8iQotIOWbuuWumjbpgY7ljrvopoHmsYI6IFBERuWGheOBuOWPjeaYoOa4iOOBvwotIOWItuS9nOWJjeeLrOeri+aknOiovDogYDYgLyA2IFBBU1NgIOe2reaMgQotIFNQRUPlooPnlYzlpJboq5bngrnjg7vmnKrnorroqo3lrp/ou4rlgKTov73liqA6IGAw5Lu2YAoKIiIiCnMgPSBiZWZvcmUgKyBwcm9ncmVzcyArIGVuZCArIGFmdGVyCmhhbmRvZmYud3JpdGVfdGV4dChzLCBlbmNvZGluZz0ndXRmLTgnKQo=' | base64 -d > /tmp/finalize.py
+          python /tmp/finalize.py
           git rm -f .tmp_theory3_topic09/topic09.html.gz.b64
           git rm -f .github/workflows/tmp-theory3-topic09-pdf.yml
-
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add denken-shinkansen/04_shinkansen_theory_3/STATUS.md \
-                  denken-shinkansen/04_shinkansen_theory_3/HANDOFF.md \
-                  denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc.md \
-                  denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_explanation_qa.md
+          git add denken-shinkansen/04_shinkansen_theory_3/STATUS.md denken-shinkansen/04_shinkansen_theory_3/HANDOFF.md denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc.md denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_explanation_qa.md
           git commit -m 'Complete Topic 09 theory explanation PDF stage'
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then exit 0; fi
