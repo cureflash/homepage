@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 8 / 14
-- current_status: `topic_09_independent_reanswer_complete`
+- current_status: `topic_09_final_qa_needs_revision`
 - last_completed_topic: `08 新幹線の交流25kVとは何なのか`
 - active_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- next_start: Topic 09の最終QAを実施する
+- next_start: Topic 09練習sourceの旧進捗記録だけを実成果物へ同期する
 
 ## Topic 01 進捗
 
@@ -159,16 +159,21 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答の先読み汚染を除去（必須先読み正本から制作前の正答番号・個別解答過程を除外）
 - [x] 完成後の公式過去問独立再解答 `6 / 6 PASS`
+- [x] 最終QA実施（`NEEDS_REVISION`: 練習source進捗記録不整合）
+- [ ] 練習source進捗記録同期
+- [ ] 最終QA再実施
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の完成後公式過去問独立再解答を実施した。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の最終QAを実施した。
 
-固定6問について、公式解答PDFを開く前に公式問題文と完成教材だけで解答を確定し、その後に公式解答と照合した。独立解答列 `(1), (5), (3), (3), (2), (3)` は公式解答列と全件一致し、`6 / 6 PASS`。
+固定6過去問の完成後独立再解答 `6 / 6 PASS`、教材外知識補完0問、Topic 10以降の力率・三相・半導体等への依存0問、未確認新幹線実車情報への依存0問を確認。解説PDF・練習PDF・PowerPointの既存QA、15問の練習問題QA、SPEC境界もPASS。
 
-教材外知識による補完0問、Topic 10以降の力率・三相・半導体等への依存0問、未確認新幹線実車値・周波数切替方式への依存0問。固定EXAM_ALIGNMENT、教材本文、練習問題、PDF・PowerPointの技術内容、SPEC境界は変更していない。
+未完了理由は進捗記録のみ。`09_hokuriku_frequency_rlc_practice.md` が `stage: PRACTICE_PDF_COMPLETE` のままで、次工程もPowerPoint作成となっているが、PowerPointと完成後独立再解答は既に完了している。
+
+最終QA記録を `topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_final_qa.md` に追加した。教材本文・固定EXAM_ALIGNMENT・練習問題・PDF・PowerPointの技術内容は変更していない。
 
 ## 判定
 
-現在 `topic_09_independent_reanswer_complete / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の最終QAを実施する。
+現在 `topic_09_final_qa_needs_revision / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09練習sourceの旧進捗記録だけを実成果物へ同期し、その後に最終QAを再実施する。
