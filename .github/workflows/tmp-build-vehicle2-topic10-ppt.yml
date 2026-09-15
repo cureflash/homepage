@@ -1,0 +1,33 @@
+name: tmp-build-vehicle2-topic10-ppt
+on:
+  push:
+    branches:
+      - assistant/vehicle2-topic10-ppt-build
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: assistant/vehicle2-topic10-ppt-build
+      - name: Reconstruct verified PPTX
+        shell: bash
+        run: |
+          set -euo pipefail
+          d=.tmp_topic10_ppt
+          for n in 00 01 02 03 04 05 06 07; do
+            test -f "$d/part$n" || exit 0
+          done
+          cat "$d"/part{00,01,02,03,04,05,06,07} > /tmp/topic10.b64
+          base64 -d /tmp/topic10.b64 > /tmp/topic10.pptx
+          echo 'baaae754b8dec6ea57bcfb33ca02b60ad0b5c96664949b852b5aa2d50faa1d12  /tmp/topic10.pptx' | sha256sum -c -
+          target='denken-shinkansen/05_shinkansen_vehicle_2/topics/10_300series_induction_motor_equivalent_circuit/10_300series_induction_motor_equivalent_circuit_images.pptx'
+          cp /tmp/topic10.pptx "$target"
+          git add "$target"
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git commit -m 'tmp: reconstruct vehicle2 topic10 PowerPoint'
+          git push origin HEAD:assistant/vehicle2-topic10-ppt-build
