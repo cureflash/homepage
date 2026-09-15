@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 7 / 14
-- current_status: `topic_08_final_qa_needs_revision`
+- current_status: `topic_08_source_progress_synced`
 - last_completed_topic: `07 モーターはなぜ回る？`
 - active_topic: `08 新幹線の交流25kVとは何なのか`
-- next_start: Topic 08の主source・練習sourceの進捗記録だけを実成果物へ同期する
+- next_start: Topic 08の最終QAを再実施する
 
 ## Topic 01 進捗
 
@@ -139,33 +139,20 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `4 / 4 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習sourceの進捗記録不整合）
-- [ ] source進捗記録同期
+- [x] source進捗記録同期
 - [ ] 最終QA再実施
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 08 `新幹線の交流25kVとは何なのか` の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。
+Topic 08 `新幹線の交流25kVとは何なのか` の主source・練習sourceに残っていた旧進捗記録を、実在成果物と現在地へ同期した。
 
-PASS項目:
-- 必須成果物: 全件実在
-- 固定公式過去問: `4問`（5問未満例外）
-- 完成後独立再解答: `4 / 4 PASS`
-- 練習問題: `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
-- 解説PDF: 200 dpi表示QA `2 / 2 PASS`、文字抽出QA PASS
-- 練習PDF: 200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS
-- PowerPoint: 既存記録で表示QA `4 / 4 PASS`、overflow・ZIP整合性PASS
-- 教材外知識補完: `0件`
-- 後続Topic依存: `0件`
-- 未確認新幹線実車値依存: `0件`
+主sourceは解説PDF、練習問題source・PDF、PowerPoint、完成後独立再解答まで完了済みへ更新し、次工程を最終QA再実施とした。練習sourceもPowerPoint・完成後独立再解答・最終QA待ちまで同期した。
 
-FAIL項目:
-- 主source冒頭statusが `EXPLANATION_SOURCE_COMPLETE` のまま
-- 主source §23が「解説PDF・練習・PowerPoint: 未着手」「完成後独立再解答: 未実施」「次工程: 解説PDF作成」のまま
-- 練習source stageが `PRACTICE_PDF_COMPLETE` のまま
+技術本文、固定EXAM_ALIGNMENT 4問、数式、3段階例題、練習15問、問題・正答、PDF/PPTX成果物は変更していない。制作前 `4 / 4 PASS`、練習独立QA `15 / 15 PASS`、正答一意性 `15 / 15 PASS`、完成後独立再解答 `4 / 4 PASS` を維持している。
 
-教材本文・固定EXAM_ALIGNMENT・問題・解答・既存成果物の技術内容に修正理由はない。
+後続Topic論点・非正弦波論点・未確認新幹線実車値の追加は `0件`。
 
 ## 判定
 
-現在 `topic_08_final_qa_needs_revision`。完成数は `7 / 14` のまま。次は主source・練習sourceの進捗記録だけを実成果物へ同期し、その後に最終QAを再実施する。
+現在 `topic_08_source_progress_synced / IN_PROGRESS`。完成数は `7 / 14` のまま。次はTopic 08の最終QAを再実施する。
