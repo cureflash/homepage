@@ -1,15 +1,15 @@
 # HANDOFF - 新幹線車両・電験二種
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
 Topic 01〜08は最終QAまで `PASS`。完成数は `8 / 39`。
 
-現在地は `topic_09_practice_source_complete`。Topic 09 `直流機方式の損失・熱設計` は、制作前EXAM_ALIGNMENTの固定一次4問＋二次1問・14対象項目を変更せず、解説本文＋3段階例題、解説PDFに続いて練習問題・完全解説sourceまで完成した。練習sourceは一次8問＋二次4問、全12問。固定14対象項目を `14 / 14` 接続し、独立計算・論理・正答一意性QAは `12 / 12 PASS`。
+現在地は `topic_09_practice_pdf_complete`。Topic 09 `直流機方式の損失・熱設計` は、制作前EXAM_ALIGNMENTの固定一次4問＋二次1問・14対象項目を変更せず、解説本文＋3段階例題、解説PDF、練習問題・完全解説sourceに続いて練習PDFまで完成した。練習PDFはA4縦4ページ、一次8問＋二次4問、全12問。180 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、計算・論理QA `12 / 12 PASS`。
 
-次工程はTopic 09の練習PDF。練習sourceの全12問・完全解説を同期し、表示QA・文字抽出QA・計算論理QAを実施する。固定範囲外論点・未確認実車値は追加しない。
+次工程はTopic 09の解説画像PowerPoint。SPEC指定3可視化（負荷率―効率、出力―損失、簡略熱モデルによる時間―温度）を固定範囲内で可視化し、表示QA・overflow・ZIP整合性QAを実施する。固定範囲外論点・未確認実車値は追加しない。
 
 ## Topic 01〜06
 - Topic 01〜06: 最終QA `PASS / completed`
@@ -124,12 +124,27 @@ source: `topics/09_dc_machine_loss_thermal_design/09_dc_machine_loss_thermal_des
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 練習PDF: `未制作`
+- 練習PDF: `completed / QA PASS`
+
+## Topic 09 練習PDF
+- `09_dc_machine_loss_thermal_design_practice.pdf`: `completed`
+- A4縦4ページ
+- 一次8問＋二次4問、全12問・完全解説を収録
+- 180 dpi全4ページ Visual QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件`
+- 計算・論理QA: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次の途中式・前提・単位・検算: `4 / 4 PASS`
+- 固定一次4問＋二次1問・14対象項目: 維持
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `1a3f6cbb92a6fb3333aa647236b271e50aeda30b1fb73b9132e74565e788047f`
+- Git blob SHA-1: `549b9ba99b73d4cafe9a57bb2fdaadb2dbce7535`
 
 ## 次の正確な開始点
-Topic 09 `直流機方式の損失・熱設計` の練習PDF。
+Topic 09 `直流機方式の損失・熱設計` の解説画像PowerPoint。
 
-1. `09_dc_machine_loss_thermal_design_practice_source.md` の一次8問＋二次4問・完全解説を同期する。
+1. SPEC指定3可視化（負荷率―効率、出力―損失、簡略熱モデルによる時間―温度）を固定済み計算条件から作成する。
 2. 固定一次4問＋二次1問・14対象項目を変更しない。
-3. 表示QA・文字抽出QA・計算論理QAを実施する。
+3. 表示QA・overflow・PowerPoint ZIP整合性QAを実施する。
 4. 誘導機、PWM/VVVF、回生、IGBT/SiC、詳細熱設計、未確認実車値を追加しない。
