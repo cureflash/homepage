@@ -6,9 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `7 / 16`。Topic 01〜07は完成済み。
 
 ## 今回進捗
-Topic 08 `新幹線の変電所はなぜ数十kmおき？` を1段階進め、完成後ブラインド独立再解答を完了した。
+Topic 08 `新幹線の変電所はなぜ数十kmおき？` を1段階進め、main sourceのEXAM_ALIGNMENT・進捗記録へ完成後ブラインド独立再解答 `7 / 7 PASS` を同期した。
 
-固定5問・7小問について、公式問題文・選択肢だけを確認し、公式解答を先に見ず、完成済みTopic 08教材の式・解法手順だけで選択肢を確定した。その後に公式解答と照合し、`7 / 7 PASS`。教材外知識補完、Topic 09以降の論点による補完、未確認実設備値の使用、SPEC固定範囲外追加はいずれも0件。
+source冒頭の旧進捗、EXAM_ALIGNMENT内の完成後再解答待ち表現、末尾の過去問対応確認・次工程を現在地へ更新した。教材本文§1〜§9、3段階例題、固定5問・7小問、各成果物、SPEC固定範囲は変更していない。
+
+完成後ブラインド独立再解答は、公式解答を先に見ず、完成済みTopic 08教材の式・解法手順だけで固定5問・7小問を解き、公式解答と `7 / 7 PASS`。教材外知識補完、Topic 09以降の論点による補完、未確認実設備値の使用、SPEC固定範囲外追加はいずれも0件。
 
 独立再解答記録: `topics/08_voltage_drop/08_voltage_drop_independent_reanswer.md`
 
@@ -45,16 +47,15 @@ Topic 09以降へ先回りしない。ATき電方式、帰線、線路インダ�
 実際の新幹線変電所間隔や個別設備値も一次資料確認前に真値化していない。
 
 ## 現在状態
-- `current_status`: `topic_08_independent_reanswer_complete`
+- `current_status`: `topic_08_source_reanswer_synced`
 - 完成数: `7 / 16`
 - last completed: Topic 07 `なぜ三相交流をそのまま架線へ流さない？`
 - active: Topic 08 `新幹線の変電所はなぜ数十kmおき？`
 
 未完成:
-- main sourceへの完成後独立再解答結果同期
 - 最終QA
 
 ## 次の正確な開始点
-Topic 08 main sourceのEXAM_ALIGNMENT・進捗記録へ、完成後独立再解答 `7 / 7 PASS` を同期する。
+Topic 08の最終QAを実施する。
 
-教材本文・固定5問・7小問・成果物・SPEC固定範囲は変更しない。同期後に最終QAへ進む。
+教材本文・固定5問・7小問・成果物・SPEC固定範囲は変更しない。
