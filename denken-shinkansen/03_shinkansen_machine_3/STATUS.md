@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: 8 / 16
-- current_status: `topic_09_independent_reanswer_complete`
-- last_completed_topic: `08 N700Sのモーターはなぜ小さくできた？`
-- active_topic: `09 新幹線はどうやって電気で止まる？`
-- next_start: Topic 09の最終QAを実施する。固定EXAM_ALIGNMENT 5問・固定範囲・完成後独立再解答結果は変更しない
+- exam_aligned_completed_topics: 9 / 16
+- current_status: `topic_09_completed`
+- last_completed_topic: `09 新幹線はどうやって電気で止まる？`
+- active_topic: `10 新幹線の速度はどう自動制御される？`
+- next_start: Topic 10の制作前EXAM_ALIGNMENTを実施する。系列SPECの固定範囲から外れる論点を件数合わせで追加しない
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -19,7 +19,8 @@
 - [x] 06 新幹線はどうやって速度を変えている？ — 品質ゲートPASS / completed
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
-- [ ] 09〜16 — 未完了
+- [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
+- [ ] 10〜16 — 未完了
 
 ## Topic 09 EXAM_ALIGNMENT
 品質ゲート対象は、系列SPECの固定範囲だけで完結する公式過去問5問で固定する。
@@ -73,6 +74,7 @@ R7上問3、R6上問3、R4上問1、H27問2、H26問16、H29問3は回生・発�
 - 固定5問の本文マッピング `5 / 5 全件`
 - `P=Fv`、`P=Tω`、`ω=2πN/60`、`E=mv²/2`、`E=Jω²/2`、`P=ΔE/t`、回生効率、負の滑りによる誘導機発電運転を固定範囲内で接続
 - 完成後独立再解答 `5 / 5 PASS`
+- 最終QA `PASS`
 - 教材外・固定範囲外知識による補完 `0件`
 - 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
@@ -134,6 +136,21 @@ R7上問3、R6上問3、R4上問1、H27問2、H26問16、H29問3は回生・発�
 
 ### PowerPoint QA記録
 `topics/09_regenerative_braking/09_regenerative_braking_powerpoint_qa.md`
+
+## Topic 09 最終QA
+- 必須成果物の実在: `PASS`
+- 固定EXAM_ALIGNMENT 5問: `PASS`
+- 完成後独立再解答: `5 / 5 PASS`
+- 解説PDF表示QA・文字抽出QA: `PASS`
+- 練習PDF表示QA・文字抽出QA: `PASS`
+- PowerPoint表示QA・overflow・ZIP整合性: `PASS`
+- source進捗整合: `PASS`
+- 固定範囲境界: `PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- 固定範囲外論点の追加: `0件`
+- 未確認実車値の追加: `0件`
+- 判定: `PASS / completed`
+- 完成数: `9 / 16`
 
 ## Topic 08 EXAM_ALIGNMENT
 品質ゲート対象は、系列SPECの固定範囲だけで完結する公式過去問4問・5小問で固定する。
