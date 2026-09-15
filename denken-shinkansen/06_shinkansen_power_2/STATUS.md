@@ -4,12 +4,12 @@ updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `06`
 theme: 275kVを受ける新幹線変電所の中身
-current_status: `topic_06_final_qa_needs_revision`
+current_status: `topic_06_source_progress_synced`
 completed_topics: `5 / 22`
 
 ## Topic 06 current result
 
-最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、練習問題、PDF/PPTX表示QA、系列SPEC固定6項目、固定範囲境界はPASS。未完了理由は主source `topics/06_substation/06_substation.md` の進捗記録だけで、旧状態 `practice_source_complete` と「次工程は練習15問の独立QA」が残っている。
+主source `topics/06_substation/06_substation.md` の旧進捗記録3箇所を現在地へ同期した。`## 状態`、冒頭の次工程、末尾進捗要約の次工程だけを修正し、教材本文・固定EXAM_ALIGNMENT・数式・問題・PDF/PPTXは変更していない。前回最終QAで唯一のblockerだった進捗記録不整合は解消済み。次は最終QAを再実施する。
 
 品質ゲート:
 - 制作前独立検証: `5 / 5問 PASS`
@@ -33,8 +33,8 @@ completed_topics: `5 / 22`
 - 固定範囲外論点追加: `0件`
 - 後続Topic知識への依存追加: `0件`
 - 未確認実設備値追加: `0件`
-- 最終QA: `NEEDS_REVISION`
-- exact blocker: `06_substation.md` の進捗記録3箇所
+- 前回最終QA: `NEEDS_REVISION`
+- 前回exact blocker: `06_substation.md` の進捗記録3箇所 → `RESOLVED`
 
 成果物:
 - `topics/06_substation/06_substation.md`
@@ -68,4 +68,4 @@ completed_topics: `5 / 22`
 
 ## next_start
 
-`topics/06_substation/06_substation.md` の進捗記録3箇所だけを現在地へ同期する。`## 状態` の旧値、冒頭の旧次工程、末尾進捗要約の旧次工程を修正し、教材本文・固定EXAM_ALIGNMENT・数式・問題・PDF/PPTXは変更しない。同期後に最終QAを再実施する。
+Topic 06の最終QAを再実施する。固定一次4問＋二次1問、完成後独立再解答、練習15問、PDF/PPTX表示QA、SPEC固定6項目、固定範囲境界、source進捗整合を再確認し、全件PASSの場合のみ `completed` とする。
