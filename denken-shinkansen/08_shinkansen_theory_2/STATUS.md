@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 8 / 21
-- current_status: `topic_09_practice_progress_synced`
-- last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
-- active_topic: `09 新幹線の25kV交流をフェーザで表す`
-- next_start: Topic 09最終QAを再々実施する
+- exam_aligned_completed_topics: 9 / 21
+- current_status: `topic_09_completed`
+- last_completed_topic: `09 新幹線の25kV交流をフェーザで表す`
+- active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
+- next_start: Topic 10制作前EXAM_ALIGNMENT
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -73,19 +73,21 @@
 - [x] 練習sourceの旧「次はPowerPoint」表現同期
 - [x] 最終QA再実施: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 練習source末尾の残存「主source同期→最終QA」表現同期
-- [ ] 最終QA再々実施
+- [x] 主source・練習sourceをcompleted状態へ同期
+- [x] 最終QA再々実施: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 09練習source末尾の残存進捗表現1箇所だけを現在地へ同期した。
+Topic 09最終QAを再々実施し、`PASS / completed` とした。
 
-- `09_25kv_ac_phasor_practice.md` 末尾の `# 次工程` を「次はTopic 09最終QAを再々実施する」へ更新
-- 技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答は変更していない
-- PDF・PowerPointは変更していない
-- 固定一次5問・11小問、独立再解答 `11 / 11 PASS` を維持
-- 二次採用0問・二次数合わせ0件を維持
-- 固定範囲外追加・未確認実設備値追加0件を維持
+- GitHub正本上の必須成果物を再確認
+- 固定一次5問・11小問の完成後独立再解答 `11 / 11 PASS` を確認
+- 二次採用0問・二次数合わせ0件の妥当性を維持
+- 解説PDF・練習PDF・PowerPointの既存表示QAを再照合
+- 主source・練習sourceの進捗記録を `completed` とTopic 10開始へ同期
+- 固定EXAM_ALIGNMENT・技術本文・数式・例題・問題・正答・PDF・PowerPointの技術内容は変更していない
+- 固定範囲外追加・未確認実設備値追加0件
 
 ## 判定
 
-Topic 09は `IN_PROGRESS`。前回最終QAで指摘された進捗記録不整合は解消した。完成数は `8 / 21` のまま。次工程は最終QA再々実施。
+Topic 09は `PASS / completed`。完成数は `9 / 21`。次工程はTopic 10の制作前EXAM_ALIGNMENT。
