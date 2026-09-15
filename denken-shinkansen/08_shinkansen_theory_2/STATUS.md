@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 8 / 21
-- current_status: `topic_09_exam_alignment_complete`
+- current_status: `topic_09_explanation_source_complete`
 - last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 - active_topic: `09 新幹線の25kV交流をフェーザで表す`
-- next_start: Topic 09の解説本文＋3段階例題
+- next_start: Topic 09の解説PDF作成＋全ページ表示QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -63,7 +63,7 @@
 
 ## Topic 09 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
@@ -72,17 +72,18 @@
 
 ## 今回進めた内容
 
-Topic 09「新幹線の25kV交流をフェーザで表す」の制作前EXAM_ALIGNMENTを完成した。
+Topic 09「新幹線の25kV交流をフェーザで表す」の解説本文＋3段階例題を完成した。
 
-- 固定一次: 5問・11小問
-- 公式解答照合: `11 / 11 PASS`
+- 固定一次: 5問・11小問を変更せず維持
+- 本文マッピング: `11 / 11`
+- 3段階例題: 基礎／本試験標準／複合ひっかけを各1問
 - 二次採用: 0問
 - 二次数合わせ: 0件
 - 固定範囲外追加: 0件
 - 未確認実設備値追加: 0件
 
-令和8年度一次まで確認し、直近年度で固定範囲だけの直接対応が不足する分は、範囲を広げず過年度の直接対応問題まで遡って5問を固定した。令和8年度二次は2026-11-15実施予定で未実施のため、現時点の最新二次は令和7年度。R7〜R5二次にもTopic 09固定範囲だけで完結する記述問題は確認できなかった。
+本文では正弦波の瞬時値・実効値・平均値、複素数表示、実効値フェーザ、`j` による位相回転、R/L/Cの複素インピーダンス、直列合成、並列アドミタンス、フェーザの加減算、瞬時値との相互変換までを固定範囲内で整理した。25 kVから最大値35.4 kVへの変換は教材上の計算値として明示した。
 
 ## 判定
 
-Topic 09は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は解説本文＋3段階例題。
+Topic 09は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は解説PDF作成＋全ページ表示QA。
