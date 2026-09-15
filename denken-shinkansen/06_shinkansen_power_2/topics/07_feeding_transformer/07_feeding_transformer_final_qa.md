@@ -4,11 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、Topic 07 の成果物・QA記録・完成後独立再解答・進捗記録を再確認した。
-
-技術内容、正式EXAM_ALIGNMENT、一次・二次の過去問対応品質ゲート、練習15問、PDF/PPTX表示QA、固定10項目、固定範囲境界はPASSした。一方、主source `07_feeding_transformer.md` の進捗記録が解説source完成時点のままで、現存成果物と不整合のため `completed` にはしない。
+前回 `NEEDS_REVISION / IN_PROGRESS` の唯一の未完了理由だった主source進捗記録不整合を解消後、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、Topic 07 の成果物・QA記録・完成後独立再解答・進捗記録を再確認した。技術内容、一次・二次の過去問対応品質ゲート、必須成果物、PDF/PPTX表示QA、固定10項目、固定範囲境界、進捗整合を全件PASSとした。
 
 ## 確認結果
 
@@ -25,7 +23,7 @@
 | 系列SPEC固定10項目 | PASS | 三相交流、単相負荷、相変換、スコット、変形ウッドブリッジ、ルーフ・デルタ、三相側不平衡、逆相電流、フェーザ図、結線比較を維持 |
 | 固定範囲境界 | PASS | V結線、一般配電、％インピーダンス、単位法、ATき電、線路電圧降下、対称座標法による定量解析、短絡計算、保護協調を追加していない |
 | 未確認実設備値 | PASS | 追加・依存 `0件` |
-| 進捗記録 | FAIL | 主source冒頭が `explanation_source_complete`・「PDF・練習問題・PowerPointは未着手」のまま。末尾 `現在地` も解説PDF、練習、PowerPoint、完成後独立再解答を未着手としており、GitHub上の実成果物と不整合 |
+| 進捗記録 | PASS | 主sourceを `completed` へ同期。最終QA再実施後の現在地を反映済み |
 
 ## 過去問対応品質ゲート
 
@@ -41,7 +39,7 @@
 
 ## 必須成果物の実在確認
 
-- `07_feeding_transformer.md` — blob `a3ef4b0ac244e7849d40fb3fbd84fe4d01235a87`
+- `07_feeding_transformer.md` — blob `a6d489bafd855c22bc4acce1f01e3c60ca8fed56`
 - `07_feeding_transformer_explanation.pdf` — blob `e37c4dc105efadd724ce31a6a2d753b72514967e`
 - `07_feeding_transformer_practice.md` — blob `cae894caabf0ceca714e465d78cc615f580271e2`
 - `07_feeding_transformer_practice.pdf` — blob `159f55cfd9539ac4a978e796588588647633b6d7`
@@ -49,10 +47,10 @@
 - `07_feeding_transformer_powerpoint_qa.md` — blob `807ba770674e101e0dc58b538bac468fbe1b5cdd`
 - `07_feeding_transformer_independent_reanswer.md` — blob `0352652f5afd5821314a8303f5cb629011143d96`
 
-## 未完了理由
+## 完了判定
 
-主sourceの進捗記録だけが旧状態である。教材本文、固定EXAM_ALIGNMENT、数式、例題、練習問題、PDF、PowerPoint、完成後独立再解答は変更不要。
+Topic 07 は `completed`。
 
-## 次段階
+完成数: `7 / 22`
 
-`07_feeding_transformer.md` の冒頭状態と末尾 `現在地` を実成果物へ同期する。技術内容・固定EXAM_ALIGNMENT・固定範囲は変更しない。その後、最終QAを再実施する。
+次はTopic 08「主変圧器を％インピーダンスで見る」の制作前EXAM_ALIGNMENTを行う。
