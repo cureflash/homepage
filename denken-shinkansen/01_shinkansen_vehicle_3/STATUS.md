@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 32 / 38
-- current_status: `topic_33_explanation_source_complete`
+- current_status: `topic_33_explanation_pdf_complete`
 - last_completed_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
 - active_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
-- next_start: Topic 33の解説PDFを作成する
+- next_start: Topic 33の練習source / PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01〜32 — PASS
-- [ ] 33 COMTRAC① 東海道新幹線全体をどう監視する？ — 制作前EXAM_ALIGNMENT＋解説本文完了
+- [ ] 33 COMTRAC① 東海道新幹線全体をどう監視する？ — 制作前EXAM_ALIGNMENT＋解説本文＋解説PDF完了
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
@@ -43,6 +43,17 @@ source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
 - データ伝送: 伝送路、雑音、多重化、搬送波、変調波、圧縮
 - JR東海一次資料の公開範囲でCOMTRACの運転管理・全列車状況監視を接続
 - 列車番号・列車位置・ダイヤはデータ例として扱い、COMTRAC内部実装とは断定しない
+- Topic 34範囲追加: `0件`
+- Topic 35範囲追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+
+## 33 解説PDF
+- `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_explanation.pdf`
+- A4縦4ページ
+- 本文§1〜§15、3段階例題、固定5問の対応を収録
+- 180 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- 固定EXAM_ALIGNMENT: `5 / 5` 反映
 - Topic 34範囲追加: `0件`
 - Topic 35範囲追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
@@ -340,4 +351,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。完成数32/38。
 
 ## 次テーマ工程
-Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` の固定EXAM_ALIGNMENT 5問と解説本文§1〜§15＋3段階例題を変更せず、解説PDFを作成する。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
+Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` の固定EXAM_ALIGNMENT 5問と解説本文§1〜§15＋3段階例題を変更せず、練習source / PDFを作成する。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
