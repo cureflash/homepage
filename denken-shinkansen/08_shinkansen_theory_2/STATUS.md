@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 8 / 21
-- current_status: `topic_09_blind_reanswer_blocked_by_answer_leak`
+- current_status: `topic_09_blind_reanswer_ready`
 - last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 - active_topic: `09 新幹線の25kV交流をフェーザで表す`
-- next_start: Topic 09主sourceの保存済み公式正答値だけを必須先読み対象から除去し、`topic_09_blind_reanswer_ready` にする
+- next_start: 保存済み公式正答値を先読みしない状態で、完成教材だけを使って固定一次5問・11小問を独立再解答する
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -67,27 +67,26 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後独立再解答: `BLOCKED`（必須先読みsourceに保存済み正答値が残存）
+- [ ] 完成後独立再解答: `BLIND-READY`（次runで実施）
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 09の完成後独立再解答に入る前の品質ゲートを監査した。
+Topic 09を `topic_09_blind_reanswer_ready` まで進めた。
 
-- MASTER_SPECは各runでactive themeの既存成果物を必須先読みとする
-- EXAM_ALIGNMENT_SPECは完成後独立再解答を「保存済み正答を先に見ず」に行うことを要求する
-- `topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` のEXAM_ALIGNMENT表に保存済み公式正答値が残っている
-- このため、現状の必須先読み手順のまま独立再解答すると品質ゲート条件を満たせない
-- HANDOFFから公式正答値は除去済み
-- 主source側は未除去なので、本runでは独立再解答を実施していない
+- `topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` のEXAM_ALIGNMENT表から保存済み公式正答値だけを除去した
+- 問題年度・問番号・対象小問・要求知識・設問型は変更していない
+- 「公式解答照合 `11 / 11 PASS`」の事実は保持した
+- HANDOFFには既に個別正答値を残していない
+- この編集runでは独立再解答を実施していない
 - 固定一次5問・11小問、二次採用0問、二次数合わせ0件、固定範囲、技術本文、成果物はいずれも変更していない
 
-## exact blocker
+## blind再解答準備
 
-`topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` の品質ゲート表に保存済み公式正答値が残っており、MASTER_SPECの必須先読みとEXAM_ALIGNMENT_SPECのblind再解答条件が同時に成立しない。
+MASTER_SPECの必須先読みとEXAM_ALIGNMENT_SPECの「保存済み正答を先に見ずに独立再解答する」条件を両立できる状態にした。主sourceの品質ゲート表は個別正答値を持たず、照合済みという事実だけを保持する。
 
-解除条件は、主sourceの公式正答値だけを除去し、問題選定・要求知識・「公式解答照合11 / 11 PASS」の事実を保持すること。その編集runでは独立再解答せず、次runで必須先読み対象に正答値がないことを確認してから完成教材のみで再解答する。
+次runでは、必須先読み対象に保存済み公式正答値がないことを確認した上で、完成教材だけを使って固定一次5問・11小問を独立再解答する。
 
 ## 判定
 
-Topic 09は `BLIND_REANSWER_BLOCKED / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は主sourceの正答値除去による `topic_09_blind_reanswer_ready` 化。
+Topic 09は `BLIND_REANSWER_READY / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は完成後独立再解答。
