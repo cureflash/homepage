@@ -1,14 +1,14 @@
 # STATUS - 新幹線車両・電験二種
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_09_practice_source_complete`
+- current_status: `topic_09_practice_pdf_complete`
 - last_completed_topic: `08 位相制御と平均直流電圧`
 - active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09の練習PDF。練習sourceの一次8問＋二次4問・完全解説を同期し、表示QA・文字抽出QA・計算論理QAを実施する
+- next_start: Topic 09の解説画像PowerPoint。SPEC指定3可視化（負荷率―効率、出力―損失、簡略熱モデルによる時間―温度）を固定済み計算条件から作成し、表示QA・overflow・ZIP整合性QAを実施する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -391,6 +391,21 @@
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 練習PDF: `未制作`
+- 練習PDF: `completed / QA PASS`
 
-次工程はTopic 09 `直流機方式の損失・熱設計` の練習PDF。
+## Topic 09 練習PDF
+- `09_dc_machine_loss_thermal_design_practice.pdf`: `completed`
+- A4縦4ページ
+- 一次8問＋二次4問、全問完全解説付き
+- 180 dpi全4ページ Visual QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件`
+- 計算・論理QA: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次記述の途中式・前提・単位・検算: `4 / 4 PASS`
+- 固定一次4問＋二次1問・14対象項目: 維持
+- SHA-256: `1a3f6cbb92a6fb3333aa647236b271e50aeda30b1fb73b9132e74565e788047f`
+- Git blob SHA-1: `549b9ba99b73d4cafe9a57bb2fdaadb2dbce7535`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+
+次工程はTopic 09 `直流機方式の損失・熱設計` の解説画像PowerPoint。
