@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
-- exam_aligned_completed_topics: 6 / 14
-- current_status: `topic_07_source_progress_synced`
-- last_completed_topic: `06 0系の変圧器は何をしていた？`
-- active_topic: `07 モーターはなぜ回る？`
-- next_start: Topic 07の最終QAを再実施する
+- exam_aligned_completed_topics: 7 / 14
+- current_status: `topic_07_completed`
+- last_completed_topic: `07 モーターはなぜ回る？`
+- active_topic: `08 新幹線の交流25kVとは何なのか`
+- next_start: Topic 08の制作前EXAM_ALIGNMENTを開始する
 
 ## Topic 01 進捗
 
@@ -120,19 +120,22 @@
 - [x] 完成後の公式過去問独立再解答 `5 / 5 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習sourceの進捗記録不整合）
 - [x] source進捗記録同期
-- [ ] 最終QA再実施
+- [x] 最終QA再実施
+- [x] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 07 `モーターはなぜ回る？` の主source・練習sourceに残っていた旧進捗記録をGitHub正本上の実成果物へ同期した。
+Topic 07 `モーターはなぜ回る？` の最終QAを再実施した。
 
-- 主source `status`: `source_progress_synced`
-- 練習問題source・練習PDF: 完成済みへ同期
-- 解説画像PowerPoint: `16:9・4枚 / 表示QA 4 / 4 PASS / はみ出し0件 / PPTX整合性PASS` へ同期
-- 完成後独立再解答: `5 / 5 PASS` へ同期
+- 必須成果物の実在: PASS
+- 固定EXAM_ALIGNMENT 5問: 全件マッピング済み
+- 完成後独立再解答: `5 / 5 PASS`
 - 教材外知識補完・後続Topic依存・未確認0系実車値依存: 各 `0問`
+- 解説PDF・練習PDF・PowerPoint既存QA: PASS
+- SPEC境界: PASS
+- 主source・練習sourceの進捗記録整合性: PASS
 - 教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習15問・PDF/PPTX成果物: 変更なし
 
 ## 判定
 
-Topic 07は `topic_07_source_progress_synced`。完成数は `6 / 14` のまま。次は最終QAを再実施し、全品質ゲートPASS時のみ `completed` とする。
+Topic 07は `PASS / completed`。完成数は `7 / 14`。次はTopic 08 `新幹線の交流25kVとは何なのか` の制作前EXAM_ALIGNMENTを開始する。
