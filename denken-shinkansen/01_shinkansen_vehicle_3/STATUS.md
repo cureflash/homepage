@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 31 / 38
-- current_status: `topic_32_practice_pdf_complete`
+- current_status: `topic_32_powerpoint_complete`
 - last_completed_topic: `31 ATC② 地上から車上へどう情報を送る？`
 - active_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
-- next_start: Topic 32の固定EXAM_ALIGNMENTと解説/練習成果物を維持して解説画像PowerPointを作成する
+- next_start: Topic 32の固定EXAM_ALIGNMENTと完成済み成果物を維持し、完成後独立再解答を行う
 
 ## 新品質ゲート進捗
 - [x] 01〜31 — PASS
-- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 練習PDF完了
+- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — PowerPoint完了
 
 ## 32 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
@@ -80,6 +80,19 @@ source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 - 複数正答: `0件`
 - 練習PDF表示QA: 180 dpi `4 / 4 PASS`
 - 練習PDF文字抽出QA: PASS
+- 固定範囲外論点追加: `0件`
+- Topic 30/31範囲の再説明追加: `0件`
+- 未確認実車値追加: `0件`
+
+## 32 PowerPoint QA
+- `topics/32_atc_speed_brake_control/32_atc_speed_brake_control_images.pptx`
+- 画面比率: `16:9`
+- スライド数: `4`
+- 内容: ATC速度制御の一般制御系対応、負帰還・ブロック線図、一次遅れ周波数応答とP・I・D、AND/OR/NOT・シーケンス・インタロック・フェイルセーフ
+- 固定EXAM_ALIGNMENT要求事項: `6 / 6` 可視化
+- 表示QA: `4 / 4 PASS`
+- overflow検査: PASS
+- PPTX ZIP整合性: PASS
 - 固定範囲外論点追加: `0件`
 - Topic 30/31範囲の再説明追加: `0件`
 - 未確認実車値追加: `0件`
@@ -269,4 +282,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 31 `ATC② 地上から車上へどう情報を送る？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は練習source/PDF完了。固定5問・6対象項目と解説/練習成果物を変更せず、次は解説画像PowerPointを作成する。
+Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は解説画像PowerPointまで完了。固定5問・6対象項目と既存成果物を変更せず、次は完成後独立再解答を実施する。
