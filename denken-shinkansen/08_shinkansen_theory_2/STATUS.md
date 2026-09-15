@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 9 / 21
-- current_status: `topic_10_explanation_pdf_complete`
+- current_status: `topic_10_practice_source_complete`
 - last_completed_topic: `09 新幹線の25kV交流をフェーザで表す`
 - active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
-- next_start: Topic 10練習問題source作成
+- next_start: Topic 10練習PDF作成＋全ページ表示QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -96,24 +96,25 @@
 - [x] 制作前EXAM_ALIGNMENT: 一次5問・20小問
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋表示QA
-- [ ] 練習問題source＋練習PDF
+- [x] 練習問題source
+- [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 10の主sourceから解説PDFを作成し、表示・文字抽出QAを完了した。
+Topic 10の固定一次5問・20小問から逆算し、練習問題sourceを作成した。
 
-- 成果物: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_explanation.pdf`
-- A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- クリッピング・重なり・文字化け: 0件
-- 固定一次5問・20小問を変更せず維持
+- 成果物: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md`
+- 一次試験型12問、全問五肢択一
+- 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
+- 正答一意性: `12 / 12 PASS`
+- 数値再計算: `12 / 12 PASS`
+- 固定一次5問・20小問への練習接続: `20 / 20`
 - 二次採用0問・二次数合わせ0件を維持
 - Topic 11以降の論点、未確認実設備値の追加0件
 
 ## 判定
 
-Topic 10は `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `9 / 21` のまま。次工程は練習問題source作成。
+Topic 10は `PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `9 / 21` のまま。次工程は練習PDF作成＋全ページ表示QA・文字抽出QA。
