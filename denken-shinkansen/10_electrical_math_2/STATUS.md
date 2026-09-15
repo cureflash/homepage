@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 8 / 20
-- current_status: `topic_09_explanation_pdf_complete`
+- current_status: `topic_09_practice_source_complete`
 - last_completed_topic: `08 二階常微分方程式`
 - active_topic: `09 ラプラス変換`
-- next_start: Topic 09の練習問題source。固定済みEXAM_ALIGNMENTの5問・6対象設問と完成済み解説だけを根拠にし、Topic 10の伝達関数・極・零点を先取りしない
+- next_start: Topic 09の練習PDF。完成済み練習sourceをそのまま反映し、全ページ表示QA・文字抽出QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -69,7 +69,7 @@
 - [x] Topic 10先取り0件・件数合わせの範囲外追加0件を確認
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
@@ -79,22 +79,24 @@
 
 ## 今回進めた内容
 
-Topic 09 `ラプラス変換` の解説PDFを完成し、完成済み主sourceだけを反映した。
+Topic 09 `ラプラス変換` の練習問題・完全解説sourceを完成した。
 
 確認結果:
-- 解説PDF: A4縦5ページ
-- 200 dpi全ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: `PASS`
-- 固定二次5問・6対象設問の反映: `6 / 6`
-- 3段階例題: 基礎1／本試験標準1／複合・ひっかけ1を反映
+- 全12問
+- 一次型8問／二次記述型4問
+- 固定二次5問・6対象設問へ全件接続
+- 微分の変換・積分の変換・初期値・代表変換対・部分分数分解・逆変換を反復
+- 一階・二階微分方程式のラプラス変換による解き直しを収録
+- 独立計算・正答一意性QA: `12 / 12 PASS`
 - Topic 10先取り: 0件
 - 件数合わせの固定範囲外追加: 0件
+- 教材外知識補完: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 09は `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。
+Topic 09は `PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`。
 
 完成数は `8 / 20` のまま。
 
-次はTopic 09の練習問題source。
+次はTopic 09の練習PDF。
