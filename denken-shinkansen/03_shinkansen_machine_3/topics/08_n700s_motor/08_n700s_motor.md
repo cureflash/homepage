@@ -2,9 +2,9 @@
 
 更新日: 2026-09-15
 
-状態: `PRACTICE_PDF_COMPLETE`
+状態: `IMAGES_PPTX_COMPLETE`
 
-制作前 `EXAM_ALIGNMENT` を固定したまま、解説本文＋基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDFまで完成した。固定4問・5小問の要求事項を全件接続し、練習12問の独立計算・論理QAは `12 / 12 PASS`。練習PDFはA4縦3ページ、200 dpi全3ページ表示QA `3 / 3 PASS`、文字抽出QA `PASS`。仕様外論点・未確認実車値は追加していない。
+制作前 `EXAM_ALIGNMENT` を固定したまま、解説本文＋基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成した。固定4問・5小問の要求事項を全件接続し、練習12問の独立計算・論理QAは `12 / 12 PASS`。PowerPointは16:9・4枚、全4スライド表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性 `PASS`。仕様外論点・未確認実車値は追加していない。
 
 ## EXAM_ALIGNMENT
 
@@ -456,6 +456,20 @@ Pout = Tω
 - 未確認実車値追加 `0件`
 - QA記録: `08_n700s_motor_practice_pdf_qa.md`
 
+## 解説画像PowerPoint
+
+`08_n700s_motor_images.pptx`
+
+- 16:9・4枚
+- 固定EXAM_ALIGNMENT 4問・5小問の判定軸、4極・6極と周波数・同期速度、滑り・出力・トルク、N700Sの6極主電動機とSiC主変換装置の関係を可視化
+- 外部画像不使用（PowerPoint図形で独自作成）
+- 全4スライド表示QA `4 / 4 PASS`
+- overflow `0件`
+- PowerPoint ZIP整合性 `PASS`
+- 固定範囲外論点追加 `0件`
+- 未確認実車値追加 `0件`
+- QA記録: `08_n700s_motor_powerpoint_qa.md`
+
 ## 次工程
 
-解説画像PowerPointを作成する。固定EXAM_ALIGNMENT 4問・5小問の判定軸、4極・6極と周波数・同期速度の関係、滑り・出力・トルク、N700Sの6極モーターとSiC駆動システムの関係を、固定範囲内で可視化する。外部資料の図を複製せず独自図形で作成し、全スライド表示QA・overflow・PPTX整合性を確認する。
+完成済み教材だけを使って固定EXAM_ALIGNMENT 4問・5小問を独立再解答し、公式解答と照合する。教材外・固定範囲外知識による補完が0件であることを確認し、固定範囲・実車一次資料の境界を変更しない。
