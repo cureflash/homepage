@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 8 / 21
-- current_status: `topic_09_independent_reanswer_complete`
+- current_status: `topic_09_final_qa_needs_revision`
 - last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 - active_topic: `09 新幹線の25kV交流をフェーザで表す`
-- next_start: Topic 09の最終QAを実施し、固定EXAM_ALIGNMENT・成果物・独立再解答・進捗記録・SPEC境界を総点検する
+- next_start: Topic 09の主source・練習sourceに残る旧進捗表現を、完成後独立再解答・最終QA実施済みの現在地へ同期する
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -68,19 +68,23 @@
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答: `11 / 11 PASS`
-- [ ] 最終QA
+- [x] 最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 主source・練習sourceの旧進捗表現同期
+- [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-Topic 09を `topic_09_independent_reanswer_complete` まで進めた。
+Topic 09の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。
 
-- 保存済み個別公式正答値を先読みせず、完成教材だけで固定一次5問・11小問を独立再解答した
-- 独立答案を公式解答と事後照合し、`11 / 11 PASS`
-- 教材だけで使用式選択・途中式構築・選択肢判定・正答理由説明が可能であることを確認した
-- `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_reanswer.md` を追加した
-- 固定EXAM_ALIGNMENT、二次採用0問、二次数合わせ0件、固定範囲、技術本文、成果物はいずれも変更していない
-- 教材外知識補完、後続Topic論点追加、未確認実設備値追加はいずれも0件
+- 固定一次5問・11小問の完成後独立再解答 `11 / 11 PASS` を再確認
+- 二次採用0問・二次数合わせ0件の判断を維持
+- 解説PDF、練習PDF、PowerPoint、練習12問の既存QAはPASS
+- 固定範囲外論点・後続Topic論点・未確認実設備値の追加0件
+- 技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答に不整合0件
+- 主source冒頭・末尾に解説PDF作成前の旧進捗表現が残存
+- 練習source末尾にPowerPoint作成前の旧進捗表現が残存
+- `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_final_qa.md` を追加
 
 ## 判定
 
-Topic 09は `INDEPENDENT_REANSWER_PASS / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は最終QA。
+Topic 09は `NEEDS_REVISION / IN_PROGRESS`。未完了理由は進捗記録のみで、完成数は `8 / 21` のまま。次工程は主source・練習sourceの旧進捗表現同期。
