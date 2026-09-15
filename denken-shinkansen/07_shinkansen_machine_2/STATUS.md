@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_11_powerpoint_complete`
+- current_status: `topic_11_blind_reanswer_ready`
 - last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
 - active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 独立再解答前ゲート
+- next_start: Topic 11 完成後独立再解答
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -221,8 +221,17 @@
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 - [x] SHA-256 `bd195a931abecfa723e895f8082f7e54964bb9c88afba52420cde6777a31b704`
 
+## Topic 11 独立再解答前ゲート
+- [x] `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
+- [x] `HANDOFF.md` のH22二次代表数値解を除去
+- [x] main sourceの制作前各答案要素の完成済み導出結果・数値解を除去
+- [x] 固定5問・15答案要素、要求知識・使用式・教材内マッピングは変更なし
+- [x] 教材本文・PDF・練習問題・PowerPoint・固定EXAM_ALIGNMENTは変更なし
+- [x] 固定範囲外論点・未確認実車値追加 `0件`
+- [x] 保存済み答案を先に見ない新runから完成後独立再解答可能
+
 ## 今回進めた内容
-Topic 11「GTO→IGBT→SiCの損失を計算する」の解説画像PowerPointを完成した。16:9・4枚、1600×900相当の全4枚表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性 PASS。固定一次4問＋二次1問・15答案要素と固定範囲を維持し、固定範囲外論点・未確認実車値の追加は0件。
+Topic 11の独立再解答前ゲートを完了した。必須先読み対象から制作前の保存済み答案・完成済み導出結果を除去し、固定一次4問＋二次1問・15答案要素、教材本文、PDF/PPTX、練習問題、固定範囲は変更していない。固定範囲外論点・未確認実車値の追加は0件。
 
 ## 判定
-Topic 11は `topic_11_powerpoint_complete / IN_PROGRESS`。完成数は `10 / 22`。次は独立再解答前ゲート。
+Topic 11は `topic_11_blind_reanswer_ready / IN_PROGRESS`。完成数は `10 / 22`。次は公式解答・保存済み正答を先に見ず、完成教材だけを使った完成後独立再解答。
