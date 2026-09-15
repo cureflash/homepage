@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_11_practice_pdf_complete`
+- current_status: `topic_11_powerpoint_complete`
 - last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
 - active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 解説画像PowerPoint
+- next_start: Topic 11 独立再解答前ゲート
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -207,8 +207,22 @@
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 - [x] SHA-256 `da6fd46d57ebea60acd2657b91fcb91a008ca5a8328cb81776c7a5debf2b2aa7`
 
+## Topic 11 解説画像PowerPoint
+- [x] `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_images.pptx`
+- [x] 16:9・4枚
+- [x] 導通損失・OFF漏れ・スイッチング損失と `P_sw=f_sw(W_on+W_off)` を可視化
+- [x] H22二次型 IGBT／逆並列ダイオードの導通区間・平均電流積分を可視化
+- [x] 素子1個→装置総損失→発熱・冷却・変換効率を可視化
+- [x] GTO→IGBT→SiC比較、N700S SiC採用、固定5過去問対応を可視化
+- [x] 1600×900相当の全4枚表示QA `4 / 4 PASS`
+- [x] overflow `0件`
+- [x] ZIP整合性 PASS
+- [x] 固定一次4問＋二次1問・15答案要素を維持
+- [x] 固定範囲外論点・未確認実車値の追加 `0件`
+- [x] SHA-256 `bd195a931abecfa723e895f8082f7e54964bb9c88afba52420cde6777a31b704`
+
 ## 今回進めた内容
-Topic 11「GTO→IGBT→SiCの損失を計算する」の練習PDFを完成した。A4縦7ページ、一次10問＋二次5問・完全解説を収録。200 dpi表示QA `7 / 7 PASS`、文字抽出QA PASS、主要数値再計算 PASS。固定5過去問・15答案要素と固定範囲を維持し、固定範囲外論点・未確認実車値の追加は0件。
+Topic 11「GTO→IGBT→SiCの損失を計算する」の解説画像PowerPointを完成した。16:9・4枚、1600×900相当の全4枚表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性 PASS。固定一次4問＋二次1問・15答案要素と固定範囲を維持し、固定範囲外論点・未確認実車値の追加は0件。
 
 ## 判定
-Topic 11は `topic_11_practice_pdf_complete / IN_PROGRESS`。完成数は `10 / 22`。次は解説画像PowerPoint。
+Topic 11は `topic_11_powerpoint_complete / IN_PROGRESS`。完成数は `10 / 22`。次は独立再解答前ゲート。
