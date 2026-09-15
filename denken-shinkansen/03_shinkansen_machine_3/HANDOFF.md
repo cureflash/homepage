@@ -6,18 +6,16 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `7 / 16`。Topic 01〜07は品質ゲートPASSでcompleted。active topicは08「N700Sのモーターはなぜ小さくできた？」。
 
 ## 今回進捗
-Topic 08の練習PDFを完成した。
+Topic 08の解説画像PowerPointを完成した。
 
-- 練習PDF: `topics/08_n700s_motor/08_n700s_motor_practice.pdf`
-- A4縦3ページ
-- 全12問・全問五肢択一＋完全解説
-- 基礎3／本試験標準7／複合・応用2
-- 200 dpi全3ページ表示QA: `3 / 3 PASS`
-- 文字抽出QA: `PASS`
-- QA記録: `topics/08_n700s_motor/08_n700s_motor_practice_pdf_qa.md`
-- 固定EXAM_ALIGNMENT 4問・5小問へ全件接続
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 正答一意性: `12 / 12 PASS`
+- PowerPoint: `topics/08_n700s_motor/08_n700s_motor_images.pptx`
+- 16:9・4枚
+- 固定EXAM_ALIGNMENT 4問・5小問の判定軸、4極・6極と周波数・同期速度、滑り・出力・トルク、N700Sの6極主電動機とSiC主変換装置の関係を可視化
+- 外部画像不使用（PowerPoint図形で独自作成）
+- 全4スライド表示QA: `4 / 4 PASS`
+- overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- QA記録: `topics/08_n700s_motor/08_n700s_motor_powerpoint_qa.md`
 - 品質ゲート対象: 公式過去問4問・5小問
 - 制作前独立検証: `5 / 5 PASS`
 - 制作前答案列: `(2), (2), (1), (2), (1)`
@@ -83,7 +81,11 @@ Topic 08の練習PDFを完成した。
 - 練習PDF表示QA: `3 / 3 PASS`
 - 練習PDF文字抽出QA: `PASS`
 - 練習PDF QA記録: `topics/08_n700s_motor/08_n700s_motor_practice_pdf_qa.md`
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 完了（16:9・4枚）
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- PowerPoint QA記録: `topics/08_n700s_motor/08_n700s_motor_powerpoint_qa.md`
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
@@ -91,9 +93,9 @@ source: `topics/08_n700s_motor/08_n700s_motor.md`
 practice source: `topics/08_n700s_motor/08_n700s_motor_practice.md`
 
 ## 次に行う
-Topic 08の解説画像PowerPointを作成する。
+Topic 08の完成後独立再解答を実施する。
 
-固定EXAM_ALIGNMENT 4問・5小問の判定軸、4極・6極と周波数・同期速度の関係、滑り・出力・トルク、N700Sの6極モーターとSiC駆動システムの関係を、系列SPECの固定範囲内で可視化する。外部資料の図を複製せず独自図形で作成し、全スライド表示QA・overflow・PPTX整合性を確認する。固定範囲・実車一次資料の境界は変更しない。
+固定EXAM_ALIGNMENT 4問・5小問を完成教材だけで再導出し、保存済み正答を先に見ずに解いた後、公式解答と照合する。教材外・固定範囲外知識による補完が0件であることを確認し、固定範囲・実車一次資料の境界を変更しない。
 
 ## Topic 07 完了要約
 Topic 07「GTO→IGBT→SiCで何が変わった？」は品質ゲートPASS / completed。
