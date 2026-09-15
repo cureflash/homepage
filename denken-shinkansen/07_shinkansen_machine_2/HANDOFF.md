@@ -9,7 +9,7 @@ Topic 01〜08は最終QAまで `PASS / completed`。
 
 active topic: `09 誘導電動機を自由に操るには？`
 
-current status: `topic_09_explanation_pdf_complete`
+current status: `topic_09_practice_source_complete`
 
 ## Topic 09 固定EXAM_ALIGNMENT
 固定過去問:
@@ -46,6 +46,12 @@ current status: `topic_09_explanation_pdf_complete`
 - PDF: A4縦4ページ
 - 200 dpi全ページ表示QA: `4 / 4 PASS`
 - 文字抽出QA: PASS
+- 練習問題source: `09_induction_motor_control_practice.md`
+- 一次試験型: 10問・全問五肢択一
+- 二次試験型: 5問・途中式／前提／単位／理由説明付き
+- 練習問題の数値・論理再検算: `15 / 15 PASS`
+- 一次正答一意性: `10 / 10 PASS`
+- 固定5問・18小問の練習問題マッピング: `18 / 18 PASS`
 - 固定範囲外追加: 0件
 
 解説source:
@@ -54,20 +60,23 @@ current status: `topic_09_explanation_pdf_complete`
 解説PDF:
 - `topics/09_induction_motor_control/09_induction_motor_control_explanation.pdf`
 
-## 解説source・PDFで収録した要点
-- 総極数 `p` の教材表記 `N_s=120f/p` と、R02一次の総極数 `2p` 表記 `ω_s=2πf/p` の記号差を明示。
-- `N=(1-s)N_s`、`f_2=sf`、回転磁界の相対速度を一続きで説明。
-- `E≈4.44fN_wΦ` から `Φ∝V/f` を導き、V/f一定の意味を説明。
-- 基底速度以下の定トルク、電圧上限後の弱め磁束・定出力を `P=Tω` へ接続。
-- H26一次型の定加速域 `V/f` 一定、定出力域 `V一定・I_M一定・f_s可変` を区別。
+練習問題source:
+- `topics/09_induction_motor_control/09_induction_motor_control_practice.md`
+
+## 練習問題sourceで収録した要点
+- `N_s=120f/p`、`N=(1-s)N_s`、`f_2=sf` と回転磁界の相対速度を一次・二次の両形式で反復。
+- 一次電圧制御では同一滑り付近の `T∝V^2` と、一定負荷で電圧低下時に滑りが増える関係を確認。
+- `E≈4.44fN_wΦ` から `Φ∝V/f` を導き、V/f一定の意味を二次記述で説明。
+- 基底速度以下の定トルク、電圧上限後の弱め磁束・定出力を `P=Tω` の計算まで接続。
+- H26一次型の定加速域 `V/f` 一定、定出力域 `V一定・I_M一定・f_s可変` を選択式で確認。
 - ベクトル制御は磁束生成成分・トルク生成成分、d軸/q軸の概念までに限定。
 
 ## 次に行うこと
-Topic 09の練習問題sourceを作成する。
+Topic 09の練習PDFを作成する。
 
-1. 二種一次試験型に加え、固定範囲に対応する二次試験記述式を含める。
-2. 固定5問・18小問の解法経路を落とさない。
-3. 二次記述式は途中式・前提・単位・理由説明まで採点可能な形にする。
-4. V/f、同期速度・滑り・二次周波数、定トルク、弱め磁束・定出力、ベクトル制御概念の固定範囲内で構成する。
+1. `09_induction_motor_control_practice.md` の一次10問＋二次5問を全件収録する。
+2. 解答・完全解説、途中式、単位、理由説明を落とさない。
+3. 固定5問・18小問の解法経路を維持する。
+4. PDF作成後に全ページ表示QA・文字抽出QA・数値整合確認を行う。
 5. Topic 10以降、厳密Park/Clarke変換、制御器設計、センサレス推定器設計を追加しない。
 6. 未確認300系実車値を追加しない。
