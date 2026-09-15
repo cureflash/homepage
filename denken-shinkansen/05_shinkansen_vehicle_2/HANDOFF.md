@@ -7,11 +7,11 @@
 
 Topic 01〜06は最終QAまで `PASS`。完成数は `6 / 39`。
 
-現在地は `topic_07_explanation_pdf_resynced`。active topicは Topic 07 `直流主回路の高出力化`。
+現在地は `topic_07_practice_pdf_resynced`。active topicは Topic 07 `直流主回路の高出力化`。
 
-完成後独立再解答で不足したH21一次「機械」問2(2)の「負荷損を規定の基準巻線温度へ補正」を固定範囲内で解説source・練習sourceへ補強済み。本runでは同一点を解説PDFへ同期し、180 dpi全5ページ表示QA・文字抽出QAを再実施してPASS。固定EXAM_ALIGNMENT、実車値、3段階例題、指定3グラフは変更していない。練習PDF・PowerPointは補強後sourceへ未同期。
+完成後独立再解答で不足したH21一次「機械」問2(2)の「負荷損を規定の基準巻線温度へ補正」を固定範囲内で解説source・練習sourceへ補強済み。解説PDFに続き、本runで練習PDFへも同期し、180 dpi全3ページ表示QA・文字抽出QA・計算/論理 `12 / 12 PASS` を確認した。固定EXAM_ALIGNMENT、問題数、正答、数値条件は変更していない。PowerPointは補強後sourceへ未同期。
 
-直近の完成後独立再解答は補強前教材に対する `14 / 15 PASS / NEEDS_REVISION` のため、Topic 07はまだ `completed` ではない。次は練習PDFの補強同期。
+直近の完成後独立再解答は補強前教材に対する `14 / 15 PASS / NEEDS_REVISION` のため、Topic 07はまだ `completed` ではない。次はPowerPointの補強同期。
 
 ## Topic 06 完了記録
 固定EXAM_ALIGNMENTは一次3問＋二次2問、計5問。
@@ -136,17 +136,22 @@ QA記録: `07_dc_main_circuit_high_output_explanation_pdf_qa.md`
 
 ## Topic 07 練習PDF
 
-`07_dc_main_circuit_high_output_practice.pdf` の既存版はA4縦3ページで完成済みだが、H21一次 問2(2)補強後sourceへ未同期。
+`07_dc_main_circuit_high_output_practice.pdf` はH21一次 問2(2)補強後sourceへ同期済み。
 
+- A4縦3ページ
 - 一次8問＋二次4問、全問完全解説付き
-- 既存版180 dpi全3ページ表示QA: `PASS`
-- 既存版文字抽出QA: `PASS`
+- 一次3へ基準巻線温度補正の用語判断を同期
+- 一次4・二次2へ「`P_c` は基準巻線温度へ補正済み」とする条件・解法を同期
+- 問題数・正答・数値条件変更: `0件`
+- 180 dpi全3ページ表示QA: `PASS`
+- 文字抽出・Unicode置換文字確認: `PASS / 0件`
+- `基準巻線温度` の収録確認: `PASS`
 - 計算・論理: `12 / 12 PASS`
 - 固定一次4問＋二次1問・15対象項目を維持
+- SHA-256: `85dd16819a4d209a1e5700a2447dd6cc3412e6bd6da19c0eebd817ac130819bb`
 - 教材外知識補完: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値の真値化: `0件`
-- H21一次 問2(2)補強後sourceへの同期: `未実施`
 
 QA記録: `07_dc_main_circuit_high_output_practice_qa.md`
 
@@ -180,7 +185,8 @@ QA記録: `07_dc_main_circuit_high_output_images_qa.md`
 - `FAIL`: H21一次 問2(2)「負荷損を基準巻線温度へ補正」。公式解答とは一致したが、当時の完成学習教材から根拠を再構築できず外部知識補完が必要だった
 - source上の不足補強: `completed`
 - 解説PDFへの補強同期: `completed`
-- 練習PDF・PowerPointへの補強同期: `未実施`
+- 練習PDFへの補強同期: `completed`
+- PowerPointへの補強同期: `未実施`
 - 補強済み完成教材だけでの再独立再解答: `未実施`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外論点追加: `0件`
@@ -188,12 +194,10 @@ QA記録: `07_dc_main_circuit_high_output_images_qa.md`
 - 現在判定: `NEEDS_REVISION`
 
 ## 次の正確な開始点
-Topic 07 `直流主回路の高出力化` の補強済み練習sourceを練習PDFへ同期する。
+Topic 07 `直流主回路の高出力化` のH21一次 問2(2)補強を解説画像PowerPointへ同期する。
 
-1. 一次3へ基準巻線温度補正の用語判断を同期する。
-2. 一次4・二次2へ「`P_c` は基準巻線温度へ補正済み」とする条件・解法を同期する。
-3. 問題数・正答・数値条件は変更しない。
-4. 180 dpi全ページ表示QA・文字抽出QA・計算/論理整合を再実施する。
-5. 固定EXAM_ALIGNMENT、採用過去問、15対象項目は変更しない。
-6. 位相制御、誘導機、VVVF、回生、IGBT/SiC、詳細熱設計を追加しない。
-7. 未確認の編成出力・主回路総損失・冷却容量・けん引力特性を補完しない。
+1. 規約効率・損失の説明へ「負荷損は規定の基準巻線温度へ補正して扱う」を追加する。
+2. SPEC指定3グラフ、確認済み実車値、固定EXAM_ALIGNMENTは変更しない。
+3. 温度補正式、温度上昇計算、詳細熱設計は追加しない。
+4. 180 dpi全4スライド表示QA・overflow・PowerPoint ZIP整合性を再実施する。
+5. 未確認の編成出力・主回路総損失・冷却容量・けん引力特性を補完しない。
