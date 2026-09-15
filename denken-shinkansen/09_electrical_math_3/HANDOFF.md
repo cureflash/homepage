@@ -8,17 +8,19 @@ Topic 01〜07は `completed`。
 
 Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで実施。制作前は `5 / 5問・9 / 9答案要素 PASS`、練習12問の独立計算QAは `12 / 12 PASS`、練習PDF表示QAは `5 / 5 PASS`、PowerPointは全5枚表示QA PASS・overflow 0件・PPTX ZIP整合性PASS。
 
-完成後独立再解答は `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`。積分操作自体ではなく、固定過去問を積分式へ接続する電気的前提3群が学習用教材に不足していた。教材外知識で補ってPASS扱いしていない。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
+完成後独立再解答は `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`。積分操作自体ではなく、固定過去問を積分式へ接続する電気的前提3群が学習用教材に不足していた。教材外知識で補ってPASS扱いしていない。
+
+不足3群は `08_integral_distance_revision_supplement.md` へ固定範囲内で最小補強済み。R8上の相電圧→線間電圧・線間波形、R3のリアクトル電圧符号・磁気エネルギー・導通終了、H28の固定問のサイリスタ導通対・無点弧時波形だけを追加し、三相回路・整流回路・リアクトル・サイリスタの体系説明には拡張していない。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
 
 完成数: `7 / 12`
 
-current_status: `topic_08_independent_reanswer_needs_revision`
+current_status: `topic_08_revision_supplement_source_complete`
 
 last_completed_topic: `07 微分② 速度を微分すると加速度`
 
 active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `Topic 08 独立再解答FAILの不足前提3群を固定範囲内で最小補強`
+next_start: `Topic 08 補強3点を学習用補強PDFへ同期`
 
 ## Topic 07 完了記録
 
@@ -90,7 +92,7 @@ next_start: `Topic 08 独立再解答FAILの不足前提3群を固定範囲内�
 - R3 機械 問16: 独立 `(a)(1), (b)(3)` / 公式 `(a)(1), (b)(3)` / PASS
 - R1 理論 問18: 独立 `(a)(1), (b)(4)` / 公式 `(a)(1), (b)(4)` / PASS
 - H28 機械 問16: 独立 `(a)(5), (b)(2)` / 公式 `(a)(5), (b)(2)` / PASS
-- H24 機械 問10: 独立 `(5)` / 公式 `(5)` / PASS
+- H24 機械 問10: 独立 `(5)` / 公式 `(5)`。PASS
 
 判定: `5 / 5問・9 / 9答案要素 PASS`。
 
@@ -198,6 +200,20 @@ FAIL理由は数学計算ではなく、公式問題文から積分式へ入る�
 
 固定EXAM_ALIGNMENT変更0件。教材外知識を補ってPASS扱いした件数0件。Topic 09〜11先取り0件。未確認新幹線実値追加0件。
 
+### 独立再解答FAIL補強source
+
+成果物: `topics/08_integral_distance/08_integral_distance_revision_supplement.md`
+
+2026-09-16、上記FAIL 3群だけを固定範囲内で最小補強した。
+
+- R8上 機械 問16: `vab=va-vb`、`VLL=√3Vs`、`VLL,max=√6Vs`、最大線間電圧の `π/3` 区間へ接続
+- R3 機械 問16(a): `vL=Ldi/dt` の符号、`WL=(1/2)Li²`、電流0で導通終了する条件へ接続
+- H28 機械 問16(a): 固定問の `T1・T4` / `T2・T3` 導通対と、無点弧で該当半周期の出力区間が消える条件へ接続
+
+不足前提への対応 `3 / 3`。三相回路・整流回路・リアクトル・サイリスタの体系説明追加0件、固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、未確認新幹線実値追加0件。
+
+現段階では補強sourceのみ。品質ゲートの再判定は未実施。
+
 ### source
 
 - `topics/08_integral_distance/08_integral_distance.md`
@@ -206,13 +222,12 @@ FAIL理由は数学計算ではなく、公式問題文から積分式へ入る�
 - `topics/08_integral_distance/08_integral_distance_practice.pdf`
 - `topics/08_integral_distance/08_integral_distance_images.pptx`
 - `topics/08_integral_distance/08_integral_distance_exam_reanswer.md`
+- `topics/08_integral_distance/08_integral_distance_revision_supplement.md`
 
 参考教材は電験王、電験三種まとめました、電気主任技術者のナレッジノート等を複数系統確認。e-sysnetは検索対象に含めたが、固定5問へ直接対応するページを確認できなかったため無関係なページは引用していない。
 
 ## 次に行うこと
 
-完成後独立再解答で不足した3群の前提だけを、固定EXAM_ALIGNMENTとTopic 08の数学範囲を変えず学習用sourceへ最小補強する。
+補強3点を学習用の補強PDFへ同期し、表示・文字抽出QAを行う。既存の解説PDF・練習PDF・解説画像PowerPointは変更せず、補強内容は追加教材として独立させる。
 
-対象は `(1)` R8上の相電圧→線間電圧・区間波形への接続、`(2)` R3のリアクトル電圧符号・磁気エネルギー・導通終了への接続、`(3)` H28のサイリスタ導通対・無点弧時波形への接続だけとする。整流回路・三相回路・リアクトルを新規テーマとして体系化しない。
-
-Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は先取りしない。
+補強PDF同期後に、完成教材だけで固定5問を再独立解答する。Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は先取りしない。
