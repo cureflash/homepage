@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 9 / 21
-- current_status: `topic_10_practice_progress_synced`
-- last_completed_topic: `09 新幹線の25kV交流をフェーザで表す`
-- active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
-- next_start: Topic 10最終QAを再実施
+- exam_aligned_completed_topics: 10 / 21
+- current_status: `topic_10_completed`
+- last_completed_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
+- active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
+- next_start: Topic 11制作前EXAM_ALIGNMENT
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -102,23 +102,23 @@
 - [x] 完成後独立再解答: `20 / 20 PASS`
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 練習source末尾の旧進捗記録同期
-- [ ] 最終QA再実施
+- [x] 最終QA再実施: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 10練習source末尾の旧進捗記録1箇所だけを、実成果物の現在地へ同期した。
+Topic 10の最終QAを再実施し、`PASS / completed` とした。
 
-- 変更対象: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md` の `# 次工程`
-- 練習PDF完成済みを反映
-- PowerPoint完成済みを反映
-- 完成後独立再解答 `20 / 20 PASS` 済みを反映
-- 初回最終QA実施済みを反映
-- 教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
+- 固定一次5問・20小問の完成後独立再解答: `20 / 20 PASS`
+- 教材外知識補完: `0件`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
+- 必須成果物: `PASS`
+- PDF/PPTX表示QA・文字抽出・整合性: `PASS`
+- SPEC境界: `PASS`
+- 前回exact blockerだった練習source末尾の旧進捗記録: `解消済み`
 - 固定範囲外追加: `0件`
 - 未確認実設備値追加: `0件`
 
 ## 判定
 
-Topic 10は `IN_PROGRESS`。初回最終QAで指摘された進捗記録不整合は解消した。完成数は `9 / 21` のまま。次工程は最終QAを再実施し、品質ゲート・成果物・進捗記録整合を再確認する。
+Topic 10は `PASS / completed`。完成数は `10 / 21`。次工程はTopic 11「ATCはなぜ特定の周波数を見分けられる？」の制作前EXAM_ALIGNMENT。
