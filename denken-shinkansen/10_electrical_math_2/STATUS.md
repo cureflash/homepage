@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 7 / 20
-- current_status: `topic_08_exam_reanswer_complete`
+- current_status: `topic_08_final_qa_needs_revision`
 - last_completed_topic: `07 一階常微分方程式`
 - active_topic: `08 二階常微分方程式`
-- next_start: Topic 08の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認する。全品質ゲートPASSの場合のみ `completed` とする
+- next_start: Topic 08 source Markdownの旧進捗2箇所だけを現在地へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、問題、PDF、PowerPoint、完成後独立再解答は変更しない
 
 ## Topic 07 制作品質ゲート
 
@@ -50,34 +50,36 @@
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 `15 / 15 PASS`
-- [ ] 最終QA
+- [x] 最終QA実施 → `NEEDS_REVISION`
+- [ ] source進捗記録2箇所の同期
+- [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 08 `二階常微分方程式` の完成後独立再解答を実施し、GitHub正本へ記録した。
+Topic 08 `二階常微分方程式` の最終QAを実施し、GitHub正本へ記録した。
 
-成果物:
-- `topics/08_second_order_ode/08_second_order_ode_exam_reanswer.md`
+最終QA:
+- `topics/08_second_order_ode/08_second_order_ode_final_qa.md`
 
-固定EXAM_ALIGNMENT:
-- R8 一次 理論 問1 (4)〜(5): `2 / 2 PASS`
-- R8 一次 理論 問6 (3)〜(4): `2 / 2 PASS`
-- R3 一次 理論 問5 (1)〜(4): `4 / 4 PASS`
-- H28 一次 理論 問3 (1)〜(5): `5 / 5 PASS`
-- H24 一次 理論 問3 (1)〜(2): `2 / 2 PASS`
+PASS:
+- 必須成果物の実在
+- 固定一次5問・15小問のEXAM_ALIGNMENT
+- 制作前独立再解答 `15 / 15 PASS`
+- 完成後独立再解答 `15 / 15 PASS`
+- 解説PDF表示QA `5 / 5 PASS`
+- 練習PDF表示QA `5 / 5 PASS`
+- PowerPoint表示QA `5 / 5 PASS`
+- Topic 09〜10先取り `0件`
+- 固定範囲外追加 `0件`
+- 未確認実車値依存 `0件`
 
-完成後独立再解答: `15 / 15 PASS`
-
-QA:
-- 教材外知識補完: `0件`
-- Topic 09〜10先取り: `0件`
-- 固定範囲外追加: `0件`
-- 二次記述の件数合わせ: `0件`
-- 未確認実車値依存: `0件`
+FAIL:
+- `08_second_order_ode.md` 冒頭 `## 状態` が解説source完了時点の旧進捗のまま
+- 同source末尾 `## 次工程` が「解説PDF作成」の旧進捗のまま
 
 ## 判定
 
-Topic 08は `IN_PROGRESS / EXAM_REANSWER_COMPLETE`。完成数は `7 / 20` のまま。
+Topic 08は `NEEDS_REVISION / IN_PROGRESS`。完成数は `7 / 20` のまま。
 
-次は最終QA。
+次はsource Markdownの旧進捗2箇所だけを現在地へ同期する。
