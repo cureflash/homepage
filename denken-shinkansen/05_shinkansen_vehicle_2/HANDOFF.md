@@ -7,9 +7,9 @@
 
 Topic 01〜08は最終QAまで `PASS`。完成数は `8 / 39`。
 
-現在地は `topic_09_final_qa_needs_revision`。Topic 09 `直流機方式の損失・熱設計` は、必須成果物、固定一次4問＋二次1問・14対象項目、完成後独立再解答 `14 / 14 PASS`、PDF/PPTX QA、固定範囲境界までPASS。最終QAの唯一のFAILは主source `09_dc_machine_loss_thermal_design.md` 冒頭 `## 状態` の旧進捗2記述で、「解説PDF、練習source/PDF、解説画像PowerPointは未制作」「次工程は解説PDF」が実成果物と矛盾している。
+現在地は `topic_09_source_progress_synced`。Topic 09 `直流機方式の損失・熱設計` は、必須成果物、固定一次4問＋二次1問・14対象項目、完成後独立再解答 `14 / 14 PASS`、PDF/PPTX QA、固定範囲境界までPASS。前回最終QAの唯一のFAILだった主source `09_dc_machine_loss_thermal_design.md` 冒頭 `## 状態` の旧進捗2記述は実成果物へ同期済み。
 
-次工程は主source冒頭の旧進捗2記述だけを実成果物へ同期する。技術本文、固定EXAM_ALIGNMENT、数式、例題、練習問題・正答、PDF/PPTX、完成後独立再解答は変更しない。同期後に最終QAを再判定する。
+次工程はTopic 09最終QAの再判定。技術本文、固定EXAM_ALIGNMENT、数式、例題、練習問題・正答、PDF/PPTX、完成後独立再解答は変更せず、進捗記録整合を含む全品質ゲートを再確認し、PASS時のみ `completed` とする。
 
 ## Topic 01〜06
 - Topic 01〜06: 最終QA `PASS / completed`
@@ -95,6 +95,7 @@ source: `topics/09_dc_machine_loss_thermal_design/09_dc_machine_loss_thermal_des
 - 教材用 `R_th`、`C_th`、損失・温度を実車値として扱う: `0件`
 - 誘導機、PWM/VVVF、回生、IGBT/SiC、詳細絶縁寿命モデル、熱流体解析の追加: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
+- 旧進捗2記述: `同期済み`
 
 ## Topic 09 解説PDF
 - `09_dc_machine_loss_thermal_design_explanation.pdf`: `completed`
@@ -184,12 +185,13 @@ source: `topics/09_dc_machine_loss_thermal_design/09_dc_machine_loss_thermal_des
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 進捗記録整合: `FAIL`
-- exact blocker: 主source `## 状態` の旧進捗2記述のみ
+- 直近判定時の進捗記録整合: `FAIL`
+- 前回exact blocker: 主source `## 状態` の旧進捗2記述のみ
+- blocker対応: `同期済み / 再判定待ち`
 
 ## 次の正確な開始点
-Topic 09 `直流機方式の損失・熱設計` の主source進捗記録同期。
+Topic 09 `直流機方式の損失・熱設計` の最終QA再判定。
 
-1. `09_dc_machine_loss_thermal_design.md` 冒頭 `## 状態` の「解説PDF、練習source/PDF、解説画像PowerPointは未制作」「次工程は解説PDF」を、実成果物（解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了）へ同期する。
-2. 技術本文、固定EXAM_ALIGNMENT、数式、例題、練習問題・正答、PDF/PPTX、独立再解答は変更しない。
-3. 同期後にTopic 09最終QAを再判定する。
+1. 主source進捗記録が実成果物と一致していることを再確認する。
+2. 固定一次4問＋二次1問・14対象項目、完成後独立再解答 `14 / 14 PASS`、必須成果物・PDF/PPTX QA、固定範囲境界を再確認する。
+3. 全件PASSなら Topic 09を `PASS / completed` とし、完成数を `9 / 39` へ更新する。
