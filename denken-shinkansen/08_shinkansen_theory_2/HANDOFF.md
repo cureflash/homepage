@@ -8,11 +8,11 @@ Topic 01〜08は `completed`。Topic 09「新幹線の25kV交流をフェーザ�
 
 完成数: `8 / 21`
 
-current_status: `topic_09_blind_reanswer_blocked_by_answer_leak`
+current_status: `topic_09_blind_reanswer_ready`
 
 active_topic: `09 新幹線の25kV交流をフェーザで表す`
 
-次工程: `topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` のEXAM_ALIGNMENT表に残る公式正答値を、問題選定・要求知識・照合済み事実を保持したまま必須先読み対象から除去する。そのrunでは独立再解答を行わず、次runで保存済み正答を見ない状態から完成教材だけを使って固定一次5問・11小問を独立再解答する。
+次工程: 保存済み公式正答値を先読みしない状態で、完成教材だけを使って固定一次5問・11小問を独立再解答する。
 
 ## Topic 09 固定範囲
 
@@ -60,6 +60,7 @@ R7・R6・R5二次「電力・管理」「機械・制御」を確認したが�
 解説source:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md`
 - 固定11小問への本文マッピング `11 / 11`
+- 品質ゲート表の個別公式正答値は除去済み。問題選定・要求知識・照合済み事実は保持
 
 解説PDF:
 - `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_explanation.pdf`
@@ -86,17 +87,13 @@ PowerPoint:
 
 固定EXAM_ALIGNMENT変更0件、二次採用0問、二次数合わせ0件、固定範囲外追加0件、未確認実設備値追加0件。
 
-## 独立再解答のexact blocker
+## blind独立再解答の準備状態
 
-MASTER_SPECは各runで active theme の既存成果物を必須先読みとし、EXAM_ALIGNMENT_SPECは完成後独立再解答を「保存済み正答を先に見ず」に行うことを要求する。
+MASTER_SPECは各runでactive themeの既存成果物を必須先読みとし、EXAM_ALIGNMENT_SPECは完成後独立再解答を「保存済み正答を先に見ず」に行うことを要求する。
 
-現状の `topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` のEXAM_ALIGNMENT表には公式正答値が残っているため、同sourceを必須先読みしたrunで独立再解答を実施すると品質ゲート条件を満たせない。本runではHANDOFFから正答値を除去したが、active theme source側が未除去なので独立再解答は実施しない。
+`topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` のEXAM_ALIGNMENT表から個別公式正答値を除去した。HANDOFFにも個別正答値は保持していない。問題年度・問番号・対象小問・要求知識・「公式解答照合11 / 11 PASS」の事実は保持している。
 
-blocker解除条件:
-1. active theme sourceの公式正答値だけを除去する。
-2. 問題年度・問番号・対象小問・要求知識・「公式解答照合11 / 11 PASS」の事実は保持する。
-3. その編集runでは独立再解答しない。
-4. 次runで必須先読み対象に正答値がないことを確認してから完成教材のみで独立再解答する。
+この編集runでは独立再解答を実施していない。次runで、必須先読み対象に保存済み公式正答値がないことを確認してから、完成教材のみで固定一次5問・11小問を独立再解答する。
 
 ## 参考資料
 
@@ -136,7 +133,7 @@ blocker解除条件:
 - 二次数合わせ: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実設備値追加: `0件`
-- 完成後独立再解答: `BLOCKED`（必須先読みsourceに保存済み正答値が残存）
+- 完成後独立再解答: `BLIND-READY / NOT YET RUN`
 
 ## Topic 08 以前
 
@@ -144,4 +141,4 @@ Topic 01〜08は `completed`。Topic 08の最終QAは、固定一次4問・6小�
 
 ## 次に行うこと
 
-`topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` の公式正答値だけを除去して `topic_09_blind_reanswer_ready` にする。技術本文・固定EXAM_ALIGNMENT・問題選定・数式・成果物は変更しない。独立再解答はその次のrunで行う。
+保存済み公式正答値を先読みせず、完成教材だけを使って固定一次5問・11小問を独立再解答する。技術本文・固定EXAM_ALIGNMENT・問題選定・数式・成果物は変更しない。
