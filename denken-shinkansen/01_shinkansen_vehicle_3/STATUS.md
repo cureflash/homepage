@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 31 / 38
-- current_status: `topic_32_exam_alignment_complete`
+- current_status: `topic_32_explanation_source_complete`
 - last_completed_topic: `31 ATC② 地上から車上へどう情報を送る？`
 - active_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
-- next_start: Topic 32の固定EXAM_ALIGNMENTを維持して解説本文＋3段階例題を作成する
+- next_start: Topic 32の固定EXAM_ALIGNMENTと解説本文を維持して解説PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01〜31 — PASS
-- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 制作前EXAM_ALIGNMENT完了
+- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 解説本文＋3段階例題完了
 
 ## 32 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
@@ -31,6 +31,20 @@
 未確認新幹線ATC実車値追加: `0件`。
 
 source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
+
+## 32 解説source
+- 本文: §1〜§15
+- 3段階例題: 基礎「一次遅れ系の折点と低周波利得」／標準「内部信号から伝達関数を求める」／複合「論理式とシーケンス判断」
+- 固定EXAM_ALIGNMENT: `6 / 6` 本文マッピング済み
+- 負帰還: `C/R=G/(1+GH)`
+- 固定過去問型: `C/R=(1+jωT1)/(1+jωT2)` を内部信号から導出
+- 一次遅れ: `W(jω)=K/(1+jωT)`、`ωc=1/T`、低周波利得 `20log10K`、折点後 `-20 dB/dec`
+- P・I・D: I=定常特性改善、D=過渡特性改善、Pは両特性へ影響
+- 論理回路: AND・OR・NOT、`X=A·C+B·NOT(C)`、タイムチャート追跡
+- シーケンス制御・インタロック・フェイルセーフの一般原則
+- JRTT公開範囲のATC方式世代差のみ収録
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
 
 ## 31 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、信号、周波数、情報伝送、センサ、デジタル信号、論理判断。
@@ -217,4 +231,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 31 `ATC② 地上から車上へどう情報を送る？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は制作前EXAM_ALIGNMENT完了。固定5問・6対象項目を変更せず、次は解説本文＋3段階例題を作成する。
+Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は解説本文＋3段階例題完了。固定5問・6対象項目と本文を変更せず、次は解説PDFを作成する。
