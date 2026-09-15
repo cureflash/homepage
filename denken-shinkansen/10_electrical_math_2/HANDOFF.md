@@ -8,11 +8,11 @@ Topic 01〜09は `completed`。
 
 完成数: `9 / 20`
 
-current_status: `topic_10_practice_source_complete`
+current_status: `topic_10_practice_pdf_complete`
 
 active_topic: `10 伝達関数・極・零点`
 
-次工程: Topic 10の練習PDFを作成し、全12問＋完全解説と固定二次5問・11対象設問への接続を維持する。固定範囲境界を変更しない。
+次工程: Topic 10の解説画像PowerPointを作成し、固定二次5問・11対象設問への接続と固定範囲境界を維持する。
 
 ## 上位仕様
 
@@ -343,6 +343,9 @@ source:
 練習source:
 `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_practice.md`
 
+練習PDF:
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_practice.pdf`
+
 ### Topic 10 固定範囲
 
 - 伝達関数
@@ -435,10 +438,28 @@ QA:
 - 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
-current_status: `topic_10_practice_source_complete / IN_PROGRESS`。
+### Topic 10 練習PDF
+
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_practice.pdf`
+
+QA:
+- A4縦4ページ
+- 全12問（一次型8問／二次記述型4問）＋完全解説を反映
+- 200 dpi全ページ表示QA `4 / 4 PASS`
+- 文字抽出QA `PASS`
+- 独立計算・正答一意性 `12 / 12 PASS` を維持
+- 固定二次5問・11対象設問への接続 `11 / 11 PASS`
+- 教材外知識補完: 0件
+- Topic 12/15先取り: 0件
+- ラウス・フルビッツ法一般手順追加: 0件
+- 定常偏差・畳み込みの独立論点化: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
+current_status: `topic_10_practice_pdf_complete / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 10 `伝達関数・極・零点` の練習PDFを作成し、全12問＋完全解説と固定二次5問・11対象設問への接続を維持する。
+Topic 10 `伝達関数・極・零点` の解説画像PowerPointを作成し、固定二次5問・11対象設問への接続を維持する。
 
 固定範囲境界を変更しない。
