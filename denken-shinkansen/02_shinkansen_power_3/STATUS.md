@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験三種「電力」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 7 / 16
-- current_status: `topic_08_powerpoint_complete`
+- current_status: `topic_08_independent_reanswer_complete`
 - last_completed_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
 - active_topic: `08 新幹線の変電所はなぜ数十kmおき？`
-- next_start: Topic 08の固定5問・7小問を完成教材だけでブラインド独立再解答する
+- next_start: Topic 08 main sourceのEXAM_ALIGNMENT・進捗記録へ完成後独立再解答 `7 / 7 PASS` を同期する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -18,7 +18,7 @@
 - [x] 05 新幹線を再エネだけで走らせられる？ — completed
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
 - [x] 07 なぜ三相交流をそのまま架線へ流さない？ — completed。改定EXAM_ALIGNMENT 3問を完成教材だけで独立再解答し `3 / 3 PASS`、教材外知識補完0件。練習PDF QA・PowerPoint Slide 4・PowerPoint QAを現行3問へ同期し、最終QA PASS
-- [ ] 08 新幹線の変電所はなぜ数十kmおき？ — 制作前EXAM_ALIGNMENT 5問・7小問 `7 / 7 PASS`。解説本文§1〜§9＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint完成。PowerPointは16:9・4枚、固定5問・7小問を `7 / 7` 可視化、表示 `4 / 4 PASS`、overflow・ZIP整合性PASS。SPEC固定範囲外追加0件。次は完成後ブラインド独立再解答
+- [ ] 08 新幹線の変電所はなぜ数十kmおき？ — 制作前EXAM_ALIGNMENT 5問・7小問 `7 / 7 PASS`。解説本文§1〜§9＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint完成。完成後ブラインド独立再解答も `7 / 7 PASS`、教材外補完0件。次はmain sourceへの再解答結果同期
 - [ ] 09 変電所からパンタグラフまでどう送る？
 - [ ] 10 新幹線が突然大電力を使ったら？
 - [ ] 11 架線事故ではどうやって電気を止める？
@@ -61,6 +61,7 @@ source: `topics/08_voltage_drop/08_voltage_drop.md`
 練習PDF QA: `topics/08_voltage_drop/08_voltage_drop_practice_qa.md`
 解説画像PowerPoint: `topics/08_voltage_drop/08_voltage_drop_images.pptx`
 PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
+完成後独立再解答: `topics/08_voltage_drop/08_voltage_drop_independent_reanswer.md`
 
 固定5問・7小問:
 - R7下 電力 問16 (a)(b)
@@ -92,14 +93,23 @@ PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
 - PowerPoint表示QA: 1601×900 `4 / 4 PASS`
 - PowerPoint overflow: `0件`
 - PowerPoint ZIP整合性: PASS
+- 完成後ブラインド独立再解答: `7 / 7 PASS`
+- 公式解答一致: `7 / 7 PASS`
+- 教材外知識補完: `0件`
 - SPEC固定範囲外追加: `0件`
 - 未確認実設備値の真値化: `0件`
 - R8上 電力 問8: 電圧降下・線路損失以外に機械的強度・コロナ・サージを要求するため品質ゲートから除外
-- 正答番号: 完成後ブラインド独立再解答の汚染防止のため固定過去問については進捗記録へ未保存
 
-未完成成果物:
-- 完成後ブラインド独立再解答
+完成後独立答案:
+- R7下 電力 問16(a)(b): `(4),(2)`
+- R7下 電力 問17(a)(b): `(3),(1)`
+- R7上 電力 問13: `(2)`
+- R6上 電力 問13: `(4)`
+- R5上 電力 問12: `(2)`
+
+未完成:
+- main sourceへの完成後独立再解答結果同期
 - 最終QA
 
 ## 次
-Topic 08の固定5問・7小問を、完成教材だけを使い、保存済み正答を先に見ずブラインド独立再解答する。教材外知識による補完、Topic 09以降の論点、未確認実設備値を使わない。
+Topic 08 main sourceのEXAM_ALIGNMENT・進捗記録へ、完成後ブラインド独立再解答 `7 / 7 PASS` を同期する。教材本文・固定5問・7小問・成果物・SPEC固定範囲は変更しない。
