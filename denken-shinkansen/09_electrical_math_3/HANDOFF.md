@@ -6,15 +6,15 @@
 
 Topic 01〜06は `completed`。
 
-Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDFまで完了。制作前独立解答は `5 / 5 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
+Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題sourceまで完了。制作前独立解答は `5 / 5 PASS`、練習12問の独立計算QAは `12 / 12 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
 
 完成数: `6 / 12`
 
-current_status: `topic_07_explanation_pdf_complete`
+current_status: `topic_07_practice_source_complete`
 
 active_topic: `07 微分② 速度を微分すると加速度`
 
-next_start: `Topic 07 練習問題source`
+next_start: `Topic 07 練習PDF`
 
 ## Topic 07 固定EXAM_ALIGNMENT
 
@@ -91,6 +91,25 @@ next_start: `Topic 07 練習問題source`
 - 固定EXAM_ALIGNMENT変更: 0件
 - 仕様外論点・再出題重複・未確認新幹線実値の追加: 0件
 
+## Topic 07 練習問題source
+
+成果物: `topics/07_derivative_2/07_derivative_2_practice.md`
+
+- 全12問・全問五肢択一
+- 基礎3 / 標準7 / 複合2
+- 完全解説付き
+- 固定5過去問の要求事項を全件練習へ接続
+- 独立計算QA: `12 / 12 PASS`
+- 複数正答、単位不整合、固定範囲外前提依存: 0件
+- 未確認新幹線実値: 0件
+
+主な対応:
+- R6上理論問7: 問10・12（可変抵抗電力の微分最大化）
+- R5下理論問12: 問1・5・7（二階微分・一定加速度・時間依存性）
+- R3理論問7: 問10・11（負荷電力最大条件と回路電流）
+- R1理論問12: 問5・6（一様電界中の一定加速度と移動時間）
+- H27理論問12: 問8（二方向運動を共通時間で接続）
+
 ## 候補除外
 
 - R7下 理論 問12: 正答にTopic 07の微分・加速度計算を必要としない
@@ -117,6 +136,7 @@ Topic 06 `微分① ダイヤの傾きは速度` は `PASS / completed`。補強
 Topic 07:
 - `topics/07_derivative_2/07_derivative_2.md`（EXAM_ALIGNMENT＋解説本文＋3段階例題）
 - `topics/07_derivative_2/07_derivative_2_explanation.pdf`
+- `topics/07_derivative_2/07_derivative_2_practice.md`（12問＋完全解説、独立計算QA `12 / 12 PASS`）
 
 Topic 06:
 - `topics/06_derivative_1/06_derivative_1.md`
@@ -131,6 +151,6 @@ Topic 06:
 
 ## 次に行うこと
 
-Topic 07の固定EXAM_ALIGNMENTと解説本文・解説PDFを正本として、固定範囲だけで練習問題sourceを作成する。
+`topics/07_derivative_2/07_derivative_2_practice.md` を正本として練習PDFを作成する。
 
-問題数はMASTER_SPEC / EXAM_ALIGNMENT_SPECの要件を満たし、固定5問の要求事項をカバーする。積分による一般導出、電子回路・ブラウン管の専門解説、RC/RL過渡現象等を先取りしない。仕様外論点追加、再出題の重複カウント、未確認新幹線実値の追加はしない。
+全12問＋完全解説を同期し、全ページ表示QA・文字抽出QAを行う。固定5問、固定範囲、制作前 `5 / 5 PASS`、練習独立計算 `12 / 12 PASS` を維持し、積分による一般導出、電子回路・ブラウン管の専門解説、RC/RL過渡現象等を先取りしない。仕様外論点追加、再出題の重複カウント、未確認新幹線実値の追加はしない。
