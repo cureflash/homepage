@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPointまで完了。
+Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。
 
 完成数: `7 / 21`
 
-current_status: `topic_08_powerpoint_complete`
+current_status: `topic_08_independent_reanswer_complete`
 
 active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 
-次工程: 完成教材だけで固定一次4問・6小問を独立再解答する。
+次工程: Topic 08の最終QAを行う。
 
 ## Topic 08 固定範囲
 
@@ -112,6 +112,21 @@ L0系・超電導リニアは `超電導磁石 → 地上コイル → 誘導電
 - 二次採用0問・二次数合わせ0件
 - 固定範囲外論点・超電導物性・未確認実設備値追加0件
 
+## 完成後独立再解答
+
+記録: `08_maglev_electromagnetic_induction_reanswer.md`
+
+- R7 問2(2): `ワ`
+- R5 問2(2)〜(4): `イ / ニ / ロ`
+- R2 問2(2): `ヨ`
+- H28 問1(5): `ル`
+- 公式解答照合: `6 / 6 PASS`
+- 教材だけで使用式・途中式・選択肢判定を再構築: `PASS`
+- 教材外知識補完: `0件`
+- 二次数合わせ: `0件`
+- 固定範囲外論点追加: `0件`
+- 超電導物性・未確認実設備値追加: `0件`
+
 ## 次に行うこと
 
-固定EXAM_ALIGNMENTと完成済み教材だけを使い、保存済み正答を先に見ずに一次4問・6小問を独立再解答する。教材外知識で補完した場合はFAILとする。
+Topic 08の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT、独立再解答 `6 / 6 PASS`、PDF/PPTX表示QA、source進捗整合、固定範囲境界を確認し、全件PASSの場合のみ `completed` とする。
