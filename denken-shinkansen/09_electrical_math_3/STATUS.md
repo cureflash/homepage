@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 6 / 12
-- current_status: `topic_07_final_qa_needs_revision`
+- current_status: `topic_07_source_progress_synced`
 - last_completed_topic: `06 微分① ダイヤの傾きは速度`
 - active_topic: `07 微分② 速度を微分すると加速度`
-- next_start: `Topic 07 主source旧進捗2箇所の同期`
+- next_start: `Topic 07 最終QA再判定`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -48,23 +48,19 @@
 - [x] 解説画像PowerPoint
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 主source旧進捗2箇所の同期
+- [x] 主source旧進捗2箇所の同期
 - [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-Topic 07「微分② 速度を微分すると加速度」の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` とした。
+Topic 07「微分② 速度を微分すると加速度」の主source `07_derivative_2.md` に残っていた旧進捗2箇所を、実在成果物と現在地へ同期した。
 
-固定5過去問の完成後独立再解答 `5 / 5 PASS`、必須成果物、練習独立計算QA `12 / 12 PASS`、解説PDF・練習PDF・PowerPointの表示QA、固定範囲と後続Topic境界はPASS。
+冒頭 `## 状態` は解説PDF・練習問題source/PDF・PowerPoint・完成後独立再解答まで完了済みへ更新。末尾の旧「解説本文段階の判定」は現在の進捗判定へ更新し、次工程を最終QA再判定とした。
 
-未完了理由は主source `07_derivative_2.md` の旧進捗2箇所のみ。冒頭 `## 状態` にPDF・練習・PowerPoint・独立再解答が未実施と残り、末尾 `## 解説本文段階の判定` に次工程が解説PDF作成と残っている。
-
-技術本文、固定EXAM_ALIGNMENT、数式、問題・正答、PDF/PPTX成果物は変更していない。仕様外論点・未確認新幹線実値の追加は0件。
-
-記録: `topics/07_derivative_2/07_derivative_2_final_qa.md`
+技術本文、固定EXAM_ALIGNMENT 5問、数式、3段階例題、問題・正答、PDF/PPTX成果物は変更していない。制作前 `5 / 5 PASS`、練習独立計算QA `12 / 12 PASS`、完成後独立再解答 `5 / 5 PASS` を維持。仕様外論点・未確認新幹線実値の追加は0件。
 
 ## 判定
 
-Topic 07は `topic_07_final_qa_needs_revision / IN_PROGRESS`。
+Topic 07は `topic_07_source_progress_synced / IN_PROGRESS`。
 
-過去問対応品質ゲートは `5 / 5 PASS`。完成数は `6 / 12` のまま。次は主source旧進捗2箇所だけを実態へ同期する。
+過去問対応品質ゲートは `5 / 5 PASS`。完成数は `6 / 12` のまま。次は最終QAを再判定する。
