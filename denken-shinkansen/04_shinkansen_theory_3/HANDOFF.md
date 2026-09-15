@@ -6,28 +6,38 @@
 
 Topic 01〜07は最終QAまでPASSし、`completed`。
 
-Topic 08 `新幹線の交流25kVとは何なのか` は完成後公式過去問独立再解答まで完了。固定4過去問を完成教材だけで再解答し、公式解答と `4 / 4` 一致した。教材外知識、後続Topic論点、未確認実車値による補完はない。
+Topic 08 `新幹線の交流25kVとは何なのか` は最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS`。過去問対応品質ゲート、必須成果物、既存表示QA、SPEC境界はPASSしている。未完了理由は主source・練習sourceの進捗記録が実在成果物より古いことだけである。
 
 - 完成数: `7 / 14`
 - last completed: `07 モーターはなぜ回る？`
 - active topic: `08 新幹線の交流25kVとは何なのか`
-- current status: `topic_08_independent_reanswer_complete`
-- next start: Topic 08の最終QA
+- current status: `topic_08_final_qa_needs_revision`
+- next start: 主source・練習sourceの進捗記録だけを実成果物へ同期する
 
 ## 今回進捗
 
-Topic 08の完成後公式過去問独立再解答を完了し、GitHub正本へ反映した。
+Topic 08の最終QAを実施し、記録を `topics/08_ac_25kv_basics/08_ac_25kv_basics_final_qa.md` に追加した。
 
-確認結果:
-- MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC: 再確認済み
-- 固定公式過去問: `4問`
+PASS:
+- 固定公式過去問: `4問`（MASTER_SPEC / EXAM_ALIGNMENT_SPECの5問未満例外）
 - 完成後独立再解答: `4 / 4 PASS`
 - 独立解答列: `(5), (3), (5), (1)`
 - 公式解答列: `(5), (3), (5), (1)`
+- 練習問題: 15問、独立再計算・再判定 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
+- 解説PDF: 200 dpi表示QA `2 / 2 PASS`、文字抽出QA PASS
+- 練習PDF: 200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS
+- PowerPoint: 既存進捗記録で表示QA `4 / 4 PASS`、overflow検査PASS、ZIP整合性PASS
 - 教材外知識補完: `0問`
 - RLC・リアクタンス・力率・三相・高調波等の後続Topic依存: `0問`
 - 非正弦波論点への依存: `0問`
 - 未確認新幹線実車値依存: `0問`
+
+FAIL:
+- 主source `08_ac_25kv_basics.md` の冒頭statusが `EXPLANATION_SOURCE_COMPLETE` のまま
+- 主source §23が「解説PDF・練習・PowerPoint: 未着手」「完成後独立再解答: 未実施」「次工程: 解説PDF作成」のまま
+- 練習source `08_ac_25kv_basics_practice.md` のstageが `PRACTICE_PDF_COMPLETE` のまま
+
+教材本文、固定EXAM_ALIGNMENT、問題、解答、PDF/PPTX成果物の技術内容には修正理由なし。次工程は進捗メタデータだけを同期する。
 
 ## Topic 08 固定過去問
 
@@ -76,15 +86,6 @@ Topic 08の完成後公式過去問独立再解答を完了し、GitHub正本へ
 - 3枚目: 同一周波数正弦波の基本ベクトル合成
 - 4枚目: 指定瞬時値への最初の到達時刻と波形読取の本試験解法フロー、固定4問対応
 
-## Topic 08 完成後独立再解答
-
-- 令和7年度上期 理論 問8: `(5)`、`t=1/480 s`
-- 令和6年度下期 理論 問8: `(3)`、最大値2倍・`π/3 rad`進み
-- 令和3年度 理論 問8: `(5)`、`i=20√2 sin(100πt-π/4) A`
-- 平成21年度 理論 問9: `(1)`、`t=1/480 s`
-
-公式解答との一致: `4 / 4 PASS`
-
 ## Topic 08 境界
 
 - Topic 09のRLC、誘導性/容量性リアクタンス、インピーダンス、共振を追加しない
@@ -99,6 +100,7 @@ Topic 08の完成後公式過去問独立再解答を完了し、GitHub正本へ
 - source: `topics/08_ac_25kv_basics/08_ac_25kv_basics.md`
   - EXAM_ALIGNMENT: 完成
   - 解説本文＋3段階例題: 完成
+  - 進捗記録: 要同期
 - 解説PDF: `topics/08_ac_25kv_basics/08_ac_25kv_basics_explanation.pdf`
   - A4縦2ページ
   - 200 dpi表示QA `2 / 2 PASS`
@@ -108,6 +110,7 @@ Topic 08の完成後公式過去問独立再解答を完了し、GitHub正本へ
   - 全15問・全問五肢択一
   - 独立再計算・再判定 `15 / 15 PASS`
   - 正答一意性 `15 / 15 PASS`
+  - 進捗記録: 要同期
 - 練習PDF: `topics/08_ac_25kv_basics/08_ac_25kv_basics_practice.pdf`
   - A4縦4ページ
   - 200 dpi表示QA `4 / 4 PASS`
@@ -120,14 +123,15 @@ Topic 08の完成後公式過去問独立再解答を完了し、GitHub正本へ
   - ZIP整合性 `PASS`
 - 完成後独立再解答記録: `topics/08_ac_25kv_basics/08_ac_25kv_basics_exam_recheck.md`
   - 固定4問 `4 / 4 PASS`
-
-最終QAは未着手。
+- 最終QA記録: `topics/08_ac_25kv_basics/08_ac_25kv_basics_final_qa.md`
+  - `NEEDS_REVISION / IN_PROGRESS`
+  - 唯一のFAIL: source進捗記録整合性
 
 ## 次に行うこと
 
-Topic 08の最終QAを実施する。
+主source・練習sourceの進捗記録だけを、解説PDF・練習PDF・PowerPoint・完成後独立再解答まで完了している実態へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、解答、PDF/PPTX内容は変更しない。
 
-固定4問のEXAM_ALIGNMENT、完成後独立再解答 `4 / 4 PASS`、必須成果物、PDF/PPTX表示QA、source・練習sourceの進捗記録、固定範囲境界を再確認し、PASSの場合のみTopic 08を`completed`とする。
+同期後、Topic 08の最終QAを再実施し、全品質ゲートPASSの場合のみ`completed`とする。
 
 ## 固定ルール
 
