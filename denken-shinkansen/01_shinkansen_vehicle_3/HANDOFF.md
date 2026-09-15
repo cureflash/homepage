@@ -6,14 +6,14 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は30/38。01〜30がPASS。active topicは31 `ATC② 地上から車上へどう情報を送る？`。
 
 ## 今回進捗
-Topic 31の解説本文§1〜§15＋3段階例題を完成した。制作前に固定した公式過去問5問・6対象項目を本文へ `6 / 6` 対応付け、周期・周波数、CPIと処理時間、A-D/D-A、標本化・量子化・符号化、伝送路・雑音・多重化・搬送波・変調波・圧縮、条件分岐・反復を系列SPEC固定範囲内で整理した。
+Topic 31の解説PDFを完成した。本文§1〜§15・3段階例題・制作前に固定した公式過去問5問6対象項目の対応を収録し、A4縦4ページ、180 dpi全4ページ表示QA PASS、文字抽出QA PASSとした。固定EXAM_ALIGNMENTは `6 / 6` を維持している。
 
 新幹線側はJRTTで確認した「速度信号用電流をレールへ流し、先頭車の受電器で受信する」という地上→車上の基本経路だけに留めた。Topic 32の速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR、未確認のATC実車周波数値・符号体系・ビットレートは追加していない。
 
 更新:
-- `topics/31_atc_signal_transmission/31_atc_signal_transmission.md` — 解説本文§1〜§15、3段階例題、固定EXAM_ALIGNMENT本文マッピングを追加
-- `STATUS.md` — `topic_31_explanation_source_complete` へ更新
-- `HANDOFF.md` — 次開始点をTopic 31解説PDFへ更新
+- `topics/31_atc_signal_transmission/31_atc_signal_transmission_explanation.pdf` — A4縦4ページ、§1〜§15・3段階例題・固定5問6対象項目を収録。180 dpi `4 / 4 PASS`、文字抽出QA PASS
+- `STATUS.md` — `topic_31_explanation_pdf_complete` へ更新
+- `HANDOFF.md` — 次開始点をTopic 31練習source/PDFへ更新
 
 ## Topic 31 固定EXAM_ALIGNMENT
 1. R7下 機械 問14 — フローチャートの条件分岐・反復による論理判断 — `3` — PASS
@@ -25,6 +25,7 @@ Topic 31の解説本文§1〜§15＋3段階例題を完成した。制作前に�
 
 制作前独立解答: `6 / 6 PASS`。
 本文マッピング: `6 / 6 PASS`。
+解説PDF反映: `6 / 6 PASS`。
 公式解答との不一致: `0件`。
 固定範囲外知識による正答補完: `0件`。
 固定範囲外追加: `0件`。
@@ -47,6 +48,15 @@ Topic 31の解説本文§1〜§15＋3段階例題を完成した。制作前に�
 - §14 標準例題: 標本化条件
 - §15 複合例題: デジタル処理時間と条件判断
 
+## Topic 31 解説PDF QA
+- path: `topics/31_atc_signal_transmission/31_atc_signal_transmission_explanation.pdf`
+- A4縦: 4ページ
+- 180 dpi表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- 固定5問・6対象項目: `6 / 6` 反映
+- Topic 32範囲追加: `0件`
+- 未確認実車値追加: `0件`
+
 ## Topic 31 固定範囲
 扱う:
 - 信号
@@ -66,12 +76,13 @@ Topic 31の解説本文§1〜§15＋3段階例題を完成した。制作前に�
 - 固定過去問に不要な通信方式各論
 
 ## 現在の状態
-- `current_status`: `topic_31_explanation_source_complete`
+- `current_status`: `topic_31_explanation_pdf_complete`
 - 完成数: 30/38
 - 01〜30: PASS
 - active topic: 31 `ATC② 地上から車上へどう情報を送る？`
 - Topic 31制作前独立解答: `6 / 6 PASS`
 - Topic 31本文マッピング: `6 / 6 PASS`
+- Topic 31解説PDF反映: `6 / 6 PASS`
 
 ## 次の正確な開始点
-Topic 31の解説PDFを作成する。本文§1〜§15・3段階例題・固定5問6対象項目の対応を反映し、全ページ表示QAを行う。
+Topic 31の練習source/PDFを作成する。固定5問・6対象項目へ接続する三種問題を作成し、独立計算・論理QA、全ページ表示QA、文字抽出QAを行う。
