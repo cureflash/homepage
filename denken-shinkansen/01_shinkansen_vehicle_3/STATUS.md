@@ -1,18 +1,18 @@
 # STATUS - 新幹線車両・電験三種
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 31 / 38
-- current_status: `topic_32_powerpoint_complete`
+- current_status: `topic_32_independent_reanswer_complete`
 - last_completed_topic: `31 ATC② 地上から車上へどう情報を送る？`
 - active_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
-- next_start: Topic 32の固定EXAM_ALIGNMENTと完成済み成果物を維持し、完成後独立再解答を行う
+- next_start: Topic 32の固定EXAM_ALIGNMENTと完成済み成果物を維持し、最終QAを実施する
 
 ## 新品質ゲート進捗
 - [x] 01〜31 — PASS
-- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — PowerPoint完了
+- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 完成後独立再解答完了、最終QA待ち
 
 ## 32 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
@@ -25,6 +25,7 @@
 6. R6上 機械 問13 — シーケンス・フィードバック・インタロック — `2` — PASS
 
 制作前独立解答: `6 / 6 PASS`。
+完成後独立再解答: `6 / 6 PASS`。
 公式解答との不一致: `0件`。
 教材外知識補完: `0件`。
 固定範囲外知識による正答補完: `0件`。
@@ -96,6 +97,20 @@ source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 - 固定範囲外論点追加: `0件`
 - Topic 30/31範囲の再説明追加: `0件`
 - 未確認実車値追加: `0件`
+
+## 32 完成後独立再解答
+- R8上 機械 問13 — 内部信号を連立し `C/R=(1+jωT1)/(1+jωT2)` → 選択肢4 — PASS
+- R7下 機械 問18(a) — `T=0.2 s, K=10` より `C/R=10/(1+j0.2ω)` → 選択肢2 — PASS
+- R7下 機械 問18(b) — 低周波利得 `20 dB`、折点 `5 rad/s`、以後 `-20 dB/dec` → 選択肢2 — PASS
+- R6下 機械 問13 — I=定常特性改善、D=過渡特性改善、P=両特性へ影響 → 選択肢2 — PASS
+- R6下 機械 問14 — `X=A·C+B·NOT(C)` を場合分けしてタイムチャート追跡 → 選択肢3 — PASS
+- R6上 機械 問13 — シーケンス/フィードバック、有接点、インタロック、タイムチャートを対応 → 選択肢2 — PASS
+- 合計: `6 / 6 PASS`
+- 公式解答との不一致: `0件`
+- 教材外知識補完: `0件`
+- 固定範囲外知識による正答補完: `0件`
+- 未確認実車値依存: `0件`
+- 記録: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control_final_qa.md`
 
 ## 31 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、信号、周波数、情報伝送、センサ、デジタル信号、論理判断。
@@ -282,4 +297,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 31 `ATC② 地上から車上へどう情報を送る？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は解説画像PowerPointまで完了。固定5問・6対象項目と既存成果物を変更せず、次は完成後独立再解答を実施する。
+Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は完成後独立再解答まで完了。固定5問・6対象項目と既存成果物を変更せず、次は最終QAを実施する。
