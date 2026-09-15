@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 10 / 21
-- current_status: `topic_10_completed`
+- current_status: `topic_11_exam_alignment_complete`
 - last_completed_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
 - active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
-- next_start: Topic 11制作前EXAM_ALIGNMENT
+- next_start: Topic 11 解説本文＋3段階例題
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -104,21 +104,44 @@
 - [x] 練習source末尾の旧進捗記録同期
 - [x] 最終QA再実施: `PASS / completed`
 
+## Topic 11 固定EXAM_ALIGNMENT
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] 固定範囲: RLC共振、周波数応答、ローパス、ハイパス、バンドパス、遮断周波数、ゲイン、位相
+- [x] H28 一次 理論 問8(1)〜(5): 周波数測定・交流ブリッジ
+- [x] H27 一次 理論 問2(1)〜(5): RC回路の振幅・位相・周波数依存
+- [x] H25 一次 理論 問3(1)〜(5): 可変周波数交流回路・特定周波数条件
+- [x] H24 一次 理論 問7(1)〜(5): 測定回路の周波数特性・周波数非依存補償
+- [x] H22 一次 理論 問4(1)〜(5): ヘイブリッジによる周波数特定
+- [x] 品質ゲート対象を一次5問・25小問に固定
+- [x] 公式問題・公式解答25小問を照合
+- [x] R8二次は2026-09-16時点で未実施、R7〜R5二次を確認
+- [x] R5二次 機械・制御 問3「電力用能動フィルタ」は固定範囲外体系が必要なため非採用
+- [x] R5二次 機械・制御 問4「ゲイン特性曲線からの伝達関数」は自動制御体系が主題のため非採用
+- [x] 二次採用0問・二次数合わせ0件
+- [x] 実車ATC回路の推測追加0件
+- [x] Topic 12以降の先取り0件
+
+## Topic 11 制作進捗
+- [x] 制作前EXAM_ALIGNMENT: 一次5問・25小問
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF＋表示QA
+- [ ] 練習問題source＋練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 10の最終QAを再実施し、`PASS / completed` とした。
+Topic 11「ATCはなぜ特定の周波数を見分けられる？」の制作前EXAM_ALIGNMENTを完成した。
 
-- 固定一次5問・20小問の完成後独立再解答: `20 / 20 PASS`
-- 教材外知識補完: `0件`
+- 固定一次: `5問 / 25小問`
+- 二次確認: `R7〜R5`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
-- 必須成果物: `PASS`
-- PDF/PPTX表示QA・文字抽出・整合性: `PASS`
-- SPEC境界: `PASS`
-- 前回exact blockerだった練習source末尾の旧進捗記録: `解消済み`
-- 固定範囲外追加: `0件`
-- 未確認実設備値追加: `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認ATC実設備値追加: `0件`
+- source: `topics/11_atc_frequency_filter/11_atc_frequency_filter.md`
 
 ## 判定
 
-Topic 10は `PASS / completed`。完成数は `10 / 21`。次工程はTopic 11「ATCはなぜ特定の周波数を見分けられる？」の制作前EXAM_ALIGNMENT。
+Topic 11は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `10 / 21`。次工程は解説本文＋3段階例題。
