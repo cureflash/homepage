@@ -6,37 +6,35 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `7 / 16`。Topic 01〜07は完成済み。
 
 ## 今回進捗
-Topic 07 `なぜ三相交流をそのまま架線へ流さない？` の最終QAを再判定し、`PASS / completed` とした。
+Topic 08 `新幹線の変電所はなぜ数十kmおき？` の制作前EXAM_ALIGNMENTを完了した。
+
+SPEC固定範囲は、抵抗、リアクタンス、インピーダンス、電圧降下、電力損失、力率、送電端、受電端、電力、効率のみ。直近年度から公式過去問を確認し、固定範囲だけで完答できる5問・7小問を固定した。
 
 現行品質ゲート:
-- R4上 機械 問9 — スコット結線、二次90°
-- H30 電力 問8 — 変圧比、平衡三相有効電力
-- H22 理論 問9 — Y結線、線間/相関係、三相電力、中性線電流
+- R7下 電力 問16 (a)(b) — 三相3線式の電圧降下、力率、線路損失
+- R7下 電力 問17 (a)(b) — 力率の異なる複数負荷、区間ごとの電圧降下
+- R7上 電力 問13 — 力率変化、三相電力、線路損失一定
+- R6上 電力 問13 — 2回線、線路抵抗、送電損失、損失率
+- R5上 電力 問12 — R・X、電圧降下率、最大負荷電力
 
-改定完成後独立再解答は `(3),(3),(4)`、公式解答と `3 / 3 PASS`。教材のみ完結 `3 / 3 PASS`、教材外知識補完0件。
+制作前独立検証は `7 / 7 PASS`。問題文から先に解き、公式解答で照合済み。完成後のブラインド独立再解答を汚染しないため、正答番号はsource・STATUS・HANDOFFへ保存していない。
 
-練習PDF QA・PowerPoint Slide 4・PowerPoint QAは現行3問へ同期済み。PowerPointは16:9・4枚、1601×900再表示 `4 / 4 PASS`、境界外はみ出し0、ZIP整合性PASS。SPEC固定範囲外追加0件。
+R8上 電力 問8は電圧降下・線路損失を含むが、機械的強度・コロナ放電・雷/開閉サージまで要求するため固定範囲外として除外した。件数合わせによる採用はしていない。
 
-最終QA: `topics/07_phase_conversion/07_phase_conversion_final_qa.md`
+source: `topics/08_voltage_drop/08_voltage_drop.md`
 
-## Topic 07 完了成果物
-- source: `topics/07_phase_conversion/07_phase_conversion.md`
-- EXAM_ALIGNMENT再監査: `topics/07_phase_conversion/07_phase_conversion_exam_alignment_reaudit.md`
-- 解説PDF: `topics/07_phase_conversion/07_phase_conversion_explanation.pdf`
-- 練習PDF: `topics/07_phase_conversion/07_phase_conversion_practice.pdf`
-- 練習PDF QA: `topics/07_phase_conversion/07_phase_conversion_practice_qa.md`
-- 解説画像PowerPoint: `topics/07_phase_conversion/07_phase_conversion_images.pptx`
-- PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
-- 改定独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer_revised.md`
-- 最終QA: `topics/07_phase_conversion/07_phase_conversion_final_qa.md`
+## 範囲境界
+Topic 09以降へ先回りしない。ATき電方式、帰線、線路インダクタンス・静電容量の詳細導出、地中線路、短絡・保護、需要率・負荷率・不等率、無効電力補償設備は追加しない。
+
+実際の新幹線変電所間隔や個別設備値は一次資料確認前に真値化しない。
 
 ## 現在状態
-- `current_status`: `topic_07_completed`
+- `current_status`: `topic_08_exam_alignment_complete`
 - 完成数: `7 / 16`
 - last completed: Topic 07 `なぜ三相交流をそのまま架線へ流さない？`
 - active: Topic 08 `新幹線の変電所はなぜ数十kmおき？`
 
 ## 次の正確な開始点
-Topic 08の制作前EXAM_ALIGNMENTを行う。
+Topic 08の解説本文＋3段階例題を作成する。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 08固定範囲を確認し、公式過去問を直近年度から調査する。本文・PDF等の制作前に、要求知識・使用式・設問型・教材で必要な説明を固定する。件数合わせやTopic 09以降の論点追加はしない。
+`topics/08_voltage_drop/08_voltage_drop.md` のEXAM_ALIGNMENT 5問・7小問を要求事項の正本として使い、必要な中間知識を欠落させず本文へマッピングする。Topic 09以降の論点・未確認の実設備値は追加しない。解説本文完成後にSTATUS・HANDOFFを次工程へ同期する。
