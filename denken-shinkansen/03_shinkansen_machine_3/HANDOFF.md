@@ -3,10 +3,10 @@
 更新日: 2026-09-15
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `8 / 16`。Topic 01〜08は品質ゲートPASSでcompleted。active topicは09「新幹線はどうやって電気で止まる？」。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は品質ゲートPASSでcompleted。active topicは10「新幹線の速度はどう自動制御される？」。
 
 ## 今回進捗
-Topic 09「新幹線はどうやって電気で止まる？」の完成後独立再解答を完了した。
+Topic 09「新幹線はどうやって電気で止まる？」の最終QAを実施し、`PASS / completed` とした。
 
 - 品質ゲート対象: 公式過去問5問
 - 制作前答案列: `(4), (3), (2), (5), (1)`
@@ -24,7 +24,10 @@ Topic 09「新幹線はどうやって電気で止まる？」の完成後独立
 - 練習問題source: 12問・全問五肢択一、独立QA `12 / 12 PASS`
 - 練習PDF: A4縦6ページ、表示QA `6 / 6 PASS`
 - 解説画像PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性 `PASS`
-- 完成数: `8 / 16`
+- source進捗整合: `PASS`
+- 固定範囲境界: `PASS`
+- 最終QA: `PASS / completed`
+- 完成数: `9 / 16`
 
 固定範囲外の誘導機構造・スリップリング・直流機始動/速度制御・発電機外部特性・チョッパ・二次入力/二次銅損・ベクトル制御等は追加していない。数値問題は通常の電験三種型または計算練習用仮定値とし、未確認実車値を真値として扱っていない。
 
@@ -67,7 +70,7 @@ Topic 09「新幹線はどうやって電気で止まる？」の完成後独立
 
 四象限運転は概念図までとし、詳細解析は扱わない。新幹線実車値は一次資料確認済みのものだけを使い、未確認値は推測しない。
 
-## Topic 09 現在状態
+## Topic 09 完了状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前検証: `5 / 5 PASS`
 - 解説本文: 完了
@@ -91,7 +94,7 @@ Topic 09「新幹線はどうやって電気で止まる？」の完成後独立
 - PowerPoint ZIP整合性: `PASS`
 - 完成後独立再解答: `5 / 5 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 未実施
+- 最終QA: `PASS / completed`
 
 source: `topics/09_regenerative_braking/09_regenerative_braking.md`
 
@@ -106,7 +109,7 @@ PowerPoint: `topics/09_regenerative_braking/09_regenerative_braking_images.pptx`
 PowerPoint QA: `topics/09_regenerative_braking/09_regenerative_braking_powerpoint_qa.md`
 
 ## 次に行う
-Topic 09の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT 5問、完成後独立再解答 `5 / 5 PASS`、表示QA、source進捗整合、固定範囲境界を確認する。固定EXAM_ALIGNMENT 5問・固定範囲は変更しない。
+Topic 10「新幹線の速度はどう自動制御される？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査し、系列SPEC外の論点を件数合わせで追加しない。
 
 ## Topic 08 完了要約
 Topic 08「N700Sのモーターはなぜ小さくできた？」は品質ゲートPASS / completed。
