@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 9 / 14
-- current_status: `topic_09_completed`
+- current_status: `topic_10_exam_alignment_complete`
 - last_completed_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
 - active_topic: `10 新幹線が使う電力は「W」だけではない`
-- next_start: Topic 10の制作前EXAM_ALIGNMENTを開始する
+- next_start: Topic 10の解説本文＋3段階例題を作成する
 
 ## Topic 01 進捗
 
@@ -164,14 +164,31 @@
 - [x] 最終QA再実施
 - [x] 最終QA PASS
 
+## Topic 10 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] GitHub上のSTATUS / HANDOFF / 既存成果物確認（Topic 10既存成果物なし）
+- [x] 直近年度を優先して公式理論過去問を確認
+- [x] Topic 10固定範囲でゲート対象5問・6答案要素を確定
+- [x] 制作前独立検証 `5 / 5問・6 / 6答案要素 PASS`
+- [x] Topic 11以降の三相・半導体・高調波と未確認実車値を境界整理
+- [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA PASS
+
 ## 今回進めた内容
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の最終QAを再実施し、`PASS / completed` とした。
+Topic 10 `新幹線が使う電力は「W」だけではない` の制作前EXAM_ALIGNMENTを完了した。
 
-前回唯一FAILだった練習source進捗記録は実成果物へ同期済み。固定6過去問の完成後独立再解答 `6 / 6 PASS`、教材外補完0問、必須成果物、解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗記録整合を全件PASS確認した。
+系列SPECの有効電力・無効電力・皮相電力・力率・位相差・複素電力の基本・力率改善・コンデンサによる力率改善の基本だけを対象とし、公式理論過去問5問・6答案要素を固定した。制作前独立検証は `5 / 5問・6 / 6答案要素 PASS`。
 
-教材本文・固定EXAM_ALIGNMENT・練習15問・正答・解説・PDF・PowerPointの技術内容は変更していない。主source・練習sourceへ完了進捗だけを同期した。
+Topic 11の三相交流、Topic 12以降の半導体、Topic 13側の高調波、電力・法規の設備論による件数合わせは0件。未確認の新幹線実車力率・補償方式も追加していない。
 
 ## 判定
 
-現在 `topic_09_completed`。完成数は `9 / 14`。次はTopic 10 `新幹線が使う電力は「W」だけではない` の制作前EXAM_ALIGNMENTを開始する。
+現在 `topic_10_exam_alignment_complete / IN_PROGRESS`。完成数は `9 / 14`。次はTopic 10の解説本文＋3段階例題を作成する。
