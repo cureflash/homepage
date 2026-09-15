@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 7 / 20
-- current_status: `topic_08_powerpoint_complete`
+- current_status: `topic_08_exam_reanswer_complete`
 - last_completed_topic: `07 一階常微分方程式`
 - active_topic: `08 二階常微分方程式`
-- next_start: Topic 08の完成後独立再解答を実施する。固定一次5問・15小問を完成教材だけで解き、保存済み正答を先に見ずに公式解答と照合する
+- next_start: Topic 08の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認する。全品質ゲートPASSの場合のみ `completed` とする
 
 ## Topic 07 制作品質ゲート
 
@@ -49,41 +49,35 @@
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答 `15 / 15 PASS`
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 08 `二階常微分方程式` の解説画像PowerPointを作成し、GitHub正本へ反映した。
+Topic 08 `二階常微分方程式` の完成後独立再解答を実施し、GitHub正本へ記録した。
 
 成果物:
-- `topics/08_second_order_ode/08_second_order_ode_images.pptx`
-- `topics/08_second_order_ode/08_second_order_ode_powerpoint_qa.md`
-- 16:9、全5スライド
+- `topics/08_second_order_ode/08_second_order_ode_exam_reanswer.md`
 
-可視化:
-- 二階方程式の本試験解法フロー
-- 判別式・減衰比による根分類
-- `ω_n`・`ζ`・`ω_d` の区別
-- 直列RLCの二階方程式と切替初期条件
-- R8問6型の一次微分係数 `2R`
-- RLCと機械系の共通二階構造
-- 固定一次5問・15小問との対応表
+固定EXAM_ALIGNMENT:
+- R8 一次 理論 問1 (4)〜(5): `2 / 2 PASS`
+- R8 一次 理論 問6 (3)〜(4): `2 / 2 PASS`
+- R3 一次 理論 問5 (1)〜(4): `4 / 4 PASS`
+- H28 一次 理論 問3 (1)〜(5): `5 / 5 PASS`
+- H24 一次 理論 問3 (1)〜(2): `2 / 2 PASS`
+
+完成後独立再解答: `15 / 15 PASS`
 
 QA:
-- 全5スライド表示QA: `5 / 5 PASS`
-- overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- 固定EXAM_ALIGNMENT接続: `5 / 5問・15 / 15小問の要求事項をカバー`
+- 教材外知識補完: `0件`
 - Topic 09〜10先取り: `0件`
 - 固定範囲外追加: `0件`
-- 未確認実車値追加: `0件`
-
-制作前独立再解答 `15 / 15 PASS` は変更なし。
+- 二次記述の件数合わせ: `0件`
+- 未確認実車値依存: `0件`
 
 ## 判定
 
-Topic 08は `IN_PROGRESS / POWERPOINT_COMPLETE`。完成数は `7 / 20` のまま。
+Topic 08は `IN_PROGRESS / EXAM_REANSWER_COMPLETE`。完成数は `7 / 20` のまま。
 
-次は完成後独立再解答。
+次は最終QA。
