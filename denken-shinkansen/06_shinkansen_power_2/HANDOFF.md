@@ -3,25 +3,41 @@
 updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `07`
-current_status: `topic_07_independent_reanswer_complete`
+current_status: `topic_07_final_qa_needs_revision`
 
 ## 今回完了
 
-Topic 07「三相電力をどう25kVの単相へ変える？」の完成後独立再解答を完了した。
+Topic 07「三相電力をどう25kVの単相へ変える？」の最終QAを実施した。
+
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
+技術内容と過去問対応品質ゲートはPASSしたが、主source `topics/07_feeding_transformer/07_feeding_transformer.md` の進捗記録が旧状態のため完了扱いにはしていない。
 
 成果物:
-- `topics/07_feeding_transformer/07_feeding_transformer_independent_reanswer.md`
+- `topics/07_feeding_transformer/07_feeding_transformer_final_qa.md`
 
-結果:
-- H23一次「理論」問6: `5 / 5空欄 PASS`
-- H23二次「機械・制御」問2: `7 / 7答案要素 PASS`
-- 合計: `2 / 2問 PASS`、`12 / 12答案要素 PASS`
+## 最終QA結果
+
+PASS:
+- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` との整合
+- 固定EXAM_ALIGNMENT: H23一次「理論」問6＋H23二次「機械・制御」問2
+- 完成後独立再解答: `2 / 2問 PASS`、`12 / 12答案要素 PASS`
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 後続Topic知識依存: `0件`
-- 未確認実設備値依存: `0件`
+- 練習15問: 一次型 `10 / 10 PASS`、二次記述 `5 / 5 PASS`
+- 解説PDF: A4縦6ページ、表示QA `6 / 6 PASS`、文字抽出QA PASS
+- 練習PDF: A4縦6ページ、表示QA `6 / 6 PASS`、文字抽出QA PASS
+- PowerPoint: 16:9・5枚、表示QA `5 / 5 PASS`、overflow 0件、ZIP整合性PASS
+- 固定10項目カバレッジ: `10 / 10`
+- 未確認実設備値追加: `0件`
 
-完成教材の説明・公式・解法手順だけを解答根拠として再構成し、答案確定後に公式解答・標準解答と照合した。
+FAIL:
+- 主source冒頭が `explanation_source_complete` のまま
+- 主source冒頭に「PDF・練習問題・PowerPointは未着手」と残存
+- 主source末尾 `現在地` でも解説PDF、練習問題、PowerPoint、完成後独立再解答を未着手としている
+
+GitHub上では後続成果物が実在するため、進捗記録不整合のみが未完了理由。
 
 ## 固定した公式過去問
 
@@ -48,6 +64,7 @@ Topic 07「三相電力をどう25kVの単相へ変える？」の完成後独�
 - `topics/07_feeding_transformer/07_feeding_transformer_images.pptx`
 - `topics/07_feeding_transformer/07_feeding_transformer_powerpoint_qa.md`
 - `topics/07_feeding_transformer/07_feeding_transformer_independent_reanswer.md`
+- `topics/07_feeding_transformer/07_feeding_transformer_final_qa.md`
 
 ## 境界
 
@@ -73,11 +90,11 @@ Topic 07固定範囲は、三相交流、単相負荷、相変換、スコット
 
 ## 次に行う
 
-Topic 07の最終QAのみを実施する。
+主source `topics/07_feeding_transformer/07_feeding_transformer.md` の進捗記録のみを現在の成果物実態へ同期する。
 
-- 必須成果物の実在を確認する
-- 固定EXAM_ALIGNMENT一次1問＋二次1問の完成後再解答 `2 / 2問・12 / 12答案要素 PASS` を確認する
-- 練習15問、解説PDF、練習PDF、PowerPointのQA記録を確認する
-- 固定範囲外追加が0件であることを確認する
-- 主source・STATUS・HANDOFFの進捗記録整合を確認する
-- 全件PASSの場合のみ `completed` とする
+- 冒頭状態を更新
+- 「PDF・練習問題・PowerPointは未着手」の旧記録を削除・同期
+- 末尾 `現在地` を解説PDF・練習source/PDF・PowerPoint・完成後独立再解答完了、最終QA `NEEDS_REVISION` へ同期
+- 教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、固定範囲は変更しない
+
+同期後、最終QAを再実施する。
