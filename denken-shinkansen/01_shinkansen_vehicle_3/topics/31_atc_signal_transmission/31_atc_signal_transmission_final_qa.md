@@ -4,9 +4,9 @@
 
 ## 現在地
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / COMPLETED`
 
-固定5問・6対象項目の完成後独立再解答は `6 / 6 PASS`。必須成果物・過去問対応・表示QA・固定範囲境界はPASSだが、主source冒頭の進捗記録が実在成果物と不整合のため、最終QAは `NEEDS_REVISION` とする。
+固定5問・6対象項目の完成後独立再解答は `6 / 6 PASS`。必須成果物・過去問対応・表示QA・進捗記録整合・固定範囲境界を再確認し、全品質ゲートPASSと判定する。
 
 ## 対象
 
@@ -71,19 +71,20 @@ Topic 32の速度検出・速度照査・ブレーキ指令・フィードバッ
 - 判定: PASS
 
 ### 進捗記録整合
-- `STATUS.md`: PASS（最終QA実施前の現在地として整合）
-- `HANDOFF.md`: PASS（最終QA実施前の現在地として整合）
-- `31_atc_signal_transmission.md`: FAIL
-  - 冒頭「状態」に `PDF・練習・PowerPoint・完成後独立再解答は未着手` と残っている。
-  - 実在する解説PDF、練習source/PDF、PowerPoint、完成後独立再解答記録と不整合。
+- `STATUS.md`: PASS（最終QA再判定直前の現在地として整合）
+- `HANDOFF.md`: PASS（最終QA再判定直前の現在地として整合）
+- `31_atc_signal_transmission.md`: PASS
+  - 冒頭「状態」は、解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで完了している実在成果物と整合。
+  - 前回FAIL原因だった `PDF・練習・PowerPoint・完成後独立再解答は未着手` の旧進捗は残っていない。
+  - 末尾「次工程」は最終QA再判定を示しており、再判定直前の状態として整合。
 
 ### 固定範囲境界
 PASS。Topic 30の列車検知回路の再説明、Topic 32の速度検出・速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR具体回路、未確認のATC実車周波数値・符号体系・ビットレート、固定過去問に不要な通信方式各論は追加していない。
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / COMPLETED`
 
-技術内容、固定5問・6対象項目の過去問対応 `6 / 6 PASS`、必須成果物、表示QA、固定範囲境界はすべてPASS。未完了理由は主source冒頭の進捗記録1箇所だけである。Topic 31はまだ `completed` にしない。
+必須成果物、固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、表示QA、進捗記録整合、固定範囲境界をすべて満たす。Topic 31を `completed` とする。
 
-次工程: `31_atc_signal_transmission.md` 冒頭の進捗記録だけを実在成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・PDF・練習問題・PowerPoint・固定範囲は変更しない。
+次工程: Topic 32 `ATC③ 新幹線をどう自動で減速させる？` の制作前EXAM_ALIGNMENT。教材本文・固定EXAM_ALIGNMENT・数式・例題・PDF・練習問題・PowerPoint・固定範囲は変更しない。
