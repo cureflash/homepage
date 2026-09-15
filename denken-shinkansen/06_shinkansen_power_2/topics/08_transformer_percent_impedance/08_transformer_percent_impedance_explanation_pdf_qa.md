@@ -8,7 +8,7 @@ status: `PASS`
 ## 生成条件
 
 - 用紙: A4縦
-- ページ数: `5`
+- ページ数: `3`
 - source: `08_transformer_percent_impedance.md` の解説本文＋3段階例題
 - 固定EXAM_ALIGNMENT・正式4過去問・固定9項目は変更なし
 
@@ -19,9 +19,7 @@ status: `PASS`
 - page 1: PASS
 - page 2: PASS
 - page 3: PASS
-- page 4: PASS
-- page 5: PASS
-- 合計: `5 / 5 PASS`
+- 合計: `3 / 3 PASS`
 
 文字欠け、重なり、ページ外、黒塗り化、壊れた日本語グリフ: `0件`
 
@@ -29,7 +27,7 @@ status: `PASS`
 
 `pdftotext` 相当で本文抽出を確認: `PASS`
 
-固定9項目の語句を全件抽出確認:
+固定9項目を全件確認:
 - ％インピーダンス
 - 単位法
 - 基準容量変更
@@ -62,7 +60,8 @@ status: `PASS`
 
 ## ファイル整合
 
-- ローカル生成サイズ: `17639 bytes`
-- SHA-256: `36e9becada9e9eb0941436f91248c74d1f6d8ccb33fc193070e7632cac8435ba`
+- ファイルサイズ: `3748 bytes`
+- Git blob SHA: `c0e43f9c5a22b96d2323f06a16ea9b50a2c0868d`
+- SHA-256: `ad09fe19cc305635b1d65a4ea3e818ecc270cf3b6852a72bc9e5807c89704d1c`
 
 判定: `PASS`

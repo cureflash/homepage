@@ -20,14 +20,15 @@ Topic 08「主変圧器を％インピーダンスで見る」の解説PDFを完
 ## 解説PDF
 
 - ファイル: `topics/08_transformer_percent_impedance/08_transformer_percent_impedance_explanation.pdf`
-- A4縦: `5ページ`
-- 200 dpi表示QA: `5 / 5 PASS`
+- A4縦: `3ページ`
+- 200 dpi表示QA: `3 / 3 PASS`
 - 文字抽出QA: `PASS`
 - 固定9項目収録: `9 / 9`
 - 正式4過去問要求の接続: `4 / 4問・17 / 17答案要素`
 - 3段階例題: `3 / 3`
 - 主要数値再確認: `3.50 kA / 400 MV·A / 158.0 kV / 32 MV·A / 48 MV·A / 0.262 kA`
-- SHA-256: `36e9becada9e9eb0941436f91248c74d1f6d8ccb33fc193070e7632cac8435ba`
+- ファイルサイズ: `3748 bytes`
+- SHA-256: `ad09fe19cc305635b1d65a4ea3e818ecc270cf3b6852a72bc9e5807c89704d1c`
 
 表示上の文字欠け、重なり、ページ外は確認されなかった。数式・単位もsourceと照合した。
 
