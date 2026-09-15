@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `09`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - 更新日: 2026-09-16
 
 ## 固定範囲
@@ -296,4 +296,4 @@ fA=1/(2π√LC)。fB=1/(2π√(2LC))=fA/√2。全直列では L合成=3L、C合
 
 ## 次工程
 
-練習問題source・練習PDFまで完成。次は固定EXAM_ALIGNMENT・解説本文・練習問題を変更せず、解説画像PowerPointを作成する。完成後独立再解答が済むまで `completed` にしない。
+PowerPoint・完成後独立再解答まで完了。最終QAは進捗記録不整合のみ `NEEDS_REVISION` だったため、このsourceの進捗記録を実成果物へ同期した。次は固定EXAM_ALIGNMENT・教材本文・問題・PDF・PowerPointを変更せず、最終QAを再実施する。最終QAがPASSするまで `completed` にしない。
