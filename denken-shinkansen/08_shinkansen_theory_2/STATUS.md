@@ -8,7 +8,7 @@
 - current_status: `topic_08_independent_reanswer_complete`
 - last_completed_topic: `07 0系のモーターはなぜ力を出せる？`
 - active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
-- next_start: Topic 08の最終QAを行う
+- next_start: Topic 08主sourceの進捗記録を実成果物へ同期する
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -55,6 +55,7 @@
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答: `6 / 6 PASS`
+- [ ] 主sourceの進捗記録同期
 - [ ] 最終QA
 
 ## 今回進めた内容
@@ -72,6 +73,15 @@ Topic 08「L0系はどうやって磁石だけで浮いて進む？」の完成�
 - 超電導物性・未確認実設備値追加: `0件`
 - 記録: `08_maglev_electromagnetic_induction_reanswer.md`
 
+## 既知の進捗記録不整合
+
+主source `08_maglev_electromagnetic_induction.md` の技術本文・固定EXAM_ALIGNMENTは有効だが、進捗記録が旧状態のまま。
+
+- 冒頭が「解説PDF、練習問題source＋練習PDF、PowerPoint、完成後独立再解答は未実施」と記載
+- 末尾 `## 次工程` が「解説PDFを作成」のまま
+
+技術内容を変えず、この2箇所だけを実成果物へ同期してから最終QAを行う。
+
 ## 判定
 
-Topic 08は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `7 / 21` のまま。次工程は最終QA。
+Topic 08は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `7 / 21` のまま。次工程は主sourceの進捗記録同期。
