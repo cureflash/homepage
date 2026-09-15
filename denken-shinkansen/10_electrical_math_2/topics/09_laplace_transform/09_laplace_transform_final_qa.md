@@ -2,13 +2,13 @@
 
 対象: `09 ラプラス変換`
 
-実施日: 2026-09-16
+再判定日: 2026-09-16
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC範囲境界はPASS。未完了理由は主source Markdownの進捗記録2箇所が旧状態のままで、実在成果物と不整合なため。
+前回 `NEEDS_REVISION` の原因だった主source Markdownの旧進捗2箇所は実成果物へ同期済み。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC範囲境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物の実在確認
 
@@ -71,14 +71,13 @@ R7 問4は伝達関数・定常偏差・畳み込み等が中心でTopic 10以�
 
 Topic 10の伝達関数・極・零点、安定判別、周波数応答は先取りしていない。未確認実車値も追加していない。
 
-## 進捗記録整合
+## 前回FAILの再確認
 
-FAILは主source `09_laplace_transform.md` の2箇所のみ。
+前回FAILだった主source Markdownの進捗記録不整合は解消済み。
 
-1. 冒頭 `## 状態` が「制作前EXAM_ALIGNMENT、制作前独立再解答、解説本文＋3段階例題まで完了」「次工程は解説PDF」の旧状態のまま。
-2. 末尾 `## 次工程` が「解説本文と3段階例題を解説PDFへ反映」の旧状態のまま。
-
-実際には解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで完了済みであるため、GitHub正本内の進捗記録が一致していない。
+- `## 状態`: 解説PDF、練習source/PDF、PowerPoint、完成後独立再解答、初回最終QAまで完了した現在地へ同期済み
+- `## 次工程`: source進捗同期後の最終QA再判定へ同期済み
+- 教材本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF・PowerPoint・完成後独立再解答の技術内容は変更していない
 
 ## 最終判定
 
@@ -90,8 +89,8 @@ FAILは主source `09_laplace_transform.md` の2箇所のみ。
 - Topic 10先取り0件: PASS
 - 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- source Markdown進捗記録と実成果物の整合: FAIL
+- source Markdown進捗記録と実成果物の整合: PASS
 
-総合判定: `NEEDS_REVISION / IN_PROGRESS`。
+総合判定: `PASS / completed`。
 
-次工程は、主sourceの `## 状態` と `## 次工程` の進捗記録だけを実成果物へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、例題、練習問題、PDF、PowerPoint、完成後独立再解答は変更しない。
+Topic 09を完了とし、次はTopic 10 `伝達関数・極・零点` の制作前EXAM_ALIGNMENTへ進む。
