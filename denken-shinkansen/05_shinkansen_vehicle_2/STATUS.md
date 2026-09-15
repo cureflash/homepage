@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_09_source_progress_synced`
-- last_completed_topic: `08 位相制御と平均直流電圧`
-- active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09の最終QAを再判定する。固定一次4問＋二次1問・14対象項目、完成後独立再解答 `14 / 14 PASS`、必須成果物・PDF/PPTX QA、固定範囲境界、進捗記録整合を確認し、PASS時のみ `completed` とする
+- exam_aligned_completed_topics: 9 / 39
+- current_status: `topic_09_completed`
+- last_completed_topic: `09 直流機方式の損失・熱設計`
+- active_topic: `10 300系① 誘導電動機等価回路`
+- next_start: Topic 10の制作前EXAM_ALIGNMENTを行う。二種の一次・二次を合わせ原則5問以上を直近年度優先で調査し、二次対応論点で確認できる記述問題を最低1問含め、固定範囲外を件数合わせで追加しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -19,6 +19,7 @@
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
 - [x] 07 直流主回路の高出力化 — PASS
 - [x] 08 位相制御と平均直流電圧 — PASS
+- [x] 09 直流機方式の損失・熱設計 — PASS
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -443,7 +444,7 @@
 - 独立再解答判定: `PASS`
 
 ## Topic 09 最終QA
-- `09_dc_machine_loss_thermal_design_final_qa.md`: 新規作成
+- `09_dc_machine_loss_thermal_design_final_qa.md`: `PASS / completed`
 - 必須成果物: `PASS`
 - 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問・14対象項目を維持
 - 完成後独立再解答: 一次 `11 / 11 PASS`、二次 `3 / 3 PASS`、合計 `14 / 14 PASS`
@@ -452,8 +453,8 @@
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 直近判定時の進捗記録整合: `FAIL` — 主source `## 状態` の旧進捗2記述が残存していた
-- blocker対応: 主source旧進捗2記述を実成果物へ同期済み。最終QA再判定待ち
-- 直近最終判定: `NEEDS_REVISION / IN_PROGRESS`
+- 前回FAIL要因だった主source旧進捗2記述: `同期済み`
+- 進捗記録整合: `PASS`
+- 最終判定: `PASS / completed`
 
-次工程はTopic 09最終QAの再判定。
+次工程はTopic 10 `300系① 誘導電動機等価回路` の制作前EXAM_ALIGNMENT。
