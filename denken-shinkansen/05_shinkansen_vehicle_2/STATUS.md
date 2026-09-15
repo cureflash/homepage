@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 7 / 39
-- current_status: `topic_08_exam_alignment_complete`
+- current_status: `topic_08_explanation_source_complete`
 - last_completed_topic: `07 直流主回路の高出力化`
 - active_topic: `08 位相制御と平均直流電圧`
-- next_start: Topic 08の解説本文＋3段階例題。制作前に固定した一次3問＋二次2問・20対象項目を全件本文へマッピングし、`SPEC.md` の固定範囲と指定4グラフだけを扱う。後続Topicを件数合わせで追加しない
+- next_start: Topic 08の解説PDF作成＋全ページ表示QA・文字抽出QA。完成済み本文・3段階例題・固定一次3問＋二次2問・20対象項目・`SPEC.md` 指定4可視化を同期し、固定範囲外論点と未確認実車値を追加しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -18,7 +18,7 @@
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
 - [x] 07 直流主回路の高出力化 — PASS
-- [ ] 08 位相制御と平均直流電圧 — EXAM_ALIGNMENT固定完了 / 解説source未作成
+- [ ] 08 位相制御と平均直流電圧 — 解説source完成 / 解説PDF未作成
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -207,7 +207,22 @@
 - 後続Topicの回生・誘導機・PWM/VVVF・IGBT/SiCを件数合わせで採用: `0件`
 - 未確認の100系・200系実車主回路値・素子定格を真値化: `0件`
 - source: `topics/08_phase_control_average_dc_voltage/08_phase_control_average_dc_voltage.md`
-- 解説本文・PDF・練習・PowerPoint: 未着手
+
+## Topic 08 解説source
+- `08_phase_control_average_dc_voltage.md`: 解説本文＋3段階例題 `completed`
+- 固定一次3問＋二次2問・20対象項目: 本文へ全件マッピング
+- 三相全制御ブリッジの平均直流電圧、120°通電電流、基本波、有効・無効電力、総合力率、高調波、単相交流電力調整、誘導性負荷、素子定格を固定範囲内で整理
+- 3段階例題: 基礎・本試験標準・複合を各1問、途中式・成立条件・検算付き
+- SPEC指定4可視化の計算条件: 4 / 4確定
+  - 点弧角―平均直流電圧
+  - 点弧角―力率
+  - 位相制御波形
+  - 高調波成分
+- 日立評論で100系のサイリスタ位相制御・4段積み重ね制御・混合ブリッジ素子耐圧4,000 Vを確認し、200系との比較値2,500 Vも同資料で確認
+- 電気学会資料で200系の力行時サイリスタ位相制御を確認
+- 未確認の100系・200系実車電圧・電流・詳細転流条件を真値化: `0件`
+- 後続Topicのチョッパ、回生、誘導機、PWM/VVVF、IGBT/SiC追加: `0件`
+- 解説PDF・練習・PowerPoint: 未着手
 
 ## Topic 08 固定範囲
 - サイリスタ
@@ -226,4 +241,4 @@
 - 位相制御波形
 - 高調波成分
 
-次工程はTopic 08 `位相制御と平均直流電圧` の解説本文＋3段階例題。
+次工程はTopic 08 `位相制御と平均直流電圧` の解説PDF作成＋全ページ表示QA・文字抽出QA。
