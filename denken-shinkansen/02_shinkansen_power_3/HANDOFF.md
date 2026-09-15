@@ -20,6 +20,8 @@ H30電力問8では、完成済みTopic 06の変圧比 `V1/V2=N1/N2` から一�
 改定独立再解答記録:
 `topics/07_phase_conversion/07_phase_conversion_independent_reanswer_revised.md`
 
+改定再解答結果は主source `topics/07_phase_conversion/07_phase_conversion.md` のEXAM_ALIGNMENT・状態欄・成果物QA・次工程へ同期済み。
+
 ## 現在状態
 - `current_status`: `topic_07_independent_reanswer_complete`
 - 完成数: `6/16`
@@ -64,4 +66,4 @@ H30電力問8では、完成済みTopic 06の変圧比 `V1/V2=N1/N2` から一�
 - SPEC固定範囲外追加: 0件
 
 ## 次の正確な開始点
-改定独立再解答 `3 / 3 PASS` を主source `07_phase_conversion.md` のEXAM_ALIGNMENT・状態欄・成果物QA・次工程へ同期する。その後Topic 07最終QAを実施する。固定範囲は拡張しない。
+Topic 07最終QAを実施し、必須成果物、改定EXAM_ALIGNMENT、独立再解答 `3 / 3 PASS`、既存表示QA、SPEC境界、source・STATUS・HANDOFFの進捗整合を確認する。固定範囲は拡張しない。
