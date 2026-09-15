@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 30 / 38
-- current_status: `topic_31_final_qa_needs_revision`
+- current_status: `topic_31_source_progress_synced`
 - last_completed_topic: `30 ATC① 新幹線は列車をどう検知する？`
 - active_topic: `31 ATC② 地上から車上へどう情報を送る？`
-- next_start: `31_atc_signal_transmission.md` 冒頭の旧進捗 `PDF・練習・PowerPoint・完成後独立再解答は未着手` を実在成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・固定範囲は変更しない
+- next_start: Topic 31の最終QAを再判定し、進捗記録整合を含む全品質ゲートを確認する
 
 ## 新品質ゲート進捗
 - [x] 01〜30 — PASS
-- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 最終QA `NEEDS_REVISION / IN_PROGRESS`。固定5問・6対象項目 `6 / 6 PASS`、必須成果物・表示QA・固定範囲境界PASS。主source冒頭の旧進捗記録1箇所のみ要同期
+- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 固定5問・6対象項目 `6 / 6 PASS`、必須成果物・表示QA・固定範囲境界PASS。主sourceの旧進捗記録を実在成果物へ同期済み。最終QA再判定待ち
 
 ## 31 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、信号、周波数、情報伝送、センサ、デジタル信号、論理判断。
@@ -111,14 +111,15 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - 記録: `topics/31_atc_signal_transmission/31_atc_signal_transmission_final_qa.md`
 
 ## 31 最終QA
-`NEEDS_REVISION / IN_PROGRESS`。
+前回判定は `NEEDS_REVISION / IN_PROGRESS`。
 - 必須成果物: PASS
 - 固定5問・6対象項目の完成後独立再解答: `6 / 6 PASS`
 - 解説PDF / 練習PDF / PowerPoint表示QA: PASS
 - 固定範囲境界: PASS
-- 進捗記録整合: FAIL
-  - `31_atc_signal_transmission.md` 冒頭に `PDF・練習・PowerPoint・完成後独立再解答は未着手` と残っており、実在成果物と不整合
-- 未完了理由は上記旧進捗1箇所のみ。Topic 31はまだ `completed` にしない
+- 前回の進捗記録整合: FAIL
+  - `31_atc_signal_transmission.md` 冒頭の旧進捗記録が実在成果物と不整合だった
+- 今回、主sourceの状態欄・次工程を実在成果物へ同期済み
+- 最終QA再判定は次工程とし、この段階ではTopic 31をまだ `completed` にしない
 
 ## 30 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知。
@@ -200,4 +201,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 30 `ATC① 新幹線は列車をどう検知する？` は固定5問の完成後独立再解答 `5 / 5 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 31 `ATC② 地上から車上へどう情報を送る？` の最終QAは `NEEDS_REVISION / IN_PROGRESS`。技術内容・過去問対応・表示QA・固定範囲境界はPASS。次は主source冒頭の旧進捗1箇所だけを実在成果物へ同期する。
+Topic 31 `ATC② 地上から車上へどう情報を送る？` は主sourceの旧進捗記録を実在成果物へ同期済み。次は最終QAを再判定する。
