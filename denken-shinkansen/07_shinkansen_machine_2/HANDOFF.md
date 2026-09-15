@@ -1,6 +1,6 @@
 # HANDOFF - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 現在地
 Topic 01〜09は最終QAまで `PASS / completed`。
@@ -9,7 +9,7 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_10_practice_source_complete`
+current status: `topic_10_practice_pdf_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -102,11 +102,24 @@ source完成内容:
 - `V_L=200 V, P=6.0 kW, X=0.40 Ω` → `I=30 A`, `V_v=200.36 V`, `K=0.9445`
 - 二次型 `V_L=100 V, P=3.0 kW, X=0.40 Ω, E_d=150 V` → `I=30 A`, `V_v=100.717 V`, `K=0.94957`, `tanφ=0.120`
 
-## 次に行うこと
-Topic 10の練習PDFを作成する。
+## Topic 10 練習PDF
+- `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_practice.pdf`: `completed`
+- A4縦6ページ
+- 一次10問＋二次5問・完全解説を収録
+- 200 dpi全6ページ Visual QA: `6 / 6 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件`
+- 数値・論理再検算: `15 / 15 PASS`
+- 一次正答一意性: `10 / 10 PASS` を維持
+- 固定5過去問・15答案要素: 維持
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `b18a4dafb0123a73d6b87ccaf75bd887cf7dcee6e4d510e9b6310fa5ecabc33d`
 
-1. `10_regenerative_braking_four_quadrant_practice.md` の15問・正答・完全解説を変更しない。
-2. 一次10問＋二次5問をPDFへ収録する。
-3. 全ページ表示QA・文字抽出QA・数値再検算を行う。
-4. 固定一次4問＋二次1問・15答案要素と固定範囲を維持する。
-5. 解説画像PowerPoint・完成後独立再解答へは先行しない。
+## 次に行うこと
+Topic 10の解説画像PowerPointを作成する。
+
+1. Topic 10の固定EXAM_ALIGNMENT、固定範囲、15答案要素を変更しない。
+2. 回生の固定電力フロー、誘導機の `s<0` 発電機運転、四象限運転、H24二次型フェーザ/PWM計算、回生効率を可視化する。
+3. PowerPoint表示QA・overflow・ZIP整合性を確認する。
+4. H27/H24の除外小問、Topic 11/16、未確認実車値を追加しない。
+5. 完成後独立再解答へは先行しない。

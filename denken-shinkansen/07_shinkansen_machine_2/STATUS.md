@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `9 / 22`
-- current_status: `topic_10_practice_source_complete`
+- current_status: `topic_10_practice_pdf_complete`
 - last_completed_topic: `09 誘導電動機を自由に操るには？`
 - active_topic: `10 新幹線はモーターを発電機にして止まる`
-- next_start: Topic 10 練習PDF
+- next_start: Topic 10 解説画像PowerPoint
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -78,8 +78,20 @@
 - [x] 固定一次4問＋二次1問・15答案要素へ全件接続
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 
+## Topic 10 練習PDF
+- [x] `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_practice.pdf`
+- [x] A4縦6ページ
+- [x] 一次10問＋二次5問・完全解説を収録
+- [x] 200 dpi全6ページ表示QA `6 / 6 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件`
+- [x] 数値・論理再検算 `15 / 15 PASS`
+- [x] 一次正答一意性 `10 / 10 PASS` を維持
+- [x] 固定一次4問＋二次1問・15答案要素と固定範囲を維持
+- [x] 固定範囲外論点・未確認実車値の追加 `0件`
+- [x] SHA-256 `b18a4dafb0123a73d6b87ccaf75bd887cf7dcee6e4d510e9b6310fa5ecabc33d`
+
 ## 今回進めた内容
-Topic 10の練習問題・完全解説sourceを完成し、GitHub正本へ反映した。一次10問＋二次記述5問の計15問。独立計算・論理QA `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`。固定5過去問・15答案要素を維持し、H27/H24の除外小問、Topic 11/16、未確認実車値の追加は0件。
+Topic 10の練習PDFを完成し、一次10問＋二次5問の全15問と完全解説を収録した。200 dpi全6ページ表示QA `6 / 6 PASS`、文字抽出QA PASS、数値・論理再検算 `15 / 15 PASS`。固定5過去問・15答案要素を維持し、H27/H24の除外小問、Topic 11/16、未確認実車値の追加は0件。
 
 ## 判定
-Topic 10は `topic_10_practice_source_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は練習PDFを作成する。
+Topic 10は `topic_10_practice_pdf_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は解説画像PowerPointを作成する。
