@@ -9,7 +9,7 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_10_powerpoint_complete`
+current status: `topic_10_blind_reanswer_ready`
 
 ## Topic 10 固定範囲
 - 力行
@@ -54,7 +54,7 @@ current status: `topic_10_powerpoint_complete`
 - R05: 制動時の運動エネルギー→電気エネルギー変換、回生ブレーキ
 - H28: 電力回生、誘導電動機、滑り
 - H27: 直流側→交流側の逆変換、架線回生電力を力行車が消費
-- H24二次: `Vv=VL+jXI`、`I=30 A`、`Vv≈101 V`、`K≈0.949`、`tanφ=0.120`
+- H24二次: `Vv=VL+jXI`、`P=VL I`、PWM変調率を教材だけで再導出する。保存済み数値解はHANDOFFへ記録しない。
 
 ## Topic 10 source
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant.md`
@@ -100,7 +100,7 @@ source完成内容:
 - `s=(1800-1890)/1800=-0.05`
 - `0.95×0.98×0.97=0.90307`
 - `V_L=200 V, P=6.0 kW, X=0.40 Ω` → `I=30 A`, `V_v=200.36 V`, `K=0.9445`
-- 二次型 `V_L=100 V, P=3.0 kW, X=0.40 Ω, E_d=150 V` → `I=30 A`, `V_v=100.717 V`, `K=0.94957`, `tanφ=0.120`
+- 練習二次型の数値再計算は練習source/PDF側でQA済み。固定H24二次過去問の保存済み数値解とは分離する。
 
 ## Topic 10 練習PDF
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_practice.pdf`: `completed`
@@ -126,6 +126,13 @@ source完成内容:
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
 - SHA-256: `77807ae3a7bbd10e7110a79316dacad7eaedb609d2ec4a482cfe473a5b5c310d`
+
+## Topic 10 独立再解答前ゲート
+- `EXAM_ALIGNMENT_SPEC.md` §10に従い、完成後再解答は保存済み正答を先に見ずに行う。
+- 今回runの必須先読みで、旧HANDOFFにH24二次問3の保存済み数値解が残っていることを確認したため、このrunでは独立再解答を実施していない。
+- 旧HANDOFFの保存済み数値解は除去済み。
+- 固定5過去問・15答案要素、教材本文、練習問題、PDF/PPTX、固定範囲は変更していない。
+- 次runは `topic_10_blind_reanswer_ready` から開始する。
 
 ## 次に行うこと
 Topic 10の完成後独立再解答を行う。
