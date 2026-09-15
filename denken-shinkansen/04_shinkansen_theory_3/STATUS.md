@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 7 / 14
-- current_status: `topic_07_completed`
+- current_status: `topic_08_exam_alignment_complete`
 - last_completed_topic: `07 モーターはなぜ回る？`
 - active_topic: `08 新幹線の交流25kVとは何なのか`
-- next_start: Topic 08の制作前EXAM_ALIGNMENTを開始する
+- next_start: Topic 08の解説本文＋3段階例題を作成する
 
 ## Topic 01 進捗
 
@@ -123,19 +123,35 @@
 - [x] 最終QA再実施
 - [x] 最終QA PASS
 
+## Topic 08 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] GitHub上のSTATUS / HANDOFF / 既存成果物確認（Topic 08既存成果物なし）
+- [x] 直近年度を優先して公式理論過去問を確認
+- [x] Topic 08固定範囲だけで完結するゲート対象4問を確定
+- [x] 制作前独立検証 `4 / 4 PASS`
+- [x] RLC・リアクタンス・力率・三相・高調波等の後続Topic論点を境界整理
+- [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA PASS
+
 ## 今回進めた内容
 
-Topic 07 `モーターはなぜ回る？` の最終QAを再実施した。
+Topic 08 `新幹線の交流25kVとは何なのか` の制作前EXAM_ALIGNMENTを完了した。
 
-- 必須成果物の実在: PASS
-- 固定EXAM_ALIGNMENT 5問: 全件マッピング済み
-- 完成後独立再解答: `5 / 5 PASS`
-- 教材外知識補完・後続Topic依存・未確認0系実車値依存: 各 `0問`
-- 解説PDF・練習PDF・PowerPoint既存QA: PASS
-- SPEC境界: PASS
-- 主source・練習sourceの進捗記録整合性: PASS
-- 教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習15問・PDF/PPTX成果物: 変更なし
+- 公式過去問は直近年度から遡って確認
+- 固定範囲だけで問題全体を解ける公式過去問: `4問`
+- MASTER_SPEC / EXAM_ALIGNMENT_SPECの5問未満例外を適用し、確認できた全件を固定
+- 制作前独立検証: `4 / 4 PASS`
+- 令和7年度上期 問8、令和6年度下期 問8、令和3年度 問8、平成21年度 問9を固定
+- 令和8年度上期 問8、令和4年度下期 問8、平成30年度 問8等の範囲外近接問題は件数合わせで採用しない
+- 後続Topic論点・未確認新幹線実車値の追加: `0件`
 
 ## 判定
 
-Topic 07は `PASS / completed`。完成数は `7 / 14`。次はTopic 08 `新幹線の交流25kVとは何なのか` の制作前EXAM_ALIGNMENTを開始する。
+現在 `topic_08_exam_alignment_complete`。完成数は `7 / 14` のまま。次は固定4問の要求事項とSPEC固定範囲だけを使って、Topic 08の解説本文＋3段階例題を作成する。
