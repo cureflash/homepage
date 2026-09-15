@@ -1,7 +1,7 @@
 # Topic 09 北陸新幹線は50Hzと60Hzをどう走る？
 
 更新日: 2026-09-16
-status: `INDEPENDENT_REANSWER_COMPLETE`
+status: `COMPLETED`
 
 ## 1. SPEC固定範囲
 
@@ -545,4 +545,4 @@ XC2 = XC1(f1/f2)
 
 ## 10. 次工程
 
-完成後独立再解答まで完了。次は最終QAを実施する。最終QAがPASSするまで`completed`にしない。
+Topic 09は最終QA再実施で `PASS / completed`。固定6過去問の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・進捗記録整合・SPEC境界を全件PASS確認済み。次はTopic 10「新幹線が使う電力は「W」だけではない」の制作前EXAM_ALIGNMENTへ進む。
