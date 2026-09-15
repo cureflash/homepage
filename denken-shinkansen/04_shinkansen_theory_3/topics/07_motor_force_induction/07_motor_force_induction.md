@@ -1,7 +1,7 @@
 # Topic 07 モーターはなぜ回る？
 
 更新日: 2026-09-15
-status: `explanation_pdf_complete`
+status: `source_progress_synced`
 
 ## 1. SPEC固定範囲
 
@@ -593,9 +593,10 @@ e = Blv sinθ
 - Topic 08以降の論点追加: `0件`
 - 未確認0系実車値の真値化: `0件`
 - 解説PDF: `A4縦4ページ / 200 dpi全4ページ表示QA PASS / 文字抽出QA PASS`
-- 練習問題source・練習PDF: 未着手
-- 解説画像PowerPoint: 未着手
-- 完成後独立再解答: 未実施
-- 最終QA: 未実施
+- 練習問題source・練習PDF: `完成 / 15問独立再計算・再判定 15 / 15 PASS / A4縦5ページ / 200 dpi全5ページ表示QA・文字抽出QA PASS`
+- 解説画像PowerPoint: `16:9・4枚 / 表示QA 4 / 4 PASS / はみ出し0件 / PPTX整合性PASS`
+- 完成後独立再解答: `5 / 5 PASS / 教材外知識補完0問 / 後続Topic依存0問 / 未確認0系実車値依存0問`
+- 最終QA: `NEEDS_REVISION / IN_PROGRESS（技術内容はPASS、進捗記録不整合のみ。source同期後の再実施待ち）`
+- source進捗記録同期: `完了`
 
-次工程: 固定EXAM_ALIGNMENTと解説本文を変更せず、練習問題source・練習PDFを作成する。
+次工程: 最終QAを再実施する。
