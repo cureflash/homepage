@@ -1,38 +1,30 @@
-name: Temporary Theory3 Topic09 PDF
+name: Temporary Theory3 Topic09 PDF Finalize
 
 on:
   push:
     branches: [main]
     paths:
       - '.github/workflows/tmp-theory3-topic09-pdf.yml'
-      - '.tmp_theory3_topic09/topic09.html.gz.b64'
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  finalize:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Install PDF dependencies
+      - name: Verify canonical Topic 09 explanation PDF
         shell: bash
         run: |
           set -euo pipefail
-          sudo apt-get update
-          sudo apt-get install -y fonts-noto-cjk poppler-utils
-          python -m pip install --upgrade 'weasyprint==68.0'
-      - name: Build and verify Topic 09 explanation PDF
-        shell: bash
-        run: |
-          set -euo pipefail
-          base64 -d .tmp_theory3_topic09/topic09.html.gz.b64 | gzip -d > /tmp/topic09.html
+          sudo apt-get update >/dev/null
+          sudo apt-get install -y poppler-utils >/dev/null
           target='denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_explanation.pdf'
-          weasyprint /tmp/topic09.html "$target"
-          pages=$(pdfinfo "$target" | awk '/^Pages:/ {print $2}')
-          test "$pages" = '4'
+          test -s "$target"
+          test "$(pdfinfo "$target" | awk '/^Pages:/ {print $2}')" = '4'
           pdftotext -layout "$target" /tmp/topic09.txt
           python - <<'PY'
           from pathlib import Path
@@ -49,22 +41,116 @@ jobs:
           mkdir -p /tmp/render
           pdftoppm -r 200 -png "$target" /tmp/render/page >/dev/null 2>&1
           test "$(find /tmp/render -maxdepth 1 -name 'page-*.png' | wc -l)" -eq 4
-          test -s /tmp/render/page-1.png
-          test -s /tmp/render/page-2.png
-          test -s /tmp/render/page-3.png
-          test -s /tmp/render/page-4.png
-          echo "pdf_pages=$pages"
-          echo "pdf_size=$(wc -c < "$target")"
-          echo "pdf_sha256=$(sha256sum "$target" | awk '{print $1}')"
-      - name: Commit PDF
+          for p in /tmp/render/page-{1,2,3,4}.png; do test -s "$p"; done
+      - name: Sync progress records and clean temporary build files
         shell: bash
         run: |
           set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          topic = Path('denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc.md')
+          s = topic.read_text(encoding='utf-8')
+          old = 'status: `EXPLANATION_SOURCE_COMPLETE`'
+          new = 'status: `EXPLANATION_PDF_COMPLETE`'
+          assert s.count(old) == 1
+          s = s.replace(old, new, 1)
+          old = '解説本文＋3段階例題は完成。次は固定EXAM_ALIGNMENTと本文を変更せず、解説PDFを作成して全ページ表示QA・文字抽出QAを行う。完成後独立再解答が済むまで`completed`にしない。'
+          new = '解説PDF・全ページ表示QA・文字抽出QAまで完了。次は固定EXAM_ALIGNMENTと本文を変更せず、練習問題source・練習問題PDFを作成する。完成後独立再解答が済むまで`completed`にしない。'
+          assert s.count(old) == 1
+          topic.write_text(s.replace(old, new, 1), encoding='utf-8')
+
+          qa = Path('denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_explanation_qa.md')
+          qa.write_text('''# Topic 09 解説PDF QA
+
+更新日: 2026-09-15
+判定: `PASS`
+
+- 対象: `09_hokuriku_frequency_rlc_explanation.pdf`
+- 形式: A4縦 4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 表示欠け・重なり・文字化け: `0件`
+- 文字抽出QA: `PASS`（U+FFFD 0件）
+- 固定公式過去問6問の要求事項: PDF内へ反映済み
+- 制作前独立検証: `6 / 6 PASS` 維持
+- SPEC境界外論点の追加: `0件`
+- 未確認の新幹線実車値追加: `0件`
+
+固定過去問は令和8年度上期 理論 問8、令和7年度下期 理論 問8、令和6年度下期 理論 問9、令和6年度上期 理論 問8、令和5年度下期 理論 問8、令和5年度上期 理論 問8。
+
+本QAは解説PDFの成果物・表示・文字抽出・固定範囲の確認であり、完成後独立再解答および最終QAは後工程で実施する。
+''', encoding='utf-8')
+
+          status = Path('denken-shinkansen/04_shinkansen_theory_3/STATUS.md')
+          s = status.read_text(encoding='utf-8')
+          reps = [
+              ('- current_status: `topic_09_explanation_source_complete`', '- current_status: `topic_09_explanation_pdf_complete`'),
+              ('- next_start: Topic 09の解説PDFを作成して全ページ表示QA・文字抽出QAを行う', '- next_start: Topic 09の練習問題source・練習PDFを作成する'),
+              ('- [ ] 解説PDF\n- [ ] 練習問題source・練習PDF', '- [x] 解説PDF\n- [ ] 練習問題source・練習PDF'),
+          ]
+          for old, new in reps:
+              assert s.count(old) == 1, old
+              s = s.replace(old, new, 1)
+          marker = '## 今回進めた内容\n'
+          assert s.count(marker) == 1
+          s = s.split(marker, 1)[0] + marker + '''
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の解説PDFを完成し、GitHub正本へ反映した。
+
+A4縦4ページ。200 dpi全ページ表示QA `4 / 4 PASS`、表示欠け・重なり・文字化け0件、文字抽出QA `PASS`（U+FFFD 0件）。固定6過去問の要求事項、3段階例題、制作前独立検証 `6 / 6 PASS` を維持している。
+
+Topic 10以降の力率・三相・半導体等、未確認の新幹線実車回路・切替方式は追加していない。
+
+## 判定
+
+現在 `topic_09_explanation_pdf_complete / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の練習問題source・練習PDFを作成する。
+'''
+          status.write_text(s, encoding='utf-8')
+
+          handoff = Path('denken-shinkansen/04_shinkansen_theory_3/HANDOFF.md')
+          s = handoff.read_text(encoding='utf-8')
+          reps = [
+              ('Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は解説本文＋3段階例題まで完成した。', 'Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は解説PDFまで完成した。'),
+              ('- current status: `topic_09_explanation_source_complete`', '- current status: `topic_09_explanation_pdf_complete`'),
+              ('- next start: Topic 09の解説PDFを作成して全ページ表示QA・文字抽出QAを行う', '- next start: Topic 09の練習問題source・練習PDFを作成する'),
+              ('  - status: `EXPLANATION_SOURCE_COMPLETE`', '  - status: `EXPLANATION_PDF_COMPLETE`'),
+              ('- 解説PDF: 未作成', '- 解説PDF: 完成（A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`）'),
+              ('固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 09の解説PDFを作成して全ページ表示QA・文字抽出QAを行う。', '固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 09の練習問題source・練習PDFを作成する。'),
+          ]
+          for old, new in reps:
+              assert s.count(old) == 1, old
+              s = s.replace(old, new, 1)
+          start = '## 今回進捗\n'
+          end = '## Topic 09 品質ゲート\n'
+          assert s.count(start) == 1 and s.count(end) == 1
+          before, rest = s.split(start, 1)
+          _, after = rest.split(end, 1)
+          progress = '''## 今回進捗
+
+Topic 09の固定EXAM_ALIGNMENTと解説本文を変更せず、解説PDFを作成した。
+
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 表示欠け・重なり・文字化け: `0件`
+- 文字抽出QA: `PASS`（U+FFFD 0件）
+- 固定6過去問要求: PDF内へ反映済み
+- 制作前独立検証: `6 / 6 PASS` 維持
+- SPEC境界外論点・未確認実車値追加: `0件`
+
+'''
+          s = before + progress + end + after
+          handoff.write_text(s, encoding='utf-8')
+          PY
+
+          git rm -f .tmp_theory3_topic09/topic09.html.gz.b64
+          git rm -f .github/workflows/tmp-theory3-topic09-pdf.yml
+
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          target='denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_explanation.pdf'
-          git add "$target"
-          git commit -m 'Add Topic 09 theory explanation PDF'
+          git add denken-shinkansen/04_shinkansen_theory_3/STATUS.md \
+                  denken-shinkansen/04_shinkansen_theory_3/HANDOFF.md \
+                  denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc.md \
+                  denken-shinkansen/04_shinkansen_theory_3/topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_explanation_qa.md
+          git commit -m 'Complete Topic 09 theory explanation PDF stage'
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then exit 0; fi
             git pull --rebase origin main
