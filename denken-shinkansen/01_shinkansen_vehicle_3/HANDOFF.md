@@ -17,8 +17,8 @@ PDF: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_practice.pdf`
 - 固定5過去問 `5 / 5` 練習マッピング
 - 独立数値・論理QA `15 / 15 PASS`
 - 複数正答 `0件`
-- PDF A4縦5ページ
-- 180 dpi全ページ表示QA `5 / 5 PASS`
+- PDF A4縦4ページ
+- 180 dpi全ページ表示QA `4 / 4 PASS`
 - 文字抽出QA PASS
 - Topic 34範囲追加 `0件`
 - Topic 35範囲追加 `0件`
