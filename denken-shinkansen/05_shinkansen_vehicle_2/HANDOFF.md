@@ -7,11 +7,11 @@
 
 Topic 01〜06は最終QAまで `PASS`。完成数は `6 / 39`。
 
-現在地は `topic_07_independent_reanswer_passed`。active topicは Topic 07 `直流主回路の高出力化`。
+現在地は `topic_07_final_qa_needs_revision`。active topicは Topic 07 `直流主回路の高出力化`。
 
 H21一次「機械」問2(2)の不足「負荷損を規定の基準巻線温度へ補正」を固定範囲内で補強し、解説PDF・練習PDF・PowerPointへの同期と各QAまで完了。補強済み完成教材だけで固定一次4問＋二次1問・15対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `2 / 2 PASS`、合計 `15 / 15 PASS`。教材外知識補完は0件。
 
-Topic 07はまだ `completed` にしない。次は最終QAを実施し、必須成果物・過去問対応・表示QA・進捗記録整合・固定範囲が全件PASSの場合のみ完了扱いにする。
+Topic 07の最終QAを実施した結果、成果物・過去問対応・表示QA・固定範囲はPASSだが、主sourceと練習sourceの進捗記録に「PDF/PPTX未同期」「再独立再解答未実施」「練習PDF未同期」という旧状態が残っているため `NEEDS_REVISION`。Topic 07はまだ `completed` にしない。
 
 ## Topic 06 完了記録
 - 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問
@@ -120,14 +120,29 @@ H21一次 問2(2)補強:
 
 前回FAILだったH21一次 問2(2)は、補強後教材の「負荷損を規定の基準巻線温度へ補正して扱う」説明だけで再構築でき、`PASS`。
 
-## 次の正確な開始点
-Topic 07 `直流主回路の高出力化` の最終QAを実施する。
+## Topic 07 最終QA
+`07_dc_main_circuit_high_output_final_qa.md` を作成済み。
 
-1. 必須成果物4種と各QA記録の存在・整合を確認する。
-2. 固定一次4問＋二次1問・15対象項目を変更していないことを確認する。
-3. 補強後完成教材による独立再解答 `15 / 15 PASS`、教材外知識補完0件を確認する。
-4. 解説PDF・練習PDF・PowerPointの表示QA、文字抽出、overflow、ZIP整合性の記録を確認する。
-5. source、STATUS、HANDOFFの進捗表現に旧状態が残っていないか確認する。
-6. Topic 07固定範囲外の位相制御、誘導機、VVVF、回生、IGBT/SiC、詳細熱設計を追加していないことを確認する。
-7. 未確認実車値を真値化していないことを確認する。
-8. 全件PASSの場合のみTopic 07を `completed` とし、完成数を `7 / 39` へ進める。1件でも不整合があれば `NEEDS_REVISION` とし、exact issueだけを次工程へ送る。
+PASS:
+- 必須成果物存在
+- 固定一次4問＋二次1問・15対象項目の維持
+- 完成後独立再解答 `15 / 15 PASS`
+- 解説PDF・練習PDF・PowerPointの各表示QA
+- 練習問題 `12 / 12 PASS`
+- 固定範囲外追加0件
+- 未確認実車値追加0件
+
+FAIL:
+- `07_dc_main_circuit_high_output.md` の状態欄・完成後独立再解答欄に、PDF/PPTX未同期・再独立再解答未実施という旧進捗が残存
+- `07_dc_main_circuit_high_output_practice_source.md` の状態欄・次工程に、練習PDF未同期という旧進捗が残存
+
+最終判定: `NEEDS_REVISION`。
+
+## 次の正確な開始点
+Topic 07のsource進捗記録だけを現在地へ同期する。
+
+1. `07_dc_main_circuit_high_output.md` の状態欄を、解説PDF・練習PDF・PowerPoint同期済み、補強後再独立再解答 `15 / 15 PASS`、最終QAは進捗記録不整合のみ `NEEDS_REVISION` へ更新する。
+2. 同ファイル末尾の完成後独立再解答欄を、補強前 `14 / 15` を履歴として残しつつ、補強後 `15 / 15 PASS` と現在地へ更新する。
+3. `07_dc_main_circuit_high_output_practice_source.md` の状態欄と次工程から「練習PDF未同期」を除き、PDF同期・表示QA済みへ更新する。
+4. 技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更しない。
+5. 同期後はTopic 07最終QAを再実施し、全件PASSの場合のみ `completed` として完成数を `7 / 39` へ進める。
