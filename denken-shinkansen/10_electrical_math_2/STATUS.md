@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 9 / 20
-- current_status: `topic_09_completed`
+- current_status: `topic_10_exam_alignment_complete`
 - last_completed_topic: `09 ラプラス変換`
 - active_topic: `10 伝達関数・極・零点`
-- next_start: Topic 10の制作前EXAM_ALIGNMENTを作成する。MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECの範囲内で、直近年度優先の公式過去問を調査し、二種相当の対応問題を固定する
+- next_start: Topic 10の解説本文＋3段階例題を作成する。固定二次5問・11対象設問を全件カバーし、Topic 12/15およびラウス・フルビッツ法の一般手順を先取りしない
 
 ## Topic 07 制作品質ゲート
 
@@ -79,25 +79,44 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 10 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 公式過去問を直近年度優先で調査
+- [x] R7〜R2二次「機械・制御」問4を確認
+- [x] R5問4は周波数応答・ゲイン特性中心のためTopic 15先取りとして非採用
+- [x] 二次5問・11対象設問を固定
+- [x] source Markdownへ要求知識・式・設問型・教材内必要説明を固定
+- [x] 制作前独立再解答・公式標準解答照合 `11 / 11 PASS`
+- [x] Topic 12/15先取り、ラウス・フルビッツ法一般手順、定常偏差・畳み込みの件数合わせ追加0件を確認
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] PowerPoint表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 09 `ラプラス変換` の最終QAを再判定し、`PASS / completed` とした。
+Topic 10 `伝達関数・極・零点` の制作前EXAM_ALIGNMENTを完成した。
 
-再確認:
-- 必須成果物実在: PASS
-- 固定二次5問・6対象設問: PASS
-- 完成後独立再解答: `6 / 6 PASS`
-- 解説PDF・練習PDF・PowerPoint表示QA: PASS
-- source進捗記録と実成果物の整合: PASS
-- 教材外知識補完: 0件
-- Topic 10先取り: 0件
-- 固定範囲外追加: 0件
+確認:
+- 公式過去問: 二次「機械・制御」5問・11対象設問を固定
+- 制作前独立再解答・公式標準解答照合: `11 / 11 PASS`
+- R5問4: Topic 15の周波数応答・ゲイン特性中心のため非採用
+- Topic 12/15先取り: 0件
+- ラウス・フルビッツ法の一般手順追加: 0件
+- 件数合わせの固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 09は `PASS / completed`。
+Topic 10は `topic_10_exam_alignment_complete / IN_PROGRESS`。
 
 完成数は `9 / 20`。
 
-次はTopic 10 `伝達関数・極・零点` の制作前EXAM_ALIGNMENT。
+次はTopic 10の解説本文＋3段階例題。
