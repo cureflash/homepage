@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 8 / 21
-- current_status: `topic_09_explanation_source_complete`
+- current_status: `topic_09_explanation_pdf_complete`
 - last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 - active_topic: `09 新幹線の25kV交流をフェーザで表す`
-- next_start: Topic 09の解説PDF作成＋全ページ表示QA
+- next_start: Topic 09の練習問題source作成
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -64,7 +64,7 @@
 ## Topic 09 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋表示QA
+- [x] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
@@ -72,18 +72,21 @@
 
 ## 今回進めた内容
 
-Topic 09「新幹線の25kV交流をフェーザで表す」の解説本文＋3段階例題を完成した。
+Topic 09「新幹線の25kV交流をフェーザで表す」の解説PDFを完成した。
 
+- 成果物: `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_explanation.pdf`
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- クリッピング・重なり・文字化け: 0件
 - 固定一次: 5問・11小問を変更せず維持
-- 本文マッピング: `11 / 11`
-- 3段階例題: 基礎／本試験標準／複合ひっかけを各1問
 - 二次採用: 0問
 - 二次数合わせ: 0件
 - 固定範囲外追加: 0件
 - 未確認実設備値追加: 0件
 
-本文では正弦波の瞬時値・実効値・平均値、複素数表示、実効値フェーザ、`j` による位相回転、R/L/Cの複素インピーダンス、直列合成、並列アドミタンス、フェーザの加減算、瞬時値との相互変換までを固定範囲内で整理した。25 kVから最大値35.4 kVへの変換は教材上の計算値として明示した。
+PDFには、正弦波・実効値・平均値、複素数表示、フェーザ、R/L/Cの複素インピーダンス、直列・並列回路、解法手順、3段階例題、固定5問・11小問への対応表を収録した。25 kVから35.4 kVへの変換は教材上の計算値として維持した。
 
 ## 判定
 
-Topic 09は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は解説PDF作成＋全ページ表示QA。
+Topic 09は `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は練習問題source作成。
