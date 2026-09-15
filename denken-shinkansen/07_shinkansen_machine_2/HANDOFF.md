@@ -9,7 +9,7 @@ Topic 01〜07は最終QAまで `PASS / completed`。
 
 active topic: `08 VVVFインバータで三相交流を作る`
 
-current status: `topic_08_calculation_program_complete`
+current status: `topic_08_independent_reanswer_complete`
 
 ## Topic 08 固定EXAM_ALIGNMENT
 - R07 一次 機械 問4: (4),(5)
@@ -39,6 +39,7 @@ current status: `topic_08_calculation_program_complete`
 - 練習source: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_practice.md`
 - 練習PDF: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_practice.pdf`
 - PowerPoint: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_images.pptx`
+- 独立再解答: `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_independent_reanswer.md`
 
 ## Topic 08 計算プログラム・指定波形/FFT完了
 成果物:
@@ -74,5 +75,17 @@ QA:
 - 固定範囲外論点の追加: 0件
 - 未確認300系実車値の追加: 0件
 
+## Topic 08 完成後独立再解答
+固定5問・13小問を完成教材だけで再導出し、公式解答・標準解答と `13 / 13 PASS`。
+
+- R07一次: PWM、スイッチング周波数
+- H22一次: 三角波、変調率、`√3 k E_d/(2√2)`
+- H19一次: 基本波、直流電圧可変不要
+- R04二次: `134 V`、`164 V`
+- H28二次: `Q5/Q6`、相/線間波形、3n次高調波、`√(2/3)E_d`
+- 教材外知識補完: 0件
+- 固定範囲外論点追加: 0件
+- 未確認300系実車値追加: 0件
+
 ## 次に行うこと
-完成教材だけを使用し、固定5問・13小問を独立再解答する。公式解答／標準解答と照合し、教材外知識補完が必要な小問が1件でもあればPASSにしない。固定EXAM_ALIGNMENTとSPEC境界は変更しない。
+Topic 08の最終QAを実施し、固定EXAM_ALIGNMENT、独立再解答、必須成果物、計算/波形QA、source・STATUS・HANDOFFの進捗整合、SPEC境界を総合判定する。未整合が1件でもあれば `completed` にしない。
