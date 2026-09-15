@@ -2,9 +2,9 @@
 
 更新日: 2026-09-15
 
-状態: `explanation_pdf_complete`
+状態: `practice_source_complete`
 
-制作前 `EXAM_ALIGNMENT` を完了し、系列 `SPEC.md` の固定範囲だけで完結する第三種「機械」公式過去問5問を固定した。制作前独立検証は `5 / 5 PASS`。固定5問から逆算した解説本文、解法アルゴリズム、基礎・本試験標準・複合の3段階例題を解説PDFへ反映し、200 dpi表示QAと文字抽出QAを完了した。件数合わせの仕様外論点、未確認実車値は追加しない。
+制作前 `EXAM_ALIGNMENT` を完了し、系列 `SPEC.md` の固定範囲だけで完結する第三種「機械」公式過去問5問を固定した。制作前独立検証は `5 / 5 PASS`。固定5問から逆算した解説本文、解法アルゴリズム、基礎・本試験標準・複合の3段階例題を解説PDFへ反映済み。練習問題sourceは12問・全問五肢択一で作成し、独立計算・論理QAと正答一意性はいずれも `12 / 12 PASS`。件数合わせの仕様外論点、未確認実車値は追加しない。
 
 ## EXAM_ALIGNMENT
 
@@ -484,6 +484,19 @@ Prec,avg = Erec/t
 
 未確認実車値追加: `0件`。
 
+## 練習問題source
+
+`09_regenerative_braking_practice.md`
+
+- 全12問・全問五肢択一
+- 基礎3／本試験標準7／複合・応用2
+- 固定EXAM_ALIGNMENT 5問へ全件接続
+- 独立計算・論理QA `12 / 12 PASS`
+- 正答一意性 `12 / 12 PASS`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- 固定範囲外論点追加 `0件`
+- 未確認実車値追加 `0件`
+
 ## 現在の品質状態
 
 - 制作前EXAM_ALIGNMENT: 完了
@@ -495,7 +508,11 @@ Prec,avg = Erec/t
 - 解説PDF: A4縦3ページ
 - 解説PDF 200 dpi表示QA: `3 / 3 PASS`
 - 解説PDF文字抽出QA: `PASS`
-- 練習問題source/PDF: 未着手
+- 練習問題source: 完了
+- 練習問題: 12問・全問五肢択一
+- 練習問題独立QA: `12 / 12 PASS`
+- 練習問題正答一意性: `12 / 12 PASS`
+- 練習問題PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
@@ -505,8 +522,10 @@ Prec,avg = Erec/t
 
 解説PDF: `09_regenerative_braking_explanation.pdf`
 
-QA記録: `09_regenerative_braking_explanation_pdf_qa.md`
+解説PDF QA記録: `09_regenerative_braking_explanation_pdf_qa.md`
+
+練習問題source: `09_regenerative_braking_practice.md`
 
 ## 次工程
 
-Topic 09の練習問題sourceを作成する。三種仕様どおり原則12問以上、少なくとも半数を五肢択一とし、固定EXAM_ALIGNMENT 5問から逆算した固定範囲だけを扱う。
+Topic 09の練習PDFを作成し、全12問・完全解説を同期して全ページ表示QAと文字抽出QAを行う。固定EXAM_ALIGNMENT 5問と固定範囲は変更しない。
