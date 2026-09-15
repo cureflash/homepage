@@ -9,95 +9,77 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_09_completed`
+current status: `topic_10_exam_alignment_complete`
 
-## Topic 09 固定EXAM_ALIGNMENT
-固定過去問:
-- R02 一次 機械 問3: (1)〜(5)
-- H26 一次 機械 問5: (3)〜(5)
-- H25 一次 機械 問3: (3),(4)
-- R04 二次 機械・制御 問3: (6)
-- R02 二次 機械・制御 問1: (1)〜(7)
+## Topic 10 固定範囲
+- 力行
+- 回生
+- 誘導機の発電機運転
+- 四象限運転
+- DCリンク
+- PWMコンバータ
+- 架線への電力回生
+- 回生効率
 
-一次3問＋二次記述2問、計5問。ゲート対象18小問。制作前独立検証 `18 / 18 PASS`、完成後独立再解答 `18 / 18 PASS`。
-
-固定範囲:
-- V/f制御
-- 磁束
-- 定トルク領域
-- 弱め磁束領域
-- 定出力領域
-- 速度制御
-- ベクトル制御の概念
-- d軸・q軸の概念
+固定電力フロー:
+`車輪 → 誘導電動機 → インバータ → DCリンク → コンバータ → 架線`
 
 境界:
-- ベクトル制御は概念説明中心。厳密な座標変換は必須にしない。
-- Topic 10の回生・四象限運転は持ち込まない。
-- 厳密なPark/Clarke変換、電流制御器設計、センサレス推定器設計は追加しない。
-- 未確認300系実車制御値を真値として追加しない。
+- H27一次問3の回生失効・電力貯蔵・運行間隔は追加しない。
+- H24二次問3の無効電流・出力可能領域は追加しない。
+- Topic 11のパワー半導体損失・熱設計は追加しない。
+- Topic 16の蓄電池・DCリンク給電は追加しない。
+- 未確認の新幹線実車回生効率を真値として追加しない。
 
-## Topic 09 完了済み工程
-- 制作前EXAM_ALIGNMENT: `18 / 18 PASS`
-- 解説本文＋3段階例題: 完成
-- 固定18小問の本文マッピング: `18 / 18`
-- 解説PDF: `09_induction_motor_control_explanation.pdf`
-- 解説PDF QA: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- 練習問題source: `09_induction_motor_control_practice.md`
-- 一次試験型10問＋二次試験型5問、全15問に完全解説
-- 練習問題QA: `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`
-- 固定5問・18小問の練習問題マッピング: `18 / 18 PASS`
-- 練習PDF: `09_induction_motor_control_practice.pdf`
-- 練習PDF QA: A4縦6ページ、200 dpi表示 `6 / 6 PASS`、文字抽出PASS、主要計算値再検算PASS
-- 解説画像PowerPoint: `09_induction_motor_control_images.pptx`
-- PowerPoint QA: 16:9・4枚、200 dpi表示 `4 / 4 PASS`、overflow 0件、ZIP整合性PASS
-- 完成後独立再解答: `18 / 18 PASS`
-- 教材外知識補完: 0件
-- 固定範囲外追加: 0件
-- 未確認300系実車制御値追加: 0件
-- 練習source旧進捗記録の同期: 完了
-- 最終QA再判定: `PASS / completed`
-- 最終QA記録: `topics/09_induction_motor_control/09_induction_motor_control_final_qa.md`
+## Topic 10 固定EXAM_ALIGNMENT
+固定過去問:
+- R06 一次 機械 問2: (1),(2)
+- R05 一次 機械 問2: (1),(2),(3),(5)
+- H28 一次 機械 問5: (3)〜(5)
+- H27 一次 機械 問3: (1),(2)
+- H24 二次 機械・制御 問3: (1),(2)a〜c
 
-## 完成後独立再解答結果
-- R02 一次 機械 問3 (1)〜(5): `(ワ, ハ, ル, ロ, ト)`、`5 / 5 PASS`
-- H26 一次 機械 問5 (3)〜(5): `(カ, ヲ, ニ)`、`3 / 3 PASS`
-- H25 一次 機械 問3 (3),(4): `(ニ, ル)`、`2 / 2 PASS`
-- R04 二次 機械・制御 問3 (6): 50 Hz→25 Hzで信号波振幅 `0.9→0.45`、周期2倍、`1 / 1 PASS`
-- R02 二次 機械・制御 問1 (1)〜(7): `1800, 1710, 90 min^-1, 3 Hz, 90, 1800, 0 min^-1`、`7 / 7 PASS`
+一次4問＋二次記述1問、計5問。ゲート対象15答案要素。
 
-## Topic 09 成果物
-解説source:
-- `topics/09_induction_motor_control/09_induction_motor_control.md`
+制作前独立検証:
+- R06 一次 機械 問2: `2 / 2 PASS`
+- R05 一次 機械 問2: `4 / 4 PASS`
+- H28 一次 機械 問5: `3 / 3 PASS`
+- H27 一次 機械 問3: `2 / 2 PASS`
+- H24 二次 機械・制御 問3: `4 / 4 PASS`
+- 合計: `15 / 15 PASS`
 
-解説PDF:
-- `topics/09_induction_motor_control/09_induction_motor_control_explanation.pdf`
+主要確認内容:
+- R06: 誘導電動機、`s<0` による回生制動
+- R05: 制動時の運動エネルギー→電気エネルギー変換、回生ブレーキ
+- H28: 電力回生、誘導電動機、滑り
+- H27: 直流側→交流側の逆変換、架線回生電力を力行車が消費
+- H24二次: `Vv=VL+jXI`、力率1で `I=30 A`、`Vv≈101 V`、`K≈0.949`、`tanφ=0.120`
 
-練習問題source:
-- `topics/09_induction_motor_control/09_induction_motor_control_practice.md`
+## Topic 10 source
+- `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant.md`
 
-練習PDF:
-- `topics/09_induction_motor_control/09_induction_motor_control_practice.pdf`
-
-解説画像PowerPoint:
-- `topics/09_induction_motor_control/09_induction_motor_control_images.pptx`
-
-最終QA:
-- `topics/09_induction_motor_control/09_induction_motor_control_final_qa.md`
-
-## Topic 09 最終QA結果
-判定: `PASS / completed`
-
-PASS:
-- 必須成果物5件の存在
-- 固定一次3問＋二次2問・18小問のEXAM_ALIGNMENT
-- 完成後独立再解答 `18 / 18 PASS`
-- 教材外知識補完 0件
-- 解説PDF表示QA `4 / 4 PASS`、文字抽出QA PASS
-- 練習PDF表示QA `6 / 6 PASS`、文字抽出QA・主要計算再検算 PASS
-- PowerPoint表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性 PASS
-- 前回唯一の進捗記録不整合解消
-- Topic 10以降・厳密Park/Clarke変換・制御器設計・センサレス推定器設計・未確認300系実車値の混入なし
+sourceには以下を記録済み。
+- 公式一次4問＋二次1問の固定EXAM_ALIGNMENT
+- 15答案要素の要求知識・式・設問型
+- 公式問題・公式解答／標準解答URL
+- 電験王2＋電験三種まとめましたの参照先
+- 教材で欠落不可の説明
+- 予定節マッピング
+- 制作前独立検証 `15 / 15 PASS`
+- 固定範囲外小問の除外理由
 
 ## 次に行うこと
-Topic 10「新幹線はモーターを発電機にして止まる」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`に従い、まず公式二種一次・二次過去問を調査し、固定範囲へ直接対応する問題だけを選定する。
+固定EXAM_ALIGNMENTを変更せず、Topic 10の解説本文を作成する。
+
+最低限、次を本文へ15答案要素すべてマッピングする。
+1. `N_s=120f/p`、`s=(N_s-N)/N_s`、`s<0` と誘導機の発電機運転
+2. 力行と回生のエネルギーフロー
+3. `P_m=Tω` と速度・トルク符号による四象限整理
+4. `車輪 → 誘導電動機 → インバータ → DCリンク → コンバータ → 架線`
+5. H24二次型の `Vv=VL+jXI`、`P=VL I`、PWM変調率計算
+6. 架線回生電力と力行車の関係
+7. 回生効率
+8. 基礎・本試験標準・複合の3段階例題
+
+次工程ではPDF・練習問題・PowerPointへ先行せず、まず解説source本文を完成させる。
