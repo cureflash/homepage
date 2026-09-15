@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 8 / 12
-- current_status: `topic_08_completed`
+- current_status: `topic_09_exam_alignment_complete`
 - last_completed_topic: `08 積分 速度曲線の面積は距離`
 - active_topic: `09 微積分で電気を読む`
-- next_start: `Topic 09 制作前EXAM_ALIGNMENT`
+- next_start: `Topic 09 制作前独立解答・公式解答照合`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -73,16 +73,41 @@
 - [x] 主source・練習sourceの旧進捗記録2箇所を現在地へ同期
 - [x] 最終QA再判定 `PASS / completed`
 
+## Topic 09 進捗
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 令和8年度上期から遡って公式過去問を調査
+- [x] Topic 09固定5式だけで直接対応できる公式過去問5問を選定
+- [x] 水力設備・電熱・RC過渡等の固定範囲外候補を除外
+- [x] 参考教材を複数系統確認（e-sysnet含む）
+- [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
+- [ ] 制作前独立解答・公式解答照合
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF（解答・完全解説付き）
+- [ ] 解説画像PowerPoint
+- [ ] 完成教材だけでの公式過去問独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 08「積分 速度曲線の面積は距離」の最終QAを再判定した。
+Topic 09「微積分で電気を読む」の制作前EXAM_ALIGNMENTを完了した。
 
-初回FAILだった主source冒頭・練習source末尾の進捗不整合は解消済み。固定5問・9答案要素の補強後独立再解答 `9 / 9 PASS`、練習独立計算QA `12 / 12 PASS`、必須成果物、既存表示QA記録、固定範囲・後続Topic境界を再確認し、全件PASSとした。
+系列SPECの固定範囲 `i=dq/dt`、`q=∫i dt`、`e=-N dΦ/dt`、`E=∫P dt`、`W=∫F dx` だけを対象とし、品質ゲート対象を次の5問に固定した。
 
-固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、専門分野の体系説明追加0件、未確認新幹線実値追加0件。
+- R7上 法規 問13
+- R6下 理論 問3
+- R3 理論 問4
+- R7上 電力 問1
+- H29 法規 問13
+
+令和8年度上期も先に確認したが、水力発電設備・効率・磁気エネルギー等の専門論点が支配的な候補は採用せず、件数合わせの仕様拡張を行っていない。参考教材はe-sysnetと電験三種まとめましたを含む複数系統で確認した。
+
+公式解答は次工程の独立解答後に照合するため、現段階のsourceには正答値を記録していない。
 
 ## 判定
 
-Topic 08は `PASS / completed`。
+`topic_09_exam_alignment_complete / IN_PROGRESS`。
 
-完成数は `8 / 12`。次工程はTopic 09「微積分で電気を読む」の制作前EXAM_ALIGNMENT。
+完成数は `8 / 12` のまま。次工程は固定5問の制作前独立解答・公式解答照合。
