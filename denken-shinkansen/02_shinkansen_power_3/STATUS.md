@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_independent_reanswer_complete`
+- current_status: `topic_07_final_qa_needs_revision`
 - last_completed_topic: `06 275,000Vをどうやって25,000Vにする？`
 - active_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
-- next_start: Topic 07最終QAを行い、必須成果物・改定EXAM_ALIGNMENT・独立再解答・表示QA・SPEC境界・進捗整合をまとめて判定する
+- next_start: PowerPoint Slide 4・PowerPoint QA・練習PDF QAの旧5問対応を改定3問へ同期し、PowerPoint表示QAを再実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -17,7 +17,7 @@
 - [x] 04 東京―佐世保「原子力新幹線」 — completed
 - [x] 05 新幹線を再エネだけで走らせられる？ — completed
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
-- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 必須成果物完成。初回完成後独立再解答は公式解答 `8 / 8` 一致だが教材のみ完結 `2 / 8` で `NEEDS_REVISION`。EXAM_ALIGNMENT再監査で固定対象を3問へ見直し、改定3問の完成後独立再解答は `(3),(3),(4)` で公式解答と `3 / 3 PASS`、教材のみ完結 `3 / 3 PASS`、教材外知識補完0件。主sourceへ同期済み
+- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 改定EXAM_ALIGNMENT 3問の完成後独立再解答は `3 / 3 PASS`、教材外知識補完0件。最終QAでPowerPoint Slide 4・PowerPoint QA・練習PDF QAが旧5問対応のままと判明し `NEEDS_REVISION`
 - [ ] 08 新幹線の変電所はなぜ数十kmおき？
 - [ ] 09 変電所からパンタグラフまでどう送る？
 - [ ] 10 新幹線が突然大電力を使ったら？
@@ -38,42 +38,16 @@ EXAM_ALIGNMENT再監査: `topics/07_phase_conversion/07_phase_conversion_exam_al
 PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
 初回独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer.md`
 改定独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer_revised.md`
+最終QA: `topics/07_phase_conversion/07_phase_conversion_final_qa.md`
 
-### 初回EXAM_ALIGNMENTとFAIL理由
-初回固定5問・8小問:
-- R7下 理論 問15(a)(b)
-- R5下 理論 問15(a)(b)
-- R4上 機械 問9
-- H30 電力 問8
-- H27 機械 問7
-
-初回完成後独立再解答は公式解答と `8 / 8` 一致したが、教材のみ完結は `2 / 8`。
-
-教材外補完を要した内容:
-- R7下 理論 問15(a)(b): 並列RLCの無効電流相殺と有効電力処理
-- R5下 理論 問15(a)(b): 力率とインピーダンス分解
-- H27 機械 問7: Δ-Y/Y-Δの一次・二次30°位相差
-
-これらはTopic 07固定範囲外であり、問題を通すためだけの仕様追加は行わない。
-
-### EXAM_ALIGNMENT再監査
-R8上〜H18の第三種三相交流問題、スコット結線、三相変圧器候補を再確認した。RLC、力率改善、Δ-Y等価変換、二電力計、複素量・厳密ベクトル等、Topic 07固定範囲外の中間知識を必要とする問題は固定対象にしない。
-
-現行SPEC固定範囲へ直接対応し、完成教材だけで完答できる公式過去問として確認できた3問を改定品質ゲートとする。
+## 現行EXAM_ALIGNMENT
+品質ゲートは現行SPEC固定範囲へ直接対応する次の3問。
 
 - R4上 機械 問9 — スコット結線・二次90°
 - H30 電力 問8 — 変圧比・三相電力
 - H22 理論 問9 — Y結線・線間/相関係・三相電力・中性線電流
 
-`MASTER_SPEC.md` の「該当問題が5問未満しか確認できない場合は確認できた全件を対象」とする例外を適用する。
-
-- 改定品質ゲート: `3問 / 3解答項目`
-- SPEC固定範囲変更: `0件`
-- 固定範囲外教材追加: `0件`
-
-### 改定完成後独立再解答
-保存済み正答・再監査記録・初回独立再解答記録・公式解答を先に見ず、公式問題文と完成教材だけで解法・解答を確定した後、公式解答と照合した。
-
+改定完成後独立再解答:
 - R4上 機械 問9: `(3)` / 公式 `(3)` / PASS
 - H30 電力 問8: `(3)` / 公式 `(3)` / PASS
 - H22 理論 問9: `(4)` / 公式 `(4)` / PASS
@@ -84,11 +58,48 @@ R8上〜H18の第三種三相交流問題、スコット結線、三相変圧器
 - 教材外知識補完: `0件`
 - SPEC固定範囲外追加: `0件`
 
-H30電力問8の変圧比は完成済みTopic 06の `V1/V2=N1/N2` を使用し、Topic 07の `P=√3 V_L I_L cosφ` と接続した。H22理論問9は `P=3V_phaseI_phase` と比較して選択肢(4)を誤りと判定した。
+## 最終QA結果
+判定: `NEEDS_REVISION`。
 
-改定再解答結果は主sourceのEXAM_ALIGNMENT・状態欄・成果物QA・次工程へ同期済み。
+PASS:
+- 必須成果物の実在
+- 改定EXAM_ALIGNMENT 3問
+- 改定完成後独立再解答 `3 / 3 PASS`
+- 解説PDF・練習PDF・PowerPointの既存表示QA
+- SPEC境界
 
-Topic 07固定範囲は三相交流、単相交流、線間/相電圧、三相電力、き電用変圧器、相変換、三相側負荷平衡、スコット結線、変形ウッドブリッジ結線、ルーフ・デルタ結線。二種相当の厳密ベクトル導出、Topic 08以降の電圧降下・線路損失・き電回路詳細、Topic 10の力率改善、Topic 11の短絡・保護へは拡張していない。未確認の個別設備定格・配置も実値化していない。
+要修正:
+1. `07_phase_conversion_powerpoint_qa.md` が旧固定5問・8小問を正本としており、Slide 4も旧5問対応表のまま。
+2. `07_phase_conversion_practice_qa.md` の「固定過去問への接続」が旧5問のまま。
+3. PowerPoint QA末尾の次工程が「固定5問・8小問の独立再解答」のままで現在地と不一致。
+
+旧固定対象から除外済み:
+- R7下 理論 問15(a)(b) — RLCの無効電流相殺等が必要
+- R5下 理論 問15(a)(b) — 力率とインピーダンス分解が必要
+- H27 機械 問7 — Δ-Y/Y-Δ位相差30°が必要
+
+これらを通すための仕様追加はしない。
+
+## Topic 07 SPEC固定範囲
+- 三相交流
+- 単相交流
+- 線間電圧
+- 相電圧
+- 三相電力
+- き電用変圧器
+- 相変換
+- 三相側の負荷平衡
+- スコット結線
+- 変形ウッドブリッジ結線
+- ルーフ・デルタ結線
+
+境界:
+- 二種相当の厳密ベクトル導出を追加しない
+- Topic 08以降の電圧降下・線路損失・き電回路詳細へ広げない
+- Topic 10の力率改善へ広げない
+- Topic 11の短絡・保護へ広げない
+- 変形ウッドブリッジ結線・ルーフ・デルタ結線は概略に留める
+- 未確認の個別新幹線変電所の結線・定格・配置を実値化しない
 
 ## 次
-Topic 07最終QAを実施し、必須成果物、改定EXAM_ALIGNMENT、独立再解答 `3 / 3 PASS`、既存表示QA、SPEC境界、source・STATUS・HANDOFFの進捗整合を確認する。
+PowerPoint Slide 4の過去問対応表を改定3問へ同期し、PowerPoint QAを再実施する。同時に練習PDF QAの過去問対応記録を改定3問へ同期する。問題数や教材範囲は勝手に増やさない。その後、Topic 07最終QAを再判定する。
