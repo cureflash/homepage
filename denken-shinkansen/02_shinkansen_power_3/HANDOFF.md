@@ -6,17 +6,20 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `8 / 16`。Topic 01〜08は完成済み。
 
 ## 今回進捗
-Topic 09 `変電所からパンタグラフまでどう送る？` の練習問題sourceを完成した。
+Topic 09 `変電所からパンタグラフまでどう送る？` の練習PDFを完成した。
 
-`topics/09_feeding_transmission/09_feeding_transmission_practice_source.md` を作成し、固定5問・7小問から逆算した電験三種「電力」型12問と完全解説を収録した。
+`topics/09_feeding_transmission/09_feeding_transmission_practice.pdf` を作成し、`09_feeding_transmission_practice_source.md` の12問＋完全解説を反映した。QAは `topics/09_feeding_transmission/09_feeding_transmission_practice_qa.md` に記録した。
 
-練習source QA:
+練習PDF QA:
+- A4縦4ページ
 - 全12問・全問五肢択一
-- 難易度: 基礎3 / 本試験標準7 / 複合2
-- 数値・論理独立再計算: `12 / 12 PASS`
+- 200 dpi表示QA: `4 / 4 PASS`
+- はみ出し・重なり・黒四角・欠損文字: `0件`
+- `pdftotext` 文字抽出QA: PASS
+- 置換文字 `U+FFFD`: `0件`
+- 数値・論理再検算: `12 / 12 PASS`
 - 正答一意性: `12 / 12 PASS`
 - 固定5問・7小問への接続: `7 / 7`
-- 線間値／相値、mS→S、T形・π形KVL/KCL、複素符号を再検算
 - SPEC固定範囲外追加: `0件`
 - Topic 10以降の先取り: `0件`
 - 未確認実設備値の真値化: `0件`
@@ -62,9 +65,15 @@ R8上 電力 問8、およびR7上・R7下の送電関連候補のうち、機�
 - 練習source数値・論理独立再計算: `12 / 12 PASS`
 - 練習source正答一意性: `12 / 12 PASS`
 - 練習source固定5問・7小問への接続: `7 / 7`
+- 練習PDF: A4縦4ページ
+- 練習PDF表示QA: 200 dpi `4 / 4 PASS`
+- 練習PDF文字抽出QA: PASS
+- 練習PDF数値・論理再検算: `12 / 12 PASS`
+- 練習PDF正答一意性: `12 / 12 PASS`
+- 練習PDF固定5問・7小問への接続: `7 / 7`
 - SPEC固定範囲外追加: `0件`
 - 未確認実設備値の真値化: `0件`
-- 練習PDF / PowerPoint: 未着手
+- PowerPoint: 未着手
 - 完成後ブラインド独立再解答: 未着手
 
 ## 直前完了テーマ
@@ -83,12 +92,12 @@ PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
 完成後独立再解答: `topics/08_voltage_drop/08_voltage_drop_independent_reanswer.md`
 
 ## 現在状態
-- `current_status`: `topic_09_practice_source_complete`
+- `current_status`: `topic_09_practice_pdf_complete`
 - 完成数: `8 / 16`
 - last completed: Topic 08 `新幹線の変電所はなぜ数十kmおき？`
 - active: Topic 09 `変電所からパンタグラフまでどう送る？`
 
 ## 次の正確な開始点
-Topic 09の練習PDFを作成する。
+Topic 09の解説画像PowerPointを作成する。
 
-`09_feeding_transmission_practice_source.md` の12問＋完全解説を正本とし、PDF化後に全ページ表示QA、文字抽出QA、数値・論理・正答一意性の再検算を行う。
+固定5問・7小問の要求事項を可視化し、16:9スライドを作成後、全スライド表示QA、overflow、PPTX整合性を確認する。
