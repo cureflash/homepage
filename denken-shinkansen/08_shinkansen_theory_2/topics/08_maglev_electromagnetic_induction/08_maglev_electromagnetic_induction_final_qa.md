@@ -68,22 +68,16 @@ R6二次「電力・管理」問3、H24二次「電力・管理」問3および�
 
 主source、練習source、独立再解答記録の固定一次4問・6小問、二次非採用判断、固定範囲は一致している。
 
-ただし主source `08_maglev_electromagnetic_induction.md` のEXAM_ALIGNMENT直後に、
-
-`完成後は保存済み正答を先に見ず、完成教材だけでこの6小問を独立再解答する。`
-
-という制作前の旧進捗表現が1箇所残っている。実際には完成後独立再解答 `6 / 6 PASS` まで完了済みであり、GitHub正本内の進捗記録が不整合である。
+前回FAIL理由だった主sourceの旧進捗表現は、完成後独立再解答 `6 / 6 PASS`・教材外知識補完0件の現在地へ同期済み。source冒頭状態・EXAM_ALIGNMENT直後・末尾次工程も現在地と整合している。
 
 技術本文、数式、例題、過去問選定、問題・正答の不整合は確認していない。
 
-判定: `FAIL / progress record mismatch`
+判定: `PASS`
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-過去問対応、完成後独立再解答 `6 / 6 PASS`、二次非採用判断、必須成果物、表示QA、SPEC境界はPASS。未完了理由は主sourceの旧進捗表現1箇所のみ。
+固定一次4問・6小問の過去問対応 `6 / 6 PASS`、完成後独立再解答 `6 / 6 PASS`、二次採用0問・二次数合わせ0件、必須成果物、表示QA、source進捗整合、SPEC境界をすべて確認した。
 
-Topic 08はまだ `completed` としない。完成数は `7 / 21` のまま。
-
-次工程は主sourceの旧進捗表現を現在地へ同期し、技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答を変更せず、その後に最終QAを再実施する。
+Topic 08を `completed` とする。完成数は `8 / 21`。次はTopic 09「新幹線の25kV交流をフェーザで表す」の制作前EXAM_ALIGNMENT。
