@@ -9,7 +9,7 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_10_exam_alignment_complete`
+current status: `topic_10_explanation_source_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -59,27 +59,33 @@ current status: `topic_10_exam_alignment_complete`
 ## Topic 10 source
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant.md`
 
-sourceには以下を記録済み。
+source完成内容:
 - 公式一次4問＋二次1問の固定EXAM_ALIGNMENT
 - 15答案要素の要求知識・式・設問型
-- 公式問題・公式解答／標準解答URL
-- 電験王2＋電験三種まとめましたの参照先
-- 教材で欠落不可の説明
-- 予定節マッピング
-- 制作前独立検証 `15 / 15 PASS`
+- §1 試験論点
+- §2 `N_s=120f/p`、`s=(N_s-N)/N_s`、`s<0` の発電機運転
+- §3 力行／回生の電力フロー
+- §4 `P_m=Tω` と四象限運転
+- §5 `Vv=VL+jXI`、`P=VL I`、PWM変調率
+- §6 回生効率
+- 頻出ミス・過去問接続・公式まとめ
+- 基礎・本試験標準・複合の3段階例題
+- 固定5問・15答案要素の本文マッピング
 - 固定範囲外小問の除外理由
 
+例題上の効率・電圧等は教材上の設定値であり、未確認実車値として扱っていない。
+
 ## 次に行うこと
-固定EXAM_ALIGNMENTを変更せず、Topic 10の解説本文を作成する。
+固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 10の解説PDFを作成する。
 
-最低限、次を本文へ15答案要素すべてマッピングする。
-1. `N_s=120f/p`、`s=(N_s-N)/N_s`、`s<0` と誘導機の発電機運転
-2. 力行と回生のエネルギーフロー
-3. `P_m=Tω` と速度・トルク符号による四象限整理
+PDFでは最低限、次を欠落させない。
+1. 誘導機の `s<0` 発電機運転
+2. 力行と回生の電力フロー
+3. `P_m=Tω` と四象限
 4. `車輪 → 誘導電動機 → インバータ → DCリンク → コンバータ → 架線`
-5. H24二次型の `Vv=VL+jXI`、`P=VL I`、PWM変調率計算
-6. 架線回生電力と力行車の関係
-7. 回生効率
-8. 基礎・本試験標準・複合の3段階例題
+5. H24二次型のフェーザ式・有効電力式・PWM変調率
+6. 回生効率
+7. 基礎・本試験標準・複合の3段階例題
+8. 過去問への接続
 
-次工程ではPDF・練習問題・PowerPointへ先行せず、まず解説source本文を完成させる。
+生成後は全ページ表示QA・文字抽出QAを行う。練習問題・PowerPointへは先行しない。
