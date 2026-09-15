@@ -1,0 +1,36 @@
+name: tmp-topic10-pptx-build
+
+on:
+  push:
+    branches:
+      - tmp/topic10-pptx-build-20260916
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reassemble verified PowerPoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          out="denken-shinkansen/05_shinkansen_vehicle_2/topics/10_300series_induction_motor_equivalent_circuit/10_300series_induction_motor_equivalent_circuit_images.pptx"
+          cat .tmp/topic10-pptx/chunk01.bin .tmp/topic10-pptx/chunk02.bin .tmp/topic10-pptx/chunk03.bin .tmp/topic10-pptx/chunk04.bin .tmp/topic10-pptx/chunk05.bin .tmp/topic10-pptx/chunk06.bin .tmp/topic10-pptx/chunk07.bin .tmp/topic10-pptx/chunk08.bin > "$out"
+          test "$(sha256sum "$out" | awk '{print $1}')" = "b25269d366237bf4d6bbdd9fa473a6b348eeabb507e2ca7b4a5166727bd84985"
+          test "$(git hash-object "$out")" = "1e4291720ea00a252e9b1b990e30461891cd7940"
+          rm -rf .tmp/topic10-pptx
+          rm .github/workflows/tmp-topic10-pptx-build.yml
+      - name: Commit assembled artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Assemble Topic 10 PowerPoint artifact"
+          git push origin HEAD:tmp/topic10-pptx-build-20260916
