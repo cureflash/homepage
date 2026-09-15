@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 29 / 38
-- current_status: `topic_30_source_progress_synced`
-- last_completed_topic: `29 コンプレッサ・ポンプ・ファン`
-- active_topic: `30 ATC① 新幹線は列車をどう検知する？`
-- next_start: Topic 30最終QAを再判定する。主sourceの進捗記録整合を確認し、全品質ゲートPASSなら `completed` として30/38へ更新する
+- exam_aligned_completed_topics: 30 / 38
+- current_status: `topic_30_completed`
+- last_completed_topic: `30 ATC① 新幹線は列車をどう検知する？`
+- active_topic: `31 ATC② 地上から車上へどう情報を送る？`
+- next_start: Topic 31の制作前EXAM_ALIGNMENT。系列SPEC固定範囲を確認し、公式過去問を直近年度優先で調査・固定して、教材制作前の独立解答を行う
 
 ## 新品質ゲート進捗
-- [x] 01〜29 — PASS
-- [ ] 30 ATC① 新幹線は列車をどう検知する？ — 最終QA再判定待ち
+- [x] 01〜30 — PASS
+- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 未着手
 
 ## 30 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、レール、軌道回路、車軸短絡、電圧、電流、短絡、リレー、列車検知。
@@ -31,12 +31,12 @@
 未確認実車値追加: `0件`。
 
 ## 30 成果物
-- 解説source / EXAM_ALIGNMENT: `topics/30_atc_train_detection/30_atc_train_detection.md` — 制作前EXAM_ALIGNMENT＋解説本文§1〜§15＋3段階例題。旧進捗を実在成果物へ同期済み
+- 解説source / EXAM_ALIGNMENT: `topics/30_atc_train_detection/30_atc_train_detection.md` — 制作前EXAM_ALIGNMENT＋解説本文§1〜§15＋3段階例題。進捗記録整合PASS
 - 解説PDF: `topics/30_atc_train_detection/30_atc_train_detection_explanation.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
 - 練習source: `topics/30_atc_train_detection/30_atc_train_detection_practice.md` — 15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説、固定5問を全件マッピング
 - 練習PDF: `topics/30_atc_train_detection/30_atc_train_detection_practice.pdf` — A4縦4ページ、180 dpi全ページ表示QA PASS、文字抽出QA PASS
 - 解説画像PowerPoint: `topics/30_atc_train_detection/30_atc_train_detection_images.pptx` — 16:9・4枚、固定5問の解法経路を可視化、全4枚表示QA PASS、ZIP整合性PASS
-- 完成後独立再解答記録 / 最終QA: `topics/30_atc_train_detection/30_atc_train_detection_final_qa.md` — 再解答 `5 / 5 PASS`、前回最終判定 `NEEDS_REVISION`。主source進捗同期後の再判定待ち
+- 完成後独立再解答記録 / 最終QA: `topics/30_atc_train_detection/30_atc_train_detection_final_qa.md` — 再解答 `5 / 5 PASS`、最終判定 `PASS / COMPLETED`
 
 ## 30 練習QA
 - 問題数: `15 / 15`
@@ -73,14 +73,13 @@
 - 未確認実車値追加: `0件`
 
 ## 30 最終QA
-前回判定は `NEEDS_REVISION / IN_PROGRESS`。
+`PASS / COMPLETED`。
 - 必須成果物: PASS
 - 固定5問の完成後独立再解答: `5 / 5 PASS`
 - 解説PDF / 練習PDF / PowerPoint表示QA: PASS
+- 進捗記録整合: PASS
 - 固定範囲境界: PASS
-- 前回の進捗記録整合: FAIL
-  - 主source冒頭に残っていた `練習・PowerPoint・完成後独立再解答は未着手` を2026-09-15に実態へ同期済み
-- 現在: 最終QA再判定待ち
+- Topic 30を `completed` とし、完成数を30/38へ更新
 
 ## 30 範囲境界
 追加しない:
@@ -92,7 +91,7 @@
 - 未確認の新幹線軌道回路電圧・電流・車軸短絡抵抗・リレー動作値
 
 ## 直前完了
-Topic 29 `コンプレッサ・ポンプ・ファン` は固定5問の完成後独立再解答 `5 / 5 PASS`、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
+Topic 30 `ATC① 新幹線は列車をどう検知する？` は固定5問の完成後独立再解答 `5 / 5 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 30の最終QAを再判定する。主sourceの進捗記録整合を含む全品質ゲートがPASSならTopic 30を `completed` にし、完成数を30/38へ更新する。教材本文・固定EXAM_ALIGNMENT・数式・例題・PDF・練習・PowerPoint・固定範囲は変更しない。
+Topic 31 `ATC② 地上から車上へどう情報を送る？` の制作前EXAM_ALIGNMENTを開始する。系列SPECの固定範囲を超えて件数合わせをせず、公式過去問を直近年度優先で調査・固定し、教材制作前の独立解答を行う。
