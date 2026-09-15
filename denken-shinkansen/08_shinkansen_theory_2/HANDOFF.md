@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜09は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source、練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、練習source末尾の旧進捗記録同期まで実施した。
+Topic 01〜10は `completed`。Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source、練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答、進捗記録同期、最終QA再実施まで完了し、`PASS / completed`。
 
-完成数: `9 / 21`
+完成数: `10 / 21`
 
-current_status: `topic_10_practice_progress_synced`
+current_status: `topic_10_completed`
 
-active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
+active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 
-次工程: Topic 10の最終QAを再実施する。教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+次工程: Topic 11の制作前EXAM_ALIGNMENTを実施する。系列SPECの固定範囲を起点に、公式過去問を一次・二次とも確認し、直接対応問題だけを品質ゲート対象へ固定する。
 
 ## Topic 10 固定範囲
 
@@ -109,7 +109,7 @@ H30二次「電力・管理」問5には高調波電流、直列リアクトル�
 
 ## Topic 10 練習問題source
 
-- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md`: 内容完成・進捗記録同期済み
+- `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_practice.md`: `completed`
 - 一次試験型12問、全問五肢択一
 - 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
 - 正答一意性: `12 / 12 PASS`
@@ -117,7 +117,7 @@ H30二次「電力・管理」問5には高調波電流、直列リアクトル�
 - 固定一次5問・20小問への練習接続: `20 / 20`
 - 二次採用0問・二次数合わせ0件を維持
 - 固定範囲外・未確認実設備値追加: 0件
-- 末尾 `# 次工程` を練習PDF・PowerPoint・完成後独立再解答・初回最終QAまで完了した現在地へ同期済み
+- 進捗記録はTopic 10 completed状態へ同期済み
 
 ## Topic 10 練習PDF
 
@@ -167,10 +167,9 @@ H30二次「電力・管理」問5には高調波電流、直列リアクトル�
 - 必須成果物: `PASS`
 - PDF/PPTX表示QA・文字抽出・整合性: `PASS`
 - SPEC境界: `PASS`
-- 初回進捗記録整合: `FAIL`
-- 初回exact blocker: 練習source末尾が「次は練習PDF作成」「完成後独立再解答は未実施」とする旧進捗
-- 初回判定: `NEEDS_REVISION / IN_PROGRESS`
-- 上記exact blockerは今回同期済み。最終QA再実施待ち
+- 前回exact blocker: 練習source末尾の旧進捗記録
+- exact blocker: `解消済み`
+- 最終QA再実施: `PASS / completed`
 
 ## Topic 10 参考資料
 
@@ -208,12 +207,12 @@ Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALI
 
 ## 品質ゲート現在値
 
-- Topic 01〜09: `PASS / completed`
-- 完成数: `9 / 21`
+- Topic 01〜10: `PASS / completed`
+- 完成数: `10 / 21`
 - Topic 10 制作前EXAM_ALIGNMENT: `PASS`
 - Topic 10 解説本文＋3段階例題: `completed`
 - Topic 10 解説PDF＋表示QA: `completed`
-- Topic 10 練習問題source: `completed / 進捗記録同期済み`
+- Topic 10 練習問題source: `completed`
 - Topic 10 練習PDF＋表示QA: `completed / 3 / 3 PASS`
 - Topic 10 練習PDF文字抽出QA: `PASS`
 - Topic 10 練習問題: `12問 / 正答一意性・数値再計算 12 / 12 PASS`
@@ -228,9 +227,8 @@ Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALI
 - Topic 10 未確認実設備値追加: `0件`
 - Topic 10 完成後独立再解答: `20 / 20 PASS`
 - Topic 10 教材外知識補完: `0件`
-- Topic 10 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- Topic 10 初回QA blocker: `解消済み / 最終QA再実施待ち`
+- Topic 10 最終QA: `PASS / completed`
 
 ## 次に行うこと
 
-Topic 10の最終QAを再実施し、固定一次5問・20小問の独立再解答結果、二次非採用判断、必須成果物、PDF/PPTX QA、SPEC境界、進捗記録整合を再確認する。PASS時のみ `completed` とする。
+Topic 11「ATCはなぜ特定の周波数を見分けられる？」の制作前EXAM_ALIGNMENTを実施する。一次・二次の公式過去問を確認し、固定範囲へ直接対応する問題だけを品質ゲート対象として固定する。
