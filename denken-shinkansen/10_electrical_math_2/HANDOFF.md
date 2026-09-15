@@ -8,7 +8,7 @@ Topic 01〜07は `completed`。
 
 完成数: `7 / 20`
 
-current_status: `topic_08_final_qa_needs_revision`
+current_status: `topic_08_source_progress_synced`
 
 active_topic: `08 二階常微分方程式`
 
@@ -238,10 +238,20 @@ FAIL:
 
 教材内容・試験対応そのものの不足ではなく、GitHub正本内の進捗記録不整合だけが残っている。
 
+## Topic 08 source進捗同期完了記録
+
+`topics/08_second_order_ode/08_second_order_ode.md` の旧進捗2箇所だけを現在地へ同期した。
+
+- 冒頭 `## 状態`: 解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了済みへ同期
+- 末尾 `## 次工程`: source同期後の最終QA再判定へ更新
+- 教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、問題、PDF、PowerPoint、完成後独立再解答は変更なし
+
+source同期後も固定一次5問・15小問、完成後独立再解答 `15 / 15 PASS`、Topic 09〜10先取り0件、固定範囲外追加0件を維持する。
+
 ## 次に行うこと
 
-`topics/08_second_order_ode/08_second_order_ode.md` の旧進捗2箇所だけを現在地へ同期する。
+Topic 08の最終QAを再判定する。
 
-- 冒頭 `## 状態` を、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了済みの状態へ更新する。
-- 末尾 `## 次工程` を、source同期後の最終QA再判定へ更新する。
+- source進捗2箇所が現在地と整合していることを確認する。
+- 既存の必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答 `15 / 15 PASS` を再確認する。
 - 教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、問題、PDF、PowerPoint、完成後独立再解答は変更しない。
