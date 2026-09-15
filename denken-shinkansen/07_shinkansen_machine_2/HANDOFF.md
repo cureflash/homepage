@@ -3,13 +3,13 @@
 更新日: 2026-09-16
 
 ## 現在地
-Topic 01〜09は最終QAまで `PASS / completed`。
+Topic 01〜10は最終QAまで `PASS / completed`。
 
-完成数: `9 / 22`
+完成数: `10 / 22`
 
-active topic: `10 新幹線はモーターを発電機にして止まる`
+active topic: `11 GTO→IGBT→SiCの損失を計算する`
 
-current status: `topic_10_practice_source_progress_synced`
+current status: `topic_10_completed`
 
 ## Topic 10 固定範囲
 - 力行
@@ -86,7 +86,7 @@ source完成内容:
 - 固定5過去問・15答案要素: 全件接続
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 末尾 `## 次工程` の旧「練習PDF作成」を、実成果物に合わせて「最終QA再実施」へ同期済み。
+- 末尾 `## 次工程` の旧「練習PDF作成」は実成果物に合わせて同期済み。
 
 ## Topic 10 練習PDF
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_practice.pdf`: `completed`
@@ -133,13 +133,13 @@ source完成内容:
 - 完成後独立再解答: `15 / 15 PASS`
 - 練習問題・PDF/PPTX QA: PASS
 - 固定範囲境界・未確認実車値: PASS
-- 進捗記録整合: 前回FAIL、旧進捗修正済み・再判定待ち
-- 判定: 前回 `NEEDS_REVISION / IN_PROGRESS`、再判定待ち
+- 進捗記録整合: PASS
+- 判定: `PASS / completed`
 
 ## 次に行うこと
-Topic 10の最終QAを再実施する。
+Topic 11「GTO→IGBT→SiCの損失を計算する」の制作前EXAM_ALIGNMENTを実施する。
 
-1. 練習source末尾が実成果物と整合していることを確認する。
-2. 必須成果物、固定一次4問＋二次1問・15答案要素、完成後独立再解答 `15 / 15 PASS` を再確認する。
-3. 固定範囲外追加・未確認実車値追加が0件であることを確認する。
-4. 全件PASSならTopic 10を `completed` に更新する。
+1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 11固定範囲を再確認する。
+2. 公式二種過去問を直近年度から調査し、一次・二次を合わせ原則5問以上、二次対象論点では記述式を含める。
+3. 固定範囲外のTopic 12以降や未確認実車値で件数を水増ししない。
+4. 固定過去問・要求知識・使用式・設問型をsourceへ記録し、制作前独立検証を行う。
