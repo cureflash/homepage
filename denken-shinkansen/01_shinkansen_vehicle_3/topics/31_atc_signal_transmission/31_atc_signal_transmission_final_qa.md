@@ -4,9 +4,9 @@
 
 ## 現在地
 
-`完成後独立再解答完了 / 最終QA未実施`
+`NEEDS_REVISION / IN_PROGRESS`
 
-固定5問・6対象項目の完成後独立再解答は `6 / 6 PASS`。最終QAは次工程で実施する。
+固定5問・6対象項目の完成後独立再解答は `6 / 6 PASS`。必須成果物・過去問対応・表示QA・固定範囲境界はPASSだが、主source冒頭の進捗記録が実在成果物と不整合のため、最終QAは `NEEDS_REVISION` とする。
 
 ## 対象
 
@@ -45,6 +45,45 @@ Topic 32の速度検出・速度照査・ブレーキ指令・フィードバッ
 - 未確認実車値追加: `0件`
 - 公式解答との不一致: `0件`
 
-## 次工程
+## 最終QA
 
-Topic 31の最終QAを実施する。必須成果物、完成後独立再解答 `6 / 6 PASS`、解説PDF・練習PDF・PowerPointの表示QA、進捗記録整合、固定範囲境界を再確認する。最終QAがPASSするまではTopic 31を `completed` にしない。
+### 必須成果物
+- 解説source / EXAM_ALIGNMENT: PASS
+- 解説PDF: PASS
+- 練習source: PASS
+- 練習PDF: PASS
+- 解説画像PowerPoint: PASS
+- 完成後独立再解答記録: PASS
+
+### 過去問対応品質ゲート
+- 固定公式過去問: `5問・6対象項目`
+- 制作前独立解答: `6 / 6 PASS`
+- 完成後独立再解答: `6 / 6 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+- 判定: PASS
+
+### 表示QA
+- 解説PDF: A4縦4ページ、180 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA PASS
+- 練習PDF: A4縦4ページ、180 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA PASS
+- PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、overflow検査PASS、ZIP整合性PASS
+- 判定: PASS
+
+### 進捗記録整合
+- `STATUS.md`: PASS（最終QA実施前の現在地として整合）
+- `HANDOFF.md`: PASS（最終QA実施前の現在地として整合）
+- `31_atc_signal_transmission.md`: FAIL
+  - 冒頭「状態」に `PDF・練習・PowerPoint・完成後独立再解答は未着手` と残っている。
+  - 実在する解説PDF、練習source/PDF、PowerPoint、完成後独立再解答記録と不整合。
+
+### 固定範囲境界
+PASS。Topic 30の列車検知回路の再説明、Topic 32の速度検出・速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR具体回路、未確認のATC実車周波数値・符号体系・ビットレート、固定過去問に不要な通信方式各論は追加していない。
+
+## 最終判定
+
+`NEEDS_REVISION / IN_PROGRESS`
+
+技術内容、固定5問・6対象項目の過去問対応 `6 / 6 PASS`、必須成果物、表示QA、固定範囲境界はすべてPASS。未完了理由は主source冒頭の進捗記録1箇所だけである。Topic 31はまだ `completed` にしない。
+
+次工程: `31_atc_signal_transmission.md` 冒頭の進捗記録だけを実在成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・PDF・練習問題・PowerPoint・固定範囲は変更しない。
