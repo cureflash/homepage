@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了。
+Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QAまで完了。
 
 完成数: `7 / 21`
 
-current_status: `topic_08_explanation_source_complete`
+current_status: `topic_08_explanation_pdf_complete`
 
 active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 
-次工程: Topic 08の解説PDFを作成し、全ページ表示QAを行う。
+次工程: Topic 08の練習問題source＋練習PDFを作成する。
 
 ## Topic 08 固定範囲
 
@@ -75,6 +75,14 @@ L0系・超電導リニアは `超電導磁石 → 地上コイル → 誘導電
 
 固定EXAM_ALIGNMENTの増減、仕様外論点、超電導物性、未確認実設備値の追加は0件。
 
+## 解説PDF QA
+
+- `08_maglev_electromagnetic_induction_explanation.pdf`
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 固定一次4問・6小問、二次非採用判断、固定範囲を変更していない
+
 ## 次に行うこと
 
-完成済みsourceを正本として解説PDFを作成し、全ページ表示QAを行う。内容を追加する場合も固定範囲内に限定し、公式過去問の選定は変更しない。
+固定EXAM_ALIGNMENTと完成済み解説sourceを正本として、練習問題source＋練習PDFを作成する。内容は固定範囲内に限定し、公式過去問の選定は変更しない。
