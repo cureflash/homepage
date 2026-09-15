@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 8 / 20
-- current_status: `topic_09_exam_alignment_complete`
+- current_status: `topic_09_explanation_source_complete`
 - last_completed_topic: `08 二階常微分方程式`
 - active_topic: `09 ラプラス変換`
-- next_start: Topic 09の解説本文＋3段階例題。固定済みEXAM_ALIGNMENTだけを根拠に作成し、Topic 10の伝達関数・極・零点を先取りしない
+- next_start: Topic 09の解説PDF。完成済み解説本文＋3段階例題だけを反映し、Topic 10の伝達関数・極・零点を先取りしない
 
 ## Topic 07 制作品質ゲート
 
@@ -67,7 +67,7 @@
 - [x] H29 問4 (1)〜(2)、H25 問4 (1)、H24 問4 (1)、H18 問4 (1)を採用
 - [x] 制作前独立再解答・公式標準解答照合 `6 / 6 PASS`
 - [x] Topic 10先取り0件・件数合わせの範囲外追加0件を確認
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF
@@ -79,29 +79,22 @@
 
 ## 今回進めた内容
 
-Topic 09 `ラプラス変換` の制作前EXAM_ALIGNMENTを完了した。
-
-固定対象:
-- R6 二次 機械・制御 問4 (4)
-- H29 二次 機械・制御 問4 (1)〜(2)
-- H25 二次 機械・制御 問4 (1)
-- H24 二次 機械・制御 問4 (1)
-- H18 二次 機械・制御 問4 (1)
+Topic 09 `ラプラス変換` の解説本文＋3段階例題を完成し、主sourceへ反映した。
 
 確認結果:
-- 公式過去問: 5問・6対象設問
-- 二次記述問題: 5 / 5問
-- 制作前独立再解答: `6 / 6 PASS`
-- 要求知識・式・設問型・教材内必要説明: sourceへ固定済み
-- 参考学習サイト: 電験王2＋e-sysnetを確認
+- 固定二次5問・6対象設問への本文マッピング: `6 / 6`
+- 3段階例題: 基礎1／本試験標準1／複合・ひっかけ1
+- 定義・線形性・微分の変換・積分の変換・初期値: 収録済み
+- 代表変換対・部分分数分解・逆ラプラス変換: 収録済み
+- Topic 07一階方程式・Topic 08二階方程式のラプラス変換による解き直し: 収録済み
 - Topic 10先取り: 0件
 - 件数合わせの固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 09は `EXAM_ALIGNMENT PASS / IN_PROGRESS`。
+Topic 09は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。
 
 完成数は `8 / 20` のまま。
 
-次はTopic 09の解説本文＋3段階例題。
+次はTopic 09の解説PDF。
