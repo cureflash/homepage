@@ -3,22 +3,27 @@
 更新日: 2026-09-15
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `7 / 16`。Topic 01〜07は品質ゲートPASSでcompleted。active topicは08「N700Sのモーターはなぜ小さくできた？」。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `8 / 16`。Topic 01〜08は品質ゲートPASSでcompleted。次のactive topicは09「新幹線はどうやって電気で止まる？」。
 
 ## 今回進捗
-Topic 08の完成後独立再解答を完了した。
+Topic 08「N700Sのモーターはなぜ小さくできた？」の最終QAを完了し、`PASS / completed` とした。
 
 - 品質ゲート対象: 公式過去問4問・5小問
 - 完成後独立答案列: `(2), (2), (1), (2), (1)`
 - 公式解答照合: `5 / 5 PASS`
+- 必須成果物の実在: `PASS`
+- 解説PDF表示QA・文字抽出QA: `PASS`
+- 練習PDF表示QA・文字抽出QA: `PASS`
+- PowerPoint表示QA・overflow・ZIP整合性: `PASS`
+- source進捗整合: `PASS`
+- 固定範囲境界: `PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 - source: `topics/08_n700s_motor/08_n700s_motor.md`
-- 完成数: `7 / 16`（Topic 08は最終QA待ち）
+- 完成数: `8 / 16`
 
-R6上問15(a)、R5下問15(a)(b)、R5上問4、R2問15(b)を完成済み教材の式・解法手順だけで再導出した。三種は原則5問以上だが、Topic 08固定範囲だけで設問全体または独立小問を完結できる公式問題は確認済み4問で固定し、件数合わせのための仕様外追加は行っていない。
+R6上問15(a)、R5下問15(a)(b)、R5上問4、R2問15(b)の固定4問・5小問を維持し、件数合わせのための仕様外追加は行っていない。
 
 ## Topic 08 EXAM_ALIGNMENT
 品質ゲート対象は4問・5小問で固定。
@@ -58,7 +63,7 @@ R6上問15(a)、R5下問15(a)(b)、R5上問4、R2問15(b)を完成済み教材�
 
 実車記述はJR東海・メーカー一次資料に基づく。N700Sでは新幹線初の6極駆動モーター、4極から6極への変更、小型軽量化、N700A比で1台車当たり約140 kgの軽量化、SiC素子使用主変換装置を確認済み。確認できていない主電動機回転速度・寸法等は推測しない。単純に「6極にすれば小さくなる」と一般化しない。
 
-## Topic 08 現在状態
+## Topic 08 完了状態
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前検証: `5 / 5 PASS`
 - 解説本文: 完了
@@ -84,15 +89,15 @@ R6上問15(a)、R5下問15(a)(b)、R5上問4、R2問15(b)を完成済み教材�
 - PowerPoint QA記録: `topics/08_n700s_motor/08_n700s_motor_powerpoint_qa.md`
 - 完成後独立再解答: `5 / 5 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 未実施
+- 最終QA: `PASS / completed`
 
 source: `topics/08_n700s_motor/08_n700s_motor.md`
 practice source: `topics/08_n700s_motor/08_n700s_motor_practice.md`
 
 ## 次に行う
-Topic 08の最終QAを実施する。
+Topic 09「新幹線はどうやって電気で止まる？」の制作前EXAM_ALIGNMENTを実施する。
 
-必須成果物の実在、固定EXAM_ALIGNMENT 4問・5小問、完成後独立再解答 `5 / 5 PASS`、解説PDF・練習PDF・PowerPointの既存QA、source進捗整合、固定範囲境界を再確認する。教材外・固定範囲外知識による補完、仕様外論点追加、未確認実車値追加が0件であることを確認する。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。仕様外論点を件数合わせで追加しない。
 
 ## Topic 07 完了要約
 Topic 07「GTO→IGBT→SiCで何が変わった？」は品質ゲートPASS / completed。
