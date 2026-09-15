@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 7 / 12
-- current_status: `topic_08_practice_source_complete`
+- current_status: `topic_08_practice_pdf_complete`
 - last_completed_topic: `07 微分② 速度を微分すると加速度`
 - active_topic: `08 積分 速度曲線の面積は距離`
-- next_start: `Topic 08 練習PDF`
+- next_start: `Topic 08 解説画像PowerPoint`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -63,23 +63,23 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source
-- [ ] 練習PDF（解答・完全解説付き）
+- [x] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 08「積分 速度曲線の面積は距離」の練習問題・完全解説sourceを完成した。
+Topic 08「積分 速度曲線の面積は距離」の練習PDF（解答・完全解説付き）を完成した。
 
-全12問・全問五肢択一（基礎3／標準7／複合2）。固定5過去問で必要な正弦波定積分、符号付き面積、波形平均、区分積分、面積・蓄積量の釣合いを練習できるようにし、系列SPEC固定の `x=∫vdt`、`t=∫dx/v(x)`、`a=v dv/dx` からの一定加速度式も範囲内で収録した。
+成果物: `topics/08_integral_distance/08_integral_distance_practice.pdf`。A4縦5ページ。練習sourceの全12問・全問五肢択一（基礎3／標準7／複合2）と全問の完全解説、固定5過去問への対応表、Topic 08固定範囲との対応を収録した。
 
-問題文だけから全12問を独立再計算し、正答一意性・単位・固定範囲依存を確認して `12 / 12 PASS`。固定5問への対応は全件維持した。
+200 dpi全ページ表示QA `5 / 5 PASS`、文字抽出QA PASS。主要計算を再検算し `12 / 12 PASS`。クリッピング・重なり・文字化け0件。
 
-固定EXAM_ALIGNMENT変更0件。Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系、未確認新幹線実値の追加は0件。
+固定EXAM_ALIGNMENT変更0件。Topic 09〜11先取り、未確認新幹線実値追加0件。
 
 ## 判定
 
-Topic 08は `topic_08_practice_source_complete / IN_PROGRESS`。
+Topic 08は `topic_08_practice_pdf_complete / IN_PROGRESS`。
 
-完成数は `7 / 12`。次工程は練習PDF。
+完成数は `7 / 12`。次工程は解説画像PowerPoint。
