@@ -7,7 +7,7 @@
 
 Topic 01〜07は最終QAまで `PASS`。完成数は `7 / 39`。
 
-現在地は `topic_08_explanation_source_complete`。active topicは Topic 08 `位相制御と平均直流電圧`。制作前EXAM_ALIGNMENTとして一次3問＋二次2問・20対象項目を固定し、制作前独立検証は一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。解説本文＋3段階例題まで完成し、固定20対象項目を本文へ全件マッピング済み。解説PDF・練習・PowerPointは未着手。
+現在地は `topic_08_explanation_pdf_complete`。active topicは Topic 08 `位相制御と平均直流電圧`。制作前EXAM_ALIGNMENTとして一次3問＋二次2問・20対象項目を固定し、制作前独立検証は一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。解説本文＋3段階例題と解説PDFまで完成し、固定20対象項目とSPEC指定4可視化を同期済み。練習・PowerPointは未着手。
 
 Topic 07はH21一次「機械」問2(2)の不足「負荷損を規定の基準巻線温度へ補正」を固定範囲内で補強し、解説PDF・練習PDF・PowerPointへの同期と各QAまで完了。補強済み完成教材だけで固定一次4問＋二次1問・15対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `2 / 2 PASS`、合計 `15 / 15 PASS`。教材外知識補完は0件。主source・練習sourceの旧進捗記録不整合も解消し、最終QA `PASS / completed`。
 
@@ -195,13 +195,25 @@ source: `topics/08_phase_control_average_dc_voltage/08_phase_control_average_dc_
 - 電気学会資料で200系の力行時サイリスタ位相制御を確認
 - 未確認の100系・200系実車電圧・電流・詳細転流条件を真値化: `0件`
 - 後続Topic追加: `0件`
-- 解説PDF・練習・PowerPoint: 未着手
+- 解説PDF: `completed` / 練習・PowerPoint: 未着手
+
+## Topic 08 解説PDF
+- `08_phase_control_average_dc_voltage_explanation.pdf`
+- A4縦6ページ
+- 180 dpi全6ページ Visual QA: `PASS`
+- 文字抽出・Unicode置換文字: `PASS / 0件`
+- 3段階例題: `3 / 3`
+- SPEC指定4可視化: `4 / 4`
+- 固定一次3問＋二次2問・20対象項目: 維持
+- SHA-256: `493463dc838de2c85614df08d629962585e9da6aa4727b52f8652c6beee9af6a`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
 
 ## 次の正確な開始点
-Topic 08 `位相制御と平均直流電圧` の解説PDF作成＋全ページ表示QA・文字抽出QA。
+Topic 08 `位相制御と平均直流電圧` の練習問題・完全解説source作成。
 
-1. 完成済み解説本文と3段階例題をそのまま教材化する。
-2. 固定一次3問＋二次2問・20対象項目を欠落なく同期する。
-3. `SPEC.md` 指定4可視化「点弧角―平均直流電圧」「点弧角―力率」「位相制御波形」「高調波成分」を収録する。
+1. 固定一次3問＋二次2問・20対象項目を練習問題へ欠落なく接続する。
+2. 一次試験型に加え、二次記述式では途中式・前提・単位・理由説明を採点可能な形で残す。
+3. 問題・解説はTopic 08固定範囲だけで完結させる。
 4. 新幹線実車値は確認済み資料の範囲だけを使い、未確認値を推定しない。
 5. チョッパ、回生、誘導機、PWM/VVVF、IGBT/SiC等の後続Topicを追加しない。
