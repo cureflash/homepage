@@ -6,14 +6,16 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は30/38。01〜30がPASS。active topicは31 `ATC② 地上から車上へどう情報を送る？`。
 
 ## 今回進捗
-Topic 31の完成後独立再解答を実施した。制作前に固定した公式過去問5問・6対象項目を完成教材の固定範囲だけで再導出し、公式解答と `6 / 6` 一致。教材外知識補完・固定範囲外追加・未確認実車値追加はいずれも0件。
+Topic 31の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物、解説PDF・練習PDF・PowerPoint表示QA、固定範囲境界はすべてPASS。
+
+未完了理由は主source `31_atc_signal_transmission.md` 冒頭の進捗記録1箇所のみ。`PDF・練習・PowerPoint・完成後独立再解答は未着手` と残っており、実在する解説PDF、練習source/PDF、PowerPoint、完成後独立再解答記録と不整合。技術内容や固定EXAM_ALIGNMENTには修正不要。
 
 Topic 32の速度検出・速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR具体回路、未確認のATC実車周波数値・符号体系・ビットレート、固定過去問に不要な通信方式各論は追加していない。
 
 更新:
-- `topics/31_atc_signal_transmission/31_atc_signal_transmission_final_qa.md` — 完成後独立再解答 `6 / 6 PASS` を記録。最終QAは未実施
-- `STATUS.md` — `topic_31_independent_reanswer_complete` へ更新
-- `HANDOFF.md` — 次開始点をTopic 31最終QAへ更新
+- `topics/31_atc_signal_transmission/31_atc_signal_transmission_final_qa.md` — 最終QA `NEEDS_REVISION / IN_PROGRESS` を記録
+- `STATUS.md` — `topic_31_final_qa_needs_revision` へ更新
+- `HANDOFF.md` — 次開始点を主source進捗記録同期へ更新
 
 ## Topic 31 固定EXAM_ALIGNMENT
 1. R7下 機械 問14 — フローチャートの条件分岐・反復による論理判断 — `3` — PASS
@@ -74,6 +76,16 @@ PowerPoint可視化: `6 / 6 PASS`。
 - Topic 32範囲追加: `0件`
 - 未確認実車値追加: `0件`
 
+## Topic 31 最終QA
+`NEEDS_REVISION / IN_PROGRESS`。
+- 必須成果物: PASS
+- 完成後独立再解答: `6 / 6 PASS`
+- 表示QA: PASS
+- 固定範囲境界: PASS
+- 進捗記録整合: FAIL
+  - `31_atc_signal_transmission.md` 冒頭に `PDF・練習・PowerPoint・完成後独立再解答は未着手` が残存
+- Topic 31はまだ `completed` にしない
+
 ## Topic 31 固定範囲
 扱う:
 - 信号
@@ -93,7 +105,7 @@ PowerPoint可視化: `6 / 6 PASS`。
 - 固定過去問に不要な通信方式各論
 
 ## 現在の状態
-- `current_status`: `topic_31_independent_reanswer_complete`
+- `current_status`: `topic_31_final_qa_needs_revision`
 - 完成数: 30/38
 - 01〜30: PASS
 - active topic: 31 `ATC② 地上から車上へどう情報を送る？`
@@ -104,6 +116,7 @@ PowerPoint可視化: `6 / 6 PASS`。
 - Topic 31練習独立QA: `15 / 15 PASS`
 - Topic 31 PowerPoint可視化: `6 / 6 PASS`
 - Topic 31完成後独立再解答: `6 / 6 PASS`
+- Topic 31最終QA: `NEEDS_REVISION / IN_PROGRESS`
 
 ## 次の正確な開始点
-Topic 31の最終QAを実施する。必須成果物、完成後独立再解答 `6 / 6 PASS`、解説PDF・練習PDF・PowerPoint表示QA、進捗記録整合、固定範囲境界を再確認する。最終QAがPASSするまではTopic 31を `completed` にしない。
+`topics/31_atc_signal_transmission/31_atc_signal_transmission.md` 冒頭の進捗記録だけを実在成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・PDF・練習問題・PowerPoint・固定範囲は変更しない。同期後、最終QAを再判定する。
