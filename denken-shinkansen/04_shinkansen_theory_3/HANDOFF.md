@@ -6,26 +6,34 @@
 
 Topic 01〜08は最終QAまでPASSし、`completed`。
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は、解説本文・解説PDF・練習source/PDF・解説画像PowerPointまで完成し、固定6過去問の完成後独立再解答も `6 / 6 PASS`。最終QAは未実施。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は、解説本文・解説PDF・練習source/PDF・解説画像PowerPoint・固定6過去問の完成後独立再解答まで完了。最終QAは技術内容・成果物・過去問対応・SPEC境界をPASSしたが、練習sourceの進捗記録が実成果物より古いため `NEEDS_REVISION`。
 
 - 完成数: `8 / 14`
 - last completed: `08 新幹線の交流25kVとは何なのか`
 - active topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- current status: `topic_09_independent_reanswer_complete`
-- next start: Topic 09の最終QAを実施する
+- current status: `topic_09_final_qa_needs_revision`
+- next start: Topic 09練習sourceの旧進捗記録だけを実成果物へ同期する
 
 ## 今回進捗
 
-固定6過去問について、公式解答PDFを開く前に公式問題文と完成教材だけで解答を確定し、その後に公式解答と照合した。
+Topic 09の最終QAを実施した。
 
-- 独立解答列: `(1), (5), (3), (3), (2), (3)`
-- 公式解答列: `(1), (5), (3), (3), (2), (3)`
-- 照合: `6 / 6 PASS`
+- 固定6過去問の完成後独立再解答: `6 / 6 PASS`
 - 教材外知識による補完: `0問`
 - Topic 10以降の力率・三相・半導体等への依存: `0問`
 - 未確認新幹線実車値・周波数切替方式への依存: `0問`
+- 解説PDF QA: PASS
+- 練習PDF QA: PASS
+- PowerPoint QA: PASS
+- 練習15問の独立再計算・論理確認: `15 / 15 PASS`
+- 正答一意性: `15 / 15 PASS`
+- SPEC境界: PASS
 
-独立再解答の詳細は `topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_exam_recheck.md` に記録した。固定EXAM_ALIGNMENT、教材本文、練習問題、PDF・PowerPointの技術内容、SPEC境界は変更していない。
+唯一のFAILは進捗記録整合性。`topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_practice.md` が `stage: PRACTICE_PDF_COMPLETE` のままで、次工程もPowerPoint作成となっているが、PowerPointと完成後独立再解答は既に完了している。
+
+最終QA記録: `topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_final_qa.md`
+
+教材本文・固定EXAM_ALIGNMENT・練習問題・PDF・PowerPointの技術内容は変更していない。
 
 ## Topic 09 品質ゲート
 
@@ -37,6 +45,7 @@ Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は、解説本文・
 - 教材外知識による正答補完: `0問`
 - Topic 10以降の力率・三相・半導体等による件数合わせ・依存: `0問`
 - 未確認新幹線実車値・周波数切替方式の追加・依存: `0件`
+- 最終QA: `NEEDS_REVISION`（練習source進捗記録不整合のみ）
 
 公式過去問は電気技術者試験センターを正本とし、e-sysnet・電験王・電験三種まとめましたは説明粒度・解法順の比較にのみ使用する。
 
@@ -114,16 +123,17 @@ f0 = 1 / (2π√LC)
   - 固定過去問→本文マッピング: `6 / 6`
   - status: `INDEPENDENT_REANSWER_COMPLETE`
 - 解説PDF: 完成（A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
-- 練習source: 完成（15問、全問五肢択一、独立QA `15 / 15 PASS`）
+- 練習source: 内容完成、進捗記録のみ要同期
 - 練習PDF: 完成（A4縦2ページ、200 dpi表示QA `2 / 2 PASS`、文字抽出QA `PASS`）
 - 解説画像PowerPoint: 完成（16:9・4枚、表示QA `4 / 4 PASS`、固定6過去問要求 `6 / 6`）
 - 完成後独立再解答: `6 / 6 PASS`
 - 独立再解答記録: `topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_exam_recheck.md`
-- 最終QA: 未実施
+- 最終QA: `NEEDS_REVISION`
+- 最終QA記録: `topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_final_qa.md`
 
 ## 次に行うこと
 
-固定EXAM_ALIGNMENT・教材本文・練習問題・PDF・PowerPointを変更せず、Topic 09の最終QAを実施する。最終QAがPASSするまで `completed` としない。
+固定EXAM_ALIGNMENT・教材本文・問題・PDF・PowerPointを変更せず、`09_hokuriku_frequency_rlc_practice.md` の旧進捗記録だけを実成果物へ同期する。その後、最終QAを再実施する。最終QAがPASSするまで `completed` としない。
 
 ## 固定ルール
 
