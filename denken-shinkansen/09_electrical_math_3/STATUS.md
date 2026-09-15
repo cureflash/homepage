@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 7 / 12
-- current_status: `topic_08_independent_reanswer_needs_revision`
+- current_status: `topic_08_revision_supplement_source_complete`
 - last_completed_topic: `07 微分② 速度を微分すると加速度`
 - active_topic: `08 積分 速度曲線の面積は距離`
-- next_start: `Topic 08 独立再解答FAILの不足前提3群を最小補強`
+- next_start: `Topic 08 補強3点を学習用補強PDFへ同期`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -66,24 +66,23 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 完成教材だけでの公式過去問独立再解答 `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`
-- [ ] 独立再解答FAILの不足前提3群を固定範囲内で最小補強
+- [x] 独立再解答FAILの不足前提3群を固定範囲内で最小補強sourceへ反映
+- [ ] 補強3点を学習用補強PDFへ同期
 - [ ] 補強後の完成教材だけで固定5問を再独立解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 08「積分 速度曲線の面積は距離」の完成後独立再解答を実施した。
+Topic 08「積分 速度曲線の面積は距離」の独立再解答FAILで不足した前提3群だけを、固定範囲を変えず補強sourceへ追加した。
 
-固定5問のうち、R1理論問18とH24機械問10は完成教材だけで問題全体を再導出でき `2 / 5問 PASS`。答案要素では `5 / 9 PASS`。教材のみで到達した答案要素はすべて公式解答と一致した。
+成果物: `topics/08_integral_distance/08_integral_distance_revision_supplement.md`。
 
-FAILは積分操作ではなく、公式問題文から積分式へ接続する電気的前提の不足による。R8上機械問16の相電圧→線間電圧・線間波形、R3機械問16のリアクトル電圧符号・磁気エネルギー・導通終了、H28機械問16のサイリスタ導通対と無点弧時波形が学習用教材に未収録だった。教材外知識で補ってPASS扱いせず `NEEDS_REVISION` とした。
+補強対象は、R8上機械問16の相電圧→線間電圧・線間波形、R3機械問16(a)の `vL=Ldi/dt` の符号・`WL=(1/2)Li²`・電流0での導通終了、H28機械問16(a)の固定問のサイリスタ導通対・無点弧時波形の3群のみ。三相回路・整流回路・リアクトル・サイリスタの体系説明には拡張していない。
 
-固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、未確認新幹線実値追加0件。
-
-成果物: `topics/08_integral_distance/08_integral_distance_exam_reanswer.md`。
+固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、未確認新幹線実値追加0件。不足前提への対応は `3 / 3`。この段階では補強sourceのみで、品質ゲートの再判定はまだ行っていない。
 
 ## 判定
 
-Topic 08は `topic_08_independent_reanswer_needs_revision / IN_PROGRESS`。
+Topic 08は `topic_08_revision_supplement_source_complete / IN_PROGRESS`。
 
-完成数は `7 / 12`。次工程は独立再解答FAILの不足前提3群だけを固定範囲内で最小補強すること。
+完成数は `7 / 12`。次工程は補強3点を学習用補強PDFへ同期し、表示・文字抽出QAを行うこと。
