@@ -1,6 +1,6 @@
 # HANDOFF - 電験二種「電気数学」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 現在地
 
@@ -8,11 +8,11 @@ Topic 01〜08は `completed`。
 
 完成数: `8 / 20`
 
-current_status: `topic_09_powerpoint_complete`
+current_status: `topic_09_exam_reanswer_complete`
 
 active_topic: `09 ラプラス変換`
 
-次工程: Topic 09の完成後独立再解答。
+次工程: Topic 09の最終QA。
 
 ## 上位仕様
 
@@ -157,6 +157,9 @@ source:
 PowerPoint:
 `topics/09_laplace_transform/09_laplace_transform_images.pptx`
 
+完成後独立再解答:
+`topics/09_laplace_transform/09_laplace_transform_exam_reanswer.md`
+
 ### Topic 09 固定範囲
 
 - ラプラス変換の定義
@@ -281,8 +284,24 @@ QA:
 - 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
+### Topic 09 完成後独立再解答
+
+`topics/09_laplace_transform/09_laplace_transform_exam_reanswer.md`
+
+結果:
+- 固定二次5問・6対象設問: `6 / 6 PASS`
+- R6 問4 (4): `11e^{-t}-16e^{-2t}+5e^{-3t}`
+- H29 問4 (1)〜(2): `2 / 2 PASS`
+- H25 問4 (1): `(1/2)sin 2t`
+- H24 問4 (1): `t-1+e^{-t}`
+- H18 問4 (1): `y0+(1/(2J))(1-cos 2t)`
+- 教材外知識補完: 0件
+- Topic 10先取り: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
 ## 次に行うこと
 
-Topic 09 `ラプラス変換` の完成後独立再解答を1段階進める。
+Topic 09 `ラプラス変換` の最終QAを1段階進める。
 
-固定二次5問・6対象設問を、保存済み正答を先に見ず、完成教材だけで再解答し、教材外知識補完の有無を記録する。
+必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認し、全品質ゲートPASSの場合のみ `completed` とする。
