@@ -6,16 +6,16 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は31/38。01〜31がPASS。active topicは32 `ATC③ 新幹線をどう自動で減速させる？`。
 
 ## 今回進捗
-Topic 32の解説本文＋3段階例題を完成した。固定EXAM_ALIGNMENTの公式過去問5問・6対象項目は変更せず、系列SPEC固定範囲（速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ）だけを本文§1〜§15へ展開した。
+Topic 32の解説PDFを完成した。固定EXAM_ALIGNMENTの公式過去問5問・6対象項目と解説本文§1〜§15は変更せず、系列SPEC固定範囲（速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ）だけをA4縦4ページへ整理した。
 
-固定6対象項目を本文へ `6 / 6` マッピング済み。負帰還 `C/R=G/(1+GH)`、固定過去問型 `C/R=(1+jωT1)/(1+jωT2)`、一次遅れ `W(jω)=K/(1+jωT)`、`ωc=1/T`、`20log10K`、折点後 `-20 dB/dec`、P・I・Dの定常/過渡特性、AND・OR・NOT、論理式・タイムチャート、シーケンス・インタロック・フェイルセーフを固定要求範囲内で収録した。
+固定6対象項目をPDFへ `6 / 6` 反映。負帰還 `C/R=G/(1+GH)`、固定過去問型 `C/R=(1+jωT1)/(1+jωT2)`、一次遅れ `W(jω)=K/(1+jωT)`、`ωc=1/T`、`20log10K`、折点後 `-20 dB/dec`、P・I・D、AND・OR・NOT、論理式・タイムチャート、シーケンス・インタロック・フェイルセーフ、3段階例題を収録した。
 
-3段階例題は、基礎「一次遅れ系の折点と低周波利得」、標準「内部信号から伝達関数を求める」、複合「論理式とシーケンス判断」。固定範囲外論点・未確認新幹線ATC実車値の追加は0件。
+表示QAは180 dpiで全4ページ `4 / 4 PASS`、文字抽出QAもPASS。固定範囲外論点・未確認新幹線ATC実車値の追加は0件。
 
 更新:
-- `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md` — 解説本文§1〜§15、3段階例題、固定EXAM_ALIGNMENT本文マッピング `6 / 6` を追加
-- `STATUS.md` — `topic_32_explanation_source_complete` へ更新
-- `HANDOFF.md` — 次開始点を解説PDFへ更新
+- `topics/32_atc_speed_brake_control/32_atc_speed_brake_control_explanation.pdf` — A4縦4ページ、固定EXAM_ALIGNMENT `6 / 6` 反映、表示/文字抽出QA PASS
+- `STATUS.md` — `topic_32_explanation_pdf_complete` へ更新
+- `HANDOFF.md` — 次開始点を練習source/PDFへ更新
 
 ## Topic 32 固定EXAM_ALIGNMENT
 1. R8上 機械 問13 — ブロック線図・負帰還・伝達関数 — `4` — PASS
@@ -42,8 +42,18 @@ source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 - 一次遅れ: `W(jω)=K/(1+jωT)`、`ωc=1/T`、低周波利得 `20log10K`、折点後 `-20 dB/dec`
 - P・I・D: I=定常特性改善、D=過渡特性改善、Pは両特性へ影響
 - 論理回路: AND・OR・NOT、`X=A·C+B·NOT(C)`、タイムチャート追跡
-- シーケンス・インタロック・フェイルセーフの一般原則
+- シーケンス制御・インタロック・フェイルセーフの一般原則
 - JRTT公開範囲のATC世代差のみ収録
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+
+## Topic 32 解説PDF
+- `topics/32_atc_speed_brake_control/32_atc_speed_brake_control_explanation.pdf`
+- A4縦4ページ
+- 本文§1〜§15、3段階例題、固定5問・6対象項目の対応を収録
+- 180 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- 固定EXAM_ALIGNMENT: `6 / 6` 反映
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
@@ -71,7 +81,7 @@ source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 Topic 31 `ATC② 地上から車上へどう情報を送る？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASSで `PASS / COMPLETED`。完成数31/38。
 
 ## 現在の状態
-- `current_status`: `topic_32_explanation_source_complete`
+- `current_status`: `topic_32_explanation_pdf_complete`
 - 完成数: 31/38
 - 01〜31: PASS
 - active topic: 32 `ATC③ 新幹線をどう自動で減速させる？`
@@ -79,10 +89,10 @@ Topic 31 `ATC② 地上から車上へどう情報を送る？` は固定5問・
 - Topic 32解説本文: §1〜§15 完了
 - Topic 32 3段階例題: 完了
 - Topic 32固定EXAM_ALIGNMENT本文マッピング: `6 / 6 PASS`
-- Topic 32解説PDF: 未着手
+- Topic 32解説PDF: A4縦4ページ、180 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS
 - Topic 32練習source/PDF: 未着手
 - Topic 32 PowerPoint: 未着手
 - Topic 32完成後独立再解答: 未着手
 
 ## 次の正確な開始点
-Topic 32の固定5問・6対象項目と解説本文を変更せず、解説PDFを作成する。系列SPEC固定範囲だけを扱い、未確認実車値・Topic 30/31範囲・固定過去問に不要な高度制御論を追加しない。
+Topic 32の固定5問・6対象項目、解説本文、解説PDFを変更せず、練習source/PDFを作成する。系列SPEC固定範囲だけを扱い、未確認実車値・Topic 30/31範囲・固定過去問に不要な高度制御論を追加しない。

@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 31 / 38
-- current_status: `topic_32_explanation_source_complete`
+- current_status: `topic_32_explanation_pdf_complete`
 - last_completed_topic: `31 ATC② 地上から車上へどう情報を送る？`
 - active_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
-- next_start: Topic 32の固定EXAM_ALIGNMENTと解説本文を維持して解説PDFを作成する
+- next_start: Topic 32の固定EXAM_ALIGNMENTと解説本文/PDFを維持して練習source/PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01〜31 — PASS
-- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 解説本文＋3段階例題完了
+- [ ] 32 ATC③ 新幹線をどう自動で減速させる？ — 解説PDF完了
 
 ## 32 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
@@ -43,6 +43,16 @@ source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 - 論理回路: AND・OR・NOT、`X=A·C+B·NOT(C)`、タイムチャート追跡
 - シーケンス制御・インタロック・フェイルセーフの一般原則
 - JRTT公開範囲のATC方式世代差のみ収録
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+
+## 32 解説PDF
+- `topics/32_atc_speed_brake_control/32_atc_speed_brake_control_explanation.pdf`
+- A4縦4ページ
+- 本文§1〜§15、3段階例題、固定5問・6対象項目の対応を収録
+- 180 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- 固定EXAM_ALIGNMENT: `6 / 6` 反映
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
@@ -231,4 +241,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 31 `ATC② 地上から車上へどう情報を送る？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は解説本文＋3段階例題完了。固定5問・6対象項目と本文を変更せず、次は解説PDFを作成する。
+Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は解説PDF完了。固定5問・6対象項目と本文/PDFを変更せず、次は練習source/PDFを作成する。
