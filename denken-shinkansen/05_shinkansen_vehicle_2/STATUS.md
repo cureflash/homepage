@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_08_completed`
+- current_status: `topic_09_exam_alignment_complete`
 - last_completed_topic: `08 位相制御と平均直流電圧`
 - active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09の制作前EXAM_ALIGNMENT。公式二種過去問を調査し、一次・二次を合わせて原則5問以上、二次対応論点では記述問題を最低1問含めて固定し、制作前独立検証を行う
+- next_start: Topic 09の解説本文＋3段階例題。固定一次4問＋二次1問・14対象項目から逆算し、SPEC固定範囲だけで本文を作成する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -332,4 +332,19 @@
 - 進捗記録整合: `PASS`
 - 最終判定: `PASS / completed`
 
-次工程はTopic 09 `直流機方式の損失・熱設計` の制作前EXAM_ALIGNMENT。
+## Topic 09 制作前EXAM_ALIGNMENT
+- source: `topics/09_dc_machine_loss_thermal_design/09_dc_machine_loss_thermal_design.md`
+- 固定過去問: 一次4問＋二次1問、計5問
+- 固定対象: 一次11項目＋二次3項目、計14項目
+- 制作前独立検証: 一次 `11 / 11 PASS`、二次 `3 / 3 PASS`、合計 `14 / 14 PASS`
+- R8 一次 機械 問1: (1)(2) — 風損、固定損割合と部分負荷効率
+- R6 一次 機械 問2: (3)のみ — 直流電動機のブラシ摩耗・定期交換
+- R5 一次 機械 問1: (1)(2)(3)(5) — 全損失、規約効率、雑負荷損、固定損
+- H23 一次 機械 問2: (2)〜(5) — 機械損、固定損、鉄損、雑負荷損の分離
+- H22 二次 機械・制御 問2: (1)〜(3) — 鉄損、定格銅損、負荷率と最大効率の記述計算
+- R8問1(3)〜(5)の発電機固有冷却方式、R6問2の誘導機・回生・IGBT・V/f、R5問1(4)の励磁回路損、H23問2(1)の同期速度を固定対象から除外
+- H22二次問2は変圧器題材だが、鉄損・銅損・負荷率・効率の一般関係だけを品質ゲートに使用し、変圧器固有理論をTopic 09へ追加しない
+- 後続Topicの誘導機・PWM/VVVF・回生・IGBT/SiCを件数合わせで採用: `0件`
+- 未確認の100系・200系実車損失・温度・冷却容量・保守周期を真値化: `0件`
+
+次工程はTopic 09 `直流機方式の損失・熱設計` の解説本文＋3段階例題。
