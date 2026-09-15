@@ -4,7 +4,7 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題・完全解説sourceまで完成。練習PDF・PowerPointは未制作。
+制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDFまで完成。PowerPointは未制作。
 
 本テーマは `SPEC.md` 第10章どおり、次だけを扱う。
 
@@ -592,6 +592,23 @@ L形近似で励磁枝を直列枝計算から外した場合は
 - Topic 11〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
+## 練習PDF QA
+
+- `10_300series_induction_motor_equivalent_circuit_practice.pdf`: `completed`
+- A4縦3ページ
+- 一次8問＋二次4問・完全解説を収録
+- 180 dpi全3ページ Visual QA: `3 / 3 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件`
+- PDF収録値の独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次の途中式・前提・単位・検算: `4 / 4 PASS`
+- 固定一次3問＋二次2問・22答案要素: 維持
+- SHA-256: `f5dfaf9d3964190bc377ae47e442f6eee630658a92da5d65e7f1140fed166b72`
+- Git blob SHA-1: `4c6bdefa78383a57074e017e6ef6eea958b50bbb`
+- 固定範囲外追加: `0件`
+- Topic 11〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+
 ## 次工程
 
-練習PDFを作成し、一次8問＋二次4問・完全解説を収録する。全ページ表示QA・文字抽出QA・数値論理QAを行い、固定一次3問＋二次2問・22答案要素を維持する。
+解説画像PowerPointを作成し、SPEC指定4グラフ（トルク―すべり、出力―すべり、効率―負荷率、二次抵抗変更時の特性）を収録する。表示QA・overflow・PowerPoint ZIP整合性を行い、固定一次3問＋二次2問・22答案要素を維持する。
