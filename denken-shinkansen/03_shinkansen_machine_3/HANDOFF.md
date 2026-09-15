@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は品質ゲートPASSでcompleted。active topicは10「新幹線の速度はどう自動制御される？」。
 
 ## 今回進捗
-Topic 10「新幹線の速度はどう自動制御される？」の練習PDFを完成し、全ページ表示QA・文字抽出QAまで完了した。
+Topic 10「新幹線の速度はどう自動制御される？」の解説画像PowerPointを完成し、全スライド表示QA・overflow・PPTX ZIP整合性QAまで完了した。
 
 - 品質ゲート対象: 公式過去問5件
 - 固定問題: R8上 問13、R7下 問13、R5下 問18(a)、R5上 問13、R4上 問15(a)
@@ -21,6 +21,11 @@ Topic 10「新幹線の速度はどう自動制御される？」の練習PDFを
 - 練習PDF表示QA: `6 / 6 PASS`
 - 練習PDF文字抽出QA: `PASS`
 - clipping / overlap / broken glyph: `0件`
+- 解説画像PowerPoint: 16:9・4枚
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- PowerPoint内の外部画像: `0点`（PowerPoint図形で独自作成）
 - 固定EXAM_ALIGNMENT 5件への接続: `5 / 5`
 - 独立計算・論理QA: `12 / 12 PASS`
 - 正答一意性QA: `12 / 12 PASS`
@@ -43,6 +48,10 @@ source: `topics/10_automatic_control/10_automatic_control.md`
 練習PDF: `topics/10_automatic_control/10_automatic_control_practice.pdf`
 
 練習PDF QA: `topics/10_automatic_control/10_automatic_control_practice_pdf_qa.md`
+
+PowerPoint: `topics/10_automatic_control/10_automatic_control_images.pptx`
+
+PowerPoint QA: `topics/10_automatic_control/10_automatic_control_powerpoint_qa.md`
 
 ## Topic 10 EXAM_ALIGNMENT
 品質ゲート対象は5件で固定。
@@ -72,7 +81,7 @@ source: `topics/10_automatic_control/10_automatic_control.md`
 - 解説PDF: 完了（A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
 - 練習問題source: 完了（12問、全問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`）
 - 練習PDF: 完了（A4縦6ページ、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`）
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 完了（16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`）
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -80,7 +89,7 @@ source: `topics/10_automatic_control/10_automatic_control.md`
 - 未確認実車値追加: `0件`
 
 ## 次に行う
-Topic 10の解説画像PowerPointを作成し、全スライド表示QA・overflow・PPTX整合性QAを行う。系列SPEC固定範囲外へ拡張しない。
+Topic 10の完成後独立再解答を、保存済み正答を先に見ず完成教材だけで実施する。固定5件を全問正答でき、根拠説明まで教材内で完結するか確認する。
 
 ## Topic 09 完了要約
 Topic 09「新幹線はどうやって電気で止まる？」は品質ゲートPASS / completed。
