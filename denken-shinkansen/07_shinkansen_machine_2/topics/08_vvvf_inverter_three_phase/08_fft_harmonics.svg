@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="white"/>
+<text x="550" y="32" text-anchor="middle" font-family="sans-serif" font-size="24">Line-voltage FFT / harmonic components</text>
+<text x="550" y="56" text-anchor="middle" font-family="sans-serif" font-size="13">one 50 Hz period; fc/f1=30; magnitude normalized to fundamental RMS</text>
+<line x1="92" y1="544.0" x2="1065" y2="544.0" stroke="#e5e7eb"/>
+<text x="82" y="549.0" text-anchor="end" font-family="sans-serif" font-size="13">0</text>
+<line x1="92" y1="458.4" x2="1065" y2="458.4" stroke="#e5e7eb"/>
+<text x="82" y="463.4" text-anchor="end" font-family="sans-serif" font-size="13">20</text>
+<line x1="92" y1="372.9" x2="1065" y2="372.9" stroke="#e5e7eb"/>
+<text x="82" y="377.9" text-anchor="end" font-family="sans-serif" font-size="13">40</text>
+<line x1="92" y1="287.3" x2="1065" y2="287.3" stroke="#e5e7eb"/>
+<text x="82" y="292.3" text-anchor="end" font-family="sans-serif" font-size="13">60</text>
+<line x1="92" y1="201.8" x2="1065" y2="201.8" stroke="#e5e7eb"/>
+<text x="82" y="206.8" text-anchor="end" font-family="sans-serif" font-size="13">80</text>
+<line x1="92" y1="116.2" x2="1065" y2="116.2" stroke="#e5e7eb"/>
+<text x="82" y="121.2" text-anchor="end" font-family="sans-serif" font-size="13">100</text>
+<rect x="94.92" y="116.22" width="10.38" height="427.78" fill="#2563eb"/>
+<rect x="111.14" y="542.29" width="10.38" height="1.71" fill="#6b7280"/>
+<rect x="127.35" y="542.92" width="10.38" height="1.08" fill="#dc2626"/>
+<rect x="143.57" y="543.49" width="10.38" height="0.51" fill="#6b7280"/>
+<rect x="159.79" y="543.64" width="10.38" height="0.36" fill="#6b7280"/>
+<rect x="176.00" y="543.51" width="10.38" height="0.49" fill="#dc2626"/>
+<rect x="192.22" y="543.48" width="10.38" height="0.52" fill="#6b7280"/>
+<rect x="208.44" y="543.62" width="10.38" height="0.38" fill="#6b7280"/>
+<rect x="224.65" y="543.65" width="10.38" height="0.35" fill="#dc2626"/>
+<rect x="240.87" y="543.39" width="10.38" height="0.61" fill="#6b7280"/>
+<rect x="257.09" y="542.95" width="10.38" height="1.05" fill="#6b7280"/>
+<rect x="273.30" y="543.24" width="10.38" height="0.76" fill="#dc2626"/>
+<rect x="289.52" y="542.74" width="10.38" height="1.26" fill="#6b7280"/>
+<rect x="305.74" y="543.32" width="10.38" height="0.68" fill="#6b7280"/>
+<rect x="321.95" y="543.84" width="10.38" height="0.16" fill="#dc2626"/>
+<rect x="338.17" y="543.57" width="10.38" height="0.43" fill="#6b7280"/>
+<rect x="354.39" y="542.93" width="10.38" height="1.07" fill="#6b7280"/>
+<rect x="370.60" y="543.78" width="10.38" height="0.22" fill="#dc2626"/>
+<rect x="386.82" y="543.22" width="10.38" height="0.78" fill="#6b7280"/>
+<rect x="403.04" y="543.63" width="10.38" height="0.37" fill="#6b7280"/>
+<rect x="419.25" y="543.17" width="10.38" height="0.83" fill="#dc2626"/>
+<rect x="435.47" y="543.67" width="10.38" height="0.33" fill="#6b7280"/>
+<rect x="451.69" y="543.78" width="10.38" height="0.22" fill="#6b7280"/>
+<rect x="467.90" y="543.75" width="10.38" height="0.25" fill="#dc2626"/>
+<rect x="484.12" y="542.59" width="10.38" height="1.41" fill="#6b7280"/>
+<rect x="500.34" y="538.64" width="10.38" height="5.36" fill="#6b7280"/>
+<rect x="516.55" y="543.58" width="10.38" height="0.42" fill="#dc2626"/>
+<rect x="532.77" y="416.20" width="10.38" height="127.80" fill="#6b7280"/>
+<rect x="548.99" y="542.69" width="10.38" height="1.31" fill="#6b7280"/>
+<rect x="565.20" y="542.46" width="10.38" height="1.54" fill="#dc2626"/>
+<rect x="581.42" y="543.05" width="10.38" height="0.95" fill="#6b7280"/>
+<rect x="597.64" y="416.07" width="10.38" height="127.93" fill="#6b7280"/>
+<rect x="613.85" y="543.75" width="10.38" height="0.25" fill="#dc2626"/>
+<rect x="630.07" y="538.87" width="10.38" height="5.13" fill="#6b7280"/>
+<rect x="646.29" y="543.25" width="10.38" height="0.75" fill="#6b7280"/>
+<rect x="662.50" y="543.53" width="10.38" height="0.47" fill="#dc2626"/>
+<rect x="678.72" y="543.65" width="10.38" height="0.35" fill="#6b7280"/>
+<rect x="694.94" y="543.83" width="10.38" height="0.17" fill="#6b7280"/>
+<rect x="711.15" y="543.39" width="10.38" height="0.61" fill="#dc2626"/>
+<rect x="727.37" y="543.76" width="10.38" height="0.24" fill="#6b7280"/>
+<rect x="743.59" y="543.86" width="10.38" height="0.14" fill="#6b7280"/>
+<rect x="759.80" y="543.11" width="10.38" height="0.89" fill="#dc2626"/>
+<rect x="776.02" y="543.04" width="10.38" height="0.96" fill="#6b7280"/>
+<rect x="792.24" y="543.05" width="10.38" height="0.95" fill="#6b7280"/>
+<rect x="808.45" y="543.38" width="10.38" height="0.62" fill="#dc2626"/>
+<rect x="824.67" y="543.31" width="10.38" height="0.69" fill="#6b7280"/>
+<rect x="840.89" y="543.82" width="10.38" height="0.18" fill="#6b7280"/>
+<rect x="857.10" y="542.83" width="10.38" height="1.17" fill="#dc2626"/>
+<rect x="873.32" y="543.51" width="10.38" height="0.49" fill="#6b7280"/>
+<rect x="889.54" y="542.74" width="10.38" height="1.26" fill="#6b7280"/>
+<rect x="905.75" y="543.71" width="10.38" height="0.29" fill="#dc2626"/>
+<rect x="921.97" y="543.69" width="10.38" height="0.31" fill="#6b7280"/>
+<rect x="938.19" y="543.16" width="10.38" height="0.84" fill="#6b7280"/>
+<rect x="954.40" y="543.68" width="10.38" height="0.32" fill="#dc2626"/>
+<rect x="970.62" y="534.75" width="10.38" height="9.25" fill="#6b7280"/>
+<rect x="986.84" y="543.10" width="10.38" height="0.90" fill="#6b7280"/>
+<rect x="1003.05" y="543.82" width="10.38" height="0.18" fill="#dc2626"/>
+<rect x="1019.27" y="543.45" width="10.38" height="0.55" fill="#6b7280"/>
+<rect x="1035.49" y="422.66" width="10.38" height="121.34" fill="#6b7280"/>
+<rect x="1051.70" y="543.31" width="10.38" height="0.69" fill="#dc2626"/>
+<text x="100.1" y="568" text-anchor="middle" font-family="sans-serif" font-size="13">1</text>
+<text x="246.1" y="568" text-anchor="middle" font-family="sans-serif" font-size="13">10</text>
+<text x="408.2" y="568" text-anchor="middle" font-family="sans-serif" font-size="13">20</text>
+<text x="570.4" y="568" text-anchor="middle" font-family="sans-serif" font-size="13">30</text>
+<text x="732.6" y="568" text-anchor="middle" font-family="sans-serif" font-size="13">40</text>
+<text x="894.7" y="568" text-anchor="middle" font-family="sans-serif" font-size="13">50</text>
+<text x="1056.9" y="568" text-anchor="middle" font-family="sans-serif" font-size="13">60</text>
+<rect x="92" y="82" width="973" height="462" fill="none" stroke="#111827" stroke-width="1.2"/>
+<text x="578.5" y="600" text-anchor="middle" font-family="sans-serif" font-size="16">harmonic order n (n x 50 Hz)</text>
+<text x="25" y="313.0" transform="rotate(-90 25 313.0)" text-anchor="middle" font-family="sans-serif" font-size="16">RMS / fundamental [%]</text>
+<text x="110" y="102" font-family="sans-serif" font-size="13">blue: fundamental; red: triplen orders; gray: other harmonics</text>
+</svg>
