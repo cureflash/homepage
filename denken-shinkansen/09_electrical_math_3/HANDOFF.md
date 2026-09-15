@@ -6,15 +6,15 @@
 
 Topic 01〜06は `completed`。
 
-Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題まで完了。制作前独立解答は `5 / 5 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
+Topic 07 `微分② 速度を微分すると加速度` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDFまで完了。制作前独立解答は `5 / 5 PASS`。仕様外論点・再出題重複による件数合わせはしていない。
 
 完成数: `6 / 12`
 
-current_status: `topic_07_explanation_source_complete`
+current_status: `topic_07_explanation_pdf_complete`
 
 active_topic: `07 微分② 速度を微分すると加速度`
 
-next_start: `Topic 07 解説PDF＋全ページ表示QA`
+next_start: `Topic 07 練習問題source`
 
 ## Topic 07 固定EXAM_ALIGNMENT
 
@@ -79,6 +79,18 @@ next_start: `Topic 07 解説PDF＋全ページ表示QA`
 
 固定5問の要求事項は本文§2〜§14へ全件対応付け済み。仕様外論点、再出題重複、未確認新幹線実値の追加は0件。
 
+## Topic 07 解説PDF
+
+成果物: `topics/07_derivative_2/07_derivative_2_explanation.pdf`
+
+- A4縦3ページ
+- 主sourceの固定範囲、3段階例題、固定5過去問への教材内マッピングを収録
+- 200 dpi全ページ表示QA: `3 / 3 PASS`
+- 文字抽出QA: PASS
+- クリッピング、重なり、文字化け: 0件
+- 固定EXAM_ALIGNMENT変更: 0件
+- 仕様外論点・再出題重複・未確認新幹線実値の追加: 0件
+
 ## 候補除外
 
 - R7下 理論 問12: 正答にTopic 07の微分・加速度計算を必要としない
@@ -104,6 +116,7 @@ Topic 06 `微分① ダイヤの傾きは速度` は `PASS / completed`。補強
 
 Topic 07:
 - `topics/07_derivative_2/07_derivative_2.md`（EXAM_ALIGNMENT＋解説本文＋3段階例題）
+- `topics/07_derivative_2/07_derivative_2_explanation.pdf`
 
 Topic 06:
 - `topics/06_derivative_1/06_derivative_1.md`
@@ -118,6 +131,6 @@ Topic 06:
 
 ## 次に行うこと
 
-Topic 07主sourceの解説本文＋3段階例題を正本として、解説PDFを作成し、全ページ表示QAを行う。
+Topic 07の固定EXAM_ALIGNMENTと解説本文・解説PDFを正本として、固定範囲だけで練習問題sourceを作成する。
 
-PDF化では固定5問の教材内マッピングと固定範囲を維持し、積分による一般導出、電子回路・ブラウン管の専門解説、RC/RL過渡現象等を先取りしない。仕様外論点追加、再出題の重複カウント、未確認新幹線実値の追加はしない。
+問題数はMASTER_SPEC / EXAM_ALIGNMENT_SPECの要件を満たし、固定5問の要求事項をカバーする。積分による一般導出、電子回路・ブラウン管の専門解説、RC/RL過渡現象等を先取りしない。仕様外論点追加、再出題の重複カウント、未確認新幹線実値の追加はしない。
