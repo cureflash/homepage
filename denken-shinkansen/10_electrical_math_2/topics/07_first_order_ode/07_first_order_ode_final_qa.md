@@ -2,13 +2,13 @@
 
 対象: `07 一階常微分方程式`
 
-実施日: 2026-09-15
+再判定日: 2026-09-15
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC範囲境界はPASS。ただし主source Markdownの進捗記録2箇所が実成果物と不整合のため、`completed` にはしない。
+前回 `NEEDS_REVISION` の原因だった主source Markdownの旧進捗2箇所は実成果物へ同期済み。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC範囲境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物の実在確認
 
@@ -16,7 +16,7 @@ GitHub正本上で次を確認した。
 
 | 成果物 | 判定 |
 |---|---|
-| source Markdown | PASS（技術内容） / NEEDS_REVISION（進捗記録） |
+| source Markdown | PASS |
 | 解説PDF | PASS |
 | 練習問題source | PASS |
 | 練習PDF | PASS |
@@ -35,7 +35,7 @@ GitHub正本上で次を確認した。
 - R5 一次 理論 問5 (1)〜(5)
 - R4 一次 理論 問4 (1)〜(5)
 
-R8問6のC-L結合となる(3)〜(5)は固定範囲外として除外済み。直近R7〜R5二次「機械・制御」はTopic 09〜10相当の伝達関数・ラプラス領域を中心とするため、件数合わせで追加していない。
+R8問6のC-L結合となる(3)〜(5)は固定範囲外として除外済み。直近R7〜R5二次「機械・制御」はTopic 09〜10相当の伝達関数・ラプラス領域が中心であり、件数合わせで追加していない。
 
 ## 完成後独立再解答
 
@@ -59,18 +59,25 @@ R8問6のC-L結合となる(3)〜(5)は固定範囲外として除外済み。�
 
 ## SPEC境界確認
 
-固定範囲は変数分離形、一階線形微分方程式、初期条件、同次解・定常特解、指数応答、時定数、RC・RL・時間領域の一次遅れ。
+固定範囲は以下。
+
+- 変数分離形
+- 一階線形微分方程式
+- 初期条件
+- 同次解・特解の基本
+- 指数応答
+- 時定数
+- RC・RL・時間領域の一次遅れ
 
 Topic 08の二階常微分方程式、Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしていない。未確認の実車時定数・回路定数も追加していない。
 
-## FAIL項目
+## 前回FAILの再確認
 
-主source `07_first_order_ode.md` の進捗記録が実成果物と一致していない。
+前回FAILだった主source Markdownの進捗記録不整合は解消済み。
 
-1. `## 状態` が「解説本文＋3段階例題まで完了。解説PDF以降は未実施」のまま残っている。
-2. `## 次工程` が「次は解説PDFを作成」のまま残っている。
-
-実際には解説PDF、練習source/PDF、PowerPoint、PowerPoint QA、完成後独立再解答まで完了しているため、進捗正本として不整合。
+- `## 状態`: 解説PDF、練習source/PDF、PowerPoint QA、完成後独立再解答まで完了した現在地へ同期済み
+- `## 次工程`: 最終QA再判定へ同期済み
+- 教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF・PowerPointの技術内容は変更していない
 
 ## 最終判定
 
@@ -78,10 +85,13 @@ Topic 08の二階常微分方程式、Topic 09のラプラス変換、Topic 10�
 - 二種相当EXAM_ALIGNMENT 一次5問・22小問: PASS
 - 完成後独立再解答 `22 / 22`: PASS
 - 教材外知識補完0件: PASS
-- SPEC外内容の非混入: PASS
+- 固定範囲外追加0件: PASS
+- Topic 08〜10先取り0件: PASS
+- 二次記述の件数合わせ0件: PASS
+- 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- source Markdown進捗記録と実成果物の整合: FAIL
+- source Markdown進捗記録と実成果物の整合: PASS
 
-総合判定: `NEEDS_REVISION / IN_PROGRESS`。
+総合判定: `PASS / completed`。
 
-次は主sourceの `## 状態` と `## 次工程` だけを実成果物へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、例題、練習問題、PDF、PowerPointは変更しない。
+Topic 07を完了とし、次はTopic 08 `二階常微分方程式` の制作前EXAM_ALIGNMENTへ進む。
