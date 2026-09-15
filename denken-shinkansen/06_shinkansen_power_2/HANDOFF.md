@@ -3,41 +3,22 @@
 updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `07`
-current_status: `topic_07_final_qa_needs_revision`
+current_status: `topic_07_source_progress_synced`
 
 ## 今回完了
 
-Topic 07「三相電力をどう25kVの単相へ変える？」の最終QAを実施した。
+Topic 07「三相電力をどう25kVの単相へ変える？」を1段階進め、前回最終QAで唯一FAILだった主sourceの進捗記録不整合を解消した。
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+対象:
+- `topics/07_feeding_transformer/07_feeding_transformer.md`
 
-技術内容と過去問対応品質ゲートはPASSしたが、主source `topics/07_feeding_transformer/07_feeding_transformer.md` の進捗記録が旧状態のため完了扱いにはしていない。
+同期した箇所:
+- 更新日
+- 冒頭 `状態`
+- 冒頭の工程説明
+- 末尾 `現在地`
 
-成果物:
-- `topics/07_feeding_transformer/07_feeding_transformer_final_qa.md`
-
-## 最終QA結果
-
-PASS:
-- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` との整合
-- 固定EXAM_ALIGNMENT: H23一次「理論」問6＋H23二次「機械・制御」問2
-- 完成後独立再解答: `2 / 2問 PASS`、`12 / 12答案要素 PASS`
-- 教材外知識補完: `0件`
-- 固定範囲外追加: `0件`
-- 後続Topic知識依存: `0件`
-- 練習15問: 一次型 `10 / 10 PASS`、二次記述 `5 / 5 PASS`
-- 解説PDF: A4縦6ページ、表示QA `6 / 6 PASS`、文字抽出QA PASS
-- 練習PDF: A4縦6ページ、表示QA `6 / 6 PASS`、文字抽出QA PASS
-- PowerPoint: 16:9・5枚、表示QA `5 / 5 PASS`、overflow 0件、ZIP整合性PASS
-- 固定10項目カバレッジ: `10 / 10`
-- 未確認実設備値追加: `0件`
-
-FAIL:
-- 主source冒頭が `explanation_source_complete` のまま
-- 主source冒頭に「PDF・練習問題・PowerPointは未着手」と残存
-- 主source末尾 `現在地` でも解説PDF、練習問題、PowerPoint、完成後独立再解答を未着手としている
-
-GitHub上では後続成果物が実在するため、進捗記録不整合のみが未完了理由。
+教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、練習問題、PDF/PPTX、固定範囲は変更していない。
 
 ## 固定した公式過去問
 
@@ -53,7 +34,7 @@ GitHub上では後続成果物が実在するため、進捗記録不整合の�
    - 結線利用率
    - 完成後再解答 `7 / 7答案要素 PASS`
 
-合計 `2 / 2問 PASS`、`12 / 12答案要素 PASS`。固定範囲外知識補完は0件。
+合計 `2 / 2問 PASS`、`12 / 12答案要素 PASS`。教材外知識補完・固定範囲外追加・後続Topic知識依存はいずれも0件。
 
 ## 現在の必須成果物
 
@@ -65,6 +46,15 @@ GitHub上では後続成果物が実在するため、進捗記録不整合の�
 - `topics/07_feeding_transformer/07_feeding_transformer_powerpoint_qa.md`
 - `topics/07_feeding_transformer/07_feeding_transformer_independent_reanswer.md`
 - `topics/07_feeding_transformer/07_feeding_transformer_final_qa.md`
+
+既存QA:
+- 解説PDF: A4縦6ページ、表示 `6 / 6 PASS`、文字抽出PASS
+- 練習15問: 一次型 `10 / 10 PASS`、二次記述 `5 / 5 PASS`
+- 練習PDF: A4縦6ページ、表示 `6 / 6 PASS`、文字抽出PASS
+- PowerPoint: 16:9・5枚、表示 `5 / 5 PASS`、overflow 0件、ZIP整合性PASS
+- 完成後独立再解答: `2 / 2問 PASS`、`12 / 12答案要素 PASS`
+- 固定10項目: `10 / 10`
+- 未確認実設備値追加: `0件`
 
 ## 境界
 
@@ -90,11 +80,14 @@ Topic 07固定範囲は、三相交流、単相負荷、相変換、スコット
 
 ## 次に行う
 
-主source `topics/07_feeding_transformer/07_feeding_transformer.md` の進捗記録のみを現在の成果物実態へ同期する。
+Topic 07の最終QAを再実施する。
 
-- 冒頭状態を更新
-- 「PDF・練習問題・PowerPointは未着手」の旧記録を削除・同期
-- 末尾 `現在地` を解説PDF・練習source/PDF・PowerPoint・完成後独立再解答完了、最終QA `NEEDS_REVISION` へ同期
-- 教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、固定範囲は変更しない
+確認対象:
+- 主sourceの進捗記録が実成果物と整合していること
+- 固定2過去問の完成後独立再解答 `2 / 2問 PASS`、`12 / 12答案要素 PASS`
+- 教材外補完0件
+- 必須成果物が全件存在
+- PDF/PPTX QAがPASS
+- 固定10項目・固定範囲境界が維持されていること
 
-同期後、最終QAを再実施する。
+全件PASSなら `PASS / completed` とし、完成数を `7 / 22` へ進める。
