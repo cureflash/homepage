@@ -6,14 +6,14 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は30/38。01〜30がPASS。active topicは31 `ATC② 地上から車上へどう情報を送る？`。
 
 ## 今回進捗
-Topic 31の解説画像PowerPointを完成した。16:9・4枚で、地上→車上の情報伝送骨格、周期・周波数とCPI、A-D変換と標本化、伝送用語と条件分岐・反復を可視化。制作前に固定した公式過去問5問・6対象項目を `6 / 6` 可視化した。表示QA `4 / 4 PASS`、overflow検査PASS、PPTX ZIP整合性PASS。
+Topic 31の完成後独立再解答を実施した。制作前に固定した公式過去問5問・6対象項目を完成教材の固定範囲だけで再導出し、公式解答と `6 / 6` 一致。教材外知識補完・固定範囲外追加・未確認実車値追加はいずれも0件。
 
 Topic 32の速度検出・速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR具体回路、未確認のATC実車周波数値・符号体系・ビットレート、固定過去問に不要な通信方式各論は追加していない。
 
 更新:
-- `topics/31_atc_signal_transmission/31_atc_signal_transmission_images.pptx` — 16:9・4枚、固定6対象項目を全件可視化、表示QA `4 / 4 PASS`、overflow/PPTX ZIP整合性PASS
-- `STATUS.md` — `topic_31_powerpoint_complete` へ更新
-- `HANDOFF.md` — 次開始点をTopic 31完成後独立再解答へ更新
+- `topics/31_atc_signal_transmission/31_atc_signal_transmission_final_qa.md` — 完成後独立再解答 `6 / 6 PASS` を記録。最終QAは未実施
+- `STATUS.md` — `topic_31_independent_reanswer_complete` へ更新
+- `HANDOFF.md` — 次開始点をTopic 31最終QAへ更新
 
 ## Topic 31 固定EXAM_ALIGNMENT
 1. R7下 機械 問14 — フローチャートの条件分岐・反復による論理判断 — `3` — PASS
@@ -29,10 +29,25 @@ Topic 32の速度検出・速度照査・ブレーキ指令・フィードバッ
 練習マッピング: `6 / 6 PASS`。
 練習独立QA: `15 / 15 PASS`。
 PowerPoint可視化: `6 / 6 PASS`。
+完成後独立再解答: `6 / 6 PASS`。
 公式解答との不一致: `0件`。
+教材外知識補完: `0件`。
 固定範囲外知識による正答補完: `0件`。
 固定範囲外追加: `0件`。
 未確認実車値追加: `0件`。
+
+## Topic 31 完成後独立再解答
+- R7下 機械 問14 — 条件分岐・反復を追跡し `(A,B)=(51,23)` → 選択肢3 — PASS
+- R5上 機械 問18(a) — `T=1/(2.5 GHz)=0.4 ns` → 選択肢3 — PASS
+- R5上 機械 問18(b) — `f=4/(20 ns)=200 MHz` → 選択肢4 — PASS
+- R4下 機械 問13 — 雑音・多重化・変調波・標本化・圧縮を対応 → 選択肢3 — PASS
+- R4下 理論 問14 — 時間波形表示にFFTは必須ではない → 選択肢5 — PASS
+- R4上 機械 問14 — アナログ/デジタル・A-D/D-A・インタフェースを対応 → 選択肢2 — PASS
+- 合計: `6 / 6 PASS`
+- 公式解答との不一致: `0件`
+- 教材外知識補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
 
 ## Topic 31 練習QA
 - source: `topics/31_atc_signal_transmission/31_atc_signal_transmission_practice.md`
@@ -78,7 +93,7 @@ PowerPoint可視化: `6 / 6 PASS`。
 - 固定過去問に不要な通信方式各論
 
 ## 現在の状態
-- `current_status`: `topic_31_powerpoint_complete`
+- `current_status`: `topic_31_independent_reanswer_complete`
 - 完成数: 30/38
 - 01〜30: PASS
 - active topic: 31 `ATC② 地上から車上へどう情報を送る？`
@@ -88,6 +103,7 @@ PowerPoint可視化: `6 / 6 PASS`。
 - Topic 31練習マッピング: `6 / 6 PASS`
 - Topic 31練習独立QA: `15 / 15 PASS`
 - Topic 31 PowerPoint可視化: `6 / 6 PASS`
+- Topic 31完成後独立再解答: `6 / 6 PASS`
 
 ## 次の正確な開始点
-Topic 31の完成後独立再解答を行う。固定5問・6対象項目を完成教材のみで再解答し、公式解答と照合する。教材外知識補完・固定範囲外追加・未確認実車値依存があればFAILとして記録する。
+Topic 31の最終QAを実施する。必須成果物、完成後独立再解答 `6 / 6 PASS`、解説PDF・練習PDF・PowerPoint表示QA、進捗記録整合、固定範囲境界を再確認する。最終QAがPASSするまではTopic 31を `completed` にしない。
