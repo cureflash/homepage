@@ -8,11 +8,11 @@ Topic 01〜09は `completed`。
 
 完成数: `9 / 20`
 
-current_status: `topic_10_explanation_pdf_complete`
+current_status: `topic_10_practice_source_complete`
 
 active_topic: `10 伝達関数・極・零点`
 
-次工程: Topic 10の練習問題sourceを作成し、固定二次5問・11対象設問へ接続する。固定範囲境界を変更しない。
+次工程: Topic 10の練習PDFを作成し、全12問＋完全解説と固定二次5問・11対象設問への接続を維持する。固定範囲境界を変更しない。
 
 ## 上位仕様
 
@@ -340,6 +340,9 @@ source:
 解説PDF:
 `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_explanation.pdf`
 
+練習source:
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_practice.md`
+
 ### Topic 10 固定範囲
 
 - 伝達関数
@@ -411,10 +414,31 @@ QA:
 - 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
-current_status: `topic_10_explanation_pdf_complete / IN_PROGRESS`。
+### Topic 10 練習問題source
+
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_practice.md`
+
+内容:
+- 全12問
+- 一次型8問／二次記述型4問
+- 難易度: 基礎3／標準6／複合3
+- 固定二次5問・11対象設問へ `11 / 11` 接続
+- 伝達関数、極・零点、直列・並列・単位負帰還、一次遅れ、二次遅れ、ステップ応答、インパルス応答、極と安定性の関係を反復
+- 簡略新幹線速度モデルは教育用係数と明記
+
+QA:
+- 独立計算・正答一意性 `12 / 12 PASS`
+- 教材外知識補完: 0件
+- Topic 12/15先取り: 0件
+- ラウス・フルビッツ法一般手順追加: 0件
+- 定常偏差・畳み込みの独立論点化: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
+current_status: `topic_10_practice_source_complete / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 10 `伝達関数・極・零点` の練習問題sourceを作成し、固定二次5問・11対象設問へ接続する。
+Topic 10 `伝達関数・極・零点` の練習PDFを作成し、全12問＋完全解説と固定二次5問・11対象設問への接続を維持する。
 
 固定範囲境界を変更しない。
