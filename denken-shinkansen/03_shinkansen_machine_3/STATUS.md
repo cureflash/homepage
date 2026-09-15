@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 9 / 16
-- current_status: `topic_10_images_pptx_complete`
+- current_status: `topic_10_blind_reanswer_blocked`
 - last_completed_topic: `09 新幹線はどうやって電気で止まる？`
 - active_topic: `10 新幹線の速度はどう自動制御される？`
-- next_start: Topic 10の完成後独立再解答を、保存済み正答を先に見ず完成教材だけで実施する
+- next_start: Topic 10の固定問題選定・教材内マッピング・制作前検証記録を維持したまま、必須先読み対象から制作前答案番号・完成済み導出結果を除去し、blind独立再解答可能な状態へする
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -20,7 +20,7 @@
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
-- [ ] 10 新幹線の速度はどう自動制御される？ — 解説source＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPoint完成・固定5件接続 `5 / 5`
+- [ ] 10 新幹線の速度はどう自動制御される？ — 解説source＋解説PDF＋練習問題source＋練習PDF＋解説画像PowerPoint完成・固定5件接続 `5 / 5`、blind独立再解答前ゲート `BLOCKED`
 - [ ] 11〜16 — 未完了
 
 ## Topic 10 EXAM_ALIGNMENT
@@ -77,11 +77,21 @@ R7上問13、R6下問13、R6上問13、R5下問13、R5下問18(b)、R4上問15(b
 - 練習問題source: 完成
 - 練習PDF: 完了（A4縦6ページ、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`）
 - 解説画像PowerPoint: 完了（16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`）
+- 完成後独立再解答前ゲート: `BLIND_REANSWER_BLOCKED`
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 - 固定EXAM_ALIGNMENT変更 `0件`
 - 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
+
+### 独立再解答前ゲート監査
+`topics/10_automatic_control/10_automatic_control_blind_reanswer_gate.md`
+
+- `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を照合
+- `STATUS.md`、`HANDOFF.md`、主sourceに制作前答案番号・導出が残存するため `BLOCKED`
+- 今回は完成後独立再解答を実施していない
+- 固定EXAM_ALIGNMENT変更 `0件`
+- 教材本文・PDF・練習問題・PowerPoint変更 `0件`
 
 ### 解説PDF
 `topics/10_automatic_control/10_automatic_control_explanation.pdf`
