@@ -9,7 +9,7 @@ Topic 01〜10は最終QAまで `PASS / completed`。
 
 active topic: `11 GTO→IGBT→SiCの損失を計算する`
 
-current status: `topic_11_practice_pdf_complete`
+current status: `topic_11_powerpoint_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -241,5 +241,17 @@ H22二次の独立計算代表値:
 - 未確認実車値追加: `0件`
 - SHA-256: `da6fd46d57ebea60acd2657b91fcb91a008ca5a8328cb81776c7a5debf2b2aa7`
 
+## Topic 11 解説画像PowerPoint
+- `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_images.pptx`: `completed`
+- 16:9・4枚
+- 導通損失・OFF漏れ・スイッチング損失、H22二次型導通区間・平均電流、総損失から発熱・冷却・効率、GTO→IGBT→SiCとN700S接続を可視化
+- Visual QA: `4 / 4 PASS`（1600×900相当）
+- overflow: `0件`
+- ZIP整合性: `PASS`
+- 固定5過去問・15答案要素: 維持
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- SHA-256: `bd195a931abecfa723e895f8082f7e54964bb9c88afba52420cde6777a31b704`
+
 ## 次に行うこと
-Topic 11「GTO→IGBT→SiCの損失を計算する」の解説画像PowerPointを作成する。固定5問・15答案要素と固定範囲を維持し、表示QA・overflow・PPTX整合性を確認する。
+Topic 11の独立再解答前ゲートを行う。`HANDOFF.md` に保存されているH22二次の代表数値解を除去し、固定5問・15答案要素と教材成果物を変更せず、保存済み正答を見ない新runから完成後独立再解答できる状態にする。
