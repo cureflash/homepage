@@ -1,0 +1,73 @@
+name: Temporary Denken Machine 2 Topic 11 practice PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tmp-denken-machine2-topic11-practice-pdf.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: denken-machine2-topic11-practice-pdf
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Generate and validate Topic 11 practice PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/tmp_topic11_machine2_publish.py
+          if ! command -v pdftotext >/dev/null 2>&1 || ! command -v pdftoppm >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq poppler-utils
+          fi
+          pdf='denken-shinkansen/07_shinkansen_machine_2/topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_practice.pdf'
+          tmpdir=$(mktemp -d)
+          pdftotext -layout "$pdf" "$tmpdir/text.txt"
+          pdftoppm -png -r 200 "$pdf" "$tmpdir/page" >/dev/null 2>&1
+          test "$(find "$tmpdir" -maxdepth 1 -name 'page-*.png' | wc -l)" -eq 7
+          python - "$tmpdir/text.txt" <<'PY'
+          from pathlib import Path
+          import sys
+          text = Path(sys.argv[1]).read_text(encoding='utf-8', errors='replace')
+          assert '\ufffd' not in text
+          assert '□' not in text
+          assert '(cid:' not in text
+          for n in range(1, 16):
+              assert f'問{n}' in text, n
+          PY
+          git diff --check
+      - name: Publish validated checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'denken-shinkansen-bot'
+          git config user.email '89366952+cureflash@users.noreply.github.com'
+          git add \
+            denken-shinkansen/07_shinkansen_machine_2/STATUS.md \
+            denken-shinkansen/07_shinkansen_machine_2/HANDOFF.md \
+            denken-shinkansen/07_shinkansen_machine_2/topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal.md \
+            denken-shinkansen/07_shinkansen_machine_2/topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_practice.md \
+            denken-shinkansen/07_shinkansen_machine_2/topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_practice.pdf
+          if git diff --cached --quiet; then
+            echo 'Topic 11 practice PDF is already published.'
+            exit 0
+          fi
+          git commit -m 'Publish Topic 11 machine 2 practice PDF'
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort >/dev/null 2>&1 || true
+            sleep 2
+          done
+          exit 1
