@@ -1,10 +1,10 @@
 # STATUS
 
-updated: 2026-09-15
+updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `07`
 theme: 三相電力をどう25kVの単相へ変える？
-current_status: `topic_07_powerpoint_complete`
+current_status: `topic_07_independent_reanswer_complete`
 completed_topics: `6 / 22`
 
 ## Topic 06 final result
@@ -128,6 +128,22 @@ QA:
 - 固定範囲外論点追加: `0件`
 - 未確認実設備値追加: `0件`
 
+## Topic 07 完成後独立再解答
+
+成果物:
+- `topics/07_feeding_transformer/07_feeding_transformer_independent_reanswer.md`
+
+完成教材の説明・公式・解法手順だけを解答根拠として正式2問を再構成し、答案確定後に公式解答・標準解答と照合した。
+
+結果:
+- H23一次「理論」問6: `5 / 5空欄 PASS`
+- H23二次「機械・制御」問2: `7 / 7答案要素 PASS`
+- 合計: `2 / 2問 PASS`、`12 / 12答案要素 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 後続Topic知識依存: `0件`
+- 未確認実設備値依存: `0件`
+
 ## Gate checklist
 
 - [x] Topic 01 completed
@@ -136,8 +152,8 @@ QA:
 - [x] Topic 04 completed
 - [x] Topic 05 completed
 - [x] Topic 06 completed
-- [ ] Topic 07 EXAM_ALIGNMENT・独立検証・解説source・解説PDF・練習source・練習PDF・PowerPoint complete / 完成後独立再解答未実施
+- [x] Topic 07 EXAM_ALIGNMENT・制作前独立検証・解説source・解説PDF・練習source・練習PDF・PowerPoint・完成後独立再解答 complete / 最終QA未実施
 
 ## next_start
 
-Topic 07の固定EXAM_ALIGNMENT一次1問＋二次1問を、完成教材だけを使い保存済み正答を見ずに独立再解答する。固定範囲外知識・未確認実設備値で補完しない。
+Topic 07の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT、正式2問の完成後独立再解答、練習15問、PDF/PPTX表示QA、固定範囲境界、主source・STATUS・HANDOFFの進捗整合を確認し、全件PASSの場合のみ `completed` とする。
