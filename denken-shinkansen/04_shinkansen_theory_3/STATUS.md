@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 9 / 14
-- current_status: `topic_10_exam_alignment_complete`
+- current_status: `topic_10_explanation_source_complete`
 - last_completed_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
 - active_topic: `10 新幹線が使う電力は「W」だけではない`
-- next_start: Topic 10の解説本文＋3段階例題を作成する
+- next_start: Topic 10の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う
 
 ## Topic 01 進捗
 
@@ -174,7 +174,7 @@
 - [x] Topic 11以降の三相・半導体・高調波と未確認実車値を境界整理
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
@@ -183,12 +183,12 @@
 
 ## 今回進めた内容
 
-Topic 10 `新幹線が使う電力は「W」だけではない` の制作前EXAM_ALIGNMENTを完了した。
+Topic 10 `新幹線が使う電力は「W」だけではない` の解説本文＋3段階例題を完成した。
 
-系列SPECの有効電力・無効電力・皮相電力・力率・位相差・複素電力の基本・力率改善・コンデンサによる力率改善の基本だけを対象とし、公式理論過去問5問・6答案要素を固定した。制作前独立検証は `5 / 5問・6 / 6答案要素 PASS`。
+有効・無効・皮相電力、力率、電力三角形、複素電力の基本、`R-XL`と力率、電流の同相・直交成分、コンデンサによる力率改善までを固定範囲内で説明した。固定5問・6答案要素を本文へ `6 / 6` マッピングし、基礎・本試験標準・複合の3段階例題を追加した。
 
-Topic 11の三相交流、Topic 12以降の半導体、Topic 13側の高調波、電力・法規の設備論による件数合わせは0件。未確認の新幹線実車力率・補償方式も追加していない。
+Topic 11の三相交流、Topic 12以降の半導体、Topic 13側の高調波、未確認の新幹線実車力率・補償方式は追加していない。
 
 ## 判定
 
-現在 `topic_10_exam_alignment_complete / IN_PROGRESS`。完成数は `9 / 14`。次はTopic 10の解説本文＋3段階例題を作成する。
+現在 `topic_10_explanation_source_complete / IN_PROGRESS`。完成数は `9 / 14`。次はTopic 10の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。
