@@ -6,32 +6,28 @@
 
 Topic 01〜07は最終QAまでPASSし、`completed`。
 
-Topic 08 `新幹線の交流25kVとは何なのか` は練習問題source・練習PDFまで完了。固定4過去問の要求事項を教材・練習へ反映し、制作前独立検証 `4 / 4 PASS` を維持している。
+Topic 08 `新幹線の交流25kVとは何なのか` は解説画像PowerPointまで完了。固定4過去問の要求事項を教材・練習・PowerPointへ反映し、制作前独立検証 `4 / 4 PASS` を維持している。
 
 - 完成数: `7 / 14`
 - last completed: `07 モーターはなぜ回る？`
 - active topic: `08 新幹線の交流25kVとは何なのか`
-- current status: `topic_08_practice_pdf_complete`
-- next start: Topic 08の解説画像PowerPoint作成
+- current status: `topic_08_powerpoint_complete`
+- next start: Topic 08の完成後公式過去問独立再解答
 
 ## 今回進捗
 
-Topic 08の練習問題source・練習PDFを完成し、GitHub正本へ反映した。
+Topic 08の解説画像PowerPointを完成し、GitHub正本へ反映した。
 
 確認結果:
 - MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC: 再確認済み
 - 固定公式過去問: `4問`
 - 制作前独立検証: `4 / 4 PASS`
-- 練習問題: `15問`、全問五肢択一
-- 難易度構成: 基礎4 / 本試験標準8 / 複合・応用3
-- 正答位置: `(1)〜(5)` 各3問
-- 独立再計算・再判定: `15 / 15 PASS`
-- 正答一意性: `15 / 15 PASS`
-- 固定4過去問要求→練習問題マッピング: `4 / 4`
-- 練習PDF: `A4縦4ページ`
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- PowerPoint: `16:9・4枚`
+- 固定4過去問要求→PowerPoint可視化対応: `4 / 4`
+- 全4スライド表示QA: `4 / 4 PASS`
 - 表示欠け・重なり・文字化け: `0件`
-- 文字抽出QA: `PASS`（U+FFFD 0件）
+- overflow検査: `PASS`
+- PPTX ZIP整合性: `PASS`（slide XML `4件`）
 - RLC・リアクタンス・力率・三相・高調波等の後続Topic混入: `0件`
 - 非正弦波の波形率・波高率・三角波・方形波追加: `0件`
 - 未確認新幹線実車値追加: `0件`
@@ -75,6 +71,13 @@ Topic 08の練習問題source・練習PDFを完成し、GitHub正本へ反映し
 - R3 問8の要求: Q1, Q2, Q3, Q7, Q8, Q11, Q12
 - 実効値・1周期平均・25kVの読み方: Q4, Q5, Q15
 
+## Topic 08 PowerPoint構成
+
+- 1枚目: 新幹線25kVは実効値、最大値`25√2 kV ≒ 35.4 kV`、瞬時値・1周期平均
+- 2枚目: 波形から周期・周波数・角周波数・位相を読む手順、純抵抗の同相
+- 3枚目: 同一周波数正弦波の基本ベクトル合成
+- 4枚目: 指定瞬時値への最初の到達時刻と波形読取の本試験解法フロー、固定4問対応
+
 ## Topic 08 境界
 
 - Topic 09のRLC、誘導性/容量性リアクタンス、インピーダンス、共振を追加しない
@@ -103,14 +106,19 @@ Topic 08の練習問題source・練習PDFを完成し、GitHub正本へ反映し
   - 200 dpi表示QA `4 / 4 PASS`
   - 文字抽出QA `PASS`
 - 練習PDF QA記録: `topics/08_ac_25kv_basics/08_ac_25kv_basics_practice_qa.md`
+- 解説画像PowerPoint: `topics/08_ac_25kv_basics/08_ac_25kv_basics_images.pptx`
+  - 16:9・4枚
+  - 表示QA `4 / 4 PASS`
+  - overflow検査 `PASS`
+  - ZIP整合性 `PASS`
 
-PowerPoint・完成後独立再解答・最終QAは未着手。
+完成後独立再解答・最終QAは未着手。
 
 ## 次に行うこと
 
-Topic 08の解説画像PowerPointを作成する。
+Topic 08の完成後公式過去問独立再解答を実施する。
 
-固定4問の要求事項を可視化し、正弦波・実効値・周期/周波数/角周波数・位相・同一周波数ベクトル合成・波形読取の範囲内で構成する。Topic 09以降の論点は混入させない。
+固定4問を、完成教材だけを使って独立に再解答する。教材外知識による補完を禁止し、公式解答との一致、固定範囲だけで解けること、後続Topic論点・未確認実車値への依存がないことを確認する。
 
 ## 固定ルール
 
