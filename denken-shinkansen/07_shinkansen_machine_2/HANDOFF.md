@@ -9,7 +9,7 @@ Topic 01〜07は最終QAまで `PASS / completed`。
 
 active topic: `08 VVVFインバータで三相交流を作る`
 
-current status: `topic_08_final_qa_needs_revision`
+current status: `topic_08_source_progress_synced`
 
 ## Topic 08 固定EXAM_ALIGNMENT
 - R07 一次 機械 問4: (4),(5)
@@ -18,7 +18,7 @@ current status: `topic_08_final_qa_needs_revision`
 - R04 二次 機械・制御 問3: (4),(5)
 - H28 二次 機械・制御 問3: (1)〜(4)
 
-一次3問＋二次記述2問、計5問・13小問。制作前独立検証は `13 / 13 PASS`。
+一次3問＋二次記述2問、計5問・13小問。制作前独立検証・完成後独立再解答はいずれも `13 / 13 PASS`。
 
 固定範囲は `SPEC.md` 第8章どおり、三相インバータ、6スイッチ構成、PWM、キャリア、基本波、線間電圧、出力周波数、高調波、スイッチング周波数、および計算プログラムのスイッチング波形・相電圧/線間電圧・基本波・FFT/高調波成分に限定する。
 
@@ -52,14 +52,6 @@ current status: `topic_08_final_qa_needs_revision`
 - `topics/08_vvvf_inverter_three_phase/08_fft_harmonics.svg`
 - `topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_calculation_qa.md`
 
-教材用仮定条件:
-- `E_d = 600 V`
-- `k = 0.90`
-- `f1 = 50 Hz`
-- `fc = 1.5 kHz`
-- `fc/f1 = 30`
-- 1基本波周期 `4096` samples
-
 QA:
 - スイッチ状態: `{-1,+1}` のみ
 - 相端電圧: `±300 V` のみ
@@ -88,25 +80,19 @@ QA:
 - 固定範囲外論点追加: 0件
 - 未確認300系実車値追加: 0件
 
-## Topic 08 最終QA
-`08_vvvf_inverter_three_phase_final_qa.md` を作成し、総合判定は `NEEDS_REVISION / IN_PROGRESS`。
+## Topic 08 前回最終QA
+`08_vvvf_inverter_three_phase_final_qa.md` の総合判定は `NEEDS_REVISION / IN_PROGRESS`。
 
-PASS:
-- 必須成果物の実在
-- 固定一次3問＋二次記述2問、計5問・13小問
-- 完成後独立再解答 `13 / 13 PASS`
-- 練習15問と解説PDF・練習PDF・PowerPointの既存QA
-- SPEC指定の計算プログラム・5波形/FFT QA
-- 固定範囲外論点追加0件
-- 未確認300系実車値追加0件
+技術内容、固定一次3問＋二次記述2問・13小問、独立再解答 `13 / 13 PASS`、必須成果物、PDF/PPTX表示QA、SPEC指定計算/波形QA、仕様境界はPASS。blockerは進捗記録3箇所のみだった。
 
-exact blockerは進捗記録3箇所のみ。
+## 今回の進捗記録同期
+前回QAで指摘された3箇所を実成果物へ同期済み。
 
-1. `08_vvvf_inverter_three_phase.md` 冒頭が「解説PDFまで完成」「練習PDF以降は未着手」の旧記録。
-2. 同source末尾の次工程が「練習問題sourceを作成」の旧記録。
-3. `08_vvvf_inverter_three_phase_practice.md` 末尾の次工程が「練習PDFを作成」の旧記録。
+1. `08_vvvf_inverter_three_phase.md` 冒頭の状態欄
+2. 同source末尾の `## 次工程`
+3. `08_vvvf_inverter_three_phase_practice.md` 末尾の `## 次工程`
 
-技術内容・固定EXAM_ALIGNMENT・数式・問題/正答・PDF/PPTX・計算/波形には修正理由なし。
+技術本文、固定EXAM_ALIGNMENT、数式、問題/正答、PDF/PPTX、計算プログラム・波形内容は変更していない。
 
 ## 次に行うこと
-上記3箇所の進捗記録だけを実成果物へ同期する。技術本文、固定EXAM_ALIGNMENT、数式、問題/正答、PDF/PPTX、計算プログラム・波形内容は変更しない。同期後にTopic 08の最終QAを再実施し、全件PASSの場合のみ `completed` とする。
+Topic 08の最終QAを再実施する。進捗記録整合を含む全品質ゲートがPASSした場合のみ `completed` とする。
