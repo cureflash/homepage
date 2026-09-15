@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 9 / 20
-- current_status: `topic_10_practice_pdf_complete`
+- current_status: `topic_10_powerpoint_complete`
 - last_completed_topic: `09 ラプラス変換`
 - active_topic: `10 伝達関数・極・零点`
-- next_start: Topic 10の解説画像PowerPointを作成し、固定二次5問・11対象設問への接続と固定範囲境界を維持する
+- next_start: Topic 10の完成教材だけを使い、保存済み正答を先に見ず、固定二次5問・11対象設問を独立再解答する
 
 ## Topic 07 制作品質ゲート
 
@@ -94,35 +94,35 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF
-- [ ] 解説画像PowerPoint
-- [ ] PowerPoint表示QA
+- [x] 解説画像PowerPoint
+- [x] PowerPoint表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 10 `伝達関数・極・零点` の練習PDFを完成した。
+Topic 10 `伝達関数・極・零点` の解説画像PowerPointを完成し、表示QAを完了した。
 
 確認:
-- `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_practice.pdf`
-- A4縦4ページ
-- 全12問（一次型8問／二次記述型4問）＋完全解説を反映
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- 独立計算・正答一意性QA: `12 / 12 PASS` を維持
+- `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_images.pptx`
+- `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_powerpoint_qa.md`
+- 16:9・5スライド
 - 固定二次5問・11対象設問への接続: `11 / 11 PASS`
-- Topic 12/15先取り: 0件
-- ラウス・フルビッツ法の一般手順追加: 0件
-- 定常偏差・畳み込みの独立論点化: 0件
-- 件数合わせの固定範囲外追加: 0件
-- 教材外知識補完: 0件
-- 未確認実車値依存: 0件
+- 全5スライド再レンダリング: `5 / 5 PASS`
+- クリッピング・重なり・文字化け: `0件`
+- overflow: `0件`
+- PPTX ZIP/XML整合性: `PASS`
+- Topic 12/15先取り: `0件`
+- ラウス・フルビッツ法の一般手順追加: `0件`
+- 定常偏差・畳み込みの独立論点化: `0件`
+- 件数合わせの固定範囲外追加: `0件`
+- 未確認実車値依存: `0件`
 
 ## 判定
 
-Topic 10は `topic_10_practice_pdf_complete / IN_PROGRESS`。
+Topic 10は `topic_10_powerpoint_complete / IN_PROGRESS`。
 
 完成数は `9 / 20`。
 
-次はTopic 10の解説画像PowerPoint作成。
+次はTopic 10の完成教材だけを使い、保存済み正答を先に見ず、固定二次5問・11対象設問を独立再解答する。
