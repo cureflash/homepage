@@ -4,7 +4,7 @@ updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `07`
 theme: 三相電力をどう25kVの単相へ変える？
-current_status: `topic_07_explanation_pdf_complete`
+current_status: `topic_07_practice_source_complete`
 completed_topics: `6 / 22`
 
 ## Topic 06 final result
@@ -69,6 +69,26 @@ QA:
 - 固定範囲外論点追加: `0件`
 - 未確認実設備値追加: `0件`
 
+## Topic 07 練習問題＋完全解説source
+
+成果物:
+- `topics/07_feeding_transformer/07_feeding_transformer_practice.md`
+
+構成:
+- 全15問
+- 基礎4／本試験標準8／複合・応用3
+- 二種一次型五肢択一10問
+- 二種二次型記述5問
+- 全問完全解説付き
+
+QA:
+- 一次型正答一意性: `10 / 10 PASS`
+- 二次記述型の数値・論理整合: `5 / 5 PASS`
+- 固定10項目カバレッジ: `10 / 10`
+- 正式2過去問要求への接続: `2 / 2`
+- 固定範囲外論点追加: `0件`
+- 未確認実設備値追加: `0件`
+
 ## Gate checklist
 
 - [x] Topic 01 completed
@@ -77,8 +97,8 @@ QA:
 - [x] Topic 04 completed
 - [x] Topic 05 completed
 - [x] Topic 06 completed
-- [ ] Topic 07 EXAM_ALIGNMENT・独立検証・解説source・解説PDF complete / 練習問題未着手
+- [ ] Topic 07 EXAM_ALIGNMENT・独立検証・解説source・解説PDF・練習source complete / 練習PDF未着手
 
 ## next_start
 
-Topic 07の練習問題＋完全解説sourceを作成する。一次試験型と二次記述式を含め、固定10項目・正式2過去問の要求事項へ接続する。固定範囲外の件数合わせ・未確認実設備値追加は行わない。
+Topic 07の練習PDFを作成する。`07_feeding_transformer_practice.md` の全15問と完全解説を正本とし、A4縦PDFへ同期して全ページ表示QA・文字抽出QA・問題数/解答整合を確認する。固定範囲外・未確認実設備値を追加しない。
