@@ -1,7 +1,7 @@
 # Topic 09 北陸新幹線は50Hzと60Hzをどう走る？
 
 更新日: 2026-09-15
-status: `EXPLANATION_SOURCE_COMPLETE`
+status: `EXPLANATION_PDF_COMPLETE`
 
 ## 1. SPEC固定範囲
 
@@ -543,4 +543,4 @@ XC2 = XC1(f1/f2)
 
 ## 9. 次工程
 
-解説本文＋3段階例題は完成。次は固定EXAM_ALIGNMENTと本文を変更せず、解説PDFを作成して全ページ表示QA・文字抽出QAを行う。完成後独立再解答が済むまで`completed`にしない。
+解説PDF・全ページ表示QA・文字抽出QAまで完了。次は固定EXAM_ALIGNMENTと本文を変更せず、練習問題source・練習問題PDFを作成する。完成後独立再解答が済むまで`completed`にしない。
