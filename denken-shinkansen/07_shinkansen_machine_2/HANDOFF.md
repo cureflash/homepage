@@ -9,7 +9,7 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_10_blind_reanswer_ready`
+current status: `topic_10_independent_reanswer_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -49,13 +49,6 @@ current status: `topic_10_blind_reanswer_ready`
 - H24 二次 機械・制御 問3: `4 / 4 PASS`
 - 合計: `15 / 15 PASS`
 
-主要確認内容:
-- R06: 誘導電動機、`s<0` による回生制動
-- R05: 制動時の運動エネルギー→電気エネルギー変換、回生ブレーキ
-- H28: 電力回生、誘導電動機、滑り
-- H27: 直流側→交流側の逆変換、架線回生電力を力行車が消費
-- H24二次: `Vv=VL+jXI`、`P=VL I`、PWM変調率を教材だけで再導出する。保存済み数値解はHANDOFFへ記録しない。
-
 ## Topic 10 source
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant.md`
 
@@ -71,9 +64,7 @@ source完成内容:
 - 頻出ミス・過去問接続・公式まとめ
 - 基礎・本試験標準・複合の3段階例題
 - 固定5問・15答案要素の本文マッピング
-- 固定範囲外小問の除外理由
-
-例題上の効率・電圧等は教材上の設定値であり、未確認実車値として扱っていない。
+- 完成後独立再解答 `15 / 15 PASS`
 
 ## Topic 10 解説PDF
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_explanation.pdf`: `completed`
@@ -95,12 +86,6 @@ source完成内容:
 - 固定5過去問・15答案要素: 全件接続
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-
-主な数値再計算:
-- `s=(1800-1890)/1800=-0.05`
-- `0.95×0.98×0.97=0.90307`
-- `V_L=200 V, P=6.0 kW, X=0.40 Ω` → `I=30 A`, `V_v=200.36 V`, `K=0.9445`
-- 練習二次型の数値再計算は練習source/PDF側でQA済み。固定H24二次過去問の保存済み数値解とは分離する。
 
 ## Topic 10 練習PDF
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_practice.pdf`: `completed`
@@ -127,18 +112,24 @@ source完成内容:
 - 未確認実車値追加: `0件`
 - SHA-256: `77807ae3a7bbd10e7110a79316dacad7eaedb609d2ec4a482cfe473a5b5c310d`
 
-## Topic 10 独立再解答前ゲート
-- `EXAM_ALIGNMENT_SPEC.md` §10に従い、完成後再解答は保存済み正答を先に見ずに行う。
-- 今回runの必須先読みで、旧HANDOFFにH24二次問3の保存済み数値解が残っていることを確認したため、このrunでは独立再解答を実施していない。
-- 旧HANDOFFの保存済み数値解は除去済み。
-- 固定5過去問・15答案要素、教材本文、練習問題、PDF/PPTX、固定範囲は変更していない。
-- 次runは `topic_10_blind_reanswer_ready` から開始する。
+## Topic 10 完成後独立再解答
+- 保存済み公式解答・標準解答を先に見ず、完成教材だけで固定5問を再解答した。
+- R06 一次 機械 問2: `2 / 2 PASS`
+- R05 一次 機械 問2: `4 / 4 PASS`
+- H28 一次 機械 問5: `3 / 3 PASS`
+- H27 一次 機械 問3: `2 / 2 PASS`
+- H24 二次 機械・制御 問3: `4 / 4 PASS`
+- 合計: `15 / 15 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- 固定5問・15答案要素、教材本文、練習問題、PDF/PPTXは変更していない。
 
 ## 次に行うこと
-Topic 10の完成後独立再解答を行う。
+Topic 10の最終QAを実施する。
 
-1. 固定5過去問・15答案要素を変更しない。
-2. 保存済み正答を先に見ず、完成教材だけで一次4問＋二次1問を再解答する。
-3. 教材外知識で補完した場合はFAILとする。
+1. 必須成果物の実在と進捗記録整合を確認する。
+2. 固定一次4問＋二次1問・15答案要素と完成後独立再解答 `15 / 15 PASS` を維持する。
+3. PDF/PPTX表示QA、練習問題QA、固定範囲境界を総合判定する。
 4. H27/H24の除外小問、Topic 11/16、未確認実車値を追加しない。
-5. 独立再解答後にSTATUS/HANDOFFを同期し、最終QAへは先行しない。
+5. PASS条件を満たした場合のみTopic 10を `completed` にする。
