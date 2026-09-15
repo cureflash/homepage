@@ -3,13 +3,13 @@
 更新日: 2026-09-15
 
 ## 現在地
-Topic 01〜08は最終QAまで `PASS / completed`。
+Topic 01〜09は最終QAまで `PASS / completed`。
 
-完成数: `8 / 22`
+完成数: `9 / 22`
 
-active topic: `09 誘導電動機を自由に操るには？`
+active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_09_source_progress_synced`
+current status: `topic_09_completed`
 
 ## Topic 09 固定EXAM_ALIGNMENT
 固定過去問:
@@ -37,37 +37,27 @@ current status: `topic_09_source_progress_synced`
 - 厳密なPark/Clarke変換、電流制御器設計、センサレス推定器設計は追加しない。
 - 未確認300系実車制御値を真値として追加しない。
 
-## 完了済み工程
+## Topic 09 完了済み工程
 - 制作前EXAM_ALIGNMENT: `18 / 18 PASS`
-- 解説本文: 完成
-- 3段階例題: 基礎・標準・複合を完成
+- 解説本文＋3段階例題: 完成
 - 固定18小問の本文マッピング: `18 / 18`
 - 解説PDF: `09_induction_motor_control_explanation.pdf`
-- 解説PDF: A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS
+- 解説PDF QA: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
 - 練習問題source: `09_induction_motor_control_practice.md`
-- 一次試験型: 10問・全問五肢択一
-- 二次試験型: 5問・途中式／前提／単位／理由説明付き
-- 練習問題の数値・論理再検算: `15 / 15 PASS`
-- 一次正答一意性: `10 / 10 PASS`
+- 一次試験型10問＋二次試験型5問、全15問に完全解説
+- 練習問題QA: `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`
 - 固定5問・18小問の練習問題マッピング: `18 / 18 PASS`
 - 練習PDF: `09_induction_motor_control_practice.pdf`
-- 練習PDF: A4縦6ページ、一次10問＋二次5問を全件収録
-- 200 dpi全ページ表示QA: `6 / 6 PASS`
-- 文字抽出QA: PASS
-- 主要計算値再検算: PASS
-- 固定5問・18小問の解法経路維持: PASS
+- 練習PDF QA: A4縦6ページ、200 dpi表示 `6 / 6 PASS`、文字抽出PASS、主要計算値再検算PASS
 - 解説画像PowerPoint: `09_induction_motor_control_images.pptx`
-- 解説画像PowerPoint: 16:9・4スライド
-- 固定5問・18小問の解法経路可視化: PASS
-- 200 dpi全スライド表示QA: `4 / 4 PASS`
-- overflow検査: 0件
-- PPTX ZIP整合性: PASS
+- PowerPoint QA: 16:9・4枚、200 dpi表示 `4 / 4 PASS`、overflow 0件、ZIP整合性PASS
 - 完成後独立再解答: `18 / 18 PASS`
 - 教材外知識補完: 0件
-- 固定EXAM_ALIGNMENT・固定範囲・問題・正答の変更: 0件
 - 固定範囲外追加: 0件
 - 未確認300系実車制御値追加: 0件
 - 練習source旧進捗記録の同期: 完了
+- 最終QA再判定: `PASS / completed`
+- 最終QA記録: `topics/09_induction_motor_control/09_induction_motor_control_final_qa.md`
 
 ## 完成後独立再解答結果
 - R02 一次 機械 問3 (1)〜(5): `(ワ, ハ, ル, ロ, ト)`、`5 / 5 PASS`
@@ -76,6 +66,7 @@ current status: `topic_09_source_progress_synced`
 - R04 二次 機械・制御 問3 (6): 50 Hz→25 Hzで信号波振幅 `0.9→0.45`、周期2倍、`1 / 1 PASS`
 - R02 二次 機械・制御 問1 (1)〜(7): `1800, 1710, 90 min^-1, 3 Hz, 90, 1800, 0 min^-1`、`7 / 7 PASS`
 
+## Topic 09 成果物
 解説source:
 - `topics/09_induction_motor_control/09_induction_motor_control.md`
 
@@ -91,16 +82,11 @@ current status: `topic_09_source_progress_synced`
 解説画像PowerPoint:
 - `topics/09_induction_motor_control/09_induction_motor_control_images.pptx`
 
-## 練習問題・PDF・PowerPointで収録した要点
-- `N_s=120f/p`、`N=(1-s)N_s`、`f_2=sf` と回転磁界の相対速度。
-- 一次電圧制御の `T∝V^2` と、一定負荷で電圧低下時に滑りが増える関係。
-- `E≈4.44fN_wΦ` から `Φ∝V/f` を導くV/f一定制御。
-- 基底速度以下の定トルク、電圧上限後の弱め磁束・定出力と `P=Tω`。
-- H26一次型の定加速域 `V/f` 一定、定出力域 `V一定・I_M一定・f_s可変`。
-- ベクトル制御は磁束生成成分・トルク生成成分、d軸/q軸の概念まで。
+最終QA:
+- `topics/09_induction_motor_control/09_induction_motor_control_final_qa.md`
 
-## 前回最終QA結果
-判定: `NEEDS_REVISION / IN_PROGRESS`
+## Topic 09 最終QA結果
+判定: `PASS / completed`
 
 PASS:
 - 必須成果物5件の存在
@@ -110,13 +96,8 @@ PASS:
 - 解説PDF表示QA `4 / 4 PASS`、文字抽出QA PASS
 - 練習PDF表示QA `6 / 6 PASS`、文字抽出QA・主要計算再検算 PASS
 - PowerPoint表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性 PASS
+- 前回唯一の進捗記録不整合解消
 - Topic 10以降・厳密Park/Clarke変換・制御器設計・センサレス推定器設計・未確認300系実車値の混入なし
 
-前回未完了理由:
-- `09_induction_motor_control_practice.md` 末尾 `## 次工程` の旧進捗記録1箇所のみ。
-
-## 今回の同期
-`09_induction_motor_control_practice.md` 末尾を、実在する練習PDF・PowerPoint・完成後独立再解答の現在地へ同期済み。技術本文、15問、解答・解説、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTXは変更していない。
-
 ## 次に行うこと
-Topic 09最終QAを再判定する。前回唯一の不整合だった練習source進捗記録が解消されていることを確認し、全品質ゲートが維持されていれば `PASS / completed` とする。
+Topic 10「新幹線はモーターを発電機にして止まる」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`に従い、まず公式二種一次・二次過去問を調査し、固定範囲へ直接対応する問題だけを選定する。
