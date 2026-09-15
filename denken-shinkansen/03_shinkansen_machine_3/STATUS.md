@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: 9 / 16
-- current_status: `topic_10_practice_source_complete`
+- current_status: `topic_10_practice_pdf_complete`
 - last_completed_topic: `09 新幹線はどうやって電気で止まる？`
 - active_topic: `10 新幹線の速度はどう自動制御される？`
-- next_start: Topic 10の練習問題source 12問を練習PDFへ反映し、全ページ表示QA・文字抽出QAを行う
+- next_start: Topic 10の解説画像PowerPointを作成し、全スライド表示QA・overflow・PPTX整合性QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -20,7 +20,7 @@
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
-- [ ] 10 新幹線の速度はどう自動制御される？ — 解説source＋解説PDF＋練習問題source完成・固定5件接続 `5 / 5`
+- [ ] 10 新幹線の速度はどう自動制御される？ — 解説source＋解説PDF＋練習問題source＋練習PDF完成・固定5件接続 `5 / 5`
 - [ ] 11〜16 — 未完了
 
 ## Topic 10 EXAM_ALIGNMENT
@@ -75,7 +75,7 @@ R7上問13、R6下問13、R6上問13、R5下問13、R5下問18(b)、R4上問15(b
 - 固定5件の本文マッピング `5 / 5 全件`
 - ブロック線図、負帰還 `G/(1+GH)`、一次遅れ・時定数、R-L/R-C伝達関数、二次遅れ、定常偏差、安定性を固定範囲内で接続
 - 練習問題source: 完成
-- 練習PDF: 未着手
+- 練習PDF: 完了（A4縦6ページ、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`）
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
@@ -111,6 +111,24 @@ R7上問13、R6下問13、R6上問13、R5下問13、R5下問18(b)、R4上問15(b
 - 固定EXAM_ALIGNMENT変更 `0件`
 - 固定範囲外論点追加 `0件`
 - 未確認実車値追加 `0件`
+
+### 練習PDF
+`topics/10_automatic_control/10_automatic_control_practice.pdf`
+
+- A4縦6ページ
+- 全12問・全問五肢択一＋完全解説
+- 200 dpi全6ページ表示QA `6 / 6 PASS`
+- 文字抽出QA `PASS`
+- clipping / overlap / broken glyph `0件`
+- 固定EXAM_ALIGNMENT 5件への接続 `5 / 5` を維持
+- 独立計算・論理QA `12 / 12 PASS`
+- 正答一意性QA `12 / 12 PASS`
+- 固定EXAM_ALIGNMENT変更 `0件`
+- 固定範囲外論点追加 `0件`
+- 未確認実車値追加 `0件`
+
+### 練習PDF QA記録
+`topics/10_automatic_control/10_automatic_control_practice_pdf_qa.md`
 
 ## Topic 09 EXAM_ALIGNMENT
 品質ゲート対象は、系列SPECの固定範囲だけで完結する公式過去問5問で固定する。
