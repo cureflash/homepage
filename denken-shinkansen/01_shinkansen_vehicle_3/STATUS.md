@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 30 / 38
-- current_status: `topic_31_explanation_pdf_complete`
+- current_status: `topic_31_practice_pdf_complete`
 - last_completed_topic: `30 ATC① 新幹線は列車をどう検知する？`
 - active_topic: `31 ATC② 地上から車上へどう情報を送る？`
-- next_start: Topic 31の練習source/PDF。固定5問6対象項目へ接続する三種問題を作成し、独立QA・全ページ表示QAを行う
+- next_start: Topic 31の解説画像PowerPoint。固定5問6対象項目の解法経路を可視化し、表示QA・PPTX整合性を確認する
 
 ## 新品質ゲート進捗
 - [x] 01〜30 — PASS
-- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 解説本文＋3段階例題＋解説PDF完成（固定5問・6対象項目を `6 / 6` マッピング）
+- [ ] 31 ATC② 地上から車上へどう情報を送る？ — 解説本文＋3段階例題＋解説PDF＋練習source/PDF完成（固定5問・6対象項目を `6 / 6` マッピング）
 
 ## 31 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、信号、周波数、情報伝送、センサ、デジタル信号、論理判断。
@@ -54,6 +54,32 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - 文字抽出QA: PASS
 - 固定EXAM_ALIGNMENT: `6 / 6` 反映
 - Topic 32範囲追加: `0件`
+- 未確認実車値追加: `0件`
+
+## 31 練習source / PDF
+- source: `topics/31_atc_signal_transmission/31_atc_signal_transmission_practice.md`
+- PDF: `topics/31_atc_signal_transmission/31_atc_signal_transmission_practice.pdf`
+- 全15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説
+- 正答位置: A/B/C/D/E各3問
+- 固定5問・6対象項目: `6 / 6` 練習マッピング
+- 独立数値・論理QA: `15 / 15 PASS`
+- 複数正答: `0件`
+- A4縦4ページ、180 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- Topic 32範囲追加: `0件`
+- 未確認実車値追加: `0件`
+
+## 31 練習QA
+- 問題数: `15 / 15`
+- 基礎/標準/複合: `4 / 8 / 3`
+- 五肢択一: `15 / 15`
+- 正答位置: A/B/C/D/E各3問
+- 固定EXAM_ALIGNMENT要求事項: `6 / 6` マッピング
+- 数値・論理再計算: `15 / 15 PASS`
+- 複数正答: `0件`
+- 練習PDF表示QA: 180 dpi `4 / 4 PASS`
+- 練習PDF文字抽出QA: PASS
+- 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
 ## 30 EXAM_ALIGNMENT
@@ -136,4 +162,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 30 `ATC① 新幹線は列車をどう検知する？` は固定5問の完成後独立再解答 `5 / 5 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。
 
 ## 次テーマ工程
-Topic 31 `ATC② 地上から車上へどう情報を送る？` は解説PDFまで完了。次は練習source/PDFを作成し、固定5問・6対象項目への接続、独立QA、全ページ表示QAを行う。
+Topic 31 `ATC② 地上から車上へどう情報を送る？` は練習source/PDFまで完了。次は解説画像PowerPointを作成し、固定5問・6対象項目の解法経路を可視化して表示QA・PPTX整合性を確認する。
