@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `9 / 16`
-- current_status: `topic_10_independent_reanswer_complete`
+- current_status: `topic_10_final_qa_needs_revision`
 - last_completed_topic: `09 新幹線はどうやって電気で止まる？`
 - active_topic: `10 新幹線の速度はどう自動制御される？`
-- next_start: Topic 10の最終QAを実施し、必須成果物・表示QA・進捗整合・SPEC境界・独立再解答結果を総合判定する
+- next_start: Topic 10練習source末尾の旧次工程1箇所だけを実成果物へ同期し、その後に最終QAを再実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -20,7 +20,7 @@
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
-- [ ] 10 新幹線の速度はどう自動制御される？ — 全必須成果物完成、固定5件接続 `5 / 5`、完成後blind独立再解答 `5 / 5 PASS`、最終QA未実施
+- [ ] 10 新幹線の速度はどう自動制御される？ — 技術内容・固定5件・完成後blind独立再解答・成果物QAはPASS。最終QAは進捗記録1箇所の不整合により `NEEDS_REVISION / IN_PROGRESS`
 - [ ] 11〜16 — 未完了
 
 ## Topic 10 EXAM_ALIGNMENT
@@ -65,12 +65,29 @@ R7上問13、R6下問13、R6上問13、R5下問13、R5下問18(b)、R4上問15(b
 - 独立再解答前ゲート: `topics/10_automatic_control/10_automatic_control_blind_reanswer_gate.md` — `BLIND_REANSWER_READY`
 - 完成後独立再解答: `(4),(3),(5),(1),(2)` / `5 / 5 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 未実施
+- 最終QA: `NEEDS_REVISION / IN_PROGRESS`（練習source末尾の旧次工程1箇所のみFAIL）
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
+## Topic 10 最終QA
+- 必須成果物の実在: `PASS`
+- 固定EXAM_ALIGNMENT 5件: `PASS`
+- 完成後blind独立再解答: `5 / 5 PASS`
+- 解説PDF表示QA・文字抽出QA: `PASS`
+- 練習PDF表示QA・文字抽出QA: `PASS`
+- PowerPoint表示QA・overflow・ZIP整合性: `PASS`
+- 固定範囲境界: `PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+- source進捗整合: `FAIL`（`10_automatic_control_practice.md` 末尾1箇所）
+- 残存旧記録: `次工程: このsourceを基に練習PDFを作成し、全ページ表示QA・文字抽出QAを行う。`
+- 実態: 練習PDFは既に完成し、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 完成数: `9 / 16` のまま
+
 ## 今回進捗
-Topic 10の完成後blind独立再解答を実施した。公式解答・保存済み正答を先に見ず、公式問題文と完成教材だけで固定5件を再導出し、答案 `(4),(3),(5),(1),(2)` を得た。再解答後に公式解答と照合して `5 / 5 PASS`。教材外・固定範囲外知識による補完、固定EXAM_ALIGNMENT変更、固定範囲外論点追加、未確認実車値追加はいずれも0件。
+Topic 10の最終QAを実施した。技術内容、固定5件への接続、完成後blind独立再解答 `5 / 5 PASS`、必須成果物、PDF/PPTX QA、固定範囲境界は全件PASS。唯一のFAILは練習source末尾の旧次工程1箇所で、実在する練習PDF・QAより進捗記録が古い。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTXは変更していない。
 
 ## 次工程
-Topic 10の最終QAを実施し、必須成果物・表示QA・進捗整合・SPEC境界・独立再解答結果を総合判定する。
+`topics/10_automatic_control/10_automatic_control_practice.md` 末尾の旧次工程1箇所だけを実成果物へ同期する。その後にTopic 10の最終QAを再実施する。
