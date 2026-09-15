@@ -9,7 +9,7 @@ Topic 01〜08は最終QAまで `PASS / completed`。
 
 active topic: `09 誘導電動機を自由に操るには？`
 
-current status: `topic_09_practice_pdf_complete`
+current status: `topic_09_images_pptx_complete`
 
 ## Topic 09 固定EXAM_ALIGNMENT
 固定過去問:
@@ -56,6 +56,12 @@ current status: `topic_09_practice_pdf_complete`
 - 文字抽出QA: PASS
 - 主要計算値再検算: PASS
 - 固定5問・18小問の解法経路維持: PASS
+- 解説画像PowerPoint: `09_induction_motor_control_images.pptx`
+- 解説画像PowerPoint: 16:9・4スライド
+- 固定5問・18小問の解法経路可視化: PASS
+- 200 dpi全スライド表示QA: `4 / 4 PASS`
+- overflow検査: 0件
+- PPTX ZIP整合性: PASS
 - 固定範囲外追加: 0件
 - 未確認300系実車制御値追加: 0件
 
@@ -71,7 +77,10 @@ current status: `topic_09_practice_pdf_complete`
 練習PDF:
 - `topics/09_induction_motor_control/09_induction_motor_control_practice.pdf`
 
-## 練習問題・PDFで収録した要点
+解説画像PowerPoint:
+- `topics/09_induction_motor_control/09_induction_motor_control_images.pptx`
+
+## 練習問題・PDF・PowerPointで収録した要点
 - `N_s=120f/p`、`N=(1-s)N_s`、`f_2=sf` と回転磁界の相対速度。
 - 一次電圧制御の `T∝V^2` と、一定負荷で電圧低下時に滑りが増える関係。
 - `E≈4.44fN_wΦ` から `Φ∝V/f` を導くV/f一定制御。
@@ -80,10 +89,10 @@ current status: `topic_09_practice_pdf_complete`
 - ベクトル制御は磁束生成成分・トルク生成成分、d軸/q軸の概念まで。
 
 ## 次に行うこと
-Topic 09の解説画像PowerPointを作成する。
+Topic 09の完成教材だけで固定5問・18小問を独立再解答する。
 
-1. 固定5問・18小問の解法経路を可視化する。
-2. V/f一定、基底速度、弱め磁束・定出力、ベクトル制御概念を固定範囲内で整理する。
-3. 表示QA・overflow検査・PPTX整合性確認を行う。
-4. Topic 10以降、厳密Park/Clarke変換、制御器設計、センサレス推定器設計を追加しない。
-5. 未確認300系実車値を追加しない。
+1. 保存済みの公式解答・標準解答を先に見ずに再解答する。
+2. 解説source・解説PDF・練習source/PDF・PowerPointの内容だけで式選択・途中式・理由説明まで組み立てる。
+3. 18小問すべてについて正答可否と教材外知識補完の有無を記録する。
+4. Topic 10以降、厳密Park/Clarke変換、制御器設計、センサレス推定器設計、未確認300系実車値を追加しない。
+5. `18 / 18 PASS` かつ教材外知識補完0件なら、次に最終QAを行う。

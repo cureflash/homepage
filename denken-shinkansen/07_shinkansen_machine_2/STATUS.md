@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `8 / 22`
-- current_status: `topic_09_practice_pdf_complete`
+- current_status: `topic_09_images_pptx_complete`
 - last_completed_topic: `08 VVVFインバータで三相交流を作る`
 - active_topic: `09 誘導電動機を自由に操るには？`
-- next_start: Topic 09の解説画像PowerPointを作成する
+- next_start: Topic 09の完成教材だけで固定5問・18小問を独立再解答する
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -65,8 +65,18 @@
 - [x] 固定5問・18小問の解法経路を維持
 - [x] 固定範囲外論点・未確認300系実車値の追加 0件
 
+## Topic 09 解説画像PowerPoint
+- [x] `09_induction_motor_control_images.pptx` 作成
+- [x] 16:9・4スライド
+- [x] 固定5問・18小問の解法経路を可視化
+- [x] V/f一定、基底速度、弱め磁束・定出力、一次電圧制御、ベクトル制御概念を固定範囲内で整理
+- [x] 200 dpi全スライド表示QA `4 / 4 PASS`
+- [x] overflow検査 0件
+- [x] PPTX ZIP整合性 PASS
+- [x] 固定範囲外論点・未確認300系実車値の追加 0件
+
 ## 今回進めた内容
-Topic 09「誘導電動機を自由に操るには？」の練習PDFを完成した。既存の練習sourceをreconcileして重複作成を避け、一次10問＋二次記述5問を全件収録した。A4縦6ページ、200 dpi全ページ表示QA `6 / 6 PASS`、文字抽出QA PASS、主要計算値の再検算PASS。固定一次3問＋二次2問・18小問の解法経路、固定範囲、未確認300系実車値を追加しない境界を維持した。
+Topic 09「誘導電動機を自由に操るには？」の解説画像PowerPointを完成した。16:9・4スライドで、同期速度・滑り・二次周波数、V/f一定と磁束、基底速度以下の定トルク／基底速度超過後の弱め磁束・定出力、一次電圧制御との区別、ベクトル制御の磁束成分・トルク成分とd/q軸概念を固定範囲内で可視化した。200 dpi全スライド表示QA `4 / 4 PASS`、overflow 0件、PPTX ZIP整合性PASS。固定一次3問＋二次2問・18小問の解法経路を維持し、固定範囲外論点・未確認300系実車値の追加は0件。
 
 ## 判定
-Topic 09は `practice_pdf_complete`。完成数は `8 / 22` のまま。次は解説画像PowerPointを作成する。
+Topic 09は `images_pptx_complete`。完成数は `8 / 22` のまま。次は完成教材だけで固定5問・18小問の独立再解答を行う。
