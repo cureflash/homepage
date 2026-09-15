@@ -6,21 +6,21 @@
 
 Topic 01〜07は `completed`。
 
-Topic 08 `積分 速度曲線の面積は距離` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、初回完成後独立再解答、不足前提3群の最小補強source/PDF、補強後の再独立解答まで実施。
+Topic 08 `積分 速度曲線の面積は距離` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、初回完成後独立再解答、不足前提3群の最小補強source/PDF、補強後の再独立解答、最終QAまで実施。
 
-初回完成後独立再解答は `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`。不足はR8上の相電圧→線間電圧・線間波形、R3のリアクトル電圧符号・磁気エネルギー・導通終了、H28のサイリスタ導通対・無点弧時波形の3群だけだった。
+補強後の完成教材だけによる固定5問・9答案要素の再独立解答は `5 / 5問・9 / 9答案要素 PASS`。技術内容、固定EXAM_ALIGNMENT、必須成果物、練習QA、既存表示QA記録、仕様境界はPASS。
 
-不足3群を `08_integral_distance_revision_supplement.md` / `.pdf` へ固定範囲内で最小補強後、完成教材だけで固定5問を再独立解答し、`5 / 5問・9 / 9答案要素 PASS`。公式解答との不一致0件、教材外知識補完0件。固定EXAM_ALIGNMENT変更、Topic 09〜11先取り、専門分野の体系説明追加、未確認新幹線実値追加はいずれも0件。
+最終QAは `NEEDS_REVISION / IN_PROGRESS`。唯一の未完了理由は進捗記録2箇所で、主source冒頭が「解説本文＋3段階例題まで完了／次は解説PDF」、練習source末尾が「次は練習PDF作成」の旧記録のまま。実際には後続成果物まで完成しているため、この2箇所だけを実成果物へ同期してから最終QAを再判定する。
 
 完成数: `7 / 12`
 
-current_status: `topic_08_exam_reanswer_after_revision_complete`
+current_status: `topic_08_final_qa_needs_revision`
 
 last_completed_topic: `07 微分② 速度を微分すると加速度`
 
 active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `Topic 08 最終QA`
+next_start: `主source・練習sourceの旧進捗記録2箇所を実成果物へ同期`
 
 ## Topic 07 完了記録
 
@@ -163,8 +163,28 @@ next_start: `Topic 08 最終QA`
 - 専門分野の体系説明追加: 0件
 - 未確認新幹線実値追加: 0件
 
-過去問対応品質ゲートはPASS。ただし最終QA未実施のためTopic 08はまだ `completed` にしない。
+### 最終QA
+
+`topics/08_integral_distance/08_integral_distance_final_qa.md`
+
+判定は `NEEDS_REVISION / IN_PROGRESS`。
+
+PASS項目:
+- 必須成果物の実在
+- 固定EXAM_ALIGNMENT 5問・9答案要素
+- 制作前独立検証 `5 / 5問・9 / 9答案要素 PASS`
+- 補強後独立再解答 `5 / 5問・9 / 9答案要素 PASS`
+- 練習独立計算QA `12 / 12 PASS`
+- PDF/PPTXの既存表示QA記録
+- 固定範囲・後続Topic境界
+
+FAIL項目はsource進捗整合のみ。
+
+- 主source `08_integral_distance.md` 冒頭 `## 状態`: 「解説本文＋3段階例題まで完了」「次工程は解説PDF」の旧記録
+- 練習source `08_integral_distance_practice.md` 末尾: 「次工程は練習PDF作成」の旧記録
+
+技術本文・数式・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・補強成果物・独立再解答は変更せず、この2箇所だけを現在地へ同期する。
 
 ## 次に行うこと
 
-Topic 08の最終QAを実施し、必須成果物、固定EXAM_ALIGNMENT、補強後 `5 / 5問・9 / 9答案要素 PASS`、PDF/PPTX表示QA、source進捗整合、仕様境界を確認する。
+主source冒頭と練習source末尾の旧進捗記録2箇所だけを、実在成果物・補強後独立再解答・最終QA実施済みの現在地へ同期する。その後にTopic 08最終QAを再判定する。
