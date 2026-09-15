@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 6 / 39
-- current_status: `topic_07_independent_reanswer_passed`
+- current_status: `topic_07_final_qa_needs_revision`
 - last_completed_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
 - active_topic: `07 直流主回路の高出力化`
-- next_start: Topic 07の最終QAを実施し、必須成果物、固定一次4問＋二次1問・15対象項目の再独立再解答 `15 / 15 PASS`、表示QA、進捗記録整合、固定範囲を確認する。全件PASSの場合のみTopic 07を `completed` とする
+- next_start: `07_dc_main_circuit_high_output.md` と `07_dc_main_circuit_high_output_practice_source.md` の旧進捗記録だけを、実在成果物・補強後再独立再解答 `15 / 15 PASS` の現在地へ同期する。技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -17,7 +17,7 @@
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
-- [ ] 07 直流主回路の高出力化 — H21一次 問2(2)不足の補強と全成果物同期後、補強済み完成教材だけで再独立再解答し `15 / 15 PASS`。教材外知識補完0件。最終QA未実施
+- [ ] 07 直流主回路の高出力化 — 補強後再独立再解答 `15 / 15 PASS`。最終QAは source Markdownの旧進捗記録不整合だけで `NEEDS_REVISION`
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -154,7 +154,21 @@
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 現在判定: `PASS / final QA pending`
+- 独立再解答判定: `PASS`
+
+## Topic 07 最終QA
+- 必須成果物: `PASS`
+- 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問・15対象項目を維持
+- 完成後独立再解答: `15 / 15 PASS`
+- 解説PDF: 表示・文字抽出QA `PASS`
+- 練習PDF: 表示・文字抽出QA、計算・論理 `12 / 12 PASS`
+- PowerPoint: 表示QA・overflow・ZIP整合性 `PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- `07_dc_main_circuit_high_output.md` の状態欄・完成後独立再解答欄に、PDF/PPTX未同期・再独立再解答未実施という旧進捗が残存: `FAIL`
+- `07_dc_main_circuit_high_output_practice_source.md` の状態欄・次工程に、練習PDF未同期という旧進捗が残存: `FAIL`
+- 最終判定: `NEEDS_REVISION`
 
 ## Topic 07 固定範囲
 - 主回路構成比較
@@ -175,4 +189,4 @@
 - 位相制御、サイリスタ点弧角、誘導電動機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱設計
 - 出典で確認できない100系・200系の編成出力、主回路総損失、効率、冷却容量、けん引力・速度特性
 
-次工程はTopic 07の最終QA。必須成果物、固定EXAM_ALIGNMENT、再独立再解答 `15 / 15 PASS`、各表示QA、source/STATUS/HANDOFFの進捗整合、固定範囲を確認し、全件PASSの場合のみTopic 07を `completed` とする。
+次工程は `07_dc_main_circuit_high_output.md` と `07_dc_main_circuit_high_output_practice_source.md` の旧進捗記録だけを現在地へ同期する。技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更しない。
