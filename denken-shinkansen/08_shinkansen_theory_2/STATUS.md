@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 8 / 21
-- current_status: `topic_09_powerpoint_complete`
+- current_status: `topic_09_blind_reanswer_blocked_by_answer_leak`
 - last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 - active_topic: `09 新幹線の25kV交流をフェーザで表す`
-- next_start: Topic 09の完成後独立再解答
+- next_start: Topic 09主sourceの保存済み公式正答値だけを必須先読み対象から除去し、`topic_09_blind_reanswer_ready` にする
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -67,25 +67,27 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後独立再解答
+- [ ] 完成後独立再解答: `BLOCKED`（必須先読みsourceに保存済み正答値が残存）
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 09「新幹線の25kV交流をフェーザで表す」の解説画像PowerPointを完成した。
+Topic 09の完成後独立再解答に入る前の品質ゲートを監査した。
 
-- PowerPoint: `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_images.pptx`
-- 16:9・5スライド
-- 正弦波・実効値・位相差、複素数表示、フェーザ、R/L/C複素インピーダンス、解法手順、固定過去問接続を可視化
-- 200 dpi全5スライド表示QA: `5 / 5 PASS`
-- ZIP整合性: `PASS`
-- クリッピング・重なり・文字化け: 0件
-- 固定一次5問・11小問を変更せず維持
-- 二次採用: 0問
-- 二次数合わせ: 0件
-- 固定範囲外追加: 0件
-- 未確認実設備値追加: 0件
+- MASTER_SPECは各runでactive themeの既存成果物を必須先読みとする
+- EXAM_ALIGNMENT_SPECは完成後独立再解答を「保存済み正答を先に見ず」に行うことを要求する
+- `topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` のEXAM_ALIGNMENT表に保存済み公式正答値が残っている
+- このため、現状の必須先読み手順のまま独立再解答すると品質ゲート条件を満たせない
+- HANDOFFから公式正答値は除去済み
+- 主source側は未除去なので、本runでは独立再解答を実施していない
+- 固定一次5問・11小問、二次採用0問、二次数合わせ0件、固定範囲、技術本文、成果物はいずれも変更していない
+
+## exact blocker
+
+`topics/09_25kv_ac_phasor/09_25kv_ac_phasor.md` の品質ゲート表に保存済み公式正答値が残っており、MASTER_SPECの必須先読みとEXAM_ALIGNMENT_SPECのblind再解答条件が同時に成立しない。
+
+解除条件は、主sourceの公式正答値だけを除去し、問題選定・要求知識・「公式解答照合11 / 11 PASS」の事実を保持すること。その編集runでは独立再解答せず、次runで必須先読み対象に正答値がないことを確認してから完成教材のみで再解答する。
 
 ## 判定
 
-Topic 09は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は完成教材だけによる固定5問・11小問の独立再解答。
+Topic 09は `BLIND_REANSWER_BLOCKED / IN_PROGRESS`。完成数は `8 / 21` のまま。次工程は主sourceの正答値除去による `topic_09_blind_reanswer_ready` 化。
