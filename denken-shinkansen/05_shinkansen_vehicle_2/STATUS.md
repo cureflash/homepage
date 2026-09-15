@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 7 / 39
-- current_status: `topic_08_powerpoint_complete`
+- current_status: `topic_08_independent_reanswer_passed`
 - last_completed_topic: `07 直流主回路の高出力化`
 - active_topic: `08 位相制御と平均直流電圧`
-- next_start: Topic 08の完成後独立再解答。完成教材のみを使い、固定一次3問＋二次2問・20対象項目を再解答して公式解答・標準解答と照合する。教材外知識補完、固定範囲外追加、未確認実車値追加は0件を維持する
+- next_start: Topic 08の最終QA。必須成果物、固定一次3問＋二次2問・20対象項目、完成後独立再解答 `20 / 20 PASS`、表示QA、進捗記録整合、固定範囲を再確認し、全件PASSならcompletedへ更新する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -18,7 +18,7 @@
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
 - [x] 07 直流主回路の高出力化 — PASS
-- [ ] 08 位相制御と平均直流電圧 — 解説source・解説PDF・練習source・練習PDF・PowerPoint完成 / 完成後独立再解答未実施
+- [ ] 08 位相制御と平均直流電圧 — 解説source・解説PDF・練習source・練習PDF・PowerPoint完成 / 完成後独立再解答 `20 / 20 PASS` / 最終QA未実施
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -301,4 +301,20 @@
 - 位相制御波形
 - 高調波成分
 
-次工程はTopic 08 `位相制御と平均直流電圧` の完成後独立再解答。完成教材だけを使い、固定一次3問＋二次2問・20対象項目を公式解答・標準解答と照合する。教材外知識補完が必要な項目はFAILとし、固定EXAM_ALIGNMENTと固定範囲は変更しない。
+## Topic 08 完成後独立再解答
+- `08_phase_control_average_dc_voltage_independent_reanswer.md`: 新規作成
+- R8一次 問4: `5 / 5 PASS` — `(ル,ニ,ヘ,ロ,ヌ)`
+- R5一次 問4(1)〜(3): `3 / 3 PASS` — `(ロ,ワ,ヲ)`
+- R1一次 問3: `5 / 5 PASS` — `(ハ,ヲ,カ,ト,ヌ)`
+- H30二次 問3(1)〜(4): `4 / 4 PASS` — `T2,T6`、`Vdc1=(3√2/π)V1cosα1`、`Pac1=(3√2/π)V1Idcosα1`、`Qac1=(3√2/π)V1Idsinα1`
+- H25二次 問3(1)〜(3): `3 / 3 PASS` — 波形一致、`IL=(V/R)√{[2(π-α)+sin2α]/(2π)}`、`π/2<α<π`
+- 一次合計: `13 / 13 PASS`
+- 二次合計: `7 / 7 PASS`
+- 総合: `20 / 20 PASS`
+- 教材外知識補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- 独立再解答判定: `PASS`
+
+次工程はTopic 08 `位相制御と平均直流電圧` の最終QA。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、進捗記録整合、固定範囲を再確認し、全品質ゲートPASSなら `completed` とする。
