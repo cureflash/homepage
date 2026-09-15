@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_powerpoint_complete`
+- current_status: `topic_07_independent_reanswer_needs_revision`
 - last_completed_topic: `06 275,000Vをどうやって25,000Vにする？`
 - active_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
-- next_start: Topic 07の完成教材だけを使って固定5問・8小問を独立再解答し、教材外知識補完の有無まで記録する
+- next_start: Topic 07のEXAM_ALIGNMENTを再監査し、教材外補完を要した固定問題についてSPEC固定範囲内だけで完答できる公式過去問への差替え・固定対象見直し可否を確認する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — EXAM_ALIGNMENT、解説本文・解説PDF・練習PDF・解説画像PowerPoint、完成後独立再解答、最終QAまで完了
@@ -17,7 +17,7 @@
 - [x] 04 東京―佐世保「原子力新幹線」 — 制作前EXAM_ALIGNMENT、解説本文・3段階例題、解説PDF、練習PDF、解説画像PowerPoint、完成後独立再解答6/6 PASS、最終QA PASS
 - [x] 05 新幹線を再エネだけで走らせられる？ — 固定5過去問、必須成果物、表示QA、修正版教材での独立再解答5/5 PASS、教材外知識補完0件、SPEC境界を最終QAで確認し `completed`
 - [x] 06 275,000Vをどうやって25,000Vにする？ — 固定5過去問、必須成果物、表示QA、完成後独立再解答5/5 PASS、教材外知識補完0件、source進捗整合・SPEC境界を最終QAで確認し `completed`
-- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 制作前EXAM_ALIGNMENT完了、固定5問・8小問、制作前独立検証 `8 / 8 PASS`。解説本文＋3段階例題、解説PDF、練習PDF、解説画像PowerPointまで完成。PowerPointは16:9・4枚、全4枚表示QA・はみ出し検査・PPTX整合性PASS。次は完成教材だけで独立再解答
+- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 必須成果物まで完成。完成後独立再解答では公式解答 `8 / 8` 一致だが教材のみ完結 `2 / 8`、教材外知識補完が必要な6小問を検出したため `NEEDS_REVISION`。SPEC外追加は0件。次はEXAM_ALIGNMENT再監査
 - [ ] 08〜16 — 未完了
 
 ## Topic 05 完了記録
@@ -82,13 +82,14 @@ source: `topics/07_phase_conversion/07_phase_conversion.md`
 練習PDF QA: `topics/07_phase_conversion/07_phase_conversion_practice_qa.md`
 解説画像PowerPoint: `topics/07_phase_conversion/07_phase_conversion_images.pptx`
 PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
+独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer.md`
 
 固定5過去問・8小問:
-- R7下 理論 問15(a)(b) — 線間/相電圧・三相電力 — `(3),(3)` PASS
-- R5下 理論 問15(a)(b) — Y/Δ・三相電力 — `(3),(4)` PASS
-- R4上 機械 問9 — スコット結線・二次90° — `(3)` PASS
-- H30 電力 問8 — 変圧比・三相電力 — `(3)` PASS
-- H27 機械 問7 — スコット結線・三相側不平衡緩和 — `(3)` PASS
+- R7下 理論 問15(a)(b) — 線間/相電圧・三相電力 — `(3),(3)`
+- R5下 理論 問15(a)(b) — Y/Δ・三相電力 — `(3),(4)`
+- R4上 機械 問9 — スコット結線・二次90° — `(3)`
+- H30 電力 問8 — 変圧比・三相電力 — `(3)`
+- H27 機械 問7 — スコット結線・三相側不平衡緩和 — `(3)`
 
 制作前独立検証 `8 / 8 PASS`。公式問題・公式解答を正本とし、電験王・電験三種まとめましたの複数系統で説明粒度と解法を確認した。
 
@@ -100,9 +101,11 @@ PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
 
 解説画像PowerPointは16:9・4枚。固定5問・8小問の要求事項を全件可視化し、全4枚表示QA、`slides_test.py` による境界外はみ出し検査、PPTX ZIP整合性をPASS。SPEC固定範囲外の追加・未確認実値の追加は0件。
 
+完成後独立再解答は公式解答と `8 / 8` 一致したが、教材のみ完結は `2 / 8`。R7下理論問15(a)(b)は並列RLCの相殺・有効電力、R5下理論問15(a)(b)は力率とインピーダンスの関係、H27機械問7はΔ-Y/Y-Δの30°位相差が現在の学習用教材にないため、合計6小問で教材外知識補完が必要だった。`EXAM_ALIGNMENT_SPEC.md` に従い `NEEDS_REVISION` とし、Topic 07は未完了のままとする。
+
 Topic 07固定範囲は三相交流、単相交流、線間/相電圧、三相電力、き電用変圧器、相変換、三相側負荷平衡、スコット結線、変形ウッドブリッジ結線、ルーフ・デルタ結線。二種相当の厳密ベクトル導出、Topic 08以降の電圧降下・線路損失・き電回路詳細、Topic 10の力率改善、Topic 11の短絡・保護へは拡張していない。未確認の個別設備定格・配置も実値化していない。
 
-固定過去問に含まれるTopic 07外の既習論点を理由に仕様は追加していない。完成後独立再解答時に、完成教材だけで固定5問・8小問へ対応できるかを改めて品質ゲート判定する。
+独立再解答で不足したRLC・力率-インピーダンス関係・Δ-Y/Y-Δ位相差を固定問題通過のためだけに追加していない。SPEC固定範囲外追加は `0件`。
 
 ## 次
-Topic 07「なぜ三相交流をそのまま架線へ流さない？」の完成教材だけを使って固定5問・8小問を独立再解答し、教材外知識補完の有無まで記録する。
+Topic 07のEXAM_ALIGNMENTを再監査し、教材外補完を要したR7下理論問15、R5下理論問15、H27機械問7について、SPEC固定範囲内だけで完答できる公式過去問への差替えまたは固定対象見直し可否を確認する。固定範囲は拡張しない。
