@@ -9,7 +9,7 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_10_independent_reanswer_complete`
+current status: `topic_10_final_qa_needs_revision`
 
 ## Topic 10 固定範囲
 - 力行
@@ -86,6 +86,7 @@ source完成内容:
 - 固定5過去問・15答案要素: 全件接続
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
+- 注意: 末尾 `## 次工程` が「次は練習PDF作成」の旧進捗のまま。内容・問題・正答は変更せず、進捗記録だけ同期する。
 
 ## Topic 10 練習PDF
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_practice.pdf`: `completed`
@@ -125,11 +126,21 @@ source完成内容:
 - 未確認実車値追加: `0件`
 - 固定5問・15答案要素、教材本文、練習問題、PDF/PPTXは変更していない。
 
-## 次に行うこと
-Topic 10の最終QAを実施する。
+## Topic 10 最終QA
+- 記録: `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_final_qa.md`
+- 必須成果物実在: PASS
+- 固定一次4問＋二次1問・15答案要素: PASS
+- 完成後独立再解答: `15 / 15 PASS`
+- 練習問題・PDF/PPTX QA: PASS
+- 固定範囲境界・未確認実車値: PASS
+- 進捗記録整合: FAIL
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- FAIL理由: `10_regenerative_braking_four_quadrant_practice.md` 末尾が「次は練習PDF作成」の旧進捗のまま。
 
-1. 必須成果物の実在と進捗記録整合を確認する。
-2. 固定一次4問＋二次1問・15答案要素と完成後独立再解答 `15 / 15 PASS` を維持する。
-3. PDF/PPTX表示QA、練習問題QA、固定範囲境界を総合判定する。
-4. H27/H24の除外小問、Topic 11/16、未確認実車値を追加しない。
-5. PASS条件を満たした場合のみTopic 10を `completed` にする。
+## 次に行うこと
+`10_regenerative_braking_four_quadrant_practice.md` 末尾の旧進捗記録だけを現在地へ同期する。
+
+1. `## 次工程` の旧文だけを修正する。
+2. 教材本文、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTXは変更しない。
+3. 完成後独立再解答 `15 / 15 PASS` と固定範囲境界を維持する。
+4. 同期後、次runで最終QAを再実施する。
