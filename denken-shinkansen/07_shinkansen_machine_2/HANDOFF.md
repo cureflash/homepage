@@ -9,7 +9,7 @@ Topic 01〜09は最終QAまで `PASS / completed`。
 
 active topic: `10 新幹線はモーターを発電機にして止まる`
 
-current status: `topic_10_final_qa_needs_revision`
+current status: `topic_10_practice_source_progress_synced`
 
 ## Topic 10 固定範囲
 - 力行
@@ -86,7 +86,7 @@ source完成内容:
 - 固定5過去問・15答案要素: 全件接続
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 注意: 末尾 `## 次工程` が「次は練習PDF作成」の旧進捗のまま。内容・問題・正答は変更せず、進捗記録だけ同期する。
+- 末尾 `## 次工程` の旧「練習PDF作成」を、実成果物に合わせて「最終QA再実施」へ同期済み。
 
 ## Topic 10 練習PDF
 - `topics/10_regenerative_braking_four_quadrant/10_regenerative_braking_four_quadrant_practice.pdf`: `completed`
@@ -133,14 +133,13 @@ source完成内容:
 - 完成後独立再解答: `15 / 15 PASS`
 - 練習問題・PDF/PPTX QA: PASS
 - 固定範囲境界・未確認実車値: PASS
-- 進捗記録整合: FAIL
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
-- FAIL理由: `10_regenerative_braking_four_quadrant_practice.md` 末尾が「次は練習PDF作成」の旧進捗のまま。
+- 進捗記録整合: 前回FAIL、旧進捗修正済み・再判定待ち
+- 判定: 前回 `NEEDS_REVISION / IN_PROGRESS`、再判定待ち
 
 ## 次に行うこと
-`10_regenerative_braking_four_quadrant_practice.md` 末尾の旧進捗記録だけを現在地へ同期する。
+Topic 10の最終QAを再実施する。
 
-1. `## 次工程` の旧文だけを修正する。
-2. 教材本文、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTXは変更しない。
-3. 完成後独立再解答 `15 / 15 PASS` と固定範囲境界を維持する。
-4. 同期後、次runで最終QAを再実施する。
+1. 練習source末尾が実成果物と整合していることを確認する。
+2. 必須成果物、固定一次4問＋二次1問・15答案要素、完成後独立再解答 `15 / 15 PASS` を再確認する。
+3. 固定範囲外追加・未確認実車値追加が0件であることを確認する。
+4. 全件PASSならTopic 10を `completed` に更新する。
