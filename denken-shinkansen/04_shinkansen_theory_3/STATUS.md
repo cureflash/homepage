@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 8 / 14
-- current_status: `topic_09_blind_reanswer_ready`
+- current_status: `topic_09_independent_reanswer_complete`
 - last_completed_topic: `08 新幹線の交流25kVとは何なのか`
 - active_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- next_start: Topic 09の完成後公式過去問独立再解答を、保存済み正答を見ずに実施する
+- next_start: Topic 09の最終QAを実施する
 
 ## Topic 01 進捗
 
@@ -158,17 +158,17 @@
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答の先読み汚染を除去（必須先読み正本から制作前の正答番号・個別解答過程を除外）
-- [ ] 完成後の公式過去問独立再解答
+- [x] 完成後の公式過去問独立再解答 `6 / 6 PASS`
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の完成後独立再解答前の品質ゲートを修正した。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の完成後公式過去問独立再解答を実施した。
 
-必須先読み対象の主sourceとHANDOFFに、制作前独立検証の正答番号・個別解答過程が残っており、`MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` が要求する「保存済み正答を見ずに完成教材だけで独立再解答する」条件を満たせない状態だった。このため、固定6過去問・要求知識・必要公式・教材対応・制作前 `6 / 6 PASS` は維持したまま、正答番号と制作前解答過程を現行の必須先読み正本から除外した。
+固定6問について、公式解答PDFを開く前に公式問題文と完成教材だけで解答を確定し、その後に公式解答と照合した。独立解答列 `(1), (5), (3), (3), (2), (3)` は公式解答列と全件一致し、`6 / 6 PASS`。
 
-教材本文・例題・練習問題・PDF・PowerPointの技術内容、固定EXAM_ALIGNMENT、SPEC境界は変更していない。Topic 10以降の論点・未確認実車情報の追加は0件。
+教材外知識による補完0問、Topic 10以降の力率・三相・半導体等への依存0問、未確認新幹線実車値・周波数切替方式への依存0問。固定EXAM_ALIGNMENT、教材本文、練習問題、PDF・PowerPointの技術内容、SPEC境界は変更していない。
 
 ## 判定
 
-現在 `topic_09_blind_reanswer_ready / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の固定6過去問を、完成教材だけで独立再解答し、その後に公式解答と照合する。
+現在 `topic_09_independent_reanswer_complete / IN_PROGRESS`。完成数は `8 / 14`。次はTopic 09の最終QAを実施する。
