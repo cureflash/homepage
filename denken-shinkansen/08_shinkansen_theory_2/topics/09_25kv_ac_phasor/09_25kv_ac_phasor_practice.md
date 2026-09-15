@@ -204,4 +204,4 @@
 
 # 次工程
 
-練習source＋練習PDF完成後は、固定EXAM_ALIGNMENT・解説source・練習sourceを変更せず、解説画像PowerPointを作成する。
+完成後独立再解答・最終QAまで実施済み。次は主sourceに残る旧進捗表現を現在地へ同期し、その後最終QAを再実施する。
