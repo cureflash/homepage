@@ -4,7 +4,7 @@ updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `07`
 theme: 三相電力をどう25kVの単相へ変える？
-current_status: `topic_07_final_qa_needs_revision`
+current_status: `topic_07_source_progress_synced`
 completed_topics: `6 / 22`
 
 ## Topic 06 final result
@@ -30,130 +30,47 @@ V結線、一般配電方式、％インピーダンス、単位法、ATき電�
 
 ## Topic 07 EXAM_ALIGNMENT / 制作前独立検証
 
-現行公開公式アーカイブ内でTopic 07固定範囲だけで問題全体を解け、かつ二種の一次・二次双方を含む2問を正式固定した。固定範囲外問題で原則5問へ水増ししない。
-
+正式固定:
 1. 平成23年度 第二種一次「理論」問6
-   - 対称三相交流の複素フェーザ、相間電流、フェーザ合成、実効値
    - `5 / 5空欄 PASS`
 2. 平成23年度 第二種二次「機械・制御」問2
-   - スコット結線、主座/T座巻数比、一次電流、巻線容量、利用率
    - `7 / 7答案要素 PASS`
 
 合計 `2 / 2問 PASS`、`12 / 12答案要素 PASS`。固定範囲外知識補完・後続Topic知識依存・未確認実設備値依存はいずれも0件。
 
-## Topic 07 解説本文＋3段階例題
+## Topic 07 成果物
 
-`topics/07_feeding_transformer/07_feeding_transformer.md` に固定10項目と正式2過去問の要求事項を全件収録済み。
-
-3段階例題:
-1. 基礎: 三相フェーザから相間電圧・枝電流を求める
-2. 本試験標準: スコット結線の巻数比・一次電流・巻線容量・利用率
-3. 複合・ひっかけ: 二つの単相負荷が不均等な場合の三相側不平衡を判定する
-
-例題数値は教材用仮定値として明記し、未確認実設備値は使用していない。
-
-## Topic 07 解説PDF
-
-成果物:
+- `topics/07_feeding_transformer/07_feeding_transformer.md`
 - `topics/07_feeding_transformer/07_feeding_transformer_explanation.pdf`
-
-完成済みsourceから固定10項目、正式2過去問の解法経路、3段階例題を同期した。
-
-QA:
-- A4縦: `6ページ`
-- 200 dpi全ページ表示QA: `6 / 6 PASS`
-- 文字抽出QA: `PASS`
-- 固定10項目: `10 / 10収録`
-- 正式過去問要求: 一次1問＋二次1問を収録
-- 3段階例題: `3 / 3収録`
-- 固定範囲外論点追加: `0件`
-- 未確認実設備値追加: `0件`
-
-## Topic 07 練習問題＋完全解説source
-
-成果物:
 - `topics/07_feeding_transformer/07_feeding_transformer_practice.md`
-
-構成:
-- 全15問
-- 基礎4／本試験標準8／複合・応用3
-- 二種一次型五肢択一10問
-- 二種二次型記述5問
-- 全問完全解説付き
-
-QA:
-- 一次型正答一意性: `10 / 10 PASS`
-- 二次記述型の数値・論理整合: `5 / 5 PASS`
-- 固定10項目カバレッジ: `10 / 10`
-- 正式2過去問要求への接続: `2 / 2`
-- 固定範囲外論点追加: `0件`
-- 未確認実設備値追加: `0件`
-
-## Topic 07 練習PDF
-
-成果物:
 - `topics/07_feeding_transformer/07_feeding_transformer_practice.pdf`
-
-完成済み `07_feeding_transformer_practice.md` の全15問・完全解説をA4縦PDFへ同期した。
-
-QA:
-- A4縦: `6ページ`
-- 200 dpi全ページ表示QA: `6 / 6 PASS`
-- 文字抽出QA: `PASS`
-- 問題数: `15 / 15`
-- 一次型五肢択一: `10 / 10 source正答と一致`
-- 二次記述型: `5 / 5 source数値・論理と一致`
-- 固定10項目カバレッジ: `10 / 10`
-- 正式2過去問要求への接続: `2 / 2`
-- 固定範囲外論点追加: `0件`
-- 未確認実設備値追加: `0件`
-
-## Topic 07 解説画像PowerPoint
-
-成果物:
 - `topics/07_feeding_transformer/07_feeding_transformer_images.pptx`
 - `topics/07_feeding_transformer/07_feeding_transformer_powerpoint_qa.md`
-
-構成:
-- 16:9・5スライド
-- 三相フェーザ、スコット結線、平衡時一次電流・利用率、不平衡・逆相、3結線比較を図解
-
-QA:
-- 200 dpi相当レンダリング表示QA: `5 / 5 PASS`
-- レンダリング寸法: `1601 × 900`
-- `slides_test.py`: `PASS / No overflow detected`
-- PPTX ZIP整合性: `PASS`
-- 固定10項目カバレッジ: `10 / 10`
-- 正式2過去問要求への接続: `2 / 2`
-- 固定範囲外論点追加: `0件`
-- 未確認実設備値追加: `0件`
-
-## Topic 07 完成後独立再解答
-
-成果物:
 - `topics/07_feeding_transformer/07_feeding_transformer_independent_reanswer.md`
-
-完成教材の説明・公式・解法手順だけを解答根拠として正式2問を再構成し、答案確定後に公式解答・標準解答と照合した。
-
-結果:
-- H23一次「理論」問6: `5 / 5空欄 PASS`
-- H23二次「機械・制御」問2: `7 / 7答案要素 PASS`
-- 合計: `2 / 2問 PASS`、`12 / 12答案要素 PASS`
-- 教材外知識補完: `0件`
-- 固定範囲外追加: `0件`
-- 後続Topic知識依存: `0件`
-- 未確認実設備値依存: `0件`
-
-## Topic 07 最終QA
-
-成果物:
 - `topics/07_feeding_transformer/07_feeding_transformer_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+QA:
+- 解説PDF: A4縦6ページ、表示 `6 / 6 PASS`、文字抽出PASS
+- 練習: 15問、一次型 `10 / 10 PASS`、二次記述 `5 / 5 PASS`
+- 練習PDF: A4縦6ページ、表示 `6 / 6 PASS`、文字抽出PASS
+- PowerPoint: 16:9・5枚、表示 `5 / 5 PASS`、overflow 0件、ZIP整合性PASS
+- 完成後独立再解答: `2 / 2問 PASS`、`12 / 12答案要素 PASS`
+- 固定10項目: `10 / 10`
+- 固定範囲外追加: `0件`
+- 未確認実設備値追加: `0件`
 
-技術内容・正式2過去問・完成後独立再解答・練習15問・PDF/PPTX表示QA・固定10項目・固定範囲境界は全件PASS。
+## 今回進めた1段階
 
-未完了理由は進捗記録のみ。主source `07_feeding_transformer.md` の冒頭が `explanation_source_complete`・「PDF・練習問題・PowerPointは未着手」のままで、末尾 `現在地` も後続成果物を未着手としており、GitHub上の実成果物と不整合。
+前回最終QAで唯一FAILだった主sourceの進捗記録不整合を解消した。
+
+`topics/07_feeding_transformer/07_feeding_transformer.md` について、次だけを実成果物へ同期した。
+
+- 更新日
+- 冒頭 `状態`
+- 冒頭の工程説明
+- 末尾 `現在地`
+
+教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、練習問題、PDF/PPTX、固定範囲は変更していない。
 
 ## Gate checklist
 
@@ -163,8 +80,8 @@ QA:
 - [x] Topic 04 completed
 - [x] Topic 05 completed
 - [x] Topic 06 completed
-- [ ] Topic 07 最終QA `NEEDS_REVISION` / 主source進捗記録同期待ち
+- [ ] Topic 07 source進捗同期完了 / 最終QA再実施待ち
 
 ## next_start
 
-Topic 07の主source `topics/07_feeding_transformer/07_feeding_transformer.md` の冒頭状態と末尾 `現在地` を実成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・固定範囲は変更しない。同期後に最終QAを再実施する。
+Topic 07の最終QAを再実施する。主source進捗整合、固定2過去問の完成後独立再解答 `2 / 2問・12 / 12答案要素 PASS`、必須成果物、PDF/PPTX QA、固定範囲境界を再確認し、全件PASSなら `completed` とする。
