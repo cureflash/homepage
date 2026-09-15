@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 9 / 20
-- current_status: `topic_10_exam_alignment_complete`
+- current_status: `topic_10_explanation_source_complete`
 - last_completed_topic: `09 ラプラス変換`
 - active_topic: `10 伝達関数・極・零点`
-- next_start: Topic 10の解説本文＋3段階例題を作成する。固定二次5問・11対象設問を全件カバーし、Topic 12/15およびラウス・フルビッツ法の一般手順を先取りしない
+- next_start: Topic 10の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。固定二次5問・11対象設問と固定範囲境界を変更しない
 
 ## Topic 07 制作品質ゲート
 
@@ -90,7 +90,7 @@
 - [x] source Markdownへ要求知識・式・設問型・教材内必要説明を固定
 - [x] 制作前独立再解答・公式標準解答照合 `11 / 11 PASS`
 - [x] Topic 12/15先取り、ラウス・フルビッツ法一般手順、定常偏差・畳み込みの件数合わせ追加0件を確認
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF
@@ -102,21 +102,23 @@
 
 ## 今回進めた内容
 
-Topic 10 `伝達関数・極・零点` の制作前EXAM_ALIGNMENTを完成した。
+Topic 10 `伝達関数・極・零点` の解説本文＋3段階例題を完成した。
 
 確認:
-- 公式過去問: 二次「機械・制御」5問・11対象設問を固定
-- 制作前独立再解答・公式標準解答照合: `11 / 11 PASS`
-- R5問4: Topic 15の周波数応答・ゲイン特性中心のため非採用
+- 固定二次5問・11対象設問への本文マッピング: `11 / 11`
+- 3段階例題: 基礎1／本試験標準1／複合・ひっかけ1
+- 伝達関数、極・零点、一次遅れ、二次遅れ、ステップ応答、インパルス応答、安定性との関係を収録
+- 簡略新幹線速度モデル `V(s)/F(s)=1/(Ms+D)` を収録
 - Topic 12/15先取り: 0件
 - ラウス・フルビッツ法の一般手順追加: 0件
+- 定常偏差・畳み込みの独立論点追加: 0件
 - 件数合わせの固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 10は `topic_10_exam_alignment_complete / IN_PROGRESS`。
+Topic 10は `topic_10_explanation_source_complete / IN_PROGRESS`。
 
 完成数は `9 / 20`。
 
-次はTopic 10の解説本文＋3段階例題。
+次はTopic 10の解説PDF作成＋全ページ表示QA・文字抽出QA。
