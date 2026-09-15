@@ -1,29 +1,33 @@
 # HANDOFF - 新幹線・電験三種「理論」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 現在地
 
 Topic 01〜08は最終QAまでPASSし、`completed`。
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は解説PDFまで完成した。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は練習問題source・練習PDFまで完成した。
 
 - 完成数: `8 / 14`
 - last completed: `08 新幹線の交流25kVとは何なのか`
 - active topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- current status: `topic_09_explanation_pdf_complete`
-- next start: Topic 09の練習問題source・練習PDFを作成する
+- current status: `topic_09_practice_pdf_complete`
+- next start: Topic 09の解説画像PowerPointを作成する
 
 ## 今回進捗
 
-Topic 09の固定EXAM_ALIGNMENTと解説本文を変更せず、解説PDFを作成した。
+Topic 09の固定EXAM_ALIGNMENTと解説本文を変更せず、練習問題source・練習PDFを作成した。
 
-- A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 全15問、全問五肢択一
+- 基礎4 / 本試験標準8 / 複合・応用3
+- 独立再計算・論理確認: `15 / 15 PASS`
+- 正答一意性: `15 / 15 PASS`
+- 正答位置: `(1)〜(5)` 各3問
+- 固定6過去問要求への接続: `6 / 6`
+- 練習PDF: A4縦2ページ
+- 200 dpi全ページ表示QA: `2 / 2 PASS`
 - 表示欠け・重なり・文字化け: `0件`
 - 文字抽出QA: `PASS`（U+FFFD 0件）
-- 固定6過去要求: PDF内へ反映済み
-- 制作前独立検証: `6 / 6 PASS` 維持
 - SPEC境界外論点・未確認実車値追加: `0件`
 
 ## Topic 09 品質ゲート
@@ -117,14 +121,15 @@ f0 = 1 / (2π√LC)
   - 固定過去問→本文マッピング: `6 / 6`
   - status: `EXPLANATION_PDF_COMPLETE`
 - 解説PDF: 完成（A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
-- 練習source / PDF: 未作成
+- 練習source: 完成（15問、全問五肢択一、独立QA `15 / 15 PASS`）
+- 練習PDF: 完成（A4縦2ページ、200 dpi表示QA `2 / 2 PASS`、文字抽出QA `PASS`）
 - 解説画像PowerPoint: 未作成
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
 ## 次に行うこと
 
-固定EXAM_ALIGNMENTと解説本文を変更せず、Topic 09の練習問題source・練習PDFを作成する。
+固定EXAM_ALIGNMENT・解説本文・練習問題を変更せず、Topic 09の解説画像PowerPointを作成する。
 
 ## 固定ルール
 
