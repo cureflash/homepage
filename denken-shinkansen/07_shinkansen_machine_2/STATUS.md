@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `9 / 22`
-- current_status: `topic_10_exam_alignment_complete`
+- current_status: `topic_10_explanation_source_complete`
 - last_completed_topic: `09 誘導電動機を自由に操るには？`
 - active_topic: `10 新幹線はモーターを発電機にして止まる`
-- next_start: Topic 10 解説本文＋3段階例題
+- next_start: Topic 10 解説PDF
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -47,10 +47,20 @@
 - H24 二次 機械・制御 問3: `4 / 4 PASS`
 - 合計: `15 / 15 PASS`
 
-## 今回進めた内容
-Topic 10「新幹線はモーターを発電機にして止まる」の制作前EXAM_ALIGNMENTを完成した。
+## Topic 10 解説source
+- [x] §1 試験論点
+- [x] §2 誘導機の `s<0` 発電機運転
+- [x] §3 力行／回生の電力フロー
+- [x] §4 `P_m=Tω` と四象限運転
+- [x] §5 `V_v=V_L+jXI`、`P=V_L I`、PWM変調率
+- [x] §6 回生効率
+- [x] 頻出ミス・過去問接続・公式まとめ
+- [x] 基礎・本試験標準・複合の3段階例題
+- [x] 固定5問・15答案要素を本文へマッピング
+- [x] 固定範囲外論点・未確認実車値の追加 0件
 
-一次4問＋二次1問を固定し、誘導機の `s<0` 発電機運転、回生時のエネルギー変換、架線への電力返送、DCリンクからPWM変換器を介した交流電源への有効電力出力を15答案要素へ分解した。固定範囲外小問は採用せず、制作前独立検証は `15 / 15 PASS`。
+## 今回進めた内容
+Topic 10の解説本文＋3段階例題を完成した。固定EXAM_ALIGNMENTは変更せず、誘導機の発電機運転、四象限、主回路の回生電力フロー、PWM変換器の二次記述計算、回生効率までを本文へ接続した。
 
 ## 判定
-Topic 10は `topic_10_exam_alignment_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は固定EXAM_ALIGNMENTを変更せず、解説本文＋基礎・標準・複合の3段階例題を作成する。
+Topic 10は `topic_10_explanation_source_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。
