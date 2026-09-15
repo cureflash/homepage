@@ -6,17 +6,17 @@
 
 Topic 01〜07は `completed`。
 
-Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題まで完了。独立解答は `5 / 5問・9 / 9答案要素 PASS`。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
+Topic 08 `積分 速度曲線の面積は距離` は制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDFまで完了。独立解答は `5 / 5問・9 / 9答案要素 PASS`。固定EXAM_ALIGNMENT変更、後続Topic先取り、未確認新幹線実値追加はいずれも0件。
 
 完成数: `7 / 12`
 
-current_status: `topic_08_explanation_source_complete`
+current_status: `topic_08_explanation_pdf_complete`
 
 last_completed_topic: `07 微分② 速度を微分すると加速度`
 
 active_topic: `08 積分 速度曲線の面積は距離`
 
-next_start: `Topic 08 解説PDF`
+next_start: `Topic 08 練習問題source`
 
 ## Topic 07 完了記録
 
@@ -123,16 +123,29 @@ next_start: `Topic 08 解説PDF`
 
 新幹線の数値例は積分説明用の仮定と明記し、未確認実車値は使用していない。
 
+### 解説PDF
+
+成果物: `topics/08_integral_distance/08_integral_distance_explanation.pdf`
+
+- A4縦4ページ
+- 主sourceの固定範囲、3段階例題、固定5過去問への教材内対応を収録
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- クリッピング、重なり、文字化け: 0件
+- 固定EXAM_ALIGNMENT変更: 0件
+- Topic 09〜11先取り、未確認新幹線実値追加: 0件
+
 ### source
 
 - `topics/08_integral_distance/08_integral_distance.md`
+- `topics/08_integral_distance/08_integral_distance_explanation.pdf`
 
 参考教材は電験王、電験三種まとめました、電気主任技術者のナレッジノート等を複数系統確認。e-sysnetは検索対象に含めたが、固定5問へ直接対応するページを確認できなかったため無関係なページは引用していない。
 
 ## 次に行うこと
 
-Topic 08の解説PDFを、完成した主sourceだけから作る。
+Topic 08の固定EXAM_ALIGNMENTと解説本文・解説PDFを正本として、固定範囲だけで練習問題sourceを作成する。
 
-固定5問へ必要な定積分・符号付き面積・波形平均・区分積分・三角関数積分と、系列SPEC固定の運転曲線接続・3段階例題を収録する。
+三種の原則12問以上、少なくとも半数を五肢択一とし、固定5問で必要な定積分・符号付き面積・波形平均・区分積分・三角関数積分と、系列SPEC固定の運転曲線接続を練習できるようにする。
 
 Topic 09の電荷・磁束・電力量・仕事の微積分体系、Topic 10の指数関数・微分方程式、Topic 11の一般特性曲線体系は先取りしない。
