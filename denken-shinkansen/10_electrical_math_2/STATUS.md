@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 8 / 20
-- current_status: `topic_08_completed`
+- current_status: `topic_09_exam_alignment_complete`
 - last_completed_topic: `08 二階常微分方程式`
 - active_topic: `09 ラプラス変換`
-- next_start: Topic 09の制作前EXAM_ALIGNMENT。公式過去問を直近年度優先で調査し、SPEC固定範囲だけで要求知識・式・設問型・教材内必要説明を固定する
+- next_start: Topic 09の解説本文＋3段階例題。固定済みEXAM_ALIGNMENTだけを根拠に作成し、Topic 10の伝達関数・極・零点を先取りしない
 
 ## Topic 07 制作品質ゲート
 
@@ -55,27 +55,53 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 09 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 公式過去問を直近年度優先で調査
+- [x] 二次「機械・制御」5問・6対象設問を固定
+- [x] 要求知識・式・設問型・教材内必要説明をsourceへ固定
+- [x] R7 問4はTopic 10以降の伝達関数・定常偏差・畳み込み等が中心のため非採用
+- [x] R6 問4は(4)のみ採用し、伝達関数の一般理論・周波数応答を除外
+- [x] H29 問4 (1)〜(2)、H25 問4 (1)、H24 問4 (1)、H18 問4 (1)を採用
+- [x] 制作前独立再解答・公式標準解答照合 `6 / 6 PASS`
+- [x] Topic 10先取り0件・件数合わせの範囲外追加0件を確認
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] PowerPoint表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 08 `二階常微分方程式` の最終QAを再判定した。
+Topic 09 `ラプラス変換` の制作前EXAM_ALIGNMENTを完了した。
+
+固定対象:
+- R6 二次 機械・制御 問4 (4)
+- H29 二次 機械・制御 問4 (1)〜(2)
+- H25 二次 機械・制御 問4 (1)
+- H24 二次 機械・制御 問4 (1)
+- H18 二次 機械・制御 問4 (1)
 
 確認結果:
-- 必須成果物実在: PASS
-- 固定EXAM_ALIGNMENT 一次5問・15小問: PASS
-- 制作前独立再解答 `15 / 15 PASS`: 維持
-- 完成後独立再解答 `15 / 15 PASS`: 維持
-- 解説PDF表示QA `5 / 5 PASS`: 維持
-- 練習PDF表示QA `5 / 5 PASS`: 維持
-- PowerPoint表示QA `5 / 5 PASS`: 維持
-- source進捗記録2箇所: 実成果物と整合
-- Topic 09〜10先取り: 0件
-- 固定範囲外追加: 0件
+- 公式過去問: 5問・6対象設問
+- 二次記述問題: 5 / 5問
+- 制作前独立再解答: `6 / 6 PASS`
+- 要求知識・式・設問型・教材内必要説明: sourceへ固定済み
+- 参考学習サイト: 電験王2＋e-sysnetを確認
+- Topic 10先取り: 0件
+- 件数合わせの固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 08は `PASS / completed`。
+Topic 09は `EXAM_ALIGNMENT PASS / IN_PROGRESS`。
 
-完成数は `8 / 20`。
+完成数は `8 / 20` のまま。
 
-次はTopic 09 `ラプラス変換` の制作前EXAM_ALIGNMENT。
+次はTopic 09の解説本文＋3段階例題。
