@@ -8,11 +8,11 @@ Topic 01〜09は `completed`。
 
 完成数: `9 / 20`
 
-current_status: `topic_10_practice_pdf_complete`
+current_status: `topic_10_exam_reanswer_complete`
 
 active_topic: `10 伝達関数・極・零点`
 
-次工程: Topic 10の解説画像PowerPointを作成し、固定二次5問・11対象設問への接続と固定範囲境界を維持する。
+次工程: Topic 10の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認する。
 
 ## 上位仕様
 
@@ -346,6 +346,15 @@ source:
 練習PDF:
 `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_practice.pdf`
 
+PowerPoint:
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_images.pptx`
+
+PowerPoint QA:
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_powerpoint_qa.md`
+
+完成後独立再解答:
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_exam_reanswer.md`
+
 ### Topic 10 固定範囲
 
 - 伝達関数
@@ -456,10 +465,45 @@ QA:
 - 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
-current_status: `topic_10_practice_pdf_complete / IN_PROGRESS`。
+### Topic 10 解説画像PowerPoint
+
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_images.pptx`
+
+QA:
+- 16:9・5枚
+- 固定二次5問・11対象設問を全件可視化
+- 全5スライド表示QA `5 / 5 PASS`
+- クリッピング・重なり・文字化け: 0件
+- overflow: 0件
+- PPTX ZIP/XML整合性: PASS
+- Topic 12/15先取り: 0件
+- ラウス・フルビッツ法一般手順追加: 0件
+- 定常偏差・畳み込みの独立論点化: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
+### Topic 10 完成後独立再解答
+
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_exam_reanswer.md`
+
+結果:
+- 固定二次5問・11対象設問: `11 / 11 PASS`
+- R7 問4 (1),(4): `2 / 2 PASS`
+- R6 問4 (1),(3): `2 / 2 PASS`
+- R4 問4 (1),(3): `2 / 2 PASS`
+- R3 問4 (1)〜(4): `4 / 4 PASS`
+- R2 問4 (2): `1 / 1 PASS`
+- 教材外知識補完: 0件
+- Topic 12/15先取り: 0件
+- ラウス・フルビッツ法一般手順の使用: 0件
+- 定常偏差・畳み込み積分の使用: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
+current_status: `topic_10_exam_reanswer_complete / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 10 `伝達関数・極・零点` の解説画像PowerPointを作成し、固定二次5問・11対象設問への接続を維持する。
+Topic 10 `伝達関数・極・零点` の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認する。
 
 固定範囲境界を変更しない。
