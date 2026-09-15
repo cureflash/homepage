@@ -10,7 +10,7 @@ Topic 01 `0系の主変圧器を等価回路で解剖する`、Topic 02 `0系の
 
 active topic: `08 VVVFインバータで三相交流を作る`
 
-current status: `topic_08_practice_pdf_complete`
+current status: `topic_08_powerpoint_complete`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
@@ -252,11 +252,25 @@ source:
 - 固定範囲外論点の追加: 0件
 - 未確認300系実車値の追加: 0件
 
+## Topic 08 解説画像PowerPoint完了
+
+PowerPoint:
+`topics/08_vvvf_inverter_three_phase/08_vvvf_inverter_three_phase_images.pptx`
+
+- 16:9・4スライド
+- 三相2レベル6スイッチ構成、PWM信号波/キャリア、相電圧/線間電圧、180°通電、高調波相殺、固定過去問対応を可視化
+- 全4スライド表示QA: `4 / 4 PASS`
+- 視覚的クリップ・境界確認: PASS
+- ZIP/OOXML整合性: PASS
+- 固定一次3問＋二次記述2問、計5問・13小問への接続を維持
+- 固定範囲外論点の追加: 0件
+- 未確認300系実車値の追加: 0件
+
 ## 次に行うこと
 
-Topic 08の解説画像PowerPointを作成する。
+Topic 08のSPEC指定計算プログラムを作成する。
 
-- 三相2レベル6スイッチ構成、PWM信号波/キャリア、相電圧/線間電圧、180°通電、高調波相殺、固定過去問対応を可視化する
-- 全スライド表示QA・overflow検査・ZIP整合性QAを行う
+- 同一条件からスイッチング波形、相電圧・線間電圧、基本波、FFT・高調波成分を生成する
+- 数値・論理QA、波形表示QA、出力整合性QAを実施する
 - 固定5問・13小問への接続を維持する
 - V/f制御、ベクトル制御、デッドタイム設計、素子選定、整流器設計等の固定範囲外論点を追加しない
