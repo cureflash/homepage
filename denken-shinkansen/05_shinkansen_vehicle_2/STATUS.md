@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_09_final_qa_needs_revision`
+- current_status: `topic_09_source_progress_synced`
 - last_completed_topic: `08 位相制御と平均直流電圧`
 - active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09主source `09_dc_machine_loss_thermal_design.md` の `## 状態` に残る旧進捗2記述だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題/正答・PDF/PPTX・独立再解答は変更しない
+- next_start: Topic 09の最終QAを再判定する。固定一次4問＋二次1問・14対象項目、完成後独立再解答 `14 / 14 PASS`、必須成果物・PDF/PPTX QA、固定範囲境界、進捗記録整合を確認し、PASS時のみ `completed` とする
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -362,6 +362,7 @@
 - 教材用熱モデルの `R_th`,`C_th` 等を実車値として扱う: `0件`
 - 誘導機、PWM/VVVF、回生、IGBT/SiC、詳細絶縁寿命モデル、熱流体解析の追加: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
+- 主source冒頭の旧進捗2記述: `同期済み`
 
 ## Topic 09 解説PDF
 - `09_dc_machine_loss_thermal_design_explanation.pdf`: `completed`
@@ -451,7 +452,8 @@
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- 進捗記録整合: `FAIL` — 主source `## 状態` に「解説PDF、練習source/PDF、解説画像PowerPointは未制作」「次工程は解説PDF」の旧記述が残存
-- 最終判定: `NEEDS_REVISION / IN_PROGRESS`
+- 直近判定時の進捗記録整合: `FAIL` — 主source `## 状態` の旧進捗2記述が残存していた
+- blocker対応: 主source旧進捗2記述を実成果物へ同期済み。最終QA再判定待ち
+- 直近最終判定: `NEEDS_REVISION / IN_PROGRESS`
 
-次工程はTopic 09主sourceの旧進捗2記述だけを実成果物へ同期する。
+次工程はTopic 09最終QAの再判定。
