@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 7 / 14
-- current_status: `topic_08_practice_pdf_complete`
+- current_status: `topic_08_powerpoint_complete`
 - last_completed_topic: `07 モーターはなぜ回る？`
 - active_topic: `08 新幹線の交流25kVとは何なのか`
-- next_start: Topic 08の解説画像PowerPointを作成する
+- next_start: Topic 08の完成後公式過去問独立再解答を実施する
 
 ## Topic 01 進捗
 
@@ -136,28 +136,25 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 08 `新幹線の交流25kVとは何なのか` の練習問題source・練習PDFを完成し、GitHub正本へ反映した。
+Topic 08 `新幹線の交流25kVとは何なのか` の解説画像PowerPointを完成し、GitHub正本へ反映した。
 
-- 全15問、全問五肢択一
-- 基礎4問 / 本試験標準8問 / 複合・応用3問
-- 正答位置: `(1)〜(5)` 各3問
-- 独立再計算・再判定: `15 / 15 PASS`
-- 正答一意性: `15 / 15 PASS`
-- 固定4過去問要求との接続: `4 / 4`
-- 練習PDF: A4縦 `4ページ`
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- PowerPoint: 16:9 `4枚`
+- 固定4過去問要求との可視化対応: `4 / 4`
+- 収録: 25kVの実効値、最大値・瞬時値・1周期平均、周期/周波数/角周波数・位相、同一周波数正弦波のベクトル合成、波形読取、指定瞬時値への最初の到達時刻
+- 全4スライド表示QA: `4 / 4 PASS`
 - 表示欠け・重なり・文字化け: `0件`
-- 文字抽出QA: `PASS`（U+FFFD 0件）
+- overflow検査: `PASS`
+- PPTX ZIP整合性: `PASS`（slide XML `4件`）
 - RLC・リアクタンス・力率・三相・高調波等の後続Topic追加: `0件`
 - 非正弦波の波形率・波高率・三角波・方形波追加: `0件`
 - 未確認新幹線実車値追加: `0件`
 
 ## 判定
 
-現在 `topic_08_practice_pdf_complete`。完成数は `7 / 14` のまま。次はTopic 08の解説画像PowerPointを作成する。
+現在 `topic_08_powerpoint_complete`。完成数は `7 / 14` のまま。次はTopic 08の完成後公式過去問独立再解答を実施する。
