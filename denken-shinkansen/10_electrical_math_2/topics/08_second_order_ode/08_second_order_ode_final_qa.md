@@ -1,28 +1,33 @@
-# Topic 08 最終QA
-
-実施日: 2026-09-15
+# Topic 08 最終QA記録
 
 対象: `08 二階常微分方程式`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+再判定日: 2026-09-15
 
-## 1. 必須成果物
+## 判定
 
-実在確認:
+`PASS / completed`。
 
-- `08_second_order_ode.md`: PASS
-- `08_second_order_ode_explanation.pdf`: PASS
-- `08_second_order_ode_practice.md`: PASS
-- `08_second_order_ode_practice.pdf`: PASS
-- `08_second_order_ode_images.pptx`: PASS
-- `08_second_order_ode_powerpoint_qa.md`: PASS
-- `08_second_order_ode_exam_reanswer.md`: PASS
+前回 `NEEDS_REVISION` の原因だった主source Markdownの旧進捗2箇所は実成果物へ同期済み。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC範囲境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
-判定: `PASS`
+## 必須成果物の実在確認
 
-## 2. 試験対応品質ゲート
+GitHub正本上で次を確認した。
 
-固定EXAM_ALIGNMENTは一次5問・15小問。
+| 成果物 | 判定 |
+|---|---|
+| source Markdown | PASS |
+| 解説PDF | PASS |
+| 練習問題source | PASS |
+| 練習PDF | PASS |
+| 解説画像PowerPoint | PASS |
+| PowerPoint QA | PASS |
+| 完成後独立再解答記録 | PASS |
+| 最終QA記録 | PASS |
+
+## EXAM_ALIGNMENT確認
+
+固定品質ゲートは一次5問・15小問。
 
 - R8 一次 理論 問1 (4)〜(5)
 - R8 一次 理論 問6 (3)〜(4)
@@ -30,69 +35,69 @@
 - H28 一次 理論 問3 (1)〜(5)
 - H24 一次 理論 問3 (1)〜(2)
 
-制作前独立再解答: `15 / 15 PASS`
+二次「機械・制御」の二次系候補は確認済みだが、確認できた問題はラプラス変換または伝達関数を前提とするため、Topic 09〜10先取りを避けて非採用としている。件数合わせの範囲追加はしていない。
 
-完成後独立再解答: `15 / 15 PASS`
+## 完成後独立再解答
 
-教材外知識補完: `0件`
+完成教材だけを使った再解答は一次5問・15小問すべてPASS。
 
-二次記述の件数合わせ: `0件`
+- R8 問1: `2 / 2 PASS`
+- R8 問6: `2 / 2 PASS`
+- R3 問5: `4 / 4 PASS`
+- H28 問3: `5 / 5 PASS`
+- H24 問3: `2 / 2 PASS`
+- 合計: `15 / 15 PASS`
 
-判定: `PASS`
+教材外知識補完、固定範囲外追加、Topic 09〜10先取り、二次記述の件数合わせ、未確認実車値依存はいずれも0件。
 
-## 3. 成果物QA
+## 表示・成果物QA
 
-解説PDF:
-- A4縦 5ページ
-- 200 dpi 全5ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: `PASS`
+- 解説PDF: A4縦5ページ、200 dpi全5ページ表示QA・文字抽出QA PASS
+- 練習PDF: A4縦5ページ、200 dpi全5ページ表示QA・文字抽出QA PASS
+- 練習問題: 全12問・全問五肢択一、独立計算・正答一意性 `12 / 12 PASS`
+- PowerPoint: 16:9・5枚、全5スライド表示QA、overflow 0件、ZIP整合性PASS
 
-練習PDF:
-- A4縦 5ページ
-- 200 dpi 全5ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: `PASS`
-- 独立計算・正答一意性: `12 / 12 PASS`
+## SPEC境界確認
 
-PowerPoint:
-- 16:9、全5スライド
-- 全5スライド表示QA: `5 / 5 PASS`
-- overflow: `0件`
-- PPTX ZIP整合性: `PASS`
+固定範囲は以下。
 
-判定: `PASS`
+- 二階線形微分方程式
+- 特性方程式
+- 実根
+- 重根
+- 複素共役根
+- 過減衰
+- 臨界減衰
+- 不足減衰
+- 固有角周波数
+- 減衰比
+- RLC回路
+- 機械系
+- 二次遅れの時間領域表現
 
-## 4. 固定範囲境界
+Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしていない。未確認実車値も追加していない。
 
-- Topic 09 ラプラス変換の先取り: `0件`
-- Topic 10 伝達関数・極・零点の先取り: `0件`
-- 固定範囲外追加: `0件`
-- 未確認実車値依存: `0件`
+## 前回FAILの再確認
 
-判定: `PASS`
+前回FAILだった主source Markdownの進捗記録不整合は解消済み。
 
-## 5. source進捗整合
+- `## 状態`: 解説PDF、練習source/PDF、PowerPoint QA、完成後独立再解答まで完了した現在地へ同期済み
+- `## 次工程`: source進捗同期後の最終QA再判定へ同期済み
+- 教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF・PowerPointの技術内容は変更していない
 
-`08_second_order_ode.md` の教材本文・EXAM_ALIGNMENT・数式・例題は現在の成果物と整合している。
+## 最終判定
 
-ただし進捗記録に旧状態が2箇所残る。
+- 必須成果物実在: PASS
+- 二種相当EXAM_ALIGNMENT 一次5問・15小問: PASS
+- 完成後独立再解答 `15 / 15`: PASS
+- 教材外知識補完0件: PASS
+- 固定範囲外追加0件: PASS
+- Topic 09〜10先取り0件: PASS
+- 二次記述の件数合わせ0件: PASS
+- 未確認実車値依存0件: PASS
+- 表示QA: PASS
+- source Markdown進捗記録と実成果物の整合: PASS
 
-1. 冒頭 `## 状態`
-   - 「制作前EXAM_ALIGNMENT、制作前独立再解答・公式解答照合、解説本文＋3段階例題まで完了」
-   - 「次工程は解説PDF」
-   - 実際には解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで完了しているため不整合。
+総合判定: `PASS / completed`。
 
-2. 末尾 `## 次工程`
-   - 「本sourceだけを正本として、Topic 08の解説PDFを作成し、全ページ表示QAを行う」
-   - 実際には後続成果物と完成後独立再解答まで完了しているため不整合。
-
-判定: `FAIL`
-
-## 6. 総合判定
-
-必須成果物、試験対応、表示QA、固定範囲境界はすべてPASS。
-
-source Markdownの進捗記録2箇所のみがGitHub正本の実態と不整合のため、Topic 08はまだ `completed` にしない。
-
-総合判定: `NEEDS_REVISION / IN_PROGRESS`
-
-次工程: `08_second_order_ode.md` の旧進捗2箇所だけを現在地へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、問題、PDF、PowerPoint、完成後独立再解答は変更しない。
+Topic 08を完了とし、次はTopic 09 `ラプラス変換` の制作前EXAM_ALIGNMENTへ進む。
