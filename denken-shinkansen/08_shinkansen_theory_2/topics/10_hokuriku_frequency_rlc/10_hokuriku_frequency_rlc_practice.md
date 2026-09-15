@@ -271,4 +271,4 @@
 
 # 次工程
 
-練習PDF・PowerPoint・完成後独立再解答・初回最終QAまで完了済み。初回最終QAで残った旧進捗記録の同期も完了した。次は最終QAを再実施する。
+Topic 10は `PASS / completed`。次はTopic 11「ATCはなぜ特定の周波数を見分けられる？」の制作前EXAM_ALIGNMENTを実施する。
