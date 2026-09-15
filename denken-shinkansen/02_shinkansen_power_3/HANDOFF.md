@@ -6,26 +6,20 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `8 / 16`。Topic 01〜08は完成済み。
 
 ## 今回進捗
-Topic 09 `変電所からパンタグラフまでどう送る？` の解説本文＋3段階例題を完成した。
+Topic 09 `変電所からパンタグラフまでどう送る？` の解説PDFを完成した。
 
-固定5問・7小問から逆算し、source `topics/09_feeding_transmission/09_feeding_transmission.md` に§1〜§14を追加した。本文要求事項マッピングは `7 / 7`。
+source `topics/09_feeding_transmission/09_feeding_transmission.md` の§1〜§14と3段階例題を正本として、`topics/09_feeding_transmission/09_feeding_transmission_explanation.pdf` を作成した。
 
-追加した主内容:
-- R・L・C、交流実効抵抗、`X_L = 2πfL`
-- `Z = R + jX`、アドミタンス、遅れ力率のフェーザ
-- `P = √3VIcosφ` → 線電流 → `3I²R`損失 → 損失率
-- T形・π形一相等価回路のKVL/KCL解法
-- 静電容量、充電電流、無負荷時電圧上昇
-- `P = (V_sV_r/X)sinδ` の成立条件
-- 新幹線の変電所→き電線・電車線→パンタグラフ→車両→車輪→レール→変電所の電流経路
-- ATき電方式・帰線の三種相当の概略
+PDF QA:
+- A4縦4ページ
+- 200 dpi全4ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- §1〜§14収録: PASS
+- 3段階例題収録: PASS
+- 固定5問・7小問マッピング掲載: `7 / 7`
+- 数値・論理再検算: PASS
 
-3段階例題:
-- 基礎: 三相送電の電流・`I²R`損失・損失率
-- 本試験標準: T形等価回路を受電端からKVL/KCLで追う計算
-- 複合: π形、mS換算、充電電流、無負荷時電圧上昇
-
-数式・単位を再計算し、T形例題KVL/KCL、π形例題のmS換算・複素符号をPASS確認した。SPEC固定範囲外追加、Topic 10以降の先取り、未確認新幹線実設備値の真値化はいずれも0件。
+固定範囲・過去問対応は変更していない。SPEC固定範囲外追加、Topic 10以降の先取り、未確認新幹線実設備値の真値化はいずれも0件。
 
 ## Topic 09 固定過去問
 品質ゲート対象は変更していない。
@@ -59,9 +53,13 @@ R8上 電力 問8、およびR7上・R7下の送電関連候補のうち、機�
 - 3段階例題: 完成
 - 本文要求事項マッピング: `7 / 7`
 - 本文数式・単位QA: PASS
+- 解説PDF: A4縦4ページ
+- 解説PDF表示QA: 200 dpi `4 / 4 PASS`
+- 解説PDF文字抽出QA: PASS
+- 解説PDF数値・論理再検算: PASS
 - SPEC固定範囲外追加: `0件`
 - 未確認実設備値の真値化: `0件`
-- 解説PDF / 練習 / PowerPoint: 未着手
+- 練習 / PowerPoint: 未着手
 - 完成後ブラインド独立再解答: 未着手
 
 ## 直前完了テーマ
@@ -80,12 +78,12 @@ PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
 完成後独立再解答: `topics/08_voltage_drop/08_voltage_drop_independent_reanswer.md`
 
 ## 現在状態
-- `current_status`: `topic_09_explanation_source_complete`
+- `current_status`: `topic_09_explanation_pdf_complete`
 - 完成数: `8 / 16`
 - last completed: Topic 08 `新幹線の変電所はなぜ数十kmおき？`
 - active: Topic 09 `変電所からパンタグラフまでどう送る？`
 
 ## 次の正確な開始点
-Topic 09の解説PDFを作成する。
+Topic 09の練習問題sourceを作成する。
 
-source `topics/09_feeding_transmission/09_feeding_transmission.md` の§1〜§14と3段階例題を正本としてPDF化し、全ページ表示QA・文字抽出QAを実施する。
+固定5問・7小問へ接続し、三種向けの問題数・難易度・五肢択一要件を満たす練習問題と完全解説を作成し、数値・論理・正答一意性を独立検証する。
