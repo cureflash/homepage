@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 7 / 14
-- current_status: `topic_08_exam_alignment_complete`
+- current_status: `topic_08_explanation_source_complete`
 - last_completed_topic: `07 モーターはなぜ回る？`
 - active_topic: `08 新幹線の交流25kVとは何なのか`
-- next_start: Topic 08の解説本文＋3段階例題を作成する
+- next_start: Topic 08の解説PDFを作成し、全ページ表示QAを実施する
 
 ## Topic 01 進捗
 
@@ -133,7 +133,7 @@
 - [x] RLC・リアクタンス・力率・三相・高調波等の後続Topic論点を境界整理
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
@@ -142,16 +142,16 @@
 
 ## 今回進めた内容
 
-Topic 08 `新幹線の交流25kVとは何なのか` の制作前EXAM_ALIGNMENTを完了した。
+Topic 08 `新幹線の交流25kVとは何なのか` の解説本文＋3段階例題を完成した。
 
-- 公式過去問は直近年度から遡って確認
-- 固定範囲だけで問題全体を解ける公式過去問: `4問`
-- MASTER_SPEC / EXAM_ALIGNMENT_SPECの5問未満例外を適用し、確認できた全件を固定
-- 制作前独立検証: `4 / 4 PASS`
-- 令和7年度上期 問8、令和6年度下期 問8、令和3年度 問8、平成21年度 問9を固定
-- 令和8年度上期 問8、令和4年度下期 問8、平成30年度 問8等の範囲外近接問題は件数合わせで採用しない
-- 後続Topic論点・未確認新幹線実車値の追加: `0件`
+- 固定過去問4問の要求事項を本文へ `4 / 4` マッピング
+- 制作前独立検証 `4 / 4 PASS` を維持
+- 正弦波瞬時値、周期・周波数・角周波数、最大値・実効値・平均値、位相・位相差、同一周波数正弦波の基本ベクトル合成、波形読取、最初の到達時刻を固定範囲内で解説
+- 3段階例題: 基礎 / 本試験標準 / 複合を収録
+- 新幹線接続は「25kVは実効値として扱い、正弦波なら最大値は25√2 kV」に限定
+- RLC・リアクタンス・力率・三相・高調波等の後続Topic追加: `0件`
+- 未確認新幹線実車値追加: `0件`
 
 ## 判定
 
-現在 `topic_08_exam_alignment_complete`。完成数は `7 / 14` のまま。次は固定4問の要求事項とSPEC固定範囲だけを使って、Topic 08の解説本文＋3段階例題を作成する。
+現在 `topic_08_explanation_source_complete`。完成数は `7 / 14` のまま。次はこのsourceを正本としてTopic 08の解説PDFを作成し、全ページ表示QAを実施する。
