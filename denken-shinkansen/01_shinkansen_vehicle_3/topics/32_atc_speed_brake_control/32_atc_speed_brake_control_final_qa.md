@@ -4,9 +4,9 @@
 
 ## 現在地
 
-`IN_PROGRESS / independent_reanswer_complete`
+`PASS / COMPLETED`
 
-固定5問・6対象項目について、完成教材だけを使った完成後独立再解答を実施し、`6 / 6 PASS`。最終QAは未実施。
+固定5問・6対象項目の完成後独立再解答は `6 / 6 PASS`。必須成果物・過去問対応・表示QA・進捗記録整合・固定範囲境界を再確認し、全品質ゲートPASSと判定する。
 
 ## 対象
 
@@ -44,6 +44,63 @@ Topic 30の軌道回路、Topic 31の信号周波数・符号化・伝送方式�
 - 未確認実車値依存: `0件`
 - 公式解答との不一致: `0件`
 
-## 次工程
+## 最終QA
 
-Topic 32の最終QAを実施し、必須成果物、固定EXAM_ALIGNMENT、表示QA、進捗記録整合、固定範囲境界を再判定する。教材本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF・PowerPointは変更しない。
+### 必須成果物
+- 解説source / EXAM_ALIGNMENT: PASS
+- 解説PDF: PASS
+- 練習source: PASS
+- 練習PDF: PASS
+- 解説画像PowerPoint: PASS
+- 完成後独立再解答記録: PASS
+
+実在確認対象:
+- `32_atc_speed_brake_control.md`
+- `32_atc_speed_brake_control_explanation.pdf`
+- `32_atc_speed_brake_control_practice.md`
+- `32_atc_speed_brake_control_practice.pdf`
+- `32_atc_speed_brake_control_images.pptx`
+- `32_atc_speed_brake_control_final_qa.md`
+
+### 過去問対応品質ゲート
+- 固定公式過去問: `5問・6対象項目`
+- 制作前独立解答: `6 / 6 PASS`
+- 完成後独立再解答: `6 / 6 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外知識による正答補完: `0件`
+- 未確認実車値追加: `0件`
+- 判定: PASS
+
+### 練習問題QA
+- 問題数: `15 / 15`
+- 基礎/標準/複合: `4 / 8 / 3`
+- 五肢択一: `15 / 15`
+- 正答位置: A/B/C/D/E各3問
+- 固定EXAM_ALIGNMENT要求事項: `6 / 6` マッピング
+- 独立数値・論理QA: `15 / 15 PASS`
+- 複数正答: `0件`
+- 判定: PASS
+
+### 表示QA
+- 解説PDF: A4縦4ページ、180 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA PASS
+- 練習PDF: A4縦4ページ、180 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA PASS
+- PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、overflow検査PASS、ZIP整合性PASS
+- 判定: PASS
+
+### 進捗記録整合
+- `STATUS.md`: PASS（最終QA直前の現在地として `topic_32_independent_reanswer_complete` と整合）
+- `HANDOFF.md`: PASS（最終QA直前の現在地として整合）
+- `32_atc_speed_brake_control.md`: PASS
+  - 冒頭「状態」は、解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで完了している実在成果物と整合。
+  - 「次工程」は最終QAを示しており、最終QA直前の状態として整合。
+
+### 固定範囲境界
+PASS。Topic 30の軌道回路・列車検知回路の再説明、Topic 31の信号周波数・符号化・伝送方式各論、未確認の新幹線ATC実車周波数・符号体系・ビットレート・速度検出器定数・速度照査閾値・減速度・応答時間、固定過去問に不要な根軌跡・ナイキスト線図・ラウス判別・PID調整法は追加していない。
+
+## 最終判定
+
+`PASS / COMPLETED`
+
+必須成果物、固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、練習QA、表示QA、進捗記録整合、固定範囲境界をすべて満たす。Topic 32を `completed` とする。
+
+次工程: Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` の制作前EXAM_ALIGNMENT。Topic 32の教材本文・固定EXAM_ALIGNMENT・数式・例題・PDF・練習問題・PowerPoint・固定範囲は変更しない。
