@@ -8,11 +8,11 @@ Topic 01〜08は `completed`。
 
 完成数: `8 / 20`
 
-current_status: `topic_09_final_qa_needs_revision`
+current_status: `topic_09_source_progress_synced`
 
 active_topic: `09 ラプラス変換`
 
-次工程: Topic 09主sourceの `## 状態` と `## 次工程` の旧進捗2箇所だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・完成後独立再解答は変更しない。
+次工程: Topic 09の最終QAを再判定する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・完成後独立再解答は変更しない。
 
 ## 上位仕様
 
@@ -326,11 +326,22 @@ FAIL:
 
 技術内容の修正は不要。進捗記録だけを実成果物へ同期した後、最終QAを再判定する。
 
+### Topic 09 source進捗同期
+
+主source `09_laplace_transform.md` の進捗記録2箇所だけを実成果物へ同期済み。
+
+- 冒頭 `## 状態`: 解説PDF、練習source/PDF、PowerPoint、完成後独立再解答、最終QA `NEEDS_REVISION` まで完了した現在地へ同期
+- 末尾 `## 次工程`: source進捗同期後の最終QA再判定へ同期
+- 技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・PDF/PPTX・完成後独立再解答: 変更なし
+- 固定二次5問・6対象設問: 変更なし
+- 完成後独立再解答 `6 / 6 PASS`: 維持
+- Topic 10先取り: 0件
+- 固定範囲外追加: 0件
+- 教材外知識補完: 0件
+- 未確認実車値依存: 0件
+
 ## 次に行うこと
 
-Topic 09主sourceの進捗記録2箇所だけを同期する。
-
-- `## 状態`: 解説PDF、練習source/PDF、PowerPoint、完成後独立再解答、最終QA `NEEDS_REVISION` まで完了した現在地へ同期
-- `## 次工程`: source進捗同期後の最終QA再判定へ同期
+Topic 09の最終QAを再判定する。
 
 教材本文、固定EXAM_ALIGNMENT、数式、例題、練習問題、PDF、PowerPoint、完成後独立再解答は変更しない。
