@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は品質ゲートPASSでcompleted。active topicは10「新幹線の速度はどう自動制御される？」。
 
 ## 今回進捗
-Topic 10「新幹線の速度はどう自動制御される？」の解説本文＋3段階例題を完成した。
+Topic 10「新幹線の速度はどう自動制御される？」の解説PDFを完成し、表示QA・文字抽出QAまで完了した。
 
 - 品質ゲート対象: 公式過去問5件
 - 固定問題: R8上 問13、R7下 問13、R5下 問18(a)、R5上 問13、R4上 問15(a)
@@ -14,7 +14,10 @@ Topic 10「新幹線の速度はどう自動制御される？」の解説本文
 - 制作前公式照合: `5 / 5 PASS`
 - 解説本文＋3段階例題: 完成
 - 固定5件の本文マッピング: `5 / 5 全件`
-- ブロック線図、負帰還 `G/(1+GH)`、一次遅れ・時定数、R-L/R-C伝達関数、二次遅れ、定常偏差、安定性を固定範囲内で接続
+- 解説PDF: A4縦4ページ
+- 200 dpi表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 文字切れ・重なり・ページ外はみ出し: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外論点追加: `0件`
@@ -24,6 +27,10 @@ Topic 10「新幹線の速度はどう自動制御される？」の解説本文
 固定範囲は、目標値・制御量・操作量・外乱、フィードバック/フィードフォワード、開ループ/閉ループ、ブロック線図、伝達関数、一次/二次遅れ、時定数、定常偏差、安定性、`G(s)/(1+G(s)H(s))`。PID、ボード線図、ナイキスト線図、ベクトル軌跡、シーケンス制御等は件数合わせで追加しない。実車の制御アルゴリズムは推測しない。
 
 source: `topics/10_automatic_control/10_automatic_control.md`
+
+解説PDF: `topics/10_automatic_control/10_automatic_control_explanation.pdf`
+
+解説PDF QA: `topics/10_automatic_control/10_automatic_control_explanation_pdf_qa.md`
 
 ## Topic 10 EXAM_ALIGNMENT
 品質ゲート対象は5件で固定。
@@ -50,7 +57,7 @@ source: `topics/10_automatic_control/10_automatic_control.md`
 - 解説本文: 完了
 - 3段階例題: 完了
 - 固定5件の本文マッピング: `5 / 5 全件`
-- 解説PDF: 未着手
+- 解説PDF: 完了（A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
 - 練習問題source/PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
@@ -60,7 +67,7 @@ source: `topics/10_automatic_control/10_automatic_control.md`
 - 未確認実車値追加: `0件`
 
 ## 次に行う
-Topic 10の解説本文＋3段階例題を基にA4縦の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。系列SPEC固定範囲外へ拡張しない。
+Topic 10の固定EXAM_ALIGNMENT 5件と固定範囲に接続する練習問題sourceを作成し、独立計算・論理QAと正答一意性QAを行う。系列SPEC固定範囲外へ拡張しない。
 
 ## Topic 09 完了要約
 Topic 09「新幹線はどうやって電気で止まる？」は品質ゲートPASS / completed。
