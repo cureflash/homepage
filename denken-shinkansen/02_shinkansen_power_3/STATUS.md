@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 7 / 16
-- current_status: `topic_08_practice_source_complete`
+- current_status: `topic_08_practice_pdf_complete`
 - last_completed_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
 - active_topic: `08 新幹線の変電所はなぜ数十kmおき？`
-- next_start: Topic 08の完成済み練習問題sourceを正本として練習PDFを作成する
+- next_start: Topic 08の解説画像PowerPointを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -18,7 +18,7 @@
 - [x] 05 新幹線を再エネだけで走らせられる？ — completed
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
 - [x] 07 なぜ三相交流をそのまま架線へ流さない？ — completed。改定EXAM_ALIGNMENT 3問を完成教材だけで独立再解答し `3 / 3 PASS`、教材外知識補完0件。練習PDF QA・PowerPoint Slide 4・PowerPoint QAを現行3問へ同期し、最終QA PASS
-- [ ] 08 新幹線の変電所はなぜ数十kmおき？ — 制作前EXAM_ALIGNMENT 5問・7小問 `7 / 7 PASS`。解説本文§1〜§9＋3段階例題、解説PDF、練習問題source完成。練習は全12問五肢択一（基礎3／標準7／複合2）、数値・論理QA `12 / 12 PASS`、固定5問・7小問へ `7 / 7` 接続。SPEC固定範囲外追加0件。次は練習PDF
+- [ ] 08 新幹線の変電所はなぜ数十kmおき？ — 制作前EXAM_ALIGNMENT 5問・7小問 `7 / 7 PASS`。解説本文§1〜§9＋3段階例題、解説PDF、練習問題source、練習PDF完成。練習PDFはA4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS、数値・論理再検算 `12 / 12 PASS`、固定5問・7小問へ `7 / 7` 接続。SPEC固定範囲外追加0件。次は解説画像PowerPoint
 - [ ] 09 変電所からパンタグラフまでどう送る？
 - [ ] 10 新幹線が突然大電力を使ったら？
 - [ ] 11 架線事故ではどうやって電気を止める？
@@ -57,6 +57,8 @@ PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
 source: `topics/08_voltage_drop/08_voltage_drop.md`
 解説PDF: `topics/08_voltage_drop/08_voltage_drop_explanation.pdf`
 練習問題source: `topics/08_voltage_drop/08_voltage_drop_practice_source.md`
+練習PDF: `topics/08_voltage_drop/08_voltage_drop_practice.pdf`
+練習PDF QA: `topics/08_voltage_drop/08_voltage_drop_practice_qa.md`
 
 固定5問・7小問:
 - R7下 電力 問16 (a)(b)
@@ -78,16 +80,20 @@ source: `topics/08_voltage_drop/08_voltage_drop.md`
 - 練習source数値・論理独立再計算: `12 / 12 PASS`
 - 練習source正答一意性: `12 / 12 PASS`
 - 練習source固定5問・7小問への接続: `7 / 7`
+- 練習PDF: A4縦4ページ
+- 練習PDF表示QA: 200 dpi `4 / 4 PASS`
+- 練習PDF文字抽出QA: PASS
+- 練習PDF数値・論理再検算: `12 / 12 PASS`
+- 練習PDF正答一意性: `12 / 12 PASS`
 - SPEC固定範囲外追加: `0件`
 - 未確認実設備値の真値化: `0件`
 - R8上 電力 問8: 電圧降下・線路損失以外に機械的強度・コロナ・サージを要求するため品質ゲートから除外
-- 正答番号: 完成後ブラインド独立再解答の汚染防止のため進捗記録へ未保存
+- 正答番号: 完成後ブラインド独立再解答の汚染防止のため固定過去問については進捗記録へ未保存
 
 未完成成果物:
-- 練習PDF
 - 解説画像PowerPoint
 - 完成後ブラインド独立再解答
 - 最終QA
 
 ## 次
-Topic 08の練習PDFを `topics/08_voltage_drop/08_voltage_drop_practice_source.md` から作成する。全ページ表示QA・文字抽出QA・正答一意性・主要計算再検算を行い、Topic 09以降の論点や未確認の実設備値は追加しない。
+Topic 08の解説画像PowerPointを作成する。固定5問・7小問の要求事項を可視化し、全スライド表示QA・overflow・PPTX整合性を確認する。Topic 09以降の論点や未確認の実設備値は追加しない。
