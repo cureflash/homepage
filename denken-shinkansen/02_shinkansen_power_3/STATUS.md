@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 8 / 16
-- current_status: `topic_09_practice_pdf_complete`
+- current_status: `topic_09_powerpoint_complete`
 - last_completed_topic: `08 新幹線の変電所はなぜ数十kmおき？`
 - active_topic: `09 変電所からパンタグラフまでどう送る？`
-- next_start: Topic 09の解説画像PowerPointを作成する
+- next_start: Topic 09の完成後ブラインド独立再解答を実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -19,7 +19,7 @@
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
 - [x] 07 なぜ三相交流をそのまま架線へ流さない？ — completed。改定EXAM_ALIGNMENT 3問を完成教材だけで独立再解答し `3 / 3 PASS`、教材外知識補完0件。練習PDF QA・PowerPoint Slide 4・PowerPoint QAを現行3問へ同期し、最終QA PASS
 - [x] 08 新幹線の変電所はなぜ数十kmおき？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗整合を最終QAで再確認し `PASS / completed`
-- [ ] 09 変電所からパンタグラフまでどう送る？ — 制作前EXAM_ALIGNMENT完了。固定5問・7小問、独立検証 `7 / 7 PASS`。解説本文§1〜§14＋3段階例題、解説PDF、練習問題source、練習PDF完成。練習PDFはA4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS、数値・論理 `12 / 12 PASS`
+- [ ] 09 変電所からパンタグラフまでどう送る？ — 制作前EXAM_ALIGNMENT完了。固定5問・7小問、独立検証 `7 / 7 PASS`。解説本文§1〜§14＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint完成。PowerPointは16:9・4枚、固定5問・7小問可視化 `7 / 7`、1601×900表示 `4 / 4 PASS`、overflow 0件、ZIP整合性PASS
 - [ ] 10 新幹線が突然大電力を使ったら？
 - [ ] 11 架線事故ではどうやって電気を止める？
 - [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
@@ -116,6 +116,8 @@ source: `topics/09_feeding_transmission/09_feeding_transmission.md`
 練習問題source: `topics/09_feeding_transmission/09_feeding_transmission_practice_source.md`
 練習PDF: `topics/09_feeding_transmission/09_feeding_transmission_practice.pdf`
 練習PDF QA: `topics/09_feeding_transmission/09_feeding_transmission_practice_qa.md`
+解説画像PowerPoint: `topics/09_feeding_transmission/09_feeding_transmission_images.pptx`
+PowerPoint QA: `topics/09_feeding_transmission/09_feeding_transmission_powerpoint_qa.md`
 
 固定5問・7小問:
 - R6下 電力 問12
@@ -149,6 +151,11 @@ source: `topics/09_feeding_transmission/09_feeding_transmission.md`
 - 練習PDF数値・論理再検算: `12 / 12 PASS`
 - 練習PDF正答一意性: `12 / 12 PASS`
 - 練習PDF固定5問・7小問への接続: `7 / 7`
+- 解説画像PowerPoint: 16:9・4枚
+- PowerPoint固定5問・7小問の要求事項可視化: `7 / 7`
+- PowerPoint表示QA: 1601×900 `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: PASS
 - SPEC固定範囲外の採用問題・本文追加: `0件`
 - Topic 10以降の先取り: `0件`
 - 未確認実設備値への依存: `0件`
@@ -156,4 +163,4 @@ source: `topics/09_feeding_transmission/09_feeding_transmission.md`
 - 完成後ブラインド独立再解答を保全するため、制作前の選択肢番号・数値解は進捗記録へ保存しない
 
 ## 次
-Topic 09 `変電所からパンタグラフまでどう送る？` の解説画像PowerPointを作成する。
+Topic 09 `変電所からパンタグラフまでどう送る？` の完成後ブラインド独立再解答を実施する。
