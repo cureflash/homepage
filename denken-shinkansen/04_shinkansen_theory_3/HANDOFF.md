@@ -4,27 +4,33 @@
 
 ## 現在地
 
-Topic 01〜08は最終QAまでPASSし、`completed`。
+Topic 01〜09は最終QAまでPASSし、`completed`。
 
-Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は、解説本文・解説PDF・練習source/PDF・解説画像PowerPoint・固定6過去問の完成後独立再解答まで完了。最終QAは技術内容・成果物・過去問対応・SPEC境界をPASSしたが、練習sourceの進捗記録が実成果物より古いため `NEEDS_REVISION` だった。その進捗記録同期まで完了した。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` は、固定6過去問の完成後独立再解答 `6 / 6 PASS`、必須成果物・表示QA・SPEC境界・進捗記録整合を全件PASSし、最終QA再実施で `PASS / completed` とした。
 
-- 完成数: `8 / 14`
-- last completed: `08 新幹線の交流25kVとは何なのか`
-- active topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- current status: `topic_09_practice_source_progress_synced`
-- next start: Topic 09の最終QAを再実施する
+- 完成数: `9 / 14`
+- last completed: `09 北陸新幹線は50Hzと60Hzをどう走る？`
+- active topic: `10 新幹線が使う電力は「W」だけではない`
+- current status: `topic_09_completed`
+- next start: Topic 10の制作前EXAM_ALIGNMENTを開始する
 
 ## 今回進捗
 
-Topic 09練習sourceの旧進捗記録だけを実成果物へ同期した。
+Topic 09の最終QAを再実施した。
 
-- `09_hokuriku_frequency_rlc_practice.md` の `stage`: `PRACTICE_PDF_COMPLETE` → `INDEPENDENT_REANSWER_COMPLETE`
-- 旧「次はPowerPoint作成」を削除
-- PowerPoint・完成後独立再解答が既に完了している状態へ同期
-- 教材本文・固定EXAM_ALIGNMENT・練習15問・正答・解説・PDF・PowerPointの技術内容は変更なし
-- 固定6過去問の完成後独立再解答 `6 / 6 PASS`、教材外補完0問、SPEC境界を維持
+- 前回唯一FAILだった練習source進捗記録は同期済み
+- 固定6過去問の完成後独立再解答: `6 / 6 PASS`
+- 教材外知識補完: `0問`
+- Topic 10以降の力率・三相・半導体等への依存: `0問`
+- 未確認新幹線実車値・周波数切替方式への依存: `0問`
+- 解説PDF QA: PASS
+- 練習PDF QA: PASS
+- PowerPoint QA: PASS
+- SPEC境界: PASS
+- source進捗記録整合性: PASS
+- 最終QA: `PASS / completed`
 
-最終QA再実施は次段階とし、現時点では `completed` にしない。
+教材本文・固定EXAM_ALIGNMENT・練習15問・正答・解説・PDF・PowerPointの技術内容は変更せず、主source・練習sourceへ完了進捗だけを同期した。
 
 ## Topic 09 品質ゲート
 
@@ -36,9 +42,9 @@ Topic 09練習sourceの旧進捗記録だけを実成果物へ同期した。
 - 教材外知識による正答補完: `0問`
 - Topic 10以降の力率・三相・半導体等による件数合わせ・依存: `0問`
 - 未確認新幹線実車値・周波数切替方式の追加・依存: `0件`
-- 最終QA: `NEEDS_REVISION`（前回判定。原因だった練習source進捗記録は同期済み、再判定待ち）
+- 最終QA: `PASS / completed`
 
-公式過去問は電気技術者試験センターを正本とし、e-sysnet・電験王・電験三種まとめましたは説明粒度・解法順の比較にのみ使用する。
+公式過去問は電気技術者試験センターを正本とし、e-sysnet・電験王・電験三種まとめましたは説明粒度・解法順の比較にのみ使用した。
 
 ## Topic 09 SPEC固定範囲
 
@@ -99,9 +105,9 @@ f0 = 1 / (2π√LC)
 
 ## 境界
 
-- Topic 10の有効・無効・皮相電力、力率、力率改善を追加しない
-- Topic 11の三相交流、Y・Δ、線間/相電圧を追加しない
-- Topic 12以降の半導体、整流、PWM、高調波を追加しない
+- Topic 10の有効・無効・皮相電力、力率、力率改善をTopic 09へ追加しない
+- Topic 11の三相交流、Y・Δ、線間/相電圧をTopic 09へ追加しない
+- Topic 12以降の半導体、整流、PWM、高調波をTopic 09へ追加しない
 - 過渡現象・ラプラス変換等へ拡張しない
 - 新幹線の周波数切替設備、切替地点、車上回路等を未確認のまま推測しない
 
@@ -112,19 +118,19 @@ f0 = 1 / (2π√LC)
   - 制作前独立検証: `6 / 6 PASS`
   - 解説本文＋3段階例題: 完成
   - 固定過去問→本文マッピング: `6 / 6`
-  - status: `INDEPENDENT_REANSWER_COMPLETE`
+  - status: `COMPLETED`
 - 解説PDF: 完成（A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
-- 練習source: 内容完成、進捗記録同期済み（`INDEPENDENT_REANSWER_COMPLETE`）
+- 練習source: 完成（`COMPLETED`）
 - 練習PDF: 完成（A4縦2ページ、200 dpi表示QA `2 / 2 PASS`、文字抽出QA `PASS`）
 - 解説画像PowerPoint: 完成（16:9・4枚、表示QA `4 / 4 PASS`、固定6過去問要求 `6 / 6`）
 - 完成後独立再解答: `6 / 6 PASS`
 - 独立再解答記録: `topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_exam_recheck.md`
-- 最終QA: `NEEDS_REVISION`（前回判定、再判定待ち）
+- 最終QA: `PASS / completed`
 - 最終QA記録: `topics/09_hokuriku_frequency_rlc/09_hokuriku_frequency_rlc_final_qa.md`
 
 ## 次に行うこと
 
-固定EXAM_ALIGNMENT・教材本文・問題・PDF・PowerPointを変更せず、Topic 09の最終QAを再実施する。前回FAIL理由だった練習source進捗記録は同期済み。最終QAがPASSするまで `completed` としない。
+Topic 10 `新幹線が使う電力は「W」だけではない` の制作前EXAM_ALIGNMENTを開始する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列SPECのTopic 10固定範囲だけを使い、直近年度から公式理論過去問を調査する。後続Topic 11以降の三相・半導体等で件数を水増ししない。
 
 ## 固定ルール
 
