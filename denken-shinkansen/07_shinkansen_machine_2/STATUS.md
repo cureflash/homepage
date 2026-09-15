@@ -5,7 +5,7 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `9 / 22`
-- current_status: `topic_10_powerpoint_complete`
+- current_status: `topic_10_blind_reanswer_ready`
 - last_completed_topic: `09 誘導電動機を自由に操るには？`
 - active_topic: `10 新幹線はモーターを発電機にして止まる`
 - next_start: Topic 10 完成後独立再解答
@@ -103,8 +103,15 @@
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 - [x] SHA-256 `77807ae3a7bbd10e7110a79316dacad7eaedb609d2ec4a482cfe473a5b5c310d`
 
+## Topic 10 独立再解答前ゲート
+- [x] 必須先読み対象を再監査
+- [x] `HANDOFF.md` に保存されていたH24二次数値解を除去
+- [x] 固定5過去問・15答案要素、教材本文、成果物は変更なし
+- [x] 今回runでは保存済み数値解を先に読んだため独立再解答を実施しない
+- [x] 次runから `EXAM_ALIGNMENT_SPEC.md` §10のblind条件で独立再解答可能
+
 ## 今回進めた内容
-Topic 10の解説画像PowerPointを完成した。16:9・4枚で、固定電力フロー、誘導機の `s<0` 発電機運転、四象限運転、H24二次型フェーザ/PWM計算、回生効率を可視化した。全4枚表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS。固定5過去問・15答案要素を維持し、H27/H24の除外小問、Topic 11/16、未確認実車値の追加は0件。
+Topic 10の完成後独立再解答前ゲートを整備した。必須先読み対象の `HANDOFF.md` にH24二次問3の保存済み数値解が残っており、`EXAM_ALIGNMENT_SPEC.md` の「保存済み正答を先に見ず」に抵触するため、今回runでは独立再解答を実施しなかった。保存済み数値解だけをHANDOFFから除去し、固定5過去問・15答案要素、教材本文、PDF/PPTX、固定範囲は変更していない。
 
 ## 判定
-Topic 10は `topic_10_powerpoint_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は完成教材のみで固定5過去問・15答案要素を独立再解答する。
+Topic 10は `topic_10_blind_reanswer_ready / IN_PROGRESS`。完成数は `9 / 22` のまま。次は新しいrunで完成教材だけを使い、固定5過去問・15答案要素を独立再解答する。
