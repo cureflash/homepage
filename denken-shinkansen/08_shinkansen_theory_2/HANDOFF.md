@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜08は `completed`。Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了した。
+Topic 01〜08は `completed`。Topic 09「新幹線の25kV交流をフェーザで表す」は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDFまで完了した。
 
 完成数: `8 / 21`
 
-current_status: `topic_09_explanation_source_complete`
+current_status: `topic_09_explanation_pdf_complete`
 
 active_topic: `09 新幹線の25kV交流をフェーザで表す`
 
-次工程: Topic 09の固定EXAM_ALIGNMENTと解説sourceを変更せず、解説PDFを作成し全ページ表示QAを行う。
+次工程: Topic 09の固定EXAM_ALIGNMENT・解説source・解説PDFを変更せず、固定範囲だけで練習問題sourceを作成する。
 
 ## Topic 09 固定範囲
 
@@ -88,6 +88,20 @@ R7・R6・R5二次「電力・管理」「機械・制御」を確認したが�
 
 固定11小問への本文マッピングは `11 / 11`。共振、Q値、三相、複素電力等の後続Topic論点追加は0件。
 
+## Topic 09 解説PDF
+
+成果物: `topics/09_25kv_ac_phasor/09_25kv_ac_phasor_explanation.pdf`
+
+- A4縦4ページ
+- 正弦波・実効値・平均値、複素数表示、フェーザ、R/L/Cの複素インピーダンス、直列・並列処理、解法手順を収録
+- 3段階例題と固定5問・11小問への教材内対応表を収録
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- クリッピング・重なり・文字化け: 0件
+- 固定EXAM_ALIGNMENT変更: 0件
+- 二次採用0問・二次数合わせ0件を維持
+- 固定範囲外追加・未確認実設備値追加: 0件
+
 ## 参考資料
 
 参照日: 2026-09-15
@@ -114,6 +128,8 @@ R7・R6・R5二次「電力・管理」「機械・制御」を確認したが�
 - 固定一次: `5問 / 11小問`
 - 公式解答照合: `11 / 11 PASS`
 - 解説本文マッピング: `11 / 11`
+- 解説PDF表示QA: `4 / 4 PASS`
+- 解説PDF文字抽出QA: `PASS`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 固定範囲外追加: `0件`
@@ -126,4 +142,4 @@ Topic 01〜08は `completed`。Topic 08の最終QAは、固定一次4問・6小�
 
 ## 次に行うこと
 
-Topic 09の解説PDFを作成し、全ページ表示QAを行う。解説source・固定EXAM_ALIGNMENT・二次非採用判断を変更しない。
+Topic 09の固定EXAM_ALIGNMENT・解説source・解説PDFを正本として、固定範囲だけで練習問題sourceを作成する。共振・Q値・周波数特性、フィルタ、三相回路、複素電力・力率・無効電力を先取りせず、二次問題を件数合わせで追加しない。
