@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 7 / 12
-- current_status: `topic_08_revision_supplement_pdf_complete`
+- current_status: `topic_08_exam_reanswer_after_revision_complete`
 - last_completed_topic: `07 微分② 速度を微分すると加速度`
 - active_topic: `08 積分 速度曲線の面積は距離`
-- next_start: `Topic 08 補強後の完成教材だけで固定5問を再独立解答`
+- next_start: `Topic 08 最終QA`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -68,19 +68,19 @@
 - [x] 完成教材だけでの公式過去問独立再解答 `2 / 5問・5 / 9答案要素 PASS / NEEDS_REVISION`
 - [x] 独立再解答FAILの不足前提3群を固定範囲内で最小補強sourceへ反映
 - [x] 補強3点を学習用補強PDFへ同期
-- [ ] 補強後の完成教材だけで固定5問を再独立解答
+- [x] 補強後の完成教材だけで固定5問を再独立解答 `5 / 5問・9 / 9答案要素 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 08「積分 速度曲線の面積は距離」の不足前提3群を、学習用追加教材 `topics/08_integral_distance/08_integral_distance_revision_supplement.pdf` へ同期した。
+Topic 08「積分 速度曲線の面積は距離」を、補強PDFを含む完成教材だけで固定5過去問・9答案要素を再独立解答した。
 
-A4縦2ページ。R8上の相電圧→線間電圧・線間波形、R3のリアクトル電圧符号・磁気エネルギー・導通終了、H28の固定問のサイリスタ導通対・無点弧時波形だけを収録し、既存の積分式への接続を明示した。既存の解説PDF・練習PDF・PowerPointは変更していない。
+R8上 機械 問16、R3 機械 問16、R1 理論 問18、H28 機械 問16、H24 機械 問10を公式問題文から再導出し、その後に電気技術者試験センターの公式解答と照合。結果は `5 / 5問・9 / 9答案要素 PASS`、公式解答との不一致0件、教材外知識補完0件。
 
-200 dpi表示QA `2 / 2 PASS`、文字抽出QA PASS、クリッピング・重なり・文字化け0件。固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、専門分野の体系説明追加0件、未確認新幹線実値追加0件。不足前提への対応は `3 / 3`。
+固定EXAM_ALIGNMENT変更0件、Topic 09〜11先取り0件、専門分野の体系説明追加0件、未確認新幹線実値追加0件。過去問対応品質ゲートはPASSしたが、最終QA未実施のためTopic 08はまだ `completed` にしない。
 
 ## 判定
 
-Topic 08は `topic_08_revision_supplement_pdf_complete / IN_PROGRESS`。
+Topic 08は `topic_08_exam_reanswer_after_revision_complete / IN_PROGRESS`。
 
-完成数は `7 / 12`。次工程は補強PDFを含む完成教材だけで固定5問・9答案要素を保存済み正答を先に見ず再独立解答すること。
+完成数は `7 / 12`。次工程は最終QA。
