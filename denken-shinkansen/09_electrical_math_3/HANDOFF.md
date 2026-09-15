@@ -4,23 +4,21 @@
 
 ## 現在地
 
-Topic 01〜07は `completed`。
+Topic 01〜08は `completed`。
 
-Topic 08 `積分 速度曲線の面積は距離` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、初回完成後独立再解答、不足前提3群の最小補強source/PDF、補強後の再独立解答、初回最終QAまで実施。
+Topic 08 `積分 速度曲線の面積は距離` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立計算・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、初回完成後独立再解答、不足前提3群の最小補強source/PDF、補強後の再独立解答、進捗記録同期、最終QA再判定まで完了。
 
-補強後の完成教材だけによる固定5問・9答案要素の再独立解答は `5 / 5問・9 / 9答案要素 PASS`。技術内容、固定EXAM_ALIGNMENT、必須成果物、練習QA、既存表示QA記録、仕様境界はPASS。
+補強後の完成教材だけによる固定5問・9答案要素の再独立解答は `5 / 5問・9 / 9答案要素 PASS`。初回最終QAで唯一FAILだった進捗記録2箇所も解消し、必須成果物、練習QA、既存表示QA記録、固定範囲・後続Topic境界を再確認して `PASS / completed` とした。
 
-初回最終QAで唯一の未完了理由だった進捗記録2箇所は、主source冒頭と練習source末尾とも実成果物へ同期済み。技術本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・補強成果物・独立再解答結果は変更していない。次は最終QAを再判定する。
+完成数: `8 / 12`
 
-完成数: `7 / 12`
+current_status: `topic_08_completed`
 
-current_status: `topic_08_source_progress_synced`
+last_completed_topic: `08 積分 速度曲線の面積は距離`
 
-last_completed_topic: `07 微分② 速度を微分すると加速度`
+active_topic: `09 微積分で電気を読む`
 
-active_topic: `08 積分 速度曲線の面積は距離`
-
-next_start: `Topic 08 最終QA再判定`
+next_start: `Topic 09 制作前EXAM_ALIGNMENT`
 
 ## Topic 07 完了記録
 
@@ -167,24 +165,27 @@ next_start: `Topic 08 最終QA再判定`
 
 `topics/08_integral_distance/08_integral_distance_final_qa.md`
 
-初回判定は `NEEDS_REVISION / IN_PROGRESS`。
-
-PASS項目:
-- 必須成果物の実在
-- 固定EXAM_ALIGNMENT 5問・9答案要素
-- 制作前独立検証 `5 / 5問・9 / 9答案要素 PASS`
-- 補強後独立再解答 `5 / 5問・9 / 9答案要素 PASS`
-- 練習独立計算QA `12 / 12 PASS`
-- PDF/PPTXの既存表示QA記録
-- 固定範囲・後続Topic境界
-
-初回FAIL項目はsource進捗整合のみだった。
+初回判定は `NEEDS_REVISION / IN_PROGRESS`。初回FAIL項目はsource進捗整合のみだった。
 
 - 主source `08_integral_distance.md` 冒頭 `## 状態`
 - 練習source `08_integral_distance_practice.md` 末尾
 
-この2箇所は2026-09-16に実成果物へ同期済み。技術本文・数式・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・補強成果物・独立再解答は変更していない。
+この2箇所を実成果物へ同期後に最終QAを再判定し、次を再確認した。
+
+- 必須成果物の実在: PASS
+- 固定EXAM_ALIGNMENT 5問・9答案要素: PASS
+- 制作前独立検証 `5 / 5問・9 / 9答案要素 PASS`
+- 補強後独立再解答 `5 / 5問・9 / 9答案要素 PASS`
+- 練習独立計算QA `12 / 12 PASS`
+- PDF/PPTXの既存表示QA記録: PASS
+- 固定範囲・後続Topic境界: PASS
+- source進捗整合: PASS
+- 教材外知識補完: 0件
+- 固定範囲外追加: 0件
+- 未確認新幹線実値追加: 0件
+
+最終判定は `PASS / completed`。
 
 ## 次に行うこと
 
-Topic 08の最終QAを再判定する。初回最終QAでFAILだったsource進捗整合が解消していることを確認し、他の品質ゲートを再確認したうえで `PASS / completed` 可否を判定する。
+Topic 09「微積分で電気を読む」の制作前EXAM_ALIGNMENTを実施する。系列SPECの固定範囲（`i=dq/dt`、`q=∫i dt`、`e=-N dΦ/dt`、`E=∫P dt`、`W=∫F dx`）だけを対象とし、公式過去問を直近年度から調査して品質ゲート対象を固定する。
