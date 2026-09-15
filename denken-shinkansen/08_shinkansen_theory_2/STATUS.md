@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 9 / 21
-- current_status: `topic_10_explanation_source_complete`
+- current_status: `topic_10_explanation_pdf_complete`
 - last_completed_topic: `09 新幹線の25kV交流をフェーザで表す`
 - active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
-- next_start: Topic 10解説PDF＋全ページ表示QA
+- next_start: Topic 10練習問題source作成
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -95,7 +95,7 @@
 ## Topic 10 制作進捗
 - [x] 制作前EXAM_ALIGNMENT: 一次5問・20小問
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋表示QA
+- [x] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
@@ -103,18 +103,17 @@
 
 ## 今回進めた内容
 
-Topic 10の固定5問・20小問から逆算し、解説本文＋3段階例題を主sourceへ反映した。
+Topic 10の主sourceから解説PDFを作成し、表示・文字抽出QAを完了した。
 
-- `ω=2πf`、`XL=ωL`、`XC=1/(ωC)` の周波数依存を整理
-- 直列RLCの複素インピーダンス、共振条件、Q値、電圧拡大を説明
-- 理想並列LCと、R-L枝＋Cの損失を含む並列回路を分離して説明
-- `Im(Y)=0` と `|Y|`最小を同一視しない解法を明示
-- 教育用RLCモデルで50Hz/55Hz/60Hzの `XL`、`XC`、`|Z|`、電流、位相を比較
-- 基礎／本試験標準／複合ひっかけの3段階例題を作成
-- 固定5問・20小問を本文へ全件マッピング
+- 成果物: `topics/10_hokuriku_frequency_rlc/10_hokuriku_frequency_rlc_explanation.pdf`
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- クリッピング・重なり・文字化け: 0件
+- 固定一次5問・20小問を変更せず維持
 - 二次採用0問・二次数合わせ0件を維持
 - Topic 11以降の論点、未確認実設備値の追加0件
 
 ## 判定
 
-Topic 10は `explanation source complete / IN_PROGRESS`。完成数は `9 / 21`。次工程は解説PDF＋全ページ表示QA・文字抽出QA。
+Topic 10は `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `9 / 21` のまま。次工程は練習問題source作成。
