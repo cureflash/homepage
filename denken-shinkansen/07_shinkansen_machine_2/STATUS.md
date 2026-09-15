@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_11_blind_reanswer_ready`
+- current_status: `topic_11_independent_reanswer_complete`
 - last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
 - active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 完成後独立再解答
+- next_start: Topic 11 最終QA
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -230,8 +230,20 @@
 - [x] 固定範囲外論点・未確認実車値追加 `0件`
 - [x] 保存済み答案を先に見ない新runから完成後独立再解答可能
 
+## Topic 11 完成後独立再解答
+- [x] 公式解答・保存済み正答を先に見ず、完成教材だけで固定5問を再解答
+- [x] R07 一次 機械 問4: `2 / 2 PASS`
+- [x] R06 一次 機械 問2: `1 / 1 PASS`
+- [x] R02 一次 機械 問2: `3 / 3 PASS`
+- [x] R04 一次 機械 問4: `5 / 5 PASS`
+- [x] H22 二次 機械・制御 問3: `4 / 4 PASS`
+- [x] 合計 `15 / 15 PASS`
+- [x] 教材外知識補完 `0件`
+- [x] 固定範囲外論点・未確認実車値の追加 `0件`
+- [x] 固定5問・15答案要素、教材本文、練習問題、PDF/PPTXの内容変更 `0件`
+
 ## 今回進めた内容
-Topic 11の独立再解答前ゲートを完了した。必須先読み対象から制作前の保存済み答案・完成済み導出結果を除去し、固定一次4問＋二次1問・15答案要素、教材本文、PDF/PPTX、練習問題、固定範囲は変更していない。固定範囲外論点・未確認実車値の追加は0件。
+Topic 11の完成後独立再解答を完了した。公式解答・保存済み正答を先に見ず、完成教材だけで固定一次4問＋二次1問・15答案要素を再解答し、公式解答・標準解答との照合は `15 / 15 PASS`。教材外知識補完、固定範囲外論点、未確認実車値の追加はいずれも0件。
 
 ## 判定
-Topic 11は `topic_11_blind_reanswer_ready / IN_PROGRESS`。完成数は `10 / 22`。次は公式解答・保存済み正答を先に見ず、完成教材だけを使った完成後独立再解答。
+Topic 11は `topic_11_independent_reanswer_complete / IN_PROGRESS`。完成数は `10 / 22`。次はTopic 11の最終QA。
