@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_blind_reanswer_ready`
+- current_status: `topic_07_independent_reanswer_complete`
 - last_completed_topic: `06 275,000Vをどうやって25,000Vにする？`
 - active_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
-- next_start: 改定品質ゲート3問（R4上機械問9、H30電力問8、H22理論問9）を、公式解答・保存済み正答を開く前に完成教材だけで独立再解答し、その後に公式解答と照合する
+- next_start: 改定独立再解答 `3 / 3 PASS` を主sourceへ同期し、その後Topic 07最終QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -17,7 +17,7 @@
 - [x] 04 東京―佐世保「原子力新幹線」 — completed
 - [x] 05 新幹線を再エネだけで走らせられる？ — completed
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
-- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 必須成果物完成。初回完成後独立再解答は公式解答 `8 / 8` 一致だが教材のみ完結 `2 / 8` で `NEEDS_REVISION`。EXAM_ALIGNMENT再監査で固定対象を3問へ見直し、主sourceへ同期済み。独立再解答前に正答を見ない品質ゲートを守れるよう、必須先読みファイルから改定3問の正答番号を除去済み
+- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 必須成果物完成。初回完成後独立再解答は公式解答 `8 / 8` 一致だが教材のみ完結 `2 / 8` で `NEEDS_REVISION`。EXAM_ALIGNMENT再監査で固定対象を3問へ見直し、改定3問の完成後独立再解答は `(3),(3),(4)` で公式解答と `3 / 3 PASS`、教材のみ完結 `3 / 3 PASS`、教材外知識補完0件
 - [ ] 08 新幹線の変電所はなぜ数十kmおき？
 - [ ] 09 変電所からパンタグラフまでどう送る？
 - [ ] 10 新幹線が突然大電力を使ったら？
@@ -37,6 +37,7 @@ EXAM_ALIGNMENT再監査: `topics/07_phase_conversion/07_phase_conversion_exam_al
 解説画像PowerPoint: `topics/07_phase_conversion/07_phase_conversion_images.pptx`
 PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
 初回独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer.md`
+改定独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer_revised.md`
 
 ### 初回EXAM_ALIGNMENTとFAIL理由
 初回固定5問・8小問:
@@ -70,14 +71,22 @@ R8上〜H18の第三種三相交流問題、スコット結線、三相変圧器
 - SPEC固定範囲変更: `0件`
 - 固定範囲外教材追加: `0件`
 
-### 今回進捗
-改定3問の独立再解答前に保存済み正答を見ないという `EXAM_ALIGNMENT_SPEC.md` の品質ゲートを実行可能にするため、必須先読み対象の `STATUS.md`、`HANDOFF.md`、主sourceから改定3問の正答番号を除去した。
+### 改定完成後独立再解答
+保存済み正答・再監査記録・初回独立再解答記録・公式解答を先に見ず、公式問題文と完成教材だけで解法・解答を確定した後、公式解答と照合した。
 
-次回は、公式問題文と完成教材だけを使って3問の解法・解答を先に確定する。`07_phase_conversion_exam_alignment_reaudit.md`、初回独立再解答記録、公式解答PDFは解答確定後の照合にのみ使う。
+- R4上 機械 問9: `(3)` / 公式 `(3)` / PASS
+- H30 電力 問8: `(3)` / 公式 `(3)` / PASS
+- H22 理論 問9: `(4)` / 公式 `(4)` / PASS
 
-教材本文・固定3問・SPEC範囲・PDF・練習PDF・PowerPointは変更していない。
+集計:
+- 公式解答一致: `3 / 3 PASS`
+- 教材のみ完結: `3 / 3 PASS`
+- 教材外知識補完: `0件`
+- SPEC固定範囲外追加: `0件`
+
+H30電力問8の変圧比は完成済みTopic 06の `V1/V2=N1/N2` を使用し、Topic 07の `P=√3 V_L I_L cosφ` と接続した。H22理論問9は `P=3V_phaseI_phase` と比較して選択肢(4)を誤りと判定した。
 
 Topic 07固定範囲は三相交流、単相交流、線間/相電圧、三相電力、き電用変圧器、相変換、三相側負荷平衡、スコット結線、変形ウッドブリッジ結線、ルーフ・デルタ結線。二種相当の厳密ベクトル導出、Topic 08以降の電圧降下・線路損失・き電回路詳細、Topic 10の力率改善、Topic 11の短絡・保護へは拡張していない。未確認の個別設備定格・配置も実値化していない。
 
 ## 次
-改定品質ゲート3問を完成教材だけで独立再解答する。解法・解答を確定するまでは、正答を含む再監査記録・旧独立再解答記録・公式解答を開かない。確定後に公式解答と照合する。
+改定独立再解答 `3 / 3 PASS` を主sourceのEXAM_ALIGNMENT・状態欄・次工程へ同期する。その後、成果物・表示QA・EXAM_ALIGNMENT・進捗整合をまとめてTopic 07最終QAする。
