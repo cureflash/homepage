@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `09`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `COMPLETED`
 - 更新日: 2026-09-16
 
 ## 固定範囲
@@ -296,4 +296,4 @@ fA=1/(2π√LC)。fB=1/(2π√(2LC))=fA/√2。全直列では L合成=3L、C合
 
 ## 次工程
 
-PowerPoint・完成後独立再解答まで完了。最終QAは進捗記録不整合のみ `NEEDS_REVISION` だったため、このsourceの進捗記録を実成果物へ同期した。次は固定EXAM_ALIGNMENT・教材本文・問題・PDF・PowerPointを変更せず、最終QAを再実施する。最終QAがPASSするまで `completed` にしない。
+Topic 09は最終QA再実施で `PASS / completed`。技術内容は変更していない。次はTopic 10「新幹線が使う電力は「W」だけではない」の制作前EXAM_ALIGNMENTへ進む。
