@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 9 / 21
-- current_status: `topic_10_exam_alignment_complete`
+- current_status: `topic_10_explanation_source_complete`
 - last_completed_topic: `09 新幹線の25kV交流をフェーザで表す`
 - active_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
-- next_start: Topic 10解説本文＋3段階例題
+- next_start: Topic 10解説PDF＋全ページ表示QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -94,7 +94,7 @@
 
 ## Topic 10 制作進捗
 - [x] 制作前EXAM_ALIGNMENT: 一次5問・20小問
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
@@ -103,17 +103,18 @@
 
 ## 今回進めた内容
 
-Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」の制作前EXAM_ALIGNMENTを完了した。
+Topic 10の固定5問・20小問から逆算し、解説本文＋3段階例題を主sourceへ反映した。
 
-- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`を再確認
-- 固定範囲をRLCの周波数依存・共振・Q値・周波数/位相特性に限定
-- 公式過去問を直近年度から確認し、一次5問・20小問を品質ゲート対象として固定
-- R8問5を最新の直接対応問題として採用
-- 二次試験を確認し、固定範囲だけで完結しない問題を件数合わせで採用していない
-- H30二次「電力・管理」問5は共振を含むが、高調波系統・変圧器・直列リアクトル・進相コンデンサ・百分率リアクタンス等を要するため非採用
-- 参考資料は公式正本に加え、e-sysnetと電験王2を比較
+- `ω=2πf`、`XL=ωL`、`XC=1/(ωC)` の周波数依存を整理
+- 直列RLCの複素インピーダンス、共振条件、Q値、電圧拡大を説明
+- 理想並列LCと、R-L枝＋Cの損失を含む並列回路を分離して説明
+- `Im(Y)=0` と `|Y|`最小を同一視しない解法を明示
+- 教育用RLCモデルで50Hz/55Hz/60Hzの `XL`、`XC`、`|Z|`、電流、位相を比較
+- 基礎／本試験標準／複合ひっかけの3段階例題を作成
+- 固定5問・20小問を本文へ全件マッピング
+- 二次採用0問・二次数合わせ0件を維持
 - Topic 11以降の論点、未確認実設備値の追加0件
 
 ## 判定
 
-Topic 10は `EXAM_ALIGNMENT complete / IN_PROGRESS`。完成数は `9 / 21`。次工程は固定5問・20小問から逆算した解説本文＋3段階例題。
+Topic 10は `explanation source complete / IN_PROGRESS`。完成数は `9 / 21`。次工程は解説PDF＋全ページ表示QA・文字抽出QA。
