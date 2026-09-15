@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDFまで完了。
+Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPointまで完了。
 
 完成数: `7 / 21`
 
-current_status: `topic_08_practice_pdf_complete`
+current_status: `topic_08_powerpoint_complete`
 
 active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 
-次工程: Topic 08の解説画像PowerPointを作成する。
+次工程: 完成教材だけで固定一次4問・6小問を独立再解答する。
 
 ## Topic 08 固定範囲
 
@@ -97,6 +97,21 @@ L0系・超電導リニアは `超電導磁石 → 地上コイル → 誘導電
 - 二次採用0問・二次数合わせ0件
 - 固定範囲外論点・超電導物性・未確認実設備値追加0件
 
+## 解説画像PowerPoint QA
+
+- `08_maglev_electromagnetic_induction_images.pptx`
+- 16:9・5枚
+- 1枚目: 固定範囲とL0系への理論接続
+- 2枚目: ファラデー則、`v=dl/dt`、レンツの法則
+- 3枚目: 誘導電流・渦電流・電磁力
+- 4枚目: `W=LI²/2` と結合コイルの磁気エネルギー
+- 5枚目: 固定一次4問・6小問への解法接続
+- 200 dpi全5スライド表示QA: `5 / 5 PASS`
+- overflow検査: `PASS`
+- PPTX ZIP整合性: `PASS`
+- 二次採用0問・二次数合わせ0件
+- 固定範囲外論点・超電導物性・未確認実設備値追加0件
+
 ## 次に行うこと
 
-固定EXAM_ALIGNMENT、完成済み解説・練習sourceを正本として、解説画像PowerPointを作成する。内容は固定範囲内に限定し、公式過去問の選定は変更しない。
+固定EXAM_ALIGNMENTと完成済み教材だけを使い、保存済み正答を先に見ずに一次4問・6小問を独立再解答する。教材外知識で補完した場合はFAILとする。
