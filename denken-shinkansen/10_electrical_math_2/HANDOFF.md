@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜08は `completed`。
+Topic 01〜09は `completed`。
 
-完成数: `8 / 20`
+完成数: `9 / 20`
 
-current_status: `topic_09_source_progress_synced`
+current_status: `topic_09_completed`
 
-active_topic: `09 ラプラス変換`
+active_topic: `10 伝達関数・極・零点`
 
-次工程: Topic 09の最終QAを再判定する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・完成後独立再解答は変更しない。
+次工程: Topic 10の制作前EXAM_ALIGNMENTを作成する。MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECの範囲内で、直近年度優先の公式過去問を調査し、二種相当の対応問題を固定する。
 
 ## 上位仕様
 
@@ -138,7 +138,7 @@ Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取�
 
 総合判定: `PASS / completed`。
 
-## Topic 09 進行記録
+## Topic 09 完了記録
 
 テーマ: `ラプラス変換`
 
@@ -307,41 +307,31 @@ QA:
 
 `topics/09_laplace_transform/09_laplace_transform_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`。
+初回判定は `NEEDS_REVISION / IN_PROGRESS`。技術内容はPASSで、FAILは主sourceの進捗記録2箇所だけだった。
 
-PASS:
-- 必須成果物実在
-- 固定二次5問・6対象設問
-- 完成後独立再解答 `6 / 6 PASS`
-- 解説PDF・練習PDF・PowerPoint表示QA
-- 教材外知識補完0件
-- Topic 10先取り0件
-- 固定範囲外追加0件
-- 未確認実車値依存0件
+その後、主source `09_laplace_transform.md` の以下を実成果物へ同期した。
 
-FAIL:
-- 主source `09_laplace_transform.md` の進捗記録2箇所が旧状態
-  - 冒頭 `## 状態` が解説本文完成時点のまま
-  - 末尾 `## 次工程` が「解説PDFへ反映」のまま
+- 冒頭 `## 状態`
+- 末尾 `## 次工程`
 
-技術内容の修正は不要。進捗記録だけを実成果物へ同期した後、最終QAを再判定する。
+技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・PDF/PPTX・完成後独立再解答は変更していない。
 
-### Topic 09 source進捗同期
+再判定で以下を確認した。
 
-主source `09_laplace_transform.md` の進捗記録2箇所だけを実成果物へ同期済み。
-
-- 冒頭 `## 状態`: 解説PDF、練習source/PDF、PowerPoint、完成後独立再解答、最終QA `NEEDS_REVISION` まで完了した現在地へ同期
-- 末尾 `## 次工程`: source進捗同期後の最終QA再判定へ同期
-- 技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・PDF/PPTX・完成後独立再解答: 変更なし
-- 固定二次5問・6対象設問: 変更なし
-- 完成後独立再解答 `6 / 6 PASS`: 維持
+- 必須成果物実在: PASS
+- 固定二次5問・6対象設問: PASS
+- 完成後独立再解答 `6 / 6 PASS`: PASS
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- source進捗整合: PASS
+- 教材外知識補完: 0件
 - Topic 10先取り: 0件
 - 固定範囲外追加: 0件
-- 教材外知識補完: 0件
 - 未確認実車値依存: 0件
+
+総合判定: `PASS / completed`。
 
 ## 次に行うこと
 
-Topic 09の最終QAを再判定する。
+Topic 10 `伝達関数・極・零点` の制作前EXAM_ALIGNMENTを作成する。
 
-教材本文、固定EXAM_ALIGNMENT、数式、例題、練習問題、PDF、PowerPoint、完成後独立再解答は変更しない。
+MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECの範囲内で、直近年度優先の公式過去問を調査し、二種相当の対応問題を固定する。仕様外論点を件数合わせで追加しない。
