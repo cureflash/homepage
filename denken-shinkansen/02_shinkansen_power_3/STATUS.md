@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 6 / 16
-- current_status: `topic_07_final_qa_needs_revision`
+- current_status: `topic_07_practice_qa_exam_alignment_synced`
 - last_completed_topic: `06 275,000Vをどうやって25,000Vにする？`
 - active_topic: `07 なぜ三相交流をそのまま架線へ流さない？`
-- next_start: PowerPoint Slide 4・PowerPoint QA・練習PDF QAの旧5問対応を改定3問へ同期し、PowerPoint表示QAを再実施する
+- next_start: PowerPoint Slide 4・PowerPoint QAの旧5問対応を改定3問へ同期し、PowerPoint表示QAを再実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -17,7 +17,7 @@
 - [x] 04 東京―佐世保「原子力新幹線」 — completed
 - [x] 05 新幹線を再エネだけで走らせられる？ — completed
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
-- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 改定EXAM_ALIGNMENT 3問の完成後独立再解答は `3 / 3 PASS`、教材外知識補完0件。最終QAでPowerPoint Slide 4・PowerPoint QA・練習PDF QAが旧5問対応のままと判明し `NEEDS_REVISION`
+- [ ] 07 なぜ三相交流をそのまま架線へ流さない？ — 改定EXAM_ALIGNMENT 3問の完成後独立再解答は `3 / 3 PASS`、教材外知識補完0件。前回最終QAで検出した練習PDF QAの旧5問対応は改定3問へ同期済み。PowerPoint Slide 4・PowerPoint QAの旧5問対応が残るため未完了
 - [ ] 08 新幹線の変電所はなぜ数十kmおき？
 - [ ] 09 変電所からパンタグラフまでどう送る？
 - [ ] 10 新幹線が突然大電力を使ったら？
@@ -58,27 +58,19 @@ PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
 - 教材外知識補完: `0件`
 - SPEC固定範囲外追加: `0件`
 
-## 最終QA結果
-判定: `NEEDS_REVISION`。
+## 今回同期した不整合
+前回最終QAの残件のうち、`07_phase_conversion_practice_qa.md` の「固定過去問への接続」を旧5問から改定3問へ同期した。
 
-PASS:
-- 必須成果物の実在
-- 改定EXAM_ALIGNMENT 3問
-- 改定完成後独立再解答 `3 / 3 PASS`
-- 解説PDF・練習PDF・PowerPointの既存表示QA
-- SPEC境界
+- R4上 機械 問9: 練習問6・7・8
+- H30 電力 問8: 練習問3・4・11（変圧比はTopic 06既習）
+- H22 理論 問9: 練習問1・3・5でY結線・線間/相・三相電力を練習。平衡Y結線の中性線電流0は解説本文と改定完成後独立再解答で確認済み
 
-要修正:
-1. `07_phase_conversion_powerpoint_qa.md` が旧固定5問・8小問を正本としており、Slide 4も旧5問対応表のまま。
-2. `07_phase_conversion_practice_qa.md` の「固定過去問への接続」が旧5問のまま。
-3. PowerPoint QA末尾の次工程が「固定5問・8小問の独立再解答」のままで現在地と不一致。
+練習PDF本文・問題数・正答は変更していない。再監査で除外したR7下理論問15、R5下理論問15、H27機械問7は現行品質ゲートとして扱わない。
 
-旧固定対象から除外済み:
-- R7下 理論 問15(a)(b) — RLCの無効電流相殺等が必要
-- R5下 理論 問15(a)(b) — 力率とインピーダンス分解が必要
-- H27 機械 問7 — Δ-Y/Y-Δ位相差30°が必要
-
-これらを通すための仕様追加はしない。
+残件:
+1. PowerPoint Slide 4が旧5過去問対応表のまま。
+2. PowerPoint QAが旧固定5問・8小問のまま。
+3. PowerPoint QA末尾の次工程が旧状態のまま。
 
 ## Topic 07 SPEC固定範囲
 - 三相交流
@@ -102,4 +94,4 @@ PASS:
 - 未確認の個別新幹線変電所の結線・定格・配置を実値化しない
 
 ## 次
-PowerPoint Slide 4の過去問対応表を改定3問へ同期し、PowerPoint QAを再実施する。同時に練習PDF QAの過去問対応記録を改定3問へ同期する。問題数や教材範囲は勝手に増やさない。その後、Topic 07最終QAを再判定する。
+PowerPoint Slide 4の過去問対応表を改定3問へ同期し、PowerPoint QAを改定3問へ更新したうえで再レンダリング・はみ出し・ZIP整合性を再QAする。問題数や教材範囲は追加しない。その後、Topic 07最終QAを再判定する。
