@@ -3,19 +3,19 @@
 更新日: 2026-09-15
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は30/38。01〜30がPASS。active topicは31 `ATC② 地上から車上へどう情報を送る？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は31/38。01〜31がPASS。active topicは32 `ATC③ 新幹線をどう自動で減速させる？`。
 
 ## 今回進捗
-Topic 31を1段階進め、主source `31_atc_signal_transmission.md` の旧進捗記録を実在成果物へ同期した。状態欄を解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了済みに更新し、末尾の次工程も最終QA再判定へ同期した。
+Topic 31の最終QAを再判定し、`PASS / COMPLETED` とした。固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物、解説PDF・練習PDF・PowerPoint表示QA、進捗記録整合、固定範囲境界を再確認し、全品質ゲートPASS。
 
-教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、PDF、練習問題、PowerPoint、固定範囲は変更していない。固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、練習独立QA `15 / 15 PASS`、各表示QAは維持している。
+前回FAIL原因だった主sourceの旧進捗記録は同期済みで、再判定時に不整合がないことを確認した。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、PDF、練習問題、PowerPoint、固定範囲は変更していない。
 
-Topic 32の速度検出・速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR具体回路、未確認のATC実車周波数値・符号体系・ビットレート、固定過去問に不要な通信方式各論は追加していない。
+Topic 32の速度検出・速度照査・ブレーキ指令・フィードバック・ブロック線図・AND/OR具体回路、未確認のATC実車周波数値・符号体系・ビットレート、固定過去問に不要な通信方式各論はTopic 31へ追加していない。
 
 更新:
-- `topics/31_atc_signal_transmission/31_atc_signal_transmission.md` — 状態欄・次工程を実在成果物へ同期
-- `STATUS.md` — `topic_31_source_progress_synced` へ更新
-- `HANDOFF.md` — 次開始点を最終QA再判定へ更新
+- `topics/31_atc_signal_transmission/31_atc_signal_transmission_final_qa.md` — 最終判定を `PASS / COMPLETED` へ更新
+- `STATUS.md` — 完成数31/38、active topicをTopic 32へ更新
+- `HANDOFF.md` — 次開始点をTopic 32制作前EXAM_ALIGNMENTへ更新
 
 ## Topic 31 固定EXAM_ALIGNMENT
 1. R7下 機械 問14 — フローチャートの条件分岐・反復による論理判断 — `3` — PASS
@@ -77,15 +77,13 @@ PowerPoint可視化: `6 / 6 PASS`。
 - 未確認実車値追加: `0件`
 
 ## Topic 31 最終QA
-前回判定は `NEEDS_REVISION / IN_PROGRESS`。
+`PASS / COMPLETED`。
 - 必須成果物: PASS
 - 完成後独立再解答: `6 / 6 PASS`
 - 表示QA: PASS
+- 進捗記録整合: PASS
 - 固定範囲境界: PASS
-- 前回の進捗記録整合: FAIL
-  - `31_atc_signal_transmission.md` の旧進捗記録が実在成果物と不整合だった
-- 今回、状態欄・次工程を実在成果物へ同期済み
-- 最終QA再判定は次工程。再判定前なのでTopic 31はまだ `completed` にしない
+- 完成数を31/38へ更新
 
 ## Topic 31 固定範囲
 扱う:
@@ -106,10 +104,10 @@ PowerPoint可視化: `6 / 6 PASS`。
 - 固定過去問に不要な通信方式各論
 
 ## 現在の状態
-- `current_status`: `topic_31_source_progress_synced`
-- 完成数: 30/38
-- 01〜30: PASS
-- active topic: 31 `ATC② 地上から車上へどう情報を送る？`
+- `current_status`: `topic_31_completed`
+- 完成数: 31/38
+- 01〜31: PASS
+- active topic: 32 `ATC③ 新幹線をどう自動で減速させる？`
 - Topic 31制作前独立解答: `6 / 6 PASS`
 - Topic 31本文マッピング: `6 / 6 PASS`
 - Topic 31解説PDF反映: `6 / 6 PASS`
@@ -117,8 +115,7 @@ PowerPoint可視化: `6 / 6 PASS`。
 - Topic 31練習独立QA: `15 / 15 PASS`
 - Topic 31 PowerPoint可視化: `6 / 6 PASS`
 - Topic 31完成後独立再解答: `6 / 6 PASS`
-- Topic 31 source進捗記録: 同期済み
-- Topic 31最終QA: 前回 `NEEDS_REVISION / IN_PROGRESS`、再判定待ち
+- Topic 31最終QA: `PASS / COMPLETED`
 
 ## 次の正確な開始点
-Topic 31の最終QAを再判定する。必須成果物、固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、解説PDF・練習PDF・PowerPoint表示QA、固定範囲境界、source進捗記録整合を確認し、全件PASSなら `completed` とする。
+Topic 32 `ATC③ 新幹線をどう自動で減速させる？` の制作前EXAM_ALIGNMENTを実施する。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。MASTER_SPEC・EXAM_ALIGNMENT_SPECに従い、公式過去問を直近年度から調査し、本文作成前に固定対象を確定する。
