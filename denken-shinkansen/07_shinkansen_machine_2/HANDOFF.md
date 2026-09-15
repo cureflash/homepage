@@ -9,7 +9,7 @@ Topic 01〜08は最終QAまで `PASS / completed`。
 
 active topic: `09 誘導電動機を自由に操るには？`
 
-current status: `topic_09_explanation_source_complete`
+current status: `topic_09_explanation_pdf_complete`
 
 ## Topic 09 固定EXAM_ALIGNMENT
 固定過去問:
@@ -42,12 +42,19 @@ current status: `topic_09_explanation_source_complete`
 - 解説本文: 完成
 - 3段階例題: 基礎・標準・複合を完成
 - 固定18小問の本文マッピング: `18 / 18`
+- 解説PDF: `09_induction_motor_control_explanation.pdf`
+- PDF: A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
 - 固定範囲外追加: 0件
 
 解説source:
 - `topics/09_induction_motor_control/09_induction_motor_control.md`
 
-## 解説sourceで収録した要点
+解説PDF:
+- `topics/09_induction_motor_control/09_induction_motor_control_explanation.pdf`
+
+## 解説source・PDFで収録した要点
 - 総極数 `p` の教材表記 `N_s=120f/p` と、R02一次の総極数 `2p` 表記 `ω_s=2πf/p` の記号差を明示。
 - `N=(1-s)N_s`、`f_2=sf`、回転磁界の相対速度を一続きで説明。
 - `E≈4.44fN_wΦ` から `Φ∝V/f` を導き、V/f一定の意味を説明。
@@ -56,11 +63,11 @@ current status: `topic_09_explanation_source_complete`
 - ベクトル制御は磁束生成成分・トルク生成成分、d軸/q軸の概念までに限定。
 
 ## 次に行うこと
-Topic 09の解説PDFを作成する。
+Topic 09の練習問題sourceを作成する。
 
-1. `09_induction_motor_control.md` の解説本文と3段階例題をPDFへ同期する。
+1. 二種一次試験型に加え、固定範囲に対応する二次試験記述式を含める。
 2. 固定5問・18小問の解法経路を落とさない。
-3. `N_s=120f/p`、`N=(1-s)N_s`、`f_2=sf`、`Φ∝V/f`、`P=Tω` を読みやすく配置する。
-4. 定トルク領域と弱め磁束・定出力領域の違いを図表化してよいが、固定範囲外の新規制御仕様は追加しない。
-5. 全ページ表示QA・文字抽出QAを行う。
+3. 二次記述式は途中式・前提・単位・理由説明まで採点可能な形にする。
+4. V/f、同期速度・滑り・二次周波数、定トルク、弱め磁束・定出力、ベクトル制御概念の固定範囲内で構成する。
+5. Topic 10以降、厳密Park/Clarke変換、制御器設計、センサレス推定器設計を追加しない。
 6. 未確認300系実車値を追加しない。
