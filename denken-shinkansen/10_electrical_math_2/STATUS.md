@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 7 / 20
-- current_status: `topic_08_explanation_pdf_complete`
+- current_status: `topic_08_practice_source_complete`
 - last_completed_topic: `07 一階常微分方程式`
 - active_topic: `08 二階常微分方程式`
-- next_start: Topic 08の練習問題sourceを作成する。固定一次5問・15小問へ全件接続し、Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしない
+- next_start: Topic 08の練習PDFを作成する。完成済み練習source全12問・完全解説を収録し、全ページ表示QA・文字抽出QAを行う。Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしない
 
 ## Topic 07 制作品質ゲート
 
@@ -45,7 +45,7 @@
 - [x] 制作前独立再解答・公式解答照合 `15 / 15 PASS`
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答
@@ -54,27 +54,26 @@
 
 ## 今回進めた内容
 
-Topic 08 `二階常微分方程式` の解説PDFを作成し、GitHub正本へ反映した。
+Topic 08 `二階常微分方程式` の練習問題・完全解説sourceを作成し、GitHub正本へ反映した。
 
 成果物:
-- `topics/08_second_order_ode/08_second_order_ode_explanation.pdf`
-- A4縦 5ページ
+- `topics/08_second_order_ode/08_second_order_ode_practice.md`
+- 全12問、全問五肢択一
+- 基礎3問／標準6問／複合3問
 
-収録範囲:
-- 二階線形微分方程式と二つの初期条件
-- 特性方程式と根分類
-- 過減衰・臨界減衰・不足減衰・無減衰
-- `ω_n`、`ζ`、`ω_d` の区別
+対応範囲:
+- 特性方程式と実根・重根・複素共役根
+- 過減衰・臨界減衰・不足減衰
+- `ω_n`、`ζ`、`ω_d`
 - 直列RLCの二階方程式と初期条件
-- `i=dq/dt` / `i=-dq/dt` の符号判断
-- 機械系 `mx''+cx'+kx=F(t)`
+- `i_L=-dq/dt` を含む符号判断
+- 機械系 `mx''+cx'+kx=0`
 - 二次遅れの時間領域表現
-- 固定一次5問・15小問への対応
-- 基礎／本試験標準／複合の3段階例題
+- 固定一次5問・15小問の要求事項へ全件接続
 
 QA:
-- 200 dpi 全5ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: `PASS`
+- 独立計算・正答一意性: `12 / 12 PASS`
+- 固定EXAM_ALIGNMENT接続: `5 / 5問・15 / 15小問の要求事項をカバー`
 - Topic 09〜10先取り: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
@@ -83,6 +82,6 @@ QA:
 
 ## 判定
 
-Topic 08は `IN_PROGRESS / EXPLANATION_PDF_COMPLETE`。完成数は `7 / 20` のまま。
+Topic 08は `IN_PROGRESS / PRACTICE_SOURCE_COMPLETE`。完成数は `7 / 20` のまま。
 
-次は練習問題source。
+次は練習PDF。
