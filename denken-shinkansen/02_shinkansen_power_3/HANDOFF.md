@@ -3,40 +3,23 @@
 更新日: 2026-09-15
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は6/16。Topic 01〜06は完成済み。active topicは07 `なぜ三相交流をそのまま架線へ流さない？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `7 / 16`。Topic 01〜07は完成済み。
 
 ## 今回進捗
-Topic 07を1段階進め、PowerPoint Slide 4とPowerPoint QAの旧5問対応を現行EXAM_ALIGNMENT 3問へ同期した。
+Topic 07 `なぜ三相交流をそのまま架線へ流さない？` の最終QAを再判定し、`PASS / completed` とした。
 
-- R4上 機械 問9: Slide 2・4
-- H30 電力 問8: Slide 1・4（変圧比はTopic 06既習）
-- H22 理論 問9: Slide 1・4
-- 旧固定対象R7下理論問15、R5下理論問15、H27機械問7: Slide 4・PowerPoint QAから除外
-- PowerPoint: 16:9・4枚を維持
-- 再レンダリング: 1601×900 `4 / 4 PASS`
-- 境界外はみ出し: 0 (`slides_test.py` PASS)
-- PPTX ZIP整合性: PASS
-- SPEC固定範囲外追加: 0件
-
-練習PDF QAは前段階で改定3問へ同期済み。教材本文・練習問題数・改定EXAM_ALIGNMENTは変更していない。
-
-## 現行品質ゲート
+現行品質ゲート:
 - R4上 機械 問9 — スコット結線、二次90°
 - H30 電力 問8 — 変圧比、平衡三相有効電力
 - H22 理論 問9 — Y結線、線間/相関係、三相電力、中性線電流
 
 改定完成後独立再解答は `(3),(3),(4)`、公式解答と `3 / 3 PASS`。教材のみ完結 `3 / 3 PASS`、教材外知識補完0件。
 
-## 残件
-Topic 07最終QAを再判定する。過去問対応、必須成果物、表示QA、進捗記録、SPEC境界がすべてPASSの場合のみ `completed` にする。
+練習PDF QA・PowerPoint Slide 4・PowerPoint QAは現行3問へ同期済み。PowerPointは16:9・4枚、1601×900再表示 `4 / 4 PASS`、境界外はみ出し0、ZIP整合性PASS。SPEC固定範囲外追加0件。
 
-旧固定対象を通すためにRLC、力率とインピーダンス分解、Δ-Y/Y-Δ位相差30°を教材へ追加してはならない。
+最終QA: `topics/07_phase_conversion/07_phase_conversion_final_qa.md`
 
-## 現在状態
-- `current_status`: `topic_07_powerpoint_exam_alignment_synced`
-- 完成数: `6/16`
-- last completed: Topic 06 `275,000Vをどうやって25,000Vにする？`
-- active: Topic 07 `なぜ三相交流をそのまま架線へ流さない？`
+## Topic 07 完了成果物
 - source: `topics/07_phase_conversion/07_phase_conversion.md`
 - EXAM_ALIGNMENT再監査: `topics/07_phase_conversion/07_phase_conversion_exam_alignment_reaudit.md`
 - 解説PDF: `topics/07_phase_conversion/07_phase_conversion_explanation.pdf`
@@ -45,28 +28,15 @@ Topic 07最終QAを再判定する。過去問対応、必須成果物、表示Q
 - 解説画像PowerPoint: `topics/07_phase_conversion/07_phase_conversion_images.pptx`
 - PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
 - 改定独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer_revised.md`
-- 前回最終QA: `topics/07_phase_conversion/07_phase_conversion_final_qa.md`
+- 最終QA: `topics/07_phase_conversion/07_phase_conversion_final_qa.md`
 
-## Topic 07 SPEC固定範囲
-- 三相交流
-- 単相交流
-- 線間電圧
-- 相電圧
-- 三相電力
-- き電用変圧器
-- 相変換
-- 三相側の負荷平衡
-- スコット結線
-- 変形ウッドブリッジ結線
-- ルーフ・デルタ結線
-
-境界:
-- 二種相当の厳密ベクトル導出を追加しない
-- Topic 08以降の電圧降下・線路損失・き電回路詳細へ広げない
-- Topic 10の力率改善へ広げない
-- Topic 11の短絡・保護へ広げない
-- 変形ウッドブリッジ結線・ルーフ・デルタ結線は概略に留める
-- 未確認の個別新幹線変電所の結線・定格・配置を実値化しない
+## 現在状態
+- `current_status`: `topic_07_completed`
+- 完成数: `7 / 16`
+- last completed: Topic 07 `なぜ三相交流をそのまま架線へ流さない？`
+- active: Topic 08 `新幹線の変電所はなぜ数十kmおき？`
 
 ## 次の正確な開始点
-Topic 07最終QAを再判定する。問題数・教材範囲は追加しない。
+Topic 08の制作前EXAM_ALIGNMENTを行う。
+
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 08固定範囲を確認し、公式過去問を直近年度から調査する。本文・PDF等の制作前に、要求知識・使用式・設問型・教材で必要な説明を固定する。件数合わせやTopic 09以降の論点追加はしない。
