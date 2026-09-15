@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 6 / 39
-- current_status: `topic_07_final_qa_needs_revision`
+- current_status: `topic_07_progress_records_synced`
 - last_completed_topic: `06 0系⑥ 主回路全体の電力・損失・効率`
 - active_topic: `07 直流主回路の高出力化`
-- next_start: `07_dc_main_circuit_high_output.md` と `07_dc_main_circuit_high_output_practice_source.md` の旧進捗記録だけを、実在成果物・補強後再独立再解答 `15 / 15 PASS` の現在地へ同期する。技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更しない
+- next_start: Topic 07最終QAを再実施し、主source・練習sourceの旧進捗記録不整合が解消したこと、必須成果物、固定一次4問＋二次1問・15対象項目、補強後再独立再解答 `15 / 15 PASS`、各表示QA、固定範囲外追加0件を再確認する。全件PASSの場合のみ `completed` として完成数を `7 / 39` へ進める
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -17,7 +17,7 @@
 - [x] 04 0系④ タップ制御と加速特性 — PASS
 - [x] 05 0系⑤ 発電ブレーキのエネルギー解析 — PASS
 - [x] 06 0系⑥ 主回路全体の電力・損失・効率 — PASS
-- [ ] 07 直流主回路の高出力化 — 補強後再独立再解答 `15 / 15 PASS`。最終QAは source Markdownの旧進捗記録不整合だけで `NEEDS_REVISION`
+- [ ] 07 直流主回路の高出力化 — 補強後再独立再解答 `15 / 15 PASS`。直近最終QAで指摘されたsource進捗記録不整合は同期済み。最終QA再実施待ち
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -76,6 +76,9 @@
 - 温度補正式・温度上昇計算・詳細熱設計の追加: `0件`
 - 解説本文＋3段階例題: `completed`
 - 固定一次4問＋二次1問・15対象項目: 本文へ全件マッピング
+- 解説PDF・練習PDF・PowerPointへの補強同期: `completed`
+- 補強後再独立再解答: `15 / 15 PASS`
+- 直近最終QAで指摘された旧進捗記録: `同期済み`
 - 実車一次資料・学会資料で確認した主電動機:
   - 0系 MT200B: 185 kW / 415 V / 490 A / 2,200 rpm / 自己通風
   - 100系 MT202: 230 kW / 625 V / 405 A / 2,900 rpm / 他力通風
@@ -107,6 +110,8 @@
 - 合計: 12問、全問完全解説付き
 - 正答・数値条件・問題数変更: `0件`
 - 独立計算・論理・正答一意性QA: `12 / 12 PASS`
+- 練習PDFへの補強同期・表示QA: `PASS`
+- 直近最終QAで指摘された旧進捗記録: `同期済み`
 - 教材外知識補完: `0件`
 - 未確認実車値の真値化: `0件`
 - 固定範囲外追加: `0件`
@@ -157,6 +162,7 @@
 - 独立再解答判定: `PASS`
 
 ## Topic 07 最終QA
+直近の最終QA記録では、以下はPASS済み。
 - 必須成果物: `PASS`
 - 固定EXAM_ALIGNMENT: 一次4問＋二次1問、計5問・15対象項目を維持
 - 完成後独立再解答: `15 / 15 PASS`
@@ -166,9 +172,12 @@
 - 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- `07_dc_main_circuit_high_output.md` の状態欄・完成後独立再解答欄に、PDF/PPTX未同期・再独立再解答未実施という旧進捗が残存: `FAIL`
-- `07_dc_main_circuit_high_output_practice_source.md` の状態欄・次工程に、練習PDF未同期という旧進捗が残存: `FAIL`
-- 最終判定: `NEEDS_REVISION`
+
+直近最終QAでのFAIL要因:
+- 主sourceのPDF/PPTX未同期・再独立再解答未実施という旧進捗記録
+- 練習sourceの練習PDF未同期という旧進捗記録
+
+上記2件の旧進捗記録は本runで実態へ同期済み。直近判定 `NEEDS_REVISION` は履歴として維持し、最終QAを再実施して全件PASSを確認するまではTopic 07を `completed` にしない。
 
 ## Topic 07 固定範囲
 - 主回路構成比較
@@ -189,4 +198,4 @@
 - 位相制御、サイリスタ点弧角、誘導電動機、PWM/VVVF、回生・四象限運転、IGBT/SiC、詳細熱設計
 - 出典で確認できない100系・200系の編成出力、主回路総損失、効率、冷却容量、けん引力・速度特性
 
-次工程は `07_dc_main_circuit_high_output.md` と `07_dc_main_circuit_high_output_practice_source.md` の旧進捗記録だけを現在地へ同期する。技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTX内容は変更しない。
+次工程はTopic 07最終QA再実施。主source・練習sourceの進捗記録同期を確認し、必須成果物、固定一次4問＋二次1問・15対象項目、補強後再独立再解答 `15 / 15 PASS`、各表示QA、固定範囲外追加0件を再確認する。全件PASSの場合のみ `completed` として完成数を `7 / 39` へ進める。
