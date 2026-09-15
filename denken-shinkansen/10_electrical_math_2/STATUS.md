@@ -1,15 +1,15 @@
 # STATUS - 電験二種「電気数学」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 状態
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 8 / 20
-- current_status: `topic_09_powerpoint_complete`
+- current_status: `topic_09_exam_reanswer_complete`
 - last_completed_topic: `08 二階常微分方程式`
 - active_topic: `09 ラプラス変換`
-- next_start: Topic 09の完成後独立再解答。固定二次5問・6対象設問を、保存済み正答を先に見ず完成教材だけで再解答する
+- next_start: Topic 09の最終QA。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認する
 
 ## Topic 07 制作品質ゲート
 
@@ -73,22 +73,22 @@
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答 `6 / 6 PASS`
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 09 `ラプラス変換` の解説画像PowerPointを完成し、GitHub正本へ反映した。
+Topic 09 `ラプラス変換` の完成後独立再解答を実施し、GitHub正本へ反映した。
 
 確認結果:
-- 16:9・5枚
-- 固定二次5問・6対象設問を全件可視化
-- 定義・代表変換対・微分/積分の変換・初期値・RLC変換・部分分数分解・逆変換を収録
-- R6/H29/H25/H24/H18の固定要求を教材内の解法へ接続
-- 全スライド表示QA: `5 / 5 PASS`
-- overflow: 0件
-- PPTX ZIP/XML整合性・再レンダリング: `PASS`
+- 固定二次5問・6対象設問を完成教材の式・解法だけで再導出
+- R6 問4 (4): `11e^{-t}-16e^{-2t}+5e^{-3t}`
+- H29 問4 (1)〜(2): `2 / 2 PASS`
+- H25 問4 (1): `(1/2)sin 2t`
+- H24 問4 (1): `t-1+e^{-t}`
+- H18 問4 (1): `y0+(1/(2J))(1-cos 2t)`
+- 完成後独立再解答: `6 / 6 PASS`
 - Topic 10内容の先取り: 0件
 - 件数合わせの固定範囲外追加: 0件
 - 教材外知識補完: 0件
@@ -96,8 +96,8 @@ Topic 09 `ラプラス変換` の解説画像PowerPointを完成し、GitHub正�
 
 ## 判定
 
-Topic 09は `POWERPOINT_COMPLETE / IN_PROGRESS`。
+Topic 09は `EXAM_REANSWER_COMPLETE / IN_PROGRESS`。
 
 完成数は `8 / 20` のまま。
 
-次はTopic 09の完成後独立再解答。
+次はTopic 09の最終QA。
