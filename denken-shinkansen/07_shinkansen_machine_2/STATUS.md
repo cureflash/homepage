@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `8 / 22`
-- current_status: `topic_09_final_qa_needs_revision`
+- current_status: `topic_09_source_progress_synced`
 - last_completed_topic: `08 VVVFインバータで三相交流を作る`
 - active_topic: `09 誘導電動機を自由に操るには？`
-- next_start: Topic 09練習sourceの旧進捗記録を実成果物へ同期する
+- next_start: Topic 09最終QAを再判定する
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -95,12 +95,12 @@
 - [x] 練習PDF表示QA `6 / 6 PASS`・文字抽出QA・主要計算再検算PASSの記録確認
 - [x] PowerPoint表示QA `4 / 4 PASS`・overflow 0件・ZIP整合性PASSの記録確認
 - [x] 固定範囲境界 PASS
-- [ ] 進捗記録整合: `09_induction_motor_control_practice.md` 末尾が「次は練習PDF作成」の旧記録のまま
+- [x] 進捗記録整合: `09_induction_motor_control_practice.md` 末尾を実成果物へ同期済み
 
 ## 今回進めた内容
-Topic 09「誘導電動機を自由に操るには？」の最終QAを実施した。技術内容、必須成果物、一次3問＋二次2問・18小問、完成後独立再解答 `18 / 18 PASS`、PDF/PPTX QA、固定範囲境界はPASS。
+Topic 09「誘導電動機を自由に操るには？」の前回最終QAで唯一残った進捗記録不整合を修正した。`09_induction_motor_control_practice.md` 末尾 `## 次工程` を、実在する練習PDF・PowerPoint・完成後独立再解答の現在地へ同期した。
 
-未完了理由は進捗記録1箇所のみ。`09_induction_motor_control_practice.md` 末尾の `## 次工程` が「この練習問題sourceから練習PDFを作成」と残っており、実在する練習PDF・PowerPoint・独立再解答の現在地と不整合。
+変更は進捗記録のみ。技術本文・固定EXAM_ALIGNMENT・15問・解答解説・問題・正答・PDF/PPTXは変更していない。
 
 ## 判定
-Topic 09は `NEEDS_REVISION / IN_PROGRESS`。完成数は `8 / 22` のまま。次は練習sourceの旧進捗記録だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 09は `IN_PROGRESS`。前回最終QAの唯一の不整合は解消済みだが、最終QAの再判定前なので完成数は `8 / 22` のまま。次はTopic 09最終QAを再判定する。
