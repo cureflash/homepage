@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「理論」
 
-更新日: 2026-09-15
+更新日: 2026-09-16
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 8 / 21
-- current_status: `topic_09_final_qa_rerun_needs_revision`
+- current_status: `topic_09_practice_progress_synced`
 - last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 - active_topic: `09 新幹線の25kV交流をフェーザで表す`
-- next_start: Topic 09練習source末尾の残存進捗表現1箇所だけを現在地へ同期する
+- next_start: Topic 09最終QAを再々実施する
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -72,22 +72,20 @@
 - [x] 主sourceの旧進捗表現同期
 - [x] 練習sourceの旧「次はPowerPoint」表現同期
 - [x] 最終QA再実施: `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 練習source末尾の残存「主source同期→最終QA」表現同期
+- [x] 練習source末尾の残存「主source同期→最終QA」表現同期
 - [ ] 最終QA再々実施
 
 ## 今回進めた内容
 
-Topic 09の最終QAを再実施した。
+Topic 09練習source末尾の残存進捗表現1箇所だけを現在地へ同期した。
 
-- 必須成果物: `PASS`
-- 固定一次5問・11小問の過去問対応: `11 / 11 PASS`
-- 完成後独立再解答: `11 / 11 PASS`
-- 二次採用0問・二次数合わせ0件: 維持
-- SPEC境界・表示QA・練習QA: `PASS`
-- 主source進捗: 現在地へ同期済み
-- 練習source末尾: 「次は主sourceを同期し、その後最終QA」と残存しており、既に完了した主source同期と矛盾
-- 技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF・PowerPointは変更していない
+- `09_25kv_ac_phasor_practice.md` 末尾の `# 次工程` を「次はTopic 09最終QAを再々実施する」へ更新
+- 技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答は変更していない
+- PDF・PowerPointは変更していない
+- 固定一次5問・11小問、独立再解答 `11 / 11 PASS` を維持
+- 二次採用0問・二次数合わせ0件を維持
+- 固定範囲外追加・未確認実設備値追加0件を維持
 
 ## 判定
 
-Topic 09は `NEEDS_REVISION / IN_PROGRESS`。未完了理由は練習source末尾の残存進捗表現1箇所のみ。完成数は `8 / 21` のまま。次工程は当該1箇所だけを現在地へ同期する。
+Topic 09は `IN_PROGRESS`。前回最終QAで指摘された進捗記録不整合は解消した。完成数は `8 / 21` のまま。次工程は最終QA再々実施。
