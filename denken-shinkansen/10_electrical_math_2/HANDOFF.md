@@ -8,11 +8,11 @@ Topic 01〜08は `completed`。
 
 完成数: `8 / 20`
 
-current_status: `topic_09_explanation_pdf_complete`
+current_status: `topic_09_practice_source_complete`
 
 active_topic: `09 ラプラス変換`
 
-次工程: Topic 09の練習問題source。
+次工程: Topic 09の練習PDF。
 
 ## 上位仕様
 
@@ -148,6 +148,9 @@ source:
 解説PDF:
 `topics/09_laplace_transform/09_laplace_transform_explanation.pdf`
 
+練習source:
+`topics/09_laplace_transform/09_laplace_transform_practice.md`
+
 ### Topic 09 固定範囲
 
 - ラプラス変換の定義
@@ -222,8 +225,27 @@ QA:
 - 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
+### Topic 09 練習問題source
+
+`topics/09_laplace_transform/09_laplace_transform_practice.md`
+
+内容:
+- 全12問
+- 一次型8問／二次記述型4問
+- 固定二次5問・6対象設問へ全件接続
+- 微分・積分の変換、初期値、代表変換対、部分分数分解、逆変換を反復
+- 一階・二階微分方程式のラプラス変換による解き直しを収録
+- 単位ステップと単位インパルスの区別を収録
+
+QA:
+- 独立計算・正答一意性 `12 / 12 PASS`
+- 教材外知識補完: 0件
+- Topic 10先取り: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
 ## 次に行うこと
 
-Topic 09 `ラプラス変換` の練習問題sourceを1段階進める。
+Topic 09 `ラプラス変換` の練習PDFを1段階進める。
 
-固定済みEXAM_ALIGNMENTの5問・6対象設問と完成済み解説だけを根拠にし、Topic 10の伝達関数・極・零点を追加しない。
+完成済み `09_laplace_transform_practice.md` をそのまま反映し、全ページ表示QA・文字抽出QAを行う。
