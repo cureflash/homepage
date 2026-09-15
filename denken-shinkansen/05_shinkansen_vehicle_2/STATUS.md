@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 9 / 39
-- current_status: `topic_09_completed`
+- current_status: `topic_10_explanation_source_complete`
 - last_completed_topic: `09 直流機方式の損失・熱設計`
 - active_topic: `10 300系① 誘導電動機等価回路`
-- next_start: Topic 10の制作前EXAM_ALIGNMENTを行う。二種の一次・二次を合わせ原則5問以上を直近年度優先で調査し、二次対応論点で確認できる記述問題を最低1問含め、固定範囲外を件数合わせで追加しない
+- next_start: Topic 10の解説PDFを制作する。固定一次3問＋二次2問・22答案要素、3段階例題、SPEC指定4グラフへつながる説明を維持し、固定範囲外と未確認300系実車値を追加しない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -457,4 +457,34 @@
 - 進捗記録整合: `PASS`
 - 最終判定: `PASS / completed`
 
-次工程はTopic 10 `300系① 誘導電動機等価回路` の制作前EXAM_ALIGNMENT。
+## Topic 10 制作前EXAM_ALIGNMENT
+- source: `topics/10_300series_induction_motor_equivalent_circuit/10_300series_induction_motor_equivalent_circuit.md`
+- 固定過去問: 一次3問＋二次2問、計5問
+- 固定対象: 一次11答案要素＋二次11答案要素、計22答案要素
+- 制作前独立検証: 一次 `11 / 11 PASS`、二次 `11 / 11 PASS`、合計 `22 / 22 PASS`
+- R8 一次 機械 問2: (1)〜(5)
+- R7 一次 機械 問2: (1)〜(5)
+- R3 二次 機械・制御 問1: (1)〜(6)
+- H28 二次 機械・制御 問1: (1)〜(5)
+- H25 一次 機械 問1: (1)のみ
+- 二次記述問題: `2問`
+- 固定範囲外知識による補完: `0件`
+- 後続Topicの件数合わせ採用: `0件`
+- 未確認300系実車値追加: `0件`
+
+## Topic 10 解説source
+- `10_300series_induction_motor_equivalent_circuit.md`: 解説本文＋3段階例題 `completed`
+- 固定一次3問＋二次2問・22答案要素: 本文へ `22 / 22` マッピング
+- 一相分等価回路、抵抗測定・無負荷試験・拘束試験、`r2'/s`、`P2`・`Pc2`・`Pm`、トルク、最大トルク、比例推移、効率を固定範囲内で整理
+- 3段階例題: 基礎・本試験標準・複合を各1問、途中式・成立条件・検算付き
+- SPEC指定4グラフへつながる計算条件: `4 / 4`
+  - トルク―すべり
+  - 出力―すべり
+  - 効率―負荷率
+  - 二次抵抗変更時の特性
+- グラフ・例題の数値は教育用仮定値と明記し、300系実車値として扱わない
+- Topic 11〜13のPWM/VVVF/回生等を追加: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認300系実車値追加: `0件`
+
+次工程はTopic 10 `300系① 誘導電動機等価回路` の解説PDF。
