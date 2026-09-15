@@ -7,9 +7,9 @@
 
 Topic 01〜08は最終QAまで `PASS`。完成数は `8 / 39`。
 
-現在地は `topic_09_independent_reanswer_passed`。Topic 09 `直流機方式の損失・熱設計` は、制作前EXAM_ALIGNMENTの固定一次4問＋二次1問・14対象項目を変更せず、解説本文＋3段階例題、解説PDF、練習問題・完全解説source/PDF、解説画像PowerPoint、完成後独立再解答まで完了した。完成教材のみで一次 `11 / 11 PASS`、二次 `3 / 3 PASS`、合計 `14 / 14 PASS`。教材外知識補完・固定範囲外追加・未確認実車値追加は0件。
+現在地は `topic_09_final_qa_needs_revision`。Topic 09 `直流機方式の損失・熱設計` は、必須成果物、固定一次4問＋二次1問・14対象項目、完成後独立再解答 `14 / 14 PASS`、PDF/PPTX QA、固定範囲境界までPASS。最終QAの唯一のFAILは主source `09_dc_machine_loss_thermal_design.md` 冒頭 `## 状態` の旧進捗2記述で、「解説PDF、練習source/PDF、解説画像PowerPointは未制作」「次工程は解説PDF」が実成果物と矛盾している。
 
-次工程はTopic 09の最終QA。必須成果物、固定一次4問＋二次1問・14対象項目、独立再解答 `14 / 14 PASS`、PDF/PPTX QA、進捗記録整合、固定範囲境界を再確認する。
+次工程は主source冒頭の旧進捗2記述だけを実成果物へ同期する。技術本文、固定EXAM_ALIGNMENT、数式、例題、練習問題・正答、PDF/PPTX、完成後独立再解答は変更しない。同期後に最終QAを再判定する。
 
 ## Topic 01〜06
 - Topic 01〜06: 最終QA `PASS / completed`
@@ -174,9 +174,22 @@ source: `topics/09_dc_machine_loss_thermal_design/09_dc_machine_loss_thermal_des
 - 未確認実車値追加: `0件`
 - 独立再解答判定: `PASS`
 
-## 次の正確な開始点
-Topic 09 `直流機方式の損失・熱設計` の最終QA。
+## Topic 09 最終QA
+- `09_dc_machine_loss_thermal_design_final_qa.md`: `NEEDS_REVISION / IN_PROGRESS`
+- 必須成果物: `PASS`
+- 固定一次4問＋二次1問・14対象項目: 維持
+- 完成後独立再解答: 一次 `11 / 11 PASS`、二次 `3 / 3 PASS`、合計 `14 / 14 PASS`
+- 解説PDF・練習PDF・PowerPoint QA: `PASS`
+- 練習問題: `12 / 12 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+- 進捗記録整合: `FAIL`
+- exact blocker: 主source `## 状態` の旧進捗2記述のみ
 
-1. 必須成果物（source、解説PDF、練習source/PDF、PowerPoint、独立再解答記録）を確認する。
-2. 固定一次4問＋二次1問・14対象項目と独立再解答 `14 / 14 PASS` を再確認する。
-3. PDF/PPTXのQA記録、進捗記録整合、固定範囲境界を確認し、PASSならTopic 09をcompletedへ移す。
+## 次の正確な開始点
+Topic 09 `直流機方式の損失・熱設計` の主source進捗記録同期。
+
+1. `09_dc_machine_loss_thermal_design.md` 冒頭 `## 状態` の「解説PDF、練習source/PDF、解説画像PowerPointは未制作」「次工程は解説PDF」を、実成果物（解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了）へ同期する。
+2. 技術本文、固定EXAM_ALIGNMENT、数式、例題、練習問題・正答、PDF/PPTX、独立再解答は変更しない。
+3. 同期後にTopic 09最終QAを再判定する。
