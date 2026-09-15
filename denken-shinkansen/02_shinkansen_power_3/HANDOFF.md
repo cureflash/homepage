@@ -6,43 +6,42 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は6/16。Topic 01〜06は完成済み。active topicは07 `なぜ三相交流をそのまま架線へ流さない？`。
 
 ## 今回進捗
-Topic 07の完成後独立再解答を実施し、`topics/07_phase_conversion/07_phase_conversion_independent_reanswer.md` へ記録した。
+Topic 07のEXAM_ALIGNMENT再監査を完了し、`topics/07_phase_conversion/07_phase_conversion_exam_alignment_reaudit.md` を追加した。
 
-固定5問・8小問は公式解答と `8 / 8` 一致したが、完成教材だけで完結できたのは `2 / 8`。R7下理論問15(a)(b)は並列RLCの相殺・有効電力、R5下理論問15(a)(b)は力率とインピーダンスの関係、H27機械問7はΔ-Y/Y-Δの30°位相差が現在の学習用教材にないため、合計6小問で教材外知識補完が必要だった。
+初回固定5問・8小問は公式解答と `8 / 8` 一致したが、教材のみ完結は `2 / 8` だった。教材外補完を要したR7下理論問15、R5下理論問15、H27機械問7について、固定問題を通すためだけのRLC、力率・インピーダンス分解、Δ-Y/Y-Δ位相差等を教材へ追加せず、公式過去問側を再監査した。
 
-`EXAM_ALIGNMENT_SPEC.md` は教材外知識で補って解いた場合をFAILとするため、判定は `NEEDS_REVISION`。Topic 07は `completed` にしていない。固定過去問を通すためだけのSPEC外追加も行っていない。
+R8上〜H18の第三種理論「三相交流」問題一覧と、第三種のスコット結線・三相変圧器候補を再確認した。RLC、力率改善、Δ-Y等価変換、二電力計、複素量・厳密ベクトル等、Topic 07固定範囲外の中間知識を必要とする問題は固定対象にしない。
+
+新規にH22理論問9を確認した。平衡Y結線の線間/相電圧、線/相電流、三相電力、中性線電流を問う問題で、完成済みTopic 07教材の範囲だけで `(4)` と独立解答でき、公式解答と一致した。
+
+この再監査により、現行SPEC固定範囲へ直接対応し完成教材だけで完答できる公式過去問は次の3問と確定した。
+
+1. R4上 機械 問9 — スコット結線・二次90° — `(3)`
+2. H30 電力 問8 — 変圧比・三相電力 — `(3)`
+3. H22 理論 問9 — Y結線・線間/相関係・三相電力 — `(4)`
+
+`MASTER_SPEC.md` の「該当問題が5問未満しか確認できない場合は確認できた全件を対象」とする例外を適用し、改定品質ゲートを `3問 / 3解答項目` とした。SPEC固定範囲変更0件、固定範囲外教材追加0件。
 
 ## 現在状態
-- `current_status`: `topic_07_independent_reanswer_needs_revision`
+- `current_status`: `topic_07_exam_alignment_reaudit_complete`
 - 完成数: `6/16`
 - last completed: Topic 06 `275,000Vをどうやって25,000Vにする？`
 - active: Topic 07 `なぜ三相交流をそのまま架線へ流さない？`
 - source: `topics/07_phase_conversion/07_phase_conversion.md`
+- EXAM_ALIGNMENT再監査: `topics/07_phase_conversion/07_phase_conversion_exam_alignment_reaudit.md`
 - 解説PDF: `topics/07_phase_conversion/07_phase_conversion_explanation.pdf`
 - 練習PDF: `topics/07_phase_conversion/07_phase_conversion_practice.pdf`
 - 練習PDF QA: `topics/07_phase_conversion/07_phase_conversion_practice_qa.md`
 - 解説画像PowerPoint: `topics/07_phase_conversion/07_phase_conversion_images.pptx`
 - PowerPoint QA: `topics/07_phase_conversion/07_phase_conversion_powerpoint_qa.md`
-- 独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer.md`
+- 初回独立再解答: `topics/07_phase_conversion/07_phase_conversion_independent_reanswer.md`
 
-## Topic 07 固定過去問と完成後判定
-1. R7下 理論 問15(a)(b) — 独立解答 `(3),(3)` / 公式 `(3),(3)` / 教材のみ `FAIL, FAIL`
-2. R5下 理論 問15(a)(b) — 独立解答 `(3),(4)` / 公式 `(3),(4)` / 教材のみ `FAIL, FAIL`
-3. R4上 機械 問9 — 独立解答 `(3)` / 公式 `(3)` / 教材のみ `PASS`
-4. H30 電力 問8 — 独立解答 `(3)` / 公式 `(3)` / 教材のみ `PASS`
-5. H27 機械 問7 — 独立解答 `(3)` / 公式 `(3)` / 教材のみ `FAIL`
+## 初回FAIL理由
+- R7下 理論 問15(a)(b): 並列L/Cの無効電流相殺 `ωL=1/(ωC)` と並列RLCの有効電力処理がTopic 07教材にない。
+- R5下 理論 問15(a)(b): `|Z|=V/I`、`cosφ=R/|Z|` からR/Xを求める中間知識がTopic 07教材にない。
+- H27 機械 問7: Δ-Y/Y-Δの一次二次位相差30°がTopic 07教材にない。
 
-公式解答との一致: `8 / 8`
-教材のみ完結: `2 / 8`
-教材外知識補完が必要: `6 / 8`
-SPEC固定範囲外追加: `0件`
-
-## FAIL理由
-- R7下 理論 問15(a)(b): 並列L/Cの無効電流相殺 `ωL=1/(ωC)` と並列RLCの有効電力処理がTopic 07の学習用教材にない。
-- R5下 理論 問15(a)(b): `|Z|=V/I`、`cosφ=R/|Z|` からR/Xを求める中間知識がTopic 07の学習用教材にない。
-- H27 機械 問7: Δ-Y/Y-Δの一次二次位相差30°がTopic 07の学習用教材にない。スコット結線部分だけでは誤り肢を一意に確定できない。
-
-不足事項はいずれもTopic 07固定範囲そのものではないため、今回の品質ゲート通過だけを目的に教材へ追加していない。
+これらは改定品質ゲートから除外し、教材範囲は広げない。
 
 ## Topic 07 SPEC固定範囲
 - 三相交流
@@ -73,4 +72,4 @@ SPEC固定範囲外追加: `0件`
 - SPEC固定範囲外追加: 0件
 
 ## 次の正確な開始点
-Topic 07のEXAM_ALIGNMENTを再監査する。教材外補完を要したR7下理論問15、R5下理論問15、H27機械問7について、Topic 07のSPEC固定範囲内だけで完答できる公式過去問への差替え、または固定対象の見直しが可能かを直近年度から確認する。固定範囲は拡張しない。
+Topic 07の改定EXAM_ALIGNMENT 3問を `07_phase_conversion.md` へ同期する。その後、R4上機械問9、H30電力問8、H22理論問9を完成教材だけで改めて独立再解答する。固定範囲は拡張しない。
