@@ -5,11 +5,11 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜07は最終QAまで `PASS`。完成数は `7 / 39`。
+Topic 01〜08は最終QAまで `PASS`。完成数は `8 / 39`。
 
-現在地は `topic_08_progress_record_synced`。active topicは Topic 08 `位相制御と平均直流電圧`。制作前EXAM_ALIGNMENTとして一次3問＋二次2問・20対象項目を固定し、制作前独立検証は一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。解説本文＋3段階例題・解説PDF・練習source・練習PDF・解説画像PowerPointまで完成。練習sourceは一次8問＋二次4問の計12問、全問完全解説付きで、固定20対象項目へ `20 / 20` 接続、独立計算・論理・正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、180 dpi全ページ表示QA・文字抽出QA・計算論理 `12 / 12 PASS`。PowerPointは16:9・4スライド、SPEC指定4可視化 `4 / 4`、2400×1350 px全スライド表示QA・overflow・ZIP整合性 `PASS`。完成教材だけで固定5過去問・20対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `7 / 7 PASS`、合計 `20 / 20 PASS`。教材外知識補完・固定範囲外追加・未確認実車値追加はいずれも0件。
+現在地は `topic_08_completed`。Topic 08 `位相制御と平均直流電圧` は、固定一次3問＋二次2問・20対象項目、完成後独立再解答 `20 / 20 PASS`、解説PDF・練習PDF・PowerPoint各QA、固定範囲、進捗記録整合をすべて再確認し、最終QA `PASS / completed` とした。教材外知識補完・固定範囲外追加・未確認実車値追加はいずれも0件。
 
-前回最終QAで唯一FAILだった主source旧進捗2箇所と練習source旧進捗1箇所は、実在成果物と完成後独立再解答 `20 / 20 PASS` の現在地へ同期済み。教材本文・数式・固定EXAM_ALIGNMENT・問題・PDF/PPTXは変更していない。Topic 08はまだ `completed` にせず、次は最終QAだけを再判定する。
+次のactive topicは Topic 09 `直流機方式の損失・熱設計`。次工程は制作前EXAM_ALIGNMENTであり、公式二種過去問を調査して一次・二次を合わせ原則5問以上、二次対応論点では記述問題を最低1問含めて固定し、制作前独立検証を行う。仕様外論点を件数合わせで追加しない。
 
 Topic 07はH21一次「機械」問2(2)の不足「負荷損を規定の基準巻線温度へ補正」を固定範囲内で補強し、解説PDF・練習PDF・PowerPointへの同期と各QAまで完了。補強済み完成教材だけで固定一次4問＋二次1問・15対象項目を再独立再解答し、一次 `13 / 13 PASS`、二次 `2 / 2 PASS`、合計 `15 / 15 PASS`。教材外知識補完は0件。主source・練習sourceの旧進捗記録不整合も解消し、最終QA `PASS / completed`。
 
@@ -274,7 +274,7 @@ source: `topics/08_phase_control_average_dc_voltage/08_phase_control_average_dc_
 - 判定: `PASS`
 
 ## Topic 08 最終QA
-`08_phase_control_average_dc_voltage_final_qa.md` の前回判定は `NEEDS_REVISION`。
+`08_phase_control_average_dc_voltage_final_qa.md` を再判定し、`PASS / completed` とした。
 
 - 必須成果物存在: `PASS`
 - 固定EXAM_ALIGNMENT: 一次3問＋二次2問・20対象項目を維持
@@ -285,12 +285,13 @@ source: `topics/08_phase_control_average_dc_voltage/08_phase_control_average_dc_
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
 - 前回唯一のFAIL要因だった主source旧進捗2箇所・練習source旧進捗1箇所: `同期済み`
-- 再判定: `未実施`
+- 進捗記録整合: `PASS`
+- 最終判定: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 08 `位相制御と平均直流電圧` の最終QA再判定。
+Topic 09 `直流機方式の損失・熱設計` の制作前EXAM_ALIGNMENT。
 
-1. 主source・練習sourceの進捗記録が実在成果物と完成後独立再解答 `20 / 20 PASS` に同期済みであることを確認する。
-2. 必須成果物、固定一次3問＋二次2問・20対象項目、練習12問、PDF/PPTX各QA、固定範囲を再確認する。
-3. 技術本文、数式、固定EXAM_ALIGNMENT、問題、PDF/PPTXは変更しない。
-4. 全品質ゲートがPASSなら Topic 08を `completed` にし、完成数を `8 / 39` へ更新する。
+1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` を再確認する。
+2. Topic 09の固定範囲「銅損、鉄損、機械損、雑負荷損、効率、温度上昇、定格、冷却、負荷率、保守」と指定3可視化だけを対象にする。
+3. 公式二種過去問を直近年度から調査し、一次・二次を合わせ原則5問以上、二次対応論点では記述問題を最低1問含める。
+4. 過去問要求を分解して固定し、制作前独立検証を行う。後続Topicや仕様外論点を件数合わせで追加しない。
