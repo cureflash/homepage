@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 7 / 14
-- current_status: `topic_08_powerpoint_complete`
+- current_status: `topic_08_independent_reanswer_complete`
 - last_completed_topic: `07 モーターはなぜ回る？`
 - active_topic: `08 新幹線の交流25kVとは何なのか`
-- next_start: Topic 08の完成後公式過去問独立再解答を実施する
+- next_start: Topic 08の最終QAを実施する
 
 ## Topic 01 進捗
 
@@ -137,24 +137,23 @@
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後の公式過去問独立再解答
+- [x] 完成後の公式過去問独立再解答 `4 / 4 PASS`
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 08 `新幹線の交流25kVとは何なのか` の解説画像PowerPointを完成し、GitHub正本へ反映した。
+Topic 08 `新幹線の交流25kVとは何なのか` の完成後公式過去問独立再解答を完了し、GitHub正本へ反映した。
 
-- PowerPoint: 16:9 `4枚`
-- 固定4過去問要求との可視化対応: `4 / 4`
-- 収録: 25kVの実効値、最大値・瞬時値・1周期平均、周期/周波数/角周波数・位相、同一周波数正弦波のベクトル合成、波形読取、指定瞬時値への最初の到達時刻
-- 全4スライド表示QA: `4 / 4 PASS`
-- 表示欠け・重なり・文字化け: `0件`
-- overflow検査: `PASS`
-- PPTX ZIP整合性: `PASS`（slide XML `4件`）
-- RLC・リアクタンス・力率・三相・高調波等の後続Topic追加: `0件`
-- 非正弦波の波形率・波高率・三角波・方形波追加: `0件`
-- 未確認新幹線実車値追加: `0件`
+- 固定公式過去問: `4問`
+- 独立解答列: `(5), (3), (5), (1)`
+- 公式解答列: `(5), (3), (5), (1)`
+- 公式解答との一致: `4 / 4 PASS`
+- 教材だけで必要公式・途中式・選択肢を確定: `4 / 4 PASS`
+- 教材外知識補完: `0問`
+- RLC・リアクタンス・力率・三相・高調波等の後続Topic依存: `0問`
+- 非正弦波論点への依存: `0問`
+- 未確認新幹線実車値依存: `0問`
 
 ## 判定
 
-現在 `topic_08_powerpoint_complete`。完成数は `7 / 14` のまま。次はTopic 08の完成後公式過去問独立再解答を実施する。
+現在 `topic_08_independent_reanswer_complete`。完成数は `7 / 14` のまま。次はTopic 08の最終QAを実施する。
