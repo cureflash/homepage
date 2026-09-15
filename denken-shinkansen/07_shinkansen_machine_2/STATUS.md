@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `9 / 22`
-- current_status: `topic_10_independent_reanswer_complete`
+- current_status: `topic_10_final_qa_needs_revision`
 - last_completed_topic: `09 誘導電動機を自由に操るには？`
 - active_topic: `10 新幹線はモーターを発電機にして止まる`
-- next_start: Topic 10 最終QA
+- next_start: Topic 10 練習source末尾の旧進捗記録だけを同期
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -121,8 +121,18 @@
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 - [x] 固定5問・15答案要素、教材本文、練習問題、PDF/PPTXの内容変更 `0件`
 
+## Topic 10 最終QA
+- [x] 必須成果物の実在: PASS
+- [x] 一次4問＋二次1問・15答案要素の過去問対応: PASS
+- [x] 完成後独立再解答 `15 / 15 PASS`
+- [x] 練習問題・PDF/PPTX QA: PASS
+- [x] 固定範囲境界・未確認実車値: PASS
+- [ ] 進捗記録整合: FAIL
+- [ ] `10_regenerative_braking_four_quadrant_practice.md` 末尾が「次は練習PDF作成」の旧状態
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 10の完成後独立再解答を実施した。固定一次4問＋二次1問・15答案要素を完成教材だけで再構築し、回答固定後に公式解答・標準解答へ照合して `15 / 15 PASS`。教材外知識補完、H27/H24の除外小問、Topic 11/16、未確認実車値の追加はいずれも0件。
+Topic 10の最終QAを実施した。技術内容、必須成果物、固定一次4問＋二次1問・15答案要素、完成後独立再解答 `15 / 15 PASS`、表示QA、固定範囲境界はPASS。未完了理由は練習source末尾の旧進捗記録1箇所だけである。教材本文・EXAM_ALIGNMENT・数式・問題・成果物は変更していない。
 
 ## 判定
-Topic 10は `topic_10_independent_reanswer_complete / IN_PROGRESS`。完成数は `9 / 22` のまま。次は最終QAを実施する。
+Topic 10は `topic_10_final_qa_needs_revision / IN_PROGRESS`。完成数は `9 / 22` のまま。次は練習source末尾の旧進捗記録だけを現在地へ同期する。
