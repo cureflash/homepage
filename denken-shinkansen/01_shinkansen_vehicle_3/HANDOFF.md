@@ -6,20 +6,17 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は32/38。01〜32がPASS。active topicは33 `COMTRAC① 東海道新幹線全体をどう監視する？`。
 
 ## 今回進捗
-Topic 33の固定EXAM_ALIGNMENT 5問と解説本文§1〜§15＋3段階例題・解説PDFを変更せず、練習source / PDFを完成した。
+Topic 33の固定EXAM_ALIGNMENT 5問、解説source/PDF、練習source/PDFを変更せず、解説画像PowerPointを完成した。
 
-source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_practice.md`
-PDF: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_practice.pdf`
+PPTX: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_images.pptx`
 
-- 全15問（基礎4／標準8／複合3）
-- 全問五肢択一＋完全解説
-- 正答位置 A/B/C/D/E各3問
-- 固定5過去問 `5 / 5` 練習マッピング
-- 独立数値・論理QA `15 / 15 PASS`
-- 複数正答 `0件`
-- PDF A4縦4ページ
-- 180 dpi全ページ表示QA `4 / 4 PASS`
-- 文字抽出QA PASS
+- 16:9・4枚
+- 内容: COMTRACの公開役割をデータ入力・更新・監視として模式化／2進数とA-D変換／フローチャートの更新順序とデータ伝送用語／固定5過去問対応
+- 固定5過去問 `5 / 5` 可視化
+- 表示QA `4 / 4 PASS`
+- overflow検査 PASS
+- PPTX ZIP整合性 PASS
+- 外部引用画像 `0件`。図は教材用模式図のみ
 - Topic 34範囲追加 `0件`
 - Topic 35範囲追加 `0件`
 - 未確認COMTRAC内部仕様追加 `0件`
@@ -57,14 +54,15 @@ PDF: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_practice.pdf`
 - COMTRAC内部の未確認データ形式、bit割当、更新周期、伝送速度、通信プロトコル、具体的アルゴリズム
 
 ## 現在の状態
-- `current_status`: `topic_33_practice_pdf_complete`
+- `current_status`: `topic_33_powerpoint_complete`
 - 完成数: 32/38
 - 01〜32: PASS
 - Topic 33制作前EXAM_ALIGNMENT: `5 / 5 PASS`
 - Topic 33解説source: 完了
 - Topic 33解説PDF: 完了
 - Topic 33練習source / PDF: 完了
-- Topic 33 PowerPoint: 未着手
+- Topic 33 PowerPoint: 完了
+- Topic 33完成後独立再解答: 未着手
 
 ## 次の正確な開始点
-Topic 33の固定EXAM_ALIGNMENT、解説本文、練習source/PDFを変更せず、解説画像PowerPointを作成する。Topic 34/35範囲と未確認COMTRAC内部仕様は追加しない。
+Topic 33の固定EXAM_ALIGNMENT 5問に対する完成後独立再解答を、保存済み正答を先に見ずに完成教材だけで実施する。教材外知識補完・Topic 34/35範囲追加・未確認COMTRAC内部仕様依存を0件で確認する。
