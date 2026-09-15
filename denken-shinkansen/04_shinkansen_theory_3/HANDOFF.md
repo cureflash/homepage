@@ -4,21 +4,21 @@
 
 ## 現在地
 
-Topic 01〜07は最終QAまでPASSし、`completed`。
+Topic 01〜08は最終QAまでPASSし、`completed`。
 
-Topic 08 `新幹線の交流25kVとは何なのか` は主source・練習sourceの旧進捗記録を実在成果物へ同期済み。過去問対応品質ゲート、必須成果物、既存表示QA、SPEC境界はPASSしており、最終QA再実施待ちの `IN_PROGRESS` である。
+Topic 08 `新幹線の交流25kVとは何なのか` は最終QA再実施で全品質ゲートPASS。主source・練習sourceの進捗記録整合性もPASSし、`completed` とした。
 
-- 完成数: `7 / 14`
-- last completed: `07 モーターはなぜ回る？`
-- active topic: `08 新幹線の交流25kVとは何なのか`
-- current status: `topic_08_source_progress_synced`
-- next start: Topic 08の最終QAを再実施する
+- 完成数: `8 / 14`
+- last completed: `08 新幹線の交流25kVとは何なのか`
+- active topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
+- current status: `topic_08_completed`
+- next start: Topic 09の制作前EXAM_ALIGNMENTを実施する
 
 ## 今回進捗
 
-Topic 08の主source `08_ac_25kv_basics.md` と練習source `08_ac_25kv_basics_practice.md` に残っていた旧進捗記録だけを実態へ同期した。
+Topic 08の最終QAを再実施した。
 
-維持している品質ゲート:
+品質ゲート:
 - 固定公式過去問: `4問`（MASTER_SPEC / EXAM_ALIGNMENT_SPECの5問未満例外）
 - 完成後独立再解答: `4 / 4 PASS`
 - 独立解答列: `(5), (3), (5), (1)`
@@ -27,12 +27,13 @@ Topic 08の主source `08_ac_25kv_basics.md` と練習source `08_ac_25kv_basics_p
 - 解説PDF: 200 dpi表示QA `2 / 2 PASS`、文字抽出QA PASS
 - 練習PDF: 200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS
 - PowerPoint: 表示QA `4 / 4 PASS`、overflow検査PASS、ZIP整合性PASS
+- source進捗記録整合性: PASS
 - 教材外知識補完: `0問`
 - RLC・リアクタンス・力率・三相・高調波等の後続Topic依存: `0問`
 - 非正弦波論点への依存: `0問`
 - 未確認新幹線実車値依存: `0問`
 
-教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、解答、PDF/PPTX成果物の技術内容は変更していない。次工程は最終QA再実施のみ。
+教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、解答、PDF/PPTX成果物の技術内容は変更していない。
 
 ## Topic 08 固定過去問
 
@@ -95,7 +96,7 @@ Topic 08の主source `08_ac_25kv_basics.md` と練習source `08_ac_25kv_basics_p
 - source: `topics/08_ac_25kv_basics/08_ac_25kv_basics.md`
   - EXAM_ALIGNMENT: 完成
   - 解説本文＋3段階例題: 完成
-  - 進捗記録: 同期済み
+  - status: `COMPLETED`
 - 解説PDF: `topics/08_ac_25kv_basics/08_ac_25kv_basics_explanation.pdf`
   - A4縦2ページ
   - 200 dpi表示QA `2 / 2 PASS`
@@ -105,7 +106,7 @@ Topic 08の主source `08_ac_25kv_basics.md` と練習source `08_ac_25kv_basics_p
   - 全15問・全問五肢択一
   - 独立再計算・再判定 `15 / 15 PASS`
   - 正答一意性 `15 / 15 PASS`
-  - 進捗記録: 同期済み
+  - stage: `COMPLETED`
 - 練習PDF: `topics/08_ac_25kv_basics/08_ac_25kv_basics_practice.pdf`
   - A4縦4ページ
   - 200 dpi表示QA `4 / 4 PASS`
@@ -119,12 +120,11 @@ Topic 08の主source `08_ac_25kv_basics.md` と練習source `08_ac_25kv_basics_p
 - 完成後独立再解答記録: `topics/08_ac_25kv_basics/08_ac_25kv_basics_exam_recheck.md`
   - 固定4問 `4 / 4 PASS`
 - 最終QA記録: `topics/08_ac_25kv_basics/08_ac_25kv_basics_final_qa.md`
-  - 現記録は `NEEDS_REVISION / IN_PROGRESS`
-  - 前回唯一のFAILだったsource進捗記録は同期済み。再判定待ち。
+  - `PASS / completed`
 
 ## 次に行うこと
 
-Topic 08の最終QAを再実施する。全品質ゲートPASSの場合のみ`completed`とし、完成数を更新する。
+Topic 09 `北陸新幹線は50Hzと60Hzをどう走る？` の制作前EXAM_ALIGNMENTを実施する。
 
 ## 固定ルール
 
