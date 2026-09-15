@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は品質ゲートPASSでcompleted。active topicは10「新幹線の速度はどう自動制御される？」。
 
 ## 今回進捗
-Topic 10「新幹線の速度はどう自動制御される？」の解説PDFを完成し、表示QA・文字抽出QAまで完了した。
+Topic 10「新幹線の速度はどう自動制御される？」の練習問題sourceを完成し、独立計算・論理QAと正答一意性QAまで完了した。
 
 - 品質ゲート対象: 公式過去問5件
 - 固定問題: R8上 問13、R7下 問13、R5下 問18(a)、R5上 問13、R4上 問15(a)
@@ -14,10 +14,12 @@ Topic 10「新幹線の速度はどう自動制御される？」の解説PDFを
 - 制作前公式照合: `5 / 5 PASS`
 - 解説本文＋3段階例題: 完成
 - 固定5件の本文マッピング: `5 / 5 全件`
-- 解説PDF: A4縦4ページ
-- 200 dpi表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- 文字切れ・重なり・ページ外はみ出し: `0件`
+- 解説PDF: A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`
+- 練習問題source: 全12問・全問五肢択一
+- 問題構成: 基礎3／本試験標準7／複合・応用2
+- 固定EXAM_ALIGNMENT 5件への接続: `5 / 5`
+- 独立計算・論理QA: `12 / 12 PASS`
+- 正答一意性QA: `12 / 12 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外論点追加: `0件`
@@ -31,6 +33,8 @@ source: `topics/10_automatic_control/10_automatic_control.md`
 解説PDF: `topics/10_automatic_control/10_automatic_control_explanation.pdf`
 
 解説PDF QA: `topics/10_automatic_control/10_automatic_control_explanation_pdf_qa.md`
+
+練習問題source: `topics/10_automatic_control/10_automatic_control_practice.md`
 
 ## Topic 10 EXAM_ALIGNMENT
 品質ゲート対象は5件で固定。
@@ -58,7 +62,8 @@ source: `topics/10_automatic_control/10_automatic_control.md`
 - 3段階例題: 完了
 - 固定5件の本文マッピング: `5 / 5 全件`
 - 解説PDF: 完了（A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`）
-- 練習問題source/PDF: 未着手
+- 練習問題source: 完了（12問、全問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`）
+- 練習PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
@@ -67,7 +72,7 @@ source: `topics/10_automatic_control/10_automatic_control.md`
 - 未確認実車値追加: `0件`
 
 ## 次に行う
-Topic 10の固定EXAM_ALIGNMENT 5件と固定範囲に接続する練習問題sourceを作成し、独立計算・論理QAと正答一意性QAを行う。系列SPEC固定範囲外へ拡張しない。
+Topic 10の練習問題source 12問を練習PDFへ反映し、全ページ表示QA・文字抽出QAを行う。系列SPEC固定範囲外へ拡張しない。
 
 ## Topic 09 完了要約
 Topic 09「新幹線はどうやって電気で止まる？」は品質ゲートPASS / completed。
