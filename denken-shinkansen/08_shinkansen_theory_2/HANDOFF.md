@@ -4,15 +4,17 @@
 
 ## 現在地
 
-Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、主source進捗記録同期まで完了。
+Topic 01〜07は `completed`。Topic 08 `L0系はどうやって磁石だけで浮いて進む？` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、主source進捗記録同期、最終QAまで実施済み。
+
+最終QAは `NEEDS_REVISION / IN_PROGRESS`。技術内容・過去問対応・成果物QAはPASSだが、主sourceに制作前の旧進捗表現が1箇所残っている。
 
 完成数: `7 / 21`
 
-current_status: `topic_08_source_progress_synced`
+current_status: `topic_08_final_qa_needs_revision`
 
 active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
 
-次工程: Topic 08の最終QAを実施する。
+次工程: 主sourceの残存旧進捗表現1箇所を現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答は変更しない。
 
 ## Topic 08 固定範囲
 
@@ -101,11 +103,6 @@ L0系・超電導リニアは `超電導磁石 → 地上コイル → 誘導電
 
 - `08_maglev_electromagnetic_induction_images.pptx`
 - 16:9・5枚
-- 1枚目: 固定範囲とL0系への理論接続
-- 2枚目: ファラデー則、`v=dl/dt`、レンツの法則
-- 3枚目: 誘導電流・渦電流・電磁力
-- 4枚目: `W=LI²/2` と結合コイルの磁気エネルギー
-- 5枚目: 固定一次4問・6小問への解法接続
 - 200 dpi全5スライド表示QA: `5 / 5 PASS`
 - overflow検査: `PASS`
 - PPTX ZIP整合性: `PASS`
@@ -127,14 +124,24 @@ L0系・超電導リニアは `超電導磁石 → 地上コイル → 誘導電
 - 固定範囲外論点追加: `0件`
 - 超電導物性・未確認実設備値追加: `0件`
 
-## 進捗記録整合
+## 最終QA
 
-主source `08_maglev_electromagnetic_induction.md` の旧進捗2箇所は実成果物へ同期済み。
+記録: `08_maglev_electromagnetic_induction_final_qa.md`
 
-- 冒頭状態欄は、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了した現在地を記録
-- 末尾 `## 次工程` は最終QAへ更新
-- 技術本文、固定EXAM_ALIGNMENT、数式、例題、問題、PDF/PPTX、独立再解答結果は変更していない
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
+PASS項目:
+- 必須成果物の実在
+- 固定一次4問・6小問の過去問対応 `6 / 6 PASS`
+- 完成後独立再解答 `6 / 6 PASS`
+- 二次採用0問・二次数合わせ0件
+- 解説PDF・練習PDF・PowerPointの既存表示QA
+- 固定範囲境界
+- 技術本文・数式・例題・問題・正答の相互整合
+
+未完了理由:
+- 主sourceのEXAM_ALIGNMENT直後に `完成後は保存済み正答を先に見ず、完成教材だけでこの6小問を独立再解答する。` という制作前の旧進捗表現が1箇所残存。
 
 ## 次に行うこと
 
-必須成果物、固定EXAM_ALIGNMENT、独立再解答 `6 / 6 PASS`、PDF/PPTX表示QA、source進捗整合、固定範囲境界を確認する最終QAを実施する。全件PASSの場合のみ `completed` とする。
+主sourceの残存旧進捗表現を、完成後独立再解答 `6 / 6 PASS` 済みの現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答は変更しない。その後、最終QAを再実施する。
