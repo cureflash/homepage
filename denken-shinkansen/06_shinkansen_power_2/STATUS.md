@@ -4,7 +4,7 @@ updated: 2026-09-15
 series: `06_shinkansen_power_2`
 active_topic: `07`
 theme: 三相電力をどう25kVの単相へ変える？
-current_status: `topic_07_preproduction_independent_verification_complete`
+current_status: `topic_07_explanation_source_complete`
 completed_topics: `6 / 22`
 
 ## Topic 06 final result
@@ -13,7 +13,7 @@ Topic 06「275kVを受ける新幹線変電所の中身」は `PASS / completed`
 
 ## Topic 07 制作前EXAM_ALIGNMENT
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` とGitHub現状をreconcileし、前回blockerを上位仕様の優先順位に基づいて解消した。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` とGitHub現状をreconcileし、上位仕様の優先順位に従って固定範囲と過去問品質ゲートを確定した。
 
 ### 固定範囲
 
@@ -54,6 +54,25 @@ Topic 06「275kVを受ける新幹線変電所の中身」は `PASS / completed`
 - 後続Topic知識依存: `0件`
 - 未確認実設備値依存: `0件`
 
+## Topic 07 解説本文＋3段階例題
+
+source Markdownへ固定10項目を全件収録した。
+
+- 三相120°フェーザ、相間量のフェーザ差、電流フェーザ合成
+- スコット主座/T座構成、T座一次電圧 `√3/2 V_L` のフェーザ幾何、巻数比・電流比
+- 等容量・同一力率負荷での一次三相平衡、巻線容量、結線利用率
+- 三相側不平衡と逆相電流の意味（対称座標法による定量解析はTopic 13へ留保）
+- 変形ウッドブリッジ、ルーフ・デルタの構成比較
+- 再利用可能な解法手順と頻出ミス
+
+3段階例題も収録済み。
+
+1. 基礎: 三相フェーザから相間電圧・枝電流を求める
+2. 本試験標準: スコット結線の巻数比・一次電流・巻線容量・利用率
+3. 複合・ひっかけ: 二つの単相負荷が不均等な場合の三相側不平衡を判定する
+
+例題数値は全て教材用仮定値として明記し、実設備値として扱っていない。V結線、％インピーダンス、ATき電、対称座標法による定量解析等の固定範囲外論点追加は0件。
+
 ### 成果物
 
 - `topics/07_feeding_transformer/07_feeding_transformer.md`
@@ -68,7 +87,8 @@ Topic 06「275kVを受ける新幹線変電所の中身」は `PASS / completed`
 - 未確認実設備値追加: 0件
 - 制作前EXAM_ALIGNMENT: 完了
 - 制作前独立検証: `PASS`
-- 解説本文＋3段階例題: 未着手
+- 解説本文＋3段階例題: 完了
+- 解説PDF: 未着手
 
 ## Gate checklist
 
@@ -78,8 +98,8 @@ Topic 06「275kVを受ける新幹線変電所の中身」は `PASS / completed`
 - [x] Topic 04 completed
 - [x] Topic 05 completed
 - [x] Topic 06 completed
-- [ ] Topic 07 制作前EXAM_ALIGNMENT・独立検証 complete / 本文未着手
+- [ ] Topic 07 EXAM_ALIGNMENT・独立検証・解説source complete / PDF未着手
 
 ## next_start
 
-Topic 07の解説本文＋3段階例題を作成する。固定10項目と正式2過去問の要求事項を全件本文へ接続し、V結線、％インピーダンス、ATき電、一般的な対称座標法等の後続・範囲外論点は追加しない。
+Topic 07の解説PDFを作成する。完成済みsourceの固定10項目・正式2過去問要求事項・3段階例題をPDFへ同期し、固定範囲外論点・未確認実設備値を追加しない。
