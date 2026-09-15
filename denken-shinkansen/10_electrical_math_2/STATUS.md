@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 8 / 20
-- current_status: `topic_09_source_progress_synced`
-- last_completed_topic: `08 二階常微分方程式`
-- active_topic: `09 ラプラス変換`
-- next_start: Topic 09の最終QAを再判定する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTX・完成後独立再解答は変更しない
+- exam_aligned_completed_topics: 9 / 20
+- current_status: `topic_09_completed`
+- last_completed_topic: `09 ラプラス変換`
+- active_topic: `10 伝達関数・極・零点`
+- next_start: Topic 10の制作前EXAM_ALIGNMENTを作成する。MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECの範囲内で、直近年度優先の公式過去問を調査し、二種相当の対応問題を固定する
 
 ## Topic 07 制作品質ゲート
 
@@ -76,31 +76,28 @@
 - [x] 完成後独立再解答 `6 / 6 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
 - [x] source進捗記録2箇所の同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 09 `ラプラス変換` の主source進捗記録2箇所を実成果物へ同期した。
+Topic 09 `ラプラス変換` の最終QAを再判定し、`PASS / completed` とした。
 
-変更箇所:
-- 冒頭 `## 状態`
-- 末尾 `## 次工程`
-
-維持事項:
-- 固定二次5問・6対象設問: 変更なし
-- 完成後独立再解答: `6 / 6 PASS` を維持
-- 技術本文・数式・3段階例題: 変更なし
-- 練習問題・解説PDF・練習PDF・PowerPoint: 変更なし
-- Topic 10先取り: 0件
-- 件数合わせの固定範囲外追加: 0件
+再確認:
+- 必須成果物実在: PASS
+- 固定二次5問・6対象設問: PASS
+- 完成後独立再解答: `6 / 6 PASS`
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- source進捗記録と実成果物の整合: PASS
 - 教材外知識補完: 0件
+- Topic 10先取り: 0件
+- 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 09は `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。
+Topic 09は `PASS / completed`。
 
-完成数は `8 / 20` のまま。
+完成数は `9 / 20`。
 
-次は最終QAを再判定する。
+次はTopic 10 `伝達関数・極・零点` の制作前EXAM_ALIGNMENT。
