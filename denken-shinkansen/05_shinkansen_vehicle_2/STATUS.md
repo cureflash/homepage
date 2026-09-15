@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 8 / 39
-- current_status: `topic_09_explanation_source_complete`
+- current_status: `topic_09_explanation_pdf_complete`
 - last_completed_topic: `08 位相制御と平均直流電圧`
 - active_topic: `09 直流機方式の損失・熱設計`
-- next_start: Topic 09の解説PDF。固定一次4問＋二次1問・14対象項目、3段階例題、SPEC指定3可視化を収録して表示・文字抽出QAを行う
+- next_start: Topic 09の練習問題・完全解説source。固定一次4問＋二次1問・14対象項目を維持し、一次は五肢択一、二次は途中式・前提・単位・検算を含む記述式として作成する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -363,4 +363,19 @@
 - 誘導機、PWM/VVVF、回生、IGBT/SiC、詳細絶縁寿命モデル、熱流体解析の追加: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
-次工程はTopic 09 `直流機方式の損失・熱設計` の解説PDF。
+## Topic 09 解説PDF
+- `09_dc_machine_loss_thermal_design_explanation.pdf`: `completed`
+- A4縦5ページ
+- 180 dpi全5ページ Visual QA: `PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件`
+- 固定一次4問＋二次1問・14対象項目: 維持
+- 3段階例題: `3 / 3`収録
+- SPEC指定3可視化: `3 / 3`収録
+  - 負荷率―効率
+  - 出力―損失
+  - 簡略熱モデルによる時間―温度
+- SHA-256: `36e753bb279f790f106daa8713afd11d212a69bfa9b60357739190f7cc9c118c`
+- 固定範囲外追加: `0件`
+- 未確認実車値追加: `0件`
+
+次工程はTopic 09 `直流機方式の損失・熱設計` の練習問題・完全解説source。
