@@ -8,7 +8,7 @@ Topic 01〜07は `completed`。
 
 完成数: `7 / 20`
 
-current_status: `topic_08_practice_pdf_complete`
+current_status: `topic_08_powerpoint_complete`
 
 active_topic: `08 二階常微分方程式`
 
@@ -167,12 +167,35 @@ source:
 
 練習PDF品質判定: `PASS / PRACTICE_PDF_COMPLETE`
 
+## Topic 08 PowerPoint完了記録
+
+解説画像PowerPoint:
+`topics/08_second_order_ode/08_second_order_ode_images.pptx`
+
+PowerPoint QA:
+`topics/08_second_order_ode/08_second_order_ode_powerpoint_qa.md`
+
+- 16:9、全5スライド
+- 二階方程式の本試験解法フローを可視化
+- 判別式・減衰比による根分類、`ω_n`・`ζ`・`ω_d` の区別を可視化
+- 直列RLCの二階方程式、切替初期条件、R8問6型の `2R` 係数を可視化
+- RLCと機械系の共通二階構造を可視化
+- 固定一次5問・15小問との対応表を収録
+- 全5スライド表示QA: `5 / 5 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- Topic 09〜10先取り: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値追加: 0件
+
+PowerPoint品質判定: `PASS / POWERPOINT_COMPLETE`
+
 ## 次に行うこと
 
-Topic 08の解説画像PowerPointを作成する。
+Topic 08の完成後独立再解答を実施する。
 
-1. 固定一次5問・15小問の解法経路を可視化する。
-2. 特性方程式、根分類、`ω_n`・`ζ`・`ω_d`、RLC初期条件を中心に構成する。
-3. Topic 09のラプラス変換、Topic 10の伝達関数・極・零点は先取りしない。
-4. 未確認実車値や固定範囲外論点を追加しない。
-5. 作成後は全スライド表示QA・overflow・PPTX整合性を確認する。
+1. 固定一次5問・15小問を完成教材だけで解く。
+2. 保存済み正答を先に見ず、解答・途中式・根拠を独立に再構成する。
+3. 公式解答と照合し、教材外知識による補完がないか確認する。
+4. Topic 09〜10や固定範囲外論点で補わない。
+5. PASS後に最終QAへ進む。
