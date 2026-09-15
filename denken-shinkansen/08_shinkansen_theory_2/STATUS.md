@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 7 / 21
-- current_status: `topic_08_source_progress_synced`
-- last_completed_topic: `07 0系のモーターはなぜ力を出せる？`
-- active_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
-- next_start: Topic 08最終QAを再実施する
+- exam_aligned_completed_topics: 8 / 21
+- current_status: `topic_08_completed`
+- last_completed_topic: `08 L0系はどうやって磁石だけで浮いて進む？`
+- active_topic: `09 新幹線の25kV交流をフェーザで表す`
+- next_start: Topic 09の制作前EXAM_ALIGNMENT
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -58,18 +58,23 @@
 - [x] 主sourceの進捗記録同期
 - [x] 最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主sourceの残存旧進捗表現を現在地へ同期
-- [ ] 最終QA再実施
+- [x] 最終QA再実施: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 08の主sourceに残っていた進捗表現を現在地へ同期した。
+Topic 08の最終QAを再実施した。
 
-- `完成後は保存済み正答を先に見ず、完成教材だけでこの6小問を独立再解答する。` を、完成後独立再解答 `6 / 6 PASS`・教材外知識補完0件の実績へ更新
-- source冒頭の状態を、最終QA `NEEDS_REVISION / IN_PROGRESS` 実施済み・再QA待ちへ同期
-- source末尾の次工程を「最終QA再実施」へ同期
-- 技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答は変更していない
-- 二次採用0問・二次数合わせ0件、固定範囲外追加0件を維持
+- 必須成果物の実在: PASS
+- 固定一次4問・6小問の過去問対応: `6 / 6 PASS`
+- 完成後独立再解答: `6 / 6 PASS`
+- 二次採用0問・二次数合わせ0件: PASS
+- 解説PDF・練習PDF・PowerPointの既存表示QA: PASS
+- source進捗整合: PASS
+- 固定範囲境界: PASS
+- 技術本文・数式・例題・問題・正答の不整合: 0件
+
+前回FAIL理由だった主sourceの旧進捗表現は解消済み。技術内容・固定EXAM_ALIGNMENT・問題・正答は変更していない。
 
 ## 判定
 
-Topic 08はまだ `NEEDS_REVISION / IN_PROGRESS`。完成数は `7 / 21` のまま。進捗記録不整合の修正は完了し、次工程は最終QA再実施。
+Topic 08は `PASS / completed`。完成数は `8 / 21`。次工程はTopic 09「新幹線の25kV交流をフェーザで表す」の制作前EXAM_ALIGNMENT。
