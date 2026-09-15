@@ -8,7 +8,7 @@ Topic 01〜06は `completed`。
 
 完成数: `6 / 20`
 
-current_status: `topic_07_final_qa_needs_revision`
+current_status: `topic_07_source_progress_synced`
 
 active_topic: `07 一階常微分方程式`
 
@@ -18,10 +18,7 @@ active_topic: `07 一階常微分方程式`
 
 制作前EXAM_ALIGNMENT、制作前独立再解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、表示QA、完成後独立再解答まで完了。
 
-最終QA記録:
-`topics/07_first_order_ode/07_first_order_ode_final_qa.md`
-
-判定は `NEEDS_REVISION / IN_PROGRESS`。技術内容・成果物・過去問対応はPASSだが、主sourceの進捗記録2箇所が旧状態のため未完了。
+前回最終QAで残っていた主sourceの旧進捗2箇所（`## 状態`、`## 次工程`）は実成果物へ同期済み。教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF・PowerPointは変更していない。
 
 ## Topic 07 固定範囲
 
@@ -93,27 +90,26 @@ Topic 08の二階常微分方程式、Topic 09のラプラス変換、Topic 10�
 
 ## 最終QA
 
-記録:
+既存記録:
 `topics/07_first_order_ode/07_first_order_ode_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+前回判定: `NEEDS_REVISION / IN_PROGRESS`
 
-PASS:
-- 必須成果物実在
-- 固定一次5問・22小問
-- 完成後独立再解答 `22 / 22 PASS`
-- PDF / PowerPoint表示QA
-- SPEC境界
-
-FAIL:
-1. 主sourceの `## 状態` が「解説PDF以降は未実施」の旧記録。
-2. 主sourceの `## 次工程` が「次は解説PDF」の旧記録。
+前回FAILは主sourceの旧進捗2箇所のみ。今回、その2箇所を実成果物へ同期したため、次は最終QAを再判定する。
 
 ## 次に行うこと
 
-主source `topics/07_first_order_ode/07_first_order_ode.md` の旧進捗2箇所だけを実成果物へ同期する。
+Topic 07の最終QAを再実施する。
 
-- `## 状態` を完成後独立再解答まで完了・最終QA `NEEDS_REVISION` の現在地へ更新
-- `## 次工程` を最終QA再判定へ更新
-- 教材本文、固定EXAM_ALIGNMENT、数式、例題、問題、PDF、PowerPointは変更しない
-- 同期後に最終QAを再実施し、全品質ゲートPASSの場合のみ `completed` とする
+- 固定一次5問・22小問を維持していること
+- 完成後独立再解答 `22 / 22 PASS`
+- 必須成果物実在
+- PDF / PowerPoint表示QA PASS
+- 教材外知識補完0件
+- 固定範囲外追加0件
+- Topic 08〜10先取り0件
+- 二次記述の件数合わせ0件
+- 未確認実車値依存0件
+- 主sourceの進捗記録が現在地と一致
+
+全品質ゲートPASSの場合のみ `completed` とし、STATUS・HANDOFF・最終QA記録を更新する。
