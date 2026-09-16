@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `11 / 16`
-- current_status: `topic_11_completed`
+- current_status: `topic_12_exam_alignment_complete`
 - last_completed_topic: `11 空転した車輪をどう立て直す？`
 - active_topic: `12 新幹線のコンピュータは何をしている？`
-- next_start: Topic 12の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 12の解説本文＋3段階例題を作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -22,8 +22,27 @@
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
-- [ ] 12 新幹線のコンピュータは何をしている？ — 制作前EXAM_ALIGNMENT待ち
+- [ ] 12 新幹線のコンピュータは何をしている？ — 制作前EXAM_ALIGNMENT完了 / IN_PROGRESS
 - [ ] 13〜16 — 未完了
+
+## Topic 12 制作品質状態
+- 固定範囲: 2進数 / 16進数 / ビット / バイト / 論理回路 / AND / OR / NOT / NAND / NOR / XOR / 論理式 / 真理値表 / A/D変換 / D/A変換 / センサ / 情報伝送
+- 基本構成: `センサ → 電気信号 → A/D変換 → デジタルデータ → 演算・論理判断 → 制御指令 → 機器`
+- 固定EXAM_ALIGNMENT: R8上 機械 問14 / R8上 機械 問18(a)(b) / R7上 機械 問14 / R5下 機械 問14 / R1 機械 問14 / H28 機械 問18(a)(b)
+- 品質ゲート対象: `6問・8答案要素`
+- 制作前独立検証・公式解答照合: `8 / 8 PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- 件数合わせの仕様外追加: `0件`
+- 非選定: R7下 機械 問14（フローチャート） / R6上 機械 問18（符号付き8bit・補数表現を含む） / R4上 機械 問14（インタフェースを含む）
+- R6下 機械 問14: R7上 問14と同一問題のため二重加算せず
+- カルノー図: 参考教材では確認したが系列SPEC固定範囲外のため追加しない
+- 車種固有通信規格・伝送速度・CPU構成・通信周期等の推測: `0件`
+- source: `topics/12_information_processing/12_information_processing.md`
+- 解説本文: 未作成
+- 解説PDF: 未作成
+- 練習問題source/PDF: 未作成
+- 解説画像PowerPoint: 未作成
+- 完成後blind独立再解答: 未実施
 
 ## Topic 11 最終品質状態
 - 固定範囲: センサ / 回転速度 / 車輪 / 粘着 / 空転 / 滑走 / フィードバック / 制御指令 / アクチュエータ / メカトロニクス / 応答速度
@@ -85,9 +104,9 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 11「空転した車輪をどう立て直す？」の最終QAを再判定し、`PASS / completed` とした。固定R4下 機械 問14の完成後独立再解答 `1 / 1 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、主source・練習sourceの進捗記録整合、固定範囲境界を全件PASS確認した。
+Topic 12「新幹線のコンピュータは何をしている？」の制作前EXAM_ALIGNMENTを完了した。系列SPEC固定範囲だけで完答できる公式過去問6問・8答案要素を固定し、各答案要素を独立再導出して公式解答と `8 / 8 PASS` を確認した。
 
-前回 `NEEDS_REVISION` の原因だった旧進捗3箇所は同期済み。教材外・固定範囲外知識による補完、固定範囲外論点追加、未確認実車値追加、実車固有アルゴリズム推測はいずれも0件。完成数を `11 / 16` へ更新した。
+R7下のフローチャート、R6上の符号付き8bit・補数表現、R4上のインタフェースは固定範囲外のため品質ゲート対象に入れず、R6下の論理回路問題はR7上と同一再出題のため二重加算していない。仕様外追加・車種固有情報の推測は0件。
 
 ## 次工程
-Topic 12「新幹線のコンピュータは何をしている？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
+Topic 12の固定EXAM_ALIGNMENT 6問・8答案要素から逆算し、系列SPEC固定範囲だけで解説本文＋3段階例題を作成する。
