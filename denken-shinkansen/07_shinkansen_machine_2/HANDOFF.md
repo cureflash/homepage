@@ -9,7 +9,7 @@ Topic 01〜11は最終QAまで `PASS / completed`。
 
 active topic: `12 N700Sの6極モーターを設計側から見る`
 
-current status: `topic_12_practice_pdf_complete`
+current status: `topic_12_powerpoint_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -388,5 +388,18 @@ source完成内容:
 - 未確認N700S実車値追加: `0件`
 - SHA-256: `f70c681e0f4c5b0ed71ebc0b3f78dcaf09e6968b5b5ce1100758e42c79efd90a`
 
+## Topic 12 解説画像PowerPoint
+- `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_images.pptx`: `completed`
+- 16:9・4枚
+- 極数→同期速度→すべり→角速度→出力・トルク、4極/6極必要周波数比較、インバータ定格、出力密度、固定5過去問への接続を可視化
+- Visual QA: `4 / 4 PASS`（1601×900）
+- overflow: `0件`
+- ZIP整合性: `PASS`
+- 固定一次2問＋二次3問・16答案要素: 維持
+- 固定範囲外追加: `0件`
+- 未確認N700S実車値追加: `0件`
+- Git blob SHA: `2165bc31df02cfc06ace513e459255ebcbb4a7f9`
+- SHA-256: `0fcc83e90287e57901ef17c50497e2c4356c0322973de1b7d8628b0be286b17c`
+
 ## 次に行うこと
-Topic 12 `N700Sの6極モーターを設計側から見る` の解説画像PowerPointを作成する。固定5過去問・16答案要素と固定範囲を維持し、表示QA・overflow・PPTX整合性を確認する。
+Topic 12の独立再解答前ゲートを実施する。必須先読み対象から保存済み正答・完成済み数値解が見えない状態を確認し、固定5問・16答案要素と教材内容は変更しない。
