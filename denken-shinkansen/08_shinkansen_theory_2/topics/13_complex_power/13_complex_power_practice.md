@@ -6,9 +6,10 @@
 
 固定EXAM_ALIGNMENTの一次3問・15小問＋二次1問・4答案要素、およびTopic 13固定範囲だけから練習問題12問を作成した。二次過去問に必要なP-Q-S・総合力率・P-Qベクトル・力率改善は一次試験型の計算問題へ落とし込み、二次固有の送電線単位法・設備設計は追加しない。
 
-- completion: `in_progress`
-- stage: `SOURCE_PROGRESS_SYNCED`
-- 次工程: 最終QA再実施
+- completion: `completed`
+- stage: `COMPLETED`
+- 最終QA: `PASS / FINAL_QA_COMPLETE`
+- 次工程: Topic 14「インバータのギザギザ波形を分解する」の制作前EXAM_ALIGNMENT
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
