@@ -4,21 +4,17 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、最新main、Topic 09成果物、既存QA、完成後blind独立再解答を再確認した。
+前回 `NEEDS_REVISION / IN_PROGRESS` の唯一の未完了理由だった進捗記録不整合を解消後、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、最新main、Topic 09成果物、各QA、完成後blind独立再解答を再確認した。
 
-技術内容、固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、練習問題QA、完成後独立再解答、固定10項目、SPEC境界はPASS。未完了理由はGitHub正本内の進捗記録不整合だけである。
-
-QA開始時のmain HEAD: `25476524df94a81e0c94748d6d607a72f0004d76`
-
-直近の当該Topic変更として、電圧降下率定義の根本修正、解説PDF再生成、修正後blind独立再解答 `14 / 14 PASS` を確認し、重複作業は行っていない。
+技術内容、正式EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、練習問題QA、完成後独立再解答、固定10項目、SPEC境界、進捗記録整合を全件PASSとした。
 
 ## 品質ゲート
 
 | 確認項目 | 結果 | 内容 |
 |---|---|---|
-| 上位仕様 | PASS | `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` を確認 |
+| 上位仕様 | PASS | `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` を再確認 |
 | 正式EXAM_ALIGNMENT | PASS | R7一次問7、H25一次問7、H26二次問4の3問を維持。固定範囲外問題で5問へ水増ししていない |
 | 完成後独立再解答 | PASS | `3 / 3問・14 / 14答案要素 PASS`。一次 `10 / 10`、二次 `4 / 4` |
 | 根本修正 | PASS | H26二次問4(3)は受電端基準 `V_r=V_s/(1+d_r)` で公式標準解答と一致 |
@@ -29,28 +25,38 @@ QA開始時のmain HEAD: `25476524df94a81e0c94748d6d607a72f0004d76`
 | PowerPoint | PASS | 16:9・4枚、表示 `4 / 4 PASS`、overflow 0、ZIP整合性PASS |
 | 固定10項目 | PASS | `10 / 10` 維持 |
 | SPEC境界 | PASS | Topic 10以降先取り0件、未確認実設備値追加0件、仕様追加0件 |
-| 進捗記録整合 | FAIL | 下記3ファイルの旧進捗記録が実成果物と不一致 |
+| 進捗記録整合 | PASS | 前回blockerだった主source・練習source・PowerPoint QAの旧進捗記録を実成果物へ同期済み |
 
-## exact blocker
+## 過去問対応品質ゲート
 
-技術修正は不要。以下の旧進捗記録だけを現在地へ同期する必要がある。
+- R7 二種一次「電力」問7: `5 / 5空欄 PASS`
+- H25 二種一次「電力」問7: `5 / 5空欄 PASS`
+- H26 二種二次「電力・管理」問4: `4 / 4答案要素 PASS`
+- 合計: `3 / 3問・14 / 14答案要素 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- 後続Topic知識への依存: `0件`
+- 未確認実設備値依存: `0件`
+- 仕様追加: `0件`
 
-1. `09_at_feeding.md`
-   - 冒頭 `## 状態` が `topic_09_voltage_drop_definition_fixed` のまま。
-   - 冒頭説明が「解説PDFは未同期、次はPDF再生成」となっているが、PDF再生成・QA・blind独立再解答は完了済み。
-   - 末尾 `## 依存成果物の影響` と `## 次工程` も、解説PDF再生成と独立再解答を未実施扱いしている。
-2. `09_at_feeding_practice.md`
-   - 冒頭状態が `topic_09_practice_source_complete` のまま。
-   - 末尾 `## 次工程` が練習PDF生成となっているが、練習PDF・QAは完了済み。
-3. `09_at_feeding_powerpoint_qa.md`
-   - 末尾が「次段階は完成後独立再解答」となっているが、修正後blind独立再解答は `14 / 14 PASS` 済み。
+原則5問未満である点は、Topic 09固定範囲だけで問題全体を完答可能な正式問題を3問に限定し、固定範囲外論点を追加して件数を水増ししないためである。一次2問に加えて二次1問を含み、二種の一次・二次双方の品質ゲートを満たす。
 
-`STATUS.md`、`HANDOFF.md`、`09_at_feeding_independent_reanswer.md` は最終QAを次工程としており整合している。
+## 必須成果物の実在確認
+
+- `09_at_feeding.md` — blob `3d263a92cea3c2179bc2ce783a4346900af96c4a`
+- `09_at_feeding_explanation.pdf` — blob `efe9cd0932f2206f53ff56d8c9e0bb16e4b7be51`
+- `09_at_feeding_explanation_pdf_qa.md` — blob `f1f1b4c35d397a61e8a8f1d412f1466ab8383387`
+- `09_at_feeding_practice.md` — blob `e6b03c892352c50778b963516f4a005d6c9dcc60`
+- `09_at_feeding_practice.pdf` — blob `fc02fcd2fc86e9bd87b06f2e80935a3bc0f7de3a`
+- `09_at_feeding_practice_pdf_qa.md` — blob `9fa322b888cfa3c1cfe49d4bf6b483351d2198ca`
+- `09_at_feeding_images.pptx` — blob `e2138ab23f5f5ff72ecd9c58761149c1e1494a63`
+- `09_at_feeding_powerpoint_qa.md` — blob `6387e2568609d861e908ea14ca7ee82007cbb637`
+- `09_at_feeding_independent_reanswer.md` — blob `e5b8d40561751855c6871d4bfb9459c0e4b64fac`
 
 ## 完了判定
 
-Topic 09はまだ `completed` にしない。
+Topic 09 は `completed`。
 
-完成数: `8 / 22`
+完成数: `9 / 22`
 
-次工程は上記3ファイルの旧進捗記録だけを実成果物へ同期する。技術本文、固定EXAM_ALIGNMENT、正式3問、練習問題・正答、PDF/PPTX、独立再解答結果は変更しない。
+次はTopic 10「なぜ変電所を何十kmも離せない？」の制作前EXAM_ALIGNMENTを行う。
