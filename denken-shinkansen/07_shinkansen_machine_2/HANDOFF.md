@@ -3,11 +3,11 @@
 更新日: 2026-09-17
 
 ## 現在地
-- Topic 01〜12: 最終QA `PASS / completed`
-- 完成数: `12 / 22`
-- active topic: `13 L0系のリニア同期モータを等価回路で考える`
-- current status: `topic_13_progress_records_synced`
-- 次工程: Topic 13 最終QA再実施
+- Topic 01〜13: 最終QA `PASS / completed`
+- 完成数: `13 / 22`
+- active topic: `14 L0系を500km/hで同期させる`
+- current status: `topic_13_final_qa_complete`
+- 次工程: Topic 14 制作前EXAM_ALIGNMENT
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -84,21 +84,14 @@ QA:
 - 固定EXAM_ALIGNMENT・教材本文・練習問題・PDF/PPTXの内容変更: `0件`
 
 ## Topic 13 最終QA
-前回判定: `NEEDS_REVISION / IN_PROGRESS`
+再判定: `PASS / completed`
 
-PASS:
-- 必須成果物の実在
-- 一次4問＋二次1問・22答案要素の過去問対応
+- 必須成果物の実在: PASS
+- 一次4問＋二次1問・22答案要素の過去問対応: PASS
 - 完成後独立再解答 `22 / 22 PASS`
-- 練習問題・PDF/PPTX QA
-- 固定範囲境界・未確認L0実値
-
-前回FAIL:
-- 進捗記録整合のみ
-
-前回不整合:
-1. main sourceの `## 状態` と末尾 `# 次工程` が「練習PDF作成」段階のまま。
-2. 練習source末尾 `# 次工程` が「PowerPoint作成」段階のまま。
+- 練習問題・PDF/PPTX QA: PASS
+- 固定範囲境界・未確認L0実値: PASS
+- 進捗記録整合: PASS
 
 ## Topic 13 進捗記録同期
 - main sourceの `## 状態` と末尾 `# 次工程` を実成果物へ同期済み。
@@ -107,4 +100,4 @@ PASS:
 - Topic 14先取り・固定範囲外論点・未確認L0実値追加は `0件`。
 
 ## 次に行うこと
-Topic 13最終QAを再実施する。進捗記録整合を再確認し、他の既PASS項目に変化がないことを確認して最終判定する。
+Topic 14「L0系を500km/hで同期させる」の制作前EXAM_ALIGNMENTを実施する。
