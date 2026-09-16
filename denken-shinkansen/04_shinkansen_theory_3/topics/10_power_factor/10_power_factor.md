@@ -1,7 +1,7 @@
 # Topic 10 新幹線が使う電力は「W」だけではない
 
 更新日: 2026-09-16
-status: `EXPLANATION_SOURCE_COMPLETE`
+status: `INDEPENDENT_REANSWER_COMPLETE`
 
 ## 1. SPEC固定範囲
 
@@ -639,4 +639,4 @@ XC = R(tanφ1-tanφ2)  （改善前がR-XL、改善後も遅れの場合）
 
 ## 10. 次工程
 
-解説本文＋基礎・本試験標準・複合の3段階例題を完成し、固定5問・6答案要素を本文へ全件マッピングした。次はこのsourceを基に解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。
+解説本文・解説PDF・練習問題source/PDF・解説画像PowerPointを完成し、固定5問・6答案要素の完成後独立再解答 `5 / 5問・6 / 6答案要素 PASS` まで完了した。次は最終QAを再実施する。
