@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 13 / 21
-- current_status: `topic_14_explanation_source_complete`
+- current_status: `topic_14_explanation_pdf_complete`
 - last_completed_topic: `13 新幹線の交流電力を複素数で扱う`
 - active_topic: `14 インバータのギザギザ波形を分解する`
-- next_start: Topic 14 解説PDF＋表示QA
+- next_start: Topic 14 練習問題source＋練習PDF
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -211,7 +211,7 @@
 ## Topic 14 制作進捗
 - [x] 制作前EXAM_ALIGNMENT: 一次2問・3答案要素＋二次1問・2答案要素、関連候補8件調査
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋表示QA
+- [x] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
 - [ ] 完成後独立再解答
@@ -219,11 +219,13 @@
 
 ## 今回進めた内容
 
-Topic 14「インバータのギザギザ波形を分解する」の解説本文＋3段階例題を完成した。
+Topic 14「インバータのギザギザ波形を分解する」の解説PDF＋表示QAを完成した。
 
-- 固定3問・5答案要素を本文・例題へ `5 / 5` 接続
+- 解説PDF: A4縦5ページ
+- 200 dpi全ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: `PASS`
+- 固定3問・5答案要素をPDFへ `5 / 5` 接続
 - 3段階例題: `3 / 3`
-- フーリエ級数、対称性、方形波、位相合成、3n次線間打消し、非正弦波実効値、PWM基本波実効値変換を固定範囲内で説明
 - 二次採用: `1問・2答案要素`、二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 - Topic 15先取り: `0件`
@@ -231,4 +233,4 @@ Topic 14「インバータのギザギザ波形を分解する」の解説本文
 
 ## 判定
 
-Topic 14は `PASS / EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `13 / 21`。次工程は解説PDF＋表示QA。
+Topic 14は `PASS / EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `13 / 21`。次工程は練習問題source＋練習PDF。
