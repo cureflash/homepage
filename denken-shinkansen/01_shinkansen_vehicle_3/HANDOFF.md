@@ -6,11 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は32/38。01〜32がPASS。active topicは33 `COMTRAC① 東海道新幹線全体をどう監視する？`。
 
 ## 今回進捗
-Topic 33の完成後blind独立再解答を完了した。固定5問は `(3),(3),(3),(5),(2)` で `5 / 5 PASS`。公式解答との不一致、教材外知識補完、固定範囲外知識補完、Topic 34/35範囲追加、未確認COMTRAC内部仕様依存はいずれも0件。
+Topic 33の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。固定5問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物、練習QA、表示QA、固定範囲境界はPASS。
 
-記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_independent_reanswer.md`
+未完了理由は主source `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md` の進捗記録2箇所のみ。冒頭 `## 状態` が独立再解答前の表現のままで、冒頭および末尾の `次工程` が「blind独立再解答する」のまま残っている。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXには修正要求なし。
 
-固定EXAM_ALIGNMENT、教材本文、練習問題、PDF/PPTXは変更していない。
+記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_final_qa.md`
 
 ## Topic 33 成果物
 - source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
@@ -20,6 +20,7 @@ Topic 33の完成後blind独立再解答を完了した。固定5問は `(3),(3)
 - PowerPoint: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_images.pptx`
 - blind gate記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_blind_gate.md`
 - 完成後blind独立再解答記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_independent_reanswer.md`
+- 最終QA記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_final_qa.md`
 
 解説PDFはA4縦4ページ・180 dpi表示QA `4 / 4 PASS`・文字抽出PASS。練習は15問（基礎4／標準8／複合3）・全問五肢択一・固定5問 `5 / 5` マッピング・独立QA `15 / 15 PASS`。PowerPointは16:9・4枚・固定5問 `5 / 5` 可視化・表示QA `4 / 4 PASS`・overflow/ZIP整合性PASS。
 
@@ -47,7 +48,7 @@ Topic 33の完成後blind独立再解答を完了した。固定5問は `(3),(3)
 - COMTRAC内部の未確認データ形式、bit割当、更新周期、伝送速度、通信プロトコル、具体的アルゴリズム
 
 ## 現在の状態
-- `current_status`: `topic_33_independent_reanswer_complete`
+- `current_status`: `topic_33_final_qa_needs_revision`
 - 完成数: 32/38
 - 01〜32: PASS
 - Topic 33制作前EXAM_ALIGNMENT: 完了
@@ -55,7 +56,9 @@ Topic 33の完成後blind独立再解答を完了した。固定5問は `(3),(3)
 - Topic 33練習source/PDF: 完了
 - Topic 33 PowerPoint: 完了
 - Topic 33完成後blind独立再解答: `5 / 5 PASS`
-- Topic 33最終QA: 未実施
+- Topic 33最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 技術内容・成果物QA: PASS
+- 未完了理由: 主sourceの進捗記録2箇所のみ
 
 ## 次の正確な開始点
-固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを実施する。
+主source `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md` の冒頭 `## 状態` と末尾 `# 次工程` だけを、独立再解答 `5 / 5 PASS` 完了後の現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
