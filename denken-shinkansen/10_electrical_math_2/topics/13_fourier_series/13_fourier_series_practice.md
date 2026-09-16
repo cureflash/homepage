@@ -638,4 +638,4 @@ V_line,rms
 
 `PASS / topic_13_practice_source_complete`
 
-次工程: 本sourceをA4縦の練習PDFへ変換し、全12問＋完全解説の反映、全ページ表示QA、文字抽出QA、主要式・数値の再検算を行う。
+次工程: 練習PDF・解説画像PowerPoint・完成後独立再解答まで完了済み。次はTopic 13の最終QAを再判定する。
