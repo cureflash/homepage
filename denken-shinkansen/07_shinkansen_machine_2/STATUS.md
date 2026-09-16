@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_progress_records_synced`
-- last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 最終QA再実施
+- exam_aligned_completed_topics: `12 / 22`
+- current_status: `topic_12_completed`
+- last_completed_topic: `12 N700Sの6極モーターを設計側から見る`
+- active_topic: `13 L0系のリニア同期モータを等価回路で考える`
+- next_start: Topic 13 制作前EXAM_ALIGNMENT
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -22,6 +22,7 @@
 - [x] Topic 09 最終QA PASS
 - [x] Topic 10 最終QA PASS
 - [x] Topic 11 最終QA PASS
+- [x] Topic 12 最終QA PASS
 
 ## Topic 10 制作前EXAM_ALIGNMENT
 - [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列`SPEC.md`確認
@@ -380,16 +381,14 @@
 - [x] 記録: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_independent_reanswer.md`
 
 ## Topic 12 最終QA
-- [x] 最終QA記録作成: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_final_qa.md`
+- [x] 最終QA記録: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_final_qa.md`
 - [x] 必須成果物の実在: PASS
 - [x] 一次2問＋二次3問・16答案要素の過去問対応: PASS
 - [x] 完成後独立再解答 `16 / 16 PASS`
 - [x] 練習問題・PDF/PPTX QA: PASS
 - [x] 固定範囲境界・未確認N700S実車値: PASS
-- [ ] 進捗記録整合: FAIL
-  - main source末尾 `# 次工程` が「解説PDFまで完成。次は練習問題source」のまま
-  - 練習source末尾 `# 次工程` が「次は練習PDFへ反映」のまま
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- [x] 進捗記録整合: PASS
+- 判定: `PASS / completed`
 
 ## Topic 12 進捗記録同期
 - [x] main sourceの `## 状態` と末尾 `# 次工程` を実成果物へ同期
@@ -398,7 +397,7 @@
 - [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
 
 ## 今回進めた内容
-Topic 12の進捗記録2件を実成果物へ同期した。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
+Topic 12の最終QAを再判定し、`PASS / completed`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
 
 ## 判定
-Topic 12は `topic_12_progress_records_synced / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の最終QAを再実施する。
+Topic 12は `PASS / completed`。完成数は `12 / 22`。次はTopic 13「L0系のリニア同期モータを等価回路で考える」の制作前EXAM_ALIGNMENT。
