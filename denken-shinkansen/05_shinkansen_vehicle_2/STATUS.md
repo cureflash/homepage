@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `11 / 39`
-- current_status: `topic_12_practice_source_complete`
+- current_status: `topic_12_practice_pdf_complete`
 - last_completed_topic: `11 300系② PWMコンバータ`
 - active_topic: `12 300系③ VVVFインバータと誘導機制御`
-- next_start: Topic 12の練習PDF
+- next_start: Topic 12の解説画像PowerPoint
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -22,7 +22,7 @@
 - [x] 09 直流機方式の損失・熱設計 — PASS
 - [x] 10 300系① 誘導電動機等価回路 — PASS
 - [x] 11 300系② PWMコンバータ — PASS
-- [ ] 12 300系③ VVVFインバータと誘導機制御 — PRACTICE_SOURCE_COMPLETE / IN_PROGRESS
+- [ ] 12 300系③ VVVFインバータと誘導機制御 — PRACTICE_PDF_COMPLETE / IN_PROGRESS
 
 ## Topic 12 固定EXAM_ALIGNMENT
 - source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -77,6 +77,23 @@
 - Topic 11のPWMコンバータ側論点再展開: `0件`
 - 未確認300系実車値の真値化: `0件`
 
+## Topic 12 練習PDF
+- path: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control_practice.pdf`
+- QA: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control_practice_qa.md`
+- A4縦: `PASS`
+- ページ数: `2`
+- 180 dpi表示QA: `2 / 2 PASS`
+- 文字抽出QA: `PASS`
+- 数値・論理QA: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次の途中式・前提・単位・理由: `4 / 4 PASS`
+- 固定5過去問・13答案要素接続: `13 / 13 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 13先取り: `0件`
+- SPEC外制御方式追加: `0件`
+- Topic 11のPWMコンバータ側論点再展開: `0件`
+- 未確認300系実車値の真値化: `0件`
+
 ## Topic 12 固定範囲
 - VVVF
 - PWM
@@ -112,4 +129,4 @@ SPEC指定可視化:
 - 最終QA: `PASS / completed`
 
 ## 次工程
-Topic 12「300系③ VVVFインバータと誘導機制御」の練習PDFを作成する。固定EXAM_ALIGNMENTは変更しない。
+Topic 12「300系③ VVVFインバータと誘導機制御」の解説画像PowerPointを作成する。SPEC指定4可視化（周波数―同期速度、周波数―電圧、回転速度―トルク、回転速度―出力）を収録し、表示QA・overflow・PowerPoint ZIP整合性を確認する。固定EXAM_ALIGNMENTは変更しない。
