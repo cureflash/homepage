@@ -6,13 +6,13 @@
 
 Topic 01〜11は `PASS / completed`。完成数は `11 / 21`。
 
-current_status: `topic_12_source_progress_synced`
+current_status: `topic_12_final_qa_complete`
 
 active_topic: `12 三相交流を新幹線へ渡す`
 
-Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QAまで実施済み。固定公式過去問H23一次「理論」問6 (1)〜(5)は完成後独立再解答 `5 / 5 PASS`、二次採用0問・二次数合わせ0件。初回最終QAで唯一FAILだった主source・練習sourceの旧進捗記録3箇所は今回実成果物へ同期済み。
+Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、旧進捗記録同期、最終QA再実施まで完了。固定公式過去問H23一次「理論」問6 (1)〜(5)は完成後独立再解答 `5 / 5 PASS`、二次採用0問・二次数合わせ0件。初回最終QAの唯一のFAILだった旧進捗記録3箇所は解消済みで、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。
 
-次工程はTopic 12の最終QA再実施。
+次工程はTopic 12の主source・練習source・STATUS・HANDOFFをcompleted状態へ同期する。
 
 ## Topic 12 成果物
 
@@ -24,7 +24,7 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - PowerPoint QA: `topics/12_three_phase_ac/12_three_phase_ac_powerpoint_qa.md`
 - 独立再解答: `topics/12_three_phase_ac/12_three_phase_ac_reanswer.md`
 - 最終QA: `topics/12_three_phase_ac/12_three_phase_ac_final_qa.md`
-- stage: `SOURCE_PROGRESS_SYNCED`
+- stage: `FINAL_QA_COMPLETE`
 - completion: `IN_PROGRESS`
 
 ## Topic 12 固定範囲
@@ -218,7 +218,20 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 二次採用0問・二次数合わせ0件を維持
 - SPEC固定範囲外追加0件
 
-現在 `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。次は最終QA再実施。
+現在 `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。
+
+## Topic 12 最終QA再実施
+
+- 記録: `topics/12_three_phase_ac/12_three_phase_ac_final_qa.md`
+- 必須成果物実在: `PASS`
+- 固定H23一次「理論」問6・5小問の独立再解答: `5 / 5 PASS`
+- 二次採用0問・二次数合わせ0件: `PASS`
+- 解説PDF・練習PDF・PowerPoint QA: `PASS`
+- SPEC固定範囲境界: `PASS`
+- 初回blocker 3件の解消確認: `PASS`
+- 判定: `PASS / FINAL_QA_COMPLETE`
+
+この段階ではTopic 12自体はまだ `IN_PROGRESS`。completed化は主source・練習source・STATUS・HANDOFFを一括同期する次工程で確定する。
 
 ## 参考資料
 
@@ -255,4 +268,4 @@ Topic 11「ATCはなぜ特定の周波数を見分けられる？」は `PASS / 
 
 ## 次に行うこと
 
-Topic 12の最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。旧進捗記録3箇所が実成果物へ同期済みであることを確認し、全ゲートPASSなら `completed` へ同期する。
+Topic 12の主source・練習source・STATUS・HANDOFFをcompleted状態へ一括同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
