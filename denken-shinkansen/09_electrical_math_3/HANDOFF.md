@@ -6,17 +6,17 @@
 
 Topic 01〜09は `completed`。
 
-Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。
+Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ブラインドゲートまで完了。
 
 完成数: `9 / 12`
 
-current_status: `topic_10_images_ppt_complete`
+current_status: `topic_10_blind_reanswer_ready`
 
 last_completed_topic: `09 微積分で電気を読む`
 
 active_topic: `10 指数関数・一階微分方程式入門`
 
-next_start: `Topic 10 完成教材だけでの公式過去問独立再解答`
+next_start: `Topic 10 ブラインド条件を守って固定5問を完成教材だけで独立再解答`
 
 ## Topic 10 固定仕様範囲
 
@@ -135,8 +135,21 @@ next_start: `Topic 10 完成教材だけでの公式過去問独立再解答`
 
 判定: `PASS / IMAGES_PPT_COMPLETE`。
 
+## Topic 10 完成後独立再解答前ブラインドゲート
+
+記録:
+`topics/10_exponential_first_order_ode/10_exponential_first_order_ode_blind_gate.md`
+
+- 固定品質ゲート対象5問は変更なし
+- 主sourceの `## 制作前独立解答・公式解答照合` 節は、次runで独立解答を確定するまで参照しない
+- 公式問題文だけを取得して先に独立解答を固定し、その後に公式解答と照合する
+- このrunでは主source確認時に制作前の個別正答・導出が視認されたため、完成後独立再解答そのものは未実施
+- 教材本文・練習問題・PDF/PPTX・固定EXAM_ALIGNMENTは変更していない
+
+判定: `BLIND_REANSWER_READY / IN_PROGRESS`。
+
 ## 次工程
 
-Topic 10の完成教材だけで固定5問を独立再解答する。
+`10_exponential_first_order_ode_blind_gate.md` の手順に従い、Topic 10の固定5問を完成教材だけで独立再解答する。
 
 独立再解答後もTopic 10は `completed` ではない。最終QAが残る。
