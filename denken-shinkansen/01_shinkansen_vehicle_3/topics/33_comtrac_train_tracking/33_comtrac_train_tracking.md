@@ -2,9 +2,9 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説本文§1〜§15＋3段階例題、解説PDF、練習source/PDF、PowerPointまで完成済み。固定EXAM_ALIGNMENTは `5 / 5` 本文対応済み。完成後blind独立再解答に備え、制作前の個別正答番号・完成済み導出結果を必須先読みsourceから除去した。Topic 34の論理回路・進路制御、Topic 35の運転整理・冗長化、未確認COMTRAC内部仕様の追加は0件。
+制作前EXAM_ALIGNMENT、解説本文§1〜§15＋3段階例題、解説PDF、練習source/PDF、PowerPoint、完成後blind独立再解答まで完了済み。固定EXAM_ALIGNMENTは `5 / 5` 本文対応済み。完成後blind独立再解答は `5 / 5 PASS`。Topic 34の論理回路・進路制御、Topic 35の運転整理・冗長化、未確認COMTRAC内部仕様の追加は0件。
 
-次工程: 完成教材だけを使って固定5問をblind独立再解答する。
+次工程: Topic 33の最終QAを再実施する。
 
 ## EXAM_ALIGNMENT
 
@@ -446,4 +446,4 @@ JR東海の公開資料では、COMTRACは発着時刻、発着番線、列車�
 
 # 次工程
 
-完成教材だけを使って固定5問をblind独立再解答する。
+Topic 33の最終QAを再実施する。
