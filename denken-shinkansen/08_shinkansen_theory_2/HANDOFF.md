@@ -6,11 +6,11 @@
 
 Topic 01〜10は `PASS / completed`。完成数は `10 / 21`。
 
-current_status: `topic_11_final_qa_needs_revision`
+current_status: `topic_11_source_progress_synced`
 
 active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 
-Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。初回最終QAは `NEEDS_REVISION / IN_PROGRESS`。未完了理由は主source 2箇所と練習source 1箇所の旧進捗記録のみ。
+Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。初回最終QAは `NEEDS_REVISION / IN_PROGRESS` だったが、指摘された主source 2箇所・練習source 1箇所の旧進捗記録は現在地へ同期済み。最終QA再実施は未実施。
 
 ## Topic 11 成果物
 
@@ -22,7 +22,7 @@ Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、
 - PowerPoint QA: `topics/11_atc_frequency_filter/11_atc_frequency_filter_powerpoint_qa.md`
 - 独立再解答: `topics/11_atc_frequency_filter/11_atc_frequency_filter_reanswer.md`
 - 最終QA: `topics/11_atc_frequency_filter/11_atc_frequency_filter_final_qa.md`
-- stage: `FINAL_QA_NEEDS_REVISION`
+- stage: `SOURCE_PROGRESS_SYNCED`
 - completion: `IN_PROGRESS`
 
 ## Topic 11 固定範囲
@@ -187,7 +187,9 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 
 判定: `NEEDS_REVISION / IN_PROGRESS`
 
-技術内容・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTXに修正要求はない。次工程は上記3箇所の進捗記録だけを現在地へ同期する。
+技術内容・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTXに修正要求はない。
+
+対応: blocker 1〜3の旧進捗記録は現在地へ同期済み。最終QA再実施は未実施。
 
 ## 参考資料
 
@@ -226,6 +228,7 @@ Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は 
 - Topic 11 PowerPoint: `PASS / completed`
 - Topic 11 完成後独立再解答: `25 / 25 PASS`
 - Topic 11 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- Topic 11 進捗記録同期: `completed`
 - Topic 11 固定一次: `5問 / 25小問`
 - Topic 11 二次採用: `0問`
 - Topic 11 二次数合わせ: `0件`
@@ -234,4 +237,4 @@ Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は 
 
 ## 次に行うこと
 
-`11_atc_frequency_filter.md` 冒頭・末尾と `11_atc_frequency_filter_practice.md` 末尾の旧進捗記録3箇所だけを、実在成果物・独立再解答済みの現在地へ同期する。教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 11の最終QAを再実施する。教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
