@@ -3,38 +3,23 @@
 updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `08`
-current_status: `topic_08_practice_pdf_complete`
+current_status: `topic_08_images_pptx_complete`
 
 ## 今回完了
 
-Topic 08「主変圧器を％インピーダンスで見る」の練習PDFを完成し、GitHub正本へ反映した。
+Topic 08「主変圧器を％インピーダンスで見る」の解説画像PowerPointを完成し、GitHub正本へ反映した。
 
-正式固定4問は変更なし:
-1. R7 二次「電力・管理」問3 — `2 / 2答案要素 PASS`
-2. R3 二次「電力・管理」問3 — `6 / 6答案要素 PASS`
-3. H30 一次「電力」問6(B) — `5 / 5空欄 PASS`
-4. H28 二次「電力・管理」問6 — `4 / 4答案要素 PASS`
+- ファイル: `topics/08_transformer_percent_impedance/08_transformer_percent_impedance_images.pptx`
+- QA: `topics/08_transformer_percent_impedance/08_transformer_percent_impedance_powerpoint_qa.md`
+- 16:9・4スライド
+- 固定9項目: `9 / 9` 可視化
+- 表示QA: `4 / 4 PASS`
+- レンダリング: `1601 × 900` / slide
+- 文字切れ・重なり・はみ出し: `0件`
+- `slides_test.py`: `PASS / No overflow detected`
+- PPTX ZIP整合性: `PASS`
 
-制作前独立再解答は一次 `5 / 5空欄`、二次 `12 / 12答案要素`、合計 `4 / 4問・17 / 17答案要素 PASS` を維持した。
-
-## 練習PDF
-
-- ファイル: `topics/08_transformer_percent_impedance/08_transformer_percent_impedance_practice.pdf`
-- QA: `topics/08_transformer_percent_impedance/08_transformer_percent_impedance_practice_pdf_qa.md`
-- A4縦8ページ
-- 全15問
-- 基礎: 4問
-- 本試験標準: 8問
-- 複合・応用: 3問
-- 二種一次型五肢択一: 10問
-- 二種二次型記述: 5問
-- 全問完全解説付き
-- 200 dpi表示QA: `8 / 8 PASS`
-- 文字抽出QA: `PASS`
-- 数値・論理QA: `15 / 15 PASS`
-- 一次正答一意性: `10 / 10 PASS`
-- 固定9項目: `9 / 9`
-- 正式4過去問要求の接続: `4 / 4問・17 / 17答案要素`
+正式固定4問は変更なし。制作前独立再解答は一次 `5 / 5空欄`、二次 `12 / 12答案要素`、合計 `4 / 4問・17 / 17答案要素 PASS` を維持した。
 
 ## Topic 08 境界
 
@@ -58,22 +43,8 @@ Topic 08「主変圧器を％インピーダンスで見る」の練習PDFを完
 - 故障種別別の短絡解析
 - 保護協調
 
-送電線インピーダンスや遮断電流は問題中の既知条件としてのみ使用した。
-
-## QA
-
-- 固定9項目: `9 / 9`
-- 正式過去問要求: `4 / 4問・17 / 17答案要素`
-- 練習問題数値・論理QA: `15 / 15 PASS`
-- 一次正答一意性: `10 / 10 PASS`
-- 練習PDF表示QA: `8 / 8 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 固定範囲外論点追加: `0件`
-- 後続Topic依存: `0件`
-- 未確認実設備値追加: `0件`
-- 正式固定4問の変更: `0件`
-- 原則5問へ合わせるための仕様追加: `0件`
+固定範囲外論点追加、未確認実設備値追加、正式固定4問変更、5問へ合わせるための仕様追加はいずれも0件。
 
 ## 次に行う
 
-Topic 08の解説画像PowerPointを作成する。固定9項目と正式4過去問要求を可視化し、固定EXAM_ALIGNMENT・正式4過去問・固定範囲は変更しない。
+保存済み正答を先に見ず、固定一次1問＋二次3問を完成教材だけで独立再解答する。
