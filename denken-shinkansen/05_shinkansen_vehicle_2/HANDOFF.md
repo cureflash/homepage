@@ -1,89 +1,64 @@
 # HANDOFF - 新幹線車両・電験二種
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
 Topic 01〜11は最終QAまで `PASS / completed`。完成数は `11 / 39`。
 
-Topic 11 `300系② PWMコンバータ` は、固定一次2問＋二次3問・計5問・27答案要素を維持し、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了した。前回最終QAで唯一FAILだった進捗記録3箇所は `3 / 3` 同期済みで、再判定は `PASS / completed`。
+現在地は `topic_12_exam_alignment_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENTを完了し、本文制作前の固定過去問を一次4問＋二次1問、計5問・13答案要素に固定した。制作前独立検証は `13 / 13 PASS`。
 
-現在地は `topic_11_completed`。次の未完了テーマはTopic 12 `300系③ VVVFインバータと誘導機制御`。
-
-## Topic 11 固定EXAM_ALIGNMENT
-source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
+## Topic 12 固定EXAM_ALIGNMENT
+source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
 
 固定過去問:
-- R5 二次 機械・制御 問3 (1)〜(5)
-- R4 一次 機械 問4 (1)〜(5)
-- R1 二次 機械・制御 問3 (1)〜(3)
-- H24 二次 機械・制御 問3 (1)〜(4)
-- H22 一次 機械 問3 (1)〜(5)
+- R6 一次 機械 問2 (1),(5)
+- R4 一次 機械 問2 (3)〜(5)
+- R2 一次 機械 問3 (1),(4),(5)
+- H30 二次 機械・制御 問1 (4)
+- H26 一次 機械 問5 (3)〜(5)
 
 品質ゲート:
-- 一次: `2問・10答案要素`
-- 二次: `3問・17答案要素`
-- 合計: `5問・27答案要素`
-- 制作前独立検証: `27 / 27 PASS`
-- 完成後独立再解答: 一次 `10 / 10 PASS`、二次 `17 / 17 PASS`、合計 `27 / 27 PASS`
-- 教材外知識補完: `0件`
+- 一次: `4問・11答案要素`
+- 二次: `1問・2答案要素`
+- 合計: `5問・13答案要素`
+- 制作前独立検証: 一次 `11 / 11 PASS`、二次 `2 / 2 PASS`、合計 `13 / 13 PASS`
+- 二次記述問題: `1問`
+- 公式解答との不一致: `0件`
+- 参考教材2系統以上: `PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
-## Topic 11 完成成果物
-- 解説source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
-  - 3段階例題 `3 / 3`
-  - 固定5問・27答案要素マッピング `27 / 27`
-- 解説PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_explanation.pdf`
-  - A4縦5ページ、180 dpi Visual QA `5 / 5 PASS`、文字抽出QA `PASS`
-- 練習source: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice_source.md`
-  - 一次8問＋二次4問、数値・論理QA `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`
-- 練習PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice.pdf`
-  - A4縦3ページ、Visual QA `3 / 3 PASS`、数値・論理再検算 `12 / 12 PASS`
-- 解説画像PowerPoint: `topics/11_300series_pwm_converter/11_300series_pwm_converter_images.pptx`
-- PowerPoint QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_images_qa.md`
-  - 16:9、4スライド、SPEC指定4可視化 `4 / 4 PASS`
-  - Visual QA `4 / 4 PASS`、overflow `0件`、ZIP/XML整合性 `PASS`
-- 完成後独立再解答: `topics/11_300series_pwm_converter/11_300series_pwm_converter_independent_reanswer.md`
-  - 一次 `10 / 10 PASS`、二次 `17 / 17 PASS`、総合 `27 / 27 PASS`
-- 最終QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_final_qa.md`
-  - `PASS / completed`
-  - 必須成果物・表示QA・練習QA・SPEC境界・進捗記録整合: 全件 `PASS`
-
-## Topic 11 固定範囲
-- PWMコンバータ
-- 直流中間回路
-- 基本波
-- 高調波
-- 力率制御
-- 直流電圧制御
-- スイッチング
-- 変換損失
+## Topic 12 固定範囲
+- VVVF
+- PWM
+- V/f
+- 同期速度
+- すべり
+- 定トルク領域
+- 定出力領域
+- 電圧制限
+- 電流制限
 
 SPEC指定可視化:
-- PWM波形
-- 基本波・高調波
-- 変調条件―基本波電圧
-- 入力電流波形
+- 周波数―同期速度
+- 周波数―電圧
+- 回転速度―トルク
+- 回転速度―出力
 
 範囲境界:
-- Topic 12のVVVF、V/f、同期速度、すべり、定トルク／定出力領域はTopic 11へ追加していない
-- Topic 13の回生、四象限運転、回生エネルギーはTopic 11へ追加していない
-- 未確認の300系直流中間電圧、キャリア周波数、変調率、素子損失等を実車値として追加していない
-- 固定範囲外追加: `0件`
-- Topic 12〜13先取り: `0件`
+- Topic 13の回生・四象限運転・回生エネルギーは先取りしない
+- ベクトル制御・センサレス制御等のSPEC外制御方式は追加しない
+- Topic 11のPWMコンバータ側の高調波・力率制御・直流中間電圧制御を再展開しない
+- 未確認の300系基底周波数、最大電圧、最大電流、PWMキャリア周波数、制御定数等を実車値として追加しない
+- SPEC指定9項目との対応: `9 / 9 PASS`
+- SPEC指定4可視化との対応: `4 / 4 PASS`
+- Topic 13先取り: `0件`
+- SPEC外制御方式追加: `0件`
 - 未確認300系実車値追加: `0件`
 
-## 最終QA再判定
-- 前回FAILだった主source冒頭・主source末尾・練習source末尾: `3 / 3 同期済み`
-- 固定一次2問＋二次3問・27答案要素: `PASS`
-- 完成後独立再解答: `27 / 27 PASS`
-- 必須成果物: `PASS`
-- PDF/PPTX表示・構造QA: `PASS`
-- 練習問題QA: `12 / 12 PASS`
-- SPEC境界: `PASS`
-- 進捗記録整合: `PASS`
-- 最終判定: `PASS / completed`
+## Topic 11 完了確認
+Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。完成後独立再解答 `27 / 27 PASS`、最終判定 `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 12「300系③ VVVFインバータと誘導機制御」の制作前EXAM_ALIGNMENTを行う。公式過去問を直近年度から確認し、一次・二次を合わせ原則5問以上、二次対象論点で確認できる記述問題を含める。過去問要求から教材範囲を固定してから本文制作へ進む。
+Topic 12の解説本文＋3段階例題を作成する。固定5過去問・13答案要素を本文へ `13 / 13` マッピングし、周波数―同期速度、周波数―電圧、回転速度―トルク、回転速度―出力の4可視化へ接続できる計算条件を置く。固定EXAM_ALIGNMENTは変更しない。
