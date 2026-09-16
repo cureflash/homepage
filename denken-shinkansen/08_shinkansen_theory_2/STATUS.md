@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 11 / 21
-- current_status: `topic_12_source_progress_synced`
+- current_status: `topic_12_final_qa_complete`
 - last_completed_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 - active_topic: `12 三相交流を新幹線へ渡す`
-- next_start: Topic 12 最終QA再実施
+- next_start: Topic 12 completed状態同期
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -157,19 +157,20 @@
 - [x] 完成後独立再解答: `5 / 5 PASS`
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source・練習sourceの旧進捗記録同期
-- [ ] 最終QA再実施
+- [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
 
 ## 今回進めた内容
 
-Topic 12「三相交流を新幹線へ渡す」の旧進捗記録3箇所を実成果物へ同期した。
+Topic 12「三相交流を新幹線へ渡す」の最終QAを再実施した。
 
-- 主source冒頭: `POWERPOINT_COMPLETE`／次工程「完成後独立再解答」から `SOURCE_PROGRESS_SYNCED`／次工程「最終QA再実施」へ同期
-- 主source末尾: 旧「完成後独立再解答」案内を、完成後独立再解答 `5 / 5 PASS`・初回最終QA実施済み・次工程「最終QA再実施」へ同期
-- 練習source: `PRACTICE_PDF_COMPLETE`／旧「解説画像PowerPoint＋表示QA」案内を、`SOURCE_PROGRESS_SYNCED`・完成後独立再解答 `5 / 5 PASS`・次工程「最終QA再実施」へ同期
-- 技術本文・固定EXAM_ALIGNMENT・練習12問・正答・PDF/PPTX変更: `0件`
+- 必須成果物実在: `PASS`
+- 固定H23一次「理論」問6・5小問の完成後独立再解答: `5 / 5 PASS`
 - 二次採用: `0問`、二次数合わせ: `0件`
-- SPEC固定範囲外追加: `0件`
+- 解説PDF・練習PDF・PowerPoint QA: `PASS`
+- SPEC固定範囲境界: `PASS`
+- 初回blockerだった旧進捗記録3箇所の解消: `PASS`
+- 技術本文・固定EXAM_ALIGNMENT・練習12問・正答・PDF/PPTX変更: `0件`
 
 ## 判定
 
-現在 `topic_12_source_progress_synced / IN_PROGRESS`。初回最終QAで唯一FAILだった旧進捗記録は解消済み。完成数は `11 / 21` のまま。次工程は最終QA再実施。
+現在 `topic_12_final_qa_complete / IN_PROGRESS`。最終QAは `PASS / FINAL_QA_COMPLETE`。完成数は `11 / 21` のまま。次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。
