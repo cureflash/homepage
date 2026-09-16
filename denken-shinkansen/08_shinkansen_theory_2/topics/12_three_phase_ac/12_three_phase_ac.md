@@ -4,10 +4,10 @@
 
 ## 状態
 
-- stage: `SOURCE_PROGRESS_SYNCED`
-- completion: `in_progress`
-- 完成後独立再解答: `5 / 5 PASS`
-- 次工程: 最終QA再実施
+- stage: `COMPLETED`
+- completion: `completed`
+- 最終QA: `PASS / FINAL_QA_COMPLETE`
+- 次工程: Topic 13「新幹線の交流電力を複素数で扱う」の制作前EXAM_ALIGNMENT
 
 ## 1. SPEC固定範囲
 
@@ -478,15 +478,14 @@ a線では、定義した枝電流方向から
 
 ## 9. 今回の到達点
 
-Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習source＋PDF、解説画像PowerPoint、完成後独立再解答、初回最終QAまで実施済み。初回最終QAでは技術内容・成果物QA・固定範囲境界はPASSで、旧進捗記録のみFAILだった。
-
-今回、主source冒頭と末尾の旧進捗記録を実成果物へ同期した。
+Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習source＋PDF、解説画像PowerPoint、完成後独立再解答、最終QA再実施まで完了し、`PASS / completed` とした。
 
 - 完成後独立再解答: `5 / 5 PASS`
+- 最終QA: `PASS / FINAL_QA_COMPLETE`
 - 二次採用: `0問`、二次数合わせ: `0件`
 - 技術本文・固定EXAM_ALIGNMENT・例題・PDF/PPTX変更: `0件`
 - SPEC固定範囲外追加: `0件`
 - Topic 13以降の先取り: `0件`
 - 未確認の新幹線変電設備値・内部結線追加: `0件`
 
-次工程は最終QA再実施。
+次工程はTopic 13「新幹線の交流電力を複素数で扱う」の制作前EXAM_ALIGNMENT。
