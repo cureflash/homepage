@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 10 / 14
-- current_status: `topic_11_independent_reanswer_complete`
+- current_status: `topic_11_final_qa_needs_revision`
 - last_completed_topic: `10 新幹線が使う電力は「W」だけではない`
 - active_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- next_start: Topic 11の最終QAを実施する
+- next_start: Topic 11の主source・練習sourceの進捗記録だけを実成果物へ同期する
 
 ## Topic 01 進捗
 
@@ -198,18 +198,19 @@
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `5 / 5問・10 / 10答案要素 PASS`
+- [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習source進捗記録不整合）
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の完成後公式過去問独立再解答を実施した。
+Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の最終QAを実施した。
 
-固定5問・10答案要素について、公式解答を先に見ず完成教材だけで解答を確定し、その後に公式解答と照合した。独立解答列は `(3),(4),(4),(4),(3),(4),(3),(4),(1),(1)`、公式解答列も同一で `5 / 5問・10 / 10答案要素 PASS`。
+固定5問・10答案要素の完成後独立再解答は `5 / 5問・10 / 10答案要素 PASS`。必須成果物、3段階例題、練習15問、解説PDF・練習PDF・PowerPoint QA、SPEC境界はPASSした。
 
-教材外知識の補完、不平衡三相・高調波・電力計測・Y-Δインピーダンス変換、具体的な新幹線き電変圧器結線、Topic 12以降の半導体・整流・PWM、未確認実設備値への依存は0件。
+ただし進捗記録整合性のみFAIL。主sourceは `status: EXPLANATION_SOURCE_COMPLETE` かつ次工程が解説PDF作成、練習sourceは `stage: PRACTICE_PDF_COMPLETE` かつ次工程がPowerPoint作成のままで、実成果物の現在地と一致していない。
 
-独立再解答記録: `topics/11_three_phase_ac/11_three_phase_ac_exam_recheck.md`
+最終QA記録: `topics/11_three_phase_ac/11_three_phase_ac_final_qa.md`
 
 ## 判定
 
-現在 `topic_11_independent_reanswer_complete / IN_PROGRESS`。完成数は `10 / 14`。次はTopic 11の最終QAを実施する。
+現在 `topic_11_final_qa_needs_revision / IN_PROGRESS`。完成数は `10 / 14`。次は技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTXを変更せず、主source・練習sourceの進捗記録だけを実成果物へ同期する。
