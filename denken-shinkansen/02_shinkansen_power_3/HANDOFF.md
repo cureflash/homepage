@@ -3,27 +3,26 @@
 更新日: 2026-09-16
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `8 / 16`。Topic 01〜08は完成済み。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は完成済み。
 
 ## 今回進捗
-Topic 09 `変電所からパンタグラフまでどう送る？` のmain sourceへ、完成後ブラインド独立再解答結果を同期した。
+Topic 09 `変電所からパンタグラフまでどう送る？` の最終QAを実施し、`PASS / completed` とした。
 
-`topics/09_feeding_transmission/09_feeding_transmission.md` の状態・EXAM_ALIGNMENT・次工程だけを現在地へ更新し、教材本文、固定5問・7小問、成果物、SPEC固定範囲は変更していない。
+`topics/09_feeding_transmission/09_feeding_transmission_final_qa.md` を追加し、main source・STATUS・HANDOFFを現在地へ同期した。教材本文、固定5問・7小問、既存成果物、SPEC固定範囲は変更していない。
 
-同期した結果:
+最終QA結果:
+- 必須成果物: PASS
+- 固定5問・7小問の本文マッピング: `7 / 7`
 - 完成教材のみでの独立再解答: `7 / 7 PASS`
 - 公式解答一致: `7 / 7 PASS`
 - 教材外知識補完: `0件`
 - Topic 10以降の論点による補完: `0件`
 - SPEC固定範囲外追加: `0件`
 - 未確認実設備値の使用: `0件`
-
-独立答案:
-- R6下 電力 問12: `(2)`
-- R6下 電力 問16(a)(b): `(3),(4)`
-- R6下 電力 問17(a)(b): `(2),(4)`
-- R5上 電力 問10: `(2)`
-- R4下 電力 問9: `(1)`
+- 解説PDF QA: PASS
+- 練習PDF QA: PASS
+- PowerPoint QA: PASS
+- 最終判定: `PASS / completed`
 
 ## Topic 09 固定過去問
 品質ゲート対象は変更していない。
@@ -46,7 +45,18 @@ Topic 10以降の需要率・負荷率・不等率・無効電力補償、短絡
 
 R8上 電力 問8、およびR7上・R7下の送電関連候補のうち、機械的強度・コロナ・雷／開閉サージ・架空送電線路の構成部品・誘導障害等の固定範囲外論点を要する問題は品質ゲートへ採用しない。
 
-## 現在の品質ゲート進捗
+## Topic 09 完了記録
+source: `topics/09_feeding_transmission/09_feeding_transmission.md`
+解説PDF: `topics/09_feeding_transmission/09_feeding_transmission_explanation.pdf`
+練習問題source: `topics/09_feeding_transmission/09_feeding_transmission_practice_source.md`
+練習PDF: `topics/09_feeding_transmission/09_feeding_transmission_practice.pdf`
+練習PDF QA: `topics/09_feeding_transmission/09_feeding_transmission_practice_qa.md`
+解説画像PowerPoint: `topics/09_feeding_transmission/09_feeding_transmission_images.pptx`
+PowerPoint QA: `topics/09_feeding_transmission/09_feeding_transmission_powerpoint_qa.md`
+完成後独立再解答: `topics/09_feeding_transmission/09_feeding_transmission_independent_reanswer.md`
+最終QA: `topics/09_feeding_transmission/09_feeding_transmission_final_qa.md`
+
+品質ゲート:
 - 制作前EXAM_ALIGNMENT: 完了
 - 公式過去問: `5問・7小問` 固定
 - 制作前独立検証: `7 / 7 PASS`
@@ -82,28 +92,16 @@ R8上 電力 問8、およびR7上・R7下の送電関連候補のうち、機�
 - SPEC固定範囲外追加: `0件`
 - 未確認実設備値の真値化: `0件`
 - main sourceへの完成後独立再解答結果同期: 完了
-- 最終QA: 未実施
+- 最終QA: `PASS / completed`
 
 ## 直前完了テーマ
-Topic 08 `新幹線の変電所はなぜ数十kmおき？` は `PASS / completed`。
-
-固定5問・7小問は完成教材だけで `7 / 7 PASS`、公式解答一致 `7 / 7`。教材外知識補完、Topic 09以降の論点による補完、未確認実設備値の使用、SPEC固定範囲外追加はいずれも0件。
-
-最終QA: `topics/08_voltage_drop/08_voltage_drop_final_qa.md`
-source: `topics/08_voltage_drop/08_voltage_drop.md`
-解説PDF: `topics/08_voltage_drop/08_voltage_drop_explanation.pdf`
-練習問題source: `topics/08_voltage_drop/08_voltage_drop_practice_source.md`
-練習PDF: `topics/08_voltage_drop/08_voltage_drop_practice.pdf`
-練習PDF QA: `topics/08_voltage_drop/08_voltage_drop_practice_qa.md`
-解説画像PowerPoint: `topics/08_voltage_drop/08_voltage_drop_images.pptx`
-PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
-完成後独立再解答: `topics/08_voltage_drop/08_voltage_drop_independent_reanswer.md`
+Topic 09 `変電所からパンタグラフまでどう送る？` は `PASS / completed`。
 
 ## 現在状態
-- `current_status`: `topic_09_source_reanswer_synced`
-- 完成数: `8 / 16`
-- last completed: Topic 08 `新幹線の変電所はなぜ数十kmおき？`
-- active: Topic 09 `変電所からパンタグラフまでどう送る？`
+- `current_status`: `topic_09_completed`
+- 完成数: `9 / 16`
+- last completed: Topic 09 `変電所からパンタグラフまでどう送る？`
+- active: Topic 10 `新幹線が突然大電力を使ったら？`
 
 ## 次の正確な開始点
-Topic 09最終QAを実施する。固定5問・7小問、教材本文、成果物、SPEC固定範囲は変更しない。
+Topic 10の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`SPEC.md` のTopic 10固定範囲だけで公式過去問を直近年度から調査し、品質ゲート対象を固定する。仕様を追加しない。
