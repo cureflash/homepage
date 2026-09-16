@@ -1,22 +1,22 @@
 # HANDOFF - 電験三種「電気数学」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 現在地
 
 Topic 01〜09は `completed`。
 
-Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題sourceまで完了。
+Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。
 
 完成数: `9 / 12`
 
-current_status: `topic_10_practice_source_complete`
+current_status: `topic_10_practice_pdf_complete`
 
 last_completed_topic: `09 微積分で電気を読む`
 
 active_topic: `10 指数関数・一階微分方程式入門`
 
-next_start: `Topic 10 練習PDF`
+next_start: `Topic 10 解説画像PowerPoint`
 
 ## Topic 10 固定仕様範囲
 
@@ -99,16 +99,26 @@ next_start: `Topic 10 練習PDF`
 
 判定: `PASS / PRACTICE_SOURCE_COMPLETE`。
 
+## Topic 10 練習PDF
+
+成果物:
+`topics/10_exponential_first_order_ode/10_exponential_first_order_ode_practice.pdf`
+
+- A4縦4ページ
+- 全12問＋完全解説を収録
+- 200 dpi表示QA `4 / 4 PASS`
+- 文字抽出QA PASS
+- 正答・主要数値のsource一致 `12 / 12 PASS`
+- 固定5過去問への接続 `5 / 5 PASS`
+- 固定EXAM_ALIGNMENT変更0件
+- RLC二次過渡・ラプラス変換・伝達関数・PID追加0件
+- Topic 11一般特性曲線体系の先取り0件
+- 未確認新幹線実値追加0件
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`。
+
 ## 次工程
 
-Topic 10の練習PDFを、現行練習source全12問＋完全解説から作成する。
+Topic 10の解説画像PowerPointを作成する。
 
-必要QA:
-- A4縦
-- 全ページ表示QA
-- 文字抽出QA
-- 12問の正答・主要数値がsourceと一致
-- 固定5過去問への接続維持
-- 固定範囲外追加0件
-
-練習PDF完了後もTopic 10は `completed` ではない。解説画像PowerPoint、完成教材だけでの固定5問独立再解答、最終QAが残る。
+PowerPoint完了後もTopic 10は `completed` ではない。完成教材だけでの固定5問独立再解答、最終QAが残る。

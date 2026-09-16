@@ -1,14 +1,14 @@
 # STATUS - 電験三種「電気数学」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 9 / 12
-- current_status: `topic_10_practice_source_complete`
+- current_status: `topic_10_practice_pdf_complete`
 - last_completed_topic: `09 微積分で電気を読む`
 - active_topic: `10 指数関数・一階微分方程式入門`
-- next_start: `Topic 10 練習PDF`
+- next_start: `Topic 10 解説画像PowerPoint`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -105,22 +105,22 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source
-- [ ] 練習PDF（解答・完全解説付き）
+- [x] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 10「指数関数・一階微分方程式入門」の練習問題sourceを完成し、GitHub正本へ反映した。
+Topic 10「指数関数・一階微分方程式入門」の練習PDFを完成し、GitHub正本へ反映した。
 
-- 成果物: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_practice.md`
-- 全12問・全問五肢択一
-- 難易度: 基礎3 / 標準7 / 複合2
-- 完全解説付き
+- 成果物: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_practice.pdf`
+- A4縦4ページ
+- 全12問＋完全解説を収録
+- 200 dpi表示QA `4 / 4 PASS`
+- 文字抽出QA PASS
+- 正答・主要数値のsource一致 `12 / 12 PASS`
 - 固定5過去問への接続 `5 / 5 PASS`
-- 数値・論理QA `12 / 12 PASS`
-- 正答一意性 `12 / 12 PASS`
 - 固定EXAM_ALIGNMENT変更0件
 - RLC二次過渡・ラプラス変換・伝達関数・PID追加0件
 - Topic 11一般特性曲線体系の先取り0件
@@ -128,6 +128,6 @@ Topic 10「指数関数・一階微分方程式入門」の練習問題sourceを
 
 ## 判定
 
-`topic_10_practice_source_complete / IN_PROGRESS`。
+`topic_10_practice_pdf_complete / IN_PROGRESS`。
 
-完成数は `9 / 12`。次工程はTopic 10の練習PDF。
+完成数は `9 / 12`。次工程はTopic 10の解説画像PowerPoint。
