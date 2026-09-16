@@ -7,7 +7,7 @@
 
 Topic 01〜11は最終QAまで `PASS / completed`。完成数は `11 / 39`。
 
-現在地は `topic_12_explanation_source_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENTと解説本文＋3段階例題を完了した。固定一次4問＋二次1問・13答案要素は変更せず、本文へ `13 / 13` マッピング済み。
+現在地は `topic_12_explanation_pdf_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QAまで完了した。固定一次4問＋二次1問・13答案要素は変更していない。
 
 ## Topic 12 固定EXAM_ALIGNMENT
 source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -41,6 +41,22 @@ source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_i
 
 教材用可視化条件は実車値と誤認しないよう仮定値として固定した。4極、`f_b=50 Hz`、`V_max=400 V`、`n_b=1440 rpm`、`T_b=900 N·m` を用い、周波数―同期速度、周波数―電圧、回転速度―トルク、回転速度―出力へ直接接続できる。
 
+## Topic 12 解説PDF完成確認
+- PDF: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control_explanation.pdf`
+- QA: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control_explanation_pdf_qa.md`
+- A4縦5ページ
+- 180 dpi表示QA: `5 / 5 PASS`
+- 文字抽出QA: `PASS`
+- 文字欠落・黒四角・重なり・クリップ: `0件`
+- 固定5過去問・13答案要素接続: `13 / 13 PASS`
+- 3段階例題: `3 / 3 PASS`
+- SPEC指定4可視化: `4 / 4 PASS`
+- 教材図の仮定値表記: `PASS`
+- Topic 13先取り: `0件`
+- SPEC外制御方式追加: `0件`
+- Topic 11のPWMコンバータ側論点再展開: `0件`
+- 未確認300系実車値の真値化: `0件`
+
 ## Topic 12 固定範囲
 - VVVF
 - PWM
@@ -73,4 +89,4 @@ SPEC指定可視化:
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。完成後独立再解答 `27 / 27 PASS`、最終判定 `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 12の解説PDFをsourceから作成する。A4縦で固定5過去問・13答案要素、3段階例題、SPEC指定4可視化への接続を維持し、表示QA・文字抽出QAを実施する。固定EXAM_ALIGNMENTは変更しない。
+Topic 12の練習問題・完全解説sourceを作成する。一次試験型に加え、H30二次の記述要求へ接続する問題を含め、固定5過去問・13答案要素を維持する。固定EXAM_ALIGNMENTは変更しない。
