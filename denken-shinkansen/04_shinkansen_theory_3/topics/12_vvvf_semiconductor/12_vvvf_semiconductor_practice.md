@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `12`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - 更新日: 2026-09-17
 
 ## 固定範囲
@@ -307,4 +307,4 @@ n型の多数キャリアは電子。nチャネルJFETでは逆ゲートバイ�
 
 ## 次工程
 
-Topic 12の解説画像PowerPointを作成する。固定EXAM_ALIGNMENTは変更しない。
+完成後独立再解答 `7 / 7 PASS` まで完了。次はTopic 12の最終QAを再実施する。固定EXAM_ALIGNMENTは変更しない。
