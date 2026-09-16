@@ -9,7 +9,7 @@ Topic 01〜12は最終QAまで `PASS / completed`。
 
 active topic: `13 L0系のリニア同期モータを等価回路で考える`
 
-current status: `topic_13_exam_alignment_complete`
+current status: `topic_13_explanation_source_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -491,9 +491,13 @@ source完成内容:
 ## Topic 13 source
 - `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit.md`
 - 制作前EXAM_ALIGNMENT: `completed`
-- 解説本文＋3段階例題: `not started`
+- 解説本文＋3段階例題: `completed`
 - 固定一次4問＋二次1問、22答案要素
 - 制作前独立検証: `22 / 22 PASS`
+- 本文マッピング: `22 / 22`
+- 3段階例題: `3 / 3`
+- 主要計算再検算: PASS
+- JR東海一次資料で確認した推進原理のみL0接続へ使用
 - 公式過去問正本: 電気技術者試験センター
 - 参考教材: e-sysnet＋電験王2
 - 固定範囲外追加: `0件`
@@ -501,4 +505,4 @@ source完成内容:
 - 未確認L0実値追加: `0件`
 
 ## 次に行うこと
-Topic 13「L0系のリニア同期モータを等価回路で考える」の解説本文＋3段階例題を、固定EXAM_ALIGNMENTを変更せず作成する。
+Topic 13「L0系のリニア同期モータを等価回路で考える」の解説PDFを、固定EXAM_ALIGNMENTと解説本文を変更せず作成する。
