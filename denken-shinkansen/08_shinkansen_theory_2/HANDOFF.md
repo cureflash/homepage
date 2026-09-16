@@ -6,11 +6,11 @@
 
 Topic 01〜13は `PASS / completed`。完成数は `13 / 21`。
 
-current_status: `topic_14_practice_pdf_complete`
+current_status: `topic_14_powerpoint_complete`
 
 active_topic: `14 インバータのギザギザ波形を分解する`
 
-Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDFまで完了。固定一次2問・3答案要素＋二次1問・2答案要素を `5 / 5` 接続し、二次採用1問・2答案要素、二次数合わせ0件を維持している。次工程は解説画像PowerPoint＋表示QA。
+Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QAまで完了。固定一次2問・3答案要素＋二次1問・2答案要素を `5 / 5` 可視化し、二次採用1問・2答案要素、二次数合わせ0件を維持している。次工程は完成後独立再解答。
 
 ## Topic 14 成果物
 
@@ -20,8 +20,10 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 練習source: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_practice.md`
 - 練習PDF: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_practice.pdf`
 - 練習PDF QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_practice_pdf_qa.md`
+- PowerPoint: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_images.pptx`
+- PowerPoint QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_powerpoint_qa.md`
 - completion: `in_progress`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `POWERPOINT_COMPLETE`
 
 ## Topic 14 固定範囲
 
@@ -84,6 +86,25 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
+## Topic 14 PowerPoint QA
+
+記録: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_powerpoint_qa.md`
+
+- 16:9・5枚
+- 200 dpi全スライド表示QA: `5 / 5 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- PDF変換・文字抽出QA: `PASS`
+- 系列SPEC指定可視化: `4 / 4 PASS`
+- 固定3問・5答案要素の可視化: `5 / 5`
+- 二次採用: `1問・2答案要素`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 15過渡現象の先取り: `0件`
+- 未確認実車PWM方式・スイッチング周波数・高調波実測値追加: `0件`
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
 ## 次に行うこと
 
-Topic 14「インバータのギザギザ波形を分解する」の解説画像PowerPoint＋表示QA。固定3問・5答案要素と系列SPECの固定範囲だけを可視化し、設備・制御固有論点やTopic 15過渡現象を追加しない。
+Topic 14「インバータのギザギザ波形を分解する」の完成後独立再解答。固定3問・5答案要素を完成教材だけで再解答し、公式標準解答との一致、教材外補完0件、固定範囲外補完0件を確認する。

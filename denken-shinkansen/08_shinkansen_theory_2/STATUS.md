@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 13 / 21
-- current_status: `topic_14_practice_pdf_complete`
+- current_status: `topic_14_powerpoint_complete`
 - last_completed_topic: `13 新幹線の交流電力を複素数で扱う`
 - active_topic: `14 インバータのギザギザ波形を分解する`
-- next_start: Topic 14 解説画像PowerPoint＋表示QA
+- next_start: Topic 14 完成後独立再解答
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -213,22 +213,21 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
-- [ ] 解説画像PowerPoint＋表示QA
+- [x] 解説画像PowerPoint＋表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 14「インバータのギザギザ波形を分解する」の練習問題source＋練習PDFを完成した。
+Topic 14「インバータのギザギザ波形を分解する」の解説画像PowerPoint＋表示QAを完成した。
 
-- 全12問・全問五肢択一
-- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3
-- 数値再計算・論理QA: `12 / 12 PASS`
-- 正答一意性: `12 / 12 PASS`
-- 固定一次2問・3答案要素＋二次1問・2答案要素への接続: `5 / 5`
-- 練習PDF: A4縦5ページ
-- 200 dpi全ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: `PASS`
+- PowerPoint: 16:9・5枚
+- 200 dpi全スライド表示QA: `5 / 5 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- PDF変換・文字抽出QA: `PASS`
+- 系列SPEC指定可視化: `4 / 4 PASS`
+- 固定一次2問・3答案要素＋二次1問・2答案要素の可視化: `5 / 5`
 - 二次採用: `1問・2答案要素`、二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 - Topic 15先取り: `0件`
@@ -236,4 +235,4 @@ Topic 14「インバータのギザギザ波形を分解する」の練習問題
 
 ## 判定
 
-Topic 14は `PASS / PRACTICE_PDF_COMPLETE / IN_PROGRESS`。完成数は `13 / 21`。次工程は解説画像PowerPoint＋表示QA。
+Topic 14は `PASS / POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `13 / 21`。次工程は完成後独立再解答。
