@@ -1,16 +1,17 @@
 # HANDOFF - 新幹線・電験三種「機械」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 正本・active series
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は品質ゲートPASSでcompleted。active topicは12「新幹線のコンピュータは何をしている？」。
 
 ## 今回進捗
-Topic 12の解説PDFを完成し、GitHub正本へ反映した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、文字切れ・重なり・ページ外はみ出し・破損グリフ0件。固定EXAM_ALIGNMENTの6問・8答案要素を `8 / 8` 収録し、3段階例題 `3 / 3` を維持した。仕様外追加・教材外補完・車種固有情報の推測は0件。
+Topic 12の練習問題sourceを完成し、GitHub正本へ反映した。全12問・全問五肢択一、基礎3 / 本試験標準7 / 複合・応用2。独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`、固定EXAM_ALIGNMENTの6問・8答案要素へ `8 / 8 PASS` で接続した。仕様外追加・教材外補完・車種固有情報の推測は0件。
 
 source: `topics/12_information_processing/12_information_processing.md`
 explanation PDF: `topics/12_information_processing/12_information_processing_explanation.pdf`
 explanation PDF QA: `topics/12_information_processing/12_information_processing_explanation_pdf_qa.md`
+practice source: `topics/12_information_processing/12_information_processing_practice.md`
 
 ## Topic 12 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
@@ -71,6 +72,24 @@ explanation PDF QA: `topics/12_information_processing/12_information_processing_
 解説PDF文字切れ・重なり・ページ外はみ出し・破損グリフ: `0件`
 解説PDF固定過去問マッピング: `8 / 8`
 
+## 練習問題sourceの現状
+- 全12問、全問五肢択一。
+- 構成: 基礎3 / 本試験標準7 / 複合・応用2。
+- R8上 問14 → 問1、問4。
+- R8上 問18(a)(b) → 問8、問9。
+- R7上 問14 → 問10。
+- R5下 問14 → 問7、問11。
+- R1 問14 → 問5、問6。
+- H28 問18(a)(b) → 問2、問10、問11。
+- 固定6問・8答案要素への接続: `8 / 8 PASS`。
+- 独立計算・論理QA: `12 / 12 PASS`。
+- 正答一意性QA: `12 / 12 PASS`。
+- 固定EXAM_ALIGNMENT変更: `0件`。
+- 固定範囲外論点追加: `0件`。
+- Topic 13以降の先取り: `0件`。
+- 車種固有仕様の推測: `0件`。
+- 練習PDF: 未作成。
+
 ## 非選定・重複扱い
 - R7下 機械 問14: フローチャート・プログラム実行が主題で固定範囲外。
 - R6上 機械 問18: n進数・D/A変換と重なるが、符号付き8bit・補数表現が正答要件で固定範囲外。
@@ -118,4 +137,4 @@ explanation PDF QA: `topics/12_information_processing/12_information_processing_
 Topic 11「空転した車輪をどう立て直す？」は最終QA `PASS / completed`。固定R4下 機械 問14、完成後独立再解答 `1 / 1 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界は全件PASS。完成数は `11 / 16`。
 
 ## 次に行う
-Topic 12の練習問題sourceを作成する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更せず、Topic 13以降を先取りしない。
+Topic 12の練習PDFを作成する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更せず、Topic 13以降を先取りしない。
