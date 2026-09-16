@@ -6,13 +6,13 @@
 
 Topic 01〜11は `PASS / completed`。完成数は `11 / 21`。
 
-current_status: `topic_12_independent_reanswer_complete`
+current_status: `topic_12_final_qa_needs_revision`
 
 active_topic: `12 三相交流を新幹線へ渡す`
 
-Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。完成後独立再解答は `ロ, ヲ, リ, ホ, ヨ` で公式標準解答と `5 / 5 PASS`。二次採用0問・二次数合わせ0件を維持している。
+Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QAまで実施済み。固定公式過去問H23一次「理論」問6 (1)〜(5)は完成後独立再解答 `5 / 5 PASS`、二次採用0問・二次数合わせ0件。初回最終QAは技術内容・成果物QAはPASSだが、主source・練習sourceの旧進捗記録が残るため `NEEDS_REVISION / IN_PROGRESS`。
 
-次工程はTopic 12の最終QA。
+次工程はTopic 12の旧進捗記録同期。その後に最終QAを再実施する。
 
 ## Topic 12 成果物
 
@@ -23,7 +23,8 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - PowerPoint: `topics/12_three_phase_ac/12_three_phase_ac_images.pptx`
 - PowerPoint QA: `topics/12_three_phase_ac/12_three_phase_ac_powerpoint_qa.md`
 - 独立再解答: `topics/12_three_phase_ac/12_three_phase_ac_reanswer.md`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- 最終QA: `topics/12_three_phase_ac/12_three_phase_ac_final_qa.md`
+- stage: `FINAL_QA_NEEDS_REVISION`
 - completion: `IN_PROGRESS`
 
 ## Topic 12 固定範囲
@@ -189,6 +190,23 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
+## Topic 12 初回最終QA
+
+- 記録: `topics/12_three_phase_ac/12_three_phase_ac_final_qa.md`
+- 必須成果物実在: `PASS`
+- 固定H23一次「理論」問6・5小問の独立再解答: `5 / 5 PASS`
+- 二次採用0問・二次数合わせ0件: `PASS`
+- 解説PDF・練習PDF・PowerPoint QA: `PASS`
+- SPEC固定範囲境界: `PASS`
+- 進捗記録整合: `FAIL`
+  - 主source冒頭が `POWERPOINT_COMPLETE`／次工程「完成後独立再解答」のまま
+  - 主source末尾が次工程「完成後独立再解答」のまま
+  - 練習source末尾が次工程「解説画像PowerPoint＋表示QA」のまま
+
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
+技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの修正は不要。進捗記録だけを実態へ同期する。
+
 ## 参考資料
 
 参照日: 2026-09-16
@@ -224,4 +242,4 @@ Topic 11「ATCはなぜ特定の周波数を見分けられる？」は `PASS / 
 
 ## 次に行うこと
 
-Topic 12の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、進捗記録整合、固定範囲境界を確認する。
+Topic 12の主source・練習sourceに残る旧進捗記録3箇所を実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。同期後に最終QAを再実施する。
