@@ -7,9 +7,9 @@
 
 Topic 01〜10は最終QAまで `PASS / completed`。完成数は `10 / 39`。
 
-現在地は `topic_11_practice_source_complete`。Topic 11 `300系② PWMコンバータ` は制作前EXAM_ALIGNMENTを固定したまま、解説本文＋3段階例題、解説PDF、練習問題・完全解説sourceまで完成した。固定一次2問＋二次3問、計5問・27答案要素を維持し、練習12問を `27 / 27` 接続した。
+現在地は `topic_11_practice_pdf_complete`。Topic 11 `300系② PWMコンバータ` は制作前EXAM_ALIGNMENTを固定したまま、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDFまで完成した。固定一次2問＋二次3問、計5問・27答案要素を維持し、練習12問を `27 / 27` 接続した。
 
-次工程はTopic 11の練習PDF。固定EXAM_ALIGNMENT・解説source・解説PDF・練習sourceの技術内容・範囲境界を変更せず、A4練習PDFと表示・文字抽出・数値論理QAを作成する。
+次工程はTopic 11の解説画像PowerPoint。固定EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDFの技術内容・範囲境界を変更せず、SPEC指定4可視化と表示QA・overflow・PowerPoint ZIP整合性を確認する。
 
 ## Topic 01〜10
 - Topic 01〜10: 最終QA `PASS / completed`
@@ -125,12 +125,33 @@ SPEC指定可視化:
 - 二次3: 方形波の基本波・高調波分離と補償電流
 - 二次4: 周期―周波数―スイッチング損失と損失分類
 
-## 次の正確な開始点
-Topic 11 `300系② PWMコンバータ` の練習PDF。
+## Topic 11 練習PDF
+- PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice.pdf`
+- QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice_qa.md`
+- A4縦3ページ
+- 一次試験型 `8 / 8`、二次試験型 `4 / 4`、全12問完全解説付き
+- 180 dpi Visual QA: `3 / 3 PASS`
+- overlap / clipping / broken glyph: `0件`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□` `0件`
+- 数値・論理再検算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次記述QA: `4 / 4 PASS`
+- 固定一次2問＋二次3問・27答案要素: 維持
+- 固定5問・27答案要素への接続: `27 / 27`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- Topic 12〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+- 問題数値: 全て教材用仮定値
+- SHA-256: `c79f2e4603661c11de55ba8804663cd00febcd419df1977022bc1c5ae0853fe3`
+- Git blob SHA-1: `64cc5843dc65a58edc8b5120061db9f74930c091`
 
-1. `11_300series_pwm_converter_practice_source.md` を正本としてA4縦PDF化する。
-2. 一次8問＋二次4問と完全解説を欠落させない。
-3. 180 dpi程度で全ページVisual QAを行い、overlap / clipping / broken glyphを確認する。
-4. 文字抽出QAと12問の数値・論理再検算を行う。
-5. 固定5問・27答案要素、固定範囲、Topic 12〜13境界を変更しない。
+## 次の正確な開始点
+Topic 11 `300系② PWMコンバータ` の解説画像PowerPoint。
+
+1. SPEC指定4可視化（PWM波形、基本波・高調波、変調条件―基本波電圧、入力電流波形）を収録する。
+2. 固定5過去問・27答案要素に直接つながる図として作る。
+3. 表示QAで全スライドのoverlap / clipping / broken glyphを確認する。
+4. PowerPoint ZIP/XML整合性を確認する。
+5. 固定EXAM_ALIGNMENT、固定範囲、Topic 12〜13境界を変更しない。
 6. 未確認300系実車値を追加しない。
