@@ -4,15 +4,15 @@
 
 ## 状態
 
-`topic_09_voltage_drop_definition_fixed`
+`topic_09_independent_reanswer_complete`
 
-完成後blind独立再解答で検出したH26二次「電力・管理」問4(3)のFAILについて、根本原因だった電圧降下率の基準電圧固定を修正した。正式一次2問＋二次1問、SPEC固定10項目、固定範囲は変更していない。
+電圧降下率定義の根本修正後、解説PDF再生成・QA、練習PDF・QA、PowerPoint QA、修正後blind独立再解答まで完了した。正式一次2問＋二次1問は `3 / 3問・14 / 14答案要素 PASS`。SPEC固定10項目、固定範囲、問題・正答は変更していない。
 
 電圧降下率は問題文・定義から分母を確認し、送電端基準と受電端基準を使い分ける。H26二次問4(3)は受電端基準の定義を用いるため、`V_r=(1-d)V_s` を一律適用しない。
 
 完成後blind再解答を守るため、公式過去問の個別正答記号・最終数値解答は本sourceへ保存しない。
 
-既存の解説PDFは旧sourceから生成されているため未同期である。次工程は、この修正sourceを正本として解説PDFを再生成し、表示QA・文字抽出QA・数式/数値再計算QAを再実施する。
+最終QA初回判定では、技術内容・必須成果物・PDF/PPTX QA・練習QA・完成後blind独立再解答・SPEC境界はPASSで、旧進捗記録のみがexact blockerとなった。本sourceではその進捗記録だけを実成果物へ同期し、技術本文は変更していない。次工程は最終QAの再判定とする。
 
 ## SPEC固定範囲
 
@@ -677,11 +677,12 @@ AT中点関係は
 
 ## 依存成果物の影響
 
-- `09_at_feeding_explanation.pdf`: 旧source §6を含むため要再生成。
-- `09_at_feeding_practice.md`: 問10・問14は「送電端基準」と問題文で明示しており、計算式・正答は変更不要。
-- `09_at_feeding_practice.pdf`: practice sourceと同じ送電端基準問題であり、今回の根本修正による数値変更は不要。
-- `09_at_feeding_images.pptx`: 距離―電位、距離―電流、AT中点拘束、単純き電比較の4可視化で構成され、電圧降下率の分母固定式を含まないため変更不要。
+- `09_at_feeding_explanation.pdf`: 修正済みsourceから再生成・QA済み。A4縦3ページ、表示 `3 / 3 PASS`、文字抽出PASS、3段階例題 `3 / 3 PASS`。
+- `09_at_feeding_practice.md`: 問10・問14は「送電端基準」と問題文で明示しており、計算式・正答は変更不要。進捗記録のみ同期済み。
+- `09_at_feeding_practice.pdf`: practice sourceから生成・QA済み。A4縦4ページ、表示 `4 / 4 PASS`、文字抽出PASS、数値・論理 `15 / 15 PASS`、一次型正答一意性 `10 / 10 PASS`。
+- `09_at_feeding_images.pptx`: 距離―電位、距離―電流、AT中点拘束、単純き電比較の4可視化で構成され、表示 `4 / 4 PASS`、overflow 0、ZIP整合性PASS。電圧降下率の分母固定式を含まないため技術変更不要。
+- `09_at_feeding_independent_reanswer.md`: 修正後の完成教材だけで `3 / 3問・14 / 14答案要素 PASS`。一次 `10 / 10`、二次 `4 / 4`、教材外補完・固定範囲外追加・後続Topic依存・未確認実設備値依存・仕様追加はいずれも0件。
 
 ## 次工程
 
-修正済みsourceを正本として `09_at_feeding_explanation.pdf` を再生成する。A4縦で本文・3段階例題・正式3問への接続を保持し、表示QA、文字抽出QA、数式・数値の独立再計算を再実施する。その後に正式3問のblind独立再解答を再実施する。
+最終QAを再判定する。進捗記録整合を含め全件PASSの場合のみ、Topic 09を `completed` とする。技術本文、固定EXAM_ALIGNMENT、正式3問、練習問題・正答、PDF/PPTX、独立再解答結果は変更しない。
