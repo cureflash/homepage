@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_explanation_pdf_records_synced`
+- current_status: `topic_12_practice_source_complete`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 練習問題source
+- next_start: Topic 12 練習PDF
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -317,8 +317,20 @@
 - [x] 未確認N700S実車値追加 `0件`
 - [x] `BLOCKED_BEFORE_PRACTICE_SOURCE` を解除
 
+## Topic 12 練習問題source
+- [x] `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_practice.md`
+- [x] 一次試験型10問・全問五肢択一
+- [x] 二次試験型5問・途中式／単位／検算または条件限定付き
+- [x] 独立計算・論理再検算 `15 / 15 PASS`
+- [x] 一次正答一意性 `10 / 10 PASS`
+- [x] 固定5過去問・16答案要素へ `16 / 16` 接続
+- [x] 4極・6極同一回転速度比較 `f_6/f_4=1.5` 再検算 PASS
+- [x] インバータ定格／短時間過負荷は問題文で与えた容量条件だけで判定
+- [x] 出力密度は教材用仮定値のみ
+- [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
+
 ## 今回進めた内容
-Topic 12の解説PDFと進捗記録の不整合を解消した。現在の4ページPDFに対するsource QA記録（表示 `4 / 4 PASS`、文字抽出PASS、固定5問・16答案要素維持）へSTATUS/HANDOFFを同期し、練習問題sourceへ進める状態へ復旧した。
+Topic 12の練習問題sourceを完成した。一次試験型10問＋二次試験型5問の計15問を作成し、固定5過去問・16答案要素へ `16 / 16` 接続した。独立計算・論理再検算 `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`。固定範囲外論点・未確認N700S実車値の追加は0件。
 
 ## 判定
-Topic 12は `topic_12_explanation_pdf_records_synced / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の練習問題sourceを作成する。
+Topic 12は `topic_12_practice_source_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の練習PDFを作成する。
