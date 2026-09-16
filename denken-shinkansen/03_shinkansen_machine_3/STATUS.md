@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: `11 / 16`
-- current_status: `topic_12_source_progress_synced`
-- last_completed_topic: `11 空転した車輪をどう立て直す？`
-- active_topic: `12 新幹線のコンピュータは何をしている？`
-- next_start: Topic 12の最終QAを再判定する
+- exam_aligned_completed_topics: `12 / 16`
+- current_status: `topic_12_completed`
+- last_completed_topic: `12 新幹線のコンピュータは何をしている？`
+- active_topic: `13 新幹線は主電動機以外もモーターだらけ？`
+- next_start: Topic 13の制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -22,10 +22,11 @@
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
-- [ ] 12 新幹線のコンピュータは何をしている？ — 旧進捗3箇所同期済み / 最終QA再判定待ち / IN_PROGRESS
-- [ ] 13〜16 — 未完了
+- [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
+- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 制作前EXAM_ALIGNMENT待ち
+- [ ] 14〜16 — 未完了
 
-## Topic 12 制作品質状態
+## Topic 12 最終品質状態
 - 固定範囲: 2進数 / 16進数 / ビット / バイト / 論理回路 / AND / OR / NOT / NAND / NOR / XOR / 論理式 / 真理値表 / A/D変換 / D/A変換 / センサ / 情報伝送
 - 基本構成: `センサ → 電気信号 → A/D変換 → デジタルデータ → 演算・論理判断 → 制御指令 → 機器`
 - 固定EXAM_ALIGNMENT: R8上 機械 問14 / R8上 機械 問18(a)(b) / R7上 機械 問14 / R5下 機械 問14 / R1 機械 問14 / H28 機械 問18(a)(b)
@@ -86,7 +87,12 @@
 - 前回最終QA固定範囲境界: `PASS`
 - 前回最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
 - 旧進捗3箇所: 同期済み
-- 最終QA再判定: `未実施`
+- 最終QA再判定: `PASS`
+- 最終QA技術内容: `PASS`
+- 最終QA必須成果物: `PASS`
+- 最終QA表示QA: `PASS`
+- 最終QA進捗記録整合: `PASS`
+- 最終QA固定範囲境界: `PASS`
 
 ## Topic 11 最終品質状態
 - 固定範囲: センサ / 回転速度 / 車輪 / 粘着 / 空転 / 滑走 / フィードバック / 制御指令 / アクチュエータ / メカトロニクス / 応答速度
@@ -148,7 +154,9 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 12「新幹線のコンピュータは何をしている？」の旧進捗記録3箇所を実成果物へ同期した。主source `## 次工程`、練習source `## 次工程`、練習PDF QA `## 次工程` を、必須成果物・完成後blind独立再解答まで完了済み、次は最終QA再判定という現在地へ更新した。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更していない。
+Topic 12「新幹線のコンピュータは何をしている？」の最終QAを再判定し、`PASS / completed` とした。固定6問・8答案要素の完成後blind独立再解答 `8 / 8 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、主source・練習source・練習PDF QAの進捗記録整合、固定範囲境界を全件PASS確認した。
+
+前回 `NEEDS_REVISION` の原因だった旧進捗3箇所は同期済み。教材外・固定範囲外知識による補完、固定範囲外論点追加、車種固有通信仕様の推測はいずれも0件。完成数を `12 / 16` へ更新した。
 
 ## 次工程
-Topic 12の最終QAを再判定する。固定6問・8答案要素、必須成果物、表示QA、進捗整合、固定範囲境界を再確認し、PASSならcompletedにする。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
