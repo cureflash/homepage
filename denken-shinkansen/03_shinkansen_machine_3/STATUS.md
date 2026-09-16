@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `11 / 16`
-- current_status: `topic_12_final_qa_needs_revision`
+- current_status: `topic_12_source_progress_synced`
 - last_completed_topic: `11 空転した車輪をどう立て直す？`
 - active_topic: `12 新幹線のコンピュータは何をしている？`
-- next_start: Topic 12の旧進捗記録3箇所を実成果物へ同期する
+- next_start: Topic 12の最終QAを再判定する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -22,7 +22,7 @@
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
-- [ ] 12 新幹線のコンピュータは何をしている？ — 最終QA `NEEDS_REVISION`（技術ゲートPASS / 進捗記録3箇所FAIL） / IN_PROGRESS
+- [ ] 12 新幹線のコンピュータは何をしている？ — 旧進捗3箇所同期済み / 最終QA再判定待ち / IN_PROGRESS
 - [ ] 13〜16 — 未完了
 
 ## Topic 12 制作品質状態
@@ -79,13 +79,14 @@
 - 公式解答・保存済み選択肢番号の事前参照: `0件`
 - 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
 - 独立再解答記録: `topics/12_information_processing/12_information_processing_independent_reanswer.md`
-- 最終QA: `NEEDS_REVISION`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA固定範囲境界: `PASS`
-- 最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
-- 旧進捗3箇所: 主source `## 次工程` / 練習source `## 次工程` / 練習PDF QA `## 次工程`
+- 前回最終QA: `NEEDS_REVISION`
+- 前回最終QA技術内容: `PASS`
+- 前回最終QA必須成果物: `PASS`
+- 前回最終QA表示QA: `PASS`
+- 前回最終QA固定範囲境界: `PASS`
+- 前回最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
+- 旧進捗3箇所: 同期済み
+- 最終QA再判定: `未実施`
 
 ## Topic 11 最終品質状態
 - 固定範囲: センサ / 回転速度 / 車輪 / 粘着 / 空転 / 滑走 / フィードバック / 制御指令 / アクチュエータ / メカトロニクス / 応答速度
@@ -147,7 +148,7 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 12「新幹線のコンピュータは何をしている？」の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。固定6問・8答案要素の完成後blind独立再解答 `8 / 8 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、固定範囲境界はPASS。未完了理由は進捗記録3箇所が旧工程のまま残っていることのみ。
+Topic 12「新幹線のコンピュータは何をしている？」の旧進捗記録3箇所を実成果物へ同期した。主source `## 次工程`、練習source `## 次工程`、練習PDF QA `## 次工程` を、必須成果物・完成後blind独立再解答まで完了済み、次は最終QA再判定という現在地へ更新した。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更していない。
 
 ## 次工程
-Topic 12の旧進捗記録3箇所だけを実成果物へ同期する。対象は主source `## 次工程`、練習source `## 次工程`、練習PDF QA `## 次工程`。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更しない。
+Topic 12の最終QAを再判定する。固定6問・8答案要素、必須成果物、表示QA、進捗整合、固定範囲境界を再確認し、PASSならcompletedにする。
