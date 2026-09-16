@@ -39,4 +39,4 @@
 - 非埋込CID日本語フォントを使用。200 dpi実表示で欠落・破損なし。
 
 ## 次工程
-Topic 12の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更しない。
+Topic 12の必須成果物と完成後blind独立再解答まで完了済み。次は最終QAを再判定する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更しない。
