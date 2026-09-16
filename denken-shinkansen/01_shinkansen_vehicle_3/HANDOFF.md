@@ -6,8 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は33/38。01〜33がPASS。active topicは34 `COMTRAC② 進路をどう自動制御する？`。
 
 ## 今回進捗
-Topic 34の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` とした。
+Topic 34の前回最終QAで検出した進捗記録2件だけを実成果物へ同期した。
 
+- `34_comtrac_route_control.md` 冒頭 `## 状態` と次工程を、解説PDF・練習source/PDF・PowerPoint・完成後blind独立再解答まで完了した現在地へ更新
+- `34_comtrac_route_control_powerpoint_qa.md` の次工程を、完成後blind独立再解答完了後の「最終QA再実施」へ更新
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX・blind独立再解答結果は変更なし
 - 固定5問・6答案要素の完成後blind独立再解答: `5 / 5問・6 / 6答案要素 PASS`
 - 必須成果物: PASS
 - 練習問題QA: `15 / 15 PASS`
@@ -16,15 +19,8 @@ Topic 34の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` とした。
 - Topic 35範囲追加: `0件`
 - 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
-- 進捗記録整合のみFAIL
-- 最終QA記録: `topics/34_comtrac_route_control/34_comtrac_route_control_final_qa.md`
 
-未完了理由は次の2件のみ。
-
-1. `34_comtrac_route_control.md` 冒頭 `## 状態` が解説source完了時点のままで、次工程も「解説PDFを作成する」のまま。
-2. `34_comtrac_route_control_powerpoint_qa.md` の次工程が「完成後blind独立再解答の前ゲートを監査する」のまま。
-
-技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX・blind独立再解答結果は変更不要。
+前回最終QA記録 `topics/34_comtrac_route_control/34_comtrac_route_control_final_qa.md` は `NEEDS_REVISION / IN_PROGRESS` の履歴として維持する。次工程で最終QAを再実施する。
 
 ## Topic 34 固定EXAM_ALIGNMENT
 - R7上 機械 問14 — AND・OR・NOT、論理回路、出力波形
@@ -47,7 +43,7 @@ Topic 35範囲追加: `0件`。
 - 練習PDF: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.pdf` — A4縦5ページ、180 dpi表示 `5 / 5 PASS`、文字抽出PASS
 - PowerPoint: `topics/34_comtrac_route_control/34_comtrac_route_control_images.pptx` — 16:9・4枚、固定6答案要素 `6 / 6` 可視化、表示 `4 / 4 PASS`、overflow・ZIP整合性PASS
 - 完成後blind独立再解答: `topics/34_comtrac_route_control/34_comtrac_route_control_independent_reanswer.md` — `5 / 5問・6 / 6答案要素 PASS`
-- 最終QA: `topics/34_comtrac_route_control/34_comtrac_route_control_final_qa.md` — `NEEDS_REVISION / IN_PROGRESS`（進捗記録2件のみ不整合）
+- 前回最終QA: `topics/34_comtrac_route_control/34_comtrac_route_control_final_qa.md` — `NEEDS_REVISION / IN_PROGRESS`（進捗記録2件のみ不整合。今回同期済み）
 
 ## Topic 34 系列SPEC固定範囲
 扱う: 進路制御、条件判定、AND、OR、NOT、真理値表、インターロック、論理回路。
@@ -62,11 +58,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_34_final_qa_needs_revision`
+- `current_status`: `topic_34_progress_records_synced`
 - 完成数: 33/38
 - 01〜33: PASS
 - last completed: 33 `COMTRAC① 東海道新幹線全体をどう監視する？`
 - active topic: 34 `COMTRAC② 進路をどう自動制御する？`
 
 ## 次の正確な開始点
-`34_comtrac_route_control.md` 冒頭の状態・次工程と、`34_comtrac_route_control_powerpoint_qa.md` の次工程だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX・blind独立再解答結果は変更しない。同期後、Topic 34の最終QAを再実施し、PASSの場合のみ `completed` として完成数を34/38へ更新する。
+Topic 34の最終QAを再実施する。進捗記録整合を再確認し、必須成果物・固定5問6答案要素の完成後blind独立再解答・練習問題QA・PDF/PPTX表示QA・固定範囲境界を含む全品質ゲートがPASSした場合のみ `completed` として完成数を34/38へ更新する。
