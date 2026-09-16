@@ -4,7 +4,7 @@
 
 ## 状態
 
-解説本文＋3段階例題まで完成。解説PDF・練習・PowerPoint・完成後独立再解答・最終QAは未実施。
+解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで実施済み。最終QAは進捗記録整合3箇所のみFAILで `NEEDS_REVISION / IN_PROGRESS`。本更新で旧進捗記録を実成果物へ同期した。
 
 本テーマは `SPEC.md` 第11章どおり、次だけを扱う。
 
@@ -486,6 +486,6 @@ Topic 12のVVVF・V/f・同期速度・すべり・定トルク／定出力領�
 - SPEC指定4可視化へ直接つながる計算条件: `4 / 4`
 - Topic 12〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
-- 状態: `topic_11_explanation_source_complete`
+- 状態: `topic_11_source_progress_synced`
 
-次工程は、このsourceを正本として解説PDFを作成する。
+次工程は、技術内容・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTXを変更せず、Topic 11の最終QAを再判定する。
