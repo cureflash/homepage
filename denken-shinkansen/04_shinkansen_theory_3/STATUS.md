@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 11 / 14
-- current_status: `topic_12_final_qa_needs_revision`
+- current_status: `topic_12_source_progress_synced`
 - last_completed_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active_topic: `12 300系はなぜVVVFになった？`
-- next_start: Topic 12の主source・練習sourceの旧進捗記録を実成果物へ同期する
+- next_start: Topic 12の最終QAを再実施する
 
 ## Topic 01 進捗
 
@@ -219,19 +219,17 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `7 / 7 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習source進捗記録不整合）
-- [ ] 主source・練習source進捗記録同期
+- [x] 主source・練習source進捗記録同期
 - [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-Topic 12 `300系はなぜVVVFになった？` の最終QAを実施した。
+Topic 12 `300系はなぜVVVFになった？` の主source・練習sourceの進捗記録だけを実成果物へ同期した。
 
-固定7問の完成後独立再解答 `7 / 7 PASS`、固定過去問要求の本文マッピング `7 / 7`、練習15問の正答一意性 `15 / 15 PASS`、解説PDF・練習PDF・PowerPointの表示/文字抽出/ファイルQA、SPEC固定範囲境界、必須成果物の実在はPASS。
+主sourceを `status: INDEPENDENT_REANSWER_COMPLETE`、練習sourceを `stage: INDEPENDENT_REANSWER_COMPLETE` に更新し、旧「解説PDF作成」「PowerPoint作成」の次工程記録を除去した。技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX成果物は変更していない。
 
-未完了理由は進捗記録不整合のみ。主sourceは `status: EXPLANATION_SOURCE_COMPLETE` のままで、練習・PowerPoint・独立再解答が未完了表示、次工程も解説PDF作成のまま。練習sourceも `stage: PRACTICE_PDF_COMPLETE`、次工程がPowerPoint作成のまま残っている。
-
-最終QA記録: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_final_qa.md`
+固定7問の完成後独立再解答 `7 / 7 PASS`、各成果物QA、SPEC境界はそのまま維持している。
 
 ## 判定
 
-現在 `topic_12_final_qa_needs_revision / IN_PROGRESS`。完成数は `11 / 14`。次は主source・練習sourceの旧進捗記録だけを実成果物へ同期する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、独立再解答結果は変更しない。
+現在 `topic_12_source_progress_synced / IN_PROGRESS`。完成数は `11 / 14`。次はTopic 12の最終QAを再実施する。
