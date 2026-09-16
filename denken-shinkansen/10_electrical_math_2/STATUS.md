@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 10 / 20
-- current_status: `topic_10_completed`
+- current_status: `topic_11_exam_alignment_complete`
 - last_completed_topic: `10 伝達関数・極・零点`
 - active_topic: `11 行列・線形連立方程式`
-- next_start: Topic 11の制作前EXAM_ALIGNMENTを行う。二種相当の公式過去問を直近年度優先で調査し、固定範囲だけで完結する品質ゲートを先に確定する
+- next_start: Topic 11の解説本文＋3段階例題を作り、固定一次5問・12対象設問を本文へ `12 / 12` マッピングする
 
 ## Topic 07 制作品質ゲート
 
@@ -102,27 +102,53 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 11 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 公式過去問を直近年度優先で調査
+- [x] 一次「理論」5問・12対象設問を固定
+- [x] source Markdownへ要求知識・式・設問型・教材内必要説明を固定
+- [x] R8問3は(1)〜(2)、R6問3は(1)〜(2)、R4問3は(1),(3)、R1問2は(3)〜(5)、R1問6は(3)〜(5)を採用
+- [x] 制作前独立再解答・公式解答照合 `12 / 12 PASS`
+- [x] 二次試験の件数合わせ採用0件を確認
+- [x] Topic 12固有値・状態空間、電力潮流詳細アルゴリズム、非線形反復計算の先取り0件を確認
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] PowerPoint表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 10 `伝達関数・極・零点` の最終QAを再判定した。
+Topic 11 `行列・線形連立方程式` の制作前EXAM_ALIGNMENTを完了した。
 
-再確認:
-- 必須成果物実在: PASS
-- 固定二次5問・11対象設問: PASS
-- 完成後独立再解答 `11 / 11 PASS`: PASS
-- 練習問題独立計算・正答一意性 `12 / 12 PASS`: PASS
-- 解説PDF・練習PDF・PowerPoint表示QA: PASS
-- source進捗記録と実成果物の整合: PASS
-- Topic 12/15先取り: 0件
-- ラウス・フルビッツ法一般手順追加: 0件
-- 定常偏差・畳み込みの独立論点化: 0件
-- 固定範囲外追加: 0件
+固定EXAM_ALIGNMENT:
+- R8 一次 理論 問3 (1)〜(2)
+- R6 一次 理論 問3 (1)〜(2)
+- R4 一次 理論 問3 (1),(3)
+- R1 一次 理論 問2 (3)〜(5)
+- R1 一次 理論 問6 (3)〜(5)
+- 合計: 一次5問・12対象設問
+
+制作前独立再解答・公式解答照合: `12 / 12 PASS`。
+
+固定境界:
+- Topic 12固有値・固有ベクトル: 追加0件
+- 状態空間: 追加0件
+- 電力潮流の詳細アルゴリズム: 追加0件
+- Newton-Raphson法・非線形反復計算: 追加0件
+- 二次試験を件数合わせで追加: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 10は `PASS / completed`。
+Topic 11は `topic_11_exam_alignment_complete / IN_PROGRESS`。
 
-完成数は `10 / 20`。
+完成数は `10 / 20` のまま。
 
-次はTopic 11 `行列・線形連立方程式` の制作前EXAM_ALIGNMENTを行う。
+次はTopic 11の解説本文＋3段階例題を作り、固定一次5問・12対象設問を本文へ `12 / 12` マッピングする。
