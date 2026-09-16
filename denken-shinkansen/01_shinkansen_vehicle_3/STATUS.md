@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 33 / 38
-- current_status: `topic_34_blind_reanswer_ready`
+- current_status: `topic_34_blind_reanswer_retry_required`
 - last_completed_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
 - active_topic: `34 COMTRAC② 進路をどう自動制御する？`
-- next_start: Topic 34固定5問を完成教材だけでblind独立再解答する
+- next_start: 新しいblind実行で、公式解答・第三者解説の正答表示を開く前にTopic 34固定5問・6答案要素を完成教材だけで全件再解答し、導出確定後に公式解答と照合する
 
 ## 新品質ゲート進捗
 - [x] 01〜33 — PASS
@@ -98,6 +98,17 @@ source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
 - 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
 - 記録: `topics/34_comtrac_route_control/34_comtrac_route_control_blind_gate.md`
+
+## 34 完成後blind独立再解答 試行
+`RETRY_REQUIRED / NOT_COUNTED`。
+- 問題本文・図表を補完する途中で、第三者解説ページおよび公式解答表の正答表示へ到達した要素が発生
+- 全5問・6答案要素について「保存済み正答・公式解答を先に見ずに再解答した」と厳密に証明できないため、本試行は品質ゲートの合格件数へ算入しない
+- 個別正答番号・完成導出は必須先読み対象へ保存しない
+- 固定5問・6答案要素、教材本文、練習問題、PDF、PowerPointは変更なし
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+- 記録: `topics/34_comtrac_route_control/34_comtrac_route_control_blind_reanswer_attempt.md`
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
@@ -407,7 +418,6 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 - 記録: `topics/31_atc_signal_transmission/31_atc_signal_transmission_final_qa.md`
-
 ## 31 最終QA
 `PASS / COMPLETED`。
 - 必須成果物: PASS
@@ -497,4 +507,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は固定5過去問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数33/38。
 
 ## 次テーマ工程
-Topic 34 `COMTRAC② 進路をどう自動制御する？` は必須成果物と表示QAまで完了。必須先読み対象の重複過去問に関する個別正答・導出をblind保護し、`BLIND_REANSWER_READY`。次は固定5問・6答案要素を完成教材だけでblind独立再解答する。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` は必須成果物と表示QAまで完了し、blind前ゲートもREADYだったが、今回の再解答試行は正答表示への先行到達が発生したため `RETRY_REQUIRED / NOT_COUNTED`。次は新しいblind実行で、正答表示を開く前に固定5問・6答案要素を完成教材だけで全件再解答し、導出確定後に公式解答と照合する。
