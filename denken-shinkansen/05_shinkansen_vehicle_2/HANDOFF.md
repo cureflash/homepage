@@ -7,19 +7,48 @@
 
 Topic 01〜10は最終QAまで `PASS / completed`。完成数は `10 / 39`。
 
-現在地は `topic_11_practice_pdf_complete`。Topic 11 `300系② PWMコンバータ` は制作前EXAM_ALIGNMENTを固定したまま、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDFまで完成した。固定一次2問＋二次3問、計5問・27答案要素を維持し、練習12問を `27 / 27` 接続した。
+現在地は `topic_11_powerpoint_complete`。Topic 11 `300系② PWMコンバータ` は、固定一次2問＋二次3問・計5問・27答案要素を変更せず、解説source/PDF、練習source/PDF、解説画像PowerPointまで完成した。
 
-次工程はTopic 11の解説画像PowerPoint。固定EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDFの技術内容・範囲境界を変更せず、SPEC指定4可視化と表示QA・overflow・PowerPoint ZIP整合性を確認する。
-
-## Topic 01〜10
-- Topic 01〜10: 最終QA `PASS / completed`
-- 各テーマで必須成果物、対応過去問、完成後独立再解答、表示QA、固定範囲境界を確認済み
-- Topic 10 `300系① 誘導電動機等価回路`: 一次3問＋二次2問・22答案要素、完成後独立再解答 `22 / 22 PASS`
+次工程は完成教材だけを使った固定5過去問・27答案要素の独立再解答。保存済み公式正答を先に参照せず、教材外知識で補完しない。
 
 ## Topic 11 固定EXAM_ALIGNMENT
 source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
 
-固定範囲:
+固定過去問:
+- R5 二次 機械・制御 問3 (1)〜(5)
+- R4 一次 機械 問4 (1)〜(5)
+- R1 二次 機械・制御 問3 (1)〜(3)
+- H24 二次 機械・制御 問3 (1)〜(4)
+- H22 一次 機械 問3 (1)〜(5)
+
+品質ゲート:
+- 一次: `2問・10答案要素`
+- 二次: `3問・17答案要素`
+- 合計: `5問・27答案要素`
+- 制作前独立検証: `27 / 27 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+
+## Topic 11 完成済み成果物
+- 解説source: 完成、3段階例題 `3 / 3`、固定5問・27答案要素マッピング `27 / 27`
+- 解説PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_explanation.pdf`
+  - A4縦5ページ、180 dpi Visual QA `5 / 5 PASS`、文字抽出QA `PASS`
+- 練習source: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice_source.md`
+  - 一次8問＋二次4問、数値・論理QA `12 / 12 PASS`、固定5問・27答案要素へ `27 / 27` 接続
+- 練習PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice.pdf`
+  - A4縦3ページ、Visual QA `3 / 3 PASS`、数値・論理再検算 `12 / 12 PASS`
+- 解説画像PowerPoint: `topics/11_300series_pwm_converter/11_300series_pwm_converter_images.pptx`
+- PowerPoint QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_images_qa.md`
+  - 16:9、4スライド
+  - SPEC指定4可視化 `4 / 4 PASS`
+  - Visual QA `4 / 4 PASS`
+  - overlap / clipping / broken glyph `0件`
+  - `slides_test.py` overflow `PASS / 0件`
+  - PowerPoint ZIP/XML整合性 `PASS`
+  - 固定5問・27答案要素への接続を維持
+  - Git blob SHA-1: `8688e3b87936a08c80ae5cdbf19dbc6d1033fb44`
+  - SHA-256: `26158481860cac4adb3f870aeaf19d2100a4418b0e6c60a0032b1c114286b4aa`
+
+## Topic 11 固定範囲
 - PWMコンバータ
 - 直流中間回路
 - 基本波
@@ -35,123 +64,20 @@ SPEC指定可視化:
 - 変調条件―基本波電圧
 - 入力電流波形
 
-固定過去問:
-- R5 二次 機械・制御 問3 (1)〜(5) — 高調波発生源・影響、基本波／高調波分離、補償電流・実効値
-- R4 一次 機械 問4 (1)〜(5) — オン損失、漏れ電流、スイッチング損失、周期、ソフトスイッチング
-- R1 二次 機械・制御 問3 (1)〜(3) — 正弦波PWM、系統電流基本波、連系リアクトル、交流端子基本波、直流中間電圧条件
-- H24 二次 機械・制御 問3 (1)〜(4) — PWM変調率、基本波電圧、フェーザ、力率、有効・無効電流
-- H22 一次 機械 問3 (1)〜(5) — 三角搬送波、変調率、線間基本波実効値、直流電圧制御、力率1制御
-
-品質ゲート:
-- 一次: 2問・10答案要素
-- 二次: 3問・17答案要素
-- 合計: 5問・27答案要素
-- 制作前独立検証: `27 / 27 PASS`
-- 二次記述問題: `3問`
-- 固定範囲外知識による補完: `0件`
+範囲境界:
+- Topic 12のVVVF、V/f、同期速度、すべり、定トルク／定出力領域は追加しない
+- Topic 13の回生、四象限運転、回生エネルギーは追加しない
+- 未確認の300系直流中間電圧、キャリア周波数、変調率、素子損失等を実車値として追加しない
+- 今回の固定範囲外追加: `0件`
 - Topic 12〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
-
-## Topic 11 解説source完成内容
-- §1: 試験論点と解法の軸
-- §2: 交流電源―連系リアクトル―PWMブリッジ―直流中間コンデンサ
-- §3: 正弦波PWMとスイッチング
-- §4: 変調率―基本波電圧
-- §5: 基本波・高調波分離、補償電流、実効値
-- §6: 交流側リアクトルのフェーザ関係
-- §7: 有効・無効電力、力率1制御
-- §8: 直流中間電圧条件
-- §9: オン・オフ・スイッチング損失
-- §10: 再利用可能な解法手順
-- §11: 基礎／本試験標準／複合の3段階例題
-- §12: SPEC指定4可視化の教材用計算条件
-- §13: 300系への接続と実車値境界
-- §14: 固定5問・27答案要素マッピング `27 / 27`
-- §15: 頻出ミス・まとめ
-
-解説source QA:
-- 3段階例題: `3 / 3`
-- 固定5問・27答案要素の本文マッピング: `27 / 27`
-- SPEC指定4可視化条件: `4 / 4`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- Topic 12〜13先取り: `0件`
-- 未確認300系実車値追加: `0件`
-
-## Topic 11 解説PDF
-- PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_explanation.pdf`
-- QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_explanation_pdf_qa.md`
-- A4縦5ページ
-- 180 dpi Visual QA: `5 / 5 PASS`
-- overlap / clipping / broken glyph: `0件`
-- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□` `0件`
-- 固定一次2問＋二次3問・27答案要素: 維持
-- 3段階例題: `3 / 3`
-- SPEC指定4可視化: `4 / 4`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 固定範囲外追加: `0件`
-- Topic 12〜13先取り: `0件`
-- 未確認300系実車値追加: `0件`
-- 教材用仮定値と実車値の区別: 明記
-- SHA-256: `c72e80b3d9a69510d1541d2eb03d88f21071999b68f3fb9429e634a97aa66db4`
-
-参考確認:
-- 公式正本: 一般財団法人 電気技術者試験センター 第二種過去問題
-- 解法比較: 電験王2
-- 補助教材比較: 「目指せ！電気主任技術者～解説ノート～」のPWM・高調波解説
-- e-sysnet.com: 対応するPWMコンバータ個別解説ページは確認できず
-
-## Topic 11 練習source
-- source: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice_source.md`
-- 一次試験型: `8問`、全問五肢択一
-- 二次試験型: `4問`、途中式・前提・単位・理由まで採点可能な記述式
-- 合計: `12問`
-- 固定5問・27答案要素への接続: `27 / 27`
-- 数値・論理QA: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- 二次記述QA: `4 / 4 PASS`
-- 問題数値: 全て教材用仮定値
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 固定範囲外追加: `0件`
-- Topic 12〜13先取り: `0件`
-- 未確認300系実車値追加: `0件`
-
-練習構成:
-- 一次1〜3: PWM生成原理、三相基本波電圧、直流中間電圧逆算
-- 一次4〜5: 連系リアクトルのフェーザ、力率1、有効・無効電力、直流電圧制御
-- 一次6: 基本波・高調波実効値
-- 一次7〜8: スイッチング周波数、オン・オフ・切替損失、ソフトスイッチング
-- 二次1: 変調率―基本波電圧の計算と逆算
-- 二次2: `P→I→XI→Vconv→Ed` の複合計算
-- 二次3: 方形波の基本波・高調波分離と補償電流
-- 二次4: 周期―周波数―スイッチング損失と損失分類
-
-## Topic 11 練習PDF
-- PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice.pdf`
-- QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice_qa.md`
-- A4縦3ページ
-- 一次試験型 `8 / 8`、二次試験型 `4 / 4`、全12問完全解説付き
-- 180 dpi Visual QA: `3 / 3 PASS`
-- overlap / clipping / broken glyph: `0件`
-- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□` `0件`
-- 数値・論理再検算: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- 二次記述QA: `4 / 4 PASS`
-- 固定一次2問＋二次3問・27答案要素: 維持
-- 固定5問・27答案要素への接続: `27 / 27`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 固定範囲外追加: `0件`
-- Topic 12〜13先取り: `0件`
-- 未確認300系実車値追加: `0件`
-- 問題数値: 全て教材用仮定値
-- SHA-256: `c79f2e4603661c11de55ba8804663cd00febcd419df1977022bc1c5ae0853fe3`
-- Git blob SHA-1: `64cc5843dc65a58edc8b5120061db9f74930c091`
 
 ## 次の正確な開始点
-Topic 11 `300系② PWMコンバータ` の解説画像PowerPoint。
+Topic 11 `300系② PWMコンバータ` の完成後独立再解答。
 
-1. SPEC指定4可視化（PWM波形、基本波・高調波、変調条件―基本波電圧、入力電流波形）を収録する。
-2. 固定5過去問・27答案要素に直接つながる図として作る。
-3. 表示QAで全スライドのoverlap / clipping / broken glyphを確認する。
-4. PowerPoint ZIP/XML整合性を確認する。
+1. 完成済みの解説source/PDF・練習source/PDF・PowerPointだけを使用する。
+2. 保存済み公式正答を先に参照しない。
+3. 固定一次2問＋二次3問・27答案要素を再導出する。
+4. 教材外知識で補完しない。
 5. 固定EXAM_ALIGNMENT、固定範囲、Topic 12〜13境界を変更しない。
-6. 未確認300系実車値を追加しない。
+6. 再解答後に公式解答と照合し、一致数と教材外補完件数を記録する。
