@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は完成済み。
 
 ## 今回進捗
-Topic 11 `架線事故ではどうやって電気を止める？` の完成後ブラインド独立再解答結果をmain sourceへ同期した。固定5問・7答案要素の完成教材のみ独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7 PASS`、教材外知識補完・Topic 12以降の論点補完・SPEC固定範囲外追加・未確認新幹線実設備値の使用はいずれも0件。教材本文、固定問題、PDF/PPTXは変更していない。
+Topic 11 `架線事故ではどうやって電気を止める？` の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` とした。技術内容、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。未完了理由は旧進捗記録4箇所のみで、仕様追加や教材内容の修正は不要。
 
 固定結果:
 - 品質ゲート対象: 公式過去問5問・7答案要素
@@ -53,6 +53,16 @@ Topic 11 `架線事故ではどうやって電気を止める？` の完成後�
 - SPEC固定範囲外追加: `0件`
 - 未確認新幹線実設備値の使用: `0件`
 - main sourceへの完成後独立再解答結果同期: 完了
+- 最終QA: `topics/11_fault_protection/11_fault_protection_final_qa.md`
+- 最終QA判定: `NEEDS_REVISION / IN_PROGRESS`
+- 最終QAの技術内容・成果物・過去問品質ゲート・SPEC境界: PASS
+- 最終QAの進捗記録整合: FAIL（旧工程4箇所）
+
+旧進捗記録4箇所:
+1. `11_fault_protection_explanation_qa.md` — 次工程が練習問題sourceのまま
+2. `11_fault_protection_practice_source.md` — 次工程が練習PDF、PowerPoint・独立再解答未実施のまま
+3. `11_fault_protection_powerpoint_qa.md` — 完成後ブラインド独立再解答未実施のまま
+4. `11_fault_protection_independent_reanswer.md` — main source同期・最終QA未実施のまま
 
 ## Topic 11 固定範囲
 `SPEC.md` から追加しない。
@@ -76,7 +86,7 @@ R8上 電力 問7は自動再閉路がSPEC外、R8上 電力 問9は通信誘導
 Topic 10 `新幹線が突然大電力を使ったら？` は `PASS / completed`。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、最終QA PASS。
 
 ## 現在状態
-- `current_status`: `topic_11_source_reanswer_synced`
+- `current_status`: `topic_11_final_qa_needs_revision`
 - 完成数: `10 / 16`
 - last completed: Topic 10 `新幹線が突然大電力を使ったら？`
 - active: Topic 11 `架線事故ではどうやって電気を止める？`
@@ -88,6 +98,7 @@ Topic 10 `新幹線が突然大電力を使ったら？` は `PASS / completed`�
 - Topic 11解説画像PowerPoint: `topics/11_fault_protection/11_fault_protection_images.pptx`
 - Topic 11 PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
 - Topic 11完成後独立再解答: `topics/11_fault_protection/11_fault_protection_independent_reanswer.md`
+- Topic 11最終QA: `topics/11_fault_protection/11_fault_protection_final_qa.md`
 - 固定問題: `5問・7答案要素`
 - 制作前独立検証: `7 / 7 PASS`
 - 本文要求事項マッピング: `7 / 7`
@@ -101,7 +112,7 @@ Topic 10 `新幹線が突然大電力を使ったら？` は `PASS / completed`�
 - 完成後ブラインド独立再解答: `7 / 7 PASS`
 - 公式解答一致: `7 / 7 PASS`
 - 教材外知識補完: `0件`
-- main sourceへの完成後独立再解答結果同期: 完了
+- 最終QA: `NEEDS_REVISION / IN_PROGRESS`
 
 ## 次の正確な開始点
-Topic 11最終QAを実施する。必須成果物、EXAM_ALIGNMENT、PDF/PPTX QA、進捗記録整合、SPEC固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
+`11_fault_protection_explanation_qa.md`、`11_fault_protection_practice_source.md`、`11_fault_protection_powerpoint_qa.md`、`11_fault_protection_independent_reanswer.md` の旧進捗記録4箇所だけを現在地へ同期する。その後Topic 11最終QAを再実施する。技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
