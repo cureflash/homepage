@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 9 / 12
-- current_status: `topic_10_final_qa_needs_revision`
+- current_status: `topic_10_source_progress_synced`
 - last_completed_topic: `09 微積分で電気を読む`
 - active_topic: `10 指数関数・一階微分方程式入門`
-- next_start: `Topic 10 source進捗記録3箇所を実成果物へ同期`
+- next_start: `Topic 10最終QA再判定`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -110,30 +110,21 @@
 - [x] 完成後独立再解答前のブラインドゲート整備
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 主source・練習sourceの旧進捗記録3箇所を実成果物へ同期
+- [x] 主source・練習sourceの旧進捗記録3箇所を実成果物へ同期
 - [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-Topic 10「指数関数・一階微分方程式入門」の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。
+Topic 10「指数関数・一階微分方程式入門」の初回最終QAで唯一残っていたsource進捗記録3箇所を実成果物へ同期した。
 
-- 記録: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_final_qa.md`
-- 必須成果物5点: 実在PASS
-- 固定5問の完成後独立再解答: `5 / 5 PASS`
-- 練習数値・論理QA: `12 / 12 PASS`
-- 正答一意性: `12 / 12 PASS`
-- 解説PDF / 練習PDF / PowerPoint表示QA: PASS
-- 固定EXAM_ALIGNMENT変更0件
-- 教材外知識補完0件
+- 主source冒頭 `## 状態`: 解説本文段階の旧記録から、必須成果物・独立再解答・初回最終QA完了までの実績へ同期
+- 主source末尾 `## 次工程`: 解説PDF作成から最終QA再判定へ同期
+- 練習source末尾 `## 次工程`: 練習PDF作成から最終QA再判定へ同期
+- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・独立再解答結果は変更していない
 - 固定範囲外追加0件
-- 未確認新幹線実値追加0件
-- FAILはsource進捗記録3箇所のみ
-  - 主source冒頭 `## 状態`
-  - 主source末尾 `## 次工程`
-  - 練習source末尾 `## 次工程`
 
 ## 判定
 
-`topic_10_final_qa_needs_revision / IN_PROGRESS`。
+`topic_10_source_progress_synced / IN_PROGRESS`。
 
-完成数は `9 / 12` のまま。次工程はTopic 10のsource進捗記録3箇所を実成果物へ同期する。
+完成数は `9 / 12` のまま。次工程はTopic 10の最終QA再判定。
