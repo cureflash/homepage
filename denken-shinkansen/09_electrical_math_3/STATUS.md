@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 8 / 12
-- current_status: `topic_09_final_qa_needs_revision`
+- current_status: `topic_09_source_progress_synced`
 - last_completed_topic: `08 積分 速度曲線の面積は距離`
 - active_topic: `09 微積分で電気を読む`
-- next_start: `Topic 09 主source・練習sourceの進捗記録2箇所を現在地へ同期`
+- next_start: `Topic 09 最終QA再判定`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -90,23 +90,22 @@
 - [x] 完成後独立再解答前のブラインド化（主sourceの保存済み選択肢番号・公式正答・個別数値解答を除去）
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5問・7 / 7答案要素 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 主source・練習sourceの旧進捗記録2箇所を現在地へ同期
+- [x] 主source・練習sourceの旧進捗記録2箇所を現在地へ同期
 - [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-Topic 09「微積分で電気を読む」の最終QAを1段階進めた。
+Topic 09「微積分で電気を読む」の進捗記録同期を1段階進めた。
 
-- 必須成果物5件のGitHub正本上の実在を確認
-- 固定5問・7答案要素の完成後独立再解答 `5 / 5問・7 / 7答案要素 PASS` を再確認
-- 練習QA `12 / 12 PASS`、記録済みPDF/PPTX表示QA、固定5式・仕様境界をPASS確認
-- 技術内容・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTXには不備なし
-- 主sourceが「次工程は最終QA」、練習sourceが「次工程は練習PDF作成」の旧進捗のまま残っている2件を検出
-- 最終QA記録 `topics/09_calculus_electricity/09_calculus_electricity_final_qa.md` を追加
+- 主source冒頭の状態と末尾の次工程を、初回最終QA後の現在地へ同期
+- 練習source末尾の旧次工程「練習PDF作成」を、最終QA再判定待ちへ同期
+- 技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・正答は変更していない
+- PDF/PPTX成果物は変更していない
+- 完成後独立再解答 `5 / 5問・7 / 7答案要素 PASS` を維持
 - 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
 
 ## 判定
 
-`topic_09_final_qa_needs_revision / IN_PROGRESS`。
+`topic_09_source_progress_synced / IN_PROGRESS`。
 
-完成数は `8 / 12` のまま。次工程は主source・練習sourceの進捗記録2箇所だけを実成果物と現在地へ同期する。
+完成数は `8 / 12` のまま。次工程はTopic 09の最終QA再判定。
