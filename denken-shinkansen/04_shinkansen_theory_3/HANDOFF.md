@@ -4,26 +4,35 @@
 
 ## 現在地
 
-Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は完成後公式過去問独立再解答まで完了した。
+Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は最終QAまで実施したが、主source・練習sourceの進捗記録不整合により `NEEDS_REVISION`。
 
 - 完成数: `10 / 14`
 - last completed: `10 新幹線が使う電力は「W」だけではない`
 - active topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- current status: `topic_11_independent_reanswer_complete / IN_PROGRESS`
-- next start: Topic 11の最終QAを実施する
+- current status: `topic_11_final_qa_needs_revision / IN_PROGRESS`
+- next start: 主source・練習sourceの進捗記録だけを実成果物へ同期する
 
 ## 今回進捗
 
-Topic 11の完成後公式過去問独立再解答を実施し、固定5問・10答案要素を完成教材だけで再解答した。公式解答は独立解答確定後に照合した。
+Topic 11の最終QAを実施した。固定過去問・成果物・表示QA・SPEC境界はPASSしたが、進捗記録整合性のみFAIL。
 
-- 独立再解答記録: `topics/11_three_phase_ac/11_three_phase_ac_exam_recheck.md`
+- 最終QA記録: `topics/11_three_phase_ac/11_three_phase_ac_final_qa.md`
 - 固定対象: 公式理論過去問5問・10答案要素
-- 独立解答列: `(3),(4),(4),(4),(3),(4),(3),(4),(1),(1)`
-- 公式解答列: `(3),(4),(4),(4),(3),(4),(3),(4),(1),(1)`
-- 一致: `5 / 5問・10 / 10答案要素 PASS`
-- 教材外知識補完: 0件
-- 境界外依存: 0件
-- 未確認実設備値・具体的き電変圧器結線への依存: 0件
+- 完成後独立再解答: `5 / 5問・10 / 10答案要素 PASS`
+- 必須成果物: PASS
+- 解説PDF表示・文字抽出QA: PASS
+- 練習15問・練習PDF QA: PASS
+- PowerPoint表示・ZIP/XML整合性QA: PASS
+- SPEC固定範囲外追加: 0件
+- 進捗記録整合性: FAIL
+
+FAIL内容:
+- `11_three_phase_ac.md` 冒頭が `status: EXPLANATION_SOURCE_COMPLETE` のまま
+- 同source末尾の次工程が「解説PDFを作成」のまま
+- `11_three_phase_ac_practice.md` が `stage: PRACTICE_PDF_COMPLETE` のまま
+- 同source末尾の次工程が「解説画像PowerPointを作成」のまま
+
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX成果物の修正は不要。
 
 ## Topic 11 SPEC固定範囲
 
@@ -98,6 +107,7 @@ P = √3 VL IL cosφ
   - 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
   - 解説本文＋3段階例題: 完成
   - 固定過去問要求の本文マッピング: `10 / 10`
+  - 進捗メタデータ: 要同期
 - 解説PDF: `topics/11_three_phase_ac/11_three_phase_ac_explanation.pdf`
   - A4縦4ページ
   - 200 dpi表示QA: `4 / 4 PASS`
@@ -109,6 +119,7 @@ P = √3 VL IL cosφ
   - 数値・論理QA: `15 / 15 PASS`
   - 正答一意性: `15 / 15 PASS`
   - 固定過去問要求への接続: `10 / 10`
+  - 進捗メタデータ: 要同期
 - 練習PDF: `topics/11_three_phase_ac/11_three_phase_ac_practice.pdf`
   - A4縦3ページ
   - 200 dpi表示QA: `3 / 3 PASS`
@@ -122,11 +133,16 @@ P = √3 VL IL cosφ
   - 固定過去問要求の可視化: `10 / 10`
 - 解説画像PowerPoint QA: `topics/11_three_phase_ac/11_three_phase_ac_images_qa.md` / PASS
 - 完成後独立再解答: `topics/11_three_phase_ac/11_three_phase_ac_exam_recheck.md` / `5 / 5問・10 / 10答案要素 PASS`
-- 最終QA: 未実施
+- 最終QA: `topics/11_three_phase_ac/11_three_phase_ac_final_qa.md` / `NEEDS_REVISION`
 
 ## 次に行うこと
 
-Topic 11の最終QAを実施する。固定5問・10答案要素、必須成果物、表示QA、進捗記録整合、SPEC境界を再監査する。
+主source・練習sourceの進捗記録だけを実成果物へ同期する。
+
+- `11_three_phase_ac.md`: statusを完成後独立再解答済みに更新し、旧「解説PDF作成」次工程を除去する
+- `11_three_phase_ac_practice.md`: stageを完成後独立再解答済みに更新し、旧「PowerPoint作成」次工程を除去する
+- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTXは変更しない
+- 同期後、最終QAを再実施する
 
 ## 固定ルール
 
