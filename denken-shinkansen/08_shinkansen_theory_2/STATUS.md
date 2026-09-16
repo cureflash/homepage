@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 12 / 21
-- current_status: `topic_13_final_qa_needs_revision`
+- current_status: `topic_13_source_progress_synced`
 - last_completed_topic: `12 三相交流を新幹線へ渡す`
 - active_topic: `13 新幹線の交流電力を複素数で扱う`
-- next_start: Topic 13 進捗記録同期
+- next_start: Topic 13 最終QA再実施
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -187,25 +187,20 @@
 - [x] 解説画像PowerPoint＋表示QA
 - [x] 完成後独立再解答: `19 / 19 PASS`
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 主source・練習sourceの旧進捗記録同期
+- [x] 主source・練習sourceの旧進捗記録同期
 - [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-Topic 13「新幹線の交流電力を複素数で扱う」の初回最終QAを実施した。
+Topic 13「新幹線の交流電力を複素数で扱う」の旧進捗記録3箇所を実成果物へ同期した。
 
-- 最終QA記録: `topics/13_complex_power/13_complex_power_final_qa.md`
-- 固定一次3問・15小問＋二次1問・4答案要素の完成後独立再解答: `19 / 19 PASS`
-- 必須成果物実在: `PASS`
-- 解説PDF・練習PDF・PowerPoint QA: `PASS`
-- SPEC固定範囲境界: `PASS`
-- 二次採用: `1問・4答案要素`、二次数合わせ: `0件`
-- 進捗記録整合: `FAIL`
-  - 主source冒頭が `EXPLANATION_PDF_COMPLETE`／次工程「練習問題source＋練習PDF」のまま
-  - 主source末尾が練習問題・PowerPoint・独立再解答を未完了扱いし、次工程「練習問題source＋練習PDF」のまま
-  - 練習source冒頭が `PRACTICE_PDF_COMPLETE`／次工程「解説画像PowerPoint＋表示QA」のまま
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの修正要否: `なし`
+- 主source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」へ同期
+- 主source末尾: 練習問題・PowerPoint・完成後独立再解答を完了扱いに同期
+- 練習source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」へ同期
+- 固定一次3問・15小問＋二次1問・4答案要素の完成後独立再解答: `19 / 19 PASS` を維持
+- 二次採用: `1問・4答案要素`、二次数合わせ: `0件` を維持
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
 
 ## 判定
 
-Topic 13は `NEEDS_REVISION / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は技術内容を変更せず、主source2箇所＋練習source1箇所の旧進捗記録を実成果物へ同期する。
+Topic 13は `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は最終QA再実施。
