@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 10 / 20
-- current_status: `topic_11_explanation_pdf_complete`
+- current_status: `topic_11_practice_source_complete`
 - last_completed_topic: `10 伝達関数・極・零点`
 - active_topic: `11 行列・線形連立方程式`
-- next_start: Topic 11の練習問題sourceを作成し、独立計算・正答一意性QAを行う
+- next_start: Topic 11の練習PDFを作成し、表示QA・文字抽出QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -114,7 +114,7 @@
 - [x] Topic 12固有値・状態空間、電力潮流詳細アルゴリズム、非線形反復計算の先取り0件を確認
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
@@ -124,15 +124,16 @@
 
 ## 今回進めた内容
 
-Topic 11 `行列・線形連立方程式` の解説PDFを完成し、GitHub正本へ反映した。
+Topic 11 `行列・線形連立方程式` の練習問題・完全解説sourceを完成し、GitHub正本へ反映した。
 
-解説PDF:
-- `topics/11_matrix_linear_systems/11_matrix_linear_systems_explanation.pdf`
-- A4縦5ページ
-- 200 dpi全ページ表示QA `5 / 5 PASS`
-- 文字抽出QA `PASS`
-- 固定一次5問・12対象設問の反映 `12 / 12`
-- 3段階例題反映: PASS
+練習source:
+- `topics/11_matrix_linear_systems/11_matrix_linear_systems_practice.md`
+- 全12問
+- 一次型8問／二次記述型4問
+- 難易度: 基礎3／標準6／複合3
+- 固定一次5問・12対象設問への接続 `12 / 12 PASS`
+- 独立計算・正答一意性QA `12 / 12 PASS`
+- 一次型正答番号: `1, 2, 2, 1, 4, 1, 3, 1`
 
 固定境界:
 - Topic 12固有値・固有ベクトル: 追加0件
@@ -140,13 +141,13 @@ Topic 11 `行列・線形連立方程式` の解説PDFを完成し、GitHub正�
 - 電力潮流の詳細アルゴリズム: 追加0件
 - Newton-Raphson法・非線形反復計算: 追加0件
 - 行列式・余因子展開の独立論点化: 0件
-- 二次試験を件数合わせで追加: 0件
+- 二次公式過去問を件数合わせで追加: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 11は `topic_11_explanation_pdf_complete / IN_PROGRESS`。
+Topic 11は `topic_11_practice_source_complete / IN_PROGRESS`。
 
 完成数は `10 / 20` のまま。
 
-次はTopic 11の練習問題sourceを作成し、独立計算・正答一意性QAを行う。
+次はTopic 11の練習PDFを作成し、表示QA・文字抽出QAを行う。
