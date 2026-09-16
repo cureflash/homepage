@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: 9 / 39
-- current_status: `topic_10_source_progress_synced`
-- last_completed_topic: `09 直流機方式の損失・熱設計`
-- active_topic: `10 300系① 誘導電動機等価回路`
-- next_start: Topic 10の最終QAを再判定する
+- exam_aligned_completed_topics: 10 / 39
+- current_status: `topic_10_completed`
+- last_completed_topic: `10 300系① 誘導電動機等価回路`
+- active_topic: `11 300系② PWMコンバータ`
+- next_start: Topic 11の制作前EXAM_ALIGNMENTを実施する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -20,6 +20,7 @@
 - [x] 07 直流主回路の高出力化 — PASS
 - [x] 08 位相制御と平均直流電圧 — PASS
 - [x] 09 直流機方式の損失・熱設計 — PASS
+- [x] 10 300系① 誘導電動機等価回路 — PASS
 
 ## Topic 06 最終QA
 - 必須成果物: `PASS`
@@ -568,7 +569,7 @@
 - 独立再解答判定: `PASS`
 
 ## Topic 10 最終QA
-- `10_300series_induction_motor_equivalent_circuit_final_qa.md`: `NEEDS_REVISION / IN_PROGRESS`
+- `10_300series_induction_motor_equivalent_circuit_final_qa.md`: `PASS / completed`
 - 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問・22答案要素を維持
 - 完成後独立再解答: 一次 `11 / 11 PASS`、二次 `11 / 11 PASS`、合計 `22 / 22 PASS`
 - 必須成果物: `PASS`
@@ -579,7 +580,7 @@
 - Topic 11〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 - 前回最終QAの唯一のFAILだった主source冒頭の「最終QAは未実施」: `同期済み`
-- 進捗記録整合: `再判定待ち`
-- 最終判定: `NEEDS_REVISION / IN_PROGRESS`
+- 進捗記録整合: `PASS`
+- 最終判定: `PASS / completed`
 
-次工程はTopic 10の最終QA再判定。技術内容・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTXには触れない。進捗記録整合がPASSならTopic 10を `completed` へ進める。
+次工程はTopic 11「300系② PWMコンバータ」の制作前EXAM_ALIGNMENT。
