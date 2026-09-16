@@ -6,21 +6,24 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `8 / 16`。Topic 01〜08は完成済み。
 
 ## 今回進捗
-Topic 09 `変電所からパンタグラフまでどう送る？` の解説画像PowerPointを完成した。
+Topic 09 `変電所からパンタグラフまでどう送る？` の完成後ブラインド独立再解答を実施した。
 
-`topics/09_feeding_transmission/09_feeding_transmission_images.pptx` を作成し、固定5問・7小問の要求事項を4枚の16:9スライドへ可視化した。QAは `topics/09_feeding_transmission/09_feeding_transmission_powerpoint_qa.md` に記録した。
+固定5問・7小問を、公式解答を先に見ず、完成教材の式・解法手順だけで再解答した。独立答案確定後に電気技術者試験センター公式解答と照合し、`7 / 7 PASS`。記録は `topics/09_feeding_transmission/09_feeding_transmission_independent_reanswer.md`。
 
-PowerPoint QA:
-- 16:9・4枚
-- 固定5問・7小問の要求事項可視化: `7 / 7`
-- 1601×900表示QA: `4 / 4 PASS`
-- 文字欠け・クリップ・意図しない重なり: `0件`
-- overflow: `0件` (`slides_test.py` PASS)
-- PPTX ZIP整合性: PASS
-- PPTX内固定5問表記: 全5問確認
+結果:
+- 完成教材のみでの独立再解答: `7 / 7 PASS`
+- 公式解答一致: `7 / 7 PASS`
+- 教材外知識補完: `0件`
+- Topic 10以降の論点による補完: `0件`
 - SPEC固定範囲外追加: `0件`
-- Topic 10以降の先取り: `0件`
-- 未確認実設備値の真値化: `0件`
+- 未確認実設備値の使用: `0件`
+
+独立答案:
+- R6下 電力 問12: `(2)`
+- R6下 電力 問16(a)(b): `(3),(4)`
+- R6下 電力 問17(a)(b): `(2),(4)`
+- R5上 電力 問10: `(2)`
+- R4下 電力 問9: `(1)`
 
 ## Topic 09 固定過去問
 品質ゲート対象は変更していない。
@@ -30,9 +33,7 @@ PowerPoint QA:
 - R5上 電力 問10
 - R4下 電力 問9
 
-制作前独立検証 `7 / 7 PASS`、公式解答との不一致0件を維持する。
-
-完成後ブラインド独立再解答を汚染しないため、制作前の選択肢番号・数値解はsource・STATUS・HANDOFFへ保存していない。
+制作前独立検証 `7 / 7 PASS`、完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答との不一致0件。
 
 ## Topic 09 固定範囲
 SPEC固定範囲は、送電線路、電線抵抗、インダクタンス、静電容量、インピーダンス、電圧降下、電力損失、ATき電方式、帰線。
@@ -74,9 +75,12 @@ R8上 電力 問8、およびR7上・R7下の送電関連候補のうち、機�
 - PowerPoint表示QA: 1601×900 `4 / 4 PASS`
 - PowerPoint overflow: `0件`
 - PowerPoint ZIP整合性: PASS
+- 完成後ブラインド独立再解答: `7 / 7 PASS`
+- 公式解答一致: `7 / 7 PASS`
+- 教材外知識補完: `0件`
+- Topic 10以降の論点による補完: `0件`
 - SPEC固定範囲外追加: `0件`
 - 未確認実設備値の真値化: `0件`
-- 完成後ブラインド独立再解答: 未着手
 
 ## 直前完了テーマ
 Topic 08 `新幹線の変電所はなぜ数十kmおき？` は `PASS / completed`。
@@ -94,10 +98,10 @@ PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
 完成後独立再解答: `topics/08_voltage_drop/08_voltage_drop_independent_reanswer.md`
 
 ## 現在状態
-- `current_status`: `topic_09_powerpoint_complete`
+- `current_status`: `topic_09_independent_reanswer_complete`
 - 完成数: `8 / 16`
 - last completed: Topic 08 `新幹線の変電所はなぜ数十kmおき？`
 - active: Topic 09 `変電所からパンタグラフまでどう送る？`
 
 ## 次の正確な開始点
-Topic 09の固定5問・7小問を、完成教材だけで保存済み正答を先に見ずブラインド独立再解答する。
+Topic 09 main sourceのEXAM_ALIGNMENT・進捗記録へ、完成後ブラインド独立再解答 `7 / 7 PASS` を同期する。教材本文・固定5問・7小問・成果物・SPEC固定範囲は変更しない。
