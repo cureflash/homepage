@@ -490,4 +490,4 @@ P = (2π×1440/60)×600
 
 ## 次工程
 
-このsourceを正本として、Topic 12の練習PDFを作成し、A4縦・表示QA・文字抽出QA・問題/正答整合QAを行う。固定EXAM_ALIGNMENTは変更しない。
+Topic 12の最終QAを再判定する。固定EXAM_ALIGNMENT、問題・正答、練習PDF/PPTX成果物は変更しない。
