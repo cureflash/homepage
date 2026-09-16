@@ -230,7 +230,7 @@ Topic 12 `300系はなぜVVVFになった？` の解説画像PowerPointを作成
 
 公式過去問図の複製、PWM・インバータ波形、GTO/IGBT/SiC詳細損失・駆動比較、BJT/FET小信号回路、ホール効果、未確認300系実車回路・数値は追加していない。固定範囲外追加0件。
 
-PowerPoint SHA-256: `7dc6c221a04f6bef8658eb7825e8b68c0290af36ed8446d26f22d995169dd69f`
+PowerPoint SHA-256: `f749810f01da439213def981b10e0081dc39e8c1c7515153e156960cd0a5ddff`
 
 ## 判定
 
