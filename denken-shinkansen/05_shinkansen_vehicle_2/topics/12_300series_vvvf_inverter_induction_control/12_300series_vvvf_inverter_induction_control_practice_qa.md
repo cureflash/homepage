@@ -44,7 +44,7 @@
 
 ## GitHub整合
 - Git blob SHA-1: `7d0bde171a13ca4ee6b449983df17cba1c9d848b`
-- source Git blob SHA-1: `0bc516e38950bd3c44c4e2181234dbe4f729e11c`
+- source Git blob SHA-1: `c5dcac6afbe05b527b36f91cf35acfc72513404f`
 
 ## 判定
 `PASS`
