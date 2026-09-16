@@ -9,7 +9,7 @@ Topic 01〜11は最終QAまで `PASS / completed`。
 
 active topic: `12 N700Sの6極モーターを設計側から見る`
 
-current status: `topic_12_powerpoint_complete`
+current status: `topic_12_blind_reanswer_ready`
 
 ## Topic 10 固定範囲
 - 力行
@@ -345,6 +345,7 @@ source完成内容:
 - 主要計算再検算: PASS
 - 固定範囲外追加: `0件`
 - 未確認N700S実車値追加: `0件`
+- 独立再解答前ゲート: `BLIND_REANSWER_READY`
 
 ## Topic 12 解説PDF
 - `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_explanation.pdf`: `completed`
@@ -401,5 +402,17 @@ source完成内容:
 - Git blob SHA: `2165bc31df02cfc06ace513e459255ebcbb4a7f9`
 - SHA-256: `0fcc83e90287e57901ef17c50497e2c4356c0322973de1b7d8628b0be286b17c`
 
+## Topic 12 独立再解答前ゲート
+- 記録: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_blind_reanswer_gate.md`
+- `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
+- `STATUS.md` / `HANDOFF.md` / main source / 練習source / blocker / PowerPoint QA を再監査
+- 固定5過去問の公式正答番号・標準解答本文の保存: `0件`
+- 固定5過去問の完成済み数値解・導出結果の保存: `0件`
+- 制作前検証はPASS数・要求知識・使用式・教材内マッピングのみを保持
+- 固定5問・16答案要素、教材本文、PDF、練習問題、PowerPoint、固定EXAM_ALIGNMENT: 変更なし
+- 固定範囲外論点追加: `0件`
+- 未確認N700S実車値追加: `0件`
+- 判定: `BLIND_REANSWER_READY`
+
 ## 次に行うこと
-Topic 12の独立再解答前ゲートを実施する。必須先読み対象から保存済み正答・完成済み数値解が見えない状態を確認し、固定5問・16答案要素と教材内容は変更しない。
+公式解答・保存済み正答を先に見ない状態で、完成教材だけを使用してTopic 12の固定5問・16答案要素を独立再解答する。解答完了後に公式解答・標準解答と照合し、教材外知識補完の有無を判定する。
