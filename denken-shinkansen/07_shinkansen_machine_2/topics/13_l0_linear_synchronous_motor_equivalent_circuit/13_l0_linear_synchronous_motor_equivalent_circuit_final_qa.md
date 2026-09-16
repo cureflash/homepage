@@ -2,23 +2,23 @@
 
 対象: `13 L0系のリニア同期モータを等価回路で考える`
 
-実施日: 2026-09-17
+再判定日: 2026-09-17
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` の範囲内で確認し、新しい仕様は追加していない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` の範囲内で再確認し、新しい仕様は追加していない。
 
-技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、練習問題QA、PDF/PPTX表示QA、固定範囲境界はPASS。未完了理由は進捗記録の不整合だけである。
+前回 `NEEDS_REVISION` の原因だった進捗記録3箇所は同期済み。技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、練習問題QA、PDF/PPTX表示QA、固定範囲境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物
 
 GitHub正本上で実在を確認した。
 
-- source Markdown: PASS (`4446ae25945148d7e47aa05e563fb9c68bf99fff`)
+- source Markdown: PASS (`10242e4dee2168d66b3efd95f84a2e1ee17c8dbc`)
 - 解説PDF: PASS (`f036c42c29d1edb15d9df585efe0448a5004e0c9`)
-- 練習source: PASS (`7116fb74c902879f5533b06a7bb8d36cf54b9d22`)
+- 練習source: PASS (`da46127bf9e851b5dd2795dd60759732d33327c6`)
 - 練習PDF: PASS (`1201194021156e6e2e00cb6584ea136f11d47d48`)
 - 解説画像PowerPoint: PASS (`24c2622a731002fe2e9d73ada115dcb6665da767`)
 - PowerPoint QA記録: PASS (`4b469cd56143155444e8ffedf2baf0d52653c5be`)
@@ -35,7 +35,7 @@ GitHub正本上で実在を確認した。
 - H21 一次 機械 問5: (1)〜(5)
 - R07 二次 機械・制御 問1: (1)の(a),(d),(e),(f)
 
-二種の一次・二次を合わせて原則5問以上、二次対象論点では記述式を含める品質ゲートを満たす。最新R08一次機械問1は同期発電機の冷却方式でTopic 13固定範囲外のため不採用。件数合わせによる範囲拡張はしていない。
+二種の一次・二次を合わせて原則5問以上、二次対象論点では記述式を含める品質ゲートを満たす。R08一次機械問1は同期発電機の冷却方式でTopic 13固定範囲外のため不採用。件数合わせによる範囲拡張はしていない。
 
 ## 完成後独立再解答
 
@@ -60,6 +60,18 @@ GitHub正本上で実在を確認した。
 - 練習PDF: A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA PASS、数値・論理再検算 `15 / 15 PASS`
 - PowerPoint: 16:9・4スライド、表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性PASS
 
+## 前回FAILの再確認
+
+前回FAILだった進捗記録3箇所は解消済み。
+
+1. main source `## 状態`: 実成果物と独立再解答完了後の現在地へ同期済み。
+2. main source末尾 `# 次工程`: 「Topic 13最終QA再実施」へ同期済み。
+3. 練習source末尾 `# 次工程`: 「Topic 13最終QA再実施」へ同期済み。
+
+同期コミットの差分も確認し、main sourceは状態・次工程3箇所のみ、練習sourceは次工程1箇所のみの変更で、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・独立再解答結果には変更がない。
+
+判定: `PASS`。
+
 ## 仕様境界
 
 追加していない範囲:
@@ -72,20 +84,6 @@ GitHub正本上で実在を確認した。
 
 判定: `PASS`。
 
-## 進捗記録整合
-
-`FAIL`。実成果物とsource内の進捗記録が一致していない。
-
-1. `13_l0_linear_synchronous_motor_equivalent_circuit.md`
-   - `## 状態` が「解説PDF、練習問題sourceまで完成／次工程は練習PDF」のまま。
-   - 末尾 `# 次工程` も「練習PDFを作成する」のまま。
-   - 実際には練習PDF、PowerPoint、独立再解答まで完了済み。
-2. `13_l0_linear_synchronous_motor_equivalent_circuit_practice.md`
-   - 末尾 `# 次工程` が「解説画像PowerPointを作成する」のまま。
-   - 実際にはPowerPoint、独立再解答まで完了済み。
-
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・独立再解答結果は修正不要。
-
 ## 最終判定
 
 - 必須成果物: PASS
@@ -93,8 +91,8 @@ GitHub正本上で実在を確認した。
 - 完成後独立再解答: `22 / 22 PASS`
 - 練習・PDF/PPTX QA: PASS
 - 固定範囲境界: PASS
-- 進捗記録整合: FAIL
+- 進捗記録整合: PASS
 
-判定: `NEEDS_REVISION / IN_PROGRESS`。
+判定: `PASS / completed`。
 
-完成数は `12 / 22` のまま。次工程はmain sourceと練習sourceの進捗記録だけを実成果物へ同期し、その後Topic 13最終QAを再実施する。
+完成数を `13 / 22` とし、次はTopic 14 `L0系を500km/hで同期させる` の制作前EXAM_ALIGNMENTへ進む。
