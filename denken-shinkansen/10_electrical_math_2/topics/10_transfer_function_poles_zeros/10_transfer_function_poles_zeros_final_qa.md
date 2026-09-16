@@ -2,13 +2,13 @@
 
 対象: `10 伝達関数・極・零点`
 
-実施日: 2026-09-16
+再判定日: 2026-09-16
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC範囲境界はPASS。ただしsource進捗記録3箇所が実成果物より古いため、`completed` にはしない。
+前回 `NEEDS_REVISION` の原因だったsource進捗記録3箇所は実成果物へ同期済み。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC範囲境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物の実在確認
 
@@ -82,19 +82,14 @@ R5 問4は周波数応答・ゲイン特性中心でTopic 15を先取りする�
 - 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
-## source進捗整合
+## 前回FAILの再確認
 
-技術内容はPASSだが、以下3箇所の進捗記録が旧状態のまま残っている。
+前回FAILだったsource進捗記録3箇所は解消済み。
 
-1. `10_transfer_function_poles_zeros.md` 冒頭 `## 状態`
-   - 現在も「解説本文＋3段階例題を完成」「次工程は解説PDF」と記録されている。
-   - 実際には解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで完了している。
-2. `10_transfer_function_poles_zeros.md` 末尾 `## 次工程`
-   - 現在も解説PDF作成を次工程としている。
-3. `10_transfer_function_poles_zeros_practice.md` 末尾 `## 次工程`
-   - 現在も練習PDF作成を次工程としている。
-
-この3箇所だけを実成果物へ同期する必要がある。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、練習問題、正答、PDF、PowerPoint、完成後独立再解答は変更しない。
+- `10_transfer_function_poles_zeros.md` 冒頭 `## 状態`: 解説PDF、練習source/PDF、PowerPoint、完成後独立再解答、初回最終QAまで完了した現在地へ同期済み
+- `10_transfer_function_poles_zeros.md` 末尾 `## 次工程`: source進捗同期後の最終QA再判定へ同期済み
+- `10_transfer_function_poles_zeros_practice.md` 末尾 `## 次工程`: 練習PDF完成後の最終QA再判定へ同期済み
+- 教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF・PowerPoint・完成後独立再解答の技術内容は変更していない
 
 ## 最終判定
 
@@ -102,10 +97,15 @@ R5 問4は周波数応答・ゲイン特性中心でTopic 15を先取りする�
 - 二種相当EXAM_ALIGNMENT 二次5問・11対象設問: PASS
 - 完成後独立再解答 `11 / 11`: PASS
 - 練習問題独立計算・正答一意性 `12 / 12`: PASS
+- 教材外知識補完0件: PASS
+- Topic 12/15先取り0件: PASS
+- ラウス・フルビッツ法一般手順追加0件: PASS
+- 定常偏差・畳み込みの独立論点化0件: PASS
+- 固定範囲外追加0件: PASS
+- 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- 固定範囲境界: PASS
-- source進捗記録と実成果物の整合: FAIL（旧進捗3箇所）
+- source進捗記録と実成果物の整合: PASS
 
-総合判定: `NEEDS_REVISION / IN_PROGRESS`。
+総合判定: `PASS / completed`。
 
-次工程は、上記3箇所の進捗記録だけを実成果物へ同期する。その後、最終QAを再判定する。
+Topic 10を完了とし、次はTopic 11 `行列・線形連立方程式` の制作前EXAM_ALIGNMENTへ進む。
