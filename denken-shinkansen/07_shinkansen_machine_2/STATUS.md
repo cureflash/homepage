@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_11_progress_records_synced`
-- last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
-- active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 最終QA再実施
+- exam_aligned_completed_topics: `11 / 22`
+- current_status: `topic_11_completed`
+- last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
+- active_topic: `12 N700Sの6極モーターを設計側から見る`
+- next_start: Topic 12 制作前EXAM_ALIGNMENT
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -21,6 +21,7 @@
 - [x] Topic 08 最終QA PASS
 - [x] Topic 09 最終QA PASS
 - [x] Topic 10 最終QA PASS
+- [x] Topic 11 最終QA PASS
 
 ## Topic 10 制作前EXAM_ALIGNMENT
 - [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列`SPEC.md`確認
@@ -250,8 +251,8 @@
 - [x] 完成後独立再解答 `15 / 15 PASS`
 - [x] 練習問題・PDF/PPTX QA: PASS
 - [x] 固定範囲境界・未確認実車値: PASS
-- [ ] 進捗記録整合: FAIL（2件・前回判定）
-- 判定: `NEEDS_REVISION / IN_PROGRESS`（前回判定）
+- [x] 進捗記録整合: PASS
+- 判定: `PASS / completed`
 
 ## Topic 11 進捗記録同期
 - [x] 練習source末尾の旧「次は解説画像PowerPointを作成する」を、実成果物に合わせて「次は最終QAを再実施する」へ同期
@@ -260,7 +261,7 @@
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 
 ## 今回進めた内容
-Topic 11の前回最終QAで検出した進捗記録2件を同期した。練習sourceの旧次工程を実成果物へ合わせ、PowerPoint QA記録とSTATUSのSHA-256記録を現行blob基準で一致させた。教材内容・固定一次4問＋二次1問・15答案要素・完成後独立再解答結果は変更していない。
+Topic 11の最終QAを再実施した。前回FAILだった進捗記録2件が解消済みであることを確認し、固定一次4問＋二次1問・15答案要素、完成後独立再解答 `15 / 15 PASS`、必須成果物、表示QA、固定範囲境界、進捗記録整合を全件PASSとした。
 
 ## 判定
-Topic 11は `topic_11_progress_records_synced / IN_PROGRESS`。完成数は `10 / 22`。次は最終QAを再実施する。
+Topic 11は `PASS / completed`。完成数は `11 / 22`。次はTopic 12「N700Sの6極モーターを設計側から見る」の制作前EXAM_ALIGNMENTを行う。
