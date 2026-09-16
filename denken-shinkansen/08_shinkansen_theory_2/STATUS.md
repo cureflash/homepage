@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 12 / 21
-- current_status: `topic_13_explanation_pdf_complete`
+- current_status: `topic_13_practice_pdf_complete`
 - last_completed_topic: `12 三相交流を新幹線へ渡す`
 - active_topic: `13 新幹線の交流電力を複素数で扱う`
-- next_start: Topic 13 練習問題source＋練習PDF
+- next_start: Topic 13 解説画像PowerPoint＋表示QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -183,20 +183,24 @@
 - [x] 制作前EXAM_ALIGNMENT: 一次3問・15小問＋二次1問・4答案要素、関連候補8件調査
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋表示QA
-- [ ] 練習問題source＋練習PDF
+- [x] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 13「新幹線の交流電力を複素数で扱う」の解説PDF＋表示QAを完成した。
+Topic 13「新幹線の交流電力を複素数で扱う」の練習問題source＋練習PDFを完成した。
 
-- PDF: `topics/13_complex_power/13_complex_power_explanation.pdf`
-- A4縦4ページ、200 dpi全ページ表示QA `4 / 4 PASS`
-- 文字抽出QA `PASS`
-- 固定4問・19答案要素への接続 `19 / 19`
-- 3段階例題 `3 / 3`
+- source: `topics/13_complex_power/13_complex_power_practice.md`
+- PDF: `topics/13_complex_power/13_complex_power_practice.pdf`
+- QA: `topics/13_complex_power/13_complex_power_practice_pdf_qa.md`
+- 全12問・全問五肢択一（基礎3 / 本試験標準6 / 複合・ひっかけ3）
+- 独立再計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- A4縦5ページ、200 dpi全ページ表示QA `5 / 5 PASS`
+- 文字抽出QA: `PASS`
+- 固定4問・19答案要素への接続: `19 / 19`
 - 二次採用: `1問・4答案要素`、二次数合わせ: `0件`
 - 電力円線図は概念のみに限定し、送電線単位法・詳細導出追加 `0件`
 - SPEC固定範囲外追加: `0件`
@@ -205,4 +209,4 @@ Topic 13「新幹線の交流電力を複素数で扱う」の解説PDF＋表示
 
 ## 判定
 
-Topic 13は `PASS / EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は練習問題source＋練習PDF。
+Topic 13は `PASS / PRACTICE_PDF_COMPLETE / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は解説画像PowerPoint＋表示QA。
