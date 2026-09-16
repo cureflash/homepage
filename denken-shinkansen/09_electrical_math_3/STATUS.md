@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 8 / 12
-- current_status: `topic_09_independent_reanswer_complete`
+- current_status: `topic_09_final_qa_needs_revision`
 - last_completed_topic: `08 積分 速度曲線の面積は距離`
 - active_topic: `09 微積分で電気を読む`
-- next_start: `Topic 09 最終QA`
+- next_start: `Topic 09 主source・練習sourceの進捗記録2箇所を現在地へ同期`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -89,21 +89,24 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答前のブラインド化（主sourceの保存済み選択肢番号・公式正答・個別数値解答を除去）
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5問・7 / 7答案要素 PASS`
-- [ ] 最終QA
+- [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 主source・練習sourceの旧進捗記録2箇所を現在地へ同期
+- [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-Topic 09「微積分で電気を読む」の完成後独立再解答を1段階進めた。
+Topic 09「微積分で電気を読む」の最終QAを1段階進めた。
 
-- 保存済み正答を先に見ず、完成教材と固定5問の公式問題だけで7答案要素を再導出
-- 独立答案: R7上法規問13 `(2),(3)`、R6下理論問3 `(2)`、R3理論問4 `(4)`、R7上電力問1 `(2)`、H29法規問13 `(2),(5)`
-- 答案確定後に電気技術者試験センター公式解答と照合し `5 / 5問・7 / 7答案要素 PASS`
-- 公式解答との不一致0件、教材外知識補完0件
+- 必須成果物5件のGitHub正本上の実在を確認
+- 固定5問・7答案要素の完成後独立再解答 `5 / 5問・7 / 7答案要素 PASS` を再確認
+- 練習QA `12 / 12 PASS`、記録済みPDF/PPTX表示QA、固定5式・仕様境界をPASS確認
+- 技術内容・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTXには不備なし
+- 主sourceが「次工程は最終QA」、練習sourceが「次工程は練習PDF作成」の旧進捗のまま残っている2件を検出
+- 最終QA記録 `topics/09_calculus_electricity/09_calculus_electricity_final_qa.md` を追加
 - 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
-- 解説PDF、練習source/PDF、PowerPointは変更なし
 
 ## 判定
 
-`topic_09_independent_reanswer_complete / IN_PROGRESS`。
+`topic_09_final_qa_needs_revision / IN_PROGRESS`。
 
-完成数は `8 / 12` のまま。次工程はTopic 09の最終QA。
+完成数は `8 / 12` のまま。次工程は主source・練習sourceの進捗記録2箇所だけを実成果物と現在地へ同期する。
