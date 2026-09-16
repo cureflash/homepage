@@ -6,28 +6,25 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は34/38。01〜34がPASS。active topicは35 `COMTRAC③ ダイヤが乱れたらどうする？`。
 
 ## 今回進捗
-Topic 35の解説PDFを完成し、GitHub正本へ反映した。
+Topic 35の練習問題sourceを完成し、GitHub正本へ反映した。
 
 - 固定EXAM_ALIGNMENT 5問は変更なし
-- 解説source本文§1〜§15＋3段階例題をA4縦PDFへ反映
-- PDF: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_explanation.pdf`
-- A4縦5ページ
-- 固定5問の要求事項: `5 / 5問` 反映
-- 180 dpi全ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: PASS
-- 3段階例題: 基礎「代入と条件分岐」／標準「変数更新と反復」／複合「標本化・量子化・条件判断」
-- シーケンス制御とフィードバック制御の区別、PLC、フローチャート、変数更新、反復を収録
-- 情報伝送: 伝送路、雑音、多重化、搬送波、変調波、圧縮を収録
-- A-D変換: 標本化→量子化→符号化、`f_s>=2f_max`、`T_s=1/f_s`、`L=2^n` を収録
-- 新幹線側はJR東海/JTIS公開範囲の運転管理、運転計画変更、遅延波及防止、第2総合指令所まで
-- 2018年資料の「機能分散」と冗長化を同義にしていない
+- 練習source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice.md`
+- 全15問（基礎4／標準8／複合3）
+- 全問五肢択一＋完全解説
+- 正答位置: A/B/C/D/E各3問
+- 固定5問の要求事項: `5 / 5` 練習マッピング
+- 独立数値・論理再計算: `15 / 15 PASS`
+- 複数正答: `0件`
+- フローチャート・変数更新・条件分岐・反復をQ5〜Q7、Q14で練習化
+- 情報伝送・標本化・量子化・符号化・ディジタル伝送をQ2〜Q4、Q8〜Q11、Q13で練習化
+- シーケンス制御・PLCをQ1、Q12で練習化
+- 冗長化と機能分散の区別をQ15で確認し、両者を同義にしていない
 - 固定範囲外追加: `0件`
 - Topic 36以降先取り: `0件`
+- Topic 34論理回路の再体系化: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
-- 個別正答番号・完成済み最終導出の保存: `0件`
-- 練習問題・PowerPointは未着手
-
-source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management.md`
+- 練習PDF・PowerPointは未着手
 
 ## Topic 35 固定EXAM_ALIGNMENT
 - R7下 機械 問14 — フローチャート、変数更新、条件分岐、反復
@@ -70,6 +67,20 @@ source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_managemen
 - 未確認COMTRAC内部仕様追加: `0件`
 - 機能分散と冗長化の混同: `0件`
 - QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_explanation_pdf_qa.md`
+
+## Topic 35 練習source
+- `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice.md`
+- 全15問（基礎4／標準8／複合3）
+- 全問五肢択一＋完全解説
+- 正答位置: A/B/C/D/E各3問
+- 固定EXAM_ALIGNMENT: `5 / 5` 練習マッピング
+- 独立数値・論理再計算: `15 / 15 PASS`
+- 複数正答: `0件`
+- 固定範囲外追加: `0件`
+- Topic 36以降先取り: `0件`
+- Topic 34論理回路の再体系化: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+- 機能分散と冗長化の混同: `0件`
 
 ## Topic 35 系列SPEC固定範囲
 扱う: 遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
@@ -119,11 +130,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_35_explanation_pdf_complete`
+- `current_status`: `topic_35_practice_source_complete`
 - 完成数: 34/38
 - 01〜34: PASS
 - last completed: 34 `COMTRAC② 進路をどう自動制御する？`
 - active topic: 35 `COMTRAC③ ダイヤが乱れたらどうする？`
 
 ## 次の正確な開始点
-Topic 35の練習source。MASTER_SPEC / EXAM_ALIGNMENT_SPECに従い、原則12問以上、少なくとも半数を五肢択一、基礎20〜30%・本試験標準50〜60%・複合約20%を目安とする。固定EXAM_ALIGNMENT 5問の要求事項を練習問題へ対応付け、解答は使用式・理由・途中計算・単位・検算まで示す。固定範囲外、Topic 36以降、未確認COMTRAC内部仕様は追加しない。
+Topic 35の練習PDF。`35_comtrac_disruption_management_practice.md` の15問＋完全解説をA4縦PDFへ反映し、全ページ表示QA、文字抽出QA、数値・論理再検算、固定EXAM_ALIGNMENT `5 / 5` 接続を確認する。固定範囲外、Topic 36以降、未確認COMTRAC内部仕様は追加しない。
