@@ -4,8 +4,8 @@
 
 ## 状態
 
-- stage: `SOURCE_PROGRESS_SYNCED`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
@@ -13,8 +13,8 @@
 - 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
 - PowerPoint QA: `PASS / POWERPOINT_COMPLETE`
 - 完成後独立再解答: `PASS / INDEPENDENT_REANSWER_COMPLETE`
-- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- 次工程: 最終QA再実施
+- 最終QA: `PASS / FINAL_QA_COMPLETE`
+- 次工程: Topic 14「インバータのギザギザ波形を分解する」の制作前EXAM_ALIGNMENT
 
 ## 1. SPEC固定範囲
 
@@ -605,6 +605,8 @@ P-Q平面では、補償前 `(1000,983.3)` からQ軸方向へ下へ移動し、
 - [x] 完成後独立再解答: `19 / 19 PASS`
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source・練習sourceの旧進捗記録同期
-- [ ] 最終QA再実施
+- [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
+- [x] 主source・練習source・STATUS・HANDOFFをcompleted状態へ同期
+- [x] 最終判定: `PASS / completed`
 
-現在 `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は最終QA再実施。
+現在 `COMPLETED / completed`。完成数は `13 / 21`。次工程はTopic 14「インバータのギザギザ波形を分解する」の制作前EXAM_ALIGNMENT。
