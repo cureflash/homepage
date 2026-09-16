@@ -7,9 +7,7 @@
 
 Topic 01〜10は最終QAまで `PASS / completed`。完成数は `10 / 39`。
 
-現在地は `topic_11_independent_reanswer_passed`。Topic 11 `300系② PWMコンバータ` は、固定一次2問＋二次3問・計5問・27答案要素を変更せず、解説source/PDF、練習source/PDF、解説画像PowerPointまで完成し、完成教材だけを使った独立再解答も `27 / 27 PASS` した。
-
-次工程はTopic 11の最終QA。固定過去問・成果物・表示QA・進捗記録・固定範囲境界を総合判定し、全件PASSの場合のみ `completed` とする。
+現在地は `topic_11_final_qa_needs_progress_sync`。Topic 11 `300系② PWMコンバータ` は、固定一次2問＋二次3問・計5問・27答案要素を変更せず、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答まで完成している。最終QAでは技術内容・固定過去問・独立再解答・必須成果物・表示QA・練習QA・SPEC境界は全件PASSだが、進捗記録3箇所が旧工程のまま残るため `NEEDS_REVISION / IN_PROGRESS` とした。
 
 ## Topic 11 固定EXAM_ALIGNMENT
 source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
@@ -58,6 +56,9 @@ source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
   - H24二次 `6 / 6 PASS`
   - 二次合計 `17 / 17 PASS`
   - 総合 `27 / 27 PASS`
+- 最終QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_final_qa.md`
+  - 判定: `NEEDS_REVISION / IN_PROGRESS`
+  - 進捗記録整合のみ `FAIL`
 
 ## Topic 11 固定範囲
 - PWMコンバータ
@@ -83,12 +84,18 @@ SPEC指定可視化:
 - Topic 12〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
-## 次の正確な開始点
-Topic 11 `300系② PWMコンバータ` の最終QA。
+## 最終QAで残った修正
+進捗記録だけを同期する。教材内容は変更しない。
 
-1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` を再確認する。
-2. 固定一次2問＋二次3問・27答案要素の独立再解答 `27 / 27 PASS` を確認する。
-3. 解説source/PDF、練習source/PDF、PowerPointと各QA記録の実在・整合を確認する。
-4. 進捗記録の旧工程表現が残っていないか確認する。
-5. 固定範囲外追加、Topic 12〜13先取り、未確認300系実車値追加が0件か確認する。
-6. 全件PASSの場合のみTopic 11を `completed` とし、完成数を `11 / 39` に更新する。
+1. 主source `11_300series_pwm_converter.md` 冒頭状態欄
+   - 現在: 「解説本文＋3段階例題まで完成。解説PDF・練習・PowerPoint・完成後独立再解答・最終QAは未実施。」
+   - 実態: 全成果物・独立再解答・最終QAまで実施済み。最終QAは進捗記録整合だけ `FAIL`。
+2. 同主source末尾
+   - 現在: `topic_11_explanation_source_complete` / 次工程は解説PDF
+   - 実態: 最終QA実施済み
+3. 練習source `11_300series_pwm_converter_practice_source.md` 末尾
+   - 現在: `topic_11_practice_source_complete` / 次工程は練習PDF
+   - 実態: 練習PDF・PowerPoint・独立再解答・最終QAまで実施済み
+
+## 次の正確な開始点
+上記3箇所の旧進捗記録だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・正答・PDF/PPTXは変更しない。同期後、Topic 11の最終QAを再判定し、全件PASSの場合のみ `completed`、完成数 `11 / 39` とする。
