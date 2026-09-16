@@ -5,13 +5,34 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 33 / 38
-- current_status: `topic_33_completed`
+- current_status: `topic_34_exam_alignment_complete`
 - last_completed_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
 - active_topic: `34 COMTRAC② 進路をどう自動制御する？`
-- next_start: Topic 34の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 34の解説本文＋3段階例題を作成する
 
 ## 新品質ゲート進捗
 - [x] 01〜33 — PASS
+
+## 34 EXAM_ALIGNMENT
+品質ゲート対象は公式過去問5問・6答案要素。系列SPEC固定範囲は、進路制御、条件判定、AND、OR、NOT、真理値表、インターロック、論理回路。
+
+1. R7上 機械 問14 — AND・OR・NOT、論理回路、出力波形 — PASS
+2. R6下 機械 問18(a) — AND・OR・NOT、真理値表 — PASS
+3. R6下 機械 問18(b) — 多段論理回路、条件判定 — PASS
+4. R5下 機械 問14 — 真理値表から論理式 — PASS
+5. R2 機械 問14 — 真理値表から論理式 — PASS
+6. H27 機械 問14 — 4入力真理値表から論理式 — PASS
+
+制作前独立解答: `5 / 5問・6 / 6答案要素 PASS`。
+公式解答との不一致: `0件`。
+固定範囲外知識による正答補完: `0件`。
+Topic 35範囲追加: `0件`。
+未確認COMTRAC内部仕様追加: `0件`。
+R6下 機械 問14 / H25 機械 問14はR7上 機械 問14との重複再出題として件数に含めない。
+R6上 機械 問14はExOR・NORを要求するため固定範囲外として除外。
+個別正答番号・完成導出結果は完成後blind再解答保護のため必須先読みsourceへ保存しない。
+
+source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
@@ -253,7 +274,7 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - 周期・周波数: `f=1/T`, `T=1/f`
 - 処理時間: `t_instruction=CPI/f`
 - A-D変換: 標本化→量子化→符号化
-- 標本化条件: `f_s>=2f_max`, `T_s<=1/(2f_max)`
+- 標本化条件: `f_s>=2fmax`, `T_s<=1/(2fmax)`
 - 情報伝送: 伝送路、雑音、多重化、搬送波、変調波、圧縮
 - センサ・信号処理: アナログ→A-D→デジタル処理、D-A、インタフェース
 - 論理判断: 条件分岐・反復の追跡まで
@@ -411,4 +432,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は固定5過去問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数33/38。
 
 ## 次テーマ工程
-Topic 34 `COMTRAC② 進路をどう自動制御する？` の制作前EXAM_ALIGNMENTを実施する。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` の制作前EXAM_ALIGNMENTは完了。次は固定5問・6答案要素を教材だけで解けるようにする解説本文＋3段階例題を作成する。
