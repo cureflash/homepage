@@ -4,12 +4,17 @@
 
 ## 状態
 
-- stage: `EXPLANATION_PDF_COMPLETE`
+- stage: `SOURCE_PROGRESS_SYNCED`
 - completion: `in_progress`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
-- 次工程: 練習問題source＋練習PDF
+- 練習問題QA: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
+- PowerPoint QA: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 次工程: 最終QA再実施
 
 ## 1. SPEC固定範囲
 
@@ -595,9 +600,11 @@ P-Q平面では、補償前 `(1000,983.3)` からQ軸方向へ下へ移動し、
 - [x] 制作前EXAM_ALIGNMENT
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋表示QA
-- [ ] 練習問題source＋練習PDF
-- [ ] 解説画像PowerPoint＋表示QA
-- [ ] 完成後独立再解答
-- [ ] 最終QA
+- [x] 練習問題source＋練習PDF
+- [x] 解説画像PowerPoint＋表示QA
+- [x] 完成後独立再解答: `19 / 19 PASS`
+- [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- [x] 主source・練習sourceの旧進捗記録同期
+- [ ] 最終QA再実施
 
-現在 `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は練習問題source＋練習PDF。
+現在 `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は最終QA再実施。
