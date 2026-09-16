@@ -4,35 +4,26 @@
 
 ## 現在地
 
-Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は最終QAまで実施したが、主source・練習sourceの進捗記録不整合により `NEEDS_REVISION`。
+Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は前回最終QAで指摘された主source・練習sourceの進捗記録不整合を修正し、実成果物へ同期済み。最終QA再実施待ち。
 
 - 完成数: `10 / 14`
 - last completed: `10 新幹線が使う電力は「W」だけではない`
 - active topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- current status: `topic_11_final_qa_needs_revision / IN_PROGRESS`
-- next start: 主source・練習sourceの進捗記録だけを実成果物へ同期する
+- current status: `topic_11_source_progress_synced / IN_PROGRESS`
+- next start: Topic 11の最終QAを再実施する
 
 ## 今回進捗
 
-Topic 11の最終QAを実施した。固定過去問・成果物・表示QA・SPEC境界はPASSしたが、進捗記録整合性のみFAIL。
+Topic 11の主source・練習sourceの進捗記録だけを実成果物へ同期した。
 
-- 最終QA記録: `topics/11_three_phase_ac/11_three_phase_ac_final_qa.md`
+- `11_three_phase_ac.md`: `status: INDEPENDENT_REANSWER_COMPLETE` へ更新
+- `11_three_phase_ac_practice.md`: `stage: INDEPENDENT_REANSWER_COMPLETE` へ更新
+- 旧「解説PDF作成」「解説画像PowerPoint作成」の次工程記録を除去
 - 固定対象: 公式理論過去問5問・10答案要素
 - 完成後独立再解答: `5 / 5問・10 / 10答案要素 PASS`
-- 必須成果物: PASS
-- 解説PDF表示・文字抽出QA: PASS
-- 練習15問・練習PDF QA: PASS
-- PowerPoint表示・ZIP/XML整合性QA: PASS
-- SPEC固定範囲外追加: 0件
-- 進捗記録整合性: FAIL
+- 必須成果物・各表示QA・SPEC境界: 既存PASSを維持
 
-FAIL内容:
-- `11_three_phase_ac.md` 冒頭が `status: EXPLANATION_SOURCE_COMPLETE` のまま
-- 同source末尾の次工程が「解説PDFを作成」のまま
-- `11_three_phase_ac_practice.md` が `stage: PRACTICE_PDF_COMPLETE` のまま
-- 同source末尾の次工程が「解説画像PowerPointを作成」のまま
-
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX成果物の修正は不要。
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX成果物は変更していない。次は最終QAを再実施し、進捗記録整合性を含めて再判定する。
 
 ## Topic 11 SPEC固定範囲
 
@@ -107,7 +98,7 @@ P = √3 VL IL cosφ
   - 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
   - 解説本文＋3段階例題: 完成
   - 固定過去問要求の本文マッピング: `10 / 10`
-  - 進捗メタデータ: 要同期
+  - 進捗メタデータ: 同期済み（`INDEPENDENT_REANSWER_COMPLETE`）
 - 解説PDF: `topics/11_three_phase_ac/11_three_phase_ac_explanation.pdf`
   - A4縦4ページ
   - 200 dpi表示QA: `4 / 4 PASS`
@@ -119,7 +110,7 @@ P = √3 VL IL cosφ
   - 数値・論理QA: `15 / 15 PASS`
   - 正答一意性: `15 / 15 PASS`
   - 固定過去問要求への接続: `10 / 10`
-  - 進捗メタデータ: 要同期
+  - 進捗メタデータ: 同期済み（`INDEPENDENT_REANSWER_COMPLETE`）
 - 練習PDF: `topics/11_three_phase_ac/11_three_phase_ac_practice.pdf`
   - A4縦3ページ
   - 200 dpi表示QA: `3 / 3 PASS`
@@ -133,16 +124,16 @@ P = √3 VL IL cosφ
   - 固定過去問要求の可視化: `10 / 10`
 - 解説画像PowerPoint QA: `topics/11_three_phase_ac/11_three_phase_ac_images_qa.md` / PASS
 - 完成後独立再解答: `topics/11_three_phase_ac/11_three_phase_ac_exam_recheck.md` / `5 / 5問・10 / 10答案要素 PASS`
-- 最終QA: `topics/11_three_phase_ac/11_three_phase_ac_final_qa.md` / `NEEDS_REVISION`
+- 最終QA: `topics/11_three_phase_ac/11_three_phase_ac_final_qa.md` / `NEEDS_REVISION`（前回判定。進捗記録同期後の再実施待ち）
 
 ## 次に行うこと
 
-主source・練習sourceの進捗記録だけを実成果物へ同期する。
+Topic 11の最終QAを再実施する。
 
-- `11_three_phase_ac.md`: statusを完成後独立再解答済みに更新し、旧「解説PDF作成」次工程を除去する
-- `11_three_phase_ac_practice.md`: stageを完成後独立再解答済みに更新し、旧「PowerPoint作成」次工程を除去する
-- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTXは変更しない
-- 同期後、最終QAを再実施する
+- 主source・練習sourceの進捗記録が実成果物と一致していることを確認する
+- 固定5問・10答案要素の完成後独立再解答PASSを確認する
+- 必須成果物・PDF/PPTX QA・固定範囲境界を再確認する
+- 全件PASSならTopic 11を `completed` とし、Topic 12へ進む
 
 ## 固定ルール
 
