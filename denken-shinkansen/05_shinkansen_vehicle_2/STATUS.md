@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `11 / 39`
-- current_status: `topic_12_exam_alignment_complete`
+- current_status: `topic_12_explanation_source_complete`
 - last_completed_topic: `11 300系② PWMコンバータ`
 - active_topic: `12 300系③ VVVFインバータと誘導機制御`
-- next_start: Topic 12の解説本文＋3段階例題
+- next_start: Topic 12の解説PDF＋表示QA・文字抽出QA
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -22,7 +22,7 @@
 - [x] 09 直流機方式の損失・熱設計 — PASS
 - [x] 10 300系① 誘導電動機等価回路 — PASS
 - [x] 11 300系② PWMコンバータ — PASS
-- [ ] 12 300系③ VVVFインバータと誘導機制御 — EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS
+- [ ] 12 300系③ VVVFインバータと誘導機制御 — EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS
 
 ## Topic 12 固定EXAM_ALIGNMENT
 - source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -37,6 +37,16 @@
 - 二次記述問題: `1問`
 - 公式解答との不一致: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
+
+## Topic 12 解説source
+- 解説本文: 完成
+- 3段階例題: `3 / 3 PASS`
+- 固定5過去問・13答案要素の本文マッピング: `13 / 13 PASS`
+- SPEC指定4可視化へ接続する計算条件: `4 / 4`
+- Topic 13先取り: `0件`
+- SPEC外制御方式追加: `0件`
+- Topic 11のPWMコンバータ側論点の再展開: `0件`
+- 未確認300系実車値の真値化: `0件`
 
 ## Topic 12 固定範囲
 - VVVF
@@ -73,4 +83,4 @@ SPEC指定可視化:
 - 最終QA: `PASS / completed`
 
 ## 次工程
-Topic 12「300系③ VVVFインバータと誘導機制御」の解説本文＋3段階例題を作成する。固定一次4問＋二次1問・13答案要素を本文へ全件マッピングし、固定EXAM_ALIGNMENTは変更しない。
+Topic 12「300系③ VVVFインバータと誘導機制御」の解説PDFをsourceから作成し、A4縦・表示QA・文字抽出QAを実施する。固定EXAM_ALIGNMENTは変更しない。
