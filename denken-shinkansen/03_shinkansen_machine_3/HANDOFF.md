@@ -6,9 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は品質ゲートPASSでcompleted。active topicは12「新幹線のコンピュータは何をしている？」。
 
 ## 今回進捗
-Topic 12の解説本文＋3段階例題を完成した。固定EXAM_ALIGNMENTの第三種「機械」公式過去問6問・8答案要素を本文へ `8 / 8` マッピングし、基礎・本試験標準・複合の3段階例題を `3 / 3 PASS`。仕様外追加・教材外補完・車種固有情報の推測は0件。
+Topic 12の解説PDFを完成し、GitHub正本へ反映した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、文字切れ・重なり・ページ外はみ出し・破損グリフ0件。固定EXAM_ALIGNMENTの6問・8答案要素を `8 / 8` 収録し、3段階例題 `3 / 3` を維持した。仕様外追加・教材外補完・車種固有情報の推測は0件。
 
 source: `topics/12_information_processing/12_information_processing.md`
+explanation PDF: `topics/12_information_processing/12_information_processing_explanation.pdf`
+explanation PDF QA: `topics/12_information_processing/12_information_processing_explanation_pdf_qa.md`
 
 ## Topic 12 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
@@ -50,7 +52,7 @@ source: `topics/12_information_processing/12_information_processing.md`
 
 完成後blind独立再解答に備え、固定過去問の選択肢番号はsource・STATUS・HANDOFFへ保存していない。
 
-## 解説本文の現状
+## 解説本文・PDFの現状
 固定8答案要素を次へ接続済み。
 
 - R8上 問14 → §2、§3、基礎例題
@@ -63,6 +65,11 @@ source: `topics/12_information_processing/12_information_processing.md`
 本文マッピング: `8 / 8 PASS`
 3段階例題: `3 / 3 PASS`
 解説source QA: `PASS`
+解説PDF: 完成（A4縦4ページ）
+解説PDF表示QA: `4 / 4 PASS`
+解説PDF文字抽出QA: `PASS`
+解説PDF文字切れ・重なり・ページ外はみ出し・破損グリフ: `0件`
+解説PDF固定過去問マッピング: `8 / 8`
 
 ## 非選定・重複扱い
 - R7下 機械 問14: フローチャート・プログラム実行が主題で固定範囲外。
@@ -111,4 +118,4 @@ source: `topics/12_information_processing/12_information_processing.md`
 Topic 11「空転した車輪をどう立て直す？」は最終QA `PASS / completed`。固定R4下 機械 問14、完成後独立再解答 `1 / 1 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界は全件PASS。完成数は `11 / 16`。
 
 ## 次に行う
-Topic 12の解説本文＋3段階例題をA4縦の解説PDFへ反映する。表示QA、文字抽出QA、固定EXAM_ALIGNMENT `8 / 8` の反映を確認し、Topic 13以降や固定範囲外論点は先取りしない。
+Topic 12の練習問題sourceを作成する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更せず、Topic 13以降を先取りしない。
