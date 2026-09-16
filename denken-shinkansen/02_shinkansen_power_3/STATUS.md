@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 8 / 16
-- current_status: `topic_09_powerpoint_complete`
+- current_status: `topic_09_independent_reanswer_complete`
 - last_completed_topic: `08 新幹線の変電所はなぜ数十kmおき？`
 - active_topic: `09 変電所からパンタグラフまでどう送る？`
-- next_start: Topic 09の完成後ブラインド独立再解答を実施する
+- next_start: Topic 09 main sourceのEXAM_ALIGNMENT・進捗記録へ完成後ブラインド独立再解答結果を同期する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -19,7 +19,7 @@
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
 - [x] 07 なぜ三相交流をそのまま架線へ流さない？ — completed。改定EXAM_ALIGNMENT 3問を完成教材だけで独立再解答し `3 / 3 PASS`、教材外知識補完0件。練習PDF QA・PowerPoint Slide 4・PowerPoint QAを現行3問へ同期し、最終QA PASS
 - [x] 08 新幹線の変電所はなぜ数十kmおき？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗整合を最終QAで再確認し `PASS / completed`
-- [ ] 09 変電所からパンタグラフまでどう送る？ — 制作前EXAM_ALIGNMENT完了。固定5問・7小問、独立検証 `7 / 7 PASS`。解説本文§1〜§14＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint完成。PowerPointは16:9・4枚、固定5問・7小問可視化 `7 / 7`、1601×900表示 `4 / 4 PASS`、overflow 0件、ZIP整合性PASS
+- [ ] 09 変電所からパンタグラフまでどう送る？ — 制作前EXAM_ALIGNMENT完了。固定5問・7小問、独立検証 `7 / 7 PASS`。解説本文§1〜§14＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint完成。完成教材だけでブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件
 - [ ] 10 新幹線が突然大電力を使ったら？
 - [ ] 11 架線事故ではどうやって電気を止める？
 - [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
@@ -118,6 +118,7 @@ source: `topics/09_feeding_transmission/09_feeding_transmission.md`
 練習PDF QA: `topics/09_feeding_transmission/09_feeding_transmission_practice_qa.md`
 解説画像PowerPoint: `topics/09_feeding_transmission/09_feeding_transmission_images.pptx`
 PowerPoint QA: `topics/09_feeding_transmission/09_feeding_transmission_powerpoint_qa.md`
+完成後独立再解答: `topics/09_feeding_transmission/09_feeding_transmission_independent_reanswer.md`
 
 固定5問・7小問:
 - R6下 電力 問12
@@ -156,11 +157,20 @@ PowerPoint QA: `topics/09_feeding_transmission/09_feeding_transmission_powerpoin
 - PowerPoint表示QA: 1601×900 `4 / 4 PASS`
 - PowerPoint overflow: `0件`
 - PowerPoint ZIP整合性: PASS
+- 完成後ブラインド独立再解答: `7 / 7 PASS`
+- 公式解答一致: `7 / 7 PASS`
+- 教材外知識補完: `0件`
+- Topic 10以降の論点による補完: `0件`
 - SPEC固定範囲外の採用問題・本文追加: `0件`
-- Topic 10以降の先取り: `0件`
 - 未確認実設備値への依存: `0件`
 - R8上・R7の送電関連候補で、機械的強度・コロナ・雷／開閉サージ・構成部品・誘導障害等の固定範囲外論点を要するものは品質ゲートから除外
-- 完成後ブラインド独立再解答を保全するため、制作前の選択肢番号・数値解は進捗記録へ保存しない
+
+完成後独立答案:
+- R6下 電力 問12: `(2)`
+- R6下 電力 問16(a)(b): `(3),(4)`
+- R6下 電力 問17(a)(b): `(2),(4)`
+- R5上 電力 問10: `(2)`
+- R4下 電力 問9: `(1)`
 
 ## 次
-Topic 09 `変電所からパンタグラフまでどう送る？` の完成後ブラインド独立再解答を実施する。
+Topic 09 main sourceのEXAM_ALIGNMENT・進捗記録へ、完成後ブラインド独立再解答 `7 / 7 PASS` を同期する。教材本文・固定5問・7小問・成果物・SPEC固定範囲は変更しない。
