@@ -4,7 +4,7 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完成。最終QAは `NEEDS_REVISION / IN_PROGRESS`（進捗記録整合のみFAIL）。本状態欄の旧記述は同期済みで、再判定待ち。
+制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完成。最終QAは `PASS / completed`。
 
 本テーマは `SPEC.md` 第10章どおり、次だけを扱う。
 
@@ -645,4 +645,4 @@ L形近似で励磁枝を直列枝計算から外した場合は
 
 ## 次工程
 
-Topic 10の最終QAを実施する。
+Topic 10最終QA `PASS / completed`。次はTopic 11「300系② PWMコンバータ」の制作前EXAM_ALIGNMENT。
