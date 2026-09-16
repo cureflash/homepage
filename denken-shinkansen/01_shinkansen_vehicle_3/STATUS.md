@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 33 / 38
-- current_status: `topic_34_exam_alignment_complete`
+- current_status: `topic_34_explanation_source_complete`
 - last_completed_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
 - active_topic: `34 COMTRAC② 進路をどう自動制御する？`
-- next_start: Topic 34の解説本文＋3段階例題を作成する
+- next_start: Topic 34の解説PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01〜33 — PASS
@@ -33,6 +33,23 @@ R6上 機械 問14はExOR・NORを要求するため固定範囲外として除�
 個別正答番号・完成導出結果は完成後blind再解答保護のため必須先読みsourceへ保存しない。
 
 source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
+
+## 34 解説source
+- 本文: §1〜§15
+- 3段階例題: 基礎「AND・OR・NOT」／標準「多段論理回路と時間区間」／複合「許可条件・代替条件・禁止条件」
+- 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6答案要素` 本文マッピング済み
+- AND: `Y=A·B`、OR: `Y=A+B`、NOT: `Y=NOT(A)`
+- 真理値表: 2入力基本表、`n`入力の行数 `2^n`
+- 多段論理回路: 中間信号へ分解し入力側から順に評価
+- 入力波形: 全変化時刻で区切り、区間ごとに0/1を評価して出力波形を再構成
+- 真理値表→論理式: 候補式を各行へ代入し不一致候補を除外
+- 条件判定: 必要条件=AND、代替条件=OR、禁止条件=NOTの学習モデル
+- インターロック: 両立してはならない動作を条件で拘束する一般原則として説明
+- JR東海/JTIS公開範囲でCOMTRAC/PRCの進路制御という役割へ接続
+- 具体的論理式・判定順序・実インターロック条件は学習用モデルと明記し実装事実とは断定しない
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
@@ -432,4 +449,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は固定5過去問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数33/38。
 
 ## 次テーマ工程
-Topic 34 `COMTRAC② 進路をどう自動制御する？` の制作前EXAM_ALIGNMENTは完了。次は固定5問・6答案要素を教材だけで解けるようにする解説本文＋3段階例題を作成する。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` は解説本文§1〜§15＋3段階例題まで完了。固定5問・6答案要素を本文へ `6 / 6` 接続済み。次は解説PDFを作成する。
