@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `13 / 22`
-- current_status: `topic_13_final_qa_complete`
+- current_status: `topic_14_exam_alignment_complete`
 - last_completed_topic: `13 L0系のリニア同期モータを等価回路で考える`
 - active_topic: `14 L0系を500km/hで同期させる`
-- next_start: Topic 14 制作前EXAM_ALIGNMENT
+- next_start: Topic 14 解説本文＋3段階例題
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -527,8 +527,36 @@
 - [x] 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更 `0件`
 - [x] Topic 14先取り・固定範囲外論点・未確認L0実値追加 `0件`
 
+## Topic 14 制作前EXAM_ALIGNMENT
+- [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列`SPEC.md`確認
+- [x] Topic 14固定範囲「内部起電力・端子電圧・同期リアクタンス・負荷角・力率・励磁・電力角特性・最大出力」を確認
+- [x] 系列SPEC指定式 `P = EV/X × sinδ` と、許可された無負荷飽和曲線・短絡特性・短絡比・同期インピーダンスを固定範囲として確認
+- [x] 一次1問＋二次記述4問、計5問を固定
+- [x] 固定範囲へ直接対応する27答案要素を品質ゲート対象化
+- [x] 制作前独立検証 `27 / 27 PASS`
+- [x] Topic 13で採用済みの答案要素との重複採用 `0件`
+- [x] R07二次問1・H29一次問1はTopic 13で明示的に除外したTopic 14該当部分だけを引継ぎ
+- [x] 固定範囲外補完 `0件`
+- [x] Topic 15以降依存 `0件`
+- [x] 未確認L0実値の真値化 `0件`
+
+### 固定過去問
+- H29 一次 機械 問1: (3),(4) — 2答案要素
+- R07 二次 機械・制御 問1: (1)の(b),(c)、(2)〜(5) — 7答案要素
+- R06 二次 機械・制御 問1: (1)a〜c、(2)a〜c — 8答案要素
+- R05 二次 機械・制御 問1: (3),(4)a,b,(5)a,b — 8答案要素
+- H27 二次 機械・制御 問1: (1)a,b — 2答案要素
+
+### 制作前独立検証
+- H29 一次 機械 問1: `2 / 2 PASS`
+- R07 二次 機械・制御 問1: `7 / 7 PASS`
+- R06 二次 機械・制御 問1: `8 / 8 PASS`
+- R05 二次 機械・制御 問1: `8 / 8 PASS`
+- H27 二次 機械・制御 問1: `2 / 2 PASS`
+- 合計: `27 / 27 PASS`
+
 ## 今回進めた内容
-Topic 13の最終QAを再実施。前回FAILだった進捗記録3箇所の同期を確認し、必須成果物、固定一次4問＋二次1問・22答案要素、独立再解答 `22 / 22 PASS`、練習問題・PDF/PPTX QA、固定範囲境界が引き続きPASSであることを確認した。
+Topic 14の制作前EXAM_ALIGNMENTを実施。既存枠のTopic 13最終QA完了成果をreconcileし、Topic 13で明示的に除外したR07二次問1・H29一次問1のTopic 14該当部分だけを非重複で引き継いだ。一次1問＋二次4問、計5問・27答案要素を固定し、制作前独立検証 `27 / 27 PASS`。固定範囲外補完、Topic 15以降依存、未確認L0実値依存はいずれも0件。
 
 ## 判定
-Topic 13は `PASS / completed`。完成数は `13 / 22`。次はTopic 14「L0系を500km/hで同期させる」の制作前EXAM_ALIGNMENT。
+Topic 14は `exam_alignment_complete / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の解説本文＋3段階例題。
