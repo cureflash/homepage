@@ -6,25 +6,24 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は完成済み。
 
 ## 今回進捗
-Topic 10 `新幹線が突然大電力を使ったら？` の完成後ブラインド独立再解答を完了した。
+Topic 10 `新幹線が突然大電力を使ったら？` のmain sourceへ、完成後ブラインド独立再解答結果を同期した。
 
-成果物:
-- `topics/10_load_variation/10_load_variation_independent_reanswer.md`
+変更対象:
+- `topics/10_load_variation/10_load_variation.md`
+- `STATUS.md`
+- `HANDOFF.md`
 
-品質ゲート:
-- 固定5問・8小問: `8 / 8 PASS`
+同期内容:
+- 完成後ブラインド独立再解答: `8 / 8 PASS`
 - 公式解答一致: `8 / 8 PASS`
 - 教材外知識補完: `0件`
 - Topic 11以降の論点による補完: `0件`
 - SPEC固定範囲外追加: `0件`
 - 未確認実設備値の使用: `0件`
+- main sourceのEXAM_ALIGNMENTへ独立答案・品質ゲート結果を反映
+- main source冒頭状態・末尾次工程を実成果物へ同期
 
-独立答案:
-- R8上 電力 問12: `(3)`
-- R7上 電力 問17 (a)(b): `(4),(4)`
-- R4上 電力 問17 (a)(b): `(4),(2)`
-- R3 法規 問13 (a)(b): `(2),(4)`
-- R1 電力 問17 (a)(b): `(4),(1)`
+教材本文、固定5問・8小問、数式、例題、PDF/PPTX、SPEC固定範囲は変更していない。
 
 ## Topic 10 固定過去問
 - R8上 電力 問12
@@ -51,7 +50,7 @@ SPECから追加しない。
 Topic 09 `変電所からパンタグラフまでどう送る？` は `PASS / completed`。固定5問・7小問の完成後ブラインド独立再解答 `7 / 7 PASS`、最終QA PASS。
 
 ## 現在状態
-- `current_status`: `topic_10_independent_reanswer_complete`
+- `current_status`: `topic_10_source_reanswer_synced`
 - 完成数: `9 / 16`
 - last completed: Topic 09 `変電所からパンタグラフまでどう送る？`
 - active: Topic 10 `新幹線が突然大電力を使ったら？`
@@ -65,4 +64,4 @@ Topic 09 `変電所からパンタグラフまでどう送る？` は `PASS / co
 - 完成後独立再解答: `topics/10_load_variation/10_load_variation_independent_reanswer.md`
 
 ## 次の正確な開始点
-Topic 10 main sourceのEXAM_ALIGNMENT・進捗記録へ、この完成後ブラインド独立再解答 `8 / 8 PASS` を同期する。教材本文・固定5問・8小問・成果物・SPEC固定範囲は変更しない。
+Topic 10最終QAを実施する。必須成果物、EXAM_ALIGNMENT、固定5問・8小問の独立再解答 `8 / 8 PASS`、解説PDF／練習PDF／PowerPoint QA、進捗記録整合、SPEC固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
