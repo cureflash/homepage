@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 9 / 12
-- current_status: `topic_10_independent_reanswer_complete`
+- current_status: `topic_10_final_qa_needs_revision`
 - last_completed_topic: `09 微積分で電気を読む`
 - active_topic: `10 指数関数・一階微分方程式入門`
-- next_start: `Topic 10 最終QA`
+- next_start: `Topic 10 source進捗記録3箇所を実成果物へ同期`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -109,25 +109,31 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答前のブラインドゲート整備
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5 PASS`
-- [ ] 最終QA
+- [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 主source・練習sourceの旧進捗記録3箇所を実成果物へ同期
+- [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-Topic 10「指数関数・一階微分方程式入門」の完成後独立再解答を実施し、GitHub正本へ記録した。
+Topic 10「指数関数・一階微分方程式入門」の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。
 
-- 記録: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_independent_reanswer.md`
-- ブラインドゲートに従い、公式問題文だけから先に独立解答を確定
-- 確定解: R8上 `(4)` / R7下 `(4)` / R6下 `(4)` / R5下 `(5)` / R2 `(2)`
-- 独立解答確定後に公式解答へ照合し `5 / 5 PASS`
-- 教材外知識補完0件
+- 記録: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_final_qa.md`
+- 必須成果物5点: 実在PASS
+- 固定5問の完成後独立再解答: `5 / 5 PASS`
+- 練習数値・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- 解説PDF / 練習PDF / PowerPoint表示QA: PASS
 - 固定EXAM_ALIGNMENT変更0件
-- 教材本文・練習問題・PDF/PPTX変更0件
-- RLC二次過渡・ラプラス変換・伝達関数・PID追加0件
-- Topic 11先取り0件
+- 教材外知識補完0件
+- 固定範囲外追加0件
 - 未確認新幹線実値追加0件
+- FAILはsource進捗記録3箇所のみ
+  - 主source冒頭 `## 状態`
+  - 主source末尾 `## 次工程`
+  - 練習source末尾 `## 次工程`
 
 ## 判定
 
-`topic_10_independent_reanswer_complete / IN_PROGRESS`。
+`topic_10_final_qa_needs_revision / IN_PROGRESS`。
 
-完成数は `9 / 12`。次工程はTopic 10の最終QA。
+完成数は `9 / 12` のまま。次工程はTopic 10のsource進捗記録3箇所を実成果物へ同期する。
