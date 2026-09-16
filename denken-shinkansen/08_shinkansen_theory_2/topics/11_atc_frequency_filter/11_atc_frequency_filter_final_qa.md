@@ -14,7 +14,7 @@
 
 ### 1. 必須成果物
 
-GitHub正本上で以下が実在する。
+GitHub正本上で以下を再確認した。
 
 - 解説source
 - 解説PDF
@@ -23,6 +23,7 @@ GitHub正本上で以下が実在する。
 - 解説画像PowerPoint
 - PowerPoint QA
 - 完成後独立再解答記録
+- 最終QA記録
 
 判定: `PASS`
 
@@ -70,24 +71,22 @@ GitHub正本上で以下が実在する。
 
 判定: `PASS`
 
-### 6. 成果物相互整合・進捗記録
+### 6. 初回blockerの解消確認
 
-技術内容、固定EXAM_ALIGNMENT、練習問題、独立再解答、PDF/PPTX QA記録は相互に整合している。
+初回最終QAで指摘した3件をGitHub正本で再確認した。
 
-ただしGitHub正本の進捗記録に旧工程が残る。
+- 主source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」へ同期済み
+- 主source末尾: 次工程「最終QA再実施」へ同期済み
+- 練習source末尾: 次工程「最終QA再実施」へ同期済み
 
-- `11_atc_frequency_filter.md` 冒頭: `stage: EXPLANATION_SOURCE_COMPLETE`、`completion: IN_PROGRESS`、次工程が「解説PDF＋表示QA」
-- 同source末尾: 次工程が「解説PDFを作成」
-- `11_atc_frequency_filter_practice.md` 末尾: 次工程が「練習PDFを作成」
+旧工程を示していた3件は解消しており、実在成果物・独立再解答済み状態と矛盾する旧進捗記録は残っていない。
 
-実在成果物・独立再解答済み状態と矛盾するため、このまま `completed` へは進めない。
-
-判定: `NEEDS_REVISION`
+判定: `PASS`
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / FINAL_QA_COMPLETE`
 
-技術内容、固定一次5問・25小問の独立再解答 `25 / 25 PASS`、二次非採用判断、必須成果物、表示QA、SPEC境界はPASS。未完了理由は主source 2箇所と練習source 1箇所の旧進捗記録のみ。
+技術内容、固定一次5問・25小問の独立再解答 `25 / 25 PASS`、二次非採用判断、必須成果物、表示QA、SPEC境界、初回blocker解消を全件PASS確認した。
 
-次工程は、上記3箇所を実在成果物・独立再解答済みの現在地へ同期する。教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+このrunでは最終QA再実施までを完了とし、Topic 11自体の `completed` 化は次工程で主source・練習source・STATUS・HANDOFFの完了状態を一括同期してから確定する。完成数はまだ `10 / 21` のままとする。
