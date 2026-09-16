@@ -7,7 +7,7 @@
 
 Topic 01〜11は最終QAまで `PASS / completed`。完成数は `11 / 39`。
 
-現在地は `topic_12_exam_alignment_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENTを完了し、本文制作前の固定過去問を一次4問＋二次1問、計5問・13答案要素に固定した。制作前独立検証は `13 / 13 PASS`。
+現在地は `topic_12_explanation_source_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENTと解説本文＋3段階例題を完了した。固定一次4問＋二次1問・13答案要素は変更せず、本文へ `13 / 13` マッピング済み。
 
 ## Topic 12 固定EXAM_ALIGNMENT
 source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -28,6 +28,18 @@ source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_i
 - 公式解答との不一致: `0件`
 - 参考教材2系統以上: `PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
+
+## Topic 12 解説source完成確認
+- 解説本文: 完成
+- 3段階例題: `3 / 3 PASS`
+- 固定5過去問・13答案要素の本文マッピング: `13 / 13 PASS`
+- SPEC指定4可視化へ接続する計算条件: `4 / 4`
+- Topic 13先取り: `0件`
+- SPEC外制御方式追加: `0件`
+- Topic 11のPWMコンバータ側高調波・力率制御・直流中間電圧制御の再展開: `0件`
+- 未確認300系実車値の真値化: `0件`
+
+教材用可視化条件は実車値と誤認しないよう仮定値として固定した。4極、`f_b=50 Hz`、`V_max=400 V`、`n_b=1440 rpm`、`T_b=900 N·m` を用い、周波数―同期速度、周波数―電圧、回転速度―トルク、回転速度―出力へ直接接続できる。
 
 ## Topic 12 固定範囲
 - VVVF
@@ -61,4 +73,4 @@ SPEC指定可視化:
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。完成後独立再解答 `27 / 27 PASS`、最終判定 `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 12の解説本文＋3段階例題を作成する。固定5過去問・13答案要素を本文へ `13 / 13` マッピングし、周波数―同期速度、周波数―電圧、回転速度―トルク、回転速度―出力の4可視化へ接続できる計算条件を置く。固定EXAM_ALIGNMENTは変更しない。
+Topic 12の解説PDFをsourceから作成する。A4縦で固定5過去問・13答案要素、3段階例題、SPEC指定4可視化への接続を維持し、表示QA・文字抽出QAを実施する。固定EXAM_ALIGNMENTは変更しない。
