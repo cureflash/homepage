@@ -6,19 +6,21 @@
 
 Topic 01〜11は `PASS / completed`。完成数は `11 / 21`。
 
-current_status: `topic_12_explanation_pdf_complete`
+current_status: `topic_12_practice_pdf_complete`
 
 active_topic: `12 三相交流を新幹線へ渡す`
 
-Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QAまで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。制作前独立計算 `5 / 5 PASS`。固定5小問の要求事項を解説本文・例題へ `5 / 5` 接続済み。二次採用0問・二次数合わせ0件を維持している。
+Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QAまで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。制作前独立計算 `5 / 5 PASS`。固定5小問の要求事項を解説本文・例題・練習問題へ `5 / 5` 接続済み。二次採用0問・二次数合わせ0件を維持している。
 
-次工程はTopic 12の練習問題source＋練習PDF。固定EXAM_ALIGNMENTと固定範囲を維持して通常の電験二種一次「理論」問題を作成し、PDF表示・文字抽出QAまで行う。
+次工程はTopic 12の解説画像PowerPoint＋表示QA。固定EXAM_ALIGNMENTと固定範囲を維持して可視化し、overflow・PPTX整合性も確認する。
 
 ## Topic 12 成果物
 
 - source: `topics/12_three_phase_ac/12_three_phase_ac.md`
 - 解説PDF: `topics/12_three_phase_ac/12_three_phase_ac_explanation.pdf`
-- stage: `EXPLANATION_PDF_COMPLETE`
+- 練習source: `topics/12_three_phase_ac/12_three_phase_ac_practice.md`
+- 練習PDF: `topics/12_three_phase_ac/12_three_phase_ac_practice.pdf`
+- stage: `PRACTICE_PDF_COMPLETE`
 - completion: `IN_PROGRESS`
 
 ## Topic 12 固定範囲
@@ -128,6 +130,26 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
+## Topic 12 練習問題・PDF QA
+
+- 練習source: `topics/12_three_phase_ac/12_three_phase_ac_practice.md`
+- 練習PDF: `topics/12_three_phase_ac/12_three_phase_ac_practice.pdf`
+- 一次試験型12問・全問五肢択一
+- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3
+- 数値・ベクトル独立再計算: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- 固定H23一次「理論」問6要求への接続: `5 / 5小問`
+- PDF: A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 13以降の先取り: `0件`
+- 未確認の新幹線変電設備値・内部結線追加: `0件`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
 ## 参考資料
 
 参照日: 2026-09-16
@@ -163,4 +185,4 @@ Topic 11「ATCはなぜ特定の周波数を見分けられる？」は `PASS / 
 
 ## 次に行うこと
 
-Topic 12の練習問題sourceを作成し、練習PDFまで完成させて表示・文字抽出QAを実施する。
+Topic 12の解説画像PowerPointを作成し、表示QA・overflow・PPTX整合性まで確認する。
