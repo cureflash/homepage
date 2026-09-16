@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 10 / 12
-- current_status: `topic_10_completed`
+- current_status: `topic_11_exam_alignment_complete`
 - last_completed_topic: `10 指数関数・一階微分方程式入門`
 - active_topic: `11 グラフ・特性曲線を読む`
-- next_start: `Topic 11制作前EXAM_ALIGNMENT`
+- next_start: `Topic 11制作前独立解答・公式解答照合`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -113,21 +113,39 @@
 - [x] 主source・練習sourceの旧進捗記録3箇所を実成果物へ同期
 - [x] 最終QA再判定 `PASS / completed`
 
+## Topic 11 進捗
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 令和8年度上期から遡って公式過去問を調査
+- [x] Topic 11固定範囲へ直接接続する公式過去問5問を固定
+- [x] 件数合わせの伝達関数・ボード線図等の仕様外論点を除外
+- [x] 参考教材を複数系統確認（e-sysnet含む）
+- [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
+- [ ] 制作前独立解答・公式解答照合
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF（解答・完全解説付き）
+- [ ] 解説画像PowerPoint
+- [ ] 完成教材だけでの公式過去問独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 10「指数関数・一階微分方程式入門」の最終QAを再判定し、`PASS / completed` とした。
+Topic 11「グラフ・特性曲線を読む」の制作前EXAM_ALIGNMENTを完了した。
 
-- 必須成果物5点の実在: PASS
-- 固定EXAM_ALIGNMENT 5問: PASS
-- 制作前独立検証: `5 / 5 PASS`
-- 完成後独立再解答: `5 / 5 PASS`
-- 練習QA: `12 / 12 PASS`
-- PDF/PPTX表示QA: PASS
-- 初回FAILだったsource進捗記録3箇所の解消: PASS
-- 教材外補完0件、固定範囲外追加0件、未確認新幹線実値追加0件
+- 固定品質ゲート: 公式過去問5問
+- R7下 機械 問1: 直流分巻電動機の速度・トルク特性図
+- R6下 理論 問13: トランジスタ静特性＋直流負荷線
+- R6下 理論 問9: RC回路の周波数変更時の電流変化
+- R5上 機械 問7: 電動機・負荷のトルク対速度曲線と安定動作点
+- R5上 機械 問9: 変圧器の最大効率条件
+- 参考教材はe-sysnet・電験三種まとめました等を確認
+- 伝達関数・ボード線図・PID等の仕様外追加0件
+- 制作前独立解答は次工程へ分離
 
 ## 判定
 
-`topic_10_completed / PASS`。
+`topic_11_exam_alignment_complete / IN_PROGRESS`。
 
-完成数は `10 / 12`。次工程はTopic 11「グラフ・特性曲線を読む」の制作前EXAM_ALIGNMENT。
+完成数は `10 / 12`。次工程は固定5問の制作前独立解答・公式解答照合。
