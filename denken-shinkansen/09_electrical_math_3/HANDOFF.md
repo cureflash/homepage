@@ -6,17 +6,17 @@
 
 Topic 01〜08は `completed`。
 
-Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDFまで完了。
+Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題sourceまで完了。
 
 完成数: `8 / 12`
 
-current_status: `topic_09_explanation_pdf_complete`
+current_status: `topic_09_practice_source_complete`
 
 last_completed_topic: `08 積分 速度曲線の面積は距離`
 
 active_topic: `09 微積分で電気を読む`
 
-next_start: `Topic 09 練習問題source`
+next_start: `Topic 09 練習PDF`
 
 ## Topic 09 固定仕様範囲
 
@@ -99,6 +99,23 @@ next_start: `Topic 09 練習問題source`
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`。
 
+## Topic 09 練習問題source
+
+成果物: `topics/09_calculus_electricity/09_calculus_electricity_practice.md`
+
+- 全12問・全問五肢択一
+- 難易度: 基礎3 / 標準7 / 複合2
+- 完全解説付き
+- 正答一意性 `12 / 12 PASS`
+- 数値再計算・論理確認 `12 / 12 PASS`
+- 固定5過去問への接続 `5 / 5`
+- 固定5式への接続 `5 / 5`
+- R7上法規問13/H29法規問13に必要な電力―時間グラフ・区分積分、R6下理論問3/R3理論問4に必要なファラデー・レンツ、R7上電力問1に必要な仕事・エネルギーの単位関係を固定範囲内で練習化
+- 新幹線問題の数値は積分練習用の仮定値と明記
+- 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
+
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`。
+
 ## 次に行うこと
 
-Topic 09の練習問題sourceを作成する。固定EXAM_ALIGNMENTとTopic 09の固定5式は変更しない。三種練習問題の原則12問以上、本試験型五肢択一を少なくとも半数、完全解説という上位仕様を守る。
+Topic 09の練習PDFを、`09_calculus_electricity_practice.md` を正本として作成する。問題数・正答・固定EXAM_ALIGNMENT・固定5式は変更しない。表示QA・文字抽出QA・数値整合を確認する。
