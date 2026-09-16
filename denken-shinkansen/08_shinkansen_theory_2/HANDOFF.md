@@ -6,17 +6,17 @@
 
 Topic 01〜13は `PASS / completed`。完成数は `13 / 21`。
 
-current_status: `topic_14_exam_alignment_complete`
+current_status: `topic_14_explanation_source_complete`
 
 active_topic: `14 インバータのギザギザ波形を分解する`
 
-Topic 14は制作前EXAM_ALIGNMENTまで完了。一次・二次を含む関連候補8件を確認し、品質ゲートを一次2問・3答案要素＋二次1問・2答案要素へ固定した。公式問題・公式標準解答照合および制作前独立再解答は `5 / 5 PASS`。二次採用1問・2答案要素、二次数合わせ0件。次工程は解説本文＋3段階例題。
+Topic 14は解説本文＋3段階例題まで完了。固定一次2問・3答案要素＋二次1問・2答案要素を本文・例題へ `5 / 5` 接続し、3段階例題 `3 / 3`。二次採用1問・2答案要素、二次数合わせ0件。次工程は解説PDF＋表示QA。
 
 ## Topic 14 成果物
 
 - source: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics.md`
 - completion: `in_progress`
-- stage: `EXAM_ALIGNMENT_COMPLETE`
+- stage: `EXPLANATION_SOURCE_COMPLETE`
 
 ## Topic 14 固定範囲
 
@@ -56,6 +56,26 @@ Topic 14は制作前EXAM_ALIGNMENTまで完了。一次・二次を含む関連�
 二次数合わせ: `0件`
 
 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+## Topic 14 解説本文QA
+
+- 固定3問・5答案要素の本文・例題接続: `5 / 5`
+- 3段階例題: `3 / 3`
+- フーリエ級数一般形・係数・対称性: `PASS`
+- 方形波の基本波・高調波振幅: `PASS`
+- 同一次数成分の位相差・合成・打消し: `PASS`
+- 3n次高調波の線間電圧での打消し: `PASS`
+- 非正弦波実効値の定義積分・二乗和: `PASS`
+- PWM基本波最大値→相実効値→線間実効値: `PASS`
+- FFT・周波数スペクトルの読み方: `PASS`
+- 計算プログラム・FFT結果ファイル生成: `0件`
+- 二次採用方針変更: `0件`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 15過渡現象の先取り: `0件`
+- 未確認実車PWM方式・スイッチング周波数・高調波実測値追加: `0件`
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 ## Topic 13 成果物
 
@@ -230,4 +250,4 @@ Topic 13「新幹線の交流電力を複素数で扱う」は `PASS / completed
 
 ## 次に行うこと
 
-Topic 14「インバータのギザギザ波形を分解する」の解説本文＋3段階例題。固定3問・5答案要素へ本文を接続し、SPEC固定範囲外の設備・制御固有論点を追加しない。
+Topic 14「インバータのギザギザ波形を分解する」の解説PDF＋表示QA。固定3問・5答案要素と3段階例題をPDFへ反映し、SPEC固定範囲外の設備・制御固有論点を追加しない。
