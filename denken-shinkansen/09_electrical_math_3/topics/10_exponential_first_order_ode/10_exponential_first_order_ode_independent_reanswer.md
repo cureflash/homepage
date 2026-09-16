@@ -106,4 +106,37 @@ RC放電では
 - R5下 理論 問10: `(5)`
 - R2 理論 問10: `(2)`
 
-この時点では公式解答未参照。次に公式解答へ照合する。
+この時点では公式解答未参照。
+
+## 公式解答照合
+
+独立解答確定後に、電気技術者試験センターの公式解答PDFを確認した。
+
+公式解答:
+- R8上: https://www.shiken.or.jp/chief/upload/20260830_ch_third_a01.pdf
+- R7下: https://www.shiken.or.jp/chief/upload/20260322_ch_third_a01.pdf
+- R6下: https://www.shiken.or.jp/chief/upload/2024_3_2.pdf
+- R5下: https://www.shiken.or.jp/chief/upload/20240324_ch_third_a01.pdf
+- R2: https://www.shiken.or.jp/chief/upload/20200913_ch_third_a01.pdf
+
+| 固定過去問 | 独立解答 | 公式解答 | 判定 |
+|---|---:|---:|---|
+| R8上 理論 問10 | 4 | 4 | PASS |
+| R7下 理論 問10 | 4 | 4 | PASS |
+| R6下 理論 問10 | 4 | 4 | PASS |
+| R5下 理論 問10 | 5 | 5 | PASS |
+| R2 理論 問10 | 2 | 2 | PASS |
+
+結果: `5 / 5 PASS`。
+
+教材外知識補完: 0件。
+固定範囲外追加: 0件。
+RLC二次過渡・ラプラス変換・伝達関数・PID追加: 0件。
+Topic 11先取り: 0件。
+固定EXAM_ALIGNMENT変更: 0件。
+
+## 判定
+
+`PASS / INDEPENDENT_REANSWER_COMPLETE`。
+
+Topic 10はまだ `completed` としない。次工程は最終QA。
