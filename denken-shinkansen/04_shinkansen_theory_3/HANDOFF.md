@@ -4,27 +4,25 @@
 
 ## 現在地
 
-Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は制作前EXAM_ALIGNMENTまで完了した。
+Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は解説本文＋3段階例題まで完了した。
 
 - 完成数: `10 / 14`
 - last completed: `10 新幹線が使う電力は「W」だけではない`
 - active topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- current status: `topic_11_exam_alignment_complete / IN_PROGRESS`
-- next start: Topic 11の解説本文＋3段階例題を作成する
+- current status: `topic_11_explanation_source_complete / IN_PROGRESS`
+- next start: Topic 11の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う
 
 ## 今回進捗
 
-Topic 11の制作前EXAM_ALIGNMENTを完成した。
+Topic 11の解説本文＋3段階例題を完成した。
 
 - 固定対象: 公式理論過去問5問・10答案要素
 - 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
-- 固定範囲: 平衡三相交流、相順、Y・Δ、線間/相電圧・電流、三相電力
-- 直近問題の除外: 令和7年度の不平衡三相、令和6年度の高調波はSPEC固定範囲外
-- Topic 14の電力計測依存: 0問
-- 具体的な新幹線き電変圧器結線・未確認実設備値依存: 0問
-- 学習サイト: e-sysnet、電験王、電験三種まとめましたを確認
+- 本文マッピング: `10 / 10`
+- 解説内容: 平衡三相、相順、Y・Δ、相値/線間値、三相電力、Y/Δ混在、既習の無効電力を使うΔコンデンサ補償
+- 3段階例題: 基礎Y結線、本試験標準Δ結線、複合Y R-L＋Δコンデンサ
+- 境界維持: 不平衡三相、高調波、電力計測、Y-Δインピーダンス変換、具体的き電変圧器結線、未確認実設備値の追加0件
 - source: `topics/11_three_phase_ac/11_three_phase_ac.md`
-- 完成後blind独立再解答対策: 正答番号・個別数値解答過程はsource/HANDOFFへ保存していない
 
 ## Topic 11 SPEC固定範囲
 
@@ -79,6 +77,8 @@ P = √3 VL IL cosφ
 - Topic 08〜10のRLC・力率・無効電力は既習事項としてのみ使用する
 - 新幹線側は三相系統→単相25 kV→車内三相という概念接続までとし、具体的なき電変圧器結線を推測しない
 
+上記は解説本文へ全件反映済み。
+
 ## 境界
 
 - 不平衡三相回路を品質ゲートへ追加しない
@@ -94,9 +94,9 @@ P = √3 VL IL cosφ
   - EXAM_ALIGNMENT: 完成
   - 固定過去問: 5問・10答案要素
   - 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
-  - 公式出典・参考教材・教材必須説明・境界: 記録済み
-  - status: `EXAM_ALIGNMENT_COMPLETE`
-- 解説本文＋3段階例題: 未作成
+  - 解説本文＋3段階例題: 完成
+  - 固定過去問要求の本文マッピング: `10 / 10`
+  - status: `EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF: 未作成
 - 練習source・練習PDF: 未作成
 - 解説画像PowerPoint: 未作成
@@ -105,7 +105,7 @@ P = √3 VL IL cosφ
 
 ## 次に行うこと
 
-Topic 11の解説本文＋3段階例題を作成する。固定5問・10答案要素を本文へ全件マッピングし、系列SPEC外の不平衡三相・高調波・電力計測・具体的き電変圧器結線を追加しない。
+Topic 11の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。sourceの固定5問・10答案要素、3段階例題、SPEC境界をそのまま維持する。
 
 ## 固定ルール
 
