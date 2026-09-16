@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `12 / 39`
-- current_status: `topic_13_exam_alignment_complete`
+- current_status: `topic_13_explanation_source_complete`
 - last_completed_topic: `12 300系③ VVVFインバータと誘導機制御`
 - active_topic: `13 300系④ 回生と四象限運転`
-- next_start: Topic 13 解説本文＋3段階例題
+- next_start: Topic 13 解説PDF
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -23,7 +23,7 @@
 - [x] 10 300系① 誘導電動機等価回路 — PASS
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
-- [ ] 13 300系④ 回生と四象限運転 — EXAM_ALIGNMENT_COMPLETE
+- [ ] 13 300系④ 回生と四象限運転 — EXPLANATION_SOURCE_COMPLETE
 
 ## Topic 13 固定EXAM_ALIGNMENT
 - source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
@@ -44,6 +44,20 @@
 - 回生失効・電力貯蔵設備追加: `0件`
 - SPEC外制御方式追加: `0件`
 - 未確認300系実車値追加: `0件`
+
+## Topic 13 解説source
+- 解説本文: 完成
+- 3段階例題: `3 / 3 PASS`
+- 固定5過去問・15答案要素の本文マッピング: `15 / 15 PASS`
+- 例題数値再計算: `PASS`
+- SPEC指定8項目: `8 / 8 PASS`
+- SPEC指定3可視化への計算条件: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 14先取り: `0件`
+- 回生失効・電力貯蔵設備追加: `0件`
+- H24二次の無効電流・出力可能領域追加: `0件`
+- SPEC外制御方式追加: `0件`
+- 未確認300系実車値の真値化: `0件`
 
 ## Topic 13 固定範囲
 - 四象限運転
@@ -219,4 +233,4 @@ SPEC指定可視化:
 - 最終QA: `PASS / completed`
 
 ## 次工程
-Topic 13「300系④ 回生と四象限運転」の解説本文＋3段階例題を作成する。
+Topic 13「300系④ 回生と四象限運転」の解説PDFを作成する。
