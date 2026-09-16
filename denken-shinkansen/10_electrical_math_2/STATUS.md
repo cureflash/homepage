@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 11 / 20
-- current_status: `topic_12_powerpoint_complete`
+- current_status: `topic_12_exam_reanswer_complete`
 - last_completed_topic: `11 行列・線形連立方程式`
 - active_topic: `12 固有値の基礎`
-- next_start: 完成教材だけで固定H28二次「機械・制御」問4 (1)を独立再解答し、公式標準解答と照合する
+- next_start: Topic 12の最終QAを実施し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を確認する
 
 ## Topic 07 制作品質ゲート
 
@@ -141,33 +141,34 @@
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答 `1 / 1 PASS`
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 12 `固有値の基礎` の解説画像PowerPointを完成した。
+Topic 12 `固有値の基礎` の完成後独立再解答を実施した。
 
 確認結果:
-- 16:9・5枚
-- 固定H28二次「機械・制御」問4 (1)への可視化接続: `1 / 1 PASS`
-- 固有値・固有ベクトル・特性方程式・連続時間線形系の安定性との関係を可視化
-- H28型「対象行列 → 特性多項式 → 指定固有値 → 係数比較 → 検算」を可視化
-- 全5スライド再レンダリング: `5 / 5 PASS`
-- クリッピング・重なり・文字化け: 0件
-- overflow: 0件
-- `slides_test.py`: PASS
-- PPTX ZIP/XML整合性: PASS
-- 可制御性・可観測性・状態フィードバック設計一般等の仕様外追加: 0件
+- 固定H28二次「機械・制御」問4 (1): `1 / 1 PASS`
+- 再導出: `A-bf=[[0,1],[-f1,-1-f2]]`
+- 特性多項式: `s^2+(1+f2)s+f1`
+- 指定固有値 `-3,-4` から目標多項式 `s^2+7s+12`
+- 係数比較: `f=(12,6)`
+- 代入後の特性多項式 `(s+3)(s+4)` を再確認
+- 公式標準解答との一致: PASS
+- 教材外知識補完: 0件
+- 固定範囲外追加: 0件
+- 小問(2)〜(6)の使用: 0件
+- 可制御性・可観測性・状態フィードバック設計一般等の使用: 0件
 - 第一種過去問による件数水増し: 0件
 - Topic 15周波数応答・ボード線図先取り: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 12は `topic_12_powerpoint_complete / IN_PROGRESS`。
+Topic 12は `topic_12_exam_reanswer_complete / IN_PROGRESS`。
 
 完成数は `11 / 20`。
 
-次は完成教材だけで固定H28二次「機械・制御」問4 (1)を独立再解答し、公式標準解答と照合する。
+次はTopic 12の最終QAを実施し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を確認する。
