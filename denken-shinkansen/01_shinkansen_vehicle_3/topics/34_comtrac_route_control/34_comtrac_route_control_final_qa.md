@@ -4,11 +4,11 @@
 
 ## 現在地
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / COMPLETED`
 
-固定5過去問・6答案要素の完成後blind独立再解答は `5 / 5問・6 / 6答案要素 PASS`。必須成果物、過去問対応、練習QA、PDF/PPTX表示QA、固定範囲境界はPASSした。
+固定5過去問・6答案要素の完成後blind独立再解答は `5 / 5問・6 / 6答案要素 PASS`。必須成果物、過去問対応、練習QA、PDF/PPTX表示QA、固定範囲境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
-未完了理由は進捗記録2件の不整合のみである。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind独立再解答結果には修正不要。
+前回の `NEEDS_REVISION / IN_PROGRESS` は進捗記録2件の不整合だけが理由だった。`34_comtrac_route_control.md` 冒頭の状態・次工程と `34_comtrac_route_control_powerpoint_qa.md` の次工程は実成果物と完成後blind独立再解答完了状態へ同期済みであり、前回指摘は解消している。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind独立再解答結果は変更していない。
 
 ## 対象
 
@@ -89,17 +89,17 @@ PASS。
 Topic 35の遅延・列車順序変更・番線変更・運転整理・冗長化、ExOR/NOR/NANDの独立ゲート化、カルノー図・高度なブール代数簡単化、COMTRAC内部の具体的優先順位・進路選択アルゴリズム・実インターロック条件表・更新周期・伝送速度・通信プロトコル・データ形式、ATC速度照査・ブレーキ制御の再説明は追加していない。
 
 ### 進捗記録整合
-FAIL。次の2件のみ不整合。
+PASS。
 
-1. `34_comtrac_route_control.md` 冒頭 `## 状態` が解説source完了時点のままで、`次工程: 解説PDFを作成する。` と記録されている。実際には解説PDF、練習source/PDF、PowerPoint、blind独立再解答まで完了済み。
-2. `34_comtrac_route_control_powerpoint_qa.md` の `## 次工程` が「完成後blind独立再解答の前ゲートを監査する」のまま。実際には前ゲートおよび完成後blind独立再解答まで完了済み。
-
-`STATUS.md` と `HANDOFF.md` は最終QA実施前の `topic_34_independent_reanswer_complete` と整合していた。
+- `STATUS.md`: 最終QA直前状態 `topic_34_progress_records_synced` と整合。
+- `HANDOFF.md`: 最終QA直前状態と整合。
+- `34_comtrac_route_control.md`: 冒頭 `## 状態` は解説source/PDF、練習source/PDF、PowerPoint、完成後blind独立再解答まで完了した実成果物と整合し、次工程は「最終QAを再実施」と記録。
+- `34_comtrac_route_control_powerpoint_qa.md`: 次工程は完成後blind独立再解答完了後の「最終QAを再実施」と記録。
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / COMPLETED`
 
-技術品質ゲートはすべてPASSしているが、進捗記録整合がFAILのためTopic 34をcompletedにはしない。完成数は `33 / 38` を維持する。
+必須成果物、固定5問・6答案要素の完成後blind独立再解答 `5 / 5問・6 / 6答案要素 PASS`、練習QA、表示QA、進捗記録整合、固定範囲境界をすべて満たす。Topic 34を `completed` とし、完成数を `34 / 38` へ更新する。
 
-次工程: `34_comtrac_route_control.md` 冒頭状態・次工程と `34_comtrac_route_control_powerpoint_qa.md` の次工程だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX・blind独立再解答結果は変更しない。その後、最終QAを再実施する。
+次工程: Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` の制作前EXAM_ALIGNMENT。Topic 34の技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・固定範囲は変更しない。
