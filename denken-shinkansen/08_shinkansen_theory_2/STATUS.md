@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 10 / 21
-- current_status: `topic_11_final_qa_complete`
-- last_completed_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
-- active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
-- next_start: Topic 11 完了状態の進捗記録同期
+- exam_aligned_completed_topics: 11 / 21
+- current_status: `topic_11_completed`
+- last_completed_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
+- active_topic: `12 三相交流を新幹線へ渡す`
+- next_start: Topic 12 制作前EXAM_ALIGNMENT
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -131,20 +131,21 @@
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source・練習sourceの旧進捗記録同期
 - [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
-- [ ] 主source・練習source・STATUS・HANDOFFをcompleted状態へ同期
+- [x] 主source・練習source・STATUS・HANDOFFをcompleted状態へ同期
+- [x] 最終判定: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 11「ATCはなぜ特定の周波数を見分けられる？」の最終QAを再実施した。
+Topic 11「ATCはなぜ特定の周波数を見分けられる？」を正式に `PASS / completed` へ同期した。
 
-- 必須成果物: `PASS`
-- 固定一次5問・25小問の完成後独立再解答: `25 / 25 PASS`
-- 二次採用: `0問`、二次数合わせ: `0件`
-- 解説PDF / 練習PDF / PowerPoint / 練習問題QA: `PASS`
-- SPEC固定範囲外追加・未確認ATC実設備値追加・Topic 12以降先取り: `0件`
-- 初回最終QAの進捗記録blocker 3件: 解消確認 `PASS`
+- 主source: `COMPLETED / completed` へ同期
+- 練習source: `completed`、最終QA `PASS / FINAL_QA_COMPLETE` へ同期
+- STATUS / HANDOFF: 完成数 `11 / 21`、次TopicをTopic 12へ更新
+- 固定一次5問・25小問の完成後独立再解答: `25 / 25 PASS` を維持
+- 二次採用: `0問`、二次数合わせ: `0件` を維持
 - 教材本文・固定EXAM_ALIGNMENT・練習12問・正答・PDF/PPTX: 変更なし
+- SPEC固定範囲外追加・未確認ATC実設備値追加・Topic 12先取り: `0件`
 
 ## 判定
 
-Topic 11最終QAは `PASS / FINAL_QA_COMPLETE`。このrunでは最終QA再実施までを完了し、Topic 11自体はまだ `IN_PROGRESS`。完成数は `10 / 21` のまま。次工程は主source・練習source・STATUS・HANDOFFの完了状態同期。
+Topic 11は `PASS / completed`。完成数は `11 / 21`。次はTopic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENT。
