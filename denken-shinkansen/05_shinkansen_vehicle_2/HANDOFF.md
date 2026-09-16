@@ -7,9 +7,9 @@
 
 Topic 01〜09は最終QAまで `PASS`。完成数は `9 / 39`。
 
-現在地は `topic_10_powerpoint_complete`。Topic 10 `300系① 誘導電動機等価回路` は制作前EXAM_ALIGNMENT（一次3問＋二次2問、22答案要素、制作前独立検証 `22 / 22 PASS`）、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDFまで完成。練習PDFはA4縦3ページ、一次8問＋二次4問・完全解説を収録し、180 dpi表示 `3 / 3 PASS`、文字抽出PASS、数値・論理 `12 / 12 PASS`。固定5問・22答案要素へ `22 / 22` 接続し、固定範囲外追加・Topic 11〜13先取り・未確認300系実車値追加は `0件`。 解説画像PowerPointは16:9・4スライド、SPEC指定4可視化 `4 / 4 PASS`、Visual QA `4 / 4 PASS`、overflow `0件`、PowerPoint ZIP整合性 `PASS`。固定EXAM_ALIGNMENT変更・固定範囲外追加・Topic 11〜13先取り・未確認300系実車値追加はいずれも `0件`。
+現在地は `topic_10_independent_reanswer_passed`。Topic 10 `300系① 誘導電動機等価回路` は制作前EXAM_ALIGNMENT（一次3問＋二次2問、22答案要素、制作前独立検証 `22 / 22 PASS`）、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPointまで完成。完成教材だけで固定5問・22答案要素を独立再解答し、一次 `11 / 11 PASS`、二次 `11 / 11 PASS`、合計 `22 / 22 PASS`。教材外知識補完・固定EXAM_ALIGNMENT変更・固定範囲外追加・Topic 11〜13先取り・未確認300系実車値追加はいずれも `0件`。
 
-次工程はTopic 10の完成教材だけで固定一次3問＋二次2問・22答案要素を独立再解答する。
+次工程はTopic 10の最終QAを実施する。
 
 ## Topic 01〜06
 - Topic 01〜06: 最終QA `PASS / completed`
@@ -258,9 +258,39 @@ source: `topics/10_300series_induction_motor_equivalent_circuit/10_300series_ind
 - SHA-256: `f5dfaf9d3964190bc377ae47e442f6eee630658a92da5d65e7f1140fed166b72`
 - Git blob SHA-1: `4c6bdefa78383a57074e017e6ef6eea958b50bbb`
 
-## 次の正確な開始点
-Topic 10 `300系① 誘導電動機等価回路` の解説画像PowerPoint。
+## Topic 10 解説画像PowerPoint
+- `10_300series_induction_motor_equivalent_circuit_images.pptx`: `completed`
+- 16:9・4スライド
+- SPEC指定4可視化: `4 / 4 PASS`
+- Visual QA: `4 / 4 PASS`
+- overflow: `0件 / PASS`
+- PowerPoint ZIP整合性: `PASS`
+- 固定一次3問＋二次2問・22答案要素: 維持
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- Topic 11〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
 
-1. SPEC指定4グラフ（トルク―すべり、出力―すべり、効率―負荷率、二次抵抗変更時の特性）を収録する。
-2. 表示QA・overflow・PowerPoint ZIP整合性を実施する。
-3. 固定一次3問＋二次2問・22答案要素を維持し、300系未確認実車値・Topic 11以降を追加しない。
+## Topic 10 完成後独立再解答
+- `10_300series_induction_motor_equivalent_circuit_independent_reanswer.md`: `completed`
+- R8一次 機械 問2: `5 / 5 PASS`
+- R7一次 機械 問2: `5 / 5 PASS`
+- H25一次 機械 問1(1): `1 / 1 PASS`
+- 一次合計: `11 / 11 PASS`
+- R3二次 機械・制御 問1: `6 / 6 PASS`
+- H28二次 機械・制御 問1: `5 / 5 PASS`
+- 二次合計: `11 / 11 PASS`
+- 総合: `22 / 22 PASS`
+- 教材外知識補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- Topic 11〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+- 独立再解答判定: `PASS`
+
+## 次の正確な開始点
+Topic 10 `300系① 誘導電動機等価回路` の最終QA。
+
+1. 必須成果物と固定一次3問＋二次2問・22答案要素を再確認する。
+2. 完成後独立再解答 `22 / 22 PASS`、解説PDF・練習PDF・PowerPoint QA、進捗記録整合を確認する。
+3. 固定範囲外追加・Topic 11〜13先取り・未確認300系実車値追加が `0件` であることを確認する。
