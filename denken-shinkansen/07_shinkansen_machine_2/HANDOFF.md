@@ -6,14 +6,14 @@
 - Topic 01〜13: 最終QA `PASS / completed`
 - 完成数: `13 / 22`
 - active topic: `14 L0系を500km/hで同期させる`
-- current status: `topic_14_exam_alignment_complete`
-- 次工程: Topic 14 解説本文＋3段階例題
+- current status: `topic_14_explanation_source_complete`
+- 次工程: Topic 14 解説PDF
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新mainと本系列の直近変更を確認。既存「機械二種を進行」枠はTopic 13最終QAまで完了済みだったため、Topic 13の再作業は実施していない。
-- Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いだ。
+- 最新mainを確認し、Topic 14の制作前EXAM_ALIGNMENTが既に完成していたため再作業せず、その次工程から進めた。
+- Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いでいる。
 - Topic 13で採用済み答案要素の重複採用は `0件`。
 
 ## Topic 14 固定範囲
@@ -52,14 +52,27 @@
 - R05 二次 機械・制御 問1: `8 / 8 PASS`
 - H27 二次 機械・制御 問1: `2 / 2 PASS`
 - 合計: `27 / 27 PASS`
-- 固定範囲外補完: `0件`
-- Topic 15以降依存: `0件`
-- 未確認L0実値依存: `0件`
+
+## Topic 14 解説source
+- [x] フェーザ、力率角 `θ`、負荷角 `δ` を区別
+- [x] 電機子抵抗無視の条件下で `P=VE/X_s sinδ` をフェーザから導出
+- [x] 1相・三相実単位・p.u.の係数を明示
+- [x] 励磁変化と力率・電機子電流・V曲線を説明
+- [x] `P_max=VE/X_s`、励磁低下・直列リアクタンス増加時の影響を説明
+- [x] 無負荷飽和曲線・三相短絡特性・短絡比・同期インピーダンス[p.u.]／[Ω]を説明
+- [x] L0系は同期理論への概念接続に限定し、未確認実値を使用しない
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3`
+- [x] 固定5問・27答案要素を本文へ `27 / 27` マッピング
+- [x] 例題数値再計算 PASS
+- [x] 固定範囲外補完 `0件`
+- [x] Topic 15以降依存 `0件`
+- [x] 未確認L0実値追加 `0件`
 
 ## Topic 14 現成果物
 - main source: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization.md`
 - 制作前EXAM_ALIGNMENT: 完成
-- 解説本文／PDF／練習source／練習PDF／PowerPoint／完成後独立再解答／最終QA: 未着手
+- 解説本文＋3段階例題: 完成
+- 解説PDF／練習source／練習PDF／PowerPoint／完成後独立再解答／最終QA: 未着手
 
 ## 次に行うこと
-Topic 14の解説本文＋基礎／本試験標準／複合の3段階例題を作成し、固定5問・27答案要素を本文へマッピングする。
+Topic 14の解説sourceを正本として解説PDFを作成し、固定5問・27答案要素、3段階例題、固定範囲境界を維持して表示QA・文字抽出QAを行う。
