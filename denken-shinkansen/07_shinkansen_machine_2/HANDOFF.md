@@ -9,7 +9,7 @@ Topic 01〜11は最終QAまで `PASS / completed`。
 
 active topic: `12 N700Sの6極モーターを設計側から見る`
 
-current status: `topic_12_explanation_pdf_records_synced`
+current status: `topic_12_practice_source_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -362,5 +362,18 @@ source完成内容:
 - 固定5問・16答案要素、3段階例題、固定範囲境界は変更なし。
 - `BLOCKED_BEFORE_PRACTICE_SOURCE` は解除済み。
 
+## Topic 12 練習問題source
+- `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_practice.md`: `completed`
+- 一次試験型10問: 全問五肢択一
+- 二次試験型5問: 記述・途中式／単位／検算または条件限定付き
+- 独立計算・論理再検算: `15 / 15 PASS`
+- 一次正答一意性: `10 / 10 PASS`
+- 固定5過去問・16答案要素: `16 / 16` 接続
+- 4極・6極同一回転速度比較: `f_6/f_4=1.5` 再検算PASS
+- インバータ定格／短時間過負荷: 問題文で与えた容量条件だけで判定
+- 出力密度: 教材用仮定値のみ
+- 固定範囲外追加: `0件`
+- 未確認N700S実車値追加: `0件`
+
 ## 次に行うこと
-Topic 12 `N700Sの6極モーターを設計側から見る` の練習問題sourceを作成する。一次試験型と二次記述型を含め、固定5問・16答案要素と固定範囲への接続を維持する。
+Topic 12 `N700Sの6極モーターを設計側から見る` の練習PDFを作成する。練習sourceの一次10問＋二次5問・完全解説を反映し、全ページ表示QA・文字抽出QA・数値再検算を行う。
