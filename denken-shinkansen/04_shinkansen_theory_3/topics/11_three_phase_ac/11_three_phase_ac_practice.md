@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `11`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - 更新日: 2026-09-16
 
 ## 固定範囲
@@ -300,4 +300,4 @@ Y結線R-L負荷1相の`|Z|=10 Ω`。1相の誘導性無効電力は`Vp² XL/|Z|
 
 ## 次工程
 
-練習問題source・練習PDFを完成。次はTopic 11の解説画像PowerPointを作成する。
+完成後独立再解答 `5 / 5問・10 / 10答案要素 PASS` まで完了。次はTopic 11の最終QAを再実施する。
