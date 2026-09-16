@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 10 / 20
-- current_status: `topic_11_explanation_source_complete`
+- current_status: `topic_11_explanation_pdf_complete`
 - last_completed_topic: `10 伝達関数・極・零点`
 - active_topic: `11 行列・線形連立方程式`
-- next_start: Topic 11の解説PDFを作成し、表示QA・文字抽出QAを行う
+- next_start: Topic 11の練習問題sourceを作成し、独立計算・正答一意性QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -113,7 +113,7 @@
 - [x] 二次試験の件数合わせ採用0件を確認
 - [x] Topic 12固有値・状態空間、電力潮流詳細アルゴリズム、非線形反復計算の先取り0件を確認
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
@@ -124,25 +124,15 @@
 
 ## 今回進めた内容
 
-Topic 11 `行列・線形連立方程式` の解説本文＋3段階例題を完成した。
+Topic 11 `行列・線形連立方程式` の解説PDFを完成し、GitHub正本へ反映した。
 
-本文収録:
-- 行列・列ベクトル・行列積と `A x=b` の対応
-- KVLから係数行列を作る手順
-- 共有抵抗の非対角成分 `-r` の理由
-- 閉路電流と枝電流の符号関係
-- KCLによる節点方程式
-- `I=YV` とアドミタンス行列の考え方
-- 2×2逆行列と加減法・代入法の接続
-- 複素係数 `R+jωL`、`1/R+jωC` を含む行列方程式
-- 本試験向け解法手順と頻出ミス
-
-3段階例題:
-- 基礎: 2元連立一次方程式を2×2逆行列で解く
-- 本試験標準: 共有抵抗を含む2閉路
-- 複合・ひっかけ: 複素アドミタンス行列
-
-固定一次5問・12対象設問への本文マッピング: `12 / 12`。
+解説PDF:
+- `topics/11_matrix_linear_systems/11_matrix_linear_systems_explanation.pdf`
+- A4縦5ページ
+- 200 dpi全ページ表示QA `5 / 5 PASS`
+- 文字抽出QA `PASS`
+- 固定一次5問・12対象設問の反映 `12 / 12`
+- 3段階例題反映: PASS
 
 固定境界:
 - Topic 12固有値・固有ベクトル: 追加0件
@@ -155,8 +145,8 @@ Topic 11 `行列・線形連立方程式` の解説本文＋3段階例題を完�
 
 ## 判定
 
-Topic 11は `topic_11_explanation_source_complete / IN_PROGRESS`。
+Topic 11は `topic_11_explanation_pdf_complete / IN_PROGRESS`。
 
 完成数は `10 / 20` のまま。
 
-次はTopic 11の解説PDFを作成し、表示QA・文字抽出QAを行う。
+次はTopic 11の練習問題sourceを作成し、独立計算・正答一意性QAを行う。
