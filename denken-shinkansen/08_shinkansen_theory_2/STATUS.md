@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 10 / 21
-- current_status: `topic_11_exam_alignment_complete`
+- current_status: `topic_11_explanation_source_complete`
 - last_completed_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
 - active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
-- next_start: Topic 11 解説本文＋3段階例題
+- next_start: Topic 11 解説PDF＋表示QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -123,7 +123,7 @@
 
 ## Topic 11 制作進捗
 - [x] 制作前EXAM_ALIGNMENT: 一次5問・25小問
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint
@@ -132,16 +132,18 @@
 
 ## 今回進めた内容
 
-Topic 11「ATCはなぜ特定の周波数を見分けられる？」の制作前EXAM_ALIGNMENTを完成した。
+Topic 11「ATCはなぜ特定の周波数を見分けられる？」の解説本文＋3段階例題を完成した。
 
-- 固定一次: `5問 / 25小問`
-- 二次確認: `R7〜R5`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
+- 固定一次5問・25小問への本文マッピング: `25 / 25`
+- 3段階例題: `3 / 3`
+- RCローパス／ハイパス、遮断周波数、ゲイン、位相を収録
+- 直列RLC抵抗出力の教育用バンドパスを収録
+- 交流ブリッジの実部・虚部平衡、周波数非依存RC補償を収録
+- 二次採用: `0問` のまま変更なし
 - SPEC固定範囲外追加: `0件`
 - 未確認ATC実設備値追加: `0件`
 - source: `topics/11_atc_frequency_filter/11_atc_frequency_filter.md`
 
 ## 判定
 
-Topic 11は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `10 / 21`。次工程は解説本文＋3段階例題。
+Topic 11は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `10 / 21`。次工程は解説PDF＋表示QA。
