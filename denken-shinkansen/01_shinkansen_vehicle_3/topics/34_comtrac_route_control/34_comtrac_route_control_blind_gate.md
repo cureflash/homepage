@@ -1,10 +1,10 @@
 # 34 COMTRAC② 完成後blind独立再解答 前ゲート
 
-判定: `BLIND_REANSWER_BLOCKED`
+判定: `BLIND_REANSWER_READY`
 
 ## 監査対象
 
-`EXAM_ALIGNMENT_SPEC.md` の「生成時に見た公式解答や保存済み正答を先に見ず、完成教材だけで独立再解答する」条件に従い、必須先読み対象を監査した。
+`EXAM_ALIGNMENT_SPEC.md` の「生成時に見た公式解答や保存済み正答を先に見ず、完成教材だけで独立再解答する」条件に従い、必須先読み対象を再監査した。
 
 - `denken-shinkansen/MASTER_SPEC.md`
 - `denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`
@@ -13,21 +13,24 @@
 - `01_shinkansen_vehicle_3/HANDOFF.md`
 - Topic 34の既存source / 練習source / QA記録
 
-## BLOCKED理由
+## 再監査結果
 
-必須先読み対象の `STATUS.md` に、Topic 32で採用した `R6下 機械 問14` の個別正答と完成済み導出結果が残っている。
+前回BLOCKED原因だった `STATUS.md` のTopic 32記録から、Topic 34固定問題 `R7上 機械 問14` と同一再出題に当たる `R6下 機械 問14` の個別正答番号・完成済み導出をblind保護した。
 
-Topic 34のsourceでは、`R6下 機械 問14` は固定過去問 `R7上 機械 問14` と同一内容の再出題として明示されている。したがって、現状の `STATUS.md` を読んだ後にTopic 34固定過去問を再解答すると、保存済み正答・導出を見ないというblind条件を満たさない。
+- Topic 32の固定EXAM_ALIGNMENT・PASS判定は保持
+- Topic 32の教材成果物は変更なし
+- Topic 34固定5問・6答案要素は変更なし
+- Topic 34教材本文、練習問題、解説PDF、練習PDF、PowerPointは変更なし
+- 必須先読み対象にTopic 34固定問題の保存済み個別正答・完成済み導出が残っていないことを確認
 
-## この段階で行わないこと
+以上により、完成後blind独立再解答へ進める。
 
-- 完成後blind独立再解答は実施しない。
-- 固定5問・6答案要素は変更しない。
-- 教材本文、練習問題、解説PDF、練習PDF、PowerPointは変更しない。
-- Topic 35範囲、固定範囲外ゲート、未確認COMTRAC内部仕様を追加しない。
+## 固定範囲境界
+
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
 
 ## 次工程
 
-`STATUS.md` のTopic 32記録から、Topic 34固定問題と同一再出題に当たる個別正答・完成済み導出だけをblind保護する。技術内容・固定EXAM_ALIGNMENT・過去のPASS判定は保持する。
-
-その後、必須先読み対象を再監査して `BLIND_REANSWER_READY` / `BLOCKED` を再判定する。READYになるまで独立再解答へ進まない。
+Topic 34固定5問・6答案要素を、保存済み正答を参照せず完成教材だけでblind独立再解答する。
