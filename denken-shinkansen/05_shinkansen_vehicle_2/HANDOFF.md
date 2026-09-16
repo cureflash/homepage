@@ -5,11 +5,11 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜09は最終QAまで `PASS / completed`。完成数は `9 / 39`。
+Topic 01〜10は最終QAまで `PASS / completed`。完成数は `10 / 39`。
 
-現在地は `topic_10_source_progress_synced`。Topic 10 `300系① 誘導電動機等価回路` は技術内容、固定EXAM_ALIGNMENT、必須成果物、完成後独立再解答、PDF/PPTX/練習QA、SPEC境界までPASS。前回最終QAの唯一のFAILだった主source冒頭の「最終QAは未実施」は今回の最終QA結果へ同期済みで、最終QA再判定待ち。
+現在地は `topic_10_completed`。Topic 10 `300系① 誘導電動機等価回路` は技術内容、固定EXAM_ALIGNMENT、必須成果物、完成後独立再解答、PDF/PPTX/練習QA、SPEC境界、進捗記録整合まで全件PASSし、最終QAを `PASS / completed` とした。
 
-次工程はTopic 10の最終QA再判定。技術内容・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTXには触れない。進捗記録整合がPASSならTopic 10を `completed` へ進める。
+次工程はTopic 11 `300系② PWMコンバータ` の制作前EXAM_ALIGNMENT。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` の固定範囲を守り、公式過去問を一次・二次から調査して品質ゲート対象を確定する。
 
 ## Topic 01〜06
 - Topic 01〜06: 最終QA `PASS / completed`
@@ -131,7 +131,7 @@ source: `topics/10_300series_induction_motor_equivalent_circuit/10_300series_ind
 - 独立再解答判定: `PASS`
 
 ## Topic 10 最終QA
-- `10_300series_induction_motor_equivalent_circuit_final_qa.md`: `NEEDS_REVISION / IN_PROGRESS`
+- `10_300series_induction_motor_equivalent_circuit_final_qa.md`: `PASS / completed`
 - 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問・22答案要素を維持
 - 完成後独立再解答: 一次 `11 / 11 PASS`、二次 `11 / 11 PASS`、合計 `22 / 22 PASS`
 - 必須成果物: `PASS`
@@ -142,12 +142,12 @@ source: `topics/10_300series_induction_motor_equivalent_circuit/10_300series_ind
 - Topic 11〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 - 前回最終QAの唯一のFAILだった主source冒頭の「最終QAは未実施」: `同期済み`
-- 進捗記録整合: `再判定待ち`
-- 最終判定: `NEEDS_REVISION / IN_PROGRESS`
+- 進捗記録整合: `PASS`
+- 最終判定: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 10 `300系① 誘導電動機等価回路` の最終QA再判定。
+Topic 11 `300系② PWMコンバータ` の制作前EXAM_ALIGNMENT。
 
-1. 主source冒頭の旧進捗1箇所が同期済みであることを確認する。
-2. 技術内容・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTXは変更しない。
-3. 進捗記録整合がPASSならTopic 10を `completed` へ進める。
+1. 電気技術者試験センター公式過去問を直近年度から調査し、Topic 11固定範囲へ直接対応する一次・二次を選定する。
+2. 二種品質ゲートとして一次・二次を合わせ原則5問以上、対応する二次記述問題が確認できる場合は少なくとも1問含める。
+3. 固定範囲はPWMコンバータ、直流中間回路、基本波、高調波、力率制御、直流電圧制御、スイッチング、変換損失。Topic 12以降は先取りしない。
