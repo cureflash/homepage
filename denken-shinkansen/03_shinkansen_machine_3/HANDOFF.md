@@ -3,10 +3,10 @@
 更新日: 2026-09-17
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は品質ゲートPASSでcompleted。active topicは12「新幹線のコンピュータは何をしている？」。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は品質ゲートPASSでcompleted。active topicは13「新幹線は主電動機以外もモーターだらけ？」。
 
 ## 今回進捗
-Topic 12の旧進捗記録3箇所を実成果物へ同期した。主source `## 次工程`、練習source `## 次工程`、練習PDF QA `## 次工程` を、必須成果物・完成後blind独立再解答まで完了済み、次は最終QA再判定という現在地へ更新した。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更していない。
+Topic 12「新幹線のコンピュータは何をしている？」の最終QAを再判定し、`PASS / completed` とした。固定6問・8答案要素の完成後blind独立再解答 `8 / 8 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、主source・練習source・練習PDF QAの進捗記録整合、固定範囲境界を全件PASS確認した。前回 `NEEDS_REVISION` の原因だった旧進捗3箇所は同期済み。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更していない。
 
 独立再解答記録: `topics/12_information_processing/12_information_processing_independent_reanswer.md`
 source: `topics/12_information_processing/12_information_processing.md`
@@ -33,7 +33,12 @@ PowerPoint QA: `topics/12_information_processing/12_information_processing_power
 - 旧進捗1: 主source `## 次工程` — 同期済み
 - 旧進捗2: 練習source `## 次工程` — 同期済み
 - 旧進捗3: 練習PDF QA `## 次工程` — 同期済み
-- 最終QA再判定: `未実施`
+- 最終QA再判定: `PASS`
+- 最終QA技術内容: `PASS`
+- 最終QA必須成果物: `PASS`
+- 最終QA表示QA: `PASS`
+- 最終QA進捗記録整合: `PASS`
+- 最終QA固定範囲境界: `PASS`
 - 固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、独立再解答結果の変更: `0件`
 
 ## Topic 12 固定範囲
@@ -194,8 +199,8 @@ PowerPoint QA: `topics/12_information_processing/12_information_processing_power
 
 参照日: 2026-09-17
 
-## Topic 11 完了状態
-Topic 11「空転した車輪をどう立て直す？」は最終QA `PASS / completed`。固定R4下 機械 問14、完成後独立再解答 `1 / 1 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界は全件PASS。完成数は `11 / 16`。
+## Topic 12 完了状態
+Topic 12「新幹線のコンピュータは何をしている？」は最終QA `PASS / completed`。固定6問・8答案要素、完成後blind独立再解答 `8 / 8 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界は全件PASS。完成数は `12 / 16`。
 
 ## 次に行う
-Topic 12の最終QAを再判定する。固定6問・8答案要素、必須成果物、表示QA、進捗整合、固定範囲境界を再確認し、PASSならcompletedにする。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
