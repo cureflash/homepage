@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜10は `PASS / completed`。完成数は `10 / 21`。
+Topic 01〜11は `PASS / completed`。完成数は `11 / 21`。
 
-current_status: `topic_11_final_qa_complete`
+current_status: `topic_11_completed`
 
-active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
+active_topic: `12 三相交流を新幹線へ渡す`
 
-Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA再実施まで完了。最終QAは `PASS / FINAL_QA_COMPLETE`。
+Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA、完了状態同期まで完了。最終判定は `PASS / completed`。
 
-このrunでは最終QA再実施までを進めたため、Topic 11自体はまだ `IN_PROGRESS` とし、完成数は `10 / 21` のまま。次工程は主source・練習source・STATUS・HANDOFFをcompleted状態へ同期し、Topic 11を正式に `PASS / completed` へ移すこと。
+次工程はTopic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENT。本文・成果物制作より先に、公式過去問を一次・二次とも確認し、固定範囲と直接対応する問題だけを品質ゲート対象へ固定する。
 
 ## Topic 11 成果物
 
@@ -24,8 +24,8 @@ Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、
 - PowerPoint QA: `topics/11_atc_frequency_filter/11_atc_frequency_filter_powerpoint_qa.md`
 - 独立再解答: `topics/11_atc_frequency_filter/11_atc_frequency_filter_reanswer.md`
 - 最終QA: `topics/11_atc_frequency_filter/11_atc_frequency_filter_final_qa.md`
-- stage: `FINAL_QA_COMPLETE`
-- completion: `IN_PROGRESS`
+- stage: `COMPLETED`
+- completion: `completed`
 
 ## Topic 11 固定範囲
 
@@ -73,9 +73,9 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 
 二次採用 `0問`、二次数合わせ `0件`。
 
-## 品質ゲート現在値
+## Topic 11 品質ゲート最終値
 
-- 解説source: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説source: `PASS / completed`
 - 解説PDF: A4縦2ページ、表示QA `2 / 2 PASS`、文字抽出QA `PASS`
 - 練習source: 12問、正答一意性・独立計算 `12 / 12 PASS`
 - 練習PDF: A4縦3ページ、表示QA `3 / 3 PASS`、文字抽出QA `PASS`
@@ -87,21 +87,18 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 - SPEC固定範囲外追加: `0件`
 - 未確認ATC実設備値・実回路追加: `0件`
 - Topic 12以降の先取り: `0件`
+- 最終QA: `PASS / FINAL_QA_COMPLETE`
+- 最終判定: `PASS / completed`
 
-## 最終QA
+## Topic 12 固定範囲
 
-初回最終QAは `NEEDS_REVISION / IN_PROGRESS`。技術内容ではなく、主source 2箇所・練習source 1箇所の旧進捗記録だけがblockerだった。
+系列SPECで定義されている範囲は次のとおり。
 
-旧進捗3件は同期済みで、再実施した最終QAでは以下を全件PASS確認した。
+- 三相回路
+- YΔ
+- 三相電力
 
-- 必須成果物: `PASS`
-- 固定一次5問・25小問の独立再解答: `25 / 25 PASS`
-- 二次非採用判断: `PASS`
-- SPEC境界: `PASS`
-- 解説PDF / 練習PDF / PowerPoint / 練習問題QA: `PASS`
-- 初回blocker 3件の解消: `PASS`
-
-判定: `PASS / FINAL_QA_COMPLETE`
+制作前EXAM_ALIGNMENTで公式過去問を確認する前に、これを超える論点を追加しない。
 
 ## 参考資料
 
@@ -110,7 +107,7 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 公式正本:
 - 電気技術者試験センター「第二種電気主任技術者試験の問題と解答」 https://www.shiken.or.jp/chief/second/qa/
 
-説明粒度・解法確認:
+Topic 11説明粒度・解法確認:
 - e-sysnet「RLC並列共振回路」 https://e-sysnet.com/parallel-resonant-circuit/
 - 電験王2 H28理論問8 https://denken-ou.com/c2/rironh28-8/
 - 電験王2 H27理論問2 https://denken-ou.com/c2/rironh27-2/
@@ -120,14 +117,14 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 
 ## 直前完了Topic
 
-Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は `PASS / completed`。
+Topic 11「ATCはなぜ特定の周波数を見分けられる？」は `PASS / completed`。
 
-- 固定一次5問・20小問
-- 完成後独立再解答 `20 / 20 PASS`
+- 固定一次5問・25小問
+- 完成後独立再解答 `25 / 25 PASS`
 - 二次採用0問・二次数合わせ0件
 - 解説source/PDF、練習source/PDF、PowerPoint、表示QA、最終QAまで完了
-- 固定範囲外追加0件、未確認実設備値追加0件
+- 固定範囲外追加0件、未確認ATC実設備値追加0件
 
 ## 次に行うこと
 
-Topic 11の主source・練習source・STATUS・HANDOFFをcompleted状態へ同期し、完成数を `11 / 21` へ更新する。教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` に従い、公式過去問を一次・二次とも確認し、固定範囲との直接対応性で採否を決める。
