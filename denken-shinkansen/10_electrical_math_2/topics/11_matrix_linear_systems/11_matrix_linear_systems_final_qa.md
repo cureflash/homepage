@@ -2,13 +2,13 @@
 
 対象: `11 行列・線形連立方程式`
 
-実施日: 2026-09-16
+再判定日: 2026-09-16
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC範囲境界はPASS。未完了理由はsource進捗記録3箇所が実成果物と不整合なためである。
+前回 `NEEDS_REVISION` の原因だったsource進捗記録3箇所は実成果物へ同期済み。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、表示QA、SPEC範囲境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物の実在確認
 
@@ -81,19 +81,14 @@ GitHub正本上で次を確認した。
 - 二次公式過去問の件数合わせ追加: 0件
 - 未確認実車値依存: 0件
 
-## source進捗整合QA
+## 前回FAILの再確認
 
-実成果物は練習PDF、PowerPoint、完成後独立再解答まで完成しているが、次の3箇所が旧状態のままである。
+前回FAILだったsource進捗記録3箇所は解消済み。
 
-1. `11_matrix_linear_systems.md` 冒頭 `## 状態`
-   - 「練習問題sourceまで完成」
-   - 「練習PDF・PowerPointは未制作」
-2. `11_matrix_linear_systems.md` 末尾 `## 次工程`
-   - 練習PDF作成が次工程のまま
-3. `11_matrix_linear_systems_practice.md` 末尾 `## 次工程`
-   - 練習PDF作成が次工程のまま
-
-技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答そのものに修正要求はない。
+- `11_matrix_linear_systems.md` 冒頭 `## 状態`: 解説PDF、練習source/PDF、PowerPoint、完成後独立再解答、初回最終QAまで完了した現在地へ同期済み
+- `11_matrix_linear_systems.md` 末尾 `## 次工程`: source進捗同期後の最終QA再判定へ同期済み
+- `11_matrix_linear_systems_practice.md` 末尾 `## 次工程`: 練習PDF完成後の最終QA再判定へ同期済み
+- 教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF・PowerPoint・完成後独立再解答の技術内容は変更していない
 
 ## 最終判定
 
@@ -102,10 +97,16 @@ GitHub正本上で次を確認した。
 - 完成後独立再解答 `12 / 12`: PASS
 - 練習問題独立計算・正答一意性 `12 / 12`: PASS
 - 教材外知識補完0件: PASS
-- 固定範囲外追加0件: PASS
+- Topic 12固有値・固有ベクトル先取り0件: PASS
+- 状態空間追加0件: PASS
+- 電力潮流詳細アルゴリズム追加0件: PASS
+- Newton-Raphson法・非線形反復計算追加0件: PASS
+- 行列式・余因子展開の独立論点化0件: PASS
+- 二次公式過去問の件数合わせ追加0件: PASS
+- 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- source進捗記録と実成果物の整合: FAIL
+- source進捗記録と実成果物の整合: PASS
 
-総合判定: `NEEDS_REVISION / IN_PROGRESS`。
+総合判定: `PASS / completed`。
 
-次工程は上記source進捗記録3箇所だけを実成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・完成後独立再解答は変更しない。
+Topic 11を完了とし、次はTopic 12 `固有値の基礎` の制作前EXAM_ALIGNMENTへ進む。
