@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 10 / 21
-- current_status: `topic_11_independent_reanswer_complete`
+- current_status: `topic_11_final_qa_needs_revision`
 - last_completed_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
 - active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
-- next_start: Topic 11 最終QA
+- next_start: Topic 11 主source・練習sourceの旧進捗記録同期
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -128,26 +128,25 @@
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint＋表示QA
 - [x] 完成後独立再解答: `25 / 25 PASS`
-- [ ] 最終QA
+- [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 主source・練習sourceの旧進捗記録同期
+- [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-Topic 11「ATCはなぜ特定の周波数を見分けられる？」の完成後独立再解答を実施した。
+Topic 11「ATCはなぜ特定の周波数を見分けられる？」の最終QAを実施した。
 
-- 記録: `topics/11_atc_frequency_filter/11_atc_frequency_filter_reanswer.md`
-- 固定一次5問・25小問を完成教材の範囲だけで式から再導出
-- H28問8: `ハ, ヲ, ヨ, ニ, ヌ`
-- H27問2: `ホ, チ, ワ, ヨ, ニ`
-- H25問3: `ハ, ル, イ, ロ, ニ`
-- H24問7: `ニ, ヨ, ヌ, イ, ヲ`
-- H22問4: `ハ, ヨ, チ, ワ, ヘ`
-- 固定済み公式解答との照合: `25 / 25 PASS`
-- 教材外知識補完: `0件`
+- 必須成果物: PASS
+- 固定一次5問・25小問の完成後独立再解答: `25 / 25 PASS`
 - 二次採用: `0問`、二次数合わせ: `0件`
-- SPEC固定範囲外追加: `0件`
-- 未確認ATC実設備値・実回路追加: `0件`
-- Topic 12以降の先取り: `0件`
+- SPEC固定範囲・未確認ATC実設備値・Topic 12以降の境界: PASS
+- 解説PDF QA: `2 / 2 PASS`
+- 練習PDF QA: `3 / 3 PASS`
+- 練習12問: `12 / 12 PASS`
+- PowerPoint QA: `5 / 5 PASS`
+- 主source冒頭・末尾と練習source末尾に旧工程の進捗記録が残存
+- 最終判定: `NEEDS_REVISION / IN_PROGRESS`
 
 ## 判定
 
-Topic 11は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `10 / 21`。次工程は最終QA。
+Topic 11は `NEEDS_REVISION / IN_PROGRESS`。技術内容と過去問対応品質ゲートはPASS。未完了理由は主source 2箇所・練習source 1箇所の旧進捗記録のみ。完成数は `10 / 21`。次工程は当該3箇所の進捗記録同期。
