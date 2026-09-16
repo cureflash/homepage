@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 34 / 38
-- current_status: `topic_35_practice_pdf_complete`
+- current_status: `topic_35_powerpoint_complete`
 - last_completed_topic: `34 COMTRAC② 進路をどう自動制御する？`
 - active_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
-- next_start: Topic 35の解説画像PowerPoint。固定5過去問の要求事項を16:9で可視化し、表示QA・overflow検査・PPTX ZIP整合性・固定EXAM_ALIGNMENT `5 / 5` 接続を確認する
+- next_start: Topic 35の完成後blind独立再解答。固定5過去問を保存済み正答・完成済み最終導出を見ずに、完成教材だけで再解答する。全問の選択肢・根拠を確定してから公式解答と照合し、教材外知識補完0件を確認する。固定5問・教材成果物・EXAM_ALIGNMENTは変更しない
 
 ## 新品質ゲート進捗
 - [x] 01〜34 — PASS
@@ -92,6 +92,22 @@ source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_managemen
 - 未確認COMTRAC内部仕様追加: `0件`
 - 機能分散と冗長化の混同: `0件`
 - QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice_pdf_qa.md`
+
+## 35 PowerPoint QA
+- `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_images.pptx`
+- 画面比率: `16:9`
+- スライド数: `3`
+- 固定EXAM_ALIGNMENT: `5 / 5問` 可視化
+- 180 dpi全スライド表示QA: `3 / 3 PASS`
+- overflow検査: `0件 / PASS`
+- PPTX ZIP整合性: PASS
+- 外部引用画像: `0件`
+- 固定範囲外追加: `0件`
+- Topic 36以降先取り: `0件`
+- Topic 34論理回路の再体系化: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+- 機能分散と冗長化の混同: `0件`
+- QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_images_qa.md`
 
 ## 34 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6答案要素。系列SPEC固定範囲は、進路制御、条件判定、AND、OR、NOT、真理値表、インターロック、論理回路。
