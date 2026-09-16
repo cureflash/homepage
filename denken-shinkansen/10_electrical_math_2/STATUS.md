@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 10 / 20
-- current_status: `topic_11_source_progress_synced`
-- last_completed_topic: `10 伝達関数・極・零点`
-- active_topic: `11 行列・線形連立方程式`
-- next_start: Topic 11の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する
+- exam_aligned_completed_topics: 11 / 20
+- current_status: `topic_11_completed`
+- last_completed_topic: `11 行列・線形連立方程式`
+- active_topic: `12 固有値の基礎`
+- next_start: Topic 12の制作前EXAM_ALIGNMENTを実施し、公式過去問・要求知識・固定範囲を確定する
 
 ## Topic 07 制作品質ゲート
 
@@ -120,33 +120,34 @@
 - [x] 完成後独立再解答 `12 / 12 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
 - [x] source進捗記録3箇所の同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 11 `行列・線形連立方程式` の最終QAで残ったsource進捗記録3箇所だけを実成果物へ同期した。
+Topic 11 `行列・線形連立方程式` の最終QAを再判定し、`PASS / completed` とした。
 
-同期箇所:
-- `11_matrix_linear_systems.md` 冒頭 `## 状態`
-- `11_matrix_linear_systems.md` 末尾 `## 次工程`
-- `11_matrix_linear_systems_practice.md` 末尾 `## 次工程`
-
-同期後の実態:
-- 固定一次「理論」5問・12対象設問: 変更なし
-- 完成後独立再解答: `12 / 12 PASS` を維持
-- 練習問題独立計算・正答一意性: `12 / 12 PASS` を維持
+再確認結果:
+- 必須成果物実在: PASS
+- 固定一次「理論」5問・12対象設問: PASS
+- 完成後独立再解答: `12 / 12 PASS`
+- 練習問題独立計算・正答一意性: `12 / 12 PASS`
 - 解説PDF表示QA: `5 / 5 PASS`
 - 練習PDF表示QA: `3 / 3 PASS`
 - PowerPoint表示QA: `5 / 5 PASS`
+- source進捗整合: PASS
+- Topic 12固有値・固有ベクトル先取り: 0件
+- 状態空間追加: 0件
+- 電力潮流詳細アルゴリズム追加: 0件
+- Newton-Raphson法・非線形反復計算追加: 0件
+- 行列式・余因子展開の独立論点化: 0件
+- 二次公式過去問の件数合わせ追加: 0件
 - 固定範囲外追加・教材外補完・未確認実車値依存: 0件
-
-技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更していない。
 
 ## 判定
 
-Topic 11は `topic_11_source_progress_synced / IN_PROGRESS`。
+Topic 11は `PASS / completed`。
 
-完成数は `10 / 20` のまま。
+完成数は `11 / 20`。
 
-次はTopic 11の最終QAを再判定する。
+次はTopic 12 `固有値の基礎` の制作前EXAM_ALIGNMENTを実施する。
