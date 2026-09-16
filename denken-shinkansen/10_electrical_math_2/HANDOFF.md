@@ -28,7 +28,7 @@ active_topic: `13 フーリエ級数`
 
 ## Topic 07 完了記録
 
-テーマ: `一階常微分分方程式`
+テーマ: `一階常微分方程式`
 
 source:
 `topics/07_first_order_ode/07_first_order_ode.md`
