@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 34 / 38
-- current_status: `topic_35_preproduction_exam_alignment_complete`
+- current_status: `topic_35_explanation_source_complete`
 - last_completed_topic: `34 COMTRAC② 進路をどう自動制御する？`
 - active_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
-- next_start: Topic 35の解説source。固定EXAM_ALIGNMENT 5問を変更せず、本文＋3段階例題を作成し、5問すべての要求知識を本文へマッピングする
+- next_start: Topic 35の解説PDF。固定EXAM_ALIGNMENT 5問と完成済み本文§1〜§15＋3段階例題を変更せず、A4縦PDFへ反映して表示QA・文字抽出QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01〜34 — PASS
@@ -31,6 +31,24 @@
 新幹線側はJR東海・JR東海情報システム公開資料で確認できるCOMTRACの運転管理、運転計画変更、遅延波及防止、第2総合指令所までを根拠とし、具体的な列車優先順位、番線変更判定式、運転整理ルール、自動化範囲、内部切替方式は断定しない。2018年JR東海資料の「複数計算機への機能分散」は故障影響範囲を小さくする構成変更として扱い、冗長化と同義にしない。
 
 source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management.md`
+
+## 35 解説source
+- 本文: §1〜§15
+- 3段階例題: 基礎「代入と条件分岐」／標準「変数更新と反復」／複合「標本化・量子化・条件判断」
+- 固定EXAM_ALIGNMENT: `5 / 5問` 本文マッピング済み
+- フローチャート: 処理→更新→判定→分岐を順に追跡
+- 変数更新・反復: 更新前/更新後を分離し、反復ごとに現在値を保持
+- シーケンス制御: 定めた手順・条件に従う制御として、フィードバック制御との区別を明示
+- PLC: 入力を読み、記憶プログラムに従い論理・順序処理して出力する一般説明まで
+- 情報伝送: 伝送路、雑音、多重化、搬送波、変調波、圧縮
+- A-D変換: 標本化→量子化→符号化、`f_s>=2f_max`、`T_s=1/f_s`、`L=2^n`
+- 例題再計算: `3 / 3 PASS`
+- COMTRAC接続: 運転管理・運転計画変更・遅延波及防止・第2総合指令所の公開事実まで
+- 具体的列車優先順位・番線変更判定式・運転整理ルール・内部切替方式追加: `0件`
+- 機能分散と冗長化の混同: `0件`
+- Topic 36以降先取り: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+- 個別正答番号・完成済み最終導出の保存: `0件`
 
 ## 34 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6答案要素。系列SPEC固定範囲は、進路制御、条件判定、AND、OR、NOT、真理値表、インターロック、論理回路。
@@ -555,4 +573,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 34 `COMTRAC② 進路をどう自動制御する？` は固定5問・6答案要素の完成後blind独立再解答 `5 / 5問・6 / 6答案要素 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数34/38。
 
 ## 次テーマ工程
-Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` の解説source。固定EXAM_ALIGNMENT 5問を変更せず、本文＋3段階例題を作成し、5問すべての要求知識を本文へマッピングする。新幹線側は公開一次資料の確認範囲に限定し、未確認COMTRAC内部仕様を追加しない。
+Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` の解説PDF。固定EXAM_ALIGNMENT 5問と完成済み本文§1〜§15＋3段階例題を変更せず、A4縦PDFへ反映し、全ページ表示QA・文字抽出QAを行う。新幹線側は公開一次資料の確認範囲に限定し、未確認COMTRAC内部仕様を追加しない。
