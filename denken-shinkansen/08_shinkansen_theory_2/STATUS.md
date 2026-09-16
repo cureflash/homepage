@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 11 / 21
-- current_status: `topic_11_completed`
+- current_status: `topic_12_exam_alignment_complete`
 - last_completed_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 - active_topic: `12 三相交流を新幹線へ渡す`
-- next_start: Topic 12 制作前EXAM_ALIGNMENT
+- next_start: Topic 12 解説本文＋3段階例題
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -134,18 +134,42 @@
 - [x] 主source・練習source・STATUS・HANDOFFをcompleted状態へ同期
 - [x] 最終判定: `PASS / completed`
 
+## Topic 12 固定EXAM_ALIGNMENT
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] 固定範囲: Y結線、Δ結線、相電圧、線間電圧、相電流、線電流、三相電力、平衡三相回路、ベクトル図
+- [x] 一次・二次を含む関連候補9件以上を調査
+- [x] H23 一次 理論 問6(1)〜(5)を品質ゲートへ固定
+- [x] 公式問題・公式解答照合 `5 / 5`
+- [x] 制作前独立計算 `5 / 5 PASS`
+- [x] H23一次機械問3、H29一次電力問6、H30一次電力問7、H26二次電力・管理問4は固定範囲外体系を要するため非採用
+- [x] R8二次は2026-09-16時点で未実施、R7〜R5二次を確認
+- [x] R7〜R5二次に固定範囲だけで完結する直接対応問題なし
+- [x] 二次採用0問・二次数合わせ0件
+- [x] 新幹線変電所の内部結線・未確認実設備値追加0件
+- [x] Topic 13以降の先取り0件
+
+## Topic 12 制作進捗
+- [x] 制作前EXAM_ALIGNMENT: 一次1問・5小問、関連候補9件以上調査
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF＋表示QA
+- [ ] 練習問題source＋練習PDF
+- [ ] 解説画像PowerPoint＋表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 11「ATCはなぜ特定の周波数を見分けられる？」を正式に `PASS / completed` へ同期した。
+Topic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENTを完了した。
 
-- 主source: `COMPLETED / completed` へ同期
-- 練習source: `completed`、最終QA `PASS / FINAL_QA_COMPLETE` へ同期
-- STATUS / HANDOFF: 完成数 `11 / 21`、次TopicをTopic 12へ更新
-- 固定一次5問・25小問の完成後独立再解答: `25 / 25 PASS` を維持
-- 二次採用: `0問`、二次数合わせ: `0件` を維持
-- 教材本文・固定EXAM_ALIGNMENT・練習12問・正答・PDF/PPTX: 変更なし
-- SPEC固定範囲外追加・未確認ATC実設備値追加・Topic 12先取り: `0件`
+- 固定公式過去問: H23一次「理論」問6 (1)〜(5)
+- 制作前独立計算: `5 / 5 PASS`
+- 一次・二次を含む関連候補: `9件以上` 調査
+- R7〜R5二次: 固定範囲の直接対応問題なし
+- 二次採用: `0問`、二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認の新幹線変電設備値・内部結線追加: `0件`
+- source: `topics/12_three_phase_ac/12_three_phase_ac.md`
 
 ## 判定
 
-Topic 11は `PASS / completed`。完成数は `11 / 21`。次はTopic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENT。
+Topic 12は `PASS / EXAM_ALIGNMENT_COMPLETE`。完成数は `11 / 21` のまま。次はTopic 12の解説本文＋3段階例題。
