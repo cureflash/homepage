@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 10 / 20
-- current_status: `topic_11_final_qa_needs_revision`
+- current_status: `topic_11_source_progress_synced`
 - last_completed_topic: `10 伝達関数・極・零点`
 - active_topic: `11 行列・線形連立方程式`
-- next_start: Topic 11のsource進捗記録3箇所だけを実成果物へ同期し、技術本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・完成後独立再解答は変更しない
+- next_start: Topic 11の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する
 
 ## Topic 07 制作品質ゲート
 
@@ -119,36 +119,34 @@
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 `12 / 12 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
-- [ ] source進捗記録3箇所の同期
+- [x] source進捗記録3箇所の同期
 - [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 11 `行列・線形連立方程式` の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。
+Topic 11 `行列・線形連立方程式` の最終QAで残ったsource進捗記録3箇所だけを実成果物へ同期した。
 
-最終QA:
-- `topics/11_matrix_linear_systems/11_matrix_linear_systems_final_qa.md`
-- 必須成果物実在: PASS
-- 固定一次「理論」5問・12対象設問: PASS
-- 完成後独立再解答: `12 / 12 PASS`
-- 練習問題独立計算・正答一意性: `12 / 12 PASS`
+同期箇所:
+- `11_matrix_linear_systems.md` 冒頭 `## 状態`
+- `11_matrix_linear_systems.md` 末尾 `## 次工程`
+- `11_matrix_linear_systems_practice.md` 末尾 `## 次工程`
+
+同期後の実態:
+- 固定一次「理論」5問・12対象設問: 変更なし
+- 完成後独立再解答: `12 / 12 PASS` を維持
+- 練習問題独立計算・正答一意性: `12 / 12 PASS` を維持
 - 解説PDF表示QA: `5 / 5 PASS`
 - 練習PDF表示QA: `3 / 3 PASS`
 - PowerPoint表示QA: `5 / 5 PASS`
 - 固定範囲外追加・教材外補完・未確認実車値依存: 0件
 
-未完了理由:
-- `11_matrix_linear_systems.md` 冒頭 `## 状態` が「練習問題sourceまで完成」「練習PDF・PowerPointは未制作」の旧状態
-- `11_matrix_linear_systems.md` 末尾 `## 次工程` が練習PDF作成のまま
-- `11_matrix_linear_systems_practice.md` 末尾 `## 次工程` が練習PDF作成のまま
-
-技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答に修正要求はない。
+技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更していない。
 
 ## 判定
 
-Topic 11は `topic_11_final_qa_needs_revision / IN_PROGRESS`。
+Topic 11は `topic_11_source_progress_synced / IN_PROGRESS`。
 
 完成数は `10 / 20` のまま。
 
-次はsource進捗記録3箇所だけを実成果物へ同期する。
+次はTopic 11の最終QAを再判定する。
