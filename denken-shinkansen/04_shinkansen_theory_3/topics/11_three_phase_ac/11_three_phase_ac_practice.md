@@ -4,8 +4,8 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `11`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
-- 更新日: 2026-09-16
+- stage: `COMPLETED`
+- 更新日: 2026-09-17
 
 ## 固定範囲
 
@@ -300,4 +300,4 @@ Y結線R-L負荷1相の`|Z|=10 Ω`。1相の誘導性無効電力は`Vp² XL/|Z|
 
 ## 次工程
 
-完成後独立再解答 `5 / 5問・10 / 10答案要素 PASS` まで完了。次はTopic 11の最終QAを再実施する。
+最終QAを再実施し `PASS / completed`。固定5問・10答案要素の完成後独立再解答 `5 / 5問・10 / 10答案要素 PASS`、必須成果物・表示QA・SPEC境界・進捗記録整合性を全件PASS確認済み。次はTopic 12「300系はなぜVVVFになった？」の制作前EXAM_ALIGNMENTへ進む。
