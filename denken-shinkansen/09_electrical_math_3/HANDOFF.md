@@ -8,13 +8,13 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 12`
 
-current_status: `topic_11_exam_alignment_complete`
+current_status: `topic_11_preproduction_independent_answer_complete`
 
 last_completed_topic: `10 指数関数・一階微分方程式入門`
 
 active_topic: `11 グラフ・特性曲線を読む`
 
-next_start: `Topic 11制作前独立解答・公式解答照合`
+next_start: `Topic 11解説本文＋3段階例題`
 
 ## Topic 11 固定仕様範囲
 
@@ -74,10 +74,22 @@ next_start: `Topic 11制作前独立解答・公式解答照合`
 - H28 機械 問10の太陽電池I-V/P-V特性: 太陽光発電システム固有知識を品質ゲートへ追加しない
 - R2 機械 問7: R5上 機械 問7と同型の再出題のため重複計上しない
 
-制作前独立解答・公式解答照合はまだ実施していない。公式正答は独立解答確定前にsourceへ保存しない。
+## Topic 11 制作前独立解答
 
-判定: `topic_11_exam_alignment_complete / IN_PROGRESS`。
+公式解答を参照する前に固定5問を独立に解答し、その後に公式解答と照合した。
+
+- R7下 機械 問1: `(5)` → 公式 `(5)` PASS
+- R6下 理論 問13: `(2) 0.9 MΩ` → 公式 `(2)` PASS
+- R6下 理論 問9: `(3) 21.2 A` → 公式 `(3)` PASS
+- R5上 機械 問7: `(4)` → 公式 `(4)` PASS
+- R5上 機械 問9: `(4) 98.0 %` → 公式 `(4)` PASS
+
+結果: `5 / 5 PASS`。
+
+固定EXAM_ALIGNMENT変更0件。固定範囲外補完0件。
+
+判定: `topic_11_preproduction_independent_answer_complete / IN_PROGRESS`。
 
 ## 次工程
 
-固定5問について、公式解答を先に見ずに制作前独立解答を確定し、その後に電気技術者試験センター公式解答と照合する。固定EXAM_ALIGNMENTは変更しない。
+固定15項目と固定5問から逆算し、Topic 11固定範囲内で解説本文＋3段階例題を作成する。
