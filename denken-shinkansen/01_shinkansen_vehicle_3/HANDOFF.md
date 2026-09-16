@@ -6,23 +6,17 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は33/38。01〜33がPASS。active topicは34 `COMTRAC② 進路をどう自動制御する？`。
 
 ## 今回進捗
-Topic 34 `COMTRAC② 進路をどう自動制御する？` の解説画像PowerPointを完成した。
+Topic 34の完成後blind独立再解答前ゲートを監査し、`BLIND_REANSWER_BLOCKED` と判定した。
 
-- PowerPoint: `topics/34_comtrac_route_control/34_comtrac_route_control_images.pptx`
-- QA記録: `topics/34_comtrac_route_control/34_comtrac_route_control_powerpoint_qa.md`
-- 画面比率: `16:9`
-- スライド数: `4`
-- 固定5過去問・6答案要素を `6 / 6` 可視化
-- 180 dpi全4枚表示QA: `4 / 4 PASS`
-- slide geometry / overflow検査: PASS（スライド外shape `0件`）
-- PPTX ZIP整合性: PASS
-- 外部引用画像: `0件`（図は教材用に新規作成）
+- ゲート記録: `topics/34_comtrac_route_control/34_comtrac_route_control_blind_gate.md`
+- 必須先読み対象の `STATUS.md` に、Topic 32で採用した `R6下 機械 問14` の個別正答・完成済み導出が残存
+- Topic 34 sourceでは `R6下 機械 問14` を固定問題 `R7上 機械 問14` と同一内容の再出題として明示
+- このため、現状のままでは「保存済み正答を先に見ずに再解答する」条件を満たさない
+- 完成後blind独立再解答は未実施
+- 固定5問・6答案要素、教材本文、練習問題、PDF、PowerPointは変更なし
 - Topic 35範囲追加: `0件`
-- ExOR/NOR/NAND等の固定範囲外ゲート追加: `0件`
-- カルノー図等の高度な論理簡単化追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
-
-教材本文・固定EXAM_ALIGNMENT・制作前独立解答結果・練習問題は変更していない。
 
 ## Topic 34 固定EXAM_ALIGNMENT
 - R7上 機械 問14 — AND・OR・NOT、論理回路、出力波形
@@ -37,7 +31,7 @@ Topic 34 `COMTRAC② 進路をどう自動制御する？` の解説画像PowerP
 Topic 35範囲追加: `0件`。
 未確認COMTRAC内部仕様追加: `0件`。
 
-完成後blind独立再解答を守るため、個別正答番号・完成済み最終導出式は必須先読みsourceへ保存していない。固定5問は以後変更しない。
+完成後blind独立再解答を守るため、個別正答番号・完成済み最終導出式はTopic 34の必須先読みsourceへ保存していない。固定5問は以後変更しない。
 
 ## Topic 34 解説source
 - source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
@@ -96,6 +90,14 @@ Topic 35範囲追加: `0件`。
 - 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
 
+## Topic 34 完成後blind独立再解答 前ゲート
+`BLIND_REANSWER_BLOCKED`。
+- `EXAM_ALIGNMENT_SPEC.md` のblind条件に照らして必須先読み対象を監査
+- `STATUS.md` のTopic 32記録に、Topic 34固定問題と同一再出題の個別正答・完成済み導出が残存
+- 現状ではblind条件を満たさないため独立再解答は実施しない
+- 技術内容・固定EXAM_ALIGNMENT・教材成果物は変更なし
+- 記録: `topics/34_comtrac_route_control/34_comtrac_route_control_blind_gate.md`
+
 ## Topic 34 系列SPEC固定範囲
 - 進路制御
 - 条件判定
@@ -128,11 +130,11 @@ Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は `PASS
 - 最終QA記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_final_qa.md`
 
 ## 現在の状態
-- `current_status`: `topic_34_powerpoint_complete`
+- `current_status`: `topic_34_blind_reanswer_blocked`
 - 完成数: 33/38
 - 01〜33: PASS
 - last completed: 33 `COMTRAC① 東海道新幹線全体をどう監視する？`
 - active topic: 34 `COMTRAC② 進路をどう自動制御する？`
 
 ## 次の正確な開始点
-Topic 34の完成後blind独立再解答前ゲートを監査する。必須先読み対象に固定5問の個別正答番号・完成済み導出結果が残っていないことを確認し、`READY` / `BLOCKED` を記録する。独立再解答そのものへ先行しない。
+`STATUS.md` のTopic 32記録から、Topic 34固定問題と同一再出題に当たる個別正答・完成済み導出だけをblind保護する。固定EXAM_ALIGNMENT・過去のPASS判定・教材成果物は変更しない。その後、必須先読み対象を再監査して `BLIND_REANSWER_READY` / `BLOCKED` を再判定する。READYになるまで独立再解答へ進まない。
