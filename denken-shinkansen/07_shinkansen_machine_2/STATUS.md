@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `12 / 22`
-- current_status: `topic_13_final_qa_needs_revision`
+- current_status: `topic_13_progress_records_synced`
 - last_completed_topic: `12 N700Sの6極モーターを設計側から見る`
 - active_topic: `13 L0系のリニア同期モータを等価回路で考える`
-- next_start: Topic 13 main source / 練習sourceの進捗記録同期
+- next_start: Topic 13 最終QA再実施
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -520,8 +520,14 @@
 - [ ] 進捗記録整合: FAIL
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 13 進捗記録同期
+- [x] main sourceの `## 状態` と末尾 `# 次工程` を実成果物へ同期
+- [x] 練習source末尾 `# 次工程` を実成果物へ同期
+- [x] 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更 `0件`
+- [x] Topic 14先取り・固定範囲外論点・未確認L0実値追加 `0件`
+
 ## 今回進めた内容
-Topic 13の最終QAを実施。固定一次4問＋二次1問・22答案要素の独立再解答、必須成果物、練習QA、PDF/PPTX表示QA、固定範囲境界はPASS。main sourceの `## 状態` / 末尾 `# 次工程` と練習source末尾 `# 次工程` が実成果物より古いため、進捗記録整合だけFAILとした。
+Topic 13の旧進捗記録3箇所を実成果物へ同期。main sourceの `## 状態` / 末尾 `# 次工程` と練習source末尾 `# 次工程` だけを更新し、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・独立再解答結果は変更していない。
 
 ## 判定
-Topic 13は `topic_13_final_qa_needs_revision / IN_PROGRESS`。完成数は `12 / 22` のまま。次はmain sourceと練習sourceの進捗記録だけを実成果物へ同期し、その後最終QAを再実施する。
+Topic 13は `topic_13_progress_records_synced / IN_PROGRESS`。完成数は `12 / 22` のまま。次はTopic 13最終QAを再実施する。
