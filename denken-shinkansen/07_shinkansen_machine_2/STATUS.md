@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `13 / 22`
-- current_status: `topic_14_exam_alignment_complete`
+- current_status: `topic_14_explanation_source_complete`
 - last_completed_topic: `13 L0系のリニア同期モータを等価回路で考える`
 - active_topic: `14 L0系を500km/hで同期させる`
-- next_start: Topic 14 解説本文＋3段階例題
+- next_start: Topic 14 解説PDF
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -555,8 +555,23 @@
 - H27 二次 機械・制御 問1: `2 / 2 PASS`
 - 合計: `27 / 27 PASS`
 
+## Topic 14 解説source
+- [x] `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization.md`
+- [x] §1 試験論点と解法連鎖
+- [x] §2 発電機／電動機フェーザ、力率角 `θ` と負荷角 `δ`
+- [x] §3 `P=VE/X_s sinδ` をフェーザから導出し、1相・三相・p.u.を区別
+- [x] §4 励磁・力率・電機子電流・V曲線
+- [x] §5 `P_max=VE/X_s`、励磁低下・直列リアクタンス増加時の影響
+- [x] §6 無負荷飽和曲線・三相短絡特性・短絡比・同期インピーダンス[p.u.]／[Ω]
+- [x] §7 L0系はJR東海一次資料で確認した同期推進の概念接続に限定
+- [x] §8 再利用可能な解法手順
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3`
+- [x] 固定5問・27答案要素を本文へ `27 / 27` マッピング
+- [x] 主要数値再計算 PASS
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+
 ## 今回進めた内容
-Topic 14の制作前EXAM_ALIGNMENTを実施。既存枠のTopic 13最終QA完了成果をreconcileし、Topic 13で明示的に除外したR07二次問1・H29一次問1のTopic 14該当部分だけを非重複で引き継いだ。一次1問＋二次4問、計5問・27答案要素を固定し、制作前独立検証 `27 / 27 PASS`。固定範囲外補完、Topic 15以降依存、未確認L0実値依存はいずれも0件。
+Topic 14を1段階進め、解説本文＋3段階例題を完成。電力角式、励磁・力率、最大出力、無負荷／短絡試験と同期インピーダンスを固定範囲内で説明し、一次1問＋二次4問・27答案要素を本文へ `27 / 27` 接続した。例題は教材上の仮定値だけを使い、未確認L0実値は追加していない。
 
 ## 判定
-Topic 14は `exam_alignment_complete / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の解説本文＋3段階例題。
+Topic 14は `explanation_source_complete / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の解説PDF。
