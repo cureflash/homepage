@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜12は `PASS / completed`。完成数は `12 / 21`。
+Topic 01〜13は `PASS / completed`。完成数は `13 / 21`。
 
-current_status: `topic_13_final_qa_complete`
+current_status: `topic_13_completed`
 
-active_topic: `13 新幹線の交流電力を複素数で扱う`
+active_topic: `14 インバータのギザギザ波形を分解する`
 
-Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAで唯一FAILだった主source2箇所＋練習source1箇所の旧進捗記録を同期し、最終QA再実施で `PASS / FINAL_QA_COMPLETE` を確認した。
+Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、旧進捗記録同期、最終QA再実施、completed状態同期まで完了。固定一次3問・15小問＋二次1問・4答案要素は完成後独立再解答 `19 / 19 PASS`、二次採用1問・4答案要素、二次数合わせ0件。最終QAは `PASS / FINAL_QA_COMPLETE`、最終判定は `PASS / completed`。
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。完成数はまだ `12 / 21` のまま。
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程はTopic 14「インバータのギザギザ波形を分解する」の制作前EXAM_ALIGNMENT。
 
 ## Topic 13 成果物
 
@@ -26,7 +26,7 @@ Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題sou
 - PowerPoint QA: `topics/13_complex_power/13_complex_power_powerpoint_qa.md`
 - 完成後独立再解答: `topics/13_complex_power/13_complex_power_reanswer.md`
 - 最終QA: `topics/13_complex_power/13_complex_power_final_qa.md`
-- completion: `in_progress`
+- completion: `completed`
 
 ## Topic 13 固定範囲
 
@@ -161,18 +161,30 @@ Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題sou
 
 判定: `PASS / FINAL_QA_COMPLETE`
 
-Topic 13自体の `completed` 化はまだ行わない。次工程で主source・練習source・STATUS・HANDOFFをcompleted状態へ一括同期してから確定する。
+## Topic 13 completed状態同期
+
+最終QA PASS後、主source・練習source・STATUS・HANDOFFを完了状態へ同期した。
+
+- 主source: `COMPLETED / completed`
+- 練習source: `COMPLETED / completed`
+- STATUS・HANDOFF: 完成数 `13 / 21`、次Topicを14へ同期
+- 固定一次3問・15小問＋二次1問・4答案要素の完成後独立再解答: `19 / 19 PASS`
+- 二次採用: `1問・4答案要素`、二次数合わせ: `0件`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
+- SPEC固定範囲外追加: `0件`
+
+最終判定: `PASS / completed`
 
 ## 直前完了Topic
 
-Topic 12「三相交流を新幹線へ渡す」は `PASS / completed`。
+Topic 13「新幹線の交流電力を複素数で扱う」は `PASS / completed`。
 
-- 固定H23一次「理論」問6・5小問
-- 完成後独立再解答 `5 / 5 PASS`
-- 二次採用0問・二次数合わせ0件
+- 固定一次3問・15小問＋二次1問・4答案要素
+- 完成後独立再解答 `19 / 19 PASS`
+- 二次採用1問・4答案要素、二次数合わせ0件
 - 解説source/PDF、練習source/PDF、PowerPoint、表示QA、最終QAまで完了
-- 固定範囲外追加0件、未確認新幹線変電設備値追加0件
+- 固定範囲外追加0件、未確認新幹線主回路・変電設備値追加0件
 
 ## 次に行うこと
 
-Topic 13の主source・練習source・STATUS・HANDOFFを `completed` 状態へ一括同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 14「インバータのギザギザ波形を分解する」の制作前EXAM_ALIGNMENT。一次・二次を含む公式過去問を固定範囲内で調査し、件数合わせで範囲外論点を採用しない。
