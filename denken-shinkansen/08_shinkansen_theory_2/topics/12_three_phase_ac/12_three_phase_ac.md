@@ -4,9 +4,9 @@
 
 ## 状態
 
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `POWERPOINT_COMPLETE`
 - completion: `in_progress`
-- 次工程: 解説画像PowerPoint＋表示QA
+- 次工程: 完成後独立再解答
 
 ## 1. SPEC固定範囲
 
@@ -477,6 +477,17 @@ a線では、定義した枝電流方向から
 
 ## 9. 今回の到達点
 
-Topic 12の練習問題source＋練習PDFまで完成した。固定H23一次「理論」問6の5小問要求を本文・例題・練習問題へ全件接続し、練習問題12問は独立再計算・正答一意性 `12 / 12 PASS`、練習PDFはA4縦4ページ・200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`。固定範囲外の不平衡三相、対称座標法、単位法、変圧器機器設計、複素電力、高調波、過渡現象は追加していない。
+Topic 12の解説画像PowerPoint＋表示QAまで完成した。
 
-次工程は、解説画像PowerPointを作成し、表示QA・overflow・PPTX整合性を確認する。
+- PowerPoint: `12_three_phase_ac_images.pptx`
+- 16:9 / 5枚
+- 全スライド表示QA: `5 / 5 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- 固定H23一次「理論」問6の5小問要求を可視化: `5 / 5`
+- 二次採用: `0問`、二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認の新幹線変電設備値・内部結線追加: `0件`
+- Topic 13以降の先取り: `0件`
+
+次工程は、保存済み正答を見ずに固定H23一次「理論」問6 (1)〜(5)を教材内容だけで完成後独立再解答する。

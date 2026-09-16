@@ -6,13 +6,13 @@
 
 Topic 01〜11は `PASS / completed`。完成数は `11 / 21`。
 
-current_status: `topic_12_practice_pdf_complete`
+current_status: `topic_12_powerpoint_complete`
 
 active_topic: `12 三相交流を新幹線へ渡す`
 
-Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QAまで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。制作前独立計算 `5 / 5 PASS`。固定5小問の要求事項を解説本文・例題・練習問題へ `5 / 5` 接続済み。二次採用0問・二次数合わせ0件を維持している。
+Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QAまで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。制作前独立計算 `5 / 5 PASS`。固定5小問の要求事項を教材・練習・PowerPointへ `5 / 5` 接続済み。二次採用0問・二次数合わせ0件を維持している。
 
-次工程はTopic 12の解説画像PowerPoint＋表示QA。固定EXAM_ALIGNMENTと固定範囲を維持して可視化し、overflow・PPTX整合性も確認する。
+次工程はTopic 12の完成後独立再解答。保存済み正答を見ず、固定H23一次「理論」問6 (1)〜(5)を完成教材だけで再導出する。
 
 ## Topic 12 成果物
 
@@ -20,7 +20,9 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 解説PDF: `topics/12_three_phase_ac/12_three_phase_ac_explanation.pdf`
 - 練習source: `topics/12_three_phase_ac/12_three_phase_ac_practice.md`
 - 練習PDF: `topics/12_three_phase_ac/12_three_phase_ac_practice.pdf`
-- stage: `PRACTICE_PDF_COMPLETE`
+- PowerPoint: `topics/12_three_phase_ac/12_three_phase_ac_images.pptx`
+- PowerPoint QA: `topics/12_three_phase_ac/12_three_phase_ac_powerpoint_qa.md`
+- stage: `POWERPOINT_COMPLETE`
 - completion: `IN_PROGRESS`
 
 ## Topic 12 固定範囲
@@ -150,6 +152,22 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
+## Topic 12 PowerPoint QA
+
+- PowerPoint: `topics/12_three_phase_ac/12_three_phase_ac_images.pptx`
+- 16:9 / 5枚
+- 全スライド表示QA: `5 / 5 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- 固定H23一次「理論」問6の5小問要求を可視化: `5 / 5`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認の新幹線変電設備値・内部結線追加: `0件`
+- Topic 13以降の先取り: `0件`
+
+判定: `PASS / POWERPOINT_COMPLETE`
+
 ## 参考資料
 
 参照日: 2026-09-16
@@ -185,4 +203,4 @@ Topic 11「ATCはなぜ特定の周波数を見分けられる？」は `PASS / 
 
 ## 次に行うこと
 
-Topic 12の解説画像PowerPointを作成し、表示QA・overflow・PPTX整合性まで確認する。
+保存済み正答を見ず、固定H23一次「理論」問6 (1)〜(5)を完成教材だけで独立再解答する。教材外知識で不足を補わず、5小問すべて一致した場合のみ次の最終QAへ進む。

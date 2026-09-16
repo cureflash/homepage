@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 11 / 21
-- current_status: `topic_12_practice_pdf_complete`
+- current_status: `topic_12_powerpoint_complete`
 - last_completed_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 - active_topic: `12 三相交流を新幹線へ渡す`
-- next_start: Topic 12 解説画像PowerPoint＋表示QA
+- next_start: Topic 12 完成後独立再解答
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -153,24 +153,21 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
-- [ ] 解説画像PowerPoint＋表示QA
+- [x] 解説画像PowerPoint＋表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 12「三相交流を新幹線へ渡す」の練習問題source＋練習PDFを完成し、GitHub正本へ反映した。
+Topic 12「三相交流を新幹線へ渡す」の解説画像PowerPoint＋表示QAを完成し、GitHub正本へ反映した。
 
-- source: `topics/12_three_phase_ac/12_three_phase_ac_practice.md`
-- PDF: `topics/12_three_phase_ac/12_three_phase_ac_practice.pdf`
-- 一次試験型12問・全問五肢択一
-- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3
-- 数値・ベクトル独立再計算: `12 / 12 PASS`
-- 正答一意性: `12 / 12 PASS`
-- 固定H23一次「理論」問6の5小問要求への接続: `5 / 5`
-- PDF: A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
+- PowerPoint: `topics/12_three_phase_ac/12_three_phase_ac_images.pptx`
+- PowerPoint QA: `topics/12_three_phase_ac/12_three_phase_ac_powerpoint_qa.md`
+- 16:9 / 5枚
+- 全スライド表示QA: `5 / 5 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- 固定H23一次「理論」問6の5小問要求を可視化: `5 / 5`
 - 二次採用: `0問`、二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 - 未確認の新幹線変電設備値・内部結線追加: `0件`
@@ -178,4 +175,4 @@ Topic 12「三相交流を新幹線へ渡す」の練習問題source＋練習PDF
 
 ## 判定
 
-Topic 12は `PRACTICE_PDF_COMPLETE / IN_PROGRESS`。完成数は `11 / 21` のまま。次工程は解説画像PowerPoint＋表示QA。
+Topic 12は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `11 / 21` のまま。次工程は完成後独立再解答。
