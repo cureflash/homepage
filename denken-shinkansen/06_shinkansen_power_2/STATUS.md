@@ -4,32 +4,36 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `09`
 theme: ATき電はなぜ長距離へ電気を送れる？
-current_status: `topic_09_independent_reanswer_complete`
+current_status: `topic_09_final_qa_needs_revision`
 completed_topics: `8 / 22`
 
 ## Topic 09 current result
 
-電圧降下率定義の根本修正と解説PDF再生成後、修正後の完成教材だけを使って固定EXAM_ALIGNMENTのblind独立再解答を再実施した。
+最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS`。
 
-独立再解答:
-- R7一次「電力」問7: `5 / 5空欄 PASS`
-- H25一次「電力」問7: `5 / 5空欄 PASS`
-- H26二次「電力・管理」問4: `4 / 4答案要素 PASS`
-- 合計: `3 / 3問・14 / 14答案要素 PASS`
-- 教材外補完: `0件`
+技術内容・試験対応品質ゲートはPASS:
+- 正式対象: R7一次「電力」問7、H25一次「電力」問7、H26二次「電力・管理」問4
+- 完成後blind独立再解答: `3 / 3問・14 / 14答案要素 PASS`
+- 一次: `10 / 10空欄 PASS`
+- 二次: `4 / 4答案要素 PASS`
+- 解説PDF: A4縦3ページ、表示 `3 / 3 PASS`、文字抽出PASS
+- 練習: 15問、数値・論理 `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`
+- 練習PDF: A4縦4ページ、表示 `4 / 4 PASS`、文字抽出PASS
+- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0、ZIP整合性PASS
+- 固定10項目: `10 / 10`
 - 固定範囲外追加: `0件`
 - Topic 10以降への依存: `0件`
 - 未確認実設備値依存: `0件`
 - 仕様追加: `0件`
 
-H26二次問4(3)では、修正後教材どおり電圧降下率の基準を問題文から確認し、受電端基準 `V_r=V_s/(1+d_r)` を適用して公式標準解答と一致した。
+未完了理由は進捗記録不整合のみ。
 
-依存成果物:
-- `09_at_feeding.md`: 固定10項目・正式3問14答案要素の本文マッピングを保持
-- `09_at_feeding_explanation.pdf`: 修正sourceへ同期済み、QA PASS
-- `09_at_feeding_practice.md` / PDF: QA PASS、変更不要
-- `09_at_feeding_images.pptx`: QA PASS、変更不要
-- `09_at_feeding_independent_reanswer.md`: 修正後再解答 `PASS` へ更新済み
+exact blocker:
+1. `09_at_feeding.md` の冒頭状態・PDF未同期説明・末尾依存成果物/次工程が旧状態。
+2. `09_at_feeding_practice.md` の冒頭状態・末尾次工程が練習PDF生成前の旧状態。
+3. `09_at_feeding_powerpoint_qa.md` の末尾次段階がblind独立再解答前の旧状態。
+
+技術本文、固定EXAM_ALIGNMENT、正式3問、練習問題・正答、PDF/PPTX、独立再解答結果は変更不要。
 
 ## Gate checklist
 
@@ -45,4 +49,4 @@ H26二次問4(3)では、修正後教材どおり電圧降下率の基準を問�
 
 ## next_start
 
-Topic 09の最終QAを実施する。固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、練習問題QA、完成後独立再解答 `14 / 14 PASS`、source/進捗記録整合、SPEC境界を再確認し、全件PASSの場合のみ `completed` とする。
+上記3ファイルの旧進捗記録だけを実成果物へ同期する。その後、最終QAを再判定し、全件PASSの場合のみTopic 09を `completed` とする。
