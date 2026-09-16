@@ -25,7 +25,7 @@
 | PowerPoint | PASS | 16:9・4枚、表示 `4 / 4 PASS`、overflow 0、ZIP整合性PASS |
 | 固定10項目 | PASS | `10 / 10` 維持 |
 | SPEC境界 | PASS | Topic 10以降先取り0件、未確認実設備値追加0件、仕様追加0件 |
-| 進捗記録整合 | PASS | 前回blockerだった主source・練習source・PowerPoint QAの旧進捗記録を実成果物へ同期済み |
+| 進捗記録整合 | PASS | 前回blockerだった主source・練習source・PowerPoint QAの旧進捗記録を実成果物へ同期し、主sourceも `completed` へ更新 |
 
 ## 過去問対応品質ゲート
 
@@ -43,7 +43,7 @@
 
 ## 必須成果物の実在確認
 
-- `09_at_feeding.md` — blob `3d263a92cea3c2179bc2ce783a4346900af96c4a`
+- `09_at_feeding.md` — blob `0259b6d04d24894e8835eff132c2b61f6a183f03`
 - `09_at_feeding_explanation.pdf` — blob `efe9cd0932f2206f53ff56d8c9e0bb16e4b7be51`
 - `09_at_feeding_explanation_pdf_qa.md` — blob `f1f1b4c35d397a61e8a8f1d412f1466ab8383387`
 - `09_at_feeding_practice.md` — blob `e6b03c892352c50778b963516f4a005d6c9dcc60`
