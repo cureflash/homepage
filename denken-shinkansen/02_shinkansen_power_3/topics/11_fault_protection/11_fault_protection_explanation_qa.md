@@ -36,4 +36,4 @@
 
 ## 次工程
 
-Topic 11の練習問題sourceを作成する。解説PDF以外の後工程へは本QAで進めない。
+練習問題source・練習PDF・PowerPoint・完成後ブラインド独立再解答・main source同期・最終QAは実施済み。最終QAの唯一のFAILだった進捗記録整合に合わせて本記録を現在地へ同期した。次はTopic 11最終QAを再実施する。
