@@ -7,7 +7,7 @@
 
 Topic 01〜11は最終QAまで `PASS / completed`。完成数は `11 / 39`。
 
-現在地は `topic_12_final_qa_needs_progress_sync`。Topic 12 `300系③ VVVFインバータと誘導機制御` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答まで完了。最終QAでは技術内容・固定EXAM_ALIGNMENT・一次/二次再解答・必須成果物・表示QA・練習QA・SPEC境界はPASSしたが、進捗記録4箇所の旧工程表現を検出したため `NEEDS_REVISION / IN_PROGRESS`。固定一次4問＋二次1問・13答案要素は変更していない。
+現在地は `topic_12_progress_records_synced`。Topic 12 `300系③ VVVFインバータと誘導機制御` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答まで完了。初回最終QAでは技術内容・固定EXAM_ALIGNMENT・一次/二次再解答・必須成果物・表示QA・練習QA・SPEC境界はPASSし、進捗記録4箇所だけがFAILだった。該当4箇所は実成果物へ同期済みで、次は最終QA再判定。固定一次4問＋二次1問・13答案要素は変更していない。
 
 ## Topic 12 固定EXAM_ALIGNMENT
 source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -128,16 +128,16 @@ source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_i
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 初回進捗記録整合: `FAIL`
+- 初回判定: `NEEDS_REVISION / IN_PROGRESS`
 
-進捗記録の不整合は次の4箇所だけ。
-1. 主source冒頭状態欄が「解説PDF・練習source/PDF・解説画像PowerPointは未着手」のまま。
-2. 主source末尾次工程が「解説PDFを作成」のまま。
-3. 練習source末尾次工程が「練習PDFを作成」のまま。
-4. 練習PDF QA末尾が `topic_12_practice_pdf_complete`、次工程「解説画像PowerPointを制作」のまま。
+初回最終QAで検出した進捗記録4箇所は同期済み。
+1. 主source冒頭状態欄
+2. 主source末尾次工程
+3. 練習source末尾次工程
+4. 練習PDF QA末尾のcurrent_status/次工程
 
-技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX成果物には修正不要。
+技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX成果物には修正していない。最終QA再判定は未実施。
 
 ## Topic 12 固定範囲
 - VVVF
@@ -168,4 +168,4 @@ SPEC指定可視化:
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。完成後独立再解答 `27 / 27 PASS`、最終判定 `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 12の技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更せず、最終QAで検出した進捗記録4箇所だけを実成果物へ同期する。その後、最終QAを再判定する。
+Topic 12の最終QAを再判定する。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
