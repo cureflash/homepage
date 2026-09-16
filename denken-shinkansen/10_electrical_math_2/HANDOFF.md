@@ -8,11 +8,11 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 20`
 
-current_status: `topic_11_practice_source_complete`
+current_status: `topic_11_practice_pdf_complete`
 
 active_topic: `11 行列・線形連立方程式`
 
-次工程: Topic 11の練習PDFを作成し、表示QA・文字抽出QAを行う。
+次工程: Topic 11の解説画像PowerPointを作成し、表示QA・overflow・ZIP/XML整合性QAを行う。
 
 ## 上位仕様
 
@@ -638,8 +638,28 @@ QA:
 - 行列式・余因子展開の独立論点化: 0件
 - 未確認実車値依存: 0件
 
-現在 `topic_11_practice_source_complete / IN_PROGRESS`。
+### Topic 11 練習PDF
+
+`topics/11_matrix_linear_systems/11_matrix_linear_systems_practice.pdf`
+
+QA:
+- A4縦3ページ
+- 全12問（一次型8問／二次記述型4問）＋完全解説を反映
+- 200 dpi全ページ表示QA `3 / 3 PASS`
+- 文字抽出QA `PASS`
+- 固定一次5問・12対象設問への接続 `12 / 12 PASS`
+- 独立計算・正答一意性 `12 / 12 PASS` を維持
+- 教材外知識補完: 0件
+- Topic 12固有値・固有ベクトル先取り: 0件
+- 状態空間追加: 0件
+- 電力潮流詳細アルゴリズム追加: 0件
+- Newton-Raphson法・非線形反復計算追加: 0件
+- 行列式・余因子展開の独立論点化: 0件
+- 二次公式過去問の件数合わせ追加: 0件
+- 未確認実車値依存: 0件
+
+現在 `topic_11_practice_pdf_complete / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 11 `行列・線形連立方程式` の練習PDFを作成し、表示QA・文字抽出QAを行う。
+Topic 11 `行列・線形連立方程式` の解説画像PowerPointを作成し、表示QA・overflow・ZIP/XML整合性QAを行う。
