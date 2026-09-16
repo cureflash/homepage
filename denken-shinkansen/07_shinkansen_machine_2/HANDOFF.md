@@ -9,7 +9,7 @@ Topic 01〜10は最終QAまで `PASS / completed`。
 
 active topic: `11 GTO→IGBT→SiCの損失を計算する`
 
-current status: `topic_11_independent_reanswer_complete`
+current status: `topic_11_final_qa_needs_revision`
 
 ## Topic 10 固定範囲
 - 力行
@@ -275,5 +275,17 @@ source完成内容:
 - 未確認実車値追加: `0件`
 - 固定5問・15答案要素、教材本文、練習問題、PDF/PPTXは変更していない。
 
+## Topic 11 最終QA
+- 記録: `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_final_qa.md`
+- 必須成果物実在: PASS
+- 固定一次4問＋二次1問・15答案要素: PASS
+- 完成後独立再解答: `15 / 15 PASS`
+- 練習問題・PDF/PPTX QA: PASS
+- 固定範囲境界・未確認実車値: PASS
+- 進捗記録整合: FAIL（2件）
+- 不整合1: 練習source末尾 `## 次工程` が旧「次は解説画像PowerPointを作成する」のまま。
+- 不整合2: 現行PowerPoint blobと同一blobを指すPowerPoint QA記録のSHA-256と、STATUS/HANDOFFのSHA-256記録が不一致。
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 次に行うこと
-Topic 11の最終QAを実施し、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PPTX表示QA、進捗記録整合、固定範囲境界を総合判定する。
+Topic 11の技術本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTXは変更せず、進捗記録2件だけを同期する。その後、最終QAを再実施する。
