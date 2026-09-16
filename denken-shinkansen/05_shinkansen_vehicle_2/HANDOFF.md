@@ -7,7 +7,7 @@
 
 Topic 01〜11は最終QAまで `PASS / completed`。完成数は `11 / 39`。
 
-現在地は `topic_12_explanation_pdf_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QAまで完了した。固定一次4問＋二次1問・13答案要素は変更していない。
+現在地は `topic_12_practice_source_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題・完全解説sourceまで完了した。固定一次4問＋二次1問・13答案要素は変更していない。
 
 ## Topic 12 固定EXAM_ALIGNMENT
 source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -57,6 +57,22 @@ source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_i
 - Topic 11のPWMコンバータ側論点再展開: `0件`
 - 未確認300系実車値の真値化: `0件`
 
+## Topic 12 練習問題source完成確認
+- source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control_practice_source.md`
+- 一次試験型: `8問`（全問五肢択一）
+- 二次試験型: `4問`（途中式・前提・単位・理由を含む記述式）
+- 合計: `12問`
+- 数値・論理QA: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5過去問・13答案要素接続: `13 / 13 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 13先取り: `0件`
+- SPEC外制御方式追加: `0件`
+- Topic 11のPWMコンバータ側論点再展開: `0件`
+- 未確認300系実車値の真値化: `0件`
+
+練習問題は同期速度・同期角速度、すべり、V/f、低周波始動、定トルク／定出力領域、電圧制限・電流制限、VVVFと三相かご形誘導電動機を固定範囲だけで扱う。H30二次型の「磁束・始動トルク維持」と「始動電流抑制」を記述問題で独立に説明できる構成にした。
+
 ## Topic 12 固定範囲
 - VVVF
 - PWM
@@ -89,4 +105,4 @@ SPEC指定可視化:
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。完成後独立再解答 `27 / 27 PASS`、最終判定 `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 12の練習問題・完全解説sourceを作成する。一次試験型に加え、H30二次の記述要求へ接続する問題を含め、固定5過去問・13答案要素を維持する。固定EXAM_ALIGNMENTは変更しない。
+Topic 12の練習PDFを作成する。練習sourceの全12問と完全解説を正本とし、A4縦・表示QA・文字抽出QA・問題/正答整合QAを行う。固定EXAM_ALIGNMENTは変更しない。
