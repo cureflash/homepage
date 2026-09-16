@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 10 / 39
-- current_status: `topic_11_exam_alignment_complete`
+- current_status: `topic_11_explanation_source_complete`
 - last_completed_topic: `10 300系① 誘導電動機等価回路`
 - active_topic: `11 300系② PWMコンバータ`
-- next_start: Topic 11の固定EXAM_ALIGNMENTに基づき、解説本文＋3段階例題を作成する
+- next_start: Topic 11の解説PDFを作成する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -21,7 +21,7 @@
 - [x] 08 位相制御と平均直流電圧 — PASS
 - [x] 09 直流機方式の損失・熱設計 — PASS
 - [x] 10 300系① 誘導電動機等価回路 — PASS
-- [ ] 11 300系② PWMコンバータ — EXAM_ALIGNMENT PASS / IN_PROGRESS
+- [ ] 11 300系② PWMコンバータ — EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS
 
 ## Topic 11 制作前EXAM_ALIGNMENT
 - source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
@@ -35,6 +35,15 @@
 - 制作前独立検証: 一次 `10 / 10 PASS`、二次 `17 / 17 PASS`、合計 `27 / 27 PASS`
 - 二次記述問題: `3問`
 - 固定範囲外知識による補完: `0件`
+- Topic 12〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+
+## Topic 11 解説source
+- 解説本文: 完成
+- 3段階例題: `3 / 3`
+- 固定5問・27答案要素の本文マッピング: `27 / 27`
+- SPEC指定4可視化へ直接つながる計算条件: `4 / 4`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - Topic 12〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
@@ -60,4 +69,4 @@
 - 未確認の300系直流中間電圧、キャリア周波数、変調率、素子損失等の実車値
 
 ## 次工程
-Topic 11の固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を作成する。固定5問・27答案要素を本文へ全件マッピングする。
+Topic 11の固定EXAM_ALIGNMENTと完成済み解説sourceを変更せず、解説PDFを作成する。
