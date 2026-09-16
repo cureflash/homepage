@@ -3,29 +3,29 @@
 updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `10`
-current_status: `topic_10_exam_alignment_complete`
+current_status: `topic_10_preproduction_reanswer_gate_ready`
 
 ## 今回完了
 
-Topic 10「なぜ変電所を何十kmも離せない？」の制作前EXAM_ALIGNMENTを完成し、sourceを新規作成した。
+既存の「電力二種を進行」枠がTopic 10制作前EXAM_ALIGNMENTを先行完了していたため、その成果をreconcileし重複作業を行わなかった。
 
-正式品質ゲート:
+正式品質ゲートは変更なし:
 - 平成30年度 第二種一次「電力」問7
 - 平成27年度 第二種二次「電力・管理」問3
 - 平成27年度 第二種二次「電力・管理」問4
 - 平成26年度 第二種二次「電力・管理」問4
 - 一次1問＋二次3問 = `4問・17答案要素`
 
-原則5問に対し、Topic 10固定範囲だけで問題全体を完答できる5問目は確認できなかったため水増ししていない。令和8年度一次「電力」問1〜問7も確認済み。四端子定数の厳密計算、無効電力制御、力率改善設備、電力潮流、移動負荷などは正式対象から除外し、仕様追加・後続Topic先取りは0件。
+固定10項目 `10 / 10`、原則5問に対する4問固定、仕様追加0件、Topic 11以降先取り0件を維持した。
 
-固定10項目は `10 / 10` を正式過去問または補助資料へ接続した。π形等価回路はSPECどおり概念に限定し、平成26年度一次「電力」問3は四端子定数計算まで要求するため正式ゲートには含めない。
+制作前独立再解答へ進む前に `topics/10_substation_spacing/10_substation_spacing_preproduction_gate.md` を追加した。今回の補助runではreconcile中に一部の正答・標準解答を含む資料を先に参照したため、このrunでの独立再解答はblind条件を満たさず `NOT_COUNTED`。見かけ上のPASS化はしていない。
 
 ## 現在地
 
-Topic 10は `exam_alignment_complete / IN_PROGRESS`。完成数は `9 / 22`。
+Topic 10は `preproduction_reanswer_gate_ready / IN_PROGRESS`。完成数は `9 / 22`。
 
-本文、解説PDF、練習source/PDF、PowerPoint、制作前独立再解答、完成後独立再解答は未実施。
+本文、解説PDF、練習source/PDF、PowerPoint、制作前独立再解答PASS、完成後独立再解答は未実施。
 
 ## 次に行う
 
-正式4問・17答案要素の制作前独立再解答を行う。個別正答・完成導出を先に見ずに答案を固定し、その後公式解答・標準解答へ照合する。固定範囲だけで `17 / 17` を再現できない場合は本文制作へ進まずEXAM_ALIGNMENTを再監査する。
+clean runで正式4問・17答案要素の制作前独立再解答を行う。個別正答・完成導出・解答解説を先に見ずに公式問題だけから答案を固定し、その後公式解答・標準解答へ照合する。固定範囲だけで `17 / 17` を再現できない場合は本文制作へ進まずEXAM_ALIGNMENTを再監査する。
