@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 10 / 20
-- current_status: `topic_11_powerpoint_complete`
+- current_status: `topic_11_exam_reanswer_complete`
 - last_completed_topic: `10 伝達関数・極・零点`
 - active_topic: `11 行列・線形連立方程式`
-- next_start: Topic 11の完成後独立再解答を実施し、固定一次5問・12対象設問を教材だけで `12 / 12 PASS` できるか確認する
+- next_start: Topic 11の最終QAを実施し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する
 
 ## Topic 07 制作品質ゲート
 
@@ -118,38 +118,38 @@
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答 `12 / 12 PASS`
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 11 `行列・線形連立方程式` の解説画像PowerPointと表示QAを完成し、GitHub正本へ反映した。
+Topic 11 `行列・線形連立方程式` の完成後独立再解答を実施し、GitHub正本へ記録した。
 
-PowerPoint:
-- `topics/11_matrix_linear_systems/11_matrix_linear_systems_images.pptx`
-- `topics/11_matrix_linear_systems/11_matrix_linear_systems_powerpoint_qa.md`
-- 16:9・5スライド
-- 固定一次5問・12対象設問への接続 `12 / 12`
-- 全5スライド再レンダリング `5 / 5 PASS`
-- クリッピング・重なり・文字化け `0件`
-- overflow `0件`
-- PPTX ZIP/XML整合性 `PASS`
-- `slides_test.py` `PASS`
+完成後独立再解答:
+- `topics/11_matrix_linear_systems/11_matrix_linear_systems_exam_reanswer.md`
+- 固定一次「理論」5問・12対象設問
+- R8 問3 (1),(2): `ヨ, ニ` → `2 / 2 PASS`
+- R6 問3 (1),(2): `ホ, ニ` → `2 / 2 PASS`
+- R4 問3 (1),(3): `ハ, ホ` → `2 / 2 PASS`
+- R1 問2 (3)〜(5): `リ, ロ, イ` → `3 / 3 PASS`
+- R1 問6 (3)〜(5): `ロ, ハ, イ` → `3 / 3 PASS`
+- 合計 `12 / 12 PASS`
+- 教材外知識補完: 0件
 
 固定境界:
-- Topic 12固有値・固有ベクトル: 追加0件
-- 状態空間: 追加0件
-- 電力潮流の詳細アルゴリズム: 追加0件
-- Newton-Raphson法・非線形反復計算: 追加0件
+- Topic 12固有値・固有ベクトル: 使用0件
+- 状態空間: 使用0件
+- 電力潮流の詳細アルゴリズム: 使用0件
+- Newton-Raphson法・非線形反復計算: 使用0件
 - 行列式・余因子展開の独立論点化: 0件
 - 二次公式過去問を件数合わせで追加: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 11は `topic_11_powerpoint_complete / IN_PROGRESS`。
+Topic 11は `topic_11_exam_reanswer_complete / IN_PROGRESS`。
 
 完成数は `10 / 20` のまま。
 
-次はTopic 11の完成後独立再解答を実施し、固定一次5問・12対象設問を教材だけで `12 / 12 PASS` できるか確認する。
+次はTopic 11の最終QAを実施し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
