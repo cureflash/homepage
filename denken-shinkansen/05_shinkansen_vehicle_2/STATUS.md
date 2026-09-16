@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `11 / 39`
-- current_status: `topic_12_final_qa_needs_progress_sync`
+- current_status: `topic_12_progress_records_synced`
 - last_completed_topic: `11 300系② PWMコンバータ`
 - active_topic: `12 300系③ VVVFインバータと誘導機制御`
-- next_start: Topic 12の進捗記録4箇所だけを実成果物へ同期
+- next_start: Topic 12の最終QA再判定
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -22,7 +22,7 @@
 - [x] 09 直流機方式の損失・熱設計 — PASS
 - [x] 10 300系① 誘導電動機等価回路 — PASS
 - [x] 11 300系② PWMコンバータ — PASS
-- [ ] 12 300系③ VVVFインバータと誘導機制御 — FINAL_QA_NEEDS_PROGRESS_SYNC / IN_PROGRESS
+- [ ] 12 300系③ VVVFインバータと誘導機制御 — PROGRESS_RECORDS_SYNCED / IN_PROGRESS
 
 ## Topic 12 固定EXAM_ALIGNMENT
 - source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -133,10 +133,12 @@
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
-- 要修正: 主source冒頭状態欄、主source末尾次工程、練習source末尾次工程、練習PDF QA末尾のcurrent_status/次工程
+- 初回進捗記録整合: `FAIL`
+- 初回判定: `NEEDS_REVISION / IN_PROGRESS`
+- 初回要修正: 主source冒頭状態欄、主source末尾次工程、練習source末尾次工程、練習PDF QA末尾のcurrent_status/次工程
+- 進捗記録4箇所の同期: `完了`
 - 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの修正: `不要`
+- 最終QA再判定: `未実施`
 
 ## Topic 12 固定範囲
 - VVVF
@@ -173,4 +175,4 @@ SPEC指定可視化:
 - 最終QA: `PASS / completed`
 
 ## 次工程
-Topic 12の技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更せず、最終QAで検出した進捗記録4箇所だけを実成果物へ同期する。その後、最終QAを再判定する。
+Topic 12の最終QAを再判定する。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
