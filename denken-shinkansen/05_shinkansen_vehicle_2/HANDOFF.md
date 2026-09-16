@@ -7,9 +7,9 @@
 
 Topic 01〜10は最終QAまで `PASS / completed`。完成数は `10 / 39`。
 
-現在地は `topic_11_powerpoint_complete`。Topic 11 `300系② PWMコンバータ` は、固定一次2問＋二次3問・計5問・27答案要素を変更せず、解説source/PDF、練習source/PDF、解説画像PowerPointまで完成した。
+現在地は `topic_11_independent_reanswer_passed`。Topic 11 `300系② PWMコンバータ` は、固定一次2問＋二次3問・計5問・27答案要素を変更せず、解説source/PDF、練習source/PDF、解説画像PowerPointまで完成し、完成教材だけを使った独立再解答も `27 / 27 PASS` した。
 
-次工程は完成教材だけを使った固定5過去問・27答案要素の独立再解答。保存済み公式正答を先に参照せず、教材外知識で補完しない。
+次工程はTopic 11の最終QA。固定過去問・成果物・表示QA・進捗記録・固定範囲境界を総合判定し、全件PASSの場合のみ `completed` とする。
 
 ## Topic 11 固定EXAM_ALIGNMENT
 source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
@@ -26,6 +26,8 @@ source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
 - 二次: `3問・17答案要素`
 - 合計: `5問・27答案要素`
 - 制作前独立検証: `27 / 27 PASS`
+- 完成後独立再解答: 一次 `10 / 10 PASS`、二次 `17 / 17 PASS`、合計 `27 / 27 PASS`
+- 教材外知識補完: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
 ## Topic 11 完成済み成果物
@@ -47,6 +49,15 @@ source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
   - 固定5問・27答案要素への接続を維持
   - Git blob SHA-1: `8688e3b87936a08c80ae5cdbf19dbc6d1033fb44`
   - SHA-256: `26158481860cac4adb3f870aeaf19d2100a4418b0e6c60a0032b1c114286b4aa`
+- 完成後独立再解答: `topics/11_300series_pwm_converter/11_300series_pwm_converter_independent_reanswer.md`
+  - R4一次 `5 / 5 PASS`
+  - H22一次 `5 / 5 PASS`
+  - 一次合計 `10 / 10 PASS`
+  - R5二次 `7 / 7 PASS`
+  - R1二次 `4 / 4 PASS`
+  - H24二次 `6 / 6 PASS`
+  - 二次合計 `17 / 17 PASS`
+  - 総合 `27 / 27 PASS`
 
 ## Topic 11 固定範囲
 - PWMコンバータ
@@ -73,11 +84,11 @@ SPEC指定可視化:
 - 未確認300系実車値追加: `0件`
 
 ## 次の正確な開始点
-Topic 11 `300系② PWMコンバータ` の完成後独立再解答。
+Topic 11 `300系② PWMコンバータ` の最終QA。
 
-1. 完成済みの解説source/PDF・練習source/PDF・PowerPointだけを使用する。
-2. 保存済み公式正答を先に参照しない。
-3. 固定一次2問＋二次3問・27答案要素を再導出する。
-4. 教材外知識で補完しない。
-5. 固定EXAM_ALIGNMENT、固定範囲、Topic 12〜13境界を変更しない。
-6. 再解答後に公式解答と照合し、一致数と教材外補完件数を記録する。
+1. `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` を再確認する。
+2. 固定一次2問＋二次3問・27答案要素の独立再解答 `27 / 27 PASS` を確認する。
+3. 解説source/PDF、練習source/PDF、PowerPointと各QA記録の実在・整合を確認する。
+4. 進捗記録の旧工程表現が残っていないか確認する。
+5. 固定範囲外追加、Topic 12〜13先取り、未確認300系実車値追加が0件か確認する。
+6. 全件PASSの場合のみTopic 11を `completed` とし、完成数を `11 / 39` に更新する。
