@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 8 / 12
-- current_status: `topic_09_blind_reanswer_ready`
+- current_status: `topic_09_independent_reanswer_complete`
 - last_completed_topic: `08 積分 速度曲線の面積は距離`
 - active_topic: `09 微積分で電気を読む`
-- next_start: `Topic 09 完成教材だけでの公式過去問独立再解答`
+- next_start: `Topic 09 最終QA`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -88,22 +88,22 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答前のブラインド化（主sourceの保存済み選択肢番号・公式正答・個別数値解答を除去）
-- [ ] 完成教材だけでの公式過去問独立再解答
+- [x] 完成教材だけでの公式過去問独立再解答 `5 / 5問・7 / 7答案要素 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 09「微積分で電気を読む」の完成後独立再解答前ゲートを1段階進めた。
+Topic 09「微積分で電気を読む」の完成後独立再解答を1段階進めた。
 
-- 主sourceの制作前独立解答節に残っていた保存済み選択肢番号・公式正答・個別数値解答を除去
-- 制作前検証結果の集計 `5 / 5問・7 / 7答案要素 PASS` は維持
-- 固定5過去問、要求知識、使用式、教材内マッピングは変更なし
-- 解説本文、3段階例題、解説PDF、練習source/PDF、PowerPointは変更なし
+- 保存済み正答を先に見ず、完成教材と固定5問の公式問題だけで7答案要素を再導出
+- 独立答案: R7上法規問13 `(2),(3)`、R6下理論問3 `(2)`、R3理論問4 `(4)`、R7上電力問1 `(2)`、H29法規問13 `(2),(5)`
+- 答案確定後に電気技術者試験センター公式解答と照合し `5 / 5問・7 / 7答案要素 PASS`
+- 公式解答との不一致0件、教材外知識補完0件
 - 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
-- 今回は保存済み正答を参照した状態のため、完成後独立再解答そのものは実施・判定していない
+- 解説PDF、練習source/PDF、PowerPointは変更なし
 
 ## 判定
 
-`topic_09_blind_reanswer_ready / IN_PROGRESS`。
+`topic_09_independent_reanswer_complete / IN_PROGRESS`。
 
-完成数は `8 / 12` のまま。次工程は完成教材だけで固定5問・7答案要素を保存済み正答を見ずに独立再解答する。
+完成数は `8 / 12` のまま。次工程はTopic 09の最終QA。
