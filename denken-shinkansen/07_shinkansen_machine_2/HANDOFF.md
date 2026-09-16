@@ -9,7 +9,7 @@ Topic 01〜11は最終QAまで `PASS / completed`。
 
 active topic: `12 N700Sの6極モーターを設計側から見る`
 
-current status: `topic_12_practice_source_complete`
+current status: `topic_12_practice_pdf_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -375,5 +375,18 @@ source完成内容:
 - 固定範囲外追加: `0件`
 - 未確認N700S実車値追加: `0件`
 
+## Topic 12 練習PDF
+- `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_practice.pdf`: `completed`
+- A4縦4ページ
+- 一次10問＋二次5問・完全解説を収録
+- 200 dpi全4ページ Visual QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- 数値・論理再検算: `15 / 15 PASS`
+- 一次正答一意性: `10 / 10 PASS` 維持
+- 固定5過去問・16答案要素: 維持
+- 固定範囲外追加: `0件`
+- 未確認N700S実車値追加: `0件`
+- SHA-256: `f70c681e0f4c5b0ed71ebc0b3f78dcaf09e6968b5b5ce1100758e42c79efd90a`
+
 ## 次に行うこと
-Topic 12 `N700Sの6極モーターを設計側から見る` の練習PDFを作成する。練習sourceの一次10問＋二次5問・完全解説を反映し、全ページ表示QA・文字抽出QA・数値再検算を行う。
+Topic 12 `N700Sの6極モーターを設計側から見る` の解説画像PowerPointを作成する。固定5過去問・16答案要素と固定範囲を維持し、表示QA・overflow・PPTX整合性を確認する。
