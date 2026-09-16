@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_11_completed`
+- current_status: `topic_12_exam_alignment_complete`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 制作前EXAM_ALIGNMENT
+- next_start: Topic 12 解説本文＋3段階例題
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -260,8 +260,33 @@
 - [x] 技術本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTXの内容変更 `0件`
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 
+## Topic 12 制作前EXAM_ALIGNMENT
+- [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列`SPEC.md`確認
+- [x] Topic 12固定範囲「極数・同期速度・周波数・すべり・回転速度・トルク・出力・出力密度・インバータ定格」を確認
+- [x] 一次2問＋二次記述3問、計5問を固定
+- [x] 固定範囲へ直接対応する16答案要素を品質ゲート対象化
+- [x] 制作前独立検証 `16 / 16 PASS`
+- [x] 固定範囲外論点による件数合わせ `0件`
+- [x] Topic 05〜06の等価回路・最大トルク、Topic 09のベクトル制御、Topic 13以降の同期機論点追加 `0件`
+- [x] 未確認N700S主電動機定格値・インバータ電圧電流等の真値化 `0件`
+
+### 固定過去問
+- R07 一次 機械 問2: (2),(5)
+- H25 一次 機械 問3: (1),(2)
+- R07 二次 機械・制御 問2: (1),(3)
+- R02 二次 機械・制御 問1: (1)〜(4)
+- R01 二次 機械・制御 問1: (1)〜(4)
+
+### 制作前独立検証
+- R07 一次 機械 問2: `2 / 2 PASS`
+- H25 一次 機械 問3: `2 / 2 PASS`
+- R07 二次 機械・制御 問2: `4 / 4 PASS`
+- R02 二次 機械・制御 問1: `4 / 4 PASS`
+- R01 二次 機械・制御 問1: `4 / 4 PASS`
+- 合計: `16 / 16 PASS`
+
 ## 今回進めた内容
-Topic 11の最終QAを再実施した。前回FAILだった進捗記録2件が解消済みであることを確認し、固定一次4問＋二次1問・15答案要素、完成後独立再解答 `15 / 15 PASS`、必須成果物、表示QA、固定範囲境界、進捗記録整合を全件PASSとした。
+Topic 12「N700Sの6極モーターを設計側から見る」の制作前EXAM_ALIGNMENTを完成した。一次2問＋二次記述3問、計5問・16答案要素を固定し、公式問題・公式解答／標準解答で制作前独立検証 `16 / 16 PASS`。固定範囲外の等価回路詳細・最大トルク・ベクトル制御・同期機論点で件数を水増しせず、未確認N700S実車値も追加していない。
 
 ## 判定
-Topic 11は `PASS / completed`。完成数は `11 / 22`。次はTopic 12「N700Sの6極モーターを設計側から見る」の制作前EXAM_ALIGNMENTを行う。
+Topic 12は `topic_12_exam_alignment_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の解説本文＋3段階例題を作成する。
