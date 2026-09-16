@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_11_final_qa_needs_revision`
+- current_status: `topic_11_progress_records_synced`
 - last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
 - active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 進捗記録2件の同期
+- next_start: Topic 11 最終QA再実施
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -194,6 +194,7 @@
 - [x] J/W、μs/s、kHz/Hzの単位換算QA PASS
 - [x] 素子1個と装置全体の損失区別 PASS
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
+- [x] 末尾 `## 次工程` を実成果物へ同期
 
 ## Topic 11 練習PDF
 - [x] `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_practice.pdf`
@@ -219,7 +220,7 @@
 - [x] ZIP整合性 PASS
 - [x] 固定一次4問＋二次1問・15答案要素を維持
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
-- [x] SHA-256 `bd195a931abecfa723e895f8082f7e54964bb9c88afba52420cde6777a31b704`
+- [x] SHA-256 `a0440ffe6243ee6920a4e9102ead6d4a551fbdc4d2e2f937735d7ab20454d37e`
 
 ## Topic 11 独立再解答前ゲート
 - [x] `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
@@ -249,13 +250,17 @@
 - [x] 完成後独立再解答 `15 / 15 PASS`
 - [x] 練習問題・PDF/PPTX QA: PASS
 - [x] 固定範囲境界・未確認実車値: PASS
-- [ ] 進捗記録整合: FAIL（2件）
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 進捗記録整合: FAIL（2件・前回判定）
+- 判定: `NEEDS_REVISION / IN_PROGRESS`（前回判定）
+
+## Topic 11 進捗記録同期
+- [x] 練習source末尾の旧「次は解説画像PowerPointを作成する」を、実成果物に合わせて「次は最終QAを再実施する」へ同期
+- [x] 現行PowerPointのGit blob SHA `4ac2a83ea8eaa732508dd798552d5179a0899c8b` に対応するPowerPoint QA記録のSHA-256 `a0440ffe6243ee6920a4e9102ead6d4a551fbdc4d2e2f937735d7ab20454d37e` をSTATUSへ同期
+- [x] 技術本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTXの内容変更 `0件`
+- [x] 固定範囲外論点・未確認実車値の追加 `0件`
 
 ## 今回進めた内容
-Topic 11の最終QAを実施した。技術内容、固定一次4問＋二次1問・15答案要素、完成後独立再解答 `15 / 15 PASS`、必須成果物、練習問題QA、PDF/PPTX表示QA、固定範囲境界はPASS。進捗記録整合のみ2件FAIL。
-
-不整合は、練習source末尾の旧「次は解説画像PowerPointを作成する」と、現行PowerPoint blobに対するPowerPoint QA記録とSTATUS/HANDOFFのSHA-256記録不一致。
+Topic 11の前回最終QAで検出した進捗記録2件を同期した。練習sourceの旧次工程を実成果物へ合わせ、PowerPoint QA記録とSTATUSのSHA-256記録を現行blob基準で一致させた。教材内容・固定一次4問＋二次1問・15答案要素・完成後独立再解答結果は変更していない。
 
 ## 判定
-Topic 11は `topic_11_final_qa_needs_revision / IN_PROGRESS`。完成数は `10 / 22`。次は上記2件の進捗記録だけを同期し、その後に最終QAを再実施する。
+Topic 11は `topic_11_progress_records_synced / IN_PROGRESS`。完成数は `10 / 22`。次は最終QAを再実施する。
