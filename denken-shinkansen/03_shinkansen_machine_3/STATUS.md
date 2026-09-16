@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `11 / 16`
-- current_status: `topic_12_practice_source_complete`
+- current_status: `topic_12_practice_pdf_complete`
 - last_completed_topic: `11 空転した車輪をどう立て直す？`
 - active_topic: `12 新幹線のコンピュータは何をしている？`
-- next_start: Topic 12の練習PDFを作成する
+- next_start: Topic 12の解説画像PowerPointを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -22,7 +22,7 @@
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
-- [ ] 12 新幹線のコンピュータは何をしている？ — 練習問題source完成 / IN_PROGRESS
+- [ ] 12 新幹線のコンピュータは何をしている？ — 練習問題source・PDF完成 / IN_PROGRESS
 - [ ] 13〜16 — 未完了
 
 ## Topic 12 制作品質状態
@@ -57,7 +57,14 @@
 - 練習問題独立計算・論理QA: `12 / 12 PASS`
 - 練習問題正答一意性QA: `12 / 12 PASS`
 - 練習問題→固定EXAM_ALIGNMENT接続: `8 / 8 PASS`
-- 練習PDF: 未作成
+- 練習PDF: 完成（A4縦3ページ）
+- 練習PDF表示QA: `3 / 3 PASS`
+- 練習PDF文字抽出QA: `PASS`
+- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
+- 練習PDF欠落・破損グリフ: `0件`
+- 練習PDF固定過去問マッピング: `8 / 8`
+- practice PDF: `topics/12_information_processing/12_information_processing_practice.pdf`
+- practice PDF QA: `topics/12_information_processing/12_information_processing_practice_pdf_qa.md`
 - 解説画像PowerPoint: 未作成
 - 完成後blind独立再解答: 未実施
 
@@ -75,7 +82,7 @@
 - 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
 - 解説PDF固定過去問マッピング: `1 / 1`
 - 練習問題source: `12問` 完成
-- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
+- 練習問題構成: 基礎3 / 本試験標準7 / 複合2
 - 練習問題形式: `12 / 12` 五肢択一
 - 練習問題独立論理QA: `12 / 12 PASS`
 - 練習問題正答一意性QA: `12 / 12 PASS`
@@ -121,9 +128,9 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 12「新幹線のコンピュータは何をしている？」の練習問題sourceを完成し、GitHub正本へ反映した。全12問・全問五肢択一、基礎3 / 本試験標準7 / 複合・応用2。独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`、固定6問・8答案要素への接続 `8 / 8 PASS`。
+Topic 12「新幹線のコンピュータは何をしている？」の練習PDFを完成し、GitHub正本へ反映した。A4縦3ページ、全12問・完全解説。200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`、固定6問・8答案要素への接続 `8 / 8 PASS`。
 
 カルノー図、フリップフロップ、記憶装置、フローチャート、符号付き2進数・補数表現、通信プロトコル、インタフェース規格、車種固有通信仕様等の追加・推測は0件。
 
 ## 次工程
-Topic 12の練習PDFを作成する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更しない。
+Topic 12の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更しない。
