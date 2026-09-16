@@ -8,11 +8,11 @@ Topic 01〜09は `completed`。
 
 完成数: `9 / 20`
 
-current_status: `topic_10_final_qa_needs_revision`
+current_status: `topic_10_source_progress_synced`
 
 active_topic: `10 伝達関数・極・零点`
 
-次工程: Topic 10の主source冒頭 `## 状態`・主source末尾 `## 次工程`・練習source末尾 `## 次工程` の旧進捗3箇所だけを実成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF/PPTX・完成後独立再解答は変更しない。その後、最終QAを再判定する。
+次工程: Topic 10の最終QAを再判定する。教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF/PPTX・完成後独立再解答は変更しない。
 
 ## 上位仕様
 
@@ -515,10 +515,10 @@ QA:
 - 主source末尾 `## 次工程`: 解説PDF作成の旧工程
 - 練習source末尾 `## 次工程`: 練習PDF作成の旧工程
 
-current_status: `topic_10_final_qa_needs_revision / IN_PROGRESS`。
+上記3箇所は2026-09-16に実成果物へ同期済み。差分監査で主sourceは2箇所、練習sourceは1箇所のみの変更を確認し、技術内容の変更は0件。
+
+current_status: `topic_10_source_progress_synced / IN_PROGRESS`。
 
 ## 次に行うこと
 
-上記3箇所の進捗記録だけを実成果物へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、練習問題、正答、PDF、PowerPoint、完成後独立再解答は変更しない。
-
-同期後、Topic 10の最終QAを再判定する。固定範囲境界を変更しない。
+Topic 10の最終QAを再判定する。固定二次5問・11対象設問、完成後独立再解答 `11 / 11 PASS`、成果物QA、固定範囲境界を維持し、技術内容は変更しない。
