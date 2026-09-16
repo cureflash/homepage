@@ -1,14 +1,15 @@
 # Topic 13 新幹線の交流電力を複素数で扱う
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 状態
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `EXPLANATION_PDF_COMPLETE`
 - completion: `in_progress`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 次工程: 解説PDF＋表示QA
+- 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 次工程: 練習問題source＋練習PDF
 
 ## 1. SPEC固定範囲
 
@@ -571,14 +572,32 @@ P-Q平面では、補償前 `(1000,983.3)` からQ軸方向へ下へ移動し、
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
-## 9. 制作進捗
+## 9. 解説PDF QA
+
+- PDF: `topics/13_complex_power/13_complex_power_explanation.pdf`
+- QA記録: `topics/13_complex_power/13_complex_power_explanation_pdf_qa.md`
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 固定4問・19答案要素への接続: `19 / 19`
+- 3段階例題: `3 / 3`
+- 二次採用: `1問・4答案要素`
+- 二次数合わせ: `0件`
+- 電力円線図: 概念のみ、詳細導出追加 `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 14以降の先取り: `0件`
+- 未確認新幹線主回路・変電設備値追加: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+## 10. 制作進捗
 
 - [x] 制作前EXAM_ALIGNMENT
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋表示QA
+- [x] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 
-現在 `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は解説PDF＋表示QA。
+現在 `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は練習問題source＋練習PDF。
