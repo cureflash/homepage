@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 9 / 16
-- current_status: `topic_09_completed`
+- current_status: `topic_10_exam_alignment_complete`
 - last_completed_topic: `09 変電所からパンタグラフまでどう送る？`
 - active_topic: `10 新幹線が突然大電力を使ったら？`
-- next_start: Topic 10制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 10解説本文＋3段階例題を作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -20,7 +20,7 @@
 - [x] 07 なぜ三相交流をそのまま架線へ流さない？ — completed。改定EXAM_ALIGNMENT 3問を完成教材だけで独立再解答し `3 / 3 PASS`、教材外知識補完0件。練習PDF QA・PowerPoint Slide 4・PowerPoint QAを現行3問へ同期し、最終QA PASS
 - [x] 08 新幹線の変電所はなぜ数十kmおき？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗整合を最終QAで再確認し `PASS / completed`
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
-- [ ] 10 新幹線が突然大電力を使ったら？
+- [ ] 10 新幹線が突然大電力を使ったら？ — 制作前EXAM_ALIGNMENT完了。固定5問・8小問、制作前独立検証 `8 / 8 PASS`、公式解答不一致0件、既完了Topic固定過去問との重複0件
 - [ ] 11 架線事故ではどうやって電気を止める？
 - [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
 - [ ] 13 新幹線の架線は何でできている？
@@ -175,5 +175,24 @@ PowerPoint QA: `topics/09_feeding_transmission/09_feeding_transmission_powerpoin
 - R5上 電力 問10: `(2)`
 - R4下 電力 問9: `(1)`
 
+## Topic 10 進行記録
+source: `topics/10_load_variation/10_load_variation.md`
+
+固定5問・8小問:
+- R8上 電力 問12
+- R7上 電力 問17 (a)(b)
+- R4上 電力 問17 (a)(b)
+- R3 法規 問13 (a)(b)
+- R1 電力 問17 (a)(b)
+
+集計:
+- 制作前EXAM_ALIGNMENT: 完了
+- 制作前独立検証: `8 / 8 PASS`
+- 公式解答との不一致: `0件`
+- SPEC固定範囲外の採用問題: `0件`
+- 既完了Topic固定過去問との重複: `0件`
+- 未確認実設備値への依存: `0件`
+- 解説本文・3段階例題: 未着手
+
 ## 次
-Topic 10 `新幹線が突然大電力を使ったら？` の制作前EXAM_ALIGNMENTを実施する。
+Topic 10 `新幹線が突然大電力を使ったら？` の解説本文＋基礎・本試験標準・複合の3段階例題を作成する。
