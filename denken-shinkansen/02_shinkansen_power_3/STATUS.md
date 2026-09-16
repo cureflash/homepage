@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 8 / 16
-- current_status: `topic_09_source_reanswer_synced`
-- last_completed_topic: `08 新幹線の変電所はなぜ数十kmおき？`
-- active_topic: `09 変電所からパンタグラフまでどう送る？`
-- next_start: Topic 09最終QAを実施する
+- exam_aligned_completed_topics: 9 / 16
+- current_status: `topic_09_completed`
+- last_completed_topic: `09 変電所からパンタグラフまでどう送る？`
+- active_topic: `10 新幹線が突然大電力を使ったら？`
+- next_start: Topic 10制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -19,7 +19,7 @@
 - [x] 06 275,000Vをどうやって25,000Vにする？ — completed
 - [x] 07 なぜ三相交流をそのまま架線へ流さない？ — completed。改定EXAM_ALIGNMENT 3問を完成教材だけで独立再解答し `3 / 3 PASS`、教材外知識補完0件。練習PDF QA・PowerPoint Slide 4・PowerPoint QAを現行3問へ同期し、最終QA PASS
 - [x] 08 新幹線の変電所はなぜ数十kmおき？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗整合を最終QAで再確認し `PASS / completed`
-- [ ] 09 変電所からパンタグラフまでどう送る？ — 制作前EXAM_ALIGNMENT完了。固定5問・7小問、独立検証 `7 / 7 PASS`。解説本文§1〜§14＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint完成。完成教材だけでブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。main sourceへ結果同期済み
+- [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
 - [ ] 10 新幹線が突然大電力を使ったら？
 - [ ] 11 架線事故ではどうやって電気を止める？
 - [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
@@ -110,7 +110,7 @@ PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
 - R6上 電力 問13: `(4)`
 - R5上 電力 問12: `(2)`
 
-## Topic 09 進捗記録
+## Topic 09 完了記録
 source: `topics/09_feeding_transmission/09_feeding_transmission.md`
 解説PDF: `topics/09_feeding_transmission/09_feeding_transmission_explanation.pdf`
 練習問題source: `topics/09_feeding_transmission/09_feeding_transmission_practice_source.md`
@@ -119,6 +119,7 @@ source: `topics/09_feeding_transmission/09_feeding_transmission.md`
 解説画像PowerPoint: `topics/09_feeding_transmission/09_feeding_transmission_images.pptx`
 PowerPoint QA: `topics/09_feeding_transmission/09_feeding_transmission_powerpoint_qa.md`
 完成後独立再解答: `topics/09_feeding_transmission/09_feeding_transmission_independent_reanswer.md`
+最終QA: `topics/09_feeding_transmission/09_feeding_transmission_final_qa.md`
 
 固定5問・7小問:
 - R6下 電力 問12
@@ -164,6 +165,7 @@ PowerPoint QA: `topics/09_feeding_transmission/09_feeding_transmission_powerpoin
 - SPEC固定範囲外の採用問題・本文追加: `0件`
 - 未確認実設備値への依存: `0件`
 - main sourceへの完成後独立再解答結果同期: 完了
+- 最終QA: `PASS / completed`
 - R8上・R7の送電関連候補で、機械的強度・コロナ・雷／開閉サージ・構成部品・誘導障害等の固定範囲外論点を要するものは品質ゲートから除外
 
 完成後独立答案:
@@ -174,4 +176,4 @@ PowerPoint QA: `topics/09_feeding_transmission/09_feeding_transmission_powerpoin
 - R4下 電力 問9: `(1)`
 
 ## 次
-Topic 09最終QAを実施する。固定5問・7小問、教材本文、成果物、SPEC固定範囲は変更しない。
+Topic 10 `新幹線が突然大電力を使ったら？` の制作前EXAM_ALIGNMENTを実施する。
