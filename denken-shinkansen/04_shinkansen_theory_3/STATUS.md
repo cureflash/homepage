@@ -1,15 +1,15 @@
 # STATUS - 新幹線・電験三種「理論」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
-- exam_aligned_completed_topics: 10 / 14
-- current_status: `topic_11_source_progress_synced`
-- last_completed_topic: `10 新幹線が使う電力は「W」だけではない`
-- active_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- next_start: Topic 11の最終QAを再実施する
+- exam_aligned_completed_topics: 11 / 14
+- current_status: `topic_11_completed`
+- last_completed_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
+- active_topic: `12 300系はなぜVVVFになった？`
+- next_start: Topic 12の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 01 進捗
 
@@ -200,16 +200,17 @@
 - [x] 完成後の公式過去問独立再解答 `5 / 5問・10 / 10答案要素 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習source進捗記録不整合）
 - [x] 主source・練習source進捗記録同期
-- [ ] 最終QA PASS
+- [x] 最終QA再実施
+- [x] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の主source・練習sourceの進捗記録だけを実成果物へ同期した。
+Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の最終QAを再実施し、`PASS / completed` とした。
 
-主sourceを `status: INDEPENDENT_REANSWER_COMPLETE`、練習sourceを `stage: INDEPENDENT_REANSWER_COMPLETE` に更新し、旧「解説PDF作成」「PowerPoint作成」の次工程記録を除去した。技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX成果物は変更していない。
+固定5問・10答案要素の完成後独立再解答 `5 / 5問・10 / 10答案要素 PASS`、公式解答一致 `10 / 10`、教材外知識補完 `0件`。解説PDF・練習PDF・PowerPointの既存QA、必須成果物実在、SPEC固定範囲境界、進捗記録整合性を全件PASS確認した。
 
-固定5問・10答案要素の完成後独立再解答 `5 / 5問・10 / 10答案要素 PASS`、各成果物QA、SPEC境界はそのまま維持している。
+最終判定に合わせて主source・練習sourceを `COMPLETED` へ同期した。技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX成果物は変更していない。
 
 ## 判定
 
-現在 `topic_11_source_progress_synced / IN_PROGRESS`。完成数は `10 / 14`。次はTopic 11の最終QAを再実施する。
+現在 `topic_11_completed`。完成数は `11 / 14`。次はTopic 12 `300系はなぜVVVFになった？` の制作前EXAM_ALIGNMENTを実施する。
