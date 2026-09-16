@@ -1,6 +1,6 @@
 # HANDOFF - 電験二種「電気数学」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 現在地
 
@@ -8,11 +8,11 @@ Topic 01〜11は `completed`。
 
 完成数: `11 / 20`
 
-current_status: `topic_12_final_qa_needs_revision`
+current_status: `topic_12_source_progress_synced`
 
 active_topic: `12 固有値の基礎`
 
-次工程: Topic 12のsource進捗記録3箇所だけを実成果物へ同期し、技術内容を変更せず最終QAを再判定する。
+次工程: Topic 12の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
 
 ## 上位仕様
 
@@ -773,12 +773,17 @@ PowerPoint QA:
 - Topic 15周波数応答・ボード線図先取り: 0件
 - 未確認実車値依存: 0件
 
-初回最終QA判定は `NEEDS_REVISION / IN_PROGRESS`。技術ゲートは全件PASSで、未完了理由は次のsource進捗記録3箇所だけ。
+初回最終QA判定は `NEEDS_REVISION / IN_PROGRESS`。技術ゲートは全件PASSで、未完了理由だったsource進捗記録3箇所を実成果物へ同期した。
 
+同期済み箇所:
 - `12_eigenvalues_basics.md` 冒頭 `## 状態`
 - `12_eigenvalues_basics.md` 末尾 `## 次工程`
 - `12_eigenvalues_basics_practice.md` 末尾 `## 次工程`
 
+技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更していない。
+
+現在 `topic_12_source_progress_synced / IN_PROGRESS`。
+
 ## 次に行うこと
 
-上記3箇所だけを実成果物へ同期し、技術本文・固定EXAM_ALIGNMENT・数式・練習問題・正答・PDF/PPTX・完成後独立再解答を変更せず、Topic 12の最終QAを再判定する。
+Topic 12 `固有値の基礎` の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
