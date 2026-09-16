@@ -3,33 +3,30 @@
 更新日: 2026-09-16
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は品質ゲートPASSでcompleted。active topicは10「新幹線の速度はどう自動制御される？」。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は品質ゲートPASSでcompleted。active topicは11「空転した車輪をどう立て直す？」。
 
 ## 今回進捗
-Topic 10の練習source `topics/10_automatic_control/10_automatic_control_practice.md` 末尾に残っていた旧次工程1箇所を、実在する練習PDF・QAへ同期した。前回最終QAで唯一FAILだった進捗記録不整合は解消済み。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTXは変更していない。最終QA再判定は次工程とする。
+Topic 10の最終QAを再実施し、`PASS / completed` とした。前回唯一のblockerだった練習source末尾の旧進捗記録は同期済みで、必須成果物、固定EXAM_ALIGNMENT 5件、完成後blind独立再解答、PDF/PPTX QA、source進捗整合、系列SPEC境界を全件PASS確認した。教材本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。Web公開要件に従い `qualifications/denken-shinkansen/catalog.json` へTopic 10を登録済み。
 
-- 品質ゲート対象: 公式過去問5件
-- 固定問題: R8上 問13、R7下 問13、R5下 問18(a)、R5上 問13、R4上 問15(a)
-- 制作前検証: `5 / 5 PASS`
+## Topic 10 最終品質状態
+- 品質ゲート対象: R8上 機械 問13 / R7下 機械 問13 / R5下 機械 問18(a) / R5上 機械 問13 / R4上 機械 問15(a)
+- 制作前独立検証: `5 / 5 PASS`
 - 解説本文＋3段階例題: 完成
 - 固定5件の本文マッピング: `5 / 5 全件`
 - 解説PDF: A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`
-- 練習問題source: 全12問・全問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`、末尾進捗記録同期済み
+- 練習問題source: 12問・全問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`
 - 練習PDF: A4縦6ページ、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`
 - 解説画像PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`
-- 完成後独立再解答前ゲート: `BLIND_REANSWER_READY`（再解答開始時に条件遵守済み）
-- 完成後独立再解答: `(4),(3),(5),(1),(2)` / `5 / 5 PASS`
+- 完成後blind独立再解答: `(4),(3),(5),(1),(2)` / `5 / 5 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 前回 `NEEDS_REVISION / IN_PROGRESS`。blocker解消済み、再判定待ち
-- source進捗整合: 旧FAIL箇所を同期済み
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
-- 完成数: `9 / 16` のまま
+- source進捗整合: `PASS`
+- Webカタログ登録: `PASS`
+- 最終QA: `PASS / completed`
 
-固定範囲は、目標値・制御量・操作量・外乱、フィードバック/フィードフォワード、開ループ/閉ループ、ブロック線図、伝達関数、一次/二次遅れ、時定数、定常偏差、安定性、`G(s)/(1+G(s)H(s))`。PID、ボード線図、ナイキスト線図、ベクトル軌跡、シーケンス制御等は件数合わせで追加しない。実車の制御アルゴリズムは推測しない。
-
-## 成果物
+## Topic 10 成果物
 - source: `topics/10_automatic_control/10_automatic_control.md`
 - 解説PDF: `topics/10_automatic_control/10_automatic_control_explanation.pdf`
 - 解説PDF QA: `topics/10_automatic_control/10_automatic_control_explanation_pdf_qa.md`
@@ -38,61 +35,24 @@ Topic 10の練習source `topics/10_automatic_control/10_automatic_control_practi
 - 練習PDF QA: `topics/10_automatic_control/10_automatic_control_practice_pdf_qa.md`
 - PowerPoint: `topics/10_automatic_control/10_automatic_control_images.pptx`
 - PowerPoint QA: `topics/10_automatic_control/10_automatic_control_powerpoint_qa.md`
-- 独立再解答前ゲート監査: `topics/10_automatic_control/10_automatic_control_blind_reanswer_gate.md`
+- blind再解答ゲート記録: `topics/10_automatic_control/10_automatic_control_blind_reanswer_gate.md`
 
-## Topic 10 EXAM_ALIGNMENT
-品質ゲート対象は5件で固定。
+## Topic 11 固定範囲
+系列 `SPEC.md` に従い、次だけを扱う。
 
-1. R8上 機械 問13 — ブロック線図、負帰還、並列経路、合成周波数伝達関数
-2. R7下 機械 問13 — ブロック線図、負帰還、正負の並列経路、合成周波数伝達関数
-3. R5下 機械 問18(a) — RC回路の周波数伝達関数、一次遅れ形の分母
-4. R5上 機械 問13 — 一次遅れ、時定数、R-L回路、周波数伝達関数
-5. R4上 機械 問15(a) — フィードバック系、制御対象の合成、一巡伝達関数
+- センサ
+- 回転速度
+- 車輪
+- 粘着
+- 空転
+- 滑走
+- フィードバック
+- 制御指令
+- アクチュエータ
+- メカトロニクス
+- 応答速度
 
-完成後blind独立再解答は `(4),(3),(5),(1),(2)` で公式解答と `5 / 5 PASS`。教材だけで公式選択・途中式構成・選択肢照合が可能で、教材外・固定範囲外知識による補完は0件。
-
-### 非選定
-- R7上 機械 問13: 行過ぎ量等を直接要求し、固定範囲外の説明追加を避けるため除外。
-- R6下 機械 問13: PID制御を直接要求するため除外。
-- R6上 機械 問13: リレーシーケンス、インタロック、タイムチャートまで必要なため除外。
-- R5下 機械 問13: ボード線図が主要求のため除外。
-- R5下 機械 問18(b): 比例プラス積分要素まで拡張するため除外。
-- R4上 機械 問15(b): ベクトル軌跡が固定範囲外のため除外。
-
-## Topic 10 最終QA
-前回判定:
-- 必須成果物の実在: `PASS`
-- 固定EXAM_ALIGNMENT 5件: `PASS`
-- 完成後blind独立再解答: `5 / 5 PASS`
-- 解説PDF表示QA・文字抽出QA: `PASS`
-- 練習PDF表示QA・文字抽出QA: `PASS`
-- PowerPoint表示QA・overflow・ZIP整合性: `PASS`
-- 固定範囲境界: `PASS`
-- 教材外・固定範囲外知識による補完: `0件`
-- 固定範囲外論点追加: `0件`
-- 未確認実車値追加: `0件`
-- source進捗整合: `FAIL`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
-
-現在、上記FAIL原因だった練習source末尾の旧次工程は実成果物へ同期済み。最終QAの再判定はまだ実施していない。
-
-## Topic 10 現在地
-- 制作前EXAM_ALIGNMENT: 完了
-- 制作前独立検証: `5 / 5 PASS`
-- 解説本文: 完了
-- 3段階例題: 完了
-- 固定5件の本文マッピング: `5 / 5 全件`
-- 解説PDF: 完了
-- 練習問題source: 完了・進捗記録同期済み
-- 練習PDF: 完了
-- 解説画像PowerPoint: 完了
-- 完成後独立再解答前ゲート: `BLIND_REANSWER_READY`（条件遵守済み）
-- 完成後独立再解答: `5 / 5 PASS`
-- 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: 前回 `NEEDS_REVISION / IN_PROGRESS`、blocker解消済み・再判定待ち
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 固定範囲外論点追加: `0件`
-- 未確認実車値追加: `0件`
+電気系・機械系・情報系が一つの制御システムを構成する例として扱う。実車の具体的な再粘着アルゴリズムは公開資料で確認できる範囲だけとし、推測しない。
 
 ## 次に行う
-Topic 10の最終QAを再実施する。
+Topic 11「空転した車輪をどう立て直す？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近年度を優先して公式過去問を調査し、品質ゲート対象を固定する。
