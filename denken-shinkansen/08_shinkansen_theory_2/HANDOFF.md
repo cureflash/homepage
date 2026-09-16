@@ -6,18 +6,18 @@
 
 Topic 01〜12は `PASS / completed`。完成数は `12 / 21`。
 
-current_status: `topic_13_powerpoint_complete`
+current_status: `topic_13_reanswer_complete`
 
 active_topic: `13 新幹線の交流電力を複素数で扱う`
 
-Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋表示QA、解説画像PowerPoint＋表示QAまで完了。固定公式過去問は一次3問・15小問＋二次1問・4答案要素で、要求接続・可視化は `19 / 19`。制作前独立再解答 `19 / 19 PASS`、二次採用1問・4答案要素、二次数合わせ0件を維持している。
+Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定公式過去問は一次3問・15小問＋二次1問・4答案要素で、完成後独立再解答も `19 / 19 PASS`。二次採用1問・4答案要素、二次数合わせ0件を維持している。
 
-次工程はTopic 13の完成後独立再解答。
+次工程はTopic 13の最終QA。主sourceの状態欄・制作進捗欄には旧工程表現が残っているため、最終QAでは進捗記録整合も確認する。
 
 ## Topic 13 成果物
 
 - source: `topics/13_complex_power/13_complex_power.md`
-- stage: `POWERPOINT_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - completion: `in_progress`
 - 解説PDF: `topics/13_complex_power/13_complex_power_explanation.pdf`
 - 解説PDF QA: `topics/13_complex_power/13_complex_power_explanation_pdf_qa.md`
@@ -26,7 +26,7 @@ Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題sou
 - 練習PDF QA: `topics/13_complex_power/13_complex_power_practice_pdf_qa.md`
 - PowerPoint: `topics/13_complex_power/13_complex_power_images.pptx`
 - PowerPoint QA: `topics/13_complex_power/13_complex_power_powerpoint_qa.md`
-- 完成後独立再解答: 未実施
+- 完成後独立再解答: `topics/13_complex_power/13_complex_power_reanswer.md` / `19 / 19 PASS`
 - 最終QA: 未実施
 
 ## Topic 13 固定範囲
@@ -62,7 +62,7 @@ Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題sou
 - H21 一次 理論 問3 (1)〜(5): 複素アドミタンス、フェーザ、平均電力
 - R2 二次 電力・管理 問6 (1)〜(3): P/Q/S、総合力率、P-Qベクトル、力率改善
 
-公式問題・公式標準解答を照合済み。制作前独立再解答 `19 / 19 PASS`。完成後ブラインド再解答を妨げないため、選択肢記号・最終数値答案はsourceへ保存していない。
+公式問題・公式標準解答を照合済み。制作前独立再解答 `19 / 19 PASS`、完成後独立再解答も `19 / 19 PASS`。
 
 関連候補は一次・二次合わせ8件を確認した。H30二次「電力・管理」問3、H25二次「電力・管理」問4は電力円線図に直接関連するが、送電線モデル・単位法・電圧安定度等を要するため非採用。R7二次「電力・管理」問3も％インピーダンス・単位法・短絡容量を要するため非採用。R8二次は2026-09-16時点で未実施。
 
@@ -202,6 +202,25 @@ Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題sou
 - 未確認新幹線主回路・変電設備値追加: `0件`
 
 判定: `PASS / POWERPOINT_COMPLETE`
+
+## Topic 13 完成後独立再解答
+
+- 記録: `topics/13_complex_power/13_complex_power_reanswer.md`
+- 固定一次3問・15小問を完成教材だけで再導出: `15 / 15 PASS`
+- 固定二次R2「電力・管理」問6・4答案要素を完成教材だけで再導出: `4 / 4 PASS`
+- 合計: `19 / 19 PASS`
+- R7一次答案: `ヨ, ト, ハ, ヌ, リ`
+- H22一次答案: `ル, チ, ハ, ヘ, ヌ`
+- H21一次答案: `チ, ル, ハ, ワ, ホ`
+- R2二次: 追加コンデンサ `2.70×10^3 kvar`、総合力率 `0.875遅れ`、P-Qベクトル関係PASS、力率0.95用追加コンデンサ `5.05×10^3 kvar`
+- 教材外知識補完: `0件`
+- SPEC固定範囲外追加: `0件`
+- 二次採用: `1問・4答案要素`
+- 二次数合わせ: `0件`
+- Topic 14以降の先取り: `0件`
+- 未確認の新幹線主回路・変電設備値追加: `0件`
+
+判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
 ## Topic 12 成果物
 
@@ -483,4 +502,4 @@ Topic 12「三相交流を新幹線へ渡す」は `PASS / completed`。
 
 ## 次に行うこと
 
-Topic 13「新幹線の交流電力を複素数で扱う」の完成後独立再解答を実施する。保存済み正答を先読みせず、固定4問・19答案要素を完成教材だけで再導出し、送電線単位法・詳細な電力円線図導出・Topic 14以降を追加しない。
+Topic 13「新幹線の交流電力を複素数で扱う」の最終QAを実施する。固定4問・19答案要素の完成後独立再解答 `19 / 19 PASS`、必須成果物、PDF/PPTX QA、SPEC境界、進捗記録整合を確認する。主sourceの旧進捗表現が残っている場合は技術本文を変更せず、進捗記録だけを実成果物へ同期して再判定する。
