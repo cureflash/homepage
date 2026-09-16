@@ -7,7 +7,7 @@
 - exam_aligned_completed_topics: 12 / 21
 - current_status: `topic_13_final_qa_complete`
 - last_completed_topic: `12 三相交流を新幹線へ渡す`
-- active_topic: `13 新幹線の交流電力を複数で扱う`
+- active_topic: `13 新幹線の交流電力を複素数で扱う`
 - next_start: Topic 13 completed状態同期
 
 ## Topic 06 制作進捗
@@ -192,7 +192,7 @@
 
 ## 今回進めた内容
 
-Topic 13「新幹線の交流電力を複数で扱う」の最終QAを再実施した。
+Topic 13「新幹線の交流電力を複素数で扱う」の最終QAを再実施した。
 
 - 必須成果物実在: `PASS`
 - 固定一次3問・15小問＋二次1問・4答案要素の完成後独立再解答: `19 / 19 PASS`
