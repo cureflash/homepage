@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `12 / 16`
-- current_status: `topic_13_exam_alignment_complete`
+- current_status: `topic_13_explanation_source_complete`
 - last_completed_topic: `12 新幹線のコンピュータは何をしている？`
 - active_topic: `13 新幹線は主電動機以外もモーターだらけ？`
-- next_start: Topic 13の解説本文＋3段階例題を作成する
+- next_start: Topic 13の解説PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -23,7 +23,7 @@
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
-- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 制作前EXAM_ALIGNMENT完了 / IN_PROGRESS
+- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 解説本文＋3段階例題完成 / IN_PROGRESS
 - [ ] 14〜16 — 未完了
 
 ## Topic 13 制作品質状態
@@ -32,13 +32,17 @@
 - 固定EXAM_ALIGNMENT: R5上 機械 問7 / R4下 機械 問11 / H30 機械 問10 / H29 機械 問12 / H27 機械 問12
 - 品質ゲート対象: `5問`
 - 制作前独立検証・公式解答照合: `5 / 5 PASS`
+- 固定過去問要求事項の本文マッピング: `5 / 5 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 解説source QA: `PASS`
 - 教材外・固定範囲外知識による補完: `0件`
 - 件数合わせの仕様外追加: `0件`
 - 未確認補機仕様の追加: `0件`
+- Topic 14〜16先取り: `0件`
 - source: `topics/13_auxiliary_motors/13_auxiliary_motors.md`
-- 解説本文: 未作成
-- 状態: `topic_13_exam_alignment_complete`
-- 次工程: 固定EXAM_ALIGNMENTを変更せず解説本文＋3段階例題を作成する
+- 解説本文: 完成
+- 状態: `topic_13_explanation_source_complete`
+- 次工程: 固定EXAM_ALIGNMENTと本文範囲を変更せず解説PDFを作成する
 
 ## Topic 12 最終品質状態
 - 固定範囲: 2進数 / 16進数 / ビット / バイト / 論理回路 / AND / OR / NOT / NAND / NOR / XOR / 論理式 / 真理値表 / A/D変換 / D/A変換 / センサ / 情報伝送
@@ -168,6 +172,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 13「新幹線は主電動機以外もモーターだらけ？」の制作前EXAM_ALIGNMENTを完了した。R5上 機械 問7、R4下 機械 問11、H30 機械 問10、H29 機械 問12、H27 機械 問12の公式5問を品質ゲート対象に固定し、保存済み正答を先に見ない制作前独立検証後に公式解答と照合して `5 / 5 PASS` を確認した。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」の解説本文＋3段階例題を完成した。固定5過去問の要求事項を本文へ `5 / 5 PASS` で接続し、基礎・本試験標準・複合の例題は独立再計算 `3 / 3 PASS`。固定EXAM_ALIGNMENT変更、系列SPEC外論点追加、Topic 14〜16先取り、未確認補機仕様の実値化はいずれも0件。
 
-系列SPEC固定範囲外のエレベータ・巻上機、流体機械の高度な水力学、冷凍サイクル、ドア制御シーケンス等は件数合わせで追加していない。新幹線側の補機形式・定格・電圧・周波数・制御方式等の未確認仕様も追加していない。完成数は `12 / 16` のまま。次工程はTopic 13の解説本文＋3段階例題。
+完成数は `12 / 16` のまま。次工程はTopic 13の解説PDF。
