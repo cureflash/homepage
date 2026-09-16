@@ -50,6 +50,6 @@
 `PASS`
 
 ## 現在地
-- current_status: `topic_12_practice_pdf_complete`
-- 完成数: `11 / 39`（Topic 12は最終QA未完了のため増やさない）
-- 次工程: Topic 12の解説画像PowerPointを制作する。SPEC指定4可視化（周波数―同期速度、周波数―電圧、回転速度―トルク、回転速度―出力）を収録し、表示QA・overflow・PowerPoint ZIP整合性を確認する。固定EXAM_ALIGNMENTは変更しない。
+- current_status: `topic_12_progress_records_synced`
+- 完成数: `11 / 39`（Topic 12は最終QA再判定前のため増やさない）
+- 次工程: Topic 12の最終QAを再判定する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX成果物は変更しない。
