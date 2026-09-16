@@ -6,17 +6,17 @@
 
 Topic 01〜08は `completed`。
 
-Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題sourceまで完了。
+Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。
 
 完成数: `8 / 12`
 
-current_status: `topic_09_practice_source_complete`
+current_status: `topic_09_practice_pdf_complete`
 
 last_completed_topic: `08 積分 速度曲線の面積は距離`
 
 active_topic: `09 微積分で電気を読む`
 
-next_start: `Topic 09 練習PDF`
+next_start: `Topic 09 解説画像PowerPoint`
 
 ## Topic 09 固定仕様範囲
 
@@ -116,6 +116,21 @@ next_start: `Topic 09 練習PDF`
 
 判定: `PASS / PRACTICE_SOURCE_COMPLETE`。
 
+## Topic 09 練習PDF
+
+成果物: `topics/09_calculus_electricity/09_calculus_electricity_practice.pdf`
+
+- A4縦4ページ
+- 全12問・全問五肢択一（基礎3 / 標準7 / 複合2）＋完全解説
+- 200 dpi表示QA `4 / 4 PASS`
+- 文字抽出QA `PASS`
+- 正答番号・主要数値整合 `12 / 12 PASS`
+- 固定5過去問・固定5式への接続を維持
+- 新幹線問題の数値は仮定値のまま
+- 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`。
+
 ## 次に行うこと
 
-Topic 09の練習PDFを、`09_calculus_electricity_practice.md` を正本として作成する。問題数・正答・固定EXAM_ALIGNMENT・固定5式は変更しない。表示QA・文字抽出QA・数値整合を確認する。
+Topic 09の解説画像PowerPointを作成する。固定5過去問・7答案要素、固定5式、問題数・正答は変更しない。
