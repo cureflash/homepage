@@ -6,25 +6,26 @@
 
 Topic 01〜12は `PASS / completed`。完成数は `12 / 21`。
 
-current_status: `topic_13_practice_pdf_complete`
+current_status: `topic_13_powerpoint_complete`
 
 active_topic: `13 新幹線の交流電力を複素数で扱う`
 
-Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋表示QAまで完了。固定公式過去問は一次3問・15小問＋二次1問・4答案要素で、要求接続は `19 / 19`。制作前独立再解答 `19 / 19 PASS`、二次採用1問・4答案要素、二次数合わせ0件を維持している。
+Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋表示QA、解説画像PowerPoint＋表示QAまで完了。固定公式過去問は一次3問・15小問＋二次1問・4答案要素で、要求接続・可視化は `19 / 19`。制作前独立再解答 `19 / 19 PASS`、二次採用1問・4答案要素、二次数合わせ0件を維持している。
 
-次工程はTopic 13の解説画像PowerPoint＋表示QA。
+次工程はTopic 13の完成後独立再解答。
 
 ## Topic 13 成果物
 
 - source: `topics/13_complex_power/13_complex_power.md`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `POWERPOINT_COMPLETE`
 - completion: `in_progress`
 - 解説PDF: `topics/13_complex_power/13_complex_power_explanation.pdf`
 - 解説PDF QA: `topics/13_complex_power/13_complex_power_explanation_pdf_qa.md`
 - 練習source: `topics/13_complex_power/13_complex_power_practice.md`
 - 練習PDF: `topics/13_complex_power/13_complex_power_practice.pdf`
 - 練習PDF QA: `topics/13_complex_power/13_complex_power_practice_pdf_qa.md`
-- PowerPoint: 未作成
+- PowerPoint: `topics/13_complex_power/13_complex_power_images.pptx`
+- PowerPoint QA: `topics/13_complex_power/13_complex_power_powerpoint_qa.md`
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
@@ -181,6 +182,26 @@ Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題sou
 - 未確認新幹線主回路・変電設備値追加: `0件`
 
 判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+## Topic 13 PowerPoint QA
+
+- PowerPoint: `topics/13_complex_power/13_complex_power_images.pptx`
+- QA記録: `topics/13_complex_power/13_complex_power_powerpoint_qa.md`
+- 16:9 / 5枚
+- 全スライド表示QA: `5 / 5 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- 固定4問・19答案要素の可視化: `19 / 19`
+- `S=VI*` と共役の理由、P/Q/|S|、電力三角形、遅れ/進み符号: `PASS`
+- `S=|I|^2Z`、`S=|V|^2Y*`、複数負荷P/Q合算、力率改善、皮相電力上限からの逆算: `PASS`
+- 電力円線図は概念のみ、詳細導出追加: `0件`
+- 二次採用: `1問・4答案要素`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 14以降の先取り: `0件`
+- 未確認新幹線主回路・変電設備値追加: `0件`
+
+判定: `PASS / POWERPOINT_COMPLETE`
 
 ## Topic 12 成果物
 
@@ -462,4 +483,4 @@ Topic 12「三相交流を新幹線へ渡す」は `PASS / completed`。
 
 ## 次に行うこと
 
-Topic 13「新幹線の交流電力を複素数で扱う」の解説画像PowerPoint＋表示QAを作成する。固定4問・19答案要素への接続を維持し、送電線単位法・詳細な電力円線図導出・Topic 14以降を追加しない。
+Topic 13「新幹線の交流電力を複素数で扱う」の完成後独立再解答を実施する。保存済み正答を先読みせず、固定4問・19答案要素を完成教材だけで再導出し、送電線単位法・詳細な電力円線図導出・Topic 14以降を追加しない。
