@@ -282,4 +282,4 @@ Aは正しい。メカトロニクスは機械・電子・情報を統合する�
 実車固有アルゴリズム推測: `0件`
 
 ## 次工程
-Topic 11の最終QAを再判定する。固定EXAM_ALIGNMENT、固定範囲、問題・正答、PDF、PowerPoint、独立再解答結果は変更しない。
+Topic 11は最終QA `PASS` でcompleted。系列の次工程はTopic 12「新幹線のコンピュータは何をしている？」の制作前EXAM_ALIGNMENT。固定EXAM_ALIGNMENT、固定範囲、問題・正答、PDF、PowerPoint、独立再解答結果は変更しない。
