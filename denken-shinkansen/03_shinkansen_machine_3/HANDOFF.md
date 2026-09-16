@@ -6,112 +6,95 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は品質ゲートPASSでcompleted。active topicは12「新幹線のコンピュータは何をしている？」。
 
 ## 今回進捗
-Topic 11「空転した車輪をどう立て直す？」の最終QAを再判定し、`PASS / completed` とした。固定R4下 機械 問14の完成後独立再解答 `1 / 1 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、主source・練習sourceの進捗記録整合、固定範囲境界を全件PASS確認した。
+Topic 12の制作前EXAM_ALIGNMENTを完了した。系列 `SPEC.md` の固定範囲だけで完答できる第三種「機械」の公式過去問6問・8答案要素を固定し、各答案要素を独立に再導出して公式解答と照合し `8 / 8 PASS`。仕様外追加・教材外補完・車種固有情報の推測は0件。
 
-前回 `NEEDS_REVISION` の原因だった旧進捗3箇所は同期済み。教材外・固定範囲外知識による補完、固定範囲外論点追加、未確認実車値追加、実車固有アルゴリズム推測はいずれも0件。次はTopic 12の制作前EXAM_ALIGNMENTを行う。
+source: `topics/12_information_processing/12_information_processing.md`
 
-## Topic 11 固定範囲
+## Topic 12 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
 
+- 2進数
+- 16進数
+- ビット
+- バイト
+- 論理回路
+- AND / OR / NOT / NAND / NOR / XOR
+- 論理式
+- 真理値表
+- A/D変換
+- D/A変換
 - センサ
-- 回転速度
-- 車輪
-- 粘着
-- 空転
-- 滑走
-- フィードバック
-- 制御指令
-- アクチュエータ
-- メカトロニクス
-- 応答速度
+- 情報伝送
 
-電気系・機械系・情報系が一つの制御システムを構成する例として扱う。実車の具体的な再粘着アルゴリズムは公開資料で確認できる範囲だけとし、推測しない。
+基本構成:
 
-## Topic 11 EXAM_ALIGNMENT
-- 品質ゲート対象: R4下 機械 問14
-- 対象数: `1問`
-- 要求事項: メカトロニクスの統合概念 / センサによる速度等の物理量計測 / アクチュエータの役割 / 制御装置による計測情報処理と指令生成
-- 制作前独立検証: `1 / 1 PASS`
-- 固定過去問要求事項の本文マッピング: `1 / 1 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 解説PDF表示QA: `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 練習問題source: `12問` 完成
-- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
-- 練習問題形式: `12 / 12` 五肢択一
-- 練習問題独立論理QA: `12 / 12 PASS`
-- 練習問題正答一意性QA: `12 / 12 PASS`
-- 練習問題→固定EXAM_ALIGNMENT接続: `1 / 1`
-- 練習PDF: A4縦 `3ページ` 完成
-- 練習PDF表示QA: `3 / 3 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 解説画像PowerPoint: 16:9 `4枚` 完成
-- PowerPoint表示QA: `4 / 4 PASS`
-- PowerPointスライド外はみ出し: `0件`
-- PowerPoint文字欠落・重なり・判読不能: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint固定EXAM_ALIGNMENT接続: `1 / 1`
-- 完成後独立再解答: `(4)` / 公式解答 `(4)` / `1 / 1 PASS`
-- 教材外・固定範囲外知識による補完: `0件`
-- 固定範囲外追加: `0件`
-- 未確認実車値追加: `0件`
-- 実車固有アルゴリズムの推測: `0件`
-- 前回最終QA: `NEEDS_REVISION`
-- 前回最終QA技術内容: `PASS`
-- 前回最終QA必須成果物: `PASS`
-- 前回最終QA表示QA: `PASS`
-- 前回最終QA固定範囲境界: `PASS`
-- 前回最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
-- 旧進捗3箇所: 同期済み
-- 最終QA再判定: `PASS`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA進捗記録整合: `PASS`
-- 最終QA固定範囲境界: `PASS`
-- source: `topics/11_readhesion_control/11_readhesion_control.md`
-- explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
-- explanation PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
-- practice source: `topics/11_readhesion_control/11_readhesion_control_practice.md`
-- practice PDF: `topics/11_readhesion_control/11_readhesion_control_practice.pdf`
-- practice PDF QA: `topics/11_readhesion_control/11_readhesion_control_practice_pdf_qa.md`
-- PowerPoint: `topics/11_readhesion_control/11_readhesion_control_images.pptx`
-- PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
-- independent reanswer: `topics/11_readhesion_control/11_readhesion_control_independent_reanswer.md`
+`センサ → 電気信号 → A/D変換 → デジタルデータ → 演算・論理判断 → 制御指令 → 機器`
 
-## 非選定
-- R4上 機械 問14: アナログ/ディジタル信号、A-D/D-A変換、インタフェースが正答要件となりTopic 11固定範囲外。
-- R6上 機械 問13: リレーシーケンス、インタロック、タイムチャートが正答要件となり固定範囲外。
-- 原則5問を満たすために、上記論点やステッピングモータ固有理論、PID等を追加しない。
+過去問要求から上記固定範囲内で、基数変換、2進数の加減算、基本論理式の簡単化、真理値表と論理式・論理回路の相互変換、組合せ論理回路の出力追跡までを扱う。
 
-## 解説sourceの要点
-- センサ = 物理量を計測・検出する。
-- 制御装置 = 計測情報を処理し、制御指令を生成する。
-- アクチュエータ = エネルギーを機械的な動き・作用へ変える。
-- メカトロニクス = 機械系・電子系・情報系を統合する。
-- 再粘着制御の概念 = `検出 → 判断・指令 → 作用 → 状態変化 → 再検出`。
-- 応答速度 = 状態変化を検出し、指令・作用へ反映するまでの速さ。
-- 鉄道側は鉄道総研の公開資料で確認できる検出・トルク指令抑制の概念までに限定し、車種固有のしきい値・判定式・トルク低減率・応答時間を導入していない。
+カルノー図、フリップフロップ、記憶装置、プログラム・フローチャート、符号付き2進数・補数表現、通信プロトコル、インタフェース規格は追加しない。
 
-## 練習sourceの要点
-- 全12問を五肢択一とし、三種本試験形式へ接続した。
-- 問1・4〜7・11・12でR4下 機械 問14の役割分担・統合概念を直接練習する。
-- 問2・3・8〜10で固定SPEC範囲の粘着 / 空転 / 滑走 / フィードバック / 応答速度を補強する。
-- 12問の正答列は `(3),(4),(2),(5),(1),(3),(4),(2),(5),(1),(3),(4)`。
-- 独立論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。
+## Topic 12 EXAM_ALIGNMENT
+固定した品質ゲート対象:
 
-## PowerPointの要点
-- Slide 1: センサ / 制御装置 / アクチュエータを「測る / 考える / 動かす」で役割分離。
-- Slide 2: 粘着 / 空転 / 滑走 / 再粘着を駆動時・制動時の状態として区別。
-- Slide 3: `状態検出 → 判断・指令 → 作用 → 状態変化 → 再検出` のフィードバックループと応答速度を可視化。
-- Slide 4: R4下 機械 問14の言い換え判別軸と固定範囲境界を集約。
-- 外部画像は使用せず、図表はPowerPoint図形で独自作成。
+- R8上 機械 問14 — 2進数・10進数・16進数の相互変換、大小比較
+- R8上 機械 問18(a)(b) — ブール代数、積和形式・和積形式の簡単化
+- R7上 機械 問14 — AND / OR / NOT回路、入力波形から出力波形を導出
+- R5下 機械 問14 — 真理値表から論理式を判別
+- R1 機械 問14 — 2進数の和・差から未知数を逆算
+- H28 機械 問18(a)(b) — 基本ゲートの真理値表、組合せ回路の2段接続
 
-## 独立再解答の要点
-- `(ア)=機械`、`(イ)=電子`、`(ウ)=センサ`、`(エ)=アクチュエータ`、`(オ)=コンピュータ` と再導出。
-- 選択肢 `(4)` を選定。
-- 公式解答 `(4)` と一致し `1 / 1 PASS`。
-- 教材外補完0件。
+品質ゲート対象: `6問・8答案要素`
+制作前独立検証・公式解答照合: `8 / 8 PASS`
+教材外・固定範囲外補完: `0件`
+
+完成後blind独立再解答に備え、固定過去問の選択肢番号はsource・STATUS・HANDOFFへ保存していない。
+
+## 非選定・重複扱い
+- R7下 機械 問14: フローチャート・プログラム実行が主題で固定範囲外。
+- R6上 機械 問18: n進数・D/A変換と重なるが、符号付き8bit・補数表現が正答要件で固定範囲外。
+- R4上 機械 問14: A/D・D/A・センサと重なるが、インタフェースが正答要件で固定範囲外。
+- R6下 機械 問14: R7上 問14と同一の論理回路・入力波形問題のため、調査はしたが品質ゲートを二重加算しない。
+- 参考サイトで使われるカルノー図は系列SPEC固定範囲外なので追加しない。
+
+## 解説本文へ必須で入れる内容
+1. 位取り記数法による2進・10進・16進の相互変換。
+2. 16進1桁 = 2進4bit の対応。
+3. bit / byte の意味と関係。
+4. 2進数の加減算と、和・差から未知数を逆算する手順。
+5. AND / OR / NOT / NAND / NOR / XOR の図記号・論理式・真理値表。
+6. 相補・分配・吸収・ド・モルガン則を過去問の簡単化に必要な範囲で使用。
+7. 真理値表 ↔ 論理式 ↔ 論理回路の相互変換。
+8. 組合せ論理回路の入力が時間変化する場合の区間ごとの0/1評価。
+9. A/D変換とD/A変換の役割。
+10. `センサ → 電気信号 → A/D変換 → デジタルデータ → 演算・論理判断 → 制御指令 → 機器` の流れ。
+11. 情報伝送は機器間でデータ・指令を受け渡す概念まで。通信規格・プロトコルは追加しない。
+12. 新幹線側は公開資料で確認できる状態監視・情報処理の概念に限定し、N700S固有のネットワーク規格・伝送速度・CPU・通信周期等を推測しない。
+
+## 参考資料
+公式:
+- https://www.shiken.or.jp/chief/third/qa/
+- R8上: `20260830_ch_third_q03.pdf` / `20260830_ch_third_a01.pdf`
+- R7上: `20250831_ch_third_q03.pdf` / `20250831_ch_third_a01.pdf`
+- R5下: `20240324_ch_third_q03.pdf` / `20240324_ch_third_a01.pdf`
+- R1: `20190901_ch_third_q03.pdf` / `20190901_ch_third_a01.pdf`
+- H28: `20160904_ch_third_q03.pdf` / `20160904_ch_third_a01.pdf`
+
+学習資料:
+- e-sysnet「論理回路とn進数」: https://e-sysnet.com/%E8%AB%96%E7%90%86%E5%9B%9E%E8%B7%AF%E3%81%A8n%E9%80%B2%E6%95%B0/
+- 電験王 R8上 機械 問18: https://denken-ou.com/kikair8-1-18/
+- 電験王 R7上 機械 問14: https://denken-ou.com/kikair7-1-14/
+- 電験王 R5下 機械 問14: https://denken-ou.com/kikair5-2-14/
+- 電験三種まとめました R5下 機械 問14: https://yaku-tik.com/denken/r5s-k14/
+
+鉄道側:
+- JR東海「東海道新幹線～不断のサービスの充実～」: https://company.jr-central.co.jp/sustainability/social/service/
+- 三菱電機「車両システム」: https://www.mitsubishielectric.co.jp/traffic/products/train/
+
+参照日: 2026-09-16
+
+## Topic 11 完了状態
+Topic 11「空転した車輪をどう立て直す？」は最終QA `PASS / completed`。固定R4下 機械 問14、完成後独立再解答 `1 / 1 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界は全件PASS。完成数は `11 / 16`。
 
 ## 次に行う
-Topic 12「新幹線のコンピュータは何をしている？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
+Topic 12の固定EXAM_ALIGNMENT 6問・8答案要素から逆算し、系列SPEC固定範囲だけで解説本文＋基礎・本試験標準・複合の3段階例題を作成する。Topic 13以降、フローチャート、記憶装置、符号付き2進数・補数表現等は先取りしない。
