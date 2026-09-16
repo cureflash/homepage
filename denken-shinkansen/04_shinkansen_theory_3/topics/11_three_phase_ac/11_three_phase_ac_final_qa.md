@@ -1,7 +1,7 @@
 # Topic 11 最終QA
 
-更新日: 2026-09-16
-判定: `NEEDS_REVISION / IN_PROGRESS`
+更新日: 2026-09-17
+判定: `PASS / completed`
 
 ## 確認対象
 
@@ -20,6 +20,16 @@
 - `11_three_phase_ac_images_qa.md`
 - `11_three_phase_ac_exam_recheck.md`
 
+## 再判定
+
+前回最終QAで唯一FAILだった主source・練習sourceの進捗記録不整合が解消済みであることを確認した。
+
+- `11_three_phase_ac.md`: 完成後独立再解答済みの進捗へ同期済み
+- `11_three_phase_ac_practice.md`: 完成後独立再解答済みの進捗へ同期済み
+- 技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX成果物は変更なし
+
+この再判定に合わせ、主source・練習sourceを `COMPLETED` へ同期した。
+
 ## 品質ゲート
 
 - 固定公式過去問: 5問・10答案要素
@@ -33,6 +43,7 @@
 - PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
 - 必須成果物の実在: PASS
 - SPEC固定範囲外追加: `0件`
+- 進捗記録整合性: PASS
 
 ## SPEC境界
 
@@ -48,17 +59,6 @@
 
 固定範囲は系列SPECの三相交流、相順、平衡三相、Y・Δ結線、相/線間電圧、相/線電流、三相電力に留まっている。
 
-## 進捗記録整合性
-
-ここだけFAIL。
-
-- 主source `11_three_phase_ac.md` 冒頭が `status: EXPLANATION_SOURCE_COMPLETE` のまま。
-- 主source末尾の次工程が「解説PDFを作成」のまま。
-- 練習source `11_three_phase_ac_practice.md` が `stage: PRACTICE_PDF_COMPLETE` のまま。
-- 練習source末尾の次工程が「解説画像PowerPointを作成」のまま。
-
-実成果物はPowerPoint・完成後独立再解答まで完了しているため、上記4箇所はGitHub正本内で実態と不整合である。
-
 ## 最終判定
 
 - 必須成果物: PASS
@@ -69,8 +69,6 @@
 - 完成後独立再解答: `5 / 5問・10 / 10答案要素 PASS`
 - 教材外補完: `0件`
 - 固定範囲外追加: `0件`
-- 進捗記録整合性: FAIL
+- 進捗記録整合性: PASS
 
-結論: Topic 11は技術内容と試験対応品質ゲートはPASSだが、主source・練習sourceの進捗記録が実成果物と一致していないため `NEEDS_REVISION / IN_PROGRESS`。`completed` にはしない。
-
-次工程は、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、主sourceと練習sourceの進捗記録だけを完成後独立再解答済みの現在地へ同期すること。
+結論: Topic 11は `PASS / completed`。完成数を `11 / 14` とし、次はTopic 12「300系はなぜVVVFになった？」の制作前EXAM_ALIGNMENTへ進む。
