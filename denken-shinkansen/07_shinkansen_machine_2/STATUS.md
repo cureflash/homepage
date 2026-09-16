@@ -5,7 +5,7 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_explanation_pdf_complete`
+- current_status: `topic_12_explanation_pdf_records_synced`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
 - next_start: Topic 12 練習問題source
@@ -303,16 +303,22 @@
 
 ## Topic 12 解説PDF
 - [x] `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_explanation.pdf`
-- [x] A4縦5ページ
-- [x] 200 dpi全5ページ表示QA `5 / 5 PASS`
+- [x] A4縦4ページ
+- [x] 200 dpi全4ページ表示QA `4 / 4 PASS`
 - [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
 - [x] 固定一次2問＋二次3問・16答案要素を維持
 - [x] 基礎・本試験標準・複合の3段階例題 `3 / 3` 収録
 - [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
-- [x] SHA-256 `318e5335e69fa35c049debb134e708ef0222a34823196c9beedd45d49295218c`
+- [x] SHA-256 `ba9059d7410cbdabb23c7931b76dceecacfacbe632f5830b5f733f20bdcee954`
+
+## Topic 12 解説PDF記録同期
+- [x] 現在の4ページPDFに対するsourceのQA記録を正本とし、STATUS/HANDOFFを4ページ・`4 / 4 PASS`・SHA-256 `ba9059d7410cbdabb23c7931b76dceecacfacbe632f5830b5f733f20bdcee954`へ同期
+- [x] 固定一次2問＋二次3問・16答案要素、3段階例題、固定範囲境界は変更なし
+- [x] 未確認N700S実車値追加 `0件`
+- [x] `BLOCKED_BEFORE_PRACTICE_SOURCE` を解除
 
 ## 今回進めた内容
-Topic 12「N700Sの6極モーターを設計側から見る」の解説PDFを完成した。A4縦5ページで、固定一次2問＋二次3問・16答案要素、解法手順、3段階例題を固定範囲内で収録。200 dpi表示QA `5 / 5 PASS`、文字抽出QA PASS、固定範囲外論点・未確認N700S実車値の追加は0件。
+Topic 12の解説PDFと進捗記録の不整合を解消した。現在の4ページPDFに対するsource QA記録（表示 `4 / 4 PASS`、文字抽出PASS、固定5問・16答案要素維持）へSTATUS/HANDOFFを同期し、練習問題sourceへ進める状態へ復旧した。
 
 ## 判定
-Topic 12は `topic_12_explanation_pdf_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の練習問題sourceを作成する。
+Topic 12は `topic_12_explanation_pdf_records_synced / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の練習問題sourceを作成する。
