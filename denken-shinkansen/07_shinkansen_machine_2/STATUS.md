@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_independent_reanswer_complete`
+- current_status: `topic_12_final_qa_needs_revision`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 最終QA
+- next_start: Topic 12 進捗記録同期
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -379,8 +379,20 @@
 - [x] 教材本文・練習問題・PDF/PPTXの内容変更 `0件`
 - [x] 記録: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_independent_reanswer.md`
 
+## Topic 12 最終QA
+- [x] 最終QA記録作成: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_final_qa.md`
+- [x] 必須成果物の実在: PASS
+- [x] 一次2問＋二次3問・16答案要素の過去問対応: PASS
+- [x] 完成後独立再解答 `16 / 16 PASS`
+- [x] 練習問題・PDF/PPTX QA: PASS
+- [x] 固定範囲境界・未確認N700S実車値: PASS
+- [ ] 進捗記録整合: FAIL
+  - main source末尾 `# 次工程` が「解説PDFまで完成。次は練習問題source」のまま
+  - 練習source末尾 `# 次工程` が「次は練習PDFへ反映」のまま
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 12の完成後独立再解答を完了した。固定一次2問＋二次3問・16答案要素を、公式解答・標準解答を先に見ず完成教材だけで解答し、照合結果は `16 / 16 PASS`。教材外知識補完、固定範囲外論点追加、未確認N700S実車値追加はいずれも0件。教材本文・練習問題・PDF/PPTXは変更していない。
+Topic 12の最終QAを実施した。固定一次2問＋二次3問・16答案要素の独立再解答 `16 / 16 PASS`、必須成果物、PDF/PPTX QA、固定範囲境界はPASS。未完了理由はmain sourceと練習source末尾の旧 `次工程` 2件のみ。
 
 ## 判定
-Topic 12は `topic_12_independent_reanswer_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の最終QAを実施する。
+Topic 12は `topic_12_final_qa_needs_revision / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の進捗記録2件を実成果物へ同期する。
