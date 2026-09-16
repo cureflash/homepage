@@ -1,11 +1,11 @@
 # 10 新幹線が突然大電力を使ったら？
 
 ## 状態
-`topic_10_source_reanswer_synced`。制作前EXAM_ALIGNMENT、解説本文§1〜§15、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答まで完成し、その結果を本sourceへ同期済み。
+`completed`。制作前EXAM_ALIGNMENT、解説本文§1〜§15、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答まで完成。最終QAを再実施し、必須成果物、固定EXAM_ALIGNMENT、独立再解答、PDF/PPTX QA、進捗記録整合、SPEC固定範囲境界を全件PASS確認した。
 
-固定5問・8小問について、制作前独立検証 `8 / 8 PASS`、本文要求事項マッピング `8 / 8`、完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8` を確認。教材外知識補完0件、SPEC固定範囲外追加0件、Topic 11以降の先取り0件、未確認新幹線実設備値の真値化0件。
+固定5問・8小問について、制作前独立検証 `8 / 8 PASS`、本文要求事項マッピング `8 / 8`、完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`。教材外知識補完0件、SPEC固定範囲外追加0件、Topic 11以降の先取り0件、未確認新幹線実設備値の真値化0件。最終QAは `10_load_variation_final_qa.md`。
 
-次工程はTopic 10最終QA。必須成果物、EXAM_ALIGNMENT、PDF/PPTX QA、進捗記録整合、SPEC固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
+次工程はTopic 11「架線事故ではどうやって電気を止める？」の制作前EXAM_ALIGNMENTを実施する。
 
 ## SPEC固定範囲
 `SPEC.md` のTopic 10から範囲を追加しない。
@@ -479,9 +479,10 @@
 - 公式解答一致: `8 / 8 PASS`
 - 教材外知識補完: `0件`
 - main sourceへの完成後独立再解答結果同期: 完了
+- 最終QA: `PASS / completed`
 - SPEC固定範囲外追加: `0件`
 - Topic 11以降の先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
 ## 次工程
-Topic 10最終QAを実施し、必須成果物、EXAM_ALIGNMENT、PDF/PPTX QA、進捗記録整合、SPEC固定範囲境界を再確認する。全件PASSの場合のみ `completed` とする。
+Topic 11「架線事故ではどうやって電気を止める？」の制作前EXAM_ALIGNMENTを実施する。
