@@ -4,32 +4,32 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `09`
 theme: ATき電はなぜ長距離へ電気を送れる？
-current_status: `topic_09_independent_reanswer_needs_revision`
+current_status: `topic_09_voltage_drop_definition_fixed`
 completed_topics: `8 / 22`
 
 ## Topic 09 current result
 
-完成後blind独立再解答を実施し、`NEEDS_REVISION` とした。
+完成後blind独立再解答で検出したH26二次「電力・管理」問4(3)のFAILについて、source §6の根本原因を修正した。
 
-正式対象:
-- 令和7年度 一次「電力」問7
-- 平成25年度 一次「電力」問7
-- 平成26年度 二次「電力・管理」問4
+修正内容:
+- 送電端基準: `d_s=(V_s-V_r)/V_s` → `V_r=(1-d_s)V_s`
+- 受電端基準: `d_r=(V_s-V_r)/V_r` → `V_r=V_s/(1+d_r)`
+- H26二次問4(3)は受電端基準として接続
+- 電圧降下率の分母を問題文・定義から確認する解法へ変更
 
-独立再解答結果:
-- R7一次「電力」問7: `5 / 5 PASS`
-- H25一次「電力」問7: `5 / 5 PASS`
-- H26二次「電力・管理」問4: `2 / 4答案要素 PASS`
-- 合計: `2 / 3問・12 / 14答案要素 PASS`
-- 教材外知識補完: `0件`
+品質境界:
+- 正式対象3問: 変更なし
+- SPEC固定10項目: 変更なし
 - 固定範囲外追加: `0件`
 - Topic 10以降の先取り: `0件`
-- 未確認実設備値依存: `0件`
+- 未確認実設備値追加: `0件`
 - 仕様追加: `0件`
 
-FAILはH26二次問4(3)のみ。Topic 09 source §6が電圧降下率を `V_r=(1-d)V_s` と送電端基準へ固定しているため、教材だけでは `I≈73.4 A, P≈793 kW` となる。一方、公式標準解答は `(|E_s|-|E_r|)/|E_r|=0.1` を用い、`V_r=6.30 kV, I=67.2 A, P=733 kW` とする。
-
-QA記録: `topics/09_at_feeding/09_at_feeding_independent_reanswer.md`
+依存成果物確認:
+- `09_at_feeding_explanation.pdf`: 旧source §6を含むため要再生成
+- `09_at_feeding_practice.md` / PDF: 問10・問14が送電端基準を明示しており、技術内容・正答の変更不要
+- `09_at_feeding_images.pptx`: 電圧降下率の基準固定式を含まないため変更不要
+- 完成後blind独立再解答: 修正後は未実施
 
 ## Gate checklist
 
@@ -45,4 +45,4 @@ QA記録: `topics/09_at_feeding/09_at_feeding_independent_reanswer.md`
 
 ## next_start
 
-Topic 09 source §6の電圧降下率の定義・基準電圧を根本修正する。固定範囲は変更せず、問題文ごとに基準電圧を確認する形へ直し、依存する解説PDF・練習source/PDF等への影響範囲を確認して整合させる。修正後に正式3問のblind独立再解答を再実施する。
+修正済み `topics/09_at_feeding/09_at_feeding.md` を正本として解説PDFを再生成し、表示QA・文字抽出QA・数式/数値再計算QAを再実施する。その後、正式3問のblind独立再解答を再実施する。
