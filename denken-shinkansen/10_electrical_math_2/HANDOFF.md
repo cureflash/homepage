@@ -8,11 +8,11 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 20`
 
-current_status: `topic_11_explanation_pdf_complete`
+current_status: `topic_11_practice_source_complete`
 
 active_topic: `11 行列・線形連立方程式`
 
-次工程: Topic 11の練習問題sourceを作成し、独立計算・正答一意性QAを行う。
+次工程: Topic 11の練習PDFを作成し、表示QA・文字抽出QAを行う。
 
 ## 上位仕様
 
@@ -615,8 +615,31 @@ QA:
 - 行列式・余因子展開の独立論点化: 0件
 - 未確認実車値依存: 0件
 
-現在 `topic_11_explanation_pdf_complete / IN_PROGRESS`。
+### Topic 11 練習問題source
+
+`topics/11_matrix_linear_systems/11_matrix_linear_systems_practice.md`
+
+内容:
+- 全12問
+- 一次型8問／二次記述型4問
+- 難易度: 基礎3／標準6／複合3
+- 固定一次5問・12対象設問へ `12 / 12` 接続
+- 行列・行列積・2×2逆行列・KVL/KCL・共有枝の符号・節点方程式・`I=YV`・複素係数行列を反復
+- 二次記述型は数学演習としての記述練習であり、二次公式過去問を件数合わせで追加したものではない
+
+QA:
+- 独立計算・正答一意性 `12 / 12 PASS`
+- 一次型正答番号 `1, 2, 2, 1, 4, 1, 3, 1`
+- 教材外知識補完: 0件
+- Topic 12固有値・固有ベクトル先取り: 0件
+- 状態空間追加: 0件
+- 電力潮流詳細アルゴリズム追加: 0件
+- Newton-Raphson法・非線形反復計算追加: 0件
+- 行列式・余因子展開の独立論点化: 0件
+- 未確認実車値依存: 0件
+
+現在 `topic_11_practice_source_complete / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 11 `行列・線形連立方程式` の練習問題sourceを作成し、独立計算・正答一意性QAを行う。
+Topic 11 `行列・線形連立方程式` の練習PDFを作成し、表示QA・文字抽出QAを行う。
