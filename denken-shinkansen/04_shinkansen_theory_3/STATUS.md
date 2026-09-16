@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
-- exam_aligned_completed_topics: 9 / 14
-- current_status: `topic_10_source_progress_synced`
-- last_completed_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- active_topic: `10 新幹線が使う電力は「W」だけではない`
-- next_start: Topic 10の最終QAを再実施する
+- exam_aligned_completed_topics: 10 / 14
+- current_status: `topic_10_final_qa_passed`
+- last_completed_topic: `10 新幹線が使う電力は「W」だけではない`
+- active_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
+- next_start: Topic 11の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 01 進捗
 
@@ -181,16 +181,16 @@
 - [x] 完成後の公式過去問独立再解答 `5 / 5問・6 / 6答案要素 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習source進捗記録不整合）
 - [x] 主source・練習source進捗記録同期
-- [ ] 最終QA PASS
+- [x] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 10 `新幹線が使う電力は「W」だけではない` の主source・練習source進捗記録を実成果物へ同期した。
+Topic 10 `新幹線が使う電力は「W」だけではない` の最終QAを再実施し、`PASS / completed` とした。
 
-主source `status` と練習source `stage` を `INDEPENDENT_REANSWER_COMPLETE` へ更新し、旧「解説PDF作成」「PowerPoint作成」の次工程記録を除去した。技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX成果物は変更していない。
+固定5問・6答案要素の完成後独立再解答 `5 / 5問・6 / 6答案要素 PASS`、教材外補完0件、必須成果物、解説PDF・練習PDF・PowerPointの既存QA、SPEC境界、前回指摘された進捗記録整合性を全件PASS確認した。技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX内容は変更していない。
 
-固定5問・6答案要素の完成後独立再解答 `5 / 5問・6 / 6答案要素 PASS`、教材外補完0件、SPEC外追加0件を維持する。
+最終QA判定に合わせ、主source `status` と練習source `stage` を `COMPLETED` へ同期した。
 
 ## 判定
 
-現在 `topic_10_source_progress_synced / IN_PROGRESS`。完成数は `9 / 14`。次はTopic 10の最終QAを再実施する。
+現在 `topic_10_final_qa_passed / completed`。完成数は `10 / 14`。次はTopic 11「電力会社の三相交流をどう新幹線へ渡す？」の制作前EXAM_ALIGNMENTを実施する。
