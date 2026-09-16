@@ -9,7 +9,7 @@ Topic 01〜12は最終QAまで `PASS / completed`。
 
 active topic: `13 L0系のリニア同期モータを等価回路で考える`
 
-current status: `topic_13_powerpoint_complete`
+current status: `topic_13_blind_reanswer_ready`
 
 ## Topic 10 固定範囲
 - 力行
@@ -557,5 +557,19 @@ source完成内容:
 - Git blob SHA: `24c2622a731002fe2e9d73ada115dcb6665da767`
 - SHA-256: `7f74fb98811164f11b3c8ca6a3b2237eadc8f0cd2a9ae4ea73262de7d1fa06cc`
 
+## Topic 13 独立再解答前ゲート
+- 記録: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_blind_reanswer_gate.md`
+- `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
+- `STATUS.md` / `HANDOFF.md` / main source / 練習source / PowerPoint QA / Topic 13成果物一覧を再監査
+- 固定5過去問の公式正答番号・標準解答本文の保存: `0件`
+- 固定5過去問の完成済み個別解答・数値解・導出結果の保存: `0件`
+- 制作前検証はPASS数・要求知識・使用式・教材内マッピングのみを保持
+- 練習sourceの正答・解説は教材自身の練習問題であり、固定公式過去問の保存済み正答には該当しない
+- 固定一次4問＋二次1問・22答案要素、教材本文、PDF、練習問題、PowerPoint、固定EXAM_ALIGNMENT: 変更なし
+- 固定範囲外論点追加: `0件`
+- Topic 14先取り: `0件`
+- 未確認L0実値追加: `0件`
+- 判定: `BLIND_REANSWER_READY`
+
 ## 次に行うこと
-Topic 13「L0系のリニア同期モータを等価回路で考える」の独立再解答前ゲートを実施する。必須先読み対象を再監査し、固定5問の公式正答・完成済み数値解を必須先読み記録へ残さない状態を確認する。
+Topic 13の完成教材だけを使い、固定一次4問＋二次1問・22答案要素を独立再解答する。答案を固定するまで公式解答・標準解答本文は開かず、固定後に照合する。教材外知識補完、Topic 14依存、未確認L0実値依存があればFAILとする。
