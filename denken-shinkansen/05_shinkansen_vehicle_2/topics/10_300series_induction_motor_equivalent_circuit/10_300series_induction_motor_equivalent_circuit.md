@@ -4,7 +4,7 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPointまで完成。完成後独立再解答は未実施。
+制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完成。最終QAは未実施。
 
 本テーマは `SPEC.md` 第10章どおり、次だけを扱う。
 
@@ -625,6 +625,24 @@ L形近似で励磁枝を直列枝計算から外した場合は
 - Git blob SHA-1: `b06acd2542494d2c66783c2be3f3e8c3c39d465b`
 - SHA-256: `b88f4db3bb0d1864869a7bf1fc2323e24330c8cbf94374b02ffcfd615d155274`
 
+## 完成後独立再解答
+
+- `10_300series_induction_motor_equivalent_circuit_independent_reanswer.md`: `completed`
+- R8一次 機械 問2: `5 / 5 PASS`
+- R7一次 機械 問2: `5 / 5 PASS`
+- H25一次 機械 問1(1): `1 / 1 PASS`
+- 一次合計: `11 / 11 PASS`
+- R3二次 機械・制御 問1: `6 / 6 PASS`
+- H28二次 機械・制御 問1: `5 / 5 PASS`
+- 二次合計: `11 / 11 PASS`
+- 総合: `22 / 22 PASS`
+- 教材外知識補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- Topic 11〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+- 独立再解答判定: `PASS`
+
 ## 次工程
 
-完成教材だけで固定一次3問＋二次2問・22答案要素を独立再解答する。
+Topic 10の最終QAを実施する。
