@@ -486,4 +486,4 @@ JR東海一次資料で確認できる範囲では、ガイドウェイの推進
 
 # 次工程
 
-練習PDFは完成済み。固定EXAM_ALIGNMENTとTopic 13固定範囲を変更せず、解説画像PowerPointを作成する。
+進捗記録同期済み。固定EXAM_ALIGNMENT、問題・正答、練習PDF、PowerPointを変更せず、Topic 13の最終QAを再実施する。
