@@ -8,11 +8,11 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 20`
 
-current_status: `topic_11_explanation_source_complete`
+current_status: `topic_11_explanation_pdf_complete`
 
 active_topic: `11 行列・線形連立方程式`
 
-次工程: Topic 11の解説PDFを作成し、表示QA・文字抽出QAを行う。
+次工程: Topic 11の練習問題sourceを作成し、独立計算・正答一意性QAを行う。
 
 ## 上位仕様
 
@@ -598,8 +598,25 @@ Topic 12の固有値・固有ベクトル、状態空間、電力潮流の詳細
 - 二次試験の件数合わせ採用: 0件
 - 未確認実車値依存: 0件
 
-現在 `topic_11_explanation_source_complete / IN_PROGRESS`。
+### Topic 11 解説PDF
+
+`topics/11_matrix_linear_systems/11_matrix_linear_systems_explanation.pdf`
+
+QA:
+- A4縦5ページ
+- 200 dpi全ページ表示QA `5 / 5 PASS`
+- 文字抽出QA `PASS`
+- 固定一次5問・12対象設問の反映 `12 / 12`
+- 3段階例題反映: PASS
+- Topic 12固有値・固有ベクトル先取り: 0件
+- 状態空間追加: 0件
+- 電力潮流詳細アルゴリズム追加: 0件
+- Newton-Raphson法・非線形反復計算追加: 0件
+- 行列式・余因子展開の独立論点化: 0件
+- 未確認実車値依存: 0件
+
+現在 `topic_11_explanation_pdf_complete / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 11 `行列・線形連立方程式` の解説PDFを作成し、表示QA・文字抽出QAを行う。
+Topic 11 `行列・線形連立方程式` の練習問題sourceを作成し、独立計算・正答一意性QAを行う。
