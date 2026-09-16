@@ -7,7 +7,7 @@
 
 Topic 01〜10は最終QAまで `PASS / completed`。完成数は `10 / 39`。
 
-現在地は `topic_11_final_qa_needs_progress_sync`。Topic 11 `300系② PWMコンバータ` は、固定一次2問＋二次3問・計5問・27答案要素を変更せず、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答まで完成している。最終QAでは技術内容・固定過去問・独立再解答・必須成果物・表示QA・練習QA・SPEC境界は全件PASSだが、進捗記録3箇所が旧工程のまま残るため `NEEDS_REVISION / IN_PROGRESS` とした。
+現在地は `topic_11_source_progress_synced`。Topic 11 `300系② PWMコンバータ` は、固定一次2問＋二次3問・計5問・27答案要素を変更せず、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答まで完成している。前回最終QAで唯一FAILだった進捗記録3箇所は実成果物へ同期済み。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・正答・PDF/PPTXは変更していない。
 
 ## Topic 11 固定EXAM_ALIGNMENT
 source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
@@ -57,8 +57,10 @@ source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
   - 二次合計 `17 / 17 PASS`
   - 総合 `27 / 27 PASS`
 - 最終QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_final_qa.md`
-  - 判定: `NEEDS_REVISION / IN_PROGRESS`
-  - 進捗記録整合のみ `FAIL`
+  - 直前判定: `NEEDS_REVISION / IN_PROGRESS`
+  - 技術内容・固定過去問・独立再解答・必須成果物・表示QA・練習QA・SPEC境界: `PASS`
+  - 直前FAILだった進捗記録3箇所: `3 / 3 同期済み`
+  - 最終QA再判定: 未実施
 
 ## Topic 11 固定範囲
 - PWMコンバータ
@@ -84,18 +86,15 @@ SPEC指定可視化:
 - Topic 12〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
-## 最終QAで残った修正
-進捗記録だけを同期する。教材内容は変更しない。
+## 今回同期した進捗記録
+教材内容は変更せず、前回最終QAで指摘された3箇所だけを同期した。
 
 1. 主source `11_300series_pwm_converter.md` 冒頭状態欄
-   - 現在: 「解説本文＋3段階例題まで完成。解説PDF・練習・PowerPoint・完成後独立再解答・最終QAは未実施。」
-   - 実態: 全成果物・独立再解答・最終QAまで実施済み。最終QAは進捗記録整合だけ `FAIL`。
+   - 全成果物・独立再解答・最終QAまで実施済みの実態へ同期。
 2. 同主source末尾
-   - 現在: `topic_11_explanation_source_complete` / 次工程は解説PDF
-   - 実態: 最終QA実施済み
+   - `topic_11_source_progress_synced`、次工程を最終QA再判定へ同期。
 3. 練習source `11_300series_pwm_converter_practice_source.md` 末尾
-   - 現在: `topic_11_practice_source_complete` / 次工程は練習PDF
-   - 実態: 練習PDF・PowerPoint・独立再解答・最終QAまで実施済み
+   - `topic_11_source_progress_synced`、次工程を最終QA再判定へ同期。
 
 ## 次の正確な開始点
-上記3箇所の旧進捗記録だけを実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・正答・PDF/PPTXは変更しない。同期後、Topic 11の最終QAを再判定し、全件PASSの場合のみ `completed`、完成数 `11 / 39` とする。
+Topic 11の最終QAを再判定する。固定5問・27答案要素、完成後独立再解答 `27 / 27 PASS`、必須成果物、PDF/PPTX QA、練習QA、SPEC境界、今回同期した進捗記録を再確認し、全件PASSの場合のみ `completed`、完成数 `11 / 39` とする。
