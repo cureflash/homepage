@@ -8,11 +8,11 @@ Topic 01〜12は `completed`。
 
 完成数: `12 / 20`
 
-current_status: `topic_13_powerpoint_complete`
+current_status: `topic_13_progress_records_synced`
 
 active_topic: `13 フーリエ級数`
 
-次工程: Topic 13の完成教材だけで固定3問・5対象設問を独立再解答し、公式標準解答と照合する。
+次工程: Topic 13の最終QAを再判定する。
 
 ## 上位仕様
 
@@ -825,7 +825,7 @@ PowerPoint QA:
 source:
 `topics/13_fourier_series/13_fourier_series.md`
 
-current_status: `topic_13_powerpoint_complete`
+current_status: `topic_13_progress_records_synced`
 
 ### Topic 13 固定範囲
 
@@ -887,6 +887,7 @@ Topic 14のフーリエ変換・FFT、Topic 15の対数・dB・周波数応答�
 - 練習PDF: `topics/13_fourier_series/13_fourier_series_practice.pdf`
 - PowerPoint: `topics/13_fourier_series/13_fourier_series_images.pptx`
 - PowerPoint QA: `topics/13_fourier_series/13_fourier_series_powerpoint_qa.md`
+- 完成後独立再解答: `topics/13_fourier_series/13_fourier_series_exam_reanswer.md` → `5 / 5 PASS`
 
 PowerPoint QA:
 - 16:9・5枚
@@ -908,4 +909,4 @@ PowerPoint QA:
 
 ## 次に行うこと
 
-Topic 13 `フーリエ級数` の完成教材だけで固定3問・5対象設問を独立再解答し、公式標準解答と照合する。
+Topic 13 `フーリエ級数` の最終QAを再判定する。
