@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `12 / 22`
-- current_status: `topic_13_powerpoint_complete`
+- current_status: `topic_13_blind_reanswer_ready`
 - last_completed_topic: `12 N700Sの6極モーターを設計側から見る`
 - active_topic: `13 L0系のリニア同期モータを等価回路で考える`
-- next_start: Topic 13 独立再解答前ゲート
+- next_start: Topic 13 完成後独立再解答
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -483,8 +483,20 @@
 - [x] Topic 14先取り・固定範囲外論点・未確認L0実値追加 `0件`
 - [x] SHA-256 `7f74fb98811164f11b3c8ca6a3b2237eadc8f0cd2a9ae4ea73262de7d1fa06cc`
 
+## Topic 13 独立再解答前ゲート
+- [x] `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
+- [x] `STATUS.md` / `HANDOFF.md` / main source / 練習source / PowerPoint QA / Topic 13成果物一覧を再監査
+- [x] 固定5過去問の公式正答番号・標準解答本文の保存 `0件`
+- [x] 固定5過去問の完成済み個別解答・数値解・導出結果の保存 `0件`
+- [x] 制作前検証はPASS数・要求知識・使用式・教材内マッピングのみを保持
+- [x] main sourceの固定過去問個別正答記号・完成済み導出値の保存 `0件`
+- [x] 固定一次4問＋二次1問・22答案要素、教材本文・PDF・練習問題・PowerPoint・固定EXAM_ALIGNMENTは変更なし
+- [x] 固定範囲外論点・Topic 14先取り・未確認L0実値追加 `0件`
+- [x] 判定 `BLIND_REANSWER_READY`
+- [x] ゲート記録: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_blind_reanswer_gate.md`
+
 ## 今回進めた内容
-Topic 13「L0系のリニア同期モータを等価回路で考える」の解説画像PowerPointを完成・GitHub正本へ反映。16:9・4枚、1601×900全4枚表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS。固定一次4問＋二次1問・22答案要素と固定範囲を維持し、仕様外追加・Topic 14先取り・未確認L0実値追加は0件。
+Topic 13「L0系のリニア同期モータを等価回路で考える」の独立再解答前ゲートを完了。必須先読み対象に固定5問の公式正答番号・標準解答本文・完成済み個別解答／数値解／導出結果が保存されていないことを確認し、固定一次4問＋二次1問・22答案要素、教材本文、PDF/PPTX、固定範囲は変更していない。
 
 ## 判定
-Topic 13は `topic_13_powerpoint_complete / IN_PROGRESS`。完成数は `12 / 22`。次は独立再解答前ゲート。
+Topic 13は `topic_13_blind_reanswer_ready / IN_PROGRESS`。完成数は `12 / 22`。次は完成教材だけを使う独立再解答。
