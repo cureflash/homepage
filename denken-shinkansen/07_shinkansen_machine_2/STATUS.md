@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_explanation_source_complete`
+- current_status: `topic_12_explanation_pdf_complete`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 解説PDF
+- next_start: Topic 12 練習問題source
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -103,6 +103,7 @@
 - [x] 1600×900相当の全4枚表示QA `4 / 4 PASS`
 - [x] overflow `0件`
 - [x] ZIP整合性 PASS
+- [x] 固定一次4問＋二次1問・15答案要素を維持
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 - [x] SHA-256 `77807ae3a7bbd10e7110a79316dacad7eaedb609d2ec4a482cfe473a5b5c310d`
 
@@ -300,8 +301,18 @@
 - [x] 主要計算再検算 PASS
 - [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
 
+## Topic 12 解説PDF
+- [x] `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_explanation.pdf`
+- [x] A4縦5ページ
+- [x] 200 dpi全5ページ表示QA `5 / 5 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 固定一次2問＋二次3問・16答案要素を維持
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3` 収録
+- [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
+- [x] SHA-256 `318e5335e69fa35c049debb134e708ef0222a34823196c9beedd45d49295218c`
+
 ## 今回進めた内容
-Topic 12「N700Sの6極モーターを設計側から見る」の解説本文＋3段階例題を完成した。`N_s=120f/P_p`、すべり・滑り周波数、`P_m=Tω`、4極／6極の必要周波数比較、インバータ定格・短時間過負荷耐量、出力密度まで固定範囲内で説明し、固定5問・16答案要素を本文へ `16 / 16` マッピングした。Topic 05〜06、09、13以降の論点や未確認N700S実車値は追加していない。
+Topic 12「N700Sの6極モーターを設計側から見る」の解説PDFを完成した。A4縦5ページで、固定一次2問＋二次3問・16答案要素、解法手順、3段階例題を固定範囲内で収録。200 dpi表示QA `5 / 5 PASS`、文字抽出QA PASS、固定範囲外論点・未確認N700S実車値の追加は0件。
 
 ## 判定
-Topic 12は `topic_12_explanation_source_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の解説PDFを作成する。
+Topic 12は `topic_12_explanation_pdf_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の練習問題sourceを作成する。
