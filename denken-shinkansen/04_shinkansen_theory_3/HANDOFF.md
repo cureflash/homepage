@@ -6,27 +6,30 @@
 
 Topic 01〜09は最終QAまでPASSし、`completed`。
 
-Topic 10 `新幹線が使う電力は「W」だけではない` は完成後公式過去問独立再解答まで完了した。
+Topic 10 `新幹線が使う電力は「W」だけではない` は最終QAを実施し、進捗記録不整合のため `NEEDS_REVISION`。
 
 - 完成数: `9 / 14`
 - last completed: `09 北陸新幹線は50Hzと60Hzをどう走る？`
 - active topic: `10 新幹線が使う電力は「W」だけではない`
-- current status: `topic_10_independent_reanswer_complete / IN_PROGRESS`
-- next start: Topic 10の最終QAを実施する
+- current status: `topic_10_final_qa_needs_revision / IN_PROGRESS`
+- next start: 主source・練習sourceの進捗記録だけを実成果物へ同期する
 
 ## 今回進捗
 
-Topic 10の完成後公式過去問独立再解答を完了した。
+Topic 10の最終QAを実施した。
 
 - 固定対象: 公式理論過去問5問・6答案要素
-- 実施条件: 公式解答PDFを先に見ず、完成教材だけで解答を確定した後に公式解答と照合
-- 独立解答列: `(3), (3), (4), (3), (4), (4)`
-- 公式解答列: `(3), (3), (4), (3), (4), (4)`
-- 一致: `5 / 5問・6 / 6答案要素 PASS`
+- 完成後独立再解答: `5 / 5問・6 / 6答案要素 PASS`
 - 教材外知識補完: `0問`
 - Topic 11以降の三相・半導体・高調波依存: `0問`
 - 未確認新幹線実車力率・無効電力・補償方式依存: `0問`
-- 記録: `topics/10_power_factor/10_power_factor_exam_recheck.md`
+- 解説PDF: `4 / 4 PASS`
+- 練習PDF: `3 / 3 PASS`
+- PowerPoint: `4 / 4 PASS`
+- SPEC境界: PASS
+- 最終QA判定: `NEEDS_REVISION`
+- 未完了理由: 主source・練習sourceの進捗記録が実成果物と不一致
+- 記録: `topics/10_power_factor/10_power_factor_final_qa.md`
 
 ## Topic 10 SPEC固定範囲
 
@@ -95,6 +98,7 @@ cosφ = P / S
   - 制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
   - 解説本文＋3段階例題: 完成
   - 固定過去問要求マッピング: `6 / 6`
+  - 進捗記録: 要同期（`EXPLANATION_SOURCE_COMPLETE` / 旧次工程が残存）
 - 解説PDF: 完成
   - `topics/10_power_factor/10_power_factor_explanation.pdf`
   - QA: `topics/10_power_factor/10_power_factor_explanation_qa.md`
@@ -106,6 +110,7 @@ cosφ = P / S
   - 全15問・全問五肢択一、独立再計算 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
   - A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS
   - 固定5過去問・6答案要素への接続: `6 / 6`
+  - 進捗記録: 要同期（`PRACTICE_PDF_COMPLETE` / 旧次工程が残存）
 - 解説画像PowerPoint: 完成
   - `topics/10_power_factor/10_power_factor_images.pptx`
   - QA: `topics/10_power_factor/10_power_factor_images_qa.md`
@@ -115,11 +120,14 @@ cosφ = P / S
   - `topics/10_power_factor/10_power_factor_exam_recheck.md`
   - `5 / 5問・6 / 6答案要素 PASS`
   - 教材外補完・後続Topic依存・未確認実車値依存: 0件
-- 最終QA: 未着手
+- 最終QA: `NEEDS_REVISION`
+  - `topics/10_power_factor/10_power_factor_final_qa.md`
+  - 技術内容・過去問対応・成果物・表示QA・SPEC境界はPASS
+  - 未完了理由は主source・練習sourceの進捗記録不整合のみ
 
 ## 次に行うこと
 
-Topic 10の最終QAを実施する。必須成果物、独立再解答、表示QA、進捗記録整合、SPEC境界を確認し、PASSした場合のみ `completed` とする。
+`10_power_factor.md` と `10_power_factor_practice.md` の進捗記録だけを実成果物へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX内容は変更しない。同期後に最終QAを再実施する。
 
 ## 固定ルール
 
