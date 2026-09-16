@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 10 / 14
-- current_status: `topic_11_exam_alignment_complete`
+- current_status: `topic_11_explanation_source_complete`
 - last_completed_topic: `10 新幹線が使う電力は「W」だけではない`
 - active_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- next_start: Topic 11の解説本文＋3段階例題を作成する
+- next_start: Topic 11の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う
 
 ## Topic 01 進捗
 
@@ -193,7 +193,7 @@
 - [x] 不平衡三相・高調波・電力計測・き電変圧器結線等の固定範囲外論点を境界整理
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
@@ -202,12 +202,12 @@
 
 ## 今回進めた内容
 
-Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の制作前EXAM_ALIGNMENTを完成した。
+Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の解説本文＋3段階例題を完成した。
 
-系列SPEC固定範囲の平衡三相交流、Y・Δ結線、線間/相電圧・電流、三相電力に限定し、公式理論過去問5問・10答案要素を品質ゲート対象として固定した。制作前独立検証は `5 / 5問・10 / 10答案要素 PASS`。令和7年度の不平衡三相、令和6年度の高調波、電力計測、具体的な新幹線き電変圧器結線等は固定範囲外として除外した。
+固定5問・10答案要素を本文へ `10 / 10` マッピングし、平衡三相、相順、Y・Δ結線、相値/線間値、三相電力、Y負荷とΔ負荷の混在、既習の無効電力を使うΔコンデンサ補償までを固定範囲内で説明した。基礎・本試験標準・複合/ひっかけの3段階例題を収録した。
 
-新規source `topics/11_three_phase_ac/11_three_phase_ac.md` にEXAM_ALIGNMENT、公式出典、参考教材、教材必須説明、境界、制作前独立検証集計を記録した。完成後blind独立再解答の先読み汚染を避けるため、正答番号・個別数値解答は保存していない。
+不平衡三相、高調波、電力計測、Y-Δインピーダンス変換、具体的な新幹線き電変圧器結線、未確認実設備値は追加していない。
 
 ## 判定
 
-現在 `topic_11_exam_alignment_complete / IN_PROGRESS`。完成数は `10 / 14`。次はTopic 11の解説本文＋3段階例題を作成する。
+現在 `topic_11_explanation_source_complete / IN_PROGRESS`。完成数は `10 / 14`。次はTopic 11の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。
