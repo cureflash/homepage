@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_final_qa_needs_revision`
+- current_status: `topic_12_progress_records_synced`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 進捗記録同期
+- next_start: Topic 12 最終QA再実施
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -391,8 +391,14 @@
   - 練習source末尾 `# 次工程` が「次は練習PDFへ反映」のまま
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 12 進捗記録同期
+- [x] main sourceの `## 状態` と末尾 `# 次工程` を実成果物へ同期
+- [x] 練習source末尾 `# 次工程` を実成果物へ同期
+- [x] 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更 `0件`
+- [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
+
 ## 今回進めた内容
-Topic 12の最終QAを実施した。固定一次2問＋二次3問・16答案要素の独立再解答 `16 / 16 PASS`、必須成果物、PDF/PPTX QA、固定範囲境界はPASS。未完了理由はmain sourceと練習source末尾の旧 `次工程` 2件のみ。
+Topic 12の進捗記録2件を実成果物へ同期した。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
 
 ## 判定
-Topic 12は `topic_12_final_qa_needs_revision / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の進捗記録2件を実成果物へ同期する。
+Topic 12は `topic_12_progress_records_synced / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の最終QAを再実施する。
