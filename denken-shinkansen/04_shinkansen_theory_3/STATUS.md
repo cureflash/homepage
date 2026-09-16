@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 11 / 14
-- current_status: `topic_12_independent_reanswer_complete`
+- current_status: `topic_12_final_qa_needs_revision`
 - last_completed_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active_topic: `12 300系はなぜVVVFになった？`
-- next_start: Topic 12の最終QAを実施する
+- next_start: Topic 12の主source・練習sourceの旧進捗記録を実成果物へ同期する
 
 ## Topic 01 進捗
 
@@ -218,18 +218,20 @@
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `7 / 7 PASS`
-- [ ] 最終QA
+- [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習source進捗記録不整合）
+- [ ] 主source・練習source進捗記録同期
+- [ ] 最終QA再実施
 
 ## 今回進めた内容
 
-Topic 12 `300系はなぜVVVFになった？` の完成後公式過去問独立再解答を実施した。
+Topic 12 `300系はなぜVVVFになった？` の最終QAを実施した。
 
-固定7問について、公式解答を先に見ず、公式問題文と完成教材だけで解答を確定した後に公式解答と照合。独立解答列は `(2),(2),(5),(4),(5),(2),(2)`、公式解答列も同一で `7 / 7 PASS`。
+固定7問の完成後独立再解答 `7 / 7 PASS`、固定過去問要求の本文マッピング `7 / 7`、練習15問の正答一意性 `15 / 15 PASS`、解説PDF・練習PDF・PowerPointの表示/文字抽出/ファイルQA、SPEC固定範囲境界、必須成果物の実在はPASS。
 
-教材だけで必要知識・式・判断根拠を再構成でき、教材外知識補完 `0件`。Topic 13のインバータ主回路・PWM・波形・高調波、機械編のGTO/IGBT/SiC詳細損失・駆動比較、BJT/FET小信号回路、ホール効果、未確認300系実車回路・数値への依存はいずれも `0件`。固定範囲外追加0件。
+未完了理由は進捗記録不整合のみ。主sourceは `status: EXPLANATION_SOURCE_COMPLETE` のままで、練習・PowerPoint・独立再解答が未完了表示、次工程も解説PDF作成のまま。練習sourceも `stage: PRACTICE_PDF_COMPLETE`、次工程がPowerPoint作成のまま残っている。
 
-独立再解答記録: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_exam_recheck.md`
+最終QA記録: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_final_qa.md`
 
 ## 判定
 
-現在 `topic_12_independent_reanswer_complete / IN_PROGRESS`。完成数は `11 / 14`。次はTopic 12の最終QAを実施する。
+現在 `topic_12_final_qa_needs_revision / IN_PROGRESS`。完成数は `11 / 14`。次は主source・練習sourceの旧進捗記録だけを実成果物へ同期する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、独立再解答結果は変更しない。
