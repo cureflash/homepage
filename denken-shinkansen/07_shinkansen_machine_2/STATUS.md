@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_exam_alignment_complete`
+- current_status: `topic_12_explanation_source_complete`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 解説本文＋3段階例題
+- next_start: Topic 12 解説PDF
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -285,8 +285,23 @@
 - R01 二次 機械・制御 問1: `4 / 4 PASS`
 - 合計: `16 / 16 PASS`
 
+## Topic 12 解説source
+- [x] §1 試験論点と解法順
+- [x] §2 `N_s=120f/P_p` と周波数逆算
+- [x] §3 `s=(N_s-N)/N_s`、`N=(1-s)N_s`、`sN_s`、`f_2=sf`
+- [x] §4 `ω=2πN/60`、`P_m=Tω`
+- [x] §5 同一機械回転速度での4極・6極必要周波数比較
+- [x] §6 インバータ定格と短時間過負荷耐量
+- [x] §7 出力密度
+- [x] §8 N700Sへの接続
+- [x] 解法手順・頻出ミス・公式まとめ
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3`
+- [x] 固定5問・16答案要素を本文へ `16 / 16` マッピング
+- [x] 主要計算再検算 PASS
+- [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
+
 ## 今回進めた内容
-Topic 12「N700Sの6極モーターを設計側から見る」の制作前EXAM_ALIGNMENTを完成した。一次2問＋二次記述3問、計5問・16答案要素を固定し、公式問題・公式解答／標準解答で制作前独立検証 `16 / 16 PASS`。固定範囲外の等価回路詳細・最大トルク・ベクトル制御・同期機論点で件数を水増しせず、未確認N700S実車値も追加していない。
+Topic 12「N700Sの6極モーターを設計側から見る」の解説本文＋3段階例題を完成した。`N_s=120f/P_p`、すべり・滑り周波数、`P_m=Tω`、4極／6極の必要周波数比較、インバータ定格・短時間過負荷耐量、出力密度まで固定範囲内で説明し、固定5問・16答案要素を本文へ `16 / 16` マッピングした。Topic 05〜06、09、13以降の論点や未確認N700S実車値は追加していない。
 
 ## 判定
-Topic 12は `topic_12_exam_alignment_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の解説本文＋3段階例題を作成する。
+Topic 12は `topic_12_explanation_source_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の解説PDFを作成する。
