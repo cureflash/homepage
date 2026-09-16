@@ -4,34 +4,26 @@
 
 ## 現在地
 
-Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は解説画像PowerPoint＋QAまで完了した。
+Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は完成後公式過去問独立再解答まで完了した。
 
 - 完成数: `10 / 14`
 - last completed: `10 新幹線が使う電力は「W」だけではない`
 - active topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- current status: `topic_11_powerpoint_complete / IN_PROGRESS`
-- next start: Topic 11の完成後公式過去問独立再解答を実施する
+- current status: `topic_11_independent_reanswer_complete / IN_PROGRESS`
+- next start: Topic 11の最終QAを実施する
 
 ## 今回進捗
 
-Topic 11の解説画像PowerPointを作成し、固定過去問要求の可視化・全ページ表示QA・文字抽出・ZIP/XML整合性QAを完了した。
+Topic 11の完成後公式過去問独立再解答を実施し、固定5問・10答案要素を完成教材だけで再解答した。公式解答は独立解答確定後に照合した。
 
-- PowerPoint: `topics/11_three_phase_ac/11_three_phase_ac_images.pptx`
-- 画面比率: 16:9
-- スライド数: 4
+- 独立再解答記録: `topics/11_three_phase_ac/11_three_phase_ac_exam_recheck.md`
 - 固定対象: 公式理論過去問5問・10答案要素
-- 可視化接続: `10 / 10`
-- Slide 1: 平衡三相の120°位相差・相順、新幹線への概念接続
-- Slide 2: Y結線、`VL=√3Vp`、`IL=Ip`、1相回路への落とし方
-- Slide 3: Δ結線、`VL=Vp`、`IL=√3Ip`、枝電流→線電流
-- Slide 4: 三相電力、Y/Δ混在時の解法、Δコンデンサ、固定過去問対応
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- shape-bound overflow: `0件`
-- 文字抽出: PASS
-- ZIP/XML整合性: PASS
-- QA: `topics/11_three_phase_ac/11_three_phase_ac_images_qa.md` / PASS
-- SHA-256: `4b1bf2182b92329f3be1565c308e3e89c81df379c6549eb39085b3f2bf83adb6`
-- 境界維持: 不平衡三相、高調波、電力計測、Y-Δインピーダンス変換、具体的き電変圧器結線、Topic 12以降の半導体・整流・PWM、未確認実設備値の追加0件
+- 独立解答列: `(3),(4),(4),(4),(3),(4),(3),(4),(1),(1)`
+- 公式解答列: `(3),(4),(4),(4),(3),(4),(3),(4),(1),(1)`
+- 一致: `5 / 5問・10 / 10答案要素 PASS`
+- 教材外知識補完: 0件
+- 境界外依存: 0件
+- 未確認実設備値・具体的き電変圧器結線への依存: 0件
 
 ## Topic 11 SPEC固定範囲
 
@@ -69,6 +61,7 @@ P = √3 VL IL cosφ
    - Y結線負荷の有効・無効電力、Δ結線コンデンサの三相無効電力
 
 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
+完成後独立再解答: `5 / 5問・10 / 10答案要素 PASS`
 
 ## 教材で必須となる説明
 
@@ -86,7 +79,7 @@ P = √3 VL IL cosφ
 - Topic 08〜10のRLC・力率・無効電力は既習事項としてのみ使用する
 - 新幹線側は三相系統→単相25 kV→車内三相という概念接続までとし、具体的なき電変圧器結線を推測しない
 
-上記は解説本文・解説PDF・練習問題・解説画像PowerPointへ反映済み。
+上記は解説本文・解説PDF・練習問題・解説画像PowerPointへ反映済みで、完成後独立再解答でも固定10答案要素を教材だけで処理できることを確認済み。
 
 ## 境界
 
@@ -128,12 +121,12 @@ P = √3 VL IL cosφ
   - ZIP/XML整合性: PASS
   - 固定過去問要求の可視化: `10 / 10`
 - 解説画像PowerPoint QA: `topics/11_three_phase_ac/11_three_phase_ac_images_qa.md` / PASS
-- 完成後独立再解答: 未実施
+- 完成後独立再解答: `topics/11_three_phase_ac/11_three_phase_ac_exam_recheck.md` / `5 / 5問・10 / 10答案要素 PASS`
 - 最終QA: 未実施
 
 ## 次に行うこと
 
-Topic 11の完成後公式過去問独立再解答を実施する。固定5問・10答案要素とSPEC境界を維持し、保存済み正答を先に見ない。
+Topic 11の最終QAを実施する。固定5問・10答案要素、必須成果物、表示QA、進捗記録整合、SPEC境界を再監査する。
 
 ## 固定ルール
 
