@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 8 / 12
-- current_status: `topic_09_practice_pdf_complete`
+- current_status: `topic_09_powerpoint_complete`
 - last_completed_topic: `08 積分 速度曲線の面積は距離`
 - active_topic: `09 微積分で電気を読む`
-- next_start: `Topic 09 解説画像PowerPoint`
+- next_start: `Topic 09 完成教材だけでの公式過去問独立再解答`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -86,24 +86,26 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 09「微積分で電気を読む」の練習PDFをGitHub正本へ反映した。
+Topic 09「微積分で電気を読む」の解説画像PowerPointをGitHub正本へ反映した。
 
-- 成果物: `topics/09_calculus_electricity/09_calculus_electricity_practice.pdf`
-- 全12問・全問五肢択一（基礎3 / 標準7 / 複合2）＋完全解説
-- A4縦4ページ
-- 200 dpi表示QA `4 / 4 PASS`
+- 成果物: `topics/09_calculus_electricity/09_calculus_electricity_images.pptx`
+- 16:9、全5枚
+- 固定5式を全件可視化
+- 固定5過去問・7答案要素に必要な式選択、グラフの傾き・面積、ファラデー・レンツ、区分積分、仕事・単位関係を固定範囲内で図解
+- 200 dpi表示QA `5 / 5 PASS`
 - 文字抽出QA `PASS`
-- 正答番号・主要数値整合 `12 / 12 PASS`
+- PPTX ZIP整合 `PASS`
+- クリッピング・重なり・文字化け0件
 - 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
 
 ## 判定
 
-`topic_09_practice_pdf_complete / IN_PROGRESS`。
+`topic_09_powerpoint_complete / IN_PROGRESS`。
 
-完成数は `8 / 12` のまま。次工程は解説画像PowerPoint。
+完成数は `8 / 12` のまま。次工程は完成教材だけで固定5問・7答案要素を独立再解答。
