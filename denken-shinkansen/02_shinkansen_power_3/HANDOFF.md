@@ -6,57 +6,52 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は完成済み。
 
 ## 今回進捗
-Topic 10 `新幹線が突然大電力を使ったら？` の最終QAを再実施し、`PASS / completed` とした。
+Topic 11 `架線事故ではどうやって電気を止める？` の制作前EXAM_ALIGNMENTを完了した。
 
-再確認結果:
-- 必須成果物: PASS
-- 固定5問・8小問の完成後ブラインド独立再解答: `8 / 8 PASS`
-- 公式解答一致: `8 / 8`
-- 教材外知識補完: `0件`
-- 解説PDF・練習PDF・PowerPoint QA: PASS
-- SPEC固定範囲外追加: `0件`
-- 前回FAILだった進捗記録3箇所の整合: PASS
+固定結果:
+- 品質ゲート対象: 公式過去問5問・7答案要素
+- R5下 電力 問16 (a)(b)
+- R5上 電力 問16 (a)(b)
+- R2 電力 問8
+- R2 電力 問9
+- H22 電力 問8
+- 制作前独立検証: `7 / 7 PASS`
+- 公式解答との不一致: `0件`
+- SPEC固定範囲外の採用問題: `0件`
+- 既完了Topic 06固定問題との重複採用: `0件`
+- 未確認新幹線実設備値への依存: `0件`
 
-技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更していない。main source、最終QA、STATUS、HANDOFFのみ完成状態へ同期した。
+R8上 電力 問7は保護協調・地絡保護に関連するが、自動再閉路がSPEC外のため品質ゲートから除外。R8上 電力 問9も通信誘導等のSPEC外論点を含むため除外した。件数合わせの仕様追加はしていない。
 
-## Topic 10 固定過去問
-- R8上 電力 問12
-- R7上 電力 問17 (a)(b)
-- R4上 電力 問17 (a)(b)
-- R3 法規 問13 (a)(b)
-- R1 電力 問17 (a)(b)
+制作前の個別正答・最終数値解は、完成後ブラインド独立再解答を保護するためsource・進捗記録へ保存していない。
 
-## Topic 10 固定範囲
-SPECから追加しない。
+## Topic 11 固定範囲
+`SPEC.md` から追加しない。
 
-- 最大需要電力
-- 需要率
-- 負荷率
-- 不等率
-- 力率
-- 電圧変動
-- 電力損失
-- 無効電力
+- 短絡
+- 地絡
+- 短絡電流
+- 過電流
+- 遮断器
+- 遮断容量
+- 保護リレー
+- 選択遮断
+- 接地
+- 避雷器
 
-新幹線側は `列車負荷増加 → 電流増加 → 電圧降下増加 → 損失増加` の因果だけを使う。未確認実設備値は真値として置かない。Topic 11以降の短絡・保護・遮断、弛度・張力、材料、配電・地中電線路、回生・蓄電へ先回りしない。
+新幹線側は「25kVの架線が地絡したら、なぜ発電所まで全部止めなくてよいのか？」を入口として事故検出・遮断・保護協調へつなぐ。未確認の保護整定値、事故電流値、遮断器定格、鉄道固有アルゴリズムは真値として置かない。
 
 ## 直前完了テーマ
 Topic 10 `新幹線が突然大電力を使ったら？` は `PASS / completed`。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、最終QA PASS。
 
 ## 現在状態
-- `current_status`: `topic_10_completed`
+- `current_status`: `topic_11_exam_alignment_complete`
 - 完成数: `10 / 16`
 - last completed: Topic 10 `新幹線が突然大電力を使ったら？`
 - active: Topic 11 `架線事故ではどうやって電気を止める？`
-- Topic 10 source: `topics/10_load_variation/10_load_variation.md`
-- Topic 10 解説PDF: `topics/10_load_variation/10_load_variation_explanation.pdf`
-- Topic 10 練習問題source: `topics/10_load_variation/10_load_variation_practice_source.md`
-- Topic 10 練習PDF: `topics/10_load_variation/10_load_variation_practice.pdf`
-- Topic 10 練習PDF QA: `topics/10_load_variation/10_load_variation_practice_qa.md`
-- Topic 10 解説画像PowerPoint: `topics/10_load_variation/10_load_variation_images.pptx`
-- Topic 10 PowerPoint QA: `topics/10_load_variation/10_load_variation_powerpoint_qa.md`
-- Topic 10 完成後独立再解答: `topics/10_load_variation/10_load_variation_independent_reanswer.md`
-- Topic 10 最終QA: `topics/10_load_variation/10_load_variation_final_qa.md`
+- Topic 11 source: `topics/11_fault_protection/11_fault_protection.md`
+- 固定問題: `5問・7答案要素`
+- 制作前独立検証: `7 / 7 PASS`
 
 ## 次の正確な開始点
-Topic 11 `架線事故ではどうやって電気を止める？` の制作前EXAM_ALIGNMENTを実施する。`SPEC.md` のTopic 11固定範囲だけを対象に、電気技術者試験センター公式過去問を直近年度から調査し、三種原則5問以上を固定する。本文・PDF等の制作にはまだ進まない。
+Topic 11の解説本文sourceを作成する。固定5問・7答案要素とSPEC固定範囲から逆算し、基礎・本試験標準・複合の3段階例題まで作る。固定要求事項を `7 / 7` 本文へ対応付け、PDF等にはまだ進まない。
