@@ -10,7 +10,7 @@ current_status: `topic_14_explanation_pdf_complete`
 
 active_topic: `14 インバータのギザギザ波形を分解する`
 
-Topic 14は解説本文＋3段階例題、解説PDF＋表示QAまで完了。固定一次2問・3答案要素＋二次1問・2答案要素を `5 / 5` 接続し、3段階例題 `3 / 3`。解説PDFはA4縦5ページ、200 dpi全ページ表示QA `5 / 5 PASS`、文字抽出PASS。二次採用1問・2答案要素、二次数合わせ0件。次工程は練習問題source＋練習PDF。
+Topic 14は解説本文＋3段階例題、解説PDF＋表示QAまで完了。固定一次2問・3答案要素＋二次1問・2答案要素を `5 / 5` 接続し、3段階例題 `3 / 3`。解説PDFはA4縦2ページ、200 dpi全ページ表示QA `2 / 2 PASS`、文字抽出PASS。二次採用1問・2答案要素、二次数合わせ0件。次工程は練習問題source＋練習PDF。
 
 ## Topic 14 成果物
 
@@ -83,8 +83,8 @@ Topic 14は解説本文＋3段階例題、解説PDF＋表示QAまで完了。固
 
 記録: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_explanation_pdf_qa.md`
 
-- A4縦5ページ
-- 200 dpi全ページ表示QA: `5 / 5 PASS`
+- A4縦2ページ
+- 200 dpi全ページ表示QA: `2 / 2 PASS`
 - 文字抽出QA: `PASS`
 - 固定一次2問・3答案要素＋二次1問・2答案要素への接続: `5 / 5`
 - 3段階例題: `3 / 3`
@@ -259,7 +259,7 @@ Topic 14は解説本文＋3段階例題、解説PDF＋表示QAまで完了。固
 
 ## 直前完了Topic
 
-Topic 13「新幹線の交流電力を複数で扱う」は `PASS / completed`。
+Topic 13「新幹線の交流電力を複素数で扱う」は `PASS / completed`。
 
 - 固定一次3問・15小問＋二次1問・4答案要素
 - 完成後独立再解答 `19 / 19 PASS`
