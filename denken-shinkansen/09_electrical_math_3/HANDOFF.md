@@ -6,17 +6,17 @@
 
 Topic 01〜08は `completed`。
 
-Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。
+Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。
 
 完成数: `8 / 12`
 
-current_status: `topic_09_practice_pdf_complete`
+current_status: `topic_09_powerpoint_complete`
 
 last_completed_topic: `08 積分 速度曲線の面積は距離`
 
 active_topic: `09 微積分で電気を読む`
 
-next_start: `Topic 09 解説画像PowerPoint`
+next_start: `Topic 09 完成教材だけでの公式過去問独立再解答`
 
 ## Topic 09 固定仕様範囲
 
@@ -131,6 +131,26 @@ next_start: `Topic 09 解説画像PowerPoint`
 
 判定: `PASS / PRACTICE_PDF_COMPLETE`。
 
+## Topic 09 解説画像PowerPoint
+
+成果物: `topics/09_calculus_electricity/09_calculus_electricity_images.pptx`
+
+- 16:9、全5枚
+- 固定5式を全件可視化
+- `i=dq/dt` / `q=∫i dt` を傾き・面積として整理
+- `e=-N dΦ/dt`、磁束鎖交数、レンツの法則、直線変化を図解
+- `E=∫P dt` と電力差グラフの区分積分手順を図解
+- `W=∫F dx`、一定力 `W=Fs`、`N·m=J`、`J/s=W` を整理
+- 固定5過去問・7答案要素に必要な解法を固定範囲内で可視化
+- 200 dpi表示QA `5 / 5 PASS`
+- 文字抽出QA `PASS`
+- PPTX ZIP整合 `PASS`
+- クリッピング・重なり・文字化け0件
+- 新幹線接続はSPECの3点だけ。未確認実車値は追加していない
+- 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件
+
+判定: `PASS / POWERPOINT_COMPLETE`。
+
 ## 次に行うこと
 
-Topic 09の解説画像PowerPointを作成する。固定5過去問・7答案要素、固定5式、問題数・正答は変更しない。
+完成教材だけを使い、固定5問・7答案要素を保存済み正答を見ずに独立再解答する。固定EXAM_ALIGNMENTとTopic 09の固定5式は変更しない。
