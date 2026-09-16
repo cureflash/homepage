@@ -32,7 +32,7 @@ Topic 12の解説画像PowerPointを作成し、表示・ファイルQAを完了
 - ZIP/XML整合性: `PASS`
 - 固定範囲外追加: `0件`
 - 未確認300系実車回路・数値依存: `0件`
-- PowerPoint SHA-256: `7dc6c221a04f6bef8658eb7825e8b68c0290af36ed8446d26f22d995169dd69f`
+- PowerPoint SHA-256: `f749810f01da439213def981b10e0081dc39e8c1c7515153e156960cd0a5ddff`
 
 公式過去問の図は複製せず、独自の教材用模式図とした。固定過去問の正答番号・個別最終数値は、完成後独立再解答の先読み汚染を避けるためsource/HANDOFFへ保存していない。
 
