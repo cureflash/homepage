@@ -9,7 +9,7 @@ Topic 01〜12は最終QAまで `PASS / completed`。
 
 active topic: `13 L0系のリニア同期モータを等価回路で考える`
 
-current status: `topic_13_practice_pdf_complete`
+current status: `topic_13_powerpoint_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -543,5 +543,19 @@ source完成内容:
 - 未確認L0実値追加: `0件`
 - SHA-256: `92201e0833c5429c591de92c78c9fe7d7e9f27a638bf1b3110b63a91d1037996`
 
+## Topic 13 解説画像PowerPoint
+- `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_images.pptx`: `completed`
+- 16:9・4枚
+- 同期機→リニア同期モータの概念対応、電機子反作用、`X_s=X_a+X_l`、1相分等価回路・フェーザ、固定5過去問への接続を可視化
+- Visual QA: `4 / 4 PASS`（1601×900）
+- overflow: `0件`
+- ZIP整合性: `PASS`
+- 固定一次4問＋二次1問・22答案要素: 維持
+- 固定範囲外追加: `0件`
+- Topic 14先取り: `0件`
+- 未確認L0実値追加: `0件`
+- Git blob SHA: `24c2622a731002fe2e9d73ada115dcb6665da767`
+- SHA-256: `7f74fb98811164f11b3c8ca6a3b2237eadc8f0cd2a9ae4ea73262de7d1fa06cc`
+
 ## 次に行うこと
-Topic 13「L0系のリニア同期モータを等価回路で考える」の解説画像PowerPointを、固定EXAM_ALIGNMENT・解説本文・解説PDF・練習source/PDFの固定範囲を変更せず作成する。
+Topic 13「L0系のリニア同期モータを等価回路で考える」の独立再解答前ゲートを実施する。必須先読み対象を再監査し、固定5問の公式正答・完成済み数値解を必須先読み記録へ残さない状態を確認する。
