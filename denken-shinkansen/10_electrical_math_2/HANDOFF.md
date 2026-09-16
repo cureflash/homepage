@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜09は `completed`。
+Topic 01〜10は `completed`。
 
-完成数: `9 / 20`
+完成数: `10 / 20`
 
-current_status: `topic_10_source_progress_synced`
+current_status: `topic_10_completed`
 
-active_topic: `10 伝達関数・極・零点`
+active_topic: `11 行列・線形連立方程式`
 
-次工程: Topic 10の最終QAを再判定する。教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF/PPTX・完成後独立再解答は変更しない。
+次工程: Topic 11の制作前EXAM_ALIGNMENTを行う。二種相当の公式過去問を直近年度優先で調査し、固定範囲だけで完結する品質ゲートを先に確定する。
 
 ## 上位仕様
 
@@ -330,7 +330,7 @@ QA:
 
 総合判定: `PASS / completed`。
 
-## Topic 10 現在地
+## Topic 10 完了記録
 
 テーマ: `伝達関数・極・零点`
 
@@ -507,18 +507,32 @@ QA:
 
 `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_final_qa.md`
 
-初回判定: `NEEDS_REVISION / IN_PROGRESS`。
+初回判定は `NEEDS_REVISION / IN_PROGRESS`。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・表示QA・SPEC境界はPASSで、未完了理由はsource進捗記録3箇所だけだった。
 
-技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・表示QA・SPEC境界はPASS。未完了理由はsource進捗記録3箇所だけ。
+その後、以下3箇所だけを実成果物へ同期した。
 
-- 主source冒頭 `## 状態`: 解説PDF前の旧状態
-- 主source末尾 `## 次工程`: 解説PDF作成の旧工程
-- 練習source末尾 `## 次工程`: 練習PDF作成の旧工程
+- 主source冒頭 `## 状態`
+- 主source末尾 `## 次工程`
+- 練習source末尾 `## 次工程`
 
-上記3箇所は2026-09-16に実成果物へ同期済み。差分監査で主sourceは2箇所、練習sourceは1箇所のみの変更を確認し、技術内容の変更は0件。
+技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更していない。
 
-current_status: `topic_10_source_progress_synced / IN_PROGRESS`。
+再判定で以下を確認した。
+
+- 必須成果物実在: PASS
+- 固定二次5問・11対象設問: PASS
+- 完成後独立再解答 `11 / 11 PASS`: PASS
+- 練習問題独立計算・正答一意性 `12 / 12 PASS`: PASS
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- source進捗整合: PASS
+- Topic 12/15先取り: 0件
+- ラウス・フルビッツ法一般手順追加: 0件
+- 定常偏差・畳み込みの独立論点化: 0件
+- 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
+
+総合判定: `PASS / completed`。
 
 ## 次に行うこと
 
-Topic 10の最終QAを再判定する。固定二次5問・11対象設問、完成後独立再解答 `11 / 11 PASS`、成果物QA、固定範囲境界を維持し、技術内容は変更しない。
+Topic 11 `行列・線形連立方程式` の制作前EXAM_ALIGNMENTを行う。二種相当の公式過去問を直近年度優先で調査し、固定範囲外の電力潮流詳細やTopic 12固有値を件数合わせで追加しない。
