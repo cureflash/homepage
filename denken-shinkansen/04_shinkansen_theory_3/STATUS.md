@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 9 / 14
-- current_status: `topic_10_explanation_pdf_complete`
+- current_status: `topic_10_practice_pdf_complete`
 - last_completed_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
 - active_topic: `10 新幹線が使う電力は「W」だけではない`
-- next_start: Topic 10の練習問題source・練習PDFを作成する
+- next_start: Topic 10の解説画像PowerPointを作成する
 
 ## Topic 01 進捗
 
@@ -176,19 +176,19 @@
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source・練習PDF
+- [x] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 10 `新幹線が使う電力は「W」だけではない` の解説PDFを完成した。
+Topic 10 `新幹線が使う電力は「W」だけではない` の練習問題source・練習PDFを完成した。
 
-A4縦4ページ。固定5問・6答案要素を `6 / 6` 反映し、有効・無効・皮相電力、力率、電力三角形、複素電力の基本、`R-XL`と力率、電流の同相・直交成分、並列/直列の力率改善、3段階例題、解法アルゴリズムを収録した。
+全15問・全問五肢択一。基礎4 / 本試験標準8 / 複合・応用3。固定5過去問・6答案要素へ `6 / 6` 接続し、独立再計算・論理確認 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`、正答位置 `(1)〜(5)` 各3問。
 
-200 dpi全ページ表示QAは `4 / 4 PASS`、文字抽出QAもPASS。Topic 11の三相交流、Topic 12以降の半導体、Topic 13側の高調波、未確認の新幹線実車力率・補償方式の追加は0件。
+練習PDFはA4縦3ページ。200 dpi全ページ表示QA `3 / 3 PASS`、文字抽出QA PASS。Topic 11以降の三相・半導体・高調波、電力科目・法規の設備詳細、未確認の新幹線実車力率・無効電力・補償方式の追加は0件。
 
 ## 判定
 
-現在 `topic_10_explanation_pdf_complete / IN_PROGRESS`。完成数は `9 / 14`。次はTopic 10の練習問題source・練習PDFを作成する。
+現在 `topic_10_practice_pdf_complete / IN_PROGRESS`。完成数は `9 / 14`。次はTopic 10の解説画像PowerPointを作成する。
