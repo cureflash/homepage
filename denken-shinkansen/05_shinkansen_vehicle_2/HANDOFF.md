@@ -7,7 +7,54 @@
 
 Topic 01〜12は最終QAまで `PASS / completed`。完成数は `12 / 39`。
 
-現在地は `topic_12_completed`。Topic 12 `300系③ VVVFインバータと誘導機制御` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答、最終QAまで完了。固定一次4問＋二次1問・13答案要素、完成後独立再解答 `13 / 13 PASS`、最終QA `PASS / completed`。次はTopic 13 `300系④ 回生と四象限運転` の制作前EXAM_ALIGNMENT。
+現在地は `topic_13_exam_alignment_complete`。Topic 13 `300系④ 回生と四象限運転` は制作前EXAM_ALIGNMENTを完了。固定一次4問＋二次1問・15答案要素、制作前独立検証 `15 / 15 PASS`。SPEC指定8項目・3可視化へ接続し、Topic 14先取り、回生失効・電力貯蔵設備、SPEC外制御方式、未確認300系実車値の追加は0件。次は解説本文＋3段階例題。
+
+## Topic 13 固定EXAM_ALIGNMENT
+source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
+
+固定過去問:
+- R6 一次 機械 問2 (1),(2)
+- R5 一次 機械 問2 (1),(2),(3),(5)
+- H28 一次 機械 問5 (3)〜(5)
+- H27 一次 機械 問3 (1),(2)
+- H24 二次 機械・制御 問3 (1),(2)a〜c
+
+品質ゲート:
+- 一次: `4問・11答案要素`
+- 二次: `1問・4答案要素`
+- 合計: `5問・15答案要素`
+- 制作前独立検証: 一次 `11 / 11 PASS`、二次 `4 / 4 PASS`、合計 `15 / 15 PASS`
+- 二次記述問題: `1問`
+- 公式解答・標準解答との不一致: `0件`
+- 参考教材2系統以上: `PASS`
+- SPEC指定8項目: `8 / 8 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+- Topic 14先取り: `0件`
+- 回生失効・電力貯蔵設備追加: `0件`
+- SPEC外制御方式追加: `0件`
+- 未確認300系実車値追加: `0件`
+
+## Topic 13 固定範囲
+- 四象限運転
+- トルク方向
+- 回転方向
+- 発電機運転
+- 回生電力
+- 直流中間回路
+- 架線側電力フロー
+- エネルギー収支
+
+SPEC指定可視化:
+- 速度・トルク平面
+- 力行・回生時の電力フロー
+- 回生可能エネルギー
+
+範囲境界:
+- Topic 14の走行抵抗・必要けん引力・加速度計算は先取りしない
+- H27の回生失効・電力貯蔵・運行間隔は追加しない
+- H24二次問3の無効電流・出力可能領域は追加しない
+- Topic 11/12の高調波・力率制御・V/f制御等は本テーマに必要な接続以上に再展開しない
+- 未確認の300系回生効率・制御定数等を実車値として追加しない
 
 ## Topic 12 固定EXAM_ALIGNMENT
 source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -165,4 +212,4 @@ SPEC指定可視化:
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。完成後独立再解答 `27 / 27 PASS`、最終判定 `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 13 `300系④ 回生と四象限運転` の制作前EXAM_ALIGNMENTを行う。MASTER SPECとEXAM_ALIGNMENT SPECに従い、一次・二次を合わせ原則5問以上を調査し、二次対象論点で確認できる記述問題を含める。本文・PDF等の制作はEXAM_ALIGNMENT固定後に開始する。
+Topic 13 `300系④ 回生と四象限運転` の解説本文＋3段階例題を作成する。固定5過去問・15答案要素、SPEC指定8項目・3可視化を本文へ接続し、固定範囲外へ広げない。
