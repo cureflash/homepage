@@ -8,11 +8,11 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 20`
 
-current_status: `topic_11_powerpoint_complete`
+current_status: `topic_11_exam_reanswer_complete`
 
 active_topic: `11 行列・線形連立方程式`
 
-次工程: Topic 11の完成後独立再解答を実施し、固定一次5問・12対象設問を教材だけで `12 / 12 PASS` できるか確認する。
+次工程: Topic 11の最終QAを実施し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
 
 ## 上位仕様
 
@@ -681,8 +681,28 @@ QA:
 - 二次公式過去問の件数合わせ追加: 0件
 - 未確認実車値依存: 0件
 
-現在 `topic_11_powerpoint_complete / IN_PROGRESS`。
+### Topic 11 完成後独立再解答
+
+`topics/11_matrix_linear_systems/11_matrix_linear_systems_exam_reanswer.md`
+
+結果:
+- 固定一次5問・12対象設問: `12 / 12 PASS`
+- R8 問3 (1),(2): `ヨ, ニ` → `2 / 2 PASS`
+- R6 問3 (1),(2): `ホ, ニ` → `2 / 2 PASS`
+- R4 問3 (1),(3): `ハ, ホ` → `2 / 2 PASS`
+- R1 問2 (3)〜(5): `リ, ロ, イ` → `3 / 3 PASS`
+- R1 問6 (3)〜(5): `ロ, ハ, イ` → `3 / 3 PASS`
+- 教材外知識補完: 0件
+- Topic 12固有値・固有ベクトル先取り: 0件
+- 状態空間の使用: 0件
+- 電力潮流詳細アルゴリズムの使用: 0件
+- Newton-Raphson法・非線形反復計算の使用: 0件
+- 行列式・余因子展開の独立論点化: 0件
+- 二次公式過去問の件数合わせ: 0件
+- 未確認実車値依存: 0件
+
+現在 `topic_11_exam_reanswer_complete / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 11 `行列・線形連立方程式` の完成後独立再解答を実施し、固定一次5問・12対象設問を教材だけで `12 / 12 PASS` できるか確認する。
+Topic 11 `行列・線形連立方程式` の最終QAを実施し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
