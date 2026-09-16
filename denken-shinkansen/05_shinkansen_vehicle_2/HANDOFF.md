@@ -7,7 +7,7 @@
 
 Topic 01〜11は最終QAまで `PASS / completed`。完成数は `11 / 39`。
 
-現在地は `topic_12_powerpoint_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QAまで完了した。固定一次4問＋二次1問・13答案要素は変更していない。
+現在地は `topic_12_independent_reanswer_passed`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答まで完了した。固定一次4問＋二次1問・13答案要素は変更していない。
 
 ## Topic 12 固定EXAM_ALIGNMENT
 source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -107,6 +107,20 @@ source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_i
 - Topic 11のPWMコンバータ側論点再展開: `0件`
 - 未確認300系実車値の真値化: `0件`
 
+## Topic 12 完成後独立再解答
+- record: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control_independent_reanswer.md`
+- 一次: `11 / 11 PASS`
+- 二次: `2 / 2 PASS`
+- 合計: `13 / 13 PASS`
+- 教材外知識補完: `0件`
+- 公式解答・標準解答との不一致: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- Topic 13先取り: `0件`
+- SPEC外制御方式追加: `0件`
+- Topic 11のPWMコンバータ側論点再展開: `0件`
+- 未確認300系実車値追加: `0件`
+
 ## Topic 12 固定範囲
 - VVVF
 - PWM
@@ -139,4 +153,4 @@ SPEC指定可視化:
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。完成後独立再解答 `27 / 27 PASS`、最終判定 `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 12の完成教材だけを使い、固定一次4問＋二次1問・13答案要素を保存済み正答を見ずに独立再解答する。教材外補完があればFAILとし、固定EXAM_ALIGNMENTは変更しない。
+Topic 12の最終QAを実施する。完成後独立再解答 `13 / 13 PASS`、必須成果物、PDF/PPTX表示QA、練習QA、固定範囲境界、進捗記録整合を確認し、PASSならcompleted、記録不整合等があればNEEDS_REVISIONとする。
