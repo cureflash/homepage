@@ -6,99 +6,104 @@
 
 Topic 01〜11は `PASS / completed`。完成数は `11 / 21`。
 
-current_status: `topic_11_completed`
+current_status: `topic_12_exam_alignment_complete`
 
 active_topic: `12 三相交流を新幹線へ渡す`
 
-Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA、完了状態同期まで完了。最終判定は `PASS / completed`。
+Topic 12は制作前EXAM_ALIGNMENTまで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。制作前独立計算 `5 / 5 PASS`。一次・二次を含む関連候補を9件以上調査し、固定範囲外体系を必要とする問題は採用していない。
 
-次工程はTopic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENT。本文・成果物制作より先に、公式過去問を一次・二次とも確認し、固定範囲と直接対応する問題だけを品質ゲート対象へ固定する。
+次工程はTopic 12の解説本文＋3段階例題。固定EXAM_ALIGNMENTと系列SPECの範囲だけで作成する。
 
-## Topic 11 成果物
+## Topic 12 source
 
-- source: `topics/11_atc_frequency_filter/11_atc_frequency_filter.md`
-- 解説PDF: `topics/11_atc_frequency_filter/11_atc_frequency_filter_explanation.pdf`
-- 練習source: `topics/11_atc_frequency_filter/11_atc_frequency_filter_practice.md`
-- 練習PDF: `topics/11_atc_frequency_filter/11_atc_frequency_filter_practice.pdf`
-- PowerPoint: `topics/11_atc_frequency_filter/11_atc_frequency_filter_images.pptx`
-- PowerPoint QA: `topics/11_atc_frequency_filter/11_atc_frequency_filter_powerpoint_qa.md`
-- 独立再解答: `topics/11_atc_frequency_filter/11_atc_frequency_filter_reanswer.md`
-- 最終QA: `topics/11_atc_frequency_filter/11_atc_frequency_filter_final_qa.md`
-- stage: `COMPLETED`
-- completion: `completed`
-
-## Topic 11 固定範囲
-
-系列SPECどおり次だけを扱う。
-
-- RLC共振
-- 周波数応答
-- ローパス
-- ハイパス
-- バンドパス
-- 遮断周波数
-- ゲイン
-- 位相
-
-ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現しない。「特定周波数を選択する教育用回路」として扱う。
-
-境界:
-
-- 実車ATCの未確認回路・定数・信号周波数を真値化しない
-- 電力用能動フィルタのインバータ・高調波補償制御を追加しない
-- 自動制御のラプラス領域伝達関数・フィードバック設計を追加しない
-- オペアンプ能動フィルタを追加しない
-- Topic 12以降の三相回路・複素電力・高調波・過渡現象を先取りしない
-
-## Topic 11 固定EXAM_ALIGNMENT
-
-品質ゲート対象は一次「理論」5問・25小問。
-
-- H28 問8(1)〜(5): 周波数測定、交流ブリッジ、`ω=2πf`
-- H27 問2(1)〜(5): RC回路、振幅、位相、周波数依存
-- H25 問3(1)〜(5): 可変周波数交流回路、特定周波数での零条件
-- H24 問7(1)〜(5): 測定回路の周波数特性、周波数非依存補償
-- H22 問4(1)〜(5): ヘイブリッジ、回路定数からの周波数特定
-
-公式問題・公式解答25小問は照合済み。
-
-## Topic 11 二次試験の扱い
-
-2026-09-16時点でR8二次は未実施。R7〜R5二次「電力・管理」「機械・制御」を確認した。
-
-- R7: 固定範囲だけで完結する直接対応問題なし
-- R6: 固定範囲だけで完結する直接対応問題なし
-- R5 機械・制御 問3「電力用能動フィルタ」: パワーエレクトロニクス・高調波補償・制御が主で、固定範囲だけでは完答できないため非採用
-- R5 機械・制御 問4「ゲイン特性曲線からの伝達関数」: 自動制御の伝達関数体系が主で、固定範囲外の追加が必要になるため非採用
-
-二次採用 `0問`、二次数合わせ `0件`。
-
-## Topic 11 品質ゲート最終値
-
-- 解説source: `PASS / completed`
-- 解説PDF: A4縦2ページ、表示QA `2 / 2 PASS`、文字抽出QA `PASS`
-- 練習source: 12問、正答一意性・独立計算 `12 / 12 PASS`
-- 練習PDF: A4縦3ページ、表示QA `3 / 3 PASS`、文字抽出QA `PASS`
-- PowerPoint: 16:9・5枚、表示QA `5 / 5 PASS`、overflow `0件`、ZIP整合性 `PASS`
-- 固定一次5問・25小問の完成後独立再解答: `25 / 25 PASS`
-- 教材外知識補完: `0件`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- SPEC固定範囲外追加: `0件`
-- 未確認ATC実設備値・実回路追加: `0件`
-- Topic 12以降の先取り: `0件`
-- 最終QA: `PASS / FINAL_QA_COMPLETE`
-- 最終判定: `PASS / completed`
+- source: `topics/12_three_phase_ac/12_three_phase_ac.md`
+- stage: `EXAM_ALIGNMENT_COMPLETE`
+- completion: `in_progress`
 
 ## Topic 12 固定範囲
 
-系列SPECで定義されている範囲は次のとおり。
+系列SPECどおり次だけを扱う。
 
-- 三相回路
-- YΔ
+- Y結線
+- Δ結線
+- 相電圧
+- 線間電圧
+- 相電流
+- 線電流
 - 三相電力
+- 平衡三相回路
+- ベクトル図
 
-制作前EXAM_ALIGNMENTで公式過去問を確認する前に、これを超える論点を追加しない。
+境界:
+
+- 不平衡三相回路・対称座標法・地絡/短絡計算を追加しない
+- 単位法・百分率インピーダンスを追加しない
+- 送配電線の電圧降下・損失設計を追加しない
+- 変圧器の等価回路・巻数比・漏れリアクタンス・V結線の機器設計へ広げない
+- 同期機・誘導機の機器特性へ広げない
+- 新幹線変電所のき電用変圧器の内部結線・未確認実設備値を推測しない
+- Topic 13以降の複素電力・高調波・過渡現象を先取りしない
+
+## Topic 12 固定EXAM_ALIGNMENT
+
+品質ゲート対象はH23一次「理論」問6の1問・5小問。
+
+- (1): 120°位相差を持つ三相電圧の複素ベクトル表示
+- (2)(3): Y電源の相電圧差からΔ負荷の枝電流を求める
+- (4): 接続点で枝電流をベクトル合成して線電流を求める
+- (5): 複素ベクトルの大きさから `√3` 関係を得る
+
+公式問題・公式解答を照合し、制作前に保存済み正答を使わず独立計算して `5 / 5 PASS`。個別正答番号は完成後ブラインド独立再解答を妨げないようsourceへ保存していない。
+
+原則5問以上の「調査」は、一次・二次を含む関連候補9件以上の確認で満たした。固定範囲だけで完答できない問題を品質ゲートへ数合わせで採用しない。
+
+## Topic 12 二次試験の扱い
+
+2026-09-16時点でR8二次は未実施。R7〜R5二次「電力・管理」「機械・制御」を公式問題で確認した。
+
+- R7 電力・管理 問2: 三相3線式だが、1線地絡・対称座標法が主で固定範囲外
+- R6 電力・管理 問3: 三相系統だが、地絡故障・通信線誘導が主で固定範囲外
+- R5 電力・管理 問3: 三相3線式送電だが、同期発電機・過渡安定度・等面積法が主で固定範囲外
+- R7〜R5 機械・制御: 同期機・誘導機・変圧器等の機器固有体系を必要とし、固定範囲だけで完結する直接対応問題なし
+
+二次採用 `0問`、二次数合わせ `0件`。
+
+## Topic 12 過去問候補の採否
+
+- H23 一次 理論 問6: 採用。固定範囲だけで全5小問を完答可能
+- H23 一次 機械 問3: 非採用。変圧器等価回路・巻数比等を要する
+- H29 一次 電力 問6: 非採用。単位法が主題
+- H30 一次 電力 問7: 非採用。三相電力式は使うが送電損失・導体量設計が主題
+- H26 二次 電力・管理 問4: 非採用。配電線電圧降下が主題
+- R7〜R5 二次: 上記のとおり直接対応なし
+
+## Topic 12 次の解説で必ずカバーする事項
+
+1. 平衡三相の120°位相差と正相順
+2. 三相相電圧の複素ベクトル表示
+3. Y結線の `VL=√3Vφ`、`IL=Iφ` と30°位相関係
+4. Δ結線の `VL=Vφ`、`IL=√3Iφ` と30°位相関係
+5. 線間電圧を相電圧のベクトル差で作る手順
+6. Δ枝電流から線電流をベクトル合成する手順
+7. `Ea+Eb+Ec=0` の利用
+8. 平衡三相有効電力 `P=3VφIφcosφ=√3VLILcosφ`
+9. ベクトル図による120°・30°関係の確認
+10. 新幹線側は発電・送電から変電設備へ三相交流が渡る導入まで。き電用変圧器詳細へ踏み込まない
+
+## Topic 12 制作前QA
+
+- MASTER_SPEC: `PASS`
+- EXAM_ALIGNMENT_SPEC: `PASS`
+- 系列SPEC: `PASS`
+- 一次・二次を含む関連候補調査: `9件以上`
+- 固定公式過去問: `H23 一次 理論 問6 / 5小問`
+- 公式問題・公式解答照合: `5 / 5`
+- 制作前独立計算: `5 / 5 PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認の新幹線変電設備値・内部結線追加: `0件`
+- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 
 ## 参考資料
 
@@ -106,14 +111,22 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 
 公式正本:
 - 電気技術者試験センター「第二種電気主任技術者試験の問題と解答」 https://www.shiken.or.jp/chief/second/qa/
+- H23一次試験問題 https://www.shiken.or.jp/chief/upload/20110903_ch_second_q01.pdf
+- H23一次試験標準解答 https://www.shiken.or.jp/chief/upload/20110903_ch_second_a01.pdf
+- R7二次 電力・管理 https://www.shiken.or.jp/chief/upload/20251116_ch_second_q01.pdf
+- R7二次 機械・制御 https://www.shiken.or.jp/chief/upload/20251116_ch_second_q02.pdf
+- R6二次 電力・管理 https://www.shiken.or.jp/chief/upload/20241110_as_02_ch_second_q01.pdf
+- R6二次 機械・制御 https://www.shiken.or.jp/chief/upload/20241110_as_02_ch_second_q02.pdf
+- R5二次 電力・管理 https://www.shiken.or.jp/chief/upload/20231112_ch_second_q01.pdf
+- R5二次 機械・制御 https://www.shiken.or.jp/chief/upload/20231112_ch_second_q02.pdf
 
-Topic 11説明粒度・解法確認:
-- e-sysnet「RLC並列共振回路」 https://e-sysnet.com/parallel-resonant-circuit/
-- 電験王2 H28理論問8 https://denken-ou.com/c2/rironh28-8/
-- 電験王2 H27理論問2 https://denken-ou.com/c2/rironh27-2/
-- 電験王2 H25理論問3 https://denken-ou.com/c2/rironh25-3/
-- 電験王2 H24理論問7 https://denken-ou.com/c2/rironh24-7/
-- 電験王2 H22理論問4 https://denken-ou.com/c2/rironh22-4/
+説明粒度・候補確認:
+- e-sysnet「三相交流回路」 https://e-sysnet.com/%E4%B8%89%E7%9B%B8%E4%BA%A4%E6%B5%81%E5%9B%9E%E8%B7%AF/
+- 電験王2 H23理論問6 https://denken-ou.com/c2/rironh23-6/
+- 電験王2 H23機械問3 https://denken-ou.com/c2/kikaih23-3/
+- 電験王2 H29電力問6 https://denken-ou.com/c2/denryokuh29-6/
+- 電験王2 H30電力問7 https://denken-ou.com/c2/denryokuh30-7/
+- 電験王2 H26電力・管理問4 https://denken-ou.com/c2/denryokukanrih26-4/
 
 ## 直前完了Topic
 
@@ -127,4 +140,4 @@ Topic 11「ATCはなぜ特定の周波数を見分けられる？」は `PASS / 
 
 ## 次に行うこと
 
-Topic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` に従い、公式過去問を一次・二次とも確認し、固定範囲との直接対応性で採否を決める。
+Topic 12「三相交流を新幹線へ渡す」の解説本文＋3段階例題を作成する。固定EXAM_ALIGNMENTのH23一次「理論」問6を完成教材だけで解けるよう、上記必須事項を欠落させず、固定範囲外へ広げない。
