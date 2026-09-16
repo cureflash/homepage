@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `11 / 16`
-- current_status: `topic_12_powerpoint_complete`
+- current_status: `topic_12_independent_reanswer_passed`
 - last_completed_topic: `11 空転した車輪をどう立て直す？`
 - active_topic: `12 新幹線のコンピュータは何をしている？`
-- next_start: Topic 12の完成後blind独立再解答を実施する
+- next_start: Topic 12の最終QAを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -22,7 +22,7 @@
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
-- [ ] 12 新幹線のコンピュータは何をしている？ — 解説画像PowerPointまで完成 / IN_PROGRESS
+- [ ] 12 新幹線のコンピュータは何をしている？ — 完成後blind独立再解答 `8 / 8 PASS` / IN_PROGRESS
 - [ ] 13〜16 — 未完了
 
 ## Topic 12 制作品質状態
@@ -73,7 +73,12 @@
 - PowerPoint固定過去問接続: `8 / 8 PASS`
 - PowerPoint: `topics/12_information_processing/12_information_processing_images.pptx`
 - PowerPoint QA: `topics/12_information_processing/12_information_processing_powerpoint_qa.md`
-- 完成後blind独立再解答: 未実施
+- 完成後blind独立再解答: `8 / 8 PASS`
+- blind解答: R8上 問14 `(5)` / R8上 問18(a) `(5)` / 問18(b) `(4)` / R7上 問14 `(3)` / R5下 問14 `(5)` / R1 問14 `(2)` / H28 問18(a) `(4)` / 問18(b) `(3)`
+- 公式解答一致: `8 / 8`
+- 公式解答・保存済み選択肢番号の事前参照: `0件`
+- 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
+- 独立再解答記録: `topics/12_information_processing/12_information_processing_independent_reanswer.md`
 
 ## Topic 11 最終品質状態
 - 固定範囲: センサ / 回転速度 / 車輪 / 粘着 / 空転 / 滑走 / フィードバック / 制御指令 / アクチュエータ / メカトロニクス / 応答速度
@@ -135,9 +140,7 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 12「新幹線のコンピュータは何をしている？」の解説画像PowerPointを完成し、GitHub正本へ反映した。16:9・4枚。全4枚のレンダリング確認 `4 / 4 PASS`、overflow `0件`、PowerPoint ZIP整合性 `PASS`。固定6問・8答案要素をPowerPoint上へ `8 / 8 PASS` で接続した。
-
-カルノー図、フリップフロップ、記憶装置、フローチャート、符号付き2進数・補数表現、通信プロトコル、インタフェース規格、車種固有通信仕様等の追加・推測は0件。
+Topic 12「新幹線のコンピュータは何をしている？」の完成後blind独立再解答を実施した。固定6問・8答案要素を完成教材だけで再導出し、全答案確定後に公式解答へ照合して `8 / 8 PASS`。公式解答・保存済み選択肢番号の事前参照、教材外・固定範囲外知識による補完、固定EXAM_ALIGNMENT変更、固定範囲外追加はいずれも0件。
 
 ## 次工程
-Topic 12の完成後blind独立再解答を実施する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更せず、保存済み正答を先に見ない。
+Topic 12の最終QAを実施する。独立再解答 `8 / 8 PASS`、必須成果物、PDF/PPTX表示QA、進捗記録整合、固定範囲境界を再確認し、品質ゲートの最終判定を行う。
