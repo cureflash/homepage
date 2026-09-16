@@ -6,17 +6,17 @@
 
 Topic 01〜08は `completed`。
 
-Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。完成後独立再解答は保存済み正答を先に見ず、完成教材と固定5問の公式問題だけで実施し、`5 / 5問・7 / 7答案要素 PASS`。
+Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答、初回最終QAまで完了。完成後独立再解答は `5 / 5問・7 / 7答案要素 PASS`。初回最終QAは技術内容・成果物・試験対応・仕様境界がPASSだが、主source・練習sourceの旧進捗記録2箇所を検出したため `NEEDS_REVISION / IN_PROGRESS`。
 
 完成数: `8 / 12`
 
-current_status: `topic_09_independent_reanswer_complete`
+current_status: `topic_09_final_qa_needs_revision`
 
 last_completed_topic: `08 積分 速度曲線の面積は距離`
 
 active_topic: `09 微積分で電気を読む`
 
-next_start: `Topic 09 最終QA`
+next_start: `主source・練習sourceの進捗記録2箇所だけを実成果物と現在地へ同期`
 
 ## Topic 09 固定仕様範囲
 
@@ -181,6 +181,24 @@ next_start: `Topic 09 最終QA`
 
 判定: `topic_09_independent_reanswer_complete / IN_PROGRESS`。
 
+## Topic 09 初回最終QA
+
+記録: `topics/09_calculus_electricity/09_calculus_electricity_final_qa.md`
+
+- 必須成果物5件: GitHub正本上で実在確認PASS
+- 固定EXAM_ALIGNMENT: `5 / 5問・7 / 7答案要素 PASS`
+- 完成後独立再解答: `5 / 5問・7 / 7答案要素 PASS`
+- 練習QA: `12 / 12 PASS`
+- 記録済み解説PDF表示QA: `6 / 6 PASS`
+- 記録済み練習PDF表示QA: `4 / 4 PASS`
+- 記録済みPowerPoint表示QA: `5 / 5 PASS`
+- 固定5式・新幹線接続3点・Topic 10〜11境界: PASS
+- 教材外知識補完0件、固定範囲外追加0件、未確認新幹線実値追加0件
+- FAIL: 主sourceの旧次工程「最終QA」1件
+- FAIL: 練習sourceの旧次工程「練習PDF作成」1件
+
+判定: `NEEDS_REVISION / IN_PROGRESS`。技術内容・教材成果物は変更不要。進捗記録2箇所だけを同期してから最終QAを再判定する。
+
 ## 次に行うこと
 
-次回はTopic 09の最終QAを実施する。固定EXAM_ALIGNMENT、Topic 09の固定5式、既存教材内容は変更しない。
+主source `09_calculus_electricity.md` と練習source `09_calculus_electricity_practice.md` の旧進捗記録2箇所だけを、実成果物・完成後独立再解答・初回最終QAまで完了した現在地へ同期する。技術本文、固定EXAM_ALIGNMENT、数式、問題・正答、PDF/PPTXは変更しない。
