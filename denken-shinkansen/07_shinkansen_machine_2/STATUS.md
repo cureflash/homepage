@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `12 / 22`
-- current_status: `topic_13_blind_reanswer_ready`
+- current_status: `topic_13_final_qa_needs_revision`
 - last_completed_topic: `12 N700Sの6極モーターを設計側から見る`
 - active_topic: `13 L0系のリニア同期モータを等価回路で考える`
-- next_start: Topic 13 完成後独立再解答
+- next_start: Topic 13 main source / 練習sourceの進捗記録同期
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -495,8 +495,33 @@
 - [x] 判定 `BLIND_REANSWER_READY`
 - [x] ゲート記録: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_blind_reanswer_gate.md`
 
+## Topic 13 完成後独立再解答
+- [x] 記録: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_independent_reanswer.md`
+- [x] 公式解答・標準解答を開く前に、完成教材だけで固定5問・22答案要素を再解答
+- [x] R07 一次 機械 問1: `5 / 5 PASS`
+- [x] R06 一次 機械 問1: `5 / 5 PASS`
+- [x] H29 一次 機械 問1の固定3答案要素: `3 / 3 PASS`
+- [x] H21 一次 機械 問5: `5 / 5 PASS`
+- [x] R07 二次 機械・制御 問1の固定4答案要素: `4 / 4 PASS`
+- [x] 合計 `22 / 22 PASS`
+- [x] 教材外知識補完 `0件`
+- [x] 固定範囲外論点追加 `0件`
+- [x] Topic 14依存 `0件`
+- [x] 未確認L0実値依存 `0件`
+- [x] 固定EXAM_ALIGNMENT・教材本文・練習問題・PDF/PPTXの内容変更 `0件`
+
+## Topic 13 最終QA
+- [x] 最終QA記録: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_final_qa.md`
+- [x] 必須成果物の実在: PASS
+- [x] 一次4問＋二次1問・22答案要素の過去問対応: PASS
+- [x] 完成後独立再解答 `22 / 22 PASS`
+- [x] 練習問題・PDF/PPTX QA: PASS
+- [x] 固定範囲境界・未確認L0実値: PASS
+- [ ] 進捗記録整合: FAIL
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 13「L0系のリニア同期モータを等価回路で考える」の独立再解答前ゲートを完了。必須先読み対象に固定5問の公式正答番号・標準解答本文・完成済み個別解答／数値解／導出結果が保存されていないことを確認し、固定一次4問＋二次1問・22答案要素、教材本文、PDF/PPTX、固定範囲は変更していない。
+Topic 13の最終QAを実施。固定一次4問＋二次1問・22答案要素の独立再解答、必須成果物、練習QA、PDF/PPTX表示QA、固定範囲境界はPASS。main sourceの `## 状態` / 末尾 `# 次工程` と練習source末尾 `# 次工程` が実成果物より古いため、進捗記録整合だけFAILとした。
 
 ## 判定
-Topic 13は `topic_13_blind_reanswer_ready / IN_PROGRESS`。完成数は `12 / 22`。次は完成教材だけを使う独立再解答。
+Topic 13は `topic_13_final_qa_needs_revision / IN_PROGRESS`。完成数は `12 / 22` のまま。次はmain sourceと練習sourceの進捗記録だけを実成果物へ同期し、その後最終QAを再実施する。
