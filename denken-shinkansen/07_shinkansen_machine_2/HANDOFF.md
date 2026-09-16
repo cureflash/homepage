@@ -3,13 +3,13 @@
 更新日: 2026-09-16
 
 ## 現在地
-Topic 01〜11は最終QAまで `PASS / completed`。
+Topic 01〜12は最終QAまで `PASS / completed`。
 
-完成数: `11 / 22`
+完成数: `12 / 22`
 
-active topic: `12 N700Sの6極モーターを設計側から見る`
+active topic: `13 L0系のリニア同期モータを等価回路で考える`
 
-current status: `topic_12_progress_records_synced`
+current status: `topic_12_completed`
 
 ## Topic 10 固定範囲
 - 力行
@@ -436,10 +436,8 @@ source完成内容:
 - 完成後独立再解答: `16 / 16 PASS`
 - 練習問題・PDF/PPTX QA: PASS
 - 固定範囲境界・未確認N700S実車値: PASS
-- 進捗記録整合: FAIL
-  - main source末尾 `# 次工程` が「解説PDFまで完成。次は練習問題source」のまま
-  - 練習source末尾 `# 次工程` が「次は練習PDFへ反映」のまま
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 進捗記録整合: PASS
+- 判定: `PASS / completed`
 
 ## Topic 12 進捗記録同期
 - main sourceの `## 状態` と末尾 `# 次工程` を実成果物へ同期済み。
@@ -449,4 +447,4 @@ source完成内容:
 - 未確認N700S実車値追加: `0件`
 
 ## 次に行うこと
-Topic 12の最終QAを再実施する。固定一次2問＋二次3問・16答案要素、完成後独立再解答 `16 / 16 PASS`、必須成果物、PDF/PPTX QA、固定範囲境界、進捗記録整合を再確認する。
+Topic 13「L0系のリニア同期モータを等価回路で考える」の制作前EXAM_ALIGNMENTを開始する。
