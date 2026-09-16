@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 11 / 21
-- current_status: `topic_12_exam_alignment_complete`
+- current_status: `topic_12_explanation_source_complete`
 - last_completed_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 - active_topic: `12 三相交流を新幹線へ渡す`
-- next_start: Topic 12 解説本文＋3段階例題
+- next_start: Topic 12 解説PDF＋表示QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -150,7 +150,7 @@
 
 ## Topic 12 制作進捗
 - [x] 制作前EXAM_ALIGNMENT: 一次1問・5小問、関連候補9件以上調査
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
@@ -159,17 +159,19 @@
 
 ## 今回進めた内容
 
-Topic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENTを完了した。
+Topic 12「三相交流を新幹線へ渡す」の解説本文＋3段階例題を完成した。
 
-- 固定公式過去問: H23一次「理論」問6 (1)〜(5)
-- 制作前独立計算: `5 / 5 PASS`
-- 一次・二次を含む関連候補: `9件以上` 調査
-- R7〜R5二次: 固定範囲の直接対応問題なし
-- 二次採用: `0問`、二次数合わせ: `0件`
+- 固定H23一次「理論」問6の5小問要求を本文・例題へ `5 / 5` 接続
+- 平衡三相の120°位相差、正相順、複素ベクトル表示を収録
+- Y結線 `VL=√3Vφ`, `IL=Iφ` と30°関係を収録
+- Δ結線 `VL=Vφ`, `IL=√3Iφ`、枝電流から線電流へのベクトル合成を収録
+- `Ea+Eb+Ec=0` と平衡三相有効電力を収録
+- 基礎・本試験標準・複合の3段階例題を収録
+- 二次採用方針変更: `0件`
 - SPEC固定範囲外追加: `0件`
 - 未確認の新幹線変電設備値・内部結線追加: `0件`
 - source: `topics/12_three_phase_ac/12_three_phase_ac.md`
 
 ## 判定
 
-Topic 12は `PASS / EXAM_ALIGNMENT_COMPLETE`。完成数は `11 / 21` のまま。次はTopic 12の解説本文＋3段階例題。
+Topic 12は `PASS / EXPLANATION_SOURCE_COMPLETE`。完成数は `11 / 21` のまま。次はTopic 12の解説PDF＋表示QA。
