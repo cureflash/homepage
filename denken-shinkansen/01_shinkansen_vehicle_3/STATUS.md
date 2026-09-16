@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 33 / 38
-- current_status: `topic_34_final_qa_needs_revision`
+- current_status: `topic_34_progress_records_synced`
 - last_completed_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
 - active_topic: `34 COMTRAC② 進路をどう自動制御する？`
-- next_start: Topic 34の進捗記録2件だけを実成果物へ同期する。`34_comtrac_route_control.md` 冒頭の状態・次工程と `34_comtrac_route_control_powerpoint_qa.md` の次工程を更新し、技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない。その後、最終QAを再実施する
+- next_start: Topic 34の最終QAを再実施する。進捗記録整合を再確認し、全品質ゲートがPASSした場合のみ `completed` として完成数を34/38へ更新する
 
 ## 新品質ゲート進捗
 - [x] 01〜33 — PASS
@@ -536,4 +536,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は固定5過去問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数33/38。
 
 ## 次テーマ工程
-Topic 34 `COMTRAC② 進路をどう自動制御する？` は技術品質ゲートをすべてPASSしたが、最終QAで進捗記録2件の不整合を検出し `NEEDS_REVISION / IN_PROGRESS`。次は `34_comtrac_route_control.md` 冒頭の状態・次工程と `34_comtrac_route_control_powerpoint_qa.md` の次工程だけを実成果物へ同期し、その後最終QAを再実施する。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` は技術品質ゲートをすべてPASSし、最終QAで指摘された進捗記録2件を実成果物へ同期済み。次は最終QAを再実施し、進捗記録整合を含む全品質ゲートがPASSした場合のみ `completed` として完成数を34/38へ更新する。
