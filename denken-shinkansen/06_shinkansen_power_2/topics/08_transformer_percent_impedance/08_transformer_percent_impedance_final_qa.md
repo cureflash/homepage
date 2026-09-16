@@ -4,13 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、Topic 08 の成果物・QA記録・完成後独立再解答・進捗記録を確認した。技術内容、一次・二次の過去問対応品質ゲート、必須成果物、PDF/PPTX表示QA、固定9項目、固定範囲境界はPASS。
-
-未完了理由は進捗記録の不整合のみ。主source `08_transformer_percent_impedance.md` が状態 `blind_reanswer_ready` のままで、末尾 `## 次工程` も完成後独立再解答を指している。一方、完成後独立再解答はすでに `4 / 4問・17 / 17答案要素 PASS` で完了している。また練習source `08_transformer_percent_impedance_practice.md` も状態 `topic_08_practice_source_complete`、末尾次工程が練習PDF作成のままだが、練習PDFとQAは完成済みである。
-
-技術内容・固定EXAM_ALIGNMENT・正式4過去問・固定9項目は修正しない。進捗記録だけを実成果物へ同期した後、最終QAを再判定する。
+前回 `NEEDS_REVISION / IN_PROGRESS` の唯一の未完了理由だった主source・練習sourceの進捗記録不整合を解消後、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、Topic 08 の成果物・QA記録・完成後独立再解答・進捗記録を再確認した。技術内容、一次・二次の過去問対応品質ゲート、必須成果物、PDF/PPTX表示QA、固定9項目、固定範囲境界、進捗整合を全件PASSとした。
 
 ## 確認結果
 
@@ -27,7 +23,7 @@
 | 系列SPEC固定9項目 | PASS | ％インピーダンス、単位法、基準容量変更、基準電圧変更、短絡電流、電圧降下、変圧器並列運転、循環電流、負荷分担を維持 |
 | 固定範囲境界 | PASS | ATき電、線路定数・距離―電圧曲線、移動負荷、電力潮流、対称座標法、故障種別別短絡解析、保護協調を追加していない |
 | 未確認実設備値 | PASS | 追加・依存 `0件` |
-| 進捗記録 | FAIL | 主sourceと練習sourceに旧状態・旧次工程が残存 |
+| 進捗記録 | PASS | 主sourceを `completed` へ同期。練習sourceの実成果物同期、STATUS・HANDOFFの次工程をTopic 09へ更新 |
 
 ## 過去問対応品質ゲート
 
@@ -45,21 +41,20 @@
 
 ## 必須成果物の実在確認
 
-- `08_transformer_percent_impedance.md` — blob `b883cb128161af640c99e4e2a6022c8c38fca90c`
+- `08_transformer_percent_impedance.md` — blob `d014592bb8e305cc85f93859f818eeb5ef5c775f`
 - `08_transformer_percent_impedance_explanation.pdf` — blob `c0e43f9c5a22b96d2323f06a16ea9b50a2c0868d`
 - `08_transformer_percent_impedance_explanation_pdf_qa.md` — blob `3351fb5d44853f5146a9d8789d4f07c6a3305ff5`
-- `08_transformer_percent_impedance_practice.md` — blob `a2cb5017fc3b16a069687786aa908eb15f51e297`
+- `08_transformer_percent_impedance_practice.md` — blob `ca2fbea2a23cf41bb128d30c8e4b71537ab78718`
 - `08_transformer_percent_impedance_practice.pdf` — blob `c510c8f88f619b2595cf1db6642dc193a3023f69`
 - `08_transformer_percent_impedance_practice_pdf_qa.md` — blob `c02c3490b2fc210a86be816244691cb07df0fe66`
 - `08_transformer_percent_impedance_images.pptx` — blob `1b4fadf9a7bc28f3605e4b783569974fe433f974`
 - `08_transformer_percent_impedance_powerpoint_qa.md` — blob `014bd2f79ffd03c769bf9310284c8c6537cfb186`
 - `08_transformer_percent_impedance_independent_reanswer.md` — blob `e398a205c3f0392488b44bd40edd5a00189fa5b5`
 
-## 未完了箇所
+## 完了判定
 
-1. 主source冒頭の状態 `blind_reanswer_ready` を実成果物へ同期する。
-2. 主source末尾の `## 次工程` を実成果物へ同期する。
-3. 練習source冒頭の状態 `topic_08_practice_source_complete` を実成果物へ同期する。
-4. 練習source末尾の `## 次工程` を実成果物へ同期する。
+Topic 08 は `completed`。
 
-Topic 08 はまだ `completed` としない。完成数は `7 / 22` のまま維持する。
+完成数: `8 / 22`
+
+次はTopic 09「ATき電はなぜ長距離へ電気を送れる？」の制作前EXAM_ALIGNMENTを行う。
