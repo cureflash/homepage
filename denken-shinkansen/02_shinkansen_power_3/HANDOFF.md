@@ -6,15 +6,15 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は完成済み。
 
 ## 今回進捗
-Topic 11 `架線事故ではどうやって電気を止める？` の解説画像PowerPoint＋QAを完成した。16:9・4枚。固定5問・7答案要素を `7 / 7` 可視化し、1601×900表示QA `4 / 4 PASS`、overflow 0件、PPTX ZIP整合性PASS。SPEC固定範囲外追加、Topic 12以降の先取り、未確認新幹線実設備値の真値化はいずれも0件。
+Topic 11 `架線事故ではどうやって電気を止める？` の完成後ブラインド独立再解答を実施した。固定5問・7答案要素を完成教材だけで再導出し `7 / 7 PASS`、公式解答一致 `7 / 7 PASS`。教材外知識補完、Topic 12以降の論点補完、SPEC固定範囲外追加、未確認新幹線実設備値の使用はいずれも0件。
 
 固定結果:
 - 品質ゲート対象: 公式過去問5問・7答案要素
-- R5下 電力 問16 (a)(b)
-- R5上 電力 問16 (a)(b)
-- R2 電力 問8
-- R2 電力 問9
-- H22 電力 問8
+- R5下 電力 問16 (a)(b): `(2),(4)`
+- R5上 電力 問16 (a)(b): `(4),(2)`
+- R2 電力 問8: `(4)`
+- R2 電力 問9: `(2)`
+- H22 電力 問8: `(3)`
 - 制作前独立検証: `7 / 7 PASS`
 - 解説本文: §1〜§15 完成
 - 3段階例題: 基礎・本試験標準・複合 各1問完成
@@ -45,11 +45,13 @@ Topic 11 `架線事故ではどうやって電気を止める？` の解説画�
 - PowerPoint overflow: `0件`
 - PowerPoint ZIP整合性: `PASS`
 - PowerPoint SHA-256: `f0d467279ec3c282293f697f21ee5e62967648cfb28fead3fa087887ca560069`
+- 完成後独立再解答: `topics/11_fault_protection/11_fault_protection_independent_reanswer.md`
+- 完成後ブラインド独立再解答: `7 / 7 PASS`
+- 公式解答一致: `7 / 7 PASS`
+- 教材外知識補完: `0件`
+- Topic 12以降の論点による補完: `0件`
 - SPEC固定範囲外追加: `0件`
-- Topic 12以降の先取り: `0件`
-- 未確認新幹線実設備値の真値化: `0件`
-
-制作前の個別正答・最終数値解は、完成後ブラインド独立再解答を保護するためsource・進捗記録・解説PDF・PowerPointへ保存していない。練習問題の正答は練習教材自身の解説として記録するが、固定公式過去問の保存済み正答は記録しない。
+- 未確認新幹線実設備値の使用: `0件`
 
 ## Topic 11 固定範囲
 `SPEC.md` から追加しない。
@@ -73,7 +75,7 @@ R8上 電力 問7は自動再閉路がSPEC外、R8上 電力 問9は通信誘導
 Topic 10 `新幹線が突然大電力を使ったら？` は `PASS / completed`。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、最終QA PASS。
 
 ## 現在状態
-- `current_status`: `topic_11_powerpoint_complete`
+- `current_status`: `topic_11_independent_reanswer_complete`
 - 完成数: `10 / 16`
 - last completed: Topic 10 `新幹線が突然大電力を使ったら？`
 - active: Topic 11 `架線事故ではどうやって電気を止める？`
@@ -84,6 +86,7 @@ Topic 10 `新幹線が突然大電力を使ったら？` は `PASS / completed`�
 - Topic 11練習PDF QA: `topics/11_fault_protection/11_fault_protection_practice_qa.md`
 - Topic 11解説画像PowerPoint: `topics/11_fault_protection/11_fault_protection_images.pptx`
 - Topic 11 PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
+- Topic 11完成後独立再解答: `topics/11_fault_protection/11_fault_protection_independent_reanswer.md`
 - 固定問題: `5問・7答案要素`
 - 制作前独立検証: `7 / 7 PASS`
 - 本文要求事項マッピング: `7 / 7`
@@ -94,6 +97,9 @@ Topic 10 `新幹線が突然大電力を使ったら？` は `PASS / completed`�
 - PowerPoint表示QA: `4 / 4 PASS`
 - PowerPoint overflow: `0件`
 - PowerPoint ZIP整合性: `PASS`
+- 完成後ブラインド独立再解答: `7 / 7 PASS`
+- 公式解答一致: `7 / 7 PASS`
+- 教材外知識補完: `0件`
 
 ## 次の正確な開始点
-Topic 11の完成後ブラインド独立再解答を行う。保存済み公式正答を先読みせず、完成教材だけを使って固定5問・7答案要素を再解答し、教材外知識補完の有無と公式解答一致を記録する。最終QAにはまだ進まない。
+Topic 11 main sourceへ完成後ブラインド独立再解答結果を同期する。固定5問・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。最終QAにはまだ進まない。
