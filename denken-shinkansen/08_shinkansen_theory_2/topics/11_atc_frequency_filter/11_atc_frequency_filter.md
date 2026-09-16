@@ -4,9 +4,9 @@
 
 ## 状態
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `SOURCE_PROGRESS_SYNCED`
 - completion: `IN_PROGRESS`
-- 次工程: 解説PDF＋表示QA
+- 次工程: 最終QA再実施
 
 ## 1. SPEC固定範囲
 
@@ -548,4 +548,4 @@ ATCを題材にする理由は、異なる周波数成分を見分けるとい�
 
 ## 次工程
 
-本sourceを正本として解説PDFを作成し、全ページ表示QA・文字抽出QAを実施する。
+全成果物・固定EXAM_ALIGNMENTは変更せず、Topic 11の最終QAを再実施する。
