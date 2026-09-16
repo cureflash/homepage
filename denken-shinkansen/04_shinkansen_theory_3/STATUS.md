@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 9 / 14
-- current_status: `topic_10_independent_reanswer_complete`
+- current_status: `topic_10_final_qa_needs_revision`
 - last_completed_topic: `09 北陸新幹線は50Hzと60Hzをどう走る？`
 - active_topic: `10 新幹線が使う電力は「W」だけではない`
-- next_start: Topic 10の最終QAを実施する
+- next_start: Topic 10の主source・練習source進捗記録を実成果物へ同期する
 
 ## Topic 01 進捗
 
@@ -179,16 +179,17 @@
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `5 / 5問・6 / 6答案要素 PASS`
+- [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習source進捗記録不整合）
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 10 `新幹線が使う電力は「W」だけではない` の完成後公式過去問独立再解答を完了した。
+Topic 10 `新幹線が使う電力は「W」だけではない` の最終QAを実施した。
 
-固定5問・6答案要素を公式解答を先に見ず、完成教材だけで再解答した。独立解答列 `(3), (3), (4), (3), (4), (4)` は公式解答列と全件一致し、`5 / 5問・6 / 6答案要素 PASS`。
+固定5問・6答案要素の完成後独立再解答 `5 / 5問・6 / 6答案要素 PASS`、必須成果物、解説PDF `4 / 4 PASS`、練習PDF `3 / 3 PASS`、PowerPoint `4 / 4 PASS`、SPEC境界はPASS。
 
-教材外知識補完0問、Topic 11以降の三相・半導体・高調波依存0問、未確認の新幹線実車力率・無効電力・補償方式依存0問。詳細記録は `topics/10_power_factor/10_power_factor_exam_recheck.md`。
+未完了理由は進捗記録のみ。主sourceが `EXPLANATION_SOURCE_COMPLETE` のままで次工程も解説PDF作成を指し、練習sourceが `PRACTICE_PDF_COMPLETE` のままで次工程もPowerPoint作成を指している。技術本文・固定EXAM_ALIGNMENT・問題・正答・成果物内容の修正は不要。詳細は `topics/10_power_factor/10_power_factor_final_qa.md`。
 
 ## 判定
 
-現在 `topic_10_independent_reanswer_complete / IN_PROGRESS`。完成数は `9 / 14`。次はTopic 10の最終QAを実施する。
+現在 `topic_10_final_qa_needs_revision / IN_PROGRESS`。完成数は `9 / 14`。次は主source・練習sourceの進捗記録だけを実成果物へ同期する。
