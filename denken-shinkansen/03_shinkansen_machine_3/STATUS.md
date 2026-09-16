@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: `10 / 16`
-- current_status: `topic_11_source_progress_synced`
-- last_completed_topic: `10 新幹線の速度はどう自動制御される？`
-- active_topic: `11 空転した車輪をどう立て直す？`
-- next_start: Topic 11の最終QAを再判定する
+- exam_aligned_completed_topics: `11 / 16`
+- current_status: `topic_11_completed`
+- last_completed_topic: `11 空転した車輪をどう立て直す？`
+- active_topic: `12 新幹線のコンピュータは何をしている？`
+- next_start: Topic 12の制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -21,10 +21,11 @@
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
-- [ ] 11 空転した車輪をどう立て直す？ — 旧進捗記録同期済み / 最終QA再判定待ち
-- [ ] 12〜16 — 未完了
+- [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
+- [ ] 12 新幹線のコンピュータは何をしている？ — 制作前EXAM_ALIGNMENT待ち
+- [ ] 13〜16 — 未完了
 
-## Topic 11 現在品質状態
+## Topic 11 最終品質状態
 - 固定範囲: センサ / 回転速度 / 車輪 / 粘着 / 空転 / 滑走 / フィードバック / 制御指令 / アクチュエータ / メカトロニクス / 応答速度
 - 固定EXAM_ALIGNMENT: R4下 機械 問14
 - 品質ゲート対象: `1問`
@@ -68,7 +69,12 @@
 - 前回最終QA固定範囲境界: `PASS`
 - 前回最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
 - 旧進捗3箇所: 同期済み
-- 最終QA再判定: 未実施
+- 最終QA再判定: `PASS`
+- 最終QA技術内容: `PASS`
+- 最終QA必須成果物: `PASS`
+- 最終QA表示QA: `PASS`
+- 最終QA進捗記録整合: `PASS`
+- 最終QA固定範囲境界: `PASS`
 - source: `topics/11_readhesion_control/11_readhesion_control.md`
 - explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
 - explanation PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
@@ -79,9 +85,9 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 11の主source・練習sourceに残っていた旧進捗記録3箇所を実成果物へ同期した。`11_readhesion_control.md` の状態・現在地・次工程を、解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで完了した実態へ更新し、`11_readhesion_control_practice.md` の次工程も最終QA再判定へ更新した。
+Topic 11「空転した車輪をどう立て直す？」の最終QAを再判定し、`PASS / completed` とした。固定R4下 機械 問14の完成後独立再解答 `1 / 1 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、主source・練習sourceの進捗記録整合、固定範囲境界を全件PASS確認した。
 
-技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF、PowerPoint、独立再解答結果は変更していない。固定範囲外論点・未確認実車値・実車固有アルゴリズムの追加は0件。
+前回 `NEEDS_REVISION` の原因だった旧進捗3箇所は同期済み。教材外・固定範囲外知識による補完、固定範囲外論点追加、未確認実車値追加、実車固有アルゴリズム推測はいずれも0件。完成数を `11 / 16` へ更新した。
 
 ## 次工程
-Topic 11の最終QAを再判定する。必須成果物、固定R4下 機械 問14の独立再解答 `1 / 1 PASS`、表示QA、進捗記録整合、固定範囲境界を再確認し、品質ゲート完了可否を判定する。
+Topic 12「新幹線のコンピュータは何をしている？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
