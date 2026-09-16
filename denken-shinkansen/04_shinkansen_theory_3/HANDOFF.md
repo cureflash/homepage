@@ -4,37 +4,30 @@
 
 ## 現在地
 
-Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は解説画像PowerPoint＋QAまで完了した。
+Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は完成後公式過去問独立再解答まで完了した。
 
 - 完成数: `11 / 14`
 - last completed: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active topic: `12 300系はなぜVVVFになった？`
-- current status: `topic_12_powerpoint_complete`
-- next start: Topic 12の完成後公式過去問独立再解答を実施する
+- current status: `topic_12_independent_reanswer_complete`
+- next start: Topic 12の最終QAを実施する
 
 ## 今回進捗
 
-Topic 12の解説画像PowerPointを作成し、表示・ファイルQAを完了した。
+Topic 12の固定公式過去問7問を、公式解答を先に見ず完成教材だけで独立再解答し、その後に公式解答と照合した。
 
-- PowerPoint: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_images.pptx`
-- QA: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_images_qa.md`
-- 画面比率: 16:9
-- スライド数: 4
-- Slide 1: p/n型、pn接合、順逆バイアス、空乏層
-- Slide 2: BJT静特性、`β ≈ ΔIC/ΔIB`、`ro ≈ ΔVCE/ΔIC`
-- Slide 3: nチャネルJFETの逆ゲートバイアス→空乏層拡大→チャネル狭窄→ドレーン電流減少
-- Slide 4: BJT/FET基本比較、系列SPEC固定の技術史入口、固定7問対応
-- 固定7問要求の可視化: `7 / 7 PASS`
-- 200 dpi表示QA: `4 / 4 PASS`
-- shape-bound overflow: `0件`
-- 文字欠け・重なり・文字化け: `0件`
-- 文字抽出QA: `PASS`
-- ZIP/XML整合性: `PASS`
+- 独立再解答記録: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_exam_recheck.md`
+- 固定過去問: `7問`
+- 独立解答列: `(2),(2),(5),(4),(5),(2),(2)`
+- 公式解答列: `(2),(2),(5),(4),(5),(2),(2)`
+- 公式解答一致: `7 / 7 PASS`
+- 教材だけで必要知識・式・判断根拠を再構成: `PASS`
+- 教材外知識補完: `0件`
 - 固定範囲外追加: `0件`
-- 未確認300系実車回路・数値依存: `0件`
-- PowerPoint SHA-256: `f749810f01da439213def981b10e0081dc39e8c1c7515153e156960cd0a5ddff`
-
-公式過去問の図は複製せず、独自の教材用模式図とした。固定過去問の正答番号・個別最終数値は、完成後独立再解答の先読み汚染を避けるためsource/HANDOFFへ保存していない。
+- Topic 13のインバータ主回路・PWM・出力波形・高調波への依存: `0件`
+- 機械編のGTO/IGBT/SiC詳細損失・駆動比較への依存: `0件`
+- BJT/FET小信号回路・hパラメータ・ホール効果への依存: `0件`
+- 未確認300系実車回路・数値への依存: `0件`
 
 ## Topic 12 SPEC固定範囲
 
@@ -82,6 +75,7 @@ SiC → 低損失化
    - 真性/不純物半導体、p/n型、キャリア、温度特性
 
 制作前独立検証: `7 / 7 PASS`
+完成後独立再解答: `7 / 7 PASS`
 
 ## 教材本文の対応
 
@@ -122,12 +116,13 @@ SiC → 低損失化
 
 ## 次に行うこと
 
-Topic 12の完成後公式過去問独立再解答を実施する。固定EXAM_ALIGNMENTは変更しない。
+Topic 12の最終QAを実施する。固定EXAM_ALIGNMENTは変更しない。
 
-- 保存済み正答番号・個別最終数値を先に見ず、固定7問を完成教材だけで再解答する
-- 必要公式・判断根拠・途中計算が教材内だけで再構成できることを確認する
-- 教材外知識の補完があればFAILとする
-- 結果を独立再解答記録へ残す
+- MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECの固定境界を再確認する
+- source Markdown、解説PDF、練習source/PDF、PowerPoint、各QA、独立再解答記録の存在と整合を確認する
+- 固定7問への本文・練習・可視化接続と完成後独立再解答 `7 / 7 PASS` を確認する
+- source/練習sourceを含む進捗記録と実成果物の整合を確認する
+- 全ゲートPASSの場合のみ `completed` とする
 
 ## 固定ルール
 
