@@ -1,6 +1,6 @@
 # HANDOFF - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 現在地
 Topic 01〜12は最終QAまで `PASS / completed`。
@@ -9,7 +9,7 @@ Topic 01〜12は最終QAまで `PASS / completed`。
 
 active topic: `13 L0系のリニア同期モータを等価回路で考える`
 
-current status: `topic_13_explanation_source_complete`
+current status: `topic_13_explanation_pdf_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -504,5 +504,17 @@ source完成内容:
 - Topic 14先取り: `0件`
 - 未確認L0実値追加: `0件`
 
+## Topic 13 解説PDF
+- `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_explanation.pdf`: `completed`
+- A4縦5ページ
+- 200 dpi全5ページ Visual QA: `5 / 5 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- 固定一次4問＋二次1問・22答案要素: 維持
+- 3段階例題: `3 / 3`収録
+- 固定範囲外追加: `0件`
+- Topic 14先取り: `0件`
+- 未確認L0実値追加: `0件`
+- SHA-256: `7d2a0fc7f61c78c24e28a709e3c65a855773298a8ec04ca77ae26af941af33fd`
+
 ## 次に行うこと
-Topic 13「L0系のリニア同期モータを等価回路で考える」の解説PDFを、固定EXAM_ALIGNMENTと解説本文を変更せず作成する。
+Topic 13「L0系のリニア同期モータを等価回路で考える」の練習問題sourceを、固定EXAM_ALIGNMENTと解説本文・解説PDFの固定範囲を変更せず作成する。
