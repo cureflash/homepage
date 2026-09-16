@@ -6,17 +6,17 @@
 
 Topic 01〜08は `completed`。
 
-Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENTと固定5問の制作前独立解答・公式解答照合まで完了。系列SPECの固定5式だけを対象に、`5 / 5問・7 / 7答案要素 PASS`、公式解答との不一致0件。
+Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題まで完了。系列SPECの固定5式だけを対象に、固定5問・7答案要素を教材内へ全件マッピング済み。
 
 完成数: `8 / 12`
 
-current_status: `topic_09_preproduction_exam_verification_complete`
+current_status: `topic_09_explanation_source_complete`
 
 last_completed_topic: `08 積分 速度曲線の面積は距離`
 
 active_topic: `09 微積分で電気を読む`
 
-next_start: `Topic 09 解説本文＋3段階例題`
+next_start: `Topic 09 解説PDF`
 
 ## Topic 07 完了記録
 
@@ -238,6 +238,30 @@ next_start: `Topic 09 解説本文＋3段階例題`
 
 詳細な計算・判断根拠は `topics/09_calculus_electricity/09_calculus_electricity.md` に記録済み。
 
+## Topic 09 解説本文＋3段階例題
+
+主source: `topics/09_calculus_electricity/09_calculus_electricity.md`
+
+固定5式だけを本文化し、次を収録した。
+
+- 微分＝変化率、積分＝蓄積量と単位による式選択
+- `i=dq/dt` と `q=∫i dt`、一定電流 `q=It`
+- `e=-N dΦ/dt`、磁束鎖交数 `NΦ`、レンツの法則、直線的磁束変化
+- `E=∫P dt`、一定電力 `E=Pt`、J / Wh / kWh、電力差グラフの区分積分
+- `W=∫F dx`、一定力 `W=Fs`、`N·m=J`、`J/s=W`
+- SPEC記載の新幹線接続3点のみ。数値はすべて仮定値と明記
+- 本試験での式選択・区間分割・単位検算の手順
+- 頻出ミス
+
+3段階例題:
+1. 基礎: `q(t)` を微分して電流を求め、積分で電気量を検算
+2. 本試験標準: 磁束の直線的変化から誘導起電力を計算
+3. 複合・ひっかけ: 消費電力・回生電力を区分積分して総消費・回収・正味電力量を分離
+
+固定5過去問・7答案要素を本文の対応節へ全件マッピング済み。固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件。
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`。
+
 ## 次に行うこと
 
-Topic 09の解説本文＋3段階例題を作成する。固定EXAM_ALIGNMENTとTopic 09の固定5式は変更しない。
+Topic 09の解説PDFを作成し、全ページ表示QA・文字抽出QAを実施する。固定EXAM_ALIGNMENTとTopic 09の固定5式は変更しない。
