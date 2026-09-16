@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 10 / 16
-- current_status: `topic_11_explanation_source_complete`
+- current_status: `topic_11_explanation_pdf_complete`
 - last_completed_topic: `10 新幹線が突然大電力を使ったら？`
 - active_topic: `11 架線事故ではどうやって電気を止める？`
-- next_start: Topic 11解説PDFを作成する
+- next_start: Topic 11練習問題sourceを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -21,7 +21,7 @@
 - [x] 08 新幹線の変電所はなぜ数十kmおき？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗整合を最終QAで再確認し `PASS / completed`
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 11 架線事故ではどうやって電気を止める？ — IN_PROGRESS。制作前EXAM_ALIGNMENT・解説本文§1〜§15・3段階例題まで完成。固定5問・7答案要素の本文要求事項マッピング `7 / 7`
+- [ ] 11 架線事故ではどうやって電気を止める？ — IN_PROGRESS。制作前EXAM_ALIGNMENT・解説本文§1〜§15・3段階例題・解説PDFまで完成。固定5問・7答案要素の本文要求事項マッピング `7 / 7`、解説PDF表示QA `4 / 4 PASS`
 - [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
 - [ ] 13 新幹線の架線は何でできている？
 - [ ] 14 駅やトンネルにはどう電気を配る？
@@ -247,6 +247,8 @@ PowerPoint QA: `topics/10_load_variation/10_load_variation_powerpoint_qa.md`
 
 ## Topic 11 制作記録
 source: `topics/11_fault_protection/11_fault_protection.md`
+解説PDF: `topics/11_fault_protection/11_fault_protection_explanation.pdf`
+解説PDF QA: `topics/11_fault_protection/11_fault_protection_explanation_qa.md`
 
 固定5問・7答案要素:
 - R5下 電力 問16 (a)(b)
@@ -269,10 +271,14 @@ source: `topics/11_fault_protection/11_fault_protection.md`
 - 固定5問・7答案要素の本文要求事項マッピング: `7 / 7`
 - 本文数式・単位・役割分離QA: PASS
 - 3段階例題独立再計算: PASS
+- 解説PDF: A4縦4ページ
+- 解説PDF表示QA: 200 dpi `4 / 4 PASS`
+- 解説PDF文字抽出QA: PASS
+- 解説PDF数値・論理再検算: PASS
 - SPEC固定範囲外追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
-完成後ブラインド独立再解答を保護するため、制作前に導出した個別正答・最終数値解は進捗記録へ保存しない。
+完成後ブラインド独立再解答を保護するため、制作前に導出した個別正答・最終数値解は進捗記録・解説PDFへ保存しない。
 
 ## 次
-Topic 11「架線事故ではどうやって電気を止める？」の解説PDFを作成する。固定5問・7答案要素の本文対応 `7 / 7` とSPEC固定範囲を維持し、表示・文字抽出・数値論理QAを行う。練習問題等にはまだ進まない。
+Topic 11「架線事故ではどうやって電気を止める？」の練習問題sourceを作成する。固定5問・7答案要素への接続 `7 / 7` とSPEC固定範囲を維持し、数値・論理・正答一意性QAを行う。練習PDF等にはまだ進まない。
