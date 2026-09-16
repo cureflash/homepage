@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 9 / 12
-- current_status: `topic_10_explanation_source_complete`
+- current_status: `topic_10_explanation_pdf_complete`
 - last_completed_topic: `09 微積分で電気を読む`
 - active_topic: `10 指数関数・一階微分方程式入門`
-- next_start: `Topic 10 解説PDF`
+- next_start: `Topic 10 練習問題source`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -103,7 +103,7 @@
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立解答・公式解答照合 `5 / 5 PASS`
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -112,18 +112,21 @@
 
 ## 今回進めた内容
 
-Topic 10「指数関数・一階微分方程式入門」の解説本文＋3段階例題を完成した。
+Topic 10「指数関数・一階微分方程式入門」の解説PDFを完成し、GitHub正本へ反映した。
 
-- 固定5問から逆算した必須説明15項目を `15 / 15` 実装
-- RC充放電、RL立上り・減衰、`τ=RC`、`τ=L/R`、初期値・最終値、自然対数、一次遅れを固定範囲内で本文化
-- 波形問題の解法を「初期値→最終値→増減→時定数」で整理
-- 3段階例題: RC放電、RL立上り、テブナン等価抵抗を使うRC複合問題
-- 固定5過去問を教材内節へ `5 / 5` マッピング
-- 例題数値・時定数次元を独立再計算してPASS
-- RLC二次過渡・ラプラス変換・伝達関数・PID追加0件、Topic 11先取り0件、未確認新幹線実値追加0件
+- 成果物: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_explanation.pdf`
+- A4縦5ページ
+- 固定5問から逆算した必須説明15項目、3段階例題、固定5過去問への対応を収録
+- 200 dpi表示QA `5 / 5 PASS`
+- 文字抽出QA `PASS`
+- クリッピング、重なり、文字化け0件
+- 固定EXAM_ALIGNMENT変更0件
+- RLC二次過渡・ラプラス変換・伝達関数・PID追加0件
+- Topic 11一般特性曲線体系の先取り0件
+- 未確認新幹線実値追加0件
 
 ## 判定
 
-`topic_10_explanation_source_complete / IN_PROGRESS`。
+`topic_10_explanation_pdf_complete / IN_PROGRESS`。
 
-完成数は `9 / 12`。次工程はTopic 10の解説PDF。
+完成数は `9 / 12`。次工程はTopic 10の練習問題source。
