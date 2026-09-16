@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_powerpoint_complete`
+- current_status: `topic_12_blind_reanswer_ready`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 独立再解答前ゲート
+- next_start: Topic 12 完成後独立再解答
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -355,8 +355,19 @@
 - [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
 - [x] SHA-256 `0fcc83e90287e57901ef17c50497e2c4356c0322973de1b7d8628b0be286b17c`
 
+## Topic 12 独立再解答前ゲート
+- [x] `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
+- [x] `STATUS.md` / `HANDOFF.md` / main source / 練習source / blocker / PowerPoint QA を再監査
+- [x] 固定5過去問の公式正答番号・標準解答本文の保存 `0件`
+- [x] 固定5過去問の完成済み数値解・導出結果の保存 `0件`
+- [x] 制作前検証はPASS数・要求知識・使用式・教材内マッピングのみを保持
+- [x] 固定一次2問＋二次3問・16答案要素、教材本文・PDF・練習問題・PowerPoint・固定EXAM_ALIGNMENTは変更なし
+- [x] 固定範囲外論点・未確認N700S実車値追加 `0件`
+- [x] 判定 `BLIND_REANSWER_READY`
+- [x] ゲート記録: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_blind_reanswer_gate.md`
+
 ## 今回進めた内容
-Topic 12の解説画像PowerPointを完成した。16:9・4枚で、極数・同期速度・すべり・回転速度・トルク・出力、4極/6極の必要周波数比較、インバータ定格、出力密度、固定5過去問・16答案要素への接続を可視化した。1601×900全4枚表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS。固定範囲外論点・未確認N700S実車値の追加は0件。
+Topic 12の完成後独立再解答前ゲートを完了した。必須先読み対象に固定5過去問の公式正答番号・標準解答本文・完成済み数値解／導出結果が保存されていないことを確認し、`BLIND_REANSWER_READY` と判定した。固定一次2問＋二次3問・16答案要素、教材本文、PDF、練習問題、PowerPoint、固定EXAM_ALIGNMENTは変更していない。固定範囲外論点・未確認N700S実車値の追加は0件。
 
 ## 判定
-Topic 12は `topic_12_powerpoint_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の独立再解答前ゲートを実施する。
+Topic 12は `topic_12_blind_reanswer_ready / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の完成後独立再解答を実施する。
