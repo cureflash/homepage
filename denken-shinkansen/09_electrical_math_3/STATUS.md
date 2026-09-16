@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 9 / 12
-- current_status: `topic_10_practice_pdf_complete`
+- current_status: `topic_10_images_ppt_complete`
 - last_completed_topic: `09 微積分で電気を読む`
 - active_topic: `10 指数関数・一階微分方程式入門`
-- next_start: `Topic 10 解説画像PowerPoint`
+- next_start: `Topic 10 完成教材だけでの公式過去問独立再解答`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -106,20 +106,20 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 10「指数関数・一階微分方程式入門」の練習PDFを完成し、GitHub正本へ反映した。
+Topic 10「指数関数・一階微分方程式入門」の解説画像PowerPointを完成し、GitHub正本へ反映した。
 
-- 成果物: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_practice.pdf`
-- A4縦4ページ
-- 全12問＋完全解説を収録
-- 200 dpi表示QA `4 / 4 PASS`
-- 文字抽出QA PASS
-- 正答・主要数値のsource一致 `12 / 12 PASS`
+- 成果物: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_images.pptx`
+- 16:9・5枚
+- 一階応答共通形、RC、RL、複雑なRC、解法フロー＋固定5過去問対応を可視化
+- 表示QA `5 / 5 PASS`
+- overflow 0件
+- PPTX ZIP整合性 PASS
 - 固定5過去問への接続 `5 / 5 PASS`
 - 固定EXAM_ALIGNMENT変更0件
 - RLC二次過渡・ラプラス変換・伝達関数・PID追加0件
@@ -128,6 +128,6 @@ Topic 10「指数関数・一階微分方程式入門」の練習PDFを完成し
 
 ## 判定
 
-`topic_10_practice_pdf_complete / IN_PROGRESS`。
+`topic_10_images_ppt_complete / IN_PROGRESS`。
 
-完成数は `9 / 12`。次工程はTopic 10の解説画像PowerPoint。
+完成数は `9 / 12`。次工程はTopic 10の完成教材だけでの固定5問独立再解答。
