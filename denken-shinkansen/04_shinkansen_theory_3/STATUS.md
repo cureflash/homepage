@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 11 / 14
-- current_status: `topic_12_powerpoint_complete`
+- current_status: `topic_12_independent_reanswer_complete`
 - last_completed_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active_topic: `12 300系はなぜVVVFになった？`
-- next_start: Topic 12の完成後公式過去問独立再解答を実施する
+- next_start: Topic 12の最終QAを実施する
 
 ## Topic 01 進捗
 
@@ -217,21 +217,19 @@
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後の公式過去問独立再解答
+- [x] 完成後の公式過去問独立再解答 `7 / 7 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 12 `300系はなぜVVVFになった？` の解説画像PowerPointを作成し、表示・ファイルQAを完了した。
+Topic 12 `300系はなぜVVVFになった？` の完成後公式過去問独立再解答を実施した。
 
-16:9・4枚。Slide 1はp/n型・pn接合・順逆バイアス、Slide 2はBJT静特性と`β`・`ro`、Slide 3はnチャネルJFETの因果関係、Slide 4はBJT/FET比較・固定技術史・過去問対応を可視化。
+固定7問について、公式解答を先に見ず、公式問題文と完成教材だけで解答を確定した後に公式解答と照合。独立解答列は `(2),(2),(5),(4),(5),(2),(2)`、公式解答列も同一で `7 / 7 PASS`。
 
-固定7問要求を `7 / 7` 可視化。200 dpi表示QA `4 / 4 PASS`、shape-bound overflow `0件`、文字欠け・重なり・文字化け `0件`、文字抽出・ZIP/XML整合性 `PASS`。
+教材だけで必要知識・式・判断根拠を再構成でき、教材外知識補完 `0件`。Topic 13のインバータ主回路・PWM・波形・高調波、機械編のGTO/IGBT/SiC詳細損失・駆動比較、BJT/FET小信号回路、ホール効果、未確認300系実車回路・数値への依存はいずれも `0件`。固定範囲外追加0件。
 
-公式過去問図の複製、PWM・インバータ波形、GTO/IGBT/SiC詳細損失・駆動比較、BJT/FET小信号回路、ホール効果、未確認300系実車回路・数値は追加していない。固定範囲外追加0件。
-
-PowerPoint SHA-256: `f749810f01da439213def981b10e0081dc39e8c1c7515153e156960cd0a5ddff`
+独立再解答記録: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_exam_recheck.md`
 
 ## 判定
 
-現在 `topic_12_powerpoint_complete / IN_PROGRESS`。完成数は `11 / 14`。次はTopic 12の完成後公式過去問独立再解答を実施する。
+現在 `topic_12_independent_reanswer_complete / IN_PROGRESS`。完成数は `11 / 14`。次はTopic 12の最終QAを実施する。
