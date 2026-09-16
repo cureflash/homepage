@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_practice_source_complete`
+- current_status: `topic_12_practice_pdf_complete`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 練習PDF
+- next_start: Topic 12 解説画像PowerPoint
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -192,7 +192,7 @@
 - [x] 二次試験型5問・途中式／前提／単位／検算または論証付き
 - [x] 独立計算・論理QA `15 / 15 PASS`
 - [x] 一次正答一意性QA `10 / 10 PASS`
-- [x] 固定5問・15答案要素へ `15 / 15` 接続
+- [x] 固定5過去問・15答案要素へ `15 / 15` 接続
 - [x] J/W、μs/s、kHz/Hzの単位換算QA PASS
 - [x] 素子1個と装置全体の損失区別 PASS
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
@@ -329,8 +329,20 @@
 - [x] 出力密度は教材用仮定値のみ
 - [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
 
+## Topic 12 練習PDF
+- [x] `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_practice.pdf`
+- [x] A4縦4ページ
+- [x] 一次10問＋二次5問・完全解説を収録
+- [x] 200 dpi全4ページ表示QA `4 / 4 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 数値・論理再検算 `15 / 15 PASS`
+- [x] 一次正答一意性 `10 / 10 PASS` を維持
+- [x] 固定一次2問＋二次3問・16答案要素と固定範囲を維持
+- [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
+- [x] SHA-256 `f70c681e0f4c5b0ed71ebc0b3f78dcaf09e6968b5b5ce1100758e42c79efd90a`
+
 ## 今回進めた内容
-Topic 12の練習問題sourceを完成した。一次試験型10問＋二次試験型5問の計15問を作成し、固定5過去問・16答案要素へ `16 / 16` 接続した。独立計算・論理再検算 `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`。固定範囲外論点・未確認N700S実車値の追加は0件。
+Topic 12の練習PDFを完成した。一次10問＋二次5問・完全解説をA4縦4ページへ反映し、200 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA PASS、数値・論理再検算 `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS` を確認した。固定5過去問・16答案要素と固定範囲を維持し、固定範囲外論点・未確認N700S実車値の追加は0件。
 
 ## 判定
-Topic 12は `topic_12_practice_source_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の練習PDFを作成する。
+Topic 12は `topic_12_practice_pdf_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の解説画像PowerPointを作成する。
