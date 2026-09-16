@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は品質ゲートPASSでcompleted。active topicは11「空転した車輪をどう立て直す？」。
 
 ## 今回進捗
-Topic 11の解説画像PowerPointを完成した。16:9・4枚で、センサ / 制御装置 / アクチュエータの役割、粘着 / 空転 / 滑走 / 再粘着、フィードバックの再検出ループ、R4下 機械 問14の判別軸を可視化した。レンダリング表示QA `4 / 4 PASS`、スライド外はみ出し0件、文字欠落・重なり・判読不能0件、ZIP整合性PASS。固定R4下 機械 問14への接続 `1 / 1`。固定EXAM_ALIGNMENT、固定範囲、解説本文・PDF、練習12問・練習PDFは変更していない。固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加は0件。
+Topic 11の完成後独立再解答を実施した。固定R4下 機械 問14について、完成教材だけでメカトロニクスの統合概念、センサ、制御装置、アクチュエータの役割を再判定し、選択肢 `(4)` を導出。電気技術者試験センター公式解答 `(4)` と一致し `1 / 1 PASS`。教材外・固定範囲外知識による補完0件、固定範囲外追加0件、未確認実車値依存0件。固定EXAM_ALIGNMENT、教材本文、練習問題、PDF、PowerPointは変更していない。
 
 ## Topic 11 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
@@ -50,6 +50,7 @@ Topic 11の解説画像PowerPointを完成した。16:9・4枚で、センサ / 
 - PowerPoint文字欠落・重なり・判読不能: `0件`
 - PowerPoint ZIP整合性: `PASS`
 - PowerPoint固定EXAM_ALIGNMENT接続: `1 / 1`
+- 完成後独立再解答: `(4)` / 公式解答 `(4)` / `1 / 1 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
@@ -62,6 +63,7 @@ Topic 11の解説画像PowerPointを完成した。16:9・4枚で、センサ / 
 - practice PDF QA: `topics/11_readhesion_control/11_readhesion_control_practice_pdf_qa.md`
 - PowerPoint: `topics/11_readhesion_control/11_readhesion_control_images.pptx`
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
+- independent reanswer: `topics/11_readhesion_control/11_readhesion_control_independent_reanswer.md`
 
 ## 非選定
 - R4上 機械 問14: アナログ/ディジタル信号、A-D/D-A変換、インタフェースが正答要件となりTopic 11固定範囲外。
@@ -91,5 +93,11 @@ Topic 11の解説画像PowerPointを完成した。16:9・4枚で、センサ / 
 - Slide 4: R4下 機械 問14の言い換え判別軸と固定範囲境界を集約。
 - 外部画像は使用せず、図表はPowerPoint図形で独自作成。
 
+## 独立再解答の要点
+- `(ア)=機械`、`(イ)=電子`、`(ウ)=センサ`、`(エ)=アクチュエータ`、`(オ)=コンピュータ` と再導出。
+- 選択肢 `(4)` を選定。
+- 公式解答 `(4)` と一致し `1 / 1 PASS`。
+- 教材外補完0件。
+
 ## 次に行う
-Topic 11の完成教材だけを使い、固定R4下 機械 問14を保存済み正答を見ずに独立再解答する。固定EXAM_ALIGNMENT、固定範囲、既存成果物は変更しない。
+Topic 11の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、進捗記録整合、固定範囲境界を確認する。
