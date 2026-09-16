@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は品質ゲートPASSでcompleted。active topicは11「空転した車輪をどう立て直す？」。
 
 ## 今回進捗
-Topic 11の解説source本文＋3段階例題を完成した。固定R4下 機械 問14が要求するメカトロニクス統合概念、センサ、制御装置、アクチュエータの役割を本文へ `1 / 1問` マッピングし、空転・滑走・再粘着、フィードバック、応答速度を系列SPEC固定範囲内で接続した。3段階例題は基礎・本試験標準・複合の `3 / 3 PASS`。固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測は0件。
+Topic 11の解説PDFを完成した。A4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、`pdftotext` 文字抽出QA `PASS`。固定R4下 機械 問14の要求事項を `1 / 1` マッピングし、3段階例題 `3 / 3` を収録した。固定EXAM_ALIGNMENT・固定範囲は変更せず、固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加は0件。
 
 ## Topic 11 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
@@ -32,11 +32,15 @@ Topic 11の解説source本文＋3段階例題を完成した。固定R4下 機�
 - 制作前独立検証: `1 / 1 PASS`
 - 固定過去問要求事項の本文マッピング: `1 / 1 PASS`
 - 3段階例題: `3 / 3 PASS`
+- 解説PDF表示QA: `4 / 4 PASS`
+- 解説PDF文字抽出QA: `PASS`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
 - 実車固有アルゴリズムの推測: `0件`
 - source: `topics/11_readhesion_control/11_readhesion_control.md`
+- explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
+- PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
 
 ## 非選定
 - R4上 機械 問14: アナログ/ディジタル信号、A-D/D-A変換、インタフェースが正答要件となりTopic 11固定範囲外。
@@ -53,4 +57,4 @@ Topic 11の解説source本文＋3段階例題を完成した。固定R4下 機�
 - 鉄道側は鉄道総研の公開資料で確認できる検出・トルク指令抑制の概念までに限定し、車種固有のしきい値・判定式・トルク低減率・応答時間を導入していない。
 
 ## 次に行う
-Topic 11の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。固定EXAM_ALIGNMENT、固定範囲、3段階例題は変更しない。
+Topic 11の練習問題sourceを作成する。固定EXAM_ALIGNMENT、固定範囲、解説本文・解説PDFは変更しない。
