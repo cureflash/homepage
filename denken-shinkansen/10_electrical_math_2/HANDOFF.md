@@ -8,11 +8,11 @@ Topic 01〜12は `completed`。
 
 完成数: `12 / 20`
 
-current_status: `topic_13_explanation_source_complete`
+current_status: `topic_13_powerpoint_complete`
 
 active_topic: `13 フーリエ級数`
 
-次工程: Topic 13の固定3問・5対象設問を変更せず、解説本文をA4縦PDFへ変換し、表示QA・文字抽出QAを行う。
+次工程: Topic 13の完成教材だけで固定3問・5対象設問を独立再解答し、公式標準解答と照合する。
 
 ## 上位仕様
 
@@ -825,7 +825,7 @@ PowerPoint QA:
 source:
 `topics/13_fourier_series/13_fourier_series.md`
 
-current_status: `topic_13_explanation_source_complete`
+current_status: `topic_13_powerpoint_complete`
 
 ### Topic 13 固定範囲
 
@@ -880,6 +880,24 @@ Topic 14のフーリエ変換・FFT、Topic 15の対数・dB・周波数応答�
 
 固定3問・5対象設問への本文マッピング: `5 / 5 PASS`。
 
+### Topic 13 成果物
+
+- 解説PDF: `topics/13_fourier_series/13_fourier_series_explanation.pdf`
+- 練習source: `topics/13_fourier_series/13_fourier_series_practice.md`
+- 練習PDF: `topics/13_fourier_series/13_fourier_series_practice.pdf`
+- PowerPoint: `topics/13_fourier_series/13_fourier_series_images.pptx`
+- PowerPoint QA: `topics/13_fourier_series/13_fourier_series_powerpoint_qa.md`
+
+PowerPoint QA:
+- 16:9・5枚
+- 固定3問・5対象設問への可視化接続: `5 / 5 PASS`
+- 全5スライド再レンダリング: `5 / 5 PASS`
+- クリッピング・重なり・文字化け: 0件
+- overflow: 0件
+- `slides_test.py`: `PASS`
+- PPTX ZIP/XML整合性: `PASS`
+- SHA-256: `b898aa5766027fc80fa64a7db8135fa2149fb73fe6cc016df2aaf09ccbeeb226`
+
 境界:
 - H20/H19周辺問題による件数合わせ: 0件
 - 第一種過去問による件数水増し: 0件
@@ -890,4 +908,4 @@ Topic 14のフーリエ変換・FFT、Topic 15の対数・dB・周波数応答�
 
 ## 次に行うこと
 
-Topic 13 `フーリエ級数` の固定3問・5対象設問を変更せず、解説本文をA4縦PDFへ変換し、表示QA・文字抽出QAを行う。
+Topic 13 `フーリエ級数` の完成教材だけで固定3問・5対象設問を独立再解答し、公式標準解答と照合する。
