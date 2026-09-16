@@ -6,16 +6,20 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は33/38。01〜33がPASS。active topicは34 `COMTRAC② 進路をどう自動制御する？`。
 
 ## 今回進捗
-Topic 34 `COMTRAC② 進路をどう自動制御する？` の解説本文§1〜§15＋3段階例題を完成した。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` の解説PDFを完成した。
 
-固定公式過去問5問・6答案要素を本文へ `6 / 6` マッピング。AND・OR・NOT、真理値表、多段論理回路、入力波形、条件判定、インターロックの一般原則を、固定範囲内で本試験型の解法手順へ接続した。新幹線側はJR東海・JTIS公開資料で確認できるCOMTRAC/PRCの「進路制御」という役割までに限定し、本文中の具体的論理式は学習用モデルと明記した。
+- PDF: `topics/34_comtrac_route_control/34_comtrac_route_control_explanation.pdf`
+- A4縦4ページ
+- 解説source §1〜§15＋3段階例題を収録
+- 固定公式過去問5問・6答案要素を `6 / 6` 反映
+- 180 dpi全4ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- Topic 35範囲追加: `0件`
+- ExOR/NOR/NAND等の固定範囲外ゲート追加: `0件`
+- カルノー図等の高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
 
-3段階例題:
-- 基礎: AND・OR・NOTを1段ずつ評価
-- 標準: 多段論理回路を中間信号へ分け、時間区間ごとに評価
-- 複合: 必要条件=AND、代替条件=OR、禁止条件=NOTの条件判定モデル
-
-Topic 35範囲追加0件、ExOR/NOR/NAND等の固定範囲外ゲート追加0件、カルノー図等の高度な論理簡単化追加0件、未確認COMTRAC内部仕様追加0件。固定5問・6答案要素、制作前独立解答結果は変更していない。
+教材本文・固定EXAM_ALIGNMENT・制作前独立解答結果は変更していない。
 
 source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
 
@@ -47,6 +51,17 @@ Topic 35範囲追加: `0件`。
 - 条件判定: 必要条件=AND、代替条件=OR、禁止条件=NOT
 - インターロック: 両立してはならない動作を条件で拘束する一般原則
 - COMTRAC/PRCの実論理式・判定順序・実インターロック条件とは断定しない
+
+## Topic 34 解説PDF
+- `topics/34_comtrac_route_control/34_comtrac_route_control_explanation.pdf`
+- A4縦4ページ
+- 本文§1〜§15、3段階例題、固定5問・6答案要素の対応を収録
+- 180 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- 固定EXAM_ALIGNMENT: `6 / 6` 反映
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
 
 ## Topic 34 系列SPEC固定範囲
 - 進路制御
@@ -80,11 +95,11 @@ Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は `PASS
 - 最終QA記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_final_qa.md`
 
 ## 現在の状態
-- `current_status`: `topic_34_explanation_source_complete`
+- `current_status`: `topic_34_explanation_pdf_complete`
 - 完成数: 33/38
 - 01〜33: PASS
 - last completed: 33 `COMTRAC① 東海道新幹線全体をどう監視する？`
 - active topic: 34 `COMTRAC② 進路をどう自動制御する？`
 
 ## 次の正確な開始点
-Topic 34の解説PDFを作成する。解説sourceの§1〜§15＋3段階例題をA4縦の学習用PDFへ落とし込み、固定5問・6答案要素 `6 / 6` の接続を維持する。練習問題・PowerPointへ先行しない。
+Topic 34の練習source / 練習PDFを作成する。三種要件に従って12問以上、少なくとも半数を五肢択一とし、完全解説を付け、固定5問・6答案要素へ接続する。PowerPointへ先行しない。

@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 33 / 38
-- current_status: `topic_34_explanation_source_complete`
+- current_status: `topic_34_explanation_pdf_complete`
 - last_completed_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
 - active_topic: `34 COMTRAC② 進路をどう自動制御する？`
-- next_start: Topic 34の解説PDFを作成する
+- next_start: Topic 34の練習source / 練習PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01〜33 — PASS
@@ -47,6 +47,17 @@ source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
 - インターロック: 両立してはならない動作を条件で拘束する一般原則として説明
 - JR東海/JTIS公開範囲でCOMTRAC/PRCの進路制御という役割へ接続
 - 具体的論理式・判定順序・実インターロック条件は学習用モデルと明記し実装事実とは断定しない
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+
+## 34 解説PDF
+- `topics/34_comtrac_route_control/34_comtrac_route_control_explanation.pdf`
+- A4縦4ページ
+- 本文§1〜§15、3段階例題、固定5問・6答案要素の対応を収録
+- 180 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- 固定EXAM_ALIGNMENT: `6 / 6` 反映
 - Topic 35範囲追加: `0件`
 - 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
@@ -449,4 +460,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は固定5過去問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数33/38。
 
 ## 次テーマ工程
-Topic 34 `COMTRAC② 進路をどう自動制御する？` は解説本文§1〜§15＋3段階例題まで完了。固定5問・6答案要素を本文へ `6 / 6` 接続済み。次は解説PDFを作成する。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` は解説PDFまで完了。固定5問・6答案要素を `6 / 6` 反映し、表示QA・文字抽出QAともPASS。次は練習source / 練習PDFを作成する。
