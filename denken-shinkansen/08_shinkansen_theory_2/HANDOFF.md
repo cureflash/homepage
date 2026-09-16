@@ -6,13 +6,13 @@
 
 Topic 01〜12は `PASS / completed`。完成数は `12 / 21`。
 
-current_status: `topic_13_source_progress_synced`
+current_status: `topic_13_final_qa_complete`
 
 active_topic: `13 新幹線の交流電力を複素数で扱う`
 
-Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAで唯一FAILだった主source2箇所＋練習source1箇所の旧進捗記録を実成果物へ同期した。
+Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋表示QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAで唯一FAILだった主source2箇所＋練習source1箇所の旧進捗記録を同期し、最終QA再実施で `PASS / FINAL_QA_COMPLETE` を確認した。
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程は最終QA再実施。完成数は `12 / 21` のまま。
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。完成数はまだ `12 / 21` のまま。
 
 ## Topic 13 成果物
 
@@ -147,6 +147,22 @@ Topic 13は解説本文＋3段階例題、解説PDF＋表示QA、練習問題sou
 
 判定: `PASS / SOURCE_PROGRESS_SYNCED`
 
+## Topic 13 最終QA再実施
+
+記録: `topics/13_complex_power/13_complex_power_final_qa.md`
+
+- 必須成果物実在: `PASS`
+- 固定一次3問・15小問＋二次1問・4答案要素の完成後独立再解答: `19 / 19 PASS`
+- 二次採用1問・4答案要素、二次数合わせ0件: `PASS`
+- 解説PDF・練習PDF・PowerPoint QA: `PASS`
+- SPEC固定範囲境界: `PASS`
+- 初回blocker 3件の解消: `PASS`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
+
+判定: `PASS / FINAL_QA_COMPLETE`
+
+Topic 13自体の `completed` 化はまだ行わない。次工程で主source・練習source・STATUS・HANDOFFをcompleted状態へ一括同期してから確定する。
+
 ## 直前完了Topic
 
 Topic 12「三相交流を新幹線へ渡す」は `PASS / completed`。
@@ -159,4 +175,4 @@ Topic 12「三相交流を新幹線へ渡す」は `PASS / completed`。
 
 ## 次に行うこと
 
-Topic 13の最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更せず、初回FAILだった進捗記録整合が解消されているかを含めて再判定する。
+Topic 13の主source・練習source・STATUS・HANDOFFを `completed` 状態へ一括同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
