@@ -549,6 +549,6 @@ QA集計:
 - 固定範囲外追加: `0件`
 - Topic 12〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
-- 状態: `topic_11_practice_source_complete`
+- 状態: `topic_11_source_progress_synced`
 
-次工程は、このsourceを正本として練習PDFを作成する。
+次工程は、技術内容・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXを変更せず、Topic 11の最終QAを再判定する。
