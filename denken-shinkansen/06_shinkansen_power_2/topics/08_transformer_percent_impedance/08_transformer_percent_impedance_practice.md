@@ -1,7 +1,7 @@
 # Topic 08 練習問題・完全解説 - 主変圧器を％インピーダンスで見る
 
 更新日: 2026-09-16
-状態: `topic_08_practice_source_complete`
+状態: `topic_08_practice_pdf_complete`
 
 本ファイルは `08_transformer_percent_impedance.md` の固定EXAM_ALIGNMENTと完成済み解説本文だけを土台にした練習プリント用sourceである。公式過去問の転載ではなく、正式固定4問の要求事項とTopic 08固定9項目を同型問題へ転用できるか確認する独自問題とする。
 
@@ -615,4 +615,4 @@ B:
 
 ## 次工程
 
-このsourceを正本として練習PDFを作成し、全15問・完全解説・数式・単位・選択肢が欠落なく表示されることを確認する。固定EXAM_ALIGNMENT、正式4過去問、固定9項目は変更しない。
+練習PDF作成・表示QA、完成後独立再解答、最終QA実施まで完了済み。本sourceの旧状態・旧次工程を実成果物へ同期した。次はTopic 08の最終QAを再判定する。固定EXAM_ALIGNMENT、正式4過去問、固定9項目、問題・解答は変更しない。
