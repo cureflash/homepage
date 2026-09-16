@@ -23,6 +23,7 @@ GitHub正本上で以下を再確認した。
 - 解説画像PowerPoint
 - PowerPoint QA
 - 完成後独立再解答記録
+- 最終QA記録
 
 判定: `PASS`
 
@@ -72,22 +73,22 @@ GitHub正本上で以下を再確認した。
 
 判定: `PASS`
 
-### 6. 進捗記録整合
+### 6. 初回blockerの解消確認
 
-実在成果物と完成後独立再解答済み状態に対し、旧工程を示す記録が残っている。
+初回最終QAで指摘した3件をGitHub正本で再確認した。
 
-- 主source冒頭: `stage: POWERPOINT_COMPLETE`、次工程「完成後独立再解答」のまま
-- 主source末尾: 「次工程は…完成後独立再解答する」のまま
-- 練習source末尾: 「次工程は解説画像PowerPoint＋表示QA」のまま
+- 主source冒頭: `SOURCE_PROGRESS_SYNCED / in_progress`、完成後独立再解答 `5 / 5 PASS`、次工程「最終QA再実施」へ同期済み
+- 主source末尾: 完成後独立再解答・初回最終QA実施済み、次工程「最終QA再実施」へ同期済み
+- 練習source末尾: 完成後独立再解答 `5 / 5 PASS`、次工程「最終QA再実施」へ同期済み
 
-技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX自体に修正要否はないが、GitHub正本の進捗記録が実態と不整合であるため、このrunではcompletedにしない。
+旧工程を示していた3件は解消しており、実在成果物・独立再解答済み状態と矛盾する旧進捗記録は残っていない。
 
-判定: `FAIL / PROGRESS_RECORDS_STALE`
+判定: `PASS`
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / FINAL_QA_COMPLETE`
 
-固定H23一次「理論」問6・5小問の独立再解答 `5 / 5 PASS`、二次非採用判断、必須成果物、表示QA、SPEC境界はPASS。未完了理由は主source・練習sourceの旧進捗記録のみ。
+固定H23一次「理論」問6・5小問の独立再解答 `5 / 5 PASS`、二次非採用判断、必須成果物、表示QA、SPEC境界、初回blocker解消を全件PASS確認した。
 
-次工程は進捗記録を実成果物へ同期し、その後に最終QAを再実施する。完成数は `11 / 21` のままとする。
+このrunでは最終QA再実施までを完了とし、Topic 12自体の `completed` 化は次工程で主source・練習source・STATUS・HANDOFFの完了状態を一括同期してから確定する。完成数はまだ `11 / 21` のままとする。
