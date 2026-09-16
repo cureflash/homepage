@@ -6,27 +6,32 @@
 
 Topic 01〜09は最終QAまでPASSし、`completed`。
 
-Topic 10 `新幹線が使う電力は「W」だけではない` は解説PDFまで完了した。
+Topic 10 `新幹線が使う電力は「W」だけではない` は練習問題source・練習PDFまで完了した。
 
 - 完成数: `9 / 14`
 - last completed: `09 北陸新幹線は50Hzと60Hzをどう走る？`
 - active topic: `10 新幹線が使う電力は「W」だけではない`
-- current status: `topic_10_explanation_pdf_complete / IN_PROGRESS`
-- next start: Topic 10の練習問題source・練習PDFを作成する
+- current status: `topic_10_practice_pdf_complete / IN_PROGRESS`
+- next start: Topic 10の解説画像PowerPointを作成する
 
 ## 今回進捗
 
-Topic 10の解説PDFを完成した。
+Topic 10の練習問題source・練習PDFを完成した。
 
 - 固定公式過去問: `5問・6答案要素`
-- 制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
-- 解説PDF: A4縦4ページ
-- 固定5問・6答案要素をPDFへ `6 / 6` 反映
-- 基礎・本試験標準・複合の3段階例題を収録
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 練習問題: `15問`
+- 構成: 基礎4 / 本試験標準8 / 複合・応用3
+- 形式: 全問五肢択一
+- 独立再計算・論理確認: `15 / 15 PASS`
+- 正答一意性: `15 / 15 PASS`
+- 正答位置: `(1)〜(5)` 各3問
+- 固定5過去問・6答案要素への接続: `6 / 6`
+- 練習PDF: A4縦3ページ
+- 200 dpi全ページ表示QA: `3 / 3 PASS`
 - 文字抽出QA: `PASS`
-- Topic 11の三相交流、Topic 12以降の半導体、Topic 13側の高調波の追加: `0件`
-- 未確認新幹線実車力率・補償方式の追加: `0件`
+- Topic 11以降の三相・半導体・高調波追加: `0件`
+- 電力科目・法規の設備詳細追加: `0件`
+- 未確認新幹線実車力率・無効電力・補償方式追加: `0件`
 
 完成後独立再解答の先読み汚染を避けるため、制作前検証の正答番号・個別数値解答は必須先読み正本へ保存していない。
 
@@ -101,14 +106,20 @@ cosφ = P / S
   - `topics/10_power_factor/10_power_factor_explanation.pdf`
   - QA: `topics/10_power_factor/10_power_factor_explanation_qa.md`
   - A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- 練習source・練習PDF: 未着手
+- 練習source・練習PDF: 完成
+  - source: `topics/10_power_factor/10_power_factor_practice.md`
+  - PDF: `topics/10_power_factor/10_power_factor_practice.pdf`
+  - QA: `topics/10_power_factor/10_power_factor_practice_qa.md`
+  - 全15問・全問五肢択一、独立再計算 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
+  - A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS
+  - 固定5過去問・6答案要素への接続: `6 / 6`
 - 解説画像PowerPoint: 未着手
 - 完成後独立再解答: 未着手
 - 最終QA: 未着手
 
 ## 次に行うこと
 
-Topic 10の練習問題source・練習PDFを作成する。固定5問・6答案要素と系列SPEC境界を維持する。
+Topic 10の解説画像PowerPointを作成する。固定5問・6答案要素と系列SPEC境界を維持する。
 
 ## 固定ルール
 
