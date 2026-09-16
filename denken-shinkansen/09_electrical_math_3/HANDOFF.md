@@ -6,19 +6,19 @@
 
 Topic 01〜09は `completed`。
 
-Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ブラインドゲート、完成教材だけでの固定5問独立再解答、初回最終QAまで完了。
+Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ブラインドゲート、完成教材だけでの固定5問独立再解答、初回最終QA、source進捗記録3箇所の同期まで完了。
 
-初回最終QAは `NEEDS_REVISION / IN_PROGRESS`。技術内容・成果物・独立再解答はPASSで、未完了理由は主source・練習sourceの旧進捗記録3箇所だけ。
+初回最終QAは `NEEDS_REVISION / IN_PROGRESS` だったが、唯一のFAILだった主source・練習sourceの旧進捗記録3箇所は実成果物へ同期済み。技術内容・成果物・独立再解答は変更していない。
 
 完成数: `9 / 12`
 
-current_status: `topic_10_final_qa_needs_revision`
+current_status: `topic_10_source_progress_synced`
 
 last_completed_topic: `09 微積分で電気を読む`
 
 active_topic: `10 指数関数・一階微分方程式入門`
 
-next_start: `Topic 10 source進捗記録3箇所を実成果物へ同期`
+next_start: `Topic 10最終QA再判定`
 
 ## Topic 10 固定仕様範囲
 
@@ -192,15 +192,26 @@ PASS:
 - 未確認新幹線実値追加0件
 - 仕様境界
 
-FAILは進捗記録3箇所のみ:
+FAILは進捗記録3箇所のみだった:
 1. 主source冒頭 `## 状態` が「解説本文＋3段階例題まで完了 / 次工程は解説PDF」のまま。
 2. 主source末尾 `## 次工程` が「解説PDFへ反映」のまま。
 3. 練習source末尾 `## 次工程` が「練習PDFを作成」のまま。
 
 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・独立再解答結果は変更不要。
 
+## Topic 10 source進捗記録同期
+
+初回最終QAでFAILだった上記3箇所を実成果物へ同期済み。
+
+- 主source冒頭 `## 状態`: 必須成果物・完成後独立再解答・初回最終QAまで完了した現在地へ同期
+- 主source末尾 `## 次工程`: 最終QA再判定へ同期
+- 練習source末尾 `## 次工程`: 最終QA再判定へ同期
+- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・独立再解答結果は変更していない
+
+判定: `topic_10_source_progress_synced / IN_PROGRESS`。
+
 ## 次工程
 
-Topic 10の主source・練習sourceに残る旧進捗記録3箇所だけを実成果物へ同期する。
+Topic 10の最終QAを再判定する。
 
-この同期では技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果を変更しない。同期後に最終QAを再判定する。
+再判定では、初回最終QAでPASSだった技術内容・成果物・独立再解答・仕様境界を再確認し、今回同期した進捗記録3箇所の整合だけを追加確認する。
