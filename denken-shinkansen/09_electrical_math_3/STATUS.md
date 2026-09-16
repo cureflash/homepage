@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 8 / 12
-- current_status: `topic_09_exam_alignment_complete`
+- current_status: `topic_09_preproduction_exam_verification_complete`
 - last_completed_topic: `08 積分 速度曲線の面積は距離`
 - active_topic: `09 微積分で電気を読む`
-- next_start: `Topic 09 制作前独立解答・公式解答照合`
+- next_start: `Topic 09 解説本文＋3段階例題`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -81,7 +81,7 @@
 - [x] 水力設備・電熱・RC過渡等の固定範囲外候補を除外
 - [x] 参考教材を複数系統確認（e-sysnet含む）
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
-- [ ] 制作前独立解答・公式解答照合
+- [x] 制作前独立解答・公式解答照合 `5 / 5問・7 / 7答案要素 PASS`
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
@@ -92,22 +92,18 @@
 
 ## 今回進めた内容
 
-Topic 09「微積分で電気を読む」の制作前EXAM_ALIGNMENTを完了した。
+Topic 09「微積分で電気を読む」の固定5問を、保存済み正答を見ずに独立解答し、その後に電気技術者試験センター公式解答と照合した。
 
-系列SPECの固定範囲 `i=dq/dt`、`q=∫i dt`、`e=-N dΦ/dt`、`E=∫P dt`、`W=∫F dx` だけを対象とし、品質ゲート対象を次の5問に固定した。
+- R7上 法規 問13: `(a)(2), (b)(3)` / PASS
+- R6下 理論 問3: `(2)` / PASS
+- R3 理論 問4: `(4)` / PASS
+- R7上 電力 問1: `(2)` / PASS
+- H29 法規 問13: `(a)(2), (b)(5)` / PASS
 
-- R7上 法規 問13
-- R6下 理論 問3
-- R3 理論 問4
-- R7上 電力 問1
-- H29 法規 問13
-
-令和8年度上期も先に確認したが、水力発電設備・効率・磁気エネルギー等の専門論点が支配的な候補は採用せず、件数合わせの仕様拡張を行っていない。参考教材はe-sysnetと電験三種まとめましたを含む複数系統で確認した。
-
-公式解答は次工程の独立解答後に照合するため、現段階のsourceには正答値を記録していない。
+判定は `5 / 5問・7 / 7答案要素 PASS`、公式解答との不一致0件。固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件。
 
 ## 判定
 
-`topic_09_exam_alignment_complete / IN_PROGRESS`。
+`topic_09_preproduction_exam_verification_complete / IN_PROGRESS`。
 
-完成数は `8 / 12` のまま。次工程は固定5問の制作前独立解答・公式解答照合。
+完成数は `8 / 12` のまま。次工程は解説本文＋3段階例題。
