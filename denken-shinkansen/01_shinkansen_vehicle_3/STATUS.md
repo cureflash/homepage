@@ -5,13 +5,32 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 34 / 38
-- current_status: `topic_34_completed`
+- current_status: `topic_35_preproduction_exam_alignment_complete`
 - last_completed_topic: `34 COMTRAC② 進路をどう自動制御する？`
 - active_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
-- next_start: Topic 35の制作前EXAM_ALIGNMENT。系列SPEC固定範囲から関連する公式過去問を直近年度優先で調査し、三種原則5問以上（該当が5問未満なら確認できた全件）を固定して制作前独立解答を行う
+- next_start: Topic 35の解説source。固定EXAM_ALIGNMENT 5問を変更せず、本文＋3段階例題を作成し、5問すべての要求知識を本文へマッピングする
 
 ## 新品質ゲート進捗
 - [x] 01〜34 — PASS
+
+## 35 EXAM_ALIGNMENT
+品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
+
+1. R7下 機械 問14 — フローチャート・変数更新・条件分岐・反復 — PASS
+2. R5上 機械 問14 — フローチャート・変数更新・条件分岐・反復 — PASS
+3. R4下 機械 問13 — 伝送路・雑音・多重化・変調波・標本化・圧縮 — PASS
+4. R4下 理論 問14 — 標本化・量子化・符号化・ディジタル伝送・A-D変換 — PASS
+5. H26 機械 問13 — シーケンス制御・工程/手順・条件による動作・PLC — PASS
+
+制作前独立解答: `5 / 5問 PASS`。
+公式解答との不一致: `0件`。
+固定範囲外知識による正答補完: `0件`。
+未確認COMTRAC内部仕様依存: `0件`。
+個別正答番号・完成導出結果は完成後blind再解答保護のため必須先読みsourceへ保存しない。
+
+新幹線側はJR東海・JR東海情報システム公開資料で確認できるCOMTRACの運転管理、運転計画変更、遅延波及防止、第2総合指令所までを根拠とし、具体的な列車優先順位、番線変更判定式、運転整理ルール、自動化範囲、内部切替方式は断定しない。2018年JR東海資料の「複数計算機への機能分散」は故障影響範囲を小さくする構成変更として扱い、冗長化と同義にしない。
+
+source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management.md`
 
 ## 34 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6答案要素。系列SPEC固定範囲は、進路制御、条件判定、AND、OR、NOT、真理値表、インターロック、論理回路。
@@ -536,4 +555,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 34 `COMTRAC② 進路をどう自動制御する？` は固定5問・6答案要素の完成後blind独立再解答 `5 / 5問・6 / 6答案要素 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数34/38。
 
 ## 次テーマ工程
-Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` の制作前EXAM_ALIGNMENT。系列SPEC固定範囲は「遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化」。公式過去問を直近年度から調査し、三種原則5問以上（該当が5問未満なら確認できた全件）を固定して、制作前独立解答を通過するまで本文制作へ進まない。
+Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` の解説source。固定EXAM_ALIGNMENT 5問を変更せず、本文＋3段階例題を作成し、5問すべての要求知識を本文へマッピングする。新幹線側は公開一次資料の確認範囲に限定し、未確認COMTRAC内部仕様を追加しない。
