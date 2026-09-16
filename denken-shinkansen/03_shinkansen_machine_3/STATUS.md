@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `10 / 16`
-- current_status: `topic_11_powerpoint_complete`
+- current_status: `topic_11_independent_reanswer_passed`
 - last_completed_topic: `10 新幹線の速度はどう自動制御される？`
 - active_topic: `11 空転した車輪をどう立て直す？`
-- next_start: Topic 11の完成教材だけで固定R4下 機械 問14を独立再解答する
+- next_start: Topic 11の最終QAを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -21,7 +21,7 @@
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
-- [ ] 11 空転した車輪をどう立て直す？ — PowerPoint完成 / 制作中
+- [ ] 11 空転した車輪をどう立て直す？ — 完成後独立再解答PASS / 最終QA待ち
 - [ ] 12〜16 — 未完了
 
 ## Topic 11 現在品質状態
@@ -53,6 +53,8 @@
 - PowerPoint文字欠落・重なり・判読不能: `0件`
 - PowerPoint ZIP整合性: `PASS`
 - PowerPoint固定過去問接続: `1 / 1`
+- 完成後独立再解答: `(4)` / 公式解答 `(4)` / `1 / 1 PASS`
+- 独立再解答記録: `topics/11_readhesion_control/11_readhesion_control_independent_reanswer.md`
 - 教材外・固定範囲外知識による補完: `0件`
 - 件数合わせの固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
@@ -69,7 +71,7 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 11「空転した車輪をどう立て直す？」の解説画像PowerPointを完成した。16:9・4枚で、センサ / 制御装置 / アクチュエータの役割、粘着 / 空転 / 滑走 / 再粘着、フィードバックの再検出ループ、R4下 機械 問14の判別軸を可視化した。レンダリング表示QA `4 / 4 PASS`、スライド外はみ出し0件、文字欠落・重なり・判読不能0件、ZIP整合性PASS。固定R4下 機械 問14への接続 `1 / 1`。固定EXAM_ALIGNMENT、固定範囲、解説本文・PDF、練習12問・練習PDFは変更していない。固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加はいずれも0件。
+Topic 11「空転した車輪をどう立て直す？」の完成後独立再解答を実施した。固定R4下 機械 問14について、完成教材のメカトロニクス統合概念、センサ、制御装置、アクチュエータの役割分担から `(4)` を再導出し、電気技術者試験センター公式解答 `(4)` と一致した。結果 `1 / 1 PASS`。教材外・固定範囲外知識による補完0件、固定範囲外追加0件、未確認実車値依存0件。既存の固定EXAM_ALIGNMENT、教材本文、練習問題、PDF、PowerPointは変更していない。
 
 ## 次工程
-Topic 11の完成教材だけを使い、固定R4下 機械 問14を保存済み正答を見ずに独立再解答する。固定EXAM_ALIGNMENT、固定範囲、既存成果物は変更しない。
+Topic 11の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、進捗記録整合、固定範囲境界を確認する。
