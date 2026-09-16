@@ -4,9 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-技術内容、固定EXAM_ALIGNMENT、一次・二次の独立再解答、必須成果物、表示・構造QA、練習問題QA、SPEC境界はすべてPASS。未完了理由は進捗記録1箇所のみで、主source冒頭の状態欄が「最終QAは未実施」のまま残っている。
+技術内容、固定EXAM_ALIGNMENT、一次・二次の独立再解答、必須成果物、表示・構造QA、練習問題QA、SPEC境界、進捗記録整合を再確認し、全件PASSとした。
 
 ## 1. 上位仕様確認
 
@@ -29,7 +29,7 @@
 
 ## 3. 完成後独立再解答
 
-`10_300series_induction_motor_equivalent_circuit_independent_reanswer.md` を確認。
+`10_300series_induction_motor_equivalent_circuit_independent_reanswer.md` を再確認。
 
 - 一次: `11 / 11 PASS`
 - 二次: `11 / 11 PASS`
@@ -88,13 +88,9 @@ SPEC境界: `PASS`
 
 ## 7. 進捗記録整合
 
-`STATUS.md` と `HANDOFF.md` は最終QA実施前の現在地として `topic_10_independent_reanswer_passed` を示しており、本QAで更新対象。
+前回FAIL要因だった主source冒頭の「最終QAは未実施」は既に同期済みであることを確認した。本再判定に合わせ、主sourceを `PASS / completed`、STATUS・HANDOFFをTopic 10完了・Topic 11開始待ちへ同期する。
 
-主source `10_300series_induction_motor_equivalent_circuit.md` 冒頭の状態欄に次の旧進捗が残っている。
-
-> 制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題・完全解説source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完成。最終QAは未実施。
-
-本QAを実施した時点で「最終QAは未実施」は実態と不一致になるため、進捗記録整合を `FAIL` とする。教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTXを変更する必要はない。
+進捗記録整合: `PASS`
 
 ## 8. 最終判定
 
@@ -105,8 +101,8 @@ SPEC境界: `PASS`
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL`（主source冒頭1箇所のみ）
+- 進捗記録整合: `PASS`
 
-したがって最終判定は `NEEDS_REVISION / IN_PROGRESS`。完成数は `9 / 39` のまま。
+したがって最終判定は `PASS / completed`。完成数は `10 / 39`。
 
-次工程は主source冒頭の「最終QAは未実施」を今回の最終QA結果へ同期する。技術内容・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTXには触れない。同期後に最終QAを再判定する。
+次工程はTopic 11「300系② PWMコンバータ」の制作前EXAM_ALIGNMENT。
