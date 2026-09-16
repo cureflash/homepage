@@ -3,23 +3,45 @@
 更新日: 2026-09-17
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は34/38。01〜34がPASS。次のactive topicは35 `COMTRAC③ ダイヤが乱れたらどうする？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は34/38。01〜34がPASS。active topicは35 `COMTRAC③ ダイヤが乱れたらどうする？`。
 
 ## 今回進捗
-Topic 34の最終QAを再実施し、`PASS / COMPLETED` とした。
+Topic 35の制作前EXAM_ALIGNMENTを完了した。
 
-- 固定5問・6答案要素の完成後blind独立再解答: `5 / 5問・6 / 6答案要素 PASS`
-- 必須成果物: PASS
-- 練習問題QA: `15 / 15 PASS`
-- 解説PDF / 練習PDF / PowerPoint表示QA: PASS
-- 進捗記録整合: PASS
-- 固定範囲境界: PASS
-- Topic 35範囲追加: `0件`
-- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
-- 未確認COMTRAC内部仕様追加: `0件`
-- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更なし
+- 系列SPEC固定範囲: 遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化
+- 公式過去問5問を固定
+- 制作前独立解答: `5 / 5問 PASS`
+- 公式解答との不一致: `0件`
+- 固定範囲外知識による正答補完: `0件`
+- 未確認COMTRAC内部仕様への依存: `0件`
+- 個別正答番号・完成導出は完成後blind独立再解答保護のため必須先読みsourceへ保存しない
+- 解説本文・例題・PDF・練習問題・PowerPointは未着手
 
-最終QA記録: `topics/34_comtrac_route_control/34_comtrac_route_control_final_qa.md` — `PASS / COMPLETED`。
+source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management.md`
+
+## Topic 35 固定EXAM_ALIGNMENT
+- R7下 機械 問14 — フローチャート、変数更新、条件分岐、反復
+- R5上 機械 問14 — フローチャート、変数更新、条件分岐、反復
+- R4下 機械 問13 — 伝送路、雑音、多重化、変調波、標本化、圧縮
+- R4下 理論 問14 — 標本化、量子化、符号化、ディジタル伝送、A-D変換
+- H26 機械 問13 — シーケンス制御、工程・手順、条件による動作、PLC
+
+制作前独立解答: `5 / 5問 PASS`。
+公式解答との不一致: `0件`。
+固定範囲外知識による正答補完: `0件`。
+未確認COMTRAC内部仕様依存: `0件`。
+
+## Topic 35 系列SPEC固定範囲
+扱う: 遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
+
+新幹線側はJR東海・JR東海情報システムの公開資料で確認できるCOMTRACの運転管理、運転計画変更、遅延波及防止、第2総合指令所までを根拠とする。具体的な列車優先順位、番線変更判定式、運転整理ルール、自動化範囲、内部切替方式は断定しない。2018年JR東海資料の「複数計算機への機能分散」は故障影響範囲を小さくする構成変更として扱い、冗長化と同義にしない。
+
+追加しない:
+- COMTRAC内部の具体的な列車優先順位、進路選択アルゴリズム、番線変更判定式、運転整理ルール、データ構造、更新周期、通信プロトコル
+- 公開資料で確認できない自動化範囲や指令員との役割分担
+- 機能分散を冗長化と同義とすること
+- Topic 36以降の固定範囲の先取り
+- Topic 34の論理回路を再度体系化して範囲を拡張すること
 
 ## Topic 34 固定EXAM_ALIGNMENT
 - R7上 機械 問14 — AND・OR・NOT、論理回路、出力波形
@@ -57,11 +79,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_34_completed`
+- `current_status`: `topic_35_preproduction_exam_alignment_complete`
 - 完成数: 34/38
 - 01〜34: PASS
 - last completed: 34 `COMTRAC② 進路をどう自動制御する？`
 - active topic: 35 `COMTRAC③ ダイヤが乱れたらどうする？`
 
 ## 次の正確な開始点
-Topic 35の制作前EXAM_ALIGNMENT。系列SPEC固定範囲は「遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化」。公式過去問を直近年度から調査し、三種原則5問以上（該当が5問未満なら確認できた全件）を固定して、制作前独立解答を通過するまで本文制作へ進まない。
+Topic 35の解説source。固定EXAM_ALIGNMENT 5問を変更せず、本文＋3段階例題を作成し、5問すべての要求知識を本文へマッピングする。新幹線側は公開一次資料の確認範囲に限定し、未確認COMTRAC内部仕様を追加しない。
