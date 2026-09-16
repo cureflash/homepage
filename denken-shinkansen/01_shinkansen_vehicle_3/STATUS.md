@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 32 / 38
-- current_status: `topic_33_blind_reanswer_ready`
+- current_status: `topic_33_independent_reanswer_complete`
 - last_completed_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
 - active_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
-- next_start: 完成教材だけを使ってTopic 33固定5問をblind独立再解答する
+- next_start: 固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを実施する
 
 ## 新品質ゲート進捗
 - [x] 01〜32 — PASS
-- [ ] 33 COMTRAC① 東海道新幹線全体をどう監視する？ — 制作前EXAM_ALIGNMENT＋解説source/PDF＋練習source/PDF＋PowerPoint完了。完成後blind独立再解答前ゲートはREADY
+- [ ] 33 COMTRAC① 東海道新幹線全体をどう監視する？ — 制作前EXAM_ALIGNMENT＋解説source/PDF＋練習source/PDF＋PowerPoint＋完成後blind独立再解答完了。最終QA待ち
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
@@ -24,12 +24,13 @@
 5. R1 機械 問14 — 2進数の加減算・基数変換 — PASS
 
 制作前独立解答: `5 / 5 PASS`。
+完成後blind独立再解答: `5 / 5 PASS`。
 公式解答との不一致: `0件`。
+教材外知識補完: `0件`。
 固定範囲外知識による正答補完: `0件`。
 Topic 34のAND・OR・NOT・真理値表・インターロック追加: `0件`。
 Topic 35の運転整理・番線変更・冗長化追加: `0件`。
 未確認COMTRAC内部仕様追加: `0件`。
-個別正答番号・制作前導出結果は完成後blind再解答のため必須先読み対象から除去済み。
 
 source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
 
@@ -90,9 +91,22 @@ source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
 `BLIND_REANSWER_READY`。
 - `EXAM_ALIGNMENT_SPEC.md` が要求する「保存済み正答を先に見ない」条件に合わせ、必須先読み対象からTopic 33固定5問の制作前個別正答番号・完成済み導出結果を除去済み
 - 過去テーマの記録中に同じ固定問題が現れる箇所も、該当する個別正答・導出だけをblind保護対象として非表示化
-- このrunでは独立再解答自体は実施しない
 - 固定EXAM_ALIGNMENT・教材本文・練習問題・PDF/PPTXは変更なし
 - 記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_blind_gate.md`
+
+## 33 完成後blind独立再解答
+- R7下 機械 問14 — `(10,2)→(12,5)→(17,11)→(28,23)→(51,23)`、`A>40`で終了 → 選択肢3 — PASS
+- R5上 機械 問14 — `(10,2)→(12,5)→(17,26)→(43,26)`、`A>40`で終了 → 選択肢3 — PASS
+- R4下 機械 問13 — 雑音／多重化／変調波／標本化／圧縮を対応 → 選択肢3 — PASS
+- R4下 理論 問14 — 時間波形表示にFFTは必須ではないため誤りは(5) → 選択肢5 — PASS
+- R1 機械 問14 — `A+B=42`, `A-B=12` より `2B=30`、`B=15=(1111)_2` → 選択肢2 — PASS
+- 合計: `5 / 5 PASS`
+- 公式解答との不一致: `0件`
+- 教材外知識補完: `0件`
+- 固定範囲外知識による正答補完: `0件`
+- Topic 34/35範囲追加: `0件`
+- 未確認COMTRAC内部仕様依存: `0件`
+- 記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_independent_reanswer.md`
 
 ## 32 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
@@ -387,4 +401,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。完成数32/38。
 
 ## 次テーマ工程
-完成教材だけを使ってTopic 33固定5問をblind独立再解答し、公式解答との一致・教材外補完0件・固定範囲外補完0件を確認する。
+固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを実施する。
