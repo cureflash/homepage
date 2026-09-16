@@ -8,11 +8,11 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 20`
 
-current_status: `topic_11_practice_pdf_complete`
+current_status: `topic_11_powerpoint_complete`
 
 active_topic: `11 行列・線形連立方程式`
 
-次工程: Topic 11の解説画像PowerPointを作成し、表示QA・overflow・ZIP/XML整合性QAを行う。
+次工程: Topic 11の完成後独立再解答を実施し、固定一次5問・12対象設問を教材だけで `12 / 12 PASS` できるか確認する。
 
 ## 上位仕様
 
@@ -658,8 +658,31 @@ QA:
 - 二次公式過去問の件数合わせ追加: 0件
 - 未確認実車値依存: 0件
 
-現在 `topic_11_practice_pdf_complete / IN_PROGRESS`。
+### Topic 11 解説画像PowerPoint
+
+`topics/11_matrix_linear_systems/11_matrix_linear_systems_images.pptx`
+
+PowerPoint QA:
+`topics/11_matrix_linear_systems/11_matrix_linear_systems_powerpoint_qa.md`
+
+QA:
+- 16:9・5枚
+- 固定一次5問・12対象設問を `12 / 12` 可視化
+- KVL→`A x=b`、共有枝の符号、KCL→`I=YV`、2×2逆行列、複素係数、解法フローを収録
+- 全スライド表示QA `5 / 5 PASS`
+- クリッピング・重なり・文字化け: 0件
+- overflow: 0件
+- PPTX ZIP/XML整合性: `PASS`
+- `slides_test.py`: `PASS`
+- Topic 12固有値・固有ベクトル先取り: 0件
+- 状態空間追加: 0件
+- 電力潮流詳細・非線形反復追加: 0件
+- 行列式・余因子展開の独立論点化: 0件
+- 二次公式過去問の件数合わせ追加: 0件
+- 未確認実車値依存: 0件
+
+現在 `topic_11_powerpoint_complete / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 11 `行列・線形連立方程式` の解説画像PowerPointを作成し、表示QA・overflow・ZIP/XML整合性QAを行う。
+Topic 11 `行列・線形連立方程式` の完成後独立再解答を実施し、固定一次5問・12対象設問を教材だけで `12 / 12 PASS` できるか確認する。
