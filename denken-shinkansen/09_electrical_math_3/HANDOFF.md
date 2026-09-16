@@ -6,17 +6,17 @@
 
 Topic 01〜08は `completed`。
 
-Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。完成後独立再解答を正答先読みなしで実施できるよう、主sourceの制作前独立解答節から保存済み選択肢番号・公式正答・個別数値解答を除去した。
+Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。完成後独立再解答は保存済み正答を先に見ず、完成教材と固定5問の公式問題だけで実施し、`5 / 5問・7 / 7答案要素 PASS`。
 
 完成数: `8 / 12`
 
-current_status: `topic_09_blind_reanswer_ready`
+current_status: `topic_09_independent_reanswer_complete`
 
 last_completed_topic: `08 積分 速度曲線の面積は距離`
 
 active_topic: `09 微積分で電気を読む`
 
-next_start: `Topic 09 完成教材だけでの公式過去問独立再解答`
+next_start: `Topic 09 最終QA`
 
 ## Topic 09 固定仕様範囲
 
@@ -159,10 +159,28 @@ next_start: `Topic 09 完成教材だけでの公式過去問独立再解答`
 - 固定5過去問・要求知識・使用式・教材内マッピングは保持
 - 固定EXAM_ALIGNMENT、解説本文、例題、学習用PDF/PPTX、練習問題は変更していない
 - 固定範囲外追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
-- このrunでは除去前の保存済み正答を参照したため、独立再解答そのものは実施・判定しない
 
 判定: `topic_09_blind_reanswer_ready / IN_PROGRESS`。
 
+## Topic 09 完成後独立再解答
+
+保存済み正答を先に見ず、完成教材と固定5問の公式問題だけを使って7答案要素を再導出し、答案確定後に公式解答と照合した。
+
+- R7上 法規 問13: `(a) 2 / (b) 3`
+- R6下 理論 問3: `2`
+- R3 理論 問4: `4`
+- R7上 電力 問1: `2`
+- H29 法規 問13: `(a) 2 / (b) 5`
+- 公式解答との一致: `5 / 5問・7 / 7答案要素 PASS`
+- 公式解答との不一致: 0件
+- 教材外知識補完: 0件
+- 固定EXAM_ALIGNMENT変更: 0件
+- 固定範囲外論点追加: 0件
+- Topic 10〜11先取り: 0件
+- 未確認新幹線実値追加: 0件
+
+判定: `topic_09_independent_reanswer_complete / IN_PROGRESS`。
+
 ## 次に行うこと
 
-次回は主sourceの保存済み正答を参照せず、完成教材と固定5問の公式問題だけを使って7答案要素を再導出する。答案を確定してから公式解答と照合する。固定EXAM_ALIGNMENTとTopic 09の固定5式は変更しない。
+次回はTopic 09の最終QAを実施する。固定EXAM_ALIGNMENT、Topic 09の固定5式、既存教材内容は変更しない。
