@@ -4,42 +4,26 @@
 
 ## 現在地
 
-Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は最終QAを実施し、進捗記録不整合のみで `NEEDS_REVISION / IN_PROGRESS`。
+Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は前回最終QAで指摘された主source・練習sourceの進捗記録不整合を修正し、実成果物へ同期済み。最終QA再実施待ち。
 
 - 完成数: `11 / 14`
 - last completed: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active topic: `12 300系はなぜVVVFになった？`
-- current status: `topic_12_final_qa_needs_revision`
-- next start: 主source・練習sourceの旧進捗記録だけを実成果物へ同期する
+- current status: `topic_12_source_progress_synced`
+- next start: Topic 12の最終QAを再実施する
 
 ## 今回進捗
 
-Topic 12の最終QAを実施した。
+Topic 12の主source・練習sourceの進捗記録だけを実成果物へ同期した。
 
-PASS:
-- 固定公式過去問7問
-- 制作前独立検証 `7 / 7 PASS`
-- 完成後独立再解答 `7 / 7 PASS`
-- 公式解答一致 `7 / 7`
-- 固定過去問要求の本文マッピング `7 / 7`
-- 練習15問、正答一意性 `15 / 15 PASS`
-- 数値・単位再計算 `3 / 3 PASS`
-- 解説PDF A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- 練習PDF A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- PowerPoint 16:9・4枚、表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
-- 必須成果物実在
-- 教材外知識補完 `0件`
-- 固定範囲外追加 `0件`
+- `12_vvvf_semiconductor.md`: `status: INDEPENDENT_REANSWER_COMPLETE` へ更新
+- `12_vvvf_semiconductor_practice.md`: `stage: INDEPENDENT_REANSWER_COMPLETE` へ更新
+- 旧「解説PDF作成」「解説画像PowerPoint作成」の次工程記録を除去
+- 固定対象: 公式理論過去問7問
+- 完成後独立再解答: `7 / 7 PASS`
+- 必須成果物・各表示QA・SPEC境界: 既存PASSを維持
 
-FAIL:
-- 進捗記録整合性
-  - `12_vvvf_semiconductor.md`: `status: EXPLANATION_SOURCE_COMPLETE` のまま。練習、PowerPoint、独立再解答が未完了表示で、次工程も解説PDF作成のまま。
-  - `12_vvvf_semiconductor_practice.md`: `stage: PRACTICE_PDF_COMPLETE`、次工程がPowerPoint作成のまま。
-
-最終QA記録:
-- `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_final_qa.md`
-
-技術本文、固定EXAM_ALIGNMENT、練習15問、正答、PDF/PPTX、独立再解答結果には修正要求なし。
+技術本文、固定EXAM_ALIGNMENT、練習15問、正答、PDF/PPTX成果物、独立再解答結果は変更していない。次は最終QAを再実施し、進捗記録整合性を含めて再判定する。
 
 ## Topic 12 SPEC固定範囲
 
@@ -94,12 +78,12 @@ SiC → 低損失化
 
 ## 次に行うこと
 
-主source・練習sourceの進捗記録だけを実成果物へ同期する。
+Topic 12の最終QAを再実施する。
 
-- `12_vvvf_semiconductor.md` の冒頭status、進捗チェック、末尾次工程を完成後独立再解答済みの状態へ同期
-- `12_vvvf_semiconductor_practice.md` のstage、末尾次工程を完成後独立再解答済みの状態へ同期
-- 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更しない
-- 同期後に最終QAを再実施し、全ゲートPASSの場合のみ `completed` とする
+- 主source・練習sourceの進捗記録が実成果物と一致していることを確認する
+- 固定7問の完成後独立再解答 `7 / 7 PASS` を確認する
+- 必須成果物・PDF/PPTX QA・固定範囲境界を再確認する
+- 全件PASSならTopic 12を `completed` とし、Topic 13へ進む
 
 ## 固定ルール
 
