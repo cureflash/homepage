@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `10 / 16`
-- current_status: `topic_11_independent_reanswer_passed`
+- current_status: `topic_11_final_qa_needs_revision`
 - last_completed_topic: `10 新幹線の速度はどう自動制御される？`
 - active_topic: `11 空転した車輪をどう立て直す？`
-- next_start: Topic 11の最終QAを実施する
+- next_start: Topic 11の主source・練習sourceに残る旧進捗記録3箇所を実成果物へ同期する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -21,7 +21,7 @@
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
-- [ ] 11 空転した車輪をどう立て直す？ — 完成後独立再解答PASS / 最終QA待ち
+- [ ] 11 空転した車輪をどう立て直す？ — 最終QA NEEDS_REVISION / 進捗記録同期待ち
 - [ ] 12〜16 — 未完了
 
 ## Topic 11 現在品質状態
@@ -61,6 +61,12 @@
 - 実車固有アルゴリズムの推測: `0件`
 - R4上 機械 問14: A-D/D-A変換等が固定範囲外のため非選定
 - R6上 機械 問13: シーケンス制御・インタロック・タイムチャートが固定範囲外のため非選定
+- 最終QA: `NEEDS_REVISION`
+- 最終QA技術内容: `PASS`
+- 最終QA必須成果物: `PASS`
+- 最終QA表示QA: `PASS`
+- 最終QA固定範囲境界: `PASS`
+- 最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
 - source: `topics/11_readhesion_control/11_readhesion_control.md`
 - explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
 - explanation PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
@@ -71,7 +77,9 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 11「空転した車輪をどう立て直す？」の完成後独立再解答を実施した。固定R4下 機械 問14について、完成教材のメカトロニクス統合概念、センサ、制御装置、アクチュエータの役割分担から `(4)` を再導出し、電気技術者試験センター公式解答 `(4)` と一致した。結果 `1 / 1 PASS`。教材外・固定範囲外知識による補完0件、固定範囲外追加0件、未確認実車値依存0件。既存の固定EXAM_ALIGNMENT、教材本文、練習問題、PDF、PowerPointは変更していない。
+Topic 11「空転した車輪をどう立て直す？」の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。固定R4下 機械 問14の完成後独立再解答 `1 / 1 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、固定範囲境界はすべてPASS。
+
+未完了理由は進捗記録のみ。`11_readhesion_control.md` の `## 現在地` が解説PDF完成時点で止まり、同ファイル `## 次工程` が「練習問題sourceを作成する」のまま残っている。また `11_readhesion_control_practice.md` の `## 次工程` が「練習PDFを作成する」のまま残っている。実成果物・技術内容との不整合が計3箇所あるため、品質ゲート完了とはしない。
 
 ## 次工程
-Topic 11の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、進捗記録整合、固定範囲境界を確認する。
+Topic 11の主source・練習sourceに残る旧進捗記録3箇所だけを実成果物へ同期する。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF、PowerPoint、独立再解答結果は変更しない。
