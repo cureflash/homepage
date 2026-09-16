@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜11は `PASS / completed`。完成数は `11 / 21`。
+Topic 01〜12は `PASS / completed`。完成数は `12 / 21`。
 
-current_status: `topic_12_final_qa_complete`
+current_status: `topic_12_completed`
 
-active_topic: `12 三相交流を新幹線へ渡す`
+active_topic: `13 新幹線の交流電力を複素数で扱う`
 
-Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、旧進捗記録同期、最終QA再実施まで完了。固定公式過去問H23一次「理論」問6 (1)〜(5)は完成後独立再解答 `5 / 5 PASS`、二次採用0問・二次数合わせ0件。初回最終QAの唯一のFAILだった旧進捗記録3箇所は解消済みで、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。
+Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、旧進捗記録同期、最終QA再実施、completed状態同期まで完了。固定公式過去問H23一次「理論」問6 (1)〜(5)は完成後独立再解答 `5 / 5 PASS`、二次採用0問・二次数合わせ0件。最終QAは `PASS / FINAL_QA_COMPLETE`、最終判定は `PASS / completed`。
 
-次工程はTopic 12の主source・練習source・STATUS・HANDOFFをcompleted状態へ同期する。
+次工程はTopic 13「新幹線の交流電力を複素数で扱う」の制作前EXAM_ALIGNMENT。
 
 ## Topic 12 成果物
 
@@ -24,8 +24,8 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - PowerPoint QA: `topics/12_three_phase_ac/12_three_phase_ac_powerpoint_qa.md`
 - 独立再解答: `topics/12_three_phase_ac/12_three_phase_ac_reanswer.md`
 - 最終QA: `topics/12_three_phase_ac/12_three_phase_ac_final_qa.md`
-- stage: `FINAL_QA_COMPLETE`
-- completion: `IN_PROGRESS`
+- stage: `COMPLETED`
+- completion: `completed`
 
 ## Topic 12 固定範囲
 
@@ -231,7 +231,19 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 初回blocker 3件の解消確認: `PASS`
 - 判定: `PASS / FINAL_QA_COMPLETE`
 
-この段階ではTopic 12自体はまだ `IN_PROGRESS`。completed化は主source・練習source・STATUS・HANDOFFを一括同期する次工程で確定する。
+## Topic 12 completed状態同期
+
+最終QA PASS後、主source・練習source・STATUS・HANDOFFを完了状態へ同期した。
+
+- 主source: `COMPLETED / completed`
+- 練習source: `COMPLETED / completed`
+- STATUS・HANDOFF: 完成数 `12 / 21`、次Topicを13へ同期
+- 固定H23一次「理論」問6・5小問の完成後独立再解答: `5 / 5 PASS`
+- 二次採用: `0問`、二次数合わせ: `0件`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
+- SPEC固定範囲外追加: `0件`
+
+最終判定: `PASS / completed`
 
 ## 参考資料
 
@@ -258,14 +270,14 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 ## 直前完了Topic
 
-Topic 11「ATCはなぜ特定の周波数を見分けられる？」は `PASS / completed`。
+Topic 12「三相交流を新幹線へ渡す」は `PASS / completed`。
 
-- 固定一次5問・25小問
-- 完成後独立再解答 `25 / 25 PASS`
+- 固定H23一次「理論」問6・5小問
+- 完成後独立再解答 `5 / 5 PASS`
 - 二次採用0問・二次数合わせ0件
 - 解説source/PDF、練習source/PDF、PowerPoint、表示QA、最終QAまで完了
-- 固定範囲外追加0件、未確認ATC実設備値追加0件
+- 固定範囲外追加0件、未確認新幹線変電設備値追加0件
 
 ## 次に行うこと
 
-Topic 12の主source・練習source・STATUS・HANDOFFをcompleted状態へ一括同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 13「新幹線の交流電力を複素数で扱う」の制作前EXAM_ALIGNMENT。一次・二次を含む公式過去問を固定範囲内で調査し、件数合わせで範囲外論点を採用しない。
