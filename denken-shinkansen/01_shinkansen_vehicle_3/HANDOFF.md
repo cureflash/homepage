@@ -6,13 +6,18 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は33/38。01〜33がPASS。active topicは34 `COMTRAC② 進路をどう自動制御する？`。
 
 ## 今回進捗
-Topic 34 `COMTRAC② 進路をどう自動制御する？` の解説PDFを完成した。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` の練習source＋練習PDFを完成した。
 
-- PDF: `topics/34_comtrac_route_control/34_comtrac_route_control_explanation.pdf`
-- A4縦4ページ
-- 解説source §1〜§15＋3段階例題を収録
-- 固定公式過去問5問・6答案要素を `6 / 6` 反映
-- 180 dpi全4ページ表示QA: `4 / 4 PASS`
+- source: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.md`
+- PDF: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.pdf`
+- 全15問（基礎4／標準8／複合3）
+- 全問五肢択一＋完全解説
+- 正答位置: A/B/C/D/E各3問
+- 固定5過去問・6答案要素を `6 / 6` 練習マッピング
+- 独立論理再計算: `15 / 15 PASS`
+- 複数正答: `0件`
+- A4縦5ページ
+- 180 dpi全5ページ表示QA: `5 / 5 PASS`
 - 文字抽出QA: PASS
 - Topic 35範囲追加: `0件`
 - ExOR/NOR/NAND等の固定範囲外ゲート追加: `0件`
@@ -20,8 +25,6 @@ Topic 34 `COMTRAC② 進路をどう自動制御する？` の解説PDFを完成
 - 未確認COMTRAC内部仕様追加: `0件`
 
 教材本文・固定EXAM_ALIGNMENT・制作前独立解答結果は変更していない。
-
-source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
 
 ## Topic 34 固定EXAM_ALIGNMENT
 - R7上 機械 問14 — AND・OR・NOT、論理回路、出力波形
@@ -63,6 +66,20 @@ Topic 35範囲追加: `0件`。
 - 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
 
+## Topic 34 練習source / PDF
+- source: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.md`
+- PDF: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.pdf`
+- 全15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説
+- 正答位置: A/B/C/D/E各3問
+- 固定5問・6答案要素: `6 / 6` 練習マッピング
+- 独立論理再計算: `15 / 15 PASS`
+- 複数正答: `0件`
+- A4縦5ページ、180 dpi全ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: PASS
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+
 ## Topic 34 系列SPEC固定範囲
 - 進路制御
 - 条件判定
@@ -95,11 +112,11 @@ Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は `PASS
 - 最終QA記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_final_qa.md`
 
 ## 現在の状態
-- `current_status`: `topic_34_explanation_pdf_complete`
+- `current_status`: `topic_34_practice_pdf_complete`
 - 完成数: 33/38
 - 01〜33: PASS
 - last completed: 33 `COMTRAC① 東海道新幹線全体をどう監視する？`
 - active topic: 34 `COMTRAC② 進路をどう自動制御する？`
 
 ## 次の正確な開始点
-Topic 34の練習source / 練習PDFを作成する。三種要件に従って12問以上、少なくとも半数を五肢択一とし、完全解説を付け、固定5問・6答案要素へ接続する。PowerPointへ先行しない。
+Topic 34の解説画像PowerPointを作成する。固定5問・6答案要素を可視化し、16:9、表示QA・overflow・PPTX整合性を確認する。完成後blind独立再解答へ先行しない。
