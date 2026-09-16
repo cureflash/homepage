@@ -8,11 +8,11 @@ Topic 01〜11は `completed`。
 
 完成数: `11 / 20`
 
-current_status: `topic_11_completed`
+current_status: `topic_12_final_qa_needs_revision`
 
 active_topic: `12 固有値の基礎`
 
-次工程: Topic 12の制作前EXAM_ALIGNMENTを実施し、公式過去問・要求知識・固定範囲を確定する。
+次工程: Topic 12のsource進捗記録3箇所だけを実成果物へ同期し、技術内容を変更せず最終QAを再判定する。
 
 ## 上位仕様
 
@@ -733,6 +733,52 @@ QA:
 
 総合判定: `PASS / completed`。
 
+## Topic 12 現在記録
+
+テーマ: `固有値の基礎`
+
+source:
+`topics/12_eigenvalues_basics/12_eigenvalues_basics.md`
+
+解説PDF:
+`topics/12_eigenvalues_basics/12_eigenvalues_basics_explanation.pdf`
+
+練習source:
+`topics/12_eigenvalues_basics/12_eigenvalues_basics_practice.md`
+
+練習PDF:
+`topics/12_eigenvalues_basics/12_eigenvalues_basics_practice.pdf`
+
+PowerPoint:
+`topics/12_eigenvalues_basics/12_eigenvalues_basics_images.pptx`
+
+PowerPoint QA:
+`topics/12_eigenvalues_basics/12_eigenvalues_basics_powerpoint_qa.md`
+
+完成後独立再解答:
+`topics/12_eigenvalues_basics/12_eigenvalues_basics_exam_reanswer.md`
+
+最終QA:
+`topics/12_eigenvalues_basics/12_eigenvalues_basics_final_qa.md`
+
+固定EXAM_ALIGNMENTはH28二次「機械・制御」問4 (1)の1問・1対象設問。制作前独立再解答・完成後独立再解答とも `1 / 1 PASS`、再導出 `f=(12,6)` は公式標準解答と一致した。
+
+成果物QA:
+- 解説PDF: A4縦5ページ、200 dpi表示 `5 / 5 PASS`、文字抽出PASS
+- 練習問題: 全12問（一次型8／二次記述型4）、独立計算・正答一意性 `12 / 12 PASS`
+- 練習PDF: A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS
+- PowerPoint: 16:9・5枚、表示 `5 / 5 PASS`、overflow 0件、ZIP/XML整合性PASS
+- 可制御性・可観測性・状態フィードバック設計一般等の固定範囲外追加: 0件
+- 第一種過去問による件数水増し: 0件
+- Topic 15周波数応答・ボード線図先取り: 0件
+- 未確認実車値依存: 0件
+
+初回最終QA判定は `NEEDS_REVISION / IN_PROGRESS`。技術ゲートは全件PASSで、未完了理由は次のsource進捗記録3箇所だけ。
+
+- `12_eigenvalues_basics.md` 冒頭 `## 状態`
+- `12_eigenvalues_basics.md` 末尾 `## 次工程`
+- `12_eigenvalues_basics_practice.md` 末尾 `## 次工程`
+
 ## 次に行うこと
 
-Topic 12 `固有値の基礎` の制作前EXAM_ALIGNMENTを実施し、公式過去問・要求知識・固定範囲を確定する。
+上記3箇所だけを実成果物へ同期し、技術本文・固定EXAM_ALIGNMENT・数式・練習問題・正答・PDF/PPTX・完成後独立再解答を変更せず、Topic 12の最終QAを再判定する。
