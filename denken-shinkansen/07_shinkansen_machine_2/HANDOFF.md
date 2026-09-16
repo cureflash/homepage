@@ -9,7 +9,7 @@ Topic 01〜11は最終QAまで `PASS / completed`。
 
 active topic: `12 N700Sの6極モーターを設計側から見る`
 
-current status: `topic_12_explanation_source_complete`
+current status: `topic_12_explanation_pdf_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -346,5 +346,16 @@ source完成内容:
 - 固定範囲外追加: `0件`
 - 未確認N700S実車値追加: `0件`
 
+## Topic 12 解説PDF
+- `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_explanation.pdf`: `completed`
+- A4縦5ページ
+- 200 dpi全5ページ Visual QA: `5 / 5 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- 固定一次2問＋二次3問・16答案要素: 維持
+- 3段階例題: `3 / 3`収録
+- 固定範囲外追加: `0件`
+- 未確認N700S実車値追加: `0件`
+- SHA-256: `318e5335e69fa35c049debb134e708ef0222a34823196c9beedd45d49295218c`
+
 ## 次に行うこと
-Topic 12 `N700Sの6極モーターを設計側から見る` の解説PDFを作成し、固定5問・16答案要素と固定範囲を維持したまま表示QA・文字抽出QAを行う。
+Topic 12 `N700Sの6極モーターを設計側から見る` の練習問題sourceを作成する。一次試験型と二次記述型を含め、固定5問・16答案要素と固定範囲への接続を維持する。
