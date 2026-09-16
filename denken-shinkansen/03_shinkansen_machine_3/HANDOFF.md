@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は品質ゲートPASSでcompleted。active topicは12「新幹線のコンピュータは何をしている？」。
 
 ## 今回進捗
-Topic 12の完成後blind独立再解答を実施した。固定EXAM_ALIGNMENT 6問・8答案要素を完成教材だけで再導出し、全答案確定後に公式解答へ照合して `8 / 8 PASS`。公式解答・保存済み選択肢番号の事前参照0件、教材外・固定範囲外知識による補完0件、固定EXAM_ALIGNMENT変更0件、固定範囲外追加0件。
+Topic 12の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。固定EXAM_ALIGNMENT 6問・8答案要素の完成後blind独立再解答 `8 / 8 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、固定範囲境界はPASS。未完了理由は進捗記録3箇所が旧工程のまま残っていることのみ。
 
 独立再解答記録: `topics/12_information_processing/12_information_processing_independent_reanswer.md`
 source: `topics/12_information_processing/12_information_processing.md`
@@ -17,6 +17,23 @@ practice PDF: `topics/12_information_processing/12_information_processing_practi
 practice PDF QA: `topics/12_information_processing/12_information_processing_practice_pdf_qa.md`
 PowerPoint: `topics/12_information_processing/12_information_processing_images.pptx`
 PowerPoint QA: `topics/12_information_processing/12_information_processing_powerpoint_qa.md`
+
+## Topic 12 最終QA
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 技術内容: `PASS`
+- 固定6問・8答案要素の完成後blind独立再解答: `8 / 8 PASS`
+- 必須成果物実在: `PASS`
+- 解説PDF表示QA: `4 / 4 PASS`
+- 練習PDF表示QA: `3 / 3 PASS`
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint ZIP整合性: `PASS`
+- 固定範囲境界: `PASS`
+- 教材外・固定範囲外知識補完: `0件`
+- 進捗記録整合: `FAIL`
+- 旧進捗1: 主source `## 次工程` が解説PDF作成のまま
+- 旧進捗2: 練習source `## 次工程` が練習PDF作成のまま
+- 旧進捗3: 練習PDF QA `## 次工程` がPowerPoint作成のまま
+- 固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、独立再解答結果の修正要否: `なし`
 
 ## Topic 12 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
@@ -180,4 +197,4 @@ PowerPoint QA: `topics/12_information_processing/12_information_processing_power
 Topic 11「空転した車輪をどう立て直す？」は最終QA `PASS / completed`。固定R4下 機械 問14、完成後独立再解答 `1 / 1 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界は全件PASS。完成数は `11 / 16`。
 
 ## 次に行う
-Topic 12の最終QAを実施する。独立再解答 `8 / 8 PASS`、必須成果物、PDF/PPTX表示QA、進捗記録整合、固定範囲境界を再確認し、品質ゲートの最終判定を行う。
+Topic 12の旧進捗記録3箇所だけを実成果物へ同期する。対象は主source `## 次工程`、練習source `## 次工程`、練習PDF QA `## 次工程`。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更しない。
