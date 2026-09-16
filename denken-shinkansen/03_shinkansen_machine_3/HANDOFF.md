@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は品質ゲートPASSでcompleted。active topicは12「新幹線のコンピュータは何をしている？」。
 
 ## 今回進捗
-Topic 12の練習PDFを完成し、GitHub正本へ反映した。A4縦3ページ、全12問・完全解説。200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`、固定EXAM_ALIGNMENTの6問・8答案要素へ `8 / 8 PASS` で接続した。仕様外追加・教材外補完・車種固有情報の推測は0件。
+Topic 12の解説画像PowerPointを完成し、GitHub正本へ反映した。16:9・4枚。表示QA `4 / 4 PASS`、スライド外はみ出し0件、文字欠落・重なり・判読不能0件、ZIP整合性PASS。固定EXAM_ALIGNMENTの6問・8答案要素へ `8 / 8 PASS` で接続した。仕様外追加・教材外補完・車種固有情報の推測は0件。
 
 source: `topics/12_information_processing/12_information_processing.md`
 explanation PDF: `topics/12_information_processing/12_information_processing_explanation.pdf`
@@ -14,6 +14,8 @@ explanation PDF QA: `topics/12_information_processing/12_information_processing_
 practice source: `topics/12_information_processing/12_information_processing_practice.md`
 practice PDF: `topics/12_information_processing/12_information_processing_practice.pdf`
 practice PDF QA: `topics/12_information_processing/12_information_processing_practice_pdf_qa.md`
+PowerPoint: `topics/12_information_processing/12_information_processing_images.pptx`
+PowerPoint QA: `topics/12_information_processing/12_information_processing_powerpoint_qa.md`
 
 ## Topic 12 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
@@ -96,6 +98,23 @@ practice PDF QA: `topics/12_information_processing/12_information_processing_pra
 - 練習PDF文字切れ・重なり・ページ外はみ出し・欠落・破損グリフ: `0件`。
 - 練習PDF固定過去問マッピング: `8 / 8`。
 
+## 解説画像PowerPointの現状
+- 16:9・4枚。
+- Slide 1: 情報処理の基本構成とA/D・D/Aの方向。
+- Slide 2: 2進・10進・16進相互変換、4bit対応、bit/byte、和差から未知数逆算。
+- Slide 3: AND / OR / NAND / NOR / XORの真理値表、論理式簡単化。
+- Slide 4: 組合せ回路を論理式へ変換し、入力変化ごとに0/1評価する手順。
+- 固定6問・8答案要素への接続: `8 / 8 PASS`。
+- 表示QA: `4 / 4 PASS`。
+- スライド外はみ出し: `0件`。
+- 文字欠落・重なり・判読不能: `0件`。
+- ZIP整合性: `PASS`。
+- 外部画像: `0点`。PowerPoint図形・テキストで独自作成。
+- 固定EXAM_ALIGNMENT変更: `0件`。
+- 固定範囲外論点追加: `0件`。
+- Topic 13以降の先取り: `0件`。
+- 車種固有仕様の推測: `0件`。
+
 ## 非選定・重複扱い
 - R7下 機械 問14: フローチャート・プログラム実行が主題で固定範囲外。
 - R6上 機械 問18: n進数・D/A変換と重なるが、符号付き8bit・補数表現が正答要件で固定範囲外。
@@ -143,4 +162,4 @@ practice PDF QA: `topics/12_information_processing/12_information_processing_pra
 Topic 11「空転した車輪をどう立て直す？」は最終QA `PASS / completed`。固定R4下 機械 問14、完成後独立再解答 `1 / 1 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界は全件PASS。完成数は `11 / 16`。
 
 ## 次に行う
-Topic 12の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更せず、Topic 13以降を先取りしない。
+Topic 12の完成後blind独立再解答を実施する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更せず、保存済み正答を先に見ない。
