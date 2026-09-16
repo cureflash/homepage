@@ -5,23 +5,23 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 32 / 38
-- current_status: `topic_33_blind_reanswer_blocked`
+- current_status: `topic_33_blind_reanswer_ready`
 - last_completed_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
 - active_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
-- next_start: Topic 33の必須先読み対象から制作前正答番号・完成済み導出結果を除去し、blind再解答前ゲートをREADYにする
+- next_start: 完成教材だけを使ってTopic 33固定5問をblind独立再解答する
 
 ## 新品質ゲート進捗
 - [x] 01〜32 — PASS
-- [ ] 33 COMTRAC① 東海道新幹線全体をどう監視する？ — 制作前EXAM_ALIGNMENT＋解説source/PDF＋練習source/PDF＋PowerPoint完了。完成後blind独立再解答はBLOCKED
+- [ ] 33 COMTRAC① 東海道新幹線全体をどう監視する？ — 制作前EXAM_ALIGNMENT＋解説source/PDF＋練習source/PDF＋PowerPoint完了。完成後blind独立再解答前ゲートはREADY
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
 
-1. R7下 機械 問14 — フローチャート・変数更新・条件分岐・反復 — `3` — PASS
-2. R5上 機械 問14 — フローチャート・変数更新・条件分岐・反復 — `3` — PASS
-3. R4下 機械 問13 — 伝送路・雑音・多重化・変調波・標本化・圧縮 — `3` — PASS
-4. R4下 理論 問14 — 標本化・量子化・符号化・ディジタル伝送・A-D変換 — `5` — PASS
-5. R1 機械 問14 — 2進数の加減算・基数変換 — `2` — PASS
+1. R7下 機械 問14 — フローチャート・変数更新・条件分岐・反復 — PASS
+2. R5上 機械 問14 — フローチャート・変数更新・条件分岐・反復 — PASS
+3. R4下 機械 問13 — 伝送路・雑音・多重化・変調波・標本化・圧縮 — PASS
+4. R4下 理論 問14 — 標本化・量子化・符号化・ディジタル伝送・A-D変換 — PASS
+5. R1 機械 問14 — 2進数の加減算・基数変換 — PASS
 
 制作前独立解答: `5 / 5 PASS`。
 公式解答との不一致: `0件`。
@@ -29,6 +29,7 @@
 Topic 34のAND・OR・NOT・真理値表・インターロック追加: `0件`。
 Topic 35の運転整理・番線変更・冗長化追加: `0件`。
 未確認COMTRAC内部仕様追加: `0件`。
+個別正答番号・制作前導出結果は完成後blind再解答のため必須先読み対象から除去済み。
 
 source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
 
@@ -86,10 +87,10 @@ source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
 - 未確認COMTRAC内部仕様追加: `0件`
 
 ## 33 完成後blind独立再解答 前ゲート
-`BLIND_REANSWER_BLOCKED`。
-- `EXAM_ALIGNMENT_SPEC.md` は、保存済み正答を先に見ずに完成後独立再解答することを要求
-- 必須先読み対象の `STATUS.md`・`HANDOFF.md`・主sourceに、Topic 33固定5問の制作前正答番号または完成済み導出が残存
-- このrunでは独立再解答を実施しない
+`BLIND_REANSWER_READY`。
+- `EXAM_ALIGNMENT_SPEC.md` が要求する「保存済み正答を先に見ない」条件に合わせ、必須先読み対象からTopic 33固定5問の制作前個別正答番号・完成済み導出結果を除去済み
+- 過去テーマの記録中に同じ固定問題が現れる箇所も、該当する個別正答・導出だけをblind保護対象として非表示化
+- このrunでは独立再解答自体は実施しない
 - 固定EXAM_ALIGNMENT・教材本文・練習問題・PDF/PPTXは変更なし
 - 記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_blind_gate.md`
 
@@ -204,11 +205,11 @@ source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 ## 31 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、信号、周波数、情報伝送、センサ、デジタル信号、論理判断。
 
-1. R7下 機械 問14 — フローチャートの条件分岐・反復による論理判断 — `3` — PASS
+1. R7下 機械 問14 — フローチャートの条件分岐・反復による論理判断 — PASS（Topic 33 blind保護対象）
 2. R5上 機械 問18(a) — パルス信号の動作周波数から周期を求める — `3` — PASS
 3. R5上 機械 問18(b) — CPIと1命令実行時間から動作周波数を求める — `4` — PASS
-4. R4下 機械 問13 — 伝送路・雑音・多重化・変調波・標本化・圧縮 — `3` — PASS
-5. R4下 理論 問14 — 標本化・量子化・符号化・伝送路雑音・A-D変換 — `5` — PASS
+4. R4下 機械 問13 — 伝送路・雑音・多重化・変調波・標本化・圧縮 — PASS（Topic 33 blind保護対象）
+5. R4下 理論 問14 — 標本化・量子化・符号化・伝送路雑音・A-D変換 — PASS（Topic 33 blind保護対象）
 6. R4上 機械 問14 — センサ・アナログ/デジタル・A-D/D-A・インタフェース — `2` — PASS
 
 制作前独立解答: `6 / 6 PASS`。
@@ -284,11 +285,11 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - 未確認実車値追加: `0件`
 
 ## 31 完成後独立再解答
-- R7下 機械 問14 — 条件分岐・反復を追跡し `(A,B)=(51,23)` → 選択肢3 — PASS
+- R7下 機械 問14 — PASS（個別正答・導出はTopic 33 blind保護のため非表示）
 - R5上 機械 問18(a) — `T=1/(2.5 GHz)=0.4 ns` → 選択肢3 — PASS
 - R5上 機械 問18(b) — `f=4/(20 ns)=200 MHz` → 選択肢4 — PASS
-- R4下 機械 問13 — 雑音・多重化・変調波・標本化・圧縮を対応 → 選択肢3 — PASS
-- R4下 理論 問14 — 時間波形表示にFFTは必須ではない → 選択肢5 — PASS
+- R4下 機械 問13 — PASS（個別正答・導出はTopic 33 blind保護のため非表示）
+- R4下 理論 問14 — PASS（個別正答・導出はTopic 33 blind保護のため非表示）
 - R4上 機械 問14 — アナログ/デジタル・A-D/D-A・インタフェースを対応 → 選択肢2 — PASS
 - 合計: `6 / 6 PASS`
 - 公式解答との不一致: `0件`
@@ -386,4 +387,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。完成数32/38。
 
 ## 次テーマ工程
-Topic 33の必須先読み対象（主source・STATUS・HANDOFF）から、制作前正答番号・完成済み導出結果だけを除去する。教材本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTXは変更せず、blind再解答前ゲートを `READY` にする。独立再解答自体はその次の別runで実施する。
+完成教材だけを使ってTopic 33固定5問をblind独立再解答し、公式解答との一致・教材外補完0件・固定範囲外補完0件を確認する。
