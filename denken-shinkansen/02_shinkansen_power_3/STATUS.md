@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 9 / 16
-- current_status: `topic_10_practice_pdf_complete`
+- current_status: `topic_10_powerpoint_complete`
 - last_completed_topic: `09 変電所からパンタグラフまでどう送る？`
 - active_topic: `10 新幹線が突然大電力を使ったら？`
-- next_start: Topic 10解説画像PowerPointを作成し、固定5問・8小問の要求事項可視化・全スライド表示QA・overflow・ZIP整合性を確認する
+- next_start: Topic 10固定5問・8小問を完成教材だけで、保存済み正答を先に見ずブラインド独立再解答する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -20,7 +20,7 @@
 - [x] 07 なぜ三相交流をそのまま架線へ流さない？ — completed。改定EXAM_ALIGNMENT 3問を完成教材だけで独立再解答し `3 / 3 PASS`、教材外知識補完0件。練習PDF QA・PowerPoint Slide 4・PowerPoint QAを現行3問へ同期し、最終QA PASS
 - [x] 08 新幹線の変電所はなぜ数十kmおき？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗整合を最終QAで再確認し `PASS / completed`
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
-- [ ] 10 新幹線が突然大電力を使ったら？ — 制作前EXAM_ALIGNMENT完了。固定5問・8小問、制作前独立検証 `8 / 8 PASS`。解説本文§1〜§15＋3段階例題、解説PDF A4縦4ページ、練習問題source全12問、練習PDF A4縦4ページまで完成。要求事項マッピング `8 / 8`、解説PDF 200 dpi表示QA `4 / 4 PASS`、練習source数値・論理・正答一意性 `12 / 12 PASS`、練習PDF 200 dpi表示QA `4 / 4 PASS`・文字抽出QA PASS・数値／論理再検算 `12 / 12 PASS`・正答一意性 `12 / 12 PASS`、SPEC外追加0件
+- [ ] 10 新幹線が突然大電力を使ったら？ — 制作前EXAM_ALIGNMENT完了。固定5問・8小問、制作前独立検証 `8 / 8 PASS`。解説本文§1〜§15＋3段階例題、解説PDF A4縦4ページ、練習問題source全12問、練習PDF A4縦4ページまで完成。要求事項マッピング `8 / 8`、解説PDF 200 dpi表示QA `4 / 4 PASS`、練習source数値・論理・正答一意性 `12 / 12 PASS`、練習PDF 200 dpi表示QA `4 / 4 PASS`・文字抽出QA PASS・数値／論理再検算 `12 / 12 PASS`・正答一意性 `12 / 12 PASS`、解説画像PowerPoint 16:9・4枚、要求事項可視化 `8 / 8`、表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性PASS、SPEC外追加0件
 - [ ] 11 架線事故ではどうやって電気を止める？
 - [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
 - [ ] 13 新幹線の架線は何でできている？
@@ -181,6 +181,8 @@ source: `topics/10_load_variation/10_load_variation.md`
 練習問題source: `topics/10_load_variation/10_load_variation_practice_source.md`
 練習PDF: `topics/10_load_variation/10_load_variation_practice.pdf`
 練習PDF QA: `topics/10_load_variation/10_load_variation_practice_qa.md`
+解説画像PowerPoint: `topics/10_load_variation/10_load_variation_images.pptx`
+PowerPoint QA: `topics/10_load_variation/10_load_variation_powerpoint_qa.md`
 
 固定5問・8小問:
 - R8上 電力 問12
@@ -218,6 +220,11 @@ source: `topics/10_load_variation/10_load_variation.md`
 - 練習PDF固定5問・8小問への接続: `8 / 8`
 - SPEC固定範囲外追加: `0件`
 - Topic 11以降の先取り: `0件`
+- 解説画像PowerPoint: 16:9・4枚
+- PowerPoint固定5問・8小問の要求事項可視化: `8 / 8`
+- PowerPoint表示QA: 1601×900 `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: PASS
 
 ## 次
-Topic 10 `新幹線が突然大電力を使ったら？` の解説画像PowerPointを作成し、固定5問・8小問の要求事項可視化・全スライド表示QA・overflow・ZIP整合性を確認する。
+Topic 10 `新幹線が突然大電力を使ったら？` の固定5問・8小問を完成教材だけで、保存済み正答を先に見ずブラインド独立再解答する。
