@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_blind_reanswer_ready`
+- current_status: `topic_12_independent_reanswer_complete`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 完成後独立再解答
+- next_start: Topic 12 最終QA
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -366,8 +366,21 @@
 - [x] 判定 `BLIND_REANSWER_READY`
 - [x] ゲート記録: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_blind_reanswer_gate.md`
 
+## Topic 12 完成後独立再解答
+- [x] 公式解答・標準解答を開く前に、完成教材だけで固定5問・16答案要素を再解答
+- [x] R07 一次 機械 問2: `2 / 2 PASS`
+- [x] H25 一次 機械 問3: `2 / 2 PASS`
+- [x] R07 二次 機械・制御 問2: `4 / 4 PASS`
+- [x] R02 二次 機械・制御 問1: `4 / 4 PASS`
+- [x] R01 二次 機械・制御 問1: `4 / 4 PASS`
+- [x] 合計 `16 / 16 PASS`
+- [x] 教材外知識補完 `0件`
+- [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
+- [x] 教材本文・練習問題・PDF/PPTXの内容変更 `0件`
+- [x] 記録: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_independent_reanswer.md`
+
 ## 今回進めた内容
-Topic 12の完成後独立再解答前ゲートを完了した。必須先読み対象に固定5過去問の公式正答番号・標準解答本文・完成済み数値解／導出結果が保存されていないことを確認し、`BLIND_REANSWER_READY` と判定した。固定一次2問＋二次3問・16答案要素、教材本文、PDF、練習問題、PowerPoint、固定EXAM_ALIGNMENTは変更していない。固定範囲外論点・未確認N700S実車値の追加は0件。
+Topic 12の完成後独立再解答を完了した。固定一次2問＋二次3問・16答案要素を、公式解答・標準解答を先に見ず完成教材だけで解答し、照合結果は `16 / 16 PASS`。教材外知識補完、固定範囲外論点追加、未確認N700S実車値追加はいずれも0件。教材本文・練習問題・PDF/PPTXは変更していない。
 
 ## 判定
-Topic 12は `topic_12_blind_reanswer_ready / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の完成後独立再解答を実施する。
+Topic 12は `topic_12_independent_reanswer_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の最終QAを実施する。
