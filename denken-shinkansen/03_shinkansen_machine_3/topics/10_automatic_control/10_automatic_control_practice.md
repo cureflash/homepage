@@ -513,4 +513,4 @@ I/V = 1/(5.00+j×50.0×0.100)
 
 未確認実車値追加: `0件`
 
-進捗: 練習PDFは `10_automatic_control_practice.pdf` として完成済み。200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`。次工程はTopic 10の最終QA再実施。
+進捗: 練習PDFは `10_automatic_control_practice.pdf` として完成済み。200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`。Topic 10最終QA再実施で `PASS / completed`。次工程はTopic 11の制作前EXAM_ALIGNMENT。
