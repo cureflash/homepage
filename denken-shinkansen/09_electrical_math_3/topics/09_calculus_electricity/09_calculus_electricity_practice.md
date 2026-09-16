@@ -431,4 +431,4 @@ EXAM_ALIGNMENT接続: R7上法規問13、R6下理論問3、R3理論問4、R7上�
 
 ## 次工程
 
-このsourceを正本として練習PDFを作成し、表示QA・文字抽出QA・数値整合を確認する。
+練習PDF・解説画像PowerPoint・完成後独立再解答・初回最終QAまで完了。次工程はTopic 09の最終QA再判定。練習問題・正答・固定EXAM_ALIGNMENTは変更しない。
