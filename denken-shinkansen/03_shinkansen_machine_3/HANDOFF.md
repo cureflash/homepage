@@ -6,8 +6,9 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は品質ゲートPASSでcompleted。active topicは12「新幹線のコンピュータは何をしている？」。
 
 ## 今回進捗
-Topic 12の解説画像PowerPointを完成し、GitHub正本へ反映した。16:9・4枚。表示QA `4 / 4 PASS`、スライド外はみ出し0件、文字欠落・重なり・判読不能0件、ZIP整合性PASS。固定EXAM_ALIGNMENTの6問・8答案要素へ `8 / 8 PASS` で接続した。仕様外追加・教材外補完・車種固有情報の推測は0件。
+Topic 12の完成後blind独立再解答を実施した。固定EXAM_ALIGNMENT 6問・8答案要素を完成教材だけで再導出し、全答案確定後に公式解答へ照合して `8 / 8 PASS`。公式解答・保存済み選択肢番号の事前参照0件、教材外・固定範囲外知識による補完0件、固定EXAM_ALIGNMENT変更0件、固定範囲外追加0件。
 
+独立再解答記録: `topics/12_information_processing/12_information_processing_independent_reanswer.md`
 source: `topics/12_information_processing/12_information_processing.md`
 explanation PDF: `topics/12_information_processing/12_information_processing_explanation.pdf`
 explanation PDF QA: `topics/12_information_processing/12_information_processing_explanation_pdf_qa.md`
@@ -55,7 +56,24 @@ PowerPoint QA: `topics/12_information_processing/12_information_processing_power
 制作前独立検証・公式解答照合: `8 / 8 PASS`
 教材外・固定範囲外補完: `0件`
 
-完成後blind独立再解答に備え、固定過去問の選択肢番号はsource・STATUS・HANDOFFへ保存していない。
+## 完成後blind独立再解答
+公式解答・保存済み選択肢番号を先に見ず、完成教材だけで全8答案要素を再導出した。
+
+- R8上 機械 問14: `(5)` / 公式 `(5)` / PASS
+- R8上 機械 問18(a): `(5)` / 公式 `(5)` / PASS
+- R8上 機械 問18(b): `(4)` / 公式 `(4)` / PASS
+- R7上 機械 問14: `(3)` / 公式 `(3)` / PASS
+- R5下 機械 問14: `(5)` / 公式 `(5)` / PASS
+- R1 機械 問14: `(2)` / 公式 `(2)` / PASS
+- H28 機械 問18(a): `(4)` / 公式 `(4)` / PASS
+- H28 機械 問18(b): `(3)` / 公式 `(3)` / PASS
+
+結果: `8 / 8 PASS`
+公式解答・保存済み選択肢番号の事前参照: `0件`
+教材外・固定範囲外知識による補完: `0件`
+固定EXAM_ALIGNMENT変更: `0件`
+固定範囲外追加: `0件`
+車種固有通信仕様の推測: `0件`
 
 ## 解説本文・PDFの現状
 固定8答案要素を次へ接続済み。
@@ -156,10 +174,10 @@ PowerPoint QA: `topics/12_information_processing/12_information_processing_power
 - JR東海「東海道新幹線～不断のサービスの充実～」: https://company.jr-central.co.jp/sustainability/social/service/
 - 三菱電機「車両システム」: https://www.mitsubishielectric.co.jp/traffic/products/train/
 
-参照日: 2026-09-16
+参照日: 2026-09-17
 
 ## Topic 11 完了状態
 Topic 11「空転した車輪をどう立て直す？」は最終QA `PASS / completed`。固定R4下 機械 問14、完成後独立再解答 `1 / 1 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界は全件PASS。完成数は `11 / 16`。
 
 ## 次に行う
-Topic 12の完成後blind独立再解答を実施する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更せず、保存済み正答を先に見ない。
+Topic 12の最終QAを実施する。独立再解答 `8 / 8 PASS`、必須成果物、PDF/PPTX表示QA、進捗記録整合、固定範囲境界を再確認し、品質ゲートの最終判定を行う。
