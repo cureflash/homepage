@@ -7,7 +7,7 @@
 
 Topic 01〜11は最終QAまで `PASS / completed`。完成数は `11 / 39`。
 
-現在地は `topic_12_practice_pdf_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QAまで完了した。固定一次4問＋二次1問・13答案要素は変更していない。
+現在地は `topic_12_powerpoint_complete`。Topic 12 `300系③ VVVFインバータと誘導機制御` の制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QAまで完了した。固定一次4問＋二次1問・13答案要素は変更していない。
 
 ## Topic 12 固定EXAM_ALIGNMENT
 source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -91,6 +91,22 @@ source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_i
 - Topic 11のPWMコンバータ側論点再展開: `0件`
 - 未確認300系実車値の真値化: `0件`
 
+## Topic 12 解説画像PowerPoint完成確認
+- PowerPoint: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control_images.pptx`
+- QA: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control_images_qa.md`
+- 16:9・4スライド
+- SPEC指定4可視化: `4 / 4 PASS`
+- LibreOffice表示QA: `4 / 4 PASS`
+- overlap / clipping / broken glyph: `0件`
+- `slides_test.py` overflow: `0件`
+- PowerPoint ZIP/XML整合性: `PASS`
+- 固定5過去問・13答案要素への接続: 維持
+- 教材用仮定値表記: `PASS`
+- Topic 13先取り: `0件`
+- SPEC外制御方式追加: `0件`
+- Topic 11のPWMコンバータ側論点再展開: `0件`
+- 未確認300系実車値の真値化: `0件`
+
 ## Topic 12 固定範囲
 - VVVF
 - PWM
@@ -123,4 +139,4 @@ SPEC指定可視化:
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。完成後独立再解答 `27 / 27 PASS`、最終判定 `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 12の解説画像PowerPointを作成する。SPEC指定4可視化（周波数―同期速度、周波数―電圧、回転速度―トルク、回転速度―出力）を収録し、表示QA・overflow・PowerPoint ZIP整合性を確認する。固定EXAM_ALIGNMENTは変更しない。
+Topic 12の完成教材だけを使い、固定一次4問＋二次1問・13答案要素を保存済み正答を見ずに独立再解答する。教材外補完があればFAILとし、固定EXAM_ALIGNMENTは変更しない。
