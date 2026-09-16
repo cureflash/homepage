@@ -6,11 +6,11 @@
 
 Topic 01〜10は `PASS / completed`。完成数は `10 / 21`。
 
-current_status: `topic_11_powerpoint_complete`
+current_status: `topic_11_independent_reanswer_complete`
 
 active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 
-Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPointまで完了。次工程は完成後独立再解答。
+Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source＋練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。次工程は最終QA。
 
 ## Topic 11 成果物
 
@@ -20,7 +20,8 @@ Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、
 - 練習PDF: `topics/11_atc_frequency_filter/11_atc_frequency_filter_practice.pdf`
 - PowerPoint: `topics/11_atc_frequency_filter/11_atc_frequency_filter_images.pptx`
 - PowerPoint QA: `topics/11_atc_frequency_filter/11_atc_frequency_filter_powerpoint_qa.md`
-- stage: `POWERPOINT_COMPLETE`
+- 独立再解答: `topics/11_atc_frequency_filter/11_atc_frequency_filter_reanswer.md`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - completion: `IN_PROGRESS`
 
 ## Topic 11 固定範囲
@@ -56,7 +57,7 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 - H24 問7(1)〜(5): 測定回路の周波数特性、周波数非依存補償
 - H22 問4(1)〜(5): ヘイブリッジ、回路定数からの周波数特定
 
-公式問題・公式解答25小問は照合済み。完成後ブラインド独立再解答を妨げないため、個別正答番号は主sourceへ保存していない。
+公式問題・公式解答25小問は照合済み。
 
 ## Topic 11 二次試験の扱い
 
@@ -154,6 +155,23 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 
 判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 11 完成後独立再解答
+
+- 記録: `topics/11_atc_frequency_filter/11_atc_frequency_filter_reanswer.md`
+- 固定一次5問・25小問を完成教材の範囲だけで式から再導出
+- H28問8: `ハ, ヲ, ヨ, ニ, ヌ`
+- H27問2: `ホ, チ, ワ, ヨ, ニ`
+- H25問3: `ハ, ル, イ, ロ, ニ`
+- H24問7: `ニ, ヨ, ヌ, イ, ヲ`
+- H22問4: `ハ, ヨ, チ, ワ, ヘ`
+- 固定済み公式解答との照合: `25 / 25 PASS`
+- 教材外知識補完: `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認ATC実設備値・実回路追加: `0件`
+- Topic 12以降の先取り: `0件`
+
+判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+
 ## 参考資料
 
 参照日: 2026-09-16
@@ -189,6 +207,7 @@ Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は 
 - Topic 11 練習source: `PASS / completed`
 - Topic 11 練習PDF: `PASS / completed`
 - Topic 11 PowerPoint: `PASS / completed`
+- Topic 11 完成後独立再解答: `25 / 25 PASS`
 - Topic 11 固定一次: `5問 / 25小問`
 - Topic 11 二次採用: `0問`
 - Topic 11 二次数合わせ: `0件`
@@ -197,4 +216,4 @@ Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は 
 
 ## 次に行うこと
 
-Topic 11の完成後独立再解答を、保存済み正答を先読みせず完成教材だけで実施する。
+Topic 11の最終QAを実施する。
