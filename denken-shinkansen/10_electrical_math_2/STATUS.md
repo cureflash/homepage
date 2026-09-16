@@ -1,15 +1,15 @@
 # STATUS - 電験二種「電気数学」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 状態
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 11 / 20
-- current_status: `topic_12_final_qa_needs_revision`
+- current_status: `topic_12_source_progress_synced`
 - last_completed_topic: `11 行列・線形連立方程式`
 - active_topic: `12 固有値の基礎`
-- next_start: Topic 12のsource進捗記録3箇所だけを実成果物へ同期し、技術内容を変更せず最終QAを再判定する
+- next_start: Topic 12の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する
 
 ## Topic 07 制作品質ゲート
 
@@ -143,15 +143,22 @@
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 `1 / 1 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
-- [ ] source進捗記録3箇所の同期
+- [x] source進捗記録3箇所の同期
 - [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 12 `固有値の基礎` の最終QAを実施した。
+Topic 12 `固有値の基礎` のsource進捗記録3箇所だけを実成果物へ同期した。
 
-確認結果:
+同期箇所:
+- `12_eigenvalues_basics.md` 冒頭 `## 状態`
+- `12_eigenvalues_basics.md` 末尾 `## 次工程`
+- `12_eigenvalues_basics_practice.md` 末尾 `## 次工程`
+
+技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更していない。
+
+既存の技術ゲートは維持:
 - 必須成果物実在: PASS
 - 固定H28二次「機械・制御」問4 (1): `1 / 1 PASS`
 - 制作前独立再解答・公式標準解答照合: `1 / 1 PASS`
@@ -164,17 +171,11 @@ Topic 12 `固有値の基礎` の最終QAを実施した。
 - 第一種過去問による件数水増し: 0件
 - Topic 15周波数応答・ボード線図先取り: 0件
 - 未確認実車値依存: 0件
-- source進捗記録整合: FAIL 3箇所
-  - `12_eigenvalues_basics.md` 冒頭 `## 状態`
-  - `12_eigenvalues_basics.md` 末尾 `## 次工程`
-  - `12_eigenvalues_basics_practice.md` 末尾 `## 次工程`
 
 ## 判定
 
-Topic 12は `topic_12_final_qa_needs_revision / IN_PROGRESS`。
+Topic 12は `topic_12_source_progress_synced / IN_PROGRESS`。
 
 完成数は `11 / 20`。
 
-技術ゲートは全件PASS。未完了理由はsource進捗記録3箇所のみ。
-
-次は上記3箇所だけを実成果物へ同期し、技術内容を変更せず最終QAを再判定する。
+次は最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
