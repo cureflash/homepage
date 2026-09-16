@@ -4,15 +4,14 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 32 / 38
-- current_status: `topic_33_source_progress_synced`
-- last_completed_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
-- active_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
-- next_start: 固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを再実施する
+- exam_aligned_completed_topics: 33 / 38
+- current_status: `topic_33_completed`
+- last_completed_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
+- active_topic: `34 COMTRAC② 進路をどう自動制御する？`
+- next_start: Topic 34の制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
-- [x] 01〜32 — PASS
-- [ ] 33 COMTRAC① 東海道新幹線全体をどう監視する？ — 制作前EXAM_ALIGNMENT＋解説source/PDF＋練習source/PDF＋PowerPoint＋完成後blind独立再解答＋主source進捗同期完了。最終QA再判定待ち
+- [x] 01〜33 — PASS
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
@@ -107,6 +106,17 @@ source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
 - Topic 34/35範囲追加: `0件`
 - 未確認COMTRAC内部仕様依存: `0件`
 - 記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_independent_reanswer.md`
+
+## 33 最終QA
+`PASS / COMPLETED`。
+- 必須成果物: PASS
+- 固定5過去問の完成後blind独立再解答: `5 / 5 PASS`
+- 練習問題QA: `15 / 15 PASS`
+- 解説PDF / 練習PDF / PowerPoint表示QA: PASS
+- 進捗記録整合: PASS
+- 固定範囲境界: PASS
+- Topic 33を `completed` とし、完成数を33/38へ更新
+- 記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_final_qa.md`
 
 ## 32 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6対象項目。系列SPEC固定範囲は、速度検出、速度照査、ブレーキ指令、フィードバック、ブロック線図、AND、OR、フェイルセーフ。
@@ -302,8 +312,8 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - R7下 機械 問14 — PASS（個別正答・導出はTopic 33 blind保護のため非表示）
 - R5上 機械 問18(a) — `T=1/(2.5 GHz)=0.4 ns` → 選択肢3 — PASS
 - R5上 機械 問18(b) — `f=4/(20 ns)=200 MHz` → 選択肢4 — PASS
-- R4下 機械 問13 — PASS（個別正答・導出はTopic 33 blind保護のため非表示）
-- R4下 理論 問14 — PASS（個別正答・導出はTopic 33 blind保護のため非表示）
+- R4下 機械 問13 — PASS（個別正答・導出はTopic 33 blind保護対象）
+- R4下 理論 問14 — PASS（個別正答・導出はTopic 33 blind保護対象）
 - R4上 機械 問14 — アナログ/デジタル・A-D/D-A・インタフェースを対応 → 選択肢2 — PASS
 - 合計: `6 / 6 PASS`
 - 公式解答との不一致: `0件`
@@ -398,7 +408,7 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - 未確認の新幹線軌道回路電圧・電流・車軸短絡抵抗・リレー動作値
 
 ## 直前完了
-Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。完成数32/38。
+Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は固定5過去問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数33/38。
 
 ## 次テーマ工程
-固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを再実施する。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` の制作前EXAM_ALIGNMENTを実施する。
