@@ -7,10 +7,10 @@
 ## 成果物
 
 - PDF: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_explanation.pdf`
-- A4縦5ページ
-- 200 dpi全ページ表示QA: `5 / 5 PASS`
+- A4縦2ページ
+- 200 dpi全ページ表示QA: `2 / 2 PASS`
 - 文字抽出QA: `PASS`
-- SHA-256: `fcbe448fc43c914cde59abe94642dfe4f685103713491543af6dc147486114ca`
+- SHA-256: `592dbde2862bf3d00833421037abe3b78779c3ebaa637b5e0bfd32ea25168a90`
 
 ## 過去問対応品質ゲート
 
@@ -27,7 +27,7 @@ PDF内で、H24一次の同一次数成分の位相合成、H22一次の基本�
 - クリッピング: `0件`
 - 文字重なり: `0件`
 - 文字化け: `0件`
-- 数式・表・波形図の判読不能: `0件`
+- 数式・表・波形の判読不能: `0件`
 - ページ欠落: `0件`
 
 ## 範囲境界
