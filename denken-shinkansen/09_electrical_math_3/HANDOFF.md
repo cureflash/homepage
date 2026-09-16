@@ -4,21 +4,19 @@
 
 ## 現在地
 
-Topic 01〜09は `completed`。
+Topic 01〜10は `completed`。
 
-Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ブラインドゲート、完成教材だけでの固定5問独立再解答、初回最終QA、source進捗記録3箇所の同期まで完了。
+Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ブラインドゲート、完成教材だけでの固定5問独立再解答、初回最終QA、source進捗記録3箇所の同期、最終QA再判定まで完了し、`PASS / completed`。
 
-初回最終QAは `NEEDS_REVISION / IN_PROGRESS` だったが、唯一のFAILだった主source・練習sourceの旧進捗記録3箇所は実成果物へ同期済み。技術内容・成果物・独立再解答は変更していない。
+完成数: `10 / 12`
 
-完成数: `9 / 12`
+current_status: `topic_10_completed`
 
-current_status: `topic_10_source_progress_synced`
+last_completed_topic: `10 指数関数・一階微分方程式入門`
 
-last_completed_topic: `09 微積分で電気を読む`
+active_topic: `11 グラフ・特性曲線を読む`
 
-active_topic: `10 指数関数・一階微分方程式入門`
-
-next_start: `Topic 10最終QA再判定`
+next_start: `Topic 11制作前EXAM_ALIGNMENT`
 
 ## Topic 10 固定仕様範囲
 
@@ -177,7 +175,7 @@ next_start: `Topic 10最終QA再判定`
 記録:
 `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_final_qa.md`
 
-判定: `NEEDS_REVISION / IN_PROGRESS`。
+初回判定: `NEEDS_REVISION / IN_PROGRESS`。
 
 PASS:
 - 必須成果物5点の実在
@@ -192,16 +190,11 @@ PASS:
 - 未確認新幹線実値追加0件
 - 仕様境界
 
-FAILは進捗記録3箇所のみだった:
-1. 主source冒頭 `## 状態` が「解説本文＋3段階例題まで完了 / 次工程は解説PDF」のまま。
-2. 主source末尾 `## 次工程` が「解説PDFへ反映」のまま。
-3. 練習source末尾 `## 次工程` が「練習PDFを作成」のまま。
-
-技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・独立再解答結果は変更不要。
+FAILは進捗記録3箇所のみだった。
 
 ## Topic 10 source進捗記録同期
 
-初回最終QAでFAILだった上記3箇所を実成果物へ同期済み。
+初回最終QAでFAILだった3箇所を実成果物へ同期済み。
 
 - 主source冒頭 `## 状態`: 必須成果物・完成後独立再解答・初回最終QAまで完了した現在地へ同期
 - 主source末尾 `## 次工程`: 最終QA再判定へ同期
@@ -210,8 +203,23 @@ FAILは進捗記録3箇所のみだった:
 
 判定: `topic_10_source_progress_synced / IN_PROGRESS`。
 
+## Topic 10 最終QA再判定
+
+初回FAILだった進捗記録3箇所の解消を確認し、技術内容・成果物・過去問対応・仕様境界を再確認した。
+
+- 必須成果物: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 制作前独立検証: `5 / 5 PASS`
+- 完成後独立再解答: `5 / 5 PASS`
+- 練習QA: `12 / 12 PASS`
+- PDF/PPTX表示QA: PASS
+- source進捗整合: PASS
+- 教材外補完0件
+- 固定範囲外追加0件
+- 未確認新幹線実値追加0件
+
+判定: `PASS / completed`。
+
 ## 次工程
 
-Topic 10の最終QAを再判定する。
-
-再判定では、初回最終QAでPASSだった技術内容・成果物・独立再解答・仕様境界を再確認し、今回同期した進捗記録3箇所の整合だけを追加確認する。
+Topic 11「グラフ・特性曲線を読む」の制作前EXAM_ALIGNMENTを実施する。系列SPECのTopic 11固定範囲だけを対象に、公式過去問を直近年度から調査し、件数合わせの仕様追加をしない。
