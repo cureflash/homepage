@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 11 / 14
-- current_status: `topic_12_explanation_source_complete`
+- current_status: `topic_12_explanation_pdf_complete`
 - last_completed_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active_topic: `12 300系はなぜVVVFになった？`
-- next_start: Topic 12の解説PDFを作成し、表示QA・文字抽出QAを実施する
+- next_start: Topic 12の練習問題source・練習PDFを作成する
 
 ## Topic 01 進捗
 
@@ -214,7 +214,7 @@
 - [x] e-sysnet・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
@@ -222,14 +222,16 @@
 
 ## 今回進めた内容
 
-Topic 12 `300系はなぜVVVFになった？` の解説本文＋3段階例題を完成した。
+Topic 12 `300系はなぜVVVFになった？` の解説PDFを作成し、表示QA・文字抽出QAを完了した。
 
-固定7問から逆算した13項目の必須説明を、半導体・キャリア→p/n型→pn接合→ダイオード→BJT→FET→半導体スイッチング素子の順で本文へ接続した。固定7問は本文節へ `7 / 7` マッピング済み。
+A4縦4ページ。200 dpiレンダリングは `4 / 4 PASS`、クリッピング・重なり・文字化け・ページ外はみ出しはいずれも0件。`pdftotext` による本文抽出もPASSした。
 
-3段階例題は、基礎「pn接合とバイアス」、本試験標準「BJT静特性から`β`・`ro`を計算」、複合・ひっかけ「BJT/FET・特殊ダイオードの正誤判定」とした。計算例は `β ≈ 200`、`ro ≈ 20 kΩ` を再計算確認済み。
+source本文の説明順、3段階例題、固定7問の本文マッピング `7 / 7` を維持した。BJT例題は `β ≈ 200`、`ro ≈ 20 kΩ` を再計算確認済み。
 
 PWM・インバータ波形、GTO/IGBT/SiCの詳細損失・駆動比較、BJT/FETの小信号回路、未確認300系実車回路・数値は追加していない。固定範囲外追加は0件。
 
+PDF SHA-256: `8de5bfd1ba517dcf4be4b38e84c3ebba40b0cab76a2fb06be0ebefd56da8094b`
+
 ## 判定
 
-現在 `topic_12_explanation_source_complete / IN_PROGRESS`。完成数は `11 / 14`。次はTopic 12の解説PDFを作成し、表示QA・文字抽出QAを実施する。
+現在 `topic_12_explanation_pdf_complete / IN_PROGRESS`。完成数は `11 / 14`。次はTopic 12の練習問題source・練習PDFを作成する。

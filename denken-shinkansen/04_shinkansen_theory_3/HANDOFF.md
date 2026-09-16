@@ -4,27 +4,30 @@
 
 ## 現在地
 
-Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は解説本文＋3段階例題まで完了した。
+Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は解説PDF＋表示/文字抽出QAまで完了した。
 
 - 完成数: `11 / 14`
 - last completed: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active topic: `12 300系はなぜVVVFになった？`
-- current status: `topic_12_explanation_source_complete`
-- next start: Topic 12の解説PDFを作成し、表示QA・文字抽出QAを実施する
+- current status: `topic_12_explanation_pdf_complete`
+- next start: Topic 12の練習問題source・練習PDFを作成する
 
 ## 今回進捗
 
-Topic 12の解説本文＋3段階例題を完成した。
+Topic 12の解説PDFを作成し、QAを完了した。
 
-- 固定過去問7問の要求知識を本文へ `7 / 7` マッピング
-- 必須説明13項目を全件本文へ接続
-- 基礎例題: pn接合と順方向バイアス
-- 本試験標準例題: BJT静特性から `β` と `ro` を計算
-- 複合・ひっかけ例題: BJT/FET・特殊ダイオードの正誤判定
-- 例題再計算: `β ≈ 200`、`ro ≈ 20 kΩ` PASS
+- PDF: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_explanation.pdf`
+- QA: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_explanation_qa.md`
+- A4縦4ページ
+- 200 dpi表示QA: `4 / 4 PASS`
+- クリッピング・重なり・文字化け・ページ外はみ出し: `0件`
+- 文字抽出QA: `PASS`
+- 固定7問マッピング: `7 / 7` 維持
+- 3段階例題: 収録済み
+- BJT例題再計算: `β ≈ 200`、`ro ≈ 20 kΩ` PASS
 - 固定範囲外追加: `0件`
 - 未確認300系実車回路・数値追加: `0件`
-- source: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor.md`
+- PDF SHA-256: `8de5bfd1ba517dcf4be4b38e84c3ebba40b0cab76a2fb06be0ebefd56da8094b`
 
 固定過去問の正答番号・個別最終数値は、完成後独立再解答の先読み汚染を避けるためsource/HANDOFFへ保存していない。
 
@@ -102,13 +105,15 @@ SiC → 低損失化
 
 ## 次に行うこと
 
-Topic 12の解説PDFを作成する。
+Topic 12の練習問題source・練習PDFを作成する。
 
-- source本文・3段階例題・固定7問マッピングを変更せずPDF化する
-- A4縦の教材として可読性を確認する
-- 表示QAと文字抽出QAを実施する
-- 固定範囲外論点をPDF生成時に追加しない
-- 完成後独立再解答用の正答番号・個別最終数値を記録しない
+- 三種仕様に従い12問以上とする
+- 固定7問の要求知識へ接続する
+- 少なくとも半数を五肢択一にする
+- 正答一意性と数値・論理を独立QAする
+- 完全解説を付ける
+- 固定範囲外論点を追加しない
+- 完成後独立再解答用の正答番号・個別最終数値をHANDOFFへ保存しない
 
 ## 固定ルール
 
