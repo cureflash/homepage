@@ -6,13 +6,94 @@
 
 Topic 01〜12は `PASS / completed`。完成数は `12 / 21`。
 
-current_status: `topic_12_completed`
+current_status: `topic_13_exam_alignment_complete`
 
 active_topic: `13 新幹線の交流電力を複素数で扱う`
 
-Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、旧進捗記録同期、最終QA再実施、completed状態同期まで完了。固定公式過去問H23一次「理論」問6 (1)〜(5)は完成後独立再解答 `5 / 5 PASS`、二次採用0問・二次数合わせ0件。最終QAは `PASS / FINAL_QA_COMPLETE`、最終判定は `PASS / completed`。
+Topic 13は制作前EXAM_ALIGNMENTまで完了。固定公式過去問は一次3問・15小問＋二次1問・4答案要素、制作前独立再解答は `19 / 19 PASS`。二次はR2「電力・管理」問6を採用し、電力円線図に直接関連するH30問3・H25問4は送電線モデル・単位法等の固定範囲外体系を要するため非採用。二次数合わせ0件。
 
-次工程はTopic 13「新幹線の交流電力を複素数で扱う」の制作前EXAM_ALIGNMENT。
+次工程はTopic 13の解説本文＋3段階例題。
+
+## Topic 13 成果物
+
+- source: `topics/13_complex_power/13_complex_power.md`
+- stage: `EXAM_ALIGNMENT_COMPLETE`
+- completion: `in_progress`
+- 解説PDF: 未作成
+- 練習source/PDF: 未作成
+- PowerPoint: 未作成
+- 完成後独立再解答: 未実施
+- 最終QA: 未実施
+
+## Topic 13 固定範囲
+
+系列SPECどおり次だけを扱う。
+
+- 複素電力
+- 有効電力
+- 無効電力
+- 皮相電力
+- 力率
+- `S = VI*`
+- 電力三角形
+- 電力円線図の概念
+
+新幹線側は大容量交流負荷の例として使用する。
+
+境界:
+
+- 送電線の単位法・百分率インピーダンス・潮流計算を追加しない
+- 送電線の電圧降下設計・電圧安定限界の導出へ広げない
+- 調相設備・変圧器・同期機等の設備固有設計へ広げない
+- 電力円線図は概念までとし、送電系統の詳細設計計算を追加しない
+- Topic 14の高調波・非正弦波解析、Topic 15の過渡現象を先取りしない
+- 未確認の新幹線主回路・変電設備の内部仕様や実設備値を推測しない
+
+## Topic 13 固定EXAM_ALIGNMENT
+
+品質ゲート対象は一次3問・15小問＋二次1問・4答案要素、合計 `4問・19答案要素`。
+
+- R7 一次 理論 問3 (1)〜(5): 位相、`P=EIcosφ`、コンデンサによる電力条件変化
+- H22 一次 理論 問2 (1)〜(5): RC回路の実効値・位相・消費有効電力
+- H21 一次 理論 問3 (1)〜(5): 複素アドミタンス、フェーザ、平均電力
+- R2 二次 電力・管理 問6 (1)〜(3): P/Q/S、総合力率、P-Qベクトル、力率改善
+
+公式問題・公式標準解答を照合済み。制作前独立再解答 `19 / 19 PASS`。完成後ブラインド再解答を妨げないため、選択肢記号・最終数値答案はsourceへ保存していない。
+
+関連候補は一次・二次合わせ8件を確認した。H30二次「電力・管理」問3、H25二次「電力・管理」問4は電力円線図に直接関連するが、送電線モデル・単位法・電圧安定度等を要するため非採用。R7二次「電力・管理」問3も％インピーダンス・単位法・短絡容量を要するため非採用。R8二次は2026-09-16時点で未実施。
+
+二次採用 `1問・4答案要素`、二次数合わせ `0件`。
+
+## Topic 13 解説本文で必須の事項
+
+1. 実効値フェーザによる `S=VI*` と共役を用いる理由
+2. `S=P+jQ` とP/Q/|S|の意味
+3. `P=VIcosφ`、`Q=VIsinφ`、`|S|=VI`
+4. `P^2+Q^2=|S|^2`、`cosφ=P/|S|`、電力三角形
+5. 遅れQ正・進みQ負の符号規約
+6. `S=|I|^2Z` 等からP/Qを求める手順
+7. 有効電力と無効電力の物理的意味
+8. 力率改善用コンデンサによるQ・皮相電力の変化
+9. 複数負荷のP/Q合算と総合力率
+10. 固定一次3問へ接続するフェーザ→平均電力の手順
+11. R2二次問6へ接続するP-Qベクトル、皮相電力上限、目標力率から必要Qを逆算する手順
+12. 電力円線図は概念まで。送電線の詳細導出は行わない
+13. 新幹線は大容量交流負荷の例に限定し、未確認実値を追加しない
+
+## Topic 13 制作前QA
+
+- MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC: `PASS`
+- 一次・二次関連候補: `8件`
+- 固定品質ゲート: `4問・19答案要素`
+- 公式問題・公式標準解答照合: `19 / 19`
+- 制作前独立再解答: `19 / 19 PASS`
+- 二次採用: `1問・4答案要素`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 14以降の先取り: `0件`
+- 未確認新幹線実設備値追加: `0件`
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 
 ## Topic 12 成果物
 
@@ -90,12 +171,12 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 2. 三相相電圧の複素ベクトル表示
 3. Y結線の `VL=√3Vφ`、`IL=Iφ` と30°位相関係
 4. Δ結線の `VL=Vφ`、`IL=√3Iφ` と30°位相関係
-5. 線間電圧を相電圧のベクトル差で作る手順
-6. Δ枝電流から線電流をベクトル合成する手順
-7. `Ea+Eb+Ec=0` の利用
-8. 平衡三相有効電力 `P=3VφIφcosφ=√3VLILcosφ`
-9. ベクトル図による120°・30°関係の確認
-10. 新幹線側は発電・送電から変電設備へ三相交流が渡る導入までに限定
+5. 線間電圧を二つの相電圧のベクトル差として作る手順
+6. Δ負荷の枝電流を `Iφ=Vφ/Zφ` で求め、接続点の線電流を枝電流のベクトル和・差から求める手順
+7. 平衡時の `Ea+Eb+Ec=0` と、対称な3ベクトルの和を計算へ使う方法
+8. 平衡三相有効電力 `P=3VφIφcosφ=√3 VLILcosφ` と、Y/Δで同じ線間量の式へ到達すること
+9. ベクトル図で120°、30°、線間量と相量の関係を確認する方法
+10. 新幹線への接続は「発電・送電側で三相交流が用いられ、変電設備へ電力が渡る」という導入に限定し、き電用変圧器の内部結線・実設備値を推測しない
 
 3段階例題も収録済み。
 
@@ -249,8 +330,30 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 参照日: 2026-09-16
 
-公式正本:
+Topic 13 公式正本:
 - 電気技術者試験センター「第二種電気主任技術者試験の問題と解答」 https://www.shiken.or.jp/chief/second/qa/
+- R7一次 理論 https://www.shiken.or.jp/chief/upload/20250831_ch_second_q01.pdf
+- R7一次 標準解答 https://www.shiken.or.jp/chief/upload/20250831_ch_second_a01.pdf
+- R2二次 電力・管理 https://www.shiken.or.jp/chief/upload/20201122_ch_second_q01.pdf
+- R2二次 標準解答 https://www.shiken.or.jp/chief/upload/20201122_ch_second_a01.pdf
+- H30二次 電力・管理 https://www.shiken.or.jp/chief/upload/20181118_ch_second_q01.pdf
+- H25二次 電力・管理 https://www.shiken.or.jp/chief/upload/20131124_ch_second_q01.pdf
+- H22一次 理論 https://www.shiken.or.jp/chief/upload/20100904_ch_second_q01.pdf
+- H22一次 標準解答 https://www.shiken.or.jp/chief/upload/20100904_ch_second_a01.pdf
+- H21一次 理論 https://www.shiken.or.jp/chief/upload/20090905_ch_second_q01.pdf
+- H21一次 標準解答 https://www.shiken.or.jp/chief/upload/20090905_ch_second_a01.pdf
+
+Topic 13 説明粒度・候補確認:
+- e-sysnet「力率とは」 https://e-sysnet.com/power_factor/
+- e-sysnet「交流電力」 https://e-sysnet.com/power-factor/
+- 電験王2 R7理論問3 https://denken-ou.com/c2/rironr7-3/
+- 電験王2 H22理論問2 https://denken-ou.com/c2/rironh22-2/
+- 電験王2 H21理論問3 https://denken-ou.com/c2/rironh21-3/
+- 電験王2 R2電力・管理問6 https://denken-ou.com/c2/denryokukanrir2-6/
+- 電験王2 H30電力・管理問3 https://denken-ou.com/c2/denryokukanrih30-3/
+- 電験王2 H25電力・管理問4 https://denken-ou.com/c2/denryokukanrih25-4/
+
+Topic 12 公式正本:
 - H23一次試験問題 https://www.shiken.or.jp/chief/upload/20110903_ch_second_q01.pdf
 - H23一次試験標準解答 https://www.shiken.or.jp/chief/upload/20110903_ch_second_a01.pdf
 - R7二次 電力・管理 https://www.shiken.or.jp/chief/upload/20251116_ch_second_q01.pdf
@@ -259,14 +362,6 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - R6二次 機械・制御 https://www.shiken.or.jp/chief/upload/20241110_as_02_ch_second_q02.pdf
 - R5二次 電力・管理 https://www.shiken.or.jp/chief/upload/20231112_ch_second_q01.pdf
 - R5二次 機械・制御 https://www.shiken.or.jp/chief/upload/20231112_ch_second_q02.pdf
-
-説明粒度・候補確認:
-- e-sysnet「三相交流回路」 https://e-sysnet.com/%E4%B8%89%E7%9B%B8%E4%BA%A4%E6%B5%81%E5%9B%9E%E8%B7%AF/
-- 電験王2 H23理論問6 https://denken-ou.com/c2/rironh23-6/
-- 電験王2 H23機械問3 https://denken-ou.com/c2/kikaih23-3/
-- 電験王2 H29電力問6 https://denken-ou.com/c2/denryokuh29-6/
-- 電験王2 H30電力問7 https://denken-ou.com/c2/denryokuh30-7/
-- 電験王2 H26電力・管理問4 https://denken-ou.com/c2/denryokukanrih26-4/
 
 ## 直前完了Topic
 
@@ -280,4 +375,4 @@ Topic 12「三相交流を新幹線へ渡す」は `PASS / completed`。
 
 ## 次に行うこと
 
-Topic 13「新幹線の交流電力を複素数で扱う」の制作前EXAM_ALIGNMENT。一次・二次を含む公式過去問を固定範囲内で調査し、件数合わせで範囲外論点を採用しない。
+Topic 13「新幹線の交流電力を複素数で扱う」の解説本文＋3段階例題を作成する。固定4問・19答案要素から逆算した必須説明を全て接続し、送電線単位法・詳細な電力円線図導出・Topic 14以降を追加しない。
