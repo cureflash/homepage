@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `12 / 39`
-- current_status: `topic_12_completed`
+- current_status: `topic_13_exam_alignment_complete`
 - last_completed_topic: `12 300系③ VVVFインバータと誘導機制御`
 - active_topic: `13 300系④ 回生と四象限運転`
-- next_start: Topic 13の制作前EXAM_ALIGNMENT
+- next_start: Topic 13 解説本文＋3段階例題
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -23,7 +23,49 @@
 - [x] 10 300系① 誘導電動機等価回路 — PASS
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
-- [ ] 13 300系④ 回生と四象限運転 — NOT_STARTED
+- [ ] 13 300系④ 回生と四象限運転 — EXAM_ALIGNMENT_COMPLETE
+
+## Topic 13 固定EXAM_ALIGNMENT
+- source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
+- 固定過去問: 一次4問＋二次1問、計5問
+- 固定答案要素: 一次11＋二次4、計15
+- R6 一次 機械 問2 (1),(2)
+- R5 一次 機械 問2 (1),(2),(3),(5)
+- H28 一次 機械 問5 (3)〜(5)
+- H27 一次 機械 問3 (1),(2)
+- H24 二次 機械・制御 問3 (1),(2)a〜c
+- 制作前独立検証: 一次 `11 / 11 PASS`、二次 `4 / 4 PASS`、合計 `15 / 15 PASS`
+- 二次記述問題: `1問`
+- 公式解答・標準解答との不一致: `0件`
+- 参考教材2系統以上: `PASS`
+- SPEC指定8項目: `8 / 8 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+- Topic 14先取り: `0件`
+- 回生失効・電力貯蔵設備追加: `0件`
+- SPEC外制御方式追加: `0件`
+- 未確認300系実車値追加: `0件`
+
+## Topic 13 固定範囲
+- 四象限運転
+- トルク方向
+- 回転方向
+- 発電機運転
+- 回生電力
+- 直流中間回路
+- 架線側電力フロー
+- エネルギー収支
+
+SPEC指定可視化:
+- 速度・トルク平面
+- 力行・回生時の電力フロー
+- 回生可能エネルギー
+
+範囲境界:
+- Topic 14の走行抵抗・必要けん引力・加速度計算は追加しない
+- H27の回生失効・電力貯蔵・運行間隔は追加しない
+- H24二次問3の無効電流・出力可能領域は追加しない
+- Topic 11/12の高調波・力率制御・V/f制御等は本テーマに必要な接続以上に再展開しない
+- 未確認の300系回生効率・制御定数等を実車値として追加しない
 
 ## Topic 12 固定EXAM_ALIGNMENT
 - source: `topics/12_300series_vvvf_inverter_induction_control/12_300series_vvvf_inverter_induction_control.md`
@@ -177,4 +219,4 @@ SPEC指定可視化:
 - 最終QA: `PASS / completed`
 
 ## 次工程
-Topic 13「300系④ 回生と四象限運転」の制作前EXAM_ALIGNMENTを行う。
+Topic 13「300系④ 回生と四象限運転」の解説本文＋3段階例題を作成する。
