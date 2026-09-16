@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 11 / 14
-- current_status: `topic_11_completed`
+- current_status: `topic_12_exam_alignment_complete`
 - last_completed_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active_topic: `12 300系はなぜVVVFになった？`
-- next_start: Topic 12の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 12の解説本文＋3段階例題を作成する
 
 ## Topic 01 進捗
 
@@ -203,14 +203,31 @@
 - [x] 最終QA再実施
 - [x] 最終QA PASS
 
+## Topic 12 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] GitHub上のSTATUS / HANDOFF / 既存成果物確認（Topic 12既存成果物なし）
+- [x] 令和8年度上期まで直近年度を優先して公式理論過去問を確認
+- [x] Topic 12固定範囲でゲート対象7問を確定
+- [x] 制作前独立検証 `7 / 7 PASS`
+- [x] Topic 13のPWM・波形、機械編の素子損失・駆動比較、未確認実車情報を境界整理
+- [x] e-sysnet・電験三種まとめましたの説明粒度を確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の最終QAを再実施し、`PASS / completed` とした。
+Topic 12 `300系はなぜVVVFになった？` の制作前EXAM_ALIGNMENTを完了した。
 
-固定5問・10答案要素の完成後独立再解答 `5 / 5問・10 / 10答案要素 PASS`、公式解答一致 `10 / 10`、教材外知識補完 `0件`。解説PDF・練習PDF・PowerPointの既存QA、必須成果物実在、SPEC固定範囲境界、進捗記録整合性を全件PASS確認した。
+令和8年度上期まで直近年度を優先して公式理論過去問を確認し、系列SPECの固定範囲だけで解答できる7問を品質ゲート対象として固定した。制作前独立検証は `7 / 7 PASS`。正答番号・個別最終数値は完成後独立再解答の先読み汚染を避けるためsource・HANDOFFへ保存していない。
 
-最終判定に合わせて主source・練習sourceを `COMPLETED` へ同期した。技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX成果物は変更していない。
+PWM・インバータ波形はTopic 13、GTO/IGBT/SiCの詳細な損失・駆動比較は機械編へ送り、仕様外論点・未確認実車値の追加は0件。source Markdownへ固定EXAM_ALIGNMENT、境界、教材必須説明、参考教材を記録した。
 
 ## 判定
 
-現在 `topic_11_completed`。完成数は `11 / 14`。次はTopic 12 `300系はなぜVVVFになった？` の制作前EXAM_ALIGNMENTを実施する。
+現在 `topic_12_exam_alignment_complete / IN_PROGRESS`。完成数は `11 / 14`。次はTopic 12の解説本文＋3段階例題を作成する。
