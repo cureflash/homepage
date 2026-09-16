@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `11 / 22`
-- current_status: `topic_12_practice_pdf_complete`
+- current_status: `topic_12_powerpoint_complete`
 - last_completed_topic: `11 GTO→IGBT→SiCの損失を計算する`
 - active_topic: `12 N700Sの6極モーターを設計側から見る`
-- next_start: Topic 12 解説画像PowerPoint
+- next_start: Topic 12 独立再解答前ゲート
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -341,8 +341,22 @@
 - [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
 - [x] SHA-256 `f70c681e0f4c5b0ed71ebc0b3f78dcaf09e6968b5b5ce1100758e42c79efd90a`
 
+## Topic 12 解説画像PowerPoint
+- [x] `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_images.pptx`
+- [x] 16:9・4枚
+- [x] 極数→同期速度→すべり→角速度→出力・トルクの計算鎖を可視化
+- [x] 同一機械回転速度で4極・6極の必要周波数比較 `f_6/f_4=1.5` を可視化
+- [x] H25一次型のインバータ連続定格／短時間過負荷と出力密度を可視化
+- [x] 固定一次2問＋二次3問・16答案要素への接続を可視化
+- [x] 1601×900全4枚表示QA `4 / 4 PASS`
+- [x] overflow `0件`
+- [x] ZIP整合性 PASS
+- [x] 固定一次2問＋二次3問・16答案要素を維持
+- [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
+- [x] SHA-256 `0fcc83e90287e57901ef17c50497e2c4356c0322973de1b7d8628b0be286b17c`
+
 ## 今回進めた内容
-Topic 12の練習PDFを完成した。一次10問＋二次5問・完全解説をA4縦4ページへ反映し、200 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA PASS、数値・論理再検算 `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS` を確認した。固定5過去問・16答案要素と固定範囲を維持し、固定範囲外論点・未確認N700S実車値の追加は0件。
+Topic 12の解説画像PowerPointを完成した。16:9・4枚で、極数・同期速度・すべり・回転速度・トルク・出力、4極/6極の必要周波数比較、インバータ定格、出力密度、固定5過去問・16答案要素への接続を可視化した。1601×900全4枚表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS。固定範囲外論点・未確認N700S実車値の追加は0件。
 
 ## 判定
-Topic 12は `topic_12_practice_pdf_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の解説画像PowerPointを作成する。
+Topic 12は `topic_12_powerpoint_complete / IN_PROGRESS`。完成数は `11 / 22` のまま。次はTopic 12の独立再解答前ゲートを実施する。
