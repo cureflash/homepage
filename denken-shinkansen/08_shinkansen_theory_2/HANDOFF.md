@@ -6,17 +6,19 @@
 
 Topic 01〜13は `PASS / completed`。完成数は `13 / 21`。
 
-current_status: `topic_14_explanation_source_complete`
+current_status: `topic_14_explanation_pdf_complete`
 
 active_topic: `14 インバータのギザギザ波形を分解する`
 
-Topic 14は解説本文＋3段階例題まで完了。固定一次2問・3答案要素＋二次1問・2答案要素を本文・例題へ `5 / 5` 接続し、3段階例題 `3 / 3`。二次採用1問・2答案要素、二次数合わせ0件。次工程は解説PDF＋表示QA。
+Topic 14は解説本文＋3段階例題、解説PDF＋表示QAまで完了。固定一次2問・3答案要素＋二次1問・2答案要素を `5 / 5` 接続し、3段階例題 `3 / 3`。解説PDFはA4縦5ページ、200 dpi全ページ表示QA `5 / 5 PASS`、文字抽出PASS。二次採用1問・2答案要素、二次数合わせ0件。次工程は練習問題source＋練習PDF。
 
 ## Topic 14 成果物
 
 - source: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics.md`
+- 解説PDF: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_explanation.pdf`
+- 解説PDF QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_explanation_pdf_qa.md`
 - completion: `in_progress`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `EXPLANATION_PDF_COMPLETE`
 
 ## Topic 14 固定範囲
 
@@ -76,6 +78,23 @@ Topic 14は解説本文＋3段階例題まで完了。固定一次2問・3答案
 - 未確認実車PWM方式・スイッチング周波数・高調波実測値追加: `0件`
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+## Topic 14 解説PDF QA
+
+記録: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_explanation_pdf_qa.md`
+
+- A4縦5ページ
+- 200 dpi全ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: `PASS`
+- 固定一次2問・3答案要素＋二次1問・2答案要素への接続: `5 / 5`
+- 3段階例題: `3 / 3`
+- クリッピング・文字重なり・文字化け・判読不能・ページ欠落: `0件`
+- 二次採用: `1問・2答案要素`、二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 15過渡現象の先取り: `0件`
+- 未確認実車PWM方式・スイッチング周波数・高調波実測値追加: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ## Topic 13 成果物
 
@@ -240,7 +259,7 @@ Topic 14は解説本文＋3段階例題まで完了。固定一次2問・3答案
 
 ## 直前完了Topic
 
-Topic 13「新幹線の交流電力を複素数で扱う」は `PASS / completed`。
+Topic 13「新幹線の交流電力を複数で扱う」は `PASS / completed`。
 
 - 固定一次3問・15小問＋二次1問・4答案要素
 - 完成後独立再解答 `19 / 19 PASS`
@@ -250,4 +269,4 @@ Topic 13「新幹線の交流電力を複素数で扱う」は `PASS / completed
 
 ## 次に行うこと
 
-Topic 14「インバータのギザギザ波形を分解する」の解説PDF＋表示QA。固定3問・5答案要素と3段階例題をPDFへ反映し、SPEC固定範囲外の設備・制御固有論点を追加しない。
+Topic 14「インバータのギザギザ波形を分解する」の練習問題source＋練習PDF。固定3問・5答案要素と系列SPECの固定範囲だけに接続し、設備・制御固有論点やTopic 15過渡現象を追加しない。
