@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 34 / 38
-- current_status: `topic_35_practice_source_complete`
+- current_status: `topic_35_practice_pdf_complete`
 - last_completed_topic: `34 COMTRAC② 進路をどう自動制御する？`
 - active_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
-- next_start: Topic 35の練習PDF。`35_comtrac_disruption_management_practice.md` の15問＋完全解説をA4縦PDFへ反映し、表示QA・文字抽出QA・数値/論理再検算・固定EXAM_ALIGNMENT `5 / 5` 接続を確認する
+- next_start: Topic 35の解説画像PowerPoint。固定5過去問の要求事項を16:9で可視化し、表示QA・overflow検査・PPTX ZIP整合性・固定EXAM_ALIGNMENT `5 / 5` 接続を確認する
 
 ## 新品質ゲート進捗
 - [x] 01〜34 — PASS
@@ -76,6 +76,22 @@ source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_managemen
 - Topic 34論理回路の再体系化: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
 - 機能分散と冗長化の混同: `0件`
+
+## 35 練習PDF
+- PDF: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice.pdf`
+- A4縦5ページ、全15問（基礎4／標準8／複合3）＋完全解説
+- 正答位置: A/B/C/D/E各3問
+- 180 dpi全ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: PASS
+- 独立数値・論理再計算: `15 / 15 PASS`
+- 固定EXAM_ALIGNMENT: `5 / 5` 接続
+- 複数正答: `0件`
+- 固定範囲外追加: `0件`
+- Topic 36以降先取り: `0件`
+- Topic 34論理回路の再体系化: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+- 機能分散と冗長化の混同: `0件`
+- QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice_pdf_qa.md`
 
 ## 34 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6答案要素。系列SPEC固定範囲は、進路制御、条件判定、AND、OR、NOT、真理値表、インターロック、論理回路。
@@ -600,4 +616,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 34 `COMTRAC② 進路をどう自動制御する？` は固定5問・6答案要素の完成後blind独立再解答 `5 / 5問・6 / 6答案要素 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数34/38。
 
 ## 次テーマ工程
-Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` の練習PDF。`topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice.md` の15問＋完全解説をA4縦PDFへ反映し、全ページ表示QA・文字抽出QA・数値/論理再検算・固定EXAM_ALIGNMENT `5 / 5` 接続を確認する。固定範囲外、Topic 36以降、未確認COMTRAC内部仕様は追加しない。
+Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` の解説画像PowerPoint。固定5過去問の要求事項を16:9で可視化し、表示QA・overflow検査・PPTX ZIP整合性・固定EXAM_ALIGNMENT `5 / 5` 接続を確認する。固定範囲外、Topic 36以降、未確認COMTRAC内部仕様は追加しない。
