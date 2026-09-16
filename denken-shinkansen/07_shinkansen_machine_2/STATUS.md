@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `12 / 22`
-- current_status: `topic_13_explanation_source_complete`
+- current_status: `topic_13_explanation_pdf_complete`
 - last_completed_topic: `12 N700Sの6極モーターを設計側から見る`
 - active_topic: `13 L0系のリニア同期モータを等価回路で考える`
-- next_start: Topic 13 解説PDF
+- next_start: Topic 13 練習問題source
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -436,8 +436,18 @@
 - [x] 主要計算再検算 PASS
 - [x] 固定範囲外論点・Topic 14先取り・未確認L0実値の追加 `0件`
 
+## Topic 13 解説PDF
+- [x] `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_explanation.pdf`
+- [x] A4縦5ページ
+- [x] 200 dpi全5ページ表示QA `5 / 5 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 固定一次4問＋二次1問・22答案要素を維持
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3` 収録
+- [x] 固定範囲外論点・Topic 14先取り・未確認L0実値追加 `0件`
+- [x] SHA-256 `7d2a0fc7f61c78c24e28a709e3c65a855773298a8ec04ca77ae26af941af33fd`
+
 ## 今回進めた内容
-Topic 13「L0系のリニア同期モータを等価回路で考える」の解説本文＋3段階例題を完成。固定一次4問＋二次記述1問・22答案要素を本文へ `22 / 22` 接続し、3段階例題 `3 / 3`、主要計算再検算PASS。仕様外追加・Topic 14先取り・未確認L0実値追加は0件。
+Topic 13「L0系のリニア同期モータを等価回路で考える」の解説PDFを完成・GitHub正本へ反映。A4縦5ページ、200 dpi表示QA `5 / 5 PASS`、文字抽出QA PASS。固定一次4問＋二次1問・22答案要素、3段階例題を維持し、仕様外追加・Topic 14先取り・未確認L0実値追加は0件。
 
 ## 判定
-Topic 13は `topic_13_explanation_source_complete / IN_PROGRESS`。完成数は `12 / 22`。次は解説PDF。
+Topic 13は `topic_13_explanation_pdf_complete / IN_PROGRESS`。完成数は `12 / 22`。次は練習問題source。
