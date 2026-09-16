@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `11 / 16`
-- current_status: `topic_12_independent_reanswer_passed`
+- current_status: `topic_12_final_qa_needs_revision`
 - last_completed_topic: `11 空転した車輪をどう立て直す？`
 - active_topic: `12 新幹線のコンピュータは何をしている？`
-- next_start: Topic 12の最終QAを実施する
+- next_start: Topic 12の旧進捗記録3箇所を実成果物へ同期する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -22,7 +22,7 @@
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
-- [ ] 12 新幹線のコンピュータは何をしている？ — 完成後blind独立再解答 `8 / 8 PASS` / IN_PROGRESS
+- [ ] 12 新幹線のコンピュータは何をしている？ — 最終QA `NEEDS_REVISION`（技術ゲートPASS / 進捗記録3箇所FAIL） / IN_PROGRESS
 - [ ] 13〜16 — 未完了
 
 ## Topic 12 制作品質状態
@@ -79,6 +79,13 @@
 - 公式解答・保存済み選択肢番号の事前参照: `0件`
 - 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
 - 独立再解答記録: `topics/12_information_processing/12_information_processing_independent_reanswer.md`
+- 最終QA: `NEEDS_REVISION`
+- 最終QA技術内容: `PASS`
+- 最終QA必須成果物: `PASS`
+- 最終QA表示QA: `PASS`
+- 最終QA固定範囲境界: `PASS`
+- 最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
+- 旧進捗3箇所: 主source `## 次工程` / 練習source `## 次工程` / 練習PDF QA `## 次工程`
 
 ## Topic 11 最終品質状態
 - 固定範囲: センサ / 回転速度 / 車輪 / 粘着 / 空転 / 滑走 / フィードバック / 制御指令 / アクチュエータ / メカトロニクス / 応答速度
@@ -140,7 +147,7 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 12「新幹線のコンピュータは何をしている？」の完成後blind独立再解答を実施した。固定6問・8答案要素を完成教材だけで再導出し、全答案確定後に公式解答へ照合して `8 / 8 PASS`。公式解答・保存済み選択肢番号の事前参照、教材外・固定範囲外知識による補完、固定EXAM_ALIGNMENT変更、固定範囲外追加はいずれも0件。
+Topic 12「新幹線のコンピュータは何をしている？」の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。固定6問・8答案要素の完成後blind独立再解答 `8 / 8 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、固定範囲境界はPASS。未完了理由は進捗記録3箇所が旧工程のまま残っていることのみ。
 
 ## 次工程
-Topic 12の最終QAを実施する。独立再解答 `8 / 8 PASS`、必須成果物、PDF/PPTX表示QA、進捗記録整合、固定範囲境界を再確認し、品質ゲートの最終判定を行う。
+Topic 12の旧進捗記録3箇所だけを実成果物へ同期する。対象は主source `## 次工程`、練習source `## 次工程`、練習PDF QA `## 次工程`。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更しない。
