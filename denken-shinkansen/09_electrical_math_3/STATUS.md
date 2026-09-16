@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 9 / 12
-- current_status: `topic_10_images_ppt_complete`
+- current_status: `topic_10_blind_reanswer_ready`
 - last_completed_topic: `09 微積分で電気を読む`
 - active_topic: `10 指数関数・一階微分方程式入門`
-- next_start: `Topic 10 完成教材だけでの公式過去問独立再解答`
+- next_start: `Topic 10 ブラインド条件を守って固定5問を完成教材だけで独立再解答`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -107,27 +107,27 @@
 - [x] 練習問題source
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
+- [x] 完成後独立再解答前のブラインドゲート整備
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 10「指数関数・一階微分方程式入門」の解説画像PowerPointを完成し、GitHub正本へ反映した。
+Topic 10「指数関数・一階微分方程式入門」の完成後独立再解答前ブラインドゲートを整備し、GitHub正本へ反映した。
 
-- 成果物: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_images.pptx`
-- 16:9・5枚
-- 一階応答共通形、RC、RL、複雑なRC、解法フロー＋固定5過去問対応を可視化
-- 表示QA `5 / 5 PASS`
-- overflow 0件
-- PPTX ZIP整合性 PASS
-- 固定5過去問への接続 `5 / 5 PASS`
+- 新規記録: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_blind_gate.md`
+- 固定品質ゲート対象5問は変更なし
+- 主sourceに保存済みの制作前個別正答・導出を、次runの独立解答確定前には参照しない手順を固定
+- 公式問題文だけで独立解答を先に確定し、その後に公式解答と照合する順序を明記
+- このrunでは主source確認時に制作前個別正答が視認されたため、完成後独立再解答そのものは実施せず、ブラインド条件を次runへ引き継いだ
 - 固定EXAM_ALIGNMENT変更0件
+- 教材本文・練習問題・PDF/PPTX変更0件
 - RLC二次過渡・ラプラス変換・伝達関数・PID追加0件
-- Topic 11一般特性曲線体系の先取り0件
+- Topic 11先取り0件
 - 未確認新幹線実値追加0件
 
 ## 判定
 
-`topic_10_images_ppt_complete / IN_PROGRESS`。
+`topic_10_blind_reanswer_ready / IN_PROGRESS`。
 
-完成数は `9 / 12`。次工程はTopic 10の完成教材だけでの固定5問独立再解答。
+完成数は `9 / 12`。次工程はブラインドゲート手順に従い、Topic 10の固定5問を完成教材だけで独立再解答する。
