@@ -2,15 +2,15 @@
 
 対象: `11 GTO→IGBT→SiCの損失を計算する`
 
-実施日: 2026-09-16
+再判定日: 2026-09-16
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
 `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` の範囲内で再確認し、新しい仕様は追加していない。
 
-技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、練習問題QA、PDF/PPTX表示QA、固定範囲境界はPASSした。未完了理由は進捗記録整合の2点のみである。
+前回 `NEEDS_REVISION` の原因だった進捗記録2件は同期済み。技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、練習問題QA、PDF/PPTX表示QA、固定範囲境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物
 
@@ -18,7 +18,7 @@ GitHub正本上で実在を確認した。
 
 - source Markdown: PASS (`9199b41b1766a321f8b491c34aed21d7908d9e07`)
 - 解説PDF: PASS (`56aa9a83622b749935a24d4664727fe6e0cce208`)
-- 練習source: PASS (`7e35ce2b179c66ed0f860921c1b60235162d3749`)
+- 練習source: PASS (`21fdb16862514c3d6761e6f3e712d58eb74b941d`)
 - 練習PDF: PASS (`b0e571eb9e18b7944e7cf4cd3c305ec536a87b0e`)
 - 解説画像PowerPoint: PASS (`4ac2a83ea8eaa732508dd798552d5179a0899c8b`)
 - PowerPoint QA記録: PASS (`3ecdd20d01c9e17764b07056db860279028a1646`)
@@ -57,14 +57,19 @@ GitHub正本上で実在を確認した。
 - 練習PDF: A4縦7ページ、200 dpi表示QA `7 / 7 PASS`、文字抽出QA PASS、主要数値再計算PASS
 - PowerPoint: 16:9・4スライド、表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性PASS
 
-## 進捗記録整合
+## 前回FAILの再確認
 
-判定: `FAIL`。
+前回FAILだった進捗記録2件は解消済み。
 
-1. `11_power_semiconductor_loss_thermal_practice.md` 末尾 `## 次工程` が「次は解説画像PowerPointを作成する」のままで、PowerPoint・独立再解答まで完了したGitHub正本の現在地と不一致。
-2. 現在のPowerPoint blob SHAは `4ac2a83ea8eaa732508dd798552d5179a0899c8b` で、`11_power_semiconductor_loss_thermal_powerpoint_qa.md` も同じGit blobを対象としている。一方、PowerPoint QA記録のSHA-256は `a0440ffe6243ee6920a4e9102ead6d4a551fbdc4d2e2f937735d7ab20454d37e`、`STATUS.md` / `HANDOFF.md` の記録は `bd195a931abecfa723e895f8082f7e54964bb9c88afba52420cde6777a31b704` で一致していない。現在artifactとQA記録に合わせて進捗記録を同期する必要がある。
+1. `11_power_semiconductor_loss_thermal_practice.md` 末尾 `## 次工程`
+   - 練習PDF・PowerPoint・完成後独立再解答完了後の現在地へ同期済み。
+   - 現在は「次は最終QAを再実施する」と記録されている。
+2. PowerPoint SHA-256記録
+   - 現行PowerPoint Git blob SHA: `4ac2a83ea8eaa732508dd798552d5179a0899c8b`
+   - PowerPoint QA記録 SHA-256: `a0440ffe6243ee6920a4e9102ead6d4a551fbdc4d2e2f937735d7ab20454d37e`
+   - STATUS/HANDOFFも同じSHA-256へ同期済み。
 
-技術本文・固定過去問・練習問題・PDF/PPTXそのものは変更しない。
+教材本文・固定過去問・練習問題・PDF/PPTXそのものは変更していない。
 
 ## 仕様境界
 
@@ -86,8 +91,8 @@ GitHub正本上で実在を確認した。
 - 完成後独立再解答: `15 / 15 PASS`
 - 練習・PDF/PPTX QA: PASS
 - 固定範囲境界: PASS
-- 進捗記録整合: FAIL（2件）
+- 進捗記録整合: PASS
 
-判定: `NEEDS_REVISION / IN_PROGRESS`。
+判定: `PASS / completed`。
 
-完成数は `10 / 22` のまま。次は上記2件の進捗記録だけを同期し、その後に最終QAを再実施する。
+完成数を `11 / 22` とし、次はTopic 12 `N700Sの6極モーターを設計側から見る` の制作前EXAM_ALIGNMENTへ進む。
