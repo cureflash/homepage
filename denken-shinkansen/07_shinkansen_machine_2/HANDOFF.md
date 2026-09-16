@@ -9,7 +9,7 @@ Topic 01〜11は最終QAまで `PASS / completed`。
 
 active topic: `12 N700Sの6極モーターを設計側から見る`
 
-current status: `topic_12_final_qa_needs_revision`
+current status: `topic_12_progress_records_synced`
 
 ## Topic 10 固定範囲
 - 力行
@@ -441,5 +441,12 @@ source完成内容:
   - 練習source末尾 `# 次工程` が「次は練習PDFへ反映」のまま
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 12 進捗記録同期
+- main sourceの `## 状態` と末尾 `# 次工程` を実成果物へ同期済み。
+- 練習source末尾 `# 次工程` を実成果物へ同期済み。
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認N700S実車値追加: `0件`
+
 ## 次に行うこと
-Topic 12の進捗記録2件を実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。同期後に最終QAを再実施する。
+Topic 12の最終QAを再実施する。固定一次2問＋二次3問・16答案要素、完成後独立再解答 `16 / 16 PASS`、必須成果物、PDF/PPTX QA、固定範囲境界、進捗記録整合を再確認する。
