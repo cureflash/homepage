@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 12 / 20
-- current_status: `topic_13_final_qa_needs_revision`
+- current_status: `topic_13_progress_records_synced`
 - last_completed_topic: `12 固有値の基礎`
 - active_topic: `13 フーリエ級数`
-- next_start: Topic 13の進捗記録5箇所を実成果物へ同期し、最終QAを再判定する
+- next_start: Topic 13の最終QAを再判定する
 
 ## Topic 07 制作品質ゲート
 
@@ -167,47 +167,40 @@
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 `5 / 5 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
-- [ ] 進捗記録5箇所の同期
+- [x] 進捗記録5箇所の同期
 - [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 13 `フーリエ級数` の最終QAを実施し、`NEEDS_REVISION` と判定した。
+Topic 13 `フーリエ級数` を1段階進め、初回最終QAで唯一残っていた進捗記録5箇所を実成果物へ同期した。
 
-技術内容・固定品質ゲート・成果物QAはPASSであり、内容修正は不要。
+同期対象:
+1. `13_fourier_series.md` 冒頭 `## 状態`
+2. `13_fourier_series.md` 末尾 `## 次工程`
+3. `13_fourier_series_practice.md` 末尾 `次工程`
+4. `13_fourier_series_powerpoint_qa.md` 末尾 `## 次工程`
+5. `HANDOFF.md` の `current_status` / `次工程`
 
-品質確認:
+技術本文、固定EXAM_ALIGNMENT、問題・正答、解説PDF、練習PDF、PowerPoint、完成後独立再解答は変更していない。
+
+品質ゲートは維持:
 - 固定第二種公式過去問: `3問・5対象設問`
 - 制作前独立再解答・公式標準解答照合: `5 / 5 PASS`
 - 解説本文へのマッピング: `5 / 5 PASS`
-- 解説PDF: A4縦5ページ、200 dpi表示 `5 / 5 PASS`、文字抽出PASS
-- 練習問題: 全12問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`
-- 練習PDF: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出 `24 / 24 PASS`、主要式・数値再検算 `12 / 12 PASS`
-- PowerPoint: 16:9・5枚、固定5対象設問への可視化 `5 / 5 PASS`、表示 `5 / 5 PASS`、overflow 0件、ZIP/XML整合性PASS
+- 練習問題: `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`
 - 完成後独立再解答: `5 / 5 PASS`
-- 教材外知識補完: 0件
-
-範囲境界:
-- H20/H19の周辺問題による件数合わせ: 0件
+- H20/H19周辺問題による件数合わせ: 0件
 - 第一種過去問による件数水増し: 0件
 - Topic 14フーリエ変換・FFT先取り: 0件
 - Topic 15対数・dB・周波数応答・ボード線図先取り: 0件
-- PWM制御方式・キャリア設計・スイッチング損失の一般論追加: 0件
+- PWM制御方式・キャリア設計・スイッチング損失一般論追加: 0件
 - 未確認実車値依存: 0件
-
-exact blockerは進捗記録のみ。
-
-1. `13_fourier_series.md` 冒頭 `## 状態` が解説本文完成時点のまま。
-2. `13_fourier_series.md` 末尾 `## 次工程` が解説PDF作成前のまま。
-3. `13_fourier_series_practice.md` 末尾 `次工程` が練習PDF作成前のまま。
-4. `13_fourier_series_powerpoint_qa.md` 末尾 `## 次工程` が完成後独立再解答前のまま。
-5. `HANDOFF.md` の `current_status` / `次工程` がPowerPoint完成時点のまま。
 
 ## 判定
 
-Topic 13は `topic_13_final_qa_needs_revision / IN_PROGRESS`。
+Topic 13は `topic_13_progress_records_synced / IN_PROGRESS`。
 
 完成数は `12 / 20` のまま。
 
-次は技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTXを変更せず、上記5箇所の進捗記録だけを実成果物へ同期し、最終QAを再判定する。
+次はTopic 13の最終QAを再判定する。
