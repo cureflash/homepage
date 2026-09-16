@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 10 / 12
-- current_status: `topic_11_exam_alignment_complete`
+- current_status: `topic_11_preproduction_independent_answer_complete`
 - last_completed_topic: `10 指数関数・一階微分方程式入門`
 - active_topic: `11 グラフ・特性曲線を読む`
-- next_start: `Topic 11制作前独立解答・公式解答照合`
+- next_start: `Topic 11解説本文＋3段階例題`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -121,7 +121,7 @@
 - [x] 件数合わせの伝達関数・ボード線図等の仕様外論点を除外
 - [x] 参考教材を複数系統確認（e-sysnet含む）
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
-- [ ] 制作前独立解答・公式解答照合
+- [x] 制作前独立解答・公式解答照合 `5 / 5 PASS`
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
@@ -132,20 +132,19 @@
 
 ## 今回進めた内容
 
-Topic 11「グラフ・特性曲線を読む」の制作前EXAM_ALIGNMENTを完了した。
+Topic 11「グラフ・特性曲線を読む」の固定5問について、公式解答を先に見ずに制作前独立解答を確定し、その後に電気技術者試験センター公式解答と照合した。
 
-- 固定品質ゲート: 公式過去問5問
-- R7下 機械 問1: 直流分巻電動機の速度・トルク特性図
-- R6下 理論 問13: トランジスタ静特性＋直流負荷線
-- R6下 理論 問9: RC回路の周波数変更時の電流変化
-- R5上 機械 問7: 電動機・負荷のトルク対速度曲線と安定動作点
-- R5上 機械 問9: 変圧器の最大効率条件
-- 参考教材はe-sysnet・電験三種まとめました等を確認
-- 伝達関数・ボード線図・PID等の仕様外追加0件
-- 制作前独立解答は次工程へ分離
+- R7下 機械 問1: 独立解答 `(5)` → 公式 `(5)` PASS
+- R6下 理論 問13: 独立解答 `(2) 0.9 MΩ` → 公式 `(2)` PASS
+- R6下 理論 問9: 独立解答 `(3) 21.2 A` → 公式 `(3)` PASS
+- R5上 機械 問7: 独立解答 `(4)` → 公式 `(4)` PASS
+- R5上 機械 問9: 独立解答 `(4) 98.0 %` → 公式 `(4)` PASS
+- 合計 `5 / 5 PASS`
+- 固定EXAM_ALIGNMENT変更0件
+- 仕様外補完0件
 
 ## 判定
 
-`topic_11_exam_alignment_complete / IN_PROGRESS`。
+`topic_11_preproduction_independent_answer_complete / IN_PROGRESS`。
 
-完成数は `10 / 12`。次工程は固定5問の制作前独立解答・公式解答照合。
+完成数は `10 / 12`。次工程はTopic 11の解説本文＋3段階例題。
