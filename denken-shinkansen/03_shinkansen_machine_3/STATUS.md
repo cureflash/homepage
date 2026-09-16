@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `10 / 16`
-- current_status: `topic_11_explanation_pdf_complete`
+- current_status: `topic_11_practice_source_complete`
 - last_completed_topic: `10 新幹線の速度はどう自動制御される？`
 - active_topic: `11 空転した車輪をどう立て直す？`
-- next_start: Topic 11の練習問題sourceを作成する
+- next_start: Topic 11の練習PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -21,7 +21,7 @@
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
-- [ ] 11 空転した車輪をどう立て直す？ — 解説PDF完成 / 制作中
+- [ ] 11 空転した車輪をどう立て直す？ — 練習問題source完成 / 制作中
 - [ ] 12〜16 — 未完了
 
 ## Topic 11 現在品質状態
@@ -37,6 +37,12 @@
 - 解説PDF文字抽出QA: `PASS`
 - 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
 - 解説PDF固定過去問マッピング: `1 / 1`
+- 練習問題source: `12問` 完成
+- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
+- 練習問題形式: `12 / 12` 五肢択一
+- 練習問題独立論理QA: `12 / 12 PASS`
+- 練習問題正答一意性QA: `12 / 12 PASS`
+- 練習問題→固定EXAM_ALIGNMENT接続: `1 / 1`
 - 教材外・固定範囲外知識による補完: `0件`
 - 件数合わせの固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
@@ -46,9 +52,10 @@
 - source: `topics/11_readhesion_control/11_readhesion_control.md`
 - explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
 - PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
+- practice source: `topics/11_readhesion_control/11_readhesion_control_practice.md`
 
 ## 今回進捗
-Topic 11「空転した車輪をどう立て直す？」の解説PDFを完成した。A4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、`pdftotext` 文字抽出QA `PASS`。固定R4下 機械 問14の要求事項を `1 / 1` マッピングし、3段階例題 `3 / 3` を収録した。固定EXAM_ALIGNMENT・固定範囲は変更せず、固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加はいずれも0件。
+Topic 11「空転した車輪をどう立て直す？」の練習問題sourceを完成した。全12問・全問五肢択一、基礎3 / 本試験標準7 / 複合・応用2。固定R4下 機械 問14へ `1 / 1` 接続し、独立論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。固定EXAM_ALIGNMENT・固定範囲・解説本文・解説PDFは変更せず、固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加はいずれも0件。
 
 ## 次工程
-Topic 11の練習問題sourceを作成する。固定EXAM_ALIGNMENT、固定範囲、解説本文・解説PDFは変更しない。
+Topic 11の練習PDFを作成する。固定EXAM_ALIGNMENT、固定範囲、解説本文・解説PDF、練習12問の問題数・正答は変更しない。
