@@ -4,30 +4,42 @@
 
 ## 現在地
 
-Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は完成後公式過去問独立再解答まで完了した。
+Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は最終QAを実施し、進捗記録不整合のみで `NEEDS_REVISION / IN_PROGRESS`。
 
 - 完成数: `11 / 14`
 - last completed: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active topic: `12 300系はなぜVVVFになった？`
-- current status: `topic_12_independent_reanswer_complete`
-- next start: Topic 12の最終QAを実施する
+- current status: `topic_12_final_qa_needs_revision`
+- next start: 主source・練習sourceの旧進捗記録だけを実成果物へ同期する
 
 ## 今回進捗
 
-Topic 12の固定公式過去問7問を、公式解答を先に見ず完成教材だけで独立再解答し、その後に公式解答と照合した。
+Topic 12の最終QAを実施した。
 
-- 独立再解答記録: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_exam_recheck.md`
-- 固定過去問: `7問`
-- 独立解答列: `(2),(2),(5),(4),(5),(2),(2)`
-- 公式解答列: `(2),(2),(5),(4),(5),(2),(2)`
-- 公式解答一致: `7 / 7 PASS`
-- 教材だけで必要知識・式・判断根拠を再構成: `PASS`
-- 教材外知識補完: `0件`
-- 固定範囲外追加: `0件`
-- Topic 13のインバータ主回路・PWM・出力波形・高調波への依存: `0件`
-- 機械編のGTO/IGBT/SiC詳細損失・駆動比較への依存: `0件`
-- BJT/FET小信号回路・hパラメータ・ホール効果への依存: `0件`
-- 未確認300系実車回路・数値への依存: `0件`
+PASS:
+- 固定公式過去問7問
+- 制作前独立検証 `7 / 7 PASS`
+- 完成後独立再解答 `7 / 7 PASS`
+- 公式解答一致 `7 / 7`
+- 固定過去問要求の本文マッピング `7 / 7`
+- 練習15問、正答一意性 `15 / 15 PASS`
+- 数値・単位再計算 `3 / 3 PASS`
+- 解説PDF A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
+- 練習PDF A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
+- PowerPoint 16:9・4枚、表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
+- 必須成果物実在
+- 教材外知識補完 `0件`
+- 固定範囲外追加 `0件`
+
+FAIL:
+- 進捗記録整合性
+  - `12_vvvf_semiconductor.md`: `status: EXPLANATION_SOURCE_COMPLETE` のまま。練習、PowerPoint、独立再解答が未完了表示で、次工程も解説PDF作成のまま。
+  - `12_vvvf_semiconductor_practice.md`: `stage: PRACTICE_PDF_COMPLETE`、次工程がPowerPoint作成のまま。
+
+最終QA記録:
+- `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_final_qa.md`
+
+技術本文、固定EXAM_ALIGNMENT、練習15問、正答、PDF/PPTX、独立再解答結果には修正要求なし。
 
 ## Topic 12 SPEC固定範囲
 
@@ -60,49 +72,15 @@ SiC → 低損失化
 ## 固定過去問
 
 1. 令和7年度下期 理論 問11
-   - 特殊ダイオードの基本動作とバイアス方向
 2. 令和7年度上期 理論 問13
-   - BJT静特性、電流増幅率、出力抵抗
 3. 令和6年度下期 理論 問11
-   - 接合形FET/MOSFET、n/pチャネル、デプレッション/エンハンスメント
 4. 令和6年度上期 理論 問11
-   - BJT/FETの入力・制御方式・キャリア等の基本比較
 5. 令和4年度上期 理論 問11
-   - nチャネル接合形FETの空乏層・チャネル・ドレーン電流
 6. 平成29年度 理論 問11
-   - pn接合に由来する整流・発光等の基本現象
 7. 平成28年度 理論 問11
-   - 真性/不純物半導体、p/n型、キャリア、温度特性
 
 制作前独立検証: `7 / 7 PASS`
 完成後独立再解答: `7 / 7 PASS`
-
-## 教材本文の対応
-
-- 半導体・キャリア、真性/不純物半導体、p/n型を本文7.2〜7.3で説明
-- pn接合、空乏層、順逆バイアスを7.4〜7.5で説明
-- ダイオード・特殊ダイオード・整流を7.6で説明
-- BJT基本と `β ≈ ΔIC/ΔIB`、`ro ≈ ΔVCE/ΔIC` を7.7で説明
-- FETの基本分類、電圧制御、高入力インピーダンスを7.8で説明
-- nチャネル接合形FETの空乏層→チャネル幅→ドレーン電流を7.9で説明
-- BJT/FET比較を7.10で説明
-- 半導体スイッチング素子の役割と系列SPEC固定の技術史を7.11で説明
-- 300系との接続を7.12に限定し、PWM等はTopic 13へ送った
-- 解法手順・頻出ミスを7.13〜7.14に整理
-- 3段階例題を8.1〜8.3に配置
-- 固定7問を9節で `7 / 7` 本文マッピング
-
-## 練習問題の対応
-
-- R7下 理論 問11: Q3, Q6, Q13
-- R7上 理論 問13: Q8, Q9, Q14
-- R6下 理論 問11: Q10, Q12
-- R6上 理論 問11: Q4, Q12
-- R4上 理論 問11: Q7, Q15
-- H29 理論 問11: Q2, Q11, Q13
-- H28 理論 問11: Q1, Q5, Q15
-
-固定7問要求への接続は `7 / 7 PASS`。
 
 ## 境界
 
@@ -116,13 +94,12 @@ SiC → 低損失化
 
 ## 次に行うこと
 
-Topic 12の最終QAを実施する。固定EXAM_ALIGNMENTは変更しない。
+主source・練習sourceの進捗記録だけを実成果物へ同期する。
 
-- MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECの固定境界を再確認する
-- source Markdown、解説PDF、練習source/PDF、PowerPoint、各QA、独立再解答記録の存在と整合を確認する
-- 固定7問への本文・練習・可視化接続と完成後独立再解答 `7 / 7 PASS` を確認する
-- source/練習sourceを含む進捗記録と実成果物の整合を確認する
-- 全ゲートPASSの場合のみ `completed` とする
+- `12_vvvf_semiconductor.md` の冒頭status、進捗チェック、末尾次工程を完成後独立再解答済みの状態へ同期
+- `12_vvvf_semiconductor_practice.md` のstage、末尾次工程を完成後独立再解答済みの状態へ同期
+- 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更しない
+- 同期後に最終QAを再実施し、全ゲートPASSの場合のみ `completed` とする
 
 ## 固定ルール
 
