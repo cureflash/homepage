@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜11は `completed`。
+Topic 01〜12は `completed`。
 
-完成数: `11 / 20`
+完成数: `12 / 20`
 
-current_status: `topic_12_source_progress_synced`
+current_status: `topic_12_completed`
 
-active_topic: `12 固有値の基礎`
+active_topic: `13 フーリエ級数`
 
-次工程: Topic 12の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
+次工程: Topic 13の制作前EXAM_ALIGNMENTを実施し、第二種公式過去問から本Topic固定範囲へ直接対応する問題を選定・独立解答する。
 
 ## 上位仕様
 
@@ -733,7 +733,7 @@ QA:
 
 総合判定: `PASS / completed`。
 
-## Topic 12 現在記録
+## Topic 12 完了記録
 
 テーマ: `固有値の基礎`
 
@@ -761,29 +761,63 @@ PowerPoint QA:
 最終QA:
 `topics/12_eigenvalues_basics/12_eigenvalues_basics_final_qa.md`
 
-固定EXAM_ALIGNMENTはH28二次「機械・制御」問4 (1)の1問・1対象設問。制作前独立再解答・完成後独立再解答とも `1 / 1 PASS`、再導出 `f=(12,6)` は公式標準解答と一致した。
+### Topic 12 固定範囲
 
-成果物QA:
+- 固有値
+- 固有ベクトル
+- 特性方程式
+- 線形系の安定性との関係
+
+可制御性・可観測性、状態フィードバック設計一般、オブザーバ、正準形・対角化・Jordan標準形、Lyapunov安定論、数値固有値計算法、Topic 15周波数応答・ボード線図、電力潮流・非線形反復計算へ拡張しない。
+
+### Topic 12 EXAM_ALIGNMENT
+
+固定H28二次「機械・制御」問4 (1)の1問・1対象設問。
+
+- 制作前独立再解答・公式標準解答照合: `1 / 1 PASS`
+- 完成後独立再解答: `1 / 1 PASS`
+- 再導出: `f=(12,6)`
+- 古典制御問題による件数合わせ: 0件
+- 第一種現代制御問題による件数合わせ: 0件
+
+### Topic 12 成果物QA
+
+- 解説本文＋3段階例題: PASS
 - 解説PDF: A4縦5ページ、200 dpi表示 `5 / 5 PASS`、文字抽出PASS
 - 練習問題: 全12問（一次型8／二次記述型4）、独立計算・正答一意性 `12 / 12 PASS`
 - 練習PDF: A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS
 - PowerPoint: 16:9・5枚、表示 `5 / 5 PASS`、overflow 0件、ZIP/XML整合性PASS
-- 可制御性・可観測性・状態フィードバック設計一般等の固定範囲外追加: 0件
+- source進捗記録と実成果物の整合: PASS
+- 固定範囲外追加: 0件
 - 第一種過去問による件数水増し: 0件
 - Topic 15周波数応答・ボード線図先取り: 0件
 - 未確認実車値依存: 0件
 
-初回最終QA判定は `NEEDS_REVISION / IN_PROGRESS`。技術ゲートは全件PASSで、未完了理由だったsource進捗記録3箇所を実成果物へ同期した。
+### Topic 12 最終QA
 
-同期済み箇所:
+初回判定は `NEEDS_REVISION / IN_PROGRESS`。技術ゲートは全件PASSで、未完了理由はsource進捗記録3箇所だけだった。
+
+その後、以下3箇所だけを実成果物へ同期した。
+
 - `12_eigenvalues_basics.md` 冒頭 `## 状態`
 - `12_eigenvalues_basics.md` 末尾 `## 次工程`
 - `12_eigenvalues_basics_practice.md` 末尾 `## 次工程`
 
-技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更していない。
+再判定で以下を確認した。
 
-現在 `topic_12_source_progress_synced / IN_PROGRESS`。
+- 必須成果物実在: PASS
+- 固定H28二次「機械・制御」問4 (1): PASS
+- 完成後独立再解答 `1 / 1 PASS`: PASS
+- 練習問題独立計算・正答一意性 `12 / 12 PASS`: PASS
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- source進捗整合: PASS
+- 固定範囲外追加: 0件
+- 第一種過去問による件数水増し: 0件
+- Topic 15周波数応答・ボード線図先取り: 0件
+- 未確認実車値依存: 0件
+
+総合判定: `PASS / completed`。
 
 ## 次に行うこと
 
-Topic 12 `固有値の基礎` の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
+Topic 13 `フーリエ級数` の制作前EXAM_ALIGNMENTを実施し、第二種公式過去問から周期関数・フーリエ係数・奇関数/偶関数・基本波・高調波・実効値の固定範囲へ直接対応する問題を選定する。件数合わせのTopic 14フーリエ変換・FFT、Topic 15対数・dB・周波数応答論点は追加しない。
