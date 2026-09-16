@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は完成済み。
 
 ## 今回進捗
-Topic 11 `架線事故ではどうやって電気を止める？` の解説本文source＋3段階例題を完成した。
+Topic 11 `架線事故ではどうやって電気を止める？` の解説PDFを完成し、表示・文字抽出・数値論理QAまで完了した。
 
 固定結果:
 - 品質ゲート対象: 公式過去問5問・7答案要素
@@ -19,12 +19,16 @@ Topic 11 `架線事故ではどうやって電気を止める？` の解説本�
 - 解説本文: §1〜§15 完成
 - 3段階例題: 基礎・本試験標準・複合 各1問完成
 - 固定5問・7答案要素の本文要求事項マッピング: `7 / 7`
-- 本文数式・単位・役割分離QA: PASS
-- 3段階例題独立再計算: PASS
+- 解説PDF: `topics/11_fault_protection/11_fault_protection_explanation.pdf`
+- 解説PDF QA: `topics/11_fault_protection/11_fault_protection_explanation_qa.md`
+- 解説PDF: A4縦4ページ
+- 200 dpi表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 3段階例題数値・論理再検算: `PASS`
 - SPEC固定範囲外追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
-制作前の個別正答・最終数値解は、完成後ブラインド独立再解答を保護するためsource・進捗記録へ保存していない。
+制作前の個別正答・最終数値解は、完成後ブラインド独立再解答を保護するためsource・進捗記録・解説PDFへ保存していない。
 
 ## Topic 11 固定範囲
 `SPEC.md` から追加しない。
@@ -48,14 +52,16 @@ R8上 電力 問7は自動再閉路がSPEC外、R8上 電力 問9は通信誘導
 Topic 10 `新幹線が突然大電力を使ったら？` は `PASS / completed`。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、最終QA PASS。
 
 ## 現在状態
-- `current_status`: `topic_11_explanation_source_complete`
+- `current_status`: `topic_11_explanation_pdf_complete`
 - 完成数: `10 / 16`
 - last completed: Topic 10 `新幹線が突然大電力を使ったら？`
 - active: Topic 11 `架線事故ではどうやって電気を止める？`
 - Topic 11 source: `topics/11_fault_protection/11_fault_protection.md`
+- Topic 11解説PDF: `topics/11_fault_protection/11_fault_protection_explanation.pdf`
 - 固定問題: `5問・7答案要素`
 - 制作前独立検証: `7 / 7 PASS`
 - 本文要求事項マッピング: `7 / 7`
+- 解説PDF表示QA: `4 / 4 PASS`
 
 ## 次の正確な開始点
-Topic 11の解説PDFを作成する。本sourceの§1〜§15と3段階例題を使い、固定5問・7答案要素への対応 `7 / 7`、SPEC固定範囲、未確認実設備値を真値化しない条件を維持する。PDFの表示・文字抽出・数値論理QAまで行い、練習問題等にはまだ進まない。
+Topic 11の練習問題sourceを作成する。固定5問・7答案要素への接続 `7 / 7`、SPEC固定範囲、完成後ブラインド独立再解答保護を維持する。練習PDF・PowerPoint・完成後独立再解答にはまだ進まない。
