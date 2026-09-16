@@ -6,13 +6,13 @@
 
 Topic 01〜11は `PASS / completed`。完成数は `11 / 21`。
 
-current_status: `topic_12_powerpoint_complete`
+current_status: `topic_12_independent_reanswer_complete`
 
 active_topic: `12 三相交流を新幹線へ渡す`
 
-Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QAまで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。制作前独立計算 `5 / 5 PASS`。固定5小問の要求事項を教材・練習・PowerPointへ `5 / 5` 接続済み。二次採用0問・二次数合わせ0件を維持している。
+Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF＋QA、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。完成後独立再解答は `ロ, ヲ, リ, ホ, ヨ` で公式標準解答と `5 / 5 PASS`。二次採用0問・二次数合わせ0件を維持している。
 
-次工程はTopic 12の完成後独立再解答。保存済み正答を見ず、固定H23一次「理論」問6 (1)〜(5)を完成教材だけで再導出する。
+次工程はTopic 12の最終QA。
 
 ## Topic 12 成果物
 
@@ -22,7 +22,8 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 練習PDF: `topics/12_three_phase_ac/12_three_phase_ac_practice.pdf`
 - PowerPoint: `topics/12_three_phase_ac/12_three_phase_ac_images.pptx`
 - PowerPoint QA: `topics/12_three_phase_ac/12_three_phase_ac_powerpoint_qa.md`
-- stage: `POWERPOINT_COMPLETE`
+- 独立再解答: `topics/12_three_phase_ac/12_three_phase_ac_reanswer.md`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - completion: `IN_PROGRESS`
 
 ## Topic 12 固定範囲
@@ -58,7 +59,7 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - (4): 接続点で枝電流をベクトル合成して線電流を求める
 - (5): 複素ベクトルの大きさから `√3` 関係を得る
 
-公式問題・公式解答を照合し、制作前に保存済み正答を使わず独立計算して `5 / 5 PASS`。個別正答番号は完成後ブラインド独立再解答を妨げないようsourceへ保存していない。
+公式問題・公式解答を照合済み。制作前独立計算 `5 / 5 PASS`、完成後独立再解答も `5 / 5 PASS`。
 
 原則5問以上の「調査」は、一次・二次を含む関連候補9件以上の確認で満たした。固定範囲だけで完答できない問題を品質ゲートへ数合わせで採用しない。
 
@@ -168,6 +169,26 @@ Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 12 完成後独立再解答
+
+- 記録: `topics/12_three_phase_ac/12_three_phase_ac_reanswer.md`
+- 固定H23一次「理論」問6 (1)〜(5)を完成教材の範囲だけで再導出
+- 独立答案: `ロ, ヲ, リ, ホ, ヨ`
+- 公式標準解答: `ロ, ヲ, リ, ホ, ヨ`
+- 照合: `5 / 5 PASS`
+- 教材だけで120°位相差を複素ベクトル化: PASS
+- 教材だけで線間電圧からΔ枝電流を導出: PASS
+- 教材だけで接続点の線電流をベクトル合成: PASS
+- `√3` 関係を複素ベクトルの大きさから再導出: PASS
+- 教材外知識補完: `0件`
+- SPEC固定範囲外追加: `0件`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- Topic 13以降の先取り: `0件`
+- 未確認の新幹線変電設備値・内部結線追加: `0件`
+
+判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+
 ## 参考資料
 
 参照日: 2026-09-16
@@ -203,4 +224,4 @@ Topic 11「ATCはなぜ特定の周波数を見分けられる？」は `PASS / 
 
 ## 次に行うこと
 
-保存済み正答を見ず、固定H23一次「理論」問6 (1)〜(5)を完成教材だけで独立再解答する。教材外知識で不足を補わず、5小問すべて一致した場合のみ次の最終QAへ進む。
+Topic 12の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、進捗記録整合、固定範囲境界を確認する。
