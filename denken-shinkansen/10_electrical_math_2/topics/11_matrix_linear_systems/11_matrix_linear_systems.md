@@ -2,9 +2,9 @@
 
 ## 状態
 
-練習問題sourceまで完成。
+完成後独立再解答まで完了。最終QAでは技術内容・必須成果物・固定EXAM_ALIGNMENT・表示QA・SPEC範囲境界はPASSし、source進捗記録3箇所だけが旧状態のため `NEEDS_REVISION / IN_PROGRESS` だった。今回、その3箇所を実成果物へ同期した。
 
-第二種一次「理論」の公式過去問5問・12対象設問を固定し、制作前独立再解答 `12 / 12 PASS`、本文マッピング `12 / 12` を維持したまま、固定範囲と過去問要求だけで練習問題sourceを作成した。
+固定一次「理論」5問・12対象設問、制作前独立再解答 `12 / 12 PASS`、本文マッピング `12 / 12`、練習問題独立計算・正答一意性 `12 / 12 PASS`、完成後独立再解答 `12 / 12 PASS` を維持している。
 
 解説PDF:
 - `11_matrix_linear_systems_explanation.pdf`
@@ -19,7 +19,24 @@
 - 固定一次5問・12対象設問への接続 `12 / 12 PASS`
 - 独立計算・正答一意性QA `12 / 12 PASS`
 
-練習PDF・PowerPointは未制作。次工程は練習PDFを作成し、表示QA・文字抽出QAを行う。
+練習PDF:
+- `11_matrix_linear_systems_practice.pdf`
+- A4縦3ページ
+- 200 dpi表示QA `3 / 3 PASS`
+- 文字抽出QA `PASS`
+
+PowerPoint:
+- `11_matrix_linear_systems_images.pptx`
+- 16:9・5枚
+- 表示QA `5 / 5 PASS`
+- overflow 0件、PPTX整合性 `PASS`
+
+完成後独立再解答:
+- `11_matrix_linear_systems_exam_reanswer.md`
+- 固定一次5問・12対象設問 `12 / 12 PASS`
+- 教材外知識補完・固定範囲外追加・未確認実車値依存 0件
+
+最終QA再判定は未実施。次工程はsource進捗整合を含めて最終QAを再判定する。
 
 本テーマは `SPEC.md` の固定範囲どおり、以下を扱う。
 
@@ -659,4 +676,4 @@ I = YV
 
 ## 次工程
 
-固定一次5問・12対象設問、本文・解説PDF・練習問題sourceを変えず、練習PDFを作成し、表示QA・文字抽出QAを行う。
+source進捗記録同期後、Topic 11の最終QAを再判定する。技術本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・完成後独立再解答は変更しない。
