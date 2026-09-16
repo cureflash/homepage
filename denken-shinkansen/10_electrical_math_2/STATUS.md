@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 12 / 20
-- current_status: `topic_13_practice_pdf_complete`
+- current_status: `topic_13_powerpoint_complete`
 - last_completed_topic: `12 固有値の基礎`
 - active_topic: `13 フーリエ級数`
-- next_start: Topic 13の解説画像PowerPointを作成し、固定3問・5対象設問を可視化して表示QAを行う
+- next_start: Topic 13の完成教材だけで固定3問・5対象設問を独立再解答し、公式標準解答と照合する
 
 ## Topic 07 制作品質ゲート
 
@@ -163,15 +163,15 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF
-- [ ] 解説画像PowerPoint
-- [ ] PowerPoint表示QA
+- [x] 解説画像PowerPoint
+- [x] PowerPoint表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 13 `フーリエ級数` の練習PDFを完成した。
+Topic 13 `フーリエ級数` の解説画像PowerPointを完成した。
 
 固定品質ゲートは変更していない。
 
@@ -180,14 +180,16 @@ Topic 13 `フーリエ級数` の練習PDFを完成した。
 - H22一次「機械」問3 (3)
 - 合計 `3問・5対象設問`
 
-練習PDF:
-- A4縦4ページ
-- 全12問＋完全解説を反映
-- 200 dpi表示QA: `4 / 4 PASS`
-- 文字抽出QA: 問1〜問12、一次型の正答8件、二次記述型の解答4件を確認して `24 / 24 PASS`
-- 主要式・数値再検算: `12 / 12 PASS`
-- 固定5対象設問への接続: `5 / 5 PASS`
-- PDF SHA-256: `9bfdf66b461719067dda3ff1c98f9f0c928da4013a977b8a669fdd7572b3f4a0`
+PowerPoint:
+- 16:9・5枚
+- 固定3問・5対象設問への可視化接続: `5 / 5 PASS`
+- フーリエ係数と対称性、三相線間差での3n次高調波打消し、非正弦波実効値、位相合成、PWM基本波換算を可視化
+- 全5スライド再レンダリング: `5 / 5 PASS`
+- クリッピング・重なり・文字化け: 0件
+- overflow: 0件
+- `slides_test.py`: `PASS`
+- PPTX ZIP/XML整合性: `PASS`
+- PPTX SHA-256: `b898aa5766027fc80fa64a7db8135fa2149fb73fe6cc016df2aaf09ccbeeb226`
 
 範囲境界:
 - H20/H19の周辺問題による件数合わせ: 0件
@@ -199,8 +201,8 @@ Topic 13 `フーリエ級数` の練習PDFを完成した。
 
 ## 判定
 
-Topic 13は `topic_13_practice_pdf_complete / IN_PROGRESS`。
+Topic 13は `topic_13_powerpoint_complete / IN_PROGRESS`。
 
 完成数は `12 / 20` のまま。
 
-次は固定3問・5対象設問を変更せず、解説画像PowerPointを作成し、全スライド表示QAを行う。
+次は完成教材だけで固定3問・5対象設問を独立再解答し、公式標準解答と照合する。
