@@ -6,17 +6,24 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `9 / 16`。Topic 01〜09は完成済み。
 
 ## 今回進捗
-Topic 10 `新幹線が突然大電力を使ったら？` の練習問題sourceを完成した。
+Topic 10 `新幹線が突然大電力を使ったら？` の練習PDFを完成した。
 
 成果物:
 - `topics/10_load_variation/10_load_variation_practice_source.md`
+- `topics/10_load_variation/10_load_variation_practice.pdf`
+- `topics/10_load_variation/10_load_variation_practice_qa.md`
+- A4縦4ページ
 - 全12問・全問五肢択一
 - 基礎3問／本試験標準7問／複合2問
 - 固定5問・8小問の要求事項へ `8 / 8` 接続
 
 QA:
-- 数値・論理独立再計算: `12 / 12 PASS`
+- 200 dpi全4ページ表示QA: `4 / 4 PASS`
+- はみ出し・重なり・黒四角・欠損文字: `0件`
+- 文字抽出QA: PASS
+- 数値・論理再検算: `12 / 12 PASS`
 - 正答一意性: `12 / 12 PASS`
+- 固定5問・8小問への接続: `8 / 8`
 - SPEC固定範囲外追加: `0件`
 - Topic 11以降の先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
@@ -48,13 +55,15 @@ SPECから追加しない。
 Topic 09 `変電所からパンタグラフまでどう送る？` は `PASS / completed`。固定5問・7小問の完成後ブラインド独立再解答 `7 / 7 PASS`、最終QA PASS。
 
 ## 現在状態
-- `current_status`: `topic_10_practice_source_complete`
+- `current_status`: `topic_10_practice_pdf_complete`
 - 完成数: `9 / 16`
 - last completed: Topic 09 `変電所からパンタグラフまでどう送る？`
 - active: Topic 10 `新幹線が突然大電力を使ったら？`
 - source: `topics/10_load_variation/10_load_variation.md`
 - 解説PDF: `topics/10_load_variation/10_load_variation_explanation.pdf`
 - 練習問題source: `topics/10_load_variation/10_load_variation_practice_source.md`
+- 練習PDF: `topics/10_load_variation/10_load_variation_practice.pdf`
+- 練習PDF QA: `topics/10_load_variation/10_load_variation_practice_qa.md`
 
 ## 次の正確な開始点
-Topic 10練習PDFを作成する。練習問題source全12問＋完全解説をA4縦PDFへ反映し、全ページ表示QA・文字抽出QA・数値／論理再検算を行う。
+Topic 10解説画像PowerPointを作成する。固定5問・8小問の要求事項を可視化し、全スライド表示QA・overflow・PPTX ZIP整合性を確認する。
