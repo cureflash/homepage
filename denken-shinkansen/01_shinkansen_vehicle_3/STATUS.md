@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 33 / 38
-- current_status: `topic_34_explanation_pdf_complete`
+- current_status: `topic_34_blind_reanswer_ready`
 - last_completed_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
 - active_topic: `34 COMTRAC② 進路をどう自動制御する？`
-- next_start: Topic 34の練習source / 練習PDFを作成する
+- next_start: Topic 34固定5問を完成教材だけでblind独立再解答する
 
 ## 新品質ゲート進捗
 - [x] 01〜33 — PASS
@@ -61,6 +61,43 @@ source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
 - Topic 35範囲追加: `0件`
 - 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
+
+## 34 練習source / PDF
+- source: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.md`
+- PDF: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.pdf`
+- 全15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説
+- 正答位置: A/B/C/D/E各3問
+- 固定5問・6答案要素: `6 / 6` 練習マッピング
+- 独立論理再計算: `15 / 15 PASS`
+- 複数正答: `0件`
+- A4縦5ページ、180 dpi全ページ表示QA: `5 / 5 PASS`
+- 文字抽出QA: PASS
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+
+## 34 PowerPoint QA
+- `topics/34_comtrac_route_control/34_comtrac_route_control_images.pptx`
+- 画面比率: `16:9`
+- スライド数: `4`
+- 固定5問・6答案要素: `6 / 6` 可視化
+- 表示QA: `4 / 4 PASS`
+- overflow検査: PASS
+- PPTX ZIP整合性: PASS
+- 外部引用画像: `0件`
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+
+## 34 完成後blind独立再解答 前ゲート
+`BLIND_REANSWER_READY`。
+- 必須先読み対象から、Topic 34固定問題と同一再出題の個別正答番号・完成済み導出結果をblind保護済み
+- Topic 32のPASS判定・固定EXAM_ALIGNMENT・教材成果物は変更なし
+- Topic 34の固定5問・6答案要素、教材本文、練習問題、PDF、PowerPointは変更なし
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+- 記録: `topics/34_comtrac_route_control/34_comtrac_route_control_blind_gate.md`
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
@@ -174,7 +211,7 @@ source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
 2. R7下 機械 問18(a) — 一次遅れ閉ループ伝達関数 — `2` — PASS
 3. R7下 機械 問18(b) — 周波数応答・ボード線図 — `2` — PASS
 4. R6下 機械 問13 — P・I・Dと定常・過渡特性 — `2` — PASS
-5. R6下 機械 問14 — AND・OR・NOT、論理式、タイムチャート — `3` — PASS
+5. R6下 機械 問14 — AND・OR・NOT、論理式、タイムチャート — PASS（個別正答はTopic 34 blind保護対象）
 6. R6上 機械 問13 — シーケンス・フィードバック・インタロック — `2` — PASS
 
 制作前独立解答: `6 / 6 PASS`。
@@ -194,7 +231,7 @@ source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 - 固定過去問型: `C/R=(1+jωT1)/(1+jωT2)` を内部信号から導出
 - 一次遅れ: `W(jω)=K/(1+jωT)`、`ωc=1/T`、低周波利得 `20log10K`、折点後 `-20 dB/dec`
 - P・I・D: I=定常特性改善、D=過渡特性改善、Pは両特性へ影響
-- 論理回路: AND・OR・NOT、`X=A·C+B·NOT(C)`、タイムチャート追跡
+- 論理回路: AND・OR・NOT、論理式、タイムチャート追跡（個別式はTopic 34 blind保護対象）
 - シーケンス制御・インタロック・フェイルセーフの一般原則
 - JRTT公開範囲のATC方式世代差のみ収録
 - 固定範囲外論点追加: `0件`
@@ -256,7 +293,7 @@ source: `topics/32_atc_speed_brake_control/32_atc_speed_brake_control.md`
 - R7下 機械 問18(a) — `T=0.2 s, K=10` より `C/R=10/(1+j0.2ω)` → 選択肢2 — PASS
 - R7下 機械 問18(b) — 低周波利得 `20 dB`、折点 `5 rad/s`、以後 `-20 dB/dec` → 選択肢2 — PASS
 - R6下 機械 問13 — I=定常特性改善、D=過渡特性改善、P=両特性へ影響 → 選択肢2 — PASS
-- R6下 機械 問14 — `X=A·C+B·NOT(C)` を場合分けしてタイムチャート追跡 → 選択肢3 — PASS
+- R6下 機械 問14 — PASS（個別正答・完成済み導出はTopic 34 blind保護対象）
 - R6上 機械 問13 — シーケンス/フィードバック、有接点、インタロック、タイムチャートを対応 → 選択肢2 — PASS
 - 合計: `6 / 6 PASS`
 - 公式解答との不一致: `0件`
@@ -460,4 +497,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は固定5過去問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数33/38。
 
 ## 次テーマ工程
-Topic 34 `COMTRAC② 進路をどう自動制御する？` は解説PDFまで完了。固定5問・6答案要素を `6 / 6` 反映し、表示QA・文字抽出QAともPASS。次は練習source / 練習PDFを作成する。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` は必須成果物と表示QAまで完了。必須先読み対象の重複過去問に関する個別正答・導出をblind保護し、`BLIND_REANSWER_READY`。次は固定5問・6答案要素を完成教材だけでblind独立再解答する。
