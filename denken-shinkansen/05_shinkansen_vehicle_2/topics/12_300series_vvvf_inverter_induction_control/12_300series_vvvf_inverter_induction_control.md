@@ -4,7 +4,7 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説本文＋3段階例題を完了。固定5過去問・13答案要素を本文へ `13 / 13` マッピング済み。解説PDF・練習source/PDF・解説画像PowerPointは未着手。
+制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習source/PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答まで完了。初回最終QAでは技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答・SPEC境界はPASSし、進捗記録整合のみ修正対象となったため、本sourceの状態欄と次工程を実成果物へ同期した。
 
 本テーマは `SPEC.md` 第12章どおり、次だけを扱う。
 
@@ -480,4 +480,4 @@ V/f一定より
 
 ## 次工程
 
-このsourceを正本としてTopic 12の解説PDFを作成し、A4縦・表示QA・文字抽出QAを行う。固定EXAM_ALIGNMENTは変更しない。
+Topic 12の最終QAを再判定する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX成果物は変更しない。
