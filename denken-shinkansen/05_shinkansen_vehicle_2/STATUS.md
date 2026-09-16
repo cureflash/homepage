@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 9 / 39
-- current_status: `topic_10_independent_reanswer_passed`
+- current_status: `topic_10_final_qa_needs_progress_sync`
 - last_completed_topic: `09 直流機方式の損失・熱設計`
 - active_topic: `10 300系① 誘導電動機等価回路`
-- next_start: Topic 10の最終QAを実施する
+- next_start: Topic 10主source冒頭の「最終QAは未実施」を今回の最終QA結果へ同期する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -405,10 +405,10 @@
 - 一次正答一意性: `8 / 8 PASS`
 - 二次記述の途中式・前提・単位・検算: `4 / 4 PASS`
 - 固定一次4問＋二次1問・14対象項目: 維持
-- SHA-256: `1a3f6cbb92a6fb3333aa647236b271e50aeda30b1fb73b9132e74565e788047f`
-- Git blob SHA-1: `549b9ba99b73d4cafe9a57bb2fdaadb2dbce7535`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
+- SHA-256: `1a3f6cbb92a6fb3333aa647236b271e50aeda30b1fb73b9132e74565e788047f`
+- Git blob SHA-1: `549b9ba99b73d4cafe9a57bb2fdaadb2dbce7535`
 
 ## Topic 09 解説画像PowerPoint
 - `09_dc_machine_loss_thermal_design_images.pptx`: `completed`
@@ -566,4 +566,19 @@
 - 未確認300系実車値追加: `0件`
 - 独立再解答判定: `PASS`
 
-次工程はTopic 10の最終QAを実施する。
+## Topic 10 最終QA
+- `10_300series_induction_motor_equivalent_circuit_final_qa.md`: `NEEDS_REVISION / IN_PROGRESS`
+- 固定EXAM_ALIGNMENT: 一次3問＋二次2問、計5問・22答案要素を維持
+- 完成後独立再解答: 一次 `11 / 11 PASS`、二次 `11 / 11 PASS`、合計 `22 / 22 PASS`
+- 必須成果物: `PASS`
+- 解説PDF・練習PDF・PowerPoint QA: `PASS`
+- 練習問題の計算・論理・正答一意性: `12 / 12 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外追加: `0件`
+- Topic 11〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+- 唯一のFAIL: 主source冒頭の「最終QAは未実施」が本QA実施後の実態と不一致
+- 進捗記録整合: `FAIL`
+- 最終判定: `NEEDS_REVISION / IN_PROGRESS`
+
+次工程はTopic 10主source冒頭の「最終QAは未実施」を今回の最終QA結果へ同期する。技術内容・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTXには触れない。同期後に最終QAを再判定する。
