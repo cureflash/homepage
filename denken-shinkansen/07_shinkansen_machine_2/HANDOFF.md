@@ -9,7 +9,7 @@ Topic 01〜11は最終QAまで `PASS / completed`。
 
 active topic: `12 N700Sの6極モーターを設計側から見る`
 
-current status: `topic_12_blind_reanswer_ready`
+current status: `topic_12_independent_reanswer_complete`
 
 ## Topic 10 固定範囲
 - 力行
@@ -345,7 +345,8 @@ source完成内容:
 - 主要計算再検算: PASS
 - 固定範囲外追加: `0件`
 - 未確認N700S実車値追加: `0件`
-- 独立再解答前ゲート: `BLIND_REANSWER_READY`
+- 独立再解答前ゲート: `CLOSED`
+- 完成後独立再解答: `16 / 16 PASS`
 
 ## Topic 12 解説PDF
 - `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_explanation.pdf`: `completed`
@@ -412,7 +413,21 @@ source完成内容:
 - 固定5問・16答案要素、教材本文、PDF、練習問題、PowerPoint、固定EXAM_ALIGNMENT: 変更なし
 - 固定範囲外論点追加: `0件`
 - 未確認N700S実車値追加: `0件`
-- 判定: `BLIND_REANSWER_READY`
+- 判定: `CLOSED / INDEPENDENT_REANSWER_COMPLETE`
+
+## Topic 12 完成後独立再解答
+- 記録: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_independent_reanswer.md`
+- 公式解答・標準解答を先に見ず、完成教材だけで固定5問を再解答した。
+- R07 一次 機械 問2: `2 / 2 PASS`
+- H25 一次 機械 問3: `2 / 2 PASS`
+- R07 二次 機械・制御 問2: `4 / 4 PASS`
+- R02 二次 機械・制御 問1: `4 / 4 PASS`
+- R01 二次 機械・制御 問1: `4 / 4 PASS`
+- 合計: `16 / 16 PASS`
+- 教材外知識補完: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認N700S実車値追加: `0件`
+- 教材本文・練習問題・PDF/PPTXの内容変更: `0件`
 
 ## 次に行うこと
-公式解答・保存済み正答を先に見ない状態で、完成教材だけを使用してTopic 12の固定5問・16答案要素を独立再解答する。解答完了後に公式解答・標準解答と照合し、教材外知識補完の有無を判定する。
+Topic 12の最終QAを実施する。必須成果物実在、固定一次2問＋二次3問・16答案要素、独立再解答 `16 / 16 PASS`、PDF/PPTX QA、固定範囲境界、進捗記録整合を再判定する。
