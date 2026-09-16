@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `11 / 16`
-- current_status: `topic_12_exam_alignment_complete`
+- current_status: `topic_12_explanation_source_complete`
 - last_completed_topic: `11 空転した車輪をどう立て直す？`
 - active_topic: `12 新幹線のコンピュータは何をしている？`
-- next_start: Topic 12の解説本文＋3段階例題を作成する
+- next_start: Topic 12の解説PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -22,7 +22,7 @@
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
-- [ ] 12 新幹線のコンピュータは何をしている？ — 制作前EXAM_ALIGNMENT完了 / IN_PROGRESS
+- [ ] 12 新幹線のコンピュータは何をしている？ — 解説本文＋3段階例題完成 / IN_PROGRESS
 - [ ] 13〜16 — 未完了
 
 ## Topic 12 制作品質状態
@@ -31,6 +31,9 @@
 - 固定EXAM_ALIGNMENT: R8上 機械 問14 / R8上 機械 問18(a)(b) / R7上 機械 問14 / R5下 機械 問14 / R1 機械 問14 / H28 機械 問18(a)(b)
 - 品質ゲート対象: `6問・8答案要素`
 - 制作前独立検証・公式解答照合: `8 / 8 PASS`
+- 固定過去問要求事項の本文マッピング: `8 / 8 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 解説source QA: `PASS`
 - 教材外・固定範囲外知識による補完: `0件`
 - 件数合わせの仕様外追加: `0件`
 - 非選定: R7下 機械 問14（フローチャート） / R6上 機械 問18（符号付き8bit・補数表現を含む） / R4上 機械 問14（インタフェースを含む）
@@ -38,7 +41,7 @@
 - カルノー図: 参考教材では確認したが系列SPEC固定範囲外のため追加しない
 - 車種固有通信規格・伝送速度・CPU構成・通信周期等の推測: `0件`
 - source: `topics/12_information_processing/12_information_processing.md`
-- 解説本文: 未作成
+- 解説本文: 完成
 - 解説PDF: 未作成
 - 練習問題source/PDF: 未作成
 - 解説画像PowerPoint: 未作成
@@ -104,9 +107,9 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 12「新幹線のコンピュータは何をしている？」の制作前EXAM_ALIGNMENTを完了した。系列SPEC固定範囲だけで完答できる公式過去問6問・8答案要素を固定し、各答案要素を独立再導出して公式解答と `8 / 8 PASS` を確認した。
+Topic 12「新幹線のコンピュータは何をしている？」の解説本文＋3段階例題を完成した。固定6問・8答案要素を本文へ `8 / 8` マッピングし、基数変換、2進数和差・逆算、基本ゲート・真理値表、論理式簡単化、組合せ回路の区間別出力追跡、A/D・D/A、センサ、情報伝送を系列SPEC固定範囲だけで説明した。
 
-R7下のフローチャート、R6上の符号付き8bit・補数表現、R4上のインタフェースは固定範囲外のため品質ゲート対象に入れず、R6下の論理回路問題はR7上と同一再出題のため二重加算していない。仕様外追加・車種固有情報の推測は0件。
+例題は基礎・本試験標準・複合の `3 / 3 PASS`。フローチャート、記憶装置、符号付き2進数・補数表現、インタフェース規格、カルノー図、車種固有通信仕様等の追加・推測は0件。
 
 ## 次工程
-Topic 12の固定EXAM_ALIGNMENT 6問・8答案要素から逆算し、系列SPEC固定範囲だけで解説本文＋3段階例題を作成する。
+Topic 12の解説本文＋3段階例題をA4縦の解説PDFへ反映し、表示QA・文字抽出QA・固定EXAM_ALIGNMENT `8 / 8` の反映を確認する。
