@@ -4,129 +4,108 @@
 
 ## 現在地
 
-Topic 01〜10は最終QAまでPASSし、`completed`。
+Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は制作前EXAM_ALIGNMENTまで完了した。
 
 - 完成数: `10 / 14`
 - last completed: `10 新幹線が使う電力は「W」だけではない`
 - active topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- current status: `topic_10_final_qa_passed / completed`
-- next start: Topic 11の制作前EXAM_ALIGNMENTを実施する
+- current status: `topic_11_exam_alignment_complete / IN_PROGRESS`
+- next start: Topic 11の解説本文＋3段階例題を作成する
 
 ## 今回進捗
 
-Topic 10の最終QAを再実施し、`PASS / completed` とした。
+Topic 11の制作前EXAM_ALIGNMENTを完成した。
 
-- 固定対象: 公式理論過去問5問・6答案要素
-- 完成後独立再解答: `5 / 5問・6 / 6答案要素 PASS`
-- 教材外知識補完: `0問`
-- Topic 11以降の三相・半導体・高調波依存: `0問`
-- 未確認新幹線実車力率・無効電力・補償方式依存: `0問`
-- 固定過去問要求の本文マッピング: `6 / 6`
-- 練習問題: `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
-- 解説PDF: 200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- 練習PDF: 200 dpi表示 `3 / 3 PASS`、文字抽出PASS
-- PowerPoint: 表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
-- SPEC固定範囲外追加: `0件`
-- 前回FAILだった主source・練習sourceの進捗記録不整合: 解消済み
-- 最終QA判定に合わせ、主source `status` と練習source `stage` を `COMPLETED` へ同期
-- 技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX内容: 変更なし
+- 固定対象: 公式理論過去問5問・10答案要素
+- 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
+- 固定範囲: 平衡三相交流、相順、Y・Δ、線間/相電圧・電流、三相電力
+- 直近問題の除外: 令和7年度の不平衡三相、令和6年度の高調波はSPEC固定範囲外
+- Topic 14の電力計測依存: 0問
+- 具体的な新幹線き電変圧器結線・未確認実設備値依存: 0問
+- 学習サイト: e-sysnet、電験王、電験三種まとめましたを確認
+- source: `topics/11_three_phase_ac/11_three_phase_ac.md`
+- 完成後blind独立再解答対策: 正答番号・個別数値解答過程はsource/HANDOFFへ保存していない
 
-## Topic 10 SPEC固定範囲
+## Topic 11 SPEC固定範囲
 
 扱う内容:
-- 有効電力
-- 無効電力
-- 皮相電力
-- 力率
-- 位相差
-- 複素電力の基本
-- 力率改善
-- コンデンサによる力率改善の基本
+- 三相交流
+- 相順
+- 平衡三相
+- Y結線
+- Δ結線
+- 相電圧
+- 線間電圧
+- 相電流
+- 線電流
+- 三相電力
 
 固定公式:
 
 ```text
-P = VI cosφ
-Q = VI sinφ
-S = VI
-S² = P² + Q²
-cosφ = P / S
+Y結線：VL = √3 Vp
+Δ結線：IL = √3 Ip
+P = √3 VL IL cosφ
 ```
 
-## Topic 10 固定過去問
+## Topic 11 固定過去問
 
-1. 令和7年度上期 理論 問9
-   - 誘導性負荷の力率、電流の同相・直交成分、並列抵抗追加後のベクトル合成
-2. 令和5年度上期 理論 問9
-   - `R-XL`直列回路のインピーダンス比と力率
-3. 平成26年度 理論 問15(a)(b)
-   - `S=VI`、`S²=P²+Q²`、有効・無効・皮相電力、無効電力からリアクタンス
-4. 平成24年度 理論 問8
-   - 電圧・電流・無効電力から有効電力と抵抗値へ接続
-5. 平成22年度 理論 問8
-   - 力率改善前後の位相角、容量性リアクタンスによる補償
+1. 令和5年度下期 理論 問15(a)(b)
+   - Y結線の線間/相電圧・電流、同一負荷のΔ結線、三相消費電力
+2. 令和4年度下期 理論 問15(a)(b)
+   - Y結線R-L負荷とΔ結線抵抗負荷、枝電流、三相消費電力
+3. 令和元年度 理論 問16(a)(b)
+   - 平衡Y結線RLC負荷の1相等価回路、線電流、三相有効電力
+4. 平成29年度 理論 問16(a)(b)
+   - Y結線R-L負荷の三相有効電力・力率、Δ結線コンデンサ
+5. 平成26年度 理論 問16(a)(b)
+   - Y結線負荷の有効・無効電力、Δ結線コンデンサの三相無効電力
 
-制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
-完成後独立再解答: `5 / 5問・6 / 6答案要素 PASS`
-最終QA: `PASS / completed`
+制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
 
 ## 教材で必須となる説明
 
-- `P[W]`、`Q[var]`、`S[VA]`の物理的意味と単位
-- 位相差`φ`と力率`cosφ`、進み・遅れ
-- `P=VIcosφ`、`Q=VIsinφ`、`S=VI`
-- `S²=P²+Q²`と電力三角形
-- `cosφ=P/S`と逆算
-- 複素電力の基本
-- 同じ有効電力でも力率が低いほど皮相電力・電流が大きくなること
-- 電流の同相成分・直交成分とフェーザ合成
-- コンデンサによる力率改善の基本原理
-- `R-XL`回路の`cosφ=R/|Z|`と既習インピーダンスの接続
-- 新幹線側は交流設備容量と力率の一般原理までとし、未確認実車値を真値化しない
+- 三相交流、平衡・対称、120°位相差
+- 相順の基本
+- 相電圧/線間電圧、相電流/線電流の区別
+- Y結線: `VL=√3Vp`, `IL=Ip`
+- Δ結線: `VL=Vp`, `IL=√3Ip`
+- Yで線間電圧から相電圧へ`1/√3`して1相回路を解く手順
+- Δで各枝に線間電圧が加わることから枝電流を求める手順
+- 平衡三相負荷では1相分の電力を3倍すること
+- `P=3VpIp cosφ`から`P=√3VLILcosφ`へ接続すること
+- 三相電力公式の逆算
+- Y負荷とΔ負荷が混在する問題で、各枝にかかる電圧を先に判定する解法
+- Topic 08〜10のRLC・力率・無効電力は既習事項としてのみ使用する
+- 新幹線側は三相系統→単相25 kV→車内三相という概念接続までとし、具体的なき電変圧器結線を推測しない
 
 ## 境界
 
-- Topic 11の三相交流、Y・Δ、線間/相電圧、三相電力公式をTopic 10へ追加しない
-- Topic 12以降の半導体・整流・インバータ・PWMをTopic 10へ追加しない
-- Topic 13側の高調波・ひずみ波電力をTopic 10へ追加しない
-- 電力科目・法規の三相配電設備・調相設備詳細をTopic 10の品質ゲートへ混在させない
-- 未確認の新幹線実車力率、無効電力、補償装置仕様を推測しない
+- 不平衡三相回路を品質ゲートへ追加しない
+- 新幹線変電所の具体的な三相→単相変換方式・き電変圧器結線は電力編へ送る
+- Topic 12以降の半導体・整流・インバータ・PWM・高調波を追加しない
+- Topic 14の電力計・測定回路を品質ゲートへ混在させない
+- Y-Δインピーダンス変換等を件数合わせのため必須範囲へ追加しない
+- 未確認の実設備値・変電設備仕様を真値化しない
 
-## Topic 10 成果物
+## Topic 11 成果物
 
-- source: `topics/10_power_factor/10_power_factor.md`
+- source: `topics/11_three_phase_ac/11_three_phase_ac.md`
   - EXAM_ALIGNMENT: 完成
-  - 制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
-  - 解説本文＋3段階例題: 完成
-  - 固定過去問要求マッピング: `6 / 6`
-  - 進捗記録: `COMPLETED`
-- 解説PDF: 完成
-  - `topics/10_power_factor/10_power_factor_explanation.pdf`
-  - QA: `topics/10_power_factor/10_power_factor_explanation_qa.md`
-  - A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- 練習source・練習PDF: 完成
-  - source: `topics/10_power_factor/10_power_factor_practice.md`
-  - PDF: `topics/10_power_factor/10_power_factor_practice.pdf`
-  - QA: `topics/10_power_factor/10_power_factor_practice_qa.md`
-  - 全15問・全問五肢択一、独立再計算 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
-  - A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS
-  - 固定5過去問・6答案要素への接続: `6 / 6`
-  - 進捗記録: `COMPLETED`
-- 解説画像PowerPoint: 完成
-  - `topics/10_power_factor/10_power_factor_images.pptx`
-  - QA: `topics/10_power_factor/10_power_factor_images_qa.md`
-  - 16:9・4枚、固定5過去問・6答案要素 `6 / 6`
-  - 200 dpi表示 `4 / 4 PASS`、overflow `0件`、ZIP/XML整合性PASS
-- 完成後独立再解答: 完成
-  - `topics/10_power_factor/10_power_factor_exam_recheck.md`
-  - `5 / 5問・6 / 6答案要素 PASS`
-  - 教材外補完・後続Topic依存・未確認実車値依存: 0件
-- 最終QA: `PASS / completed`
-  - `topics/10_power_factor/10_power_factor_final_qa.md`
+  - 固定過去問: 5問・10答案要素
+  - 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
+  - 公式出典・参考教材・教材必須説明・境界: 記録済み
+  - status: `EXAM_ALIGNMENT_COMPLETE`
+- 解説本文＋3段階例題: 未作成
+- 解説PDF: 未作成
+- 練習source・練習PDF: 未作成
+- 解説画像PowerPoint: 未作成
+- 完成後独立再解答: 未実施
+- 最終QA: 未実施
 
 ## 次に行うこと
 
-Topic 11「電力会社の三相交流をどう新幹線へ渡す？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`の固定範囲に従い、公式過去問から品質ゲート対象を確定する。
+Topic 11の解説本文＋3段階例題を作成する。固定5問・10答案要素を本文へ全件マッピングし、系列SPEC外の不平衡三相・高調波・電力計測・具体的き電変圧器結線を追加しない。
 
 ## 固定ルール
 
