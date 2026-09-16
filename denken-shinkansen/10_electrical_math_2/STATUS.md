@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 12 / 20
-- current_status: `topic_12_completed`
+- current_status: `topic_13_exam_alignment_complete`
 - last_completed_topic: `12 固有値の基礎`
 - active_topic: `13 フーリエ級数`
-- next_start: Topic 13の制作前EXAM_ALIGNMENTを実施し、第二種公式過去問から本Topic固定範囲へ直接対応する問題を選定・独立解答する
+- next_start: Topic 13の固定3問・5対象設問を維持して解説本文＋3段階例題を作成する
 
 ## Topic 07 制作品質ゲート
 
@@ -147,31 +147,57 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 13 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 第二種公式過去問を直近年度から遡って調査
+- [x] H28二次「機械・制御」問3 (3)〜(4)を固定
+- [x] H24一次「機械」問3 (4)〜(5)を固定
+- [x] H22一次「機械」問3 (3)を固定
+- [x] 固定3問・5対象設問をsource Markdownへ記録
+- [x] 制作前独立再解答・公式標準解答照合 `5 / 5 PASS`
+- [x] H20/H19周辺問題・第一種過去問による件数合わせ0件を確認
+- [x] Topic 14フーリエ変換・FFT、Topic 15対数・dB・周波数応答の先取り0件を確認
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] PowerPoint表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 12 `固有値の基礎` の最終QAを再判定し、`PASS / completed` とした。
+Topic 13 `フーリエ級数` の制作前EXAM_ALIGNMENTを完成した。
 
-再確認結果:
-- 必須成果物実在: PASS
-- 固定H28二次「機械・制御」問4 (1): PASS
-- 制作前独立再解答・公式標準解答照合: `1 / 1 PASS`
-- 完成後独立再解答: `1 / 1 PASS`、`f=(12,6)`
-- 練習問題独立計算・正答一意性: `12 / 12 PASS`
-- 解説PDF: A4縦5ページ、200 dpi表示 `5 / 5 PASS`、文字抽出PASS
-- 練習PDF: A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS
-- PowerPoint: 16:9・5枚、表示 `5 / 5 PASS`、overflow 0件、ZIP/XML整合性PASS
-- source進捗記録と実成果物の整合: PASS
-- 固定範囲外追加: 0件
+固定品質ゲート:
+- H28二次「機械・制御」問3 (3)〜(4)
+- H24一次「機械」問3 (4)〜(5)
+- H22一次「機械」問3 (3)
+- 合計 `3問・5対象設問`
+
+制作前独立再解答・公式標準解答照合:
+- H28 問3 (3): `v_RO` に3n次高調波、`v_RS` では打消し → PASS
+- H28 問3 (4): `E0=sqrt(2/3)Ed` → PASS
+- H24 問3 (4): `φ=π/6` → `ヲ` → PASS
+- H24 問3 (5): `2倍未満` → `ル` → PASS
+- H22 問3 (3): `sqrt(3)Ed k/(2sqrt(2))` → `ト` → PASS
+- 合計 `5 / 5 PASS`
+
+範囲境界:
+- H20/H19の周辺問題による件数合わせ: 0件
 - 第一種過去問による件数水増し: 0件
-- Topic 15周波数応答・ボード線図先取り: 0件
+- Topic 14フーリエ変換・FFT先取り: 0件
+- Topic 15対数・dB・周波数応答・ボード線図先取り: 0件
 - 未確認実車値依存: 0件
-
-技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTXは変更していない。
 
 ## 判定
 
-Topic 12は `PASS / completed`。
+Topic 13は `topic_13_exam_alignment_complete / IN_PROGRESS`。
 
-完成数は `12 / 20`。
+完成数は `12 / 20` のまま。
 
-次はTopic 13 `フーリエ級数` の制作前EXAM_ALIGNMENTを実施する。
+次は固定3問・5対象設問を変更せず、解説本文＋3段階例題を作成する。
