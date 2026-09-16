@@ -6,16 +6,16 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は33/38。01〜33がPASS。active topicは34 `COMTRAC② 進路をどう自動制御する？`。
 
 ## 今回進捗
-Topic 34の完成後blind独立再解答前ゲートを `BLIND_REANSWER_BLOCKED` から `BLIND_REANSWER_READY` へ進めた。
+Topic 34の完成後blind独立再解答を試行したが、`RETRY_REQUIRED / NOT_COUNTED` とした。
 
-- 前回BLOCKED原因だった `STATUS.md` のTopic 32 `R6下 機械 問14` について、個別正答番号・完成済み導出だけをblind保護
-- Topic 32の固定EXAM_ALIGNMENT、PASS判定、教材成果物は変更なし
+- 問題本文・図表を補完する途中で、第三者解説ページおよび公式解答表の正答表示へ到達した要素が発生
+- `EXAM_ALIGNMENT_SPEC.md` の「保存済み正答・公式解答を先に見ずに完成教材だけで独立再解答する」条件を全6答案要素で厳密に証明できないため、本試行は合格件数へ算入しない
+- 個別正答番号・完成導出はSTATUS/HANDOFF/試行記録へ保存していない
 - Topic 34固定5問・6答案要素、教材本文、練習問題、PDF、PowerPointは変更なし
-- 必須先読み対象を再監査し、Topic 34固定問題の保存済み個別正答・完成済み導出が残っていないことを確認
-- ゲート記録: `topics/34_comtrac_route_control/34_comtrac_route_control_blind_gate.md`
 - Topic 35範囲追加: `0件`
 - 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
+- 試行記録: `topics/34_comtrac_route_control/34_comtrac_route_control_blind_reanswer_attempt.md`
 
 ## Topic 34 固定EXAM_ALIGNMENT
 - R7上 機械 問14 — AND・OR・NOT、論理回路、出力波形
@@ -52,11 +52,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_34_blind_reanswer_ready`
+- `current_status`: `topic_34_blind_reanswer_retry_required`
 - 完成数: 33/38
 - 01〜33: PASS
 - last completed: 33 `COMTRAC① 東海道新幹線全体をどう監視する？`
 - active topic: 34 `COMTRAC② 進路をどう自動制御する？`
 
 ## 次の正確な開始点
-Topic 34固定5問・6答案要素を、保存済み正答を参照せず完成教材だけでblind独立再解答する。独立再解答が完了するまで最終QAへ進まない。
+新しいblind実行で、公式解答・第三者解説の正答表示を開く前に、公式問題本文・図表と完成教材だけを使ってTopic 34固定5問・6答案要素を全件再解答する。全件導出確定後にのみ公式解答と照合する。最終QAへは進まない。
