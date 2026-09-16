@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 12 / 20
-- current_status: `topic_13_explanation_pdf_complete`
+- current_status: `topic_13_practice_source_complete`
 - last_completed_topic: `12 固有値の基礎`
 - active_topic: `13 フーリエ級数`
-- next_start: Topic 13の練習問題sourceを作成し、固定3問・5対象設問へ接続する問題と完全解説を固定範囲内で作る
+- next_start: Topic 13の練習PDFを作成し、全12問＋完全解説を反映して表示QA・文字抽出QA・主要式再検算を行う
 
 ## Topic 07 制作品質ゲート
 
@@ -161,7 +161,7 @@
 - [x] Topic 14フーリエ変換・FFT、Topic 15対数・dB・周波数応答の先取り0件を確認
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
@@ -171,7 +171,7 @@
 
 ## 今回進めた内容
 
-Topic 13 `フーリエ級数` の解説PDFを完成した。
+Topic 13 `フーリエ級数` の練習問題・完全解説sourceを完成した。
 
 固定品質ゲートは変更していない。
 
@@ -180,13 +180,14 @@ Topic 13 `フーリエ級数` の解説PDFを完成した。
 - H22一次「機械」問3 (3)
 - 合計 `3問・5対象設問`
 
-QA:
-- 解説PDF: A4縦5ページ
-- 200 dpi全ページ表示QA: `5 / 5 PASS`
-- クリッピング・重なり・文字化け: 0件
-- 文字抽出QA: `PASS`
-- 固定3問・5対象設問への反映: `5 / 5 PASS`
-- 3段階例題: `3 / 3`
+練習source:
+- 全12問
+- 一次型8問／二次記述型4問
+- 難易度: 基礎3／標準6／複合3
+- 固定5対象設問への接続: `5 / 5 PASS`
+- 独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 一次型正答番号: `1, 3, 4, 2, 5, 3, 2, 4`
 
 範囲境界:
 - H20/H19の周辺問題による件数合わせ: 0件
@@ -198,8 +199,8 @@ QA:
 
 ## 判定
 
-Topic 13は `topic_13_explanation_pdf_complete / IN_PROGRESS`。
+Topic 13は `topic_13_practice_source_complete / IN_PROGRESS`。
 
 完成数は `12 / 20` のまま。
 
-次は固定3問・5対象設問を変更せず、練習問題sourceを作成し、固定範囲内で問題・完全解説を作る。
+次は練習sourceをA4縦PDFへ変換し、全12問＋完全解説の反映、全ページ表示QA、文字抽出QA、主要式・数値再検算を行う。
