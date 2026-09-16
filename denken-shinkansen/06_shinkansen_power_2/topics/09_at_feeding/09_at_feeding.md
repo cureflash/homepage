@@ -4,15 +4,15 @@
 
 ## 状態
 
-`topic_09_independent_reanswer_complete`
+`completed`
 
-電圧降下率定義の根本修正後、解説PDF再生成・QA、練習PDF・QA、PowerPoint QA、修正後blind独立再解答まで完了した。正式一次2問＋二次1問は `3 / 3問・14 / 14答案要素 PASS`。SPEC固定10項目、固定範囲、問題・正答は変更していない。
+制作前EXAM_ALIGNMENT、制作前独立検証、解説本文＋3段階例題、解説PDF、練習問題・完全解説、練習PDF、解説画像PowerPoint、完成後blind独立再解答、最終QA再判定まで完了した。正式一次2問＋二次1問は `3 / 3問・14 / 14答案要素 PASS`。技術内容・固定10項目・固定範囲・問題・正答は変更せず、進捗記録整合を含め `PASS / completed` とした。
 
 電圧降下率は問題文・定義から分母を確認し、送電端基準と受電端基準を使い分ける。H26二次問4(3)は受電端基準の定義を用いるため、`V_r=(1-d)V_s` を一律適用しない。
 
 完成後blind再解答を守るため、公式過去問の個別正答記号・最終数値解答は本sourceへ保存しない。
 
-最終QA初回判定では、技術内容・必須成果物・PDF/PPTX QA・練習QA・完成後blind独立再解答・SPEC境界はPASSで、旧進捗記録のみがexact blockerとなった。本sourceではその進捗記録だけを実成果物へ同期し、技術本文は変更していない。次工程は最終QAの再判定とする。
+最終QA再判定は全件PASS。次工程はTopic 10「なぜ変電所を何十kmも離せない？」の制作前EXAM_ALIGNMENTである。
 
 ## SPEC固定範囲
 
@@ -685,4 +685,4 @@ AT中点関係は
 
 ## 次工程
 
-最終QAを再判定する。進捗記録整合を含め全件PASSの場合のみ、Topic 09を `completed` とする。技術本文、固定EXAM_ALIGNMENT、正式3問、練習問題・正答、PDF/PPTX、独立再解答結果は変更しない。
+Topic 09は `PASS / completed`。次はTopic 10「なぜ変電所を何十kmも離せない？」の制作前EXAM_ALIGNMENTを行う。技術本文、固定EXAM_ALIGNMENT、正式3問、練習問題・正答、PDF/PPTX、独立再解答結果は変更しない。
