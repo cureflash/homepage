@@ -25,6 +25,7 @@ GitHub正本上で以下の実在を再確認した。
 - 解説画像PowerPoint
 - PowerPoint QA
 - 完成後独立再解答記録
+- 最終QA記録
 
 判定: `PASS`
 
@@ -73,22 +74,22 @@ H30二次「電力・管理」問3、H25二次「電力・管理」問4は電力
 
 判定: `PASS`
 
-### 6. 進捗記録整合
+### 6. 初回blockerの解消確認
 
-実成果物・完成後独立再解答済み状態とsource内の進捗記録を照合した結果、旧工程表現が3箇所残っている。
+初回最終QAで指摘した3件をGitHub正本で再確認した。
 
-1. 主source冒頭の状態欄が `EXPLANATION_PDF_COMPLETE`、次工程「練習問題source＋練習PDF」のまま。
-2. 主source末尾の制作進捗が練習問題・PowerPoint・完成後独立再解答を未完了扱いし、現在地も `EXPLANATION_PDF_COMPLETE`、次工程「練習問題source＋練習PDF」のまま。
-3. 練習source冒頭が `PRACTICE_PDF_COMPLETE`、次工程「解説画像PowerPoint＋表示QA」のまま。
+- 主source冒頭: `SOURCE_PROGRESS_SYNCED / in_progress`、完成後独立再解答 `19 / 19 PASS`、次工程「最終QA再実施」へ同期済み
+- 主source末尾: 練習問題source＋PDF、PowerPoint＋表示QA、完成後独立再解答、初回最終QA、旧進捗記録同期を完了扱いへ同期済み
+- 練習source冒頭: `SOURCE_PROGRESS_SYNCED / in_progress`、固定4問・19答案要素への接続 `19 / 19`、次工程「最終QA再実施」へ同期済み
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX自体の修正は不要。旧進捗記録だけを実成果物へ同期する必要がある。
+旧工程を示していた3件は解消しており、実在成果物・独立再解答済み状態と矛盾する旧進捗記録は残っていない。
 
-判定: `FAIL`
+判定: `PASS`
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / FINAL_QA_COMPLETE`
 
-固定一次3問・15小問＋二次1問・4答案要素の完成後独立再解答 `19 / 19 PASS`、必須成果物、表示QA、SPEC境界はPASS。未完了理由は主source2箇所＋練習source1箇所の進捗記録不整合のみ。
+固定一次3問・15小問＋二次1問・4答案要素の独立再解答 `19 / 19 PASS`、二次採用判断、必須成果物、表示QA、SPEC境界、初回blocker解消を全件PASS確認した。
 
-完成数は `12 / 21` のまま。次工程は技術内容を変更せず、旧進捗記録3箇所を実成果物へ同期すること。
+このrunでは最終QA再実施までを完了とし、Topic 13自体の `completed` 化は次工程で主source・練習source・STATUS・HANDOFFの完了状態を一括同期してから確定する。完成数はまだ `12 / 21` のままとする。
