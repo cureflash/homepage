@@ -4,25 +4,29 @@
 
 ## 現在地
 
-Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は解説本文＋3段階例題まで完了した。
+Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は解説PDF＋表示/文字抽出QAまで完了した。
 
 - 完成数: `10 / 14`
 - last completed: `10 新幹線が使う電力は「W」だけではない`
 - active topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- current status: `topic_11_explanation_source_complete / IN_PROGRESS`
-- next start: Topic 11の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う
+- current status: `topic_11_explanation_pdf_complete / IN_PROGRESS`
+- next start: Topic 11の練習問題source・練習PDFを作成する
 
 ## 今回進捗
 
-Topic 11の解説本文＋3段階例題を完成した。
+Topic 11の解説PDFを作成し、全ページ表示QA・文字抽出QAを完了した。
 
+- 解説PDF: A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `4 / 4ページ PASS`
+- 文字切れ・重なり・欠落・黒四角: `0件`
+- 置換文字 `�`・`□`: `0件`
 - 固定対象: 公式理論過去問5問・10答案要素
-- 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
-- 本文マッピング: `10 / 10`
-- 解説内容: 平衡三相、相順、Y・Δ、相値/線間値、三相電力、Y/Δ混在、既習の無効電力を使うΔコンデンサ補償
+- PDF反映: `10 / 10`
 - 3段階例題: 基礎Y結線、本試験標準Δ結線、複合Y R-L＋Δコンデンサ
 - 境界維持: 不平衡三相、高調波、電力計測、Y-Δインピーダンス変換、具体的き電変圧器結線、未確認実設備値の追加0件
-- source: `topics/11_three_phase_ac/11_three_phase_ac.md`
+- PDF: `topics/11_three_phase_ac/11_three_phase_ac_explanation.pdf`
+- QA: `topics/11_three_phase_ac/11_three_phase_ac_explanation_qa.md`
 
 ## Topic 11 SPEC固定範囲
 
@@ -77,7 +81,7 @@ P = √3 VL IL cosφ
 - Topic 08〜10のRLC・力率・無効電力は既習事項としてのみ使用する
 - 新幹線側は三相系統→単相25 kV→車内三相という概念接続までとし、具体的なき電変圧器結線を推測しない
 
-上記は解説本文へ全件反映済み。
+上記は解説本文と解説PDFへ全件反映済み。
 
 ## 境界
 
@@ -96,8 +100,12 @@ P = √3 VL IL cosφ
   - 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
   - 解説本文＋3段階例題: 完成
   - 固定過去問要求の本文マッピング: `10 / 10`
-  - status: `EXPLANATION_SOURCE_COMPLETE`
-- 解説PDF: 未作成
+- 解説PDF: `topics/11_three_phase_ac/11_three_phase_ac_explanation.pdf`
+  - A4縦4ページ
+  - 200 dpi表示QA: `4 / 4 PASS`
+  - 文字抽出QA: PASS
+  - 固定過去問要求のPDF反映: `10 / 10`
+- 解説PDF QA: `topics/11_three_phase_ac/11_three_phase_ac_explanation_qa.md` / PASS
 - 練習source・練習PDF: 未作成
 - 解説画像PowerPoint: 未作成
 - 完成後独立再解答: 未実施
@@ -105,7 +113,7 @@ P = √3 VL IL cosφ
 
 ## 次に行うこと
 
-Topic 11の解説PDFを作成し、全ページ表示QA・文字抽出QAを行う。sourceの固定5問・10答案要素、3段階例題、SPEC境界をそのまま維持する。
+Topic 11の練習問題source・練習PDFを作成する。sourceの固定5問・10答案要素、3段階例題、SPEC境界をそのまま維持する。
 
 ## 固定ルール
 
