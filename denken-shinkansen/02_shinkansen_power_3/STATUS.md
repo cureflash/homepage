@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 10 / 16
-- current_status: `topic_11_independent_reanswer_complete`
+- current_status: `topic_11_source_reanswer_synced`
 - last_completed_topic: `10 新幹線が突然大電力を使ったら？`
 - active_topic: `11 架線事故ではどうやって電気を止める？`
-- next_start: Topic 11 main sourceへ完成後ブラインド独立再解答結果を同期する
+- next_start: Topic 11最終QAを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -21,7 +21,7 @@
 - [x] 08 新幹線の変電所はなぜ数十kmおき？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗整合を最終QAで再確認し `PASS / completed`
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 11 架線事故ではどうやって電気を止める？ — IN_PROGRESS。制作前EXAM_ALIGNMENT・解説本文§1〜§15・3段階例題・解説PDF・練習問題source・練習PDF＋QA・解説画像PowerPoint＋QAまで完成。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件
+- [ ] 11 架線事故ではどうやって電気を止める？ — IN_PROGRESS。制作前EXAM_ALIGNMENT・解説本文§1〜§15・3段階例題・解説PDF・練習問題source・練習PDF＋QA・解説画像PowerPoint＋QAまで完成。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。完成後独立再解答結果をmain sourceへ同期済み
 - [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
 - [ ] 13 新幹線の架線は何でできている？
 - [ ] 14 駅やトンネルにはどう電気を配る？
@@ -303,6 +303,7 @@ PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
 - Topic 12以降の論点による補完: `0件`
 - SPEC固定範囲外追加（独立再解答時）: `0件`
 - 未確認新幹線実設備値の使用: `0件`
+- main sourceへの完成後独立再解答結果同期: 完了
 
 完成後独立答案:
 - R5下 電力 問16(a)(b): `(2),(4)`
@@ -312,4 +313,4 @@ PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
 - H22 電力 問8: `(3)`
 
 ## 次
-Topic 11 main sourceへ完成後ブラインド独立再解答結果を同期する。固定5問・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。最終QAにはまだ進まない。
+Topic 11最終QAを実施し、必須成果物、EXAM_ALIGNMENT、PDF/PPTX QA、進捗記録整合、SPEC固定範囲境界を再確認する。全件PASSの場合のみ `completed` とする。
