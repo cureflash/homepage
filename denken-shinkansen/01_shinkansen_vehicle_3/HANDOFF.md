@@ -6,11 +6,11 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は32/38。01〜32がPASS。active topicは33 `COMTRAC① 東海道新幹線全体をどう監視する？`。
 
 ## 今回進捗
-Topic 33の完成後blind独立再解答前ゲートを `BLOCKED → READY` にした。必須先読み対象の `STATUS.md`・`HANDOFF.md`・主sourceから、Topic 33固定5問の制作前個別正答番号・完成済み導出結果を除去した。独立再解答自体はこのrunでは実施していない。
+Topic 33の完成後blind独立再解答を完了した。固定5問は `(3),(3),(3),(5),(2)` で `5 / 5 PASS`。公式解答との不一致、教材外知識補完、固定範囲外知識補完、Topic 34/35範囲追加、未確認COMTRAC内部仕様依存はいずれも0件。
 
-記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_blind_gate.md`
+記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_independent_reanswer.md`
 
-固定EXAM_ALIGNMENT、教材本文、練習問題、PDF/PPTXは変更していない。Topic 34/35範囲追加、未確認COMTRAC内部仕様追加はいずれも0件。
+固定EXAM_ALIGNMENT、教材本文、練習問題、PDF/PPTXは変更していない。
 
 ## Topic 33 成果物
 - source: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md`
@@ -19,6 +19,7 @@ Topic 33の完成後blind独立再解答前ゲートを `BLOCKED → READY` に�
 - 練習PDF: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_practice.pdf`
 - PowerPoint: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_images.pptx`
 - blind gate記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_blind_gate.md`
+- 完成後blind独立再解答記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_independent_reanswer.md`
 
 解説PDFはA4縦4ページ・180 dpi表示QA `4 / 4 PASS`・文字抽出PASS。練習は15問（基礎4／標準8／複合3）・全問五肢択一・固定5問 `5 / 5` マッピング・独立QA `15 / 15 PASS`。PowerPointは16:9・4枚・固定5問 `5 / 5` 可視化・表示QA `4 / 4 PASS`・overflow/ZIP整合性PASS。
 
@@ -29,7 +30,7 @@ Topic 33の完成後blind独立再解答前ゲートを `BLOCKED → READY` に�
 4. R4下 理論 問14 — 標本化・量子化・符号化・ディジタル伝送・A-D変換
 5. R1 機械 問14 — 2進数の加減算・基数変換
 
-制作前独立検証は完了済み。完成後blind条件を守るため、個別正答番号・制作前導出結果は必須先読み対象に残さない。品質ゲート対象は上記5問から変更しない。
+制作前独立検証は完了済み。完成後blind独立再解答は `5 / 5 PASS`。品質ゲート対象は上記5問から変更していない。
 
 ## Topic 33 固定範囲境界
 扱う:
@@ -46,14 +47,15 @@ Topic 33の完成後blind独立再解答前ゲートを `BLOCKED → READY` に�
 - COMTRAC内部の未確認データ形式、bit割当、更新周期、伝送速度、通信プロトコル、具体的アルゴリズム
 
 ## 現在の状態
-- `current_status`: `topic_33_blind_reanswer_ready`
+- `current_status`: `topic_33_independent_reanswer_complete`
 - 完成数: 32/38
 - 01〜32: PASS
 - Topic 33制作前EXAM_ALIGNMENT: 完了
 - Topic 33解説source/PDF: 完了
 - Topic 33練習source/PDF: 完了
 - Topic 33 PowerPoint: 完了
-- Topic 33完成後blind独立再解答: `READY`
+- Topic 33完成後blind独立再解答: `5 / 5 PASS`
+- Topic 33最終QA: 未実施
 
 ## 次の正確な開始点
-完成教材だけを使ってTopic 33固定5問をblind独立再解答し、公式解答との一致・教材外補完0件・固定範囲外補完0件を確認する。
+固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを実施する。
