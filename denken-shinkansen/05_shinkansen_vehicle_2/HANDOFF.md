@@ -7,9 +7,9 @@
 
 Topic 01〜10は最終QAまで `PASS / completed`。完成数は `10 / 39`。
 
-現在地は `topic_11_explanation_source_complete`。Topic 11 `300系② PWMコンバータ` は制作前EXAM_ALIGNMENTを固定したまま、解説本文＋3段階例題まで完成した。固定一次2問＋二次3問、計5問・27答案要素を本文へ `27 / 27` マッピングし、SPEC指定4可視化へ直接つながる計算条件も `4 / 4` 設定済み。
+現在地は `topic_11_explanation_pdf_complete`。Topic 11 `300系② PWMコンバータ` は制作前EXAM_ALIGNMENTを固定したまま、解説本文＋3段階例題と解説PDFまで完成した。固定一次2問＋二次3問、計5問・27答案要素を維持し、SPEC指定4可視化を `4 / 4` 収録した。
 
-次工程はTopic 11の解説PDF。固定EXAM_ALIGNMENT・解説sourceの技術内容・範囲境界を変更せず、PDF化と表示QAを行う。
+次工程はTopic 11の練習問題・完全解説source。固定EXAM_ALIGNMENT・解説source・解説PDFの技術内容・範囲境界を変更せず、一次型＋二次記述型の練習を作成する。
 
 ## Topic 01〜10
 - Topic 01〜10: 最終QA `PASS / completed`
@@ -77,6 +77,23 @@ SPEC指定可視化:
 - Topic 12〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
+## Topic 11 解説PDF
+- PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_explanation.pdf`
+- QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_explanation_pdf_qa.md`
+- A4縦5ページ
+- 180 dpi Visual QA: `5 / 5 PASS`
+- overlap / clipping / broken glyph: `0件`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□` `0件`
+- 固定一次2問＋二次3問・27答案要素: 維持
+- 3段階例題: `3 / 3`
+- SPEC指定4可視化: `4 / 4`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- Topic 12〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+- 教材用仮定値と実車値の区別: 明記
+- SHA-256: `c72e80b3d9a69510d1541d2eb03d88f21071999b68f3fb9429e634a97aa66db4`
+
 参考確認:
 - 公式正本: 一般財団法人 電気技術者試験センター 第二種過去問題
 - 解法比較: 電験王2
@@ -84,11 +101,11 @@ SPEC指定可視化:
 - e-sysnet.com: 対応するPWMコンバータ個別解説ページは確認できず
 
 ## 次の正確な開始点
-Topic 11 `300系② PWMコンバータ` の解説PDF。
+Topic 11 `300系② PWMコンバータ` の練習問題・完全解説source。
 
-1. `11_300series_pwm_converter.md` の完成済み解説本文を正本とする。
-2. 固定5問・27答案要素の説明を削らない。
-3. 3段階例題とSPEC指定4可視化へつながる式・条件を維持する。
+1. 固定5問・27答案要素と解説sourceを正本とする。
+2. 一次試験型に加え、二次試験へ接続する記述式を含め、途中式・前提・単位・理由を採点可能な形で示す。
+3. PWM、基本波・高調波、力率・直流電圧制御、スイッチング損失を固定範囲内で練習できる構成にする。
 4. Topic 12のVVVF／誘導機制御、Topic 13の回生・四象限運転を先取りしない。
 5. 未確認300系実車値を真値として追加しない。
-6. PDF化後に全ページ表示QAと文字抽出QAを実施する。
+6. 作成後、正答一意性・数値・論理を独立QAする。
