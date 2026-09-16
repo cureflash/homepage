@@ -5,7 +5,7 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 8 / 12
-- current_status: `topic_09_powerpoint_complete`
+- current_status: `topic_09_blind_reanswer_ready`
 - last_completed_topic: `08 積分 速度曲線の面積は距離`
 - active_topic: `09 微積分で電気を読む`
 - next_start: `Topic 09 完成教材だけでの公式過去問独立再解答`
@@ -87,25 +87,23 @@
 - [x] 練習問題source
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
+- [x] 完成後独立再解答前のブラインド化（主sourceの保存済み選択肢番号・公式正答・個別数値解答を除去）
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 09「微積分で電気を読む」の解説画像PowerPointをGitHub正本へ反映した。
+Topic 09「微積分で電気を読む」の完成後独立再解答前ゲートを1段階進めた。
 
-- 成果物: `topics/09_calculus_electricity/09_calculus_electricity_images.pptx`
-- 16:9、全5枚
-- 固定5式を全件可視化
-- 固定5過去問・7答案要素に必要な式選択、グラフの傾き・面積、ファラデー・レンツ、区分積分、仕事・単位関係を固定範囲内で図解
-- 200 dpi表示QA `5 / 5 PASS`
-- 文字抽出QA `PASS`
-- PPTX ZIP整合 `PASS`
-- クリッピング・重なり・文字化け0件
+- 主sourceの制作前独立解答節に残っていた保存済み選択肢番号・公式正答・個別数値解答を除去
+- 制作前検証結果の集計 `5 / 5問・7 / 7答案要素 PASS` は維持
+- 固定5過去問、要求知識、使用式、教材内マッピングは変更なし
+- 解説本文、3段階例題、解説PDF、練習source/PDF、PowerPointは変更なし
 - 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
+- 今回は保存済み正答を参照した状態のため、完成後独立再解答そのものは実施・判定していない
 
 ## 判定
 
-`topic_09_powerpoint_complete / IN_PROGRESS`。
+`topic_09_blind_reanswer_ready / IN_PROGRESS`。
 
-完成数は `8 / 12` のまま。次工程は完成教材だけで固定5問・7答案要素を独立再解答。
+完成数は `8 / 12` のまま。次工程は完成教材だけで固定5問・7答案要素を保存済み正答を見ずに独立再解答する。
