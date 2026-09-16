@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 13 / 21
-- current_status: `topic_13_completed`
+- current_status: `topic_14_exam_alignment_complete`
 - last_completed_topic: `13 新幹線の交流電力を複素数で扱う`
 - active_topic: `14 インバータのギザギザ波形を分解する`
-- next_start: Topic 14 制作前EXAM_ALIGNMENT
+- next_start: Topic 14 解説本文＋3段階例題
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -192,17 +192,42 @@
 - [x] 主source・練習source・STATUS・HANDOFFをcompleted状態へ同期
 - [x] 最終判定: `PASS / completed`
 
+## Topic 14 固定EXAM_ALIGNMENT
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] 固定範囲: 非正弦波、フーリエ級数、基本波、高調波、実効値、波形ひずみ、高調波成分
+- [x] 一次・二次を含む関連候補8件を調査
+- [x] H24 一次 機械 問3(4)(5)を採用
+- [x] H22 一次 機械 問3(3)を採用
+- [x] H28 二次 機械・制御 問3(3)(4)を採用
+- [x] 品質ゲート対象を一次2問・3答案要素＋二次1問・2答案要素に固定
+- [x] 公式問題・公式標準解答照合 `5 / 5`
+- [x] 制作前独立再解答 `5 / 5 PASS`
+- [x] H30/H25二次の系統高調波問題は設備固有体系を要するため非採用
+- [x] H24二次は高調波を無視する条件、R4二次は前段設備計算への依存が大きいため非採用
+- [x] 二次採用1問・2答案要素、二次数合わせ0件
+- [x] Topic 15過渡現象の先取り0件
+- [x] 未確認実車PWM方式・スイッチング周波数・高調波実測値追加0件
+
+## Topic 14 制作進捗
+- [x] 制作前EXAM_ALIGNMENT: 一次2問・3答案要素＋二次1問・2答案要素、関連候補8件調査
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF＋表示QA
+- [ ] 練習問題source＋練習PDF
+- [ ] 解説画像PowerPoint＋表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 13「新幹線の交流電力を複素数で扱う」をcompleted状態へ同期した。
+Topic 14「インバータのギザギザ波形を分解する」の制作前EXAM_ALIGNMENTを完了した。
 
-- 固定一次3問・15小問＋二次1問・4答案要素の完成後独立再解答: `19 / 19 PASS`
-- 最終QA: `PASS / FINAL_QA_COMPLETE`
-- 二次採用: `1問・4答案要素`、二次数合わせ: `0件`
-- 主source・練習source・STATUS・HANDOFF: completed状態へ同期
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
+- 固定範囲: 非正弦波、フーリエ級数、基本波、高調波、実効値、波形ひずみ、高調波成分
+- 関連候補調査: 一次・二次合わせ `8件`
+- 品質ゲート: 一次2問・3答案要素＋二次1問・2答案要素
+- 制作前独立再解答: `5 / 5 PASS`
+- 二次採用: `1問・2答案要素`、二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 
 ## 判定
 
-Topic 13は `PASS / completed`。完成数は `13 / 21`。次工程はTopic 14「インバータのギザギザ波形を分解する」の制作前EXAM_ALIGNMENT。
+Topic 14は `PASS / EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `13 / 21`。次工程は解説本文＋3段階例題。
