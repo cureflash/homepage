@@ -6,9 +6,9 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は品質ゲートPASSでcompleted。active topicは11「空転した車輪をどう立て直す？」。
 
 ## 今回進捗
-Topic 11の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。固定R4下 機械 問14の完成後独立再解答 `1 / 1 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、固定範囲境界はすべてPASS。
+Topic 11の主source・練習sourceに残っていた旧進捗記録3箇所を実成果物へ同期した。`11_readhesion_control.md` の状態・現在地・次工程を、解説PDF、練習source/PDF、PowerPoint、完成後独立再解答まで完了した実態へ更新し、`11_readhesion_control_practice.md` の次工程も最終QA再判定へ更新した。
 
-未完了理由は進捗記録のみ。`11_readhesion_control.md` の `## 現在地` が解説PDF完成時点で止まり、同ファイル `## 次工程` が「練習問題sourceを作成する」のまま残っている。さらに `11_readhesion_control_practice.md` の `## 次工程` が「練習PDFを作成する」のまま残っている。旧進捗は計3箇所で、技術内容・固定EXAM_ALIGNMENT・問題・正答・成果物自体の修正は不要。
+技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF、PowerPoint、独立再解答結果は変更していない。固定範囲外論点・未確認実車値・実車固有アルゴリズムの追加は0件。前回最終QA `NEEDS_REVISION` の原因だった進捗記録不整合は修正済みで、次は最終QA再判定を行う。
 
 ## Topic 11 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
@@ -56,12 +56,14 @@ Topic 11の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
 - 実車固有アルゴリズムの推測: `0件`
-- 最終QA: `NEEDS_REVISION`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA固定範囲境界: `PASS`
-- 最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
+- 前回最終QA: `NEEDS_REVISION`
+- 前回最終QA技術内容: `PASS`
+- 前回最終QA必須成果物: `PASS`
+- 前回最終QA表示QA: `PASS`
+- 前回最終QA固定範囲境界: `PASS`
+- 前回最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
+- 旧進捗3箇所: 同期済み
+- 最終QA再判定: 未実施
 - source: `topics/11_readhesion_control/11_readhesion_control.md`
 - explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
 - explanation PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
@@ -107,4 +109,4 @@ Topic 11の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した
 - 教材外補完0件。
 
 ## 次に行う
-Topic 11の主source・練習sourceに残る旧進捗記録3箇所だけを実成果物へ同期する。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF、PowerPoint、独立再解答結果は変更しない。
+Topic 11の最終QAを再判定する。必須成果物、固定R4下 機械 問14の独立再解答 `1 / 1 PASS`、解説PDF・練習PDF・PowerPointの表示QA、進捗記録整合、固定範囲境界を再確認し、品質ゲート完了可否を判定する。
