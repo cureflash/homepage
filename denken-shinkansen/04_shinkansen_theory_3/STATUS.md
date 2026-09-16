@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 10 / 14
-- current_status: `topic_11_final_qa_needs_revision`
+- current_status: `topic_11_source_progress_synced`
 - last_completed_topic: `10 新幹線が使う電力は「W」だけではない`
 - active_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- next_start: Topic 11の主source・練習sourceの進捗記録だけを実成果物へ同期する
+- next_start: Topic 11の最終QAを再実施する
 
 ## Topic 01 進捗
 
@@ -199,18 +199,17 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `5 / 5問・10 / 10答案要素 PASS`
 - [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習source進捗記録不整合）
+- [x] 主source・練習source進捗記録同期
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の最終QAを実施した。
+Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の主source・練習sourceの進捗記録だけを実成果物へ同期した。
 
-固定5問・10答案要素の完成後独立再解答は `5 / 5問・10 / 10答案要素 PASS`。必須成果物、3段階例題、練習15問、解説PDF・練習PDF・PowerPoint QA、SPEC境界はPASSした。
+主sourceを `status: INDEPENDENT_REANSWER_COMPLETE`、練習sourceを `stage: INDEPENDENT_REANSWER_COMPLETE` に更新し、旧「解説PDF作成」「PowerPoint作成」の次工程記録を除去した。技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX成果物は変更していない。
 
-ただし進捗記録整合性のみFAIL。主sourceは `status: EXPLANATION_SOURCE_COMPLETE` かつ次工程が解説PDF作成、練習sourceは `stage: PRACTICE_PDF_COMPLETE` かつ次工程がPowerPoint作成のままで、実成果物の現在地と一致していない。
-
-最終QA記録: `topics/11_three_phase_ac/11_three_phase_ac_final_qa.md`
+固定5問・10答案要素の完成後独立再解答 `5 / 5問・10 / 10答案要素 PASS`、各成果物QA、SPEC境界はそのまま維持している。
 
 ## 判定
 
-現在 `topic_11_final_qa_needs_revision / IN_PROGRESS`。完成数は `10 / 14`。次は技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTXを変更せず、主source・練習sourceの進捗記録だけを実成果物へ同期する。
+現在 `topic_11_source_progress_synced / IN_PROGRESS`。完成数は `10 / 14`。次はTopic 11の最終QAを再実施する。
