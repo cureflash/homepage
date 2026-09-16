@@ -7,9 +7,9 @@
 
 Topic 01〜09は最終QAまで `PASS / completed`。完成数は `9 / 39`。
 
-現在地は `topic_10_final_qa_needs_progress_sync`。Topic 10 `300系① 誘導電動機等価回路` は技術内容、固定EXAM_ALIGNMENT、必須成果物、完成後独立再解答、PDF/PPTX/練習QA、SPEC境界までPASS。最終QAでは、主source冒頭に「最終QAは未実施」という旧進捗が1箇所残るため `NEEDS_REVISION / IN_PROGRESS` と判定した。
+現在地は `topic_10_source_progress_synced`。Topic 10 `300系① 誘導電動機等価回路` は技術内容、固定EXAM_ALIGNMENT、必須成果物、完成後独立再解答、PDF/PPTX/練習QA、SPEC境界までPASS。前回最終QAの唯一のFAILだった主source冒頭の「最終QAは未実施」は今回の最終QA結果へ同期済みで、最終QA再判定待ち。
 
-次工程は主source冒頭の進捗1箇所だけを今回の最終QA結果へ同期し、その後に最終QAを再判定する。技術内容・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTXには触れない。
+次工程はTopic 10の最終QA再判定。技術内容・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTXには触れない。進捗記録整合がPASSならTopic 10を `completed` へ進める。
 
 ## Topic 01〜06
 - Topic 01〜06: 最終QA `PASS / completed`
@@ -79,6 +79,7 @@ source: `topics/10_300series_induction_motor_equivalent_circuit/10_300series_ind
 - SPEC指定4グラフへつながる計算条件: `4 / 4`
 - 教材用仮定値と300系実車値の区別: 明記
 - Topic 11〜13先取り・固定範囲外追加・未確認300系実車値追加: `0件`
+- 前回最終QAで指摘された主source冒頭の旧進捗1箇所: `同期済み`
 
 ## Topic 10 解説PDF
 - `10_300series_induction_motor_equivalent_circuit_explanation.pdf`: `completed`
@@ -140,13 +141,13 @@ source: `topics/10_300series_induction_motor_equivalent_circuit/10_300series_ind
 - 固定範囲外追加: `0件`
 - Topic 11〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
-- 唯一のFAIL: 主source冒頭の「最終QAは未実施」が本QA実施後の実態と不一致
-- 進捗記録整合: `FAIL`
+- 前回最終QAの唯一のFAILだった主source冒頭の「最終QAは未実施」: `同期済み`
+- 進捗記録整合: `再判定待ち`
 - 最終判定: `NEEDS_REVISION / IN_PROGRESS`
 
 ## 次の正確な開始点
-Topic 10 `300系① 誘導電動機等価回路` の主source進捗同期。
+Topic 10 `300系① 誘導電動機等価回路` の最終QA再判定。
 
-1. `10_300series_induction_motor_equivalent_circuit.md` 状態欄の「最終QAは未実施」を今回の最終QA結果へ同期する。
+1. 主source冒頭の旧進捗1箇所が同期済みであることを確認する。
 2. 技術内容・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTXは変更しない。
-3. 同期後に最終QAを再判定し、進捗記録整合がPASSならTopic 10を `completed` へ進める。
+3. 進捗記録整合がPASSならTopic 10を `completed` へ進める。
