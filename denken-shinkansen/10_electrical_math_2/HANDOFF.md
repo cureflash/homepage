@@ -8,11 +8,11 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 20`
 
-current_status: `topic_11_final_qa_needs_revision`
+current_status: `topic_11_source_progress_synced`
 
 active_topic: `11 行列・線形連立方程式`
 
-次工程: Topic 11のsource進捗記録3箇所だけを実成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・完成後独立再解答は変更しない。
+次工程: Topic 11の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
 
 ## 上位仕様
 
@@ -707,13 +707,15 @@ QA:
 
 初回判定は `NEEDS_REVISION / IN_PROGRESS`。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・表示QA・SPEC境界はPASSで、未完了理由はsource進捗記録3箇所だけ。
 
-未同期箇所:
+同期済み箇所:
 - 主source冒頭 `## 状態`
 - 主source末尾 `## 次工程`
 - 練習source末尾 `## 次工程`
 
-現在 `topic_11_final_qa_needs_revision / IN_PROGRESS`。
+技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更していない。
+
+現在 `topic_11_source_progress_synced / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 11 `行列・線形連立方程式` のsource進捗記録3箇所だけを実成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更しない。
+Topic 11 `行列・線形連立方程式` の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
