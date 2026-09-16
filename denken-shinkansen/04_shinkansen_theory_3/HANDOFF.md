@@ -4,30 +4,32 @@
 
 ## 現在地
 
-Topic 01〜09は最終QAまでPASSし、`completed`。
+Topic 01〜10は最終QAまでPASSし、`completed`。
 
-Topic 10 `新幹線が使う電力は「W」だけではない` は、前回最終QAで指摘された主source・練習sourceの進捗記録不整合を解消した。最終QA再実施前のため `IN_PROGRESS` を維持する。
-
-- 完成数: `9 / 14`
-- last completed: `09 北陸新幹線は50Hzと60Hzをどう走る？`
-- active topic: `10 新幹線が使う電力は「W」だけではない`
-- current status: `topic_10_source_progress_synced / IN_PROGRESS`
-- next start: Topic 10の最終QAを再実施する
+- 完成数: `10 / 14`
+- last completed: `10 新幹線が使う電力は「W」だけではない`
+- active topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
+- current status: `topic_10_final_qa_passed / completed`
+- next start: Topic 11の制作前EXAM_ALIGNMENTを実施する
 
 ## 今回進捗
 
-Topic 10の主source・練習sourceの進捗記録を実成果物へ同期した。
+Topic 10の最終QAを再実施し、`PASS / completed` とした。
 
-- 主source `status`: `EXPLANATION_SOURCE_COMPLETE` → `INDEPENDENT_REANSWER_COMPLETE`
-- 練習source `stage`: `PRACTICE_PDF_COMPLETE` → `INDEPENDENT_REANSWER_COMPLETE`
-- 主sourceの旧「次は解説PDF作成」を除去
-- 練習sourceの旧「次はPowerPoint作成」を除去
 - 固定対象: 公式理論過去問5問・6答案要素
 - 完成後独立再解答: `5 / 5問・6 / 6答案要素 PASS`
 - 教材外知識補完: `0問`
 - Topic 11以降の三相・半導体・高調波依存: `0問`
 - 未確認新幹線実車力率・無効電力・補償方式依存: `0問`
-- 技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX成果物: 変更なし
+- 固定過去問要求の本文マッピング: `6 / 6`
+- 練習問題: `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
+- 解説PDF: 200 dpi表示 `4 / 4 PASS`、文字抽出PASS
+- 練習PDF: 200 dpi表示 `3 / 3 PASS`、文字抽出PASS
+- PowerPoint: 表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
+- SPEC固定範囲外追加: `0件`
+- 前回FAILだった主source・練習sourceの進捗記録不整合: 解消済み
+- 最終QA判定に合わせ、主source `status` と練習source `stage` を `COMPLETED` へ同期
+- 技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX内容: 変更なし
 
 ## Topic 10 SPEC固定範囲
 
@@ -66,6 +68,7 @@ cosφ = P / S
 
 制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
 完成後独立再解答: `5 / 5問・6 / 6答案要素 PASS`
+最終QA: `PASS / completed`
 
 ## 教材で必須となる説明
 
@@ -83,10 +86,10 @@ cosφ = P / S
 
 ## 境界
 
-- Topic 11の三相交流、Y・Δ、線間/相電圧、三相電力公式を追加しない
-- Topic 12以降の半導体・整流・インバータ・PWMを追加しない
-- Topic 13側の高調波・ひずみ波電力を追加しない
-- 電力科目・法規の三相配電設備・調相設備詳細を品質ゲートへ混在させない
+- Topic 11の三相交流、Y・Δ、線間/相電圧、三相電力公式をTopic 10へ追加しない
+- Topic 12以降の半導体・整流・インバータ・PWMをTopic 10へ追加しない
+- Topic 13側の高調波・ひずみ波電力をTopic 10へ追加しない
+- 電力科目・法規の三相配電設備・調相設備詳細をTopic 10の品質ゲートへ混在させない
 - 未確認の新幹線実車力率、無効電力、補償装置仕様を推測しない
 
 ## Topic 10 成果物
@@ -96,7 +99,7 @@ cosφ = P / S
   - 制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
   - 解説本文＋3段階例題: 完成
   - 固定過去問要求マッピング: `6 / 6`
-  - 進捗記録: `INDEPENDENT_REANSWER_COMPLETE` へ同期済み
+  - 進捗記録: `COMPLETED`
 - 解説PDF: 完成
   - `topics/10_power_factor/10_power_factor_explanation.pdf`
   - QA: `topics/10_power_factor/10_power_factor_explanation_qa.md`
@@ -108,7 +111,7 @@ cosφ = P / S
   - 全15問・全問五肢択一、独立再計算 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`
   - A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS
   - 固定5過去問・6答案要素への接続: `6 / 6`
-  - 進捗記録: `INDEPENDENT_REANSWER_COMPLETE` へ同期済み
+  - 進捗記録: `COMPLETED`
 - 解説画像PowerPoint: 完成
   - `topics/10_power_factor/10_power_factor_images.pptx`
   - QA: `topics/10_power_factor/10_power_factor_images_qa.md`
@@ -118,14 +121,12 @@ cosφ = P / S
   - `topics/10_power_factor/10_power_factor_exam_recheck.md`
   - `5 / 5問・6 / 6答案要素 PASS`
   - 教材外補完・後続Topic依存・未確認実車値依存: 0件
-- 最終QA: 前回 `NEEDS_REVISION`
+- 最終QA: `PASS / completed`
   - `topics/10_power_factor/10_power_factor_final_qa.md`
-  - 技術内容・過去問対応・成果物・表示QA・SPEC境界はPASS
-  - 指摘された進捗記録不整合は今回解消済み。再判定待ち
 
 ## 次に行うこと
 
-Topic 10の最終QAを再実施する。主source・練習sourceの進捗記録同期済みを確認し、技術内容・過去問対応・成果物・表示QA・SPEC境界を再判定する。
+Topic 11「電力会社の三相交流をどう新幹線へ渡す？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`の固定範囲に従い、公式過去問から品質ゲート対象を確定する。
 
 ## 固定ルール
 
