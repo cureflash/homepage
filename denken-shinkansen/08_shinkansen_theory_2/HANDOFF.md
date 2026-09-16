@@ -6,16 +6,16 @@
 
 Topic 01〜10は `PASS / completed`。完成数は `10 / 21`。
 
-current_status: `topic_11_exam_alignment_complete`
+current_status: `topic_11_explanation_source_complete`
 
 active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 
-Topic 11は制作前EXAM_ALIGNMENTまで完了。次工程は解説本文＋基礎／本試験標準／複合・ひっかけの3段階例題。
+Topic 11は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了。次工程は解説PDF＋表示QA。
 
 ## Topic 11 source
 
 - `topics/11_atc_frequency_filter/11_atc_frequency_filter.md`
-- stage: `EXAM_ALIGNMENT_COMPLETE`
+- stage: `EXPLANATION_SOURCE_COMPLETE`
 - completion: `IN_PROGRESS`
 
 ## Topic 11 固定範囲
@@ -64,36 +64,40 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 
 二次採用 `0問`、二次数合わせ `0件`。
 
-## Topic 11 本文で必ず接続する事項
+## Topic 11 解説source収録内容
 
-固定過去問と系列SPECから逆算し、次を本文へ収録する。
+固定5問・25小問から逆算し、次を本文へ収録済み。
 
 - `ω=2πf`、`ZR=R`、`ZL=jωL`、`ZC=1/(jωC)`
 - 周波数応答 `H(jω)=Vout/Vin` の大きさと位相
 - RCローパス `1/(1+jωRC)`
 - RCハイパス `jωRC/(1+jωRC)`
-- 遮断周波数 `fc=1/(2πRC)` と振幅比 `1/sqrt(2)`
-- ゲイン、必要時の `20log10|H|`
+- 遮断周波数 `fc=1/(2πRC)`、`1/sqrt(2)`、`-3.01 dB`
+- ゲイン `20log10|H|`
 - 直列RLC＋R出力の教育用バンドパスと `f0=1/(2πsqrt(LC))`
 - 低周波／高周波／共振付近からフィルタ特性を判定する手順
-- 交流ブリッジの複素平衡式から未知周波数を求める手順
-- 周波数依存項を相殺して電圧比を一定にする補償条件
+- 交流ブリッジの複素平衡式、実部・虚部分離、未知周波数導出
+- 周波数依存項を相殺するRC補償 `R1C1=R2C2`
+- 可変周波数回路の零条件
 - ATCとの接続は「特定周波数を通す／抑える」という概念まで
 
-## Topic 11 制作前QA
+3段階例題:
 
-- MASTER_SPEC: `PASS`
-- EXAM_ALIGNMENT_SPEC: `PASS`
-- 系列SPEC: `PASS`
-- 固定一次: `5問 / 25小問`
-- 公式問題・公式解答照合: `25 / 25確認済み`
-- 二次確認: `R7〜R5確認済み`
-- 二次採用: `0問`
+1. 基礎: RCローパスの遮断周波数・振幅比・位相
+2. 本試験標準: 直列RLC抵抗出力のバンドパス
+3. 複合・ひっかけ: Wien形教育用交流ブリッジの平衡周波数＋実部条件
+
+## Topic 11 解説source QA
+
+- 固定一次5問・25小問への本文マッピング: `25 / 25`
+- 3段階例題: `3 / 3`
+- 二次採用: `0問` のまま
 - 二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 - 未確認ATC実設備値追加: `0件`
+- Topic 12以降の先取り: `0件`
 
-判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 ## 参考資料
 
@@ -125,6 +129,7 @@ Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は 
 - Topic 01〜10: `PASS / completed`
 - 完成数: `10 / 21`
 - Topic 11 制作前EXAM_ALIGNMENT: `PASS / completed`
+- Topic 11 解説source: `PASS / completed`
 - Topic 11 固定一次: `5問 / 25小問`
 - Topic 11 二次採用: `0問`
 - Topic 11 二次数合わせ: `0件`
@@ -133,4 +138,4 @@ Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は 
 
 ## 次に行うこと
 
-Topic 11の固定一次5問・25小問と系列SPECだけを使い、解説本文＋3段階例題を作成する。
+Topic 11主sourceを正本として解説PDFを作成し、全ページ表示QAと文字抽出QAを実施する。
