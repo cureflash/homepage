@@ -3,23 +3,30 @@
 updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `09`
-current_status: `topic_09_voltage_drop_definition_fixed`
+current_status: `topic_09_explanation_pdf_regenerated`
 
 ## 今回完了
 
-Topic 09「ATき電はなぜ長距離へ電気を送れる？」で、完成後blind独立再解答がFAILした根本原因をsource §6で修正した。
+Topic 09「ATき電はなぜ長距離へ電気を送れる？」で、source §6の電圧降下率定義修正を反映した解説PDFを再生成した。
 
-電圧降下率を一律の送電端基準へ固定せず、問題文・定義から基準電圧を確認する形へ変更した。
+- A4縦 `3ページ`
+- 200 dpi表示QA `3 / 3 PASS`
+- 文字抽出QA `PASS`
+- 3段階例題再計算 `3 / 3 PASS`
+- 正式一次2問＋二次1問・`14 / 14答案要素` の本文接続を維持
+
+PDFでは次を明示した。
 
 - 送電端基準: `d_s=(V_s-V_r)/V_s` → `V_r=(1-d_s)V_s`
 - 受電端基準: `d_r=(V_s-V_r)/V_r` → `V_r=V_s/(1+d_r)`
-- H26二次「電力・管理」問4(3): 受電端基準へ接続
+- H26二次「電力・管理」問4(3)は受電端基準
 
 正式対象3問・SPEC固定10項目・固定範囲は変更していない。
 
-## 依存成果物の確認
+## 依存成果物
 
-- 解説PDF: 旧source §6を含むため要再生成
+- 解説PDF: 修正sourceへ同期済み
+- 解説PDF QA: 再実施済み、`PASS`
 - 練習source / PDF: 問10・問14が送電端基準を明示しているため技術変更不要
 - PowerPoint: 電圧降下率の基準固定式を含まないため変更不要
 - 完成後blind独立再解答: 修正後は未実施
@@ -35,6 +42,4 @@ Topic 09「ATき電はなぜ長距離へ電気を送れる？」で、完成後b
 
 ## 次に行う
 
-修正済み `topics/09_at_feeding/09_at_feeding.md` を正本として `09_at_feeding_explanation.pdf` を再生成する。
-
-表示QA・文字抽出QA・数式/数値再計算QAを再実施し、依存成果物を同期した後、正式一次2問＋二次1問のblind独立再解答を再実施する。
+修正後の完成教材のみを使い、正式一次2問＋二次1問・14答案要素のblind独立再解答を再実施する。保存済み正答・公式標準解答は答案固定後まで見ない。
