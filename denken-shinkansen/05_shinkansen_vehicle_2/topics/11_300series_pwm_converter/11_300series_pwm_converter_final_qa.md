@@ -4,9 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-技術内容、固定EXAM_ALIGNMENT、一次・二次の独立再解答、必須成果物、表示・構造QA、練習問題QA、SPEC境界はすべてPASS。未完了理由は進捗記録3箇所のみで、主source冒頭・主source末尾・練習source末尾が旧工程のまま残っている。
+技術内容、固定EXAM_ALIGNMENT、一次・二次の独立再解答、必須成果物、表示・構造QA、練習問題QA、SPEC境界、進捗記録整合を再確認し、全件PASSとした。
 
 ## 1. 上位仕様確認
 
@@ -29,7 +29,7 @@
 
 ## 3. 完成後独立再解答
 
-`11_300series_pwm_converter_independent_reanswer.md` を確認。
+`11_300series_pwm_converter_independent_reanswer.md` を再確認。
 
 - 一次: `10 / 10 PASS`
 - 二次: `17 / 17 PASS`
@@ -90,23 +90,15 @@ SPEC境界: `PASS`
 
 ## 7. 進捗記録整合
 
-`STATUS.md` と `HANDOFF.md` は本QAで更新対象。
+前回最終QAで唯一FAILだった3箇所を再確認した。
 
-主source `11_300series_pwm_converter.md` に旧進捗が2箇所残っている。
+- 主source冒頭状態欄: 実成果物・前回QA結果・進捗同期済みの状態へ更新済み
+- 主source末尾: `topic_11_source_progress_synced`、次工程を最終QA再判定へ更新済み
+- 練習source末尾: `topic_11_source_progress_synced`、次工程を最終QA再判定へ更新済み
 
-1. 冒頭状態欄:
-   - 「解説本文＋3段階例題まで完成。解説PDF・練習・PowerPoint・完成後独立再解答・最終QAは未実施。」
-2. 末尾の解説source品質確認:
-   - 状態が `topic_11_explanation_source_complete`
-   - 次工程が解説PDF作成
+前回指摘した旧工程表現は `3 / 3` 解消済み。本再判定に合わせ、`STATUS.md` と `HANDOFF.md` をTopic 11完了・Topic 12開始待ちへ同期する。
 
-練習source `11_300series_pwm_converter_practice_source.md` 末尾にも旧進捗が1箇所残っている。
-
-3. 独立QA末尾:
-   - 状態が `topic_11_practice_source_complete`
-   - 次工程が練習PDF作成
-
-いずれも現行成果物・独立再解答の実態と不一致であるため、進捗記録整合を `FAIL` とする。教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTXを変更する必要はない。
+進捗記録整合: `PASS`
 
 ## 8. 最終判定
 
@@ -117,8 +109,8 @@ SPEC境界: `PASS`
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL`（主source2箇所＋練習source1箇所）
+- 進捗記録整合: `PASS`
 
-したがって最終判定は `NEEDS_REVISION / IN_PROGRESS`。完成数は `10 / 39` のまま。
+したがって最終判定は `PASS / completed`。完成数は `11 / 39`。
 
-次工程は主source2箇所・練習source1箇所の旧進捗記録だけを実成果物へ同期する。技術内容・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTXには触れない。同期後に最終QAを再判定する。
+次工程はTopic 12「300系③ VVVFインバータと誘導機制御」の制作前EXAM_ALIGNMENT。
