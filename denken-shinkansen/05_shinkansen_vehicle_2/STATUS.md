@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `10 / 39`
-- current_status: `topic_11_source_progress_synced`
-- last_completed_topic: `10 300系① 誘導電動機等価回路`
-- active_topic: `11 300系② PWMコンバータ`
-- next_start: Topic 11の最終QAを再判定し、全件PASSの場合のみ `completed` とする
+- exam_aligned_completed_topics: `11 / 39`
+- current_status: `topic_11_completed`
+- last_completed_topic: `11 300系② PWMコンバータ`
+- active_topic: `12 300系③ VVVFインバータと誘導機制御`
+- next_start: Topic 12の制作前EXAM_ALIGNMENT
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -21,7 +21,8 @@
 - [x] 08 位相制御と平均直流電圧 — PASS
 - [x] 09 直流機方式の損失・熱設計 — PASS
 - [x] 10 300系① 誘導電動機等価回路 — PASS
-- [ ] 11 300系② PWMコンバータ — SOURCE_PROGRESS_SYNCED / IN_PROGRESS
+- [x] 11 300系② PWMコンバータ — PASS
+- [ ] 12 300系③ VVVFインバータと誘導機制御 — NOT_STARTED
 
 ## Topic 11 固定EXAM_ALIGNMENT
 - source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
@@ -36,36 +37,26 @@
 - 二次記述問題: `3問`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
-## Topic 11 完成済み成果物
+## Topic 11 完成成果物・QA
 - 解説source: 完成、3段階例題 `3 / 3`、固定5問・27答案要素マッピング `27 / 27`
 - 解説PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_explanation.pdf`
   - A4縦5ページ、180 dpi Visual QA `5 / 5 PASS`、文字抽出QA `PASS`
 - 練習source: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice_source.md`
-  - 一次8問＋二次4問、数値・論理QA `12 / 12 PASS`、固定5問・27答案要素へ `27 / 27` 接続
+  - 一次8問＋二次4問、数値・論理QA `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`
 - 練習PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice.pdf`
   - A4縦3ページ、Visual QA `3 / 3 PASS`、数値・論理再検算 `12 / 12 PASS`
 - 解説画像PowerPoint: `topics/11_300series_pwm_converter/11_300series_pwm_converter_images.pptx`
 - PowerPoint QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_images_qa.md`
-  - 16:9、4スライド
-  - SPEC指定4可視化 `4 / 4 PASS`
-  - Visual QA `4 / 4 PASS`
-  - overlap / clipping / broken glyph `0件`
-  - `slides_test.py` overflow `PASS / 0件`
-  - PowerPoint ZIP/XML整合性 `PASS`
-  - 固定一次2問＋二次3問・27答案要素を維持
-  - Git blob SHA-1: `8688e3b87936a08c80ae5cdbf19dbc6d1033fb44`
-  - SHA-256: `26158481860cac4adb3f870aeaf19d2100a4418b0e6c60a0032b1c114286b4aa`
+  - 16:9、4スライド、SPEC指定4可視化 `4 / 4 PASS`
+  - Visual QA `4 / 4 PASS`、overflow `0件`、ZIP/XML整合性 `PASS`
 - 完成後独立再解答: `topics/11_300series_pwm_converter/11_300series_pwm_converter_independent_reanswer.md`
   - 一次 `10 / 10 PASS`
   - 二次 `17 / 17 PASS`
   - 合計 `27 / 27 PASS`
   - 教材外知識補完 `0件`
-  - 固定EXAM_ALIGNMENT変更 `0件`
 - 最終QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_final_qa.md`
-  - 直前判定: `NEEDS_REVISION / IN_PROGRESS`
-  - 技術内容・固定過去問・独立再解答・必須成果物・表示QA・練習QA・SPEC境界: `PASS`
-  - 直前FAILだった進捗記録3箇所: `3 / 3 同期済み`
-  - 最終QA再判定: 未実施
+  - `PASS / completed`
+  - 必須成果物・表示QA・練習QA・SPEC境界・進捗記録整合: 全件 `PASS`
 
 ## Topic 11 固定範囲
 - PWMコンバータ
@@ -87,18 +78,20 @@ SPEC指定可視化:
 - Topic 12のVVVF、V/f、同期速度、すべり、定トルク／定出力領域は追加しない
 - Topic 13の回生、四象限運転、回生エネルギーは追加しない
 - 未確認の300系直流中間電圧、キャリア周波数、変調率、素子損失等を実車値として追加しない
-- 今回の固定範囲外追加: `0件`
+- 固定範囲外追加: `0件`
 - Topic 12〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
-## 今回の進捗同期
-- 主source冒頭状態欄: 同期済み
-- 主source末尾品質確認: 同期済み
-- 練習source末尾独立QA: 同期済み
-- 技術本文変更: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 数式・例題・練習問題・正答変更: `0件`
-- PDF/PPTX変更: `0件`
+## 最終QA再判定
+- 前回FAILだった進捗記録3箇所: `3 / 3 同期済み`
+- 固定一次2問＋二次3問・27答案要素: `PASS`
+- 完成後独立再解答: `27 / 27 PASS`
+- 必須成果物: `PASS`
+- PDF/PPTX表示・構造QA: `PASS`
+- 練習問題QA: `12 / 12 PASS`
+- SPEC境界: `PASS`
+- 進捗記録整合: `PASS`
+- 最終判定: `PASS / completed`
 
 ## 次工程
-Topic 11の最終QAを再判定する。固定5問・27答案要素、完成後独立再解答 `27 / 27 PASS`、必須成果物、PDF/PPTX QA、練習QA、SPEC境界、進捗記録整合を全件確認し、PASSの場合のみ `completed`、完成数 `11 / 39` とする。
+Topic 12「300系③ VVVFインバータと誘導機制御」の制作前EXAM_ALIGNMENT。一次・二次を合わせ原則5問以上を公式過去問から調査し、二次対象論点で確認できる記述問題を含め、本文制作前に固定する。
