@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `9 / 16`
-- current_status: `topic_10_final_qa_needs_revision`
+- current_status: `topic_10_source_progress_synced`
 - last_completed_topic: `09 新幹線はどうやって電気で止まる？`
 - active_topic: `10 新幹線の速度はどう自動制御される？`
-- next_start: Topic 10練習source末尾の旧次工程1箇所だけを実成果物へ同期し、その後に最終QAを再実施する
+- next_start: Topic 10の最終QAを再実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -20,7 +20,7 @@
 - [x] 07 GTO→IGBT→SiCで何が変わった？ — 品質ゲートPASS / completed
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
-- [ ] 10 新幹線の速度はどう自動制御される？ — 技術内容・固定5件・完成後blind独立再解答・成果物QAはPASS。最終QAは進捗記録1箇所の不整合により `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 10 新幹線の速度はどう自動制御される？ — 技術内容・固定5件・完成後blind独立再解答・成果物QAはPASS。最終QAで指摘された練習source末尾の旧進捗記録を同期済み。最終QA再実施待ち
 - [ ] 11〜16 — 未完了
 
 ## Topic 10 EXAM_ALIGNMENT
@@ -59,17 +59,18 @@ R7上問13、R6下問13、R6上問13、R5下問13、R5下問18(b)、R4上問15(b
 - 解説本文＋3段階例題: 完成
 - 固定5件の本文マッピング: `5 / 5 全件`
 - 解説PDF: `topics/10_automatic_control/10_automatic_control_explanation.pdf` — A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`
-- 練習問題source: `topics/10_automatic_control/10_automatic_control_practice.md` — 12問、全問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`
+- 練習問題source: `topics/10_automatic_control/10_automatic_control_practice.md` — 12問、全問五肢択一、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`、末尾進捗記録を実成果物へ同期済み
 - 練習PDF: `topics/10_automatic_control/10_automatic_control_practice.pdf` — A4縦6ページ、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`
 - 解説画像PowerPoint: `topics/10_automatic_control/10_automatic_control_images.pptx` — 16:9・4枚、表示QA `4 / 4 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`
 - 独立再解答前ゲート: `topics/10_automatic_control/10_automatic_control_blind_reanswer_gate.md` — `BLIND_REANSWER_READY`
 - 完成後独立再解答: `(4),(3),(5),(1),(2)` / `5 / 5 PASS`
 - 教材外・固定範囲外知識による補完: `0件`
-- 最終QA: `NEEDS_REVISION / IN_PROGRESS`（練習source末尾の旧次工程1箇所のみFAIL）
+- 最終QA: 前回 `NEEDS_REVISION / IN_PROGRESS`。唯一のblockerだった練習source末尾の旧進捗記録は解消済み。再判定待ち
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 
 ## Topic 10 最終QA
+前回判定時:
 - 必須成果物の実在: `PASS`
 - 固定EXAM_ALIGNMENT 5件: `PASS`
 - 完成後blind独立再解答: `5 / 5 PASS`
@@ -81,13 +82,12 @@ R7上問13、R6下問13、R6上問13、R5下問13、R5下問18(b)、R4上問15(b
 - 固定範囲外論点追加: `0件`
 - 未確認実車値追加: `0件`
 - source進捗整合: `FAIL`（`10_automatic_control_practice.md` 末尾1箇所）
-- 残存旧記録: `次工程: このsourceを基に練習PDFを作成し、全ページ表示QA・文字抽出QAを行う。`
-- 実態: 練習PDFは既に完成し、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
-- 完成数: `9 / 16` のまま
+
+今回、その旧進捗記録を実態へ同期した。教材本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTXは変更していない。最終QA自体の再判定は次工程とする。
 
 ## 今回進捗
-Topic 10の最終QAを実施した。技術内容、固定5件への接続、完成後blind独立再解答 `5 / 5 PASS`、必須成果物、PDF/PPTX QA、固定範囲境界は全件PASS。唯一のFAILは練習source末尾の旧次工程1箇所で、実在する練習PDF・QAより進捗記録が古い。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTXは変更していない。
+Topic 10を1段階進め、`topics/10_automatic_control/10_automatic_control_practice.md` 末尾に残っていた旧次工程だけを実成果物へ同期した。練習PDFは既に完成済みで、200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTXは変更していない。
 
 ## 次工程
-`topics/10_automatic_control/10_automatic_control_practice.md` 末尾の旧次工程1箇所だけを実成果物へ同期する。その後にTopic 10の最終QAを再実施する。
+Topic 10の最終QAを再実施する。
