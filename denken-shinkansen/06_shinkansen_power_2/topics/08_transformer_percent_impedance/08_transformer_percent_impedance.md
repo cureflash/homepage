@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_08_source_progress_synced`
+`completed`
 
-制作前EXAM_ALIGNMENT、制作前独立検証、解説本文＋3段階例題、解説PDF、練習問題・完全解説、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA実施まで完了済み。最終QAでは技術内容・過去問対応・成果物QA・固定範囲はPASSで、未完了理由は進捗記録のみだったため、本sourceの旧状態・旧次工程を実成果物へ同期した。固定EXAM_ALIGNMENT、正式4過去問、固定9項目、教材本文・例題は変更していない。
+制作前EXAM_ALIGNMENT、制作前独立検証、解説本文＋3段階例題、解説PDF、練習問題・完全解説、練習PDF、解説画像PowerPoint、完成後独立再解答、最終QA再判定まで完了済み。技術内容・一次二次の過去問対応品質ゲート・必須成果物・表示QA・進捗整合・固定範囲を全件再確認し、`PASS / completed` とした。固定EXAM_ALIGNMENT、正式4過去問、固定9項目、教材本文・例題は変更していない。次工程はTopic 09「ATき電はなぜ長距離へ電気を送れる？」の制作前EXAM_ALIGNMENTである。
 
 ## SPEC固定範囲
 
@@ -654,4 +654,4 @@ R7二次問3型では、`P+jQ` から電流フェーザを作り、`ZI` を複�
 
 ## 次工程
 
-最終QAを再判定する。技術内容、一次・二次の過去問対応品質ゲート、必須成果物、表示QA、進捗整合、固定範囲境界を再確認し、全件PASSなら `completed` とする。固定EXAM_ALIGNMENT、正式4過去問、固定9項目、教材本文・例題は変更しない。
+Topic 09「ATき電はなぜ長距離へ電気を送れる？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 09固定範囲だけを正本とし、二種一次・二次の公式過去問を直近年度から調査して正式固定する。
