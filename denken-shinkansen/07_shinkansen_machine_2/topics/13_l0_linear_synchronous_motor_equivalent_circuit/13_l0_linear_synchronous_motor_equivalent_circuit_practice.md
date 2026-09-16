@@ -468,6 +468,22 @@ JR東海一次資料で確認できる範囲では、ガイドウェイの推進
 - 未確認L0実値追加: `0件`
 - リニア同期モータ直接対応の公式過去問捏造: `0件`
 
+# 練習PDF QA
+
+- `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_practice.pdf`: `completed`
+- A4縦4ページ
+- 一次10問＋二次5問・完全解説を収録
+- 200 dpi全4ページ Visual QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- 問1〜問15の全設問存在確認: `15 / 15 PASS`
+- 数値・論理再検算: `15 / 15 PASS`
+- 一次正答一意性: `10 / 10 PASS` を維持
+- 固定5過去問・22答案要素: `22 / 22` 接続を維持
+- Topic 14先取り: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認L0実値追加: `0件`
+- SHA-256: `92201e0833c5429c591de92c78c9fe7d7e9f27a638bf1b3110b63a91d1037996`
+
 # 次工程
 
-固定EXAM_ALIGNMENT、解説本文・解説PDF、本練習問題sourceの固定範囲を維持し、練習PDFを作成する。
+練習PDFは完成済み。固定EXAM_ALIGNMENTとTopic 13固定範囲を変更せず、解説画像PowerPointを作成する。
