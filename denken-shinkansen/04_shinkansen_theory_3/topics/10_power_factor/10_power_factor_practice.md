@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `10`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `COMPLETED`
 - 更新日: 2026-09-16
 
 ## 固定範囲
@@ -299,4 +299,4 @@ Q10の並列コンデンサに実効値200 Vが加わる。必要な容量性リ
 
 ## 次工程
 
-練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答まで完了。固定5問・6答案要素は `5 / 5問・6 / 6答案要素 PASS`。次は最終QAを再実施する。
+最終QAを再実施し `PASS / completed`。固定5問・6答案要素の完成後独立再解答 `5 / 5問・6 / 6答案要素 PASS`、練習15問・PDF/PPTX QA・SPEC境界・進捗記録整合性を全件PASS確認済み。次はTopic 11「電力会社の三相交流をどう新幹線へ渡す？」の制作前EXAM_ALIGNMENTへ進む。
