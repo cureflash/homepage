@@ -6,9 +6,9 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は32/38。01〜32がPASS。active topicは33 `COMTRAC① 東海道新幹線全体をどう監視する？`。
 
 ## 今回進捗
-Topic 33の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。固定5問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物、練習QA、表示QA、固定範囲境界はPASS。
+Topic 33を1段階進め、前回最終QAで指摘された主sourceの旧進捗記録を実成果物へ同期した。差分は `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md` の冒頭 `## 状態` と冒頭・末尾の `次工程` のみ。完成後blind独立再解答 `5 / 5 PASS` を反映し、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
 
-未完了理由は主source `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md` の進捗記録2箇所のみ。冒頭 `## 状態` が独立再解答前の表現のままで、冒頭および末尾の `次工程` が「blind独立再解答する」のまま残っている。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXには修正要求なし。
+前回最終QA記録は `NEEDS_REVISION / IN_PROGRESS` の履歴として保持する。指摘修正は完了したため、次は固定EXAM_ALIGNMENTと完成済み成果物を変更せず最終QAを再実施する。
 
 記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_final_qa.md`
 
@@ -48,7 +48,7 @@ Topic 33の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した
 - COMTRAC内部の未確認データ形式、bit割当、更新周期、伝送速度、通信プロトコル、具体的アルゴリズム
 
 ## 現在の状態
-- `current_status`: `topic_33_final_qa_needs_revision`
+- `current_status`: `topic_33_source_progress_synced`
 - 完成数: 32/38
 - 01〜32: PASS
 - Topic 33制作前EXAM_ALIGNMENT: 完了
@@ -56,9 +56,11 @@ Topic 33の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した
 - Topic 33練習source/PDF: 完了
 - Topic 33 PowerPoint: 完了
 - Topic 33完成後blind独立再解答: `5 / 5 PASS`
-- Topic 33最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- Topic 33前回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 前回指摘: 主source進捗記録のみ
+- 指摘修正: 完了
 - 技術内容・成果物QA: PASS
-- 未完了理由: 主sourceの進捗記録2箇所のみ
+- 現在の未完了理由: 最終QA再判定待ち
 
 ## 次の正確な開始点
-主source `topics/33_comtrac_train_tracking/33_comtrac_train_tracking.md` の冒頭 `## 状態` と末尾 `# 次工程` だけを、独立再解答 `5 / 5 PASS` 完了後の現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+固定EXAM_ALIGNMENT、技術本文、問題、正答、PDF/PPTXを変更せず、Topic 33の最終QAを再実施する。
