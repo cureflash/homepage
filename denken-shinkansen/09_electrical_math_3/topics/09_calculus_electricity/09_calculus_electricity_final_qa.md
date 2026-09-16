@@ -6,19 +6,21 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`09_electrical_math_3/SPEC.md` に照らして最終QAを実施した。技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、必須成果物、記録済み表示QA、仕様境界はPASS。未完了理由はsource進捗記録2箇所の不整合だけである。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`09_electrical_math_3/SPEC.md` に照らして最終QAを再判定した。仕様追加はしていない。
+
+初回最終QAで唯一FAILだった進捗記録2箇所は、主source `09_calculus_electricity.md` と練習source `09_calculus_electricity_practice.md` の双方で、再判定前に実在成果物と現在地へ同期済みである。技術本文、固定EXAM_ALIGNMENT、数式、問題・正答、PDF/PPTX、完成後独立再解答結果は変更していない。
 
 ## 必須成果物の実在確認
 
-GitHub正本上で次を確認した。
+GitHub正本上で次を再確認した。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| 主source Markdown | `38d13038aa17b4727947877b255ed8cd908fcfaa` | PASS |
+| 主source Markdown | `065deaa9e44f286440d96211ac1edb0bda2dbe62` | PASS |
 | 解説PDF | `7e8b4a62009a889b0a01af5ea9b87243d86e6b1e` | PASS |
-| 練習source | `f375b45930e8d16f9e80adc34985fc5a1d786b2e` | PASS |
+| 練習source | `d655786962d2ad61f5443cc9d840c4a65a18afeb` | PASS |
 | 練習PDF | `09017b8c901c31af932dbb397d0c1a63efca90a4` | PASS |
 | 解説画像PowerPoint | `0196731a85a5200b6ef2b295022cc150f4516305` | PASS |
 
@@ -69,14 +71,14 @@ GitHub正本上で次を確認した。
 
 新幹線接続は、走行電力の消費電力量、回生電力の回収電力量、牽引力の仕事の3点だけ。指数関数・RC/RL過渡・一階微分方程式はTopic 10、一般特性曲線体系はTopic 11へ残している。未確認新幹線実値追加0件。
 
-## FAIL項目
+## 初回FAIL項目の解消確認
 
-技術内容ではなく進捗記録だけに2件の不整合がある。
+初回FAILだった進捗記録2箇所を再確認した。
 
-1. 主source `09_calculus_electricity.md` は冒頭と末尾で `Topic 09 は in_progress。次工程は最終QA` としている。最終QAを実施した現時点では旧進捗である。
-2. 練習source `09_calculus_electricity_practice.md` 末尾は `このsourceを正本として練習PDFを作成` を次工程としているが、練習PDF、PowerPoint、完成後独立再解答はすでに完了している。
+1. 主source冒頭 `## 状態` と末尾 `## 次工程` は、初回最終QA後の進捗記録同期まで完了し、次工程が最終QA再判定である実態へ同期済み。
+2. 練習source末尾 `## 次工程` は、練習PDF・PowerPoint・完成後独立再解答・初回最終QAまで完了し、次工程が最終QA再判定である実態へ同期済み。
 
-両方とも教材内容・問題・正答・固定EXAM_ALIGNMENTの欠陥ではない。次工程で進捗記録だけを実成果物へ同期し、その後に最終QAを再判定する。
+再判定時点で、初回FAIL原因は解消している。
 
 ## 最終判定
 
@@ -90,6 +92,7 @@ GitHub正本上で次を確認した。
 - 固定範囲外追加: 0件
 - 未確認実車値追加: 0件
 - 仕様境界: PASS
-- source進捗整合: FAIL（2箇所）
+- source進捗整合: PASS
+- 初回FAIL原因の解消: PASS
 
-したがって Topic 09 は `NEEDS_REVISION / IN_PROGRESS`。系列完成数は `8 / 12` のまま。次工程は主source・練習sourceの進捗記録2箇所だけを現在地へ同期する。
+したがって Topic 09 は `PASS / completed`。系列完成数は `9 / 12`。次の未完了テーマは Topic 10「指数関数・一階微分方程式入門」。
