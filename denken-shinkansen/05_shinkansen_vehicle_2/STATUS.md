@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `10 / 39`
-- current_status: `topic_11_final_qa_needs_progress_sync`
+- current_status: `topic_11_source_progress_synced`
 - last_completed_topic: `10 300系① 誘導電動機等価回路`
 - active_topic: `11 300系② PWMコンバータ`
-- next_start: 主source2箇所・練習source1箇所の旧進捗記録だけを実成果物へ同期し、その後Topic 11の最終QAを再判定する
+- next_start: Topic 11の最終QAを再判定し、全件PASSの場合のみ `completed` とする
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -21,7 +21,7 @@
 - [x] 08 位相制御と平均直流電圧 — PASS
 - [x] 09 直流機方式の損失・熱設計 — PASS
 - [x] 10 300系① 誘導電動機等価回路 — PASS
-- [ ] 11 300系② PWMコンバータ — FINAL_QA_NEEDS_PROGRESS_SYNC / IN_PROGRESS
+- [ ] 11 300系② PWMコンバータ — SOURCE_PROGRESS_SYNCED / IN_PROGRESS
 
 ## Topic 11 固定EXAM_ALIGNMENT
 - source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
@@ -62,9 +62,10 @@
   - 教材外知識補完 `0件`
   - 固定EXAM_ALIGNMENT変更 `0件`
 - 最終QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_final_qa.md`
-  - 判定: `NEEDS_REVISION / IN_PROGRESS`
+  - 直前判定: `NEEDS_REVISION / IN_PROGRESS`
   - 技術内容・固定過去問・独立再解答・必須成果物・表示QA・練習QA・SPEC境界: `PASS`
-  - 進捗記録整合: `FAIL`（主source2箇所＋練習source1箇所の旧工程表現）
+  - 直前FAILだった進捗記録3箇所: `3 / 3 同期済み`
+  - 最終QA再判定: 未実施
 
 ## Topic 11 固定範囲
 - PWMコンバータ
@@ -90,5 +91,14 @@ SPEC指定可視化:
 - Topic 12〜13先取り: `0件`
 - 未確認300系実車値追加: `0件`
 
+## 今回の進捗同期
+- 主source冒頭状態欄: 同期済み
+- 主source末尾品質確認: 同期済み
+- 練習source末尾独立QA: 同期済み
+- 技術本文変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 数式・例題・練習問題・正答変更: `0件`
+- PDF/PPTX変更: `0件`
+
 ## 次工程
-主source `11_300series_pwm_converter.md` の冒頭状態欄・末尾品質確認、練習source `11_300series_pwm_converter_practice_source.md` の末尾独立QAに残る旧進捗記録3箇所だけを現状へ同期する。技術本文・固定EXAM_ALIGNMENT・数式・例題・問題・PDF/PPTXは変更しない。同期後にTopic 11の最終QAを再判定する。
+Topic 11の最終QAを再判定する。固定5問・27答案要素、完成後独立再解答 `27 / 27 PASS`、必須成果物、PDF/PPTX QA、練習QA、SPEC境界、進捗記録整合を全件確認し、PASSの場合のみ `completed`、完成数 `11 / 39` とする。
