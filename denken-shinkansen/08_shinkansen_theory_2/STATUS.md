@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 10 / 21
-- current_status: `topic_11_powerpoint_complete`
+- current_status: `topic_11_independent_reanswer_complete`
 - last_completed_topic: `10 北陸新幹線で50Hzと60Hzが変わると何が起きる？`
 - active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
-- next_start: Topic 11 完成後独立再解答
+- next_start: Topic 11 最終QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -127,19 +127,22 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint＋表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答: `25 / 25 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 11「ATCはなぜ特定の周波数を見分けられる？」の解説画像PowerPointを完成し、表示・overflow・PPTX整合性QAを実施した。
+Topic 11「ATCはなぜ特定の周波数を見分けられる？」の完成後独立再解答を実施した。
 
-- PowerPoint: `topics/11_atc_frequency_filter/11_atc_frequency_filter_images.pptx`
-- 16:9・5枚
-- 全スライド表示QA: `5 / 5 PASS`
-- overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- 固定一次5問・25小問の5出題系統を可視化
+- 記録: `topics/11_atc_frequency_filter/11_atc_frequency_filter_reanswer.md`
+- 固定一次5問・25小問を完成教材の範囲だけで式から再導出
+- H28問8: `ハ, ヲ, ヨ, ニ, ヌ`
+- H27問2: `ホ, チ, ワ, ヨ, ニ`
+- H25問3: `ハ, ル, イ, ロ, ニ`
+- H24問7: `ニ, ヨ, ヌ, イ, ヲ`
+- H22問4: `ハ, ヨ, チ, ワ, ヘ`
+- 固定済み公式解答との照合: `25 / 25 PASS`
+- 教材外知識補完: `0件`
 - 二次採用: `0問`、二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 - 未確認ATC実設備値・実回路追加: `0件`
@@ -147,4 +150,4 @@ Topic 11「ATCはなぜ特定の周波数を見分けられる？」の解説画
 
 ## 判定
 
-Topic 11は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `10 / 21`。次工程は完成後独立再解答。
+Topic 11は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `10 / 21`。次工程は最終QA。
