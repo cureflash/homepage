@@ -1,25 +1,26 @@
 # HANDOFF - 新幹線・電験二種「理論」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 現在地
 
 Topic 01〜12は `PASS / completed`。完成数は `12 / 21`。
 
-current_status: `topic_13_explanation_source_complete`
+current_status: `topic_13_explanation_pdf_complete`
 
 active_topic: `13 新幹線の交流電力を複素数で扱う`
 
-Topic 13は解説本文＋3段階例題まで完了。固定公式過去問は一次3問・15小問＋二次1問・4答案要素で、本文・例題への要求接続は `19 / 19`。制作前独立再解答 `19 / 19 PASS`、二次採用1問・4答案要素、二次数合わせ0件を維持している。
+Topic 13は解説本文＋3段階例題、解説PDF＋表示QAまで完了。固定公式過去問は一次3問・15小問＋二次1問・4答案要素で、要求接続は `19 / 19`。制作前独立再解答 `19 / 19 PASS`、二次採用1問・4答案要素、二次数合わせ0件を維持している。
 
-次工程はTopic 13の解説PDF＋表示QA。
+次工程はTopic 13の練習問題source＋練習PDF。
 
 ## Topic 13 成果物
 
 - source: `topics/13_complex_power/13_complex_power.md`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `EXPLANATION_PDF_COMPLETE`
 - completion: `in_progress`
-- 解説PDF: 未作成
+- 解説PDF: `topics/13_complex_power/13_complex_power_explanation.pdf`
+- 解説PDF QA: `topics/13_complex_power/13_complex_power_explanation_pdf_qa.md`
 - 練習source/PDF: 未作成
 - PowerPoint: 未作成
 - 完成後独立再解答: 未実施
@@ -139,6 +140,24 @@ Topic 13は解説本文＋3段階例題まで完了。固定公式過去問は�
 - 未確認新幹線実設備値追加: `0件`
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+## Topic 13 解説PDF QA
+
+- PDF: `topics/13_complex_power/13_complex_power_explanation.pdf`
+- QA記録: `topics/13_complex_power/13_complex_power_explanation_pdf_qa.md`
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 固定4問・19答案要素への接続: `19 / 19`
+- 3段階例題: `3 / 3`
+- 二次採用: `1問・4答案要素`
+- 二次数合わせ: `0件`
+- 電力円線図の詳細導出追加: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 14以降の先取り: `0件`
+- 未確認新幹線主回路・変電設備値追加: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ## Topic 12 成果物
 
@@ -420,4 +439,4 @@ Topic 12「三相交流を新幹線へ渡す」は `PASS / completed`。
 
 ## 次に行うこと
 
-Topic 13「新幹線の交流電力を複素数で扱う」の解説PDF＋表示QAを作成する。固定4問・19答案要素への接続と3段階例題を維持し、送電線単位法・詳細な電力円線図導出・Topic 14以降を追加しない。
+Topic 13「新幹線の交流電力を複素数で扱う」の練習問題source＋練習PDFを作成する。固定4問・19答案要素への接続を維持し、送電線単位法・詳細な電力円線図導出・Topic 14以降を追加しない。
