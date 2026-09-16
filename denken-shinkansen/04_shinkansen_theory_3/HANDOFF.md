@@ -4,36 +4,37 @@
 
 ## 現在地
 
-Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は練習問題source・練習PDF＋QAまで完了した。
+Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は解説画像PowerPoint＋QAまで完了した。
 
 - 完成数: `11 / 14`
 - last completed: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active topic: `12 300系はなぜVVVFになった？`
-- current status: `topic_12_practice_pdf_complete`
-- next start: Topic 12の解説画像PowerPointを作成する
+- current status: `topic_12_powerpoint_complete`
+- next start: Topic 12の完成後公式過去問独立再解答を実施する
 
 ## 今回進捗
 
-Topic 12の練習問題source・練習PDFを作成し、QAを完了した。
+Topic 12の解説画像PowerPointを作成し、表示・ファイルQAを完了した。
 
-- source: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_practice.md`
-- PDF: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_practice.pdf`
-- QA: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_practice_qa.md`
-- 全15問・全問五肢択一
-- 基礎4問 / 本試験標準8問 / 複合・応用3問
-- 正答位置 `(1)`〜`(5)`: 各3問
-- 正答一意性: `15 / 15 PASS`
-- 数値・単位再計算: `3 / 3 PASS`（Q8, Q9, Q14）
-- 固定7問要求への接続: `7 / 7 PASS`
-- A4縦4ページ
+- PowerPoint: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_images.pptx`
+- QA: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_images_qa.md`
+- 画面比率: 16:9
+- スライド数: 4
+- Slide 1: p/n型、pn接合、順逆バイアス、空乏層
+- Slide 2: BJT静特性、`β ≈ ΔIC/ΔIB`、`ro ≈ ΔVCE/ΔIC`
+- Slide 3: nチャネルJFETの逆ゲートバイアス→空乏層拡大→チャネル狭窄→ドレーン電流減少
+- Slide 4: BJT/FET基本比較、系列SPEC固定の技術史入口、固定7問対応
+- 固定7問要求の可視化: `7 / 7 PASS`
 - 200 dpi表示QA: `4 / 4 PASS`
-- クリッピング・重なり・文字化け: `0件`
+- shape-bound overflow: `0件`
+- 文字欠け・重なり・文字化け: `0件`
 - 文字抽出QA: `PASS`
+- ZIP/XML整合性: `PASS`
 - 固定範囲外追加: `0件`
 - 未確認300系実車回路・数値依存: `0件`
-- PDF SHA-256: `1b1ccededa8b1408173bd41d610a745bdfb7d41fab778808362a606c5bb2b5f4`
+- PowerPoint SHA-256: `7dc6c221a04f6bef8658eb7825e8b68c0290af36ed8446d26f22d995169dd69f`
 
-固定過去問の正答番号・個別最終数値は、完成後独立再解答の先読み汚染を避けるためsource/HANDOFFへ保存していない。
+公式過去問の図は複製せず、独自の教材用模式図とした。固定過去問の正答番号・個別最終数値は、完成後独立再解答の先読み汚染を避けるためsource/HANDOFFへ保存していない。
 
 ## Topic 12 SPEC固定範囲
 
@@ -121,14 +122,12 @@ SiC → 低損失化
 
 ## 次に行うこと
 
-Topic 12の解説画像PowerPointを作成する。固定EXAM_ALIGNMENTは変更しない。
+Topic 12の完成後公式過去問独立再解答を実施する。固定EXAM_ALIGNMENTは変更しない。
 
-- p/n型、pn接合、順逆バイアスと空乏層の関係を教材用模式図で可視化する
-- BJT静特性から `β`・`ro` を読む手順を教材用グラフで可視化する
-- nチャネルJFETの「逆ゲートバイアス→空乏層拡大→チャネル狭窄→ドレーン電流減少」を可視化する
-- BJT/FETの基本比較を可視化する
-- 公式過去問の図を複製せず、独自の教材用模式図とする
-- Topic 13のPWM・インバータ波形へ進まない
+- 保存済み正答番号・個別最終数値を先に見ず、固定7問を完成教材だけで再解答する
+- 必要公式・判断根拠・途中計算が教材内だけで再構成できることを確認する
+- 教材外知識の補完があればFAILとする
+- 結果を独立再解答記録へ残す
 
 ## 固定ルール
 
