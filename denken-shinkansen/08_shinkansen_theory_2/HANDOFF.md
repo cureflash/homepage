@@ -6,16 +6,17 @@
 
 Topic 01〜10は `PASS / completed`。完成数は `10 / 21`。
 
-current_status: `topic_11_explanation_source_complete`
+current_status: `topic_11_explanation_pdf_complete`
 
 active_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 
-Topic 11は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了。次工程は解説PDF＋表示QA。
+Topic 11は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QAまで完了。次工程は練習問題source＋練習PDF。
 
-## Topic 11 source
+## Topic 11 成果物
 
-- `topics/11_atc_frequency_filter/11_atc_frequency_filter.md`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- source: `topics/11_atc_frequency_filter/11_atc_frequency_filter.md`
+- 解説PDF: `topics/11_atc_frequency_filter/11_atc_frequency_filter_explanation.pdf`
+- stage: `EXPLANATION_PDF_COMPLETE`
 - completion: `IN_PROGRESS`
 
 ## Topic 11 固定範囲
@@ -99,6 +100,22 @@ ATC・軌道回路は入口に使うが、実車ATC回路を推測して再現�
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
+## Topic 11 解説PDF QA
+
+- PDF: `topics/11_atc_frequency_filter/11_atc_frequency_filter_explanation.pdf`
+- A4縦2ページ
+- 200 dpi全ページ表示QA: `2 / 2 PASS`
+- 文字抽出QA: `PASS`
+- 固定一次5問・25小問への接続: `25 / 25`
+- 3段階例題: `3 / 3`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認ATC実設備値追加: `0件`
+- Topic 12以降の先取り: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
 ## 参考資料
 
 参照日: 2026-09-16
@@ -130,6 +147,7 @@ Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は 
 - 完成数: `10 / 21`
 - Topic 11 制作前EXAM_ALIGNMENT: `PASS / completed`
 - Topic 11 解説source: `PASS / completed`
+- Topic 11 解説PDF: `PASS / completed`
 - Topic 11 固定一次: `5問 / 25小問`
 - Topic 11 二次採用: `0問`
 - Topic 11 二次数合わせ: `0件`
@@ -138,4 +156,4 @@ Topic 10「北陸新幹線で50Hzと60Hzが変わると何が起きる？」は 
 
 ## 次に行うこと
 
-Topic 11主sourceを正本として解説PDFを作成し、全ページ表示QAと文字抽出QAを実施する。
+Topic 11の練習問題sourceを作成し、練習PDFまで完成させて表示・文字抽出QAを実施する。
