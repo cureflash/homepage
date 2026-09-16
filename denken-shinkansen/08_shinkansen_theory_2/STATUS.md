@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「理論」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 12 / 21
-- current_status: `topic_13_explanation_source_complete`
+- current_status: `topic_13_explanation_pdf_complete`
 - last_completed_topic: `12 三相交流を新幹線へ渡す`
 - active_topic: `13 新幹線の交流電力を複素数で扱う`
-- next_start: Topic 13 解説PDF＋表示QA
+- next_start: Topic 13 練習問題source＋練習PDF
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -182,7 +182,7 @@
 ## Topic 13 制作進捗
 - [x] 制作前EXAM_ALIGNMENT: 一次3問・15小問＋二次1問・4答案要素、関連候補8件調査
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋表示QA
+- [x] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
 - [ ] 完成後独立再解答
@@ -190,19 +190,19 @@
 
 ## 今回進めた内容
 
-Topic 13「新幹線の交流電力を複素数で扱う」の解説本文＋3段階例題を完成した。
+Topic 13「新幹線の交流電力を複素数で扱う」の解説PDF＋表示QAを完成した。
 
-- 固定4問・19答案要素を本文・例題へ `19 / 19` 接続
-- `S=VI*` の共役理由、P/Q/|S|、電力三角形、遅れ/進み符号を説明
-- `S=|I|^2Z`、`S=|V|^2Y*`、フェーザ/アドミタンスから平均有効電力へ接続
-- 複数負荷のP/Q合算、総合力率、力率改善、皮相電力上限、目標力率から必要Qを逆算する手順を収録
-- 3段階例題 `3 / 3` を独立再計算し整合確認
-- 電力円線図は概念のみに限定し、送電線単位法・詳細導出を追加していない
+- PDF: `topics/13_complex_power/13_complex_power_explanation.pdf`
+- A4縦4ページ、200 dpi全ページ表示QA `4 / 4 PASS`
+- 文字抽出QA `PASS`
+- 固定4問・19答案要素への接続 `19 / 19`
+- 3段階例題 `3 / 3`
 - 二次採用: `1問・4答案要素`、二次数合わせ: `0件`
+- 電力円線図は概念のみに限定し、送電線単位法・詳細導出追加 `0件`
 - SPEC固定範囲外追加: `0件`
 - Topic 14以降の先取り: `0件`
 - 未確認新幹線主回路・変電設備値追加: `0件`
 
 ## 判定
 
-Topic 13は `PASS / EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は解説PDF＋表示QA。
+Topic 13は `PASS / EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は練習問題source＋練習PDF。
