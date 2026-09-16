@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `12 / 22`
-- current_status: `topic_13_practice_pdf_complete`
+- current_status: `topic_13_powerpoint_complete`
 - last_completed_topic: `12 N700Sの6極モーターを設計側から見る`
 - active_topic: `13 L0系のリニア同期モータを等価回路で考える`
-- next_start: Topic 13 解説画像PowerPoint
+- next_start: Topic 13 独立再解答前ゲート
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -469,8 +469,22 @@
 - [x] Topic 14先取り・固定範囲外論点・未確認L0実値追加 `0件`
 - [x] SHA-256 `92201e0833c5429c591de92c78c9fe7d7e9f27a638bf1b3110b63a91d1037996`
 
+## Topic 13 解説画像PowerPoint
+- [x] `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_images.pptx`
+- [x] 16:9・4枚
+- [x] 同期機→リニア同期モータの概念対応と `N_s=120f/P` を可視化
+- [x] 電機子反作用（増磁・減磁・交差磁化）と `X_s=X_a+X_l` を可視化
+- [x] `V`,`I`,`E`,`jX_sI` の1相分等価回路・フェーザを可視化
+- [x] 固定一次4問＋二次1問・22答案要素への接続と固定範囲境界を可視化
+- [x] 1601×900全4枚表示QA `4 / 4 PASS`
+- [x] overflow `0件`
+- [x] ZIP整合性 PASS
+- [x] 固定一次4問＋二次1問・22答案要素を維持
+- [x] Topic 14先取り・固定範囲外論点・未確認L0実値追加 `0件`
+- [x] SHA-256 `7f74fb98811164f11b3c8ca6a3b2237eadc8f0cd2a9ae4ea73262de7d1fa06cc`
+
 ## 今回進めた内容
-Topic 13「L0系のリニア同期モータを等価回路で考える」の練習PDFを完成・GitHub正本へ反映。A4縦4ページ、一次10問＋二次5問・完全解説、200 dpi全4ページ表示QA `4 / 4 PASS`、文字抽出QA PASS、問1〜15存在 `15 / 15 PASS`。固定一次4問＋二次1問・22答案要素と固定範囲を維持し、仕様外追加・Topic 14先取り・未確認L0実値追加は0件。
+Topic 13「L0系のリニア同期モータを等価回路で考える」の解説画像PowerPointを完成・GitHub正本へ反映。16:9・4枚、1601×900全4枚表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS。固定一次4問＋二次1問・22答案要素と固定範囲を維持し、仕様外追加・Topic 14先取り・未確認L0実値追加は0件。
 
 ## 判定
-Topic 13は `topic_13_practice_pdf_complete / IN_PROGRESS`。完成数は `12 / 22`。次は解説画像PowerPoint。
+Topic 13は `topic_13_powerpoint_complete / IN_PROGRESS`。完成数は `12 / 22`。次は独立再解答前ゲート。
