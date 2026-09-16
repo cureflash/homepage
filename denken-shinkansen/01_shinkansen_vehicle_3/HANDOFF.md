@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は32/38。01〜32がPASS。active topicは33 `COMTRAC① 東海道新幹線全体をどう監視する？`。
 
 ## 今回進捗
-Topic 33の完成後blind独立再解答前ゲートを監査した。必須先読み対象の `STATUS.md`・`HANDOFF.md`・主sourceに制作前正答番号または完成済み導出が残っているため、`BLIND_REANSWER_BLOCKED` と判定し、独立再解答は実施していない。
+Topic 33の完成後blind独立再解答前ゲートを `BLOCKED → READY` にした。必須先読み対象の `STATUS.md`・`HANDOFF.md`・主sourceから、Topic 33固定5問の制作前個別正答番号・完成済み導出結果を除去した。独立再解答自体はこのrunでは実施していない。
 
 記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_blind_gate.md`
 
@@ -29,7 +29,7 @@ Topic 33の完成後blind独立再解答前ゲートを監査した。必須先�
 4. R4下 理論 問14 — 標本化・量子化・符号化・ディジタル伝送・A-D変換
 5. R1 機械 問14 — 2進数の加減算・基数変換
 
-制作前独立検証は `5 / 5 PASS`。品質ゲート対象は上記5問から変更しない。
+制作前独立検証は完了済み。完成後blind条件を守るため、個別正答番号・制作前導出結果は必須先読み対象に残さない。品質ゲート対象は上記5問から変更しない。
 
 ## Topic 33 固定範囲境界
 扱う:
@@ -46,14 +46,14 @@ Topic 33の完成後blind独立再解答前ゲートを監査した。必須先�
 - COMTRAC内部の未確認データ形式、bit割当、更新周期、伝送速度、通信プロトコル、具体的アルゴリズム
 
 ## 現在の状態
-- `current_status`: `topic_33_blind_reanswer_blocked`
+- `current_status`: `topic_33_blind_reanswer_ready`
 - 完成数: 32/38
 - 01〜32: PASS
 - Topic 33制作前EXAM_ALIGNMENT: 完了
 - Topic 33解説source/PDF: 完了
 - Topic 33練習source/PDF: 完了
 - Topic 33 PowerPoint: 完了
-- Topic 33完成後blind独立再解答: `BLOCKED`
+- Topic 33完成後blind独立再解答: `READY`
 
 ## 次の正確な開始点
-主source・STATUS・HANDOFFからTopic 33の制作前正答番号・完成済み導出結果だけを除去する。教材本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTXは変更せず、blind再解答前ゲートを `READY` にする。独立再解答自体は、その次の別runで行う。
+完成教材だけを使ってTopic 33固定5問をblind独立再解答し、公式解答との一致・教材外補完0件・固定範囲外補完0件を確認する。
