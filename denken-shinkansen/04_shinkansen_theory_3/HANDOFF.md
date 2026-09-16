@@ -6,33 +6,27 @@
 
 Topic 01〜09は最終QAまでPASSし、`completed`。
 
-Topic 10 `新幹線が使う電力は「W」だけではない` は解説画像PowerPointまで完了した。
+Topic 10 `新幹線が使う電力は「W」だけではない` は完成後公式過去問独立再解答まで完了した。
 
 - 完成数: `9 / 14`
 - last completed: `09 北陸新幹線は50Hzと60Hzをどう走る？`
 - active topic: `10 新幹線が使う電力は「W」だけではない`
-- current status: `topic_10_powerpoint_complete / IN_PROGRESS`
-- next start: Topic 10の完成教材だけで固定5問・6答案要素を独立再解答する
+- current status: `topic_10_independent_reanswer_complete / IN_PROGRESS`
+- next start: Topic 10の最終QAを実施する
 
 ## 今回進捗
 
-Topic 10の解説画像PowerPointを完成した。
+Topic 10の完成後公式過去問独立再解答を完了した。
 
-- PowerPoint: 16:9・4枚
-- Slide 1: `P[W]`・`Q[var]`・`S[VA]`、電力三角形、`S²=P²+Q²`、`cosφ=P/S`
-- Slide 2: 同じ有効電力で力率低下時に皮相電力・電流が増える関係 `I=P/(Vcosφ)`
-- Slide 3: 電流の同相・直交成分、並列抵抗追加後のフェーザ合成、`R-XL`回路の力率
-- Slide 4: 並列コンデンサ／直列`R-L-C`による力率改善、固定5過去問の解法対応
-- 固定5過去問・6答案要素への可視化: `6 / 6`
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- shape-bound overflow: `0件`
-- 文字欠け・重なり・文字化け: `0件`
-- ZIP/XML整合性: `PASS`
-- Topic 11以降の三相・半導体・高調波追加: `0件`
-- 電力科目・法規の設備詳細追加: `0件`
-- 未確認新幹線実車力率・無効電力・補償方式追加: `0件`
-
-完成後独立再解答の先読み汚染を避けるため、制作前検証の正答番号・個別数値解答は必須先読み正本へ保存していない。
+- 固定対象: 公式理論過去問5問・6答案要素
+- 実施条件: 公式解答PDFを先に見ず、完成教材だけで解答を確定した後に公式解答と照合
+- 独立解答列: `(3), (3), (4), (3), (4), (4)`
+- 公式解答列: `(3), (3), (4), (3), (4), (4)`
+- 一致: `5 / 5問・6 / 6答案要素 PASS`
+- 教材外知識補完: `0問`
+- Topic 11以降の三相・半導体・高調波依存: `0問`
+- 未確認新幹線実車力率・無効電力・補償方式依存: `0問`
+- 記録: `topics/10_power_factor/10_power_factor_exam_recheck.md`
 
 ## Topic 10 SPEC固定範囲
 
@@ -70,6 +64,7 @@ cosφ = P / S
    - 力率改善前後の位相角、容量性リアクタンスによる補償
 
 制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
+完成後独立再解答: `5 / 5問・6 / 6答案要素 PASS`
 
 ## 教材で必須となる説明
 
@@ -100,7 +95,6 @@ cosφ = P / S
   - 制作前独立検証: `5 / 5問・6 / 6答案要素 PASS`
   - 解説本文＋3段階例題: 完成
   - 固定過去問要求マッピング: `6 / 6`
-  - status: `EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF: 完成
   - `topics/10_power_factor/10_power_factor_explanation.pdf`
   - QA: `topics/10_power_factor/10_power_factor_explanation_qa.md`
@@ -117,12 +111,15 @@ cosφ = P / S
   - QA: `topics/10_power_factor/10_power_factor_images_qa.md`
   - 16:9・4枚、固定5過去問・6答案要素 `6 / 6`
   - 200 dpi表示 `4 / 4 PASS`、overflow `0件`、ZIP/XML整合性PASS
-- 完成後独立再解答: 未着手
+- 完成後独立再解答: 完成
+  - `topics/10_power_factor/10_power_factor_exam_recheck.md`
+  - `5 / 5問・6 / 6答案要素 PASS`
+  - 教材外補完・後続Topic依存・未確認実車値依存: 0件
 - 最終QA: 未着手
 
 ## 次に行うこと
 
-Topic 10の完成教材だけで固定5問・6答案要素を独立再解答する。保存済み正答を先に見ず、教材外知識で補完しない。
+Topic 10の最終QAを実施する。必須成果物、独立再解答、表示QA、進捗記録整合、SPEC境界を確認し、PASSした場合のみ `completed` とする。
 
 ## 固定ルール
 
