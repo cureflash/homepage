@@ -364,4 +364,4 @@ ANDは全入力が1のときだけ出力1になる。したがって `D=1,S=0,P=
 - Topic 13以降の先取り: `0件`
 
 ## 次工程
-Topic 12の必須成果物と完成後blind独立再解答まで完了済み。次は最終QAを再判定する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更しない。
+Topic 12は最終QA `PASS` でcompleted。系列の次工程はTopic 13「新幹線は主電動機以外もモーターだらけ？」の制作前EXAM_ALIGNMENT。固定EXAM_ALIGNMENT、固定範囲、問題・正答、PDF、PowerPoint、独立再解答結果は変更しない。
