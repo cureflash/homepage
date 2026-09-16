@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 12 / 20
-- current_status: `topic_13_powerpoint_complete`
+- current_status: `topic_13_exam_reanswer_complete`
 - last_completed_topic: `12 固有値の基礎`
 - active_topic: `13 フーリエ級数`
-- next_start: Topic 13の完成教材だけで固定3問・5対象設問を独立再解答し、公式標準解答と照合する
+- next_start: Topic 13の最終QAを実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -165,13 +165,15 @@
 - [x] 練習PDF
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答 `5 / 5 PASS`
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 13 `フーリエ級数` の解説画像PowerPointを完成した。
+Topic 13 `フーリエ級数` の完成後独立再解答を正式に完了した。
+
+前runの正答露出による `NOT_COUNTED` を引き継ぎ、本runでは候補解答を公式標準解答確認前に `ANSWER_LOCKED_BEFORE_REVIEW` としてGitHubへ保存した後に照合した。
 
 固定品質ゲートは変更していない。
 
@@ -180,16 +182,14 @@ Topic 13 `フーリエ級数` の解説画像PowerPointを完成した。
 - H22一次「機械」問3 (3)
 - 合計 `3問・5対象設問`
 
-PowerPoint:
-- 16:9・5枚
-- 固定3問・5対象設問への可視化接続: `5 / 5 PASS`
-- フーリエ係数と対称性、三相線間差での3n次高調波打消し、非正弦波実効値、位相合成、PWM基本波換算を可視化
-- 全5スライド再レンダリング: `5 / 5 PASS`
-- クリッピング・重なり・文字化け: 0件
-- overflow: 0件
-- `slides_test.py`: `PASS`
-- PPTX ZIP/XML整合性: `PASS`
-- PPTX SHA-256: `b898aa5766027fc80fa64a7db8135fa2149fb73fe6cc016df2aaf09ccbeeb226`
+独立再解答:
+- H28 (3): `v_RO` → PASS
+- H28 (4): `E0=sqrt(2/3)Ed` → PASS
+- H24 (4): `π/6` → `ヲ` → PASS
+- H24 (5): `2倍未満の` → `ル` → PASS
+- H22 (3): `sqrt(3)Ed k/(2sqrt(2))` → `ト` → PASS
+- 合計: `5 / 5 PASS`
+- 教材外知識補完: 0件
 
 範囲境界:
 - H20/H19の周辺問題による件数合わせ: 0件
@@ -201,8 +201,8 @@ PowerPoint:
 
 ## 判定
 
-Topic 13は `topic_13_powerpoint_complete / IN_PROGRESS`。
+Topic 13は `topic_13_exam_reanswer_complete / IN_PROGRESS`。
 
 完成数は `12 / 20` のまま。
 
-次は完成教材だけで固定3問・5対象設問を独立再解答し、公式標準解答と照合する。
+次はTopic 13の最終QAを実施する。
