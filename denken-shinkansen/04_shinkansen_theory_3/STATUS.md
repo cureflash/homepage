@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 10 / 14
-- current_status: `topic_10_final_qa_passed`
+- current_status: `topic_11_exam_alignment_complete`
 - last_completed_topic: `10 新幹線が使う電力は「W」だけではない`
 - active_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- next_start: Topic 11の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 11の解説本文＋3段階例題を作成する
 
 ## Topic 01 進捗
 
@@ -183,14 +183,31 @@
 - [x] 主source・練習source進捗記録同期
 - [x] 最終QA PASS
 
+## Topic 11 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] GitHub上のSTATUS / HANDOFF / 既存成果物確認（Topic 11既存成果物なし）
+- [x] 直近年度を優先して公式理論過去問を確認
+- [x] Topic 11固定範囲でゲート対象5問・10答案要素を確定
+- [x] 制作前独立検証 `5 / 5問・10 / 10答案要素 PASS`
+- [x] 不平衡三相・高調波・電力計測・き電変圧器結線等の固定範囲外論点を境界整理
+- [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA PASS
+
 ## 今回進めた内容
 
-Topic 10 `新幹線が使う電力は「W」だけではない` の最終QAを再実施し、`PASS / completed` とした。
+Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の制作前EXAM_ALIGNMENTを完成した。
 
-固定5問・6答案要素の完成後独立再解答 `5 / 5問・6 / 6答案要素 PASS`、教材外補完0件、必須成果物、解説PDF・練習PDF・PowerPointの既存QA、SPEC境界、前回指摘された進捗記録整合性を全件PASS確認した。技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX内容は変更していない。
+系列SPEC固定範囲の平衡三相交流、Y・Δ結線、線間/相電圧・電流、三相電力に限定し、公式理論過去問5問・10答案要素を品質ゲート対象として固定した。制作前独立検証は `5 / 5問・10 / 10答案要素 PASS`。令和7年度の不平衡三相、令和6年度の高調波、電力計測、具体的な新幹線き電変圧器結線等は固定範囲外として除外した。
 
-最終QA判定に合わせ、主source `status` と練習source `stage` を `COMPLETED` へ同期した。
+新規source `topics/11_three_phase_ac/11_three_phase_ac.md` にEXAM_ALIGNMENT、公式出典、参考教材、教材必須説明、境界、制作前独立検証集計を記録した。完成後blind独立再解答の先読み汚染を避けるため、正答番号・個別数値解答は保存していない。
 
 ## 判定
 
-現在 `topic_10_final_qa_passed / completed`。完成数は `10 / 14`。次はTopic 11「電力会社の三相交流をどう新幹線へ渡す？」の制作前EXAM_ALIGNMENTを実施する。
+現在 `topic_11_exam_alignment_complete / IN_PROGRESS`。完成数は `10 / 14`。次はTopic 11の解説本文＋3段階例題を作成する。
