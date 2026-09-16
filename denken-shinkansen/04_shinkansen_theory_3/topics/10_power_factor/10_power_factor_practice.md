@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `10`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - 更新日: 2026-09-16
 
 ## 固定範囲
@@ -299,4 +299,4 @@ Q10の並列コンデンサに実効値200 Vが加わる。必要な容量性リ
 
 ## 次工程
 
-練習問題source・練習PDFまで完成。次は解説画像PowerPointを作成する。
+練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答まで完了。固定5問・6答案要素は `5 / 5問・6 / 6答案要素 PASS`。次は最終QAを再実施する。
