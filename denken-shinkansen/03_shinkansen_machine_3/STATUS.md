@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `10 / 16`
-- current_status: `topic_11_practice_source_complete`
+- current_status: `topic_11_practice_pdf_complete`
 - last_completed_topic: `10 新幹線の速度はどう自動制御される？`
 - active_topic: `11 空転した車輪をどう立て直す？`
-- next_start: Topic 11の練習PDFを作成する
+- next_start: Topic 11の解説画像PowerPointを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -21,7 +21,7 @@
 - [x] 08 N700Sのモーターはなぜ小さくできた？ — 品質ゲートPASS / completed
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
-- [ ] 11 空転した車輪をどう立て直す？ — 練習問題source完成 / 制作中
+- [ ] 11 空転した車輪をどう立て直す？ — 練習PDF完成 / 制作中
 - [ ] 12〜16 — 未完了
 
 ## Topic 11 現在品質状態
@@ -43,6 +43,10 @@
 - 練習問題独立論理QA: `12 / 12 PASS`
 - 練習問題正答一意性QA: `12 / 12 PASS`
 - 練習問題→固定EXAM_ALIGNMENT接続: `1 / 1`
+- 練習PDF: 完成（A4縦3ページ）
+- 練習PDF表示QA: `3 / 3 PASS`
+- 練習PDF文字抽出QA: `PASS`
+- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
 - 教材外・固定範囲外知識による補完: `0件`
 - 件数合わせの固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
@@ -51,11 +55,13 @@
 - R6上 機械 問13: シーケンス制御・インタロック・タイムチャートが固定範囲外のため非選定
 - source: `topics/11_readhesion_control/11_readhesion_control.md`
 - explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
-- PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
+- explanation PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
 - practice source: `topics/11_readhesion_control/11_readhesion_control_practice.md`
+- practice PDF: `topics/11_readhesion_control/11_readhesion_control_practice.pdf`
+- practice PDF QA: `topics/11_readhesion_control/11_readhesion_control_practice_pdf_qa.md`
 
 ## 今回進捗
-Topic 11「空転した車輪をどう立て直す？」の練習問題sourceを完成した。全12問・全問五肢択一、基礎3 / 本試験標準7 / 複合・応用2。固定R4下 機械 問14へ `1 / 1` 接続し、独立論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。固定EXAM_ALIGNMENT・固定範囲・解説本文・解説PDFは変更せず、固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加はいずれも0件。
+Topic 11「空転した車輪をどう立て直す？」の練習PDFを完成した。A4縦3ページ、全12問・全問五肢択一、完全解説 `12 / 12` を収録。200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`、文字切れ・重なり・ページ外はみ出し0件。固定R4下 機械 問14への接続 `1 / 1`、練習12問の問題数・正答、固定EXAM_ALIGNMENT・固定範囲・解説本文・解説PDFは変更していない。固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加はいずれも0件。
 
 ## 次工程
-Topic 11の練習PDFを作成する。固定EXAM_ALIGNMENT、固定範囲、解説本文・解説PDF、練習12問の問題数・正答は変更しない。
+Topic 11の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT、固定範囲、解説本文・解説PDF、練習12問の問題数・正答、練習PDFは変更しない。

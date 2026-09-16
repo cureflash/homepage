@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は品質ゲートPASSでcompleted。active topicは11「空転した車輪をどう立て直す？」。
 
 ## 今回進捗
-Topic 11の練習問題sourceを完成した。全12問・全問五肢択一、基礎3 / 本試験標準7 / 複合・応用2。固定R4下 機械 問14へ `1 / 1` 接続し、独立論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。固定EXAM_ALIGNMENT・固定範囲・解説本文・解説PDFは変更せず、固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加は0件。
+Topic 11の練習PDFを完成した。A4縦3ページ、全12問・全問五肢択一、完全解説 `12 / 12` を収録。200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`、文字切れ・重なり・ページ外はみ出し0件。固定R4下 機械 問14への接続 `1 / 1`、練習12問の問題数・正答、固定EXAM_ALIGNMENT・固定範囲・解説本文・解説PDFは変更していない。固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加は0件。
 
 ## Topic 11 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
@@ -40,14 +40,20 @@ Topic 11の練習問題sourceを完成した。全12問・全問五肢択一、�
 - 練習問題独立論理QA: `12 / 12 PASS`
 - 練習問題正答一意性QA: `12 / 12 PASS`
 - 練習問題→固定EXAM_ALIGNMENT接続: `1 / 1`
+- 練習PDF: A4縦 `3ページ` 完成
+- 練習PDF表示QA: `3 / 3 PASS`
+- 練習PDF文字抽出QA: `PASS`
+- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
 - 実車固有アルゴリズムの推測: `0件`
 - source: `topics/11_readhesion_control/11_readhesion_control.md`
 - explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
-- PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
+- explanation PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
 - practice source: `topics/11_readhesion_control/11_readhesion_control_practice.md`
+- practice PDF: `topics/11_readhesion_control/11_readhesion_control_practice.pdf`
+- practice PDF QA: `topics/11_readhesion_control/11_readhesion_control_practice_pdf_qa.md`
 
 ## 非選定
 - R4上 機械 問14: アナログ/ディジタル信号、A-D/D-A変換、インタフェースが正答要件となりTopic 11固定範囲外。
@@ -71,4 +77,4 @@ Topic 11の練習問題sourceを完成した。全12問・全問五肢択一、�
 - 独立論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。
 
 ## 次に行う
-Topic 11の練習PDFを作成する。固定EXAM_ALIGNMENT、固定範囲、解説本文・解説PDF、練習12問の問題数・正答は変更しない。
+Topic 11の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT、固定範囲、解説本文・解説PDF、練習12問の問題数・正答、練習PDFは変更しない。
