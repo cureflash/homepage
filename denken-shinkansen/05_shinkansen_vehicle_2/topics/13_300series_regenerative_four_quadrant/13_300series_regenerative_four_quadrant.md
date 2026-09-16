@@ -4,7 +4,7 @@
 
 ## 状態
 
-解説本文＋3段階例題を完成。固定一次4問＋二次記述1問、計5問・15答案要素を本文へ `15 / 15` 接続し、SPEC指定8項目・3可視化へ接続した。次は解説PDFを作成する。
+解説本文＋3段階例題、解説PDF＋表示QA・文字抽出QAを完成。固定一次4問＋二次記述1問、計5問・15答案要素を本文・PDFへ `15 / 15` 接続し、SPEC指定8項目・3可視化を反映した。次は練習問題・完全解説sourceを作成する。
 
 本テーマは `SPEC.md` 第13章どおり、次だけを扱う。
 
@@ -458,6 +458,29 @@ H24二次型の教材用仮定として、単相交流電源の実効値を `V_L
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
+## 14. 解説PDF QA
+
+- PDF: `13_300series_regenerative_four_quadrant_explanation.pdf`
+- QA: `13_300series_regenerative_four_quadrant_explanation_pdf_qa.md`
+- A4縦: `PASS`
+- ページ数: `5`
+- 180 dpi表示QA: `5 / 5 PASS`
+- 文字抽出QA: `PASS`
+- 文字欠落・黒四角・重なり・クリップ: `0件`
+- 固定5過去問・15答案要素接続: `15 / 15 PASS`
+- 3段階例題: `3 / 3 PASS`
+- SPEC指定8項目: `8 / 8 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 教材図・例題の仮定値表記: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 14先取り: `0件`
+- 回生失効・電力貯蔵設備追加: `0件`
+- H24二次の無効電流・出力可能領域追加: `0件`
+- SPEC外制御方式追加: `0件`
+- 未確認300系実車値の真値化: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
 ## 次工程
 
-解説PDFを作成する。固定5過去問・15答案要素、3段階例題、SPEC指定3可視化を反映し、固定範囲外へ広げない。
+練習問題・完全解説sourceを作成する。固定5過去問・15答案要素へ接続し、固定EXAM_ALIGNMENTは変更しない。
