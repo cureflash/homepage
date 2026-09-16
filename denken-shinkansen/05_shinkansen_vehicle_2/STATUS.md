@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 10 / 39
-- current_status: `topic_11_practice_source_complete`
+- current_status: `topic_11_practice_pdf_complete`
 - last_completed_topic: `10 300系① 誘導電動機等価回路`
 - active_topic: `11 300系② PWMコンバータ`
-- next_start: Topic 11の練習PDFを作成する
+- next_start: Topic 11の解説画像PowerPointを作成する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -21,7 +21,7 @@
 - [x] 08 位相制御と平均直流電圧 — PASS
 - [x] 09 直流機方式の損失・熱設計 — PASS
 - [x] 10 300系① 誘導電動機等価回路 — PASS
-- [ ] 11 300系② PWMコンバータ — PRACTICE_SOURCE_COMPLETE / IN_PROGRESS
+- [ ] 11 300系② PWMコンバータ — PRACTICE_PDF_COMPLETE / IN_PROGRESS
 
 ## Topic 11 制作前EXAM_ALIGNMENT
 - source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
@@ -78,6 +78,25 @@
 - 未確認300系実車値追加: `0件`
 - 問題数値: すべて教材用仮定値
 
+## Topic 11 練習PDF
+- PDF: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice.pdf`
+- QA: `topics/11_300series_pwm_converter/11_300series_pwm_converter_practice_qa.md`
+- A4縦: `3ページ`
+- 一次試験型: `8 / 8`、二次試験型: `4 / 4`、全12問完全解説付き
+- 180 dpi Visual QA: `3 / 3 PASS`
+- overlap / clipping / broken glyph: `0件`
+- 文字抽出QA: `PASS` / Unicode置換文字 `0件` / `□` `0件`
+- 数値・論理再検算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次記述QA: `4 / 4 PASS`
+- 固定EXAM_ALIGNMENT: 一次2問＋二次3問・27答案要素を維持
+- 固定5問・27答案要素への接続: `27 / 27`
+- 固定範囲外追加: `0件`
+- Topic 12〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+- 問題数値: すべて教材用仮定値
+- SHA-256: `c79f2e4603661c11de55ba8804663cd00febcd419df1977022bc1c5ae0853fe3`
+
 ## Topic 11 固定範囲
 - PWMコンバータ
 - 直流中間回路
@@ -100,4 +119,4 @@
 - 未確認の300系直流中間電圧、キャリア周波数、変調率、素子損失等の実車値
 
 ## 次工程
-Topic 11の固定EXAM_ALIGNMENT・解説source・解説PDF・練習sourceを変更せず、練習PDFを作成する。
+Topic 11の固定EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDFを変更せず、解説画像PowerPointを作成する。SPEC指定4可視化（PWM波形、基本波・高調波、変調条件―基本波電圧、入力電流波形）を収録し、表示QA・overflow・PowerPoint ZIP整合性を確認する。
