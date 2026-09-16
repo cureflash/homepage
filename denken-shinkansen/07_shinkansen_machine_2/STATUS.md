@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `12 / 22`
-- current_status: `topic_12_completed`
+- current_status: `topic_13_exam_alignment_complete`
 - last_completed_topic: `12 N700Sの6極モーターを設計側から見る`
 - active_topic: `13 L0系のリニア同期モータを等価回路で考える`
-- next_start: Topic 13 制作前EXAM_ALIGNMENT
+- next_start: Topic 13 解説本文＋3段階例題
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -396,8 +396,34 @@
 - [x] 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更 `0件`
 - [x] 固定範囲外論点・未確認N700S実車値の追加 `0件`
 
+## Topic 13 制作前EXAM_ALIGNMENT
+- [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列`SPEC.md`確認
+- [x] Topic 13固定範囲「同期機・界磁・電機子・同期リアクタンス・励磁・電機子反作用・フェーザ・リニア同期モータ・移動磁界」を確認
+- [x] 一次4問＋二次記述1問、計5問を固定
+- [x] 固定範囲へ直接対応する22答案要素を品質ゲート対象化
+- [x] 制作前独立検証 `22 / 22 PASS`
+- [x] R08一次機械問1は同期発電機の冷却方式で固定範囲外のため不採用
+- [x] Topic 14の力率・負荷角・電力角特性・最大出力・無負荷飽和／短絡特性を追加 `0件`
+- [x] リニア同期モータ直接対応の公式過去問を件数合わせで捏造 `0件`
+- [x] 未確認L0実値の真値化 `0件`
+
+### 固定過去問
+- R07 一次 機械 問1: (1)〜(5)
+- R06 一次 機械 問1: (1)〜(5)
+- H29 一次 機械 問1: (1),(2),(5)
+- H21 一次 機械 問5: (1)〜(5)
+- R07 二次 機械・制御 問1: (1)の(a),(d),(e),(f)
+
+### 制作前独立検証
+- R07 一次 機械 問1: `5 / 5 PASS`
+- R06 一次 機械 問1: `5 / 5 PASS`
+- H29 一次 機械 問1の固定3答案要素: `3 / 3 PASS`
+- H21 一次 機械 問5: `5 / 5 PASS`
+- R07 二次 機械・制御 問1の固定4答案要素: `4 / 4 PASS`
+- 合計: `22 / 22 PASS`
+
 ## 今回進めた内容
-Topic 12の最終QAを再判定し、`PASS / completed`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
+Topic 13「L0系のリニア同期モータを等価回路で考える」の制作前EXAM_ALIGNMENTを完成。固定一次4問＋二次記述1問・22答案要素を固定し、公式解答との制作前独立照合 `22 / 22 PASS`。仕様外追加・Topic 14先取り・未確認L0実値追加は0件。
 
 ## 判定
-Topic 12は `PASS / completed`。完成数は `12 / 22`。次はTopic 13「L0系のリニア同期モータを等価回路で考える」の制作前EXAM_ALIGNMENT。
+Topic 13は `topic_13_exam_alignment_complete / IN_PROGRESS`。完成数は `12 / 22`。次は解説本文＋3段階例題。
