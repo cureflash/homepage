@@ -8,11 +8,11 @@ Topic 01〜09は `completed`。
 
 完成数: `9 / 20`
 
-current_status: `topic_10_exam_reanswer_complete`
+current_status: `topic_10_final_qa_needs_revision`
 
 active_topic: `10 伝達関数・極・零点`
 
-次工程: Topic 10の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認する。
+次工程: Topic 10の主source冒頭 `## 状態`・主source末尾 `## 次工程`・練習source末尾 `## 次工程` の旧進捗3箇所だけを実成果物へ同期する。教材本文・固定EXAM_ALIGNMENT・数式・例題・問題・正答・PDF/PPTX・完成後独立再解答は変更しない。その後、最終QAを再判定する。
 
 ## 上位仕様
 
@@ -355,6 +355,9 @@ PowerPoint QA:
 完成後独立再解答:
 `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_exam_reanswer.md`
 
+最終QA:
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_final_qa.md`
+
 ### Topic 10 固定範囲
 
 - 伝達関数
@@ -500,10 +503,22 @@ QA:
 - 固定範囲外追加: 0件
 - 未確認実車値依存: 0件
 
-current_status: `topic_10_exam_reanswer_complete / IN_PROGRESS`。
+### Topic 10 最終QA
+
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_final_qa.md`
+
+初回判定: `NEEDS_REVISION / IN_PROGRESS`。
+
+技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・表示QA・SPEC境界はPASS。未完了理由はsource進捗記録3箇所だけ。
+
+- 主source冒頭 `## 状態`: 解説PDF前の旧状態
+- 主source末尾 `## 次工程`: 解説PDF作成の旧工程
+- 練習source末尾 `## 次工程`: 練習PDF作成の旧工程
+
+current_status: `topic_10_final_qa_needs_revision / IN_PROGRESS`。
 
 ## 次に行うこと
 
-Topic 10 `伝達関数・極・零点` の最終QAを実施し、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後独立再解答、source進捗整合、固定範囲境界を再確認する。
+上記3箇所の進捗記録だけを実成果物へ同期する。教材本文、固定EXAM_ALIGNMENT、数式、3段階例題、練習問題、正答、PDF、PowerPoint、完成後独立再解答は変更しない。
 
-固定範囲境界を変更しない。
+同期後、Topic 10の最終QAを再判定する。固定範囲境界を変更しない。
