@@ -6,25 +6,23 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は33/38。01〜33がPASS。active topicは34 `COMTRAC② 進路をどう自動制御する？`。
 
 ## 今回進捗
-Topic 34 `COMTRAC② 進路をどう自動制御する？` の練習source＋練習PDFを完成した。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` の解説画像PowerPointを完成した。
 
-- source: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.md`
-- PDF: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.pdf`
-- 全15問（基礎4／標準8／複合3）
-- 全問五肢択一＋完全解説
-- 正答位置: A/B/C/D/E各3問
-- 固定5過去問・6答案要素を `6 / 6` 練習マッピング
-- 独立論理再計算: `15 / 15 PASS`
-- 複数正答: `0件`
-- A4縦5ページ
-- 180 dpi全5ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: PASS
+- PowerPoint: `topics/34_comtrac_route_control/34_comtrac_route_control_images.pptx`
+- QA記録: `topics/34_comtrac_route_control/34_comtrac_route_control_powerpoint_qa.md`
+- 画面比率: `16:9`
+- スライド数: `4`
+- 固定5過去問・6答案要素を `6 / 6` 可視化
+- 180 dpi全4枚表示QA: `4 / 4 PASS`
+- slide geometry / overflow検査: PASS（スライド外shape `0件`）
+- PPTX ZIP整合性: PASS
+- 外部引用画像: `0件`（図は教材用に新規作成）
 - Topic 35範囲追加: `0件`
 - ExOR/NOR/NAND等の固定範囲外ゲート追加: `0件`
 - カルノー図等の高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
 
-教材本文・固定EXAM_ALIGNMENT・制作前独立解答結果は変更していない。
+教材本文・固定EXAM_ALIGNMENT・制作前独立解答結果・練習問題は変更していない。
 
 ## Topic 34 固定EXAM_ALIGNMENT
 - R7上 機械 問14 — AND・OR・NOT、論理回路、出力波形
@@ -42,7 +40,9 @@ Topic 35範囲追加: `0件`。
 完成後blind独立再解答を守るため、個別正答番号・完成済み最終導出式は必須先読みsourceへ保存していない。固定5問は以後変更しない。
 
 ## Topic 34 解説source
+- source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
 - 本文: §1〜§15
+- 3段階例題: 基礎「AND・OR・NOT」／標準「多段論理回路と時間区間」／複合「許可条件・代替条件・禁止条件」
 - 固定5問・6答案要素: `6 / 6` 本文マッピング済み
 - AND: `Y=A·B`
 - OR: `Y=A+B`
@@ -80,6 +80,22 @@ Topic 35範囲追加: `0件`。
 - 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
 
+## Topic 34 PowerPoint
+- `topics/34_comtrac_route_control/34_comtrac_route_control_images.pptx`
+- 16:9・4枚
+- Slide 1: COMTRAC/PRCの公開範囲と電験論理回路への接続
+- Slide 2: AND・OR・NOT、真理値表、条件判定
+- Slide 3: 多段論理回路、入力波形の区間評価
+- Slide 4: 真理値表→論理式、インターロック学習モデル、固定過去問マッピング、出典
+- 固定5問・6答案要素: `6 / 6` 可視化
+- 180 dpi表示QA: `4 / 4 PASS`
+- slide geometry / overflow検査: PASS
+- PPTX ZIP整合性: PASS
+- 外部引用画像: `0件`
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+
 ## Topic 34 系列SPEC固定範囲
 - 進路制御
 - 条件判定
@@ -112,11 +128,11 @@ Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は `PASS
 - 最終QA記録: `topics/33_comtrac_train_tracking/33_comtrac_train_tracking_final_qa.md`
 
 ## 現在の状態
-- `current_status`: `topic_34_practice_pdf_complete`
+- `current_status`: `topic_34_powerpoint_complete`
 - 完成数: 33/38
 - 01〜33: PASS
 - last completed: 33 `COMTRAC① 東海道新幹線全体をどう監視する？`
 - active topic: 34 `COMTRAC② 進路をどう自動制御する？`
 
 ## 次の正確な開始点
-Topic 34の解説画像PowerPointを作成する。固定5問・6答案要素を可視化し、16:9、表示QA・overflow・PPTX整合性を確認する。完成後blind独立再解答へ先行しない。
+Topic 34の完成後blind独立再解答前ゲートを監査する。必須先読み対象に固定5問の個別正答番号・完成済み導出結果が残っていないことを確認し、`READY` / `BLOCKED` を記録する。独立再解答そのものへ先行しない。
