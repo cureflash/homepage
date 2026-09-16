@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 11 / 20
-- current_status: `topic_12_practice_source_complete`
+- current_status: `topic_12_practice_pdf_complete`
 - last_completed_topic: `11 行列・線形連立方程式`
 - active_topic: `12 固有値の基礎`
-- next_start: Topic 12の練習PDFを作成し、全12問・完全解説・固定H28二次「機械・制御」問4 (1)への接続を反映して表示QA・文字抽出QAを行う
+- next_start: Topic 12の解説画像PowerPointを作成し、固定H28二次「機械・制御」問4 (1)への接続を可視化して表示QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -138,7 +138,7 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source
-- [ ] 練習PDF
+- [x] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
 - [ ] 完成後独立再解答
@@ -147,27 +147,24 @@
 
 ## 今回進めた内容
 
-Topic 12 `固有値の基礎` の練習問題・完全解説sourceを完成した。
+Topic 12 `固有値の基礎` の練習PDFを完成した。
 
 確認結果:
-- 全12問
+- A4縦3ページ
+- 全12問・完全解説を収録
 - 一次型8問／二次記述型4問
-- 難易度: 基礎3／標準6／複合3
-- 一次型は全問五肢択一
 - 固定H28二次「機械・制御」問4 (1)への接続: `1 / 1 PASS`
-- H28型の特性多項式→指定固有値→係数比較を問6・問10・問12で反復
-- 固有値・固有ベクトル・特性方程式・安定性の固定4論点を全件収録
-- 独立計算・正答一意性QA: `12 / 12 PASS`
-- 一次型正答番号: `1, 2, 4, 3, 5, 2, 4, 1`
-- 可制御性・可観測性・状態フィードバック設計一般等の仕様外追加: 0件
+- 問6・問10・問12で特性多項式→指定固有値→係数比較を反復
+- 200 dpi表示QA: `3 / 3 PASS`
+- 文字抽出QA: PASS
+- 固定範囲外追加: 0件
 - 第一種過去問による件数水増し: 0件
-- Topic 15周波数応答・ボード線図先取り: 0件
 - 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 12は `topic_12_practice_source_complete / IN_PROGRESS`。
+Topic 12は `topic_12_practice_pdf_complete / IN_PROGRESS`。
 
 完成数は `11 / 20`。
 
-次はTopic 12の練習PDFを作成し、全12問・完全解説・固定H28二次「機械・制御」問4 (1)への接続を反映して表示QA・文字抽出QAを行う。
+次はTopic 12の解説画像PowerPointを作成し、固定H28二次「機械・制御」問4 (1)への接続を可視化して表示QAを行う。
