@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `13 / 22`
-- current_status: `topic_14_explanation_source_complete`
+- current_status: `topic_14_explanation_pdf_complete`
 - last_completed_topic: `13 L0系のリニア同期モータを等価回路で考える`
 - active_topic: `14 L0系を500km/hで同期させる`
-- next_start: Topic 14 解説PDF
+- next_start: Topic 14 練習問題source
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -570,8 +570,18 @@
 - [x] 主要数値再計算 PASS
 - [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
 
+## Topic 14 解説PDF
+- [x] `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_explanation.pdf`
+- [x] A4縦3ページ
+- [x] 200 dpi全3ページ表示QA `3 / 3 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 固定一次1問＋二次4問・27答案要素を維持
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3` 収録
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+- [x] SHA-256 `9e3af1ef9246da706aa83a2e2787a67c3c74afebc3bb950e677bd77f45f68d9b`
+
 ## 今回進めた内容
-Topic 14を1段階進め、解説本文＋3段階例題を完成。電力角式、励磁・力率、最大出力、無負荷／短絡試験と同期インピーダンスを固定範囲内で説明し、一次1問＋二次4問・27答案要素を本文へ `27 / 27` 接続した。例題は教材上の仮定値だけを使い、未確認L0実値は追加していない。
+Topic 14を1段階進め、解説PDFをGitHub正本へ反映した。A4縦3ページ、200 dpi全ページ表示QA `3 / 3 PASS`、文字抽出QA PASS。固定一次1問＋二次4問・27答案要素と3段階例題を維持し、固定範囲外論点・Topic 15以降先取り・未確認L0実値追加は `0件`。
 
 ## 判定
-Topic 14は `explanation_source_complete / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の解説PDF。
+Topic 14は `explanation_pdf_complete / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の練習問題source。
