@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 8 / 12
-- current_status: `topic_09_preproduction_exam_verification_complete`
+- current_status: `topic_09_explanation_source_complete`
 - last_completed_topic: `08 積分 速度曲線の面積は距離`
 - active_topic: `09 微積分で電気を読む`
-- next_start: `Topic 09 解説本文＋3段階例題`
+- next_start: `Topic 09 解説PDF`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -82,7 +82,7 @@
 - [x] 参考教材を複数系統確認（e-sysnet含む）
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立解答・公式解答照合 `5 / 5問・7 / 7答案要素 PASS`
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
@@ -92,18 +92,17 @@
 
 ## 今回進めた内容
 
-Topic 09「微積分で電気を読む」の固定5問を、保存済み正答を見ずに独立解答し、その後に電気技術者試験センター公式解答と照合した。
+Topic 09「微積分で電気を読む」の解説本文＋3段階例題を主sourceへ反映した。
 
-- R7上 法規 問13: `(a)(2), (b)(3)` / PASS
-- R6下 理論 問3: `(2)` / PASS
-- R3 理論 問4: `(4)` / PASS
-- R7上 電力 問1: `(2)` / PASS
-- H29 法規 問13: `(a)(2), (b)(5)` / PASS
-
-判定は `5 / 5問・7 / 7答案要素 PASS`、公式解答との不一致0件。固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件。
+- 固定5式 `i=dq/dt`、`q=∫i dt`、`e=-N dΦ/dt`、`E=∫P dt`、`W=∫F dx` を本文化
+- 単位・成立条件・一定値の場合の特別形・グラフの傾き／面積・区分積分・解法手順を収録
+- 3段階例題: 電荷→電流、磁束変化→誘導起電力、消費／回生電力の区分積分
+- 固定5過去問・7答案要素を教材内節へ全件マッピング
+- 新幹線数値例はすべて仮定値と明記
+- 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
 
 ## 判定
 
-`topic_09_preproduction_exam_verification_complete / IN_PROGRESS`。
+`topic_09_explanation_source_complete / IN_PROGRESS`。
 
-完成数は `8 / 12` のまま。次工程は解説本文＋3段階例題。
+完成数は `8 / 12` のまま。次工程は解説PDF。
