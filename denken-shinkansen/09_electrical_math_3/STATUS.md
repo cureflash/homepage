@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 8 / 12
-- current_status: `topic_09_explanation_pdf_complete`
+- current_status: `topic_09_practice_source_complete`
 - last_completed_topic: `08 積分 速度曲線の面積は距離`
 - active_topic: `09 微積分で電気を読む`
-- next_start: `Topic 09 練習問題source`
+- next_start: `Topic 09 練習PDF`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -84,7 +84,7 @@
 - [x] 制作前独立解答・公式解答照合 `5 / 5問・7 / 7答案要素 PASS`
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
@@ -92,19 +92,20 @@
 
 ## 今回進めた内容
 
-Topic 09「微積分で電気を読む」の解説PDFをGitHub正本へ反映した。
+Topic 09「微積分で電気を読む」の練習問題sourceをGitHub正本へ反映した。
 
-- 成果物: `topics/09_calculus_electricity/09_calculus_electricity_explanation.pdf`
-- A4縦6ページ
-- 200 dpi表示QA `6 / 6 PASS`
-- 文字抽出QA PASS
-- クリッピング、重なり、文字化け0件
-- 固定5式、3段階例題、固定5過去問・7答案要素への接続を反映
-- 新幹線数値例はすべて仮定値と明記
+- 成果物: `topics/09_calculus_electricity/09_calculus_electricity_practice.md`
+- 全12問・全問五肢択一
+- 難易度: 基礎3 / 標準7 / 複合2
+- 完全解説付き
+- 正答一意性 `12 / 12 PASS`
+- 数値再計算・論理確認 `12 / 12 PASS`
+- 固定5過去問への接続 `5 / 5`
+- 固定5式への接続 `5 / 5`
 - 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
 
 ## 判定
 
-`topic_09_explanation_pdf_complete / IN_PROGRESS`。
+`topic_09_practice_source_complete / IN_PROGRESS`。
 
-完成数は `8 / 12` のまま。次工程は練習問題source。
+完成数は `8 / 12` のまま。次工程は練習PDF。
