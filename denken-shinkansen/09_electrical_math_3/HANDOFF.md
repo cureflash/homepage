@@ -6,17 +6,17 @@
 
 Topic 01〜08は `completed`。
 
-Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答、初回最終QAまで完了。完成後独立再解答は `5 / 5問・7 / 7答案要素 PASS`。初回最終QAは技術内容・成果物・試験対応・仕様境界がPASSだが、主source・練習sourceの旧進捗記録2箇所を検出したため `NEEDS_REVISION / IN_PROGRESS`。
+Topic 09 `微積分で電気を読む` は、制作前EXAM_ALIGNMENT、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答、初回最終QAまで完了。完成後独立再解答は `5 / 5問・7 / 7答案要素 PASS`。初回最終QAで検出した主source・練習sourceの旧進捗記録2箇所は同期済み。技術内容・成果物・試験対応・仕様境界はPASSのまま。
 
 完成数: `8 / 12`
 
-current_status: `topic_09_final_qa_needs_revision`
+current_status: `topic_09_source_progress_synced`
 
 last_completed_topic: `08 積分 速度曲線の面積は距離`
 
 active_topic: `09 微積分で電気を読む`
 
-next_start: `主source・練習sourceの進捗記録2箇所だけを実成果物と現在地へ同期`
+next_start: `Topic 09 最終QA再判定`
 
 ## Topic 09 固定仕様範囲
 
@@ -199,6 +199,16 @@ next_start: `主source・練習sourceの進捗記録2箇所だけを実成果物
 
 判定: `NEEDS_REVISION / IN_PROGRESS`。技術内容・教材成果物は変更不要。進捗記録2箇所だけを同期してから最終QAを再判定する。
 
+## Topic 09 進捗記録同期
+
+- 主sourceの状態・次工程を初回最終QA後の現在地へ同期
+- 練習sourceの旧次工程「練習PDF作成」を最終QA再判定待ちへ同期
+- 技術本文、固定EXAM_ALIGNMENT、数式、例題、練習問題、正答、PDF/PPTXは変更していない
+- 完成後独立再解答 `5 / 5問・7 / 7答案要素 PASS` を維持
+- 固定範囲外追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
+
+判定: `topic_09_source_progress_synced / IN_PROGRESS`。
+
 ## 次に行うこと
 
-主source `09_calculus_electricity.md` と練習source `09_calculus_electricity_practice.md` の旧進捗記録2箇所だけを、実成果物・完成後独立再解答・初回最終QAまで完了した現在地へ同期する。技術本文、固定EXAM_ALIGNMENT、数式、問題・正答、PDF/PPTXは変更しない。
+Topic 09の最終QAを再判定する。技術内容・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTXは変更しない。
