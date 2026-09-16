@@ -9,7 +9,7 @@ Topic 01〜10は最終QAまで `PASS / completed`。
 
 active topic: `11 GTO→IGBT→SiCの損失を計算する`
 
-current status: `topic_11_final_qa_needs_revision`
+current status: `topic_11_progress_records_synced`
 
 ## Topic 10 固定範囲
 - 力行
@@ -226,6 +226,7 @@ source完成内容:
 - 素子1個と装置全体の損失区別: PASS
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
+- 末尾 `## 次工程` の旧「次は解説画像PowerPointを作成する」は実成果物に合わせて同期済み。
 
 ## Topic 11 練習PDF
 - `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_practice.pdf`: `completed`
@@ -250,7 +251,7 @@ source完成内容:
 - 固定5過去問・15答案要素: 維持
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
-- SHA-256: `bd195a931abecfa723e895f8082f7e54964bb9c88afba52420cde6777a31b704`
+- SHA-256: `a0440ffe6243ee6920a4e9102ead6d4a551fbdc4d2e2f937735d7ab20454d37e`
 
 ## Topic 11 独立再解答前ゲート
 - `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
@@ -282,10 +283,18 @@ source完成内容:
 - 完成後独立再解答: `15 / 15 PASS`
 - 練習問題・PDF/PPTX QA: PASS
 - 固定範囲境界・未確認実車値: PASS
-- 進捗記録整合: FAIL（2件）
+- 進捗記録整合: FAIL（2件・前回判定）
 - 不整合1: 練習source末尾 `## 次工程` が旧「次は解説画像PowerPointを作成する」のまま。
 - 不整合2: 現行PowerPoint blobと同一blobを指すPowerPoint QA記録のSHA-256と、STATUS/HANDOFFのSHA-256記録が不一致。
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`（前回判定）
+
+## Topic 11 進捗記録同期
+- 練習source末尾 `## 次工程` を実成果物へ同期済み。
+- 現行PowerPoint Git blob SHA `4ac2a83ea8eaa732508dd798552d5179a0899c8b` に対応するPowerPoint QA記録のSHA-256 `a0440ffe6243ee6920a4e9102ead6d4a551fbdc4d2e2f937735d7ab20454d37e` をSTATUS/HANDOFFへ同期済み。
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTXの内容変更: `0件`
+- 固定範囲外論点追加: `0件`
+- 未確認実車値追加: `0件`
+- current status: `topic_11_progress_records_synced / IN_PROGRESS`
 
 ## 次に行うこと
-Topic 11の技術本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTXは変更せず、進捗記録2件だけを同期する。その後、最終QAを再実施する。
+Topic 11の最終QAを再実施する。
