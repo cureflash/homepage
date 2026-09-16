@@ -4,33 +4,34 @@
 
 ## 現在地
 
-Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は練習問題source・練習PDF＋QAまで完了した。
+Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は解説画像PowerPoint＋QAまで完了した。
 
 - 完成数: `10 / 14`
 - last completed: `10 新幹線が使う電力は「W」だけではない`
 - active topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- current status: `topic_11_practice_pdf_complete / IN_PROGRESS`
-- next start: Topic 11の解説画像PowerPointを作成する
+- current status: `topic_11_powerpoint_complete / IN_PROGRESS`
+- next start: Topic 11の完成後公式過去問独立再解答を実施する
 
 ## 今回進捗
 
-Topic 11の練習問題source・練習PDFを作成し、内容QA・全ページ表示QA・文字抽出QAを完了した。
+Topic 11の解説画像PowerPointを作成し、固定過去問要求の可視化・全ページ表示QA・文字抽出・ZIP/XML整合性QAを完了した。
 
-- 練習問題: 全15問・全問五肢択一
-- 難易度: 基礎4 / 本試験標準8 / 複合・応用3
-- 数値・論理再計算: `15 / 15 PASS`
-- 正答一意性: `15 / 15 PASS`
-- 正答位置: `(1)`〜`(5)` 各3問
+- PowerPoint: `topics/11_three_phase_ac/11_three_phase_ac_images.pptx`
+- 画面比率: 16:9
+- スライド数: 4
 - 固定対象: 公式理論過去問5問・10答案要素
-- 練習問題への接続: `10 / 10`
-- 練習PDF: A4縦3ページ
-- 200 dpi全ページ表示QA: `3 / 3 PASS`
-- 文字抽出QA: PASS
-- 文字切れ・重なり・欠落・黒四角・置換文字: `0件`
+- 可視化接続: `10 / 10`
+- Slide 1: 平衡三相の120°位相差・相順、新幹線への概念接続
+- Slide 2: Y結線、`VL=√3Vp`、`IL=Ip`、1相回路への落とし方
+- Slide 3: Δ結線、`VL=Vp`、`IL=√3Ip`、枝電流→線電流
+- Slide 4: 三相電力、Y/Δ混在時の解法、Δコンデンサ、固定過去問対応
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- shape-bound overflow: `0件`
+- 文字抽出: PASS
+- ZIP/XML整合性: PASS
+- QA: `topics/11_three_phase_ac/11_three_phase_ac_images_qa.md` / PASS
+- SHA-256: `4b1bf2182b92329f3be1565c308e3e89c81df379c6549eb39085b3f2bf83adb6`
 - 境界維持: 不平衡三相、高調波、電力計測、Y-Δインピーダンス変換、具体的き電変圧器結線、Topic 12以降の半導体・整流・PWM、未確認実設備値の追加0件
-- source: `topics/11_three_phase_ac/11_three_phase_ac_practice.md`
-- PDF: `topics/11_three_phase_ac/11_three_phase_ac_practice.pdf`
-- QA: `topics/11_three_phase_ac/11_three_phase_ac_practice_qa.md` / PASS
 
 ## Topic 11 SPEC固定範囲
 
@@ -85,7 +86,7 @@ P = √3 VL IL cosφ
 - Topic 08〜10のRLC・力率・無効電力は既習事項としてのみ使用する
 - 新幹線側は三相系統→単相25 kV→車内三相という概念接続までとし、具体的なき電変圧器結線を推測しない
 
-上記は解説本文・解説PDF・練習問題へ反映済み。
+上記は解説本文・解説PDF・練習問題・解説画像PowerPointへ反映済み。
 
 ## 境界
 
@@ -120,13 +121,19 @@ P = √3 VL IL cosφ
   - 200 dpi表示QA: `3 / 3 PASS`
   - 文字抽出QA: PASS
 - 練習PDF QA: `topics/11_three_phase_ac/11_three_phase_ac_practice_qa.md` / PASS
-- 解説画像PowerPoint: 未作成
+- 解説画像PowerPoint: `topics/11_three_phase_ac/11_three_phase_ac_images.pptx`
+  - 16:9・4枚
+  - 200 dpi表示QA: `4 / 4 PASS`
+  - overflow: 0件
+  - ZIP/XML整合性: PASS
+  - 固定過去問要求の可視化: `10 / 10`
+- 解説画像PowerPoint QA: `topics/11_three_phase_ac/11_three_phase_ac_images_qa.md` / PASS
 - 完成後独立再解答: 未実施
 - 最終QA: 未実施
 
 ## 次に行うこと
 
-Topic 11の解説画像PowerPointを作成する。固定5問・10答案要素とSPEC境界を維持する。
+Topic 11の完成後公式過去問独立再解答を実施する。固定5問・10答案要素とSPEC境界を維持し、保存済み正答を先に見ない。
 
 ## 固定ルール
 

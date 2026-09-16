@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 10 / 14
-- current_status: `topic_11_practice_pdf_complete`
+- current_status: `topic_11_powerpoint_complete`
 - last_completed_topic: `10 新幹線が使う電力は「W」だけではない`
 - active_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- next_start: Topic 11の解説画像PowerPointを作成する
+- next_start: Topic 11の完成後公式過去問独立再解答を実施する
 
 ## Topic 01 進捗
 
@@ -196,18 +196,18 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の練習問題source・練習PDFを完成し、内容・表示・文字抽出QAを実施した。
+Topic 11 `電力会社の三相交流をどう新幹線へ渡す？` の解説画像PowerPointを完成し、表示・ファイルQAを実施した。
 
-全15問・全問五肢択一（基礎4／本試験標準8／複合3）、数値・論理再計算 `15 / 15 PASS`、正答一意性 `15 / 15 PASS`、固定5問・10答案要素へ `10 / 10` 接続。PDFはA4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS、文字切れ・重なり・欠落・黒四角・置換文字は0件。
+16:9・4枚。平衡三相の120°位相差・相順、Y結線、Δ結線、三相電力、Y/Δ混在時の解法、Δコンデンサの三相無効電力を固定範囲内で可視化した。固定5問・10答案要素への可視化接続は `10 / 10`。200 dpi表示QA `4 / 4 PASS`、shape-bound overflow 0件、文字抽出・ZIP/XML整合性PASS。
 
 不平衡三相、高調波、電力計測、Y-Δインピーダンス変換、具体的な新幹線き電変圧器結線、Topic 12以降の半導体・整流・PWM、未確認実設備値は追加していない。
 
 ## 判定
 
-現在 `topic_11_practice_pdf_complete / IN_PROGRESS`。完成数は `10 / 14`。次はTopic 11の解説画像PowerPointを作成する。
+現在 `topic_11_powerpoint_complete / IN_PROGRESS`。完成数は `10 / 14`。次はTopic 11の完成後公式過去問独立再解答を実施する。
