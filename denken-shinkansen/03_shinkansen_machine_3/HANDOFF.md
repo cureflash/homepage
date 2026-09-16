@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `10 / 16`。Topic 01〜10は品質ゲートPASSでcompleted。active topicは11「空転した車輪をどう立て直す？」。
 
 ## 今回進捗
-Topic 11の解説PDFを完成した。A4縦4ページ、200 dpi全4ページ表示QA `4 / 4 PASS`、`pdftotext` 文字抽出QA `PASS`。固定R4下 機械 問14の要求事項を `1 / 1` マッピングし、3段階例題 `3 / 3` を収録した。固定EXAM_ALIGNMENT・固定範囲は変更せず、固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加は0件。
+Topic 11の練習問題sourceを完成した。全12問・全問五肢択一、基礎3 / 本試験標準7 / 複合・応用2。固定R4下 機械 問14へ `1 / 1` 接続し、独立論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。固定EXAM_ALIGNMENT・固定範囲・解説本文・解説PDFは変更せず、固定範囲外論点、未確認実車値、実車固有アルゴリズムの推測追加は0件。
 
 ## Topic 11 固定範囲
 系列 `SPEC.md` に従い、次だけを扱う。
@@ -34,6 +34,12 @@ Topic 11の解説PDFを完成した。A4縦4ページ、200 dpi全4ページ表�
 - 3段階例題: `3 / 3 PASS`
 - 解説PDF表示QA: `4 / 4 PASS`
 - 解説PDF文字抽出QA: `PASS`
+- 練習問題source: `12問` 完成
+- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
+- 練習問題形式: `12 / 12` 五肢択一
+- 練習問題独立論理QA: `12 / 12 PASS`
+- 練習問題正答一意性QA: `12 / 12 PASS`
+- 練習問題→固定EXAM_ALIGNMENT接続: `1 / 1`
 - 教材外・固定範囲外知識による補完: `0件`
 - 固定範囲外追加: `0件`
 - 未確認実車値追加: `0件`
@@ -41,6 +47,7 @@ Topic 11の解説PDFを完成した。A4縦4ページ、200 dpi全4ページ表�
 - source: `topics/11_readhesion_control/11_readhesion_control.md`
 - explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
 - PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
+- practice source: `topics/11_readhesion_control/11_readhesion_control_practice.md`
 
 ## 非選定
 - R4上 機械 問14: アナログ/ディジタル信号、A-D/D-A変換、インタフェースが正答要件となりTopic 11固定範囲外。
@@ -56,5 +63,12 @@ Topic 11の解説PDFを完成した。A4縦4ページ、200 dpi全4ページ表�
 - 応答速度 = 状態変化を検出し、指令・作用へ反映するまでの速さ。
 - 鉄道側は鉄道総研の公開資料で確認できる検出・トルク指令抑制の概念までに限定し、車種固有のしきい値・判定式・トルク低減率・応答時間を導入していない。
 
+## 練習sourceの要点
+- 全12問を五肢択一とし、三種本試験形式へ接続した。
+- 問1・4〜7・11・12でR4下 機械 問14の役割分担・統合概念を直接練習する。
+- 問2・3・8〜10で固定SPEC範囲の粘着 / 空転 / 滑走 / フィードバック / 応答速度を補強する。
+- 12問の正答列は `(3),(4),(2),(5),(1),(3),(4),(2),(5),(1),(3),(4)`。
+- 独立論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。
+
 ## 次に行う
-Topic 11の練習問題sourceを作成する。固定EXAM_ALIGNMENT、固定範囲、解説本文・解説PDFは変更しない。
+Topic 11の練習PDFを作成する。固定EXAM_ALIGNMENT、固定範囲、解説本文・解説PDF、練習12問の問題数・正答は変更しない。
