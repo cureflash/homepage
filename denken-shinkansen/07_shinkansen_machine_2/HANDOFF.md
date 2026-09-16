@@ -6,98 +6,60 @@
 - Topic 01〜13: 最終QA `PASS / completed`
 - 完成数: `13 / 22`
 - active topic: `14 L0系を500km/hで同期させる`
-- current status: `topic_13_final_qa_complete`
-- 次工程: Topic 14 制作前EXAM_ALIGNMENT
+- current status: `topic_14_exam_alignment_complete`
+- 次工程: Topic 14 解説本文＋3段階例題
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
-## Topic 13 固定範囲
-- 同期機
-- 界磁
-- 電機子
+## reconcile結果
+- 最新mainと本系列の直近変更を確認。既存「機械二種を進行」枠はTopic 13最終QAまで完了済みだったため、Topic 13の再作業は実施していない。
+- Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いだ。
+- Topic 13で採用済み答案要素の重複採用は `0件`。
+
+## Topic 14 固定範囲
+- 内部起電力
+- 端子電圧
 - 同期リアクタンス
+- 負荷角
+- 力率
 - 励磁
-- 電機子反作用
-- フェーザ
-- リニア同期モータ
-- 移動磁界
+- 電力角特性
+- 最大出力
+- `P = EV/X × sinδ`
+- 無負荷飽和曲線・三相短絡特性・短絡比・同期インピーダンスは系列SPECが許可する範囲で通常の同期発電機へ戻って説明可
 
 境界:
-- Topic 14の負荷角・力率・電力角特性・最大出力を先取りしない。
-- 無負荷飽和曲線・短絡特性・短絡比・同期インピーダンス測定を追加しない。
-- 後続Topicの蓄電池・伝達関数・過渡応答・PID・安定判別・再粘着制御を追加しない。
+- Topic 13の同期機構造・電機子反作用・フェーザ記号認識を再制作しない。
+- 突極機の二反作用法、過渡／初期過渡リアクタンス、突発短絡過渡、等面積法、AVR/PSSは追加しない。
+- Topic 15以降を先取りしない。
+- 未確認L0推進コイル寸法・極ピッチ・電圧・電流・推力・500 km/h時の電気周波数を実値化しない。
 - リニア同期モータ直接対応の公式過去問を件数合わせで作らない。
-- 未確認L0実値を真値として追加しない。
 
-## Topic 13 固定EXAM_ALIGNMENT
+## Topic 14 固定EXAM_ALIGNMENT
 固定過去問:
-- R07 一次 機械 問1: (1)〜(5)
-- R06 一次 機械 問1: (1)〜(5)
-- H29 一次 機械 問1: (1),(2),(5)
-- H21 一次 機械 問5: (1)〜(5)
-- R07 二次 機械・制御 問1: (1)の(a),(d),(e),(f)
+- H29 一次 機械 問1: (3),(4) — 2答案要素
+- R07 二次 機械・制御 問1: (1)の(b),(c)、(2)〜(5) — 7答案要素
+- R06 二次 機械・制御 問1: (1)a〜c、(2)a〜c — 8答案要素
+- R05 二次 機械・制御 問1: (3),(4)a,b,(5)a,b — 8答案要素
+- H27 二次 機械・制御 問1: (1)a,b — 2答案要素
 
-一次4問＋二次記述1問、計5問。ゲート対象22答案要素。
+一次1問＋二次記述4問、計5問。ゲート対象27答案要素。
 
 制作前独立検証:
-- R07 一次 機械 問1: `5 / 5 PASS`
-- R06 一次 機械 問1: `5 / 5 PASS`
-- H29 一次 機械 問1の固定3答案要素: `3 / 3 PASS`
-- H21 一次 機械 問5: `5 / 5 PASS`
-- R07 二次 機械・制御 問1の固定4答案要素: `4 / 4 PASS`
-- 合計: `22 / 22 PASS`
-
-最新R08一次機械問1は同期発電機の冷却方式でTopic 13固定範囲外のため不採用。件数合わせによる仕様追加はしていない。
-
-## Topic 13 成果物
-- main source: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit.md`
-- 解説PDF: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_explanation.pdf`
-- 練習source: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_practice.md`
-- 練習PDF: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_practice.pdf`
-- PowerPoint: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_images.pptx`
-- PowerPoint QA: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_powerpoint_qa.md`
-- blind reanswer gate: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_blind_reanswer_gate.md`
-- independent reanswer: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_independent_reanswer.md`
-- final QA: `topics/13_l0_linear_synchronous_motor_equivalent_circuit/13_l0_linear_synchronous_motor_equivalent_circuit_final_qa.md`
-
-QA:
-- 解説PDF: A4縦5ページ、200 dpi `5 / 5 PASS`、文字抽出PASS
-- 練習source: 一次10問＋二次5問、独立計算・論理QA `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`
-- 練習PDF: A4縦4ページ、200 dpi `4 / 4 PASS`、文字抽出PASS、再検算 `15 / 15 PASS`
-- PowerPoint: 16:9・4枚、表示QA `4 / 4 PASS`、overflow 0、ZIP整合性PASS
-- 固定5問・22答案要素への接続: `22 / 22 PASS`
-- Topic 14先取り・固定範囲外追加・未確認L0実値追加: `0件`
-
-## Topic 13 完成後独立再解答
-公式解答・標準解答を開く前に完成教材だけで固定5問・22答案要素を再解答し、その後公式と照合済み。
-
-- R07 一次 機械 問1: `5 / 5 PASS`
-- R06 一次 機械 問1: `5 / 5 PASS`
-- H29 一次 機械 問1の固定3答案要素: `3 / 3 PASS`
-- H21 一次 機械 問5: `5 / 5 PASS`
-- R07 二次 機械・制御 問1の固定4答案要素: `4 / 4 PASS`
-- 合計: `22 / 22 PASS`
-- 教材外知識補完: `0件`
-- 固定範囲外論点追加: `0件`
-- Topic 14依存: `0件`
+- H29 一次 機械 問1: `2 / 2 PASS`
+- R07 二次 機械・制御 問1: `7 / 7 PASS`
+- R06 二次 機械・制御 問1: `8 / 8 PASS`
+- R05 二次 機械・制御 問1: `8 / 8 PASS`
+- H27 二次 機械・制御 問1: `2 / 2 PASS`
+- 合計: `27 / 27 PASS`
+- 固定範囲外補完: `0件`
+- Topic 15以降依存: `0件`
 - 未確認L0実値依存: `0件`
-- 固定EXAM_ALIGNMENT・教材本文・練習問題・PDF/PPTXの内容変更: `0件`
 
-## Topic 13 最終QA
-再判定: `PASS / completed`
-
-- 必須成果物の実在: PASS
-- 一次4問＋二次1問・22答案要素の過去問対応: PASS
-- 完成後独立再解答 `22 / 22 PASS`
-- 練習問題・PDF/PPTX QA: PASS
-- 固定範囲境界・未確認L0実値: PASS
-- 進捗記録整合: PASS
-
-## Topic 13 進捗記録同期
-- main sourceの `## 状態` と末尾 `# 次工程` を実成果物へ同期済み。
-- 練習source末尾 `# 次工程` を実成果物へ同期済み。
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・独立再解答結果は変更していない。
-- Topic 14先取り・固定範囲外論点・未確認L0実値追加は `0件`。
+## Topic 14 現成果物
+- main source: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization.md`
+- 制作前EXAM_ALIGNMENT: 完成
+- 解説本文／PDF／練習source／練習PDF／PowerPoint／完成後独立再解答／最終QA: 未着手
 
 ## 次に行うこと
-Topic 14「L0系を500km/hで同期させる」の制作前EXAM_ALIGNMENTを実施する。
+Topic 14の解説本文＋基礎／本試験標準／複合の3段階例題を作成し、固定5問・27答案要素を本文へマッピングする。
