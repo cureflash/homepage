@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `10 / 22`
-- current_status: `topic_11_independent_reanswer_complete`
+- current_status: `topic_11_final_qa_needs_revision`
 - last_completed_topic: `10 新幹線はモーターを発電機にして止まる`
 - active_topic: `11 GTO→IGBT→SiCの損失を計算する`
-- next_start: Topic 11 最終QA
+- next_start: Topic 11 進捗記録2件の同期
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -242,8 +242,20 @@
 - [x] 固定範囲外論点・未確認実車値の追加 `0件`
 - [x] 固定5問・15答案要素、教材本文、練習問題、PDF/PPTXの内容変更 `0件`
 
+## Topic 11 最終QA
+- [x] 最終QA記録作成: `topics/11_power_semiconductor_loss_thermal/11_power_semiconductor_loss_thermal_final_qa.md`
+- [x] 必須成果物の実在: PASS
+- [x] 一次4問＋二次1問・15答案要素の過去問対応: PASS
+- [x] 完成後独立再解答 `15 / 15 PASS`
+- [x] 練習問題・PDF/PPTX QA: PASS
+- [x] 固定範囲境界・未確認実車値: PASS
+- [ ] 進捗記録整合: FAIL（2件）
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 11の完成後独立再解答を完了した。公式解答・保存済み正答を先に見ず、完成教材だけで固定一次4問＋二次1問・15答案要素を再解答し、公式解答・標準解答との照合は `15 / 15 PASS`。教材外知識補完、固定範囲外論点、未確認実車値の追加はいずれも0件。
+Topic 11の最終QAを実施した。技術内容、固定一次4問＋二次1問・15答案要素、完成後独立再解答 `15 / 15 PASS`、必須成果物、練習問題QA、PDF/PPTX表示QA、固定範囲境界はPASS。進捗記録整合のみ2件FAIL。
+
+不整合は、練習source末尾の旧「次は解説画像PowerPointを作成する」と、現行PowerPoint blobに対するPowerPoint QA記録とSTATUS/HANDOFFのSHA-256記録不一致。
 
 ## 判定
-Topic 11は `topic_11_independent_reanswer_complete / IN_PROGRESS`。完成数は `10 / 22`。次はTopic 11の最終QA。
+Topic 11は `topic_11_final_qa_needs_revision / IN_PROGRESS`。完成数は `10 / 22`。次は上記2件の進捗記録だけを同期し、その後に最終QAを再実施する。
