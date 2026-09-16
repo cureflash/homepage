@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 9 / 12
-- current_status: `topic_10_blind_reanswer_ready`
+- current_status: `topic_10_independent_reanswer_complete`
 - last_completed_topic: `09 微積分で電気を読む`
 - active_topic: `10 指数関数・一階微分方程式入門`
-- next_start: `Topic 10 ブラインド条件を守って固定5問を完成教材だけで独立再解答`
+- next_start: `Topic 10 最終QA`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -108,18 +108,18 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答前のブラインドゲート整備
-- [ ] 完成教材だけでの公式過去問独立再解答
+- [x] 完成教材だけでの公式過去問独立再解答 `5 / 5 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 10「指数関数・一階微分方程式入門」の完成後独立再解答前ブラインドゲートを整備し、GitHub正本へ反映した。
+Topic 10「指数関数・一階微分方程式入門」の完成後独立再解答を実施し、GitHub正本へ記録した。
 
-- 新規記録: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_blind_gate.md`
-- 固定品質ゲート対象5問は変更なし
-- 主sourceに保存済みの制作前個別正答・導出を、次runの独立解答確定前には参照しない手順を固定
-- 公式問題文だけで独立解答を先に確定し、その後に公式解答と照合する順序を明記
-- このrunでは主source確認時に制作前個別正答が視認されたため、完成後独立再解答そのものは実施せず、ブラインド条件を次runへ引き継いだ
+- 記録: `topics/10_exponential_first_order_ode/10_exponential_first_order_ode_independent_reanswer.md`
+- ブラインドゲートに従い、公式問題文だけから先に独立解答を確定
+- 確定解: R8上 `(4)` / R7下 `(4)` / R6下 `(4)` / R5下 `(5)` / R2 `(2)`
+- 独立解答確定後に公式解答へ照合し `5 / 5 PASS`
+- 教材外知識補完0件
 - 固定EXAM_ALIGNMENT変更0件
 - 教材本文・練習問題・PDF/PPTX変更0件
 - RLC二次過渡・ラプラス変換・伝達関数・PID追加0件
@@ -128,6 +128,6 @@ Topic 10「指数関数・一階微分方程式入門」の完成後独立再解
 
 ## 判定
 
-`topic_10_blind_reanswer_ready / IN_PROGRESS`。
+`topic_10_independent_reanswer_complete / IN_PROGRESS`。
 
-完成数は `9 / 12`。次工程はブラインドゲート手順に従い、Topic 10の固定5問を完成教材だけで独立再解答する。
+完成数は `9 / 12`。次工程はTopic 10の最終QA。
