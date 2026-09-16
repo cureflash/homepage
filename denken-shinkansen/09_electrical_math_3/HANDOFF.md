@@ -6,17 +6,17 @@
 
 Topic 01〜09は `completed`。
 
-Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。
+Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。
 
 完成数: `9 / 12`
 
-current_status: `topic_10_practice_pdf_complete`
+current_status: `topic_10_images_ppt_complete`
 
 last_completed_topic: `09 微積分で電気を読む`
 
 active_topic: `10 指数関数・一階微分方程式入門`
 
-next_start: `Topic 10 解説画像PowerPoint`
+next_start: `Topic 10 完成教材だけでの公式過去問独立再解答`
 
 ## Topic 10 固定仕様範囲
 
@@ -117,8 +117,26 @@ next_start: `Topic 10 解説画像PowerPoint`
 
 判定: `PASS / PRACTICE_PDF_COMPLETE`。
 
+## Topic 10 解説画像PowerPoint
+
+成果物:
+`topics/10_exponential_first_order_ode/10_exponential_first_order_ode_images.pptx`
+
+- 16:9・5枚
+- 一階応答共通形、RC、RL、複雑なRC、解法フロー＋固定5過去問対応を可視化
+- 表示QA `5 / 5 PASS`
+- overflow 0件
+- PPTX ZIP整合性 PASS
+- 固定5過去問への接続 `5 / 5 PASS`
+- 固定EXAM_ALIGNMENT変更0件
+- RLC二次過渡・ラプラス変換・伝達関数・PID追加0件
+- Topic 11一般特性曲線体系の先取り0件
+- 未確認新幹線実値追加0件
+
+判定: `PASS / IMAGES_PPT_COMPLETE`。
+
 ## 次工程
 
-Topic 10の解説画像PowerPointを作成する。
+Topic 10の完成教材だけで固定5問を独立再解答する。
 
-PowerPoint完了後もTopic 10は `completed` ではない。完成教材だけでの固定5問独立再解答、最終QAが残る。
+独立再解答後もTopic 10は `completed` ではない。最終QAが残る。
