@@ -1,11 +1,11 @@
 # 10 新幹線が突然大電力を使ったら？
 
 ## 状態
-`topic_10_explanation_source_complete`。制作前EXAM_ALIGNMENT、解説本文§1〜§15、基礎・本試験標準・複合の3段階例題まで完成。解説PDF、練習問題source・PDF、解説画像PowerPoint、完成後ブラインド独立再解答は未着手。
+`topic_10_practice_source_complete`。制作前EXAM_ALIGNMENT、解説本文§1〜§15、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題sourceまで完成。練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答は未着手。
 
-固定5問・8小問について、制作前独立検証 `8 / 8 PASS` を維持し、本文要求事項マッピング `8 / 8`。SPEC固定範囲外追加0件、Topic 11以降の先取り0件、未確認新幹線実設備値の真値化0件。
+固定5問・8小問について、制作前独立検証 `8 / 8 PASS` と本文要求事項マッピング `8 / 8` を維持。練習問題sourceは全12問・全問五肢択一、数値・論理独立再計算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5問・8小問への接続 `8 / 8`。SPEC固定範囲外追加0件、Topic 11以降の先取り0件、未確認新幹線実設備値の真値化0件。
 
-次工程は、このsourceを正本としてTopic 10解説PDFを作成する。
+次工程は、`10_load_variation_practice_source.md` を正本としてTopic 10練習PDFを作成し、全ページ表示QA・文字抽出QA・数値／論理再検算を行う。
 
 ## SPEC固定範囲
 `SPEC.md` のTopic 10から範囲を追加しない。
@@ -463,4 +463,4 @@
 - 未確認新幹線実設備値の真値化: `0件`
 
 ## 次工程
-このsourceを正本としてTopic 10解説PDFを作成し、表示QA・文字抽出QA・数値論理QAを行う。
+`10_load_variation_practice_source.md` を正本としてTopic 10練習PDFを作成し、全ページ表示QA・文字抽出QA・数値／論理再検算を行う。
