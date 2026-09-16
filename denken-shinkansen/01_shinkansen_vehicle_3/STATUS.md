@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 33 / 38
-- current_status: `topic_34_blind_reanswer_retry_required`
+- current_status: `topic_34_independent_reanswer_complete`
 - last_completed_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
 - active_topic: `34 COMTRAC② 進路をどう自動制御する？`
-- next_start: 新しいblind実行で、公式解答・第三者解説の正答表示を開く前にTopic 34固定5問・6答案要素を完成教材だけで全件再解答し、導出確定後に公式解答と照合する
+- next_start: Topic 34の最終QAを実施し、固定5問・6答案要素の完成後blind独立再解答、必須成果物、練習問題QA、PDF/PPTX表示QA、進捗記録整合、固定範囲境界を確認する。PASSの場合のみcompletedとして34/38へ更新する
 
 ## 新品質ゲート進捗
 - [x] 01〜33 — PASS
@@ -109,6 +109,20 @@ source: `topics/34_comtrac_route_control/34_comtrac_route_control.md`
 - 固定範囲外ゲート・高度な論理簡単化追加: `0件`
 - 未確認COMTRAC内部仕様追加: `0件`
 - 記録: `topics/34_comtrac_route_control/34_comtrac_route_control_blind_reanswer_attempt.md`
+
+## 34 完成後blind独立再解答
+`5 / 5問・6 / 6答案要素 PASS`。
+- 新しいblind実行として、公式解答・第三者解説の正答表示を開く前に、公式問題PDFと完成教材だけで全6答案要素を導出
+- 真理値表から論理式を選ぶ設問は、候補式の上線範囲を問題画像へ再照合してから0/1代入を実施
+- 全答案要素の選択肢確定後にのみ公式解答表を開いて照合
+- 公式解答との不一致: `0件`
+- 教材外知識補完: `0件`
+- 固定範囲外知識による補完: `0件`
+- Topic 35範囲追加: `0件`
+- 固定範囲外ゲート・高度な論理簡単化追加: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+- 教材本文・固定EXAM_ALIGNMENT・練習問題・PDF・PowerPointは変更なし
+- 記録: `topics/34_comtrac_route_control/34_comtrac_route_control_independent_reanswer.md`
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
@@ -507,4 +521,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 33 `COMTRAC① 東海道新幹線全体をどう監視する？` は固定5過去問の完成後blind独立再解答 `5 / 5 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数33/38。
 
 ## 次テーマ工程
-Topic 34 `COMTRAC② 進路をどう自動制御する？` は必須成果物と表示QAまで完了し、blind前ゲートもREADYだったが、今回の再解答試行は正答表示への先行到達が発生したため `RETRY_REQUIRED / NOT_COUNTED`。次は新しいblind実行で、正答表示を開く前に固定5問・6答案要素を完成教材だけで全件再解答し、導出確定後に公式解答と照合する。
+Topic 34 `COMTRAC② 進路をどう自動制御する？` は必須成果物・表示QA・完成後blind独立再解答まで完了し、固定5問・6答案要素は `5 / 5問・6 / 6答案要素 PASS`。次は最終QAを実施し、全品質ゲートPASSの場合のみTopic 34を `completed` として完成数を34/38へ更新する。
