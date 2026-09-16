@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `10 / 39`
-- current_status: `topic_11_powerpoint_complete`
+- current_status: `topic_11_independent_reanswer_passed`
 - last_completed_topic: `10 300系① 誘導電動機等価回路`
 - active_topic: `11 300系② PWMコンバータ`
-- next_start: 完成済み教材だけを使い、Topic 11固定5過去問・27答案要素を独立再解答する
+- next_start: Topic 11の最終QAを実施し、必須成果物・進捗記録・固定範囲・独立再解答結果を総合判定する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -21,7 +21,7 @@
 - [x] 08 位相制御と平均直流電圧 — PASS
 - [x] 09 直流機方式の損失・熱設計 — PASS
 - [x] 10 300系① 誘導電動機等価回路 — PASS
-- [ ] 11 300系② PWMコンバータ — POWERPOINT_COMPLETE / IN_PROGRESS
+- [ ] 11 300系② PWMコンバータ — INDEPENDENT_REANSWER_PASS / IN_PROGRESS
 
 ## Topic 11 固定EXAM_ALIGNMENT
 - source: `topics/11_300series_pwm_converter/11_300series_pwm_converter.md`
@@ -55,6 +55,12 @@
   - 固定一次2問＋二次3問・27答案要素を維持
   - Git blob SHA-1: `8688e3b87936a08c80ae5cdbf19dbc6d1033fb44`
   - SHA-256: `26158481860cac4adb3f870aeaf19d2100a4418b0e6c60a0032b1c114286b4aa`
+- 完成後独立再解答: `topics/11_300series_pwm_converter/11_300series_pwm_converter_independent_reanswer.md`
+  - 一次 `10 / 10 PASS`
+  - 二次 `17 / 17 PASS`
+  - 合計 `27 / 27 PASS`
+  - 教材外知識補完 `0件`
+  - 固定EXAM_ALIGNMENT変更 `0件`
 
 ## Topic 11 固定範囲
 - PWMコンバータ
@@ -81,4 +87,4 @@ SPEC指定可視化:
 - 未確認300系実車値追加: `0件`
 
 ## 次工程
-完成済みの解説source/PDF・練習source/PDF・PowerPointだけを使い、保存済み公式正答を先に参照せず、固定一次2問＋二次3問・27答案要素を独立再解答する。教材外知識による補完は禁止する。
+Topic 11の最終QAを実施する。固定5過去問・27答案要素の独立再解答 `27 / 27 PASS`、必須成果物、表示QA、進捗記録整合、固定範囲境界をまとめて判定し、品質ゲートを満たした場合のみ `completed` とする。
