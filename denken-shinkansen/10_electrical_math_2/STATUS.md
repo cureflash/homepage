@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 9 / 20
-- current_status: `topic_10_source_progress_synced`
-- last_completed_topic: `09 ラプラス変換`
-- active_topic: `10 伝達関数・極・零点`
-- next_start: Topic 10の最終QAを再判定する。教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更しない
+- exam_aligned_completed_topics: 10 / 20
+- current_status: `topic_10_completed`
+- last_completed_topic: `10 伝達関数・極・零点`
+- active_topic: `11 行列・線形連立方程式`
+- next_start: Topic 11の制作前EXAM_ALIGNMENTを行う。二種相当の公式過去問を直近年度優先で調査し、固定範囲だけで完結する品質ゲートを先に確定する
 
 ## Topic 07 制作品質ゲート
 
@@ -99,30 +99,30 @@
 - [x] 完成後独立再解答 `11 / 11 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
 - [x] source進捗記録3箇所の同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 10 `伝達関数・極・零点` の最終QAで残っていた進捗記録3箇所だけを実成果物へ同期した。
+Topic 10 `伝達関数・極・零点` の最終QAを再判定した。
 
-同期箇所:
-- 主source冒頭 `## 状態`
-- 主source末尾 `## 次工程`
-- 練習source末尾 `## 次工程`
-
-差分監査:
-- 主source: 上記2箇所のみ変更
-- 練習source: 上記1箇所のみ変更
-- 教材本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答: 変更0件
-- PDF/PPTX: 変更0件
-- 完成後独立再解答 `11 / 11 PASS`: 維持
+再確認:
+- 必須成果物実在: PASS
+- 固定二次5問・11対象設問: PASS
+- 完成後独立再解答 `11 / 11 PASS`: PASS
+- 練習問題独立計算・正答一意性 `12 / 12 PASS`: PASS
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- source進捗記録と実成果物の整合: PASS
+- Topic 12/15先取り: 0件
+- ラウス・フルビッツ法一般手順追加: 0件
+- 定常偏差・畳み込みの独立論点化: 0件
 - 固定範囲外追加: 0件
+- 未確認実車値依存: 0件
 
 ## 判定
 
-Topic 10は `source_progress_synced / IN_PROGRESS`。
+Topic 10は `PASS / completed`。
 
-完成数は `9 / 20` のまま。
+完成数は `10 / 20`。
 
-次は技術内容を変更せず最終QAを再判定する。
+次はTopic 11 `行列・線形連立方程式` の制作前EXAM_ALIGNMENTを行う。
