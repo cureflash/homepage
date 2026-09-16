@@ -4,9 +4,10 @@
 
 ## 状態
 
-- stage: `SOURCE_PROGRESS_SYNCED`
-- completion: `IN_PROGRESS`
-- 次工程: 最終QA再実施
+- stage: `COMPLETED`
+- completion: `completed`
+- 最終QA: `PASS / FINAL_QA_COMPLETE`
+- 次工程: Topic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENT
 
 ## 1. SPEC固定範囲
 
@@ -548,4 +549,4 @@ ATCを題材にする理由は、異なる周波数成分を見分けるとい�
 
 ## 次工程
 
-全成果物・固定EXAM_ALIGNMENTは変更せず、Topic 11の最終QAを再実施する。
+Topic 11は `PASS / completed`。次はTopic 12「三相交流を新幹線へ渡す」の制作前EXAM_ALIGNMENT。
