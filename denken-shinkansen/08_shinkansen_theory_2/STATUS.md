@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 12 / 21
-- current_status: `topic_13_powerpoint_complete`
+- current_status: `topic_13_reanswer_complete`
 - last_completed_topic: `12 三相交流を新幹線へ渡す`
 - active_topic: `13 新幹線の交流電力を複素数で扱う`
-- next_start: Topic 13 完成後独立再解答
+- next_start: Topic 13 最終QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -185,23 +185,19 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint＋表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答: `19 / 19 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 13「新幹線の交流電力を複素数で扱う」の解説画像PowerPoint＋表示QAを完了した。
+Topic 13「新幹線の交流電力を複素数で扱う」の完成後独立再解答を完了した。
 
-- PowerPoint: `topics/13_complex_power/13_complex_power_images.pptx`
-- QA: `topics/13_complex_power/13_complex_power_powerpoint_qa.md`
-- 16:9 / 5枚
-- 全スライド表示QA: `5 / 5 PASS`
-- overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- 固定4問・19答案要素の可視化: `19 / 19`
-- `S=VI*` と共役、P/Q/|S|、電力三角形、遅れ/進み符号: `PASS`
-- `S=|I|^2Z`、`S=|V|^2Y*`、複数負荷P/Q合算、力率改善、皮相電力上限からの逆算: `PASS`
-- 電力円線図は概念のみ、詳細導出追加: `0件`
+- 記録: `topics/13_complex_power/13_complex_power_reanswer.md`
+- 固定一次3問・15小問: `15 / 15 PASS`
+- 固定二次1問・4答案要素: `4 / 4 PASS`
+- 合計: `19 / 19 PASS`
+- 保存済み個別正答・公式標準解答の先読み: `0件`
+- 教材外知識補完: `0件`
 - 二次採用: `1問・4答案要素`、二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 - Topic 14以降の先取り: `0件`
@@ -209,4 +205,4 @@ Topic 13「新幹線の交流電力を複素数で扱う」の解説画像PowerP
 
 ## 判定
 
-Topic 13は `PASS / POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は完成後独立再解答。
+Topic 13は `PASS / INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `12 / 21` のまま。次工程は最終QA。
