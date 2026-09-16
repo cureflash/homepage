@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 9 / 12
-- current_status: `topic_09_completed`
+- current_status: `topic_10_exam_alignment_complete`
 - last_completed_topic: `09 微積分で電気を読む`
 - active_topic: `10 指数関数・一階微分方程式入門`
-- next_start: `Topic 10 制作前EXAM_ALIGNMENT`
+- next_start: `Topic 10 解説本文＋3段階例題`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -93,19 +93,35 @@
 - [x] 主source・練習sourceの旧進捗記録2箇所を現在地へ同期
 - [x] 最終QA再判定 `PASS / completed`
 
+## Topic 10 進捗
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 令和8年度上期から遡って公式過去問を調査
+- [x] Topic 10固定範囲だけで直接対応できる公式過去問5問を選定
+- [x] RLC二次過渡・再出題重複・固定範囲外候補を除外
+- [x] 参考教材を複数系統確認
+- [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
+- [x] 制作前独立解答・公式解答照合 `5 / 5 PASS`
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF（解答・完全解説付き）
+- [ ] 解説画像PowerPoint
+- [ ] 完成教材だけでの公式過去問独立再解答
+- [ ] 最終QA
+
 ## 今回進めた内容
 
-Topic 09「微積分で電気を読む」の最終QAを再判定した。
+Topic 10「指数関数・一階微分方程式入門」の制作前EXAM_ALIGNMENTを完了した。
 
-- 初回最終QAで唯一FAILだった主source・練習sourceの進捗記録2箇所が同期済みであることを再確認
-- 必須成果物5件のGitHub正本上の実在を再確認
-- 固定5問・7答案要素の完成後独立再解答 `5 / 5問・7 / 7答案要素 PASS` を維持
-- 練習QA `12 / 12 PASS`、記録済みPDF/PPTX表示QAを維持
-- 固定5式・新幹線接続3点・Topic 10〜11境界を再確認
-- 固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件
+- 公式過去問を令和8年度上期から遡って確認
+- 固定5問: R8上理論問10、R7下理論問10、R6下理論問10、R5下理論問10、R2理論問10
+- 制作前独立解答は `(4),(4),(4),(5),(2)`、公式解答と `5 / 5 PASS`
+- R7上/R6上のRLC二次過渡、R3のR7下再出題元、H28のR5下同型問題等を件数合わせに採用しなかった
+- 固定範囲外論点追加0件、Topic 11先取り0件、未確認新幹線実値追加0件
 
 ## 判定
 
-`topic_09_completed / PASS`。
+`topic_10_exam_alignment_complete / IN_PROGRESS`。
 
-完成数は `9 / 12`。次工程はTopic 10「指数関数・一階微分方程式入門」の制作前EXAM_ALIGNMENT。
+完成数は `9 / 12`。次工程はTopic 10の解説本文＋3段階例題。
