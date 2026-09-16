@@ -2,13 +2,13 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT`、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答まで完了。
+制作前 `EXAM_ALIGNMENT`、固定5問の制作前独立解答・公式解答照合、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答、初回最終QAまで完了。
 
 系列SPECの固定5式だけを対象に、固定5問・7答案要素へ教材内対応を作成済み。固定EXAM_ALIGNMENT変更0件、固定範囲外論点追加0件、Topic 10〜11先取り0件、未確認新幹線実値追加0件。
 
 完成後独立再解答は保存済み正答を先に見ず、完成教材と固定5問の公式問題だけで実施し、答案確定後に公式解答と照合して `5 / 5問・7 / 7答案要素 PASS`。教材外知識補完0件。
 
-Topic 09 は `in_progress`。次工程は最終QA。
+Topic 09 は `in_progress`。初回最終QAは技術内容・成果物・試験対応・仕様境界PASS、進捗記録のみ `NEEDS_REVISION`。主source・練習sourceの進捗記録同期まで完了し、次工程は最終QA再判定。
 
 # EXAM_ALIGNMENT
 
@@ -536,4 +536,4 @@ Topic 09では、微分・積分を電気量へ読み替える。覚える式は
 
 ## 次工程
 
-Topic 09の最終QAを実施する。固定EXAM_ALIGNMENTとTopic 09の固定5式、既存教材内容は変更しない。
+Topic 09の初回最終QAまで実施済み。主source・練習sourceの進捗記録同期を完了したため、次工程は最終QA再判定。固定EXAM_ALIGNMENTとTopic 09の固定5式、既存教材内容は変更しない。
