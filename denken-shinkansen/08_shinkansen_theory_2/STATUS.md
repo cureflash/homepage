@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 11 / 21
-- current_status: `topic_12_powerpoint_complete`
+- current_status: `topic_12_independent_reanswer_complete`
 - last_completed_topic: `11 ATCはなぜ特定の周波数を見分けられる？`
 - active_topic: `12 三相交流を新幹線へ渡す`
-- next_start: Topic 12 完成後独立再解答
+- next_start: Topic 12 最終QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -154,20 +154,18 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint＋表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答: `5 / 5 PASS`
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 12「三相交流を新幹線へ渡す」の解説画像PowerPoint＋表示QAを完成し、GitHub正本へ反映した。
+Topic 12「三相交流を新幹線へ渡す」の完成後独立再解答を実施した。
 
-- PowerPoint: `topics/12_three_phase_ac/12_three_phase_ac_images.pptx`
-- PowerPoint QA: `topics/12_three_phase_ac/12_three_phase_ac_powerpoint_qa.md`
-- 16:9 / 5枚
-- 全スライド表示QA: `5 / 5 PASS`
-- overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- 固定H23一次「理論」問6の5小問要求を可視化: `5 / 5`
+- 記録: `topics/12_three_phase_ac/12_three_phase_ac_reanswer.md`
+- 固定H23一次「理論」問6 (1)〜(5)を完成教材の範囲だけで式から再導出
+- 独立答案: `ロ, ヲ, リ, ホ, ヨ`
+- 固定済み公式標準解答との照合: `5 / 5 PASS`
+- 教材外知識補完: `0件`
 - 二次採用: `0問`、二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 - 未確認の新幹線変電設備値・内部結線追加: `0件`
@@ -175,4 +173,4 @@ Topic 12「三相交流を新幹線へ渡す」の解説画像PowerPoint＋表�
 
 ## 判定
 
-Topic 12は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `11 / 21` のまま。次工程は完成後独立再解答。
+Topic 12は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `11 / 21` のまま。次工程は最終QA。
