@@ -6,19 +6,20 @@
 
 Topic 01〜11は `PASS / completed`。完成数は `11 / 21`。
 
-current_status: `topic_12_explanation_source_complete`
+current_status: `topic_12_explanation_pdf_complete`
 
 active_topic: `12 三相交流を新幹線へ渡す`
 
-Topic 12は解説本文＋3段階例題まで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。制作前独立計算 `5 / 5 PASS`。固定5小問の要求事項を解説本文・例題へ `5 / 5` 接続済み。二次採用0問・二次数合わせ0件を維持している。
+Topic 12は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QAまで完了。固定公式過去問はH23一次「理論」問6 (1)〜(5)。制作前独立計算 `5 / 5 PASS`。固定5小問の要求事項を解説本文・例題へ `5 / 5` 接続済み。二次採用0問・二次数合わせ0件を維持している。
 
-次工程はTopic 12の解説PDF＋表示QA。現在のsourceだけを正本としてPDF化し、全ページ表示QA・文字抽出QAを行う。
+次工程はTopic 12の練習問題source＋練習PDF。固定EXAM_ALIGNMENTと固定範囲を維持して通常の電験二種一次「理論」問題を作成し、PDF表示・文字抽出QAまで行う。
 
-## Topic 12 source
+## Topic 12 成果物
 
 - source: `topics/12_three_phase_ac/12_three_phase_ac.md`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
-- completion: `in_progress`
+- 解説PDF: `topics/12_three_phase_ac/12_three_phase_ac_explanation.pdf`
+- stage: `EXPLANATION_PDF_COMPLETE`
+- completion: `IN_PROGRESS`
 
 ## Topic 12 固定範囲
 
@@ -111,6 +112,22 @@ Topic 12は解説本文＋3段階例題まで完了。固定公式過去問はH2
 - 未確認の新幹線変電設備値・内部結線追加: `0件`
 - 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
+## Topic 12 解説PDF QA
+
+- PDF: `topics/12_three_phase_ac/12_three_phase_ac_explanation.pdf`
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 固定H23一次「理論」問6の5小問への接続: `5 / 5`
+- 3段階例題: `3 / 3`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認の新幹線変電設備値・内部結線追加: `0件`
+- Topic 13以降の先取り: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
 ## 参考資料
 
 参照日: 2026-09-16
@@ -146,4 +163,4 @@ Topic 11「ATCはなぜ特定の周波数を見分けられる？」は `PASS / 
 
 ## 次に行うこと
 
-Topic 12「三相交流を新幹線へ渡す」の解説PDFを、現在の `12_three_phase_ac.md` だけから作成する。PDF化後、全ページ表示QA・文字抽出QAを実施し、内容欠落やレイアウト崩れがなければ次工程へ進める。
+Topic 12の練習問題sourceを作成し、練習PDFまで完成させて表示・文字抽出QAを実施する。
