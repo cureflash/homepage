@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: 9 / 39
-- current_status: `topic_10_practice_pdf_complete`
+- current_status: `topic_10_powerpoint_complete`
 - last_completed_topic: `09 直流機方式の損失・熱設計`
 - active_topic: `10 300系① 誘導電動機等価回路`
-- next_start: Topic 10の解説画像PowerPointを制作する。SPEC指定4グラフ（トルク―すべり、出力―すべり、効率―負荷率、二次抵抗変更時の特性）を収録し、表示QA・overflow・PowerPoint ZIP整合性を確認する
+- next_start: Topic 10の完成教材だけで固定一次3問＋二次2問・22答案要素を独立再解答する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -530,4 +530,23 @@
 - SHA-256: `f5dfaf9d3964190bc377ae47e442f6eee630658a92da5d65e7f1140fed166b72`
 - Git blob SHA-1: `4c6bdefa78383a57074e017e6ef6eea958b50bbb`
 
-次工程はTopic 10 `300系① 誘導電動機等価回路` の解説画像PowerPoint。SPEC指定4グラフを収録し、表示QA・overflow・PowerPoint ZIP整合性を確認する。
+## Topic 10 解説画像PowerPoint
+- `10_300series_induction_motor_equivalent_circuit_images.pptx`: `completed`
+- 16:9・4スライド
+- SPEC指定4可視化: `4 / 4 PASS`
+  - トルク―すべり
+  - 出力―すべり
+  - 効率―負荷率
+  - 二次抵抗変更時の特性
+- LibreOffice全4スライド Visual QA: `4 / 4 PASS`
+- overflow: `0件 / PASS`
+- PowerPoint ZIP整合性: `PASS`
+- 固定一次3問＋二次2問・22答案要素: 維持
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- Topic 11〜13先取り: `0件`
+- 未確認300系実車値追加: `0件`
+- Git blob SHA-1: `b06acd2542494d2c66783c2be3f3e8c3c39d465b`
+- SHA-256: `b88f4db3bb0d1864869a7bf1fc2323e24330c8cbf94374b02ffcfd615d155274`
+
+次工程はTopic 10の完成教材だけで固定一次3問＋二次2問・22答案要素を独立再解答する。
