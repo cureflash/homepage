@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 11 / 20
-- current_status: `topic_12_source_progress_synced`
-- last_completed_topic: `11 行列・線形連立方程式`
-- active_topic: `12 固有値の基礎`
-- next_start: Topic 12の最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する
+- exam_aligned_completed_topics: 12 / 20
+- current_status: `topic_12_completed`
+- last_completed_topic: `12 固有値の基礎`
+- active_topic: `13 フーリエ級数`
+- next_start: Topic 13の制作前EXAM_ALIGNMENTを実施し、第二種公式過去問から本Topic固定範囲へ直接対応する問題を選定・独立解答する
 
 ## Topic 07 制作品質ゲート
 
@@ -144,38 +144,34 @@
 - [x] 完成後独立再解答 `1 / 1 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
 - [x] source進捗記録3箇所の同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 12 `固有値の基礎` のsource進捗記録3箇所だけを実成果物へ同期した。
+Topic 12 `固有値の基礎` の最終QAを再判定し、`PASS / completed` とした。
 
-同期箇所:
-- `12_eigenvalues_basics.md` 冒頭 `## 状態`
-- `12_eigenvalues_basics.md` 末尾 `## 次工程`
-- `12_eigenvalues_basics_practice.md` 末尾 `## 次工程`
-
-技術本文・固定EXAM_ALIGNMENT・数式・3段階例題・練習問題・正答・PDF/PPTX・完成後独立再解答は変更していない。
-
-既存の技術ゲートは維持:
+再確認結果:
 - 必須成果物実在: PASS
-- 固定H28二次「機械・制御」問4 (1): `1 / 1 PASS`
+- 固定H28二次「機械・制御」問4 (1): PASS
 - 制作前独立再解答・公式標準解答照合: `1 / 1 PASS`
 - 完成後独立再解答: `1 / 1 PASS`、`f=(12,6)`
 - 練習問題独立計算・正答一意性: `12 / 12 PASS`
 - 解説PDF: A4縦5ページ、200 dpi表示 `5 / 5 PASS`、文字抽出PASS
 - 練習PDF: A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS
 - PowerPoint: 16:9・5枚、表示 `5 / 5 PASS`、overflow 0件、ZIP/XML整合性PASS
+- source進捗記録と実成果物の整合: PASS
 - 固定範囲外追加: 0件
 - 第一種過去問による件数水増し: 0件
 - Topic 15周波数応答・ボード線図先取り: 0件
 - 未確認実車値依存: 0件
 
+技術本文・固定EXAM_ALIGNMENT・数式・例題・練習問題・PDF/PPTXは変更していない。
+
 ## 判定
 
-Topic 12は `topic_12_source_progress_synced / IN_PROGRESS`。
+Topic 12は `PASS / completed`。
 
-完成数は `11 / 20`。
+完成数は `12 / 20`。
 
-次は最終QAを再判定し、必須成果物・表示QA・固定EXAM_ALIGNMENT・完成後独立再解答・source進捗整合・固定範囲境界を再確認する。
+次はTopic 13 `フーリエ級数` の制作前EXAM_ALIGNMENTを実施する。
