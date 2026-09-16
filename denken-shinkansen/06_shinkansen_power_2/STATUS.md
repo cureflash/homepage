@@ -4,12 +4,14 @@ updated: 2026-09-16
 series: `06_shinkansen_power_2`
 active_topic: `08`
 theme: 主変圧器を％インピーダンスで見る
-current_status: `topic_08_independent_reanswer_complete`
+current_status: `topic_08_final_qa_needs_revision`
 completed_topics: `7 / 22`
 
 ## Topic 08 current result
 
-完成後独立再解答を完了した。正式4過去問を、答案確定まで公式解答・Git履歴上の制作前個別答案・外部解説の個別解答を見ず、完成教材だけで再構成し、答案確定後に公式標準解答と照合した。
+最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` とした。
+
+技術内容、一次・二次の過去問対応品質ゲート、必須成果物、PDF/PPTX表示QA、固定9項目、固定範囲境界はPASS。
 
 - R7 二次「電力・管理」問3: `2 / 2答案要素 PASS`
 - R3 二次「電力・管理」問3: `6 / 6答案要素 PASS`
@@ -22,7 +24,14 @@ completed_topics: `7 / 22`
 - 未確認実設備値依存: `0件`
 - 正式固定4問変更: `0件`
 
-固定EXAM_ALIGNMENT、固定9項目、教材成果物は変更していない。
+未完了理由は進捗記録のみ。
+
+- 主source冒頭が `blind_reanswer_ready` のまま
+- 主source末尾が完成後独立再解答を次工程としている
+- 練習source冒頭が `topic_08_practice_source_complete` のまま
+- 練習source末尾が練習PDF作成を次工程としている
+
+完成後独立再解答、練習PDF、各表示QAは既に完了済み。技術内容・固定EXAM_ALIGNMENT・正式4過去問・固定9項目は修正しない。
 
 ## Gate checklist
 
@@ -43,8 +52,8 @@ completed_topics: `7 / 22`
   - [x] 解説画像PowerPoint
   - [x] blind独立再解答前ゲート
   - [x] 完成後独立再解答
-  - [ ] 最終QA
+  - [x] 最終QA実施（`NEEDS_REVISION`）
 
 ## next_start
 
-Topic 08の最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、練習15問、PDF/PPTX表示QA、固定範囲境界、主source・STATUS・HANDOFFの進捗整合を確認し、全件PASSの場合のみ `completed` とする。仕様・正式固定4問・固定9項目は変更しない。
+Topic 08の主source・練習sourceに残る旧状態・旧次工程だけを実成果物へ同期する。教材本文、問題・解答、固定EXAM_ALIGNMENT、正式4過去問、固定9項目、PDF/PPTXは変更しない。同期後に最終QAを再判定する。
