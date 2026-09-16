@@ -9,7 +9,7 @@ Topic 01〜11は最終QAまで `PASS / completed`。
 
 active topic: `12 N700Sの6極モーターを設計側から見る`
 
-current status: `topic_12_independent_reanswer_complete`
+current status: `topic_12_final_qa_needs_revision`
 
 ## Topic 10 固定範囲
 - 力行
@@ -429,5 +429,17 @@ source完成内容:
 - 未確認N700S実車値追加: `0件`
 - 教材本文・練習問題・PDF/PPTXの内容変更: `0件`
 
+## Topic 12 最終QA
+- 記録: `topics/12_n700s_six_pole_motor_design/12_n700s_six_pole_motor_design_final_qa.md`
+- 必須成果物実在: PASS
+- 固定一次2問＋二次3問・16答案要素: PASS
+- 完成後独立再解答: `16 / 16 PASS`
+- 練習問題・PDF/PPTX QA: PASS
+- 固定範囲境界・未確認N700S実車値: PASS
+- 進捗記録整合: FAIL
+  - main source末尾 `# 次工程` が「解説PDFまで完成。次は練習問題source」のまま
+  - 練習source末尾 `# 次工程` が「次は練習PDFへ反映」のまま
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 次に行うこと
-Topic 12の最終QAを実施する。必須成果物実在、固定一次2問＋二次3問・16答案要素、独立再解答 `16 / 16 PASS`、PDF/PPTX QA、固定範囲境界、進捗記録整合を再判定する。
+Topic 12の進捗記録2件を実成果物へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。同期後に最終QAを再実施する。
