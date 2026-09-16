@@ -6,13 +6,13 @@
 - Topic 01〜13: 最終QA `PASS / completed`
 - 完成数: `13 / 22`
 - active topic: `14 L0系を500km/hで同期させる`
-- current status: `topic_14_explanation_source_complete`
-- 次工程: Topic 14 解説PDF
+- current status: `topic_14_explanation_pdf_complete`
+- 次工程: Topic 14 練習問題source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新mainを確認し、Topic 14の制作前EXAM_ALIGNMENTが既に完成していたため再作業せず、その次工程から進めた。
+- 最新mainを確認し、Topic 14の制作前EXAM_ALIGNMENTと解説sourceが既に完成していたため再作業せず、次工程の解説PDFを作成した。
 - Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いでいる。
 - Topic 13で採用済み答案要素の重複採用は `0件`。
 
@@ -68,11 +68,22 @@
 - [x] Topic 15以降依存 `0件`
 - [x] 未確認L0実値追加 `0件`
 
+## Topic 14 解説PDF
+- [x] `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_explanation.pdf`
+- [x] A4縦3ページ
+- [x] 200 dpi全ページ表示QA `3 / 3 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 固定一次1問＋二次4問・27答案要素を維持
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3` 収録
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+- [x] SHA-256 `9e3af1ef9246da706aa83a2e2787a67c3c74afebc3bb950e677bd77f45f68d9b`
+
 ## Topic 14 現成果物
 - main source: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization.md`
 - 制作前EXAM_ALIGNMENT: 完成
 - 解説本文＋3段階例題: 完成
-- 解説PDF／練習source／練習PDF／PowerPoint／完成後独立再解答／最終QA: 未着手
+- 解説PDF: 完成
+- 練習source／練習PDF／PowerPoint／完成後独立再解答／最終QA: 未着手
 
 ## 次に行うこと
-Topic 14の解説sourceを正本として解説PDFを作成し、固定5問・27答案要素、3段階例題、固定範囲境界を維持して表示QA・文字抽出QAを行う。
+Topic 14の固定5問・27答案要素と固定範囲を維持した練習問題sourceを作成し、一次試験型と二次記述型を独立QAする。
