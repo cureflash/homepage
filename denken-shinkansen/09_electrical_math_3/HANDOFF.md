@@ -6,17 +6,19 @@
 
 Topic 01〜09は `completed`。
 
-Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ブラインドゲート、完成教材だけでの固定5問独立再解答まで完了。
+Topic 10 `指数関数・一階微分方程式入門` は、制作前EXAM_ALIGNMENT、制作前独立解答、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ブラインドゲート、完成教材だけでの固定5問独立再解答、初回最終QAまで完了。
+
+初回最終QAは `NEEDS_REVISION / IN_PROGRESS`。技術内容・成果物・独立再解答はPASSで、未完了理由は主source・練習sourceの旧進捗記録3箇所だけ。
 
 完成数: `9 / 12`
 
-current_status: `topic_10_independent_reanswer_complete`
+current_status: `topic_10_final_qa_needs_revision`
 
 last_completed_topic: `09 微積分で電気を読む`
 
 active_topic: `10 指数関数・一階微分方程式入門`
 
-next_start: `Topic 10 最終QA`
+next_start: `Topic 10 source進捗記録3箇所を実成果物へ同期`
 
 ## Topic 10 固定仕様範囲
 
@@ -170,8 +172,35 @@ next_start: `Topic 10 最終QA`
 
 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`。
 
+## Topic 10 初回最終QA
+
+記録:
+`topics/10_exponential_first_order_ode/10_exponential_first_order_ode_final_qa.md`
+
+判定: `NEEDS_REVISION / IN_PROGRESS`。
+
+PASS:
+- 必須成果物5点の実在
+- 固定EXAM_ALIGNMENT 5問
+- 制作前独立検証 `5 / 5 PASS`
+- 完成後独立再解答 `5 / 5 PASS`
+- 練習数値・論理QA `12 / 12 PASS`
+- 正答一意性 `12 / 12 PASS`
+- 解説PDF / 練習PDF / PowerPoint表示QA
+- 教材外補完0件
+- 固定範囲外追加0件
+- 未確認新幹線実値追加0件
+- 仕様境界
+
+FAILは進捗記録3箇所のみ:
+1. 主source冒頭 `## 状態` が「解説本文＋3段階例題まで完了 / 次工程は解説PDF」のまま。
+2. 主source末尾 `## 次工程` が「解説PDFへ反映」のまま。
+3. 練習source末尾 `## 次工程` が「練習PDFを作成」のまま。
+
+技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・独立再解答結果は変更不要。
+
 ## 次工程
 
-Topic 10の最終QAを実施する。
+Topic 10の主source・練習sourceに残る旧進捗記録3箇所だけを実成果物へ同期する。
 
-独立再解答PASSだけではTopic 10を `completed` としない。最終QAで、必須成果物、表示QA、練習QA、固定EXAM_ALIGNMENT、独立再解答、進捗記録、仕様境界を再確認する。
+この同期では技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果を変更しない。同期後に最終QAを再判定する。
