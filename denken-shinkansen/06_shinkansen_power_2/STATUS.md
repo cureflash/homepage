@@ -4,30 +4,28 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `10`
 theme: なぜ変電所を何十kmも離せない？
-current_status: `topic_09_completed`
+current_status: `topic_10_exam_alignment_complete`
 completed_topics: `9 / 22`
 
-## Topic 09 final result
+## Topic 10 current result
 
-Topic 09「ATき電はなぜ長距離へ電気を送れる？」の最終QA再判定を実施し、`PASS / completed` とした。
+Topic 10「なぜ変電所を何十kmも離せない？」の制作前EXAM_ALIGNMENTを完了した。
 
-品質ゲート:
-- 正式対象: R7一次「電力」問7、H25一次「電力」問7、H26二次「電力・管理」問4
-- 完成後blind独立再解答: `3 / 3問・14 / 14答案要素 PASS`
-- 一次: `10 / 10空欄 PASS`
-- 二次: `4 / 4答案要素 PASS`
-- 解説PDF: A4縦3ページ、表示 `3 / 3 PASS`、文字抽出PASS
-- 練習: 15問、数値・論理 `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`
-- 練習PDF: A4縦4ページ、表示 `4 / 4 PASS`、文字抽出PASS
-- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0、ZIP整合性PASS
-- 固定10項目: `10 / 10`
-- 固定範囲外追加: `0件`
-- Topic 10以降への依存: `0件`
-- 未確認実設備値依存: `0件`
+品質ゲート対象:
+- 平成30年度 第二種一次「電力」問7
+- 平成27年度 第二種二次「電力・管理」問3
+- 平成27年度 第二種二次「電力・管理」問4
+- 平成26年度 第二種二次「電力・管理」問4
+- 一次1問＋二次3問、計 `4問・17答案要素`
+- 固定10項目: `10 / 10` を正式過去問または補助資料へ接続
+- Topic 10固定範囲外追加: `0件`
+- Topic 11以降の先取り: `0件`
+- 未確認実設備値追加: `0件`
 - 仕様追加: `0件`
-- 進捗記録整合: PASS
 
-前回最終QAの唯一のFAILだった旧進捗記録不整合は解消済み。主sourceを `completed` へ同期し、技術本文・固定EXAM_ALIGNMENT・正式3問・練習問題/正答・PDF/PPTX・独立再解答結果は変更していない。
+原則5問に対し、Topic 10固定範囲だけで問題全体を完答できる5問目は確認できなかったため、件数合わせを行っていない。令和8年度一次「電力」問1〜問7も確認済みで、直接対応する全問完答対象はなかった。令和8年度二次は2026-09-17時点で未実施。
+
+本文・PDF・練習問題・PowerPointは未着手。制作前独立再解答も未実施。
 
 ## Gate checklist
 
@@ -40,8 +38,8 @@ Topic 09「ATき電はなぜ長距離へ電気を送れる？」の最終QA再�
 - [x] Topic 07 completed
 - [x] Topic 08 completed
 - [x] Topic 09 completed
-- [ ] Topic 10
+- [ ] Topic 10 - EXAM_ALIGNMENT complete / IN_PROGRESS
 
 ## next_start
 
-Topic 10「なぜ変電所を何十kmも離せない？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 10固定範囲だけを使い、二種一次・二次の公式過去問候補を調査して品質ゲート対象を固定する。
+Topic 10の制作前独立再解答を行う。正式4問について保存済み正答を先に見ず、公式問題から `4 / 4問・17 / 17答案要素` を独立確定して公式解答・標準解答へ照合する。1答案要素でもTopic 10固定範囲外の補完が必要なら本文制作へ進まずEXAM_ALIGNMENTを再監査する。
