@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `11 / 16`
-- current_status: `topic_12_explanation_source_complete`
+- current_status: `topic_12_explanation_pdf_complete`
 - last_completed_topic: `11 空転した車輪をどう立て直す？`
 - active_topic: `12 新幹線のコンピュータは何をしている？`
-- next_start: Topic 12の解説PDFを作成する
+- next_start: Topic 12の練習問題sourceを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -22,7 +22,7 @@
 - [x] 09 新幹線はどうやって電気で止まる？ — 品質ゲートPASS / completed
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
-- [ ] 12 新幹線のコンピュータは何をしている？ — 解説本文＋3段階例題完成 / IN_PROGRESS
+- [ ] 12 新幹線のコンピュータは何をしている？ — 解説PDF完成 / IN_PROGRESS
 - [ ] 13〜16 — 未完了
 
 ## Topic 12 制作品質状態
@@ -42,7 +42,14 @@
 - 車種固有通信規格・伝送速度・CPU構成・通信周期等の推測: `0件`
 - source: `topics/12_information_processing/12_information_processing.md`
 - 解説本文: 完成
-- 解説PDF: 未作成
+- 解説PDF: 完成（A4縦4ページ）
+- 解説PDF表示QA: `4 / 4 PASS`
+- 解説PDF文字抽出QA: `PASS`
+- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
+- 解説PDF欠落・破損グリフ: `0件`
+- 解説PDF固定過去問マッピング: `8 / 8`
+- explanation PDF: `topics/12_information_processing/12_information_processing_explanation.pdf`
+- explanation PDF QA: `topics/12_information_processing/12_information_processing_explanation_pdf_qa.md`
 - 練習問題source/PDF: 未作成
 - 解説画像PowerPoint: 未作成
 - 完成後blind独立再解答: 未実施
@@ -107,9 +114,9 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 12「新幹線のコンピュータは何をしている？」の解説本文＋3段階例題を完成した。固定6問・8答案要素を本文へ `8 / 8` マッピングし、基数変換、2進数和差・逆算、基本ゲート・真理値表、論理式簡単化、組合せ回路の区間別出力追跡、A/D・D/A、センサ、情報伝送を系列SPEC固定範囲だけで説明した。
+Topic 12「新幹線のコンピュータは何をしている？」の解説PDFを完成し、GitHub正本へ反映した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、文字切れ・重なり・ページ外はみ出し・破損グリフは0件。固定6問・8答案要素の教材内マッピング `8 / 8`、3段階例題 `3 / 3` を維持した。
 
-例題は基礎・本試験標準・複合の `3 / 3 PASS`。フローチャート、記憶装置、符号付き2進数・補数表現、インタフェース規格、カルノー図、車種固有通信仕様等の追加・推測は0件。
+フローチャート、記憶装置、符号付き2進数・補数表現、インタフェース規格、カルノー図、車種固有通信仕様等の追加・推測は0件。
 
 ## 次工程
-Topic 12の解説本文＋3段階例題をA4縦の解説PDFへ反映し、表示QA・文字抽出QA・固定EXAM_ALIGNMENT `8 / 8` の反映を確認する。
+Topic 12の練習問題sourceを作成する。固定EXAM_ALIGNMENT `6問・8答案要素` と系列SPEC固定範囲を変更しない。
