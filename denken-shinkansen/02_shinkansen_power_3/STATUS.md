@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 10 / 16
-- current_status: `topic_11_final_qa_needs_revision`
+- current_status: `topic_11_progress_records_synced`
 - last_completed_topic: `10 新幹線が突然大電力を使ったら？`
 - active_topic: `11 架線事故ではどうやって電気を止める？`
-- next_start: Topic 11の旧進捗記録4箇所だけを現在地へ同期する
+- next_start: Topic 11最終QAを再実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -21,7 +21,7 @@
 - [x] 08 新幹線の変電所はなぜ数十kmおき？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗整合を最終QAで再確認し `PASS / completed`
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 11 架線事故ではどうやって電気を止める？ — `NEEDS_REVISION / IN_PROGRESS`。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。技術内容・必須成果物・PDF/PPTX QA・SPEC境界はPASS。最終QAで旧進捗記録4箇所のみFAILを確認
+- [ ] 11 架線事故ではどうやって電気を止める？ — `NEEDS_REVISION / IN_PROGRESS`。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。技術内容・必須成果物・PDF/PPTX QA・SPEC境界はPASS。最終QAで唯一FAILだった旧進捗記録4箇所は現在地へ同期済み、最終QA再判定待ち
 - [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
 - [ ] 13 新幹線の架線は何でできている？
 - [ ] 14 駅やトンネルにはどう電気を配る？
@@ -306,7 +306,7 @@ PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
 - 未確認新幹線実設備値の使用: `0件`
 - main sourceへの完成後独立再解答結果同期: 完了
 - 最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程4箇所）
-- 旧進捗記録4箇所同期: 未実施
+- 旧進捗記録4箇所同期: 完了
 
 完成後独立答案:
 - R5下 電力 問16(a)(b): `(2),(4)`
@@ -316,4 +316,4 @@ PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
 - H22 電力 問8: `(3)`
 
 ## 次
-`11_fault_protection_explanation_qa.md`、`11_fault_protection_practice_source.md`、`11_fault_protection_powerpoint_qa.md`、`11_fault_protection_independent_reanswer.md` の旧進捗記録4箇所だけを現在地へ同期する。その後Topic 11最終QAを再実施する。技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
+Topic 11最終QAを再実施する。技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
