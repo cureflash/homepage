@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 10 / 16
-- current_status: `topic_11_practice_source_complete`
+- current_status: `topic_11_practice_pdf_complete`
 - last_completed_topic: `10 新幹線が突然大電力を使ったら？`
 - active_topic: `11 架線事故ではどうやって電気を止める？`
-- next_start: Topic 11練習PDFを作成する
+- next_start: Topic 11解説画像PowerPointを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -21,7 +21,7 @@
 - [x] 08 新幹線の変電所はなぜ数十kmおき？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、進捗整合を最終QAで再確認し `PASS / completed`
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 11 架線事故ではどうやって電気を止める？ — IN_PROGRESS。制作前EXAM_ALIGNMENT・解説本文§1〜§15・3段階例題・解説PDF・練習問題sourceまで完成。固定5問・7答案要素の本文要求事項マッピング `7 / 7`、練習source接続 `7 / 7`、練習source独立QA `12 / 12 PASS`
+- [ ] 11 架線事故ではどうやって電気を止める？ — IN_PROGRESS。制作前EXAM_ALIGNMENT・解説本文§1〜§15・3段階例題・解説PDF・練習問題source・練習PDF＋QAまで完成。固定5問・7答案要素の本文要求事項マッピング `7 / 7`、練習PDF接続 `7 / 7`、練習PDF数値・論理QA `12 / 12 PASS`
 - [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
 - [ ] 13 新幹線の架線は何でできている？
 - [ ] 14 駅やトンネルにはどう電気を配る？
@@ -250,6 +250,8 @@ source: `topics/11_fault_protection/11_fault_protection.md`
 解説PDF: `topics/11_fault_protection/11_fault_protection_explanation.pdf`
 解説PDF QA: `topics/11_fault_protection/11_fault_protection_explanation_qa.md`
 練習問題source: `topics/11_fault_protection/11_fault_protection_practice_source.md`
+練習PDF: `topics/11_fault_protection/11_fault_protection_practice.pdf`
+練習PDF QA: `topics/11_fault_protection/11_fault_protection_practice_qa.md`
 
 固定5問・7答案要素:
 - R5下 電力 問16 (a)(b)
@@ -281,6 +283,12 @@ source: `topics/11_fault_protection/11_fault_protection.md`
 - 練習source数値・論理独立再計算: `12 / 12 PASS`
 - 練習source正答一意性: `12 / 12 PASS`
 - 練習source固定5問・7答案要素への接続: `7 / 7`
+- 練習PDF: A4縦4ページ
+- 練習PDF表示QA: 200 dpi `4 / 4 PASS`
+- 練習PDF文字抽出QA: PASS
+- 練習PDF数値・論理再検算: `12 / 12 PASS`
+- 練習PDF正答一意性: `12 / 12 PASS`
+- 練習PDF固定5問・7答案要素への接続: `7 / 7`
 - SPEC固定範囲外追加: `0件`
 - Topic 12以降の先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
@@ -288,4 +296,4 @@ source: `topics/11_fault_protection/11_fault_protection.md`
 完成後ブラインド独立再解答を保護するため、制作前に導出した個別正答・最終数値解は進捗記録・解説PDFへ保存しない。
 
 ## 次
-Topic 11「架線事故ではどうやって電気を止める？」の練習PDFを作成し、表示・文字抽出・数値論理QAを行う。固定5問・7答案要素への接続 `7 / 7` とSPEC固定範囲を維持する。PowerPoint・完成後ブラインド独立再解答にはまだ進まない。
+Topic 11「架線事故ではどうやって電気を止める？」の解説画像PowerPointを作成し、固定5問・7答案要素の要求事項を可視化する。表示・overflow・PPTX整合性QAを行い、SPEC固定範囲と完成後ブラインド独立再解答保護を維持する。完成後独立再解答にはまだ進まない。
