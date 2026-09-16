@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 32 / 38
-- current_status: `topic_33_independent_reanswer_complete`
+- current_status: `topic_33_source_progress_synced`
 - last_completed_topic: `32 ATC③ 新幹線をどう自動で減速させる？`
 - active_topic: `33 COMTRAC① 東海道新幹線全体をどう監視する？`
-- next_start: 固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを実施する
+- next_start: 固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを再実施する
 
 ## 新品質ゲート進捗
 - [x] 01〜32 — PASS
-- [ ] 33 COMTRAC① 東海道新幹線全体をどう監視する？ — 制作前EXAM_ALIGNMENT＋解説source/PDF＋練習source/PDF＋PowerPoint＋完成後blind独立再解答完了。最終QA待ち
+- [ ] 33 COMTRAC① 東海道新幹線全体をどう監視する？ — 制作前EXAM_ALIGNMENT＋解説source/PDF＋練習source/PDF＋PowerPoint＋完成後blind独立再解答＋主source進捗同期完了。最終QA再判定待ち
 
 ## 33 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、列車番号、列車位置、ダイヤ、データ表現、2進数、情報処理、データ伝送。
@@ -401,4 +401,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 32 `ATC③ 新幹線をどう自動で減速させる？` は固定5問・6対象項目の完成後独立再解答 `6 / 6 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認実車値追加0件で `PASS / COMPLETED`。完成数32/38。
 
 ## 次テーマ工程
-固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを実施する。
+固定EXAM_ALIGNMENTと完成済み成果物を変更せず、Topic 33の最終QAを再実施する。
