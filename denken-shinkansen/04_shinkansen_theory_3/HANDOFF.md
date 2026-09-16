@@ -1,29 +1,32 @@
 # HANDOFF - 新幹線・電験三種「理論」
 
-更新日: 2026-09-16
+更新日: 2026-09-17
 
 ## 現在地
 
-Topic 01〜10は最終QAまでPASSし、`completed`。Topic 11は前回最終QAで指摘された主source・練習sourceの進捗記録不整合を修正し、実成果物へ同期済み。最終QA再実施待ち。
+Topic 01〜11は最終QAまでPASSし、`completed`。次はTopic 12「300系はなぜVVVFになった？」の制作前EXAM_ALIGNMENTから開始する。
 
-- 完成数: `10 / 14`
-- last completed: `10 新幹線が使う電力は「W」だけではない`
-- active topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- current status: `topic_11_source_progress_synced / IN_PROGRESS`
-- next start: Topic 11の最終QAを再実施する
+- 完成数: `11 / 14`
+- last completed: `11 電力会社の三相交流をどう新幹線へ渡す？`
+- active topic: `12 300系はなぜVVVFになった？`
+- current status: `topic_11_completed`
+- next start: Topic 12の制作前EXAM_ALIGNMENTを実施する
 
 ## 今回進捗
 
-Topic 11の主source・練習sourceの進捗記録だけを実成果物へ同期した。
+Topic 11の最終QAを再実施し、`PASS / completed` とした。
 
-- `11_three_phase_ac.md`: `status: INDEPENDENT_REANSWER_COMPLETE` へ更新
-- `11_three_phase_ac_practice.md`: `stage: INDEPENDENT_REANSWER_COMPLETE` へ更新
-- 旧「解説PDF作成」「解説画像PowerPoint作成」の次工程記録を除去
 - 固定対象: 公式理論過去問5問・10答案要素
 - 完成後独立再解答: `5 / 5問・10 / 10答案要素 PASS`
-- 必須成果物・各表示QA・SPEC境界: 既存PASSを維持
+- 公式解答一致: `10 / 10`
+- 教材外知識補完: `0件`
+- 必須成果物・解説PDF・練習PDF・PowerPoint QA: PASS
+- SPEC固定範囲外追加: `0件`
+- 進捗記録整合性: PASS
+- `11_three_phase_ac.md`: `COMPLETED` へ同期
+- `11_three_phase_ac_practice.md`: `COMPLETED` へ同期
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX成果物は変更していない。次は最終QAを再実施し、進捗記録整合性を含めて再判定する。
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX成果物は変更していない。
 
 ## Topic 11 SPEC固定範囲
 
@@ -98,7 +101,7 @@ P = √3 VL IL cosφ
   - 制作前独立検証: `5 / 5問・10 / 10答案要素 PASS`
   - 解説本文＋3段階例題: 完成
   - 固定過去問要求の本文マッピング: `10 / 10`
-  - 進捗メタデータ: 同期済み（`INDEPENDENT_REANSWER_COMPLETE`）
+  - 進捗メタデータ: `COMPLETED`
 - 解説PDF: `topics/11_three_phase_ac/11_three_phase_ac_explanation.pdf`
   - A4縦4ページ
   - 200 dpi表示QA: `4 / 4 PASS`
@@ -110,7 +113,7 @@ P = √3 VL IL cosφ
   - 数値・論理QA: `15 / 15 PASS`
   - 正答一意性: `15 / 15 PASS`
   - 固定過去問要求への接続: `10 / 10`
-  - 進捗メタデータ: 同期済み（`INDEPENDENT_REANSWER_COMPLETE`）
+  - 進捗メタデータ: `COMPLETED`
 - 練習PDF: `topics/11_three_phase_ac/11_three_phase_ac_practice.pdf`
   - A4縦3ページ
   - 200 dpi表示QA: `3 / 3 PASS`
@@ -124,16 +127,17 @@ P = √3 VL IL cosφ
   - 固定過去問要求の可視化: `10 / 10`
 - 解説画像PowerPoint QA: `topics/11_three_phase_ac/11_three_phase_ac_images_qa.md` / PASS
 - 完成後独立再解答: `topics/11_three_phase_ac/11_three_phase_ac_exam_recheck.md` / `5 / 5問・10 / 10答案要素 PASS`
-- 最終QA: `topics/11_three_phase_ac/11_three_phase_ac_final_qa.md` / `NEEDS_REVISION`（前回判定。進捗記録同期後の再実施待ち）
+- 最終QA: `topics/11_three_phase_ac/11_three_phase_ac_final_qa.md` / `PASS / completed`
 
 ## 次に行うこと
 
-Topic 11の最終QAを再実施する。
+Topic 12「300系はなぜVVVFになった？」の制作前EXAM_ALIGNMENTを実施する。
 
-- 主source・練習sourceの進捗記録が実成果物と一致していることを確認する
-- 固定5問・10答案要素の完成後独立再解答PASSを確認する
-- 必須成果物・PDF/PPTX QA・固定範囲境界を再確認する
-- 全件PASSならTopic 11を `completed` とし、Topic 12へ進む
+- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`を正本として固定範囲を確認する
+- 直近年度を優先して対応する公式理論過去問を調査する
+- 三種原則5問以上の品質ゲート対象を確定する
+- 固定範囲外の後続Topic論点・未確認実車情報を境界整理する
+- source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定する
 
 ## 固定ルール
 
