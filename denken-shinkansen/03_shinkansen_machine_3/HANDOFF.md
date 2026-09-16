@@ -6,17 +6,78 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は品質ゲートPASSでcompleted。active topicは13「新幹線は主電動機以外もモーターだらけ？」。
 
 ## 今回進捗
-Topic 12「新幹線のコンピュータは何をしている？」の最終QAを再判定し、`PASS / completed` とした。固定6問・8答案要素の完成後blind独立再解答 `8 / 8 PASS`、必須成果物、解説PDF・練習PDF・PowerPointの表示QA、主source・練習source・練習PDF QAの進捗記録整合、固定範囲境界を全件PASS確認した。前回 `NEEDS_REVISION` の原因だった旧進捗3箇所は同期済み。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更していない。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」の制作前EXAM_ALIGNMENTを完了した。系列SPECの固定範囲に直接対応する公式5問を固定し、保存済み正答を先に見ない制作前独立検証後に公式解答と照合して `5 / 5 PASS`。件数合わせの仕様外論点追加と未確認補機仕様の追加は0件。完成数は `12 / 16` のまま。
 
-独立再解答記録: `topics/12_information_processing/12_information_processing_independent_reanswer.md`
-source: `topics/12_information_processing/12_information_processing.md`
-explanation PDF: `topics/12_information_processing/12_information_processing_explanation.pdf`
-explanation PDF QA: `topics/12_information_processing/12_information_processing_explanation_pdf_qa.md`
-practice source: `topics/12_information_processing/12_information_processing_practice.md`
-practice PDF: `topics/12_information_processing/12_information_processing_practice.pdf`
-practice PDF QA: `topics/12_information_processing/12_information_processing_practice_pdf_qa.md`
-PowerPoint: `topics/12_information_processing/12_information_processing_images.pptx`
-PowerPoint QA: `topics/12_information_processing/12_information_processing_powerpoint_qa.md`
+source: `topics/13_auxiliary_motors/13_auxiliary_motors.md`
+次工程: 固定EXAM_ALIGNMENTを変更せず、解説本文＋基礎・本試験標準・複合の3段階例題を作成する。
+
+## Topic 13 制作前EXAM_ALIGNMENT
+固定範囲:
+- 電動機出力
+- 回転速度
+- トルク
+- 負荷特性
+- ポンプ
+- ファン
+- コンプレッサ
+- 所要動力
+- 効率
+- インバータ駆動
+- 可変速運転
+
+代表計算:
+- `P = ωT`
+- ポンプ所要動力
+- ファン所要動力
+- 効率を考慮した入力電力
+
+固定した品質ゲート対象:
+- R5上 機械 問7 — 電動機・負荷のトルク－速度曲線、安定動作点、送風機負荷
+- R4下 機械 問11 — ポンプ所要動力、流量換算、損失水頭、ポンプ効率、電動機効率
+- H30 機械 問10 — ポンプ所要動力、効率、余裕係数、必要台数
+- H29 機械 問12 — 送風機の負荷特性、`Q ∝ N`、`T ∝ N²`、`P ∝ N³`、可変速運転
+- H27 機械 問12 — ポンプ用電動機出力、全揚程、効率、余裕係数
+
+品質ゲート対象: `5問`
+制作前独立検証・公式解答照合: `5 / 5 PASS`
+教材外・固定範囲外知識による補完: `0件`
+件数合わせの仕様外追加: `0件`
+未確認補機仕様の追加: `0件`
+
+過去問から固定範囲内で必要と確定した内容:
+1. `P = ωT`、`ω = 2πN/60`。
+2. 電動機トルクと負荷トルクの差による加速・減速、交点としての動作点、局所安定性。
+3. ポンプ水動力 `P_h = ρgQH`、流量単位換算、全揚程・損失水頭。
+4. ポンプ効率・電動機効率・余裕係数を含む所要入力・出力の逆算。
+5. 複数ポンプの必要台数は定格出力で割った後に整数へ切り上げる。
+6. ファン・ポンプ系の代表的な負荷特性 `Q ∝ N`、`T ∝ N²`、`P ∝ N³`。
+7. インバータ駆動・可変速運転は必要流量に応じて回転速度を変える電動機応用として扱う。
+
+範囲境界:
+- エレベータ・巻上機は独立したTopic 13範囲へ追加しない。
+- キャビテーション、NPSH、配管網解析等の高度な流体機械設計へ拡張しない。
+- コンプレッサの圧縮仕事・熱力学サイクルへ拡張しない。
+- Topic 15の照明・電熱・空調電力を先取りしない。
+- ドア駆動装置からシーケンス制御・インタロックへ拡張しない。
+- 車種固有の補機形式、定格、電圧、周波数、インバータ方式等は一次資料確認前に実値化しない。
+
+公式資料:
+- https://www.shiken.or.jp/chief/third/qa/
+- R5上: `20230820_ch_third_q03.pdf` / `20230820_ch_third_a01.pdf`
+- R4下: `20230326_ch_third_q03.pdf` / `20230326_ch_third_a01.pdf`
+- H30: `20180902_ch_third_q03.pdf` / `20180902_ch_third_a01.pdf`
+- H29: `20170903_ch_third_q03.pdf` / `20170903_ch_third_a01.pdf`
+- H27: `20150906_ch_third_q03.pdf` / `20150906_ch_third_a01.pdf`
+
+学習資料:
+- e-sysnet「電動機の制動と所要出力」: https://e-sysnet.com/%E9%9B%BB%E5%8B%95%E6%A9%9F%E3%81%AE%E5%88%B6%E5%8B%95%E3%81%A8%E6%89%80%E8%A6%81%E5%87%BA%E5%8A%9B/
+- e-sysnet「ポンプ用・送風機の運転と停止」: https://e-sysnet.com/%E3%83%9D%E3%83%B3%E3%83%97%E7%94%A8%E3%83%BB%E9%80%81%E9%A2%A8%E6%A9%9F%E3%81%AE%E9%81%8B%E8%BB%A2%E3%81%A8%E5%81%9C%E6%AD%A2/
+- 電験王 R4下 機械 問11: https://denken-ou.com/kikair4-2-11/
+- 電験三種まとめました R4下 機械 問11: https://yaku-tik.com/denken/r4s-k11/
+- 電験三種まとめました H29 機械 問12: https://yaku-tik.com/denken/h29-k12/
+- 電験三種まとめました H27 機械 問12: https://yaku-tik.com/denken/h27-k12/
+
+参照日: 2026-09-17
 
 ## Topic 12 最終QA
 - 前回判定: `NEEDS_REVISION / IN_PROGRESS`
@@ -167,7 +228,7 @@ PowerPoint QA: `topics/12_information_processing/12_information_processing_power
 1. 位取り記数法による2進・10進・16進の相互変換。
 2. 16進1桁 = 2進4bit の対応。
 3. bit / byte の意味と関係。
-4. 2進数の加減算と、和・差から未知数を逆算する手順。
+4. 2進数の加減算と、和・差から未知の2進数を逆算する手順。
 5. AND / OR / NOT / NAND / NOR / XOR の図記号識別点・論理式・真理値表。
 6. 相補・分配・吸収・ド・モルガン則を過去問の簡単化に必要な範囲で使用。
 7. 真理値表 ↔ 論理式 ↔ 論理回路の相互変換。
@@ -198,9 +259,3 @@ PowerPoint QA: `topics/12_information_processing/12_information_processing_power
 - 三菱電機「車両システム」: https://www.mitsubishielectric.co.jp/traffic/products/train/
 
 参照日: 2026-09-17
-
-## Topic 12 完了状態
-Topic 12「新幹線のコンピュータは何をしている？」は最終QA `PASS / completed`。固定6問・8答案要素、完成後blind独立再解答 `8 / 8 PASS`、必須成果物・表示QA・進捗記録整合・固定範囲境界は全件PASS。完成数は `12 / 16`。
-
-## 次に行う
-Topic 13「新幹線は主電動機以外もモーターだらけ？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲に従い、直近の公式過去問から関連問題を調査して品質ゲート対象を確定する。
