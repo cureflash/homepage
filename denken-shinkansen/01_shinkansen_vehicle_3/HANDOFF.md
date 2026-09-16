@@ -6,23 +6,25 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は34/38。01〜34がPASS。active topicは35 `COMTRAC③ ダイヤが乱れたらどうする？`。
 
 ## 今回進捗
-Topic 35の解説画像PowerPointを完成し、GitHub正本へ反映した。
+Topic 35の完成後blind独立再解答を完了し、GitHub正本へ反映した。
 
 - 固定EXAM_ALIGNMENT 5問は変更なし
-- PowerPoint: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_images.pptx`
-- 画面比率: `16:9`
-- スライド数: `3`
-- 固定5過去問の要求事項: `5 / 5` 可視化
-- 180 dpi全スライド表示QA: `3 / 3 PASS`
-- overflow検査: `0件 / PASS`
-- PPTX ZIP整合性: PASS
-- 外部引用画像: `0件`
-- 固定範囲外追加: `0件`
+- 完成教材だけで先に固定5問を再解答し、全選択肢・根拠確定後に公式解答表と照合
+- R7下 機械 問14: 選択肢3 — PASS
+- R5上 機械 問14: 選択肢3 — PASS
+- R4下 機械 問13: 選択肢3 — PASS
+- R4下 理論 問14: 選択肢5 — PASS
+- H26 機械 問13: 選択肢3 — PASS
+- 合計: `5 / 5問 PASS`
+- 公式解答との不一致: `0件`
+- 教材外知識補完: `0件`
+- 固定範囲外知識による補完: `0件`
 - Topic 36以降先取り: `0件`
 - Topic 34論理回路の再体系化: `0件`
-- 未確認COMTRAC内部仕様追加: `0件`
+- 未確認COMTRAC内部仕様依存: `0件`
 - 機能分散と冗長化の混同: `0件`
-- QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_images_qa.md`
+- 教材本文・固定EXAM_ALIGNMENT・練習問題・PDF・PowerPointは変更なし
+- 記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_independent_reanswer.md`
 
 ## Topic 35 固定EXAM_ALIGNMENT
 - R7下 機械 問14 — フローチャート、変数更新、条件分岐、反復
@@ -32,7 +34,9 @@ Topic 35の解説画像PowerPointを完成し、GitHub正本へ反映した。
 - H26 機械 問13 — シーケンス制御、工程・手順、条件による動作、PLC
 
 制作前独立解答: `5 / 5問 PASS`。
+完成後blind独立再解答: `5 / 5問 PASS`。
 公式解答との不一致: `0件`。
+教材外知識補完: `0件`。
 固定範囲外知識による正答補完: `0件`。
 未確認COMTRAC内部仕様依存: `0件`。
 
@@ -97,6 +101,33 @@ Topic 35の解説画像PowerPointを完成し、GitHub正本へ反映した。
 - 機能分散と冗長化の混同: `0件`
 - QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice_pdf_qa.md`
 
+## Topic 35 PowerPoint QA
+- `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_images.pptx`
+- 画面比率: `16:9`
+- スライド数: `3`
+- 固定EXAM_ALIGNMENT: `5 / 5問` 可視化
+- 180 dpi全スライド表示QA: `3 / 3 PASS`
+- overflow検査: `0件 / PASS`
+- PPTX ZIP整合性: PASS
+- 外部引用画像: `0件`
+- 固定範囲外追加: `0件`
+- Topic 36以降先取り: `0件`
+- Topic 34論理回路の再体系化: `0件`
+- 未確認COMTRAC内部仕様追加: `0件`
+- 機能分散と冗長化の混同: `0件`
+- QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_images_qa.md`
+
+## Topic 35 完成後blind独立再解答
+- 記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_independent_reanswer.md`
+- 判定: `5 / 5問 PASS`
+- 公式解答との不一致: `0件`
+- 教材外知識補完: `0件`
+- 固定範囲外知識による補完: `0件`
+- Topic 36以降先取り: `0件`
+- Topic 34論理回路の再体系化: `0件`
+- 未確認COMTRAC内部仕様依存: `0件`
+- 機能分散と冗長化の混同: `0件`
+
 ## Topic 35 系列SPEC固定範囲
 扱う: 遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
 
@@ -145,11 +176,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_35_powerpoint_complete`
+- `current_status`: `topic_35_independent_reanswer_complete`
 - 完成数: 34/38
 - 01〜34: PASS
 - last completed: 34 `COMTRAC② 進路をどう自動制御する？`
 - active topic: 35 `COMTRAC③ ダイヤが乱れたらどうする？`
 
 ## 次の正確な開始点
-Topic 35の完成後blind独立再解答。固定5過去問を保存済み正答・完成済み最終導出を見ずに、完成教材だけで再解答する。全問の選択肢・根拠を確定してから公式解答と照合し、教材外知識補完0件を確認する。固定5問・教材成果物・EXAM_ALIGNMENTは変更しない。
+Topic 35の最終QA。必須成果物、固定5過去問の完成後blind独立再解答 `5 / 5問 PASS`、練習QA、解説PDF・練習PDF・PowerPoint表示QA、進捗記録整合、系列SPEC固定範囲境界を確認する。全件PASSの場合のみ `completed` とし完成数を35/38へ更新する。固定5問・教材成果物・EXAM_ALIGNMENTは変更しない。
