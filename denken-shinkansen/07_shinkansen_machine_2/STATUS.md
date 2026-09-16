@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `12 / 22`
-- current_status: `topic_13_exam_alignment_complete`
+- current_status: `topic_13_explanation_source_complete`
 - last_completed_topic: `12 N700Sの6極モーターを設計側から見る`
 - active_topic: `13 L0系のリニア同期モータを等価回路で考える`
-- next_start: Topic 13 解説本文＋3段階例題
+- next_start: Topic 13 解説PDF
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -422,8 +422,22 @@
 - R07 二次 機械・制御 問1の固定4答案要素: `4 / 4 PASS`
 - 合計: `22 / 22 PASS`
 
+## Topic 13 解説source
+- [x] §1 試験論点と解法順
+- [x] §2 同期機・界磁・電機子・同期運転
+- [x] §3 電機子反作用・増磁／減磁／交差磁化
+- [x] §4 `X_s=X_a+X_l` と1相分等価回路
+- [x] §5 `V`,`I`,`E`,`jX_sI` のフェーザ
+- [x] §6 リニア同期モータ・移動磁界
+- [x] §7 JR東海一次資料で確認した範囲だけL0接続
+- [x] 解法手順・頻出ミス・公式まとめ
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3`
+- [x] 固定5問・22答案要素を本文へ `22 / 22` マッピング
+- [x] 主要計算再検算 PASS
+- [x] 固定範囲外論点・Topic 14先取り・未確認L0実値の追加 `0件`
+
 ## 今回進めた内容
-Topic 13「L0系のリニア同期モータを等価回路で考える」の制作前EXAM_ALIGNMENTを完成。固定一次4問＋二次記述1問・22答案要素を固定し、公式解答との制作前独立照合 `22 / 22 PASS`。仕様外追加・Topic 14先取り・未確認L0実値追加は0件。
+Topic 13「L0系のリニア同期モータを等価回路で考える」の解説本文＋3段階例題を完成。固定一次4問＋二次記述1問・22答案要素を本文へ `22 / 22` 接続し、3段階例題 `3 / 3`、主要計算再検算PASS。仕様外追加・Topic 14先取り・未確認L0実値追加は0件。
 
 ## 判定
-Topic 13は `topic_13_exam_alignment_complete / IN_PROGRESS`。完成数は `12 / 22`。次は解説本文＋3段階例題。
+Topic 13は `topic_13_explanation_source_complete / IN_PROGRESS`。完成数は `12 / 22`。次は解説PDF。
