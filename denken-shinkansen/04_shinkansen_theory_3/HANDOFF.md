@@ -4,30 +4,34 @@
 
 ## 現在地
 
-Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は解説PDF＋表示/文字抽出QAまで完了した。
+Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は練習問題source・練習PDF＋QAまで完了した。
 
 - 完成数: `11 / 14`
 - last completed: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active topic: `12 300系はなぜVVVFになった？`
-- current status: `topic_12_explanation_pdf_complete`
-- next start: Topic 12の練習問題source・練習PDFを作成する
+- current status: `topic_12_practice_pdf_complete`
+- next start: Topic 12の解説画像PowerPointを作成する
 
 ## 今回進捗
 
-Topic 12の解説PDFを作成し、QAを完了した。
+Topic 12の練習問題source・練習PDFを作成し、QAを完了した。
 
-- PDF: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_explanation.pdf`
-- QA: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_explanation_qa.md`
+- source: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_practice.md`
+- PDF: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_practice.pdf`
+- QA: `topics/12_vvvf_semiconductor/12_vvvf_semiconductor_practice_qa.md`
+- 全15問・全問五肢択一
+- 基礎4問 / 本試験標準8問 / 複合・応用3問
+- 正答位置 `(1)`〜`(5)`: 各3問
+- 正答一意性: `15 / 15 PASS`
+- 数値・単位再計算: `3 / 3 PASS`（Q8, Q9, Q14）
+- 固定7問要求への接続: `7 / 7 PASS`
 - A4縦4ページ
 - 200 dpi表示QA: `4 / 4 PASS`
-- クリッピング・重なり・文字化け・ページ外はみ出し: `0件`
+- クリッピング・重なり・文字化け: `0件`
 - 文字抽出QA: `PASS`
-- 固定7問マッピング: `7 / 7` 維持
-- 3段階例題: 収録済み
-- BJT例題再計算: `β ≈ 200`、`ro ≈ 20 kΩ` PASS
 - 固定範囲外追加: `0件`
-- 未確認300系実車回路・数値追加: `0件`
-- PDF SHA-256: `8de5bfd1ba517dcf4be4b38e84c3ebba40b0cab76a2fb06be0ebefd56da8094b`
+- 未確認300系実車回路・数値依存: `0件`
+- PDF SHA-256: `1b1ccededa8b1408173bd41d610a745bdfb7d41fab778808362a606c5bb2b5f4`
 
 固定過去問の正答番号・個別最終数値は、完成後独立再解答の先読み汚染を避けるためsource/HANDOFFへ保存していない。
 
@@ -93,6 +97,18 @@ SiC → 低損失化
 - 3段階例題を8.1〜8.3に配置
 - 固定7問を9節で `7 / 7` 本文マッピング
 
+## 練習問題の対応
+
+- R7下 理論 問11: Q3, Q6, Q13
+- R7上 理論 問13: Q8, Q9, Q14
+- R6下 理論 問11: Q10, Q12
+- R6上 理論 問11: Q4, Q12
+- R4上 理論 問11: Q7, Q15
+- H29 理論 問11: Q2, Q11, Q13
+- H28 理論 問11: Q1, Q5, Q15
+
+固定7問要求への接続は `7 / 7 PASS`。
+
 ## 境界
 
 - GTO・IGBT・SiCの詳細な損失、駆動方式、スイッチング周波数比較は機械編へ送る
@@ -105,15 +121,14 @@ SiC → 低損失化
 
 ## 次に行うこと
 
-Topic 12の練習問題source・練習PDFを作成する。
+Topic 12の解説画像PowerPointを作成する。固定EXAM_ALIGNMENTは変更しない。
 
-- 三種仕様に従い12問以上とする
-- 固定7問の要求知識へ接続する
-- 少なくとも半数を五肢択一にする
-- 正答一意性と数値・論理を独立QAする
-- 完全解説を付ける
-- 固定範囲外論点を追加しない
-- 完成後独立再解答用の正答番号・個別最終数値をHANDOFFへ保存しない
+- p/n型、pn接合、順逆バイアスと空乏層の関係を教材用模式図で可視化する
+- BJT静特性から `β`・`ro` を読む手順を教材用グラフで可視化する
+- nチャネルJFETの「逆ゲートバイアス→空乏層拡大→チャネル狭窄→ドレーン電流減少」を可視化する
+- BJT/FETの基本比較を可視化する
+- 公式過去問の図を複製せず、独自の教材用模式図とする
+- Topic 13のPWM・インバータ波形へ進まない
 
 ## 固定ルール
 

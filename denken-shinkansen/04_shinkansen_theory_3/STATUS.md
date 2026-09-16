@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 11 / 14
-- current_status: `topic_12_explanation_pdf_complete`
+- current_status: `topic_12_practice_pdf_complete`
 - last_completed_topic: `11 電力会社の三相交流をどう新幹線へ渡す？`
 - active_topic: `12 300系はなぜVVVFになった？`
-- next_start: Topic 12の練習問題source・練習PDFを作成する
+- next_start: Topic 12の解説画像PowerPointを作成する
 
 ## Topic 01 進捗
 
@@ -215,23 +215,25 @@
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source・練習PDF
+- [x] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 12 `300系はなぜVVVFになった？` の解説PDFを作成し、表示QA・文字抽出QAを完了した。
+Topic 12 `300系はなぜVVVFになった？` の練習問題source・練習PDFを作成し、問題QA・表示QA・文字抽出QAを完了した。
 
-A4縦4ページ。200 dpiレンダリングは `4 / 4 PASS`、クリッピング・重なり・文字化け・ページ外はみ出しはいずれも0件。`pdftotext` による本文抽出もPASSした。
+全15問・全問五肢択一。基礎4問（26.7%）、本試験標準8問（53.3%）、複合・応用3問（20.0%）。正答位置は `(1)`〜`(5)` 各3問。
 
-source本文の説明順、3段階例題、固定7問の本文マッピング `7 / 7` を維持した。BJT例題は `β ≈ 200`、`ro ≈ 20 kΩ` を再計算確認済み。
+固定7問の要求知識へ `7 / 7` 接続。正答一意性 `15 / 15 PASS`、数値・単位再計算 `3 / 3 PASS`（Q8, Q9, Q14）。
 
-PWM・インバータ波形、GTO/IGBT/SiCの詳細損失・駆動比較、BJT/FETの小信号回路、未確認300系実車回路・数値は追加していない。固定範囲外追加は0件。
+練習PDFはA4縦4ページ。200 dpi表示QA `4 / 4 PASS`、クリッピング・重なり・文字化け `0件`、文字抽出 `PASS`。
 
-PDF SHA-256: `8de5bfd1ba517dcf4be4b38e84c3ebba40b0cab76a2fb06be0ebefd56da8094b`
+PWM・インバータ波形、GTO/IGBT/SiCの詳細損失・駆動比較、BJT/FET小信号回路、ホール効果、未確認300系実車回路・数値は追加していない。固定範囲外追加0件。
+
+練習PDF SHA-256: `1b1ccededa8b1408173bd41d610a745bdfb7d41fab778808362a606c5bb2b5f4`
 
 ## 判定
 
-現在 `topic_12_explanation_pdf_complete / IN_PROGRESS`。完成数は `11 / 14`。次はTopic 12の練習問題source・練習PDFを作成する。
+現在 `topic_12_practice_pdf_complete / IN_PROGRESS`。完成数は `11 / 14`。次はTopic 12の解説画像PowerPointを作成する。
