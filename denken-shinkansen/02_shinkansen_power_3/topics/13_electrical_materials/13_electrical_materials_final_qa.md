@@ -4,9 +4,9 @@
 実施日: 2026-09-18
 
 ## 判定
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。進捗記録整合のみFAILと判定する。仕様追加は行っていない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。初回最終QAで唯一FAILだった旧進捗記録5箇所は現在地へ同期済みで、技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界、進捗記録整合を全件PASSと判定した。仕様追加は行っていない。
 
 ## 必須成果物
 GitHub正本上で以下の実在を確認した。
@@ -83,19 +83,17 @@ GitHub正本上で以下の実在を確認した。
 SPEC境界: PASS。
 
 ## 進捗記録整合
-最終QAを実施した現在、次の5箇所が旧工程を「次工程」として残している。
+初回最終QAでFAILだった5箇所を再確認した。
 
-1. `13_electrical_materials_explanation_qa.md` — 次工程が練習問題source作成のまま。
-2. `13_electrical_materials_practice_source.md` — 次工程が練習PDF作成のまま。
-3. `13_electrical_materials_practice_qa.md` — 次工程が解説画像PowerPoint作成のまま。
-4. `13_electrical_materials_powerpoint_qa.md` — 次工程が完成後ブラインド独立再解答のまま。
-5. `13_electrical_materials_independent_reanswer.md` — 次工程が最終QA実施のまま。
-
-`practice_source_complete` 自体は当該成果物のローカル完成状態として維持してよいが、後工程の実施状況を示す説明は現在地へ同期する必要がある。
+1. `13_electrical_materials_explanation_qa.md` — 練習問題source、練習PDF、PowerPoint、完成後ブラインド独立再解答、初回最終QA実施済みを反映済み。
+2. `13_electrical_materials_practice_source.md` — 練習PDF、PowerPoint、完成後ブラインド独立再解答、初回最終QA実施済みを反映済み。`practice_source_complete` は当該成果物自体の完成状態を示すローカル状態であり、後工程の未実施を意味しない。
+3. `13_electrical_materials_practice_qa.md` — PowerPoint、完成後ブラインド独立再解答、初回最終QA実施済みを反映済み。
+4. `13_electrical_materials_powerpoint_qa.md` — 完成後ブラインド独立再解答 `5 / 5 PASS`、初回最終QA実施済みを反映済み。
+5. `13_electrical_materials_independent_reanswer.md` — 初回最終QA実施済みと、再実施が次工程であることを反映済み。
 
 技術内容、数式、固定問題、正答、PDF/PPTX、独立再解答結果に修正事項はない。
 
-進捗記録整合: FAIL。
+進捗記録整合: PASS。
 
 ## 最終判定
 - 必須成果物: PASS
@@ -104,8 +102,8 @@ SPEC境界: PASS。
 - 教材外知識補完: `0件`
 - PDF/PPTX QA: PASS
 - SPEC境界: PASS
-- 進捗記録整合: FAIL（旧工程5箇所）
+- 進捗記録整合: PASS
 
-Topic 13はまだ `completed` としない。新品質基準の完成数は `12 / 16` のまま。
+Topic 13は `PASS / completed`。新品質基準の完成数は `13 / 16`。
 
-次工程は、上記5箇所の進捗記録を現在地へ同期し、main source・STATUS・HANDOFFにも同期結果を反映する。その後、Topic 13最終QAを再実施する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
+次工程はTopic 14 `駅やトンネルにはどう電気を配る？` の制作前EXAM_ALIGNMENT。Topic 13の固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
