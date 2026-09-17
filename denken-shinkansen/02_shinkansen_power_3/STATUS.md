@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験三種「電力」
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 12 / 16
-- current_status: `topic_13_explanation_source_complete`
+- current_status: `topic_13_practice_source_complete`
 - last_completed_topic: `12 320km/hでもパンタグラフが離れないのはなぜ？`
 - active_topic: `13 新幹線の架線は何でできている？`
-- next_start: Topic 13の解説本文と3段階例題を元に解説PDFを作成し、固定5問・5答案要素への対応と数式・単位をQAする
+- next_start: Topic 13練習問題sourceから練習PDFを作成し、A4表示QA・文字抽出QA・12問再検算・正答一意性・固定5問5答案要素への接続を確認する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -23,7 +23,7 @@
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 13 新幹線の架線は何でできている？ — IN_PROGRESS。制作前EXAM_ALIGNMENT完了、固定5問・5答案要素、制作前独立検証 `5 / 5 PASS`。解説本文§1〜§16と3段階例題完成、本文要求事項マッピング `5 / 5 PASS`。次は解説PDF
+- [ ] 13 新幹線の架線は何でできている？ — IN_PROGRESS。制作前EXAM_ALIGNMENT完了、固定5問・5答案要素、制作前独立検証 `5 / 5 PASS`。解説本文§1〜§16＋3段階例題、解説PDF＋QA、練習問題source全12問を完成。練習source `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5問・5答案要素接続 `5 / 5 PASS`。次は練習PDF
 - [ ] 14 駅やトンネルにはどう電気を配る？
 - [ ] 15 回生した電気はどこへ行く？
 - [ ] 16 発電所からN700Sまで全部つないでみる
@@ -390,6 +390,9 @@ PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_pow
 
 ## Topic 13 進行記録
 source: `topics/13_electrical_materials/13_electrical_materials.md`
+解説PDF: `topics/13_electrical_materials/13_electrical_materials_explanation.pdf`
+解説PDF QA: `topics/13_electrical_materials/13_electrical_materials_explanation_qa.md`
+練習問題source: `topics/13_electrical_materials/13_electrical_materials_practice_source.md`
 
 固定5問・5答案要素:
 - R8上 電力 問14
@@ -407,10 +410,18 @@ source: `topics/13_electrical_materials/13_electrical_materials.md`
 - 3段階例題: 基礎・本試験標準・複合 各1問完成
 - 固定5問・5答案要素の本文要求事項マッピング: `5 / 5 PASS`
 - 3段階例題独立再計算・正答一意性: `3 / 3 PASS`
-- 解説PDF・練習・PowerPoint: 未着手
+- 解説PDF: A4縦4ページ
+- 解説PDF表示QA: 200 dpi `4 / 4 PASS`
+- 解説PDF文字抽出QA: `PASS`
+- 練習問題source: 全12問・全問五肢択一
+- 練習難易度: 基礎3 / 本試験標準7 / 複合2
+- 練習source数値・論理独立再計算: `12 / 12 PASS`
+- 練習source正答一意性: `12 / 12 PASS`
+- 練習source固定5問・5答案要素への接続: `5 / 5 PASS`
+- 練習PDF・PowerPoint: 未着手
 - SPEC固定範囲外追加: `0件`
 - Topic 14以降の論点による補完: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
 ## 次
-Topic 13の解説本文と3段階例題を元に解説PDFを作成し、固定5問・5答案要素への対応と数式・単位をQAする。Topic 12以前の技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
+Topic 13練習問題sourceから練習PDFを作成し、A4表示QA・文字抽出QA・12問再検算・正答一意性・固定5問5答案要素への接続を確認する。Topic 12以前の技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
