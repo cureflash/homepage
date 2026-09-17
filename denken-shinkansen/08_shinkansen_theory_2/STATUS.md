@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 15 / 21
-- current_status: `topic_16_exam_alignment_complete`
+- current_status: `topic_16_explanation_source_complete`
 - last_completed_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 - active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
-- next_start: Topic 16 解説本文＋3段階例題
+- next_start: Topic 16 解説PDF＋表示QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -273,7 +273,7 @@
 
 ## Topic 16 制作進捗
 - [x] 制作前EXAM_ALIGNMENT: 一次5問・25答案要素、関連候補12件調査
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF＋表示QA
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
@@ -283,17 +283,22 @@
 
 ## 今回進めた内容
 
-Topic 16の制作前EXAM_ALIGNMENTを完了した。
+Topic 16の解説本文＋3段階例題を完成させた。
 
 - source: `topics/16_semiconductor_diode/16_semiconductor_diode.md`
-- 品質ゲート: 一次5問・25答案要素
-- 公式問題・公式標準解答照合: `25 / 25`
-- 制作前独立導出: `25 / 25 PASS`
+- EXAM_ALIGNMENT必須説明: `17 / 17 covered`
+- 固定一次5問・25答案要素への教材内接続: `25 / 25`
+- 3段階例題: `3 / 3`
+- 例題数値再計算: `PASS`
+- 真性/n形/p形、`pn=n_i^2`、多数/少数キャリア: `PASS`
+- pn接合、空乏層、電荷中性、ガウスの法則、電界・電位: `PASS`
+- 順方向/逆方向、指数的I-V特性: `PASS`
 - 二次採用: `0問`、二次数合わせ: `0件`
-- R7二次ダイオードブリッジ/R6二次チョッパ: 系列SPEC境界により非採用
+- 降伏機構の詳細追加: `0件`
+- パワーエレクトロニクス回路追加: `0件`
 - Topic 17先取り: `0件`
 - 未確認の300系主変換装置仕様追加: `0件`
 
 ## 判定
 
-Topic 16は `PASS / EXAM_ALIGNMENT_COMPLETE`。完成数は `15 / 21` のまま。次工程は解説本文＋3段階例題。
+Topic 16は `PASS / EXPLANATION_SOURCE_COMPLETE`。完成数は `15 / 21` のまま。次工程は解説PDF＋表示QA。
