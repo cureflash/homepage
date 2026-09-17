@@ -8,13 +8,13 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 12`
 
-current_status: `topic_11_independent_reanswer_complete`
+current_status: `topic_11_final_qa_needs_revision`
 
 last_completed_topic: `10 指数関数・一階微分方程式入門`
 
 active_topic: `11 グラフ・特性曲線を読む`
 
-next_start: `Topic 11最終QA`
+next_start: `Topic 11の主source・練習sourceの旧進捗記録3箇所を現在地へ同期`
 
 ## Topic 11 固定仕様範囲
 
@@ -199,6 +199,27 @@ next_start: `Topic 11最終QA`
 
 Topic 11はまだ `completed` としない。
 
+## Topic 11 最終QA（初回）
+
+次をGitHub正本へ反映した。
+
+- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_final_qa.md`
+- 必須成果物実在: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 完成後独立再解答: `5 / 5 PASS`
+- 練習QA: `12 / 12 PASS`
+- 仕様境界: PASS
+- 固定EXAM_ALIGNMENT変更0件
+- 固定範囲外追加0件
+- source進捗整合: FAIL
+  - 主source冒頭 `## 状態` が解説本文完成時点のまま
+  - 主source末尾 `## 次工程` が解説PDF作成のまま
+  - 練習source末尾 `## 次工程` が練習PDF作成のまま
+
+判定: `NEEDS_REVISION / IN_PROGRESS`。
+
+技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、完成後独立再解答結果は変更しない。
+
 ## 次工程
 
-Topic 11の最終QAを実施する。
+主source・練習sourceの旧進捗記録3箇所だけを実成果物と現在地へ同期する。その後、Topic 11最終QAを再判定する。
