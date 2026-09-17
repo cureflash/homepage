@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 35 / 38
-- current_status: `topic_35_final_qa_complete`
+- current_status: `topic_36_exam_alignment_fixed`
 - last_completed_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
 - active_topic: `36 COSMOS① 新幹線全体を統合管理する`
-- next_start: Topic 36の制作前EXAM_ALIGNMENTを実施する。系列SPEC固定範囲「運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理」から逸脱せず、公式過去問を先に調査・固定する
+- next_start: Topic 36の固定5問・8答案要素を変更せず、公式解答を先に見ない独立runで制作前独立解答を行う。`8 / 8 PASS`確認後に解説本文へ進む
 
 ## 新品質ゲート進捗
 - [x] 01〜35 — PASS
@@ -684,4 +684,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` は固定5過去問の完成後blind独立再解答 `5 / 5問 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数35/38。
 
 ## 次テーマ工程
-Topic 36 `COSMOS① 新幹線全体を統合管理する` の制作前EXAM_ALIGNMENTを実施する。系列SPEC固定範囲は、運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理。
+Topic 36 `COSMOS① 新幹線全体を統合管理する` は制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定済み。次は固定内容を変更せず、公式解答を先に見ない独立runで制作前独立解答を行い、`8 / 8 PASS`確認後に解説本文へ進む。
