@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 15 / 20
-- current_status: `topic_16_blind_gate_ready`
+- current_status: `topic_16_post_completion_reanswer_complete`
 - last_completed_topic: `15 対数・dB・周波数応答`
 - active_topic: `16 数値微分・数値積分`
-- next_start: Topic 16の完成後独立再解答を、ブラインドゲートに従い保存済み正答を含むファイルを先に見ずに実施する
+- next_start: Topic 16の最終QAを実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -243,23 +243,23 @@
 - [x] 解説画像PowerPoint（16:9・5枚、固定4問・8答案要素 `8 / 8 PASS`）
 - [x] PowerPoint表示QA（全5枚 `5 / 5 PASS`、overflow 0、ZIP/XML整合性 `PASS`）
 - [x] 完成後独立再解答前のブラインドゲート整備（当runは保存済み正答視認のため再解答不実施）
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答 `8 / 8 PASS`（post-completion lock commit `4688e138f4d32329e0db432740e8f0cd44ee34a6`）
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 16の完成後独立再解答前ブラインドゲートを整備した。
+Topic 16の完成後独立再解答をブラインドゲートに従って実施した。
 
-完成後独立再解答を確定する前に主sourceを取得し、制作前独立再解答の個別数値解・公式照合済み結果を視認したため、このrunでは完成後独立再解答を実施・判定しない。固定第二種4問・8答案要素、固定EXAM_ALIGNMENT、教材成果物、問題・正答は変更していない。第一種・第三種による件数水増し、Topic 17以降の先取り、高次数値微分・高次Newton-Cotes公式・スプライン・有限要素法等の仕様外追加、未確認実車値依存はいずれも0件。
+公式解答・保存済み正答を確認する前に固定第二種4問・8答案要素を完成教材だけで再導出し、候補答案を `16_numerical_differentiation_integration_post_completion_reanswer_lock.md` として先に固定した。lock commitは `4688e138f4d32329e0db432740e8f0cd44ee34a6`。その後に公式解答と照合し、R6一次「法規」問4 (1)〜(2)、R4二次「電力・管理」問1の2出力、H23二次「電力・管理」問6の3答案要素、H22二次「電力・管理」問3 (4)の全8答案要素が一致したため `8 / 8 PASS`。教材外知識補完0件、第一種・第三種による件数水増し0件、Topic 17以降の先取り0件、仕様外算法追加0件、未確認実車値依存0件。
 
-ブラインドゲート:
-`topics/16_numerical_differentiation_integration/16_numerical_differentiation_integration_blind_gate.md`
+完成後独立再解答:
+`topics/16_numerical_differentiation_integration/16_numerical_differentiation_integration_post_completion_reanswer.md`
 
 ## 判定
 
-`topic_16_blind_gate_ready / IN_PROGRESS`
+`topic_16_post_completion_reanswer_complete / IN_PROGRESS`
 
 完成数は `15 / 20` のまま。
 
-次はTopic 16の完成後独立再解答を、ブラインドゲートに従い保存済み正答を含むファイルを先に見ずに実施する。
+次はTopic 16の最終QAを実施する。
