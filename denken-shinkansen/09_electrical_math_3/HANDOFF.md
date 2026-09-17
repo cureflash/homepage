@@ -8,13 +8,13 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 12`
 
-current_status: `topic_11_practice_pdf_complete`
+current_status: `topic_11_images_pptx_complete`
 
 last_completed_topic: `10 指数関数・一階微分方程式入門`
 
 active_topic: `11 グラフ・特性曲線を読む`
 
-next_start: `Topic 11解説画像PowerPoint`
+next_start: `Topic 11完成教材だけでの公式過去問独立再解答`
 
 ## Topic 11 固定仕様範囲
 
@@ -153,8 +153,21 @@ next_start: `Topic 11解説画像PowerPoint`
 - 固定EXAM_ALIGNMENT変更0件
 - 伝達関数・ボード線図・PID等の固定範囲外追加0件
 
-判定: `topic_11_practice_pdf_complete / IN_PROGRESS`。
+## Topic 11 解説画像PowerPoint
+
+主sourceと完成済み教材の固定範囲だけを使い、次をGitHub正本へ反映した。
+
+- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_images.pptx`
+- 16:9・5枚
+- 200 dpi表示QA `5 / 5 PASS`
+- overflow `0件`
+- PPTX ZIP整合性 `PASS`
+- 軸→意味→式の読解順序、基本5関数形、傾き・面積、交点・安定性・負荷線、変圧器最大効率・RC/RLC周波数変化を図解
+- 固定EXAM_ALIGNMENT変更0件
+- 伝達関数・ボード線図・PID等の固定範囲外追加0件
+
+判定: `topic_11_images_pptx_complete / IN_PROGRESS`。
 
 ## 次工程
 
-Topic 11の解説画像PowerPointを作成する。
+Topic 11の完成教材だけで固定5問を独立再解答する。
