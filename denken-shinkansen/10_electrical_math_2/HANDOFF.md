@@ -8,11 +8,11 @@ Topic 01〜13は `completed`。
 
 完成数: `13 / 20`
 
-current_status: `topic_14_powerpoint_complete`
+current_status: `topic_14_progress_records_synced`
 
 active_topic: `14 フーリエ変換・FFT`
 
-次工程: Topic 14の固定R3一次「機械」問8 (1)を、完成教材だけで保存済み正答を見ずに独立再解答する。
+次工程: Topic 14の最終QAを再判定する。
 
 ## 上位仕様
 
@@ -940,7 +940,7 @@ PowerPoint QA:
 source:
 `topics/14_fourier_transform_fft/14_fourier_transform_fft.md`
 
-current_status: `topic_14_powerpoint_complete`
+current_status: `topic_14_progress_records_synced`
 
 ### Topic 14 固定範囲
 
@@ -1077,4 +1077,4 @@ QA:
 
 ## 次に行うこと
 
-Topic 14 `フーリエ変換・FFT` の固定R3一次「機械」問8 (1)を、完成教材だけで保存済み正答を見ずに独立再解答する。
+Topic 14 `フーリエ変換・FFT` の最終QAを再判定する。
