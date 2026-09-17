@@ -6,11 +6,11 @@
 
 Topic 01〜14は `PASS / completed`。完成数は `14 / 21`。
 
-current_status: `topic_15_source_progress_synced`
+current_status: `topic_15_final_qa_complete`
 
 active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 
-Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QAまで実施済み。固定一次5問・25答案要素は完成教材だけで `25 / 25 PASS`、二次採用0問・数合わせ0件。初回最終QAで唯一FAILだった主source・練習sourceの旧進捗記録4箇所を実成果物へ同期した。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。完成数は `14 / 21` のまま、次工程は最終QA再実施。
+Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、進捗記録同期、最終QA再実施まで完了。固定一次5問・25答案要素は完成教材だけで `25 / 25 PASS`、二次採用0問・数合わせ0件。初回最終QAのblocker4件は `4 / 4 PASS` で解消し、最終QAは `PASS / FINAL_QA_COMPLETE`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。完成数は `14 / 21` のまま、次工程はcompleted状態同期。
 
 ## Topic 15 成果物
 
@@ -23,9 +23,9 @@ Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - PowerPoint: `topics/15_breaker_transient/15_breaker_transient_images.pptx`
 - PowerPoint QA: `topics/15_breaker_transient/15_breaker_transient_powerpoint_qa.md`
 - 完成後独立再解答: `topics/15_breaker_transient/15_breaker_transient_reanswer.md`
-- 初回最終QA: `topics/15_breaker_transient/15_breaker_transient_final_qa.md`
+- 最終QA: `topics/15_breaker_transient/15_breaker_transient_final_qa.md`
 - completion: `in_progress`
-- stage: `SOURCE_PROGRESS_SYNCED`
+- stage: `FINAL_QA_COMPLETE`
 
 ## Topic 15 固定範囲
 
@@ -201,6 +201,24 @@ Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 判定: `PASS / SOURCE_PROGRESS_SYNCED`
 
+## Topic 15 最終QA再実施
+
+記録: `topics/15_breaker_transient/15_breaker_transient_final_qa.md`
+
+- 必須成果物: `PASS`
+- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
+- 二次採用判断: `PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC境界: `PASS`
+- PDF/PPTX表示QA・練習QA: `PASS`
+- 初回blocker4件の解消: `4 / 4 PASS`
+- 進捗記録整合: `PASS`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
+
+判定: `PASS / FINAL_QA_COMPLETE`
+
 ## Topic 14 成果物
 
 - source: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics.md`
@@ -342,4 +360,4 @@ Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 ## 次に行うこと
 
-Topic 15の最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更せず、初回blockerだった4進捗記録が解消されているかを含めて再判定する。
+Topic 15のcompleted状態同期を行う。主source・練習source・STATUS・HANDOFFを `completed` へ同期し、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
