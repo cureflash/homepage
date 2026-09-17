@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は完成済み。
 
 ## 今回進捗
-Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の完成後ブラインド独立再解答結果をmain sourceへ同期した。固定5問・6答案要素の完成教材のみ独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完・Topic 13以降の論点補完・SPEC固定範囲外追加・未確認新幹線実設備値の使用はいずれも0件。教材本文、固定問題、PDF/PPTXは変更していない。
+Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の最終QAを実施した。必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、PDF/PPTX QA、SPEC境界はPASS。一方、`12_overhead_line_mechanics_explanation_qa.md`、`12_overhead_line_mechanics_practice_source.md`、`12_overhead_line_mechanics_powerpoint_qa.md`、`12_overhead_line_mechanics_independent_reanswer.md` の4箇所に旧工程記録が残っているため、進捗記録整合のみFAIL。最終判定は `NEEDS_REVISION / IN_PROGRESS` とし、Topic 12は未完了のまま。技術内容、固定問題、数式、正答、PDF/PPTX、独立再解答結果は変更していない。
 
 完成後独立答案:
 - R7上 電力 問12: `(4)`
@@ -24,6 +24,7 @@ source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
 解説画像PowerPoint: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_images.pptx`
 PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_powerpoint_qa.md`
 完成後独立再解答: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_independent_reanswer.md`
+最終QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_final_qa.md`
 
 固定問題:
 - R7上 電力 問12
@@ -91,6 +92,7 @@ H25 電力 問9は架線張力に関連するが、支線・支柱の幾何と�
 - SPEC固定範囲外の採用問題・本文・PDF・PowerPoint追加: `0件`
 - 件数合わせの仕様追加: `0件`
 - 制作前の保存済み正答・選択肢番号の完成教材転記: `0件`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程4箇所）
 
 ## 直前完了テーマ
 Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / completed`。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、必須成果物、PDF/PPTX QA、SPEC境界、進捗記録整合を全件PASS確認済み。
@@ -118,7 +120,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_12_source_reanswer_synced`
+- `current_status`: `topic_12_final_qa_needs_progress_sync`
 - 完成数: `11 / 16`
 - last completed: Topic 11 `架線事故ではどうやって電気を止める？`
 - active: Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？`
@@ -131,6 +133,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 12 解説画像PowerPoint: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_images.pptx`
 - Topic 12 PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_powerpoint_qa.md`
 - Topic 12 完成後独立再解答: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_independent_reanswer.md`
+- Topic 12 最終QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_final_qa.md`
 - 固定問題: `5問・6答案要素`
 - 制作前独立検証: `6 / 6 PASS`
 - 本文要求事項マッピング: `6 / 6 PASS`
@@ -156,6 +159,8 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - SPEC固定範囲外追加: `0件`
 - Topic 13以降の先取り・補完: `0件`
 - 未確認新幹線実設備値の使用・真値化: `0件`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 進捗記録整合: FAIL（旧工程4箇所）
 
 ## 次の正確な開始点
-Topic 12最終QAを実施する。必須成果物、EXAM_ALIGNMENT、PDF/PPTX QA、進捗記録整合、SPEC固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
+Topic 12の旧進捗記録4箇所を現在地へ同期する。対象は解説PDF QA、練習問題source、PowerPoint QA、完成後独立再解答。技術内容、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
