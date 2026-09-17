@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `14 / 39`
-- current_status: `topic_15_blind_reanswer_ready`
+- current_status: `topic_15_blind_reanswer_candidates_fixed`
 - last_completed_topic: `14 300系⑤ 走行抵抗と必要けん引力`
 - active_topic: `15 500系 高速域の出力・熱解析`
-- next_start: Topic 15の完成後独立再解答を、公式解答・標準解答を先に開かず、完成教材と公式問題文だけで固定5問・16答案要素について実施する
+- next_start: Topic 15の固定候補答案16要素を公式解答・標準解答と照合し、教材内根拠まで確認して独立再解答PASS/FAILを確定する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -25,7 +25,7 @@
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
-- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / BLIND_REANSWER_READY
+- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / BLIND_REANSWER_CANDIDATES_FIXED
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -151,6 +151,20 @@
 - 未確認500系実車値の真値化: `0件`
 - 判定: `PASS / BLIND_REANSWER_READY`
 
+## Topic 15 完成後独立再解答 候補答案固定
+- path: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_blind_reanswer_candidates.md`
+- 公式解答・標準解答の先読み: `0件`
+- 一次候補答案: `10 / 10 fixed`
+- 二次候補答案: `6 / 6 fixed`
+- 合計: `16 / 16 fixed`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 教材本文・PDF/PPTX変更: `0件`
+- SPEC指定9項目・4可視化・共通仮定式系変更: `0件`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+- 公式照合: `未実施`
+- 判定: `CANDIDATES_FIXED / OFFICIAL_COMPARISON_PENDING`
+
 ## Topic 15 SPEC固定範囲
 扱う内容:
 - `P = ωT`
@@ -180,4 +194,4 @@ SPEC指定可視化:
 Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 15「500系 高速域の出力・熱解析」の完成後独立再解答を、公式解答・標準解答を先に開かず、完成教材と公式問題文だけで固定5問・16答案要素について実施する。候補答案をGitHubへ固定してから公式照合する。
+Topic 15の固定候補答案16要素を変更せず公式解答・標準解答と照合し、各答案要素が完成教材内の根拠だけで導けたかを確認して、完成後独立再解答のPASS/FAILを確定する。
