@@ -374,4 +374,4 @@ Topic 14〜16先取り: `0件`
 
 ## 次工程
 
-固定EXAM_ALIGNMENTと問題・正答を変更せず、Topic 13の練習PDFを作成する。
+練習PDF・解説画像PowerPoint・完成後blind独立再解答は完成済み。固定EXAM_ALIGNMENTと問題・正答を変更せず、Topic 13の最終QAを再判定する。
