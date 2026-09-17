@@ -6,19 +6,22 @@
 
 Topic 01〜15は `PASS / completed`。完成数は `15 / 21`。
 
-current_status: `topic_16_explanation_pdf_complete`
+current_status: `topic_16_practice_pdf_complete`
 
 active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
 
-Topic 16は解説PDF＋表示QAまで完了。固定一次5問・25答案要素を教材内説明へ `25 / 25` 接続し、EXAM_ALIGNMENT必須説明17項目を `17 / 17 covered`。3段階例題は `3 / 3`。解説PDFはA4縦2ページ、200 dpi全ページ表示QA `2 / 2 PASS`、文字抽出QA `PASS`。二次採用0問・数合わせ0件、降伏機構の詳細、パワーエレクトロニクス回路、Topic 17、未確認300系主変換装置仕様の追加0件。次工程は練習問題source＋練習PDF。
+Topic 16は練習問題source＋練習PDFまで完了。固定一次5問・25答案要素を練習問題へ `25 / 25` 接続。練習問題は12問・全問五肢択一、基礎3 / 本試験標準6 / 複合・ひっかけ3、数値再計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`。練習PDFはA4縦3ページ、200 dpi全ページ表示QA `3 / 3 PASS`、文字抽出QA `PASS`。二次採用0問・数合わせ0件、降伏機構の詳細、パワーエレクトロニクス回路、Topic 17、未確認300系主変換装置仕様の追加0件。次工程は解説画像PowerPoint＋表示QA。
 
 ## Topic 16 成果物
 
 - source: `topics/16_semiconductor_diode/16_semiconductor_diode.md`
 - 解説PDF: `topics/16_semiconductor_diode/16_semiconductor_diode_explanation.pdf`
 - 解説PDF QA: `topics/16_semiconductor_diode/16_semiconductor_diode_explanation_pdf_qa.md`
+- 練習source: `topics/16_semiconductor_diode/16_semiconductor_diode_practice.md`
+- 練習PDF: `topics/16_semiconductor_diode/16_semiconductor_diode_practice.pdf`
+- 練習PDF QA: `topics/16_semiconductor_diode/16_semiconductor_diode_practice_pdf_qa.md`
 - completion: `in_progress`
-- stage: `EXPLANATION_PDF_COMPLETE`
+- stage: `PRACTICE_PDF_COMPLETE`
 
 ## Topic 16 固定範囲
 
@@ -100,6 +103,34 @@ Topic 16は解説PDF＋表示QAまで完了。固定一次5問・25答案要素�
 - 未確認300系主変換装置仕様追加: `0件`
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+## Topic 16 練習問題・PDF QA
+
+記録: `topics/16_semiconductor_diode/16_semiconductor_diode_practice_pdf_qa.md`
+
+- 12問・全問五肢択一
+- 基礎3 / 本試験標準6 / 複合・ひっかけ3
+- 数値再計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- 固定一次5問・25答案要素への接続: `25 / 25`
+- R8一次: 問3・問5・問6・問7・問12
+- H30一次: 問1・問2・問10
+- H26一次: 問3・問10・問12
+- H24一次: 問4・問5・問9・問11・問12
+- H22一次: 問3・問6・問7・問8・問12
+- PDF A4縦3ページ
+- 200 dpi全ページ表示QA: `3 / 3 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `ab5a0f73f641f06b10a4748c544abb288ab811d2e7481bbf70e91553d6740795`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 降伏機構の詳細追加: `0件`
+- パワーエレクトロニクス回路追加: `0件`
+- Topic 17先取り: `0件`
+- 未確認300系主変換装置仕様追加: `0件`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
 
 ## Topic 15 成果物
 
@@ -462,4 +493,4 @@ Topic 16は解説PDF＋表示QAまで完了。固定一次5問・25答案要素�
 
 ## 次に行うこと
 
-Topic 16の練習問題source＋練習PDFを作成し、問題・解答・完全解説、数値再計算・正答一意性、固定一次5問・25答案要素、SPEC境界を確認する。降伏機構の詳細、パワーエレクトロニクス回路、Topic 17、未確認の300系主変換装置仕様を追加しない。
+Topic 16の解説画像PowerPoint＋表示QAを作成する。降伏機構の詳細、パワーエレクトロニクス回路、Topic 17、未確認の300系主変換装置仕様を追加しない。
