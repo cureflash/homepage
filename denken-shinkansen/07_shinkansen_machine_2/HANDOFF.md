@@ -6,8 +6,8 @@
 - Topic 01〜14: 最終QA `PASS / completed`
 - 完成数: `14 / 22`
 - active topic: `15 新幹線の補機モーターを設計する`
-- current status: `topic_15_final_qa_needs_revision`
-- 次工程: Topic 15 進捗記録3箇所の同期
+- current status: `topic_15_progress_records_synced`
+- 次工程: Topic 15 最終QA再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -16,9 +16,13 @@
 - Topic 14は最終QA `PASS / completed` のまま変更なし。
 - Topic 15は制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、解説画像PowerPoint、PowerPoint QA、独立再解答前ゲート、完成後独立再解答まで完成済み。
 - 固定5過去問・8答案要素の独立再解答は `8 / 8 PASS`。教材外知識補完 `0件`。
-- 今回最終QAを実施し、必須成果物、試験対応、練習・表示QA、仕様境界はPASS。
-- blockerは進捗記録3箇所のみ。main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程` がPowerPoint作成前の状態で止まっている。
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの修正は不要。
+- 前回最終QAで必須成果物、試験対応、練習・表示QA、仕様境界はPASS。
+- 前回唯一のblockerだった進捗記録3箇所を今回同期した。
+  - main source `## 状態`
+  - main source末尾 `# 次工程`
+  - 練習source末尾 `# 次工程`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
+- 最終QAそのものはまだ再実施していないため、Topic 15は未完了のまま。
 
 ## Topic 15 固定範囲
 - ポンプ
@@ -47,15 +51,15 @@
 一次3問＋二次記述2問、計5問。品質ゲート対象は8答案要素。
 
 ## Topic 15 成果物状態
-- 解説source: 完成
+- 解説source: 完成・進捗記録同期済み
 - 解説PDF: 完成
-- 練習source: 完成
+- 練習source: 完成・進捗記録同期済み
 - 練習PDF: 完成
 - PowerPoint: 完成
 - PowerPoint QA: PASS
 - 独立再解答前ゲート: `BLIND_REANSWER_READY`
 - 完成後独立再解答: `PASS / independent_reanswer_complete`
-- 最終QA記録: `NEEDS_REVISION / IN_PROGRESS`
+- 最終QA記録: 前回 `NEEDS_REVISION / IN_PROGRESS`、再実施待ち
 
 ## Topic 15 PowerPoint QA
 - `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_images.pptx`
@@ -88,14 +92,9 @@
 - 完成後独立再解答: `8 / 8 PASS`
 - 練習・PDF/PPTX QA: PASS
 - 仕様境界: PASS
-- 進捗記録整合: FAIL
-- 最終判定: `NEEDS_REVISION / IN_PROGRESS`
+- 前回blockerの進捗記録3箇所: 今回同期済み
+- 最終QA再実施: 未実施
+- 前回最終判定: `NEEDS_REVISION / IN_PROGRESS`
 
 ## 次に行うこと
-Topic 15の技術内容は変更せず、次の進捗文だけを実成果物状態へ同期する。
-
-1. `topics/15_auxiliary_motor_design/15_auxiliary_motor_design.md` の `## 状態`
-2. 同ファイル末尾 `# 次工程`
-3. `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_practice.md` 末尾 `# 次工程`
-
-同期後にTopic 15最終QAを再実施し、全項目PASSの場合のみ `completed`、完成数 `15 / 22` とする。
+Topic 15最終QAを再実施する。進捗記録整合を含む全項目がPASSの場合のみ `completed`、完成数 `15 / 22` とし、次の未完了テーマTopic 16へ進む。
