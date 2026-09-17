@@ -2,9 +2,9 @@
 
 更新日: 2026-09-18
 
-状態: `topic_15_explanation_source_complete / IN_PROGRESS`
+状態: `topic_15_explanation_pdf_complete / IN_PROGRESS`
 
-制作前 `EXAM_ALIGNMENT` で固定した7問・12答案要素を変更せず、系列 `SPEC.md` の Topic 15 固定範囲だけで解説source本文を作成した。光束・光度・照度・輝度、逆二乗則、照明率・保守率・所要灯数、発光効率・LED、ジュール熱・電力量・熱量・効率、COPの基本を、本試験で再利用できる解法手順まで記載した。固定過去問要求事項の本文マッピングは `12 / 12 PASS`、基礎 / 本試験標準 / 複合・ひっかけの3段階例題もPASS。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。次工程は解説PDF作成である。
+制作前 `EXAM_ALIGNMENT` で固定した7問・12答案要素を変更せず、系列 `SPEC.md` の Topic 15 固定範囲だけで解説source本文を作成した。光束・光度・照度・輝度、逆二乗則、照明率・保守率・所要灯数、発光効率・LED、ジュール熱・電力量・熱量・効率、COPの基本を、本試験で再利用できる解法手順まで記載した。固定過去問要求事項の本文マッピングは `12 / 12 PASS`、基礎 / 本試験標準 / 複合・ひっかけの3段階例題もPASS。解説PDFはA4縦3ページで完成し、200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。次工程は練習問題source作成である。
 
 ## EXAM_ALIGNMENT
 
@@ -603,6 +603,18 @@ COP: COP = Q/W_in
 - N700S等の車内照明器具の型式・灯数・実消費電力、空調装置の実能力・実COP等を推測で補わない。
 - Topic 16「同期機」を先取りしない。
 
+## 解説PDF進捗
+
+- 解説PDF: `topics/15_lighting_heating/15_lighting_heating_explanation.pdf`
+- 解説PDF QA: `topics/15_lighting_heating/15_lighting_heating_explanation_pdf_qa.md`
+- A4縦3ページ
+- 200 dpi表示QA: `3 / 3 PASS`
+- 文字抽出QA: `PASS`
+- 文字切れ・重なり・ページ外はみ出し: `0件`
+- 欠落・破損グリフ: `0件`
+- 固定EXAM_ALIGNMENT 7問・12答案要素マッピング: `12 / 12`
+- 固定範囲外追加: `0件`
+
 ## 次工程
 
-固定EXAM_ALIGNMENTを変更せず、Topic 15の解説PDFを作成する。固定7問・12答案要素の本文マッピングと3段階例題をPDFへ欠落なく反映し、表示QAを行う。
+固定EXAM_ALIGNMENTを変更せず、Topic 15の練習問題sourceを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、固定7問・12答案要素へ接続させる。
