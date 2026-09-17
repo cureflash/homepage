@@ -7,7 +7,7 @@
 
 Topic 01〜12は最終QAまで `PASS / completed`。完成数は `12 / 39`。
 
-現在地は `topic_13_explanation_pdf_complete`。Topic 13 `300系④ 回生と四象限運転` は解説本文＋3段階例題、解説PDF＋表示QA・文字抽出QAまで完成。固定一次4問＋二次1問・15答案要素を本文・PDFへ `15 / 15` 接続し、SPEC指定8項目・3可視化を反映。A4縦5ページ、180 dpi表示 `5 / 5 PASS`、文字抽出PASS。Topic 14先取り、回生失効・電力貯蔵設備、H24二次の無効電流・出力可能領域、SPEC外制御方式、未確認300系実車値の追加は0件。次は練習問題・完全解説source。
+現在地は `topic_13_practice_source_complete`。Topic 13 `300系④ 回生と四象限運転` は解説本文＋3段階例題、解説PDF＋表示QA・文字抽出QA、練習問題・完全解説sourceまで完成。練習sourceは一次8問＋二次4問、計12問。固定一次4問＋二次1問・15答案要素へ `15 / 15` 接続し、数値・論理 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`。Topic 14先取り、回生失効・電力貯蔵設備、H24二次の無効電流・出力可能領域、SPEC外制御方式、未確認300系実車値の追加は0件。次は練習PDF。
 
 ## Topic 13 固定EXAM_ALIGNMENT
 source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
@@ -67,6 +67,22 @@ source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerativ
 - Topic 14先取り: `0件`
 - 回生失効・電力貯蔵設備追加: `0件`
 - H24二次の無効電流・出力可能領域追加: `0件`
+- SPEC外制御方式追加: `0件`
+- 未確認300系実車値の真値化: `0件`
+
+## Topic 13 練習問題source完成確認
+- source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_practice_source.md`
+- 一次試験型: `8問`（全問五肢択一）
+- 二次試験型: `4問`（途中式・前提・単位・理由を含む記述式）
+- 合計: `12問`
+- 数値・論理QA: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5過去問・15答案要素接続: `15 / 15 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 14先取り: `0件`
+- H27固定範囲外の回生失効・電力貯蔵設備・運行間隔追加: `0件`
+- H24二次固定範囲外の無効電流・出力可能領域追加: `0件`
+- Topic 11/12の論点再展開: `0件`
 - SPEC外制御方式追加: `0件`
 - 未確認300系実車値の真値化: `0件`
 
@@ -248,4 +264,4 @@ SPEC指定可視化:
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。完成後独立再解答 `27 / 27 PASS`、最終判定 `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 13 `300系④ 回生と四象限運転` の練習問題・完全解説sourceを作成する。固定5過去問・15答案要素へ接続し、固定EXAM_ALIGNMENTは変更しない。
+Topic 13 `300系④ 回生と四象限運転` の練習PDFを作成する。固定5過去問・15答案要素へ接続し、固定EXAM_ALIGNMENTは変更しない。
