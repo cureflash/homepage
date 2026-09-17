@@ -4,11 +4,11 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、最新main、Topic 11成果物、各QA、完成後blind独立再解答を再確認した。
+前回 `NEEDS_REVISION / IN_PROGRESS` の唯一の未完了理由だった進捗記録不整合を解消後、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、最新main、Topic 11成果物、各QA、完成後blind独立再解答を再確認した。
 
-技術内容、固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、練習問題QA、計算プログラムQA、完成後独立再解答、SPEC固定範囲はPASS。未完了理由は進捗記録の旧状態だけである。
+技術内容、固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、練習問題QA、計算プログラムQA、完成後独立再解答、SPEC固定範囲、進捗記録整合を全件PASSとした。
 
 ## 品質ゲート
 
@@ -25,7 +25,7 @@
 | 計算プログラム | PASS | `x=0...12 km` を0.1 km刻み121点、SPEC指定4量をCSV・グラフ化、代表点再代入・全点傾向QA PASS |
 | PowerPoint | PASS | 16:9・4枚、表示 `4 / 4 PASS`、overflow 0、ZIP整合性PASS、SPEC固定6項目 `6 / 6`、指定4量 `4 / 4` |
 | SPEC境界 | PASS | Topic 12以降先取り0件、未確認実設備値0件、仕様追加0件、公式過去問転載0件 |
-| 進捗記録整合 | FAIL | 下記4箇所が実成果物より古い状態のまま |
+| 進捗記録整合 | PASS | 前回blockerだった主source・練習source・PowerPoint QAの旧進捗記録を実成果物へ同期し、主sourceを `completed` へ更新 |
 
 ## 正式過去問対応品質ゲート
 
@@ -42,25 +42,20 @@
 
 原則5問未満である点は、Topic 11固定範囲だけで問題全体を完答できる正式問題を4問に限定し、固定範囲外論点を追加して件数を水増ししないためである。一次1問に加えて二次3問を含み、二種の一次・二次双方を確認している。
 
-## exact blocker
+## 必須成果物の実在確認
 
-技術修正は不要。次の進捗文だけが実成果物状態と不整合である。
+- `11_moving_train_voltage.md` — `completed`
+- `11_moving_train_voltage_explanation.pdf` — QA `PASS`
+- `11_moving_train_voltage_practice.md` — 15問、QA `PASS`
+- `11_moving_train_voltage_practice.pdf` — QA `PASS`
+- `11_moving_train_voltage_sim.py` / `11_moving_train_voltage_sweep.csv` / 4 SVG — QA `PASS`
+- `11_moving_train_voltage_images.pptx` — QA `PASS`
+- `11_moving_train_voltage_blind_reanswer_20260917.md` — `4 / 4問・17 / 17答案要素 PASS`
 
-1. `11_moving_train_voltage.md` 冒頭 `## 状態`
-   - 現在: `topic_11_practice_source_complete / IN_PROGRESS`
-   - 実状態: 完成後blind独立再解答まで完了。
-2. `11_moving_train_voltage.md` 冒頭要約・末尾 `## 次工程`
-   - 現在: 練習PDF・計算プログラム・PowerPoint未制作／次工程が練習PDF制作。
-   - 実状態: すべて制作・QA済み。次工程は最終QA再実施。
-3. `11_moving_train_voltage_practice.md` 冒頭 `状態`
-   - 現在: `topic_11_practice_source_complete / IN_PROGRESS`
-   - 実状態: 完成後blind独立再解答まで完了。
-4. `11_moving_train_voltage_powerpoint_qa.md` 末尾
-   - 現在: 「完成後blind独立再解答はまだ実施しない」。
-   - 実状態: 完成後blind独立再解答 `4 / 4問・17 / 17答案要素 PASS`。
+## 完了判定
 
-これらを実成果物状態へ同期するまでTopic 11を `completed` にしない。
+Topic 11 は `completed`。
 
-## 次工程
+完成数: `11 / 22`
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・計算プログラムは変更せず、上記4箇所の進捗記録だけを同期する。同期後に最終QAを再実施し、全項目PASSの場合のみ `completed`、完成数 `11 / 22` とする。
+次はTopic 12「N700Sが何本も同時加速したら？」の制作前EXAM_ALIGNMENTを行う。
