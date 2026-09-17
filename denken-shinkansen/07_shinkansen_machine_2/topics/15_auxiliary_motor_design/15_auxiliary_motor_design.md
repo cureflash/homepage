@@ -4,9 +4,9 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT`、解説本文＋基礎／本試験標準／複合の3段階例題、解説PDF、練習問題source、練習PDFまで完成。解説画像PowerPoint・完成後独立再解答は未着手。
+制作前 `EXAM_ALIGNMENT`、解説本文＋基礎／本試験標準／複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、PowerPoint QA、独立再解答前ゲート、完成後独立再解答まで完成済み。最終QAは進捗記録不整合のみで `NEEDS_REVISION`。
 
-現在の判定は `topic_15_practice_pdf_complete / IN_PROGRESS`。次工程は解説画像PowerPoint。
+現在の判定は `topic_15_progress_records_syncing / IN_PROGRESS`。次工程は進捗記録同期完了後の最終QA再実施。
 
 本テーマは系列 `SPEC.md` の固定範囲どおり、次を扱う。
 
@@ -564,4 +564,4 @@
 
 # 次工程
 
-Topic 15の解説画像PowerPointを作成し、固定一次3問＋二次2問・8答案要素と固定範囲を維持したまま表示QA・overflow・ZIP整合性を確認する。
+Topic 15の最終QAを再実施し、進捗記録整合を含む全項目を確認する。全項目PASSの場合のみ `completed`、完成数 `15 / 22` とする。
