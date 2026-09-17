@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `12`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `COMPLETED`
 - 更新日: 2026-09-17
 
 ## 固定範囲
@@ -307,4 +307,4 @@ n型の多数キャリアは電子。nチャネルJFETでは逆ゲートバイ�
 
 ## 次工程
 
-完成後独立再解答 `7 / 7 PASS` まで完了。次はTopic 12の最終QAを再実施する。固定EXAM_ALIGNMENTは変更しない。
+最終QAを再実施し `PASS / completed`。固定7問の完成後独立再解答 `7 / 7 PASS`、必須成果物・表示QA・SPEC境界・進捗記録整合性を全件PASS確認済み。次はTopic 13「インバータはどうやって三相交流を作る？」の制作前EXAM_ALIGNMENTへ進む。固定EXAM_ALIGNMENTは変更しない。
