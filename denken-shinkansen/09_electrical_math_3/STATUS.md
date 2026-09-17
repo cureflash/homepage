@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 10 / 12
-- current_status: `topic_11_preproduction_independent_answer_complete`
+- current_status: `topic_11_explanation_source_complete`
 - last_completed_topic: `10 指数関数・一階微分方程式入門`
 - active_topic: `11 グラフ・特性曲線を読む`
-- next_start: `Topic 11解説本文＋3段階例題`
+- next_start: `Topic 11解説PDF`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -122,7 +122,7 @@
 - [x] 参考教材を複数系統確認（e-sysnet含む）
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立解答・公式解答照合 `5 / 5 PASS`
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
@@ -132,19 +132,19 @@
 
 ## 今回進めた内容
 
-Topic 11「グラフ・特性曲線を読む」の固定5問について、公式解答を先に見ずに制作前独立解答を確定し、その後に電気技術者試験センター公式解答と照合した。
+Topic 11「グラフ・特性曲線を読む」の解説本文＋3段階例題を主sourceへ実装した。
 
-- R7下 機械 問1: 独立解答 `(5)` → 公式 `(5)` PASS
-- R6下 理論 問13: 独立解答 `(2) 0.9 MΩ` → 公式 `(2)` PASS
-- R6下 理論 問9: 独立解答 `(3) 21.2 A` → 公式 `(3)` PASS
-- R5上 機械 問7: 独立解答 `(4)` → 公式 `(4)` PASS
-- R5上 機械 問9: 独立解答 `(4) 98.0 %` → 公式 `(4)` PASS
-- 合計 `5 / 5 PASS`
+- 固定必須説明 `15 / 15` を本文へ実装
+- 固定5過去問を教材内へ `5 / 5` マッピング
+- 例題1「速度―時間曲線」: `a=1.0 m/s^2`、`x=200 m` PASS
+- 例題2「変圧器最大効率」: 負荷率 `0.50`、`η≈97.6 %` PASS
+- 例題3「負荷線・曲線群・補間」: `I_C=3.0 mA`、`I_B≈17.5 μA`、`R_B≈246 kΩ` PASS
+- 3段階例題独立再計算 `3 / 3 PASS`
 - 固定EXAM_ALIGNMENT変更0件
-- 仕様外補完0件
+- 伝達関数・ボード線図・PID等の固定範囲外追加0件
 
 ## 判定
 
-`topic_11_preproduction_independent_answer_complete / IN_PROGRESS`。
+`topic_11_explanation_source_complete / IN_PROGRESS`。
 
-完成数は `10 / 12`。次工程はTopic 11の解説本文＋3段階例題。
+完成数は `10 / 12`。次工程はTopic 11の解説PDF。
