@@ -5,7 +5,7 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は品質ゲートPASSでcompleted。active topicは14「停電してもN700Sが走れるのはなぜ？」。
 
-Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDFを完了し、`topic_14_practice_pdf_complete / IN_PROGRESS`。解説画像PowerPointは未着手。
+Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPointを完了し、`topic_14_powerpoint_complete / IN_PROGRESS`。完成後blind独立再解答は未実施。
 
 ## Topic 14 固定範囲
 系列 `SPEC.md` に従い、電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率だけを扱う。
@@ -76,12 +76,27 @@ Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習�
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
+## Topic 14 解説画像PowerPoint
+`topics/14_battery/14_battery_images.pptx` を作成済み。
+
+- 16:9・4枚
+- LibreOffice 180 dpi表示QA: `4 / 4 PASS`
+- スライド外はみ出し: `0件`
+- 文字切れ・重なり・判読不能: `0件`
+- 欠落・破損グリフ: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- 固定EXAM_ALIGNMENT H30問12との接続: `1 / 1 PASS`
+- `C = It` / `W = VC` / `W = Pt` / 直列・並列 / `V = E - Ir` / 放電効率を含む必要容量逆算: `PASS`
+- 固定範囲外追加: `0件`
+- 未確認N700S実値追加: `0件`
+- QA: `topics/14_battery/14_battery_powerpoint_qa.md`
+
 ## Topic 14 新幹線側の扱い
 JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ自走システム」の搭載を確認。搭載電池の化学系、実容量、直並列構成、定格電圧、自走速度・距離・時間、詳細な電力経路は現時点で実値化しない。一次資料で明示された値だけを後工程で使用する。
 
 ## Topic 14 成果物
 - source: `topics/14_battery/14_battery.md`
-- 状態: 練習PDF完成
+- 状態: 解説画像PowerPoint完成
 - source本文QA: `PASS`
 - explanation PDF: `topics/14_battery/14_battery_explanation.pdf`
 - explanation PDF QA: `topics/14_battery/14_battery_explanation_pdf_qa.md`
@@ -96,7 +111,10 @@ JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ�
 - practice PDF固定過去問マッピング: `1 / 1 PASS`
 - practice PDF文字切れ・重なり・ページ外はみ出し: `0件`
 - practice PDF欠落・破損グリフ: `0件`
-- PowerPoint: 未着手
+- PowerPoint: `topics/14_battery/14_battery_images.pptx`
+- PowerPoint QA: `topics/14_battery/14_battery_powerpoint_qa.md`
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint固定過去問接続: `1 / 1 PASS`
 - 完成後blind独立再解答: 未実施
 - 固定範囲外追加: `0件`
 - 件数合わせ: `0件`
@@ -106,4 +124,4 @@ JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 14の解説画像PowerPointを作成する。
+Topic 14の完成後blind独立再解答を実施する。
