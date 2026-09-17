@@ -58,8 +58,8 @@ R8一次「機械」にはTopic 14の走行抵抗・必要けん引力・機械�
 - path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_explanation.pdf`
 - QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_explanation_pdf_qa.md`
 - 判定: `PASS / EXPLANATION_PDF_COMPLETE`
-- A4縦6ページ
-- 180 dpi表示QA: `6 / 6 PASS`
+- A4縦3ページ
+- 180 dpi表示QA: `3 / 3 PASS`
 - 文字抽出QA: `PASS`
 - 文字欠落・黒四角・重なり・クリップ: `0件`
 - 固定5過去問・9答案要素接続: `9 / 9 PASS`
@@ -69,7 +69,7 @@ R8一次「機械」にはTopic 14の走行抵抗・必要けん引力・機械�
 - 4可視化共通仮定式系: `PASS`
 - 加速曲線: 前進オイラー法 `Δt=1 s` をPDF内に明記
 - 教材用仮定値表記: `PASS / 300系実車値ではないことを明記`
-- PDF SHA-256: `84e603302adc30e70523bf490d6fdfd498733ac2a6ab3f8eca572f0c29f34943`
+- PDF SHA-256: `32d691584b5d898b80389f20810ba2e3a22d9825d7b58502e9af9dd355c4a180`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 

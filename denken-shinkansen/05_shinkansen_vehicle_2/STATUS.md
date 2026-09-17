@@ -61,8 +61,8 @@
 ## Topic 14 解説PDF
 - path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_explanation.pdf`
 - QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_explanation_pdf_qa.md`
-- A4縦6ページ
-- 180 dpi表示QA: `6 / 6 PASS`
+- A4縦3ページ
+- 180 dpi表示QA: `3 / 3 PASS`
 - 文字抽出QA: `PASS`
 - 文字欠落・黒四角・重なり・クリップ: `0件`
 - 固定5過去問・9答案要素接続: `9 / 9 PASS`
@@ -70,7 +70,7 @@
 - SPEC指定8項目: `8 / 8 PASS`
 - SPEC指定4可視化: `4 / 4 PASS`
 - 4可視化共通仮定式系: `PASS`
-- PDF SHA-256: `84e603302adc30e70523bf490d6fdfd498733ac2a6ab3f8eca572f0c29f34943`
+- PDF SHA-256: `32d691584b5d898b80389f20810ba2e3a22d9825d7b58502e9af9dd355c4a180`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 未確認300系実車値の真値化: `0件`
 - 判定: `PASS / EXPLANATION_PDF_COMPLETE`

@@ -6,13 +6,13 @@
 
 ## 出力確認
 - 用紙: A4縦
-- ページ数: `6`
+- ページ数: `3`
 - render: `180 dpi`
-- 表示QA: `6 / 6 PASS`
+- 表示QA: `3 / 3 PASS`
 - 文字抽出QA: `PASS`
 - 文字欠落・黒四角・重なり・クリップ: `0件`
 - PDF open/preflight: `PASS`
-- PDF SHA-256: `84e603302adc30e70523bf490d6fdfd498733ac2a6ab3f8eca572f0c29f34943`
+- PDF SHA-256: `32d691584b5d898b80389f20810ba2e3a22d9825d7b58502e9af9dd355c4a180`
 
 ## 内容確認
 - 固定過去問: 一次2問＋二次3問、計5問
