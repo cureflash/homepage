@@ -4,13 +4,13 @@
 
 ## 現在地
 
-Topic 01〜13は `PASS / completed`。完成数は `13 / 21`。
+Topic 01〜14は `PASS / completed`。完成数は `14 / 21`。
 
-current_status: `topic_14_final_qa_complete`
+current_status: `topic_14_completed`
 
-active_topic: `14 インバータのギザギザ波形を分解する`
+active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 
-Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施まで完了。固定一次2問・3答案要素＋二次1問・2答案要素は完成教材だけで `5 / 5 PASS`、公式標準解答と全件一致。初回最終QAで唯一FAILだった主source冒頭・主source末尾・練習source冒頭の旧進捗記録3件は全件解消し、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。完成数はまだ `13 / 21` のまま、次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。
+Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施、completed状態同期まで完了。固定一次2問・3答案要素＋二次1問・2答案要素は完成教材だけで `5 / 5 PASS`、公式標準解答と全件一致。初回最終QAで唯一FAILだった主source冒頭・主source末尾・練習source冒頭の旧進捗記録3件は全件解消し、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程はTopic 15の制作前EXAM_ALIGNMENT。
 
 ## Topic 14 成果物
 
@@ -24,8 +24,8 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - PowerPoint QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_powerpoint_qa.md`
 - 完成後独立再解答: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_reanswer.md`
 - 最終QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_final_qa.md`
-- completion: `in_progress`
-- stage: `FINAL_QA_COMPLETE`
+- completion: `completed`
+- stage: `COMPLETED`
 
 ## Topic 14 固定範囲
 
@@ -140,17 +140,17 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 ## Topic 14 進捗記録同期
 
-初回最終QAで指摘された3箇所だけを実成果物へ同期した。
+初回最終QAで指摘された3箇所を実成果物へ同期し、最終QA PASS後にcompleted状態まで同期した。
 
-- 主source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」
-- 主source末尾: 解説PDF、練習問題source＋PDF、PowerPoint＋表示QA、完成後独立再解答を完了扱いへ同期
-- 練習source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」
+- 主source: `COMPLETED / completed`
+- 練習source: `COMPLETED / completed`
+- STATUS / HANDOFF: Topic 14 completed、完成数 `14 / 21`
 - 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
 - 固定一次2問・3答案要素＋二次1問・2答案要素の独立再解答: `5 / 5 PASS` を維持
 - 二次採用: `1問・2答案要素`、二次数合わせ: `0件` を維持
 
-判定: `PASS / SOURCE_PROGRESS_SYNCED`
+判定: `PASS / completed`
 
 ## 次に行うこと
 
-Topic 14の主source・練習source・STATUS・HANDOFFをcompleted状態へ同期し、完成数を `14 / 21` へ進める。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の制作前EXAM_ALIGNMENT。
