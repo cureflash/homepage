@@ -3,36 +3,41 @@
 updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `12`
-current_status: `topic_12_calculation_program_complete`
+current_status: `topic_12_powerpoint_complete`
 
 ## 今回完了
 
-Topic 12「N700Sが何本も同時加速したら？」の列車本数―電圧・損失計算を制作した。
+Topic 12「N700Sが何本も同時加速したら？」の解説画像PowerPoint＋QAを完成した。
 
 成果物:
-- `topics/12_multiple_train_load/12_multiple_train_load_sim.py`
-- `topics/12_multiple_train_load/12_multiple_train_load_sweep.csv`
-- `topics/12_multiple_train_load/12_multiple_train_load_voltage.svg`
-- `topics/12_multiple_train_load/12_multiple_train_load_loss.svg`
-- `topics/12_multiple_train_load/12_multiple_train_load_sim_qa.md`
+- `topics/12_multiple_train_load/12_multiple_train_load_images.pptx`
+- `topics/12_multiple_train_load/12_multiple_train_load_powerpoint_qa.md`
 
-解説source §11.3 の教材上仮定値をそのまま使用した。
+PowerPointは16:9・4スライド。SPEC固定8項目を `8 / 8` 可視化し、指定グラフ「列車本数―電圧」「列車本数―損失」を `2 / 2` 収録した。
+
+使用条件は解説source §11.3・計算プログラムと同一の教材上仮定値。
 - `66 kV`
 - 1列車 `2 MW`
 - 遅れ力率 `0.90`
 - 1相線路 `R=0.50 Ω`, `X=1.00 Ω`
 - `n=0...4`
 
-定電力負荷として受電端電圧を更新し、高電圧側解を採用した。`n=4` で `Vr=65.880407 kV`、`I=77.898765 A`、三相線路損失 `9.102326 kW`。
+代表値:
+- `n=4`: `Vr=65.880407 kV`
+- `n=4`: `I=77.898765 A`
+- `n=4`: 三相線路損失 `9.102326 kW`
 
-計算QA:
-- CSV `5 / 5` 行 PASS
-- 受電端電圧: 単調非増加 PASS
-- 電流・損失: 単調非減少 PASS
-- 実数高電圧解 `5 / 5 PASS`
-- SVG XML parse `2 / 2 PASS`
-- SPEC指定「列車本数―電圧」「列車本数―損失」 `2 / 2 PASS`
-- 複素KVL独立再代入残差: 代表点最大 `0.000280 V`
+QA:
+- 表示 `4 / 4 PASS`
+- レンダリング `1601 × 900` / slide
+- 文字切れ `0件`
+- 文字重なり `0件`
+- 図形はみ出し `0件`
+- `slides_test.py` PASS
+- PPTX ZIP整合性 PASS
+- LibreOffice PDF変換 `4ページ PASS`
+- PDF文字抽出 PASS
+- SHA-256 `f4f94504c5bd900f0e07d73203de0787c885ce021aa3818358e26aad22203995`
 
 ## 正式品質ゲート
 
@@ -58,10 +63,10 @@ Topic 12「N700Sが何本も同時加速したら？」の列車本数―電圧�
 
 Topic 11: `completed`。
 
-Topic 12: 解説PDF＋QA、練習問題source＋source QA、練習PDF＋PDF QA、計算プログラム＋CSV＋SVG＋計算QAまで完了。品質ゲートは完成後blind独立再解答まで未通過。
+Topic 12: 解説PDF＋QA、練習問題source＋source QA、練習PDF＋PDF QA、計算プログラム＋CSV＋SVG＋計算QA、PowerPoint＋PowerPoint QAまで完了。品質ゲートは完成後blind独立再解答まで未通過。
 
 完成数: `11 / 22`。
 
 ## 次に行う
 
-Topic 12の解説画像PowerPointを制作し、PowerPoint QAを行う。固定5問・25答案要素、進み/遅れ符号規約、教材上仮定値と実設備値の区別を維持し、仕様外論点・Topic 13以降・未確認N700S実設備値を追加しない。
+Topic 12の完成後blind独立再解答を行う。固定5問・25答案要素を、保存済み正答・公式解答を先に見ず、教材内容だけで解く。答案を先に固定した後で公式解答と照合し、教材外知識補完があればFAILとする。完答できるまでTopic 12をcompletedにしない。
