@@ -1,7 +1,7 @@
 # Topic 11 練習問題・完全解説 - 新幹線が移動すると電圧はどう変わる？
 
 更新日: 2026-09-17
-状態: `topic_11_practice_source_complete / IN_PROGRESS`
+状態: `topic_11_independent_reanswer_complete`
 
 本ファイルは `11_moving_train_voltage.md` の固定EXAM_ALIGNMENTと完成済み解説本文だけを土台にした練習プリント用sourceである。公式過去問の転載ではなく、正式固定4問・17答案要素とTopic 11固定範囲を同型問題へ転用できるか確認する独自問題とする。
 
