@@ -6,19 +6,18 @@
 - Topic 01〜14: 最終QA `PASS / completed`
 - 完成数: `14 / 22`
 - active topic: `15 新幹線の補機モーターを設計する`
-- current status: `topic_14_completed`
-- 次工程: Topic 15 制作前EXAM_ALIGNMENT
+- current status: `topic_15_explanation_source_complete`
+- 次工程: Topic 15 解説PDF
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 14の実成果物と直近変更を確認し、既存の「機械二種を進行」枠の成果をreconcileした。
-- Topic 14は制作前EXAM_ALIGNMENT・解説source・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・独立再解答前ゲート・完成後独立再解答まで完成済み。
-- Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いでいる。Topic 13で採用済み答案要素の重複採用は `0件`。
-- 完成教材だけで固定5問・27答案要素をblind再解答し、答案確定後に公式解答・標準解答と照合して `27 / 27 PASS`。教材外補完・固定範囲外追加・Topic 15以降依存・未確認L0実値依存はいずれも `0件`。
-- 前回最終QAで唯一FAILだったmain source 2箇所＋練習source 1箇所の進捗記録は同期済み。
-- 今回、最終QAを再実施し、必須成果物・過去問対応・独立再解答・練習QA・PDF/PPTX QA・固定範囲境界・進捗記録整合を再確認して全件PASS。Topic 14を `PASS / completed` とした。
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更 `0件`。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 15 main sourceと直近変更を確認した。
+- Topic 14は最終QA `PASS / completed` のまま変更なし。
+- Topic 15 main sourceには制作前EXAM_ALIGNMENTが既に存在し、一次3問＋二次記述2問、計5問・8答案要素が固定済みであることを確認した。
+- 今回、Topic 15の解説本文と基礎／本試験標準／複合の3段階例題を作成し、固定5問・8答案要素を本文へ `8 / 8` 接続した。
+- 例題数値を再計算しPASS。固定範囲外論点、Topic 16以降の先取り、未確認新幹線補機実値の真値化はいずれも `0件`。
+- 固定公式過去問の個別正答記号・完成済み答案は保存していない。完成後のblind再解答条件を維持する。
 
 ## Topic 14 固定範囲
 - 内部起電力
@@ -172,5 +171,60 @@
 - 進捗記録同期: 完成
 - 最終QA: `PASS / completed`
 
+## Topic 15 固定範囲
+- ポンプ
+- ファン
+- コンプレッサ
+- 負荷特性
+- 所要動力
+- 効率
+- インバータ駆動
+- 可変速運転
+- 相似則 `Q∝N`, `H∝N²`, `P∝N³`
+
+境界:
+- Topic 05〜09で完成済みの誘導機等価回路・最大トルク・PWM回路詳細・ベクトル制御詳細を再制作しない。
+- Topic 16の蓄電池・DCリンク、Topic 17以降の制御系を先取りしない。
+- 未確認の新幹線補機機種・定格電圧・電流・回転速度・効率・容量を実車値化しない。
+
+## Topic 15 固定EXAM_ALIGNMENT
+固定過去問:
+- R06 一次 機械 問2 (5) — 1答案要素
+- H25 一次 機械 問3 (1),(2) — 2答案要素
+- H23 一次 機械 問1 (1),(2) — 2答案要素
+- R04 二次 機械・制御 問3 (6) — 2答案要素
+- R07 二次 機械・制御 問2 (1)の定格トルク部分 — 1答案要素
+
+一次3問＋二次記述2問、計5問。ゲート対象8答案要素。
+
+## Topic 15 解説source
+- [x] `topics/15_auxiliary_motor_design/15_auxiliary_motor_design.md`
+- [x] §1 試験論点と計算鎖
+- [x] §2 `P=Tω`、`ω=2πN/60`、`T_M=Jα+T_L`
+- [x] §3 ポンプ・ファン相似則、`T_L∝N²`、`P_fluid=ρgQH`、効率連鎖
+- [x] §4 `V/f` 一定制御、電圧指令と周期、同期速度
+- [x] §5 連続負荷と短時間加速負荷による容量判定
+- [x] §6 新幹線補機への概念接続。未確認実車値は使用しない
+- [x] §7 再利用可能な解法手順
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3`
+- [x] 固定5問・8答案要素を本文へ `8 / 8` マッピング
+- [x] 例題数値再計算 PASS
+- [x] 固定範囲外論点追加 `0件`
+- [x] Topic 16以降先取り `0件`
+- [x] 未確認新幹線補機実値追加 `0件`
+- [x] 固定公式過去問の個別正答記号・完成済み答案保存 `0件`
+
+## Topic 15 現成果物
+- main source: `topics/15_auxiliary_motor_design/15_auxiliary_motor_design.md`
+- 制作前EXAM_ALIGNMENT: 完成
+- 解説本文＋3段階例題: 完成
+- 解説PDF: 未着手
+- 練習source: 未着手
+- 練習PDF: 未着手
+- PowerPoint: 未着手
+- 独立再解答前ゲート: 未着手
+- 完成後独立再解答: 未着手
+- 最終QA: 未着手
+
 ## 次に行うこと
-Topic 15「新幹線の補機モーターを設計する」の制作前EXAM_ALIGNMENT。系列SPECの固定範囲「ポンプ・ファン・コンプレッサ・負荷特性・所要動力・効率・インバータ駆動・可変速運転・相似則」から過去問対応を固定し、仕様を追加しない。
+Topic 15「新幹線の補機モーターを設計する」の解説PDFを作成する。固定一次3問＋二次記述2問・8答案要素と3段階例題を維持し、仕様を追加しない。
