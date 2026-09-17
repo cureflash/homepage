@@ -5,9 +5,9 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `14 / 16`。Topic 01〜14は品質ゲートPASSでcompleted。active topicは15「車内の照明・空調にはどれだけ電気が必要？」。
 
-Topic 15は制作前 `EXAM_ALIGNMENT` と解説source本文まで完了。固定7問・12答案要素は変更せず、本文マッピング `12 / 12 PASS`。光束・光度・照度・輝度、逆二乗則、照明率・保守率・所要灯数、発光効率・LED、ジュール熱・電力量・熱量・効率、COPの基本を、解法手順と基礎 / 本試験標準 / 複合・ひっかけの3段階例題まで記載した。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。
+Topic 15は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDFまで完了。固定7問・12答案要素は変更せず、本文マッピング `12 / 12 PASS`。解説PDFはA4縦3ページで、200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`。光束・光度・照度・輝度、逆二乗則、照明率・保守率・所要灯数、発光効率・LED、ジュール熱・電力量・熱量・効率、COPの基本、解法手順、3段階例題、固定EXAM_ALIGNMENT 12答案要素を収録した。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。
 
-状態: `topic_15_explanation_source_complete / IN_PROGRESS`
+状態: `topic_15_explanation_pdf_complete / IN_PROGRESS`
 
 ## Topic 15 固定範囲
 照明:
@@ -45,6 +45,8 @@ Topic 15は制作前 `EXAM_ALIGNMENT` と解説source本文まで完了。固定
 件数合わせの仕様追加、熱伝導・熱放射・工業電熱の追加、未確認の新幹線車内設備実値、Topic 16先取りはいずれも `0件`。
 
 source: `topics/15_lighting_heating/15_lighting_heating.md`
+explanation PDF: `topics/15_lighting_heating/15_lighting_heating_explanation.pdf`
+explanation PDF QA: `topics/15_lighting_heating/15_lighting_heating_explanation_pdf_qa.md`
 
 ## Topic 14
 Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENTはH30 機械 問12、完成後blind独立再解答 `1 / 1 PASS`。解説PDF・練習PDF・PowerPointの表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/14_battery/` に保存済み。
@@ -53,4 +55,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-固定EXAM_ALIGNMENTを変更せず、Topic 15の解説PDFを作成する。固定7問・12答案要素の本文マッピングと3段階例題をPDFへ欠落なく反映し、表示QAを行う。
+固定EXAM_ALIGNMENTを変更せず、Topic 15の練習問題sourceを作成する。三種仕様に従い原則12問以上、少なくとも半数を五肢択一とし、固定7問・12答案要素へ接続させる。
