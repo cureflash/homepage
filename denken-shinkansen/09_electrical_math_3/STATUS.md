@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 10 / 12
-- current_status: `topic_11_images_pptx_complete`
+- current_status: `topic_11_blind_gate_ready`
 - last_completed_topic: `10 指数関数・一階微分方程式入門`
 - active_topic: `11 グラフ・特性曲線を読む`
-- next_start: `Topic 11完成教材だけでの公式過去問独立再解答`
+- next_start: `Topic 11完成教材だけでの公式過去問独立再解答（ブラインド手順）`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -40,7 +40,7 @@
 - [x] 件数合わせの仕様外論点・再出題重複を除外
 - [x] 参考教材を複数系統確認
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
-- [x] 制作前独立計算・公式解答照合 `5 / 5 PASS`
+- [x] 制作前独立解答・公式解答照合 `5 / 5 PASS`
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source
@@ -54,7 +54,6 @@
 ## Topic 08 進捗
 - [x] 系列SPEC確認
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
-- [x] 直近年度を優先して公式過去問を調査
 - [x] Topic 08の固定範囲だけで積分操作が解法に直接必要な公式過去問5問を選定
 - [x] 件数合わせの仕様外論点・積分が必須でない候補を除外
 - [x] 参考教材を複数系統確認
@@ -127,24 +126,23 @@
 - [x] 練習問題source
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
+- [x] 完成後独立再解答前のブラインドゲート整備
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
 
 ## 今回進めた内容
 
-Topic 11「グラフ・特性曲線を読む」の解説画像PowerPointをGitHub正本へ反映した。
+Topic 11「グラフ・特性曲線を読む」の完成後独立再解答前ブラインドゲートをGitHub正本へ反映した。
 
-- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_images.pptx`
-- 16:9・5枚
-- 200 dpi表示QA `5 / 5 PASS`
-- overflow `0件`
-- PPTX ZIP整合性 `PASS`
-- 固定5過去問・固定必須説明15項目から外れる仕様追加0件
-- 固定EXAM_ALIGNMENT変更0件
+- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_blind_gate.md`
+- 固定品質ゲート5問は変更なし
+- 固定EXAM_ALIGNMENT・教材成果物・問題・正答は変更なし
+- 保存済み制作前正答を視認したrunでは独立再解答を実施しない手順を明記
+- 次runは主sourceの制作前独立解答節とHANDOFFの保存済み個別正答を先読みせず、完成教材だけで固定5問を解く
 - 伝達関数・ボード線図・PID等の固定範囲外追加0件
 
 ## 判定
 
-`topic_11_images_pptx_complete / IN_PROGRESS`。
+`topic_11_blind_gate_ready / IN_PROGRESS`。
 
-完成数は `10 / 12`。次工程はTopic 11の完成教材だけでの公式過去問独立再解答。
+完成数は `10 / 12`。次工程はTopic 11の完成教材だけでの公式過去問独立再解答（ブラインド手順）。
