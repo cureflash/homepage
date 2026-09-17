@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 14 / 20
-- current_status: `topic_15_practice_pdf_complete`
+- current_status: `topic_15_powerpoint_complete`
 - last_completed_topic: `14 フーリエ変換・FFT`
 - active_topic: `15 対数・dB・周波数応答`
-- next_start: Topic 15の解説画像PowerPointを作成する
+- next_start: Topic 15の完成後独立再解答を実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -214,27 +214,27 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF
-- [ ] 解説画像PowerPoint
-- [ ] PowerPoint表示QA
+- [x] 解説画像PowerPoint
+- [x] PowerPoint表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 15 `対数・dB・周波数応答` の練習PDFを作成し、全ページ表示QA・文字抽出QAを実施した。
+Topic 15 `対数・dB・周波数応答` の解説画像PowerPointを作成し、表示QAを実施した。
 
-`topics/15_log_db_frequency_response/15_log_db_frequency_response_practice.pdf` はA4縦6ページ。練習sourceの全12問（一次型8問／記述型4問）と全12問の解答・完全解説を収録した。固定済み第二種公式過去問5問・12答案要素への接続 `12 / 12 PASS` を維持した。
+`topics/15_log_db_frequency_response/15_log_db_frequency_response_images.pptx` は16:9・5枚。常用対数・自然対数、dB変換、代表因子のボード線図、R5型の伝達関数復元、H30型PI要素、R4型の正弦波定常応答、R6型の高周波位相、H23型のゲイン余裕・位相余裕・帯域幅を可視化し、固定済み第二種公式過去問5問・12答案要素への接続を `12 / 12 PASS` で維持した。
 
-200 dpi表示QAは `6 / 6 PASS`。文字欠け・重なり・ページ外クリップ・欠損グリフは0件。`pdftotext -layout` 文字抽出QAもPASSし、日本語フォントはsubset embeddedを確認した。独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS` を維持。仕様外追加・件数水増し・未確認実車値追加は0件。
+全5スライド再レンダリング `5 / 5 PASS`。クリッピング・重なり・文字化け0件、overflow 0件、`slides_test.py` PASS、PPTX ZIP/XML整合性PASS。仕様外追加・件数水増し・未確認実車値追加は0件。
 
 QA記録:
-`topics/15_log_db_frequency_response/15_log_db_frequency_response_practice_qa.md`
+`topics/15_log_db_frequency_response/15_log_db_frequency_response_powerpoint_qa.md`
 
 ## 判定
 
-Topic 15は `PRACTICE_PDF_COMPLETE / IN_PROGRESS`。
+Topic 15は `POWERPOINT_COMPLETE / IN_PROGRESS`。
 
 完成数は `14 / 20` のまま。
 
-次はTopic 15の解説画像PowerPointを作成する。
+次はTopic 15の完成後独立再解答を実施する。
