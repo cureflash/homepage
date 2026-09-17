@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は完成済み。active themeはTopic 13。
 
 ## 今回進捗
-Topic 13 `新幹線の架線は何でできている？` の初回最終QAを実施した。必須成果物、固定EXAM_ALIGNMENT 5問・5答案要素、完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、PDF/PPTX QA、SPEC境界はすべてPASS。教材外知識補完、Topic 14以降の論点による補完、SPEC固定範囲外追加、未確認新幹線実設備値の使用はいずれも `0件`。一方、旧工程を次工程として残す進捗記録が5箇所あるため、進捗記録整合のみFAILとし `NEEDS_REVISION / IN_PROGRESS`。Topic 13は未完了のまま、次は旧進捗記録5箇所の同期。
+Topic 13 `新幹線の架線は何でできている？` の初回最終QAで唯一FAILだった進捗記録整合について、`13_electrical_materials_explanation_qa.md`、`13_electrical_materials_practice_source.md`、`13_electrical_materials_practice_qa.md`、`13_electrical_materials_powerpoint_qa.md`、`13_electrical_materials_independent_reanswer.md` の旧「次工程」を現在地へ同期した。main sourceも `topic_13_progress_sync_complete` へ同期済み。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、完成後ブラインド独立再解答結果は変更していない。Topic 13はまだ未完了で、次は最終QAを再実施する。
 
 source: `topics/13_electrical_materials/13_electrical_materials.md`
 解説PDF: `topics/13_electrical_materials/13_electrical_materials_explanation.pdf`
@@ -65,7 +65,7 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - SPEC固定範囲外追加（独立再解答時）: `0件`
 - 未確認新幹線実設備値の使用: `0件`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
-- 旧進捗記録5箇所同期: 未実施
+- 旧進捗記録5箇所同期: 完了
 
 完成後独立答案:
 - R8上 電力 問14: `(2)`
@@ -191,7 +191,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_13_final_qa_needs_progress_sync`
+- `current_status`: `topic_13_progress_sync_complete`
 - 完成数: `12 / 16`
 - last completed: Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？`
 - active: Topic 13 `新幹線の架線は何でできている？`
@@ -220,8 +220,8 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 13 SPEC固定範囲外追加: `0件`
 - Topic 13 未確認新幹線実設備値の真値化: `0件`
 - Topic 13 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（進捗記録整合のみFAIL: 旧工程5箇所）
-- Topic 13 旧進捗記録5箇所同期: 未実施
+- Topic 13 旧進捗記録5箇所同期: 完了
 - Topic 12 最終QA: `PASS / completed`
 
 ## 次の正確な開始点
-`13_electrical_materials_explanation_qa.md`、`13_electrical_materials_practice_source.md`、`13_electrical_materials_practice_qa.md`、`13_electrical_materials_powerpoint_qa.md`、`13_electrical_materials_independent_reanswer.md` の旧進捗記録5箇所を現在地へ同期する。その後、Topic 13の最終QAを再実施する。Topic 12以前の技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
+Topic 13の最終QAを再実施し、初回最終QAで唯一FAILだった進捗記録整合を含めて再判定する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
