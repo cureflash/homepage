@@ -5,13 +5,27 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 35 / 38
-- current_status: `topic_36_exam_alignment_fixed`
+- current_status: `topic_36_preanswer_retry_required`
 - last_completed_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
 - active_topic: `36 COSMOS① 新幹線全体を統合管理する`
-- next_start: Topic 36の固定5問・8答案要素を変更せず、公式解答を先に見ない独立runで制作前独立解答を行う。`8 / 8 PASS`確認後に解説本文へ進む
+- next_start: Topic 36の固定5問・8答案要素を変更せず、新しいblind runで最初から全8答案要素を解き、全答案と根拠を確定した後にのみ公式解答を開く。`8 / 8 PASS`確認後に解説本文へ進む
 
 ## 新品質ゲート進捗
 - [x] 01〜35 — PASS
+
+## 36 制作前独立解答 試行
+`RETRY_REQUIRED / NOT_COUNTED`。
+- 固定EXAM_ALIGNMENT: `5問・8答案要素`、変更なし
+- R6上・R4上・R4下の4問・6答案要素: 公式問題PDFだけで先に導出し、全答案確定後に公式解答照合 → `6 / 6一致`
+- H27 機械 問18(a)(b): 問題本文補完中に第三者ページの正答表示へ到達したためblind条件不成立
+- 品質ゲート算入: `0 / 8`（部分合格として扱わない）
+- 個別正答番号・完成導出の必須先読みsource保存: `0件`
+- 固定範囲外追加: `0件`
+- Topic 37以降先取り: `0件`
+- 未確認COSMOS内部仕様追加: `0件`
+- 解説本文・PDF・練習問題・PowerPoint: 未着手
+- 完成数: `35 / 38` 維持
+- 次工程: 新しいblind runで固定5問・8答案要素を最初から全件解き、全答案確定後にのみ公式解答を開く。`8 / 8 PASS`で解説本文へ進む
 
 ## 35 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
@@ -684,4 +698,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` は固定5過去問の完成後blind独立再解答 `5 / 5問 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数35/38。
 
 ## 次テーマ工程
-Topic 36 `COSMOS① 新幹線全体を統合管理する` は制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定済み。次は固定内容を変更せず、公式解答を先に見ない独立runで制作前独立解答を行い、`8 / 8 PASS`確認後に解説本文へ進む。
+Topic 36 `COSMOS① 新幹線全体を統合管理する` は制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定済み。今回の制作前独立解答試行はH27問18の問題本文補完中に第三者ページの正答表示へ到達したため `RETRY_REQUIRED / NOT_COUNTED`。固定内容を変更せず、新しいblind runで全8答案要素を最初から解き、全答案と根拠を確定した後にのみ公式解答を開く。`8 / 8 PASS`確認後に解説本文へ進む。
