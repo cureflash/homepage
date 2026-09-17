@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `14`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - 更新日: 2026-09-17
 
 ## 固定範囲
