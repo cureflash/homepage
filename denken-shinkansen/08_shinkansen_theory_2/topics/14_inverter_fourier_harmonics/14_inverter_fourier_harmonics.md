@@ -4,17 +4,17 @@
 
 ## 状態
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `SOURCE_PROGRESS_SYNCED`
 - completion: `in_progress`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 解説PDF QA: `未着手`
-- 練習問題QA: `未着手`
-- 練習PDF QA: `未着手`
-- PowerPoint QA: `未着手`
-- 完成後独立再解答: `未着手`
-- 最終QA: `未着手`
-- 次工程: 解説PDF＋表示QA
+- 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習問題QA: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
+- PowerPoint QA: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 次工程: 最終QA再実施
 
 ## 1. SPEC固定範囲
 
@@ -559,10 +559,12 @@ FFTは、標本化した時間波形から離散的な周波数成分を求め�
 
 - [x] 制作前EXAM_ALIGNMENT: 一次2問・3答案要素＋二次1問・2答案要素
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋表示QA
-- [ ] 練習問題source＋練習PDF
-- [ ] 解説画像PowerPoint＋表示QA
-- [ ] 完成後独立再解答
-- [ ] 最終QA
+- [x] 解説PDF＋表示QA
+- [x] 練習問題source＋練習PDF
+- [x] 解説画像PowerPoint＋表示QA
+- [x] 完成後独立再解答: `5 / 5 PASS`
+- [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- [x] 主source・練習sourceの旧進捗記録同期
+- [ ] 最終QA再実施
 
-現在 `EXPLANATION_SOURCE_COMPLETE / in_progress`。完成数は `13 / 21`。次工程は解説PDF＋表示QA。
+現在 `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。完成数は `13 / 21` のまま。次工程は最終QA再実施。
