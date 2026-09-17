@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 15 / 21
-- current_status: `topic_16_explanation_pdf_complete`
+- current_status: `topic_16_practice_pdf_complete`
 - last_completed_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 - active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
-- next_start: Topic 16 練習問題source＋練習PDF
+- next_start: Topic 16 解説画像PowerPoint＋表示QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -275,7 +275,7 @@
 - [x] 制作前EXAM_ALIGNMENT: 一次5問・25答案要素、関連候補12件調査
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋表示QA
-- [ ] 練習問題source＋練習PDF
+- [x] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
@@ -283,17 +283,22 @@
 
 ## 今回進めた内容
 
-Topic 16の解説PDF＋表示QAを完成させた。
+Topic 16の練習問題source＋練習PDFを完成させた。
 
-- PDF: `topics/16_semiconductor_diode/16_semiconductor_diode_explanation.pdf`
-- QA: `topics/16_semiconductor_diode/16_semiconductor_diode_explanation_pdf_qa.md`
-- A4縦2ページ
-- 200 dpi全ページ表示QA: `2 / 2 PASS`
+- 練習source: `topics/16_semiconductor_diode/16_semiconductor_diode_practice.md`
+- 練習PDF: `topics/16_semiconductor_diode/16_semiconductor_diode_practice.pdf`
+- 練習PDF QA: `topics/16_semiconductor_diode/16_semiconductor_diode_practice_pdf_qa.md`
+- 問題数: `12`
+- 形式: `全問五肢択一`
+- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
+- 数値再計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- 固定一次5問・25答案要素への接続: `25 / 25`
+- PDF: A4縦3ページ
+- 200 dpi全ページ表示QA: `3 / 3 PASS`
 - 文字抽出QA: `PASS`
-- 固定一次5問・25答案要素への教材内接続: `25 / 25`
-- EXAM_ALIGNMENT必須説明: `17 / 17 covered`
-- 3段階例題: `3 / 3`
 - 二次採用: `0問`、二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
 - 降伏機構の詳細追加: `0件`
 - パワーエレクトロニクス回路追加: `0件`
 - Topic 17先取り: `0件`
@@ -301,4 +306,4 @@ Topic 16の解説PDF＋表示QAを完成させた。
 
 ## 判定
 
-Topic 16は `PASS / EXPLANATION_PDF_COMPLETE`。完成数は `15 / 21` のまま。次工程は練習問題source＋練習PDF。
+Topic 16は `PASS / PRACTICE_PDF_COMPLETE`。完成数は `15 / 21` のまま。次工程は解説画像PowerPoint＋表示QA。
