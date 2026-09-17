@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 12 / 14
-- current_status: `topic_12_completed`
+- current_status: `topic_13_exam_alignment_complete`
 - last_completed_topic: `12 300系はなぜVVVFになった？`
 - active_topic: `13 インバータはどうやって三相交流を作る？`
-- next_start: Topic 13の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 13の解説本文＋3段階例題を作成する
 
 ## Topic 01 進捗
 
@@ -223,14 +223,32 @@
 - [x] 最終QA再実施
 - [x] 最終QA PASS
 
+## Topic 13 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] GitHub上のSTATUS / HANDOFF / 既存成果物確認（Topic 13既存成果物なし）
+- [x] 直近年度を優先して公式理論過去問を確認
+- [x] Topic 13固定範囲でゲート対象4問を確定
+- [x] 制作前独立検証 `4 / 4 PASS`
+- [x] NAND・マルチバイブレータ、直流チョッパ詳細、機械科目PWM等の固定範囲外候補を除外
+- [x] 重複再出題を件数へ水増ししないことを確認
+- [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA PASS
+
 ## 今回進めた内容
 
-Topic 12 `300系はなぜVVVFになった？` の最終QAを再実施した。
+Topic 13 `インバータはどうやって三相交流を作る？` の制作前EXAM_ALIGNMENTを完了した。
 
-前回の唯一のFAILだった主source・練習sourceの進捗記録不整合が解消済みであることを確認。固定7問の完成後独立再解答 `7 / 7 PASS`、必須成果物、解説PDF・練習PDF・PowerPointのQA、SPEC境界を再確認し全件PASSとした。
+公式「理論」過去問から、Topic 13固定範囲だけで扱える4問を品質ゲート対象に固定した。制作前に独立再構成・計算・波形判定を行い、公式標準解答と照合して `4 / 4 PASS`。NAND・マルチバイブレータ、直流チョッパ固有L/C動作、機械科目のインバータ/PWM問題を件数合わせで追加していない。令和5年度下期 理論 問9は令和6年度上期 理論 問9と同内容の再出題として重複計上していない。
 
-主sourceを `status: COMPLETED`、練習sourceを `stage: COMPLETED` へ同期した。技術本文・固定EXAM_ALIGNMENT・練習15問・正答・PDF/PPTX・独立再解答結果は変更していない。
+source `topics/13_inverter_pwm/13_inverter_pwm.md` に固定4問、教材必須事項、SPEC境界、学習サイト確認、制作前独立検証を反映した。
 
 ## 判定
 
-Topic 12は `PASS / completed`。完成数は `12 / 14`。次はTopic 13「インバータはどうやって三相交流を作る？」の制作前EXAM_ALIGNMENTを実施する。
+Topic 13は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `12 / 14`。次は解説本文＋3段階例題を作成し、固定4問の要求事項を本文へマッピングする。
