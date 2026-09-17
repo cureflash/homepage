@@ -7,8 +7,8 @@
 固定EXAM_ALIGNMENTの一次2問・3答案要素＋二次1問・2答案要素、およびTopic 14固定範囲だけから練習問題12問を作成した。二次で必要な3n次高調波の線間打消しと非正弦波実効値積分は、一次型の五肢択一へ落とし込みつつ、解説では記述答案に必要な途中式と理由を残す。
 
 - completion: `in_progress`
-- stage: `PRACTICE_PDF_COMPLETE`
-- 次工程: 解説画像PowerPoint＋表示QA
+- stage: `SOURCE_PROGRESS_SYNCED`
+- 次工程: 最終QA再実施
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
