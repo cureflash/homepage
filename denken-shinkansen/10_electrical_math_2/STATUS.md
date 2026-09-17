@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 15 / 20
-- current_status: `topic_16_exam_alignment_complete`
+- current_status: `topic_16_preproduction_reanswer_complete`
 - last_completed_topic: `15 対数・dB・周波数応答`
 - active_topic: `16 数値微分・数値積分`
-- next_start: Topic 16の固定4問・8答案要素を制作前独立再導出し、公式解答と照合する
+- next_start: Topic 16の固定4問・8答案要素を全件カバーする解説本文＋3段階例題を作成する
 
 ## Topic 07 制作品質ゲート
 
@@ -234,7 +234,8 @@
 - [x] H20一次「機械」関連候補は現行公式アーカイブで直接再確認できないため正式件数へ含めない
 - [x] 第一種・第三種、Topic 17以降による件数水増し0件を確認
 - [x] source Markdownへ要求知識・式・設問型・教材内必要説明・境界を固定
-- [ ] 制作前独立再解答・公式解答照合
+- [x] 制作前独立再解答・公式解答照合 `8 / 8 PASS`
+- [x] 公式解答確認前に `ANSWER_LOCKED_BEFORE_REVIEW` を保存（lock commit `d376d19197e730308a26f37a055cecc91eb555de`）
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
@@ -247,16 +248,16 @@
 
 ## 今回進めた内容
 
-Topic 16 `数値微分・数値積分` の制作前EXAM_ALIGNMENTを完了した。
+Topic 16 `数値微分・数値積分` の制作前独立再解答・公式解答照合を完了した。
 
-第二種公式問題・公式解答を確認し、離散・区分的な時間データから平均量・積算量を求める接続問題として4問・8答案要素を固定した。算法名そのものを問う第二種問題は確認できなかったため、原則5問に届かせる目的で解析的微積分、Topic 17以降、第一種・第三種を追加していない。
+EXAM_ALIGNMENTで固定済みの第二種公式過去問4問・8答案要素について、公式解答確認前に候補回答を `ANSWER_LOCKED_BEFORE_REVIEW` としてGitHubへ保存し、その後に公式解答・標準解答と照合した。結果は `8 / 8 PASS`、照合後の修正0件。
 
-固定範囲はSPECどおり、差分、数値微分、台形則、Simpson則の基本、誤差、刻み幅、速度データ→加速度、電力データ→電力量に限定した。
+固定問題数は4問のままとし、原則5問に届かせる目的で解析的微積分、Topic 17以降、第一種・第三種を追加していない。固定範囲も差分、数値微分、台形則、Simpson則の基本、誤差、刻み幅、速度データ→加速度、電力データ→電力量から変更していない。
 
 ## 判定
 
-`topic_16_exam_alignment_complete / IN_PROGRESS`
+`topic_16_preproduction_reanswer_complete / IN_PROGRESS`
 
 完成数は `15 / 20` のまま。
 
-次は固定4問・8答案要素の制作前独立再導出・公式解答照合を行う。
+次は固定4問・8答案要素を全件カバーする解説本文＋3段階例題を作成する。
