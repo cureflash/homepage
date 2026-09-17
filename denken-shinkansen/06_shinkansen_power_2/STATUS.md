@@ -4,12 +4,14 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `10`
 theme: なぜ変電所を何十kmも離せない？
-current_status: `topic_10_blind_reanswer_retry_required`
+current_status: `topic_10_blind_reanswer_ready`
 completed_topics: `9 / 22`
 
 ## Topic 10 current result
 
-Topic 10「なぜ変電所を何十kmも離せない？」の完成後blind独立再解答を実施したが、品質ゲートは `RETRY_REQUIRED / NOT_COUNTED` とした。
+Topic 10「なぜ変電所を何十kmも離せない？」は完成後blind独立再解答の再試行待ち。
+
+前回試行は `RETRY_REQUIRED / NOT_COUNTED`。必須先読みの進捗記録に前回不一致答案の具体的な正答情報が残っていたため、今回のrunでは再解答を行わず、blind再試行前ゲートを整備した。
 
 品質ゲート対象:
 - 平成30年度 第二種一次「電力」問7
@@ -17,7 +19,7 @@ Topic 10「なぜ変電所を何十kmも離せない？」の完成後blind独�
 - 平成27年度 第二種二次「電力・管理」問4
 - 平成26年度 第二種二次「電力・管理」問4
 - 一次1問＋二次3問、計 `4問・17答案要素`
-- 制作前独立再解答: 一次 `5 / 5`＋二次 `12 / 12`＝`4 / 4問・17 / 17答案要素 PASS`
+- 制作前独立再解答: `4 / 4問・17 / 17答案要素 PASS`
 - 解説本文への正式答案要素マッピング: `17 / 17`
 - 3段階例題: `3 / 3 PASS`
 - 固定10項目: `10 / 10`
@@ -37,9 +39,8 @@ Topic 10「なぜ変電所を何十kmも離せない？」の完成後blind独�
 - PowerPoint表示QA: `4 / 4 PASS`
 - `slides_test.py`: `PASS / No overflow detected`
 - PPTX ZIP整合性: `PASS / No errors detected`
-- 完成後blind再解答: 一次 `4 / 5`＋二次 `12 / 12`＝`3 / 4問・16 / 17答案要素 PASS`
-- 完成後blind再解答判定: `RETRY_REQUIRED / NOT_COUNTED`
-- 唯一の不一致: H30一次「電力」問7(4)。blind答案で途中式の分母を `3σρL²` としたが、公式は `9σ²ρAL³`。
+- 前回完成後blind再解答: `RETRY_REQUIRED / NOT_COUNTED`
+- 今回: `BLIND_REANSWER_READY`
 - Topic 10固定範囲外追加: `0件`
 - Topic 11以降の先取り: `0件`
 - 未確認実設備値追加: `0件`
@@ -58,8 +59,10 @@ Topic 10「なぜ変電所を何十kmも離せない？」の完成後blind独�
 - [x] Topic 07 completed
 - [x] Topic 08 completed
 - [x] Topic 09 completed
-- [ ] Topic 10 - blind reanswer RETRY_REQUIRED / IN_PROGRESS
+- [ ] Topic 10 - blind reanswer READY / IN_PROGRESS
 
 ## next_start
 
-新規clean runでTopic 10の正式4問・17答案要素を完成教材だけからblind独立再解答する。H30一次「電力」問7は途中式 `P²/G²` を保持して5空欄を問題文の選択肢へ照合する。固定EXAM_ALIGNMENT、SPEC固定10項目、教材成果物、固定範囲境界は変更しない。
+新規clean runでTopic 10の正式4問・17答案要素を完成教材だけからblind独立再解答する。
+
+答案固定前は `10_substation_spacing_independent_reanswer.md`、公式解答・公式標準解答、保存済み個別正答を含む過去監査記録を読まない。固定EXAM_ALIGNMENT、SPEC固定10項目、教材成果物、固定範囲境界は変更しない。
