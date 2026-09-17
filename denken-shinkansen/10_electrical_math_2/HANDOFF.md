@@ -8,11 +8,11 @@ Topic 01〜13は `completed`。
 
 完成数: `13 / 20`
 
-current_status: `topic_14_exam_alignment_complete`
+current_status: `topic_14_explanation_source_complete`
 
 active_topic: `14 フーリエ変換・FFT`
 
-次工程: Topic 14の解説本文＋3段階例題を作成する。
+次工程: Topic 14の解説PDFを作成し、表示QA・文字抽出QAを実施する。
 
 ## 上位仕様
 
@@ -940,7 +940,7 @@ PowerPoint QA:
 source:
 `topics/14_fourier_transform_fft/14_fourier_transform_fft.md`
 
-current_status: `topic_14_exam_alignment_complete`
+current_status: `topic_14_explanation_source_complete`
 
 ### Topic 14 固定範囲
 
@@ -976,8 +976,36 @@ f_s > 2 f_max
 - ADC量子化・回路方式の仕様外追加: 0件。
 - 未確認実車値依存: 0件。
 
-次は固定1答案要素とSPEC必須事項を本文へ対応付けた解説本文＋3段階例題を作成する。
+### Topic 14 解説本文＋3段階例題
+
+主sourceへ完成済み。
+
+本文では以下を収録した。
+- 時間領域と周波数領域、連続フーリエ変換の概念
+- `f_s=1/T_s` とサンプリング定理 `f_s>2f_max`
+- ナイキスト周波数とエイリアシング
+- DFT定義と `Δf=f_s/N`, `f_k=kΔf`
+- FFTはDFTを効率よく計算する方法であること
+- FFTスペクトルから基本波・高調波の位置を読む手順
+- 教育用PWM等を後工程の計算プログラムでFFTする接続
+- 本試験型解法手順と頻出ミス
+
+3段階例題:
+- 基礎: 最高周波数3.2 kHzに対するサンプリング条件 `f_s>6.4 kHz`
+- 本試験標準: `f_s=12.8 kHz`, `N=1024` から `Δf=12.5 Hz`, 50 Hz→`k=4`, 250 Hz→`k=20`
+- 複合・ひっかけ: `f_s=8 kHz` で7 kHz成分が1 kHzへ折り返すエイリアシング
+
+固定R3一次「機械」問8 (1)の1答案要素への本文マッピング: `1 / 1 PASS`。3段階例題の独立再計算: `3 / 3 PASS`。
+
+境界:
+- Topic 15先取り: 0件
+- ADC量子化・変換回路方式追加: 0件
+- フィルタ設計一般追加: 0件
+- 第一種・第三種過去問による件数水増し: 0件
+- 未確認実車値依存: 0件
+
+次は本sourceを正本として解説PDFを作成し、全ページ表示QA・文字抽出QA・固定1答案要素と3段階例題の反映を確認する。
 
 ## 次に行うこと
 
-Topic 14 `フーリエ変換・FFT` の解説本文＋3段階例題を作成する。
+Topic 14 `フーリエ変換・FFT` の解説PDFを作成し、表示QA・文字抽出QAを実施する。
