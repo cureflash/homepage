@@ -17,4 +17,4 @@
 
 判定: `PASS`
 
-次工程: Topic 35の練習source。固定EXAM_ALIGNMENT 5問を変更せず、MASTER_SPEC / EXAM_ALIGNMENT_SPECの三種練習問題要件に従う。
+次工程: Topic 35の最終QAを再実施する。固定EXAM_ALIGNMENT、技術本文、問題/正答、PDF/PPTX、blind独立再解答結果は変更しない。
