@@ -2,13 +2,13 @@
 
 ## 状態
 
-`EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。
+`EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。
 
-系列SPEC固定範囲「運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理」だけを対象に、制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定し、制作前blind独立解答 `8 / 8 PASS` を維持したまま解説本文を作成した。本文は§1〜§16、3段階例題を含み、固定5問・8答案要素の要求事項を `8 / 8` 本文マッピング済み。例題は独立再計算 `3 / 3 PASS`。PDF・練習問題・PowerPointは未着手。
+系列SPEC固定範囲「運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理」だけを対象に、制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定し、制作前blind独立解答 `8 / 8 PASS` を維持したまま解説本文を作成した。本文は§1〜§16、3段階例題を含み、固定5問・8答案要素の要求事項を `8 / 8` 本文マッピング済み。例題は独立再計算 `3 / 3 PASS`。解説PDFはA4縦4ページで作成し、180 dpi全4ページ表示、文字抽出、固定EXAM_ALIGNMENT反映、固定範囲境界のQAを `PASS`。練習問題・PowerPointは未着手。
 
 完成後blind独立再解答を成立させるため、制作前独立解答で確定した個別正答番号・完成導出は本sourceへ保存しない。固定5問・8答案要素は変更しない。
 
-次工程: 本sourceだけを正本として解説PDFを作成し、全ページ表示・文字抽出・固定EXAM_ALIGNMENT反映・固定範囲境界をQAする。練習問題・PowerPointへはまだ進まない。
+次工程: Topic 36の固定範囲から練習sourceを作成し、原則12問以上・少なくとも半数五肢択一・完全解説・固定EXAM_ALIGNMENT接続・独立再解答をQAする。PowerPointへはまだ進まない。
 
 ## EXAM_ALIGNMENT
 
@@ -540,7 +540,11 @@ CPUクロックとLAN通信速度は別の性能指標なので、「CPUクロ�
 - 固定範囲外追加: `0件`
 - Topic 37以降先取り: `0件`
 - 未確認COSMOS内部仕様追加: `0件`
-- 解説PDF・練習問題・PowerPoint: 未着手
+- 解説PDF: `A4縦4ページ / 180 dpi 4 / 4 PASS / 文字抽出QA PASS / 固定EXAM_ALIGNMENT 8 / 8答案要素反映`
+- 解説PDF固定範囲外追加: `0件`
+- 解説PDF Topic 37以降先取り: `0件`
+- 解説PDF未確認COSMOS内部仕様追加: `0件`
+- 練習問題・PowerPoint: 未着手
 - 完成数: `35 / 38` 維持
 
-次工程は本sourceからの解説PDF作成。練習問題・PowerPointへはまだ進まない。
+次工程はTopic 36の固定範囲からの練習source作成。原則12問以上・少なくとも半数五肢択一・完全解説・固定EXAM_ALIGNMENT接続・独立再解答をQAする。PowerPointへはまだ進まない。
