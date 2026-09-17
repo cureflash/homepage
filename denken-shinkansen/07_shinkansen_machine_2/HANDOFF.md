@@ -6,18 +6,19 @@
 - Topic 01〜14: 最終QA `PASS / completed`
 - 完成数: `14 / 22`
 - active topic: `15 新幹線の補機モーターを設計する`
-- current status: `topic_15_explanation_pdf_complete`
-- 次工程: Topic 15 練習問題source
+- current status: `topic_15_practice_source_complete`
+- 次工程: Topic 15 練習PDF
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 15 main sourceと直近変更を確認した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 15 main source、解説PDF、直近変更を確認した。
 - Topic 14は最終QA `PASS / completed` のまま変更なし。
 - Topic 15 main sourceには制作前EXAM_ALIGNMENTが既に存在し、一次3問＋二次記述2問、計5問・8答案要素が固定済みであることを確認した。
-- Topic 15の解説本文と基礎／本試験標準／複合の3段階例題は完成済みで、固定5問・8答案要素を本文へ `8 / 8` 接続している。
-- 今回、Topic 15解説PDFを作成した。A4縦5ページ、200 dpi全ページ表示QA `5 / 5 PASS`、文字抽出QA PASS。
-- 固定一次3問＋二次2問・8答案要素、3段階例題を維持し、固定範囲外論点、Topic 16以降の先取り、未確認新幹線補機実値の真値化はいずれも `0件`。
+- Topic 15の解説本文と基礎／本試験標準／複合の3段階例題、解説PDFは完成済みで、固定5問・8答案要素を維持している。
+- 今回、Topic 15練習問題sourceを作成した。一次試験型10問・全問五肢択一、二次試験型5問、合計15問。
+- 一次正答一意性 `10 / 10 PASS`、独立計算・論理QA `15 / 15 PASS`、固定5問・8答案要素へ `8 / 8` 接続した。
+- 固定範囲外論点、Topic 16以降の先取り、未確認新幹線補機実値の真値化はいずれも `0件`。
 - 固定公式過去問の個別正答記号・完成済み答案は保存していない。完成後のblind再解答条件を維持する。
 
 ## Topic 14 固定範囲
@@ -225,12 +226,22 @@
 - [x] 固定範囲外論点・Topic 16以降先取り・未確認新幹線補機実値追加 `0件`
 - [x] SHA-256 `87535e7730fa674e1a03c63d8dd4a000f27c3be7c43a50a5667b42700f696313`
 
+## Topic 15 練習問題source
+- [x] `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_practice.md`
+- [x] 一次試験型10問・全問五肢択一
+- [x] 二次試験型5問・途中式／前提／単位／検算または論証付き
+- [x] 一次正答一意性 `10 / 10 PASS`
+- [x] 独立計算・論理QA `15 / 15 PASS`
+- [x] 固定一次3問＋二次2問・8答案要素へ `8 / 8` 接続
+- [x] コンプレッサへの三乗則無条件適用 `0件`
+- [x] Topic 16以降先取り・未確認新幹線補機実値追加 `0件`
+
 ## Topic 15 現成果物
 - main source: `topics/15_auxiliary_motor_design/15_auxiliary_motor_design.md`
 - 制作前EXAM_ALIGNMENT: 完成
 - 解説本文＋3段階例題: 完成
 - 解説PDF: 完成
-- 練習source: 未着手
+- 練習source: 完成
 - 練習PDF: 未着手
 - PowerPoint: 未着手
 - 独立再解答前ゲート: 未着手
@@ -238,4 +249,4 @@
 - 最終QA: 未着手
 
 ## 次に行うこと
-Topic 15「新幹線の補機モーターを設計する」の練習問題sourceを作成する。固定一次3問＋二次記述2問・8答案要素を維持し、仕様を追加しない。
+Topic 15「新幹線の補機モーターを設計する」の練習PDFを作成し、A4表示QA・文字抽出QA・問題数／解説収録・数値再検算を行う。
