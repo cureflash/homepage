@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `13`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - 更新日: 2026-09-17
 
 ## 固定範囲
@@ -315,4 +315,4 @@ P=ΣVnIn cosφn を用いる。P1=200×3.0×0.80=480 W、P3=40×1.5×0.60=36 W�
 
 ## 次工程
 
-解説画像PowerPointを作成する。固定EXAM_ALIGNMENTは変更せず、完成後独立再解答前なのでTopic 13は `completed` にしない。
+完成後公式過去問独立再解答 `4 / 4 PASS`。次はTopic 13の最終QAを実施する。最終QA前なのでTopic 13は `completed` にしない。
