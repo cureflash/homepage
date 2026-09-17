@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 11 / 16
-- current_status: `topic_12_progress_records_synced`
-- last_completed_topic: `11 架線事故ではどうやって電気を止める？`
-- active_topic: `12 320km/hでもパンタグラフが離れないのはなぜ？`
-- next_start: Topic 12最終QAを再実施する
+- exam_aligned_completed_topics: 12 / 16
+- current_status: `topic_12_completed`
+- last_completed_topic: `12 320km/hでもパンタグラフが離れないのはなぜ？`
+- active_topic: `13 新幹線の架線は何でできている？`
+- next_start: Topic 13の制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -22,7 +22,7 @@
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？ — 解説本文§1〜§14＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint＋QA完成。完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。完成後独立再解答結果をmain sourceへ同期済み。例題再計算 `3 / 3 PASS`、解説PDF表示QA `4 / 4 PASS`、練習PDF表示QA `4 / 4 PASS`、練習PDF数値・論理・正答一意性 `12 / 12 PASS`、PowerPoint要求事項可視化 `6 / 6`、表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性PASS、SPEC固定範囲外追加0件。初回最終QAは技術内容・成果物・過去問品質ゲート・SPEC境界PASS、進捗記録整合のみFAIL（旧工程4箇所）で `NEEDS_REVISION / IN_PROGRESS`。旧進捗記録4箇所は現在地へ同期済みで、最終QA再実施待ち
+- [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [ ] 13 新幹線の架線は何でできている？
 - [ ] 14 駅やトンネルにはどう電気を配る？
 - [ ] 15 回生した電気はどこへ行く？
@@ -237,7 +237,6 @@ PowerPoint QA: `topics/10_load_variation/10_load_variation_powerpoint_qa.md`
 - 前回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程3箇所）
 - 旧進捗記録3箇所同期: 完了
 - 最終QA再実施: `PASS / completed`
-
 完成後独立答案:
 - R8上 電力 問12: `(3)`
 - R7上 電力 問17(a)(b): `(4),(4)`
@@ -316,7 +315,7 @@ PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
 - R2 電力 問9: `(2)`
 - H22 電力 問8: `(3)`
 
-## Topic 12 進行記録
+## Topic 12 完了記録
 source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
 解説PDF: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation.pdf`
 解説PDF QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation_qa.md`
@@ -378,8 +377,9 @@ PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_pow
 - SPEC固定範囲外の採用問題・本文・PDF・PowerPoint追加: `0件`
 - 件数合わせの仕様追加: `0件`
 - 完成後ブラインド独立再解答を汚染しないため制作前の選択肢番号・最終数値解は完成教材未記録
-- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程4箇所）
+- 前回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程4箇所）
 - 旧進捗記録4箇所同期: 完了
+- 最終QA再実施: `PASS / completed`
 
 完成後独立答案:
 - R7上 電力 問12: `(4)`
@@ -389,4 +389,4 @@ PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_pow
 - H24 電力 問13: `(3)`
 
 ## 次
-Topic 12最終QAを再実施する。技術内容、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
+Topic 13 `新幹線の架線は何でできている？` の制作前EXAM_ALIGNMENTを実施する。Topic 12の技術内容、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
