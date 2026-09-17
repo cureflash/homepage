@@ -4,9 +4,9 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT`、解説本文＋基礎／本試験標準／複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、PowerPoint QA、独立再解答前ゲート、完成後独立再解答まで完成済み。最終QAは進捗記録不整合のみで `NEEDS_REVISION`。
+制作前 `EXAM_ALIGNMENT`、解説本文＋基礎／本試験標準／複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、PowerPoint QA、独立再解答前ゲート、完成後独立再解答、最終QAまで完成済み。
 
-現在の判定は `topic_15_progress_records_syncing / IN_PROGRESS`。次工程は進捗記録同期完了後の最終QA再実施。
+現在の判定は `completed / PASS`。次工程は Topic 16 制作前EXAM_ALIGNMENT。
 
 本テーマは系列 `SPEC.md` の固定範囲どおり、次を扱う。
 
@@ -564,4 +564,4 @@
 
 # 次工程
 
-Topic 15の最終QAを再実施し、進捗記録整合を含む全項目を確認する。全項目PASSの場合のみ `completed`、完成数 `15 / 22` とする。
+Topic 16「N700Sバッテリーから主回路へ電力を送る」の制作前EXAM_ALIGNMENTを行う。
