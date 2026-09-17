@@ -4,12 +4,12 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `10`
 theme: なぜ変電所を何十kmも離せない？
-current_status: `topic_10_practice_pdf_complete`
+current_status: `topic_10_powerpoint_complete`
 completed_topics: `9 / 22`
 
 ## Topic 10 current result
 
-Topic 10「なぜ変電所を何十kmも離せない？」の練習PDFを完成した。
+Topic 10「なぜ変電所を何十kmも離せない？」の解説画像PowerPointを完成した。
 
 品質ゲート対象:
 - 平成30年度 第二種一次「電力」問7
@@ -31,6 +31,12 @@ Topic 10「なぜ変電所を何十kmも離せない？」の練習PDFを完成�
 - 練習PDF: A4縦 `6ページ`
 - 練習PDF 200 dpi表示QA: `6 / 6 PASS`
 - 練習PDF文字抽出QA: `PASS`
+- 解説画像PowerPoint: 16:9 `4スライド`
+- SPEC計算・可視化固定3項目: `3 / 3 PASS`
+- PowerPoint固定10項目可視化: `10 / 10 PASS`
+- PowerPoint表示QA: `4 / 4 PASS`
+- `slides_test.py`: `PASS / No overflow detected`
+- PPTX ZIP整合性: `PASS / No errors detected`
 - Topic 10固定範囲外追加: `0件`
 - Topic 11以降の先取り: `0件`
 - 未確認実設備値追加: `0件`
@@ -38,7 +44,7 @@ Topic 10「なぜ変電所を何十kmも離せない？」の練習PDFを完成�
 
 原則5問に対し、Topic 10固定範囲だけで問題全体を完答できる5問目は確認できなかったため、件数合わせを行っていない。
 
-PowerPoint・完成後独立再解答は未着手。
+完成後blind独立再解答は未着手。
 
 ## Gate checklist
 
@@ -51,8 +57,8 @@ PowerPoint・完成後独立再解答は未着手。
 - [x] Topic 07 completed
 - [x] Topic 08 completed
 - [x] Topic 09 completed
-- [ ] Topic 10 - practice PDF complete / IN_PROGRESS
+- [ ] Topic 10 - PowerPoint complete / IN_PROGRESS
 
 ## next_start
 
-Topic 10の解説画像PowerPointを作成する。解説本文・練習source、正式4問・17答案要素、SPEC固定10項目、固定範囲境界を変更せず可視化する。
+Topic 10の正式4問・17答案要素を、保存済み正答を先に見ず、完成教材だけを用いてblind独立再解答する。固定EXAM_ALIGNMENT、SPEC固定10項目、固定範囲境界は変更しない。

@@ -3,11 +3,11 @@
 updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `10`
-current_status: `topic_10_practice_pdf_complete`
+current_status: `topic_10_powerpoint_complete`
 
 ## 今回完了
 
-Topic 10「なぜ変電所を何十kmも離せない？」の練習PDFをGitHub正本へ反映した。
+Topic 10「なぜ変電所を何十kmも離せない？」の解説画像PowerPoint＋QAをGitHub正本へ反映した。
 
 正式品質ゲートは変更なし:
 - 平成30年度 第二種一次「電力」問7
@@ -16,16 +16,16 @@ Topic 10「なぜ変電所を何十kmも離せない？」の練習PDFをGitHub�
 - 平成26年度 第二種二次「電力・管理」問4
 - 一次1問＋二次3問 = `4問・17答案要素`
 
-練習PDFはA4縦6ページ。全15問（基礎4／本試験標準8／複合3）、二種一次型五肢択一10問＋二種二次型記述5問、完全解説15 / 15を収録。200 dpi表示QA `6 / 6 PASS`、文字抽出QA `PASS`、数値・論理QA `15 / 15 PASS`。正式4問・17答案要素への接続 `17 / 17 PASS`、固定10項目 `10 / 10 PASS`。
+PowerPointは16:9・4スライド。SPEC固定の「距離―パンタグラフ電圧」「距離―損失」「力率別比較」を `3 / 3` 可視化し、固定10項目も `10 / 10` 可視化した。全4スライドを1601×900でレンダリングし表示QA `4 / 4 PASS`、`slides_test.py` は `No overflow detected`、PPTX ZIP整合性もPASS。
 
-Topic 11以降補完0件、固定範囲外追加0件、未確認実設備値追加0件、仕様追加0件。完成後blind独立再解答を保護するため、公式過去問の個別正答記号・最終数値・完成導出は保存していない。
+Topic 11以降補完0件、固定範囲外追加0件、未確認実設備値追加0件、仕様追加0件。PowerPoint内の数値は教材用仮定値として明示した。
 
 ## 現在地
 
-Topic 10は `practice_pdf_complete / IN_PROGRESS`。完成数は `9 / 22`。
+Topic 10は `powerpoint_complete / IN_PROGRESS`。完成数は `9 / 22`。
 
-PowerPoint、完成後独立再解答は未実施。
+固定EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習source、練習PDF＋QA、解説画像PowerPoint＋QAまで完成。完成後blind独立再解答は未実施。
 
 ## 次に行う
 
-Topic 10の解説画像PowerPointを作成する。正式4問・17答案要素、SPEC固定10項目、固定範囲境界を変更せず可視化する。
+Topic 10の正式4問・17答案要素を、保存済み正答を先に見ず、完成教材だけを用いてblind独立再解答する。固定EXAM_ALIGNMENT、SPEC固定10項目、固定範囲境界は変更しない。
