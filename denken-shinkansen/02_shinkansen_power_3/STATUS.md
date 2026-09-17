@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 11 / 16
-- current_status: `topic_11_completed`
+- current_status: `topic_12_exam_alignment_complete`
 - last_completed_topic: `11 架線事故ではどうやって電気を止める？`
 - active_topic: `12 320km/hでもパンタグラフが離れないのはなぜ？`
-- next_start: Topic 12の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 12の解説本文＋3段階例題を作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -22,7 +22,7 @@
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？
+- [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？ — 制作前EXAM_ALIGNMENT完了。公式過去問5問・6答案要素を固定し、制作前独立検証 `6 / 6 PASS`、SPEC固定範囲外追加0件
 - [ ] 13 新幹線の架線は何でできている？
 - [ ] 14 駅やトンネルにはどう電気を配る？
 - [ ] 15 回生した電気はどこへ行く？
@@ -316,5 +316,25 @@ PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
 - R2 電力 問9: `(2)`
 - H22 電力 問8: `(3)`
 
+## Topic 12 進行記録
+source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
+
+固定5問・6答案要素:
+- R7上 電力 問12
+- R6下 電力 問13
+- R3 電力 問16 (a)(b)
+- H29 電力 問8
+- H24 電力 問13
+
+集計:
+- 制作前EXAM_ALIGNMENT: 完了
+- 制作前独立検証: `6 / 6 PASS`
+- 公式解答との不一致: `0件`
+- SPEC固定範囲外の採用問題: `0件`
+- Topic 13以降の論点による補完: `0件`
+- 未確認新幹線実設備値への依存: `0件`
+- 件数合わせの仕様追加: `0件`
+- 完成後ブラインド独立再解答を汚染しないため制作前の選択肢番号・最終数値解は未記録
+
 ## 次
-Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の制作前EXAM_ALIGNMENTを実施する。Topic 11の技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
+Topic 12の解説本文＋3段階例題を作成し、固定5問・6答案要素の要求事項を本文へ `6 / 6` マッピングする。SPEC固定範囲外、Topic 13以降、未確認の新幹線実設備値は追加しない。
