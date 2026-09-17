@@ -4,11 +4,12 @@
 
 ## 状態
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `EXPLANATION_PDF_COMPLETE`
 - completion: `in_progress`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 次工程: 解説PDF＋表示QA
+- 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 次工程: 練習問題source＋練習PDF
 
 ## 1. SPEC固定範囲
 
@@ -597,6 +598,26 @@ p側を正にしているので順方向バイアスである。外部電圧は�
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
-## 9. 次工程
+## 9. 解説PDF QA
 
-解説PDFを作成し、表示QAを行う。固定一次5問・25答案要素、3段階例題、SPEC境界がPDFでも維持されていることを確認する。
+- PDF: `topics/16_semiconductor_diode/16_semiconductor_diode_explanation.pdf`
+- QA: `topics/16_semiconductor_diode/16_semiconductor_diode_explanation_pdf_qa.md`
+- A4縦2ページ
+- 200 dpi全ページ表示QA: `2 / 2 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `6c06933153460b2e6bbe9bc0811b285d0482cef30fd78e7dbbec6ab5ce71ed03`
+- 固定一次5問・25答案要素への教材内接続: `25 / 25`
+- EXAM_ALIGNMENT必須説明17項目: `17 / 17 covered`
+- 3段階例題: `3 / 3`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 降伏機構の詳細追加: `0件`
+- パワーエレクトロニクス回路追加: `0件`
+- Topic 17先取り: `0件`
+- 未確認300系主変換装置仕様追加: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+## 10. 次工程
+
+練習問題source＋練習PDFを作成し、問題・解答・完全解説、数値再計算・正答一意性、固定一次5問・25答案要素、SPEC境界を確認する。

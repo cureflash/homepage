@@ -6,17 +6,19 @@
 
 Topic 01〜15は `PASS / completed`。完成数は `15 / 21`。
 
-current_status: `topic_16_explanation_source_complete`
+current_status: `topic_16_explanation_pdf_complete`
 
 active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
 
-Topic 16は解説本文＋3段階例題まで完了。固定一次5問・25答案要素を教材内説明へ `25 / 25` 接続し、EXAM_ALIGNMENT必須説明17項目を `17 / 17 covered`。真性/n形/p形、`pn=n_i^2`、多数・少数キャリア、pn接合、空乏層、電荷中性、ガウスの法則、電界・電位、順逆バイアス、指数的I-V特性を固定範囲内で収録した。3段階例題は基礎・本試験標準・複合/ひっかけを各1問、数値再計算PASS。二次採用0問・数合わせ0件、降伏機構の詳細、パワーエレクトロニクス回路、Topic 17、未確認300系主変換装置仕様の追加0件。次工程は解説PDF＋表示QA。
+Topic 16は解説PDF＋表示QAまで完了。固定一次5問・25答案要素を教材内説明へ `25 / 25` 接続し、EXAM_ALIGNMENT必須説明17項目を `17 / 17 covered`。3段階例題は `3 / 3`。解説PDFはA4縦2ページ、200 dpi全ページ表示QA `2 / 2 PASS`、文字抽出QA `PASS`。二次採用0問・数合わせ0件、降伏機構の詳細、パワーエレクトロニクス回路、Topic 17、未確認300系主変換装置仕様の追加0件。次工程は練習問題source＋練習PDF。
 
 ## Topic 16 成果物
 
 - source: `topics/16_semiconductor_diode/16_semiconductor_diode.md`
+- 解説PDF: `topics/16_semiconductor_diode/16_semiconductor_diode_explanation.pdf`
+- 解説PDF QA: `topics/16_semiconductor_diode/16_semiconductor_diode_explanation_pdf_qa.md`
 - completion: `in_progress`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `EXPLANATION_PDF_COMPLETE`
 
 ## Topic 16 固定範囲
 
@@ -78,6 +80,26 @@ Topic 16は解説本文＋3段階例題まで完了。固定一次5問・25答�
 - 未確認300系主変換装置仕様追加: `0件`
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+## Topic 16 解説PDF QA
+
+記録: `topics/16_semiconductor_diode/16_semiconductor_diode_explanation_pdf_qa.md`
+
+- A4縦2ページ
+- 200 dpi全ページ表示QA: `2 / 2 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `6c06933153460b2e6bbe9bc0811b285d0482cef30fd78e7dbbec6ab5ce71ed03`
+- 固定一次5問・25答案要素への教材内接続: `25 / 25`
+- EXAM_ALIGNMENT必須説明17項目: `17 / 17 covered`
+- 3段階例題: `3 / 3`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 降伏機構の詳細追加: `0件`
+- パワーエレクトロニクス回路追加: `0件`
+- Topic 17先取り: `0件`
+- 未確認300系主変換装置仕様追加: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ## Topic 15 成果物
 
@@ -440,4 +462,4 @@ Topic 16は解説本文＋3段階例題まで完了。固定一次5問・25答�
 
 ## 次に行うこと
 
-Topic 16の解説PDFを作成し、表示QAを行う。固定一次5問・25答案要素、3段階例題、SPEC境界を維持し、降伏機構の詳細、パワーエレクトロニクス回路、Topic 17、未確認の300系主変換装置仕様を追加しない。
+Topic 16の練習問題source＋練習PDFを作成し、問題・解答・完全解説、数値再計算・正答一意性、固定一次5問・25答案要素、SPEC境界を確認する。降伏機構の詳細、パワーエレクトロニクス回路、Topic 17、未確認の300系主変換装置仕様を追加しない。
