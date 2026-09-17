@@ -1,15 +1,15 @@
 # STATUS - 新幹線・電験三種「理論」
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 13 / 14
-- current_status: `topic_14_independent_reanswer_complete`
+- current_status: `topic_14_final_qa_needs_revision`
 - last_completed_topic: `13 インバータはどうやって三相交流を作る？`
 - active_topic: `14 East iは何をどう測っている？`
-- next_start: Topic 14の最終QAを実施する。必須成果物、PDF/PPTX QA、固定8問カバレッジ、SPEC境界、進捗記録整合性を再確認し、全件PASSの場合のみ `completed` とする
+- next_start: Topic 14の主source・練習sourceの進捗記録だけを `INDEPENDENT_REANSWER_COMPLETE` へ同期する。技術本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTX・独立再解答結果は変更しない
 
 ## Topic 01 進捗
 
@@ -257,4 +257,7 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 初回実施 `7 / 8問・12 / 13答案要素`（`NEEDS_REVISION`: 令和6年度下期 理論 問16(b)の測定点同定を誤読）
 - [x] 完成後の公式過去問独立再解答 再実施 `8 / 8問・13 / 13答案要素 PASS`
+- [x] 最終QA実施（`NEEDS_REVISION`: 主source・練習sourceの進捗記録不整合）
+- [ ] 主source・練習source進捗記録同期
+- [ ] 最終QA再実施
 - [ ] 最終QA PASS
