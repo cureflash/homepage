@@ -4,12 +4,12 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `11`
 theme: 新幹線が移動すると電圧はどう変わる？
-current_status: `topic_11_practice_source_complete`
+current_status: `topic_11_practice_pdf_complete`
 completed_topics: `10 / 22`
 
 ## Topic 11 current result
 
-制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDFに続き、練習問題・完全解説sourceと独立QAを完了した。
+制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QAまで完了した。
 
 正式品質ゲート:
 - 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
@@ -33,6 +33,8 @@ completed_topics: `10 / 22`
 練習成果物:
 - `topics/11_moving_train_voltage/11_moving_train_voltage_practice.md`
 - `topics/11_moving_train_voltage/11_moving_train_voltage_practice_qa.md`
+- `topics/11_moving_train_voltage/11_moving_train_voltage_practice.pdf`
+- `topics/11_moving_train_voltage/11_moving_train_voltage_practice_pdf_qa.md`
 - 全15問: 基礎4 / 本試験標準8 / 複合・応用3
 - 二種一次型五肢択一10問 / 二種二次型記述5問
 - 一次型正答一意性: `10 / 10 PASS`
@@ -40,6 +42,10 @@ completed_topics: `10 / 22`
 - 正式4問・17答案要素への練習接続: `17 / 17 PASS`
 - SPEC固定6項目: `6 / 6 PASS`
 - 計算プログラム指定4量への接続: `4 / 4 PASS`
+- 練習PDF: A4縦 `8ページ`
+- 200 dpi表示QA: `8 / 8 PASS`
+- `pdftotext` 文字抽出QA: PASS / U+FFFD `0件`
+- PDF SHA-256: `916bfee4e38eb4ad3c98f16a73be303b929587b07c54abbbe86cfaa02ed071f8`
 
 本文・練習では、位置 `x` から `Z(x)` を作る方法、`S=P+jQ=VI*`、`V_s=V_r+ZI`、厳密な受電端電圧式、近似電圧降下、`I²R` 損失、位置比較、分布負荷の積分法を扱う。H30一次問7の導体量関係はTopic 10既習事項として再確認するだけで、新規主題にはしていない。
 
@@ -62,8 +68,8 @@ completed_topics: `10 / 22`
 - [x] Topic 08 completed
 - [x] Topic 09 completed
 - [x] Topic 10 completed
-- [ ] Topic 11 — 練習source complete / IN_PROGRESS
+- [ ] Topic 11 — 練習PDF complete / IN_PROGRESS
 
 ## next_start
 
-Topic 11の練習問題・完全解説sourceと独立QAを基準に、練習PDFを制作し、表示・文字抽出・数式・問題解答整合QAを行う。計算プログラム、PowerPointはまだ制作しない。
+Topic 11 SPECの計算プログラムを制作し、列車位置 `x` を連続掃引してパンタグラフ電圧・線路電流・有効電力損失・無効電力を計算・グラフ化する。PowerPointはまだ制作しない。
