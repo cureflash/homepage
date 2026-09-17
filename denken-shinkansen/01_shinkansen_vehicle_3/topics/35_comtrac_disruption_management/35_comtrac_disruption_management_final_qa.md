@@ -4,11 +4,11 @@
 
 ## 現在地
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / COMPLETED`
 
-固定5過去問の完成後blind独立再解答は `5 / 5問 PASS`。必須成果物、過去問対応、練習QA、PDF/PPTX表示QA、系列SPEC固定範囲境界はPASS。
+固定5過去問の完成後blind独立再解答は `5 / 5問 PASS`。必須成果物、過去問対応、練習QA、PDF/PPTX表示QA、系列SPEC固定範囲境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
-未完了理由は進捗記録3箇所の不整合のみ。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind独立再解答結果は変更しない。
+前回の `NEEDS_REVISION / IN_PROGRESS` は進捗記録3箇所の不整合だけが理由だった。`35_comtrac_disruption_management.md` 冒頭の状態・次工程と `35_comtrac_disruption_management_explanation_pdf_qa.md` の次工程は、実成果物と完成後blind独立再解答完了状態へ同期済みであり、前回指摘は解消している。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind独立再解答結果は変更していない。
 
 ## 対象
 
@@ -89,22 +89,18 @@ PASS。
 Topic 36以降のネットワーク・統合管理・遠隔監視、Topic 34の論理回路再体系化、COMTRAC内部の具体的な列車優先順位・進路選択アルゴリズム・番線変更判定式・運転整理ルール・データ構造・更新周期・通信プロトコル・自動化範囲・内部切替方式は追加していない。2018年公開資料の機能分散も冗長化と同義化していない。
 
 ### 進捗記録整合
-FAIL。
+PASS。
 
-実成果物はPowerPoint・完成後blind独立再解答まで完了しているが、次の3箇所が旧工程のまま残る。
-
-1. `35_comtrac_disruption_management.md` 冒頭 `## 状態` が「PDF・練習問題・PowerPointは未着手」と記録しており、実成果物と不整合。
-2. 同source冒頭の `次工程` が「解説PDFを作成する」のままで、実成果物と不整合。
-3. `35_comtrac_disruption_management_explanation_pdf_qa.md` の `次工程` が「Topic 35の練習source」のままで、実成果物と不整合。
-
-`STATUS.md` と `HANDOFF.md` は最終QA直前状態 `topic_35_independent_reanswer_complete` と整合していた。
+- `STATUS.md`: 最終QA直前状態 `topic_35_progress_records_synced` と整合。
+- `HANDOFF.md`: 最終QA直前状態 `topic_35_progress_records_synced` と整合。
+- `35_comtrac_disruption_management.md`: 冒頭 `## 状態` は解説source/PDF、練習source/PDF、PowerPoint、完成後blind独立再解答まで完了した実成果物と整合し、次工程は「Topic 35の最終QAを再実施」と記録。
+- `35_comtrac_disruption_management_explanation_pdf_qa.md`: 次工程は完成後blind独立再解答完了後の「Topic 35の最終QAを再実施」と記録。
+- 前回FAILだった旧工程3箇所は全件解消。
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / COMPLETED`
 
-技術内容・固定EXAM_ALIGNMENT・固定5問の完成後blind独立再解答 `5 / 5問 PASS`・練習QA・PDF/PPTX表示QA・固定範囲境界は全件PASS。未完了理由は進捗記録3箇所のみ。
+必須成果物、固定5問の完成後blind独立再解答 `5 / 5問 PASS`、練習QA、表示QA、進捗記録整合、固定範囲境界をすべて満たす。Topic 35を `completed` とし、完成数を `35 / 38` へ更新する。
 
-完成数は `34 / 38` を維持する。
-
-次工程: 上記3箇所だけを実成果物へ同期する。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind独立再解答結果は変更しない。同期後に最終QAを再実施する。
+次工程: Topic 36 `COSMOS① 新幹線全体を統合管理する` の制作前EXAM_ALIGNMENT。Topic 35の技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・固定範囲は変更しない。
