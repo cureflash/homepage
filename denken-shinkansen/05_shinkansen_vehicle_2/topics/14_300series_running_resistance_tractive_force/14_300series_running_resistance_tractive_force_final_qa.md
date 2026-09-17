@@ -1,12 +1,12 @@
 # 14 300系⑤ 走行抵抗と必要けん引力 — 最終QA
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-技術内容、固定EXAM_ALIGNMENT、完成後blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界はPASS。進捗記録4箇所が旧工程のまま残っているため、`completed` にはしない。
+技術内容、固定EXAM_ALIGNMENT、完成後blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界を再確認し、前回FAILだった進捗記録4箇所も `4 / 4 PASS` を確認した。Topic 14は上位仕様の完成条件を満たす。
 
 ## 1. 上位仕様確認
 
@@ -106,18 +106,18 @@ GitHub正本で次を確認した。
 
 SPEC境界: `PASS`
 
-## 7. 進捗記録整合
+## 7. 進捗記録整合の再判定
 
-次の4箇所が現在地 `topic_14_blind_reanswer_passed` / 最終QAと同期していない。
+前回FAILだった4箇所をGitHub正本で再確認した。
 
-1. 主source冒頭 `## 状態`: 「次は新しいrunで完成後blind再解答」となっている。
-2. 主source末尾 `## 次工程`: 「完成後blind再解答」となっている。
-3. 練習source末尾 `## 次工程`: 「練習PDFを制作」となっている。
-4. 練習PDF QA末尾 `## 現在地`: `topic_14_practice_pdf_complete`、次工程「解説画像PowerPoint」となっている。
+1. 主source冒頭 `## 状態`: Topic 14最終QA再判定が次工程 — `PASS`
+2. 主source末尾 `## 次工程`: Topic 14最終QA再判定 — `PASS`
+3. 練習source末尾 `## 次工程`: Topic 14最終QA再判定 — `PASS`
+4. 練習PDF QA末尾 `## 現在地`: `topic_14_progress_sync_complete`、次工程はTopic 14最終QA再判定 — `PASS`
 
-技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind再解答結果を変更する必要はない。進捗記録だけを同期すれば再判定可能。
+進捗記録整合: `4 / 4 PASS`
 
-進捗記録整合: `FAIL / 4件`
+技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind再解答結果の変更: `0件`
 
 ## 8. 最終判定
 
@@ -128,8 +128,8 @@ SPEC境界: `PASS`
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL / 4件`
+- 進捗記録整合: `4 / 4 PASS`
 
-したがって現時点の最終判定は `NEEDS_REVISION / IN_PROGRESS`。完成数は `13 / 39` のまま。
+したがってTopic 14を `PASS / completed` とする。完成数は `14 / 39`。
 
-次工程は上記4箇所の進捗記録だけを同期する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない。同期後にTopic 14最終QAを再判定する。
+次工程はTopic 15「500系 高速域の出力・熱解析」の制作前EXAM_ALIGNMENT。上位仕様に従い、本文制作前に二種一次・二次を含む公式過去問対応を固定する。
