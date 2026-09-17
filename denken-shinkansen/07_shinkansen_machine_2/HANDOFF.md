@@ -6,17 +6,18 @@
 - Topic 01〜16: 最終QA `PASS / completed`
 - 完成数: `16 / 22`
 - active topic: `17 新幹線の速度をフィードバック制御する`
-- current status: `topic_17_exam_alignment_complete`
-- 次工程: Topic 17 解説source本文制作
+- current status: `topic_17_explanation_source_complete`
+- 次工程: Topic 17 解説PDF制作
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、直近の機械二種変更を再確認した。
-- 既存「機械二種を進行」枠でTopic 16最終QAが `PASS / completed` まで進んでいることを採用し、Topic 16を重複制作していない。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 17 sourceを再確認した。
+- Topic 16は最終QA `PASS / completed` のままとし、重複制作していない。
 - 最初の未完了テーマはTopic 17「新幹線の速度をフィードバック制御する」。
-- Topic 17の制作前EXAM_ALIGNMENTを新規実施し、一次1問＋二次4問、計5問・6答案要素を固定した。
-- Topic 18〜21先取り、二自由度制御の仕様追加、未確認実車値追加、固定問題の正答記号・完成済み解答保存は `0件`。
+- Topic 17の制作前EXAM_ALIGNMENTに固定された一次1問＋二次4問、計5問・6答案要素を変更していない。
+- Topic 17解説source本文を完成し、固定6答案要素を `6 / 6` 接続した。
+- Topic 18〜21先取り、二自由度制御の独立論点追加、未確認実車値追加、固定問題の正答記号・完成済み解答保存は `0件`。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -85,5 +86,17 @@ Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数�
 
 判定: `PASS / topic_17_exam_alignment_complete`
 
+## Topic 17 解説source
+- source: `topics/17_speed_feedback_control/17_speed_feedback_control.md`
+- 目標値・偏差・出力・フィードバック量を信号式で整理
+- 伝達関数、直列接続、開ループ経路、一巡積を説明
+- 閉ループ `G/(1+GH)` と偏差 `1/(1+GH)` を導出
+- 外乱の印加位置を含む `E/D` 導出手順を説明
+- 基礎／本試験標準／複合の3段階例題を作成・代数再計算PASS
+- 固定5問・6答案要素を `6 / 6` 接続
+- 境界違反、未確認実車値、固定問題の正答保存 `0件`
+
+判定: `PASS / topic_17_explanation_source_complete`
+
 ## 次に行うこと
-Topic 17の解説source本文を制作する。固定5問・6答案要素から逆算し、系列SPECの固定範囲だけで、基礎／本試験標準／複合の3段階例題まで作成する。
+Topic 17解説PDFを制作する。固定5問・6答案要素、3段階例題、仕様境界を維持し、完成後に表示・文字抽出QAを行う。
