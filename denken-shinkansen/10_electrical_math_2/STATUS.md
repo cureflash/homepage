@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 15 / 20
-- current_status: `topic_15_completed`
+- current_status: `topic_16_exam_alignment_complete`
 - last_completed_topic: `15 対数・dB・周波数応答`
 - active_topic: `16 数値微分・数値積分`
-- next_start: Topic 16の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 16の固定4問・8答案要素を制作前独立再導出し、公式解答と照合する
 
 ## Topic 07 制作品質ゲート
 
@@ -222,18 +222,41 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 16 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 第二種公式過去問を直近年度から遡って調査
+- [x] R6一次「法規」問4 (1)〜(2)、R4二次「電力・管理」問1、H23二次「電力・管理」問6、H22二次「電力・管理」問3 (4)を固定
+- [x] 固定4問・8答案要素をsource Markdownへ記録
+- [x] 数値微分・数値積分の算法名を直接問う第二種問題が確認できないことを明記
+- [x] H27二次「電力・管理」問3は解析積分のため正式件数へ含めない
+- [x] H20一次「機械」関連候補は現行公式アーカイブで直接再確認できないため正式件数へ含めない
+- [x] 第一種・第三種、Topic 17以降による件数水増し0件を確認
+- [x] source Markdownへ要求知識・式・設問型・教材内必要説明・境界を固定
+- [ ] 制作前独立再解答・公式解答照合
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] PowerPoint表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 15 `対数・dB・周波数応答` の最終QAを再判定した。
+Topic 16 `数値微分・数値積分` の制作前EXAM_ALIGNMENTを完了した。
 
-初回FAIL要因だった進捗記録6ファイルは `6 / 6 PASS`。必須成果物、固定第二種公式過去問5問・12答案要素、完成後独立再解答 `12 / 12 PASS`、解説PDF `4 / 4 PASS`、練習PDF `6 / 6 PASS`、PowerPoint `5 / 5 PASS`、SPEC境界もすべてPASSを維持した。
+第二種公式問題・公式解答を確認し、離散・区分的な時間データから平均量・積算量を求める接続問題として4問・8答案要素を固定した。算法名そのものを問う第二種問題は確認できなかったため、原則5問に届かせる目的で解析的微積分、Topic 17以降、第一種・第三種を追加していない。
 
-技術本文・問題・正答・PDF・PowerPoint・EXAM_ALIGNMENTは変更していない。
+固定範囲はSPECどおり、差分、数値微分、台形則、Simpson則の基本、誤差、刻み幅、速度データ→加速度、電力データ→電力量に限定した。
 
 ## 判定
 
-Topic 15は `PASS / completed`。
+`topic_16_exam_alignment_complete / IN_PROGRESS`
 
-完成数は `15 / 20`。
+完成数は `15 / 20` のまま。
 
-次はTopic 16 `数値微分・数値積分` の制作前EXAM_ALIGNMENTを実施する。
+次は固定4問・8答案要素の制作前独立再導出・公式解答照合を行う。
