@@ -4,28 +4,33 @@
 
 ## 現在地
 
-Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何をどう測っている？」は最終QAで指摘された主source・練習sourceの進捗記録不整合を修正し、両sourceを `INDEPENDENT_REANSWER_COMPLETE` へ同期した。技術内容・固定EXAM_ALIGNMENT・練習問題・PDF/PPTX・独立再解答結果は変更していない。最終QA再実施前のため、まだ `completed` にはしていない。
+Topic 01〜14は最終QAまでPASSし、`04_shinkansen_theory_3` は `14 / 14 completed`。Topic 14「East iは何をどう測っている？」は、前回最終QAで唯一FAILだった主source・練習sourceの進捗記録不整合を修正後、最終QAを再実施して全件PASSした。技術内容・固定EXAM_ALIGNMENT・練習問題・PDF/PPTX・独立再解答結果は変更していない。
 
-- 完成数: `13 / 14`
-- last completed: `13 インバータはどうやって三相交流を作る？`
-- active topic: `14 East iは何をどう測っている？`
-- current status: `topic_14_progress_sync_complete`
-- next start: Topic 14の最終QAを再実施する。主source・練習sourceが `INDEPENDENT_REANSWER_COMPLETE` へ同期済みであることを確認し、技術本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTX・独立再解答結果は変更しない
+- 完成数: `14 / 14`
+- last completed: `14 East iは何をどう測っている？`
+- active topic: `none`
+- current status: `topic_14_completed`
+- next start: `05_shinkansen_vehicle_2` のGitHub正本を確認し、最初の未完了テーマを制作前EXAM_ALIGNMENTから開始する
 
 ## 今回進捗
 
-前回最終QAで唯一FAILだった進捗記録整合性を修正した。
+Topic 14の最終QAを再実施し、`PASS / completed` とした。
 
-- 主source `14_east_i_measurement.md`: `status: INDEPENDENT_REANSWER_COMPLETE` へ同期
-- 主source末尾: 次工程を「最終QAを再実施」へ同期
-- 練習source `14_east_i_measurement_practice.md`: `stage: INDEPENDENT_REANSWER_COMPLETE` へ同期
+- 主source `14_east_i_measurement.md`: 最終QA直前状態 `status: INDEPENDENT_REANSWER_COMPLETE` を確認
+- 練習source `14_east_i_measurement_practice.md`: 最終QA直前状態 `stage: INDEPENDENT_REANSWER_COMPLETE` を確認
+- 完成後独立再解答 再実施: `8 / 8問・13 / 13答案要素 PASS`
+- 必須成果物実在: PASS
+- 解説PDF QA: PASS
+- 練習PDF QA: PASS
+- PowerPoint QA: PASS
+- 固定8問要求の本文・練習・画像接続: PASS
+- 進捗記録整合性: PASS
+- SPEC境界: PASS
 - 技術本文変更: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 練習15問・正答変更: `0件`
 - PDF/PPTX変更: `0件`
 - 独立再解答結果変更: `0件`
-
-この段階では最終QAを再実施していないため、Topic 14は `completed` としない。次工程は最終QA再実施である。
 
 ## Topic 14 固定過去問
 
@@ -41,6 +46,7 @@ Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何を
 制作前独立検証: `8 / 8問・13 / 13答案要素 PASS`
 完成後独立再解答 初回: `7 / 8問・12 / 13答案要素 NEEDS_REVISION`
 完成後独立再解答 再実施: `8 / 8問・13 / 13答案要素 PASS`
+最終QA再実施: `PASS / completed`
 
 ## Topic 14 SPEC固定範囲
 
@@ -76,7 +82,7 @@ Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何を
 - 未確認のEast i検測項目・センサ構成・内部回路・数値を推測しない。
 - 件数合わせのため系列SPEC外論点を追加しない。
 
-## 解説source・PDFの現状
+## 解説source・PDFの最終状態
 
 固定8問の要求事項を本文・解説PDFへ `8 / 8` マッピング済み。
 
@@ -91,27 +97,34 @@ East i接続はJR東日本「新たな新幹線専用検測車の開発に着手
 
 解説PDFはA4縦4ページ。200 dpiレンダリング `4 / 4 PASS`、文字抽出 `PASS`、固定範囲外追加 `0件`。
 
-## 練習source・PDFの現状
+## 練習source・PDFの最終状態
 
 固定8問の要求事項を練習15問へ `8 / 8` 接続済み。全問五肢択一で、基礎4・本試験標準8・複合3。正答一意性 `15 / 15 PASS`、数値・単位・論理再計算 `12 / 12 PASS`、正答位置は `(1)`〜`(5)` 各3問。
 
 練習PDFはA4縦4ページ。200 dpiレンダリング `4 / 4 PASS`、文字抽出 `PASS`、固定範囲外追加 `0件`、未確認East i情報依存 `0件`。
 
-## 解説画像PowerPointの現状
+## 解説画像PowerPointの最終状態
 
 固定8問の要求事項を4枚の解説画像へ `8 / 8` 接続済み。16:9・4枚、200 dpi表示 `4 / 4 PASS`、shape-bound overflow 0件、文字欠け・重なり・文字化け0件、ZIP/XML整合性PASS。
 
 East i実車情報は、JR東日本一次資料で公表された現行E926形の検測装置例とトロリ線状態測定方式だけを使用した。一般的な電気計測原理とEast iの実装を区別し、未確認の内部回路・センサ定数・測定値は追加していない。
 
+## 最終QA
+
+- 必須成果物: PASS
+- 過去問対応品質ゲート: PASS
+- 3段階例題: PASS
+- 練習問題・完全解説: PASS
+- 解説PDF・練習PDF・PowerPoint QA: PASS
+- 完成後独立再解答: `8 / 8問・13 / 13答案要素 PASS`
+- 教材外補完: `0件`
+- 固定範囲外追加: `0件`
+- 進捗記録整合性: PASS
+- 判定: `PASS / completed`
+
 ## 次に行うこと
 
-Topic 14の最終QAを再実施する。
-
-- 主source `14_east_i_measurement.md` のstatusが `INDEPENDENT_REANSWER_COMPLETE` であることを確認する
-- 練習source `14_east_i_measurement_practice.md` のstageが `INDEPENDENT_REANSWER_COMPLETE` であることを確認する
-- 必須成果物、固定8問・13答案要素の独立再解答、PDF/PPTX QA、SPEC境界を再確認する
-- 技術本文、固定EXAM_ALIGNMENT、練習15問、正答、PDF/PPTX、独立再解答結果は変更しない
-- 全件PASSの場合のみTopic 14を `completed` とする
+`04_shinkansen_theory_3` は `14 / 14 completed`。`MASTER_SPEC.md` の系列順に従い、次回は `05_shinkansen_vehicle_2` のGitHub正本を確認し、最初の未完了テーマを制作前EXAM_ALIGNMENTから開始する。
 
 ## 固定ルール
 
