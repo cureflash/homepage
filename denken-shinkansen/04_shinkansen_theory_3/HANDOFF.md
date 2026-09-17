@@ -4,29 +4,33 @@
 
 ## 現在地
 
-Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何をどう測っている？」は解説PDF＋表示・文字抽出QAまで完了した。
+Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何をどう測っている？」は練習問題source・練習PDF＋QAまで完了した。
 
 - 完成数: `13 / 14`
 - last completed: `13 インバータはどうやって三相交流を作る？`
 - active topic: `14 East iは何をどう測っている？`
-- current status: `topic_14_explanation_pdf_complete`
-- next start: Topic 14の練習問題source・練習PDFを作成し、正答一意性・再計算・表示QAを行う
+- current status: `topic_14_practice_pdf_complete`
+- next start: Topic 14の解説画像PowerPointを作成し、固定8問要求への接続・表示QA・構造QAを行う
 
 ## 今回進捗
 
-Topic 14の解説PDFを作成し、表示・文字抽出QAを完了した。
+Topic 14の練習問題source・練習PDFを作成し、正答一意性・再計算・表示・文字抽出QAを完了した。
 
-- 解説PDF: A4縦4ページ
+- 練習問題: 15問・全問五肢択一
+- 難易度: 基礎4 / 本試験標準8 / 複合3
+- 正答一意性: `15 / 15 PASS`
+- 正答位置 `(1)`〜`(5)`: 各3問
+- 数値・単位・論理再計算: `12 / 12 PASS`
+- 固定8問要求への接続: `8 / 8 PASS`
+- 練習PDF: A4縦4ページ
 - 200 dpi表示QA: `4 / 4 PASS`
 - 文字抽出QA: `PASS`
-- 固定公式過去問: `8問・13答案要素`
-- 固定8問要求事項のPDF対応: `8 / 8`
-- 3段階例題の独立再計算: `3 / 3 PASS` を維持
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 系列SPEC外論点追加: `0件`
-- 未確認East i内部回路・センサ定数・測定値の事実化: `0件`
-- PDF: `topics/14_east_i_measurement/14_east_i_measurement_explanation.pdf`
-- QA: `topics/14_east_i_measurement/14_east_i_measurement_explanation_qa.md`
+- 未確認East i情報依存: `0件`
+- source: `topics/14_east_i_measurement/14_east_i_measurement_practice.md`
+- PDF: `topics/14_east_i_measurement/14_east_i_measurement_practice.pdf`
+- QA: `topics/14_east_i_measurement/14_east_i_measurement_practice_qa.md`
 
 ## Topic 14 固定過去問
 
@@ -92,15 +96,20 @@ East i接続はJR東日本「新たな新幹線専用検測車の開発に着手
 
 解説PDFはA4縦4ページ。200 dpiレンダリング `4 / 4 PASS`、文字抽出 `PASS`、固定範囲外追加 `0件`。
 
+## 練習source・PDFの現状
+
+固定8問の要求事項を練習15問へ `8 / 8` 接続済み。全問五肢択一で、基礎4・本試験標準8・複合3。正答一意性 `15 / 15 PASS`、数値・単位・論理再計算 `12 / 12 PASS`、正答位置は `(1)`〜`(5)` 各3問。
+
+練習PDFはA4縦4ページ。200 dpiレンダリング `4 / 4 PASS`、文字抽出 `PASS`、固定範囲外追加 `0件`、未確認East i情報依存 `0件`。
+
 ## 次に行うこと
 
-Topic 14の練習問題source・練習PDFを作成し、正答一意性・再計算・表示QAを行う。
+Topic 14の解説画像PowerPointを作成し、固定8問要求への接続・表示QA・構造QAを行う。
 
 - `topics/14_east_i_measurement/14_east_i_measurement.md` と固定EXAM_ALIGNMENTを正本とする
-- 系列SPEC範囲だけで練習問題を作る
-- 固定過去問で要求される計算・判断を練習問題へ反映する
-- 正答一意性と計算問題の再計算を確認する
-- 練習PDFの文字切れ、重なり、判読不能、欠落を確認する
+- 系列SPEC範囲だけで解説画像を作る
+- 固定過去問で要求される計算・判断を解説画像へ反映する
+- 表示崩れ・文字切れ・重なり・構造不整合を確認する
 - 正答番号・固定過去問の個別最終数値を先読みせず、完成後独立再解答を汚染しない
 
 ## 固定ルール
