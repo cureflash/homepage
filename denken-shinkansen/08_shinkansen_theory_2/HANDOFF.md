@@ -6,11 +6,11 @@
 
 Topic 01〜13は `PASS / completed`。完成数は `13 / 21`。
 
-current_status: `topic_14_powerpoint_complete`
+current_status: `topic_14_reanswer_complete`
 
 active_topic: `14 インバータのギザギザ波形を分解する`
 
-Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QAまで完了。固定一次2問・3答案要素＋二次1問・2答案要素を `5 / 5` 可視化し、二次採用1問・2答案要素、二次数合わせ0件を維持している。次工程は完成後独立再解答。
+Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定一次2問・3答案要素＋二次1問・2答案要素は完成教材だけで `5 / 5 PASS`、公式標準解答と全件一致。教材外補完0件、二次数合わせ0件を維持している。次工程は最終QA。
 
 ## Topic 14 成果物
 
@@ -22,8 +22,9 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 練習PDF QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_practice_pdf_qa.md`
 - PowerPoint: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_images.pptx`
 - PowerPoint QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_powerpoint_qa.md`
+- 完成後独立再解答: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_reanswer.md`
 - completion: `in_progress`
-- stage: `POWERPOINT_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 
 ## Topic 14 固定範囲
 
@@ -50,6 +51,7 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 一次・二次合わせ関連候補8件を確認済み。H30/H25二次「電力・管理」は設備固有体系、H24二次は高調波無視条件、R4二次は整流器・直流電圧・電動機等への依存が大きいため非採用。
 
 - 制作前独立再解答: `5 / 5 PASS`
+- 完成後独立再解答: `5 / 5 PASS`
 - 二次採用: `1問・2答案要素`
 - 二次数合わせ: `0件`
 
@@ -105,6 +107,23 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 14 完成後独立再解答
+
+記録: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_reanswer.md`
+
+- H24 一次 機械 問3 (4)(5): `2 / 2 PASS`
+- H22 一次 機械 問3 (3): `1 / 1 PASS`
+- H28 二次 機械・制御 問3 (3)(4): `2 / 2 PASS`
+- 一次合計: `3 / 3 PASS`
+- 二次合計: `2 / 2 PASS`
+- 総合: `5 / 5 PASS`
+- 公式標準解答一致: `5 / 5`
+- 教材外知識補完: `0件`
+- SPEC固定範囲外追加: `0件`
+- 二次数合わせ: `0件`
+
+判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+
 ## 次に行うこと
 
-Topic 14「インバータのギザギザ波形を分解する」の完成後独立再解答。固定3問・5答案要素を完成教材だけで再解答し、公式標準解答との一致、教材外補完0件、固定範囲外補完0件を確認する。
+Topic 14「インバータのギザギザ波形を分解する」の最終QA。固定3問・5答案要素の完成後独立再解答 `5 / 5 PASS`、必須成果物、PDF/PPTX QA、進捗記録整合、SPEC固定範囲境界を確認する。
