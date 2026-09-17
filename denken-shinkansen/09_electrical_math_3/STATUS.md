@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `09_electrical_math_3`
-- exam_aligned_completed_topics: 10 / 12
-- current_status: `topic_11_source_progress_sync_complete`
-- last_completed_topic: `10 指数関数・一階微分方程式入門`
-- active_topic: `11 グラフ・特性曲線を読む`
-- next_start: `Topic 11最終QAを再判定`
+- exam_aligned_completed_topics: 11 / 12
+- current_status: `topic_11_final_qa_pass`
+- last_completed_topic: `11 グラフ・特性曲線を読む`
+- active_topic: `12 電気数学総合`
+- next_start: `Topic 12の制作前EXAM_ALIGNMENT調査`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -131,21 +131,25 @@
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source・練習sourceの旧進捗記録3箇所を現在地へ同期
-- [ ] 最終QA再判定
+- [x] 最終QA再判定 `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 11「グラフ・特性曲線を読む」の初回最終QAでFAILだった進捗記録3箇所だけを現在地へ同期した。
+Topic 11「グラフ・特性曲線を読む」の最終QAを再判定し、`PASS / completed` とした。
 
-- 主source `## 状態`: 完成教材・独立再解答完了、最終QA再判定待ちへ同期
-- 主source `## 次工程`: `Topic 11の最終QAを再判定` へ同期
-- 練習source `## 次工程`: `Topic 11の最終QAを再判定` へ同期
-- 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更なし
+- 初回最終QAでFAILだった旧進捗記録3箇所の同期を再確認: PASS
+- 必須成果物実在: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 制作前独立検証: `5 / 5 PASS`
+- 完成後独立再解答: `5 / 5 PASS`
+- 練習QA: `12 / 12 PASS`
+- 表示QA・成果物実在: PASS
+- 教材外補完0件
 - 固定EXAM_ALIGNMENT変更0件
 - 仕様外追加0件
 
 ## 判定
 
-`topic_11_source_progress_sync_complete / IN_PROGRESS`。
+`topic_11_final_qa_pass / completed`。
 
-完成数は `10 / 12`。次工程はTopic 11最終QAの再判定。
+完成数は `11 / 12`。次の未完了テーマは Topic 12「電気数学総合」。次工程はTopic 12の制作前EXAM_ALIGNMENT調査。
