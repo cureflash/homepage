@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は完成済み。active themeはTopic 13。
 
 ## 今回進捗
-Topic 13 `新幹線の架線は何でできている？` の解説画像PowerPointを作成し、PowerPoint QAまで完了した。品質ゲート対象はR8上・R7下・R6下・R5下・R5上の電力問14、計5問・5答案要素のまま変更していない。PowerPointは16:9・4枚、固定5問・5答案要素の要求事項可視化 `5 / 5 PASS`、1601×900表示QA `4 / 4 PASS`、overflow `0件`、ZIP整合性PASS、数値・論理QA PASS。SPEC固定範囲外追加、Topic 12の弛度・張力計算、Topic 14の配電・地中電線路設計、半導体デバイス回路、未確認の新幹線トロリ線実設備値の真値化はいずれも `0件`。
+Topic 13 `新幹線の架線は何でできている？` の完成後ブラインド独立再解答を実施した。品質ゲート対象はR8上・R7下・R6下・R5下・R5上の電力問14、計5問・5答案要素のまま変更していない。保存済み正答を先に見ず完成教材だけで再解答し、独立答案は順に `(2),(3),(4),(5),(2)`。その後に公式標準解答と照合し `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`。教材外知識補完、Topic 14以降の論点による補完、SPEC固定範囲外追加、未確認新幹線実設備値の使用はいずれも `0件`。次は最終QA。
 
 source: `topics/13_electrical_materials/13_electrical_materials.md`
 解説PDF: `topics/13_electrical_materials/13_electrical_materials_explanation.pdf`
@@ -16,6 +16,7 @@ source: `topics/13_electrical_materials/13_electrical_materials.md`
 練習PDF QA: `topics/13_electrical_materials/13_electrical_materials_practice_qa.md`
 解説画像PowerPoint: `topics/13_electrical_materials/13_electrical_materials_images.pptx`
 PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoint_qa.md`
+完成後独立再解答: `topics/13_electrical_materials/13_electrical_materials_independent_reanswer.md`
 
 固定問題:
 - R8上 電力 問14 — 絶縁材料
@@ -56,7 +57,20 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - PowerPoint overflow: `0件`
 - PowerPoint ZIP整合性: `PASS`
 - PowerPoint内数値・論理QA: `PASS`
-- 完成後ブラインド独立再解答・最終QA: 未実施
+- 完成後ブラインド独立再解答: `5 / 5 PASS`
+- 公式解答一致: `5 / 5 PASS`
+- 教材外知識補完: `0件`
+- Topic 14以降の論点による補完: `0件`
+- SPEC固定範囲外追加（独立再解答時）: `0件`
+- 未確認新幹線実設備値の使用: `0件`
+- 最終QA: 未実施
+
+完成後独立答案:
+- R8上 電力 問14: `(2)`
+- R7下 電力 問14: `(3)`
+- R6下 電力 問14: `(4)`
+- R5下 電力 問14: `(5)`
+- R5上 電力 問14: `(2)`
 
 ## 前回進捗（Topic 12）
 Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の最終QAを再実施した。初回最終QAで唯一FAILだった進捗記録整合について、`12_overhead_line_mechanics_explanation_qa.md`、`12_overhead_line_mechanics_practice_source.md`、`12_overhead_line_mechanics_powerpoint_qa.md`、`12_overhead_line_mechanics_independent_reanswer.md` の4箇所が現在地へ同期済みであることを再確認し、技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を全件PASSと判定した。Topic 12を `PASS / completed` とし、main source・STATUS・HANDOFFを同期した。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更していない。
@@ -175,7 +189,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_13_powerpoint_complete`
+- `current_status`: `topic_13_independent_reanswer_complete`
 - 完成数: `12 / 16`
 - last completed: Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？`
 - active: Topic 13 `新幹線の架線は何でできている？`
@@ -186,6 +200,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 13 練習PDF QA: `topics/13_electrical_materials/13_electrical_materials_practice_qa.md`
 - Topic 13 解説画像PowerPoint: `topics/13_electrical_materials/13_electrical_materials_images.pptx`
 - Topic 13 PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoint_qa.md`
+- Topic 13 完成後独立再解答: `topics/13_electrical_materials/13_electrical_materials_independent_reanswer.md`
 - Topic 13 固定問題: `5問・5答案要素`
 - Topic 13 制作前EXAM_ALIGNMENT: 完了
 - Topic 13 制作前独立検証: `5 / 5 PASS`
@@ -196,9 +211,13 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 13 練習source QA: `12 / 12 PASS`、固定5問・5答案要素接続 `5 / 5 PASS`
 - Topic 13 練習PDF QA: 表示 `4 / 4 PASS`、文字抽出 `PASS`、再検算・正答一意性 `12 / 12 PASS`、固定5問・5答案要素接続 `5 / 5 PASS`
 - Topic 13 PowerPoint QA: 固定5問・5答案要素可視化 `5 / 5 PASS`、表示 `4 / 4 PASS`、overflow `0件`、ZIP整合性 `PASS`
+- Topic 13 完成後ブラインド独立再解答: `5 / 5 PASS`
+- Topic 13 公式解答一致: `5 / 5 PASS`
+- Topic 13 教材外知識補完: `0件`
 - Topic 13 SPEC固定範囲外追加: `0件`
 - Topic 13 未確認新幹線実設備値の真値化: `0件`
+- Topic 13 最終QA: 未実施
 - Topic 12 最終QA: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 13の完成後ブラインド独立再解答を、保存済み正答を先に見ず完成教材だけで固定5問・5答案要素に対して実施する。Topic 12以前の技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
+Topic 13の最終QAを実施し、必須成果物、PDF/PPTX QA、固定EXAM_ALIGNMENT、完成後独立再解答、SPEC境界、進捗記録整合を再確認する。Topic 12以前の技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
