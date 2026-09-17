@@ -6,17 +6,19 @@
 
 Topic 01〜14は `PASS / completed`。完成数は `14 / 21`。
 
-current_status: `topic_15_explanation_source_complete`
+current_status: `topic_15_explanation_pdf_complete`
 
 active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 
-Topic 15は解説本文＋3段階例題まで完了。固定範囲はRL・RC・RLC回路、初期条件、過渡項・定常項、時定数、微分方程式、必要に応じたラプラス変換。品質ゲートはR8〜R4一次「理論」の5問・25答案要素で、解説本文から `25 / 25` 接続済み。EXAM_ALIGNMENT必須説明17項目を全件収録し、基礎RL・標準RC・複合RLCの3段階例題を数値再計算済み。R8二次は2026-09-17時点で未実施、R7〜R5二次は固定範囲だけで完答できる直接対応問題がなく、二次採用0問・数合わせ0件。次工程は解説PDF＋表示QA。
+Topic 15は解説PDF＋表示QAまで完了。固定範囲はRL・RC・RLC回路、初期条件、過渡項・定常項、時定数、微分方程式、必要に応じたラプラス変換。品質ゲートはR8〜R4一次「理論」の5問・25答案要素で、教材内接続 `25 / 25` を維持。R8二次は2026-09-17時点で未実施、R7〜R5二次は固定範囲だけで完答できる直接対応問題がなく、二次採用0問・数合わせ0件。解説PDFはA4縦2ページ、200 dpi全ページ表示QA `2 / 2 PASS`、文字抽出PASS。次工程は練習問題source＋練習PDF。
 
 ## Topic 15 成果物
 
 - source: `topics/15_breaker_transient/15_breaker_transient.md`
+- 解説PDF: `topics/15_breaker_transient/15_breaker_transient_explanation.pdf`
+- 解説PDF QA: `topics/15_breaker_transient/15_breaker_transient_explanation_pdf_qa.md`
 - completion: `in_progress`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `EXPLANATION_PDF_COMPLETE`
 
 ## Topic 15 固定範囲
 
@@ -71,6 +73,23 @@ Topic 15は解説本文＋3段階例題まで完了。固定範囲はRL・RC・R
 - Topic 16以降の先取り: `0件`
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+## Topic 15 解説PDF QA
+
+記録: `topics/15_breaker_transient/15_breaker_transient_explanation_pdf_qa.md`
+
+- A4縦2ページ
+- 200 dpi全ページ表示QA: `2 / 2 PASS`
+- 文字抽出QA: `PASS`
+- 固定一次5問・25答案要素への教材内接続: `25 / 25`
+- 3段階例題: `3 / 3`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 遮断器アーク・過渡回復電圧・保護協調等の仕様外追加: `0件`
+- 未確認実設備値・実測波形追加: `0件`
+- Topic 16以降の先取り: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ## Topic 14 成果物
 
@@ -213,4 +232,4 @@ Topic 15は解説本文＋3段階例題まで完了。固定範囲はRL・RC・R
 
 ## 次に行うこと
 
-Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の解説PDF＋表示QA。
+Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の練習問題source＋練習PDF。
