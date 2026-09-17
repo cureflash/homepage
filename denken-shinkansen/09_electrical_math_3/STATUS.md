@@ -138,8 +138,9 @@ Topic 11「グラフ・特性曲線を読む」の完成後独立再解答前ブ
 - `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_blind_gate.md`
 - 固定品質ゲート5問は変更なし
 - 固定EXAM_ALIGNMENT・教材成果物・問題・正答は変更なし
+- HANDOFFから制作前独立解答の個別正答を除去
 - 保存済み制作前正答を視認したrunでは独立再解答を実施しない手順を明記
-- 次runは主sourceの制作前独立解答節とHANDOFFの保存済み個別正答を先読みせず、完成教材だけで固定5問を解く
+- 次runは主sourceの制作前独立解答節を先読みせず、完成教材だけで固定5問を解く
 - 伝達関数・ボード線図・PID等の固定範囲外追加0件
 
 ## 判定
