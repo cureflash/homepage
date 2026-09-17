@@ -7,7 +7,7 @@
 
 Topic 01〜12は最終QAまで `PASS / completed`。完成数は `12 / 39`。
 
-現在地は `topic_13_independent_reanswer_passed`。Topic 13 `300系④ 回生と四象限運転` は、固定EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題・完全解説source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答まで完成。固定一次4問＋二次1問・15答案要素は `15 / 15 PASS`。次は最終QA。
+現在地は `topic_13_final_qa_needs_progress_sync`。Topic 13 `300系④ 回生と四象限運転` は、固定EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題・完全解説source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答まで完成。固定一次4問＋二次1問・15答案要素は `15 / 15 PASS`。初回最終QAは技術内容・成果物・SPEC境界がPASS、進捗記録4箇所のみFAILのため `NEEDS_REVISION / IN_PROGRESS`。
 
 ## Topic 13 固定EXAM_ALIGNMENT
 source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
@@ -41,6 +41,7 @@ source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerativ
 - 解説画像PowerPoint: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_images.pptx`
 - PowerPoint QA: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_images_qa.md`
 - 完成後独立再解答: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_independent_reanswer.md`
+- 最終QA: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_final_qa.md`
 
 ## Topic 13 完成後独立再解答
 - 公式解答確認前に完成教材と公式問題文だけで答案を固定
@@ -53,6 +54,25 @@ source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerativ
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 - Topic 14先取り: `0件`
+
+## Topic 13 初回最終QA
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 技術内容: `PASS`
+- 固定一次4問＋二次1問・15答案要素: `PASS`
+- 完成後独立再解答: `15 / 15 PASS`
+- 必須成果物: `PASS`
+- PDF/PPTX表示・構造QA: `PASS`
+- 練習問題QA: `12 / 12 PASS`
+- SPEC境界: `PASS`
+- 進捗記録整合: `FAIL`
+
+未同期4箇所:
+1. 主source冒頭状態欄が `次は練習PDFを作成する` のまま。
+2. 主source末尾が `練習PDFを作成する` のまま。
+3. 練習source末尾が `このsourceを正本として練習PDFを作成` のまま。
+4. 練習PDF QA末尾が `topic_13_practice_pdf_complete` / 次工程PowerPointのまま。
+
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・完成後独立再解答結果は変更不要。
 
 ## Topic 13 解説画像PowerPoint完成確認
 - 16:9・4スライド
@@ -97,4 +117,4 @@ source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerativ
 Topic 12 `300系③ VVVFインバータと誘導機制御` は最終QA `PASS / completed`。Topic 11 `300系② PWMコンバータ` も `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 13 `300系④ 回生と四象限運転` の最終QAを実施する。固定5問・15答案要素の完成後独立再解答 `15 / 15 PASS` を維持し、必須成果物、PDF/PPTX QA、進捗記録整合、固定範囲境界を総合判定する。
+Topic 13の進捗記録4箇所だけを実成果物へ同期する。主source冒頭・主source末尾・練習source末尾・練習PDF QA末尾を現在地へ合わせる。技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・完成後独立再解答結果は変更しない。同期後にTopic 13最終QAを再判定する。
