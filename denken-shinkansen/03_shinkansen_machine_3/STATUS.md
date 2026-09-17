@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `12 / 16`
-- current_status: `topic_13_practice_source_complete`
+- current_status: `topic_13_practice_pdf_complete`
 - last_completed_topic: `12 新幹線のコンピュータは何をしている？`
 - active_topic: `13 新幹線は主電動機以外もモーターだらけ？`
-- next_start: Topic 13の練習PDFを作成する
+- next_start: Topic 13の解説画像PowerPointを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -23,7 +23,7 @@
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
-- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 練習問題source完成 / IN_PROGRESS
+- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 練習PDF完成 / IN_PROGRESS
 - [ ] 14〜16 — 未完了
 
 ## Topic 13 制作品質状態
@@ -56,8 +56,16 @@
 - 練習問題独立計算・論理QA: `12 / 12 PASS`
 - 練習問題正答一意性QA: `12 / 12 PASS`
 - 練習問題→固定EXAM_ALIGNMENT接続: `5 / 5 PASS`
-- 状態: `topic_13_practice_source_complete`
-- 次工程: 固定EXAM_ALIGNMENTと問題・正答を変更せず練習PDFを作成する
+- 練習PDF: 完成（A4縦3ページ）
+- 練習PDF表示QA: `3 / 3 PASS`
+- 練習PDF文字抽出QA: `PASS`
+- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
+- 練習PDF欠落・破損グリフ: `0件`
+- 練習PDF固定過去問マッピング: `5 / 5`
+- practice PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_practice.pdf`
+- practice PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_practice_pdf_qa.md`
+- 状態: `topic_13_practice_pdf_complete`
+- 次工程: 固定EXAM_ALIGNMENTと問題・正答を変更せず解説画像PowerPointを作成する
 
 ## Topic 12 最終品質状態
 - 固定範囲: 2進数 / 16進数 / ビット / バイト / 論理回路 / AND / OR / NOT / NAND / NOR / XOR / 論理式 / 真理値表 / A/D変換 / D/A変換 / センサ / 情報伝送
@@ -187,6 +195,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 13「新幹線は主電動機以外もモーターだらけ？」の練習問題sourceを作成した。全12問・全問五肢択一（基礎3 / 本試験標準7 / 複合・応用2）。独立計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5過去問への接続 `5 / 5 PASS`。固定EXAM_ALIGNMENT変更、系列SPEC外論点追加、Topic 14〜16先取り、未確認補機仕様の追加はいずれも0件。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」の練習PDFを完成・GitHub正本へ反映した。A4縦3ページ、全12問・全問五肢択一（基礎3 / 本試験標準7 / 複合・応用2）、完全解説 `12 / 12`。200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`、固定5過去問への接続 `5 / 5 PASS`。固定EXAM_ALIGNMENT変更、系列SPEC外論点追加、Topic 14〜16先取り、未確認補機仕様の追加はいずれも0件。
 
-完成数は `12 / 16` のまま。次工程はTopic 13の練習PDF。
+完成数は `12 / 16` のまま。次工程はTopic 13の解説画像PowerPoint。
