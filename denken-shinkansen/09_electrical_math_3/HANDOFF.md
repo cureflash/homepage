@@ -1,6 +1,6 @@
 # HANDOFF - 電験三種「電気数学」
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 現在地
 
@@ -8,13 +8,13 @@ Topic 01〜11は `completed`。
 
 完成数: `11 / 12`
 
-current_status: `topic_12_practice_source_complete`
+current_status: `topic_12_practice_pdf_complete`
 
 last_completed_topic: `11 グラフ・特性曲線を読む`
 
 active_topic: `12 電気数学総合`
 
-next_start: `Topic 12の練習PDF（解答・完全解説付き）`
+next_start: `Topic 12の解説画像PowerPoint`
 
 ## Topic 11 固定仕様範囲
 
@@ -395,6 +395,23 @@ R8上 電力 問15は Topic 09では水力設備知識が固定範囲外だっ�
 
 練習source判定: `PASS / PRACTICE_SOURCE_COMPLETE`。
 
+## Topic 12 練習PDF
+
+練習問題sourceを正本として次をGitHub正本へ反映した。
+
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_practice.pdf`
+- A4縦6ページ
+- 200 dpi表示QA `6 / 6 PASS`
+- 文字抽出QA `PASS`
+- 全12問・全問五肢択一、解答・完全解説付き
+- 練習sourceの正答・数値との整合 `12 / 12 PASS`
+- 固定5過去問への接続 `5 / 5`
+- 固定EXAM_ALIGNMENT変更0件
+- 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
+- 未確認の新幹線実車値追加0件
+
+判定: `topic_12_practice_pdf_complete / IN_PROGRESS`。
+
 ## 次工程
 
-練習sourceを正本として、Topic 12の練習PDF（解答・完全解説付き）を作成する。
+Topic 12の解説画像PowerPointを作成する。
