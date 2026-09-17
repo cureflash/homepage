@@ -75,22 +75,22 @@ H30/H25二次「電力・管理」は系統インピーダンス、変圧器、�
 
 判定: `PASS`
 
-### 6. 進捗記録整合
+### 6. 初回blockerの解消確認
 
-実成果物・完成後独立再解答済み状態に対し、次の3件が未同期である。
+初回最終QAで指摘した3件をGitHub正本で再確認した。
 
-1. 主source冒頭が `stage: EXPLANATION_SOURCE_COMPLETE` のままで、解説PDF・練習問題・練習PDF・PowerPoint・完成後独立再解答をすべて `未着手`、次工程を「解説PDF＋表示QA」と記録している。
-2. 主source末尾 `## 9. 制作進捗` が、解説PDF以降を未完了のままとし、現在地を `EXPLANATION_SOURCE_COMPLETE`、次工程を「解説PDF＋表示QA」と記録している。
-3. 練習source冒頭が `stage: PRACTICE_PDF_COMPLETE`、次工程「解説画像PowerPoint＋表示QA」のままで、既に完了しているPowerPoint＋表示QAと完成後独立再解答を反映していない。
+- 主source冒頭: `SOURCE_PROGRESS_SYNCED / in_progress`、完成後独立再解答 `PASS / INDEPENDENT_REANSWER_COMPLETE`、次工程「最終QA再実施」へ同期済み
+- 主source末尾: 解説PDF、練習問題source＋PDF、PowerPoint＋表示QA、完成後独立再解答、初回最終QA、旧進捗記録同期を完了扱いへ同期済み
+- 練習source冒頭: `SOURCE_PROGRESS_SYNCED / in_progress`、固定3問・5答案要素への接続 `5 / 5`、次工程「最終QA再実施」へ同期済み
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・成果物自体の不整合ではなく、進捗記録だけの不整合である。
+旧工程を示していた3件は解消しており、実在成果物・独立再解答済み状態と矛盾する旧進捗記録は残っていない。
 
-判定: `FAIL / exact blocker`
+判定: `PASS`
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / FINAL_QA_COMPLETE`
 
-固定3問・5答案要素の完成後独立再解答 `5 / 5 PASS`、必須成果物、表示QA、練習QA、二次採用判断、SPEC境界はPASS。未完了理由は上記3件の進捗記録不整合のみ。
+固定一次2問・3答案要素＋二次1問・2答案要素の独立再解答 `5 / 5 PASS`、二次採用判断、必須成果物、表示QA、練習QA、SPEC境界、初回blocker解消を全件PASS確認した。
 
-次工程は、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、主source冒頭・主source末尾・練習source冒頭の3箇所だけを実成果物へ同期し、その後に最終QAを再実施する。完成数は `13 / 21` のままとする。
+このrunでは最終QA再実施までを完了とし、Topic 14自体の `completed` 化は次工程で主source・練習source・STATUS・HANDOFFの完了状態を一括同期してから確定する。完成数はまだ `13 / 21` のままとする。
