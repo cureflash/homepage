@@ -4,7 +4,7 @@
 
 - series: `04_shinkansen_theory_3`
 - topic: `13`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `COMPLETED`
 - 更新日: 2026-09-17
 
 ## 固定範囲
@@ -315,4 +315,4 @@ P=ΣVnIn cosφn を用いる。P1=200×3.0×0.80=480 W、P3=40×1.5×0.60=36 W�
 
 ## 次工程
 
-完成後公式過去問独立再解答 `4 / 4 PASS`。次はTopic 13の最終QAを実施する。最終QA前なのでTopic 13は `completed` にしない。
+最終QAを実施し `PASS / completed`。固定4問の完成後独立再解答 `4 / 4 PASS`、必須成果物・表示QA・SPEC境界・進捗記録整合性を全件PASS確認済み。次はTopic 14「East iは何をどう測っている？」の制作前EXAM_ALIGNMENTへ進む。固定EXAM_ALIGNMENTは変更しない。
