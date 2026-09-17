@@ -6,20 +6,22 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_exam_alignment_complete`
-- 次工程: Topic 16 解説source作成
+- current status: `topic_16_explanation_source_complete`
+- 次工程: Topic 16 解説PDF作成
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 15既存成果物を確認した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 16 sourceを確認した。
 - Topic 01〜15は最終QA `PASS / completed` のまま変更なし。
 - 最初の未完了テーマは Topic 16。
 - Topic 16の系列SPEC固定範囲は、リチウムイオン電池、起電力、内部抵抗、放電電流、電圧降下、Ah、Wh、C-rate、DCリンク、DC/DC変換の概念、変換効率。
-- 制作前EXAM_ALIGNMENTを `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link.md` に作成した。
-- R08一次「機械」まで直近年度から確認し、固定範囲へ直接対応する一次4問＋二次記述1問、計5問・12答案要素を品質ゲート対象として固定した。
-- R07一次「機械」問5は一般電気化学・鉛蓄電池が中心で固定範囲への直接性が低いため、件数合わせでは採用しない。
-- 未確認N700S実車値、Topic 17以降の論点、電池材料反応・BMS、チョッパ回路詳細の仕様追加は `0件`。
+- 固定EXAM_ALIGNMENTは一次4問＋二次記述1問、計5問・12答案要素のまま変更なし。
+- 解説sourceを完成し、固定12答案要素を本文へ `12 / 12` 接続した。
+- `V=E∓Ir`、Ah/Wh、C-rate、`I²r`、DC/DC、DCリンク、変換効率を式・単位・逆算・解法手順まで説明した。
+- 基礎／本試験標準／複合の3段階例題を作成し、計算整合を確認した。
+- N700S側は東芝公式資料で、自走用SCiBバッテリー装置と駆動システムへの給電関係を確認した。
+- 未確認N700S電池電圧・容量・セル数・内部抵抗・C-rate・効率の実車値化、Topic 17以降先取り、電池材料反応・BMS・チョッパ回路詳細の仕様追加は `0件`。
 - 固定問題の正答記号・完成済み数値解の保存は `0件`。完成教材後のblind独立再解答まで参照しない。
 
 ## Topic 15 最終状態
@@ -42,17 +44,20 @@
 
 一次4問＋二次記述1問、計5問。品質ゲート対象は12答案要素。
 
-## Topic 16 制作前ゲート
-- [x] `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、最新 `STATUS.md`、`HANDOFF.md` を確認
-- [x] R08一次「機械」まで直近年度から公式過去問を確認
-- [x] 一次・二次を含む固定5問・12答案要素を確定
-- [x] 関連する二次記述 H23「機械・制御」問3を含めた
-- [x] 固定範囲外を件数合わせで追加していない
-- [x] 未確認N700S実車値追加 `0件`
+## Topic 16 解説sourceゲート
+- [x] 固定5問・12答案要素を変更していない
+- [x] 固定12答案要素を本文へ `12 / 12` 接続
+- [x] 起電力・内部抵抗・端子電圧・内部抵抗損を説明
+- [x] Ah・Wh・平均電圧・C-rateを説明
+- [x] 充放電電流・端子電圧波形・充放電時間を説明
+- [x] DC/DC・DCリンク・変換効率を説明
+- [x] 3段階例題を作成し再計算PASS
+- [x] N700S実車側を公式メーカー資料で確認
+- [x] 未確認実車値追加 `0件`
 - [x] Topic 17以降先取り `0件`
-- [x] 正答記号・完成済み数値解保存 `0件`
-- [x] 参考教材2系統以上を確認
-- 判定: `PASS / topic_16_exam_alignment_complete`
+- [x] 仕様外論点追加 `0件`
+- [x] 正答記号・完成済み固定問題数値解保存 `0件`
+- 判定: `PASS / topic_16_explanation_source_complete`
 
 ## 次に行うこと
-固定EXAM_ALIGNMENTを変更せず、Topic 16解説sourceを作成する。`V=E-Ir`、Ah/Wh、C-rate、`I²r`、DC/DCとDCリンク、変換効率を、固定12答案要素を教材だけで解ける粒度まで説明する。N700Sの数値は一次資料確認済みの値だけを実車値として扱う。
+固定EXAM_ALIGNMENTと解説sourceを変更せず、Topic 16解説PDFを作成する。固定12答案要素、3段階例題、N700S実車事実と教材用仮定値の区別を維持する。
