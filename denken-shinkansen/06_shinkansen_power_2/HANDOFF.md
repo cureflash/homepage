@@ -3,11 +3,31 @@
 updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `12`
-current_status: `topic_12_explanation_source_complete`
+current_status: `topic_12_explanation_pdf_complete`
 
 ## 今回完了
 
-Topic 12「N700Sが何本も同時加速したら？」の解説本文sourceを制作した。
+Topic 12「N700Sが何本も同時加速したら？」の解説PDFを制作し、QAを完了した。
+
+成果物:
+- `topics/12_multiple_train_load/12_multiple_train_load_explanation.pdf`
+- `topics/12_multiple_train_load/12_multiple_train_load_explanation_pdf_qa.md`
+
+QA結果:
+- A4縦 `3ページ`
+- 200 dpi表示QA `3 / 3 PASS`
+- `pdftotext` 文字抽出 PASS、置換文字 U+FFFD `0件`
+- 数式・単位・3段階例題の独立再計算 `3 / 3 PASS`
+- 固定5問・25答案要素の教材内説明マッピング `25 / 25`
+
+制作前再解答で不足していた進み/遅れ無効電力の符号規約をPDF上でも明示した。
+- `S=P+jQ`
+- 遅れ `Q>0`
+- 進み `Q<0`
+- 三相負荷 `I=(P-jQ)/(√3V)`
+- 「進み/遅れ→Qの符号→共役→負荷電流」の順で解く
+
+## 正式品質ゲート
 
 固定済みの品質ゲートは変更していない。
 - 令和4年度 第二種二次「電力・管理」問6 — 制作前再解答 `8 / 8 PASS`
@@ -17,41 +37,23 @@ Topic 12「N700Sが何本も同時加速したら？」の解説本文sourceを�
 - 平成23年度 第二種二次「電力・管理」問6 — 制作前再解答 `3 / 3 PASS`
 - 制作前合計: 一次1問＋二次4問、`23 / 25答案要素 PASS`
 
-本文では固定5問・25答案要素を `25 / 25` 説明箇所へマッピングした。これは説明の存在確認であり、完成後blind独立再解答PASSを意味しない。
-
-## 今回反映した不足
-
-制作前再解答で不足していた複素電流の符号規約を、既存固定範囲「複素電力から線路電流を求める方法」の具体化として本文へ反映した。
-
-- `S=P+jQ`
-- 遅れ無効電力 `Q>0`
-- 進み無効電力 `Q<0`
-- 三相負荷で基準電圧位相を0とした `I=(P-jQ)/(√3V)`
-- 文章の進み/遅れを `Q` の符号へ変換してから電流計算する手順
-- 各負荷電流の符号確定後に複数枝KVL・ループ電流へ進む手順
-
-加えて、需要率・不等率・負荷率、定電力負荷、簡易P-Q潮流、複数枝電流、`I^2R` 損失、損失係数を固定範囲内で説明し、3段階例題を作成した。
+PDF内の `25 / 25` は説明箇所の存在確認であり、完成後blind独立再解答PASSではない。
 
 ## 品質境界
 
 - 固定5問・25答案要素の変更: `0件`
 - Topic 13以降の論点追加: `0件`
 - 未確認N700S実設備値の真値使用: `0件`
-- 公式過去問の個別正答値・正答記号の転記: `0件`
-
-source:
-- `topics/12_multiple_train_load/12_multiple_train_load.md`
-- `topics/12_multiple_train_load/12_preproduction_reanswer.md`
-- `topics/12_multiple_train_load/12_multiple_train_load_explanation.md`
+- 仕様追加: `0件`
 
 ## 現在地
 
 Topic 11: `completed`。
 
-Topic 12: 解説本文source完了。品質ゲートは完成後blind独立再解答まで未通過。
+Topic 12: 解説PDF＋QA完了。品質ゲートは完成後blind独立再解答まで未通過。
 
 完成数: `11 / 22`。
 
 ## 次に行う
 
-Topic 12の解説PDFを制作し、表示・文字抽出・数式欠落・3段階例題をQAする。固定5問・25答案要素と進み/遅れ無効電力符号規約を落とさず、後続Topicの論点や未確認実設備値で補わない。
+Topic 12の練習問題・完全解説sourceを制作する。一次試験型と二次記述型を固定5問・25答案要素へ接続し、進み/遅れ無効電力の符号規約を落とさない。仕様外論点・Topic 13以降・未確認N700S実設備値は追加しない。
