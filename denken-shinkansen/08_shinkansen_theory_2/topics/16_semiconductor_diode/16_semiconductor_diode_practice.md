@@ -6,9 +6,9 @@
 
 固定EXAM_ALIGNMENTの一次5問・25答案要素、およびTopic 16固定範囲だけから練習問題12問を作成した。二種理論は一次試験が中心であり、固定範囲だけで完結する二次記述式が確認できないため、二次数合わせは行わない。
 
-- completion: `in_progress`
-- stage: `PROGRESS_RECORDS_SYNCED`
-- 次工程: 最終QA再実施
+- completion: `completed`
+- stage: `COMPLETED`
+- 次工程: Topic 17 制作前EXAM_ALIGNMENT
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
@@ -275,4 +275,4 @@ a〜eはすべて正しい。p側に負の固定アクセプタ、n側に正の�
 
 # 次工程
 
-最終QAを再実施し、進捗記録同期を確認する。
+Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の制作前EXAM_ALIGNMENTを行う。
