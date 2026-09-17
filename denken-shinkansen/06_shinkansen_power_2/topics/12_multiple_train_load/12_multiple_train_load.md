@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_12_progress_records_synced`
+`completed`
 
-解説本文、解説PDF、練習問題・練習PDF、計算プログラム・CSV・グラフ、PowerPoint、各QA、完成後blind独立再解答まで完了。初回最終QAでは技術内容・固定品質ゲートはPASSし、進捗記録4箇所のみ旧状態と判定された。本更新で当該進捗記録を実成果物状態へ同期し、最終QA再判定前のためTopic 12は未完了を維持する。
+制作前EXAM_ALIGNMENT、制作前独立再解答、解説本文、解説PDF、練習問題・練習PDF、計算プログラム・CSV・グラフ、PowerPoint、各QA、完成後blind独立再解答、最終QA再判定まで完了した。完成後blind独立再解答は一次 `5 / 5`＋二次 `20 / 20`＝`5 / 5問・25 / 25答案要素 PASS`。初回最終QAで唯一FAILだった旧進捗記録を実成果物へ同期後、技術内容・試験対応品質ゲート・必須成果物・PDF/PPTX QA・練習QA・計算プログラムQA・blind独立再解答・SPEC境界・進捗記録整合を再確認し、全件PASSとして `completed` とした。技術本文、固定EXAM_ALIGNMENT、正式5問・25答案要素、問題・正答、PDF/PPTX、計算プログラムは変更していない。
 
 正式品質ゲートは、第二種一次「電力」1問＋第二種二次「電力・管理」4問の計5問、`25答案要素` に固定する。件数合わせのためにTopic 12固定範囲外の論点は追加しない。
 
@@ -297,4 +297,4 @@ Topic 12での教材マッピング:
 
 ## 次工程
 
-初回最終QAで検出した4箇所の進捗記録同期は完了。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・計算プログラムは変更せず、`12_multiple_train_load_final_qa.md` を再判定する。全項目PASSの場合のみTopic 12を `completed`、完成数を `12 / 22` とする。
+Topic 13「単相の新幹線負荷は三相系統を乱さない？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` の固定範囲を守り、まず一次・二次の公式過去問要求を確定する。
