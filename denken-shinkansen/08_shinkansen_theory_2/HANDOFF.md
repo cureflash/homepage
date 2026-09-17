@@ -6,11 +6,11 @@
 
 Topic 01〜16は `PASS / completed`。完成数は `16 / 21`。
 
-current_status: `topic_17_final_qa_needs_revision`
+current_status: `topic_17_progress_records_synced`
 
 active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 
-Topic 17の初回最終QAまで完了。固定一次5問・25答案要素の完成後独立再解答、必須成果物、表示QA、練習QA、二次採用判断、SPEC境界はPASS。主source・練習sourceに旧工程の進捗記録4箇所が残るため `NEEDS_REVISION / IN_PROGRESS`。次工程はこの4箇所だけを実成果物状態へ同期する。
+Topic 17の初回最終QAでblockerだった主source・練習sourceの旧進捗記録4箇所を実成果物状態へ同期済み。固定一次5問・25答案要素、二次採用判断、必須成果物、表示QA、練習QA、SPEC境界は維持してPASS。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程は最終QA再実施。
 
 ## Topic 16 成果物
 
@@ -173,7 +173,7 @@ Topic 17の初回最終QAまで完了。固定一次5問・25答案要素の完�
 - 完成後独立再解答: `topics/17_transistor_fet_switching/17_transistor_fet_switching_reanswer.md`
 - 最終QA: `topics/17_transistor_fet_switching/17_transistor_fet_switching_final_qa.md`
 - completion: `in_progress`
-- stage: `FINAL_QA_NEEDS_REVISION`
+- stage: `PROGRESS_RECORDS_SYNCED`
 
 ## Topic 17 固定範囲
 
@@ -337,6 +337,18 @@ R8一次理論は確認したが固定範囲の直接対応問題なし。R7〜R
 
 初回判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 17 進捗記録同期
+
+初回最終QAのblocker 4箇所を実成果物状態へ同期した。
+
+- 主source冒頭: `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」へ更新
+- 主source末尾: 次工程「最終QA再実施」へ更新
+- 練習source冒頭: `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」へ更新
+- 練習source末尾: 次工程「最終QA再実施」へ更新
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
+
+判定: `PASS / PROGRESS_RECORDS_SYNCED`
+
 ## 次工程
 
-Topic 17の技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXを変更せず、主source・練習sourceの旧進捗記録4箇所だけを実成果物状態へ同期する。その後、最終QAを再実施する。
+Topic 17の技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXを変更せず、最終QAを再実施する。
