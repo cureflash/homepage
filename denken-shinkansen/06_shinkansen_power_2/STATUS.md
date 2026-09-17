@@ -1,39 +1,45 @@
 # STATUS
 
-updated: 2026-09-17
+updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `12`
 theme: N700Sが何本も同時加速したら？
-current_status: `topic_11_completed`
+current_status: `topic_12_exam_alignment_complete`
 completed_topics: `11 / 22`
+
+## Topic 12 current result
+
+制作前EXAM_ALIGNMENTを完了した。本文・PDF・練習・計算プログラム・PowerPointはまだ制作していない。
+
+正式品質ゲートを次の5問・25答案要素に固定した。
+- 令和4年度 第二種二次「電力・管理」問6 — 需要率・不等率・負荷率 — `8答案要素`
+- 令和元年度 第二種二次「電力・管理」問2 — 簡易電力潮流・受電端電圧 — `6答案要素`
+- 平成30年度 第二種一次「電力」問7 — 三相送電電力・線路損失 — `5答案要素`
+- 平成29年度 第二種二次「電力・管理」問4 — 複数定電力負荷・線路潮流 — `3答案要素`
+- 平成23年度 第二種二次「電力・管理」問6 — 負荷率・損失係数 — `3答案要素`
+- 合計: 一次1問＋二次4問、`5問 / 25答案要素`
+
+制作前確認:
+- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` を再確認
+- 直近年度から公式過去問を確認し、後続Topicの論点を必要とする候補は除外
+- 電験王2、e-sysnetの2系統を説明粒度・解法順の参考として確認
+- 未確認N700S実設備値: `0件`
+- Topic 13以降の仕様追加: `0件`
+- 公式過去問の個別正答値保存: `0件`
+
+source:
+- `topics/12_multiple_train_load/12_multiple_train_load.md`
 
 ## Topic 11 final result
 
-最終QA再判定を実施し、`PASS / completed` とした。
+Topic 11は `PASS / completed` を維持する。
 
 正式品質ゲート:
 - 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
 - 平成27年度 第二種二次「電力・管理」問3 — `4 / 4 PASS`
 - 平成27年度 第二種二次「電力・管理」問4 — `5 / 5 PASS`
 - 平成26年度 第二種二次「電力・管理」問4 — `3 / 3 PASS`
-- 一次1問＋二次3問、計 `4 / 4問・17 / 17答案要素 PASS`
-
-成果物・QA:
-- 解説PDF: A4縦2ページ、表示 `2 / 2 PASS`、文字抽出PASS、3段階例題 `3 / 3 PASS`
-- 練習: 15問（一次10＋二次5）、独立QA `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`、17答案要素接続 `17 / 17 PASS`
-- 練習PDF: A4縦8ページ、表示 `8 / 8 PASS`、文字抽出PASS、GitHub正本bytes再レンダリング差分0
-- 計算プログラム: `x=0.0...12.0 km` を0.1 km刻み121点、パンタグラフ電圧・線路電流・有効電力損失・無効電力 `4 / 4` 出力、代表点再代入・全点傾向QA PASS
-- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0、ZIP整合性PASS、SPEC固定6項目 `6 / 6`、指定4量 `4 / 4`
-- 完成後blind独立再解答: `4 / 4問・17 / 17答案要素 PASS`
-- 教材外補完: `0件`
-- Topic 12以降の先取り: `0件`
-- 未確認実設備値依存: `0件`
-- 仕様追加: `0件`
-- 公式過去問転載: `0件`
-
-原則5問に対し、Topic 11固定範囲だけで問題全体を完答できる5問目は確認できなかったため、固定範囲外論点を追加して件数を水増ししていない。
-
-前回最終QAで唯一FAILだった進捗記録不整合は解消し、主sourceを `completed` へ更新した。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、計算プログラム、blind独立再解答結果は変更していない。
+- 合計: `4 / 4問・17 / 17答案要素 PASS`
 
 ## Gate checklist
 
@@ -48,8 +54,8 @@ completed_topics: `11 / 22`
 - [x] Topic 09 completed
 - [x] Topic 10 completed
 - [x] Topic 11 completed
-- [ ] Topic 12 — production-pre EXAM_ALIGNMENT pending
+- [ ] Topic 12 — production-pre independent reanswer pending
 
 ## next_start
 
-Topic 12「N700Sが何本も同時加速したら？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` に従い、一次・二次の公式過去問を直近年度優先で調査し、固定範囲だけで要求知識・式・設問型・教材マッピングを確定する。
+Topic 12の制作前独立再解答を行う。保存済み公式解答・解説を先に見ず、固定した5問・25答案要素がTopic 12固定範囲と既習Topic 01〜11だけで解答可能かを確認する。外部知識補完が必要な答案要素があれば、その不足だけを教材必須説明へ戻し、後続Topicの論点や未確認実設備値で補わない。
