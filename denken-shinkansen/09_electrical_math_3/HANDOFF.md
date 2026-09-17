@@ -8,13 +8,13 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 12`
 
-current_status: `topic_11_preproduction_independent_answer_complete`
+current_status: `topic_11_explanation_source_complete`
 
 last_completed_topic: `10 指数関数・一階微分方程式入門`
 
 active_topic: `11 グラフ・特性曲線を読む`
 
-next_start: `Topic 11解説本文＋3段階例題`
+next_start: `Topic 11解説PDF`
 
 ## Topic 11 固定仕様範囲
 
@@ -88,8 +88,29 @@ next_start: `Topic 11解説本文＋3段階例題`
 
 固定EXAM_ALIGNMENT変更0件。固定範囲外補完0件。
 
-判定: `topic_11_preproduction_independent_answer_complete / IN_PROGRESS`。
+## Topic 11 解説本文＋3段階例題
+
+主sourceへ固定15項目を `15 / 15` 実装し、固定5過去問を `5 / 5` 教材内マッピングした。
+
+本文で扱った主な読解:
+- 軸・単位・目盛・基本5関数形
+- 傾き・面積・最大最小
+- 交点と安定・不安定
+- 曲線群・負荷線・局所補間
+- 周波数・負荷等のパラメータ変化
+- 分巻電動機、誘導機、変圧器効率、ダイオード非線形特性、RLC周波数特性、速度―時間曲線
+
+3段階例題:
+- 基礎: 速度―時間曲線 → `a=1.0 m/s^2`、`x=200 m`
+- 本試験標準: 変圧器最大効率 → 負荷率 `0.50`、`η≈97.6 %`
+- 複合・ひっかけ: 負荷線・曲線群・補間 → `I_C=3.0 mA`、`I_B≈17.5 μA`、`R_B≈246 kΩ`
+
+独立再計算 `3 / 3 PASS`。
+
+固定EXAM_ALIGNMENT変更0件。伝達関数・ボード線図・PID等の固定範囲外追加0件。
+
+判定: `topic_11_explanation_source_complete / IN_PROGRESS`。
 
 ## 次工程
 
-固定15項目と固定5問から逆算し、Topic 11固定範囲内で解説本文＋3段階例題を作成する。
+主sourceを正本としてTopic 11解説PDFを作成し、表示QA・文字抽出QA・数値整合を確認する。
