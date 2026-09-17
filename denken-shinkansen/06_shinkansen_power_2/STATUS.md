@@ -4,12 +4,14 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `11`
 theme: 新幹線が移動すると電圧はどう変わる？
-current_status: `topic_11_independent_reanswer_complete`
+current_status: `topic_11_final_qa_needs_revision`
 completed_topics: `10 / 22`
 
 ## Topic 11 current result
 
-制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QA、計算プログラム・CSV・グラフと独立計算QA、解説画像PowerPointとPowerPoint QA、完成後blind独立再解答まで完了した。
+制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QA、計算プログラム・CSV・4グラフと独立計算QA、解説画像PowerPointとPowerPoint QA、完成後blind独立再解答まで完了した。
+
+最終QAを実施し、技術内容・試験対応・必須成果物・各QA・SPEC境界はPASS。唯一の未完了理由は、主source・練習source・PowerPoint QAに残る旧進捗記録4箇所である。技術内容は修正しない。
 
 正式品質ゲート:
 - 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
@@ -18,82 +20,28 @@ completed_topics: `10 / 22`
 - 平成26年度 第二種二次「電力・管理」問4 — `3 / 3 PASS`
 - 一次1問＋二次3問、計 `4 / 4問・17 / 17答案要素 PASS`
 
-解説成果物:
-- `topics/11_moving_train_voltage/11_moving_train_voltage_explanation.md`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_explanation.pdf`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_explanation_pdf_qa.md`
-- A4縦 `2ページ`
-- 200 dpi表示QA `2 / 2 PASS`
-- `pdftotext` 文字抽出QA: PASS / U+FFFD `0件`
-- 3段階例題独立再計算 `3 / 3 PASS`
-- SPEC固定内容 `6 / 6`
-- SPEC指定計算量への数式接続 `4 / 4`
-- 正式品質ゲート本文マッピング `17 / 17`
-
-練習成果物:
-- `topics/11_moving_train_voltage/11_moving_train_voltage_practice.md`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_practice_qa.md`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_practice.pdf`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_practice_pdf_qa.md`
-- 全15問: 基礎4 / 本試験標準8 / 複合・応用3
-- 二種一次型五肢択一10問 / 二種二次型記述5問
-- 一次型正答一意性: `10 / 10 PASS`
-- 独立数値・論理QA: `15 / 15 PASS`
-- 正式4問・17答案要素への練習接続: `17 / 17 PASS`
-- SPEC固定6項目: `6 / 6 PASS`
-- 計算プログラム指定4量への接続: `4 / 4 PASS`
-- 練習PDF: A4縦 `8ページ`
-- 200 dpi表示QA: `8 / 8 PASS`
-- `pdftotext` 文字抽出QA: PASS / U+FFFD `0件`
-- PDF SHA-256: `d7b6c17e52e9d15d6ecc07e2c9a7dc58acd503c6c784932da2d52bffb8c49527`
-- Git blob SHA: `4aeffbd83faf7256161475899f8e3f8319d29073`
-- GitHub正本bytes再レンダリング差分: `8 / 8ページ・0差分 PASS`
-
-計算プログラム成果物:
-- `topics/11_moving_train_voltage/11_moving_train_voltage_sim.py`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_sweep.csv`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_pantograph_voltage.svg`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_line_current.svg`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_active_loss.svg`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_reactive_power.svg`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_sim_qa.md`
-- 解説例題2の教材上仮定値を再利用し、`x=0.0 ... 12.0 km` を `0.1 km` 刻みで `121点` 掃引
-- パンタグラフ電圧・線路電流・有効電力損失・無効電力: `4 / 4` CSV出力・グラフ化 PASS
-- 代表点 `0 / 6 / 12 km` 独立再代入 PASS
-- `x=12 km`: `Vr=24.866572 kV`, `I=178.731693 A`, `P_loss=15.333609 kW`
-- 解説例題2の丸め値と一致
-- 全点傾向QA: `Vr` 単調非増加、`I/P_loss/Q_line` 単調非減少、`Q_load` 一定 — PASS
-
-PowerPoint成果物:
-- `topics/11_moving_train_voltage/11_moving_train_voltage_images.pptx`
-- `topics/11_moving_train_voltage/11_moving_train_voltage_powerpoint_qa.md`
-- 16:9 `4スライド`
-- SPEC固定6項目: `6 / 6` 可視化
-- SPEC指定4量: `4 / 4 PASS`
-- 正式4問・17答案要素への論点接続: 維持 / EXAM_ALIGNMENT変更 `0件`
-- 1601×900表示QA: `4 / 4 PASS`
-- `slides_test.py`: `PASS / No overflow detected`
-- PPTX ZIP整合性: PASS
-- SHA-256: `358c809cbaff5358147a9e4027aa5d9b3711bdad7c4926d2768d3efa68e2cce6`
-
-完成後blind独立再解答:
-- `topics/11_moving_train_voltage/11_moving_train_voltage_blind_reanswer_20260917.md`
-- 平成30年度 第二種一次「電力」問7: `5 / 5 PASS`
-- 平成27年度 第二種二次「電力・管理」問3: `4 / 4 PASS`
-- 平成27年度 第二種二次「電力・管理」問4: `5 / 5 PASS`
-- 平成26年度 第二種二次「電力・管理」問4: `3 / 3 PASS`
-- 一次 `5 / 5` + 二次 `12 / 12` = `4 / 4問・17 / 17答案要素 PASS`
+成果物・QA:
+- 解説PDF: A4縦2ページ、表示 `2 / 2 PASS`、文字抽出PASS、3段階例題 `3 / 3 PASS`
+- 練習: 15問（一次10＋二次5）、独立QA `15 / 15 PASS`、一次正答一意性 `10 / 10 PASS`、17答案要素接続 `17 / 17 PASS`
+- 練習PDF: A4縦8ページ、表示 `8 / 8 PASS`、文字抽出PASS、GitHub正本bytes再レンダリング差分0
+- 計算プログラム: `x=0.0...12.0 km` を0.1 km刻み121点、パンタグラフ電圧・線路電流・有効電力損失・無効電力 `4 / 4` 出力、代表点再代入・全点傾向QA PASS
+- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0、ZIP整合性PASS、SPEC固定6項目 `6 / 6`、指定4量 `4 / 4`
+- 完成後blind独立再解答: `4 / 4問・17 / 17答案要素 PASS`
 - 教材外補完: `0件`
-- 仕様追加: `0件`
-
-本文・練習・計算プログラム・PowerPointでは、位置 `x` から `Z(x)` を作る方法、`S=P+jQ=VI*`、`V_s=V_r+ZI`、厳密な受電端電圧式、近似電圧降下、`I²R` 損失、位置比較、分布負荷の積分法を扱う。H30一次問7の導体量関係はTopic 10既習事項として再確認するだけで、新規主題にはしていない。
-
-範囲監査:
 - Topic 12以降の先取り: `0件`
 - 未確認実設備値依存: `0件`
 - 仕様追加: `0件`
 - 公式過去問転載: `0件`
-- 例題・練習・計算プログラム・PowerPoint数値はすべて教材上の仮定値
+
+最終QA記録:
+- `topics/11_moving_train_voltage/11_moving_train_voltage_final_qa.md`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
+exact blocker:
+1. `11_moving_train_voltage.md` 冒頭 `## 状態` が `topic_11_practice_source_complete / IN_PROGRESS` のまま。
+2. 同main sourceの冒頭要約・末尾 `## 次工程` が練習PDF・計算プログラム・PowerPoint制作前のまま。
+3. `11_moving_train_voltage_practice.md` 冒頭 `状態` が `topic_11_practice_source_complete / IN_PROGRESS` のまま。
+4. `11_moving_train_voltage_powerpoint_qa.md` 末尾が「完成後blind独立再解答はまだ実施しない」のまま。
 
 ## Gate checklist
 
@@ -107,8 +55,8 @@ PowerPoint成果物:
 - [x] Topic 08 completed
 - [x] Topic 09 completed
 - [x] Topic 10 completed
-- [ ] Topic 11 — blind independent reanswer complete / IN_PROGRESS
+- [ ] Topic 11 — final QA `NEEDS_REVISION / IN_PROGRESS`
 
 ## next_start
 
-Topic 11の最終QAを実施し、成果物・進捗記録・固定EXAM_ALIGNMENT・完成後blind独立再解答結果の整合を再判定する。最終QA PASSまでは `completed` にしない。
+技術内容は変更せず、上記4箇所の進捗記録だけを実成果物状態へ同期する。同期後にTopic 11最終QAを再実施し、全項目PASSの場合のみ `completed`、完成数 `11 / 22` とする。
