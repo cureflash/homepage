@@ -1,7 +1,7 @@
 # Topic 12 300系はなぜVVVFになった？
 
 更新日: 2026-09-17
-status: `INDEPENDENT_REANSWER_COMPLETE`
+status: `COMPLETED`
 
 ## 1. SPEC固定範囲
 
@@ -413,8 +413,8 @@ D. 可変容量ダイオードは逆方向バイアスによる空乏層幅の�
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答
-- [ ] 最終QA
+- [x] 最終QA
 
 ## 次工程
 
-完成後独立再解答 `7 / 7 PASS` まで完了。次はTopic 12の最終QAを再実施する。
+最終QAを再実施し `PASS / completed`。固定7問の完成後独立再解答 `7 / 7 PASS`、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合性を全件PASS確認済み。次はTopic 13「インバータはどうやって三相交流を作る？」の制作前EXAM_ALIGNMENTへ進む。
