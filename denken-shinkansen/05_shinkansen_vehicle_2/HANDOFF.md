@@ -7,9 +7,9 @@
 
 Topic 01〜13は最終QAまで `PASS / completed`。完成数は `13 / 39`。
 
-現在地は `topic_14_practice_source_complete`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は固定一次2問＋二次3問、計5問・9答案要素と制作前検証 `9 / 9 PASS` を変更せず、解説source、解説PDF、練習問題sourceまで完成した。
+現在地は `topic_14_practice_pdf_complete`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は固定一次2問＋二次3問、計5問・9答案要素と制作前検証 `9 / 9 PASS` を変更せず、解説source、解説PDF、練習問題source、練習PDFまで完成した。
 
-次はTopic 14の練習PDF。
+次はTopic 14の解説画像PowerPoint。
 
 ## Topic 14 固定EXAM_ALIGNMENT
 source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -93,6 +93,26 @@ R8一次「機械」にはTopic 14の走行抵抗・必要けん引力・機械�
 
 練習問題の列車側数値は解説sourceと同じ教材用仮定モデルを使用した。固定R7二次への接続では同期速度・滑りの数値処理だけを扱い、滑り制御方式は追加していない。
 
+## Topic 14 練習PDF
+- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_practice.pdf`
+- QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_practice_qa.md`
+- 判定: `PASS / PRACTICE_PDF_COMPLETE`
+- A4縦2ページ
+- 一次8問＋二次4問: `12 / 12` 完全解説付き
+- 180 dpi表示QA: `2 / 2 PASS`
+- 文字抽出QA: `PASS`
+- 文字欠落・黒四角・重なり・クリップ: `0件`
+- 固定5過去問・9答案要素接続: `9 / 9 PASS`
+- 数値・論理整合: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 二次の途中式・前提・単位・理由: `4 / 4 PASS`
+- SPEC指定8項目: `8 / 8 covered`
+- SPEC指定4可視化の式系・条件との整合: `4 / 4 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認300系実車値の真値化: `0件`
+- PDF SHA-256: `c6294a3297daf587a8c60969d588a78d28ece396a46a3c646131e6edb6e690c7`
+
 ## Topic 14 SPEC固定範囲
 扱う内容:
 - 走行抵抗
@@ -118,4 +138,4 @@ R8一次「機械」にはTopic 14の走行抵抗・必要けん引力・機械�
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次の正確な開始点
-固定EXAM_ALIGNMENT、解説source、解説PDF、練習問題sourceは完成。次はTopic 14の練習PDFを作る。一次8問＋二次4問を完全解説付きで収録し、A4表示・文字抽出・数値整合・固定5過去問9答案要素接続をQAする。固定5過去問・9答案要素、SPEC指定8項目・4可視化条件、教材用仮定式系を変更しない。
+固定EXAM_ALIGNMENT、解説source、解説PDF、練習問題source、練習PDFは完成。次はTopic 14の解説画像PowerPointを作る。SPEC指定4可視化を同じ教材用仮定式系で図示し、表示・文字・数値・固定5過去問9答案要素接続をQAする。固定5過去問・9答案要素、SPEC指定8項目・4可視化条件、教材用仮定式系を変更しない。
