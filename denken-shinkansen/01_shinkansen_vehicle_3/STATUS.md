@@ -5,27 +5,31 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 35 / 38
-- current_status: `topic_36_preanswer_retry_required`
+- current_status: `topic_36_preanswer_complete`
 - last_completed_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
 - active_topic: `36 COSMOS① 新幹線全体を統合管理する`
-- next_start: Topic 36の固定5問・8答案要素を変更せず、新しいblind runで最初から全8答案要素を解き、全答案と根拠を確定した後にのみ公式解答を開く。`8 / 8 PASS`確認後に解説本文へ進む
+- next_start: Topic 36の固定EXAM_ALIGNMENT `5問・8答案要素` と系列SPEC固定範囲だけを使って解説本文を作成し、全8答案要素の要求事項を本文へマッピングする
 
 ## 新品質ゲート進捗
 - [x] 01〜35 — PASS
 
-## 36 制作前独立解答 試行
-`RETRY_REQUIRED / NOT_COUNTED`。
+## 36 制作前独立解答
+`5問・8答案要素 / 8 / 8 PASS`。
 - 固定EXAM_ALIGNMENT: `5問・8答案要素`、変更なし
-- R6上・R4上・R4下の4問・6答案要素: 公式問題PDFだけで先に導出し、全答案確定後に公式解答照合 → `6 / 6一致`
-- H27 機械 問18(a)(b): 問題本文補完中に第三者ページの正答表示へ到達したためblind条件不成立
-- 品質ゲート算入: `0 / 8`（部分合格として扱わない）
+- 新しいblind runで公式問題PDFだけから全8答案要素を先に導出・確定し、その後に公式解答表へ照合
+- R6上 機械 問18(a)(b): `2 / 2 PASS`
+- R4上 機械 問13・問14: `2 / 2 PASS`
+- R4下 機械 問18(a)(b): `2 / 2 PASS`
+- H27 機械 問18(a)(b): `2 / 2 PASS`
+- 公式解答との不一致: `0件`
+- 固定範囲外知識による正答補完: `0件`
+- 未確認COSMOS内部仕様依存: `0件`
 - 個別正答番号・完成導出の必須先読みsource保存: `0件`
 - 固定範囲外追加: `0件`
 - Topic 37以降先取り: `0件`
-- 未確認COSMOS内部仕様追加: `0件`
 - 解説本文・PDF・練習問題・PowerPoint: 未着手
 - 完成数: `35 / 38` 維持
-- 次工程: 新しいblind runで固定5問・8答案要素を最初から全件解き、全答案確定後にのみ公式解答を開く。`8 / 8 PASS`で解説本文へ進む
+- 次工程: 固定EXAM_ALIGNMENTと系列SPEC固定範囲に基づく解説本文作成。全8答案要素の要求事項を本文へマッピングする
 
 ## 35 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
@@ -698,4 +702,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` は固定5過去問の完成後blind独立再解答 `5 / 5問 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数35/38。
 
 ## 次テーマ工程
-Topic 36 `COSMOS① 新幹線全体を統合管理する` は制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定済み。今回の制作前独立解答試行はH27問18の問題本文補完中に第三者ページの正答表示へ到達したため `RETRY_REQUIRED / NOT_COUNTED`。固定内容を変更せず、新しいblind runで全8答案要素を最初から解き、全答案と根拠を確定した後にのみ公式解答を開く。`8 / 8 PASS`確認後に解説本文へ進む。
+Topic 36 `COSMOS① 新幹線全体を統合管理する` は制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定し、新しいblind runで全8答案要素を公式問題PDFだけから先に導出・確定した後、公式解答表と照合して `8 / 8 PASS`。個別正答番号・完成導出は完成後blind再解答保護のため必須先読みsourceへ保存していない。固定内容を変更せず、次は解説本文を作成して全8答案要素の要求事項を本文へマッピングする。
