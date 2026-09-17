@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `14 / 16`
-- current_status: `topic_15_explanation_pdf_complete`
+- current_status: `topic_15_practice_source_complete`
 - last_completed_topic: `14 停電してもN700Sが走れるのはなぜ？`
 - active_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
-- next_start: Topic 15の練習問題sourceを作成する
+- next_start: Topic 15の練習PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -55,8 +55,15 @@
 - 解説PDF固定過去問マッピング: `12 / 12`
 - explanation PDF: `topics/15_lighting_heating/15_lighting_heating_explanation.pdf`
 - explanation PDF QA: `topics/15_lighting_heating/15_lighting_heating_explanation_pdf_qa.md`
-- 状態: `topic_15_explanation_pdf_complete / IN_PROGRESS`
-- 次工程: 固定EXAM_ALIGNMENTを変更せずTopic 15の練習問題sourceを作成する
+- 練習問題source: `12問` 完成
+- practice source: `topics/15_lighting_heating/15_lighting_heating_practice.md`
+- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
+- 練習問題形式: `12 / 12` 五肢択一
+- 練習問題独立計算・論理QA: `12 / 12 PASS`
+- 練習問題正答一意性QA: `12 / 12 PASS`
+- 練習問題→固定EXAM_ALIGNMENT接続: `12 / 12 PASS`
+- 状態: `topic_15_practice_source_complete / IN_PROGRESS`
+- 次工程: 固定EXAM_ALIGNMENTを変更せずTopic 15の練習PDFを作成する
 
 ## Topic 14 最終品質状態
 - 固定範囲: 電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率
@@ -338,6 +345,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 15「車内の照明・空調にはどれだけ電気が必要？」の解説PDFを完成した。A4縦3ページ、200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`。固定EXAM_ALIGNMENT 7問・12答案要素の教材内マッピングは `12 / 12`、3段階例題も収録済み。固定EXAM_ALIGNMENT変更、固定範囲外論点、光束発散度・熱伝導・熱放射・工業電熱、未確認の新幹線車内設備実値、Topic 16先取りはいずれも `0件`。
+Topic 15「車内の照明・空調にはどれだけ電気が必要？」の練習問題sourceを12問作成した。構成は基礎3 / 本試験標準7 / 複合・応用2、全12問を五肢択一とした。独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`、固定EXAM_ALIGNMENT 7問・12答案要素への接続 `12 / 12 PASS`。固定範囲外論点、光束発散度・熱伝導・熱放射・工業電熱、未確認の新幹線車内設備実値、Topic 16先取りはいずれも `0件`。
 
-完成数は `14 / 16` のまま。次工程はTopic 15の練習問題source。
+完成数は `14 / 16` のまま。次工程はTopic 15の練習PDF。
