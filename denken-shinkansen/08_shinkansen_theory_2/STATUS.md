@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 13 / 21
-- current_status: `topic_14_reanswer_complete`
+- current_status: `topic_14_final_qa_needs_revision`
 - last_completed_topic: `13 新幹線の交流電力を複素数で扱う`
 - active_topic: `14 インバータのギザギザ波形を分解する`
-- next_start: Topic 14 最終QA
+- next_start: Topic 14 進捗記録3箇所同期
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -215,22 +215,27 @@
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint＋表示QA
 - [x] 完成後独立再解答: `5 / 5 PASS`
-- [ ] 最終QA
+- [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 
 ## 今回進めた内容
 
-Topic 14「インバータのギザギザ波形を分解する」の完成後独立再解答を完了した。
+Topic 14「インバータのギザギザ波形を分解する」の最終QAを実施した。
 
-- 固定一次2問・3答案要素: `3 / 3 PASS`
-- 固定二次1問・2答案要素: `2 / 2 PASS`
-- 合計: `5 / 5 PASS`
+- 固定一次2問・3答案要素＋二次1問・2答案要素: `5 / 5 PASS`
 - 公式標準解答との一致: `5 / 5`
-- 教材外知識補完: `0件`
-- SPEC固定範囲外追加: `0件`
+- 必須成果物: `PASS`
+- 解説PDF・練習PDF・PowerPoint表示QA: `PASS`
+- 練習12問の数値・論理・正答一意性: `12 / 12 PASS`
+- SPEC固定範囲境界: `PASS`
 - 二次採用: `1問・2答案要素`、二次数合わせ: `0件`
-- Topic 15先取り: `0件`
-- 未確認実車PWM方式・スイッチング周波数・高調波実測値追加: `0件`
+- 進捗記録整合: `FAIL`
+
+exact blockerは進捗記録3箇所のみ。
+
+1. 主source冒頭が `EXPLANATION_SOURCE_COMPLETE` / 解説PDF以降未着手 / 次工程「解説PDF＋表示QA」のまま。
+2. 主source末尾 `## 9. 制作進捗` が解説PDF以降を未完了とし、現在地・次工程も旧状態のまま。
+3. 練習source冒頭が `PRACTICE_PDF_COMPLETE` / 次工程「解説画像PowerPoint＋表示QA」のまま。
 
 ## 判定
 
-Topic 14は `PASS / INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `13 / 21`。次工程は最終QA。
+Topic 14は `NEEDS_REVISION / IN_PROGRESS`。完成数は `13 / 21` のまま。次工程は技術内容を変更せず、上記進捗記録3箇所だけを実成果物へ同期してから最終QAを再実施する。
