@@ -6,22 +6,28 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は35/38。01〜35がPASS。active topicは36 `COSMOS① 新幹線全体を統合管理する`。
 
 ## 今回進捗
-Topic 36の固定EXAM_ALIGNMENT 5問・8答案要素と制作前blind独立解答 `8 / 8 PASS` を変更せず、系列SPEC固定範囲だけで解説sourceを完成し、source QAを `PASS / EXPLANATION_SOURCE_COMPLETE` とした。
+Topic 36の固定EXAM_ALIGNMENT 5問・8答案要素と制作前blind独立解答 `8 / 8 PASS`、完成済み解説sourceを変更せず、解説PDFを作成しPDF QAを `PASS / EXPLANATION_PDF_COMPLETE` とした。
 
 - source: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management.md`
-- QA記録: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation_source_qa.md`
+- 解説PDF: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation.pdf`
+- PDF QA記録: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation_pdf_qa.md`
 - 系列SPEC固定範囲: 運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理
 - 本文: §1〜§16
 - 3段階例題: 基礎／本試験標準／複合・ひっかけ
 - 例題独立再計算: `3 / 3 PASS`
 - 固定EXAM_ALIGNMENT本文マッピング: `8 / 8答案要素 PASS`
+- 解説PDF: A4縦4ページ
+- 180 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- 固定EXAM_ALIGNMENT PDF反映: `8 / 8答案要素 PASS`
 - 固定範囲外追加: `0件`
 - Topic 37〜38先取り: `0件`
 - 未確認COSMOS内部仕様追加: `0件`
+- 「設備管理」をCOSMOS正式独立サブシステム名として断定: `0件`
 - 個別正答番号・公式問題の完成導出保存: `0件`
-- PDF・練習問題・PowerPoint: 未着手
+- 練習問題・PowerPoint: 未着手
 - 完成数: `35 / 38` 維持
-- 次工程: 本sourceだけを正本として解説PDFを作成し、全ページ表示・文字抽出・固定EXAM_ALIGNMENT反映・固定範囲境界をQAする。練習問題・PowerPointへはまだ進まない
+- 次工程: Topic 36の固定範囲から練習sourceを作成し、原則12問以上・少なくとも半数五肢択一・完全解説・固定EXAM_ALIGNMENT接続・独立再解答をQAする。PowerPointへはまだ進まない
 
 ## Topic 36 解説source
 - 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
@@ -40,6 +46,22 @@ Topic 36の固定EXAM_ALIGNMENT 5問・8答案要素と制作前blind独立解�
 - Topic 37以降先取り: `0件`
 - 未確認COSMOS内部仕様追加: `0件`
 - 個別正答番号・公式問題の完成導出保存: `0件`
+
+## Topic 36 解説PDF
+- PDF: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation.pdf`
+- QA記録: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation_pdf_qa.md`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- A4縦4ページ
+- 本文§1〜§16＋3段階例題を収録
+- 固定EXAM_ALIGNMENT: `8 / 8答案要素` 反映
+- 180 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: PASS
+- 固定範囲外追加: `0件`
+- Topic 37以降先取り: `0件`
+- 未確認COSMOS内部仕様追加: `0件`
+- 「設備管理」をCOSMOS正式独立サブシステム名として断定: `0件`
+- 個別正答番号・公式問題の完成導出保存: `0件`
+- 練習問題・PowerPoint: 未着手
 
 ## Topic 35 固定EXAM_ALIGNMENT
 - R7下 機械 問14 — フローチャート、変数更新、条件分岐、反復
@@ -206,11 +228,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_36_explanation_source_complete`
+- `current_status`: `topic_36_explanation_pdf_complete`
 - 完成数: 35/38
 - 01〜35: PASS
 - last completed: 35 `COMTRAC③ ダイヤが乱れたらどうする？`
 - active topic: 36 `COSMOS① 新幹線全体を統合管理する`
 
 ## 次の正確な開始点
-Topic 36は制作前EXAM_ALIGNMENT 5問・8答案要素を固定し、制作前blind独立解答 `8 / 8 PASS` を維持したまま解説sourceを完成。本文§1〜§16、3段階例題、固定5問・8答案要素の本文マッピング `8 / 8 PASS`、例題独立再計算 `3 / 3 PASS`。固定範囲外追加・Topic 37以降先取り・未確認COSMOS内部仕様追加はいずれも0件。次は本sourceだけを正本として解説PDFを作成し、全ページ表示・文字抽出・固定EXAM_ALIGNMENT反映・固定範囲境界をQAする。練習問題・PowerPointへはまだ進まない。
+Topic 36は制作前EXAM_ALIGNMENT 5問・8答案要素を固定し、制作前blind独立解答 `8 / 8 PASS` を維持したまま解説sourceと解説PDFを完成。PDFはA4縦4ページ、180 dpi全ページ表示 `4 / 4 PASS`、文字抽出PASS、固定5問・8答案要素 `8 / 8` 反映。固定範囲外追加・Topic 37以降先取り・未確認COSMOS内部仕様追加はいずれも0件。次はTopic 36の固定範囲から練習sourceを作成し、原則12問以上・少なくとも半数五肢択一・完全解説・固定EXAM_ALIGNMENT接続・独立再解答をQAする。PowerPointへはまだ進まない。
