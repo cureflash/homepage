@@ -4,9 +4,9 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT` と解説本文＋基礎／本試験標準／複合の3段階例題まで完成。解説PDF・練習問題・練習PDF・解説画像PowerPoint・完成後独立再解答は未着手。
+制作前 `EXAM_ALIGNMENT`、解説本文＋基礎／本試験標準／複合の3段階例題、解説PDFまで完成。練習問題・練習PDF・解説画像PowerPoint・完成後独立再解答は未着手。
 
-現在の判定は `topic_15_explanation_source_complete / IN_PROGRESS`。次工程は解説PDF。
+現在の判定は `topic_15_explanation_pdf_complete / IN_PROGRESS`。次工程は練習問題source。
 
 本テーマは系列 `SPEC.md` の固定範囲どおり、次を扱う。
 
@@ -520,6 +520,17 @@
 - [x] 未確認新幹線補機実値の真値化 `0件`
 - [x] 固定公式過去問の個別正答記号・完成済み答案の保存 `0件`
 
+# 解説PDF QA
+
+- [x] `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_explanation.pdf`
+- [x] A4縦5ページ
+- [x] 200 dpi全5ページ表示QA `5 / 5 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 固定一次3問＋二次2問・8答案要素を維持
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3` 収録
+- [x] 固定範囲外論点・Topic 16以降先取り・未確認新幹線補機実値追加 `0件`
+- [x] SHA-256 `87535e7730fa674e1a03c63d8dd4a000f27c3be7c43a50a5667b42700f696313`
+
 # 次工程
 
-Topic 15の解説PDFを作成する。
+Topic 15の練習問題sourceを作成する。
