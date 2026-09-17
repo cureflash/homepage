@@ -1,12 +1,12 @@
 # 16 N700Sバッテリーから主回路へ電力を送る
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT` と、解説本文＋基礎／本試験標準／複合の3段階例題まで完成。
+解説source/PDF、練習source/PDF、解説画像PowerPoint、各QA、完成後独立再解答まで完了し、進捗記録を実成果物状態へ同期した。
 
-現在 `topic_16_explanation_source_complete / IN_PROGRESS`。次工程は解説PDF作成。固定過去問の個別正答記号・完成済み数値解は保存せず、完成教材後の独立再解答まで参照しない。
+現在 `topic_16_progress_records_synced / IN_PROGRESS`。次工程はTopic 16最終QA再実施。固定一次4問＋二次記述1問・12答案要素は変更せず、独立再解答 `12 / 12 PASS` を維持する。
 
 ## 固定範囲
 
@@ -503,4 +503,4 @@ DC/DC後は
 
 ## 次工程
 
-このsourceを正本として Topic 16 解説PDFを作成する。固定12答案要素、3段階例題、N700S実車値と教材用仮定値の区別を維持する。
+Topic 16 最終QAを再実施する。技術本文、固定EXAM_ALIGNMENT、PDF/PPTX、練習問題、完成後独立再解答結果は変更しない。
