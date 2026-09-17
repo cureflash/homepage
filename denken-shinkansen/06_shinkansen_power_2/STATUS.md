@@ -4,14 +4,21 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `10`
 theme: なぜ変電所を何十kmも離せない？
-current_status: `topic_10_final_qa_needs_revision`
+current_status: `topic_10_source_progress_synced`
 completed_topics: `9 / 22`
 
 ## Topic 10 current result
 
-最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS`。
+前回最終QAの唯一のFAILだった進捗記録不整合を修正した。
 
-技術内容・試験対応品質ゲートはPASS:
+同期対象:
+1. `topics/10_substation_spacing/10_substation_spacing.md`
+2. `topics/10_substation_spacing/10_substation_spacing_practice.md`
+3. `topics/10_substation_spacing/10_substation_spacing_powerpoint_qa.md`
+
+技術本文、固定EXAM_ALIGNMENT、正式4問・17答案要素、練習問題・正答、PDF/PPTX、blind独立再解答結果は変更していない。
+
+維持する品質ゲート:
 - 平成30年度 第二種一次「電力」問7
 - 平成27年度 第二種二次「電力・管理」問3
 - 平成27年度 第二種二次「電力・管理」問4
@@ -36,16 +43,9 @@ completed_topics: `9 / 22`
 - 未確認実設備値追加: `0件`
 - 仕様追加: `0件`
 
-未完了理由は進捗記録不整合のみ。
-
-exact blocker:
-1. `topics/10_substation_spacing/10_substation_spacing.md` の冒頭状態・未実施説明が解説source完成時点のまま。
-2. `topics/10_substation_spacing/10_substation_spacing_practice.md` の冒頭状態・末尾次工程が練習PDF生成前のまま。
-3. `topics/10_substation_spacing/10_substation_spacing_powerpoint_qa.md` の末尾次段階がblind独立再解答前のまま。
-
-技術本文、固定EXAM_ALIGNMENT、正式4問・17答案要素、練習問題・正答、PDF/PPTX、blind独立再解答結果は変更不要。
-
 原則5問に対し、Topic 10固定範囲だけで問題全体を完答できる5問目は確認できなかったため、件数合わせを行っていない。
+
+Topic 10はまだ `completed` にしない。前回最終QAの `NEEDS_REVISION` は監査履歴として保持し、次工程で進捗記録整合を含む最終QAを再判定する。
 
 ## Gate checklist
 
@@ -58,8 +58,8 @@ exact blocker:
 - [x] Topic 07 completed
 - [x] Topic 08 completed
 - [x] Topic 09 completed
-- [ ] Topic 10 - final QA `NEEDS_REVISION`; technical gates PASS, progress sync pending
+- [ ] Topic 10 - progress sync complete; final QA re-evaluation pending
 
 ## next_start
 
-上記3ファイルの旧進捗記録だけを実成果物へ同期する。その後、最終QAを再判定し、全件PASSの場合のみTopic 10を `completed` として完成数を `10 / 22` に進める。
+Topic 10の最終QAを再判定する。技術内容・試験対応品質ゲート・必須成果物・PDF/PPTX QA・練習QA・blind独立再解答・進捗記録整合を再確認し、全件PASSの場合のみ `completed` として完成数を `10 / 22` に進める。
