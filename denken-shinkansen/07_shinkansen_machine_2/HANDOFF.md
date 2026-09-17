@@ -6,21 +6,21 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_explanation_pdf_complete`
-- 次工程: Topic 16 練習問題source作成
+- current status: `topic_16_practice_source_complete`
+- 次工程: Topic 16 練習PDF作成
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、直近の07系列コミット、Topic 16 sourceを確認した。
-- 既存の「機械二種を進行」枠で Topic 16 解説sourceが完成済みだったため、その成果を採用して重複制作していない。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、直近の07系列コミット、Topic 16 source・解説PDFを確認した。
 - Topic 01〜15は最終QA `PASS / completed` のまま変更なし。
 - 最初の未完了テーマは Topic 16。
 - Topic 16の系列SPEC固定範囲は、リチウムイオン電池、起電力、内部抵抗、放電電流、電圧降下、Ah、Wh、C-rate、DCリンク、DC/DC変換の概念、変換効率。
 - 固定EXAM_ALIGNMENTは一次4問＋二次記述1問、計5問・12答案要素のまま変更なし。
-- 解説sourceの固定12答案要素 `12 / 12` 接続、3段階例題、N700S実車事実と教材用仮定値の区別をそのまま解説PDFへ反映した。
-- 解説PDFはA4縦8ページ。160 dpi表示QA `8 / 8 PASS`、文字抽出PASS、Unicode置換文字 `0件`、`(cid:)` `0件`。
-- 例題1〜3は独立再計算PASS。
+- 解説source/PDFの固定12答案要素 `12 / 12` 接続、3段階例題、N700S実車事実と教材用仮定値の区別を維持した。
+- 練習問題sourceを一次10問＋二次5問で作成し、固定12答案要素へ `12 / 12` 接続した。
+- 一次10問は全問五肢択一で正答一意性 `10 / 10 PASS`、全15問の計算・論理QA `15 / 15 PASS`。
+- H23二次型として、C-rateからの充放電電流、端子電圧波形、充放電時間、内部抵抗損 `I²r` と損失比較を記述式で演習化した。
 - 未確認N700S電池電圧・容量・セル数・内部抵抗・C-rate・効率の実車値化、Topic 17以降先取り、電池材料反応・BMS・チョッパ回路詳細の仕様追加は `0件`。
 - 固定問題の正答記号・完成済み数値解の掲載は `0件`。完成教材後のblind独立再解答まで参照しない。
 
@@ -77,5 +77,19 @@
 - [x] PDF Git blob SHA `ec0988d134a802f9f54f1e1f54af442e6bde23b6`
 - 判定: `PASS / topic_16_explanation_pdf_complete`
 
+## Topic 16 練習sourceゲート
+- [x] `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.md`
+- [x] 一次試験型10問、全問五肢択一
+- [x] 二次試験型5問、途中式・前提・単位・検算または論証付き
+- [x] 一次正答一意性 `10 / 10 PASS`
+- [x] 独立計算・論理QA `15 / 15 PASS`
+- [x] 固定一次4問＋二次記述1問・12答案要素へ `12 / 12` 接続
+- [x] H23二次型の充放電電流・端子電圧波形・充放電時間・`I²r` 損失比較を記述式で収録
+- [x] 未確認N700S実車値追加 `0件`
+- [x] Topic 17以降先取り `0件`
+- [x] 電池材料反応・BMS・チョッパ回路詳細の仕様追加 `0件`
+- [x] 固定問題の正答記号・完成済み数値解掲載 `0件`
+- 判定: `PASS / topic_16_practice_source_complete`
+
 ## 次に行うこと
-固定EXAM_ALIGNMENTと解説source/PDFを変更せず、Topic 16の練習問題sourceを作成する。二種一次型に加え、H23二次型へ接続する記述式を含め、答えだけでなく途中式・前提・単位・理由説明まで採点可能にする。固定問題の正答記号・完成済み数値解はblind独立再解答まで参照しない。
+固定EXAM_ALIGNMENT、解説source、解説PDF、練習sourceを変更せず、Topic 16の練習PDFを作成する。一次10問＋二次5問の解答・完全解説を収録し、表示QA・文字抽出QA・数値再検算を行う。固定問題の正答記号・完成済み数値解はblind独立再解答まで参照しない。
