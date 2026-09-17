@@ -5,9 +5,11 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜12は最終QAまで `PASS / completed`。完成数は `12 / 39`。
+Topic 01〜13は最終QAまで `PASS / completed`。完成数は `13 / 39`。
 
-現在地は `topic_13_progress_sync_complete`。Topic 13 `300系④ 回生と四象限運転` は、固定EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題・完全解説source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答まで完成。固定一次4問＋二次1問・15答案要素は `15 / 15 PASS`。初回最終QAで唯一FAILだった進捗記録4箇所を実成果物へ同期済み。次は最終QA再判定。
+現在地は `topic_13_final_qa_complete`。Topic 13 `300系④ 回生と四象限運転` は、固定EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題・完全解説source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後独立再解答、最終QAまで完了。固定一次4問＋二次1問・15答案要素は `15 / 15 PASS`。初回最終QAで唯一FAILだった進捗記録4箇所も `4 / 4 PASS` で同期済みで、再判定は `PASS / completed`。
+
+次はTopic 14 `300系⑤ 走行抵抗と必要けん引力` の制作前EXAM_ALIGNMENT。
 
 ## Topic 13 固定EXAM_ALIGNMENT
 source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
@@ -24,14 +26,15 @@ source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerativ
 - 二次: `1問・4答案要素`
 - 合計: `5問・15答案要素`
 - 制作前独立検証: 一次 `11 / 11 PASS`、二次 `4 / 4 PASS`、合計 `15 / 15 PASS`
-- 二次記述問題: `1問`
+- 完成後独立再解答: 一次 `11 / 11 PASS`、二次 `4 / 4 PASS`、合計 `15 / 15 PASS`
+- 教材外知識補完: `0件`
 - 公式解答・標準解答との不一致: `0件`
 - 参考教材2系統以上: `PASS`
 - SPEC指定8項目: `8 / 8 PASS`
 - SPEC指定3可視化: `3 / 3 PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
-## Topic 13 既完成成果物
+## Topic 13 成果物
 - 解説source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
 - 解説PDF: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_explanation.pdf`
 - 解説PDF QA: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_explanation_pdf_qa.md`
@@ -43,88 +46,66 @@ source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerativ
 - 完成後独立再解答: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_independent_reanswer.md`
 - 最終QA: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_final_qa.md`
 
-## Topic 13 完成後独立再解答
-- 公式解答確認前に完成教材と公式問題文だけで答案を固定
-- 答案ロックcommit: `14070ee683554770df331c22f09525a5be97b45c`
-- 一次 `11 / 11 PASS`
-- 二次 `4 / 4 PASS`
-- 合計 `15 / 15 PASS`
-- 教材外知識補完: `0件`
-- 公式解答・標準解答との不一致: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 固定範囲外追加: `0件`
-- Topic 14先取り: `0件`
-
-## Topic 13 初回最終QA
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+## Topic 13 最終QA
+- 判定: `PASS / completed`
 - 技術内容: `PASS`
 - 固定一次4問＋二次1問・15答案要素: `PASS`
 - 完成後独立再解答: `15 / 15 PASS`
 - 必須成果物: `PASS`
-- PDF/PPTX表示・構造QA: `PASS`
-- 練習問題QA: `12 / 12 PASS`
+- 解説PDF: A4縦5ページ、180 dpi表示 `5 / 5 PASS`、文字抽出 `PASS`
+- 練習PDF: A4縦2ページ、一次8問＋二次4問、180 dpi表示 `2 / 2 PASS`、数値・論理 `12 / 12 PASS`
+- PowerPoint: 16:9・4スライド、表示 `4 / 4 PASS`、overflow `0件`、ZIP/XML整合性 `PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL`
-
-初回QAで未同期だった4箇所:
-1. 主source冒頭状態欄
-2. 主source末尾次工程
-3. 練習source末尾次工程
-4. 練習PDF QA末尾現在地
+- 進捗記録整合: `PASS`
 
 ## Topic 13 進捗記録同期
-- 主source冒頭: `PASS`
-- 主source末尾: `PASS`
-- 練習source末尾: `PASS`
-- 練習PDF QA末尾: `PASS`
-- 同期: `4 / 4 PASS`
-- 技術本文変更: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 問題・正答変更: `0件`
-- PDF/PPTX変更: `0件`
-- 完成後独立再解答結果変更: `0件`
+初回最終QAで未同期だった4箇所は解消済み。
 
-## Topic 13 解説画像PowerPoint完成確認
-- 16:9・4スライド
-- SPEC指定3可視化 `3 / 3 PASS`
-  - 速度・トルク平面
-  - 力行・回生時の電力フロー
-  - 回生可能エネルギー
-- H24二次型計算再検算: `PASS`
-- 固定5過去問・15答案要素接続: `15 / 15 PASS`
-- 約180 dpi表示QA: `4 / 4 PASS`
-- overlap / clipping / broken glyph / overflow: `0件`
-- `slides_test.py`: `PASS / 0件`
-- PowerPoint ZIP/XML整合性: `PASS`
-- PDF経由文字抽出: `4 / 4ページ PASS`
-- Unicode置換文字: `0件`
-- PowerPoint SHA-256: `c5f69a2f555916d4ba81966cbd30adddc068b0d663023f3385f9287fa40ff893`
-- Git blob SHA-1: `05ec4efe282fac7392524c2f85e83488257ef43d`
+1. 主source冒頭状態欄: `PASS`
+2. 主source末尾次工程: `PASS`
+3. 練習source末尾次工程: `PASS`
+4. 練習PDF QA末尾現在地: `PASS`
 
-## Topic 13 練習PDF完成確認
-- A4縦2ページ
-- 一次8問＋二次4問、全12問＋完全解説を収録
-- 180 dpi表示QA: `2 / 2 PASS`
-- 文字抽出QA: `PASS`
-- Unicode置換文字 / 黒四角 / クリップ / 重なり / overflow: `0件`
-- 数値・論理QA: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- 二次の途中式・前提・単位・理由: `4 / 4 PASS`
-- 固定5過去問・15答案要素接続: `15 / 15 PASS`
-- PDF SHA-256: `ec183d8f536905083c3cbf9cdaca06d014f99e735fa00361b5ea82472fc935c0`
-- PDF Git blob SHA-1: `ce7d43ed9a81f752bd0220d211c145f2b65a5908`
-- source Git blob SHA-1: `c52cdd0959c30b62488985ee416af6ee4fc35b58`
+同期: `4 / 4 PASS`
+
+同期時に変更していないもの:
+- 技術本文
+- 固定EXAM_ALIGNMENT
+- 問題・正答
+- PDF/PPTX
+- 完成後独立再解答結果
 
 ## Topic 13 範囲境界
-- Topic 14の走行抵抗・必要けん引力・加速度計算は先取りしない
-- H27の回生失効・電力貯蔵・運行間隔は追加しない
-- H24二次問3の無効電流・出力可能領域は追加しない
-- Topic 11/12の高調波・力率制御・V/f制御等は本テーマに必要な接続以上に再展開しない
-- SPEC外制御方式は追加しない
-- 未確認の300系回生効率・制御定数等を実車値として追加しない
+- Topic 14の走行抵抗・必要けん引力・加速度計算は先取りしていない
+- H27の回生失効・電力貯蔵・運行間隔は追加していない
+- H24二次問3の無効電流・出力可能領域は追加していない
+- Topic 11/12の高調波・力率制御・V/f制御等は必要な接続以上に再展開していない
+- SPEC外制御方式は追加していない
+- 未確認の300系回生効率・制御定数等を実車値として追加していない
+
+## Topic 14 SPEC固定範囲
+Topic 14 `300系⑤ 走行抵抗と必要けん引力` は系列 `SPEC.md` に従い、制作前EXAM_ALIGNMENTから開始する。
+
+扱う内容:
+- 走行抵抗
+- 速度依存抵抗
+- 空気抵抗
+- 勾配抵抗
+- 加速抵抗
+- 必要けん引力
+- 軸出力
+- 車輪周出力
+
+指定計算・グラフ:
+- 速度―走行抵抗
+- 速度―必要けん引力
+- 速度―必要出力
+- 勾配条件比較
+
+仕様を追加せず、まず電気技術者試験センターの第二種公式過去問を直近年度から調査する。二種は一次・二次を合わせ原則5問以上を調査し、二次対象論点で該当記述問題を確認できる場合は少なくとも1問を固定する。過去問要求から教材必須説明を逆算し、参考教材は最低2系統を確認する。確定不能事項は推測せずexact blockerとして記録する。
 
 ## 直前Topic
-Topic 12 `300系③ VVVFインバータと誘導機制御` は最終QA `PASS / completed`。Topic 11 `300系② PWMコンバータ` も `PASS / completed`。
+Topic 13 `300系④ 回生と四象限運転` は最終QA `PASS / completed`。Topic 12 `300系③ VVVFインバータと誘導機制御`、Topic 11 `300系② PWMコンバータ` も `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 13最終QAを再判定する。初回最終QAで唯一FAILだった進捗記録4箇所は `4 / 4 PASS` で同期済み。技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・完成後独立再解答結果は変更しない。
+Topic 14 `300系⑤ 走行抵抗と必要けん引力` の制作前EXAM_ALIGNMENTを行う。本文・PDF・練習問題・PowerPointは、固定過去問と要求事項を確定するまで作らない。
