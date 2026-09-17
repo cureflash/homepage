@@ -6,8 +6,8 @@
 - Topic 01〜14: 最終QA `PASS / completed`
 - 完成数: `14 / 22`
 - active topic: `15 新幹線の補機モーターを設計する`
-- current status: `topic_15_practice_source_complete`
-- 次工程: Topic 15 練習PDF
+- current status: `topic_15_practice_pdf_complete`
+- 次工程: Topic 15 解説画像PowerPoint
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -16,8 +16,8 @@
 - Topic 14は最終QA `PASS / completed` のまま変更なし。
 - Topic 15 main sourceには制作前EXAM_ALIGNMENTが既に存在し、一次3問＋二次記述2問、計5問・8答案要素が固定済みであることを確認した。
 - Topic 15の解説本文と基礎／本試験標準／複合の3段階例題、解説PDFは完成済みで、固定5問・8答案要素を維持している。
-- 今回、Topic 15練習問題sourceを作成した。一次試験型10問・全問五肢択一、二次試験型5問、合計15問。
-- 一次正答一意性 `10 / 10 PASS`、独立計算・論理QA `15 / 15 PASS`、固定5問・8答案要素へ `8 / 8` 接続した。
+- Topic 15練習問題sourceは一次試験型10問・全問五肢択一、二次試験型5問、合計15問で完成済み。一次正答一意性 `10 / 10 PASS`、独立計算・論理QA `15 / 15 PASS`、固定5問・8答案要素へ `8 / 8` 接続済み。
+- 今回、Topic 15練習PDFを作成した。A4縦7ページ、200 dpi表示QA `7 / 7 PASS`、文字抽出QA PASS、問1〜15存在確認 `15 / 15 PASS`、数値・論理再検算 `15 / 15 PASS`。
 - 固定範囲外論点、Topic 16以降の先取り、未確認新幹線補機実値の真値化はいずれも `0件`。
 - 固定公式過去問の個別正答記号・完成済み答案は保存していない。完成後のblind再解答条件を維持する。
 
@@ -236,17 +236,33 @@
 - [x] コンプレッサへの三乗則無条件適用 `0件`
 - [x] Topic 16以降先取り・未確認新幹線補機実値追加 `0件`
 
+## Topic 15 練習PDF
+- [x] `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_practice.pdf`
+- [x] A4縦7ページ
+- [x] 一次10問＋二次5問・解答／完全解説を収録
+- [x] 200 dpi全7ページ表示QA `7 / 7 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 問1〜問15の全設問存在確認 `15 / 15 PASS`
+- [x] 数値・論理再検算 `15 / 15 PASS`
+- [x] 一次正答一意性 `10 / 10 PASS` を維持
+- [x] 固定一次3問＋二次2問・8答案要素と固定範囲を維持
+- [x] コンプレッサへの三乗則無条件適用 `0件`
+- [x] Topic 05〜09の等価回路・PWM・ベクトル制御詳細の再制作 `0件`
+- [x] Topic 16以降の先取り `0件`
+- [x] 未確認新幹線補機実値の真値化 `0件`
+- [x] SHA-256 `a8cfcf15d58c2d93100479c7a6b6a627b6ccf01b8a36ac3659ba665c8b8f8de5`
+
 ## Topic 15 現成果物
 - main source: `topics/15_auxiliary_motor_design/15_auxiliary_motor_design.md`
 - 制作前EXAM_ALIGNMENT: 完成
 - 解説本文＋3段階例題: 完成
 - 解説PDF: 完成
 - 練習source: 完成
-- 練習PDF: 未着手
+- 練習PDF: 完成
 - PowerPoint: 未着手
 - 独立再解答前ゲート: 未着手
 - 完成後独立再解答: 未着手
 - 最終QA: 未着手
 
 ## 次に行うこと
-Topic 15「新幹線の補機モーターを設計する」の練習PDFを作成し、A4表示QA・文字抽出QA・問題数／解説収録・数値再検算を行う。
+Topic 15「新幹線の補機モーターを設計する」の解説画像PowerPointを作成し、固定一次3問＋二次2問・8答案要素と固定範囲を維持したまま表示QA・overflow・ZIP整合性を確認する。

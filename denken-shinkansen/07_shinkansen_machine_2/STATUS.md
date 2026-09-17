@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `14 / 22`
-- current_status: `topic_15_practice_source_complete`
+- current_status: `topic_15_practice_pdf_complete`
 - last_completed_topic: `14 L0系を500km/hで同期させる`
 - active_topic: `15 新幹線の補機モーターを設計する`
-- next_start: Topic 15 練習PDF
+- next_start: Topic 15 解説画像PowerPoint
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -719,8 +719,24 @@
 - [x] 未確認新幹線補機実値の真値化 `0件`
 - [x] 固定公式過去問の個別正答記号・完成済み答案保存 `0件`
 
+## Topic 15 練習PDF
+- [x] `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_practice.pdf`
+- [x] A4縦7ページ
+- [x] 一次10問＋二次5問・解答／完全解説を収録
+- [x] 200 dpi全7ページ表示QA `7 / 7 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 問1〜問15の全設問存在確認 `15 / 15 PASS`
+- [x] 数値・論理再検算 `15 / 15 PASS`
+- [x] 一次正答一意性 `10 / 10 PASS` を維持
+- [x] 固定一次3問＋二次2問・8答案要素と固定範囲を維持
+- [x] コンプレッサへの三乗則無条件適用 `0件`
+- [x] Topic 05〜09の等価回路・PWM・ベクトル制御詳細の再制作 `0件`
+- [x] Topic 16以降の先取り `0件`
+- [x] 未確認新幹線補機実値の真値化 `0件`
+- [x] SHA-256 `a8cfcf15d58c2d93100479c7a6b6a627b6ccf01b8a36ac3659ba665c8b8f8de5`
+
 ## 今回進めた内容
-Topic 15練習問題sourceを作成した。一次試験型10問・全問五肢択一、二次試験型5問、合計15問。一次正答一意性 `10 / 10 PASS`、独立計算・論理QA `15 / 15 PASS`、固定一次3問＋二次記述2問・8答案要素へ `8 / 8` 接続した。仕様外論点、Topic 16以降の先取り、未確認新幹線補機実値の追加は行っていない。
+Topic 15練習PDFを作成した。A4縦7ページ、一次10問＋二次5問・解答／完全解説を収録。200 dpi表示QA `7 / 7 PASS`、文字抽出QA PASS、全設問存在確認 `15 / 15 PASS`、数値・論理再検算 `15 / 15 PASS`。固定一次3問＋二次2問・8答案要素と固定範囲を維持し、仕様外論点、Topic 16以降の先取り、未確認新幹線補機実値の追加は行っていない。
 
 ## 判定
-Topic 15は `topic_15_practice_source_complete / IN_PROGRESS`。完成数は `14 / 22`。次はTopic 15練習PDF。
+Topic 15は `topic_15_practice_pdf_complete / IN_PROGRESS`。完成数は `14 / 22`。次はTopic 15解説画像PowerPoint。
