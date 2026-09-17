@@ -93,6 +93,8 @@
 - R5上 電力問題: https://www.shiken.or.jp/chief/upload/20230820_ch_third_q02.pdf
 - R5上 公式解答: https://www.shiken.or.jp/chief/upload/20230820_ch_third_a01.pdf
 
-## 次工程
+## 進捗同期
 
-Topic 13の最終QAを実施し、必須成果物、PDF/PPTX QA、固定EXAM_ALIGNMENT、完成後独立再解答、SPEC境界、進捗記録整合を再確認する。
+初回最終QAは実施済みで、技術内容・必須成果物・過去問品質ゲート・SPEC境界はPASS、進捗記録整合のみ旧工程5箇所のためFAILだった。本ファイルの旧「次工程」を現在地へ同期した。
+
+次工程はTopic 13最終QAの再実施。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
