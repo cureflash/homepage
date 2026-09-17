@@ -6,11 +6,11 @@
 
 Topic 01〜14は `PASS / completed`。完成数は `14 / 21`。
 
-current_status: `topic_15_practice_pdf_complete`
+current_status: `topic_15_powerpoint_complete`
 
 active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 
-Topic 15は練習問題source＋練習PDFまで完了。固定範囲はRL・RC・RLC回路、初期条件、過渡項・定常項、時定数、微分方程式、必要に応じたラプラス変換。品質ゲートはR8〜R4一次「理論」の5問・25答案要素で、教材内接続 `25 / 25` を維持。R8二次は2026-09-17時点で未実施、R7〜R5二次は固定範囲だけで完答できる直接対応問題がなく、二次採用0問・数合わせ0件。練習は12問・全問五肢択一、A4縦6ページ、200 dpi全ページ表示QA `6 / 6 PASS`、文字抽出PASS。次工程は解説画像PowerPoint＋表示QA。
+Topic 15は解説画像PowerPoint＋表示QAまで完了。固定範囲はRL・RC・RLC回路、初期条件、過渡項・定常項、時定数、微分方程式、必要に応じたラプラス変換。品質ゲートはR8〜R4一次「理論」の5問・25答案要素で、教材内接続・可視化 `25 / 25` を維持。R8二次は2026-09-17時点で未実施、R7〜R5二次は固定範囲だけで完答できる直接対応問題がなく、二次採用0問・数合わせ0件。PowerPointは16:9・5枚、200 dpi全スライド表示QA `5 / 5 PASS`、overflow 0件、PPTX ZIP整合性・PDF変換・文字抽出PASS。次工程は完成後独立再解答。
 
 ## Topic 15 成果物
 
@@ -20,8 +20,10 @@ Topic 15は練習問題source＋練習PDFまで完了。固定範囲はRL・RC�
 - 練習source: `topics/15_breaker_transient/15_breaker_transient_practice.md`
 - 練習PDF: `topics/15_breaker_transient/15_breaker_transient_practice.pdf`
 - 練習PDF QA: `topics/15_breaker_transient/15_breaker_transient_practice_pdf_qa.md`
+- PowerPoint: `topics/15_breaker_transient/15_breaker_transient_images.pptx`
+- PowerPoint QA: `topics/15_breaker_transient/15_breaker_transient_powerpoint_qa.md`
 - completion: `in_progress`
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `POWERPOINT_COMPLETE`
 
 ## Topic 15 固定範囲
 
@@ -115,6 +117,30 @@ Topic 15は練習問題source＋練習PDFまで完了。固定範囲はRL・RC�
 - 未確認実設備値・実測過渡波形追加: `0件`
 
 判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+## Topic 15 PowerPoint QA
+
+記録: `topics/15_breaker_transient/15_breaker_transient_powerpoint_qa.md`
+
+- 16:9・5枚
+- 200 dpi全スライド表示QA: `5 / 5 PASS`
+- overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- PDF変換: `5ページ / PASS`
+- PDF文字抽出QA: `PASS`
+- 系列SPEC指定可視化（RL・RC・RLC過渡応答波形）: `PASS`
+- `t=0- / t=0+ / t→∞`、`i_L`・`v_C` 連続条件、時定数、電荷保存、RLC二階微分方程式、蓄積エネルギーを可視化: `PASS`
+- 固定一次5問・25答案要素の可視化: `25 / 25`
+- 最終スライドに公式過去問出典: `PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 遮断器アーク・過渡回復電圧・保護協調等の追加: `0件`
+- 自動制御・パワーエレクトロニクス・電力系統過渡安定度の追加: `0件`
+- Topic 16以降の先取り: `0件`
+- 未確認実設備値・実測過渡波形追加: `0件`
+
+判定: `PASS / POWERPOINT_COMPLETE`
 
 ## Topic 14 成果物
 
@@ -257,4 +283,4 @@ Topic 15は練習問題source＋練習PDFまで完了。固定範囲はRL・RC�
 
 ## 次に行うこと
 
-Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の解説画像PowerPoint＋表示QA。
+Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の完成後独立再解答。
