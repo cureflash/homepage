@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_15_completed`
+- current_status: `topic_16_exam_alignment_complete`
 - last_completed_topic: `15 新幹線の補機モーターを設計する`
 - active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: Topic 16 制作前EXAM_ALIGNMENT
+- next_start: Topic 16 解説source作成
 
 ## 完了テーマ
 - [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `NOT_STARTED`
+- [ ] Topic 16 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT完成
 
 ## Topic 15 固定範囲
 系列 `SPEC.md` の次だけを扱う。
@@ -105,8 +105,53 @@
 - [x] 前回blockerだった進捗記録3箇所を実成果物状態へ同期済み
 - [x] 最終QA再実施 `PASS / completed`
 
+## Topic 16 固定範囲
+系列 `SPEC.md` の次だけを扱う。
+
+- リチウムイオン電池
+- 起電力
+- 内部抵抗
+- 放電電流
+- 電圧降下
+- Ah
+- Wh
+- C-rate
+- DCリンク
+- DC/DC変換の概念
+- 変換効率
+
+境界:
+- 電池材料・電極反応・BMSを独立論点として追加しない。
+- Topic 07〜10のPWM変換器・インバータ・回生の回路詳細を再制作しない。
+- Topic 17以降の伝達関数・過渡応答・PID・安定判別・再粘着制御を先取りしない。
+- N700Sの電池電圧、容量、セル数、内部抵抗、C-rate、効率等を一次資料未確認のまま実車値として置かない。
+
+## Topic 16 固定EXAM_ALIGNMENT
+一次4問＋二次記述1問、計5問・12答案要素を品質ゲート対象とする。
+
+- R02 一次 機械 問4 (1),(4),(5) — 3答案要素
+- H30 一次 機械 問6 (3),(4) — 2答案要素
+- H26 一次 機械 問3 (1) — 1答案要素
+- H18 一次 機械 問3 (1) — 1答案要素
+- H23 二次 機械・制御 問3 (3),(4) — 5答案要素
+
+固定問題の正答記号・完成済み数値解は保存せず、完成教材後に独立再解答してから公式解答・標準解答と照合する。
+
+## Topic 16 制作前EXAM_ALIGNMENT
+- [x] `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link.md` を作成
+- [x] R08一次「機械」まで直近年度から公式過去問を確認
+- [x] 一次4問＋二次記述1問、計5問・12答案要素を固定
+- [x] H23二次「機械・制御」問3を二次記述品質ゲートに含めた
+- [x] R07一次「機械」問5は一般電気化学・鉛蓄電池中心で固定範囲への直接性が低いため件数合わせ採用なし
+- [x] 参考教材2系統以上を確認
+- [x] 未確認N700S実車値追加 `0件`
+- [x] Topic 17以降先取り `0件`
+- [x] 電池材料反応・BMS・チョッパ回路詳細の仕様追加 `0件`
+- [x] 正答記号・完成済み数値解保存 `0件`
+- [x] 判定 `PASS / topic_16_exam_alignment_complete`
+
 ## 今回進めた内容
-Topic 15最終QAを再実施した。前回唯一のblockerだった進捗記録3箇所の同期を確認し、固定5問・8答案要素の独立再解答 `8 / 8 PASS`、成果物実在、練習・表示QA、仕様境界がすべてPASSのためTopic 15を完了とした。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更はない。
+Topic 16制作前EXAM_ALIGNMENTを完成した。R08一次「機械」まで直近年度から確認し、固定範囲へ直接対応する一次4問＋二次記述1問、計5問・12答案要素を固定した。仕様外の鉛蓄電池化学やチョッパ詳細を件数合わせで追加せず、未確認N700S実車値も追加していない。
 
 ## 判定
-Topic 15は `PASS / completed`。完成数は `15 / 22`。次は Topic 16 制作前EXAM_ALIGNMENT。
+Topic 16は `topic_16_exam_alignment_complete / IN_PROGRESS`。完成数は `15 / 22`。次は Topic 16 解説source作成。
