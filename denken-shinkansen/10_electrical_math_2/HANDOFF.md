@@ -8,11 +8,11 @@ Topic 01〜13は `completed`。
 
 完成数: `13 / 20`
 
-current_status: `topic_14_explanation_source_complete`
+current_status: `topic_14_practice_source_complete`
 
 active_topic: `14 フーリエ変換・FFT`
 
-次工程: Topic 14の解説PDFを作成し、表示QA・文字抽出QAを実施する。
+次工程: Topic 14の練習PDFを作成し、表示QA・文字抽出QAを実施する。
 
 ## 上位仕様
 
@@ -731,7 +731,7 @@ QA:
 - 電力潮流詳細アルゴリズム追加: 0件
 - Newton-Raphson法・非線形反復計算追加: 0件
 - 行列式・余因子展開の独立論点化: 0件
-- 二次公式過去問の件数合わせ追加: 0件
+- 二次公式過去問の件数合わせ: 0件
 - 未確認実車値依存: 0件
 
 総合判定: `PASS / completed`。
@@ -940,7 +940,7 @@ PowerPoint QA:
 source:
 `topics/14_fourier_transform_fft/14_fourier_transform_fft.md`
 
-current_status: `topic_14_explanation_source_complete`
+current_status: `topic_14_practice_source_complete`
 
 ### Topic 14 固定範囲
 
@@ -997,15 +997,46 @@ f_s > 2 f_max
 
 固定R3一次「機械」問8 (1)の1答案要素への本文マッピング: `1 / 1 PASS`。3段階例題の独立再計算: `3 / 3 PASS`。
 
-境界:
+### Topic 14 解説PDF
+
+`topics/14_fourier_transform_fft/14_fourier_transform_fft_explanation.pdf`
+
+QA:
+- A4縦5ページ
+- 200 dpi全ページ表示QA `5 / 5 PASS`
+- 文字抽出QA `PASS`
+- 固定R3一次「機械」問8 (1)の1答案要素を `1 / 1` 反映
+- 3段階例題 `3 / 3` 反映
 - Topic 15先取り: 0件
 - ADC量子化・変換回路方式追加: 0件
 - フィルタ設計一般追加: 0件
+- FFT実装詳細の試験必須化: 0件
 - 第一種・第三種過去問による件数水増し: 0件
 - 未確認実車値依存: 0件
 
-次は本sourceを正本として解説PDFを作成し、全ページ表示QA・文字抽出QA・固定1答案要素と3段階例題の反映を確認する。
+### Topic 14 練習問題source
+
+`topics/14_fourier_transform_fft/14_fourier_transform_fft_practice.md`
+
+内容:
+- 全12問
+- 一次型8問／記述型4問
+- 難易度: 基礎3／標準6／複合3
+- R3一次「機械」問8 (1)の固定1答案要素へ問2・問4・問9で接続
+- サンプリング周期・周波数、サンプリング定理、ナイキスト周波数、エイリアシング、DFT定義、周波数刻み、FFTとDFTの関係、教育用PWM相当波形の基本波・高調波位置を反復
+- 記述型は数学・信号処理の途中式確認用で、第二種二次の固定過去問対応を件数合わせで追加していない
+
+QA:
+- 固定1答案要素への接続 `1 / 1 PASS`
+- 独立計算・論理QA `12 / 12 PASS`
+- 一次型正答一意性 `8 / 8 PASS`
+- Topic 15先取り: 0件
+- ADC量子化・変換回路方式追加: 0件
+- フィルタ設計一般追加: 0件
+- FFT実装詳細の試験必須化: 0件
+- 第一種・第三種過去問による件数水増し: 0件
+- 未確認実車値依存: 0件
 
 ## 次に行うこと
 
-Topic 14 `フーリエ変換・FFT` の解説PDFを作成し、表示QA・文字抽出QAを実施する。
+Topic 14 `フーリエ変換・FFT` の練習PDFを作成し、表示QA・文字抽出QA・全12問と完全解説の反映確認を行う。
