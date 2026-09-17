@@ -89,7 +89,7 @@
 ## 機械QA
 - `slides_test.py`: `PASS / No overflow detected`
 - PPTX ZIP整合性: `PASS / No errors detected`
-- SHA-256: `0cd4a16a80b75891a0f7e64ac0049dedbb12ba5366f2ae91051a4f309b5338df`
+- SHA-256: `019e3126fd7ea3a49ad41954bbf421bca39db24f372164808b8ada4836c7386b`
 
 ## 判定
 `PASS / topic_10_powerpoint_complete`
