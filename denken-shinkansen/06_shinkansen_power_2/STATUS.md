@@ -4,12 +4,12 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `11`
 theme: 新幹線が移動すると電圧はどう変わる？
-current_status: `topic_11_calculation_program_complete`
+current_status: `topic_11_powerpoint_complete`
 completed_topics: `10 / 22`
 
 ## Topic 11 current result
 
-制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QA、計算プログラム・CSV・グラフと独立計算QAまで完了した。
+制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QA、計算プログラム・CSV・グラフと独立計算QA、解説画像PowerPointとPowerPoint QAまで完了した。
 
 正式品質ゲート:
 - 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
@@ -64,14 +64,26 @@ completed_topics: `10 / 22`
 - 解説例題2の丸め値と一致
 - 全点傾向QA: `Vr` 単調非増加、`I/P_loss/Q_line` 単調非減少、`Q_load` 一定 — PASS
 
-本文・練習・計算プログラムでは、位置 `x` から `Z(x)` を作る方法、`S=P+jQ=VI*`、`V_s=V_r+ZI`、厳密な受電端電圧式、近似電圧降下、`I²R` 損失、位置比較、分布負荷の積分法を扱う。H30一次問7の導体量関係はTopic 10既習事項として再確認するだけで、新規主題にはしていない。
+PowerPoint成果物:
+- `topics/11_moving_train_voltage/11_moving_train_voltage_images.pptx`
+- `topics/11_moving_train_voltage/11_moving_train_voltage_powerpoint_qa.md`
+- 16:9 `4スライド`
+- SPEC固定6項目: `6 / 6` 可視化
+- SPEC指定4量: `4 / 4 PASS`
+- 正式4問・17答案要素への論点接続: 維持 / EXAM_ALIGNMENT変更 `0件`
+- 1601×900表示QA: `4 / 4 PASS`
+- `slides_test.py`: `PASS / No overflow detected`
+- PPTX ZIP整合性: PASS
+- SHA-256: `358c809cbaff5358147a9e4027aa5d9b3711bdad7c4926d2768d3efa68e2cce6`
+
+本文・練習・計算プログラム・PowerPointでは、位置 `x` から `Z(x)` を作る方法、`S=P+jQ=VI*`、`V_s=V_r+ZI`、厳密な受電端電圧式、近似電圧降下、`I²R` 損失、位置比較、分布負荷の積分法を扱う。H30一次問7の導体量関係はTopic 10既習事項として再確認するだけで、新規主題にはしていない。
 
 範囲監査:
 - Topic 12以降の先取り: `0件`
 - 未確認実設備値依存: `0件`
 - 仕様追加: `0件`
 - 公式過去問転載: `0件`
-- 例題・練習・計算プログラム数値はすべて教材上の仮定値
+- 例題・練習・計算プログラム・PowerPoint数値はすべて教材上の仮定値
 
 ## Gate checklist
 
@@ -85,8 +97,8 @@ completed_topics: `10 / 22`
 - [x] Topic 08 completed
 - [x] Topic 09 completed
 - [x] Topic 10 completed
-- [ ] Topic 11 — 計算プログラム complete / IN_PROGRESS
+- [ ] Topic 11 — PowerPoint complete / IN_PROGRESS
 
 ## next_start
 
-Topic 11の解説画像PowerPointを制作し、表示・数式・試験対応QAを行う。完成後blind再解答はまだ実施しない。
+Topic 11の完成教材だけを使い、正式固定4問・17答案要素を保存済み正答を見ずにblind独立再解答する。PowerPoint完成段階ではまだ実施しない。
