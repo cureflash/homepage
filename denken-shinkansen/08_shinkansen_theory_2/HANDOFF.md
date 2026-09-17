@@ -6,11 +6,11 @@
 
 Topic 01〜15は `PASS / completed`。完成数は `15 / 21`。
 
-current_status: `topic_16_final_qa_needs_revision`
+current_status: `topic_16_progress_records_synced`
 
 active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
 
-Topic 16は初回最終QAまで実施済み。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界はいずれもPASS。blockerは主source・練習sourceに残る旧進捗記録4箇所のみで、判定は `NEEDS_REVISION / IN_PROGRESS`。次工程はその4箇所を実成果物状態へ同期する。
+Topic 16は初回最終QAまで実施済み。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界はいずれもPASS。初回最終QAでblockerだった主source・練習sourceの旧進捗記録4箇所は実成果物状態へ同期済み。判定は `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`、次工程は最終QA再実施。
 
 ## Topic 16 成果物
 
@@ -25,7 +25,7 @@ Topic 16は初回最終QAまで実施済み。固定一次5問・25答案要素�
 - 完成後独立再解答: `topics/16_semiconductor_diode/16_semiconductor_diode_reanswer.md`
 - 初回最終QA: `topics/16_semiconductor_diode/16_semiconductor_diode_final_qa.md`
 - completion: `in_progress`
-- stage: `FINAL_QA_NEEDS_REVISION`
+- stage: `PROGRESS_RECORDS_SYNCED`
 
 ## Topic 16 固定範囲
 
@@ -119,6 +119,18 @@ Topic 16は初回最終QAまで実施済み。固定一次5問・25答案要素�
 
 判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 16 進捗記録同期
+
+初回最終QAのblocker 4箇所を実成果物状態へ同期した。
+
+- 主source冒頭: `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」へ更新
+- 主source末尾: 次工程「最終QA再実施」へ更新
+- 練習source冒頭: `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」へ更新
+- 練習source末尾: 次工程「最終QA再実施」へ更新
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
+
+判定: `PASS / PROGRESS_RECORDS_SYNCED`
+
 ## 次工程
 
-Topic 16の主source・練習sourceに残る旧進捗記録4箇所を、PowerPoint・完成後独立再解答・初回最終QAまで完了した実状態へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 16の最終QAを再実施し、初回blocker 4箇所の解消とGitHub正本全体の整合を再判定する。PASS後にcompleted状態へ進める。

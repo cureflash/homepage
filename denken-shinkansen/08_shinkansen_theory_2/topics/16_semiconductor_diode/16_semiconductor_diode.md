@@ -1,16 +1,20 @@
 # Topic 16 300系の半導体はなぜ電流を一方向へ流せる？
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `PROGRESS_RECORDS_SYNCED`
 - completion: `in_progress`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
 - 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
-- 次工程: 解説画像PowerPoint＋表示QA
+- PowerPoint QA: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `25 / 25 PASS`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 進捗記録同期: `PASS / PROGRESS_RECORDS_SYNCED`
+- 次工程: 最終QA再実施
 
 ## 1. SPEC固定範囲
 
@@ -645,4 +649,4 @@ p側を正にしているので順方向バイアスである。外部電圧は�
 
 ## 11. 次工程
 
-解説画像PowerPoint＋表示QAを作成し、固定一次5問・25答案要素の可視化、表示品質、SPEC境界を確認する。
+最終QAを再実施し、初回最終QAの進捗記録blocker 4箇所が解消済みであることを確認する。技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXは変更しない。
