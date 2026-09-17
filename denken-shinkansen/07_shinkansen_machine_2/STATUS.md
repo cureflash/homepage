@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `16 / 22`
-- current_status: `topic_17_exam_alignment_complete`
+- current_status: `topic_17_explanation_source_complete`
 - last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
 - active_topic: `17 新幹線の速度をフィードバック制御する`
-- next_start: Topic 17 解説source本文制作
+- next_start: Topic 17 解説PDF制作
 
 ## 完了テーマ
 - [x] Topic 01〜16 最終QA `PASS / completed`
-- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS` / 次は解説source
+- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source `PASS` / 次は解説PDF
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -196,8 +196,21 @@
 - source: `topics/17_speed_feedback_control/17_speed_feedback_control.md`
 - 判定: `PASS / topic_17_exam_alignment_complete`
 
+## Topic 17 解説source
+- [x] 目標値・偏差・出力・フィードバック量の信号関係を整理
+- [x] 伝達関数を零初期条件での入出力比として説明
+- [x] 直列接続、開ループ経路、一巡積を説明
+- [x] `G/(1+GH)` を信号式から導出
+- [x] `1/(1+GH)` を信号式から導出
+- [x] 外乱の印加位置を読んで `E/D` を導く手順を説明
+- [x] 基礎／本試験標準／複合の3段階例題を作成・代数再計算PASS
+- [x] 固定5問・6答案要素を本文へ `6 / 6` 接続
+- [x] Topic 18〜21先取り、二自由度制御の独立論点追加、未確認実車値追加 `0件`
+- [x] 固定問題の正答記号・完成済み解答保存 `0件`
+- 判定: `PASS / topic_17_explanation_source_complete`
+
 ## 今回進めた内容
-Topic 16完了後の最新mainと既存「機械二種を進行」枠の成果をreconcileし、重複作業を避けてTopic 17制作前EXAM_ALIGNMENTを実施した。一次1問＋二次4問、計5問・6答案要素を固定し、Topic 18以降の論点を除外した。
+Topic 17を制作前EXAM_ALIGNMENT完了状態から1段階進め、固定5問・6答案要素から逆算した解説source本文を完成した。閉ループ、偏差、外乱経路までを固定範囲内で導出し、3段階例題と過去問接続表を作成した。
 
 ## 判定
-Topic 17は `PASS / topic_17_exam_alignment_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は解説source本文制作。
+Topic 17は `PASS / topic_17_explanation_source_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は解説PDF制作。
