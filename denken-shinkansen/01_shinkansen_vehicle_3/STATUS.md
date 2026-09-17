@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 35 / 38
-- current_status: `topic_36_preanswer_complete`
+- current_status: `topic_36_explanation_source_complete`
 - last_completed_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
 - active_topic: `36 COSMOS① 新幹線全体を統合管理する`
-- next_start: Topic 36の固定EXAM_ALIGNMENT `5問・8答案要素` と系列SPEC固定範囲だけを使って解説本文を作成し、全8答案要素の要求事項を本文へマッピングする
+- next_start: Topic 36の完成済み解説sourceだけを正本として解説PDFを作成し、全ページ表示・文字抽出・固定EXAM_ALIGNMENT反映・固定範囲境界をQAする
 
 ## 新品質ゲート進捗
 - [x] 01〜35 — PASS
@@ -27,9 +27,23 @@
 - 個別正答番号・完成導出の必須先読みsource保存: `0件`
 - 固定範囲外追加: `0件`
 - Topic 37以降先取り: `0件`
-- 解説本文・PDF・練習問題・PowerPoint: 未着手
 - 完成数: `35 / 38` 維持
-- 次工程: 固定EXAM_ALIGNMENTと系列SPEC固定範囲に基づく解説本文作成。全8答案要素の要求事項を本文へマッピングする
+
+## 36 解説source
+- source: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management.md`
+- QA記録: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation_source_qa.md`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 本文: §1〜§16
+- 3段階例題: 基礎／本試験標準／複合・ひっかけ
+- 例題独立再計算: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT: `5問・8答案要素`、本文マッピング `8 / 8 PASS`
+- 固定範囲外追加: `0件`
+- Topic 37以降先取り: `0件`
+- 未確認COSMOS内部仕様追加: `0件`
+- 個別正答番号・公式問題の完成導出保存: `0件`
+- PDF・練習問題・PowerPoint: 未着手
+- 完成数: `35 / 38` 維持
+- 次工程: 本sourceから解説PDFを作成し、全ページ表示・文字抽出・固定EXAM_ALIGNMENT反映・固定範囲境界をQAする。練習問題・PowerPointへはまだ進まない
 
 ## 35 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
@@ -702,4 +716,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` は固定5過去問の完成後blind独立再解答 `5 / 5問 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数35/38。
 
 ## 次テーマ工程
-Topic 36 `COSMOS① 新幹線全体を統合管理する` は制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定し、新しいblind runで全8答案要素を公式問題PDFだけから先に導出・確定した後、公式解答表と照合して `8 / 8 PASS`。個別正答番号・完成導出は完成後blind再解答保護のため必須先読みsourceへ保存していない。固定内容を変更せず、次は解説本文を作成して全8答案要素の要求事項を本文へマッピングする。
+Topic 36 `COSMOS① 新幹線全体を統合管理する` は制作前EXAM_ALIGNMENT 5問・8答案要素を固定し、制作前blind独立解答 `8 / 8 PASS` を維持したまま解説sourceを完成。本文§1〜§16、3段階例題、固定5問・8答案要素の本文マッピング `8 / 8 PASS`、例題独立再計算 `3 / 3 PASS`。固定範囲外追加・Topic 37以降先取り・未確認COSMOS内部仕様追加はいずれも0件。次は本sourceだけを正本として解説PDFを作成し、全ページ表示・文字抽出・固定EXAM_ALIGNMENT反映・固定範囲境界をQAする。
