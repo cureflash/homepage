@@ -4,26 +4,33 @@
 
 ## 現在地
 
-Topic 01〜11は最終QAまでPASSし、`completed`。Topic 12「300系はなぜVVVFになった？」は前回最終QAで指摘された主source・練習sourceの進捗記録不整合を修正し、実成果物へ同期済み。最終QA再実施待ち。
+Topic 01〜12は最終QAまでPASSし、`completed`。次はTopic 13「インバータはどうやって三相交流を作る？」の制作前EXAM_ALIGNMENT。
 
-- 完成数: `11 / 14`
-- last completed: `11 電力会社の三相交流をどう新幹線へ渡す？`
-- active topic: `12 300系はなぜVVVFになった？`
-- current status: `topic_12_source_progress_synced`
-- next start: Topic 12の最終QAを再実施する
+- 完成数: `12 / 14`
+- last completed: `12 300系はなぜVVVFになった？`
+- active topic: `13 インバータはどうやって三相交流を作る？`
+- current status: `topic_12_completed`
+- next start: Topic 13の制作前EXAM_ALIGNMENTを実施する
 
 ## 今回進捗
 
-Topic 12の主source・練習sourceの進捗記録だけを実成果物へ同期した。
+Topic 12の最終QAを再実施し、`PASS / completed` とした。
 
-- `12_vvvf_semiconductor.md`: `status: INDEPENDENT_REANSWER_COMPLETE` へ更新
-- `12_vvvf_semiconductor_practice.md`: `stage: INDEPENDENT_REANSWER_COMPLETE` へ更新
-- 旧「解説PDF作成」「解説画像PowerPoint作成」の次工程記録を除去
+- 前回唯一FAILだった主source・練習sourceの進捗記録不整合: 解消
 - 固定対象: 公式理論過去問7問
+- 制作前独立検証: `7 / 7 PASS`
 - 完成後独立再解答: `7 / 7 PASS`
-- 必須成果物・各表示QA・SPEC境界: 既存PASSを維持
+- 公式解答一致: `7 / 7`
+- 教材外補完: `0件`
+- 解説PDF: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
+- 練習PDF: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
+- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
+- SPEC固定範囲外追加: `0件`
+- 進捗記録整合性: PASS
+- `12_vvvf_semiconductor.md`: `status: COMPLETED`
+- `12_vvvf_semiconductor_practice.md`: `stage: COMPLETED`
 
-技術本文、固定EXAM_ALIGNMENT、練習15問、正答、PDF/PPTX成果物、独立再解答結果は変更していない。次は最終QAを再実施し、進捗記録整合性を含めて再判定する。
+技術本文、固定EXAM_ALIGNMENT、練習15問、正答、PDF/PPTX、独立再解答結果は変更していない。
 
 ## Topic 12 SPEC固定範囲
 
@@ -78,12 +85,12 @@ SiC → 低損失化
 
 ## 次に行うこと
 
-Topic 12の最終QAを再実施する。
+Topic 13「インバータはどうやって三相交流を作る？」の制作前EXAM_ALIGNMENTを実施する。
 
-- 主source・練習sourceの進捗記録が実成果物と一致していることを確認する
-- 固定7問の完成後独立再解答 `7 / 7 PASS` を確認する
-- 必須成果物・PDF/PPTX QA・固定範囲境界を再確認する
-- 全件PASSならTopic 12を `completed` とし、Topic 13へ進む
+- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`を再確認する
+- Topic 13固定範囲に直接対応する公式「理論」過去問を直近年度優先で確認する
+- 固定範囲だけで解ける問題を品質ゲート対象として確定する
+- 制作前独立検証を行い、系列SPEC外論点を件数合わせで追加しない
 
 ## 固定ルール
 
