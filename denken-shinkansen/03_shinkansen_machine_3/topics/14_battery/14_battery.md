@@ -2,9 +2,9 @@
 
 更新日: 2026-09-17
 
-状態: `topic_14_explanation_source_complete / IN_PROGRESS`
+状態: `topic_14_explanation_pdf_complete / IN_PROGRESS`
 
-制作前 `EXAM_ALIGNMENT` と解説source本文を完了した。解説PDF・練習問題・練習PDF・解説画像PowerPointは未着手。系列 `SPEC.md` の固定範囲だけを対象とし、電気化学一般へ範囲を広げない。
+制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDFを完了した。練習問題・練習PDF・解説画像PowerPointは未着手。系列 `SPEC.md` の固定範囲だけを対象とし、電気化学一般へ範囲を広げない。
 
 ## EXAM_ALIGNMENT
 
@@ -462,4 +462,4 @@ H28 問12とR4上 問12は固定範囲外知識が必要なため、本章の品
 
 ## 次工程
 
-Topic 14の解説PDFを、このsource本文だけを基礎に作成する。固定EXAM_ALIGNMENTと範囲境界は変更しない。
+Topic 14の練習問題sourceを、固定EXAM_ALIGNMENTと範囲境界を変更せずに作成する。

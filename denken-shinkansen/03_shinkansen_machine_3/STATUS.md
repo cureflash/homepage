@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `13 / 16`
-- current_status: `topic_14_explanation_source_complete`
+- current_status: `topic_14_explanation_pdf_complete`
 - last_completed_topic: `13 新幹線は主電動機以外もモーターだらけ？`
 - active_topic: `14 停電してもN700Sが走れるのはなぜ？`
-- next_start: Topic 14の解説PDFを作成する
+- next_start: Topic 14の練習問題sourceを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -24,7 +24,7 @@
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
-- [ ] 14 停電してもN700Sが走れるのはなぜ？ — 解説source本文完成 / IN_PROGRESS
+- [ ] 14 停電してもN700Sが走れるのはなぜ？ — 解説PDF完成 / IN_PROGRESS
 - [ ] 15〜16 — 未完了
 
 ## Topic 14 現在地
@@ -45,12 +45,19 @@
 - JR東海一次資料確認: N700Sのバッテリ自走システム搭載を確認
 - source: `topics/14_battery/14_battery.md`
 - 解説本文: 完成
-- 解説PDF: 未着手
+- 解説PDF: 完成（A4縦2ページ）
+- 解説PDF表示QA: `2 / 2 PASS`
+- 解説PDF文字抽出QA: `PASS`
+- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
+- 解説PDF欠落・破損グリフ: `0件`
+- 解説PDF固定過去問マッピング: `1 / 1`
+- explanation PDF: `topics/14_battery/14_battery_explanation.pdf`
+- explanation PDF QA: `topics/14_battery/14_battery_explanation_pdf_qa.md`
 - 練習問題source/PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後blind独立再解答: 未実施
-- 状態: `topic_14_explanation_source_complete / IN_PROGRESS`
-- 次工程: Topic 14の解説PDF
+- 状態: `topic_14_explanation_pdf_complete / IN_PROGRESS`
+- 次工程: Topic 14の練習問題source
 
 ## Topic 13 最終品質状態
 - 固定範囲: 電動機出力 / 回転速度 / トルク / 負荷特性 / ポンプ / ファン / コンプレッサ / 所要動力 / 効率 / インバータ駆動 / 可変速運転
@@ -256,6 +263,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 14の解説source本文を完成。H30 機械 問12の要求事項を本文へ `1 / 1` マッピングし、基礎・本試験標準・複合ひっかけの3段階例題を作成した。Ah/Wh、直並列、内部抵抗、充放電効率、必要容量の固定範囲だけで構成し、固定範囲外追加・件数合わせ・未確認N700S実値追加・Topic 15/16先取りは0件。解説source QAはPASS。
+Topic 14の解説PDFを完成。A4縦2ページ、200 dpi表示QA `2 / 2 PASS`、文字抽出QA `PASS`、文字切れ・重なり・ページ外はみ出し・破損グリフ0件。固定H30 機械 問12の教材内マッピング `1 / 1`、3段階例題 `3 / 3`。固定EXAM_ALIGNMENT変更・固定範囲外追加・未確認N700S実値追加・Topic 15/16先取りは0件。
 
-完成数は `13 / 16` のまま。次工程はTopic 14の解説PDF。
+完成数は `13 / 16` のまま。次工程はTopic 14の練習問題source。
