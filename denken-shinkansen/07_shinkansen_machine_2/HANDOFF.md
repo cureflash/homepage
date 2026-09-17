@@ -6,8 +6,8 @@
 - Topic 01〜13: 最終QA `PASS / completed`
 - 完成数: `13 / 22`
 - active topic: `14 L0系を500km/hで同期させる`
-- current status: `topic_14_final_qa_needs_revision`
-- 次工程: Topic 14 進捗記録同期
+- current status: `topic_14_progress_records_synced`
+- 次工程: Topic 14 最終QA再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -18,6 +18,7 @@
 - Topic 13で採用済み答案要素の重複採用は `0件`。
 - 完成教材だけで固定5問・27答案要素をblind再解答し、答案確定後に公式解答・標準解答と照合して `27 / 27 PASS`。教材外補完・固定範囲外追加・Topic 15以降依存・未確認L0実値依存はいずれも `0件`。
 - 最終QAを実施し、必須成果物・過去問対応・独立再解答・練習QA・PDF/PPTX QA・固定範囲境界はPASS。main source 2箇所＋練習source 1箇所の旧進捗記録だけが未同期のため `NEEDS_REVISION / IN_PROGRESS` とした。
+- 今回、main sourceの `## 状態` と末尾 `# 次工程`、練習source末尾 `# 次工程` の3箇所を実成果物へ同期した。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
 
 ## Topic 14 固定範囲
 - 内部起電力
@@ -152,6 +153,12 @@
 - [ ] 進捗記録整合: FAIL（main source 2箇所＋練習source 1箇所）
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 14 進捗記録同期
+- [x] main sourceの `## 状態` と末尾 `# 次工程` を実成果物へ同期
+- [x] 練習source末尾 `# 次工程` を実成果物へ同期
+- [x] 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更 `0件`
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+
 ## Topic 14 現成果物
 - main source: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization.md`
 - 制作前EXAM_ALIGNMENT: 完成
@@ -162,7 +169,8 @@
 - PowerPoint: 完成
 - 独立再解答前ゲート: 完成
 - 完成後独立再解答: `27 / 27 PASS`
-- 最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 進捗記録同期: 完成
+- 最終QA: `NEEDS_REVISION / IN_PROGRESS`（同期前判定。再実施待ち）
 
 ## 次に行うこと
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、main sourceの `## 状態` と末尾 `# 次工程`、練習source末尾 `# 次工程` の3箇所だけを実成果物へ同期する。その後、Topic 14最終QAを再実施する。
+固定EXAM_ALIGNMENT、技術本文、練習問題、PDF/PPTXを変更せず、Topic 14最終QAを再実施する。
