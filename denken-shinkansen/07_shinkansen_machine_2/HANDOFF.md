@@ -3,22 +3,22 @@
 更新日: 2026-09-17
 
 ## 現在地
-- Topic 01〜13: 最終QA `PASS / completed`
-- 完成数: `13 / 22`
-- active topic: `14 L0系を500km/hで同期させる`
-- current status: `topic_14_progress_records_synced`
-- 次工程: Topic 14 最終QA再実施
+- Topic 01〜14: 最終QA `PASS / completed`
+- 完成数: `14 / 22`
+- active topic: `15 新幹線の補機モーターを設計する`
+- current status: `topic_14_completed`
+- 次工程: Topic 15 制作前EXAM_ALIGNMENT
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 14の実成果物を確認し、制作前EXAM_ALIGNMENT・解説source・解説PDF・練習問題source・練習PDF・解説画像PowerPointまで完成済みであることを確認した。
-- Topic 14の独立再解答前ゲートを実施し、必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別解答が保存されていないことを確認した。
-- Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いでいる。
-- Topic 13で採用済み答案要素の重複採用は `0件`。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 14の実成果物と直近変更を確認し、既存の「機械二種を進行」枠の成果をreconcileした。
+- Topic 14は制作前EXAM_ALIGNMENT・解説source・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・独立再解答前ゲート・完成後独立再解答まで完成済み。
+- Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いでいる。Topic 13で採用済み答案要素の重複採用は `0件`。
 - 完成教材だけで固定5問・27答案要素をblind再解答し、答案確定後に公式解答・標準解答と照合して `27 / 27 PASS`。教材外補完・固定範囲外追加・Topic 15以降依存・未確認L0実値依存はいずれも `0件`。
-- 最終QAを実施し、必須成果物・過去問対応・独立再解答・練習QA・PDF/PPTX QA・固定範囲境界はPASS。main source 2箇所＋練習source 1箇所の旧進捗記録だけが未同期のため `NEEDS_REVISION / IN_PROGRESS` とした。
-- 今回、main sourceの `## 状態` と末尾 `# 次工程`、練習source末尾 `# 次工程` の3箇所を実成果物へ同期した。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
+- 前回最終QAで唯一FAILだったmain source 2箇所＋練習source 1箇所の進捗記録は同期済み。
+- 今回、最終QAを再実施し、必須成果物・過去問対応・独立再解答・練習QA・PDF/PPTX QA・固定範囲境界・進捗記録整合を再確認して全件PASS。Topic 14を `PASS / completed` とした。
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更 `0件`。
 
 ## Topic 14 固定範囲
 - 内部起電力
@@ -150,8 +150,8 @@
 - [x] 完成後独立再解答 `27 / 27 PASS`
 - [x] 練習問題・PDF/PPTX QA: PASS
 - [x] 固定範囲境界・未確認L0実値: PASS
-- [ ] 進捗記録整合: FAIL（main source 2箇所＋練習source 1箇所）
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- [x] 進捗記録整合: PASS
+- 判定: `PASS / completed`
 
 ## Topic 14 進捗記録同期
 - [x] main sourceの `## 状態` と末尾 `# 次工程` を実成果物へ同期
@@ -170,7 +170,7 @@
 - 独立再解答前ゲート: 完成
 - 完成後独立再解答: `27 / 27 PASS`
 - 進捗記録同期: 完成
-- 最終QA: `NEEDS_REVISION / IN_PROGRESS`（同期前判定。再実施待ち）
+- 最終QA: `PASS / completed`
 
 ## 次に行うこと
-固定EXAM_ALIGNMENT、技術本文、練習問題、PDF/PPTXを変更せず、Topic 14最終QAを再実施する。
+Topic 15「新幹線の補機モーターを設計する」の制作前EXAM_ALIGNMENT。系列SPECの固定範囲「ポンプ・ファン・コンプレッサ・負荷特性・所要動力・効率・インバータ駆動・可変速運転・相似則」から過去問対応を固定し、仕様を追加しない。
