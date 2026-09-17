@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `12 / 39`
-- current_status: `topic_13_final_qa_needs_progress_sync`
+- current_status: `topic_13_progress_sync_complete`
 - last_completed_topic: `12 300系③ VVVFインバータと誘導機制御`
 - active_topic: `13 300系④ 回生と四象限運転`
-- next_start: Topic 13 進捗記録4箇所を実成果物へ同期
+- next_start: Topic 13 最終QAを再判定
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -23,7 +23,7 @@
 - [x] 10 300系① 誘導電動機等価回路 — PASS
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
-- [ ] 13 300系④ 回生と四象限運転 — FINAL_QA_NEEDS_PROGRESS_SYNC / IN_PROGRESS
+- [ ] 13 300系④ 回生と四象限運転 — PROGRESS_SYNC_COMPLETE / IN_PROGRESS
 
 ## Topic 13 固定EXAM_ALIGNMENT
 - source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
@@ -110,7 +110,7 @@
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 
-## Topic 13 最終QA
+## Topic 13 初回最終QA
 - path: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_final_qa.md`
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
 - 技術内容: `PASS`
@@ -122,6 +122,18 @@
 - SPEC境界: `PASS`
 - 進捗記録整合: `FAIL`
 - 未同期: 主source冒頭・主source末尾・練習source末尾・練習PDF QA末尾の4箇所
+
+## Topic 13 進捗記録同期
+- 主source冒頭: `PASS`
+- 主source末尾: `PASS`
+- 練習source末尾: `PASS`
+- 練習PDF QA末尾: `PASS`
+- 同期: `4 / 4 PASS`
+- 技術本文変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 問題・正答変更: `0件`
+- PDF/PPTX変更: `0件`
+- 完成後独立再解答結果変更: `0件`
 
 ## Topic 13 固定範囲
 - 四象限運転
@@ -153,4 +165,4 @@ Topic 12 `300系③ VVVFインバータと誘導機制御` は固定一次4問�
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。最終判定 `PASS / completed`。
 
 ## 次工程
-Topic 13の進捗記録4箇所だけを実成果物へ同期する。主source冒頭・主source末尾・練習source末尾・練習PDF QA末尾を現在地へ合わせ、技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・完成後独立再解答結果は変更しない。その後、Topic 13最終QAを再判定する。
+Topic 13の進捗記録4箇所は実成果物へ同期済み。次にTopic 13最終QAを再判定する。技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・完成後独立再解答結果は変更しない。
