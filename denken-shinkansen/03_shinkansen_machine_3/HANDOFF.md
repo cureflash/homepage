@@ -5,9 +5,9 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `14 / 16`。Topic 01〜14は品質ゲートPASSでcompleted。active topicは15「車内の照明・空調にはどれだけ電気が必要？」。
 
-Topic 15は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDFまで完了。固定7問・12答案要素は変更せず、本文マッピング `12 / 12 PASS`、練習問題→固定EXAM_ALIGNMENT接続 `12 / 12 PASS`。練習問題は12問（基礎3 / 本試験標準7 / 複合・応用2）、全12問を五肢択一とし、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`、固定7問・12答案要素への接続 `12 / 12 PASS`。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。
+Topic 15は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。固定7問・12答案要素は変更せず、本文マッピング `12 / 12 PASS`、練習問題→固定EXAM_ALIGNMENT接続 `12 / 12 PASS`、PowerPoint→固定EXAM_ALIGNMENT接続 `12 / 12 PASS`。練習問題は12問（基礎3 / 本試験標準7 / 複合・応用2）、全12問を五肢択一とし、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、200 dpi表示QA `3 / 3 PASS`。PowerPointは16:9・4枚、約180 dpi相当表示QA `4 / 4 PASS`、スライド外はみ出し・文字切れ・重なり・判読不能・欠落破損グリフはいずれも0件、ZIP整合性PASS。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。
 
-状態: `topic_15_practice_pdf_complete / IN_PROGRESS`
+状態: `topic_15_powerpoint_complete / IN_PROGRESS`
 
 ## Topic 15 固定範囲
 照明:
@@ -50,6 +50,8 @@ explanation PDF QA: `topics/15_lighting_heating/15_lighting_heating_explanation_
 practice source: `topics/15_lighting_heating/15_lighting_heating_practice.md`
 practice PDF: `topics/15_lighting_heating/15_lighting_heating_practice.pdf`
 practice PDF QA: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md`
+PowerPoint: `topics/15_lighting_heating/15_lighting_heating_images.pptx`
+PowerPoint QA: `topics/15_lighting_heating/15_lighting_heating_powerpoint_qa.md`
 
 ## Topic 14
 Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENTはH30 機械 問12、完成後blind独立再解答 `1 / 1 PASS`。解説PDF・練習PDF・PowerPointの表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/14_battery/` に保存済み。
@@ -58,4 +60,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-固定EXAM_ALIGNMENTを変更せず、Topic 15の解説画像PowerPointを作成する。練習PDF・QAと固定7問12答案要素の接続を維持し、Topic 16は先取りしない。
+固定EXAM_ALIGNMENTと教材成果物を変更せず、保存済み正答選択肢番号を見ない完成後blind独立再解答を7問・12答案要素で実施する。Topic 16は先取りしない。
