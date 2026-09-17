@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 11 / 16
-- current_status: `topic_12_independent_reanswer_complete`
+- current_status: `topic_12_source_reanswer_synced`
 - last_completed_topic: `11 架線事故ではどうやって電気を止める？`
 - active_topic: `12 320km/hでもパンタグラフが離れないのはなぜ？`
-- next_start: Topic 12の完成後ブラインド独立再解答結果をmain sourceへ同期する
+- next_start: Topic 12最終QAを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -22,7 +22,7 @@
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？ — 解説本文§1〜§14＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint＋QA完成。完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。例題再計算 `3 / 3 PASS`、解説PDF表示QA `4 / 4 PASS`、練習PDF表示QA `4 / 4 PASS`、練習PDF数値・論理・正答一意性 `12 / 12 PASS`、PowerPoint要求事項可視化 `6 / 6`、表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性PASS、SPEC固定範囲外追加0件
+- [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？ — 解説本文§1〜§14＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint＋QA完成。完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。完成後独立再解答結果をmain sourceへ同期済み。例題再計算 `3 / 3 PASS`、解説PDF表示QA `4 / 4 PASS`、練習PDF表示QA `4 / 4 PASS`、練習PDF数値・論理・正答一意性 `12 / 12 PASS`、PowerPoint要求事項可視化 `6 / 6`、表示QA `4 / 4 PASS`、overflow 0件、ZIP整合性PASS、SPEC固定範囲外追加0件
 - [ ] 13 新幹線の架線は何でできている？
 - [ ] 14 駅やトンネルにはどう電気を配る？
 - [ ] 15 回生した電気はどこへ行く？
@@ -373,6 +373,7 @@ PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_pow
 - Topic 13以降の論点による補完: `0件`
 - SPEC固定範囲外追加（独立再解答時）: `0件`
 - 未確認新幹線実設備値の使用: `0件`
+- main sourceへの完成後独立再解答結果同期: 完了
 - SPEC固定範囲外の採用問題・本文・PDF・PowerPoint追加: `0件`
 - 件数合わせの仕様追加: `0件`
 - 完成後ブラインド独立再解答を汚染しないため制作前の選択肢番号・最終数値解は完成教材未記録
@@ -385,4 +386,4 @@ PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_pow
 - H24 電力 問13: `(3)`
 
 ## 次
-Topic 12の完成後ブラインド独立再解答結果をmain sourceへ同期する。固定5問・6答案要素、教材本文、既存PDF/PPTX、SPEC固定範囲は変更しない。
+Topic 12最終QAを実施し、必須成果物、EXAM_ALIGNMENT、PDF/PPTX QA、進捗記録整合、SPEC固定範囲境界を再確認する。全件PASSの場合のみ `completed` とする。
