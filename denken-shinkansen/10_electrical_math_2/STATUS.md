@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 15 / 20
-- current_status: `topic_16_practice_source_complete`
+- current_status: `topic_16_practice_pdf_complete`
 - last_completed_topic: `15 対数・dB・周波数応答`
 - active_topic: `16 数値微分・数値積分`
-- next_start: Topic 16の練習PDFを作成し、表示QA・文字抽出QAを行う
+- next_start: Topic 16の解説画像PowerPointを作成し、表示QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -239,7 +239,7 @@
 - [x] 解説本文＋3段階例題（固定4問・8答案要素マッピング `8 / 8`、例題 `3 / 3`）
 - [x] 解説PDF（A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出QA `PASS`）
 - [x] 練習問題source（全12問、固定4問・8答案要素 `8 / 8 PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
-- [ ] 練習PDF
+- [x] 練習PDF（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`）
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
 - [ ] 完成後独立再解答
@@ -248,14 +248,14 @@
 
 ## 今回進めた内容
 
-Topic 16の練習問題sourceを作成した。
+Topic 16の練習PDF＋QAを作成した。
 
-全12問（一次型8問／記述型4問、基礎3／標準6／複合3）。固定第二種4問・8答案要素への接続 `8 / 8 PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`。第一種・第三種による件数水増し、Topic 17以降の先取り、高次数値微分・高次Newton-Cotes公式・スプライン・有限要素法等の仕様外追加、未確認実車値依存はいずれも0件。
+A4縦4ページ。200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`。全12問（一次型8問／記述型4問）、固定第二種4問・8答案要素への接続 `8 / 8 PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS` を維持。第一種・第三種による件数水増し、Topic 17以降の先取り、高次数値微分・高次Newton-Cotes公式・スプライン・有限要素法等の仕様外追加、未確認実車値依存はいずれも0件。
 
 ## 判定
 
-`topic_16_practice_source_complete / IN_PROGRESS`
+`topic_16_practice_pdf_complete / IN_PROGRESS`
 
 完成数は `15 / 20` のまま。
 
-次はTopic 16の練習PDFを作成し、表示QA・文字抽出QAを行う。
+次はTopic 16の解説画像PowerPointを作成し、表示QAを行う。
