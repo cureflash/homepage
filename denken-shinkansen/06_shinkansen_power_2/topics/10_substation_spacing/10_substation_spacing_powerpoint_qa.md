@@ -94,4 +94,4 @@
 ## 判定
 `PASS / topic_10_powerpoint_complete`
 
-次段階は、完成教材だけを用いて正式4問・17答案要素をblind独立再解答する。固定EXAM_ALIGNMENTは変更しない。
+完成後blind clean retryは正式4問・17答案要素 `17 / 17 PASS` で完了済み。次段階は進捗記録整合を含む最終QA再判定とする。固定EXAM_ALIGNMENT、PowerPoint実体、技術内容は変更しない。
