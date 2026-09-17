@@ -60,7 +60,7 @@
 
 と、p側で
 
-`|E|max=qN_A l_p/epsilon`
+`|E_max|=qN_A l_p/epsilon`
 
 を用いると、電位差は三角形状の電界分布の面積から
 
