@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 13 / 20
-- current_status: `topic_13_completed`
+- current_status: `topic_14_exam_alignment_complete`
 - last_completed_topic: `13 フーリエ級数`
 - active_topic: `14 フーリエ変換・FFT`
-- next_start: Topic 14の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 14の解説本文＋3段階例題を作成する
 
 ## Topic 07 制作品質ゲート
 
@@ -171,33 +171,42 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 14 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 第二種公式過去問を直近年度から遡って調査
+- [x] R3一次「機械」問8 (1)を正式固定
+- [x] 現行公式資料で直接確認できる1問・1答案要素を品質ゲート対象に固定
+- [x] 制作前独立再解答・公式解答照合 `1 / 1 PASS`
+- [x] H18一次「機械」問6は現行公式アーカイブで問題本文・公式解答を直接確認できないため件数へ含めない
+- [x] H12一次「機械」問8は題名のみ確認、問題本文・公式解答を確定できないため件数へ含めない
+- [x] 二次「機械・制御」の直接対応問題を件数合わせで追加しない
+- [x] 第一種・第三種による件数水増し0件を確認
+- [x] Topic 15先取り、ADC量子化・回路方式の仕様外追加0件を確認
+- [x] source MarkdownへEXAM_ALIGNMENT・必要説明・境界を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] PowerPoint表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 13 `フーリエ級数` の最終QAを再判定した。
+Topic 14 `フーリエ変換・FFT` の制作前EXAM_ALIGNMENTを完了した。
 
-前回 `NEEDS_REVISION` の唯一の原因だった進捗記録5箇所が実成果物へ同期済みであることを再確認し、技術内容・固定EXAM_ALIGNMENT・完成後独立再解答・成果物QA・SPEC範囲境界を再監査した。
+現行の電気技術者試験センター公式資料で本Topic固定範囲へ直接接続し、問題本文・公式解答まで確認できたR3一次「機械」問8 (1)を正式固定した。制作前にサンプリング定理 `f_s > 2 f_max` を独立再導出し、空欄係数 `2` で公式解答と一致、`1 / 1 PASS`。
 
-品質ゲート:
-- 固定第二種公式過去問: `3問・5対象設問`
-- 制作前独立再解答・公式標準解答照合: `5 / 5 PASS`
-- 解説本文へのマッピング: `5 / 5 PASS`
-- 練習問題: `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`
-- 完成後独立再解答: `5 / 5 PASS`
-- 解説PDF表示QA: `5 / 5 PASS`
-- 練習PDF表示QA: `4 / 4 PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
-- H20/H19周辺問題による件数合わせ: 0件
-- 第一種過去問による件数水増し: 0件
-- Topic 14フーリエ変換・FFT先取り: 0件
-- Topic 15対数・dB・周波数応答・ボード線図先取り: 0件
-- PWM制御方式・キャリア設計・スイッチング損失一般論追加: 0件
-- 未確認実車値依存: 0件
-- source進捗記録と実成果物の整合: PASS
+原則5問以上に対し、H18一次「機械」問6は学習資料で内容を確認できるものの現行公式アーカイブから本文・公式解答を直接確認できず、H12一次「機械」問8は題名のみで本文・正答を確定できないため正式件数へ含めなかった。二次「機械・制御」、第一種・第三種、Topic 15論点、ADC量子化・回路方式を件数合わせで追加していない。
 
 ## 判定
 
-Topic 13は `PASS / completed`。
+Topic 14は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。
 
 完成数は `13 / 20`。
 
-次はTopic 14 `フーリエ変換・FFT` の制作前EXAM_ALIGNMENTを実施する。
+次はTopic 14の解説本文＋3段階例題を作成する。
