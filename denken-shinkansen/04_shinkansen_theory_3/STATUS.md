@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 12 / 14
-- current_status: `topic_13_exam_alignment_complete`
+- current_status: `topic_13_explanation_source_complete`
 - last_completed_topic: `12 300系はなぜVVVFになった？`
 - active_topic: `13 インバータはどうやって三相交流を作る？`
-- next_start: Topic 13の解説本文＋3段階例題を作成する
+- next_start: Topic 13の解説PDFを作成し、表示QA・文字抽出QAを行う
 
 ## Topic 01 進捗
 
@@ -234,7 +234,7 @@
 - [x] 重複再出題を件数へ水増ししないことを確認
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
@@ -243,12 +243,12 @@
 
 ## 今回進めた内容
 
-Topic 13 `インバータはどうやって三相交流を作る？` の制作前EXAM_ALIGNMENTを完了した。
+Topic 13 `インバータはどうやって三相交流を作る？` の解説本文＋3段階例題を完成した。
 
-公式「理論」過去問から、Topic 13固定範囲だけで扱える4問を品質ゲート対象に固定した。制作前に独立再構成・計算・波形判定を行い、公式標準解答と照合して `4 / 4 PASS`。NAND・マルチバイブレータ、直流チョッパ固有L/C動作、機械科目のインバータ/PWM問題を件数合わせで追加していない。令和5年度下期 理論 問9は令和6年度上期 理論 問9と同内容の再出題として重複計上していない。
+固定4過去問の要求を本文へ `4 / 4` マッピングし、理想スイッチ、パルス・デューティ比、波形率・波高率、PWM、基本波・高調波、ひずみ波電力、区間別波形追跡、三相インバータの基本を説明した。系列SPECに明記された増幅回路・オペアンプは基本概念だけを収録し、固定4問の品質ゲートへ件数合わせで混在させていない。
 
-source `topics/13_inverter_pwm/13_inverter_pwm.md` に固定4問、教材必須事項、SPEC境界、学習サイト確認、制作前独立検証を反映した。
+3段階例題は独立再計算 `3 / 3 PASS`。詳細PWM方式、V/f制御、素子損失、NAND・マルチバイブレータ、直流チョッパ固有L/C、未確認実車値の追加は0件。
 
 ## 判定
 
-Topic 13は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `12 / 14`。次は解説本文＋3段階例題を作成し、固定4問の要求事項を本文へマッピングする。
+Topic 13は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `12 / 14`。次は解説PDFを作成し、表示QA・文字抽出QAを行う。
