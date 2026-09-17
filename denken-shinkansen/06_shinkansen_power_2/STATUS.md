@@ -2,24 +2,14 @@
 
 updated: 2026-09-17
 series: `06_shinkansen_power_2`
-active_topic: `11`
-theme: 新幹線が移動すると電圧はどう変わる？
-current_status: `topic_11_source_progress_synced`
-completed_topics: `10 / 22`
+active_topic: `12`
+theme: N700Sが何本も同時加速したら？
+current_status: `topic_11_completed`
+completed_topics: `11 / 22`
 
-## Topic 11 current result
+## Topic 11 final result
 
-前回最終QAの唯一のFAILだった進捗記録不整合を修正した。
-
-同期対象:
-1. `topics/11_moving_train_voltage/11_moving_train_voltage.md`
-   - 冒頭状態・要約・次工程を実成果物状態へ同期。
-2. `topics/11_moving_train_voltage/11_moving_train_voltage_practice.md`
-   - 冒頭状態を完成後blind独立再解答完了状態へ同期。
-3. `topics/11_moving_train_voltage/11_moving_train_voltage_powerpoint_qa.md`
-   - 末尾を完成後blind独立再解答完了・最終QA再判定待ちへ同期。
-
-技術本文、固定EXAM_ALIGNMENT、正式4問・17答案要素、練習問題・正答、PDF/PPTX、計算プログラム、blind独立再解答結果は変更していない。
+最終QA再判定を実施し、`PASS / completed` とした。
 
 正式品質ゲート:
 - 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
@@ -43,7 +33,7 @@ completed_topics: `10 / 22`
 
 原則5問に対し、Topic 11固定範囲だけで問題全体を完答できる5問目は確認できなかったため、固定範囲外論点を追加して件数を水増ししていない。
 
-Topic 11はまだ `completed` にしない。前回最終QAの `NEEDS_REVISION` は監査履歴として保持し、次工程で進捗記録整合を含む最終QAを再判定する。
+前回最終QAで唯一FAILだった進捗記録不整合は解消し、主sourceを `completed` へ更新した。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、計算プログラム、blind独立再解答結果は変更していない。
 
 ## Gate checklist
 
@@ -57,8 +47,9 @@ Topic 11はまだ `completed` にしない。前回最終QAの `NEEDS_REVISION` 
 - [x] Topic 08 completed
 - [x] Topic 09 completed
 - [x] Topic 10 completed
-- [ ] Topic 11 — progress sync complete; final QA re-evaluation pending
+- [x] Topic 11 completed
+- [ ] Topic 12 — production-pre EXAM_ALIGNMENT pending
 
 ## next_start
 
-Topic 11の最終QAを再判定する。技術内容・試験対応品質ゲート・必須成果物・PDF/PPTX QA・練習QA・計算プログラムQA・blind独立再解答・進捗記録整合を再確認し、全件PASSの場合のみ `completed` として完成数を `11 / 22` に進める。
+Topic 12「N700Sが何本も同時加速したら？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` に従い、一次・二次の公式過去問を直近年度優先で調査し、固定範囲だけで要求知識・式・設問型・教材マッピングを確定する。
