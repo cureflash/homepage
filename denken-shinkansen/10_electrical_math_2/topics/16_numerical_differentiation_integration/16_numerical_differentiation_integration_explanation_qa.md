@@ -50,4 +50,4 @@
 
 `PASS / topic_16_explanation_pdf_complete`
 
-次工程: Topic 16の練習問題sourceを作成する。
+次工程: Topic 16の最終QAを再判定する。
