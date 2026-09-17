@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `14 / 39`
-- current_status: `topic_15_explanation_pdf_complete`
+- current_status: `topic_15_practice_source_complete`
 - last_completed_topic: `14 300系⑤ 走行抵抗と必要けん引力`
 - active_topic: `15 500系 高速域の出力・熱解析`
-- next_start: Topic 15の練習問題sourceを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDFの共通仮定式系を変更せず、第二種一次・二次への接続と完全解説条件を守る
+- next_start: Topic 15の練習PDFを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDFと練習sourceの共通仮定式系を変更せず、一次8問・二次4問・完全解説12問・固定16答案要素を欠落させない
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -25,7 +25,7 @@
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
-- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / EXPLANATION_PDF_PASS
+- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / PRACTICE_SOURCE_PASS
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -80,6 +80,22 @@
 - SPEC外追加: `0件`
 - 未確認500系実車値の真値化: `0件`
 - 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+## Topic 15 練習問題source
+- path: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_practice_source.md`
+- 一次試験型: `8問`、全問五肢択一
+- 二次試験型: `4問`、途中式・前提・単位・理由を記載
+- 合計: `12問`
+- 固定5過去問・16答案要素接続: `16 / 16 PASS`
+- 数値・論理再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定4可視化の式系・条件との整合: `4 / 4 PASS`
+- 解説source/PDFの共通仮定式系の変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
 ## Topic 14 固定EXAM_ALIGNMENT
 - source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -263,4 +279,4 @@ SPEC指定可視化:
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次工程
-Topic 15「500系 高速域の出力・熱解析」の練習問題sourceを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDFの共通仮定式系を変更せず、第二種一次・二次への接続と完全解説条件を守る。
+Topic 15「500系 高速域の出力・熱解析」の練習PDFを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDFと練習sourceの共通仮定式系を変更せず、一次8問・二次4問・完全解説12問・固定16答案要素を欠落させない。
