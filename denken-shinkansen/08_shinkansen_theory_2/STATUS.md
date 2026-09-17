@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 14 / 21
-- current_status: `topic_15_final_qa_complete`
-- last_completed_topic: `14 インバータのギザギザ波形を分解する`
-- active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
-- next_start: Topic 15 completed状態同期
+- exam_aligned_completed_topics: 15 / 21
+- current_status: `topic_15_completed`
+- last_completed_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
+- active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
+- next_start: Topic 16 制作前EXAM_ALIGNMENT
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -250,22 +250,20 @@
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source・練習sourceの旧進捗記録同期
 - [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
-- [ ] completed状態同期
+- [x] completed状態同期
+- [x] 最終判定: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の最終QAを再実施した。
+Topic 15のcompleted状態同期を行った。
 
-- 必須成果物: `PASS`
-- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
-- 公式標準解答一致: `25 / 25`
-- 二次採用判断: `PASS`、二次採用 `0問`、二次数合わせ `0件`
-- 解説PDF・練習PDF・PowerPoint表示QA: `PASS`
-- 練習12問の数値再計算・論理QA、正答一意性: `12 / 12 PASS`
-- SPEC境界: `PASS`
-- 初回blocker4件の解消: `4 / 4 PASS`
+- 主source: `COMPLETED / completed`
+- 練習source: `COMPLETED / completed`
+- STATUS / HANDOFF: Topic 15 completed、完成数 `15 / 21`
+- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS` を維持
+- 二次採用: `0問`、二次数合わせ: `0件` を維持
 - 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
 
 ## 判定
 
-Topic 15は `PASS / FINAL_QA_COMPLETE`。完成数は `14 / 21` のまま。次工程はcompleted状態同期。
+Topic 15は `PASS / completed`。完成数は `15 / 21`。次工程はTopic 16制作前EXAM_ALIGNMENT。
