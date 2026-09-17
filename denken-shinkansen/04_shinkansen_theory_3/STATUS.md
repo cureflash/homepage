@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `04_shinkansen_theory_3`
-- exam_aligned_completed_topics: 12 / 14
-- current_status: `topic_13_independent_reanswer_complete`
-- last_completed_topic: `12 300系はなぜVVVFになった？`
-- active_topic: `13 インバータはどうやって三相交流を作る？`
-- next_start: Topic 13の最終QAを実施する
+- exam_aligned_completed_topics: 13 / 14
+- current_status: `topic_13_completed`
+- last_completed_topic: `13 インバータはどうやって三相交流を作る？`
+- active_topic: `14 East iは何をどう測っている？`
+- next_start: Topic 14の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 01 進捗
 
@@ -239,24 +239,27 @@
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `4 / 4 PASS`
-- [ ] 最終QA PASS
+- [x] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 13 `インバータはどうやって三相交流を作る？` の完成後公式過去問独立再解答を実施し、GitHub正本へ記録した。
+Topic 13 `インバータはどうやって三相交流を作る？` の最終QAを実施し、`PASS / completed` とした。
 
 - 固定公式「理論」過去問: `4問`
-- 独立解答列: `(2),(1),(3),(3)`
-- 公式解答列: `(2),(1),(3),(3)`
-- 一致: `4 / 4 PASS`
+- 完成後独立再解答: `4 / 4 PASS`
+- 公式解答一致: `4 / 4`
 - 教材外知識による補完: `0件`
-- 系列SPEC固定範囲外論点への依存: `0件`
-- Topic 14の測定器・測定誤差への依存: `0件`
-- 機械科目の詳細PWM/V/f制御への依存: `0件`
-- 未確認実車値への依存: `0件`
-- 独立再解答記録: `topics/13_inverter_pwm/13_inverter_pwm_exam_recheck.md`
-- 主source・練習sourceのstage: `INDEPENDENT_REANSWER_COMPLETE`
+- 固定過去問要求の本文マッピング: `4 / 4`
+- 3段階例題: `3 / 3 PASS`
+- 練習問題: 15問、正答一意性 `15 / 15 PASS`、再計算 `8 / 8 PASS`
+- 解説PDF: 200 dpi表示 `4 / 4 PASS`、文字抽出PASS
+- 練習PDF: 200 dpi表示 `3 / 3 PASS`、文字抽出PASS
+- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
+- 系列SPEC固定範囲外追加: `0件`
+- 未確認実車値依存: `0件`
+- 最終QA記録: `topics/13_inverter_pwm/13_inverter_pwm_final_qa.md`
+- 主source・練習source: `COMPLETED`
 
 ## 判定
 
-Topic 13は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `12 / 14`。次はTopic 13の最終QAを実施する。
+Topic 13は `PASS / completed`。完成数は `13 / 14`。次はTopic 14「East iは何をどう測っている？」の制作前EXAM_ALIGNMENTを実施する。
