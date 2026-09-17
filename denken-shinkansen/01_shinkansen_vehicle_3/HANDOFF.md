@@ -6,23 +6,40 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は35/38。01〜35がPASS。active topicは36 `COSMOS① 新幹線全体を統合管理する`。
 
 ## 今回進捗
-Topic 36の固定EXAM_ALIGNMENT 5問・8答案要素を変更せず、新しいblind runで公式問題PDFだけから全8答案要素を先に導出・確定し、その後に公式解答表へ照合して `8 / 8 PASS` を確認した。
+Topic 36の固定EXAM_ALIGNMENT 5問・8答案要素と制作前blind独立解答 `8 / 8 PASS` を変更せず、系列SPEC固定範囲だけで解説sourceを完成し、source QAを `PASS / EXPLANATION_SOURCE_COMPLETE` とした。
 
-- 固定EXAM_ALIGNMENT: 公式過去問 `5問・8答案要素`、変更なし
+- source: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management.md`
+- QA記録: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation_source_qa.md`
 - 系列SPEC固定範囲: 運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理
-- R6上 機械 問18(a)(b): `2 / 2 PASS`
-- R4上 機械 問13・問14: `2 / 2 PASS`
-- R4下 機械 問18(a)(b): `2 / 2 PASS`
-- H27 機械 問18(a)(b): `2 / 2 PASS`
-- 公式解答との不一致: `0件`
-- 固定範囲外知識による正答補完: `0件`
-- 未確認COSMOS内部仕様依存: `0件`
-- 個別正答番号・完成導出の必須先読みsource保存: `0件`
-- 解説本文・PDF・練習問題・PowerPoint: 未着手
-- 完成数: `35 / 38` 維持
+- 本文: §1〜§16
+- 3段階例題: 基礎／本試験標準／複合・ひっかけ
+- 例題独立再計算: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT本文マッピング: `8 / 8答案要素 PASS`
 - 固定範囲外追加: `0件`
 - Topic 37〜38先取り: `0件`
-- 次工程: 固定EXAM_ALIGNMENTと系列SPEC固定範囲に基づく解説本文を作成し、全8答案要素の要求事項を本文へマッピングする
+- 未確認COSMOS内部仕様追加: `0件`
+- 個別正答番号・公式問題の完成導出保存: `0件`
+- PDF・練習問題・PowerPoint: 未着手
+- 完成数: `35 / 38` 維持
+- 次工程: 本sourceだけを正本として解説PDFを作成し、全ページ表示・文字抽出・固定EXAM_ALIGNMENT反映・固定範囲境界をQAする。練習問題・PowerPointへはまだ進まない
+
+## Topic 36 解説source
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 制作前blind独立解答: `5問・8答案要素 / 8 / 8 PASS`
+- 固定EXAM_ALIGNMENT: `5問・8答案要素`、変更なし
+- 本文: §1〜§16
+- 3段階例題: 基礎／本試験標準／複合・ひっかけ
+- 例題独立再計算: `3 / 3 PASS`
+- コンピュータ構成・CPU/LAN区別・ICメモリ: PASS
+- 有線/無線・アナログ/ディジタル・光ファイバ・パリティ: PASS
+- A-D/D-A変換・インタフェース: PASS
+- 配列・最大値・平均値・反復・比較交換・並べ替え: PASS
+- 位取り記数法・符号付き2進数・2の補数・オフセットバイナリ: PASS
+- COSMOS公開範囲との接続: PASS
+- 固定範囲外追加: `0件`
+- Topic 37以降先取り: `0件`
+- 未確認COSMOS内部仕様追加: `0件`
+- 個別正答番号・公式問題の完成導出保存: `0件`
 
 ## Topic 35 固定EXAM_ALIGNMENT
 - R7下 機械 問14 — フローチャート、変数更新、条件分岐、反復
@@ -189,11 +206,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_36_preanswer_complete`
+- `current_status`: `topic_36_explanation_source_complete`
 - 完成数: 35/38
 - 01〜35: PASS
 - last completed: 35 `COMTRAC③ ダイヤが乱れたらどうする？`
 - active topic: 36 `COSMOS① 新幹線全体を統合管理する`
 
 ## 次の正確な開始点
-Topic 36は制作前EXAM_ALIGNMENT 5問・8答案要素を固定し、新しいblind runで全8答案要素を公式問題PDFだけから先に導出・確定し、公式解答表と照合して `8 / 8 PASS`。個別正答番号・完成導出は完成後blind再解答保護のため必須先読みsourceへ保存していない。次は固定EXAM_ALIGNMENTと系列SPEC固定範囲に基づく解説本文作成。全8答案要素の要求事項を本文へマッピングし、PDF・練習問題・PowerPointへはまだ進まない。
+Topic 36は制作前EXAM_ALIGNMENT 5問・8答案要素を固定し、制作前blind独立解答 `8 / 8 PASS` を維持したまま解説sourceを完成。本文§1〜§16、3段階例題、固定5問・8答案要素の本文マッピング `8 / 8 PASS`、例題独立再計算 `3 / 3 PASS`。固定範囲外追加・Topic 37以降先取り・未確認COSMOS内部仕様追加はいずれも0件。次は本sourceだけを正本として解説PDFを作成し、全ページ表示・文字抽出・固定EXAM_ALIGNMENT反映・固定範囲境界をQAする。練習問題・PowerPointへはまだ進まない。
