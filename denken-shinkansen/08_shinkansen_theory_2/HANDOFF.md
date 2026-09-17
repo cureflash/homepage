@@ -6,11 +6,11 @@
 
 Topic 01〜15は `PASS / completed`。完成数は `15 / 21`。
 
-current_status: `topic_16_reanswer_complete`
+current_status: `topic_16_final_qa_needs_revision`
 
 active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
 
-Topic 16は完成後独立再解答まで完了。固定一次5問・25答案要素を完成済み教材の固定範囲だけで再導出し、公式標準解答と `25 / 25` 一致。教材外知識補完0件。二次採用0問・数合わせ0件、降伏機構の詳細、整流・チョッパ・インバータ回路、Topic 17、未確認300系主変換装置仕様の追加0件。次工程は最終QA。
+Topic 16は初回最終QAまで実施済み。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界はいずれもPASS。blockerは主source・練習sourceに残る旧進捗記録4箇所のみで、判定は `NEEDS_REVISION / IN_PROGRESS`。次工程はその4箇所を実成果物状態へ同期する。
 
 ## Topic 16 成果物
 
@@ -23,8 +23,9 @@ Topic 16は完成後独立再解答まで完了。固定一次5問・25答案要
 - 解説画像PowerPoint: `topics/16_semiconductor_diode/16_semiconductor_diode_images.pptx`
 - PowerPoint QA: `topics/16_semiconductor_diode/16_semiconductor_diode_powerpoint_qa.md`
 - 完成後独立再解答: `topics/16_semiconductor_diode/16_semiconductor_diode_reanswer.md`
+- 初回最終QA: `topics/16_semiconductor_diode/16_semiconductor_diode_final_qa.md`
 - completion: `in_progress`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `FINAL_QA_NEEDS_REVISION`
 
 ## Topic 16 固定範囲
 
@@ -97,6 +98,27 @@ Topic 16は完成後独立再解答まで完了。固定一次5問・25答案要
 
 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
+## Topic 16 初回最終QA
+
+記録: `topics/16_semiconductor_diode/16_semiconductor_diode_final_qa.md`
+
+- 必須成果物: `PASS`
+- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
+- 二次採用判断: `PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC境界: `PASS`
+- PDF/PPTX表示QA・練習QA: `PASS`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答の不整合: `0件`
+- 進捗記録blocker: `4箇所`
+  - 主source冒頭状態
+  - 主source末尾「次工程」
+  - 練習source冒頭状態
+  - 練習source末尾「次工程」
+
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 次工程
 
-Topic 16 最終QA。MASTER_SPEC、EXAM_ALIGNMENT_SPEC、系列SPEC、固定EXAM_ALIGNMENT、全成果物・進捗記録を横断確認し、completed判定前のblocker有無を判定する。最終QAで進捗記録不整合が見つかった場合は `NEEDS_REVISION` とし、技術内容を勝手に変えず同期対象を特定する。
+Topic 16の主source・練習sourceに残る旧進捗記録4箇所を、PowerPoint・完成後独立再解答・初回最終QAまで完了した実状態へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
