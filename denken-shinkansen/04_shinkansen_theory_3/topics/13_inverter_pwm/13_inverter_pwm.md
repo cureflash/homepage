@@ -1,7 +1,7 @@
 # Topic 13 インバータはどうやって三相交流を作る？
 
 更新日: 2026-09-17
-status: `INDEPENDENT_REANSWER_COMPLETE`
+status: `COMPLETED`
 
 ## 1. SPEC固定範囲
 
@@ -507,8 +507,8 @@ v_i= 4 V → v_o= 3 V
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 `4 / 4 PASS`
-- [ ] 最終QA PASS
+- [x] 最終QA PASS
 
 ## 次工程
 
-Topic 13の最終QAを実施する。固定4問の完成後独立再解答は `4 / 4 PASS`。最終QA前なのでTopic 13は `completed` にしない。
+最終QAを実施し `PASS / completed`。固定4問の完成後独立再解答 `4 / 4 PASS`、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合性を全件PASS確認済み。次はTopic 14「East iは何をどう測っている？」の制作前EXAM_ALIGNMENTへ進む。
