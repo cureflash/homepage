@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: `12 / 16`
-- current_status: `topic_13_progress_sync_complete`
-- last_completed_topic: `12 新幹線のコンピュータは何をしている？`
-- active_topic: `13 新幹線は主電動機以外もモーターだらけ？`
-- next_start: Topic 13の最終QAを再判定する
+- exam_aligned_completed_topics: `13 / 16`
+- current_status: `topic_13_completed`
+- last_completed_topic: `13 新幹線は主電動機以外もモーターだらけ？`
+- active_topic: `14 停電してもN700Sが走れるのはなぜ？`
+- next_start: Topic 14の制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -23,10 +23,10 @@
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
-- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 旧進捗3箇所同期済み / 最終QA再判定待ち / IN_PROGRESS
+- [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [ ] 14〜16 — 未完了
 
-## Topic 13 制作品質状態
+## Topic 13 最終品質状態
 - 固定範囲: 電動機出力 / 回転速度 / トルク / 負荷特性 / ポンプ / ファン / コンプレッサ / 所要動力 / 効率 / インバータ駆動 / 可変速運転
 - 代表計算: `P = ωT` / ポンプ所要動力 / ファン所要動力 / 効率を考慮した入力電力
 - 固定EXAM_ALIGNMENT: R5上 機械 問7 / R4下 機械 問11 / H30 機械 問10 / H29 機械 問12 / H27 機械 問12
@@ -92,8 +92,15 @@
 - 旧進捗2: `13_auxiliary_motors_practice.md` — 同期済み
 - 旧進捗3: `13_auxiliary_motors_practice_pdf_qa.md` — 同期済み
 - 進捗記録同期: `3 / 3 PASS`
-- 状態: `topic_13_progress_sync_complete`
-- 次工程: Topic 13の最終QAを再判定する
+- 最終QA再判定: `PASS`
+- 最終QA技術内容: `PASS`
+- 最終QA必須成果物: `PASS`
+- 最終QA表示QA: `PASS`
+- 最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
+- 最終QA進捗記録整合: `PASS`
+- 最終QA固定範囲境界: `PASS`
+- 状態: `completed`
+- 次工程: Topic 14の制作前EXAM_ALIGNMENT
 
 ## Topic 12 最終品質状態
 - 固定範囲: 2進数 / 16進数 / ビット / バイト / 論理回路 / AND / OR / NOT / NAND / NOR / XOR / 論理式 / 真理値表 / A/D変換 / D/A変換 / センサ / 情報伝送
@@ -223,6 +230,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 13で前回最終QAの唯一のFAILだった進捗記録整合を修正した。`13_auxiliary_motors.md`、`13_auxiliary_motors_practice.md`、`13_auxiliary_motors_practice_pdf_qa.md` の旧工程記録を実成果物へ同期し、`3 / 3 PASS`。固定EXAM_ALIGNMENT、問題・正答、技術本文、PDF/PPTXは変更していない。
+Topic 13の最終QAを再判定し、技術内容・必須成果物・PDF/PPTX表示QA・固定EXAM_ALIGNMENT・完成後blind独立再解答・進捗記録整合・固定範囲境界をすべて再確認して `PASS`。Topic 13を `completed` とした。固定EXAM_ALIGNMENT、問題・正答、技術本文、PDF/PPTXは変更していない。
 
-完成数は `12 / 16` のまま。次工程はTopic 13の最終QA再判定。
+完成数は `13 / 16`。次工程はTopic 14「停電してもN700Sが走れるのはなぜ？」の制作前EXAM_ALIGNMENT。
