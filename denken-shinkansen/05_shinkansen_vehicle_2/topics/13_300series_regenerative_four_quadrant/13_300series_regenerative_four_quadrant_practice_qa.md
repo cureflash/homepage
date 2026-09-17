@@ -53,6 +53,6 @@
 `PASS`
 
 ## 現在地
-- current_status: `topic_13_practice_pdf_complete`
+- current_status: `topic_13_progress_sync_complete`
 - 完成数: `12 / 39`
-- 次工程: Topic 13 解説画像PowerPoint。固定EXAM_ALIGNMENTは変更しない。
+- 次工程: Topic 13 最終QAを再判定する。固定EXAM_ALIGNMENTは変更しない。
