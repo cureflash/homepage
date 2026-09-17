@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 14 / 20
-- current_status: `topic_15_explanation_source_complete`
+- current_status: `topic_15_explanation_pdf_complete`
 - last_completed_topic: `14 フーリエ変換・FFT`
 - active_topic: `15 対数・dB・周波数応答`
-- next_start: Topic 15の解説PDFを制作し、表示QA・文字抽出QAを行う
+- next_start: Topic 15の練習問題sourceを制作する
 
 ## Topic 07 制作品質ゲート
 
@@ -211,7 +211,7 @@
 - [x] 制作前独立再解答・公式解答照合 `12 / 12 PASS`
 - [x] 公式解答確認前に `ANSWER_LOCKED_BEFORE_REVIEW` を保存（lock commit `7e83ea01cd6ccdeca2531fbfb29f119370947f75`）
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
@@ -222,18 +222,16 @@
 
 ## 今回進めた内容
 
-Topic 15 `対数・dB・周波数応答` の解説本文＋3段階例題を制作した。
+Topic 15 `対数・dB・周波数応答` の解説PDFを作成し、GitHub正本へ反映した。
 
-固定済みの第二種公式過去問5問・12答案要素を本文へ `12 / 12` マッピングした。R6高周波位相、R5の積分要素・定数ゲイン・一次遅れ・ボード線図逆算、R4の正弦波定常振幅比、H30のPI折れ線、H23の安定余裕・交差周波数・帯域幅を教材だけで再現できるようにした。
+`topics/15_log_db_frequency_response/15_log_db_frequency_response_explanation.pdf` はA4縦4ページ。200 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`。固定済み第二種公式過去問5問・12答案要素を `12 / 12` 反映し、3段階例題も `3 / 3 PASS` を維持した。
 
-3段階例題は、基礎「dBと振幅比の往復」、本試験標準「ゲイン折れ線から `T=2 s`, `T_I=0.39905 s` を逆算」、複合「`ω_gc=1 rad/s`, 位相余裕45°から `T=1 s`, `K=sqrt(2)` を求める」とし、独立再計算 `3 / 3 PASS`。
-
-第一種・第三種による件数水増し、ラウス・フルビッツ法一般、ナイキスト線図による独立した安定判別、補償器設計一般、フィルタ設計一般、Topic 16以降の先取り、未確認実車値依存はいずれも0件。
+QA記録は `topics/15_log_db_frequency_response/15_log_db_frequency_response_explanation_qa.md` に保存した。第一種・第三種による件数水増し、ラウス・フルビッツ法一般、ナイキスト線図による独立した安定判別、補償器設計一般、フィルタ設計一般、Topic 16以降の先取り、未確認実車値依存はいずれも0件。
 
 ## 判定
 
-Topic 15は `explanation source complete / IN_PROGRESS`。
+Topic 15は `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。
 
 完成数は `14 / 20` のまま。
 
-次は解説本文をA4縦の解説PDFへ組版し、全ページ表示QA・文字抽出QAを行う。
+次はTopic 15の練習問題sourceを制作する。
