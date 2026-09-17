@@ -8,13 +8,13 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 12`
 
-current_status: `topic_11_explanation_source_complete`
+current_status: `topic_11_explanation_pdf_complete`
 
 last_completed_topic: `10 指数関数・一階微分方程式入門`
 
 active_topic: `11 グラフ・特性曲線を読む`
 
-next_start: `Topic 11解説PDF`
+next_start: `Topic 11練習問題source`
 
 ## Topic 11 固定仕様範囲
 
@@ -109,8 +109,22 @@ next_start: `Topic 11解説PDF`
 
 固定EXAM_ALIGNMENT変更0件。伝達関数・ボード線図・PID等の固定範囲外追加0件。
 
-判定: `topic_11_explanation_source_complete / IN_PROGRESS`。
+## Topic 11 解説PDF
+
+主sourceを正本として次を反映した。
+
+- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_explanation.pdf`
+- A4縦4ページ
+- 200 dpi表示QA `4 / 4 PASS`
+- 文字抽出QA `PASS`
+- 固定必須説明 `15 / 15`
+- 3段階例題の数値整合 `3 / 3 PASS`
+- 固定5過去問への教材内対応 `5 / 5`
+- 固定EXAM_ALIGNMENT変更0件
+- 伝達関数・ボード線図・PID等の固定範囲外追加0件
+
+判定: `topic_11_explanation_pdf_complete / IN_PROGRESS`。
 
 ## 次工程
 
-主sourceを正本としてTopic 11解説PDFを作成し、表示QA・文字抽出QA・数値整合を確認する。
+主sourceと解説PDFを正本として、Topic 11の練習問題sourceを作成する。
