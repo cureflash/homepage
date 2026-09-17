@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 11 / 16
-- current_status: `topic_12_explanation_pdf_complete`
+- current_status: `topic_12_practice_source_complete`
 - last_completed_topic: `11 架線事故ではどうやって電気を止める？`
 - active_topic: `12 320km/hでもパンタグラフが離れないのはなぜ？`
-- next_start: Topic 12の練習問題sourceを作成する
+- next_start: Topic 12の練習PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -22,7 +22,7 @@
 - [x] 09 変電所からパンタグラフまでどう送る？ — completed。固定5問・7小問を完成教材だけでブラインド独立再解答し `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外補完0件。必須成果物、PDF/PPTX QA、SPEC境界を最終QAで再確認し `PASS / completed`
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？ — 解説本文§1〜§14＋3段階例題、解説PDF完成。固定5問・6答案要素 `6 / 6`、例題再計算 `3 / 3 PASS`、解説PDF表示QA `4 / 4 PASS`、文字抽出PASS、SPEC固定範囲外追加0件
+- [ ] 12 320km/hでもパンタグラフが離れないのはなぜ？ — 解説本文§1〜§14＋3段階例題、解説PDF、練習問題source完成。固定5問・6答案要素 `6 / 6`、例題再計算 `3 / 3 PASS`、解説PDF表示QA `4 / 4 PASS`、練習source `12 / 12` 数値・論理PASS・正答一意、SPEC固定範囲外追加0件
 - [ ] 13 新幹線の架線は何でできている？
 - [ ] 14 駅やトンネルにはどう電気を配る？
 - [ ] 15 回生した電気はどこへ行く？
@@ -65,8 +65,8 @@ PowerPoint QA: `topics/08_voltage_drop/08_voltage_drop_powerpoint_qa.md`
 最終QA: `topics/08_voltage_drop/08_voltage_drop_final_qa.md`
 
 固定5問・7小問:
-- R7下 電力 問16 (a)(b)
-- R7下 電力 問17 (a)(b)
+- R7下 電力 問16(a)(b)
+- R7下 電力 問17(a)(b)
 - R7上 電力 問13
 - R6上 電力 問13
 - R5上 電力 問12
@@ -320,6 +320,7 @@ PowerPoint QA: `topics/11_fault_protection/11_fault_protection_powerpoint_qa.md`
 source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
 解説PDF: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation.pdf`
 解説PDF QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation_qa.md`
+練習問題source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_practice_source.md`
 
 固定5問・6答案要素:
 - R7上 電力 問12
@@ -344,6 +345,11 @@ source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
 - 解説PDF文字抽出QA: PASS
 - 解説PDF数値・論理再検算: `3 / 3 PASS`
 - 固定5問・6答案要素のPDF対応: `6 / 6`
+- 練習問題source: 全12問・全問五肢択一
+- 練習難易度: 基礎3 / 本試験標準7 / 複合2
+- 練習source数値・論理独立再計算: `12 / 12 PASS`
+- 練習source正答一意性: `12 / 12 PASS`
+- 練習source固定5問・6答案要素への接続: `6 / 6`
 - SPEC固定範囲外の採用問題・本文・PDF追加: `0件`
 - Topic 13以降の論点による補完・先取り: `0件`
 - 未確認新幹線実設備値への依存・真値化: `0件`
@@ -351,4 +357,4 @@ source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
 - 完成後ブラインド独立再解答を汚染しないため制作前の選択肢番号・最終数値解はPDF未記録
 
 ## 次
-Topic 12の練習問題sourceを作成する。原則12問以上、少なくとも半数を五肢択一、本試験標準を中心に固定5問・6答案要素へ接続する。SPEC固定範囲外、Topic 13以降、未確認の新幹線実設備値は追加しない。
+Topic 12の練習PDFを作成する。全12問・全解説・固定5問6答案要素への接続を反映し、表示QA、文字抽出QA、数値・論理再検算、正答一意性を確認する。SPEC固定範囲外、Topic 13以降、未確認の新幹線実設備値は追加しない。
