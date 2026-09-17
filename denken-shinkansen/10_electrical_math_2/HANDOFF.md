@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜13は `completed`。
+Topic 01〜14は `completed`。
 
-完成数: `13 / 20`
+完成数: `14 / 20`
 
-current_status: `topic_14_progress_records_synced`
+current_status: `topic_14_completed`
 
-active_topic: `14 フーリエ変換・FFT`
+active_topic: `15 対数・dB・周波数応答`
 
-次工程: Topic 14の最終QAを再判定する。
+次工程: Topic 15の制作前EXAM_ALIGNMENTを実施する。
 
 ## 上位仕様
 
@@ -846,9 +846,9 @@ Topic 14のフーリエ変換・FFT、Topic 15の対数・dB・周波数応答�
 
 固定第二種公式過去問3問・5対象設問。
 
-- H28 二次 機械・制御 問3 (3)〜(4)
-- H24 一次 機械 問3 (4)〜(5)
-- H22 一次 機械 問3 (3)
+- H28 二次「機械・制御」問3 (3)〜(4)
+- H24 一次「機械」問3 (4)〜(5)
+- H22 一次「機械」問3 (3)
 
 制作前独立再解答・公式標準解答照合: `5 / 5 PASS`。
 
@@ -933,14 +933,14 @@ PowerPoint QA:
 
 総合判定: `PASS / completed`。
 
-## Topic 14 進捗
+## Topic 14 完了記録
 
 テーマ: `フーリエ変換・FFT`
 
 source:
 `topics/14_fourier_transform_fft/14_fourier_transform_fft.md`
 
-current_status: `topic_14_progress_records_synced`
+current_status: `topic_14_completed`
 
 ### Topic 14 固定範囲
 
@@ -1075,6 +1075,42 @@ QA:
 - file size: `17980 bytes`
 - Topic 15先取り、ADC量子化・回路方式、フィルタ設計一般、FFT実装詳細の試験必須化、二次公式過去問の件数合わせ、第一種・第三種過去問による件数水増し、未確認実車値依存: `0件`
 
+### Topic 14 完成後独立再解答
+
+`topics/14_fourier_transform_fft/14_fourier_transform_fft_exam_reanswer.md`
+
+- `ANSWER_LOCKED_BEFORE_REVIEW` 後に公式解答と照合
+- lock commit: `0909fcf24702845179cdad0b72daa63e71548472`
+- R3一次「機械」問8 (1): `2（チ）` → PASS
+- 結果: `1 / 1 PASS`
+- 教材外知識補完: 0件
+
+### Topic 14 最終QA
+
+`topics/14_fourier_transform_fft/14_fourier_transform_fft_final_qa.md`
+
+初回判定は `NEEDS_REVISION / IN_PROGRESS`。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・表示QA・SPEC境界はPASSで、未完了理由は進捗記録6箇所だけだった。
+
+その後、6箇所を実成果物へ同期し、再判定で以下を確認した。
+
+- 必須成果物実在: PASS
+- 固定第二種公式1問・1答案要素: PASS
+- 完成後独立再解答 `1 / 1 PASS`: PASS
+- 練習問題独立計算・論理QA `12 / 12 PASS`: PASS
+- 一次型正答一意性 `8 / 8 PASS`: PASS
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- source進捗整合: PASS
+- H18/H12候補の正式件数追加: 0件
+- 二次公式過去問の件数合わせ: 0件
+- 第一種・第三種過去問による件数水増し: 0件
+- Topic 15先取り: 0件
+- ADC量子化・変換回路方式追加: 0件
+- フィルタ設計一般追加: 0件
+- FFT実装詳細の試験必須化: 0件
+- 未確認実車値依存: 0件
+
+総合判定: `PASS / completed`。
+
 ## 次に行うこと
 
-Topic 14 `フーリエ変換・FFT` の最終QAを再判定する。
+Topic 15 `対数・dB・周波数応答` の制作前EXAM_ALIGNMENTを実施する。
