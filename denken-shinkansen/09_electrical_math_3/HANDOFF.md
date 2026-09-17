@@ -8,13 +8,13 @@ Topic 01〜11は `completed`。
 
 完成数: `11 / 12`
 
-current_status: `topic_12_preproduction_independent_answer_complete`
+current_status: `topic_12_explanation_source_complete`
 
 last_completed_topic: `11 グラフ・特性曲線を読む`
 
 active_topic: `12 電気数学総合`
 
-next_start: `Topic 12の解説本文＋3段階例題`
+next_start: `Topic 12の解説PDF`
 
 ## Topic 11 固定仕様範囲
 
@@ -333,6 +333,33 @@ R8上 電力 問15は Topic 09では水力設備知識が固定範囲外だっ�
 
 判定: `PASS / PREPRODUCTION_INDEPENDENT_ANSWER_COMPLETE`。
 
+## Topic 12 解説本文＋3段階例題
+
+主sourceへ固定必須説明20項目を `20 / 20` 実装し、固定5過去問を `5 / 5` 教材内マッピングした。
+
+本文で扱った主な接続:
+- 総合問題の既知量・未知量・単位・必要数学の抽出
+- SI接頭語、百分率、次元、比例・反比例、有効数字
+- 正弦波、実効値、周波数、120°位相差、三相電力
+- RLC複素インピーダンス、フェーザ合成、絶対値
+- `e=-N dΦ/dt` と `E∝fΦ_m`
+- `E=∫Pdt`、効率、揚水の損失水頭、`Q_gT_g=Q_pT_p`
+- `n_s=120f/p`、`ω=2πn/60`、`P=ωT`
+- 周期波形の最大・最小・代表区間積分・平均値
+- Topic 10の指数一次過渡の既習事項としての再接続
+- 未確認実車値を使わない新幹線側の数学接続整理
+
+3段階例題:
+- 基礎: 正弦波磁束の微分 → `E_m≈125.7 V`、`E≈88.9 V`
+- 本試験標準: 三相同期電動機 → `n_s=1500 min^-1`、`P_out≈49.9 kW`、`T≈318 N·m`
+- 複合・ひっかけ: 三相整流波形 → `V_LL≈207.8 V`、`V_max≈293.9 V`、`V_min≈254.6 V`、`V_avg≈280.7 V`、`δ≈0.140`
+
+例題独立再計算 `3 / 3 PASS`。
+
+固定EXAM_ALIGNMENT変更0件。伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件。未確認新幹線実車値追加0件。
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`。
+
 ## 次工程
 
-固定5問と必須説明20項目を変えず、Topic 12の解説本文＋3段階例題を作成する。
+Topic 12の解説PDFを作成する。
