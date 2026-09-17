@@ -82,4 +82,4 @@
 
 `PRACTICE_PDF_COMPLETE / IN_PROGRESS`
 
-次工程: Topic 16の解説画像PowerPointを作成し、表示QAを行う。固定4問・8答案要素への接続 `8 / 8`、練習問題の独立計算・論理QA `12 / 12 PASS`、仕様境界を維持する。
+次工程: Topic 16の最終QAを再判定する。
