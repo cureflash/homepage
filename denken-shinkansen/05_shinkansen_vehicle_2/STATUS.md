@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `13 / 39`
-- current_status: `topic_14_blind_reanswer_ready`
+- current_status: `topic_14_blind_reanswer_blocked`
 - last_completed_topic: `13 300系④ 回生と四象限運転`
 - active_topic: `14 300系⑤ 走行抵抗と必要けん引力`
-- next_start: Topic 14 完成後blind再解答
+- next_start: H26二次 機械・制御 問1 (4) の公式標準解答数値不整合の扱い確定後、blind再解答QAを確定
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -24,7 +24,7 @@
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
-- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / BLIND_REANSWER_READY
+- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / BLOCKED_OFFICIAL_NUMERIC_DISCREPANCY
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -39,7 +39,7 @@
 - H25 一次 機械 問3 (1),(2)
 - 制作前計算・論理検証: 一次 `3 / 3 PASS`、二次 `6 / 6 PASS`、合計 `9 / 9 PASS`
 - 二次記述問題: `3問`
-- 公式解答・標準解答との不一致: `0件`
+- 制作前の公式解答・標準解答との不一致: `0件`
 - 参考教材2系統以上: `PASS`
 - R8一次「機械」直近年度確認: `PASS / 固定対象なし`
 - SPEC指定8項目: `8 / 8 aligned`
@@ -137,11 +137,29 @@
 - 判定: `PASS / BLIND_REANSWER_READY`
 - main source の制作前検証欄から固定公式過去問の個別数値解・正答記号・完成済み答案を除去済み
 - `保存済み正答を見ずに` 行うブラインド条件: `PASS`
-- 本runで完成後独立再解答: `未実施`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 既存教材本文・成果物変更: `0件`
 - SPEC外追加: `0件`
-- 次工程: 新しいrunで固定5問・9答案要素の完成後blind再解答
+
+## Topic 14 完成後blind再解答
+- blind答案: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer.md`
+- QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_qa.md`
+- 公式解答を開く前のblind答案固定: `PASS`
+- 固定5問再解答: `5 / 5`
+- 固定9答案要素の公式照合確定PASS: `8 / 9`
+- R7二次 問2 (1),(3): `4 / 4 PASS`
+- R1二次 問1 (4): `1 / 1 PASS`
+- H26一次 問5 (1): `1 / 1 PASS`
+- H25一次 問3 (1),(2): `2 / 2 PASS`
+- H26二次 問1 (4): `BLOCKED`
+- blind再計算: `I2'=22.430886... A`, `TL=48.0468... N·m` → 問題冊子指定3桁では `48.0 N·m`
+- 公式標準解答: `I2'=22.430 A` を示した後 `48.067 -> 48.1 N·m`
+- 公式掲載値 `I2'=22.430 A` の再代入: `48.04298... N·m` → `48.0 N·m`
+- exact blocker: 問題データ・公式掲載式からの算術結果と公式標準解答最終値が不一致。上位SPECにこの公式側算術差の許容規定がないため推測でPASSにしない。
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 既存教材本文・成果物変更: `0件`
+- SPEC外追加: `0件`
+- 判定: `BLOCKED / OFFICIAL_NUMERIC_DISCREPANCY`
 
 ## Topic 14 固定範囲
 扱う内容:
@@ -168,4 +186,4 @@ SPEC指定可視化:
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次工程
-固定EXAM_ALIGNMENT、教材本文、練習問題、PDF/PPTXを変更せず、公式解答・標準解答を先に開かない新しいrunで、完成教材と公式問題文だけを使って固定5問・9答案要素をblind再解答する。答案をGitHubへ固定してから公式照合する。
+H26二次「機械・制御」問1 (4) の公式標準解答最終値 `48.1 N·m` と、問題データ・公式掲載式からの独立再計算 `48.0 N·m` の不整合を品質ゲート上どう扱うかが確定するまで停止する。Topic 14を `completed` にせず、Topic 15へ進めない。
