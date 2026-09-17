@@ -6,19 +6,19 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
 `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`07_shinkansen_machine_2/SPEC.md` の範囲内で再確認し、新しい仕様は追加していない。
 
-固定一次1問＋二次記述4問・27答案要素、完成後独立再解答、必須成果物、練習問題QA、PDF/PPTX表示QA、固定範囲境界はPASS。未完了理由は進捗記録3箇所の不整合のみである。
+固定一次1問＋二次記述4問・27答案要素、完成後独立再解答、必須成果物、練習問題QA、PDF/PPTX表示QA、固定範囲境界、進捗記録整合を再確認し、すべてPASS。
 
 ## 必須成果物
 
 GitHub正本上で実在を確認した。
 
-- source Markdown: PASS (`62be3055fafa0b95d4d8d81c24914f4939e6a175`)
+- source Markdown: PASS (`3665e4744e8f959cf47383addfd80776e204bc6c`)
 - 解説PDF: PASS (`b5534b47769464b72e4c7814d6384815cff5950a`)
-- 練習source: PASS (`1bf49d4a7d3834261325834ae9831a91027bd74c`)
+- 練習source: PASS (`4638cdad0ecf3adcf50f5253bb7213c706dbf7fd`)
 - 練習PDF: PASS (`186077f0ad9897bbe47b748998ed09dcf44f5346`)
 - 解説画像PowerPoint: PASS (`2edf2ec7c42d4939e37c6d912bcc0756052aca5a`)
 - PowerPoint QA記録: PASS (`341158d7fe13ff3a037ce9cf2db4d682821f7d87`)
@@ -36,7 +36,7 @@ GitHub正本上で実在を確認した。
 - H27 二次 機械・制御 問1 (1)a,b: `2 / 2 PASS`
 - 合計: `27 / 27 PASS`
 
-二種の一次・二次を合わせて原則5問以上、二次対象論点では記述式を含める品質ゲートを満たす。Topic 13で採用済み答案要素の重複採用は0件で、件数合わせによる固定範囲外追加も0件である。
+二種の一次・二次を合わせて原則5問以上、二次対象論点では記述式を含める品質ゲートを満たす。Topic 13で採用済み答案要素の重複採用は0件で、件数合わせによる固定範囲外追加も0件。
 
 ## 完成後独立再解答
 
@@ -75,18 +75,18 @@ GitHub正本上で実在を確認した。
 
 ## 進捗記録整合
 
-実成果物・完成後独立再解答済み状態に対し、次の3件が未同期である。
+前回blockerだった次の3件はGitHub正本へ同期済み。
 
-1. main source `## 状態` が「解説PDFまで完成、次工程は練習問題source作成」のまま。
-2. main source末尾 `# 次工程` が「練習問題sourceを作成」のまま。
-3. 練習source末尾 `# 次工程` が「練習PDFを作成」のまま。
+1. main source `## 状態`
+2. main source末尾 `# 次工程`
+3. 練習source末尾 `# 次工程`
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・完成後独立再解答の不整合ではなく、進捗記録だけの不整合である。
+いずれもTopic 14 `PASS / completed` とTopic 15制作前EXAM_ALIGNMENTを次工程として示している。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更は0件。
 
-判定: `FAIL / exact blocker`。
+判定: `PASS`。
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-完成数は `13 / 22` のまま。次工程は、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、上記3箇所だけを実成果物へ同期し、その後に最終QAを再実施する。
+完成数は `14 / 22`。次工程はTopic 15「新幹線の補機モーターを設計する」の制作前EXAM_ALIGNMENT。
