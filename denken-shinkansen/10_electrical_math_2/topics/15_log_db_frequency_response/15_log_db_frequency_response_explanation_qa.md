@@ -49,4 +49,4 @@
 
 `PASS / topic_15_explanation_pdf_complete`
 
-次工程: Topic 15の練習問題source。
+次工程: Topic 15の最終QAを再判定する。
