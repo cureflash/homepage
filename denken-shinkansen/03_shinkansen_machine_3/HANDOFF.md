@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は品質ゲートPASSでcompleted。active topicは13「新幹線は主電動機以外もモーターだらけ？」。
 
 ## 今回進捗
-Topic 13の練習PDFを完成し、GitHub正本へ反映した。A4縦3ページ、全12問・全問五肢択一（基礎3 / 本試験標準7 / 複合・応用2）、完全解説 `12 / 12`。200 dpi表示QA `3 / 3 PASS`、文字抽出QA `PASS`、固定5過去問への接続 `5 / 5 PASS`。固定EXAM_ALIGNMENT変更、件数合わせの仕様外追加、Topic 14〜16先取り、未確認補機仕様の追加はいずれも0件。完成数は `12 / 16` のまま。
+Topic 13の解説画像PowerPointを完成し、GitHub正本へ反映する。16:9・4枚、固定5過去問との接続 `5 / 5 PASS`。LibreOffice→PDF→180 dpi表示QA `4 / 4 PASS`、スライド外はみ出し0件、文字切れ・重なり・判読不能0件、欠落・破損グリフ0件、PowerPoint ZIP整合性PASS。固定EXAM_ALIGNMENT変更、件数合わせの仕様外追加、Topic 14〜16先取り、未確認補機仕様の追加はいずれも0件。完成数は `12 / 16` のまま。
 
 source: `topics/13_auxiliary_motors/13_auxiliary_motors.md`
 explanation PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation.pdf`
@@ -14,8 +14,10 @@ explanation PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation_
 practice source: `topics/13_auxiliary_motors/13_auxiliary_motors_practice.md`
 practice PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_practice.pdf`
 practice PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_practice_pdf_qa.md`
+PowerPoint: `topics/13_auxiliary_motors/13_auxiliary_motors_images.pptx`
+PowerPoint QA: `topics/13_auxiliary_motors/13_auxiliary_motors_powerpoint_qa.md`
 
-次工程: 固定EXAM_ALIGNMENTと問題・正答を変更せず、Topic 13の解説画像PowerPointを作成する。
+次工程: 完成済み教材だけを使って、固定5問をblind独立再解答する。
 
 ## Topic 13 固定範囲
 - 電動機出力
@@ -99,6 +101,20 @@ practice PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_practice_pdf_qa
 - 固定範囲外論点追加: `0件`。
 - Topic 14〜16先取り: `0件`。
 - 未確認補機仕様追加: `0件`。
+
+## Topic 13 解説画像PowerPoint
+- 16:9・4枚。
+- slide 1: 補機の共通構造、`P = ωT`、固定5問の3論点を俯瞰。
+- slide 2: 電動機・負荷トルクの大小、動作点、安定判定 → R5上 問7。
+- slide 3: `P_h = ρgQH`、流量換算、全揚程、効率、余裕係数、必要台数 → R4下 問11 / H30 問10 / H27 問12。
+- slide 4: `Q ∝ N`、`T ∝ N²`、`P ∝ N³`、可変速運転 → H29 問12。
+- 固定5過去問への接続: `5 / 5 PASS`。
+- 表示QA: `4 / 4 PASS`（180 dpi）。
+- スライド外はみ出し: `0件`。
+- 文字切れ・重なり・判読不能・欠落・破損グリフ: `0件`。
+- ZIP整合性: `PASS`。
+- 外部画像: `0点`。
+- SHA-256: `fca70d88004752d4a907fa57d0bb595112591b7c5c1c121ed4948c065af22dd2`。
 
 ## 公式・参考資料
 公式:
