@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 14 / 21
-- current_status: `topic_15_final_qa_needs_revision`
+- current_status: `topic_15_source_progress_synced`
 - last_completed_topic: `14 インバータのギザギザ波形を分解する`
 - active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
-- next_start: Topic 15 主source・練習sourceの旧進捗記録同期
+- next_start: Topic 15 最終QA再実施
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -248,30 +248,22 @@
 - [x] 解説画像PowerPoint＋表示QA
 - [x] 完成後独立再解答: `25 / 25 PASS`
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 主source・練習sourceの旧進捗記録同期
+- [x] 主source・練習sourceの旧進捗記録同期
 - [ ] 最終QA再実施
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の初回最終QAをGitHub正本へ反映した。
+Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の旧進捗記録4箇所を実成果物へ同期した。
 
-- 必須成果物: `PASS`
-- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
-- 公式標準解答一致: `25 / 25`
-- 二次採用: `0問`、二次数合わせ: `0件`
-- SPEC境界: `PASS`
-- 解説PDF表示QA: `2 / 2 PASS`
-- 練習PDF表示QA: `6 / 6 PASS`
-- 練習12問の数値・論理QA / 正答一意性: `12 / 12 PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答の不整合: `0件`
-- 進捗記録blocker: `4箇所`
-  - 主source冒頭状態
-  - 主source末尾「次工程」
-  - 練習source冒頭状態
-  - 練習source末尾「次工程」
+- 主source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、PowerPoint・完成後独立再解答・初回最終QA・次工程を実状態へ同期
+- 主source末尾: PowerPoint・完成後独立再解答・初回最終QAまで実状態へ同期し、次工程を「最終QA再実施」へ更新
+- 練習source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」へ同期
+- 練習source末尾: 次工程「最終QA再実施」へ同期
+- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS` を維持
+- 二次採用: `0問`、二次数合わせ: `0件` を維持
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
 
 ## 判定
 
-Topic 15は `NEEDS_REVISION / IN_PROGRESS`。品質ゲート自体はPASSで、blockerは主source・練習sourceの旧進捗記録4箇所のみ。完成数は `14 / 21` のまま。次工程は上記4箇所の実成果物状態への同期。
+Topic 15は `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。完成数は `14 / 21` のまま。次工程は最終QA再実施。
