@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 16 / 21
-- current_status: `topic_17_final_qa_needs_revision`
+- current_status: `topic_17_progress_records_synced`
 - last_completed_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
 - active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
-- next_start: Topic 17 進捗記録4箇所同期
+- next_start: Topic 17 最終QA再実施
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -311,32 +311,23 @@
 - [x] 解説画像PowerPoint＋表示QA: 16:9・5枚、200 dpi `5 / 5 PASS`、shape geometry overflow `0件`、PPTX ZIP整合性 `PASS`、PDF変換5ページ `PASS`、文字抽出 `PASS`
 - [x] 完成後独立再解答: `25 / 25 PASS`
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 主source・練習sourceの旧進捗記録4箇所同期
+- [x] 主source・練習sourceの旧進捗記録4箇所同期
 - [ ] 最終QA再実施
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の初回最終QAを実施した。
+Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の初回最終QA blocker 4箇所を実成果物状態へ同期した。
 
-- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
-- 公式標準解答との一致: `25 / 25`
-- 必須成果物: `PASS`
-- 二次採用判断: `PASS`
+- 主source冒頭: `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」
+- 主source末尾: 次工程「最終QA再実施」
+- 練習source冒頭: `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」
+- 練習source末尾: 次工程「最終QA再実施」
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
-- SPEC境界: `PASS`
-- 解説PDF表示QA: `2 / 2 PASS`
-- 練習PDF表示QA: `4 / 4 PASS`
-- 練習12問の数値・論理QA / 正答一意性: `12 / 12 PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの不整合: `0件`
-- 進捗記録blocker: `4箇所`
-  - 主source冒頭状態
-  - 主source末尾「次工程」
-  - 練習source冒頭状態
-  - 練習source末尾「次工程」
 
 ## 判定
 
-Topic 17は `NEEDS_REVISION / IN_PROGRESS`。完成数は `16 / 21` のまま。exact blockerは主source・練習sourceの旧進捗記録4箇所。次工程はこの4箇所だけを実成果物状態へ同期し、技術内容は変更しない。
+Topic 17は `PASS / PROGRESS_RECORDS_SYNCED`。完成数は `16 / 21` のまま。次工程は最終QA再実施。
