@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_16_explanation_pdf_complete`
+- current_status: `topic_16_practice_source_complete`
 - last_completed_topic: `15 新幹線の補機モーターを設計する`
 - active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: Topic 16 練習問題source作成
+- next_start: Topic 16 練習PDF作成
 
 ## 完了テーマ
 - [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `IN_PROGRESS` — 解説PDF完成
+- [ ] Topic 16 `IN_PROGRESS` — 練習問題source完成
 
 ## Topic 15 固定範囲
 系列 `SPEC.md` の次だけを扱う。
@@ -184,8 +184,22 @@
 - [x] PDF Git blob SHA `ec0988d134a802f9f54f1e1f54af442e6bde23b6`
 - [x] 判定 `PASS / topic_16_explanation_pdf_complete`
 
+## Topic 16 練習source
+- [x] `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.md` を作成
+- [x] 一次試験型10問、全問五肢択一
+- [x] 二次試験型5問、途中式・前提・単位・検算または論証付き
+- [x] 一次正答一意性 `10 / 10 PASS`
+- [x] 独立計算・論理QA `15 / 15 PASS`
+- [x] 固定一次4問＋二次記述1問・12答案要素へ `12 / 12` 接続
+- [x] H23二次型の充放電電流・端子電圧波形・充放電時間・`I²r` 損失比較を記述式で収録
+- [x] 未確認N700S実車値の真値化 `0件`
+- [x] 電池材料反応・BMS・チョッパ回路詳細の仕様追加 `0件`
+- [x] Topic 17以降先取り `0件`
+- [x] 固定問題の個別正答記号・完成済み数値解掲載 `0件`
+- [x] 判定 `PASS / topic_16_practice_source_complete`
+
 ## 今回進めた内容
-Topic 16の解説PDFを作成した。既存の「機械二種を進行」枠で完成済みだった解説sourceをreconcileして再制作せず、固定一次4問＋二次1問・12答案要素を変更しないままA4縦8ページへ反映した。3段階例題の数値を再計算し、160 dpi全8ページ表示QA、PDF文字抽出QAをPASS。未確認実車定格、材料反応、BMS、チョッパ回路詳細、Topic 17以降は追加していない。
+Topic 16の練習問題sourceを作成した。固定一次4問＋二次1問・12答案要素を変更せず、一次10問＋二次5問へ `12 / 12` 接続した。一次10問は全問五肢択一で正答一意性 `10 / 10 PASS`、全15問の独立計算・論理QA `15 / 15 PASS`。H23二次型の充放電電流、端子電圧波形、充放電時間、内部抵抗損と効率比較を途中式・単位・理由説明付きで演習化した。未確認実車定格、材料反応、BMS、チョッパ回路詳細、Topic 17以降は追加していない。
 
 ## 判定
-Topic 16は `topic_16_explanation_pdf_complete / IN_PROGRESS`。完成数は `15 / 22`。次は Topic 16 練習問題source作成。
+Topic 16は `topic_16_practice_source_complete / IN_PROGRESS`。完成数は `15 / 22`。次は Topic 16 練習PDF作成。
