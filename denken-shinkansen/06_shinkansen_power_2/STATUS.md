@@ -4,31 +4,33 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `12`
 theme: N700Sが何本も同時加速したら？
-current_status: `topic_12_exam_alignment_complete`
+current_status: `topic_12_preproduction_reanswer_gap_identified`
 completed_topics: `11 / 22`
 
 ## Topic 12 current result
 
-制作前EXAM_ALIGNMENTを完了した。本文・PDF・練習・計算プログラム・PowerPointはまだ制作していない。
+制作前独立再解答を実施し、公式標準解答と照合した。現時点の結果は `23 / 25答案要素 PASS` で、品質ゲートは未通過のまま維持する。
 
-正式品質ゲートを次の5問・25答案要素に固定した。
-- 令和4年度 第二種二次「電力・管理」問6 — 需要率・不等率・負荷率 — `8答案要素`
-- 令和元年度 第二種二次「電力・管理」問2 — 簡易電力潮流・受電端電圧 — `6答案要素`
-- 平成30年度 第二種一次「電力」問7 — 三相送電電力・線路損失 — `5答案要素`
-- 平成29年度 第二種二次「電力・管理」問4 — 複数定電力負荷・線路潮流 — `3答案要素`
-- 平成23年度 第二種二次「電力・管理」問6 — 負荷率・損失係数 — `3答案要素`
-- 合計: 一次1問＋二次4問、`5問 / 25答案要素`
+正式品質ゲート:
+- 令和4年度 第二種二次「電力・管理」問6 — `8 / 8 PASS`
+- 令和元年度 第二種二次「電力・管理」問2 — `6 / 6 PASS`
+- 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
+- 平成29年度 第二種二次「電力・管理」問4 — `1 / 3 PASS`
+- 平成23年度 第二種二次「電力・管理」問6 — `3 / 3 PASS`
+- 合計: 一次1問＋二次4問、`23 / 25答案要素 PASS`
+
+FAIL 2要素は同一原因で、進み無効電力を含む定電力負荷の複素電流符号規約が教材必須説明として具体化されていなかったことによる。本文では `S=P+jQ`、遅れ `Q>0`、進み `Q<0`、三相負荷の `I=(P-jQ)/(√3V)` を共役関係から明示する。これは既存固定範囲「複素電力から線路電流を求める方法」の具体化であり、新規仕様追加ではない。
 
 制作前確認:
 - `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` を再確認
-- 直近年度から公式過去問を確認し、後続Topicの論点を必要とする候補は除外
-- 電験王2、e-sysnetの2系統を説明粒度・解法順の参考として確認
-- 未確認N700S実設備値: `0件`
-- Topic 13以降の仕様追加: `0件`
-- 公式過去問の個別正答値保存: `0件`
+- 固定5問・25答案要素は変更なし
+- 後続Topic論点の追加: `0件`
+- 未確認N700S実設備値の使用: `0件`
+- 公式解答の個別正答値・完成導出のsource保存: `0件`
 
 source:
 - `topics/12_multiple_train_load/12_multiple_train_load.md`
+- `topics/12_multiple_train_load/12_preproduction_reanswer.md`
 
 ## Topic 11 final result
 
@@ -54,8 +56,8 @@ Topic 11は `PASS / completed` を維持する。
 - [x] Topic 09 completed
 - [x] Topic 10 completed
 - [x] Topic 11 completed
-- [ ] Topic 12 — production-pre independent reanswer pending
+- [ ] Topic 12 — preproduction reanswer completed; `23 / 25`, explanation gap identified
 
 ## next_start
 
-Topic 12の制作前独立再解答を行う。保存済み公式解答・解説を先に見ず、固定した5問・25答案要素がTopic 12固定範囲と既習Topic 01〜11だけで解答可能かを確認する。外部知識補完が必要な答案要素があれば、その不足だけを教材必須説明へ戻し、後続Topicの論点や未確認実設備値で補わない。
+Topic 12の解説本文sourceを制作する。固定済み5問・25答案要素から逆算し、既存の教材必須説明に加えて、今回検出した進み/遅れ無効電力の符号規約と複素電流の共役関係を必ず本文へ入れる。仕様外論点・後続Topic・未確認実設備値で穴埋めしない。完成後blind独立再解答まで品質ゲート未通過扱いを維持する。
