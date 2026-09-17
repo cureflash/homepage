@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `14 / 39`
-- current_status: `topic_14_completed`
+- current_status: `topic_15_exam_alignment_complete`
 - last_completed_topic: `14 300系⑤ 走行抵抗と必要けん引力`
 - active_topic: `15 500系 高速域の出力・熱解析`
-- next_start: Topic 15の制作前EXAM_ALIGNMENTを行う。上位仕様に従い、本文制作前に二種一次・二次を含む公式過去問対応を固定する
+- next_start: Topic 15の解説本文＋3段階例題を作成する。固定EXAM_ALIGNMENTを変更せず、SPEC指定9項目・4可視化と一次10＋二次6の16答案要素を本文へ接続する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -25,9 +25,29 @@
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
-- [ ] 15 500系 高速域の出力・熱解析 — NOT_STARTED
+- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / EXAM_ALIGNMENT_PASS
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
+
+## Topic 15 固定EXAM_ALIGNMENT
+- source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
+- 固定過去問: 一次4問＋二次1問、計5問
+- 固定答案要素: 一次10＋二次6、計16
+- R8 一次 機械 問1 (1),(2)
+- R7 二次 機械・制御 問2 (1)〜(3)
+- R5 一次 機械 問1 (1),(3),(5)
+- H26 一次 機械 問5 (3)〜(5)
+- H25 一次 機械 問3 (1),(2)
+- 制作前計算・論理検証: 一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`
+- 二次記述・計算問題: `1問`
+- 制作前の公式解答・標準解答との不一致: `0件`
+- 参考教材2系統以上: `PASS`
+- R8一次「機械」直近年度確認: `PASS / 問1 (1),(2)を固定`
+- SPEC指定9項目: `9 / 9 aligned`
+- SPEC指定4可視化: `4 / 4 aligned`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 
 ## Topic 14 固定EXAM_ALIGNMENT
 - source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -211,4 +231,4 @@ SPEC指定可視化:
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次工程
-Topic 15「500系 高速域の出力・熱解析」の制作前EXAM_ALIGNMENTを行う。上位仕様に従い、本文制作前に二種一次・二次を含む公式過去問対応を固定する。
+Topic 15「500系 高速域の出力・熱解析」の解説本文＋3段階例題を作成する。固定EXAM_ALIGNMENTを変更せず、SPEC指定9項目・4可視化と一次10＋二次6の16答案要素を本文へ接続する。
