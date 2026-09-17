@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_12_preproduction_independent_answer_complete`
+- current_status: `topic_12_explanation_source_complete`
 - last_completed_topic: `11 グラフ・特性曲線を読む`
 - active_topic: `12 電気数学総合`
-- next_start: `Topic 12の解説本文＋3段階例題`
+- next_start: `Topic 12の解説PDF`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -143,7 +143,7 @@
 - [x] 参考教材を複数系統確認（e-sysnet含む）
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立解答・公式解答照合 `5 / 5問・9 / 9答案要素 PASS`
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
@@ -156,23 +156,21 @@
 
 ## 今回進めた内容
 
-Topic 12「電気数学総合」の固定5問を、公式解答参照前に制作前独立解答し、答案確定後に公式解答と照合した。
+Topic 12「電気数学総合」の解説本文と3段階例題を主sourceへ反映した。
 
-- R8上 理論 問9: PASS
-- R8上 理論 問17(a)(b): PASS / PASS
-- R8上 電力 問15(a)(b): PASS / PASS
-- R8上 機械 問15(a)(b): PASS / PASS
-- R8上 機械 問16(a)(b): PASS / PASS
-- 合計 `5 / 5問・9 / 9答案要素 PASS`
-- 問題要求・使用式・途中計算・正答根拠を全件確認
+- 固定必須説明20項目: `20 / 20` 実装
+- 固定5過去問への教材内マッピング: `5 / 5`
+- 3段階例題: 基礎 / 本試験標準 / 複合・ひっかけ 各1問
+- 例題独立再計算: `3 / 3 PASS`
+  - 正弦波磁束→誘導起電力: `E_m≈125.7 V`、`E≈88.9 V`
+  - 三相同期電動機: `n_s=1500 min^-1`、`P_out≈49.9 kW`、`T≈318 N·m`
+  - 三相整流波形: `V_LL≈207.8 V`、`V_max≈293.9 V`、`V_min≈254.6 V`、`V_avg≈280.7 V`、`δ≈0.140`
 - 固定EXAM_ALIGNMENT変更0件
-- 固定範囲外補完0件
-- 保存済み正答の事前参照0件
-
-完成後独立再解答のブラインド条件維持のため、個別答案は主sourceの制作前独立解答節にのみ保存し、完成後再解答時は同節を参照しない。
+- 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
+- 未確認の新幹線実車値追加0件
 
 ## 判定
 
-`topic_12_preproduction_independent_answer_complete / IN_PROGRESS`。
+`topic_12_explanation_source_complete / IN_PROGRESS`。
 
-完成数は `11 / 12`。次工程はTopic 12の解説本文＋3段階例題。
+完成数は `11 / 12`。次工程はTopic 12の解説PDF。
