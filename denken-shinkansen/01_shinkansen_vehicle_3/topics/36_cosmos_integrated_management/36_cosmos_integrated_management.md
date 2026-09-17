@@ -2,13 +2,13 @@
 
 ## 状態
 
-`EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。
+`COMPLETED / PASS`。
 
-系列SPEC固定範囲「運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理」だけを対象に、制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定し、制作前blind独立解答 `8 / 8 PASS` を維持したまま解説本文を作成した。本文は§1〜§16、3段階例題を含み、固定5問・8答案要素の要求事項を `8 / 8` 本文マッピング済み。例題は独立再計算 `3 / 3 PASS`。解説PDFはA4縦4ページで作成し、180 dpi全4ページ表示、文字抽出、固定EXAM_ALIGNMENT反映、固定範囲境界のQAを `PASS`。練習問題・PowerPointは未着手。
+系列SPEC固定範囲「運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理」だけを対象に、制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定して制作した。解説本文§1〜§16、3段階例題、解説PDF、15問の練習source/PDF、16:9・4枚のPowerPointを完成し、各個別QAをPASSした。固定EXAM_ALIGNMENTは解説・練習・PowerPointへ `8 / 8答案要素` 接続済み。制作前blind独立解答 `8 / 8 PASS`、完成後blind独立再解答 `8 / 8 PASS`、公式解答との不一致・教材外知識補完・固定範囲外知識補完はいずれも0件。最終QA `PASS / COMPLETED`。
 
-完成後blind独立再解答を成立させるため、制作前独立解答で確定した個別正答番号・完成導出は本sourceへ保存しない。固定5問・8答案要素は変更しない。
+固定5問・8答案要素は制作前から完成後まで追加・差替えなし。COSMOS内部の未確認仕様、Topic 37のSCADA体系、Topic 38の高信頼システム体系を先取りしていない。
 
-次工程: Topic 36の固定範囲から練習sourceを作成し、原則12問以上・少なくとも半数五肢択一・完全解説・固定EXAM_ALIGNMENT接続・独立再解答をQAする。PowerPointへはまだ進まない。
+次工程: Topic 37 `COSMOS② 新幹線の電力設備を遠隔監視する` の制作前EXAM_ALIGNMENTから開始する。
 
 ## EXAM_ALIGNMENT
 
@@ -535,16 +535,23 @@ CPUクロックとLAN通信速度は別の性能指標なので、「CPUクロ�
 - 3段階例題: 基礎「r進数と2の補数」／標準「最大値・平均値・降順並べ替え」／複合「A-D/D-A・パリティ・LAN」
 - 固定EXAM_ALIGNMENT本文マッピング: `8 / 8答案要素 PASS`
 - 例題独立再計算: `3 / 3 PASS`
+- 解説source QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF: `A4縦4ページ / 180 dpi 4 / 4 PASS / 文字抽出 PASS`
+- 練習source: `15問（基礎4 / 標準8 / 複合3） / 五肢択一15 / 15 / 完全解説15 / 15`
+- 練習source独立再解答: `15 / 15 PASS`
+- 練習PDF: `A4縦5ページ / 180 dpi 5 / 5 PASS / 文字抽出 PASS`
+- PowerPoint: `16:9・4枚 / 180 dpi 4 / 4 PASS / overflow 0件 / ZIP整合性 PASS`
+- 固定EXAM_ALIGNMENT解説・練習・PowerPoint接続: `8 / 8答案要素 PASS`
+- 完成後blind独立再解答: `5問・8答案要素 / 8 / 8 PASS`
 - 公式解答との不一致: `0件`
-- 個別正答番号・完成導出のsource保存: `0件`
+- 教材外知識補完: `0件`
+- 固定範囲外知識補完: `0件`
 - 固定範囲外追加: `0件`
-- Topic 37以降先取り: `0件`
+- Topic 37先取り: `0件`
+- Topic 38先取り: `0件`
 - 未確認COSMOS内部仕様追加: `0件`
-- 解説PDF: `A4縦4ページ / 180 dpi 4 / 4 PASS / 文字抽出QA PASS / 固定EXAM_ALIGNMENT 8 / 8答案要素反映`
-- 解説PDF固定範囲外追加: `0件`
-- 解説PDF Topic 37以降先取り: `0件`
-- 解説PDF未確認COSMOS内部仕様追加: `0件`
-- 練習問題・PowerPoint: 未着手
-- 完成数: `35 / 38` 維持
+- 最終QA: `PASS / COMPLETED`
+- 最終QA記録: `36_cosmos_integrated_management_final_qa.md`
+- 完成数: `36 / 38`
 
-次工程はTopic 36の固定範囲からの練習source作成。原則12問以上・少なくとも半数五肢択一・完全解説・固定EXAM_ALIGNMENT接続・独立再解答をQAする。PowerPointへはまだ進まない。
+次工程はTopic 37 `COSMOS② 新幹線の電力設備を遠隔監視する` の制作前EXAM_ALIGNMENT。
