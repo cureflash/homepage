@@ -4,9 +4,9 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT`、解説本文＋基礎／本試験標準／複合の3段階例題、解説PDFまで完成。練習問題・練習PDF・解説画像PowerPoint・完成後独立再解答は未着手。
+制作前 `EXAM_ALIGNMENT`、解説本文＋基礎／本試験標準／複合の3段階例題、解説PDF、練習問題sourceまで完成。練習PDF・解説画像PowerPoint・完成後独立再解答は未着手。
 
-現在の判定は `topic_15_explanation_pdf_complete / IN_PROGRESS`。次工程は練習問題source。
+現在の判定は `topic_15_practice_source_complete / IN_PROGRESS`。次工程は練習PDF。
 
 本テーマは系列 `SPEC.md` の固定範囲どおり、次を扱う。
 
@@ -531,6 +531,20 @@
 - [x] 固定範囲外論点・Topic 16以降先取り・未確認新幹線補機実値追加 `0件`
 - [x] SHA-256 `87535e7730fa674e1a03c63d8dd4a000f27c3be7c43a50a5667b42700f696313`
 
+# 練習source QA
+
+- [x] `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_practice.md`
+- [x] 一次試験型10問・全問五肢択一
+- [x] 二次試験型5問・途中式／前提／単位／検算または論証付き
+- [x] 一次正答一意性 `10 / 10 PASS`
+- [x] 独立計算・論理QA `15 / 15 PASS`
+- [x] 固定一次3問＋二次記述2問・8答案要素へ `8 / 8` 接続
+- [x] コンプレッサへの三乗則無条件適用 `0件`
+- [x] Topic 05〜09の等価回路・PWM・ベクトル制御詳細の再制作 `0件`
+- [x] Topic 16以降の先取り `0件`
+- [x] 未確認新幹線補機実値の真値化 `0件`
+- [x] 固定公式過去問の個別正答記号・完成済み答案保存 `0件`
+
 # 次工程
 
-Topic 15の練習問題sourceを作成する。
+Topic 15の練習PDFを作成し、A4表示QA・文字抽出QA・問題数／解説収録・数値再検算を行う。
