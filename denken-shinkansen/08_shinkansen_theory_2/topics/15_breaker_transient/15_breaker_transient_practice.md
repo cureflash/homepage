@@ -6,9 +6,9 @@
 
 固定EXAM_ALIGNMENTの一次5問・25答案要素、およびTopic 15固定範囲だけから練習問題12問を作成した。二種理論は一次試験が中心のため、無理に二次記述式を追加しない。
 
-- completion: `in_progress`
-- stage: `SOURCE_PROGRESS_SYNCED`
-- 次工程: 最終QA再実施
+- completion: `completed`
+- stage: `COMPLETED`
+- 次工程: Topic 16「300系の半導体はなぜ電流を一方向へ流せる？」の制作前EXAM_ALIGNMENT
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
@@ -264,4 +264,6 @@ tau=R_th C=15 kohm×20 uF=0.30 s。一次回路の一般形より v_C(t)=30+(120
 
 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
-次工程: 最終QA再実施。
+進捗同期: 最終QA `PASS / FINAL_QA_COMPLETE`、completed状態同期済み。問題・正答・解説本文は変更していない。
+
+次工程: Topic 16「300系の半導体はなぜ電流を一方向へ流せる？」の制作前EXAM_ALIGNMENT。
