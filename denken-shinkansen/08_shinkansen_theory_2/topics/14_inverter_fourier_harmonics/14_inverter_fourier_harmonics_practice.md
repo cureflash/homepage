@@ -6,9 +6,10 @@
 
 固定EXAM_ALIGNMENTの一次2問・3答案要素＋二次1問・2答案要素、およびTopic 14固定範囲だけから練習問題12問を作成した。二次で必要な3n次高調波の線間打消しと非正弦波実効値積分は、一次型の五肢択一へ落とし込みつつ、解説では記述答案に必要な途中式と理由を残す。
 
-- completion: `in_progress`
-- stage: `SOURCE_PROGRESS_SYNCED`
-- 次工程: 最終QA再実施
+- completion: `completed`
+- stage: `COMPLETED`
+- 最終QA: `PASS / FINAL_QA_COMPLETE`
+- 次工程: Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の制作前EXAM_ALIGNMENT
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
