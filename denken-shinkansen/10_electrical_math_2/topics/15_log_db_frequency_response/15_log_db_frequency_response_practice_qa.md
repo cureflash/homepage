@@ -83,4 +83,4 @@
 
 `PRACTICE_PDF_COMPLETE / IN_PROGRESS`
 
-次工程: Topic 15の解説画像PowerPointを作成し、表示QAを行う。
+次工程: Topic 15の最終QAを再判定する。
