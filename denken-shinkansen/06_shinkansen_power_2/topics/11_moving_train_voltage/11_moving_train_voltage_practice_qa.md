@@ -61,4 +61,4 @@ status: `PASS`
 
 `PASS`
 
-次工程は、このsourceを基準に練習PDFを制作し、表示・文字抽出・数式・問題解答整合QAを行う。
+練習PDF `11_moving_train_voltage_practice.pdf` とPDF QA `11_moving_train_voltage_practice_pdf_qa.md` は完成・PASS済み。次工程はTopic 11 SPECの計算プログラムを制作し、列車位置 `x` を連続掃引してパンタグラフ電圧・線路電流・有効電力損失・無効電力を計算・グラフ化する。PowerPointはまだ制作しない。
