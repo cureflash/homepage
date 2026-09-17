@@ -2,9 +2,9 @@
 
 更新日: 2026-09-17
 
-状態: `topic_13_explanation_source_complete`
+状態: `topic_13_independent_reanswer_complete / IN_PROGRESS`
 
-制作前 `EXAM_ALIGNMENT` で固定した第三種「機械」の公式5問を変更せず、系列 `SPEC.md` の固定範囲だけで解説本文と3段階例題を作成した。固定5問の要求事項を本文へ `5 / 5` 接続し、例題の独立再計算は `3 / 3 PASS`。エレベータ・巻上機、流体機械の高度な水力学、冷凍サイクル、補機の未確認実機仕様等は追加していない。
+制作前 `EXAM_ALIGNMENT` で固定した第三種「機械」の公式5問を変更せず、系列 `SPEC.md` の固定範囲だけで解説本文・3段階例題・解説PDF・練習問題source/PDF・解説画像PowerPointまで作成した。固定5問の要求事項を本文へ `5 / 5` 接続し、完成後blind独立再解答も `5 / 5 PASS`。エレベータ・巻上機、流体機械の高度な水力学、冷凍サイクル、補機の未確認実機仕様等は追加していない。Topic 13は最終QA前のためまだcompletedではない。
 
 ## EXAM_ALIGNMENT
 
@@ -463,15 +463,19 @@
 ## 今回進捗
 
 - 制作前EXAM_ALIGNMENT: 完了
-- 解説本文: 完成
+- 解説本文・解説PDF: 完成
+- 練習問題source・練習PDF: 完成
+- 解説画像PowerPoint: 完成
 - 固定過去問要求事項の本文マッピング: `5 / 5 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 解説source QA: `PASS`
+- 完成後blind独立再解答: `5 / 5 PASS`
+- H29 問12 fresh blind: 教材の `T∝N²` / `Q∝N` / `P∝N³` だけで `(4)` に固定後、公式解答 `(4)` と照合PASS
+- H29 fresh blindで公式解答の事前参照: `0件`
+- 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 - 未確認補機仕様の追加: `0件`
-- 状態: `topic_13_explanation_source_complete`
+- 状態: `topic_13_independent_reanswer_complete / IN_PROGRESS`
 
 ## 次工程
 
-固定EXAM_ALIGNMENTと本文範囲を変更せず、Topic 13の解説PDFを作成する。
+Topic 13の最終QAを行う。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
