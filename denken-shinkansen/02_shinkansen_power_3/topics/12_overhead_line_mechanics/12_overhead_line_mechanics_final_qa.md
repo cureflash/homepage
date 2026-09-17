@@ -4,9 +4,9 @@
 実施日: 2026-09-17
 
 ## 判定
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。技術内容、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。一方、旧工程を示す進捗記録が4箇所残っており、進捗記録整合のみFAILと判定する。仕様追加は行っていない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。前回最終QAで唯一FAILだった旧進捗記録4箇所は現在地へ同期済みで、技術内容、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界、進捗記録整合を全件PASSと判定した。仕様追加は行っていない。
 
 ## 必須成果物
 GitHub正本上で以下の実在を確認した。
@@ -87,16 +87,16 @@ H25 電力 問9は支線・支柱の幾何と支持物設計が中心で固定�
 SPEC境界: PASS。
 
 ## 進捗記録整合
-現在地は「完成後ブラインド独立再解答結果をmain sourceへ同期済み → 最終QA実施済み」であるが、以下4箇所が旧工程を示している。
+前回FAILだった4箇所を再確認した。
 
-1. `12_overhead_line_mechanics_explanation_qa.md` — 次工程が「練習問題sourceを作成」のまま。
-2. `12_overhead_line_mechanics_practice_source.md` — 状態が `practice_source_complete`、次工程が「練習PDFを作成」のまま。
-3. `12_overhead_line_mechanics_powerpoint_qa.md` — 次工程が「完成後ブラインド独立再解答」のまま。
-4. `12_overhead_line_mechanics_independent_reanswer.md` — 次工程が「main sourceへ結果を同期」のまま。
+1. `12_overhead_line_mechanics_explanation_qa.md` — 練習source・練習PDF・PowerPoint・独立再解答・main source同期・初回最終QA実施済みを反映済み。
+2. `12_overhead_line_mechanics_practice_source.md` — 練習PDF・PowerPoint・独立再解答・main source同期・初回最終QA実施済みを反映済み。`practice_source_complete` は当該成果物自体の完成状態を示すローカル状態であり、後工程の未実施を意味しない。
+3. `12_overhead_line_mechanics_powerpoint_qa.md` — 完成後ブラインド独立再解答 `6 / 6 PASS`、main source同期・初回最終QA実施済みを反映済み。
+4. `12_overhead_line_mechanics_independent_reanswer.md` — main source同期・初回最終QA実施済みを反映済み。
 
-技術内容、数式、固定問題、正答、PDF/PPTX、独立再解答結果に修正事項はない。次工程では上記4箇所の進捗記録だけを現在地へ同期し、その後に最終QAを再実施する。
+技術内容、数式、固定問題、正答、PDF/PPTX、独立再解答結果に修正事項はない。Topic 11の完成済み練習sourceも成果物ローカル状態として `practice_source_complete` を維持しており、Topic 12も同じ記録規則にそろっている。
 
-進捗記録整合: FAIL。
+進捗記録整合: PASS。
 
 ## 最終判定
 - 必須成果物: PASS
@@ -105,8 +105,8 @@ SPEC境界: PASS。
 - 教材外知識補完: `0件`
 - PDF/PPTX QA: PASS
 - SPEC境界: PASS
-- 進捗記録整合: FAIL（旧工程4箇所）
+- 進捗記録整合: PASS
 
-Topic 12はまだ `completed` にしない。新品質基準の完成数は `11 / 16` のまま。
+Topic 12は `PASS / completed`。新品質基準の完成数は `12 / 16`。
 
-次工程は旧進捗記録4箇所を現在地へ同期する。技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
+次工程はTopic 13 `新幹線の架線は何でできている？` の制作前EXAM_ALIGNMENT。Topic 12の技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
