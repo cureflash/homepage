@@ -6,22 +6,21 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_powerpoint_complete`
-- 次工程: Topic 16 独立再解答前ゲート
+- current status: `topic_16_blind_reanswer_gate_complete`
+- 次工程: Topic 16 完成後独立再解答
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、直近変更、Topic 16既存成果物を確認した。
-- 既存の「機械二種を進行」枠による練習PDF完成状態を引き継ぎ、重複制作 `0件`。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 16全成果物を再監査した。
 - Topic 01〜15は最終QA `PASS / completed` のまま変更なし。
 - 最初の未完了テーマは Topic 16。
 - 固定範囲・固定EXAM_ALIGNMENTは変更なし。一次4問＋二次記述1問、計5問・12答案要素。
-- 解説source/PDF、練習source/PDFの内容・QAを変更していない。
-- 解説画像PowerPointを16:9・4枚で作成し、固定12答案要素を可視化した。
-- 120 dpi・1601×900表示QA `4 / 4 PASS`、文字抽出QA PASS、PPTX ZIP整合性 PASS。
-- 未確認N700S電池電圧・容量・セル数・内部抵抗・C-rate・DC/DC具体定格の実車値化、電池材料反応・BMS・チョッパ詳細の仕様追加、Topic 17以降先取り `0件`。
-- 固定問題の正答記号・完成済み数値解は参照・保存していない。
+- 解説source/PDF、練習source/PDFの内容・QAは変更していない。
+- main上で先行完成済みだった解説画像PowerPoint/QAを正本としてreconcileし、既存blob `aba7ff0a01d5d139a1a3370d384761d48f4085ba` / `c04d48d8e7a0f8dd0d5f179521f1cf932aa61aac` へ復帰した。
+- 固定問題の公式正答番号・標準解答本文・完成済み個別解答・数値解・導出結果は参照・保存していない。
+- 未確認N700S実車値、電池材料反応・BMS・チョッパ詳細の仕様追加、Topic 17以降先取り `0件`。
+- 独立再解答前ゲート判定: `BLIND_REANSWER_READY`。
 
 ## Topic 15 最終状態
 - 固定一次3問＋二次記述2問、5問・8答案要素
@@ -51,6 +50,7 @@
 - [x] 練習PDF `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.pdf` — 5ページ、主要数値 `29 / 29 PASS`、表示QA `5 / 5 PASS`
 - [x] 解説画像PowerPoint `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_images.pptx` — 16:9・4枚、表示QA `4 / 4 PASS`
 - [x] PowerPoint QA `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_powerpoint_qa.md`
+- [x] 独立再解答前ゲート `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_blind_reanswer_gate.md`
 
 ## Topic 16 解説画像PowerPointゲート
 - [x] 起電力 `E`＋内部抵抗 `r`、放電 `V=E-Ir`、充電 `V=E+Ir`、内部抵抗損 `I²r` を可視化
@@ -68,5 +68,13 @@
 - [x] Git blob SHA `aba7ff0a01d5d139a1a3370d384761d48f4085ba`
 - 判定: `PASS / topic_16_powerpoint_complete`
 
+## Topic 16 独立再解答前ゲート
+- [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` / 系列 `SPEC.md` / 最新mainを再監査
+- [x] 完成済み教材だけで固定5問・12答案要素を再解答できる状態を確認
+- [x] 固定公式過去問の個別正答番号・標準解答本文の保存 `0件`
+- [x] 固定公式過去問の完成済み個別解答・数値解・導出結果の保存 `0件`
+- [x] 固定EXAM_ALIGNMENT変更、仕様外追加、Topic 17以降先取り、未確認実車値追加 `0件`
+- 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
+
 ## 次に行うこと
-固定EXAM_ALIGNMENTと完成済み教材を変更せず、Topic 16の独立再解答前ゲートを実施する。`MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md`、最新main、Topic 16全成果物を再監査し、固定5過去問の個別正答記号・標準解答本文・完成済み数値解が保存されていないことを確認する。`BLIND_REANSWER_READY` を確認するまで公式解答・標準解答を参照しない。
+公式解答・標準解答を先に開かず、完成済みTopic 16教材だけを使って固定一次4問＋二次1問・12答案要素を独立再解答する。答案確定後に公式解答・標準解答と照合する。

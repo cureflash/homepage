@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_16_powerpoint_complete`
+- current_status: `topic_16_blind_reanswer_gate_complete`
 - last_completed_topic: `15 新幹線の補機モーターを設計する`
 - active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: Topic 16 独立再解答前ゲート
+- next_start: Topic 16 完成後独立再解答
 
 ## 完了テーマ
 - [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `IN_PROGRESS` — 解説画像PowerPoint完成
+- [ ] Topic 16 `IN_PROGRESS` — 独立再解答前ゲート完了
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -124,8 +124,18 @@
 - [x] Git blob SHA `aba7ff0a01d5d139a1a3370d384761d48f4085ba`
 - 判定: `PASS / topic_16_powerpoint_complete`
 
+## Topic 16 独立再解答前ゲート
+- [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` と最新mainを再監査
+- [x] Topic 16の解説source/PDF、練習source/PDF、PowerPoint/QAの実在を再確認
+- [x] main上で先行完成済みだったPowerPoint/QAを正本としてreconcileし、既存blobへ復帰
+- [x] 固定一次4問＋二次1問・12答案要素を変更していない
+- [x] 固定5過去問の公式正答番号・標準解答本文の保存 `0件`
+- [x] 固定5過去問の完成済み個別解答・数値解・導出結果の保存 `0件`
+- [x] 未確認N700S実車値、仕様外論点、Topic 17以降先取り `0件`
+- [x] 判定 `BLIND_REANSWER_READY`
+
 ## 今回進めた内容
-既存のTopic 16解説source/PDF・練習source/PDFを変更せず、解説画像PowerPointを作成した。固定5問・12答案要素を可視化し、表示QA `4 / 4 PASS`、文字抽出QA、PPTX ZIP整合性を通過した。未確認N700S実車値、仕様外論点、Topic 17以降、固定過去問の個別正答・完成済み数値解は追加・参照していない。
+Topic 16の完成済み成果物を再監査し、独立再解答前ゲートを完了した。固定一次4問＋二次1問・12答案要素は変更せず、公式正答・標準解答・完成済み個別解答を参照しない状態を確認した。main上で先行完成済みだったPowerPoint/QAは既存正本blobへreconcileした。
 
 ## 判定
-Topic 16は `topic_16_powerpoint_complete / IN_PROGRESS`。完成数は `15 / 22` のまま。次はTopic 16 独立再解答前ゲート。
+Topic 16は `topic_16_blind_reanswer_gate_complete / IN_PROGRESS`。完成数は `15 / 22` のまま。次はTopic 16 完成後独立再解答。
