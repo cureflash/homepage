@@ -6,8 +6,8 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_final_qa_needs_revision`
-- 次工程: Topic 16 進捗記録3箇所を実成果物状態へ同期
+- current status: `topic_16_progress_records_synced`
+- 次工程: Topic 16 最終QAを再実施
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -19,7 +19,7 @@
 - 解説source/PDF、練習source/PDF、PowerPoint/QA、独立再解答記録の実在を確認。
 - 固定5問・12答案要素の厳密ブラインド再解答は `12 / 12 PASS`。
 - 未確認N700S実車値、電池材料反応・BMS・チョッパ詳細の仕様追加、Topic 17以降先取り `0件`。
-- 最終QAでは技術・試験対応・表示QAはPASS。ただし進捗記録3箇所の不整合を検出したため `NEEDS_REVISION`。
+- 前回最終QAで唯一FAILだった進捗記録3箇所を実成果物状態へ同期済み。最終QA再実施待ち。
 
 ## Topic 15 最終状態
 - 固定一次3問＋二次記述2問、5問・8答案要素
@@ -55,7 +55,8 @@
 - [x] H18再実施用問題入力 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md`
 - [x] H18答案ロック `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_answer_lock.md`
 - [x] 完成後独立再解答記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md` — 厳密ブラインド `12 / 12 PASS`
-- [x] 最終QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_final_qa.md` — `NEEDS_REVISION`
+- [x] 最終QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_final_qa.md` — 前回 `NEEDS_REVISION`
+- [x] 前回最終QAの進捗記録3箇所を実成果物状態へ同期
 
 ## Topic 16 解説画像PowerPointゲート
 - [x] 起電力 `E`＋内部抵抗 `r`、放電 `V=E-Ir`、充電 `V=E+Ir`、内部抵抗損 `I²r` を可視化
@@ -92,7 +93,7 @@
 - 厳密ブラインド結果: `12 / 12 PASS`
 - 判定: `PASS / topic_16_independent_reanswer_complete`
 
-## Topic 16 最終QA
+## Topic 16 最終QA（前回）
 - 必須成果物実在: PASS
 - 固定5問・12答案要素: `12 / 12 PASS`
 - 解説PDF・練習PDF・PowerPoint各QA: PASS
@@ -104,5 +105,12 @@
   3. 練習source末尾 `# 次工程` が「練習PDF作成」のまま。
 - 判定: `NEEDS_REVISION / topic_16_final_qa_needs_revision`
 
+## Topic 16 進捗記録同期
+- main source `## 状態`: 全成果物・独立再解答完了後の実状態へ同期済み。
+- main source末尾 `## 次工程`: 「Topic 16 最終QA再実施」へ同期済み。
+- 練習source末尾 `# 次工程`: 「Topic 16 最終QA再実施」へ同期済み。
+- 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更: `0件`。
+- 判定: `PASS / topic_16_progress_records_synced`
+
 ## 次に行うこと
-上記3箇所だけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTXは変更しない。同期後にTopic 16最終QAを再実施し、全項目PASS時のみ `completed` とする。
+Topic 16最終QAを再実施する。必須成果物、固定5問・12答案要素、独立再解答 `12 / 12 PASS`、PDF/PPTX QA、仕様境界、進捗記録整合を再確認し、全項目PASS時のみ `completed` とする。
