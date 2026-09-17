@@ -5,7 +5,7 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は品質ゲートPASSでcompleted。active topicは13「新幹線は主電動機以外もモーターだらけ？」。
 
-現在 `topic_13_final_qa_needs_revision / IN_PROGRESS`。Topic 13の最終QAを実施し、技術内容、必須成果物、PDF/PPTX表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、固定範囲境界はすべてPASSした。一方、主source・練習source・練習PDF QAの3箇所に旧工程を指す進捗記録が残っているため、進捗記録整合のみFAILとし、Topic 13はcompletedにしていない。
+現在 `topic_13_progress_sync_complete / IN_PROGRESS`。Topic 13の前回最終QAでは、技術内容、必須成果物、PDF/PPTX表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、固定範囲境界はすべてPASSし、主source・練習source・練習PDF QAの3箇所に残っていた旧工程だけが進捗記録整合FAILだった。今回、その旧進捗3箇所を実成果物へ同期した。Topic 13は最終QA再判定前のためcompletedにしていない。
 
 ## Topic 13 固定範囲
 電動機出力 / 回転速度 / トルク / 負荷特性 / ポンプ / ファン / コンプレッサ / 所要動力 / 効率 / インバータ駆動 / 可変速運転。
@@ -48,16 +48,18 @@
 H29 問12 fresh blindでは、教材の `T∝N²`、`Q∝N`、`P∝N³` を公式問題の選択肢へ照合すると(イ)(ウ)(エ)が一致するのは `(4)` のみであるため、教材にないエレベータ負荷知識を追加せず一意に選択できた。答案固定後に公式解答 `(4)` を確認した。
 
 ## 最終QA
-- 判定: `NEEDS_REVISION`
+- 前回判定: `NEEDS_REVISION`
 - 技術内容: `PASS`
 - 必須成果物: `PASS`
 - PDF/PPTX表示QA: `PASS`
 - 固定EXAM_ALIGNMENT・完成後blind独立再解答: `PASS`
 - 固定範囲境界: `PASS`
-- 進捗記録整合: `FAIL`（旧進捗3箇所）
-- 旧進捗1: `13_auxiliary_motors.md` の状態・今回進捗・次工程が最終QA前を指したまま
-- 旧進捗2: `13_auxiliary_motors_practice.md` の次工程が「練習PDFを作成」のまま
-- 旧進捗3: `13_auxiliary_motors_practice_pdf_qa.md` の次工程が「blind独立再解答」のまま
+- 前回進捗記録整合: `FAIL`（旧進捗3箇所）
+- 旧進捗1 `13_auxiliary_motors.md`: 同期済み
+- 旧進捗2 `13_auxiliary_motors_practice.md`: 同期済み
+- 旧進捗3 `13_auxiliary_motors_practice_pdf_qa.md`: 同期済み
+- 進捗記録同期: `3 / 3 PASS`
+- 現在状態: `topic_13_progress_sync_complete / IN_PROGRESS`
 
 ## 範囲境界
 - エレベータ・巻上機を独立論点として追加しない。
@@ -68,4 +70,4 @@ H29 問12 fresh blindでは、教材の `T∝N²`、`Q∝N`、`P∝N³` を公�
 - 車種固有の補機形式、定格、電圧、周波数、インバータ方式を一次資料確認前に実値化しない。
 
 ## 次工程
-旧進捗3箇所だけを実成果物へ同期する。固定EXAM_ALIGNMENT、問題・正答、技術本文、PDF/PPTXは変更しない。同期後にTopic 13の最終QAを再判定する。
+Topic 13の最終QAを再判定する。固定EXAM_ALIGNMENT、問題・正答、技術本文、PDF/PPTXは変更せず、前回唯一FAILだった進捗記録整合を含めて全ゲートを再確認し、全件PASSの場合のみ `completed` とする。
