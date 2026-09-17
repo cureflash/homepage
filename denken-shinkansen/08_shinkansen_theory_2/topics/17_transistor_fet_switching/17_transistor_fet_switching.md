@@ -4,14 +4,14 @@
 
 ## 状態
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `PROGRESS_RECORDS_SYNCED`
 - completion: `in_progress`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - 品質ゲート: 一次5問・25答案要素 `25 / 25 PASS`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
-- 次工程: 解説PDF＋表示QA
+- 次工程: 最終QA再実施
 
 ## 1. SPEC固定範囲
 
@@ -536,4 +536,4 @@ CMOS回路の出力に `C_L=200 pF` の容量性負荷があり、電源電圧 `
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`。
 
-次工程は、固定EXAM_ALIGNMENTと本解説本文を変更せずに解説PDFを作成し、表示QAを行う。
+次工程は、固定EXAM_ALIGNMENTと本解説本文を変更せずに最終QAを再実施する。
