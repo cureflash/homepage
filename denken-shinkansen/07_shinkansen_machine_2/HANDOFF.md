@@ -3,43 +3,23 @@
 更新日: 2026-09-17
 
 ## 現在地
-- Topic 01〜14: 最終QA `PASS / completed`
-- 完成数: `14 / 22`
-- active topic: `15 新幹線の補機モーターを設計する`
-- current status: `topic_15_progress_records_synced`
-- 次工程: Topic 15 最終QA再実施
+- Topic 01〜15: 最終QA `PASS / completed`
+- 完成数: `15 / 22`
+- active topic: `16 N700Sバッテリーから主回路へ電力を送る`
+- current status: `topic_15_completed`
+- 次工程: Topic 16 制作前EXAM_ALIGNMENT
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 15既存成果物を確認した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 15既存成果物、直近のTopic 15変更を確認した。
 - Topic 14は最終QA `PASS / completed` のまま変更なし。
-- Topic 15は制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、解説画像PowerPoint、PowerPoint QA、独立再解答前ゲート、完成後独立再解答まで完成済み。
+- Topic 15は制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、解説画像PowerPoint、PowerPoint QA、独立再解答前ゲート、完成後独立再解答、最終QAまで完成。
 - 固定5過去問・8答案要素の独立再解答は `8 / 8 PASS`。教材外知識補完 `0件`。
-- 前回最終QAで必須成果物、試験対応、練習・表示QA、仕様境界はPASS。
-- 前回唯一のblockerだった進捗記録3箇所を今回同期した。
-  - main source `## 状態`
-  - main source末尾 `# 次工程`
-  - 練習source末尾 `# 次工程`
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。
-- 最終QAそのものはまだ再実施していないため、Topic 15は未完了のまま。
-
-## Topic 15 固定範囲
-- ポンプ
-- ファン
-- コンプレッサ
-- 負荷特性
-- 所要動力
-- 効率
-- インバータ駆動
-- 可変速運転
-- 相似則 `Q∝N`, `H∝N²`, `P∝N³`
-
-境界:
-- Topic 05〜09の誘導機等価回路、最大トルク、PWM回路詳細、ベクトル制御内部理論を再制作しない。
-- Topic 16以降の蓄電池・DCリンク・制御系論点を先取りしない。
-- 未確認の新幹線補機定格値を実車値として置かない。
-- コンプレッサへ三乗則を無条件適用しない。
+- 前回最終QAで唯一のblockerだった進捗記録3箇所は実成果物状態へ同期済み。
+- 最終QAを再実施し、必須成果物、試験対応、練習・表示QA、仕様境界、進捗整合を全件PASSとした。
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更はない。
+- 重複制作 `0件`。
 
 ## Topic 15 固定EXAM_ALIGNMENT
 - R06 一次 機械 問2 (5) — 1答案要素
@@ -51,15 +31,15 @@
 一次3問＋二次記述2問、計5問。品質ゲート対象は8答案要素。
 
 ## Topic 15 成果物状態
-- 解説source: 完成・進捗記録同期済み
+- 解説source: `completed`
 - 解説PDF: 完成
-- 練習source: 完成・進捗記録同期済み
+- 練習source: `completed`
 - 練習PDF: 完成
 - PowerPoint: 完成
 - PowerPoint QA: PASS
 - 独立再解答前ゲート: `BLIND_REANSWER_READY`
 - 完成後独立再解答: `PASS / independent_reanswer_complete`
-- 最終QA記録: 前回 `NEEDS_REVISION / IN_PROGRESS`、再実施待ち
+- 最終QA記録: `PASS / completed`
 
 ## Topic 15 PowerPoint QA
 - `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_images.pptx`
@@ -92,9 +72,8 @@
 - 完成後独立再解答: `8 / 8 PASS`
 - 練習・PDF/PPTX QA: PASS
 - 仕様境界: PASS
-- 前回blockerの進捗記録3箇所: 今回同期済み
-- 最終QA再実施: 未実施
-- 前回最終判定: `NEEDS_REVISION / IN_PROGRESS`
+- 前回blockerの進捗記録3箇所: 同期確認PASS
+- 最終判定: `PASS / completed`
 
 ## 次に行うこと
-Topic 15最終QAを再実施する。進捗記録整合を含む全項目がPASSの場合のみ `completed`、完成数 `15 / 22` とし、次の未完了テーマTopic 16へ進む。
+Topic 16「N700Sバッテリーから主回路へ電力を送る」の制作前EXAM_ALIGNMENTを行う。まず公式二種一次・二次過去問から当該テーマへ直接対応する問題を調査し、`EXAM_ALIGNMENT_SPEC.md` の品質ゲートに従って固定対象を確定する。仕様外の問題を件数合わせで追加しない。
