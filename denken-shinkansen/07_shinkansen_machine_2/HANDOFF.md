@@ -6,8 +6,8 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_h18_blind_input_ready`
-- 次工程: 隔離済み問題入力を使ったH18一次「機械」問3 (1) の独立再解答
+- current status: `topic_16_independent_reanswer_complete`
+- 次工程: Topic 16 最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -17,9 +17,10 @@
 - 最初の未完了テーマは Topic 16。
 - 固定範囲・固定EXAM_ALIGNMENTは変更なし。一次4問＋二次記述1問、計5問・12答案要素。
 - 解説source/PDF、練習source/PDF、PowerPoint/QAは変更していない。
-- 完成後独立再解答ではR02一次3要素、H30一次2要素、H26一次1要素、H23二次5要素を完成教材のみで答案確定後に公式照合し、厳密ブラインド `11 / 11 PASS`。
-- H18一次「機械」問3 (1) は問題取得に使った第三者解説ページで正答が同時露出したため、厳密ブラインド条件を満たさずPASS扱いにしない。
-- H18再実施用として、問題本文・解答群だけを `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md` へ隔離した。正答記号・正答内容・解説・採点結果は保存していない。
+- 既存枠の成果をreconcileし、完成済み工程を重複実施していない。
+- R02一次3要素、H30一次2要素、H26一次1要素、H23二次5要素は既存の厳密ブラインド `11 / 11 PASS` を維持。
+- H18一次「機械」問3 (1) は隔離済み問題入力と完成教材だけで再解答し、（カ）DC/DCコンバータと理由を `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_answer_lock.md` へ解答照合前に固定した。
+- 答案ロックをGitHubへ保存した後に別ソースで解答を照合し一致。H18 `1 / 1 PASS`、固定12答案要素は `12 / 12 PASS`。
 - 未確認N700S実車値、電池材料反応・BMS・チョッパ詳細の仕様追加、Topic 17以降先取り `0件`。
 
 ## Topic 15 最終状態
@@ -51,8 +52,9 @@
 - [x] 解説画像PowerPoint `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_images.pptx` — 16:9・4枚、表示QA `4 / 4 PASS`
 - [x] PowerPoint QA `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_powerpoint_qa.md`
 - [x] 独立再解答前ゲート `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_blind_reanswer_gate.md`
-- [x] 完成後独立再解答記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md` — 厳密ブラインド `11 / 12 PASS`、1要素再実施必要
-- [x] H18再実施用問題入力 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md` — `BLIND_INPUT_READY`
+- [x] H18再実施用問題入力 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md`
+- [x] H18答案ロック `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_answer_lock.md`
+- [x] 完成後独立再解答記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md` — 厳密ブラインド `12 / 12 PASS`
 
 ## Topic 16 解説画像PowerPointゲート
 - [x] 起電力 `E`＋内部抵抗 `r`、放電 `V=E-Ir`、充電 `V=E+Ir`、内部抵抗損 `I²r` を可視化
@@ -82,12 +84,12 @@
 - R02一次 問4 (1),(4),(5): `3 / 3 PASS`
 - H30一次 問6 (3),(4): `2 / 2 PASS`
 - H26一次 問3 (1): `1 / 1 PASS`
+- H18一次 問3 (1): `1 / 1 PASS` — （カ）DC/DCコンバータを解答照合前にロックし、後から照合して一致
 - H23二次 問3 (3),(4): `5 / 5 PASS`
-- 上記は完成教材だけで答案確定後、電気技術者試験センター公式解答・標準解答へ照合した。
-- H18一次 問3 (1): 本採点は未実施。再実施用問題入力を隔離済み。
-- 厳密ブラインド結果: `11 / 12 PASS`
-- H18再実施準備: `PASS / BLIND_INPUT_READY`
-- 判定: `NEEDS_REDO / topic_16_h18_blind_input_ready`
+- R02/H30/H26/H23は完成教材だけで答案確定後、電気技術者試験センター公式解答・標準解答へ照合した。
+- H18は問題側だけを隔離した再実施入力から答案を固定し、GitHub保存後に電験王2の解答欄へ照合した。公式アーカイブが正本であることは確認済みだが、本runではH18一次の個別公式解答PDFを直接取得できなかったため、公式直接照合とは記録しない。
+- 厳密ブラインド結果: `12 / 12 PASS`
+- 判定: `PASS / topic_16_independent_reanswer_complete`
 
 ## 次に行うこと
-`topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md` と完成済みTopic 16教材だけを使い、H18一次「機械」問3 (1) の答案記号と理由を先に固定する。その後に解答を照合する。固定EXAM_ALIGNMENTは変更しない。
+Topic 16最終QAを実施する。必須成果物の実在、解説PDF・練習PDF・PowerPoint各QA、固定5問・12答案要素 `12 / 12 PASS`、仕様境界、source/STATUS/HANDOFFの進捗整合を監査する。PASS時のみTopic 16を `completed` とする。
