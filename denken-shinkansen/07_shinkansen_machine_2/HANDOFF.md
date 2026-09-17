@@ -6,8 +6,8 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_independent_reanswer_complete`
-- 次工程: Topic 16 最終QA
+- current status: `topic_16_final_qa_needs_revision`
+- 次工程: Topic 16 進捗記録3箇所を実成果物状態へ同期
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -16,12 +16,10 @@
 - Topic 01〜15は最終QA `PASS / completed` のまま変更なし。
 - 最初の未完了テーマは Topic 16。
 - 固定範囲・固定EXAM_ALIGNMENTは変更なし。一次4問＋二次記述1問、計5問・12答案要素。
-- 解説source/PDF、練習source/PDF、PowerPoint/QAは変更していない。
-- 既存枠の成果をreconcileし、完成済み工程を重複実施していない。
-- R02一次3要素、H30一次2要素、H26一次1要素、H23二次5要素は既存の厳密ブラインド `11 / 11 PASS` を維持。
-- H18一次「機械」問3 (1) は隔離済み問題入力と完成教材だけで再解答し、（カ）DC/DCコンバータと理由を `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_answer_lock.md` へ解答照合前に固定した。
-- 答案ロックをGitHubへ保存した後に別ソースで解答を照合し一致。H18 `1 / 1 PASS`、固定12答案要素は `12 / 12 PASS`。
+- 解説source/PDF、練習source/PDF、PowerPoint/QA、独立再解答記録の実在を確認。
+- 固定5問・12答案要素の厳密ブラインド再解答は `12 / 12 PASS`。
 - 未確認N700S実車値、電池材料反応・BMS・チョッパ詳細の仕様追加、Topic 17以降先取り `0件`。
+- 最終QAでは技術・試験対応・表示QAはPASS。ただし進捗記録3箇所の不整合を検出したため `NEEDS_REVISION`。
 
 ## Topic 15 最終状態
 - 固定一次3問＋二次記述2問、5問・8答案要素
@@ -47,14 +45,17 @@
 - [x] 制作前EXAM_ALIGNMENT `PASS`
 - [x] 解説source `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link.md`
 - [x] 解説PDF `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_explanation.pdf` — 8ページ、表示QA `8 / 8 PASS`
+- [x] 解説PDF QA `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_explanation_pdf_qa.md`
 - [x] 練習source `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.md` — 一次10問＋二次5問、独立QA `15 / 15 PASS`
 - [x] 練習PDF `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.pdf` — 5ページ、主要数値 `29 / 29 PASS`、表示QA `5 / 5 PASS`
+- [x] 練習PDF QA `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice_pdf_qa.md`
 - [x] 解説画像PowerPoint `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_images.pptx` — 16:9・4枚、表示QA `4 / 4 PASS`
 - [x] PowerPoint QA `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_powerpoint_qa.md`
 - [x] 独立再解答前ゲート `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_blind_reanswer_gate.md`
 - [x] H18再実施用問題入力 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md`
 - [x] H18答案ロック `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_answer_lock.md`
 - [x] 完成後独立再解答記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md` — 厳密ブラインド `12 / 12 PASS`
+- [x] 最終QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_final_qa.md` — `NEEDS_REVISION`
 
 ## Topic 16 解説画像PowerPointゲート
 - [x] 起電力 `E`＋内部抵抗 `r`、放電 `V=E-Ir`、充電 `V=E+Ir`、内部抵抗損 `I²r` を可視化
@@ -87,9 +88,21 @@
 - H18一次 問3 (1): `1 / 1 PASS` — （カ）DC/DCコンバータを解答照合前にロックし、後から照合して一致
 - H23二次 問3 (3),(4): `5 / 5 PASS`
 - R02/H30/H26/H23は完成教材だけで答案確定後、電気技術者試験センター公式解答・標準解答へ照合した。
-- H18は問題側だけを隔離した再実施入力から答案を固定し、GitHub保存後に電験王2の解答欄へ照合した。公式アーカイブが正本であることは確認済みだが、本runではH18一次の個別公式解答PDFを直接取得できなかったため、公式直接照合とは記録しない。
+- H18は問題側だけを隔離した再実施入力から答案を固定し、GitHub保存後に電験王2の解答欄へ照合した。公式アーカイブが正本であることは確認済みだが、H18一次の個別公式解答PDFを直接取得できなかったため公式直接照合とは記録しない。
 - 厳密ブラインド結果: `12 / 12 PASS`
 - 判定: `PASS / topic_16_independent_reanswer_complete`
 
+## Topic 16 最終QA
+- 必須成果物実在: PASS
+- 固定5問・12答案要素: `12 / 12 PASS`
+- 解説PDF・練習PDF・PowerPoint各QA: PASS
+- 練習一次正答一意性 `10 / 10 PASS`、独立計算・論理QA `15 / 15 PASS`
+- 仕様境界: PASS
+- 進捗記録整合: FAIL
+  1. main source `## 状態` が `topic_16_explanation_source_complete` / 次工程「解説PDF作成」のまま。
+  2. main source末尾 `## 次工程` が「解説PDF作成」のまま。
+  3. 練習source末尾 `# 次工程` が「練習PDF作成」のまま。
+- 判定: `NEEDS_REVISION / topic_16_final_qa_needs_revision`
+
 ## 次に行うこと
-Topic 16最終QAを実施する。必須成果物の実在、解説PDF・練習PDF・PowerPoint各QA、固定5問・12答案要素 `12 / 12 PASS`、仕様境界、source/STATUS/HANDOFFの進捗整合を監査する。PASS時のみTopic 16を `completed` とする。
+上記3箇所だけを実成果物状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTXは変更しない。同期後にTopic 16最終QAを再実施し、全項目PASS時のみ `completed` とする。
