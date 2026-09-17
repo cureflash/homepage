@@ -8,11 +8,11 @@ Topic 01〜13は `completed`。
 
 完成数: `13 / 20`
 
-current_status: `topic_14_practice_source_complete`
+current_status: `topic_14_practice_pdf_complete`
 
 active_topic: `14 フーリエ変換・FFT`
 
-次工程: Topic 14の練習PDFを作成し、表示QA・文字抽出QAを実施する。
+次工程: Topic 14の解説画像PowerPointを作成し、表示QAを実施する。
 
 ## 上位仕様
 
@@ -940,7 +940,7 @@ PowerPoint QA:
 source:
 `topics/14_fourier_transform_fft/14_fourier_transform_fft.md`
 
-current_status: `topic_14_practice_source_complete`
+current_status: `topic_14_practice_pdf_complete`
 
 ### Topic 14 固定範囲
 
@@ -1037,6 +1037,26 @@ QA:
 - 第一種・第三種過去問による件数水増し: 0件
 - 未確認実車値依存: 0件
 
+### Topic 14 練習PDF
+
+`topics/14_fourier_transform_fft/14_fourier_transform_fft_practice.pdf`
+
+QA:
+- A4縦5ページ
+- 全12問（一次型8問／記述型4問）＋完全解説を反映
+- 200 dpi全ページ表示QA `5 / 5 PASS`
+- 文字抽出QA `PASS`
+- 固定R3一次「機械」問8 (1)の1答案要素への接続 `1 / 1 PASS`
+- 独立計算・論理QA `12 / 12 PASS` を維持
+- 一次型正答一意性 `8 / 8 PASS` を維持
+- Topic 15先取り: 0件
+- ADC量子化・変換回路方式追加: 0件
+- フィルタ設計一般追加: 0件
+- FFT実装詳細の試験必須化: 0件
+- 二次公式過去問の件数合わせ: 0件
+- 第一種・第三種過去問による件数水増し: 0件
+- 未確認実車値依存: 0件
+
 ## 次に行うこと
 
-Topic 14 `フーリエ変換・FFT` の練習PDFを作成し、表示QA・文字抽出QA・全12問と完全解説の反映確認を行う。
+Topic 14 `フーリエ変換・FFT` の解説画像PowerPointを作成し、表示QAを実施する。
