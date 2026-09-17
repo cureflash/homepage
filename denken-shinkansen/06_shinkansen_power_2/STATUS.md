@@ -4,12 +4,12 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `11`
 theme: 新幹線が移動すると電圧はどう変わる？
-current_status: `topic_11_practice_pdf_complete`
+current_status: `topic_11_calculation_program_complete`
 completed_topics: `10 / 22`
 
 ## Topic 11 current result
 
-制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QAまで完了した。
+制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QA、計算プログラム・CSV・グラフと独立計算QAまで完了した。
 
 正式品質ゲート:
 - 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
@@ -49,14 +49,29 @@ completed_topics: `10 / 22`
 - Git blob SHA: `4aeffbd83faf7256161475899f8e3f8319d29073`
 - GitHub正本bytes再レンダリング差分: `8 / 8ページ・0差分 PASS`
 
-本文・練習では、位置 `x` から `Z(x)` を作る方法、`S=P+jQ=VI*`、`V_s=V_r+ZI`、厳密な受電端電圧式、近似電圧降下、`I²R` 損失、位置比較、分布負荷の積分法を扱う。H30一次問7の導体量関係はTopic 10既習事項として再確認するだけで、新規主題にはしていない。
+計算プログラム成果物:
+- `topics/11_moving_train_voltage/11_moving_train_voltage_sim.py`
+- `topics/11_moving_train_voltage/11_moving_train_voltage_sweep.csv`
+- `topics/11_moving_train_voltage/11_moving_train_voltage_pantograph_voltage.svg`
+- `topics/11_moving_train_voltage/11_moving_train_voltage_line_current.svg`
+- `topics/11_moving_train_voltage/11_moving_train_voltage_active_loss.svg`
+- `topics/11_moving_train_voltage/11_moving_train_voltage_reactive_power.svg`
+- `topics/11_moving_train_voltage/11_moving_train_voltage_sim_qa.md`
+- 解説例題2の教材上仮定値を再利用し、`x=0.0 ... 12.0 km` を `0.1 km` 刻みで `121点` 掃引
+- パンタグラフ電圧・線路電流・有効電力損失・無効電力: `4 / 4` CSV出力・グラフ化 PASS
+- 代表点 `0 / 6 / 12 km` 独立再代入 PASS
+- `x=12 km`: `Vr=24.866572 kV`, `I=178.731693 A`, `P_loss=15.333609 kW`
+- 解説例題2の丸め値と一致
+- 全点傾向QA: `Vr` 単調非増加、`I/P_loss/Q_line` 単調非減少、`Q_load` 一定 — PASS
+
+本文・練習・計算プログラムでは、位置 `x` から `Z(x)` を作る方法、`S=P+jQ=VI*`、`V_s=V_r+ZI`、厳密な受電端電圧式、近似電圧降下、`I²R` 損失、位置比較、分布負荷の積分法を扱う。H30一次問7の導体量関係はTopic 10既習事項として再確認するだけで、新規主題にはしていない。
 
 範囲監査:
 - Topic 12以降の先取り: `0件`
 - 未確認実設備値依存: `0件`
 - 仕様追加: `0件`
 - 公式過去問転載: `0件`
-- 例題・練習数値はすべて教材上の仮定値
+- 例題・練習・計算プログラム数値はすべて教材上の仮定値
 
 ## Gate checklist
 
@@ -70,8 +85,8 @@ completed_topics: `10 / 22`
 - [x] Topic 08 completed
 - [x] Topic 09 completed
 - [x] Topic 10 completed
-- [ ] Topic 11 — 練習PDF complete / IN_PROGRESS
+- [ ] Topic 11 — 計算プログラム complete / IN_PROGRESS
 
 ## next_start
 
-Topic 11 SPECの計算プログラムを制作し、列車位置 `x` を連続掃引してパンタグラフ電圧・線路電流・有効電力損失・無効電力を計算・グラフ化する。PowerPointはまだ制作しない。
+Topic 11の解説画像PowerPointを制作し、表示・数式・試験対応QAを行う。完成後blind再解答はまだ実施しない。
