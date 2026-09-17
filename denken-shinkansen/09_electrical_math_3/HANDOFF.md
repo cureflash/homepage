@@ -8,13 +8,13 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 12`
 
-current_status: `topic_11_images_pptx_complete`
+current_status: `topic_11_blind_gate_ready`
 
 last_completed_topic: `10 指数関数・一階微分方程式入門`
 
 active_topic: `11 グラフ・特性曲線を読む`
 
-next_start: `Topic 11完成教材だけでの公式過去問独立再解答`
+next_start: `Topic 11完成教材だけでの公式過去問独立再解答（ブラインド手順）`
 
 ## Topic 11 固定仕様範囲
 
@@ -76,15 +76,11 @@ next_start: `Topic 11完成教材だけでの公式過去問独立再解答`
 
 ## Topic 11 制作前独立解答
 
-公式解答を参照する前に固定5問を独立に解答し、その後に公式解答と照合した。
-
-- R7下 機械 問1: `(5)` → 公式 `(5)` PASS
-- R6下 理論 問13: `(2) 0.9 MΩ` → 公式 `(2)` PASS
-- R6下 理論 問9: `(3) 21.2 A` → 公式 `(3)` PASS
-- R5上 機械 問7: `(4)` → 公式 `(4)` PASS
-- R5上 機械 問9: `(4) 98.0 %` → 公式 `(4)` PASS
+固定5問を公式解答参照前に独立解答し、その後に公式解答と照合済み。
 
 結果: `5 / 5 PASS`。
+
+完成後独立再解答のブラインド条件を守るため、個別の選択肢番号・数値解・導出はHANDOFFには保存しない。履歴は主sourceの`## 制作前独立解答・公式解答照合`節にのみ残し、完成後独立再解答を確定するまでは参照しない。
 
 固定EXAM_ALIGNMENT変更0件。固定範囲外補完0件。
 
@@ -166,8 +162,22 @@ next_start: `Topic 11完成教材だけでの公式過去問独立再解答`
 - 固定EXAM_ALIGNMENT変更0件
 - 伝達関数・ボード線図・PID等の固定範囲外追加0件
 
-判定: `topic_11_images_pptx_complete / IN_PROGRESS`。
+## Topic 11 完成後独立再解答 ブラインドゲート
+
+次をGitHub正本へ反映した。
+
+- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_blind_gate.md`
+- 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
+- 固定品質ゲート5問は変更なし
+- 固定EXAM_ALIGNMENT・教材成果物・問題・正答は変更なし
+- HANDOFFから制作前独立解答の個別正答を除去
+- 主sourceの制作前独立解答節は、完成後独立解答を確定するまで参照しない
+- 伝達関数・ボード線図・PID等の固定範囲外追加0件
+
+このrunでは保存済み個別正答を視認済みのため、完成後独立再解答そのものは実施しない。
+
+判定: `topic_11_blind_gate_ready / IN_PROGRESS`。
 
 ## 次工程
 
-Topic 11の完成教材だけで固定5問を独立再解答する。
+Topic 11の完成教材だけで固定5問をブラインド手順に従って独立再解答する。
