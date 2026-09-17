@@ -1,7 +1,7 @@
 # Topic 14 East iは何をどう測っている？
 
 更新日: 2026-09-17
-status: `EXPLANATION_SOURCE_COMPLETE`
+status: `INDEPENDENT_REANSWER_COMPLETE`
 
 ## 1. SPEC固定範囲
 
@@ -721,4 +721,4 @@ e = V_m - V_t
 
 ## 13. 次工程
 
-次は、このsourceを正本として解説PDFを作成し、表示・文字抽出QAを行う。固定EXAM_ALIGNMENT、本文範囲、3段階例題は変更せず、完成後独立再解答の正答番号・個別最終数値を先読みしない。
+次は最終QAを再実施する。技術本文、固定EXAM_ALIGNMENT、練習問題、PDF/PPTX、独立再解答結果は変更しない。
