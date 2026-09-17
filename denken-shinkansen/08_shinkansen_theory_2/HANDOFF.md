@@ -4,13 +4,13 @@
 
 ## 現在地
 
-Topic 01〜15は `PASS / completed`。完成数は `15 / 21`。
+Topic 01〜16は `PASS / completed`。完成数は `16 / 21`。
 
-current_status: `topic_16_final_qa_complete`
+current_status: `topic_16_completed`
 
-active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
+active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 
-Topic 16は最終QA再実施まで完了。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界、初回blocker4件の解消を全件確認し、判定は `PASS / FINAL_QA_COMPLETE`。completionはまだ `in_progress` とし、次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。
+Topic 16はcompleted状態同期まで完了。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界、初回blocker4件の解消を全件確認済み。判定は `PASS / completed`。次工程はTopic 17の制作前EXAM_ALIGNMENT。
 
 ## Topic 16 成果物
 
@@ -24,8 +24,8 @@ Topic 16は最終QA再実施まで完了。固定一次5問・25答案要素の�
 - PowerPoint QA: `topics/16_semiconductor_diode/16_semiconductor_diode_powerpoint_qa.md`
 - 完成後独立再解答: `topics/16_semiconductor_diode/16_semiconductor_diode_reanswer.md`
 - 最終QA: `topics/16_semiconductor_diode/16_semiconductor_diode_final_qa.md`
-- completion: `in_progress`
-- stage: `FINAL_QA_COMPLETE`
+- completion: `completed`
+- stage: `COMPLETED`
 
 ## Topic 16 固定範囲
 
@@ -148,6 +148,18 @@ Topic 16は最終QA再実施まで完了。固定一次5問・25答案要素の�
 
 判定: `PASS / FINAL_QA_COMPLETE`
 
+## Topic 16 completed状態同期
+
+主source・練習source・STATUS・HANDOFFを実成果物状態へ同期した。
+
+- 主source: `completion: completed`、`stage: COMPLETED`
+- 練習source: `completion: completed`、`stage: COMPLETED`
+- STATUS: 完成数 `16 / 21`、Topic 17をactiveへ更新
+- HANDOFF: Topic 01〜16 `PASS / completed` へ更新
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
+
+判定: `PASS / completed`
+
 ## 次工程
 
-主source・練習source・STATUS・HANDOFFをTopic 16 `completed` 状態へ同期する。完成数はその同期完了まで `15 / 21` のままとする。
+Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の制作前EXAM_ALIGNMENTを行う。
