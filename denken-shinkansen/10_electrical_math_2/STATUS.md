@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 14 / 20
-- current_status: `topic_15_progress_records_synced`
-- last_completed_topic: `14 フーリエ変換・FFT`
-- active_topic: `15 対数・dB・周波数応答`
-- next_start: Topic 15の最終QAを再判定する
+- exam_aligned_completed_topics: 15 / 20
+- current_status: `topic_15_completed`
+- last_completed_topic: `15 対数・dB・周波数応答`
+- active_topic: `16 数値微分・数値積分`
+- next_start: Topic 16の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -219,21 +219,21 @@
 - [x] 完成後独立再解答 `12 / 12 PASS`（post-completion lock commit `05a031bf1ce152cf071f4028fa4960443d31b1df`）
 - [x] 最終QA実施 → `NEEDS_REVISION`
 - [x] 進捗記録6ファイルの同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-最新main、`STATUS.md` / `HANDOFF.md`、直近変更を確認し、既存の「電気数学二種を進行」枠の成果をreconcileした。
+Topic 15 `対数・dB・周波数応答` の最終QAを再判定した。
 
-初回最終QAでFAIL要因だった6ファイルは、既存枠によりすでに実成果物へ同期済みであることを確認した。主source、解説PDF QA、練習source、練習PDF QA、PowerPoint QAはいずれも次工程が「Topic 15の最終QAを再判定する」へ更新済みで、`HANDOFF.md` も `topic_15_progress_records_synced` / 最終QA再判定へ同期済みだった。
+初回FAIL要因だった進捗記録6ファイルは `6 / 6 PASS`。必須成果物、固定第二種公式過去問5問・12答案要素、完成後独立再解答 `12 / 12 PASS`、解説PDF `4 / 4 PASS`、練習PDF `6 / 6 PASS`、PowerPoint `5 / 5 PASS`、SPEC境界もすべてPASSを維持した。
 
-重複修正を避け、旧状態を残していた本 `STATUS.md` のみを実状態へ同期した。技術本文・問題・正答・PDF・PowerPoint・EXAM_ALIGNMENTは変更していない。
+技術本文・問題・正答・PDF・PowerPoint・EXAM_ALIGNMENTは変更していない。
 
 ## 判定
 
-Topic 15は `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`。
+Topic 15は `PASS / completed`。
 
-完成数は `14 / 20` のまま。
+完成数は `15 / 20`。
 
-次はTopic 15の最終QAを再判定する。
+次はTopic 16 `数値微分・数値積分` の制作前EXAM_ALIGNMENTを実施する。
