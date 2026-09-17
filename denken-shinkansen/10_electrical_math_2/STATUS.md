@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 15 / 20
-- current_status: `topic_16_explanation_source_complete`
+- current_status: `topic_16_explanation_pdf_complete`
 - last_completed_topic: `15 対数・dB・周波数応答`
 - active_topic: `16 数値微分・数値積分`
-- next_start: Topic 16の解説PDFを作成し、表示QA・文字抽出QAを行う
+- next_start: Topic 16の練習問題sourceを作成する
 
 ## Topic 07 制作品質ゲート
 
@@ -237,7 +237,7 @@
 - [x] 制作前独立再解答・公式解答照合 `8 / 8 PASS`
 - [x] 公式解答確認前に `ANSWER_LOCKED_BEFORE_REVIEW` を保存（lock commit `d376d19197e730308a26f37a055cecc91eb555de`）
 - [x] 解説本文＋3段階例題（固定4問・8答案要素マッピング `8 / 8`、例題 `3 / 3`）
-- [ ] 解説PDF
+- [x] 解説PDF（A4縦5ページ、200 dpi表示 `5 / 5 PASS`、文字抽出QA `PASS`）
 - [ ] 練習問題source
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
@@ -248,14 +248,14 @@
 
 ## 今回進めた内容
 
-既存の「電気数学二種を進行」枠で完了したTopic 16の制作前独立再解答をreconcileし、重複せず次工程の解説本文＋3段階例題を主sourceへ作成した。
+Topic 16の解説本文＋3段階例題から解説PDFを作成し、表示QA・文字抽出QAを完了した。
 
-本文は差分・数値微分・台形則・Simpson則の基本・誤差・刻み幅・速度データから加速度・電力データから電力量に限定。固定4問・8答案要素への本文マッピングは `8 / 8`、3段階例題は `3 / 3`。第一種・第三種による件数水増し、Topic 17以降の先取り、未確認実車値の追加はいずれも0件。
+解説PDFはA4縦5ページ。200 dpiで全5ページを確認し `5 / 5 PASS`、欠け・重なり・黒塗り・文字化け0件、`pdftotext -layout` 文字抽出 `PASS`。固定第二種4問・8答案要素への接続 `8 / 8`、3段階例題 `3 / 3` を維持した。第一種・第三種による件数水増し、Topic 17以降の先取り、高次数値計算法等の仕様外追加、未確認実車値依存はいずれも0件。
 
 ## 判定
 
-`topic_16_explanation_source_complete / IN_PROGRESS`
+`topic_16_explanation_pdf_complete / IN_PROGRESS`
 
 完成数は `15 / 20` のまま。
 
-次はTopic 16の解説PDFを作成し、表示QA・文字抽出QAを行う。
+次はTopic 16の練習問題sourceを作成する。

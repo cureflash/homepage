@@ -2,17 +2,21 @@
 
 ## 状態
 
-`topic_16_explanation_source_complete / IN_PROGRESS`
+`topic_16_explanation_pdf_complete / IN_PROGRESS`
 
-2026-09-18、制作前EXAM_ALIGNMENT、固定4問・8答案要素の制作前独立再解答・公式解答照合に続き、解説本文＋3段階例題を作成した。公式解答確認前の再解答は `8 / 8 PASS`、照合後の修正0件、固定問題数・答案要素数の変更0件。
+2026-09-18、制作前EXAM_ALIGNMENT、固定4問・8答案要素の制作前独立再解答・公式解答照合、解説本文＋3段階例題に続き、解説PDFを作成して表示QA・文字抽出QAを完了した。公式解答確認前の再解答は `8 / 8 PASS`、固定問題数・答案要素数の変更0件。
 
-解説本文はSPEC固定範囲の「差分、数値微分、台形則、Simpson則の基本、誤差、刻み幅、速度データ→加速度、電力データ→電力量」に限定した。Topic 17以降、第一種・第三種、未確認の新幹線実車値は追加していない。
+解説PDFはA4縦5ページ、200 dpi表示 `5 / 5 PASS`、`pdftotext -layout` 文字抽出 `PASS`。固定4問・8答案要素への接続 `8 / 8`、3段階例題 `3 / 3` を維持した。Topic 17以降、第一種・第三種、未確認の新幹線実車値は追加していない。
 
 制作前再解答記録:
 - lock: `16_numerical_differentiation_integration_exam_reanswer_lock.md`
 - lock commit: `d376d19197e730308a26f37a055cecc91eb555de`
 - 照合記録: `16_numerical_differentiation_integration_exam_reanswer.md`
 - 結果: `8 / 8 PASS`
+
+解説PDF:
+- `16_numerical_differentiation_integration_explanation.pdf`
+- QA: `16_numerical_differentiation_integration_explanation_qa.md`
 
 ## 固定範囲
 
@@ -546,4 +550,4 @@ Topic 17以降の先取り: `0件`
 
 ## 次工程
 
-解説本文＋3段階例題をもとに解説PDFを作成し、表示QA・文字抽出QAを行う。固定4問・8答案要素の本文マッピング `8 / 8` を維持し、仕様外論点を追加しない。
+Topic 16の練習問題sourceを作成する。固定4問・8答案要素への接続 `8 / 8` を維持し、仕様外論点を追加しない。
