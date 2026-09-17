@@ -6,21 +6,21 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`09_electrical_math_3/SPEC.md` に照らして最終QAを実施した。仕様追加はしていない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`09_electrical_math_3/SPEC.md` に照らして最終QAを再判定した。仕様追加はしていない。
 
-技術内容、必須成果物、固定EXAM_ALIGNMENT、練習QA、完成後独立再解答はPASSしている。ただし、GitHub正本である主source・練習sourceに実成果物と矛盾する旧進捗記録が3箇所残っているため、現時点では `completed` としない。
+初回最終QAで唯一FAILだった主source・練習sourceの旧進捗記録3箇所は、再判定前に実成果物と現在地へ同期済みである。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、完成後独立再解答結果は変更していない。
 
 ## 必須成果物の実在確認
 
-GitHub正本上で次を確認した。
+GitHub正本上で次を再確認した。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| 主source Markdown | `a586250f59d0a6f8d384dd272f70055face3dfba` | PASS |
+| 主source Markdown | `a648a47ba91da6d28e5ecee10de5c69e6c7ca209` | PASS |
 | 解説PDF | `12a8a1b9f5eb496769a909e0e380f44326714097` | PASS |
-| 練習source | `c5de4ba33c9f74680c6233bb8a2311f1565ec90b` | PASS |
+| 練習source | `ad51b59e99d575854ec443fdc2c82841fea7446b` | PASS |
 | 練習PDF | `0abf3ef20c543661b70629aa2aea62ec41b2d8a4` | PASS |
 | 解説画像PowerPoint | `062d7266f9bd790c555aa647a1e51524fd8c7e9f` | PASS |
 
@@ -54,7 +54,7 @@ blind gateに従い、固定5問を完成教材だけで独立再解答済み。
 
 ## 練習・表示QA
 
-記録済みQAと対応成果物の実在を確認した。
+記録済みQAと対応成果物の実在を再確認した。
 
 - 練習問題: 12問、全問五肢択一、基礎3 / 標準7 / 複合2
 - 練習数値・論理QA: `12 / 12 PASS`
@@ -90,15 +90,15 @@ blind gateに従い、固定5問を完成教材だけで独立再解答済み。
 
 仕様境界はPASS。
 
-## FAIL項目: source進捗整合
+## 初回FAIL項目の解消確認
 
-技術内容ではなく、正本内の進捗記録3箇所のみFAIL。
+初回FAILだった進捗記録3箇所を再確認した。
 
-1. 主source冒頭 `## 状態` が「解説本文＋3段階例題を完成した」段階のままで、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了した現在地を反映していない。
-2. 主source末尾 `## 次工程` が「解説PDFを作成」となっているが、解説PDFは既に実在しQA済み。
-3. 練習source末尾 `## 次工程` が「練習PDFを作成」となっているが、練習PDFは既に実在しQA済み。
+1. 主source冒頭 `## 状態` は、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了し、初回最終QA後の進捗同期済み・次工程が最終QA再判定である実態へ同期済み。
+2. 主source末尾 `## 次工程` は `Topic 11の最終QAを再判定する` へ同期済み。
+3. 練習source末尾 `## 次工程` は `Topic 11の最終QAを再判定する` へ同期済み。
 
-`MASTER_SPEC.md` は完了判定をGitHub正本と実在成果物で行うため、この不整合を残したまま `completed` にはしない。
+再判定時点で、初回FAIL原因は解消している。
 
 ## 最終判定
 
@@ -112,8 +112,7 @@ blind gateに従い、固定5問を完成教材だけで独立再解答済み。
 - 固定範囲外追加: 0件
 - 未確認実車値追加: 0件
 - 仕様境界: PASS
-- source進捗整合: FAIL（3箇所）
+- source進捗整合: PASS
+- 初回FAIL原因の解消: PASS
 
-したがって Topic 11 は `NEEDS_REVISION / IN_PROGRESS`。完成数は `10 / 12` のまま。
-
-次工程は、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・独立再解答結果を変更せず、主source・練習sourceの旧進捗記録3箇所だけを実成果物と現在地へ同期する。
+したがって Topic 11 は `PASS / completed`。系列完成数は `11 / 12`。次の未完了テーマは Topic 12「電気数学総合」。
