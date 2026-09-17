@@ -89,7 +89,8 @@ SPEC指定可視化:
 - SPEC指定9項目: `9 / 9 PASS`
 - SPEC指定4可視化: `4 / 4 PASS`
 - 4可視化共通仮定式系: `PASS`
-- PDF SHA-256: `2b20783e82ada1d6db504d59e18e492851313e270e9051e44a3f74f6bc305593`
+- PDF SHA-256: `58c06ad4b257d854e8e3ee15035e73f864f493e0bfd7df361c72498c07fb2984`
+- Git blob SHA: `be8cdfaa65b377ca85130ca90ac6b8f5d5e23ef7`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認500系実車値の真値化: `0件`
