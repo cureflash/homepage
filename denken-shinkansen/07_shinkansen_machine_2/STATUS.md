@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `13 / 22`
-- current_status: `topic_14_explanation_pdf_complete`
+- current_status: `topic_14_blind_reanswer_ready`
 - last_completed_topic: `13 L0系のリニア同期モータを等価回路で考える`
 - active_topic: `14 L0系を500km/hで同期させる`
-- next_start: Topic 14 練習問題source
+- next_start: Topic 14 完成後独立再解答
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -580,8 +580,56 @@
 - [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
 - [x] SHA-256 `9e3af1ef9246da706aa83a2e2787a67c3c74afebc3bb950e677bd77f45f68d9b`
 
+## Topic 14 練習問題source
+- [x] `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_practice.md`
+- [x] 一次試験型10問・全問五肢択一
+- [x] 二次試験型5問・途中式／前提／単位／検算または論証付き
+- [x] 一次正答一意性 `10 / 10 PASS`
+- [x] 独立計算・論理QA `15 / 15 PASS`
+- [x] 固定5過去問・27答案要素へ `27 / 27` 接続
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+
+## Topic 14 練習PDF
+- [x] `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_practice.pdf`
+- [x] A4縦4ページ
+- [x] 一次10問＋二次5問・解答／完全解説を収録
+- [x] 200 dpi全4ページ表示QA `4 / 4 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- [x] 数値・論理再検算 `15 / 15 PASS`
+- [x] 一次正答一意性 `10 / 10 PASS` を維持
+- [x] 固定一次1問＋二次4問・27答案要素を維持
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+- [x] SHA-256 `557a06402e67d214d45af477020ff5c11f6af488eb5d75546d98615b7182dc9d`
+
+## Topic 14 解説画像PowerPoint
+- [x] `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_images.pptx`
+- [x] 16:9・4枚
+- [x] 発電機／電動機フェーザと力率角 `θ`・負荷角 `δ` を可視化
+- [x] `P=VE/X_s sinδ`、`P_max=VE/X_s`、励磁・リアクタンス変化を可視化
+- [x] 励磁・力率・V曲線、同期調相機 `I=(V-E)/(jX_s)` を可視化
+- [x] 無負荷飽和曲線・三相短絡特性・短絡比・同期インピーダンスを可視化
+- [x] 1601×900全4枚表示QA `4 / 4 PASS`
+- [x] overflow `0件`
+- [x] PPTX ZIP整合性 PASS
+- [x] 固定一次1問＋二次4問・27答案要素を維持
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+- [x] Git blob SHA `2edf2ec7c42d4939e37c6d912bcc0756052aca5a`
+- [x] SHA-256 `2c399f792e186246bc7893d100a343d52e085d1ac991c5cc92aeb949d5724c76`
+
+## Topic 14 独立再解答前ゲート
+- [x] `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
+- [x] `STATUS.md` / `HANDOFF.md` / main source / 練習source / PowerPoint QA / Topic 14成果物一覧を再監査
+- [x] 固定5過去問の公式正答番号・標準解答本文の保存 `0件`
+- [x] 固定5過去問の完成済み個別解答・数値解・導出結果の保存 `0件`
+- [x] 制作前検証はPASS数・要求知識・使用式・教材内マッピングのみを保持
+- [x] 練習sourceの正答・解説は教材自身の練習問題で、固定公式過去問の保存済み正答には該当しない
+- [x] 固定一次1問＋二次4問・27答案要素、教材本文・PDF・練習問題・PowerPoint・固定EXAM_ALIGNMENTは変更なし
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+- [x] 判定 `BLIND_REANSWER_READY`
+- [x] ゲート記録: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_blind_reanswer_gate.md`
+
 ## 今回進めた内容
-Topic 14を1段階進め、解説PDFをGitHub正本へ反映した。A4縦3ページ、200 dpi全ページ表示QA `3 / 3 PASS`、文字抽出QA PASS。固定一次1問＋二次4問・27答案要素と3段階例題を維持し、固定範囲外論点・Topic 15以降先取り・未確認L0実値追加は `0件`。
+Topic 14を1段階進め、完成後独立再解答前ゲートを完了した。固定一次1問＋二次4問・27答案要素を維持し、必須先読み対象への公式正答・標準解答本文・完成済み個別解答の保存は `0件`。固定範囲外論点・Topic 15以降先取り・未確認L0実値追加も `0件`。
 
 ## 判定
-Topic 14は `explanation_pdf_complete / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の練習問題source。
+Topic 14は `BLIND_REANSWER_READY / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の完成後独立再解答。
