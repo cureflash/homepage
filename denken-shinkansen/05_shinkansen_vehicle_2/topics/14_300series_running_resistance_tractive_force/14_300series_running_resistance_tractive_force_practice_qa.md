@@ -41,7 +41,7 @@
 - 4可視化共通仮定式系の変更: `0件`
 - Topic 13の回生・制動・エネルギー返送再展開: `0件`
 - Topic 12のPWM/VVVF/V/f・滑り制御再展開: `0件`
-- 粘着限界・曲線抵抗・トンネル抵抗・台車/歯車設計・列車運行計画追加: `0件`
+- 粘着限界、曲線抵抗、トンネル抵抗、台車・歯車設計、列車運行計画追加: `0件`
 - 未確認300系実車値の真値化: `0件`
 
 ## 整合情報
@@ -53,6 +53,6 @@
 `PASS / PRACTICE_PDF_COMPLETE`
 
 ## 現在地
-- current_status: `topic_14_practice_pdf_complete`
+- current_status: `topic_14_progress_sync_complete`
 - 完成数: `13 / 39`
-- 次工程: Topic 14 解説画像PowerPoint。固定EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDFは変更しない。
+- 次工程: Topic 14 最終QAを再判定する。固定EXAM_ALIGNMENTは変更しない。
