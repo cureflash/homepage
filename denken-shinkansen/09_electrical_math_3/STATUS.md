@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 10 / 12
-- current_status: `topic_11_explanation_pdf_complete`
+- current_status: `topic_11_practice_source_complete`
 - last_completed_topic: `10 指数関数・一階微分方程式入門`
 - active_topic: `11 グラフ・特性曲線を読む`
-- next_start: `Topic 11練習問題source`
+- next_start: `Topic 11練習PDF`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -124,7 +124,7 @@
 - [x] 制作前独立解答・公式解答照合 `5 / 5 PASS`
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 完成教材だけでの公式過去問独立再解答
@@ -132,19 +132,19 @@
 
 ## 今回進めた内容
 
-Topic 11「グラフ・特性曲線を読む」の解説PDFをGitHub正本へ反映した。
+Topic 11「グラフ・特性曲線を読む」の練習問題sourceをGitHub正本へ反映した。
 
-- A4縦4ページ
-- 200 dpi表示QA `4 / 4 PASS`
-- 文字抽出QA `PASS`
-- 固定必須説明 `15 / 15` をPDFへ反映
-- 3段階例題の数値整合 `3 / 3 PASS`
-- 固定5過去問への教材内対応 `5 / 5`
+- 全12問・全問五肢択一
+- 基礎3 / 標準7 / 複合2
+- 固定5過去問への接続 `5 / 5 PASS`
+- 固定必須説明15項目への練習接続 `15 / 15 PASS`
+- 数値・論理QA `12 / 12 PASS`
+- 正答一意性 `12 / 12 PASS`
 - 固定EXAM_ALIGNMENT変更0件
 - 伝達関数・ボード線図・PID等の固定範囲外追加0件
 
 ## 判定
 
-`topic_11_explanation_pdf_complete / IN_PROGRESS`。
+`topic_11_practice_source_complete / IN_PROGRESS`。
 
-完成数は `10 / 12`。次工程はTopic 11の練習問題source。
+完成数は `10 / 12`。次工程はTopic 11の練習PDF。
