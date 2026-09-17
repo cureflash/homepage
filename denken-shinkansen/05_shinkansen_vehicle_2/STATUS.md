@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `14 / 39`
-- current_status: `topic_15_practice_pdf_complete`
+- current_status: `topic_15_powerpoint_complete`
 - last_completed_topic: `14 300系⑤ 走行抵抗と必要けん引力`
 - active_topic: `15 500系 高速域の出力・熱解析`
-- next_start: Topic 15の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDF・練習source/PDFの共通仮定式系を変更せず、固定16答案要素とSPEC指定4可視化を欠落させない
+- next_start: Topic 15の完成後独立再解答前ゲートを実施し、必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別答案が残っていないことを監査する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -25,7 +25,7 @@
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
-- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / PRACTICE_PDF_PASS
+- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / POWERPOINT_PASS
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -121,6 +121,24 @@
 - Git blob SHA: `b8c82a672043c1c52941c9cfdf612a6475144ea8`
 - 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
+## Topic 15 解説画像PowerPoint
+- path: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_images.pptx`
+- QA: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_powerpoint_qa.md`
+- 16:9・4枚
+- 1601×900表示QA: `4 / 4 PASS`
+- overflow・文字欠落・重なり・切れ: `0件`
+- PPTX ZIP整合性: `PASS`
+- 固定5過去問・16答案要素の可視化・接続: `16 / 16 PASS`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定4可視化: `4 / 4 PASS`
+- 解説source/PDF・練習source/PDFの共通仮定式系変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+- SHA-256: `c5fc5495c63266366941f8b9a280737aa38382eea6b3999c8ee81902c9c67d72`
+- Git blob SHA: `34c4cf717dea445e87517ba960a486d2e18f8776`
+- 判定: `PASS / POWERPOINT_COMPLETE`
+
 ## Topic 15 SPEC固定範囲
 扱う内容:
 - `P = ωT`
@@ -150,4 +168,4 @@ SPEC指定可視化:
 Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 15「500系 高速域の出力・熱解析」の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDF・練習source/PDFの共通仮定式系を変更せず、固定16答案要素とSPEC指定4可視化を欠落させない。
+Topic 15「500系 高速域の出力・熱解析」の完成後独立再解答前ゲートを実施し、必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別答案が残っていないことを監査する。

@@ -7,9 +7,9 @@
 
 Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
 
-Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDFまで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。練習PDFは一次8問＋二次4問、完全解説12問を収録し、固定16答案要素接続 `16 / 16 PASS`、数値・論理 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`。SPEC指定9項目・4可視化の共通式系を維持し、未確認500系実車値の真値化・SPEC外追加は0件。
+Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。PowerPointは16:9・4枚、1601×900表示QA `4 / 4 PASS`、固定16答案要素の可視化・接続 `16 / 16 PASS`、SPEC指定4可視化 `4 / 4 PASS`。SPEC指定9項目・共通仮定式系を維持し、未確認500系実車値の真値化・SPEC外追加は0件。
 
-次工程は Topic 15 の解説画像PowerPoint。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDF・練習source/PDFの共通仮定式系を変更せず、固定16答案要素とSPEC指定4可視化を欠落させない。
+次工程は Topic 15 の完成後独立再解答前ゲート。必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別答案が残っていないことを監査してからblind再解答へ進む。
 
 ## Topic 15 固定EXAM_ALIGNMENT
 source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
@@ -129,8 +129,26 @@ SPEC指定可視化:
 - PDF SHA-256: `124c1341180148d102e85cadb64d2e68d1ed082621465d227034f5efa5a58814`
 - Git blob SHA: `b8c82a672043c1c52941c9cfdf612a6475144ea8`
 
+## Topic 15 解説画像PowerPoint
+- path: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_images.pptx`
+- QA: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_powerpoint_qa.md`
+- 判定: `PASS / POWERPOINT_COMPLETE`
+- 16:9・4枚
+- 1601×900表示QA: `4 / 4 PASS`
+- overflow・文字欠落・重なり・切れ: `0件`
+- PPTX ZIP整合性: `PASS`
+- 固定5問・16答案要素の可視化・接続: `16 / 16 PASS`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定4可視化: `4 / 4 PASS`
+- 共通仮定式系の変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+- SHA-256: `c5fc5495c63266366941f8b9a280737aa38382eea6b3999c8ee81902c9c67d72`
+- Git blob SHA: `34c4cf717dea445e87517ba960a486d2e18f8776`
+
 ## 過去Topic
 Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次に行うこと
-Topic 15 `500系 高速域の出力・熱解析` の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDF・練習source/PDFの共通仮定式系を変更せず、固定16答案要素とSPEC指定4可視化を欠落させない。
+Topic 15 `500系 高速域の出力・熱解析` の完成後独立再解答前ゲートを実施する。必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別答案が残っていないことを監査し、blind再解答条件を満たす場合だけ次工程へ進む。
