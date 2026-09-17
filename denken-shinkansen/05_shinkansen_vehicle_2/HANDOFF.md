@@ -1,13 +1,15 @@
 # HANDOFF - 新幹線車両・電験二種
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜13は最終QAまで `PASS / completed`。完成数は `13 / 39`。
+Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
 
-現在地は `topic_14_progress_sync_complete`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は、固定一次2問＋二次3問、計5問・9答案要素、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、blind再解答前ゲート、完成後blind再解答までPASS。最終QAで指摘された進捗記録4箇所を現在地へ同期済み。最終QA再判定前なので `completed` にはしない。
+Topic 14 `300系⑤ 走行抵抗と必要けん引力` は、固定一次2問＋二次3問、計5問・9答案要素、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、blind再解答前ゲート、完成後blind再解答、最終QAまでPASS。前回最終QAで指摘された進捗記録4箇所も `4 / 4 PASS` を再確認し、`completed` とした。
+
+次のactive topicは Topic 15 `500系 高速域の出力・熱解析`。制作前EXAM_ALIGNMENTから開始する。
 
 ## Topic 14 固定EXAM_ALIGNMENT
 source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -43,7 +45,7 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - blind再解答前ゲート: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_gate.md` — `PASS / BLIND_REANSWER_READY`
 - blind答案: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer.md`
 - blind再解答QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_qa.md` — `PASS / BLIND_REANSWER_COMPLETE`
-- 最終QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_final_qa.md` — `NEEDS_REVISION / IN_PROGRESS`
+- 最終QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_final_qa.md` — `PASS / completed`
 
 主要QA:
 - 解説本文3段階例題: `3 / 3 PASS`
@@ -53,6 +55,7 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 練習PDF表示QA: `2 / 2 PASS`
 - PowerPoint: 16:9・4枚、SPEC指定4可視化 `4 / 4 PASS`、表示QA `4 / 4 PASS`
 - 完成後blind再解答: `5 / 5問・9 / 9答案要素 PASS`
+- 最終QA進捗記録整合: `4 / 4 PASS`
 - 未確認300系実車値の真値化: `0件`
 - SPEC外追加: `0件`
 
@@ -99,16 +102,9 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL / 4件`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
-
-同期対象は次の4箇所のみ。
-1. 主source冒頭 `## 状態`
-2. 主source末尾 `## 次工程`
-3. 練習source末尾 `## 次工程`
-4. 練習PDF QA末尾 `## 現在地`
-
-技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind再解答結果は変更しない。
+- 進捗記録整合: `4 / 4 PASS`
+- 判定: `PASS / completed`
+- 完成数: `14 / 39`
 
 ## Topic 14 進捗記録同期
 - 主source冒頭 `## 状態`: `PASS`
@@ -145,4 +141,4 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次の正確な開始点
-Topic 14最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない。全件PASSの場合のみ `completed` とし、その後Topic 15へ進む。
+Topic 15 `500系 高速域の出力・熱解析` の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`SPEC.md` のTopic 15固定範囲を確認し、本文制作前に公式過去問を直近年度から調査して二種一次・二次を合わせ原則5問以上固定する。仕様外の論点は追加しない。
