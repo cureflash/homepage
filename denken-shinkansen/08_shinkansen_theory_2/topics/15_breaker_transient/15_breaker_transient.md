@@ -4,17 +4,17 @@
 
 ## 状態
 
-- stage: `PRACTICE_PDF_COMPLETE`
+- stage: `SOURCE_PROGRESS_SYNCED`
 - completion: `in_progress`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
 - 練習問題QA: `PASS / PRACTICE_SOURCE_COMPLETE`
 - 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
-- PowerPoint QA: `NOT_STARTED`
-- 完成後独立再解答: `NOT_STARTED`
-- 最終QA: `NOT_STARTED`
-- 次工程: 解説画像PowerPoint＋表示QA
+- PowerPoint QA: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 次工程: 最終QA再実施
 
 ## 1. SPEC固定範囲
 
@@ -77,7 +77,6 @@
 ### 2.3 過去問から逆算した必須説明
 
 固定5問と系列SPECを満たすため、解説本文では次を欠落させない。
-
 1. スイッチ投入・開放の直前 `t=0-`、直後 `t=0+`、十分時間が経過した `t→∞` を分けて回路状態を読む方法。
 2. 直流定常状態では理想コイルを短絡、理想コンデンサを開放として扱う理由。
 3. コイル電流 `i_L` は瞬時に変化できず、コンデンサ電圧 `v_C` は瞬時に変化できないという初期条件。
@@ -157,7 +156,6 @@
 ここで `x` はRL回路なら主にコイル電流、RC回路なら主にコンデンサ電圧である。
 
 ### 4.2 スイッチングの3つの時刻
-
 過渡問題では同じ回路図でも時刻によって見え方が違う。
 
 - `t=0-`: スイッチ切替直前。長時間同じ状態なら直流定常状態として解く。
@@ -237,7 +235,6 @@
 である。
 
 一般の一次RC回路では、スイッチ切替後の回路で独立電圧源を短絡、独立電流源を開放し、コンデンサ端子から見える等価抵抗を `R_eq` として
-
 `tau=R_eq C`
 
 を使う。最終値はコンデンサを開放した直流定常回路から別に求める。
@@ -317,7 +314,6 @@ RLC回路ではエネルギー蓄積要素がLとCの2個あるため、RL・RC�
 ### 4.9 ラプラス変換を使う場合
 
 ラプラス変換は微分方程式を代数方程式へ変える手段であり、初期条件を消してよいわけではない。例えば
-
 `L{di/dt}=sI(s)-i(0+)`
 
 で初期値が現れる。
@@ -397,7 +393,6 @@ RLC回路ではエネルギー蓄積要素がLとCの2個あるため、RL・RC�
 `t→∞` ではコンデンサを開放する。抵抗分圧より
 
 `v_C(∞)=120×60/(30+60)=80 V`
-
 #### 2. 時定数
 
 独立電圧源を短絡し、コンデンサ端子から抵抗網を見る。
@@ -534,6 +529,6 @@ RLC回路ではエネルギー蓄積要素がLとCの2個あるため、RL・RC�
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
-進捗同期: 解説PDF `PASS / EXPLANATION_PDF_COMPLETE`、練習source `PASS / PRACTICE_SOURCE_COMPLETE`、練習PDF `PASS / PRACTICE_PDF_COMPLETE`。技術本文・固定EXAM_ALIGNMENTは変更していない。
+進捗同期: 解説PDF `PASS / EXPLANATION_PDF_COMPLETE`、練習source `PASS / PRACTICE_SOURCE_COMPLETE`、練習PDF `PASS / PRACTICE_PDF_COMPLETE`、PowerPoint `PASS / POWERPOINT_COMPLETE`、完成後独立再解答 `PASS / INDEPENDENT_REANSWER_COMPLETE`、初回最終QA `NEEDS_REVISION / IN_PROGRESS`。技術本文・固定EXAM_ALIGNMENTは変更していない。
 
-次工程: 解説画像PowerPoint＋表示QA。
+次工程: 最終QA再実施。
