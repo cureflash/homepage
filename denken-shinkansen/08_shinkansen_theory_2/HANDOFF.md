@@ -6,11 +6,11 @@
 
 Topic 01〜13は `PASS / completed`。完成数は `13 / 21`。
 
-current_status: `topic_14_reanswer_complete`
+current_status: `topic_14_final_qa_needs_revision`
 
 active_topic: `14 インバータのギザギザ波形を分解する`
 
-Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定一次2問・3答案要素＋二次1問・2答案要素は完成教材だけで `5 / 5 PASS`、公式標準解答と全件一致。教材外補完0件、二次数合わせ0件を維持している。次工程は最終QA。
+Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定一次2問・3答案要素＋二次1問・2答案要素は完成教材だけで `5 / 5 PASS`、公式標準解答と全件一致。最終QAでは技術内容・成果物・試験対応・SPEC境界はPASSしたが、主source冒頭・主source末尾・練習source冒頭の進捗記録3箇所が実成果物へ未同期のため `NEEDS_REVISION / IN_PROGRESS`。完成数は `13 / 21` のまま。
 
 ## Topic 14 成果物
 
@@ -23,8 +23,9 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - PowerPoint: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_images.pptx`
 - PowerPoint QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_powerpoint_qa.md`
 - 完成後独立再解答: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_reanswer.md`
+- 最終QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_final_qa.md`
 - completion: `in_progress`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `FINAL_QA_NEEDS_REVISION`
 
 ## Topic 14 固定範囲
 
@@ -124,6 +125,24 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
+## Topic 14 最終QA
+
+記録: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_final_qa.md`
+
+- 必須成果物: `PASS`
+- 固定3問・5答案要素の完成後独立再解答: `5 / 5 PASS`
+- PDF/PPTX表示QA・練習QA: `PASS`
+- 二次採用判断・SPEC境界: `PASS`
+- 進捗記録整合: `FAIL`
+
+exact blocker:
+
+1. 主source冒頭が `EXPLANATION_SOURCE_COMPLETE` / 解説PDF以降未着手 / 次工程「解説PDF＋表示QA」のまま。
+2. 主source末尾 `## 9. 制作進捗` が解説PDF以降を未完了とし、現在地・次工程も旧状態のまま。
+3. 練習source冒頭が `PRACTICE_PDF_COMPLETE` / 次工程「解説画像PowerPoint＋表示QA」のまま。
+
+判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 次に行うこと
 
-Topic 14「インバータのギザギザ波形を分解する」の最終QA。固定3問・5答案要素の完成後独立再解答 `5 / 5 PASS`、必須成果物、PDF/PPTX QA、進捗記録整合、SPEC固定範囲境界を確認する。
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、主source冒頭・主source末尾・練習source冒頭の進捗記録3箇所だけを実成果物へ同期する。その後にTopic 14最終QAを再実施する。
