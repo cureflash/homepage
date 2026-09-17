@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験二種「理論」
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 15 / 21
-- current_status: `topic_16_powerpoint_complete`
+- current_status: `topic_16_reanswer_complete`
 - last_completed_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 - active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
-- next_start: Topic 16 完成後独立再解答
+- next_start: Topic 16 最終QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -265,7 +265,7 @@
 - [x] 品質ゲート対象を一次5問・25答案要素に固定
 - [x] 公式問題・公式標準解答照合 `25 / 25`
 - [x] 制作前独立導出 `25 / 25 PASS`
-- [x] R8二次は2026-09-17時点で未実施、R7〜R5二次を確認
+- [x] R8二次は2026-09-18時点で未実施（2026-11-15実施予定）、R7〜R5二次を確認
 - [x] R7二次のダイオードブリッジ、R6二次のチョッパはパワーエレクトロニクス回路のため非採用
 - [x] 二次採用0問・二次数合わせ0件
 - [x] Topic 17のトランジスタ/FET/MOSFET/IGBT/GTO/SiC先取り0件
@@ -277,30 +277,30 @@
 - [x] 解説PDF＋表示QA
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint＋表示QA
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答: `25 / 25 PASS`
 - [ ] 最終QA
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 16の解説画像PowerPoint＋表示QAを完成させた。
+Topic 16の完成後独立再解答を実施した。
 
-- PowerPoint: `topics/16_semiconductor_diode/16_semiconductor_diode_images.pptx`
-- PowerPoint QA: `topics/16_semiconductor_diode/16_semiconductor_diode_powerpoint_qa.md`
-- 16:9 / 5枚
-- 200 dpi全スライド表示QA: `5 / 5 PASS`
-- shape geometry overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- PDF変換: `5ページ / PASS`
-- PDF文字抽出QA: `PASS`
-- 固定一次5問・25答案要素への可視化: `25 / 25`
+- 記録: `topics/16_semiconductor_diode/16_semiconductor_diode_reanswer.md`
+- R8 一次 理論 問7: `5 / 5 PASS`
+- H30 一次 理論 問4: `5 / 5 PASS`
+- H26 一次 理論 問7: `5 / 5 PASS`
+- H24 一次 理論 問4: `5 / 5 PASS`
+- H22 一次 理論 問7: `5 / 5 PASS`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
+- 公式標準解答との一致: `25 / 25`
+- 教材外知識補完: `0件`
 - 二次採用: `0問`、二次数合わせ: `0件`
 - SPEC固定範囲外追加: `0件`
 - 降伏機構の詳細追加: `0件`
-- 整流・チョッパ・インバータ回路追加: `0件`
+- パワーエレクトロニクス回路追加: `0件`
 - Topic 17先取り: `0件`
 - 未確認の300系主変換装置仕様追加: `0件`
 
 ## 判定
 
-Topic 16は `PASS / POWERPOINT_COMPLETE`。完成数は `15 / 21` のまま。次工程は完成後独立再解答。
+Topic 16は `PASS / INDEPENDENT_REANSWER_COMPLETE`。完成数は `15 / 21` のまま。次工程は最終QA。
