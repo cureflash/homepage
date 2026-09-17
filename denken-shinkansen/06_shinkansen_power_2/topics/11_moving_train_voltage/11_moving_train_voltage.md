@@ -4,9 +4,9 @@
 
 ## 状態
 
-`topic_11_independent_reanswer_complete`
+`completed`
 
-制作前EXAM_ALIGNMENT、制作前独立再解答、解説本文source、解説PDF、練習問題・完全解説source、練習PDF、計算プログラム・CSV・4グラフ、解説画像PowerPoint、各QA、完成後blind独立再解答まで完了した。完成後blind独立再解答は一次 `5 / 5`＋二次 `12 / 12`＝`4 / 4問・17 / 17答案要素 PASS`。初回最終QAは技術内容・試験対応・必須成果物・各QA・SPEC境界をPASSし、旧進捗記録だけを `NEEDS_REVISION` とした。本sourceは進捗記録のみ実成果物へ同期し、技術本文・固定EXAM_ALIGNMENT・正式4問17答案要素は変更していない。
+制作前EXAM_ALIGNMENT、制作前独立再解答、解説本文source、解説PDF、練習問題・完全解説source、練習PDF、計算プログラム・CSV・4グラフ、解説画像PowerPoint、各QA、完成後blind独立再解答、最終QA再判定まで完了した。完成後blind独立再解答は一次 `5 / 5`＋二次 `12 / 12`＝`4 / 4問・17 / 17答案要素 PASS`。初回最終QAで唯一FAILだった旧進捗記録を実成果物へ同期後、技術内容・試験対応品質ゲート・必須成果物・PDF/PPTX QA・練習QA・計算プログラムQA・blind独立再解答・SPEC境界・進捗記録整合を再確認し、全件PASSとして `completed` とした。技術本文、固定EXAM_ALIGNMENT、正式4問・17答案要素、問題・正答、PDF/PPTX、計算プログラムは変更していない。
 
 正式品質ゲートは、第二種一次「電力」1問＋第二種二次「電力・管理」3問の計4問、`17答案要素` に固定する。原則5問に対し、Topic 11固定範囲だけで完答できる5問目は確認できなかったため、件数合わせのための仕様追加は行わない。
 
@@ -251,4 +251,4 @@ Topic 11での対応:
 
 ## 次工程
 
-Topic 11の最終QAを再判定する。技術本文、固定EXAM_ALIGNMENT、正式4問・17答案要素、練習問題・正答、PDF/PPTX、計算プログラム、blind独立再解答結果は変更しない。進捗記録整合を含め全件PASSの場合のみ `completed` とする。
+Topic 12「N700Sが何本も同時加速したら？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` の固定範囲を守り、まず一次・二次の公式過去問要求を確定する。
