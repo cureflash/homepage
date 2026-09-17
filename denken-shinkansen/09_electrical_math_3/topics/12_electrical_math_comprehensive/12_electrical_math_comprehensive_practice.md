@@ -519,4 +519,4 @@ Topic 12はまだ `completed` としない。
 
 ## 次工程
 
-この練習sourceを正本として、Topic 12の練習PDF（解答・完全解説付き）を作成する。
+Topic 12の最終QAを再判定する。
