@@ -4,11 +4,11 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、最新main、Topic 12成果物、各QA、完成後blind独立再解答を再確認した。
+前回 `NEEDS_REVISION / IN_PROGRESS` の唯一の未完了理由だった進捗記録不整合を解消後、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`、最新main、Topic 12成果物、各QA、完成後blind独立再解答を再確認した。
 
-技術内容、固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、練習問題QA、計算プログラムQA、完成後独立再解答、SPEC固定範囲はPASS。未完了理由は進捗記録の旧状態だけである。
+技術内容、固定EXAM_ALIGNMENT、必須成果物、PDF/PPTX QA、練習問題QA、計算プログラムQA、完成後独立再解答、SPEC固定範囲、進捗記録整合を全件PASSとした。
 
 ## 品質ゲート
 
@@ -25,7 +25,7 @@
 | 計算プログラム | PASS | 列車本数 `n=0...4` の5点で定電力負荷潮流を計算、CSV `5 / 5`、高電圧側解 `5 / 5`、SVG `2 / 2`、複素KVL再代入PASS |
 | PowerPoint | PASS | 16:9・4枚、表示 `4 / 4 PASS`、overflow 0、ZIP整合性PASS、SPEC固定8項目 `8 / 8`、指定2量 `2 / 2` |
 | SPEC境界 | PASS | Topic 13以降先取り0件、未確認N700S実設備値0件、仕様追加0件、公式過去問転載0件 |
-| 進捗記録整合 | FAIL | 下記4箇所が実成果物より古い状態のまま |
+| 進捗記録整合 | PASS | 前回blockerだった主source・練習source・PowerPoint QAの旧進捗記録を実成果物状態へ同期済み |
 
 ## 正式過去問対応品質ゲート
 
@@ -43,25 +43,20 @@
 
 一次1問に加えて二次4問を含み、二種の一次・二次双方を確認している。制作前 `23 / 25` で不足したH29二次問4の2要素は、完成教材の `S=P+jQ`、進み `Q<0`、`I=(P-jQ)/(√3V)` と複数枝KCL/KVLだけで正答でき、完成後 `2 / 2` 改善確認済みである。
 
-## exact blocker
+## 必須成果物の実在確認
 
-技術修正は不要。次の進捗文だけが実成果物状態と不整合である。
+- `12_multiple_train_load.md`
+- `12_multiple_train_load_explanation.pdf` — QA `PASS`
+- `12_multiple_train_load_practice.md` — 15問、QA `PASS`
+- `12_multiple_train_load_practice.pdf` — QA `PASS`
+- `12_multiple_train_load_sim.py` / `12_multiple_train_load_sweep.csv` / 2 SVG — QA `PASS`
+- `12_multiple_train_load_images.pptx` — QA `PASS`
+- `12_multiple_train_load_blind_reanswer_20260918.md` — `5 / 5問・25 / 25答案要素 PASS`
 
-1. `12_multiple_train_load.md` 冒頭 `## 状態`
-   - 現在: `exam_alignment_complete`
-   - 実状態: 完成後blind独立再解答まで完了。
-2. `12_multiple_train_load.md` 冒頭要約・末尾 `## 次工程`
-   - 現在: 制作前EXAM_ALIGNMENTのみ完了／次工程が制作前独立再解答。
-   - 実状態: 解説PDF、練習PDF、計算プログラム、PowerPoint、各QA、完成後blind独立再解答まで完了。次工程は最終QA再判定。
-3. `12_multiple_train_load_practice.md` 冒頭 `状態`
-   - 現在: `topic_12_practice_source_complete`
-   - 実状態: 完成後blind独立再解答まで完了。
-4. `12_multiple_train_load_powerpoint_qa.md` 末尾
-   - 現在: 完成後blind独立再解答を次段階としている。
-   - 実状態: 完成後blind独立再解答 `5 / 5問・25 / 25答案要素 PASS`。
+## 完了判定
 
-これらを実成果物状態へ同期するまでTopic 12を `completed` にしない。
+Topic 12 は `completed`。
 
-## 次工程
+完成数: `12 / 22`
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・計算プログラムは変更せず、上記4箇所の進捗記録だけを同期する。同期後に最終QAを再実施し、全項目PASSの場合のみ `completed`、完成数 `12 / 22` とする。
+次はTopic 13「単相の新幹線負荷は三相系統を乱さない？」の制作前EXAM_ALIGNMENTを行う。
