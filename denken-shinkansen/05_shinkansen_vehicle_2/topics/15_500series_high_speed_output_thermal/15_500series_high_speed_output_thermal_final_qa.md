@@ -4,9 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-技術内容、固定EXAM_ALIGNMENT、完成後blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界はすべてPASSした。一方、現在工程を示す進捗記録4箇所が旧工程のまま残っているため、上位仕様の「GitHub正本と実在成果物による完了判定」に照らしてTopic 15をまだ `completed` とはしない。
+技術内容、固定EXAM_ALIGNMENT、完成後blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界、進捗記録整合を再確認し、全件PASSとした。
 
 ## 1. 上位仕様確認
 
@@ -115,18 +115,16 @@ SPEC境界: `PASS`
 
 ## 7. 進捗記録整合
 
-現在工程を示す4箇所をGitHub正本で確認した。
+初回最終QAで唯一FAILだった4箇所を再確認した。
 
-1. 主source冒頭 `## 状態`: `PASS / EXPLANATION_SOURCE_COMPLETE`、次工程が解説PDFのまま — `FAIL`
-2. 主source末尾 `## 次工程`: 解説PDF作成のまま — `FAIL`
-3. 練習source末尾 `## 次工程`: 練習PDF作成のまま — `FAIL`
-4. 練習PDF QA末尾 `## 現在地`: 次工程が解説画像PowerPoint作成のまま — `FAIL`
+1. 主source冒頭 `## 状態`: 完成後blind再解答まで完了し、次工程を最終QA再判定へ同期済み。
+2. 主source末尾 `## 次工程`: Topic 15最終QA再判定へ同期済み。
+3. 練習source末尾 `## 次工程`: Topic 15最終QA再判定へ同期済み。
+4. 練習PDF QA末尾 `## 現在地`: `topic_15_final_qa_needs_progress_sync`、次工程をTopic 15最終QA再判定へ同期済み。
 
-進捗記録整合: `0 / 4 PASS`、要同期 `4件`。
+旧工程表現は `4 / 4` 解消済み。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の修正は不要だった。
 
-解説PDF QA、PowerPoint QA、blind再解答QAの末尾に残る「次工程」は各成果物作成時点の履歴として扱い、現在工程を示す正本4箇所には含めない。
-
-技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind再解答結果の変更: `0件`
+進捗記録整合: `PASS`
 
 ## 8. 最終判定
 
@@ -137,8 +135,9 @@ SPEC境界: `PASS`
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL / 4件要同期`
+- 進捗記録整合: `PASS`
+- SPEC外追加: `0件`
 
-したがってTopic 15は `NEEDS_REVISION / IN_PROGRESS` とする。完成数は `14 / 39` のまま。
+したがって最終判定は `PASS / completed`。完成数は `15 / 39`。
 
-次工程は進捗記録4箇所だけを現工程へ同期し、技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果を変更せず、Topic 15最終QAを再判定する。
+次工程はTopic 16「700系 多レベル変換器とPWM」の制作前EXAM_ALIGNMENT。
