@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `12 / 39`
-- current_status: `topic_13_practice_pdf_complete`
+- current_status: `topic_13_powerpoint_complete`
 - last_completed_topic: `12 300系③ VVVFインバータと誘導機制御`
 - active_topic: `13 300系④ 回生と四象限運転`
-- next_start: Topic 13 解説画像PowerPoint
+- next_start: Topic 13 完成後独立再解答
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -23,7 +23,7 @@
 - [x] 10 300系① 誘導電動機等価回路 — PASS
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
-- [ ] 13 300系④ 回生と四象限運転 — PRACTICE_PDF_COMPLETE / IN_PROGRESS
+- [ ] 13 300系④ 回生と四象限運転 — POWERPOINT_COMPLETE / IN_PROGRESS
 
 ## Topic 13 固定EXAM_ALIGNMENT
 - source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
@@ -85,6 +85,20 @@
 - PDF Git blob SHA-1: `ce7d43ed9a81f752bd0220d211c145f2b65a5908`
 - source Git blob SHA-1: `c52cdd0959c30b62488985ee416af6ee4fc35b58`
 
+## Topic 13 解説画像PowerPoint
+- path: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_images.pptx`
+- QA: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_images_qa.md`
+- 16:9・4スライド
+- SPEC指定3可視化: `3 / 3 PASS`
+- H24二次型計算再検算: `PASS`
+- 固定5過去問・15答案要素接続: `15 / 15 PASS`
+- 約180 dpi表示QA: `4 / 4 PASS`
+- `slides_test.py` overflow検査: `PASS / 0件`
+- PowerPoint ZIP/XML整合性: `PASS`
+- PDF経由文字抽出: `4 / 4ページ PASS`
+- SHA-256: `c5f69a2f555916d4ba81966cbd30adddc068b0d663023f3385f9287fa40ff893`
+- Git blob SHA-1: `05ec4efe282fac7392524c2f85e83488257ef43d`
+
 ## Topic 13 固定範囲
 - 四象限運転
 - トルク方向
@@ -115,4 +129,4 @@ Topic 12 `300系③ VVVFインバータと誘導機制御` は固定一次4問�
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。最終判定 `PASS / completed`。
 
 ## 次工程
-Topic 13「300系④ 回生と四象限運転」の解説画像PowerPointを作成する。固定EXAM_ALIGNMENTは変更しない。
+Topic 13「300系④ 回生と四象限運転」の固定5問・15答案要素を、保存済み正答を先に見ず教材内容だけで完成後独立再解答する。固定EXAM_ALIGNMENTは変更しない。

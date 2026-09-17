@@ -7,7 +7,7 @@
 
 Topic 01〜12は最終QAまで `PASS / completed`。完成数は `12 / 39`。
 
-現在地は `topic_13_practice_pdf_complete`。Topic 13 `300系④ 回生と四象限運転` は、固定EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題・完全解説source、練習PDF＋QAまで完成。固定一次4問＋二次1問・15答案要素への接続は `15 / 15 PASS`。次は解説画像PowerPoint。
+現在地は `topic_13_powerpoint_complete`。Topic 13 `300系④ 回生と四象限運転` は、固定EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習問題・完全解説source、練習PDF＋QA、解説画像PowerPoint＋QAまで完成。固定一次4問＋二次1問・15答案要素への接続は `15 / 15 PASS`。次は完成後独立再解答。
 
 ## Topic 13 固定EXAM_ALIGNMENT
 source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
@@ -38,6 +38,25 @@ source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerativ
 - 練習source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_practice_source.md`
 - 練習PDF: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_practice.pdf`
 - 練習PDF QA: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_practice_qa.md`
+- 解説画像PowerPoint: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_images.pptx`
+- PowerPoint QA: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_images_qa.md`
+
+## Topic 13 解説画像PowerPoint完成確認
+- 16:9・4スライド
+- SPEC指定3可視化 `3 / 3 PASS`
+  - 速度・トルク平面
+  - 力行・回生時の電力フロー
+  - 回生可能エネルギー
+- H24二次型計算再検算: `PASS`
+- 固定5過去問・15答案要素接続: `15 / 15 PASS`
+- 約180 dpi表示QA: `4 / 4 PASS`
+- overlap / clipping / broken glyph / overflow: `0件`
+- `slides_test.py`: `PASS / 0件`
+- PowerPoint ZIP/XML整合性: `PASS`
+- PDF経由文字抽出: `4 / 4ページ PASS`
+- Unicode置換文字: `0件`
+- PowerPoint SHA-256: `c5f69a2f555916d4ba81966cbd30adddc068b0d663023f3385f9287fa40ff893`
+- Git blob SHA-1: `05ec4efe282fac7392524c2f85e83488257ef43d`
 
 ## Topic 13 練習PDF完成確認
 - A4縦2ページ
@@ -65,4 +84,4 @@ source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerativ
 Topic 12 `300系③ VVVFインバータと誘導機制御` は最終QA `PASS / completed`。Topic 11 `300系② PWMコンバータ` も `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 13 `300系④ 回生と四象限運転` の解説画像PowerPointを作成する。SPEC指定3可視化（速度・トルク平面、力行・回生時の電力フロー、回生可能エネルギー）を可視化し、固定5過去問・15答案要素との接続を維持する。固定EXAM_ALIGNMENTは変更しない。
+Topic 13 `300系④ 回生と四象限運転` の固定5問・15答案要素を、保存済み正答を先に見ず教材内容だけで完成後独立再解答する。固定EXAM_ALIGNMENTは変更しない。
