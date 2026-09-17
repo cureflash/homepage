@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 13 / 14
-- current_status: `topic_14_independent_reanswer_needs_revision`
+- current_status: `topic_14_independent_reanswer_complete`
 - last_completed_topic: `13 インバータはどうやって三相交流を作る？`
 - active_topic: `14 East iは何をどう測っている？`
-- next_start: Topic 14の固定8問・13答案要素を、保存済み正答番号・個別最終数値を先に見ず再度独立再解答する。初回は `7 / 8問・12 / 13答案要素` で、令和6年度下期 理論 問16(b)の測定点同定を誤った
+- next_start: Topic 14の最終QAを実施する。必須成果物、PDF/PPTX QA、固定8問カバレッジ、SPEC境界、進捗記録整合性を再確認し、全件PASSの場合のみ `completed` とする
 
 ## Topic 01 進捗
 
@@ -256,5 +256,5 @@
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
 - [x] 完成後の公式過去問独立再解答 初回実施 `7 / 8問・12 / 13答案要素`（`NEEDS_REVISION`: 令和6年度下期 理論 問16(b)の測定点同定を誤読）
-- [ ] 完成後の公式過去問独立再解答 `8 / 8問・13 / 13答案要素 PASS`
+- [x] 完成後の公式過去問独立再解答 再実施 `8 / 8問・13 / 13答案要素 PASS`
 - [ ] 最終QA PASS
