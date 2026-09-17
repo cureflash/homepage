@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 10 / 12
-- current_status: `topic_11_final_qa_needs_revision`
+- current_status: `topic_11_source_progress_sync_complete`
 - last_completed_topic: `10 指数関数・一階微分方程式入門`
 - active_topic: `11 グラフ・特性曲線を読む`
-- next_start: `Topic 11の主source・練習sourceの旧進捗記録3箇所を現在地へ同期`
+- next_start: `Topic 11最終QAを再判定`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -54,7 +54,6 @@
 ## Topic 08 進捗
 - [x] 系列SPEC確認
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
-- [x] 直近年度を優先して公式過去問を調査
 - [x] Topic 08の固定範囲だけで積分操作が解法に直接必要な公式過去問5問を選定
 - [x] 件数合わせの仕様外論点・積分が必須でない候補を除外
 - [x] 参考教材を複数系統確認
@@ -130,25 +129,22 @@
 - [x] 完成後独立再解答前のブラインドゲート整備
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 主source・練習sourceの旧進捗記録3箇所を現在地へ同期
+- [x] 主source・練習sourceの旧進捗記録3箇所を現在地へ同期
 - [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-Topic 11「グラフ・特性曲線を読む」の最終QAを実施し、GitHub正本へ記録した。
+Topic 11「グラフ・特性曲線を読む」の初回最終QAでFAILだった進捗記録3箇所だけを現在地へ同期した。
 
-- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_final_qa.md`
-- 必須成果物の実在: PASS
-- 固定EXAM_ALIGNMENT 5問: PASS
-- 完成後独立再解答: `5 / 5 PASS`
-- 練習QA: `12 / 12 PASS`
-- 仕様境界: PASS
+- 主source `## 状態`: 完成教材・独立再解答完了、最終QA再判定待ちへ同期
+- 主source `## 次工程`: `Topic 11の最終QAを再判定` へ同期
+- 練習source `## 次工程`: `Topic 11の最終QAを再判定` へ同期
+- 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果は変更なし
 - 固定EXAM_ALIGNMENT変更0件
 - 仕様外追加0件
-- source進捗整合のみFAIL: 主source2箇所・練習source1箇所の計3箇所
 
 ## 判定
 
-`topic_11_final_qa_needs_revision / IN_PROGRESS`。
+`topic_11_source_progress_sync_complete / IN_PROGRESS`。
 
-完成数は `10 / 12`。次工程は、技術内容を変更せず旧進捗記録3箇所だけを現在地へ同期する。
+完成数は `10 / 12`。次工程はTopic 11最終QAの再判定。
