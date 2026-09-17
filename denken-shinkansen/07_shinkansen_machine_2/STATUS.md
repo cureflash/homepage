@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_16_blind_reanswer_gate_complete`
+- current_status: `topic_16_independent_reanswer_needs_redo`
 - last_completed_topic: `15 新幹線の補機モーターを設計する`
 - active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: Topic 16 完成後独立再解答
+- next_start: H18一次「機械」問3 (1) の独立再解答やり直し
 
 ## 完了テーマ
 - [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `IN_PROGRESS` — 独立再解答前ゲート完了
+- [ ] Topic 16 `IN_PROGRESS` — 完成後独立再解答を実施、厳密ブラインド `11 / 12 PASS`、H18一次1答案要素のみ再実施必要
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -134,8 +134,19 @@
 - [x] 未確認N700S実車値、仕様外論点、Topic 17以降先取り `0件`
 - [x] 判定 `BLIND_REANSWER_READY`
 
+## Topic 16 完成後独立再解答
+- [x] R02一次 問4 (1),(4),(5): 完成教材だけで答案確定後、公式解答照合 `3 / 3 PASS`
+- [x] H30一次 問6 (3),(4): 完成教材だけで答案確定後、公式解答照合 `2 / 2 PASS`
+- [x] H26一次 問3 (1): 完成教材だけで答案確定後、公式解答照合 `1 / 1 PASS`
+- [x] H23二次 問3 (3),(4): 完成教材だけで答案確定後、公式標準解答照合 `5 / 5 PASS`
+- [ ] H18一次 問3 (1): 問題取得に使った第三者解説ページで正答が同時露出したため厳密ブラインド不成立。PASS扱いにしない
+- [x] 厳密ブラインド照合済み答案要素 `11 / 12 PASS`
+- [x] 固定EXAM_ALIGNMENT変更、仕様外追加、Topic 17以降先取り、未確認N700S実車値追加 `0件`
+- 記録: `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md`
+- 判定: `NEEDS_REDO / topic_16_independent_reanswer_partial`
+
 ## 今回進めた内容
-Topic 16の完成済み成果物を再監査し、独立再解答前ゲートを完了した。固定一次4問＋二次1問・12答案要素は変更せず、公式正答・標準解答・完成済み個別解答を参照しない状態を確認した。main上で先行完成済みだったPowerPoint/QAは既存正本blobへreconcileした。
+Topic 16の完成後独立再解答を実施した。R02一次3要素、H30一次2要素、H26一次1要素、H23二次5要素は、完成教材のみで答案を確定してから公式解答・標準解答と照合し `11 / 11 PASS`。H18一次 問3 (1) は問題取得時に第三者解説ページ上の正答も同時露出したため、品質ゲートを緩めず再実施対象とした。
 
 ## 判定
-Topic 16は `topic_16_blind_reanswer_gate_complete / IN_PROGRESS`。完成数は `15 / 22` のまま。次はTopic 16 完成後独立再解答。
+Topic 16は `topic_16_independent_reanswer_needs_redo / IN_PROGRESS`。完成数は `15 / 22` のまま。次はH18一次「機械」問3 (1) の独立再解答やり直し。
