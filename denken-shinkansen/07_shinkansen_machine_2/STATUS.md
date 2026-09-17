@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_16_exam_alignment_complete`
+- current_status: `topic_16_explanation_source_complete`
 - last_completed_topic: `15 新幹線の補機モーターを設計する`
 - active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: Topic 16 解説source作成
+- next_start: Topic 16 解説PDF作成
 
 ## 完了テーマ
 - [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT完成
+- [ ] Topic 16 `IN_PROGRESS` — 解説source完成
 
 ## Topic 15 固定範囲
 系列 `SPEC.md` の次だけを扱う。
@@ -150,8 +150,23 @@
 - [x] 正答記号・完成済み数値解保存 `0件`
 - [x] 判定 `PASS / topic_16_exam_alignment_complete`
 
+## Topic 16 解説source
+- [x] 起電力・内部抵抗・放電/充電端子電圧 `V=E∓Ir` を説明
+- [x] Ah・Wh・平均電圧・C-rate・`I²r` を式、単位、逆算まで説明
+- [x] H23二次型の定電流区間について、充放電電流・端子電圧波形・充放電時間を説明
+- [x] 内部抵抗損と充電効率の比較を `I²r` から説明
+- [x] DC/DC・DCリンク・変換効率を固定範囲内で説明
+- [x] N700S自走用SCiBと駆動システムへの給電関係を東芝公式資料で確認
+- [x] 基礎／本試験標準／複合の3段階例題を作成・再計算PASS
+- [x] 固定12答案要素を本文へ `12 / 12` 接続
+- [x] 未確認N700S実車値の真値化 `0件`
+- [x] 電池材料反応・BMS・チョッパ回路詳細の仕様追加 `0件`
+- [x] Topic 17以降先取り `0件`
+- [x] 固定問題の個別正答記号・完成済み数値解保存 `0件`
+- [x] 判定 `PASS / topic_16_explanation_source_complete`
+
 ## 今回進めた内容
-Topic 16制作前EXAM_ALIGNMENTを完成した。R08一次「機械」まで直近年度から確認し、固定範囲へ直接対応する一次4問＋二次記述1問、計5問・12答案要素を固定した。仕様外の鉛蓄電池化学やチョッパ詳細を件数合わせで追加せず、未確認N700S実車値も追加していない。
+Topic 16解説sourceを完成した。固定一次4問＋二次1問・12答案要素を変更せず、本文へ `12 / 12` 接続した。3段階例題を追加し、N700S側は公式メーカー資料で確認できる自走用リチウムイオンバッテリーと駆動システムへの給電関係だけを実車事実として扱った。未確認の実車電池定格、材料反応、BMS、チョッパ回路詳細、Topic 17以降は追加していない。
 
 ## 判定
-Topic 16は `topic_16_exam_alignment_complete / IN_PROGRESS`。完成数は `15 / 22`。次は Topic 16 解説source作成。
+Topic 16は `topic_16_explanation_source_complete / IN_PROGRESS`。完成数は `15 / 22`。次は Topic 16 解説PDF作成。
