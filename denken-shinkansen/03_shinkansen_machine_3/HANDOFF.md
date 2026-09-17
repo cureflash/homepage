@@ -3,9 +3,9 @@
 更新日: 2026-09-17
 
 ## 正本・現在地
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は品質ゲートPASSでcompleted。active topicは13「新幹線は主電動機以外もモーターだらけ？」。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は品質ゲートPASSでcompleted。active topicは14「停電してもN700Sが走れるのはなぜ？」。
 
-現在 `topic_13_progress_sync_complete / IN_PROGRESS`。Topic 13の前回最終QAでは、技術内容、必須成果物、PDF/PPTX表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、固定範囲境界はすべてPASSし、主source・練習source・練習PDF QAの3箇所に残っていた旧工程だけが進捗記録整合FAILだった。今回、その旧進捗3箇所を実成果物へ同期した。Topic 13は最終QA再判定前のためcompletedにしていない。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定を実施し、技術内容、必須成果物、PDF/PPTX表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界がすべてPASSしたため `completed` とした。固定EXAM_ALIGNMENT、問題・正答、技術本文、PDF/PPTXは変更していない。
 
 ## Topic 13 固定範囲
 電動機出力 / 回転速度 / トルク / 負荷特性 / ポンプ / ファン / コンプレッサ / 所要動力 / 効率 / インバータ駆動 / 可変速運転。
@@ -17,7 +17,7 @@
 - ポンプ効率・電動機効率・余裕係数を含む所要動力
 - ファン・ポンプ系の代表的負荷特性 `Q ∝ N`、`T ∝ N²`、`P ∝ N³`
 
-## 固定EXAM_ALIGNMENT
+## Topic 13 固定EXAM_ALIGNMENT
 - R5上 機械 問7 — 電動機・負荷のトルク－速度曲線、安定動作点、送風機負荷
 - R4下 機械 問11 — ポンプ所要動力、流量換算、損失水頭、ポンプ効率、電動機効率
 - H30 機械 問10 — ポンプ所要動力、効率、余裕係数、必要台数
@@ -26,7 +26,7 @@
 
 品質ゲート対象 `5問`。制作前独立検証・公式解答照合 `5 / 5 PASS`。完成後blind独立再解答・公式解答照合 `5 / 5 PASS`。固定EXAM_ALIGNMENT変更、教材外・固定範囲外補完、件数合わせ、未確認補機仕様追加はいずれも0件。
 
-## 成果物・QA
+## Topic 13 成果物・QA
 - source: `topics/13_auxiliary_motors/13_auxiliary_motors.md`
 - explanation PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation.pdf`
 - explanation PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation_pdf_qa.md`
@@ -47,21 +47,25 @@
 
 H29 問12 fresh blindでは、教材の `T∝N²`、`Q∝N`、`P∝N³` を公式問題の選択肢へ照合すると(イ)(ウ)(エ)が一致するのは `(4)` のみであるため、教材にないエレベータ負荷知識を追加せず一意に選択できた。答案固定後に公式解答 `(4)` を確認した。
 
-## 最終QA
+## Topic 13 最終QA
 - 前回判定: `NEEDS_REVISION`
+- 前回技術内容: `PASS`
+- 前回必須成果物: `PASS`
+- 前回PDF/PPTX表示QA: `PASS`
+- 前回固定EXAM_ALIGNMENT・完成後blind独立再解答: `PASS`
+- 前回固定範囲境界: `PASS`
+- 前回進捗記録整合: `FAIL`（旧進捗3箇所）
+- 旧進捗3箇所同期: `3 / 3 PASS`
+- 最終QA再判定: `PASS`
 - 技術内容: `PASS`
 - 必須成果物: `PASS`
 - PDF/PPTX表示QA: `PASS`
 - 固定EXAM_ALIGNMENT・完成後blind独立再解答: `PASS`
+- 進捗記録整合: `PASS`
 - 固定範囲境界: `PASS`
-- 前回進捗記録整合: `FAIL`（旧進捗3箇所）
-- 旧進捗1 `13_auxiliary_motors.md`: 同期済み
-- 旧進捗2 `13_auxiliary_motors_practice.md`: 同期済み
-- 旧進捗3 `13_auxiliary_motors_practice_pdf_qa.md`: 同期済み
-- 進捗記録同期: `3 / 3 PASS`
-- 現在状態: `topic_13_progress_sync_complete / IN_PROGRESS`
+- 状態: `completed`
 
-## 範囲境界
+## Topic 13 範囲境界
 - エレベータ・巻上機を独立論点として追加しない。
 - キャビテーション、NPSH、配管網解析へ拡張しない。
 - コンプレッサの圧縮仕事・熱力学サイクルへ拡張しない。
@@ -70,4 +74,4 @@ H29 問12 fresh blindでは、教材の `T∝N²`、`Q∝N`、`P∝N³` を公�
 - 車種固有の補機形式、定格、電圧、周波数、インバータ方式を一次資料確認前に実値化しない。
 
 ## 次工程
-Topic 13の最終QAを再判定する。固定EXAM_ALIGNMENT、問題・正答、技術本文、PDF/PPTXは変更せず、前回唯一FAILだった進捗記録整合を含めて全ゲートを再確認し、全件PASSの場合のみ `completed` とする。
+Topic 14「停電してもN700Sが走れるのはなぜ？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲を守り、まず公式過去問から対象論点を固定する。
