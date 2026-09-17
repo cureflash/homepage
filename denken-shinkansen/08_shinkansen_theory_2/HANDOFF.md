@@ -6,11 +6,11 @@
 
 Topic 01〜13は `PASS / completed`。完成数は `13 / 21`。
 
-current_status: `topic_14_final_qa_needs_revision`
+current_status: `topic_14_source_progress_synced`
 
 active_topic: `14 インバータのギザギザ波形を分解する`
 
-Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定一次2問・3答案要素＋二次1問・2答案要素は完成教材だけで `5 / 5 PASS`、公式標準解答と全件一致。最終QAでは技術内容・成果物・試験対応・SPEC境界はPASSしたが、主source冒頭・主source末尾・練習source冒頭の進捗記録3箇所が実成果物へ未同期のため `NEEDS_REVISION / IN_PROGRESS`。完成数は `13 / 21` のまま。
+Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定一次2問・3答案要素＋二次1問・2答案要素は完成教材だけで `5 / 5 PASS`、公式標準解答と全件一致。初回最終QAで唯一FAILだった主source冒頭・主source末尾・練習source冒頭の旧進捗記録3箇所を実成果物へ同期した。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。完成数は `13 / 21` のまま、次工程は最終QA再実施。
 
 ## Topic 14 成果物
 
@@ -25,7 +25,7 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 完成後独立再解答: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_reanswer.md`
 - 最終QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_final_qa.md`
 - completion: `in_progress`
-- stage: `FINAL_QA_NEEDS_REVISION`
+- stage: `SOURCE_PROGRESS_SYNCED`
 
 ## Topic 14 固定範囲
 
@@ -135,7 +135,7 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 二次採用判断・SPEC境界: `PASS`
 - 進捗記録整合: `FAIL`
 
-exact blocker:
+初回最終QA時点のexact blocker:
 
 1. 主source冒頭が `EXPLANATION_SOURCE_COMPLETE` / 解説PDF以降未着手 / 次工程「解説PDF＋表示QA」のまま。
 2. 主source末尾 `## 9. 制作進捗` が解説PDF以降を未完了とし、現在地・次工程も旧状態のまま。
@@ -143,6 +143,19 @@ exact blocker:
 
 判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 14 進捗記録同期
+
+初回最終QAで指摘された3箇所だけを実成果物へ同期した。
+
+- 主source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」
+- 主source末尾: 解説PDF、練習問題source＋PDF、PowerPoint＋表示QA、完成後独立再解答を完了扱いへ同期
+- 練習source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
+- 固定一次2問・3答案要素＋二次1問・2答案要素の独立再解答: `5 / 5 PASS` を維持
+- 二次採用: `1問・2答案要素`、二次数合わせ: `0件` を維持
+
+判定: `PASS / SOURCE_PROGRESS_SYNCED`
+
 ## 次に行うこと
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXを変更せず、主source冒頭・主source末尾・練習source冒頭の進捗記録3箇所だけを実成果物へ同期する。その後にTopic 14最終QAを再実施する。
+Topic 14の最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更せず、初回FAILだった進捗記録整合が解消されているかを含めて再判定する。
