@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `12 / 39`
-- current_status: `topic_13_explanation_pdf_complete`
+- current_status: `topic_13_practice_source_complete`
 - last_completed_topic: `12 300系③ VVVFインバータと誘導機制御`
 - active_topic: `13 300系④ 回生と四象限運転`
-- next_start: Topic 13 練習問題・完全解説source
+- next_start: Topic 13 練習PDF
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -23,7 +23,7 @@
 - [x] 10 300系① 誘導電動機等価回路 — PASS
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
-- [ ] 13 300系④ 回生と四象限運転 — EXPLANATION_PDF_COMPLETE / IN_PROGRESS
+- [ ] 13 300系④ 回生と四象限運転 — PRACTICE_SOURCE_COMPLETE / IN_PROGRESS
 
 ## Topic 13 固定EXAM_ALIGNMENT
 - source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
@@ -76,6 +76,22 @@
 - Topic 14先取り: `0件`
 - 回生失効・電力貯蔵設備追加: `0件`
 - H24二次の無効電流・出力可能領域追加: `0件`
+- SPEC外制御方式追加: `0件`
+- 未確認300系実車値の真値化: `0件`
+
+## Topic 13 練習問題source
+- path: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant_practice_source.md`
+- 一次試験型: `8問`（全問五肢択一）
+- 二次試験型: `4問`（途中式・前提・単位・理由を含む記述式）
+- 合計: `12問`
+- 数値・論理QA: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5過去問・15答案要素接続: `15 / 15 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 14先取り: `0件`
+- H27固定範囲外の回生失効・電力貯蔵設備・運行間隔追加: `0件`
+- H24二次固定範囲外の無効電流・出力可能領域追加: `0件`
+- Topic 11/12の論点再展開: `0件`
 - SPEC外制御方式追加: `0件`
 - 未確認300系実車値の真値化: `0件`
 
@@ -253,4 +269,4 @@ SPEC指定可視化:
 - 最終QA: `PASS / completed`
 
 ## 次工程
-Topic 13「300系④ 回生と四象限運転」の練習問題・完全解説sourceを作成する。固定EXAM_ALIGNMENTは変更しない。
+Topic 13「300系④ 回生と四象限運転」の練習PDFを作成する。固定EXAM_ALIGNMENTは変更しない。
