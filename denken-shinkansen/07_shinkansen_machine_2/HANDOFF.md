@@ -6,14 +6,14 @@
 - Topic 01〜13: 最終QA `PASS / completed`
 - 完成数: `13 / 22`
 - active topic: `14 L0系を500km/hで同期させる`
-- current status: `topic_14_powerpoint_complete`
-- 次工程: Topic 14 独立再解答前ゲート
+- current status: `topic_14_blind_reanswer_ready`
+- 次工程: Topic 14 完成後独立再解答
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 14の実成果物を確認し、制作前EXAM_ALIGNMENT・解説source・解説PDF・練習問題source・練習PDFまで完成済みであることを確認した。
-- 重複制作せず、次の安全な工程として解説画像PowerPointを作成した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 14の実成果物を確認し、制作前EXAM_ALIGNMENT・解説source・解説PDF・練習問題source・練習PDF・解説画像PowerPointまで完成済みであることを確認した。
+- Topic 14の独立再解答前ゲートを実施し、必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別解答が保存されていないことを確認した。
 - Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いでいる。
 - Topic 13で採用済み答案要素の重複採用は `0件`。
 
@@ -115,6 +115,18 @@
 - [x] Git blob SHA `2edf2ec7c42d4939e37c6d912bcc0756052aca5a`
 - [x] SHA-256 `2c399f792e186246bc7893d100a343d52e085d1ac991c5cc92aeb949d5724c76`
 
+## Topic 14 独立再解答前ゲート
+- [x] `MASTER_SPEC.md` の必須先読み対象と `EXAM_ALIGNMENT_SPEC.md` のblind再解答条件を再監査
+- [x] `STATUS.md` / `HANDOFF.md` / main source / 練習source / PowerPoint QA / Topic 14成果物一覧を再監査
+- [x] 固定5過去問の公式正答番号・標準解答本文の保存 `0件`
+- [x] 固定5過去問の完成済み個別解答・数値解・導出結果の保存 `0件`
+- [x] 制作前検証はPASS数・要求知識・使用式・教材内マッピングのみを保持
+- [x] 練習sourceの正答・解説は教材自身の練習問題で、固定公式過去問の保存済み正答には該当しない
+- [x] 固定一次1問＋二次4問・27答案要素、教材本文・PDF・練習問題・PowerPoint・固定EXAM_ALIGNMENTは変更なし
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+- [x] 判定 `BLIND_REANSWER_READY`
+- [x] ゲート記録: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_blind_reanswer_gate.md`
+
 ## Topic 14 現成果物
 - main source: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization.md`
 - 制作前EXAM_ALIGNMENT: 完成
@@ -123,7 +135,8 @@
 - 練習source: 完成
 - 練習PDF: 完成
 - PowerPoint: 完成
+- 独立再解答前ゲート: `BLIND_REANSWER_READY`
 - 完成後独立再解答／最終QA: 未着手
 
 ## 次に行うこと
-Topic 14 独立再解答前ゲートを実施し、必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別解答が保存されていないことを監査する。
+Topic 14 完成後独立再解答。公式解答・標準解答を開く前に、完成教材だけで固定5問・27答案要素を再解答し、答案確定後に公式解答と照合する。
