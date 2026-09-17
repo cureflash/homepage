@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `13 / 22`
-- current_status: `topic_14_blind_reanswer_ready`
+- current_status: `topic_14_independent_reanswer_complete`
 - last_completed_topic: `13 L0系のリニア同期モータを等価回路で考える`
 - active_topic: `14 L0系を500km/hで同期させる`
-- next_start: Topic 14 完成後独立再解答
+- next_start: Topic 14 最終QA
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -628,8 +628,21 @@
 - [x] 判定 `BLIND_REANSWER_READY`
 - [x] ゲート記録: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_blind_reanswer_gate.md`
 
+## Topic 14 完成後独立再解答
+- [x] 記録: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_independent_reanswer.md`
+- [x] 公式解答・標準解答を開く前に、完成教材だけで固定5問・27答案要素を再解答
+- [x] H29 一次 機械 問1: `2 / 2 PASS`
+- [x] R07 二次 機械・制御 問1: `7 / 7 PASS`
+- [x] R06 二次 機械・制御 問1: `8 / 8 PASS`
+- [x] R05 二次 機械・制御 問1: `8 / 8 PASS`
+- [x] H27 二次 機械・制御 問1: `2 / 2 PASS`
+- [x] 合計 `27 / 27 PASS`
+- [x] 教材外知識補完 `0件`
+- [x] 固定範囲外論点・Topic 15以降依存・未確認L0実値依存 `0件`
+- [x] 固定EXAM_ALIGNMENT・教材本文・練習問題・PDF/PPTXの内容変更 `0件`
+
 ## 今回進めた内容
-Topic 14を1段階進め、完成後独立再解答前ゲートを完了した。固定一次1問＋二次4問・27答案要素を維持し、必須先読み対象への公式正答・標準解答本文・完成済み個別解答の保存は `0件`。固定範囲外論点・Topic 15以降先取り・未確認L0実値追加も `0件`。
+Topic 14を1段階進め、完成後独立再解答を完了した。固定一次1問＋二次4問・27答案要素を完成教材だけで再解答し、公式解答・標準解答との照合は `27 / 27 PASS`。教材外知識補完・固定範囲外論点・Topic 15以降依存・未確認L0実値依存はいずれも `0件`。
 
 ## 判定
-Topic 14は `BLIND_REANSWER_READY / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の完成後独立再解答。
+Topic 14は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の最終QA。
