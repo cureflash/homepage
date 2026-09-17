@@ -6,74 +6,53 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_15_completed`
-- 次工程: Topic 16 制作前EXAM_ALIGNMENT
+- current status: `topic_16_exam_alignment_complete`
+- 次工程: Topic 16 解説source作成
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 15既存成果物、直近のTopic 15変更を確認した。
-- Topic 14は最終QA `PASS / completed` のまま変更なし。
-- Topic 15は制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、解説画像PowerPoint、PowerPoint QA、独立再解答前ゲート、完成後独立再解答、最終QAまで完成。
-- 固定5過去問・8答案要素の独立再解答は `8 / 8 PASS`。教材外知識補完 `0件`。
-- 前回最終QAで唯一のblockerだった進捗記録3箇所は実成果物状態へ同期済み。
-- 最終QAを再実施し、必須成果物、試験対応、練習・表示QA、仕様境界、進捗整合を全件PASSとした。
-- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの内容変更はない。
-- 重複制作 `0件`。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 15既存成果物を確認した。
+- Topic 01〜15は最終QA `PASS / completed` のまま変更なし。
+- 最初の未完了テーマは Topic 16。
+- Topic 16の系列SPEC固定範囲は、リチウムイオン電池、起電力、内部抵抗、放電電流、電圧降下、Ah、Wh、C-rate、DCリンク、DC/DC変換の概念、変換効率。
+- 制作前EXAM_ALIGNMENTを `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link.md` に作成した。
+- R08一次「機械」まで直近年度から確認し、固定範囲へ直接対応する一次4問＋二次記述1問、計5問・12答案要素を品質ゲート対象として固定した。
+- R07一次「機械」問5は一般電気化学・鉛蓄電池が中心で固定範囲への直接性が低いため、件数合わせでは採用しない。
+- 未確認N700S実車値、Topic 17以降の論点、電池材料反応・BMS、チョッパ回路詳細の仕様追加は `0件`。
+- 固定問題の正答記号・完成済み数値解の保存は `0件`。完成教材後のblind独立再解答まで参照しない。
 
-## Topic 15 固定EXAM_ALIGNMENT
-- R06 一次 機械 問2 (5) — 1答案要素
-- H25 一次 機械 問3 (1),(2) — 2答案要素
-- H23 一次 機械 問1 (1),(2) — 2答案要素
-- R04 二次 機械・制御 問3 (6) — 2答案要素
-- R07 二次 機械・制御 問2 (1)の定格トルク部分 — 1答案要素
-
-一次3問＋二次記述2問、計5問。品質ゲート対象は8答案要素。
-
-## Topic 15 成果物状態
-- 解説source: `completed`
-- 解説PDF: 完成
-- 練習source: `completed`
-- 練習PDF: 完成
-- PowerPoint: 完成
-- PowerPoint QA: PASS
-- 独立再解答前ゲート: `BLIND_REANSWER_READY`
-- 完成後独立再解答: `PASS / independent_reanswer_complete`
-- 最終QA記録: `PASS / completed`
-
-## Topic 15 PowerPoint QA
-- `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_images.pptx`
-- `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_powerpoint_qa.md`
-- 16:9・4枚
-- 120 dpi・1601×900 全4枚表示QA `4 / 4 PASS`
-- overflow `0件`
-- PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
-- PPTX ZIP整合性 PASS
-- 固定一次3問＋二次2問・8答案要素を維持
-- 固定範囲外論点・Topic 16以降先取り・未確認新幹線補機実値追加 `0件`
-- Git blob SHA `af72dc7052484b5e368a1ab16389e4571caa7d3b`
-
-## Topic 15 完成後独立再解答
-- `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_independent_reanswer.md`
-- R06 一次 機械 問2 (5): `1 / 1 PASS`
-- H25 一次 機械 問3 (1),(2): `2 / 2 PASS`
-- H23 一次 機械 問1 (1),(2): `2 / 2 PASS`
-- R04 二次 機械・制御 問3 (6): `2 / 2 PASS`
-- R07 二次 機械・制御 問2 (1) 定格トルク: `1 / 1 PASS`
-- 合計: `8 / 8 PASS`
-- 教材外知識補完 `0件`
-- 固定範囲外論点・Topic 16以降依存・未確認実値依存 `0件`
-- 判定: `PASS / independent_reanswer_complete`
-
-## Topic 15 最終QA
-- `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_final_qa.md`
-- 必須成果物: PASS
-- 固定5問・8答案要素: `8 / 8 PASS`
-- 完成後独立再解答: `8 / 8 PASS`
-- 練習・PDF/PPTX QA: PASS
-- 仕様境界: PASS
-- 前回blockerの進捗記録3箇所: 同期確認PASS
+## Topic 15 最終状態
+- 固定一次3問＋二次記述2問、5問・8答案要素
+- 完成後独立再解答 `8 / 8 PASS`
+- 必須成果物、練習・PDF/PPTX QA、仕様境界、進捗整合: PASS
 - 最終判定: `PASS / completed`
 
+## Topic 16 固定EXAM_ALIGNMENT
+- R02 一次 機械 問4 (1),(4),(5) — 3答案要素
+  - リチウムイオン二次電池の公称電圧、大電流放電時の電圧低下、`Wh=VIt` と重量エネルギー密度
+- H30 一次 機械 問6 (3),(4) — 2答案要素
+  - `Ah=It` による放電時間、`Wh/Ah` による平均電圧
+- H26 一次 機械 問3 (1) — 1答案要素
+  - 蓄電池を電力変換装置の直流回路へ接続する構成
+- H18 一次 機械 問3 (1) — 1答案要素
+  - 直流入力から直流出力を得るDC/DCコンバータの識別
+- H23 二次 機械・制御 問3 (3),(4) — 5答案要素
+  - 内部抵抗＋起電力モデル、C-rate、充放電電流、端子電圧波形、充放電時間、内部抵抗損と充電効率
+
+一次4問＋二次記述1問、計5問。品質ゲート対象は12答案要素。
+
+## Topic 16 制作前ゲート
+- [x] `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、最新 `STATUS.md`、`HANDOFF.md` を確認
+- [x] R08一次「機械」まで直近年度から公式過去問を確認
+- [x] 一次・二次を含む固定5問・12答案要素を確定
+- [x] 関連する二次記述 H23「機械・制御」問3を含めた
+- [x] 固定範囲外を件数合わせで追加していない
+- [x] 未確認N700S実車値追加 `0件`
+- [x] Topic 17以降先取り `0件`
+- [x] 正答記号・完成済み数値解保存 `0件`
+- [x] 参考教材2系統以上を確認
+- 判定: `PASS / topic_16_exam_alignment_complete`
+
 ## 次に行うこと
-Topic 16「N700Sバッテリーから主回路へ電力を送る」の制作前EXAM_ALIGNMENTを行う。まず公式二種一次・二次過去問から当該テーマへ直接対応する問題を調査し、`EXAM_ALIGNMENT_SPEC.md` の品質ゲートに従って固定対象を確定する。仕様外の問題を件数合わせで追加しない。
+固定EXAM_ALIGNMENTを変更せず、Topic 16解説sourceを作成する。`V=E-Ir`、Ah/Wh、C-rate、`I²r`、DC/DCとDCリンク、変換効率を、固定12答案要素を教材だけで解ける粒度まで説明する。N700Sの数値は一次資料確認済みの値だけを実車値として扱う。
