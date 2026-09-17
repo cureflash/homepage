@@ -4,42 +4,40 @@
 
 ## 現在地
 
-Topic 01〜13は最終QAまでPASSし、`completed`。次の未完了テーマはTopic 14「East iは何をどう測っている？」。
+Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何をどう測っている？」は制作前EXAM_ALIGNMENTまで完了した。
 
 - 完成数: `13 / 14`
 - last completed: `13 インバータはどうやって三相交流を作る？`
 - active topic: `14 East iは何をどう測っている？`
-- current status: `topic_13_completed`
-- next start: Topic 14の制作前EXAM_ALIGNMENTを実施する
+- current status: `topic_14_exam_alignment_complete`
+- next start: Topic 14の解説本文＋3段階例題を作成する
 
 ## 今回進捗
 
-Topic 13の最終QAを実施し、`PASS / completed` とした。
+Topic 14の制作前EXAM_ALIGNMENTを完了した。
 
-- 固定公式「理論」過去問: `4問`
-- 制作前独立検証: `4 / 4 PASS`
-- 完成後独立再解答: `4 / 4 PASS`
-- 公式解答一致: `4 / 4`
-- 教材外知識による補完: `0件`
-- 固定過去問要求の本文マッピング: `4 / 4`
-- 3段階例題: `3 / 3 PASS`
-- 練習問題: 15問、正答一意性 `15 / 15 PASS`、再計算 `8 / 8 PASS`
-- 解説PDF: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- 練習PDF: A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS
-- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
+- 令和8年度上期まで公式「理論」過去問を確認
+- 固定公式過去問: `8問・13答案要素`
+- 制作前独立検証: `8 / 8問・13 / 13答案要素 PASS`
 - 固定範囲外追加: `0件`
-- 未確認実車値依存: `0件`
-- 最終QA記録: `topics/13_inverter_pwm/13_inverter_pwm_final_qa.md`
-- 主source・練習source: `COMPLETED`
+- 未確認East i実車情報の教材事実化: `0件`
+- 学習資料: e-sysnet・電験王・電験三種まとめました
+- source: `topics/14_east_i_measurement/14_east_i_measurement.md`
 
-## Topic 13 固定過去問
+## Topic 14 固定過去問
 
-1. 令和6年度上期 理論 問9
-2. 令和4年度下期 理論 問8
-3. 平成30年度 理論 問13
-4. 平成29年度 理論 問9
+1. 令和8年度上期 理論 問16
+2. 令和7年度下期 理論 問14
+3. 令和7年度上期 理論 問16
+4. 令和6年度下期 理論 問16
+5. 令和6年度上期 理論 問14
+6. 令和6年度上期 理論 問16
+7. 令和5年度下期 理論 問16
+8. 令和4年度下期 理論 問14
 
-完成後独立再解答: `4 / 4 PASS`
+制作前独立検証: `8 / 8問・13 / 13答案要素 PASS`
+
+完成後独立再解答の先読み汚染を避けるため、正答番号・個別最終数値はHANDOFFへ保存しない。
 
 ## Topic 14 SPEC固定範囲
 
@@ -77,15 +75,13 @@ Topic 13の最終QAを実施し、`PASS / completed` とした。
 
 ## 次に行うこと
 
-Topic 14の制作前EXAM_ALIGNMENTを実施する。
+Topic 14の解説本文＋3段階例題を作成する。
 
-- `MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`を再確認する
-- 公式「理論」過去問を直近年度から調査し、Topic 14固定範囲だけで解ける問題を品質ゲート対象として確定する
-- 原則5問以上、該当問題が5問未満なら確認できた全件を対象とする
-- 制作前独立検証を行う
-- e-sysnet等を含む複数の学習資料で説明粒度を確認する
-- East iの実測項目を扱う場合は公開一次資料で確認する
-- source MarkdownへEXAM_ALIGNMENTと境界を固定するまで本文制作へ進まない
+- `topics/14_east_i_measurement/14_east_i_measurement.md` の固定EXAM_ALIGNMENTだけを品質ゲートとして使う
+- 固定8問が教材だけで解けるよう、要求知識・判断手順・式の意味と適用条件を本文へ展開する
+- 3段階例題を作り、計算問題は独立再計算する
+- East iの具体的検測項目を本文へ入れる場合は、JR等の公開一次資料で確認した項目だけを使う
+- 正答番号・固定過去問の個別最終数値をsourceへ保存せず、完成後独立再解答を汚染しない
 
 ## 固定ルール
 
