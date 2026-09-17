@@ -6,11 +6,11 @@
 
 Topic 01〜14は `PASS / completed`。完成数は `14 / 21`。
 
-current_status: `topic_15_final_qa_needs_revision`
+current_status: `topic_15_source_progress_synced`
 
 active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 
-Topic 15は初回最終QAまで実施済み。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界はいずれもPASS。blockerは主source・練習sourceに残る旧進捗記録4箇所のみで、判定は `NEEDS_REVISION / IN_PROGRESS`。次工程はその4箇所を実成果物状態へ同期する。
+Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QAまで実施済み。固定一次5問・25答案要素は完成教材だけで `25 / 25 PASS`、二次採用0問・数合わせ0件。初回最終QAで唯一FAILだった主source・練習sourceの旧進捗記録4箇所を実成果物へ同期した。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。完成数は `14 / 21` のまま、次工程は最終QA再実施。
 
 ## Topic 15 成果物
 
@@ -25,7 +25,7 @@ Topic 15は初回最終QAまで実施済み。固定一次5問・25答案要素�
 - 完成後独立再解答: `topics/15_breaker_transient/15_breaker_transient_reanswer.md`
 - 初回最終QA: `topics/15_breaker_transient/15_breaker_transient_final_qa.md`
 - completion: `in_progress`
-- stage: `FINAL_QA_NEEDS_REVISION`
+- stage: `SOURCE_PROGRESS_SYNCED`
 
 ## Topic 15 固定範囲
 
@@ -187,6 +187,20 @@ Topic 15は初回最終QAまで実施済み。固定一次5問・25答案要素�
 
 判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 15 進捗記録同期
+
+初回最終QAで指摘された4箇所だけを実成果物へ同期した。
+
+- 主source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、PowerPoint・完成後独立再解答・初回最終QA・次工程を実状態へ同期
+- 主source末尾: PowerPoint・完成後独立再解答・初回最終QAまで実状態へ同期し、次工程「最終QA再実施」へ更新
+- 練習source冒頭: `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`、次工程「最終QA再実施」
+- 練習source末尾: 次工程「最終QA再実施」
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
+- 固定一次5問・25答案要素の独立再解答: `25 / 25 PASS` を維持
+- 二次採用: `0問`、二次数合わせ: `0件` を維持
+
+判定: `PASS / SOURCE_PROGRESS_SYNCED`
+
 ## Topic 14 成果物
 
 - source: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics.md`
@@ -328,4 +342,4 @@ Topic 15は初回最終QAまで実施済み。固定一次5問・25答案要素�
 
 ## 次に行うこと
 
-Topic 15の主source・練習sourceに残る旧進捗記録4箇所を、PowerPoint・完成後独立再解答・初回最終QAまで完了した実状態へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 15の最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更せず、初回blockerだった4進捗記録が解消されているかを含めて再判定する。
