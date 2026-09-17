@@ -4,8 +4,8 @@
 
 ## 状態
 
-- stage: `PROGRESS_RECORDS_SYNCED`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
@@ -14,7 +14,8 @@
 - 完成後独立再解答: `25 / 25 PASS`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - 進捗記録同期: `PASS / PROGRESS_RECORDS_SYNCED`
-- 次工程: 最終QA再実施
+- 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
+- 次工程: Topic 17 制作前EXAM_ALIGNMENT
 
 ## 1. SPEC固定範囲
 
@@ -649,4 +650,4 @@ p側を正にしているので順方向バイアスである。外部電圧は�
 
 ## 11. 次工程
 
-最終QAを再実施し、初回最終QAの進捗記録blocker 4箇所が解消済みであることを確認する。技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXは変更しない。
+Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の制作前EXAM_ALIGNMENTを行う。
