@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は完成済み。
 
 ## 今回進捗
-Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の最終QAを実施した。必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、PDF/PPTX QA、SPEC境界はPASS。一方、`12_overhead_line_mechanics_explanation_qa.md`、`12_overhead_line_mechanics_practice_source.md`、`12_overhead_line_mechanics_powerpoint_qa.md`、`12_overhead_line_mechanics_independent_reanswer.md` の4箇所に旧工程記録が残っているため、進捗記録整合のみFAIL。最終判定は `NEEDS_REVISION / IN_PROGRESS` とし、Topic 12は未完了のまま。技術内容、固定問題、数式、正答、PDF/PPTX、独立再解答結果は変更していない。
+Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の初回最終QAで唯一FAILだった進捗記録整合を1段階進めた。`12_overhead_line_mechanics_explanation_qa.md`、`12_overhead_line_mechanics_practice_source.md`、`12_overhead_line_mechanics_powerpoint_qa.md`、`12_overhead_line_mechanics_independent_reanswer.md` の旧工程記録4箇所を現在地へ同期し、main sourceも `topic_12_progress_records_synced / IN_PROGRESS` へ同期した。固定EXAM_ALIGNMENT、完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、PDF/PPTX QA、SPEC境界、数式・問題・正答・独立再解答結果は変更していない。Topic 12は最終QA再実施前のため未完了のまま。
 
 完成後独立答案:
 - R7上 電力 問12: `(4)`
@@ -93,6 +93,7 @@ H25 電力 問9は架線張力に関連するが、支線・支柱の幾何と�
 - 件数合わせの仕様追加: `0件`
 - 制作前の保存済み正答・選択肢番号の完成教材転記: `0件`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程4箇所）
+- 旧進捗記録4箇所同期: 完了
 
 ## 直前完了テーマ
 Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / completed`。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、必須成果物、PDF/PPTX QA、SPEC境界、進捗記録整合を全件PASS確認済み。
@@ -120,7 +121,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_12_final_qa_needs_progress_sync`
+- `current_status`: `topic_12_progress_records_synced`
 - 完成数: `11 / 16`
 - last completed: Topic 11 `架線事故ではどうやって電気を止める？`
 - active: Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？`
@@ -160,7 +161,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 13以降の先取り・補完: `0件`
 - 未確認新幹線実設備値の使用・真値化: `0件`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- 進捗記録整合: FAIL（旧工程4箇所）
+- 旧進捗記録4箇所同期: 完了
 
 ## 次の正確な開始点
-Topic 12の旧進捗記録4箇所を現在地へ同期する。対象は解説PDF QA、練習問題source、PowerPoint QA、完成後独立再解答。技術内容、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
+Topic 12最終QAを再実施する。技術内容、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
