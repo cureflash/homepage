@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 14 / 20
-- current_status: `topic_15_practice_source_complete`
+- current_status: `topic_15_practice_pdf_complete`
 - last_completed_topic: `14 フーリエ変換・FFT`
 - active_topic: `15 対数・dB・周波数応答`
-- next_start: Topic 15の練習PDFを作成する
+- next_start: Topic 15の解説画像PowerPointを作成する
 
 ## Topic 07 制作品質ゲート
 
@@ -213,7 +213,7 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source
-- [ ] 練習PDF
+- [x] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
 - [ ] 完成後独立再解答
@@ -222,16 +222,19 @@
 
 ## 今回進めた内容
 
-Topic 15 `対数・dB・周波数応答` の練習問題sourceを作成し、GitHub正本へ反映した。
+Topic 15 `対数・dB・周波数応答` の練習PDFを作成し、全ページ表示QA・文字抽出QAを実施した。
 
-`topics/15_log_db_frequency_response/15_log_db_frequency_response_practice.md` は全12問。一次型8問／記述型4問、難易度は基礎3／標準6／複合3。固定済み第二種公式過去問5問・12答案要素へ `12 / 12 PASS` で接続した。
+`topics/15_log_db_frequency_response/15_log_db_frequency_response_practice.pdf` はA4縦6ページ。練習sourceの全12問（一次型8問／記述型4問）と全12問の解答・完全解説を収録した。固定済み第二種公式過去問5問・12答案要素への接続 `12 / 12 PASS` を維持した。
 
-独立計算・論理QAは `12 / 12 PASS`、一次型正答一意性は `8 / 8 PASS`。第一種・第三種による件数水増し、ラウス・フルビッツ法一般、ナイキスト線図による独立した安定判別、補償器設計一般、フィルタ設計一般、Topic 16以降の先取り、未確認実車値依存はいずれも0件。
+200 dpi表示QAは `6 / 6 PASS`。文字欠け・重なり・ページ外クリップ・欠損グリフは0件。`pdftotext -layout` 文字抽出QAもPASSし、日本語フォントはsubset embeddedを確認した。独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS` を維持。仕様外追加・件数水増し・未確認実車値追加は0件。
+
+QA記録:
+`topics/15_log_db_frequency_response/15_log_db_frequency_response_practice_qa.md`
 
 ## 判定
 
-Topic 15は `PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`。
+Topic 15は `PRACTICE_PDF_COMPLETE / IN_PROGRESS`。
 
 完成数は `14 / 20` のまま。
 
-次はTopic 15の練習PDFを作成する。
+次はTopic 15の解説画像PowerPointを作成する。
