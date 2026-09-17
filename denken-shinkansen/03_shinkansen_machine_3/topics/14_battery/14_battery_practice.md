@@ -1,6 +1,6 @@
 # 14 停電してもN700Sが走れるのはなぜ？ — 練習問題 source
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 Topic 14 の練習問題sourceを12問作成した。系列 `SPEC.md` と固定済み `EXAM_ALIGNMENT`（H30 機械 問12）から逆算した範囲だけを使用する。
@@ -349,4 +349,4 @@ H30 機械 問12に接続する固定知識は、
 - 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
 ## 次工程
-Topic 14の練習PDFを、この練習問題sourceから作成する。
+練習PDF・解説画像PowerPoint・完成後blind独立再解答は完成済み。固定EXAM_ALIGNMENTと問題・正答を変更せず、Topic 14の最終QAを再判定する。
