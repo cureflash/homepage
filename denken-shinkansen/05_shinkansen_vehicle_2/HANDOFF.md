@@ -7,9 +7,11 @@
 
 Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
 
-Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。PowerPointは16:9・4枚、1601×900表示QA `4 / 4 PASS`、固定16答案要素の可視化・接続 `16 / 16 PASS`、SPEC指定4可視化 `4 / 4 PASS`。SPEC指定9項目・共通仮定式系を維持し、未確認500系実車値の真値化・SPEC外追加は0件。
+Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲートまで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。PowerPointは16:9・4枚、1601×900表示QA `4 / 4 PASS`、固定16答案要素の可視化・接続 `16 / 16 PASS`、SPEC指定4可視化 `4 / 4 PASS`。SPEC指定9項目・共通仮定式系を維持し、未確認500系実車値の真値化・SPEC外追加は0件。
 
-次工程は Topic 15 の完成後独立再解答前ゲート。必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別答案が残っていないことを監査してからblind再解答へ進む。
+独立再解答前ゲートは `PASS / BLIND_REANSWER_READY`。必須先読み対象に固定5過去問の公式正答番号・標準解答本文・完成済み個別答案・個別数値解・導出結果は保存されていない。main sourceには公式問題・公式解答URLのみを記録し、正答内容は保存していない。
+
+次工程は Topic 15 の完成後独立再解答。公式解答・標準解答を先に開かず、完成教材と公式問題文だけで固定5問・16答案要素を再解答し、候補答案をGitHubへ固定してから公式照合する。
 
 ## Topic 15 固定EXAM_ALIGNMENT
 source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
@@ -147,8 +149,20 @@ SPEC指定可視化:
 - SHA-256: `c5fc5495c63266366941f8b9a280737aa38382eea6b3999c8ee81902c9c67d72`
 - Git blob SHA: `34c4cf717dea445e87517ba960a486d2e18f8776`
 
+## Topic 15 完成後独立再解答前ゲート
+- path: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_blind_reanswer_gate.md`
+- 判定: `PASS / BLIND_REANSWER_READY`
+- 必須先読み対象: `MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC / STATUS / HANDOFF / main source / 練習source / 各QA / 成果物一覧`
+- 固定公式過去問の公式正答番号・標準解答本文保存: `0件`
+- 固定公式過去問の完成済み個別答案・個別数値解・導出結果保存: `0件`
+- main sourceの公式問題・公式解答URL: `URLのみ / 正答内容保存なし`
+- 練習sourceの正答・解説: `教材自身の練習問題 / 固定公式過去問の保存済み正答ではない`
+- 固定EXAM_ALIGNMENT・教材本文・PDF/PPTX・共通仮定式系変更: `0件`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+
 ## 過去Topic
 Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次に行うこと
-Topic 15 `500系 高速域の出力・熱解析` の完成後独立再解答前ゲートを実施する。必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別答案が残っていないことを監査し、blind再解答条件を満たす場合だけ次工程へ進む。
+Topic 15 `500系 高速域の出力・熱解析` の完成後独立再解答を実施する。公式解答・標準解答を先に開かず、完成教材と公式問題文だけで固定5問・16答案要素を再解答し、候補答案をGitHubへ固定してから公式照合する。
