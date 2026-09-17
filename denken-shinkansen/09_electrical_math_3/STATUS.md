@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_12_exam_alignment_complete`
+- current_status: `topic_12_preproduction_independent_answer_complete`
 - last_completed_topic: `11 グラフ・特性曲線を読む`
 - active_topic: `12 電気数学総合`
-- next_start: `Topic 12の制作前独立解答・公式解答照合`
+- next_start: `Topic 12の解説本文＋3段階例題`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -142,7 +142,7 @@
 - [x] 伝達関数・法規等の固定範囲外候補を除外
 - [x] 参考教材を複数系統確認（e-sysnet含む）
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
-- [ ] 制作前独立解答・公式解答照合
+- [x] 制作前独立解答・公式解答照合 `5 / 5問・9 / 9答案要素 PASS`
 - [ ] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
@@ -156,20 +156,23 @@
 
 ## 今回進めた内容
 
-Topic 12「電気数学総合」の制作前EXAM_ALIGNMENT調査を完了した。
+Topic 12「電気数学総合」の固定5問を、公式解答参照前に制作前独立解答し、答案確定後に公式解答と照合した。
 
-- R8上の公式問題を直近年度として確認
-- 品質ゲート5問を固定: 理論2 / 電力1 / 機械2
-- 既習Topics 01〜11の数学を代表問題へ横断接続
-- 保存済み正答があるR8上理論問10は再利用せず、R8上理論問9を採用して次工程のブラインド性を維持
-- 伝達関数・ボード線図・PID・法規固有論点等を追加しない
-- 参考教材を複数系統確認（e-sysnet / 電験三種まとめました / 電気主任技術者のナレッジノート）
-- 過去問から逆算した必須説明20項目をsourceへ記録
-- 公式解答・保存済み正答はsourceへ記録せず、次工程の制作前独立解答を分離
-- 仕様外追加0件
+- R8上 理論 問9: PASS
+- R8上 理論 問17(a)(b): PASS / PASS
+- R8上 電力 問15(a)(b): PASS / PASS
+- R8上 機械 問15(a)(b): PASS / PASS
+- R8上 機械 問16(a)(b): PASS / PASS
+- 合計 `5 / 5問・9 / 9答案要素 PASS`
+- 問題要求・使用式・途中計算・正答根拠を全件確認
+- 固定EXAM_ALIGNMENT変更0件
+- 固定範囲外補完0件
+- 保存済み正答の事前参照0件
+
+完成後独立再解答のブラインド条件維持のため、個別答案は主sourceの制作前独立解答節にのみ保存し、完成後再解答時は同節を参照しない。
 
 ## 判定
 
-`topic_12_exam_alignment_complete / IN_PROGRESS`。
+`topic_12_preproduction_independent_answer_complete / IN_PROGRESS`。
 
-完成数は `11 / 12`。次工程はTopic 12の制作前独立解答・公式解答照合。
+完成数は `11 / 12`。次工程はTopic 12の解説本文＋3段階例題。
