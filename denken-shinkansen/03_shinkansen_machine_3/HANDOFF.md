@@ -5,73 +5,49 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は品質ゲートPASSでcompleted。active topicは14「停電してもN700Sが走れるのはなぜ？」。
 
-Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定を実施し、技術内容、必須成果物、PDF/PPTX表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界がすべてPASSしたため `completed` とした。固定EXAM_ALIGNMENT、問題・正答、技術本文、PDF/PPTXは変更していない。
+Topic 14は制作前 `EXAM_ALIGNMENT` を完了し、`topic_14_exam_alignment_complete / IN_PROGRESS`。本文・解説PDF・練習問題source/PDF・解説画像PowerPointは未着手。
 
-## Topic 13 固定範囲
-電動機出力 / 回転速度 / トルク / 負荷特性 / ポンプ / ファン / コンプレッサ / 所要動力 / 効率 / インバータ駆動 / 可変速運転。
+## Topic 14 固定範囲
+系列 `SPEC.md` に従い、電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率だけを扱う。
 
-代表計算:
-- `P = ωT`
-- `ω = 2πN/60`
-- ポンプ水動力 `P_h = ρgQH`
-- ポンプ効率・電動機効率・余裕係数を含む所要動力
-- ファン・ポンプ系の代表的負荷特性 `Q ∝ N`、`T ∝ N²`、`P ∝ N³`
+計算範囲:
+- 電池容量
+- 電力量
+- 直列時の電圧
+- 並列時の容量
+- 放電時間
+- 必要電力から必要容量
 
-## Topic 13 固定EXAM_ALIGNMENT
-- R5上 機械 問7 — 電動機・負荷のトルク－速度曲線、安定動作点、送風機負荷
-- R4下 機械 問11 — ポンプ所要動力、流量換算、損失水頭、ポンプ効率、電動機効率
-- H30 機械 問10 — ポンプ所要動力、効率、余裕係数、必要台数
-- H29 機械 問12 — `Q ∝ N`、`T ∝ N²`、`P ∝ N³`、可変速運転
-- H27 機械 問12 — ポンプ用電動機出力、全揚程、効率、余裕係数
+燃料電池、電気分解・電気めっき、鉛蓄電池・ニッケル水素電池・NAS電池等の個別化学、BMS・保護回路・熱管理、Topic 15・16は追加しない。
 
-品質ゲート対象 `5問`。制作前独立検証・公式解答照合 `5 / 5 PASS`。完成後blind独立再解答・公式解答照合 `5 / 5 PASS`。固定EXAM_ALIGNMENT変更、教材外・固定範囲外補完、件数合わせ、未確認補機仕様追加はいずれも0件。
+## Topic 14 固定EXAM_ALIGNMENT
+- H30 機械 問12 — リチウムイオン二次電池の正極・負極・電解液、放電時のリチウムイオン移動方向、セル電圧
 
-## Topic 13 成果物・QA
-- source: `topics/13_auxiliary_motors/13_auxiliary_motors.md`
-- explanation PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation.pdf`
-- explanation PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation_pdf_qa.md`
-- practice source: `topics/13_auxiliary_motors/13_auxiliary_motors_practice.md`
-- practice PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_practice.pdf`
-- practice PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_practice_pdf_qa.md`
-- PowerPoint: `topics/13_auxiliary_motors/13_auxiliary_motors_images.pptx`
-- PowerPoint QA: `topics/13_auxiliary_motors/13_auxiliary_motors_powerpoint_qa.md`
-- independent reanswer: `topics/13_auxiliary_motors/13_auxiliary_motors_independent_reanswer.md`
+品質ゲート対象は `1問`。直近年度から遡って電気化学・電池問題を確認したが、系列SPEC固定範囲だけで問題全体を解答対象にできると確認した公式問題はH30問12のみ。三種で関連公式問題が5問未満の場合は確認できた全件を扱うという上位仕様の例外を適用し、件数合わせの固定範囲外追加はしない。
 
-解説本文は固定5問を `5 / 5` マッピング、3段階例題 `3 / 3 PASS`。解説PDFはA4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS。
+近接問題の非選定:
+- H28 機械 問12 — 二次電池・内部抵抗等は接続するが、問題全体には酸化還元・イオン化傾向が必要なため非選定。
+- R4上 機械 問12 — NAS固有の活物質・電解質・作動条件が必要なため非選定。
 
-練習問題は12問・全問五肢択一（基礎3 / 本試験標準7 / 複合2）、独立計算・論理 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5問接続 `5 / 5 PASS`。練習PDFはA4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出PASS。
+制作前公式照合ではH30問12の公式正答 `(1)` を確認。完成後blind独立再解答は教材完成後に別工程で行う。
 
-解説画像PowerPointは16:9・4枚。固定5問接続 `5 / 5 PASS`。LibreOffice→PDF→180 dpi表示 `4 / 4 PASS`、スライド外はみ出し0件、文字切れ・重なり・判読不能0件、欠落・破損グリフ0件、ZIP整合性PASS。SHA-256: `8dc1bd352a123bd85b5a6b1f7a21591b98e1c25586a3d8682848dc4344acea02`。
+## Topic 14 新幹線側の扱い
+JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ自走システム」の搭載を確認。搭載電池の化学系、実容量、直並列構成、定格電圧、自走速度・距離・時間は現時点で実値化しない。一次資料で明示された値だけを後工程で使用する。
 
-完成後blind独立再解答は、R5上 問7 `(4)`、R4下 問11 `(4)`、H30 問10 `(4)`、H29 問12 `(4)`、H27 問12 `(5)`。公式解答一致 `5 / 5 PASS`、教材外・固定範囲外知識補完0件。
+## Topic 14 成果物
+- source: `topics/14_battery/14_battery.md`
+- 状態: 制作前EXAM_ALIGNMENT完成
+- 固定範囲外追加: `0件`
+- 件数合わせ: `0件`
+- 未確認N700S実値追加: `0件`
+- source本文: 未着手
+- explanation PDF: 未着手
+- practice source/PDF: 未着手
+- PowerPoint: 未着手
+- 完成後blind独立再解答: 未実施
 
-H29 問12 fresh blindでは、教材の `T∝N²`、`Q∝N`、`P∝N³` を公式問題の選択肢へ照合すると(イ)(ウ)(エ)が一致するのは `(4)` のみであるため、教材にないエレベータ負荷知識を追加せず一意に選択できた。答案固定後に公式解答 `(4)` を確認した。
-
-## Topic 13 最終QA
-- 前回判定: `NEEDS_REVISION`
-- 前回技術内容: `PASS`
-- 前回必須成果物: `PASS`
-- 前回PDF/PPTX表示QA: `PASS`
-- 前回固定EXAM_ALIGNMENT・完成後blind独立再解答: `PASS`
-- 前回固定範囲境界: `PASS`
-- 前回進捗記録整合: `FAIL`（旧進捗3箇所）
-- 旧進捗3箇所同期: `3 / 3 PASS`
-- 最終QA再判定: `PASS`
-- 技術内容: `PASS`
-- 必須成果物: `PASS`
-- PDF/PPTX表示QA: `PASS`
-- 固定EXAM_ALIGNMENT・完成後blind独立再解答: `PASS`
-- 進捗記録整合: `PASS`
-- 固定範囲境界: `PASS`
-- 状態: `completed`
-
-## Topic 13 範囲境界
-- エレベータ・巻上機を独立論点として追加しない。
-- キャビテーション、NPSH、配管網解析へ拡張しない。
-- コンプレッサの圧縮仕事・熱力学サイクルへ拡張しない。
-- Topic 14〜16を先取りしない。
-- ドア駆動装置からシーケンス制御・インタロックへ拡張しない。
-- 車種固有の補機形式、定格、電圧、周波数、インバータ方式を一次資料確認前に実値化しない。
+## Topic 13
+Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 14「停電してもN700Sが走れるのはなぜ？」の制作前EXAM_ALIGNMENTを実施する。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` の固定範囲を守り、まず公式過去問から対象論点を固定する。
+Topic 14の解説source本文を、`topics/14_battery/14_battery.md` に固定したH30 機械 問12と系列SPEC固定範囲だけで作成する。
