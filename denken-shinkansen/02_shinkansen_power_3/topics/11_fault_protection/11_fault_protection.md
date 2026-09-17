@@ -1,11 +1,11 @@
 # 11 架線事故ではどうやって電気を止める？
 
 ## 状態
-`topic_11_final_qa_needs_revision`。制作前EXAM_ALIGNMENT、解説本文§1〜§15、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答まで完成し、その結果を本sourceへ同期済み。最終QAを実施し、技術内容・過去問品質ゲート・PDF/PPTX QA・SPEC境界はPASS、進捗記録整合のみFAILと判定した。
+`topic_11_completed`。制作前EXAM_ALIGNMENT、解説本文§1〜§15、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答まで完成し、その結果を本sourceへ同期済み。前回最終QAで唯一FAILだった旧進捗記録4箇所も現在地へ同期し、最終QA再判定で `PASS / completed` とした。
 
 固定5問・7答案要素について、制作前独立検証 `7 / 7 PASS`、本文要求事項マッピング `7 / 7`、完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7` を確認。教材外知識補完0件、SPEC固定範囲外追加0件、Topic 12以降の先取り0件、未確認新幹線実設備値の真値化0件。最終QAは `11_fault_protection_final_qa.md`。
 
-未完了理由は `11_fault_protection_explanation_qa.md`、`11_fault_protection_practice_source.md`、`11_fault_protection_powerpoint_qa.md`、`11_fault_protection_independent_reanswer.md` の旧進捗記録4箇所のみ。次工程はこの4箇所だけを現在地へ同期し、技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
+技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更せず、進捗記録整合を再確認して完了判定した。次工程はTopic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の制作前EXAM_ALIGNMENT。
 
 ## SPEC固定範囲
 `SPEC.md` のTopic 11から範囲を追加しない。
@@ -463,7 +463,7 @@ ZnO素子は強い非線形抵抗特性を持つ。通常電圧では抵抗が�
 - main sourceへの完成後独立再解答結果同期: 完了
 - SPEC固定範囲外追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
-- 最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程4箇所）
+- 最終QA: `PASS / completed`
 
 ## 次工程
-`11_fault_protection_explanation_qa.md`、`11_fault_protection_practice_source.md`、`11_fault_protection_powerpoint_qa.md`、`11_fault_protection_independent_reanswer.md` の旧進捗記録4箇所だけを現在地へ同期する。技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
+Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の制作前EXAM_ALIGNMENTを実施する。Topic 11の技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
