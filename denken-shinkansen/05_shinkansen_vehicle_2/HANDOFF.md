@@ -9,9 +9,9 @@ Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
 
 Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲートまで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。PowerPointは16:9・4枚、1601×900表示QA `4 / 4 PASS`、固定16答案要素の可視化・接続 `16 / 16 PASS`、SPEC指定4可視化 `4 / 4 PASS`。SPEC指定9項目・共通仮定式系を維持し、未確認500系実車値の真値化・SPEC外追加は0件。
 
-独立再解答前ゲート `PASS / BLIND_REANSWER_READY` の条件を維持して公式問題文だけを開き、固定5問・16答案要素を完成教材から独立再解答した。公式解答・標準解答を開く前に候補答案を `15_500series_high_speed_output_thermal_blind_reanswer_candidates.md` へ固定済み。一次 `10 / 10`、二次 `6 / 6`、合計 `16 / 16` の候補答案を保存し、公式照合はまだ実施していない。
+独立再解答前ゲート `PASS / BLIND_REANSWER_READY` の条件を維持して公式問題文だけを開き、固定5問・16答案要素を完成教材から独立再解答した。公式解答・標準解答を開く前に候補答案を `15_500series_high_speed_output_thermal_blind_reanswer_candidates.md` へ固定し、その後公式解答・標準解答と照合した。固定5問 `5 / 5 PASS`、一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`。教材外知識による補完0件、公式解答・標準解答との不一致0件。
 
-次工程は固定済み候補答案を変更せず、公式解答・標準解答と照合して全16答案要素の正誤と教材内根拠を確認し、完成後独立再解答のPASS/FAILを確定する。
+次工程はTopic 15の最終QA。必須成果物、各QA、SPEC境界、進捗記録整合を再確認して `completed` 可否を判定する。
 
 ## Topic 15 固定EXAM_ALIGNMENT
 source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
@@ -163,7 +163,7 @@ SPEC指定可視化:
 
 ## Topic 15 完成後独立再解答 候補答案固定
 - path: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_blind_reanswer_candidates.md`
-- 判定: `CANDIDATES_FIXED / OFFICIAL_COMPARISON_PENDING`
+- 判定: `CANDIDATES_FIXED`
 - 公式解答・標準解答の先読み: `0件`
 - 一次候補答案: `10 / 10 fixed`
 - 二次候補答案: `6 / 6 fixed`
@@ -174,8 +174,23 @@ SPEC指定可視化:
 - SPEC外追加: `0件`
 - 未確認500系実車値の真値化: `0件`
 
+## Topic 15 完成後独立再解答
+- QA: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_blind_reanswer_qa.md`
+- 判定: `PASS / BLIND_REANSWER_COMPLETE`
+- 固定過去問: `5 / 5 PASS`
+- 一次答案要素: `10 / 10 PASS`
+- 二次答案要素: `6 / 6 PASS`
+- 合計: `16 / 16 PASS`
+- 教材内根拠のみで解答: `PASS`
+- 教材外知識による補完: `0件`
+- 公式解答・標準解答との不一致: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC指定9項目・4可視化・共通仮定式系変更: `0件`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+
 ## 過去Topic
 Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次に行うこと
-Topic 15の固定候補答案16要素を変更せず公式解答・標準解答と照合し、各答案要素が完成教材内の根拠だけで導けたかを確認して、完成後独立再解答のPASS/FAILを確定する。
+Topic 15の最終QAを実施し、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界、進捗記録整合を再確認して `completed` 可否を判定する。
