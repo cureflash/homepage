@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 13 / 20
-- current_status: `topic_14_practice_pdf_complete`
+- current_status: `topic_14_powerpoint_complete`
 - last_completed_topic: `13 フーリエ級数`
 - active_topic: `14 フーリエ変換・FFT`
-- next_start: Topic 14の解説画像PowerPointを作成する
+- next_start: Topic 14の完成後独立再解答を実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -189,26 +189,26 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF
-- [ ] 解説画像PowerPoint
-- [ ] PowerPoint表示QA
+- [x] 解説画像PowerPoint
+- [x] PowerPoint表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 14 `フーリエ変換・FFT` の練習PDFを作成し、GitHub正本へ反映した。
+Topic 14 `フーリエ変換・FFT` の解説画像PowerPointと表示QAを作成し、GitHub正本へ反映した。
 
-`topics/14_fourier_transform_fft/14_fourier_transform_fft_practice.pdf` はA4縦5ページ。全12問（一次型8問／記述型4問）と完全解説を反映した。200 dpi全ページ表示QA `5 / 5 PASS`、文字抽出QA `PASS`。
+`topics/14_fourier_transform_fft/14_fourier_transform_fft_images.pptx` は16:9・5枚。サンプリング定理、`f_s=1/T_s`、DFT、`Δf=f_s/N`、FFT、エイリアシング、教育用PWM相当波形のスペクトル読取りを可視化した。
 
-固定R3一次「機械」問8 (1)の1答案要素への接続 `1 / 1 PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS` を維持した。
+固定R3一次「機械」問8 (1)の1答案要素への可視化接続 `1 / 1 PASS`。全5スライド再レンダリング `5 / 5 PASS`、クリッピング・重なり・文字化け0件、overflow 0件、`slides_test.py` PASS、PPTX ZIP/XML整合性PASS。
 
 Topic 15先取り、ADC量子化・変換回路方式、フィルタ設計一般、FFT実装詳細の試験必須化、二次公式過去問の件数合わせ、第一種・第三種による件数水増し、未確認実車値追加はいずれも0件。
 
 ## 判定
 
-Topic 14は `PRACTICE_PDF_COMPLETE / IN_PROGRESS`。
+Topic 14は `POWERPOINT_COMPLETE / IN_PROGRESS`。
 
 完成数は `13 / 20`。
 
-次はTopic 14の解説画像PowerPointを作成する。
+次はTopic 14の完成後独立再解答を実施する。
