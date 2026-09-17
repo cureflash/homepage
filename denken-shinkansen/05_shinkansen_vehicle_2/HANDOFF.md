@@ -7,7 +7,7 @@
 
 Topic 01〜13は最終QAまで `PASS / completed`。完成数は `13 / 39`。
 
-現在地は `topic_14_blind_reanswer_passed`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は、固定一次2問＋二次3問、計5問・9答案要素、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、blind再解答前ゲート、完成後blind再解答までPASS。Topic 14自体はまだ最終QA前なので `completed` にしない。
+現在地は `topic_14_final_qa_needs_progress_sync`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は、固定一次2問＋二次3問、計5問・9答案要素、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、blind再解答前ゲート、完成後blind再解答までPASS。最終QAでは技術・試験対応・成果物・SPEC境界はPASSしたが、進捗記録4箇所が旧工程のため `NEEDS_REVISION / IN_PROGRESS`。`completed` にはしない。
 
 ## Topic 14 固定EXAM_ALIGNMENT
 source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -43,6 +43,7 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - blind再解答前ゲート: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_gate.md` — `PASS / BLIND_REANSWER_READY`
 - blind答案: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer.md`
 - blind再解答QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_qa.md` — `PASS / BLIND_REANSWER_COMPLETE`
+- 最終QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_final_qa.md` — `NEEDS_REVISION / IN_PROGRESS`
 
 主要QA:
 - 解説本文3段階例題: `3 / 3 PASS`
@@ -51,6 +52,7 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 解説PDF表示QA: `3 / 3 PASS`
 - 練習PDF表示QA: `2 / 2 PASS`
 - PowerPoint: 16:9・4枚、SPEC指定4可視化 `4 / 4 PASS`、表示QA `4 / 4 PASS`
+- 完成後blind再解答: `5 / 5問・9 / 9答案要素 PASS`
 - 未確認300系実車値の真値化: `0件`
 - SPEC外追加: `0件`
 
@@ -89,6 +91,25 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 
 新しい許容差・一般例外は追加していない。公式問題条件と公式標準解答に掲載された式を正本として算術を再現し、最終印字値だけが式・中間値と不整合である個別事象として確定したため、blind答案 `48.0 N·m` をPASSとした。
 
+## Topic 14 最終QA
+- 技術内容: `PASS`
+- 固定5問・9答案要素: `PASS`
+- 完成後blind再解答: `9 / 9 PASS`
+- 必須成果物: `PASS`
+- PDF/PPTX表示・構造QA: `PASS`
+- 練習問題QA: `12 / 12 PASS`
+- SPEC境界: `PASS`
+- 進捗記録整合: `FAIL / 4件`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
+同期対象は次の4箇所のみ。
+1. 主source冒頭 `## 状態`
+2. 主source末尾 `## 次工程`
+3. 練習source末尾 `## 次工程`
+4. 練習PDF QA末尾 `## 現在地`
+
+技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind再解答結果は変更しない。
+
 ## Topic 14 SPEC固定範囲
 扱う内容:
 - 走行抵抗
@@ -114,4 +135,4 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次の正確な開始点
-Topic 14の最終QA。必須成果物、固定5問・9答案要素のblind再解答 `9 / 9 PASS`、PDF/PPTX QA、練習問題QA、SPEC境界、進捗記録整合を再確認し、`PASS / completed` の可否を判定する。Topic 15へは最終QA完了後に進む。
+Topic 14最終QAで検出した進捗記録4箇所だけを現在地へ同期する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない。同期後にTopic 14最終QAを再判定する。Topic 15へは最終QAが `PASS / completed` になるまで進まない。
