@@ -1,18 +1,18 @@
 # STATUS - 新幹線・電験二種「機械・制御」
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_16_explanation_source_complete`
+- current_status: `topic_16_explanation_pdf_complete`
 - last_completed_topic: `15 新幹線の補機モーターを設計する`
 - active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: Topic 16 解説PDF作成
+- next_start: Topic 16 練習問題source作成
 
 ## 完了テーマ
 - [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `IN_PROGRESS` — 解説source完成
+- [ ] Topic 16 `IN_PROGRESS` — 解説PDF完成
 
 ## Topic 15 固定範囲
 系列 `SPEC.md` の次だけを扱う。
@@ -165,8 +165,27 @@
 - [x] 固定問題の個別正答記号・完成済み数値解保存 `0件`
 - [x] 判定 `PASS / topic_16_explanation_source_complete`
 
+## Topic 16 解説PDF
+- [x] `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_explanation.pdf` を作成
+- [x] A4縦・8ページ
+- [x] 固定一次4問＋二次記述1問・12答案要素を維持
+- [x] 固定12答案要素をPDFへ `12 / 12` 接続
+- [x] 基礎／本試験標準／複合の3段階例題を収録し、数値再計算PASS
+- [x] N700S実車事実と教材用仮定値の区別を維持
+- [x] 160 dpi 全8ページ表示QA `8 / 8 PASS`
+- [x] 文字・数式・表の欠落、重なり、切れ、overflow `0件`
+- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- [x] 電池材料反応・BMS・チョッパ回路詳細の仕様追加 `0件`
+- [x] Topic 17以降先取り `0件`
+- [x] 未確認N700S実車値の真値化 `0件`
+- [x] 固定問題の個別正答記号・完成済み数値解掲載 `0件`
+- [x] QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_explanation_pdf_qa.md`
+- [x] PDF SHA-256 `b9c88d84c1914d8d939356694603228b8303df38312e7f22cc5674b4ad90b3c0`
+- [x] PDF Git blob SHA `ec0988d134a802f9f54f1e1f54af442e6bde23b6`
+- [x] 判定 `PASS / topic_16_explanation_pdf_complete`
+
 ## 今回進めた内容
-Topic 16解説sourceを完成した。固定一次4問＋二次1問・12答案要素を変更せず、本文へ `12 / 12` 接続した。3段階例題を追加し、N700S側は公式メーカー資料で確認できる自走用リチウムイオンバッテリーと駆動システムへの給電関係だけを実車事実として扱った。未確認の実車電池定格、材料反応、BMS、チョッパ回路詳細、Topic 17以降は追加していない。
+Topic 16の解説PDFを作成した。既存の「機械二種を進行」枠で完成済みだった解説sourceをreconcileして再制作せず、固定一次4問＋二次1問・12答案要素を変更しないままA4縦8ページへ反映した。3段階例題の数値を再計算し、160 dpi全8ページ表示QA、PDF文字抽出QAをPASS。未確認実車定格、材料反応、BMS、チョッパ回路詳細、Topic 17以降は追加していない。
 
 ## 判定
-Topic 16は `topic_16_explanation_source_complete / IN_PROGRESS`。完成数は `15 / 22`。次は Topic 16 解説PDF作成。
+Topic 16は `topic_16_explanation_pdf_complete / IN_PROGRESS`。完成数は `15 / 22`。次は Topic 16 練習問題source作成。
