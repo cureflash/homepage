@@ -5,7 +5,7 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は品質ゲートPASSでcompleted。active topicは14「停電してもN700Sが走れるのはなぜ？」。
 
-Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題sourceを完了し、`topic_14_practice_source_complete / IN_PROGRESS`。練習PDF・解説画像PowerPointは未着手。
+Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDFを完了し、`topic_14_practice_pdf_complete / IN_PROGRESS`。解説画像PowerPointは未着手。
 
 ## Topic 14 固定範囲
 系列 `SPEC.md` に従い、電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率だけを扱う。
@@ -81,7 +81,7 @@ JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ�
 
 ## Topic 14 成果物
 - source: `topics/14_battery/14_battery.md`
-- 状態: 練習問題source完成
+- 状態: 練習PDF完成
 - source本文QA: `PASS`
 - explanation PDF: `topics/14_battery/14_battery_explanation.pdf`
 - explanation PDF QA: `topics/14_battery/14_battery_explanation_pdf_qa.md`
@@ -89,7 +89,13 @@ JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ�
 - explanation PDF文字抽出QA: `PASS`
 - practice source: `topics/14_battery/14_battery_practice.md`
 - practice source QA: `12 / 12 PASS`
-- practice PDF: 未着手
+- practice PDF: `topics/14_battery/14_battery_practice.pdf`
+- practice PDF QA: `topics/14_battery/14_battery_practice_pdf_qa.md`
+- practice PDF表示QA: `3 / 3 PASS`
+- practice PDF文字抽出QA: `PASS`
+- practice PDF固定過去問マッピング: `1 / 1 PASS`
+- practice PDF文字切れ・重なり・ページ外はみ出し: `0件`
+- practice PDF欠落・破損グリフ: `0件`
 - PowerPoint: 未着手
 - 完成後blind独立再解答: 未実施
 - 固定範囲外追加: `0件`
@@ -100,4 +106,4 @@ JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 14の練習PDFを、`topics/14_battery/14_battery_practice.md` から作成する。
+Topic 14の解説画像PowerPointを作成する。
