@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 13 / 14
-- current_status: `topic_13_completed`
+- current_status: `topic_14_exam_alignment_complete`
 - last_completed_topic: `13 インバータはどうやって三相交流を作る？`
 - active_topic: `14 East iは何をどう測っている？`
-- next_start: Topic 14の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 14の解説本文＋3段階例題を作成する
 
 ## Topic 01 進捗
 
@@ -241,25 +241,35 @@
 - [x] 完成後の公式過去問独立再解答 `4 / 4 PASS`
 - [x] 最終QA PASS
 
+## Topic 14 進捗
+
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] GitHub上のSTATUS / HANDOFF / 既存成果物確認（Topic 14既存成果物なし）
+- [x] 令和8年度上期まで直近年度を優先して公式理論過去問を確認
+- [x] Topic 14固定範囲でゲート対象8問・13答案要素を確定
+- [x] 制作前独立検証 `8 / 8問・13 / 13答案要素 PASS`
+- [x] 未確認East i検測項目・センサ構成・内部回路・数値、ATC/軌道回路詳細を境界整理
+- [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
+- [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source・練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] 完成後の公式過去問独立再解答
+- [ ] 最終QA PASS
+
 ## 今回進めた内容
 
-Topic 13 `インバータはどうやって三相交流を作る？` の最終QAを実施し、`PASS / completed` とした。
+Topic 14 `East iは何をどう測っている？` の制作前EXAM_ALIGNMENTを完了した。
 
-- 固定公式「理論」過去問: `4問`
-- 完成後独立再解答: `4 / 4 PASS`
-- 公式解答一致: `4 / 4`
-- 教材外知識による補完: `0件`
-- 固定過去問要求の本文マッピング: `4 / 4`
-- 3段階例題: `3 / 3 PASS`
-- 練習問題: 15問、正答一意性 `15 / 15 PASS`、再計算 `8 / 8 PASS`
-- 解説PDF: 200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- 練習PDF: 200 dpi表示 `3 / 3 PASS`、文字抽出PASS
-- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
-- 系列SPEC固定範囲外追加: `0件`
-- 未確認実車値依存: `0件`
-- 最終QA記録: `topics/13_inverter_pwm/13_inverter_pwm_final_qa.md`
-- 主source・練習source: `COMPLETED`
+- 令和8年度上期まで公式「理論」過去問を確認
+- 固定公式過去問: `8問・13答案要素`
+- 制作前独立検証: `8 / 8問・13 / 13答案要素 PASS`
+- 固定範囲外追加: `0件`
+- 未確認East i実車情報の教材事実化: `0件`
+- e-sysnet・電験王・電験三種まとめましたで説明粒度を確認
+- source: `topics/14_east_i_measurement/14_east_i_measurement.md`
 
 ## 判定
 
-Topic 13は `PASS / completed`。完成数は `13 / 14`。次はTopic 14「East iは何をどう測っている？」の制作前EXAM_ALIGNMENTを実施する。
+Topic 14は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `13 / 14`。次は固定EXAM_ALIGNMENTに基づいて解説本文＋3段階例題を作成する。
