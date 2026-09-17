@@ -6,19 +6,19 @@
 - Topic 01〜14: 最終QA `PASS / completed`
 - 完成数: `14 / 22`
 - active topic: `15 新幹線の補機モーターを設計する`
-- current status: `topic_15_independent_reanswer_complete`
-- 次工程: Topic 15 最終QA
+- current status: `topic_15_final_qa_needs_revision`
+- 次工程: Topic 15 進捗記録3箇所の同期
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
 - 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 15既存成果物を確認した。
 - Topic 14は最終QA `PASS / completed` のまま変更なし。
-- Topic 15は制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、解説画像PowerPoint、PowerPoint QA、独立再解答前ゲートまで完成済みだった。
-- 今回、固定5過去問・8答案要素を、公式解答・標準解答を開く前に完成教材だけで再解答し、答案確定後に公式資料と照合した。
-- 独立再解答は `8 / 8 PASS`。教材外知識補完 `0件`。
-- 固定一次3問＋二次記述2問、計5問・8答案要素を変更していない。
-- 固定範囲外論点、Topic 16以降の先取り、未確認新幹線補機実値の真値化はいずれも `0件`。
+- Topic 15は制作前EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、解説画像PowerPoint、PowerPoint QA、独立再解答前ゲート、完成後独立再解答まで完成済み。
+- 固定5過去問・8答案要素の独立再解答は `8 / 8 PASS`。教材外知識補完 `0件`。
+- 今回最終QAを実施し、必須成果物、試験対応、練習・表示QA、仕様境界はPASS。
+- blockerは進捗記録3箇所のみ。main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程` がPowerPoint作成前の状態で止まっている。
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの修正は不要。
 
 ## Topic 15 固定範囲
 - ポンプ
@@ -55,7 +55,7 @@
 - PowerPoint QA: PASS
 - 独立再解答前ゲート: `BLIND_REANSWER_READY`
 - 完成後独立再解答: `PASS / independent_reanswer_complete`
-- 最終QA: 未着手
+- 最終QA記録: `NEEDS_REVISION / IN_PROGRESS`
 
 ## Topic 15 PowerPoint QA
 - `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_images.pptx`
@@ -69,15 +69,6 @@
 - 固定範囲外論点・Topic 16以降先取り・未確認新幹線補機実値追加 `0件`
 - Git blob SHA `af72dc7052484b5e368a1ab16389e4571caa7d3b`
 
-## Topic 15 独立再解答前ゲート
-- `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_blind_reanswer_gate.md`
-- 判定: `BLIND_REANSWER_READY`
-- 固定5過去問の公式正答番号・標準解答本文の保存 `0件`
-- 固定5過去問の完成済み個別解答・数値解・導出結果の保存 `0件`
-- 練習sourceの正答・完全解説は教材自身の練習問題であり、固定公式過去問の保存済み正答には該当しない
-- 固定一次3問＋二次2問・8答案要素、教材本文・PDF、練習、PowerPoint、固定EXAM_ALIGNMENTは変更なし
-- コンプレッサへの三乗則無条件適用、Topic 16以降先取り、未確認新幹線補機実値追加 `0件`
-
 ## Topic 15 完成後独立再解答
 - `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_independent_reanswer.md`
 - R06 一次 機械 問2 (5): `1 / 1 PASS`
@@ -90,5 +81,21 @@
 - 固定範囲外論点・Topic 16以降依存・未確認実値依存 `0件`
 - 判定: `PASS / independent_reanswer_complete`
 
+## Topic 15 最終QA
+- `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_final_qa.md`
+- 必須成果物: PASS
+- 固定5問・8答案要素: `8 / 8 PASS`
+- 完成後独立再解答: `8 / 8 PASS`
+- 練習・PDF/PPTX QA: PASS
+- 仕様境界: PASS
+- 進捗記録整合: FAIL
+- 最終判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 次に行うこと
-Topic 15最終QAを実施する。必須成果物、固定EXAM_ALIGNMENT 5問・8答案要素、独立再解答 `8 / 8 PASS`、PDF/PPTX QA、固定範囲境界、進捗記録の整合を再確認し、PASSした場合のみTopic 15を `completed`、完成数を `15 / 22` とする。
+Topic 15の技術内容は変更せず、次の進捗文だけを実成果物状態へ同期する。
+
+1. `topics/15_auxiliary_motor_design/15_auxiliary_motor_design.md` の `## 状態`
+2. 同ファイル末尾 `# 次工程`
+3. `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_practice.md` 末尾 `# 次工程`
+
+同期後にTopic 15最終QAを再実施し、全項目PASSの場合のみ `completed`、完成数 `15 / 22` とする。
