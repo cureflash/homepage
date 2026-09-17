@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 13 / 21
-- current_status: `topic_14_final_qa_complete`
-- last_completed_topic: `13 新幹線の交流電力を複素数で扱う`
-- active_topic: `14 インバータのギザギザ波形を分解する`
-- next_start: Topic 14 主source・練習source・STATUS・HANDOFFのcompleted状態同期
+- exam_aligned_completed_topics: 14 / 21
+- current_status: `topic_14_completed`
+- last_completed_topic: `14 インバータのギザギザ波形を分解する`
+- active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
+- next_start: Topic 15 制作前EXAM_ALIGNMENT
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -218,19 +218,19 @@
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source・練習sourceの旧進捗記録同期
 - [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
+- [x] 主source・練習source・STATUS・HANDOFFをcompleted状態へ同期
+- [x] 最終判定: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 14「インバータのギザギザ波形を分解する」の最終QAを再実施した。
+Topic 14「インバータのギザギザ波形を分解する」のcompleted状態同期を完了した。
 
-- 固定一次2問・3答案要素＋二次1問・2答案要素の完成後独立再解答: `5 / 5 PASS`
-- 必須成果物の実在: `PASS`
-- 解説PDF・練習PDF・PowerPoint表示QA: `PASS`
-- 練習12問の数値・論理QA、正答一意性: `12 / 12 PASS`
-- 二次採用判断・SPEC境界: `PASS`
-- 初回最終QAのexact blocker 3件: `3 / 3 解消`
+- 主source: `COMPLETED / completed`
+- 練習source: `COMPLETED / completed`
+- STATUS / HANDOFF: Topic 14 completed、完成数 `14 / 21` へ同期
+- 固定一次2問・3答案要素＋二次1問・2答案要素の完成後独立再解答: `5 / 5 PASS` を維持
 - 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
 
 ## 判定
 
-Topic 14は `PASS / FINAL_QA_COMPLETE`。完成数はまだ `13 / 21` のまま。次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。
+Topic 14は `PASS / completed`。完成数は `14 / 21`。次工程はTopic 15「遮断器を入れた瞬間、電流はどう変化する？」の制作前EXAM_ALIGNMENT。
