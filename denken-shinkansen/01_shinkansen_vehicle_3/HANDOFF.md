@@ -6,21 +6,16 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は34/38。01〜34がPASS。active topicは35 `COMTRAC③ ダイヤが乱れたらどうする？`。
 
 ## 今回進捗
-Topic 35の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。
+Topic 35の前回最終QAで唯一FAILだった進捗記録3箇所を実成果物へ同期した。`topic_35_progress_records_synced / IN_PROGRESS`。
 
-- 固定EXAM_ALIGNMENT 5問は変更なし
-- 完成後blind独立再解答: `5 / 5問 PASS`
-- 必須成果物: PASS
-- 練習問題QA: `15 / 15 PASS`
-- 解説PDF / 練習PDF / PowerPoint表示QA: PASS
-- 系列SPEC固定範囲境界: PASS
-- 進捗記録整合: FAIL
-- 未完了理由は進捗記録3箇所のみ
-  1. main source冒頭 `## 状態` の「PDF・練習問題・PowerPointは未着手」
-  2. main source冒頭 `次工程` の「解説PDFを作成する」
-  3. 解説PDF QAの `次工程` の「Topic 35の練習source」
-- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更なし
-- 最終QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_final_qa.md`
+- main source冒頭 `## 状態` を、解説PDF・練習source/PDF・PowerPoint・完成後blind独立再解答完了状態へ同期
+- main source `次工程` を「解説PDF作成」から「最終QA再実施」へ同期
+- 解説PDF QA `次工程` を「練習source」から「最終QA再実施」へ同期
+- 固定EXAM_ALIGNMENT 5問: 変更なし
+- 完成後blind独立再解答: `5 / 5問 PASS` のまま
+- 技術本文・問題/正答・PDF/PPTX: 変更なし
+- 完成数は `34 / 38` 維持
+- 次工程: Topic 35の最終QA再実施
 
 ## Topic 35 固定EXAM_ALIGNMENT
 - R7下 機械 問14 — フローチャート、変数更新、条件分岐、反復
@@ -131,6 +126,13 @@ Topic 35の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した
 - 進捗記録整合: FAIL（旧工程3箇所のみ）
 - 完成数: `34 / 38` 維持
 
+## Topic 35 進捗記録同期
+- 判定: `topic_35_progress_records_synced / IN_PROGRESS`
+- 旧工程3箇所を実成果物へ同期済み
+- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果: 変更なし
+- 完成数: `34 / 38` 維持
+- 次工程: Topic 35の最終QA再実施
+
 ## Topic 35 系列SPEC固定範囲
 扱う: 遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
 
@@ -179,11 +181,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_35_final_qa_needs_revision`
+- `current_status`: `topic_35_progress_records_synced`
 - 完成数: 34/38
 - 01〜34: PASS
 - last completed: 34 `COMTRAC② 進路をどう自動制御する？`
 - active topic: 35 `COMTRAC③ ダイヤが乱れたらどうする？`
 
 ## 次の正確な開始点
-Topic 35の進捗記録3箇所だけを実成果物へ同期する。対象は `35_comtrac_disruption_management.md` 冒頭 `## 状態` の未着手記述、同sourceの `次工程`、`35_comtrac_disruption_management_explanation_pdf_qa.md` の `次工程`。技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない。同期後に最終QAを再実施する。
+Topic 35の最終QAを再実施する。前回唯一FAILだった進捗記録整合を再確認し、技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない。
