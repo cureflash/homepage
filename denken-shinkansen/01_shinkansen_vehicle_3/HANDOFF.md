@@ -6,17 +6,20 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は35/38。01〜35がPASS。active topicは36 `COSMOS① 新幹線全体を統合管理する`。
 
 ## 今回進捗
-Topic 36の制作前EXAM_ALIGNMENT固定結果がmain sourceへ反映済みである一方、`STATUS.md` と `HANDOFF.md` がTopic 35完了直後の旧工程を指していたため、GitHub正本の進捗記録を同期した。
+Topic 36の制作前独立解答を実施したが、H27 機械 問18(a)(b)の問題本文補完中に第三者ページの正答表示へ到達したため、固定5問・8答案要素全体を `RETRY_REQUIRED / NOT_COUNTED` とした。
 
 - 固定EXAM_ALIGNMENT: 公式過去問 `5問・8答案要素`、変更なし
 - 系列SPEC固定範囲: 運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理
-- 制作前独立解答: `NOT_COUNTED` のまま。品質ゲートを緩和しない
+- R6上・R4上・R4下の4問・6答案要素: 公式問題PDFだけで先に独立導出し、全答案確定後に公式解答表と照合して `6 / 6一致`
+- H27 機械 問18(a)(b): blind条件不成立
+- 品質ゲート算入: `0 / 8`。部分合格扱いにしない
+- 個別正答番号・完成導出の必須先読みsource保存: `0件`
 - 解説本文・PDF・練習問題・PowerPoint: 未着手
 - 完成数: `35 / 38` 維持
 - 固定範囲外追加: `0件`
 - Topic 37〜38先取り: `0件`
 - 未確認COSMOS内部仕様追加: `0件`
-- 次工程: 固定5問・8答案要素を変更せず、公式解答を先に見ない独立runで制作前独立解答を行う。`8 / 8 PASS`確認後に解説本文へ進む
+- 次工程: 固定5問・8答案要素を変更せず、新しいblind runで最初から全8答案要素を解き、全答案と根拠を確定した後にのみ公式解答を開く。`8 / 8 PASS`確認後に解説本文へ進む
 
 ## Topic 35 固定EXAM_ALIGNMENT
 - R7下 機械 問14 — フローチャート、変数更新、条件分岐、反復
@@ -183,11 +186,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_36_exam_alignment_fixed`
+- `current_status`: `topic_36_preanswer_retry_required`
 - 完成数: 35/38
 - 01〜35: PASS
 - last completed: 35 `COMTRAC③ ダイヤが乱れたらどうする？`
 - active topic: 36 `COSMOS① 新幹線全体を統合管理する`
 
 ## 次の正確な開始点
-Topic 36は制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定済み。固定内容を変更せず、公式解答を先に見ない独立runで制作前独立解答を行い、`8 / 8 PASS`確認後に解説本文へ進む。
+Topic 36は制作前EXAM_ALIGNMENTの公式過去問5問・8答案要素を固定済み。今回の試行はH27問18の問題本文補完中に第三者ページの正答表示へ到達したため `RETRY_REQUIRED / NOT_COUNTED`。固定内容を変更せず、新しいblind runで全8答案要素を最初から解き、全答案と根拠を確定した後にのみ公式解答を開く。`8 / 8 PASS`確認後に解説本文へ進む。
