@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<rect width="100%" height="100%" fill="white"/>
+<text x="480.0" y="30" text-anchor="middle" font-size="20" font-family="sans-serif">Topic 11: pantograph voltage vs train position</text>
+<line x1="92" y1="462" x2="925" y2="462" stroke="black"/>
+<line x1="92" y1="54" x2="92" y2="462" stroke="black"/>
+<line x1="92.00" y1="462" x2="92.00" y2="468" stroke="black"/>
+<text x="92.00" y="486" text-anchor="middle" font-size="12" font-family="sans-serif">0.0</text>
+<line x1="86" y1="462.00" x2="92" y2="462.00" stroke="black"/>
+<text x="82" y="466.00" text-anchor="end" font-size="12" font-family="sans-serif">24.9</text>
+<line x1="92" y1="462.00" x2="925" y2="462.00" stroke="#dddddd" stroke-width="1"/>
+<line x1="258.60" y1="462" x2="258.60" y2="468" stroke="black"/>
+<text x="258.60" y="486" text-anchor="middle" font-size="12" font-family="sans-serif">2.4</text>
+<line x1="86" y1="380.40" x2="92" y2="380.40" stroke="black"/>
+<text x="82" y="384.40" text-anchor="end" font-size="12" font-family="sans-serif">24.9</text>
+<line x1="92" y1="380.40" x2="925" y2="380.40" stroke="#dddddd" stroke-width="1"/>
+<line x1="425.20" y1="462" x2="425.20" y2="468" stroke="black"/>
+<text x="425.20" y="486" text-anchor="middle" font-size="12" font-family="sans-serif">4.8</text>
+<line x1="86" y1="298.80" x2="92" y2="298.80" stroke="black"/>
+<text x="82" y="302.80" text-anchor="end" font-size="12" font-family="sans-serif">24.9</text>
+<line x1="92" y1="298.80" x2="925" y2="298.80" stroke="#dddddd" stroke-width="1"/>
+<line x1="591.80" y1="462" x2="591.80" y2="468" stroke="black"/>
+<text x="591.80" y="486" text-anchor="middle" font-size="12" font-family="sans-serif">7.2</text>
+<line x1="86" y1="217.20" x2="92" y2="217.20" stroke="black"/>
+<text x="82" y="221.20" text-anchor="end" font-size="12" font-family="sans-serif">24.9</text>
+<line x1="92" y1="217.20" x2="925" y2="217.20" stroke="#dddddd" stroke-width="1"/>
+<line x1="758.40" y1="462" x2="758.40" y2="468" stroke="black"/>
+<text x="758.40" y="486" text-anchor="middle" font-size="12" font-family="sans-serif">9.6</text>
+<line x1="86" y1="135.60" x2="92" y2="135.60" stroke="black"/>
+<text x="82" y="139.60" text-anchor="end" font-size="12" font-family="sans-serif">25</text>
+<line x1="92" y1="135.60" x2="925" y2="135.60" stroke="#dddddd" stroke-width="1"/>
+<line x1="925.00" y1="462" x2="925.00" y2="468" stroke="black"/>
+<text x="925.00" y="486" text-anchor="middle" font-size="12" font-family="sans-serif">12.0</text>
+<line x1="86" y1="54.00" x2="92" y2="54.00" stroke="black"/>
+<text x="82" y="58.00" text-anchor="end" font-size="12" font-family="sans-serif">25</text>
+<line x1="92" y1="54.00" x2="925" y2="54.00" stroke="#dddddd" stroke-width="1"/>
+<text x="508.5" y="516" text-anchor="middle" font-size="14" font-family="sans-serif">train position x [km]</text>
+<text x="23" y="258.0" text-anchor="middle" font-size="14" font-family="sans-serif" transform="rotate(-90 23 258.0)">pantograph voltage [kV]</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="92.00,75.86 98.94,78.87 105.88,81.89 112.83,84.91 119.77,87.93 126.71,90.94 133.65,93.96 140.59,96.98 147.53,100.00 154.47,103.02 161.42,106.04 168.36,109.06 175.30,112.08 182.24,115.10 189.18,118.12 196.12,121.14 203.07,124.16 210.01,127.19 216.95,130.21 223.89,133.23 230.83,136.25 237.78,139.28 244.72,142.30 251.66,145.32 258.60,148.35 265.54,151.37 272.48,154.40 279.43,157.42 286.37,160.45 293.31,163.47 300.25,166.50 307.19,169.53 314.13,172.55 321.08,175.58 328.02,178.61 334.96,181.63 341.90,184.66 348.84,187.69 355.78,190.72 362.73,193.75 369.67,196.78 376.61,199.81 383.55,202.84 390.49,205.87 397.43,208.90 404.38,211.93 411.32,214.96 418.26,217.99 425.20,221.02 432.14,224.05 439.08,227.09 446.03,230.12 452.97,233.15 459.91,236.19 466.85,239.22 473.79,242.25 480.73,245.29 487.68,248.32 494.62,251.36 501.56,254.39 508.50,257.43 515.44,260.46 522.38,263.50 529.33,266.54 536.27,269.57 543.21,272.61 550.15,275.65 557.09,278.68 564.03,281.72 570.98,284.76 577.92,287.80 584.86,290.84 591.80,293.88 598.74,296.92 605.68,299.96 612.62,303.00 619.57,306.04 626.51,309.08 633.45,312.12 640.39,315.16 647.33,318.20 654.27,321.25 661.22,324.29 668.16,327.33 675.10,330.37 682.04,333.42 688.98,336.46 695.93,339.51 702.87,342.55 709.81,345.60 716.75,348.64 723.69,351.69 730.63,354.73 737.58,357.78 744.52,360.82 751.46,363.87 758.40,366.92 765.34,369.97 772.28,373.01 779.23,376.06 786.17,379.11 793.11,382.16 800.05,385.21 806.99,388.26 813.93,391.31 820.88,394.36 827.82,397.41 834.76,400.46 841.70,403.51 848.64,406.56 855.58,409.61 862.53,412.66 869.47,415.71 876.41,418.77 883.35,421.82 890.29,424.87 897.23,427.93 904.18,430.98 911.12,434.03 918.06,437.09 925.00,440.14"/>
+<line x1="735" y1="71" x2="759" y2="71" stroke="#1f77b4" stroke-width="3"/>
+<text x="767" y="76" font-size="12" font-family="sans-serif">pantograph voltage</text>
+</svg>
