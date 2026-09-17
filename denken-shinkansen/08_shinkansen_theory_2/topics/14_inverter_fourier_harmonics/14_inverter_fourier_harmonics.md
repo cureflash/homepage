@@ -4,8 +4,8 @@
 
 ## 状態
 
-- stage: `SOURCE_PROGRESS_SYNCED`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
 - 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
@@ -14,7 +14,8 @@
 - PowerPoint QA: `PASS / POWERPOINT_COMPLETE`
 - 完成後独立再解答: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- 次工程: 最終QA再実施
+- 最終QA: `PASS / FINAL_QA_COMPLETE`
+- 次工程: Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の制作前EXAM_ALIGNMENT
 
 ## 1. SPEC固定範囲
 
@@ -565,6 +566,8 @@ FFTは、標本化した時間波形から離散的な周波数成分を求め�
 - [x] 完成後独立再解答: `5 / 5 PASS`
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source・練習sourceの旧進捗記録同期
-- [ ] 最終QA再実施
+- [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
+- [x] 主source・練習source・STATUS・HANDOFFをcompleted状態へ同期
+- [x] 最終判定: `PASS / completed`
 
-現在 `SOURCE_PROGRESS_SYNCED / IN_PROGRESS`。完成数は `13 / 21` のまま。次工程は最終QA再実施。
+現在 `COMPLETED / completed`。完成数は `14 / 21`。次工程はTopic 15「遮断器を入れた瞬間、電流はどう変化する？」の制作前EXAM_ALIGNMENT。
