@@ -643,4 +643,4 @@ p.u.では
 
 # 次工程
 
-練習問題source完成。次はこのsourceから練習PDFを作成し、全ページ表示QA・文字抽出QA・数値／論理再検算を行う。
+進捗記録同期済み。固定EXAM_ALIGNMENT、問題・正答、練習PDF、PowerPointを変更せず、Topic 14の最終QAを再実施する。
