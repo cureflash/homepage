@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 15 / 20
-- current_status: `topic_16_preproduction_reanswer_complete`
+- current_status: `topic_16_explanation_source_complete`
 - last_completed_topic: `15 対数・dB・周波数応答`
 - active_topic: `16 数値微分・数値積分`
-- next_start: Topic 16の固定4問・8答案要素を全件カバーする解説本文＋3段階例題を作成する
+- next_start: Topic 16の解説PDFを作成し、表示QA・文字抽出QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -236,7 +236,7 @@
 - [x] source Markdownへ要求知識・式・設問型・教材内必要説明・境界を固定
 - [x] 制作前独立再解答・公式解答照合 `8 / 8 PASS`
 - [x] 公式解答確認前に `ANSWER_LOCKED_BEFORE_REVIEW` を保存（lock commit `d376d19197e730308a26f37a055cecc91eb555de`）
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題（固定4問・8答案要素マッピング `8 / 8`、例題 `3 / 3`）
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF
@@ -248,16 +248,14 @@
 
 ## 今回進めた内容
 
-Topic 16 `数値微分・数値積分` の制作前独立再解答・公式解答照合を完了した。
+既存の「電気数学二種を進行」枠で完了したTopic 16の制作前独立再解答をreconcileし、重複せず次工程の解説本文＋3段階例題を主sourceへ作成した。
 
-EXAM_ALIGNMENTで固定済みの第二種公式過去問4問・8答案要素について、公式解答確認前に候補回答を `ANSWER_LOCKED_BEFORE_REVIEW` としてGitHubへ保存し、その後に公式解答・標準解答と照合した。結果は `8 / 8 PASS`、照合後の修正0件。
-
-固定問題数は4問のままとし、原則5問に届かせる目的で解析的微積分、Topic 17以降、第一種・第三種を追加していない。固定範囲も差分、数値微分、台形則、Simpson則の基本、誤差、刻み幅、速度データ→加速度、電力データ→電力量から変更していない。
+本文は差分・数値微分・台形則・Simpson則の基本・誤差・刻み幅・速度データから加速度・電力データから電力量に限定。固定4問・8答案要素への本文マッピングは `8 / 8`、3段階例題は `3 / 3`。第一種・第三種による件数水増し、Topic 17以降の先取り、未確認実車値の追加はいずれも0件。
 
 ## 判定
 
-`topic_16_preproduction_reanswer_complete / IN_PROGRESS`
+`topic_16_explanation_source_complete / IN_PROGRESS`
 
 完成数は `15 / 20` のまま。
 
-次は固定4問・8答案要素を全件カバーする解説本文＋3段階例題を作成する。
+次はTopic 16の解説PDFを作成し、表示QA・文字抽出QAを行う。
