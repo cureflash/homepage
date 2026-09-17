@@ -5,7 +5,7 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `13 / 39`
-- current_status: `topic_14_exam_alignment_complete`
+- current_status: `topic_14_exam_alignment_complete_spec_reconciled`
 - last_completed_topic: `13 300系④ 回生と四象限運転`
 - active_topic: `14 300系⑤ 走行抵抗と必要けん引力`
 - next_start: Topic 14 解説本文＋3段階例題
@@ -24,7 +24,7 @@
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
-- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / EXAM_ALIGNMENT_COMPLETE
+- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / EXAM_ALIGNMENT_COMPLETE / SPEC_RECONCILED
 
 ## Topic 14 固定EXAM_ALIGNMENT
 - source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -44,27 +44,58 @@
 - SPEC指定4可視化: `4 / 4 aligned`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
+## Topic 14 SPEC再照合
+`SPEC.md` 第14章の正本記載へ再照合し、進捗記録の範囲誤記を修正した。
+
+SPEC指定8項目:
+- 走行抵抗
+- 加速抵抗
+- 勾配抵抗
+- けん引力
+- 車輪周力
+- 速度
+- 必要出力
+- 加速度
+
+SPEC指定4可視化:
+- 速度―走行抵抗
+- 速度―必要けん引力
+- 速度―必要出力
+- 加速曲線
+
+再照合QA:
+- SPEC 8項目: `8 / 8 一致`
+- SPEC 4可視化: `4 / 4 一致`
+- 固定5過去問: `変更なし`
+- 固定9答案要素: `変更なし`
+- 制作前検証: `9 / 9 PASS 維持`
+- 「空気抵抗」をSPEC指定項目とする誤記: `修正済み`
+- 「勾配条件比較」をSPEC指定可視化とする誤記: `修正済み`
+- 新規過去問追加: `0件`
+- 新規実車値追加: `0件`
+
 ## Topic 14 固定範囲
 - 走行抵抗
-- 速度依存抵抗
-- 空気抵抗
-- 勾配抵抗
 - 加速抵抗
-- 必要けん引力
-- 軸出力
-- 車輪周出力
+- 勾配抵抗
+- けん引力
+- 車輪周力
+- 速度
+- 必要出力
+- 加速度
 
 SPEC指定可視化:
 - 速度―走行抵抗
 - 速度―必要けん引力
 - 速度―必要出力
-- 勾配条件比較
+- 加速曲線
 
 範囲境界:
 - Topic 13の回生・制動・エネルギー返送は再展開しない
 - Topic 12のPWM/VVVF/V/f制御等は `P=Tω` 接続に必要な範囲以上へ戻らない
 - 粘着限界、曲線抵抗、トンネル抵抗、台車・歯車設計、列車運行計画は追加しない
-- 未確認の300系質量・走行抵抗係数・空気抵抗係数・伝達効率を実車値として追加しない
+- 走行抵抗の内訳・経験式・係数は根拠のある範囲を超えて追加しない
+- 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## Topic 13 固定EXAM_ALIGNMENT
 - source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerative_four_quadrant.md`
@@ -205,4 +236,4 @@ Topic 12 `300系③ VVVFインバータと誘導機制御` は固定一次4問�
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。最終判定 `PASS / completed`。
 
 ## 次工程
-Topic 14は制作前EXAM_ALIGNMENTまで完了。固定一次2問＋二次3問・9答案要素とSPEC指定8項目・4可視化を変更せず、次は解説本文＋3段階例題を制作する。本文・PDF等で未確認の300系実車値を真値化しない。
+Topic 14は制作前EXAM_ALIGNMENTを正本SPECへ再照合済み。固定一次2問＋二次3問・9答案要素を変更せず、正本SPEC指定8項目・4可視化に沿って次は解説本文＋3段階例題を制作する。本文・PDF等で未確認の300系実車値を真値化しない。
