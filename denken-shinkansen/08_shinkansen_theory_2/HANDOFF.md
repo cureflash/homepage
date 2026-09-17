@@ -6,11 +6,11 @@
 
 Topic 01〜16は `PASS / completed`。完成数は `16 / 21`。
 
-current_status: `topic_17_exam_alignment_complete`
+current_status: `topic_17_explanation_source_complete`
 
 active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 
-Topic 17の制作前EXAM_ALIGNMENTまで完了。固定一次5問・25答案要素を公式標準解答と独立導出で `25 / 25 PASS`。R7〜R5二次を確認し、固定範囲だけで完結する直接対応問題は採用0問、数合わせ0件。次工程はTopic 17の解説本文＋3段階例題。
+Topic 17の解説本文＋3段階例題まで完了。固定一次5問・25答案要素への接続は `25 / 25`、過去問から逆算した必須説明は `15 / 15 covered`、例題は `3 / 3`。固定EXAM_ALIGNMENTと二次採用方針は変更せず、二次採用0問・数合わせ0件を維持。次工程は解説PDF＋表示QA。
 
 ## Topic 16 成果物
 
@@ -164,7 +164,7 @@ Topic 17の制作前EXAM_ALIGNMENTまで完了。固定一次5問・25答案要�
 
 - source: `topics/17_transistor_fet_switching/17_transistor_fet_switching.md`
 - completion: `in_progress`
-- stage: `EXAM_ALIGNMENT_COMPLETE`
+- stage: `EXPLANATION_SOURCE_COMPLETE`
 
 ## Topic 17 固定範囲
 
@@ -206,6 +206,25 @@ R8一次理論は確認したが固定範囲の直接対応問題なし。R7〜R
 
 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 
+## Topic 17 解説本文QA
+
+- 過去問から逆算した必須説明: `15 / 15 covered`
+- 固定一次5問・25答案要素への接続: `25 / 25`
+- 3段階例題: `3 / 3`
+- BJT直流動作点と小信号計算の分離: `PASS`
+- エミッタ接地の位相反転: `PASS`
+- エミッタフォロワの電流増幅・電圧追従: `PASS`
+- MOSFET `g_m` 増幅: `PASS`
+- CMOS ON/OFF・容量性負荷: `PASS`
+- IGBT/GTO/SiC: `概念範囲のみ`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 変換器詳細計算追加: `0件`
+- 未確認新幹線主変換装置仕様追加: `0件`
+- Topic 18以降の先取り: `0件`
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
 ## 次工程
 
-Topic 17の固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を作成する。
+Topic 17の固定EXAM_ALIGNMENTと解説本文を変更せず、解説PDFを作成して表示QAを行う。
