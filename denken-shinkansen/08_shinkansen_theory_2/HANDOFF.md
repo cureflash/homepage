@@ -6,11 +6,11 @@
 
 Topic 01〜16は `PASS / completed`。完成数は `16 / 21`。
 
-current_status: `topic_17_explanation_source_complete`
+current_status: `topic_17_explanation_pdf_complete`
 
 active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 
-Topic 17の解説本文＋3段階例題まで完了。固定一次5問・25答案要素への接続は `25 / 25`、過去問から逆算した必須説明は `15 / 15 covered`、例題は `3 / 3`。固定EXAM_ALIGNMENTと二次採用方針は変更せず、二次採用0問・数合わせ0件を維持。次工程は解説PDF＋表示QA。
+Topic 17の解説PDF＋表示QAまで完了。A4縦2ページ、200 dpi `2 / 2 PASS`、文字抽出 `PASS`。固定一次5問・25答案要素への接続は `25 / 25`、過去問から逆算した必須説明は `15 / 15 covered`、例題は `3 / 3`。固定EXAM_ALIGNMENTと二次採用方針は変更せず、二次採用0問・数合わせ0件を維持。次工程は練習問題source＋練習PDF。
 
 ## Topic 16 成果物
 
@@ -163,8 +163,10 @@ Topic 17の解説本文＋3段階例題まで完了。固定一次5問・25答�
 ## Topic 17 成果物
 
 - source: `topics/17_transistor_fet_switching/17_transistor_fet_switching.md`
+- 解説PDF: `topics/17_transistor_fet_switching/17_transistor_fet_switching_explanation.pdf`
+- 解説PDF QA: `topics/17_transistor_fet_switching/17_transistor_fet_switching_explanation_pdf_qa.md`
 - completion: `in_progress`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `EXPLANATION_PDF_COMPLETE`
 
 ## Topic 17 固定範囲
 
@@ -225,6 +227,25 @@ R8一次理論は確認したが固定範囲の直接対応問題なし。R7〜R
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
+## Topic 17 解説PDF QA
+
+記録: `topics/17_transistor_fet_switching/17_transistor_fet_switching_explanation_pdf_qa.md`
+
+- A4縦2ページ
+- 200 dpi全ページ表示QA: `2 / 2 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `63a85a2edd9cf0f79bad6801b2e39325b8da7b899d4764bf50f7c5fa6d664d35`
+- 固定一次5問・25答案要素への教材内接続: `25 / 25`
+- 過去問から逆算した必須説明: `15 / 15 covered`
+- 3段階例題: `3 / 3`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 変換器詳細計算追加: `0件`
+- 未確認新幹線主変換装置仕様追加: `0件`
+- Topic 18以降の先取り: `0件`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
 ## 次工程
 
-Topic 17の固定EXAM_ALIGNMENTと解説本文を変更せず、解説PDFを作成して表示QAを行う。
+Topic 17の固定EXAM_ALIGNMENTと解説本文を変更せず、練習問題source＋練習PDFを作成する。
