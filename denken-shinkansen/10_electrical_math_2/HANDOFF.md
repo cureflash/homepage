@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜14は `completed`。
+Topic 01〜15は `completed`。
 
-完成数: `14 / 20`
+完成数: `15 / 20`
 
-current_status: `topic_15_progress_records_synced`
+current_status: `topic_15_completed`
 
-active_topic: `15 対数・dB・周波数応答`
+active_topic: `16 数値微分・数値積分`
 
-次工程: Topic 15の最終QAを再判定する。
+次工程: Topic 16の制作前EXAM_ALIGNMENTを実施する。
 
 ## 上位仕様
 
@@ -1111,6 +1111,85 @@ QA:
 
 総合判定: `PASS / completed`。
 
+## Topic 15 完了記録
+
+テーマ: `対数・dB・周波数応答`
+
+source:
+`topics/15_log_db_frequency_response/15_log_db_frequency_response.md`
+
+current_status: `topic_15_completed`
+
+### Topic 15 固定範囲
+
+- 常用対数
+- 自然対数
+- dB
+- `20log10|G(jω)|`
+- 位相
+- ボード線図
+- ゲイン余裕・位相余裕への接続
+
+ラウス・フルビッツ法一般、ナイキスト線図による独立安定判別、補償器設計一般、フィルタ設計一般、Topic 16以降の数値計算へ拡張しない。
+
+### Topic 15 EXAM_ALIGNMENT
+
+固定第二種公式過去問5問・12答案要素。
+
+- R6 二次「機械・制御」問4 (5)
+- R5 二次「機械・制御」問4 (1)〜(4)
+- R4 二次「機械・制御」問4 (5)
+- H30 二次「機械・制御」問4 (2)
+- H23 一次「機械」問7 (1)〜(5)
+
+制作前独立再解答・公式解答照合: `12 / 12 PASS`。
+
+### Topic 15 成果物
+
+- 解説PDF: `topics/15_log_db_frequency_response/15_log_db_frequency_response_explanation.pdf`
+- 解説PDF QA: `topics/15_log_db_frequency_response/15_log_db_frequency_response_explanation_qa.md` → `4 / 4 PASS`
+- 練習source: `topics/15_log_db_frequency_response/15_log_db_frequency_response_practice.md`
+- 練習PDF: `topics/15_log_db_frequency_response/15_log_db_frequency_response_practice.pdf`
+- 練習PDF QA: `topics/15_log_db_frequency_response/15_log_db_frequency_response_practice_qa.md` → `6 / 6 PASS`
+- PowerPoint: `topics/15_log_db_frequency_response/15_log_db_frequency_response_images.pptx`
+- PowerPoint QA: `topics/15_log_db_frequency_response/15_log_db_frequency_response_powerpoint_qa.md` → `5 / 5 PASS`
+- 完成後独立再解答: `topics/15_log_db_frequency_response/15_log_db_frequency_response_post_completion_reanswer.md` → `12 / 12 PASS`
+- 最終QA: `topics/15_log_db_frequency_response/15_log_db_frequency_response_final_qa.md` → `PASS / completed`
+
+練習問題QA:
+- 全12問（一次型8問／記述型4問）
+- 独立計算・論理QA `12 / 12 PASS`
+- 一次型正答一意性 `8 / 8 PASS`
+
+境界:
+- 第一種・第三種過去問による件数水増し: 0件
+- ラウス・フルビッツ法一般追加: 0件
+- ナイキスト線図による独立安定判別追加: 0件
+- 補償器設計一般追加: 0件
+- フィルタ設計一般追加: 0件
+- Topic 16以降の数値計算先取り: 0件
+- 未確認実車値依存: 0件
+
+### Topic 15 最終QA
+
+初回判定は `NEEDS_REVISION / IN_PROGRESS`。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・表示QA・SPEC境界はPASSで、未完了理由は進捗記録6ファイルだけだった。
+
+その後、6ファイルを実成果物へ同期し、再判定で以下を確認した。
+
+- 必須成果物実在: PASS
+- 固定第二種公式5問・12答案要素: PASS
+- 完成後独立再解答 `12 / 12 PASS`: PASS
+- 練習問題独立計算・論理QA `12 / 12 PASS`: PASS
+- 一次型正答一意性 `8 / 8 PASS`: PASS
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- 進捗記録整合 `6 / 6 PASS`
+- 固定範囲外追加: 0件
+- 第一種・第三種過去問による件数水増し: 0件
+- Topic 16以降先取り: 0件
+- 未確認実車値依存: 0件
+
+総合判定: `PASS / completed`。
+
 ## 次に行うこと
 
-Topic 15 `対数・dB・周波数応答` の最終QAを再判定する。
+Topic 16 `数値微分・数値積分` の制作前EXAM_ALIGNMENTを実施する。
