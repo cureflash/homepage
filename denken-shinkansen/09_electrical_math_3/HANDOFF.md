@@ -4,17 +4,17 @@
 
 ## 現在地
 
-Topic 01〜10は `completed`。
+Topic 01〜11は `completed`。
 
-完成数: `10 / 12`
+完成数: `11 / 12`
 
-current_status: `topic_11_source_progress_sync_complete`
+current_status: `topic_11_final_qa_pass`
 
-last_completed_topic: `10 指数関数・一階微分方程式入門`
+last_completed_topic: `11 グラフ・特性曲線を読む`
 
-active_topic: `11 グラフ・特性曲線を読む`
+active_topic: `12 電気数学総合`
 
-next_start: `Topic 11最終QAを再判定`
+next_start: `Topic 12の制作前EXAM_ALIGNMENT調査`
 
 ## Topic 11 固定仕様範囲
 
@@ -233,6 +233,23 @@ Topic 11はまだ `completed` としない。
 
 判定: `topic_11_source_progress_sync_complete / IN_PROGRESS`。
 
+## Topic 11 最終QA再判定
+
+初回FAIL原因の解消を確認し、最終QAを再判定した。
+
+- 必須成果物実在: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 制作前独立検証: `5 / 5 PASS`
+- 完成後独立再解答: `5 / 5 PASS`
+- 練習QA: `12 / 12 PASS`
+- 表示QA・成果物実在: PASS
+- source進捗整合: PASS
+- 教材外知識補完0件
+- 固定EXAM_ALIGNMENT変更0件
+- 固定範囲外追加0件
+
+判定: `PASS / completed`。
+
 ## 次工程
 
-Topic 11の最終QAを再判定する。
+Topic 12「電気数学総合」の制作前EXAM_ALIGNMENT調査を開始する。
