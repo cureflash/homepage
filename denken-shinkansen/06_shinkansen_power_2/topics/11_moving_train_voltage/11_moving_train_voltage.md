@@ -4,9 +4,9 @@
 
 ## 状態
 
-`exam_alignment_complete / IN_PROGRESS`
+`topic_11_practice_source_complete / IN_PROGRESS`
 
-制作前EXAM_ALIGNMENTを完了した。本文・PDF・練習問題・PowerPoint・計算プログラムはまだ制作していない。
+制作前EXAM_ALIGNMENT、制作前独立再解答、解説本文source、解説PDF、練習問題・完全解説source、練習source独立QAまで完了した。練習PDF、計算プログラム、PowerPointはまだ制作していない。
 
 正式品質ゲートは、第二種一次「電力」1問＋第二種二次「電力・管理」3問の計4問、`17答案要素` に固定する。原則5問に対し、Topic 11固定範囲だけで完答できる5問目は確認できなかったため、件数合わせのための仕様追加は行わない。
 
@@ -251,4 +251,4 @@ Topic 11での対応:
 
 ## 次工程
 
-正式4問・17答案要素について、保存済み正答を見ずに制作前独立再解答を行い、Topic 11固定範囲と既習Topic 10だけで各答案要素へ到達できるか確認する。FAILがあれば本文制作へ進まず、EXAM_ALIGNMENTまたは要求説明を修正する。
+練習問題・完全解説source `11_moving_train_voltage_practice.md` と独立QA `11_moving_train_voltage_practice_qa.md` を基準に練習PDFを制作し、表示・文字抽出・数式・問題解答整合QAを行う。計算プログラム、PowerPointはまだ制作しない。
