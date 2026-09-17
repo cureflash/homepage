@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `13 / 16`
-- current_status: `topic_14_powerpoint_complete`
+- current_status: `topic_14_independent_reanswer_complete`
 - last_completed_topic: `13 新幹線は主電動機以外もモーターだらけ？`
 - active_topic: `14 停電してもN700Sが走れるのはなぜ？`
-- next_start: Topic 14の完成後blind独立再解答を実施する
+- next_start: Topic 14の最終QAを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -24,7 +24,7 @@
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
-- [ ] 14 停電してもN700Sが走れるのはなぜ？ — 解説画像PowerPoint完成 / IN_PROGRESS
+- [ ] 14 停電してもN700Sが走れるのはなぜ？ — 完成後blind独立再解答 `1 / 1 PASS` / IN_PROGRESS
 - [ ] 15〜16 — 未完了
 
 ## Topic 14 現在地
@@ -77,9 +77,13 @@
 - PowerPoint固定過去問接続: `1 / 1 PASS`
 - PowerPoint: `topics/14_battery/14_battery_images.pptx`
 - PowerPoint QA: `topics/14_battery/14_battery_powerpoint_qa.md`
-- 完成後blind独立再解答: 未実施
-- 状態: `topic_14_powerpoint_complete / IN_PROGRESS`
-- 次工程: Topic 14の完成後blind独立再解答
+- 完成後blind独立再解答: `1 / 1 PASS`
+- blind解答: H30 機械 問12 `(1)`
+- 公式解答一致: `1 / 1`
+- 教材外・固定範囲外知識による補完: `0件`
+- 独立再解答記録: `topics/14_battery/14_battery_independent_reanswer.md`
+- 状態: `topic_14_independent_reanswer_complete / IN_PROGRESS`
+- 次工程: Topic 14の最終QA
 
 ## Topic 13 最終品質状態
 - 固定範囲: 電動機出力 / 回転速度 / トルク / 負荷特性 / ポンプ / ファン / コンプレッサ / 所要動力 / 効率 / インバータ駆動 / 可変速運転
@@ -285,6 +289,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 14の解説画像PowerPointを作成。16:9・4枚、LibreOffice 180 dpi表示QA `4 / 4 PASS`、スライド外はみ出し・文字切れ・重なり・欠落破損グリフは0件、ZIP整合性PASS。固定H30 機械 問12への接続 `1 / 1 PASS`。固定EXAM_ALIGNMENT変更・固定範囲外追加・未確認N700S実値追加・Topic 15/16先取りは0件。
+Topic 14の完成後blind独立再解答を実施。H30 機械 問12について、完成教材の5項目（正極・負極・電解液・放電時イオン移動・セル電圧）だけから選択肢 `(1)` を一意に固定し、答案固定後に公式解答PDFと照合して `1 / 1 PASS`。教材外・固定範囲外知識補完、固定EXAM_ALIGNMENT変更、未確認N700S実値追加は0件。独立再解答記録を `topics/14_battery/14_battery_independent_reanswer.md` に保存。
 
-完成数は `13 / 16` のまま。次工程はTopic 14の完成後blind独立再解答。
+完成数は `13 / 16` のまま。次工程はTopic 14の最終QA。
