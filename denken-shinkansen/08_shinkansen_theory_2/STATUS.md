@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 16 / 21
-- current_status: `topic_16_completed`
+- current_status: `topic_17_exam_alignment_complete`
 - last_completed_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
 - active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
-- next_start: Topic 17 制作前EXAM_ALIGNMENT
+- next_start: Topic 17 解説本文＋3段階例題
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -284,17 +284,46 @@
 - [x] completed状態同期
 - [x] 最終判定: `PASS / completed`
 
+## Topic 17 固定EXAM_ALIGNMENT
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] 固定範囲: バイポーラトランジスタ、FET、MOSFET、IGBT、GTOの概念、SiCデバイスの概念、増幅、動作点、負荷線、スイッチング、電力損失
+- [x] R8一次理論を確認し、固定範囲の直接対応問題なし
+- [x] R7 一次 理論 問8を採用
+- [x] R5 一次 理論 問7を採用
+- [x] H30 一次 理論 問7を採用
+- [x] H28 一次 理論 問7を採用
+- [x] H27 一次 理論 問7を採用
+- [x] 品質ゲート対象を一次5問・25答案要素に固定
+- [x] 公式問題・公式標準解答照合 `25 / 25`
+- [x] 制作前独立導出 `25 / 25 PASS`
+- [x] R8二次は2026-09-18時点で未実施、R7〜R5二次を確認
+- [x] R7二次ダイオードブリッジ、R6二次チョッパ、R5二次能動フィルタは変換器回路が主題のため非採用
+- [x] 二次採用0問・二次数合わせ0件
+- [x] 変換器詳細計算の追加0件
+- [x] 未確認の新幹線主変換装置仕様追加0件
+- [x] Topic 18以降の先取り0件
+
+## Topic 17 制作進捗
+- [x] 制作前EXAM_ALIGNMENT: 一次5問・25答案要素 `25 / 25 PASS`
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF＋表示QA
+- [ ] 練習問題source＋練習PDF
+- [ ] 解説画像PowerPoint＋表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] completed状態同期
+
 ## 今回進めた内容
 
-Topic 16「300系の半導体はなぜ電流を一方向へ流せる？」のcompleted状態同期を完了した。
+Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の制作前EXAM_ALIGNMENTを完了した。
 
-- 主source: `completed / COMPLETED`
-- 練習source: `completed / COMPLETED`
-- STATUS / HANDOFF: Topic 16 completed状態へ同期
-- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS` を維持
-- 二次採用: `0問`、二次数合わせ: `0件` を維持
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
+- 品質ゲート: 一次5問・25答案要素
+- 公式問題・公式標準解答照合: `25 / 25`
+- 制作前独立導出: `25 / 25 PASS`
+- 二次: R7〜R5を確認、採用 `0問`、数合わせ `0件`
+- SPEC固定範囲外追加: `0件`
+- 未確認実車仕様追加: `0件`
 
 ## 判定
 
-Topic 16は `PASS / completed`。完成数は `16 / 21`。次工程はTopic 17「GTO・IGBT・SiCはどうやって電流を操る？」の制作前EXAM_ALIGNMENT。
+Topic 17は `PASS / EXAM_ALIGNMENT_COMPLETE`。完成数は `16 / 21` のまま。次工程は解説本文＋3段階例題。
