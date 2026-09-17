@@ -4,41 +4,31 @@
 
 ## 現在地
 
-Topic 01〜12は最終QAまでPASSし、`completed`。Topic 13「インバータはどうやって三相交流を作る？」は解説画像PowerPoint＋QAまで完了。
+Topic 01〜12は最終QAまでPASSし、`completed`。Topic 13「インバータはどうやって三相交流を作る？」は完成後公式過去問独立再解答まで完了。
 
 - 完成数: `12 / 14`
 - last completed: `12 300系はなぜVVVFになった？`
 - active topic: `13 インバータはどうやって三相交流を作る？`
-- current status: `topic_13_powerpoint_complete`
-- next start: Topic 13の完成後公式過去問独立再解答を実施する
+- current status: `topic_13_independent_reanswer_complete`
+- next start: Topic 13の最終QAを実施する
 
 ## 今回進捗
 
-Topic 13の解説画像PowerPointとQAを作成した。
+Topic 13の固定公式「理論」過去問4問を、完成教材だけで独立再解答し、公式解答と照合した。
 
 - 固定公式「理論」過去問: `4問`
-- 制作前独立検証: `4 / 4 PASS`
-- PowerPoint: 16:9・4枚
-- 固定4問要求の可視化: `4 / 4 PASS`
-- Slide 1: 理想ON/OFFスイッチ、0/Eパルス、デューティ比、平均値・実効値、PWM
-- Slide 2: 基本波＋高調波、次数別電力、波形率・波高率
-- Slide 3: 理想ダイオードの区間別ON/OFF判定とクリッパ波形追跡
-- Slide 4: 三相インバータの120°位相差、増幅率・理想オペアンプの最小限の基本、新幹線への一般概念接続
-- 200 dpi表示QA: `4 / 4 PASS`
-- shape-bound overflow: `0件`
-- 目視文字欠け・重なり・文字化け: `0件`
-- 必須語・公式の文字抽出: `PASS`
-- ZIP/XML整合性: `PASS`
-- 系列SPEC外論点の追加: `0件`
-- 未確認実車値の追加: `0件`
-- source: `topics/13_inverter_pwm/13_inverter_pwm.md`
-- 解説PDF: `topics/13_inverter_pwm/13_inverter_pwm_explanation.pdf`
-- 練習source: `topics/13_inverter_pwm/13_inverter_pwm_practice.md`
-- 練習PDF: `topics/13_inverter_pwm/13_inverter_pwm_practice.pdf`
-- PowerPoint: `topics/13_inverter_pwm/13_inverter_pwm_images.pptx`
-- PowerPoint QA: `topics/13_inverter_pwm/13_inverter_pwm_images_qa.md`
+- 独立解答列: `(2),(1),(3),(3)`
+- 公式解答列: `(2),(1),(3),(3)`
+- 一致: `4 / 4 PASS`
+- 教材外知識による補完: `0件`
+- 系列SPEC固定範囲外論点への依存: `0件`
+- Topic 14の測定器・測定誤差への依存: `0件`
+- 機械科目の詳細PWM/V/f制御への依存: `0件`
+- 未確認実車値への依存: `0件`
+- 記録: `topics/13_inverter_pwm/13_inverter_pwm_exam_recheck.md`
+- 主source・練習sourceを `INDEPENDENT_REANSWER_COMPLETE` へ同期
 
-固定4問の品質ゲートは変更していない。公式過去問の図は複製せず独自模式図とし、詳細PWM方式・機械科目論点・Topic 14の測定論点へは拡張していない。
+固定4問の品質ゲート・系列SPEC境界は変更していない。最終QA未実施のためTopic 13はまだ `completed` としない。
 
 ## Topic 13 SPEC固定範囲
 
@@ -84,8 +74,7 @@ PWM
 解説PDF対応: `4 / 4`
 練習問題要求接続: `4 / 4`
 解説画像対応: `4 / 4`
-
-正答番号・個別の公式過去問最終数値は、完成後独立再解答の先読み汚染を避けるためHANDOFFへ保存しない。
+完成後独立再解答: `4 / 4 PASS`
 
 ## 本文・PDFで固定した必須事項
 
@@ -124,11 +113,13 @@ PWM
 
 ## 次に行うこと
 
-Topic 13の完成後公式過去問独立再解答を実施する。
+Topic 13の最終QAを実施する。
 
-- 固定4問を保存済み正答を先に見ず、完成教材だけで再解答する
-- 教材外知識で補完せず、根拠・式・波形判定を説明できることを確認する
-- 独立再解答後も最終QA前なので `completed` にはしない
+- 必須成果物の実在・QA記録を再確認する
+- 固定4問の独立再解答 `4 / 4 PASS` と教材マッピングを確認する
+- 主source・練習source・STATUS・HANDOFFの進捗記録整合性を確認する
+- 系列SPEC境界外の追加がないことを確認する
+- 最終QA PASSまで `completed` にはしない
 
 ## 固定ルール
 
