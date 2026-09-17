@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `14 / 22`
-- current_status: `topic_15_blind_reanswer_ready`
+- current_status: `topic_15_independent_reanswer_complete`
 - last_completed_topic: `14 L0系を500km/hで同期させる`
 - active_topic: `15 新幹線の補機モーターを設計する`
-- next_start: Topic 15 完成後独立再解答
+- next_start: Topic 15 最終QA
 
 ## 完了テーマ
 - [x] Topic 01〜14 最終QA `PASS / completed`
@@ -42,7 +42,7 @@
 - R04 二次 機械・制御 問3 (6) — 2答案要素
 - R07 二次 機械・制御 問2 (1)の定格トルク部分 — 1答案要素
 
-固定公式過去問の個別正答記号・完成済み答案は保存せず、完成後blind再解答条件を維持する。
+blind再解答前は固定公式過去問の個別正答記号・完成済み答案を保存しない。再解答答案確定後に公式照合結果を独立再解答記録へ保存した。
 
 ## Topic 15 成果物
 - [x] 制作前EXAM_ALIGNMENT
@@ -53,7 +53,7 @@
 - [x] 解説画像PowerPoint `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_images.pptx`
 - [x] PowerPoint QA `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_powerpoint_qa.md`
 - [x] 独立再解答前ゲート `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_blind_reanswer_gate.md`
-- [ ] 完成後独立再解答
+- [x] 完成後独立再解答 `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_independent_reanswer.md`
 - [ ] 最終QA
 
 ## Topic 15 解説画像PowerPoint
@@ -86,8 +86,20 @@
 - [x] コンプレッサへの三乗則無条件適用、Topic 16以降先取り、未確認新幹線補機実値追加 `0件`
 - [x] 判定 `BLIND_REANSWER_READY`
 
+## Topic 15 完成後独立再解答
+- [x] 公式解答・標準解答を開く前に完成教材だけで固定5問・8答案要素を再解答
+- [x] R06 一次 機械 問2 (5): `V_1/f_1=一定` → `1 / 1 PASS`
+- [x] H25 一次 機械 問3 (1),(2): 回転角速度・過負荷耐量 → `2 / 2 PASS`
+- [x] H23 一次 機械 問1 (1),(2): 一次周波数・励磁電流 → `2 / 2 PASS`
+- [x] R04 二次 機械・制御 問3 (6): 25 Hzで信号振幅 `0.45`、周期 `40 ms` → `2 / 2 PASS`
+- [x] R07 二次 機械・制御 問2 (1) 定格トルク: `181 N·m` → `1 / 1 PASS`
+- [x] 公式解答・標準解答照合 `8 / 8 PASS`
+- [x] 教材外知識補完 `0件`
+- [x] コンプレッサへの三乗則無条件適用、Topic 05〜09詳細再制作、Topic 16以降依存、未確認実値依存 `0件`
+- [x] 判定 `PASS / independent_reanswer_complete`
+
 ## 今回進めた内容
-Topic 15の完成後独立再解答前ゲートを実施した。既存枠のPowerPoint完成成果をreconcileし、重複制作せず、固定一次3問＋二次2問・8答案要素を維持した。公式正答・標準解答本文・完成済み個別答案の保存は `0件` で、blind再解答条件を満たす。
+Topic 15の完成後独立再解答を実施した。固定5過去問・8答案要素を、公式解答・標準解答を開く前に完成教材だけで再解答し、答案確定後に公式資料と照合した。結果は `8 / 8 PASS`。教材本文・練習問題・PDF/PPTX、固定EXAM_ALIGNMENTは変更していない。
 
 ## 判定
-Topic 15は `BLIND_REANSWER_READY / IN_PROGRESS`。完成数は `14 / 22`。次はTopic 15完成後独立再解答。
+Topic 15は `independent_reanswer_complete / IN_PROGRESS`。完成数は `14 / 22`。次はTopic 15最終QA。
