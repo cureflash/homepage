@@ -7,11 +7,9 @@
 
 Topic 01〜13は最終QAまで `PASS / completed`。完成数は `13 / 39`。
 
-現在地は `topic_14_blind_reanswer_ready`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は固定一次2問＋二次3問、計5問・9答案要素と制作前検証 `9 / 9 PASS` を変更せず、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成している。
+現在地は `topic_14_blind_reanswer_blocked`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は、固定一次2問＋二次3問、計5問・9答案要素、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、blind再解答前ゲートまで完成済み。固定EXAM_ALIGNMENTと既存成果物は変更していない。
 
-完成後独立再解答前ゲートで指摘された main source `制作前計算・論理検証` 欄の固定公式過去問個別数値解・正答記号・完成済み答案は除去済み。固定過去問、要求知識・使用式、教材内マッピング、制作前PASS件数、教材本文、練習問題、PDF/PPTXは変更していない。blind再解答前提条件は `PASS`。
-
-次は公式解答・標準解答を先に開かず、完成教材と公式問題文だけを使って固定5問・9答案要素を完成後blind再解答する。答案をGitHubへ固定してから公式照合する。
+完成後blind再解答は公式解答・標準解答を開く前に答案をGitHubへ固定し、その後に公式照合した。9答案要素のうち8要素は公式と一致したが、H26二次「機械・制御」問1 (4) だけ公式標準解答内部に数値不整合があるため、推測でPASSにせず停止している。
 
 ## Topic 14 固定EXAM_ALIGNMENT
 source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -29,121 +27,78 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 合計: `5問・9答案要素`
 - 制作前計算・論理検証: 一次 `3 / 3 PASS`、二次 `6 / 6 PASS`、合計 `9 / 9 PASS`
 - 二次記述問題: `3問`
-- 公式解答・標準解答との不一致: `0件`
 - 参考教材2系統以上: `PASS`
 - R8一次「機械」直近年度確認: `PASS / 固定対象なし`
 - SPEC指定8項目: `8 / 8 aligned`
 - SPEC指定4可視化: `4 / 4 aligned`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
-R8一次「機械」にはTopic 14の走行抵抗・必要けん引力・機械出力接続を直接測る固定対象を確認できなかったため、件数合わせでは採用していない。列車の走行抵抗式・勾配抵抗式そのものを直接問う第二種問題も固定対象として確認できていないため、「過去問で直接問われた」とは扱わない。SPEC必須の列車側力学を、確認できた `P=Tω`、負荷トルク・慣性トルク、始動トルク等の二種試験論点へ接続する。
+R8一次「機械」にはTopic 14の走行抵抗・必要けん引力・機械出力接続を直接測る固定対象を確認できなかったため採用していない。列車の走行抵抗式・勾配抵抗式そのものを直接問う第二種問題も固定対象として確認できていないため、「過去問で直接問われた」とは扱わない。SPEC必須の列車側力学を `P=Tω`、負荷トルク・慣性トルク、始動トルク等の二種試験論点へ接続している。
 
-## Topic 14 解説source
-- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
-- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 解説本文: `完成`
-- 3段階例題: `3 / 3 PASS`
-- 固定5過去問・9答案要素本文マッピング: `9 / 9 PASS`
-- 例題数値再計算: `PASS`
-- SPEC指定8項目: `8 / 8 PASS`
-- SPEC指定4可視化の計算条件: `4 / 4 PASS`
-- 4可視化は同じ教材用仮定式系から生成: `PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 未確認300系実車値の真値化: `0件`
+## 完成済み成果物
+- 解説source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md` — `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_explanation.pdf` — `PASS / EXPLANATION_PDF_COMPLETE`
+- 解説PDF QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_explanation_pdf_qa.md`
+- 練習問題source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_practice_source.md` — `PASS / PRACTICE_SOURCE_COMPLETE`
+- 練習PDF: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_practice.pdf` — `PASS / PRACTICE_PDF_COMPLETE`
+- 練習PDF QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_practice_qa.md`
+- 解説画像PowerPoint: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_images.pptx` — `PASS / POWERPOINT_COMPLETE`
+- PowerPoint QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_powerpoint_qa.md`
+- blind再解答前ゲート: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_gate.md` — `PASS / BLIND_REANSWER_READY`
 
 教材用仮定モデル:
 - `m=m_eq=4.00×10^5 kg`
 - `R_run(v)=25000+80v+6v^2 [N]`、`v [m/s]`
-- 300系実車値ではないことを本文で明示
+- 300系実車値ではないことを明示済み
 
-## Topic 14 解説PDF
-- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_explanation.pdf`
-- QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_explanation_pdf_qa.md`
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
-- A4縦3ページ
-- 180 dpi表示QA: `3 / 3 PASS`
-- 文字抽出QA: `PASS`
-- 文字欠落・黒四角・重なり・クリップ: `0件`
-- 固定5過去問・9答案要素接続: `9 / 9 PASS`
-- 3段階例題: `3 / 3 PASS`
-- SPEC指定8項目: `8 / 8 PASS`
-- SPEC指定4可視化: `4 / 4 PASS`
-- 4可視化共通仮定式系: `PASS`
-- 加速曲線: 前進オイラー法 `Δt=1 s` をPDF内に明記
-- 教材用仮定値表記: `PASS / 300系実車値ではないことを明記`
-- PDF SHA-256: `32d691584b5d898b80389f20810ba2e3a22d9825d7b58502e9af9dd355c4a180`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- SPEC外追加: `0件`
-
-## Topic 14 練習問題source
-- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_practice_source.md`
-- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
-- 一次試験型: `8問`、全問五肢択一
-- 二次試験型: `4問`、途中式・前提・単位・理由を含む
-- 合計: `12問`
-- 固定5過去問・9答案要素接続: `9 / 9 PASS`
-- 数値・論理再計算: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- SPEC指定8項目: `8 / 8 covered`
-- SPEC指定4可視化の式系・条件との整合: `4 / 4 PASS`
-- 4可視化共通仮定式系の変更: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- Topic 13再展開: `0件`
-- Topic 12のPWM/VVVF/V/f・滑り制御再展開: `0件`
-- SPEC外追加: `0件`
+既存成果物の主要QA:
+- 解説本文3段階例題: `3 / 3 PASS`
+- 固定5過去問・9答案要素の本文接続: `9 / 9 PASS`
+- 練習問題: 一次8問＋二次4問、計12問、数値・論理 `12 / 12 PASS`
+- 解説PDF表示QA: `3 / 3 PASS`
+- 練習PDF表示QA: `2 / 2 PASS`
+- PowerPoint: 16:9・4枚、SPEC指定4可視化 `4 / 4 PASS`、表示QA `4 / 4 PASS`
 - 未確認300系実車値の真値化: `0件`
-
-練習問題の列車側数値は解説sourceと同じ教材用仮定モデルを使用した。固定R7二次への接続では同期速度・滑りの数値処理だけを扱い、滑り制御方式は追加していない。
-
-## Topic 14 練習PDF
-- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_practice.pdf`
-- QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_practice_qa.md`
-- 判定: `PASS / PRACTICE_PDF_COMPLETE`
-- A4縦2ページ
-- 一次8問＋二次4問: `12 / 12` 完全解説付き
-- 180 dpi表示QA: `2 / 2 PASS`
-- 文字抽出QA: `PASS`
-- 文字欠落・黒四角・重なり・クリップ: `0件`
-- 固定5過去問・9答案要素接続: `9 / 9 PASS`
-- 数値・論理整合: `12 / 12 PASS`
-- 一次正答一意性: `8 / 8 PASS`
-- 二次の途中式・前提・単位・理由: `4 / 4 PASS`
-- SPEC指定8項目: `8 / 8 covered`
-- SPEC指定4可視化の式系・条件との整合: `4 / 4 PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
-- 未確認300系実車値の真値化: `0件`
-- PDF SHA-256: `c6294a3297daf587a8c60969d588a78d28ece396a46a3c646131e6edb6e690c7`
 
-## Topic 14 解説画像PowerPoint
-- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_images.pptx`
-- QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_powerpoint_qa.md`
-- 判定: `PASS / POWERPOINT_COMPLETE`
-- 16:9・4枚
-- SPEC指定4可視化: `4 / 4 PASS`
-- 1600×900表示QA: `4 / 4 PASS`
-- 文字・数式・図の欠落、重なり、切れ: `0件`
-- overflow: `0件`
-- PDF文字抽出QA: `PASS`
-- PPTX ZIP整合性: `PASS`
-- 固定5過去問・9答案要素接続: `9 / 9 PASS`
-- 4可視化共通仮定式系: `PASS`
-- 加速曲線: 前進オイラー法 `Δt=1 s`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- SPEC外追加: `0件`
-- 未確認300系実車値の真値化: `0件`
-- PPTX SHA-256: `ccacae7c24460cdc95e34ff86a821df0798e6694cbab626d07dc43ea387f00e4`
-- Git blob SHA: `e7193da320ce93219cd65044fbb8d7badf43ceb9`
+## Topic 14 完成後blind再解答
+blind答案:
+`topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer.md`
 
-## Topic 14 独立再解答前ゲート
-- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_gate.md`
-- 判定: `PASS / BLIND_REANSWER_READY`
-- main source の制作前検証欄から固定公式過去問の個別数値解・正答記号・完成済み答案を除去済み
-- blind条件: `PASS`
-- 本runの完成後独立再解答: `未実施`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 既存教材本文・成果物変更: `0件`
-- SPEC外追加: `0件`
+QA:
+`topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_qa.md`
+
+実施条件:
+- 公式解答・標準解答を開く前にblind答案をGitHubへ固定: `PASS`
+- 完成教材と公式問題文で固定5問を再解答: `5 / 5`
+- 固定9答案要素の公式照合確定PASS: `8 / 9`
+- 教材外知識による補完: `0件`
+
+確定PASS:
+- R7 二次 機械・制御 問2 (1),(3): `4 / 4`
+- R1 二次 機械・制御 問1 (4): `1 / 1`
+- H26 一次 機械 問5 (1): `1 / 1`
+- H25 一次 機械 問3 (1),(2): `2 / 2`
+
+## exact blocker
+H26二次「機械・制御」問1 (4)。
+
+問題データと教材・公式掲載式からのblind再計算:
+- `I2'=22.430886... A`
+- `TL=48.0468... N·m`
+- 問題冊子の3桁指定に従うと `48.0 N·m`
+
+公式標準解答:
+- `I2'=22.430 A` と表示
+- 最終計算を `48.067 -> 48.1 N·m` と表示
+
+公式標準解答に表示された `I2'=22.430 A` を公式掲載式へそのまま再代入しても、
+
+`(3×2)/(2π×50) × 22.430^2 × (0.15/0.03) = 48.04298... N·m`
+
+となり、3桁では `48.0 N·m`。したがって公式標準解答の最終数値 `48.1 N·m` と内部整合しない。
+
+`MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` は公式解答との一致を品質ゲートに要求しているが、このような公式側の算術差に対する許容差・例外規定はない。仕様を追加せず、Topic 14は `BLOCKED / OFFICIAL_NUMERIC_DISCREPANCY` とする。
 
 ## Topic 14 SPEC固定範囲
 扱う内容:
@@ -170,4 +125,4 @@ R8一次「機械」にはTopic 14の走行抵抗・必要けん引力・機械�
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次の正確な開始点
-公式解答・標準解答を先に開かず、完成教材と公式問題文だけを使って固定5問・9答案要素を完成後blind再解答する。答案をGitHubへ固定してから公式照合し、教材外知識で補完した答案要素がないかも判定する。
+H26二次「機械・制御」問1 (4) の公式標準解答最終値 `48.1 N·m` と独立再計算 `48.0 N·m` の不整合を品質ゲート上どう扱うかが確定するまで停止する。Topic 14を `completed` にせず、完成数は `13 / 39` のまま。Topic 15へ進めない。
