@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `12 / 16`
-- current_status: `topic_13_powerpoint_complete`
+- current_status: `topic_13_independent_reanswer_complete`
 - last_completed_topic: `12 新幹線のコンピュータは何をしている？`
 - active_topic: `13 新幹線は主電動機以外もモーターだらけ？`
-- next_start: Topic 13の完成後blind独立再解答を行う
+- next_start: Topic 13の最終QAを行う
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -23,7 +23,7 @@
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
-- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 解説画像PowerPoint完成 / IN_PROGRESS
+- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 完成後blind独立再解答 `5 / 5 PASS` / 最終QA待ち / IN_PROGRESS
 - [ ] 14〜16 — 未完了
 
 ## Topic 13 制作品質状態
@@ -73,8 +73,16 @@
 - PowerPoint固定過去問接続: `5 / 5 PASS`
 - PowerPoint: `topics/13_auxiliary_motors/13_auxiliary_motors_images.pptx`
 - PowerPoint QA: `topics/13_auxiliary_motors/13_auxiliary_motors_powerpoint_qa.md`
-- 状態: `topic_13_powerpoint_complete`
-- 次工程: 完成済み教材だけを使って固定5問をblind独立再解答する
+- 完成後blind独立再解答: `5 / 5 PASS`
+- blind解答: R5上 問7 `(4)` / R4下 問11 `(4)` / H30 問10 `(4)` / H29 問12 `(4)` / H27 問12 `(5)`
+- 公式解答一致: `5 / 5`
+- H29 問12 fresh blind: 公式問題だけを先に参照し、教材の `T∝N²` / `Q∝N` / `P∝N³` から選択肢 `(4)` を一意に固定後、公式解答 `(4)` と照合PASS
+- H29 fresh blindで公式解答の事前参照: `0件`
+- 前段H29 blind条件汚染: `隔離済み / fresh blindで再実施`
+- 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
+- 独立再解答記録: `topics/13_auxiliary_motors/13_auxiliary_motors_independent_reanswer.md`
+- 状態: `topic_13_independent_reanswer_complete`
+- 次工程: 必須成果物・表示QA・固定EXAM_ALIGNMENT・進捗整合・固定範囲境界の最終QA
 
 ## Topic 12 最終品質状態
 - 固定範囲: 2進数 / 16進数 / ビット / バイト / 論理回路 / AND / OR / NOT / NAND / NOR / XOR / 論理式 / 真理値表 / A/D変換 / D/A変換 / センサ / 情報伝送
@@ -204,6 +212,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 13「新幹線は主電動機以外もモーターだらけ？」の解説画像PowerPointを完成・GitHub正本へ反映する。16:9・4枚、固定5過去問への接続 `5 / 5 PASS`。180 dpi表示QA `4 / 4 PASS`、スライド外はみ出し0件、文字切れ・重なり・判読不能0件、欠落・破損グリフ0件、ZIP整合性PASS。固定EXAM_ALIGNMENT変更、系列SPEC外論点追加、Topic 14〜16先取り、未確認補機仕様の追加はいずれも0件。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」の完成後blind独立再解答を完了し、固定5問すべてを公式解答と照合して `5 / 5 PASS`。H29 問12は前段の汚染runを隔離し、公式問題のみを先に参照するfresh blindで `(4)` に固定後、公式解答 `(4)` と一致した。教材の `T∝N²`、`Q∝N`、`P∝N³` だけで選択肢を一意に絞り、教材外のエレベータ負荷知識は補完していない。固定EXAM_ALIGNMENT変更、固定範囲外追加、未確認補機仕様追加はいずれも0件。
 
-完成数は `12 / 16` のまま。次工程はTopic 13の完成後blind独立再解答。
+完成数は `12 / 16` のまま。次工程はTopic 13の最終QA。
