@@ -4,14 +4,22 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `11`
 theme: 新幹線が移動すると電圧はどう変わる？
-current_status: `topic_11_final_qa_needs_revision`
+current_status: `topic_11_source_progress_synced`
 completed_topics: `10 / 22`
 
 ## Topic 11 current result
 
-制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QA、計算プログラム・CSV・4グラフと独立計算QA、解説画像PowerPointとPowerPoint QA、完成後blind独立再解答まで完了した。
+前回最終QAの唯一のFAILだった進捗記録不整合を修正した。
 
-最終QAを実施し、技術内容・試験対応・必須成果物・各QA・SPEC境界はPASS。唯一の未完了理由は、主source・練習source・PowerPoint QAに残る旧進捗記録4箇所である。技術内容は修正しない。
+同期対象:
+1. `topics/11_moving_train_voltage/11_moving_train_voltage.md`
+   - 冒頭状態・要約・次工程を実成果物状態へ同期。
+2. `topics/11_moving_train_voltage/11_moving_train_voltage_practice.md`
+   - 冒頭状態を完成後blind独立再解答完了状態へ同期。
+3. `topics/11_moving_train_voltage/11_moving_train_voltage_powerpoint_qa.md`
+   - 末尾を完成後blind独立再解答完了・最終QA再判定待ちへ同期。
+
+技術本文、固定EXAM_ALIGNMENT、正式4問・17答案要素、練習問題・正答、PDF/PPTX、計算プログラム、blind独立再解答結果は変更していない。
 
 正式品質ゲート:
 - 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
@@ -33,15 +41,9 @@ completed_topics: `10 / 22`
 - 仕様追加: `0件`
 - 公式過去問転載: `0件`
 
-最終QA記録:
-- `topics/11_moving_train_voltage/11_moving_train_voltage_final_qa.md`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+原則5問に対し、Topic 11固定範囲だけで問題全体を完答できる5問目は確認できなかったため、固定範囲外論点を追加して件数を水増ししていない。
 
-exact blocker:
-1. `11_moving_train_voltage.md` 冒頭 `## 状態` が `topic_11_practice_source_complete / IN_PROGRESS` のまま。
-2. 同main sourceの冒頭要約・末尾 `## 次工程` が練習PDF・計算プログラム・PowerPoint制作前のまま。
-3. `11_moving_train_voltage_practice.md` 冒頭 `状態` が `topic_11_practice_source_complete / IN_PROGRESS` のまま。
-4. `11_moving_train_voltage_powerpoint_qa.md` 末尾が「完成後blind独立再解答はまだ実施しない」のまま。
+Topic 11はまだ `completed` にしない。前回最終QAの `NEEDS_REVISION` は監査履歴として保持し、次工程で進捗記録整合を含む最終QAを再判定する。
 
 ## Gate checklist
 
@@ -55,8 +57,8 @@ exact blocker:
 - [x] Topic 08 completed
 - [x] Topic 09 completed
 - [x] Topic 10 completed
-- [ ] Topic 11 — final QA `NEEDS_REVISION / IN_PROGRESS`
+- [ ] Topic 11 — progress sync complete; final QA re-evaluation pending
 
 ## next_start
 
-技術内容は変更せず、上記4箇所の進捗記録だけを実成果物状態へ同期する。同期後にTopic 11最終QAを再実施し、全項目PASSの場合のみ `completed`、完成数 `11 / 22` とする。
+Topic 11の最終QAを再判定する。技術内容・試験対応品質ゲート・必須成果物・PDF/PPTX QA・練習QA・計算プログラムQA・blind独立再解答・進捗記録整合を再確認し、全件PASSの場合のみ `completed` として完成数を `11 / 22` に進める。
