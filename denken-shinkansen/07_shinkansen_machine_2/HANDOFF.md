@@ -6,8 +6,8 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_blind_reanswer_gate_complete`
-- 次工程: Topic 16 完成後独立再解答
+- current status: `topic_16_independent_reanswer_needs_redo`
+- 次工程: H18一次「機械」問3 (1) の独立再解答やり直し
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -16,11 +16,11 @@
 - Topic 01〜15は最終QA `PASS / completed` のまま変更なし。
 - 最初の未完了テーマは Topic 16。
 - 固定範囲・固定EXAM_ALIGNMENTは変更なし。一次4問＋二次記述1問、計5問・12答案要素。
-- 解説source/PDF、練習source/PDFの内容・QAは変更していない。
-- main上で先行完成済みだった解説画像PowerPoint/QAを正本としてreconcileし、既存blob `aba7ff0a01d5d139a1a3370d384761d48f4085ba` / `c04d48d8e7a0f8dd0d5f179521f1cf932aa61aac` へ復帰した。
-- 固定問題の公式正答番号・標準解答本文・完成済み個別解答・数値解・導出結果は参照・保存していない。
+- 解説source/PDF、練習source/PDF、PowerPoint/QAは変更していない。
+- 完成後独立再解答ではR02一次3要素、H30一次2要素、H26一次1要素、H23二次5要素を完成教材のみで答案確定後に公式照合し、厳密ブラインド `11 / 11 PASS`。
+- H18一次「機械」問3 (1) は問題取得に使った第三者解説ページで正答が同時露出したため、厳密ブラインド条件を満たさずPASS扱いにしない。
+- H18の正答内容は独立再実施を可能にするため進捗記録へ保存しない。
 - 未確認N700S実車値、電池材料反応・BMS・チョッパ詳細の仕様追加、Topic 17以降先取り `0件`。
-- 独立再解答前ゲート判定: `BLIND_REANSWER_READY`。
 
 ## Topic 15 最終状態
 - 固定一次3問＋二次記述2問、5問・8答案要素
@@ -51,6 +51,7 @@
 - [x] 解説画像PowerPoint `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_images.pptx` — 16:9・4枚、表示QA `4 / 4 PASS`
 - [x] PowerPoint QA `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_powerpoint_qa.md`
 - [x] 独立再解答前ゲート `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_blind_reanswer_gate.md`
+- [x] 完成後独立再解答記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md` — 厳密ブラインド `11 / 12 PASS`、1要素再実施必要
 
 ## Topic 16 解説画像PowerPointゲート
 - [x] 起電力 `E`＋内部抵抗 `r`、放電 `V=E-Ir`、充電 `V=E+Ir`、内部抵抗損 `I²r` を可視化
@@ -76,5 +77,15 @@
 - [x] 固定EXAM_ALIGNMENT変更、仕様外追加、Topic 17以降先取り、未確認実車値追加 `0件`
 - 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
 
+## Topic 16 完成後独立再解答
+- R02一次 問4 (1),(4),(5): `3 / 3 PASS`
+- H30一次 問6 (3),(4): `2 / 2 PASS`
+- H26一次 問3 (1): `1 / 1 PASS`
+- H23二次 問3 (3),(4): `5 / 5 PASS`
+- 上記は完成教材だけで答案確定後、電気技術者試験センター公式解答・標準解答へ照合した。
+- H18一次 問3 (1): 問題取得時に第三者解説ページ上の正答が同時露出したためブラインド完全性 `FAIL`。正答内容は本HANDOFFへ保存しない。
+- 厳密ブラインド結果: `11 / 12 PASS`
+- 判定: `NEEDS_REDO / topic_16_independent_reanswer_partial`
+
 ## 次に行うこと
-公式解答・標準解答を先に開かず、完成済みTopic 16教材だけを使って固定一次4問＋二次1問・12答案要素を独立再解答する。答案確定後に公式解答・標準解答と照合する。
+H18一次「機械」問3 (1) の1答案要素だけを、解答非表示の問題ソースから取得して完成済みTopic 16教材だけで再解答する。答案確定後に解答と照合する。固定EXAM_ALIGNMENTは変更しない。
