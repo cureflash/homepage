@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `14 / 39`
-- current_status: `topic_15_blind_reanswer_complete`
+- current_status: `topic_15_final_qa_needs_progress_sync`
 - last_completed_topic: `14 300系⑤ 走行抵抗と必要けん引力`
 - active_topic: `15 500系 高速域の出力・熱解析`
-- next_start: Topic 15の最終QAを実施し、必須成果物、各QA、SPEC境界、進捗記録整合を確認してcompleted可否を判定する
+- next_start: Topic 15の進捗記録4箇所だけを現工程へ同期し、技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果を変更せず、最終QAを再判定する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -25,7 +25,7 @@
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
-- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / BLIND_REANSWER_COMPLETE
+- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / FINAL_QA_NEEDS_PROGRESS_SYNC
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -180,6 +180,19 @@
 - 未確認500系実車値の真値化: `0件`
 - 判定: `PASS / BLIND_REANSWER_COMPLETE`
 
+## Topic 15 最終QA
+- QA: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_final_qa.md`
+- 技術内容: `PASS`
+- 固定5問・16答案要素: `PASS`
+- 完成後blind再解答: `16 / 16 PASS`
+- 必須成果物: `PASS`
+- PDF/PPTX表示・構造QA: `PASS`
+- 練習問題QA: `12 / 12 PASS`
+- SPEC境界: `PASS`
+- 進捗記録整合: `FAIL / 4件要同期`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の変更: `0件`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## Topic 15 SPEC固定範囲
 扱う内容:
 - `P = ωT`
@@ -209,4 +222,4 @@ SPEC指定可視化:
 Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 15の最終QAを実施し、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界、進捗記録整合を再確認して `completed` 可否を判定する。
+Topic 15の進捗記録4箇所だけを `topic_15_final_qa_needs_progress_sync` に同期し、技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果を変更せず、最終QAを再判定する。
