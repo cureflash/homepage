@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 13 / 20
-- current_status: `topic_14_exam_alignment_complete`
+- current_status: `topic_14_explanation_source_complete`
 - last_completed_topic: `13 フーリエ級数`
 - active_topic: `14 フーリエ変換・FFT`
-- next_start: Topic 14の解説本文＋3段階例題を作成する
+- next_start: Topic 14の解説PDFを作成し、表示QA・文字抽出QAを実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -185,7 +185,7 @@
 - [x] 第一種・第三種による件数水増し0件を確認
 - [x] Topic 15先取り、ADC量子化・回路方式の仕様外追加0件を確認
 - [x] source MarkdownへEXAM_ALIGNMENT・必要説明・境界を固定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF
@@ -197,16 +197,16 @@
 
 ## 今回進めた内容
 
-Topic 14 `フーリエ変換・FFT` の制作前EXAM_ALIGNMENTを完了した。
+Topic 14 `フーリエ変換・FFT` の解説本文＋3段階例題を完成し、主sourceへ反映した。
 
-現行の電気技術者試験センター公式資料で本Topic固定範囲へ直接接続し、問題本文・公式解答まで確認できたR3一次「機械」問8 (1)を正式固定した。制作前にサンプリング定理 `f_s > 2 f_max` を独立再導出し、空欄係数 `2` で公式解答と一致、`1 / 1 PASS`。
+固定R3一次「機械」問8 (1)の1答案要素を本文へ `1 / 1` マッピングした。本文では時間領域と周波数領域、フーリエ変換の概念、`f_s=1/T_s`、サンプリング定理 `f_s>2f_max`、エイリアシング、DFT、`Δf=f_s/N`、FFTとDFTの関係、PWM等のFFTスペクトルの読み方を固定範囲内で説明した。
 
-原則5問以上に対し、H18一次「機械」問6は学習資料で内容を確認できるものの現行公式アーカイブから本文・公式解答を直接確認できず、H12一次「機械」問8は題名のみで本文・正答を確定できないため正式件数へ含めなかった。二次「機械・制御」、第一種・第三種、Topic 15論点、ADC量子化・回路方式を件数合わせで追加していない。
+3段階例題は、基礎のサンプリング定理、本試験標準のDFT周波数刻み、複合・ひっかけの7 kHz→1 kHzエイリアシングとし、独立再計算 `3 / 3 PASS`。Topic 15先取り、ADC量子化・変換回路方式、フィルタ設計一般、第一種・第三種による件数水増し、未確認実車値追加はいずれも0件。
 
 ## 判定
 
-Topic 14は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。
+Topic 14は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。
 
 完成数は `13 / 20`。
 
-次はTopic 14の解説本文＋3段階例題を作成する。
+次はTopic 14の解説PDFを作成し、全ページ表示QA・文字抽出QA・固定1答案要素と3段階例題の反映を確認する。
