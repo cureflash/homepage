@@ -5,9 +5,9 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は品質ゲートPASSでcompleted。active topicは14「停電してもN700Sが走れるのはなぜ？」。
 
-Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後blind独立再解答まで完了。今回、最終QAを実施した。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENTとblind再解答、固定範囲境界はPASSしたが、旧進捗記録が3ファイル残っているため進捗記録整合のみFAIL。判定は `NEEDS_REVISION` とし、completedにはしない。
+Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後blind独立再解答まで完了。前回最終QAでは技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENTとblind再解答、固定範囲境界はPASSしたが、旧進捗記録3ファイルのため進捗記録整合のみFAILとなった。今回、その3ファイルを実成果物へ同期し `3 / 3 PASS`。固定EXAM_ALIGNMENT、問題、正答、技術本文、PDF/PPTX、固定範囲は変更していない。最終QA再判定前のためまだcompletedではない。
 
-状態: `topic_14_final_qa_needs_revision / IN_PROGRESS`
+状態: `topic_14_progress_sync_complete / IN_PROGRESS`
 
 ## Topic 14 固定範囲
 系列 `SPEC.md` に従い、電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率だけを扱う。
@@ -58,7 +58,7 @@ Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習�
 - 未確認N700S実値追加: `0件`
 - Topic 15・16先取り: `0件`
 
-## 今回の最終QA
+## 前回の最終QA
 - 技術内容: `PASS`
 - 必須成果物: `PASS`
 - 表示QA: `PASS`
@@ -67,19 +67,13 @@ Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習�
 - 進捗記録整合: `FAIL`
 - 総合判定: `NEEDS_REVISION`
 
-進捗記録整合FAILの対象は次の3ファイル。
+進捗記録整合FAILの対象だった3ファイルは今回すべて同期済み。
 
-1. `topics/14_battery/14_battery.md`
-   - 冒頭状態が `topic_14_explanation_pdf_complete / IN_PROGRESS` のまま。
-   - 「練習問題・練習PDF・解説画像PowerPointは未着手」と残っている。
-   - EXAM_ALIGNMENT内に「完成後blind独立再解答は未実施」と残っている。
-   - 次工程が「練習問題source作成」のまま。
-2. `topics/14_battery/14_battery_practice.md`
-   - 次工程が「練習PDF作成」のまま。
-3. `topics/14_battery/14_battery_practice_pdf_qa.md`
-   - 次工程が「解説画像PowerPoint作成」のまま。
+1. `topics/14_battery/14_battery.md` — 同期済み
+2. `topics/14_battery/14_battery_practice.md` — 同期済み
+3. `topics/14_battery/14_battery_practice_pdf_qa.md` — 同期済み
 
-上記は成果物の技術内容や過去問対応のFAILではなく、実成果物に対する進捗記録の同期漏れである。今回の最終QAでは仕様・問題・正答・技術本文・PDF/PPTX・固定EXAM_ALIGNMENTを変更しない。
+進捗記録同期: `3 / 3 PASS`。
 
 ## 新幹線側の扱い
 JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ自走システム」の搭載を確認。搭載電池の化学系、実容量、直並列構成、定格電圧、自走速度・距離・時間は実値化していない。系列SPECに明記された基本構成を超えて仕様を追加しない。
@@ -88,4 +82,4 @@ JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 14の旧進捗3ファイルだけを実成果物へ同期する。固定EXAM_ALIGNMENT、問題、正答、技術本文、PDF/PPTX、固定範囲は変更しない。同期完了後に最終QAを再判定し、全件PASSの場合のみ `completed` とする。
+Topic 14の最終QAを再判定する。固定EXAM_ALIGNMENT、問題、正答、技術本文、PDF/PPTX、固定範囲は変更しない。全件PASSの場合のみ `completed` とする。
