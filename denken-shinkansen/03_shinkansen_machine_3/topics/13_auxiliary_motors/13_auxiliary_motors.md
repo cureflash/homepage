@@ -2,9 +2,9 @@
 
 更新日: 2026-09-17
 
-状態: `topic_13_independent_reanswer_complete / IN_PROGRESS`
+状態: `topic_13_progress_sync_complete / IN_PROGRESS`
 
-制作前 `EXAM_ALIGNMENT` で固定した第三種「機械」の公式5問を変更せず、系列 `SPEC.md` の固定範囲だけで解説本文・3段階例題・解説PDF・練習問題source/PDF・解説画像PowerPointまで作成した。固定5問の要求事項を本文へ `5 / 5` 接続し、完成後blind独立再解答も `5 / 5 PASS`。エレベータ・巻上機、流体機械の高度な水力学、冷凍サイクル、補機の未確認実機仕様等は追加していない。Topic 13は最終QA前のためまだcompletedではない。
+制作前 `EXAM_ALIGNMENT` で固定した第三種「機械」の公式5問を変更せず、系列 `SPEC.md` の固定範囲だけで解説本文・3段階例題・解説PDF・練習問題source/PDF・解説画像PowerPointまで作成した。固定5問の要求事項を本文へ `5 / 5` 接続し、完成後blind独立再解答も `5 / 5 PASS`。エレベータ・巻上機、流体機械の高度な水力学、冷凍サイクル、補機の未確認実機仕様等は追加していない。前回最終QAでは技術内容・必須成果物・表示QA・固定EXAM_ALIGNMENT・blind独立再解答・固定範囲境界はPASS、進捗記録整合のみFAILだった。今回、指摘された旧進捗3箇所の同期を完了したため、次工程は最終QAの再判定である。再判定前のためまだcompletedではない。
 
 ## EXAM_ALIGNMENT
 
@@ -474,8 +474,9 @@
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定範囲外追加: `0件`
 - 未確認補機仕様の追加: `0件`
-- 状態: `topic_13_independent_reanswer_complete / IN_PROGRESS`
+- 旧進捗3箇所同期: `3 / 3 PASS`
+- 状態: `topic_13_progress_sync_complete / IN_PROGRESS`
 
 ## 次工程
 
-Topic 13の最終QAを行う。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
+Topic 13の最終QAを再判定する。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
