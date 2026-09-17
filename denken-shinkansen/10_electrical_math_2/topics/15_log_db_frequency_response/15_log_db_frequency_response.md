@@ -2,9 +2,9 @@
 
 ## 状態
 
-`topic_15_explanation_source_complete / IN_PROGRESS`
+`topic_15_progress_records_synced / IN_PROGRESS`
 
-2026-09-17、制作前EXAM_ALIGNMENT、制作前独立再解答・公式解答照合、解説本文＋3段階例題まで完了した。固定5問・12答案要素は制作前再解答 `12 / 12 PASS`、本文マッピング `12 / 12 PASS`。3段階例題は独立再計算 `3 / 3 PASS`。解説PDF、練習問題、PowerPoint、完成後独立再解答は未着手。
+2026-09-18、制作前EXAM_ALIGNMENTから完成後独立再解答・成果物QAまで実成果物上で完了済みである。固定5問・12答案要素は制作前再解答 `12 / 12 PASS`、本文マッピング `12 / 12 PASS`、完成後独立再解答 `12 / 12 PASS`。解説PDF、練習問題source/PDF、PowerPointと各表示QAもPASS。初回最終QAは技術内容ではなく進捗記録6ファイルの旧工程表記だけを理由に `NEEDS_REVISION` となったため、本段階では進捗記録だけを実成果物へ同期する。
 
 Topic 10で既に確認済みだった「R5二次 問4はTopic 15の周波数応答・ゲイン特性へ送る」「R6二次 問4 (5) は周波数応答としてTopic 10では採用しない」「R4二次 問4 (5) は周波数応答としてTopic 10では採用しない」という調査結果をreconcileし、同じ年度の調査をやり直して件数を水増ししない。
 
@@ -18,7 +18,7 @@ Topic 10で既に確認済みだった「R5二次 問4はTopic 15の周波数応
 
 制作前独立再解答は、公式解答確認前に `ANSWER_LOCKED_BEFORE_REVIEW` をGitHubへ保存してから照合した。lock commitは `7e83ea01cd6ccdeca2531fbfb29f119370947f75`。結果は `12 / 12 PASS`。
 
-次工程は、解説本文をA4縦の解説PDFへ組版し、表示QA・文字抽出QAを行う。
+次工程は、Topic 15の最終QAを再判定する。
 
 ## 固定範囲
 
@@ -836,4 +836,4 @@ PM=180-135=45 deg
 
 ## 次工程
 
-解説本文をA4縦の解説PDFへ組版し、全ページ表示QA・文字抽出QAを行う。
+Topic 15の最終QAを再判定する。
