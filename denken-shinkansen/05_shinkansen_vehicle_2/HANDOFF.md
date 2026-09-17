@@ -7,9 +7,9 @@
 
 Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
 
-Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了。固定一次4問＋二次1問、計5問・16答案要素は変更せず、本文マッピング `16 / 16 PASS`、SPEC指定9項目 `9 / 9`、4可視化の共通式系 `4 / 4 PASS`。未確認500系実車値の真値化・SPEC外追加は0件。
+Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDFまで完了。固定一次4問＋二次1問、計5問・16答案要素は変更せず、本文/PDF接続 `16 / 16 PASS`、SPEC指定9項目 `9 / 9`、4可視化 `4 / 4 PASS`。未確認500系実車値の真値化・SPEC外追加は0件。
 
-次工程は Topic 15 の解説PDF。固定EXAM_ALIGNMENTと解説sourceの共通仮定式系を変更せず、3段階例題・固定16答案要素・SPEC指定9項目/4可視化を欠落させない。
+次工程は Topic 15 の練習問題source。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDFの共通仮定式系を変更せず、第二種一次・二次への接続と完全解説条件を守る。
 
 ## Topic 15 固定EXAM_ALIGNMENT
 source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
@@ -73,6 +73,24 @@ SPEC指定可視化:
 - 簡略熱モデル: `R_th=0.80 K/kW`, `C_th=6000 kJ/K`、いずれも500系実車値ではない
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 固定過去問の正答記号・個別最終解の新規保存: `0件`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+
+## Topic 15 解説PDF
+- path: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_explanation.pdf`
+- QA: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_explanation_pdf_qa.md`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+- A4縦4ページ
+- 180 dpi表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 文字欠落・黒四角・重なり・クリップ: `0件`
+- 固定5問・16答案要素接続: `16 / 16 PASS`
+- 3段階例題: `3 / 3 PASS`
+- SPEC指定9項目: `9 / 9 PASS`
+- SPEC指定4可視化: `4 / 4 PASS`
+- 4可視化共通仮定式系: `PASS`
+- PDF SHA-256: `2b20783e82ada1d6db504d59e18e492851313e270e9051e44a3f74f6bc305593`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認500系実車値の真値化: `0件`
 
@@ -206,4 +224,4 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次の正確な開始点
-Topic 15 `500系 高速域の出力・熱解析` の解説PDFを作成する。固定EXAM_ALIGNMENTと解説sourceの共通仮定式系を変更せず、3段階例題・固定16答案要素・SPEC指定9項目/4可視化を欠落させない。
+Topic 15 `500系 高速域の出力・熱解析` の練習問題sourceを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDFの共通仮定式系を変更せず、第二種一次・二次への接続と完全解説条件を守る。
