@@ -3,236 +3,82 @@
 更新日: 2026-09-17
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は35/38。01〜35がPASS。active topicは36 `COSMOS① 新幹線全体を統合管理する`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は `35 / 38`。01〜35がPASS。active topicは36 `COSMOS① 新幹線全体を統合管理する`。
 
 ## 今回進捗
-Topic 36の固定EXAM_ALIGNMENT 5問・8答案要素と制作前blind独立解答 `8 / 8 PASS`、完成済み解説sourceを変更せず、解説PDFを作成しPDF QAを `PASS / EXPLANATION_PDF_COMPLETE` とした。
+Topic 36を練習PDF完了状態から1段階進め、解説画像PowerPointと表示・構造QAを完成した。固定EXAM_ALIGNMENT 5問・8答案要素と制作前blind独立解答 `8 / 8 PASS` は変更していない。
 
-- source: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management.md`
-- 解説PDF: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation.pdf`
-- PDF QA記録: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation_pdf_qa.md`
-- 系列SPEC固定範囲: 運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理
-- 本文: §1〜§16
-- 3段階例題: 基礎／本試験標準／複合・ひっかけ
-- 例題独立再計算: `3 / 3 PASS`
-- 固定EXAM_ALIGNMENT本文マッピング: `8 / 8答案要素 PASS`
-- 解説PDF: A4縦4ページ
-- 180 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: PASS
-- 固定EXAM_ALIGNMENT PDF反映: `8 / 8答案要素 PASS`
-- 固定範囲外追加: `0件`
-- Topic 37〜38先取り: `0件`
-- 未確認COSMOS内部仕様追加: `0件`
-- 「設備管理」をCOSMOS正式独立サブシステム名として断定: `0件`
-- 個別正答番号・公式問題の完成導出保存: `0件`
-- 練習問題・PowerPoint: 未着手
-- 完成数: `35 / 38` 維持
-- 次工程: Topic 36の固定範囲から練習sourceを作成し、原則12問以上・少なくとも半数五肢択一・完全解説・固定EXAM_ALIGNMENT接続・独立再解答をQAする。PowerPointへはまだ進まない
-
-## Topic 36 解説source
-- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 制作前blind独立解答: `5問・8答案要素 / 8 / 8 PASS`
-- 固定EXAM_ALIGNMENT: `5問・8答案要素`、変更なし
-- 本文: §1〜§16
-- 3段階例題: 基礎／本試験標準／複合・ひっかけ
-- 例題独立再計算: `3 / 3 PASS`
-- コンピュータ構成・CPU/LAN区別・ICメモリ: PASS
-- 有線/無線・アナログ/ディジタル・光ファイバ・パリティ: PASS
-- A-D/D-A変換・インタフェース: PASS
-- 配列・最大値・平均値・反復・比較交換・並べ替え: PASS
-- 位取り記数法・符号付き2進数・2の補数・オフセットバイナリ: PASS
-- COSMOS公開範囲との接続: PASS
-- 固定範囲外追加: `0件`
-- Topic 37以降先取り: `0件`
-- 未確認COSMOS内部仕様追加: `0件`
-- 個別正答番号・公式問題の完成導出保存: `0件`
-
-## Topic 36 解説PDF
-- PDF: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation.pdf`
-- QA記録: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation_pdf_qa.md`
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
-- A4縦4ページ
-- 本文§1〜§16＋3段階例題を収録
-- 固定EXAM_ALIGNMENT: `8 / 8答案要素` 反映
-- 180 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: PASS
-- 固定範囲外追加: `0件`
-- Topic 37以降先取り: `0件`
-- 未確認COSMOS内部仕様追加: `0件`
-- 「設備管理」をCOSMOS正式独立サブシステム名として断定: `0件`
-- 個別正答番号・公式問題の完成導出保存: `0件`
-- 練習問題・PowerPoint: 未着手
-
-## Topic 35 固定EXAM_ALIGNMENT
-- R7下 機械 問14 — フローチャート、変数更新、条件分岐、反復
-- R5上 機械 問14 — フローチャート、変数更新、条件分岐、反復
-- R4下 機械 問13 — 伝送路、雑音、多重化、変調波、標本化、圧縮
-- R4下 理論 問14 — 標本化、量子化、符号化、ディジタル伝送、A-D変換
-- H26 機械 問13 — シーケンス制御、工程・手順、条件による動作、PLC
-
-制作前独立解答: `5 / 5問 PASS`。
-完成後blind独立再解答: `5 / 5問 PASS`。
-公式解答との不一致: `0件`。
-教材外知識補完: `0件`。
-固定範囲外知識による正答補完: `0件`。
-未確認COMTRAC内部仕様依存: `0件`。
-
-## Topic 35 解説source
-- 本文: §1〜§15
-- 3段階例題: 基礎「代入と条件分岐」／標準「変数更新と反復」／複合「標本化・量子化・条件判断」
-- 固定EXAM_ALIGNMENT: `5 / 5問` 本文マッピング済み
-- フローチャート: 処理→更新→判定→分岐の順で追跡
-- 変数更新: 更新前/更新後を表で分離し、反復ごとに値を保持
-- シーケンス制御: 定めた手順・条件に従う制御。フィードバック制御との区別を明示
-- PLC: 入力を読み、記憶プログラムに従い論理・順序処理して出力する一般説明まで
-- 情報伝送: 伝送路、雑音、多重化、搬送波、変調波、圧縮
-- A-D変換: 標本化→量子化→符号化、`f_s>=2f_max`、`T_s=1/f_s`、`L=2^n`
-- COMTRAC接続: 運転管理・運転計画変更・遅延波及防止・第2総合指令所の公開事実まで
-- 具体的列車優先順位・番線変更判定式・運転整理ルール・内部切替方式は追加していない
-- 機能分散を冗長化と同義にしていない
-- Topic 36以降先取り: `0件`
-- 未確認COMTRAC内部仕様追加: `0件`
-
-## Topic 35 解説PDF
-- `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_explanation.pdf`
-- A4縦5ページ
-- 本文§1〜§15＋3段階例題を収録
-- 固定EXAM_ALIGNMENT: `5 / 5問` 反映
-- 180 dpi全ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: PASS
-- 固定範囲外追加: `0件`
-- Topic 36以降先取り: `0件`
-- Topic 34論理回路の再体系化: `0件`
-- 未確認COMTRAC内部仕様追加: `0件`
-- 機能分散と冗長化の混同: `0件`
-- QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_explanation_pdf_qa.md`
-
-## Topic 35 練習source
-- `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice.md`
-- 全15問（基礎4／標準8／複合3）
-- 全問五肢択一＋完全解説
-- 正答位置: A/B/C/D/E各3問
-- 固定EXAM_ALIGNMENT: `5 / 5` 練習マッピング
-- 独立数値・論理再計算: `15 / 15 PASS`
-- 複数正答: `0件`
-- 固定範囲外追加: `0件`
-- Topic 36以降先取り: `0件`
-- Topic 34論理回路の再体系化: `0件`
-- 未確認COMTRAC内部仕様追加: `0件`
-- 機能分散と冗長化の混同: `0件`
-
-## Topic 35 練習PDF
-- `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice.pdf`
-- A4縦5ページ
-- 全15問（基礎4／標準8／複合3）＋完全解説
-- 正答位置: A/B/C/D/E各3問
-- 180 dpi全ページ表示QA: `5 / 5 PASS`
-- 文字抽出QA: PASS
-- 独立数値・論理再計算: `15 / 15 PASS`
-- 固定EXAM_ALIGNMENT: `5 / 5` 接続
-- 複数正答: `0件`
-- 固定範囲外追加: `0件`
-- Topic 36以降先取り: `0件`
-- Topic 34論理回路の再体系化: `0件`
-- 未確認COMTRAC内部仕様追加: `0件`
-- 機能分散と冗長化の混同: `0件`
-- QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_practice_pdf_qa.md`
-
-## Topic 35 PowerPoint QA
-- `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_images.pptx`
+- PowerPoint: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_images.pptx`
+- PowerPoint QA: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_images_qa.md`
+- 判定: `PASS / POWERPOINT_COMPLETE`
 - 画面比率: `16:9`
-- スライド数: `3`
-- 固定EXAM_ALIGNMENT: `5 / 5問` 可視化
-- 180 dpi全スライド表示QA: `3 / 3 PASS`
-- overflow検査: `0件 / PASS`
-- PPTX ZIP整合性: PASS
+- スライド数: `4`
+- 固定EXAM_ALIGNMENT可視化: `8 / 8答案要素 PASS`
+- 180 dpi全スライド表示QA: `4 / 4 PASS`
+- 文字切れ・重なり・黒塗り・欠落: `0件`
+- shape geometry overflow: `0件 / PASS`
+- PPTX ZIP整合性: `PASS`
+- PDF変換: `4ページ / PASS`
 - 外部引用画像: `0件`
 - 固定範囲外追加: `0件`
-- Topic 36以降先取り: `0件`
-- Topic 34論理回路の再体系化: `0件`
-- 未確認COMTRAC内部仕様追加: `0件`
-- 機能分散と冗長化の混同: `0件`
-- QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_images_qa.md`
+- Topic 37のSCADA・遠隔計測・遠隔制御の体系的先取り: `0件`
+- Topic 38の冗長化・バックアップ・障害切替の体系的先取り: `0件`
+- 未確認COSMOS内部仕様追加: `0件`
+- 「設備管理」をCOSMOS正式独立サブシステム名として断定: `0件`
+- 個別正答番号・完成導出保存: `0件`
+- 完成数: `35 / 38` 維持
 
-## Topic 35 完成後blind独立再解答
-- 記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_independent_reanswer.md`
-- 判定: `5 / 5問 PASS`
-- 公式解答との不一致: `0件`
-- 教材外知識補完: `0件`
-- 固定範囲外知識による補完: `0件`
-- Topic 36以降先取り: `0件`
-- Topic 34論理回路の再体系化: `0件`
-- 未確認COMTRAC内部仕様依存: `0件`
-- 機能分散と冗長化の混同: `0件`
+## Topic 36 固定EXAM_ALIGNMENT
+品質ゲート対象は公式過去問 `5問・8答案要素`。固定後の追加・差替えなし。
 
-## Topic 35 最終QA
-- 記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_final_qa.md`
-- 判定: `PASS / COMPLETED`
-- 技術内容・固定EXAM_ALIGNMENT・完成後blind独立再解答・練習QA・PDF/PPTX表示QA・固定範囲境界: PASS
-- 進捗記録整合: PASS
-- 前回FAILだった旧工程3箇所: 全件解消
-- 完成数: `35 / 38`
+- R6上 機械 問18(a)(b): 基数表現、符号付き2進数、2の補数、オフセットバイナリ、D-A変換
+- R4上 機械 問13: 有線/無線、アナログ/ディジタル、光ファイバ、電波、パリティチェック
+- R4上 機械 問14: A-D/D-A変換、インタフェース
+- R4下 機械 問18(a)(b): 配列、最大値、平均値、反復、並べ替え、一時変数
+- H27 機械 問18(a)(b): コンピュータ構成、CPU、入力/出力/記憶、LAN、RAM/ROM系メモリ
 
-## Topic 35 進捗記録同期
-- 判定: `topic_35_progress_records_synced / IN_PROGRESS`
-- 旧工程3箇所を実成果物へ同期済み
-- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果: 変更なし
-- 完成数: `34 / 38` 維持
-- 次工程: Topic 35の最終QA再実施
-
-## Topic 35 系列SPEC固定範囲
-扱う: 遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
-
-新幹線側はJR東海・JR東海情報システムの公開資料で確認できるCOMTRACの運転管理、運転計画変更、遅延波及防止、第2総合指令所までを根拠とする。具体的な列車優先順位、番線変更判定式、運転整理ルール、自動化範囲、内部切替方式は断定しない。2018年JR東海資料の「複数計算機への機能分散」は故障影響範囲を小さくする構成変更として扱い、冗長化と同義にしない。
-
-追加しない:
-- COMTRAC内部の具体的な列車優先順位、進路選択アルゴリズム、番線変更判定式、運転整理ルール、データ構造、更新周期、通信プロトコル
-- 公開資料で確認できない自動化範囲や指令員との役割分担
-- 機能分散を冗長化と同義とすること
-- Topic 36以降の固定範囲の先取り
-- Topic 34の論理回路を再度体系化して範囲を拡張すること
-
-## Topic 34 固定EXAM_ALIGNMENT
-- R7上 機械 問14 — AND・OR・NOT、論理回路、出力波形
-- R6下 機械 問18(a)(b) — AND・OR・NOT、真理値表、多段論理回路、条件判定
-- R5下 機械 問14 — 真理値表から論理式
-- R2 機械 問14 — 真理値表から論理式
-- H27 機械 問14 — 4入力真理値表から論理式
-
-制作前独立解答: `5 / 5問・6 / 6答案要素 PASS`。
-完成後blind独立再解答: `5 / 5問・6 / 6答案要素 PASS`。
+制作前blind独立解答: `8 / 8 PASS`。
 公式解答との不一致: `0件`。
 固定範囲外知識による正答補完: `0件`。
-Topic 35範囲追加: `0件`。
-未確認COMTRAC内部仕様追加: `0件`。
+未確認COSMOS内部仕様依存: `0件`。
 
-## Topic 34 成果物
-- source: `topics/34_comtrac_route_control/34_comtrac_route_control.md` — §1〜§15＋3段階例題、固定6答案要素 `6 / 6` 本文マッピング
-- 解説PDF: `topics/34_comtrac_route_control/34_comtrac_route_control_explanation.pdf` — A4縦4ページ、180 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- 練習source: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.md` — 15問（基礎4／標準8／複合3）、全問五肢択一＋完全解説、独立論理QA `15 / 15 PASS`
-- 練習PDF: `topics/34_comtrac_route_control/34_comtrac_route_control_practice.pdf` — A4縦5ページ、180 dpi表示 `5 / 5 PASS`、文字抽出PASS
-- PowerPoint: `topics/34_comtrac_route_control/34_comtrac_route_control_images.pptx` — 16:9・4枚、固定6答案要素 `6 / 6` 可視化、表示 `4 / 4 PASS`、overflow・ZIP整合性PASS
-- 完成後blind独立再解答: `topics/34_comtrac_route_control/34_comtrac_route_control_independent_reanswer.md` — `5 / 5問・6 / 6答案要素 PASS`
-- 最終QA: `topics/34_comtrac_route_control/34_comtrac_route_control_final_qa.md` — `PASS / COMPLETED`
+## Topic 36 固定範囲
+扱う: 運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理。
 
-## Topic 34 系列SPEC固定範囲
-扱う: 進路制御、条件判定、AND、OR、NOT、真理値表、インターロック、論理回路。
-
-新幹線側はJR東海・JR東海情報システムの公開資料で確認できるCOMTRAC/PRCの「進路制御」という役割までを根拠とし、具体的論理式・判定順序・実インターロック条件・更新周期・通信仕様等は実装事実として断定しない。
+新幹線側はJR東日本公開資料で確認できるCOSMOSの7サブシステムと、計画・当日実施・実績を一元管理する公開事実までを根拠とする。系列SPECの「設備管理」は教材上の整理語であり、COSMOSの正式独立サブシステム名とは断定しない。
 
 追加しない:
-- Topic 35の遅延、列車順序変更、番線変更、運転整理、冗長化
-- ExOR、NOR、NANDを独立した新規ゲート知識として扱うこと
-- カルノー図、ブール代数の高度な簡単化
-- COMTRAC内部の具体的優先順位、進路選択アルゴリズム、実際のインターロック条件表、更新周期、伝送速度、通信プロトコル、データ形式
-- ATCの速度照査・ブレーキ制御の再説明
+- COSMOS内部の具体的ネットワーク構成、通信プロトコル、帯域、更新周期、データベース構造、サーバ構成、冗長切替方式
+- 公開資料で確認できないサブシステム間のデータ形式・制御ロジック
+- Topic 37のSCADA・遠隔計測・遠隔制御の体系的説明
+- Topic 38の冗長化・バックアップ・障害切替の体系的説明
+
+## Topic 36 成果物
+- source: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management.md`
+- 解説source QA: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation_source_qa.md`
+- 解説PDF: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation.pdf`
+- 解説PDF QA: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_explanation_pdf_qa.md`
+- 練習source: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_practice.md`
+- 練習source QA: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_practice_source_qa.md`
+- 練習PDF: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_practice.pdf`
+- 練習PDF QA: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_practice_pdf_qa.md`
+- PowerPoint: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_images.pptx`
+- PowerPoint QA: `topics/36_cosmos_integrated_management/36_cosmos_integrated_management_images_qa.md`
+
+## Topic 36 既完成QA
+- 解説source: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF: A4縦4ページ、180 dpi `4 / 4 PASS`、文字抽出 `PASS`
+- 練習source: 15問（基礎4 / 標準8 / 複合3）、全問五肢択一＋完全解説、独立再解答 `15 / 15 PASS`
+- 練習PDF: A4縦5ページ、180 dpi `5 / 5 PASS`、文字抽出 `PASS`
+- 固定EXAM_ALIGNMENT本文・練習・PowerPoint接続: `8 / 8答案要素 PASS`
+- PowerPoint: 16:9・4枚、180 dpi `4 / 4 PASS`、overflow `0件`、ZIP整合性 `PASS`
 
 ## 現在の状態
-- `current_status`: `topic_36_explanation_pdf_complete`
-- 完成数: 35/38
-- 01〜35: PASS
+- `current_status`: `topic_36_powerpoint_complete`
+- 完成数: `35 / 38`
+- 01〜35: PASS / COMPLETED
 - last completed: 35 `COMTRAC③ ダイヤが乱れたらどうする？`
 - active topic: 36 `COSMOS① 新幹線全体を統合管理する`
 
 ## 次の正確な開始点
-Topic 36は制作前EXAM_ALIGNMENT 5問・8答案要素を固定し、制作前blind独立解答 `8 / 8 PASS` を維持したまま解説sourceと解説PDFを完成。PDFはA4縦4ページ、180 dpi全ページ表示 `4 / 4 PASS`、文字抽出PASS、固定5問・8答案要素 `8 / 8` 反映。固定範囲外追加・Topic 37以降先取り・未確認COSMOS内部仕様追加はいずれも0件。次はTopic 36の固定範囲から練習sourceを作成し、原則12問以上・少なくとも半数五肢択一・完全解説・固定EXAM_ALIGNMENT接続・独立再解答をQAする。PowerPointへはまだ進まない。
+Topic 36の完成後blind独立再解答。PowerPoint・解説/練習成果物は変更せず、公式問題PDFと完成教材だけで固定5問・8答案要素を先に独立導出し、全答案確定後に公式解答表と照合する。全8答案要素が一致し、教材外知識補完・固定範囲外知識補完・未確認COSMOS内部仕様依存が0件であることを確認する。最終QAへはまだ進まない。
