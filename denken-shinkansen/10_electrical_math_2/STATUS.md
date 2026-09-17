@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 14 / 20
-- current_status: `topic_15_exam_reanswer_complete`
+- current_status: `topic_15_final_qa_needs_revision`
 - last_completed_topic: `14 フーリエ変換・FFT`
 - active_topic: `15 対数・dB・周波数応答`
-- next_start: Topic 15の最終QAを実施する
+- next_start: Topic 15の進捗記録6ファイルを実成果物へ同期する
 
 ## Topic 07 制作品質ゲート
 
@@ -217,24 +217,26 @@
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 `12 / 12 PASS`（post-completion lock commit `05a031bf1ce152cf071f4028fa4960443d31b1df`）
-- [ ] 最終QA
+- [x] 最終QA実施 → `NEEDS_REVISION`
+- [ ] 進捗記録6ファイルの同期
+- [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 15 `対数・dB・周波数応答` の完成後独立再解答を、保存済み正答・公式解答を先に見ないブラインド手順で実施した。
+Topic 15 `対数・dB・周波数応答` の最終QAを実施した。
 
-候補答案を `topics/15_log_db_frequency_response/15_log_db_frequency_response_post_completion_reanswer_lock.md` に `ANSWER_LOCKED_BEFORE_REVIEW` として先に保存し、その後に公式標準解答・一次試験標準解答と照合した。固定5問・12答案要素は `12 / 12 PASS`。
+必須成果物、固定第二種公式過去問5問・12答案要素、完成後独立再解答 `12 / 12 PASS`、解説PDF `4 / 4 PASS`、練習PDF `6 / 6 PASS`、PowerPoint `5 / 5 PASS`、SPEC境界はいずれもPASS。
 
-R6問4 (5) `-90°`、R5問4 (1)〜(4)、R4問4 (5) `B=0.691`、H30問4 (2)のPI折れ線、H23一次「機械」問7 `ワ, チ, ハ, ヘ, イ` はすべて公式解答と一致。教材外知識補完、仕様外論点追加、件数水増し、未確認実車値依存はいずれも0件。
+一方、主source、解説PDF QA、練習source、練習PDF QA、PowerPoint QA、`HANDOFF.md` の計6ファイルが旧工程の進捗記録を残しているため、進捗整合だけFAILとした。技術本文・問題・正答・PDF・PowerPointの修正は不要。
 
-照合記録:
-`topics/15_log_db_frequency_response/15_log_db_frequency_response_post_completion_reanswer.md`
+最終QA記録:
+`topics/15_log_db_frequency_response/15_log_db_frequency_response_final_qa.md`
 
 ## 判定
 
-Topic 15は `EXAM_REANSWER_COMPLETE / IN_PROGRESS`。
+Topic 15は `FINAL_QA_NEEDS_REVISION / IN_PROGRESS`。
 
 完成数は `14 / 20` のまま。
 
-次はTopic 15の最終QAを実施する。
+次はTopic 15の進捗記録6ファイルだけを実成果物へ同期し、その後に最終QAを再判定する。
