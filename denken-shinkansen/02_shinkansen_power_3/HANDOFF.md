@@ -6,11 +6,13 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は完成済み。
 
 ## 今回進捗
-Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の解説本文§1〜§14＋3段階例題を完成した。固定5問・6答案要素の要求事項を本文へ `6 / 6` マッピングし、例題3問を独立再計算して `3 / 3 PASS`。`D=wS^2/(8T)`、`L≈S+8D^2/(3S)`、`ΔL=αLΔθ` の記号・単位・成立条件・逆算、温度変化の複合手順、風圧・着雪の合成荷重、波動速度 `c=√(T/μ)` の基本関係までを固定範囲内で説明した。
+Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の解説PDF＋QAを完成した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出 `PASS`。本文§1〜§14、基礎・本試験標準・複合の3段階例題、固定5問・6答案要素の要求事項を反映し、例題数値・論理再検算 `3 / 3 PASS`、固定過去問対応 `6 / 6` を維持した。
 
-SPEC固定範囲外追加0件、Topic 13以降の先取り0件、未確認新幹線実設備値の真値化0件。制作前の保存済み選択肢番号・最終数値解は本文へ転記しておらず、完成後ブラインド独立再解答の条件を維持している。
+SPEC固定範囲外追加0件、Topic 13以降の先取り0件、未確認新幹線実設備値の真値化0件。制作前の保存済み選択肢番号・最終数値解はPDFへ転記しておらず、完成後ブラインド独立再解答の条件を維持している。
 
 source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
+解説PDF: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation.pdf`
+解説PDF QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation_qa.md`
 
 固定問題:
 - R7上 電力 問12
@@ -47,11 +49,15 @@ H25 電力 問9は架線張力に関連するが、支線・支柱の幾何と�
 - 3段階例題: 基礎・本試験標準・複合 各1問完成
 - 固定5問・6答案要素の本文要求事項マッピング: `6 / 6 PASS`
 - 3段階例題独立再計算: `3 / 3 PASS`
-- SPEC固定範囲外の採用問題・本文追加: `0件`
+- 解説PDF: A4縦4ページ
+- 解説PDF表示QA: 200 dpi `4 / 4 PASS`
+- 解説PDF文字抽出QA: `PASS`
+- 解説PDF数値・論理再検算: `3 / 3 PASS`
+- SPEC固定範囲外の採用問題・本文・PDF追加: `0件`
 - Topic 13以降の論点による補完・先取り: `0件`
 - 未確認新幹線実設備値への依存・真値化: `0件`
 - 件数合わせの仕様追加: `0件`
-- 制作前の保存済み正答・選択肢番号の本文転記: `0件`
+- 制作前の保存済み正答・選択肢番号のPDF転記: `0件`
 
 ## 直前完了テーマ
 Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / completed`。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、必須成果物、PDF/PPTX QA、SPEC境界、進捗記録整合を全件PASS確認済み。
@@ -79,18 +85,22 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_12_explanation_source_complete`
+- `current_status`: `topic_12_explanation_pdf_complete`
 - 完成数: `11 / 16`
 - last completed: Topic 11 `架線事故ではどうやって電気を止める？`
 - active: Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？`
 - Topic 12 source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
+- Topic 12 解説PDF: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation.pdf`
+- Topic 12 解説PDF QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation_qa.md`
 - 固定問題: `5問・6答案要素`
 - 制作前独立検証: `6 / 6 PASS`
 - 本文要求事項マッピング: `6 / 6 PASS`
 - 3段階例題独立再計算: `3 / 3 PASS`
+- 解説PDF表示QA: `4 / 4 PASS`
+- 解説PDF文字抽出QA: `PASS`
 - SPEC固定範囲外追加: `0件`
 - Topic 13以降の先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
 ## 次の正確な開始点
-Topic 12の解説PDFを作成し、本文§1〜§14、3段階例題、固定5問・6答案要素の要求事項を反映する。SPEC固定範囲外、Topic 13以降、未確認の新幹線実設備値を追加しない。
+Topic 12の練習問題sourceを作成する。原則12問以上、少なくとも半数を五肢択一、本試験標準を中心に固定5問・6答案要素へ接続し、SPEC固定範囲外、Topic 13以降、未確認の新幹線実設備値を追加しない。
