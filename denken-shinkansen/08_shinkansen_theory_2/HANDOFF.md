@@ -6,11 +6,11 @@
 
 Topic 01〜13は `PASS / completed`。完成数は `13 / 21`。
 
-current_status: `topic_14_source_progress_synced`
+current_status: `topic_14_final_qa_complete`
 
 active_topic: `14 インバータのギザギザ波形を分解する`
 
-Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。固定一次2問・3答案要素＋二次1問・2答案要素は完成教材だけで `5 / 5 PASS`、公式標準解答と全件一致。初回最終QAで唯一FAILだった主source冒頭・主source末尾・練習source冒頭の旧進捗記録3箇所を実成果物へ同期した。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。完成数は `13 / 21` のまま、次工程は最終QA再実施。
+Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、最終QA再実施まで完了。固定一次2問・3答案要素＋二次1問・2答案要素は完成教材だけで `5 / 5 PASS`、公式標準解答と全件一致。初回最終QAで唯一FAILだった主source冒頭・主source末尾・練習source冒頭の旧進捗記録3件は全件解消し、再実施した最終QAは `PASS / FINAL_QA_COMPLETE`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。完成数はまだ `13 / 21` のまま、次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。
 
 ## Topic 14 成果物
 
@@ -25,7 +25,7 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 完成後独立再解答: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_reanswer.md`
 - 最終QA: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics_final_qa.md`
 - completion: `in_progress`
-- stage: `SOURCE_PROGRESS_SYNCED`
+- stage: `FINAL_QA_COMPLETE`
 
 ## Topic 14 固定範囲
 
@@ -133,15 +133,10 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - 固定3問・5答案要素の完成後独立再解答: `5 / 5 PASS`
 - PDF/PPTX表示QA・練習QA: `PASS`
 - 二次採用判断・SPEC境界: `PASS`
-- 進捗記録整合: `FAIL`
+- 初回blocker 3件の解消: `3 / 3 PASS`
+- 進捗記録整合: `PASS`
 
-初回最終QA時点のexact blocker:
-
-1. 主source冒頭が `EXPLANATION_SOURCE_COMPLETE` / 解説PDF以降未着手 / 次工程「解説PDF＋表示QA」のまま。
-2. 主source末尾 `## 9. 制作進捗` が解説PDF以降を未完了とし、現在地・次工程も旧状態のまま。
-3. 練習source冒頭が `PRACTICE_PDF_COMPLETE` / 次工程「解説画像PowerPoint＋表示QA」のまま。
-
-判定: `NEEDS_REVISION / IN_PROGRESS`
+判定: `PASS / FINAL_QA_COMPLETE`
 
 ## Topic 14 進捗記録同期
 
@@ -158,4 +153,4 @@ Topic 14は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 ## 次に行うこと
 
-Topic 14の最終QAを再実施する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更せず、初回FAILだった進捗記録整合が解消されているかを含めて再判定する。
+Topic 14の主source・練習source・STATUS・HANDOFFをcompleted状態へ同期し、完成数を `14 / 21` へ進める。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
