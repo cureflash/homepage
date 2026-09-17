@@ -7,9 +7,11 @@
 
 Topic 01〜13は最終QAまで `PASS / completed`。完成数は `13 / 39`。
 
-現在地は `topic_14_powerpoint_complete`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は固定一次2問＋二次3問、計5問・9答案要素と制作前検証 `9 / 9 PASS` を変更せず、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成した。
+現在地は `topic_14_blind_reanswer_gate_needs_sanitization`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は固定一次2問＋二次3問、計5問・9答案要素と制作前検証 `9 / 9 PASS` を変更せず、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完成している。
 
-次はTopic 14の独立再解答前ゲート。
+完成後独立再解答前ゲートで、main source の `制作前計算・論理検証` 欄に固定公式過去問の個別数値解・正答記号・完成済み導出結果が保存されていることを確認した。この状態では `保存済み正答を見ずに` 行うblind再解答条件を満たさないため、本runでは再解答を実施していない。
+
+次はmain sourceから保存済み個別解答だけを除去する。固定EXAM_ALIGNMENT、教材本文、練習問題、PDF/PPTX、制作前PASS件数は変更しない。
 
 ## Topic 14 固定EXAM_ALIGNMENT
 source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -133,6 +135,16 @@ R8一次「機械」にはTopic 14の走行抵抗・必要けん引力・機械�
 - PPTX SHA-256: `ccacae7c24460cdc95e34ff86a821df0798e6694cbab626d07dc43ea387f00e4`
 - Git blob SHA: `e7193da320ce93219cd65044fbb8d7badf43ceb9`
 
+## Topic 14 独立再解答前ゲート
+- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_gate.md`
+- 判定: `NEEDS_REVISION / BLIND_REANSWER_NOT_READY`
+- main source の制作前検証欄に固定公式過去問の個別数値解・正答記号・完成済み導出結果を確認
+- blind条件: `FAIL`
+- 本runの完成後独立再解答: `未実施`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 既存成果物変更: `0件`
+- SPEC外追加: `0件`
+
 ## Topic 14 SPEC固定範囲
 扱う内容:
 - 走行抵抗
@@ -158,4 +170,4 @@ R8一次「機械」にはTopic 14の走行抵抗・必要けん引力・機械�
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次の正確な開始点
-固定EXAM_ALIGNMENT、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointは完成。次はTopic 14の独立再解答前ゲートを実施する。固定公式過去問の個別正答記号・完成済み答案を保存していないことを再確認し、固定5過去問・9答案要素、SPEC指定8項目・4可視化条件、教材用仮定式系を変更せず、完成後blind再解答へ進める。
+main source の `制作前計算・論理検証` 欄から固定公式過去問の個別数値解・正答記号・完成済み答案だけを除去する。固定5過去問・9答案要素、要求知識・使用式、教材内マッピング、PASS件数、SPEC指定8項目・4可視化条件、教材本文、練習問題、PDF/PPTXは変更しない。除去後の新しいrunで、公式解答・標準解答を先に開かず完成後blind再解答を実施する。
