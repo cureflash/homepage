@@ -5,7 +5,7 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は品質ゲートPASSでcompleted。active topicは14「停電してもN700Sが走れるのはなぜ？」。
 
-Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPointを完了し、`topic_14_powerpoint_complete / IN_PROGRESS`。完成後blind独立再解答は未実施。
+Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後blind独立再解答を完了し、`topic_14_independent_reanswer_complete / IN_PROGRESS`。次工程は最終QA。
 
 ## Topic 14 固定範囲
 系列 `SPEC.md` に従い、電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率だけを扱う。
@@ -29,7 +29,7 @@ Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習�
 - H28 機械 問12 — 二次電池・内部抵抗等は接続するが、問題全体には酸化還元・イオン化傾向が必要なため非選定。
 - R4上 機械 問12 — NAS固有の活物質・電解質・作動条件が必要なため非選定。
 
-制作前公式照合ではH30問12の公式正答 `(1)` を確認。完成後blind独立再解答は教材完成後に別工程で行う。
+制作前公式照合ではH30問12の公式正答 `(1)` を確認。完成後blind独立再解答でも教材内5項目だけから選択肢 `(1)` を一意に固定し、答案固定後の公式解答照合で一致した。
 
 ## Topic 14 解説source本文
 `topics/14_battery/14_battery.md` に解説本文を作成済み。
@@ -91,12 +91,25 @@ Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習�
 - 未確認N700S実値追加: `0件`
 - QA: `topics/14_battery/14_battery_powerpoint_qa.md`
 
+## Topic 14 完成後blind独立再解答
+`topics/14_battery/14_battery_independent_reanswer.md` に記録済み。
+
+- 対象: H30 機械 問12
+- 完成教材から再構成: 正極=リチウムを含む金属酸化物 / 負極=主に黒鉛 / 電解液=有機電解液 / 放電時=負極から正極 / セル電圧=3〜4 V程度
+- blind解答: `(1)`
+- 公式解答一致: `1 / 1 PASS`
+- 教材外・固定範囲外知識補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外追加: `0件`
+- 未確認N700S実値追加: `0件`
+- 判定: `PASS`
+
 ## Topic 14 新幹線側の扱い
 JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ自走システム」の搭載を確認。搭載電池の化学系、実容量、直並列構成、定格電圧、自走速度・距離・時間、詳細な電力経路は現時点で実値化しない。一次資料で明示された値だけを後工程で使用する。
 
 ## Topic 14 成果物
 - source: `topics/14_battery/14_battery.md`
-- 状態: 解説画像PowerPoint完成
+- 状態: 完成後blind独立再解答完了 / 最終QA待ち
 - source本文QA: `PASS`
 - explanation PDF: `topics/14_battery/14_battery_explanation.pdf`
 - explanation PDF QA: `topics/14_battery/14_battery_explanation_pdf_qa.md`
@@ -115,7 +128,8 @@ JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ�
 - PowerPoint QA: `topics/14_battery/14_battery_powerpoint_qa.md`
 - PowerPoint表示QA: `4 / 4 PASS`
 - PowerPoint固定過去問接続: `1 / 1 PASS`
-- 完成後blind独立再解答: 未実施
+- 完成後blind独立再解答: `1 / 1 PASS`
+- 独立再解答記録: `topics/14_battery/14_battery_independent_reanswer.md`
 - 固定範囲外追加: `0件`
 - 件数合わせ: `0件`
 - 未確認N700S実値追加: `0件`
@@ -124,4 +138,4 @@ JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 14の完成後blind独立再解答を実施する。
+Topic 14の最終QAを実施する。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。
