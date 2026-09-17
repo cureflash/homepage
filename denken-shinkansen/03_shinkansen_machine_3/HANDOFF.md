@@ -5,7 +5,7 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `13 / 16`。Topic 01〜13は品質ゲートPASSでcompleted。active topicは14「停電してもN700Sが走れるのはなぜ？」。
 
-Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDFを完了し、`topic_14_explanation_pdf_complete / IN_PROGRESS`。練習問題source/PDF・解説画像PowerPointは未着手。
+Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題sourceを完了し、`topic_14_practice_source_complete / IN_PROGRESS`。練習PDF・解説画像PowerPointは未着手。
 
 ## Topic 14 固定範囲
 系列 `SPEC.md` に従い、電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率だけを扱う。
@@ -59,26 +59,45 @@ Topic 14は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDFを完了�
 - 未確認N700S実値追加: `0件`
 - QA: `topics/14_battery/14_battery_explanation_pdf_qa.md`
 
+## Topic 14 練習問題source
+`topics/14_battery/14_battery_practice.md` を作成済み。
+
+- 問題数: `12 / 12`
+- 構成: 基礎3 / 本試験標準7 / 複合・応用2
+- 五肢択一: `12 / 12`
+- 独立計算・論理QA: `12 / 12 PASS`
+- 正答一意性QA: `12 / 12 PASS`
+- 固定EXAM_ALIGNMENT H30問12への接続: `1 / 1 PASS`（問4）
+- `Ah` / `Wh` / 直列 / 並列 / 内部抵抗 / 充放電効率 / 放電時間 / 必要容量: `PASS`
+- H28問12向け酸化還元・イオン化傾向追加: `0件`
+- NAS・燃料電池・電気加工等の固定範囲外追加: `0件`
+- 未確認N700S実値追加: `0件`
+- Topic 15・16先取り: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
 ## Topic 14 新幹線側の扱い
 JR東海公式N700Sページで「高速鉄道で世界初となるバッテリ自走システム」の搭載を確認。搭載電池の化学系、実容量、直並列構成、定格電圧、自走速度・距離・時間、詳細な電力経路は現時点で実値化しない。一次資料で明示された値だけを後工程で使用する。
 
 ## Topic 14 成果物
 - source: `topics/14_battery/14_battery.md`
-- 状態: 解説PDF完成
+- 状態: 練習問題source完成
 - source本文QA: `PASS`
 - explanation PDF: `topics/14_battery/14_battery_explanation.pdf`
 - explanation PDF QA: `topics/14_battery/14_battery_explanation_pdf_qa.md`
 - explanation PDF表示QA: `2 / 2 PASS`
 - explanation PDF文字抽出QA: `PASS`
+- practice source: `topics/14_battery/14_battery_practice.md`
+- practice source QA: `12 / 12 PASS`
+- practice PDF: 未着手
+- PowerPoint: 未着手
+- 完成後blind独立再解答: 未実施
 - 固定範囲外追加: `0件`
 - 件数合わせ: `0件`
 - 未確認N700S実値追加: `0件`
-- practice source/PDF: 未着手
-- PowerPoint: 未着手
-- 完成後blind独立再解答: 未実施
 
 ## Topic 13
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 14の練習問題sourceを、固定範囲と固定EXAM_ALIGNMENTを変更せずに作成する。
+Topic 14の練習PDFを、`topics/14_battery/14_battery_practice.md` から作成する。
