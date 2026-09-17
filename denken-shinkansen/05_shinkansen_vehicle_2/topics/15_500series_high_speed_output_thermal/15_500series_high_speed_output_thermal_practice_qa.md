@@ -36,6 +36,6 @@
 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
 ## 現在地
-current_status: `topic_15_progress_sync_complete`
+current_status: `topic_15_final_qa_needs_progress_sync`
 
-Topic 15は解説PDF、練習PDF、解説画像PowerPoint、完成後blind再解答まで完了し、最終QAで指摘された進捗記録4箇所の同期を実施済み。次工程はTopic 15最終QAの再判定である。固定EXAM_ALIGNMENT、SPEC固定範囲、共通仮定式系、PDF/PPTX、blind再解答結果は変更しない。
+Topic 15は解説PDF、練習PDF、解説画像PowerPoint、完成後blind再解答まで完了し、最終QAでは技術内容・固定EXAM_ALIGNMENT・成果物QA・SPEC境界がPASSした。進捗記録同期後の次工程はTopic 15最終QAの再判定である。固定EXAM_ALIGNMENT、SPEC固定範囲、共通仮定式系、PDF/PPTX、blind再解答結果は変更しない。
