@@ -8,7 +8,7 @@ status: `PASS`
 ## 生成条件
 
 - 用紙: A4縦
-- ページ数: `5`
+- ページ数: `2`
 - source: `10_substation_spacing.md` の解説本文§1〜§15＋3段階例題
 - 正式品質ゲート: 平成30年度二種一次「電力」問7、平成27年度二種二次「電力・管理」問3・問4、平成26年度二種二次「電力・管理」問4
 - 一次1問＋二次3問 = `4問・17答案要素`
@@ -20,10 +20,7 @@ status: `PASS`
 
 - page 1: PASS
 - page 2: PASS
-- page 3: PASS
-- page 4: PASS
-- page 5: PASS
-- 合計: `5 / 5 PASS`
+- 合計: `2 / 2 PASS`
 
 文字欠け、重なり、ページ外、黒塗り化、壊れた日本語グリフ: `0件`
 
@@ -47,6 +44,7 @@ status: `PASS`
 - 例題3: `x=2L/3`、`V_max/V_Bonly=8/27≈0.296` → PASS
 - 3段階例題再計算: `3 / 3 PASS`
 - 正式4過去問への本文接続: `4 / 4問・17 / 17答案要素`
+- SPEC固定10項目: `10 / 10`
 
 ## 範囲境界
 
@@ -59,8 +57,8 @@ status: `PASS`
 
 ## ファイル整合
 
-- ファイルサイズ: `16603 bytes`
-- SHA-256: `01dccc1cc80bc8846e3b702a8d813ee6e6ca7227dd2f5bf76767c0bd2a8b5a00`
-- Git blob SHA: `2d40fe7a0f578e2a9ca08e3c691456285aecfda0`
+- ファイルサイズ: `4331 bytes`
+- Git blob SHA: `2804fd739aaf1537c897f192576cc63f5968bbb1`
+- SHA-256: `7f62188fcf53d37943a68701bb46cf9ce688288da00a45efa08e746fad898e30`
 
 判定: `PASS`
