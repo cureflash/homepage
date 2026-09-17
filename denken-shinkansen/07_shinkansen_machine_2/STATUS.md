@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_16_h18_blind_input_ready`
+- current_status: `topic_16_independent_reanswer_complete`
 - last_completed_topic: `15 新幹線の補機モーターを設計する`
 - active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: 隔離済み問題入力を使ったH18一次「機械」問3 (1) の独立再解答
+- next_start: Topic 16 最終QA
 
 ## 完了テーマ
 - [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `IN_PROGRESS` — 厳密ブラインド `11 / 12 PASS`、H18一次1答案要素の問題入力を解答非保存状態で隔離済み
+- [ ] Topic 16 `IN_PROGRESS` — 完成後独立再解答 `12 / 12 PASS`、次は最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -52,7 +52,7 @@
 - H18 一次 機械 問3 (1) — 1答案要素
 - H23 二次 機械・制御 問3 (3),(4) — 5答案要素
 
-固定問題の正答記号・完成済み数値解は保存せず、完成教材後に独立再解答してから公式解答・標準解答と照合する。
+固定問題の正答記号・完成済み数値解は保存せず、完成教材後に独立再解答してから解答と照合する。
 
 ## Topic 16 制作前EXAM_ALIGNMENT
 - [x] R08一次「機械」まで直近年度から公式過去問を確認
@@ -138,16 +138,16 @@
 - [x] R02一次 問4 (1),(4),(5): 完成教材だけで答案確定後、公式解答照合 `3 / 3 PASS`
 - [x] H30一次 問6 (3),(4): 完成教材だけで答案確定後、公式解答照合 `2 / 2 PASS`
 - [x] H26一次 問3 (1): 完成教材だけで答案確定後、公式解答照合 `1 / 1 PASS`
+- [x] H18一次 問3 (1): 隔離済み問題入力と完成教材だけで（カ）DC/DCコンバータを先に答案ロックし、その後の解答照合で一致 `1 / 1 PASS`
 - [x] H23二次 問3 (3),(4): 完成教材だけで答案確定後、公式標準解答照合 `5 / 5 PASS`
-- [ ] H18一次 問3 (1): 本採点未実施。問題側情報のみ `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md` へ隔離済み
-- [x] H18再実施入力 `BLIND_INPUT_READY`。正答記号・正答内容・解説・採点結果は隔離ファイルへ保存していない
-- [x] 厳密ブラインド照合済み答案要素 `11 / 12 PASS`
+- [x] H18答案ロック `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_answer_lock.md` を解答照合前にGitHubへ保存
+- [x] 厳密ブラインド再解答 `12 / 12 PASS`
 - [x] 固定EXAM_ALIGNMENT変更、仕様外追加、Topic 17以降先取り、未確認N700S実車値追加 `0件`
 - 記録: `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md`
-- 判定: `NEEDS_REDO / topic_16_h18_blind_input_ready`
+- 判定: `PASS / topic_16_independent_reanswer_complete`
 
 ## 今回進めた内容
-H18一次「機械」問3 (1) の再実施用入力を、問題本文・解答群だけのファイルとして固定した。取得元ページは解説・解答も同居するため、このrunではH18を採点せず、品質ゲートを緩めていない。固定一次4問＋二次1問・12答案要素、既存 `11 / 12 PASS`、教材内容、仕様境界は変更していない。
+H18一次「機械」問3 (1) を、隔離済み問題入力と完成済みTopic 16教材だけで再解答した。（カ）DC/DCコンバータと理由を `16_n700s_battery_dc_link_h18_q3_1_answer_lock.md` へ解答照合前に固定し、GitHubへ保存後に解答を照合して一致を確認した。これにより固定5問・12答案要素は `12 / 12 PASS`。教材内容、固定EXAM_ALIGNMENT、仕様境界は変更していない。
 
 ## 判定
-Topic 16は `topic_16_h18_blind_input_ready / IN_PROGRESS`。完成数は `15 / 22` のまま。次は隔離済み問題入力を使ったH18一次「機械」問3 (1) の独立再解答。
+Topic 16は `topic_16_independent_reanswer_complete / IN_PROGRESS`。完成数は `15 / 22` のまま。次はTopic 16最終QA。
