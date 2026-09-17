@@ -114,7 +114,7 @@ H23二次 問3 (3) は、電流波形、端子電圧波形、充電時間、放�
   - https://e-sysnet.com/%E9%9B%BB%E6%B0%97%E5%8C%96%E5%AD%A6%E9%9B%BB%E6%B1%A0%E3%81%A8%E9%9B%BB%E6%B0%97%E5%8A%A0%E5%B7%A5/
   - 二次電池、リチウム系電池、内部抵抗・放電特性を説明する際の基礎確認に使用する。
 - e-sysnet「直流の電力と電力量」
-  - https://e-sysnet.com/%E7%9B%B4%E6%B5%81%E3%81%AE%E9%9B%BB%E6%B0%97%E3%81%A8%E9%9B%BB%E5%8A%9B%E9%87%8F/
+  - https://e-sysnet.com/%E7%9B%B4%E6%B5%81%E3%81%AE%E9%9B%BB%E5%8A%9B%E3%81%A8%E9%9B%BB%E5%8A%9B%E9%87%8F/
   - `P=VI` と電力量の単位関係を確認する。
 - 電気の神髄「電験一種二次試験『機械・制御』パワエレ分野の攻略法」内チョッパ回路（DC→DC）の説明
   - https://denki-no-shinzui.com/strategy-powerelectronics/
