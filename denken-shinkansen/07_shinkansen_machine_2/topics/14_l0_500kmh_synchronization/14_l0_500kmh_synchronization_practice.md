@@ -643,4 +643,4 @@ p.u.では
 
 # 次工程
 
-進捗記録同期済み。固定EXAM_ALIGNMENT、問題・正答、練習PDF、PowerPointを変更せず、Topic 14の最終QAを再実施する。
+Topic 14最終QA `PASS / completed`。次はTopic 15「新幹線の補機モーターを設計する」の制作前EXAM_ALIGNMENT。
