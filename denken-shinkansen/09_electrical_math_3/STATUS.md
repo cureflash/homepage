@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_12_independent_reanswer_complete`
+- current_status: `topic_12_final_qa_needs_revision`
 - last_completed_topic: `11 グラフ・特性曲線を読む`
 - active_topic: `12 電気数学総合`
-- next_start: `Topic 12の最終QA`
+- next_start: `Topic 12のsource進捗記録同期`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -150,26 +150,31 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答前のブラインドゲート整備
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5問・9 / 9答案要素 PASS`
-- [ ] 最終QA
+- [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
 - [ ] 必要時のsource進捗記録同期
 - [ ] 最終QA再判定 `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 12「電気数学総合」の完成教材だけでの公式過去問独立再解答を実施し、GitHub正本へ反映した。
+Topic 12「電気数学総合」の最終QAを実施し、GitHub正本へ反映した。
 
-- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_independent_reanswer.md`
-- 前回のブラインド汚染実行は無効扱いのまま、本実行では保存済み個別正答を含む主source区間を参照せずに答案を先に確定
-- 固定品質ゲート5問・9答案要素を変更なしで再解答
-- 公式解答照合 `5 / 5問・9 / 9答案要素 PASS`
-- 教材外知識補完0件
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_final_qa.md`
+- 必須成果物実在: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 制作前独立検証: `5 / 5問・9 / 9答案要素 PASS`
+- 完成後独立再解答: `5 / 5問・9 / 9答案要素 PASS`
+- 練習QA: `12 / 12 PASS`
+- 表示QA・成果物実在: PASS
+- 仕様境界: PASS
 - 固定EXAM_ALIGNMENT変更0件
-- 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
-- 法規固有論点追加0件
-- 未確認の新幹線実車値追加0件
+- 固定範囲外追加0件
+- source進捗整合: FAIL
+  - 主source冒頭 `## 状態` が解説本文完成時点のまま
+  - 主source末尾 `## 次工程` が解説PDF作成のまま
+  - 練習source末尾 `## 次工程` が練習PDF作成のまま
 
 ## 判定
 
-`topic_12_independent_reanswer_complete / IN_PROGRESS`。
+`topic_12_final_qa_needs_revision / IN_PROGRESS`。
 
-完成数は `11 / 12`。次工程はTopic 12の最終QA。
+完成数は `11 / 12`。次工程はTopic 12の主source・練習sourceに残る旧進捗記録3箇所だけを現在地へ同期する。
