@@ -7,7 +7,7 @@
 
 Topic 01〜13は最終QAまで `PASS / completed`。完成数は `13 / 39`。
 
-現在地は `topic_14_final_qa_needs_progress_sync`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は、固定一次2問＋二次3問、計5問・9答案要素、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、blind再解答前ゲート、完成後blind再解答までPASS。最終QAでは技術・試験対応・成果物・SPEC境界はPASSしたが、進捗記録4箇所が旧工程のため `NEEDS_REVISION / IN_PROGRESS`。`completed` にはしない。
+現在地は `topic_14_progress_sync_complete`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は、固定一次2問＋二次3問、計5問・9答案要素、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、blind再解答前ゲート、完成後blind再解答までPASS。最終QAで指摘された進捗記録4箇所を現在地へ同期済み。最終QA再判定前なので `completed` にはしない。
 
 ## Topic 14 固定EXAM_ALIGNMENT
 source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -110,6 +110,16 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 
 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、blind再解答結果は変更しない。
 
+## Topic 14 進捗記録同期
+- 主source冒頭 `## 状態`: `PASS`
+- 主source末尾 `## 次工程`: `PASS`
+- 練習source末尾 `## 次工程`: `PASS`
+- 練習PDF QA末尾 `## 現在地`: `PASS`
+- 進捗記録整合: `4 / 4 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 技術本文・問題/正答・PDF/PPTX・blind再解答結果変更: `0件`
+- 判定: `PASS / PROGRESS_SYNC_COMPLETE`
+
 ## Topic 14 SPEC固定範囲
 扱う内容:
 - 走行抵抗
@@ -135,4 +145,4 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次の正確な開始点
-Topic 14最終QAで検出した進捗記録4箇所だけを現在地へ同期する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない。同期後にTopic 14最終QAを再判定する。Topic 15へは最終QAが `PASS / completed` になるまで進まない。
+Topic 14最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない。全件PASSの場合のみ `completed` とし、その後Topic 15へ進む。
