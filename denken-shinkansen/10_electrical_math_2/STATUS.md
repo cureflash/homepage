@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 14 / 20
-- current_status: `topic_14_completed`
+- current_status: `topic_15_exam_alignment_complete`
 - last_completed_topic: `14 フーリエ変換・FFT`
 - active_topic: `15 対数・dB・周波数応答`
-- next_start: Topic 15の制作前EXAM_ALIGNMENTを実施する
+- next_start: Topic 15の制作前独立再解答・公式解答照合を実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -197,18 +197,40 @@
 - [x] 最終QA再判定 → `PASS`
 - [x] `completed`
 
+## Topic 15 制作品質ゲート
+
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] Topic 10でTopic 15送りとして確認済みのR5/R6/R4二次「機械・制御」問4をreconcile
+- [x] 第二種公式過去問を直近年度優先で追加確認
+- [x] 二次4問＋一次1問、計5問・12答案要素を固定
+- [x] R6問4 (5)、R5問4 (1)〜(4)、R4問4 (5)、H30問4 (2)、H23一次「機械」問7 (1)〜(5)を採用
+- [x] source Markdownへ要求知識・式・設問型・教材内必要説明を固定
+- [x] 常用対数・自然対数・dB・`20log10|G(jω)|`・位相・ボード線図・ゲイン余裕/位相余裕への接続をSPECどおり固定
+- [x] 第一種・第三種による件数水増し0件、ラウス・フルビッツ法一般・ナイキスト安定判別一般・補償器設計一般・フィルタ設計一般の仕様外追加0件を確認
+- [ ] 制作前独立再解答・公式解答照合 `0 / 12`
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF
+- [ ] 解説画像PowerPoint
+- [ ] PowerPoint表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] `completed`
+
 ## 今回進めた内容
 
-Topic 14 `フーリエ変換・FFT` の最終QAを再判定した。
+Topic 15 `対数・dB・周波数応答` の制作前EXAM_ALIGNMENTを実施した。
 
-前回FAIL要因だった進捗記録6箇所が実成果物へ同期済みであることを確認し、必須成果物、固定R3一次「機械」問8 (1)の1問・1答案要素、完成後独立再解答 `1 / 1 PASS`、練習問題QA、解説PDF・練習PDF・PowerPoint表示QA、SPEC境界を再確認した。
+Topic 10で既に確認済みだったR5二次問4、R6二次問4 (5)、R4二次問4 (5)のTopic 15への接続をreconcileし、重複調査による別選定を避けた。追加でH30二次「機械・制御」問4 (2)とH23一次「機械」問7 (1)〜(5)を確認し、第二種5問・12答案要素を固定した。
 
-Topic 15先取り、ADC量子化・変換回路方式、フィルタ設計一般、FFT実装詳細の試験必須化、二次公式過去問の件数合わせ、第一種・第三種による件数水増し、未確認実車値依存はいずれも0件。
+固定範囲は系列SPECの常用対数、自然対数、dB、`20log10|G(jω)|`、位相、ボード線図、ゲイン余裕・位相余裕への接続だけとし、第一種・第三種による件数水増し、ラウス・フルビッツ法一般、ナイキスト線図による独立した安定判別、補償器設計一般、フィルタ設計一般、Topic 16以降の先取りはいずれも0件。
 
 ## 判定
 
-Topic 14は `PASS / completed`。
+Topic 15は `EXAM_ALIGNMENT complete / IN_PROGRESS`。
 
-完成数は `14 / 20`。
+完成数は `14 / 20` のまま。
 
-次はTopic 15 `対数・dB・周波数応答` の制作前EXAM_ALIGNMENTを実施する。
+次は固定5問・12答案要素の制作前独立再解答・公式解答照合を実施する。
