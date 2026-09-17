@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_11_final_qa_pass`
+- current_status: `topic_12_exam_alignment_complete`
 - last_completed_topic: `11 グラフ・特性曲線を読む`
 - active_topic: `12 電気数学総合`
-- next_start: `Topic 12の制作前EXAM_ALIGNMENT調査`
+- next_start: `Topic 12の制作前独立解答・公式解答照合`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -133,23 +133,41 @@
 - [x] 主source・練習sourceの旧進捗記録3箇所を現在地へ同期
 - [x] 最終QA再判定 `PASS / completed`
 
+## Topic 12 進捗
+- [x] 系列SPEC確認
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
+- [x] 令和8年度上期の公式過去問を調査
+- [x] 理論・電力・機械を横断する公式過去問5問を固定
+- [x] 伝達関数・法規等の固定範囲外候補を除外
+- [x] 参考教材を複数系統確認（e-sysnet含む）
+- [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
+- [ ] 制作前独立解答・公式解答照合
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF
+- [ ] 練習問題source
+- [ ] 練習PDF（解答・完全解説付き）
+- [ ] 解説画像PowerPoint
+- [ ] 完成後独立再解答前のブラインドゲート整備
+- [ ] 完成教材だけでの公式過去問独立再解答
+- [ ] 最終QA
+- [ ] 必要時のsource進捗記録同期
+- [ ] 最終QA再判定 `PASS / completed`
+
 ## 今回進めた内容
 
-Topic 11「グラフ・特性曲線を読む」の最終QAを再判定し、`PASS / completed` とした。
+Topic 12「電気数学総合」の制作前EXAM_ALIGNMENT調査を完了した。
 
-- 初回最終QAでFAILだった旧進捗記録3箇所の同期を再確認: PASS
-- 必須成果物実在: PASS
-- 固定EXAM_ALIGNMENT 5問: PASS
-- 制作前独立検証: `5 / 5 PASS`
-- 完成後独立再解答: `5 / 5 PASS`
-- 練習QA: `12 / 12 PASS`
-- 表示QA・成果物実在: PASS
-- 教材外補完0件
-- 固定EXAM_ALIGNMENT変更0件
+- R8上の公式問題を直近年度として確認
+- 品質ゲート5問を固定: 理論2 / 電力1 / 機械2
+- 既習Topics 01〜11の数学を代表問題へ横断接続
+- 伝達関数・ボード線図・PID・法規固有論点等を追加しない
+- 参考教材を複数系統確認（e-sysnet / 電験三種まとめました / 電気主任技術者のナレッジノート）
+- 過去問から逆算した必須説明18項目をsourceへ記録
+- 公式解答・保存済み正答はsourceへ記録せず、次工程の制作前独立解答を分離
 - 仕様外追加0件
 
 ## 判定
 
-`topic_11_final_qa_pass / completed`。
+`topic_12_exam_alignment_complete / IN_PROGRESS`。
 
-完成数は `11 / 12`。次の未完了テーマは Topic 12「電気数学総合」。次工程はTopic 12の制作前EXAM_ALIGNMENT調査。
+完成数は `11 / 12`。次工程はTopic 12の制作前独立解答・公式解答照合。
