@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_12_final_qa_needs_revision`
+- current_status: `topic_12_source_progress_sync_complete`
 - last_completed_topic: `11 グラフ・特性曲線を読む`
 - active_topic: `12 電気数学総合`
-- next_start: `Topic 12のsource進捗記録同期`
+- next_start: `Topic 12の最終QA再判定`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -151,30 +151,22 @@
 - [x] 完成後独立再解答前のブラインドゲート整備
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5問・9 / 9答案要素 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
-- [ ] 必要時のsource進捗記録同期
+- [x] 必要時のsource進捗記録同期
 - [ ] 最終QA再判定 `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 12「電気数学総合」の最終QAを実施し、GitHub正本へ反映した。
+Topic 12「電気数学総合」の初回最終QAでFAILだった旧進捗記録3箇所だけを現在地へ同期した。
 
-- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_final_qa.md`
-- 必須成果物実在: PASS
-- 固定EXAM_ALIGNMENT 5問: PASS
-- 制作前独立検証: `5 / 5問・9 / 9答案要素 PASS`
-- 完成後独立再解答: `5 / 5問・9 / 9答案要素 PASS`
-- 練習QA: `12 / 12 PASS`
-- 表示QA・成果物実在: PASS
-- 仕様境界: PASS
+- 主source冒頭 `## 状態`: 完成教材・独立再解答完了、最終QA再判定待ちへ同期
+- 主source末尾 `## 次工程`: `Topic 12の最終QAを再判定する` へ同期
+- 練習source末尾 `## 次工程`: `Topic 12の最終QAを再判定する` へ同期
+- 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、完成後独立再解答結果は変更なし
 - 固定EXAM_ALIGNMENT変更0件
 - 固定範囲外追加0件
-- source進捗整合: FAIL
-  - 主source冒頭 `## 状態` が解説本文完成時点のまま
-  - 主source末尾 `## 次工程` が解説PDF作成のまま
-  - 練習source末尾 `## 次工程` が練習PDF作成のまま
 
 ## 判定
 
-`topic_12_final_qa_needs_revision / IN_PROGRESS`。
+`topic_12_source_progress_sync_complete / IN_PROGRESS`。
 
-完成数は `11 / 12`。次工程はTopic 12の主source・練習sourceに残る旧進捗記録3箇所だけを現在地へ同期する。
+完成数は `11 / 12`。次工程はTopic 12の最終QA再判定。
