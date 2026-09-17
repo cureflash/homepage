@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 15 / 21
-- current_status: `topic_16_final_qa_complete`
-- last_completed_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
-- active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
-- next_start: Topic 16 completed状態同期
+- exam_aligned_completed_topics: 16 / 21
+- current_status: `topic_16_completed`
+- last_completed_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
+- active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
+- next_start: Topic 17 制作前EXAM_ALIGNMENT
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -281,22 +281,20 @@
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 主source・練習sourceの旧進捗記録同期
 - [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
-- [ ] completed状態同期
+- [x] completed状態同期
+- [x] 最終判定: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 16「300系の半導体はなぜ電流を一方向へ流せる？」の最終QAを再実施した。
+Topic 16「300系の半導体はなぜ電流を一方向へ流せる？」のcompleted状態同期を完了した。
 
-- 必須成果物: `PASS`
-- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
-- 公式標準解答一致: `25 / 25`
-- 二次採用判断: `PASS`
-- 二次採用: `0問`、二次数合わせ: `0件`
-- SPEC境界: `PASS`
-- PDF/PPTX表示QA・練習QA: `PASS`
-- 初回blocker解消: `4 / 4 PASS`
+- 主source: `completed / COMPLETED`
+- 練習source: `completed / COMPLETED`
+- STATUS / HANDOFF: Topic 16 completed状態へ同期
+- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS` を維持
+- 二次採用: `0問`、二次数合わせ: `0件` を維持
 - 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
 
 ## 判定
 
-Topic 16は `PASS / FINAL_QA_COMPLETE`。完成数は `15 / 21` のまま。次工程はcompleted状態同期。
+Topic 16は `PASS / completed`。完成数は `16 / 21`。次工程はTopic 17「GTO・IGBT・SiCはどうやって電流を操る？」の制作前EXAM_ALIGNMENT。
