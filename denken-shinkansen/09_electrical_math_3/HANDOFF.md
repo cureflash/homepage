@@ -8,13 +8,13 @@ Topic 01〜11は `completed`。
 
 完成数: `11 / 12`
 
-current_status: `topic_12_practice_pdf_complete`
+current_status: `topic_12_blind_gate_ready`
 
 last_completed_topic: `11 グラフ・特性曲線を読む`
 
 active_topic: `12 電気数学総合`
 
-next_start: `Topic 12の解説画像PowerPoint`
+next_start: `Topic 12の完成教材だけでの公式過去問独立再解答`
 
 ## Topic 11 固定仕様範囲
 
@@ -412,6 +412,39 @@ R8上 電力 問15は Topic 09では水力設備知識が固定範囲外だっ�
 
 判定: `topic_12_practice_pdf_complete / IN_PROGRESS`。
 
+## Topic 12 解説画像PowerPoint
+
+主sourceと完成済み教材の固定範囲だけを使い、次をGitHub正本へ反映した。
+
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_images.pptx`
+- 16:9・5枚
+- 200 dpi表示QA `5 / 5 PASS`
+- overflow `0件`
+- PPTX ZIP整合性 `PASS`
+- 総合解法順序、正弦波→フェーザ→RLC、正弦波微分→電磁誘導、揚水・三相同期機の量の鎖、三相整流波形→定積分平均を図解
+- 固定5過去問への接続 `5 / 5`
+- 固定EXAM_ALIGNMENT変更0件
+- 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
+- 未確認の新幹線実車値追加0件
+
+判定: `topic_12_explanation_images_complete / IN_PROGRESS`。
+
+## Topic 12 完成後独立再解答 ブラインドゲート
+
+次をGitHub正本へ反映した。
+
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_blind_gate.md`
+- 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
+- 固定品質ゲート5問は変更なし
+- 固定EXAM_ALIGNMENT・教材成果物・問題・正答は変更なし
+- HANDOFFには制作前独立解答の個別正答・数値解・導出を保存しない状態を維持
+- 主sourceの制作前独立解答節は、完成後独立解答を確定するまで参照しない
+- 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
+- 法規固有論点追加0件
+- 未確認の新幹線実車値追加0件
+
+判定: `topic_12_blind_gate_ready / IN_PROGRESS`。
+
 ## 次工程
 
-Topic 12の解説画像PowerPointを作成する。
+Topic 12の完成教材だけで固定5問を独立再解答し、解答確定後に公式解答と照合する。
