@@ -7,9 +7,9 @@
 
 Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
 
-Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENTまで完了。一次4問＋二次1問、計5問・16答案要素を固定し、制作前計算・論理検証は `16 / 16 PASS`。SPEC指定9項目・4可視化への対応を固定し、未確認500系実車値の真値化・SPEC外追加は0件。本文は未着手。
+Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENTと解説本文＋3段階例題まで完了。固定一次4問＋二次1問、計5問・16答案要素は変更せず、本文マッピング `16 / 16 PASS`、SPEC指定9項目 `9 / 9`、4可視化の共通式系 `4 / 4 PASS`。未確認500系実車値の真値化・SPEC外追加は0件。
 
-次工程は Topic 15 の解説本文＋3段階例題。固定EXAM_ALIGNMENTを変更せず、一次10＋二次6の16答案要素を本文だけで解ける構成へ接続する。
+次工程は Topic 15 の解説PDF。固定EXAM_ALIGNMENTと解説sourceの共通仮定式系を変更せず、3段階例題・固定16答案要素・SPEC指定9項目/4可視化を欠落させない。
 
 ## Topic 15 固定EXAM_ALIGNMENT
 source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
@@ -59,6 +59,22 @@ SPEC指定可視化:
 - 詳細な熱流体解析、冷却風量設計、絶縁寿命モデル、軸受・歯車・車体空力設計を追加しない
 - 未確認500系実車値を真値化しない
 - 簡略熱モデルを第二種公式過去問で直接問われた論点とは扱わない
+
+## Topic 15 解説source
+- path: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 3段階例題: `3 / 3 PASS`
+- 固定5問・16答案要素の本文接続: `16 / 16 PASS`
+- 例題数値再計算: `3 / 3 PASS`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定4可視化の共通式系・計算条件: `4 / 4 PASS`
+- 教材用仮定モデル: `N_b=3000 min^-1`, `T_b=1200 N·m`, `P_b≈377 kW`
+- 損失モデル: `P_loss=15+25(P_out/P_b)^2 [kW]`
+- 簡略熱モデル: `R_th=0.80 K/kW`, `C_th=6000 kJ/K`、いずれも500系実車値ではない
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定過去問の正答記号・個別最終解の新規保存: `0件`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
 
 ## Topic 14 固定EXAM_ALIGNMENT
 source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -190,4 +206,4 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次の正確な開始点
-Topic 15 `500系 高速域の出力・熱解析` の解説本文＋3段階例題を作成する。`topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md` の固定EXAM_ALIGNMENTを変更せず、SPEC指定9項目・4可視化と一次10＋二次6の16答案要素を本文へ接続する。
+Topic 15 `500系 高速域の出力・熱解析` の解説PDFを作成する。固定EXAM_ALIGNMENTと解説sourceの共通仮定式系を変更せず、3段階例題・固定16答案要素・SPEC指定9項目/4可視化を欠落させない。
