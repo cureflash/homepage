@@ -6,11 +6,11 @@
 
 Topic 01〜14は `PASS / completed`。完成数は `14 / 21`。
 
-current_status: `topic_15_reanswer_complete`
+current_status: `topic_15_final_qa_needs_revision`
 
 active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 
-Topic 15は完成後独立再解答まで完了。固定範囲はRL・RC・RLC回路、初期条件、過渡項・定常項、時定数、微分方程式、必要に応じたラプラス変換。品質ゲートはR8〜R4一次「理論」の5問・25答案要素で、完成後独立再解答 `25 / 25 PASS`。R8二次は2026-09-17時点で未実施、R7〜R5二次は固定範囲だけで完答できる直接対応問題がなく、二次採用0問・数合わせ0件。次工程は最終QA。
+Topic 15は初回最終QAまで実施済み。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界はいずれもPASS。blockerは主source・練習sourceに残る旧進捗記録4箇所のみで、判定は `NEEDS_REVISION / IN_PROGRESS`。次工程はその4箇所を実成果物状態へ同期する。
 
 ## Topic 15 成果物
 
@@ -23,8 +23,9 @@ Topic 15は完成後独立再解答まで完了。固定範囲はRL・RC・RLC�
 - PowerPoint: `topics/15_breaker_transient/15_breaker_transient_images.pptx`
 - PowerPoint QA: `topics/15_breaker_transient/15_breaker_transient_powerpoint_qa.md`
 - 完成後独立再解答: `topics/15_breaker_transient/15_breaker_transient_reanswer.md`
+- 初回最終QA: `topics/15_breaker_transient/15_breaker_transient_final_qa.md`
 - completion: `in_progress`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- stage: `FINAL_QA_NEEDS_REVISION`
 
 ## Topic 15 固定範囲
 
@@ -164,6 +165,27 @@ Topic 15は完成後独立再解答まで完了。固定範囲はRL・RC・RLC�
 - 未確認実設備値・実測過渡波形追加: `0件`
 
 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+
+## Topic 15 初回最終QA
+
+記録: `topics/15_breaker_transient/15_breaker_transient_final_qa.md`
+
+- 必須成果物: `PASS`
+- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
+- 二次採用判断: `PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC境界: `PASS`
+- PDF/PPTX表示QA・練習QA: `PASS`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答の不整合: `0件`
+- 進捗記録blocker: `4箇所`
+  - 主source冒頭状態
+  - 主source末尾「次工程」
+  - 練習source冒頭状態
+  - 練習source末尾「次工程」
+
+判定: `NEEDS_REVISION / IN_PROGRESS`
 
 ## Topic 14 成果物
 
@@ -306,4 +328,4 @@ Topic 15は完成後独立再解答まで完了。固定範囲はRL・RC・RLC�
 
 ## 次に行うこと
 
-Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の最終QA。
+Topic 15の主source・練習sourceに残る旧進捗記録4箇所を、PowerPoint・完成後独立再解答・初回最終QAまで完了した実状態へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
