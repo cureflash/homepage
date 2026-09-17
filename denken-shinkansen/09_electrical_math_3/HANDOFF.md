@@ -8,13 +8,13 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 12`
 
-current_status: `topic_11_blind_gate_ready`
+current_status: `topic_11_independent_reanswer_complete`
 
 last_completed_topic: `10 指数関数・一階微分方程式入門`
 
 active_topic: `11 グラフ・特性曲線を読む`
 
-next_start: `Topic 11完成教材だけでの公式過去問独立再解答（ブラインド手順）`
+next_start: `Topic 11最終QA`
 
 ## Topic 11 固定仕様範囲
 
@@ -178,6 +178,27 @@ next_start: `Topic 11完成教材だけでの公式過去問独立再解答（�
 
 判定: `topic_11_blind_gate_ready / IN_PROGRESS`。
 
+## Topic 11 完成教材だけでの公式過去問独立再解答
+
+次をGitHub正本へ反映した。
+
+- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_independent_reanswer.md`
+- ブラインド条件を守り、公式解答・制作前独立解答節を参照する前に固定5問の解答を確定
+- 固定品質ゲート5問は変更なし
+- R7下 機械 問1: `(5)` PASS
+- R6下 理論 問13: `(2)` PASS
+- R6下 理論 問9: `(3)` PASS
+- R5上 機械 問7: `(4)` PASS
+- R5上 機械 問9: `(4)` PASS
+- 公式解答照合 `5 / 5 PASS`
+- 教材外知識補完0件
+- 固定EXAM_ALIGNMENT変更0件
+- 伝達関数・ボード線図・PID等の固定範囲外追加0件
+
+判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`。
+
+Topic 11はまだ `completed` としない。
+
 ## 次工程
 
-Topic 11の完成教材だけで固定5問をブラインド手順に従って独立再解答する。
+Topic 11の最終QAを実施する。
