@@ -6,21 +6,21 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_practice_source_complete`
-- 次工程: Topic 16 練習PDF作成
+- current status: `topic_16_practice_pdf_complete`
+- 次工程: Topic 16 解説画像PowerPoint作成
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、直近の07系列コミット、Topic 16 source・解説PDFを確認した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 16 source・解説PDF・練習sourceを確認した。
 - Topic 01〜15は最終QA `PASS / completed` のまま変更なし。
 - 最初の未完了テーマは Topic 16。
 - Topic 16の系列SPEC固定範囲は、リチウムイオン電池、起電力、内部抵抗、放電電流、電圧降下、Ah、Wh、C-rate、DCリンク、DC/DC変換の概念、変換効率。
 - 固定EXAM_ALIGNMENTは一次4問＋二次記述1問、計5問・12答案要素のまま変更なし。
 - 解説source/PDFの固定12答案要素 `12 / 12` 接続、3段階例題、N700S実車事実と教材用仮定値の区別を維持した。
-- 練習問題sourceを一次10問＋二次5問で作成し、固定12答案要素へ `12 / 12` 接続した。
-- 一次10問は全問五肢択一で正答一意性 `10 / 10 PASS`、全15問の計算・論理QA `15 / 15 PASS`。
-- H23二次型として、C-rateからの充放電電流、端子電圧波形、充放電時間、内部抵抗損 `I²r` と損失比較を記述式で演習化した。
+- 練習問題sourceは一次10問＋二次5問、固定12答案要素へ `12 / 12` 接続、一次正答一意性 `10 / 10 PASS`、全15問の計算・論理QA `15 / 15 PASS` を維持した。
+- 練習PDFをA4縦5ページで作成し、一次10問＋二次5問の解答・解説を収録した。
+- PDF化後の主要数値29チェックポイントは `29 / 29 PASS`、160 dpi表示QA `5 / 5 PASS`、文字抽出QA PASS。
 - 未確認N700S電池電圧・容量・セル数・内部抵抗・C-rate・効率の実車値化、Topic 17以降先取り、電池材料反応・BMS・チョッパ回路詳細の仕様追加は `0件`。
 - 固定問題の正答記号・完成済み数値解の掲載は `0件`。完成教材後のblind独立再解答まで参照しない。
 
@@ -91,5 +91,23 @@
 - [x] 固定問題の正答記号・完成済み数値解掲載 `0件`
 - 判定: `PASS / topic_16_practice_source_complete`
 
+## Topic 16 練習PDFゲート
+- [x] `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.pdf`
+- [x] A4縦・5ページ
+- [x] 一次10問＋二次5問の解答・解説を収録
+- [x] 固定一次4問＋二次記述1問・12答案要素へ `12 / 12` 接続
+- [x] 主要数値29チェックポイント `29 / 29 PASS`
+- [x] 160 dpi表示QA `5 / 5 PASS`
+- [x] 文字・数式・表の欠落、重なり、切れ、overflow `0件`
+- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- [x] 未確認N700S実車値追加 `0件`
+- [x] Topic 17以降先取り `0件`
+- [x] 仕様外論点追加 `0件`
+- [x] 固定問題の正答記号・完成済み数値解掲載 `0件`
+- [x] QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice_pdf_qa.md`
+- [x] PDF SHA-256 `ec0ac0e9c6e95a662f42c0a4526b4c2287c322a7bb458809e12a61319f2e93dc`
+- [x] PDF Git blob SHA `ea328bb7d1f2dd4a8d3adb74e1a7a67ccaf2a4d0`
+- 判定: `PASS / topic_16_practice_pdf_complete`
+
 ## 次に行うこと
-固定EXAM_ALIGNMENT、解説source、解説PDF、練習sourceを変更せず、Topic 16の練習PDFを作成する。一次10問＋二次5問の解答・完全解説を収録し、表示QA・文字抽出QA・数値再検算を行う。固定問題の正答記号・完成済み数値解はblind独立再解答まで参照しない。
+固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDFを変更せず、Topic 16の解説画像PowerPointを作成する。固定12答案要素を可視化し、表示QAと仕様境界を確認する。固定問題の正答記号・完成済み数値解はblind独立再解答まで参照しない。
