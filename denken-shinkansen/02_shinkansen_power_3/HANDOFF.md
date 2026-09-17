@@ -6,7 +6,7 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は完成済み。active themeはTopic 13。
 
 ## 今回進捗
-Topic 13 `新幹線の架線は何でできている？` の完成後ブラインド独立再解答を実施した。品質ゲート対象はR8上・R7下・R6下・R5下・R5上の電力問14、計5問・5答案要素のまま変更していない。保存済み正答を先に見ず完成教材だけで再解答し、独立答案は順に `(2),(3),(4),(5),(2)`。その後に公式標準解答と照合し `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`。教材外知識補完、Topic 14以降の論点による補完、SPEC固定範囲外追加、未確認新幹線実設備値の使用はいずれも `0件`。次は最終QA。
+Topic 13 `新幹線の架線は何でできている？` の初回最終QAを実施した。必須成果物、固定EXAM_ALIGNMENT 5問・5答案要素、完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、PDF/PPTX QA、SPEC境界はすべてPASS。教材外知識補完、Topic 14以降の論点による補完、SPEC固定範囲外追加、未確認新幹線実設備値の使用はいずれも `0件`。一方、旧工程を次工程として残す進捗記録が5箇所あるため、進捗記録整合のみFAILとし `NEEDS_REVISION / IN_PROGRESS`。Topic 13は未完了のまま、次は旧進捗記録5箇所の同期。
 
 source: `topics/13_electrical_materials/13_electrical_materials.md`
 解説PDF: `topics/13_electrical_materials/13_electrical_materials_explanation.pdf`
@@ -17,6 +17,7 @@ source: `topics/13_electrical_materials/13_electrical_materials.md`
 解説画像PowerPoint: `topics/13_electrical_materials/13_electrical_materials_images.pptx`
 PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoint_qa.md`
 完成後独立再解答: `topics/13_electrical_materials/13_electrical_materials_independent_reanswer.md`
+最終QA: `topics/13_electrical_materials/13_electrical_materials_final_qa.md`
 
 固定問題:
 - R8上 電力 問14 — 絶縁材料
@@ -63,7 +64,8 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - Topic 14以降の論点による補完: `0件`
 - SPEC固定範囲外追加（独立再解答時）: `0件`
 - 未確認新幹線実設備値の使用: `0件`
-- 最終QA: 未実施
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
+- 旧進捗記録5箇所同期: 未実施
 
 完成後独立答案:
 - R8上 電力 問14: `(2)`
@@ -189,7 +191,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_13_independent_reanswer_complete`
+- `current_status`: `topic_13_final_qa_needs_progress_sync`
 - 完成数: `12 / 16`
 - last completed: Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？`
 - active: Topic 13 `新幹線の架線は何でできている？`
@@ -201,6 +203,7 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 13 解説画像PowerPoint: `topics/13_electrical_materials/13_electrical_materials_images.pptx`
 - Topic 13 PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoint_qa.md`
 - Topic 13 完成後独立再解答: `topics/13_electrical_materials/13_electrical_materials_independent_reanswer.md`
+- Topic 13 最終QA: `topics/13_electrical_materials/13_electrical_materials_final_qa.md`
 - Topic 13 固定問題: `5問・5答案要素`
 - Topic 13 制作前EXAM_ALIGNMENT: 完了
 - Topic 13 制作前独立検証: `5 / 5 PASS`
@@ -216,8 +219,9 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - Topic 13 教材外知識補完: `0件`
 - Topic 13 SPEC固定範囲外追加: `0件`
 - Topic 13 未確認新幹線実設備値の真値化: `0件`
-- Topic 13 最終QA: 未実施
+- Topic 13 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（進捗記録整合のみFAIL: 旧工程5箇所）
+- Topic 13 旧進捗記録5箇所同期: 未実施
 - Topic 12 最終QA: `PASS / completed`
 
 ## 次の正確な開始点
-Topic 13の最終QAを実施し、必須成果物、PDF/PPTX QA、固定EXAM_ALIGNMENT、完成後独立再解答、SPEC境界、進捗記録整合を再確認する。Topic 12以前の技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
+`13_electrical_materials_explanation_qa.md`、`13_electrical_materials_practice_source.md`、`13_electrical_materials_practice_qa.md`、`13_electrical_materials_powerpoint_qa.md`、`13_electrical_materials_independent_reanswer.md` の旧進捗記録5箇所を現在地へ同期する。その後、Topic 13の最終QAを再実施する。Topic 12以前の技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
