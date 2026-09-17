@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 10 / 12
-- current_status: `topic_11_independent_reanswer_complete`
+- current_status: `topic_11_final_qa_needs_revision`
 - last_completed_topic: `10 指数関数・一階微分方程式入門`
 - active_topic: `11 グラフ・特性曲線を読む`
-- next_start: `Topic 11最終QA`
+- next_start: `Topic 11の主source・練習sourceの旧進捗記録3箇所を現在地へ同期`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -129,22 +129,26 @@
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答前のブラインドゲート整備
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5 PASS`
-- [ ] 最終QA
+- [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 主source・練習sourceの旧進捗記録3箇所を現在地へ同期
+- [ ] 最終QA再判定
 
 ## 今回進めた内容
 
-Topic 11「グラフ・特性曲線を読む」の完成教材だけで固定5問をブラインド独立再解答し、GitHub正本へ反映した。
+Topic 11「グラフ・特性曲線を読む」の最終QAを実施し、GitHub正本へ記録した。
 
-- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_independent_reanswer.md`
-- ブラインド条件を守り、独立解答確定後に公式解答を照合
-- 固定品質ゲート5問は変更なし
-- 独立再解答 `5 / 5 PASS`
-- 教材外知識補完0件
+- `topics/11_graph_characteristic_curves/11_graph_characteristic_curves_final_qa.md`
+- 必須成果物の実在: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 完成後独立再解答: `5 / 5 PASS`
+- 練習QA: `12 / 12 PASS`
+- 仕様境界: PASS
 - 固定EXAM_ALIGNMENT変更0件
-- 伝達関数・ボード線図・PID等の固定範囲外追加0件
+- 仕様外追加0件
+- source進捗整合のみFAIL: 主source2箇所・練習source1箇所の計3箇所
 
 ## 判定
 
-`topic_11_independent_reanswer_complete / IN_PROGRESS`。
+`topic_11_final_qa_needs_revision / IN_PROGRESS`。
 
-完成数は `10 / 12`。次工程はTopic 11最終QA。
+完成数は `10 / 12`。次工程は、技術内容を変更せず旧進捗記録3箇所だけを現在地へ同期する。
