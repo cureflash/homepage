@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `13 / 39`
-- current_status: `topic_14_final_qa_needs_progress_sync`
+- current_status: `topic_14_progress_sync_complete`
 - last_completed_topic: `13 300系④ 回生と四象限運転`
 - active_topic: `14 300系⑤ 走行抵抗と必要けん引力`
-- next_start: Topic 14の進捗記録4箇所だけを現在地へ同期し、その後に最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない
+- next_start: Topic 14の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない。全件PASSの場合のみ `completed` とする
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -24,7 +24,7 @@
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
-- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / FINAL_QA_NEEDS_PROGRESS_SYNC
+- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / PROGRESS_SYNC_COMPLETE
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -174,6 +174,17 @@
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
 - 完成数変更: `なし / 13 / 39`
 
+## Topic 14 進捗記録同期
+- 主source冒頭 `## 状態`: `PASS`
+- 主source末尾 `## 次工程`: `PASS`
+- 練習source末尾 `## 次工程`: `PASS`
+- 練習PDF QA末尾 `## 現在地`: `PASS`
+- 進捗記録整合: `4 / 4 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 技術本文・問題/正答・PDF/PPTX・blind再解答結果変更: `0件`
+- 判定: `PASS / PROGRESS_SYNC_COMPLETE`
+- 完成数変更: `なし / 13 / 39`
+
 ## Topic 14 固定範囲
 扱う内容:
 - 走行抵抗
@@ -199,4 +210,4 @@ SPEC指定可視化:
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次工程
-Topic 14最終QAで検出した進捗記録4箇所だけを現在地へ同期する。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。同期後にTopic 14最終QAを再判定する。
+Topic 14最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない。全件PASSの場合のみ `completed` とする。
