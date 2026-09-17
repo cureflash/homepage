@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `13 / 39`
-- current_status: `topic_14_powerpoint_complete`
+- current_status: `topic_14_blind_reanswer_gate_needs_sanitization`
 - last_completed_topic: `13 300系④ 回生と四象限運転`
 - active_topic: `14 300系⑤ 走行抵抗と必要けん引力`
-- next_start: Topic 14 独立再解答前ゲート
+- next_start: Topic 14 main source の保存済み固定過去問個別解答を除去
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -24,7 +24,7 @@
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
-- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / POWERPOINT_COMPLETE
+- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / BLIND_REANSWER_GATE_NEEDS_SANITIZATION
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -132,6 +132,17 @@
 - Git blob SHA: `e7193da320ce93219cd65044fbb8d7badf43ceb9`
 - 判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 14 独立再解答前ゲート
+- QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_blind_reanswer_gate.md`
+- 判定: `NEEDS_REVISION / BLIND_REANSWER_NOT_READY`
+- main source の制作前検証欄に固定公式過去問の個別数値解・正答記号・完成済み導出結果を確認
+- `保存済み正答を見ずに` 行うブラインド条件: `FAIL`
+- 本runで完成後独立再解答: `未実施`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 既存成果物変更: `0件`
+- SPEC外追加: `0件`
+- 次工程: main source から保存済み個別解答のみ除去
+
 ## Topic 14 固定範囲
 扱う内容:
 - 走行抵抗
@@ -157,4 +168,4 @@ SPEC指定可視化:
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次工程
-固定EXAM_ALIGNMENT、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointを変更せず、Topic 14の独立再解答前ゲートを実施する。固定公式過去問の個別正答記号・完成済み答案を保存していないことを再確認し、完成後blind再解答へ進める。
+固定EXAM_ALIGNMENT、教材本文、練習問題、PDF/PPTXを変更せず、main source の制作前検証欄から固定公式過去問の個別数値解・正答記号・完成済み答案だけを除去する。除去後の新しいrunで完成後blind再解答へ進める。
