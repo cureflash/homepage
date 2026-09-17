@@ -6,23 +6,22 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_practice_pdf_complete`
-- 次工程: Topic 16 解説画像PowerPoint作成
+- current status: `topic_16_powerpoint_complete`
+- 次工程: Topic 16 独立再解答前ゲート
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 16 source・解説PDF・練習sourceを確認した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、直近変更、Topic 16既存成果物を確認した。
+- 既存の「機械二種を進行」枠による練習PDF完成状態を引き継ぎ、重複制作 `0件`。
 - Topic 01〜15は最終QA `PASS / completed` のまま変更なし。
 - 最初の未完了テーマは Topic 16。
-- Topic 16の系列SPEC固定範囲は、リチウムイオン電池、起電力、内部抵抗、放電電流、電圧降下、Ah、Wh、C-rate、DCリンク、DC/DC変換の概念、変換効率。
-- 固定EXAM_ALIGNMENTは一次4問＋二次記述1問、計5問・12答案要素のまま変更なし。
-- 解説source/PDFの固定12答案要素 `12 / 12` 接続、3段階例題、N700S実車事実と教材用仮定値の区別を維持した。
-- 練習問題sourceは一次10問＋二次5問、固定12答案要素へ `12 / 12` 接続、一次正答一意性 `10 / 10 PASS`、全15問の計算・論理QA `15 / 15 PASS` を維持した。
-- 練習PDFをA4縦5ページで作成し、一次10問＋二次5問の解答・解説を収録した。
-- PDF化後の主要数値29チェックポイントは `29 / 29 PASS`、160 dpi表示QA `5 / 5 PASS`、文字抽出QA PASS。
-- 未確認N700S電池電圧・容量・セル数・内部抵抗・C-rate・効率の実車値化、Topic 17以降先取り、電池材料反応・BMS・チョッパ回路詳細の仕様追加は `0件`。
-- 固定問題の正答記号・完成済み数値解の掲載は `0件`。完成教材後のblind独立再解答まで参照しない。
+- 固定範囲・固定EXAM_ALIGNMENTは変更なし。一次4問＋二次記述1問、計5問・12答案要素。
+- 解説source/PDF、練習source/PDFの内容・QAを変更していない。
+- 解説画像PowerPointを16:9・4枚で作成し、固定12答案要素を可視化した。
+- 120 dpi・1601×900表示QA `4 / 4 PASS`、文字抽出QA PASS、PPTX ZIP整合性 PASS。
+- 未確認N700S電池電圧・容量・セル数・内部抵抗・C-rate・DC/DC具体定格の実車値化、電池材料反応・BMS・チョッパ詳細の仕様追加、Topic 17以降先取り `0件`。
+- 固定問題の正答記号・完成済み数値解は参照・保存していない。
 
 ## Topic 15 最終状態
 - 固定一次3問＋二次記述2問、5問・8答案要素
@@ -44,70 +43,30 @@
 
 一次4問＋二次記述1問、計5問。品質ゲート対象は12答案要素。
 
-## Topic 16 解説sourceゲート
-- [x] 固定5問・12答案要素を変更していない
-- [x] 固定12答案要素を本文へ `12 / 12` 接続
-- [x] 起電力・内部抵抗・端子電圧・内部抵抗損を説明
-- [x] Ah・Wh・平均電圧・C-rateを説明
-- [x] 充放電電流・端子電圧波形・充放電時間を説明
-- [x] DC/DC・DCリンク・変換効率を説明
-- [x] 3段階例題を作成し再計算PASS
-- [x] N700S実車側を公式メーカー資料で確認
-- [x] 未確認実車値追加 `0件`
-- [x] Topic 17以降先取り `0件`
-- [x] 仕様外論点追加 `0件`
-- [x] 正答記号・完成済み固定問題数値解保存 `0件`
-- 判定: `PASS / topic_16_explanation_source_complete`
+## Topic 16 完成済み成果物
+- [x] 制作前EXAM_ALIGNMENT `PASS`
+- [x] 解説source `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link.md`
+- [x] 解説PDF `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_explanation.pdf` — 8ページ、表示QA `8 / 8 PASS`
+- [x] 練習source `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.md` — 一次10問＋二次5問、独立QA `15 / 15 PASS`
+- [x] 練習PDF `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.pdf` — 5ページ、主要数値 `29 / 29 PASS`、表示QA `5 / 5 PASS`
+- [x] 解説画像PowerPoint `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_images.pptx` — 16:9・4枚、表示QA `4 / 4 PASS`
+- [x] PowerPoint QA `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_powerpoint_qa.md`
 
-## Topic 16 解説PDFゲート
-- [x] `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_explanation.pdf`
-- [x] A4縦・8ページ
-- [x] 固定12答案要素を `12 / 12` 接続
-- [x] 3段階例題の数値再計算PASS
-- [x] 160 dpi表示QA `8 / 8 PASS`
-- [x] 文字・数式・表の欠落、重なり、切れ、overflow `0件`
+## Topic 16 解説画像PowerPointゲート
+- [x] 起電力 `E`＋内部抵抗 `r`、放電 `V=E-Ir`、充電 `V=E+Ir`、内部抵抗損 `I²r` を可視化
+- [x] Ah・Wh・平均電圧・C-rate・重量エネルギー密度を可視化
+- [x] H23二次型の定電流充放電電流波形、端子電圧 `E_i±Ir`、充放電時間、損失比較を可視化
+- [x] 蓄電池→DC/DC→DCリンク→主変換装置→主電動機と変換効率を可視化
+- [x] 固定一次4問＋二次記述1問・12答案要素を維持
+- [x] 120 dpi・1601×900 全4枚表示QA `4 / 4 PASS`
+- [x] 文字・数式・図の欠落、重なり、切れ、overflow `0件`
 - [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
-- [x] N700S実車事実と教材用仮定値の区別を維持
-- [x] 未確認実車値追加 `0件`
-- [x] Topic 17以降先取り `0件`
-- [x] 仕様外論点追加 `0件`
-- [x] 固定問題の正答記号・完成済み数値解掲載 `0件`
-- [x] QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_explanation_pdf_qa.md`
-- [x] PDF SHA-256 `b9c88d84c1914d8d939356694603228b8303df38312e7f22cc5674b4ad90b3c0`
-- [x] PDF Git blob SHA `ec0988d134a802f9f54f1e1f54af442e6bde23b6`
-- 判定: `PASS / topic_16_explanation_pdf_complete`
-
-## Topic 16 練習sourceゲート
-- [x] `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.md`
-- [x] 一次試験型10問、全問五肢択一
-- [x] 二次試験型5問、途中式・前提・単位・検算または論証付き
-- [x] 一次正答一意性 `10 / 10 PASS`
-- [x] 独立計算・論理QA `15 / 15 PASS`
-- [x] 固定一次4問＋二次記述1問・12答案要素へ `12 / 12` 接続
-- [x] H23二次型の充放電電流・端子電圧波形・充放電時間・`I²r` 損失比較を記述式で収録
-- [x] 未確認N700S実車値追加 `0件`
-- [x] Topic 17以降先取り `0件`
-- [x] 電池材料反応・BMS・チョッパ回路詳細の仕様追加 `0件`
-- [x] 固定問題の正答記号・完成済み数値解掲載 `0件`
-- 判定: `PASS / topic_16_practice_source_complete`
-
-## Topic 16 練習PDFゲート
-- [x] `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice.pdf`
-- [x] A4縦・5ページ
-- [x] 一次10問＋二次5問の解答・解説を収録
-- [x] 固定一次4問＋二次記述1問・12答案要素へ `12 / 12` 接続
-- [x] 主要数値29チェックポイント `29 / 29 PASS`
-- [x] 160 dpi表示QA `5 / 5 PASS`
-- [x] 文字・数式・表の欠落、重なり、切れ、overflow `0件`
-- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
-- [x] 未確認N700S実車値追加 `0件`
-- [x] Topic 17以降先取り `0件`
-- [x] 仕様外論点追加 `0件`
-- [x] 固定問題の正答記号・完成済み数値解掲載 `0件`
-- [x] QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice_pdf_qa.md`
-- [x] PDF SHA-256 `ec0ac0e9c6e95a662f42c0a4526b4c2287c322a7bb458809e12a61319f2e93dc`
-- [x] PDF Git blob SHA `ea328bb7d1f2dd4a8d3adb74e1a7a67ccaf2a4d0`
-- 判定: `PASS / topic_16_practice_pdf_complete`
+- [x] PPTX ZIP整合性 PASS
+- [x] 未確認N700S実車値・仕様外論点・Topic 17以降先取り `0件`
+- [x] 固定公式過去問の個別正答記号・完成済み数値解保存 `0件`
+- [x] PPTX SHA-256 `6f1b89c2c652aac4210cbb7a3fb05a3c6b5527d87d3ecc02b767fefbc78c5cc1`
+- [x] Git blob SHA `aba7ff0a01d5d139a1a3370d384761d48f4085ba`
+- 判定: `PASS / topic_16_powerpoint_complete`
 
 ## 次に行うこと
-固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDFを変更せず、Topic 16の解説画像PowerPointを作成する。固定12答案要素を可視化し、表示QAと仕様境界を確認する。固定問題の正答記号・完成済み数値解はblind独立再解答まで参照しない。
+固定EXAM_ALIGNMENTと完成済み教材を変更せず、Topic 16の独立再解答前ゲートを実施する。`MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md`、最新main、Topic 16全成果物を再監査し、固定5過去問の個別正答記号・標準解答本文・完成済み数値解が保存されていないことを確認する。`BLIND_REANSWER_READY` を確認するまで公式解答・標準解答を参照しない。
