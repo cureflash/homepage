@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 14 / 20
-- current_status: `topic_15_explanation_pdf_complete`
+- current_status: `topic_15_practice_source_complete`
 - last_completed_topic: `14 フーリエ変換・FFT`
 - active_topic: `15 対数・dB・周波数応答`
-- next_start: Topic 15の練習問題sourceを制作する
+- next_start: Topic 15の練習PDFを作成する
 
 ## Topic 07 制作品質ゲート
 
@@ -61,7 +61,7 @@
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
 - [x] 二次「機械・制御」5問・6対象設問を固定
 - [x] 要求知識・式・設問型・教材内必要説明をsourceへ固定
-- [x] R7 問4はTopic 10以降の伝達関数・定常偏差・畳み込み等が中心のため非採用
+- [x] R7 問4はTopic 10以降の伝達関数・定常偏差・畳み込み等が中心でTopic 10以降へ跨るため非採用
 - [x] R6 問4は(4)のみ採用し、伝達関数の一般理論・周波数応答を除外
 - [x] H29 問4 (1)〜(2)、H25 問4 (1)、H24 問4 (1)、H18 問4 (1)を採用
 - [x] 制作前独立再解答・公式標準解答照合 `6 / 6 PASS`
@@ -212,7 +212,7 @@
 - [x] 公式解答確認前に `ANSWER_LOCKED_BEFORE_REVIEW` を保存（lock commit `7e83ea01cd6ccdeca2531fbfb29f119370947f75`）
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source
+- [x] 練習問題source
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
@@ -222,16 +222,16 @@
 
 ## 今回進めた内容
 
-Topic 15 `対数・dB・周波数応答` の解説PDFを作成し、GitHub正本へ反映した。
+Topic 15 `対数・dB・周波数応答` の練習問題sourceを作成し、GitHub正本へ反映した。
 
-`topics/15_log_db_frequency_response/15_log_db_frequency_response_explanation.pdf` はA4縦4ページ。200 dpi全ページ表示QA `4 / 4 PASS`、文字抽出QA `PASS`。固定済み第二種公式過去問5問・12答案要素を `12 / 12` 反映し、3段階例題も `3 / 3 PASS` を維持した。
+`topics/15_log_db_frequency_response/15_log_db_frequency_response_practice.md` は全12問。一次型8問／記述型4問、難易度は基礎3／標準6／複合3。固定済み第二種公式過去問5問・12答案要素へ `12 / 12 PASS` で接続した。
 
-QA記録は `topics/15_log_db_frequency_response/15_log_db_frequency_response_explanation_qa.md` に保存した。第一種・第三種による件数水増し、ラウス・フルビッツ法一般、ナイキスト線図による独立した安定判別、補償器設計一般、フィルタ設計一般、Topic 16以降の先取り、未確認実車値依存はいずれも0件。
+独立計算・論理QAは `12 / 12 PASS`、一次型正答一意性は `8 / 8 PASS`。第一種・第三種による件数水増し、ラウス・フルビッツ法一般、ナイキスト線図による独立した安定判別、補償器設計一般、フィルタ設計一般、Topic 16以降の先取り、未確認実車値依存はいずれも0件。
 
 ## 判定
 
-Topic 15は `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。
+Topic 15は `PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`。
 
 完成数は `14 / 20` のまま。
 
-次はTopic 15の練習問題sourceを制作する。
+次はTopic 15の練習PDFを作成する。
