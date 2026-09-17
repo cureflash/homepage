@@ -6,11 +6,11 @@
 
 Topic 01〜15は `PASS / completed`。完成数は `15 / 21`。
 
-current_status: `topic_16_progress_records_synced`
+current_status: `topic_16_final_qa_complete`
 
 active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
 
-Topic 16は初回最終QAまで実施済み。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界はいずれもPASS。初回最終QAでblockerだった主source・練習sourceの旧進捗記録4箇所は実成果物状態へ同期済み。判定は `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`、次工程は最終QA再実施。
+Topic 16は最終QA再実施まで完了。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界、初回blocker4件の解消を全件確認し、判定は `PASS / FINAL_QA_COMPLETE`。completionはまだ `in_progress` とし、次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。
 
 ## Topic 16 成果物
 
@@ -23,9 +23,9 @@ Topic 16は初回最終QAまで実施済み。固定一次5問・25答案要素�
 - 解説画像PowerPoint: `topics/16_semiconductor_diode/16_semiconductor_diode_images.pptx`
 - PowerPoint QA: `topics/16_semiconductor_diode/16_semiconductor_diode_powerpoint_qa.md`
 - 完成後独立再解答: `topics/16_semiconductor_diode/16_semiconductor_diode_reanswer.md`
-- 初回最終QA: `topics/16_semiconductor_diode/16_semiconductor_diode_final_qa.md`
+- 最終QA: `topics/16_semiconductor_diode/16_semiconductor_diode_final_qa.md`
 - completion: `in_progress`
-- stage: `PROGRESS_RECORDS_SYNCED`
+- stage: `FINAL_QA_COMPLETE`
 
 ## Topic 16 固定範囲
 
@@ -117,7 +117,7 @@ Topic 16は初回最終QAまで実施済み。固定一次5問・25答案要素�
   - 練習source冒頭状態
   - 練習source末尾「次工程」
 
-判定: `NEEDS_REVISION / IN_PROGRESS`
+初回判定: `NEEDS_REVISION / IN_PROGRESS`
 
 ## Topic 16 進捗記録同期
 
@@ -131,6 +131,23 @@ Topic 16は初回最終QAまで実施済み。固定一次5問・25答案要素�
 
 判定: `PASS / PROGRESS_RECORDS_SYNCED`
 
+## Topic 16 最終QA再実施
+
+記録: `topics/16_semiconductor_diode/16_semiconductor_diode_final_qa.md`
+
+- 必須成果物: `PASS`
+- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
+- 二次採用判断: `PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC境界: `PASS`
+- PDF/PPTX表示QA・練習QA: `PASS`
+- 初回blocker解消: `4 / 4 PASS`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX変更: `0件`
+
+判定: `PASS / FINAL_QA_COMPLETE`
+
 ## 次工程
 
-Topic 16の最終QAを再実施し、初回blocker 4箇所の解消とGitHub正本全体の整合を再判定する。PASS後にcompleted状態へ進める。
+主source・練習source・STATUS・HANDOFFをTopic 16 `completed` 状態へ同期する。完成数はその同期完了まで `15 / 21` のままとする。
