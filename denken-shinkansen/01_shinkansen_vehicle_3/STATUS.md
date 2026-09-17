@@ -4,14 +4,14 @@
 
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
-- exam_aligned_completed_topics: 34 / 38
-- current_status: `topic_35_progress_records_synced`
-- last_completed_topic: `34 COMTRAC② 進路をどう自動制御する？`
-- active_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
-- next_start: Topic 35の最終QAを再実施する。前回唯一FAILだった進捗記録整合を再確認し、技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない
+- exam_aligned_completed_topics: 35 / 38
+- current_status: `topic_35_final_qa_complete`
+- last_completed_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
+- active_topic: `36 COSMOS① 新幹線全体を統合管理する`
+- next_start: Topic 36の制作前EXAM_ALIGNMENTを実施する。系列SPEC固定範囲「運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理」から逸脱せず、公式過去問を先に調査・固定する
 
 ## 新品質ゲート進捗
-- [x] 01〜34 — PASS
+- [x] 01〜35 — PASS
 
 ## 35 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問。系列SPEC固定範囲は、遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
@@ -147,6 +147,19 @@ source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_managemen
 - 解説PDF QA `次工程`: 「練習source」から「最終QA再実施」へ同期
 - 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果: 変更なし
 - 次工程: Topic 35の最終QA再実施
+
+## 35 最終QA再判定
+`PASS / COMPLETED`。
+- 必須成果物: PASS
+- 固定5過去問の完成後blind独立再解答: `5 / 5問 PASS`
+- 練習問題QA: `15 / 15 PASS`
+- 解説PDF / 練習PDF / PowerPoint表示QA: PASS
+- 固定範囲境界: PASS
+- 前回FAILだった進捗記録3箇所: 全件同期済み
+- 進捗記録整合: PASS
+- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果: 変更なし
+- Topic 35を `completed` とし、完成数を35/38へ更新
+- 記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_final_qa.md`
 
 ## 34 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6答案要素。系列SPEC固定範囲は、進路制御、条件判定、AND、OR、NOT、真理値表、インターロック、論理回路。
@@ -668,7 +681,7 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 - 未確認の新幹線軌道回路電圧・電流・車軸短絡抵抗・リレー動作値
 
 ## 直前完了
-Topic 34 `COMTRAC② 進路をどう自動制御する？` は固定5問・6答案要素の完成後blind独立再解答 `5 / 5問・6 / 6答案要素 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数34/38。
+Topic 35 `COMTRAC③ ダイヤが乱れたらどうする？` は固定5過去問の完成後blind独立再解答 `5 / 5問 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数35/38。
 
 ## 次テーマ工程
-Topic 35の最終QAを再実施する。前回唯一FAILだった進捗記録整合を再確認し、技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない。
+Topic 36 `COSMOS① 新幹線全体を統合管理する` の制作前EXAM_ALIGNMENTを実施する。系列SPEC固定範囲は、運行管理、車両管理、設備管理、保守管理、情報伝送、ネットワーク、データ処理。
