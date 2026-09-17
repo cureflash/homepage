@@ -1,11 +1,11 @@
 # 12 320km/hでもパンタグラフが離れないのはなぜ？
 
 ## 状態
-`topic_12_final_qa_needs_progress_sync`。制作前EXAM_ALIGNMENT、解説本文§1〜§14、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答、main sourceへの再解答結果同期、初回最終QAまで実施済み。
+`topic_12_progress_records_synced / IN_PROGRESS`。制作前EXAM_ALIGNMENT、解説本文§1〜§14、基礎・本試験標準・複合の3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答、main sourceへの再解答結果同期、初回最終QA、旧進捗記録4箇所の同期まで実施済み。
 
-固定5問・6答案要素について、制作前独立検証 `6 / 6 PASS`、本文要求事項マッピング `6 / 6 PASS`、完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6` を確認。教材外知識補完0件、SPEC固定範囲外追加0件、Topic 13以降の先取り0件、未確認新幹線実設備値の真値化0件。初回最終QAでは技術内容・成果物・過去問品質ゲート・SPEC境界はPASSしたが、旧工程を示す進捗記録4箇所が残るため進捗記録整合のみFAILとなり、`NEEDS_REVISION / IN_PROGRESS`。Topic 12はまだcompletedにしない。
+固定5問・6答案要素について、制作前独立検証 `6 / 6 PASS`、本文要求事項マッピング `6 / 6 PASS`、完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6` を確認。教材外知識補完0件、SPEC固定範囲外追加0件、Topic 13以降の先取り0件、未確認新幹線実設備値の真値化0件。初回最終QAでは技術内容・成果物・過去問品質ゲート・SPEC境界はPASSし、旧工程4箇所のため進捗記録整合のみFAILとなった。現在は当該4箇所を実成果物へ同期済み。Topic 12は最終QA再実施前のためまだcompletedにしない。
 
-次工程は旧進捗記録4箇所の現在地への同期。対象は解説PDF QA、練習問題source、PowerPoint QA、完成後独立再解答で、技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。同期後に最終QAを再実施する。
+次工程はTopic 12最終QAの再実施。技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
 
 ## SPEC固定範囲
 `SPEC.md` のTopic 12から範囲を追加しない。
@@ -451,6 +451,7 @@ Topic 12の中心は、架線の種類を覚えることではなく、支持点
 - 未確認の新幹線実設備値の真値化: `0件`
 - 制作前の保存済み正答・選択肢番号の本文転記: `0件`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS、進捗記録整合のみFAIL: 旧工程4箇所）
+- 旧進捗記録4箇所の同期: 完了
 
 ## 次工程
-旧進捗記録4箇所を現在地へ同期する。対象は `12_overhead_line_mechanics_explanation_qa.md`、`12_overhead_line_mechanics_practice_source.md`、`12_overhead_line_mechanics_powerpoint_qa.md`、`12_overhead_line_mechanics_independent_reanswer.md`。技術内容、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。同期後に最終QAを再実施する。
+Topic 12最終QAを再実施する。技術内容、固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
