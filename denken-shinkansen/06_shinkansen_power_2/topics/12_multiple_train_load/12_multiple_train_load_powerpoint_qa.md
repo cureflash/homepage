@@ -114,4 +114,4 @@ PowerPoint完成は、完成後blind独立再解答PASSを意味しない。Topi
 ## 判定
 `PASS / topic_12_powerpoint_complete`
 
-次段階は、保存済み正答・公式解答を先に見ず、固定5問・25答案要素を教材内容だけで完成後blind独立再解答する。外部知識補完があればFAILとする。
+完成後blind独立再解答は正式5問・25答案要素 `25 / 25 PASS` で完了済み。次段階は進捗記録整合を含む最終QA再判定とする。固定EXAM_ALIGNMENT、PowerPoint実体、技術内容は変更しない。
