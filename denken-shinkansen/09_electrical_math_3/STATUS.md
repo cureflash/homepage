@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 10 / 12
-- current_status: `topic_11_explanation_source_complete`
+- current_status: `topic_11_explanation_pdf_complete`
 - last_completed_topic: `10 指数関数・一階微分方程式入門`
 - active_topic: `11 グラフ・特性曲線を読む`
-- next_start: `Topic 11解説PDF`
+- next_start: `Topic 11練習問題source`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -123,7 +123,7 @@
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立解答・公式解答照合 `5 / 5 PASS`
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -132,19 +132,19 @@
 
 ## 今回進めた内容
 
-Topic 11「グラフ・特性曲線を読む」の解説本文＋3段階例題を主sourceへ実装した。
+Topic 11「グラフ・特性曲線を読む」の解説PDFをGitHub正本へ反映した。
 
-- 固定必須説明 `15 / 15` を本文へ実装
-- 固定5過去問を教材内へ `5 / 5` マッピング
-- 例題1「速度―時間曲線」: `a=1.0 m/s^2`、`x=200 m` PASS
-- 例題2「変圧器最大効率」: 負荷率 `0.50`、`η≈97.6 %` PASS
-- 例題3「負荷線・曲線群・補間」: `I_C=3.0 mA`、`I_B≈17.5 μA`、`R_B≈246 kΩ` PASS
-- 3段階例題独立再計算 `3 / 3 PASS`
+- A4縦4ページ
+- 200 dpi表示QA `4 / 4 PASS`
+- 文字抽出QA `PASS`
+- 固定必須説明 `15 / 15` をPDFへ反映
+- 3段階例題の数値整合 `3 / 3 PASS`
+- 固定5過去問への教材内対応 `5 / 5`
 - 固定EXAM_ALIGNMENT変更0件
 - 伝達関数・ボード線図・PID等の固定範囲外追加0件
 
 ## 判定
 
-`topic_11_explanation_source_complete / IN_PROGRESS`。
+`topic_11_explanation_pdf_complete / IN_PROGRESS`。
 
-完成数は `10 / 12`。次工程はTopic 11の解説PDF。
+完成数は `10 / 12`。次工程はTopic 11の練習問題source。
