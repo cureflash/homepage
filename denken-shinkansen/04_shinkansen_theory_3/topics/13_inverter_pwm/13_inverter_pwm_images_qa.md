@@ -31,7 +31,7 @@
 - 必須語・公式の文字抽出: `PASS`
 - ZIP整合性: `PASS`
 - XML整合性: `PASS`（不正XML 0件）
-- SHA-256: `2b02f453d8b52ddbe1b98bcf702c2bf8a3cdc93ea8c4711ee12355e4dfc12303`
+- SHA-256: `a33f9d2908fe6ffa6d2e8e5782a047b4c374b1c287ea8b2e7146e91531ebd282`
 
 ## SPEC境界
 
