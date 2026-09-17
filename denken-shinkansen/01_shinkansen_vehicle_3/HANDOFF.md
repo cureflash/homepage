@@ -6,24 +6,28 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は `36 / 38`。01〜36がPASS。active topicは37 `COSMOS② 新幹線の電力設備を遠隔監視する`。
 
 ## 今回進捗
-Topic 37を未着手状態から1段階進め、制作前EXAM_ALIGNMENTを完了した。系列SPEC固定範囲だけを対象に公式過去問を調査し、blind条件を保持できる5問・6答案要素を固定した。参考教材2系統以上と、JR東日本ほかの公開資料でSCADA/遠隔監視制御の実設備側根拠も確認した。
+Topic 37を1段階進め、制作前blind独立解答を完了した。EXAM_ALIGNMENTで固定済みの5問・6答案要素を変更せず、公式問題PDFだけで全答案と根拠を先に確定し、その後で公式解答PDFを開いて照合した。
 
-判定: `PASS / EXAM_ALIGNMENT_COMPLETE`。
+判定: `PASS / PREANSWER_COMPLETE`。
 
 - source: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring.md`
 - EXAM_ALIGNMENT QA: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_exam_alignment_qa.md`
+- 制作前blind QA: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_preanswer_qa.md`
 - 固定公式過去問: `5問・6答案要素`
-- 制作前blind独立解答: `未実施`
+- 制作前blind独立解答: `6 / 6 PASS`
+- 問題差替え: `0件`
+- 公式解答との不一致: `0件`
 - 完成数: `36 / 38`
 
-## Topic 37 固定公式過去問
-1. R6上 法規 問7 — 配電用変電所の遮断信号、通信線による信号伝送、遠隔側機器動作
-2. R3 機械 問14 — 2進数・10進数・16進数、デジタル情報
-3. R1 理論 問18(a)(b) — 二重積分形A-D変換、デジタル直流電圧計
-4. H26 機械 問13 — シーケンス制御、レベルスイッチ、PLC
-5. H23 法規 問6 — 転送遮断装置、通信回線、別地点の遮断器動作
+## Topic 37 制作前blind独立解答結果
+1. R6上 法規 問7 — 独立答案 `5` / 公式 `5` / PASS
+2. R3 機械 問14 — 独立答案 `5` / 公式 `5` / PASS
+3. R1 理論 問18(a) — 独立答案 `1` / 公式 `1` / PASS
+4. R1 理論 問18(b) — 独立答案 `4` / 公式 `4` / PASS
+5. H26 機械 問13 — 独立答案 `3` / 公式 `3` / PASS
+6. H23 法規 問6 — 独立答案 `1` / 公式 `1` / PASS
 
-固定5問の公式問題本文・図表は確認済み。固定5問について公式解答PDF・第三者正答表示は未参照で、個別正答番号も保存していない。調査途中で正答情報へ到達した別問題は固定対象から除外済み。
+R1問18(a)(b)では、二重積分形A-D変換について `Vm = kVxT1`、`Vo = Vm - kVr(t-T1)`、`Vx = (T2/T1)Vr` を問題図から導出し、(b)は `Vx = (N2/N1)Vr = 4.0 V` と独立計算した。
 
 ## Topic 37 系列SPEC固定範囲
 扱う内容:
@@ -49,4 +53,4 @@ Topic 37を未着手状態から1段階進め、制作前EXAM_ALIGNMENTを完了
 - 東京電力パワーグリッド: 無人変電所の遠隔監視制御
 
 ## 次の正確な開始点
-Topic 37の制作前blind独立解答。固定5問・6答案要素を追加・差替えせず、公式問題PDFだけで全答案と根拠を先に確定する。その後で初めて公式解答PDFを開き照合する。本文制作へはまだ進まない。
+Topic 37の解説source本文作成。固定済みEXAM_ALIGNMENTの5問・6答案要素を本文へ全件マッピングし、系列SPEC固定範囲だけで基礎概念・公式/関係・解法手順・3段階例題・新幹線接続・頻出ミスを構成する。Topic 38へは進まない。
