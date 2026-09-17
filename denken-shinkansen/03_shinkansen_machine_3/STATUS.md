@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: `13 / 16`
-- current_status: `topic_14_progress_sync_complete`
-- last_completed_topic: `13 新幹線は主電動機以外もモーターだらけ？`
-- active_topic: `14 停電してもN700Sが走れるのはなぜ？`
-- next_start: Topic 14の最終QAを再判定する
+- exam_aligned_completed_topics: `14 / 16`
+- current_status: `topic_14_completed`
+- last_completed_topic: `14 停電してもN700Sが走れるのはなぜ？`
+- active_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
+- next_start: Topic 15の制作前EXAM_ALIGNMENTを実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -24,10 +24,10 @@
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
-- [ ] 14 停電してもN700Sが走れるのはなぜ？ — 旧進捗3ファイル同期 `3 / 3 PASS` / 最終QA再判定待ち / IN_PROGRESS
+- [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [ ] 15〜16 — 未完了
 
-## Topic 14 現在地
+## Topic 14 最終品質状態
 - 固定範囲: 電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率
 - 固定計算: 電池容量 / 電力量 / 直列時の電圧 / 並列時の容量 / 放電時間 / 必要電力から必要容量
 - 固定EXAM_ALIGNMENT: H30 機械 問12
@@ -93,8 +93,15 @@
 - 旧進捗2: `topics/14_battery/14_battery_practice.md` — 同期済み
 - 旧進捗3: `topics/14_battery/14_battery_practice_pdf_qa.md` — 同期済み
 - 進捗記録同期: `3 / 3 PASS`
-- 状態: `topic_14_progress_sync_complete / IN_PROGRESS`
-- 次工程: Topic 14の最終QAを再判定する
+- 最終QA再判定: `PASS`
+- 最終QA技術内容: `PASS`
+- 最終QA必須成果物: `PASS`
+- 最終QA表示QA: `PASS`
+- 最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
+- 最終QA進捗記録整合: `PASS`
+- 最終QA固定範囲境界: `PASS`
+- 状態: `completed`
+- 次工程: Topic 15の制作前EXAM_ALIGNMENT
 
 ## Topic 13 最終品質状態
 - 固定範囲: 電動機出力 / 回転速度 / トルク / 負荷特性 / ポンプ / ファン / コンプレッサ / 所要動力 / 効率 / インバータ駆動 / 可変速運転
@@ -300,4 +307,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 14で最終QAが指摘した旧進捗3ファイルを実成果物へ同期し、進捗記録同期 `3 / 3 PASS`。固定EXAM_ALIGNMENT、問題、正答、技術本文、PDF/PPTX、固定範囲は変更していない。完成数は `13 / 16` のまま。次工程はTopic 14の最終QA再判定。
+Topic 14の最終QAを再判定し、技術内容・必須成果物・PDF/PPTX表示QA・固定EXAM_ALIGNMENT・完成後blind独立再解答・進捗記録整合・固定範囲境界をすべて再確認して `PASS`。Topic 14を `completed` とした。固定EXAM_ALIGNMENT、問題・正答、技術本文、PDF/PPTX、固定範囲は変更していない。
+
+完成数は `14 / 16`。次工程はTopic 15「車内の照明・空調にはどれだけ電気が必要？」の制作前EXAM_ALIGNMENT。
