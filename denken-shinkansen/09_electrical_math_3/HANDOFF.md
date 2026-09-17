@@ -8,13 +8,13 @@ Topic 01〜10は `completed`。
 
 完成数: `10 / 12`
 
-current_status: `topic_11_final_qa_needs_revision`
+current_status: `topic_11_source_progress_sync_complete`
 
 last_completed_topic: `10 指数関数・一階微分方程式入門`
 
 active_topic: `11 グラフ・特性曲線を読む`
 
-next_start: `Topic 11の主source・練習sourceの旧進捗記録3箇所を現在地へ同期`
+next_start: `Topic 11最終QAを再判定`
 
 ## Topic 11 固定仕様範囲
 
@@ -220,6 +220,19 @@ Topic 11はまだ `completed` としない。
 
 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、完成後独立再解答結果は変更しない。
 
+## Topic 11 旧進捗記録同期
+
+初回最終QAでFAILだった旧進捗記録3箇所だけを現在地へ同期した。
+
+- 主source冒頭 `## 状態`: 完成教材・独立再解答完了、最終QA再判定待ちへ同期
+- 主source末尾 `## 次工程`: `Topic 11の最終QAを再判定` へ同期
+- 練習source末尾 `## 次工程`: `Topic 11の最終QAを再判定` へ同期
+- 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、完成後独立再解答結果は変更なし
+- 固定EXAM_ALIGNMENT変更0件
+- 固定範囲外追加0件
+
+判定: `topic_11_source_progress_sync_complete / IN_PROGRESS`。
+
 ## 次工程
 
-主source・練習sourceの旧進捗記録3箇所だけを実成果物と現在地へ同期する。その後、Topic 11最終QAを再判定する。
+Topic 11の最終QAを再判定する。
