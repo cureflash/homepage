@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 12 / 16
-- current_status: `topic_13_exam_alignment_complete`
+- current_status: `topic_13_preproduction_independent_verification_complete`
 - last_completed_topic: `12 320km/hでもパンタグラフが離れないのはなぜ？`
 - active_topic: `13 新幹線の架線は何でできている？`
-- next_start: Topic 13の制作前独立検証を実施する
+- next_start: Topic 13の解説本文と基礎・本試験標準・複合の3段階例題を作成する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -23,7 +23,7 @@
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 13 新幹線の架線は何でできている？ — IN_PROGRESS。制作前EXAM_ALIGNMENT完了、固定5問・5答案要素。次は制作前独立検証
+- [ ] 13 新幹線の架線は何でできている？ — IN_PROGRESS。制作前EXAM_ALIGNMENT完了、固定5問・5答案要素、制作前独立検証 `5 / 5 PASS`。次は解説本文・3段階例題
 - [ ] 14 駅やトンネルにはどう電気を配る？
 - [ ] 15 回生した電気はどこへ行く？
 - [ ] 16 発電所からN700Sまで全部つないでみる
@@ -401,10 +401,13 @@ source: `topics/13_electrical_materials/13_electrical_materials.md`
 現在地:
 - 制作前EXAM_ALIGNMENT: 完了
 - 固定問題: `5問・5答案要素`
-- 制作前独立検証: 未実施
+- 制作前独立検証: `5 / 5 PASS`
+- 公式解答との不一致: `0件`
+- SPEC固定範囲外の知識を使わないと解けない採用問題: `0件`
+- Topic 14以降の論点による補完: `0件`
 - 解説本文・PDF・練習・PowerPoint: 未着手
 - SPEC固定範囲外追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
 ## 次
-Topic 13の固定5問について制作前独立検証を実施する。Topic 12以前の技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
+Topic 13の固定5問・5答案要素を全件マッピングしながら、SPEC固定範囲内で解説本文と基礎・本試験標準・複合の3段階例題を作成する。Topic 12以前の技術内容・固定EXAM_ALIGNMENT・成果物・独立再解答結果は変更しない。
