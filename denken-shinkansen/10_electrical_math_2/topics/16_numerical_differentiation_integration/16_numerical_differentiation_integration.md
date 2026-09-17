@@ -2,11 +2,11 @@
 
 ## 状態
 
-`topic_16_explanation_pdf_complete / IN_PROGRESS`
+`topic_16_practice_source_complete / IN_PROGRESS`
 
-2026-09-18、制作前EXAM_ALIGNMENT、固定4問・8答案要素の制作前独立再解答・公式解答照合、解説本文＋3段階例題に続き、解説PDFを作成して表示QA・文字抽出QAを完了した。公式解答確認前の再解答は `8 / 8 PASS`、固定問題数・答案要素数の変更0件。
+2026-09-18、制作前EXAM_ALIGNMENT、固定4問・8答案要素の制作前独立再解答・公式解答照合、解説本文＋3段階例題、解説PDFに続き、練習問題sourceを作成した。公式解答確認前の再解答は `8 / 8 PASS`、固定問題数・答案要素数の変更0件。
 
-解説PDFはA4縦3ページ、200 dpi表示 `3 / 3 PASS`、`pdftotext -layout` 文字抽出 `PASS`。固定4問・8答案要素への接続 `8 / 8`、3段階例題 `3 / 3` を維持した。Topic 17以降、第一種・第三種、未確認の新幹線実車値は追加していない。
+練習問題sourceは全12問（一次型8問／記述型4問、基礎3／標準6／複合3）。固定4問・8答案要素への接続 `8 / 8 PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`。Topic 17以降、第一種・第三種、高次数値計算法、未確認の新幹線実車値は追加していない。
 
 制作前再解答記録:
 - lock: `16_numerical_differentiation_integration_exam_reanswer_lock.md`
@@ -17,6 +17,12 @@
 解説PDF:
 - `16_numerical_differentiation_integration_explanation.pdf`
 - QA: `16_numerical_differentiation_integration_explanation_qa.md`
+
+練習問題source:
+- `16_numerical_differentiation_integration_practice.md`
+- 固定4問・8答案要素接続: `8 / 8 PASS`
+- 独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
 
 ## 固定範囲
 
@@ -550,4 +556,4 @@ Topic 17以降の先取り: `0件`
 
 ## 次工程
 
-Topic 16の練習問題sourceを作成する。固定4問・8答案要素への接続 `8 / 8` を維持し、仕様外論点を追加しない。
+Topic 16の練習PDFを作成し、表示QA・文字抽出QAを行う。固定4問・8答案要素への接続 `8 / 8` と練習問題の独立計算・論理QA `12 / 12 PASS` を維持し、仕様外論点を追加しない。
