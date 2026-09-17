@@ -3,12 +3,12 @@
 更新日: 2026-09-18
 
 ## 状態
-- active_series: `09_electrical_math_3`
-- exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_12_source_progress_sync_complete`
-- last_completed_topic: `11 グラフ・特性曲線を読む`
-- active_topic: `12 電気数学総合`
-- next_start: `Topic 12の最終QA再判定`
+- active_series: `09_electrical_math_3` (completed)
+- exam_aligned_completed_topics: 12 / 12
+- current_status: `series_completed`
+- last_completed_topic: `12 電気数学総合`
+- active_topic: `なし`
+- next_start: `10_electrical_math_2 / Topic 16 解説画像PowerPoint＋表示QA`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -54,7 +54,6 @@
 ## Topic 08 進捗
 - [x] 系列SPEC確認
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
-- [x] 直近年度を優先して公式過去問を調査
 - [x] Topic 08の固定範囲だけで積分操作が解法に直接必要な公式過去問5問を選定
 - [x] 件数合わせの仕様外論点・積分が必須でない候補を除外
 - [x] 参考教材を複数系統確認
@@ -152,21 +151,26 @@
 - [x] 完成教材だけでの公式過去問独立再解答 `5 / 5問・9 / 9答案要素 PASS`
 - [x] 最終QA `NEEDS_REVISION / IN_PROGRESS`
 - [x] 必要時のsource進捗記録同期
-- [ ] 最終QA再判定 `PASS / completed`
+- [x] 最終QA再判定 `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 12「電気数学総合」の初回最終QAでFAILだった旧進捗記録3箇所だけを現在地へ同期した。
+Topic 12「電気数学総合」の最終QAを再判定した。
 
-- 主source冒頭 `## 状態`: 完成教材・独立再解答完了、最終QA再判定待ちへ同期
-- 主source末尾 `## 次工程`: `Topic 12の最終QAを再判定する` へ同期
-- 練習source末尾 `## 次工程`: `Topic 12の最終QAを再判定する` へ同期
-- 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、完成後独立再解答結果は変更なし
+- 初回FAILだった主source・練習sourceの旧進捗記録3箇所が現在地へ同期済みであることを再確認
+- 必須成果物実在: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 制作前独立検証: `5 / 5問・9 / 9答案要素 PASS`
+- 完成後独立再解答: `5 / 5問・9 / 9答案要素 PASS`
+- 練習QA: `12 / 12 PASS`
+- 表示QA・成果物実在: PASS
+- 仕様境界: PASS
+- source進捗整合: PASS
 - 固定EXAM_ALIGNMENT変更0件
 - 固定範囲外追加0件
 
 ## 判定
 
-`topic_12_source_progress_sync_complete / IN_PROGRESS`。
+Topic 12は `PASS / completed`。
 
-完成数は `11 / 12`。次工程はTopic 12の最終QA再判定。
+完成数は `12 / 12`。`09_electrical_math_3` は完了。MASTER_SPECの制作順では次は `10_electrical_math_2` であり、GitHub正本の同系列STATUSでは Topic 16 の解説画像PowerPoint＋表示QAが次工程。
