@@ -7,9 +7,58 @@
 
 Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
 
-Topic 14 `300系⑤ 走行抵抗と必要けん引力` は、固定一次2問＋二次3問、計5問・9答案要素、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、blind再解答前ゲート、完成後blind再解答、最終QAまでPASS。前回最終QAで指摘された進捗記録4箇所も `4 / 4 PASS` を再確認し、`completed` とした。
+Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENTまで完了。一次4問＋二次1問、計5問・16答案要素を固定し、制作前計算・論理検証は `16 / 16 PASS`。SPEC指定9項目・4可視化への対応を固定し、未確認500系実車値の真値化・SPEC外追加は0件。本文は未着手。
 
-次のactive topicは Topic 15 `500系 高速域の出力・熱解析`。制作前EXAM_ALIGNMENTから開始する。
+次工程は Topic 15 の解説本文＋3段階例題。固定EXAM_ALIGNMENTを変更せず、一次10＋二次6の16答案要素を本文だけで解ける構成へ接続する。
+
+## Topic 15 固定EXAM_ALIGNMENT
+source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
+
+固定過去問:
+- R8 一次 機械 問1 (1),(2)
+- R7 二次 機械・制御 問2 (1)〜(3)
+- R5 一次 機械 問1 (1),(3),(5)
+- H26 一次 機械 問5 (3)〜(5)
+- H25 一次 機械 問3 (1),(2)
+
+品質ゲート:
+- 一次: `4問・10答案要素`
+- 二次: `1問・6答案要素`
+- 合計: `5問・16答案要素`
+- 制作前計算・論理検証: `16 / 16 PASS`
+- 二次記述・計算問題: `1問`
+- 公式解答・標準解答との不一致: `0件`
+- 参考教材2系統以上: `PASS`
+- R8一次「機械」直近年度確認: `PASS / 問1 (1),(2)を固定`
+- SPEC指定9項目: `9 / 9 aligned`
+- SPEC指定4可視化: `4 / 4 aligned`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+Topic 15 SPEC固定範囲:
+- `P = ωT`
+- 高速域トルク
+- 定出力領域
+- 電流制限
+- 電圧制限
+- 損失
+- 発熱
+- 冷却
+- 温度上昇
+
+SPEC指定可視化:
+- 回転速度―トルク
+- 回転速度―出力
+- 出力―損失
+- 簡略熱モデル
+
+範囲境界:
+- Topic 12 の VVVF・V/f・すべり制御は定出力領域・電圧制限・電流制限との接続に必要な範囲だけ参照する
+- Topic 16 の多レベル変換器・PWM・素子電圧・高調波へ進まない
+- 詳細な熱流体解析、冷却風量設計、絶縁寿命モデル、軸受・歯車・車体空力設計を追加しない
+- 未確認500系実車値を真値化しない
+- 簡略熱モデルを第二種公式過去問で直接問われた論点とは扱わない
 
 ## Topic 14 固定EXAM_ALIGNMENT
 source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -141,4 +190,4 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次の正確な開始点
-Topic 15 `500系 高速域の出力・熱解析` の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`SPEC.md` のTopic 15固定範囲を確認し、本文制作前に公式過去問を直近年度から調査して二種一次・二次を合わせ原則5問以上固定する。仕様外の論点は追加しない。
+Topic 15 `500系 高速域の出力・熱解析` の解説本文＋3段階例題を作成する。`topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md` の固定EXAM_ALIGNMENTを変更せず、SPEC指定9項目・4可視化と一次10＋二次6の16答案要素を本文へ接続する。
