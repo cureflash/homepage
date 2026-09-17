@@ -4,9 +4,9 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / completed`
 
-技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界はPASS。未完了理由は進捗記録4箇所が実成果物より古いことだけである。
+技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界、進捗記録整合を再確認し、全件PASSとした。
 
 ## 1. 上位仕様確認
 
@@ -95,16 +95,16 @@ SPEC境界: `PASS`
 
 ## 7. 進捗記録整合
 
-実成果物は完成後独立再解答まで到達しているが、次の4箇所が旧工程のまま残っている。
+初回最終QAで唯一FAILだった4箇所を再確認した。
 
-1. 主source冒頭状態欄: `次は練習PDFを作成する` のまま。
-2. 主source末尾: `練習PDFを作成する` のまま。
-3. 練習source末尾: `このsourceを正本として練習PDFを作成` のまま。
-4. 練習PDF QA末尾: current_statusが `topic_13_practice_pdf_complete`、次工程がPowerPointのまま。
+1. 主source冒頭状態欄: 完成後独立再解答まで完成し、次工程を最終QA再判定へ同期済み。
+2. 主source末尾: 次工程をTopic 13最終QA再判定へ同期済み。
+3. 練習source末尾: 次工程をTopic 13最終QA再判定へ同期済み。
+4. 練習PDF QA末尾: current_statusを `topic_13_progress_sync_complete`、次工程をTopic 13最終QA再判定へ同期済み。
 
-技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX成果物を変更する必要はない。上記4箇所だけを実成果物へ同期した後、最終QAを再判定する。
+旧工程表現は `4 / 4` 解消済み。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・完成後独立再解答結果の修正は不要だった。
 
-進捗記録整合: `FAIL`
+進捗記録整合: `PASS`
 
 ## 8. 最終判定
 
@@ -115,8 +115,8 @@ SPEC境界: `PASS`
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL`
+- 進捗記録整合: `PASS`
 
-したがって最終判定は `NEEDS_REVISION / IN_PROGRESS`。完成数は `12 / 39` のままとする。
+したがって最終判定は `PASS / completed`。完成数は `13 / 39`。
 
-次工程は進捗記録4箇所だけを実成果物へ同期する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、完成後独立再解答結果は変更しない。
+次工程はTopic 14「300系⑤ 走行抵抗と必要けん引力」の制作前EXAM_ALIGNMENT。
