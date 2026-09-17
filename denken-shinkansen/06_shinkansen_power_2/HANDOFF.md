@@ -31,7 +31,9 @@ Topic 11「新幹線が移動すると電圧はどう変わる？」の練習PDF
 - 正式4問・17答案要素への接続: `17 / 17 PASS`
 - SPEC固定6項目: `6 / 6 PASS`
 - パンタグラフ電圧・線路電流・有効電力損失・無効電力への接続: `4 / 4 PASS`
-- PDF SHA-256: `916bfee4e38eb4ad3c98f16a73be303b929587b07c54abbbe86cfaa02ed071f8`
+- PDF SHA-256: `d7b6c17e52e9d15d6ecc07e2c9a7dc58acd503c6c784932da2d52bffb8c49527`
+- Git blob SHA: `4aeffbd83faf7256161475899f8e3f8319d29073`
+- GitHub正本bytes再レンダリング差分: `8 / 8ページ・0差分 PASS`
 - Topic 12以降の先取り: `0件`
 - 未確認実設備値: `0件`
 - 仕様追加: `0件`
