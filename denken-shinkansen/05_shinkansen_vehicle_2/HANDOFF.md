@@ -5,13 +5,13 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
+Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲート、候補答案固定、公式照合まで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。完成後blind再解答は固定5問 `5 / 5 PASS`、一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`。教材外知識による補完0件、公式解答・標準解答との不一致0件。
+Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲート、候補答案固定、公式照合、進捗記録同期、最終QA再判定まで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。完成後blind再解答は固定5問 `5 / 5 PASS`、一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`。教材外知識による補完0件、公式解答・標準解答との不一致0件。
 
-Topic 15最終QAでは、技術内容、固定EXAM_ALIGNMENT、blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界はすべてPASSしたが、現在工程を示す進捗記録4箇所が旧工程のまま残っていたため `NEEDS_REVISION / IN_PROGRESS` とした。その4箇所は `topic_15_final_qa_needs_progress_sync` / 最終QA再判定へ同期済みで、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の変更は0件。完成数は `14 / 39` のまま。
+初回最終QAで唯一FAILだった進捗記録4箇所は最終QA再判定前に同期済み。再判定では技術内容、固定EXAM_ALIGNMENT、blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界、進捗記録整合がすべてPASSし、Topic 15を `PASS / completed` とした。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の変更は0件、SPEC外追加0件。
 
-現在地は `topic_15_progress_sync_complete`。次工程はTopic 15最終QAの再判定である。
+現在地は `topic_15_completed`。次工程はTopic 16 `700系 多レベル変換器とPWM` の制作前EXAM_ALIGNMENTである。
 
 ## Topic 15 固定EXAM_ALIGNMENT
 source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
@@ -191,7 +191,7 @@ SPEC指定可視化:
 
 ## Topic 15 最終QA
 - QA: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_final_qa.md`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 判定: `PASS / completed`
 - 技術内容: `PASS`
 - 固定5問・16答案要素: `PASS`
 - 完成後blind再解答: `16 / 16 PASS`
@@ -199,12 +199,9 @@ SPEC指定可視化:
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL / 4件要同期`
-- 要同期1: 主source冒頭 `## 状態`
-- 要同期2: 主source末尾 `## 次工程`
-- 要同期3: 練習source末尾 `## 次工程`
-- 要同期4: 練習PDF QA末尾 `## 現在地`
+- 進捗記録整合: `PASS / 4件同期確認済み`
 - 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の変更: `0件`
+- SPEC外追加: `0件`
 
 ## Topic 15 進捗記録同期
 - 主source冒頭 `## 状態`: `PASS / topic_15_final_qa_needs_progress_sync`
@@ -217,7 +214,7 @@ SPEC指定可視化:
 - 判定: `PASS / PROGRESS_SYNC_COMPLETE`
 
 ## 過去Topic
-Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
+Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次に行うこと
-Topic 15最終QAを再実施し、進捗記録4箇所の整合を再確認する。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更せず、全ゲートPASS時だけTopic 15をcompletedとする。
+Topic 16 `700系 多レベル変換器とPWM` の制作前EXAM_ALIGNMENTを開始する。公式過去問を直近年度から確認し、SPEC固定範囲（多レベル変換、PWM、素子電圧、出力電圧、高調波、dv/dt、スイッチング周波数、変換効率）と指定3可視化（2レベル・多レベル出力波形比較、高調波比較、素子電圧比較）だけでゲート対象を確定する。
