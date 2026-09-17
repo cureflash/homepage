@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `13 / 39`
-- current_status: `topic_14_exam_alignment_complete_spec_reconciled`
+- current_status: `topic_14_explanation_source_complete`
 - last_completed_topic: `13 300系④ 回生と四象限運転`
 - active_topic: `14 300系⑤ 走行抵抗と必要けん引力`
-- next_start: Topic 14 解説本文＋3段階例題
+- next_start: Topic 14 解説PDF
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -24,7 +24,7 @@
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
-- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / EXAM_ALIGNMENT_COMPLETE / SPEC_RECONCILED
+- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / EXPLANATION_SOURCE_COMPLETE
 
 ## Topic 14 固定EXAM_ALIGNMENT
 - source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -73,6 +73,19 @@ SPEC指定4可視化:
 - 「勾配条件比較」をSPEC指定可視化とする誤記: `修正済み`
 - 新規過去問追加: `0件`
 - 新規実車値追加: `0件`
+
+## Topic 14 解説source
+- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
+- 解説本文: `完成`
+- 3段階例題: `3 / 3 PASS`
+- 固定5過去問・9答案要素の本文マッピング: `9 / 9 PASS`
+- 例題数値再計算: `PASS`
+- SPEC指定8項目: `8 / 8 PASS`
+- SPEC指定4可視化への計算条件: `4 / 4 PASS`
+- 4可視化の共通仮定式系: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 未確認300系実車値の真値化: `0件`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 ## Topic 14 固定範囲
 - 走行抵抗
@@ -236,4 +249,4 @@ Topic 12 `300系③ VVVFインバータと誘導機制御` は固定一次4問�
 Topic 11 `300系② PWMコンバータ` は固定一次2問＋二次3問・27答案要素、解説source/PDF、練習source/PDF、解説画像PowerPoint、完成後独立再解答、最終QAまで完了。最終判定 `PASS / completed`。
 
 ## 次工程
-Topic 14は制作前EXAM_ALIGNMENTを正本SPECへ再照合済み。固定一次2問＋二次3問・9答案要素を変更せず、正本SPEC指定8項目・4可視化に沿って次は解説本文＋3段階例題を制作する。本文・PDF等で未確認の300系実車値を真値化しない。
+Topic 14の解説本文＋3段階例題は `PASS / EXPLANATION_SOURCE_COMPLETE`。固定一次2問＋二次3問・9答案要素とSPEC指定8項目・4可視化条件を変更せず、次は解説PDFを制作する。未確認の300系実車値を真値化しない。
