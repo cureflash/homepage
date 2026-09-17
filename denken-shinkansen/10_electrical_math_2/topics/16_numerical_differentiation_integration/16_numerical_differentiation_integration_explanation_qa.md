@@ -5,12 +5,12 @@
 ## 組版
 
 - A4縦: PASS
-- ページ数: 5
-- 200 dpi 全ページ表示確認: `5 / 5 PASS`
+- ページ数: 3
+- 200 dpi 全ページ表示確認: `3 / 3 PASS`
 - 欠け・重なり・黒塗り・文字化け: 0件
 - `pdftotext -layout` 文字抽出: PASS
-- SHA-256: `230471716764b25f4bc5ba99da740f00b6b86df8824ef8135f7b5ac6da2c7e0d`
-- file size: `15256 bytes`
+- SHA-256: `28d3b15442be997d195ce27bc261acc8f770a004bc732f11453c3ed11294b46c`
+- file size: `7023 bytes`
 
 ## 試験対応
 

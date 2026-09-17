@@ -6,7 +6,7 @@
 
 2026-09-18、制作前EXAM_ALIGNMENT、固定4問・8答案要素の制作前独立再解答・公式解答照合、解説本文＋3段階例題に続き、解説PDFを作成して表示QA・文字抽出QAを完了した。公式解答確認前の再解答は `8 / 8 PASS`、固定問題数・答案要素数の変更0件。
 
-解説PDFはA4縦5ページ、200 dpi表示 `5 / 5 PASS`、`pdftotext -layout` 文字抽出 `PASS`。固定4問・8答案要素への接続 `8 / 8`、3段階例題 `3 / 3` を維持した。Topic 17以降、第一種・第三種、未確認の新幹線実車値は追加していない。
+解説PDFはA4縦3ページ、200 dpi表示 `3 / 3 PASS`、`pdftotext -layout` 文字抽出 `PASS`。固定4問・8答案要素への接続 `8 / 8`、3段階例題 `3 / 3` を維持した。Topic 17以降、第一種・第三種、未確認の新幹線実車値は追加していない。
 
 制作前再解答記録:
 - lock: `16_numerical_differentiation_integration_exam_reanswer_lock.md`
