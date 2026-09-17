@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 14 / 21
-- current_status: `topic_15_explanation_pdf_complete`
+- current_status: `topic_15_practice_pdf_complete`
 - last_completed_topic: `14 インバータのギザギザ波形を分解する`
 - active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
-- next_start: Topic 15 練習問題source＋練習PDF
+- next_start: Topic 15 解説画像PowerPoint＋表示QA
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -244,7 +244,7 @@
 - [x] 制作前EXAM_ALIGNMENT: 一次5問・25答案要素、関連候補9件調査
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋表示QA
-- [ ] 練習問題source＋練習PDF
+- [x] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
 - [ ] 完成後独立再解答
 - [ ] 最終QA
@@ -252,18 +252,22 @@
 
 ## 今回進めた内容
 
-Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の解説PDF＋表示QAを完了した。
+Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の練習問題source＋練習PDFを完了した。
 
-- 解説PDF: A4縦2ページ
-- 200 dpi全ページ表示QA: `2 / 2 PASS`
+- 練習問題: `12問・全問五肢択一`
+- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
+- 数値再計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- 固定一次5問・25答案要素への接続: `25 / 25`
+- 練習PDF: A4縦6ページ
+- 200 dpi全ページ表示QA: `6 / 6 PASS`
 - 文字抽出QA: `PASS`
-- 固定一次5問・25答案要素への教材内接続: `25 / 25`
-- 3段階例題: `3 / 3`
 - 二次採用: `0問`、二次数合わせ: `0件`
 - 遮断器アーク・過渡回復電圧・保護協調等の仕様外追加: `0件`
-- 未確認実設備値・実測波形追加: `0件`
+- 自動制御・パワーエレクトロニクス・電力系統過渡安定度の追加: `0件`
+- 未確認実設備値・実測過渡波形追加: `0件`
 - Topic 16以降の先取り: `0件`
 
 ## 判定
 
-Topic 15は `PASS / EXPLANATION_PDF_COMPLETE`。完成数は `14 / 21` のまま。次工程は練習問題source＋練習PDF。
+Topic 15は `PASS / PRACTICE_PDF_COMPLETE`。完成数は `14 / 21` のまま。次工程は解説画像PowerPoint＋表示QA。
