@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `12 / 16`
-- current_status: `topic_13_final_qa_needs_revision`
+- current_status: `topic_13_progress_sync_complete`
 - last_completed_topic: `12 新幹線のコンピュータは何をしている？`
 - active_topic: `13 新幹線は主電動機以外もモーターだらけ？`
-- next_start: Topic 13の旧進捗3箇所を実成果物へ同期する
+- next_start: Topic 13の最終QAを再判定する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -23,7 +23,7 @@
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
-- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA `NEEDS_REVISION` / 進捗記録整合のみFAIL（旧進捗3箇所） / IN_PROGRESS
+- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 旧進捗3箇所同期済み / 最終QA再判定待ち / IN_PROGRESS
 - [ ] 14〜16 — 未完了
 
 ## Topic 13 制作品質状態
@@ -81,18 +81,19 @@
 - 前段H29 blind条件汚染: `隔離済み / fresh blindで再実施`
 - 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
 - 独立再解答記録: `topics/13_auxiliary_motors/13_auxiliary_motors_independent_reanswer.md`
-- 最終QA: `NEEDS_REVISION`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
-- 最終QA固定範囲境界: `PASS`
-- 最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
-- 旧進捗1: `13_auxiliary_motors.md` の状態・今回進捗・次工程が最終QA前を指したまま
-- 旧進捗2: `13_auxiliary_motors_practice.md` の次工程が「練習PDFを作成」のまま
-- 旧進捗3: `13_auxiliary_motors_practice_pdf_qa.md` の次工程が「blind独立再解答」のまま
-- 状態: `topic_13_final_qa_needs_revision`
-- 次工程: 旧進捗3箇所を実成果物へ同期し、その後に最終QAを再判定する
+- 前回最終QA: `NEEDS_REVISION`
+- 前回最終QA技術内容: `PASS`
+- 前回最終QA必須成果物: `PASS`
+- 前回最終QA表示QA: `PASS`
+- 前回最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
+- 前回最終QA固定範囲境界: `PASS`
+- 前回最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
+- 旧進捗1: `13_auxiliary_motors.md` — 同期済み
+- 旧進捗2: `13_auxiliary_motors_practice.md` — 同期済み
+- 旧進捗3: `13_auxiliary_motors_practice_pdf_qa.md` — 同期済み
+- 進捗記録同期: `3 / 3 PASS`
+- 状態: `topic_13_progress_sync_complete`
+- 次工程: Topic 13の最終QAを再判定する
 
 ## Topic 12 最終品質状態
 - 固定範囲: 2進数 / 16進数 / ビット / バイト / 論理回路 / AND / OR / NOT / NAND / NOR / XOR / 論理式 / 真理値表 / A/D変換 / D/A変換 / センサ / 情報伝送
@@ -222,6 +223,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 13の最終QAを実施した。技術内容、必須成果物、PDF/PPTX表示QA、固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、固定範囲境界はいずれもPASS。一方、主source・練習source・練習PDF QAの3箇所に旧工程を指す進捗記録が残っているため、進捗記録整合のみFAILとして最終判定は `NEEDS_REVISION`。Topic 13はcompletedにしない。
+Topic 13で前回最終QAの唯一のFAILだった進捗記録整合を修正した。`13_auxiliary_motors.md`、`13_auxiliary_motors_practice.md`、`13_auxiliary_motors_practice_pdf_qa.md` の旧工程記録を実成果物へ同期し、`3 / 3 PASS`。固定EXAM_ALIGNMENT、問題・正答、技術本文、PDF/PPTXは変更していない。
 
-完成数は `12 / 16` のまま。次工程は旧進捗3箇所を実成果物へ同期する。
+完成数は `12 / 16` のまま。次工程はTopic 13の最終QA再判定。
