@@ -8,13 +8,13 @@ Topic 01〜11は `completed`。
 
 完成数: `11 / 12`
 
-current_status: `topic_12_independent_reanswer_complete`
+current_status: `topic_12_final_qa_needs_revision`
 
 last_completed_topic: `11 グラフ・特性曲線を読む`
 
 active_topic: `12 電気数学総合`
 
-next_start: `Topic 12の最終QA`
+next_start: `Topic 12のsource進捗記録同期`
 
 ## Topic 11 固定仕様範囲
 
@@ -299,7 +299,7 @@ Topic 11はまだ `completed` としない。
 ブラインド条件維持:
 - R8上 理論 問10は Topic 10の品質ゲートで既に使用し、保存済み独立解答・公式正答が存在するためTopic 12では再利用しない
 - Topic 12の固定5問には保存済み正答を持つ既存ゲート問題を含めない
-- 個別の選択肢番号・数値解は制作前独立解答節にのみ保存し、完成後独立再解答を確定するまで参照しない
+- 個別の選択肢番号・数値解は制作前独立解答節にのみ保存し、完成後独立再解答を確定するまでは参照しない
 
 固定範囲外として除外した主な候補:
 - R8上 機械 問13: 伝達関数・制御理論体系が必要
@@ -463,6 +463,29 @@ R8上 電力 問15は Topic 09では水力設備知識が固定範囲外だっ�
 
 Topic 12はまだ `completed` としない。
 
+## Topic 12 最終QA（初回）
+
+次をGitHub正本へ反映した。
+
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_final_qa.md`
+- 必須成果物実在: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 制作前独立検証: `5 / 5問・9 / 9答案要素 PASS`
+- 完成後独立再解答: `5 / 5問・9 / 9答案要素 PASS`
+- 練習QA: `12 / 12 PASS`
+- 表示QA・成果物実在: PASS
+- 仕様境界: PASS
+- 固定EXAM_ALIGNMENT変更0件
+- 固定範囲外追加0件
+- source進捗整合: FAIL
+  - 主source冒頭 `## 状態` が解説本文完成時点のまま
+  - 主source末尾 `## 次工程` が解説PDF作成のまま
+  - 練習source末尾 `## 次工程` が練習PDF作成のまま
+
+判定: `NEEDS_REVISION / IN_PROGRESS`。
+
+技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、完成後独立再解答結果は変更しない。
+
 ## 次工程
 
-Topic 12の最終QAを実施する。
+Topic 12の主source・練習sourceに残る旧進捗記録3箇所だけを現在地へ同期する。
