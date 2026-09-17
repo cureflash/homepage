@@ -45,7 +45,9 @@ completed_topics: `10 / 22`
 - 練習PDF: A4縦 `8ページ`
 - 200 dpi表示QA: `8 / 8 PASS`
 - `pdftotext` 文字抽出QA: PASS / U+FFFD `0件`
-- PDF SHA-256: `916bfee4e38eb4ad3c98f16a73be303b929587b07c54abbbe86cfaa02ed071f8`
+- PDF SHA-256: `d7b6c17e52e9d15d6ecc07e2c9a7dc58acd503c6c784932da2d52bffb8c49527`
+- Git blob SHA: `4aeffbd83faf7256161475899f8e3f8319d29073`
+- GitHub正本bytes再レンダリング差分: `8 / 8ページ・0差分 PASS`
 
 本文・練習では、位置 `x` から `Z(x)` を作る方法、`S=P+jQ=VI*`、`V_s=V_r+ZI`、厳密な受電端電圧式、近似電圧降下、`I²R` 損失、位置比較、分布負荷の積分法を扱う。H30一次問7の導体量関係はTopic 10既習事項として再確認するだけで、新規主題にはしていない。
 
