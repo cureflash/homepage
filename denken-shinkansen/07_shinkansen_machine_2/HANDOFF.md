@@ -6,8 +6,8 @@
 - Topic 01〜15: 最終QA `PASS / completed`
 - 完成数: `15 / 22`
 - active topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- current status: `topic_16_independent_reanswer_needs_redo`
-- 次工程: H18一次「機械」問3 (1) の独立再解答やり直し
+- current status: `topic_16_h18_blind_input_ready`
+- 次工程: 隔離済み問題入力を使ったH18一次「機械」問3 (1) の独立再解答
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -19,7 +19,7 @@
 - 解説source/PDF、練習source/PDF、PowerPoint/QAは変更していない。
 - 完成後独立再解答ではR02一次3要素、H30一次2要素、H26一次1要素、H23二次5要素を完成教材のみで答案確定後に公式照合し、厳密ブラインド `11 / 11 PASS`。
 - H18一次「機械」問3 (1) は問題取得に使った第三者解説ページで正答が同時露出したため、厳密ブラインド条件を満たさずPASS扱いにしない。
-- H18の正答内容は独立再実施を可能にするため進捗記録へ保存しない。
+- H18再実施用として、問題本文・解答群だけを `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md` へ隔離した。正答記号・正答内容・解説・採点結果は保存していない。
 - 未確認N700S実車値、電池材料反応・BMS・チョッパ詳細の仕様追加、Topic 17以降先取り `0件`。
 
 ## Topic 15 最終状態
@@ -52,6 +52,7 @@
 - [x] PowerPoint QA `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_powerpoint_qa.md`
 - [x] 独立再解答前ゲート `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_blind_reanswer_gate.md`
 - [x] 完成後独立再解答記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md` — 厳密ブラインド `11 / 12 PASS`、1要素再実施必要
+- [x] H18再実施用問題入力 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md` — `BLIND_INPUT_READY`
 
 ## Topic 16 解説画像PowerPointゲート
 - [x] 起電力 `E`＋内部抵抗 `r`、放電 `V=E-Ir`、充電 `V=E+Ir`、内部抵抗損 `I²r` を可視化
@@ -83,9 +84,10 @@
 - H26一次 問3 (1): `1 / 1 PASS`
 - H23二次 問3 (3),(4): `5 / 5 PASS`
 - 上記は完成教材だけで答案確定後、電気技術者試験センター公式解答・標準解答へ照合した。
-- H18一次 問3 (1): 問題取得時に第三者解説ページ上の正答が同時露出したためブラインド完全性 `FAIL`。正答内容は本HANDOFFへ保存しない。
+- H18一次 問3 (1): 本採点は未実施。再実施用問題入力を隔離済み。
 - 厳密ブラインド結果: `11 / 12 PASS`
-- 判定: `NEEDS_REDO / topic_16_independent_reanswer_partial`
+- H18再実施準備: `PASS / BLIND_INPUT_READY`
+- 判定: `NEEDS_REDO / topic_16_h18_blind_input_ready`
 
 ## 次に行うこと
-H18一次「機械」問3 (1) の1答案要素だけを、解答非表示の問題ソースから取得して完成済みTopic 16教材だけで再解答する。答案確定後に解答と照合する。固定EXAM_ALIGNMENTは変更しない。
+`topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md` と完成済みTopic 16教材だけを使い、H18一次「機械」問3 (1) の答案記号と理由を先に固定する。その後に解答を照合する。固定EXAM_ALIGNMENTは変更しない。
