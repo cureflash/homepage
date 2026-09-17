@@ -3,11 +3,11 @@
 updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `10`
-current_status: `topic_10_powerpoint_complete`
+current_status: `topic_10_blind_reanswer_retry_required`
 
 ## 今回完了
 
-Topic 10「なぜ変電所を何十kmも離せない？」の解説画像PowerPoint＋QAをGitHub正本へ反映した。
+Topic 10「なぜ変電所を何十kmも離せない？」の完成後blind独立再解答を実施し、公式解答照合まで記録した。
 
 正式品質ゲートは変更なし:
 - 平成30年度 第二種一次「電力」問7
@@ -16,16 +16,24 @@ Topic 10「なぜ変電所を何十kmも離せない？」の解説画像PowerPo
 - 平成26年度 第二種二次「電力・管理」問4
 - 一次1問＋二次3問 = `4問・17答案要素`
 
-PowerPointは16:9・4スライド。SPEC固定の「距離―パンタグラフ電圧」「距離―損失」「力率別比較」を `3 / 3` 可視化し、固定10項目も `10 / 10` 可視化した。全4スライドを1601×900でレンダリングし表示QA `4 / 4 PASS`、`slides_test.py` は `No overflow detected`、PPTX ZIP整合性もPASS。
+blind再解答結果:
+- H30一次「電力」問7: `4 / 5答案要素 PASS`
+- H27二次「電力・管理」問3: `4 / 4答案要素 PASS`
+- H27二次「電力・管理」問4: `5 / 5答案要素 PASS`
+- H26二次「電力・管理」問4: `3 / 3答案要素 PASS`
+- 合計: 一次 `4 / 5`＋二次 `12 / 12`＝`3 / 4問・16 / 17答案要素 PASS`
+- 判定: `RETRY_REQUIRED / NOT_COUNTED`
 
-Topic 11以降補完0件、固定範囲外追加0件、未確認実設備値追加0件、仕様追加0件。PowerPoint内の数値は教材用仮定値として明示した。
+唯一の不一致はH30一次「電力」問7(4)。`P/G = VIcosφ/(√3σAL)` を二乗した途中で `P²/G²` を保持せず、blind答案を `3σρL²`（リ）とした。公式は `9σ²ρAL³`（ヨ）。他16答案要素は公式解答・標準解答と一致した。
+
+教材外補完0件、Topic 11以降依存0件、固定範囲外追加0件、未確認実設備値追加0件、仕様追加0件。教材成果物・固定EXAM_ALIGNMENTは変更していない。
 
 ## 現在地
 
-Topic 10は `powerpoint_complete / IN_PROGRESS`。完成数は `9 / 22`。
+Topic 10は `blind_reanswer_retry_required / IN_PROGRESS`。完成数は `9 / 22`。
 
-固定EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋QA、練習source、練習PDF＋QA、解説画像PowerPoint＋QAまで完成。完成後blind独立再解答は未実施。
+完成済み成果物は維持し、今回のblind再解答はPASSとして数えない。
 
 ## 次に行う
 
-Topic 10の正式4問・17答案要素を、保存済み正答を先に見ず、完成教材だけを用いてblind独立再解答する。固定EXAM_ALIGNMENT、SPEC固定10項目、固定範囲境界は変更しない。
+新規clean runで正式4問・17答案要素のblind独立再解答を再試行する。H30一次「電力」問7では途中式 `P²/G²` を保持して各空欄を選択肢へ照合する。固定EXAM_ALIGNMENT、SPEC固定10項目、教材成果物、固定範囲境界は変更しない。

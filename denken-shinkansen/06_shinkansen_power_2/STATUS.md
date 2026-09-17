@@ -4,12 +4,12 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `10`
 theme: なぜ変電所を何十kmも離せない？
-current_status: `topic_10_powerpoint_complete`
+current_status: `topic_10_blind_reanswer_retry_required`
 completed_topics: `9 / 22`
 
 ## Topic 10 current result
 
-Topic 10「なぜ変電所を何十kmも離せない？」の解説画像PowerPointを完成した。
+Topic 10「なぜ変電所を何十kmも離せない？」の完成後blind独立再解答を実施したが、品質ゲートは `RETRY_REQUIRED / NOT_COUNTED` とした。
 
 品質ゲート対象:
 - 平成30年度 第二種一次「電力」問7
@@ -37,14 +37,15 @@ Topic 10「なぜ変電所を何十kmも離せない？」の解説画像PowerPo
 - PowerPoint表示QA: `4 / 4 PASS`
 - `slides_test.py`: `PASS / No overflow detected`
 - PPTX ZIP整合性: `PASS / No errors detected`
+- 完成後blind再解答: 一次 `4 / 5`＋二次 `12 / 12`＝`3 / 4問・16 / 17答案要素 PASS`
+- 完成後blind再解答判定: `RETRY_REQUIRED / NOT_COUNTED`
+- 唯一の不一致: H30一次「電力」問7(4)。blind答案で途中式の分母を `3σρL²` としたが、公式は `9σ²ρAL³`。
 - Topic 10固定範囲外追加: `0件`
 - Topic 11以降の先取り: `0件`
 - 未確認実設備値追加: `0件`
 - 仕様追加: `0件`
 
 原則5問に対し、Topic 10固定範囲だけで問題全体を完答できる5問目は確認できなかったため、件数合わせを行っていない。
-
-完成後blind独立再解答は未着手。
 
 ## Gate checklist
 
@@ -57,8 +58,8 @@ Topic 10「なぜ変電所を何十kmも離せない？」の解説画像PowerPo
 - [x] Topic 07 completed
 - [x] Topic 08 completed
 - [x] Topic 09 completed
-- [ ] Topic 10 - PowerPoint complete / IN_PROGRESS
+- [ ] Topic 10 - blind reanswer RETRY_REQUIRED / IN_PROGRESS
 
 ## next_start
 
-Topic 10の正式4問・17答案要素を、保存済み正答を先に見ず、完成教材だけを用いてblind独立再解答する。固定EXAM_ALIGNMENT、SPEC固定10項目、固定範囲境界は変更しない。
+新規clean runでTopic 10の正式4問・17答案要素を完成教材だけからblind独立再解答する。H30一次「電力」問7は途中式 `P²/G²` を保持して5空欄を問題文の選択肢へ照合する。固定EXAM_ALIGNMENT、SPEC固定10項目、教材成果物、固定範囲境界は変更しない。
