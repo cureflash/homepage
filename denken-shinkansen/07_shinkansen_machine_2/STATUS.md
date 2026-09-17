@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `16 / 22`
-- current_status: `topic_16_final_qa_pass`
+- current_status: `topic_17_exam_alignment_complete`
 - last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
 - active_topic: `17 新幹線の速度をフィードバック制御する`
-- next_start: Topic 17 制作前EXAM_ALIGNMENT
+- next_start: Topic 17 解説source本文制作
 
 ## 完了テーマ
 - [x] Topic 01〜16 最終QA `PASS / completed`
-- [ ] Topic 17 `NOT_STARTED` — 制作前EXAM_ALIGNMENTから開始
+- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS` / 次は解説source
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -159,8 +159,45 @@
 - 記録: `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_final_qa.md`
 - 判定: `PASS / topic_16_final_qa_pass / completed`
 
+## Topic 17 固定範囲
+系列 `SPEC.md` の次だけを扱う。
+
+- 目標値
+- 偏差
+- 制御器
+- プラント
+- センサ
+- 伝達関数
+- ブロック線図
+- 閉ループ伝達関数
+- 外乱
+
+境界:
+- Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘着制御を先取りしない。
+- 二自由度制御・フィードフォワード補償を独立論点として追加しない。
+- 新幹線の制御ゲイン、時定数、センサ定数等を一次資料未確認のまま実車値として置かない。
+
+## Topic 17 固定EXAM_ALIGNMENT
+一次1問＋二次記述4問、計5問・6答案要素を品質ゲート対象とする。
+
+- R07 二次 機械・制御 問4 (1) — 1答案要素
+- R06 二次 機械・制御 問4 (1) — 1答案要素
+- R04 二次 機械・制御 問4 (3) — 1答案要素
+- R03 二次 機械・制御 問4 (1),(2) — 2答案要素
+- H21 一次 機械 問4 (1) — 1答案要素
+
+## Topic 17 制作前EXAM_ALIGNMENT
+- [x] 直近年度から公式過去問を確認
+- [x] 一次1問＋二次記述4問、計5問・6答案要素を固定
+- [x] 伝達関数・ブロック線図・閉ループ伝達関数・外乱へ直接対応する小問だけを採用
+- [x] 参考教材2系統以上を確認
+- [x] Topic 18〜21先取り、二自由度制御の仕様追加、未確認実車値追加 `0件`
+- [x] 正答記号・完成済み解答保存 `0件`
+- source: `topics/17_speed_feedback_control/17_speed_feedback_control.md`
+- 判定: `PASS / topic_17_exam_alignment_complete`
+
 ## 今回進めた内容
-Topic 16最終QAを再実施し、前回FAILだった進捗記録整合を含む全ゲートをPASSした。Topic 16を `completed` とし、完成数を `16 / 22` へ更新した。
+Topic 16完了後の最新mainと既存「機械二種を進行」枠の成果をreconcileし、重複作業を避けてTopic 17制作前EXAM_ALIGNMENTを実施した。一次1問＋二次4問、計5問・6答案要素を固定し、Topic 18以降の論点を除外した。
 
 ## 判定
-Topic 16は `PASS / completed`。次の未完了テーマは Topic 17「新幹線の速度をフィードバック制御する」。次工程は制作前EXAM_ALIGNMENT。
+Topic 17は `PASS / topic_17_exam_alignment_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は解説source本文制作。
