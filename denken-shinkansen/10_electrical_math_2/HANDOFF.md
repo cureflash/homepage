@@ -8,11 +8,11 @@ Topic 01〜15は `completed`。
 
 完成数: `15 / 20`
 
-current_status: `topic_15_completed`
+current_status: `topic_16_explanation_source_complete`
 
 active_topic: `16 数値微分・数値積分`
 
-次工程: Topic 16の制作前EXAM_ALIGNMENTを実施する。
+次工程: Topic 16の解説PDFを作成し、表示QA・文字抽出QAを行う。
 
 ## 上位仕様
 
@@ -1190,6 +1190,60 @@ current_status: `topic_15_completed`
 
 総合判定: `PASS / completed`。
 
+## Topic 16 進行記録
+
+テーマ: `数値微分・数値積分`
+
+source:
+`topics/16_numerical_differentiation_integration/16_numerical_differentiation_integration.md`
+
+制作前独立再解答:
+`topics/16_numerical_differentiation_integration/16_numerical_differentiation_integration_exam_reanswer.md`
+
+### Topic 16 EXAM_ALIGNMENT
+
+固定第二種公式過去問4問・8答案要素。
+
+- R6 一次「法規」問4 (1)〜(2)
+- R4 二次「電力・管理」問1のピーク／オフピーク出力2値
+- H23 二次「電力・管理」問6 (1)a、(1)b、(2)
+- H22 二次「電力・管理」問3 (4)
+
+制作前独立再解答は、公式解答確認前に `ANSWER_LOCKED_BEFORE_REVIEW` を保存（lock commit `d376d19197e730308a26f37a055cecc91eb555de`）し、その後の公式解答・標準解答照合で `8 / 8 PASS`。照合後修正0件、教材範囲追加0件、件数水増し0件。
+
+### Topic 16 解説本文＋3段階例題
+
+主sourceへ完成済み。
+
+本文では以下を収録した。
+- 差分と前進差分・中心差分
+- 刻み幅と誤差、測定ノイズへの注意
+- `E=∫Pdt` と区分一定データの `ΣP_iΔt_i`
+- 台形則
+- Simpson則の基本と適用条件
+- `P_loss=kP^2` の場合に `P^2` を時間平均する考え方
+- 全日効率を電力量で組み立てる考え方
+- 時間帯別流量等の収支積算
+- 教育用速度データから加速度を求める接続
+- 教育用電力データから電力量を求める接続
+- 本試験向け解法手順と頻出ミス
+
+3段階例題:
+- 基礎: 速度データの中心差分 → `2.5 m/s^2`
+- 本試験標準: 区分一定電力 → `208 MWh`, `8.67 MW`, `72.2 %`
+- 複合・ひっかけ: 台形則 `20 MWh` とSimpson則 `21.33 MWh` の比較
+
+固定4問・8答案要素への本文マッピング: `8 / 8`。
+
+境界:
+- 第一種・第三種による件数水増し: 0件
+- Topic 17以降の先取り: 0件
+- 高次数値微分・高次Newton-Cotes公式の体系的追加: 0件
+- スプライン・有限要素法等の別算法追加: 0件
+- 未確認実車値依存: 0件
+
+current_status: `topic_16_explanation_source_complete`
+
 ## 次に行うこと
 
-Topic 16 `数値微分・数値積分` の制作前EXAM_ALIGNMENTを実施する。
+Topic 16 `数値微分・数値積分` の解説PDFを作成し、表示QA・文字抽出QAを行う。固定4問・8答案要素への本文マッピング `8 / 8` を維持し、仕様外論点を追加しない。
