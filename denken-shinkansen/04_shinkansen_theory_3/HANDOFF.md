@@ -4,39 +4,28 @@
 
 ## 現在地
 
-Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何をどう測っている？」は最終QAを実施し、技術内容・過去問対応品質ゲート・PDF/PPTX QAはPASSしたが、主source・練習sourceの進捗記録不整合により `NEEDS_REVISION`。まだ `completed` にはしていない。
+Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何をどう測っている？」は最終QAで指摘された主source・練習sourceの進捗記録不整合を修正し、両sourceを `INDEPENDENT_REANSWER_COMPLETE` へ同期した。技術内容・固定EXAM_ALIGNMENT・練習問題・PDF/PPTX・独立再解答結果は変更していない。最終QA再実施前のため、まだ `completed` にはしていない。
 
 - 完成数: `13 / 14`
 - last completed: `13 インバータはどうやって三相交流を作る？`
 - active topic: `14 East iは何をどう測っている？`
-- current status: `topic_14_final_qa_needs_revision`
-- next start: `14_east_i_measurement.md` と `14_east_i_measurement_practice.md` の進捗記録だけを `INDEPENDENT_REANSWER_COMPLETE` へ同期する。技術本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTX・独立再解答結果は変更しない
+- current status: `topic_14_progress_sync_complete`
+- next start: Topic 14の最終QAを再実施する。主source・練習sourceが `INDEPENDENT_REANSWER_COMPLETE` へ同期済みであることを確認し、技術本文・固定EXAM_ALIGNMENT・練習問題・PDF/PPTX・独立再解答結果は変更しない
 
 ## 今回進捗
 
-Topic 14の最終QAを実施した。必須成果物、各QA記録、固定8問・13答案要素の完成後独立再解答、SPEC境界を再確認した結果、技術品質は全件PASSした。
+前回最終QAで唯一FAILだった進捗記録整合性を修正した。
 
-- 必須成果物の実在: PASS
-- 固定8問要求の本文マッピング: `8 / 8`
-- 3段階例題独立再計算: `3 / 3 PASS`
-- 練習問題: 15問、全問五肢択一、正答一意性 `15 / 15 PASS`
-- 練習問題再計算: `12 / 12 PASS`
-- 解説PDF: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- 練習PDF: A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出PASS
-- PowerPoint: 16:9・4枚、表示 `4 / 4 PASS`、overflow 0件、ZIP/XML整合性PASS
-- 完成後独立再解答 再実施: `8 / 8問・13 / 13答案要素 PASS`
-- 教材外知識補完: `0件`
-- 系列SPEC固定範囲外追加: `0件`
-- 未確認East i情報追加: `0件`
+- 主source `14_east_i_measurement.md`: `status: INDEPENDENT_REANSWER_COMPLETE` へ同期
+- 主source末尾: 次工程を「最終QAを再実施」へ同期
+- 練習source `14_east_i_measurement_practice.md`: `stage: INDEPENDENT_REANSWER_COMPLETE` へ同期
+- 技術本文変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 練習15問・正答変更: `0件`
+- PDF/PPTX変更: `0件`
+- 独立再解答結果変更: `0件`
 
-ただし進捗記録整合性がFAILした。
-
-- 主source `14_east_i_measurement.md`: `status: EXPLANATION_SOURCE_COMPLETE` のまま
-- 主source末尾: 次工程が「解説PDFを作成」のまま
-- 練習source `14_east_i_measurement_practice.md`: `stage: PRACTICE_PDF_COMPLETE` のまま
-- `STATUS.md` / `HANDOFF.md` / `14_east_i_measurement_exam_recheck.md`: 完成後独立再解答再実施PASSまで進行済み
-
-このため最終QAは `NEEDS_REVISION` とし、`topics/14_east_i_measurement/14_east_i_measurement_final_qa.md` に記録した。次工程は進捗メタデータだけの同期であり、技術成果物は変更しない。
+この段階では最終QAを再実施していないため、Topic 14は `completed` としない。次工程は最終QA再実施である。
 
 ## Topic 14 固定過去問
 
@@ -116,13 +105,13 @@ East i実車情報は、JR東日本一次資料で公表された現行E926形�
 
 ## 次に行うこと
 
-主source・練習sourceの進捗記録を同期する。
+Topic 14の最終QAを再実施する。
 
-- `14_east_i_measurement.md` の冒頭statusを `INDEPENDENT_REANSWER_COMPLETE` へ更新する
-- 同source末尾の次工程を「最終QA再実施」へ更新する
-- `14_east_i_measurement_practice.md` のstageを `INDEPENDENT_REANSWER_COMPLETE` へ更新する
+- 主source `14_east_i_measurement.md` のstatusが `INDEPENDENT_REANSWER_COMPLETE` であることを確認する
+- 練習source `14_east_i_measurement_practice.md` のstageが `INDEPENDENT_REANSWER_COMPLETE` であることを確認する
+- 必須成果物、固定8問・13答案要素の独立再解答、PDF/PPTX QA、SPEC境界を再確認する
 - 技術本文、固定EXAM_ALIGNMENT、練習15問、正答、PDF/PPTX、独立再解答結果は変更しない
-- 同期後の次工程で最終QAを再実施し、全件PASSの場合のみTopic 14を `completed` とする
+- 全件PASSの場合のみTopic 14を `completed` とする
 
 ## 固定ルール
 
