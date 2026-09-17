@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `13 / 16`
-- current_status: `topic_14_final_qa_needs_revision`
+- current_status: `topic_14_progress_sync_complete`
 - last_completed_topic: `13 新幹線は主電動機以外もモーターだらけ？`
 - active_topic: `14 停電してもN700Sが走れるのはなぜ？`
-- next_start: Topic 14の旧進捗3ファイルを実成果物へ同期する
+- next_start: Topic 14の最終QAを再判定する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -24,7 +24,7 @@
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
-- [ ] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA `NEEDS_REVISION`（進捗記録整合のみFAIL） / IN_PROGRESS
+- [ ] 14 停電してもN700Sが走れるのはなぜ？ — 旧進捗3ファイル同期 `3 / 3 PASS` / 最終QA再判定待ち / IN_PROGRESS
 - [ ] 15〜16 — 未完了
 
 ## Topic 14 現在地
@@ -89,11 +89,12 @@
 - 前回最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
 - 前回最終QA固定範囲境界: `PASS`
 - 前回最終QA進捗記録整合: `FAIL`（旧進捗3ファイル）
-- 旧進捗1: `topics/14_battery/14_battery.md` — 冒頭状態・未着手記述・blind未実施記述・次工程が旧状態
-- 旧進捗2: `topics/14_battery/14_battery_practice.md` — 次工程が練習PDF作成のまま
-- 旧進捗3: `topics/14_battery/14_battery_practice_pdf_qa.md` — 次工程がPowerPoint作成のまま
-- 状態: `topic_14_final_qa_needs_revision / IN_PROGRESS`
-- 次工程: 旧進捗3ファイルだけを実成果物へ同期する
+- 旧進捗1: `topics/14_battery/14_battery.md` — 同期済み
+- 旧進捗2: `topics/14_battery/14_battery_practice.md` — 同期済み
+- 旧進捗3: `topics/14_battery/14_battery_practice_pdf_qa.md` — 同期済み
+- 進捗記録同期: `3 / 3 PASS`
+- 状態: `topic_14_progress_sync_complete / IN_PROGRESS`
+- 次工程: Topic 14の最終QAを再判定する
 
 ## Topic 13 最終品質状態
 - 固定範囲: 電動機出力 / 回転速度 / トルク / 負荷特性 / ポンプ / ファン / コンプレッサ / 所要動力 / 効率 / インバータ駆動 / 可変速運転
@@ -299,4 +300,4 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 14の最終QAを実施。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT・完成後blind独立再解答、固定範囲境界はすべてPASS。一方、`14_battery.md`、`14_battery_practice.md`、`14_battery_practice_pdf_qa.md` に実成果物と不一致の旧進捗が残っているため、進捗記録整合のみFAIL。総合判定は `NEEDS_REVISION` とし、完成数は `13 / 16` のまま。次工程は旧進捗3ファイルだけの同期。
+Topic 14で最終QAが指摘した旧進捗3ファイルを実成果物へ同期し、進捗記録同期 `3 / 3 PASS`。固定EXAM_ALIGNMENT、問題、正答、技術本文、PDF/PPTX、固定範囲は変更していない。完成数は `13 / 16` のまま。次工程はTopic 14の最終QA再判定。
