@@ -3,11 +3,11 @@
 updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `10`
-current_status: `topic_10_explanation_pdf_complete`
+current_status: `topic_10_practice_source_complete`
 
 ## 今回完了
 
-Topic 10「なぜ変電所を何十kmも離せない？」の解説PDFをGitHub正本へ反映した。
+Topic 10「なぜ変電所を何十kmも離せない？」の練習問題・完全解説sourceをGitHub正本へ反映した。
 
 正式品質ゲートは変更なし:
 - 平成30年度 第二種一次「電力」問7
@@ -16,16 +16,16 @@ Topic 10「なぜ変電所を何十kmも離せない？」の解説PDFをGitHub�
 - 平成26年度 第二種二次「電力・管理」問4
 - 一次1問＋二次3問 = `4問・17答案要素`
 
-解説PDFはA4縦2ページ。本文§1〜§15＋3段階例題を反映し、200 dpi表示QA `2 / 2 PASS`、文字抽出QA PASS、例題独立再計算 `3 / 3 PASS`、正式4問・17答案要素 `17 / 17` を維持した。固定10項目 `10 / 10`、Topic 11以降補完0件、固定範囲外追加0件、未確認実設備値追加0件、仕様追加0件。
+練習sourceは全15問（基礎4／本試験標準8／複合3）、二種一次型五肢択一10問＋二種二次型記述5問。数値・論理QA `15 / 15 PASS`、一次型正答一意性 `10 / 10 PASS`、正式4問・17答案要素への接続 `17 / 17 PASS`、固定10項目 `10 / 10 PASS`。
 
-完成後blind独立再解答を保護するため、公式過去問の個別正答記号・最終数値・完成導出は保存していない。
+Topic 11以降補完0件、固定範囲外追加0件、未確認実設備値追加0件、仕様追加0件。完成後blind独立再解答を保護するため、公式過去問の個別正答記号・最終数値・完成導出は保存していない。
 
 ## 現在地
 
-Topic 10は `explanation_pdf_complete / IN_PROGRESS`。完成数は `9 / 22`。
+Topic 10は `practice_source_complete / IN_PROGRESS`。完成数は `9 / 22`。
 
-練習source/PDF、PowerPoint、完成後独立再解答は未実施。
+練習PDF、PowerPoint、完成後独立再解答は未実施。
 
 ## 次に行う
 
-Topic 10の練習問題・完全解説sourceを作成する。正式4問・17答案要素、SPEC固定10項目、固定範囲境界を変更せず、二種一次型と二次記述型へ接続する。
+Topic 10の練習PDFを作成する。練習source全15問・完全解説、正式4問・17答案要素、SPEC固定10項目、固定範囲境界を変更せずPDFへ反映する。
