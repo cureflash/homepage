@@ -6,8 +6,8 @@
 - Topic 01〜13: 最終QA `PASS / completed`
 - 完成数: `13 / 22`
 - active topic: `14 L0系を500km/hで同期させる`
-- current status: `topic_14_blind_reanswer_ready`
-- 次工程: Topic 14 完成後独立再解答
+- current status: `topic_14_independent_reanswer_complete`
+- 次工程: Topic 14 最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -16,6 +16,7 @@
 - Topic 14の独立再解答前ゲートを実施し、必須先読み対象に固定5過去問の公式正答・標準解答・完成済み個別解答が保存されていないことを確認した。
 - Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いでいる。
 - Topic 13で採用済み答案要素の重複採用は `0件`。
+- 完成教材だけで固定5問・27答案要素をblind再解答し、答案確定後に公式解答・標準解答と照合して `27 / 27 PASS`。教材外補完・固定範囲外追加・Topic 15以降依存・未確認L0実値依存はいずれも `0件`。
 
 ## Topic 14 固定範囲
 - 内部起電力
@@ -127,6 +128,19 @@
 - [x] 判定 `BLIND_REANSWER_READY`
 - [x] ゲート記録: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_blind_reanswer_gate.md`
 
+## Topic 14 完成後独立再解答
+- [x] 公式解答・標準解答を開く前に完成教材だけで固定5問・27答案要素を再解答
+- [x] H29 一次 機械 問1: `2 / 2 PASS`
+- [x] R07 二次 機械・制御 問1: `7 / 7 PASS`
+- [x] R06 二次 機械・制御 問1: `8 / 8 PASS`
+- [x] R05 二次 機械・制御 問1: `8 / 8 PASS`
+- [x] H27 二次 機械・制御 問1: `2 / 2 PASS`
+- [x] 合計 `27 / 27 PASS`
+- [x] 教材外知識補完 `0件`
+- [x] 固定範囲外論点・Topic 15以降依存・未確認L0実値依存 `0件`
+- [x] 固定EXAM_ALIGNMENT・教材本文・練習問題・PDF/PPTXの内容変更 `0件`
+- [x] 記録: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_independent_reanswer.md`
+
 ## Topic 14 現成果物
 - main source: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization.md`
 - 制作前EXAM_ALIGNMENT: 完成
@@ -135,8 +149,9 @@
 - 練習source: 完成
 - 練習PDF: 完成
 - PowerPoint: 完成
-- 独立再解答前ゲート: `BLIND_REANSWER_READY`
-- 完成後独立再解答／最終QA: 未着手
+- 独立再解答前ゲート: 完成
+- 完成後独立再解答: `27 / 27 PASS`
+- 最終QA: 未着手
 
 ## 次に行うこと
-Topic 14 完成後独立再解答。公式解答・標準解答を開く前に、完成教材だけで固定5問・27答案要素を再解答し、答案確定後に公式解答と照合する。
+Topic 14 最終QA。必須成果物、固定5問・27答案要素、完成後独立再解答、PDF/PPTX QA、固定範囲境界、進捗記録整合を再監査して判定する。
