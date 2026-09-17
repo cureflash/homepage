@@ -6,14 +6,14 @@
 - Topic 01〜13: 最終QA `PASS / completed`
 - 完成数: `13 / 22`
 - active topic: `14 L0系を500km/hで同期させる`
-- current status: `topic_14_practice_source_complete`
-- 次工程: Topic 14 練習PDF
+- current status: `topic_14_practice_pdf_complete`
+- 次工程: Topic 14 解説画像PowerPoint
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、直近変更を確認し、既存枠でTopic 14の制作前EXAM_ALIGNMENT・解説source・解説PDFまで完成済みであることを確認した。
-- 重複制作せず、次の安全な工程として練習問題sourceを作成した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 14の実成果物を確認し、制作前EXAM_ALIGNMENT・解説source・解説PDF・練習問題sourceまで完成済みであることを確認した。
+- 重複制作せず、次の安全な工程として練習PDFを作成した。
 - Topic 13でR07二次問1・H29一次問1のうちTopic 14範囲を明示的に除外していたため、その非重複部分だけをTopic 14へ引き継いでいる。
 - Topic 13で採用済み答案要素の重複採用は `0件`。
 
@@ -88,13 +88,26 @@
 - [x] 固定5過去問・27答案要素へ `27 / 27` 接続
 - [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
 
+## Topic 14 練習PDF
+- [x] `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_practice.pdf`
+- [x] A4縦4ページ
+- [x] 一次10問＋二次5問・解答／完全解説を収録
+- [x] 200 dpi全4ページ表示QA `4 / 4 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- [x] 数値・論理再検算 `15 / 15 PASS`
+- [x] 一次正答一意性 `10 / 10 PASS` を維持
+- [x] 固定一次1問＋二次4問・27答案要素を維持
+- [x] 固定範囲外論点・Topic 15以降先取り・未確認L0実値追加 `0件`
+- [x] SHA-256 `557a06402e67d214d45af477020ff5c11f6af488eb5d75546d98615b7182dc9d`
+
 ## Topic 14 現成果物
 - main source: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization.md`
 - 制作前EXAM_ALIGNMENT: 完成
 - 解説本文＋3段階例題: 完成
 - 解説PDF: 完成
 - 練習source: 完成
-- 練習PDF／PowerPoint／完成後独立再解答／最終QA: 未着手
+- 練習PDF: 完成
+- PowerPoint／完成後独立再解答／最終QA: 未着手
 
 ## 次に行うこと
-Topic 14 練習問題sourceから練習PDFを作成し、全ページ表示QA・文字抽出QA・数値／論理再検算を行う。
+Topic 14 解説画像PowerPointを作成し、固定5過去問・27答案要素を維持したまま表示QA・overflow・PPTX整合性を確認する。
