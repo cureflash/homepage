@@ -4,13 +4,13 @@
 
 ## 現在地
 
-Topic 01〜14は `PASS / completed`。完成数は `14 / 21`。
+Topic 01〜15は `PASS / completed`。完成数は `15 / 21`。
 
-current_status: `topic_15_final_qa_complete`
+current_status: `topic_15_completed`
 
-active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
+active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
 
-Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、進捗記録同期、最終QA再実施まで完了。固定一次5問・25答案要素は完成教材だけで `25 / 25 PASS`、二次採用0問・数合わせ0件。初回最終QAのblocker4件は `4 / 4 PASS` で解消し、最終QAは `PASS / FINAL_QA_COMPLETE`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。完成数は `14 / 21` のまま、次工程はcompleted状態同期。
+Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答、初回最終QA、進捗記録同期、最終QA再実施、completed状態同期まで完了。固定一次5問・25答案要素は完成教材だけで `25 / 25 PASS`、二次採用0問・数合わせ0件。初回最終QAのblocker4件は `4 / 4 PASS` で解消し、最終QAは `PASS / FINAL_QA_COMPLETE`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程はTopic 16制作前EXAM_ALIGNMENT。
 
 ## Topic 15 成果物
 
@@ -24,8 +24,8 @@ Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 - PowerPoint QA: `topics/15_breaker_transient/15_breaker_transient_powerpoint_qa.md`
 - 完成後独立再解答: `topics/15_breaker_transient/15_breaker_transient_reanswer.md`
 - 最終QA: `topics/15_breaker_transient/15_breaker_transient_final_qa.md`
-- completion: `in_progress`
-- stage: `FINAL_QA_COMPLETE`
+- completion: `completed`
+- stage: `COMPLETED`
 
 ## Topic 15 固定範囲
 
@@ -219,6 +219,19 @@ Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 判定: `PASS / FINAL_QA_COMPLETE`
 
+## Topic 15 completed状態同期
+
+最終QA PASS後、進捗記録だけをcompleted状態へ同期した。
+
+- 主source: `COMPLETED / completed`
+- 練習source: `COMPLETED / completed`
+- STATUS / HANDOFF: Topic 15 completed、完成数 `15 / 21`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更: `0件`
+- 固定一次5問・25答案要素の独立再解答: `25 / 25 PASS` を維持
+- 二次採用: `0問`、二次数合わせ: `0件` を維持
+
+判定: `PASS / completed`
+
 ## Topic 14 成果物
 
 - source: `topics/14_inverter_fourier_harmonics/14_inverter_fourier_harmonics.md`
@@ -360,4 +373,4 @@ Topic 15は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF＋
 
 ## 次に行うこと
 
-Topic 15のcompleted状態同期を行う。主source・練習source・STATUS・HANDOFFを `completed` へ同期し、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 16「300系の半導体はなぜ電流を一方向へ流せる？」の制作前EXAM_ALIGNMENTを開始する。MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECを再確認し、一次・二次の公式過去問を直近年度から調査して、固定範囲だけで完答できる品質ゲート対象を決める。
