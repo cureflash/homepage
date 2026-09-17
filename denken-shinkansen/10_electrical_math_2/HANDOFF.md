@@ -8,11 +8,11 @@ Topic 01〜13は `completed`。
 
 完成数: `13 / 20`
 
-current_status: `topic_14_practice_pdf_complete`
+current_status: `topic_14_powerpoint_complete`
 
 active_topic: `14 フーリエ変換・FFT`
 
-次工程: Topic 14の解説画像PowerPointを作成し、表示QAを実施する。
+次工程: Topic 14の固定R3一次「機械」問8 (1)を、完成教材だけで保存済み正答を見ずに独立再解答する。
 
 ## 上位仕様
 
@@ -940,7 +940,7 @@ PowerPoint QA:
 source:
 `topics/14_fourier_transform_fft/14_fourier_transform_fft.md`
 
-current_status: `topic_14_practice_pdf_complete`
+current_status: `topic_14_powerpoint_complete`
 
 ### Topic 14 固定範囲
 
@@ -1057,6 +1057,24 @@ QA:
 - 第一種・第三種過去問による件数水増し: 0件
 - 未確認実車値依存: 0件
 
+### Topic 14 解説画像PowerPoint
+
+GitHub:
+- `topics/14_fourier_transform_fft/14_fourier_transform_fft_images.pptx`
+- `topics/14_fourier_transform_fft/14_fourier_transform_fft_powerpoint_qa.md`
+
+QA:
+- 16:9、5枚
+- 固定R3一次「機械」問8 (1)の1答案要素への可視化接続: `1 / 1 PASS`
+- 全5スライド再レンダリング: `5 / 5 PASS`
+- クリッピング・重なり・文字化け: `0件`
+- overflow: `0件`
+- `slides_test.py`: `PASS`
+- PPTX ZIP/XML整合性: `PASS`
+- SHA-256: `9e0f2993632728d11261f8c3840f6dbe459a225fc9a32647a4630f8c4f9b47a8`
+- file size: `17980 bytes`
+- Topic 15先取り、ADC量子化・回路方式、フィルタ設計一般、FFT実装詳細の試験必須化、二次公式過去問の件数合わせ、第一種・第三種過去問による件数水増し、未確認実車値依存: `0件`
+
 ## 次に行うこと
 
-Topic 14 `フーリエ変換・FFT` の解説画像PowerPointを作成し、表示QAを実施する。
+Topic 14 `フーリエ変換・FFT` の固定R3一次「機械」問8 (1)を、完成教材だけで保存済み正答を見ずに独立再解答する。
