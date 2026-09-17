@@ -1,7 +1,7 @@
 # Topic 12 練習問題・完全解説 - N700Sが何本も同時加速したら？
 
 更新日: 2026-09-18
-状態: `topic_12_practice_source_complete`
+状態: `topic_12_progress_records_synced`
 
 本ファイルは `12_multiple_train_load.md` の固定EXAM_ALIGNMENTと完成済み解説本文だけを土台にした練習プリント用sourceである。公式過去問の転載ではなく、正式固定5問・25答案要素とTopic 12固定範囲を同型問題へ転用できるか確認する独自問題とする。
 
