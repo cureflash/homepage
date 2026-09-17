@@ -1,6 +1,6 @@
 # HANDOFF - 電験二種「電気数学」
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 現在地
 
@@ -8,11 +8,11 @@ Topic 01〜14は `completed`。
 
 完成数: `14 / 20`
 
-current_status: `topic_14_completed`
+current_status: `topic_15_progress_records_synced`
 
 active_topic: `15 対数・dB・周波数応答`
 
-次工程: Topic 15の制作前EXAM_ALIGNMENTを実施する。
+次工程: Topic 15の最終QAを再判定する。
 
 ## 上位仕様
 
@@ -1113,4 +1113,4 @@ QA:
 
 ## 次に行うこと
 
-Topic 15 `対数・dB・周波数応答` の制作前EXAM_ALIGNMENTを実施する。
+Topic 15 `対数・dB・周波数応答` の最終QAを再判定する。
