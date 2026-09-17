@@ -4,17 +4,17 @@
 
 ## 状態
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `PRACTICE_PDF_COMPLETE`
 - completion: `in_progress`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- 解説PDF QA: `NOT_STARTED`
-- 練習問題QA: `NOT_STARTED`
-- 練習PDF QA: `NOT_STARTED`
+- 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習問題QA: `PASS / PRACTICE_SOURCE_COMPLETE`
+- 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
 - PowerPoint QA: `NOT_STARTED`
 - 完成後独立再解答: `NOT_STARTED`
 - 最終QA: `NOT_STARTED`
-- 次工程: 解説PDF＋表示QA
+- 次工程: 解説画像PowerPoint＋表示QA
 
 ## 1. SPEC固定範囲
 
@@ -534,4 +534,6 @@ RLC回路ではエネルギー蓄積要素がLとCの2個あるため、RL・RC�
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
-次工程: 解説PDF＋表示QA。
+進捗同期: 解説PDF `PASS / EXPLANATION_PDF_COMPLETE`、練習source `PASS / PRACTICE_SOURCE_COMPLETE`、練習PDF `PASS / PRACTICE_PDF_COMPLETE`。技術本文・固定EXAM_ALIGNMENTは変更していない。
+
+次工程: 解説画像PowerPoint＋表示QA。
