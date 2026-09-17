@@ -4,36 +4,41 @@
 
 ## 現在地
 
-Topic 01〜12は最終QAまでPASSし、`completed`。Topic 13「インバータはどうやって三相交流を作る？」は解説PDF＋表示/文字抽出QAまで完了。
+Topic 01〜12は最終QAまでPASSし、`completed`。Topic 13「インバータはどうやって三相交流を作る？」は練習問題source・練習PDF＋QAまで完了。
 
 - 完成数: `12 / 14`
 - last completed: `12 300系はなぜVVVFになった？`
 - active topic: `13 インバータはどうやって三相交流を作る？`
-- current status: `topic_13_explanation_pdf_complete`
-- next start: Topic 13の練習問題source・練習PDFを作成する
+- current status: `topic_13_practice_pdf_complete`
+- next start: Topic 13の解説画像PowerPointを作成する
 
 ## 今回進捗
 
-Topic 13の解説PDFとQAを作成した。
+Topic 13の練習問題source・練習PDFとQAを作成した。
 
 - 固定公式「理論」過去問: `4問`
 - 制作前独立検証: `4 / 4 PASS`
-- 固定4問の本文マッピング: `4 / 4`
-- 固定4問のPDF対応: `4 / 4`
-- 3段階例題の独立再計算: `3 / 3 PASS`
-- 解説PDF: A4縦4ページ
-- 200 dpi表示QA: `4 / 4 PASS`
+- 練習問題: `15問`
+- 五肢択一: `15 / 15`
+- 基礎4 / 本試験標準8 / 複合・応用3
+- 正答一意性: `15 / 15 PASS`
+- 正答位置 `(1)`〜`(5)`: 各3問
+- 数値・単位・論理再計算: `8 / 8 PASS`
+- 固定4問要求への接続: `4 / 4 PASS`
+- 練習PDF: A4縦3ページ
+- 200 dpi表示QA: `3 / 3 PASS`
 - 文字抽出QA: `PASS`
-- クリッピング・重なり・文字化け・ページ外はみ出し: `0件`
+- clipping / overlap / broken glyph: `0件`
 - 系列SPEC外論点の追加: `0件`
-- 重複再出題の水増し: `0件`
-- 機械科目過去問の混在: `0件`
 - 未確認実車値の追加: `0件`
 - source: `topics/13_inverter_pwm/13_inverter_pwm.md`
 - 解説PDF: `topics/13_inverter_pwm/13_inverter_pwm_explanation.pdf`
 - 解説PDF QA: `topics/13_inverter_pwm/13_inverter_pwm_explanation_qa.md`
+- 練習source: `topics/13_inverter_pwm/13_inverter_pwm_practice.md`
+- 練習PDF: `topics/13_inverter_pwm/13_inverter_pwm_practice.pdf`
+- 練習PDF QA: `topics/13_inverter_pwm/13_inverter_pwm_practice_qa.md`
 
-系列SPECに明記される増幅回路・オペアンプは基本概念だけを収録した。固定4問の品質ゲートには追加せず、詳細な増幅回路設計・周波数特性へは拡張していない。
+系列SPECに明記される増幅回路・オペアンプは基本概念だけを練習へ含めた。固定4問の品質ゲートは変更せず、詳細な増幅回路設計・周波数特性へは拡張していない。
 
 ## Topic 13 SPEC固定範囲
 
@@ -76,7 +81,8 @@ PWM
 
 制作前独立検証: `4 / 4 PASS`
 本文マッピング: `4 / 4`
-PDF対応: `4 / 4`
+解説PDF対応: `4 / 4`
+練習問題要求接続: `4 / 4`
 
 正答番号・個別の公式過去問最終数値は、完成後独立再解答の先読み汚染を避けるためHANDOFFへ保存しない。
 
@@ -117,13 +123,12 @@ PDF対応: `4 / 4`
 
 ## 次に行うこと
 
-Topic 13の練習問題source・練習PDFを作成する。
+Topic 13の解説画像PowerPointを作成する。
 
-- MASTER_SPEC / EXAM_ALIGNMENT_SPECどおり原則12問以上とする
-- 少なくとも半数を五肢択一とし、本試験標準を中心にする
-- 固定4問の要求事項へ接続する
+- 固定4問の要求事項と本文の解法順を図解する
+- 系列SPEC固定範囲だけで構成する
 - 詳細PWM方式や機械科目論点、Topic 14の測定論点を先取りしない
-- 練習PDF完成後も独立再解答前なので `completed` にはしない
+- PowerPoint完成後も完成後独立再解答・最終QA前なので `completed` にはしない
 
 ## 固定ルール
 
