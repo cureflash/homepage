@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `13 / 39`
-- current_status: `topic_14_practice_pdf_complete`
+- current_status: `topic_14_powerpoint_complete`
 - last_completed_topic: `13 300系④ 回生と四象限運転`
 - active_topic: `14 300系⑤ 走行抵抗と必要けん引力`
-- next_start: Topic 14 解説画像PowerPoint
+- next_start: Topic 14 独立再解答前ゲート
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -24,7 +24,7 @@
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
-- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / PRACTICE_PDF_COMPLETE
+- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / POWERPOINT_COMPLETE
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -112,6 +112,26 @@
 - PDF SHA-256: `c6294a3297daf587a8c60969d588a78d28ece396a46a3c646131e6edb6e690c7`
 - 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
+## Topic 14 解説画像PowerPoint
+- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_images.pptx`
+- QA: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force_powerpoint_qa.md`
+- 16:9・4枚
+- SPEC指定4可視化: `4 / 4 PASS`
+- 1600×900表示QA: `4 / 4 PASS`
+- 文字・数式・図の欠落、重なり、切れ: `0件`
+- overflow: `0件`
+- PDF文字抽出QA: `PASS`
+- PPTX ZIP整合性: `PASS`
+- 固定5過去問・9答案要素接続: `9 / 9 PASS`
+- 4可視化共通仮定式系: `PASS`
+- 前進オイラー法: `Δt=1 s`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認300系実車値の真値化: `0件`
+- PPTX SHA-256: `ccacae7c24460cdc95e34ff86a821df0798e6694cbab626d07dc43ea387f00e4`
+- Git blob SHA: `e7193da320ce93219cd65044fbb8d7badf43ceb9`
+- 判定: `PASS / POWERPOINT_COMPLETE`
+
 ## Topic 14 固定範囲
 扱う内容:
 - 走行抵抗
@@ -137,4 +157,4 @@ SPEC指定可視化:
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次工程
-固定EXAM_ALIGNMENT、解説source、解説PDF、練習問題source、練習PDFを変更せず、Topic 14の解説画像PowerPointを制作する。SPEC指定4可視化を同じ教材用仮定式系で図示し、表示・文字・数値・固定5過去問9答案要素接続をQAする。
+固定EXAM_ALIGNMENT、解説source、解説PDF、練習問題source、練習PDF、解説画像PowerPointを変更せず、Topic 14の独立再解答前ゲートを実施する。固定公式過去問の個別正答記号・完成済み答案を保存していないことを再確認し、完成後blind再解答へ進める。
