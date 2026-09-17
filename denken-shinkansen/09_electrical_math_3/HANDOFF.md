@@ -8,13 +8,13 @@ Topic 01〜11は `completed`。
 
 完成数: `11 / 12`
 
-current_status: `topic_12_explanation_source_complete`
+current_status: `topic_12_explanation_pdf_complete`
 
 last_completed_topic: `11 グラフ・特性曲線を読む`
 
 active_topic: `12 電気数学総合`
 
-next_start: `Topic 12の解説PDF`
+next_start: `Topic 12の練習問題source`
 
 ## Topic 11 固定仕様範囲
 
@@ -360,6 +360,23 @@ R8上 電力 問15は Topic 09では水力設備知識が固定範囲外だっ�
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`。
 
+## Topic 12 解説PDF
+
+主sourceを正本として次を反映した。
+
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_explanation.pdf`
+- A4縦6ページ
+- 200 dpi表示QA `6 / 6 PASS`
+- 文字抽出QA `PASS`
+- 固定必須説明 `20 / 20`
+- 3段階例題の数値整合 `3 / 3 PASS`
+- 固定5過去問への教材内対応 `5 / 5`
+- 固定EXAM_ALIGNMENT変更0件
+- 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
+- 未確認の新幹線実車値追加0件
+
+判定: `topic_12_explanation_pdf_complete / IN_PROGRESS`。
+
 ## 次工程
 
-Topic 12の解説PDFを作成する。
+主sourceと解説PDFを正本として、Topic 12の練習問題sourceを作成する。
