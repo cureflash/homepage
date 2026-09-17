@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_16_independent_reanswer_needs_redo`
+- current_status: `topic_16_h18_blind_input_ready`
 - last_completed_topic: `15 新幹線の補機モーターを設計する`
 - active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: H18一次「機械」問3 (1) の独立再解答やり直し
+- next_start: 隔離済み問題入力を使ったH18一次「機械」問3 (1) の独立再解答
 
 ## 完了テーマ
 - [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `IN_PROGRESS` — 完成後独立再解答を実施、厳密ブラインド `11 / 12 PASS`、H18一次1答案要素のみ再実施必要
+- [ ] Topic 16 `IN_PROGRESS` — 厳密ブラインド `11 / 12 PASS`、H18一次1答案要素の問題入力を解答非保存状態で隔離済み
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -139,14 +139,15 @@
 - [x] H30一次 問6 (3),(4): 完成教材だけで答案確定後、公式解答照合 `2 / 2 PASS`
 - [x] H26一次 問3 (1): 完成教材だけで答案確定後、公式解答照合 `1 / 1 PASS`
 - [x] H23二次 問3 (3),(4): 完成教材だけで答案確定後、公式標準解答照合 `5 / 5 PASS`
-- [ ] H18一次 問3 (1): 問題取得に使った第三者解説ページで正答が同時露出したため厳密ブラインド不成立。PASS扱いにしない
+- [ ] H18一次 問3 (1): 本採点未実施。問題側情報のみ `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_blind_input.md` へ隔離済み
+- [x] H18再実施入力 `BLIND_INPUT_READY`。正答記号・正答内容・解説・採点結果は隔離ファイルへ保存していない
 - [x] 厳密ブラインド照合済み答案要素 `11 / 12 PASS`
 - [x] 固定EXAM_ALIGNMENT変更、仕様外追加、Topic 17以降先取り、未確認N700S実車値追加 `0件`
 - 記録: `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md`
-- 判定: `NEEDS_REDO / topic_16_independent_reanswer_partial`
+- 判定: `NEEDS_REDO / topic_16_h18_blind_input_ready`
 
 ## 今回進めた内容
-Topic 16の完成後独立再解答を実施した。R02一次3要素、H30一次2要素、H26一次1要素、H23二次5要素は、完成教材のみで答案を確定してから公式解答・標準解答と照合し `11 / 11 PASS`。H18一次 問3 (1) は問題取得時に第三者解説ページ上の正答も同時露出したため、品質ゲートを緩めず再実施対象とした。
+H18一次「機械」問3 (1) の再実施用入力を、問題本文・解答群だけのファイルとして固定した。取得元ページは解説・解答も同居するため、このrunではH18を採点せず、品質ゲートを緩めていない。固定一次4問＋二次1問・12答案要素、既存 `11 / 12 PASS`、教材内容、仕様境界は変更していない。
 
 ## 判定
-Topic 16は `topic_16_independent_reanswer_needs_redo / IN_PROGRESS`。完成数は `15 / 22` のまま。次はH18一次「機械」問3 (1) の独立再解答やり直し。
+Topic 16は `topic_16_h18_blind_input_ready / IN_PROGRESS`。完成数は `15 / 22` のまま。次は隔離済み問題入力を使ったH18一次「機械」問3 (1) の独立再解答。
