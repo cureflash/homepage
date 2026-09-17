@@ -2,23 +2,16 @@
 
 updated: 2026-09-17
 series: `06_shinkansen_power_2`
-active_topic: `10`
-theme: なぜ変電所を何十kmも離せない？
-current_status: `topic_10_source_progress_synced`
-completed_topics: `9 / 22`
+active_topic: `11`
+theme: 新幹線が移動すると電圧はどう変わる？
+current_status: `topic_10_completed`
+completed_topics: `10 / 22`
 
-## Topic 10 current result
+## Topic 10 final result
 
-前回最終QAの唯一のFAILだった進捗記録不整合を修正した。
+Topic 10「なぜ変電所を何十kmも離せない？」は最終QA再判定を完了し、`PASS / completed` とした。
 
-同期対象:
-1. `topics/10_substation_spacing/10_substation_spacing.md`
-2. `topics/10_substation_spacing/10_substation_spacing_practice.md`
-3. `topics/10_substation_spacing/10_substation_spacing_powerpoint_qa.md`
-
-技術本文、固定EXAM_ALIGNMENT、正式4問・17答案要素、練習問題・正答、PDF/PPTX、blind独立再解答結果は変更していない。
-
-維持する品質ゲート:
+品質ゲート:
 - 平成30年度 第二種一次「電力」問7
 - 平成27年度 第二種二次「電力・管理」問3
 - 平成27年度 第二種二次「電力・管理」問4
@@ -42,10 +35,9 @@ completed_topics: `9 / 22`
 - Topic 11以降の先取り: `0件`
 - 未確認実設備値追加: `0件`
 - 仕様追加: `0件`
+- 進捗記録整合: `PASS`
 
 原則5問に対し、Topic 10固定範囲だけで問題全体を完答できる5問目は確認できなかったため、件数合わせを行っていない。
-
-Topic 10はまだ `completed` にしない。前回最終QAの `NEEDS_REVISION` は監査履歴として保持し、次工程で進捗記録整合を含む最終QAを再判定する。
 
 ## Gate checklist
 
@@ -58,8 +50,9 @@ Topic 10はまだ `completed` にしない。前回最終QAの `NEEDS_REVISION` 
 - [x] Topic 07 completed
 - [x] Topic 08 completed
 - [x] Topic 09 completed
-- [ ] Topic 10 - progress sync complete; final QA re-evaluation pending
+- [x] Topic 10 completed
+- [ ] Topic 11
 
 ## next_start
 
-Topic 10の最終QAを再判定する。技術内容・試験対応品質ゲート・必須成果物・PDF/PPTX QA・練習QA・blind独立再解答・進捗記録整合を再確認し、全件PASSの場合のみ `completed` として完成数を `10 / 22` に進める。
+Topic 11「新幹線が移動すると電圧はどう変わる？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` の固定範囲から、二種一次・二次の公式過去問を直近年度優先で調査し、仕様を追加せず正式品質ゲートを固定する。
