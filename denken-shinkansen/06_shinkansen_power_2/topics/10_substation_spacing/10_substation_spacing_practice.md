@@ -1,7 +1,7 @@
 # Topic 10 練習問題・完全解説 - なぜ変電所を何十kmも離せない？
 
 更新日: 2026-09-17
-状態: `topic_10_practice_source_complete / IN_PROGRESS`
+状態: `topic_10_independent_reanswer_complete`
 
 本ファイルは `10_substation_spacing.md` の固定EXAM_ALIGNMENTと完成済み解説本文だけを土台にした練習プリント用sourceである。公式過去問の転載ではなく、正式固定4問・17答案要素とTopic 10固定10項目を同型問題へ転用できるか確認する独自問題とする。
 
@@ -767,4 +767,4 @@ B側は
 
 ## 次工程
 
-このsourceを内容変更せず練習PDFへ反映し、表示QA・文字抽出QA・数値再検算を行う。
+練習PDFは本sourceから生成・QA済みで、A4縦6ページ、表示 `6 / 6 PASS`、文字抽出PASS、数値・論理 `15 / 15 PASS`、一次型正答一意性 `10 / 10 PASS`。解説画像PowerPointと完成後blind clean retryも完了し、正式4問・17答案要素は `17 / 17 PASS`。次工程は進捗記録整合を含む最終QA再判定とする。練習問題・正答は変更していない。
