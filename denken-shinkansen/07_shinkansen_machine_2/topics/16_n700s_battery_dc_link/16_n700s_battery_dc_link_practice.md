@@ -688,4 +688,4 @@ DC/DCは、蓄電池側の直流電圧を接続先に必要な別の直流電圧
 
 # 次工程
 
-固定EXAM_ALIGNMENT、解説source、解説PDF、本練習sourceを変更せず、Topic 16 練習PDFを作成する。
+Topic 16 最終QAを再実施する。固定EXAM_ALIGNMENT、解説source/PDF、練習source/PDF、PowerPoint、完成後独立再解答結果は変更しない。
