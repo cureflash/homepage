@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_12_practice_pdf_complete`
+- current_status: `topic_12_explanation_images_complete`
 - last_completed_topic: `11 グラフ・特性曲線を読む`
 - active_topic: `12 電気数学総合`
-- next_start: `Topic 12の解説画像PowerPoint`
+- next_start: `Topic 12の完成後独立再解答前ブラインドゲート整備`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -147,7 +147,7 @@
 - [x] 解説PDF
 - [x] 練習問題source
 - [x] 練習PDF（解答・完全解説付き）
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後独立再解答前のブラインドゲート整備
 - [ ] 完成教材だけでの公式過去問独立再解答
 - [ ] 最終QA
@@ -156,14 +156,14 @@
 
 ## 今回進めた内容
 
-Topic 12「電気数学総合」の練習PDFをGitHub正本へ反映した。
+Topic 12「電気数学総合」の解説画像PowerPointをGitHub正本へ反映した。
 
-- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_practice.pdf`
-- A4縦6ページ
-- 200 dpi表示QA `6 / 6 PASS`
-- 文字抽出QA `PASS`
-- 全12問・全問五肢択一、解答・完全解説付き
-- 練習sourceの正答・数値との整合 `12 / 12 PASS`
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_images.pptx`
+- 16:9・5枚
+- 200 dpi表示QA `5 / 5 PASS`
+- overflow `0件`
+- PPTX ZIP整合性 `PASS`
+- 総合解法順序、正弦波→フェーザ→RLC、正弦波微分→電磁誘導、揚水・三相同期機の量の鎖、三相整流波形→定積分平均を図解
 - 固定5過去問への接続 `5 / 5`
 - 固定EXAM_ALIGNMENT変更0件
 - 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
@@ -171,6 +171,6 @@ Topic 12「電気数学総合」の練習PDFをGitHub正本へ反映した。
 
 ## 判定
 
-`topic_12_practice_pdf_complete / IN_PROGRESS`。
+`topic_12_explanation_images_complete / IN_PROGRESS`。
 
-完成数は `11 / 12`。次工程はTopic 12の解説画像PowerPoint。
+完成数は `11 / 12`。次工程はTopic 12の完成後独立再解答前ブラインドゲート整備。
