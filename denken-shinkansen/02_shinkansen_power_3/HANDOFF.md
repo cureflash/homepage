@@ -6,13 +6,14 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `02_shinkansen_power_3`。新品質基準の完成数は `11 / 16`。Topic 01〜11は完成済み。
 
 ## 今回進捗
-Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の解説PDF＋QAを完成した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出 `PASS`。本文§1〜§14、基礎・本試験標準・複合の3段階例題、固定5問・6答案要素の要求事項を反映し、例題数値・論理再検算 `3 / 3 PASS`、固定過去問対応 `6 / 6` を維持した。
+Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の練習問題sourceを完成した。全12問・全問五肢択一、基礎3問／本試験標準7問／複合2問。数値・論理独立再計算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5問・6答案要素への接続 `6 / 6`。
 
-SPEC固定範囲外追加0件、Topic 13以降の先取り0件、未確認新幹線実設備値の真値化0件。制作前の保存済み選択肢番号・最終数値解はPDFへ転記しておらず、完成後ブラインド独立再解答の条件を維持している。
+SPEC固定範囲外追加0件、Topic 13以降の先取り0件、未確認新幹線実設備値の真値化0件。弛度・実長・温度伸縮・水平張力の逆算を中心に、SPEC内の風圧荷重・着雪・波動伝播の基本・高速集電までを問題化した。
 
 source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
 解説PDF: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation.pdf`
 解説PDF QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation_qa.md`
+練習問題source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_practice_source.md`
 
 固定問題:
 - R7上 電力 問12
@@ -53,6 +54,11 @@ H25 電力 問9は架線張力に関連するが、支線・支柱の幾何と�
 - 解説PDF表示QA: 200 dpi `4 / 4 PASS`
 - 解説PDF文字抽出QA: `PASS`
 - 解説PDF数値・論理再検算: `3 / 3 PASS`
+- 練習問題source: 全12問・全問五肢択一
+- 練習難易度: 基礎3 / 本試験標準7 / 複合2
+- 練習source数値・論理独立再計算: `12 / 12 PASS`
+- 練習source正答一意性: `12 / 12 PASS`
+- 練習source固定5問・6答案要素への接続: `6 / 6`
 - SPEC固定範囲外の採用問題・本文・PDF追加: `0件`
 - Topic 13以降の論点による補完・先取り: `0件`
 - 未確認新幹線実設備値への依存・真値化: `0件`
@@ -85,22 +91,26 @@ Topic 11 `架線事故ではどうやって電気を止める？` は `PASS / co
 - 最終QA判定: `PASS / completed`
 
 ## 現在状態
-- `current_status`: `topic_12_explanation_pdf_complete`
+- `current_status`: `topic_12_practice_source_complete`
 - 完成数: `11 / 16`
 - last completed: Topic 11 `架線事故ではどうやって電気を止める？`
 - active: Topic 12 `320km/hでもパンタグラフが離れないのはなぜ？`
 - Topic 12 source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics.md`
 - Topic 12 解説PDF: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation.pdf`
 - Topic 12 解説PDF QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_explanation_qa.md`
+- Topic 12 練習問題source: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_practice_source.md`
 - 固定問題: `5問・6答案要素`
 - 制作前独立検証: `6 / 6 PASS`
 - 本文要求事項マッピング: `6 / 6 PASS`
 - 3段階例題独立再計算: `3 / 3 PASS`
 - 解説PDF表示QA: `4 / 4 PASS`
 - 解説PDF文字抽出QA: `PASS`
+- 練習source数値・論理独立再計算: `12 / 12 PASS`
+- 練習source正答一意性: `12 / 12 PASS`
+- 練習source固定5問・6答案要素への接続: `6 / 6`
 - SPEC固定範囲外追加: `0件`
 - Topic 13以降の先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
 ## 次の正確な開始点
-Topic 12の練習問題sourceを作成する。原則12問以上、少なくとも半数を五肢択一、本試験標準を中心に固定5問・6答案要素へ接続し、SPEC固定範囲外、Topic 13以降、未確認の新幹線実設備値を追加しない。
+Topic 12の練習PDFを作成する。全12問・全解説・固定5問6答案要素への接続を反映し、表示QA、文字抽出QA、数値・論理再検算、正答一意性を確認する。SPEC固定範囲外、Topic 13以降、未確認の新幹線実設備値は追加しない。
