@@ -4,47 +4,30 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `12`
 theme: N700Sが何本も同時加速したら？
-current_status: `topic_12_powerpoint_complete`
+current_status: `topic_12_independent_reanswer_complete`
 completed_topics: `11 / 22`
 
 ## Topic 12 current result
 
-解説画像PowerPoint＋PowerPoint QAまで完了した。Topic 12は完成後blind独立再解答前のため未完了を維持する。
+完成後blind独立再解答まで完了した。固定5問・25答案要素を完成教材・明示済み既習事項だけで再解答し、公式解答・標準解答との照合で `25 / 25 PASS`。最終QA前のためTopic 12は未完了を維持する。
 
 今回の成果物:
-- `topics/12_multiple_train_load/12_multiple_train_load_images.pptx`
-- `topics/12_multiple_train_load/12_multiple_train_load_powerpoint_qa.md`
+- `topics/12_multiple_train_load/12_multiple_train_load_blind_reanswer_20260918.md`
 
-PowerPoint:
-- 16:9 / 4スライド
-- SPEC固定8項目 `8 / 8` 可視化
-- SPEC指定「列車本数―電圧」「列車本数―損失」 `2 / 2 PASS`
-- 表示QA `4 / 4 PASS`
-- `slides_test.py` PASS
-- PPTX ZIP整合性 PASS
-- LibreOffice PDF変換 `4ページ PASS`
-- PDF文字抽出 PASS
+完成後blind独立再解答:
+- 令和4年度 第二種二次「電力・管理」問6 — `8 / 8 PASS`
+- 令和元年度 第二種二次「電力・管理」問2 — `6 / 6 PASS`
+- 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
+- 平成29年度 第二種二次「電力・管理」問4 — `3 / 3 PASS`
+- 平成23年度 第二種二次「電力・管理」問6 — `3 / 3 PASS`
+- 合計: 一次1問＋二次4問、`5 / 5問・25 / 25答案要素 PASS`
 
-計算条件は解説source §11.3・計算プログラムと同じ教材上仮定値を使用した。N700S・新幹線実設備値ではない。
-- 送電端線間電圧 `66 kV`
-- 1列車あたり `2 MW`
-- 遅れ力率 `0.90`
-- 線路1相あたり `R=0.50 Ω`, `X=1.00 Ω`
-- 列車本数 `n=0...4`
+制作前再解答で不足していた平成29年度問4の2答案要素は、完成教材の `S=P+jQ`、進み `Q<0`、`I=(P-jQ)/(√3V)` と複数枝KCL/KVLだけで正答でき、`2 / 2` 改善確認済み。
 
-正式品質ゲートは変更しない。
-- 令和4年度 第二種二次「電力・管理」問6 — 制作前再解答 `8 / 8 PASS`
-- 令和元年度 第二種二次「電力・管理」問2 — 制作前再解答 `6 / 6 PASS`
-- 平成30年度 第二種一次「電力」問7 — 制作前再解答 `5 / 5 PASS`
-- 平成29年度 第二種二次「電力・管理」問4 — 制作前再解答 `1 / 3 PASS`
-- 平成23年度 第二種二次「電力・管理」問6 — 制作前再解答 `3 / 3 PASS`
-- 制作前合計: 一次1問＋二次4問、`23 / 25答案要素 PASS`
-
-解説・練習教材内では固定5問・25答案要素を `25 / 25` カバー済みだが、完成後blind独立再解答PASSではない。
-
-制作境界:
+品質境界:
 - 固定5問・25答案要素の変更: `0件`
 - 後続Topic論点の追加: `0件`
+- 教材外知識補完: `0件`
 - 未確認N700S実設備値の真値使用: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
@@ -66,6 +49,7 @@ source:
 - `topics/12_multiple_train_load/12_multiple_train_load_sim_qa.md`
 - `topics/12_multiple_train_load/12_multiple_train_load_images.pptx`
 - `topics/12_multiple_train_load/12_multiple_train_load_powerpoint_qa.md`
+- `topics/12_multiple_train_load/12_multiple_train_load_blind_reanswer_20260918.md`
 
 ## Topic 11 final result
 
@@ -91,8 +75,8 @@ Topic 11は `PASS / completed` を維持する。
 - [x] Topic 09 completed
 - [x] Topic 10 completed
 - [x] Topic 11 completed
-- [ ] Topic 12 — PowerPoint completed; final blind independent reanswer pending
+- [ ] Topic 12 — completion blind reanswer `25 / 25 PASS`; final QA pending
 
 ## next_start
 
-Topic 12の完成後blind独立再解答を行う。保存済み正答・公式解答を先に見ず、固定5問・25答案要素を教材内容だけで解き、答案を先に固定してから公式解答と照合する。教材外知識補完があればFAIL。完答できるまでTopic 12をcompletedにしない。
+Topic 12の最終QAを行う。必須成果物、EXAM_ALIGNMENT、SPEC固定範囲、各QA、完成後blind独立再解答 `25 / 25 PASS`、進捗記録の整合を再判定する。最終QA PASSまでTopic 12を `completed` にしない。
