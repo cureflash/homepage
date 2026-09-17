@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 13 / 14
-- current_status: `topic_14_practice_pdf_complete`
+- current_status: `topic_14_powerpoint_complete`
 - last_completed_topic: `13 インバータはどうやって三相交流を作る？`
 - active_topic: `14 East iは何をどう測っている？`
-- next_start: Topic 14の解説画像PowerPointを作成し、固定8問要求への接続・表示QA・構造QAを行う
+- next_start: Topic 14の完成後公式過去問独立再解答を、保存済み正答を先に見ず固定8問・13答案要素で実施する
 
 ## Topic 01 進捗
 
@@ -254,30 +254,27 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
-- [ ] 解説画像PowerPoint
+- [x] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 14 `East iは何をどう測っている？` の練習問題source・練習PDFを完成し、正答一意性・再計算・表示・文字抽出QAを実施した。
+Topic 14 `East iは何をどう測っている？` の解説画像PowerPointを作成し、固定8問要求への接続・表示・構造QAを実施した。
 
-- 練習問題: 15問・全問五肢択一
-- 難易度: 基礎4 / 本試験標準8 / 複合3
-- 正答一意性: `15 / 15 PASS`
-- 正答位置 `(1)`〜`(5)`: 各3問
-- 数値・単位・論理再計算: `12 / 12 PASS`
+- PowerPoint: 16:9・4枚
 - 固定8問要求への接続: `8 / 8 PASS`
-- 練習PDF: A4縦4ページ
 - 200 dpi表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
+- shape-bound overflow: `0件`
+- 目視文字欠け・重なり・文字化け: `0件`
+- 必須語・公式の文字抽出: `PASS`
+- ZIP/XML整合性: `PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 系列SPEC外論点追加: `0件`
-- 未確認East i情報依存: `0件`
-- source: `topics/14_east_i_measurement/14_east_i_measurement_practice.md`
-- PDF: `topics/14_east_i_measurement/14_east_i_measurement_practice.pdf`
-- QA: `topics/14_east_i_measurement/14_east_i_measurement_practice_qa.md`
+- 未確認East i情報追加: `0件`
+- PPTX: `topics/14_east_i_measurement/14_east_i_measurement_images.pptx`
+- QA: `topics/14_east_i_measurement/14_east_i_measurement_images_qa.md`
 
 ## 判定
 
-Topic 14は `PRACTICE_PDF_COMPLETE / IN_PROGRESS`。完成数は `13 / 14`。次は解説画像PowerPointを作成し、固定8問要求への接続・表示QA・構造QAを行う。
+Topic 14は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `13 / 14`。次は完成後の公式過去問独立再解答を、固定8問・13答案要素について保存済み正答を先に見ず実施する。

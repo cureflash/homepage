@@ -4,33 +4,34 @@
 
 ## 現在地
 
-Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何をどう測っている？」は練習問題source・練習PDF＋QAまで完了した。
+Topic 01〜13は最終QAまでPASSし、`completed`。Topic 14「East iは何をどう測っている？」は解説画像PowerPoint＋QAまで完了した。
 
 - 完成数: `13 / 14`
 - last completed: `13 インバータはどうやって三相交流を作る？`
 - active topic: `14 East iは何をどう測っている？`
-- current status: `topic_14_practice_pdf_complete`
-- next start: Topic 14の解説画像PowerPointを作成し、固定8問要求への接続・表示QA・構造QAを行う
+- current status: `topic_14_powerpoint_complete`
+- next start: Topic 14の完成後公式過去問独立再解答を、固定8問・13答案要素について保存済み正答を先に見ず実施する
 
 ## 今回進捗
 
-Topic 14の練習問題source・練習PDFを作成し、正答一意性・再計算・表示・文字抽出QAを完了した。
+Topic 14の解説画像PowerPointを作成し、固定過去問要求への接続・表示・構造QAを完了した。
 
-- 練習問題: 15問・全問五肢択一
-- 難易度: 基礎4 / 本試験標準8 / 複合3
-- 正答一意性: `15 / 15 PASS`
-- 正答位置 `(1)`〜`(5)`: 各3問
-- 数値・単位・論理再計算: `12 / 12 PASS`
+- PowerPoint: 16:9・4枚
+- Slide 1: 電圧計・電流計の内部抵抗、分流器・倍率器、複数計器の最大目盛判定
+- Slide 2: ホイートストンブリッジ、真値・測定値・誤差、計器損失、電位差計・CT・VT
+- Slide 3: 整流形電圧計、整流平均値・実効値・波形率、オシロスコープ、A/D変換
+- Slide 4: JR東日本一次資料で確認した現行E926形の検測装置例、一般測定系、East i実装と一般計測原理の境界
 - 固定8問要求への接続: `8 / 8 PASS`
-- 練習PDF: A4縦4ページ
 - 200 dpi表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
+- shape-bound overflow: `0件`
+- 目視文字欠け・重なり・文字化け: `0件`
+- 必須語・公式の文字抽出: `PASS`
+- ZIP/XML整合性: `PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - 系列SPEC外論点追加: `0件`
-- 未確認East i情報依存: `0件`
-- source: `topics/14_east_i_measurement/14_east_i_measurement_practice.md`
-- PDF: `topics/14_east_i_measurement/14_east_i_measurement_practice.pdf`
-- QA: `topics/14_east_i_measurement/14_east_i_measurement_practice_qa.md`
+- 未確認East i情報追加: `0件`
+- PPTX: `topics/14_east_i_measurement/14_east_i_measurement_images.pptx`
+- QA: `topics/14_east_i_measurement/14_east_i_measurement_images_qa.md`
 
 ## Topic 14 固定過去問
 
@@ -102,15 +103,21 @@ East i接続はJR東日本「新たな新幹線専用検測車の開発に着手
 
 練習PDFはA4縦4ページ。200 dpiレンダリング `4 / 4 PASS`、文字抽出 `PASS`、固定範囲外追加 `0件`、未確認East i情報依存 `0件`。
 
+## 解説画像PowerPointの現状
+
+固定8問の要求事項を4枚の解説画像へ `8 / 8` 接続済み。16:9・4枚、200 dpi表示 `4 / 4 PASS`、shape-bound overflow 0件、文字欠け・重なり・文字化け0件、ZIP/XML整合性PASS。
+
+East i実車情報は、JR東日本一次資料で公表された現行E926形の検測装置例とトロリ線状態測定方式だけを使用した。一般的な電気計測原理とEast iの実装を区別し、未確認の内部回路・センサ定数・測定値は追加していない。
+
 ## 次に行うこと
 
-Topic 14の解説画像PowerPointを作成し、固定8問要求への接続・表示QA・構造QAを行う。
+Topic 14の完成後公式過去問独立再解答を実施する。
 
-- `topics/14_east_i_measurement/14_east_i_measurement.md` と固定EXAM_ALIGNMENTを正本とする
-- 系列SPEC範囲だけで解説画像を作る
-- 固定過去問で要求される計算・判断を解説画像へ反映する
-- 表示崩れ・文字切れ・重なり・構造不整合を確認する
-- 正答番号・固定過去問の個別最終数値を先読みせず、完成後独立再解答を汚染しない
+- 固定8問・13答案要素を対象とする
+- 保存済み正答・個別最終数値を先に見ない
+- 解説PDF・練習PDF・PowerPointの完成教材だけで、必要公式・判断・途中式を再構成する
+- 教材外知識で補った場合はFAILとする
+- `8 / 8問・13 / 13答案要素` を満たした場合のみ次の最終QAへ進む
 
 ## 固定ルール
 
