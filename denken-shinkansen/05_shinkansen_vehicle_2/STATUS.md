@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `14 / 39`
-- current_status: `topic_15_explanation_source_complete`
+- current_status: `topic_15_explanation_pdf_complete`
 - last_completed_topic: `14 300系⑤ 走行抵抗と必要けん引力`
 - active_topic: `15 500系 高速域の出力・熱解析`
-- next_start: Topic 15の解説PDFを作成する。固定EXAM_ALIGNMENTと解説sourceの共通仮定式系を変更せず、3段階例題・固定16答案要素・SPEC指定9項目/4可視化を欠落させない
+- next_start: Topic 15の練習問題sourceを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDFの共通仮定式系を変更せず、第二種一次・二次への接続と完全解説条件を守る
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -25,7 +25,7 @@
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
-- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / EXPLANATION_SOURCE_PASS
+- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / EXPLANATION_PDF_PASS
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -62,6 +62,24 @@
 - SPEC外追加: `0件`
 - 未確認500系実車値の真値化: `0件`
 - 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+## Topic 15 解説PDF
+- path: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_explanation.pdf`
+- QA: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_explanation_pdf_qa.md`
+- A4縦4ページ
+- 180 dpi表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 文字欠落・黒四角・重なり・クリップ: `0件`
+- 固定5過去問・16答案要素接続: `16 / 16 PASS`
+- 3段階例題: `3 / 3 PASS`
+- SPEC指定9項目: `9 / 9 PASS`
+- SPEC指定4可視化: `4 / 4 PASS`
+- 4可視化共通仮定式系: `PASS`
+- PDF SHA-256: `2b20783e82ada1d6db504d59e18e492851313e270e9051e44a3f74f6bc305593`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認500系実車値の真値化: `0件`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ## Topic 14 固定EXAM_ALIGNMENT
 - source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -186,7 +204,7 @@
 - R1二次 問1 (4): `1 / 1 PASS`
 - H26二次 問1 (4): `1 / 1 PASS`
 - H26一次 問5 (1): `1 / 1 PASS`
-- H25一次 問3 (1),(2): `2 / 2 PASS`
+- H25一次 機械 問3 (1),(2): `2 / 2 PASS`
 - H26二次 問1 (4) blind再計算: `I2'=22.430886... A`, `TL=48.046775... N·m` → `48.0 N·m`
 - 公式標準解答は掲載式・表示中間値と最終印字値 `48.1 N·m` が内部不整合。公式掲載値 `I2'=22.430 A` の再代入でも `48.04298... N·m` → `48.0 N·m`
 - 電験王2の独立解説も `48.047 -> 48.0 N·m`。新しい許容差は設けず、公式問題条件と公式掲載式の算術再現により個別不整合を確定
@@ -245,4 +263,4 @@ SPEC指定可視化:
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次工程
-Topic 15「500系 高速域の出力・熱解析」の解説PDFを作成する。固定EXAM_ALIGNMENTと解説sourceの共通仮定式系を変更せず、3段階例題・固定16答案要素・SPEC指定9項目/4可視化を欠落させない。
+Topic 15「500系 高速域の出力・熱解析」の練習問題sourceを作成する。固定EXAM_ALIGNMENT、SPEC固定範囲、解説source/PDFの共通仮定式系を変更せず、第二種一次・二次への接続と完全解説条件を守る。
