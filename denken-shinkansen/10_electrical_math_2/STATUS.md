@@ -5,11 +5,11 @@
 ## 状態
 
 - active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 13 / 20
-- current_status: `topic_14_progress_records_synced`
-- last_completed_topic: `13 フーリエ級数`
-- active_topic: `14 フーリエ変換・FFT`
-- next_start: Topic 14の最終QAを再判定する
+- exam_aligned_completed_topics: 14 / 20
+- current_status: `topic_14_completed`
+- last_completed_topic: `14 フーリエ変換・FFT`
+- active_topic: `15 対数・dB・周波数応答`
+- next_start: Topic 15の制作前EXAM_ALIGNMENTを実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -194,21 +194,21 @@
 - [x] 完成後独立再解答 `1 / 1 PASS`
 - [x] 最終QA実施 → `NEEDS_REVISION`
 - [x] 進捗記録6箇所の同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 14 `フーリエ変換・FFT` の初回最終QAで指摘された進捗記録不整合だけを修正した。
+Topic 14 `フーリエ変換・FFT` の最終QAを再判定した。
 
-同期対象は、主source冒頭 `## 状態`、主source末尾 `## 次工程`、解説PDF QA末尾 `次工程`、練習source末尾 `## 次工程`、PowerPoint QA末尾 `## 次工程`、HANDOFFの `current_status` / `次工程`。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF、PowerPoint、完成後独立再解答は変更していない。
+前回FAIL要因だった進捗記録6箇所が実成果物へ同期済みであることを確認し、必須成果物、固定R3一次「機械」問8 (1)の1問・1答案要素、完成後独立再解答 `1 / 1 PASS`、練習問題QA、解説PDF・練習PDF・PowerPoint表示QA、SPEC境界を再確認した。
 
-固定R3一次「機械」問8 (1)の完成後独立再解答 `1 / 1 PASS`、解説・練習・PowerPointの各QA、Topic 15先取り0件等の品質ゲートは維持している。
+Topic 15先取り、ADC量子化・変換回路方式、フィルタ設計一般、FFT実装詳細の試験必須化、二次公式過去問の件数合わせ、第一種・第三種による件数水増し、未確認実車値依存はいずれも0件。
 
 ## 判定
 
-Topic 14は `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`。
+Topic 14は `PASS / completed`。
 
-完成数は `13 / 20`。
+完成数は `14 / 20`。
 
-次はTopic 14の最終QAを再判定する。
+次はTopic 15 `対数・dB・周波数応答` の制作前EXAM_ALIGNMENTを実施する。
