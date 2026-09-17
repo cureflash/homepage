@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: 34 / 38
-- current_status: `topic_35_final_qa_needs_revision`
+- current_status: `topic_35_progress_records_synced`
 - last_completed_topic: `34 COMTRAC② 進路をどう自動制御する？`
 - active_topic: `35 COMTRAC③ ダイヤが乱れたらどうする？`
-- next_start: Topic 35の進捗記録3箇所だけを実成果物へ同期する。対象は main source冒頭 `## 状態` の未着手記述、同sourceの `次工程`、解説PDF QAの `次工程`。技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない。同期後に最終QAを再実施する
+- next_start: Topic 35の最終QAを再実施する。前回唯一FAILだった進捗記録整合を再確認し、技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない
 
 ## 新品質ゲート進捗
 - [x] 01〜34 — PASS
@@ -139,6 +139,14 @@ source: `topics/35_comtrac_disruption_management/35_comtrac_disruption_managemen
 - 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更なし
 - 完成数は34/38を維持
 - 記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_final_qa.md`
+
+## 35 進捗記録同期
+`topic_35_progress_records_synced / IN_PROGRESS`。
+- main source冒頭 `## 状態`: 実成果物・blind独立再解答完了状態へ同期
+- main source `次工程`: 「解説PDF作成」から「最終QA再実施」へ同期
+- 解説PDF QA `次工程`: 「練習source」から「最終QA再実施」へ同期
+- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果: 変更なし
+- 次工程: Topic 35の最終QA再実施
 
 ## 34 EXAM_ALIGNMENT
 品質ゲート対象は公式過去問5問・6答案要素。系列SPEC固定範囲は、進路制御、条件判定、AND、OR、NOT、真理値表、インターロック、論理回路。
@@ -663,4 +671,4 @@ source: `topics/31_atc_signal_transmission/31_atc_signal_transmission.md`
 Topic 34 `COMTRAC② 進路をどう自動制御する？` は固定5問・6答案要素の完成後blind独立再解答 `5 / 5問・6 / 6答案要素 PASS`、必須成果物・練習QA・表示QA・進捗記録整合・固定範囲境界すべてPASS、教材外知識補完・固定範囲外追加・未確認COMTRAC内部仕様追加0件で `PASS / COMPLETED`。完成数34/38。
 
 ## 次テーマ工程
-Topic 35の進捗記録3箇所だけを実成果物へ同期する。対象は `topics/35_comtrac_disruption_management/35_comtrac_disruption_management.md` 冒頭 `## 状態` の未着手記述、同sourceの `次工程`、`topics/35_comtrac_disruption_management/35_comtrac_disruption_management_explanation_pdf_qa.md` の `次工程`。技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない。同期後に最終QAを再実施する。
+Topic 35の最終QAを再実施する。前回唯一FAILだった進捗記録整合を再確認し、技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない。
