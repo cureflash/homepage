@@ -1,14 +1,14 @@
 # STATUS - 電験三種「電気数学」
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_12_practice_source_complete`
+- current_status: `topic_12_practice_pdf_complete`
 - last_completed_topic: `11 グラフ・特性曲線を読む`
 - active_topic: `12 電気数学総合`
-- next_start: `Topic 12の練習PDF（解答・完全解説付き）`
+- next_start: `Topic 12の解説画像PowerPoint`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -146,7 +146,7 @@
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
 - [x] 練習問題source
-- [ ] 練習PDF（解答・完全解説付き）
+- [x] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
 - [ ] 完成後独立再解答前のブラインドゲート整備
 - [ ] 完成教材だけでの公式過去問独立再解答
@@ -156,21 +156,21 @@
 
 ## 今回進めた内容
 
-Topic 12「電気数学総合」の練習問題sourceをGitHub正本へ反映した。
+Topic 12「電気数学総合」の練習PDFをGitHub正本へ反映した。
 
-- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_practice.md`
-- 全12問・全問五肢択一
-- 基礎3 / 標準7 / 複合2
-- 数値・論理独立再計算 `12 / 12 PASS`
-- 正答一意性 `12 / 12 PASS`
-- 固定5過去問への接続 `5 / 5 PASS`
-- 固定必須説明20項目への練習接続 `20 / 20 PASS`
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_practice.pdf`
+- A4縦6ページ
+- 200 dpi表示QA `6 / 6 PASS`
+- 文字抽出QA `PASS`
+- 全12問・全問五肢択一、解答・完全解説付き
+- 練習sourceの正答・数値との整合 `12 / 12 PASS`
+- 固定5過去問への接続 `5 / 5`
 - 固定EXAM_ALIGNMENT変更0件
 - 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
 - 未確認の新幹線実車値追加0件
 
 ## 判定
 
-`topic_12_practice_source_complete / IN_PROGRESS`。
+`topic_12_practice_pdf_complete / IN_PROGRESS`。
 
-完成数は `11 / 12`。次工程はTopic 12の練習PDF（解答・完全解説付き）。
+完成数は `11 / 12`。次工程はTopic 12の解説画像PowerPoint。
