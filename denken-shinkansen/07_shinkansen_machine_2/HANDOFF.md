@@ -6,20 +6,17 @@
 - Topic 01〜16: 最終QA `PASS / completed`
 - 完成数: `16 / 22`
 - active topic: `17 新幹線の速度をフィードバック制御する`
-- current status: `topic_16_final_qa_pass`
-- 次工程: Topic 17 制作前EXAM_ALIGNMENT
+- current status: `topic_17_exam_alignment_complete`
+- 次工程: Topic 17 解説source本文制作
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 16全成果物を再監査した。
-- 再監査開始時点の最初の未完了テーマは Topic 16。
-- 固定範囲・固定EXAM_ALIGNMENTは変更なし。一次4問＋二次記述1問、計5問・12答案要素。
-- 解説source/PDF、練習source/PDF、PowerPoint/QA、独立再解答記録の実在を確認。
-- 固定5問・12答案要素の厳密ブラインド再解答は `12 / 12 PASS`。
-- 前回最終QAで唯一FAILだった進捗記録3箇所を同期済みで、今回の再監査では進捗整合もPASS。
-- 未確認N700S実車値、電池材料反応・BMS・チョッパ詳細の仕様追加、Topic 17以降先取り `0件`。
-- Topic 16を `PASS / completed` とし、次の未完了テーマを Topic 17へ移した。
+- 最新main、系列 `STATUS.md` / `HANDOFF.md`、直近の機械二種変更を再確認した。
+- 既存「機械二種を進行」枠でTopic 16最終QAが `PASS / completed` まで進んでいることを採用し、Topic 16を重複制作していない。
+- 最初の未完了テーマはTopic 17「新幹線の速度をフィードバック制御する」。
+- Topic 17の制作前EXAM_ALIGNMENTを新規実施し、一次1問＋二次4問、計5問・6答案要素を固定した。
+- Topic 18〜21先取り、二自由度制御の仕様追加、未確認実車値追加、固定問題の正答記号・完成済み解答保存は `0件`。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -59,7 +56,34 @@
 - 最終判定: `PASS / topic_16_final_qa_pass / completed`
 
 ## Topic 17 固定範囲
-系列 `SPEC.md` の Topic 17「新幹線の速度をフィードバック制御する / 伝達関数・ブロック線図」を正本とする。制作前EXAM_ALIGNMENTで公式過去問を先に調査し、一次・二次を含む品質ゲート対象を固定するまで本文制作へ進まない。
+系列 `SPEC.md` の Topic 17「新幹線の速度をフィードバック制御する / 伝達関数・ブロック線図」を正本とする。
+
+扱う内容:
+- 目標値
+- 偏差
+- 制御器
+- プラント
+- センサ
+- 伝達関数
+- ブロック線図
+- 閉ループ伝達関数
+- 外乱
+
+Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘着制御は先取りしない。
+
+## Topic 17 固定EXAM_ALIGNMENT
+- R07 二次 機械・制御 問4 (1) — 1答案要素
+- R06 二次 機械・制御 問4 (1) — 1答案要素
+- R04 二次 機械・制御 問4 (3) — 1答案要素
+- R03 二次 機械・制御 問4 (1),(2) — 2答案要素
+- H21 一次 機械 問4 (1) — 1答案要素
+
+一次1問＋二次4問、計5問。品質ゲート対象は6答案要素。
+
+制作前EXAM_ALIGNMENT source:
+`topics/17_speed_feedback_control/17_speed_feedback_control.md`
+
+判定: `PASS / topic_17_exam_alignment_complete`
 
 ## 次に行うこと
-Topic 17の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md` に従い、直近年度から公式過去問を調査し、一次・二次を含む対応問題と答案要素を固定する。
+Topic 17の解説source本文を制作する。固定5問・6答案要素から逆算し、系列SPECの固定範囲だけで、基礎／本試験標準／複合の3段階例題まで作成する。
