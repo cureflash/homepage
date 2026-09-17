@@ -4,15 +4,15 @@
 
 ## 現在地
 
-Topic 01〜12は `completed`。
+Topic 01〜13は `completed`。
 
-完成数: `12 / 20`
+完成数: `13 / 20`
 
-current_status: `topic_13_progress_records_synced`
+current_status: `topic_13_completed`
 
-active_topic: `13 フーリエ級数`
+active_topic: `14 フーリエ変換・FFT`
 
-次工程: Topic 13の最終QAを再判定する。
+次工程: Topic 14の制作前EXAM_ALIGNMENTを実施する。
 
 ## 上位仕様
 
@@ -472,6 +472,9 @@ QA:
 
 `topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_images.pptx`
 
+PowerPoint QA:
+`topics/10_transfer_function_poles_zeros/10_transfer_function_poles_zeros_powerpoint_qa.md`
+
 QA:
 - 16:9・5枚
 - 固定二次5問・11対象設問を全件可視化
@@ -818,14 +821,14 @@ PowerPoint QA:
 
 総合判定: `PASS / completed`。
 
-## Topic 13 進行記録
+## Topic 13 完了記録
 
 テーマ: `フーリエ級数`
 
 source:
 `topics/13_fourier_series/13_fourier_series.md`
 
-current_status: `topic_13_progress_records_synced`
+current_status: `topic_13_completed`
 
 ### Topic 13 固定範囲
 
@@ -888,6 +891,7 @@ Topic 14のフーリエ変換・FFT、Topic 15の対数・dB・周波数応答�
 - PowerPoint: `topics/13_fourier_series/13_fourier_series_images.pptx`
 - PowerPoint QA: `topics/13_fourier_series/13_fourier_series_powerpoint_qa.md`
 - 完成後独立再解答: `topics/13_fourier_series/13_fourier_series_exam_reanswer.md` → `5 / 5 PASS`
+- 最終QA: `topics/13_fourier_series/13_fourier_series_final_qa.md` → `PASS / completed`
 
 PowerPoint QA:
 - 16:9・5枚
@@ -907,6 +911,28 @@ PowerPoint QA:
 - PWM制御方式・キャリア設計・スイッチング損失の一般論追加: 0件
 - 未確認実車値依存: 0件
 
+### Topic 13 最終QA
+
+初回判定は `NEEDS_REVISION / IN_PROGRESS`。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・表示QA・SPEC境界はPASSで、未完了理由は進捗記録5箇所だけだった。
+
+その後、5箇所を実成果物へ同期し、再判定で以下を確認した。
+
+- 必須成果物実在: PASS
+- 固定第二種公式3問・5対象設問: PASS
+- 完成後独立再解答 `5 / 5 PASS`: PASS
+- 練習問題独立計算・論理QA `12 / 12 PASS`: PASS
+- 一次型正答一意性 `8 / 8 PASS`: PASS
+- 解説PDF・練習PDF・PowerPoint表示QA: PASS
+- source進捗整合: PASS
+- H20/H19周辺問題による件数合わせ: 0件
+- 第一種過去問による件数水増し: 0件
+- Topic 14フーリエ変換・FFT先取り: 0件
+- Topic 15対数・dB・周波数応答・ボード線図先取り: 0件
+- PWM制御方式・キャリア設計・スイッチング損失一般論追加: 0件
+- 未確認実車値依存: 0件
+
+総合判定: `PASS / completed`。
+
 ## 次に行うこと
 
-Topic 13 `フーリエ級数` の最終QAを再判定する。
+Topic 14 `フーリエ変換・FFT` の制作前EXAM_ALIGNMENTを実施する。
