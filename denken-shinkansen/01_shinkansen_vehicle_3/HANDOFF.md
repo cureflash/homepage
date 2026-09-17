@@ -6,49 +6,50 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は `36 / 38`。01〜36がPASS。active topicは37 `COSMOS② 新幹線の電力設備を遠隔監視する`。
 
 ## 今回進捗
-Topic 37を1段階進め、完成済み解説sourceだけを正本として解説PDFを作成した。固定5問・6答案要素、系列SPEC固定範囲、§1〜§15、3段階例題を変更せずPDFへ反映し、表示・文字抽出・固定範囲境界をQAした。
+Topic 37を1段階進め、固定5問・6答案要素と系列SPEC固定範囲を維持した練習sourceを作成した。全15問を基礎4・標準8・複合3で構成し、全問五肢択一・完全解説とした。全15問を問題文から独立再解答し、固定EXAM_ALIGNMENTへの接続と範囲境界をQAした。
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`。
+判定: `PASS / PRACTICE_SOURCE_COMPLETE`。
 
-- source: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring.md`
-- 解説PDF: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_explanation.pdf`
-- 解説PDF QA: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_explanation_pdf_qa.md`
-- 固定公式過去問: `5問・6答案要素`
-- 固定EXAM_ALIGNMENT本文マッピング: `6 / 6 PASS`
-- 3段階例題: `3 / 3 PASS`
-- A4縦 / 6ページ: PASS
-- 180 dpi全ページ表示: `6 / 6 PASS`
-- 文字抽出: PASS
+- 練習source: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_practice.md`
+- 練習source QA: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_practice_source_qa.md`
+- 問題数: `15`
+- 難易度: 基礎4 / 標準8 / 複合3
+- 五肢択一: `15 / 15`
+- 完全解説: `15 / 15`
+- 正答位置: A=3 / B=3 / C=3 / D=3 / E=3
+- 独立再解答: `15 / 15 PASS`
+- 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6 / 6 PASS`
+- 複数正答: `0件`
 - 固定問題差替え: `0件`
 - 固定範囲外追加: `0件`
 - Topic 38先取り: `0件`
 - COSMOS-SCADA未確認内部仕様追加: `0件`
 - 完成数: `36 / 38`
 
-## Topic 37 解説PDF内容
-1. 電験で問う論点 — A-D変換、デジタル計測、数値表現、シーケンス制御、通信遠隔制御
-2. COSMOS-SCADAの公開範囲 — JR東日本公開資料で確認できる新幹線電力設備の状態監視・制御
-3. SCADA一般概念 — Data Acquisition / Supervisory Monitoring / Control
-4. 変電所・センサ・遠隔計測
-5. A-D変換 — `2^n`コード、量子化幅
-6. 二重積分形A-D変換 — `Vx=(T2/T1)Vr`、同一クロックなら `Vx=(N2/N1)Vr`
-7. 2進数・10進数・16進数変換
-8. シーケンス制御・PLC
-9. 通信による遮断信号と遠隔制御
-10. 遠隔監視・遠隔制御の問題解法手順
-11. 基礎例題 — 2進/16進・量子化
-12. 本試験標準例題 — 二重積分形A-D変換
-13. 複合例題 — センサ→A-D→PLC→通信→遠方機器
-14. 固定EXAM_ALIGNMENT本文マッピング
-15. 頻出ミス・公式・解法まとめ
+## Topic 37 練習source内容
+1. SCADAの一般的役割
+2. センサ・PLC・出力機器の役割
+3. A-D変換のコード数・量子化幅
+4. 2進数・10進数・16進数変換
+5. 二重積分形A-D変換の時間比計算
+6. 二重積分形A-D変換のクロック数比
+7. レベルスイッチ・PLC・シーケンス制御
+8. 遠隔計測と遠隔制御の情報方向
+9. 通信回線による転送遮断の一般原理
+10. 10 bit A-D変換の量子化・コード番号
+11. 16進数・10進数・2進数変換
+12. COSMOS-SCADA公開範囲と一般SCADAの区別
+13. 二重積分形A-D変換・クロック数・16進数の複合
+14. センサ→A-D→PLC→通信→遠方機器の複合
+15. SCADA・A-D・シーケンス・遠隔制御の複合正誤
 
-## 固定EXAM_ALIGNMENT本文マッピング
-1. R6上 法規 問7 — §11、§12、§15
-2. R3 機械 問14 — §9、§13
-3. R1 理論 問18(a) — §7、§8、§14
-4. R1 理論 問18(b) — §7、§8、§14
-5. H26 機械 問13 — §5、§10、§12、§15
-6. H23 法規 問6 — §11、§12
+## 固定EXAM_ALIGNMENT練習接続
+1. R6上 法規 問7 — Q8, Q9, Q14, Q15
+2. R3 機械 問14 — Q4, Q11, Q13
+3. R1 理論 問18(a) — Q5, Q13
+4. R1 理論 問18(b) — Q6, Q13
+5. H26 機械 問13 — Q2, Q7, Q14, Q15
+6. H23 法規 問6 — Q9, Q15
 
 結果: `6 / 6答案要素 PASS`。
 
@@ -68,4 +69,4 @@ Topic 37を1段階進め、完成済み解説sourceだけを正本として解�
 - Topic 38の冗長化・バックアップ・フェイルセーフ・論理回路・障害検知・切替・システム信頼性は先取りしない。
 
 ## 次の正確な開始点
-Topic 37の練習source作成。固定5問・6答案要素と固定範囲を維持し、原則12問以上、少なくとも半数を五肢択一、全問に完全解説を付ける。固定EXAM_ALIGNMENTへの接続と独立再解答をQAし、練習PDF・PowerPointへはまだ進まない。
+Topic 37の練習PDF作成。完成済み `37_cosmos_power_remote_monitoring_practice.md` だけを正本として問題・選択肢・解答・完全解説を反映し、全ページ表示、文字抽出、問題/解答整合、固定EXAM_ALIGNMENT反映、範囲境界をQAする。PowerPointへはまだ進まない。
