@@ -6,12 +6,13 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は品質ゲートPASSでcompleted。active topicは13「新幹線は主電動機以外もモーターだらけ？」。
 
 ## 今回進捗
-Topic 13「新幹線は主電動機以外もモーターだらけ？」の解説PDFを完成した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`。固定5過去問の教材内マッピングは `5 / 5`、3段階例題は `3 / 3`。固定EXAM_ALIGNMENT変更、件数合わせの仕様外追加、Topic 14〜16先取り、未確認補機仕様の実値化はいずれも0件。完成数は `12 / 16` のまま。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」の練習問題sourceを完成した。全12問・全問五肢択一（基礎3 / 本試験標準7 / 複合・応用2）、独立計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`。固定5過去問への接続は `5 / 5 PASS`。固定EXAM_ALIGNMENT変更、件数合わせの仕様外追加、Topic 14〜16先取り、未確認補機仕様の追加はいずれも0件。完成数は `12 / 16` のまま。
 
 source: `topics/13_auxiliary_motors/13_auxiliary_motors.md`
 explanation PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation.pdf`
 explanation PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation_pdf_qa.md`
-次工程: 固定EXAM_ALIGNMENTと本文範囲を変更せず、Topic 13の練習問題sourceを作成する。
+practice source: `topics/13_auxiliary_motors/13_auxiliary_motors_practice.md`
+次工程: 固定EXAM_ALIGNMENTと問題・正答を変更せず、Topic 13の練習PDFを作成する。
 
 ## Topic 13 制作前EXAM_ALIGNMENT
 固定範囲:
@@ -113,6 +114,23 @@ Topic 14〜16先取り: `0件`
 - 3段階例題収録: `3 / 3`。
 - 固定EXAM_ALIGNMENT変更: `0件`。
 - 固定範囲外追加: `0件`。
+- Topic 14〜16先取り: `0件`。
+- 未確認補機仕様追加: `0件`。
+
+## Topic 13 練習問題sourceの現状
+- 全12問、全問五肢択一。
+- 構成: 基礎3 / 本試験標準7 / 複合・応用2。
+- R5上 問7 → 問8。
+- R4下 問11 → 問4、問12。
+- H30 問10 → 問5、問12。
+- H29 問12 → 問6、問7、問11。
+- H27 問12 → 問3、問5、問10。
+- 系列SPEC固定範囲補強 → 問1、問2、問9。
+- 固定5過去問への接続: `5 / 5 PASS`。
+- 独立計算・論理QA: `12 / 12 PASS`。
+- 正答一意性QA: `12 / 12 PASS`。
+- 固定EXAM_ALIGNMENT変更: `0件`。
+- 固定範囲外論点追加: `0件`。
 - Topic 14〜16先取り: `0件`。
 - 未確認補機仕様追加: `0件`。
 
