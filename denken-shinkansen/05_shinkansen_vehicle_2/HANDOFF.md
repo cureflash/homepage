@@ -7,11 +7,11 @@
 
 Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
 
-Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲートまで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。PowerPointは16:9・4枚、1601×900表示QA `4 / 4 PASS`、固定16答案要素の可視化・接続 `16 / 16 PASS`、SPEC指定4可視化 `4 / 4 PASS`。SPEC指定9項目・共通仮定式系を維持し、未確認500系実車値の真値化・SPEC外追加は0件。
+Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲート、候補答案固定、公式照合まで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。完成後blind再解答は固定5問 `5 / 5 PASS`、一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`。教材外知識による補完0件、公式解答・標準解答との不一致0件。
 
-独立再解答前ゲート `PASS / BLIND_REANSWER_READY` の条件を維持して公式問題文だけを開き、固定5問・16答案要素を完成教材から独立再解答した。公式解答・標準解答を開く前に候補答案を `15_500series_high_speed_output_thermal_blind_reanswer_candidates.md` へ固定し、その後公式解答・標準解答と照合した。固定5問 `5 / 5 PASS`、一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`。教材外知識による補完0件、公式解答・標準解答との不一致0件。
+Topic 15最終QAでは、技術内容、固定EXAM_ALIGNMENT、blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界はすべてPASSした。ただし現在工程を示す進捗記録4箇所が旧工程のまま残っているため `NEEDS_REVISION / IN_PROGRESS`。完成数は `14 / 39` のまま。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更していない。
 
-次工程はTopic 15の最終QA。必須成果物、各QA、SPEC境界、進捗記録整合を再確認して `completed` 可否を判定する。
+次工程は進捗記録4箇所だけを `topic_15_final_qa_needs_progress_sync` に同期し、その後Topic 15最終QAを再判定する。
 
 ## Topic 15 固定EXAM_ALIGNMENT
 source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
@@ -119,7 +119,7 @@ SPEC指定可視化:
 - 180 dpi表示QA: `4 / 4 PASS`
 - 文字抽出QA: `PASS`
 - 文字欠落・黒四角・重なり・クリップ: `0件`
-- 固定5問・16答案要素接続: `16 / 16 PASS`
+- 固定5過去問・16答案要素接続: `16 / 16 PASS`
 - 数値・論理整合: `12 / 12 PASS`
 - 一次正答一意性: `8 / 8 PASS`
 - SPEC指定9項目: `9 / 9 covered`
@@ -189,8 +189,25 @@ SPEC指定可視化:
 - SPEC外追加: `0件`
 - 未確認500系実車値の真値化: `0件`
 
+## Topic 15 最終QA
+- QA: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal_final_qa.md`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 技術内容: `PASS`
+- 固定5問・16答案要素: `PASS`
+- 完成後blind再解答: `16 / 16 PASS`
+- 必須成果物: `PASS`
+- PDF/PPTX表示・構造QA: `PASS`
+- 練習問題QA: `12 / 12 PASS`
+- SPEC境界: `PASS`
+- 進捗記録整合: `FAIL / 4件要同期`
+- 要同期1: 主source冒頭 `## 状態`
+- 要同期2: 主source末尾 `## 次工程`
+- 要同期3: 練習source末尾 `## 次工程`
+- 要同期4: 練習PDF QA末尾 `## 現在地`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の変更: `0件`
+
 ## 過去Topic
 Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次に行うこと
-Topic 15の最終QAを実施し、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界、進捗記録整合を再確認して `completed` 可否を判定する。
+Topic 15の進捗記録4箇所だけを `topic_15_final_qa_needs_progress_sync` に同期し、技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果を変更せず、最終QAを再判定する。
