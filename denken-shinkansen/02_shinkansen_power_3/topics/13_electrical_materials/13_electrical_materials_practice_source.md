@@ -356,4 +356,7 @@ ACSRでは中心の鋼より線が主に機械的強度を受け持ち、周囲�
 ## 判定
 `PASS / PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`
 
-次工程は、このsourceからTopic 13練習PDFを作成し、A4表示QA・文字抽出QA・12問再検算・正答一意性・固定5問5答案要素への接続を確認する。
+## 進捗同期
+後続工程の練習PDF、解説画像PowerPoint、完成後ブラインド独立再解答、初回最終QAは実施済み。初回最終QAで指摘された旧工程記録として、本sourceの進捗表示を現在地へ同期した。
+
+次工程はTopic 13最終QAの再実施。`practice_source_complete` は当該成果物のローカル完成状態として維持する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
