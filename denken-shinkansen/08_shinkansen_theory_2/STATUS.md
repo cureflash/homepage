@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 16 / 21
-- current_status: `topic_17_practice_pdf_complete`
+- current_status: `topic_17_powerpoint_complete`
 - last_completed_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
 - active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
-- next_start: Topic 17 解説画像PowerPoint＋表示QA
+- next_start: Topic 17 完成後独立再解答
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -308,23 +308,24 @@
 - [x] 解説本文＋3段階例題: 必須説明 `15 / 15`、固定一次答案要素接続 `25 / 25`、例題 `3 / 3`
 - [x] 解説PDF＋表示QA: A4縦2ページ、200 dpi `2 / 2 PASS`、文字抽出 `PASS`
 - [x] 練習問題source＋練習PDF: 12問、A4縦4ページ、200 dpi `4 / 4 PASS`、文字抽出 `PASS`
-- [ ] 解説画像PowerPoint＋表示QA
+- [x] 解説画像PowerPoint＋表示QA: 16:9・5枚、200 dpi `5 / 5 PASS`、shape geometry overflow `0件`、PPTX ZIP整合性 `PASS`、PDF変換5ページ `PASS`、文字抽出 `PASS`
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の練習問題source＋練習PDF＋QAを完了した。
+Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の解説画像PowerPoint＋表示QAを完了した。
 
-- 練習問題: 12問（基礎3 / 本試験標準6 / 複合・ひっかけ3）、全問五肢択一
-- 数値再計算・論理QA: `12 / 12 PASS`
-- 正答一意性: `12 / 12 PASS`
-- 練習PDF: A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
+- PowerPoint: 16:9・5枚
+- 200 dpi全スライド表示QA: `5 / 5 PASS`
+- shape geometry overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- PDF変換: `5ページ / PASS`
+- PDF文字抽出QA: `PASS`
+- 固定一次5問・25答案要素の可視化: `25 / 25`
+- 最終スライドに公式過去問出典: `PASS`
 - 固定EXAM_ALIGNMENT: 変更なし
-- 固定一次5問・25答案要素への接続: `25 / 25`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 変換器詳細計算追加: `0件`
@@ -333,4 +334,4 @@ Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の練習問�
 
 ## 判定
 
-Topic 17は `PASS / PRACTICE_PDF_COMPLETE`。完成数は `16 / 21` のまま。次工程は解説画像PowerPoint＋表示QA。
+Topic 17は `PASS / POWERPOINT_COMPLETE`。完成数は `16 / 21` のまま。次工程は完成後独立再解答。
