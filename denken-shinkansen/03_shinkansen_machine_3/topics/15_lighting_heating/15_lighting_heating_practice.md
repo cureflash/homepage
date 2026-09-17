@@ -431,5 +431,16 @@ COPより供給熱量は、
 - 未確認の新幹線車内照明・空調実値追加: `0件`
 - Topic 16先取り: `0件`
 
+## 練習PDF
+- PDF: `15_lighting_heating_practice.pdf`
+- QA: `15_lighting_heating_practice_pdf_qa.md`
+- A4縦: `3ページ`
+- 表示QA: `3 / 3 PASS`
+- 文字抽出QA: `PASS`
+- 正答一覧source一致: `12 / 12 PASS`
+- 固定7問・12答案要素への接続: `12 / 12 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定範囲外論点追加: `0件`
+
 ## 次工程
-練習問題PDFを作成し、表示QA・文字抽出QA・固定EXAM_ALIGNMENTマッピングを確認する。
+固定EXAM_ALIGNMENTを変更せず、Topic 15の解説画像PowerPointを作成する。
