@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 15 / 20
-- current_status: `topic_16_practice_pdf_complete`
+- current_status: `topic_16_powerpoint_complete`
 - last_completed_topic: `15 対数・dB・周波数応答`
 - active_topic: `16 数値微分・数値積分`
-- next_start: Topic 16の解説画像PowerPointを作成し、表示QAを行う
+- next_start: Topic 16の完成後独立再解答を、保存済み正答を先に見ずに実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -240,22 +240,22 @@
 - [x] 解説PDF（A4縦3ページ、200 dpi表示 `3 / 3 PASS`、文字抽出QA `PASS`）
 - [x] 練習問題source（全12問、固定4問・8答案要素 `8 / 8 PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 練習PDF（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`）
-- [ ] 解説画像PowerPoint
-- [ ] PowerPoint表示QA
+- [x] 解説画像PowerPoint（16:9・5枚、固定4問・8答案要素 `8 / 8 PASS`）
+- [x] PowerPoint表示QA（全5枚 `5 / 5 PASS`、overflow 0、ZIP/XML整合性 `PASS`）
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 16の練習PDF＋QAを作成した。
+Topic 16の解説画像PowerPoint＋表示QAを作成した。
 
-A4縦4ページ。200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`。全12問（一次型8問／記述型4問）、固定第二種4問・8答案要素への接続 `8 / 8 PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS` を維持。第一種・第三種による件数水増し、Topic 17以降の先取り、高次数値微分・高次Newton-Cotes公式・スプライン・有限要素法等の仕様外追加、未確認実車値依存はいずれも0件。
+16:9・5枚。固定第二種4問・8答案要素への可視化接続 `8 / 8 PASS`。前進差分・中心差分、区分一定の面積和、台形則、Simpson則、刻み幅と誤差、`P^2` を積分する損失計算、期間全体の電力量から求める全日効率を可視化した。全5枚再レンダリング `5 / 5 PASS`、クリッピング・重なり・文字化け0件、overflow 0、`slides_test.py` PASS、PPTX ZIP/XML整合性PASS。第一種・第三種による件数水増し、Topic 17以降の先取り、高次数値微分・高次Newton-Cotes公式・スプライン・有限要素法等の仕様外追加、未確認実車値依存はいずれも0件。
 
 ## 判定
 
-`topic_16_practice_pdf_complete / IN_PROGRESS`
+`topic_16_powerpoint_complete / IN_PROGRESS`
 
 完成数は `15 / 20` のまま。
 
-次はTopic 16の解説画像PowerPointを作成し、表示QAを行う。
+次はTopic 16の完成後独立再解答を、保存済み正答を先に見ずに実施する。
