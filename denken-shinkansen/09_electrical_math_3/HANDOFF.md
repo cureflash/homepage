@@ -4,17 +4,17 @@
 
 ## 現在地
 
-Topic 01〜11は `completed`。
+Topic 01〜12は `completed`。
 
-完成数: `11 / 12`
+完成数: `12 / 12`
 
-current_status: `topic_12_source_progress_sync_complete`
+current_status: `series_completed`
 
-last_completed_topic: `11 グラフ・特性曲線を読む`
+last_completed_topic: `12 電気数学総合`
 
-active_topic: `12 電気数学総合`
+active_topic: `なし`
 
-next_start: `Topic 12の最終QA再判定`
+next_start: `10_electrical_math_2 / Topic 16 解説画像PowerPoint＋表示QA`
 
 ## Topic 11 固定仕様範囲
 
@@ -171,7 +171,7 @@ next_start: `Topic 12の最終QA再判定`
 - 固定品質ゲート5問は変更なし
 - 固定EXAM_ALIGNMENT・教材成果物・問題・正答は変更なし
 - HANDOFFから制作前独立解答の個別正答を除去
-- 主sourceの制作前独立解答節は、完成後独立再解答を確定するまで参照しない
+- 主sourceの制作前独立解答節は、完成後独立再解答を確定するまでは参照しない
 - 伝達関数・ボード線図・PID等の固定範囲外追加0件
 
 このrunでは保存済み個別正答を視認済みのため、完成後独立再解答そのものは実施しない。
@@ -499,6 +499,26 @@ Topic 12はまだ `completed` としない。
 
 判定: `topic_12_source_progress_sync_complete / IN_PROGRESS`。
 
+## Topic 12 最終QA再判定
+
+初回FAIL原因の解消を確認し、最終QAを再判定した。
+
+- 必須成果物実在: PASS
+- 固定EXAM_ALIGNMENT 5問: PASS
+- 制作前独立検証: `5 / 5問・9 / 9答案要素 PASS`
+- 完成後独立再解答: `5 / 5問・9 / 9答案要素 PASS`
+- 練習QA: `12 / 12 PASS`
+- 表示QA・成果物実在: PASS
+- source進捗整合: PASS
+- 教材外知識補完0件
+- 固定EXAM_ALIGNMENT変更0件
+- 固定範囲外追加0件
+- 未確認実車値追加0件
+
+判定: `PASS / completed`。
+
+Topic 12完了により `09_electrical_math_3` は `12 / 12 completed`。
+
 ## 次工程
 
-Topic 12の最終QAを再判定する。
+MASTER_SPECの制作順では次は `10_electrical_math_2`。GitHub正本の同系列STATUSでは Topic 16「数値微分・数値積分」の解説画像PowerPoint＋表示QAが次工程。
