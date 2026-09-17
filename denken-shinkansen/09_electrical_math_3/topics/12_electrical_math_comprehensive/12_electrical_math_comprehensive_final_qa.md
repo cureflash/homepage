@@ -6,21 +6,21 @@
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`09_electrical_math_3/SPEC.md` に照らして最終QAを実施した。仕様追加はしていない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`09_electrical_math_3/SPEC.md` に照らして最終QAを再判定した。仕様追加はしていない。
 
-技術内容・過去問対応品質ゲートはPASSしているが、主source・練習sourceの進捗記録3箇所が実成果物と現在地へ同期していないため、Topic 12はまだ `completed` としない。
+初回最終QAで唯一FAILだった主source・練習sourceの旧進捗記録3箇所は、再判定前に実成果物と現在地へ同期済みである。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、完成後独立再解答結果は変更していない。
 
 ## 必須成果物の実在確認
 
-GitHub正本上で次を確認した。
+GitHub正本上で次を再確認した。
 
 | 成果物 | blob SHA | 判定 |
 |---|---|---|
-| 主source Markdown | `2d95cedbc0af87360829885cab9ed53a0c432089` | PASS |
+| 主source Markdown | `1813a31ee701159bec63337d9f8df36d83f9083d` | PASS |
 | 解説PDF | `8ce9464741a67f55200fd9f1a7f9ba82dbb7a9e1` | PASS |
-| 練習source | `e9bf98fe9575405d53ab87dfc805f40574890ec9` | PASS |
+| 練習source | `240c72d1428f4dcf578fb15b7c89b519cde9c6b6` | PASS |
 | 練習PDF | `465a9d59c2a1929e80f894625d41532855354ee8` | PASS |
 | 解説画像PowerPoint | `85bdaafe7ca14624b6d6da9ddecd7643a1742bd1` | PASS |
 
@@ -54,7 +54,7 @@ blind gateに従い、固定5問を完成教材だけで独立再解答済み。
 
 ## 練習・表示QA
 
-記録済みQAと対応成果物の実在を確認した。
+記録済みQAと対応成果物の実在を再確認した。
 
 - 練習問題: 12問、全問五肢択一、基礎3 / 標準7 / 複合2
 - 練習数値・論理QA: `12 / 12 PASS`
@@ -87,17 +87,15 @@ blind gateに従い、固定5問を完成教材だけで独立再解答済み。
 
 仕様境界はPASS。
 
-## source進捗整合
+## 初回FAIL項目の解消確認
 
-FAIL。
+初回FAILだった進捗記録3箇所を再確認した。
 
-技術本文・問題・正答には不整合を確認していないが、次の旧進捗記録が残っている。
+1. 主source冒頭 `## 状態` は、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答まで完了し、初回最終QA後の進捗同期済み・次工程が最終QA再判定である実態へ同期済み。
+2. 主source末尾 `## 次工程` は `Topic 12の最終QAを再判定する` へ同期済み。
+3. 練習source末尾 `## 次工程` は `Topic 12の最終QAを再判定する` へ同期済み。
 
-1. 主source冒頭 `## 状態` が「解説本文＋3段階例題まで完了」のままで、解説PDF・練習source/PDF・PowerPoint・完成後独立再解答の完了が反映されていない。
-2. 主source末尾 `## 次工程` が `Topic 12の解説PDFを作成する` のまま。
-3. 練習source末尾 `## 次工程` が `Topic 12の練習PDF（解答・完全解説付き）を作成する` のまま。
-
-この3箇所だけを実成果物と現在地へ同期する必要がある。技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、完成後独立再解答結果は変更しない。
+再判定時点で、初回FAIL原因は解消している。
 
 ## 最終判定
 
@@ -111,6 +109,7 @@ FAIL。
 - 固定範囲外追加: 0件
 - 未確認実車値追加: 0件
 - 仕様境界: PASS
-- source進捗整合: FAIL
+- source進捗整合: PASS
+- 初回FAIL原因の解消: PASS
 
-したがって Topic 12 は `NEEDS_REVISION / IN_PROGRESS`。次工程は主source・練習sourceの旧進捗記録3箇所だけを現在地へ同期する。
+したがって Topic 12 は `PASS / completed`。系列完成数は `12 / 12`。`09_electrical_math_3` は完了。
