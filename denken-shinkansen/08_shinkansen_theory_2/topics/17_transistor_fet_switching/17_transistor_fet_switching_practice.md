@@ -7,8 +7,8 @@
 固定EXAM_ALIGNMENTの一次5問・25答案要素、およびTopic 17固定範囲だけから練習問題12問を作成した。二種理論は一次試験が中心であり、固定範囲だけで完結する二次記述式を採用していないため、二次数合わせは行わない。
 
 - completion: `in_progress`
-- stage: `PRACTICE_PDF_COMPLETE`
-- 次工程: 解説画像PowerPoint＋表示QA
+- stage: `PROGRESS_RECORDS_SYNCED`
+- 次工程: 最終QA再実施
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
@@ -273,4 +273,4 @@ Q=C_LV_DD=(150 pF)(4.0 V)=600 pC=0.60 nC。I_avg=fQ=(250 kHz)(0.60 nC)=1.5×10^-
 
 # 次工程
 
-固定EXAM_ALIGNMENTと本練習問題を変更せず、解説画像PowerPoint＋表示QAを作成する。
+固定EXAM_ALIGNMENTと本練習問題を変更せず、最終QAを再実施する。
