@@ -1,15 +1,15 @@
 # STATUS - 電験二種「電気数学」
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 14 / 20
-- current_status: `topic_15_final_qa_needs_revision`
+- current_status: `topic_15_progress_records_synced`
 - last_completed_topic: `14 フーリエ変換・FFT`
 - active_topic: `15 対数・dB・周波数応答`
-- next_start: Topic 15の進捗記録6ファイルを実成果物へ同期する
+- next_start: Topic 15の最終QAを再判定する
 
 ## Topic 07 制作品質ゲート
 
@@ -61,7 +61,7 @@
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
 - [x] 二次「機械・制御」5問・6対象設問を固定
 - [x] 要求知識・式・設問型・教材内必要説明をsourceへ固定
-- [x] R7 問4はTopic 10以降の伝達関数・定常偏差・畳み込み等が中心のため非採用
+- [x] R7 問4はTopic 10以降の伝達関数・定常偏差・畳み込み等が中心でTopic 10以降へ跨るため非採用
 - [x] R6 問4は(4)のみ採用し、伝達関数の一般理論・周波数応答を除外
 - [x] H29 問4 (1)〜(2)、H25 問4 (1)、H24 問4 (1)、H18 問4 (1)を採用
 - [x] 制作前独立再解答・公式標準解答照合 `6 / 6 PASS`
@@ -218,25 +218,22 @@
 - [x] PowerPoint表示QA
 - [x] 完成後独立再解答 `12 / 12 PASS`（post-completion lock commit `05a031bf1ce152cf071f4028fa4960443d31b1df`）
 - [x] 最終QA実施 → `NEEDS_REVISION`
-- [ ] 進捗記録6ファイルの同期
+- [x] 進捗記録6ファイルの同期
 - [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 15 `対数・dB・周波数応答` の最終QAを実施した。
+最新main、`STATUS.md` / `HANDOFF.md`、直近変更を確認し、既存の「電気数学二種を進行」枠の成果をreconcileした。
 
-必須成果物、固定第二種公式過去問5問・12答案要素、完成後独立再解答 `12 / 12 PASS`、解説PDF `4 / 4 PASS`、練習PDF `6 / 6 PASS`、PowerPoint `5 / 5 PASS`、SPEC境界はいずれもPASS。
+初回最終QAでFAIL要因だった6ファイルは、既存枠によりすでに実成果物へ同期済みであることを確認した。主source、解説PDF QA、練習source、練習PDF QA、PowerPoint QAはいずれも次工程が「Topic 15の最終QAを再判定する」へ更新済みで、`HANDOFF.md` も `topic_15_progress_records_synced` / 最終QA再判定へ同期済みだった。
 
-一方、主source、解説PDF QA、練習source、練習PDF QA、PowerPoint QA、`HANDOFF.md` の計6ファイルが旧工程の進捗記録を残しているため、進捗整合だけFAILとした。技術本文・問題・正答・PDF・PowerPointの修正は不要。
-
-最終QA記録:
-`topics/15_log_db_frequency_response/15_log_db_frequency_response_final_qa.md`
+重複修正を避け、旧状態を残していた本 `STATUS.md` のみを実状態へ同期した。技術本文・問題・正答・PDF・PowerPoint・EXAM_ALIGNMENTは変更していない。
 
 ## 判定
 
-Topic 15は `FINAL_QA_NEEDS_REVISION / IN_PROGRESS`。
+Topic 15は `PROGRESS_RECORDS_SYNCED / IN_PROGRESS`。
 
 完成数は `14 / 20` のまま。
 
-次はTopic 15の進捗記録6ファイルだけを実成果物へ同期し、その後に最終QAを再判定する。
+次はTopic 15の最終QAを再判定する。
