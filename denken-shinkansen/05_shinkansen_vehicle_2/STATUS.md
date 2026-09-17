@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `14 / 39`
-- current_status: `topic_15_progress_sync_complete`
-- last_completed_topic: `14 300系⑤ 走行抵抗と必要けん引力`
-- active_topic: `15 500系 高速域の出力・熱解析`
-- next_start: Topic 15最終QAを再実施し、進捗記録4箇所の整合を再確認する。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更せず、全ゲートPASS時だけcompletedとする
+- exam_aligned_completed_topics: `15 / 39`
+- current_status: `topic_15_completed`
+- last_completed_topic: `15 500系 高速域の出力・熱解析`
+- active_topic: `16 700系 多レベル変換器とPWM`
+- next_start: Topic 16の制作前EXAM_ALIGNMENTを開始する。MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPECを守り、公式過去問を直近年度から確認して固定範囲・答案要素を確定する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -25,7 +25,7 @@
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
-- [ ] 15 500系 高速域の出力・熱解析 — IN_PROGRESS / PROGRESS_SYNC_COMPLETE
+- [x] 15 500系 高速域の出力・熱解析 — PASS
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -189,9 +189,10 @@
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL / 4件要同期`
+- 進捗記録整合: `PASS / 4件同期確認済み`
 - 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の変更: `0件`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- SPEC外追加: `0件`
+- 判定: `PASS / completed`
 
 ## Topic 15 進捗記録同期
 - 主source冒頭 `## 状態`: `PASS / topic_15_final_qa_needs_progress_sync`
@@ -229,7 +230,7 @@ SPEC指定可視化:
 - 簡略熱モデルを第二種公式過去問で直接問われた論点とは扱わない
 
 ## 過去Topic
-Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
+Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 15最終QAを再実施し、進捗記録4箇所の整合を再確認する。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更せず、全ゲートPASS時だけTopic 15をcompletedとする。
+Topic 16「700系 多レベル変換器とPWM」の制作前EXAM_ALIGNMENTを開始する。公式過去問を直近年度から確認し、SPEC固定範囲内でゲート対象を確定する。
