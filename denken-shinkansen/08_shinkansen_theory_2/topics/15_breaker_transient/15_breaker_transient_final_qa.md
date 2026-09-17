@@ -76,31 +76,41 @@ R8二次は2026-09-17時点で未実施。R7/R6二次の制御系時間応答、
 
 判定: `PASS`
 
-### 6. 進捗記録整合
+### 6. 初回blocker解消確認
 
-実成果物・HANDOFF・STATUSはPowerPoint完成、完成後独立再解答 `25 / 25 PASS`、次工程「最終QA」を示している。一方、以下の4記録箇所が実状態より古い。
+初回最終QAで指摘した進捗記録4箇所を再照合した。
 
 1. `15_breaker_transient.md` 冒頭状態
-   - stage: `PRACTICE_PDF_COMPLETE`
-   - PowerPoint QA: `NOT_STARTED`
-   - 完成後独立再解答: `NOT_STARTED`
-   - 次工程: 解説画像PowerPoint＋表示QA
+   - stage: `SOURCE_PROGRESS_SYNCED`
+   - PowerPoint QA: `PASS / POWERPOINT_COMPLETE`
+   - 完成後独立再解答: `PASS / INDEPENDENT_REANSWER_COMPLETE`
+   - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+   - 次工程: `最終QA再実施`
 2. `15_breaker_transient.md` 末尾
-   - 「次工程: 解説画像PowerPoint＋表示QA」のまま
+   - PowerPoint・完成後独立再解答・初回最終QAを実状態へ同期済み
+   - 次工程: `最終QA再実施`
 3. `15_breaker_transient_practice.md` 冒頭状態
-   - stage: `PRACTICE_PDF_COMPLETE`
-   - 次工程: 解説画像PowerPoint＋表示QA
+   - stage: `SOURCE_PROGRESS_SYNCED`
+   - 次工程: `最終QA再実施`
 4. `15_breaker_transient_practice.md` 末尾
-   - 「次工程: 解説画像PowerPoint＋表示QA」のまま
+   - 次工程: `最終QA再実施`
 
-技術内容・固定EXAM_ALIGNMENT・問題・正答の不整合ではなく、進捗記録だけの不整合である。ただしGitHub正本の状態記録が実成果物と矛盾しているため、この状態では `completed` にしない。
+初回blocker解消: `4 / 4 PASS`。
 
-判定: `NEEDS_REVISION`
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXの変更は `0件`。
+
+判定: `PASS`
+
+### 7. 進捗記録整合
+
+主source・練習source・STATUS・HANDOFF・実成果物の現在地は、最終QA再実施直前まで整合している。本QAのPASSをSTATUS・HANDOFFへ反映し、completed状態同期は次工程として分離する。
+
+判定: `PASS`
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / FINAL_QA_COMPLETE`
 
-固定一次5問・25答案要素の独立再解答、二次採用判断、必須成果物、表示QA、練習QA、SPEC境界は全件PASS。blockerは主source・練習sourceの旧進捗記録4箇所のみ。
+固定一次5問・25答案要素の完成後独立再解答、二次採用判断、必須成果物、表示QA、練習QA、SPEC境界、初回blocker4件の解消を全件確認した。
 
-次工程は、上記4箇所を既存成果物の実状態へ同期すること。固定EXAM_ALIGNMENT・技術本文・練習問題・正答・PDF/PPTXは変更しない。同期後に最終QAを再実施し、PASS確認後にcompleted状態へ進める。完成数は `14 / 21` のまま。
+Topic 15は最終QAを通過したが、completed状態同期はまだ行わない。完成数は `14 / 21` のまま。次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。
