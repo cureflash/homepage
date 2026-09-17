@@ -1,7 +1,7 @@
 # 13 新幹線の架線は何でできている？
 
 ## 状態
-`topic_13_practice_pdf_complete`。制作前EXAM_ALIGNMENT、制作前独立検証、解説本文、基礎・本試験標準・複合の3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QAまで完了。解説画像PowerPoint、完成後独立再解答、最終QAは未着手。
+`topic_13_powerpoint_complete`。制作前EXAM_ALIGNMENT、制作前独立検証、解説本文、基礎・本試験標準・複合の3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QAまで完了。完成後独立再解答、最終QAは未着手。
 
 品質ゲート対象は、電気技術者試験センター公式過去問の直近年度を優先して確認した電力・電気材料5問に固定する。件数合わせのためSPEC固定範囲を拡張しない。
 
@@ -378,11 +378,16 @@ SF6は高い絶縁性能とアーク消弧性能を持ち、ガス遮断器等�
 - 練習PDF数値・論理再検算: `12 / 12 PASS`
 - 練習PDF正答一意性: `12 / 12 PASS`
 - 練習PDF固定5問・5答案要素への接続: `5 / 5 PASS`
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 16:9・4枚
+- PowerPoint固定5問・5答案要素の要求事項可視化: `5 / 5 PASS`
+- PowerPoint表示QA: 1601×900 `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- PowerPoint内数値・論理QA: `PASS`
 - 完成後ブラインド独立再解答: 未実施
 - 最終QA: 未実施
 - SPEC固定範囲外追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
 ## 次
-Topic 13解説画像PowerPointを作成し、固定5問・5答案要素の要求事項可視化、16:9表示QA、overflow、ZIP整合性を確認する。
+Topic 13の完成後ブラインド独立再解答を、保存済み正答を先に見ず完成教材だけで固定5問・5答案要素に対して実施する。
