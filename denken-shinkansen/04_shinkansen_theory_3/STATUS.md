@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 12 / 14
-- current_status: `topic_13_explanation_pdf_complete`
+- current_status: `topic_13_practice_pdf_complete`
 - last_completed_topic: `12 300系はなぜVVVFになった？`
 - active_topic: `13 インバータはどうやって三相交流を作る？`
-- next_start: Topic 13の練習問題source・練習PDFを作成する
+- next_start: Topic 13の解説画像PowerPointを作成する
 
 ## Topic 01 進捗
 
@@ -236,24 +236,28 @@
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF
-- [ ] 練習問題source・練習PDF
+- [x] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
 - [ ] 最終QA PASS
 
 ## 今回進めた内容
 
-Topic 13 `インバータはどうやって三相交流を作る？` の解説PDFを完成し、GitHub正本へ反映する段階までQAを完了した。
+Topic 13 `インバータはどうやって三相交流を作る？` の練習問題source・練習PDFを作成し、QA後にGitHub正本へ反映した。
 
-- A4縦4ページ
-- 200 dpi表示QA: `4 / 4 PASS`
+- 全15問・全問五肢択一
+- 基礎4問 / 本試験標準8問 / 複合・応用3問
+- 正答一意性: `15 / 15 PASS`
+- 正答位置 `(1)`〜`(5)`: 各3問
+- 数値・単位・論理再計算: `8 / 8 PASS`
+- 固定4過去問要求への接続: `4 / 4 PASS`
+- 練習PDF: A4縦3ページ
+- 200 dpi表示QA: `3 / 3 PASS`
 - 文字抽出QA: `PASS`
-- 固定4過去問の要求事項: `4 / 4` 反映
-- 3段階例題: `3 / 3 PASS`
-- クリッピング・重なり・文字化け・ページ外はみ出し: `0件`
+- clipping / overlap / broken glyph: `0件`
 - 系列SPEC固定範囲外追加: `0件`
-- 詳細PWM方式、V/f制御、素子損失、NAND・マルチバイブレータ、直流チョッパ固有L/C、測定論点、未確認実車値の追加: `0件`
+- 未確認実車値依存: `0件`
 
 ## 判定
 
-Topic 13は `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `12 / 14`。次は練習問題source・練習PDFを作成する。
+Topic 13は `PRACTICE_PDF_COMPLETE / IN_PROGRESS`。完成数は `12 / 14`。次は解説画像PowerPointを作成する。
