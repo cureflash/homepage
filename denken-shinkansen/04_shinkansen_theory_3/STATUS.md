@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 13 / 14
-- current_status: `topic_14_powerpoint_complete`
+- current_status: `topic_14_independent_reanswer_needs_revision`
 - last_completed_topic: `13 インバータはどうやって三相交流を作る？`
 - active_topic: `14 East iは何をどう測っている？`
-- next_start: Topic 14の完成後公式過去問独立再解答を、保存済み正答を先に見ず固定8問・13答案要素で実施する
+- next_start: Topic 14の固定8問・13答案要素を、保存済み正答番号・個別最終数値を先に見ず再度独立再解答する。初回は `7 / 8問・12 / 13答案要素` で、令和6年度下期 理論 問16(b)の測定点同定を誤った
 
 ## Topic 01 進捗
 
@@ -255,26 +255,6 @@
 - [x] 解説PDF
 - [x] 練習問題source・練習PDF
 - [x] 解説画像PowerPoint
-- [ ] 完成後の公式過去問独立再解答
+- [x] 完成後の公式過去問独立再解答 初回実施 `7 / 8問・12 / 13答案要素`（`NEEDS_REVISION`: 令和6年度下期 理論 問16(b)の測定点同定を誤読）
+- [ ] 完成後の公式過去問独立再解答 `8 / 8問・13 / 13答案要素 PASS`
 - [ ] 最終QA PASS
-
-## 今回進めた内容
-
-Topic 14 `East iは何をどう測っている？` の解説画像PowerPointを作成し、固定8問要求への接続・表示・構造QAを実施した。
-
-- PowerPoint: 16:9・4枚
-- 固定8問要求への接続: `8 / 8 PASS`
-- 200 dpi表示QA: `4 / 4 PASS`
-- shape-bound overflow: `0件`
-- 目視文字欠け・重なり・文字化け: `0件`
-- 必須語・公式の文字抽出: `PASS`
-- ZIP/XML整合性: `PASS`
-- 固定EXAM_ALIGNMENT変更: `0件`
-- 系列SPEC外論点追加: `0件`
-- 未確認East i情報追加: `0件`
-- PPTX: `topics/14_east_i_measurement/14_east_i_measurement_images.pptx`
-- QA: `topics/14_east_i_measurement/14_east_i_measurement_images_qa.md`
-
-## 判定
-
-Topic 14は `POWERPOINT_COMPLETE / IN_PROGRESS`。完成数は `13 / 14`。次は完成後の公式過去問独立再解答を、固定8問・13答案要素について保存済み正答を先に見ず実施する。
