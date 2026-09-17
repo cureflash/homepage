@@ -7,8 +7,8 @@
 固定EXAM_ALIGNMENTの一次5問・25答案要素、およびTopic 15固定範囲だけから練習問題12問を作成した。二種理論は一次試験が中心のため、無理に二次記述式を追加しない。
 
 - completion: `in_progress`
-- stage: `PRACTICE_PDF_COMPLETE`
-- 次工程: 解説画像PowerPoint＋表示QA
+- stage: `SOURCE_PROGRESS_SYNCED`
+- 次工程: 最終QA再実施
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
@@ -32,7 +32,6 @@
 固定一次5問・25答案要素の要求事項を練習問題へ `25 / 25` 接続した。個別の公式過去問本文・正答は複製していない。
 
 # 問題
-
 ## 基礎
 
 ### 問1 スイッチング直後の連続条件
@@ -264,4 +263,4 @@ tau=R_th C=15 kohm×20 uF=0.30 s。一次回路の一般形より v_C(t)=30+(120
 
 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
-次工程: 解説画像PowerPoint＋表示QA。
+次工程: 最終QA再実施。
