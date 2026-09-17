@@ -8,13 +8,13 @@ Topic 01〜11は `completed`。
 
 完成数: `11 / 12`
 
-current_status: `topic_12_explanation_pdf_complete`
+current_status: `topic_12_practice_source_complete`
 
 last_completed_topic: `11 グラフ・特性曲線を読む`
 
 active_topic: `12 電気数学総合`
 
-next_start: `Topic 12の練習問題source`
+next_start: `Topic 12の練習PDF（解答・完全解説付き）`
 
 ## Topic 11 固定仕様範囲
 
@@ -377,6 +377,24 @@ R8上 電力 問15は Topic 09では水力設備知識が固定範囲外だっ�
 
 判定: `topic_12_explanation_pdf_complete / IN_PROGRESS`。
 
+## Topic 12 練習問題source
+
+次をGitHub正本へ反映した。
+
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_practice.md`
+- 全12問・全問五肢択一
+- 基礎3 / 標準7 / 複合2
+- 数値・論理独立再計算 `12 / 12 PASS`
+- 正答一意性 `12 / 12 PASS`
+- 固定5過去問への接続 `5 / 5 PASS`
+- 固定必須説明20項目への練習接続 `20 / 20 PASS`
+- 解答解説は全問で使用式・理由・代入・中間計算・最終値または判断根拠・検算を記載
+- 固定EXAM_ALIGNMENT変更0件
+- 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
+- 未確認の新幹線実車値追加0件
+
+練習source判定: `PASS / PRACTICE_SOURCE_COMPLETE`。
+
 ## 次工程
 
-主sourceと解説PDFを正本として、Topic 12の練習問題sourceを作成する。
+練習sourceを正本として、Topic 12の練習PDF（解答・完全解説付き）を作成する。
