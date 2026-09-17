@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_12_blind_gate_ready`
+- current_status: `topic_12_independent_reanswer_complete`
 - last_completed_topic: `11 グラフ・特性曲線を読む`
 - active_topic: `12 電気数学総合`
-- next_start: `Topic 12の完成教材だけでの公式過去問独立再解答`
+- next_start: `Topic 12の最終QA`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -149,27 +149,27 @@
 - [x] 練習PDF（解答・完全解説付き）
 - [x] 解説画像PowerPoint
 - [x] 完成後独立再解答前のブラインドゲート整備
-- [ ] 完成教材だけでの公式過去問独立再解答
+- [x] 完成教材だけでの公式過去問独立再解答 `5 / 5問・9 / 9答案要素 PASS`
 - [ ] 最終QA
 - [ ] 必要時のsource進捗記録同期
 - [ ] 最終QA再判定 `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 12「電気数学総合」の完成後独立再解答前ブラインドゲートをGitHub正本へ反映した。
+Topic 12「電気数学総合」の完成教材だけでの公式過去問独立再解答を実施し、GitHub正本へ反映した。
 
-- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_blind_gate.md`
-- 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
-- 固定品質ゲート5問は変更なし
-- 固定EXAM_ALIGNMENT・教材成果物・問題・正答は変更なし
-- 主sourceの制作前独立解答節は、完成後独立解答を確定するまで参照しない
-- HANDOFFには個別の選択肢番号・数値解・導出を保存しない状態を維持
+- `topics/12_electrical_math_comprehensive/12_electrical_math_comprehensive_independent_reanswer.md`
+- 前回のブラインド汚染実行は無効扱いのまま、本実行では保存済み個別正答を含む主source区間を参照せずに答案を先に確定
+- 固定品質ゲート5問・9答案要素を変更なしで再解答
+- 公式解答照合 `5 / 5問・9 / 9答案要素 PASS`
+- 教材外知識補完0件
+- 固定EXAM_ALIGNMENT変更0件
 - 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
 - 法規固有論点追加0件
 - 未確認の新幹線実車値追加0件
 
 ## 判定
 
-`topic_12_blind_gate_ready / IN_PROGRESS`。
+`topic_12_independent_reanswer_complete / IN_PROGRESS`。
 
-完成数は `11 / 12`。次工程はTopic 12の完成教材だけでの公式過去問独立再解答。
+完成数は `11 / 12`。次工程はTopic 12の最終QA。
