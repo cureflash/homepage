@@ -4,11 +4,9 @@
 実施日: 2026-09-17
 
 ## 判定
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。技術内容、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。仕様追加は行っていない。
-
-未完了理由は進捗記録整合のみ。後工程が完了済みなのに旧「次工程」が残る4ファイルを確認したため、品質ゲート上 `completed` にはしない。
+`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、`02_shinkansen_power_3/SPEC.md` とGitHub正本を再照合した。前回最終QAで唯一FAILだった旧進捗記録4箇所は現在地へ同期済みで、技術内容、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界、進捗記録整合を全件PASSと判定した。仕様追加は行っていない。
 
 ## 必須成果物
 GitHub正本上で以下の実在を確認した。
@@ -89,16 +87,16 @@ R8上 電力 問7は自動再閉路、R8上 電力 問9は通信誘導等の固�
 SPEC境界: PASS。
 
 ## 進捗記録整合
-以下4箇所が現在の実成果物と不一致。
+前回FAILだった4箇所を再確認した。
 
-1. `11_fault_protection_explanation_qa.md` — 「次工程は練習問題source」と残っているが、練習source・練習PDF・PowerPoint・独立再解答・main source同期まで完了済み。
-2. `11_fault_protection_practice_source.md` — 「次工程は練習PDF、PowerPoint・独立再解答にはまだ進まない」と残っているが、後工程は完了済み。
-3. `11_fault_protection_powerpoint_qa.md` — 「完成後ブラインド独立再解答はまだ実施しない」と残っているが、`7 / 7 PASS` 済み。
-4. `11_fault_protection_independent_reanswer.md` — 「次工程はmain source同期、最終QAにはまだ進まない」と残っているが、main source同期済みで本最終QAも実施済み。
+1. `11_fault_protection_explanation_qa.md` — 練習source・練習PDF・PowerPoint・独立再解答・main source同期・最終QA実施済みを反映済み。
+2. `11_fault_protection_practice_source.md` — 練習PDF・PowerPoint・独立再解答・main source同期・最終QA実施済みを反映済み。
+3. `11_fault_protection_powerpoint_qa.md` — 完成後ブラインド独立再解答 `7 / 7 PASS`、main source同期・最終QA実施済みを反映済み。
+4. `11_fault_protection_independent_reanswer.md` — main source同期・最終QA実施済みを反映済み。
 
-技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF/PPTX、独立再解答結果の修正は不要。上記4ファイルの進捗記録だけを現在地へ同期した後、最終QAを再実施する。
+本sourceも `topic_11_completed`、最終QA `PASS / completed`、次工程Topic 12制作前EXAM_ALIGNMENTへ同期した。
 
-進捗記録整合: FAIL。
+進捗記録整合: PASS。
 
 ## 最終判定
 - 必須成果物: PASS
@@ -107,8 +105,8 @@ SPEC境界: PASS。
 - 教材外知識補完: `0件`
 - PDF/PPTX QA: PASS
 - SPEC境界: PASS
-- 進捗記録整合: FAIL（旧工程4箇所）
+- 進捗記録整合: PASS
 
-Topic 11は `NEEDS_REVISION / IN_PROGRESS` を維持する。新品質基準の完成数は `10 / 16`。
+Topic 11は `PASS / completed`。新品質基準の完成数は `11 / 16`。
 
-次工程は、上記4ファイルの旧進捗記録だけを現在地へ同期する。技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
+次工程はTopic 12 `320km/hでもパンタグラフが離れないのはなぜ？` の制作前EXAM_ALIGNMENT。Topic 11の技術内容・固定EXAM_ALIGNMENT・数式・問題・正答・PDF/PPTX・独立再解答結果は変更しない。
