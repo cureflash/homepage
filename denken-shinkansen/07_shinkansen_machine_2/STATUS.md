@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `13 / 22`
-- current_status: `topic_14_independent_reanswer_complete`
+- current_status: `topic_14_final_qa_needs_revision`
 - last_completed_topic: `13 L0系のリニア同期モータを等価回路で考える`
 - active_topic: `14 L0系を500km/hで同期させる`
-- next_start: Topic 14 最終QA
+- next_start: Topic 14 進捗記録同期
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -641,8 +641,18 @@
 - [x] 固定範囲外論点・Topic 15以降依存・未確認L0実値依存 `0件`
 - [x] 固定EXAM_ALIGNMENT・教材本文・練習問題・PDF/PPTXの内容変更 `0件`
 
+## Topic 14 最終QA
+- [x] 最終QA記録: `topics/14_l0_500kmh_synchronization/14_l0_500kmh_synchronization_final_qa.md`
+- [x] 必須成果物の実在: PASS
+- [x] 一次1問＋二次4問・27答案要素の過去問対応: PASS
+- [x] 完成後独立再解答 `27 / 27 PASS`
+- [x] 練習問題・PDF/PPTX QA: PASS
+- [x] 固定範囲境界・未確認L0実値: PASS
+- [ ] 進捗記録整合: FAIL（main source 2箇所＋練習source 1箇所）
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
 ## 今回進めた内容
-Topic 14を1段階進め、完成後独立再解答を完了した。固定一次1問＋二次4問・27答案要素を完成教材だけで再解答し、公式解答・標準解答との照合は `27 / 27 PASS`。教材外知識補完・固定範囲外論点・Topic 15以降依存・未確認L0実値依存はいずれも `0件`。
+Topic 14の最終QAを実施した。固定一次1問＋二次4問・27答案要素の完成後独立再解答 `27 / 27 PASS`、必須成果物、練習問題・PDF/PPTX QA、固定範囲境界はPASS。未完了理由はmain sourceの `## 状態` と末尾 `# 次工程`、練習source末尾 `# 次工程` の旧進捗記録3箇所のみ。
 
 ## 判定
-Topic 14は `INDEPENDENT_REANSWER_COMPLETE / IN_PROGRESS`。完成数は `13 / 22`。次はTopic 14の最終QA。
+Topic 14は `NEEDS_REVISION / IN_PROGRESS`。完成数は `13 / 22`。次は技術内容を変更せず進捗記録3箇所だけを実成果物へ同期し、その後に最終QAを再実施する。
