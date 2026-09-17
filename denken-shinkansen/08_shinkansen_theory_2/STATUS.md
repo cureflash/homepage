@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 15 / 21
-- current_status: `topic_16_reanswer_complete`
+- current_status: `topic_16_final_qa_needs_revision`
 - last_completed_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 - active_topic: `16 300系の半導体はなぜ電流を一方向へ流せる？`
-- next_start: Topic 16 最終QA
+- next_start: Topic 16 主source・練習sourceの旧進捗記録同期
 
 ## Topic 06 制作進捗
 - [x] 制作前EXAM_ALIGNMENT
@@ -278,29 +278,31 @@
 - [x] 練習問題source＋練習PDF
 - [x] 解説画像PowerPoint＋表示QA
 - [x] 完成後独立再解答: `25 / 25 PASS`
-- [ ] 最終QA
+- [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- [ ] 主source・練習sourceの旧進捗記録同期
+- [ ] 最終QA再実施
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 16の完成後独立再解答を実施した。
+Topic 16「300系の半導体はなぜ電流を一方向へ流せる？」の初回最終QAをGitHub正本へ反映した。
 
-- 記録: `topics/16_semiconductor_diode/16_semiconductor_diode_reanswer.md`
-- R8 一次 理論 問7: `5 / 5 PASS`
-- H30 一次 理論 問4: `5 / 5 PASS`
-- H26 一次 理論 問7: `5 / 5 PASS`
-- H24 一次 理論 問4: `5 / 5 PASS`
-- H22 一次 理論 問7: `5 / 5 PASS`
-- 固定一次5問・25答案要素: `25 / 25 PASS`
-- 公式標準解答との一致: `25 / 25`
-- 教材外知識補完: `0件`
+- 必須成果物: `PASS`
+- 固定一次5問・25答案要素の完成後独立再解答: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
 - 二次採用: `0問`、二次数合わせ: `0件`
-- SPEC固定範囲外追加: `0件`
-- 降伏機構の詳細追加: `0件`
-- パワーエレクトロニクス回路追加: `0件`
-- Topic 17先取り: `0件`
-- 未確認の300系主変換装置仕様追加: `0件`
+- SPEC境界: `PASS`
+- 解説PDF表示QA: `2 / 2 PASS`
+- 練習PDF表示QA: `3 / 3 PASS`
+- 練習12問の数値・論理QA / 正答一意性: `12 / 12 PASS`
+- PowerPoint表示QA: `5 / 5 PASS`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答の不整合: `0件`
+- 進捗記録blocker: `4箇所`
+  - 主source冒頭状態
+  - 主source末尾「次工程」
+  - 練習source冒頭状態
+  - 練習source末尾「次工程」
 
 ## 判定
 
-Topic 16は `PASS / INDEPENDENT_REANSWER_COMPLETE`。完成数は `15 / 21` のまま。次工程は最終QA。
+Topic 16は `NEEDS_REVISION / IN_PROGRESS`。品質ゲート自体はPASSで、blockerは主source・練習sourceの旧進捗記録4箇所のみ。完成数は `15 / 21` のまま。次工程は上記4箇所の実成果物状態への同期。
