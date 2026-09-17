@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_16_final_qa_needs_revision`
+- current_status: `topic_16_progress_records_synced`
 - last_completed_topic: `15 新幹線の補機モーターを設計する`
 - active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: Topic 16 進捗記録3箇所を実成果物状態へ同期
+- next_start: Topic 16 最終QAを再実施
 
 ## 完了テーマ
 - [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `IN_PROGRESS` — 技術・試験対応ゲートはPASS、最終QAで進捗記録3箇所の不整合を検出
+- [ ] Topic 16 `IN_PROGRESS` — 技術・試験対応ゲートはPASS、前回最終QAで検出した進捗記録3箇所を同期済み。最終QA再実施待ち
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -146,22 +146,26 @@
 - 記録: `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md`
 - 判定: `PASS / topic_16_independent_reanswer_complete`
 
-## Topic 16 最終QA
+## Topic 16 最終QA（前回）
 - [x] 必須成果物実在: PASS
 - [x] 固定一次4問＋二次記述1問・12答案要素: `12 / 12 PASS`
 - [x] 解説PDF表示・抽出QA: PASS
 - [x] 練習PDF表示・数値・抽出QA: PASS
 - [x] PowerPoint表示・ZIP整合性QA: PASS
 - [x] 仕様境界: PASS
-- [ ] 進捗記録整合: FAIL
-  - main source `## 状態` が `topic_16_explanation_source_complete` / 次工程「解説PDF作成」のまま
-  - main source末尾 `## 次工程` が「解説PDF作成」のまま
-  - 練習source末尾 `# 次工程` が「練習PDF作成」のまま
+- [ ] 進捗記録整合: FAIL（下記同期で修正済み。最終QA再実施待ち）
 - 記録: `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_final_qa.md`
 - 判定: `NEEDS_REVISION / topic_16_final_qa_needs_revision`
 
+## Topic 16 進捗記録同期
+- [x] main source `## 状態` を全成果物・独立再解答完了後の実状態へ同期
+- [x] main source末尾 `## 次工程` を「Topic 16 最終QA再実施」へ同期
+- [x] 練習source末尾 `# 次工程` を「Topic 16 最終QA再実施」へ同期
+- [x] 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更 `0件`
+- 判定: `PASS / topic_16_progress_records_synced`
+
 ## 今回進めた内容
-Topic 16最終QAを実施した。技術内容・固定EXAM_ALIGNMENT・独立再解答・必須成果物・PDF/PPTX QA・仕様境界はすべてPASS。進捗記録3箇所だけが実成果物状態と不一致のため、Topic 16は完了扱いにしていない。
+前回最終QAで唯一のFAILだった進捗記録3箇所を実成果物状態へ同期した。固定一次4問＋二次記述1問・12答案要素、独立再解答 `12 / 12 PASS`、技術本文、PDF/PPTXは変更していない。
 
 ## 判定
-Topic 16は `topic_16_final_qa_needs_revision / IN_PROGRESS`。完成数は `15 / 22` のまま。次はmain sourceの状態・次工程と練習sourceの次工程を実成果物状態へ同期する。
+Topic 16は `topic_16_progress_records_synced / IN_PROGRESS`。完成数は `15 / 22` のまま。次はTopic 16最終QAを再実施する。
