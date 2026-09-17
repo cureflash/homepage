@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `14 / 16`
-- current_status: `topic_15_exam_alignment_complete`
+- current_status: `topic_15_explanation_source_complete`
 - last_completed_topic: `14 停電してもN700Sが走れるのはなぜ？`
 - active_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
-- next_start: Topic 15の解説source本文を作成する
+- next_start: Topic 15の解説PDFを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -27,7 +27,7 @@
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [ ] 15〜16 — 未完了
 
-## Topic 15 制作前EXAM_ALIGNMENT
+## Topic 15 進行状態
 - 固定範囲（照明）: 光束 / 光度 / 照度 / 輝度 / lm / cd / lx / 逆二乗則 / 照明率 / 保守率 / 所要灯数 / 発光効率 / LED
 - 固定計算（照明）: 照度 / 光度 / 光束 / 所要灯数 / 消費電力
 - 固定範囲（電熱・空調）: ジュール熱 / 電力量 / 熱量 / ヒーター / 空調 / 電熱 / 効率 / COPの基本
@@ -36,6 +36,9 @@
 - 品質ゲート対象: `7問・12答案要素`
 - 制作前独立検証・公式解答照合: `12 / 12 PASS`
 - 完成後blind保全: 制作前記録に正答選択肢番号・独立計算の最終数値を保存しない
+- 固定過去問要求事項の本文マッピング: `12 / 12 PASS`
+- 3段階例題: 基礎 / 本試験標準 / 複合・ひっかけ `PASS`
+- 解説source QA: `PASS`
 - 非選定: R7下 機械 問17（光束発散度が必要） / R7下 機械 問12（熱伝導） / R6下 機械 問12（熱伝導） / R5上 機械 問12（光束発散度が必要）
 - 重複扱い: R5下 機械 問17は固定範囲内だが、より新しい点光源・水平面照度問題を固定済みのため品質ゲートへ重複加算しない
 - 固定範囲外追加: `0件`
@@ -43,9 +46,9 @@
 - 未確認新幹線車内照明・空調実値追加: `0件`
 - Topic 16先取り: `0件`
 - source: `topics/15_lighting_heating/15_lighting_heating.md`
-- 解説本文: 未着手
-- 状態: `topic_15_exam_alignment_complete / IN_PROGRESS`
-- 次工程: 固定EXAM_ALIGNMENTを変更せずTopic 15の解説source本文を作成する
+- 解説本文: 完成
+- 状態: `topic_15_explanation_source_complete / IN_PROGRESS`
+- 次工程: 固定EXAM_ALIGNMENTを変更せずTopic 15の解説PDFを作成する
 
 ## Topic 14 最終品質状態
 - 固定範囲: 電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率
@@ -327,6 +330,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 15「車内の照明・空調にはどれだけ電気が必要？」の制作前EXAM_ALIGNMENTを完了した。R8上から遡って公式過去問を確認し、系列SPEC固定範囲だけで扱う7問・12答案要素を固定。独立計算・判断後の公式解答照合は `12 / 12 PASS`。完成後blind独立再解答を汚染しないよう、正答選択肢番号・独立計算の最終数値は進捗記録に保存していない。光束発散度・熱伝導・熱放射・工業電熱・未確認の新幹線車内設備実値は追加していない。解説本文は未着手。
+Topic 15「車内の照明・空調にはどれだけ電気が必要？」の解説source本文を完成した。制作前に固定した7問・12答案要素は変更せず、本文マッピング `12 / 12 PASS`。基礎 / 本試験標準 / 複合・ひっかけの3段階例題と解法手順を追加し、解説source QAは `PASS`。光束発散度・熱伝導・熱放射・工業電熱・未確認の新幹線車内設備実値・Topic 16は追加していない。
 
-完成数は `14 / 16` のまま。次工程はTopic 15の解説source本文。
+完成数は `14 / 16` のまま。次工程はTopic 15の解説PDF。
