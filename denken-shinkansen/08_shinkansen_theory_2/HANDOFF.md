@@ -6,19 +6,22 @@
 
 Topic 01〜14は `PASS / completed`。完成数は `14 / 21`。
 
-current_status: `topic_15_explanation_pdf_complete`
+current_status: `topic_15_practice_pdf_complete`
 
 active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 
-Topic 15は解説PDF＋表示QAまで完了。固定範囲はRL・RC・RLC回路、初期条件、過渡項・定常項、時定数、微分方程式、必要に応じたラプラス変換。品質ゲートはR8〜R4一次「理論」の5問・25答案要素で、教材内接続 `25 / 25` を維持。R8二次は2026-09-17時点で未実施、R7〜R5二次は固定範囲だけで完答できる直接対応問題がなく、二次採用0問・数合わせ0件。解説PDFはA4縦2ページ、200 dpi全ページ表示QA `2 / 2 PASS`、文字抽出PASS。次工程は練習問題source＋練習PDF。
+Topic 15は練習問題source＋練習PDFまで完了。固定範囲はRL・RC・RLC回路、初期条件、過渡項・定常項、時定数、微分方程式、必要に応じたラプラス変換。品質ゲートはR8〜R4一次「理論」の5問・25答案要素で、教材内接続 `25 / 25` を維持。R8二次は2026-09-17時点で未実施、R7〜R5二次は固定範囲だけで完答できる直接対応問題がなく、二次採用0問・数合わせ0件。練習は12問・全問五肢択一、A4縦6ページ、200 dpi全ページ表示QA `6 / 6 PASS`、文字抽出PASS。次工程は解説画像PowerPoint＋表示QA。
 
 ## Topic 15 成果物
 
 - source: `topics/15_breaker_transient/15_breaker_transient.md`
 - 解説PDF: `topics/15_breaker_transient/15_breaker_transient_explanation.pdf`
 - 解説PDF QA: `topics/15_breaker_transient/15_breaker_transient_explanation_pdf_qa.md`
+- 練習source: `topics/15_breaker_transient/15_breaker_transient_practice.md`
+- 練習PDF: `topics/15_breaker_transient/15_breaker_transient_practice.pdf`
+- 練習PDF QA: `topics/15_breaker_transient/15_breaker_transient_practice_pdf_qa.md`
 - completion: `in_progress`
-- stage: `EXPLANATION_PDF_COMPLETE`
+- stage: `PRACTICE_PDF_COMPLETE`
 
 ## Topic 15 固定範囲
 
@@ -90,6 +93,28 @@ Topic 15は解説PDF＋表示QAまで完了。固定範囲はRL・RC・RLC回路
 - Topic 16以降の先取り: `0件`
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+## Topic 15 練習問題・PDF QA
+
+記録: `topics/15_breaker_transient/15_breaker_transient_practice_pdf_qa.md`
+
+- 12問・全問五肢択一
+- 基礎3 / 本試験標準6 / 複合・ひっかけ3
+- 数値再計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- 固定一次5問・25答案要素への接続: `25 / 25`
+- PDF A4縦6ページ
+- 200 dpi全ページ表示QA: `6 / 6 PASS`
+- 文字抽出QA: `PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- 遮断器アーク・過渡回復電圧・保護協調の追加: `0件`
+- 自動制御・パワーエレクトロニクス・電力系統過渡安定度の追加: `0件`
+- Topic 16以降の先取り: `0件`
+- 未確認実設備値・実測過渡波形追加: `0件`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
 
 ## Topic 14 成果物
 
@@ -232,4 +257,4 @@ Topic 15は解説PDF＋表示QAまで完了。固定範囲はRL・RC・RLC回路
 
 ## 次に行うこと
 
-Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の練習問題source＋練習PDF。
+Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の解説画像PowerPoint＋表示QA。
