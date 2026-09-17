@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `14 / 22`
-- current_status: `topic_15_explanation_source_complete`
+- current_status: `topic_15_explanation_pdf_complete`
 - last_completed_topic: `14 L0系を500km/hで同期させる`
 - active_topic: `15 新幹線の補機モーターを設計する`
-- next_start: Topic 15 解説PDF
+- next_start: Topic 15 練習問題source
 
 ## 完了テーマ
 - [x] Topic 01 最終QA PASS
@@ -696,8 +696,18 @@
 - [x] 未確認新幹線補機実値追加 `0件`
 - [x] 固定公式過去問の個別正答記号・完成済み答案保存 `0件`
 
+## Topic 15 解説PDF
+- [x] `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_explanation.pdf`
+- [x] A4縦5ページ
+- [x] 200 dpi全5ページ表示QA `5 / 5 PASS`
+- [x] 文字抽出QA PASS / Unicode置換文字 `0件` / `□`置換 `0件` / `(cid:)` `0件`
+- [x] 固定一次3問＋二次2問・8答案要素を維持
+- [x] 基礎・本試験標準・複合の3段階例題 `3 / 3` 収録
+- [x] 固定範囲外論点・Topic 16以降先取り・未確認新幹線補機実値追加 `0件`
+- [x] SHA-256 `87535e7730fa674e1a03c63d8dd4a000f27c3be7c43a50a5667b42700f696313`
+
 ## 今回進めた内容
-Topic 15解説sourceを作成した。固定一次3問＋二次記述2問、計5問・8答案要素を本文へ `8 / 8` 接続し、基礎／本試験標準／複合の3段階例題を作成して数値を再計算した。仕様外論点、Topic 16以降の先取り、未確認新幹線補機実値の追加は行っていない。
+Topic 15解説PDFを作成した。A4縦5ページ、200 dpi全ページ表示QA `5 / 5 PASS`、文字抽出QA PASS。固定一次3問＋二次記述2問、計5問・8答案要素と基礎／本試験標準／複合の3段階例題を維持し、仕様外論点、Topic 16以降の先取り、未確認新幹線補機実値の追加は行っていない。
 
 ## 判定
-Topic 15は `topic_15_explanation_source_complete / IN_PROGRESS`。完成数は `14 / 22`。次はTopic 15解説PDF。
+Topic 15は `topic_15_explanation_pdf_complete / IN_PROGRESS`。完成数は `14 / 22`。次はTopic 15練習問題source。
