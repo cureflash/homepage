@@ -4,9 +4,9 @@
 
 ## 状態
 
-解説source/PDF、練習source/PDF、解説画像PowerPoint、各QA、完成後独立再解答まで完了し、進捗記録を実成果物状態へ同期した。
+解説source/PDF、練習source/PDF、解説画像PowerPoint、各QA、完成後独立再解答、最終QAまで完了した。
 
-現在 `topic_16_progress_records_synced / IN_PROGRESS`。次工程はTopic 16最終QA再実施。固定一次4問＋二次記述1問・12答案要素は変更せず、独立再解答 `12 / 12 PASS` を維持する。
+現在 `topic_16_final_qa_pass / completed`。固定一次4問＋二次記述1問・12答案要素は変更せず、独立再解答 `12 / 12 PASS`、PDF/PPTX QA、仕様境界、進捗整合をすべてPASSした。次工程はTopic 17制作前EXAM_ALIGNMENT。
 
 ## 固定範囲
 
@@ -503,4 +503,4 @@ DC/DC後は
 
 ## 次工程
 
-Topic 16 最終QAを再実施する。技術本文、固定EXAM_ALIGNMENT、PDF/PPTX、練習問題、完成後独立再解答結果は変更しない。
+Topic 16は最終QA `PASS / completed`。次はTopic 17「新幹線の速度をフィードバック制御する」の制作前EXAM_ALIGNMENTを行う。

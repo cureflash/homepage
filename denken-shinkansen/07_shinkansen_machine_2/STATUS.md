@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `07_shinkansen_machine_2`
-- exam_aligned_completed_topics: `15 / 22`
-- current_status: `topic_16_progress_records_synced`
-- last_completed_topic: `15 新幹線の補機モーターを設計する`
-- active_topic: `16 N700Sバッテリーから主回路へ電力を送る`
-- next_start: Topic 16 最終QAを再実施
+- exam_aligned_completed_topics: `16 / 22`
+- current_status: `topic_16_final_qa_pass`
+- last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
+- active_topic: `17 新幹線の速度をフィードバック制御する`
+- next_start: Topic 17 制作前EXAM_ALIGNMENT
 
 ## 完了テーマ
-- [x] Topic 01〜15 最終QA `PASS / completed`
-- [ ] Topic 16 `IN_PROGRESS` — 技術・試験対応ゲートはPASS、前回最終QAで検出した進捗記録3箇所を同期済み。最終QA再実施待ち
+- [x] Topic 01〜16 最終QA `PASS / completed`
+- [ ] Topic 17 `NOT_STARTED` — 制作前EXAM_ALIGNMENTから開始
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -52,8 +52,6 @@
 - H18 一次 機械 問3 (1) — 1答案要素
 - H23 二次 機械・制御 問3 (3),(4) — 5答案要素
 
-固定問題の正答記号・完成済み数値解は保存せず、完成教材後に独立再解答してから解答と照合する。
-
 ## Topic 16 制作前EXAM_ALIGNMENT
 - [x] R08一次「機械」まで直近年度から公式過去問を確認
 - [x] 一次4問＋二次記述1問、計5問・12答案要素を固定
@@ -80,7 +78,6 @@
 - [x] 160 dpi 全8ページ表示QA `8 / 8 PASS`
 - [x] 文字・数式・表の欠落、重なり、切れ、overflow `0件`
 - [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
-- [x] QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_explanation_pdf_qa.md`
 - [x] PDF SHA-256 `b9c88d84c1914d8d939356694603228b8303df38312e7f22cc5674b4ad90b3c0`
 - [x] PDF Git blob SHA `ec0988d134a802f9f54f1e1f54af442e6bde23b6`
 - 判定: `PASS / topic_16_explanation_pdf_complete`
@@ -103,7 +100,6 @@
 - [x] 160 dpi 全5ページ表示QA `5 / 5 PASS`
 - [x] 文字・数式・表の欠落、重なり、切れ、overflow `0件`
 - [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
-- [x] QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_practice_pdf_qa.md`
 - [x] PDF SHA-256 `ec0ac0e9c6e95a662f42c0a4526b4c2287c322a7bb458809e12a61319f2e93dc`
 - [x] PDF Git blob SHA `ea328bb7d1f2dd4a8d3adb74e1a7a67ccaf2a4d0`
 - 判定: `PASS / topic_16_practice_pdf_complete`
@@ -111,61 +107,60 @@
 ## Topic 16 解説画像PowerPoint
 - [x] `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_images.pptx`
 - [x] 16:9・4枚
-- [x] 起電力＋内部抵抗、Ah/Wh/C-rate、H23二次型波形、DC/DC→DCリンク→主変換装置の4論点を可視化
-- [x] 固定一次4問＋二次記述1問・12答案要素を維持し可視化
-- [x] 120 dpi・1601×900 全4枚表示QA `4 / 4 PASS`
+- [x] 固定一次4問＋二次記述1問・12答案要素を維持
+- [x] 120 dpi 全4枚表示QA `4 / 4 PASS`
 - [x] 文字・数式・図の欠落、重なり、切れ、overflow `0件`
-- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
 - [x] PPTX ZIP整合性 PASS
-- [x] 未確認N700S実車値、電池材料反応・BMS・チョッパ詳細、Topic 17以降先取り `0件`
-- [x] 固定公式過去問の個別正答記号・完成済み数値解保存 `0件`
-- [x] QA記録 `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_powerpoint_qa.md`
+- [x] 未確認N700S実車値、仕様外論点、Topic 17以降先取り `0件`
 - [x] PPTX SHA-256 `6f1b89c2c652aac4210cbb7a3fb05a3c6b5527d87d3ecc02b767fefbc78c5cc1`
 - [x] Git blob SHA `aba7ff0a01d5d139a1a3370d384761d48f4085ba`
 - 判定: `PASS / topic_16_powerpoint_complete`
 
 ## Topic 16 独立再解答前ゲート
 - [x] `MASTER_SPEC.md` / `EXAM_ALIGNMENT_SPEC.md` と最新mainを再監査
-- [x] Topic 16の解説source/PDF、練習source/PDF、PowerPoint/QAの実在を再確認
-- [x] main上で先行完成済みだったPowerPoint/QAを正本としてreconcileし、既存blobへ復帰
+- [x] Topic 16全成果物の実在を再確認
 - [x] 固定一次4問＋二次1問・12答案要素を変更していない
-- [x] 固定5過去問の公式正答番号・標準解答本文の保存 `0件`
-- [x] 固定5過去問の完成済み個別解答・数値解・導出結果の保存 `0件`
+- [x] 固定5過去問の公式正答番号・標準解答本文の事前保存 `0件`
 - [x] 未確認N700S実車値、仕様外論点、Topic 17以降先取り `0件`
-- [x] 判定 `BLIND_REANSWER_READY`
+- 判定: `BLIND_REANSWER_READY`
 
 ## Topic 16 完成後独立再解答
-- [x] R02一次 問4 (1),(4),(5): 完成教材だけで答案確定後、公式解答照合 `3 / 3 PASS`
-- [x] H30一次 問6 (3),(4): 完成教材だけで答案確定後、公式解答照合 `2 / 2 PASS`
-- [x] H26一次 問3 (1): 完成教材だけで答案確定後、公式解答照合 `1 / 1 PASS`
-- [x] H18一次 問3 (1): 隔離済み問題入力と完成教材だけで（カ）DC/DCコンバータを先に答案ロックし、その後の解答照合で一致 `1 / 1 PASS`
-- [x] H23二次 問3 (3),(4): 完成教材だけで答案確定後、公式標準解答照合 `5 / 5 PASS`
-- [x] H18答案ロック `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_h18_q3_1_answer_lock.md` を解答照合前にGitHubへ保存
+- [x] R02一次 問4 (1),(4),(5): `3 / 3 PASS`
+- [x] H30一次 問6 (3),(4): `2 / 2 PASS`
+- [x] H26一次 問3 (1): `1 / 1 PASS`
+- [x] H18一次 問3 (1): `1 / 1 PASS`
+- [x] H23二次 問3 (3),(4): `5 / 5 PASS`
 - [x] 厳密ブラインド再解答 `12 / 12 PASS`
-- [x] 固定EXAM_ALIGNMENT変更、仕様外追加、Topic 17以降先取り、未確認N700S実車値追加 `0件`
-- 記録: `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_independent_reanswer.md`
+- [x] 教材外知識による補完 `0件`
 - 判定: `PASS / topic_16_independent_reanswer_complete`
 
 ## Topic 16 最終QA（前回）
-- [x] 必須成果物実在: PASS
-- [x] 固定一次4問＋二次記述1問・12答案要素: `12 / 12 PASS`
-- [x] 解説PDF表示・抽出QA: PASS
-- [x] 練習PDF表示・数値・抽出QA: PASS
-- [x] PowerPoint表示・ZIP整合性QA: PASS
-- [x] 仕様境界: PASS
-- [ ] 進捗記録整合: FAIL（下記同期で修正済み。最終QA再実施待ち）
-- 記録: `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_final_qa.md`
+- 必須成果物、固定5問・12答案要素、PDF/PPTX QA、仕様境界: PASS
+- 進捗記録整合: FAIL
 - 判定: `NEEDS_REVISION / topic_16_final_qa_needs_revision`
 
 ## Topic 16 進捗記録同期
 - [x] main source `## 状態` を全成果物・独立再解答完了後の実状態へ同期
-- [x] main source末尾 `## 次工程` を「Topic 16 最終QA再実施」へ同期
-- [x] 練習source末尾 `# 次工程` を「Topic 16 最終QA再実施」へ同期
+- [x] main source末尾 `## 次工程` を最終QA再実施へ同期
+- [x] 練習source末尾 `# 次工程` を最終QA再実施へ同期
 - [x] 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更 `0件`
 - 判定: `PASS / topic_16_progress_records_synced`
 
+## Topic 16 最終QA（再実施）
+- [x] 必須成果物実在: PASS
+- [x] 固定一次4問＋二次記述1問・12答案要素: `12 / 12 PASS`
+- [x] 完成後独立再解答: `12 / 12 PASS`
+- [x] 解説PDF表示・抽出QA: PASS
+- [x] 練習PDF表示・数値・抽出QA: PASS
+- [x] PowerPoint表示・ZIP整合性QA: PASS
+- [x] 仕様境界: PASS
+- [x] 進捗記録整合: PASS
+- [x] 技術本文・問題・正答・固定EXAM_ALIGNMENTの変更 `0件`
+- 記録: `topics/16_n700s_battery_dc_link/16_n700s_battery_dc_link_final_qa.md`
+- 判定: `PASS / topic_16_final_qa_pass / completed`
+
 ## 今回進めた内容
-前回最終QAで唯一のFAILだった進捗記録3箇所を実成果物状態へ同期した。固定一次4問＋二次記述1問・12答案要素、独立再解答 `12 / 12 PASS`、技術本文、PDF/PPTXは変更していない。
+Topic 16最終QAを再実施し、前回FAILだった進捗記録整合を含む全ゲートをPASSした。Topic 16を `completed` とし、完成数を `16 / 22` へ更新した。
 
 ## 判定
-Topic 16は `topic_16_progress_records_synced / IN_PROGRESS`。完成数は `15 / 22` のまま。次はTopic 16最終QAを再実施する。
+Topic 16は `PASS / completed`。次の未完了テーマは Topic 17「新幹線の速度をフィードバック制御する」。次工程は制作前EXAM_ALIGNMENT。
