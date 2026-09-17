@@ -4,7 +4,7 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT` と解説本文＋3段階例題を完了した。固定過去問は一次4問＋二次1問、計5問・16答案要素のまま変更していない。本文でSPEC指定9項目・4可視化と固定16答案要素を接続し、例題数値を再計算した。判定は `PASS / EXPLANATION_SOURCE_COMPLETE`。次工程は解説PDFである。
+Topic 15は制作前 `EXAM_ALIGNMENT`、解説本文＋3段階例題、解説PDF、練習source/PDF、解説画像PowerPoint、完成後blind再解答まで完了した。固定過去問は一次4問＋二次1問、計5問・16答案要素のまま変更していない。完成後blind再解答は固定5問 `5 / 5 PASS`、一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`。最終QAでは技術内容・固定EXAM_ALIGNMENT・必須成果物・成果物QA・SPEC境界がPASSし、進捗記録同期のみ要修正となった。current_status は `topic_15_final_qa_needs_progress_sync`。次工程はTopic 15最終QAの再判定である。
 
 ## 固定範囲
 
@@ -688,4 +688,6 @@ H25一次型では
 
 ## 次工程
 
-固定EXAM_ALIGNMENTと本文の共通仮定式系を変更せず、解説PDFを作成する。PDFでは3段階例題、固定16答案要素への接続、SPEC指定9項目・4可視化を欠落させない。
+current_status: `topic_15_final_qa_needs_progress_sync`
+
+完成後blind再解答は固定5問 `5 / 5 PASS`、一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`。最終QAでは技術内容・固定EXAM_ALIGNMENT・必須成果物・成果物QA・SPEC境界がPASSしている。進捗記録同期後、Topic 15最終QAを再判定する。固定EXAM_ALIGNMENT、本文の共通仮定式系、問題・正答、PDF/PPTX、blind再解答結果は変更しない。
