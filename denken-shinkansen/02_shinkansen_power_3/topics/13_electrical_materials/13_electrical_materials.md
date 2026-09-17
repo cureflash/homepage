@@ -1,7 +1,7 @@
 # 13 新幹線の架線は何でできている？
 
 ## 状態
-`topic_13_independent_reanswer_complete`。制作前EXAM_ALIGNMENT、制作前独立検証、解説本文、基礎・本試験標準・複合の3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後ブラインド独立再解答まで完了。最終QAは未着手。
+`topic_13_final_qa_needs_progress_sync`。制作前EXAM_ALIGNMENT、制作前独立検証、解説本文、基礎・本試験標準・複合の3段階例題、解説PDF＋QA、練習問題source、練習PDF＋QA、解説画像PowerPoint＋QA、完成後ブラインド独立再解答まで完了。初回最終QAは技術内容・必須成果物・固定EXAM_ALIGNMENT・独立再解答・PDF/PPTX QA・SPEC境界をPASS、進捗記録整合のみ旧工程5箇所のためFAIL。Topic 13は未完了のまま、次に旧進捗記録5箇所を現在地へ同期する。
 
 品質ゲート対象は、電気技術者試験センター公式過去問の直近年度を優先して確認した電力・電気材料5問に固定する。件数合わせのためSPEC固定範囲を拡張しない。
 
@@ -405,9 +405,10 @@ SF6は高い絶縁性能とアーク消弧性能を持ち、ガス遮断器等�
 - 公式解答一致: `5 / 5 PASS`
 - 教材外知識補完: `0件`
 - Topic 14以降の論点による補完: `0件`
-- 最終QA: 未実施
+- 最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
+- 旧進捗記録5箇所同期: 未実施
 - SPEC固定範囲外追加: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
 
 ## 次
-Topic 13の最終QAを実施し、必須成果物、PDF/PPTX QA、固定EXAM_ALIGNMENT、完成後独立再解答、SPEC境界、進捗記録整合を再確認する。
+`13_electrical_materials_explanation_qa.md`、`13_electrical_materials_practice_source.md`、`13_electrical_materials_practice_qa.md`、`13_electrical_materials_powerpoint_qa.md`、`13_electrical_materials_independent_reanswer.md` の旧進捗記録5箇所を現在地へ同期する。その後、Topic 13の最終QAを再実施する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
