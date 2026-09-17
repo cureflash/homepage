@@ -3,33 +3,36 @@
 updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `12`
-current_status: `topic_12_practice_pdf_complete`
+current_status: `topic_12_calculation_program_complete`
 
 ## 今回完了
 
-Topic 12「N700Sが何本も同時加速したら？」の練習PDFとPDF QAを制作した。
+Topic 12「N700Sが何本も同時加速したら？」の列車本数―電圧・損失計算を制作した。
 
 成果物:
-- `topics/12_multiple_train_load/12_multiple_train_load_practice.pdf`
-- `topics/12_multiple_train_load/12_multiple_train_load_practice_pdf_qa.md`
+- `topics/12_multiple_train_load/12_multiple_train_load_sim.py`
+- `topics/12_multiple_train_load/12_multiple_train_load_sweep.csv`
+- `topics/12_multiple_train_load/12_multiple_train_load_voltage.svg`
+- `topics/12_multiple_train_load/12_multiple_train_load_loss.svg`
+- `topics/12_multiple_train_load/12_multiple_train_load_sim_qa.md`
 
-構成・QA:
-- A4縦7ページ、200 dpi表示QA `7 / 7 PASS`
-- 全15問・完全解説 `15 / 15 PASS`
-- 二種一次型五肢択一 `10 / 10 PASS`
-- 二種二次型記述 `5 / 5 PASS`
-- 一次型正答一意性 `10 / 10 PASS`、複数正答 `0件`
-- 二次記述の途中式・単位・符号・検算 `5 / 5 PASS`
-- 文字抽出PASS、U+FFFD `0件`
-- 固定5問・25答案要素への教材内接続 `25 / 25 PASS`
-- SPEC固定8項目への接続 `8 / 8 PASS`
+解説source §11.3 の教材上仮定値をそのまま使用した。
+- `66 kV`
+- 1列車 `2 MW`
+- 遅れ力率 `0.90`
+- 1相線路 `R=0.50 Ω`, `X=1.00 Ω`
+- `n=0...4`
 
-制作前再解答で不足していた進み/遅れ無効電力の符号規約をPDFでも維持した。
-- `S=P+jQ`
-- 遅れ `Q>0`
-- 進み `Q<0`
-- 三相負荷 `I=(P-jQ)/(√3V)`
-- 問13で進み負荷の符号誤りがKVL・ループ電流へ伝搬することを確認
+定電力負荷として受電端電圧を更新し、高電圧側解を採用した。`n=4` で `Vr=65.880407 kV`、`I=77.898765 A`、三相線路損失 `9.102326 kW`。
+
+計算QA:
+- CSV `5 / 5` 行 PASS
+- 受電端電圧: 単調非増加 PASS
+- 電流・損失: 単調非減少 PASS
+- 実数高電圧解 `5 / 5 PASS`
+- SVG XML parse `2 / 2 PASS`
+- SPEC指定「列車本数―電圧」「列車本数―損失」 `2 / 2 PASS`
+- 複素KVL独立再代入残差: 代表点最大 `0.000280 V`
 
 ## 正式品質ゲート
 
@@ -41,7 +44,7 @@ Topic 12「N700Sが何本も同時加速したら？」の練習PDFとPDF QAを�
 - 平成23年度 第二種二次「電力・管理」問6 — 制作前再解答 `3 / 3 PASS`
 - 制作前合計: 一次1問＋二次4問、`23 / 25答案要素 PASS`
 
-PDFの `25 / 25` は教材内カバレッジ確認であり、完成後blind独立再解答PASSではない。
+解説・練習教材の `25 / 25` は教材内カバレッジであり、完成後blind独立再解答PASSではない。
 
 ## 品質境界
 
@@ -55,10 +58,10 @@ PDFの `25 / 25` は教材内カバレッジ確認であり、完成後blind独�
 
 Topic 11: `completed`。
 
-Topic 12: 解説PDF＋QA、練習問題source＋source QA、練習PDF＋PDF QAまで完了。品質ゲートは完成後blind独立再解答まで未通過。
+Topic 12: 解説PDF＋QA、練習問題source＋source QA、練習PDF＋PDF QA、計算プログラム＋CSV＋SVG＋計算QAまで完了。品質ゲートは完成後blind独立再解答まで未通過。
 
 完成数: `11 / 22`。
 
 ## 次に行う
 
-Topic 12 SPECの計算・可視化に従い、列車本数を変化させたときの電圧・損失を計算するプログラムと結果CSV・グラフを制作する。固定5問・25答案要素と符号規約を維持し、仕様外論点・Topic 13以降・未確認N700S実設備値は追加しない。
+Topic 12の解説画像PowerPointを制作し、PowerPoint QAを行う。固定5問・25答案要素、進み/遅れ符号規約、教材上仮定値と実設備値の区別を維持し、仕様外論点・Topic 13以降・未確認N700S実設備値を追加しない。
