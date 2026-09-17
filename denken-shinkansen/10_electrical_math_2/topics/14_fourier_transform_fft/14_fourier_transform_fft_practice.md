@@ -533,4 +533,4 @@ f_s = 12800 Hz > 700 Hz
 
 ## 次工程
 
-練習PDFは完成・QA済み。次はTopic 14の解説画像PowerPointを作成し、表示QAを実施する。
+Topic 14の最終QAを再判定する。
