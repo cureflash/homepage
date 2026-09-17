@@ -759,4 +759,4 @@ v_2 ≈ 181.73 km/h
 
 ## 次工程
 
-固定EXAM_ALIGNMENT、解説source、解説PDF、練習問題sourceを変更せず、Topic 14の練習PDFを制作する。A4表示・文字抽出・一次8問＋二次4問・完全解説・固定5過去問9答案要素接続・数値整合をQAする。
+進捗記録同期済み。技術本文・固定EXAM_ALIGNMENT・問題/正答・練習PDF・完成後blind再解答結果は変更せず、次にTopic 14最終QAを再判定する。
