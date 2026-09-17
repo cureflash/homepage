@@ -6,11 +6,11 @@
 
 Topic 01〜16は `PASS / completed`。完成数は `16 / 21`。
 
-current_status: `topic_17_explanation_pdf_complete`
+current_status: `topic_17_practice_pdf_complete`
 
 active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 
-Topic 17の解説PDF＋表示QAまで完了。A4縦2ページ、200 dpi `2 / 2 PASS`、文字抽出 `PASS`。固定一次5問・25答案要素への接続は `25 / 25`、過去問から逆算した必須説明は `15 / 15 covered`、例題は `3 / 3`。固定EXAM_ALIGNMENTと二次採用方針は変更せず、二次採用0問・数合わせ0件を維持。次工程は練習問題source＋練習PDF。
+Topic 17の練習問題source＋練習PDF＋QAまで完了。練習問題は12問（基礎3 / 本試験標準6 / 複合・ひっかけ3）、全問五肢択一。A4縦4ページ、200 dpi `4 / 4 PASS`、文字抽出 `PASS`、数値再計算・論理QA `12 / 12 PASS`、正答一意性 `12 / 12 PASS`。固定一次5問・25答案要素への接続は `25 / 25`。固定EXAM_ALIGNMENTと二次採用方針は変更せず、二次採用0問・数合わせ0件を維持。次工程は解説画像PowerPoint＋表示QA。
 
 ## Topic 16 成果物
 
@@ -165,8 +165,11 @@ Topic 17の解説PDF＋表示QAまで完了。A4縦2ページ、200 dpi `2 / 2 P
 - source: `topics/17_transistor_fet_switching/17_transistor_fet_switching.md`
 - 解説PDF: `topics/17_transistor_fet_switching/17_transistor_fet_switching_explanation.pdf`
 - 解説PDF QA: `topics/17_transistor_fet_switching/17_transistor_fet_switching_explanation_pdf_qa.md`
+- 練習source: `topics/17_transistor_fet_switching/17_transistor_fet_switching_practice.md`
+- 練習PDF: `topics/17_transistor_fet_switching/17_transistor_fet_switching_practice.pdf`
+- 練習PDF QA: `topics/17_transistor_fet_switching/17_transistor_fet_switching_practice_pdf_qa.md`
 - completion: `in_progress`
-- stage: `EXPLANATION_PDF_COMPLETE`
+- stage: `PRACTICE_PDF_COMPLETE`
 
 ## Topic 17 固定範囲
 
@@ -246,6 +249,27 @@ R8一次理論は確認したが固定範囲の直接対応問題なし。R7〜R
 
 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
+## Topic 17 練習問題・練習PDF QA
+
+記録: `topics/17_transistor_fet_switching/17_transistor_fet_switching_practice_pdf_qa.md`
+
+- 練習問題: 12問、全問五肢択一
+- 難易度: 基礎3 / 本試験標準6 / 複合・ひっかけ3
+- 数値再計算・論理QA: `12 / 12 PASS`
+- 正答一意性: `12 / 12 PASS`
+- A4縦4ページ
+- 200 dpi全ページ表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `47c171a1430398875c02f4c005f3e8c807ba10e7da84ef69d2c68ed699d9e548`
+- 固定一次5問・25答案要素への接続: `25 / 25`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 変換器詳細計算追加: `0件`
+- 未確認新幹線主変換装置仕様追加: `0件`
+- Topic 18以降の先取り: `0件`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
 ## 次工程
 
-Topic 17の固定EXAM_ALIGNMENTと解説本文を変更せず、練習問題source＋練習PDFを作成する。
+Topic 17の固定EXAM_ALIGNMENT・解説本文・練習問題を変更せず、解説画像PowerPoint＋表示QAを作成する。
