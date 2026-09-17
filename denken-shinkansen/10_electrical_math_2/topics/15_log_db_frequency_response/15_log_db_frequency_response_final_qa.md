@@ -2,13 +2,13 @@
 
 対象: `15 対数・dB・周波数応答`
 
-実施日: 2026-09-17
+再判定日: 2026-09-18
 
 ## 判定
 
-`NEEDS_REVISION`。
+`PASS / completed`。
 
-技術内容、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PowerPoint表示QA、SPEC境界はPASS。未完了理由は、実成果物まで進んでいるのに進捗記録6ファイルが旧工程のまま残っていることだけである。教材本文・問題・正答・PDF・PowerPointの技術修正は不要。
+初回 `NEEDS_REVISION` の原因だった進捗記録6ファイルは実成果物へ同期済み。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PowerPoint表示QA、SPEC境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物の実在確認
 
@@ -83,32 +83,34 @@ GitHub正本上で次を確認した。
 - 第一種・第三種過去問による件数水増し: 0件
 - 未確認実車値依存: 0件
 
-## 進捗記録整合QA
+## 進捗記録整合QAの再判定
 
-以下6ファイルが実成果物より古い工程を示しているためFAIL。
+初回FAILだった6ファイルをGitHub正本で再確認した。
 
 1. `15_log_db_frequency_response.md`
-   - 冒頭 `## 状態` が `topic_15_explanation_source_complete`
-   - 冒頭説明で解説PDF・練習問題・PowerPoint・完成後独立再解答を未着手としている
-   - `次工程` が解説PDFのまま
+   - 冒頭 `## 状態`: `topic_15_progress_records_synced / IN_PROGRESS` — PASS
+   - 実成果物・完成後独立再解答・初回最終QAまで完了済みの説明へ同期 — PASS
+   - `次工程`: Topic 15最終QA再判定 — PASS
 2. `15_log_db_frequency_response_explanation_qa.md`
-   - `次工程` が練習問題sourceのまま
+   - `次工程`: Topic 15最終QA再判定 — PASS
 3. `15_log_db_frequency_response_practice.md`
-   - `次工程` が練習PDFのまま
+   - `次工程`: Topic 15最終QA再判定 — PASS
 4. `15_log_db_frequency_response_practice_qa.md`
-   - `次工程` がPowerPointのまま
+   - `次工程`: Topic 15最終QA再判定 — PASS
 5. `15_log_db_frequency_response_powerpoint_qa.md`
-   - `次工程` が完成後独立再解答のまま
+   - `次工程`: Topic 15最終QA再判定 — PASS
 6. `../../HANDOFF.md`
-   - `current_status` が `topic_14_completed`
-   - Topic 15の次工程が制作前EXAM_ALIGNMENTのまま
+   - `current_status`: `topic_15_progress_records_synced` — PASS
+   - `次工程`: Topic 15最終QA再判定 — PASS
 
-`STATUS.md` は完成後独立再解答完了まで同期済みであり、本QA実施後は本QA結果へ更新する。
+進捗記録整合: `6 / 6 PASS`。
+
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立再解答の技術内容変更: 0件。
 
 ## 最終判定
 
 - 必須成果物実在: PASS
-- 二種相当EXAM_ALIGNMENT 5問・12答案要素: PASS
+- 二種相当EXAM_ALIGNMENT 第二種公式5問・12答案要素: PASS
 - 完成後独立再解答 `12 / 12`: PASS
 - 練習問題独立計算・論理QA `12 / 12`: PASS
 - 一次型正答一意性 `8 / 8`: PASS
@@ -117,8 +119,8 @@ GitHub正本上で次を確認した。
 - 固定範囲外追加0件: PASS
 - 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- 進捗記録と実成果物の整合: FAIL
+- 進捗記録と実成果物の整合: `6 / 6 PASS`
 
-総合判定: `NEEDS_REVISION`。
+総合判定: `PASS / completed`。
 
-Topic 15は `completed` にしない。次工程は上記6ファイルの進捗記録だけを実成果物へ同期し、その後に最終QAを再判定する。
+Topic 15を完了とし、次はTopic 16 `数値微分・数値積分` の制作前EXAM_ALIGNMENTへ進む。
