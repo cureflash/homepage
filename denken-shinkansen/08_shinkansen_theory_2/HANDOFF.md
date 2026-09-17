@@ -6,11 +6,11 @@
 
 Topic 01〜16は `PASS / completed`。完成数は `16 / 21`。
 
-current_status: `topic_17_powerpoint_complete`
+current_status: `topic_17_reanswer_complete`
 
 active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 
-Topic 17の解説画像PowerPoint＋表示QAまで完了。PowerPointは16:9・5枚、200 dpi `5 / 5 PASS`、shape geometry overflow `0件`、PPTX ZIP整合性 `PASS`、PDF変換5ページ `PASS`、文字抽出 `PASS`。固定一次5問・25答案要素の可視化は `25 / 25`。固定EXAM_ALIGNMENTと二次採用方針は変更せず、二次採用0問・数合わせ0件を維持。次工程は完成後独立再解答。
+Topic 17の完成後独立再解答まで完了。固定一次5問・25答案要素は `25 / 25 PASS`、公式標準解答との一致 `25 / 25`。固定EXAM_ALIGNMENTと二次採用方針は変更せず、二次採用0問・数合わせ0件を維持。次工程は最終QA。
 
 ## Topic 16 成果物
 
@@ -170,8 +170,9 @@ Topic 17の解説画像PowerPoint＋表示QAまで完了。PowerPointは16:9・5
 - 練習PDF QA: `topics/17_transistor_fet_switching/17_transistor_fet_switching_practice_pdf_qa.md`
 - 解説画像PowerPoint: `topics/17_transistor_fet_switching/17_transistor_fet_switching_images.pptx`
 - PowerPoint QA: `topics/17_transistor_fet_switching/17_transistor_fet_switching_powerpoint_qa.md`
+- 完成後独立再解答: `topics/17_transistor_fet_switching/17_transistor_fet_switching_reanswer.md`
 - completion: `in_progress`
-- stage: `POWERPOINT_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 
 ## Topic 17 固定範囲
 
@@ -205,13 +206,14 @@ R8一次理論は確認したが固定範囲の直接対応問題なし。R7〜R
 
 - 公式問題・公式標準解答照合: `25 / 25`
 - 制作前独立導出: `25 / 25 PASS`
+- 完成後独立再解答: `25 / 25 PASS`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 変換器詳細計算追加: `0件`
 - 未確認新幹線主変換装置仕様追加: `0件`
 - Topic 18以降の先取り: `0件`
 
-判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+判定: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
 
 ## Topic 17 解説本文QA
 
@@ -292,6 +294,27 @@ R8一次理論は確認したが固定範囲の直接対応問題なし。R7〜R
 
 判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 17 完成後独立再解答
+
+記録: `topics/17_transistor_fet_switching/17_transistor_fet_switching_reanswer.md`
+
+- R7 一次 理論 問8: `5 / 5 PASS`
+- R5 一次 理論 問7: `5 / 5 PASS`
+- H30 一次 理論 問7: `5 / 5 PASS`
+- H28 一次 理論 問7: `5 / 5 PASS`
+- H27 一次 理論 問7: `5 / 5 PASS`
+- 固定一次合計: `25 / 25 PASS`
+- 公式標準解答との一致: `25 / 25`
+- 教材外知識補完: `0件`
+- SPEC固定範囲外追加: `0件`
+- 二次採用方針変更: `0件`
+- 二次数合わせ: `0件`
+- 変換器詳細計算追加: `0件`
+- 未確認新幹線主変換装置仕様追加: `0件`
+- Topic 18以降の先取り: `0件`
+
+判定: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
+
 ## 次工程
 
-Topic 17の固定EXAM_ALIGNMENT・解説本文・練習問題・解説画像PowerPointを変更せず、完成後独立再解答を実施する。
+Topic 17の固定EXAM_ALIGNMENT・解説本文・練習問題・解説画像PowerPoint・完成後独立再解答を変更せず、最終QAを実施する。
