@@ -1,14 +1,14 @@
 # STATUS - 新幹線車両・電験二種
 
-更新日: 2026-09-17
+更新日: 2026-09-18
 
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
-- exam_aligned_completed_topics: `13 / 39`
-- current_status: `topic_14_progress_sync_complete`
-- last_completed_topic: `13 300系④ 回生と四象限運転`
-- active_topic: `14 300系⑤ 走行抵抗と必要けん引力`
-- next_start: Topic 14の最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない。全件PASSの場合のみ `completed` とする
+- exam_aligned_completed_topics: `14 / 39`
+- current_status: `topic_14_completed`
+- last_completed_topic: `14 300系⑤ 走行抵抗と必要けん引力`
+- active_topic: `15 500系 高速域の出力・熱解析`
+- next_start: Topic 15の制作前EXAM_ALIGNMENTを行う。上位仕様に従い、本文制作前に二種一次・二次を含む公式過去問対応を固定する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -24,7 +24,8 @@
 - [x] 11 300系② PWMコンバータ — PASS
 - [x] 12 300系③ VVVFインバータと誘導機制御 — PASS
 - [x] 13 300系④ 回生と四象限運転 — PASS
-- [ ] 14 300系⑤ 走行抵抗と必要けん引力 — IN_PROGRESS / PROGRESS_SYNC_COMPLETE
+- [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
+- [ ] 15 500系 高速域の出力・熱解析 — NOT_STARTED
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -170,9 +171,9 @@
 - PDF/PPTX表示・構造QA: `PASS`
 - 練習問題QA: `12 / 12 PASS`
 - SPEC境界: `PASS`
-- 進捗記録整合: `FAIL / 4件`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
-- 完成数変更: `なし / 13 / 39`
+- 進捗記録整合: `4 / 4 PASS`
+- 判定: `PASS / completed`
+- 完成数変更: `13 / 39 → 14 / 39`
 
 ## Topic 14 進捗記録同期
 - 主source冒頭 `## 状態`: `PASS`
@@ -210,4 +211,4 @@ SPEC指定可視化:
 - 未確認の300系質量・走行抵抗係数・伝達効率を実車値として追加しない
 
 ## 次工程
-Topic 14最終QAを再判定する。固定EXAM_ALIGNMENT、技術本文、問題・正答、PDF/PPTX、blind再解答結果は変更しない。全件PASSの場合のみ `completed` とする。
+Topic 15「500系 高速域の出力・熱解析」の制作前EXAM_ALIGNMENTを行う。上位仕様に従い、本文制作前に二種一次・二次を含む公式過去問対応を固定する。
