@@ -9,9 +9,9 @@ Topic 01〜14は最終QAまで `PASS / completed`。完成数は `14 / 39`。
 
 Topic 15 `500系 高速域の出力・熱解析` は制作前EXAM_ALIGNMENT、解説本文＋3段階例題、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後独立再解答前ゲート、候補答案固定、公式照合まで完了。固定一次4問＋二次1問、計5問・16答案要素は変更していない。完成後blind再解答は固定5問 `5 / 5 PASS`、一次 `10 / 10 PASS`、二次 `6 / 6 PASS`、合計 `16 / 16 PASS`。教材外知識による補完0件、公式解答・標準解答との不一致0件。
 
-Topic 15最終QAでは、技術内容、固定EXAM_ALIGNMENT、blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界はすべてPASSした。ただし現在工程を示す進捗記録4箇所が旧工程のまま残っているため `NEEDS_REVISION / IN_PROGRESS`。完成数は `14 / 39` のまま。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更していない。
+Topic 15最終QAでは、技術内容、固定EXAM_ALIGNMENT、blind再解答、必須成果物、PDF/PPTX QA、練習問題QA、SPEC境界はすべてPASSしたが、現在工程を示す進捗記録4箇所が旧工程のまま残っていたため `NEEDS_REVISION / IN_PROGRESS` とした。その4箇所は `topic_15_final_qa_needs_progress_sync` / 最終QA再判定へ同期済みで、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の変更は0件。完成数は `14 / 39` のまま。
 
-次工程は進捗記録4箇所だけを `topic_15_final_qa_needs_progress_sync` に同期し、その後Topic 15最終QAを再判定する。
+現在地は `topic_15_progress_sync_complete`。次工程はTopic 15最終QAの再判定である。
 
 ## Topic 15 固定EXAM_ALIGNMENT
 source: `topics/15_500series_high_speed_output_thermal/15_500series_high_speed_output_thermal.md`
@@ -206,8 +206,18 @@ SPEC指定可視化:
 - 要同期4: 練習PDF QA末尾 `## 現在地`
 - 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の変更: `0件`
 
+## Topic 15 進捗記録同期
+- 主source冒頭 `## 状態`: `PASS / topic_15_final_qa_needs_progress_sync`
+- 主source末尾 `## 次工程`: `PASS / 最終QA再判定`
+- 練習source末尾 `## 次工程`: `PASS / 最終QA再判定`
+- 練習PDF QA末尾 `## 現在地`: `PASS / topic_15_final_qa_needs_progress_sync`
+- 進捗記録整合: `4 / 4 PASS`
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果の変更: `0件`
+- SPEC外追加: `0件`
+- 判定: `PASS / PROGRESS_SYNC_COMPLETE`
+
 ## 過去Topic
 Topic 01〜14は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の個別注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次に行うこと
-Topic 15の進捗記録4箇所だけを `topic_15_final_qa_needs_progress_sync` に同期し、技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果を変更せず、最終QAを再判定する。
+Topic 15最終QAを再実施し、進捗記録4箇所の整合を再確認する。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更せず、全ゲートPASS時だけTopic 15をcompletedとする。
