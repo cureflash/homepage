@@ -22,8 +22,8 @@ completed_topics: `10 / 22`
 - `topics/11_moving_train_voltage/11_moving_train_voltage_explanation.md`
 - `topics/11_moving_train_voltage/11_moving_train_voltage_explanation.pdf`
 - `topics/11_moving_train_voltage/11_moving_train_voltage_explanation_pdf_qa.md`
-- A4縦 `3ページ`
-- 200 dpi表示QA `3 / 3 PASS`
+- A4縦 `2ページ`
+- 200 dpi表示QA `2 / 2 PASS`
 - `pdftotext` 文字抽出QA: PASS / U+FFFD `0件`
 - 3段階例題独立再計算 `3 / 3 PASS`
 - SPEC固定内容 `6 / 6`
