@@ -4,17 +4,14 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `12`
 theme: N700Sが何本も同時加速したら？
-current_status: `topic_12_independent_reanswer_complete`
+current_status: `topic_12_final_qa_needs_revision`
 completed_topics: `11 / 22`
 
 ## Topic 12 current result
 
-完成後blind独立再解答まで完了した。固定5問・25答案要素を完成教材・明示済み既習事項だけで再解答し、公式解答・標準解答との照合で `25 / 25 PASS`。最終QA前のためTopic 12は未完了を維持する。
+最終QAを実施し、判定は `NEEDS_REVISION / IN_PROGRESS`。技術内容、固定EXAM_ALIGNMENT、必須成果物、解説/練習PDF QA、練習問題QA、計算プログラムQA、PowerPoint QA、完成後blind独立再解答、SPEC固定範囲はすべてPASSした。
 
-今回の成果物:
-- `topics/12_multiple_train_load/12_multiple_train_load_blind_reanswer_20260918.md`
-
-完成後blind独立再解答:
+正式品質ゲート:
 - 令和4年度 第二種二次「電力・管理」問6 — `8 / 8 PASS`
 - 令和元年度 第二種二次「電力・管理」問2 — `6 / 6 PASS`
 - 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
@@ -22,7 +19,19 @@ completed_topics: `11 / 22`
 - 平成23年度 第二種二次「電力・管理」問6 — `3 / 3 PASS`
 - 合計: 一次1問＋二次4問、`5 / 5問・25 / 25答案要素 PASS`
 
-制作前再解答で不足していた平成29年度問4の2答案要素は、完成教材の `S=P+jQ`、進み `Q<0`、`I=(P-jQ)/(√3V)` と複数枝KCL/KVLだけで正答でき、`2 / 2` 改善確認済み。
+制作前 `23 / 25` で不足した平成29年度問4の2答案要素も完成教材だけで `2 / 2` 改善確認済み。
+
+最終QA:
+- `topics/12_multiple_train_load/12_multiple_train_load_final_qa.md`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+
+exact blocker:
+1. `12_multiple_train_load.md` 冒頭 `## 状態` が `exam_alignment_complete` のまま。
+2. 同main sourceの冒頭要約・末尾 `## 次工程` が制作前段階のまま。
+3. `12_multiple_train_load_practice.md` 冒頭 `状態` が `topic_12_practice_source_complete` のまま。
+4. `12_multiple_train_load_powerpoint_qa.md` 末尾がblind独立再解答を次工程としている。
+
+技術修正は不要。上記進捗記録のみ実成果物へ同期するまでTopic 12は未完了を維持する。
 
 品質境界:
 - 固定5問・25答案要素の変更: `0件`
@@ -50,6 +59,7 @@ source:
 - `topics/12_multiple_train_load/12_multiple_train_load_images.pptx`
 - `topics/12_multiple_train_load/12_multiple_train_load_powerpoint_qa.md`
 - `topics/12_multiple_train_load/12_multiple_train_load_blind_reanswer_20260918.md`
+- `topics/12_multiple_train_load/12_multiple_train_load_final_qa.md`
 
 ## Topic 11 final result
 
@@ -75,8 +85,8 @@ Topic 11は `PASS / completed` を維持する。
 - [x] Topic 09 completed
 - [x] Topic 10 completed
 - [x] Topic 11 completed
-- [ ] Topic 12 — completion blind reanswer `25 / 25 PASS`; final QA pending
+- [ ] Topic 12 — technical/final exam gate PASS; progress-record sync pending
 
 ## next_start
 
-Topic 12の最終QAを行う。必須成果物、EXAM_ALIGNMENT、SPEC固定範囲、各QA、完成後blind独立再解答 `25 / 25 PASS`、進捗記録の整合を再判定する。最終QA PASSまでTopic 12を `completed` にしない。
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・計算プログラムは変更せず、最終QAで検出した上記4箇所の進捗記録だけを実成果物状態へ同期する。同期後に最終QAを再判定し、全項目PASSの場合のみTopic 12を `completed`、完成数 `12 / 22` とする。
