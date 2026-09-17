@@ -19,7 +19,7 @@
 - [x] PDF文字抽出のUnicode置換文字 `0件`
 - [x] `(cid:)` `0件`
 - [x] PPTX ZIP整合性 PASS
-- [x] SHA-256 `024b7e9c26ecee741f965a1af1063ec4d639a7379ce5393cbd7e40f347a124cf`
+- [x] Git blob SHA `af72dc7052484b5e368a1ab16389e4571caa7d3b`
 
 ## 試験対応・範囲QA
 - [x] 固定一次3問＋二次記述2問、計5問・8答案要素を維持
