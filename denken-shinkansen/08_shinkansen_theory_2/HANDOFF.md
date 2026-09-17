@@ -6,11 +6,11 @@
 
 Topic 01〜14は `PASS / completed`。完成数は `14 / 21`。
 
-current_status: `topic_15_powerpoint_complete`
+current_status: `topic_15_reanswer_complete`
 
 active_topic: `15 遮断器を入れた瞬間、電流はどう変化する？`
 
-Topic 15は解説画像PowerPoint＋表示QAまで完了。固定範囲はRL・RC・RLC回路、初期条件、過渡項・定常項、時定数、微分方程式、必要に応じたラプラス変換。品質ゲートはR8〜R4一次「理論」の5問・25答案要素で、教材内接続・可視化 `25 / 25` を維持。R8二次は2026-09-17時点で未実施、R7〜R5二次は固定範囲だけで完答できる直接対応問題がなく、二次採用0問・数合わせ0件。PowerPointは16:9・5枚、200 dpi全スライド表示QA `5 / 5 PASS`、overflow 0件、PPTX ZIP整合性・PDF変換・文字抽出PASS。次工程は完成後独立再解答。
+Topic 15は完成後独立再解答まで完了。固定範囲はRL・RC・RLC回路、初期条件、過渡項・定常項、時定数、微分方程式、必要に応じたラプラス変換。品質ゲートはR8〜R4一次「理論」の5問・25答案要素で、完成後独立再解答 `25 / 25 PASS`。R8二次は2026-09-17時点で未実施、R7〜R5二次は固定範囲だけで完答できる直接対応問題がなく、二次採用0問・数合わせ0件。次工程は最終QA。
 
 ## Topic 15 成果物
 
@@ -22,8 +22,9 @@ Topic 15は解説画像PowerPoint＋表示QAまで完了。固定範囲はRL・R
 - 練習PDF QA: `topics/15_breaker_transient/15_breaker_transient_practice_pdf_qa.md`
 - PowerPoint: `topics/15_breaker_transient/15_breaker_transient_images.pptx`
 - PowerPoint QA: `topics/15_breaker_transient/15_breaker_transient_powerpoint_qa.md`
+- 完成後独立再解答: `topics/15_breaker_transient/15_breaker_transient_reanswer.md`
 - completion: `in_progress`
-- stage: `POWERPOINT_COMPLETE`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 
 ## Topic 15 固定範囲
 
@@ -55,6 +56,7 @@ Topic 15は解説画像PowerPoint＋表示QAまで完了。固定範囲はRL・R
 
 - 公式問題・公式標準解答照合: `25 / 25`
 - 制作前独立再解答: `25 / 25 PASS`
+- 完成後独立再解答: `25 / 25 PASS`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - 仕様外論点追加: `0件`
@@ -141,6 +143,27 @@ Topic 15は解説画像PowerPoint＋表示QAまで完了。固定範囲はRL・R
 - 未確認実設備値・実測過渡波形追加: `0件`
 
 判定: `PASS / POWERPOINT_COMPLETE`
+
+## Topic 15 完成後独立再解答
+
+記録: `topics/15_breaker_transient/15_breaker_transient_reanswer.md`
+
+- R8 一次 理論 問6: `5 / 5 PASS`
+- R7 一次 理論 問6: `5 / 5 PASS`
+- R6 一次 理論 問4: `5 / 5 PASS`
+- R5 一次 理論 問5: `5 / 5 PASS`
+- R4 一次 理論 問4: `5 / 5 PASS`
+- 一次合計: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
+- 教材内の初期条件・最終値・時定数・微分方程式・電荷保存・RLC自由応答・蓄積エネルギーだけで再構成: `PASS`
+- 教材外知識補完: `0件`
+- SPEC固定範囲外追加: `0件`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- Topic 16以降の先取り: `0件`
+- 未確認実設備値・実測過渡波形追加: `0件`
+
+判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
 ## Topic 14 成果物
 
@@ -283,4 +306,4 @@ Topic 15は解説画像PowerPoint＋表示QAまで完了。固定範囲はRL・R
 
 ## 次に行うこと
 
-Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の完成後独立再解答。
+Topic 15「遮断器を入れた瞬間、電流はどう変化する？」の最終QA。
