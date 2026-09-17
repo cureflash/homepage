@@ -7,9 +7,9 @@
 
 Topic 01〜13は最終QAまで `PASS / completed`。完成数は `13 / 39`。
 
-現在地は `topic_14_exam_alignment_complete_spec_reconciled`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は制作前EXAM_ALIGNMENTを正本 `SPEC.md` 第14章へ再照合済み。固定一次2問＋二次3問、計5問・9答案要素と制作前計算・論理検証 一次 `3 / 3 PASS`、二次 `6 / 6 PASS`、合計 `9 / 9 PASS` は変更していない。本文・PDF・練習問題・PowerPointは未制作。
+現在地は `topic_14_explanation_source_complete`。Topic 14 `300系⑤ 走行抵抗と必要けん引力` は制作前EXAM_ALIGNMENTを正本 `SPEC.md` 第14章へ再照合済みで、固定一次2問＋二次3問、計5問・9答案要素と制作前計算・論理検証 一次 `3 / 3 PASS`、二次 `6 / 6 PASS`、合計 `9 / 9 PASS` を変更せず、解説本文＋3段階例題まで完成した。
 
-次はTopic 14の解説本文＋3段階例題。
+次はTopic 14の解説PDF。
 
 ## Topic 14 固定EXAM_ALIGNMENT
 source: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
@@ -63,6 +63,28 @@ source: `topics/14_300series_running_resistance_tractive_force/14_300series_runn
 - 制作前検証: `9 / 9 PASS 維持`
 - 新規過去問追加: `0件`
 - 新規実車値追加: `0件`
+
+## Topic 14 解説source
+- path: `topics/14_300series_running_resistance_tractive_force/14_300series_running_resistance_tractive_force.md`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説本文: `完成`
+- 3段階例題: `3 / 3 PASS`
+- 固定5過去問・9答案要素本文マッピング: `9 / 9 PASS`
+- 例題数値再計算: `PASS`
+- SPEC指定8項目: `8 / 8 PASS`
+- SPEC指定4可視化の計算条件: `4 / 4 PASS`
+- 4可視化は同じ教材用仮定式系から生成: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- Topic 13の回生・制動・エネルギー返送再展開: `0件`
+- Topic 12のPWM/VVVF/V/f等再展開: `0件`
+- SPEC外の粘着限界・曲線抵抗・トンネル抵抗・台車/歯車設計・運行計画追加: `0件`
+- 未確認300系実車値の真値化: `0件`
+
+教材用仮定モデル:
+- `m=m_eq=4.00×10^5 kg`
+- `R_run(v)=25000+80v+6v^2 [N]`、`v [m/s]`
+- 300系実車値ではないことを本文で明示
+- 速度―走行抵抗、速度―必要けん引力、速度―必要出力、加速曲線の4可視化条件を同一式系へ固定
 
 ## Topic 14 SPEC固定範囲
 扱う内容:
@@ -164,4 +186,4 @@ source: `topics/13_300series_regenerative_four_quadrant/13_300series_regenerativ
 Topic 13 `300系④ 回生と四象限運転` は最終QA `PASS / completed`。Topic 12 `300系③ VVVFインバータと誘導機制御`、Topic 11 `300系② PWMコンバータ` も `PASS / completed`。
 
 ## 次の正確な開始点
-Topic 14 `300系⑤ 走行抵抗と必要けん引力` の固定EXAM_ALIGNMENTは正本SPECへ再照合済み。固定一次2問＋二次3問・9答案要素を変更せず、SPEC指定8項目・4可視化に沿って解説本文＋3段階例題を制作する。PDF・練習問題・PowerPointはその後の工程とし、未確認の300系実車値は真値化しない。
+Topic 14 `300系⑤ 走行抵抗と必要けん引力` の固定EXAM_ALIGNMENTと解説sourceは完成。固定一次2問＋二次3問・9答案要素、SPEC指定8項目・4可視化条件、教材用仮定式系を変更せず、次は解説PDFを制作する。PDF後に練習問題・PowerPointへ進む。未確認の300系実車値は真値化しない。
