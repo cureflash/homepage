@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 15 / 20
-- current_status: `topic_16_powerpoint_complete`
+- current_status: `topic_16_blind_gate_ready`
 - last_completed_topic: `15 対数・dB・周波数応答`
 - active_topic: `16 数値微分・数値積分`
-- next_start: Topic 16の完成後独立再解答を、保存済み正答を先に見ずに実施する
+- next_start: Topic 16の完成後独立再解答を、ブラインドゲートに従い保存済み正答を含むファイルを先に見ずに実施する
 
 ## Topic 07 制作品質ゲート
 
@@ -61,7 +61,7 @@
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC確認
 - [x] 二次「機械・制御」5問・6対象設問を固定
 - [x] 要求知識・式・設問型・教材内必要説明をsourceへ固定
-- [x] R7 問4はTopic 10以降の伝達関数・定常偏差・畳み込み等が中心でTopic 10以降へ跨るため非採用
+- [x] R7 問4は伝達関数・定常偏差・畳み込み等が中心でTopic 10以降へ跨るため非採用
 - [x] R6 問4は(4)のみ採用し、伝達関数の一般理論・周波数応答を除外
 - [x] H29 問4 (1)〜(2)、H25 問4 (1)、H24 問4 (1)、H18 問4 (1)を採用
 - [x] 制作前独立再解答・公式標準解答照合 `6 / 6 PASS`
@@ -242,20 +242,24 @@
 - [x] 練習PDF（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`）
 - [x] 解説画像PowerPoint（16:9・5枚、固定4問・8答案要素 `8 / 8 PASS`）
 - [x] PowerPoint表示QA（全5枚 `5 / 5 PASS`、overflow 0、ZIP/XML整合性 `PASS`）
+- [x] 完成後独立再解答前のブラインドゲート整備（当runは保存済み正答視認のため再解答不実施）
 - [ ] 完成後独立再解答
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 16の解説画像PowerPoint＋表示QAを作成した。
+Topic 16の完成後独立再解答前ブラインドゲートを整備した。
 
-16:9・5枚。固定第二種4問・8答案要素への可視化接続 `8 / 8 PASS`。前進差分・中心差分、区分一定の面積和、台形則、Simpson則、刻み幅と誤差、`P^2` を積分する損失計算、期間全体の電力量から求める全日効率を可視化した。全5枚再レンダリング `5 / 5 PASS`、クリッピング・重なり・文字化け0件、overflow 0、`slides_test.py` PASS、PPTX ZIP/XML整合性PASS。第一種・第三種による件数水増し、Topic 17以降の先取り、高次数値微分・高次Newton-Cotes公式・スプライン・有限要素法等の仕様外追加、未確認実車値依存はいずれも0件。
+完成後独立再解答を確定する前に主sourceを取得し、制作前独立再解答の個別数値解・公式照合済み結果を視認したため、このrunでは完成後独立再解答を実施・判定しない。固定第二種4問・8答案要素、固定EXAM_ALIGNMENT、教材成果物、問題・正答は変更していない。第一種・第三種による件数水増し、Topic 17以降の先取り、高次数値微分・高次Newton-Cotes公式・スプライン・有限要素法等の仕様外追加、未確認実車値依存はいずれも0件。
+
+ブラインドゲート:
+`topics/16_numerical_differentiation_integration/16_numerical_differentiation_integration_blind_gate.md`
 
 ## 判定
 
-`topic_16_powerpoint_complete / IN_PROGRESS`
+`topic_16_blind_gate_ready / IN_PROGRESS`
 
 完成数は `15 / 20` のまま。
 
-次はTopic 16の完成後独立再解答を、保存済み正答を先に見ずに実施する。
+次はTopic 16の完成後独立再解答を、ブラインドゲートに従い保存済み正答を含むファイルを先に見ずに実施する。
