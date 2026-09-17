@@ -1,7 +1,7 @@
 # Topic 13 インバータはどうやって三相交流を作る？
 
 更新日: 2026-09-17
-status: `EXPLANATION_SOURCE_COMPLETE`
+status: `EXPLANATION_PDF_COMPLETE`
 
 ## 1. SPEC固定範囲
 
@@ -503,7 +503,7 @@ v_i= 4 V → v_o= 3 V
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
@@ -511,4 +511,4 @@ v_i= 4 V → v_o= 3 V
 
 ## 次工程
 
-解説PDFを作成し、固定4問の要求事項 `4 / 4`、3段階例題 `3 / 3`、系列SPEC固定範囲を維持したまま表示QA・文字抽出QAを行う。
+練習問題sourceを作成する。原則12問以上、少なくとも半数を五肢択一とし、本試験標準を中心に固定4問の要求事項へ接続する。系列SPEC固定範囲外の論点を追加しない。

@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 12 / 14
-- current_status: `topic_13_explanation_source_complete`
+- current_status: `topic_13_explanation_pdf_complete`
 - last_completed_topic: `12 300系はなぜVVVFになった？`
 - active_topic: `13 インバータはどうやって三相交流を作る？`
-- next_start: Topic 13の解説PDFを作成し、表示QA・文字抽出QAを行う
+- next_start: Topic 13の練習問題source・練習PDFを作成する
 
 ## Topic 01 進捗
 
@@ -235,7 +235,7 @@
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] 完成後の公式過去問独立再解答
@@ -243,12 +243,17 @@
 
 ## 今回進めた内容
 
-Topic 13 `インバータはどうやって三相交流を作る？` の解説本文＋3段階例題を完成した。
+Topic 13 `インバータはどうやって三相交流を作る？` の解説PDFを完成し、GitHub正本へ反映する段階までQAを完了した。
 
-固定4過去問の要求を本文へ `4 / 4` マッピングし、理想スイッチ、パルス・デューティ比、波形率・波高率、PWM、基本波・高調波、ひずみ波電力、区間別波形追跡、三相インバータの基本を説明した。系列SPECに明記された増幅回路・オペアンプは基本概念だけを収録し、固定4問の品質ゲートへ件数合わせで混在させていない。
-
-3段階例題は独立再計算 `3 / 3 PASS`。詳細PWM方式、V/f制御、素子損失、NAND・マルチバイブレータ、直流チョッパ固有L/C、未確認実車値の追加は0件。
+- A4縦4ページ
+- 200 dpi表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 固定4過去問の要求事項: `4 / 4` 反映
+- 3段階例題: `3 / 3 PASS`
+- クリッピング・重なり・文字化け・ページ外はみ出し: `0件`
+- 系列SPEC固定範囲外追加: `0件`
+- 詳細PWM方式、V/f制御、素子損失、NAND・マルチバイブレータ、直流チョッパ固有L/C、測定論点、未確認実車値の追加: `0件`
 
 ## 判定
 
-Topic 13は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `12 / 14`。次は解説PDFを作成し、表示QA・文字抽出QAを行う。
+Topic 13は `EXPLANATION_PDF_COMPLETE / IN_PROGRESS`。完成数は `12 / 14`。次は練習問題source・練習PDFを作成する。
