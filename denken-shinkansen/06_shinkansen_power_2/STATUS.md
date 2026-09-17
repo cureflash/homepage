@@ -4,12 +4,12 @@ updated: 2026-09-17
 series: `06_shinkansen_power_2`
 active_topic: `11`
 theme: 新幹線が移動すると電圧はどう変わる？
-current_status: `topic_11_powerpoint_complete`
+current_status: `topic_11_independent_reanswer_complete`
 completed_topics: `10 / 22`
 
 ## Topic 11 current result
 
-制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QA、計算プログラム・CSV・グラフと独立計算QA、解説画像PowerPointとPowerPoint QAまで完了した。
+制作前EXAM_ALIGNMENTと制作前独立再解答をPASSした固定4問・17答案要素を基準に、解説本文source、解説PDF、練習問題・完全解説source、独立QA、練習PDFとPDF QA、計算プログラム・CSV・グラフと独立計算QA、解説画像PowerPointとPowerPoint QA、完成後blind独立再解答まで完了した。
 
 正式品質ゲート:
 - 平成30年度 第二種一次「電力」問7 — `5 / 5 PASS`
@@ -76,6 +76,16 @@ PowerPoint成果物:
 - PPTX ZIP整合性: PASS
 - SHA-256: `358c809cbaff5358147a9e4027aa5d9b3711bdad7c4926d2768d3efa68e2cce6`
 
+完成後blind独立再解答:
+- `topics/11_moving_train_voltage/11_moving_train_voltage_blind_reanswer_20260917.md`
+- 平成30年度 第二種一次「電力」問7: `5 / 5 PASS`
+- 平成27年度 第二種二次「電力・管理」問3: `4 / 4 PASS`
+- 平成27年度 第二種二次「電力・管理」問4: `5 / 5 PASS`
+- 平成26年度 第二種二次「電力・管理」問4: `3 / 3 PASS`
+- 一次 `5 / 5` + 二次 `12 / 12` = `4 / 4問・17 / 17答案要素 PASS`
+- 教材外補完: `0件`
+- 仕様追加: `0件`
+
 本文・練習・計算プログラム・PowerPointでは、位置 `x` から `Z(x)` を作る方法、`S=P+jQ=VI*`、`V_s=V_r+ZI`、厳密な受電端電圧式、近似電圧降下、`I²R` 損失、位置比較、分布負荷の積分法を扱う。H30一次問7の導体量関係はTopic 10既習事項として再確認するだけで、新規主題にはしていない。
 
 範囲監査:
@@ -97,8 +107,8 @@ PowerPoint成果物:
 - [x] Topic 08 completed
 - [x] Topic 09 completed
 - [x] Topic 10 completed
-- [ ] Topic 11 — PowerPoint complete / IN_PROGRESS
+- [ ] Topic 11 — blind independent reanswer complete / IN_PROGRESS
 
 ## next_start
 
-Topic 11の完成教材だけを使い、正式固定4問・17答案要素を保存済み正答を見ずにblind独立再解答する。PowerPoint完成段階ではまだ実施しない。
+Topic 11の最終QAを実施し、成果物・進捗記録・固定EXAM_ALIGNMENT・完成後blind独立再解答結果の整合を再判定する。最終QA PASSまでは `completed` にしない。
