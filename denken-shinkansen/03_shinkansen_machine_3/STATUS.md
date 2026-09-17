@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `12 / 16`
-- current_status: `topic_13_explanation_source_complete`
+- current_status: `topic_13_explanation_pdf_complete`
 - last_completed_topic: `12 新幹線のコンピュータは何をしている？`
 - active_topic: `13 新幹線は主電動機以外もモーターだらけ？`
-- next_start: Topic 13の解説PDFを作成する
+- next_start: Topic 13の練習問題sourceを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -23,7 +23,7 @@
 - [x] 10 新幹線の速度はどう自動制御される？ — 品質ゲートPASS / completed
 - [x] 11 空転した車輪をどう立て直す？ — 品質ゲートPASS / completed
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
-- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 解説本文＋3段階例題完成 / IN_PROGRESS
+- [ ] 13 新幹線は主電動機以外もモーターだらけ？ — 解説PDF完成 / IN_PROGRESS
 - [ ] 14〜16 — 未完了
 
 ## Topic 13 制作品質状態
@@ -41,8 +41,16 @@
 - Topic 14〜16先取り: `0件`
 - source: `topics/13_auxiliary_motors/13_auxiliary_motors.md`
 - 解説本文: 完成
-- 状態: `topic_13_explanation_source_complete`
-- 次工程: 固定EXAM_ALIGNMENTと本文範囲を変更せず解説PDFを作成する
+- 解説PDF: 完成（A4縦4ページ）
+- 解説PDF表示QA: `4 / 4 PASS`
+- 解説PDF文字抽出QA: `PASS`
+- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
+- 解説PDF欠落・破損グリフ: `0件`
+- 解説PDF固定過去問マッピング: `5 / 5`
+- explanation PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation.pdf`
+- explanation PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation_pdf_qa.md`
+- 状態: `topic_13_explanation_pdf_complete`
+- 次工程: 固定EXAM_ALIGNMENTと本文範囲を変更せず練習問題sourceを作成する
 
 ## Topic 12 最終品質状態
 - 固定範囲: 2進数 / 16進数 / ビット / バイト / 論理回路 / AND / OR / NOT / NAND / NOR / XOR / 論理式 / 真理値表 / A/D変換 / D/A変換 / センサ / 情報伝送
@@ -172,6 +180,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 13「新幹線は主電動機以外もモーターだらけ？」の解説本文＋3段階例題を完成した。固定5過去問の要求事項を本文へ `5 / 5 PASS` で接続し、基礎・本試験標準・複合の例題は独立再計算 `3 / 3 PASS`。固定EXAM_ALIGNMENT変更、系列SPEC外論点追加、Topic 14〜16先取り、未確認補機仕様の実値化はいずれも0件。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」の解説PDFを作成した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`。固定5過去問マッピング `5 / 5`、3段階例題 `3 / 3`。固定EXAM_ALIGNMENT変更、系列SPEC外論点追加、Topic 14〜16先取り、未確認補機仕様の実値化はいずれも0件。
 
-完成数は `12 / 16` のまま。次工程はTopic 13の解説PDF。
+完成数は `12 / 16` のまま。次工程はTopic 13の練習問題source。

@@ -6,10 +6,12 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `12 / 16`。Topic 01〜12は品質ゲートPASSでcompleted。active topicは13「新幹線は主電動機以外もモーターだらけ？」。
 
 ## 今回進捗
-Topic 13「新幹線は主電動機以外もモーターだらけ？」の解説本文＋3段階例題を完成した。固定5過去問の要求事項を本文へ `5 / 5 PASS` で接続し、例題は独立再計算 `3 / 3 PASS`。固定EXAM_ALIGNMENT変更、件数合わせの仕様外追加、Topic 14〜16先取り、未確認補機仕様の実値化はいずれも0件。完成数は `12 / 16` のまま。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」の解説PDFを完成した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`。固定5過去問の教材内マッピングは `5 / 5`、3段階例題は `3 / 3`。固定EXAM_ALIGNMENT変更、件数合わせの仕様外追加、Topic 14〜16先取り、未確認補機仕様の実値化はいずれも0件。完成数は `12 / 16` のまま。
 
 source: `topics/13_auxiliary_motors/13_auxiliary_motors.md`
-次工程: 固定EXAM_ALIGNMENTと本文範囲を変更せず、Topic 13の解説PDFを作成する。
+explanation PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation.pdf`
+explanation PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation_pdf_qa.md`
+次工程: 固定EXAM_ALIGNMENTと本文範囲を変更せず、Topic 13の練習問題sourceを作成する。
 
 ## Topic 13 制作前EXAM_ALIGNMENT
 固定範囲:
@@ -100,6 +102,19 @@ Topic 14〜16先取り: `0件`
 - 基礎: `N=1500 min^-1`、`T=20 N·m` から `P=3.14 kW`。負荷トルク増加時の減速判定まで確認。
 - 本試験標準: `Q=1.2 m³/min`、全揚程30 m、ポンプ効率80%、余裕係数1.10、電動機効率90%から必要軸出力 `8.085 kW`、電気入力 `8.98 kW`、5.5 kW機の必要台数2台を再計算。
 - 複合: 流量70%の可変速ファンで速度比0.70、トルク比0.49、軸動力比0.343、20 kW基準から `6.86 kW`、効率92%で電気入力 `7.46 kW` を再計算。
+
+## Topic 13 解説PDFの現状
+- 解説PDF: 完成（A4縦4ページ）。
+- 表示QA: `4 / 4 PASS`（200 dpi）。
+- 文字抽出QA: `PASS`。
+- 文字切れ・重なり・ページ外はみ出し: `0件`。
+- 欠落・破損グリフ: `0件`。
+- 固定5過去問マッピング: `5 / 5`。
+- 3段階例題収録: `3 / 3`。
+- 固定EXAM_ALIGNMENT変更: `0件`。
+- 固定範囲外追加: `0件`。
+- Topic 14〜16先取り: `0件`。
+- 未確認補機仕様追加: `0件`。
 
 ## Topic 12 最終QA
 - 前回判定: `NEEDS_REVISION / IN_PROGRESS`
