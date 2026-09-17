@@ -6,10 +6,10 @@
 
 - active_series: `04_shinkansen_theory_3`
 - exam_aligned_completed_topics: 13 / 14
-- current_status: `topic_14_exam_alignment_complete`
+- current_status: `topic_14_explanation_source_complete`
 - last_completed_topic: `13 インバータはどうやって三相交流を作る？`
 - active_topic: `14 East iは何をどう測っている？`
-- next_start: Topic 14の解説本文＋3段階例題を作成する
+- next_start: Topic 14の解説PDFを作成し、表示・文字抽出QAを行う
 
 ## Topic 01 進捗
 
@@ -251,7 +251,7 @@
 - [x] 未確認East i検測項目・センサ構成・内部回路・数値、ATC/軌道回路詳細を境界整理
 - [x] e-sysnet・電験王・電験三種まとめましたの説明粒度を確認
 - [x] source MarkdownへEXAM_ALIGNMENTと教材必須説明を固定
-- [ ] 解説本文＋3段階例題
+- [x] 解説本文＋3段階例題
 - [ ] 解説PDF
 - [ ] 練習問題source・練習PDF
 - [ ] 解説画像PowerPoint
@@ -260,16 +260,17 @@
 
 ## 今回進めた内容
 
-Topic 14 `East iは何をどう測っている？` の制作前EXAM_ALIGNMENTを完了した。
+Topic 14 `East iは何をどう測っている？` の解説本文＋3段階例題を完成した。
 
-- 令和8年度上期まで公式「理論」過去問を確認
-- 固定公式過去問: `8問・13答案要素`
-- 制作前独立検証: `8 / 8問・13 / 13答案要素 PASS`
-- 固定範囲外追加: `0件`
-- 未確認East i実車情報の教材事実化: `0件`
-- e-sysnet・電験王・電験三種まとめましたで説明粒度を確認
+- 固定8問要求事項の本文対応: `8 / 8`
+- 3段階例題: `3問`
+- 例題独立再計算: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 系列SPEC外論点追加: `0件`
+- 未確認East i内部回路・センサ定数・測定値の事実化: `0件`
+- JR東日本2025-10-07一次資料から、E926形の公表検測装置だけを新幹線接続へ採用
 - source: `topics/14_east_i_measurement/14_east_i_measurement.md`
 
 ## 判定
 
-Topic 14は `EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`。完成数は `13 / 14`。次は固定EXAM_ALIGNMENTに基づいて解説本文＋3段階例題を作成する。
+Topic 14は `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`。完成数は `13 / 14`。次は固定sourceから解説PDFを作成し、表示・文字抽出QAを行う。
