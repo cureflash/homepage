@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 13 / 16
-- current_status: `topic_13_completed`
+- current_status: `topic_14_exam_alignment_complete`
 - last_completed_topic: `13 新幹線の架線は何でできている？`
 - active_topic: `14 駅やトンネルにはどう電気を配る？`
-- next_start: Topic 14の制作前EXAM_ALIGNMENTを開始し、公式過去問を直近年度から調査してSPEC固定範囲だけで品質ゲート対象を固定する
+- next_start: Topic 14の固定5問・6答案要素について制作前独立検証を行い、公式標準解答を先に見ずに解答・根拠を固定した後に照合する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -24,7 +24,7 @@
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 14 駅やトンネルにはどう電気を配る？
+- [ ] 14 駅やトンネルにはどう電気を配る？ — 制作前EXAM_ALIGNMENT完了。固定5問・6答案要素。次は制作前独立検証
 - [ ] 15 回生した電気はどこへ行く？
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
@@ -453,5 +453,26 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - R5下 電力 問14: `(5)`
 - R5上 電力 問14: `(2)`
 
+## Topic 14 進行記録
+source: `topics/14_distribution/14_distribution.md`
+
+固定5問・6答案要素:
+- R8上 電力 問13
+- R7下 電力 問10
+- R3 電力 問12
+- H23 電力 問9
+- H20 電力 問17 (a)(b)
+
+集計:
+- 制作前EXAM_ALIGNMENT: 完了
+- 固定問題: `5問・6答案要素`
+- 制作前独立検証: 未実施（次工程）
+- SPEC固定範囲外の採用問題: `0件`
+- 既完了Topic固定過去問との重複採用: `0件`
+- 未確認新幹線実設備値への依存: `0件`
+- 件数合わせの仕様追加: `0件`
+- 正答番号・最終数値解のsource記録: `0件`（制作前独立検証を汚染しないため）
+- 除外: R8上 電力 問17（バランサ）、R8上 電力 問10（ケーブル損失機構）、R7上 電力 問11（バランサ）、R7上 電力 問10（OF/CVT等の詳細比較）、R4上 電力 問13（固定範囲外機材）、R5上 電力 問12（Topic 08固定問題と重複）
+
 ## 次
-Topic 14 `駅やトンネルにはどう電気を配る？` の制作前EXAM_ALIGNMENTを開始する。`SPEC.md` の固定範囲から追加せず、直近年度の公式過去問を優先して対象問題を固定する。
+Topic 14の固定5問・6答案要素について制作前独立検証を行う。公式標準解答を先に見ずに解答・根拠を固定し、その後に公式解答と照合する。
