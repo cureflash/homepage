@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 12 / 16
-- current_status: `topic_13_progress_sync_complete`
-- last_completed_topic: `12 320km/hでもパンタグラフが離れないのはなぜ？`
-- active_topic: `13 新幹線の架線は何でできている？`
-- next_start: Topic 13最終QAを再実施し、初回最終QAで唯一FAILだった進捗記録整合を含めて再判定する
+- exam_aligned_completed_topics: 13 / 16
+- current_status: `topic_13_completed`
+- last_completed_topic: `13 新幹線の架線は何でできている？`
+- active_topic: `14 駅やトンネルにはどう電気を配る？`
+- next_start: Topic 14の制作前EXAM_ALIGNMENTを開始し、公式過去問を直近年度から調査してSPEC固定範囲だけで品質ゲート対象を固定する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -23,7 +23,7 @@
 - [x] 10 新幹線が突然大電力を使ったら？ — completed。固定5問・8小問の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8`、教材外補完0件。解説PDF・練習PDF・PowerPoint QA、SPEC境界、前回FAILだった進捗記録3箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 13 新幹線の架線は何でできている？ — IN_PROGRESS。制作前EXAM_ALIGNMENT完了、固定5問・5答案要素、制作前独立検証 `5 / 5 PASS`。解説本文§1〜§16＋3段階例題、解説PDF＋QA、練習問題source全12問、練習PDF＋QA、解説画像PowerPoint＋QA、完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`。初回最終QAは技術内容・成果物・過去問品質ゲート・SPEC境界PASS、進捗記録整合のみFAIL（旧工程5箇所）。旧進捗記録5箇所同期完了、次は最終QA再実施
+- [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [ ] 14 駅やトンネルにはどう電気を配る？
 - [ ] 15 回生した電気はどこへ行く？
 - [ ] 16 発電所からN700Sまで全部つないでみる
@@ -388,7 +388,7 @@ PowerPoint QA: `topics/12_overhead_line_mechanics/12_overhead_line_mechanics_pow
 - H29 電力 問8: `(2)`
 - H24 電力 問13: `(3)`
 
-## Topic 13 進行記録
+## Topic 13 完了記録
 source: `topics/13_electrical_materials/13_electrical_materials.md`
 解説PDF: `topics/13_electrical_materials/13_electrical_materials_explanation.pdf`
 解説PDF QA: `topics/13_electrical_materials/13_electrical_materials_explanation_qa.md`
@@ -407,7 +407,7 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - R5下 電力 問14
 - R5上 電力 問14
 
-現在地:
+集計:
 - 制作前EXAM_ALIGNMENT: 完了
 - 固定問題: `5問・5答案要素`
 - 制作前独立検証: `5 / 5 PASS`
@@ -444,6 +444,7 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - 未確認新幹線実設備値の真値化: `0件`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・成果物・過去問品質ゲート・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
 - 旧進捗記録5箇所同期: 完了
+- 最終QA再実施: `PASS / completed`
 
 完成後独立答案:
 - R8上 電力 問14: `(2)`
@@ -453,4 +454,4 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - R5上 電力 問14: `(2)`
 
 ## 次
-Topic 13の最終QAを再実施し、初回最終QAで唯一FAILだった進捗記録整合を含めて再判定する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
+Topic 14 `駅やトンネルにはどう電気を配る？` の制作前EXAM_ALIGNMENTを開始する。`SPEC.md` の固定範囲から追加せず、直近年度の公式過去問を優先して対象問題を固定する。
