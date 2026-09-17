@@ -6,25 +6,21 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は34/38。01〜34がPASS。active topicは35 `COMTRAC③ ダイヤが乱れたらどうする？`。
 
 ## 今回進捗
-Topic 35の完成後blind独立再解答を完了し、GitHub正本へ反映した。
+Topic 35の最終QAを実施し、`NEEDS_REVISION / IN_PROGRESS` と判定した。
 
 - 固定EXAM_ALIGNMENT 5問は変更なし
-- 完成教材だけで先に固定5問を再解答し、全選択肢・根拠確定後に公式解答表と照合
-- R7下 機械 問14: 選択肢3 — PASS
-- R5上 機械 問14: 選択肢3 — PASS
-- R4下 機械 問13: 選択肢3 — PASS
-- R4下 理論 問14: 選択肢5 — PASS
-- H26 機械 問13: 選択肢3 — PASS
-- 合計: `5 / 5問 PASS`
-- 公式解答との不一致: `0件`
-- 教材外知識補完: `0件`
-- 固定範囲外知識による補完: `0件`
-- Topic 36以降先取り: `0件`
-- Topic 34論理回路の再体系化: `0件`
-- 未確認COMTRAC内部仕様依存: `0件`
-- 機能分散と冗長化の混同: `0件`
-- 教材本文・固定EXAM_ALIGNMENT・練習問題・PDF・PowerPointは変更なし
-- 記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_independent_reanswer.md`
+- 完成後blind独立再解答: `5 / 5問 PASS`
+- 必須成果物: PASS
+- 練習問題QA: `15 / 15 PASS`
+- 解説PDF / 練習PDF / PowerPoint表示QA: PASS
+- 系列SPEC固定範囲境界: PASS
+- 進捗記録整合: FAIL
+- 未完了理由は進捗記録3箇所のみ
+  1. main source冒頭 `## 状態` の「PDF・練習問題・PowerPointは未着手」
+  2. main source冒頭 `次工程` の「解説PDFを作成する」
+  3. 解説PDF QAの `次工程` の「Topic 35の練習source」
+- 技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更なし
+- 最終QA記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_final_qa.md`
 
 ## Topic 35 固定EXAM_ALIGNMENT
 - R7下 機械 問14 — フローチャート、変数更新、条件分岐、反復
@@ -128,6 +124,13 @@ Topic 35の完成後blind独立再解答を完了し、GitHub正本へ反映し�
 - 未確認COMTRAC内部仕様依存: `0件`
 - 機能分散と冗長化の混同: `0件`
 
+## Topic 35 最終QA
+- 記録: `topics/35_comtrac_disruption_management/35_comtrac_disruption_management_final_qa.md`
+- 判定: `NEEDS_REVISION / IN_PROGRESS`
+- 技術内容・固定EXAM_ALIGNMENT・完成後blind独立再解答・練習QA・PDF/PPTX表示QA・固定範囲境界: PASS
+- 進捗記録整合: FAIL（旧工程3箇所のみ）
+- 完成数: `34 / 38` 維持
+
 ## Topic 35 系列SPEC固定範囲
 扱う: 遅延、列車順序、番線変更、運転整理、情報処理、条件分岐、冗長化。
 
@@ -176,11 +179,11 @@ Topic 35範囲追加: `0件`。
 - ATCの速度照査・ブレーキ制御の再説明
 
 ## 現在の状態
-- `current_status`: `topic_35_independent_reanswer_complete`
+- `current_status`: `topic_35_final_qa_needs_revision`
 - 完成数: 34/38
 - 01〜34: PASS
 - last completed: 34 `COMTRAC② 進路をどう自動制御する？`
 - active topic: 35 `COMTRAC③ ダイヤが乱れたらどうする？`
 
 ## 次の正確な開始点
-Topic 35の最終QA。必須成果物、固定5過去問の完成後blind独立再解答 `5 / 5問 PASS`、練習QA、解説PDF・練習PDF・PowerPoint表示QA、進捗記録整合、系列SPEC固定範囲境界を確認する。全件PASSの場合のみ `completed` とし完成数を35/38へ更新する。固定5問・教材成果物・EXAM_ALIGNMENTは変更しない。
+Topic 35の進捗記録3箇所だけを実成果物へ同期する。対象は `35_comtrac_disruption_management.md` 冒頭 `## 状態` の未着手記述、同sourceの `次工程`、`35_comtrac_disruption_management_explanation_pdf_qa.md` の `次工程`。技術本文・固定EXAM_ALIGNMENT・問題/正答・PDF/PPTX・blind独立再解答結果は変更しない。同期後に最終QAを再実施する。
