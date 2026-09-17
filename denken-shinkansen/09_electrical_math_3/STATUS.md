@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `09_electrical_math_3`
 - exam_aligned_completed_topics: 11 / 12
-- current_status: `topic_12_explanation_source_complete`
+- current_status: `topic_12_explanation_pdf_complete`
 - last_completed_topic: `11 グラフ・特性曲線を読む`
 - active_topic: `12 電気数学総合`
-- next_start: `Topic 12の解説PDF`
+- next_start: `Topic 12の練習問題source`
 
 ## Topic 06 進捗
 - [x] 系列SPEC確認
@@ -144,7 +144,7 @@
 - [x] source Markdownへ制作前EXAM_ALIGNMENTを記録
 - [x] 制作前独立解答・公式解答照合 `5 / 5問・9 / 9答案要素 PASS`
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF
+- [x] 解説PDF
 - [ ] 練習問題source
 - [ ] 練習PDF（解答・完全解説付き）
 - [ ] 解説画像PowerPoint
@@ -156,21 +156,20 @@
 
 ## 今回進めた内容
 
-Topic 12「電気数学総合」の解説本文と3段階例題を主sourceへ反映した。
+Topic 12「電気数学総合」の解説PDFをGitHub正本へ反映した。
 
-- 固定必須説明20項目: `20 / 20` 実装
-- 固定5過去問への教材内マッピング: `5 / 5`
-- 3段階例題: 基礎 / 本試験標準 / 複合・ひっかけ 各1問
-- 例題独立再計算: `3 / 3 PASS`
-  - 正弦波磁束→誘導起電力: `E_m≈125.7 V`、`E≈88.9 V`
-  - 三相同期電動機: `n_s=1500 min^-1`、`P_out≈49.9 kW`、`T≈318 N·m`
-  - 三相整流波形: `V_LL≈207.8 V`、`V_max≈293.9 V`、`V_min≈254.6 V`、`V_avg≈280.7 V`、`δ≈0.140`
+- A4縦6ページ
+- 200 dpi表示QA `6 / 6 PASS`
+- 文字抽出QA `PASS`
+- 固定必須説明20項目: `20 / 20`
+- 3段階例題の数値整合: `3 / 3 PASS`
+- 固定5過去問への教材内対応: `5 / 5`
 - 固定EXAM_ALIGNMENT変更0件
 - 伝達関数・ボード線図・PID・フーリエ解析等の固定範囲外追加0件
 - 未確認の新幹線実車値追加0件
 
 ## 判定
 
-`topic_12_explanation_source_complete / IN_PROGRESS`。
+`topic_12_explanation_pdf_complete / IN_PROGRESS`。
 
-完成数は `11 / 12`。次工程はTopic 12の解説PDF。
+完成数は `11 / 12`。次工程はTopic 12の練習問題source。
