@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `14 / 22`
-- current_status: `topic_15_final_qa_needs_revision`
+- current_status: `topic_15_progress_records_synced`
 - last_completed_topic: `14 L0系を500km/hで同期させる`
 - active_topic: `15 新幹線の補機モーターを設計する`
-- next_start: Topic 15 進捗記録3箇所の同期
+- next_start: Topic 15 最終QA再実施
 
 ## 完了テーマ
 - [x] Topic 01〜14 最終QA `PASS / completed`
@@ -54,7 +54,7 @@ blind再解答前は固定公式過去問の個別正答記号・完成済み答
 - [x] PowerPoint QA `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_powerpoint_qa.md`
 - [x] 独立再解答前ゲート `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_blind_reanswer_gate.md`
 - [x] 完成後独立再解答 `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_independent_reanswer.md`
-- [x] 最終QA記録 `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_final_qa.md` — `NEEDS_REVISION`
+- [x] 最終QA記録 `topics/15_auxiliary_motor_design/15_auxiliary_motor_design_final_qa.md` — 前回判定 `NEEDS_REVISION`
 
 ## Topic 15 解説画像PowerPoint
 - [x] 16:9・4枚
@@ -104,14 +104,15 @@ blind再解答前は固定公式過去問の個別正答記号・完成済み答
 - [x] 完成後独立再解答 `8 / 8 PASS`
 - [x] 練習問題・解説PDF・練習PDF・PowerPoint QA PASS
 - [x] 固定範囲境界 PASS
-- [ ] 進捗記録整合
-  - main source `## 状態` が `topic_15_practice_pdf_complete` / PowerPoint・独立再解答未着手のまま
-  - main source末尾 `# 次工程` がPowerPoint作成のまま
-  - 練習source末尾 `# 次工程` がPowerPoint作成のまま
-- [x] 判定 `NEEDS_REVISION / IN_PROGRESS`
+- [x] 前回blockerだった進捗記録3箇所を実成果物状態へ同期済み
+  - main source `## 状態`
+  - main source末尾 `# 次工程`
+  - 練習source末尾 `# 次工程`
+- [ ] 最終QA再実施
+- 前回判定: `NEEDS_REVISION / IN_PROGRESS`
 
 ## 今回進めた内容
-Topic 15最終QAを実施した。技術品質、固定5問・8答案要素、独立再解答、必須成果物、PDF/PPTX QA、仕様境界はPASS。main source 2箇所と練習source 1箇所の進捗記録だけが実成果物状態より古いため、完了判定は保留した。
+Topic 15の技術内容、固定EXAM_ALIGNMENT、問題、正答、PDF/PPTXは変更せず、前回最終QAで唯一のblockerだった進捗記録3箇所を実成果物状態へ同期した。固定一次3問＋二次2問・8答案要素と独立再解答 `8 / 8 PASS` は維持している。
 
 ## 判定
-Topic 15は `final_qa_needs_revision / IN_PROGRESS`。完成数は `14 / 22` のまま。次は進捗記録3箇所の同期。
+Topic 15は `topic_15_progress_records_synced / IN_PROGRESS`。完成数は `14 / 22` のまま。次は最終QA再実施。
