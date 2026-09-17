@@ -6,11 +6,11 @@
 
 Topic 01〜16は `PASS / completed`。完成数は `16 / 21`。
 
-current_status: `topic_16_completed`
+current_status: `topic_17_exam_alignment_complete`
 
 active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
 
-Topic 16はcompleted状態同期まで完了。固定一次5問・25答案要素の完成後独立再解答 `25 / 25 PASS`、二次採用0問・数合わせ0件、必須成果物、表示QA、練習QA、SPEC境界、初回blocker4件の解消を全件確認済み。判定は `PASS / completed`。次工程はTopic 17の制作前EXAM_ALIGNMENT。
+Topic 17の制作前EXAM_ALIGNMENTまで完了。固定一次5問・25答案要素を公式標準解答と独立導出で `25 / 25 PASS`。R7〜R5二次を確認し、固定範囲だけで完結する直接対応問題は採用0問、数合わせ0件。次工程はTopic 17の解説本文＋3段階例題。
 
 ## Topic 16 成果物
 
@@ -160,6 +160,52 @@ Topic 16はcompleted状態同期まで完了。固定一次5問・25答案要素
 
 判定: `PASS / completed`
 
+## Topic 17 成果物
+
+- source: `topics/17_transistor_fet_switching/17_transistor_fet_switching.md`
+- completion: `in_progress`
+- stage: `EXAM_ALIGNMENT_COMPLETE`
+
+## Topic 17 固定範囲
+
+系列SPECどおり次だけを扱う。
+
+- バイポーラトランジスタ
+- FET
+- MOSFET
+- IGBT
+- GTOの概念
+- SiCデバイスの概念
+- 増幅
+- 動作点
+- 負荷線
+- スイッチング
+- 電力損失
+
+理論編では素子の動作原理を中心とし、変換器としての詳細計算は機械編へ譲る。未確認の新幹線主変換装置の実装・定格・損失値は追加しない。
+
+## Topic 17 固定EXAM_ALIGNMENT
+
+品質ゲート対象は一次5問・25答案要素。
+
+- R7 一次 理論 問8: BJTエミッタ接地増幅、分圧バイアス、動作点、電圧増幅率、位相反転
+- R5 一次 理論 問7: CMOS MOSFET、ON/OFF、NAND、容量性負荷の平均電源電流
+- H30 一次 理論 問7: BJT小信号増幅、入力インピーダンス、電圧増幅率
+- H28 一次 理論 問7: BJTエミッタフォロワ、電流増幅、電圧増幅率
+- H27 一次 理論 問7: MOSFET増幅、相互コンダクタンス、入力抵抗、電圧増幅率
+
+R8一次理論は確認したが固定範囲の直接対応問題なし。R7〜R5二次も確認し、R7問3のダイオードブリッジ、R6問3のチョッパ、R5問3の電力用能動フィルタは変換器回路が主題で、系列SPECが機械編へ送る範囲のため非採用。
+
+- 公式問題・公式標準解答照合: `25 / 25`
+- 制作前独立導出: `25 / 25 PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 変換器詳細計算追加: `0件`
+- 未確認新幹線主変換装置仕様追加: `0件`
+- Topic 18以降の先取り: `0件`
+
+判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
 ## 次工程
 
-Topic 17「GTO・IGBT・SiCはどうやって電流を操る？」の制作前EXAM_ALIGNMENTを行う。
+Topic 17の固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を作成する。
