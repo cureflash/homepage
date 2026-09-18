@@ -8,11 +8,11 @@ Topic 01〜19は最終QAまで `PASS / completed`。
 
 完成数: `19 / 20`
 
-current_status: `topic_20_powerpoint_complete`
+current_status: `topic_20_post_completion_validation_complete`
 
 active_topic: `20 新幹線を数式モデルだけで走らせる`
 
-次工程: Topic 20の完成後独立検証。
+次工程: Topic 20の最終QA。
 
 ## 上位仕様
 
@@ -246,6 +246,29 @@ PWM波形・FFT
 
 判定: `PASS / POWERPOINT_COMPLETE`。
 
+## 完成後独立検証
+
+記録:
+`topics/20_shinkansen_math_model/20_shinkansen_math_model_post_completion_validation.md`
+
+再現用スクリプト:
+`topics/20_shinkansen_math_model/20_shinkansen_math_model_post_completion_validation.py`
+
+制作前検証・3段階例題・練習問題とは異なる教育用数値条件で、固定範囲だけを新規3ケース独立検証した。
+
+- Case A: 牽引力→運動方程式→Euler速度更新→位置→仕事・電力量 `PASS`
+- Case B: 一次簡略制御モデル→伝達関数→解析解→Euler刻み幅比較 `PASS`
+- Case C: 回生符号→エネルギー収支→周期成分→サンプリング→DFT `PASS`
+- 新規3ケース: `3 / 3 PASS`
+- 統合モデル直接要求の確認済み第二種過去問: `0問`
+- 接続5問の直接対応品質ゲート件数への水増し: `0件`
+- 第一種・第三種問題追加: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
+判定: `PASS / POST_COMPLETION_VALIDATION_COMPLETE`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -264,10 +287,10 @@ PWM波形・FFT
 - [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 練習PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 解説画像PowerPoint＋QA（16:9・5枚、固定統合範囲 `7 / 7`、必要説明 `6 / 6 PASS`、接続確認5問 `5 / 5 PASS`、表示QA `5 / 5 PASS`、overflow `0件`）
-- [ ] 完成後独立検証
+- [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、統合モデル直接要求0問・接続5問の水増し0件を維持）
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文・解説PDF・練習問題source・練習PDF・PowerPointを変更せず、Topic 20の完成後独立検証を行う。
+固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文・解説PDF・練習問題source・練習PDF・PowerPoint・完成後独立検証を変更せず、Topic 20の最終QAを行う。
