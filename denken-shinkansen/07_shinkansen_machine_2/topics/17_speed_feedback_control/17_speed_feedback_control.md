@@ -4,9 +4,9 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENT、解説source本文、解説PDF＋QAを完了した。
+制作前EXAM_ALIGNMENT、解説source本文、解説PDF＋QA、練習source＋練習PDF＋QA、解説画像PowerPoint＋QA、独立再解答前ゲート、答案ロック、完成後独立再解答を完了した。
 
-現在 `topic_17_explanation_pdf_complete / IN_PROGRESS`。固定一次1問＋二次4問、計5問・6答案要素を維持し、解説PDFは表示・文字抽出QAをPASSした。固定問題の正答記号・完成済み解答は保存していない。次工程は練習source制作。
+現在 `topic_17_progress_records_synced / IN_PROGRESS`。固定一次1問＋二次4問、計5問・6答案要素を維持し、完成後独立再解答 `6 / 6 PASS`、各表示QAもPASS。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。次工程はTopic 17最終QA再実施。
 
 ## 固定範囲
 
@@ -467,7 +467,6 @@ Topic 18以降で扱う時間応答、PID、安定判別、周波数応答はこ
 固定5問・6答案要素への本文接続は `6 / 6`。
 
 ## 16. 公式・解法まとめ
-
 伝達関数:
 
 `G(s) = 出力 / 入力`
@@ -522,4 +521,4 @@ Topic 18以降で扱う時間応答、PID、安定判別、周波数応答はこ
 
 # 次工程
 
-Topic 17練習sourceを制作する。一次試験型に加え、固定二次4問へ接続できる記述式を含め、固定5問・6答案要素と仕様境界を維持する。
+Topic 17最終QAを再実施する。固定5問・6答案要素、完成後独立再解答 `6 / 6 PASS`、各PDF/PPTX QA、仕様境界、進捗記録整合を再確認し、PASSした場合のみ completed とする。
