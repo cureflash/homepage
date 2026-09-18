@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_blind_reanswer_candidates_refreshed`
+- current_status: `topic_16_blind_reanswer_qa_pass`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: 新しいrunで、今回固定した新候補答案を変更せず公式解答・標準解答と26答案要素を照合し、結果をblind再解答QAへ記録する
+- next_start: 新しいrunで、Topic 16の最終QAを実施し、固定EXAM_ALIGNMENT・必須成果物・表示QA・blind再解答QA・進捗記録の整合を確認する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — BLIND_REANSWER_CANDIDATES_REFRESHED / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — BLIND_REANSWER_QA_PASS / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -163,18 +163,19 @@
 
 ## Topic 16 完成後独立再解答QA
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_qa.md`
-- 旧QAは改訂前教材に対する記録で、新候補答案の照合結果としては使用しない
-- source補正: `完了`
-- 解説PDF同期: `完了`
-- 練習PDF同期: `完了`
-- PowerPoint同期: `完了`
-- blind再解答前ゲート再構築: `完了`
-- 新候補答案固定: `完了 / 26 / 26`
-- 次は固定済み候補答案を変更せず公式解答・標準解答と照合する
+- 固定済み新候補答案の後付け変更: `0件`
+- 公式解答・標準解答照合: `5問 / 26答案要素 / 26 / 26 PASS`
+- 一次: `20 / 20 PASS`
+- 二次: `6 / 6 PASS`
+- 教材だけで導出: `26 / 26 PASS`
+- 教材外知識補完: `0件`
+- R7 一次 機械 問4 (3): `PASS / MOSFET（チ）を改訂教材内根拠から独立固定`
+- H24 二次 (2b): `PASS / 候補K≈0.950、標準K≈0.949は同一式・同一厳密値の丸め差`
+- 公式解答／標準解答との内容不一致: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC指定8項目・3可視化変更: `0件`
 - SPEC外追加: `0件`
-- 判定: `PENDING / OFFICIAL_COMPARISON_REQUIRED`
+- 判定: `PASS / BLIND_REANSWER_QA_PASS`
 
 ## Topic 16 SPEC固定範囲
 扱う内容:
@@ -203,4 +204,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-新候補答案を固定済み。新しいrunで候補答案を変更せず、公式解答・標準解答を開いて固定5問・26答案要素を照合し、結果を `16_700series_multilevel_converter_pwm_blind_reanswer_qa.md` に記録する。
+Topic 16の最終QAを実施し、固定EXAM_ALIGNMENT、必須成果物、表示QA、blind再解答QA、進捗記録の整合を確認する。最終QAがPASSした場合のみ `completed` とする。
