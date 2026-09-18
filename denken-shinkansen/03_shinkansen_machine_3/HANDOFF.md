@@ -5,9 +5,9 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `15 / 16`。Topic 01〜15は品質ゲートPASSでcompleted。active topicは16「同期機って新幹線には使わないの？」。
 
-Topic 16は制作前EXAM_ALIGNMENTを固定済み。系列 `SPEC.md` の固定範囲だけから公式過去問6問・6答案要素を選定し、問題要求の独立再確認後に電気技術者試験センター公式解答と照合して `6 / 6 PASS`。始動法・制動巻線、短絡比、無負荷飽和曲線・三相短絡曲線、同期調相機、負荷角・脱出トルク等の仕様外追加は0件。正答選択肢番号・計算問題の最終数値は完成後blind独立再解答のため制作前記録へ保存していない。
+Topic 16は制作前EXAM_ALIGNMENT固定後、解説source本文まで完成。系列 `SPEC.md` の固定範囲だけで公式過去問6問・6答案要素を選定し、制作前検証 `6 / 6 PASS` を維持したまま、本文マッピング `6 / 6 PASS`、3段階例題 `PASS`、解説source QA `PASS`。始動法・制動巻線、短絡比、無負荷飽和曲線・三相短絡曲線、同期調相機、負荷角・脱出トルク等の仕様外追加は0件。正答選択肢番号・計算問題の最終数値は完成後blind独立再解答のため制作前記録へ保存していない。
 
-状態: `topic_16_exam_alignment_complete / IN_PROGRESS`
+状態: `topic_16_explanation_source_complete / IN_PROGRESS`
 
 ## Topic 16 固定範囲
 - 同期機
@@ -38,6 +38,9 @@ Topic 16は制作前EXAM_ALIGNMENTを固定済み。系列 `SPEC.md` の固定�
 
 品質ゲート対象: `6問・6答案要素`。
 制作前検証・公式解答照合: `6 / 6 PASS`。
+固定過去問要求事項の本文マッピング: `6 / 6 PASS`。
+3段階例題: `PASS`。
+解説source QA: `PASS`。
 固定範囲外知識による答案補完: `0件`。
 固定EXAM_ALIGNMENT変更: `0件`。
 
@@ -49,6 +52,12 @@ Topic 16は制作前EXAM_ALIGNMENTを固定済み。系列 `SPEC.md` の固定�
 - R4下 機械 問4 — V曲線は範囲内だが、完答に同期調相機が必要で固定範囲外。
 
 source: `topics/16_synchronous_machine/16_synchronous_machine.md`
+解説本文: 完成。
+解説PDF: 未着手。
+練習問題source: 未着手。
+練習PDF: 未着手。
+解説画像PowerPoint: 未着手。
+完成後blind独立再解答: 未実施。
 
 ## Topic 15
 Topic 15「車内の照明・空調にはどれだけ電気が必要？」は最終QA再判定PASSで `completed`。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、進捗記録整合、固定範囲境界は全件PASS。Webカタログにも登録済み。
@@ -71,4 +80,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 16「同期機って新幹線には使わないの？」の解説source本文を作成する。固定した6問・6答案要素と系列 `SPEC.md` の固定範囲は変更しない。
+Topic 16「同期機って新幹線には使わないの？」の解説PDFを作成する。`16_synchronous_machine.md` の本文・固定EXAM_ALIGNMENT 6問・6答案要素・範囲境界を変更せず、A4縦PDFへ落とし込み、表示QAと文字抽出QAを行う。
