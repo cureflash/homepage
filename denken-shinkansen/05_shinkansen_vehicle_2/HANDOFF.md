@@ -6,9 +6,33 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜18は最終QAまで `PASS / completed`。完成数は `18 / 39`。
+Topic 01〜19は最終QAまで `PASS / completed`。完成数は `19 / 39`。
 
-現在地は `topic_19_clean_blind_official_check_complete`。active topic は Topic 19 `ミニ新幹線 複電圧主回路`。制作前EXAM_ALIGNMENT、解説source、解説PDF、練習source、練習PDF、解説画像PowerPoint、完成後clean blind候補固定、公式解答・標準解答照合まで完了した。固定5問・9答案要素は `9 / 9 PASS`。次はTopic 19最終QA。
+現在地は `topic_19_completed`。last completed は Topic 19 `ミニ新幹線 複電圧主回路`。固定5問・9答案要素は完成後clean blindで `9 / 9 PASS`、必須成果物・各QA・SPEC境界・進捗整合を最終QAで確認済み。active topic は Topic 20 `N700系 フィードバック制御`。次は制作前EXAM_ALIGNMENT。
+
+## Topic 19 最終QA
+
+最終QA:
+- `topics/19_mini_shinkansen_dual_voltage_main_circuit/19_mini_shinkansen_dual_voltage_main_circuit_final_qa.md`
+
+判定: `PASS / completed`
+
+品質:
+- 固定公式過去問: `一次4問＋二次1問 / 5問 / 変更なし`
+- 固定答案要素: `一次7＋二次2 / 9`
+- 完成後clean blind: `9 / 9 PASS`
+- 候補答案変更 / 教材外知識補完 / 固定問題差替え: `0件`
+- 解説PDF: `2 pages / pdfium・pdftoppm 2 / 2 PASS`
+- 練習PDF: `5 pages / pdfium・pdftoppm 5 / 5 PASS`
+- 練習問題: `一次8問＋二次4問 / 12 / 12再計算 PASS / 一次8 / 8正答一意`
+- PowerPoint: `4 slides / 1600×900 4 / 4 PASS`
+- SPEC指定9項目 / 3可視化: `9 / 9`, `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更 / SPEC外追加 / 未確認実車値の真値化: `0件`
+- 最終QA工程で教材本文・問題・正答・数式・PDF/PPTX本体の変更: `0件`
+
+worker reconcile:
+- clean blind候補固定 commit `81a9510e50bf17130c1223fcb9cf2c00dace80b4` を引き継いだ。
+- 公式照合 commit `88063075bb3e7014a6d2f79dba1c4ec03514ccfe` 以降の記録・同期を確認し、再解答を重複実施していない。
 
 ## Topic 19 clean blind公式照合
 
@@ -254,4 +278,4 @@ source:
 
 ## 次工程
 
-Topic 19最終QA。既存PDF/PPTX、問題、正答、数式、固定EXAM_ALIGNMENTは変更せず、必須成果物・各QA・clean blind記録・SPEC境界・進捗整合のみを最終確認する。
+Topic 20「N700系 フィードバック制御」の制作前EXAM_ALIGNMENT。`SPEC.md` の伝達関数、ブロック線図、開ループ、閉ループ、一次遅れ、二次遅れ、時定数、定常偏差、過渡応答、安定性、および指定3グラフの範囲だけで、直近年度から二種一次・二次の公式過去問を確認する。
