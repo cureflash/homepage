@@ -5,18 +5,18 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: `36 / 38`
-- current_status: `topic_37_practice_source_revised`
+- current_status: `topic_37_practice_pdf_revised`
 - last_completed_topic: `36 COSMOS① 新幹線全体を統合管理する`
 - active_topic: `37 COSMOS② 新幹線の電力設備を遠隔監視する`
-- next_start: 改訂済み練習sourceを正本としてTopic 37の練習PDFを同期修正し、全ページ表示・文字抽出・問題/解答整合・固定5問6答案要素の反映をQAする。PowerPoint・完成後blind独立再解答・最終QAにはまだ進まない
+- next_start: 改訂済み解説source・練習sourceを正本としてTopic 37のPowerPointを同期修正し、16:9表示・overflow・固定5問6答案要素の反映・PPTX ZIP整合性をQAする。完成後blind独立再解答・最終QAにはまだ進まない
 
 ## 新品質ゲート進捗
 - [x] 01〜36 — PASS / COMPLETED
-- [ ] 37 — IN PROGRESS / PRACTICE_SOURCE_REVISED
+- [ ] 37 — IN PROGRESS / PRACTICE_PDF_REVISED
 - [ ] 38 — 未着手
 
 ## Topic 37 現在進捗
-判定: `IN PROGRESS / PRACTICE_SOURCE_REVISED_PASS`。
+判定: `IN PROGRESS / PRACTICE_PDF_REVISED_PASS`。
 
 - source: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring.md`
 - EXAM_ALIGNMENT QA: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_exam_alignment_qa.md`
@@ -39,21 +39,25 @@
 - 固定問題追加・差替え: `0件`
 
 ### 今回完了した1段階
-改訂sourceを正本として、Topic 37の練習sourceを同期修正しQAした。
+改訂済み練習sourceを正本として、Topic 37の練習PDFを同期修正しQAした。
 
+- PDF: `A4縦 / 4ページ`
 - 練習問題: `15問`（基礎4 / 標準8 / 複合3）
-- Q9: R6上 法規 問7用の系統連系保護を直接練習できる内容へ改訂
-- Q15: H23 法規 問6用の逆潮流・自立運転・単独運転・逆充電・転送遮断装置の定義問題へ改訂
-- 改訂後独立再解答: `15 / 15 PASS`
+- 五肢択一・完全解説: `15 / 15`
 - 正答位置: A/B/C/D/E各3問
-- 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6 / 6` 練習接続
+- Q9: R6上 法規 問7用の系統連系保護を反映
+- Q15: H23 法規 問6用の逆潮流・自立運転・単独運転・逆充電・転送遮断装置を反映
+- 180 dpi表示: `4 / 4 PASS`
+- 文字抽出: PASS
+- 問題/正答/解説整合: PASS
+- 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6 / 6` PDF接続
 - 固定範囲外追加: `0件`
 - COSMOS-SCADA未確認内部仕様追加: `0件`
 - 転送遮断・系統連系保護をCOSMOS-SCADA固有実装と断定: `0件`
 - Topic 38先取り: `0件`
 - 完成後blind独立再解答の再実施: `未実施`
 
-練習PDF・PowerPointは改訂source未反映のため、まだ最終成果物同期済みとはみなさない。
+PowerPointは改訂source未反映のため、まだ最終成果物同期済みとはみなさない。
 
 ## Topic 37 固定範囲
 系列SPECどおり、次を対象とする。
@@ -77,4 +81,4 @@
 - 完成後blind独立再解答: `8 / 8 PASS`
 
 ## 完成数
-`36 / 38`。Topic 37は練習sourceの改訂同期まで完了したが、練習PDF・PowerPoint未同期かつ完成後blind独立再解答の再実施前なので完成扱いにしない。
+`36 / 38`。Topic 37は練習PDFの改訂同期まで完了したが、PowerPoint未同期かつ完成後blind独立再解答の再実施前なので完成扱いにしない。
