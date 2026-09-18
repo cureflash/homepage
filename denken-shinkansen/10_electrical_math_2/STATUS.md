@@ -4,12 +4,12 @@
 
 ## 状態
 
-- active_series: `10_electrical_math_2`
-- exam_aligned_completed_topics: 19 / 20
-- current_status: `topic_20_final_qa_needs_revision`
-- last_completed_topic: `19 最適化入門`
-- active_topic: `20 新幹線を数式モデルだけで走らせる`
-- next_start: Topic 20の最終QA再判定
+- active_series: `10_electrical_math_2` (completed)
+- exam_aligned_completed_topics: 20 / 20
+- current_status: `series_completed`
+- last_completed_topic: `20 新幹線を数式モデルだけで走らせる`
+- active_topic: `なし`
+- next_start: `なし（本系列完了）`
 
 ## Topic 07 制作品質ゲート
 
@@ -343,28 +343,29 @@
 - [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、統合モデル直接要求0問・接続5問の水増し0件を維持）
 - [x] 最終QA実施 → `NEEDS_REVISION`（技術品質PASS、進捗記録整合 `0 / 6 PASS`）
 - [x] 進捗記録5ファイル＋STATUS/HANDOFFの同期
-- [ ] 最終QA再判定
-- [ ] `completed`
+- [x] 最終QA再判定 → `PASS`
+- [x] `completed`
 
 ## 今回進めた内容
 
-Topic 20 `新幹線を数式モデルだけで走らせる` の初回最終QAで指摘された進捗記録不整合を同期した。
+Topic 20 `新幹線を数式モデルだけで走らせる` の最終QAを再判定した。
 
-- 技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF、PowerPoint、完成後独立検証の技術内容変更: `0件`
-- Topic 20配下の進捗記録5ファイル: 同期済み
-- `STATUS.md` / `HANDOFF.md`: 同期済み
-- 初回最終QA: `NEEDS_REVISION / topic_20_final_qa_needs_revision`
-- 完成後独立検証: `3 / 3 PASS` 維持
+- 初回FAILだった進捗記録6ファイルが実成果物状態へ同期済みであることを再確認
+- 必須成果物実在: `PASS`
+- 第二種公式過去問接続5問: `PASS`
 - 統合モデル自体を直接要求する確認済み第二種過去問: `0問`
 - 接続5問の直接対応品質ゲート件数への水増し: `0件`
-- 第一種・第三種問題の追加: `0件`
-- 仕様外数学・算法の追加: `0件`
+- 完成後独立検証: `3 / 3 PASS`
+- 練習問題独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 進捗記録整合: `6 / 6 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 技術本文・問題・正答・PDF・PowerPoint・完成後独立検証の変更: `0件`
+- 仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
 ## 判定
 
-`topic_20_final_qa_needs_revision / IN_PROGRESS`
+Topic 20は `PASS / completed`。
 
-完成数は `19 / 20` のまま。
-
-次はTopic 20の最終QA再判定。
+完成数は `20 / 20`。`10_electrical_math_2` は `series_completed`。
