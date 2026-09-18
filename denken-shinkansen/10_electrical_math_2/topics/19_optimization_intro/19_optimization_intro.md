@@ -2,7 +2,7 @@
 
 ## 状態
 
-`topic_19_explanation_body_complete / IN_PROGRESS`
+`topic_19_explanation_pdf_complete / IN_PROGRESS`
 
 2026-09-18、制作前EXAM_ALIGNMENTを完了した。最新main、`STATUS.md` / `HANDOFF.md`、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列`SPEC.md`、Topic 04の既存成果物をreconcileし、Topic 18完了後の最初の未完了テーマがTopic 19であることを確認した。
 
@@ -13,6 +13,8 @@
 2026-09-18、固定範囲内の制作前独立検証も完了した。一変数境界最適化、二変数等式制約、ラグランジュ未定乗数法の入口を教育用数値条件で独立検証し、`PASS / PREPRODUCTION_VALIDATION_COMPLETE` とした。
 
 2026-09-18、固定済みEXAM_ALIGNMENTを変更せず、解説本文と3段階例題を追加した。教材で必要な説明6項目、3段階例題3問、接続確認5問の教材内対応を確認し、`PASS / EXPLANATION_BODY_COMPLETE` とした。
+
+2026-09-18、解説PDFとQAを作成した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出`PASS`、3段階例題の数値整合`PASS`。初回表示QAで解法アルゴリズムの日本語コードブロックに豆腐文字を検出したため、表示用書体だけをCID日本語書体へ修正して再生成し、固定EXAM_ALIGNMENT・技術内容・数値・固定範囲の変更0件で `PASS / EXPLANATION_PDF_COMPLETE` とした。
 
 ## 固定範囲
 
@@ -566,6 +568,28 @@ C=8^2+2*2^2=72
 
 判定: `PASS / EXPLANATION_BODY_COMPLETE`。
 
+## 解説PDF＋QA
+
+成果物:
+- `19_optimization_intro_explanation.pdf`
+- `19_optimization_intro_explanation_qa.md`
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`。
+
+- A4縦4ページ
+- 200 dpi表示QA: `4 / 4 PASS`
+- 文字切れ・表/本文重なり・ページ外はみ出し・日本語の欠落/豆腐文字: `0件`
+- `pdftotext` 文字抽出: `PASS`
+- 教材で必要な説明6項目: `6 / 6 PASS`
+- 3段階例題の独立数値再計算: `3 / 3 PASS`
+- 接続確認した第二種公式過去問: `5 / 5`
+- 直接最適化・ラグランジュ未定乗数法要求の確認済み第二種過去問: `0問`
+- 接続確認5問の固定品質ゲート件数への水増し: `0件`
+- H17問6の固定件数追加: `0件`
+- Topic 04の一変数極値一般の再制作: `0件`
+- KKT条件・一般数値最適化・最適制御理論の仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -582,7 +606,7 @@ C=8^2+2*2^2=72
 - [x] 固定EXAM_ALIGNMENT確定
 - [x] 制作前独立検証
 - [x] 解説本文＋3段階例題
-- [ ] 解説PDF＋QA
+- [x] 解説PDF＋QA
 - [ ] 練習問題source
 - [ ] 練習PDF＋QA
 - [ ] 解説画像PowerPoint＋QA
@@ -592,4 +616,4 @@ C=8^2+2*2^2=72
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENTと解説本文を変更せず、Topic 19の解説PDF＋QAを作成する。
+固定済みEXAM_ALIGNMENTと解説本文・解説PDFを変更せず、Topic 19の練習問題sourceを作成する。
