@@ -4,11 +4,11 @@
 
 ## 状態
 
-制作前 `EXAM_ALIGNMENT` と解説本文＋3段階例題を完了した。固定過去問は一次4問＋二次1問、計5問・26答案要素のまま変更していない。本文でSPEC指定8項目・3可視化と固定26答案要素を接続し、例題数値を再計算した。完成後blind再解答QAで R7一次「機械」問4 (3) の自己消弧形スイッチング素子の識別説明不足を検出したため、公式問題文・解答群に基づき IGBT と MOSFET の識別、および逆並列ダイオードとの役割の違いだけを最小補正した。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデルは変更していない。
+制作前 `EXAM_ALIGNMENT` と解説本文＋3段階例題を完了した。固定過去問は一次4問＋二次1問、計5問・26答案要素のまま変更していない。本文でSPEC指定8項目・3可視化と固定26答案要素を接続し、例題数値を再計算した。完成後blind再解答QAで R7一次「機械」問4 (3) の自己消弧形スイッチング素子の識別説明不足を検出したため、公式問題文・解答群に基づき IGBT と MOSFET の識別、および逆並列ダイオードとの役割の違いだけを最小補正した。補正は解説PDF・練習PDF・PowerPointへ同期済みで、完成後blind再解答も `26 / 26 PASS`。最終QAで指摘された進捗記録4箇所だけを現在工程へ同期した。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデル、技術成果物は変更していない。
 
-current_status: `topic_16_source_revision_complete`
+current_status: `topic_16_progress_sync_complete`
 
-次工程: 修正版sourceを解説PDF・練習PDF・PowerPointへ同期し、表示QA後にblind再解答前ゲートを作り直す。
+次工程: Topic 16最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
 
 ## 固定範囲
 
@@ -576,4 +576,4 @@ R4一次型では、損失の発生時点を区別する。
 
 ## 次工程
 
-固定EXAM_ALIGNMENT、SPEC固定範囲、共通仮定モデルを変更せず、今回の最小補正を解説PDF・練習PDF・PowerPointへ同期する。同期後にblind再解答前ゲートを作り直す。
+Topic 16最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
