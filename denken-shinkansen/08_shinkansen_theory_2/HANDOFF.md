@@ -6,11 +6,11 @@
 
 Topic 01〜18は `PASS / completed`。完成数は `18 / 21`。
 
-current_status: `topic_19_preproduction_exam_alignment_complete`
+current_status: `topic_19_blind_reanswer_complete`
 
 active_topic: `19 25kV・大電流をどう安全に測る？`
 
-Topic 19は制作前EXAM_ALIGNMENTまで完了。品質ゲートを一次5問・25答案要素に固定し、二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は制作前blind独立再解答。
+Topic 19は制作前EXAM_ALIGNMENTと制作前blind独立再解答まで完了。品質ゲートは一次5問・25答案要素で、blind導出 `25 / 25 PASS`、独立導出後の公式標準解答照合 `25 / 25`。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は解説本文＋3段階例題。
 
 ## Topic 18 成果物
 
@@ -43,10 +43,11 @@ Topic 19は制作前EXAM_ALIGNMENTまで完了。品質ゲートを一次5問・
 - 二次数合わせ: `0件`
 - 最終判定: `PASS / completed`
 
-## Topic 19 source
+## Topic 19 成果物
 
 - source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement.md`
-- stage: `PREPRODUCTION_EXAM_ALIGNMENT_COMPLETE`
+- 制作前blind独立再解答: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_blind_reanswer.md`
+- stage: `BLIND_REANSWER_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 19 固定範囲
@@ -86,8 +87,18 @@ Topic 19は制作前EXAM_ALIGNMENTまで完了。品質ゲートを一次5問・
 - 実設備CT・VTの未確認実値追加: `0件`
 - 公式標準解答・正答記号のsource事前保存: `0件`
 
-判定: `PASS / PREPRODUCTION_EXAM_ALIGNMENT_COMPLETE / IN_PROGRESS`
+## Topic 19 制作前blind独立再解答
+
+- R5一次理論問8: `ハ / リ / ル / チ / ワ`
+- R1一次理論問4: `ヲ / ル / ロ / ヌ / カ`
+- H29一次理論問4: `ヘ / イ / ニ / ル / ヌ`
+- H25一次理論問8: `ヲ / ニ / ロ / ル / カ`
+- H21一次理論問6: `ト / ハ / カ / ロ / ル`
+- blind導出: `25 / 25 PASS`
+- 公式標準解答照合: `25 / 25`
+- 先見: `0件`
+- 判定: `PASS / BLIND_REANSWER_COMPLETE`
 
 ## 次工程
 
-Topic 19の制作前blind独立再解答。固定一次5問・25答案要素を問題文だけから独立導出し、その後に公式標準解答と照合する。
+Topic 19の解説本文＋3段階例題。固定一次5問・25答案要素と、主sourceで固定済みの必須説明16項目を漏れなく接続する。
