@@ -2,13 +2,13 @@
 
 対象: `16 数値微分・数値積分`
 
-実施日: 2026-09-18
+再判定日: 2026-09-18
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PowerPoint表示QA、SPEC境界はPASS。未完了理由は、実成果物より古い進捗記録が6ファイルに残っていることだけである。
+初回 `NEEDS_REVISION` の原因だった進捗記録6ファイルは実成果物へ同期済み。必須成果物、固定EXAM_ALIGNMENT、完成後独立再解答、PDF/PowerPoint表示QA、SPEC境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物の実在確認
 
@@ -84,28 +84,29 @@ GitHub正本上で次を確認した。
 - 第一種・第三種過去問による件数水増し: 0件
 - 未確認実車値依存: 0件
 
-## 進捗記録整合QA
+## 進捗記録整合QAの再判定
 
-次の6ファイルが実成果物より古い工程を指しているためFAIL。
+初回FAILだった6ファイルをGitHub正本で再確認した。
 
 1. `16_numerical_differentiation_integration.md`
-   - 冒頭 `## 状態`: `topic_16_practice_source_complete / IN_PROGRESS` のまま
-   - `## 次工程`: 練習PDF作成のまま
+   - 冒頭 `## 状態`: `topic_16_progress_records_synced / IN_PROGRESS` — PASS
+   - 実成果物・完成後独立再解答・初回最終QAまで完了済みの説明へ同期 — PASS
+   - `次工程`: Topic 16最終QA再判定 — PASS
 2. `16_numerical_differentiation_integration_explanation_qa.md`
-   - 次工程: 練習問題source作成のまま
+   - `次工程`: Topic 16最終QA再判定 — PASS
 3. `16_numerical_differentiation_integration_practice.md`
-   - 次工程: 練習PDF作成のまま
+   - `次工程`: Topic 16最終QA再判定 — PASS
 4. `16_numerical_differentiation_integration_practice_qa.md`
-   - 次工程: 解説画像PowerPoint作成のまま
+   - `次工程`: Topic 16最終QA再判定 — PASS
 5. `16_numerical_differentiation_integration_powerpoint_qa.md`
-   - 次工程: 完成後独立再解答のまま
+   - `次工程`: Topic 16最終QA再判定 — PASS
 6. `../../HANDOFF.md`
-   - `current_status`: `topic_16_explanation_source_complete` のまま
-   - 次工程: 解説PDF作成のまま
+   - `current_status`: `topic_16_progress_records_synced` — PASS
+   - `次工程`: Topic 16最終QA再判定 — PASS
 
-進捗記録整合: `FAIL`。
+進捗記録整合: `6 / 6 PASS`。
 
-この不整合を直すために技術本文、固定EXAM_ALIGNMENT、問題・正答、PDF、PowerPoint、完成後独立再解答結果は変更しない。
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立再解答の技術内容変更: 0件。
 
 ## 最終判定
 
@@ -119,10 +120,8 @@ GitHub正本上で次を確認した。
 - 固定範囲外追加0件: PASS
 - 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- 進捗記録と実成果物の整合: FAIL
+- 進捗記録と実成果物の整合: `6 / 6 PASS`
 
-総合判定: `NEEDS_REVISION / IN_PROGRESS`。
+総合判定: `PASS / completed`。
 
-Topic 16はまだ `completed` としない。完成数は `15 / 20` のまま。
-
-次工程: 上記6ファイルの進捗記録だけを現在地へ同期し、その後にTopic 16最終QAを再判定する。
+Topic 16を完了とし、次はTopic 17 `常微分方程式の数値解法` の制作前EXAM_ALIGNMENTへ進む。
