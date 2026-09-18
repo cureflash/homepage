@@ -6,11 +6,11 @@
 
 Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
 
-current_status: `topic_20_reanswer_complete`
+current_status: `topic_20_final_qa_needs_revision`
 
 active_topic: `20 East iは走りながら何をどう測る？`
 
-Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。次工程は最終QA。
+Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。初回最終QAは教材内容・成果物・過去問対応ゲート自体はPASSだが、主sourceの状態欄が実進捗と不一致のため `NEEDS_REVISION / FINAL_QA_BLOCKED`。次工程は主source進捗記録同期。
 
 ## Topic 20 固定範囲
 
@@ -60,24 +60,9 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 - PowerPoint: `topics/20_east_i_measurement/20_east_i_measurement_images.pptx`
 - PowerPoint QA: `topics/20_east_i_measurement/20_east_i_measurement_powerpoint_qa.md`
 - 完成後独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_reanswer.md`
-- stage: `INDEPENDENT_REANSWER_COMPLETE`
+- 最終QA: `topics/20_east_i_measurement/20_east_i_measurement_final_qa.md`
+- stage: `FINAL_QA_BLOCKED`
 - completion: `in_progress`
-
-## PowerPoint QA
-
-- 16:9 / 8枚
-- 200 dpi表示QA: `8 / 8 PASS`
-- `2667 × 1500 px / slide`
-- shape geometry overflow: `0件`
-- PPTX ZIP整合性: `PASS`
-- PDF変換: `8ページ / PASS`
-- 文字抽出QA: `PASS`
-- 文字化け: `0件`
-- SPEC固定範囲: `12 / 12可視化`
-- 固定一次5問・25答案要素: `25 / 25可視化`
-- 共通解法8ステップ: `PASS`
-- SHA-256: `2a35298811f8a54f1aa3b9448235bbc829ac9031140aa40f45702da82d7fb179`
-- 判定: `PASS / POWERPOINT_COMPLETE`
 
 ## 完成後独立再解答
 
@@ -94,6 +79,23 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 - East i内部測定回路・未公開定数の推測追加: `0件`
 - 判定: `PASS / INDEPENDENT_REANSWER_COMPLETE`
 
+## 初回最終QA
+
+- 必須成果物欠落: `0件`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
+- SPEC固定範囲: `12 / 12`
+- 解説PDF表示QA: `8 / 8 PASS`
+- 練習PDF表示QA: `4 / 4 PASS`
+- 練習12問QA: `12 / 12 PASS`
+- PowerPoint表示QA: `8 / 8 PASS`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 固定範囲外追加: `0件`
+- East i内部測定回路・未公開定数の推測追加: `0件`
+- blocker: 主source `20_east_i_measurement.md` の状態欄が `stage: EXPLANATION_SOURCE_COMPLETE`、次工程 `解説PDF＋表示QA` のままで、実進捗 `INDEPENDENT_REANSWER_COMPLETE` と不一致
+- blocker数: `1件`
+- 判定: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+
 ## East i一次資料
 
 - JR東日本/JREメディアで、新幹線用East i（E926形）が走行しながら線路・架線等を検査・検測する車両であることを確認。
@@ -106,4 +108,4 @@ East iは電気・電子計測の導入に限定する。公開資料で確認�
 
 ## 次工程
 
-Topic 20の最終QA。EXAM_ALIGNMENT、全成果物、完成後独立再解答、固定範囲12項目、一次5問・25答案要素、二次0問方針、East i出典境界を再監査する。
+Topic 20主source `20_east_i_measurement.md` の状態欄を実進捗へ同期する。同期後に最終QAを再実施し、PASSした場合のみ `completed` 状態同期へ進む。
