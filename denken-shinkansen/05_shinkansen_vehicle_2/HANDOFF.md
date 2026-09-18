@@ -6,121 +6,78 @@
 
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active series は `05_shinkansen_vehicle_2`。
 
-Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
+Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
 
-現在地は `topic_17_progress_alignment_sync_complete`。Topic 17 `パワー半導体の損失比較` は成果物自体のQA、是正後の固定5問・23答案要素のclean blind公式照合、旧26答案要素前提が残っていた6記録の同期までPASS。最終QA再実施前のためcompleted化していない。
+現在地は `topic_17_completed`。次の未完了テーマは Topic 18 `E2系 50Hz・60Hzと磁束`。
 
-## EXAM_ALIGNMENT是正
+## Topic 17 完了記録
 
-完成後blind再解答で、H24一次「機械」問6の (1)(4)(5) がTopic 17教材から導出できず、しかも固定SPEC外の照明固有知識であることが判明した。
+最終QA: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_final_qa.md`
 
-公式問題文を再監査した結果、H24一次 問6は次の採用単位へ是正した。
+判定: `PASS / completed`
 
-- (2): 放熱設計 — Topic 17「冷却」に対応 / ゲート対象
-- (3): 半導体接合部温度 — Topic 17「接合温度」に対応 / ゲート対象
-- (1): LEDランプ構成部品 — SPEC外 / 対象外
-- (4): 光へのエネルギー変換 — SPEC外 / 対象外
-- (5): 自然空冷照明器具の具体的設計周囲温度 — SPEC外 / 対象外
-
-問題そのものは固定5問の一つとして残す。この是正は品質ゲートの緩和ではなく誤マッピング修正である。
-
-監査記録:
-- `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_exam_alignment_remap_audit.md`
-
-## Topic 17 固定EXAM_ALIGNMENT
-
-source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison.md`
-
-固定過去問:
+固定EXAM_ALIGNMENT:
 - R7 一次 機械 問4 (1)〜(5): 5要素
 - R4 一次 機械 問4 (1)〜(5): 5要素
 - R2 一次 機械 問2 (1)〜(5): 5要素
 - H24 一次 機械 問6 (2)(3): 2要素
 - H24 二次 機械・制御 問1 (1)〜(6): 6要素
-
-固定数:
-- 一次: `4問・17答案要素`
-- 二次: `1問・6答案要素`
+- 一次: `17答案要素`
+- 二次: `6答案要素`
 - 合計: `5問・23答案要素`
 
-維持条件:
-- SPEC指定7項目: `7 / 7 aligned`
-- SPEC指定3可視化: `3 / 3 aligned`
-- SPEC外追加: `0件`
-- 未確認700系実車値の真値化: `0件`
+H24一次 問6は問題自体を固定5問の一つとして維持するが、Topic 17に直接対応する `(2) 放熱設計`、`(3) 半導体接合部温度` のみゲート対象。照明固有の `(1)(4)(5)` は固定SPEC外として対象外。
 
-## Topic 17 必須成果物
-
-- 解説source: `17_power_semiconductor_loss_comparison_explanation_source.md` — `PASS / 23答案要素へ同期済み`
-- 解説PDF: `17_power_semiconductor_loss_comparison_explanation.pdf` — `PASS / 4 pages / 本体変更なし`
-- 練習source: `17_power_semiconductor_loss_comparison_practice_source.md` — `PASS / 一次8＋二次4 / 23答案要素へ同期済み`
-- 練習PDF: `17_power_semiconductor_loss_comparison_practice.pdf` — `PASS / 6 pages / 本体変更なし`
-- PowerPoint: `17_power_semiconductor_loss_comparison_images.pptx` — `PASS / 4 slides / 本体変更なし`
-- PowerPoint QA: `17_power_semiconductor_loss_comparison_powerpoint_qa.md` — `23 / 23 PASS` へ同期済み
-- blind再解答前ゲート: `17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` — 再マッピング前の履歴
-- blind再解答候補試行: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates.md` — 再マッピング前の履歴
-- clean blind候補答案: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md` — `23 / 23 candidate fixed`
-- 公式照合記録: `17_power_semiconductor_loss_comparison_blind_reanswer_official_check.md` — `23 / 23 PASS`
-- 最終QA: `17_power_semiconductor_loss_comparison_final_qa.md` — 前回判定 `NEEDS_REVISION / PROGRESS_ALIGNMENT_SYNC_REQUIRED`。次工程で再実施する
-
-## clean blind候補固定
-
-是正後23答案要素を、旧候補答案・公式解答・標準解答・電験解説サイトの個別解説を参照せず再解答した。
-
-- R7一次 問4: `5 / 5 candidate fixed`
-- R4一次 問4: `5 / 5 candidate fixed`
-- R2一次 問2: `5 / 5 candidate fixed`
-- H24一次 問6 (2)(3): `2 / 2 candidate fixed`
-- H24二次 問1: `6 / 6 candidate fixed`
-- 合計: `23 / 23 candidate fixed`
-
-## 公式解答・標準解答との照合
-
-候補固定後に初めて公式解答・標準解答を開き、候補答案は変更せず照合した。
-
-- R7一次 問4: `5 / 5 PASS`
-- R4一次 問4: `5 / 5 PASS`
-- R2一次 問2: `5 / 5 PASS`
-- H24一次 問6 (2)(3): `2 / 2 PASS`
-- H24二次 問1: `6 / 6 PASS`
+完成後clean blind:
 - 一次: `17 / 17 PASS`
 - 二次: `6 / 6 PASS`
 - 合計: `23 / 23 PASS`
 - 候補答案変更: `0件`
 - 教材外知識での補完: `0件`
 - 固定問題差替え: `0件`
+
+成果物:
+- 解説source: `PASS`
+- 解説PDF: `PASS / 4 pages / 180 dpi 4 / 4`
+- 練習source: `PASS / 一次8＋二次4`
+- 練習PDF: `PASS / 6 pages / 180 dpi 6 / 6`
+- PowerPoint: `PASS / 4 slides / 1600×900 4 / 4`
+- SPEC指定7項目: `7 / 7 PASS`
+- SPEC指定3可視化: `3 / 3 PASS`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
 
-## 進捗記録同期
+前回最終QAで検出した旧26答案要素前提の6記録は、是正後 `5問・23答案要素` とclean blind `23 / 23 PASS` へ同期済み。PDF/PPTX本体・問題・正答・数式・固定過去問は変更していない。
 
-前回最終QAで検出した旧 `26答案要素` 前提の6記録を、是正後 `5問・23答案要素` とclean blind `23 / 23 PASS` へ同期した。
+履歴:
+- 再監査: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_exam_alignment_remap_audit.md`
+- clean blind候補: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md`
+- 公式照合: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_official_check.md`
+- 旧 `blind_reanswer_gate.md` と旧 `blind_reanswer_candidates.md` は再マッピング前の履歴として保存
 
-同期済み:
-1. `17_power_semiconductor_loss_comparison.md`
-2. `17_power_semiconductor_loss_comparison_explanation_source.md`
-3. `17_power_semiconductor_loss_comparison_practice_source.md`
-4. `17_power_semiconductor_loss_comparison_explanation_pdf_qa.md`
-5. `17_power_semiconductor_loss_comparison_practice_qa.md`
-6. `17_power_semiconductor_loss_comparison_powerpoint_qa.md`
+## Topic 18 固定SPEC境界
 
-practice sourceのH24一次問6マッピングは `(2)(3)のみ` へ是正済み。照明固有の `(1)(4)(5)` は固定SPEC外としてゲート対象外。
+`SPEC.md` Topic 18 の固定範囲は次のとおり。
 
-PDF/PPTX本体、問題、正答、数式、固定過去問は変更していない。
+主題:
+- 異なる電源周波数が変圧器・主変換装置・誘導機へ与える条件を解析する。
 
-判定: `PASS / PROGRESS_ALIGNMENT_SYNC_COMPLETE`。
+扱う内容:
+- V/f
+- 磁束
+- 変圧器誘起電圧
+- 鉄心磁束密度
+- 同期速度
+- インバータ出力周波数
+- 機器定格
 
-旧 `blind_reanswer_gate.md` と旧 `blind_reanswer_candidates.md` は再マッピング前の履歴として残す。
+指定計算・グラフ:
+- 周波数―磁束密度
+- V/f特性
+- 周波数―同期速度
 
-## Topic 17 範囲境界
-
-- 扱う内容: 導通損失、スイッチング損失、スイッチング周波数、素子電流、接合温度、冷却、変換効率。
-- 指定可視化: 電流―導通損失、スイッチング周波数―損失、出力―変換効率。
-- Topic 16の多レベル波形・高調波解析は再展開しない。
-- 後続TopicのSiC採用・機器小型化は先取りしない。
-- 接合温度・冷却は損失から温度上昇へ接続する最小限の熱抵抗モデルまで扱う。
-- 未確認700系実車の素子型式・定格・損失・温度・冷却条件・効率を真値化しない。
+この範囲を勝手に追加・変更しない。
 
 ## 次工程
 
-Topic 17の最終QAを再実施する。固定5問・23答案要素、clean blind `23 / 23 PASS`、SPEC指定7項目・3可視化、成果物・進捗記録の整合を確認し、合格した場合のみcompleted化する。
+Topic 18の制作前EXAM_ALIGNMENTを行う。最新mainと他worker成果をreconcileし、二種一次・二次を含む公式過去問を直近年度から調査して固定する。本文・PDF・PowerPoint等はEXAM_ALIGNMENT確定前に作らない。不整合や確定不能事項があれば推測せずblockerを記録して停止する。
