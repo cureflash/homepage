@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_powerpoint_revision_sync_complete`
+- current_status: `topic_16_blind_reanswer_gate_rebuilt`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: 公式解答・標準解答・旧blind再解答QAを先読み対象から外し、必須成果物・固定5問26答案要素・SPEC指定8項目3可視化を再監査してblind再解答前ゲートを作り直す
+- next_start: 新しい独立runで、公式解答・標準解答・旧候補答案・旧blind再解答QAを先に見ず、公式問題文＋改訂済み教材だけを使って固定5問26答案要素を再解答し、新候補答案を固定する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — POWERPOINT_REVISION_SYNC_COMPLETE / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — BLIND_REANSWER_GATE_REBUILT / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -138,36 +138,35 @@
 
 ## Topic 16 完成後独立再解答前ゲート
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_gate.md`
+- 改訂済み必須成果物再監査: `PASS`
 - 固定5過去問・26答案要素: `変更なし`
-- 必須先読み対象の公式正答番号・標準解答本文保存: `0件`
-- 必須先読み対象の完成済み個別答案・個別数値解・導出結果保存: `0件`
-- 旧ゲートはblind QA指摘前の成果物に対する記録のため、改訂済みPowerPointを含む必須成果物再監査後に作り直す
-- 判定: `REBUILD_REQUIRED`
+- SPEC指定8項目・3可視化: `変更なし`
+- 固定範囲外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 次回候補答案固定前に公式解答・標準解答・旧候補答案・旧blind QAを先読みしない条件を固定
+- 判定: `PASS / BLIND_REANSWER_GATE_REBUILT`
 
 ## Topic 16 完成後独立再解答 候補答案固定
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_candidates.md`
-- 実施条件: `公式問題文＋完成教材のみ / 公式解答・標準解答は未参照`
+- 旧候補答案は改訂前教材によるもののため再利用しない
 - 固定過去問・26答案要素: `変更なし`
-- 一次候補答案: `20 / 20 固定`
-- 二次候補答案: `6 / 6 固定`
-- 合計: `26 / 26 固定`
-- 旧候補答案は改訂前教材によるもののため、ゲート再作成後に再固定する
 - 判定: `REFRESH_REQUIRED`
 
 ## Topic 16 完成後独立再解答QA
 - path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_blind_reanswer_qa.md`
-- 公式解答・標準解答との照合: `26 / 26 一致相当`
-- 教材だけでの導出: `25 / 26 PASS`
-- FAIL: `R7 一次 機械 問4 (3)` — 旧完成教材に必要な自己消弧形スイッチング素子の識別説明が不足
+- 旧照合: 公式解答・標準解答と `26 / 26 一致相当`
+- 旧独立再解答: 教材だけでの導出 `25 / 26 PASS`
+- 旧FAIL: `R7 一次 機械 問4 (3)` — 改訂前教材に必要な自己消弧形スイッチング素子の識別説明が不足
 - source補正: `完了`
 - 解説PDF同期: `完了`
 - 練習PDF同期: `完了`
 - PowerPoint同期: `完了`
-- 改訂済み全成果物でblind再解答前ゲートを作り直し、その後に独立再解答を再実施する
+- blind再解答前ゲート再構築: `完了`
+- 次は新候補答案を独立条件で再固定する
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC指定8項目・3可視化変更: `0件`
 - SPEC外追加: `0件`
-- 判定: `NEEDS_REVISION / BLIND_REANSWER_QA_COMPLETE`
+- 判定: `NEEDS_REVISION / REANSWER_PENDING`
 
 ## Topic 16 SPEC固定範囲
 扱う内容:
@@ -196,4 +195,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-source補正・解説PDF同期・練習PDF同期・PowerPoint同期は完了。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデルを変更せず、公式解答・標準解答・旧blind再解答QAを先読み対象から外して必須成果物を再監査し、blind再解答前ゲートを作り直す。
+blind再解答前ゲート再構築まで完了。固定EXAM_ALIGNMENT、SPEC指定8項目・3可視化、共通仮定モデルを変更せず、新しい独立runで公式解答・標準解答・旧候補答案・旧blind QAを先に見ない条件を守り、公式問題文＋改訂済み教材だけで固定5問・26答案要素の新候補答案を再固定する。
