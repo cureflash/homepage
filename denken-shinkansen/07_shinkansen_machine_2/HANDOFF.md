@@ -3,24 +3,22 @@
 更新日: 2026-09-18
 
 ## 現在地
-- Topic 01〜16: 最終QA `PASS / completed`
-- 完成数: `16 / 22`
-- active topic: `17 新幹線の速度をフィードバック制御する`
-- current status: `topic_17_final_qa_pass`
-- 次工程: Topic 17 completed状態同期
+- Topic 01〜17: 最終QA `PASS / completed`
+- 完成数: `17 / 22`
+- active topic: `18 速度指令を変えたら何秒で追従する？`
+- current status: `topic_17_completed`
+- 次工程: Topic 18 制作前EXAM_ALIGNMENT
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
 - 最新main、系列 `STATUS.md` / `HANDOFF.md`、Topic 17 source、解説PDF・QA、練習source・練習PDF・QA、PowerPoint・QA、独立再解答記録を再確認した。
-- Topic 16は最終QA `PASS / completed` のままとし、重複制作していない。
-- 最終QA再実施開始時点の最初の未完了テーマはTopic 17「新幹線の速度をフィードバック制御する」。
+- Topic 17は最終QA `PASS`、完成後独立再解答 `6 / 6 PASS`、PDF/PPTX各QA PASSを維持したまま completed 状態へ同期した。
+- main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程`、系列 `STATUS.md` / `HANDOFF.md` を完成状態へ同期した。
 - 固定一次1問＋二次4問、計5問・6答案要素を変更していない。
-- 完成教材だけで固定6答案要素を独立再解答し、公式照合 `6 / 6 PASS` を維持。
-- 解説PDF表示 `6 / 6 PASS`、練習PDF表示 `5 / 5 PASS`、PowerPoint表示 `4 / 4 PASS` を維持。
 - Topic 18〜21先取り、二自由度制御・フィードフォワード補償の独立論点追加、未確認実車値追加、教材外知識による補完は `0件`。
-- 前回最終QAでFAILだったmain source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程` の3箇所は同期済みで、再実施した最終QAでは `3 / 3 PASS`。
-- Topic 17は `PASS / topic_17_final_qa_pass / FINAL_QA_COMPLETE / IN_PROGRESS`。本runでは最終QA再実施までを1段階とし、completed状態同期は次工程へ分離する。
+- 技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更は `0件`。
+- 最初の未完了テーマはTopic 18「速度指令を変えたら何秒で追従する？」。次工程は制作前EXAM_ALIGNMENT。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -212,5 +210,14 @@ Topic 18の過渡応答、Topic 19のPID、Topic 20の安定判別・周波数�
 
 判定: `PASS / topic_17_final_qa_pass / FINAL_QA_COMPLETE / IN_PROGRESS`
 
+## Topic 17 completed状態同期
+- main source `## 状態`: `topic_17_final_qa_pass / completed` へ同期済み
+- main source末尾 `# 次工程`: Topic 18制作前EXAM_ALIGNMENTへ同期済み
+- 練習source末尾 `# 次工程`: Topic 18制作前EXAM_ALIGNMENTへ同期済み
+- 系列 `STATUS.md` / `HANDOFF.md`: 完成数 `17 / 22`、active Topic 18へ同期
+- 技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果の変更: `0件`
+
+判定: `PASS / topic_17_completed / completed`
+
 ## 次に行うこと
-Topic 17のcompleted状態同期を行う。main source `## 状態`、main source末尾 `# 次工程`、練習source末尾 `# 次工程`、系列 `STATUS.md` / `HANDOFF.md` を完成状態へ同期する。技術本文・問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更しない。同期完了後、Topic 18「速度指令を変えたら何秒で追従する？」の制作前EXAM_ALIGNMENTへ移る。
+Topic 18「速度指令を変えたら何秒で追従する？」の制作前EXAM_ALIGNMENTを行う。系列 `SPEC.md` の固定範囲（一次遅れ、二次遅れ、時定数、減衰係数、固有角周波数、オーバーシュート、立上り時間、整定時間、定常偏差、ステップ応答）から逸脱せず、二種一次・二次の公式過去問を直近年度から調査し、品質ゲート対象を固定する。
