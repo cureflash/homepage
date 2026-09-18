@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `13`
 theme: 単相の新幹線負荷は三相系統を乱さない？
-current_status: `topic_13_preproduction_exam_alignment_pending`
+current_status: `topic_13_preproduction_exam_alignment_complete`
 completed_topics: `12 / 22`
 
 ## Topic 12 final result
@@ -48,6 +48,20 @@ source:
 - `topics/12_multiple_train_load/12_multiple_train_load_blind_reanswer_20260918.md`
 - `qualifications/denken-shinkansen/catalog.json`
 
+## Topic 13 progress
+
+制作前EXAM_ALIGNMENT完了。
+
+正式品質ゲート:
+- 平成28年度 第二種一次「法規」問6 — 三相不平衡、交流式電気鉄道、逆相電流、同期機への影響、不平衡対策 — `5答案要素`
+- 平成23年度 第二種二次「電力・管理」問4 — 異容量V結線、三相平衡負荷＋単相負荷、フェーザ合成、設備利用率 — `3答案要素`
+- 合計: 一次1問＋二次1問、`2問 / 8答案要素`
+
+原則5問未満だが、固定範囲外の故障計算・配電方式・保護を混ぜて件数を水増ししない。平成16年度一次「電力」問2と平成10年度一次「電力」問6(B)は関連履歴を確認したが、現行公式アーカイブ外で公式問題・公式解答を再確認できないため正式ゲートには数えない。
+
+source:
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance.md`
+
 ## Gate checklist
 
 - [x] Topic 01 completed
@@ -62,8 +76,8 @@ source:
 - [x] Topic 10 completed
 - [x] Topic 11 completed
 - [x] Topic 12 completed
-- [ ] Topic 13 — production-pre EXAM_ALIGNMENT pending
+- [ ] Topic 13 — production-pre EXAM_ALIGNMENT complete; independent re-answer pending
 
 ## next_start
 
-Topic 13「単相の新幹線負荷は三相系統を乱さない？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` の固定範囲を守り、一次・二次の公式過去問要求を先に確定する。
+Topic 13の正式2問8答案要素を、保存済み正答を先に見ずに制作前独立再解答する。固定範囲外の故障計算等で補完せず、不足した中間知識だけを教材要件として記録する。
