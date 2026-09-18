@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `13`
 theme: 単相の新幹線負荷は三相系統を乱さない？
-current_status: `topic_13_preproduction_reanswer_complete_with_gap`
+current_status: `topic_13_explanation_source_complete`
 completed_topics: `12 / 22`
 
 ## Topic 12 final result
@@ -50,7 +50,7 @@ source:
 
 ## Topic 13 progress
 
-制作前EXAM_ALIGNMENTと制作前blind独立再解答まで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source本文まで完了。
 
 正式品質ゲート:
 - 平成28年度 第二種一次「法規」問6 — `5答案要素`
@@ -62,18 +62,27 @@ source:
 - H23二次 電力・管理 問4: `1 / 3 PASS`
 - 合計: `6 / 8 PASS`
 
-H23二次問4の不足:
-- 二つの単相負荷を各変圧器へ独立に加えるモデルとして扱い、(2)単相負荷合計と(3)利用率を誤った。
-- 教材本文では、二つの単相負荷が同一のときの回路電流、30 kVA側は三相負荷電流のみ、50 kVA側は三相負荷電流＋単相負荷電流となるフェーザ関係を説明する。
-- `P1,max = 50 - 30 cos30° = 24.02 kW` と利用率 `94.97 -> 95.0 %` へ途中式から到達できる説明が必要。
+解説source反映:
+- 三相平衡・不平衡、正相・逆相・零相、`a` 演算子、対称座標変換、逆相電流、き電用変圧器による不平衡緩和を固定範囲内で説明。
+- H28一次問6の5答案要素を本文へ `5 / 5` マッピング。
+- H23二次問4の3答案要素を本文へ `3 / 3` マッピング。
+- 正式2問8答案要素の説明箇所マッピング: `8 / 8`。
+- 制作前不足2要素について、二つの単相負荷を同一とする最大条件、Ta/Tbの回路電流、フェーザ合成、`P1,max = Sb - Sa cos30°`、利用率までを説明し、教材上の改善箇所 `2 / 2` を反映。
+- 3段階例題をsourceへ実装。数値は教材用仮定値とし、未確認実設備値を使用していない。
 
-この `6 / 8` は制作前ベースラインであり、完成判定ではない。完成後blind独立再解答では `8 / 8 PASS` が必要。
+この `8 / 8` は教材内説明箇所の存在確認であり、完成後blind独立再解答のPASSではない。完成判定では固定2問8答案要素を教材のみで `8 / 8 PASS` する必要がある。
 
-原則5問未満だが、固定範囲外の故障計算・配電方式・保護を混ぜて件数を水増ししない。正式問題の追加はしない。
+品質境界:
+- 正式過去問追加: `0件`
+- Topic 14以降の先取り: `0件`
+- Topic 16故障計算先取り: `0件`
+- 未確認実設備値の真値使用: `0件`
+- 仕様追加: `0件`
 
 source:
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance.md`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_preproduction_blind_reanswer_20260918.md`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_explanation.md`
 
 ## Gate checklist
 
@@ -89,8 +98,8 @@ source:
 - [x] Topic 10 completed
 - [x] Topic 11 completed
 - [x] Topic 12 completed
-- [ ] Topic 13 — production-pre EXAM_ALIGNMENT + blind re-answer complete; explanation source pending
+- [ ] Topic 13 — production-pre EXAM_ALIGNMENT + blind re-answer + explanation source complete; explanation PDF pending
 
 ## next_start
 
-Topic 13の解説source本文を制作する。既存SPEC範囲を増やさず、制作前再解答で不足したH23二次問4の回路電流・フェーザ合成・容量制約を必須中間説明として組み込む。Topic 14以降・Topic 16故障計算は先取りしない。
+Topic 13の解説PDFを制作し、表示・文字抽出・数式欠落・3段階例題の再計算QAを行う。固定2問8答案要素、SPEC境界、制作前不足2要素の改善説明を維持し、Topic 14以降・Topic 16故障計算は先取りしない。
