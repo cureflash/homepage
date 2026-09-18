@@ -1,5 +1,4 @@
 name: Temporary Topic 19 Progress Sync
-# Trigger after workflow exists on default branch.
 
 on:
   push:
@@ -37,88 +36,31 @@ jobs:
                   raise SystemExit(f'{path}: expected 1 match, got {n}: {old!r}')
               p.write_text(s.replace(old, new, 1), encoding='utf-8')
 
-          src='denken-shinkansen/07_shinkansen_machine_2/topics/19_pid_speed_control/19_pid_speed_control.md'
-          status='denken-shinkansen/07_shinkansen_machine_2/STATUS.md'
-          handoff='denken-shinkansen/07_shinkansen_machine_2/HANDOFF.md'
+          src = 'denken-shinkansen/07_shinkansen_machine_2/topics/19_pid_speed_control/19_pid_speed_control.md'
+          status = 'denken-shinkansen/07_shinkansen_machine_2/STATUS.md'
+          handoff = 'denken-shinkansen/07_shinkansen_machine_2/HANDOFF.md'
 
-          rep(src,
-              'Topic 19の制作前EXAM_ALIGNMENTと解説source本文を完了した。',
-              'Topic 19の制作前EXAM_ALIGNMENT、解説source、解説PDF＋QAを完了した。')
-          rep(src,
-              '現在 `topic_19_explanation_source_complete / IN_PROGRESS`。固定一次1問＋二次4問、計5問・12答案要素は変更していない。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。次工程はTopic 19解説PDF＋QA。',
-              '現在 `topic_19_explanation_pdf_complete / IN_PROGRESS`。固定一次1問＋二次4問、計5問・12答案要素は変更していない。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。解説PDF QAは表示6/6、数値・論理15/15、固定12答案要素12/12でPASS。次工程はTopic 19練習source。')
+          rep(src, 'Topic 19の制作前EXAM_ALIGNMENTと解説source本文を完了した。', 'Topic 19の制作前EXAM_ALIGNMENT、解説source、解説PDF＋QAを完了した。')
+          rep(src, '現在 `topic_19_explanation_source_complete / IN_PROGRESS`。固定一次1問＋二次4問、計5問・12答案要素は変更していない。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。次工程はTopic 19解説PDF＋QA。', '現在 `topic_19_explanation_pdf_complete / IN_PROGRESS`。固定一次1問＋二次4問、計5問・12答案要素は変更していない。固定問題の個別正答記号・最終数値・完成済み式変形結果は保存していない。解説PDF QAは表示6/6、数値・論理15/15、固定12答案要素12/12でPASS。次工程はTopic 19練習source。')
 
-          rep(status,
-              '- current_status: `topic_19_explanation_source_complete`',
-              '- current_status: `topic_19_explanation_pdf_complete`')
-          rep(status,
-              '- next_start: Topic 19 解説PDF＋QA',
-              '- next_start: Topic 19 練習source')
-          rep(status,
-              '- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`',
-              '- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`')
-          rep(status,
-              '判定: `PASS / topic_19_explanation_source_complete`',
-              '''判定: `PASS / topic_19_explanation_source_complete`
+          rep(status, '- current_status: `topic_19_explanation_source_complete`', '- current_status: `topic_19_explanation_pdf_complete`')
+          rep(status, '- next_start: Topic 19 解説PDF＋QA', '- next_start: Topic 19 練習source')
+          rep(status, '- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`', '- [ ] Topic 19 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT `PASS`、解説source `PASS`、解説PDF＋QA `PASS`')
+          pdf_section = '判定: `PASS / topic_19_explanation_source_complete`\n\n## Topic 19 解説PDF＋QA\n成果物:\n- `topics/19_pid_speed_control/19_pid_speed_control_explanation.pdf`\n- `topics/19_pid_speed_control/19_pid_speed_control_explanation_pdf_qa.md`\n\nQA:\n- A4縦6ページ: `PASS`\n- 固定5問・12答案要素: `12 / 12 COVERED`\n- 表示QA: `6 / 6 PASS`\n- 文字抽出: `PASS`\n- 数値・論理QA: `15 / 15 PASS`\n- Topic 20/21先取り・未確認実車PID値・固定問題正答保存: `各0件`\n- Git blob: `bbbe79949058c62725f644236b78f8c961365291`\n\n判定: `PASS / topic_19_explanation_pdf_complete`'
+          rep(status, '判定: `PASS / topic_19_explanation_source_complete`', pdf_section)
+          rep(status, 'Topic 19解説source本文を作成した。P・I・D各動作、PID二表現の係数変換、P/PI/PD/PID判別、単位負帰還の偏差伝達関数、最終値の定理、ステップ・ランプ定常偏差、Topic 18の二次遅れへの接続、教材用仮定プラントでの `Kp`・`Ki`・`Kd` 一変数比較条件を記録した。固定5問・12答案要素を教材節へ `12 / 12` 接続した。完成数は `18 / 22` のまま。', 'Topic 19解説PDFを生成し、表示6/6、文字抽出、数値・論理15/15、固定5問・12答案要素12/12を確認してQA `PASS` とした。Topic 20/21先取り、未確認実車PID値、固定問題の個別正答保存はいずれも0件。完成数は `18 / 22` のまま。')
+          rep(status, 'Topic 19「PIDで新幹線の速度を制御する」の解説PDF＋QAを作成する。', 'Topic 19「PIDで新幹線の速度を制御する」の練習sourceを作成する。')
 
-## Topic 19 解説PDF＋QA
-成果物:
-- `topics/19_pid_speed_control/19_pid_speed_control_explanation.pdf`
-- `topics/19_pid_speed_control/19_pid_speed_control_explanation_pdf_qa.md`
-
-QA:
-- A4縦6ページ: `PASS`
-- 固定5問・12答案要素: `12 / 12 COVERED`
-- 表示QA: `6 / 6 PASS`
-- 文字抽出: `PASS`
-- 数値・論理QA: `15 / 15 PASS`
-- Topic 20/21先取り・未確認実車PID値・固定問題正答保存: `各0件`
-- Git blob: `bbbe79949058c62725f644236b78f8c961365291`
-
-判定: `PASS / topic_19_explanation_pdf_complete`''')
-          rep(status,
-              'Topic 19解説source本文を作成した。P・I・D各動作、PID二表現の係数変換、P/PI/PD/PID判別、単位負帰還の偏差伝達関数、最終値の定理、ステップ・ランプ定常偏差、Topic 18の二次遅れへの接続、教材用仮定プラントでの `Kp`・`Ki`・`Kd` 一変数比較条件を記録した。固定5問・12答案要素を教材節へ `12 / 12` 接続した。完成数は `18 / 22` のまま。',
-              'Topic 19解説PDFを生成し、表示6/6、文字抽出、数値・論理15/15、固定5問・12答案要素12/12を確認してQA `PASS` とした。Topic 20/21先取り、未確認実車PID値、固定問題の個別正答保存はいずれも0件。完成数は `18 / 22` のまま。')
-          rep(status,
-              'Topic 19「PIDで新幹線の速度を制御する」の解説PDF＋QAを作成する。',
-              'Topic 19「PIDで新幹線の速度を制御する」の練習sourceを作成する。')
-
-          rep(handoff,
-              '- current status: `topic_19_explanation_source_complete / IN_PROGRESS`',
-              '- current status: `topic_19_explanation_pdf_complete / IN_PROGRESS`')
-          rep(handoff,
-              '- 次工程: Topic 19 解説PDF＋QA',
-              '- 次工程: Topic 19 練習source')
-          rep(handoff,
-              'Topic 19解説source本文を完成した。',
-              'Topic 19解説PDF＋QAまで完成した。')
-          rep(handoff,
-              '''成果物:
-- `topics/19_pid_speed_control/19_pid_speed_control.md`''',
-              '''成果物:
-- `topics/19_pid_speed_control/19_pid_speed_control.md`
-- `topics/19_pid_speed_control/19_pid_speed_control_explanation.pdf`
-- `topics/19_pid_speed_control/19_pid_speed_control_explanation_pdf_qa.md`''')
-          rep(handoff,
-              '- 判定: `PASS / topic_19_explanation_source_complete`',
-              '- 解説PDF: 表示6/6、文字抽出PASS、数値・論理15/15\n- 判定: `PASS / topic_19_explanation_pdf_complete`')
-          rep(handoff,
-              '''## GitHub反映
-- 解説source commit: `a1f2a2386037904c493b96e7820f1c2bc73ade5e`
-- STATUS同期 commit: `6f0e96eab98a03028c85a4983c31e78aa3be5992`''',
-              '''## GitHub反映
-- 解説source: GitHub正本反映済み
-- 解説PDF: Git blob `bbbe79949058c62725f644236b78f8c961365291`
-- 解説PDF QA: `PASS / topic_19_explanation_pdf_complete`''')
-          rep(handoff,
-              'Topic 19解説sourceから解説PDFを生成し、表示・文字抽出・式・数値・固定12答案要素接続をQAする。',
-              'Topic 19練習sourceを作成し、固定一次1問＋二次4問・12答案要素への演習接続を維持してQAする。')
+          rep(handoff, '- current status: `topic_19_explanation_source_complete / IN_PROGRESS`', '- current status: `topic_19_explanation_pdf_complete / IN_PROGRESS`')
+          rep(handoff, '- 次工程: Topic 19 解説PDF＋QA', '- 次工程: Topic 19 練習source')
+          rep(handoff, 'Topic 19解説source本文を完成した。', 'Topic 19解説PDF＋QAまで完成した。')
+          rep(handoff, '成果物:\n- `topics/19_pid_speed_control/19_pid_speed_control.md`', '成果物:\n- `topics/19_pid_speed_control/19_pid_speed_control.md`\n- `topics/19_pid_speed_control/19_pid_speed_control_explanation.pdf`\n- `topics/19_pid_speed_control/19_pid_speed_control_explanation_pdf_qa.md`')
+          rep(handoff, '- 判定: `PASS / topic_19_explanation_source_complete`', '- 解説PDF: 表示6/6、文字抽出PASS、数値・論理15/15\n- 判定: `PASS / topic_19_explanation_pdf_complete`')
+          rep(handoff, '## GitHub反映\n- 解説source commit: `a1f2a2386037904c493b96e7820f1c2bc73ade5e`\n- STATUS同期 commit: `6f0e96eab98a03028c85a4983c31e78aa3be5992`', '## GitHub反映\n- 解説source: GitHub正本反映済み\n- 解説PDF: Git blob `bbbe79949058c62725f644236b78f8c961365291`\n- 解説PDF QA: `PASS / topic_19_explanation_pdf_complete`')
+          rep(handoff, 'Topic 19解説sourceから解説PDFを生成し、表示・文字抽出・式・数値・固定12答案要素接続をQAする。', 'Topic 19練習sourceを作成し、固定一次1問＋二次4問・12答案要素への演習接続を維持してQAする。')
           PY
           git rm .github/workflows/tmp-topic19-progress-sync.yml
-          git add \
-            denken-shinkansen/07_shinkansen_machine_2/topics/19_pid_speed_control/19_pid_speed_control.md \
-            denken-shinkansen/07_shinkansen_machine_2/STATUS.md \
-            denken-shinkansen/07_shinkansen_machine_2/HANDOFF.md
+          git add denken-shinkansen/07_shinkansen_machine_2/topics/19_pid_speed_control/19_pid_speed_control.md denken-shinkansen/07_shinkansen_machine_2/STATUS.md denken-shinkansen/07_shinkansen_machine_2/HANDOFF.md
           git commit -m 'denken machine2: sync Topic 19 explanation PDF progress'
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then exit 0; fi
