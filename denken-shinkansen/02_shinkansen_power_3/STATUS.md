@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `02_shinkansen_power_3`
-- exam_aligned_completed_topics: 13 / 16
-- current_status: `topic_14_progress_records_synced`
-- last_completed_topic: `13 新幹線の架線は何でできている？`
-- active_topic: `14 駅やトンネルにはどう電気を配る？`
-- next_start: Topic 14の最終QAを再実施する。固定EXAM_ALIGNMENT、教材内容、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認し、全件PASSの場合のみ `completed` とする
+- exam_aligned_completed_topics: 14 / 16
+- current_status: `topic_14_completed`
+- last_completed_topic: `14 駅やトンネルにはどう電気を配る？`
+- active_topic: `15 回生した電気はどこへ行く？`
+- next_start: Topic 15の制作前EXAM_ALIGNMENTを行う。`SPEC.md` のTopic 15固定範囲だけで解ける公式過去問を直近年度から遡って調査し、件数合わせの仕様追加をしない
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -24,7 +24,7 @@
 - [x] 11 架線事故ではどうやって電気を止める？ — completed。固定5問・7答案要素の完成後ブラインド独立再解答 `7 / 7 PASS`、公式解答一致 `7 / 7`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 14 駅やトンネルにはどう電気を配る？ — 初回最終QA `NEEDS_REVISION / IN_PROGRESS`。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・PDF/PPTX QA・SPEC境界はPASS。唯一FAILだった旧進捗記録5箇所は現在地へ同期済み。最終QA再実施待ちのため完成数は13 / 16のまま
+- [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [ ] 15 回生した電気はどこへ行く？
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
@@ -453,7 +453,7 @@ PowerPoint QA: `topics/13_electrical_materials/13_electrical_materials_powerpoin
 - R5下 電力 問14: `(5)`
 - R5上 電力 問14: `(2)`
 
-## Topic 14 進行記録
+## Topic 14 完了記録
 source: `topics/14_distribution/14_distribution.md`
 解説PDF: `topics/14_distribution/14_distribution_explanation.pdf`
 解説PDF QA: `topics/14_distribution/14_distribution_explanation_qa.md`
@@ -521,7 +521,8 @@ PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 - 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`（技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後独立再解答・PDF/PPTX QA・SPEC境界はPASS。進捗記録整合のみFAIL: 旧工程5箇所）
 - 初回最終QA記録: `topics/14_distribution/14_distribution_final_qa.md`
 - 旧進捗記録5箇所同期: 完了
-- 最終QA再実施: 未実施
+- 最終QA再実施: `PASS / completed`
+- Webカタログ登録: `qualifications/denken-shinkansen/catalog.json` — 完了
 
 完成後独立答案:
 - R8上 電力 問13: `(2)`
@@ -531,4 +532,4 @@ PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 - H20 電力 問17(a)(b): `(2),(3)`
 
 ## 次
-Topic 14の最終QAを再実施する。固定EXAM_ALIGNMENT、教材内容、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認し、全件PASSの場合のみ `completed` とする。
+Topic 15 `回生した電気はどこへ行く？` の制作前EXAM_ALIGNMENTを行う。`SPEC.md` のTopic 15固定範囲だけで解ける公式過去問を直近年度から遡って調査し、件数合わせの仕様追加をしない。
