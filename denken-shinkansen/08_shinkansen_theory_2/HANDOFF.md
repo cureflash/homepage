@@ -6,11 +6,11 @@
 
 Topic 01〜18は `PASS / completed`。完成数は `18 / 21`。
 
-current_status: `topic_19_practice_pdf_complete`
+current_status: `topic_19_powerpoint_complete`
 
 active_topic: `19 25kV・大電流をどう安全に測る？`
 
-Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDFまで完了。品質ゲートは一次5問・25答案要素で、blind導出 `25 / 25 PASS`、公式標準解答照合 `25 / 25`、本文/PDF/練習への接続 `25 / 25`。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は解説画像PowerPoint＋表示QA。
+Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QAまで完了。品質ゲートは一次5問・25答案要素で、blind導出 `25 / 25 PASS`、公式標準解答照合 `25 / 25`、本文/PDF/練習/PowerPointへの接続 `25 / 25`。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は完成後独立再解答。
 
 ## Topic 18 成果物
 
@@ -52,7 +52,9 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 練習source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.md`
 - 練習PDF: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.pdf`
 - 練習PDF QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice_pdf_qa.md`
-- stage: `PRACTICE_PDF_COMPLETE`
+- PowerPoint: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_images.pptx`
+- PowerPoint QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_powerpoint_qa.md`
+- stage: `POWERPOINT_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 19 固定範囲
@@ -155,6 +157,24 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 実設備CT・VTの未確認実値追加: `0件`
 - 判定: `PASS / PRACTICE_PDF_COMPLETE`
 
+## Topic 19 解説画像PowerPoint＋表示QA
+
+- 16:9 / 6枚
+- 200 dpi全スライド表示QA: `6 / 6 PASS`
+- shape geometry overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- PDF変換: `6ページ / PASS`
+- PDF文字抽出QA: `PASS`
+- SHA-256: `28e66278adf5dcac60809ca22d4a51936483e7e87dd043f32a1bdf8ad659f0c5`
+- SPEC固定範囲: `10 / 10可視化`
+- 練習12問要求論点: `12 / 12接続`
+- 固定一次5問・25答案要素: `25 / 25可視化`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- Topic 20先取り: `0件`
+- 実設備CT・VTの未確認定格・結線・精度階級追加: `0件`
+- 判定: `PASS / POWERPOINT_COMPLETE`
+
 ## 次工程
 
-Topic 19の解説画像PowerPoint＋表示QA。固定一次5問・25答案要素、SPEC固定範囲10項目、練習12問との接続を維持し、Topic 20の誤差・ブリッジ・波形・サンプリングを混在させない。
+Topic 19の完成後独立再解答。固定一次5問・25答案要素を、保存済み正答を先に見ず、完成済み教材だけを使って再度解く。
