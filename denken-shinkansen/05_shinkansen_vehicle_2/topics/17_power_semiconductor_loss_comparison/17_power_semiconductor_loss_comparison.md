@@ -10,9 +10,11 @@ H24一次 問6は問題全体を外さず、Topic 17に直接対応する (2) �
 
 固定過去問は一次4問＋二次1問の計5問を維持し、固定答案要素は一次17＋二次6の計23へ是正した。仕様追加は行っていない。
 
-current_status: `topic_17_exam_alignment_remap_complete`
+是正後の固定5問・23答案要素はclean条件でblind再解答し、候補固定後に公式解答・標準解答と照合して `23 / 23 PASS`。候補答案変更、教材外知識での補完、固定問題差替えはいずれも0件。
 
-次工程: 旧候補答案記録を参照せず、是正後の固定5問・23答案要素をclean条件でblind再解答する。公式解答・標準解答は候補固定後に照合する。
+current_status: `topic_17_progress_alignment_sync_complete`
+
+次工程: Topic 17の最終QAを再実施する。問題・正答・数式・PDF/PPTX本体・固定過去問は変更しない。
 
 ## 固定範囲
 
@@ -170,23 +172,46 @@ H24一次 問6の採用単位再監査では公式問題だけを再確認し、
 11. SPEC指定3可視化は同一の一般モデルから再生成する。`I-P_cond`、`f_s-P_loss`、`P_out-η` の計算条件をsourceへ固定する。
 12. 新幹線接続では、未確認の700系実車値を置かず、主変換装置で「損失が発熱・冷却・効率へ連鎖する」意味だけを一般原理として説明する。
 
-## 制作前独立検証の扱い
+## 旧制作前独立検証（履歴）
 
 制作前には旧マッピングの5問・26答案要素を公式問題から独立再導出し、その後に公式解答／標準解答と照合して `26 / 26 PASS` と記録した。しかし完成後blind再解答で、H24一次 問6の (1)(4)(5) がTopic 17教材では導出不能かつSPEC外であることが判明した。
 
-このため、旧 `26 / 26` は「問題全体を解いた履歴」であって、是正後EXAM_ALIGNMENTの最終品質ゲートには使わない。最終ゲートは是正後の23答案要素をclean条件でblind再解答して判定する。
+旧 `26 / 26` は再マッピング前の履歴値であり、現行EXAM_ALIGNMENTの品質判定には使用しない。
+
+## clean blind再解答・公式照合
+
+是正後の固定5問・23答案要素を旧候補答案、公式解答・標準解答、個別過去問解説を候補固定前に参照せず再解答した。
+
+- R7一次 問4: `5 / 5 PASS`
+- R4一次 問4: `5 / 5 PASS`
+- R2一次 問2: `5 / 5 PASS`
+- H24一次 問6 (2)(3): `2 / 2 PASS`
+- H24二次 問1: `6 / 6 PASS`
+- 一次: `17 / 17 PASS`
+- 二次: `6 / 6 PASS`
+- 合計: `23 / 23 PASS`
+- 候補答案変更: `0件`
+- 教材外知識での補完: `0件`
+- 固定問題差替え: `0件`
+
+候補答案記録: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md`
+
+公式照合記録: `17_power_semiconductor_loss_comparison_blind_reanswer_official_check.md`
 
 ## 成果物状況
 
-- 解説source: `17_power_semiconductor_loss_comparison_explanation_source.md` — 成果物自体はPASS
-- 解説PDF: `17_power_semiconductor_loss_comparison_explanation.pdf` — 4ページ / 表示QA PASS
-- 練習source: `17_power_semiconductor_loss_comparison_practice_source.md` — 一次8問＋二次4問 / QA PASS
-- 練習PDF: `17_power_semiconductor_loss_comparison_practice.pdf` — 6ページ / 表示QA PASS
-- PowerPoint: `17_power_semiconductor_loss_comparison_images.pptx` — 4枚 / QA PASS
-- blind再解答前ゲート: `17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` — 旧26要素前提のため履歴扱い
-- blind再解答候補試行: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates.md` — `23 / 26 derivable` の履歴。今回の再マッピングにより、未導出3要素はゲート対象外となったが、strict blind provenance未達のため最終PASSには使わない
-
-旧成果物内の「固定5問・26答案要素 `26 / 26`」表記は再マッピング前の履歴値であり、最終品質判定値としては使用しない。教材本文を仕様外へ増補せず、次工程で23要素のclean blind再解答を実施する。
+- 解説source: `17_power_semiconductor_loss_comparison_explanation_source.md` — `PASS / 23答案要素へ同期済み`
+- 解説PDF: `17_power_semiconductor_loss_comparison_explanation.pdf` — `PASS / 4ページ / 本体変更なし`
+- 練習source: `17_power_semiconductor_loss_comparison_practice_source.md` — `PASS / 一次8問＋二次4問 / 23答案要素へ同期済み`
+- 練習PDF: `17_power_semiconductor_loss_comparison_practice.pdf` — `PASS / 6ページ / 本体変更なし`
+- PowerPoint: `17_power_semiconductor_loss_comparison_images.pptx` — `PASS / 4枚 / 本体変更なし`
+- explanation PDF QA: `23 / 23 PASS` へ同期済み
+- practice PDF QA: `23 / 23 PASS` へ同期済み
+- PowerPoint QA: `23 / 23 PASS` へ同期済み
+- blind再解答前ゲート: `17_power_semiconductor_loss_comparison_blind_reanswer_gate.md` — 再マッピング前の履歴として保持
+- blind再解答候補試行: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates.md` — 再マッピング前の履歴として保持
+- clean blind候補答案: `17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md` — `23 / 23 candidate fixed`
+- 公式照合記録: `17_power_semiconductor_loss_comparison_blind_reanswer_official_check.md` — `23 / 23 PASS`
 
 ## SPEC整合ゲート
 
@@ -196,12 +221,12 @@ H24一次 問6の採用単位再監査では公式問題だけを再確認し、
 - 二次記述・計算問題1問以上: `PASS / 1問`
 - H24一次 問6の採用単位: `PASS / (2)(3)のみ`
 - 固定答案要素: `23`
+- clean blind再解答・公式照合: `23 / 23 PASS`
 - SPEC外追加: `0件`
 - 未確認700系実車値の真値化: `0件`
-- 完成後blind再解答: `未実施 / 次工程`
-- completed化: `不可 / 完成数16 / 39のまま`
-- 判定: `PASS / EXAM_ALIGNMENT_REMAP_COMPLETE`
+- completed化: `不可 / 最終QA再実施前 / 完成数16 / 39のまま`
+- 判定: `PASS / PROGRESS_ALIGNMENT_SYNC_COMPLETE`
 
 ## 次工程
 
-旧候補答案記録を参照せず、是正後の固定5問・23答案要素をclean条件でblind再解答する。候補固定までは公式解答・標準解答を開かない。
+Topic 17の最終QAを再実施する。問題・正答・数式・PDF/PPTX本体・固定過去問は変更しない。
