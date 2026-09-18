@@ -6,23 +6,23 @@
 - Topic 01〜17: 最終QA `PASS / completed`
 - 完成数: `17 / 22`
 - active topic: `18 速度指令を変えたら何秒で追従する？`
-- current status: `topic_18_practice_source_complete`
-- 次工程: Topic 18 練習PDF＋表示QA
+- current status: `topic_18_practice_pdf_complete`
+- 次工程: Topic 18 解説画像PowerPoint＋表示QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
-- 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 18実在成果物を確認した。
+- 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 18実在成果物、直近のTopic 18変更を確認した。
 - 最初の未完了テーマはTopic 18「速度指令を変えたら何秒で追従する？」であることを確認した。
-- Topic 18解説PDFとQA記録がGitHub上に実在し、`PASS / topic_18_explanation_pdf_complete` であることを確認した。
-- 固定一次1問＋二次4問、計5問・12答案要素を変更せず、次工程の練習sourceを作成した。
-- 一次10問は全問五肢択一、二次5問は記述・式変形・途中計算・検算付きとした。
+- 既存のTopic 18練習sourceは `PASS / topic_18_practice_source_complete` で、重複制作せず次工程の練習PDF＋QAを実施した。
+- 練習PDFはA4縦6ページ、一次10問＋二次5問。160 dpi表示QA `6 / 6 PASS`、文字抽出PASS。
 - 一次正答一意性 `10 / 10 PASS`、全15問の独立再計算・論理QA `15 / 15 PASS`。
-- 固定5問・12答案要素への接続 `12 / 12`。
+- 固定一次1問＋二次4問、計5問・12答案要素への接続 `12 / 12 PASS` を維持した。
 - Topic 19〜21先取り、仕様外独立論点、未確認実車値追加は `0件`。
 - 固定問題の正答記号・完成済み個別解答の保存は `0件`。
-- source: `topics/18_speed_transient_response/18_speed_transient_response_practice.md`
-- 次工程はTopic 18練習PDF＋表示QA・文字抽出QA・数値整合QA。
+- PDF: `topics/18_speed_transient_response/18_speed_transient_response_practice.pdf`
+- QA: `topics/18_speed_transient_response/18_speed_transient_response_practice_pdf_qa.md`
+- 次工程はTopic 18解説画像PowerPoint＋表示QA。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -301,5 +301,20 @@ Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘�
 
 判定: `PASS / topic_18_practice_source_complete / IN_PROGRESS`
 
+## Topic 18 練習PDF
+- PDF: `topics/18_speed_transient_response/18_speed_transient_response_practice.pdf`
+- QA: `topics/18_speed_transient_response/18_speed_transient_response_practice_pdf_qa.md`
+- A4縦・6ページ、一次10問＋二次5問
+- 固定5問・12答案要素 `12 / 12 PASS`
+- 一次正答一意性 `10 / 10 PASS`
+- 全15問の独立再計算・論理QA `15 / 15 PASS`
+- 160 dpi全6ページ表示QA `6 / 6 PASS`
+- PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- SHA-256 `41262af9fd778e3ff0bda53c10cbf6938548e9768324b908882a3b8fd569e64f`
+- Git blob SHA `0fc7e767eec6ffb5bc5295cff87ef55ddef0ce10`
+- Topic 19〜21先取り、仕様外独立論点、未確認実車値、固定問題の正答保存 `0件`
+
+判定: `PASS / topic_18_practice_pdf_complete / IN_PROGRESS`
+
 ## 次に行うこと
-固定5問・12答案要素と練習source内容を変更せず、Topic 18練習PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う。
+固定5問・12答案要素とTopic 18既存成果物を変更せず、Topic 18解説画像PowerPointを作成し、表示QA・ZIP整合性QA・仕様境界確認を行う。
