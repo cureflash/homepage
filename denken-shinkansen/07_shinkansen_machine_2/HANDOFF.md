@@ -6,23 +6,21 @@
 - Topic 01〜17: 最終QA `PASS / completed`
 - 完成数: `17 / 22`
 - active topic: `18 速度指令を変えたら何秒で追従する？`
-- current status: `topic_18_blind_reanswer_ready`
-- 次工程: Topic 18 完成後独立再解答
+- current status: `topic_18_independent_reanswer_complete`
+- 次工程: Topic 18 最終QA
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
 ## reconcile結果
 - 最新main、`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、系列 `SPEC.md`、`STATUS.md` / `HANDOFF.md`、Topic 18実在成果物を確認した。
 - 最初の未完了テーマはTopic 18「速度指令を変えたら何秒で追従する？」であることを確認した。
-- 既存の制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPointはすべてPASSで、固定一次1問＋二次4問、計5問・12答案要素を維持した。
-- 今回、独立再解答前ゲートを実施し、公式正答・標準解答・完成済み個別解答を事前参照していないことを確認した。
-- 固定5過去問の公式正答記号・標準解答本文・完成済み個別解答の事前保存は `0件`。
-- 解説PDF表示QA `5 / 5 PASS`、練習PDF表示QA `6 / 6 PASS`、PowerPoint表示QA `4 / 4 PASS`。
-- 練習一次正答一意性 `10 / 10 PASS`、全15問の独立再計算・論理QA `15 / 15 PASS`。
-- 固定5問・12答案要素への教材接続 `12 / 12 PASS`。
-- Topic 19〜21先取り、仕様外独立論点、未確認実車値追加、固定EXAM_ALIGNMENT変更は `0件`。
-- ゲート記録: `topics/18_speed_transient_response/18_speed_transient_response_blind_reanswer_gate.md`
-- 次工程はTopic 18完成後独立再解答。
+- 既存の制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source・練習PDF・解説画像PowerPoint・独立再解答前ゲートはすべてPASSで、固定一次1問＋二次4問、計5問・12答案要素を維持した。
+- 今回、公式正答・標準解答を見る前に固定5問・12答案要素を完成教材だけで解答し、`18_speed_transient_response_answer_lock.md` へ答案を固定した。
+- 答案固定後に電気技術者試験センター公式正答・標準解答と照合し、厳密ブラインド再解答 `12 / 12 PASS`。
+- 教材外知識による補完、Topic 19〜21先取り、仕様外独立論点追加、未確認実車値追加、固定EXAM_ALIGNMENT変更は `0件`。
+- 答案ロック: `topics/18_speed_transient_response/18_speed_transient_response_answer_lock.md`
+- 独立再解答記録: `topics/18_speed_transient_response/18_speed_transient_response_independent_reanswer.md`
+- 次工程はTopic 18最終QA。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 - R02 一次 機械 問4 (1),(4),(5) — 3答案要素
@@ -339,5 +337,19 @@ Topic 19のPID、Topic 20の安定判別・周波数応答、Topic 21の再粘�
 
 判定: `BLIND_REANSWER_READY / IN_PROGRESS`
 
+## Topic 18 完成後独立再解答
+- 答案ロック: `topics/18_speed_transient_response/18_speed_transient_response_answer_lock.md`
+- 記録: `topics/18_speed_transient_response/18_speed_transient_response_independent_reanswer.md`
+- 公式正答・標準解答を見る前に固定5問・12答案要素を完成教材だけで解答し、答案をGitHubへ固定
+- H23一次 機械 問7 (2): `1 / 1 PASS`
+- R07二次 機械・制御 問4 (2),(4),(5): `4 / 4 PASS`
+- R06二次 機械・制御 問4 (2),(3),(4): `3 / 3 PASS`
+- R03二次 機械・制御 問4 (3),(4): `2 / 2 PASS`
+- H29二次 機械・制御 問4 (5): `2 / 2 PASS`
+- 厳密ブラインド再解答: `12 / 12 PASS`
+- 教材外知識による補完、Topic 19〜21先取り、仕様外独立論点追加、未確認実車値追加: `0件`
+
+判定: `PASS / topic_18_independent_reanswer_complete / IN_PROGRESS`
+
 ## 次に行うこと
-完成教材だけを使って固定5問・12答案要素を先に再解答し、答案を固定した後で公式解答・標準解答と照合する。
+Topic 18最終QAを実施し、必須成果物・固定12答案要素・独立再解答・PDF/PPTX QA・仕様境界・進捗記録整合を総合判定する。
