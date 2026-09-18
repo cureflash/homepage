@@ -87,13 +87,14 @@ PowerPoint:
 
 ### 最終QA blocker
 
-1. `14_power_factor_voltage_control_explanation.md` のstage・次工程が旧状態。
-2. `14_power_factor_voltage_control_practice.md` が練習PDF・PowerPoint・blindを未実施としている。
-3. `14_power_factor_voltage_control_explanation_pdf_qa.md` の次工程が完成後blind再実施のまま。
-4. `14_power_factor_voltage_control_practice_pdf_qa.md` の次工程がPowerPoint制作のまま。
-5. `14_power_factor_voltage_control_powerpoint_qa.md` がTopic全体をblind再実施前としている。
-6. PowerPoint QA記録のファイル指紋が現行GitHub正本と不一致。
-7. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
+1. `14_power_factor_voltage_control.md` が最終QA未実施・次工程を最終QAとしている旧状態。
+2. `14_power_factor_voltage_control_explanation.md` のstage・次工程が旧状態。
+3. `14_power_factor_voltage_control_practice.md` が練習PDF・PowerPoint・blindを未実施としている。
+4. `14_power_factor_voltage_control_explanation_pdf_qa.md` の次工程が完成後blind再実施のまま。
+5. `14_power_factor_voltage_control_practice_pdf_qa.md` の次工程がPowerPoint制作のまま。
+6. `14_power_factor_voltage_control_powerpoint_qa.md` がTopic全体をblind再実施前としている。
+7. PowerPoint QA記録のファイル指紋が現行GitHub正本と不一致。
+8. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
 
 ### 品質境界
 
@@ -123,11 +124,11 @@ PowerPoint:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — final QA `NEEDS_REVISION`; blocker 7件
+- [ ] Topic 14 — final QA `NEEDS_REVISION`; blocker 8件
 
 ## next_start
 
-Topic 14の最終QA blocker 7件を解消する。固定5問・21答案要素と教材技術範囲は変更しない。
+Topic 14の最終QA blocker 8件を解消する。固定5問・21答案要素と教材技術範囲は変更しない。
 
 1. 旧進捗記録を現行工程へ同期する。
 2. 現行GitHub正本PPTXを再QAし、現行blobに対応するQA記録へ更新する。
