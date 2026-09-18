@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 17 / 20
-- current_status: `topic_18_explanation_pdf_complete`
+- current_status: `topic_18_practice_source_complete`
 - last_completed_topic: `17 常微分方程式の数値解法`
 - active_topic: `18 非線形方程式と反復計算`
-- next_start: Topic 18の練習問題sourceを作成する
+- next_start: Topic 18の練習PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う
 
 ## Topic 07 制作品質ゲート
 
@@ -288,7 +288,7 @@
 - [x] 制作前独立数値検証（固定範囲 `PASS`、二分法20反復・Newton法3反復・初期値依存・導関数ゼロ条件を確認）
 - [x] 解説本文＋3段階例題（固定説明 `5 / 5 PASS`、例題 `3 / 3 PASS`、接続確認5問マッピング `5 / 5 PASS`）
 - [x] 解説PDF（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
-- [ ] 練習問題source
+- [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [ ] 練習PDF
 - [ ] 解説画像PowerPoint
 - [ ] PowerPoint表示QA
@@ -298,29 +298,29 @@
 
 ## 今回進めた内容
 
-Topic 18の解説PDF＋QAを完了した。
+Topic 18の練習問題sourceを完了した。
 
-- 解説PDF: A4縦4ページ
-- 200 dpi表示QA: `4 / 4 PASS`
-- 文字切れ・重なり・ページ外はみ出し・豆腐文字: `0件`
-- `pdftotext` 文字抽出QA: `PASS`
-- 3段階例題の独立数値再計算: `3 / 3 PASS`
-- 固定説明項目: `5 / 5 PASS`
-- 接続確認5問の教材内マッピング: `5 / 5 PASS`
+- 全問題数: `12`
+- 一次型: `8`
+- 記述型: `4`
+- 難易度: 基礎 `3`、標準 `6`、複合 `3`
+- 独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 一次型正答番号: `4, 2, 3, 5, 4, 1, 2, 5`
 - 直接二分法・Newton法要求の第二種過去問: `0問` のまま
+- 接続確認した第二種公式過去問: `5問`
 - 接続確認5問の固定品質ゲート件数への水増し: `0件`
 - 第一種Newton-Raphson潮流問題による件数水増し: `0件`
 - Topic 19最適化、多変数Newton法、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
 成果物:
-- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_explanation.pdf`
-- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_explanation_qa.md`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_practice.md`
 
 ## 判定
 
-`topic_18_explanation_pdf_complete / IN_PROGRESS`
+`topic_18_practice_source_complete / IN_PROGRESS`
 
 完成数は `17 / 20`。
 
-次はTopic 18の練習問題sourceを作成する。
+次はTopic 18の練習PDFを作成し、表示QA・文字抽出QA・数値整合QAを行う。
