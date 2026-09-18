@@ -76,7 +76,7 @@ PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_p
 - 実設備値は一次資料確認済みのものだけを実値とする。
 
 ## 次
-Topic 16の最終QAを実施し、必須成果物、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合をまとめて判定する。
+Topic 16 main sourceへ完成後独立再解答結果を同期する。固定5出題回・7答案要素、教材本文、PDF/PPTX、SPEC固定範囲は変更しない。最終QAにはまだ進まない。
 
 ## 直前完了テーマ
 Topic 15 `回生した電気はどこへ行く？` は `PASS / completed`。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
