@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `14`
 theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_14_explanation_source_complete`
+current_status: `topic_14_explanation_pdf_complete`
 completed_topics: `13 / 22`
 
 ## Topic 12 final result
@@ -122,7 +122,7 @@ source:
 
 ## Topic 14 progress
 
-Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説sourceまで完了。解説PDF・練習問題・PowerPoint・完成後blind独立再解答は未着手。
+Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QAまで完了。練習問題・PowerPoint・完成後blind独立再解答は未着手。
 
 正式固定問題:
 - 令和6年度 第二種一次「電力」問5 — `5答案要素`
@@ -148,13 +148,25 @@ Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXA
 - 3段階例題: `3 / 3`
 - 制作前blind不足1答案要素: `1 / 1 explanation strengthened`
 
+解説PDF・QA:
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.pdf`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation_pdf_qa.md`
+- A4縦: `6ページ`
+- 200 dpi表示: `6 / 6 PASS`
+- 文字抽出: `PASS`
+- SPEC固定10項目: `10 / 10 covered`
+- SPEC固定3可視化: `3 / 3 covered`
+- 3段階例題独立再計算: `3 / 3 PASS`
+- 固定5問・21答案要素: `21 / 21 covered`
+- 制作前blind不足1答案要素: `1 / 1 改善説明確認`
+
 不足1答案要素の補強:
 - R2二次問6の最小コンデンサ容量。容量制約を `S<=ST` の不等式として扱い、境界値が正しくても最終設備容量を不足側へ丸めない手順を明記した。正式問題の境界 `2690.52 kvar` に対して、公式標準解答の `2.70×10^3 kvar` へ接続する。
 
 品質境界:
 - 固定5問・21答案要素の変更: `0件`
 - SPEC指定10項目: `10 / 10 covered`
-- SPEC指定3可視化: `3 / 3 source data defined`
+- SPEC指定3可視化: `3 / 3 covered`
 - 一次・二次合計5問: `PASS`
 - 二次記述・計算: `3問`
 - 参考教材2系統以上: `PASS / e-sysnet.com + 電験王2`
@@ -168,6 +180,8 @@ source:
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control.md`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_preproduction_blind_reanswer_20260918.md`
 - `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.md`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.pdf`
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation_pdf_qa.md`
 
 ## Gate checklist
 
@@ -184,8 +198,8 @@ source:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — explanation source complete; explanation PDF + QA pending
+- [ ] Topic 14 — explanation PDF + QA complete; practice source pending
 
 ## next_start
 
-Topic 14の解説PDFを `14_power_factor_voltage_control_explanation.md` から生成し、表示、文字抽出、3段階例題の数値再計算、固定5問・21答案要素の説明欠落がないことをQAする。練習問題・PowerPoint・完成後blind独立再解答はまだ行わない。
+Topic 14の練習問題・完全解説sourceを作成し、一次試験型＋二次記述式で固定5問・21答案要素へ接続する。練習PDF・PowerPoint・完成後blind独立再解答はまだ行わない。
