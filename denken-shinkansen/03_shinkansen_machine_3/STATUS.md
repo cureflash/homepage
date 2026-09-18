@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `15 / 16`
-- current_status: `topic_16_blind_reanswer_needs_revision`
+- current_status: `topic_16_vector_source_remediation_complete`
 - last_completed_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
 - active_topic: `16 同期機って新幹線には使わないの？`
-- next_start: R5下 機械 問5に対応する同期電動機ベクトル図の選択肢判定手順を、固定範囲内で補強する
+- next_start: source改訂を解説PDFへ反映し、既存A4縦構成を維持して表示QA・文字抽出QAを再実施する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -26,420 +26,73 @@
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [x] 15 車内の照明・空調にはどれだけ電気が必要？ — 最終QA再判定PASS / completed
-- [ ] 16 同期機って新幹線には使わないの？ — 完成後blind独立再解答 `5 / 6 PASS` / NEEDS_REVISION
+- [ ] 16 同期機って新幹線には使わないの？ — ベクトル図source補強完了 / NEEDS_REVISION
 
 ## Topic 16 制作品質状態
 - 固定範囲: 同期機 / 同期発電機 / 同期電動機 / 回転磁界 / 同期速度 / 極数 / 周波数 / 界磁 / 励磁 / 電機子 / 力率 / 電機子反作用 / 同期リアクタンス / V曲線の基本 / 並行運転の基本
 - 固定EXAM_ALIGNMENT: R7上 機械 問5 / R5下 機械 問5 / R5下 機械 問6 / R4上 機械 問4 / H28 機械 問5 / H26 機械 問5
 - 品質ゲート対象: `6問・6答案要素`
 - 制作前検証・公式解答照合: `6 / 6 PASS`
-- 完成後blind保全: blind答案を commit `1f687fdde925e4aeebb39f6ce8a01b28bdd418fd` で固定してから公式解答を照合
 - 固定過去問要求事項の本文マッピング: `6 / 6 PASS`
-- 3段階例題: 基礎 / 本試験標準 / 複合・ひっかけ `PASS`
-- 解説source QA: `PASS`
-- 固定範囲外知識による答案補完: `0件`
+- 3段階例題: `PASS`
 - 固定EXAM_ALIGNMENT変更: `0件`
-- 非選定: R7下 機械 問5（始動・制動巻線） / R7下 機械 問6（無負荷・短絡特性を使う試験法） / R6上 機械 問5（始動法） / R5上 機械 問5（短絡比） / R4下 機械 問4（同期調相機）
-- 始動法・制動巻線・短絡比・短絡試験・同期調相機等の固定範囲外追加: `0件`
+- 固定範囲外知識による答案補完: `0件`
+- 始動法・制動巻線・短絡比・短絡試験・同期調相機・負荷角等の固定範囲外追加: `0件`
 - L0系リニア同期モータ: 系列SPECどおり、回転同期機を直線状に展開したものという概念説明に限定
+
+### 今回の補強
 - source: `topics/16_synchronous_machine/16_synchronous_machine.md`
-- 解説本文: 完成
-- 解説PDF: 完成（A4縦4ページ）
-- 解説PDF表示QA: `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 解説PDF欠落・破損グリフ: `0件`
-- 解説PDF固定過去問マッピング: `6 / 6`
-- explanation PDF: `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf`
-- explanation PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md`
-- 練習問題source: `12問` 完成
+- 状態: ベクトル図の尾→頭・始点終点判定を補強済み
+- 同期電動機の式: `V = E + jXsI`
+- 作図判定: `E` の終点を `jXsI` の始点とし、`jXsI` の終点が `V` の終点に一致する
+- 逆向き判定: `V` の終点 → `E` の終点を `jXsI` と読む候補は除外
+- `jXsI` の位相: `I` より90°進む
+- 解説source QA: `PASS`
+- ベクトル尾→頭・始点終点判定QA: `PASS`
 - practice source: `topics/16_synchronous_machine/16_synchronous_machine_practice.md`
-- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
-- 練習問題形式: `12 / 12` 五肢択一
+- 練習問題: `12問` を維持
+- 問10: R5下 機械 問5型の尾→頭判定を直接問う五肢択一へ改訂
 - 練習問題独立計算・論理QA: `12 / 12 PASS`
 - 練習問題正答一意性QA: `12 / 12 PASS`
 - 練習問題→固定EXAM_ALIGNMENT接続: `6 / 6 PASS`
-- 練習PDF: 完成（A4縦2ページ）
-- 練習PDF表示QA: `2 / 2 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 練習PDF欠落・破損グリフ: `0件`
-- 練習PDF正答一覧source一致: `12 / 12 PASS`
-- 練習PDF固定過去問マッピング: `6 / 6`
-- practice PDF: `topics/16_synchronous_machine/16_synchronous_machine_practice.pdf`
-- practice PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md`
-- 解説画像PowerPoint: 完成（16:9・4枚）
-- PowerPoint表示QA: `4 / 4 PASS`
-- PowerPointスライド外はみ出し: `0件`
-- PowerPoint文字欠落・重なり・判読不能: `0件`
-- PowerPoint欠落・破損グリフ: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint固定過去問接続: `6 / 6 PASS`
-- PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx`
-- PowerPoint QA: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md`
-- 完成後blind独立再解答: `5 / 6 PASS / NEEDS_REVISION`
+
+### 派生成果物の同期状態
+- explanation PDF: `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf` — 既存版あり / source改訂未反映 / `REGEN_REQUIRED`
+- explanation PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` — 改訂前PDFに対する記録
+- practice PDF: `topics/16_synchronous_machine/16_synchronous_machine_practice.pdf` — 既存版あり / practice source改訂未反映 / `REGEN_REQUIRED`
+- practice PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` — 改訂前PDFに対する記録
+- PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx` — 既存版あり / source改訂未反映 / `REGEN_REQUIRED`
+- PowerPoint QA: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md` — 改訂前PowerPointに対する記録
+
+### 完成後blind独立再解答
+- 旧版結果: `5 / 6 PASS / NEEDS_REVISION`
 - blind解答: R7上 問5 `(3)` / R5下 問5 `(5)` / R5下 問6 `(3)` / R4上 問4 `(2)` / H28 問5 `(2)` / H26 問5 `(1)`
-- 公式解答一致: R7上 問5 `(3)` / R5下 問5 `(3)` / R5下 問6 `(3)` / R4上 問4 `(2)` / H28 問5 `(2)` / H26 問5 `(1)`
-- blind不一致: R5下 機械 問5のみ。`V = E + jXsI` の関係は選べたが、選択肢図のベクトル矢印の始点・終点を誤読した
+- 公式解答: R7上 問5 `(3)` / R5下 問5 `(3)` / R5下 問6 `(3)` / R4上 問4 `(2)` / H28 問5 `(2)` / H26 問5 `(1)`
+- blind不一致: R5下 機械 問5のみ
+- 原因: `V = E + jXsI` と90°進みは選べたが、選択肢図の `jXsI` の始点・終点を逆に読んだ
 - 独立再解答記録: `topics/16_synchronous_machine/16_synchronous_machine_independent_reanswer.md`
+- 再実施条件: 解説PDF・練習PDF・PowerPointへsource改訂を同期した後
 - 品質ゲート判定: `NEEDS_REVISION`
-- 状態: `topic_16_blind_reanswer_needs_revision / IN_PROGRESS`
-- 次工程: 固定範囲・固定EXAM_ALIGNMENTを変えず、`E + jXsI = V` の尾→頭接続を含むベクトル図の選択肢判定手順を補強する
+- 状態: `topic_16_vector_source_remediation_complete / IN_PROGRESS`
 
 ## Topic 15 最終品質状態
-- 固定範囲（照明）: 光束 / 光度 / 照度 / 輝度 / lm / cd / lx / 逆二乗則 / 照明率 / 保守率 / 所要灯数 / 発光効率 / LED
-- 固定計算（照明）: 照度 / 光度 / 光束 / 所要灯数 / 消費電力
-- 固定範囲（電熱・空調）: ジュール熱 / 電力量 / 熱量 / ヒーター / 空調 / 電熱 / 効率 / COPの基本
-- 固定計算（電熱）: `Q = I²Rt` / `Q = Pt` 等を中心に扱う
 - 固定EXAM_ALIGNMENT: R8上 機械 問17(a)(b) / R7上 機械 問12 / R7上 機械 問17(a)(b) / R6下 機械 問17(a)(b) / R6上 機械 問17(a)(b) / R4上 機械 問17(a)(b) / R2 機械 問12
 - 品質ゲート対象: `7問・12答案要素`
-- 制作前独立検証・公式解答照合: `12 / 12 PASS`
-- 完成後blind保全: 制作前記録に正答選択肢番号・独立計算の最終数値を保存しない
-- 固定過去問要求事項の本文マッピング: `12 / 12 PASS`
-- 3段階例題: 基礎 / 本試験標準 / 複合・ひっかけ `PASS`
-- 解説source QA: `PASS`
-- 非選定: R7下 機械 問17（光束発散度が必要） / R7下 機械 問12（熱伝導） / R6下 機械 問12（熱伝導） / R5上 機械 問12（光束発散度が必要）
-- 重複扱い: R5下 機械 問17は固定範囲内だが、より新しい同型の点光源・水平面照度問題を固定済みのため品質ゲートへ重複加算しない
-- 固定範囲外追加: `0件`
-- 熱伝導・熱放射・工業電熱の追加: `0件`
-- 未確認新幹線車内照明・空調実値追加: `0件`
-- Topic 16先取り: `0件`
-- source: `topics/15_lighting_heating/15_lighting_heating.md`
-- 解説本文: 完成
-- 解説PDF: 完成（A4縦3ページ）
-- 解説PDF表示QA: `3 / 3 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 解説PDF欠落・破損グリフ: `0件`
-- 解説PDF固定過去問マッピング: `12 / 12`
-- explanation PDF: `topics/15_lighting_heating/15_lighting_heating_explanation.pdf`
-- explanation PDF QA: `topics/15_lighting_heating/15_lighting_heating_explanation_pdf_qa.md`
-- 練習問題source: `12問` 完成
-- practice source: `topics/15_lighting_heating/15_lighting_heating_practice.md`
-- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
-- 練習問題形式: `12 / 12` 五肢択一
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 練習問題正答一意性QA: `12 / 12 PASS`
-- 練習問題→固定EXAM_ALIGNMENT接続: `12 / 12 PASS`
-- 練習PDF: 完成（A4縦3ページ）
-- 練習PDF表示QA: `3 / 3 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 練習PDF欠落・破損グリフ: `0件`
-- 練習PDF固定過去問マッピング: `12 / 12`
-- practice PDF: `topics/15_lighting_heating/15_lighting_heating_practice.pdf`
-- practice PDF QA: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md`
-- 解説画像PowerPoint: 完成（16:9・4枚）
-- PowerPoint表示QA: `4 / 4 PASS`
-- PowerPointスライド外はみ出し: `0件`
-- PowerPoint文字欠落・重なり・判読不能: `0件`
-- PowerPoint欠落・破損グリフ: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint固定過去問接続: `12 / 12 PASS`
-- PowerPoint: `topics/15_lighting_heating/15_lighting_heating_images.pptx`
-- PowerPoint QA: `topics/15_lighting_heating/15_lighting_heating_powerpoint_qa.md`
 - 完成後blind独立再解答: `12 / 12 PASS`
-- blind解答: R8上 問17 `(a)5 / (b)2` / R7上 問12 `(4)` / R7上 問17 `(a)2 / (b)2` / R6下 問17 `(a)2 / (b)3` / R6上 問17 `(a)2 / (b)1` / R4上 問17 `(a)5 / (b)5` / R2 問12 `(3)`
-- 公式解答一致: `12 / 12`
-- blind答案固定commit: `e5dc7884e5500fe7b407f67c758b45e51c9501a3`
-- 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
-- 独立再解答記録: `topics/15_lighting_heating/15_lighting_heating_independent_reanswer.md`
-- 前回最終QA判定: `NEEDS_REVISION`
-- 前回最終QA技術内容: `PASS`
-- 前回最終QA必須成果物: `PASS`
-- 前回最終QA表示QA: `PASS`
-- 前回最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
-- 前回最終QA進捗記録整合: `FAIL`（旧進捗2ファイル）
-- 旧進捗1: `topics/15_lighting_heating/15_lighting_heating_practice.md` — 同期済み
-- 旧進捗2: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md` — 同期済み
-- 進捗記録同期: `2 / 2 PASS`
-- 前回最終QA固定範囲境界: `PASS`
 - 最終QA再判定: `PASS`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
-- 最終QA進捗記録整合: `PASS`
-- 最終QA固定範囲境界: `PASS`
-- Webカタログ登録: `qualifications/denken-shinkansen/catalog.json` / `PASS`
 - 状態: `completed`
-- 次工程: Topic 16の制作前EXAM_ALIGNMENT
 
 ## Topic 14 最終品質状態
-- 固定範囲: 電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率
-- 固定計算: 電池容量 / 電力量 / 直列時の電圧 / 並列時の容量 / 放電時間 / 必要電力から必要容量
 - 固定EXAM_ALIGNMENT: H30 機械 問12
-- 品質ゲート対象: `1問`（固定範囲だけで問題全体を解答対象にできる確認済み全件。5問未満例外を適用）
-- 公式正答照合: H30 機械 問12 `(1)`
-- 非選定: H28 機械 問12（酸化還元・イオン化傾向が必要） / R4上 機械 問12（NAS固有知識が必要）
-- 固定過去問要求事項の本文マッピング: `1 / 1 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 解説source QA: `PASS`
-- 件数合わせの固定範囲外追加: `0件`
-- H28問12向け酸化還元・イオン化傾向追加: `0件`
-- NAS・燃料電池・電気加工等の固定範囲外追加: `0件`
-- 未確認N700S実値追加: `0件`
-- Topic 15・16先取り: `0件`
-- JR東海一次資料確認: N700Sのバッテリ自走システム搭載を確認
-- source: `topics/14_battery/14_battery.md`
-- 解説本文: 完成
-- 解説PDF: 完成（A4縦2ページ）
-- 解説PDF表示QA: `2 / 2 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 解説PDF欠落・破損グリフ: `0件`
-- 解説PDF固定過去問マッピング: `1 / 1`
-- explanation PDF: `topics/14_battery/14_battery_explanation.pdf`
-- explanation PDF QA: `topics/14_battery/14_battery_explanation_pdf_qa.md`
-- 練習問題source: `12問` 完成
-- practice source: `topics/14_battery/14_battery_practice.md`
-- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
-- 練習問題形式: `12 / 12` 五肢択一
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 練習問題正答一意性QA: `12 / 12 PASS`
-- 練習問題→固定EXAM_ALIGNMENT接続: `1 / 1 PASS`
-- 練習PDF: 完成（A4縦3ページ）
-- 練習PDF表示QA: `3 / 3 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 練習PDF欠落・破損グリフ: `0件`
-- 練習PDF固定過去問マッピング: `1 / 1`
-- practice PDF: `topics/14_battery/14_battery_practice.pdf`
-- practice PDF QA: `topics/14_battery/14_battery_practice_pdf_qa.md`
-- 解説画像PowerPoint: 完成（16:9・4枚）
-- PowerPoint表示QA: `4 / 4 PASS`
-- PowerPointスライド外はみ出し: `0件`
-- PowerPoint文字欠落・重なり・判読不能: `0件`
-- PowerPoint欠落・破損グリフ: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint固定過去問接続: `1 / 1 PASS`
-- PowerPoint: `topics/14_battery/14_battery_images.pptx`
-- PowerPoint QA: `topics/14_battery/14_battery_powerpoint_qa.md`
 - 完成後blind独立再解答: `1 / 1 PASS`
-- blind解答: H30 機械 問12 `(1)`
-- 公式解答一致: `1 / 1`
-- 教材外・固定範囲外知識による補完: `0件`
-- 独立再解答記録: `topics/14_battery/14_battery_independent_reanswer.md`
-- 前回最終QA: `NEEDS_REVISION`
-- 前回最終QA技術内容: `PASS`
-- 前回最終QA必須成果物: `PASS`
-- 前回最終QA表示QA: `PASS`
-- 前回最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
-- 前回最終QA固定範囲境界: `PASS`
-- 前回最終QA進捗記録整合: `FAIL`（旧進捗3ファイル）
-- 旧進捗1: `topics/14_battery/14_battery.md` — 同期済み
-- 旧進捗2: `topics/14_battery/14_battery_practice.md` — 同期済み
-- 旧進捗3: `topics/14_battery/14_battery_practice_pdf_qa.md` — 同期済み
-- 進捗記録同期: `3 / 3 PASS`
 - 最終QA再判定: `PASS`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
-- 最終QA進捗記録整合: `PASS`
-- 最終QA固定範囲境界: `PASS`
 - 状態: `completed`
-- 次工程: Topic 15の制作前EXAM_ALIGNMENT
 
 ## Topic 13 最終品質状態
-- 固定範囲: 電動機出力 / 回転速度 / トルク / 負荷特性 / ポンプ / ファン / コンプレッサ / 所要動力 / 効率 / インバータ駆動 / 可変速運転
-- 代表計算: `P = ωT` / ポンプ所要動力 / ファン所要動力 / 効率を考慮した入力電力
 - 固定EXAM_ALIGNMENT: R5上 機械 問7 / R4下 機械 問11 / H30 機械 問10 / H29 機械 問12 / H27 機械 問12
-- 品質ゲート対象: `5問`
-- 制作前独立検証・公式解答照合: `5 / 5 PASS`
-- 固定過去問要求事項の本文マッピング: `5 / 5 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 解説source QA: `PASS`
-- 教材外・固定範囲外知識による答案補完: `0件`
-- 件数合わせの仕様外追加: `0件`
-- 未確認補機仕様の追加: `0件`
-- Topic 14〜16先取り: `0件`
-- source: `topics/13_auxiliary_motors/13_auxiliary_motors.md`
-- 解説本文: 完成
-- 解説PDF: 完成（A4縦4ページ）
-- 解説PDF表示QA: `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 解説PDF欠落・破損グリフ: `0件`
-- 解説PDF固定過去問マッピング: `5 / 5`
-- explanation PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation.pdf`
-- explanation PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_explanation_pdf_qa.md`
-- 練習問題source: `12問` 完成
-- practice source: `topics/13_auxiliary_motors/13_auxiliary_motors_practice.md`
-- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
-- 練習問題形式: `12 / 12` 五肢択一
-- 練習問題独立計算・論理QA: `12 / 12 PASS`
-- 練習問題正答一意性QA: `12 / 12 PASS`
-- 練習問題→固定EXAM_ALIGNMENT接続: `5 / 5 PASS`
-- 練習PDF: 完成（A4縦3ページ）
-- 練習PDF表示QA: `3 / 3 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 練習PDF欠落・破損グリフ: `0件`
-- 練習PDF固定過去問マッピング: `5 / 5`
-- practice PDF: `topics/13_auxiliary_motors/13_auxiliary_motors_practice.pdf`
-- practice PDF QA: `topics/13_auxiliary_motors/13_auxiliary_motors_practice_pdf_qa.md`
-- 解説画像PowerPoint: 完成（16:9・4枚）
-- PowerPoint表示QA: `4 / 4 PASS`
-- PowerPointスライド外はみ出し: `0件`
-- PowerPoint文字欠落・重なり・判読不能: `0件`
-- PowerPoint欠落・破損グリフ: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint固定過去問接続: `5 / 5 PASS`
-- PowerPoint: `topics/13_auxiliary_motors/13_auxiliary_motors_images.pptx`
-- PowerPoint QA: `topics/13_auxiliary_motors/13_auxiliary_motors_powerpoint_qa.md`
 - 完成後blind独立再解答: `5 / 5 PASS`
-- blind解答: R5上 問7 `(4)` / R4下 問11 `(4)` / H30 問10 `(4)` / H29 問12 `(4)` / H27 問12 `(5)`
-- 公式解答一致: `5 / 5`
-- H29 問12 fresh blind: 公式問題だけを先に参照し、教材の `T∝N²` / `Q∝N` / `P∝N³` から選択肢 `(4)` を一意に固定後、公式解答 `(4)` と照合PASS
-- H29 fresh blindで公式解答の事前参照: `0件`
-- 前段H29 blind条件汚染: `隔離済み / fresh blindで再実施`
-- 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
-- 独立再解答記録: `topics/13_auxiliary_motors/13_auxiliary_motors_independent_reanswer.md`
-- 前回最終QA: `NEEDS_REVISION`
-- 前回最終QA技術内容: `PASS`
-- 前回最終QA必須成果物: `PASS`
-- 前回最終QA表示QA: `PASS`
-- 前回最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
-- 前回最終QA固定範囲境界: `PASS`
-- 前回最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
-- 旧進捗1: `13_auxiliary_motors.md` — 同期済み
-- 旧進捗2: `13_auxiliary_motors_practice.md` — 同期済み
-- 旧進捗3: `13_auxiliary_motors_practice_pdf_qa.md` — 同期済み
-- 進捗記録同期: `3 / 3 PASS`
 - 最終QA再判定: `PASS`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
-- 最終QA進捗記録整合: `PASS`
-- 最終QA固定範囲境界: `PASS`
 - 状態: `completed`
-- 次工程: Topic 14の制作前EXAM_ALIGNMENT
 
-## Topic 12 最終品質状態
-- 固定範囲: 2進数 / 16進数 / ビット / バイト / 論理回路 / AND / OR / NOT / NAND / NOR / XOR / 論理式 / 真理値表 / A/D変換 / D/A変換 / センサ / 情報伝送
-- 基本構成: `センサ → 電気信号 → A/D変換 → デジタルデータ → 演算・論理判断 → 制御指令 → 機器`
-- 固定EXAM_ALIGNMENT: R8上 機械 問14 / R8上 機械 問18(a)(b) / R7上 機械 問14 / R5下 機械 問14 / R1 機械 問14 / H28 機械 問18(a)(b)
-- 品質ゲート対象: `6問・8答案要素`
-- 制作前独立検証・公式解答照合: `8 / 8 PASS`
-- 固定過去問要求事項の本文マッピング: `8 / 8 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 解説source QA: `PASS`
-- 教材外・固定範囲外知識による補完: `0件`
-- 件数合わせの仕様外追加: `0件`
-- 非選定: R7下 機械 問14（フローチャート） / R6上 機械 問18（符号付き8bit・補数表現を含む） / R4上 機械 問14（インタフェースを含む）
-- R6下 機械 問14: R7上 問14と同一問題のため二重加算せず
-- カルノー図: 参考教材では確認したが系列SPEC固定範囲外のため追加しない
-- 車種固有通信規格・伝送速度・CPU構成・通信周期等の推測: `0件`
-- source: `topics/12_information_processing/12_information_processing.md`
-- 解説本文: 完成
-- 解説PDF: 完成（A4縦4ページ）
-- 解説PDF表示QA: `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 解説PDF欠落・破損グリフ: `0件`
-- 解説PDF固定過去問マッピング: `8 / 8`
-- explanation PDF: `topics/12_information_processing/12_information_processing_explanation.pdf`
-- explanation PDF QA: `topics/12_information_processing/12_information_processing_explanation_pdf_qa.md`
-- 練習問題source: `12問` 完成
-- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
-- 練習問題形式: `12 / 12` 五肢択一
-- 練習問題独立論理QA: `12 / 12 PASS`
-- 練習問題正答一意性QA: `12 / 12 PASS`
-- 練習問題→固定EXAM_ALIGNMENT接続: `8 / 8 PASS`
-- 練習PDF: 完成（A4縦3ページ）
-- 練習PDF表示QA: `3 / 3 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 解説画像PowerPoint: 完成（16:9・4枚）
-- PowerPoint表示QA: `4 / 4 PASS`
-- PowerPointスライド外はみ出し: `0件`
-- PowerPoint文字欠落・重なり・判読不能: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint固定過去問接続: `8 / 8 PASS`
-- PowerPoint: `topics/12_information_processing/12_information_processing_images.pptx`
-- PowerPoint QA: `topics/12_information_processing/12_information_processing_powerpoint_qa.md`
-- 完成後blind独立再解答: `8 / 8 PASS`
-- blind解答: R8上 問14 `(5)` / R8上 問18(a) `(5)` / 問18(b) `(4)` / R7上 問14 `(3)` / R5下 問14 `(5)` / R1 問14 `(2)` / H28 問18(a) `(4)` / 問18(b) `(3)`
-- 公式解答一致: `8 / 8`
-- 公式解答・保存済み選択肢番号の事前参照: `0件`
-- 完成後blind独立再解答での教材外・固定範囲外知識補完: `0件`
-- 独立再解答記録: `topics/12_information_processing/12_information_processing_independent_reanswer.md`
-- 前回最終QA: `NEEDS_REVISION`
-- 前回最終QA技術内容: `PASS`
-- 前回最終QA必須成果物: `PASS`
-- 前回最終QA表示QA: `PASS`
-- 前回最終QA固定範囲境界: `PASS`
-- 前回最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
-- 旧進捗3箇所: 同期済み
-- 最終QA再判定: `PASS`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA進捗記録整合: `PASS`
-- 最終QA固定範囲境界: `PASS`
-
-## Topic 11 最終品質状態
-- 固定範囲: センサ / 回転速度 / 車輪 / 粘着 / 空転 / 滑走 / フィードバック / 制御指令 / アクチュエータ / メカトロニクス / 応答速度
-- 固定EXAM_ALIGNMENT: R4下 機械 問14
-- 品質ゲート対象: `1問`
-- 制作前独立検証: `1 / 1 PASS`
-- 固定過去問要求事項の本文マッピング: `1 / 1 PASS`
-- 3段階例題: `3 / 3 PASS`
-- 解説source QA: PASS
-- 解説PDF: 完成
-- 解説PDF表示QA: `4 / 4 PASS`
-- 解説PDF文字抽出QA: `PASS`
-- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 解説PDF固定過去問マッピング: `1 / 1`
-- 練習問題source: `12問` 完成
-- 練習問題構成: 基礎3 / 本試験標準7 / 複合・応用2
-- 練習問題形式: `12 / 12` 五肢択一
-- 練習問題独立論理QA: `12 / 12 PASS`
-- 練習問題正答一意性QA: `12 / 12 PASS`
-- 練習問題→固定EXAM_ALIGNMENT接続: `1 / 1`
-- 練習PDF: 完成（A4縦3ページ）
-- 練習PDF表示QA: `3 / 3 PASS`
-- 練習PDF文字抽出QA: `PASS`
-- 練習PDF文字切れ・重なり・ページ外はみ出し: `0件`
-- 解説画像PowerPoint: 完成（16:9・4枚）
-- PowerPoint表示QA: `4 / 4 PASS`
-- PowerPointスライド外はみ出し: `0件`
-- PowerPoint文字欠落・重なり・判読不能: `0件`
-- PowerPoint ZIP整合性: `PASS`
-- PowerPoint固定過去問接続: `1 / 1`
-- 完成後独立再解答: `(4)` / 公式解答 `(4)` / `1 / 1 PASS`
-- 独立再解答記録: `topics/11_readhesion_control/11_readhesion_control_independent_reanswer.md`
-- 教材外・固定範囲外知識による補完: `0件`
-- 件数合わせの固定範囲外追加: `0件`
-- 未確認実車値追加: `0件`
-- 実車固有アルゴリズムの推測: `0件`
-- R4上 機械 問14: A-D/D-A変換等が固定範囲外のため非選定
-- R6上 機械 問13: シーケンス制御・インタロック・タイムチャートが固定範囲外のため非選定
-- 前回最終QA: `NEEDS_REVISION`
-- 前回最終QA技術内容: `PASS`
-- 前回最終QA必須成果物: `PASS`
-- 前回最終QA表示QA: `PASS`
-- 前回最終QA固定範囲境界: `PASS`
-- 前回最終QA進捗記録整合: `FAIL`（旧進捗3箇所）
-- 旧進捗3箇所: 同期済み
-- 最終QA再判定: `PASS`
-- 最終QA技術内容: `PASS`
-- 最終QA必須成果物: `PASS`
-- 最終QA表示QA: `PASS`
-- 最終QA進捗記録整合: `PASS`
-- 最終QA固定範囲境界: `PASS`
-- source: `topics/11_readhesion_control/11_readhesion_control.md`
-- explanation PDF: `topics/11_readhesion_control/11_readhesion_control_explanation.pdf`
-- explanation PDF QA: `topics/11_readhesion_control/11_readhesion_control_explanation_pdf_qa.md`
-- practice source: `topics/11_readhesion_control/11_readhesion_control_practice.md`
-- practice PDF: `topics/11_readhesion_control/11_readhesion_control_practice.pdf`
-- practice PDF QA: `topics/11_readhesion_control/11_readhesion_control_practice_pdf_qa.md`
-- PowerPoint: `topics/11_readhesion_control/11_readhesion_control_images.pptx`
-- PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
-
-## 今回進捗
-Topic 16「同期機って新幹線には使わないの？」の完成後blind独立再解答を実施した。固定6問・6答案要素について、答案を commit `1f687fdde925e4aeebb39f6ce8a01b28bdd418fd` で先に固定してから公式解答と照合し、`5 / 6 PASS`。R5下 機械 問5だけblind `(5)`、公式 `(3)` で不一致。式 `V = E + jXsI`、遅れ力率、`jXsI` がIより90°進む関係までは教材だけで判断できたが、選択肢図のベクトル矢印の始点・終点を誤読したため、品質ゲートは `NEEDS_REVISION` とした。固定EXAM_ALIGNMENT変更・固定範囲外知識による答案補完は0件。
-
-完成数は `15 / 16` のまま。次工程は固定範囲を変えず、同期電動機ベクトル図の選択肢判定手順を補強する。
+## 次工程
+`topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf` にsource改訂を反映する。固定範囲・固定EXAM_ALIGNMENTを変更せず、既存A4縦構成を維持して「Eの終点 → Vの終点が `jXsI`」という尾→頭判定を入れ、表示QA・文字抽出QAを再実施する。
