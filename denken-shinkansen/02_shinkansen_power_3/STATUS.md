@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `02_shinkansen_power_3`
 - exam_aligned_completed_topics: 14 / 16
-- current_status: `topic_14_completed`
+- current_status: `topic_15_exam_alignment_complete`
 - last_completed_topic: `14 駅やトンネルにはどう電気を配る？`
 - active_topic: `15 回生した電気はどこへ行く？`
-- next_start: Topic 15の制作前EXAM_ALIGNMENTを行う。`SPEC.md` のTopic 15固定範囲だけで解ける公式過去問を直近年度から遡って調査し、件数合わせの仕様追加をしない
+- next_start: Topic 15の制作前独立検証を行う。固定5出題回・8答案要素を公式解答番号を見ずに独立再解答し、`SPEC.md` のTopic 15固定範囲だけで完結することを確認する
 
 ## 新品質ゲート進捗
 - [x] 01 新幹線の電気はどこから来る？ — completed
@@ -25,7 +25,7 @@
 - [x] 12 320km/hでもパンタグラフが離れないのはなぜ？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・前回FAILだった旧進捗記録4箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 13 新幹線の架線は何でできている？ — completed。固定5問・5答案要素の完成後ブラインド独立再解答 `5 / 5 PASS`、公式解答一致 `5 / 5 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
 - [x] 14 駅やトンネルにはどう電気を配る？ — completed。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件。必須成果物・PDF/PPTX QA・SPEC境界・初回最終QAでFAILだった旧進捗記録5箇所の整合を最終QAで再確認し `PASS / completed`
-- [ ] 15 回生した電気はどこへ行く？
+- [ ] 15 回生した電気はどこへ行く？ — 制作前EXAM_ALIGNMENT完了。固定5出題回・8答案要素（実質4パターン）。次は制作前独立検証
 - [ ] 16 発電所からN700Sまで全部つないでみる
 
 ## Topic 07 完了記録
@@ -531,5 +531,26 @@ PowerPoint QA: `topics/14_distribution/14_distribution_powerpoint_qa.md`
 - H23 電力 問9: `(1)`
 - H20 電力 問17(a)(b): `(2),(3)`
 
+## Topic 15 進行記録
+source: `topics/15_regenerative_power/15_regenerative_power.md`
+
+固定5出題回・8答案要素:
+- R8上 電力 問5
+- R7上 法規 問13 (a)(b)
+- R4下 電力 問11
+- H29 法規 問13 (a)(b)
+- H25 法規 問12 (a)(b) — R7上法規問13の再出題元
+
+集計:
+- 制作前EXAM_ALIGNMENT: 完了
+- 実質問題パターン: `4`
+- 公式問題・公式解答正本確認: 完了
+- 電験学習資料2系統以上確認: 完了
+- e-sysnet Topic 15直結ページ: サイト内検索で未確認。電池化学ページは範囲拡張防止のため補助参照に限定
+- SPEC固定範囲外の採用問題: `0件`
+- 未確認新幹線実設備値の使用: `0件`
+- 件数合わせの仕様追加: `0件`
+- 制作前独立検証: `未実施`
+
 ## 次
-Topic 15 `回生した電気はどこへ行く？` の制作前EXAM_ALIGNMENTを行う。`SPEC.md` のTopic 15固定範囲だけで解ける公式過去問を直近年度から遡って調査し、件数合わせの仕様追加をしない。
+Topic 15の固定5出題回・8答案要素を公式解答番号を参照せずに独立再解答する。Topic 15固定範囲だけで各問題を解けること、要求事項に欠落がないことを確認し、PASS後に解説本文へ進む。
