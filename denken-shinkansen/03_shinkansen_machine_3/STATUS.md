@@ -1,14 +1,14 @@
 # STATUS - 新幹線・電験三種「機械」
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `15 / 16`
-- current_status: `topic_16_powerpoint_remediation_complete`
+- current_status: `topic_16_independent_reanswer_complete`
 - last_completed_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
 - active_topic: `16 同期機って新幹線には使わないの？`
-- next_start: 改訂済み教材だけを使い、保存済み正答を先に見ずに固定EXAM_ALIGNMENT 6問をblind独立再解答する
+- next_start: Topic 16の最終QA再判定を実施し、必須成果物・表示QA・固定EXAM_ALIGNMENT・進捗記録整合・固定範囲境界をまとめて確認する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [x] 15 車内の照明・空調にはどれだけ電気が必要？ — 最終QA再判定PASS / completed
-- [ ] 16 同期機って新幹線には使わないの？ — 解説PDF・練習PDF・PowerPointへベクトル図補強反映済み / NEEDS_REVISION
+- [ ] 16 同期機って新幹線には使わないの？ — 完成後blind独立再解答 `6 / 6 PASS` / 最終QA待ち
 
 ## Topic 16 制作品質状態
 - 固定範囲: 同期機 / 同期発電機 / 同期電動機 / 回転磁界 / 同期速度 / 極数 / 周波数 / 界磁 / 励磁 / 電機子 / 力率 / 電機子反作用 / 同期リアクタンス / V曲線の基本 / 並行運転の基本
@@ -110,14 +110,17 @@
 
 ### 完成後blind独立再解答
 - 旧版結果: `5 / 6 PASS / NEEDS_REVISION`
-- blind解答: R7上 問5 `(3)` / R5下 問5 `(5)` / R5下 問6 `(3)` / R4上 問4 `(2)` / H28 問5 `(2)` / H26 問5 `(1)`
+- 改訂後答案ロックcommit: `a6d6452528cf03e9a055d9410aff8c33c3503dd6`
+- 改訂後blind解答: R7上 問5 `(3)` / R5下 問5 `(3)` / R5下 問6 `(3)` / R4上 問4 `(2)` / H28 問5 `(2)` / H26 問5 `(1)`
 - 公式解答: R7上 問5 `(3)` / R5下 問5 `(3)` / R5下 問6 `(3)` / R4上 問4 `(2)` / H28 問5 `(2)` / H26 問5 `(1)`
-- blind不一致: R5下 機械 問5のみ
-- 原因: `V = E + jXsI` と90°進みは選べたが、選択肢図の `jXsI` の始点・終点を逆に読んだ
+- 公式解答一致: `6 / 6 PASS`
+- 教材内根拠へ戻せる: `6 / 6 PASS`
+- 固定範囲外知識による答案補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - 独立再解答記録: `topics/16_synchronous_machine/16_synchronous_machine_independent_reanswer.md`
-- 再実施条件: 解説PDF・練習PDF・PowerPointへのsource改訂同期が完了済み。次工程で固定6問をblind独立再解答する
-- 品質ゲート判定: `NEEDS_REVISION`
-- 状態: `topic_16_powerpoint_remediation_complete / IN_PROGRESS`
+- 完成後blind独立再解答ゲート: `PASS`
+- 品質状態: 最終QA待ち
+- 状態: `topic_16_independent_reanswer_complete / IN_PROGRESS`
 
 ## Topic 15 最終品質状態
 - 固定EXAM_ALIGNMENT: R8上 機械 問17(a)(b) / R7上 機械 問12 / R7上 機械 問17(a)(b) / R6下 機械 問17(a)(b) / R6上 機械 問17(a)(b) / R4上 機械 問17(a)(b) / R2 機械 問12
@@ -139,4 +142,4 @@
 - 状態: `completed`
 
 ## 次工程
-改訂済み解説source・解説PDF・練習source・練習PDF・PowerPointだけを使い、保存済み正答を先に見ずに固定EXAM_ALIGNMENT 6問をblind独立再解答する。正答だけでなく、各答案の根拠を教材内の説明へ戻して確認する。
+Topic 16の最終QA再判定を実施する。解説source / 解説PDF / 練習source / 練習PDF / PowerPoint / 各QA記録 / 完成後blind独立再解答記録 / STATUS / HANDOFF の整合を確認し、固定範囲外追加0件・固定EXAM_ALIGNMENT変更0件を再確認する。
