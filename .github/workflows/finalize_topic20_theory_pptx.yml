@@ -1,0 +1,60 @@
+name: finalize-topic20-theory-pptx
+on:
+  push:
+    paths:
+      - '.github/tmp/build_topic20_theory_pptx.js'
+permissions:
+  contents: write
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned PowerPoint generator
+        run: npm install --no-save pptxgenjs@4.0.0
+      - name: Build and record canonical PPTX
+        shell: bash
+        run: |
+          set -euo pipefail
+          P='denken-shinkansen/08_shinkansen_theory_2/topics/20_east_i_measurement/20_east_i_measurement_images.pptx'
+          QA='denken-shinkansen/08_shinkansen_theory_2/topics/20_east_i_measurement/20_east_i_measurement_powerpoint_qa.md'
+          ST='denken-shinkansen/08_shinkansen_theory_2/STATUS.md'
+          HO='denken-shinkansen/08_shinkansen_theory_2/HANDOFF.md'
+          node .github/tmp/build_topic20_theory_pptx.js "$P"
+          SIZE=$(stat -c%s "$P")
+          SHA256=$(sha256sum "$P" | cut -d' ' -f1)
+          BLOB=$(git hash-object "$P")
+          python - "$QA" "$ST" "$HO" "$BLOB" "$SIZE" "$SHA256" <<'PY'
+          from pathlib import Path
+          import sys
+          qa,st,ho,blob,size,sha=sys.argv[1:]
+          for f in (qa,st,ho):
+              p=Path(f); t=p.read_text(encoding='utf-8')
+              t=t.replace('PPTX_SHA_PENDING',sha).replace('PPTX_SIZE_PENDING',size).replace('PPTX_BLOB_PENDING',blob)
+              if f == st:
+                  t=t.replace('- [ ] 解説画像PowerPoint＋表示QA: `BUILD_PENDING`','- [x] 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_COMPLETE`')
+                  t=t.replace('`BUILD_PENDING / topic_20_powerpoint_build_pending / IN_PROGRESS`。','`PASS / topic_20_powerpoint_complete / IN_PROGRESS`。')
+                  t=t.replace('current_status: `topic_20_powerpoint_build_pending`','current_status: `topic_20_powerpoint_complete`')
+                  t=t.replace('next_start: Topic 20 PowerPoint生成待ち','next_start: Topic 20 完成後独立再解答')
+                  t=t.replace('完成数は `19 / 21`。次工程はPowerPoint生成待ち。','完成数は `19 / 21`。次工程はTopic 20の完成後独立再解答。')
+              elif f == ho:
+                  t=t.replace('current_status: `topic_20_powerpoint_build_pending`','current_status: `topic_20_powerpoint_complete`')
+                  t=t.replace('まで完了。PowerPoint生成待ち。','、解説画像PowerPoint＋表示QAまで完了。次工程は完成後独立再解答。')
+                  t=t.replace('stage: `POWERPOINT_BUILD_PENDING`','stage: `POWERPOINT_COMPLETE`')
+                  t=t.replace('PowerPoint生成待ち。生成・SHA記録後、Topic 20の完成後独立再解答。','Topic 20の完成後独立再解答。')
+              t=t.replace('POWERPOINT_BUILD_PENDING','PASS / POWERPOINT_COMPLETE')
+              p.write_text(t,encoding='utf-8')
+          PY
+          rm -f .github/tmp/build_topic20_theory_pptx.js .github/workflows/finalize_topic20_theory_pptx.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'denken theory2: finalize Topic 20 PowerPoint binary'
+          git pull --rebase origin main
+          git push origin HEAD:main

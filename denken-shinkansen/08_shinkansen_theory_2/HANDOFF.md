@@ -6,45 +6,13 @@
 
 Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
 
-current_status: `topic_20_practice_pdf_complete`
+current_status: `topic_20_powerpoint_build_pending`
 
 active_topic: `20 East iは走りながら何をどう測る？`
 
-Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDFまで完了。系列SPEC固定範囲12項目、品質ゲート一次5問・25答案要素を維持した。固定5問・25答案要素は教材へ `25 / 25` 接続、練習12問は `12 / 12` 数値・論理QAおよび正答一意性PASS。二次採用0・数合わせ0。次工程は解説画像PowerPoint＋表示QA。
-
-## Topic 19 完了状態
-
-- completion: `completed`
-- stage: `COMPLETED`
-- 固定一次5問・25答案要素: `25 / 25 PASS`
-- 公式標準解答一致: `25 / 25`
-- SPEC固定範囲: `10 / 10`
-- 必須説明: `16 / 16`
-- 3段階例題: `3 / 3`
-- 解説PDF表示QA: `5 / 5 PASS`
-- 練習12問QA: `12 / 12 PASS`
-- 練習PDF表示QA: `5 / 5 PASS`
-- PowerPoint表示QA: `6 / 6 PASS`
-- 完成後独立再解答: `25 / 25 PASS`
-- 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-
-## Topic 20 成果物
-
-- source: `topics/20_east_i_measurement/20_east_i_measurement.md`
-- 制作前blind独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_blind_reanswer.md`
-- 解説PDF: `topics/20_east_i_measurement/20_east_i_measurement_explanation.pdf`
-- 解説PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_explanation_pdf_qa.md`
-- 練習source: `topics/20_east_i_measurement/20_east_i_measurement_practice.md`
-- 練習PDF: `topics/20_east_i_measurement/20_east_i_measurement_practice.pdf`
-- 練習PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_practice_pdf_qa.md`
-- stage: `PRACTICE_PDF_COMPLETE`
-- completion: `in_progress`
+Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDFまで完了。PowerPoint生成待ち。
 
 ## Topic 20 固定範囲
-
-系列SPECどおり次だけを扱う。
 
 - 測定誤差
 - 絶対誤差
@@ -59,108 +27,67 @@ Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 標本化
 - エイリアシング
 
-East iが実際に測定する項目はJR東日本等の公開資料で確認する。内部測定回路、回路定数、サンプリング周波数、ADC分解能等を推測で再現しない。
+East iは電気・電子計測の導入に限定する。公開資料で確認できない内部測定回路、ADC分解能、サンプリング周波数、センサ方式を推測で実値化しない。
 
 ## Topic 20 固定EXAM_ALIGNMENT
 
 品質ゲート対象は一次5問・25答案要素。
 
-- R8 一次 理論 問4: 静電容量の校正回路。零位法、位相、標準抵抗・未知容量、平衡条件、周波数変更による校正。
-- R7 一次 理論 問4: インピーダンス校正。誘導分圧器、標準・未知枝電流、検出器零条件、複素インピーダンス比、平衡式。
-- R6 一次 理論 問6: 交流ブリッジ。平衡条件、寄生容量、寄生成分による誤差、補償・ガード、未知量算出。
-- H24 一次 理論 問7: オシロスコープ用プローブ。入力R/C、減衰比、プローブR/C、時定数一致、周波数補償。
-- H20 一次 理論 問6: 電圧計・電流計による電力測定誤差。内部抵抗、二接続法、指示値と真値、誤差率、接続選択。
+- R8 一次 理論 問4: 零位法、90°位相差、標準抵抗・未知容量、検出器零条件、周波数変更から校正。
+- R7 一次 理論 問4: 誘導分圧器、標準・未知枝電流、検出器零条件、複素インピーダンス比、平衡式。
+- R6 一次 理論 問6: 交流ブリッジ、寄生容量、誤差、補償・ガード、未知量算出。
+- H24 一次 理論 問7: 入力R/C、減衰比、プローブR/C、時定数一致、周波数補償。
+- H20 一次 理論 問6: 内部抵抗、二接続法、指示値と真値、誤差率、接続選択。
 
-A/D変換、サンプリング、標本化、エイリアシングは系列SPEC必須。直接対応する二種一次「理論」の固定過去問を捏造せず、教材本文と練習問題で直接補う。
+固定過去問に直接現れないA/D変換、サンプリング、標本化、エイリアシングは系列SPEC必須として教材・練習問題で補う。存在しない公式過去問へ接続しない。
 
 ## 二次試験の扱い
 
-- 令和8年度二次試験は2026-09-19時点で未実施（2026-11-15実施予定）。
 - 系列08は一次理論中心。
 - Topic 20固定範囲だけで完答する直接対応記述問題を件数合わせで採用しない。
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 
-## East i一次資料確認
+## Topic 20 成果物
+
+- source: `topics/20_east_i_measurement/20_east_i_measurement.md`
+- 制作前blind独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_blind_reanswer.md`
+- 解説PDF: `topics/20_east_i_measurement/20_east_i_measurement_explanation.pdf`
+- 解説PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_explanation_pdf_qa.md`
+- 練習source: `topics/20_east_i_measurement/20_east_i_measurement_practice.md`
+- 練習PDF: `topics/20_east_i_measurement/20_east_i_measurement_practice.pdf`
+- 練習PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_practice_pdf_qa.md`
+- PowerPoint: `topics/20_east_i_measurement/20_east_i_measurement_images.pptx`
+- PowerPoint QA: `topics/20_east_i_measurement/20_east_i_measurement_powerpoint_qa.md`
+- stage: `POWERPOINT_BUILD_PENDING`
+- completion: `in_progress`
+
+## PowerPoint QA
+
+- 16:9 / 8枚
+- 200 dpi表示QA: `8 / 8 PASS`
+- `2667 × 1500 px / slide`
+- shape geometry overflow: `0件`
+- PPTX ZIP整合性: `PASS`
+- PDF変換: `8ページ / PASS`
+- 文字抽出QA: `PASS`
+- 文字化け: `0件`
+- SPEC固定範囲: `12 / 12可視化`
+- 固定一次5問・25答案要素: `25 / 25可視化`
+- 共通解法8ステップ: `PASS`
+- SHA-256: `PPTX_SHA_PENDING`
+- 判定: `POWERPOINT_BUILD_PENDING`
+
+## East i一次資料
 
 - JR東日本/JREメディアで、新幹線用East i（E926形）が走行しながら線路・架線等を検査・検測する車両であることを確認。
-- JR東日本 2025-10-23資料で、East-i搭載センサによるトロリ線の摩耗・高さ・偏位測定とカメラ画像取得を確認。
-- 上記は計測の導入例としてのみ使い、E926の内部回路や同一センサ構成を断定しない。
+- JR東日本 2025-10-23資料で、East-i搭載センサによるトロリ線の摩耗・高さ・偏位測定とカメラ画像等の取得を確認。
+- 上記を導入例としてのみ使い、E926の内部回路・同一センサ構成・未公開定数を断定しない。
 
 一次資料:
 - `https://www.jreast.co.jp/press/2025/20251023_ho02.pdf`
 - `https://media.jreast.co.jp/articles/1653`
 
-## 制作前EXAM_ALIGNMENT判定
-
-- MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC: `確認済み`
-- SPEC固定範囲: `12 / 12`
-- 固定一次過去問: `5問`
-- 固定答案要素: `25要素`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- 公式標準解答・保存済み正答の事前保存: `0件`
-- 固定範囲外追加: `0件`
-- East i内部測定回路の推測追加: `0件`
-- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
-
-## 制作前blind独立再解答
-
-- R8一次理論問4: `カ / ワ / リ / ホ / イ`
-- R7一次理論問4: `ル / チ / ヌ / ヲ / ヨ`
-- R6一次理論問6: `ヘ / ハ / ワ / チ / ヲ`
-- H24一次理論問7: `ニ / ヨ / ヌ / イ / ヲ`
-- H20一次理論問6: `ニ / カ / ヨ / リ / ワ`
-- 独立導出: `25 / 25 PASS`
-- 公式標準解答直接照合: `20 / 20一致`（R8/R7/R6/H24）
-- H20二次資料照合: `5 / 5一致`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- 固定範囲外追加: `0件`
-- East i内部測定回路の推測追加: `0件`
-- 判定: `PASS / BLIND_REANSWER_COMPLETE`
-
-## Topic 20 解説source
-
-- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- SPEC固定範囲: `12 / 12収録`
-- 必須説明: `20 / 20収録`
-- 固定一次5問・25答案要素: `25 / 25接続`
-- 3段階例題: `3 / 3 PASS`
-- A/D・サンプリング・エイリアシングを存在しない過去問へ接続: `0件`
-
-## Topic 20 解説PDF＋表示QA
-
-- A4縦8ページ
-- 200 dpi全ページ表示QA: `8 / 8 PASS`
-- 文字抽出QA: `PASS`
-- SHA-256: `4adf6ea4c23ff1745174bc90014661e7ffcc6949bfea8bd4dd08ccfae7c8c92d`
-- 固定一次5問・25答案要素: `25 / 25接続`
-- クリッピング/文字重なり/文字化け/ページ欠落: `0件`
-- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
-
-## Topic 20 練習問題source＋練習PDF
-
-既存source・QAは作成済みだったが、GitHub正本にPDF本体が欠落していたため、2026-09-19にsourceから再生成して復元した。
-
-- A4縦4ページ
-- 200 dpi全ページ表示QA: `4 / 4 PASS`
-- 文字抽出QA: `PASS`
-- SHA-256: `1ec964bb8739f19735977d6f7a85a92892f5891544e6426a9d0d8d146be689c1`
-- 問題数: `12問`
-- 形式: `全問五肢択一`
-- 難易度: `基礎3 / 本試験標準6 / 複合・ひっかけ3`
-- 数値再計算・論理QA: `12 / 12 PASS`
-- 正答一意性: `12 / 12 PASS`
-- SPEC固定範囲: `12 / 12接続`
-- 固定一次5問・25答案要素: `25 / 25接続`
-- A/D・サンプリング・エイリアシングの存在しない過去問への接続: `0件`
-- 二次採用: `0問`
-- 二次数合わせ: `0件`
-- 固定範囲外追加: `0件`
-- East i内部測定回路・未公開定数の推測追加: `0件`
-- 判定: `PASS / PRACTICE_PDF_COMPLETE`
-
 ## 次工程
 
-Topic 20の解説画像PowerPoint＋表示QA。固定一次5問・25答案要素、SPEC固定範囲12項目、練習12問との接続を維持し、East i内部回路・未公開定数を推測で追加しない。
+PowerPoint生成待ち。生成・SHA記録後、Topic 20の完成後独立再解答。保存済み正答を先に見ず、固定一次5問・25答案要素を教材内容だけで再解答し、各答案要素の根拠を説明できるか確認する。外部知識で補完した場合はFAILとする。
