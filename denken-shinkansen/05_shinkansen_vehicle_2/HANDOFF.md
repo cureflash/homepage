@@ -8,7 +8,37 @@
 
 Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
 
-現在地は `topic_18_exam_alignment_complete`。active topic は Topic 18 `E2系 50Hz・60Hzと磁束`。
+現在地は `topic_18_explanation_source_complete`。active topic は Topic 18 `E2系 50Hz・60Hzと磁束`。
+
+## Topic 18 解説source
+
+source:
+- `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_explanation_source.md`
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+固定範囲の実装:
+- `E=4.44fNΦ_m` の導出と周波数変更比
+- `B_m=Φ_m/A` と周波数―磁束密度
+- V/f一定と磁束維持
+- `N_s=120f/P`、極対数表記時の `ω_s=2πf/p`
+- `s=(N_s-N)/N_s`、`f_2=sf`
+- 固定子磁界・回転子・回転子磁界の相対速度7要素
+- 電源周波数とインバータ出力周波数の区別
+- 機器定格を電圧・周波数・巻数・磁束／磁束密度の組で判断
+- 3段階例題 `3 / 3`
+- SPEC指定3可視化の再生成条件 `3 / 3`
+
+品質:
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定過去問: `一次3問＋二次2問 / 5問`
+- 固定答案要素: `一次7＋二次8 / 15`
+- 固定要求知識の本文マッピング: `15 / 15 covered`
+- 例題数値再計算: `3 / 3 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC外追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
+- clean blind公式照合: `未実施 / 成果物完成後`
 
 ## Topic 18 制作前EXAM_ALIGNMENT
 
@@ -114,4 +144,4 @@ H24一次 問6は問題自体を固定5問の一つとして維持するが、To
 
 ## 次工程
 
-Topic 18の解説source本文を作る。固定5問・15答案要素から必要事項を逆算し、固定SPEC内の公式・成立条件・解法手順・例題・指定3グラフを接続する。本文source完成前にPDF・PowerPointへ進まない。未確認E2系実車値は真値化しない。
+Topic 18の解説PDFを作る。`18_e2series_50hz_60hz_flux_explanation_source.md` を正本として、固定5問・15答案要素、SPEC指定7項目・3可視化を変更しない。生成後に表示QAと数式・数値QAを行い、PDF完成前に練習問題・PowerPointへ進まない。
