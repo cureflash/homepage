@@ -4,9 +4,9 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説source本文を完了した。
+制作前EXAM_ALIGNMENT、解説source本文、解説PDF＋QAを完了した。
 
-現在 `topic_17_explanation_source_complete / IN_PROGRESS`。固定一次1問＋二次4問、計5問・6答案要素を本文へ `6 / 6` 接続した。固定問題の正答記号・完成済み解答は保存していない。次工程は解説PDF制作。
+現在 `topic_17_explanation_pdf_complete / IN_PROGRESS`。固定一次1問＋二次4問、計5問・6答案要素を維持し、解説PDFは表示・文字抽出QAをPASSした。固定問題の正答記号・完成済み解答は保存していない。次工程は練習source制作。
 
 ## 固定範囲
 
@@ -509,6 +509,17 @@ Topic 18以降で扱う時間応答、PID、安定判別、周波数応答はこ
 
 判定: `PASS / topic_17_explanation_source_complete`
 
+# 解説PDF
+
+- [x] `topics/17_speed_feedback_control/17_speed_feedback_control_explanation.pdf`
+- [x] A4縦・6ページ、固定5問・6答案要素 `6 / 6`
+- [x] 基礎／本試験標準／複合の3段階例題を維持
+- [x] 160 dpi 全6ページ表示QA `6 / 6 PASS`
+- [x] 文字・数式の欠落、重なり、切れ、overflow、破損グリフ `0件`
+- [x] PDF文字抽出QA PASS / Unicode置換文字 `0件` / `(cid:)` `0件`
+- QA: `topics/17_speed_feedback_control/17_speed_feedback_control_explanation_pdf_qa.md`
+- 判定: `PASS / topic_17_explanation_pdf_complete`
+
 # 次工程
 
-Topic 17解説PDFを制作する。固定5問・6答案要素、3段階例題、仕様境界を維持する。
+Topic 17練習sourceを制作する。一次試験型に加え、固定二次4問へ接続できる記述式を含め、固定5問・6答案要素と仕様境界を維持する。
