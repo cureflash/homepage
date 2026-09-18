@@ -7,7 +7,7 @@
 
 Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-現在地は `topic_16_explanation_pdf_complete`。Topic 16 `700系 多レベル変換器とPWM` は制作前EXAM_ALIGNMENT、解説source＋3段階例題、解説PDFまで完了した。次工程は固定EXAM_ALIGNMENT・解説source・共通仮定モデルを変更せず、練習問題sourceを制作する。
+現在地は `topic_16_practice_source_complete`。Topic 16 `700系 多レベル変換器とPWM` は制作前EXAM_ALIGNMENT、解説source＋3段階例題、解説PDF、練習問題sourceまで完了した。次工程は固定EXAM_ALIGNMENT・解説source・共通仮定モデル・練習問題sourceを変更せず、練習PDFを制作する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -63,6 +63,25 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
+## Topic 16 練習問題source
+source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm_practice_source.md`
+
+品質ゲート:
+- 一次試験型: `8問 / 8問五肢択一`
+- 二次試験型: `4問 / 4問記述式`
+- 完全解説: `12 / 12`
+- 数値・論理再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5過去問・26答案要素への接続: `26 / 26 PASS`
+- SPEC指定8項目: `8 / 8 covered`
+- SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
+- 共通仮定モデルの変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 正答記号・固定過去問の個別最終解保存: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
+
 ## Topic 16 SPEC固定範囲
 扱う内容:
 - 多レベル変換
@@ -100,4 +119,4 @@ SPEC指定可視化:
 Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16の練習問題sourceを制作する。固定5問・26答案要素、SPEC指定8項目・3可視化、解説source、共通仮定モデル、範囲境界を変更しない。
+Topic 16の練習PDFを制作する。固定5問・26答案要素、SPEC指定8項目・3可視化、解説source、共通仮定モデル、練習問題source、範囲境界を変更しない。
