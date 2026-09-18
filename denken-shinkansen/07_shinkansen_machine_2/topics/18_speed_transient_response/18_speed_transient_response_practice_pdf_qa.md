@@ -46,7 +46,7 @@
 ## ハッシュ
 - PDF SHA-256: `50fdfc549fdefd89e14577f671e5e13261a95b3141acd9cba69637f5e2d1f209`
 - PDF Git blob SHA: `fb67c0ac0d3b6d9ec7656d0a759b6ac86992f242`
-- PDF size: `32909 byte`
+- PDF size: `22060 byte`
 
 ## 判定
 `PASS / topic_18_practice_pdf_reqa_pass / IN_PROGRESS`
