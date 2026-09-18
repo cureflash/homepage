@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `14`
 theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_13_completed`
+current_status: `topic_14_preproduction_exam_alignment_complete`
 completed_topics: `13 / 22`
 
 ## Topic 12 final result
@@ -120,6 +120,40 @@ source:
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_final_qa.md`
 - `qualifications/denken-shinkansen/catalog.json`
 
+## Topic 14 preproduction EXAM_ALIGNMENT
+
+Topic 14「新幹線の力率と電圧をどう維持する？」は制作前EXAM_ALIGNMENTまで完了。本文・PDF・練習問題・PowerPoint・制作前blind独立再解答は未着手。
+
+正式固定問題:
+- 令和6年度 第二種一次「電力」問5 — `5答案要素`
+- 令和4年度 第二種一次「法規」問4 — `5答案要素`
+- 令和5年度 第二種二次「電力・管理」問4 — `2答案要素`
+- 令和2年度 第二種二次「電力・管理」問6 — `4答案要素`
+- 平成23年度 第二種二次「電力・管理」問3 — `5答案要素`
+- 合計: 一次2問＋二次3問、`5問・21答案要素`
+
+直近年度優先確認:
+- R8一次「電力」問2は保護リレー・内部故障保護を含みTopic 17を先取りするため不採用。
+- R8一次「電力」問3はP-V曲線・電圧安定性が中心でTopic 20を先取りするため不採用。
+- R7一次「電力」・二次「電力・管理」はTopic 14固定範囲だけで問題全体を扱える直接問題を固定採用しない。
+- R6一次「電力」問5から固定採用を開始した。
+
+品質境界:
+- SPEC指定10項目: `10 / 10 aligned`
+- SPEC指定3可視化: `3 / 3 aligned`
+- 一次・二次合計5問: `PASS`
+- 二次記述・計算: `3問`
+- 参考教材2系統以上: `PASS / e-sysnet.com + 電験王2`
+- Topic 15以降の先取り: `0件`
+- 固定範囲外の件数水増し: `0件`
+- 未確認実設備値の真値化: `0件`
+- 公式過去問転載: `0件`
+- 仕様追加: `0件`
+- 判定: `PASS / PREPRODUCTION_EXAM_ALIGNMENT_COMPLETE`
+
+source:
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control.md`
+
 ## Gate checklist
 
 - [x] Topic 01 completed
@@ -135,8 +169,8 @@ source:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — preproduction EXAM_ALIGNMENT pending
+- [ ] Topic 14 — preproduction EXAM_ALIGNMENT complete; preproduction blind reanswer pending
 
 ## next_start
 
-Topic 14「新幹線の力率と電圧をどう維持する？」の制作前EXAM_ALIGNMENTを行う。`MASTER_SPEC.md`、`EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md` のTopic 14固定範囲だけを使い、公式過去問を一次・二次から直近年度優先で調査する。Topic 15以降を先取りしない。
+Topic 14の固定5問・21答案要素を変更せず、保存済み正答を見ない制作前blind独立再解答を行う。候補解・途中式・根拠を先に固定し、その後に公式解答／標準解答と照合する。Topic 15以降を先取りしない。
