@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 19 / 21
-- current_status: `topic_19_completed`
+- current_status: `topic_20_exam_alignment_complete`
 - last_completed_topic: `19 25kV・大電流をどう安全に測る？`
 - active_topic: `20 East iは走りながら何をどう測る？`
-- next_start: Topic 20 制作前EXAM_ALIGNMENT
+- next_start: Topic 20 制作前blind独立再解答
 
 ## 完成済み
 
@@ -47,23 +47,56 @@ Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] completed状態同期
 - [x] 最終判定: `PASS / completed`
 
+## Topic 20 固定EXAM_ALIGNMENT
+- [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
+- [x] 固定範囲: 測定誤差、絶対誤差、相対誤差、精度、有効数字、ブリッジ回路、波形計測、オシロスコープ、A/D変換、サンプリング、標本化、エイリアシング
+- [x] 一次・二次を含む関連候補を直近年度から調査
+- [x] R8 一次 理論 問4を採用
+- [x] R7 一次 理論 問4を採用
+- [x] R6 一次 理論 問6を採用
+- [x] H24 一次 理論 問7を採用
+- [x] H20 一次 理論 問6を採用
+- [x] 品質ゲート対象を一次5問・25答案要素に固定
+- [x] R4一次理論問8はTopic 19との重複が大きいため非採用
+- [x] R3一次理論問8/R2一次理論問6はブリッジ論点重複のため関連候補として非採用
+- [x] R8二次は2026-09-19時点で未実施
+- [x] 系列08は一次理論中心のため二次問題を件数合わせで採用しない
+- [x] 二次採用0問・二次数合わせ0件
+- [x] East i公開測定項目をJR東日本資料で確認
+- [x] East i内部測定回路の推測追加0件
+- [x] 公式標準解答・保存済み正答の事前保存0件
+
+## Topic 20 制作進捗
+- [x] 制作前EXAM_ALIGNMENT: `PASS / 一次5問・25答案要素`
+- [ ] 制作前blind独立再解答
+- [ ] 公式標準解答照合
+- [ ] 解説本文＋3段階例題
+- [ ] 解説PDF＋表示QA
+- [ ] 練習問題source＋練習PDF
+- [ ] 解説画像PowerPoint＋表示QA
+- [ ] 完成後独立再解答
+- [ ] 最終QA
+- [ ] completed状態同期
+
 ## 今回進めた内容
 
-Topic 19の `completed` 状態同期を実施した。
+Topic 20の制作前EXAM_ALIGNMENTを完成させた。
 
-- 主source: `completion: completed` / `stage: COMPLETED`
-- 練習source: `completion: completed` / `stage: COMPLETED`
-- STATUS: 完成数 `19 / 21`、Topic 20をactiveへ更新
-- HANDOFF: Topic 01〜19 `PASS / completed` へ更新
-- 固定一次5問・25答案要素: `25 / 25 PASS` 維持
-- 公式標準解答一致: `25 / 25`
+- source: `topics/20_east_i_measurement/20_east_i_measurement.md`
+- SPEC固定範囲: `12 / 12固定`
+- 固定一次過去問: `5問`
+- 固定答案要素: `25要素`
+- 採用: R8一次理論問4 / R7一次理論問4 / R6一次理論問6 / H24一次理論問7 / H20一次理論問6
+- A/D変換・サンプリング・標本化・エイリアシング: 直接対応公式過去問を捏造せず、SPEC必須項目として教材・練習で補う方針
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF・PowerPoint変更: `0件`
-- 仕様外追加: `0件`
+- East i一次資料確認: `PASS`
+- East i内部測定回路の推測追加: `0件`
+- 公式標準解答・保存済み正答の事前保存: `0件`
+- 固定範囲外追加: `0件`
 
 ## 判定
 
-`PASS / completed`。
+`PASS / topic_20_exam_alignment_complete / IN_PROGRESS`。
 
-完成数は `19 / 21`。次工程はTopic 20「East iは走りながら何をどう測る？」の制作前EXAM_ALIGNMENT。
+完成数は `19 / 21`。次工程はTopic 20の制作前blind独立再解答。

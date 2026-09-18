@@ -6,59 +6,18 @@
 
 Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
 
-current_status: `topic_19_completed`
+current_status: `topic_20_exam_alignment_complete`
 
 active_topic: `20 East iは走りながら何をどう測る？`
 
-Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、PowerPoint＋表示QA、完成後独立再解答、最終QA再実施を通過し、`completed` 状態同期まで完了。初回最終QAで確認された2 blocker（PowerPoint本体欠落、主source進捗記録不一致）は解消済み。次工程はTopic 20の制作前EXAM_ALIGNMENT。
+Topic 20は制作前EXAM_ALIGNMENTまで完了。系列SPEC固定範囲12項目を固定し、品質ゲートを一次5問・25答案要素に設定した。令和8年度二次は未実施で、系列08は一次理論中心のため二次問題を件数合わせで採用しない。次工程は保存済み正答を見ずに行う制作前blind独立再解答。
 
-## Topic 19 固定範囲
+## Topic 19 完了状態
 
-- 電圧計
-- 電流計
-- 内部抵抗
-- 倍率器
-- 分流器
-- 電力計
-- CT
-- VT
-- 変成比
-- 電力量測定
-
-Topic 20の誤差・ブリッジ・波形・サンプリングはTopic 19へ先取りしない。実設備CT・VTの定格、結線、精度階級等は一次資料未確認の真値として追加しない。
-
-## Topic 19 固定EXAM_ALIGNMENT
-
-品質ゲート対象は一次5問・25答案要素。
-
-- R5 一次 理論 問8: 熱電形交流電力計
-- R1 一次 理論 問4: コンデンサ形計器用変圧器
-- H29 一次 理論 問4: エアトン分流器
-- H25 一次 理論 問8: 可動コイル形計器
-- H21 一次 理論 問6: 静電電圧計
-
-令和8年度二次試験は2026-09-19時点で未実施。R7〜R1二次にTopic 19固定範囲だけで完答する直接対応問題は確認できず、二次採用0問・数合わせ0件。
-
-## Topic 19 成果物
-
-- source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement.md`
-- 制作前blind独立再解答: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_blind_reanswer.md`
-- 解説PDF: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_explanation.pdf`
-- 解説PDF QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_explanation_pdf_qa.md`
-- 練習source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.md`
-- 練習PDF: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice.pdf`
-- 練習PDF QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice_pdf_qa.md`
-- PowerPoint: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_images.pptx`
-- PowerPoint QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_powerpoint_qa.md`
-- 完成後独立再解答: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_reanswer.md`
-- 最終QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_final_qa.md`
 - completion: `completed`
 - stage: `COMPLETED`
-
-## 品質ゲート現状
-
-- 制作前blind独立再解答: `25 / 25 PASS`
-- 公式標準解答照合: `25 / 25`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
 - SPEC固定範囲: `10 / 10`
 - 必須説明: `16 / 16`
 - 3段階例題: `3 / 3`
@@ -67,23 +26,80 @@ Topic 20の誤差・ブリッジ・波形・サンプリングはTopic 19へ先�
 - 練習PDF表示QA: `5 / 5 PASS`
 - PowerPoint表示QA: `6 / 6 PASS`
 - 完成後独立再解答: `25 / 25 PASS`
-- 初回blocker解消: `2 / 2`
 - 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
-- Topic 20先取り: `0件`
 
-## completed状態同期
+## Topic 20 成果物
 
-- 主source: `completion: completed` / `stage: COMPLETED`
-- 練習source: `completion: completed` / `stage: COMPLETED`
-- 固定一次5問・25答案要素: `25 / 25 PASS` 維持
+- source: `topics/20_east_i_measurement/20_east_i_measurement.md`
+- stage: `EXAM_ALIGNMENT_COMPLETE`
+- completion: `in_progress`
+
+## Topic 20 固定範囲
+
+系列SPECどおり次だけを扱う。
+
+- 測定誤差
+- 絶対誤差
+- 相対誤差
+- 精度
+- 有効数字
+- ブリッジ回路
+- 波形計測
+- オシロスコープ
+- A/D変換
+- サンプリング
+- 標本化
+- エイリアシング
+
+East iが実際に測定する項目はJR東日本等の公開資料で確認する。内部測定回路、回路定数、サンプリング周波数、ADC分解能等を推測で再現しない。
+
+## Topic 20 固定EXAM_ALIGNMENT
+
+品質ゲート対象は一次5問・25答案要素。
+
+- R8 一次 理論 問4: 静電容量の校正回路。零位法、位相、標準抵抗・未知容量、平衡条件、周波数変更による校正。
+- R7 一次 理論 問4: インピーダンス校正。誘導分圧器、標準・未知枝電流、検出器零条件、複素インピーダンス比、平衡式。
+- R6 一次 理論 問6: 交流ブリッジ。平衡条件、寄生容量、寄生成分による誤差、補償・ガード、未知量算出。
+- H24 一次 理論 問7: オシロスコープ用プローブ。入力R/C、減衰比、プローブR/C、時定数一致、周波数補償。
+- H20 一次 理論 問6: 電圧計・電流計による電力測定誤差。内部抵抗、二接続法、指示値と真値、誤差率、接続選択。
+
+関連候補としてR4一次理論問8、R3一次理論問8、R2一次理論問6も確認したが、Topic 19との重複またはブリッジ論点の重複を避け、固定5問の範囲を広くするため採用しない。
+
+A/D変換、サンプリング、標本化、エイリアシングは系列SPEC必須。直接対応する二種一次「理論」の固定過去問を捏造せず、教材本文と練習問題で直接補う。
+
+## 二次試験の扱い
+
+- 令和8年度二次試験は2026-09-19時点で未実施（2026-11-15実施予定）。
+- 系列08は一次理論中心。
+- Topic 20固定範囲だけで完答する直接対応記述問題を件数合わせで採用しない。
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF・PowerPoint変更: `0件`
-- 仕様外追加: `0件`
-- 判定: `PASS / completed`
+
+## East i一次資料確認
+
+- JR東日本/JREメディアで、新幹線用East i（E926形）が走行しながら線路・架線等を検査・検測する車両であることを確認。
+- JR東日本 2025-10-23資料で、East-i搭載センサによるトロリ線の摩耗・高さ・偏位測定とカメラ画像取得を確認。
+- 上記は計測の導入例としてのみ使い、E926の内部回路や同一センサ構成を断定しない。
+
+一次資料:
+- `https://www.jreast.co.jp/press/2025/20251023_ho02.pdf`
+- `https://media.jreast.co.jp/articles/1653`
+
+## 制作前EXAM_ALIGNMENT判定
+
+- MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC: `確認済み`
+- SPEC固定範囲: `12 / 12`
+- 固定一次過去問: `5問`
+- 固定答案要素: `25要素`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 公式標準解答・保存済み正答の事前保存: `0件`
+- 固定範囲外追加: `0件`
+- East i内部測定回路の推測追加: `0件`
+- 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
 
 ## 次工程
 
-Topic 20「East iは走りながら何をどう測る？」の制作前EXAM_ALIGNMENT。
+Topic 20の制作前blind独立再解答。固定一次5問・25答案要素を、公式標準解答・保存済み正答を先に見ず、問題文から独立導出する。
