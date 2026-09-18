@@ -1,12 +1,12 @@
 # Topic 16 同期機って新幹線には使わないの？
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
-状態: `topic_16_vector_source_remediation_complete / IN_PROGRESS`
+状態: `topic_16_progress_records_synchronized / IN_PROGRESS`
 
-制作前 `EXAM_ALIGNMENT` で固定した6問・6答案要素と系列 `SPEC.md` の Topic 16 固定範囲は変更しない。完成後blind独立再解答でR5下 機械 問5のみ、式 `V = E + jXsI` と位相関係は選べた一方、選択肢図の `jXsI` の始点・終点を逆に読んだためFAILとなった。このため、同期電動機ベクトル図について「Eの終点を `jXsI` の始点とし、その終点がVの終点に一致する」という尾→頭の判定手順を本文へ補強した。固定範囲外論点、固定EXAM_ALIGNMENT、既存の正答は変更していない。
+制作前 `EXAM_ALIGNMENT` で固定した6問・6答案要素と系列 `SPEC.md` の Topic 16 固定範囲は変更しない。旧版blind独立再解答でR5下 機械 問5のみ、式 `V = E + jXsI` と位相関係は選べた一方、選択肢図の `jXsI` の始点・終点を逆に読んだためFAILとなった。このため、同期電動機ベクトル図について「Eの終点を `jXsI` の始点とし、その終点がVの終点に一致する」という尾→頭の判定手順を本文へ補強し、解説PDF・練習source/PDF・PowerPointへ再同期した。改訂後blind独立再解答は `6 / 6 PASS`。固定範囲外論点、固定EXAM_ALIGNMENT、既存の正答は変更していない。
 
-次工程は、このsource改訂を解説PDFへ反映し、表示QA・文字抽出QAを再実施する。
+次工程は、進捗記録整合を確認したうえでTopic 16の最終QAを再判定する。技術内容・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
 
 ## EXAM_ALIGNMENT
 
@@ -89,7 +89,21 @@
 
 ### 完成後blind独立再解答
 
-2026-09-18に6問を教材だけで再解答し、答案を先に固定してから公式解答と照合した結果は `5 / 6 PASS / NEEDS_REVISION`。R5下 機械 問5のみ、`V = E + jXsI` と `jXsI` が `I` より90°進む関係までは正しく選べたが、候補図で `jXsI` の矢印をVの終点からEの終点へ逆向きに読んだ。固定EXAM_ALIGNMENTは変更せず、本sourceで尾→頭の判定手順を補強する。
+旧版では `5 / 6 PASS / NEEDS_REVISION`。R5下 機械 問5のみ、`V = E + jXsI` と `jXsI` が `I` より90°進む関係までは正しく選べたが、候補図で `jXsI` の矢印をVの終点からEの終点へ逆向きに読んだ。このため固定EXAM_ALIGNMENTを変更せず、尾→頭の判定手順を本文・練習問題・解説PDF・PowerPointへ補強した。
+
+改訂後は、公式解答照合前に commit `a6d6452528cf03e9a055d9410aff8c33c3503dd6` で答案を固定し、その後公式解答と照合した。
+
+- R7上 機械 問5: `(3)` — `PASS`
+- R5下 機械 問5: `(3)` — `PASS`
+- R5下 機械 問6: `(3)` — `PASS`
+- R4上 機械 問4: `(2)` — `PASS`
+- H28 機械 問5: `(2)` — `PASS`
+- H26 機械 問5: `(1)` — `PASS`
+
+改訂後blind独立再解答: `6 / 6 PASS`。
+教材内根拠へ戻せる: `6 / 6 PASS`。
+固定範囲外知識による答案補完: `0件`。
+固定EXAM_ALIGNMENT変更: `0件`。
 
 再解答記録: `16_synchronous_machine_independent_reanswer.md`。
 
@@ -526,17 +540,19 @@ V曲線: 横軸 If、縦軸 Ia
 
 ## 成果物・QA進捗
 
-- 解説source本文: ベクトル図の尾→頭・始点終点判定を補強済み
+- 解説source本文: ベクトル図の尾→頭・始点終点判定を補強済み / `PASS`
 - 固定EXAM_ALIGNMENTへの本文接続: `6 / 6 PASS`
 - 解説source QA: `PASS`
-- 練習問題source: 問10を同じ判定手順へ改訂済み
-- 解説PDF: 既存版あり / source改訂未反映 / `REGEN_REQUIRED`
-- 練習PDF: 既存版あり / practice source改訂未反映 / `REGEN_REQUIRED`
-- 解説画像PowerPoint: 既存版あり / source改訂未反映 / `REGEN_REQUIRED`
-- 完成後blind独立再解答: 旧版で `5 / 6 PASS / NEEDS_REVISION`。派生成果物同期後に再実施
+- 練習問題source: 問10を同じ判定手順へ改訂済み / `12 / 12 PASS`
+- 解説PDF: source改訂反映済み / A4縦4ページ / 200 dpi表示 `4 / 4 PASS` / 文字抽出 `PASS`
+- 練習PDF: practice source改訂反映済み / A4縦2ページ / 200 dpi表示 `2 / 2 PASS` / 正答一覧 `12 / 12 PASS`
+- 解説画像PowerPoint: source改訂反映済み / 16:9・4枚 / 表示 `4 / 4 PASS` / はみ出し0件 / ZIP整合性 `PASS`
+- 完成後blind独立再解答: 改訂後 `6 / 6 PASS`
+- 教材内根拠へ戻せる: `6 / 6 PASS`
 - 固定範囲外追加: `0件`
+- 固定範囲外知識による答案補完: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
 
 ## 次工程
 
-本source改訂を `16_synchronous_machine_explanation.pdf` へ反映する。固定範囲・固定EXAM_ALIGNMENTを変えず、A4縦の既存構成を維持してベクトル図判定手順を追加し、表示QAと文字抽出QAを再実施する。
+進捗記録整合を確認したうえでTopic 16の最終QAを再判定する。技術内容・固定範囲・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
