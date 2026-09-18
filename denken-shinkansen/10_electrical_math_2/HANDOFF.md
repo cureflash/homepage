@@ -8,11 +8,11 @@ Topic 01〜16は最終QAまで `PASS / completed`。
 
 完成数: `16 / 20`
 
-current_status: `topic_17_powerpoint_complete`
+current_status: `topic_17_post_completion_validation_complete`
 
 active_topic: `17 常微分方程式の数値解法`
 
-次工程: Topic 17の完成後独立検証を行う。
+次工程: Topic 17の最終QAを実施する。
 
 ## 上位仕様
 
@@ -27,21 +27,6 @@ active_topic: `17 常微分方程式の数値解法`
 - main の直近変更
 
 仕様外論点を件数合わせで追加しない。二種相当の公式過去問対応を先に固定し、完成後は教材だけで独立検証して品質ゲートを通過したテーマだけを `completed` とする。
-
-## reconcile結果
-
-直近の「電気数学二種を進行」枠の成果を確認した。
-
-- Topic 16「数値微分・数値積分」: 最終QA `PASS / completed`
-- Topic 17 制作前EXAM_ALIGNMENT: 完了
-- Topic 17 制作前独立数値検証: 完了
-- Topic 17 解説本文＋3段階例題: 完了
-- Topic 17 解説PDF＋QA: 完了
-- Topic 17 練習問題source: 完了
-- Topic 17 練習PDF＋QA: 完了
-- Topic 17 解説画像PowerPoint＋表示QA: 完了
-
-Topic 01〜16の詳細な過去問対応・成果物・QA記録は、各Topic配下のsource・QA・`STATUS.md` を正本とする。
 
 # Topic 17 常微分方程式の数値解法
 
@@ -66,7 +51,7 @@ Topic 01〜16の詳細な過去問対応・成果物・QA記録は、各Topic配
 
 ## EXAM_ALIGNMENT
 
-source:
+主source:
 `topics/17_ode_numerical_methods/17_ode_numerical_methods.md`
 
 第二種公式過去問を直近年度から確認し、常微分方程式＋初期条件へ接続する一次「理論」5問を確認済み。
@@ -85,145 +70,62 @@ source:
 
 R8問6はTopic 17との接続確認では独立な一次応答である (1)〜(2) のみを見る。(3)以降のC-L結合を本Topicへ追加しない。
 
-## 制作前独立数値検証
+## 制作済み成果物
 
-記録:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_preproduction_validation.md`
+- 主source: `topics/17_ode_numerical_methods/17_ode_numerical_methods.md`
+- 制作前独立数値検証: `topics/17_ode_numerical_methods/17_ode_numerical_methods_preproduction_validation.md`
+- 再現用スクリプト: `topics/17_ode_numerical_methods/17_ode_numerical_methods_preproduction_validation.py`
+- 解説PDF: `topics/17_ode_numerical_methods/17_ode_numerical_methods_explanation.pdf`
+- 解説PDF QA: `topics/17_ode_numerical_methods/17_ode_numerical_methods_explanation_qa.md`
+- 練習source: `topics/17_ode_numerical_methods/17_ode_numerical_methods_practice.md`
+- 練習PDF: `topics/17_ode_numerical_methods/17_ode_numerical_methods_practice.pdf`
+- 練習PDF QA: `topics/17_ode_numerical_methods/17_ode_numerical_methods_practice_qa.md`
+- 解説画像PowerPoint: `topics/17_ode_numerical_methods/17_ode_numerical_methods_images.pptx`
+- PowerPoint QA: `topics/17_ode_numerical_methods/17_ode_numerical_methods_powerpoint_qa.md`
+- 完成後独立検証: `topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.md`
+- 完成後独立検証スクリプト: `topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.py`
 
-再現用スクリプト:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_preproduction_validation.py`
+既存成果物QA:
 
-正規化一次減衰系 `dy/dt=-y, y(0)=1` をEuler法で独立計算済み。
-
-`h=0.25` の手計算:
-
-```text
-1 -> 0.75 -> 0.5625 -> 0.421875 -> 0.31640625
-```
-
-解析解 `e^-1=0.367879441...` と比較し、刻み幅比較も確認済み。
-
-判定: `PASS / PREPRODUCTION_NUMERICAL_VALIDATION_COMPLETE`
-
-## 解説本文＋3段階例題
-
-source:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods.md`
-
-固定6説明項目: `6 / 6 PASS`
-
-3段階例題:
-
-- 基礎: `dy/dt=-y` のEuler法
-- 本試験標準: RL過渡をEuler法で計算し解析解・刻み幅と比較
-- 複合: 教育用列車モデルの速度・位置更新
-
-独立再計算: `3 / 3 PASS`
-
-Runge-Kutta法は `SPEC.md` 指定どおり概念に限定。Topic 18以降の先取り0件、未確認実車値依存0件。
-
-## 解説PDF
-
-PDF:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_explanation.pdf`
-
-QA:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_explanation_qa.md`
-
-確認済み:
-
-- A4縦4ページ
-- 200 dpi表示QA `4 / 4 PASS`
-- 文字抽出QA `PASS`
-- 固定範囲5項目 `5 / 5 PASS`
-- 教材で必要な説明6項目 `6 / 6 PASS`
-- 3段階例題 `3 / 3 PASS`
-- RL例題 `h=0.10 s`: `i(0.40)=9.375 A`
-- 解析解: `8.646647... A`
-- 絶対誤差: `0.728353 A`
-- `h=0.05 s`: `i(0.40)=8.998871 A`
-- 絶対誤差: `0.352224 A`
-- 教育用列車例: `v(60)=28.525 m/s`, `x(60)=590 m`
-- 直接Euler/RK要求の固定過去問: `0問`
-- 非該当問題の件数水増し: `0件`
+- 固定6説明項目: `6 / 6 PASS`
+- 3段階例題: `3 / 3 PASS`
+- 解説PDF: A4縦4ページ、表示QA `4 / 4 PASS`、文字抽出 `PASS`
+- 練習問題: 全12問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`
+- 練習PDF: A4縦1ページ、表示QA `1 / 1 PASS`、文字抽出 `PASS`
+- PowerPoint: 16:9・5枚、表示QA `5 / 5 PASS`、overflow `0件`、ZIP/XML整合性 `PASS`
+- Runge-Kutta法: `SPEC.md` どおり概念に限定
 - Topic 18以降の先取り: `0件`
 - 未確認実車値依存: `0件`
 
-判定: `PASS / EXPLANATION_PDF_COMPLETE`
+## 完成後独立検証
 
-## 練習問題source
+記録:
+`topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.md`
 
-source:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_practice.md`
+再現用:
+`topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.py`
 
-構成:
+直接Euler/RK要求の第二種過去問が0問のため、接続確認5問を品質ゲートへ格上げせず、完成教材の固定範囲だけを使って保存済み例題と異なる新規数値条件を独立検証した。
 
-- 全12問
-- 一次型8問
-- 記述型4問
-- 基礎3問／標準6問／複合3問
-- Euler法、初期値、刻み幅と誤差、RL/RC過渡、簡略列車運動式を反復
-- Runge-Kutta法は概念確認のみ
+- Case A: `dy/dt=-2y, y(0)=1`
+  - `h=0.10`: `y(0.3)=0.512`
+  - `h=0.05`: `y(0.3)=0.531441`
+  - 解析解 `0.548811636...`
+  - 絶対誤差 `0.0368116 -> 0.0173706`
+- Case B: 教育用RL過渡 `V=50 V, R=5 Ω, L=1 H, i(0)=0`
+  - `h=0.05 s`: `i(0.20)=6.8359375 A`
+  - `h=0.025 s`: `i(0.20)=6.563910842 A`
+  - 解析解 `6.321205588 A`
+  - 絶対誤差 `0.514732 -> 0.242705 A`
+- Case C: 教育用列車モデル
+  - `t=10 s`: `v=5.000000 m/s, x=0.00 m`
+  - `t=20 s`: `v=9.875000 m/s, x=50.00 m`
+  - `t=30 s`: `v=14.628125 m/s, x=148.75 m`
+  - 位置更新は同一刻みの始点速度を使用
 
-QA:
+判定: `PASS / POST_COMPLETION_VALIDATION_COMPLETE`。
 
-- 独立計算・論理QA `12 / 12 PASS`
-- 一次型正答番号 `3, 4, 2, 3, 3, 4, 4, 2`
-- 一次型正答一意性 `8 / 8 PASS`
-- 接続確認した第二種公式過去問 `5問`
-- 直接Euler/RK要求の固定過去問 `0問`
-- 非該当問題の品質ゲート件数への水増し `0件`
-- Topic 18以降の先取り `0件`
-- 未確認実車値追加 `0件`
-
-## 練習PDF
-
-PDF:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_practice.pdf`
-
-QA:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_practice_qa.md`
-
-確認済み:
-
-- A4縦1ページ
-- 200 dpi表示QA `1 / 1 PASS`
-- 文字切れ・重なり・壊れた日本語グリフ `0件`
-- 文字抽出QA `PASS`
-- 全12問・解答・完全解説収録 `PASS`
-- 独立計算・論理QA `12 / 12 PASS`
-- 一次型正答一意性 `8 / 8 PASS`
-- 数値整合 `PASS`
-- 直接Euler/RK要求の固定過去問 `0問`
-- 非該当5問の固定品質ゲート件数への水増し `0件`
-- Topic 18以降の先取り `0件`
-- 未確認実車値依存 `0件`
-
-判定: `PASS / PRACTICE_PDF_COMPLETE`
-
-## 解説画像PowerPoint
-
-PowerPoint:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_images.pptx`
-
-QA:
-`topics/17_ode_numerical_methods/17_ode_numerical_methods_powerpoint_qa.md`
-
-確認済み:
-
-- 16:9・5枚
-- 固定範囲5項目 `5 / 5 covered`
-- 同一生成コードによる表示QA `5 / 5 PASS`
-- overflow `0件`
-- `slides_test.py` `PASS`
-- PPTX ZIP/XML整合性 `PASS`
-- 数値整合 `PASS`
-- 直接Euler/RK要求の固定過去問 `0問`
-- 非該当5問の固定品質ゲート件数への水増し `0件`
-- Topic 18以降の先取り `0件`
-- 未確認実車値依存 `0件`
-
-判定: `PASS / POWERPOINT_COMPLETE`
+固定EXAM_ALIGNMENT変更0件。非該当問題の件数水増し0件。Topic 18以降の先取り0件。未確認実車値依存0件。
 
 ## 現在の品質ゲート
 
@@ -242,10 +144,10 @@ QA:
 - [x] 練習PDF＋表示QA・文字抽出QA・数値整合QA
 - [x] 解説画像PowerPoint
 - [x] PowerPoint表示QA
-- [ ] 完成後独立検証
+- [x] 完成後独立検証 `PASS`
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 次工程
 
-Topic 17の完成後独立検証を行う。固定範囲、直接Euler/RK要求0問、非該当問題の件数水増し0件を維持する。
+Topic 17の最終QAを実施する。固定範囲、直接Euler/RK要求0問、非該当問題の件数水増し0件を維持する。
