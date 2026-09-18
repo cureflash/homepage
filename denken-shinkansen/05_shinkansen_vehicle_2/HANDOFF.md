@@ -7,9 +7,9 @@
 
 Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 
-現在地は `topic_17_practice_source_complete`。Topic 17 `パワー半導体の損失比較` は制作前EXAM_ALIGNMENTの固定一次4問＋二次1問・26答案要素を変更せず、解説本文・3段階例題・解説PDF・練習問題sourceまで完成した。練習sourceは一次8問（全問五肢択一）＋二次4問、完全解説 `12 / 12`、数値・論理 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`、固定要求知識 `26 / 26 PASS`、SPEC指定7項目 `7 / 7 covered`、指定3可視化 `3 / 3 aligned`。未確認700系実車値の真値化とSPEC外追加は0件。完成数はまだ `16 / 39` のまま。
+現在地は `topic_17_practice_pdf_complete`。Topic 17 `パワー半導体の損失比較` は制作前EXAM_ALIGNMENTの固定一次4問＋二次1問・26答案要素を変更せず、解説本文・3段階例題・解説PDF・練習問題source・練習PDFまで完成した。練習PDFはA4縦6ページ、一次8問（全問五肢択一）＋二次4問、完全解説 `12 / 12`、180 dpi表示 `6 / 6 PASS`、数値・論理 `12 / 12 PASS`、一次正答一意性 `8 / 8 PASS`、固定要求知識 `26 / 26 PASS`、SPEC指定7項目 `7 / 7 covered`、指定3可視化の式系・条件 `3 / 3 PASS`。未確認700系実車値の真値化とSPEC外追加は0件。完成数はまだ `16 / 39` のまま。
 
-次工程はTopic 17の練習PDFを作成する。
+次工程はTopic 17の解説画像PowerPointを作成する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -325,8 +325,33 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - 未確認700系実車値の真値化: `0件`
 - 判定: `PASS / PRACTICE_SOURCE_COMPLETE`
 
+## Topic 17 練習PDF
+- PDF: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_practice.pdf`
+- QA: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_practice_qa.md`
+- A4縦: `6ページ`
+- 一次試験型: `8 / 8`、全問五肢択一
+- 二次試験型: `4 / 4`、途中式・前提・単位・理由を収録
+- 完全解説: `12 / 12`
+- 180 dpiレンダリング: `6 / 6 PASS`
+- PDF open/preflight・文字抽出: `PASS`
+- Unicode置換文字 / `(cid:)`: `0件 / 0件`
+- 文字欠落・文字化け・重なり・クリップ: `0件`
+- 数値・論理整合: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5過去問・26答案要素接続: `26 / 26 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
+- 共通一般仮定モデル変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 問題数・正答・式系変更: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- SHA-256: `f8c3b2b3abdfa050d02d53b6b71fe84b408b74103e814c085306496da89df866`
+- Git blob SHA: `f2443f2a9bf1fcbf870355e0712f40c0ca31e74d`
+- 判定: `PASS / PRACTICE_PDF_COMPLETE`
+
 ## 過去Topic
 Topic 01〜16は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 17「パワー半導体の損失比較」の練習PDFを作成する。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定7項目・3可視化は変更しない。
+Topic 17「パワー半導体の損失比較」の解説画像PowerPointを作成する。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定7項目・3可視化は変更しない。
