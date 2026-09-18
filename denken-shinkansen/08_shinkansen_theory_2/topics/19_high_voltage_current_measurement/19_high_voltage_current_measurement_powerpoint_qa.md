@@ -1,12 +1,13 @@
 # Topic 19 PowerPoint QA
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 成果物
 
 - PowerPoint: `19_high_voltage_current_measurement_images.pptx`
 - 16:9 / 6枚
-- SHA-256: `28e66278adf5dcac60809ca22d4a51936483e7e87dd043f32a1bdf8ad659f0c5`
+- SHA-256: `7245837d236fb59360e0409906783e978d86477fcd71699dc532674a0c1f7faa`
+- 復元理由: 最新mainでPowerPoint本体が欠落し最終QAがblockされたため、既存source・SPEC固定範囲・固定EXAM_ALIGNMENTだけから再生成し、表示QAを再実施した。
 
 ## 表示・ファイルQA
 
@@ -46,6 +47,6 @@
 - Topic 20の誤差・ブリッジ・波形・サンプリング先取り: `0件`
 - 実設備CT・VTの未確認定格・結線・精度階級追加: `0件`
 
-判定: `PASS / POWERPOINT_COMPLETE`
+判定: `PASS / POWERPOINT_RESTORED`
 
-次工程: 完成後独立再解答
+次工程: 主source進捗記録同期後、Topic 19最終QA再実施。
