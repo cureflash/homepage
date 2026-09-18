@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 18 / 21
-- current_status: `topic_19_progress_records_synced`
+- current_status: `topic_19_final_qa_complete`
 - last_completed_topic: `18 新幹線のセンサ信号をどう増幅する？`
 - active_topic: `19 25kV・大電流をどう安全に測る？`
-- next_start: Topic 19 最終QA再実施
+- next_start: Topic 19 completed状態同期
 
 ## 完成済み
 
@@ -26,7 +26,7 @@ Topic 01〜18は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 品質ゲート対象を一次5問・25答案要素に固定
 - [x] R8/R7/R6/R4/R3/R2の校正・ブリッジ系は固定範囲外またはTopic 20側として非採用
 - [x] H20一次理論問6は測定誤差が主題のためTopic 20側として非採用
-- [x] R8二次は2026-09-18時点で未実施
+- [x] R8二次は2026-09-19時点で未実施
 - [x] R7〜R1二次に固定範囲だけで完答する直接対応問題なし
 - [x] 二次採用0問・二次数合わせ0件
 - [x] Topic 20先取り0件
@@ -43,30 +43,33 @@ Topic 01〜18は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 完成後独立再解答: `25 / 25 PASS`
 - [x] 初回最終QA実施: `NEEDS_REVISION / FINAL_QA_BLOCKED`
 - [x] 主source進捗記録同期: `PASS / PROGRESS_RECORDS_SYNCED`
-- [ ] 最終QA再実施
+- [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
 - [ ] completed状態同期
 
 ## 今回進めた内容
 
-Topic 19の主source進捗記録を、GitHub正本の実在成果物・QA記録へ同期した。
+Topic 19の最終QAを再実施した。
 
-- source: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement.md`
-- stage: `PROGRESS_RECORDS_SYNCED`
-- 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
-- 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
-- PowerPoint QA: `PASS / POWERPOINT_RESTORED`
+- final QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_final_qa.md`
+- 初回blocker解消: `2 / 2`
+- 必須成果物欠落: `0件`
+- 固定一次5問・25答案要素: `25 / 25 PASS`
+- 公式標準解答一致: `25 / 25`
+- SPEC固定範囲: `10 / 10`
+- 必須説明: `16 / 16`
+- 3段階例題: `3 / 3`
+- 練習12問QA: `12 / 12 PASS`
+- 解説PDF表示QA: `5 / 5 PASS`
+- 練習PDF表示QA: `5 / 5 PASS`
+- PowerPoint表示QA: `6 / 6 PASS`
 - 完成後独立再解答: `25 / 25 PASS`
-- 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`
-- 初回blocker「PowerPoint本体欠落」: `解消済み`
-- 初回blocker「主source進捗記録不一致」: `解消済み`
-- 固定一次5問・25答案要素: `25 / 25維持`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
 - Topic 20先取り: `0件`
-- 実設備CT・VTの未確認実値追加: `0件`
+- 実設備CT・VTの未確認定格・結線・精度階級追加: `0件`
 
 ## 判定
 
-`PASS / topic_19_progress_records_synced / IN_PROGRESS`。
+`PASS / topic_19_final_qa_complete / IN_PROGRESS`。
 
-完成数は `18 / 21` のまま。次工程はTopic 19の最終QA再実施。
+完成数は `18 / 21` のまま。次工程はTopic 19の `completed` 状態同期。
