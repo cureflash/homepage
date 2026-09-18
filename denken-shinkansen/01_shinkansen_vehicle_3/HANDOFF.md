@@ -6,16 +6,19 @@
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `01_shinkansen_vehicle_3`。新品質基準の完成数は `36 / 38`。01〜36がPASS。active topicは37 `COSMOS② 新幹線の電力設備を遠隔監視する`。
 
 ## 今回進捗
-Topic 37を1段階進め、改訂sourceを正本として練習sourceを同期修正し、固定EXAM_ALIGNMENT反映・独立再解答・固定範囲境界をQAした。
+Topic 37を1段階進め、改訂済み練習sourceを正本として練習PDFを同期修正し、全ページ表示・文字抽出・問題/正答/解説整合・固定EXAM_ALIGNMENT反映・固定範囲境界をQAした。
 
-判定: `PASS / PRACTICE_SOURCE_REVISED`。
+判定: `PASS / PRACTICE_PDF_REVISED`。
 
+- PDF: `A4縦 / 4ページ`
 - 練習問題: `15問`（基礎4 / 標準8 / 複合3）
-- Q9: R6上 法規 問7用の系統連系保護へ改訂
-- Q15: H23 法規 問6用の逆潮流・自立運転・単独運転・逆充電・転送遮断装置の定義問題へ改訂
-- 改訂後独立再解答: `15 / 15 PASS`
+- 五肢択一・完全解説: `15 / 15`
 - 正答位置: A/B/C/D/E各3問
-- 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6 / 6` 練習接続
+- Q9: R6上 法規 問7用の系統連系保護を反映
+- Q15: H23 法規 問6用の逆潮流・自立運転・単独運転・逆充電・転送遮断装置の定義を反映
+- 180 dpi表示: `4 / 4 PASS`
+- 文字抽出: PASS
+- 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6 / 6` PDF接続
 - 固定問題追加・差替え: `0件`
 - 固定範囲外追加: `0件`
 - COSMOS-SCADA未確認内部仕様追加: `0件`
@@ -23,7 +26,7 @@ Topic 37を1段階進め、改訂sourceを正本として練習sourceを同期�
 - Topic 38先取り: `0件`
 - 完成後blind独立再解答の再実施: `未実施`
 
-既存完成後独立再解答の判定 `4 / 6 PASS / NEEDS_REVISION` は履歴として維持する。下流成果物を同期した後に再独立解答するため、Topic 37はcompletedにしない。
+既存完成後独立再解答の判定 `4 / 6 PASS / NEEDS_REVISION` は履歴として維持する。PowerPointを改訂sourceへ同期した後に再独立解答するため、Topic 37はcompletedにしない。
 
 ## 現在の成果物状態
 - source: 改訂済み
@@ -32,7 +35,8 @@ Topic 37を1段階進め、改訂sourceを正本として練習sourceを同期�
 - 解説PDF QA: 改訂後PASS
 - 練習source: 改訂sourceへ同期済み
 - 練習source QA: 改訂後PASS
-- 練習PDF: 存在するが改訂source未反映
+- 練習PDF: 改訂sourceへ同期済み
+- 練習PDF QA: 改訂後PASS
 - PowerPoint: 存在するが改訂source未反映
 - 完成後独立再解答: 旧版教材で `4 / 6 PASS`
 - 最終QA: 未実施
@@ -55,4 +59,4 @@ Topic 37を1段階進め、改訂sourceを正本として練習sourceを同期�
 - Topic 38の冗長化・バックアップ・フェイルセーフ・論理回路・障害検知・切替・システム信頼性は先取りしない。
 
 ## 次の正確な開始点
-改訂済み練習sourceを正本としてTopic 37の練習PDFを同期修正する。修正後、全ページ表示・文字抽出・問題/解答整合・固定5問6答案要素の反映をQAする。PowerPoint、完成後blind独立再解答、最終QAにはまだ進まない。
+改訂済み解説source・練習sourceを正本としてTopic 37のPowerPointを同期修正する。修正後、16:9表示・overflow・固定5問6答案要素の反映・PPTX ZIP整合性をQAする。完成後blind独立再解答・最終QAにはまだ進まない。
