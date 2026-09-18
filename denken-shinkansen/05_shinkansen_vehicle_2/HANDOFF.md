@@ -7,9 +7,9 @@
 
 Topic 01〜16は最終QAまで `PASS / completed`。完成数は `16 / 39`。
 
-現在地は `topic_17_exam_alignment_complete`。Topic 17 `パワー半導体の損失比較` は制作前EXAM_ALIGNMENTを完了し、固定一次4問＋二次1問・26答案要素を公式問題・公式解答／標準解答で照合した。制作前独立検証は `26 / 26 PASS`、SPEC指定7項目・3可視化も整合済み。完成数はまだ `16 / 39` のまま。
+現在地は `topic_17_explanation_source_complete`。Topic 17 `パワー半導体の損失比較` は制作前EXAM_ALIGNMENTの固定一次4問＋二次1問・26答案要素を変更せず、解説本文と3段階例題を完成した。固定要求知識は `26 / 26 covered`、SPEC指定7項目は `7 / 7 covered`、指定3可視化の再生成条件は `3 / 3 fixed`。未確認700系実車値の真値化とSPEC外追加は0件。完成数はまだ `16 / 39` のまま。
 
-次工程はTopic 17の固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を作成する。
+次工程はTopic 17の解説PDFを作成する。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -220,7 +220,7 @@ SPEC指定可視化:
 - Topic 11のPWMコンバータは前提確認に必要な範囲だけ参照する
 - Topic 12のVVVF・V/f・誘導機速度制御、Topic 13の回生・四象限運転は追加しない
 - Topic 17のパワー半導体損失比較へ先取りしない
-- `dv/dt`はSPEC指定項目として扱うが、今回固定した第二種公式過去問で直接問われた論点とは記載しない
+- `dv/dt`はSPEC指定項目として扱うが、今回固定した第二種公式過去問で直接問われたとは扱わない
 - 公開一次資料で確認できない700系の変換器レベル数、直流電圧、素子耐圧、キャリア周波数、損失・効率値を実車値として置かない
 
 ## 解説sourceで固定した教材モデル
@@ -264,8 +264,31 @@ source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_lo
 - 接合温度・冷却は損失から温度上昇へ接続する最小限の熱抵抗モデルまで扱う
 - 素子比較は一般モデル・教材内仮定値で行い、未確認700系実車の素子型式・定格・損失・温度・冷却条件・効率を真値化しない
 
+## Topic 17 解説source
+source: `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_explanation_source.md`
+
+品質ゲート:
+- 解説本文: `完成`
+- 3段階例題: `3 / 3 PASS`
+- 例題数値再計算: `3 / 3 PASS`
+- 固定5問・26答案要素の実効本文マッピング: `26 / 26 covered`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化の再生成条件: `3 / 3 fixed`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+教材用一般モデル:
+- 導通損失: `P_cond≈V_onDI` または `I_rms,on^2R_on`
+- スイッチング損失: `P_sw=f_s(E_on+E_off)`
+- 接合温度: `T_j=T_a+P_lossR_θ`
+- 変換効率: `η=P_out/(P_out+P_loss)`
+- 可逆チョッパ平均化: `V_a=D V_state1+(1-D)V_state2`
+- 可視化は一般仮定値のみを使い、700系実車値として扱わない
+
 ## 過去Topic
 Topic 01〜16は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 17「パワー半導体の損失比較」の固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を作成する。
+Topic 17「パワー半導体の損失比較」の解説PDFを作成する。固定EXAM_ALIGNMENT・固定5問・26答案要素・SPEC指定範囲は変更しない。
