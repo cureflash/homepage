@@ -1,6 +1,6 @@
 # Topic 16 解説PDF QA
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 対象: `16_synchronous_machine_explanation.pdf`
 
@@ -47,4 +47,4 @@
 
 解説PDF単体: `PASS`
 
-Topic 16全体は、練習PDF・PowerPointがsource改訂未同期で、完成後blind独立再解答も再実施前のため `NEEDS_REVISION` を維持する。
+練習PDF・PowerPointもsource改訂へ再同期済みで、改訂後blind独立再解答は `6 / 6 PASS`。Topic 16の技術内容・派生成果物・過去問対応ゲートはPASSしている。残作業は進捗記録整合の完了後に最終QAを再判定することだけである。
