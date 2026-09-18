@@ -5,82 +5,70 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `15 / 16`。Topic 01〜15は品質ゲートPASSでcompleted。active topicは16「同期機って新幹線には使わないの？」。
 
-Topic 15は、前回最終QAで唯一FAILだった進捗記録整合を同期後に再判定し、技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、進捗記録整合、固定範囲境界の全項目が `PASS`。Webカタログにも登録し `completed` とした。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更していない。
+Topic 16は制作前EXAM_ALIGNMENTを固定済み。系列 `SPEC.md` の固定範囲だけから公式過去問6問・6答案要素を選定し、問題要求の独立再確認後に電気技術者試験センター公式解答と照合して `6 / 6 PASS`。始動法・制動巻線、短絡比、無負荷飽和曲線・三相短絡曲線、同期調相機、負荷角・脱出トルク等の仕様外追加は0件。正答選択肢番号・計算問題の最終数値は完成後blind独立再解答のため制作前記録へ保存していない。
 
-状態: `topic_15_completed / completed`
+状態: `topic_16_exam_alignment_complete / IN_PROGRESS`
 
-## Topic 15 最終QA再判定
-- 技術内容: `PASS`
-- 必須成果物: `PASS`
-- 表示QA: `PASS`
-- 固定EXAM_ALIGNMENT＋完成後blind独立再解答: `PASS`
-- 進捗記録整合: `PASS`
-- 固定範囲境界: `PASS`
-- Webカタログ登録: `qualifications/denken-shinkansen/catalog.json` / `PASS`
-- 最終判定: `PASS / completed`
+## Topic 16 固定範囲
+- 同期機
+- 同期発電機
+- 同期電動機
+- 回転磁界
+- 同期速度
+- 極数
+- 周波数
+- 界磁
+- 励磁
+- 電機子
+- 力率
+- 電機子反作用
+- 同期リアクタンス
+- V曲線の基本
+- 並行運転の基本
 
-## Topic 15 固定範囲
-照明:
-- 光束 / 光度 / 照度 / 輝度
-- lm / cd / lx
-- 逆二乗則
-- 照明率 / 保守率 / 所要灯数
-- 発光効率 / LED
-- 計算: 照度 / 光度 / 光束 / 所要灯数 / 消費電力
+同期速度は `Ns = 120f / P`。L0系リニア同期モータは、系列SPECどおり回転同期機を直線状に展開したものとして概念説明にだけ使用する。四機比較は固定子、回転子、励磁、回転磁界、同期速度、すべり、整流子、ブラシ、速度制御、発電機運転、主な用途に限定する。
 
-電熱・空調:
-- ジュール熱 / 電力量 / 熱量 / ヒーター / 空調 / 電熱 / 効率 / COPの基本
-- 計算: `Q = I²Rt` / `Q = Pt` 等を中心に扱う
+## Topic 16 固定EXAM_ALIGNMENT
+- R7上 機械 問5 — 同期発電機の並行運転条件 / 周波数 / 電圧 / 位相 / 同期検定器
+- R5下 機械 問5 — 同期電動機 / 遅れ力率 / 誘導起電力 / 同期リアクタンス / ベクトル図
+- R5下 機械 問6 — 同期発電機 / 同期速度 / 極数 / 周波数 / 並行運転
+- R4上 機械 問4 — 並行運転 / 起電力 / 界磁 / 回転速度 / 同期検定器 / 無効横流
+- H28 機械 問5 — 同期電動機 / V曲線 / 界磁電流 / 電機子電流 / 力率
+- H26 機械 問5 — 同期発電機 / 電機子反作用 / 力率 / 同期リアクタンス
 
-過去問で比熱・潜熱・密度が数値として与えられる場合は熱量換算の与条件として使うが、熱伝導・熱放射・熱抵抗・相変化理論等を独立論点として追加しない。新幹線側は「客室で使われる電気設備」という導入に限定し、一次資料で確認できない照明器具仕様・灯数・消費電力・空調能力・COP等は実値化しない。
-
-## Topic 15 固定EXAM_ALIGNMENT
-- R8上 機械 問17(a)(b) — 熱量 / 電熱 / 効率 / 消費電力 / 時間
-- R7上 機械 問12 — 光束 / 光度 / 水平面照度 / 逆二乗則 / 複数光源
-- R7上 機械 問17(a)(b) — 熱量 / 消費電力 / 効率 / 電力量
-- R6下 機械 問17(a)(b) — 光束 / 平均光度 / 水平面照度 / 逆二乗則
-- R6上 機械 問17(a)(b) — 光束 / 光度 / 照度 / 輝度
-- R4上 機械 問17(a)(b) — 電力量 / 熱量 / COP / 温度上昇
-- R2 機械 問12 — 平均照度 / 光束 / 照明率 / 保守率 / 所要灯数
-
-品質ゲート対象は `7問・12答案要素`。制作前独立検証・公式解答照合 `12 / 12 PASS`、固定範囲外知識による答案補完 `0件`。解説source本文マッピング `12 / 12 PASS`、3段階例題 `PASS`。
-
-完成後blind独立再解答:
-- R8上 機械 問17: `(a)5 / (b)2`
-- R7上 機械 問12: `(4)`
-- R7上 機械 問17: `(a)2 / (b)2`
-- R6下 機械 問17: `(a)2 / (b)3`
-- R6上 機械 問17: `(a)2 / (b)1`
-- R4上 機械 問17: `(a)5 / (b)5`
-- R2 機械 問12: `(3)`
-- 公式解答一致: `12 / 12 PASS`
-- 教材外・固定範囲外知識による補完: `0件`
-- 記録: `topics/15_lighting_heating/15_lighting_heating_independent_reanswer.md`
+品質ゲート対象: `6問・6答案要素`。
+制作前検証・公式解答照合: `6 / 6 PASS`。
+固定範囲外知識による答案補完: `0件`。
+固定EXAM_ALIGNMENT変更: `0件`。
 
 非選定:
-- R7下 機械 問17 — 光束発散度を直接要求し、固定範囲外。
-- R7下 機械 問12 — 熱伝導率・温度こう配を使う熱伝導問題で固定範囲外。
-- R6下 機械 問12 — 熱伝導率を使う熱伝導問題で固定範囲外。
-- R5上 機械 問12 — 光束発散度が正答要件に含まれ固定範囲外。
-- R5下 機械 問17 — 固定範囲内だが、より新しい同型の点光源・水平面照度問題を固定済みのため品質ゲートへ重複加算しない。
+- R7下 機械 問5 — 始動・制動巻線が固定範囲外。
+- R7下 機械 問6 — 無負荷・短絡特性を使う試験法が固定範囲外。
+- R6上 機械 問5 — 始動法が固定範囲外。
+- R5上 機械 問5 — 短絡比が固定範囲外。
+- R4下 機械 問4 — V曲線は範囲内だが、完答に同期調相機が必要で固定範囲外。
 
-件数合わせの仕様追加、熱伝導・熱放射・工業電熱の追加、未確認の新幹線車内設備実値、Topic 16先取りはいずれも `0件`。
+source: `topics/16_synchronous_machine/16_synchronous_machine.md`
 
-source: `topics/15_lighting_heating/15_lighting_heating.md`
-explanation PDF: `topics/15_lighting_heating/15_lighting_heating_explanation.pdf`
-explanation PDF QA: `topics/15_lighting_heating/15_lighting_heating_explanation_pdf_qa.md`
-practice source: `topics/15_lighting_heating/15_lighting_heating_practice.md`
-practice PDF: `topics/15_lighting_heating/15_lighting_heating_practice.pdf`
-practice PDF QA: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md`
-PowerPoint: `topics/15_lighting_heating/15_lighting_heating_images.pptx`
-PowerPoint QA: `topics/15_lighting_heating/15_lighting_heating_powerpoint_qa.md`
-independent reanswer: `topics/15_lighting_heating/15_lighting_heating_independent_reanswer.md`
+## Topic 15
+Topic 15「車内の照明・空調にはどれだけ電気が必要？」は最終QA再判定PASSで `completed`。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、進捗記録整合、固定範囲境界は全件PASS。Webカタログにも登録済み。
+
+固定EXAM_ALIGNMENT:
+- R8上 機械 問17(a)(b)
+- R7上 機械 問12
+- R7上 機械 問17(a)(b)
+- R6下 機械 問17(a)(b)
+- R6上 機械 問17(a)(b)
+- R4上 機械 問17(a)(b)
+- R2 機械 問12
+
+品質ゲート対象は `7問・12答案要素`。完成後blind独立再解答 `12 / 12 PASS`。成果物は `topics/15_lighting_heating/` に保存済み。
 
 ## Topic 14
-Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENTはH30 機械 問12、完成後blind独立再解答 `1 / 1 PASS`。解説PDF・練習PDF・PowerPointの表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/14_battery/` に保存済み。
+Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENTはH30 機械 問12、完成後blind独立再解答 `1 / 1 PASS`。成果物は `topics/14_battery/` に保存済み。
 
 ## Topic 13
-Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
+Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 16「同期機って新幹線には使わないの？」の制作前EXAM_ALIGNMENTを作成する。系列 `SPEC.md` の固定範囲を守り、Topic 15の成果物は変更しない。
+Topic 16「同期機って新幹線には使わないの？」の解説source本文を作成する。固定した6問・6答案要素と系列 `SPEC.md` の固定範囲は変更しない。
