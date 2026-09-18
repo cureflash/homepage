@@ -8,7 +8,7 @@
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 16の制作前独立検証を完了した。固定5出題回・7答案要素を公式問題文とTopic 16固定範囲から再計算・論理判定し、答案固定後に公式標準解答と照合した。`7 / 7 PASS`、公式標準解答一致 `7 / 7 PASS`、固定範囲外知識補完0件。SPECの総合確認12項目から範囲を追加していない。解説本文・PDF・練習問題・PowerPointは未着手。
+Topic 16の解説本文＋3段階例題を完成した。制作前に固定した5出題回・7答案要素を崩さず、本文要求事項マッピングは `7 / 7 PASS`、基礎・本試験標準・複合の3例題は独立再計算 `3 / 3 PASS`。発電電力・電力量、変圧・三相電力、電圧降下・線路損失、%インピーダンス・短絡・遮断、発電/負荷/回生の双方向エネルギーフローを、SPECの総合確認12項目の範囲内で一本につないだ。SPEC外追加、件数合わせ、未確認新幹線実設備値の真値化はいずれも0件。解説PDF・練習問題・PowerPointは未着手。
 
 source: `topics/16_power_system_integration/16_power_system_integration.md`
 
@@ -26,7 +26,10 @@ source: `topics/16_power_system_integration/16_power_system_integration.md`
 - 公式標準解答一致: `7 / 7 PASS`
 - 公式標準解答との不一致: `0件`
 - Topic 16固定範囲外の知識補完: `0件`
-- 解説本文: 未着手
+- 解説本文: §1〜§15 完成
+- 3段階例題: 基礎・本試験標準・複合 各1問完成
+- 3段階例題独立再計算: `3 / 3 PASS`
+- 固定5出題回・7答案要素の本文要求事項マッピング: `7 / 7 PASS`
 - 解説PDF: 未着手
 - 練習問題source / PDF: 未着手
 - 解説画像PowerPoint: 未着手
@@ -42,7 +45,7 @@ source: `topics/16_power_system_integration/16_power_system_integration.md`
 - 実設備値は一次資料確認済みのものだけを実値とする。
 
 ## 次
-Topic 16の解説本文＋3段階例題を作成する。
+Topic 16の解説PDFを作成する。
 
 ## 直前完了テーマ
 Topic 15 `回生した電気はどこへ行く？` は `PASS / completed`。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
