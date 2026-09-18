@@ -8,11 +8,11 @@ Topic 01〜19は最終QAまで `PASS / completed`。
 
 完成数: `19 / 20`
 
-current_status: `topic_20_post_completion_validation_complete`
+current_status: `topic_20_final_qa_needs_revision`
 
 active_topic: `20 新幹線を数式モデルだけで走らせる`
 
-次工程: Topic 20の最終QA。
+次工程: Topic 20の最終QA再判定。
 
 ## 上位仕様
 
@@ -269,6 +269,44 @@ PWM波形・FFT
 
 判定: `PASS / POST_COMPLETION_VALIDATION_COMPLETE`。
 
+## 初回最終QA
+
+記録:
+`topics/20_shinkansen_math_model/20_shinkansen_math_model_final_qa.md`
+
+技術内容、固定EXAM_ALIGNMENT、完成後独立検証、PDF/PowerPoint表示QA、SPEC境界はすべてPASS。進捗記録が実成果物より古かったため `NEEDS_REVISION` とした。
+
+- 必須成果物実在: `PASS`
+- 第二種公式過去問接続: `PASS`
+- 統合モデル直接要求: `0問`
+- 接続5問の直接対応品質ゲート件数への水増し: `0件`
+- 完成後独立検証: `3 / 3 PASS`
+- 練習問題独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 固定範囲外追加: `0件`
+- 未確認実車値依存: `0件`
+- 初回進捗記録整合: `0 / 6 PASS`
+
+判定: `NEEDS_REVISION / topic_20_final_qa_needs_revision / IN_PROGRESS`。
+
+## 進捗記録同期
+
+初回最終QAの指摘に従い、技術内容を変更せず進捗記録のみを実成果物状態へ同期した。
+
+- `20_shinkansen_math_model.md`: 同期済み
+- `20_shinkansen_math_model_explanation_qa.md`: 同期済み
+- `20_shinkansen_math_model_practice.md`: 同期済み
+- `20_shinkansen_math_model_practice_qa.md`: 同期済み
+- `20_shinkansen_math_model_powerpoint_qa.md`: 同期済み
+- `STATUS.md`: 同期済み
+- 本 `HANDOFF.md`: 同期済み
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 技術本文・問題・正答変更: `0件`
+- PDF / PowerPoint変更: `0件`
+- 完成後独立検証結果変更: `0件`
+
+判定: `PASS / PROGRESS_RECORDS_SYNCED`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -288,9 +326,11 @@ PWM波形・FFT
 - [x] 練習PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 解説画像PowerPoint＋QA（16:9・5枚、固定統合範囲 `7 / 7`、必要説明 `6 / 6 PASS`、接続確認5問 `5 / 5 PASS`、表示QA `5 / 5 PASS`、overflow `0件`）
 - [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、統合モデル直接要求0問・接続5問の水増し0件を維持）
-- [ ] 最終QA
+- [x] 初回最終QA → `NEEDS_REVISION`（技術品質PASS、進捗記録不整合のみ）
+- [x] 進捗記録同期
+- [ ] 最終QA再判定
 - [ ] `completed`
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文・解説PDF・練習問題source・練習PDF・PowerPoint・完成後独立検証を変更せず、Topic 20の最終QAを行う。
+固定済みEXAM_ALIGNMENT、技術本文・問題・正答・PDF・PowerPoint・完成後独立検証結果を変更せず、Topic 20の最終QAを再判定する。PASSの場合のみ `completed` とし、系列完成数を `20 / 20` へ更新する。
