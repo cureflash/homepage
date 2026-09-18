@@ -4,13 +4,13 @@
 
 ## 現在地
 
-Topic 01〜16は `PASS / completed`。完成数は `16 / 21`。
+Topic 01〜17は `PASS / completed`。完成数は `17 / 21`。
 
-current_status: `topic_17_final_qa_complete`
+current_status: `topic_17_completed`
 
-active_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
+active_topic: `18 新幹線のセンサ信号をどう増幅する？`
 
-Topic 17の最終QA再実施を `PASS / FINAL_QA_COMPLETE` で完了。固定一次5問・25答案要素 `25 / 25 PASS`、公式標準解答一致 `25 / 25`、二次採用0問・二次数合わせ0件、初回blocker `4 / 4 PASS`。技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程はcompleted状態同期。
+Topic 17のcompleted状態同期を完了。固定一次5問・25答案要素 `25 / 25 PASS`、公式標準解答一致 `25 / 25`、二次採用0問・二次数合わせ0件を維持し、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更していない。次工程はTopic 18 制作前EXAM_ALIGNMENT。
 
 ## Topic 16 成果物
 
@@ -172,8 +172,8 @@ Topic 17の最終QA再実施を `PASS / FINAL_QA_COMPLETE` で完了。固定一
 - PowerPoint QA: `topics/17_transistor_fet_switching/17_transistor_fet_switching_powerpoint_qa.md`
 - 完成後独立再解答: `topics/17_transistor_fet_switching/17_transistor_fet_switching_reanswer.md`
 - 最終QA: `topics/17_transistor_fet_switching/17_transistor_fet_switching_final_qa.md`
-- completion: `in_progress`
-- stage: `FINAL_QA_COMPLETE`
+- completion: `completed`
+- stage: `COMPLETED`
 
 ## Topic 17 固定範囲
 
@@ -366,6 +366,18 @@ R8一次理論は確認したが固定範囲の直接対応問題なし。R7〜R
 
 判定: `PASS / FINAL_QA_COMPLETE`
 
+## Topic 17 completed状態同期
+
+主source・練習source・STATUS・HANDOFFを実成果物状態へ同期した。
+
+- 主source: `completion: completed`、`stage: COMPLETED`
+- 練習source: `completion: completed`、`stage: COMPLETED`
+- STATUS: 完成数 `17 / 21`、Topic 18をactiveへ更新
+- HANDOFF: Topic 01〜17 `PASS / completed` へ更新
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
+
+判定: `PASS / completed`
+
 ## 次工程
 
-Topic 17の主source・練習source・STATUS・HANDOFFをcompleted状態へ同期する。
+Topic 18「新幹線のセンサ信号をどう増幅する？」の制作前EXAM_ALIGNMENT。

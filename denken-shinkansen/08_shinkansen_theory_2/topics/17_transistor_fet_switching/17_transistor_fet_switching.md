@@ -4,14 +4,21 @@
 
 ## 状態
 
-- stage: `PROGRESS_RECORDS_SYNCED`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 - 制作前QA: `PASS / EXAM_ALIGNMENT_COMPLETE`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
+- PowerPoint QA: `PASS / POWERPOINT_COMPLETE`
+- 完成後独立再解答: `25 / 25 PASS`
+- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
+- 進捗記録同期: `PASS / PROGRESS_RECORDS_SYNCED`
+- 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
 - 品質ゲート: 一次5問・25答案要素 `25 / 25 PASS`
 - 二次採用: `0問`
 - 二次数合わせ: `0件`
-- 次工程: 最終QA再実施
+- 次工程: Topic 18 制作前EXAM_ALIGNMENT
 
 ## 1. SPEC固定範囲
 
@@ -536,4 +543,4 @@ CMOS回路の出力に `C_L=200 pF` の容量性負荷があり、電源電圧 `
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`。
 
-次工程は、固定EXAM_ALIGNMENTと本解説本文を変更せずに最終QAを再実施する。
+次工程は、Topic 18 制作前EXAM_ALIGNMENTへ進む。
