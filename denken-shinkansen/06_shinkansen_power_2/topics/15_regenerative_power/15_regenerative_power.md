@@ -4,9 +4,12 @@
 
 ## 状態
 
-`topic_15_exam_alignment_complete`
+`topic_15_preproduction_blind_complete`
 
-制作前EXAM_ALIGNMENTを実施し、第二種一次・二次を横断して正式品質ゲート対象を5問に固定した。教材本文・例題・練習問題は未着手。次工程は固定5問を教材なしで独立再解答し、必要答案要素を確定する制作前blind。
+制作前EXAM_ALIGNMENTと制作前blind独立再解答を完了した。正式品質ゲート対象は一次3問＋二次2問の固定5問・24答案要素。制作前blindは `5 / 5問・24 / 24答案要素 PASS`。教材本文・例題・練習問題は未着手。次工程は固定済み本文節マッピングに従う解説source作成。
+
+制作前blind記録:
+- `15_regenerative_power_preproduction_blind_20260919.md`
 
 ## SPEC固定範囲
 
@@ -251,7 +254,8 @@ https://www.shiken.or.jp/chief/upload/20091129_ch_second_a01.pdf
 
 - 正式過去問: `5問`
 - 一次: `3問 / 15空欄`
-- 二次: `2問`
+- 二次: `2問 / 9答案要素`
+- 合計: `24答案要素`
 - 二次記述を含む: `PASS`
 - 直近年度から候補確認: `PASS`
 - 周辺問題による件数水増し: `0件`
@@ -262,4 +266,15 @@ https://www.shiken.or.jp/chief/upload/20091129_ch_second_a01.pdf
 
 ## 制作前独立検証
 
-未実施。次工程で固定5問を教材なしで独立再解答し、公式解答と照合する。ここで不一致が出た場合は本文制作へ進まずblockerとして記録する。
+実施済み。`15_regenerative_power_preproduction_blind_20260919.md` に記録した。
+
+- R2一次「電力」問6: `5 / 5 PASS`
+- H28一次「電力」問5: `5 / 5 PASS`
+- H26一次「電力」問1: `5 / 5 PASS`
+- H25二次「電力・管理」問6: `3 / 3答案群 PASS`
+- H21二次「電力・管理」問4: `6 / 6 PASS`
+- 一次: `15 / 15 PASS`
+- 二次: `9 / 9 PASS`
+- 合計: `5 / 5問・24 / 24答案要素 PASS`
+
+固定5問の候補解を公式解答・標準解答を見る前に確定し、その後に照合した。blockerなし。次工程は本文節マッピングに従う解説source作成。
