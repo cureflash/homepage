@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `16 / 39`
-- current_status: `topic_17_final_qa_needs_revision`
+- current_status: `topic_17_progress_alignment_sync_complete`
 - last_completed_topic: `16 700系 多レベル変換器とPWM`
 - active_topic: `17 パワー半導体の損失比較`
-- next_start: Topic 17の旧26答案要素表記が残る6記録を、是正後5問・23答案要素とclean blind `23 / 23 PASS` へ同期する。問題・正答・数式・PDF/PPTX本体・固定過去問は変更しない
+- next_start: Topic 17の最終QAを再実施する。問題・正答・数式・PDF/PPTX本体・固定過去問は変更しない
 
 ## 完了済み
 
@@ -58,7 +58,7 @@ H24一次「機械」問6の採用単位を公式問題文から再監査した�
 - 解説画像PowerPoint: `PASS / 4 slides`
 - 成果物自体の判定: `PASS`
 
-旧成果物・旧QAの「固定5問・26答案要素 `26 / 26`」表記は再マッピング前の履歴値であり、最終品質ゲートには使用しない。
+PDF/PPTX本体・問題・正答・数式は今回変更していない。
 
 ## Topic 17 clean blind再解答
 
@@ -98,11 +98,11 @@ H24一次「機械」問6の採用単位を公式問題文から再監査した�
 
 公式照合工程: `PASS / OFFICIAL_CHECK_COMPLETE`。
 
-## Topic 17 最終QA
+## Topic 17 進捗記録同期
 
-最終QAで技術成果物・clean blind品質ゲートはPASSしたが、是正後EXAM_ALIGNMENTと現行記録の整合にFAILを検出した。
+前回最終QAで検出した旧26答案要素前提の6記録を、是正後の固定5問・23答案要素とclean blind `23 / 23 PASS` へ同期した。
 
-旧 `26答案要素` 前提が残る修正対象:
+同期済み:
 - `17_power_semiconductor_loss_comparison.md`
 - `17_power_semiconductor_loss_comparison_explanation_source.md`
 - `17_power_semiconductor_loss_comparison_practice_source.md`
@@ -110,14 +110,13 @@ H24一次「機械」問6の採用単位を公式問題文から再監査した�
 - `17_power_semiconductor_loss_comparison_practice_qa.md`
 - `17_power_semiconductor_loss_comparison_powerpoint_qa.md`
 
-特にpractice sourceはH24一次問6の `(1)〜(5)` 全体を対応付けた旧表が残り、是正後の `(2)(3)のみ` と不一致。
+特にpractice sourceのH24一次問6マッピングは `(2)(3)のみ` へ是正済み。照明固有の `(1)(4)(5)` は固定SPEC外としてゲート対象外。
 
-判定: `NEEDS_REVISION / PROGRESS_ALIGNMENT_SYNC_REQUIRED`。
+判定: `PASS / PROGRESS_ALIGNMENT_SYNC_COMPLETE`。
 
-最終QA記録:
-- `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_final_qa.md`
+旧 `blind_reanswer_gate.md` と旧 `blind_reanswer_candidates.md` は再マッピング前の履歴として残し、同期対象にしない。
 
-Topic 17はcompleted化しない。完成数は `16 / 39` のまま維持する。
+Topic 17は最終QA再実施前のためcompleted化しない。完成数は `16 / 39` のまま維持する。
 
 ## Topic 17 SPEC固定範囲
 
@@ -127,4 +126,4 @@ Topic 16の多レベル波形・高調波解析は再展開せず、後続Topic�
 
 ## 次工程
 
-Topic 17の上記6記録だけを、是正後 `5問・23答案要素` とclean blind `23 / 23 PASS` へ同期する。問題・正答・数式・PDF/PPTX本体・固定過去問は変更しない。その後、最終QAを再実施する。
+Topic 17の最終QAを再実施する。固定5問・23答案要素、clean blind `23 / 23 PASS`、SPEC指定7項目・3可視化、成果物・進捗記録の整合を確認し、合格した場合のみcompleted化する。
