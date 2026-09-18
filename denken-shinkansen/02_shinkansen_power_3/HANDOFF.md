@@ -3,14 +3,14 @@
 更新日: 2026-09-19
 
 ## 正本・active series
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。MASTER_SPEC順で `01_shinkansen_vehicle_3` は完了、`02_shinkansen_power_3` が最初の未完了系列。新品質基準の完成数は `14 / 16`。Topic 01〜14は完成済み。active themeはTopic 15 `回生した電気はどこへ行く？`。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。`02_shinkansen_power_3` の新品質基準の完成数は `15 / 16`。Topic 01〜15は完成済み。active themeはTopic 16 `発電所からN700Sまで全部つないでみる`。
 
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 15の初回最終QAで唯一FAILだった進捗記録整合を修正した。旧工程を指していた7箇所を `7 / 7` 現在地へ同期し、`current_status` は `topic_15_progress_sync_complete`。技術内容、必須成果物、固定EXAM_ALIGNMENT、数式、問題・正答、PDF/PPTX、完成後ブラインド独立再解答結果は変更していない。完成数は `14 / 16` のまま。
+Topic 15 `回生した電気はどこへ行く？` の最終QAを再実施し、`PASS / completed` とした。初回最終QAで唯一FAILだった進捗記録整合は旧記録7箇所を `7 / 7` 同期済みで、再監査でもPASS。技術内容、固定EXAM_ALIGNMENT、数式、問題・正答、PDF/PPTX、完成後ブラインド独立再解答結果は変更していない。Webカタログにも登録した。
 
-初回最終QA: `topics/15_regenerative_power/15_regenerative_power_final_qa.md`
+最終QA: `topics/15_regenerative_power/15_regenerative_power_final_qa.md`
 固定候補: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer_candidates.md`
 完成後独立再解答: `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md`
 source: `topics/15_regenerative_power/15_regenerative_power.md`
@@ -21,8 +21,9 @@ source: `topics/15_regenerative_power/15_regenerative_power.md`
 練習PDF QA: `topics/15_regenerative_power/15_regenerative_power_practice_qa.md`
 解説画像PowerPoint: `topics/15_regenerative_power/15_regenerative_power_images.pptx`
 PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md`
+Webカタログ: `../../qualifications/denken-shinkansen/catalog.json`
 
-## 固定品質ゲート
+## Topic 15 固定品質ゲート
 - R8上 電力 問5 — `(4)` / 公式 `(4)` — PASS
 - R7上 法規 問13(a)(b) — `(2),(3)` / 公式 `(2),(3)` — PASS
 - R4下 電力 問11 — `(5)` / 公式 `(5)` — PASS
@@ -45,20 +46,9 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - SPEC固定範囲外追加: `0件`
 - Topic 16先取り: `0件`
 - 未確認新幹線実設備値の真値化: `0件`
-- 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
-- 初回最終QAの唯一の未達カテゴリ: 進捗記録整合
-- 旧進捗記録同期: `7 / 7 完了`
-
-## 進捗記録同期
-1. `STATUS.md` — `topic_15_progress_sync_complete`、次工程=最終QA再実施へ同期。
-2. `topics/15_regenerative_power/15_regenerative_power.md` — 完成後独立再解答 `8 / 8 PASS`、初回最終QA、進捗同期結果、次工程を同期。
-3. `topics/15_regenerative_power/15_regenerative_power_explanation_qa.md` — 次工程を最終QA再実施へ同期。
-4. `topics/15_regenerative_power/15_regenerative_power_practice_source.md` — 次工程を最終QA再実施へ同期。
-5. `topics/15_regenerative_power/15_regenerative_power_practice_qa.md` — 次工程を最終QA再実施へ同期。
-6. `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa.md` — 次工程を最終QA再実施へ同期。
-7. `topics/15_regenerative_power/15_regenerative_power_independent_reanswer.md` — 初回最終QA結果と次工程を同期。
-
-`15_regenerative_power_independent_reanswer_candidates.md` はblind固定証跡のため変更していない。
+- 進捗記録整合: `7 / 7 PASS`
+- 最終QA再実施: `PASS / completed`
+- Webカタログ登録: 完了
 
 ## 範囲境界
 - 回生電力が架線へ戻った後、他負荷・系統・蓄電設備へ流れる電力収支を扱う。
@@ -66,10 +56,10 @@ PowerPoint QA: `topics/15_regenerative_power/15_regenerative_power_powerpoint_qa
 - 蓄電池は電力貯蔵・充放電の役割まで。電池化学・UPS・充電方式へ広げない。
 - 需給調整で固定過去問に現れる太陽光・揚水・運転予備力・火力は必要最小限の例に限定する。
 - 回生失効の具体的車両制御や新幹線実設備値は一次資料確認前に断定しない。
-- Topic 16の総合系統計算は先取りしない。
+- Topic 16の総合系統計算はTopic 15へ先取りしていない。
 
 ## 次
-Topic 15の最終QAを再実施する。技術内容・必須成果物・固定EXAM_ALIGNMENT・完成後ブラインド独立再解答・PDF/PPTX QA・SPEC境界・進捗記録整合を再確認し、全件PASSの場合のみ `completed` とする。
+Topic 16 `発電所からN700Sまで全部つないでみる` の制作前EXAM_ALIGNMENTを実施する。
 
 ## 直前完了テーマ
-Topic 14 `駅やトンネルにはどう電気を配る？` は `PASS / completed`。固定5問・6答案要素の完成後ブラインド独立再解答 `6 / 6 PASS`、公式解答一致 `6 / 6 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
+Topic 15 `回生した電気はどこへ行く？` は `PASS / completed`。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
