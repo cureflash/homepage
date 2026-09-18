@@ -8,11 +8,11 @@ Topic 01〜19は最終QAまで `PASS / completed`。
 
 完成数: `19 / 20`
 
-current_status: `topic_20_practice_source_complete`
+current_status: `topic_20_practice_pdf_complete`
 
 active_topic: `20 新幹線を数式モデルだけで走らせる`
 
-次工程: Topic 20の練習PDF＋QA。
+次工程: Topic 20の解説画像PowerPoint＋QA。
 
 ## 上位仕様
 
@@ -197,6 +197,29 @@ PWM波形・FFT
 
 判定: `PASS / PRACTICE_SOURCE_COMPLETE`。
 
+## 練習PDF＋QA
+
+成果物:
+
+- `topics/20_shinkansen_math_model/20_shinkansen_math_model_practice.pdf`
+- `topics/20_shinkansen_math_model/20_shinkansen_math_model_practice_qa.md`
+
+固定済み練習sourceだけからA4縦4ページの練習PDFを作成し、表示・文字抽出・独立数値照合を行った。
+
+- A4縦: `4ページ`
+- 200 dpi表示QA: `4 / 4 PASS`
+- 文字抽出QA: `PASS`
+- 独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- 接続確認5問の教材内マッピング: `5 / 5 PASS`
+- 統合モデル直接要求の確認済み第二種過去問: `0問`
+- 接続5問の直接対応品質ゲート件数への水増し: `0件`
+- 第一種・第三種問題追加: `0件`
+- 仕様外追加: `0件`
+- 未確認実車値依存: `0件`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`。
+
 ## 制作品質ゲート
 
 - [x] 系列SPEC確認
@@ -213,7 +236,7 @@ PWM波形・FFT
 - [x] 解説本文＋3段階例題
 - [x] 解説PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立数値照合 `3 / 3 PASS`）
 - [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
-- [ ] 練習PDF＋QA
+- [x] 練習PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [ ] 解説画像PowerPoint＋QA
 - [ ] 完成後独立検証
 - [ ] 最終QA
@@ -221,4 +244,4 @@ PWM波形・FFT
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文・解説PDF・練習問題sourceを変更せず、Topic 20の練習PDF＋QAを作成する。
+固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文・解説PDF・練習問題source・練習PDFを変更せず、Topic 20の解説画像PowerPoint＋QAを作成する。
