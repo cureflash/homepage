@@ -8,7 +8,35 @@
 
 Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
 
-現在地は `topic_18_practice_source_complete`。active topic は Topic 18 `E2系 50Hz・60Hzと磁束`。
+現在地は `topic_18_practice_pdf_complete`。active topic は Topic 18 `E2系 50Hz・60Hzと磁束`。
+
+## Topic 18 練習PDF
+
+成果物:
+- `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_practice.pdf`
+- `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_practice_qa.md`
+
+判定: `PASS / PRACTICE_PDF_COMPLETE`
+
+品質:
+- A4縦5ページ
+- pdfium 180 dpi: `5 / 5 PASS`
+- pdftoppm 180 dpi: `5 / 5 PASS`
+- 文字抽出: `PASS`
+- 欠落文字・黒四角・クリップ・重なり: `0件`
+- 一次試験型: `8 / 8`、全問五肢択一
+- 二次試験型: `4 / 4`
+- 完全解説: `12 / 12`
+- 数値・論理独立再計算: `12 / 12 PASS`
+- 一次正答一意性: `8 / 8 PASS`
+- 固定5問・15答案要素の実効接続: `15 / 15 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化の式系・条件との整合: `3 / 3 PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 問題・正答・数式変更: `0件`
+- SPEC外追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
+- clean blind公式照合: `未実施 / PowerPoint完成後`
 
 ## Topic 18 練習source
 
@@ -32,7 +60,7 @@ source:
 - 固定EXAM_ALIGNMENT変更: `0件`
 - SPEC外追加: `0件`
 - 未確認E2系実車値の真値化: `0件`
-- clean blind公式照合: `未実施 / 練習PDF・PowerPoint完成後`
+- clean blind公式照合: `未実施 / PowerPoint完成後`
 
 ## Topic 18 解説PDF
 
@@ -190,4 +218,4 @@ H24一次 問6は問題自体を固定5問の一つとして維持するが、To
 
 ## 次工程
 
-Topic 18の練習PDFを作る。`18_e2series_50hz_60hz_flux_practice_source.md` を正本として、固定5問・15答案要素、SPEC指定7項目・3可視化、一次8問・二次4問の問題・正答・数式を変更しない。PDF生成後に表示QA、文字抽出QA、数値・正答一意性QAを行い、練習PDF完成前にPowerPointへ進まない。
+Topic 18の解説画像PowerPointを作る。固定5問・15答案要素、SPEC指定7項目・3可視化、解説／練習の問題・正答・数式を変更しない。PowerPoint完成後に表示QA・文字QA・数値QAを行い、その後clean blind公式照合へ進む。
