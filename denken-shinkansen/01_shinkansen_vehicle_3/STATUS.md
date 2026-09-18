@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: `37 / 38`
-- current_status: `topic_37_completed`
+- current_status: `topic_38_exam_alignment_complete`
 - last_completed_topic: `37 COSMOS② 新幹線の電力設備を遠隔監視する`
 - active_topic: `38 COSMOS③ システムが壊れても新幹線を止めない`
-- next_start: Topic 38の制作前EXAM_ALIGNMENTを実施する。系列SPEC固定範囲「冗長化、バックアップ、フェイルセーフ、論理回路、障害検知、切替、システム信頼性」から逸脱せず、公式過去問を直近年度から調査して固定問題を選定する
+- next_start: Topic 38の固定5問・5答案要素を変更せず、公式問題PDFだけで制作前blind独立解答を行い、答案確定後に公式解答PDFで照合する
 
 ## 新品質ゲート進捗
 - [x] 01〜37 — PASS / COMPLETED
-- [ ] 38 — 未着手
+- [ ] 38 — EXAM_ALIGNMENT_COMPLETE / PASS。制作前blind独立解答は未実施
 
 ## Topic 37 最終状態
 判定: `PASS / COMPLETED`。
@@ -46,24 +46,25 @@
 - COSMOS-SCADA未確認内部仕様依存: `0件`
 - Topic 38先取り: `0件`
 
-### 今回完了した1段階
-Topic 37の最終QAを実施した。固定範囲、必須4成果物、各個別QA、固定5問・6答案要素、改訂後完成後blind独立再解答 `6 / 6 PASS`、未確認内部仕様0件、Topic 38先取り0件を横断確認し、全条件PASSのため `completed` とした。
+## Topic 38 今回完了した1段階
+制作前EXAM_ALIGNMENTを実施し、`PASS / EXAM_ALIGNMENT_COMPLETE`。
 
-## Topic 37 固定範囲
-系列SPECどおり、次を対象とした。
+- source: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability.md`
+- EXAM_ALIGNMENT QA: `topics/38_cosmos_high_reliability/38_cosmos_high_reliability_exam_alignment_qa.md`
+- 固定公式過去問: `5問・5答案要素`
+- R6下 機械 問14 — 論理回路と入力/出力波形
+- R6上 機械 問14 — ExOR・NOR・ORのビット論理演算
+- R6下 電力 問9 — 地絡保護と故障回線選択
+- R4下 電力 問13 — 複数給電線・低圧ネットワーク方式
+- R3 電力 問13 — 遮断器・保護継電器・区分開閉器による事故区間切離し
+- 固定5問の公式問題本文・図表: `確認済み`
+- 固定5問の公式解答PDF: `未参照`
+- 固定5問の第三者正答表示: `未参照`
+- 個別正答番号保存: `0件`
+- 制作前blind独立解答: `未実施`
 
-- SCADA
-- 変電所
-- センサ
-- 遠隔計測
-- A/D変換
-- デジタル情報
-- 遠隔制御
-
-固定過去問を一意に解くために必要な最小限の系統連系保護・用語定義のみ補強した。COSMOS-SCADA内部のデータ形式、通信プロトコル、ネットワーク構成、更新周期、サーバ構成、データベース構造は推測していない。Topic 38の冗長化・バックアップ・フェイルセーフ・論理回路・障害検知・切替・システム信頼性は先取りしていない。
-
-## Topic 38
-未着手。系列SPEC固定範囲は次のとおり。
+### Topic 38 固定範囲
+系列SPECどおり、次だけを対象とする。
 
 - 冗長化
 - バックアップ
@@ -73,5 +74,7 @@ Topic 37の最終QAを実施した。固定範囲、必須4成果物、各個別
 - 切替
 - システム信頼性
 
+JR東日本公開資料で確認できた「システム信頼度の向上」「事故時の情報収集・制御・早期復旧」だけを実システム事実として扱う。COSMOS/COSMOS-SCADAのサーバ台数、二重系/三重系、待機方式、通信経路、切替時間、切替条件、同期方式は推測しない。
+
 ## 完成数
-`37 / 38`。Topic 37は最終QA `PASS / COMPLETED`。次はTopic 38の制作前EXAM_ALIGNMENTから開始する。
+`37 / 38`。Topic 38は制作前EXAM_ALIGNMENTまで完了。次は制作前blind独立解答。
