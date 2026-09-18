@@ -3,24 +3,21 @@
 更新日: 2026-09-18
 
 ## 正本・現在地
-最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `14 / 16`。Topic 01〜14は品質ゲートPASSでcompleted。active topicは15「車内の照明・空調にはどれだけ電気が必要？」。
+最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `15 / 16`。Topic 01〜15は品質ゲートPASSでcompleted。active topicは16「同期機って新幹線には使わないの？」。
 
-Topic 15の前回最終QAは、技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、固定範囲境界がすべて `PASS`、進捗記録整合のみ `FAIL` で `NEEDS_REVISION` だった。指摘対象だった `topics/15_lighting_heating/15_lighting_heating_practice.md` と `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md` を、実成果物（PowerPoint完成、blind独立再解答完成）へ同期した。進捗記録同期は `2 / 2 PASS`。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更していない。
+Topic 15は、前回最終QAで唯一FAILだった進捗記録整合を同期後に再判定し、技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、進捗記録整合、固定範囲境界の全項目が `PASS`。Webカタログにも登録し `completed` とした。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更していない。
 
-状態: `topic_15_progress_sync_complete / IN_PROGRESS`
+状態: `topic_15_completed / completed`
 
-## Topic 15 前回最終QAと同期結果
-- 前回最終QA 技術内容: `PASS`
-- 前回最終QA 必須成果物: `PASS`
-- 前回最終QA 表示QA: `PASS`
-- 前回最終QA 固定EXAM_ALIGNMENT＋完成後blind独立再解答: `PASS`
-- 前回最終QA 進捗記録整合: `FAIL`（旧進捗2ファイル）
-- 前回最終QA 固定範囲境界: `PASS`
-- 前回最終判定: `NEEDS_REVISION`
-- 旧進捗1: `topics/15_lighting_heating/15_lighting_heating_practice.md` — 同期済み
-- 旧進捗2: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md` — 同期済み
-- 進捗記録同期: `2 / 2 PASS`
-- 次工程: 最終QAを再判定する
+## Topic 15 最終QA再判定
+- 技術内容: `PASS`
+- 必須成果物: `PASS`
+- 表示QA: `PASS`
+- 固定EXAM_ALIGNMENT＋完成後blind独立再解答: `PASS`
+- 進捗記録整合: `PASS`
+- 固定範囲境界: `PASS`
+- Webカタログ登録: `qualifications/denken-shinkansen/catalog.json` / `PASS`
+- 最終判定: `PASS / completed`
 
 ## Topic 15 固定範囲
 照明:
@@ -86,4 +83,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-Topic 15の最終QAを再判定する。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更しない。Topic 16は先取りしない。
+Topic 16「同期機って新幹線には使わないの？」の制作前EXAM_ALIGNMENTを作成する。系列 `SPEC.md` の固定範囲を守り、Topic 15の成果物は変更しない。
