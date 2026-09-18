@@ -5,9 +5,9 @@
 ## 正本・現在地
 最上位正本は `../MASTER_SPEC.md` と `../EXAM_ALIGNMENT_SPEC.md`。active seriesは `03_shinkansen_machine_3`。新品質基準の完成数は `14 / 16`。Topic 01〜14は品質ゲートPASSでcompleted。active topicは15「車内の照明・空調にはどれだけ電気が必要？」。
 
-Topic 15は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPointまで完了。固定7問・12答案要素は変更せず、本文マッピング `12 / 12 PASS`、練習問題→固定EXAM_ALIGNMENT接続 `12 / 12 PASS`、PowerPoint→固定EXAM_ALIGNMENT接続 `12 / 12 PASS`。練習問題は12問（基礎3 / 本試験標準7 / 複合・応用2）、全12問を五肢択一とし、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、200 dpi表示QA `3 / 3 PASS`。PowerPointは16:9・4枚、約180 dpi相当表示QA `4 / 4 PASS`、スライド外はみ出し・文字切れ・重なり・判読不能・欠落破損グリフはいずれも0件、ZIP整合性PASS。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。
+Topic 15は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習問題source、練習PDF、解説画像PowerPoint、完成後blind独立再解答まで完了。固定7問・12答案要素は変更せず、本文マッピング `12 / 12 PASS`、練習問題→固定EXAM_ALIGNMENT接続 `12 / 12 PASS`、PowerPoint→固定EXAM_ALIGNMENT接続 `12 / 12 PASS`。練習問題は12問（基礎3 / 本試験標準7 / 複合・応用2）、全12問を五肢択一とし、独立計算・論理QA `12 / 12 PASS`、正答一意性QA `12 / 12 PASS`。練習PDFはA4縦3ページ、200 dpi表示QA `3 / 3 PASS`。PowerPointは16:9・4枚、約180 dpi相当表示QA `4 / 4 PASS`、スライド外はみ出し・文字切れ・重なり・判読不能・欠落破損グリフはいずれも0件、ZIP整合性PASS。完成後blind独立再解答は、答案をcommit `e5dc7884e5500fe7b407f67c758b45e51c9501a3` で先に固定してから公式解答を照合し、`12 / 12 PASS`。教材外・固定範囲外知識による補完は0件。光束発散度、熱伝導・熱放射、工業電熱、未確認の新幹線車内設備実値、Topic 16は追加していない。
 
-状態: `topic_15_powerpoint_complete / IN_PROGRESS`
+状態: `topic_15_independent_reanswer_complete / IN_PROGRESS`
 
 ## Topic 15 固定範囲
 照明:
@@ -35,6 +35,18 @@ Topic 15は制作前 `EXAM_ALIGNMENT`、解説source本文、解説PDF、練習�
 
 品質ゲート対象は `7問・12答案要素`。制作前独立検証・公式解答照合 `12 / 12 PASS`、固定範囲外知識による答案補完 `0件`。解説source本文マッピング `12 / 12 PASS`、3段階例題 `PASS`。
 
+完成後blind独立再解答:
+- R8上 機械 問17: `(a)5 / (b)2`
+- R7上 機械 問12: `(4)`
+- R7上 機械 問17: `(a)2 / (b)2`
+- R6下 機械 問17: `(a)2 / (b)3`
+- R6上 機械 問17: `(a)2 / (b)1`
+- R4上 機械 問17: `(a)5 / (b)5`
+- R2 機械 問12: `(3)`
+- 公式解答一致: `12 / 12 PASS`
+- 教材外・固定範囲外知識による補完: `0件`
+- 記録: `topics/15_lighting_heating/15_lighting_heating_independent_reanswer.md`
+
 非選定:
 - R7下 機械 問17 — 光束発散度を直接要求し、固定範囲外。
 - R7下 機械 問12 — 熱伝導率・温度こう配を使う熱伝導問題で固定範囲外。
@@ -52,6 +64,7 @@ practice PDF: `topics/15_lighting_heating/15_lighting_heating_practice.pdf`
 practice PDF QA: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md`
 PowerPoint: `topics/15_lighting_heating/15_lighting_heating_images.pptx`
 PowerPoint QA: `topics/15_lighting_heating/15_lighting_heating_powerpoint_qa.md`
+independent reanswer: `topics/15_lighting_heating/15_lighting_heating_independent_reanswer.md`
 
 ## Topic 14
 Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENTはH30 機械 問12、完成後blind独立再解答 `1 / 1 PASS`。解説PDF・練習PDF・PowerPointの表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/14_battery/` に保存済み。
@@ -60,4 +73,4 @@ Topic 14「停電してもN700Sが走れるのはなぜ？」は最終QA再判�
 Topic 13「新幹線は主電動機以外もモーターだらけ？」は最終QA再判定PASSで `completed`。固定EXAM_ALIGNMENT 5問、完成後blind独立再解答 `5 / 5 PASS`、PDF/PPTX表示QA、進捗記録整合、固定範囲境界はいずれもPASS。成果物は `topics/13_auxiliary_motors/` に保存済み。
 
 ## 次工程
-固定EXAM_ALIGNMENTと教材成果物を変更せず、保存済み正答選択肢番号を見ない完成後blind独立再解答を7問・12答案要素で実施する。Topic 16は先取りしない。
+Topic 15の最終QAを実施する。必須成果物、表示QA、固定EXAM_ALIGNMENT、完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件PASSの場合のみ `completed` とする。Topic 16は先取りしない。
