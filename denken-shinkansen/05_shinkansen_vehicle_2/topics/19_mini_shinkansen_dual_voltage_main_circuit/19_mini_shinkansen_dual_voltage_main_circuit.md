@@ -4,17 +4,19 @@
 
 ## 状態
 
-制作前EXAM_ALIGNMENTと解説source本文を完了した。解説PDF・練習source・練習PDF・PowerPointは未着手。
+制作前EXAM_ALIGNMENT、解説source、解説PDFを完了した。練習source・練習PDF・PowerPointは未着手。
 
 固定過去問は第二種の一次4問＋二次1問、計5問。Topic 19へ直接対応する答案要素だけをゲート対象とし、周辺論点で件数を水増ししない。
 
-current_status: `topic_19_explanation_source_complete`
+current_status: `topic_19_explanation_pdf_complete`
 
 必須成果物:
 - 主source: `19_mini_shinkansen_dual_voltage_main_circuit.md`
 - 解説source: `19_mini_shinkansen_dual_voltage_main_circuit_explanation_source.md` — `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF: `19_mini_shinkansen_dual_voltage_main_circuit_explanation.pdf` — `PASS / EXPLANATION_PDF_COMPLETE`
+- 解説PDF QA: `19_mini_shinkansen_dual_voltage_main_circuit_explanation_pdf_qa.md`
 
-次工程: 解説sourceから解説PDFを作る。固定5問・9答案要素とSPEC指定9項目・3計算/グラフの範囲を変えない。ミニ新幹線の実車架線電圧、主変圧器巻数・タップ構成、絶縁定格、主変換装置・補助電源・電源切替の実構成は、一次資料で確認できたもの以外を真値化しない。
+次工程: 練習sourceを作る。固定5問・9答案要素とSPEC指定9項目・3計算/グラフの範囲を変えない。ミニ新幹線の実車架線電圧、主変圧器巻数・タップ構成、絶縁定格、主変換装置・補助電源・電源切替の実構成は、一次資料で確認できたもの以外を真値化しない。
 
 ## 固定範囲
 
@@ -177,6 +179,26 @@ current_status: `topic_19_explanation_source_complete`
 - 例題数値再計算: `3 / 3 PASS`
 - SPEC指定9項目: `9 / 9 covered`
 - SPEC指定3可視化の再生成条件: `3 / 3 fixed`
+- SPEC外追加: `0件`
+- 未確認ミニ新幹線実車値の真値化: `0件`
+- H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
+- 完成後clean blind公式照合: `未実施 / 成果物完成後に実施`
+
+## 解説PDF QA
+
+判定: `PASS / EXPLANATION_PDF_COMPLETE`
+
+- 解説PDF: `19_mini_shinkansen_dual_voltage_main_circuit_explanation.pdf`
+- QA記録: `19_mini_shinkansen_dual_voltage_main_circuit_explanation_pdf_qa.md`
+- A4縦: `2 pages`
+- pdfium 180 dpi: `2 / 2 PASS`
+- pdftoppm 180 dpi: `2 / 2 PASS`
+- 数式・数値QA: `PASS`
+- 固定過去問: `一次4問＋二次1問 / 5問`
+- 固定答案要素のPDF接続: `9 / 9 covered`
+- SPEC指定9項目: `9 / 9 covered`
+- SPEC指定3可視化: `3 / 3 PASS`
+- 3段階例題: `3 / 3 PASS`
 - SPEC外追加: `0件`
 - 未確認ミニ新幹線実車値の真値化: `0件`
 - H25負荷時タップ切換装置を実車採用方式として扱う記述: `0件`
