@@ -6,14 +6,34 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `17 / 39`
-- current_status: `topic_18_exam_alignment_complete`
+- current_status: `topic_18_explanation_source_complete`
 - last_completed_topic: `17 パワー半導体の損失比較`
 - active_topic: `18 E2系 50Hz・60Hzと磁束`
-- next_start: Topic 18の解説source本文。固定5問・15答案要素から逆算し、SPEC指定3グラフまで設計する。PDF・PowerPointはsource完成後
+- next_start: Topic 18の解説PDF。完成済み解説sourceから固定5問・15答案要素、SPEC指定7項目・3可視化を変更せずPDF化し、表示QAと数式・数値QAを行う
 
 ## 完了済み
 
 Topic 01〜17は最終QAまで `PASS / completed`。完成数は `17 / 39`。
+
+## Topic 18 解説source
+
+判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
+
+source:
+- `topics/18_e2series_50hz_60hz_flux/18_e2series_50hz_60hz_flux_explanation_source.md`
+
+品質:
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 固定過去問: `一次3問＋二次2問 / 5問`
+- 固定答案要素: `一次7＋二次8 / 15`
+- 固定要求知識の本文マッピング: `15 / 15 covered`
+- 3段階例題: `3 / 3`
+- 例題数値再計算: `3 / 3 PASS`
+- SPEC指定7項目: `7 / 7 covered`
+- SPEC指定3可視化: `3 / 3 fixed`
+- SPEC外追加: `0件`
+- 未確認E2系実車値の真値化: `0件`
+- 完成後clean blind公式照合: `未実施 / 成果物完成後`
 
 ## Topic 18 制作前EXAM_ALIGNMENT
 
@@ -119,4 +139,4 @@ clean blind候補答案:
 
 ## 次工程
 
-Topic 18の解説source本文を作る。固定5問・15答案要素から必要事項を逆算し、`E = 4.44 f N Φ_m`、`B_m = Φ_m/A`、V/f一定、`N_s = 120f/p`、滑り・滑り周波数、電源周波数とインバータ出力周波数の区別、SPEC指定3グラフを固定範囲内で接続する。未確認E2系実車値は真値化しない。
+Topic 18の解説PDFを作る。`18_e2series_50hz_60hz_flux_explanation_source.md` を正本として、固定5問・15答案要素、SPEC指定7項目・3可視化を変更しない。PDF生成後にページ表示、数式、数値、単位、電源周波数とインバータ出力周波数の区別をQAする。
