@@ -1,7 +1,7 @@
 # 14 駅やトンネルにはどう電気を配る？
 
 ## 状態
-`final_qa_needs_revision`。制作前EXAM_ALIGNMENT・制作前独立検証・解説本文・3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答まで完了し、初回最終QAを実施した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。進捗記録整合のみFAIL（旧工程5箇所）のため、Topic 14は未完了のまま。
+`progress_records_synced`。制作前EXAM_ALIGNMENT・制作前独立検証・解説本文・3段階例題・解説PDF・練習問題source・練習PDF・解説画像PowerPoint・完成後独立再解答まで完了し、初回最終QAを実施した。技術内容、必須成果物、固定EXAM_ALIGNMENT、完成後ブラインド独立再解答、PDF/PPTX QA、SPEC境界はPASS。初回最終QAで唯一FAILだった旧工程5箇所の進捗記録を現在地へ同期した。Topic 14は最終QA再実施前のため、まだ未完了。
 
 品質ゲート対象は、電気技術者試験センター公式過去問を直近年度から遡って確認し、`SPEC.md` のTopic 14固定範囲だけで解ける5問・6答案要素に固定する。件数合わせのためSPECを拡張しない。固定5問・6答案要素は、制作前独立検証 `6 / 6 PASS`、完成後独立再解答 `6 / 6 PASS`、公式解答との不一致`0件`を確認した。
 
@@ -457,6 +457,7 @@
 - 初回最終QA: `topics/14_distribution/14_distribution_final_qa.md` — `NEEDS_REVISION / IN_PROGRESS`
 - 初回最終QAの技術内容・必須成果物・固定EXAM_ALIGNMENT・独立再解答・PDF/PPTX QA・SPEC境界: PASS
 - 初回最終QAの進捗記録整合: FAIL（旧工程5箇所）
+- 旧進捗記録5箇所同期: 完了
 
 完成後独立答案:
 - R8上 電力 問13: `(2)`
@@ -466,4 +467,4 @@
 - H20 電力 問17(a)(b): `(2),(3)`
 
 ## 次
-`14_distribution_explanation_qa.md`、`14_distribution_practice_source.md`、`14_distribution_practice_qa.md`、`14_distribution_powerpoint_qa.md`、`14_distribution_independent_reanswer.md` の旧工程記録5箇所を現在地へ同期する。固定EXAM_ALIGNMENT、数式、問題、正答、PDF/PPTX、独立再解答結果は変更しない。
+Topic 14の最終QAを再実施する。固定EXAM_ALIGNMENT、教材内容、PDF/PPTX QA、完成後独立再解答、SPEC境界、進捗記録整合を再確認し、すべてPASSした場合のみ `completed` とする。
