@@ -7,9 +7,9 @@
 
 Topic 01〜15は最終QAまで `PASS / completed`。完成数は `15 / 39`。
 
-現在地は `topic_16_final_qa_needs_progress_sync`。Topic 16 `700系 多レベル変換器とPWM` は、固定一次4問＋二次1問・26答案要素、解説source/PDF、練習source/PDF、PowerPoint、完成後blind再解答まで品質ゲートを通過済み。最終QAでは技術内容・必須成果物・表示QA・試験対応・SPEC境界は全PASSだったが、主source等4箇所の進捗記録だけに旧工程表現が残っているため `NEEDS_REVISION / IN_PROGRESS` とした。completedにはしない。
+現在地は `topic_16_progress_sync_complete`。Topic 16 `700系 多レベル変換器とPWM` は、固定一次4問＋二次1問・26答案要素、解説source/PDF、練習source/PDF、PowerPoint、完成後blind再解答まで品質ゲートを通過済み。前回最終QAでは技術内容・必須成果物・表示QA・試験対応・SPEC境界は全PASSで、主source等4箇所の進捗記録だけが `NEEDS_REVISION` だった。今回、その4箇所を `4 / 4` 同期した。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更していない。Topic 16は最終QA再判定前のためcompletedにはしない。
 
-次工程は、最終QAで検出した進捗記録4箇所だけを現在工程へ同期する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。同期後にTopic 16最終QAを再判定する。
+次工程はTopic 16最終QAの再判定のみ。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
 
 ## Topic 16 固定EXAM_ALIGNMENT
 source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
@@ -186,6 +186,20 @@ source: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_co
 - SPEC外追加: `0件`
 - 判定: `NEEDS_REVISION / IN_PROGRESS`
 
+## Topic 16 進捗記録同期
+- 最終QA指摘4箇所: `4 / 4 同期完了`
+- 主source冒頭 `## 状態`: `topic_16_progress_sync_complete`
+- 主source末尾 `## 次工程`: `最終QA再判定`
+- 練習source末尾 `## 次工程`: `topic_16_progress_sync_complete / 最終QA再判定`
+- 練習PDF QA末尾 `## 現在地`: `topic_16_progress_sync_complete / 最終QA再判定`
+- 技術成果物変更: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 問題・正答変更: `0件`
+- PDF/PPTX変更: `0件`
+- blind再解答結果変更: `0件`
+- SPEC外追加: `0件`
+- 判定: `PASS / PROGRESS_SYNC_COMPLETE`
+
 ## Topic 16 SPEC固定範囲
 扱う内容:
 - 多レベル変換
@@ -223,4 +237,4 @@ SPEC指定可視化:
 Topic 01〜15は完了済み。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QAは各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16最終QAで検出した進捗記録4箇所だけを現在工程へ同期する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。同期後にTopic 16最終QAを再判定する。
+Topic 16最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・blind再解答結果は変更しない。
