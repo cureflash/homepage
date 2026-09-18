@@ -4,8 +4,8 @@
 
 ## 状態
 
-- stage: `PROGRESS_RECORDS_SYNCED`
-- completion: `in_progress`
+- stage: `COMPLETED`
+- completion: `completed`
 - 制作前EXAM_ALIGNMENT: `PASS`
 - 品質ゲート対象: 一次5問・25答案要素
 - 制作前blind独立再解答: `25 / 25 PASS`
@@ -17,6 +17,7 @@
 - 完成後独立再解答: `25 / 25 PASS`
 - 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`
 - 進捗記録同期: `PASS / PROGRESS_RECORDS_SYNCED`
+- 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
 - 必須説明: `16 / 16`
 - 固定一次5問への接続: `25 / 25答案要素`
 - 3段階例題: `3 / 3`
@@ -25,7 +26,7 @@
 - 二次数合わせ: `0件`
 - Topic 20先取り: `0件`
 - 実設備CT・VTの未確認実値追加: `0件`
-- 次工程: 最終QA再実施
+- 次工程: Topic 20 制作前EXAM_ALIGNMENT
 
 ## 1. SPEC固定範囲
 
@@ -608,4 +609,4 @@ VTの変圧比は
 
 ## 9. 次工程
 
-Topic 19の最終QAを再実施する。固定一次5問・25答案要素、二次採用0問・二次数合わせ0件、SPEC固定範囲10項目、実在成果物と進捗記録の整合を再確認し、PASSの場合のみ `completed` 状態同期へ進む。
+Topic 20「East iは走りながら何をどう測る？」の制作前EXAM_ALIGNMENTへ進む。
