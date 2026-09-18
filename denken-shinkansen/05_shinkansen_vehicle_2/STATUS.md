@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `15 / 39`
-- current_status: `topic_16_exam_alignment_complete`
+- current_status: `topic_16_explanation_source_complete`
 - last_completed_topic: `15 500系 高速域の出力・熱解析`
 - active_topic: `16 700系 多レベル変換器とPWM`
-- next_start: Topic 16の固定EXAM_ALIGNMENTを変更せず、解説本文＋3段階例題を制作する
+- next_start: Topic 16の固定EXAM_ALIGNMENTと解説本文を変更せず、解説PDFを制作する
 
 ## 品質ゲート進捗
 - [x] 01 0系① 主変圧器の等価回路 — PASS
@@ -26,7 +26,7 @@
 - [x] 13 300系④ 回生と四象限運転 — PASS
 - [x] 14 300系⑤ 走行抵抗と必要けん引力 — PASS
 - [x] 15 500系 高速域の出力・熱解析 — PASS
-- [ ] 16 700系 多レベル変換器とPWM — EXAM_ALIGNMENT COMPLETE / 制作中
+- [ ] 16 700系 多レベル変換器とPWM — EXPLANATION_SOURCE_COMPLETE / 制作中
 
 詳細な過去TopicのQAは各 `topics/` 配下のsource・QAを正本とする。
 
@@ -50,6 +50,21 @@
 - 未確認700系実車値の真値化: `0件`
 - 正答記号・個別最終解のsource保存: `0件`
 - 判定: `PASS / EXAM_ALIGNMENT_COMPLETE`
+
+## Topic 16 解説source
+- path: `topics/16_700series_multilevel_converter_pwm/16_700series_multilevel_converter_pwm.md`
+- 解説本文: `完成`
+- 3段階例題: `3 / 3 PASS`
+- 例題数値再計算: `PASS`
+- 固定5過去問・26答案要素の本文マッピング: `26 / 26 PASS`
+- SPEC指定8項目: `8 / 8 covered`
+- SPEC指定3可視化の再生成条件: `3 / 3 PASS`
+- 共通仮定モデルの実車値誤認防止: `PASS`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 正答記号・固定過去問の個別最終解保存: `0件`
+- SPEC外追加: `0件`
+- 未確認700系実車値の真値化: `0件`
+- 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`
 
 ## Topic 16 SPEC固定範囲
 扱う内容:
@@ -78,4 +93,4 @@ SPEC指定可視化:
 Topic 01〜15は最終QAまで `PASS / completed`。個別の固定EXAM_ALIGNMENT、成果物、blind再解答、最終QA、既知の注意事項は各Topic配下のsource・QAを正本とする。
 
 ## 次工程
-Topic 16「700系 多レベル変換器とPWM」の解説本文＋3段階例題を制作する。固定一次4問＋二次1問・26答案要素は変更しない。
+Topic 16「700系 多レベル変換器とPWM」の解説PDFを制作する。固定一次4問＋二次1問・26答案要素、SPEC指定8項目・3可視化、解説本文、範囲境界を変更しない。
