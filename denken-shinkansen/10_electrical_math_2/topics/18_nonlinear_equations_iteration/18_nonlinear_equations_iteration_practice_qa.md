@@ -38,4 +38,4 @@
 
 `PASS / PRACTICE_PDF_COMPLETE`
 
-次工程はTopic 18の解説画像PowerPointを作成し、表示QAを行う。
+解説画像PowerPoint、完成後独立検証、初回最終QAまで完了済み。次工程はTopic 18の最終QA再判定である。
