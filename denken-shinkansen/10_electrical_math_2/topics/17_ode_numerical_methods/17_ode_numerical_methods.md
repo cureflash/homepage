@@ -2,9 +2,9 @@
 
 ## 状態
 
-`topic_17_exam_alignment_complete / IN_PROGRESS`
+`topic_17_preproduction_numerical_validation_complete / IN_PROGRESS`
 
-2026-09-18、制作前EXAM_ALIGNMENTを実施した。教材本文・PDF・練習問題・PowerPoint・完成後独立再解答は未着手。次工程は制作前独立数値検証である。
+2026-09-18、制作前EXAM_ALIGNMENTと制作前独立数値検証を完了した。教材本文・PDF・練習問題・PowerPoint・完成後独立検証は未着手。次工程は解説本文＋3段階例題である。
 
 ## 固定範囲
 
@@ -138,6 +138,45 @@ m dv/dt = Ftraction(v) - Fresistance(v)
   - https://wagtail.cds.tohoku.ac.jp/coda/clang/c-6-application-sup-ode-runge-kutta.html
   - Euler法とRunge-Kutta法の位置付け・逐次計算の説明を確認
 
+## 制作前独立数値検証
+
+記録:
+`17_ode_numerical_methods_preproduction_validation.md`
+
+再現用スクリプト:
+`17_ode_numerical_methods_preproduction_validation.py`
+
+解析解が既知の正規化一次減衰系
+
+```text
+dy/dt = -y
+y(0) = 1
+y(1) = e^(-1) = 0.367879441171...
+```
+
+をEuler法で独立計算した。
+
+`h=0.25` の手計算は
+
+```text
+1 -> 0.75 -> 0.5625 -> 0.421875 -> 0.31640625
+```
+
+で、スクリプトと一致した。
+
+`t=1` の絶対誤差は
+
+```text
+h=0.5    : 0.117879441171
+h=0.25   : 0.051473191171
+h=0.125  : 0.024270525366
+h=0.0625 : 0.011805310720
+```
+
+となり、この検証問題では刻み幅を半分にするごとに誤差が単調減少した。
+
+判定: `PASS / PREPRODUCTION_NUMERICAL_VALIDATION_COMPLETE`
+
 ## 制作品質ゲート
 
 - `SPEC.md` 固定範囲外追加: `0件`
@@ -145,9 +184,10 @@ m dv/dt = Ftraction(v) - Fresistance(v)
 - Euler法・Runge-Kutta法を直接要求する確認済み過去問: `0問`
 - 非該当問題の固定件数への水増し: `0件`
 - 第一種・第三種による件数水増し: `0件`
+- 制作前独立数値検証: `PASS`
 - Topic 18以降の先取り: `0件`
 - 未確認実車値依存: `0件`
 
 ## 次工程
 
-制作前独立数値検証を行う。解析解が既知の一次初期値問題をEuler法で再計算し、刻み幅依存・誤差を独立確認する。公式過去問5問は接続確認用であり、Euler法・Runge-Kutta法を直接要求する固定過去問として扱わない。
+固定済みEXAM_ALIGNMENTと制作前独立数値検証を変更せず、解説本文＋3段階例題を作成する。
