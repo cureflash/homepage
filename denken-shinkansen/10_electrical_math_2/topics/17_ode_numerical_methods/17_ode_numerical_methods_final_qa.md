@@ -2,13 +2,13 @@
 
 対象: `17 常微分方程式の数値解法`
 
-実施日: 2026-09-18
+再判定日: 2026-09-18
 
 ## 判定
 
-`NEEDS_REVISION / IN_PROGRESS`。
+`PASS / completed`。
 
-必須成果物、固定EXAM_ALIGNMENT、完成後独立検証、PDF/PowerPoint表示QA、SPEC境界はPASS。ただし進捗記録4ファイルが実成果物より古いため、GitHub正本の状態整合が未完了であり `completed` にはしない。
+初回 `NEEDS_REVISION` の原因だった進捗記録4ファイルは実成果物へ同期済み。必須成果物、固定EXAM_ALIGNMENT、完成後独立検証、PDF/PowerPoint表示QA、SPEC境界、進捗記録整合を再確認し、全品質ゲートPASSと判定する。
 
 ## 必須成果物の実在確認
 
@@ -70,8 +70,6 @@ GitHub正本上で次を確認した。
 
 ## 表示・成果物QA
 
-既存QA記録を再照合した。
-
 - 解説PDF: A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、数値整合 `PASS`
 - 3段階例題: `3 / 3 PASS`
 - 練習問題: 全12問（一次型8問／記述型4問）、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`
@@ -98,28 +96,28 @@ GitHub正本上で次を確認した。
 - 第一種・第三種過去問による件数水増し: `0件`
 - 未確認実車値依存: `0件`
 
-## 進捗記録整合QA
+## 進捗記録整合QAの再判定
 
-実成果物は完成後独立検証まで完了し、主source・STATUS・HANDOFF・完成後独立検証記録は「次工程: 最終QA」で同期済み。
-
-一方、以下4ファイルの次工程記録が実状態より古い。
+初回FAILの原因だった4ファイルと系列進捗2ファイルをGitHub正本で再確認した。
 
 1. `17_ode_numerical_methods_explanation_qa.md`
-   - 現在: `次工程は練習問題sourceを作成する。`
-   - 実状態: 練習問題source、練習PDF、PowerPoint、完成後独立検証まで完了
+   - `次工程`: Topic 17最終QA再判定 — PASS
 2. `17_ode_numerical_methods_practice.md`
-   - 現在: `次工程は練習PDFを作成し、表示QA・文字抽出QA・数値整合を確認する。`
-   - 実状態: 練習PDF、PowerPoint、完成後独立検証まで完了
+   - `次工程`: Topic 17最終QA再判定 — PASS
 3. `17_ode_numerical_methods_practice_qa.md`
-   - 現在: `次工程は解説画像PowerPointを作成し、PowerPoint表示QAを行う。`
-   - 実状態: PowerPoint、完成後独立検証まで完了
+   - `次工程`: Topic 17最終QA再判定 — PASS
 4. `17_ode_numerical_methods_powerpoint_qa.md`
-   - 現在: `Topic 17の完成後独立検証を実施する。`
-   - 実状態: 完成後独立検証 `PASS` 済み
+   - `次工程`: Topic 17最終QA再判定 — PASS
+5. `../../STATUS.md`
+   - `current_status`: `topic_17_progress_sync_complete` — PASS
+   - `next_start`: Topic 17最終QA再判定 — PASS
+6. `../../HANDOFF.md`
+   - `current_status`: `topic_17_progress_sync_complete` — PASS
+   - `次工程`: Topic 17最終QA再判定 — PASS
 
-進捗記録整合: `2 / 6 PASS`。
+進捗記録整合: `6 / 6 PASS`。
 
-技術本文、固定EXAM_ALIGNMENT、問題、正答、PDF、PowerPoint、完成後独立検証の技術内容に修正要求はない。
+技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立検証の技術内容変更: `0件`。
 
 ## 最終判定
 
@@ -132,8 +130,8 @@ GitHub正本上で次を確認した。
 - 固定範囲外追加0件: PASS
 - 未確認実車値依存0件: PASS
 - 表示QA: PASS
-- 進捗記録と実成果物の整合: `2 / 6 PASS`
+- 進捗記録と実成果物の整合: `6 / 6 PASS`
 
-総合判定: `NEEDS_REVISION / IN_PROGRESS`。
+総合判定: `PASS / completed`。
 
-次工程は上記4ファイルの進捗記録だけを実成果物へ同期する。固定EXAM_ALIGNMENT、技術本文、練習問題、正答、PDF、PowerPoint、完成後独立検証は変更しない。同期後に最終QAを再判定する。
+Topic 17を完了とし、次はTopic 18 `非線形方程式と反復計算` の制作前EXAM_ALIGNMENTへ進む。
