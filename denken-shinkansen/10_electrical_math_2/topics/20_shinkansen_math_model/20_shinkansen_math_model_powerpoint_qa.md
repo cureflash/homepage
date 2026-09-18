@@ -94,4 +94,4 @@
 
 ## 次工程
 
-固定済みEXAM_ALIGNMENT、制作前独立検証、解説本文・解説PDF・練習問題source・練習PDF・PowerPointを変更せず、Topic 20の完成後独立検証を行う。
+完成後独立検証、初回最終QAまで完了済み。固定済みEXAM_ALIGNMENT、技術本文・問題・正答・PDF・PowerPoint・完成後独立検証結果は変更せず、Topic 20の最終QAを再判定する。
