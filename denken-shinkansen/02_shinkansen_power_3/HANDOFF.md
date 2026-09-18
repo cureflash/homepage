@@ -8,7 +8,7 @@
 詳細な完了履歴は `STATUS.md` と各Topicのsource・QA記録を正本とする。
 
 ## 今回進捗
-Topic 16の練習PDF＋QAを完成した。A4縦4ページ、全12問・全問五肢択一、基礎3問／本試験標準7問／複合2問。200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、数値・論理再検算 `12 / 12 PASS`、正答一意性 `12 / 12 PASS`、固定5出題回・7答案要素への接続 `7 / 7 PASS`。公式過去問の問題文・保存済み正答は転記せず、完成後ブラインド独立再解答を汚染する公式正答番号の教材転記は0件。SPEC外追加、件数合わせ、未確認新幹線実設備値の真値化はいずれも0件。PowerPointは未着手。
+Topic 16の解説画像PowerPoint＋QAを完成した。16:9・4枚。固定5出題回・7答案要素の要求事項可視化 `7 / 7 PASS`、表示QA `4 / 4 PASS`、overflow `0件`、PPTX ZIP整合性 `PASS`、PowerPoint内数式・論理QA `PASS`。公式正答番号・制作前最終答案のPowerPoint転記は0件。SPEC外追加、件数合わせ、未確認新幹線実設備値の真値化はいずれも0件。完成後ブラインド独立再解答は未実施。
 
 source: `topics/16_power_system_integration/16_power_system_integration.md`
 解説PDF: `topics/16_power_system_integration/16_power_system_integration_explanation.pdf`
@@ -16,6 +16,8 @@ source: `topics/16_power_system_integration/16_power_system_integration.md`
 練習問題source: `topics/16_power_system_integration/16_power_system_integration_practice_source.md`
 練習PDF: `topics/16_power_system_integration/16_power_system_integration_practice.pdf`
 練習PDF QA: `topics/16_power_system_integration/16_power_system_integration_practice_qa.md`
+解説画像PowerPoint: `topics/16_power_system_integration/16_power_system_integration_images.pptx`
+PowerPoint QA: `topics/16_power_system_integration/16_power_system_integration_powerpoint_qa.md`
 
 ## Topic 16 固定品質ゲート
 - R8上 電力 問2 — 発電電力・電力量・単位換算 — `(5)` PASS
@@ -52,7 +54,13 @@ source: `topics/16_power_system_integration/16_power_system_integration.md`
 - 練習PDF数値・論理再検算: `12 / 12 PASS`
 - 練習PDF正答一意性: `12 / 12 PASS`
 - 練習PDF固定5出題回・7答案要素への接続: `7 / 7 PASS`
-- 解説画像PowerPoint: 未着手
+- 解説画像PowerPoint: 16:9・4枚
+- PowerPoint固定5出題回・7答案要素の要求事項可視化: `7 / 7 PASS`
+- PowerPoint表示QA: `4 / 4 PASS`
+- PowerPoint overflow: `0件`
+- PowerPoint ZIP整合性: `PASS`
+- PowerPoint内数式・論理QA: `PASS`
+- 完成後ブラインド独立再解答保護: 公式正答番号・制作前最終答案のPowerPoint転記 `0件`
 - 完成後ブラインド独立再解答: 未実施
 - SPEC固定範囲外追加: `0件`
 - 件数合わせの仕様追加: `0件`
@@ -65,7 +73,7 @@ source: `topics/16_power_system_integration/16_power_system_integration.md`
 - 実設備値は一次資料確認済みのものだけを実値とする。
 
 ## 次
-Topic 16の解説画像PowerPointを作成する。
+Topic 16の完成後ブラインド独立再解答を実施する。
 
 ## 直前完了テーマ
 Topic 15 `回生した電気はどこへ行く？` は `PASS / completed`。固定5出題回・8答案要素の完成後ブラインド独立再解答 `8 / 8 PASS`、公式解答一致 `8 / 8 PASS`、教材外知識補完0件、必須成果物・PDF/PPTX QA・SPEC境界・進捗記録整合を最終QAで確認済み。
