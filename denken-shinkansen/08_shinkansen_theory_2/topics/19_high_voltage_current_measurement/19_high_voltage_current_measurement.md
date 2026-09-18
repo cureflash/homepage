@@ -1,16 +1,22 @@
 # Topic 19 25kV・大電流をどう安全に測る？
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 状態
 
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- stage: `PROGRESS_RECORDS_SYNCED`
 - completion: `in_progress`
 - 制作前EXAM_ALIGNMENT: `PASS`
 - 品質ゲート対象: 一次5問・25答案要素
 - 制作前blind独立再解答: `25 / 25 PASS`
 - 公式標準解答照合: `25 / 25`
 - 解説本文QA: `PASS / EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習PDF QA: `PASS / PRACTICE_PDF_COMPLETE`
+- 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_RESTORED`
+- 完成後独立再解答: `25 / 25 PASS`
+- 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+- 進捗記録同期: `PASS / PROGRESS_RECORDS_SYNCED`
 - 必須説明: `16 / 16`
 - 固定一次5問への接続: `25 / 25答案要素`
 - 3段階例題: `3 / 3`
@@ -19,7 +25,7 @@
 - 二次数合わせ: `0件`
 - Topic 20先取り: `0件`
 - 実設備CT・VTの未確認実値追加: `0件`
-- 次工程: 解説PDF＋表示QA
+- 次工程: 最終QA再実施
 
 ## 1. SPEC固定範囲
 
@@ -580,6 +586,26 @@ VTの変圧比は
 
 判定: `PASS / EXPLANATION_SOURCE_COMPLETE`。
 
-## 8. 次工程
+## 8. 進捗記録同期
 
-解説本文をもとにTopic 19の解説PDFを作成し、全ページ表示QA・文字抽出QA・固定一次5問25答案要素への接続確認を行う。
+初回最終QAで確認された進捗記録不一致を、GitHub正本の実在成果物とQA記録に合わせて同期した。
+
+- 解説PDF＋表示QA: `PASS / EXPLANATION_PDF_COMPLETE`
+- 練習問題source＋練習PDF: `PASS / PRACTICE_PDF_COMPLETE`
+- 解説画像PowerPoint＋表示QA: `PASS / POWERPOINT_RESTORED`
+- 完成後独立再解答: `25 / 25 PASS`
+- 初回最終QA: `NEEDS_REVISION / FINAL_QA_BLOCKED`
+- 初回blocker 1: PowerPoint本体欠落 → `解消済み`
+- 初回blocker 2: 主source進捗記録不一致 → `解消済み`
+- 固定一次5問・25答案要素: `25 / 25維持`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 20先取り: `0件`
+- 実設備CT・VTの未確認実値追加: `0件`
+
+判定: `PASS / PROGRESS_RECORDS_SYNCED`。
+
+## 9. 次工程
+
+Topic 19の最終QAを再実施する。固定一次5問・25答案要素、二次採用0問・二次数合わせ0件、SPEC固定範囲10項目、実在成果物と進捗記録の整合を再確認し、PASSの場合のみ `completed` 状態同期へ進む。
