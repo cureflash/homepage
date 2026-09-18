@@ -5,14 +5,14 @@
 ## 状態
 - active_series: `07_shinkansen_machine_2`
 - exam_aligned_completed_topics: `16 / 22`
-- current_status: `topic_17_explanation_pdf_complete`
+- current_status: `topic_17_practice_source_complete`
 - last_completed_topic: `16 N700Sバッテリーから主回路へ電力を送る`
 - active_topic: `17 新幹線の速度をフィードバック制御する`
-- next_start: Topic 17 練習source制作
+- next_start: Topic 17 練習PDF制作
 
 ## 完了テーマ
 - [x] Topic 01〜16 最終QA `PASS / completed`
-- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF `PASS` / 次は練習source
+- [ ] Topic 17 `IN_PROGRESS` — 制作前EXAM_ALIGNMENT・解説source・解説PDF・練習source `PASS` / 次は練習PDF
 
 仕様authorityは `denken-shinkansen/MASTER_SPEC.md`、`denken-shinkansen/EXAM_ALIGNMENT_SPEC.md`、本系列 `SPEC.md`。仕様追加はしない。
 
@@ -221,8 +221,18 @@
 - 記録: `topics/17_speed_feedback_control/17_speed_feedback_control_explanation_pdf_qa.md`
 - 判定: `PASS / topic_17_explanation_pdf_complete`
 
+## Topic 17 練習source
+- [x] `topics/17_speed_feedback_control/17_speed_feedback_control_practice.md`
+- [x] 一次10問＋二次5問
+- [x] 一次正答一意性 `10 / 10 PASS`
+- [x] 独立再計算・論理QA `15 / 15 PASS`
+- [x] 固定5問・6答案要素へ `6 / 6` 接続
+- [x] 直列接続、開ループ経路、閉ループ、偏差、外乱経路を一次・二次で確認可能
+- [x] Topic 18〜21先取り、二自由度制御の独立論点追加、未確認実車値、固定問題の正答保存 `0件`
+- 判定: `PASS / topic_17_practice_source_complete`
+
 ## 今回進めた内容
-既存枠のTopic 17解説source成果をreconcileし、重複制作せず次工程の解説PDFを制作した。固定5問・6答案要素、3段階例題、仕様境界を維持し、表示・文字抽出QAをPASSした。
+Topic 17を解説PDF完了状態から1段階進め、一次10問＋二次5問の練習sourceを完成した。固定5問・6答案要素へ `6 / 6` 接続し、一次正答一意性 `10 / 10 PASS`、全15問の独立再計算・論理確認 `15 / 15 PASS`。仕様境界を維持した。
 
 ## 判定
-Topic 17は `PASS / topic_17_explanation_pdf_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は練習source制作。
+Topic 17は `PASS / topic_17_practice_source_complete / IN_PROGRESS`。完成数は `16 / 22` のまま。次工程は練習PDF制作。
