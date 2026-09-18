@@ -4,7 +4,9 @@
 
 ## 状態
 
-Topic 18の必須成果物、固定一次1問＋二次4問・12答案要素、完成後独立再解答 `12 / 12 PASS`、解説PDF、練習PDF、PowerPointを確認済み。練習PDFは `≈` 欠落グリフ修正後の現行blob `fb67c0ac0d3b6d9ec7656d0a759b6ac86992f242` に対して再QAし、表示・文字抽出・数値論理・固定12答案要素接続をすべてPASSした。現在 `topic_18_progress_records_synced / IN_PROGRESS`。次工程はTopic 18最終QA再実施。
+Topic 18の制作前EXAM_ALIGNMENT、解説source本文、解説PDF＋QA、練習source＋練習PDF＋QA、解説画像PowerPoint＋QA、独立再解答前ゲート、答案ロック、完成後独立再解答、最終QAまで完了した。
+
+現在 `topic_18_final_qa_pass / completed`。固定一次1問＋二次4問、計5問・12答案要素を維持し、完成後独立再解答 `12 / 12 PASS`、解説PDF・練習PDF・PowerPoint QA、仕様境界、進捗整合をすべてPASSした。技術本文・練習問題・正答・固定EXAM_ALIGNMENT・PDF/PPTX・独立再解答結果は変更していない。次工程はTopic 19「PIDで新幹線の速度を制御する」の制作前EXAM_ALIGNMENT。
 
 ## 固定範囲
 
@@ -143,7 +145,7 @@ Topic 18の必須成果物、固定一次1問＋二次4問・12答案要素、�
 - [x] Topic 19〜21先取り、仕様外独立論点、未確認実車値追加 `0件`
 - [x] 固定問題の正答記号・最終数値保存 `0件`
 
-判定: `PASS / topic_18_exam_alignment_complete / IN_PROGRESS`
+判定: `PASS / topic_18_exam_alignment_complete`
 
 # 解説source本文
 
@@ -754,8 +756,8 @@ PDF・PowerPointで作る比較グラフは、実車値ではなく教材上の�
 - [x] Topic 19〜21先取り、仕様外独立論点追加 `0件`
 - [x] 固定問題の正答記号・最終数値・完成済み個別解答保存 `0件`
 
-判定: `PASS / topic_18_explanation_source_complete / IN_PROGRESS`
+判定: `PASS / topic_18_explanation_source_complete`
 
 # 次工程
 
-固定5問・12答案要素、技術本文、成果物、独立再解答結果を変更せず、Topic 18最終QAを再実施する。
+Topic 18は最終QA `PASS / completed`。次はTopic 19「PIDで新幹線の速度を制御する」の制作前EXAM_ALIGNMENTを行う。
