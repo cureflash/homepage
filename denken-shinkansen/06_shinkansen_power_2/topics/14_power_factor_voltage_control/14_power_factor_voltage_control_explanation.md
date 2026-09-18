@@ -1,8 +1,8 @@
 # Topic 14 解説本文 source
 
 テーマ: 新幹線の力率と電圧をどう維持する？
-更新日: 2026-09-18
-stage: `EXPLANATION_SOURCE_REMEDIATED_AFTER_BLIND / IN_PROGRESS`
+更新日: 2026-09-19
+stage: `EXPLANATION_SOURCE_SYNCED_WITH_FINAL_QA / IN_PROGRESS`
 
 ## 品質ゲート前提
 
@@ -18,7 +18,9 @@ stage: `EXPLANATION_SOURCE_REMEDIATED_AFTER_BLIND / IN_PROGRESS`
 
 不足1要素は、令和2年度二次問6の「最低必要コンデンサ容量」の最終提示である。境界値 `2690.52 kvar` の導出はできていたが、「少なくとも必要」な設備容量を不足側へ丸めない答案処理が固定できていなかった。本sourceでは設備容量制約を不等式として扱い、離散容量・有効数字で表すときも必要量を下回らない手順を明示する。
 
-完成後blind独立再解答は `20 / 21 PASS`。新たな不足1要素は平成23年度二次「電力・管理」問3 (2a) の一次母線電圧で、66 kV側へ換算したリアクタンスで求めた `Vs(eq)=66.258 kV` を、問題が要求する一次母線側へ定格電圧比 `154/66` で戻す最終答案処理を落とした。本sourceでは、等価回路をどの電圧側へ換算したかを明示し、求めた電圧が要求側と異なる場合は定格電圧比で戻してから最終答案とする手順を補強する。
+修正前の完成後blind独立再解答は `20 / 21 PASS`。不足1要素は平成23年度二次「電力・管理」問3 (2a) の一次母線電圧で、66 kV側へ換算したリアクタンスで求めた `Vs(eq)=66.258 kV` を、問題が要求する一次母線側へ定格電圧比 `154/66` で戻す最終答案処理を落とした。本sourceでは、等価回路をどの電圧側へ換算したかを明示し、求めた電圧が要求側と異なる場合は定格電圧比で戻してから最終答案とする手順を補強した。
+
+補強後のlearner-facing成果物に対して2026-09-19に完成後blind独立再解答を再実施し、一次 `10 / 10`、二次 `11 / 11`、合計 `21 / 21 PASS` を確認済み。最終QAも実施済みだが、現行GitHub正本PowerPointの再QAとWebカタログ登録が未完了のためTopic 14はまだ `completed` ではない。
 
 正式過去問:
 - 令和6年度 第二種一次「電力」問5
@@ -31,8 +33,6 @@ stage: `EXPLANATION_SOURCE_REMEDIATED_AFTER_BLIND / IN_PROGRESS`
   - https://www.shiken.or.jp/chief/upload/20201122_ch_second_q01.pdf
 - 平成23年度 第二種二次「電力・管理」問3
   - https://www.shiken.or.jp/chief/upload/20111127_ch_second_q01.pdf
-
-完成後blind独立再解答で固定5問・21答案要素を全件再検証するまではcompletedにしない。
 
 ## 1. このテーマで電験は何を問うか
 
@@ -753,6 +753,7 @@ Vreq = Veq × Vbase,req / Vbase,eq
 - 固定5問・21答案要素: `21 / 21 mapped`
 - 制作前blind不足1要素: `1 / 1 explanation strengthened`
 - 完成後blind不足1要素（H23二次問3 (2a) 電圧側換算）: `1 / 1 explanation strengthened`
+- 修正版完成後blind独立再解答: `21 / 21 PASS`
 - 一次問題: `2問 / 10答案要素 covered`
 - 二次記述計算: `3問 / 11答案要素 covered`
 - 3段階例題: `3 / 3`
@@ -761,8 +762,8 @@ Vreq = Veq × Vbase,req / Vbase,eq
 - 未確認実設備値の真値化: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
-- stage判定: `EXPLANATION_SOURCE_REMEDIATED_AFTER_BLIND / IN_PROGRESS`
+- stage判定: `EXPLANATION_SOURCE_SYNCED_WITH_FINAL_QA / IN_PROGRESS`
 
 ## 次工程
 
-本sourceの完成後blind不足1要素の補強を、learner-facingの解説PDFへ同期し、必要ならPowerPointの該当スライドにも同じ「等価側→要求側」の答案処理を明示する。同期後に表示・文字抽出・数値整合QAを再実施し、その後、固定5問・21答案要素の完成後blind独立再解答を再実施する。全21答案要素PASSまでは最終QAを行わない。
+本sourceのlearner-facing反映、解説PDF再QA、固定5問・21答案要素の完成後blind再解答は完了済み。Topic 14全体では、現行GitHub正本PowerPointの再QA、Webカタログ登録、最終QA再判定が残る。固定EXAM_ALIGNMENTと教材技術範囲は変更しない。
