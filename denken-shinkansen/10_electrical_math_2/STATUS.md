@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 16 / 20
-- current_status: `topic_17_post_completion_validation_complete`
+- current_status: `topic_17_final_qa_needs_revision`
 - last_completed_topic: `16 数値微分・数値積分`
 - active_topic: `17 常微分方程式の数値解法`
-- next_start: Topic 17の最終QAを実施する
+- next_start: Topic 17の進捗記録4ファイルを実成果物へ同期する
 
 ## Topic 07 制作品質ゲート
 
@@ -268,31 +268,35 @@
 - [x] 解説画像PowerPoint（16:9・5枚、固定範囲 `5 / 5`）
 - [x] PowerPoint表示QA（再レンダリング `5 / 5 PASS`、overflow `0件`、`slides_test.py` `PASS`）
 - [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、直接Euler/RK要求0問・水増し0件を維持）
-- [ ] 最終QA
+- [x] 最終QA実施 → `NEEDS_REVISION`
+- [ ] 進捗記録4ファイルの同期
+- [ ] 最終QA再判定 → `PASS`
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 17の完成後独立検証を実施した。
+Topic 17の最終QAを実施した。
 
-- 記録: `topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.md`
-- 再現用: `topics/17_ode_numerical_methods/17_ode_numerical_methods_post_completion_validation.py`
-- 保存済み例題と異なる新規数値条件で3ケースを独立計算
-- Case A: 一次減衰 `dy/dt=-2y`、刻み幅を `0.10 -> 0.05` とすると絶対誤差が `0.0368116 -> 0.0173706` に減少
-- Case B: 教育用RL過渡、刻み幅を `0.05 s -> 0.025 s` とすると絶対誤差が `0.514732 A -> 0.242705 A` に減少
-- Case C: 教育用列車モデルを始点値Euler法で速度・位置同時更新し、3ステップの数値整合を確認
-- Runge-Kutta法はSPECどおり概念説明のみを確認
+- 最終QA記録: `topics/17_ode_numerical_methods/17_ode_numerical_methods_final_qa.md`
+- 必須成果物実在: `PASS`
+- 第二種公式過去問調査: `PASS`
 - 直接Euler法・Runge-Kutta法を要求する確認済み第二種過去問: `0問`
 - 接続確認した第二種公式過去問: `5問`
 - 非該当5問の固定品質ゲート件数への水増し: `0件`
-- 固定EXAM_ALIGNMENT変更: `0件`
+- 完成後独立検証: 新規3ケース `3 / 3 PASS`
+- 練習問題独立計算・論理QA: `12 / 12 PASS`
+- 一次型正答一意性: `8 / 8 PASS`
+- SPEC固定範囲外追加: `0件`
 - Topic 18以降の先取り: `0件`
 - 未確認実車値依存: `0件`
+- 進捗記録整合: `2 / 6 PASS`
+- blocker: 解説PDF QA、練習source、練習PDF QA、PowerPoint QAの次工程記録4ファイルが実状態より古い
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF・PowerPoint・完成後独立検証への修正要求: `0件`
 
 ## 判定
 
-`PASS / POST_COMPLETION_VALIDATION_COMPLETE`
+`NEEDS_REVISION / IN_PROGRESS`
 
 完成数は `16 / 20` のまま。
 
-次はTopic 17の最終QAを実施する。
+次はTopic 17の進捗記録4ファイルだけを実成果物へ同期し、その後に最終QAを再判定する。
