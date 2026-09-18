@@ -3,48 +3,44 @@
 updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
-current_status: `topic_14_powerpoint_canonical_corruption_confirmed`
+current_status: `topic_14_powerpoint_rebuild_reqa_complete`
 
 ## 今回完了
 
-Topic 14の最初の未解消blockerである現行PowerPoint正本を、GitHub Actions上で直接再QAした。
+Topic 14の最初の未解消blockerだった破損PowerPoint正本を、既存source・固定仕様だけで再構成し、新正本へ置換する準備と再QAを完了した。
 
-結果:
-- 現行正本: `15002 bytes`
-- Git blob: `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8`
-- SHA-256: `dcc0824a5db5acaafa467c9d2b6574fddc39d72a7e281b8bb5cfc33c95c213cf`
-- QA run: `35392633009`
-- `git hash-object` は上記Git blobと一致
-- `unzip -t`: `FAIL`
-- `missing 24279 bytes in zipfile`
-- `start of central directory not found; zipfile corrupt`
-- exit code `51`
+新正本:
+- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx`
+- size: `35351 bytes`
+- Git blob: `74ef08c777c67cf30811d48230a6e143a2377a48`
+- SHA-256: `bf643bbb5190cf8fe45a67f99696c345d1c66612f4494b0f49dba6a27b908a41`
 
-旧QA対象 `39281 bytes` と現行正本 `15002 bytes` の差も `24279 bytes`。従来の「QA指紋不一致」から、現行GitHub正本PPTX自体の破損まで原因を確定した。
+再QA:
+- ZIP整合性: `PASS`
+- 16:9・4スライド: `PASS`
+- 200 dpi相当表示: `4 / 4 PASS`
+- 文字切れ・重なり・overflow: `0件`
+- LibreOffice PDF: `4ページ PASS`
+- PDF文字抽出: `PASS / U+FFFD 0件`
+- SPEC固定10項目: `10 / 10 PASS`
+- SPEC固定3可視化: `3 / 3 PASS`
+- 固定5問・21答案要素へのPowerPoint説明接続: `21 / 21 PASS`
+- H23二次問3 (2a): `66.258 × 154/66 = 154.6 kV ≒ 155 kV` をSlide 3で確認
 
-一時QA workflowは検証後に削除済み。恒久的な仕様・成果物構成は追加していない。
-
-更新:
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_powerpoint_qa.md`
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_final_qa.md`
-- `STATUS.md`
-- `HANDOFF.md`
+固定EXAM_ALIGNMENT、固定5問・21答案要素、教材技術範囲は変更していない。
 
 ## 品質ゲート維持
 
-- 固定EXAM_ALIGNMENT: 一次2問＋二次3問、`5問・21答案要素`
 - 完成後blind: 一次 `10 / 10`、二次 `11 / 11`、合計 `21 / 21 PASS`
-- 解説PDF: A4縦5ページ、表示 `5 / 5 PASS`、3段階例題 `3 / 3`
-- 練習: 15問、一次型10＋二次型5、数値・論理 `15 / 15 PASS`
+- 解説PDF: `5 / 5 PASS`
+- 練習: 15問、数値・論理 `15 / 15 PASS`
 - 練習PDF: `7 / 7 PASS`
-- SPEC境界: PASS
 - 固定問題・答案要素変更: `0件`
 - 仕様追加: `0件`
 
-## 未完了blocker（残り2件）
+## 未完了blocker（残り1件）
 
-1. 破損した `14_power_factor_voltage_control_images.pptx` を既存source・固定仕様だけで正常なPPTXへ復旧し、新しいGitHub正本blobに対して再QAする。
-2. PowerPoint QA PASS後、`qualifications/denken-shinkansen/catalog.json` にTopic 14を登録する。
+1. `qualifications/denken-shinkansen/catalog.json` にTopic 14を既存形式どおり登録し、最終QAを再判定する。
 
 ## 現在地
 
@@ -54,20 +50,9 @@ Topic 14: `NEEDS_REVISION / IN_PROGRESS`。
 
 ## 次に行う
 
-PowerPoint正本を復旧する。固定4スライド構成・既存source・既存PowerPoint QA記録の範囲を超えて内容を追加しない。
+Webカタログの既存Topic登録形式を確認し、Topic 14を仕様追加なしで登録する。登録後に最終QAを再判定する。
 
-復旧後の必須再QA:
-- ZIP整合性
-- 16:9・4スライド
-- 200 dpi全スライド表示
-- 文字切れ・重なり・overflow
-- LibreOffice PDF変換・文字抽出
-- SPEC固定10項目 `10 / 10`
-- SPEC固定3可視化 `3 / 3`
-- 固定5問・21答案要素への説明接続
-- H23二次問3 (2a) `66.258 × 154/66 = 154.6 kV ≒ 155 kV`
-
-全件PASSまではWebカタログ登録・Topic 14完了・Topic 15着手へ進めない。
+全件PASSまではTopic 14を `completed` にせず、Topic 15へ進めない。
 
 ## 品質境界
 

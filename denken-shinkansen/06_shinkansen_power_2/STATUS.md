@@ -4,20 +4,16 @@ updated: 2026-09-19
 series: `06_shinkansen_power_2`
 active_topic: `14`
 theme: 新幹線の力率と電圧をどう維持する？
-current_status: `topic_14_powerpoint_canonical_corruption_confirmed`
+current_status: `topic_14_powerpoint_rebuild_reqa_complete`
 completed_topics: `13 / 22`
 
 ## Completed through Topic 13
 
 Topic 01〜13は `completed`。
 
-直近完了:
-- Topic 12「N700Sが何本も同時加速したら？」: `PASS / completed`、固定5問・25答案要素 `25 / 25 PASS`
-- Topic 13「単相の新幹線負荷は三相系統を乱さない？」: `PASS / completed`、固定2問・8答案要素 `8 / 8 PASS`
-
 ## Topic 14 progress
 
-Topic 14「新幹線の力率と電圧をどう維持する？」は、制作前EXAM_ALIGNMENT、制作前blind、解説source/PDF、練習source/PDF、PowerPoint、各QA、修正版成果物に対する完成後blindまで実施済み。
+制作前EXAM_ALIGNMENT、制作前blind、解説source/PDF、練習source/PDF、PowerPoint、各QA、修正版learner-facing成果物に対する完成後blindまで実施済み。
 
 完成後blind:
 - R6一次「電力」問5: `5 / 5 PASS`
@@ -31,50 +27,38 @@ Topic 14「新幹線の力率と電圧をどう維持する？」は、制作前
 
 固定EXAM_ALIGNMENT、固定5問・21答案要素、教材技術範囲は変更していない。
 
-### 成果物・QA
+### PowerPoint復旧・再QA
 
-解説:
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.md`
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation.pdf`
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_explanation_pdf_qa.md`
-- A4縦5ページ、200 dpi `5 / 5 PASS`
-- 3段階例題 `3 / 3 PASS`
-- SPEC固定3可視化 `3 / 3 PASS`
-- 固定5問・21答案要素 `21 / 21 covered`
+破損していた `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx` を、既存source・固定仕様だけで再構成した。
 
-練習:
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice.md`
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice.pdf`
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_practice_pdf_qa.md`
-- 15問（一次型10＋二次型5）
-- 200 dpi `7 / 7 PASS`
-- 数値・論理 `15 / 15 PASS`
-- 一次型正答一意性 `10 / 10 PASS`
-- 固定5問・21答案要素 `21 / 21 covered`
+新正本:
+- size: `35351 bytes`
+- Git blob: `74ef08c777c67cf30811d48230a6e143a2377a48`
+- SHA-256: `bf643bbb5190cf8fe45a67f99696c345d1c66612f4494b0f49dba6a27b908a41`
 
-PowerPoint:
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_images.pptx`
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_powerpoint_qa.md`
-- 現行GitHub正本: `15002 bytes`
-- Git blob: `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8`
-- SHA-256: `dcc0824a5db5acaafa467c9d2b6574fddc39d72a7e281b8bb5cfc33c95c213cf`
-- GitHub Actions run `35392633009` で正本を直接再QA
-- `unzip -t`: `FAIL`
-- `missing 24279 bytes in zipfile`
-- `start of central directory not found; zipfile corrupt`
-- 旧QA対象 `39281 bytes` と現行正本の差も `24279 bytes`
-- 判定: `FAIL / CURRENT_BINARY_CORRUPT`
+QA:
+- ZIP整合性: `PASS`
+- 16:9・4スライド: `PASS`
+- 200 dpi相当表示: `4 / 4 PASS`
+- overflow: `0件`
+- LibreOffice PDF変換: `4ページ PASS`
+- PDF文字抽出: `PASS / U+FFFD 0件`
+- SPEC固定10項目: `10 / 10 PASS`
+- SPEC固定3可視化: `3 / 3 PASS`
+- 固定5問・21答案要素のPowerPoint説明接続: `21 / 21 PASS`
+- H23二次問3 (2a) `66.258 × 154/66 = 154.6 kV ≒ 155 kV`: 収録・確認済み
 
-従来のPowerPoint blockerは「QA指紋不一致」ではなく、現行GitHub正本PPTX自体の破損まで原因を確定した。旧QAの表示・構造PASSを現行バイナリへ流用しない。
+### 最終QA
 
-最終QA:
-- `topics/14_power_factor_voltage_control/14_power_factor_voltage_control_final_qa.md`
-- 判定: `NEEDS_REVISION / IN_PROGRESS`
+`topics/14_power_factor_voltage_control/14_power_factor_voltage_control_final_qa.md`
 
-### 最終QA blocker（残り2件）
+判定: `NEEDS_REVISION / IN_PROGRESS`
 
-1. 破損した現行PowerPoint正本を、既存source・固定仕様の範囲だけで正常なPPTXへ復旧し、新しい正本blobを再QAする。
-2. PowerPoint復旧・再QA PASS後、`qualifications/denken-shinkansen/catalog.json` にTopic 14を登録する。
+技術内容・過去問対応・必須成果物はPASS。残るblockerはWebカタログ登録1件のみ。
+
+### 最終QA blocker（残り1件）
+
+1. `qualifications/denken-shinkansen/catalog.json` にTopic 14を既存カタログ仕様どおり登録し、最終QAを再判定する。
 
 ### 品質境界
 
@@ -104,10 +88,10 @@ PowerPoint:
 - [x] Topic 11 completed
 - [x] Topic 12 completed
 - [x] Topic 13 completed
-- [ ] Topic 14 — final QA `NEEDS_REVISION`; PPTX破損＋Webカタログ未登録
+- [ ] Topic 14 — PowerPoint復旧・再QA PASS、Webカタログ未登録
 
 ## next_start
 
-Topic 14のPowerPoint正本を、固定5問・21答案要素と教材技術範囲を変更せず復旧する。復旧後、新しいGitHub正本blobに対してZIP整合性、16:9・4スライド、200 dpi表示、overflow、PDF変換・文字抽出、SPEC固定10項目・3可視化、固定21答案要素、H23二次問3 (2a) の電圧側復元説明を再QAする。
+`qualifications/denken-shinkansen/catalog.json` の既存Topic登録形式を確認し、Topic 14を仕様追加なしで登録する。登録後に最終QAを再判定する。
 
-PowerPoint QA PASS後にWebカタログ登録、最終QA再判定を行う。全件PASSまではTopic 14を `completed` にせず、Topic 15へ進めない。
+全件PASSまではTopic 14を `completed` にせず、Topic 15へ進めない。
