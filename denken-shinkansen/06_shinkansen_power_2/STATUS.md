@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `13`
 theme: 単相の新幹線負荷は三相系統を乱さない？
-current_status: `topic_13_final_qa_needs_revision`
+current_status: `topic_13_progress_records_synced`
 completed_topics: `12 / 22`
 
 ## Topic 12 final result
@@ -50,7 +50,7 @@ source:
 
 ## Topic 13 progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋PowerPoint QA、完成後blind独立再解答、初回最終QAまで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋PowerPoint QA、完成後blind独立再解答、初回最終QA、初回最終QAで指摘された進捗記録同期まで完了。
 
 正式品質ゲート:
 - 平成28年度 第二種一次「法規」問6 — `5答案要素`
@@ -115,12 +115,16 @@ source:
 初回最終QA:
 - 技術内容・固定EXAM_ALIGNMENT・必須教材成果物・PDF/PPTX QA・練習QA・完成後blind・SPEC境界: PASS。
 - 判定: `NEEDS_REVISION / IN_PROGRESS`。
-- exact blocker 1: `13_three_phase_unbalance.md` の状態・次工程が制作前の旧記録。
-- exact blocker 2: `13_three_phase_unbalance_practice.md` の状態・次工程が練習PDF前の旧記録。
-- exact blocker 3: `13_three_phase_unbalance_powerpoint_qa.md` が完成後blind未実施とする旧記録。
-- exact blocker 4: `qualifications/denken-shinkansen/catalog.json` にTopic 13が未登録。
+- blockerは技術内容ではなく進捗記録3箇所＋Webカタログ1件のみだった。
 
-技術内容の修正は不要。4 blocker解消と最終QA再判定前のためTopic 13は `IN_PROGRESS`、完成数は `12 / 22` のまま。
+進捗記録同期:
+- `13_three_phase_unbalance.md` の状態・次工程を実成果物状態へ同期: PASS。
+- `13_three_phase_unbalance_practice.md` の状態・次工程を実成果物状態へ同期: PASS。
+- `13_three_phase_unbalance_powerpoint_qa.md` の完成後blind状態を `8 / 8 PASS` へ同期: PASS。
+- `qualifications/denken-shinkansen/catalog.json` にTopic 13を登録: PASS。
+- 技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・完成後blind結果の変更: `0件`。
+
+4 blockerは解消したが、最終QA再判定をまだ実施していないためTopic 13は `IN_PROGRESS`、完成数は `12 / 22` のまま。
 
 品質境界:
 - 正式過去問追加: `0件`
@@ -145,6 +149,7 @@ source:
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_powerpoint_qa.md`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_blind_reanswer_20260918.md`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_final_qa.md`
+- `qualifications/denken-shinkansen/catalog.json`
 
 ## Gate checklist
 
@@ -160,8 +165,8 @@ source:
 - [x] Topic 10 completed
 - [x] Topic 11 completed
 - [x] Topic 12 completed
-- [ ] Topic 13 — initial final QA `NEEDS_REVISION`; technical gates PASS; progress-record sync 3件＋Web catalog 1件 pending
+- [ ] Topic 13 — progress records synced＋Web catalog registered; final QA rerun pending
 
 ## next_start
 
-Topic 13の技術成果物・固定EXAM_ALIGNMENT・問題・正答は変更しない。`13_three_phase_unbalance.md`、`13_three_phase_unbalance_practice.md`、`13_three_phase_unbalance_powerpoint_qa.md` の旧進捗記録を実成果物状態へ同期し、`qualifications/denken-shinkansen/catalog.json` にTopic 13を登録する。その後、最終QAを再判定する。4 blocker解消まではcompletedにせず、Topic 14以降・Topic 16故障計算は先取りしない。
+Topic 13の最終QAを再判定する。技術成果物・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTX・完成後blind独立再解答結果は変更しない。再判定PASS時のみ `completed` として完成数を `13 / 22` へ更新する。再判定完了まではTopic 14以降・Topic 16故障計算を先取りしない。
