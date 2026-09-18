@@ -6,9 +6,9 @@
 
 固定EXAM_ALIGNMENTの一次5問・25答案要素、およびTopic 18固定範囲だけから練習問題12問を作成した。二種理論は一次試験が中心であり、固定範囲だけで完結する二次記述式を採用していないため、二次数合わせは行わない。
 
-- completion: `in_progress`
-- stage: `PROGRESS_RECORDS_SYNCED`
-- 次工程: Topic 18最終QA再実施
+- completion: `completed`
+- stage: `COMPLETED`
+- 次工程: Topic 19 制作前EXAM_ALIGNMENT
 - 問題数: 12問
 - 形式: 全問五肢択一
 - 難易度: 基礎3問 / 本試験標準6問 / 複合・ひっかけ3問
@@ -275,4 +275,4 @@ V+>V- なので理想コンパレータの出力は正側へ飽和する方向�
 
 # 次工程
 
-Topic 18最終QAを再実施する。固定一次5問・25答案要素、完成後独立再解答 `25 / 25 PASS`、解説PDF・練習PDF・PowerPoint各QA、SPEC境界、進捗記録整合を再確認し、PASSした場合のみ completed とする。
+Topic 19「25kV・大電流をどう安全に測る？」の制作前EXAM_ALIGNMENTへ進む。
