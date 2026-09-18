@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `15 / 16`
-- current_status: `topic_16_practice_pdf_remediation_complete`
+- current_status: `topic_16_powerpoint_remediation_complete`
 - last_completed_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
 - active_topic: `16 同期機って新幹線には使わないの？`
-- next_start: 改訂済みsourceのベクトル図補強を解説画像PowerPointへ反映し、16:9・4枚を維持して表示QA・ZIP整合性QAを再実施する
+- next_start: 改訂済み教材だけを使い、保存済み正答を先に見ずに固定EXAM_ALIGNMENT 6問をblind独立再解答する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [x] 15 車内の照明・空調にはどれだけ電気が必要？ — 最終QA再判定PASS / completed
-- [ ] 16 同期機って新幹線には使わないの？ — 解説PDF・練習PDFへベクトル図補強反映済み / NEEDS_REVISION
+- [ ] 16 同期機って新幹線には使わないの？ — 解説PDF・練習PDF・PowerPointへベクトル図補強反映済み / NEEDS_REVISION
 
 ## Topic 16 制作品質状態
 - 固定範囲: 同期機 / 同期発電機 / 同期電動機 / 回転磁界 / 同期速度 / 極数 / 周波数 / 界磁 / 励磁 / 電機子 / 力率 / 電機子反作用 / 同期リアクタンス / V曲線の基本 / 並行運転の基本
@@ -84,13 +84,29 @@
 - 固定範囲外追加: `0件`
 - QA記録: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md`
 
+### 解説画像PowerPoint再同期
+- PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx`
+- source改訂反映: `PASS`
+- 16:9: `PASS`
+- スライド数: `4`
+- 表示QA: `4 / 4 PASS`
+- `slides_test.py` はみ出し検査: `PASS`（0件）
+- PowerPoint ZIP整合性: `PASS`
+- `V = E + jXsI`: `PASS`
+- `jXsI` は `I` より90°進む: `PASS`
+- `E の終点 → V の終点 = jXsI` の尾→頭判定収録: `PASS`
+- `V の終点 → E の終点` の逆向き候補除外: `PASS`
+- 固定EXAM_ALIGNMENT 6問・6答案要素接続: `6 / 6 PASS`
+- 固定範囲外追加: `0件`
+- QA記録: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md`
+
 ### 派生成果物の同期状態
 - explanation PDF: `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf` — source改訂反映済み / `PASS`
 - explanation PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md` — 再同期後QA / `PASS`
 - practice PDF: `topics/16_synchronous_machine/16_synchronous_machine_practice.pdf` — practice source改訂反映済み / `PASS`
 - practice PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_practice_pdf_qa.md` — 再同期後QA / `PASS`
-- PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx` — source改訂未反映 / `REGEN_REQUIRED`
-- PowerPoint QA: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md` — 改訂前PowerPointに対する記録
+- PowerPoint: `topics/16_synchronous_machine/16_synchronous_machine_images.pptx` — source改訂反映済み / `PASS`
+- PowerPoint QA: `topics/16_synchronous_machine/16_synchronous_machine_powerpoint_qa.md` — 再同期後QA / `PASS`
 
 ### 完成後blind独立再解答
 - 旧版結果: `5 / 6 PASS / NEEDS_REVISION`
@@ -99,9 +115,9 @@
 - blind不一致: R5下 機械 問5のみ
 - 原因: `V = E + jXsI` と90°進みは選べたが、選択肢図の `jXsI` の始点・終点を逆に読んだ
 - 独立再解答記録: `topics/16_synchronous_machine/16_synchronous_machine_independent_reanswer.md`
-- 再実施条件: PowerPointへsource改訂を同期した後
+- 再実施条件: 解説PDF・練習PDF・PowerPointへのsource改訂同期が完了済み。次工程で固定6問をblind独立再解答する
 - 品質ゲート判定: `NEEDS_REVISION`
-- 状態: `topic_16_practice_pdf_remediation_complete / IN_PROGRESS`
+- 状態: `topic_16_powerpoint_remediation_complete / IN_PROGRESS`
 
 ## Topic 15 最終品質状態
 - 固定EXAM_ALIGNMENT: R8上 機械 問17(a)(b) / R7上 機械 問12 / R7上 機械 問17(a)(b) / R6下 機械 問17(a)(b) / R6上 機械 問17(a)(b) / R4上 機械 問17(a)(b) / R2 機械 問12
@@ -123,4 +139,4 @@
 - 状態: `completed`
 
 ## 次工程
-`topics/16_synchronous_machine/16_synchronous_machine_images.pptx` にsourceのベクトル図補強を反映する。固定範囲・固定EXAM_ALIGNMENTを変更せず、既存16:9・4枚構成を維持し、`E の終点 → V の終点` が `jXsI` である尾→頭判定を収録して、表示QA・ZIP整合性QAを再実施する。
+改訂済み解説source・解説PDF・練習source・練習PDF・PowerPointだけを使い、保存済み正答を先に見ずに固定EXAM_ALIGNMENT 6問をblind独立再解答する。正答だけでなく、各答案の根拠を教材内の説明へ戻して確認する。
