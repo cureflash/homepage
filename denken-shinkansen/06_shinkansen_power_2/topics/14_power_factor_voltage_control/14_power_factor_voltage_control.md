@@ -4,12 +4,15 @@
 
 ## 状態
 
-`topic_14_explanation_source_complete`
+`topic_14_practice_source_complete`
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説sourceまで完了した。正式固定5問・21答案要素は変更せず、解説sourceへ `21 / 21` マッピング済み。制作前blindで不足した令和2年度二次問6の「最低必要設備容量を不足側へ丸めない」答案処理も補強した。PDF・練習問題・PowerPoint・完成後blind独立再解答は未着手である。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説sourceまで完了した。正式固定5問・21答案要素は変更せず、解説sourceと練習sourceへ `21 / 21` マッピング済み。制作前blindで不足した令和2年度二次問6の「最低必要設備容量を不足側へ丸めない」答案処理は、解説と練習問8・問12で補強した。練習PDF・PowerPoint・完成後blind独立再解答は未着手である。
 
-解説source:
+成果物:
 - `14_power_factor_voltage_control_explanation.md`
+- `14_power_factor_voltage_control_explanation.pdf`
+- `14_power_factor_voltage_control_explanation_pdf_qa.md`
+- `14_power_factor_voltage_control_practice.md`
 
 ## SPEC固定範囲
 
@@ -216,7 +219,7 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - 直近年度優先確認: `PASS`
 - Topic 14固定範囲外の問題による件数水増し: `0件`
 
-制作前blind独立再解答は完了済みで、結果は `20 / 21 PASS`。不足1答案要素は解説sourceで補強した。完成後blind独立再解答では固定5問・21答案要素を変更せず全件再検証する。
+制作前blind独立再解答は完了済みで、結果は `20 / 21 PASS`。不足1答案要素は解説sourceで補強し、練習問8・問12で同型再訓練を追加した。完成後blind独立再解答では固定5問・21答案要素を変更せず全件再検証する。
 
 ## 参考教材
 
@@ -294,8 +297,35 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - 未確認実設備値の真値化: `0件`
 - 公式過去問転載: `0件`
 - 仕様追加: `0件`
-- stage: `EXPLANATION_SOURCE_COMPLETE / IN_PROGRESS`
+- stage: `EXPLANATION_SOURCE_COMPLETE`
+
+## 解説PDF進捗
+
+- PDF: `14_power_factor_voltage_control_explanation.pdf`
+- QA: `14_power_factor_voltage_control_explanation_pdf_qa.md`
+- A4縦: `6ページ`
+- 200 dpi表示: `6 / 6 PASS`
+- 文字抽出: `PASS`
+- 3段階例題独立再計算: `3 / 3 PASS`
+- 固定5問・21答案要素: `21 / 21 covered`
+- 制作前blind不足1要素: `1 / 1 改善説明確認`
+- stage: `EXPLANATION_PDF_COMPLETE`
+
+## 練習source進捗
+
+- source: `14_power_factor_voltage_control_practice.md`
+- 全15問: 基礎4、本試験標準8、複合・応用3
+- 二種一次型五肢択一: `10問`
+- 二種二次型記述: `5問`
+- 固定5問・21答案要素: `21 / 21 mapped`
+- SPEC固定10項目: `10 / 10 covered`
+- 制作前blind不足1要素: 問8・問12で再訓練
+- Topic 15以降の先取り: `0件`
+- 未確認実設備値の真値化: `0件`
+- 公式過去問転載: `0件`
+- 仕様追加: `0件`
+- stage: `PRACTICE_SOURCE_COMPLETE / IN_PROGRESS`
 
 ## 次工程
 
-`14_power_factor_voltage_control_explanation.md` から解説PDFを生成し、表示、文字抽出、3段階例題の数値再計算、固定5問・21答案要素の説明欠落がないことをQAする。練習問題・PowerPoint・完成後blind独立再解答はまだ行わない。
+`14_power_factor_voltage_control_practice.md` から練習PDFを生成し、表示、文字抽出、全15問の数値・論理、一次型10問の正答一意性をQAする。PowerPoint・完成後blind独立再解答はまだ行わない。
