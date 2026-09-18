@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `13`
 theme: 単相の新幹線負荷は三相系統を乱さない？
-current_status: `topic_13_practice_pdf_complete`
+current_status: `topic_13_powerpoint_complete`
 completed_topics: `12 / 22`
 
 ## Topic 12 final result
@@ -50,7 +50,7 @@ source:
 
 ## Topic 13 progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QAまで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋PowerPoint QAまで完了。
 
 正式品質ゲート:
 - 平成28年度 第二種一次「法規」問6 — `5答案要素`
@@ -96,7 +96,16 @@ source:
 - 正式2問8答案要素の教材内接続: `8 / 8`。
 - 制作前不足2要素の再訓練維持: PASS。
 
-この `8 / 8` は教材内の練習カバレッジであり、完成後blind独立再解答のPASSではない。完成判定では固定2問8答案要素を教材のみで `8 / 8 PASS` する必要がある。
+解説画像PowerPoint＋QA:
+- `13_three_phase_unbalance_images.pptx`: 16:9 `4スライド`。
+- 全4スライド表示QA: `4 / 4 PASS`。
+- `slides_test.py`: `PASS / No overflow detected`。
+- PPTX ZIP整合性・LibreOffice PDF変換・文字抽出: PASS。
+- SPEC固定8項目の可視化: `8 / 8 PASS`。
+- 正式2問8答案要素のPowerPoint接続: `8 / 8`。
+- 制作前不足2答案要素のフェーザ投影・`P1,max=Sb-Sa cos30°`・利用率の説明維持: `2 / 2 PASS`。
+
+この `8 / 8` は教材内の説明・練習カバレッジであり、完成後blind独立再解答のPASSではない。完成判定では固定2問8答案要素を教材のみで `8 / 8 PASS` する必要がある。
 
 品質境界:
 - 正式過去問追加: `0件`
@@ -113,6 +122,10 @@ source:
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_explanation.pdf`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_explanation_pdf_qa.md`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_practice.md`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_practice.pdf`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_practice_pdf_qa.md`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_images.pptx`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_powerpoint_qa.md`
 
 ## Gate checklist
 
@@ -128,8 +141,8 @@ source:
 - [x] Topic 10 completed
 - [x] Topic 11 completed
 - [x] Topic 12 completed
-- [ ] Topic 13 — production-pre EXAM_ALIGNMENT + blind re-answer + explanation source/PDF + practice source/PDF complete; PowerPoint pending
+- [ ] Topic 13 — production-pre EXAM_ALIGNMENT + blind re-answer + explanation source/PDF + practice source/PDF + PowerPoint complete; completion blind re-answer pending
 
 ## next_start
 
-Topic 13の解説画像PowerPointを制作し、全スライド表示QAと固定2問8答案要素・制作前不足2要素の説明維持を確認する。Topic 14以降・Topic 16故障計算は先取りしない。
+Topic 13の固定2問・8答案要素を教材だけで完成後blind独立再解答し、`8 / 8 PASS` を確認する。固定EXAM_ALIGNMENTは変更せず、Topic 14以降・Topic 16故障計算は先取りしない。
