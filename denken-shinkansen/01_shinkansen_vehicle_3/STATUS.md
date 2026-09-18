@@ -5,18 +5,18 @@
 ## 状態
 - active_series: `01_shinkansen_vehicle_3`
 - exam_aligned_completed_topics: `36 / 38`
-- current_status: `topic_37_powerpoint_revised`
+- current_status: `topic_37_independent_reanswer_pass`
 - last_completed_topic: `36 COSMOS① 新幹線全体を統合管理する`
 - active_topic: `37 COSMOS② 新幹線の電力設備を遠隔監視する`
-- next_start: 完成教材を変更せず、Topic 37の完成後blind独立再解答を固定5問・6答案要素で再実施する。全答案確定後に公式解答と照合し、教材だけで一意導出できるかを判定する。最終QAにはまだ進まない
+- next_start: Topic 37の最終QAを実施する。固定範囲、必須4成果物、各QA、完成後独立再解答 `6 / 6 PASS`、COSMOS-SCADA未確認内部仕様0件、Topic 38先取り0件を確認し、全条件PASSの場合だけcompletedへ更新する
 
 ## 新品質ゲート進捗
 - [x] 01〜36 — PASS / COMPLETED
-- [ ] 37 — IN PROGRESS / POWERPOINT_REVISED
+- [ ] 37 — IN PROGRESS / INDEPENDENT_REANSWER_PASS
 - [ ] 38 — 未着手
 
 ## Topic 37 現在進捗
-判定: `IN PROGRESS / POWERPOINT_REVISED_PASS`。
+判定: `IN PROGRESS / INDEPENDENT_REANSWER_PASS`。
 
 - source: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring.md`
 - EXAM_ALIGNMENT QA: `topics/37_cosmos_power_remote_monitoring/37_cosmos_power_remote_monitoring_exam_alignment_qa.md`
@@ -35,31 +35,27 @@
 ### 固定ゲート
 - 固定公式過去問: `5問・6答案要素`
 - 制作前blind独立解答: `6 / 6 PASS`
-- 既存完成後独立再解答: `4 / 6 PASS / NEEDS_REVISION`
+- 第1回完成後独立再解答: `4 / 6 PASS / NEEDS_REVISION`
+- 改訂後完成後独立再解答: `6 / 6 PASS`
 - 固定問題追加・差替え: `0件`
 
 ### 今回完了した1段階
-改訂済み解説source・練習sourceを正本として、Topic 37のPowerPointを同期修正しQAした。
+改訂後完成教材を変更せず、Topic 37の完成後独立再解答を固定5問・6答案要素で再実施した。
 
-- PowerPoint: `16:9 / 4枚`
-- slide 1: COSMOS-SCADA公開範囲とSCADA一般機能
-- slide 2: 遠隔計測、A-D変換、二重積分形、クロック数比
-- slide 3: デジタル情報、シーケンス制御、遠隔制御、R6上 法規 問7の系統連系保護、H23 法規 問6の関連用語定義
-- slide 4: 固定5問・6答案要素のPowerPoint対応と解法手順
-- R6上 法規 問7: 発電電圧異常、系統側短絡・地絡、地絡過電圧、単独運転、転送遮断まで反映
-- H23 法規 問6: 逆潮流、自立運転、単独運転、逆充電、転送遮断装置まで反映
-- 180 dpi相当表示: `4 / 4 PASS`
-- shape geometry overflow: `0件 / PASS`
-- PPTX ZIP整合性: `PASS`
-- PDF変換: `4ページ / PASS`
-- 固定EXAM_ALIGNMENT: `5問・6答案要素 / 6 / 6` PowerPoint接続
-- 固定範囲外追加: `0件`
-- COSMOS-SCADA未確認内部仕様追加: `0件`
-- 転送遮断・系統連系保護をCOSMOS-SCADA固有実装と断定: `0件`
+- R6上 法規 問7: `5 / PASS`
+- R3 機械 問14: `5 / PASS`
+- R1 理論 問18(a): `1 / PASS`
+- R1 理論 問18(b): `4 / PASS`
+- H26 機械 問13: `3 / PASS`
+- H23 法規 問6: `1 / PASS`
+- 完成教材だけで一意導出: `6 / 6 PASS`
+- 独立答案と公式解答一致: `6 / 6`
+- 教材外知識補完: `0件`
+- 固定問題追加・差替え: `0件`
+- COSMOS-SCADA未確認内部仕様依存: `0件`
 - Topic 38先取り: `0件`
-- 完成後blind独立再解答の再実施: `未実施`
 
-PowerPointまで改訂sourceへ同期済み。旧完成後blind独立再解答の `4 / 6 PASS / NEEDS_REVISION` は履歴として維持し、次段階で完成教材だけを使って再実施する。
+第1回 `4 / 6 PASS / NEEDS_REVISION` は履歴として維持した。改訂後は不足2答案要素も教材だけで一意導出できることを確認した。最終QAはまだ実施していないため、Topic 37はcompletedにしない。
 
 ## Topic 37 固定範囲
 系列SPECどおり、次を対象とする。
@@ -83,4 +79,4 @@ PowerPointまで改訂sourceへ同期済み。旧完成後blind独立再解答�
 - 完成後blind独立再解答: `8 / 8 PASS`
 
 ## 完成数
-`36 / 38`。Topic 37はPowerPointの改訂同期まで完了したが、完成後blind独立再解答の再実施前なので完成扱いにしない。
+`36 / 38`。Topic 37は改訂後完成後独立再解答 `6 / 6 PASS` まで完了したが、最終QA前なので完成扱いにしない。
