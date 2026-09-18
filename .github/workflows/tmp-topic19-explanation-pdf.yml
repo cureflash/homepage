@@ -1,4 +1,5 @@
 name: Temporary Topic 19 Explanation PDF Assembly
+# Trigger assembly after workflow exists on default branch.
 
 on:
   push:
