@@ -2,9 +2,9 @@
 
 ## 状態
 
-`EXAM_ALIGNMENT_COMPLETE / PASS`。
+`PREANSWER_COMPLETE / PASS`。
 
-制作前EXAM_ALIGNMENTのみ完了。本文・解説PDF・練習source/PDF・PowerPointは未制作。固定公式過去問5問・5答案要素について、公式問題PDFの本文・図表だけを確認し、公式解答PDF・第三者の正答表示は参照していない。次工程は固定5問を変更せずに行う制作前blind独立解答。
+制作前EXAM_ALIGNMENTと制作前blind独立解答まで完了。本文・解説PDF・練習source/PDF・PowerPointは未制作。固定公式過去問5問・5答案要素は変更せず、公式問題PDFだけで候補答案を固定した後に公式解答PDFと照合し、`5 / 5 PASS`。
 
 ## EXAM_ALIGNMENT
 
@@ -29,7 +29,7 @@
 | R4下 電力 問13 | 1 | 低圧ネットワーク方式、複数給電線、ネットワークプロテクタ、事故時の供給継続 | 複数経路・保護装置→一部事故時も健全経路から供給 | 五肢択一・正誤 | 冗長化、バックアップ、切替、システム信頼性 |
 | R3 電力 問13 | 1 | 遮断器、保護継電器、区分開閉器、事故区間の切離し | 事故検出→遮断・区分→健全部分を事故区間から分離 | 五肢択一・穴埋め | 障害検知、切替・切離し、フェイルセーフの基礎 |
 
-品質ゲート対象: `5問・5答案要素`。以後、制作前blind独立解答から完成後blind独立再解答まで、件数合わせで問題を追加・差替えしない。
+品質ゲート対象: `5問・5答案要素`。以後、完成後blind独立再解答まで、件数合わせで問題を追加・差替えしない。
 
 ### 公式問題URL
 
@@ -39,26 +39,30 @@
 - R4下 電力: https://www.shiken.or.jp/chief/upload/20230326_ch_third_q02.pdf
 - R3 電力: https://www.shiken.or.jp/chief/upload/20210822_ch_third_q02.pdf
 
-### 公式解答URL（現段階では未参照）
+### 公式解答URL
 
-- R6下: https://www.shiken.or.jp/chief/upload/20250323_ch_third_a01.pdf
+- R6下: https://www.shiken.or.jp/chief/upload/2024_3_2.pdf
 - R6上: https://www.shiken.or.jp/chief/upload/20240818_ch_third_a01.pdf
 - R4下: https://www.shiken.or.jp/chief/upload/20230326_ch_third_a01.pdf
 - R3: https://www.shiken.or.jp/chief/upload/20210822_ch_third_a01.pdf
 
-## blind条件保護
+## 制作前blind独立解答
 
-- 固定5問の公式問題本文・図表: `確認済み`
-- 固定5問の公式解答PDF: `未参照`
-- 固定5問の第三者正答表示: `未参照`
-- 固定5問の個別正答番号保存: `0件`
-- 制作前blind独立解答: `未実施`
-
-調査途中に正答表示へ到達した別問題は固定対象から除外した。固定5問は、正答を見ずに公式問題PDFの本文・図表を確認できたものだけで構成している。
+- QA: `38_cosmos_high_reliability_preanswer_qa.md`
+- 候補固定コミット: `c073dbd91cd3090bd98bcd2392c477f1c4015d21`
+- 固定問題差替え: `0件`
+- 候補固定前の公式解答PDF参照: `0件`
+- 候補固定後の公式解答照合: `実施済み`
+- 結果: `5 / 5 PASS`
+- R6下 機械 問14: `3`
+- R6上 機械 問14: `5`
+- R6下 電力 問9: `4`
+- R4下 電力 問13: `3`
+- R3 電力 問13: `2`
 
 ## 参考教材
 
-説明粒度・論点整理の確認だけに使用し、固定5問の正答取得には使用しない。
+説明粒度・論点整理の確認だけに使用し、固定5問の正答取得には使用していない。
 
 ### e-sysnet
 - シーケンスの論理回路（AND・OR・NOT・NAND・NOR回路）: https://e-sysnet.com/and/
@@ -115,4 +119,4 @@
 
 ## 次工程
 
-固定5問・5答案要素を変更せず、公式問題PDFだけで制作前blind独立解答を行う。答案確定後に初めて公式解答PDFを開いて照合する。本文・PDF・PowerPoint制作へ先に進まない。
+固定5問・5答案要素と系列SPEC固定範囲を変更せず、解説source本文を制作する。固定5問を教材だけで解けるよう、論理回路、配電保護、低圧ネットワーク方式と冗長化・バックアップ・フェイルセーフ・システム信頼性の関係を説明する。COSMOS/COSMOS-SCADAの未公開内部構成は追加しない。
