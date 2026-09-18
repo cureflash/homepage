@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `03_shinkansen_machine_3`
 - exam_aligned_completed_topics: `15 / 16`
-- current_status: `topic_16_explanation_source_complete`
+- current_status: `topic_16_explanation_pdf_complete`
 - last_completed_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
 - active_topic: `16 同期機って新幹線には使わないの？`
-- next_start: Topic 16の解説PDFを作成する
+- next_start: Topic 16の練習問題sourceを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -26,7 +26,7 @@
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
 - [x] 15 車内の照明・空調にはどれだけ電気が必要？ — 最終QA再判定PASS / completed
-- [ ] 16 同期機って新幹線には使わないの？ — 解説source本文完成 / IN_PROGRESS
+- [ ] 16 同期機って新幹線には使わないの？ — 解説PDF完成 / IN_PROGRESS
 
 ## Topic 16 制作品質状態
 - 固定範囲: 同期機 / 同期発電機 / 同期電動機 / 回転磁界 / 同期速度 / 極数 / 周波数 / 界磁 / 励磁 / 電機子 / 力率 / 電機子反作用 / 同期リアクタンス / V曲線の基本 / 並行運転の基本
@@ -44,13 +44,20 @@
 - L0系リニア同期モータ: 系列SPECどおり、回転同期機を直線状に展開したものという概念説明に限定
 - source: `topics/16_synchronous_machine/16_synchronous_machine.md`
 - 解説本文: 完成
-- 解説PDF: 未着手
+- 解説PDF: 完成（A4縦4ページ）
+- 解説PDF表示QA: `4 / 4 PASS`
+- 解説PDF文字抽出QA: `PASS`
+- 解説PDF文字切れ・重なり・ページ外はみ出し: `0件`
+- 解説PDF欠落・破損グリフ: `0件`
+- 解説PDF固定過去問マッピング: `6 / 6`
+- explanation PDF: `topics/16_synchronous_machine/16_synchronous_machine_explanation.pdf`
+- explanation PDF QA: `topics/16_synchronous_machine/16_synchronous_machine_explanation_pdf_qa.md`
 - 練習問題source: 未着手
 - 練習PDF: 未着手
 - 解説画像PowerPoint: 未着手
 - 完成後blind独立再解答: 未実施
-- 状態: `topic_16_explanation_source_complete / IN_PROGRESS`
-- 次工程: 本文・固定EXAM_ALIGNMENT 6問・6答案要素・範囲境界を変更せず、解説PDFを作成する
+- 状態: `topic_16_explanation_pdf_complete / IN_PROGRESS`
+- 次工程: 固定EXAM_ALIGNMENT 6問・6答案要素と範囲境界を変更せず、Topic 16の練習問題sourceを作成する
 
 ## Topic 15 最終品質状態
 - 固定範囲（照明）: 光束 / 光度 / 照度 / 輝度 / lm / cd / lx / 逆二乗則 / 照明率 / 保守率 / 所要灯数 / 発光効率 / LED
@@ -406,6 +413,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 16「同期機って新幹線には使わないの？」の解説source本文を完成した。制作前に固定した公式過去問6問・6答案要素は変更せず、本文マッピング `6 / 6 PASS`、3段階例題 `PASS`、解説source QA `PASS`。始動法・制動巻線、短絡比、無負荷・短絡特性を使う試験法、同期調相機、負荷角・脱出トルク等の固定範囲外追加は0件。L0系は回転同期機を直線状に展開した概念説明に限定した。
+Topic 16「同期機って新幹線には使わないの？」の解説PDFを完成した。A4縦4ページ、200 dpi表示QA `4 / 4 PASS`、文字抽出QA `PASS`、文字切れ・重なり・ページ外はみ出し `0件`、固定EXAM_ALIGNMENT 6問・6答案要素の教材内マッピング `6 / 6`。固定EXAM_ALIGNMENT変更・固定範囲外追加・未確認L0系実車値追加は0件。
 
-完成数は `15 / 16`。次工程はTopic 16の解説PDF。
+完成数は `15 / 16`。次工程はTopic 16の練習問題source。
