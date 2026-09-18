@@ -6,10 +6,10 @@
 
 - active_series: `05_shinkansen_vehicle_2`
 - exam_aligned_completed_topics: `16 / 39`
-- current_status: `topic_17_clean_blind_candidates_fixed`
+- current_status: `topic_17_official_check_complete`
 - last_completed_topic: `16 700系 多レベル変換器とPWM`
 - active_topic: `17 パワー半導体の損失比較`
-- next_start: 固定済みclean blind候補23答案要素を、電気技術者試験センター公式解答・標準解答と照合する。候補答案は変更せず、正誤と教材内導出根拠を記録する
+- next_start: Topic 17の成果物・固定EXAM_ALIGNMENT・clean blind公式照合結果をまとめて最終QAし、completed可否を判定する
 
 ## 完了済み
 
@@ -65,7 +65,7 @@ H24一次「機械」問6の採用単位を公式問題文から再監査した�
 是正後の固定5問・23答案要素をclean条件で再解答し、公式解答・標準解答を開く前に候補答案を固定した。
 
 - 旧候補答案ファイル: `未参照`
-- 公式解答・標準解答: `未参照`
+- 公式解答・標準解答: 候補固定前は `未参照`
 - 電験解説サイトの各問題解説: `未参照`
 - R7一次 問4: `5 / 5 candidate fixed`
 - R4一次 問4: `5 / 5 candidate fixed`
@@ -73,11 +73,30 @@ H24一次「機械」問6の採用単位を公式問題文から再監査した�
 - H24一次 問6 (2)(3): `2 / 2 candidate fixed`
 - H24二次 問1: `6 / 6 candidate fixed`
 - 合計: `23 / 23 candidate fixed`
-- 公式照合: `未実施`
-- completed化: `不可`
 
 候補答案記録:
 - `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_candidates_clean.md`
+
+## Topic 17 公式照合
+
+固定後の候補答案は変更せず、電気技術者試験センターの公式解答・標準解答と照合した。
+
+- R7一次 問4: `5 / 5 PASS`
+- R4一次 問4: `5 / 5 PASS`
+- R2一次 問2: `5 / 5 PASS`
+- H24一次 問6 (2)(3): `2 / 2 PASS`
+- H24二次 問1: `6 / 6 PASS`
+- 一次: `17 / 17 PASS`
+- 二次: `6 / 6 PASS`
+- 合計: `23 / 23 PASS`
+- 候補答案変更: `0件`
+- 教材外知識での補完: `0件`
+- 固定問題差替え: `0件`
+
+照合記録:
+- `topics/17_power_semiconductor_loss_comparison/17_power_semiconductor_loss_comparison_blind_reanswer_official_check.md`
+
+公式照合工程: `PASS / OFFICIAL_CHECK_COMPLETE`。この段階ではcompleted化しない。
 
 ## Topic 17 SPEC固定範囲
 
@@ -87,4 +106,4 @@ Topic 16の多レベル波形・高調波解析は再展開せず、後続Topic�
 
 ## 次工程
 
-固定済みclean blind候補23答案要素を、電気技術者試験センター公式解答・標準解答と照合する。候補答案は変更せず、正誤と教材内導出根拠を記録する。
+Topic 17の成果物・固定EXAM_ALIGNMENT・clean blind公式照合結果をまとめて最終QAし、completed可否を判定する。
