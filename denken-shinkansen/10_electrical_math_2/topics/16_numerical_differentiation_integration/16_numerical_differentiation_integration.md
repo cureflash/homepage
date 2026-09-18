@@ -2,11 +2,9 @@
 
 ## 状態
 
-`topic_16_practice_source_complete / IN_PROGRESS`
+`topic_16_progress_records_synced / IN_PROGRESS`
 
-2026-09-18、制作前EXAM_ALIGNMENT、固定4問・8答案要素の制作前独立再解答・公式解答照合、解説本文＋3段階例題、解説PDFに続き、練習問題sourceを作成した。公式解答確認前の再解答は `8 / 8 PASS`、固定問題数・答案要素数の変更0件。
-
-練習問題sourceは全12問（一次型8問／記述型4問、基礎3／標準6／複合3）。固定4問・8答案要素への接続 `8 / 8 PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`。Topic 17以降、第一種・第三種、高次数値計算法、未確認の新幹線実車値は追加していない。
+2026-09-18、制作前EXAM_ALIGNMENTから完成後独立再解答・成果物QAまで実成果物上で完了済みである。固定4問・8答案要素は制作前再解答 `8 / 8 PASS`、本文マッピング `8 / 8 PASS`、完成後独立再解答 `8 / 8 PASS`。解説PDF、練習問題source/PDF、PowerPointと各表示QAもPASS。初回最終QAは技術内容ではなく進捗記録6ファイルの旧工程表記だけを理由に `NEEDS_REVISION` となったため、本段階では進捗記録だけを実成果物へ同期する。
 
 制作前再解答記録:
 - lock: `16_numerical_differentiation_integration_exam_reanswer_lock.md`
@@ -556,4 +554,4 @@ Topic 17以降の先取り: `0件`
 
 ## 次工程
 
-Topic 16の練習PDFを作成し、表示QA・文字抽出QAを行う。固定4問・8答案要素への接続 `8 / 8` と練習問題の独立計算・論理QA `12 / 12 PASS` を維持し、仕様外論点を追加しない。
+Topic 16の最終QAを再判定する。
