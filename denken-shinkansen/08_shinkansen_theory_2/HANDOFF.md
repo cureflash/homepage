@@ -6,11 +6,11 @@
 
 Topic 01〜18は `PASS / completed`。完成数は `18 / 21`。
 
-current_status: `topic_19_powerpoint_complete`
+current_status: `topic_19_reanswer_complete`
 
 active_topic: `19 25kV・大電流をどう安全に測る？`
 
-Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QAまで完了。品質ゲートは一次5問・25答案要素で、blind導出 `25 / 25 PASS`、公式標準解答照合 `25 / 25`、本文/PDF/練習/PowerPointへの接続 `25 / 25`。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は完成後独立再解答。
+Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QA、練習問題source＋練習PDF、解説画像PowerPoint＋表示QA、完成後独立再解答まで完了。品質ゲートは一次5問・25答案要素で、完成教材だけから `25 / 25 PASS`、公式標準解答とも `25 / 25` 一致。二次は固定範囲だけで完答する直接対応問題が確認できないため0問。次工程は最終QA。
 
 ## Topic 18 成果物
 
@@ -54,7 +54,8 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 練習PDF QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_practice_pdf_qa.md`
 - PowerPoint: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_images.pptx`
 - PowerPoint QA: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_powerpoint_qa.md`
-- stage: `POWERPOINT_COMPLETE`
+- 完成後独立再解答: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_reanswer.md`
+- stage: `INDEPENDENT_REANSWER_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 19 固定範囲
@@ -175,6 +176,29 @@ Topic 19は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 実設備CT・VTの未確認定格・結線・精度階級追加: `0件`
 - 判定: `PASS / POWERPOINT_COMPLETE`
 
+## Topic 19 完成後独立再解答
+
+記録: `topics/19_high_voltage_current_measurement/19_high_voltage_current_measurement_reanswer.md`
+
+- R5 一次 理論 問8: `ハ / リ / ル / チ / ワ` → `5 / 5 PASS`
+- R1 一次 理論 問4: `ヲ / ル / ロ / ヌ / カ` → `5 / 5 PASS`
+- H29 一次 理論 問4: `ヘ / イ / ニ / ル / ヌ` → `5 / 5 PASS`
+- H25 一次 理論 問8: `ヲ / ニ / ロ / ル / カ` → `5 / 5 PASS`
+- H21 一次 理論 問6: `ト / ハ / カ / ロ / ル` → `5 / 5 PASS`
+- 固定一次合計: `25 / 25 PASS`
+- 公式標準解答との一致: `25 / 25`
+- 完成教材だけで再構成: `PASS`
+- 教材外知識補完: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 二次採用方針変更: `0件`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- SPEC固定範囲外追加: `0件`
+- Topic 20先取り: `0件`
+- 実設備CT・VTの未確認定格・結線・精度階級追加: `0件`
+
+判定: `25 / 25 PASS / INDEPENDENT_REANSWER_COMPLETE`
+
 ## 次工程
 
-Topic 19の完成後独立再解答。固定一次5問・25答案要素を、保存済み正答を先に見ず、完成済み教材だけを使って再度解く。
+Topic 19の最終QAを実施し、必須成果物、固定一次5問・25答案要素、完成後独立再解答、PDF/PPTX QA、仕様境界、進捗記録整合を総合判定する。
