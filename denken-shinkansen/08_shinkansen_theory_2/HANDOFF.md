@@ -6,11 +6,11 @@
 
 Topic 01〜19は `PASS / completed`。完成数は `19 / 21`。
 
-current_status: `topic_20_explanation_source_complete`
+current_status: `topic_20_explanation_pdf_complete`
 
 active_topic: `20 East iは走りながら何をどう測る？`
 
-Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題まで完了。系列SPEC固定範囲12項目、品質ゲート一次5問・25答案要素を維持した。固定5問・25答案要素は本文へ `25 / 25` 接続、必須説明は `20 / 20`、3段階例題は `3 / 3 PASS`。R8/R7/R6/H24は公式標準解答と `20 / 20一致`。H20は現行の電気技術者試験センター公式過去問一覧がH21以降のため、電験王の問題転記・解答で `5 / 5` を二次照合し、公式直接照合済みとは扱わない。二次採用0・数合わせ0。次工程は解説PDF＋表示QA。
+Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本文＋3段階例題、解説PDF＋表示QAまで完了。系列SPEC固定範囲12項目、品質ゲート一次5問・25答案要素を維持した。固定5問・25答案要素はPDFへ `25 / 25` 接続、必須説明は `20 / 20`、3段階例題は `3 / 3 PASS`。R8/R7/R6/H24は公式標準解答と `20 / 20一致`。H20は現行の電気技術者試験センター公式過去問一覧がH21以降のため、電験王の問題転記・解答で `5 / 5` を二次照合し、公式直接照合済みとは扱わない。二次採用0・数合わせ0。次工程は練習問題source＋練習PDF。
 
 ## Topic 19 完了状態
 
@@ -34,7 +34,9 @@ Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 
 - source: `topics/20_east_i_measurement/20_east_i_measurement.md`
 - 制作前blind独立再解答: `topics/20_east_i_measurement/20_east_i_measurement_blind_reanswer.md`
-- stage: `EXPLANATION_SOURCE_COMPLETE`
+- 解説PDF: `topics/20_east_i_measurement/20_east_i_measurement_explanation.pdf`
+- 解説PDF QA: `topics/20_east_i_measurement/20_east_i_measurement_explanation_pdf_qa.md`
+- stage: `EXPLANATION_PDF_COMPLETE`
 - completion: `in_progress`
 
 ## Topic 20 解説source
@@ -54,6 +56,25 @@ Topic 20は制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説本�
 - 二次数合わせ: `0件`
 - 固定範囲外追加: `0件`
 - East i内部測定回路・未公開定数の推測追加: `0件`
+
+## Topic 20 解説PDF＋表示QA
+
+- A4縦8ページ
+- 200 dpi全ページ表示QA: `8 / 8 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `4adf6ea4c23ff1745174bc90014661e7ffcc6949bfea8bd4dd08ccfae7c8c92d`
+- SPEC固定範囲: `12 / 12収録`
+- 必須説明: `20 / 20収録`
+- 固定一次5問・25答案要素: `25 / 25接続`
+- 3段階例題: `3 / 3収録`
+- 例題数値独立再計算: `3 / 3 PASS`
+- クリッピング/文字重なり/文字化け/ページ欠落: `0件`
+- A/D・サンプリング・エイリアシングを存在しない過去問へ接続: `0件`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 固定範囲外追加: `0件`
+- East i内部測定回路・未公開定数の推測追加: `0件`
+- 判定: `PASS / EXPLANATION_PDF_COMPLETE`
 
 ## Topic 20 固定範囲
 
@@ -137,4 +158,4 @@ A/D変換、サンプリング、標本化、エイリアシングは系列SPEC�
 
 ## 次工程
 
-Topic 20の解説PDF＋表示QA。`20_east_i_measurement.md` の解説本文・3段階例題を正本とし、固定一次5問・25答案要素、SPEC固定範囲12項目、式・数値を変更せずPDF化する。PDF生成後に表示QA、文字抽出QA、数値QAを行い、PASS前に練習問題へ進まない。
+Topic 20の練習問題source＋練習PDF。固定一次5問・25答案要素、SPEC固定範囲12項目、解説本文の公式・成立条件・例題へ接続し、A/D・サンプリング・エイリアシングも系列SPEC必須分として練習で直接補う。固定範囲だけで完結する二次記述式を件数合わせで追加しない。

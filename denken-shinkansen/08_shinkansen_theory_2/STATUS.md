@@ -5,10 +5,10 @@
 ## 状態
 - active_series: `08_shinkansen_theory_2`
 - exam_aligned_completed_topics: 19 / 21
-- current_status: `topic_20_explanation_source_complete`
+- current_status: `topic_20_explanation_pdf_complete`
 - last_completed_topic: `19 25kV・大電流をどう安全に測る？`
 - active_topic: `20 East iは走りながら何をどう測る？`
-- next_start: Topic 20 解説PDF＋表示QA
+- next_start: Topic 20 練習問題source＋練習PDF
 
 ## 完成済み
 
@@ -71,7 +71,7 @@ Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 制作前blind独立再解答: `25 / 25 PASS`
 - [x] 標準解答照合: `R8/R7/R6/H24 20 / 20公式一致 + H20 5 / 5二次資料一致`
 - [x] 解説本文＋3段階例題: `PASS / EXPLANATION_SOURCE_COMPLETE`
-- [ ] 解説PDF＋表示QA
+- [x] 解説PDF＋表示QA: `PASS / EXPLANATION_PDF_COMPLETE`
 - [ ] 練習問題source＋練習PDF
 - [ ] 解説画像PowerPoint＋表示QA
 - [ ] 完成後独立再解答
@@ -80,14 +80,19 @@ Topic 01〜19は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 
 ## 今回進めた内容
 
-Topic 20の解説本文＋3段階例題を完成させた。
+Topic 20の解説PDF＋表示QAを完成させた。
 
-- 成果物: `topics/20_east_i_measurement/20_east_i_measurement.md`
+- PDF: `topics/20_east_i_measurement/20_east_i_measurement_explanation.pdf`
+- QA: `topics/20_east_i_measurement/20_east_i_measurement_explanation_pdf_qa.md`
+- A4縦8ページ
+- 200 dpi全ページ表示QA: `8 / 8 PASS`
+- 文字抽出QA: `PASS`
+- SHA-256: `4adf6ea4c23ff1745174bc90014661e7ffcc6949bfea8bd4dd08ccfae7c8c92d`
 - SPEC固定範囲: `12 / 12収録`
 - 過去問から逆算した必須説明: `20 / 20収録`
 - 固定一次過去問: `5 / 5接続`
 - 固定答案要素: `25 / 25接続`
-- 3段階例題: `3 / 3`
+- 3段階例題: `3 / 3収録`
 - 例題数値独立再計算: `3 / 3 PASS`
 - A/D・サンプリング・エイリアシングを存在しない過去問へ接続: `0件`
 - 固定EXAM_ALIGNMENT変更: `0件`
@@ -98,6 +103,6 @@ Topic 20の解説本文＋3段階例題を完成させた。
 
 ## 判定
 
-`PASS / topic_20_explanation_source_complete / IN_PROGRESS`。
+`PASS / topic_20_explanation_pdf_complete / IN_PROGRESS`。
 
-完成数は `19 / 21`。次工程はTopic 20の解説PDF＋表示QA。
+完成数は `19 / 21`。次工程はTopic 20の練習問題source＋練習PDF。
