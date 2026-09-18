@@ -24,13 +24,14 @@ Topic 14「新幹線の力率と電圧をどう維持する？」を1段階進�
 
 ## 未完了blocker
 
-1. 解説sourceのstage・次工程が旧状態。
-2. 練習sourceが練習PDF・PowerPoint・blindを未実施としている。
-3. 解説PDF QAの次工程が完成後blind再実施のまま。
-4. 練習PDF QAの次工程がPowerPoint制作のまま。
-5. PowerPoint QAがTopic全体をblind再実施前としている。
-6. PowerPoint QA記録のファイルサイズ `39281 bytes` と現行GitHub正本 `15002 bytes`・blob `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8` が不一致。現行PPTXの再QAが必要。
-7. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
+1. 主source `14_power_factor_voltage_control.md` が最終QA未実施・次工程を最終QAとしている旧状態。
+2. 解説sourceのstage・次工程が旧状態。
+3. 練習sourceが練習PDF・PowerPoint・blindを未実施としている。
+4. 解説PDF QAの次工程が完成後blind再実施のまま。
+5. 練習PDF QAの次工程がPowerPoint制作のまま。
+6. PowerPoint QAがTopic全体をblind再実施前としている。
+7. PowerPoint QA記録のファイルサイズ `39281 bytes` と現行GitHub正本 `15002 bytes`・blob `9ad4e4bc2e0c8f7eafbeb83f277c05496b2303d8` が不一致。現行PPTXの再QAが必要。
+8. `qualifications/denken-shinkansen/catalog.json` にTopic 14が未登録。
 
 ## 現在地
 
@@ -40,7 +41,7 @@ Topic 14は最終QA `NEEDS_REVISION`。Topic自体はまだ未完了。
 
 ## 次に行う
 
-上記7 blockerを、固定5問・21答案要素と教材技術範囲を変更せず解消する。
+上記8 blockerを、固定5問・21答案要素と教材技術範囲を変更せず解消する。
 
 - 旧進捗記録を現行工程へ同期
 - 現行GitHub正本PPTXを再QAし、現行blobに対応するQA記録へ更新
