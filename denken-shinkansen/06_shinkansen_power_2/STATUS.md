@@ -4,7 +4,7 @@ updated: 2026-09-18
 series: `06_shinkansen_power_2`
 active_topic: `13`
 theme: 単相の新幹線負荷は三相系統を乱さない？
-current_status: `topic_13_independent_reanswer_complete`
+current_status: `topic_13_final_qa_needs_revision`
 completed_topics: `12 / 22`
 
 ## Topic 12 final result
@@ -50,7 +50,7 @@ source:
 
 ## Topic 13 progress
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋PowerPoint QA、完成後blind独立再解答まで完了。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋PowerPoint QA、完成後blind独立再解答、初回最終QAまで完了。
 
 正式品質ゲート:
 - 平成28年度 第二種一次「法規」問6 — `5答案要素`
@@ -112,7 +112,15 @@ source:
 - 制作前不足2答案要素: `2 / 2 改善確認`。
 - 公式解答・標準解答は候補解固定後に照合。
 
-完成後blindはPASSしたが、最終QA再判定前のためTopic 13は `IN_PROGRESS`、完成数は `12 / 22` のまま。
+初回最終QA:
+- 技術内容・固定EXAM_ALIGNMENT・必須教材成果物・PDF/PPTX QA・練習QA・完成後blind・SPEC境界: PASS。
+- 判定: `NEEDS_REVISION / IN_PROGRESS`。
+- exact blocker 1: `13_three_phase_unbalance.md` の状態・次工程が制作前の旧記録。
+- exact blocker 2: `13_three_phase_unbalance_practice.md` の状態・次工程が練習PDF前の旧記録。
+- exact blocker 3: `13_three_phase_unbalance_powerpoint_qa.md` が完成後blind未実施とする旧記録。
+- exact blocker 4: `qualifications/denken-shinkansen/catalog.json` にTopic 13が未登録。
+
+技術内容の修正は不要。4 blocker解消と最終QA再判定前のためTopic 13は `IN_PROGRESS`、完成数は `12 / 22` のまま。
 
 品質境界:
 - 正式過去問追加: `0件`
@@ -136,6 +144,7 @@ source:
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_images.pptx`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_powerpoint_qa.md`
 - `topics/13_three_phase_unbalance/13_three_phase_unbalance_blind_reanswer_20260918.md`
+- `topics/13_three_phase_unbalance/13_three_phase_unbalance_final_qa.md`
 
 ## Gate checklist
 
@@ -151,8 +160,8 @@ source:
 - [x] Topic 10 completed
 - [x] Topic 11 completed
 - [x] Topic 12 completed
-- [ ] Topic 13 — production artifacts complete; completion blind re-answer `8 / 8 PASS`; final QA pending
+- [ ] Topic 13 — initial final QA `NEEDS_REVISION`; technical gates PASS; progress-record sync 3件＋Web catalog 1件 pending
 
 ## next_start
 
-Topic 13の最終QAを実施し、必須成果物、固定2問8答案要素のEXAM_ALIGNMENT、完成後blind独立再解答 `8 / 8 PASS`、進捗記録の整合を再判定する。固定EXAM_ALIGNMENTは変更せず、Topic 14以降・Topic 16故障計算は先取りしない。
+Topic 13の技術成果物・固定EXAM_ALIGNMENT・問題・正答は変更しない。`13_three_phase_unbalance.md`、`13_three_phase_unbalance_practice.md`、`13_three_phase_unbalance_powerpoint_qa.md` の旧進捗記録を実成果物状態へ同期し、`qualifications/denken-shinkansen/catalog.json` にTopic 13を登録する。その後、最終QAを再判定する。4 blocker解消まではcompletedにせず、Topic 14以降・Topic 16故障計算は先取りしない。
