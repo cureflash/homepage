@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 17 / 20
-- current_status: `topic_18_practice_pdf_complete`
+- current_status: `topic_18_powerpoint_complete`
 - last_completed_topic: `17 常微分方程式の数値解法`
 - active_topic: `18 非線形方程式と反復計算`
-- next_start: Topic 18の解説画像PowerPointを作成し、表示QAを行う
+- next_start: Topic 18の完成後独立検証を行う
 
 ## Topic 07 制作品質ゲート
 
@@ -290,37 +290,39 @@
 - [x] 解説PDF（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
 - [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 練習PDF（A4縦5ページ、200 dpi表示 `5 / 5 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
-- [ ] 解説画像PowerPoint
-- [ ] PowerPoint表示QA
+- [x] 解説画像PowerPoint（16:9・5枚、固定範囲 `5 / 5`、接続確認5問 `5 / 5`）
+- [x] PowerPoint表示QA（再レンダリング `5 / 5 PASS`、overflow `0件`、`slides_test.py` `PASS`、ZIP/XML整合性 `PASS`）
 - [ ] 完成後独立検証
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 18の練習PDF＋QAを完了した。
+Topic 18の解説画像PowerPoint＋表示QAを完了した。
 
-- A4縦: `5ページ`
-- 200 dpi表示QA: `5 / 5 PASS`
-- 文字切れ・重なり・ページ外はみ出し・壊れた日本語グリフ: `0件`
-- 文字抽出QA: `PASS`
-- 問1〜問12、解答・完全解説の収録: `PASS`
-- 独立計算・論理QA: `12 / 12 PASS`
-- 一次型正答一意性: `8 / 8 PASS`
-- 直接二分法・Newton法要求の第二種過去問: `0問` のまま
+- 16:9: `PASS`
+- スライド数: `5`
+- SPEC固定範囲: `5 / 5 covered`
+- 接続確認した第二種二次「電力・管理」5問との対応: `5 / 5 PASS`
+- 二分法・Newton法そのものを直接要求する確認済み第二種過去問: `0問`
 - 接続確認5問の固定品質ゲート件数への水増し: `0件`
-- 第一種Newton-Raphson潮流問題による件数水増し: `0件`
-- Topic 19最適化、多変数Newton法、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
+- 数値整合QA: `PASS`
+- 全5スライド再レンダリング: `5 / 5 PASS`
+- 文字切れ・重なり・文字化け: `0件`
+- overflow: `0件`
+- `slides_test.py`: `PASS`
+- ZIP/XML整合性: `PASS`
+- Topic 19最適化、多変数Newton-Raphson潮流、ヤコビ行列一般理論、追加求根法の仕様外追加: `0件`
 - 未確認実車値依存: `0件`
 
 成果物:
-- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_practice.pdf`
-- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_practice_qa.md`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_images.pptx`
+- `topics/18_nonlinear_equations_iteration/18_nonlinear_equations_iteration_powerpoint_qa.md`
 
 ## 判定
 
-`topic_18_practice_pdf_complete / IN_PROGRESS`
+`topic_18_powerpoint_complete / IN_PROGRESS`
 
 完成数は `17 / 20`。
 
-次はTopic 18の解説画像PowerPointを作成し、表示QAを行う。
+次はTopic 18の完成後独立検証を行う。
