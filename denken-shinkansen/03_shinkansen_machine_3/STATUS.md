@@ -4,11 +4,11 @@
 
 ## 状態
 - active_series: `03_shinkansen_machine_3`
-- exam_aligned_completed_topics: `14 / 16`
-- current_status: `topic_15_progress_sync_complete`
-- last_completed_topic: `14 停電してもN700Sが走れるのはなぜ？`
-- active_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
-- next_start: Topic 15の最終QAを再判定する
+- exam_aligned_completed_topics: `15 / 16`
+- current_status: `topic_15_completed`
+- last_completed_topic: `15 車内の照明・空調にはどれだけ電気が必要？`
+- active_topic: `16 同期機って新幹線には使わないの？`
+- next_start: Topic 16の制作前EXAM_ALIGNMENTを作成する
 
 ## 新品質ゲート進捗
 - [x] 01 架線25kVをそのままモーターに入れたらどうなる？ — 品質ゲートPASS / completed
@@ -25,9 +25,10 @@
 - [x] 12 新幹線のコンピュータは何をしている？ — 品質ゲートPASS / completed
 - [x] 13 新幹線は主電動機以外もモーターだらけ？ — 最終QA再判定PASS / completed
 - [x] 14 停電してもN700Sが走れるのはなぜ？ — 最終QA再判定PASS / completed
-- [ ] 15〜16 — 未完了
+- [x] 15 車内の照明・空調にはどれだけ電気が必要？ — 最終QA再判定PASS / completed
+- [ ] 16 同期機って新幹線には使わないの？ — 未完了
 
-## Topic 15 進行状態
+## Topic 15 最終品質状態
 - 固定範囲（照明）: 光束 / 光度 / 照度 / 輝度 / lm / cd / lx / 逆二乗則 / 照明率 / 保守率 / 所要灯数 / 発光効率 / LED
 - 固定計算（照明）: 照度 / 光度 / 光束 / 所要灯数 / 消費電力
 - 固定範囲（電熱・空調）: ジュール熱 / 電力量 / 熱量 / ヒーター / 空調 / 電熱 / 効率 / COPの基本
@@ -95,8 +96,16 @@
 - 旧進捗2: `topics/15_lighting_heating/15_lighting_heating_practice_pdf_qa.md` — 同期済み
 - 進捗記録同期: `2 / 2 PASS`
 - 前回最終QA固定範囲境界: `PASS`
-- 状態: `topic_15_progress_sync_complete / IN_PROGRESS`
-- 次工程: Topic 15の最終QAを再判定する。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更しない
+- 最終QA再判定: `PASS`
+- 最終QA技術内容: `PASS`
+- 最終QA必須成果物: `PASS`
+- 最終QA表示QA: `PASS`
+- 最終QA固定EXAM_ALIGNMENT・blind再解答: `PASS`
+- 最終QA進捗記録整合: `PASS`
+- 最終QA固定範囲境界: `PASS`
+- Webカタログ登録: `qualifications/denken-shinkansen/catalog.json` / `PASS`
+- 状態: `completed`
+- 次工程: Topic 16の制作前EXAM_ALIGNMENT
 
 ## Topic 14 最終品質状態
 - 固定範囲: 電池 / 正極 / 負極 / 電解質 / 起電力 / 充電 / 放電 / 一次電池 / 二次電池 / リチウムイオン電池 / 電圧 / 電流 / Ah / Wh / 直列接続 / 並列接続 / 内部抵抗 / 充放電効率
@@ -373,6 +382,6 @@
 - PowerPoint QA: `topics/11_readhesion_control/11_readhesion_control_powerpoint_qa.md`
 
 ## 今回進捗
-Topic 15「車内の照明・空調にはどれだけ電気が必要？」の旧進捗2ファイルを、実成果物（PowerPoint完成、blind独立再解答完成）へ同期した。`15_lighting_heating_practice.md` と `15_lighting_heating_practice_pdf_qa.md` はいずれも次工程を「最終QA再判定」へ更新し、進捗記録同期 `2 / 2 PASS`。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更していない。
+Topic 15「車内の照明・空調にはどれだけ電気が必要？」の最終QAを再判定した。技術内容、必須成果物、表示QA、固定EXAM_ALIGNMENT＋完成後blind独立再解答、進捗記録整合、固定範囲境界を再確認し、全件 `PASS`。WebカタログへTopic 15を登録し、`completed` とした。固定EXAM_ALIGNMENT、問題・正答、教材本文、PDF/PPTXは変更していない。
 
-完成数は `14 / 16` のまま。次工程はTopic 15の最終QA再判定。
+完成数は `15 / 16`。次工程はTopic 16「同期機って新幹線には使わないの？」の制作前EXAM_ALIGNMENT。
