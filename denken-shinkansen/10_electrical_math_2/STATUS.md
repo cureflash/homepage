@@ -6,10 +6,10 @@
 
 - active_series: `10_electrical_math_2`
 - exam_aligned_completed_topics: 19 / 20
-- current_status: `topic_20_powerpoint_complete`
+- current_status: `topic_20_post_completion_validation_complete`
 - last_completed_topic: `19 最適化入門`
 - active_topic: `20 新幹線を数式モデルだけで走らせる`
-- next_start: Topic 20の完成後独立検証
+- next_start: Topic 20の最終QA
 
 ## Topic 07 制作品質ゲート
 
@@ -315,7 +315,7 @@
 - [x] 解説PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、数値整合 `PASS`）
 - [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 練習PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
-- [x] 解説画像PowerPoint＋QA（16:9・5枚、固定範囲 `5 / 5`、接続確認5問 `5 / 5`、表示QA `5 / 5 PASS`、overflow `0件`）
+- [x] 解説画像PowerPoint＋QA（16:9・5枚、固定範囲 `5 / 5`、接続確認5問 `5 / 5 PASS`、表示QA `5 / 5 PASS`、overflow `0件`）
 - [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、直接最適化・ラグランジュ法要求0問・水増し0件を維持）
 - [x] 最終QA実施 → `NEEDS_REVISION`（技術品質PASS、進捗記録整合 `1 / 6 PASS`）
 - [x] 進捗記録5ファイルの同期
@@ -340,35 +340,31 @@
 - [x] 練習問題source（全12問、一次型8問・記述型4問、基礎3問・標準6問・複合3問、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 練習PDF＋QA（A4縦4ページ、200 dpi表示 `4 / 4 PASS`、文字抽出QA `PASS`、独立計算・論理QA `12 / 12 PASS`、一次型正答一意性 `8 / 8 PASS`）
 - [x] 解説画像PowerPoint＋QA（16:9・5枚、固定統合範囲 `7 / 7`、必要説明 `6 / 6 PASS`、接続確認5問 `5 / 5 PASS`、表示QA `5 / 5 PASS`、overflow `0件`）
-- [ ] 完成後独立検証
+- [x] 完成後独立検証（新規3ケース `3 / 3 PASS`、統合モデル直接要求0問・接続5問の水増し0件を維持）
 - [ ] 最終QA
 - [ ] `completed`
 
 ## 今回進めた内容
 
-Topic 20 `新幹線を数式モデルだけで走らせる` の解説画像PowerPoint＋QAを完成した。
+Topic 20 `新幹線を数式モデルだけで走らせる` の完成後独立検証を完了した。
 
-- PowerPoint: `topics/20_shinkansen_math_model/20_shinkansen_math_model_images.pptx`
-- QA記録: `topics/20_shinkansen_math_model/20_shinkansen_math_model_powerpoint_qa.md`
-- 16:9: `5枚`
-- SPEC固定統合範囲: `7 / 7 covered`
-- 教材で必要な説明6項目の可視化: `6 / 6 PASS`
-- 接続確認5問との対応: `5 / 5 PASS`
-- 数値整合QA: `PASS`
-- 全5スライド表示QA: `5 / 5 PASS`
-- shape geometry overflow: `0件`
-- `slides_test.py`: `PASS`
-- PPTX ZIP/XML整合性: `PASS`
+- 記録: `topics/20_shinkansen_math_model/20_shinkansen_math_model_post_completion_validation.md`
+- 再現用: `topics/20_shinkansen_math_model/20_shinkansen_math_model_post_completion_validation.py`
+- 新規3ケース: `3 / 3 PASS`
+- Case A: 牽引力→運動方程式→Euler速度更新→位置→仕事・電力量 `PASS`
+- Case B: 一次簡略制御モデル→伝達関数→解析解→Euler刻み幅比較 `PASS`
+- Case C: 回生符号→エネルギー収支→周期成分→サンプリング→DFT `PASS`
 - 統合モデル自体を直接要求する確認済み第二種過去問: `0問`
 - 接続5問の直接対応品質ゲート件数への水増し: `0件`
 - 第一種・第三種問題の追加: `0件`
+- 固定EXAM_ALIGNMENT変更: `0件`
 - 仕様外数学・算法の追加: `0件`
 - 未確認実車値依存: `0件`
 
 ## 判定
 
-`topic_20_powerpoint_complete / IN_PROGRESS`
+`topic_20_post_completion_validation_complete / IN_PROGRESS`
 
-完成数は `19 / 20`。
+完成数は `19 / 20` のまま。
 
-次はTopic 20の完成後独立検証。
+次はTopic 20の最終QA。
