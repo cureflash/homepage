@@ -75,33 +75,42 @@ R8二次は2026-09-18時点で未実施。R7二次「機械・制御」問3の�
 
 判定: `PASS`
 
-### 6. 進捗記録整合
+### 6. 初回blocker解消確認
 
-実成果物は完成後独立再解答まで進んでいるが、主source・練習sourceに旧工程の進捗記録が残っている。
+初回最終QAで指摘した進捗記録4箇所を再照合した。
 
 1. `17_transistor_fet_switching.md` 冒頭状態
-   - stage: `EXPLANATION_SOURCE_COMPLETE`
-   - 次工程: `解説PDF＋表示QA`
-   - 実状態 `INDEPENDENT_REANSWER_COMPLETE` と不一致
+   - stage: `PROGRESS_RECORDS_SYNCED`
+   - completion: `in_progress`
+   - 品質ゲート: 一次5問・25答案要素 `25 / 25 PASS`
+   - 二次採用: `0問`
+   - 二次数合わせ: `0件`
+   - 次工程: `最終QA再実施`
 2. `17_transistor_fet_switching.md` 末尾
-   - 次工程: `解説PDFを作成し、表示QA`
-   - 実状態と不一致
+   - 次工程: `最終QAを再実施する`
 3. `17_transistor_fet_switching_practice.md` 冒頭状態
-   - stage: `PRACTICE_PDF_COMPLETE`
-   - 次工程: `解説画像PowerPoint＋表示QA`
-   - 実状態と不一致
+   - stage: `PROGRESS_RECORDS_SYNCED`
+   - completion: `in_progress`
+   - 次工程: `最終QA再実施`
 4. `17_transistor_fet_switching_practice.md` 末尾
-   - 次工程: `解説画像PowerPoint＋表示QA`
-   - 実状態と不一致
+   - 次工程: `最終QA再実施`
 
-技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXの不整合は `0件`。blockerは進捗記録4箇所のみ。
+初回blocker解消: `4 / 4 PASS`。
 
-判定: `NEEDS_REVISION`
+技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXの変更は `0件`。
+
+判定: `PASS`
+
+### 7. 進捗記録整合
+
+主source・練習source・STATUS・HANDOFF・実成果物の現在地は、最終QA再実施直前まで整合している。本QAのPASSをSTATUS・HANDOFFへ反映し、completed状態同期は次工程として分離する。
+
+判定: `PASS`
 
 ## 最終判定
 
-`NEEDS_REVISION / IN_PROGRESS`
+`PASS / FINAL_QA_COMPLETE`
 
-固定一次5問・25答案要素の完成後独立再解答、二次採用判断、必須成果物、表示QA、練習QA、SPEC境界はすべてPASS。Topic 17を `completed` にはしない。
+固定一次5問・25答案要素の完成後独立再解答、二次採用判断、必須成果物、表示QA、練習QA、SPEC境界、初回blocker4件の解消を全件確認した。
 
-exact blocker: 主source・練習sourceの旧進捗記録4箇所を実成果物状態へ同期する必要がある。次工程はこの4箇所だけを同期し、技術本文・固定EXAM_ALIGNMENT・問題・正答・PDF/PPTXは変更しない。
+Topic 17は最終QAを通過したが、completed状態同期はまだ行わない。完成数は `16 / 21` のまま。次工程は主source・練習source・STATUS・HANDOFFのcompleted状態同期。
