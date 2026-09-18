@@ -4,15 +4,15 @@
 
 ## 状態
 - active_series: `08_shinkansen_theory_2`
-- exam_aligned_completed_topics: 17 / 21
-- current_status: `topic_18_final_qa_complete`
-- last_completed_topic: `17 GTO・IGBT・SiCはどうやって電流を操る？`
-- active_topic: `18 新幹線のセンサ信号をどう増幅する？`
-- next_start: Topic 18 completed状態同期
+- exam_aligned_completed_topics: 18 / 21
+- current_status: `topic_18_completed`
+- last_completed_topic: `18 新幹線のセンサ信号をどう増幅する？`
+- active_topic: `19 25kV・大電流をどう安全に測る？`
+- next_start: Topic 19 制作前EXAM_ALIGNMENT
 
 ## 完成済み
 
-Topic 01〜17は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後独立再解答、最終QAを通過し `PASS / completed`。
+Topic 01〜18は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後独立再解答、最終QAを通過し `PASS / completed`。
 
 ## Topic 18 固定EXAM_ALIGNMENT
 - [x] MASTER_SPEC / EXAM_ALIGNMENT_SPEC / 系列SPEC確認
@@ -45,28 +45,26 @@ Topic 01〜17は、各テーマのEXAM_ALIGNMENT、必要成果物、完成後�
 - [x] 初回最終QA: `NEEDS_REVISION / IN_PROGRESS`
 - [x] 進捗記録同期: `PASS / topic_18_progress_records_synced`
 - [x] 最終QA再実施: `PASS / FINAL_QA_COMPLETE`
-- [ ] completed状態同期
+- [x] completed状態同期
+- [x] 最終判定: `PASS / completed`
 
 ## 今回進めた内容
 
-Topic 18最終QAを再実施した。
+Topic 18のcompleted状態同期を実施した。
 
-- 必須成果物: `PASS`
+- 主source: `completion: completed`、`stage: COMPLETED`
+- 練習source: `completion: completed`、`stage: COMPLETED`
+- STATUS: 完成数 `18 / 21`、Topic 19をactiveへ更新
+- HANDOFF: Topic 01〜18 `PASS / completed` へ更新
 - 固定一次5問・25答案要素: `25 / 25 PASS`
 - 公式標準解答一致: `25 / 25`
-- 完成後独立再解答: `25 / 25 PASS`
-- 二次採用: `0問`、二次数合わせ: `0件`
-- SPEC固定範囲: `PASS`
-- 解説PDF表示QA: `3 / 3 PASS`
-- 練習PDF表示QA: `3 / 3 PASS`
-- 練習12問QA: `12 / 12 PASS`
-- PowerPoint表示QA: `5 / 5 PASS`
-- 初回進捗記録blocker: `4 / 4解消`
-- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTXの修正blocker: `0件`
+- 二次採用: `0問`
+- 二次数合わせ: `0件`
+- 技術本文・固定EXAM_ALIGNMENT・練習問題・正答・PDF/PPTX変更: `0件`
 - 仕様外追加: `0件`
 
 ## 判定
 
-`PASS / FINAL_QA_COMPLETE / IN_PROGRESS`。
+`PASS / completed`。
 
-完成数は `17 / 21` のまま。次工程はTopic 18 `completed` 状態同期。
+完成数は `18 / 21`。次工程はTopic 19「25kV・大電流をどう安全に測る？」の制作前EXAM_ALIGNMENT。
