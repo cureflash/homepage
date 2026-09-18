@@ -1,12 +1,12 @@
 # Topic 14 - 新幹線の力率と電圧をどう維持する？
 
-更新日: 2026-09-18
+更新日: 2026-09-19
 
 ## 状態
 
-`topic_14_powerpoint_complete`
+`topic_14_completion_blind_rerun_pass`
 
-制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで完了した。正式固定5問・21答案要素は変更せず、各成果物へ `21 / 21` を接続済み。制作前blindで不足した令和2年度二次問6の「最低必要設備容量を不足側へ丸めない」答案処理は、解説、練習問8・問12、PowerPoint Slide 4で補強した。完成後blind独立再解答は未着手である。
+制作前EXAM_ALIGNMENT、制作前blind独立再解答、解説source、解説PDF＋PDF QA、練習問題・完全解説source、練習PDF＋PDF QA、解説画像PowerPoint＋QAまで作成済み。修正前完成後blindで残ったH23二次問3 (2a) の1 blockerをsource/PDF/PPTへ補強し、現行解説PDFの再QAもPASS。その修正版learner-facing成果物に対して2026-09-19に完成後blind独立再解答を再実施し、固定5問・21答案要素を `21 / 21 PASS` とした。Topic 14は最終QA未実施のためまだ `completed` ではない。
 
 成果物:
 - `14_power_factor_voltage_control_explanation.md`
@@ -17,6 +17,7 @@
 - `14_power_factor_voltage_control_practice_pdf_qa.md`
 - `14_power_factor_voltage_control_images.pptx`
 - `14_power_factor_voltage_control_powerpoint_qa.md`
+- `14_power_factor_voltage_control_blind_reanswer_20260919.md`
 
 ## SPEC固定範囲
 
@@ -223,7 +224,7 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - 直近年度優先確認: `PASS`
 - Topic 14固定範囲外の問題による件数水増し: `0件`
 
-制作前blind独立再解答は完了済みで、結果は `20 / 21 PASS`。不足1答案要素は解説sourceで補強し、練習問8・問12で同型再訓練を追加した。完成後blind独立再解答では固定5問・21答案要素を変更せず全件再検証する。
+制作前blind独立再解答は `20 / 21 PASS`。不足1答案要素は解説sourceで補強し、練習問8・問12で同型再訓練を追加した。修正前完成後blindはH23二次問3 (2a)のみ不足して `20 / 21 PASS` だったが、電圧側復元手順をlearner-facing成果物へ補強後、2026-09-19に固定5問・21答案要素を再実施して `21 / 21 PASS`。記録は `14_power_factor_voltage_control_blind_reanswer_20260919.md`。
 
 ## 参考教材
 
@@ -307,12 +308,13 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 
 - PDF: `14_power_factor_voltage_control_explanation.pdf`
 - QA: `14_power_factor_voltage_control_explanation_pdf_qa.md`
-- A4縦: `6ページ`
-- 200 dpi表示: `6 / 6 PASS`
-- 文字抽出: `PASS`
+- A4縦: `5ページ`
+- 200 dpi表示: `5 / 5 PASS`
+- 文字抽出: `PASS / U+FFFD 0件`
 - 3段階例題独立再計算: `3 / 3 PASS`
 - 固定5問・21答案要素: `21 / 21 covered`
 - 制作前blind不足1要素: `1 / 1 改善説明確認`
+- H23二次問3 (2a) の電圧側復元: `PASS`
 - stage: `EXPLANATION_PDF_COMPLETE`
 
 ## 練習source進捗
@@ -364,6 +366,23 @@ https://www.shiken.or.jp/chief/upload/20111127_ch_second_a01.pdf
 - 仕様追加: `0件`
 - stage: `POWERPOINT_COMPLETE / IN_PROGRESS`
 
+## 完成後blind独立再解答（修正版成果物、2026-09-19）
+
+- record: `14_power_factor_voltage_control_blind_reanswer_20260919.md`
+- R6一次「電力」問5: `5 / 5 PASS`
+- R4一次「法規」問4: `5 / 5 PASS`
+- R5二次「電力・管理」問4: `2 / 2 PASS`
+- R2二次「電力・管理」問6: `4 / 4 PASS`
+- H23二次「電力・管理」問3: `5 / 5 PASS`
+- 一次: `10 / 10 PASS`
+- 二次: `11 / 11 PASS`
+- 合計: `5 / 5問・21 / 21答案要素 PASS`
+- 制作前blind不足「最低必要容量を不足側へ丸めない」: `PASS / 改善維持`
+- 前回完成後blind blocker H23二次問3 (2a) `66 kV側等価値 → 154 kV一次側`: `PASS / 改善確認`
+- 固定EXAM_ALIGNMENT変更: `0件`
+- 仕様追加: `0件`
+- stage: `COMPLETION_BLIND_RERUN_PASS / IN_PROGRESS`
+
 ## 次工程
 
-固定5問・21答案要素の完成後blind独立再解答を行う。保存済み正答・公式解答を先に見ず、教材だけで全答案要素を再解答し、制作前blind不足1要素「最低必要容量を不足側へ丸めない」も再検証する。最終QAはまだ行わない。
+Topic 14の最終QAを行う。上位仕様、固定EXAM_ALIGNMENT、必須成果物、各PDF/PPTX QA、2026-09-19完成後blind `21 / 21 PASS`、進捗記録整合、Web公開状態、SPEC境界をまとめて確認する。最終QAで全件PASSするまではTopic 14を `completed` にせず、Topic 15へ進めない。
